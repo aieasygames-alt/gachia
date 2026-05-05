@@ -38,7 +38,7 @@ export interface GameRouteConfig {
   characters: boolean;
   weapons: boolean;
   items: boolean;
-  tierList: boolean;
+  'tier-list': boolean;
   calculator: boolean;
   map: boolean;
   guides: boolean;
