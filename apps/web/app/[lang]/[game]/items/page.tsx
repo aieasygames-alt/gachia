@@ -1,8 +1,8 @@
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { nteMaterials, getNteMaterialName } from '@gachia/data';
+import { nteMaterials, getNteMaterialName, genshinMaterials, getGenshinMaterialName } from '@gachia/data';
 
-const TYPE_LABELS: Record<string, Record<string, string>> = {
+const NTE_TYPE_LABELS: Record<string, Record<string, string>> = {
   guide: { zh: '猎手指南', en: 'Hunter Guide', ja: 'ハンターガイド' },
   'arc-exp': { zh: '弧盘经验', en: 'Arc EXP', ja: 'アルクEXP' },
   'module-exp': { zh: '模块经验', en: 'Module EXP', ja: 'モジュールEXP' },
@@ -13,7 +13,18 @@ const TYPE_LABELS: Record<string, Record<string, string>> = {
   manual: { zh: '技能手册', en: 'Skill Manual', ja: 'スキルマニュアル' },
 };
 
-const RARITY_COLORS = ['', '#9ca3af', '#4ade80', '#60a5fa', '#a855f7'];
+const GENSHIN_TYPE_LABELS: Record<string, Record<string, string>> = {
+  'character-ascension': { zh: '角色突破材料', en: 'Character Ascension', ja: 'キャラ突破素材' },
+  'talent-book': { zh: '天赋书', en: 'Talent Book', ja: '天賦本' },
+  'boss-drop': { zh: 'Boss掉落', en: 'Boss Drop', ja: 'ボスドロップ' },
+  'weekly-boss': { zh: '周本材料', en: 'Weekly Boss', ja: '週ボス素材' },
+  'local-specialty': { zh: '区域特产', en: 'Local Specialty', ja: '地域特産品' },
+  'common-drop': { zh: '普通怪物掉落', en: 'Common Drop', ja: '一般ドロップ' },
+  currency: { zh: '货币', en: 'Currency', ja: '通貨' },
+  'exp-material': { zh: '经验材料', en: 'EXP Material', ja: '経験値素材' },
+};
+
+const RARITY_COLORS = ['', '#9ca3af', '#4ade80', '#60a5fa', '#a855f7', '#eab308'];
 
 export default async function ItemsPage({
   params,
@@ -25,28 +36,36 @@ export default async function ItemsPage({
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];
 
-  if (gameId !== 'nte') {
-    return (
-      <div>
-        <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-          {CATEGORY_LABELS.items?.[locale] ?? 'Items'}
-        </h1>
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-          <div className="flex h-32 items-center justify-center rounded-lg border border-dashed border-game-border text-sm text-game-text-muted">
-            Coming Soon
-          </div>
-        </div>
-      </div>
-    );
+  if (gameId === 'genshin') {
+    return <GenshinItemsPage locale={locale} />;
   }
 
-  const materials = nteMaterials;
-  const grouped = groupByType(materials);
-  const typeOrder = ['guide', 'arc-exp', 'module-exp', 'ascension', 'boss', 'manual', 'permit', 'currency'];
+  if (gameId === 'nte') {
+    return <NteItemsPage locale={locale} />;
+  }
 
   return (
     <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+      <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {CATEGORY_LABELS.items?.[locale] ?? 'Items'}
+      </h1>
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+        <div className="flex h-32 items-center justify-center rounded-lg border border-dashed border-game-border text-sm text-game-text-muted">Coming Soon</div>
+      </div>
+    </div>
+  );
+}
+
+// --- Genshin Items ---
+
+function GenshinItemsPage({ locale }: { locale: SupportedLocale }) {
+  const materials = genshinMaterials;
+  const grouped = groupByType(materials);
+  const typeOrder = ['character-ascension', 'talent-book', 'boss-drop', 'weekly-boss', 'local-specialty', 'common-drop', 'exp-material', 'currency'];
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.genshin.theme.primary }}>
         {CATEGORY_LABELS.items?.[locale] ?? 'Items'}
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
@@ -56,12 +75,54 @@ export default async function ItemsPage({
       {typeOrder.map((type) => {
         const list = grouped[type];
         if (!list || list.length === 0) return null;
-        const typeLabel = TYPE_LABELS[type]?.[locale] ?? type;
+        const typeLabel = GENSHIN_TYPE_LABELS[type]?.[locale] ?? type;
         return (
           <section key={type} className="mb-8">
-            <h2 className="mb-4 text-lg font-semibold text-game-text">
-              {typeLabel} ({list.length})
-            </h2>
+            <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
+            <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              {list.map((mat) => (
+                <div key={mat.id} className="rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                  <div className="mb-1 flex items-center gap-2">
+                    <h3 className="text-sm font-semibold text-game-text">{getGenshinMaterialName(mat, locale)}</h3>
+                  </div>
+                  <div className="mb-1 flex items-center gap-2">
+                    <span className="text-xs text-game-text-muted">{typeLabel}</span>
+                    <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
+                  </div>
+                  <p className="text-xs text-game-text-muted line-clamp-2">{locale === 'zh' ? mat.source : mat.sourceEn}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
+// --- NTE Items ---
+
+function NteItemsPage({ locale }: { locale: SupportedLocale }) {
+  const materials = nteMaterials;
+  const grouped = groupByType(materials);
+  const typeOrder = ['guide', 'arc-exp', 'module-exp', 'ascension', 'boss', 'manual', 'permit', 'currency'];
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.nte.theme.primary }}>
+        {CATEGORY_LABELS.items?.[locale] ?? 'Items'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? `共 ${materials.length} 种材料` : locale === 'ja' ? `${materials.length} 種の素材` : `${materials.length} Materials`}
+      </p>
+
+      {typeOrder.map((type) => {
+        const list = grouped[type];
+        if (!list || list.length === 0) return null;
+        const typeLabel = NTE_TYPE_LABELS[type]?.[locale] ?? type;
+        return (
+          <section key={type} className="mb-8">
+            <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
             <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {list.map((mat) => (
                 <div key={mat.id} className="rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
@@ -70,9 +131,7 @@ export default async function ItemsPage({
                   </div>
                   <div className="mb-1 flex items-center gap-2">
                     <span className="text-xs text-game-text-muted">{typeLabel}</span>
-                    <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>
-                      {'★'.repeat(mat.rarity)}
-                    </span>
+                    <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
                   </div>
                   <p className="text-xs text-game-text-muted line-clamp-2">{mat.source}</p>
                 </div>

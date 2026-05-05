@@ -99,6 +99,66 @@ export type {
   NteRecommendedBuild,
 } from './games/nte/types';
 
+// ============================================================
+// Genshin Impact exports
+// ============================================================
+
+// Genshin character exports
+export {
+  genshinCharacters,
+  getGenshinCharacterById,
+  getGenshinCharacterName,
+  getGenshinCharacterDescription,
+  getGenshinCharacterImage,
+  getGenshinCharacterTierReason,
+} from './games/genshin/characters';
+
+// Genshin weapon exports
+export {
+  genshinWeapons,
+  getGenshinWeaponById,
+  getGenshinWeaponName,
+  getGenshinWeaponEffect,
+  getGenshinWeaponSource,
+} from './games/genshin/weapons';
+
+// Genshin material exports
+export {
+  genshinMaterials,
+  getGenshinMaterialName,
+  getGenshinMaterialById,
+} from './games/genshin/items';
+
+// Genshin artifact exports
+export {
+  artifactSets as genshinArtifactSets,
+  getArtifactSetName,
+  getArtifactSetDesc2pc,
+  getArtifactSetDesc4pc,
+  getArtifactSetById,
+} from './games/genshin/artifacts';
+
+// Genshin extras (character materials)
+export {
+  characterMaterials as genshinCharacterMaterials,
+  getMaterialsForCharacter as getGenshinMaterialsForCharacter,
+} from './games/genshin/extras';
+
+export type {
+  GenshinCharacter,
+  GenshinWeapon,
+  GenshinMaterial,
+  GenshinArtifactSet,
+  GenshinCharacterMaterials,
+  GenshinSkillSet,
+  GenshinSkillBase,
+  GenshinActiveSkill,
+  GenshinConstellation,
+  GenshinTeamComp,
+  GenshinFaq,
+  GenshinRecommendedBuild,
+} from './games/genshin/types';
+
 // --- Data Access Helpers ---
 
 export interface GameData {

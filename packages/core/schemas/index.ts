@@ -46,6 +46,11 @@ export const GameRouteConfigSchema = z.object({
   calculator: z.boolean(),
   map: z.boolean(),
   guides: z.boolean(),
+  'disk-sets': z.boolean().optional(),
+  'redeem-codes': z.boolean().optional(),
+  gacha: z.boolean().optional(),
+  anomalies: z.boolean().optional(),
+  artifacts: z.boolean().optional(),
 });
 
 export const GameModuleSchema = z.object({

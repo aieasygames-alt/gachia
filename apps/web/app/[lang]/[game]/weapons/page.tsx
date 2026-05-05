@@ -1,14 +1,24 @@
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { nteWeapons, getNteWeaponName, getNteWeaponEffect } from '@gachia/data';
+import { nteWeapons, getNteWeaponName, getNteWeaponEffect, genshinWeapons, getGenshinWeaponName, getGenshinWeaponEffect } from '@gachia/data';
 
-const WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
+const NTE_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
   solid: { zh: '固体', en: 'Solid', ja: 'ソリッド' },
   synthesis: { zh: '合成', en: 'Synthesis', ja: 'シンセシス' },
   gas: { zh: '气体', en: 'Gas', ja: 'ガス' },
 };
 
-const RANK_COLORS: Record<string, string> = { S: '#eab308', A: '#a855f7', B: '#60a5fa' };
+const NTE_RANK_COLORS: Record<string, string> = { S: '#eab308', A: '#a855f7', B: '#60a5fa' };
+
+const GENSHIN_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
+  sword: { zh: '单手剑', en: 'Sword', ja: '片手剣' },
+  claymore: { zh: '双手剑', en: 'Claymore', ja: '両手剣' },
+  polearm: { zh: '长柄武器', en: 'Polearm', ja: '長柄武器' },
+  bow: { zh: '弓', en: 'Bow', ja: '弓' },
+  catalyst: { zh: '法器', en: 'Catalyst', ja: '法器' },
+};
+
+const GENSHIN_RARITY_COLORS: Record<number, string> = { 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };
 
 export default async function WeaponsPage({
   params,
@@ -20,58 +30,67 @@ export default async function WeaponsPage({
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];
 
-  if (gameId !== 'nte') {
-    return (
-      <div>
-        <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-          {CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons'}
-        </h1>
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-          <div className="flex h-40 items-center justify-center rounded-lg border border-dashed border-game-border text-sm text-game-text-muted">
-            Coming Soon
-          </div>
-        </div>
-      </div>
-    );
+  if (gameId === 'genshin') {
+    return <GenshinWeaponsPage locale={locale} />;
   }
 
-  const weapons = nteWeapons;
-  const grouped = groupBy(weapons, 'rank');
-  const ranks = ['S', 'A', 'B'] as const;
+  if (gameId === 'nte') {
+    return <NteWeaponsPage locale={locale} />;
+  }
 
   return (
     <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {locale === 'zh' ? '弧盘' : locale === 'ja' ? 'アルク' : 'Arcs'}
+      <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons'}
+      </h1>
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+        <div className="flex h-40 items-center justify-center rounded-lg border border-dashed border-game-border text-sm text-game-text-muted">Coming Soon</div>
+      </div>
+    </div>
+  );
+}
+
+// --- Genshin Weapons ---
+
+function GenshinWeaponsPage({ locale }: { locale: SupportedLocale }) {
+  const weapons = genshinWeapons;
+  const fiveStar = weapons.filter((w) => w.rarity === 5);
+  const fourStar = weapons.filter((w) => w.rarity === 4);
+  const threeStar = weapons.filter((w) => w.rarity === 3);
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.genshin.theme.primary }}>
+        {CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons'}
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${weapons.length} 件弧盘` : locale === 'ja' ? `${weapons.length} 個のアルク` : `${weapons.length} Arcs`}
+        {locale === 'zh' ? `共 ${weapons.length} 件武器` : locale === 'ja' ? `${weapons.length} 個の武器` : `${weapons.length} Weapons`}
       </p>
 
-      {ranks.map((rank) => {
-        const list = grouped[rank];
-        if (!list || list.length === 0) return null;
+      {[fiveStar, fourStar, threeStar].map((list) => {
+        if (list.length === 0) return null;
+        const rarity = list[0]!.rarity;
         return (
-          <section key={rank} className="mb-8">
+          <section key={rarity} className="mb-8">
             <h2 className="mb-4 text-lg font-semibold text-game-text">
-              {rank}-Rank ({list.length})
+              {rarity}★ ({list.length})
             </h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {list.map((w) => {
-                const effect = getNteWeaponEffect(w, locale);
-                const typeLabel = WEAPON_TYPE_LABELS[w.type]?.[locale] ?? w.type;
+                const effect = getGenshinWeaponEffect(w, locale);
+                const typeLabel = GENSHIN_WEAPON_TYPE_LABELS[w.weaponType]?.[locale] ?? w.weaponType;
                 return (
                   <div key={w.id} className="rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary">
                     <div className="mb-2 flex items-center gap-2">
-                      <span className="text-base font-bold" style={{ color: RANK_COLORS[w.rank] || '#888' }}>{w.rank}</span>
-                      <h3 className="font-semibold text-game-text">{getNteWeaponName(w, locale)}</h3>
+                      <span className="text-base font-bold" style={{ color: GENSHIN_RARITY_COLORS[w.rarity] || '#888' }}>{w.rarity}★</span>
+                      <h3 className="font-semibold text-game-text">{getGenshinWeaponName(w, locale)}</h3>
                       <span className="ml-auto rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{typeLabel}</span>
                     </div>
                     <div className="mb-2 flex gap-3 text-sm text-game-text-muted">
                       <span>ATK {w.baseAtk}</span>
-                      <span>{w.substatValue} {w.substat}</span>
+                      <span>{w.subStatValue} {w.subStat}</span>
                     </div>
-                    <p className="text-xs leading-relaxed text-game-text-muted line-clamp-2">{effect.description}</p>
+                    {effect.description && <p className="text-xs leading-relaxed text-game-text-muted line-clamp-2">{effect.description}</p>}
                     {w.signatureCharacter && (
                       <p className="mt-2 text-xs text-game-primary">
                         {locale === 'zh' ? '专属' : 'Signature'}: {w.signatureCharacter}
@@ -88,10 +107,59 @@ export default async function WeaponsPage({
   );
 }
 
-function groupBy<T extends { rank: string }>(arr: T[], key: keyof T & 'rank'): Record<string, T[]> {
+// --- NTE Weapons ---
+
+function NteWeaponsPage({ locale }: { locale: SupportedLocale }) {
+  const weapons = nteWeapons;
+  const grouped = groupByRank(weapons);
+  const ranks = ['S', 'A', 'B'] as const;
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.nte.theme.primary }}>
+        {locale === 'zh' ? '弧盘' : locale === 'ja' ? 'アルク' : 'Arcs'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? `共 ${weapons.length} 件弧盘` : locale === 'ja' ? `${weapons.length} 個のアルク` : `${weapons.length} Arcs`}
+      </p>
+
+      {ranks.map((rank) => {
+        const list = grouped[rank];
+        if (!list || list.length === 0) return null;
+        return (
+          <section key={rank} className="mb-8">
+            <h2 className="mb-4 text-lg font-semibold text-game-text">{rank}-Rank ({list.length})</h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {list.map((w) => {
+                const effect = getNteWeaponEffect(w, locale);
+                const typeLabel = NTE_WEAPON_TYPE_LABELS[w.type]?.[locale] ?? w.type;
+                return (
+                  <div key={w.id} className="rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary">
+                    <div className="mb-2 flex items-center gap-2">
+                      <span className="text-base font-bold" style={{ color: NTE_RANK_COLORS[w.rank] || '#888' }}>{w.rank}</span>
+                      <h3 className="font-semibold text-game-text">{getNteWeaponName(w, locale)}</h3>
+                      <span className="ml-auto rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{typeLabel}</span>
+                    </div>
+                    <div className="mb-2 flex gap-3 text-sm text-game-text-muted">
+                      <span>ATK {w.baseAtk}</span>
+                      <span>{w.substatValue} {w.substat}</span>
+                    </div>
+                    <p className="text-xs leading-relaxed text-game-text-muted line-clamp-2">{effect.description}</p>
+                    {w.signatureCharacter && (<p className="mt-2 text-xs text-game-primary">{locale === 'zh' ? '专属' : 'Signature'}: {w.signatureCharacter}</p>)}
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
+function groupByRank<T extends { rank: string }>(arr: T[]): Record<string, T[]> {
   return arr.reduce((acc, item) => {
-    const k = item[key] as string;
-    (acc[k] ??= []).push(item);
+    (acc[item.rank] ??= []).push(item);
     return acc;
   }, {} as Record<string, T[]>);
 }

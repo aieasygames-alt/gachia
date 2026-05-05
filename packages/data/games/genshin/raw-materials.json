@@ -1,0 +1,1667 @@
+[
+  {
+    "id": "agnidus-agate-sliver",
+    "name": "燃愿玛瑙碎屑",
+    "nameEn": "Agnidus Agate Sliver",
+    "type": "character-ascension",
+    "rarity": 2,
+    "source": "Boss掉落: Pyro相关Boss",
+    "sourceEn": "Boss Drop: Pyro related bosses"
+  },
+  {
+    "id": "agnidus-agate-fragment",
+    "name": "燃愿玛瑙断片",
+    "nameEn": "Agnidus Agate Fragment",
+    "type": "character-ascension",
+    "rarity": 3,
+    "source": "Boss掉落: Pyro相关Boss",
+    "sourceEn": "Boss Drop: Pyro related bosses"
+  },
+  {
+    "id": "agnidus-agate-chunk",
+    "name": "燃愿玛瑙块",
+    "nameEn": "Agnidus Agate Chunk",
+    "type": "character-ascension",
+    "rarity": 4,
+    "source": "Boss掉落: Pyro相关Boss",
+    "sourceEn": "Boss Drop: Pyro related bosses"
+  },
+  {
+    "id": "agnidus-agate-gemstone",
+    "name": "燃愿玛瑙宝石",
+    "nameEn": "Agnidus Agate Gemstone",
+    "type": "character-ascension",
+    "rarity": 5,
+    "source": "Boss掉落: Pyro相关Boss",
+    "sourceEn": "Boss Drop: Pyro related bosses"
+  },
+  {
+    "id": "varunada-lazurite-sliver",
+    "name": "涤净青金碎屑",
+    "nameEn": "Varunada Lazurite Sliver",
+    "type": "character-ascension",
+    "rarity": 2,
+    "source": "Boss掉落: Hydro相关Boss",
+    "sourceEn": "Boss Drop: Hydro related bosses"
+  },
+  {
+    "id": "varunada-lazurite-fragment",
+    "name": "涤净青金断片",
+    "nameEn": "Varunada Lazurite Fragment",
+    "type": "character-ascension",
+    "rarity": 3,
+    "source": "Boss掉落: Hydro相关Boss",
+    "sourceEn": "Boss Drop: Hydro related bosses"
+  },
+  {
+    "id": "varunada-lazurite-chunk",
+    "name": "涤净青金块",
+    "nameEn": "Varunada Lazurite Chunk",
+    "type": "character-ascension",
+    "rarity": 4,
+    "source": "Boss掉落: Hydro相关Boss",
+    "sourceEn": "Boss Drop: Hydro related bosses"
+  },
+  {
+    "id": "varunada-lazurite-gemstone",
+    "name": "涤净青金宝石",
+    "nameEn": "Varunada Lazurite Gemstone",
+    "type": "character-ascension",
+    "rarity": 5,
+    "source": "Boss掉落: Hydro相关Boss",
+    "sourceEn": "Boss Drop: Hydro related bosses"
+  },
+  {
+    "id": "vajrada-amethyst-sliver",
+    "name": "最胜紫晶碎屑",
+    "nameEn": "Vajrada Amethyst Sliver",
+    "type": "character-ascension",
+    "rarity": 2,
+    "source": "Boss掉落: Electro相关Boss",
+    "sourceEn": "Boss Drop: Electro related bosses"
+  },
+  {
+    "id": "vajrada-amethyst-fragment",
+    "name": "最胜紫晶断片",
+    "nameEn": "Vajrada Amethyst Fragment",
+    "type": "character-ascension",
+    "rarity": 3,
+    "source": "Boss掉落: Electro相关Boss",
+    "sourceEn": "Boss Drop: Electro related bosses"
+  },
+  {
+    "id": "vajrada-amethyst-chunk",
+    "name": "最胜紫晶块",
+    "nameEn": "Vajrada Amethyst Chunk",
+    "type": "character-ascension",
+    "rarity": 4,
+    "source": "Boss掉落: Electro相关Boss",
+    "sourceEn": "Boss Drop: Electro related bosses"
+  },
+  {
+    "id": "vajrada-amethyst-gemstone",
+    "name": "最胜紫晶宝石",
+    "nameEn": "Vajrada Amethyst Gemstone",
+    "type": "character-ascension",
+    "rarity": 5,
+    "source": "Boss掉落: Electro相关Boss",
+    "sourceEn": "Boss Drop: Electro related bosses"
+  },
+  {
+    "id": "shivada-jade-sliver",
+    "name": "哀叙冰玉碎屑",
+    "nameEn": "Shivada Jade Sliver",
+    "type": "character-ascension",
+    "rarity": 2,
+    "source": "Boss掉落: Cryo相关Boss",
+    "sourceEn": "Boss Drop: Cryo related bosses"
+  },
+  {
+    "id": "shivada-jade-fragment",
+    "name": "哀叙冰玉断片",
+    "nameEn": "Shivada Jade Fragment",
+    "type": "character-ascension",
+    "rarity": 3,
+    "source": "Boss掉落: Cryo相关Boss",
+    "sourceEn": "Boss Drop: Cryo related bosses"
+  },
+  {
+    "id": "shivada-jade-chunk",
+    "name": "哀叙冰玉块",
+    "nameEn": "Shivada Jade Chunk",
+    "type": "character-ascension",
+    "rarity": 4,
+    "source": "Boss掉落: Cryo相关Boss",
+    "sourceEn": "Boss Drop: Cryo related bosses"
+  },
+  {
+    "id": "shivada-jade-gemstone",
+    "name": "哀叙冰玉宝石",
+    "nameEn": "Shivada Jade Gemstone",
+    "type": "character-ascension",
+    "rarity": 5,
+    "source": "Boss掉落: Cryo相关Boss",
+    "sourceEn": "Boss Drop: Cryo related bosses"
+  },
+  {
+    "id": "nagadus-emerald-sliver",
+    "name": "生长碧翡碎屑",
+    "nameEn": "Nagadus Emerald Sliver",
+    "type": "character-ascension",
+    "rarity": 2,
+    "source": "Boss掉落: Dendro相关Boss",
+    "sourceEn": "Boss Drop: Dendro related bosses"
+  },
+  {
+    "id": "nagadus-emerald-fragment",
+    "name": "生长碧翡断片",
+    "nameEn": "Nagadus Emerald Fragment",
+    "type": "character-ascension",
+    "rarity": 3,
+    "source": "Boss掉落: Dendro相关Boss",
+    "sourceEn": "Boss Drop: Dendro related bosses"
+  },
+  {
+    "id": "nagadus-emerald-chunk",
+    "name": "生长碧翡块",
+    "nameEn": "Nagadus Emerald Chunk",
+    "type": "character-ascension",
+    "rarity": 4,
+    "source": "Boss掉落: Dendro相关Boss",
+    "sourceEn": "Boss Drop: Dendro related bosses"
+  },
+  {
+    "id": "nagadus-emerald-gemstone",
+    "name": "生长碧翡宝石",
+    "nameEn": "Nagadus Emerald Gemstone",
+    "type": "character-ascension",
+    "rarity": 5,
+    "source": "Boss掉落: Dendro相关Boss",
+    "sourceEn": "Boss Drop: Dendro related bosses"
+  },
+  {
+    "id": "vayuda-turquoise-sliver",
+    "name": "自在松石碎屑",
+    "nameEn": "Vayuda Turquoise Sliver",
+    "type": "character-ascension",
+    "rarity": 2,
+    "source": "Boss掉落: Anemo相关Boss",
+    "sourceEn": "Boss Drop: Anemo related bosses"
+  },
+  {
+    "id": "vayuda-turquoise-fragment",
+    "name": "自在松石断片",
+    "nameEn": "Vayuda Turquoise Fragment",
+    "type": "character-ascension",
+    "rarity": 3,
+    "source": "Boss掉落: Anemo相关Boss",
+    "sourceEn": "Boss Drop: Anemo related bosses"
+  },
+  {
+    "id": "vayuda-turquoise-chunk",
+    "name": "自在松石块",
+    "nameEn": "Vayuda Turquoise Chunk",
+    "type": "character-ascension",
+    "rarity": 4,
+    "source": "Boss掉落: Anemo相关Boss",
+    "sourceEn": "Boss Drop: Anemo related bosses"
+  },
+  {
+    "id": "vayuda-turquoise-gemstone",
+    "name": "自在松石宝石",
+    "nameEn": "Vayuda Turquoise Gemstone",
+    "type": "character-ascension",
+    "rarity": 5,
+    "source": "Boss掉落: Anemo相关Boss",
+    "sourceEn": "Boss Drop: Anemo related bosses"
+  },
+  {
+    "id": "prithiva-topaz-sliver",
+    "name": "坚牢黄玉碎屑",
+    "nameEn": "Prithiva Topaz Sliver",
+    "type": "character-ascension",
+    "rarity": 2,
+    "source": "Boss掉落: Geo相关Boss",
+    "sourceEn": "Boss Drop: Geo related bosses"
+  },
+  {
+    "id": "prithiva-topaz-fragment",
+    "name": "坚牢黄玉断片",
+    "nameEn": "Prithiva Topaz Fragment",
+    "type": "character-ascension",
+    "rarity": 3,
+    "source": "Boss掉落: Geo相关Boss",
+    "sourceEn": "Boss Drop: Geo related bosses"
+  },
+  {
+    "id": "prithiva-topaz-chunk",
+    "name": "坚牢黄玉块",
+    "nameEn": "Prithiva Topaz Chunk",
+    "type": "character-ascension",
+    "rarity": 4,
+    "source": "Boss掉落: Geo相关Boss",
+    "sourceEn": "Boss Drop: Geo related bosses"
+  },
+  {
+    "id": "prithiva-topaz-gemstone",
+    "name": "坚牢黄玉宝石",
+    "nameEn": "Prithiva Topaz Gemstone",
+    "type": "character-ascension",
+    "rarity": 5,
+    "source": "Boss掉落: Geo相关Boss",
+    "sourceEn": "Boss Drop: Geo related bosses"
+  },
+  {
+    "id": "teachings-of-freedom",
+    "name": "「自由」的教导",
+    "nameEn": "Teachings of Freedom",
+    "type": "talent-book",
+    "rarity": 2,
+    "source": "秘境: 蒙德 (周一/四/日)",
+    "sourceEn": "Domain: Mondstadt (周一/四/日)"
+  },
+  {
+    "id": "guide-of-freedom",
+    "name": "「自由」的指引",
+    "nameEn": "Guide to Freedom",
+    "type": "talent-book",
+    "rarity": 3,
+    "source": "秘境: 蒙德 (周一/四/日)",
+    "sourceEn": "Domain: Mondstadt (周一/四/日)"
+  },
+  {
+    "id": "philosophies-of-freedom",
+    "name": "「自由」的哲学",
+    "nameEn": "Philosophies of Freedom",
+    "type": "talent-book",
+    "rarity": 4,
+    "source": "秘境: 蒙德 (周一/四/日)",
+    "sourceEn": "Domain: Mondstadt (周一/四/日)"
+  },
+  {
+    "id": "teachings-of-resistance",
+    "name": "「抗争」的教导",
+    "nameEn": "Teachings of Resistance",
+    "type": "talent-book",
+    "rarity": 2,
+    "source": "秘境: 蒙德 (周二/五/日)",
+    "sourceEn": "Domain: Mondstadt (周二/五/日)"
+  },
+  {
+    "id": "guide-of-resistance",
+    "name": "「抗争」的指引",
+    "nameEn": "Guide to Resistance",
+    "type": "talent-book",
+    "rarity": 3,
+    "source": "秘境: 蒙德 (周二/五/日)",
+    "sourceEn": "Domain: Mondstadt (周二/五/日)"
+  },
+  {
+    "id": "philosophies-of-resistance",
+    "name": "「抗争」的哲学",
+    "nameEn": "Philosophies of Resistance",
+    "type": "talent-book",
+    "rarity": 4,
+    "source": "秘境: 蒙德 (周二/五/日)",
+    "sourceEn": "Domain: Mondstadt (周二/五/日)"
+  },
+  {
+    "id": "teachings-of-ballad",
+    "name": "「诗文」的教导",
+    "nameEn": "Teachings of Ballad",
+    "type": "talent-book",
+    "rarity": 2,
+    "source": "秘境: 蒙德 (周三/六/日)",
+    "sourceEn": "Domain: Mondstadt (周三/六/日)"
+  },
+  {
+    "id": "guide-of-ballad",
+    "name": "「诗文」的指引",
+    "nameEn": "Guide to Ballad",
+    "type": "talent-book",
+    "rarity": 3,
+    "source": "秘境: 蒙德 (周三/六/日)",
+    "sourceEn": "Domain: Mondstadt (周三/六/日)"
+  },
+  {
+    "id": "philosophies-of-ballad",
+    "name": "「诗文」的哲学",
+    "nameEn": "Philosophies of Ballad",
+    "type": "talent-book",
+    "rarity": 4,
+    "source": "秘境: 蒙德 (周三/六/日)",
+    "sourceEn": "Domain: Mondstadt (周三/六/日)"
+  },
+  {
+    "id": "teachings-of-prosperity",
+    "name": "「繁荣」的教导",
+    "nameEn": "Teachings of Prosperity",
+    "type": "talent-book",
+    "rarity": 2,
+    "source": "秘境: 璃月 (周一/四/日)",
+    "sourceEn": "Domain: Liyue (周一/四/日)"
+  },
+  {
+    "id": "guide-of-prosperity",
+    "name": "「繁荣」的指引",
+    "nameEn": "Guide to Prosperity",
+    "type": "talent-book",
+    "rarity": 3,
+    "source": "秘境: 璃月 (周一/四/日)",
+    "sourceEn": "Domain: Liyue (周一/四/日)"
+  },
+  {
+    "id": "philosophies-of-prosperity",
+    "name": "「繁荣」的哲学",
+    "nameEn": "Philosophies of Prosperity",
+    "type": "talent-book",
+    "rarity": 4,
+    "source": "秘境: 璃月 (周一/四/日)",
+    "sourceEn": "Domain: Liyue (周一/四/日)"
+  },
+  {
+    "id": "teachings-of-diligence",
+    "name": "「勤劳」的教导",
+    "nameEn": "Teachings of Diligence",
+    "type": "talent-book",
+    "rarity": 2,
+    "source": "秘境: 璃月 (周二/五/日)",
+    "sourceEn": "Domain: Liyue (周二/五/日)"
+  },
+  {
+    "id": "guide-of-diligence",
+    "name": "「勤劳」的指引",
+    "nameEn": "Guide to Diligence",
+    "type": "talent-book",
+    "rarity": 3,
+    "source": "秘境: 璃月 (周二/五/日)",
+    "sourceEn": "Domain: Liyue (周二/五/日)"
+  },
+  {
+    "id": "philosophies-of-diligence",
+    "name": "「勤劳」的哲学",
+    "nameEn": "Philosophies of Diligence",
+    "type": "talent-book",
+    "rarity": 4,
+    "source": "秘境: 璃月 (周二/五/日)",
+    "sourceEn": "Domain: Liyue (周二/五/日)"
+  },
+  {
+    "id": "teachings-of-gold",
+    "name": "「黄金」的教导",
+    "nameEn": "Teachings of Gold",
+    "type": "talent-book",
+    "rarity": 2,
+    "source": "秘境: 璃月 (周三/六/日)",
+    "sourceEn": "Domain: Liyue (周三/六/日)"
+  },
+  {
+    "id": "guide-of-gold",
+    "name": "「黄金」的指引",
+    "nameEn": "Guide to Gold",
+    "type": "talent-book",
+    "rarity": 3,
+    "source": "秘境: 璃月 (周三/六/日)",
+    "sourceEn": "Domain: Liyue (周三/六/日)"
+  },
+  {
+    "id": "philosophies-of-gold",
+    "name": "「黄金」的哲学",
+    "nameEn": "Philosophies of Gold",
+    "type": "talent-book",
+    "rarity": 4,
+    "source": "秘境: 璃月 (周三/六/日)",
+    "sourceEn": "Domain: Liyue (周三/六/日)"
+  },
+  {
+    "id": "teachings-of-transience",
+    "name": "「浮世」的教导",
+    "nameEn": "Teachings of Transience",
+    "type": "talent-book",
+    "rarity": 2,
+    "source": "秘境: 稻妻 (周一/四/日)",
+    "sourceEn": "Domain: Inazuma (周一/四/日)"
+  },
+  {
+    "id": "guide-of-transience",
+    "name": "「浮世」的指引",
+    "nameEn": "Guide to Transience",
+    "type": "talent-book",
+    "rarity": 3,
+    "source": "秘境: 稻妻 (周一/四/日)",
+    "sourceEn": "Domain: Inazuma (周一/四/日)"
+  },
+  {
+    "id": "philosophies-of-transience",
+    "name": "「浮世」的哲学",
+    "nameEn": "Philosophies of Transience",
+    "type": "talent-book",
+    "rarity": 4,
+    "source": "秘境: 稻妻 (周一/四/日)",
+    "sourceEn": "Domain: Inazuma (周一/四/日)"
+  },
+  {
+    "id": "teachings-of-elegance",
+    "name": "「风雅」的教导",
+    "nameEn": "Teachings of Elegance",
+    "type": "talent-book",
+    "rarity": 2,
+    "source": "秘境: 稻妻 (周二/五/日)",
+    "sourceEn": "Domain: Inazuma (周二/五/日)"
+  },
+  {
+    "id": "guide-of-elegance",
+    "name": "「风雅」的指引",
+    "nameEn": "Guide to Elegance",
+    "type": "talent-book",
+    "rarity": 3,
+    "source": "秘境: 稻妻 (周二/五/日)",
+    "sourceEn": "Domain: Inazuma (周二/五/日)"
+  },
+  {
+    "id": "philosophies-of-elegance",
+    "name": "「风雅」的哲学",
+    "nameEn": "Philosophies of Elegance",
+    "type": "talent-book",
+    "rarity": 4,
+    "source": "秘境: 稻妻 (周二/五/日)",
+    "sourceEn": "Domain: Inazuma (周二/五/日)"
+  },
+  {
+    "id": "teachings-of-light",
+    "name": "「天光」的教导",
+    "nameEn": "Teachings of Light",
+    "type": "talent-book",
+    "rarity": 2,
+    "source": "秘境: 稻妻 (周三/六/日)",
+    "sourceEn": "Domain: Inazuma (周三/六/日)"
+  },
+  {
+    "id": "guide-of-light",
+    "name": "「天光」的指引",
+    "nameEn": "Guide to Light",
+    "type": "talent-book",
+    "rarity": 3,
+    "source": "秘境: 稻妻 (周三/六/日)",
+    "sourceEn": "Domain: Inazuma (周三/六/日)"
+  },
+  {
+    "id": "philosophies-of-light",
+    "name": "「天光」的哲学",
+    "nameEn": "Philosophies of Light",
+    "type": "talent-book",
+    "rarity": 4,
+    "source": "秘境: 稻妻 (周三/六/日)",
+    "sourceEn": "Domain: Inazuma (周三/六/日)"
+  },
+  {
+    "id": "teachings-of-admonition",
+    "name": "「诤言」的教导",
+    "nameEn": "Teachings of Admonition",
+    "type": "talent-book",
+    "rarity": 2,
+    "source": "秘境: 须弥 (周一/四/日)",
+    "sourceEn": "Domain: Sumeru (周一/四/日)"
+  },
+  {
+    "id": "guide-of-admonition",
+    "name": "「诤言」的指引",
+    "nameEn": "Guide to Admonition",
+    "type": "talent-book",
+    "rarity": 3,
+    "source": "秘境: 须弥 (周一/四/日)",
+    "sourceEn": "Domain: Sumeru (周一/四/日)"
+  },
+  {
+    "id": "philosophies-of-admonition",
+    "name": "「诤言」的哲学",
+    "nameEn": "Philosophies of Admonition",
+    "type": "talent-book",
+    "rarity": 4,
+    "source": "秘境: 须弥 (周一/四/日)",
+    "sourceEn": "Domain: Sumeru (周一/四/日)"
+  },
+  {
+    "id": "teachings-of-ingenuity",
+    "name": "「巧思」的教导",
+    "nameEn": "Teachings of Ingenuity",
+    "type": "talent-book",
+    "rarity": 2,
+    "source": "秘境: 须弥 (周二/五/日)",
+    "sourceEn": "Domain: Sumeru (周二/五/日)"
+  },
+  {
+    "id": "guide-of-ingenuity",
+    "name": "「巧思」的指引",
+    "nameEn": "Guide to Ingenuity",
+    "type": "talent-book",
+    "rarity": 3,
+    "source": "秘境: 须弥 (周二/五/日)",
+    "sourceEn": "Domain: Sumeru (周二/五/日)"
+  },
+  {
+    "id": "philosophies-of-ingenuity",
+    "name": "「巧思」的哲学",
+    "nameEn": "Philosophies of Ingenuity",
+    "type": "talent-book",
+    "rarity": 4,
+    "source": "秘境: 须弥 (周二/五/日)",
+    "sourceEn": "Domain: Sumeru (周二/五/日)"
+  },
+  {
+    "id": "teachings-of-praxis",
+    "name": "「笃行」的教导",
+    "nameEn": "Teachings of Praxis",
+    "type": "talent-book",
+    "rarity": 2,
+    "source": "秘境: 须弥 (周三/六/日)",
+    "sourceEn": "Domain: Sumeru (周三/六/日)"
+  },
+  {
+    "id": "guide-of-praxis",
+    "name": "「笃行」的指引",
+    "nameEn": "Guide to Praxis",
+    "type": "talent-book",
+    "rarity": 3,
+    "source": "秘境: 须弥 (周三/六/日)",
+    "sourceEn": "Domain: Sumeru (周三/六/日)"
+  },
+  {
+    "id": "philosophies-of-praxis",
+    "name": "「笃行」的哲学",
+    "nameEn": "Philosophies of Praxis",
+    "type": "talent-book",
+    "rarity": 4,
+    "source": "秘境: 须弥 (周三/六/日)",
+    "sourceEn": "Domain: Sumeru (周三/六/日)"
+  },
+  {
+    "id": "teachings-of-equity",
+    "name": "「公平」的教导",
+    "nameEn": "Teachings of Equity",
+    "type": "talent-book",
+    "rarity": 2,
+    "source": "秘境: 枫丹 (周一/四/日)",
+    "sourceEn": "Domain: Fontaine (周一/四/日)"
+  },
+  {
+    "id": "guide-of-equity",
+    "name": "「公平」的指引",
+    "nameEn": "Guide to Equity",
+    "type": "talent-book",
+    "rarity": 3,
+    "source": "秘境: 枫丹 (周一/四/日)",
+    "sourceEn": "Domain: Fontaine (周一/四/日)"
+  },
+  {
+    "id": "philosophies-of-equity",
+    "name": "「公平」的哲学",
+    "nameEn": "Philosophies of Equity",
+    "type": "talent-book",
+    "rarity": 4,
+    "source": "秘境: 枫丹 (周一/四/日)",
+    "sourceEn": "Domain: Fontaine (周一/四/日)"
+  },
+  {
+    "id": "teachings-of-justice",
+    "name": "「正义」的教导",
+    "nameEn": "Teachings of Justice",
+    "type": "talent-book",
+    "rarity": 2,
+    "source": "秘境: 枫丹 (周二/五/日)",
+    "sourceEn": "Domain: Fontaine (周二/五/日)"
+  },
+  {
+    "id": "guide-of-justice",
+    "name": "「正义」的指引",
+    "nameEn": "Guide to Justice",
+    "type": "talent-book",
+    "rarity": 3,
+    "source": "秘境: 枫丹 (周二/五/日)",
+    "sourceEn": "Domain: Fontaine (周二/五/日)"
+  },
+  {
+    "id": "philosophies-of-justice",
+    "name": "「正义」的哲学",
+    "nameEn": "Philosophies of Justice",
+    "type": "talent-book",
+    "rarity": 4,
+    "source": "秘境: 枫丹 (周二/五/日)",
+    "sourceEn": "Domain: Fontaine (周二/五/日)"
+  },
+  {
+    "id": "teachings-of-order",
+    "name": "「秩序」的教导",
+    "nameEn": "Teachings of Order",
+    "type": "talent-book",
+    "rarity": 2,
+    "source": "秘境: 枫丹 (周三/六/日)",
+    "sourceEn": "Domain: Fontaine (周三/六/日)"
+  },
+  {
+    "id": "guide-of-order",
+    "name": "「秩序」的指引",
+    "nameEn": "Guide to Order",
+    "type": "talent-book",
+    "rarity": 3,
+    "source": "秘境: 枫丹 (周三/六/日)",
+    "sourceEn": "Domain: Fontaine (周三/六/日)"
+  },
+  {
+    "id": "philosophies-of-order",
+    "name": "「秩序」的哲学",
+    "nameEn": "Philosophies of Order",
+    "type": "talent-book",
+    "rarity": 4,
+    "source": "秘境: 枫丹 (周三/六/日)",
+    "sourceEn": "Domain: Fontaine (周三/六/日)"
+  },
+  {
+    "id": "dvalins-sigh",
+    "name": "东风之息",
+    "nameEn": "Dvalin's Sigh",
+    "type": "weekly-boss",
+    "rarity": 5,
+    "source": "周本: Stormterror",
+    "sourceEn": "Weekly Boss: Stormterror"
+  },
+  {
+    "id": "dvalins-claw",
+    "name": "东风之爪",
+    "nameEn": "Dvalin's Claw",
+    "type": "weekly-boss",
+    "rarity": 5,
+    "source": "周本: Stormterror",
+    "sourceEn": "Weekly Boss: Stormterror"
+  },
+  {
+    "id": "dvalins-plume",
+    "name": "东风之翎",
+    "nameEn": "Dvalin's Plume",
+    "type": "weekly-boss",
+    "rarity": 5,
+    "source": "周本: Stormterror",
+    "sourceEn": "Weekly Boss: Stormterror"
+  },
+  {
+    "id": "tail-of-boreas",
+    "name": "北风的尾羽",
+    "nameEn": "Tail of Boreas",
+    "type": "weekly-boss",
+    "rarity": 5,
+    "source": "周本: Lupus Boreas",
+    "sourceEn": "Weekly Boss: Lupus Boreas"
+  },
+  {
+    "id": "ring-of-boreas",
+    "name": "北风的戒指",
+    "nameEn": "Ring of Boreas",
+    "type": "weekly-boss",
+    "rarity": 5,
+    "source": "周本: Lupus Boreas",
+    "sourceEn": "Weekly Boss: Lupus Boreas"
+  },
+  {
+    "id": "spirit-locket-of-boreas",
+    "name": "北风的魂匣",
+    "nameEn": "Spirit Locket of Boreas",
+    "type": "weekly-boss",
+    "rarity": 5,
+    "source": "周本: Lupus Boreas",
+    "sourceEn": "Weekly Boss: Lupus Boreas"
+  },
+  {
+    "id": "tusk-of-monoceros-caeli",
+    "name": "吞天之鲸·只角",
+    "nameEn": "Tusk of Monoceros Caeli",
+    "type": "weekly-boss",
+    "rarity": 5,
+    "source": "周本: Childe",
+    "sourceEn": "Weekly Boss: Childe"
+  },
+  {
+    "id": "shard-of-a-foul-legacy",
+    "name": "魔王之刃·残片",
+    "nameEn": "Shard of a Foul Legacy",
+    "type": "weekly-boss",
+    "rarity": 5,
+    "source": "周本: Childe",
+    "sourceEn": "Weekly Boss: Childe"
+  },
+  {
+    "id": "shadow-of-the-warrior",
+    "name": "武炼之魂·孤影",
+    "nameEn": "Shadow of the Warrior",
+    "type": "weekly-boss",
+    "rarity": 5,
+    "source": "周本: Childe",
+    "sourceEn": "Weekly Boss: Childe"
+  },
+  {
+    "id": "dragon-lords-crown",
+    "name": "龙之王冠",
+    "nameEn": "Dragon Lord's Crown",
+    "type": "weekly-boss",
+    "rarity": 5,
+    "source": "周本: Azhdaha",
+    "sourceEn": "Weekly Boss: Azhdaha"
+  },
+  {
+    "id": "bloodjade-branch",
+    "name": "血玉之枝",
+    "nameEn": "Bloodjade Branch",
+    "type": "weekly-boss",
+    "rarity": 5,
+    "source": "周本: Azhdaha",
+    "sourceEn": "Weekly Boss: Azhdaha"
+  },
+  {
+    "id": "gilded-scale",
+    "name": "鎏金之鳞",
+    "nameEn": "Gilded Scale",
+    "type": "weekly-boss",
+    "rarity": 5,
+    "source": "周本: Azhdaha",
+    "sourceEn": "Weekly Boss: Azhdaha"
+  },
+  {
+    "id": "molten-moment",
+    "name": "熔毁之刻",
+    "nameEn": "Molten Moment",
+    "type": "weekly-boss",
+    "rarity": 5,
+    "source": "周本: Signora",
+    "sourceEn": "Weekly Boss: Signora"
+  },
+  {
+    "id": "hellfire-butterfly",
+    "name": "狱火之蝶",
+    "nameEn": "Hellfire Butterfly",
+    "type": "weekly-boss",
+    "rarity": 5,
+    "source": "周本: Signora",
+    "sourceEn": "Weekly Boss: Signora"
+  },
+  {
+    "id": "ashen-heart",
+    "name": "灰烬之心",
+    "nameEn": "Ashen Heart",
+    "type": "weekly-boss",
+    "rarity": 5,
+    "source": "周本: Signora",
+    "sourceEn": "Weekly Boss: Signora"
+  },
+  {
+    "id": "the-meaning-of-aeons",
+    "name": "万劫之真意",
+    "nameEn": "The Meaning of Aeons",
+    "type": "weekly-boss",
+    "rarity": 5,
+    "source": "周本: Raiden Shogun",
+    "sourceEn": "Weekly Boss: Raiden Shogun"
+  },
+  {
+    "id": "tears-of-the-calamitous-god",
+    "name": "祸神之禊泪",
+    "nameEn": "Tears of the Calamitous God",
+    "type": "weekly-boss",
+    "rarity": 5,
+    "source": "周本: Raiden Shogun",
+    "sourceEn": "Weekly Boss: Raiden Shogun"
+  },
+  {
+    "id": "mudra-of-the-malefic-general",
+    "name": "凶将之手眼",
+    "nameEn": "Mudra of the Malefic General",
+    "type": "weekly-boss",
+    "rarity": 5,
+    "source": "周本: Raiden Shogun",
+    "sourceEn": "Weekly Boss: Raiden Shogun"
+  },
+  {
+    "id": "everflame-seed",
+    "name": "常燃火种",
+    "nameEn": "Everflame Seed",
+    "type": "boss-drop",
+    "rarity": 5,
+    "source": "Boss掉落: Pyro Regisvine",
+    "sourceEn": "Boss Drop: Pyro Regisvine"
+  },
+  {
+    "id": "cleansing-heart",
+    "name": "涤净青莲",
+    "nameEn": "Cleansing Heart",
+    "type": "boss-drop",
+    "rarity": 5,
+    "source": "Boss掉落: Rhodeia of Loch",
+    "sourceEn": "Boss Drop: Rhodeia of Loch"
+  },
+  {
+    "id": "lightning-prism",
+    "name": "雷光棱镜",
+    "nameEn": "Lightning Prism",
+    "type": "boss-drop",
+    "rarity": 5,
+    "source": "Boss掉落: Electro Hypostasis",
+    "sourceEn": "Boss Drop: Electro Hypostasis"
+  },
+  {
+    "id": "hoarfrost-core",
+    "name": "极寒之核",
+    "nameEn": "Hoarfrost Core",
+    "type": "boss-drop",
+    "rarity": 5,
+    "source": "Boss掉落: Cryo Regisvine",
+    "sourceEn": "Boss Drop: Cryo Regisvine"
+  },
+  {
+    "id": "basalt-petrification",
+    "name": "玄岩之塔",
+    "nameEn": "Basalt Petrification",
+    "type": "boss-drop",
+    "rarity": 5,
+    "source": "Boss掉落: Geo Hypostasis",
+    "sourceEn": "Boss Drop: Geo Hypostasis"
+  },
+  {
+    "id": "perpetual-heart",
+    "name": "永续机心",
+    "nameEn": "Perpetual Heart",
+    "type": "boss-drop",
+    "rarity": 5,
+    "source": "Boss掉落: Perpetual Mechanical Array",
+    "sourceEn": "Boss Drop: Perpetual Mechanical Array"
+  },
+  {
+    "id": "storm-beads",
+    "name": "雷霆数珠",
+    "nameEn": "Storm Beads",
+    "type": "boss-drop",
+    "rarity": 5,
+    "source": "Boss掉落: Thunder Manifestation",
+    "sourceEn": "Boss Drop: Thunder Manifestation"
+  },
+  {
+    "id": "dew-of-repudiation",
+    "name": "排异之露",
+    "nameEn": "Dew of Repudiation",
+    "type": "boss-drop",
+    "rarity": 5,
+    "source": "Boss掉落: Hydro Hypostasis",
+    "sourceEn": "Boss Drop: Hydro Hypostasis"
+  },
+  {
+    "id": "dragonheirs-false-fin",
+    "name": "龙嗣伪鳍",
+    "nameEn": "Dragonheir's False Fin",
+    "type": "boss-drop",
+    "rarity": 5,
+    "source": "Boss掉落: Bathysmal Vishap Herd",
+    "sourceEn": "Boss Drop: Bathysmal Vishap Herd"
+  },
+  {
+    "id": "smaragdistite-jade-branch",
+    "name": "翠翎恐蕈之核",
+    "nameEn": "Majestic Hooked Beak",
+    "type": "boss-drop",
+    "rarity": 5,
+    "source": "Boss掉落: Jadeplume Terrorshroom",
+    "sourceEn": "Boss Drop: Jadeplume Terrorshroom"
+  },
+  {
+    "id": "cecilia",
+    "name": "塞西莉亚花",
+    "nameEn": "Cecilia",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 蒙德",
+    "sourceEn": "Field Collection: Mondstadt"
+  },
+  {
+    "id": "dandelion-seed",
+    "name": "蒲公英籽",
+    "nameEn": "Dandelion Seed",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 蒙德",
+    "sourceEn": "Field Collection: Mondstadt"
+  },
+  {
+    "id": "small-lamp-grass",
+    "name": "小灯草",
+    "nameEn": "Small Lamp Grass",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 蒙德",
+    "sourceEn": "Field Collection: Mondstadt"
+  },
+  {
+    "id": "valberry",
+    "name": "树莓",
+    "nameEn": "Valberry",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 蒙德",
+    "sourceEn": "Field Collection: Mondstadt"
+  },
+  {
+    "id": "windwheel-aster",
+    "name": "风车菊",
+    "nameEn": "Windwheel Aster",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 蒙德",
+    "sourceEn": "Field Collection: Mondstadt"
+  },
+  {
+    "id": "wolfhook",
+    "name": "钩钩果",
+    "nameEn": "Wolfhook",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 蒙德",
+    "sourceEn": "Field Collection: Mondstadt"
+  },
+  {
+    "id": "calla-lily",
+    "name": "嘟嘟莲",
+    "nameEn": "Calla Lily",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 蒙德",
+    "sourceEn": "Field Collection: Mondstadt"
+  },
+  {
+    "id": "philanemo-mushroom",
+    "name": "慕风蘑菇",
+    "nameEn": "Philanemo Mushroom",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 蒙德",
+    "sourceEn": "Field Collection: Mondstadt"
+  },
+  {
+    "id": "cor-lapis",
+    "name": "石珀",
+    "nameEn": "Cor Lapis",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 璃月",
+    "sourceEn": "Field Collection: Liyue"
+  },
+  {
+    "id": "glaze-lily",
+    "name": "琉璃百合",
+    "nameEn": "Glaze Lily",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 璃月",
+    "sourceEn": "Field Collection: Liyue"
+  },
+  {
+    "id": "jueyun-chili",
+    "name": "绝云椒椒",
+    "nameEn": "Jueyun Chili",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 璃月",
+    "sourceEn": "Field Collection: Liyue"
+  },
+  {
+    "id": "noctilucous-jade",
+    "name": "夜泊石",
+    "nameEn": "Noctilucous Jade",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 璃月",
+    "sourceEn": "Field Collection: Liyue"
+  },
+  {
+    "id": "qingxin",
+    "name": "清心",
+    "nameEn": "Qingxin",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 璃月",
+    "sourceEn": "Field Collection: Liyue"
+  },
+  {
+    "id": "silk-flower",
+    "name": "霓裳花",
+    "nameEn": "Silk Flower",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 璃月",
+    "sourceEn": "Field Collection: Liyue"
+  },
+  {
+    "id": "starconch",
+    "name": "星螺",
+    "nameEn": "Starconch",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 璃月",
+    "sourceEn": "Field Collection: Liyue"
+  },
+  {
+    "id": "violetgrass",
+    "name": "琉璃袋",
+    "nameEn": "Violetgrass",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 璃月",
+    "sourceEn": "Field Collection: Liyue"
+  },
+  {
+    "id": "amakumo-fruit",
+    "name": "天云草实",
+    "nameEn": "Amakumo Fruit",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 稻妻",
+    "sourceEn": "Field Collection: Inazuma"
+  },
+  {
+    "id": "crystal-marrow",
+    "name": "晶化骨髓",
+    "nameEn": "Crystal Marrow",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 稻妻",
+    "sourceEn": "Field Collection: Inazuma"
+  },
+  {
+    "id": "dendrobium",
+    "name": "血斛",
+    "nameEn": "Dendrobium",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 稻妻",
+    "sourceEn": "Field Collection: Inazuma"
+  },
+  {
+    "id": "fluorescent-fungus",
+    "name": "荧光粉",
+    "nameEn": "Fluorescent Fungus",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 稻妻",
+    "sourceEn": "Field Collection: Inazuma"
+  },
+  {
+    "id": "naku-weed",
+    "name": "鸣草",
+    "nameEn": "Naku Weed",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 稻妻",
+    "sourceEn": "Field Collection: Inazuma"
+  },
+  {
+    "id": "onikabuto",
+    "name": "鬼兜虫",
+    "nameEn": "Onikabuto",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 稻妻",
+    "sourceEn": "Field Collection: Inazuma"
+  },
+  {
+    "id": "sakura-bloom",
+    "name": "绯樱绣球",
+    "nameEn": "Sakura Bloom",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 稻妻",
+    "sourceEn": "Field Collection: Inazuma"
+  },
+  {
+    "id": "sea-ganoderma",
+    "name": "海灵芝",
+    "nameEn": "Sea Ganoderma",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 稻妻",
+    "sourceEn": "Field Collection: Inazuma"
+  },
+  {
+    "id": "ajilenakh-nut",
+    "name": "枣椰",
+    "nameEn": "Ajilenakh Nut",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 须弥",
+    "sourceEn": "Field Collection: Sumeru"
+  },
+  {
+    "id": "kalpalata-lotus",
+    "name": "劫波莲",
+    "nameEn": "Kalpalata Lotus",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 须弥",
+    "sourceEn": "Field Collection: Sumeru"
+  },
+  {
+    "id": "padisarah",
+    "name": "帕蒂沙兰",
+    "nameEn": "Padisarah",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 须弥",
+    "sourceEn": "Field Collection: Sumeru"
+  },
+  {
+    "id": "rukkhashava-mushroom",
+    "name": "树王圣体菇",
+    "nameEn": "Rukkhashava Mushroom",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 须弥",
+    "sourceEn": "Field Collection: Sumeru"
+  },
+  {
+    "id": "sand-grease-pupa",
+    "name": "沙脂蛹",
+    "nameEn": "Sand Grease Pupa",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 须弥",
+    "sourceEn": "Field Collection: Sumeru"
+  },
+  {
+    "id": "scarab",
+    "name": "圣甲虫",
+    "nameEn": "Scarab",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 须弥",
+    "sourceEn": "Field Collection: Sumeru"
+  },
+  {
+    "id": "viparyas",
+    "name": "毗钵耶",
+    "nameEn": "Viparyas",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 须弥",
+    "sourceEn": "Field Collection: Sumeru"
+  },
+  {
+    "id": "zaytun-peach",
+    "name": "须弥桃",
+    "nameEn": "Zaytun Peach",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 须弥",
+    "sourceEn": "Field Collection: Sumeru"
+  },
+  {
+    "id": "beryl-conch",
+    "name": "苍晶螺",
+    "nameEn": "Beryl Conch",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 枫丹",
+    "sourceEn": "Field Collection: Fontaine"
+  },
+  {
+    "id": "lumitoile",
+    "name": "灵光珠",
+    "nameEn": "Lumitoile",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 枫丹",
+    "sourceEn": "Field Collection: Fontaine"
+  },
+  {
+    "id": "marcotte",
+    "name": "茉洁草",
+    "nameEn": "Marcotte",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 枫丹",
+    "sourceEn": "Field Collection: Fontaine"
+  },
+  {
+    "id": "rainbow-rose",
+    "name": "虹彩蔷薇",
+    "nameEn": "Rainbow Rose",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 枫丹",
+    "sourceEn": "Field Collection: Fontaine"
+  },
+  {
+    "id": "subdetection-unit",
+    "name": "区域侦测模块",
+    "nameEn": "Subdetection Unit",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 枫丹",
+    "sourceEn": "Field Collection: Fontaine"
+  },
+  {
+    "id": "bulle-fruit",
+    "name": "泡泡桔",
+    "nameEn": "Bulle Fruit",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 枫丹",
+    "sourceEn": "Field Collection: Fontaine"
+  },
+  {
+    "id": "saurian-claw",
+    "name": "龙爪",
+    "nameEn": "Saurian Claw",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 纳塔",
+    "sourceEn": "Field Collection: Natlan"
+  },
+  {
+    "id": "quenching-weed",
+    "name": "熄焰草",
+    "nameEn": "Quenching Weed",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 纳塔",
+    "sourceEn": "Field Collection: Natlan"
+  },
+  {
+    "id": "sparkclaw-fruit",
+    "name": "雷爪果",
+    "nameEn": "Sparkclaw Fruit",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 纳塔",
+    "sourceEn": "Field Collection: Natlan"
+  },
+  {
+    "id": "embercore-flower",
+    "name": "焰心花",
+    "nameEn": "Embercore Flower",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 纳塔",
+    "sourceEn": "Field Collection: Natlan"
+  },
+  {
+    "id": "slime-condensate",
+    "name": "史莱姆凝液",
+    "nameEn": "Slime Condensate",
+    "type": "common-drop",
+    "rarity": 1,
+    "source": "怪物掉落: 史莱姆",
+    "sourceEn": "Enemy Drop: Slimes"
+  },
+  {
+    "id": "slime-secretions",
+    "name": "史莱姆清",
+    "nameEn": "Slime Secretions",
+    "type": "common-drop",
+    "rarity": 2,
+    "source": "怪物掉落: 史莱姆",
+    "sourceEn": "Enemy Drop: Slimes"
+  },
+  {
+    "id": "slime-concentrate",
+    "name": "史莱姆原浆",
+    "nameEn": "Slime Concentrate",
+    "type": "common-drop",
+    "rarity": 3,
+    "source": "怪物掉落: 史莱姆",
+    "sourceEn": "Enemy Drop: Slimes"
+  },
+  {
+    "id": "damaged-mask",
+    "name": "破损的面具",
+    "nameEn": "Damaged Mask",
+    "type": "common-drop",
+    "rarity": 1,
+    "source": "怪物掉落: 丘丘人",
+    "sourceEn": "Enemy Drop: Hilichurls"
+  },
+  {
+    "id": "stained-mask",
+    "name": "污秽的面具",
+    "nameEn": "Stained Mask",
+    "type": "common-drop",
+    "rarity": 2,
+    "source": "怪物掉落: 丘丘人",
+    "sourceEn": "Enemy Drop: Hilichurls"
+  },
+  {
+    "id": "ominous-mask",
+    "name": "不祥的面具",
+    "nameEn": "Ominous Mask",
+    "type": "common-drop",
+    "rarity": 3,
+    "source": "怪物掉落: 丘丘人",
+    "sourceEn": "Enemy Drop: Hilichurls"
+  },
+  {
+    "id": "divining-scroll",
+    "name": "导能的绘卷",
+    "nameEn": "Divining Scroll",
+    "type": "common-drop",
+    "rarity": 2,
+    "source": "怪物掉落: 萨满",
+    "sourceEn": "Enemy Drop: Samachurls"
+  },
+  {
+    "id": "concealing-scroll",
+    "name": "封魔的绘卷",
+    "nameEn": "Sealed Scroll",
+    "type": "common-drop",
+    "rarity": 3,
+    "source": "怪物掉落: 萨满",
+    "sourceEn": "Enemy Drop: Samachurls"
+  },
+  {
+    "id": "forbidden-curse-scroll",
+    "name": "禁咒的绘卷",
+    "nameEn": "Forbidden Curse Scroll",
+    "type": "common-drop",
+    "rarity": 4,
+    "source": "怪物掉落: 萨满",
+    "sourceEn": "Enemy Drop: Samachurls"
+  },
+  {
+    "id": "recruits-insignia",
+    "name": "寻宝鸦印",
+    "nameEn": "Recruit's Insignia",
+    "type": "common-drop",
+    "rarity": 1,
+    "source": "怪物掉落: 盗宝团",
+    "sourceEn": "Enemy Drop: Treasure Hoarders"
+  },
+  {
+    "id": "sergeants-insignia",
+    "name": "藏宝鸦印",
+    "nameEn": "Sergeant's Insignia",
+    "type": "common-drop",
+    "rarity": 2,
+    "source": "怪物掉落: 盗宝团",
+    "sourceEn": "Enemy Drop: Treasure Hoarders"
+  },
+  {
+    "id": "lieutenants-insignia",
+    "name": "攫金鸦印",
+    "nameEn": "Lieutenant's Insignia",
+    "type": "common-drop",
+    "rarity": 3,
+    "source": "怪物掉落: 盗宝团",
+    "sourceEn": "Enemy Drop: Treasure Hoarders"
+  },
+  {
+    "id": "hunters-sacrificial-knife",
+    "name": "猎兵祭刀",
+    "nameEn": "Hunter's Sacrificial Knife",
+    "type": "common-drop",
+    "rarity": 2,
+    "source": "怪物掉落: 愚人众",
+    "sourceEn": "Enemy Drop: Fatui"
+  },
+  {
+    "id": "agents-sacrificial-knife",
+    "name": "特工祭刀",
+    "nameEn": "Agent's Sacrificial Knife",
+    "type": "common-drop",
+    "rarity": 3,
+    "source": "怪物掉落: 愚人众",
+    "sourceEn": "Enemy Drop: Fatui"
+  },
+  {
+    "id": "inspectors-sacrificial-knife",
+    "name": "督查长祭刀",
+    "nameEn": "Inspector's Sacrificial Knife",
+    "type": "common-drop",
+    "rarity": 4,
+    "source": "怪物掉落: 愚人众",
+    "sourceEn": "Enemy Drop: Fatui"
+  },
+  {
+    "id": "old-handguard",
+    "name": "破缺的刀镡",
+    "nameEn": "Old Handguard",
+    "type": "common-drop",
+    "rarity": 2,
+    "source": "怪物掉落: 野伏",
+    "sourceEn": "Enemy Drop: Nobushi"
+  },
+  {
+    "id": "kageuchi-handguard",
+    "name": "影打的刀镡",
+    "nameEn": "Kageuchi Handguard",
+    "type": "common-drop",
+    "rarity": 3,
+    "source": "怪物掉落: 野伏",
+    "sourceEn": "Enemy Drop: Nobushi"
+  },
+  {
+    "id": "famous-handguard",
+    "name": "名刀镡",
+    "nameEn": "Famous Handguard",
+    "type": "common-drop",
+    "rarity": 4,
+    "source": "怪物掉落: 野伏",
+    "sourceEn": "Enemy Drop: Nobushi"
+  },
+  {
+    "id": "floating-core",
+    "name": "浮游干核",
+    "nameEn": "Spectral Husk",
+    "type": "common-drop",
+    "rarity": 2,
+    "source": "怪物掉落: 漂浮灵",
+    "sourceEn": "Enemy Drop: Specters"
+  },
+  {
+    "id": "suffused-core",
+    "name": "浮游幽核",
+    "nameEn": "Spectral Heart",
+    "type": "common-drop",
+    "rarity": 3,
+    "source": "怪物掉落: 漂浮灵",
+    "sourceEn": "Enemy Drop: Specters"
+  },
+  {
+    "id": "crystallizing-core",
+    "name": "浮游晶化核",
+    "nameEn": "Spectral Nucleus",
+    "type": "common-drop",
+    "rarity": 4,
+    "source": "怪物掉落: 漂浮灵",
+    "sourceEn": "Enemy Drop: Specters"
+  },
+  {
+    "id": "inactivated-fungal-nucleus",
+    "name": "失活菌核",
+    "nameEn": "Inactivated Fungal Nucleus",
+    "type": "common-drop",
+    "rarity": 2,
+    "source": "怪物掉落: 蕈兽",
+    "sourceEn": "Enemy Drop: Fungi"
+  },
+  {
+    "id": "dormant-fungal-nucleus",
+    "name": "休眠菌核",
+    "nameEn": "Dormant Fungal Nucleus",
+    "type": "common-drop",
+    "rarity": 3,
+    "source": "怪物掉落: 蕈兽",
+    "sourceEn": "Enemy Drop: Fungi"
+  },
+  {
+    "id": "robust-fungal-nucleus",
+    "name": "茁壮菌核",
+    "nameEn": "Robust Fungal Nucleus",
+    "type": "common-drop",
+    "rarity": 4,
+    "source": "怪物掉落: 蕈兽",
+    "sourceEn": "Enemy Drop: Fungi"
+  },
+  {
+    "id": "meshing-gear",
+    "name": "机关齿轮",
+    "nameEn": "Meshing Gear",
+    "type": "common-drop",
+    "rarity": 2,
+    "source": "怪物掉落: 发条机关",
+    "sourceEn": "Enemy Drop: Clockwork Meka"
+  },
+  {
+    "id": "mechanical-spur-gear",
+    "name": "机关促动齿轮",
+    "nameEn": "Mechanical Spur Gear",
+    "type": "common-drop",
+    "rarity": 3,
+    "source": "怪物掉落: 发条机关",
+    "sourceEn": "Enemy Drop: Clockwork Meka"
+  },
+  {
+    "id": "artificed-dynamic-gear",
+    "name": "奇特动力齿轮",
+    "nameEn": "Artificed Dynamic Gear",
+    "type": "common-drop",
+    "rarity": 4,
+    "source": "怪物掉落: 发条机关",
+    "sourceEn": "Enemy Drop: Clockwork Meka"
+  },
+  {
+    "id": "firm-arrowhead",
+    "name": "牢固的箭头",
+    "nameEn": "Firm Arrowhead",
+    "type": "common-drop",
+    "rarity": 1,
+    "source": "怪物掉落: 射手丘丘人",
+    "sourceEn": "Enemy Drop: Hilichurl Shooters"
+  },
+  {
+    "id": "sharp-arrowhead",
+    "name": "锐利的箭头",
+    "nameEn": "Sharp Arrowhead",
+    "type": "common-drop",
+    "rarity": 2,
+    "source": "怪物掉落: 射手丘丘人",
+    "sourceEn": "Enemy Drop: Hilichurl Shooters"
+  },
+  {
+    "id": "weathered-arrowhead",
+    "name": "历战的箭头",
+    "nameEn": "Weathered Arrowhead",
+    "type": "common-drop",
+    "rarity": 3,
+    "source": "怪物掉落: 射手丘丘人",
+    "sourceEn": "Enemy Drop: Hilichurl Shooters"
+  },
+  {
+    "id": "whopperflower-nectar",
+    "name": "骗骗花蜜",
+    "nameEn": "Whopperflower Nectar",
+    "type": "common-drop",
+    "rarity": 1,
+    "source": "怪物掉落: 骗骗花",
+    "sourceEn": "Enemy Drop: Whopperflowers"
+  },
+  {
+    "id": "shimmering-nectar",
+    "name": "微光花蜜",
+    "nameEn": "Shimmering Nectar",
+    "type": "common-drop",
+    "rarity": 2,
+    "source": "怪物掉落: 骗骗花",
+    "sourceEn": "Enemy Drop: Whopperflowers"
+  },
+  {
+    "id": "energy-nectar",
+    "name": "原素花蜜",
+    "nameEn": "Energy Nectar",
+    "type": "common-drop",
+    "rarity": 3,
+    "source": "怪物掉落: 骗骗花",
+    "sourceEn": "Enemy Drop: Whopperflowers"
+  },
+  {
+    "id": "mora",
+    "name": "摩拉",
+    "nameEn": "Mora",
+    "type": "currency",
+    "rarity": 3,
+    "source": "游戏内获取",
+    "sourceEn": "In-game acquisition"
+  },
+  {
+    "id": "primogem",
+    "name": "原石",
+    "nameEn": "Primogem",
+    "type": "currency",
+    "rarity": 5,
+    "source": "游戏内获取",
+    "sourceEn": "In-game acquisition"
+  },
+  {
+    "id": "intertwined-fate",
+    "name": "纠缠之缘",
+    "nameEn": "Intertwined Fate",
+    "type": "currency",
+    "rarity": 5,
+    "source": "游戏内获取",
+    "sourceEn": "In-game acquisition"
+  },
+  {
+    "id": "acquaint-fate",
+    "name": "相遇之缘",
+    "nameEn": "Acquaint Fate",
+    "type": "currency",
+    "rarity": 5,
+    "source": "游戏内获取",
+    "sourceEn": "In-game acquisition"
+  },
+  {
+    "id": "genesis-crystal",
+    "name": "创世结晶",
+    "nameEn": "Genesis Crystal",
+    "type": "currency",
+    "rarity": 5,
+    "source": "游戏内获取",
+    "sourceEn": "In-game acquisition"
+  },
+  {
+    "id": "original-resin",
+    "name": "原粹树脂",
+    "nameEn": "Original Resin",
+    "type": "currency",
+    "rarity": 3,
+    "source": "游戏内获取",
+    "sourceEn": "In-game acquisition"
+  },
+  {
+    "id": "wanderers-advice",
+    "name": "流浪者的经验",
+    "nameEn": "Wanderer's Advice",
+    "type": "exp-material",
+    "rarity": 2,
+    "source": "活动奖励、宝箱、任务",
+    "sourceEn": "Events, Chests, Quests"
+  },
+  {
+    "id": "adventurers-experience",
+    "name": "冒险家的经验",
+    "nameEn": "Adventurer's Experience",
+    "type": "exp-material",
+    "rarity": 3,
+    "source": "活动奖励、宝箱、任务",
+    "sourceEn": "Events, Chests, Quests"
+  },
+  {
+    "id": "heros-wit",
+    "name": "大英雄的经验",
+    "nameEn": "Hero's Wit",
+    "type": "exp-material",
+    "rarity": 4,
+    "source": "活动奖励、宝箱、任务",
+    "sourceEn": "Events, Chests, Quests"
+  }
+]

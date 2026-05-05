@@ -56,6 +56,7 @@ export const GAMES: Record<GameId, GameModule> = {
       calculator: true,
       map: true,
       guides: true,
+      artifacts: true,
     },
   },
   starrail: {
@@ -202,6 +203,7 @@ export const CATEGORY_LABELS: Record<string, Record<SupportedLocale, string>> = 
   'redeem-codes': { zh: '兑换码', en: 'Redeem Codes', ja: '交換コード' },
   gacha: { zh: '祈愿', en: 'Gacha', ja: 'ガチャ' },
   anomalies: { zh: '异象', en: 'Anomalies', ja: 'アノマリー' },
+  artifacts: { zh: '圣遗物', en: 'Artifacts', ja: '聖遺物' },
   news: { zh: '资讯', en: 'News', ja: 'ニュース' },
   compare: { zh: '对比', en: 'Compare', ja: '比較' },
 };

@@ -46,6 +46,7 @@ export interface GameRouteConfig {
   'redeem-codes'?: boolean;
   gacha?: boolean;
   anomalies?: boolean;
+  artifacts?: boolean;
 }
 
 export interface GameModule {
