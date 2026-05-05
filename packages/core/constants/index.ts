@@ -169,6 +169,7 @@ export const GAMES: Record<GameId, GameModule> = {
       'disk-sets': true,
       'redeem-codes': true,
       gacha: true,
+      anomalies: true,
     },
   },
 } as const;
@@ -200,6 +201,7 @@ export const CATEGORY_LABELS: Record<string, Record<SupportedLocale, string>> = 
   'disk-sets': { zh: '光盘套装', en: 'Disk Sets', ja: 'ディスクセット' },
   'redeem-codes': { zh: '兑换码', en: 'Redeem Codes', ja: '交換コード' },
   gacha: { zh: '祈愿', en: 'Gacha', ja: 'ガチャ' },
+  anomalies: { zh: '异象', en: 'Anomalies', ja: 'アノマリー' },
   news: { zh: '资讯', en: 'News', ja: 'ニュース' },
   compare: { zh: '对比', en: 'Compare', ja: '比較' },
 };

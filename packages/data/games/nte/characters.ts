@@ -2,9 +2,6 @@ import type { SupportedLocale, Character } from '@gachia/core';
 import type { NteCharacter } from './types';
 import { localeStr } from './types';
 import rawCharacters from './raw-characters.json';
-import rawImageSources from './raw-image-sources.json';
-
-const imageMap = ((rawImageSources as Record<string, unknown>).characters ?? {}) as Record<string, string>;
 
 const allCharacters: NteCharacter[] = rawCharacters as unknown as NteCharacter[];
 
@@ -22,7 +19,7 @@ export function getNteCharacterDescription(char: NteCharacter, locale: Supported
 }
 
 export function getNteCharacterImage(char: NteCharacter): string {
-  return imageMap[char.id] || '';
+  return `/images/characters/${char.id}.webp`;
 }
 
 export function getNteCharacterById(id: string): NteCharacter | undefined {
@@ -42,9 +39,9 @@ export const characters: Character[] = nteCharacters.map((char) => ({
   weaponType: char.weaponEn,
   description: { zh: char.description, en: char.descriptionEn, ja: char.descriptionEn },
   images: {
-    icon: imageMap[char.id] || '',
-    card: imageMap[char.id] || '',
-    gachaSplash: imageMap[char.id] || '',
+    icon: `/images/characters/${char.id}.webp`,
+    card: `/images/characters/${char.id}.webp`,
+    gachaSplash: `/images/characters/${char.id}.webp`,
   },
   stats: { baseHp: [], baseAtk: [], baseDef: [] },
   materials: [],

@@ -45,6 +45,7 @@ export interface GameRouteConfig {
   'disk-sets'?: boolean;
   'redeem-codes'?: boolean;
   gacha?: boolean;
+  anomalies?: boolean;
 }
 
 export interface GameModule {

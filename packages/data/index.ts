@@ -76,6 +76,14 @@ export {
 } from './games/nte/gacha';
 export type { NteGachaBanner, NteGachaFaq } from './games/nte/gacha';
 
+// NTE anomalies (bosses)
+export {
+  anomalies as nteAnomalies,
+  getAnomalyName,
+  getAnomalyByType,
+} from './games/nte/anomalies';
+export type { NteAnomaly } from './games/nte/anomalies';
+
 export type {
   NteCharacter,
   NteWeapon,
