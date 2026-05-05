@@ -1,9 +1,19 @@
 import { notFound } from 'next/navigation';
-import { NextIntlClientProvider, useMessages } from 'next-intl';
+import { NextIntlClientProvider } from 'next-intl';
 import { LOCALES, DEFAULT_LOCALE } from '@gachia/core';
 import type { SupportedLocale } from '@gachia/core';
 import { SiteHeader } from '@/components/layout/site-header';
 import { SiteFooter } from '@/components/layout/site-footer';
+
+import zhMessages from '@/messages/zh.json';
+import enMessages from '@/messages/en.json';
+import jaMessages from '@/messages/ja.json';
+
+const allMessages: Record<string, Record<string, unknown>> = {
+  zh: zhMessages,
+  en: enMessages,
+  ja: jaMessages,
+};
 
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ lang: locale }));
@@ -23,7 +33,7 @@ export default async function LocaleLayout({
   }
 
   const locale = lang as SupportedLocale;
-  const messages = (await import(`@/messages/${locale}.json`)).default;
+  const messages = allMessages[locale] ?? allMessages[DEFAULT_LOCALE];
 
   return (
     <html lang={locale}>

@@ -1,14 +1,18 @@
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
 import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin('./lib/i18n/request.ts');
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
   trailingSlash: false,
-  outputFileTracingRoot: require('path').join(__dirname, '../..'),
+  outputFileTracingRoot: join(__dirname, '../..'),
 };
 
 export default withNextIntl(nextConfig);

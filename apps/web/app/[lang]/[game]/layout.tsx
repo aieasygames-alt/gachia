@@ -3,6 +3,7 @@ import { GAMES, LOCALES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { GameNav } from '@/components/layout/game-nav';
 import { Breadcrumbs } from '@/components/layout/breadcrumbs';
+import { GameDataSetter } from '@/components/layout/game-data-setter';
 
 export function generateStaticParams() {
   return LOCALES.flatMap((lang) =>
@@ -47,7 +48,7 @@ export default async function GameLayout({
 
   return (
     <>
-      <script dangerouslySetInnerHTML={{ __html: `document.documentElement.dataset.game="${gameId}"` }} />
+      <GameDataSetter gameId={gameId} />
       <GameNav gameId={gameId} locale={lang as SupportedLocale} />
       <div className="container mx-auto px-4 py-6">
         <Breadcrumbs lang={lang} game={gameId} />
