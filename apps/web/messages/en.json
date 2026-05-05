@@ -1,0 +1,50 @@
+{
+  "site": {
+    "title": "Gachia",
+    "description": "Your ultimate anime open-world game database"
+  },
+  "nav": {
+    "home": "Home",
+    "characters": "Characters",
+    "weapons": "Weapons",
+    "items": "Items",
+    "tierList": "Tier List",
+    "calculator": "Calculator",
+    "map": "Map",
+    "guides": "Guides",
+    "news": "News",
+    "compare": "Compare",
+    "search": "Search",
+    "language": "Language"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "noData": "No data available",
+    "filter": "Filter",
+    "sort": "Sort",
+    "reset": "Reset",
+    "all": "All",
+    "rarity": "Rarity",
+    "element": "Element",
+    "weaponType": "Weapon Type",
+    "version": "Version",
+    "updatedAt": "Updated at"
+  },
+  "guides": {
+    "allCategories": "All Categories",
+    "search": "Search guides",
+    "readMore": "Read more",
+    "publishedOn": "Published on {date}",
+    "tableOfContents": "Table of Contents",
+    "faq": "FAQ",
+    "relatedGuides": "Related Guides",
+    "backToGuides": "Back to Guides",
+    "noGuides": "No guides available",
+    "guideCount": "{count} guides"
+  },
+  "footer": {
+    "disclaimer": "Game data is sourced from the game client for reference only. All game assets are copyrighted by their respective publishers.",
+    "copyright": "© {year} Gachia. All rights reserved."
+  }
+}

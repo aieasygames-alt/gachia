@@ -1,0 +1,50 @@
+{
+  "site": {
+    "title": "Gachia",
+    "description": "一站式二次元开放世界游戏数据库"
+  },
+  "nav": {
+    "home": "首页",
+    "characters": "角色图鉴",
+    "weapons": "武器",
+    "items": "材料道具",
+    "tierList": "节奏榜",
+    "calculator": "计算器",
+    "map": "地图",
+    "guides": "攻略百科",
+    "news": "资讯",
+    "compare": "对比",
+    "search": "搜索",
+    "language": "语言"
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "出错了",
+    "noData": "暂无数据",
+    "filter": "筛选",
+    "sort": "排序",
+    "reset": "重置",
+    "all": "全部",
+    "rarity": "稀有度",
+    "element": "元素",
+    "weaponType": "武器类型",
+    "version": "版本",
+    "updatedAt": "更新于"
+  },
+  "guides": {
+    "allCategories": "全部分类",
+    "search": "搜索攻略",
+    "readMore": "阅读全文",
+    "publishedOn": "发布于 {date}",
+    "tableOfContents": "目录",
+    "faq": "常见问题",
+    "relatedGuides": "相关攻略",
+    "backToGuides": "返回攻略列表",
+    "noGuides": "暂无攻略",
+    "guideCount": "共 {count} 篇攻略"
+  },
+  "footer": {
+    "disclaimer": "本站数据来源于游戏客户端，仅供学习参考。所有游戏素材版权归原厂商所有。",
+    "copyright": "© {year} Gachia. All rights reserved."
+  }
+}

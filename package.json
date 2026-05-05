@@ -1,0 +1,22 @@
+{
+  "name": "gachia",
+  "private": true,
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "type-check": "turbo type-check",
+    "clean": "turbo clean"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.0",
+    "typescript": "^5.8.0"
+  },
+  "packageManager": "pnpm@10.10.0",
+  "pnpm": {
+    "onlyBuiltDependencies": ["@swc/core", "esbuild", "sharp", "workerd", "@parcel/watcher"]
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

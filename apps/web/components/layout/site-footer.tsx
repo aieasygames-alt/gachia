@@ -1,0 +1,68 @@
+import { useTranslations } from 'next-intl';
+import type { SupportedLocale } from '@gachia/core';
+import { GAMES, GAME_IDS } from '@gachia/core';
+import { Link } from '@/lib/i18n/navigation';
+
+interface SiteFooterProps {
+  locale: SupportedLocale;
+}
+
+export function SiteFooter({ locale }: SiteFooterProps) {
+  const t = useTranslations('footer');
+  const year = new Date().getFullYear();
+
+  return (
+    <footer className="border-t border-game-border bg-game-surface">
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid gap-8 md:grid-cols-4">
+          {/* Brand */}
+          <div>
+            <h3 className="mb-2 text-lg font-bold text-game-primary">Gachia</h3>
+            <p className="text-sm text-game-text-muted">
+              {t('disclaimer')}
+            </p>
+          </div>
+
+          {/* Games */}
+          <div>
+            <h4 className="mb-2 font-semibold text-game-text">Games</h4>
+            <ul className="space-y-1">
+              {GAME_IDS.map((gameId) => (
+                <li key={gameId}>
+                  <Link
+                    href={`/${gameId}` as '/'}
+                    className="text-sm text-game-text-muted hover:text-game-primary"
+                  >
+                    {GAMES[gameId].name[locale]}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className="mb-2 font-semibold text-game-text">Resources</h4>
+            <ul className="space-y-1 text-sm text-game-text-muted">
+              <li>Sitemap</li>
+              <li>API</li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="mb-2 font-semibold text-game-text">Legal</h4>
+            <ul className="space-y-1 text-sm text-game-text-muted">
+              <li>Privacy Policy</li>
+              <li>Terms of Service</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-8 border-t border-game-border pt-4 text-center text-sm text-game-text-muted">
+          {t('copyright', { year })}
+        </div>
+      </div>
+    </footer>
+  );
+}

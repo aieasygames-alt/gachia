@@ -1,0 +1,9 @@
+{
+  "name": "@gachia/admin",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Admin panel not yet implemented'",
+    "clean": "rm -rf node_modules"
+  }
+}
