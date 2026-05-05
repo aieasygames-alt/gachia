@@ -3,7 +3,7 @@ import type { GameId, SupportedLocale } from '@gachia/core';
 import { notFound } from 'next/navigation';
 import { getGuideById, getGuideTitle, getGuideContent, getGuideSummary, getGuideCategory, getGuideFaqQuestion, getGuideFaqAnswer, NTE_GUIDE_CATEGORIES, nteGuides } from '@gachia/data';
 import { Link } from '@/lib/i18n/navigation';
-import { MarkdownRenderer } from '@/components/wiki/markdown-renderer';
+import { ClientMarkdown } from '@/components/wiki/client-markdown';
 
 export async function generateStaticParams() {
   return LOCALES.flatMap((lang) =>
@@ -93,7 +93,7 @@ export default async function GuideDetailPage({
 
       {/* Content */}
       <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">
-        <MarkdownRenderer content={content} />
+        <ClientMarkdown content={content} />
       </div>
 
       {/* FAQ */}

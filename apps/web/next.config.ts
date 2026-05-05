@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
   },
   trailingSlash: false,
   outputFileTracingRoot: join(__dirname, '../..'),
+  serverExternalPackages: ['react-markdown', 'remark-gfm', 'unified', 'vfile', 'remark-parse', 'remark-rehype'],
 };
 
 export default withNextIntl(nextConfig);
