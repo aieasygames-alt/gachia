@@ -1,5 +1,5 @@
 import { GAMES, LOCALES } from '@gachia/core';
-import { nteGuides } from '@gachia/data';
+import { nteGuides, nteCharacters } from '@gachia/data';
 import type { MetadataRoute } from 'next';
 
 const BASE_URL = 'https://gachia.com';
@@ -42,6 +42,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: `${BASE_URL}/${locale}/nte/guides/${guide.id}`,
         lastModified: guide.date ? new Date(guide.date) : new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.7,
+      });
+    }
+
+    // NTE character detail pages
+    for (const char of nteCharacters) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/nte/characters/${char.id}`,
+        lastModified: new Date(),
         changeFrequency: 'weekly',
         priority: 0.7,
       });

@@ -1,6 +1,4 @@
-import type { Character, Weapon, Item, TierList } from '@gachia/core';
-
-export const characters: Character[] = [];
-export const weapons: Weapon[] = [];
-export const items: Item[] = [];
-export const tierLists: TierList[] = [];
+export { characters } from './characters';
+export { weapons } from './weapons';
+export { items } from './items';
+export { tierLists } from './tier-lists';

@@ -17,6 +17,61 @@ export {
 } from './games/nte/guides';
 export type { NteGuide, NteGuideFaq } from './games/nte/guides';
 
+// NTE character exports
+export {
+  nteCharacters,
+  getNteCharacterById,
+  getNteCharacterName,
+  getNteCharacterDescription,
+  getNteCharacterImage,
+  getNteCharacterTierReason,
+} from './games/nte/characters';
+
+// NTE weapon exports
+export {
+  nteWeapons,
+  getNteWeaponById,
+  getNteWeaponName,
+  getNteWeaponEffect,
+  getNteWeaponSource,
+} from './games/nte/weapons';
+
+// NTE material exports
+export {
+  nteMaterials,
+  getNteMaterialName,
+  getNteMaterialById,
+} from './games/nte/items';
+
+// NTE extras (disk sets, builds, character materials, images)
+export {
+  diskSets as nteDiskSets,
+  builds as nteBuilds,
+  characterMaterials as nteCharacterMaterials,
+  getNteDiskSetName,
+  getNteDiskSetDesc2pc,
+  getNteDiskSetDesc4pc,
+  getBuildsForCharacter,
+  getMaterialsForCharacter,
+  getCharacterImageUrl,
+  getWeaponImageUrl,
+} from './games/nte/extras';
+
+export type {
+  NteCharacter,
+  NteWeapon,
+  NteMaterial,
+  NteCharacterMaterials,
+  NteDiskSet,
+  NteBuild,
+  NteSkillSet,
+  NteSkillBase,
+  NteActiveSkill,
+  NteTeamComp,
+  NteFaq,
+  NteRecommendedBuild,
+} from './games/nte/types';
+
 // --- Data Access Helpers ---
 
 export interface GameData {
@@ -59,7 +114,6 @@ export function getGameData(gameId: GameId): GameData {
   }
 }
 
-// Placeholder arrays — will be populated per game module
 import { characters as genshinCharacters, weapons as genshinWeapons, items as genshinItems, tierLists as genshinTierLists } from './games/genshin';
 import { characters as starrailCharacters, weapons as starrailWeapons, items as starrailItems, tierLists as starrailTierLists } from './games/starrail';
 import { characters as wuwaCharacters, weapons as wuwaWeapons, items as wuwaItems, tierLists as wuwaTierLists } from './games/wuwa';

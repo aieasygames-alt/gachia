@@ -5,10 +5,14 @@
   "scripts": {
     "dev": "next dev --turbopack --port 3000",
     "build": "next build",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
-    "clean": "rm -rf .next node_modules"
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "clean": "rm -rf .next .open-next node_modules"
   },
   "dependencies": {
     "@gachia/core": "workspace:*",
@@ -27,7 +31,7 @@
     "zustand": "^5.0.0"
   },
   "devDependencies": {
-    "@opennextjs/cloudflare": "^0.6.0",
+    "@opennextjs/cloudflare": "^1.19.6",
     "@tailwindcss/postcss": "^4.1.0",
     "@types/node": "25.6.0",
     "@types/react": "^19.1.0",
