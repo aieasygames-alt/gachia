@@ -57,6 +57,25 @@ export {
   getWeaponImageUrl,
 } from './games/nte/extras';
 
+// NTE redeem codes
+export {
+  redeemCodes as nteRedeemCodes,
+  getActiveRedeemCodes,
+  getRedeemCodeReward,
+} from './games/nte/redeem-codes';
+export type { NteRedeemCode } from './games/nte/redeem-codes';
+
+// NTE gacha system
+export {
+  gachaBanners as nteGachaBanners,
+  gachaFaqs as nteGachaFaqs,
+  getGachaBannerName,
+  getGachaBannerDesc,
+  getGachaFaqQuestion,
+  getGachaFaqAnswer,
+} from './games/nte/gacha';
+export type { NteGachaBanner, NteGachaFaq } from './games/nte/gacha';
+
 export type {
   NteCharacter,
   NteWeapon,

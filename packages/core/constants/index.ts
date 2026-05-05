@@ -166,6 +166,9 @@ export const GAMES: Record<GameId, GameModule> = {
       calculator: false,
       map: false,
       guides: true,
+      'disk-sets': true,
+      'redeem-codes': true,
+      gacha: true,
     },
   },
 } as const;
@@ -194,6 +197,9 @@ export const CATEGORY_LABELS: Record<string, Record<SupportedLocale, string>> = 
   calculator: { zh: '计算器', en: 'Calculator', ja: '計算機' },
   map: { zh: '地图', en: 'Map', ja: 'マップ' },
   guides: { zh: '攻略百科', en: 'Guides', ja: 'ガイド' },
+  'disk-sets': { zh: '光盘套装', en: 'Disk Sets', ja: 'ディスクセット' },
+  'redeem-codes': { zh: '兑换码', en: 'Redeem Codes', ja: '交換コード' },
+  gacha: { zh: '祈愿', en: 'Gacha', ja: 'ガチャ' },
   news: { zh: '资讯', en: 'News', ja: 'ニュース' },
   compare: { zh: '对比', en: 'Compare', ja: '比較' },
 };

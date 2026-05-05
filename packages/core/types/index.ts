@@ -42,6 +42,9 @@ export interface GameRouteConfig {
   calculator: boolean;
   map: boolean;
   guides: boolean;
+  'disk-sets'?: boolean;
+  'redeem-codes'?: boolean;
+  gacha?: boolean;
 }
 
 export interface GameModule {
