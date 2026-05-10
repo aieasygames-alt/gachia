@@ -37,6 +37,13 @@ import {
   getWuWaCharacterImage,
 } from '@gachia/data/games/wuwa/characters';
 import type { WuWaCharacter } from '@gachia/data/games/wuwa/types';
+import {
+  nteCharacters,
+  getNteCharacterName,
+  getNteCharacterImage,
+  getNteCharacterTierReason,
+} from '@gachia/data/games/nte/characters';
+import type { NteCharacter } from '@gachia/data/games/nte/types';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 // --- Constants ---
@@ -120,6 +127,7 @@ export function CompareClient({ gameId, locale }: { gameId: GameId; locale: Supp
   if (gameId === 'genshin') return <GenshinCompare locale={locale} />;
   if (gameId === 'starrail') return <StarRailCompare locale={locale} />;
   if (gameId === 'wuwa') return <WuWaCompare locale={locale} />;
+  if (gameId === 'nte') return <NteCompare locale={locale} />;
   return <ComingSoon locale={locale} />;
 }
 
@@ -871,6 +879,130 @@ function WuWaCompare({ locale }: { locale: SupportedLocale }) {
                 <StatRow label={t(locale, '版本', 'Version', 'バージョン')} valueA={charA.releaseVersion} valueB={charB.releaseVersion} />
               </tbody>
             </table>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// =====================================================================
+// NTE Compare
+// =====================================================================
+
+const NTE_CMP_COLORS: Record<string, string> = {
+  anima: '#4ade80', chaos: '#8b5cf6', cosmos: '#3b82f6',
+  incantation: '#f59e0b', lakshana: '#ec4899', psyche: '#06b6d4',
+};
+const NTE_CMP_NAMES: Record<string, Record<string, string>> = {
+  anima: { zh: '创生', en: 'Anima' }, chaos: { zh: '混沌', en: 'Chaos' },
+  cosmos: { zh: '宇宙', en: 'Cosmos' }, incantation: { zh: '咒术', en: 'Incantation' },
+  lakshana: { zh: '相', en: 'Lakshana' }, psyche: { zh: '精神', en: 'Psyche' },
+};
+
+function NteCompare({ locale }: { locale: SupportedLocale }) {
+  const [char1, setChar1] = useState<NteCharacter | null>(null);
+  const [char2, setChar2] = useState<NteCharacter | null>(null);
+  const [search1, setSearch1] = useState('');
+  const [search2, setSearch2] = useState('');
+
+  const filtered1 = useMemo(() => {
+    if (!search1.trim()) return nteCharacters;
+    const q = search1.toLowerCase();
+    return nteCharacters.filter(c => c.name.toLowerCase().includes(q) || c.nameEn.toLowerCase().includes(q));
+  }, [search1]);
+  const filtered2 = useMemo(() => {
+    if (!search2.trim()) return nteCharacters;
+    const q = search2.toLowerCase();
+    return nteCharacters.filter(c => c.name.toLowerCase().includes(q) || c.nameEn.toLowerCase().includes(q));
+  }, [search2]);
+
+  const gameConfig = GAMES.nte;
+
+  const CharSelector = ({ char, setChar, search, setSearch, filtered, label }: {
+    char: NteCharacter | null; setChar: (c: NteCharacter) => void;
+    search: string; setSearch: (s: string) => void;
+    filtered: NteCharacter[]; label: string;
+  }) => (
+    <div className="flex-1 rounded-xl border border-game-border bg-game-surface p-4">
+      <h3 className="mb-3 text-sm font-semibold text-game-primary">{label}</h3>
+      {char ? (
+        <div className="mb-3 flex items-center gap-3">
+          <CharacterAvatar src={getNteCharacterImage(char)} alt={char.nameEn} element={char.attribute} className="h-12 w-12 rounded-lg object-cover" />
+          <div>
+            <p className="font-semibold text-game-text">{getNteCharacterName(char, locale)}</p>
+            <div className="flex items-center gap-2 text-xs text-game-text-muted">
+              <span style={{ color: NTE_CMP_COLORS[char.attribute] }}>{NTE_CMP_NAMES[char.attribute]?.[locale] ?? char.attribute}</span>
+              <span>{char.rank}-Rank</span>
+              {char.tierRank && <span className="font-bold text-red-400">{char.tierRank}</span>}
+            </div>
+          </div>
+        </div>
+      ) : (
+        <input type="text" value={search} onChange={(e) => setSearch(e.target.value)}
+          placeholder={t(locale, '搜索角色...', 'Search...', '検索...')}
+          className="mb-2 w-full rounded-lg border border-game-border bg-game-surface-alt px-3 py-2 text-sm text-game-text outline-none focus:border-game-primary" />
+      )}
+      {!char && (
+        <div className="grid grid-cols-2 gap-1.5 max-h-60 overflow-y-auto">
+          {filtered.map(c => (
+            <button key={c.id} onClick={() => setChar(c)}
+              className="flex items-center gap-2 rounded-lg border border-game-border bg-game-surface-alt p-2 text-left text-xs transition-colors hover:border-game-primary">
+              <CharacterAvatar src={getNteCharacterImage(c)} alt="" element={c.attribute} className="h-8 w-8 rounded object-cover" />
+              <span className="text-game-text">{getNteCharacterName(c, locale)}</span>
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+
+  return (
+    <div>
+      <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {t(locale, '角色对比', 'Character Compare', 'キャラ比較')}
+      </h1>
+      <div className="mb-6 grid gap-4 md:grid-cols-2">
+        <CharSelector char={char1} setChar={setChar1} search={search1} setSearch={setSearch1} filtered={filtered1} label={t(locale, '角色 A', 'Character A', 'キャラA')} />
+        <CharSelector char={char2} setChar={setChar2} search={search2} setSearch={setSearch2} filtered={filtered2} label={t(locale, '角色 B', 'Character B', 'キャラB')} />
+      </div>
+
+      {char1 && char2 && (
+        <div className="space-y-4">
+          {/* Tier Comparison */}
+          <div className="rounded-xl border border-game-border bg-game-surface p-4">
+            <h3 className="mb-3 text-sm font-semibold text-game-primary">{t(locale, '等级对比', 'Tier Comparison', 'ティア比較')}</h3>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="text-center">
+                <p className="text-2xl font-bold text-red-400">{char1.tierRank || '-'}</p>
+                <p className="text-xs text-game-text-muted">{getNteCharacterName(char1, locale)}</p>
+              </div>
+              <div className="text-center">
+                <p className="text-2xl font-bold text-red-400">{char2.tierRank || '-'}</p>
+                <p className="text-xs text-game-text-muted">{getNteCharacterName(char2, locale)}</p>
+              </div>
+            </div>
+            {(char1.tierReason || char2.tierReason) && (
+              <div className="mt-3 grid grid-cols-2 gap-4 border-t border-game-border pt-3">
+                <p className="text-xs text-game-text-muted">{getNteCharacterTierReason(char1, locale)}</p>
+                <p className="text-xs text-game-text-muted">{getNteCharacterTierReason(char2, locale)}</p>
+              </div>
+            )}
+          </div>
+
+          {/* Build Comparison */}
+          <div className="rounded-xl border border-game-border bg-game-surface p-4">
+            <h3 className="mb-3 text-sm font-semibold text-game-primary">{t(locale, '配装对比', 'Build Comparison', 'ビルド比較')}</h3>
+            <div className="grid grid-cols-2 gap-4 text-sm">
+              {[char1, char2].map((c, i) => (
+                <div key={i}>
+                  <p className="mb-1 font-medium text-game-text">{getNteCharacterName(c, locale)}</p>
+                  <p className="text-xs text-game-text-muted">{t(locale, '弧盘', 'Arc')}: {locale === 'zh' ? c.recommendedBuild.bestWeapon : c.recommendedBuild.bestWeaponEn}</p>
+                  <p className="text-xs text-game-text-muted">{t(locale, '光盘', 'Disk')}: {locale === 'zh' ? c.recommendedBuild.bestDiskSet : c.recommendedBuild.bestDiskSetEn}</p>
+                  <p className="text-xs text-game-text-muted">{t(locale, '副属性', 'Subs')}: {(locale === 'zh' ? c.recommendedBuild.subStatPriority : c.recommendedBuild.subStatPriorityEn).slice(0, 3).join(' > ')}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       )}

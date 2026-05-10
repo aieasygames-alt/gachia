@@ -21,6 +21,12 @@ import {
   getWuWaCharacterImage,
 } from '@gachia/data/games/wuwa/characters';
 import type { WuWaCharacter } from '@gachia/data/games/wuwa/types';
+import {
+  nteCharacters,
+  getNteCharacterName,
+  getNteCharacterImage,
+} from '@gachia/data/games/nte/characters';
+import type { NteCharacter } from '@gachia/data/games/nte/types';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 // --- Constants ---
@@ -116,6 +122,7 @@ export function TeamsClient({ gameId, locale }: { gameId: GameId; locale: Suppor
   if (gameId === 'genshin') return <GenshinTeams locale={locale} />;
   if (gameId === 'starrail') return <StarRailTeams locale={locale} />;
   if (gameId === 'wuwa') return <WuWaTeams locale={locale} />;
+  if (gameId === 'nte') return <NteTeams locale={locale} />;
   return <ComingSoon locale={locale} />;
 }
 
@@ -839,6 +846,109 @@ function WuWaTeams({ locale }: { locale: SupportedLocale }) {
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+// =====================================================================
+// NTE Teams
+// =====================================================================
+
+const NTE_TEAM_COLORS: Record<string, string> = {
+  anima: '#4ade80', chaos: '#8b5cf6', cosmos: '#3b82f6',
+  incantation: '#f59e0b', lakshana: '#ec4899', psyche: '#06b6d4',
+};
+const NTE_TEAM_NAMES: Record<string, Record<string, string>> = {
+  anima: { zh: '创生', en: 'Anima' }, chaos: { zh: '混沌', en: 'Chaos' },
+  cosmos: { zh: '宇宙', en: 'Cosmos' }, incantation: { zh: '咒术', en: 'Incantation' },
+  lakshana: { zh: '相', en: 'Lakshana' }, psyche: { zh: '精神', en: 'Psyche' },
+};
+
+function NteTeams({ locale }: { locale: SupportedLocale }) {
+  const [slots, setSlots] = useState<(NteCharacter | null)[]>([null, null, null, null]);
+  const [search, setSearch] = useState('');
+  const [activeSlot, setActiveSlot] = useState(0);
+
+  const filtered = useMemo(() => {
+    if (!search.trim()) return nteCharacters;
+    const q = search.toLowerCase();
+    return nteCharacters.filter(c => c.name.toLowerCase().includes(q) || c.nameEn.toLowerCase().includes(q));
+  }, [search]);
+
+  const gameConfig = GAMES.nte;
+
+  const addToSlot = (char: NteCharacter) => {
+    const newSlots = [...slots];
+    newSlots[activeSlot] = char;
+    setSlots(newSlots);
+  };
+
+  // Quick fill from recommended teams
+  const firstChar = slots.find(s => s !== null);
+  const quickTeams = firstChar?.teamComps ?? [];
+
+  return (
+    <div>
+      <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {t(locale, '配队模拟器', 'Team Builder', 'パーティビルダー')}
+      </h1>
+
+      {/* Team Slots */}
+      <div className="mb-6 grid grid-cols-2 gap-3 md:grid-cols-4">
+        {slots.map((char, i) => (
+          <button key={i} onClick={() => setActiveSlot(i)}
+            className={`flex flex-col items-center gap-2 rounded-xl border-2 p-4 transition-colors ${activeSlot === i ? 'border-game-primary bg-game-primary/10' : 'border-game-border bg-game-surface hover:border-game-primary/50'}`}>
+            {char ? (
+              <>
+                <CharacterAvatar src={getNteCharacterImage(char)} alt="" element={char.attribute} className="h-14 w-14 rounded-xl object-cover" />
+                <span className="text-xs font-medium text-game-text">{getNteCharacterName(char, locale)}</span>
+                <span className="text-[10px]" style={{ color: NTE_TEAM_COLORS[char.attribute] }}>{NTE_TEAM_NAMES[char.attribute]?.[locale] ?? char.attribute}</span>
+              </>
+            ) : (
+              <>
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl border-2 border-dashed border-game-border text-lg text-game-text-muted">{i + 1}</div>
+                <span className="text-xs text-game-text-muted">{t(locale, '选择角色', 'Select', '選択')}</span>
+              </>
+            )}
+          </button>
+        ))}
+      </div>
+
+      {/* Quick Fill */}
+      {quickTeams.length > 0 && (
+        <div className="mb-4 rounded-xl border border-game-border bg-game-surface p-4">
+          <h3 className="mb-2 text-sm font-semibold text-game-primary">{t(locale, '快速填充', 'Quick Fill', 'クイックフィル')}</h3>
+          <div className="flex flex-wrap gap-2">
+            {quickTeams.map((team, i) => (
+              <button key={i} onClick={() => {
+                const newSlots: (NteCharacter | null)[] = [null, null, null, null];
+                team.members.forEach((mId, mi) => {
+                  const m = nteCharacters.find(c => c.id === mId);
+                  if (m && mi < 4) newSlots[mi] = m;
+                });
+                setSlots(newSlots);
+              }} className="rounded-lg border border-game-border bg-game-surface-alt px-3 py-1.5 text-xs text-game-text transition-colors hover:border-game-primary hover:text-game-primary">
+                {locale === 'zh' ? team.name : team.nameEn}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Character Selection */}
+      <div className="rounded-xl border border-game-border bg-game-surface p-4">
+        <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder={t(locale, '搜索角色名称...', 'Search character...', 'キャラを検索...')}
+          className="mb-3 w-full rounded-lg border border-game-border bg-game-surface-alt px-4 py-2.5 text-sm text-game-text outline-none focus:border-game-primary" />
+        <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8">
+          {filtered.map(c => (
+            <button key={c.id} onClick={() => addToSlot(c)}
+              className={`group flex flex-col items-center gap-1 rounded-lg border p-2 transition-all ${slots.some(s => s?.id === c.id) ? 'border-game-primary/30 bg-game-primary/5 opacity-50' : 'border-game-border bg-game-surface-alt hover:border-game-primary/50'}`}>
+              <CharacterAvatar src={getNteCharacterImage(c)} alt="" element={c.attribute} className="h-10 w-10 rounded-lg object-cover" />
+              <span className="text-center text-[11px] text-game-text">{getNteCharacterName(c, locale)}</span>
+            </button>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

@@ -145,6 +145,21 @@ function AscensionCalc({ locale }: { locale: SupportedLocale }) {
   const [talentFrom, setTalentFrom] = useState(1);
   const [talentTo, setTalentTo] = useState(10);
   const [collapsedGroups, setCollapsedGroups] = useState<Record<string, boolean>>({});
+  const [owned, setOwned] = useState<Record<string, number>>({});
+
+  // Load owned materials from localStorage on mount
+  useState(() => {
+    try {
+      const saved = localStorage.getItem('gachia-owned-materials');
+      if (saved) setOwned(JSON.parse(saved));
+    } catch {}
+  });
+
+  const updateOwned = (id: string, qty: number) => {
+    const next = { ...owned, [id]: Math.max(0, qty) };
+    setOwned(next);
+    try { localStorage.setItem('gachia-owned-materials', JSON.stringify(next)); } catch {}
+  };
 
   const filtered = useMemo(() => {
     let chars = genshinCharacters;
@@ -315,13 +330,26 @@ function AscensionCalc({ locale }: { locale: SupportedLocale }) {
                   </button>
                   {!collapsed && (
                     <div className="flex flex-wrap gap-2 px-4 pb-4">
-                      {items.sort((a, b) => b.rarity - a.rarity).map((m) => (
-                        <span key={m.id} className={`inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm ${RARITY_BG[m.rarity] || ''} ${RARITY_BORDER[m.rarity] || 'border-game-border'}`}>
-                          <span style={{ color: RARITY_TEXT[m.rarity] || '#888' }}>{'★'.repeat(Math.min(m.rarity, 5))}</span>
-                          <span className="text-game-text">{m.name}</span>
-                          <span className="font-bold text-game-primary">×{m.quantity}</span>
-                        </span>
-                      ))}
+                      {items.sort((a, b) => b.rarity - a.rarity).map((m) => {
+                        const have = owned[m.id] || 0;
+                        const deficit = Math.max(0, m.quantity - have);
+                        return (
+                          <div key={m.id} className={`inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm ${RARITY_BG[m.rarity] || ''} ${RARITY_BORDER[m.rarity] || 'border-game-border'}`}>
+                            <span style={{ color: RARITY_TEXT[m.rarity] || '#888' }}>{'★'.repeat(Math.min(m.rarity, 5))}</span>
+                            <span className="text-game-text">{m.name}</span>
+                            <span className="font-bold text-game-primary">×{m.quantity}</span>
+                            <input type="number" min={0} value={have}
+                              onChange={(e) => updateOwned(m.id, parseInt(e.target.value) || 0)}
+                              className="ml-1 w-12 rounded border border-game-border bg-game-surface-alt px-1 py-0.5 text-xs text-game-text text-center outline-none focus:border-game-primary"
+                              title={t(locale, '已有', 'Owned', '所持')} />
+                            {deficit > 0 ? (
+                              <span className="text-xs font-bold text-red-400">-{deficit}</span>
+                            ) : (
+                              <span className="text-xs font-bold text-green-400">✓</span>
+                            )}
+                          </div>
+                        );
+                      })}
                     </div>
                   )}
                 </div>
@@ -412,6 +440,21 @@ function MaterialPlanner({ locale }: { locale: SupportedLocale }) {
   const [talentFrom, setTalentFrom] = useState(1);
   const [talentTo, setTalentTo] = useState(10);
   const [collapsedGroups, setCollapsedGroups] = useState<Record<string, boolean>>({});
+  const [owned, setOwned] = useState<Record<string, number>>({});
+
+  // Load owned materials from localStorage on mount
+  useState(() => {
+    try {
+      const saved = localStorage.getItem('gachia-owned-materials');
+      if (saved) setOwned(JSON.parse(saved));
+    } catch {}
+  });
+
+  const updateOwned = (id: string, qty: number) => {
+    const next = { ...owned, [id]: Math.max(0, qty) };
+    setOwned(next);
+    try { localStorage.setItem('gachia-owned-materials', JSON.stringify(next)); } catch {}
+  };
 
   const filtered = useMemo(() => {
     let chars = genshinCharacters;
@@ -557,6 +600,10 @@ function MaterialPlanner({ locale }: { locale: SupportedLocale }) {
             <span className="text-sm text-game-text-muted ml-auto">
               {selectedChars.length} {t(locale, '个角色', 'characters', 'キャラ')}
             </span>
+            <button onClick={() => { setOwned({}); try { localStorage.removeItem('gachia-owned-materials'); } catch {} }}
+              className="rounded px-2 py-1 text-xs text-game-text-muted hover:text-red-400 transition-colors border border-game-border">
+              {t(locale, '重置库存', 'Reset Owned', 'リセット')}
+            </button>
           </div>
           <div className="space-y-3">
             {typeOrder.filter((t) => result[t]).map((type) => {
@@ -573,13 +620,26 @@ function MaterialPlanner({ locale }: { locale: SupportedLocale }) {
                   </button>
                   {!collapsed && (
                     <div className="flex flex-wrap gap-2 px-4 pb-4">
-                      {items.sort((a, b) => b.rarity - a.rarity).map((m) => (
-                        <span key={m.id} className={`inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm ${RARITY_BG[m.rarity] || ''} ${RARITY_BORDER[m.rarity] || 'border-game-border'}`}>
-                          <span style={{ color: RARITY_TEXT[m.rarity] || '#888' }}>{'★'.repeat(Math.min(m.rarity, 5))}</span>
-                          <span className="text-game-text">{m.name}</span>
-                          <span className="font-bold text-game-primary">×{m.quantity}</span>
-                        </span>
-                      ))}
+                      {items.sort((a, b) => b.rarity - a.rarity).map((m) => {
+                        const have = owned[m.id] || 0;
+                        const deficit = Math.max(0, m.quantity - have);
+                        return (
+                          <div key={m.id} className={`inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm ${RARITY_BG[m.rarity] || ''} ${RARITY_BORDER[m.rarity] || 'border-game-border'}`}>
+                            <span style={{ color: RARITY_TEXT[m.rarity] || '#888' }}>{'★'.repeat(Math.min(m.rarity, 5))}</span>
+                            <span className="text-game-text">{m.name}</span>
+                            <span className="font-bold text-game-primary">×{m.quantity}</span>
+                            <input type="number" min={0} value={have}
+                              onChange={(e) => updateOwned(m.id, parseInt(e.target.value) || 0)}
+                              className="ml-1 w-12 rounded border border-game-border bg-game-surface-alt px-1 py-0.5 text-xs text-game-text text-center outline-none focus:border-game-primary"
+                              title={t(locale, '已有', 'Owned', '所持')} />
+                            {deficit > 0 ? (
+                              <span className="text-xs font-bold text-red-400">-{deficit}</span>
+                            ) : (
+                              <span className="text-xs font-bold text-green-400">✓</span>
+                            )}
+                          </div>
+                        );
+                      })}
                     </div>
                   )}
                 </div>
