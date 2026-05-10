@@ -144,6 +144,32 @@ export {
   getMaterialsForCharacter as getGenshinMaterialsForCharacter,
 } from './games/genshin/extras';
 
+// Genshin regions
+export {
+  regions as genshinRegions,
+  getRegionName as getGenshinRegionName,
+  getRegionDescription as getGenshinRegionDescription,
+  getRegionById as getGenshinRegionById,
+} from './games/genshin/regions';
+export type { GenshinRegion } from './games/genshin/regions';
+
+// Genshin guides
+export {
+  genshinGuides,
+  getGuideTitle as getGenshinGuideTitle,
+  getGuideContent as getGenshinGuideContent,
+  getGuideSummary as getGenshinGuideSummary,
+  getGuideCategory as getGenshinGuideCategory,
+  getGuideCategories as getGenshinGuideCategories,
+  getGuidesByCategory as getGenshinGuidesByCategory,
+  getGuideById as getGenshinGuideById,
+  getGuideSlugs as getGenshinGuideSlugs,
+  getGuideFaqQuestion as getGenshinGuideFaqQuestion,
+  getGuideFaqAnswer as getGenshinGuideFaqAnswer,
+  GENSHIN_GUIDE_CATEGORIES,
+} from './games/genshin/guides';
+export type { GenshinGuide, GenshinGuideFaq } from './games/genshin/guides';
+
 export type {
   GenshinCharacter,
   GenshinWeapon,
@@ -158,6 +184,136 @@ export type {
   GenshinFaq,
   GenshinRecommendedBuild,
 } from './games/genshin/types';
+
+// ============================================================
+// Honkai: Star Rail exports
+// ============================================================
+
+// StarRail character exports
+export {
+  starrailCharacters,
+  getStarRailCharacterById,
+  getStarRailCharacterName,
+  getStarRailCharacterDescription,
+  getStarRailCharacterImage,
+  getStarRailCharacterTierReason,
+} from './games/starrail/characters';
+
+// StarRail light cone exports
+export {
+  starrailLightCones,
+  getStarRailLightConeById,
+  getStarRailLightConeName,
+  getStarRailLightConeEffect,
+  getStarRailLightConeSource,
+} from './games/starrail/weapons';
+
+// StarRail material exports
+export {
+  starrailMaterials,
+  getStarRailMaterialName,
+  getStarRailMaterialById,
+} from './games/starrail/items';
+
+// StarRail relic exports
+export {
+  relicSets as starrailRelicSets,
+  getRelicSetName as getStarRailRelicSetName,
+  getRelicSetDesc2pc as getStarRailRelicSetDesc2pc,
+  getRelicSetDesc4pc as getStarRailRelicSetDesc4pc,
+  getRelicSetById as getStarRailRelicSetById,
+  getCavernRelics as getStarRailCavernRelics,
+  getPlanarOrnaments as getStarRailPlanarOrnaments,
+} from './games/starrail/relics';
+
+export type {
+  StarRailCharacter,
+  StarRailLightCone,
+  StarRailMaterial,
+  StarRailRelicSet,
+  StarRailSkillSet,
+  StarRailSkillBase,
+  StarRailActiveSkill,
+  StarRailEidolon,
+  StarRailTeamComp,
+  StarRailFaq,
+  StarRailRecommendedBuild,
+} from './games/starrail/types';
+
+// ============================================================
+// Wuthering Waves exports
+// ============================================================
+
+// WuWa character exports
+export {
+  wuwaCharacters,
+  getWuWaCharacterById,
+  getWuWaCharacterName,
+  getWuWaCharacterDescription,
+  getWuWaCharacterImage,
+  getWuWaCharacterMaterials,
+} from './games/wuwa/characters';
+
+// WuWa weapon exports
+export {
+  wuwaWeapons,
+  getWuWaWeaponById,
+  getWuWaWeaponName,
+  getWuWaWeaponEffect,
+  getWuWaWeaponSource,
+} from './games/wuwa/weapons';
+
+// WuWa material exports
+export {
+  wuwaMaterials,
+  getWuWaMaterialName,
+  getWuWaMaterialById,
+} from './games/wuwa/items';
+
+export type {
+  WuWaCharacter,
+  WuWaWeapon,
+  WuWaMaterial,
+  WuWaSkillSet,
+  WuWaSkillBase,
+  WuWaActiveSkill,
+  WuWaSequence,
+} from './games/wuwa/types';
+
+// WuWa region exports
+export {
+  regions as wuwaRegions,
+  getRegionName as getWuWaRegionName,
+  getRegionDescription as getWuWaRegionDescription,
+  getRegionById as getWuWaRegionById,
+} from './games/wuwa/regions';
+export type { WuWaRegion } from './games/wuwa/regions';
+
+// WuWa guide exports
+export {
+  wuwaGuides,
+  getGuideTitle as getWuWaGuideTitle,
+  getGuideContent as getWuWaGuideContent,
+  getGuideSummary as getWuWaGuideSummary,
+  getGuideCategory as getWuWaGuideCategory,
+  getGuideCategories as getWuWaGuideCategories,
+  getGuidesByCategory as getWuWaGuidesByCategory,
+  getGuideById as getWuWaGuideById,
+  getGuideSlugs as getWuWaGuideSlugs,
+  getGuideFaqQuestion as getWuWaGuideFaqQuestion,
+  getGuideFaqAnswer as getWuWaGuideFaqAnswer,
+  WUWA_GUIDE_CATEGORIES,
+} from './games/wuwa/guides';
+export type { WuWaGuide, WuWaGuideFaq } from './games/wuwa/guides';
+
+// WuWa echo exports
+export {
+  echoSets as wuwaEchoSets,
+  getEchoSetName as getWuWaEchoSetName,
+  getEchoSetDesc2pc as getWuWaEchoSetDesc2pc,
+  getEchoSetDesc5pc as getWuWaEchoSetDesc5pc,
+  getEchoSetById as getWuWaEchoSetById,
+} from './games/wuwa/echoes';
 
 // --- Data Access Helpers ---
 
@@ -202,6 +358,6 @@ export function getGameData(gameId: GameId): GameData {
 }
 
 import { characters as genshinCharacters, weapons as genshinWeapons, items as genshinItems, tierLists as genshinTierLists } from './games/genshin';
-import { characters as starrailCharacters, weapons as starrailWeapons, items as starrailItems, tierLists as starrailTierLists } from './games/starrail';
+import { characters as starrailCharacters, weapons as starrailWeapons, items as starrailItems, tierLists as starrailTierLists } from './games/starrail/index';
 import { characters as wuwaCharacters, weapons as wuwaWeapons, items as wuwaItems, tierLists as wuwaTierLists } from './games/wuwa';
 import { characters as nteCharacters, weapons as nteWeapons, items as nteItems, tierLists as nteTierLists } from './games/nte';

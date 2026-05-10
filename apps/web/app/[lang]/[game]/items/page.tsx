@@ -1,6 +1,6 @@
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { nteMaterials, getNteMaterialName, genshinMaterials, getGenshinMaterialName } from '@gachia/data';
+import { nteMaterials, getNteMaterialName, genshinMaterials, getGenshinMaterialName, starrailMaterials, getStarRailMaterialName, wuwaMaterials, getWuWaMaterialName } from '@gachia/data';
 
 const NTE_TYPE_LABELS: Record<string, Record<string, string>> = {
   guide: { zh: '猎手指南', en: 'Hunter Guide', ja: 'ハンターガイド' },
@@ -40,8 +40,16 @@ export default async function ItemsPage({
     return <GenshinItemsPage locale={locale} />;
   }
 
+  if (gameId === 'starrail') {
+    return <StarRailItemsPage locale={locale} />;
+  }
+
   if (gameId === 'nte') {
     return <NteItemsPage locale={locale} />;
+  }
+
+  if (gameId === 'wuwa') {
+    return <WuWaItemsPage locale={locale} />;
   }
 
   return (
@@ -100,6 +108,59 @@ function GenshinItemsPage({ locale }: { locale: SupportedLocale }) {
   );
 }
 
+// --- Star Rail Items ---
+
+const STARRAIL_TYPE_LABELS: Record<string, Record<string, string>> = {
+  'character-ascension': { zh: '角色突破材料', en: 'Character Ascension', ja: 'キャラ突破素材' },
+  'trace': { zh: '行迹材料', en: 'Trace Material', ja: '軌跡素材' },
+  'boss': { zh: 'Boss掉落', en: 'Boss Drop', ja: 'ボスドロップ' },
+  'common': { zh: '普通材料', en: 'Common Material', ja: '一般素材' },
+  currency: { zh: '货币', en: 'Currency', ja: '通貨' },
+  'exp-material': { zh: '经验材料', en: 'EXP Material', ja: '経験値素材' },
+};
+
+function StarRailItemsPage({ locale }: { locale: SupportedLocale }) {
+  const materials = starrailMaterials;
+  const grouped = groupByType(materials);
+  const typeOrder = ['character-ascension', 'trace', 'boss', 'common', 'exp-material', 'currency'];
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.starrail.theme.primary }}>
+        {CATEGORY_LABELS.items?.[locale] ?? 'Items'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? `共 ${materials.length} 种材料` : locale === 'ja' ? `${materials.length} 種の素材` : `${materials.length} Materials`}
+      </p>
+
+      {typeOrder.map((type) => {
+        const list = grouped[type];
+        if (!list || list.length === 0) return null;
+        const typeLabel = STARRAIL_TYPE_LABELS[type]?.[locale] ?? type;
+        return (
+          <section key={type} className="mb-8">
+            <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
+            <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              {list.map((mat) => (
+                <div key={mat.id} className="rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                  <div className="mb-1 flex items-center gap-2">
+                    <h3 className="text-sm font-semibold text-game-text">{getStarRailMaterialName(mat, locale)}</h3>
+                  </div>
+                  <div className="mb-1 flex items-center gap-2">
+                    <span className="text-xs text-game-text-muted">{typeLabel}</span>
+                    <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
+                  </div>
+                  <p className="text-xs text-game-text-muted line-clamp-2">{locale === 'zh' ? mat.source : mat.sourceEn}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
 // --- NTE Items ---
 
 function NteItemsPage({ locale }: { locale: SupportedLocale }) {
@@ -134,6 +195,59 @@ function NteItemsPage({ locale }: { locale: SupportedLocale }) {
                     <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
                   </div>
                   <p className="text-xs text-game-text-muted line-clamp-2">{mat.source}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
+// --- Wuthering Waves Items ---
+
+const WUWA_TYPE_LABELS: Record<string, Record<string, string>> = {
+  'common-drop': { zh: '普通掉落', en: 'Common Drop', ja: '一般ドロップ' },
+  'skill-material': { zh: '技能材料', en: 'Skill Material', ja: 'スキル素材' },
+  'boss-material': { zh: 'Boss材料', en: 'Boss Material', ja: 'ボス素材' },
+  'weekly-boss': { zh: '周本材料', en: 'Weekly Boss', ja: '週ボス素材' },
+  'local-specialty': { zh: '区域特产', en: 'Local Specialty', ja: '地域特産品' },
+  currency: { zh: '货币', en: 'Currency', ja: '通貨' },
+};
+
+function WuWaItemsPage({ locale }: { locale: SupportedLocale }) {
+  const materials = wuwaMaterials;
+  const grouped = groupByType(materials);
+  const typeOrder = ['common-drop', 'skill-material', 'boss-material', 'weekly-boss', 'local-specialty', 'currency'];
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.wuwa.theme.primary }}>
+        {CATEGORY_LABELS.items?.[locale] ?? 'Items'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? `共 ${materials.length} 种材料` : locale === 'ja' ? `${materials.length} 種の素材` : `${materials.length} Materials`}
+      </p>
+
+      {typeOrder.map((type) => {
+        const list = grouped[type];
+        if (!list || list.length === 0) return null;
+        const typeLabel = WUWA_TYPE_LABELS[type]?.[locale] ?? type;
+        return (
+          <section key={type} className="mb-8">
+            <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
+            <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              {list.map((mat) => (
+                <div key={mat.id} className="rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                  <div className="mb-1 flex items-center gap-2">
+                    <h3 className="text-sm font-semibold text-game-text">{getWuWaMaterialName(mat, locale)}</h3>
+                  </div>
+                  <div className="mb-1 flex items-center gap-2">
+                    <span className="text-xs text-game-text-muted">{typeLabel}</span>
+                    <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
+                  </div>
+                  <p className="text-xs text-game-text-muted line-clamp-2">{locale === 'zh' ? mat.source : mat.sourceEn}</p>
                 </div>
               ))}
             </div>

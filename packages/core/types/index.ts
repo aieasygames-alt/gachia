@@ -47,6 +47,9 @@ export interface GameRouteConfig {
   gacha?: boolean;
   anomalies?: boolean;
   artifacts?: boolean;
+  build?: boolean;
+  compare?: boolean;
+  teams?: boolean;
 }
 
 export interface GameModule {

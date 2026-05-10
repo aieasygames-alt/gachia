@@ -1,0 +1,330 @@
+[
+  {
+    "id": "band-of-sizzling-thunder",
+    "name": "雷霆万钧",
+    "nameEn": "Band of Sizzling Thunder",
+    "type": "cavern",
+    "bonus2pc": "雷属性伤害提高10%",
+    "bonus2pcEn": "Lightning DMG +10%.",
+    "bonus4pc": "当装备者施放终结技时，速度提高20%，持续1回合",
+    "bonus4pcEn": "When the wearer uses their Ultimate, increases SPD by 20% for 1 turn.",
+    "bestFor": ["kepler", "arlan", "serval"]
+  },
+  {
+    "id": "champion-of-streetwise-boxing",
+    "name": "街头拳击手",
+    "nameEn": "Champion of Streetwise Boxing",
+    "type": "cavern",
+    "bonus2pc": "物理伤害提高10%",
+    "bonus2pcEn": "Physical DMG +10%.",
+    "bonus4pc": "当装备者发起攻击后，攻击力提高5%，该效果最多叠加5层",
+    "bonus4pcEn": "After the wearer attacks, ATK increases by 5% for the rest of the battle. This effect can stack up to 5 times.",
+    "bestFor": ["luka", "sushang", "natasha"]
+  },
+  {
+    "id": "thief-of-shooting-meteor",
+    "name": "流星追迹的怪盗",
+    "nameEn": "Thief of Shooting Meteor",
+    "type": "cavern",
+    "bonus2pc": "击破特攻提高16%",
+    "bonus2pcEn": "Break Effect +16%.",
+    "bonus4pc": "当装备者造成弱点击破后，额外提高16%击破特攻，并恢复3点能量",
+    "bonus4pcEn": "Increases the wearer's Break Effect by 16%. After the wearer inflicts Weakness Break, regenerates 3 Energy.",
+    "bestFor": ["xueyi", " Gallagher", "griseo"]
+  },
+  {
+    "id": "genius-of-brilliant-stars",
+    "name": "天才们的超距通讯",
+    "nameEn": "Genius of Brilliant Stars",
+    "type": "cavern",
+    "bonus2pc": "量子属性伤害提高10%",
+    "bonus2pcEn": "Quantum DMG +10%.",
+    "bonus4pc": "当装备者对敌方目标造成伤害时，无视其10%防御力。若目标拥有量子弱点，则额外无视10%防御力",
+    "bonus4pcEn": "When the wearer deals DMG to an enemy, ignores 10% DEF. If the enemy has Quantum Weakness, additionally ignores 10% DEF.",
+    "bestFor": ["qingque", "seele", "xueyi"]
+  },
+  {
+    "id": "firesmith-of-lava-forging",
+    "name": "熔岩锻铸的火匠",
+    "nameEn": "Firesmith of Lava-Forging",
+    "type": "cavern",
+    "bonus2pc": "火属性伤害提高10%",
+    "bonus2pcEn": "Fire DMG +10%.",
+    "bonus4pc": "战技造成的伤害提高12%。施放终结技后，火属性伤害提高12%，持续1次攻击",
+    "bonus4pcEn": "Increases Skill DMG by 12%. After using Ultimate, Fire DMG increases by 12% for 1 attack.",
+    "bestFor": ["hook", "himeko", "asta"]
+  },
+  {
+    "id": "hunter-of-glacial-forest",
+    "name": "寒霜猎手的极光",
+    "nameEn": "Hunter of Glacial Forest",
+    "type": "cavern",
+    "bonus2pc": "冰属性伤害提高10%",
+    "bonus2pcEn": "Ice DMG +10%.",
+    "bonus4pc": "当装备者施放终结技时，暴击伤害提高25%，持续2回合",
+    "bonus4pcEn": "After using Ultimate, increases CRIT DMG by 25% for 2 turns.",
+    "bestFor": ["yanqing", "gepard", "march-7th"]
+  },
+  {
+    "id": "knight-of-purity-palace",
+    "name": "净庭教宗的圣骑士",
+    "nameEn": "Knight of Purity Palace",
+    "type": "cavern",
+    "bonus2pc": "护盾效果提高20%",
+    "bonus2pcEn": "Increases Shield effect by 20%.",
+    "bonus4pc": "当装备者为队友提供护盾时，护盾持有者造成的伤害提高10%",
+    "bonus4pcEn": "When the wearer provides a Shield to an ally, increases the Shield holder's DMG by 10%.",
+    "bestFor": ["gepard", "march-7th", "preservation-trailblazer"]
+  },
+  {
+    "id": "longevous-disciple",
+    "name": "宝命长存的莳者",
+    "nameEn": "Longevous Disciple",
+    "type": "cavern",
+    "bonus2pc": "最大生命值提高12%",
+    "bonus2pcEn": "Max HP +12%.",
+    "bonus4pc": "当装备者受到攻击时，暴击率提高8%，持续2回合，该效果最多叠加2层",
+    "bonus4pcEn": "When the wearer is hit, CRIT Rate increases by 8% for 2 turns. This effect can stack up to 2 times.",
+    "bestFor": ["blade", "jingliu", "fu-xuan"]
+  },
+  {
+    "id": "messenger-traversing-hackerspace",
+    "name": "骇域漫游的信使",
+    "nameEn": "Messenger Traversing Hackerspace",
+    "type": "cavern",
+    "bonus2pc": "速度提高6%",
+    "bonus2pcEn": "SPD +6%.",
+    "bonus4pc": "当装备者对队友施放战技或终结技时，全体队友速度提高12%，持续1回合",
+    "bonus4pcEn": "When the wearer uses Skill or Ultimate on an ally, increases all allies' SPD by 12% for 1 turn.",
+    "bestFor": ["bronya", "tingyun", "pela"]
+  },
+  {
+    "id": "musketeer-of-wild-wheat",
+    "name": "野穗伴行的快枪手",
+    "nameEn": "Musketeer of Wild Wheat",
+    "type": "cavern",
+    "bonus2pc": "攻击力提高12%",
+    "bonus2pcEn": "ATK +12%.",
+    "bonus4pc": "装备者的速度提高6%，普攻伤害提高10%",
+    "bonus4pcEn": "The wearer's SPD increases by 6% and Basic ATK DMG increases by 10%.",
+    "bestFor": ["danheng", "sushang", "serval"]
+  },
+  {
+    "id": "passerby-of-wandering-cloud",
+    "name": "过客的游迹",
+    "nameEn": "Passerby of Wandering Cloud",
+    "type": "cavern",
+    "bonus2pc": "治疗量提高10%",
+    "bonus2pcEn": "Outgoing Healing +10%.",
+    "bonus4pc": "在战斗开始时，恢复1个战技点",
+    "bonus4pcEn": "At the start of the battle, regenerates 1 Skill Point.",
+    "bestFor": ["bailu", "natasha", "luocha"]
+  },
+  {
+    "id": "wastelander-of-banditry-desert",
+    "name": "废土客的荒漠",
+    "nameEn": "Wastelander of Banditry Desert",
+    "type": "cavern",
+    "bonus2pc": "虚数属性伤害提高10%",
+    "bonus2pcEn": "Imaginary DMG +10%.",
+    "bonus4pc": "对陷入禁锢状态的敌方目标施放攻击时，暴击伤害提高10%，暴击率提高10%",
+    "bonus4pcEn": "When attacking enemies with Imprisonment, CRIT Rate increases by 10% and CRIT DMG increases by 10%.",
+    "bestFor": ["welt", "yukong", "dan-heng-imbibitor-lunae"]
+  },
+  {
+    "id": "prisoner-in-deep-confinement",
+    "name": "深囚的幽锁",
+    "nameEn": "Prisoner in Deep Confinement",
+    "type": "cavern",
+    "bonus2pc": "攻击力提高12%",
+    "bonus2pcEn": "ATK +12%.",
+    "bonus4pc": "目标每承受1个持续伤害效果，装备者对其暴击率提高5%，最多叠加3层",
+    "bonus4pcEn": "For every DoT on the target, increases CRIT Rate by 5%, up to 3 stacks.",
+    "bestFor": ["kafka", "sampo", "luka"]
+  },
+  {
+    "id": "pioneer-diver-of-dead-waters",
+    "name": "死水深潜的先驱",
+    "nameEn": "Pioneer Diver of Dead Waters",
+    "type": "cavern",
+    "bonus2pc": "对拥有3个及以上负面效果的敌方目标造成的伤害提高12%",
+    "bonus2pcEn": "Increases DMG dealt to enemies with 3 or more debuffs by 12%.",
+    "bonus4pc": "敌方目标每承受1个负面效果，装备者暴击率提高4%，最多3层。对拥有3个及以上负面效果的目标，每个负面效果额外提高暴击伤害8%",
+    "bonus4pcEn": "Increases CRIT Rate by 4% per debuff on the enemy (max 3 stacks). Against enemies with 3 or more debuffs, increases CRIT DMG by 8% per debuff.",
+    "bestFor": ["dr-ratio", "topaz", "aventurine"]
+  },
+  {
+    "id": "eagle-of-twilight-line",
+    "name": "黄昏飞驰的猎鹰",
+    "nameEn": "Eagle of Twilight Line",
+    "type": "cavern",
+    "bonus2pc": "风属性伤害提高10%",
+    "bonus2pcEn": "Wind DMG +10%.",
+    "bonus4pc": "当装备者施放终结技后，行动提前25%",
+    "bonus4pcEn": "After the wearer uses Ultimate, advances action by 25%.",
+    "bestFor": ["danheng", "sampo", "bronya"]
+  },
+  {
+    "id": "guard-of-wuthering-snow",
+    "name": "戍关的雪原",
+    "nameEn": "Guard of Wuthering Snow",
+    "type": "cavern",
+    "bonus2pc": "受到的伤害降低8%",
+    "bonus2pcEn": "Reduces DMG taken by 8%.",
+    "bonus4pc": "回合开始时，恢复等同于装备者生命值上限8%的生命值",
+    "bonus4pcEn": "At the start of the turn, restores HP equal to 8% of the wearer's Max HP.",
+    "bestFor": ["gepard", "preservation-trailblazer", "march-7th"]
+  },
+  {
+    "id": "watchmaker-master-of-dream-machinations",
+    "name": "钟表匠的默想",
+    "nameEn": "Watchmaker, Master of Dream Machinations",
+    "type": "cavern",
+    "bonus2pc": "击破特攻提高16%",
+    "bonus2pcEn": "Break Effect +16%.",
+    "bonus4pc": "当装备者施放终结技时，全体队友的击破特攻提高30%，持续2回合",
+    "bonus4pcEn": "When the wearer uses Ultimate, increases all allies' Break Effect by 30% for 2 turns.",
+    "bestFor": ["harmony-trailblazer", "rappa", "griseo"]
+  },
+  {
+    "id": "iron-cavalry-against-the-scourge",
+    "name": "铁骑的锋镝",
+    "nameEn": "Iron Cavalry Against the Scourge",
+    "type": "cavern",
+    "bonus2pc": "击破特攻提高16%",
+    "bonus2pcEn": "Increases Break Effect by 16%.",
+    "bonus4pc": "当装备者的击破特攻大于等于150%时，击破伤害无视10%防御力。当击破特攻大于等于250%时，额外无视15%防御力",
+    "bonus4pcEn": "When Break Effect is 150% or higher, Break DMG ignores 10% DEF. When Break Effect is 250% or higher, additionally ignores 15% DEF.",
+    "bestFor": ["firefly", "rappa", "harmony-trailblazer"]
+  },
+  {
+    "id": "the-ashblazing-grand-duke",
+    "name": "烬烬之炎大公",
+    "nameEn": "The Ashblazing Grand Duke",
+    "type": "cavern",
+    "bonus2pc": "追加攻击造成的伤害提高20%",
+    "bonus2pcEn": "Follow-up ATK DMG +20%.",
+    "bonus4pc": "追加攻击命中后，攻击力提高6%，最多叠加8层，持续3回合。追加攻击再次命中时刷新层数",
+    "bonus4pcEn": "When follow-up attack hits, ATK increases by 6%, stacking up to 8 times for 3 turns. Stacks are refreshed when follow-up attack hits again.",
+    "bestFor": ["jingyuan", "topaz", "himeko"]
+  },
+  {
+    "id": "poet-of-mourning-collapse",
+    "name": "寂灭之诗",
+    "nameEn": "Poet of Mourning Collapse",
+    "type": "cavern",
+    "bonus2pc": "量子属性伤害提高10%",
+    "bonus2pcEn": "Quantum DMG +10%.",
+    "bonus4pc": "装备者速度降低8%。战斗中，速度每低于110的10%，暴击率提高8%，最多提高32%",
+    "bonus4pcEn": "Decreases SPD by 8%. In battle, CRIT Rate increases by 8% for every 10% SPD below 110 (max 32%).",
+    "bestFor": ["qingque", "seele", "xueyi"]
+  },
+  {
+    "id": "space-sealing-station",
+    "name": "太空封印站",
+    "nameEn": "Space Sealing Station",
+    "type": "planar",
+    "bonus2pc": "攻击力提高12%。当装备者速度大于等于120时，攻击力额外提高12%",
+    "bonus2pcEn": "ATK +12%. When SPD is 120 or higher, ATK increases by an additional 12%.",
+    "bestFor": ["seele", "jingyuan", "yanqing"]
+  },
+  {
+    "id": "fleet-of-the-ageless",
+    "name": "不老者的仙舟",
+    "nameEn": "Fleet of the Ageless",
+    "type": "planar",
+    "bonus2pc": "最大生命值提高12%。当装备者速度大于等于120时，全体队友攻击力提高8%",
+    "bonus2pcEn": "Max HP +12%. When SPD is 120 or higher, increases all allies' ATK by 8%.",
+    "bestFor": ["bailu", "luocha", "huohuo"]
+  },
+  {
+    "id": "pan-galactic-commercial-enterprise",
+    "name": "泛银河商业公司",
+    "nameEn": "Pan-Galactic Commercial Enterprise",
+    "type": "planar",
+    "bonus2pc": "效果命中提高10%。攻击力提高等同于当前效果命中的25%",
+    "bonus2pcEn": "Effect Hit Rate +10%. Increases ATK by an amount equal to 25% of the current Effect Hit Rate.",
+    "bestFor": ["silver-wolf", "welt", "pela"]
+  },
+  {
+    "id": "belobog-of-the-archives",
+    "name": "档案馆的贝洛伯格",
+    "nameEn": "Belobog of the Archives",
+    "type": "planar",
+    "bonus2pc": "防御力提高15%。当防御力大于等于1200时，攻击力提高12%",
+    "bonus2pcEn": "DEF +15%. When DEF is 1200 or higher, ATK increases by 12%.",
+    "bestFor": ["preservation-trailblazer", "march-7th", "gepard"]
+  },
+  {
+    "id": "celestial-differentiator",
+    "name": "停转的萨尔索图",
+    "nameEn": "Celestial Differentiator",
+    "type": "planar",
+    "bonus2pc": "暴击伤害提高16%。当暴击伤害大于等于120%时，终结技和追加攻击暴击率提高15%",
+    "bonus2pcEn": "CRIT DMG +16%. When CRIT DMG is 120% or higher, increases Ultimate and Follow-up ATK CRIT Rate by 15%.",
+    "bestFor": ["jingyuan", "yanqing", "topaz"]
+  },
+  {
+    "id": "rutilant-arena",
+    "name": "繁星竞技场",
+    "nameEn": "Rutilant Arena",
+    "type": "planar",
+    "bonus2pc": "暴击率提高8%。当暴击率大于等于70%时，战技和普攻造成的伤害提高20%",
+    "bonus2pcEn": "CRIT Rate +8%. When CRIT Rate is 70% or higher, increases Skill and Basic ATK DMG by 20%.",
+    "bestFor": ["seele", "dr-ratio", "clara"]
+  },
+  {
+    "id": "broken-keel",
+    "name": "折断的龙骨",
+    "nameEn": "Broken Keel",
+    "type": "planar",
+    "bonus2pc": "效果抵抗提高10%。当效果抵抗大于等于30%时，全体队友暴击伤害提高10%",
+    "bonus2pcEn": "Effect RES +10%. When Effect RES is 30% or higher, increases all allies' CRIT DMG by 10%.",
+    "bestFor": ["bronya", "tingyun", "pela"]
+  },
+  {
+    "id": "firmament-frontline-glamoth",
+    "name": "苍穹战线格拉默",
+    "nameEn": "Firmament Frontline: Glamoth",
+    "type": "planar",
+    "bonus2pc": "攻击力提高12%。当速度大于等于135时，伤害提高12%；当速度大于等于160时，伤害提高18%",
+    "bonus2pcEn": "ATK +12%. When SPD is 135 or higher, increases DMG by 12%. When SPD is 160 or higher, increases DMG by 18%.",
+    "bestFor": ["kafka", "seele", "silver-wolf"]
+  },
+  {
+    "id": "sigonia-the-unclaimed-desolation",
+    "name": "无主荒星",
+    "nameEn": "Sigonia, the Unclaimed Desolation",
+    "type": "planar",
+    "bonus2pc": "暴击率提高4%。当敌方目标被击败时，暴击伤害提高4%，最多叠加10层",
+    "bonus2pcEn": "CRIT Rate +4%. When enemies are defeated, increases CRIT DMG by 4%, stacking up to 10 times.",
+    "bestFor": ["jingyuan", "himeko", "argenti"]
+  },
+  {
+    "id": "izumo-gensei-and-takama-divine-realm",
+    "name": "出云神世与高天神国",
+    "nameEn": "Izumo Gensei and Takama Divine Realm",
+    "type": "planar",
+    "bonus2pc": "攻击力提高12%。当队伍中至少2名角色命途相同，暴击率提高12%",
+    "bonus2pcEn": "ATK +12%. When at least 2 allies follow the same Path, increases CRIT Rate by 12%.",
+    "bestFor": ["topaz", "dr-ratio", "jingyuan"]
+  },
+  {
+    "id": "duran-dynasty-of-running-wolves",
+    "name": "奔狼的都蓝王朝",
+    "nameEn": "Duran, Dynasty of Running Wolves",
+    "type": "planar",
+    "bonus2pc": "当队友施放追加攻击时，追加攻击伤害提高5%，最多叠加5层",
+    "bonus2pcEn": "When allies use follow-up attacks, increases follow-up ATK DMG by 5%, stacking up to 5 times.",
+    "bestFor": ["jingyuan", "topaz", "himeko"]
+  },
+  {
+    "id": "forge-of-the-kalpagni-lantern",
+    "name": "劫火莲灯的铸造",
+    "nameEn": "Forge of the Kalpagni Lantern",
+    "type": "planar",
+    "bonus2pc": "速度提高6%。当装备者攻击拥有火属性弱点的敌方目标时，击破特攻提高40%",
+    "bonus2pcEn": "SPD +6%. When the wearer hits an enemy with Fire Weakness, increases Break Effect by 40%.",
+    "bestFor": ["harmony-trailblazer", "rappa", "firefly"]
+  }
+]

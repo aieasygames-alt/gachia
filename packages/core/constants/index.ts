@@ -57,6 +57,9 @@ export const GAMES: Record<GameId, GameModule> = {
       map: true,
       guides: true,
       artifacts: true,
+      build: true,
+      compare: true,
+      teams: true,
     },
   },
   starrail: {
@@ -94,6 +97,10 @@ export const GAMES: Record<GameId, GameModule> = {
       calculator: false,
       map: false,
       guides: true,
+      artifacts: true,
+      build: true,
+      compare: true,
+      teams: true,
     },
   },
   wuwa: {
@@ -130,6 +137,9 @@ export const GAMES: Record<GameId, GameModule> = {
       calculator: false,
       map: true,
       guides: true,
+      build: true,
+      compare: true,
+      teams: true,
     },
   },
   nte: {
@@ -204,6 +214,8 @@ export const CATEGORY_LABELS: Record<string, Record<SupportedLocale, string>> = 
   gacha: { zh: '祈愿', en: 'Gacha', ja: 'ガチャ' },
   anomalies: { zh: '异象', en: 'Anomalies', ja: 'アノマリー' },
   artifacts: { zh: '圣遗物', en: 'Artifacts', ja: '聖遺物' },
+  build: { zh: '配装', en: 'Build', ja: 'ビルド' },
   news: { zh: '资讯', en: 'News', ja: 'ニュース' },
   compare: { zh: '对比', en: 'Compare', ja: '比較' },
+  teams: { zh: '配队', en: 'Teams', ja: 'パーティ' },
 };

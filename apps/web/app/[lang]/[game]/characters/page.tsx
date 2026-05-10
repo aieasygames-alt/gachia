@@ -1,7 +1,8 @@
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { nteCharacters, getNteCharacterName, getNteCharacterImage, genshinCharacters, getGenshinCharacterName, getGenshinCharacterImage } from '@gachia/data';
+import { nteCharacters, getNteCharacterName, getNteCharacterImage, genshinCharacters, getGenshinCharacterName, getGenshinCharacterImage, starrailCharacters, getStarRailCharacterName, getStarRailCharacterImage, wuwaCharacters, getWuWaCharacterName, getWuWaCharacterImage } from '@gachia/data';
 import { Link } from '@/lib/i18n/navigation';
+import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 const NTE_ELEMENT_COLORS: Record<string, string> = {
   anima: '#4ade80', chaos: '#8b5cf6', cosmos: '#3b82f6',
@@ -11,6 +12,22 @@ const NTE_ELEMENT_COLORS: Record<string, string> = {
 const GENSHIN_ELEMENT_COLORS: Record<string, string> = {
   pyro: '#ef4444', hydro: '#3b82f6', electro: '#8b5cf6',
   cryo: '#67e8f9', dendro: '#4ade80', anemo: '#6ee7b7', geo: '#fbbf24',
+};
+
+const STARRAIL_ELEMENT_COLORS: Record<string, string> = {
+  fire: '#ef4444', ice: '#67e8f9', lightning: '#8b5cf6',
+  wind: '#6ee7b7', physical: '#9ca3af', quantum: '#6366f1', imaginary: '#fbbf24',
+};
+
+const STARRAIL_PATH_LABELS: Record<string, Record<string, string>> = {
+  destruction: { zh: '毁灭', en: 'Destruction', ja: '壊滅' },
+  hunt: { zh: '巡猎', en: 'Hunt', ja: '巡狩' },
+  erudition: { zh: '智识', en: 'Erudition', ja: '知恵' },
+  harmony: { zh: '同谐', en: 'Harmony', ja: '調和' },
+  nihility: { zh: '虚无', en: 'Nihility', ja: '虚無' },
+  preservation: { zh: '存护', en: 'Preservation', ja: '存護' },
+  abundance: { zh: '丰饶', en: 'Abundance', ja: '豊穣' },
+  remembrance: { zh: '记忆', en: 'Remembrance', ja: '記憶' },
 };
 
 const GENSHIN_WEAPON_LABELS: Record<string, Record<string, string>> = {
@@ -35,8 +52,16 @@ export default async function CharactersPage({
     return <GenshinCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />;
   }
 
+  if (gameId === 'starrail') {
+    return <StarRailCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />;
+  }
+
   if (gameId === 'nte') {
     return <NteCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />;
+  }
+
+  if (gameId === 'wuwa') {
+    return <WuWaCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />;
   }
 
   return (
@@ -109,13 +134,12 @@ function GenshinCharacterCard({ char, locale, gameId }: { char: typeof genshinCh
       className="group flex flex-col overflow-hidden rounded-lg border border-game-border bg-game-surface transition-all hover:border-game-primary hover:shadow-lg"
     >
       <div className="relative aspect-square overflow-hidden bg-game-surface-alt">
-        {imageUrl ? (
-          <img src={imageUrl} alt={getGenshinCharacterName(char, locale)} className="h-full w-full object-cover object-top transition-transform group-hover:scale-105" loading="lazy" />
-        ) : (
-          <div className="flex h-full items-center justify-center text-2xl font-bold text-game-text-muted">
-            {char.nameEn.charAt(0)}
-          </div>
-        )}
+        <CharacterAvatar
+          src={imageUrl}
+          alt={getGenshinCharacterName(char, locale)}
+          element={char.element}
+          className="h-full w-full object-cover object-top transition-transform group-hover:scale-105"
+        />
         <span className="absolute bottom-1.5 left-1.5 rounded px-1.5 py-0.5 text-xs font-medium text-white" style={{ backgroundColor: elementColor }}>
           {char.element.charAt(0).toUpperCase() + char.element.slice(1)}
         </span>
@@ -128,6 +152,85 @@ function GenshinCharacterCard({ char, locale, gameId }: { char: typeof genshinCh
           {getGenshinCharacterName(char, locale)}
         </h3>
         <p className="text-xs text-game-text-muted truncate">{weaponLabel}</p>
+      </div>
+    </Link>
+  );
+}
+
+// --- Star Rail Characters ---
+
+function StarRailCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedLocale; gameId: GameId; gameConfig: typeof GAMES.starrail }) {
+  const chars = starrailCharacters;
+  const fiveStar = chars.filter((c) => c.rarity === 5);
+  const fourStar = chars.filter((c) => c.rarity === 4);
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
+      </p>
+
+      {fiveStar.length > 0 && (
+        <section className="mb-8">
+          <h2 className="mb-4 text-lg font-semibold text-game-text">
+            5★ ({fiveStar.length})
+          </h2>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+            {fiveStar.map((char) => (
+              <StarRailCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {fourStar.length > 0 && (
+        <section className="mb-8">
+          <h2 className="mb-4 text-lg font-semibold text-game-text">
+            4★ ({fourStar.length})
+          </h2>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+            {fourStar.map((char) => (
+              <StarRailCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+
+function StarRailCharacterCard({ char, locale, gameId }: { char: typeof starrailCharacters[number]; locale: SupportedLocale; gameId: GameId }) {
+  const elementColor = STARRAIL_ELEMENT_COLORS[char.element] || '#888';
+  const imageUrl = getStarRailCharacterImage(char);
+  const pathLabel = STARRAIL_PATH_LABELS[char.path]?.[locale] ?? char.path;
+
+  return (
+    <Link
+      href={`/${gameId}/characters/${char.id}` as '/'}
+      className="group flex flex-col overflow-hidden rounded-lg border border-game-border bg-game-surface transition-all hover:border-game-primary hover:shadow-lg"
+    >
+      <div className="relative aspect-square overflow-hidden bg-game-surface-alt">
+        <CharacterAvatar
+          src={imageUrl}
+          alt={getStarRailCharacterName(char, locale)}
+          element={char.element}
+          className="h-full w-full object-cover object-top transition-transform group-hover:scale-105"
+        />
+        <span className="absolute bottom-1.5 left-1.5 rounded px-1.5 py-0.5 text-xs font-medium text-white" style={{ backgroundColor: elementColor }}>
+          {char.element.charAt(0).toUpperCase() + char.element.slice(1)}
+        </span>
+        <span className="absolute top-1.5 right-1.5 rounded bg-game-bg/80 px-1.5 py-0.5 text-xs font-bold" style={{ color: '#eab308' }}>
+          {char.rarity}★
+        </span>
+      </div>
+      <div className="p-2.5">
+        <h3 className="text-sm font-semibold text-game-text group-hover:text-game-primary truncate">
+          {getStarRailCharacterName(char, locale)}
+        </h3>
+        <p className="text-xs text-game-text-muted truncate">{pathLabel}</p>
       </div>
     </Link>
   );
@@ -188,13 +291,12 @@ function NteCharacterCard({ char, locale, gameId }: { char: typeof nteCharacters
       className="group flex flex-col overflow-hidden rounded-lg border border-game-border bg-game-surface transition-all hover:border-game-primary hover:shadow-lg"
     >
       <div className="relative aspect-square overflow-hidden bg-game-surface-alt">
-        {imageUrl ? (
-          <img src={imageUrl} alt={getNteCharacterName(char, locale)} className="h-full w-full object-cover object-top transition-transform group-hover:scale-105" loading="lazy" />
-        ) : (
-          <div className="flex h-full items-center justify-center text-2xl font-bold text-game-text-muted">
-            {char.nameEn.charAt(0)}
-          </div>
-        )}
+        <CharacterAvatar
+          src={imageUrl}
+          alt={getNteCharacterName(char, locale)}
+          element={char.attribute}
+          className="h-full w-full object-cover object-top transition-transform group-hover:scale-105"
+        />
         <span className="absolute bottom-1.5 left-1.5 rounded px-1.5 py-0.5 text-xs font-medium text-white" style={{ backgroundColor: elementColor }}>
           {char.attribute.charAt(0).toUpperCase() + char.attribute.slice(1)}
         </span>
@@ -207,6 +309,98 @@ function NteCharacterCard({ char, locale, gameId }: { char: typeof nteCharacters
           {getNteCharacterName(char, locale)}
         </h3>
         <p className="text-xs text-game-text-muted truncate">{char.roleEn}</p>
+      </div>
+    </Link>
+  );
+}
+
+// --- Wuthering Waves Characters ---
+
+const WUWA_ELEMENT_COLORS: Record<string, string> = {
+  glacio: '#67e8f9', fusion: '#ef4444', electro: '#8b5cf6',
+  aero: '#6ee7b7', spectro: '#fbbf24', havoc: '#a855f7',
+};
+
+const WUWA_WEAPON_LABELS: Record<string, Record<string, string>> = {
+  broadblade: { zh: ' broadblade', en: 'Broadblade', ja: '大剣' },
+  sword: { zh: '长刃', en: 'Sword', ja: '長刃' },
+  pistols: { zh: '佩枪', en: 'Pistols', ja: '銃' },
+  gauntlets: { zh: '臂铠', en: 'Gauntlets', ja: '腕甲' },
+  rectifier: { zh: '音感仪', en: 'Rectifier', ja: '感応儀' },
+};
+
+function WuWaCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedLocale; gameId: GameId; gameConfig: typeof GAMES.wuwa }) {
+  const chars = wuwaCharacters;
+  const fiveStar = chars.filter((c) => c.rarity === 5);
+  const fourStar = chars.filter((c) => c.rarity === 4);
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
+      </p>
+
+      {fiveStar.length > 0 && (
+        <section className="mb-8">
+          <h2 className="mb-4 text-lg font-semibold text-game-text">
+            5★ ({fiveStar.length})
+          </h2>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+            {fiveStar.map((char) => (
+              <WuWaCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {fourStar.length > 0 && (
+        <section className="mb-8">
+          <h2 className="mb-4 text-lg font-semibold text-game-text">
+            4★ ({fourStar.length})
+          </h2>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+            {fourStar.map((char) => (
+              <WuWaCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+
+function WuWaCharacterCard({ char, locale, gameId }: { char: typeof wuwaCharacters[number]; locale: SupportedLocale; gameId: GameId }) {
+  const elementColor = WUWA_ELEMENT_COLORS[char.element] || '#888';
+  const imageUrl = getWuWaCharacterImage(char);
+  const weaponLabel = WUWA_WEAPON_LABELS[char.weaponType]?.[locale] ?? char.weaponType;
+
+  return (
+    <Link
+      href={`/${gameId}/characters/${char.id}` as '/'}
+      className="group flex flex-col overflow-hidden rounded-lg border border-game-border bg-game-surface transition-all hover:border-game-primary hover:shadow-lg"
+    >
+      <div className="relative aspect-square overflow-hidden bg-game-surface-alt">
+        <CharacterAvatar
+          src={imageUrl}
+          alt={getWuWaCharacterName(char, locale)}
+          element={char.element}
+          className="h-full w-full object-cover object-top transition-transform group-hover:scale-105"
+        />
+        <span className="absolute bottom-1.5 left-1.5 rounded px-1.5 py-0.5 text-xs font-medium text-white" style={{ backgroundColor: elementColor }}>
+          {char.element.charAt(0).toUpperCase() + char.element.slice(1)}
+        </span>
+        <span className="absolute top-1.5 right-1.5 rounded bg-game-bg/80 px-1.5 py-0.5 text-xs font-bold" style={{ color: '#eab308' }}>
+          {char.rarity}★
+        </span>
+      </div>
+      <div className="p-2.5">
+        <h3 className="text-sm font-semibold text-game-text group-hover:text-game-primary truncate">
+          {getWuWaCharacterName(char, locale)}
+        </h3>
+        <p className="text-xs text-game-text-muted truncate">{weaponLabel}</p>
       </div>
     </Link>
   );

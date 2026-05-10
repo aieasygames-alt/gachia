@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { LOCALES, DEFAULT_LOCALE } from '@gachia/core';
 import type { SupportedLocale } from '@gachia/core';
 import { SiteHeader } from '@/components/layout/site-header';
@@ -44,6 +45,7 @@ export default async function LocaleLayout({
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
+        <GoogleAnalytics gaId="G-4L1VKXGY2Y" />
       </head>
       <body className="min-h-screen bg-game-bg text-game-text antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>

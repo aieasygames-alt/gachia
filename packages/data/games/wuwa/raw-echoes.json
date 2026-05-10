@@ -1,0 +1,102 @@
+[
+  {
+    "id": "freezing-frost",
+    "name": "凝夜白霜",
+    "nameEn": "Freezing Frost",
+    "bonus2pc": "冷凝伤害提升10%",
+    "bonus2pcEn": "Glacio DMG Bonus +10%",
+    "bonus5pc": "施放变奏技能时，冷凝伤害提升30%，持续15秒",
+    "bonus5pcEn": "After using Intro Skill, Glacio DMG Bonus +30% for 15s",
+    "bestFor": ["lingyang", "sanhua", "baizhi", "zhezhi"]
+  },
+  {
+    "id": "molten-rift",
+    "name": "熔山裂谷",
+    "nameEn": "Molten Rift",
+    "bonus2pc": "热熔伤害提升10%",
+    "bonus2pcEn": "Fusion DMG Bonus +10%",
+    "bonus5pc": "施放变奏技能时，热熔伤害提升30%，持续15秒",
+    "bonus5pcEn": "After using Intro Skill, Fusion DMG Bonus +30% for 15s",
+    "bestFor": ["encore", "changli", "chixia", "mortefi"]
+  },
+  {
+    "id": "thundering-mammoth",
+    "name": "彻空冥雷",
+    "nameEn": "Thundering Mammoth",
+    "bonus2pc": "导电伤害提升10%",
+    "bonus2pcEn": "Electro DMG Bonus +10%",
+    "bonus5pc": "施放变奏技能时，导电伤害提升30%，持续15秒",
+    "bonus5pcEn": "After using Intro Skill, Electro DMG Bonus +30% for 15s",
+    "bestFor": ["calcharo", "yinlin", "xiangli-yao", "yuanwu"]
+  },
+  {
+    "id": "sierra-gale",
+    "name": "啸谷长风",
+    "nameEn": "Sierra Gale",
+    "bonus2pc": "气动伤害提升10%",
+    "bonus2pcEn": "Aero DMG Bonus +10%",
+    "bonus5pc": "施放变奏技能时，气动伤害提升30%，持续15秒",
+    "bonus5pcEn": "After using Intro Skill, Aero DMG Bonus +30% for 15s",
+    "bestFor": ["jiyan", "aalto", "jianxin", "yangyang"]
+  },
+  {
+    "id": "celestial-light",
+    "name": "耀州纪闻",
+    "nameEn": "Celestial Light",
+    "bonus2pc": "衍射伤害提升10%",
+    "bonus2pcEn": "Spectro DMG Bonus +10%",
+    "bonus5pc": "施放变奏技能时，衍射伤害提升30%，持续15秒",
+    "bonus5pcEn": "After using Intro Skill, Spectro DMG Bonus +30% for 15s",
+    "bestFor": ["jinhsi", "verina", "rover-spectro"]
+  },
+  {
+    "id": "sun-sinking-eclipse",
+    "name": "沉日劫煌",
+    "nameEn": "Sun-sinking Eclipse",
+    "bonus2pc": "湮灭伤害提升10%",
+    "bonus2pcEn": "Havoc DMG Bonus +10%",
+    "bonus5pc": "施放变奏技能时，湮灭伤害提升30%，持续15秒",
+    "bonus5pcEn": "After using Intro Skill, Havoc DMG Bonus +30% for 15s",
+    "bestFor": ["danjin", "rover-havoc", "taoqi"]
+  },
+  {
+    "id": "rejuvenating-glow",
+    "name": "隐世回光",
+    "nameEn": "Rejuvenating Glow",
+    "bonus2pc": "治疗效果提升10%",
+    "bonus2pcEn": "Healing Bonus +10%",
+    "bonus5pc": "对目标施放延奏技能时，为队伍中附近角色回复生命值上限20%的生命",
+    "bonus5pcEn": "When using Outro Skill on a target, heals nearby team members for 20% of their Max HP",
+    "bestFor": ["baizhi", "verina", "jianxin"]
+  },
+  {
+    "id": "moonlit-clouds",
+    "name": "不绝余音",
+    "nameEn": "Moonlit Clouds",
+    "bonus2pc": "共鸣效率提升10%",
+    "bonus2pcEn": "Energy Regen +10%",
+    "bonus5pc": "施放延奏技能时，使下一个登场的角色攻击力提升22.5%，持续15秒",
+    "bonus5pcEn": "When using Outro Skill, the next character's ATK increases by 22.5% for 15s",
+    "bestFor": ["verina", "baizhi", "jianxin", "mortefi"]
+  },
+  {
+    "id": "lingering-tunes",
+    "name": "轻云出月",
+    "nameEn": "Lingering Tunes",
+    "bonus2pc": "攻击力提升10%",
+    "bonus2pcEn": "ATK +10%",
+    "bonus5pc": "施放延奏技能时，自身攻击力提升15%，共鸣技能伤害提升15%，持续15秒",
+    "bonus5pcEn": "After using Outro Skill, ATK +15% and Resonance Skill DMG +15% for 15s",
+    "bestFor": ["encore", "jiyan", "calcharo", "changli"]
+  },
+  {
+    "id": "halo-tide",
+    "name": "浮星披霜",
+    "nameEn": "Halo Tide",
+    "bonus2pc": "共鸣技能伤害提升12%",
+    "bonus2pcEn": "Resonance Skill DMG Bonus +12%",
+    "bonus5pc": "施放共鸣技能后，共鸣解放伤害提升24%，持续15秒",
+    "bonus5pcEn": "After using Resonance Skill, Resonance Liberation DMG +24% for 15s",
+    "bestFor": ["jinhsi", "xiangli-yao", "zhezhi", "calcharo"]
+  }
+]

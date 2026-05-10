@@ -1,0 +1,222 @@
+[
+  {
+    "id": "quick-start-guide",
+    "title": "鸣潮快速上手指南",
+    "titleEn": "Wuthering Waves Quick Start Guide",
+    "category": "beginner",
+    "categoryZh": "新手入门",
+    "categoryEn": "Beginner",
+    "summary": "从下载安装到快速上手鸣潮，了解基础操作、界面、共鸣系统和抽卡机制。",
+    "summaryEn": "Get started with Wuthering Waves quickly. Learn basic controls, UI, the Resonance system, and the Convene (gacha) mechanic.",
+    "content": "## 鸣潮快速上手指南\n\n### 1. 基础操作\n- **移动**: WASD/摇杆移动，空格跳跃\n- **普攻**: 鼠标左键/攻击键连续攻击\n- **共鸣技能**: E键释放，有冷却时间\n- **共鸣解放**: R键释放，需要共鸣能量\n- **闪避**: 空格/Shift，完美闪避触发子弹时间\n- **声骸技能**: Z键释放已装备声骸的主动技能\n\n### 2. 共鸣系统\n鸣潮的核心战斗围绕共鸣者(Resonator)展开：\n- **6种属性**: 凝素(Glacio)、热熔(Fusion)、导电(Electro)、气动(Aero)、衍射(Spectro)、湮灭(Havoc)\n- **5种武器**: 宽刃(Broadblade)、臂铠(Gauntlets)、手枪(Pistols)、音感仪(Rectifier)、长刃(Sword)\n- **属性克制**: 不同属性间有克制关系，合理搭配事半功倍\n\n### 3. 声骸系统\n声骸是鸣潮的特色装备系统：\n- 每个角色可装备5个声骸\n- 声骸有COST值(1/3/4)，总COST上限随Union Level提升(10→12)\n- 装备声骸可获得主动技能和属性加成\n- 套装效果：2件套和5件套提供额外加成\n\n### 4. 体力系统(波片)\n- 波片(Waveplate)上限240点\n- 每6分钟恢复1点波片\n- 用于挑战Boss(60波片)和副本获取材料\n- 优先消耗在角色突破材料上\n\n### 5. 祈愿(抽卡)系统\n- 调频(Convene)是鸣潮的抽卡系统\n- **5星保底**: 80抽必出5星角色/武器\n- **4星保底**: 10抽必出4星\n- **大保底**: 歪了非UP角色后，下次必出UP角色\n- 保底在角色池和武器池之间不互通",
+    "contentEn": "## Wuthering Waves Quick Start Guide\n\n### 1. Basic Controls\n- **Movement**: WASD/Left stick, Space to jump\n- **Normal Attack**: Left click/Attack button for combo attacks\n- **Resonance Skill**: Press E, has a cooldown\n- **Resonance Liberation**: Press R, requires Resonance Energy\n- **Dodge**: Space/Shift, perfect dodge triggers slow motion\n- **Echo Skill**: Press Z to use the equipped Echo's active ability\n\n### 2. Resonance System\nThe core combat revolves around Resonators:\n- **6 Elements**: Glacio, Fusion, Electro, Aero, Spectro, Havoc\n- **5 Weapon Types**: Broadblade, Gauntlets, Pistols, Rectifier, Sword\n- **Elemental Advantage**: Different elements have advantage relationships, proper team building is key\n\n### 3. Echo System\nThe Echo system is Wuthering Waves' unique equipment mechanic:\n- Each character equips up to 5 Echoes\n- Echoes have COST values (1/3/4), total COST cap increases with Union Level (10→12)\n- Equipped Echoes provide active abilities and stat bonuses\n- Sonata Effects: 2-piece and 5-piece set bonuses\n\n### 4. Stamina System (Waveplate)\n- Waveplate cap is 240 points\n- Recovers 1 point every 6 minutes\n- Used for Boss challenges (60 Waveplate) and dungeons for materials\n- Prioritize spending on character ascension materials\n\n### 5. Convene (Gacha) System\n- Convene is the gacha system in Wuthering Waves\n- **5-star pity**: Guaranteed 5-star at 80 pulls\n- **4-star pity**: Guaranteed 4-star every 10 pulls\n- **Guarantee**: If you lose the 50/50, the next 5-star is guaranteed featured\n- Pity does not carry over between character and weapon banners",
+    "tags": [
+      "新手",
+      "入门",
+      "共鸣系统",
+      "Beginner",
+      "Resonance System"
+    ],
+    "faq": [
+      {
+        "question": "Which character should I build first?",
+        "questionZh": "先练哪个角色？",
+        "answer": "Focus on your 5-star from the beginner banner first, then build support Resonators like Baizhi and Sanhua who are strong and free.",
+        "answerZh": "优先培养新手池出的5星角色，然后练白芷、散华等免费强力辅助共鸣者。"
+      },
+      {
+        "question": "How to spend Waveplate efficiently?",
+        "questionZh": "波片怎么用最划算？",
+        "answer": "Early game: Simulation Challenge for EXP and Credits. Mid game: Ascension materials and Echo farming. Late game: Tacet Fields for Echo sets.",
+        "answerZh": "前期打模拟挑战获取经验和信用点，中期打突破材料和声骸，后期刷回音域刷声骸套装。"
+      },
+      {
+        "question": "What is Union Level and SOL3 Phase?",
+        "questionZh": "联合等级和SOL3阶段是什么？",
+        "answer": "Union Level is your account level (max 60). SOL3 Phase raises world difficulty and enemy levels, unlocking better drops. You can lower SOL3 Phase at any time.",
+        "answerZh": "联合等级是账号等级(最高60级)。SOL3阶段提升世界难度和敌人等级，解锁更好掉落。可随时降低SOL3阶段。"
+      }
+    ]
+  },
+  {
+    "id": "combat-system-guide",
+    "title": "战斗系统完全攻略",
+    "titleEn": "Complete Combat System Guide",
+    "category": "combat",
+    "categoryZh": "战斗系统",
+    "categoryEn": "Combat",
+    "summary": "深入解析鸣潮的战斗系统：共鸣技能、入战/退战、协奏能量、完美闪避、Forte回路等核心机制。",
+    "summaryEn": "Deep dive into Wuthering Waves' combat system: Resonance Skills, Intro/Outro Skills, Concerto Energy, Perfect Dodge, Forte Circuit, and other core mechanics.",
+    "content": "## 战斗系统完全攻略\n\n### 1. 入战与退战技能(Intro/Outro)\n鸣潮独特的换人战斗系统：\n- **协奏能量(Concerto Energy)**: 攻击敌人积攒协奏能量条\n- **入战技能(Intro Skill)**: 切入角色时自动释放的技能\n- **退战技能(Outro Skill)**: 切出角色时自动释放的技能\n- **策略**: 合理安排角色切换顺序，利用入战/退战效果打出连携\n\n### 2. 完美闪避\n- 在敌人攻击命中的瞬间闪避触发完美闪避\n- 触发子弹时间效果，短暂减速敌人\n- 完美闪避后可触发特殊反击动作\n- 是高端战斗的核心技巧\n\n### 3. Forte回路(固有回路)\n每个角色拥有独特的Forte回路机制：\n- 通过特定操作积累回路能量\n- 能量满后可释放强化效果\n- 每个角色的回路机制不同，需要针对性练习\n- 例如：部分角色通过普攻叠层，部分通过技能\n\n### 4. 共鸣解放(大招)\n- 需要积攒足够的共鸣能量\n- 能量通过攻击、受击、技能命中获得\n- 释放时有无敌帧，可用来规避伤害\n- 部分角色的大招有形态变化效果\n\n### 5. 声骸技能\n- 按Z键释放当前装备声骸的主动技能\n- 不同声骸提供不同效果：伤害、治疗、增益等\n- 合理选择声骸技能搭配角色定位\n- 声骸技能有冷却时间\n\n### 6. 战斗技巧\n1. 利用入战/退战机制进行快速角色切换连携\n2. 完美闪避是提高输出的关键\n3. 合理管理共鸣能量，确保大招在关键时刻可用\n4. 声骸技能可以作为连招的衔接\n5. 注意属性克制关系，选择对应属性的队伍",
+    "contentEn": "## Complete Combat System Guide\n\n### 1. Intro & Outro Skills\nWuthering Waves' unique character-switch combat system:\n- **Concerto Energy**: Attacking enemies fills the Concerto Energy gauge\n- **Intro Skill**: Automatically triggered when switching IN to a character\n- **Outro Skill**: Automatically triggered when switching OUT from a character\n- **Strategy**: Plan your switch order to maximize Intro/Outro skill combos\n\n### 2. Perfect Dodge\n- Dodge at the exact moment an enemy attack lands to trigger Perfect Dodge\n- Activates slow-motion effect, briefly slowing enemies\n- Perfect Dodge enables a special counter-attack\n- Core skill for high-end combat\n\n### 3. Forte Circuit\nEach character has a unique Forte Circuit mechanic:\n- Accumulate circuit energy through specific actions\n- When fully charged, unleash an enhanced effect\n- Each character's circuit works differently, requiring practice\n- Examples: Some characters stack through normal attacks, others through skills\n\n### 4. Resonance Liberation (Ultimate)\n- Requires sufficient Resonance Energy\n- Energy gained through attacking, taking damage, and skill hits\n- Grants invincibility frames during cast, useful for dodging damage\n- Some characters' ultimates trigger form changes\n\n### 5. Echo Skills\n- Press Z to use the equipped Echo's active ability\n- Different Echoes provide different effects: DMG, healing, buffs\n- Match Echo skills to your character's role\n- Echo skills have cooldowns\n\n### 6. Combat Tips\n1. Use Intro/Outro mechanics for rapid character-switch combos\n2. Perfect Dodge is key to maximizing DPS\n3. Manage Resonance Energy to ensure ultimates are available when needed\n4. Echo skills can bridge gaps in combos\n5. Consider elemental advantages when building teams",
+    "tags": [
+      "战斗",
+      "共鸣",
+      "闪避",
+      "Combat",
+      "Resonance",
+      "Dodge"
+    ],
+    "faq": [
+      {
+        "question": "What are Intro and Outro skills?",
+        "questionZh": "入战和退战技能是什么？",
+        "answer": "Intro Skills trigger when you switch TO a character, Outro Skills trigger when you switch FROM a character. Both are automatic and key to the combo system.",
+        "answerZh": "入战技能在切入角色时自动触发，退战技能在切出角色时自动触发。两者都是自动的，是连招系统的核心。"
+      },
+      {
+        "question": "How does Concerto Energy work?",
+        "questionZh": "协奏能量怎么运作？",
+        "answer": "Concerto Energy fills as you attack enemies. When full, switching characters triggers enhanced Intro/Outro skills. Different characters' Concerto gauges fill at different rates.",
+        "answerZh": "攻击敌人时协奏能量会逐渐充满。满时切换角色会触发强化的入战/退战技能。不同角色的协奏能量条充能速度不同。"
+      },
+      {
+        "question": "What is the Forte Circuit?",
+        "questionZh": "固有回路是什么？",
+        "answer": "The Forte Circuit is a unique gauge-based mechanic for each character. Filling it through specific actions unlocks enhanced abilities or powerful attacks unique to that character.",
+        "answerZh": "固有回路是每个角色独有的量表机制。通过特定行动充满后，可解锁该角色独有的强化能力或强力攻击。"
+      }
+    ]
+  },
+  {
+    "id": "echo-system-guide",
+    "title": "声骸系统完全指南",
+    "titleEn": "Complete Echo System Guide",
+    "category": "echo",
+    "categoryZh": "声骸系统",
+    "categoryEn": "Echo System",
+    "summary": "全面解析鸣潮的声骸系统：声骸分类、COST机制、套装效果、主属性与副属性、刷取策略。",
+    "summaryEn": "Comprehensive guide to the Echo system: Echo classes, COST mechanics, Sonata Effects (set bonuses), main/sub stats, and farming strategies.",
+    "content": "## 声骸系统完全指南\n\n### 1. 声骸基础\n声骸是鸣潮的核心装备系统，类似于其他游戏中的圣遗物/遗器：\n- 每个角色可装备最多5个声骸\n- 声骸通过击败敌人掉落或声骸域获取\n- 每个声骸拥有主动技能和属性加成\n\n### 2. COST机制\n- 声骸分为不同COST等级：1-COST、3-COST、4-COST\n- 总COST上限随Union Level提升：\n  - 初始：10 COST\n  - 高等级：12 COST\n- 常见COST组合：4+4+3+1+1=13(高等级)或4+3+3+1+1=12\n- 合理分配COST是声骸搭配的核心\n\n### 3. 声骸分类\n按稀有度/等级分为4类：\n- **普通(Common)**: 1-COST，如 Whiff Whaff、Snip Snap、Zig Zag等\n- **精英(Elite)**: 3-COST，如 Cyan-Feathered Heron、Hurriclaw、Roseshroom等\n- **霸主(Overlord)**: 4-COST，如 Feilian Beringal、Impermanence Heron、Crownless等\n- **灾厄(Calamity)**: 4-COST，如 Dreamless、Bell-Borne Geochelone、Hecate、Jué等\n\n### 4. 套装效果(奏鸣效果/Sonata Effects)\n共8种声骸套装：\n- **凝寒霜焰(Glacio)**: 2件-凝素伤害+10%；5件-普攻/重击额外凝素伤害\n- **热熔裂隙(Fusion)**: 2件-热熔伤害+10%；5件-普攻/重击额外热熔伤害\n- **雷啸霆击(Electro)**: 2件-导电伤害+10%；5件-普攻/重击额外导电伤害\n- **气旋侵蚀(Aero)**: 2件-气动伤害+10%；5件-普攻/重击额外气动伤害\n- **衍光失真(Spectro)**: 2件-衍射伤害+10%；5件-普攻/重击额外衍射伤害\n- **暗潮湮灭(Havoc)**: 2件-湮灭伤害+10%；5件-普攻/重击额外湮灭伤害\n- **治愈之光(Healing)**: 2件-治疗效果+10%；5件-治疗时提供额外能量恢复\n- **月华之力(Moonlit)**: 2件-攻击力+10%；5件-切换角色时提供攻击力加成\n\n### 5. 声骸属性\n每个声骸有2个主属性和最多5个副属性：\n- **主属性**: 根据COST等级随机（不同COST有不同主属性池）\n- **副属性**: 随机生成，有特定数值范围\n- 常见优质副属性：暴击率、暴击伤害、攻击力%、元素伤害加成\n\n### 6. 刷取策略\n1. **前期**: 使用任何可用的声骸，不必追求套装\n2. **中期**: 刷取2件套效果，优先选择属性COST合理的声骸\n3. **后期**: 追求5件套+优质副属性\n4. **刷取地点**: 回音域(Tacet Field)是主要刷取地点\n5. **锁定策略**: 先锁定主属性正确的，再筛选副属性",
+    "contentEn": "## Complete Echo System Guide\n\n### 1. Echo Basics\nThe Echo system is the core equipment mechanic, similar to artifacts/relics in other games:\n- Each character equips up to 5 Echoes\n- Echoes drop from defeated enemies or are obtained from Tacet Fields\n- Each Echo provides an active ability and stat bonuses\n\n### 2. COST Mechanic\n- Echoes have different COST levels: 1-COST, 3-COST, 4-COST\n- Total COST cap increases with Union Level:\n  - Initial: 10 COST\n  - Higher levels: 12 COST\n- Common COST combos: 4+4+3+1+1=13 (high level) or 4+3+3+1+1=12\n- Proper COST allocation is the core of Echo builds\n\n### 3. Echo Classes\n4 classes by rarity:\n- **Common**: 1-COST, e.g., Whiff Whaff, Snip Snap, Zig Zag\n- **Elite**: 3-COST, e.g., Cyan-Feathered Heron, Hurriclaw, Roseshroom\n- **Overlord**: 4-COST, e.g., Feilian Beringal, Impermanence Heron, Crownless\n- **Calamity**: 4-COST, e.g., Dreamless, Bell-Borne Geochelone, Hecate, Jue\n\n### 4. Sonata Effects (Set Bonuses)\n8 Echo sets with 2-piece and 5-piece bonuses:\n- **Glacio**: 2pc - Glacio DMG +10%; 5pc - Extra Glacio DMG on basic/heavy attacks\n- **Fusion**: 2pc - Fusion DMG +10%; 5pc - Extra Fusion DMG on basic/heavy attacks\n- **Electro**: 2pc - Electro DMG +10%; 5pc - Extra Electro DMG on basic/heavy attacks\n- **Aero**: 2pc - Aero DMG +10%; 5pc - Extra Aero DMG on basic/heavy attacks\n- **Spectro**: 2pc - Spectro DMG +10%; 5pc - Extra Spectro DMG on basic/heavy attacks\n- **Havoc**: 2pc - Havoc DMG +10%; 5pc - Extra Havoc DMG on basic/heavy attacks\n- **Healing**: 2pc - Healing +10%; 5pc - Energy recovery on heal\n- **Moonlit**: 2pc - ATK +10%; 5pc - ATK bonus on character switch\n\n### 5. Echo Stats\nEach Echo has 2 main stats and up to 5 sub-stats:\n- **Main Stats**: Randomized by COST tier (different COST pools)\n- **Sub-stats**: Randomly generated with specific value ranges\n- Priority sub-stats: CRIT Rate, CRIT DMG, ATK%, Elemental DMG Bonus\n\n### 6. Farming Strategy\n1. **Early**: Use any available Echoes, don't chase sets\n2. **Mid**: Farm for 2-piece bonuses, prioritize stat-efficient COST combos\n3. **Late**: Chase 5-piece sets with premium sub-stats\n4. **Farming Location**: Tacet Fields are the primary farming spot\n5. **Lock Strategy**: Lock main stats first, then filter by sub-stats",
+    "tags": [
+      "声骸",
+      "装备",
+      "套装效果",
+      "Echo",
+      "Equipment",
+      "Sonata Effects"
+    ],
+    "faq": [
+      {
+        "question": "What is the best COST distribution?",
+        "questionZh": "声骸COST怎么分配最好？",
+        "answer": "At 12 COST: 4+3+3+1+1 (two 3-COST Elites) or 4+4+3+1+0 (skip one slot). At higher levels with 12+ COST, aim for 4+4+3+1+1 to maximize set bonuses.",
+        "answerZh": "12 COST时：4+3+3+1+1（两个3-COST精英）或4+4+3+1+0（跳过一个槽位）。高等级12+COST时，目标是4+4+3+1+1以最大化套装效果。"
+      },
+      {
+        "question": "Should I prioritize 5-piece set or mixed sets?",
+        "questionZh": "应该优先5件套还是混搭？",
+        "answer": "For DPS characters, 5-piece elemental sets are usually best. For supports, 2-piece elemental + 2-piece Moonlit or Healing can be effective. Always prioritize good main stats over set bonuses.",
+        "answerZh": "输出角色通常5件套元素伤害最好。辅助可以用2件套元素+2件套月华或治愈混搭。主属性永远优先于套装效果。"
+      },
+      {
+        "question": "How do I get high-quality Echoes?",
+        "questionZh": "怎么获取高品质声骸？",
+        "answer": "Farm Tacet Fields for targeted set drops. Higher SOL3 Phase gives better Echo drops. Boss Echoes (Overlord/Calamity) have unique skills but require 60 Waveplate per attempt.",
+        "answerZh": "刷回音域获取指定套装掉落。更高的SOL3阶段给更好的声骸掉落。Boss声骸(霸主/灾厄)有独特技能但每次需要60波片。"
+      }
+    ]
+  },
+  {
+    "id": "resonance-chain-guide",
+    "title": "共鸣链系统指南",
+    "titleEn": "Resonance Chain Guide",
+    "category": "combat",
+    "categoryZh": "战斗系统",
+    "categoryEn": "Combat",
+    "summary": "详解鸣潮的共鸣链(命座)系统：波带获取、各节点效果、是否值得抽取建议。",
+    "summaryEn": "Detailed guide to the Resonance Chain system: Waveband acquisition, node effects, and pull value recommendations.",
+    "content": "## 共鸣链系统指南\n\n### 1. 共鸣链基础\n共鸣链(Resonance Chain)是鸣潮的命座系统：\n- 每个角色有6个共鸣链节点(S1-S6)\n- 通过获取重复角色的波带(Waveband)来解锁\n- 每个节点提供不同的能力强化\n- 共鸣链效果只对对应角色生效\n\n### 2. 波带(Waveband)获取\n- **抽卡重复**: 从祈愿中获得重复角色时，获得对应角色的波带\n- **商店兑换**: 部分角色的波带可在特定商店中用代币兑换\n- **活动奖励**: 部分限时活动可能赠送角色波带\n\n### 3. 共鸣链节点效果\n共鸣链通常按照以下规律强化角色：\n- **S1**: 强化共鸣技能或基础机制\n- **S2**: 提升生存能力或能量恢复\n- **S3**: 强化共鸣解放(大招)\n- **S4**: 新增机制或显著强化现有技能\n- **S5**: 进一步提升核心输出能力\n- **S6**: 大幅质变，角色完全体\n\n### 4. 共鸣链价值分析\n不同角色对共鸣链的依赖程度不同：\n- **0链即完整**: 大部分角色在0链就有完整机制\n- **关键命座**: 部分角色在S1或S6有显著提升\n- **性价比**: 一般S1性价比最高，S6投入最大\n\n### 5. 建议\n1. 优先考虑角色广度(更多角色)而非共鸣链深度\n2. 主C的S1通常比辅助的S6更有价值\n3. 除非是真爱角色，不建议追求S6\n4. 关注社区共鸣链评测再做决定",
+    "contentEn": "## Resonance Chain Guide\n\n### 1. Resonance Chain Basics\nThe Resonance Chain is the constellation-equivalent system:\n- Each character has 6 Resonance Chain nodes (S1-S6)\n- Unlock by acquiring Wavebands from duplicate character pulls\n- Each node provides a different ability enhancement\n- Resonance Chain effects only apply to the corresponding character\n\n### 2. Waveband Acquisition\n- **Gacha Duplicates**: Pulling a duplicate character grants that character's Waveband\n- **Shop Exchange**: Some character Wavebands can be exchanged with tokens in specific shops\n- **Event Rewards**: Limited-time events may occasionally grant character Wavebands\n\n### 3. Node Effects\nResonance Chain typically follows this pattern:\n- **S1**: Enhances Resonance Skill or basic mechanics\n- **S2**: Improves survivability or energy recovery\n- **S3**: Strengthens Resonance Liberation (Ultimate)\n- **S4**: Adds new mechanics or significantly enhances existing skills\n- **S5**: Further boosts core DPS capabilities\n- **S6**: Major transformation, character's full potential\n\n### 4. Value Analysis\nDifferent characters have varying dependency on Resonance Chain:\n- **Complete at S0**: Most characters have full mechanics at S0\n- **Key Nodes**: Some characters see significant improvements at S1 or S6\n- **Cost Efficiency**: S1 generally offers the best value, S6 requires the most investment\n\n### 5. Recommendations\n1. Prioritize roster breadth (more characters) over Resonance Chain depth\n2. A main DPS's S1 is usually more valuable than a support's S6\n3. Don't chase S6 unless it's a favorite character\n4. Check community Resonance Chain reviews before deciding",
+    "tags": [
+      "共鸣链",
+      "命座",
+      "波带",
+      "Resonance Chain",
+      "Waveband"
+    ],
+    "faq": [
+      {
+        "question": "Is Resonance Chain necessary for endgame?",
+        "questionZh": "共鸣链对后期必要吗？",
+        "answer": "No, most content is clearable at S0. Resonance Chains make things easier and faster but are not required for any content.",
+        "answerZh": "不需要，大部分内容0链即可通关。共鸣链让事情更简单更快，但不是任何内容的必要条件。"
+      },
+      {
+        "question": "Which characters benefit most from S1?",
+        "questionZh": "哪些角色S1提升最大？",
+        "answer": "Main DPS characters generally benefit most from S1, as it typically boosts their core damage output. Check character-specific guides for detailed S1 analysis.",
+        "answerZh": "主C角色通常S1提升最大，因为S1一般强化核心输出能力。查看角色专属攻略了解详细的S1分析。"
+      }
+    ]
+  },
+  {
+    "id": "farming-guide",
+    "title": "材料刷取与资源管理指南",
+    "titleEn": "Farming & Resource Management Guide",
+    "category": "farming",
+    "categoryZh": "刷取攻略",
+    "categoryEn": "Farming",
+    "summary": "鸣潮中最优的波片使用策略、材料刷取路线、每日任务规划和资源管理建议。",
+    "summaryEn": "Optimal Waveplate usage strategy, material farming routes, daily task planning, and resource management tips for Wuthering Waves.",
+    "content": "## 材料刷取与资源管理指南\n\n### 1. 波片(Waveplate)优先级\n波片是最重要的有限资源：\n- **前期(Union Level 1-20)**:\n  - 模拟挑战(Simulation Challenge): 获取经验和信用点\n  - Boss挑战: 获取角色突破材料\n- **中期(Union Level 20-40)**:\n  - 声骸域(Tacet Field): 刷取声骸套装\n  - Boss挑战: 持续获取突破材料\n- **后期(Union Level 40+)**:\n  - 回音域: 刷取高品质声骸\n  - 周常Boss: 获取技能升级材料\n\n### 2. Boss挑战\n- 每次消耗60波片\n- 16个Boss分布在不同国度\n- 掉落角色突破材料和声骸\n- Boss位置：\n  - 瑝珑: Mechanical Division, Crownless, Dreamless, Feilian Beringal, Impermanence Heron, Bell-Borne Geochelone\n  - 黑海岸: Hecate, Crownless Shadow\n  - 黎那汐塔: Thundering Mephis, Abomination, Luminous Crown\n  - 拉海洛: Frost-Blaze, Glacial Crown, Abyss Walker\n\n### 3. 每日规划\n推荐每日完成以下内容：\n- **日常任务**: 获取活跃度和基础奖励\n- **消耗波片**: 至少消耗当日恢复的波片\n- **声骸猎杀**: 每日可猎杀一定数量的精英声骸\n- **探索活动**: 收集地图上的材料、开宝箱\n- **活动参与**: 完成当期限时活动任务\n\n### 4. 材料分类\n- **通用材料**: 多个角色共用，优先刷取\n- **专属材料**: 特定角色需要，按需刷取\n- **稀有材料**: Boss掉落，每周限制获取次数\n- **特产**: 地图采集物，刷新周期较长\n\n### 5. 省体力技巧\n1. 提前规划要培养的角色，避免浪费材料\n2. 利用声骸数据银行(Data Bank)补全声骸图鉴\n3. 周常Boss周刷新，合理安排挑战时间\n4. 活动奖励通常性价比很高，优先完成\n5. 高SOL3阶段掉落更好，但不建议过早提升难度",
+    "contentEn": "## Farming & Resource Management Guide\n\n### 1. Waveplate Priority\nWaveplate is the most important limited resource:\n- **Early (Union Level 1-20)**:\n  - Simulation Challenge: EXP and Credits\n  - Boss Challenges: Character ascension materials\n- **Mid (Union Level 20-40)**:\n  - Tacet Field: Echo sets\n  - Boss Challenges: Ongoing ascension materials\n- **Late (Union Level 40+)**:\n  - Tacet Fields: High-quality Echoes\n  - Weekly Bosses: Skill upgrade materials\n\n### 2. Boss Challenges\n- Costs 60 Waveplate per attempt\n- 16 bosses across different nations\n- Drop ascension materials and Echoes\n- Boss Locations:\n  - Huanglong: Mechanical Division, Crownless, Dreamless, Feilian Beringal, Impermanence Heron, Bell-Borne Geochelone\n  - The Black Shores: Hecate, Crownless Shadow\n  - Rinascita: Thundering Mephis, Abomination, Luminous Crown\n  - Lahai-Roi: Frost-Blaze, Glacial Crown, Abyss Walker\n\n### 3. Daily Planning\nRecommended daily activities:\n- **Daily Missions**: Activity points and basic rewards\n- **Spend Waveplate**: At minimum, use daily recovered Waveplate\n- **Echo Hunts**: Limited elite Echo kills per day\n- **Exploration**: Gather map materials, open chests\n- **Events**: Complete limited-time event tasks\n\n### 4. Material Categories\n- **Universal Materials**: Shared across characters, farm first\n- **Character-Specific**: Only needed for certain characters\n- **Rare Materials**: Boss drops, weekly acquisition limits\n- **Local Specialties**: Map gathering items, long respawn timers\n\n### 5. Efficiency Tips\n1. Plan which characters to build in advance to avoid waste\n2. Use the Data Bank to complete Echo collection\n3. Weekly bosses reset weekly, schedule your attempts\n4. Event rewards are usually high value, prioritize them\n5. Higher SOL3 Phase has better drops but don't raise difficulty too early",
+    "tags": [
+      "刷取",
+      "材料",
+      "波片",
+      "Farming",
+      "Materials",
+      "Waveplate"
+    ],
+    "faq": [
+      {
+        "question": "What should I spend Waveplate on first?",
+        "questionZh": "波片应该先花在哪里？",
+        "answer": "Early game: Simulation Challenges for EXP/Credits. Once you have characters to build, shift to Boss challenges for ascension materials. Late game: Tacet Fields for Echo sets.",
+        "answerZh": "前期打模拟挑战获取经验/信用点。有了需要培养的角色后转Boss打突破材料。后期刷回音域拿声骸套装。"
+      },
+      {
+        "question": "How many bosses are there and where?",
+        "questionZh": "有多少个Boss，分别在哪里？",
+        "answer": "16 bosses total across all nations. Huanglong has 6, The Black Shores has 2, Rinascita has 3, Lahai-Roi has 3. New Federation has no bosses yet. Each costs 60 Waveplate.",
+        "answerZh": "共16个Boss分布在不同国度。瑝珑6个、黑海岸2个、黎那汐塔3个、拉海洛3个。新联邦暂无Boss。每次消耗60波片。"
+      }
+    ]
+  },
+  {
+    "id": "beginner-tips",
+    "title": "新手必看技巧",
+    "titleEn": "Essential Tips for New Players",
+    "category": "beginner",
+    "categoryZh": "新手入门",
+    "categoryEn": "Beginner",
+    "summary": "给刚入坑鸣潮的新玩家的实用技巧和常见误区提醒，帮助你快速上手不踩坑。",
+    "summaryEn": "Practical tips and common mistake warnings for new Wuthering Waves players to help you get started without pitfalls.",
+    "content": "## 新手必看技巧\n\n### 1. 开局选择\n- **新手池**: 优先使用新手池的折扣抽卡\n- **初始角色**: 白芷、散华等免费角色都非常实用\n- **主线推进**: 跟随主线解锁功能和地图区域\n\n### 2. 资源管理\n- **波片不要溢出**: 确保波片不达到上限浪费恢复\n- **不要平均培养**: 集中资源培养1主C+1副C+1辅助\n- **信用点规划**: 前期信用点很紧张，不要浪费在不需要的角色上\n- **声骸经验**: 前期不要大量强化声骸，后期会有更好的\n\n### 3. 探索技巧\n- **共鸣灯塔**: 优先激活，照亮地图区域\n- **传送点**: 看到就开，方便后续探索\n- **宝箱**: 前期宝箱给大量经验，积极探索\n- **每日采集**: 养成路过采集材料的习惯\n\n### 4. 战斗技巧\n- **完美闪避**: 多练习，这是战斗提升最大的技巧\n- **角色切换**: 不要只玩一个角色，善用入战/退战技能\n- **声骸技能**: 别忘了按Z使用声骸技能\n- **属性克制**: 注意敌人属性弱点\n\n### 5. 常见误区\n- ❌ 不要一上来就刷声骸，前期用过渡声骸即可\n- ❌ 不要忽略Union Level，它影响世界等级和掉落\n- ❌ 不要跳过主线任务，很多功能需要主线解锁\n- ❌ 不要分散培养太多角色，资源集中更高效\n- ❌ 不要忽略免费角色，部分免费角色非常强力\n\n### 6. 进阶建议\n- 加入活跃公会获取额外资源\n- 关注游戏更新和活动信息\n- 使用声骸数据银行追踪收集进度\n- 合理规划抽卡资源，不要冲动消费",
+    "contentEn": "## Essential Tips for New Players\n\n### 1. Starting Out\n- **Beginner Banner**: Prioritize the discounted beginner banner pulls\n- **Starting Characters**: Free characters like Baizhi and Sanhua are very useful\n- **Main Story**: Follow the main quest to unlock features and map areas\n\n### 2. Resource Management\n- **Don't let Waveplate cap**: Ensure Waveplate doesn't hit the maximum and waste recovery\n- **Don't spread resources**: Focus on 1 main DPS + 1 sub DPS + 1 support\n- **Credit Planning**: Credits are tight early on, don't waste them on characters you don't need\n- **Echo EXP**: Don't heavily invest in Echo enhancement early, better ones come later\n\n### 3. Exploration Tips\n- **Resonance Beacons**: Activate them first to illuminate map areas\n- **Teleport Points**: Unlock whenever you see them for easier exploration\n- **Chests**: Early chests give lots of EXP, explore actively\n- **Daily Gathering**: Get into the habit of picking up materials as you pass by\n\n### 4. Combat Tips\n- **Perfect Dodge**: Practice this, it's the biggest combat improvement you can make\n- **Character Switching**: Don't play only one character, utilize Intro/Outro skills\n- **Echo Skills**: Don't forget to press Z to use Echo abilities\n- **Elemental Advantage**: Pay attention to enemy elemental weaknesses\n\n### 5. Common Mistakes\n- ❌ Don't farm Echoes intensively at the start, use transition Echoes\n- ❌ Don't ignore Union Level, it affects world level and drops\n- ❌ Don't skip the main story, many features require story progression\n- ❌ Don't spread resources across too many characters, focus is more efficient\n- ❌ Don't ignore free characters, some are very strong\n\n### 6. Advanced Tips\n- Join an active guild for extra resources\n- Follow game updates and event information\n- Use the Data Bank to track Echo collection progress\n- Plan your Convene resources wisely, don't impulse pull",
+    "tags": [
+      "新手",
+      "技巧",
+      "攻略",
+      "Beginner",
+      "Tips",
+      "Guide"
+    ],
+    "faq": [
+      {
+        "question": "Should I pull on the beginner banner or the standard banner?",
+        "questionZh": "先抽新手池还是常驻池？",
+        "answer": "Always use the beginner banner first since it offers discounted pulls with guaranteed 5-star. After exhausting it, save for limited character banners.",
+        "answerZh": "优先用新手池，有折扣且有保底5星。用完新手池后，攒资源等限定角色池。"
+      },
+      {
+        "question": "When should I raise my SOL3 Phase?",
+        "questionZh": "什么时候提升SOL3阶段？",
+        "answer": "Raise it when you feel comfortable with current difficulty. Higher SOL3 gives better drops but stronger enemies. You can always lower it if it becomes too hard.",
+        "answerZh": "当觉得当前难度可以轻松应对时再提升。更高的SOL3掉落更好但敌人更强。太难了可以随时降低。"
+      }
+    ]
+  }
+]

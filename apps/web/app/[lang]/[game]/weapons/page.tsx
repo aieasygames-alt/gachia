@@ -1,6 +1,6 @@
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { nteWeapons, getNteWeaponName, getNteWeaponEffect, genshinWeapons, getGenshinWeaponName, getGenshinWeaponEffect } from '@gachia/data';
+import { nteWeapons, getNteWeaponName, getNteWeaponEffect, genshinWeapons, getGenshinWeaponName, getGenshinWeaponEffect, starrailLightCones, getStarRailLightConeName, getStarRailLightConeEffect, wuwaWeapons, getWuWaWeaponName, getWuWaWeaponEffect } from '@gachia/data';
 
 const NTE_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
   solid: { zh: '固体', en: 'Solid', ja: 'ソリッド' },
@@ -34,8 +34,16 @@ export default async function WeaponsPage({
     return <GenshinWeaponsPage locale={locale} />;
   }
 
+  if (gameId === 'starrail') {
+    return <StarRailWeaponsPage locale={locale} />;
+  }
+
   if (gameId === 'nte') {
     return <NteWeaponsPage locale={locale} />;
+  }
+
+  if (gameId === 'wuwa') {
+    return <WuWaWeaponsPage locale={locale} />;
   }
 
   return (
@@ -107,6 +115,77 @@ function GenshinWeaponsPage({ locale }: { locale: SupportedLocale }) {
   );
 }
 
+// --- Star Rail Light Cones ---
+
+const STARRAIL_PATH_LABELS: Record<string, Record<string, string>> = {
+  destruction: { zh: '毁灭', en: 'Destruction', ja: '壊滅' },
+  hunt: { zh: '巡猎', en: 'Hunt', ja: '巡狩' },
+  erudition: { zh: '智识', en: 'Erudition', ja: '知恵' },
+  harmony: { zh: '同谐', en: 'Harmony', ja: '調和' },
+  nihility: { zh: '虚无', en: 'Nihility', ja: '虚無' },
+  preservation: { zh: '存护', en: 'Preservation', ja: '存護' },
+  abundance: { zh: '丰饶', en: 'Abundance', ja: '豊穣' },
+  remembrance: { zh: '记忆', en: 'Remembrance', ja: '記憶' },
+};
+
+function StarRailWeaponsPage({ locale }: { locale: SupportedLocale }) {
+  const weapons = starrailLightCones;
+  const fiveStar = weapons.filter((w) => w.rarity === 5);
+  const fourStar = weapons.filter((w) => w.rarity === 4);
+  const threeStar = weapons.filter((w) => w.rarity === 3);
+
+  const label = locale === 'zh' ? '光锥' : locale === 'ja' ? '光円錐' : 'Light Cones';
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.starrail.theme.primary }}>
+        {label}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? `共 ${weapons.length} 件光锥` : locale === 'ja' ? `${weapons.length} 個の光円錐` : `${weapons.length} Light Cones`}
+      </p>
+
+      {[fiveStar, fourStar, threeStar].map((list) => {
+        if (list.length === 0) return null;
+        const rarity = list[0]!.rarity;
+        return (
+          <section key={rarity} className="mb-8">
+            <h2 className="mb-4 text-lg font-semibold text-game-text">
+              {rarity}★ ({list.length})
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {list.map((w) => {
+                const effect = getStarRailLightConeEffect(w, locale);
+                const pathLabel = STARRAIL_PATH_LABELS[w.path]?.[locale] ?? w.path;
+                return (
+                  <div key={w.id} className="rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary">
+                    <div className="mb-2 flex items-center gap-2">
+                      <span className="text-base font-bold" style={{ color: rarity === 5 ? '#eab308' : rarity === 4 ? '#a855f7' : '#60a5fa' }}>{w.rarity}★</span>
+                      <h3 className="font-semibold text-game-text">{getStarRailLightConeName(w, locale)}</h3>
+                      <span className="ml-auto rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{pathLabel}</span>
+                    </div>
+                    <div className="mb-2 flex gap-3 text-sm text-game-text-muted">
+                      <span>HP {w.baseHp}</span>
+                      <span>ATK {w.baseAtk}</span>
+                      <span>DEF {w.baseDef}</span>
+                    </div>
+                    {effect.description && <p className="text-xs leading-relaxed text-game-text-muted line-clamp-2">{effect.description}</p>}
+                    {w.signatureCharacter && (
+                      <p className="mt-2 text-xs text-game-primary">
+                        {locale === 'zh' ? '专属' : 'Signature'}: {w.signatureCharacter}
+                      </p>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
 // --- NTE Weapons ---
 
 function NteWeaponsPage({ locale }: { locale: SupportedLocale }) {
@@ -146,6 +225,73 @@ function NteWeaponsPage({ locale }: { locale: SupportedLocale }) {
                     </div>
                     <p className="text-xs leading-relaxed text-game-text-muted line-clamp-2">{effect.description}</p>
                     {w.signatureCharacter && (<p className="mt-2 text-xs text-game-primary">{locale === 'zh' ? '专属' : 'Signature'}: {w.signatureCharacter}</p>)}
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
+// --- Wuthering Waves Weapons ---
+
+const WUWA_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
+  broadblade: { zh: '大刃', en: 'Broadblade', ja: '大剣' },
+  sword: { zh: '长刃', en: 'Sword', ja: '長刃' },
+  pistols: { zh: '佩枪', en: 'Pistols', ja: '銃' },
+  gauntlets: { zh: '臂铠', en: 'Gauntlets', ja: '腕甲' },
+  rectifier: { zh: '音感仪', en: 'Rectifier', ja: '感応儀' },
+};
+
+const WUWA_RARITY_COLORS: Record<number, string> = { 1: '#9ca3af', 2: '#4ade80', 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };
+
+function WuWaWeaponsPage({ locale }: { locale: SupportedLocale }) {
+  const weapons = wuwaWeapons;
+  const fiveStar = weapons.filter((w) => w.rarity === 5);
+  const fourStar = weapons.filter((w) => w.rarity === 4);
+  const threeStar = weapons.filter((w) => w.rarity === 3);
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.wuwa.theme.primary }}>
+        {CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? `共 ${weapons.length} 件武器` : locale === 'ja' ? `${weapons.length} 個の武器` : `${weapons.length} Weapons`}
+      </p>
+
+      {[fiveStar, fourStar, threeStar].map((list) => {
+        if (list.length === 0) return null;
+        const rarity = list[0]!.rarity;
+        return (
+          <section key={rarity} className="mb-8">
+            <h2 className="mb-4 text-lg font-semibold text-game-text">
+              {rarity}★ ({list.length})
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {list.map((w) => {
+                const effect = getWuWaWeaponEffect(w, locale);
+                const typeLabel = WUWA_WEAPON_TYPE_LABELS[w.weaponType]?.[locale] ?? w.weaponType;
+                return (
+                  <div key={w.id} className="rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary">
+                    <div className="mb-2 flex items-center gap-2">
+                      <span className="text-base font-bold" style={{ color: WUWA_RARITY_COLORS[w.rarity] || '#888' }}>{w.rarity}★</span>
+                      <h3 className="font-semibold text-game-text">{getWuWaWeaponName(w, locale)}</h3>
+                      <span className="ml-auto rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{typeLabel}</span>
+                    </div>
+                    <div className="mb-2 flex gap-3 text-sm text-game-text-muted">
+                      <span>ATK {w.baseAtk}</span>
+                      {w.subStat && <span>{w.subStat.value} {w.subStat.name}</span>}
+                    </div>
+                    {effect.description && <p className="text-xs leading-relaxed text-game-text-muted line-clamp-2">{effect.description}</p>}
+                    {w.signatureCharacter && (
+                      <p className="mt-2 text-xs text-game-primary">
+                        {locale === 'zh' ? '专属' : 'Signature'}: {w.signatureCharacter}
+                      </p>
+                    )}
                   </div>
                 );
               })}

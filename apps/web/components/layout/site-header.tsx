@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { GAMES, GAME_IDS } from '@gachia/core';
 import type { SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
@@ -12,8 +13,9 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
     <header className="sticky top-0 z-50 border-b border-game-border bg-game-bg/80 backdrop-blur-md">
       <div className="container mx-auto flex h-14 items-center justify-between px-4">
         {/* Logo */}
-        <Link href="/" className="text-xl font-bold text-game-primary">
-          Gachia
+        <Link href="/" className="flex items-center gap-2">
+          <Image src="/images/logo.png" alt="Gachia" width={32} height={32} className="h-8 w-8" />
+          <span className="text-xl font-bold text-game-primary">Gachia</span>
         </Link>
 
         {/* Game Switcher */}

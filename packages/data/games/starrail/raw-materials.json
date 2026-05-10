@@ -1,0 +1,560 @@
+[
+  {
+    "id": "tracks-of-destiny",
+    "name": "命运的足迹",
+    "nameEn": "Tracks of Destiny",
+    "type": "special",
+    "rarity": 5,
+    "source": "活动奖励、模拟宇宙奖励、忘却之庭奖励",
+    "sourceEn": "Event rewards, Simulated Universe rewards, Forgotten Hall rewards"
+  },
+  {
+    "id": "lost-echo-of-the-shared-wish",
+    "name": "愿望同归的回声",
+    "nameEn": "Lost Echo of the Shared Wish",
+    "type": "special",
+    "rarity": 5,
+    "source": "历战余响Boss掉落",
+    "sourceEn": "Echo of War boss drops"
+  },
+  {
+    "id": "stagnant-shadow-shape-of-destruction",
+    "name": "毁灭之形",
+    "nameEn": "Shape of Destruction",
+    "type": "boss",
+    "rarity": 4,
+    "source": "侵蚀隧洞·毁灭之芽",
+    "sourceEn": "Stagnant Shadow: Bud of Destruction"
+  },
+  {
+    "id": "stagnant-shadow-shape-of-preservation",
+    "name": "存护之形",
+    "nameEn": "Shape of Preservation",
+    "type": "boss",
+    "rarity": 4,
+    "source": "侵蚀隧洞·存护之芽",
+    "sourceEn": "Stagnant Shadow: Bud of Preservation"
+  },
+  {
+    "id": "stagnant-shadow-shape-of-the-hunt",
+    "name": "巡猎之形",
+    "nameEn": "Shape of The Hunt",
+    "type": "boss",
+    "rarity": 4,
+    "source": "侵蚀隧洞·巡猎之芽",
+    "sourceEn": "Stagnant Shadow: Bud of The Hunt"
+  },
+  {
+    "id": "stagnant-shadow-shape-of-erudition",
+    "name": "智识之形",
+    "nameEn": "Shape of Erudition",
+    "type": "boss",
+    "rarity": 4,
+    "source": "侵蚀隧洞·智识之芽",
+    "sourceEn": "Stagnant Shadow: Bud of Erudition"
+  },
+  {
+    "id": "stagnant-shadow-shape-of-harmony",
+    "name": "同谐之形",
+    "nameEn": "Shape of Harmony",
+    "type": "boss",
+    "rarity": 4,
+    "source": "侵蚀隧洞·同谐之芽",
+    "sourceEn": "Stagnant Shadow: Bud of Harmony"
+  },
+  {
+    "id": "stagnant-shadow-shape-of-nihility",
+    "name": "虚无之形",
+    "nameEn": "Shape of Nihility",
+    "type": "boss",
+    "rarity": 4,
+    "source": "侵蚀隧洞·虚无之芽",
+    "sourceEn": "Stagnant Shadow: Bud of Nihility"
+  },
+  {
+    "id": "stagnant-shadow-shape-of-abundance",
+    "name": "丰饶之形",
+    "nameEn": "Shape of Abundance",
+    "type": "boss",
+    "rarity": 4,
+    "source": "侵蚀隧洞·丰饶之芽",
+    "sourceEn": "Stagnant Shadow: Bud of Abundance"
+  },
+  {
+    "id": "endotherm-chitin",
+    "name": "恒温天晶",
+    "nameEn": "Endotherm Chitin",
+    "type": "boss",
+    "rarity": 4,
+    "source": "历战余响·毁灭之芽",
+    "sourceEn": "Echo of War: Bud of Destruction"
+  },
+  {
+    "id": "havoc-regisprism",
+    "name": "祸乱之棱",
+    "nameEn": "Havoc Regisprism",
+    "type": "boss",
+    "rarity": 4,
+    "source": "历战余响·虚无之芽",
+    "sourceEn": "Echo of War: Bud of Nihility"
+  },
+  {
+    "id": "storm-eye",
+    "name": "风暴之眼",
+    "nameEn": "Storm Eye",
+    "type": "boss",
+    "rarity": 4,
+    "source": "历战余响·巡猎之芽",
+    "sourceEn": "Echo of War: Bud of The Hunt"
+  },
+  {
+    "id": "gelid-chitin",
+    "name": "凛冬之钉",
+    "nameEn": "Gelid Chitin",
+    "type": "boss",
+    "rarity": 4,
+    "source": "历战余响·存护之芽",
+    "sourceEn": "Echo of War: Bud of Preservation"
+  },
+  {
+    "id": "ascendant-debris",
+    "name": "升华余渣",
+    "nameEn": "Ascendant Debris",
+    "type": "boss",
+    "rarity": 4,
+    "source": "历战余响·丰饶之芽",
+    "sourceEn": "Echo of War: Bud of Abundance"
+  },
+  {
+    "id": "extinguished-acorn",
+    "name": "熄灭旧核",
+    "nameEn": "Extinguished Core",
+    "type": "trace",
+    "rarity": 2,
+    "source": "拟造花萼（金）",
+    "sourceEn": "Calyx (Golden)"
+  },
+  {
+    "id": "kindled-acorn",
+    "name": "点燃新核",
+    "nameEn": "Glimmering Core",
+    "type": "trace",
+    "rarity": 3,
+    "source": "拟造花萼（金）",
+    "sourceEn": "Calyx (Golden)"
+  },
+  {
+    "id": "scorched-acorn",
+    "name": "燃烧残核",
+    "nameEn": "Squirming Core",
+    "type": "trace",
+    "rarity": 4,
+    "source": "拟造花萼（金）",
+    "sourceEn": "Calyx (Golden)"
+  },
+  {
+    "id": "shattered-homunculus",
+    "name": "破碎的活体",
+    "nameEn": "Shattered Homeocompany",
+    "type": "trace",
+    "rarity": 2,
+    "source": "拟造花萼（金）",
+    "sourceEn": "Calyx (Golden)"
+  },
+  {
+    "id": "severed-homunculus",
+    "name": "割裂的活体",
+    "nameEn": "Vanquished Homeocompany",
+    "type": "trace",
+    "rarity": 3,
+    "source": "拟造花萼（金）",
+    "sourceEn": "Calyx (Golden)"
+  },
+  {
+    "id": "regenerative-homunculus",
+    "name": "重塑的活体",
+    "nameEn": "Ambrosial Homeocompany",
+    "type": "trace",
+    "rarity": 4,
+    "source": "拟造花萼（金）",
+    "sourceEn": "Calyx (Golden)"
+  },
+  {
+    "id": "obsidian-of-despair",
+    "name": "绝望的黑曜石",
+    "nameEn": "Obsidian of Despair",
+    "type": "ascension",
+    "rarity": 2,
+    "source": "凝滞虚影",
+    "sourceEn": "Stagnant Shadow"
+  },
+  {
+    "id": "obsidian-of-fear",
+    "name": "恐惧的黑曜石",
+    "nameEn": "Obsidian of Fear",
+    "type": "ascension",
+    "rarity": 3,
+    "source": "凝滞虚影",
+    "sourceEn": "Stagnant Shadow"
+  },
+  {
+    "id": "obsidian-of-dread",
+    "name": "惊骇的黑曜石",
+    "nameEn": "Obsidian of Dread",
+    "type": "ascension",
+    "rarity": 4,
+    "source": "凝滞虚影",
+    "sourceEn": "Stagnant Shadow"
+  },
+  {
+    "id": "obsidian-of-radiance",
+    "name": "炽曜的黑曜石",
+    "nameEn": "Obsidian of Radiance",
+    "type": "ascension",
+    "rarity": 5,
+    "source": "凝滞虚影",
+    "sourceEn": "Stagnant Shadow"
+  },
+  {
+    "id": "tatters-of-thought",
+    "name": "思绪末屑",
+    "nameEn": "Tatters of Thought",
+    "type": "ascension",
+    "rarity": 2,
+    "source": "凝滞虚影",
+    "sourceEn": "Stagnant Shadow"
+  },
+  {
+    "id": "tatters-of-consciousness",
+    "name": "意识碎片",
+    "nameEn": "Fragments of Impression",
+    "type": "ascension",
+    "rarity": 3,
+    "source": "凝滞虚影",
+    "sourceEn": "Stagnant Shadow"
+  },
+  {
+    "id": "tatters-of-sentience",
+    "name": "智识之影",
+    "nameEn": "Shards of Sentience",
+    "type": "ascension",
+    "rarity": 4,
+    "source": "凝滞虚影",
+    "sourceEn": "Stagnant Shadow"
+  },
+  {
+    "id": "thiefs-instinct",
+    "name": "窃贼的本能",
+    "nameEn": "Thief's Instinct",
+    "type": "common",
+    "rarity": 2,
+    "source": "敌人掉落、拟造花萼（赤）",
+    "sourceEn": "Enemy drops, Calyx (Crimson)"
+  },
+  {
+    "id": "usurpers-scheme",
+    "name": "篡改的野心",
+    "nameEn": "Usurper's Scheme",
+    "type": "common",
+    "rarity": 3,
+    "source": "敌人掉落、拟造花萼（赤）",
+    "sourceEn": "Enemy drops, Calyx (Crimson)"
+  },
+  {
+    "id": "conquerors-will",
+    "name": "守护者的意志",
+    "nameEn": "Conqueror's Will",
+    "type": "common",
+    "rarity": 4,
+    "source": "敌人掉落、拟造花萼（赤）",
+    "sourceEn": "Enemy drops, Calyx (Crimson)"
+  },
+  {
+    "id": "ancient-part",
+    "name": "古代零件",
+    "nameEn": "Ancient Part",
+    "type": "common",
+    "rarity": 2,
+    "source": "敌人掉落、拟造花萼（赤）",
+    "sourceEn": "Enemy drops, Calyx (Crimson)"
+  },
+  {
+    "id": "ancient-spar",
+    "name": "古代游丝",
+    "nameEn": "Ancient Spar",
+    "type": "common",
+    "rarity": 3,
+    "source": "敌人掉落、拟造花萼（赤）",
+    "sourceEn": "Enemy drops, Calyx (Crimson)"
+  },
+  {
+    "id": "ancient-engine",
+    "name": "古代引擎",
+    "nameEn": "Ancient Engine",
+    "type": "common",
+    "rarity": 4,
+    "source": "敌人掉落、拟造花萼（赤）",
+    "sourceEn": "Enemy drops, Calyx (Crimson)"
+  },
+  {
+    "id": "immortal-scionette",
+    "name": "永寿幼芽",
+    "nameEn": "Immortal Scionette",
+    "type": "common",
+    "rarity": 2,
+    "source": "敌人掉落、拟造花萼（赤）",
+    "sourceEn": "Enemy drops, Calyx (Crimson)"
+  },
+  {
+    "id": "immortal-flower",
+    "name": "永寿天华",
+    "nameEn": "Immortal Lumintwig",
+    "type": "common",
+    "rarity": 3,
+    "source": "敌人掉落、拟造花萼（赤）",
+    "sourceEn": "Enemy drops, Calyx (Crimson)"
+  },
+  {
+    "id": "immortal-leaf",
+    "name": "永寿荣枝",
+    "nameEn": "Immortal Ironbranch",
+    "type": "common",
+    "rarity": 4,
+    "source": "敌人掉落、拟造花萼（赤）",
+    "sourceEn": "Enemy drops, Calyx (Crimson)"
+  },
+  {
+    "id": "artifexs-module",
+    "name": "工造机杼",
+    "nameEn": "Artifex's Module",
+    "type": "common",
+    "rarity": 2,
+    "source": "敌人掉落、拟造花萼（赤）",
+    "sourceEn": "Enemy drops, Calyx (Crimson)"
+  },
+  {
+    "id": "artifexs-cyberheart",
+    "name": "工造迥轮",
+    "nameEn": "Artifex's Cyberheart",
+    "type": "common",
+    "rarity": 3,
+    "source": "敌人掉落、拟造花萼（赤）",
+    "sourceEn": "Enemy drops, Calyx (Crimson)"
+  },
+  {
+    "id": "artifexs-gyreheart",
+    "name": "工造浑心",
+    "nameEn": "Artifex's Gyreheart",
+    "type": "common",
+    "rarity": 4,
+    "source": "敌人掉落、拟造花萼（赤）",
+    "sourceEn": "Enemy drops, Calyx (Crimson)"
+  },
+  {
+    "id": "silvermane-badge",
+    "name": "铁卫扣子",
+    "nameEn": "Silvermane Badge",
+    "type": "common",
+    "rarity": 2,
+    "source": "敌人掉落、拟造花萼（赤）",
+    "sourceEn": "Enemy drops, Calyx (Crimson)"
+  },
+  {
+    "id": "silvermane-insignia",
+    "name": "铁卫军徽",
+    "nameEn": "Silvermane Insignia",
+    "type": "common",
+    "rarity": 3,
+    "source": "敌人掉落、拟造花萼（赤）",
+    "sourceEn": "Enemy drops, Calyx (Crimson)"
+  },
+  {
+    "id": "silvermane-medal",
+    "name": "铁卫勋章",
+    "nameEn": "Silvermane Medal",
+    "type": "common",
+    "rarity": 4,
+    "source": "敌人掉落、拟造花萼（赤）",
+    "sourceEn": "Enemy drops, Calyx (Crimson)"
+  },
+  {
+    "id": "dream-collection-plan",
+    "name": "梦境发条",
+    "nameEn": "Dream Collection Plan",
+    "type": "common",
+    "rarity": 2,
+    "source": "敌人掉落、拟造花萼（赤）",
+    "sourceEn": "Enemy drops, Calyx (Crimson)"
+  },
+  {
+    "id": "dream-fire",
+    "name": "梦境炉火",
+    "nameEn": "Dream Fire",
+    "type": "common",
+    "rarity": 3,
+    "source": "敌人掉落、拟造花萼（赤）",
+    "sourceEn": "Enemy drops, Calyx (Crimson)"
+  },
+  {
+    "id": "dream-element",
+    "name": "梦境之晶",
+    "nameEn": "Dream Element",
+    "type": "common",
+    "rarity": 4,
+    "source": "敌人掉落、拟造花萼（赤）",
+    "sourceEn": "Enemy drops, Calyx (Crimson)"
+  },
+  {
+    "id": "golden-crown-of-the-past-shadow",
+    "name": "往日之影的金饰",
+    "nameEn": "Golden Crown of the Past Shadow",
+    "type": "trace",
+    "rarity": 3,
+    "source": "拟造花萼（金）",
+    "sourceEn": "Calyx (Golden)"
+  },
+  {
+    "id": "storm-crown-of-the-past-shadow",
+    "name": "往日之影的雷冠",
+    "nameEn": "Storm Crown of the Past Shadow",
+    "type": "trace",
+    "rarity": 4,
+    "source": "拟造花萼（金）",
+    "sourceEn": "Calyx (Golden)"
+  },
+  {
+    "id": "meteor-crown-of-the-past-shadow",
+    "name": "往日之影的陨冠",
+    "nameEn": "Meteor Crown of the Past Shadow",
+    "type": "trace",
+    "rarity": 4,
+    "source": "拟造花萼（金）",
+    "sourceEn": "Calyx (Golden)"
+  },
+  {
+    "id": "silverspark-crown-of-the-past-shadow",
+    "name": "往日之影的银冠",
+    "nameEn": "Silverspark Crown of the Past Shadow",
+    "type": "trace",
+    "rarity": 4,
+    "source": "拟造花萼（金）",
+    "sourceEn": "Calyx (Golden)"
+  },
+  {
+    "id": "astral-crown-of-the-past-shadow",
+    "name": "往日之影的星冠",
+    "nameEn": "Astral Crown of the Past Shadow",
+    "type": "trace",
+    "rarity": 4,
+    "source": "拟造花萼（金）",
+    "sourceEn": "Calyx (Golden)"
+  },
+  {
+    "id": "abyss-crown-of-the-past-shadow",
+    "name": "往日之影的暗冠",
+    "nameEn": "Abyss Crown of the Past Shadow",
+    "type": "trace",
+    "rarity": 4,
+    "source": "拟造花萼（金）",
+    "sourceEn": "Calyx (Golden)"
+  },
+  {
+    "id": "honeysuckle-crown-of-the-past-shadow",
+    "name": "往日之影的蜜冠",
+    "nameEn": "Honeysuckle Crown of the Past Shadow",
+    "type": "trace",
+    "rarity": 4,
+    "source": "拟造花萼（金）",
+    "sourceEn": "Calyx (Golden)"
+  },
+  {
+    "id": "stellar-jade",
+    "name": "星琼",
+    "nameEn": "Stellar Jade",
+    "type": "currency",
+    "rarity": 5,
+    "source": "日常任务、活动、成就奖励",
+    "sourceEn": "Daily missions, events, achievement rewards"
+  },
+  {
+    "id": "star-rail-pass",
+    "name": "星轨通票",
+    "nameEn": "Star Rail Pass",
+    "type": "currency",
+    "rarity": 5,
+    "source": "商店购买、活动奖励",
+    "sourceEn": "Shop purchase, event rewards"
+  },
+  {
+    "id": "star-rail-special-pass",
+    "name": "星轨通票·限定",
+    "nameEn": "Star Rail Special Pass",
+    "type": "currency",
+    "rarity": 5,
+    "source": "商店购买、活动奖励",
+    "sourceEn": "Shop purchase, event rewards"
+  },
+  {
+    "id": "credit",
+    "name": "信用点",
+    "nameEn": "Credit",
+    "type": "currency",
+    "rarity": 3,
+    "source": "日常任务、拟造花萼、活动奖励",
+    "sourceEn": "Daily missions, Calyx, event rewards"
+  },
+  {
+    "id": "trailblaze-exp",
+    "name": "开拓经验",
+    "nameEn": "Trailblaze EXP",
+    "type": "currency",
+    "rarity": 3,
+    "source": "完成任务、消耗开拓力",
+    "sourceEn": "Completing missions, consuming Trailblaze Power"
+  },
+  {
+    "id": "refined-aether",
+    "name": "精炼以太",
+    "nameEn": "Refined Aether",
+    "type": "common",
+    "rarity": 3,
+    "source": "拟造花萼（赤）",
+    "sourceEn": "Calyx (Crimson)"
+  },
+  {
+    "id": "lost-gold",
+    "name": "遗失光尘",
+    "nameEn": "Lost Gold Fragment",
+    "type": "common",
+    "rarity": 3,
+    "source": "拟造花萼（金）",
+    "sourceEn": "Calyx (Golden)"
+  },
+  {
+    "id": "travelers-guide",
+    "name": "漫游指南",
+    "nameEn": "Traveler's Guide",
+    "type": "common",
+    "rarity": 4,
+    "source": "模拟宇宙、活动奖励、商店兑换",
+    "sourceEn": "Simulated Universe, event rewards, shop exchange"
+  },
+  {
+    "id": " adversaries-recipe",
+    "name": "浓缩精华",
+    "nameEn": "Adversarial Essence",
+    "type": "common",
+    "rarity": 4,
+    "source": "拟造花萼（赤）",
+    "sourceEn": "Calyx (Crimson)"
+  },
+  {
+    "id": "void-cast-iron",
+    "name": "虚空虚铸",
+    "nameEn": "Void Cast Iron",
+    "type": "boss",
+    "rarity": 4,
+    "source": "历战余响",
+    "sourceEn": "Echo of War"
+  }
+]

@@ -1,0 +1,249 @@
+[
+  {
+    "id": "quick-start-guide",
+    "title": "原神快速上手指南",
+    "titleEn": "Genshin Impact Quick Start Guide",
+    "category": "beginner",
+    "categoryZh": "新手入门",
+    "categoryEn": "Beginner",
+    "summary": "从下载安装到30分钟内快速上手原神，了解基础操作、界面、抽卡系统。",
+    "summaryEn": "Get started with Genshin Impact in 30 minutes. Learn basic controls, UI, and the gacha system.",
+    "content": "## 原神快速上手指南\n\n### 1. 基础操作\n- **移动**: WASD/摇杆移动，空格跳跃\n- **攻击**: 鼠标左键/攻击键普攻连段\n- **元素战技**: E键释放，有冷却时间\n- **元素爆发**: Q键释放，需要元素能量\n\n### 2. 元素反应\n原神核心战斗机制是元素反应：\n- **蒸发** (水+火): 2倍伤害加成\n- **融化** (冰+火): 2倍伤害加成\n- **超导** (雷+冰): 降低物理抗性\n- **感电** (雷+水): 持续雷伤\n- **冻结** (冰+水): 冻住敌人\n\n### 3. 树脂系统\n- 原粹树脂每8分钟恢复1点\n- 用于挑战秘境、Boss获取材料\n- 优先消耗树脂在角色突破材料上\n\n### 4. 祈愿(抽卡)系统\n- 4星保底: 10抽必出4星\n- 5星硬保底: 90抽必出5星\n- 软保底: 约75抽后概率大幅提升\n- 大保底: 如果歪了非UP角色，下次必出UP",
+    "contentEn": "## Quick Start Guide\n\n### 1. Basic Controls\n- **Movement**: WASD/Left stick, Space to jump\n- **Attack**: Left click/Attack button for normal attacks\n- **Elemental Skill**: Press E, has a cooldown\n- **Elemental Burst**: Press Q, requires energy\n\n### 2. Elemental Reactions\nThe core combat system:\n- **Vaporize** (Hydro+Pyro): 2x DMG multiplier\n- **Melt** (Cryo+Pyro): 2x DMG multiplier\n- **Superconduct** (Electro+Cryo): Reduces Physical RES\n- **Electro-Charged** (Electro+Hydro): Continuous Electro DMG\n- **Freeze** (Cryo+Hydro): Freezes enemies\n\n### 3. Resin System\n- Original Resin recovers 1 point every 8 minutes\n- Used for Domains, Bosses to get materials\n- Prioritize spending resin on character ascension materials\n\n### 4. Wish (Gacha) System\n- 4-star pity: Guaranteed 4-star every 10 pulls\n- 5-star hard pity: Guaranteed 5-star at 90 pulls\n- Soft pity: Rates increase significantly around 75 pulls\n- Guarantee: If you lose 50/50, next 5-star is guaranteed featured",
+    "tags": [
+      "新手",
+      "入门",
+      "元素反应",
+      "Beginner",
+      "Elemental Reactions"
+    ],
+    "faq": [
+      {
+        "question": "Which character should I build first?",
+        "questionZh": "先练哪个角色？",
+        "answer": "Focus on Xiangling, Bennett, and Xingqiu from the standard banner. They are strong in endgame.",
+        "answerZh": "优先培养香菱、班尼特、行秋这三个常驻四星角色，后期依然强力。"
+      },
+      {
+        "question": "How to spend resin efficiently?",
+        "questionZh": "树脂怎么用最划算？",
+        "answer": "Early game: Ley Line Blossoms for EXP/Mora. Mid game: Talent and Ascension domains. Late game: Artifact domains.",
+        "answerZh": "前期打地脉花获取经验和摩拉，中期打天赋和突破材料，后期刷圣遗物。"
+      }
+    ]
+  },
+  {
+    "id": "elemental-reaction-guide",
+    "title": "元素反应完全攻略",
+    "titleEn": "Complete Elemental Reaction Guide",
+    "category": "beginner",
+    "categoryZh": "新手入门",
+    "categoryEn": "Beginner",
+    "summary": "深入解析原神7元素的反应机制、倍率计算和实战运用技巧。",
+    "summaryEn": "Deep dive into Genshin's 7-element reaction system, multipliers, and combat applications.",
+    "content": "## 元素反应完全攻略\n\n### 增幅反应\n- **蒸发**: 水→火 2.0倍，火→水 1.5倍\n- **融化**: 火→冰 2.0倍，冰→火 1.5倍\n\n### 激化反应(草元素)\n- **原激化**: 雷+草 → 激化状态\n- **超激化**: 雷攻击激化目标，提升雷伤\n- **蔓激化**: 草攻击激化目标，提升草伤\n\n### 结晶反应\n- **岩+其他元素**: 生成对应元素护盾\n\n### 扩散反应\n- **风+其他元素**: 扩散元素到周围敌人\n\n### 实战技巧\n1. 先挂水再用火C打出蒸发(2.0倍)\n2. 万叶/砂糖扩散可以同时减抗\n3. 班尼特+香菱+行秋是最经典的蒸发队",
+    "contentEn": "## Complete Elemental Reaction Guide\n\n### Amplifying Reactions\n- **Vaporize**: Hydro→Pyro 2.0x, Pyro→Hydro 1.5x\n- **Melt**: Pyro→Cryo 2.0x, Cryo→Pyro 1.5x\n\n### Quicken Reactions (Dendro)\n- **Quicken**: Electro+Dendro → Quicken status\n- **Aggravate**: Electro attacks on Quicken targets boost Electro DMG\n- **Spread**: Dendro attacks on Quicken targets boost Dendro DMG\n\n### Crystallize\n- **Geo+other element**: Generates element-specific shield\n\n### Swirl\n- **Anemo+other element**: Spreads element to nearby enemies\n\n### Combat Tips\n1. Apply Hydro first then use Pyro DPS for Vaporize (2.0x)\n2. Kazuha/Sucrose Swirl can reduce elemental RES\n3. Bennett+Xiangling+Xingqiu is the classic Vaporize team",
+    "tags": [
+      "元素反应",
+      "战斗",
+      "Elemental Reactions",
+      "Combat"
+    ],
+    "faq": [
+      {
+        "question": "What is elemental mastery?",
+        "questionZh": "元素精通有什么用？",
+        "answer": "Elemental Mastery increases the damage of transformative reactions (Overload, Electro-Charged, etc.) and amplifying reaction multipliers.",
+        "answerZh": "元素精通提升剧变反应伤害(超载、感电等)和增幅反应的加成倍率。"
+      }
+    ]
+  },
+  {
+    "id": "artifact-guide",
+    "title": "圣遗物完全指南",
+    "titleEn": "Complete Artifact Guide",
+    "category": "beginner",
+    "categoryZh": "新手入门",
+    "categoryEn": "Beginner",
+    "summary": "从零开始理解圣遗物系统：主属性、副属性、套装效果、强化策略。",
+    "summaryEn": "Understand the artifact system from scratch: main stats, substats, set bonuses, and enhancement strategy.",
+    "content": "## 圣遗物完全指南\n\n### 圣遗物基础\n- 每个角色可装备5件圣遗物\n- **生之花**: 固定生命值\n- **死之羽**: 固定攻击力\n- **时之沙**: 攻击%/生命%/防御%/元素充能/元素精通\n- **空之杯**: 元素伤害加成/攻击%/物理伤害加成\n- **理之冠**: 暴击率/暴击伤害/攻击%/治疗加成\n\n### 副属性优先级\n1. 暴击率 / 暴击伤害\n2. 攻击力%\n3. 元素充能效率\n4. 元素精通\n\n### 强化策略\n- 只强化有暴击率+暴击伤害的圣遗物\n- 优先保证暴击率60%+，暴击伤害120%+\n- 4件套 vs 2+2散搭：看角色需求\n\n### 推荐刷取路线\n- **前期**: 战狂+教官过渡\n- **中期**: 绝缘之旗印(通用性最强)\n- **后期**: 根据角色刷对应套装",
+    "contentEn": "## Complete Artifact Guide\n\n### Artifact Basics\n- Each character equips 5 artifacts\n- **Flower of Life**: Fixed HP\n- **Plume of Death**: Fixed ATK\n- **Sands of Eon**: ATK%/HP%/DEF%/Energy Recharge/EM\n- **Goblet of Eonothem**: Elemental DMG Bonus/ATK%/Physical DMG\n- **Circlet of Logos**: CRIT Rate/CRIT DMG/ATK%/Healing Bonus\n\n### Substat Priority\n1. CRIT Rate / CRIT DMG\n2. ATK%\n3. Energy Recharge\n4. Elemental Mastery\n\n### Enhancement Strategy\n- Only enhance artifacts with CRIT Rate + CRIT DMG\n- Aim for 60%+ CRIT Rate, 120%+ CRIT DMG\n- 4pc set vs 2+2 mix: depends on character\n\n### Farming Route\n- **Early**: Berserker + Instructor for过渡\n- **Mid**: Emblem of Severed Fate (most versatile)\n- **Late**: Farm specific sets per character",
+    "tags": [
+      "圣遗物",
+      "装备",
+      "Artifacts",
+      "Equipment"
+    ],
+    "faq": [
+      {
+        "question": "Should I use 4pc or 2+2?",
+        "questionZh": "4件套好还是2+2散搭好？",
+        "answer": "For most DPS, 4pc set is better. For supports, 2+2 can be more flexible. Emblem 4pc is universally good.",
+        "answerZh": "大多数主C用4件套更好，辅助角色2+2更灵活。绝缘4件套通用性最强。"
+      }
+    ]
+  },
+  {
+    "id": "resin-planning-guide",
+    "title": "树脂规划与每日必做",
+    "titleEn": "Resin Planning & Daily Routine",
+    "category": "beginner",
+    "categoryZh": "新手入门",
+    "categoryEn": "Beginner",
+    "summary": "教你如何高效利用树脂，建立每日游戏流程。",
+    "summaryEn": "Learn how to efficiently use resin and establish a daily game routine.",
+    "content": "## 树脂规划与每日必做\n\n### 每日必做清单\n1. 完成4个每日委托（60原石）\n2. 消耗所有树脂\n3. 完成挖矿路线\n4. 购买打折的祈愿\n\n### 树脂优先级\n- **前期** (AR1-35): 地脉花 > Boss > 秘境\n- **中期** (AR35-45): 角色突破 > 天赋 > 武器材料\n- **后期** (AR45+): 圣遗物 > 天赋 > 其他\n\n### 每周必做\n- 周本Boss（免费树脂次数）\n- 尘歌壶洞天宝币兑换\n- 声望任务（蒙德/璃月/稻妻/须弥/枫丹）\n\n### 树脂恢复方式\n- 自然恢复: 8分钟/点，每日180点\n- 脆弱树脂: 储存备用\n- 原石兑换: 不推荐（性价比低）",
+    "contentEn": "## Resin Planning & Daily Routine\n\n### Daily Checklist\n1. Complete 4 Daily Commissions (60 Primogems)\n2. Spend all Resin\n3. Mining route\n4. Purchase discounted Wishes\n\n### Resin Priority\n- **Early** (AR1-35): Ley Lines > Bosses > Domains\n- **Mid** (AR35-45): Ascension > Talents > Weapon materials\n- **Late** (AR45+): Artifacts > Talents > Others\n\n### Weekly Tasks\n- Weekly Bosses (free resin attempts)\n- Serenitea Pot realm currency exchange\n- Reputation quests (Mondstadt/Liyue/Inazuma/Sumeru/Fontaine)\n\n### Resin Recovery\n- Natural: 8 min/point, 180/day\n- Fragile Resin: Save for later\n- Primogem exchange: Not recommended",
+    "tags": [
+      "树脂",
+      "每日",
+      "规划",
+      "Resin",
+      "Daily",
+      "Planning"
+    ],
+    "faq": [
+      {
+        "question": "When should I use Fragile Resin?",
+        "questionZh": "脆弱树脂什么时候用？",
+        "answer": "Save Fragile Resin until AR45 when you can farm 5-star artifacts efficiently.",
+        "answerZh": "建议存到冒险等级45级后再用，那时候可以高效刷5星圣遗物。"
+      }
+    ]
+  },
+  {
+    "id": "gacha-system-guide",
+    "title": "祈愿系统完全解析",
+    "titleEn": "Complete Wish System Guide",
+    "category": "beginner",
+    "categoryZh": "新手入门",
+    "categoryEn": "Beginner",
+    "summary": "深入了解原神祈愿系统的概率机制、保底规则和抽卡策略。",
+    "summaryEn": "Deep dive into Genshin's wish system probabilities, pity mechanics, and pulling strategy.",
+    "content": "## 祈愿系统完全解析\n\n### 卡池类型\n1. **角色活动祈愿**: UP角色，50/50机制\n2. **角色活动祈愿-2**: 第二个UP角色池\n3. **武器活动祈愿**: UP武器，神铸定轨\n4. **常驻祈愿**: 非UP角色/武器\n\n### 保底机制\n- **4星保底**: 10抽必出4星+\n- **5星软保底**: 约75抽起概率逐渐提升\n- **5星硬保底**: 90抽必出5星\n- **大保底**: 歪非UP后，下次5星必为UP\n\n### 抽卡策略\n- 新玩家优先抽强力主C\n- 不要用原石换常驻池\n- 武器池性价比低于角色池\n- 关注角色复刻周期规划原石\n\n### 原石获取途径\n- 每日委托: 60/天\n- 深境螺旋: 600/期\n- 活动奖励: 约420/版本\n- 成就/宝箱/任务",
+    "contentEn": "## Complete Wish System Guide\n\n### Banner Types\n1. **Character Event Wish**: Featured character, 50/50 mechanic\n2. **Character Event Wish-2**: Second featured character\n3. **Weapon Event Wish**: Featured weapons, Epitomized Path\n4. **Standard Wish**: Non-featured characters/weapons\n\n### Pity Mechanics\n- **4-star pity**: Guaranteed 4-star+ every 10 pulls\n- **5-star soft pity**: Rates gradually increase around 75 pulls\n- **5-star hard pity**: Guaranteed 5-star at 90 pulls\n- **Guarantee**: After losing 50/50, next 5-star is guaranteed featured\n\n### Pulling Strategy\n- New players: Prioritize strong DPS characters\n- Don't spend Primogems on Standard banner\n- Weapon banner is less value than Character banner\n- Plan around character rerun schedules\n\n### Primogem Sources\n- Daily Commissions: 60/day\n- Spiral Abyss: 600/cycle\n- Events: ~420/version\n- Achievements/Chests/Quests",
+    "tags": [
+      "祈愿",
+      "抽卡",
+      "保底",
+      "Wish",
+      "Gacha",
+      "Pity"
+    ],
+    "faq": [
+      {
+        "question": "Should I pull for weapons or characters?",
+        "questionZh": "抽武器还是角色？",
+        "answer": "Always prioritize characters first. Weapons are nice-to-have but not essential for most content.",
+        "answerZh": "优先抽角色。武器是锦上添花，大部分内容不依赖专武也能轻松应对。"
+      }
+    ]
+  },
+  {
+    "id": "abyss-general-strategy",
+    "title": "深境螺旋通用攻略",
+    "titleEn": "Spiral Abyss General Strategy",
+    "category": "abyss",
+    "categoryZh": "深渊攻略",
+    "categoryEn": "Abyss",
+    "summary": "深境螺旋基础攻略：队伍搭配原则、层数机制、战斗策略。",
+    "summaryEn": "Spiral Abyss basics: team building principles, floor mechanics, and combat strategies.",
+    "content": "## 深境螺旋通用攻略\n\n### 基础机制\n- 每期深渊两层(9-12层)，每层3间\n- 每间需要在限定时间内击败所有敌人\n- 需要两队，每队4人\n\n### 队伍搭配原则\n1. **主C + 副C + 辅助 + 生存**\n2. 确保两队元素不冲突\n3. 至少一队有聚怪角色\n4. 生存位不可少（盾/治疗）\n\n### 强力通用阵容\n- **国家队**: 香菱+班尼特+行秋+重云/砂糖\n- **万达国际**: 公子+万叶+香菱+班尼特\n- **胡行钟**: 胡桃+行秋+钟离+夜兰\n- **雷国**: 雷电将军+香菱+行秋+班尼特\n- **妮绽放**: 妮露+纳西妲+珊瑚宫心海+草主",
+    "contentEn": "## Spiral Abyss General Strategy\n\n### Basic Mechanics\n- Each cycle has 4 floors (9-12), 3 chambers per floor\n- Must defeat all enemies within the time limit\n- Need 2 teams of 4 characters each\n\n### Team Building Principles\n1. **Main DPS + Sub DPS + Support + Sustain**\n2. Ensure elements don't conflict between teams\n3. At least one team needs a grouper\n4. Sustain (shield/healer) is essential\n\n### Strong Universal Teams\n- **National Team**: Xiangling + Bennett + Xingqiu + Chongyun/Sucrose\n- **International**: Tartaglia + Kazuha + Xiangling + Bennett\n- **Hu Tao Double Hydro**: Hu Tao + Xingqiu + Zhongli + Yelan\n- **Raiden National**: Raiden + Xiangling + Xingqiu + Bennett\n- **Nilou Bloom**: Nilou + Nahida + Kokomi + Dendro MC",
+    "tags": [
+      "深渊",
+      "配队",
+      "Spiral Abyss",
+      "Team Building"
+    ],
+    "faq": [
+      {
+        "question": "What AR do I need for Abyss?",
+        "questionZh": "什么等级能打深渊？",
+        "answer": "Floor 9-10: AR40+. Floor 11: AR45+. Floor 12: AR50+ with good artifacts.",
+        "answerZh": "9-10层：冒险等级40+。11层：45+。12层：50+且有好的圣遗物。"
+      }
+    ]
+  },
+  {
+    "id": "abyss-team-building",
+    "title": "深渊阵容推荐与搭配",
+    "titleEn": "Abyss Team Recommendations",
+    "category": "abyss",
+    "categoryZh": "深渊攻略",
+    "categoryEn": "Abyss",
+    "summary": "当前版本深渊最佳阵容推荐，按角色池深度分级。",
+    "summaryEn": "Current best Abyss teams ranked by character investment level.",
+    "content": "## 深渊阵容推荐\n\n### 低配阵容(4星为主)\n- **国家队**: 香菱+班尼特+行秋+重云\n- **超导物理**: 雷泽+七七+菲谢尔+凯亚\n- **冻结队**: 凯亚+芭芭拉+香菱+安柏\n\n### 中配阵容(含5星)\n- **雷国**: 雷电将军+香菱+行秋+班尼特\n- **甘雨融化**: 甘雨+班尼特+香菱+万叶\n- **宵宫蒸发**: 宵宫+行秋+钟离+班尼特\n\n### 高配阵容(全5星)\n- **神鹤万心**: 神里绫华+申鹤+万叶+珊瑚宫心海\n- **胡行钟夜**: 胡桃+行秋+钟离+夜兰\n- **那维莱特**: 那维莱特+芙宁娜+万叶+白术\n- **阿蕾奇诺**: 阿蕾奇诺+班尼特+万叶+夜兰",
+    "contentEn": "## Abyss Team Recommendations\n\n### Budget Teams (4-star focus)\n- **National**: Xiangling + Bennett + Xingqiu + Chongyun\n- **Physical Superconduct**: Razor + Qiqi + Fischl + Kaeya\n- **Freeze**: Kaeya + Barbara + Xiangling + Amber\n\n### Mid Investment (with 5-stars)\n- **Raiden National**: Raiden + Xiangling + Xingqiu + Bennett\n- **Ganyu Melt**: Ganyu + Bennett + Xiangling + Kazuha\n- **Yoimiya Vaporize**: Yoimiya + Xingqiu + Zhongli + Bennett\n\n### High Investment (full 5-star)\n- **Ayaka Freeze**: Ayaka + Shenhe + Kazuha + Kokomi\n- **Hu Tao Double Hydro**: Hu Tao + Xingqiu + Zhongli + Yelan\n- **Neuvillette**: Neuvillette + Furina + Kazuha + Baizhu\n- **Arlecchino**: Arlecchino + Bennett + Kazuha + Yelan",
+    "tags": [
+      "深渊",
+      "阵容",
+      "配队",
+      "Abyss",
+      "Teams"
+    ],
+    "faq": [
+      {
+        "question": "Can I clear Abyss with only 4-stars?",
+        "questionZh": "纯四星能满星深渊吗？",
+        "answer": "Yes, the National Team can clear Floor 12, but it requires good artifacts and skill.",
+        "answerZh": "可以，国家队可以满星12层，但需要好的圣遗物和操作。"
+      }
+    ]
+  },
+  {
+    "id": "weapon-enhancement-guide",
+    "title": "武器强化与选择指南",
+    "titleEn": "Weapon Enhancement & Selection Guide",
+    "category": "system",
+    "categoryZh": "系统攻略",
+    "categoryEn": "System",
+    "summary": "如何选择和强化武器，各类武器推荐。",
+    "summaryEn": "How to select and enhance weapons, with recommendations for each type.",
+    "content": "## 武器强化与选择指南\n\n### 武器选择原则\n- 主C: 选高基础攻击+攻击%/暴击副属性\n- 辅助: 选元素充能/元素精通\n- 治疗: 选生命%/治疗加成\n\n### 各类武器推荐\n\n**单手剑**: 磐岩结绿(5★) > 雾切(5★) > 天目影打刀(4★锻造)\n**双手剑**: 狼末(5★) > 螭骨剑(4★纪行) > 试作古华(4★锻造)\n**长柄**: 护摩(5★) > 鱼获(4★免费) > 决斗之枪(4★纪行)\n**弓**: 若水(5★) > 绝弦(4★) > 破魔(4★锻造)\n**法器**: 神乐(5★) > 流浪乐章(4★) > 试作金珀(4★锻造)\n\n### 强化策略\n- 优先强化主C的武器到90级\n- 辅助武器可以停在80级\n- 不要浪费强化材料在3星武器上",
+    "contentEn": "## Weapon Enhancement & Selection Guide\n\n### Selection Principles\n- DPS: High base ATK + ATK%/CRIT substat\n- Support: Energy Recharge/Elemental Mastery\n- Healer: HP%/Healing Bonus\n\n### Recommendations\n\n**Sword**: Jade Cutter (5★) > Mistsplitter (5★) > Amenoma (4★ forge)\n**Claymore**: Wolf's Gravestone (5★) > Serpent Spine (4★ BP) > Prototype Archaic (4★ forge)\n**Polearm**: Staff of Homa (5★) > The Catch (4★ free) > Deathmatch (4★ BP)\n**Bow**: Aqua Simulacra (5★) > Stringless (4★) > Hamayumi (4★ forge)\n**Catalyst**: Kagura's Verity (5★) > Widsith (4★) > Prototype Amber (4★ forge)\n\n### Enhancement Strategy\n- Prioritize DPS weapon to Lv90\n- Support weapons can stay at Lv80\n- Don't waste materials on 3-star weapons",
+    "tags": [
+      "武器",
+      "强化",
+      "Weapon",
+      "Enhancement"
+    ],
+    "faq": [
+      {
+        "question": "Is the Battle Pass weapon worth it?",
+        "questionZh": "纪行武器值得买吗？",
+        "answer": "Serpent Spine and The Black Sword are good value. Only buy if you already buy BP.",
+        "answerZh": "螭骨剑和黑剑性价比较高，但前提是你本来就打算买纪行。"
+      }
+    ]
+  },
+  {
+    "id": "exploration-guide",
+    "title": "探索技巧与收集指南",
+    "titleEn": "Exploration & Collection Guide",
+    "category": "system",
+    "categoryZh": "系统攻略",
+    "categoryEn": "System",
+    "summary": "高效探索提瓦特大陆：宝箱寻找、神瞳收集、隐藏成就获取。",
+    "summaryEn": "Efficient exploration of Teyvat: chest hunting, oculus collection, and hidden achievements.",
+    "content": "## 探索技巧与收集指南\n\n### 神瞳收集技巧\n- 蒙德风神瞳66个，璃月岩神瞳131个\n- 推荐使用互动地图标记已收集的\n- 有些神瞳需要解谜或世界任务才能获取\n- 七天神像供奉满级后多余的可以兑换摩拉\n\n### 宝箱类型\n- **普通宝箱**: 2原石\n- **精致宝箱**: 5原石\n- **珍贵宝箱**: 10原石\n- **华丽宝箱**: 40原石\n- **奇馈宝箱**: (枫丹特有)\n\n### 隐藏成就\n- 对话NPC触发\n- 特定地点互动\n- 使用特定角色技能\n- 完成隐藏世界任务链\n\n### 探索效率提升\n- 优先解锁所有传送锚点\n- 使用食物增加体力上限\n- 双风共鸣减少体力消耗",
+    "contentEn": "## Exploration & Collection Guide\n\n### Oculus Collection Tips\n- Mondstadt: 66 Anemoculi, Liyue: 131 Geoculi\n- Use interactive map to mark collected ones\n- Some require puzzles or world quests\n- Excess oculi can be exchanged for Mora\n\n### Chest Types\n- **Common Chest**: 2 Primogems\n- **Exquisite Chest**: 5 Primogems\n- **Precious Chest**: 10 Primogems\n- **Luxurious Chest**: 40 Primogems\n\n### Hidden Achievements\n- Triggered by NPC dialogue\n- Interact at specific locations\n- Use specific character abilities\n- Complete hidden quest chains\n\n### Exploration Efficiency\n- Prioritize unlocking all Teleport Waypoints\n- Use food to increase Stamina\n- Double Anemo resonance reduces Stamina consumption",
+    "tags": [
+      "探索",
+      "收集",
+      "宝箱",
+      "Exploration",
+      "Collection"
+    ],
+    "faq": [
+      {
+        "question": "How to find all chests?",
+        "questionZh": "怎么找到所有宝箱？",
+        "answer": "Use an interactive map tool. Some chests only appear after completing certain quests.",
+        "answerZh": "使用互动地图工具。有些宝箱需要完成特定任务后才会出现。"
+      }
+    ]
+  }
+]
