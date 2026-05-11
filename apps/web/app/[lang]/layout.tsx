@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { Poppins } from 'next/font/google';
 import { LOCALES, DEFAULT_LOCALE } from '@gachia/core';
 import type { SupportedLocale } from '@gachia/core';
 import { SiteHeader } from '@/components/layout/site-header';
@@ -9,6 +10,13 @@ import { SiteFooter } from '@/components/layout/site-footer';
 import zhMessages from '@/messages/zh.json';
 import enMessages from '@/messages/en.json';
 import jaMessages from '@/messages/ja.json';
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-poppins',
+});
 
 const allMessages: Record<string, Record<string, unknown>> = {
   zh: zhMessages,
@@ -37,14 +45,8 @@ export default async function LocaleLayout({
   const messages = allMessages[locale] ?? allMessages[DEFAULT_LOCALE];
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={poppins.variable}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
         <GoogleAnalytics gaId="G-4L1VKXGY2Y" />
       </head>
       <body className="min-h-screen bg-game-bg text-game-text antialiased">

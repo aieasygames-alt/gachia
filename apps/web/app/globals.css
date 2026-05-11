@@ -67,7 +67,7 @@
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-poppins), system-ui, -apple-system, sans-serif;
 }
 
 /* Scrollbar */
