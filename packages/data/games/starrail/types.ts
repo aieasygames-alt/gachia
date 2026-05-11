@@ -159,6 +159,24 @@ export interface StarRailCharacterMaterials {
   }>;
 }
 
+// --- Region ---
+
+export interface StarRailRegion {
+  id: string;
+  name: string;
+  nameEn: string;
+  description: string;
+  descriptionEn: string;
+  highlights: string[];
+  specialties: string[];
+  bosses: string[];
+  domains: string[];
+  tips: string[];
+  spaceAnchors: number;
+  calyxes: number;
+  echoesOfWar: number;
+}
+
 // --- Locale Helper ---
 
 export function localeStr(zh: string, en: string, locale: SupportedLocale): string {

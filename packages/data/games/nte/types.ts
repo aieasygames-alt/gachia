@@ -174,6 +174,23 @@ export interface NteBuild {
   }>;
 }
 
+// --- Region ---
+
+export interface NteRegion {
+  id: string;
+  name: string;
+  nameEn: string;
+  description: string;
+  descriptionEn: string;
+  highlights: string[];
+  specialties: string[];
+  bosses: string[];
+  domains: string[];
+  tips: string[];
+  subRegions: string[];
+  collectibles: number;
+}
+
 // --- Accessor Helpers ---
 
 export function localeStr(zh: string, en: string, locale: SupportedLocale): string {

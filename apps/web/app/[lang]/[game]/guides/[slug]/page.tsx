@@ -20,6 +20,15 @@ import {
   getGenshinGuideFaqAnswer,
   GENSHIN_GUIDE_CATEGORIES,
   genshinGuides,
+  starrailGuides,
+  getStarRailGuideById,
+  getStarRailGuideTitle,
+  getStarRailGuideContent,
+  getStarRailGuideSummary,
+  getStarRailGuideCategory,
+  getStarRailGuideFaqQuestion,
+  getStarRailGuideFaqAnswer,
+  STARRAIL_GUIDE_CATEGORIES,
   wuwaGuides,
   getGuideById as getWuWaGuideById,
   getGuideTitle as getWuWaGuideTitle,
@@ -43,6 +52,11 @@ export async function generateStaticParams() {
     ...genshinGuides.map((guide) => ({
       lang,
       game: 'genshin',
+      slug: guide.id,
+    })),
+    ...starrailGuides.map((guide) => ({
+      lang,
+      game: 'starrail',
       slug: guide.id,
     })),
     ...wuwaGuides.map((guide) => ({
@@ -92,6 +106,16 @@ export async function generateMetadata({
     };
   }
 
+  if (gameId === 'starrail') {
+    const guide = getStarRailGuideById(slug);
+    if (!guide) return {};
+    const gameName = GAMES.starrail.name[locale];
+    return {
+      title: `${getStarRailGuideTitle(guide, locale)} | ${gameName} Wiki | Gachia`,
+      description: getStarRailGuideSummary(guide, locale).slice(0, 160),
+    };
+  }
+
   return {};
 }
 
@@ -114,6 +138,10 @@ export default async function GuideDetailPage({
 
   if (gameId === 'wuwa') {
     return <WuWaGuideDetail locale={locale} slug={slug} />;
+  }
+
+  if (gameId === 'starrail') {
+    return <StarRailGuideDetail locale={locale} slug={slug} />;
   }
 
   notFound();
@@ -347,6 +375,82 @@ function WuWaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: stri
       {/* Back */}
       <div className="border-t border-game-border pt-4">
         <Link href="/wuwa/guides" className="text-sm text-game-primary transition-colors hover:text-game-accent">
+          {locale === 'zh' ? '← 返回攻略列表' : locale === 'ja' ? '← ガイド一覧に戻る' : '← Back to Guides'}
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+// ============================================================
+// Star Rail Guide Detail
+// ============================================================
+
+function StarRailGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: string }) {
+  const guide = getStarRailGuideById(slug);
+  if (!guide) notFound();
+
+  const gameConfig = GAMES.starrail;
+  const content = getStarRailGuideContent(guide, locale);
+  const category = getStarRailGuideCategory(guide, locale);
+
+  return (
+    <div>
+      <div className="mb-4 flex items-center gap-2 text-sm text-game-text-muted">
+        <Link href="/starrail/guides" className="transition-colors hover:text-game-primary">
+          {CATEGORY_LABELS.guides?.[locale] ?? 'Guides'}
+        </Link>
+        <span>/</span>
+        {STARRAIL_GUIDE_CATEGORIES[guide.category]?.[locale] && (
+          <>
+            <span>{STARRAIL_GUIDE_CATEGORIES[guide.category]?.[locale]}</span>
+            <span>/</span>
+          </>
+        )}
+        <span className="text-game-text">{getStarRailGuideTitle(guide, locale)}</span>
+      </div>
+
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {getStarRailGuideTitle(guide, locale)}
+      </h1>
+
+      <div className="mb-6 flex flex-wrap items-center gap-3 text-sm text-game-text-muted">
+        <span className="rounded bg-game-surface-alt px-2 py-0.5 text-game-primary">
+          {category}
+        </span>
+        {guide.tags.map((tag) => (
+          <span key={tag} className="rounded bg-game-surface-alt px-2 py-0.5">
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">
+        <ClientMarkdown content={content} />
+      </div>
+
+      {guide.faq && guide.faq.length > 0 && (
+        <section className="mb-8">
+          <h2 className="mb-4 text-lg font-semibold text-game-primary">
+            {locale === 'zh' ? '常见问题' : locale === 'ja' ? 'よくある質問' : 'FAQ'}
+          </h2>
+          <div className="space-y-3">
+            {guide.faq.map((faqItem, i) => (
+              <details key={i} className="group rounded-lg border border-game-border bg-game-surface">
+                <summary className="cursor-pointer px-4 py-3 font-medium text-game-text transition-colors group-hover:text-game-primary">
+                  {getStarRailGuideFaqQuestion(faqItem, locale)}
+                </summary>
+                <div className="border-t border-game-border px-4 py-3 text-sm leading-relaxed text-game-text-muted">
+                  {getStarRailGuideFaqAnswer(faqItem, locale)}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <div className="border-t border-game-border pt-4">
+        <Link href="/starrail/guides" className="text-sm text-game-primary transition-colors hover:text-game-accent">
           {locale === 'zh' ? '← 返回攻略列表' : locale === 'ja' ? '← ガイド一覧に戻る' : '← Back to Guides'}
         </Link>
       </div>

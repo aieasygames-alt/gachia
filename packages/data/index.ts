@@ -99,6 +99,15 @@ export type {
   NteRecommendedBuild,
 } from './games/nte/types';
 
+// NTE regions
+export {
+  regions as nteRegions,
+  getRegionName as getNteRegionName,
+  getRegionDescription as getNteRegionDescription,
+  getRegionById as getNteRegionById,
+} from './games/nte/regions';
+export type { NteRegion } from './games/nte/types';
+
 // ============================================================
 // Genshin Impact exports
 // ============================================================
@@ -226,11 +235,44 @@ export {
   getPlanarOrnaments as getStarRailPlanarOrnaments,
 } from './games/starrail/relics';
 
+// StarRail extras (character materials)
+export {
+  characterMaterials as starrailCharacterMaterials,
+  getMaterialsForCharacter as getStarRailMaterialsForCharacter,
+} from './games/starrail/extras';
+
+// StarRail regions
+export {
+  regions as starrailRegions,
+  getRegionName as getStarRailRegionName,
+  getRegionDescription as getStarRailRegionDescription,
+  getRegionById as getStarRailRegionById,
+} from './games/starrail/regions';
+
+// StarRail guides
+export {
+  starrailGuides,
+  getGuideTitle as getStarRailGuideTitle,
+  getGuideContent as getStarRailGuideContent,
+  getGuideSummary as getStarRailGuideSummary,
+  getGuideCategory as getStarRailGuideCategory,
+  getGuideCategories as getStarRailGuideCategories,
+  getGuidesByCategory as getStarRailGuidesByCategory,
+  getGuideById as getStarRailGuideById,
+  getGuideSlugs as getStarRailGuideSlugs,
+  getGuideFaqQuestion as getStarRailGuideFaqQuestion,
+  getGuideFaqAnswer as getStarRailGuideFaqAnswer,
+  STARRAIL_GUIDE_CATEGORIES,
+} from './games/starrail/guides';
+export type { StarRailGuide, StarRailGuideFaq } from './games/starrail/guides';
+
 export type {
   StarRailCharacter,
   StarRailLightCone,
   StarRailMaterial,
   StarRailRelicSet,
+  StarRailCharacterMaterials,
+  StarRailRegion,
   StarRailSkillSet,
   StarRailSkillBase,
   StarRailActiveSkill,
