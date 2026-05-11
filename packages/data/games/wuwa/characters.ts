@@ -1,3 +1,4 @@
+import { IMAGE_BASE } from '../../image-base';
 import type { SupportedLocale, Character } from '@gachia/core';
 import type { WuWaCharacter } from './types';
 import { localeStr } from './types';
@@ -19,7 +20,7 @@ export function getWuWaCharacterDescription(char: WuWaCharacter, locale: Support
 }
 
 export function getWuWaCharacterImage(char: WuWaCharacter): string {
-  return `/images/wuwa/characters/${char.id}.webp`;
+  return `${IMAGE_BASE}/images/wuwa/characters/${char.id}.webp`;
 }
 
 export function getWuWaCharacterById(id: string): WuWaCharacter | undefined {

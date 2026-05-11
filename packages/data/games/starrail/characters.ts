@@ -1,3 +1,4 @@
+import { IMAGE_BASE } from '../../image-base';
 import type { SupportedLocale, Character } from '@gachia/core';
 import type { StarRailCharacter } from './types';
 import { localeStr } from './types';
@@ -19,7 +20,7 @@ export function getStarRailCharacterDescription(char: StarRailCharacter, locale:
 }
 
 export function getStarRailCharacterImage(char: StarRailCharacter): string {
-  return `/images/starrail/characters/${char.id}.webp`;
+  return `${IMAGE_BASE}/images/starrail/characters/${char.id}.webp`;
 }
 
 export function getStarRailCharacterById(id: string): StarRailCharacter | undefined {

@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getDb } from '@/lib/db';
 import { userCharacters, eq, and } from '@gachia/db';
 import { createAuth } from '@/lib/auth';
+import { checkRateLimit } from '@/lib/rate-limit';
+
+const RL = { limit: 100, windowSeconds: 60, prefix: '/api/user-characters' };
 
 async function getSession(request: NextRequest) {
   const auth = createAuth();
@@ -17,6 +20,9 @@ interface CharacterBody {
 }
 
 export async function GET(request: NextRequest) {
+  const limited = await checkRateLimit(request, RL);
+  if (limited) return limited;
+
   const session = await getSession(request);
   if (!session) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
@@ -40,6 +46,9 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  const limited = await checkRateLimit(request, RL);
+  if (limited) return limited;
+
   const session = await getSession(request);
   if (!session) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
@@ -85,6 +94,9 @@ export async function POST(request: NextRequest) {
 }
 
 export async function DELETE(request: NextRequest) {
+  const limited = await checkRateLimit(request, RL);
+  if (limited) return limited;
+
   const session = await getSession(request);
   if (!session) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });

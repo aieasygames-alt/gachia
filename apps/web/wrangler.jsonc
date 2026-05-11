@@ -16,6 +16,12 @@
 			"service": "gachia"
 		}
 	],
+	"r2_buckets": [
+		{
+			"bucket_name": "gachia-images",
+			"binding": "IMAGES"
+		}
+	],
 	"d1_databases": [
 		{
 			"binding": "DB",

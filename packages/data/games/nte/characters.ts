@@ -1,3 +1,4 @@
+import { IMAGE_BASE } from '../../image-base';
 import type { SupportedLocale, Character } from '@gachia/core';
 import type { NteCharacter } from './types';
 import { localeStr } from './types';
@@ -19,7 +20,7 @@ export function getNteCharacterDescription(char: NteCharacter, locale: Supported
 }
 
 export function getNteCharacterImage(char: NteCharacter): string {
-  return `/images/characters/${char.id}.webp`;
+  return `${IMAGE_BASE}/images/characters/${char.id}.webp`;
 }
 
 export function getNteCharacterById(id: string): NteCharacter | undefined {

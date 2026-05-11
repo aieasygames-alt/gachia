@@ -2,8 +2,12 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getDb } from '@/lib/db';
 import { sharedBuilds, eq, sql } from '@gachia/db';
 import { createAuth } from '@/lib/auth';
+import { checkRateLimit } from '@/lib/rate-limit';
 
 export async function POST(request: NextRequest) {
+  const limited = await checkRateLimit(request, { limit: 10, windowSeconds: 60, prefix: '/api/shared-builds' });
+  if (limited) return limited;
+
   const body: { gameId?: string; characterId?: string; buildData?: string; userId?: string } = await request.json();
   const { gameId, characterId, buildData, userId } = body;
 

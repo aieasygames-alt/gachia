@@ -1,3 +1,4 @@
+import { IMAGE_BASE } from '../../image-base';
 import type { SupportedLocale, Character } from '@gachia/core';
 import type { GenshinCharacter } from './types';
 import { localeStr } from './types';
@@ -19,7 +20,7 @@ export function getGenshinCharacterDescription(char: GenshinCharacter, locale: S
 }
 
 export function getGenshinCharacterImage(char: GenshinCharacter): string {
-  return `/images/genshin/characters/${char.id}.webp`;
+  return `${IMAGE_BASE}/images/genshin/characters/${char.id}.webp`;
 }
 
 export function getGenshinCharacterById(id: string): GenshinCharacter | undefined {
