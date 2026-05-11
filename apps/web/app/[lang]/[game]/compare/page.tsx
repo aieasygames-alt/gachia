@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { GAMES } from '@gachia/core';
-import { CompareClient } from './compare-client';
+
+const CompareClient = dynamic(() => import('./compare-client').then((m) => m.CompareClient));
 
 export async function generateMetadata({
   params,

@@ -8,5 +8,7 @@ export type { WuWaRegion } from './regions';
 export { wuwaGuides, getGuideTitle, getGuideContent, getGuideSummary, getGuideCategory, getGuideCategories, getGuidesByCategory, getGuideById, getGuideSlugs, getGuideFaqQuestion, getGuideFaqAnswer, WUWA_GUIDE_CATEGORIES } from './guides';
 export type { WuWaGuide, WuWaGuideFaq } from './guides';
 export { echoSets, getEchoSetName, getEchoSetDesc2pc, getEchoSetDesc5pc, getEchoSetById } from './echoes';
+export { characterMaterials, getMaterialsForCharacter, aggregateMaterials } from './extras';
+export type { WuWaCharacterMaterials, WuWaMaterialEntry, WuWaMaterialPhase } from './extras';
 
 export const tierLists: TierList[] = [];

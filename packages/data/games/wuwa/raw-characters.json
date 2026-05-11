@@ -11,11 +11,40 @@
     "releaseVersion": "1.0",
     "status": "released",
     "image": "/images/wuwa/characters/aalto.webp",
-    "stats": { "hp": 10025, "atk": 275, "def": 1053, "energy": 100, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Howler Core", "boss": "Elegy Tacet Core", "localSpecialty": "Belle Poppy" },
-    "skillMaterials": { "commonDrop": "Waveworn Residue", "weeklyBoss": "Unending Destruction" },
-    "minorFortes": [{ "stat": "Aero DMG", "value": "+12%" }],
-    "voiceActors": { "en": "Chris Tergliafera", "jp": "Itou Kento", "cn": "Chen Zhang Tai Kang", "kr": "Kim Myung Jun" }
+    "stats": {
+      "hp": 10025,
+      "atk": 275,
+      "def": 1053,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Howler Core",
+      "boss": "Elegy Tacet Core",
+      "localSpecialty": "Belle Poppy"
+    },
+    "skillMaterials": {
+      "commonDrop": "Waveworn Residue",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "Aero DMG",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Chris Tergliafera",
+      "jp": "Itou Kento",
+      "cn": "Chen Zhang Tai Kang",
+      "kr": "Kim Myung Jun"
+    },
+    "tierRank": "B",
+    "tierReason": {
+      "zh": "气动副C，功能性一般",
+      "en": "Aero sub-DPS with limited utility"
+    }
   },
   {
     "id": "baizhi",
@@ -29,11 +58,40 @@
     "releaseVersion": "1.0",
     "status": "released",
     "image": "/images/wuwa/characters/baizhi.webp",
-    "stats": { "hp": 10372, "atk": 250, "def": 1100, "energy": 135, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Whisperin Core", "boss": "Sound-Keeping Tacet Core", "localSpecialty": "Wintry Bell" },
-    "skillMaterials": { "commonDrop": "Helix", "weeklyBoss": "Unending Destruction" },
-    "minorFortes": [{ "stat": "Healing Bonus", "value": "+12%" }],
-    "voiceActors": { "en": "Sara Ragsdale", "jp": "Kato Emiri", "cn": "Mu Xu Ting", "kr": "Lee Sae Byeok" }
+    "stats": {
+      "hp": 10372,
+      "atk": 250,
+      "def": 1100,
+      "energy": 135,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Whisperin Core",
+      "boss": "Sound-Keeping Tacet Core",
+      "localSpecialty": "Wintry Bell"
+    },
+    "skillMaterials": {
+      "commonDrop": "Helix",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "Healing Bonus",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Sara Ragsdale",
+      "jp": "Kato Emiri",
+      "cn": "Mu Xu Ting",
+      "kr": "Lee Sae Byeok"
+    },
+    "tierRank": "B",
+    "tierReason": {
+      "zh": "治疗辅助，回复能力稳定",
+      "en": "Healer support with stable recovery"
+    }
   },
   {
     "id": "calcharo",
@@ -47,11 +105,44 @@
     "releaseVersion": "1.0",
     "status": "released",
     "image": "/images/wuwa/characters/calcharo.webp",
-    "stats": { "hp": 10625, "atk": 425, "def": 1222, "energy": 125, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Howler Core", "boss": "Hidden Thunder Tacet Core", "localSpecialty": "Belle Poppy" },
-    "skillMaterials": { "commonDrop": "Cadence", "weeklyBoss": "Unending Destruction" },
-    "minorFortes": [{ "stat": "CRIT Rate", "value": "+8%" }, { "stat": "ATK%", "value": "+12%" }],
-    "voiceActors": { "en": "Ry McKeandin", "jp": "Kobayashi Chiaki", "cn": "Xie Ying Tong", "kr": "Kim Hyun Wook" }
+    "stats": {
+      "hp": 10625,
+      "atk": 425,
+      "def": 1222,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Howler Core",
+      "boss": "Hidden Thunder Tacet Core",
+      "localSpecialty": "Belle Poppy"
+    },
+    "skillMaterials": {
+      "commonDrop": "Cadence",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "CRIT Rate",
+        "value": "+8%"
+      },
+      {
+        "stat": "ATK%",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Ry McKeandin",
+      "jp": "Kobayashi Chiaki",
+      "cn": "Xie Ying Tong",
+      "kr": "Kim Hyun Wook"
+    },
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "强力雷属性主C，输出稳定",
+      "en": "Strong Electro main DPS with consistent damage"
+    }
   },
   {
     "id": "changli",
@@ -65,11 +156,44 @@
     "releaseVersion": "1.1",
     "status": "released",
     "image": "/images/wuwa/characters/changli.webp",
-    "stats": { "hp": 10825, "atk": 413, "def": 1259, "energy": 125, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Ring", "boss": "Rage Tacet Core", "localSpecialty": "Coriolus" },
-    "skillMaterials": { "commonDrop": "Phlogiston", "weeklyBoss": "Unwarranted Feather" },
-    "minorFortes": [{ "stat": "CRIT DMG", "value": "+16%" }, { "stat": "ATK%", "value": "+12%" }],
-    "voiceActors": { "en": "Amber May", "jp": "Ueda Kana", "cn": "Xue Jun", "kr": "Kim Ji Yul" }
+    "stats": {
+      "hp": 10825,
+      "atk": 413,
+      "def": 1259,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Ring",
+      "boss": "Rage Tacet Core",
+      "localSpecialty": "Coriolus"
+    },
+    "skillMaterials": {
+      "commonDrop": "Phlogiston",
+      "weeklyBoss": "Unwarranted Feather"
+    },
+    "minorFortes": [
+      {
+        "stat": "CRIT DMG",
+        "value": "+16%"
+      },
+      {
+        "stat": "ATK%",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Amber May",
+      "jp": "Ueda Kana",
+      "cn": "Xue Jun",
+      "kr": "Kim Ji Yul"
+    },
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "强力热熔主C，爆发输出能力出众",
+      "en": "Strong Fusion main DPS with outstanding burst capability"
+    }
   },
   {
     "id": "chixia",
@@ -83,11 +207,40 @@
     "releaseVersion": "1.0",
     "status": "released",
     "image": "/images/wuwa/characters/chixia.webp",
-    "stats": { "hp": 10025, "atk": 275, "def": 1053, "energy": 100, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Whisperin Core", "boss": "Rage Tacet Core", "localSpecialty": "Coriolus" },
-    "skillMaterials": { "commonDrop": "Phlogiston", "weeklyBoss": "Unending Destruction" },
-    "minorFortes": [{ "stat": "Fusion DMG", "value": "+12%" }],
-    "voiceActors": { "en": "Luisa Guerreiro", "jp": "Uchida Shu", "cn": "Yang Ting Ting", "kr": "Yu Hye Jung" }
+    "stats": {
+      "hp": 10025,
+      "atk": 275,
+      "def": 1053,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Whisperin Core",
+      "boss": "Rage Tacet Core",
+      "localSpecialty": "Coriolus"
+    },
+    "skillMaterials": {
+      "commonDrop": "Phlogiston",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "Fusion DMG",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Luisa Guerreiro",
+      "jp": "Uchida Shu",
+      "cn": "Yang Ting Ting",
+      "kr": "Yu Hye Jung"
+    },
+    "tierRank": "B",
+    "tierReason": {
+      "zh": "热熔远程输出，前期可用",
+      "en": "Fusion ranged DPS, usable early game"
+    }
   },
   {
     "id": "danjin",
@@ -101,11 +254,40 @@
     "releaseVersion": "1.0",
     "status": "released",
     "image": "/images/wuwa/characters/danjin.webp",
-    "stats": { "hp": 10063, "atk": 275, "def": 941, "energy": 100, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Whisperin Core", "boss": "Sound-Keeping Tacet Core", "localSpecialty": "Wintry Bell" },
-    "skillMaterials": { "commonDrop": "Metallic Drip", "weeklyBoss": "Unending Destruction" },
-    "minorFortes": [{ "stat": "Havoc DMG", "value": "+12%" }],
-    "voiceActors": { "en": "Suzie Yeung", "jp": "Kawamura Reina", "cn": "Cang Ci", "kr": "Yu Hye Jung" }
+    "stats": {
+      "hp": 10063,
+      "atk": 275,
+      "def": 941,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Whisperin Core",
+      "boss": "Sound-Keeping Tacet Core",
+      "localSpecialty": "Wintry Bell"
+    },
+    "skillMaterials": {
+      "commonDrop": "Metallic Drip",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "Havoc DMG",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Suzie Yeung",
+      "jp": "Kawamura Reina",
+      "cn": "Cang Ci",
+      "kr": "Yu Hye Jung"
+    },
+    "tierRank": "B",
+    "tierReason": {
+      "zh": "湮灭近战输出，操作要求较高",
+      "en": "Havoc melee DPS, requires skill to play well"
+    }
   },
   {
     "id": "encore",
@@ -119,11 +301,44 @@
     "releaseVersion": "1.0",
     "status": "released",
     "image": "/images/wuwa/characters/encore.webp",
-    "stats": { "hp": 10825, "atk": 413, "def": 1259, "energy": 125, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Howler Core", "boss": "Rage Tacet Core", "localSpecialty": "Belle Poppy" },
-    "skillMaterials": { "commonDrop": "Phlogiston", "weeklyBoss": "Unwarranted Feather" },
-    "minorFortes": [{ "stat": "CRIT Rate", "value": "+8%" }, { "stat": "ATK%", "value": "+12%" }],
-    "voiceActors": { "en": "Courtney Lin", "jp": "Kakuma Ai", "cn": "Ying Ying", "kr": "Kim Ha Ru" }
+    "stats": {
+      "hp": 10825,
+      "atk": 413,
+      "def": 1259,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Howler Core",
+      "boss": "Rage Tacet Core",
+      "localSpecialty": "Belle Poppy"
+    },
+    "skillMaterials": {
+      "commonDrop": "Phlogiston",
+      "weeklyBoss": "Unwarranted Feather"
+    },
+    "minorFortes": [
+      {
+        "stat": "CRIT Rate",
+        "value": "+8%"
+      },
+      {
+        "stat": "ATK%",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Courtney Lin",
+      "jp": "Kakuma Ai",
+      "cn": "Ying Ying",
+      "kr": "Kim Ha Ru"
+    },
+    "tierRank": "SS",
+    "tierReason": {
+      "zh": "顶级热熔主C，输出循环流畅，伤害极高",
+      "en": "Top-tier Fusion main DPS with smooth rotation and high damage"
+    }
   },
   {
     "id": "jianxin",
@@ -137,11 +352,40 @@
     "releaseVersion": "1.0",
     "status": "released",
     "image": "/images/wuwa/characters/jianxin.webp",
-    "stats": { "hp": 10063, "atk": 250, "def": 1137, "energy": 125, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Whisperin Core", "boss": "Elegy Tacet Core", "localSpecialty": "Belle Poppy" },
-    "skillMaterials": { "commonDrop": "Waveworn Residue", "weeklyBoss": "Unending Destruction" },
-    "minorFortes": [{ "stat": "Aero DMG", "value": "+12%" }],
-    "voiceActors": { "en": "Brianna Roberts", "jp": "Nanase Ao", "cn": "Ruo Bing", "kr": "Lee Sae Byeok" }
+    "stats": {
+      "hp": 10063,
+      "atk": 250,
+      "def": 1137,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Whisperin Core",
+      "boss": "Elegy Tacet Core",
+      "localSpecialty": "Belle Poppy"
+    },
+    "skillMaterials": {
+      "commonDrop": "Waveworn Residue",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "Aero DMG",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Brianna Roberts",
+      "jp": "Nanase Ao",
+      "cn": "Ruo Bing",
+      "kr": "Lee Sae Byeok"
+    },
+    "tierRank": "A",
+    "tierReason": {
+      "zh": "气动辅助，提供护盾和聚怪",
+      "en": "Aero support providing shields and grouping"
+    }
   },
   {
     "id": "jinhsi",
@@ -155,11 +399,44 @@
     "releaseVersion": "1.1",
     "status": "released",
     "image": "/images/wuwa/characters/jinhsi.webp",
-    "stats": { "hp": 11400, "atk": 375, "def": 1369, "energy": 125, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Howler Core", "boss": "Sound-Keeping Tacet Core", "localSpecialty": "Pecok Flower" },
-    "skillMaterials": { "commonDrop": "Waveworn Residue", "weeklyBoss": "Unwarranted Feather" },
-    "minorFortes": [{ "stat": "CRIT Rate", "value": "+8%" }, { "stat": "ATK%", "value": "+12%" }],
-    "voiceActors": { "en": "Anairis Quinones", "jp": "Awano Maki", "cn": "Xue Jun", "kr": "Kim Chae Rin" }
+    "stats": {
+      "hp": 11400,
+      "atk": 375,
+      "def": 1369,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Howler Core",
+      "boss": "Sound-Keeping Tacet Core",
+      "localSpecialty": "Pecok Flower"
+    },
+    "skillMaterials": {
+      "commonDrop": "Waveworn Residue",
+      "weeklyBoss": "Unwarranted Feather"
+    },
+    "minorFortes": [
+      {
+        "stat": "CRIT Rate",
+        "value": "+8%"
+      },
+      {
+        "stat": "ATK%",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Anairis Quinones",
+      "jp": "Awano Maki",
+      "cn": "Xue Jun",
+      "kr": "Kim Chae Rin"
+    },
+    "tierRank": "SS",
+    "tierReason": {
+      "zh": "顶级光谱主C，爆发伤害极高，对群对单均表现优秀",
+      "en": "Top-tier Spectro main DPS with exceptional burst damage"
+    }
   },
   {
     "id": "jiyan",
@@ -173,11 +450,44 @@
     "releaseVersion": "1.0",
     "status": "released",
     "image": "/images/wuwa/characters/jiyan.webp",
-    "stats": { "hp": 10625, "atk": 425, "def": 1222, "energy": 125, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Howler Core", "boss": "Elegy Tacet Core", "localSpecialty": "Belle Poppy" },
-    "skillMaterials": { "commonDrop": "Waveworn Residue", "weeklyBoss": "Unending Destruction" },
-    "minorFortes": [{ "stat": "CRIT DMG", "value": "+16%" }, { "stat": "ATK%", "value": "+12%" }],
-    "voiceActors": { "en": "Grahame Kuers", "jp": "Toshiyuki Toyonaga", "cn": "Ding Jian Cun", "kr": "Kim Sin Woo" }
+    "stats": {
+      "hp": 10625,
+      "atk": 425,
+      "def": 1222,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Howler Core",
+      "boss": "Elegy Tacet Core",
+      "localSpecialty": "Belle Poppy"
+    },
+    "skillMaterials": {
+      "commonDrop": "Waveworn Residue",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "CRIT DMG",
+        "value": "+16%"
+      },
+      {
+        "stat": "ATK%",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Grahame Kuers",
+      "jp": "Toshiyuki Toyonaga",
+      "cn": "Ding Jian Cun",
+      "kr": "Kim Sin Woo"
+    },
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "强力气动主C，大范围AOE伤害",
+      "en": "Strong Aero main DPS with large AoE damage"
+    }
   },
   {
     "id": "lingyang",
@@ -191,11 +501,44 @@
     "releaseVersion": "1.0",
     "status": "released",
     "image": "/images/wuwa/characters/lingyang.webp",
-    "stats": { "hp": 10625, "atk": 425, "def": 1222, "energy": 125, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Howler Core", "boss": "Sound-Keeping Tacet Core", "localSpecialty": "Wintry Bell" },
-    "skillMaterials": { "commonDrop": "Metallic Drip", "weeklyBoss": "Unending Destruction" },
-    "minorFortes": [{ "stat": "CRIT Rate", "value": "+8%" }, { "stat": "ATK%", "value": "+12%" }],
-    "voiceActors": { "en": "Kevin K. Greviou", "jp": "Itou Ayasa", "cn": "Mao Luo Mao", "kr": "Song Ha Rim" }
+    "stats": {
+      "hp": 10625,
+      "atk": 425,
+      "def": 1222,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Howler Core",
+      "boss": "Sound-Keeping Tacet Core",
+      "localSpecialty": "Wintry Bell"
+    },
+    "skillMaterials": {
+      "commonDrop": "Metallic Drip",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "CRIT Rate",
+        "value": "+8%"
+      },
+      {
+        "stat": "ATK%",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Kevin K. Greviou",
+      "jp": "Itou Ayasa",
+      "cn": "Mao Luo Mao",
+      "kr": "Song Ha Rim"
+    },
+    "tierRank": "A",
+    "tierReason": {
+      "zh": "冰凝主C，输出中规中矩",
+      "en": "Glacio main DPS with decent damage output"
+    }
   },
   {
     "id": "mortefi",
@@ -209,11 +552,40 @@
     "releaseVersion": "1.0",
     "status": "released",
     "image": "/images/wuwa/characters/mortefi.webp",
-    "stats": { "hp": 10025, "atk": 250, "def": 1137, "energy": 125, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Whisperin Core", "boss": "Rage Tacet Core", "localSpecialty": "Coriolus" },
-    "skillMaterials": { "commonDrop": "Phlogiston", "weeklyBoss": "Monument Bell" },
-    "minorFortes": [{ "stat": "Fusion DMG", "value": "+12%" }],
-    "voiceActors": { "en": "Kyle McKeegie", "jp": "Takahashi Rie", "cn": "Xin Chen", "kr": "Kim Ha Ru" }
+    "stats": {
+      "hp": 10025,
+      "atk": 250,
+      "def": 1137,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Whisperin Core",
+      "boss": "Rage Tacet Core",
+      "localSpecialty": "Coriolus"
+    },
+    "skillMaterials": {
+      "commonDrop": "Phlogiston",
+      "weeklyBoss": "Monument Bell"
+    },
+    "minorFortes": [
+      {
+        "stat": "Fusion DMG",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Kyle McKeegie",
+      "jp": "Takahashi Rie",
+      "cn": "Xin Chen",
+      "kr": "Kim Ha Ru"
+    },
+    "tierRank": "A",
+    "tierReason": {
+      "zh": "热熔辅助，为队伍提供增伤",
+      "en": "Fusion support providing team damage buffs"
+    }
   },
   {
     "id": "rover-havoc",
@@ -227,11 +599,40 @@
     "releaseVersion": "1.0",
     "status": "released",
     "image": "/images/wuwa/characters/rover-havoc.webp",
-    "stats": { "hp": 10825, "atk": 413, "def": 1259, "energy": 125, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Whisperin Core", "boss": "Mysterious Code", "localSpecialty": "Pecok Flower" },
-    "skillMaterials": { "commonDrop": "Metallic Drip", "weeklyBoss": "Unwarranted Feather" },
-    "minorFortes": [{ "stat": "Havoc DMG", "value": "+12%" }],
-    "voiceActors": { "en": "Jane Jackson / Chase Brown", "jp": "Tanaka Minami / Toshiki Masuda", "cn": "Du QingQing / Ma Yang", "kr": "Song Ha Rim / Kim Sin Woo" }
+    "stats": {
+      "hp": 10825,
+      "atk": 413,
+      "def": 1259,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Whisperin Core",
+      "boss": "Mysterious Code",
+      "localSpecialty": "Pecok Flower"
+    },
+    "skillMaterials": {
+      "commonDrop": "Metallic Drip",
+      "weeklyBoss": "Unwarranted Feather"
+    },
+    "minorFortes": [
+      {
+        "stat": "Havoc DMG",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Jane Jackson / Chase Brown",
+      "jp": "Tanaka Minami / Toshiki Masuda",
+      "cn": "Du QingQing / Ma Yang",
+      "kr": "Song Ha Rim / Kim Sin Woo"
+    },
+    "tierRank": "A+",
+    "tierReason": {
+      "zh": "免费强力湮灭主C，养成成本低",
+      "en": "Free strong Havoc main DPS with low investment"
+    }
   },
   {
     "id": "rover-spectro",
@@ -245,11 +646,40 @@
     "releaseVersion": "1.0",
     "status": "released",
     "image": "/images/wuwa/characters/rover-spectro.webp",
-    "stats": { "hp": 11400, "atk": 375, "def": 1369, "energy": 125, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Whisperin Core", "boss": "Mysterious Code", "localSpecialty": "Pecok Flower" },
-    "skillMaterials": { "commonDrop": "Metallic Drip", "weeklyBoss": "Unending Destruction" },
-    "minorFortes": [{ "stat": "Spectro DMG", "value": "+12%" }],
-    "voiceActors": { "en": "Jane Jackson / Chase Brown", "jp": "Tanaka Minami / Toshiki Masuda", "cn": "Du QingQing / Ma Yang", "kr": "Song Ha Rim / Kim Sin Woo" }
+    "stats": {
+      "hp": 11400,
+      "atk": 375,
+      "def": 1369,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Whisperin Core",
+      "boss": "Mysterious Code",
+      "localSpecialty": "Pecok Flower"
+    },
+    "skillMaterials": {
+      "commonDrop": "Metallic Drip",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "Spectro DMG",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Jane Jackson / Chase Brown",
+      "jp": "Tanaka Minami / Toshiki Masuda",
+      "cn": "Du QingQing / Ma Yang",
+      "kr": "Song Ha Rim / Kim Sin Woo"
+    },
+    "tierRank": "A+",
+    "tierReason": {
+      "zh": "免费强力光谱输出，配合金犀效果优秀",
+      "en": "Free strong Spectro DPS, excellent with Jinhsi"
+    }
   },
   {
     "id": "sanhua",
@@ -263,11 +693,40 @@
     "releaseVersion": "1.0",
     "status": "released",
     "image": "/images/wuwa/characters/sanhua.webp",
-    "stats": { "hp": 10063, "atk": 275, "def": 941, "energy": 100, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Whisperin Core", "boss": "Sound-Keeping Tacet Core", "localSpecialty": "Wintry Bell" },
-    "skillMaterials": { "commonDrop": "Metallic Drip", "weeklyBoss": "Unending Destruction" },
-    "minorFortes": [{ "stat": "Glacio DMG", "value": "+12%" }],
-    "voiceActors": { "en": "Megan MacKenzie", "jp": "Uchida Maaya", "cn": "Qiu Qiu", "kr": "Kim Chae Rin" }
+    "stats": {
+      "hp": 10063,
+      "atk": 275,
+      "def": 941,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Whisperin Core",
+      "boss": "Sound-Keeping Tacet Core",
+      "localSpecialty": "Wintry Bell"
+    },
+    "skillMaterials": {
+      "commonDrop": "Metallic Drip",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "Glacio DMG",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Megan MacKenzie",
+      "jp": "Uchida Maaya",
+      "cn": "Qiu Qiu",
+      "kr": "Kim Chae Rin"
+    },
+    "tierRank": "B",
+    "tierReason": {
+      "zh": "冰凝辅助，能为队伍提供增益",
+      "en": "Glacio support providing team buffs"
+    }
   },
   {
     "id": "taoqi",
@@ -281,11 +740,40 @@
     "releaseVersion": "1.0",
     "status": "released",
     "image": "/images/wuwa/characters/taoqi.webp",
-    "stats": { "hp": 8950, "atk": 225, "def": 1564, "energy": 125, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Howler Core", "boss": "Gold-Dissolving Feather", "localSpecialty": "Iris" },
-    "skillMaterials": { "commonDrop": "Waveworn Residue", "weeklyBoss": "Unwarranted Feather" },
-    "minorFortes": [{ "stat": "DEF%", "value": "+15.2%" }],
-    "voiceActors": { "en": "Elizabeth Neale", "jp": "Sakura Kaori", "cn": "Zhang Yu Mo", "kr": "Lee Sae Byeok" }
+    "stats": {
+      "hp": 8950,
+      "atk": 225,
+      "def": 1564,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Howler Core",
+      "boss": "Gold-Dissolving Feather",
+      "localSpecialty": "Iris"
+    },
+    "skillMaterials": {
+      "commonDrop": "Waveworn Residue",
+      "weeklyBoss": "Unwarranted Feather"
+    },
+    "minorFortes": [
+      {
+        "stat": "DEF%",
+        "value": "+15.2%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Elizabeth Neale",
+      "jp": "Sakura Kaori",
+      "cn": "Zhang Yu Mo",
+      "kr": "Lee Sae Byeok"
+    },
+    "tierRank": "B",
+    "tierReason": {
+      "zh": "气动防御型角色，提供护盾",
+      "en": "Aero defensive character providing shields"
+    }
   },
   {
     "id": "verina",
@@ -299,11 +787,40 @@
     "releaseVersion": "1.0",
     "status": "released",
     "image": "/images/wuwa/characters/verina.webp",
-    "stats": { "hp": 14238, "atk": 338, "def": 1100, "energy": 175, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Howler Core", "boss": "Elegy Tacet Core", "localSpecialty": "Belle Poppy" },
-    "skillMaterials": { "commonDrop": "Helix", "weeklyBoss": "Monument Bell" },
-    "minorFortes": [{ "stat": "Healing Bonus", "value": "+12%" }],
-    "voiceActors": { "en": "Hollie Holt", "jp": "Yamashita Seiya", "cn": "Cai Shu Meng", "kr": "Kim Chae Rin" }
+    "stats": {
+      "hp": 14238,
+      "atk": 338,
+      "def": 1100,
+      "energy": 175,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Howler Core",
+      "boss": "Elegy Tacet Core",
+      "localSpecialty": "Belle Poppy"
+    },
+    "skillMaterials": {
+      "commonDrop": "Helix",
+      "weeklyBoss": "Monument Bell"
+    },
+    "minorFortes": [
+      {
+        "stat": "Healing Bonus",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Hollie Holt",
+      "jp": "Yamashita Seiya",
+      "cn": "Cai Shu Meng",
+      "kr": "Kim Chae Rin"
+    },
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "最强辅助之一，治疗+增伤一体化",
+      "en": "One of the best supports with healing and damage boost"
+    }
   },
   {
     "id": "xiangli-yao",
@@ -317,11 +834,44 @@
     "releaseVersion": "1.2",
     "status": "released",
     "image": "/images/wuwa/characters/xiangli-yao.webp",
-    "stats": { "hp": 10625, "atk": 425, "def": 1222, "energy": 125, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Whisperin Core", "boss": "Hidden Thunder Tacet Core", "localSpecialty": "Violet Coral" },
-    "skillMaterials": { "commonDrop": "Cadence", "weeklyBoss": "Unending Destruction" },
-    "minorFortes": [{ "stat": "CRIT DMG", "value": "+16%" }, { "stat": "ATK%", "value": "+12%" }],
-    "voiceActors": { "en": "Shaun Mendum", "jp": "Kobayashi Chiaki", "cn": "Ban Ma", "kr": "Jung Eui Jin" }
+    "stats": {
+      "hp": 10625,
+      "atk": 425,
+      "def": 1222,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Whisperin Core",
+      "boss": "Hidden Thunder Tacet Core",
+      "localSpecialty": "Violet Coral"
+    },
+    "skillMaterials": {
+      "commonDrop": "Cadence",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "CRIT DMG",
+        "value": "+16%"
+      },
+      {
+        "stat": "ATK%",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Shaun Mendum",
+      "jp": "Kobayashi Chiaki",
+      "cn": "Ban Ma",
+      "kr": "Jung Eui Jin"
+    },
+    "tierRank": "A+",
+    "tierReason": {
+      "zh": "导电输出角色，机制独特",
+      "en": "Electro DPS with unique mechanics"
+    }
   },
   {
     "id": "yangyang",
@@ -335,11 +885,44 @@
     "releaseVersion": "1.0",
     "status": "released",
     "image": "/images/wuwa/characters/yangyang.webp",
-    "stats": { "hp": 10200, "atk": 250, "def": 1100, "energy": 100, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Ring", "boss": "Roaring Rock Fist", "localSpecialty": "Wintry Bell" },
-    "skillMaterials": { "commonDrop": "Metallic Drip", "weeklyBoss": "Unending Destruction" },
-    "minorFortes": [{ "stat": "Aero DMG", "value": "+12%" }, { "stat": "ATK%", "value": "+12%" }],
-    "voiceActors": { "en": "Amber Aviles", "jp": "Ishikawa Yui", "cn": "Cai Na", "kr": "Kim Chae Rin" }
+    "stats": {
+      "hp": 10200,
+      "atk": 250,
+      "def": 1100,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Ring",
+      "boss": "Roaring Rock Fist",
+      "localSpecialty": "Wintry Bell"
+    },
+    "skillMaterials": {
+      "commonDrop": "Metallic Drip",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "Aero DMG",
+        "value": "+12%"
+      },
+      {
+        "stat": "ATK%",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Amber Aviles",
+      "jp": "Ishikawa Yui",
+      "cn": "Cai Na",
+      "kr": "Kim Chae Rin"
+    },
+    "tierRank": "B",
+    "tierReason": {
+      "zh": "气动聚怪辅助，前期实用",
+      "en": "Aero grouping support, useful early game"
+    }
   },
   {
     "id": "yinlin",
@@ -353,11 +936,44 @@
     "releaseVersion": "1.0",
     "status": "released",
     "image": "/images/wuwa/characters/yinlin.webp",
-    "stats": { "hp": 10825, "atk": 413, "def": 1259, "energy": 125, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Howler Core", "boss": "Hidden Thunder Tacet Core", "localSpecialty": "Belle Poppy" },
-    "skillMaterials": { "commonDrop": "Waveworn Residue", "weeklyBoss": "Unwarranted Feather" },
-    "minorFortes": [{ "stat": "CRIT Rate", "value": "+8%" }, { "stat": "ATK%", "value": "+12%" }],
-    "voiceActors": { "en": "AIMEE-X", "jp": "Endou Yurika", "cn": "Xiao Nian", "kr": "Kim Chae Rin" }
+    "stats": {
+      "hp": 10825,
+      "atk": 413,
+      "def": 1259,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Howler Core",
+      "boss": "Hidden Thunder Tacet Core",
+      "localSpecialty": "Belle Poppy"
+    },
+    "skillMaterials": {
+      "commonDrop": "Waveworn Residue",
+      "weeklyBoss": "Unwarranted Feather"
+    },
+    "minorFortes": [
+      {
+        "stat": "CRIT Rate",
+        "value": "+8%"
+      },
+      {
+        "stat": "ATK%",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "AIMEE-X",
+      "jp": "Endou Yurika",
+      "cn": "Xiao Nian",
+      "kr": "Kim Chae Rin"
+    },
+    "tierRank": "SS",
+    "tierReason": {
+      "zh": "顶级雷属性副C/主C，后台协同攻击伤害优秀",
+      "en": "Top-tier Electro sub-DPS/main DPS with excellent off-field damage"
+    }
   },
   {
     "id": "yuanwu",
@@ -371,11 +987,44 @@
     "releaseVersion": "1.0",
     "status": "released",
     "image": "/images/wuwa/characters/yuanwu.webp",
-    "stats": { "hp": 8525, "atk": 225, "def": 1638, "energy": 125, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Ring", "boss": "Hidden Thunder Tacet Core", "localSpecialty": "???" },
-    "skillMaterials": { "commonDrop": "Cadence", "weeklyBoss": "Unending Destruction" },
-    "minorFortes": [{ "stat": "Electro DMG", "value": "+12%" }, { "stat": "DEF%", "value": "+15.2%" }],
-    "voiceActors": { "en": "Chris Tergliafera", "jp": "Matsuda Kenichiro", "cn": "Zhao Yi", "kr": "Park Ki Ryun" }
+    "stats": {
+      "hp": 8525,
+      "atk": 225,
+      "def": 1638,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Ring",
+      "boss": "Hidden Thunder Tacet Core",
+      "localSpecialty": "???"
+    },
+    "skillMaterials": {
+      "commonDrop": "Cadence",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "Electro DMG",
+        "value": "+12%"
+      },
+      {
+        "stat": "DEF%",
+        "value": "+15.2%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Chris Tergliafera",
+      "jp": "Matsuda Kenichiro",
+      "cn": "Zhao Yi",
+      "kr": "Park Ki Ryun"
+    },
+    "tierRank": "B",
+    "tierReason": {
+      "zh": "导电辅助，功能性有限",
+      "en": "Electro support with limited utility"
+    }
   },
   {
     "id": "zhezhi",
@@ -389,10 +1038,43 @@
     "releaseVersion": "1.2",
     "status": "released",
     "image": "/images/wuwa/characters/zhezhi.webp",
-    "stats": { "hp": 12250, "atk": 375, "def": 1198, "energy": 125, "critRate": 5, "critDmg": 150 },
-    "ascensionMaterials": { "commonDrop": "Howler Core", "boss": "Sound-Keeping Tacet Core", "localSpecialty": "Lanternberry" },
-    "skillMaterials": { "commonDrop": "Helix", "weeklyBoss": "Monument Bell" },
-    "minorFortes": [{ "stat": "CRIT Rate", "value": "+8%" }, { "stat": "ATK%", "value": "+12%" }],
-    "voiceActors": { "en": "Shin-Fei Chen", "jp": "Makino Yui", "cn": "Miao Zi", "kr": "Kim Ha Ru" }
+    "stats": {
+      "hp": 12250,
+      "atk": 375,
+      "def": 1198,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Howler Core",
+      "boss": "Sound-Keeping Tacet Core",
+      "localSpecialty": "Lanternberry"
+    },
+    "skillMaterials": {
+      "commonDrop": "Helix",
+      "weeklyBoss": "Monument Bell"
+    },
+    "minorFortes": [
+      {
+        "stat": "CRIT Rate",
+        "value": "+8%"
+      },
+      {
+        "stat": "ATK%",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Shin-Fei Chen",
+      "jp": "Makino Yui",
+      "cn": "Miao Zi",
+      "kr": "Kim Ha Ru"
+    },
+    "tierRank": "A+",
+    "tierReason": {
+      "zh": "冰凝副C/辅助，后台输出能力强",
+      "en": "Glacio sub-DPS/support with strong off-field damage"
+    }
   }
 ]

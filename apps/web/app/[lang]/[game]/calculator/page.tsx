@@ -1,5 +1,7 @@
+import dynamic from 'next/dynamic';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { CalculatorClient } from './calculator-client';
+
+const CalculatorClient = dynamic(() => import('./calculator-client').then((m) => m.CalculatorClient));
 
 export default async function CalculatorPage({
   params,

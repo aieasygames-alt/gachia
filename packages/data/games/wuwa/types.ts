@@ -49,6 +49,7 @@ export interface WuWaCharacter {
   status: string;
   image: string;
   tierRank?: string;
+  tierReason?: { zh?: string; en?: string };
   stats: {
     hp: number;
     atk: number;

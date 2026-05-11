@@ -1,0 +1,6028 @@
+[
+  {
+    "characterId": "aalto",
+    "rarity": 4,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "lf-howler-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3200
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "mf-howler-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6400
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 3
+          },
+          {
+            "id": "elegy-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "mf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12800
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 4
+          },
+          {
+            "id": "elegy-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "hf-howler-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 25600
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 5
+          },
+          {
+            "id": "elegy-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "hf-howler-core",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 51200
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 5
+          },
+          {
+            "id": "elegy-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "ff-howler-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 102400
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 7
+          },
+          {
+            "id": "elegy-tacet-core",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "waveworn-residue-210",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "waveworn-residue-210",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "waveworn-residue-226",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "waveworn-residue-226",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "waveworn-residue-235",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "waveworn-residue-235",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "waveworn-residue-235",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "waveworn-residue-239",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "waveworn-residue-239",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "baizhi",
+    "rarity": 4,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "lf-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3200
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "mf-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6400
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 3
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "mf-whisperin-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12800
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 4
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "hf-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 25600
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 5
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "hf-whisperin-core",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 51200
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 5
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "ff-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 102400
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 7
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "lento-helix",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "lento-helix",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "adagio-helix",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "adagio-helix",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "andante-helix",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "andante-helix",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "andante-helix",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "presto-helix",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "presto-helix",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "calcharo",
+    "rarity": 5,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "lf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 5000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "mf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 10000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 5
+          },
+          {
+            "id": "hidden-thunder-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "mf-howler-core",
+            "quantity": 6
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 20000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 5
+          },
+          {
+            "id": "hidden-thunder-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "hf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 40000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 7
+          },
+          {
+            "id": "hidden-thunder-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "hf-howler-core",
+            "quantity": 8
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 7
+          },
+          {
+            "id": "hidden-thunder-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "ff-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 160000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 10
+          },
+          {
+            "id": "hidden-thunder-tacet-core",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "cadence-seed",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "cadence-seed",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "cadence-bud",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "cadence-bud",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "cadence-leaf",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "cadence-leaf",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "cadence-leaf",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "cadence-blossom",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "cadence-blossom",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "changli",
+    "rarity": 5,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "crude-ring",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 5000
+          },
+          {
+            "id": "coriolus",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "basic-ring",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 10000
+          },
+          {
+            "id": "coriolus",
+            "quantity": 5
+          },
+          {
+            "id": "rage-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "basic-ring",
+            "quantity": 6
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 20000
+          },
+          {
+            "id": "coriolus",
+            "quantity": 5
+          },
+          {
+            "id": "rage-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "improved-ring",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 40000
+          },
+          {
+            "id": "coriolus",
+            "quantity": 7
+          },
+          {
+            "id": "rage-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "improved-ring",
+            "quantity": 8
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "coriolus",
+            "quantity": 7
+          },
+          {
+            "id": "rage-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "tailored-ring",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 160000
+          },
+          {
+            "id": "coriolus",
+            "quantity": 10
+          },
+          {
+            "id": "rage-tacet-core",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "impure-phlogiston",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "impure-phlogiston",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "extracted-phlogiston",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "extracted-phlogiston",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "refined-phlogiston",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "refined-phlogiston",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "refined-phlogiston",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "flawless-phlogiston",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "flawless-phlogiston",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "chixia",
+    "rarity": 4,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "lf-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3200
+          },
+          {
+            "id": "coriolus",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "mf-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6400
+          },
+          {
+            "id": "coriolus",
+            "quantity": 3
+          },
+          {
+            "id": "rage-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "mf-whisperin-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12800
+          },
+          {
+            "id": "coriolus",
+            "quantity": 4
+          },
+          {
+            "id": "rage-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "hf-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 25600
+          },
+          {
+            "id": "coriolus",
+            "quantity": 5
+          },
+          {
+            "id": "rage-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "hf-whisperin-core",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 51200
+          },
+          {
+            "id": "coriolus",
+            "quantity": 5
+          },
+          {
+            "id": "rage-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "ff-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 102400
+          },
+          {
+            "id": "coriolus",
+            "quantity": 7
+          },
+          {
+            "id": "rage-tacet-core",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "impure-phlogiston",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "impure-phlogiston",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "extracted-phlogiston",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "extracted-phlogiston",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "refined-phlogiston",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "refined-phlogiston",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "refined-phlogiston",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "flawless-phlogiston",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "flawless-phlogiston",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "danjin",
+    "rarity": 4,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "lf-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3200
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "mf-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6400
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 3
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "mf-whisperin-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12800
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 4
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "hf-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 25600
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 5
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "hf-whisperin-core",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 51200
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 5
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "ff-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 102400
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 7
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "inert-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "inert-metallic-drip",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "reactive-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "reactive-metallic-drip",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "polarized-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "polarized-metallic-drip",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "polarized-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "heterized-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "heterized-metallic-drip",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "encore",
+    "rarity": 5,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "lf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 5000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "mf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 10000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 5
+          },
+          {
+            "id": "rage-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "mf-howler-core",
+            "quantity": 6
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 20000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 5
+          },
+          {
+            "id": "rage-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "hf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 40000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 7
+          },
+          {
+            "id": "rage-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "hf-howler-core",
+            "quantity": 8
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 7
+          },
+          {
+            "id": "rage-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "ff-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 160000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 10
+          },
+          {
+            "id": "rage-tacet-core",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "impure-phlogiston",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "impure-phlogiston",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "extracted-phlogiston",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "extracted-phlogiston",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "refined-phlogiston",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "refined-phlogiston",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "refined-phlogiston",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "flawless-phlogiston",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "flawless-phlogiston",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "jianxin",
+    "rarity": 4,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "lf-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3200
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "mf-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6400
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 3
+          },
+          {
+            "id": "elegy-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "mf-whisperin-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12800
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 4
+          },
+          {
+            "id": "elegy-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "hf-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 25600
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 5
+          },
+          {
+            "id": "elegy-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "hf-whisperin-core",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 51200
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 5
+          },
+          {
+            "id": "elegy-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "ff-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 102400
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 7
+          },
+          {
+            "id": "elegy-tacet-core",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "waveworn-residue-210",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "waveworn-residue-210",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "waveworn-residue-226",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "waveworn-residue-226",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "waveworn-residue-235",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "waveworn-residue-235",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "waveworn-residue-235",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "waveworn-residue-239",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "waveworn-residue-239",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "jinhsi",
+    "rarity": 5,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "lf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 5000
+          },
+          {
+            "id": "pecok-flower",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "mf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 10000
+          },
+          {
+            "id": "pecok-flower",
+            "quantity": 5
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "mf-howler-core",
+            "quantity": 6
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 20000
+          },
+          {
+            "id": "pecok-flower",
+            "quantity": 5
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "hf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 40000
+          },
+          {
+            "id": "pecok-flower",
+            "quantity": 7
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "hf-howler-core",
+            "quantity": 8
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "pecok-flower",
+            "quantity": 7
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "ff-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 160000
+          },
+          {
+            "id": "pecok-flower",
+            "quantity": 10
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "waveworn-residue-210",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "waveworn-residue-210",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "waveworn-residue-226",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "waveworn-residue-226",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "waveworn-residue-235",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "waveworn-residue-235",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "waveworn-residue-235",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "waveworn-residue-239",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "waveworn-residue-239",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "jiyan",
+    "rarity": 5,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "lf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 5000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "mf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 10000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 5
+          },
+          {
+            "id": "elegy-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "mf-howler-core",
+            "quantity": 6
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 20000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 5
+          },
+          {
+            "id": "elegy-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "hf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 40000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 7
+          },
+          {
+            "id": "elegy-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "hf-howler-core",
+            "quantity": 8
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 7
+          },
+          {
+            "id": "elegy-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "ff-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 160000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 10
+          },
+          {
+            "id": "elegy-tacet-core",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "waveworn-residue-210",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "waveworn-residue-210",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "waveworn-residue-226",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "waveworn-residue-226",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "waveworn-residue-235",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "waveworn-residue-235",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "waveworn-residue-235",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "waveworn-residue-239",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "waveworn-residue-239",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "lingyang",
+    "rarity": 5,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "lf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 5000
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "mf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 10000
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 5
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "mf-howler-core",
+            "quantity": 6
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 20000
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 5
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "hf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 40000
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 7
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "hf-howler-core",
+            "quantity": 8
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 7
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "ff-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 160000
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 10
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "inert-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "inert-metallic-drip",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "reactive-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "reactive-metallic-drip",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "polarized-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "polarized-metallic-drip",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "polarized-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "heterized-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "heterized-metallic-drip",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "mortefi",
+    "rarity": 4,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "lf-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3200
+          },
+          {
+            "id": "coriolus",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "mf-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6400
+          },
+          {
+            "id": "coriolus",
+            "quantity": 3
+          },
+          {
+            "id": "rage-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "mf-whisperin-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12800
+          },
+          {
+            "id": "coriolus",
+            "quantity": 4
+          },
+          {
+            "id": "rage-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "hf-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 25600
+          },
+          {
+            "id": "coriolus",
+            "quantity": 5
+          },
+          {
+            "id": "rage-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "hf-whisperin-core",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 51200
+          },
+          {
+            "id": "coriolus",
+            "quantity": 5
+          },
+          {
+            "id": "rage-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "ff-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 102400
+          },
+          {
+            "id": "coriolus",
+            "quantity": 7
+          },
+          {
+            "id": "rage-tacet-core",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "impure-phlogiston",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "impure-phlogiston",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "extracted-phlogiston",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "monument-bell",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "extracted-phlogiston",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "monument-bell",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "refined-phlogiston",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "monument-bell",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "refined-phlogiston",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "monument-bell",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "refined-phlogiston",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "monument-bell",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "flawless-phlogiston",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "monument-bell",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "flawless-phlogiston",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "monument-bell",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "rover-havoc",
+    "rarity": 5,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "lf-whisperin-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 5000
+          },
+          {
+            "id": "pecok-flower",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "mf-whisperin-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 10000
+          },
+          {
+            "id": "pecok-flower",
+            "quantity": 5
+          },
+          {
+            "id": "mysterious-code",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "mf-whisperin-core",
+            "quantity": 6
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 20000
+          },
+          {
+            "id": "pecok-flower",
+            "quantity": 5
+          },
+          {
+            "id": "mysterious-code",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "hf-whisperin-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 40000
+          },
+          {
+            "id": "pecok-flower",
+            "quantity": 7
+          },
+          {
+            "id": "mysterious-code",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "hf-whisperin-core",
+            "quantity": 8
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "pecok-flower",
+            "quantity": 7
+          },
+          {
+            "id": "mysterious-code",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "ff-whisperin-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 160000
+          },
+          {
+            "id": "pecok-flower",
+            "quantity": 10
+          },
+          {
+            "id": "mysterious-code",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "inert-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "inert-metallic-drip",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "reactive-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "reactive-metallic-drip",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "polarized-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "polarized-metallic-drip",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "polarized-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "heterized-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "heterized-metallic-drip",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "rover-spectro",
+    "rarity": 5,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "lf-whisperin-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 5000
+          },
+          {
+            "id": "pecok-flower",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "mf-whisperin-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 10000
+          },
+          {
+            "id": "pecok-flower",
+            "quantity": 5
+          },
+          {
+            "id": "mysterious-code",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "mf-whisperin-core",
+            "quantity": 6
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 20000
+          },
+          {
+            "id": "pecok-flower",
+            "quantity": 5
+          },
+          {
+            "id": "mysterious-code",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "hf-whisperin-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 40000
+          },
+          {
+            "id": "pecok-flower",
+            "quantity": 7
+          },
+          {
+            "id": "mysterious-code",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "hf-whisperin-core",
+            "quantity": 8
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "pecok-flower",
+            "quantity": 7
+          },
+          {
+            "id": "mysterious-code",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "ff-whisperin-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 160000
+          },
+          {
+            "id": "pecok-flower",
+            "quantity": 10
+          },
+          {
+            "id": "mysterious-code",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "inert-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "inert-metallic-drip",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "reactive-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "reactive-metallic-drip",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "polarized-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "polarized-metallic-drip",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "polarized-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "heterized-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "heterized-metallic-drip",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "sanhua",
+    "rarity": 4,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "lf-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3200
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "mf-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6400
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 3
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "mf-whisperin-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12800
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 4
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "hf-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 25600
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 5
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "hf-whisperin-core",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 51200
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 5
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "ff-whisperin-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 102400
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 7
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "inert-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "inert-metallic-drip",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "reactive-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "reactive-metallic-drip",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "polarized-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "polarized-metallic-drip",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "polarized-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "heterized-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "heterized-metallic-drip",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "taoqi",
+    "rarity": 4,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "lf-howler-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3200
+          },
+          {
+            "id": "iris",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "mf-howler-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6400
+          },
+          {
+            "id": "iris",
+            "quantity": 3
+          },
+          {
+            "id": "gold-dissolving-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "mf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12800
+          },
+          {
+            "id": "iris",
+            "quantity": 4
+          },
+          {
+            "id": "gold-dissolving-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "hf-howler-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 25600
+          },
+          {
+            "id": "iris",
+            "quantity": 5
+          },
+          {
+            "id": "gold-dissolving-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "hf-howler-core",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 51200
+          },
+          {
+            "id": "iris",
+            "quantity": 5
+          },
+          {
+            "id": "gold-dissolving-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "ff-howler-core",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 102400
+          },
+          {
+            "id": "iris",
+            "quantity": 7
+          },
+          {
+            "id": "gold-dissolving-feather",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "waveworn-residue-210",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "waveworn-residue-210",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "waveworn-residue-226",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "waveworn-residue-226",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "waveworn-residue-235",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "waveworn-residue-235",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "waveworn-residue-235",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "waveworn-residue-239",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "waveworn-residue-239",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "verina",
+    "rarity": 5,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "lf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 5000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "mf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 10000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 5
+          },
+          {
+            "id": "elegy-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "mf-howler-core",
+            "quantity": 6
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 20000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 5
+          },
+          {
+            "id": "elegy-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "hf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 40000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 7
+          },
+          {
+            "id": "elegy-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "hf-howler-core",
+            "quantity": 8
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 7
+          },
+          {
+            "id": "elegy-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "ff-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 160000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 10
+          },
+          {
+            "id": "elegy-tacet-core",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "lento-helix",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "lento-helix",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "adagio-helix",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "monument-bell",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "adagio-helix",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "monument-bell",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "andante-helix",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "monument-bell",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "andante-helix",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "monument-bell",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "andante-helix",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "monument-bell",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "presto-helix",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "monument-bell",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "presto-helix",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "monument-bell",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "xiangli-yao",
+    "rarity": 5,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "lf-whisperin-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 5000
+          },
+          {
+            "id": "violet-coral",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "mf-whisperin-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 10000
+          },
+          {
+            "id": "violet-coral",
+            "quantity": 5
+          },
+          {
+            "id": "hidden-thunder-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "mf-whisperin-core",
+            "quantity": 6
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 20000
+          },
+          {
+            "id": "violet-coral",
+            "quantity": 5
+          },
+          {
+            "id": "hidden-thunder-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "hf-whisperin-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 40000
+          },
+          {
+            "id": "violet-coral",
+            "quantity": 7
+          },
+          {
+            "id": "hidden-thunder-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "hf-whisperin-core",
+            "quantity": 8
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "violet-coral",
+            "quantity": 7
+          },
+          {
+            "id": "hidden-thunder-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "ff-whisperin-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 160000
+          },
+          {
+            "id": "violet-coral",
+            "quantity": 10
+          },
+          {
+            "id": "hidden-thunder-tacet-core",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "cadence-seed",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "cadence-seed",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "cadence-bud",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "cadence-bud",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "cadence-leaf",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "cadence-leaf",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "cadence-leaf",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "cadence-blossom",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "cadence-blossom",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "yangyang",
+    "rarity": 4,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "crude-ring",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3200
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "basic-ring",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6400
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 3
+          },
+          {
+            "id": "roaring-rock-fist",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "basic-ring",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12800
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 4
+          },
+          {
+            "id": "roaring-rock-fist",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "improved-ring",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 25600
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 5
+          },
+          {
+            "id": "roaring-rock-fist",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "improved-ring",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 51200
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 5
+          },
+          {
+            "id": "roaring-rock-fist",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "tailored-ring",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 102400
+          },
+          {
+            "id": "wintry-bell",
+            "quantity": 7
+          },
+          {
+            "id": "roaring-rock-fist",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "inert-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "inert-metallic-drip",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "reactive-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "reactive-metallic-drip",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "polarized-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "polarized-metallic-drip",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "polarized-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "heterized-metallic-drip",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "heterized-metallic-drip",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "yinlin",
+    "rarity": 5,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "lf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 5000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "mf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 10000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 5
+          },
+          {
+            "id": "hidden-thunder-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "mf-howler-core",
+            "quantity": 6
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 20000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 5
+          },
+          {
+            "id": "hidden-thunder-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "hf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 40000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 7
+          },
+          {
+            "id": "hidden-thunder-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "hf-howler-core",
+            "quantity": 8
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 7
+          },
+          {
+            "id": "hidden-thunder-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "ff-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 160000
+          },
+          {
+            "id": "belle-poppy",
+            "quantity": 10
+          },
+          {
+            "id": "hidden-thunder-tacet-core",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "waveworn-residue-210",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "waveworn-residue-210",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "waveworn-residue-226",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "waveworn-residue-226",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "waveworn-residue-235",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "waveworn-residue-235",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "waveworn-residue-235",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "waveworn-residue-239",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "waveworn-residue-239",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "unwarranted-feather",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "yuanwu",
+    "rarity": 4,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "crude-ring",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3200
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "basic-ring",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6400
+          },
+          {
+            "id": "hidden-thunder-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "basic-ring",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12800
+          },
+          {
+            "id": "hidden-thunder-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "improved-ring",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 25600
+          },
+          {
+            "id": "hidden-thunder-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "improved-ring",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 51200
+          },
+          {
+            "id": "hidden-thunder-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "tailored-ring",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 102400
+          },
+          {
+            "id": "hidden-thunder-tacet-core",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "cadence-seed",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "cadence-seed",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "cadence-bud",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "cadence-bud",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "cadence-leaf",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "cadence-leaf",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "cadence-leaf",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "cadence-blossom",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "cadence-blossom",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "unending-destruction",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "zhezhi",
+    "rarity": 5,
+    "ascensionMaterials": [
+      {
+        "levelRange": "1-20",
+        "materials": [
+          {
+            "id": "lf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 5000
+          },
+          {
+            "id": "lanternberry",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "levelRange": "20-40",
+        "materials": [
+          {
+            "id": "mf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 10000
+          },
+          {
+            "id": "lanternberry",
+            "quantity": 5
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          {
+            "id": "mf-howler-core",
+            "quantity": 6
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 20000
+          },
+          {
+            "id": "lanternberry",
+            "quantity": 5
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          {
+            "id": "hf-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 40000
+          },
+          {
+            "id": "lanternberry",
+            "quantity": 7
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          {
+            "id": "hf-howler-core",
+            "quantity": 8
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "lanternberry",
+            "quantity": 7
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          {
+            "id": "ff-howler-core",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 160000
+          },
+          {
+            "id": "lanternberry",
+            "quantity": 10
+          },
+          {
+            "id": "sound-keeping-tacet-core",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "skillMaterials": [
+      {
+        "levelRange": "1-2",
+        "materials": [
+          {
+            "id": "lento-helix",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "levelRange": "2-3",
+        "materials": [
+          {
+            "id": "lento-helix",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "levelRange": "3-4",
+        "materials": [
+          {
+            "id": "adagio-helix",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 6000
+          },
+          {
+            "id": "monument-bell",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "4-5",
+        "materials": [
+          {
+            "id": "adagio-helix",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 12000
+          },
+          {
+            "id": "monument-bell",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "5-6",
+        "materials": [
+          {
+            "id": "andante-helix",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 24000
+          },
+          {
+            "id": "monument-bell",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "6-7",
+        "materials": [
+          {
+            "id": "andante-helix",
+            "quantity": 5
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 48000
+          },
+          {
+            "id": "monument-bell",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "levelRange": "7-8",
+        "materials": [
+          {
+            "id": "andante-helix",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 80000
+          },
+          {
+            "id": "monument-bell",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "8-9",
+        "materials": [
+          {
+            "id": "presto-helix",
+            "quantity": 3
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 120000
+          },
+          {
+            "id": "monument-bell",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "levelRange": "9-10",
+        "materials": [
+          {
+            "id": "presto-helix",
+            "quantity": 4
+          },
+          {
+            "id": "shell-credits",
+            "quantity": 200000
+          },
+          {
+            "id": "monument-bell",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  }
+]

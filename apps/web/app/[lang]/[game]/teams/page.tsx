@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { GAMES } from '@gachia/core';
-import { TeamsClient } from './teams-client';
+
+const TeamsClient = dynamic(() => import('./teams-client').then((m) => m.TeamsClient));
 
 export async function generateMetadata({
   params,

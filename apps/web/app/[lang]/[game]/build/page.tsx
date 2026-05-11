@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { GAMES } from '@gachia/core';
-import { BuildClient } from './build-client';
+
+const BuildClient = dynamic(() => import('./build-client').then((m) => m.BuildClient));
 
 export async function generateMetadata({
   params,
