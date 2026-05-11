@@ -24,10 +24,10 @@ import {
   getStarRailGuideCategories,
   STARRAIL_GUIDE_CATEGORIES,
   wuwaGuides,
-  getGuideTitle as getWuWaGuideTitle,
-  getGuideSummary as getWuWaGuideSummary,
-  getGuideCategory as getWuWaGuideCategory,
-  getGuideCategories as getWuWaGuideCategories,
+  getWuWaGuideTitle,
+  getWuWaGuideSummary,
+  getWuWaGuideCategory,
+  getWuWaGuideCategories,
   WUWA_GUIDE_CATEGORIES,
 } from '@gachia/data';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
