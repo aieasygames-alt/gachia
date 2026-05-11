@@ -42,19 +42,37 @@ export function SiteFooter({ locale }: SiteFooterProps) {
 
           {/* Resources */}
           <div>
-            <h4 className="mb-2 font-semibold text-game-text">Resources</h4>
-            <ul className="space-y-1 text-sm text-game-text-muted">
-              <li>Sitemap</li>
-              <li>API</li>
+            <h4 className="mb-2 font-semibold text-game-text">
+              {locale === 'zh' ? '资源' : locale === 'ja' ? 'リソース' : 'Resources'}
+            </h4>
+            <ul className="space-y-1 text-sm">
+              <li>
+                <Link href="/sitemap" as="/" className="text-game-text-muted hover:text-game-primary">
+                  {locale === 'zh' ? '网站地图' : locale === 'ja' ? 'サイトマップ' : 'Sitemap'}
+                </Link>
+              </li>
+              <li>
+                <Link href="/api" as="/" className="text-game-text-muted hover:text-game-primary">
+                  API
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Legal */}
           <div>
             <h4 className="mb-2 font-semibold text-game-text">Legal</h4>
-            <ul className="space-y-1 text-sm text-game-text-muted">
-              <li>Privacy Policy</li>
-              <li>Terms of Service</li>
+            <ul className="space-y-1 text-sm">
+              <li>
+                <Link href="/privacy" as="/" className="text-game-text-muted hover:text-game-primary">
+                  {locale === 'zh' ? '隐私政策' : locale === 'ja' ? 'プライバシーポリシー' : 'Privacy Policy'}
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" as="/" className="text-game-text-muted hover:text-game-primary">
+                  {locale === 'zh' ? '服务条款' : locale === 'ja' ? '利用規約' : 'Terms of Service'}
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
