@@ -7,6 +7,9 @@ import { GAMES, GAME_IDS } from '@gachia/core';
 import type { SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
 import { LocaleSwitcher } from './locale-switcher';
+import { UserMenu } from '@/components/auth/user-menu';
+import { AuthDialog } from '@/components/auth/auth-dialog';
+import { useSession } from '@/lib/auth-client';
 
 const SearchDialog = dynamic(
   () => import('@/components/search/search-dialog').then((m) => m.SearchDialog),
@@ -19,6 +22,8 @@ interface SiteHeaderProps {
 
 export function SiteHeader({ locale }: SiteHeaderProps) {
   const [searchOpen, setSearchOpen] = useState(false);
+  const [authOpen, setAuthOpen] = useState(false);
+  const { data: session } = useSession();
 
   // Keyboard shortcut: Cmd/Ctrl+K to open search
   useEffect(() => {
@@ -74,11 +79,24 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
             </button>
 
             <LocaleSwitcher locale={locale} />
+
+            {/* Auth */}
+            {session ? (
+              <UserMenu />
+            ) : (
+              <button
+                onClick={() => setAuthOpen(true)}
+                className="rounded-lg border border-game-border bg-game-surface px-3 py-1.5 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary"
+              >
+                {locale === 'zh' ? '登录' : locale === 'ja' ? 'ログイン' : 'Login'}
+              </button>
+            )}
           </div>
         </div>
       </header>
 
       <SearchDialog locale={locale} open={searchOpen} onClose={() => setSearchOpen(false)} />
+      <AuthDialog open={authOpen} onClose={() => setAuthOpen(false)} />
     </>
   );
 }

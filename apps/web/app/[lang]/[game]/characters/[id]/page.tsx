@@ -49,6 +49,11 @@ import {
 import type { NteCharacter, GenshinCharacter, StarRailCharacter, WuWaCharacter } from '@gachia/data';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
+import dynamic from 'next/dynamic';
+
+const FavoriteButton = dynamic(
+  () => import('@/components/auth/favorite-button').then((m) => m.FavoriteButton),
+);
 
 const NTE_ELEMENT_COLORS: Record<string, string> = {
   anima: '#4ade80', chaos: '#8b5cf6', cosmos: '#3b82f6',
@@ -338,6 +343,9 @@ function GenshinCharacterDetail({ char, locale }: { char: GenshinCharacter; loca
           <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
             {getGenshinCharacterName(char, locale)}
           </h1>
+          <div className="mb-3">
+            <FavoriteButton gameId="genshin" characterId={char.id} />
+          </div>
           <div className="mb-3 flex flex-wrap gap-2">
             <span className="rounded px-2 py-0.5 text-sm font-medium text-white" style={{ backgroundColor: elementColor }}>
               {elementName}
@@ -683,6 +691,9 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
           <h1 className="mb-2 text-3xl font-bold" style={{ color: gameConfig.theme.primary }}>
             {charName}
           </h1>
+          <div className="mb-3">
+            <FavoriteButton gameId="starrail" characterId={char.id} />
+          </div>
           <div className="mb-3 flex flex-wrap gap-2">
             <span className="rounded-full bg-game-surface-alt px-3 py-1 text-sm text-game-text">{pathLabel}</span>
             <span className="rounded-full bg-game-surface-alt px-3 py-1 text-sm" style={{ color: elementColor }}>{elementName}</span>
@@ -918,6 +929,9 @@ function NteCharacterDetail({ char, locale }: { char: NteCharacter; locale: Supp
           <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
             {getNteCharacterName(char, locale)}
           </h1>
+          <div className="mb-3">
+            <FavoriteButton gameId="nte" characterId={char.id} />
+          </div>
           <div className="mb-3 flex flex-wrap gap-2">
             <span className="rounded px-2 py-0.5 text-sm font-medium text-white" style={{ backgroundColor: NTE_ELEMENT_COLORS[char.attribute] || '#888' }}>
               {NTE_ELEMENT_NAMES[char.attribute]?.[locale] ?? char.attribute}
@@ -1119,6 +1133,9 @@ function WuWaCharacterDetail({ char, locale }: { char: WuWaCharacter; locale: Su
           <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
             {charName}
           </h1>
+          <div className="mb-3">
+            <FavoriteButton gameId="wuwa" characterId={char.id} />
+          </div>
           <div className="mb-3 flex flex-wrap gap-2">
             <span className="rounded px-2 py-0.5 text-sm font-medium text-white" style={{ backgroundColor: elementColor }}>
               {elementName}
