@@ -15,11 +15,14 @@ export async function generateMetadata({
   const gameId = game as GameId;
   const gameConfig = GAMES[gameId];
   const gameName = locale === 'zh' ? gameConfig.name.zh : locale === 'ja' ? (gameConfig.name.ja ?? gameConfig.name.en) : gameConfig.name.en;
-  const title = locale === 'zh' ? `${gameName} 配装推荐 - Gachia` : locale === 'ja' ? `${gameName} ビルド - Gachia` : `${gameName} Build - Gachia`;
+  const title = locale === 'zh' ? `${gameName} 配装推荐` : locale === 'ja' ? `${gameName} ビルド` : `${gameName} Build`;
   return {
     title,
-    description: locale === 'zh' ? `${gameName} 角色配装推荐、最佳武器、圣遗物搭配` : `${gameName} character build recommendations, best weapons, artifact sets`,
-    robots: 'index, follow',
+    description: locale === 'zh' ? `${gameName} 角色配装推荐、最佳武器、圣遗物搭配` : locale === 'ja' ? `${gameName} キャラビルドおすすめ、最適武器、聖遺物・遺物・エコー組み合わせ` : `${gameName} character build recommendations, best weapons, artifact sets`,
+    alternates: {
+      canonical: `https://gachia.com/${locale}/${gameId}/build`,
+      languages: { 'zh-Hans': `https://gachia.com/zh/${gameId}/build`, en: `https://gachia.com/en/${gameId}/build`, ja: `https://gachia.com/ja/${gameId}/build`, 'x-default': `https://gachia.com/zh/${gameId}/build` },
+    },
   };
 }
 

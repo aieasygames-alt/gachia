@@ -18,19 +18,31 @@ export async function generateMetadata({
   if (gameId === 'starrail') {
     const label = locale === 'zh' ? '遗器' : locale === 'ja' ? '遺物' : 'Relics';
     return {
-      title: `${label} | ${gameName} Wiki | Gachia`,
+      title: `${label} - ${gameName} Wiki`,
       description: locale === 'zh'
         ? `崩坏：星穹铁道全遗器图鉴，包含洞窟遗器和位面饰品的2件套/4件套效果及推荐角色`
+        : locale === 'ja'
+        ? `崩壊：スターレイル遺物図鑑、洞窟遺物と次元装飾の2セット/4セット効果とおすすめキャラ`
         : `Complete Honkai: Star Rail Relic guide with 2pc/4pc set bonuses and recommended characters`,
+      alternates: {
+        canonical: `https://gachia.com/${locale}/${gameId}/artifacts`,
+        languages: { 'zh-Hans': `https://gachia.com/zh/${gameId}/artifacts`, en: `https://gachia.com/en/${gameId}/artifacts`, ja: `https://gachia.com/ja/${gameId}/artifacts`, 'x-default': `https://gachia.com/zh/${gameId}/artifacts` },
+      },
     };
   }
 
   const label = CATEGORY_LABELS.artifacts?.[locale] ?? 'Artifacts';
   return {
-    title: `${label} | ${gameName} Wiki | Gachia`,
+    title: `${label} - ${gameName} Wiki`,
     description: locale === 'zh'
       ? `原神圣遗物图鉴大全，包含${genshinArtifactSets.length}套圣遗物的2件套/4件套效果及推荐角色`
+      : locale === 'ja'
+      ? `原神聖遺物図鑑、${genshinArtifactSets.length}セットの2セット/4セット効果とおすすめキャラ`
       : `Complete Genshin Impact Artifact guide with ${genshinArtifactSets.length} sets, 2pc/4pc bonuses and recommended characters`,
+    alternates: {
+      canonical: `https://gachia.com/${locale}/${gameId}/artifacts`,
+      languages: { 'zh-Hans': `https://gachia.com/zh/${gameId}/artifacts`, en: `https://gachia.com/en/${gameId}/artifacts`, ja: `https://gachia.com/ja/${gameId}/artifacts`, 'x-default': `https://gachia.com/zh/${gameId}/artifacts` },
+    },
   };
 }
 

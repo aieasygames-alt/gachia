@@ -76,13 +76,24 @@ export async function generateMetadata({
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
 
+  const buildGuideAlternates = (gameId: string, slug: string) => ({
+    canonical: `https://gachia.com/${locale}/${gameId}/guides/${slug}`,
+    languages: {
+      'zh-Hans': `https://gachia.com/zh/${gameId}/guides/${slug}`,
+      en: `https://gachia.com/en/${gameId}/guides/${slug}`,
+      ja: `https://gachia.com/ja/${gameId}/guides/${slug}`,
+      'x-default': `https://gachia.com/zh/${gameId}/guides/${slug}`,
+    },
+  });
+
   if (gameId === 'genshin') {
     const guide = getGenshinGuideById(slug);
     if (!guide) return {};
     const gameName = GAMES.genshin.name[locale];
     return {
-      title: `${getGenshinGuideTitle(guide, locale)} | ${gameName} Wiki | Gachia`,
+      title: `${getGenshinGuideTitle(guide, locale)} - ${gameName} Wiki`,
       description: getGenshinGuideSummary(guide, locale).slice(0, 160),
+      alternates: buildGuideAlternates(gameId, slug),
     };
   }
 
@@ -91,8 +102,9 @@ export async function generateMetadata({
     if (!guide) return {};
     const gameName = GAMES.nte.name[locale];
     return {
-      title: `${getNteGuideTitle(guide, locale)} | ${gameName} Wiki | Gachia`,
+      title: `${getNteGuideTitle(guide, locale)} - ${gameName} Wiki`,
       description: getNteGuideSummary(guide, locale).slice(0, 160),
+      alternates: buildGuideAlternates(gameId, slug),
     };
   }
 
@@ -101,8 +113,9 @@ export async function generateMetadata({
     if (!guide) return {};
     const gameName = GAMES.wuwa.name[locale];
     return {
-      title: `${getWuWaGuideTitle(guide, locale)} | ${gameName} Wiki | Gachia`,
+      title: `${getWuWaGuideTitle(guide, locale)} - ${gameName} Wiki`,
       description: getWuWaGuideSummary(guide, locale).slice(0, 160),
+      alternates: buildGuideAlternates(gameId, slug),
     };
   }
 
@@ -111,8 +124,9 @@ export async function generateMetadata({
     if (!guide) return {};
     const gameName = GAMES.starrail.name[locale];
     return {
-      title: `${getStarRailGuideTitle(guide, locale)} | ${gameName} Wiki | Gachia`,
+      title: `${getStarRailGuideTitle(guide, locale)} - ${gameName} Wiki`,
       description: getStarRailGuideSummary(guide, locale).slice(0, 160),
+      alternates: buildGuideAlternates(gameId, slug),
     };
   }
 

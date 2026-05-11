@@ -15,11 +15,14 @@ export async function generateMetadata({
   const gameId = game as GameId;
   const gameConfig = GAMES[gameId];
   const gameName = locale === 'zh' ? gameConfig.name.zh : locale === 'ja' ? (gameConfig.name.ja ?? gameConfig.name.en) : gameConfig.name.en;
-  const title = locale === 'zh' ? `${gameName} 配队模拟器 - Gachia` : locale === 'ja' ? `${gameName} パーティ編成 - Gachia` : `${gameName} Team Builder - Gachia`;
+  const title = locale === 'zh' ? `${gameName} 配队模拟器` : locale === 'ja' ? `${gameName} パーティ編成` : `${gameName} Team Builder`;
   return {
     title,
-    description: locale === 'zh' ? `${gameName} 角色配队模拟器，查看元素共鸣效果，推荐最佳阵容` : `${gameName} team builder - element resonance, recommended compositions`,
-    robots: 'index, follow',
+    description: locale === 'zh' ? `${gameName} 角色配队模拟器，查看元素共鸣效果，推荐最佳阵容` : locale === 'ja' ? `${gameName} パーティ編成シミュレーター、元素共鳴効果確認、おすすめ編成` : `${gameName} team builder - element resonance, recommended compositions`,
+    alternates: {
+      canonical: `https://gachia.com/${locale}/${gameId}/teams`,
+      languages: { 'zh-Hans': `https://gachia.com/zh/${gameId}/teams`, en: `https://gachia.com/en/${gameId}/teams`, ja: `https://gachia.com/ja/${gameId}/teams`, 'x-default': `https://gachia.com/zh/${gameId}/teams` },
+    },
   };
 }
 

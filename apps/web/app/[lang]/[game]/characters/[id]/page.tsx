@@ -148,14 +148,25 @@ export async function generateMetadata({
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
 
+  const buildAlternates = (charId: string) => ({
+    canonical: `https://gachia.com/${locale}/${gameId}/characters/${charId}`,
+    languages: {
+      'zh-Hans': `https://gachia.com/zh/${gameId}/characters/${charId}`,
+      en: `https://gachia.com/en/${gameId}/characters/${charId}`,
+      ja: `https://gachia.com/ja/${gameId}/characters/${charId}`,
+      'x-default': `https://gachia.com/zh/${gameId}/characters/${charId}`,
+    },
+  });
+
   if (gameId === 'genshin') {
     const char = getGenshinCharacterById(id);
     if (!char) return {};
     const gameName = GAMES.genshin.name[locale];
     const name = getGenshinCharacterName(char, locale);
     return {
-      title: `${name} | ${gameName} Wiki | Gachia`,
+      title: `${name} - ${gameName} Wiki`,
       description: getGenshinCharacterDescription(char, locale).slice(0, 160),
+      alternates: buildAlternates(id),
     };
   }
 
@@ -165,8 +176,9 @@ export async function generateMetadata({
     const gameName = GAMES.starrail.name[locale];
     const name = getStarRailCharacterName(char, locale);
     return {
-      title: `${name} | ${gameName} Wiki | Gachia`,
+      title: `${name} - ${gameName} Wiki`,
       description: getStarRailCharacterDescription(char, locale).slice(0, 160),
+      alternates: buildAlternates(id),
     };
   }
 
@@ -176,8 +188,9 @@ export async function generateMetadata({
     const gameName = GAMES.nte.name[locale];
     const name = getNteCharacterName(char, locale);
     return {
-      title: `${name} | ${gameName} Wiki | Gachia`,
+      title: `${name} - ${gameName} Wiki`,
       description: getNteCharacterDescription(char, locale).slice(0, 160),
+      alternates: buildAlternates(id),
     };
   }
 
@@ -187,8 +200,9 @@ export async function generateMetadata({
     const gameName = GAMES.wuwa.name[locale];
     const name = getWuWaCharacterName(char, locale);
     return {
-      title: `${name} | ${gameName} Wiki | Gachia`,
+      title: `${name} - ${gameName} Wiki`,
       description: getWuWaCharacterDescription(char, locale).slice(0, 160),
+      alternates: buildAlternates(id),
     };
   }
 

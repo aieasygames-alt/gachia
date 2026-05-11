@@ -52,8 +52,12 @@ export async function generateMetadata({
     if (!set) return {};
     const name = getArtifactSetName(set, locale);
     return {
-      title: `${name} | ${gameName} Wiki | Gachia`,
+      title: `${name} - ${gameName} Wiki`,
       description: getArtifactSetDesc2pc(set, locale).slice(0, 160),
+      alternates: {
+        canonical: `https://gachia.com/${locale}/${gameId}/artifacts/${id}`,
+        languages: { 'zh-Hans': `https://gachia.com/zh/${gameId}/artifacts/${id}`, en: `https://gachia.com/en/${gameId}/artifacts/${id}`, ja: `https://gachia.com/ja/${gameId}/artifacts/${id}`, 'x-default': `https://gachia.com/zh/${gameId}/artifacts/${id}` },
+      },
     };
   }
 
@@ -62,8 +66,12 @@ export async function generateMetadata({
     if (!set) return {};
     const name = getStarRailRelicSetName(set, locale);
     return {
-      title: `${name} | ${gameName} Wiki | Gachia`,
+      title: `${name} - ${gameName} Wiki`,
       description: getStarRailRelicSetDesc2pc(set, locale).slice(0, 160),
+      alternates: {
+        canonical: `https://gachia.com/${locale}/${gameId}/artifacts/${id}`,
+        languages: { 'zh-Hans': `https://gachia.com/zh/${gameId}/artifacts/${id}`, en: `https://gachia.com/en/${gameId}/artifacts/${id}`, ja: `https://gachia.com/ja/${gameId}/artifacts/${id}`, 'x-default': `https://gachia.com/zh/${gameId}/artifacts/${id}` },
+      },
     };
   }
 
