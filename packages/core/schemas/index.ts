@@ -10,7 +10,7 @@ export const SupportedLocaleSchema = z.enum(['zh', 'en', 'ja']);
 
 // --- Game ---
 
-export const GameIdSchema = z.enum(['genshin', 'starrail', 'wuwa', 'nte']);
+export const GameIdSchema = z.enum(['genshin', 'starrail', 'wuwa', 'nte', 'zzz']);
 
 export const GameThemeSchema = z.object({
   primary: z.string().regex(/^#[0-9a-fA-F]{6}$/, 'Must be a valid hex color'),
@@ -47,6 +47,7 @@ export const GameRouteConfigSchema = z.object({
   map: z.boolean(),
   guides: z.boolean(),
   'disk-sets': z.boolean().optional(),
+  'drive-discs': z.boolean().optional(),
   'redeem-codes': z.boolean().optional(),
   gacha: z.boolean().optional(),
   anomalies: z.boolean().optional(),

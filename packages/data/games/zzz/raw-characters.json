@@ -1,0 +1,807 @@
+[
+  {
+    "id": "anby",
+    "name": "安比",
+    "nameEn": "Anby Demara",
+    "nameJa": "アンビー",
+    "attribute": "electric",
+    "specialty": "击破",
+    "specialtyEn": "Stun",
+    "rank": "A",
+    "faction": "狡兔屋",
+    "factionEn": "Cunning Hares",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "狡兔屋的成员之一，沉默寡言但实力不凡的少女。使用电属性斩击武器进行战斗。",
+    "descriptionEn": "A member of the Cunning Hares. A quiet but skilled girl who fights with Electric Slash weapons.",
+    "faq": [
+      {
+        "question": "Is Anby good in Zenless Zone Zero?",
+        "questionZh": "安比值得培养吗？",
+        "answer": "Anby is a solid A-rank Stun character in ZZZ. She provides reliable Daze and is great for free-to-play teams.",
+        "answerZh": "安比是绝区零中优秀的A级击破角色。她提供稳定的眩晕积累，非常适合免费队伍。"
+      },
+      {
+        "question": "What is the best build for Anby?",
+        "questionZh": "安比最佳配装是什么？",
+        "answer": "Anby benefits from Impact and Energy Regen stats. Use Shockstar Disco drive disc set for maximum Daze output.",
+        "answerZh": "安比适合冲击力和能量回复属性。使用震撼巨星驱动盘套装最大化眩晕输出。"
+      }
+    ],
+    "relatedCharacters": ["nicole", "billy"],
+    "tierRank": "A",
+    "tierReason": "Solid free Stun unit, good Daze application",
+    "tierReasonZh": "优秀的免费击破角色，眩晕积累稳定",
+    "skills": {
+      "normalAttack": {
+        "name": "电光斩",
+        "nameEn": "Voltage Slash",
+        "description": "进行连续的电属性斩击。",
+        "descriptionEn": "Perform consecutive Electric slash attacks."
+      },
+      "dodge": {
+        "name": "闪避",
+        "nameEn": "Dodge",
+        "description": "快速闪避敌人的攻击。",
+        "descriptionEn": "Quickly dodge enemy attacks."
+      },
+      "assist": {
+        "name": "支援突击",
+        "nameEn": "Assault",
+        "description": "在适当时机切换入场，发动电属性斩击。",
+        "descriptionEn": "Switch in at the right timing to deliver an Electric slash."
+      },
+      "special": {
+        "name": "电磁脉冲",
+        "nameEn": "Flash Slash",
+        "description": "蓄力后释放强力的电属性斩击。",
+        "descriptionEn": "Charge up and release a powerful Electric slash."
+      },
+      "ultimate": {
+        "name": "雷光一闪",
+        "nameEn": "Lightning Flash",
+        "description": "释放全部能量，发动超强的电属性连续斩击。",
+        "descriptionEn": "Unleash full energy for a super powerful consecutive Electric slash combo."
+      },
+      "chain": {
+        "name": "连锁技",
+        "nameEn": "Chain Attack",
+        "description": "在连锁攻击中发动电属性范围斩击。",
+        "descriptionEn": "Execute an Electric AoE slash during a Chain Attack."
+      },
+      "corePassive": {
+        "name": "静电充能",
+        "nameEn": "Static Charge",
+        "description": "命中敌人时积累额外眩晕值。",
+        "descriptionEn": "Accumulate extra Daze when hitting enemies."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "星光引路",
+      "bestWeaponEn": "Starlight Engine",
+      "alternativeWeapons": ["和平捍卫者"],
+      "bestDriveDisc": "震撼巨星",
+      "bestDriveDiscEn": "Shockstar Disco",
+      "mainStats": { "4": "Impact", "5": "Electric DMG", "6": "Energy Regen" },
+      "mainStatsEn": { "4": "Impact", "5": "Electric DMG", "6": "Energy Regen" },
+      "subStatPriority": ["Impact", "Energy Regen", "ATK%", "Crit Rate"],
+      "subStatPriorityEn": ["Impact", "Energy Regen", "ATK%", "Crit Rate"]
+    },
+    "teamComps": [
+      {
+        "name": "狡兔屋标配",
+        "nameEn": "Cunning Hares Standard",
+        "members": ["anby", "nicole", "billy"],
+        "description": "狡兔屋三人组，免费且搭配良好。",
+        "descriptionEn": "The Cunning Hares trio, free and well-synergized."
+      }
+    ],
+    "image": "",
+    "availableAtLaunch": true,
+    "acquisitionMethod": "故事模式免费获得",
+    "status": "available",
+    "cvZh": "宴宁",
+    "cvJp": "高橋花林",
+    "cvEn": "Emi Lo"
+  },
+  {
+    "id": "nicole",
+    "name": "妮可",
+    "nameEn": "Nicole Demara",
+    "nameJa": "ニコ",
+    "attribute": "ether",
+    "specialty": "支援",
+    "specialtyEn": "Support",
+    "rank": "A",
+    "faction": "狡兔屋",
+    "factionEn": "Cunning Hares",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "狡兔屋的老板，精明能干的少女。使用以太属性武器进行战斗，擅长削弱敌人防御。",
+    "descriptionEn": "The boss of the Cunning Hares. A clever girl who fights with Ether weapons, excelling at reducing enemy DEF.",
+    "faq": [
+      {
+        "question": "Is Nicole good in Zenless Zone Zero?",
+        "questionZh": "妮可值得培养吗？",
+        "answer": "Nicole is one of the best Support characters in ZZZ. Her DEF shred makes her valuable in many teams.",
+        "answerZh": "妮可是绝区零中最好的支援角色之一。她的减防效果使她在许多队伍中都很有价值。"
+      }
+    ],
+    "relatedCharacters": ["anby", "billy"],
+    "tierRank": "S",
+    "tierReason": "Best free Support, universal DEF shred",
+    "tierReasonZh": "最佳免费支援，通用减防",
+    "skills": {
+      "normalAttack": {
+        "name": "以太弹",
+        "nameEn": "Ether Shot",
+        "description": "发射以太能量弹。",
+        "descriptionEn": "Fire Ether energy shots."
+      },
+      "dodge": {
+        "name": "闪避",
+        "nameEn": "Dodge",
+        "description": "快速闪避敌人的攻击。",
+        "descriptionEn": "Quickly dodge enemy attacks."
+      },
+      "assist": {
+        "name": "能量护盾",
+        "nameEn": "Energy Field",
+        "description": "切换入场时创造以太能量场，降低敌人防御。",
+        "descriptionEn": "Create an Ether energy field when switching in, reducing enemy DEF."
+      },
+      "special": {
+        "name": "引力黑洞",
+        "nameEn": "Gravity Well",
+        "description": "创造一个引力黑洞，吸引并伤害敌人。",
+        "descriptionEn": "Create a gravity well that pulls in and damages enemies."
+      },
+      "ultimate": {
+        "name": "以太爆破",
+        "nameEn": "Ether Burst",
+        "description": "释放强大的以太能量爆破。",
+        "descriptionEn": "Unleash a powerful Ether energy blast."
+      },
+      "chain": {
+        "name": "连锁技",
+        "nameEn": "Chain Attack",
+        "description": "在连锁攻击中发动以太范围攻击。",
+        "descriptionEn": "Execute an Ether AoE attack during a Chain Attack."
+      },
+      "corePassive": {
+        "name": "能量削弱",
+        "nameEn": "Energy Weaken",
+        "description": "技能命中敌人时降低其防御力。",
+        "descriptionEn": "Reduce enemy DEF when skills hit."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "虚数怪兽",
+      "bestWeaponEn": "Virtual Monster",
+      "alternativeWeapons": ["共鸣音箱"],
+      "bestDriveDisc": "自由布鲁斯",
+      "bestDriveDiscEn": "Freedom Blues",
+      "mainStats": { "4": "Anomaly Mastery", "5": "Ether DMG", "6": "Energy Regen" },
+      "mainStatsEn": { "4": "Anomaly Mastery", "5": "Ether DMG", "6": "Energy Regen" },
+      "subStatPriority": ["Anomaly Mastery", "Energy Regen", "ATK%", "PEN Ratio"],
+      "subStatPriorityEn": ["Anomaly Mastery", "Energy Regen", "ATK%", "PEN Ratio"]
+    },
+    "teamComps": [
+      {
+        "name": "狡兔屋标配",
+        "nameEn": "Cunning Hares Standard",
+        "members": ["nicole", "anby", "billy"],
+        "description": "狡兔屋三人组，免费且搭配良好。",
+        "descriptionEn": "The Cunning Hares trio, free and well-synergized."
+      },
+      {
+        "name": "以太强化队",
+        "nameEn": "Ether Amplify",
+        "members": ["nicole", "zhu-yuan", "anby"],
+        "description": "妮可减防配合朱鸢输出。",
+        "descriptionEn": "Nicole's DEF shred combined with Zhu Yuan's damage."
+      }
+    ],
+    "image": "",
+    "availableAtLaunch": true,
+    "acquisitionMethod": "故事模式免费获得",
+    "status": "available",
+    "cvZh": "陈婷婷",
+    "cvJp": "市ノ瀬加那",
+    "cvEn": "Megan Shipman"
+  },
+  {
+    "id": "billy",
+    "name": "比利",
+    "nameEn": "Billy Kid",
+    "nameJa": "ビリー",
+    "attribute": "physical",
+    "specialty": "强攻",
+    "specialtyEn": "Attack",
+    "rank": "A",
+    "faction": "狡兔屋",
+    "factionEn": "Cunning Hares",
+    "attackType": "穿刺",
+    "attackTypeEn": "Pierce",
+    "description": "狡兔屋的成员之一，自称「超级巨星」的机器人。使用双枪进行远程物理攻击。",
+    "descriptionEn": "A member of the Cunning Hares, a robot who calls himself a 'superstar'. Fights with dual pistols for ranged Physical attacks.",
+    "faq": [
+      {
+        "question": "Is Billy good in Zenless Zone Zero?",
+        "questionZh": "比利值得培养吗？",
+        "answer": "Billy is a decent free Physical Attack agent. Good for early game but gets outclassed later.",
+        "answerZh": "比利是不错的免费物理强攻角色。前期很好用但后期会被替代。"
+      }
+    ],
+    "relatedCharacters": ["nicole", "anby"],
+    "tierRank": "B",
+    "tierReason": "Decent free DPS, outclassed by limited units",
+    "tierReasonZh": "不错的免费主C，但不如限定角色",
+    "skills": {
+      "normalAttack": {
+        "name": "双枪连射",
+        "nameEn": "Double Shot",
+        "description": "使用双枪进行连续射击。",
+        "descriptionEn": "Fire consecutive shots with dual pistols."
+      },
+      "dodge": {
+        "name": "闪避",
+        "nameEn": "Dodge",
+        "description": "快速闪避敌人的攻击。",
+        "descriptionEn": "Quickly dodge enemy attacks."
+      },
+      "assist": {
+        "name": "支援射击",
+        "nameEn": "Assist Shot",
+        "description": "切换入场时发动双枪扫射。",
+        "descriptionEn": "Unleash dual pistol sweep when switching in."
+      },
+      "special": {
+        "name": "星光扫射",
+        "nameEn": "Starlight Sweep",
+        "description": "蓄力后释放全方位双枪扫射。",
+        "descriptionEn": "Charge up and release an omnidirectional dual pistol sweep."
+      },
+      "ultimate": {
+        "name": "超级巨星时间",
+        "nameEn": "Superstar Time",
+        "description": "进入超级巨星模式，释放全力射击。",
+        "descriptionEn": "Enter Superstar mode and unleash full-power shots."
+      },
+      "chain": {
+        "name": "连锁技",
+        "nameEn": "Chain Attack",
+        "description": "在连锁攻击中发动双枪乱射。",
+        "descriptionEn": "Execute dual pistol barrage during a Chain Attack."
+      },
+      "corePassive": {
+        "name": "能量弹",
+        "nameEn": "Power Shot",
+        "description": "命中弱点时造成额外物理伤害。",
+        "descriptionEn": "Deal extra Physical damage when hitting weak points."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "星光引路",
+      "bestWeaponEn": "Starlight Engine",
+      "alternativeWeapons": ["和平捍卫者"],
+      "bestDriveDisc": "木偶师电音",
+      "bestDriveDiscEn": "Woodpecker Electro",
+      "mainStats": { "4": "ATK%", "5": "Physical DMG", "6": "Crit Rate" },
+      "mainStatsEn": { "4": "ATK%", "5": "Physical DMG", "6": "Crit Rate" },
+      "subStatPriority": ["Crit Rate", "Crit DMG", "ATK%", "PEN"],
+      "subStatPriorityEn": ["Crit Rate", "Crit DMG", "ATK%", "PEN"]
+    },
+    "teamComps": [
+      {
+        "name": "狡兔屋标配",
+        "nameEn": "Cunning Hares Standard",
+        "members": ["billy", "nicole", "anby"],
+        "description": "狡兔屋三人组，免费且搭配良好。",
+        "descriptionEn": "The Cunning Hares trio, free and well-synergized."
+      }
+    ],
+    "image": "",
+    "availableAtLaunch": true,
+    "acquisitionMethod": "故事模式免费获得",
+    "status": "available",
+    "cvZh": "陈润秋",
+    "cvJp": "林勇",
+    "cvEn": "Kellen Goff"
+  },
+  {
+    "id": "ellen",
+    "name": "艾莲",
+    "nameEn": "Ellen Joe",
+    "nameJa": "エレン",
+    "attribute": "ice",
+    "specialty": "强攻",
+    "specialtyEn": "Attack",
+    "rank": "S",
+    "faction": "维多利亚家政",
+    "factionEn": "Victoria Housekeeping Co.",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "维多利亚家政的成员，外表冷淡内心温柔的少女。使用冰属性大剑进行高速斩击。",
+    "descriptionEn": "A member of Victoria Housekeeping Co. A seemingly cold but kind girl who wields an Ice greatsword for high-speed slashes.",
+    "faq": [
+      {
+        "question": "Is Ellen good in Zenless Zone Zero?",
+        "questionZh": "艾莲值得培养吗？",
+        "answer": "Ellen is one of the strongest DPS in ZZZ. Her Ice attacks deal massive damage with excellent burst windows.",
+        "answerZh": "艾莲是绝区零中最强的主C之一。她的冰属性攻击在爆发期间造成巨大伤害。"
+      }
+    ],
+    "relatedCharacters": ["lycaon", "soukaku"],
+    "tierRank": "SS",
+    "tierReason": "Top-tier Ice DPS, excellent burst damage",
+    "tierReasonZh": "顶级冰系主C，爆发伤害极高",
+    "skills": {
+      "normalAttack": {
+        "name": "寒冰斩",
+        "nameEn": "Frost Slash",
+        "description": "使用大剑进行冰属性连续斩击。",
+        "descriptionEn": "Perform consecutive Ice slashes with greatsword."
+      },
+      "dodge": {
+        "name": "冲刺闪避",
+        "nameEn": "Dash",
+        "description": "快速冲刺闪避，可以获得强化状态。",
+        "descriptionEn": "Quick dash dodge that grants a buff state."
+      },
+      "assist": {
+        "name": "冰牙突袭",
+        "nameEn": "Frost Bite",
+        "description": "切换入场时发动冰属性突进斩。",
+        "descriptionEn": "Execute an Ice rushing slash when switching in."
+      },
+      "special": {
+        "name": "极寒风暴",
+        "nameEn": "Blizzard",
+        "description": "蓄力后释放极寒斩击，造成大范围冰属性伤害。",
+        "descriptionEn": "Charge and release a freezing slash dealing wide Ice damage."
+      },
+      "ultimate": {
+        "name": "永恒冻土",
+        "nameEn": "Permafrost",
+        "description": "释放全部力量，发动超强的冰属性连续斩击。",
+        "descriptionEn": "Unleash full power for devastating consecutive Ice slashes."
+      },
+      "chain": {
+        "name": "连锁技",
+        "nameEn": "Chain Attack",
+        "description": "在连锁攻击中发动冰属性大范围斩击。",
+        "descriptionEn": "Execute a wide Ice slash during a Chain Attack."
+      },
+      "corePassive": {
+        "name": "冻结之心",
+        "nameEn": "Frozen Heart",
+        "description": "冲刺攻击后获得强化状态，提升下一次攻击伤害。",
+        "descriptionEn": "Gain buff state after dash attack, boosting next attack damage."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "深海访客",
+      "bestWeaponEn": "Deep Sea Visitor",
+      "alternativeWeapons": ["星光引路"],
+      "bestDriveDisc": "极地金属",
+      "bestDriveDiscEn": "Polar Metal",
+      "mainStats": { "4": "Crit Rate", "5": "Ice DMG", "6": "Crit DMG" },
+      "mainStatsEn": { "4": "Crit Rate", "5": "Ice DMG", "6": "Crit DMG" },
+      "subStatPriority": ["Crit Rate", "Crit DMG", "ATK%", "PEN"],
+      "subStatPriorityEn": ["Crit Rate", "Crit DMG", "ATK%", "PEN"]
+    },
+    "teamComps": [
+      {
+        "name": "维多利亚冰队",
+        "nameEn": "Victoria Ice Team",
+        "members": ["ellen", "lycaon", "soukaku"],
+        "description": "维多利亚家政冰属性队伍，输出与辅助完美配合。",
+        "descriptionEn": "Victoria Housekeeping Ice team with perfect DPS and support synergy."
+      }
+    ],
+    "image": "",
+    "availableAtLaunch": true,
+    "acquisitionMethod": "限定信号检索（卡池）",
+    "status": "available",
+    "cvZh": "鬼月",
+    "cvJp": "種﨑敦美",
+    "cvEn": "Crystina L. Frye"
+  },
+  {
+    "id": "zhu-yuan",
+    "name": "朱鸢",
+    "nameEn": "Zhu Yuan",
+    "nameJa": "朱鳶",
+    "attribute": "ether",
+    "specialty": "强攻",
+    "specialtyEn": "Attack",
+    "rank": "S",
+    "faction": "刑侦特勤组",
+    "factionEn": "Criminal Investigation Special Response Team",
+    "attackType": "穿刺",
+    "attackTypeEn": "Pierce",
+    "description": "新艾利都刑侦特勤组的精英成员，冷静沉稳的神枪手。使用以太属性枪械进行精准射击。",
+    "descriptionEn": "An elite member of the Criminal Investigation Special Response Team. A calm and precise sharpshooter who uses Ether firearms.",
+    "faq": [
+      {
+        "question": "Is Zhu Yuan good in Zenless Zone Zero?",
+        "questionZh": "朱鸢值得培养吗？",
+        "answer": "Zhu Yuan is one of the top DPS characters in ZZZ. Her Ether damage and precision shots are devastating.",
+        "answerZh": "朱鸢是绝区零中顶级主C之一。她的以太伤害和精准射击非常强力。"
+      }
+    ],
+    "relatedCharacters": ["nicole", "qingyi"],
+    "tierRank": "SS",
+    "tierReason": "Top-tier Ether DPS, massive single-target damage",
+    "tierReasonZh": "顶级以太主C，单体伤害极高",
+    "skills": {
+      "normalAttack": {
+        "name": "以太射击",
+        "nameEn": "Ether Shot",
+        "description": "使用以太弹药进行精准射击。",
+        "descriptionEn": "Fire precise shots with Ether ammunition."
+      },
+      "dodge": {
+        "name": "闪避",
+        "nameEn": "Dodge",
+        "description": "快速闪避敌人的攻击。",
+        "descriptionEn": "Quickly dodge enemy attacks."
+      },
+      "assist": {
+        "name": "支援射击",
+        "nameEn": "Assist Shot",
+        "description": "切换入场时发动以太爆破射击。",
+        "descriptionEn": "Execute an Ether blast shot when switching in."
+      },
+      "special": {
+        "name": "指令射击",
+        "nameEn": "Command Shot",
+        "description": "蓄力后释放强力以太贯通射击。",
+        "descriptionEn": "Charge and release a powerful Ether piercing shot."
+      },
+      "ultimate": {
+        "name": "全弹发射",
+        "nameEn": "Full Barrage",
+        "description": "释放全部以太弹药，发动毁灭性的连续射击。",
+        "descriptionEn": "Unleash all Ether ammo for a devastating barrage."
+      },
+      "chain": {
+        "name": "连锁技",
+        "nameEn": "Chain Attack",
+        "description": "在连锁攻击中发动以太范围射击。",
+        "descriptionEn": "Execute an Ether AoE shot during a Chain Attack."
+      },
+      "corePassive": {
+        "name": "精准打击",
+        "nameEn": "Precision Strike",
+        "description": "暴击时额外造成以太属性伤害。",
+        "descriptionEn": "Deal additional Ether damage on critical hits."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "暴烈油画",
+      "bestWeaponEn": "Burst油画",
+      "alternativeWeapons": ["星光引路"],
+      "bestDriveDisc": "混沌爵士",
+      "bestDriveDiscEn": "Chaos Jazz",
+      "mainStats": { "4": "Crit Rate", "5": "Ether DMG", "6": "Crit DMG" },
+      "mainStatsEn": { "4": "Crit Rate", "5": "Ether DMG", "6": "Crit DMG" },
+      "subStatPriority": ["Crit Rate", "Crit DMG", "ATK%", "PEN"],
+      "subStatPriorityEn": ["Crit Rate", "Crit DMG", "ATK%", "PEN"]
+    },
+    "teamComps": [
+      {
+        "name": "刑侦特勤组",
+        "nameEn": "CIST Standard",
+        "members": ["zhu-yuan", "nicole", "qingyi"],
+        "description": "刑侦特勤组三人，妮可减防配合朱鸢输出。",
+        "descriptionEn": "CIST trio, Nicole's DEF shred boosts Zhu Yuan's damage."
+      }
+    ],
+    "image": "",
+    "availableAtLaunch": true,
+    "acquisitionMethod": "限定信号检索（卡池）",
+    "status": "available",
+    "cvZh": "Mace",
+    "cvJp": "鬼頭明里",
+    "cvEn": "Samantha Cooper"
+  },
+  {
+    "id": "nekomata",
+    "name": "猫又",
+    "nameEn": "Nekomata",
+    "nameJa": "ネコマタ",
+    "attribute": "physical",
+    "specialty": "强攻",
+    "specialtyEn": "Attack",
+    "rank": "S",
+    "faction": "狡兔屋",
+    "factionEn": "Cunning Hares",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "拥有猫耳的敏捷少女，使用双刀进行高速物理斩击。",
+    "descriptionEn": "An agile cat-eared girl who uses dual blades for high-speed Physical slashes.",
+    "faq": [
+      {
+        "question": "Is Nekomata good in Zenless Zone Zero?",
+        "questionZh": "猫又值得培养吗？",
+        "answer": "Nekomata is a strong Physical DPS with fast attack speed and good mobility.",
+        "answerZh": "猫又是强力的物理主C，攻速快，机动性好。"
+      }
+    ],
+    "relatedCharacters": ["anby", "nicole"],
+    "tierRank": "S",
+    "tierReason": "Strong Physical DPS, fast and mobile",
+    "tierReasonZh": "强力物理主C，速度快机动性好",
+    "skills": {
+      "normalAttack": {
+        "name": "猫爪斩",
+        "nameEn": "Cat Claw Slash",
+        "description": "使用双刀进行高速连续斩击。",
+        "descriptionEn": "Perform high-speed consecutive slashes with dual blades."
+      },
+      "dodge": {
+        "name": "猫步闪避",
+        "nameEn": "Cat Step",
+        "description": "灵活闪避，闪避后可获得强化。",
+        "descriptionEn": "Agile dodge that grants a buff."
+      },
+      "assist": {
+        "name": "突袭斩",
+        "nameEn": "Ambush Slash",
+        "description": "切换入场时发动快速双刀突袭。",
+        "descriptionEn": "Execute a quick dual blade ambush when switching in."
+      },
+      "special": {
+        "name": "暗影乱舞",
+        "nameEn": "Shadow Dance",
+        "description": "蓄力后释放连续高速斩击。",
+        "descriptionEn": "Charge and release consecutive high-speed slashes."
+      },
+      "ultimate": {
+        "name": "猫爪乱舞",
+        "nameEn": "Claw Frenzy",
+        "description": "释放全力，发动超高速的连续斩击。",
+        "descriptionEn": "Unleash full power for ultra-fast consecutive slashes."
+      },
+      "chain": {
+        "name": "连锁技",
+        "nameEn": "Chain Attack",
+        "description": "在连锁攻击中发动物理范围斩击。",
+        "descriptionEn": "Execute Physical AoE slashes during a Chain Attack."
+      },
+      "corePassive": {
+        "name": "猫之敏捷",
+        "nameEn": "Feline Agility",
+        "description": "闪避攻击后提升下一次攻击伤害。",
+        "descriptionEn": "Boost next attack damage after dodge attack."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "钢铁肉垫",
+      "bestWeaponEn": "Steel Cushion",
+      "alternativeWeapons": ["星光引路"],
+      "bestDriveDisc": "物理金属",
+      "bestDriveDiscEn": "Physical Metal",
+      "mainStats": { "4": "Crit Rate", "5": "Physical DMG", "6": "Crit DMG" },
+      "mainStatsEn": { "4": "Crit Rate", "5": "Physical DMG", "6": "Crit DMG" },
+      "subStatPriority": ["Crit Rate", "Crit DMG", "ATK%", "PEN"],
+      "subStatPriorityEn": ["Crit Rate", "Crit DMG", "ATK%", "PEN"]
+    },
+    "teamComps": [
+      {
+        "name": "物理输出队",
+        "nameEn": "Physical DPS Team",
+        "members": ["nekomata", "anby", "nicole"],
+        "description": "猫又作为主C，搭配狡兔屋成员。",
+        "descriptionEn": "Nekomata as main DPS with Cunning Hares members."
+      }
+    ],
+    "image": "",
+    "availableAtLaunch": true,
+    "acquisitionMethod": "限定信号检索（卡池）",
+    "status": "available",
+    "cvZh": "花玲",
+    "cvJp": "佐藤美由希",
+    "cvEn": "Alice Himora"
+  },
+  {
+    "id": "lycaon",
+    "name": "莱卡恩",
+    "nameEn": "Lycaon",
+    "nameJa": "ライカオン",
+    "attribute": "ice",
+    "specialty": "击破",
+    "specialtyEn": "Stun",
+    "rank": "S",
+    "faction": "维多利亚家政",
+    "factionEn": "Victoria Housekeeping Co.",
+    "attackType": "打击",
+    "attackTypeEn": "Strike",
+    "description": "维多利亚家政的绅士狼人管家。使用冰属性格斗进行战斗，擅长眩晕敌人。",
+    "descriptionEn": "A gentleman wolfman butler of Victoria Housekeeping Co. Fights with Ice strikes, excelling at Dazing enemies.",
+    "faq": [
+      {
+        "question": "Is Lycaon good in Zenless Zone Zero?",
+        "questionZh": "莱卡恩值得培养吗？",
+        "answer": "Lycaon is one of the best Stun characters. His Ice Daze is essential for Ice teams.",
+        "answerZh": "莱卡恩是最强的击破角色之一。他的冰属性眩晕对冰队至关重要。"
+      }
+    ],
+    "relatedCharacters": ["ellen", "soukaku"],
+    "tierRank": "S",
+    "tierReason": "Top-tier Ice Stun, essential for Ice teams",
+    "tierReasonZh": "顶级冰系击破，冰队核心",
+    "skills": {
+      "normalAttack": {
+        "name": "绅士拳",
+        "nameEn": "Gentleman's Fist",
+        "description": "使用冰属性格斗术进行连续打击。",
+        "descriptionEn": "Perform consecutive Ice strikes."
+      },
+      "dodge": {
+        "name": "闪避",
+        "nameEn": "Dodge",
+        "description": "优雅地闪避敌人的攻击。",
+        "descriptionEn": "Gracefully dodge enemy attacks."
+      },
+      "assist": {
+        "name": "冰牙打击",
+        "nameEn": "Fang Strike",
+        "description": "切换入场时发动冰属性重击。",
+        "descriptionEn": "Execute an Ice heavy strike when switching in."
+      },
+      "special": {
+        "name": "冰霜裂爪",
+        "nameEn": "Frost Claw",
+        "description": "蓄力后释放冰属性连击。",
+        "descriptionEn": "Charge and release Ice combo strikes."
+      },
+      "ultimate": {
+        "name": "绅士之怒",
+        "nameEn": "Gentleman's Wrath",
+        "description": "释放全力，发动超强冰属性连续打击。",
+        "descriptionEn": "Unleash full power for devastating Ice strikes."
+      },
+      "chain": {
+        "name": "连锁技",
+        "nameEn": "Chain Attack",
+        "description": "在连锁攻击中发动冰属性范围打击。",
+        "descriptionEn": "Execute Ice AoE strikes during a Chain Attack."
+      },
+      "corePassive": {
+        "name": "绅士之道",
+        "nameEn": "Gentleman's Way",
+        "description": "攻击眩晕状态的敌人时造成额外伤害。",
+        "descriptionEn": "Deal extra damage to Dazed enemies."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "拘缚者的原罪",
+      "bestWeaponEn": "The Restrained",
+      "alternativeWeapons": ["和平捍卫者"],
+      "bestDriveDisc": "极地金属",
+      "bestDriveDiscEn": "Polar Metal",
+      "mainStats": { "4": "Impact", "5": "Ice DMG", "6": "Energy Regen" },
+      "mainStatsEn": { "4": "Impact", "5": "Ice DMG", "6": "Energy Regen" },
+      "subStatPriority": ["Impact", "Energy Regen", "ATK%", "Crit Rate"],
+      "subStatPriorityEn": ["Impact", "Energy Regen", "ATK%", "Crit Rate"]
+    },
+    "teamComps": [
+      {
+        "name": "维多利亚冰队",
+        "nameEn": "Victoria Ice Team",
+        "members": ["ellen", "lycaon", "soukaku"],
+        "description": "艾莲的最佳队友，提供冰属性眩晕和增益。",
+        "descriptionEn": "Ellen's best teammates, providing Ice Daze and buffs."
+      }
+    ],
+    "image": "",
+    "availableAtLaunch": true,
+    "acquisitionMethod": "限定信号检索（卡池）",
+    "status": "available",
+    "cvZh": "夏目響平",
+    "cvJp": "小西克幸",
+    "cvEn": "Stephen Fu"
+  },
+  {
+    "id": "grace",
+    "name": "格莉丝",
+    "nameEn": "Grace Howard",
+    "nameJa": "グレース",
+    "attribute": "electric",
+    "specialty": "异常",
+    "specialtyEn": "Anomaly",
+    "rank": "S",
+    "faction": "白铃重工",
+    "factionEn": "Belobog Heavy Industries",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "白铃重工的天才工程师少女。使用电属性武器进行战斗，擅长施加电属性异常状态。",
+    "descriptionEn": "A genius engineer girl from Belobog Heavy Industries. Fights with Electric weapons, excelling at inflicting Electric Anomaly.",
+    "faq": [
+      {
+        "question": "Is Grace good in Zenless Zone Zero?",
+        "questionZh": "格莉丝值得培养吗？",
+        "answer": "Grace is the best Electric Anomaly character. Her Disorder triggers are essential for Electric teams.",
+        "answerZh": "格莉丝是最强的电属性异常角色。她的属性紊乱触发对电队至关重要。"
+      }
+    ],
+    "relatedCharacters": ["koleda", "ben"],
+    "tierRank": "S",
+    "tierReason": "Best Electric Anomaly, great Disorder triggers",
+    "tierReasonZh": "最强电属性异常，属性紊乱触发优秀",
+    "skills": {
+      "normalAttack": {
+        "name": "电弧斩",
+        "nameEn": "Arc Slash",
+        "description": "使用带电武器进行连续斩击。",
+        "descriptionEn": "Perform consecutive Electric slashes."
+      },
+      "dodge": {
+        "name": "闪避",
+        "nameEn": "Dodge",
+        "description": "快速闪避敌人的攻击。",
+        "descriptionEn": "Quickly dodge enemy attacks."
+      },
+      "assist": {
+        "name": "电弧放电",
+        "nameEn": "Arc Discharge",
+        "description": "切换入场时释放电弧。",
+        "descriptionEn": "Release electric arc when switching in."
+      },
+      "special": {
+        "name": "电磁风暴",
+        "nameEn": "EM Storm",
+        "description": "蓄力后释放大范围电磁风暴。",
+        "descriptionEn": "Charge and release a wide electromagnetic storm."
+      },
+      "ultimate": {
+        "name": "超载放电",
+        "nameEn": "Overload Discharge",
+        "description": "释放全部电力，发动超强的电属性攻击。",
+        "descriptionEn": "Unleash full electrical power for devastating Electric attacks."
+      },
+      "chain": {
+        "name": "连锁技",
+        "nameEn": "Chain Attack",
+        "description": "在连锁攻击中发动电属性范围攻击。",
+        "descriptionEn": "Execute Electric AoE attack during a Chain Attack."
+      },
+      "corePassive": {
+        "name": "高压电流",
+        "nameEn": "High Voltage",
+        "description": "攻击时积累电属性异常值。",
+        "descriptionEn": "Accumulate Electric Anomaly on attacks."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "融合编译器",
+      "bestWeaponEn": "Fusion Compiler",
+      "alternativeWeapons": ["雨中旋律"],
+      "bestDriveDisc": "自由布鲁斯",
+      "bestDriveDiscEn": "Freedom Blues",
+      "mainStats": { "4": "Anomaly Mastery", "5": "Electric DMG", "6": "Anomaly Mastery" },
+      "mainStatsEn": { "4": "Anomaly Mastery", "5": "Electric DMG", "6": "Anomaly Mastery" },
+      "subStatPriority": ["Anomaly Mastery", "ATK%", "PEN Ratio", "Energy Regen"],
+      "subStatPriorityEn": ["Anomaly Mastery", "ATK%", "PEN Ratio", "Energy Regen"]
+    },
+    "teamComps": [
+      {
+        "name": "白铃重工队",
+        "nameEn": "Belobog Team",
+        "members": ["grace", "koleda", "ben"],
+        "description": "白铃重工三人组，攻守兼备。",
+        "descriptionEn": "Belobog trio with balanced offense and defense."
+      }
+    ],
+    "image": "",
+    "availableAtLaunch": true,
+    "acquisitionMethod": "限定信号检索（卡池）",
+    "status": "available",
+    "cvZh": "小敢",
+    "cvJp": "福圓美里",
+    "cvEn": "Brenna Larsen"
+  }
+]

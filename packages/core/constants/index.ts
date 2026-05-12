@@ -18,7 +18,7 @@ export const LOCALE_NAMES: Record<SupportedLocale, string> = {
 // Games Registry
 // ============================================================
 
-export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte'];
+export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz'];
 
 export const GAMES: Record<GameId, GameModule> = {
   genshin: {
@@ -183,6 +183,46 @@ export const GAMES: Record<GameId, GameModule> = {
       anomalies: true,
     },
   },
+  zzz: {
+    id: 'zzz',
+    name: { zh: '绝区零', en: 'Zenless Zone Zero', ja: 'ゼンレスゾーンゼロ' },
+    theme: {
+      primary: '#f5c518',
+      accent: '#00d4aa',
+      background: '#0f0f1a',
+      surface: '#1a1a2e',
+    },
+    elements: [
+      { id: 'physical', name: { zh: '物理', en: 'Physical', ja: '物理' }, color: '#9ca3af' },
+      { id: 'fire', name: { zh: '火', en: 'Fire', ja: '炎' }, color: '#ef4444' },
+      { id: 'ice', name: { zh: '冰', en: 'Ice', ja: '氷' }, color: '#67e8f9' },
+      { id: 'electric', name: { zh: '电', en: 'Electric', ja: '電' }, color: '#8b5cf6' },
+      { id: 'ether', name: { zh: '以太', en: 'Ether', ja: 'エーテル' }, color: '#ec4899' },
+    ],
+    rarities: [
+      { stars: 5, color: '#f5c518', label: { zh: 'S级', en: 'S-Rank', ja: 'S級' } },
+      { stars: 4, color: '#a855f7', label: { zh: 'A级', en: 'A-Rank', ja: 'A級' } },
+      { stars: 3, color: '#60a5fa', label: { zh: 'B级', en: 'B-Rank', ja: 'B級' } },
+    ],
+    stats: {
+      baseStats: ['hp', 'atk', 'def', 'impact', 'anomalyMastery'],
+      subStats: ['hpPercent', 'atkPercent', 'defPercent', 'critRate', 'critDmg', 'impact', 'anomalyMastery', 'penRatio', 'energyRegen'],
+      specialStats: ['impact', 'anomalyMastery', 'penRatio', 'energyRegen'],
+    },
+    routes: {
+      characters: true,
+      weapons: true,
+      items: true,
+      'tier-list': true,
+      calculator: false,
+      map: false,
+      guides: true,
+      'drive-discs': true,
+      build: true,
+      compare: true,
+      teams: true,
+    },
+  },
 } as const;
 
 // ============================================================
@@ -210,6 +250,7 @@ export const CATEGORY_LABELS: Record<string, Record<SupportedLocale, string>> = 
   map: { zh: '地图', en: 'Map', ja: 'マップ' },
   guides: { zh: '攻略百科', en: 'Guides', ja: 'ガイド' },
   'disk-sets': { zh: '光盘套装', en: 'Disk Sets', ja: 'ディスクセット' },
+  'drive-discs': { zh: '驱动盘', en: 'Drive Discs', ja: 'ドライブディスク' },
   'redeem-codes': { zh: '兑换码', en: 'Redeem Codes', ja: '交換コード' },
   gacha: { zh: '祈愿', en: 'Gacha', ja: 'ガチャ' },
   anomalies: { zh: '异象', en: 'Anomalies', ja: 'アノマリー' },

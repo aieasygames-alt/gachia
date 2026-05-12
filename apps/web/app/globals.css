@@ -51,6 +51,17 @@
   --color-text-muted: #94a3b8;
 }
 
+:root[data-game="zzz"] {
+  --color-primary: #f5c518;
+  --color-accent: #00d4aa;
+  --color-bg: #0f0f1a;
+  --color-surface: #1a1a2e;
+  --color-surface-alt: #252540;
+  --color-border: #3a3a5c;
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+}
+
 /* ============================================================
    Rarity Border Colors
    ============================================================ */

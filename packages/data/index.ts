@@ -357,6 +357,59 @@ export {
   getEchoSetById as getWuWaEchoSetById,
 } from './games/wuwa/echoes';
 
+// ============================================================
+// Zenless Zone Zero (ZZZ) exports
+// ============================================================
+
+// ZZZ character exports
+export {
+  zzzCharacters,
+  getZzzCharacterById,
+  getZzzCharacterName,
+  getZzzCharacterDescription,
+  getZzzCharacterImage,
+  getZzzCharacterTierReason,
+} from './games/zzz/characters';
+
+// ZZZ weapon exports (W-Engines)
+export {
+  zzzWeapons,
+  getZzzWeaponById,
+  getZzzWeaponName,
+  getZzzWeaponEffect,
+  getZzzWeaponSource,
+} from './games/zzz/weapons';
+
+// ZZZ material exports
+export {
+  zzzMaterials,
+  getZzzMaterialName,
+  getZzzMaterialById,
+} from './games/zzz/items';
+
+// ZZZ drive disc exports
+export {
+  zzzDriveDiscs,
+  getZzzDriveDiscName,
+  getZzzDriveDiscDesc2pc,
+  getZzzDriveDiscDesc4pc,
+  getZzzDriveDiscById,
+} from './games/zzz/drive-discs';
+
+export type {
+  ZzzCharacter,
+  ZzzWeapon,
+  ZzzMaterial,
+  ZzzDriveDisc,
+  ZzzSkillSet,
+  ZzzSkillBase,
+  ZzzActiveSkill,
+  ZzzTeamComp,
+  ZzzFaq,
+  ZzzRecommendedBuild,
+  ZzzMindscapeCinema,
+} from './games/zzz/types';
+
 // --- Data Access Helpers ---
 
 export interface GameData {
@@ -396,6 +449,13 @@ export function getGameData(gameId: GameId): GameData {
         items: nteItems,
         tierLists: nteTierLists,
       };
+    case 'zzz':
+      return {
+        characters: zzzCharacters,
+        weapons: zzzWeapons,
+        items: zzzItems,
+        tierLists: zzzTierLists,
+      };
   }
 }
 
@@ -403,3 +463,4 @@ import { characters as genshinCharacters, weapons as genshinWeapons, items as ge
 import { characters as starrailCharacters, weapons as starrailWeapons, items as starrailItems, tierLists as starrailTierLists } from './games/starrail/index';
 import { characters as wuwaCharacters, weapons as wuwaWeapons, items as wuwaItems, tierLists as wuwaTierLists } from './games/wuwa';
 import { characters as nteCharacters, weapons as nteWeapons, items as nteItems, tierLists as nteTierLists } from './games/nte';
+import { characters as zzzCharacters, weapons as zzzWeapons, items as zzzItems, tierLists as zzzTierLists } from './games/zzz';

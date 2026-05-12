@@ -1,0 +1,20 @@
+[
+  { "id": "zzz-basic-physical-chip", "name": "基础物理芯片", "nameEn": "Basic Physical Chip", "type": "突破材料", "rarity": 2, "source": "战斗模拟" },
+  { "id": "zzz-advanced-physical-chip", "name": "高级物理芯片", "nameEn": "Advanced Physical Chip", "type": "突破材料", "rarity": 3, "source": "战斗模拟" },
+  { "id": "zzz-basic-fire-chip", "name": "基础火属性芯片", "nameEn": "Basic Fire Chip", "type": "突破材料", "rarity": 2, "source": "战斗模拟" },
+  { "id": "zzz-advanced-fire-chip", "name": "高级火属性芯片", "nameEn": "Advanced Fire Chip", "type": "突破材料", "rarity": 3, "source": "战斗模拟" },
+  { "id": "zzz-basic-ice-chip", "name": "基础冰属性芯片", "nameEn": "Basic Ice Chip", "type": "突破材料", "rarity": 2, "source": "战斗模拟" },
+  { "id": "zzz-advanced-ice-chip", "name": "高级冰属性芯片", "nameEn": "Advanced Ice Chip", "type": "突破材料", "rarity": 3, "source": "战斗模拟" },
+  { "id": "zzz-basic-electric-chip", "name": "基础电属性芯片", "nameEn": "Basic Electric Chip", "type": "突破材料", "rarity": 2, "source": "战斗模拟" },
+  { "id": "zzz-advanced-electric-chip", "name": "高级电属性芯片", "nameEn": "Advanced Electric Chip", "type": "突破材料", "rarity": 3, "source": "战斗模拟" },
+  { "id": "zzz-basic-ether-chip", "name": "基础以太芯片", "nameEn": "Basic Ether Chip", "type": "突破材料", "rarity": 2, "source": "战斗模拟" },
+  { "id": "zzz-advanced-ether-chip", "name": "高级以太芯片", "nameEn": "Advanced Ether Chip", "type": "突破材料", "rarity": 3, "source": "战斗模拟" },
+  { "id": "zzz-denny", "name": "丁尼", "nameEn": "Denny", "type": "通用货币", "rarity": 1, "source": "各种活动" },
+  { "id": "zzz-master-tape", "name": "大师录音带", "nameEn": "Master Tape", "type": "抽卡道具", "rarity": 4, "source": "商店、活动" },
+  { "id": "zzz-encrypted-master-tape", "name": "加密大师录音带", "nameEn": "Encrypted Master Tape", "type": "抽卡道具", "rarity": 5, "source": "商店、活动" },
+  { "id": "zzz-plating-agent", "name": "镀剂", "nameEn": "Plating Agent", "type": "技能材料", "rarity": 2, "source": "战斗模拟" },
+  { "id": "zzz-polarizing-agent", "name": "偏极剂", "nameEn": "Polarizing Agent", "type": "技能材料", "rarity": 3, "source": "战斗模拟" },
+  { "id": "zzz-charge-drive", "name": "充能驱动", "nameEn": "Charge Drive", "type": "技能材料", "rarity": 3, "source": "战斗模拟" },
+  { "id": "zzz-high-dimensional-data", "name": "高维数据", "nameEn": "High-Dimensional Data", "type": "突破材料", "rarity": 4, "source": "专家挑战" },
+  { "id": "zzz-hamster-cage-pass", "name": "仓鼠笼通行证", "nameEn": "Hamster Cage Pass", "type": "特殊材料", "rarity": 5, "source": "城市基金、活动" }
+]

@@ -28,6 +28,11 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     en: 'Infinity Nikki character guide, arc database, disk set builds, wiki — Gachia',
     ja: '無限ニキキャラ図鑑、アルクデータ、ディスクおすすめ、攻略百科 — Gachia',
   },
+  zzz: {
+    zh: '绝区零代理人图鉴、音擎数据、驱动盘推荐、攻略百科 — Gachia',
+    en: 'Zenless Zone Zero agent guide, W-Engine database, drive disc builds, wiki — Gachia',
+    ja: 'ゼンレスゾーンゼロエージェント図鑑、Wエンジンデータ、ドライブディスクおすすめ、攻略百科 — Gachia',
+  },
 };
 
 export function generateStaticParams() {

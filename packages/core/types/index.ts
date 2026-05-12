@@ -4,7 +4,7 @@
 
 // --- Game ---
 
-export type GameId = 'genshin' | 'starrail' | 'wuwa' | 'nte';
+export type GameId = 'genshin' | 'starrail' | 'wuwa' | 'nte' | 'zzz';
 
 export type SupportedLocale = 'zh' | 'en' | 'ja';
 
@@ -43,6 +43,7 @@ export interface GameRouteConfig {
   map: boolean;
   guides: boolean;
   'disk-sets'?: boolean;
+  'drive-discs'?: boolean;
   'redeem-codes'?: boolean;
   gacha?: boolean;
   anomalies?: boolean;

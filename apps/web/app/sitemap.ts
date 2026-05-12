@@ -1,9 +1,10 @@
 import { GAMES, LOCALES } from '@gachia/core';
 import {
-  nteGuides, nteCharacters,
-  genshinCharacters, genshinGuides, genshinArtifactSets,
-  wuwaCharacters, wuwaGuides,
-  starrailCharacters, starrailGuides, starrailRelicSets,
+  nteGuides, nteCharacters, nteWeapons, nteMaterials, nteDiskSets,
+  genshinCharacters, genshinGuides, genshinArtifactSets, genshinWeapons, genshinMaterials,
+  wuwaCharacters, wuwaGuides, wuwaWeapons, wuwaMaterials, wuwaEchoSets,
+  starrailCharacters, starrailGuides, starrailRelicSets, starrailLightCones, starrailMaterials,
+  zzzCharacters, zzzWeapons, zzzMaterials, zzzDriveDiscs,
 } from '@gachia/data';
 import type { MetadataRoute } from 'next';
 
@@ -73,6 +74,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
 
+    for (const weapon of genshinWeapons) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/genshin/weapons/${weapon.id}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.6,
+      });
+    }
+
+    for (const mat of genshinMaterials) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/genshin/items/${mat.id}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.5,
+      });
+    }
+
     // --- Star Rail detail pages ---
     for (const char of starrailCharacters) {
       entries.push({
@@ -101,6 +120,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
 
+    for (const lc of starrailLightCones) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/starrail/weapons/${lc.id}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.6,
+      });
+    }
+
+    for (const mat of starrailMaterials) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/starrail/items/${mat.id}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.5,
+      });
+    }
+
     // --- WuWa detail pages ---
     for (const char of wuwaCharacters) {
       entries.push({
@@ -120,6 +157,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
 
+    for (const weapon of wuwaWeapons) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/wuwa/weapons/${weapon.id}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.6,
+      });
+    }
+
+    for (const mat of wuwaMaterials) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/wuwa/items/${mat.id}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.5,
+      });
+    }
+
+    for (const echo of wuwaEchoSets) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/wuwa/echoes/${echo.id}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.6,
+      });
+    }
+
     // --- NTE detail pages ---
     for (const char of nteCharacters) {
       entries.push({
@@ -136,6 +200,70 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: guide.date ? new Date(guide.date) : new Date(),
         changeFrequency: 'weekly',
         priority: 0.7,
+      });
+    }
+
+    for (const weapon of nteWeapons) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/nte/weapons/${weapon.id}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.6,
+      });
+    }
+
+    for (const mat of nteMaterials) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/nte/items/${mat.id}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.5,
+      });
+    }
+
+    for (const ds of nteDiskSets) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/nte/disk-sets/${ds.id}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.6,
+      });
+    }
+
+    // --- ZZZ detail pages ---
+    for (const char of zzzCharacters) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/zzz/characters/${char.id}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.7,
+      });
+    }
+
+    for (const weapon of zzzWeapons) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/zzz/weapons/${weapon.id}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.6,
+      });
+    }
+
+    for (const mat of zzzMaterials) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/zzz/items/${mat.id}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.5,
+      });
+    }
+
+    for (const dd of zzzDriveDiscs) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/zzz/drive-discs/${dd.id}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.6,
       });
     }
   }

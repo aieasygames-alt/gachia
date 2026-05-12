@@ -1,6 +1,36 @@
+import type { Metadata } from 'next';
 import type { SupportedLocale } from '@gachia/core';
 import { GAMES, GAME_IDS, CATEGORY_LABELS } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
+
+const DESCRIPTIONS: Record<string, string> = {
+  zh: '一站式二次元开放世界游戏数据库，覆盖原神、崩铁、鸣潮、异环、绝区零等游戏的角色图鉴、武器数据、攻略百科。',
+  en: 'Multi-game open world wiki covering Genshin Impact, Honkai: Star Rail, Wuthering Waves, Infinity Nikki, and Zenless Zone Zero.',
+  ja: '原神・スターレイル・鳴潮・NTE・ゼンレスゾーンゼロなど、マルチゲームのオープンワールドWikiデータベース。',
+};
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const locale = lang as SupportedLocale;
+  const description = DESCRIPTIONS[locale] ?? DESCRIPTIONS.zh;
+
+  return {
+    description,
+    alternates: {
+      canonical: `https://gachia.com/${locale}`,
+      languages: {
+        'zh-Hans': 'https://gachia.com/zh',
+        en: 'https://gachia.com/en',
+        ja: 'https://gachia.com/ja',
+        'x-default': 'https://gachia.com/zh',
+      },
+    },
+  };
+}
 
 export default async function LocaleHome({
   params,
