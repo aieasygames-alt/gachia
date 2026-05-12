@@ -1,20 +1,44 @@
 [
   { "id": "zzz-basic-physical-chip", "name": "基础物理芯片", "nameEn": "Basic Physical Chip", "type": "突破材料", "rarity": 2, "source": "战斗模拟" },
-  { "id": "zzz-advanced-physical-chip", "name": "高级物理芯片", "nameEn": "Advanced Physical Chip", "type": "突破材料", "rarity": 3, "source": "战斗模拟" },
+  { "id": "zzz-advanced-physical-chip", "name": "进阶物理芯片", "nameEn": "Advanced Physical Chip", "type": "突破材料", "rarity": 3, "source": "战斗模拟" },
+  { "id": "zzz-specializer-physical-chip", "name": "特化物理芯片", "nameEn": "Specializer Physical Chip", "type": "突破材料", "rarity": 4, "source": "战斗模拟" },
+
   { "id": "zzz-basic-fire-chip", "name": "基础火属性芯片", "nameEn": "Basic Fire Chip", "type": "突破材料", "rarity": 2, "source": "战斗模拟" },
-  { "id": "zzz-advanced-fire-chip", "name": "高级火属性芯片", "nameEn": "Advanced Fire Chip", "type": "突破材料", "rarity": 3, "source": "战斗模拟" },
+  { "id": "zzz-advanced-fire-chip", "name": "进阶火属性芯片", "nameEn": "Advanced Fire Chip", "type": "突破材料", "rarity": 3, "source": "战斗模拟" },
+  { "id": "zzz-specializer-fire-chip", "name": "特化火属性芯片", "nameEn": "Specializer Fire Chip", "type": "突破材料", "rarity": 4, "source": "战斗模拟" },
+
   { "id": "zzz-basic-ice-chip", "name": "基础冰属性芯片", "nameEn": "Basic Ice Chip", "type": "突破材料", "rarity": 2, "source": "战斗模拟" },
-  { "id": "zzz-advanced-ice-chip", "name": "高级冰属性芯片", "nameEn": "Advanced Ice Chip", "type": "突破材料", "rarity": 3, "source": "战斗模拟" },
+  { "id": "zzz-advanced-ice-chip", "name": "进阶冰属性芯片", "nameEn": "Advanced Ice Chip", "type": "突破材料", "rarity": 3, "source": "战斗模拟" },
+  { "id": "zzz-specializer-ice-chip", "name": "特化冰属性芯片", "nameEn": "Specializer Ice Chip", "type": "突破材料", "rarity": 4, "source": "战斗模拟" },
+
   { "id": "zzz-basic-electric-chip", "name": "基础电属性芯片", "nameEn": "Basic Electric Chip", "type": "突破材料", "rarity": 2, "source": "战斗模拟" },
-  { "id": "zzz-advanced-electric-chip", "name": "高级电属性芯片", "nameEn": "Advanced Electric Chip", "type": "突破材料", "rarity": 3, "source": "战斗模拟" },
+  { "id": "zzz-advanced-electric-chip", "name": "进阶电属性芯片", "nameEn": "Advanced Electric Chip", "type": "突破材料", "rarity": 3, "source": "战斗模拟" },
+  { "id": "zzz-specializer-electric-chip", "name": "特化电属性芯片", "nameEn": "Specializer Electric Chip", "type": "突破材料", "rarity": 4, "source": "战斗模拟" },
+
   { "id": "zzz-basic-ether-chip", "name": "基础以太芯片", "nameEn": "Basic Ether Chip", "type": "突破材料", "rarity": 2, "source": "战斗模拟" },
-  { "id": "zzz-advanced-ether-chip", "name": "高级以太芯片", "nameEn": "Advanced Ether Chip", "type": "突破材料", "rarity": 3, "source": "战斗模拟" },
-  { "id": "zzz-denny", "name": "丁尼", "nameEn": "Denny", "type": "通用货币", "rarity": 1, "source": "各种活动" },
-  { "id": "zzz-master-tape", "name": "大师录音带", "nameEn": "Master Tape", "type": "抽卡道具", "rarity": 4, "source": "商店、活动" },
-  { "id": "zzz-encrypted-master-tape", "name": "加密大师录音带", "nameEn": "Encrypted Master Tape", "type": "抽卡道具", "rarity": 5, "source": "商店、活动" },
+  { "id": "zzz-advanced-ether-chip", "name": "进阶以太芯片", "nameEn": "Advanced Ether Chip", "type": "突破材料", "rarity": 3, "source": "战斗模拟" },
+  { "id": "zzz-specializer-ether-chip", "name": "特化以太芯片", "nameEn": "Specializer Ether Chip", "type": "突破材料", "rarity": 4, "source": "战斗模拟" },
+
   { "id": "zzz-plating-agent", "name": "镀剂", "nameEn": "Plating Agent", "type": "技能材料", "rarity": 2, "source": "战斗模拟" },
   { "id": "zzz-polarizing-agent", "name": "偏极剂", "nameEn": "Polarizing Agent", "type": "技能材料", "rarity": 3, "source": "战斗模拟" },
   { "id": "zzz-charge-drive", "name": "充能驱动", "nameEn": "Charge Drive", "type": "技能材料", "rarity": 3, "source": "战斗模拟" },
-  { "id": "zzz-high-dimensional-data", "name": "高维数据", "nameEn": "High-Dimensional Data", "type": "突破材料", "rarity": 4, "source": "专家挑战" },
-  { "id": "zzz-hamster-cage-pass", "name": "仓鼠笼通行证", "nameEn": "Hamster Cage Pass", "type": "特殊材料", "rarity": 5, "source": "城市基金、活动" }
+  { "id": "zzz-high-dimensional-data", "name": "高维数据", "nameEn": "High-Dimensional Data", "type": "技能材料", "rarity": 4, "source": "专家挑战" },
+  { "id": "zzz-high-dimensional-data-inferno", "name": "高维数据：地狱火", "nameEn": "High-Dimensional Data: Inferno", "type": "技能材料", "rarity": 4, "source": "专家挑战" },
+  { "id": "zzz-high-dimensional-data-frost", "name": "高维数据：寒霜", "nameEn": "High-Dimensional Data: Frost", "type": "技能材料", "rarity": 4, "source": "专家挑战" },
+  { "id": "zzz-high-dimensional-data-thunder", "name": "高维数据：雷鸣", "nameEn": "High-Dimensional Data: Thunder", "type": "技能材料", "rarity": 4, "source": "专家挑战" },
+  { "id": "zzz-high-dimensional-data-ether", "name": "高维数据：以太", "nameEn": "High-Dimensional Data: Ether", "type": "技能材料", "rarity": 4, "source": "专家挑战" },
+  { "id": "zzz-high-dimensional-data-physical", "name": "高维数据：物理", "nameEn": "High-Dimensional Data: Physical", "type": "技能材料", "rarity": 4, "source": "专家挑战" },
+
+  { "id": "zzz-denny", "name": "丁尼", "nameEn": "Denny", "type": "通用货币", "rarity": 1, "source": "各种活动" },
+  { "id": "zzz-master-tape", "name": "大师录音带", "nameEn": "Master Tape", "type": "抽卡道具", "rarity": 4, "source": "商店、活动" },
+  { "id": "zzz-encrypted-master-tape", "name": "加密大师录音带", "nameEn": "Encrypted Master Tape", "type": "抽卡道具", "rarity": 5, "source": "商店、活动" },
+  { "id": "zzz-boopon", "name": "邦布券", "nameEn": "Boopon", "type": "抽卡道具", "rarity": 3, "source": "商店、活动" },
+
+  { "id": "zzz-hamster-cage-pass", "name": "仓鼠笼通行证", "nameEn": "Hamster Cage Pass", "type": "特殊材料", "rarity": 5, "source": "城市基金、活动" },
+  { "id": "zzz-senior-investigator-cert", "name": "高级调查员认证", "nameEn": "Senior Investigator Certification", "type": "特殊材料", "rarity": 4, "source": "零号空洞" },
+  { "id": "zzz-investigator-log", "name": "调查员记录", "nameEn": "Investigator Log", "type": "特殊材料", "rarity": 3, "source": "零号空洞" },
+  { "id": "zzz-tuning-calibrator", "name": "调谐校准仪", "nameEn": "Tuning Calibrator", "type": "特殊材料", "rarity": 4, "source": "零号空洞" },
+  { "id": "zzz-ether-battery", "name": "以太电池", "nameEn": "Ether Battery", "type": "特殊材料", "rarity": 3, "source": "委托任务" },
+  { "id": "zzz-phosphorescent-extract", "name": "磷光萃取物", "nameEn": "Phosphorescent Extract", "type": "技能材料", "rarity": 4, "source": "专家挑战" },
+  { "id": "zzz-crystallized-plating", "name": "结晶镀层", "nameEn": "Crystallized Plating", "type": "技能材料", "rarity": 3, "source": "战斗模拟" }
 ]
