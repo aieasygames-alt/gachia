@@ -1,6 +1,6 @@
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { nteWeapons, getNteWeaponName, getNteWeaponEffect, genshinWeapons, getGenshinWeaponName, getGenshinWeaponEffect, starrailLightCones, getStarRailLightConeName, getStarRailLightConeEffect, wuwaWeapons, getWuWaWeaponName, getWuWaWeaponEffect } from '@gachia/data';
+import { nteWeapons, getNteWeaponName, getNteWeaponEffect, genshinWeapons, getGenshinWeaponName, getGenshinWeaponEffect, starrailLightCones, getStarRailLightConeName, getStarRailLightConeEffect, wuwaWeapons, getWuWaWeaponName, getWuWaWeaponEffect, zzzWeapons, getZzzWeaponName, getZzzWeaponEffect } from '@gachia/data';
 
 const NTE_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
   solid: { zh: '固体', en: 'Solid', ja: 'ソリッド' },
@@ -44,6 +44,10 @@ export default async function WeaponsPage({
 
   if (gameId === 'wuwa') {
     return <WuWaWeaponsPage locale={locale} />;
+  }
+
+  if (gameId === 'zzz') {
+    return <ZzzWeaponsPage locale={locale} />;
   }
 
   return (
@@ -308,4 +312,66 @@ function groupByRank<T extends { rank: string }>(arr: T[]): Record<string, T[]> 
     (acc[item.rank] ??= []).push(item);
     return acc;
   }, {} as Record<string, T[]>);
+}
+
+// --- ZZZ W-Engines ---
+
+const ZZZ_RANK_COLORS: Record<string, string> = { S: '#eab308', A: '#a855f7', B: '#60a5fa' };
+
+const ZZZ_SPECIALTY_LABELS: Record<string, Record<string, string>> = {
+  Attack: { zh: '强攻', en: 'Attack', ja: '強攻' },
+  Stun: { zh: '击破', en: 'Stun', ja: '撃破' },
+  Anomaly: { zh: '异常', en: 'Anomaly', ja: '異常' },
+  Support: { zh: '支援', en: 'Support', ja: '支援' },
+  Defense: { zh: '防护', en: 'Defense', ja: '防護' },
+};
+
+function ZzzWeaponsPage({ locale }: { locale: SupportedLocale }) {
+  const weapons = zzzWeapons;
+  const grouped = groupByRank(weapons);
+  const ranks = ['S', 'A', 'B'] as const;
+
+  const label = locale === 'zh' ? '音擎' : locale === 'ja' ? 'W-エンジン' : 'W-Engines';
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.zzz.theme.primary }}>
+        {label}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? `共 ${weapons.length} 件音擎` : locale === 'ja' ? `${weapons.length} 個のW-エンジン` : `${weapons.length} W-Engines`}
+      </p>
+
+      {ranks.map((rank) => {
+        const list = grouped[rank];
+        if (!list || list.length === 0) return null;
+        return (
+          <section key={rank} className="mb-8">
+            <h2 className="mb-4 text-lg font-semibold text-game-text">{rank}-Rank ({list.length})</h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {list.map((w) => {
+                const effect = getZzzWeaponEffect(w, locale);
+                const specialtyLabel = ZZZ_SPECIALTY_LABELS[w.specialtyEn]?.[locale] ?? w.specialtyEn;
+                return (
+                  <div key={w.id} className="rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary">
+                    <div className="mb-2 flex items-center gap-2">
+                      <span className="text-base font-bold" style={{ color: ZZZ_RANK_COLORS[w.rank] || '#888' }}>{w.rank}</span>
+                      <h3 className="font-semibold text-game-text">{getZzzWeaponName(w, locale)}</h3>
+                      <span className="ml-auto rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{specialtyLabel}</span>
+                    </div>
+                    <div className="mb-2 flex gap-3 text-sm text-game-text-muted">
+                      <span>ATK {w.baseAtk}</span>
+                      <span>{w.substatValue} {w.substat}</span>
+                    </div>
+                    {effect.description && <p className="text-xs leading-relaxed text-game-text-muted line-clamp-2">{effect.description}</p>}
+                    {w.signatureCharacter && (<p className="mt-2 text-xs text-game-primary">{locale === 'zh' ? '专属' : 'Signature'}: {w.signatureCharacter}</p>)}
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
 }

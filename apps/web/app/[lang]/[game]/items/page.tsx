@@ -1,6 +1,6 @@
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { nteMaterials, getNteMaterialName, genshinMaterials, getGenshinMaterialName, starrailMaterials, getStarRailMaterialName, wuwaMaterials, getWuWaMaterialName } from '@gachia/data';
+import { nteMaterials, getNteMaterialName, genshinMaterials, getGenshinMaterialName, starrailMaterials, getStarRailMaterialName, wuwaMaterials, getWuWaMaterialName, zzzMaterials, getZzzMaterialName } from '@gachia/data';
 
 const NTE_TYPE_LABELS: Record<string, Record<string, string>> = {
   guide: { zh: '猎手指南', en: 'Hunter Guide', ja: 'ハンターガイド' },
@@ -50,6 +50,10 @@ export default async function ItemsPage({
 
   if (gameId === 'wuwa') {
     return <WuWaItemsPage locale={locale} />;
+  }
+
+  if (gameId === 'zzz') {
+    return <ZzzItemsPage locale={locale} />;
   }
 
   return (
@@ -263,4 +267,57 @@ function groupByType<T extends { type: string }>(arr: T[]): Record<string, T[]> 
     (acc[item.type] ??= []).push(item);
     return acc;
   }, {} as Record<string, T[]>);
+}
+
+// --- ZZZ Items ---
+
+const ZZZ_TYPE_LABELS: Record<string, Record<string, string>> = {
+  'character-ascension': { zh: '角色突破材料', en: 'Character Ascension', ja: 'キャラ突破素材' },
+  'skill-material': { zh: '技能材料', en: 'Skill Material', ja: 'スキル素材' },
+  'boss-material': { zh: 'Boss材料', en: 'Boss Material', ja: 'ボス素材' },
+  'common-drop': { zh: '普通掉落', en: 'Common Drop', ja: '一般ドロップ' },
+  'exp-material': { zh: '经验材料', en: 'EXP Material', ja: '経験値素材' },
+  currency: { zh: '货币', en: 'Currency', ja: '通貨' },
+};
+
+function ZzzItemsPage({ locale }: { locale: SupportedLocale }) {
+  const materials = zzzMaterials;
+  const grouped = groupByType(materials);
+  const typeOrder = ['character-ascension', 'skill-material', 'boss-material', 'common-drop', 'exp-material', 'currency'];
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.zzz.theme.primary }}>
+        {CATEGORY_LABELS.items?.[locale] ?? 'Items'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? `共 ${materials.length} 种材料` : locale === 'ja' ? `${materials.length} 種の素材` : `${materials.length} Materials`}
+      </p>
+
+      {typeOrder.map((type) => {
+        const list = grouped[type];
+        if (!list || list.length === 0) return null;
+        const typeLabel = ZZZ_TYPE_LABELS[type]?.[locale] ?? type;
+        return (
+          <section key={type} className="mb-8">
+            <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
+            <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              {list.map((mat) => (
+                <div key={mat.id} className="rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                  <div className="mb-1 flex items-center gap-2">
+                    <h3 className="text-sm font-semibold text-game-text">{getZzzMaterialName(mat, locale)}</h3>
+                  </div>
+                  <div className="mb-1 flex items-center gap-2">
+                    <span className="text-xs text-game-text-muted">{typeLabel}</span>
+                    <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
+                  </div>
+                  <p className="text-xs text-game-text-muted line-clamp-2">{mat.source}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
 }

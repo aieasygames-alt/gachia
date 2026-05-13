@@ -1,12 +1,24 @@
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { nteCharacters, getNteCharacterName, getNteCharacterImage, genshinCharacters, getGenshinCharacterName, getGenshinCharacterImage, starrailCharacters, getStarRailCharacterName, getStarRailCharacterImage, wuwaCharacters, getWuWaCharacterName, getWuWaCharacterImage } from '@gachia/data';
+import { nteCharacters, getNteCharacterName, getNteCharacterImage, genshinCharacters, getGenshinCharacterName, getGenshinCharacterImage, starrailCharacters, getStarRailCharacterName, getStarRailCharacterImage, wuwaCharacters, getWuWaCharacterName, getWuWaCharacterImage, zzzCharacters, getZzzCharacterName, getZzzCharacterImage } from '@gachia/data';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 const NTE_ELEMENT_COLORS: Record<string, string> = {
   anima: '#4ade80', chaos: '#8b5cf6', cosmos: '#3b82f6',
   incantation: '#f59e0b', lakshana: '#ec4899', psyche: '#06b6d4',
+};
+
+const ZZZ_ELEMENT_COLORS: Record<string, string> = {
+  physical: '#9ca3af', fire: '#ef4444', ice: '#67e8f9', electric: '#8b5cf6', ether: '#ec4899',
+};
+
+const ZZZ_SPECIALTY_LABELS: Record<string, Record<string, string>> = {
+  Attack: { zh: '强攻', en: 'Attack', ja: '強攻' },
+  Stun: { zh: '击破', en: 'Stun', ja: '撃破' },
+  Anomaly: { zh: '异常', en: 'Anomaly', ja: '異常' },
+  Support: { zh: '支援', en: 'Support', ja: '支援' },
+  Defense: { zh: '防护', en: 'Defense', ja: '防護' },
 };
 
 const GENSHIN_ELEMENT_COLORS: Record<string, string> = {
@@ -62,6 +74,10 @@ export default async function CharactersPage({
 
   if (gameId === 'wuwa') {
     return <WuWaCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />;
+  }
+
+  if (gameId === 'zzz') {
+    return <ZzzCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />;
   }
 
   return (
@@ -401,6 +417,85 @@ function WuWaCharacterCard({ char, locale, gameId }: { char: typeof wuwaCharacte
           {getWuWaCharacterName(char, locale)}
         </h3>
         <p className="text-xs text-game-text-muted truncate">{weaponLabel}</p>
+      </div>
+    </Link>
+  );
+}
+
+// --- ZZZ Characters ---
+
+function ZzzCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedLocale; gameId: GameId; gameConfig: typeof GAMES.zzz }) {
+  const chars = zzzCharacters;
+  const sRank = chars.filter((c) => c.rank === 'S');
+  const aRank = chars.filter((c) => c.rank === 'A');
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
+      </p>
+
+      {sRank.length > 0 && (
+        <section className="mb-8">
+          <h2 className="mb-4 text-lg font-semibold text-game-text">
+            S {locale === 'zh' ? '级' : locale === 'ja' ? '級' : '-Rank'} ({sRank.length})
+          </h2>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+            {sRank.map((char) => (
+              <ZzzCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {aRank.length > 0 && (
+        <section className="mb-8">
+          <h2 className="mb-4 text-lg font-semibold text-game-text">
+            A {locale === 'zh' ? '级' : locale === 'ja' ? '級' : '-Rank'} ({aRank.length})
+          </h2>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+            {aRank.map((char) => (
+              <ZzzCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+
+function ZzzCharacterCard({ char, locale, gameId }: { char: typeof zzzCharacters[number]; locale: SupportedLocale; gameId: GameId }) {
+  const elementColor = ZZZ_ELEMENT_COLORS[char.attribute] || '#888';
+  const imageUrl = getZzzCharacterImage(char);
+  const specialtyLabel = ZZZ_SPECIALTY_LABELS[char.specialtyEn]?.[locale] ?? char.specialtyEn;
+
+  return (
+    <Link
+      href={`/${gameId}/characters/${char.id}` as '/'}
+      className="group flex flex-col overflow-hidden rounded-lg border border-game-border bg-game-surface transition-all hover:border-game-primary hover:shadow-lg"
+    >
+      <div className="relative aspect-square overflow-hidden bg-game-surface-alt">
+        <CharacterAvatar
+          src={imageUrl}
+          alt={getZzzCharacterName(char, locale)}
+          element={char.attribute}
+          className="h-full w-full object-cover object-top transition-transform group-hover:scale-105"
+        />
+        <span className="absolute bottom-1.5 left-1.5 rounded px-1.5 py-0.5 text-xs font-medium text-white" style={{ backgroundColor: elementColor }}>
+          {char.attribute.charAt(0).toUpperCase() + char.attribute.slice(1)}
+        </span>
+        <span className="absolute top-1.5 right-1.5 rounded bg-game-bg/80 px-1.5 py-0.5 text-xs font-bold" style={{ color: '#eab308' }}>
+          {char.rank}
+        </span>
+      </div>
+      <div className="p-2.5">
+        <h3 className="text-sm font-semibold text-game-text group-hover:text-game-primary truncate">
+          {getZzzCharacterName(char, locale)}
+        </h3>
+        <p className="text-xs text-game-text-muted truncate">{specialtyLabel}</p>
       </div>
     </Link>
   );
