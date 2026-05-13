@@ -272,18 +272,17 @@ function groupByType<T extends { type: string }>(arr: T[]): Record<string, T[]> 
 // --- ZZZ Items ---
 
 const ZZZ_TYPE_LABELS: Record<string, Record<string, string>> = {
-  'character-ascension': { zh: '角色突破材料', en: 'Character Ascension', ja: 'キャラ突破素材' },
-  'skill-material': { zh: '技能材料', en: 'Skill Material', ja: 'スキル素材' },
-  'boss-material': { zh: 'Boss材料', en: 'Boss Material', ja: 'ボス素材' },
-  'common-drop': { zh: '普通掉落', en: 'Common Drop', ja: '一般ドロップ' },
-  'exp-material': { zh: '经验材料', en: 'EXP Material', ja: '経験値素材' },
-  currency: { zh: '货币', en: 'Currency', ja: '通貨' },
+  '突破材料': { zh: '角色突破材料', en: 'Character Ascension', ja: 'キャラ突破素材' },
+  '技能材料': { zh: '技能材料', en: 'Skill Material', ja: 'スキル素材' },
+  '特殊材料': { zh: '特殊材料', en: 'Special Material', ja: '特殊素材' },
+  '通用货币': { zh: '货币', en: 'Currency', ja: '通貨' },
+  '抽卡道具': { zh: '抽卡道具', en: 'Gacha Item', ja: 'ガチャアイテム' },
 };
 
 function ZzzItemsPage({ locale }: { locale: SupportedLocale }) {
   const materials = zzzMaterials;
   const grouped = groupByType(materials);
-  const typeOrder = ['character-ascension', 'skill-material', 'boss-material', 'common-drop', 'exp-material', 'currency'];
+  const typeOrder = ['突破材料', '技能材料', '特殊材料', '通用货币', '抽卡道具'];
 
   return (
     <div>

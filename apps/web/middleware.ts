@@ -1,27 +1,12 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import createMiddleware from 'next-intl/middleware';
+import { routing } from './lib/i18n/routing';
 
-const LOCALES = ['zh', 'en', 'ja'];
-
-// Paths that should be redirected with locale prefix
-const LOCALE_PATHS = ['/sitemap', '/api', '/privacy', '/terms', '/contact'];
-
-export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
-
-  // Redirect root to default locale
-  if (pathname === '/') {
-    return NextResponse.redirect(new URL('/zh', request.url), 308);
-  }
-
-  // Redirect known pages without locale prefix
-  if (LOCALE_PATHS.includes(pathname)) {
-    return NextResponse.redirect(new URL(`/zh${pathname}`, request.url), 308);
-  }
-
-  return NextResponse.next();
-}
+export default createMiddleware(routing);
 
 export const config = {
-  matcher: ['/', '/sitemap', '/api', '/privacy', '/terms', '/contact'],
+  // Match all pathnames except for
+  // - /api (API routes)
+  // - /_next (Next.js internals)
+  // - /images, /favicon.ico, etc. (static files)
+  matcher: ['/', '/(zh|en|ja)/:path*', '/(sitemap|api|privacy|terms|contact)'],
 };
