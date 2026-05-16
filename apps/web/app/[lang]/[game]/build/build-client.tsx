@@ -50,6 +50,12 @@ import {
   getNteCharacterTierReason,
 } from '@gachia/data/games/nte/characters';
 import type { NteCharacter } from '@gachia/data/games/nte/types';
+import {
+  zzzCharacters,
+  getZzzCharacterName,
+  getZzzCharacterImage,
+} from '@gachia/data/games/zzz/characters';
+import type { ZzzCharacter } from '@gachia/data/games/zzz/types';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 // --- Constants ---
@@ -146,6 +152,7 @@ export function BuildClient({ gameId, locale }: { gameId: GameId; locale: Suppor
   if (gameId === 'starrail') return <StarRailBuildRecommender locale={locale} />;
   if (gameId === 'wuwa') return <WuWaBuildRecommender locale={locale} />;
   if (gameId === 'nte') return <NteBuildRecommender locale={locale} />;
+  if (gameId === 'zzz') return <ZzzBuildRecommender locale={locale} />;
   return <ComingSoon locale={locale} />;
 }
 
@@ -1102,6 +1109,116 @@ function NteBuildRecommender({ locale }: { locale: SupportedLocale }) {
 // =====================================================================
 // Coming Soon
 // =====================================================================
+
+// =====================================================================
+// ZZZ Build Recommender
+// =====================================================================
+
+const ZZZ_ELEMENTS = ['physical', 'fire', 'ice', 'electric', 'ether'] as const;
+const ZZZ_ELEMENT_COLORS: Record<string, string> = {
+  physical: '#9ca3af', fire: '#ef4444', ice: '#67e8f9', electric: '#8b5cf6', ether: '#a855f7',
+};
+const ZZZ_ELEMENT_NAMES: Record<string, Record<string, string>> = {
+  physical: { zh: '物理', en: 'Physical', ja: '物理' },
+  fire: { zh: '火', en: 'Fire', ja: '炎' },
+  ice: { zh: '冰', en: 'Ice', ja: '氷' },
+  electric: { zh: '电', en: 'Electric', ja: '電気' },
+  ether: { zh: '以太', en: 'Ether', ja: 'エーテル' },
+};
+const ZZZ_SPECIALTY_LABELS: Record<string, Record<string, string>> = {
+  attack: { zh: '强攻', en: 'Attack', ja: '強攻' },
+  stun: { zh: '击破', en: 'Stun', ja: '撃破' },
+  anomaly: { zh: '异常', en: 'Anomaly', ja: '異常' },
+  support: { zh: '支援', en: 'Support', ja: '支援' },
+  defense: { zh: '防护', en: 'Defense', ja: '防護' },
+};
+
+function ZzzBuildRecommender({ locale }: { locale: SupportedLocale }) {
+  const [selectedChar, setSelectedChar] = useState<ZzzCharacter | null>(null);
+  const [elementFilter, setElementFilter] = useState<string>('all');
+
+  const filtered = useMemo(() => {
+    if (elementFilter === 'all') return zzzCharacters;
+    return zzzCharacters.filter((c) => c.attribute === elementFilter);
+  }, [elementFilter]);
+
+  return (
+    <div>
+      <div className="mb-6">
+        <h2 className="mb-2 text-lg font-semibold text-game-primary">
+          {t(locale, '选择代理人查看推荐配装', 'Select an agent to view recommended build', 'エージェントを選択してビルドを確認')}
+        </h2>
+        {/* Element filter */}
+        <div className="flex flex-wrap gap-2">
+          <button onClick={() => setElementFilter('all')} className={`rounded-full px-3 py-1 text-sm border transition-colors ${elementFilter === 'all' ? 'border-game-primary text-game-primary' : 'border-game-border text-game-text-muted hover:border-game-primary'}`}>
+            {t(locale, '全部', 'All', '全て')}
+          </button>
+          {ZZZ_ELEMENTS.map((el) => (
+            <button key={el} onClick={() => setElementFilter(el)} className={`rounded-full px-3 py-1 text-sm border transition-colors ${elementFilter === el ? 'border-game-primary text-game-primary' : 'border-game-border text-game-text-muted hover:border-game-primary'}`}>
+              {ZZZ_ELEMENT_NAMES[el]?.[locale] ?? el}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-6 lg:flex-row">
+        {/* Character grid */}
+        <div className="grid flex-1 grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-4">
+          {filtered.map((char) => (
+            <button key={char.id} onClick={() => setSelectedChar(char)} className={`group flex flex-col items-center gap-1 rounded-lg border bg-game-surface p-2 transition-all hover:border-game-primary ${selectedChar?.id === char.id ? 'border-game-primary' : 'border-game-border'}`}>
+              <CharacterAvatar src={getZzzCharacterImage(char)} alt={getZzzCharacterName(char, locale)} element={char.attribute} className="h-14 w-14 rounded-lg object-cover" />
+              <span className="text-center text-xs font-medium text-game-text">{getZzzCharacterName(char, locale)}</span>
+              <div className="flex gap-1">
+                <span className="text-[10px] px-1 rounded" style={{ backgroundColor: ZZZ_ELEMENT_COLORS[char.attribute], color: '#fff' }}>{ZZZ_ELEMENT_NAMES[char.attribute]?.[locale] ?? char.attribute}</span>
+              </div>
+            </button>
+          ))}
+        </div>
+
+        {/* Build details */}
+        <div className="lg:w-80">
+          {selectedChar ? (
+            <div className="rounded-lg border border-game-border bg-game-surface p-4">
+              <div className="mb-3 flex items-center gap-3">
+                <CharacterAvatar src={getZzzCharacterImage(selectedChar)} alt={getZzzCharacterName(selectedChar, locale)} element={selectedChar.attribute} className="h-12 w-12 rounded-lg object-cover" />
+                <div>
+                  <h3 className="font-semibold text-game-text">{getZzzCharacterName(selectedChar, locale)}</h3>
+                  <div className="flex gap-1 text-xs text-game-text-muted">
+                    <span>{selectedChar.rank}-Rank</span>
+                    <span>·</span>
+                    <span>{ZZZ_SPECIALTY_LABELS[selectedChar.specialtyEn]?.[locale] ?? selectedChar.specialtyEn}</span>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-2 text-sm">
+                <BuildInfoRow label={t(locale, '最佳音擎', 'Best W-Engine', 'ベストWエンジン')} value={locale === 'zh' ? selectedChar.recommendedBuild.bestWeapon : selectedChar.recommendedBuild.bestWeaponEn} />
+                {selectedChar.recommendedBuild.alternativeWeapons.length > 0 && (
+                  <BuildInfoRow label={t(locale, '备选', 'Alt', '代替')} value={selectedChar.recommendedBuild.alternativeWeapons.join(', ')} />
+                )}
+                <BuildInfoRow label={t(locale, '驱动盘', 'Drive Disc', 'ドライブディスク')} value={locale === 'zh' ? selectedChar.recommendedBuild.bestDriveDisc : selectedChar.recommendedBuild.bestDriveDiscEn} />
+                <BuildInfoRow label={t(locale, '主属性', 'Main Stats', 'メインステータス')} value={Object.values(locale === 'zh' ? selectedChar.recommendedBuild.mainStats : selectedChar.recommendedBuild.mainStatsEn).join(' / ')} />
+                <BuildInfoRow label={t(locale, '副属性', 'Sub Stats', 'サブステータス')} value={(locale === 'zh' ? selectedChar.recommendedBuild.subStatPriority : selectedChar.recommendedBuild.subStatPriorityEn).join(' > ')} />
+              </div>
+            </div>
+          ) : (
+            <div className="flex h-48 items-center justify-center rounded-lg border border-dashed border-game-border text-sm text-game-text-muted">
+              {t(locale, '请选择一个代理人', 'Select an agent', 'エージェントを選択してください')}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function BuildInfoRow({ label, value }: { label: string; value: string }) {
+  return (
+    <div>
+      <span className="text-xs text-game-text-muted">{label}</span>
+      <p className="text-game-text">{value}</p>
+    </div>
+  );
+}
 
 function ComingSoon({ locale }: { locale: SupportedLocale }) {
   return (

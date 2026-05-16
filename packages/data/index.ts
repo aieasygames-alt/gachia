@@ -396,6 +396,22 @@ export {
   getZzzDriveDiscById,
 } from './games/zzz/drive-discs';
 
+// ZZZ guide exports
+export {
+  zzzGuides,
+  getZzzGuideTitle,
+  getZzzGuideContent,
+  getZzzGuideSummary,
+  getZzzGuideCategory,
+  getZzzGuideCategories,
+  getZzzGuidesByCategory,
+  getZzzGuideById,
+  getZzzGuideSlugs,
+  getZzzGuideFaqQuestion,
+  getZzzGuideFaqAnswer,
+  ZZZ_GUIDE_CATEGORIES,
+} from './games/zzz/guides';
+
 export type {
   ZzzCharacter,
   ZzzWeapon,
@@ -409,6 +425,8 @@ export type {
   ZzzRecommendedBuild,
   ZzzMindscapeCinema,
 } from './games/zzz/types';
+
+export type { ZzzGuide, ZzzGuideFaq } from './games/zzz/guides';
 
 // --- Data Access Helpers ---
 

@@ -44,6 +44,12 @@ import {
   getNteCharacterTierReason,
 } from '@gachia/data/games/nte/characters';
 import type { NteCharacter } from '@gachia/data/games/nte/types';
+import {
+  zzzCharacters,
+  getZzzCharacterName,
+  getZzzCharacterImage,
+} from '@gachia/data/games/zzz/characters';
+import type { ZzzCharacter } from '@gachia/data/games/zzz/types';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 // --- Constants ---
@@ -128,6 +134,7 @@ export function CompareClient({ gameId, locale }: { gameId: GameId; locale: Supp
   if (gameId === 'starrail') return <StarRailCompare locale={locale} />;
   if (gameId === 'wuwa') return <WuWaCompare locale={locale} />;
   if (gameId === 'nte') return <NteCompare locale={locale} />;
+  if (gameId === 'zzz') return <ZzzCompare locale={locale} />;
   return <ComingSoon locale={locale} />;
 }
 
@@ -1013,6 +1020,70 @@ function NteCompare({ locale }: { locale: SupportedLocale }) {
 // =====================================================================
 // Coming Soon
 // =====================================================================
+
+// =====================================================================
+// ZZZ Compare
+// =====================================================================
+
+const ZZZ_CMP_ELEMENT_COLORS: Record<string, string> = {
+  physical: '#9ca3af', fire: '#ef4444', ice: '#67e8f9', electric: '#8b5cf6', ether: '#a855f7',
+};
+
+function ZzzCompare({ locale }: { locale: SupportedLocale }) {
+  const [char1, setChar1] = useState<ZzzCharacter | null>(null);
+  const [char2, setChar2] = useState<ZzzCharacter | null>(null);
+  const [selecting, setSelecting] = useState<1 | 2>(1);
+
+  function selectChar(c: ZzzCharacter) {
+    if (selecting === 1) { setChar1(c); setSelecting(2); }
+    else { setChar2(c); setSelecting(1); }
+  }
+
+  return (
+    <div>
+      <p className="mb-4 text-sm text-game-text-muted">
+        {t(locale, '选择两位代理人进行对比', 'Select two agents to compare', '2人のエージェントを選択して比較')}
+        {selecting === 1 ? ` (${t(locale, '选择第一位', 'Select 1st', '1人目を選択')})` : ` (${t(locale, '选择第二位', 'Select 2nd', '2人目を選択')})`}
+      </p>
+
+      {/* Character grid */}
+      <div className="mb-6 grid grid-cols-4 gap-2 sm:grid-cols-6 md:grid-cols-8">
+        {zzzCharacters.map((c) => (
+          <button key={c.id} onClick={() => selectChar(c)} className={`group flex flex-col items-center gap-1 rounded-lg border p-2 transition-all hover:border-game-primary ${char1?.id === c.id || char2?.id === c.id ? 'border-game-primary bg-game-surface' : 'border-game-border'}`}>
+            <CharacterAvatar src={getZzzCharacterImage(c)} alt={getZzzCharacterName(c, locale)} element={c.attribute} className="h-10 w-10 rounded object-cover" />
+            <span className="text-[10px] text-game-text text-center leading-tight">{getZzzCharacterName(c, locale)}</span>
+          </button>
+        ))}
+      </div>
+
+      {/* Comparison */}
+      {char1 && char2 && (
+        <div className="grid grid-cols-2 gap-4">
+          {[char1, char2].map((ch) => (
+            <div key={ch.id} className="rounded-lg border border-game-border bg-game-surface p-4">
+              <div className="mb-3 flex items-center gap-3">
+                <CharacterAvatar src={getZzzCharacterImage(ch)} alt={getZzzCharacterName(ch, locale)} element={ch.attribute} className="h-14 w-14 rounded-lg object-cover" />
+                <div>
+                  <h3 className="font-semibold text-game-text">{getZzzCharacterName(ch, locale)}</h3>
+                  <div className="flex gap-1 text-xs">
+                    <span className="rounded px-1" style={{ backgroundColor: ZZZ_CMP_ELEMENT_COLORS[ch.attribute], color: '#fff' }}>{ch.attribute}</span>
+                    <span className="text-game-text-muted">{ch.rank}-Rank</span>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-1 text-sm">
+                <p><span className="text-game-text-muted">{t(locale, '职业', 'Specialty', '得意')}:</span> {ch.specialtyEn}</p>
+                <p><span className="text-game-text-muted">{t(locale, '最佳音擎', 'Best W-Engine', 'ベストWエンジン')}:</span> {locale === 'zh' ? ch.recommendedBuild.bestWeapon : ch.recommendedBuild.bestWeaponEn}</p>
+                <p><span className="text-game-text-muted">{t(locale, '驱动盘', 'Drive Disc', 'ドライブディスク')}:</span> {locale === 'zh' ? ch.recommendedBuild.bestDriveDisc : ch.recommendedBuild.bestDriveDiscEn}</p>
+                <p><span className="text-game-text-muted">{t(locale, '阵营', 'Faction', '陣営')}:</span> {locale === 'zh' ? ch.faction : ch.factionEn}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 function ComingSoon({ locale }: { locale: SupportedLocale }) {
   return (

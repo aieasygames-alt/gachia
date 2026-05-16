@@ -1,0 +1,146 @@
+[
+  {
+    "id": "quick-start-guide",
+    "title": "绝区零新手快速上手指南",
+    "titleEn": "ZZZ Quick Start Guide for Beginners",
+    "category": "beginner",
+    "categoryZh": "新手入门",
+    "categoryEn": "Beginner",
+    "summary": "从零开始了解绝区零的核心玩法，包括基础操作、代理人培养、资源获取等关键内容。",
+    "summaryEn": "Learn the core mechanics of Zenless Zone Zero from scratch, including basic controls, agent development, and resource acquisition.",
+    "content": "## 绝区零新手快速上手指南\n\n### 1. 基础操作\n\n绝区零采用**即时动作战斗**系统，玩家控制一支3人小队进入空洞（Hollow）进行探索和战斗。\n\n- **普通攻击**：连续按攻击键进行连击\n- **闪避**：在敌人攻击瞬间闪避触发「极限闪避」，可进入「子弹时间」\n- **特殊技**：消耗能量释放强力技能\n- **终结技**：能量满时释放大招\n- **换人连携**：在特定时机切换角色触发连携攻击\n\n### 2. 代理人培养优先级\n\n1. **优先培养主C（输出代理人）**：集中资源提升S级输出角色的等级和技能\n2. **其次培养辅助**：如增益型支援、击破型代理人\n3. **最后培养副C**：用于切换连携的角色\n\n### 3. 日常资源获取\n\n| 任务类型 | 推荐优先级 | 获得资源 |\n|---------|-----------|----------|\n| 日常任务 | ★★★★★ | 丁尼、调查点数 |\n| 周常任务 | ★★★★★ | 高级材料 |\n| 模拟作战 | ★★★★☆ | 突破材料、音擎 |\n| 零号空洞 | ★★★★☆ | 驱动盘 |\n| 信源检索（抽卡） | ★★★☆☆ | 代理人、音擎 |\n\n### 4. 前期注意事项\n\n- **不要分散资源**：前期专注培养一队3人\n- **完成主线推进**：解锁更多功能和玩法\n- **每日刷材料本**：优先刷当前主C需要的突破材料\n- **合理使用菲林**：建议优先抽取强力S级主C",
+    "contentEn": "## ZZZ Quick Start Guide\n\n### 1. Basic Controls\n\nZZZ uses a **real-time action combat** system. You control a team of 3 agents entering Hollows for exploration and combat.\n\n- **Normal Attack**: Chain attacks by pressing the attack button\n- **Dodge**: Dodge at the right moment to trigger \"Perfect Dodge\" and enter bullet time\n- **Special Skill**: Spend energy for powerful skills\n- **Ultimate**: Unleash your ultimate when energy is full\n- **Chain Attack**: Switch characters at specific moments to trigger chain attacks\n\n### 2. Agent Development Priority\n\n1. **Focus on your main DPS first**: Concentrate resources on leveling up your S-Rank DPS agent\n2. **Then build support**: Buff-type supporters and stun agents\n3. **Finally build sub-DPS**: Characters used for chain switching\n\n### 3. Daily Resource Acquisition\n\n| Task Type | Priority | Resources |\n|-----------|-----------|------------|\n| Daily Tasks | ★★★★★ | Denny, Survey Points |\n| Weekly Tasks | ★★★★★ | Advanced Materials |\n| Simulation Battle | ★★★★☆ | Ascension Materials, W-Engines |\n| Hollow Zero | ★★★★☆ | Drive Discs |\n| Signal Search (Gacha) | ★★★☆☆ | Agents, W-Engines |\n\n### 4. Early Game Tips\n\n- **Don't spread resources**: Focus on building one team of 3\n- **Progress the main story**: Unlocks more features and game modes\n- **Farm material dungeons daily**: Prioritize ascension materials for your main DPS\n- **Use Polyfilm wisely**: Recommended to pull for strong S-Rank DPS first",
+    "tags": ["新手", "入门", "操作", "Beginner", "Controls", "Tips"],
+    "faq": [
+      {
+        "question": "Which agent should I pull for first?",
+        "questionZh": "新手应该优先抽取哪个代理人？",
+        "answer": "It's recommended to pull for a strong S-Rank DPS agent first. Ellen Joe and Zhu Yuan are excellent choices for beginners.",
+        "answerZh": "建议优先抽取强力的S级输出代理人。艾莲和朱鸢都是非常适合新手的选择。"
+      },
+      {
+        "question": "How do I get more Pulls (Film)?",
+        "questionZh": "怎么获得更多抽卡资源（菲林）？",
+        "answer": "Complete daily/weekly tasks, progress the story, participate in events, and clear Hollow Zero for Polyfilm.",
+        "answerZh": "完成日常/周常任务、推进主线剧情、参与活动、通关零号空洞都可以获得菲林。"
+      }
+    ]
+  },
+  {
+    "id": "combat-mechanics",
+    "title": "绝区零战斗系统详解",
+    "titleEn": "ZZZ Combat System Deep Dive",
+    "category": "combat",
+    "categoryZh": "战斗攻略",
+    "categoryEn": "Combat",
+    "summary": "深入理解绝区零的战斗机制，包括异常状态、失衡系统、连携攻击等进阶技巧。",
+    "summaryEn": "Understand ZZZ's combat mechanics in depth, including Anomaly, Stun mechanics, Chain Attacks, and advanced techniques.",
+    "content": "## 战斗系统详解\n\n### 失衡值系统（Daze/Stun）\n\n每个敌人都有一个**失衡条**（Daze Bar），受到攻击时会积累。当失衡条满时：\n\n- 敌人进入**眩晕状态**（Stunned）\n- 受到的伤害大幅增加\n- 可以触发**连携攻击**（Chain Attack）\n\n**击破型代理人**（Stun specialty）拥有更高的失衡积累效率，是队伍中非常重要的角色。\n\n### 异常状态（Anomaly）\n\n通过持续攻击积累**异常值**，满后触发属性异常效果：\n\n| 属性 | 异常效果 | 描述 |\n|------|---------|------|\n| 物理 | 突击 | 造成物理爆发伤害 |\n| 火 | 燃烧 | 持续火属性伤害 |\n| 冰 | 冻结 | 冻住敌人，使其无法行动 |\n| 电 | 触电 | 持续电属性伤害 |\n| 以太 | 侵蚀 | 降低敌人防御力 |\n\n### 连携攻击\n\n在以下时机切换角色可触发连携攻击：\n\n1. **敌人眩晕时**：任意角色切换都会触发\n2. **极限闪避后**：切换到另一角色触发\n3. **终结技后**：切换触发追加连携\n\n连携攻击造成大量伤害，是输出循环的核心。\n\n### 战斗循环\n\n典型的战斗循环：\n\n1. 用击破型角色积累敌人失衡值\n2. 敌人眩晕后触发连携攻击\n3. 切换到输出角色进行爆发输出\n4. 根据需要使用支援角色提供增益\n5. 循环上述步骤",
+    "contentEn": "## Combat System Deep Dive\n\n### Daze/Stun System\n\nEvery enemy has a **Daze Bar** that fills when attacked. When the bar is full:\n\n- The enemy enters **Stunned** state\n- Takes significantly increased damage\n- Enables **Chain Attacks**\n\n**Stun-specialty agents** have higher daze accumulation efficiency and are crucial team members.\n\n### Anomaly System\n\nContinuously attacking builds **Anomaly value**. When full, it triggers elemental anomaly effects:\n\n| Element | Anomaly Effect | Description |\n|---------|---------------|-------------|\n| Physical | Assault | Deals burst physical damage |\n| Fire | Burn | Continuous fire damage |\n| Ice | Freeze | Freezes enemy, preventing action |\n| Electric | Shock | Continuous electric damage |\n| Ether | Corruption | Reduces enemy defense |\n\n### Chain Attacks\n\nSwitch characters at specific moments to trigger Chain Attacks:\n\n1. **When enemy is Stunned**: Any character switch triggers it\n2. **After Perfect Dodge**: Switch to another character\n3. **After Ultimate**: Switch triggers follow-up chain\n\nChain Attacks deal massive damage and are the core of your damage rotation.\n\n### Combat Rotation\n\nTypical combat loop:\n\n1. Use Stun agents to build enemy Daze\n2. Trigger Chain Attack when enemy is Stunned\n3. Switch to DPS for burst damage\n4. Use Support agents for buffs as needed\n5. Repeat the cycle",
+    "tags": ["战斗", "机制", "连携", "Combat", "Mechanics", "Chain Attack"],
+    "faq": [
+      {
+        "question": "What is the most important combat mechanic?",
+        "questionZh": "战斗中最重要的机制是什么？",
+        "answer": "The Daze/Stun system and Chain Attacks are the most important. Mastering when to switch characters during Stun windows is key to maximizing damage.",
+        "answerZh": "失衡系统和连携攻击最为关键。掌握在敌人眩晕期间切换角色的时机是最大化伤害的核心。"
+      },
+      {
+        "question": "How do Anomaly builds work?",
+        "questionZh": "异常流怎么玩？",
+        "answer": "Anomaly agents (like Grace or Jane) focus on building Anomaly quickly through rapid attacks. Pair them with elemental Drive Discs that boost Anomaly damage.",
+        "answerZh": "异常型代理人（如格莉丝或简）通过快速攻击快速积累异常值。搭配提升异常伤害的驱动盘套装效果更佳。"
+      }
+    ]
+  },
+  {
+    "id": "team-building-guide",
+    "title": "绝区零配队指南",
+    "titleEn": "ZZZ Team Building Guide",
+    "category": "team",
+    "categoryZh": "配队攻略",
+    "categoryEn": "Teams",
+    "summary": "学习如何构建高效的3人队伍，理解各职业定位与协同效果。",
+    "summaryEn": "Learn how to build effective 3-agent teams, understand role synergy and team compositions.",
+    "content": "## 配队指南\n\n### 队伍基础结构\n\n标准3人小队通常包含：\n\n1. **输出（DPS）**：队伍核心伤害来源\n2. **击破（Stun）**：快速积累敌人失衡值\n3. **支援（Support）/防护（Defense）**：提供增益或生存能力\n\n### 经典配队范例\n\n#### 物理队\n- **输出**：可琳 / 安比\n- **击破**：莱卡恩\n- **支援**：妮可\n\n#### 冰队\n- **输出**：艾莲\n- **击破**：莱卡恩\n- **支援**：苍角\n\n#### 电队\n- **输出**：格莉丝 / 安比\n- **击破**：安比\n- **支援**：妮可\n\n#### 火队\n- **输出**：柏妮思 / 莱特\n- **击破**：珂蕾妲\n- **支援**：露西\n\n### 特殊配队思路\n\n- **异常流**：利用异常持续伤害，不需要传统输出（如简+格莉丝+赛斯）\n- **纯支援爆发**：青衣提供大量增益，让输出角色在眩晕期间打出极限伤害\n- **双输出轮换**：两个输出角色交替上场，利用连携机制\n\n### 配队原则\n\n1. **属性统一**：同属性角色更容易触发异常效果\n2. **职业搭配**：击破+输出+支援是最稳定的组合\n3. **角色协同**：某些角色的技能会互相增强\n4. **灵活调整**：根据敌人类型调整队伍构成",
+    "contentEn": "## Team Building Guide\n\n### Basic Team Structure\n\nA standard 3-agent team typically includes:\n\n1. **DPS**: The team's primary damage dealer\n2. **Stun**: Quickly builds enemy Daze meter\n3. **Support/Defense**: Provides buffs or survivability\n\n### Classic Team Examples\n\n#### Physical Team\n- **DPS**: Corin / Anby\n- **Stun**: Lycaon\n- **Support**: Nicole\n\n#### Ice Team\n- **DPS**: Ellen\n- **Stun**: Lycaon\n- **Support**: Soukaku\n\n#### Electric Team\n- **DPS**: Grace / Anby\n- **Stun**: Anby\n- **Support**: Nicole\n\n#### Fire Team\n- **DPS**: Burnice / Lighter\n- **Stun**: Koleda\n- **Support**: Lucy\n\n### Special Team Strategies\n\n- **Anomaly Focus**: Uses Anomaly DoT, no traditional DPS needed (e.g., Jane + Grace + Seth)\n- **Buff Burst**: Qingyi provides massive buffs for DPS to deal extreme damage during Stun windows\n- **Dual DPS Rotation**: Two DPS agents alternate using Chain mechanics\n\n### Team Building Principles\n\n1. **Elemental Unity**: Same-element agents trigger Anomaly more easily\n2. **Role Balance**: Stun + DPS + Support is the most stable combo\n3. **Character Synergy**: Some agents' skills enhance each other\n4. **Flexibility**: Adjust team composition based on enemy types",
+    "tags": ["配队", "队伍", "协同", "Team", "Composition", "Synergy"],
+    "faq": [
+      {
+        "question": "Do I need same-element teams?",
+        "questionZh": "必须配同属性队伍吗？",
+        "answer": "Same-element teams are generally stronger due to Anomaly triggers, but mixed-element teams can work if the role synergy is good.",
+        "answerZh": "同属性队伍因为更容易触发异常效果通常更强，但如果职业协同好的话，混搭队伍也完全可以使用。"
+      }
+    ]
+  },
+  {
+    "id": "w-engine-guide",
+    "title": "绝区零音擎（武器）选择指南",
+    "titleEn": "ZZZ W-Engine Selection Guide",
+    "category": "equipment",
+    "categoryZh": "装备攻略",
+    "categoryEn": "Equipment",
+    "summary": "了解不同类型音擎的特点，为你的代理人选择最合适的武器。",
+    "summaryEn": "Understand different W-Engine types and choose the best weapon for your agents.",
+    "content": "## 音擎选择指南\n\n### 音擎基础\n\n音擎是代理人的武器装备，提供以下属性：\n\n- **基础攻击力**：根据稀有度不同有不同基础值\n- **副属性**：提供额外加成（如暴击率、异常精通等）\n- **被动效果**：特殊技能效果，通常对特定职业有额外加成\n\n### 按职业选择音擎\n\n#### 强攻型（Attack）\n- **首选**：暴击率/暴击伤害副属性的S级音擎\n- **核心**：提升基础攻击力和伤害输出\n- **示例**：星级引擎（星光引擎）—— 暴击伤害加成\n\n#### 击破型（Stun）\n- **首选**：提升失衡积累效率的音擎\n- **核心**：快速让敌人进入眩晕状态\n- **示例**：带有冲击力加成的音擎\n\n#### 异常型（Anomaly）\n- **首选**：异常精通加成的音擎\n- **核心**：提升异常状态的伤害和积累速度\n\n#### 支援型（Support）\n- **首选**：提供团队增益的音擎\n- **核心**：增强队友输出能力\n\n#### 防护型（Defense）\n- **首选**：提升防御或护盾效果的音擎\n- **核心**：增强生存能力\n\n### 音擎获取方式\n\n| 来源 | 稀有度 | 说明 |\n|------|--------|------|\n| 信源检索 | S级 | 最强音擎，部分为角色专属 |\n| 模拟作战商店 | S/A级 | 可用特定货币兑换 |\n| 活动奖励 | A/B级 | 免费获取 |\n| 制作系统 | B级 | 用材料制作基础音擎 |",
+    "contentEn": "## W-Engine Selection Guide\n\n### W-Engine Basics\n\nW-Engines are agent weapons that provide:\n\n- **Base ATK**: Varies by rarity\n- **Sub-stat**: Additional bonuses (CRIT Rate, Anomaly Mastery, etc.)\n- **Passive Effect**: Special skill effects, often with bonuses for specific specialties\n\n### Choosing by Specialty\n\n#### Attack Specialty\n- **Top Pick**: S-Rank engines with CRIT Rate/CRIT DMG sub-stats\n- **Core**: Boost base ATK and damage output\n- **Example**: Starlight Engine — CRIT DMG bonus\n\n#### Stun Specialty\n- **Top Pick**: Engines that boost Daze accumulation\n- **Core**: Quickly stun enemies\n- **Example**: Engines with Impact bonus\n\n#### Anomaly Specialty\n- **Top Pick**: Engines with Anomaly Mastery bonus\n- **Core**: Boost Anomaly damage and buildup speed\n\n#### Support Specialty\n- **Top Pick**: Engines that provide team buffs\n- **Core**: Enhance teammate damage\n\n#### Defense Specialty\n- **Top Pick**: Engines that boost DEF or shield effects\n- **Core**: Improve survivability\n\n### W-Engine Sources\n\n| Source | Rarity | Notes |\n|--------|--------|-------|\n| Signal Search | S-Rank | Strongest engines, some are character-exclusive |\n| Simulation Shop | S/A-Rank | Exchangeable with specific currency |\n| Event Rewards | A/B-Rank | Free acquisition |\n| Crafting | B-Rank | Crafted with materials |",
+    "tags": ["音擎", "武器", "装备", "W-Engine", "Weapon", "Equipment"],
+    "faq": [
+      {
+        "question": "Should I pull for character signature W-Engines?",
+        "questionZh": "应该抽取角色专属音擎吗？",
+        "answer": "Signature W-Engines provide the best performance for their character but are not strictly necessary. A good S-Rank generic engine can be 80-90% as effective.",
+        "answerZh": "专属音擎为对应角色提供最佳性能，但不是必需的。好的通用S级音擎可以达到专属音擎80-90%的效果。"
+      }
+    ]
+  },
+  {
+    "id": "drive-disc-guide",
+    "title": "绝区零驱动盘选择与搭配指南",
+    "titleEn": "ZZZ Drive Disc Selection Guide",
+    "category": "equipment",
+    "categoryZh": "装备攻略",
+    "categoryEn": "Equipment",
+    "summary": "学习驱动盘套装效果与主属性选择，为代理人搭配最优装备。",
+    "summaryEn": "Learn Drive Disc set effects and main stat choices to optimize your agent's equipment.",
+    "content": "## 驱动盘选择与搭配指南\n\n### 驱动盘基础\n\n每个代理人可以装备**6个驱动盘**，分为以下位置：\n\n- **1号位**：固定主属性（生命值）\n- **2号位**：固定主属性（攻击力）\n- **3号位**：固定主属性（防御力）\n- **4号位**：随机主属性\n- **5号位**：随机主属性\n- **6号位**：随机主属性\n\n### 套装效果\n\n装备同套装的驱动盘可以激活套装加成：\n- **2件套**：装备2件同套装即可激活\n- **4件套**：装备4件同套装激活更强效果\n\n常见搭配方式：**4+2**（4件主套装+2件副套装）\n\n### 按输出类型选择\n\n#### 暴击输出型\n- **主套装**：增加暴击率或暴击伤害的套装\n- **副套装**：攻击力加成套装\n- **4号位主属性**：暴击率或暴击伤害\n- **5号位主属性**：属性伤害加成\n\n#### 异常输出型\n- **主套装**：异常精通或异常伤害套装\n- **副套装**：属性伤害加成套装\n- **4号位主属性**：异常精通\n- **5号位主属性**：属性伤害加成\n\n#### 击破辅助型\n- **主套装**：冲击力加成套装\n- **副套装**：能量回复套装\n- **4号位主属性**：冲击力\n- **5号位主属性**：属性伤害加成\n\n### 驱动盘获取\n\n主要通过**零号空洞**和**驱动盘副本**获取。建议优先刷取主C的驱动盘，确保关键位置的主属性正确后再追求副词条。",
+    "contentEn": "## Drive Disc Selection Guide\n\n### Drive Disc Basics\n\nEach agent can equip **6 Drive Discs**, divided into slots:\n\n- **Slot 1**: Fixed main stat (HP)\n- **Slot 2**: Fixed main stat (ATK)\n- **Slot 3**: Fixed main stat (DEF)\n- **Slot 4**: Random main stat\n- **Slot 5**: Random main stat\n- **Slot 6**: Random main stat\n\n### Set Effects\n\nEquipping discs from the same set activates bonuses:\n- **2pc**: Activate with 2 pieces from the same set\n- **4pc**: Activate with 4 pieces for a stronger effect\n\nCommon setup: **4+2** (4 pieces main set + 2 pieces off-set)\n\n### Selection by Build Type\n\n#### CRIT DPS Build\n- **Main Set**: CRIT Rate or CRIT DMG boosting set\n- **Off-set**: ATK bonus set\n- **Slot 4 main stat**: CRIT Rate or CRIT DMG\n- **Slot 5 main stat**: Elemental DMG bonus\n\n#### Anomaly DPS Build\n- **Main Set**: Anomaly Mastery or Anomaly DMG set\n- **Off-set**: Elemental DMG bonus set\n- **Slot 4 main stat**: Anomaly Mastery\n- **Slot 5 main stat**: Elemental DMG bonus\n\n#### Stun Support Build\n- **Main Set**: Impact bonus set\n- **Off-set**: Energy Recharge set\n- **Slot 4 main stat**: Impact\n- **Slot 5 main stat**: Elemental DMG bonus\n\n### Acquisition\n\nDrive Discs are mainly obtained from **Hollow Zero** and **Drive Disc dungeons**. Prioritize farming for your main DPS first, ensuring correct main stats before optimizing sub-stats.",
+    "tags": ["驱动盘", "装备", "套装", "Drive Disc", "Equipment", "Set"],
+    "faq": [
+      {
+        "question": "Should I go for 4pc or 2pc+2pc?",
+        "questionZh": "应该凑4件套还是2+2？",
+        "answer": "4pc set effects are usually stronger than two 2pc effects. Go for 4+2 (4pc main set + 2pc off-set) as the standard build.",
+        "answerZh": "4件套效果通常比两个2件套效果更强。标准搭配是4+2（4件主套装+2件副套装）。"
+      }
+    ]
+  },
+  {
+    "id": "resource-farming-guide",
+    "title": "绝区零资源刷取与养成规划",
+    "titleEn": "ZZZ Resource Farming & Development Planning",
+    "category": "farming",
+    "categoryZh": "刷取攻略",
+    "categoryEn": "Farming",
+    "summary": "合理规划体力使用，高效刷取代理人养成所需的各种材料。",
+    "summaryEn": "Plan your energy usage efficiently and farm materials needed for agent development.",
+    "content": "## 资源刷取与养成规划\n\n### 体力（电池）分配\n\n每天的体力（电池）是有限的，需要合理分配：\n\n#### 前期（1-30级）\n- **主线推进**优先，体力用于刷经验本和丁尼本\n- 适当刷突破材料保证主C不卡进度\n- 不需要急着刷驱动盘\n\n#### 中期（30-45级）\n- 开始**集中刷突破材料**，保证主力队伍全员满级\n- 开始**刷驱动盘副本**，为主C凑出基本套装\n- 保持日常任务的完成\n\n#### 后期（45级+）\n- **驱动盘毕业刷取**：为主C追求好的主属性和副词条\n- **技能材料**：提升核心技能等级\n- **多角色培养**：开始培养第二队\n\n### 材料分类\n\n| 材料类型 | 主要用途 | 获取方式 |\n|---------|---------|----------|\n| 突破芯片 | 角色等级突破 | 模拟作战（属性材料本） |\n| 技能材料 | 技能等级提升 | 模拟作战（技能材料本） |\n| 丁尼 | 通用货币 | 任务、副本 |\n| 菲林 | 抽卡货币 | 任务、活动 |\n| 驱动盘 | 装备 | 零号空洞、驱动盘副本 |\n| 音擎 | 武器 | 信源检索、商店兑换 |\n\n### 养成优先级\n\n1. **主C等级** → 拉满\n2. **主C音擎** → 拉满\n3. **主C技能** → 核心技能8级以上\n4. **主C驱动盘** → 凑齐套装，主属性正确\n5. **辅助等级** → 保证生存\n6. **辅助技能** → 关键增益技能\n7. **全队驱动盘优化** → 追求副词条",
+    "contentEn": "## Resource Farming & Development Planning\n\n### Energy (Battery) Allocation\n\nDaily energy is limited, so plan wisely:\n\n#### Early Game (Lv.1-30)\n- **Main story progression** first, spend energy on EXP and Denny dungeons\n- Farm ascension materials to keep your main DPS on track\n- No need to rush Drive Disc farming\n\n#### Mid Game (Lv.30-45)\n- **Focus on ascension materials**, ensure all main team members are max level\n- Start **farming Drive Disc dungeons** for basic sets on your main DPS\n- Keep completing daily tasks\n\n#### Late Game (Lv.45+)\n- **Drive Disc optimization**: Pursue good main stats and sub-stats for main DPS\n- **Skill materials**: Level up core skills\n- **Multi-agent development**: Start building a second team\n\n### Material Categories\n\n| Material Type | Primary Use | Source |\n|--------------|-------------|--------|\n| Breakthrough Chips | Character level ascension | Simulation Battles |\n| Skill Materials | Skill level upgrades | Simulation Battles |\n| Denny | General currency | Tasks, Dungeons |\n| Polyfilm | Gacha currency | Tasks, Events |\n| Drive Discs | Equipment | Hollow Zero, Drive Disc Dungeons |\n| W-Engines | Weapons | Signal Search, Shop Exchange |\n\n### Development Priority\n\n1. **Main DPS Level** → Max out\n2. **Main DPS W-Engine** → Max out\n3. **Main DPS Skills** → Core skills to Lv.8+\n4. **Main DPS Drive Discs** → Complete set with correct main stats\n5. **Support Level** → Ensure survivability\n6. **Support Skills** → Key buff skills\n7. **Full Team Disc Optimization** → Pursue sub-stats",
+    "tags": ["资源", "养成", "体力", "Resource", "Farming", "Energy"],
+    "faq": [
+      {
+        "question": "What should I spend energy on first?",
+        "questionZh": "体力应该优先刷什么？",
+        "answer": "Early game: EXP and Denny dungeons. Mid game: Ascension materials for your main DPS. Late game: Drive Disc dungeons for optimization.",
+        "answerZh": "前期：经验和丁尼本。中期：主C的突破材料。后期：驱动盘副本追求极品副词条。"
+      },
+      {
+        "question": "When should I start farming Drive Discs?",
+        "questionZh": "什么时候开始刷驱动盘？",
+        "answer": "Start when your main DPS is at max level with maxed W-Engine. Before that, focus on level and skill materials.",
+        "answerZh": "当主C满级且音擎拉满后再开始集中刷驱动盘。在此之前优先保证等级和技能材料。"
+      }
+    ]
+  }
+]

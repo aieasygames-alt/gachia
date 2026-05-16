@@ -27,6 +27,13 @@ import {
   getNteCharacterImage,
 } from '@gachia/data/games/nte/characters';
 import type { NteCharacter } from '@gachia/data/games/nte/types';
+import {
+  zzzCharacters,
+  getZzzCharacterName,
+  getZzzCharacterImage,
+  getZzzCharacterById,
+} from '@gachia/data/games/zzz/characters';
+import type { ZzzCharacter } from '@gachia/data/games/zzz/types';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 // --- Constants ---
@@ -123,6 +130,7 @@ export function TeamsClient({ gameId, locale }: { gameId: GameId; locale: Suppor
   if (gameId === 'starrail') return <StarRailTeams locale={locale} />;
   if (gameId === 'wuwa') return <WuWaTeams locale={locale} />;
   if (gameId === 'nte') return <NteTeams locale={locale} />;
+  if (gameId === 'zzz') return <ZzzTeams locale={locale} />;
   return <ComingSoon locale={locale} />;
 }
 
@@ -956,6 +964,62 @@ function NteTeams({ locale }: { locale: SupportedLocale }) {
 // =====================================================================
 // Coming Soon
 // =====================================================================
+
+// =====================================================================
+// ZZZ Teams
+// =====================================================================
+
+const ZZZ_TEAM_ELEMENT_COLORS: Record<string, string> = {
+  physical: '#9ca3af', fire: '#ef4444', ice: '#67e8f9', electric: '#8b5cf6', ether: '#a855f7',
+};
+
+function ZzzTeams({ locale }: { locale: SupportedLocale }) {
+  const teamsWithComps = zzzCharacters.filter((c) => c.teamComps.length > 0);
+
+  return (
+    <div>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {t(locale, `共 ${teamsWithComps.length} 位代理人的推荐配队`, `${teamsWithComps.length} agents with recommended teams`, `${teamsWithComps.length}エージェントのおすすめ編成`)}
+      </p>
+
+      <div className="space-y-4">
+        {teamsWithComps.map((char) => (
+          <div key={char.id} className="rounded-lg border border-game-border bg-game-surface p-4">
+            <div className="mb-3 flex items-center gap-3">
+              <CharacterAvatar src={getZzzCharacterImage(char)} alt={getZzzCharacterName(char, locale)} element={char.attribute} className="h-10 w-10 rounded-lg object-cover" />
+              <div>
+                <h3 className="font-semibold text-game-text">{getZzzCharacterName(char, locale)}</h3>
+                <span className="text-xs rounded px-1" style={{ backgroundColor: ZZZ_TEAM_ELEMENT_COLORS[char.attribute], color: '#fff' }}>{char.attribute}</span>
+              </div>
+            </div>
+            <div className="space-y-3">
+              {char.teamComps.map((team, i) => (
+                <div key={i} className="rounded border border-game-border/50 bg-game-surface-alt p-3">
+                  <div className="mb-1 flex items-center gap-2">
+                    <span className="text-sm font-medium text-game-text">{locale === 'zh' ? team.name : team.nameEn}</span>
+                  </div>
+                  <p className="mb-2 text-xs text-game-text-muted">{locale === 'zh' ? team.description : team.descriptionEn}</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {team.members.map((memberId) => {
+                      const member = getZzzCharacterById(memberId);
+                      return member ? (
+                        <span key={memberId} className="flex items-center gap-1 rounded bg-game-surface px-2 py-0.5 text-xs text-game-primary">
+                          {getZzzCharacterName(member, locale)}
+                        </span>
+                      ) : (
+                        <span key={memberId} className="rounded bg-game-surface px-2 py-0.5 text-xs text-game-text-muted">{memberId}</span>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function ComingSoon({ locale }: { locale: SupportedLocale }) {
   return (
