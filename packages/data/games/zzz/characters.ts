@@ -1,4 +1,3 @@
-import { IMAGE_BASE } from '../../image-base';
 import type { SupportedLocale, Character } from '@gachia/core';
 import type { ZzzCharacter } from './types';
 import { localeStr } from './types';
@@ -20,7 +19,7 @@ export function getZzzCharacterDescription(char: ZzzCharacter, locale: Supported
 }
 
 export function getZzzCharacterImage(char: ZzzCharacter): string {
-  return `${IMAGE_BASE}/images/zzz/characters/${char.id}.webp`;
+  return `/images/zzz/characters/${char.id}.webp`;
 }
 
 export function getZzzCharacterById(id: string): ZzzCharacter | undefined {
