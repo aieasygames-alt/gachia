@@ -33,6 +33,11 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     en: 'Zenless Zone Zero agent guide, W-Engine database, drive disc builds, wiki — Gachia',
     ja: 'ゼンレスゾーンゼロエージェント図鑑、Wエンジンデータ、ドライブディスクおすすめ、攻略百科 — Gachia',
   },
+  guihuan: {
+    zh: '归环角色图鉴、武器数据、攻略百科 — Gachia',
+    en: 'Guihuan character guide, weapon database, wiki — Gachia',
+    ja: '帰環キャラ図鑑、武器データ、攻略百科 — Gachia',
+  },
 };
 
 export function generateStaticParams() {

@@ -5,6 +5,7 @@ import {
   wuwaCharacters, wuwaGuides, wuwaWeapons, wuwaMaterials, wuwaEchoSets,
   starrailCharacters, starrailGuides, starrailRelicSets, starrailLightCones, starrailMaterials,
   zzzCharacters, zzzWeapons, zzzMaterials, zzzDriveDiscs,
+  guihuanCharacters, guihuanWeapons, guihuanMaterials,
 } from '@gachia/data';
 import type { MetadataRoute } from 'next';
 
@@ -264,6 +265,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: 'weekly',
         priority: 0.6,
+      });
+    }
+
+    // --- Guihuan detail pages ---
+    for (const char of guihuanCharacters) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/guihuan/characters/${char.id}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.7,
+      });
+    }
+
+    for (const weapon of guihuanWeapons) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/guihuan/weapons/${weapon.id}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.6,
+      });
+    }
+
+    for (const mat of guihuanMaterials) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/guihuan/items/${mat.id}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.5,
       });
     }
   }

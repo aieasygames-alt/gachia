@@ -10,7 +10,7 @@ export const SupportedLocaleSchema = z.enum(['zh', 'en', 'ja']);
 
 // --- Game ---
 
-export const GameIdSchema = z.enum(['genshin', 'starrail', 'wuwa', 'nte', 'zzz']);
+export const GameIdSchema = z.enum(['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan']);
 
 export const GameThemeSchema = z.object({
   primary: z.string().regex(/^#[0-9a-fA-F]{6}$/, 'Must be a valid hex color'),

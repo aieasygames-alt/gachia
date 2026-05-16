@@ -428,6 +428,66 @@ export type {
 
 export type { ZzzGuide, ZzzGuideFaq } from './games/zzz/guides';
 
+// ============================================================
+// 归环 (Guihuan) exports
+// ============================================================
+
+// Guihuan character exports
+export {
+  guihuanCharacters,
+  getGuihuanCharacterById,
+  getGuihuanCharacterName,
+  getGuihuanCharacterDescription,
+  getGuihuanCharacterImage,
+  getGuihuanCharacterTierReason,
+} from './games/guihuan/characters';
+
+// Guihuan weapon exports
+export {
+  guihuanWeapons,
+  getGuihuanWeaponById,
+  getGuihuanWeaponName,
+  getGuihuanWeaponEffect,
+  getGuihuanWeaponSource,
+} from './games/guihuan/weapons';
+
+// Guihuan material exports
+export {
+  guihuanMaterials,
+  getGuihuanMaterialName,
+  getGuihuanMaterialById,
+} from './games/guihuan/items';
+
+// Guihuan guide exports
+export {
+  guihuanGuides,
+  getGuihuanGuideTitle,
+  getGuihuanGuideContent,
+  getGuihuanGuideSummary,
+  getGuihuanGuideCategory,
+  getGuihuanGuideCategories,
+  getGuihuanGuidesByCategory,
+  getGuihuanGuideById,
+  getGuihuanGuideSlugs,
+  getGuihuanGuideFaqQuestion,
+  getGuihuanGuideFaqAnswer,
+  GUIHUAN_GUIDE_CATEGORIES,
+} from './games/guihuan/guides';
+
+export type {
+  GuihuanCharacter,
+  GuihuanWeapon,
+  GuihuanMaterial,
+  GuihuanSkillSet,
+  GuihuanSkillBase,
+  GuihuanActiveSkill,
+  GuihuanTeamComp,
+  GuihuanFaq,
+  GuihuanRecommendedBuild,
+} from './games/guihuan/types';
+
+export type { GuihuanGuide, GuihuanGuideFaq } from './games/guihuan/guides';
+
 // --- Data Access Helpers ---
 
 export interface GameData {
@@ -474,6 +534,13 @@ export function getGameData(gameId: GameId): GameData {
         items: zzzItems,
         tierLists: zzzTierLists,
       };
+    case 'guihuan':
+      return {
+        characters: guihuanCharacters,
+        weapons: guihuanWeapons,
+        items: guihuanItems,
+        tierLists: guihuanTierLists,
+      };
   }
 }
 
@@ -482,3 +549,4 @@ import { characters as starrailCharacters, weapons as starrailWeapons, items as 
 import { characters as wuwaCharacters, weapons as wuwaWeapons, items as wuwaItems, tierLists as wuwaTierLists } from './games/wuwa';
 import { characters as nteCharacters, weapons as nteWeapons, items as nteItems, tierLists as nteTierLists } from './games/nte';
 import { characters as zzzCharacters, weapons as zzzWeapons, items as zzzItems, tierLists as zzzTierLists } from './games/zzz';
+import { characters as guihuanCharacters, weapons as guihuanWeapons, items as guihuanItems, tierLists as guihuanTierLists } from './games/guihuan';

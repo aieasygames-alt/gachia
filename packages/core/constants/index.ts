@@ -18,7 +18,7 @@ export const LOCALE_NAMES: Record<SupportedLocale, string> = {
 // Games Registry
 // ============================================================
 
-export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz'];
+export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan'];
 
 export const GAMES: Record<GameId, GameModule> = {
   genshin: {
@@ -218,6 +218,46 @@ export const GAMES: Record<GameId, GameModule> = {
       map: false,
       guides: true,
       'drive-discs': true,
+      build: true,
+      compare: true,
+      teams: true,
+    },
+  },
+  guihuan: {
+    id: 'guihuan',
+    name: { zh: '归环', en: 'Guihuan', ja: '帰環' },
+    theme: {
+      primary: '#22d3ee',
+      accent: '#f472b6',
+      background: '#0a0a1a',
+      surface: '#111827',
+    },
+    elements: [
+      { id: 'flame', name: { zh: '烈焰', en: 'Flame', ja: '烈焔' }, color: '#ef4444' },
+      { id: 'frost', name: { zh: '霜寒', en: 'Frost', ja: '霜寒' }, color: '#67e8f9' },
+      { id: 'thunder', name: { zh: '雷霆', en: 'Thunder', ja: '雷霆' }, color: '#8b5cf6' },
+      { id: 'gale', name: { zh: '疾风', en: 'Gale', ja: '疾風' }, color: '#6ee7b7' },
+      { id: 'radiance', name: { zh: '光辉', en: 'Radiance', ja: '光輝' }, color: '#fbbf24' },
+      { id: 'void', name: { zh: '虚空', en: 'Void', ja: '虚空' }, color: '#a855f7' },
+    ],
+    rarities: [
+      { stars: 5, color: '#22d3ee', label: { zh: 'SSR', en: 'SSR', ja: 'SSR' } },
+      { stars: 4, color: '#a855f7', label: { zh: 'SR', en: 'SR', ja: 'SR' } },
+      { stars: 3, color: '#60a5fa', label: { zh: 'R', en: 'R', ja: 'R' } },
+    ],
+    stats: {
+      baseStats: ['hp', 'atk', 'def'],
+      subStats: ['hpPercent', 'atkPercent', 'defPercent', 'critRate', 'critDmg'],
+      specialStats: [],
+    },
+    routes: {
+      characters: true,
+      weapons: true,
+      items: true,
+      'tier-list': true,
+      calculator: false,
+      map: true,
+      guides: true,
       build: true,
       compare: true,
       teams: true,

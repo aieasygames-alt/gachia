@@ -4,9 +4,9 @@ import { GAMES, GAME_IDS, CATEGORY_LABELS } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
 
 const DESCRIPTIONS: Record<string, string> = {
-  zh: '一站式二次元开放世界游戏数据库，覆盖原神、崩铁、鸣潮、异环、绝区零等游戏的角色图鉴、武器数据、攻略百科。',
-  en: 'Multi-game open world wiki covering Genshin Impact, Honkai: Star Rail, Wuthering Waves, Infinity Nikki, and Zenless Zone Zero.',
-  ja: '原神・スターレイル・鳴潮・NTE・ゼンレスゾーンゼロなど、マルチゲームのオープンワールドWikiデータベース。',
+  zh: '一站式二次元开放世界游戏数据库，覆盖原神、崩铁、鸣潮、异环、绝区零、归环等游戏的角色图鉴、武器数据、攻略百科。',
+  en: 'Multi-game open world wiki covering Genshin Impact, Honkai: Star Rail, Wuthering Waves, Neverness to Everness, Zenless Zone Zero, and Guihuan.',
+  ja: '原神・スターレイル・鳴潮・NTE・ゼンレスゾーンゼロ・帰環など、マルチゲームのオープンワールドWikiデータベース。',
 };
 
 export async function generateMetadata({
