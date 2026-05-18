@@ -50,6 +50,16 @@ import {
   getZzzCharacterImage,
 } from '@gachia/data/games/zzz/characters';
 import type { ZzzCharacter } from '@gachia/data/games/zzz/types';
+import {
+  guihuanCharacters,
+  getGuihuanCharacterName,
+  getGuihuanCharacterImage,
+} from '@gachia/data/games/guihuan/characters';
+import {
+  guihuanWeapons,
+  getGuihuanWeaponName,
+} from '@gachia/data/games/guihuan/weapons';
+import type { GuihuanCharacter, GuihuanWeapon } from '@gachia/data/games/guihuan/types';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 // --- Constants ---
@@ -135,6 +145,7 @@ export function CompareClient({ gameId, locale }: { gameId: GameId; locale: Supp
   if (gameId === 'wuwa') return <WuWaCompare locale={locale} />;
   if (gameId === 'nte') return <NteCompare locale={locale} />;
   if (gameId === 'zzz') return <ZzzCompare locale={locale} />;
+  if (gameId === 'guihuan') return <GuihunCompare locale={locale} />;
   return <ComingSoon locale={locale} />;
 }
 
@@ -1079,6 +1090,85 @@ function ZzzCompare({ locale }: { locale: SupportedLocale }) {
               </div>
             </div>
           ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// =====================================================================
+// Guihun Compare
+// =====================================================================
+
+const GUIHUN_CMP_ELEMENT_COLORS: Record<string, string> = {
+  flame: '#ef4444', frost: '#67e8f9', thunder: '#8b5cf6',
+  gale: '#6ee7b7', radiance: '#fbbf24', void: '#a855f7',
+};
+const GUIHUN_CMP_ELEMENT_NAMES: Record<string, Record<string, string>> = {
+  flame: { zh: '焰', en: 'Flame', ja: '炎' }, frost: { zh: '霜', en: 'Frost', ja: '氷' },
+  thunder: { zh: '雷', en: 'Thunder', ja: '雷' }, gale: { zh: '岚', en: 'Gale', ja: '嵐' },
+  radiance: { zh: '光', en: 'Radiance', ja: '光' }, void: { zh: '虚', en: 'Void', ja: '虚' },
+};
+
+function GuihunCompare({ locale }: { locale: SupportedLocale }) {
+  const [char1, setChar1] = useState<GuihuanCharacter | null>(null);
+  const [char2, setChar2] = useState<GuihuanCharacter | null>(null);
+  const [selecting, setSelecting] = useState<1 | 2>(1);
+
+  function selectChar(c: GuihuanCharacter) {
+    if (selecting === 1) { setChar1(c); setSelecting(2); }
+    else { setChar2(c); setSelecting(1); }
+  }
+
+  return (
+    <div>
+      <p className="mb-4 text-sm text-game-text-muted">
+        {t(locale, '选择两位角色进行对比', 'Select two characters to compare', '2人のキャラを選択して比較')}
+        {selecting === 1 ? ` (${t(locale, '选择第一位', 'Select 1st', '1人目を選択')})` : ` (${t(locale, '选择第二位', 'Select 2nd', '2人目を選択')})`}
+      </p>
+
+      {/* Character grid */}
+      <div className="mb-6 grid grid-cols-4 gap-2 sm:grid-cols-6 md:grid-cols-8">
+        {guihuanCharacters.map((c) => (
+          <button key={c.id} onClick={() => selectChar(c)} className={`group flex flex-col items-center gap-1 rounded-lg border p-2 transition-all hover:border-game-primary ${char1?.id === c.id || char2?.id === c.id ? 'border-game-primary bg-game-surface' : 'border-game-border'}`}>
+            <CharacterAvatar src={getGuihuanCharacterImage(c)} alt={getGuihuanCharacterName(c, locale)} element={c.element} className="h-10 w-10 rounded object-cover" />
+            <span className="text-[10px] text-game-text text-center leading-tight">{getGuihuanCharacterName(c, locale)}</span>
+          </button>
+        ))}
+      </div>
+
+      {/* Comparison */}
+      {char1 && char2 && (
+        <div className="grid grid-cols-2 gap-4">
+          {[char1, char2].map((ch) => {
+            const build = ch.recommendedBuild;
+            const weapon = guihuanWeapons.find((w) => w.nameEn.toLowerCase() === build.bestWeaponEn?.toLowerCase()) ?? null;
+            return (
+              <div key={ch.id} className="rounded-lg border border-game-border bg-game-surface p-4">
+                <div className="mb-3 flex items-center gap-3">
+                  <CharacterAvatar src={getGuihuanCharacterImage(ch)} alt={getGuihuanCharacterName(ch, locale)} element={ch.element} className="h-14 w-14 rounded-lg object-cover" />
+                  <div>
+                    <h3 className="font-semibold text-game-text">{getGuihuanCharacterName(ch, locale)}</h3>
+                    <div className="flex gap-1 text-xs">
+                      <span className="rounded px-1" style={{ backgroundColor: GUIHUN_CMP_ELEMENT_COLORS[ch.element], color: '#fff' }}>
+                        {GUIHUN_CMP_ELEMENT_NAMES[ch.element]?.[locale] ?? ch.element}
+                      </span>
+                      <span className="text-yellow-500">{ch.rarity}★</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="space-y-1 text-sm">
+                  <p><span className="text-game-text-muted">{t(locale, '定位', 'Role', '役割')}:</span> {locale === 'zh' ? ch.role : ch.roleEn}</p>
+                  {weapon ? (
+                    <p><span className="text-game-text-muted">{t(locale, '武器', 'Weapon', '武器')}:</span> {getGuihuanWeaponName(weapon, locale)} <span className="text-[10px] text-yellow-500">{'★'.repeat(weapon.rarity)}</span></p>
+                  ) : (
+                    <p><span className="text-game-text-muted">{t(locale, '武器', 'Weapon', '武器')}:</span> {locale === 'zh' ? build.bestWeapon : build.bestWeaponEn}</p>
+                  )}
+                  <p><span className="text-game-text-muted">{t(locale, '强度评级', 'Tier Rating', 'ティア評価')}:</span> <span className="inline-flex items-center justify-center rounded px-2 py-0.5 text-xs font-bold text-white" style={{ backgroundColor: TIER_COLORS[ch.tierRank] || '#6b7280' }}>{ch.tierRank}</span></p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       )}
     </div>

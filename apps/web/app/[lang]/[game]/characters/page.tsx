@@ -1,8 +1,18 @@
-import { GAMES, CATEGORY_LABELS } from '@gachia/core';
+import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { nteCharacters, getNteCharacterName, getNteCharacterImage, genshinCharacters, getGenshinCharacterName, getGenshinCharacterImage, starrailCharacters, getStarRailCharacterName, getStarRailCharacterImage, wuwaCharacters, getWuWaCharacterName, getWuWaCharacterImage, zzzCharacters, getZzzCharacterName, getZzzCharacterImage } from '@gachia/data';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
+
+const BASE_URL = 'https://gachia.com';
+
+const CHAR_DESC: Record<string, Record<string, string>> = {
+  genshin: { zh: '原神全角色图鉴，包含五星、四星角色数据、技能、突破材料', en: 'Complete Genshin Impact character roster with stats, skills, and ascension materials', ja: '原神全キャラクター図鑑、ステータス、スキル、突破素材' },
+  starrail: { zh: '崩坏：星穹铁道全角色图鉴，包含属性、命途、技能数据', en: 'Complete Honkai: Star Rail character roster with elements, paths, and skill data', ja: 'スターレイル全キャラ図鑑、属性、運命、スキルデータ' },
+  wuwa: { zh: '鸣潮全角色图鉴，包含属性、武器类型、技能数据', en: 'Complete Wuthering Waves character roster with elements, weapon types, and skill data', ja: '鳴潮全キャラ図鑑、属性、武器タイプ、スキルデータ' },
+  nte: { zh: '异环全角色图鉴，包含S级、A级角色数据', en: 'Complete Neverness to Everness character roster with S-Rank and A-Rank data', ja: '異環全キャラ図鑑、S級、A級キャラデータ' },
+  zzz: { zh: '绝区零全代理人图鉴，包含属性、专精数据', en: 'Complete Zenless Zone Zero agent roster with attributes and specialties', ja: 'ゼンレスゾーンゼロ全エージェント図鑑、属性、専門データ' },
+};
 
 const NTE_ELEMENT_COLORS: Record<string, string> = {
   anima: '#4ade80', chaos: '#8b5cf6', cosmos: '#3b82f6',
@@ -49,6 +59,31 @@ const GENSHIN_WEAPON_LABELS: Record<string, Record<string, string>> = {
   bow: { zh: '弓', en: 'Bow', ja: '弓' },
   catalyst: { zh: '法器', en: 'Catalyst', ja: '法器' },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; game: string }>;
+}) {
+  const { lang, game } = await params;
+  const locale = lang as SupportedLocale;
+  const gameId = game as GameId;
+  const gameName = GAMES[gameId]?.name[locale];
+  const categoryLabel = CATEGORY_LABELS.characters?.[locale] ?? 'Characters';
+  const desc = CHAR_DESC[gameId]?.[locale];
+  const languages: Record<string, string> = {};
+  for (const l of LOCALES) {
+    const hreflang = l === 'zh' ? 'zh-Hans' : l;
+    languages[hreflang] = `${BASE_URL}/${l}/${gameId}/characters`;
+  }
+  languages['x-default'] = `${BASE_URL}/zh/${gameId}/characters`;
+
+  return {
+    title: `${categoryLabel} - ${gameName}`,
+    description: desc ?? `${categoryLabel} - ${gameName} Wiki`,
+    alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/characters`, languages },
+  };
+}
 
 export default async function CharactersPage({
   params,

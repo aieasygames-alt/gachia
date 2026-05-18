@@ -1,4 +1,4 @@
-import { GAMES, CATEGORY_LABELS } from '@gachia/core';
+import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
 import {
@@ -37,6 +37,32 @@ import {
   ZZZ_GUIDE_CATEGORIES,
 } from '@gachia/data';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
+
+const BASE_URL = 'https://gachia.com';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; game: string }>;
+}) {
+  const { lang, game } = await params;
+  const locale = lang as SupportedLocale;
+  const gameId = game as GameId;
+  const gameName = GAMES[gameId]?.name[locale];
+  const categoryLabel = CATEGORY_LABELS.guides?.[locale] ?? 'Guides';
+  const languages: Record<string, string> = {};
+  for (const l of LOCALES) {
+    const hreflang = l === 'zh' ? 'zh-Hans' : l;
+    languages[hreflang] = `${BASE_URL}/${l}/${gameId}/guides`;
+  }
+  languages['x-default'] = `${BASE_URL}/zh/${gameId}/guides`;
+
+  return {
+    title: `${categoryLabel} - ${gameName}`,
+    description: `${categoryLabel} - ${gameName} Wiki`,
+    alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/guides`, languages },
+  };
+}
 
 export default async function GuidesPage({
   params,

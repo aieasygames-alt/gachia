@@ -34,6 +34,12 @@ import {
   getZzzCharacterById,
 } from '@gachia/data/games/zzz/characters';
 import type { ZzzCharacter } from '@gachia/data/games/zzz/types';
+import {
+  guihuanCharacters,
+  getGuihuanCharacterName,
+  getGuihuanCharacterImage,
+} from '@gachia/data/games/guihuan/characters';
+import type { GuihuanCharacter } from '@gachia/data/games/guihuan/types';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 // --- Constants ---
@@ -131,6 +137,7 @@ export function TeamsClient({ gameId, locale }: { gameId: GameId; locale: Suppor
   if (gameId === 'wuwa') return <WuWaTeams locale={locale} />;
   if (gameId === 'nte') return <NteTeams locale={locale} />;
   if (gameId === 'zzz') return <ZzzTeams locale={locale} />;
+  if (gameId === 'guihuan') return <GuihuanTeams locale={locale} />;
   return <ComingSoon locale={locale} />;
 }
 
@@ -1005,6 +1012,65 @@ function ZzzTeams({ locale }: { locale: SupportedLocale }) {
                       return member ? (
                         <span key={memberId} className="flex items-center gap-1 rounded bg-game-surface px-2 py-0.5 text-xs text-game-primary">
                           {getZzzCharacterName(member, locale)}
+                        </span>
+                      ) : (
+                        <span key={memberId} className="rounded bg-game-surface px-2 py-0.5 text-xs text-game-text-muted">{memberId}</span>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// =====================================================================
+// Guihun Teams
+// =====================================================================
+
+const GUIHUN_TEAM_ELEMENT_COLORS: Record<string, string> = {
+  flame: '#ef4444', frost: '#67e8f9', thunder: '#8b5cf6',
+  gale: '#6ee7b7', radiance: '#fbbf24', void: '#a855f7',
+};
+
+function GuihuanTeams({ locale }: { locale: SupportedLocale }) {
+  const teamsWithComps = guihuanCharacters.filter((c) => c.teamComps.length > 0);
+
+  return (
+    <div>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {t(locale, `共 ${teamsWithComps.length} 位角色的推荐配队`, `${teamsWithComps.length} characters with recommended teams`, `${teamsWithComps.length}キャラのおすすめ編成`)}
+      </p>
+
+      <div className="space-y-4">
+        {teamsWithComps.map((char) => (
+          <div key={char.id} className="rounded-lg border border-game-border bg-game-surface p-4">
+            <div className="mb-3 flex items-center gap-3">
+              <CharacterAvatar src={getGuihuanCharacterImage(char)} alt={getGuihuanCharacterName(char, locale)} element={char.element} className="h-10 w-10 rounded-lg object-cover" />
+              <div>
+                <h3 className="font-semibold text-game-text">{getGuihuanCharacterName(char, locale)}</h3>
+                <span className="text-xs rounded px-1" style={{ backgroundColor: GUIHUN_TEAM_ELEMENT_COLORS[char.element], color: '#fff' }}>
+                  {char.elementEn}
+                </span>
+              </div>
+            </div>
+            <div className="space-y-3">
+              {char.teamComps.map((team, i) => (
+                <div key={i} className="rounded border border-game-border/50 bg-game-surface-alt p-3">
+                  <div className="mb-1 flex items-center gap-2">
+                    <span className="text-sm font-medium text-game-text">{locale === 'zh' ? team.name : team.nameEn}</span>
+                  </div>
+                  <p className="mb-2 text-xs text-game-text-muted">{locale === 'zh' ? team.description : team.descriptionEn}</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {team.members.map((memberId) => {
+                      const member = guihuanCharacters.find((c) => c.id === memberId);
+                      return member ? (
+                        <span key={memberId} className="flex items-center gap-1 rounded bg-game-surface px-2 py-0.5 text-xs text-game-primary">
+                          {getGuihuanCharacterName(member, locale)}
                         </span>
                       ) : (
                         <span key={memberId} className="rounded bg-game-surface px-2 py-0.5 text-xs text-game-text-muted">{memberId}</span>

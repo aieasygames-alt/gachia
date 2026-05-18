@@ -7,6 +7,16 @@ const ELEMENT_COLORS: Record<string, string> = {
   incantation: '#f59e0b', lakshana: '#ec4899', psyche: '#06b6d4',
 };
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; game: string }>;
+}) {
+  const { game } = await params;
+  if (game !== 'nte') return { robots: { index: false, follow: false } };
+  return {};
+}
+
 export default async function DiskSetsPage({
   params,
 }: {

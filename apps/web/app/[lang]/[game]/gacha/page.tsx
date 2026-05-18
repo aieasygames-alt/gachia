@@ -12,6 +12,16 @@ import {
 } from '@gachia/data';
 import { Link } from '@/lib/i18n/navigation';
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; game: string }>;
+}) {
+  const { game } = await params;
+  if (game !== 'nte') return { robots: { index: false, follow: false } };
+  return {};
+}
+
 export default async function GachaPage({
   params,
 }: {

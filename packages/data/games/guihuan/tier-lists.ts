@@ -1,10 +1,14 @@
 import type { TierList } from '@gachia/core';
 
-const updatedAt = '2025-05-13';
+const updatedAt = '2026-05-16';
 
-// Placeholder — no characters yet
 const characters = {
-  overall: {} as const,
+  overall: {
+    SS: ['chu', 'airu', 'liro', 'mingzhe'] as const,
+    S: ['yalun', 'heilian'] as const,
+    A: ['yaqi', 'zhuque', 'yelan'] as const,
+    B: ['suyin', 'guhan', 'chenxi'] as const,
+  } as const,
 } as const;
 
 type TierKey = 'SS' | 'S' | 'A' | 'B';

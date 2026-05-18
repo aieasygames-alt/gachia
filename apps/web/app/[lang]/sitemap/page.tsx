@@ -36,6 +36,8 @@ export default async function SitemapPage({
     { id: 'starrail', name: { zh: '崩坏：星穹铁道', en: 'Honkai: Star Rail', ja: '崩壊：スターレイル' } },
     { id: 'wuwa', name: { zh: '鸣潮', en: 'Wuthering Waves', ja: '鳴潮' } },
     { id: 'nte', name: { zh: '无限暖暖', en: 'Infinity Nikki', ja: '無限ニキ' } },
+    { id: 'zzz', name: { zh: '绝区零', en: 'Zenless Zone Zero', ja: 'ゼンレスゾーンゼロ' } },
+    { id: 'guihuan', name: { zh: '归环', en: 'Guihuan', ja: '帰環' } },
   ];
 
   const categories: { key: string; label: Record<string, string> }[] = [

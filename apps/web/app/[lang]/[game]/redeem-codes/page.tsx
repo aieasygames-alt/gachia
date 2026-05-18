@@ -2,6 +2,16 @@ import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { getActiveRedeemCodes, getRedeemCodeReward } from '@gachia/data';
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; game: string }>;
+}) {
+  const { game } = await params;
+  if (game !== 'nte') return { robots: { index: false, follow: false } };
+  return {};
+}
+
 export default async function RedeemCodesPage({
   params,
 }: {

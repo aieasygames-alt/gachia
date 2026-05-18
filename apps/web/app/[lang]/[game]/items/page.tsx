@@ -1,6 +1,8 @@
-import { GAMES, CATEGORY_LABELS } from '@gachia/core';
+import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { nteMaterials, getNteMaterialName, genshinMaterials, getGenshinMaterialName, starrailMaterials, getStarRailMaterialName, wuwaMaterials, getWuWaMaterialName, zzzMaterials, getZzzMaterialName } from '@gachia/data';
+
+const BASE_URL = 'https://gachia.com';
 
 const NTE_TYPE_LABELS: Record<string, Record<string, string>> = {
   guide: { zh: '猎手指南', en: 'Hunter Guide', ja: 'ハンターガイド' },
@@ -25,6 +27,30 @@ const GENSHIN_TYPE_LABELS: Record<string, Record<string, string>> = {
 };
 
 const RARITY_COLORS = ['', '#9ca3af', '#4ade80', '#60a5fa', '#a855f7', '#eab308'];
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; game: string }>;
+}) {
+  const { lang, game } = await params;
+  const locale = lang as SupportedLocale;
+  const gameId = game as GameId;
+  const gameName = GAMES[gameId]?.name[locale];
+  const categoryLabel = CATEGORY_LABELS.items?.[locale] ?? 'Items';
+  const languages: Record<string, string> = {};
+  for (const l of LOCALES) {
+    const hreflang = l === 'zh' ? 'zh-Hans' : l;
+    languages[hreflang] = `${BASE_URL}/${l}/${gameId}/items`;
+  }
+  languages['x-default'] = `${BASE_URL}/zh/${gameId}/items`;
+
+  return {
+    title: `${categoryLabel} - ${gameName}`,
+    description: `${categoryLabel} - ${gameName} Wiki`,
+    alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/items`, languages },
+  };
+}
 
 export default async function ItemsPage({
   params,

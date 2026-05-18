@@ -1,6 +1,8 @@
-import { GAMES, CATEGORY_LABELS } from '@gachia/core';
+import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { nteWeapons, getNteWeaponName, getNteWeaponEffect, genshinWeapons, getGenshinWeaponName, getGenshinWeaponEffect, starrailLightCones, getStarRailLightConeName, getStarRailLightConeEffect, wuwaWeapons, getWuWaWeaponName, getWuWaWeaponEffect, zzzWeapons, getZzzWeaponName, getZzzWeaponEffect } from '@gachia/data';
+
+const BASE_URL = 'https://gachia.com';
 
 const NTE_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
   solid: { zh: '固体', en: 'Solid', ja: 'ソリッド' },
@@ -19,6 +21,30 @@ const GENSHIN_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
 };
 
 const GENSHIN_RARITY_COLORS: Record<number, string> = { 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; game: string }>;
+}) {
+  const { lang, game } = await params;
+  const locale = lang as SupportedLocale;
+  const gameId = game as GameId;
+  const gameName = GAMES[gameId]?.name[locale];
+  const categoryLabel = CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons';
+  const languages: Record<string, string> = {};
+  for (const l of LOCALES) {
+    const hreflang = l === 'zh' ? 'zh-Hans' : l;
+    languages[hreflang] = `${BASE_URL}/${l}/${gameId}/weapons`;
+  }
+  languages['x-default'] = `${BASE_URL}/zh/${gameId}/weapons`;
+
+  return {
+    title: `${categoryLabel} - ${gameName}`,
+    description: `${categoryLabel} - ${gameName} Wiki`,
+    alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/weapons`, languages },
+  };
+}
 
 export default async function WeaponsPage({
   params,

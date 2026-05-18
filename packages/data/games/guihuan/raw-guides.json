@@ -1,1 +1,134 @@
-[]
+[
+  {
+    "id": "beginner-guide",
+    "title": "《归环》新手入门完全指南",
+    "titleEn": "Guihuan Complete Beginner Guide",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "从零开始了解《归环》的世界观、战斗系统、使灵养成和探索技巧，帮助新归还者快速上手。",
+    "summaryEn": "Learn everything about Guihuan's world, combat system, Spirit raising, and exploration tips from scratch.",
+    "content": "## 欢迎，归还者\n\n你来到故事的尾声，星球的未来仅剩42天。作为预言中的「归还者」，你将与神秘使灵「初」缔结契约，不断迈入42天的死亡循环，重塑因果，改写未来。\n\n### 基础操作\n\n- **移动与探索**: 使用滑空匣进行高速移动，支持陆/水/空三栖\n- **战斗切换**: 3人小队轮换战斗，每人拥有独立使灵\n- **骰子检定**: 与NPC对话和交互时，20面骰子决定结果\n\n### 使灵流派系统\n\n每个使灵拥有4种战斗流派，玩家选择2种搭配：\n\n1. **强攻流** — 高伤害输出\n2. **追击流** — 连锁追击，幸运加持\n3. **灵愈流** — 治疗和护盾\n4. **控场流** — 控制和减益\n\n### 养成优先级\n\n1. 先提升主C角色等级和技能\n2. 获取适配的武器\n3. 刷取合适的圣遗物/灵装\n4. 最后考虑副C和辅助的养成",
+    "contentEn": "## Welcome, Returner\n\nYou arrive at the end of the story, with only 42 days remaining for the planet. As the prophesied 'Returner,' you will form a contract with the mysterious Spirit 'Chu,' repeatedly entering the 42-day death loop to reshape causality and rewrite the future.\n\n### Basic Controls\n\n- **Movement & Exploration**: Use the Hover Glider for high-speed travel across land, water, and air\n- **Combat Switching**: 3-person party rotation, each with their own Spirit companion\n- **Dice Checks**: A D20 die determines outcomes during NPC interactions\n\n### Spirit Style System\n\nEach Spirit has 4 combat styles. Players equip 2:\n\n1. **Assault** — High damage output\n2. **Follow-up** — Chain attacks with luck bonuses\n3. **Healing** — Recovery and shields\n4. **Control** — CC and debuffs\n\n### Progression Priority\n\n1. Level up your main DPS and skills first\n2. Obtain suitable weapons\n3. Farm appropriate gear/artifacts\n4. Then invest in sub-DPS and supports",
+    "tags": ["新手", "入门", "基础", "Beginner", "Basics", "指南"],
+    "faq": [
+      {
+        "question": "What should I do first in Guihuan?",
+        "questionZh": "归环开局应该做什么？",
+        "answer": "Follow the main story to unlock all features, then focus on leveling your main DPS character.",
+        "answerZh": "跟随主线剧情解锁所有功能，然后集中资源提升主C角色的等级。"
+      },
+      {
+        "question": "How does the time loop work?",
+        "questionZh": "时间循环机制是怎样的？",
+        "answer": "The 42-day loop is the core story mechanic. After dying, you restart the loop but keep your memories and progress. Each loop reveals new story branches.",
+        "answerZh": "42天循环是核心剧情机制。死亡后重启循环但保留记忆和进度，每次循环揭示新的剧情分支。"
+      }
+    ]
+  },
+  {
+    "id": "download-install-guide",
+    "title": "《归环》下载安装指南 — 全平台下载地址",
+    "titleEn": "Download Guihuan — PC, Mobile Install Guide",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "提供《归环》在PC、安卓、iOS平台的下载安装教程和系统配置要求。",
+    "summaryEn": "Download and install Guihuan on PC, Android, and iOS platforms with system requirements.",
+    "content": "## 系统配置要求\n\n### PC端\n- 操作系统: Windows 10 64位以上\n- 处理器: Intel i5 / 同等AMD处理器\n- 内存: 8GB RAM\n- 显卡: NVIDIA GTX 1060 6GB\n- 存储空间: 40GB\n\n### 移动端\n- 安卓: 骁龙845及以上，6GB RAM\n- iOS: iPhone 12及以上，A14芯片\n\n## 下载方式\n\n1. **PC端**: 前往官网 gh.sarosgame.com 下载客户端\n2. **安卓**: TapTap、好游快爆等平台下载\n3. **iOS**: App Store 搜索「归环」",
+    "contentEn": "## System Requirements\n\n### PC\n- OS: Windows 10 64-bit or above\n- CPU: Intel i5 / equivalent AMD\n- RAM: 8GB\n- GPU: NVIDIA GTX 1060 6GB\n- Storage: 40GB\n\n### Mobile\n- Android: Snapdragon 845+, 6GB RAM\n- iOS: iPhone 12+, A14 chip\n\n## Download\n\n1. **PC**: Visit the official site gh.sarosgame.com\n2. **Android**: TapTap, 3839 and other platforms\n3. **iOS**: Search 'Guihuan' on the App Store",
+    "tags": ["下载", "安装", "平台", "Download", "Install", "新手"],
+    "faq": [
+      {
+        "question": "Is Guihuan available on all platforms?",
+        "questionZh": "归环支持哪些平台？",
+        "answer": "Guihuan supports PC, Android, and iOS with cross-save functionality.",
+        "answerZh": "归环支持PC、安卓和iOS平台，支持跨平台存档互通。"
+      }
+    ]
+  },
+  {
+    "id": "spirit-system-guide",
+    "title": "使灵系统详解 — 流派选择与搭配指南",
+    "titleEn": "Spirit System Guide — Style Selection and Synergy",
+    "category": "combat",
+    "categoryZh": "战斗攻略",
+    "categoryEn": "Combat",
+    "summary": "深入解析归环的使灵流派系统，教你如何选择最佳流派组合和队伍搭配。",
+    "summaryEn": "Deep dive into Guihuan's Spirit style system — learn how to choose the best style combinations and team synergies.",
+    "content": "## 使灵流派系统\n\n每个角色拥有独立的使灵，使灵拥有4种战斗流派。玩家从中选择2种搭配使用，不同的流派组合会显著改变角色的定位。\n\n### 流派详解\n\n**强攻流**\n- 特点：高额直接伤害\n- 适合：主C角色\n- 代表角色：明珏、初\n\n**追击流**\n- 特点：队友攻击后概率触发追加攻击\n- 适合：副C角色\n- 代表角色：朱雀\n\n**灵愈流**\n- 特点：治疗、护盾、增益\n- 适合：辅助角色\n- 代表角色：艾尔、素音\n\n**控场流**\n- 特点：冻结、眩晕、减益\n- 适合：控制角色\n- 代表角色：雅琪\n\n### 推荐搭配\n\n- 主C: 强攻 + 追击（最大化输出）\n- 副C: 追击 + 控场（辅助输出+控制）\n- 辅助: 灵愈 + 控场（保命+控场）",
+    "contentEn": "## Spirit Style System\n\nEach character has their own Spirit companion with 4 combat styles. Players choose 2 to equip — different combinations significantly change a character's role.\n\n### Style Breakdown\n\n**Assault Style**\n- Feature: High direct damage\n- Best for: Main DPS\n- Representative: Mingzhe, Chu\n\n**Follow-up Style**\n- Feature: Chance to trigger extra attacks after ally hits\n- Best for: Sub-DPS\n- Representative: Zhuque\n\n**Healing Style**\n- Feature: Healing, shields, buffs\n- Best for: Support\n- Representative: Airu, Suyin\n\n**Control Style**\n- Feature: Freeze, stun, debuffs\n- Best for: CC units\n- Representative: Yaqi\n\n### Recommended Combos\n\n- Main DPS: Assault + Follow-up (maximize damage)\n- Sub-DPS: Follow-up + Control (support damage + CC)\n- Support: Healing + Control (sustain + CC)",
+    "tags": ["使灵", "流派", "战斗", "Spirit", "Style", "Combat"],
+    "faq": [
+      {
+        "question": "Can I change Spirit styles later?",
+        "questionZh": "之后能更换使灵流派吗？",
+        "answer": "Yes, you can switch between styles freely outside of combat.",
+        "answerZh": "可以，在非战斗状态下可以自由切换流派搭配。"
+      }
+    ]
+  },
+  {
+    "id": "tier-list-guide",
+    "title": "《归环》开服角色节奏榜",
+    "titleEn": "Guihuan Launch Character Tier List",
+    "category": "tier-list",
+    "categoryZh": "节奏榜",
+    "categoryEn": "Tier List",
+    "summary": "归环开服全角色强度排行，包含各定位角色推荐和培养优先级。",
+    "summaryEn": "Complete launch character tier list for Guihuan, including role recommendations and build priority.",
+    "content": "## SS级角色\n\n- **初** (光辉/进攻) — 核心限定SSR，顶级输出+增益\n- **艾尔** (霜寒/灵愈) — 最强治疗，护盾+回复\n- **璃洛** (疾风/增益) — 最强辅助，全队增益\n- **明珏** (烈焰/进攻) — 顶级烈焰主C\n\n## S级角色\n\n- **亚伦** (雷霆/副攻) — 优秀后台输出+减防\n- **黑莲** (虚空/进攻) — 强力单体输出\n\n## A级角色\n\n- **雅琪** (霜寒/控制) — 最强控制角色\n- **朱雀** (烈焰/追击) — 优秀追击副C\n- **夜兰** (雷霆/进攻) — 最强四星输出\n\n## B级角色\n\n- **素音** (疾风/灵愈) — 前期免费治疗\n- **谷寒** (霜寒/副攻) — 减防辅助\n- **晨曦** (光辉/增益) — 四星增伤辅助",
+    "contentEn": "## SS Tier\n\n- **Chu** (Radiance/Attack) — Core limited SSR, top DPS + utility\n- **Airu** (Frost/Support) — Best healer, shields + sustain\n- **Liro** (Gale/Buffer) — Best support, team-wide buffs\n- **Mingzhe** (Flame/Attack) — Top Flame main DPS\n\n## S Tier\n\n- **Yalun** (Thunder/Sub-DPS) — Excellent off-field DPS + DEF shred\n- **Heilian** (Void/Attack) — Strong single-target DPS\n\n## A Tier\n\n- **Yaqi** (Frost/Control) — Best crowd control\n- **Zhuque** (Flame/Follow-up) — Solid follow-up sub-DPS\n- **Yelan** (Thunder/Attack) — Best 4-star DPS\n\n## B Tier\n\n- **Suyin** (Gale/Support) — Early free healer\n- **Guhan** (Frost/Sub-DPS) — DEF shred support\n- **Chenxi** (Radiance/Buffer) — 4-star ATK buffer",
+    "tags": ["节奏榜", "强度", "排行", "Tier List", "Ranking", "强度榜"],
+    "faq": [
+      {
+        "question": "Who should I pull first?",
+        "questionZh": "第一个应该抽谁？",
+        "answer": "Chu is the recommended first pull as the core story DPS. Airu is the best support to pull next.",
+        "answerZh": "推荐先抽初作为核心输出，其次抽艾尔获取最强治疗辅助。"
+      }
+    ]
+  },
+  {
+    "id": "exploration-guide",
+    "title": "亚达尔大陆探索指南 — 滑空匣与隐藏宝箱",
+    "titleEn": "Yadaer Exploration Guide — Hover Glider & Hidden Chests",
+    "category": "exploration",
+    "categoryZh": "探索攻略",
+    "categoryEn": "Exploration",
+    "summary": "全面介绍亚达尔大陆的探索系统，包括滑空匣使用技巧、灵脉采集、隐藏宝箱位置和NPC交互。",
+    "summaryEn": "Complete guide to exploring the continent of Yadaer, including Hover Glider tips, Spirit vein gathering, hidden chests, and NPC interactions.",
+    "content": "## 滑空匣系统\n\n滑空匣是上古灵器，点亮源晶后可使用。支持三种模式：\n\n- **陆地模式**: 高速滑行，无视小型障碍物\n- **水面模式**: 水面滑行，不消耗体力\n- **空中模式**: 短暂飞行，跨越地形\n\n### 使用技巧\n\n1. 在高处起飞可获得更长的空中滑翔距离\n2. 遇到灵脉加速点时冲过去可获得额外加速\n3. 滑空匣有耐久度，在灵脉节点可恢复\n\n## 隐藏宝箱\n\n亚达尔大陆遍布隐藏宝箱，部分需要：\n- 特定元素的颂灵术解锁\n- 骰子检定成功才能打开\n- 在特定时间循环日才会出现\n\n## NPC交互\n\n每个命名NPC都可交互，拥有完整的个人档案：\n- 姓名、年龄、职业\n- 性格和喜好\n- 随身物品（可偷窃）\n- 好感度系统",
+    "contentEn": "## Hover Glider System\n\nThe Hover Glider is an ancient Spirit tool activated by lighting source crystals. Three modes:\n\n- **Land Mode**: High-speed gliding, ignores small obstacles\n- **Water Mode**: Glide across water without stamina cost\n- **Air Mode**: Short flight, cross terrain gaps\n\n### Tips\n\n1. Launch from high ground for longer air glides\n2. Hit Spirit vein boost points for extra speed\n3. The glider has durability; recharge at Spirit vein nodes\n\n## Hidden Chests\n\nYadaer is filled with hidden chests. Some require:\n- Specific elemental Spirit chanting to unlock\n- Successful dice checks to open\n- Appearing only on specific loop days\n\n## NPC Interaction\n\nEvery named NPC is interactable with full profiles:\n- Name, age, profession\n- Personality and preferences\n- Carried items (can be pickpocketed)\n- Affinity system",
+    "tags": ["探索", "滑空匣", "宝箱", "Exploration", "Hover Glider", "Chests"],
+    "faq": [
+      {
+        "question": "How do I get the Hover Glider?",
+        "questionZh": "怎么获得滑空匣？",
+        "answer": "The Hover Glider is obtained during the main story quest in Chapter 1, after visiting the Spirit Academy.",
+        "answerZh": "滑空匣在第一章主线剧情中，访问颂灵学院后自动获得。"
+      }
+    ]
+  },
+  {
+    "id": "time-loop-mechanic",
+    "title": "时间循环机制详解 — 42天循环与分支剧情",
+    "titleEn": "Time Loop Mechanic Guide — 42-Day Cycle & Branching Story",
+    "category": "mechanic",
+    "categoryZh": "机制解析",
+    "categoryEn": "Mechanics",
+    "summary": "深入解析归环的核心时间循环机制，包括42天死亡循环、骰子检定、分支选择和多结局解锁。",
+    "summaryEn": "Deep dive into Guihuan's core time loop mechanic, including the 42-day death cycle, dice checks, branching choices, and multiple endings.",
+    "content": "## 42天循环机制\n\n归环的核心玩法围绕42天时间循环展开：\n\n- 每次循环持续游戏内42天\n- 死亡后重启循环，但保留角色养成进度\n- 每次循环可以做出不同选择，解锁新的剧情分支\n- 收集的线索和记忆会在循环间累积\n\n## 骰子检定系统\n\n游戏中几乎所有交互都可能触发D20骰子检定：\n\n- **说服NPC**: 基于魅力属性\n- **威吓NPC**: 基于力量属性\n- **观察线索**: 基于感知属性\n- **偷窃物品**: 基于敏捷属性\n\n### 特殊骰子机制\n\n- **重投**: 消耗预言点数重新投掷\n- **多投**: 投掷多个骰子取最高\n- **预言点数**: 通过探索和战斗获得\n\n## 分支剧情\n\n关键剧情节点会出现4个选项：\n\n1. 每个选择通向不同的发展\n2. 可以在循环中回溯体验所有分支\n3. 部分支线任务也有独立分支\n4. 累积足够线索可解锁隐藏结局",
+    "contentEn": "## 42-Day Cycle Mechanic\n\nGuihuan's core gameplay revolves around the 42-day time loop:\n\n- Each loop lasts 42 in-game days\n- Death restarts the loop, but character progression is retained\n- Each loop lets you make different choices, unlocking new story branches\n- Clues and memories accumulate across loops\n\n## Dice Check System\n\nNearly all interactions can trigger a D20 dice check:\n\n- **Persuade NPCs**: Based on Charisma stat\n- **Intimidate NPCs**: Based on Strength stat\n- **Observe Clues**: Based on Perception stat\n- **Pickpocket Items**: Based on Agility stat\n\n### Special Dice Mechanics\n\n- **Reroll**: Spend prediction points to reroll\n- **Multi-roll**: Roll multiple dice, take the highest\n- **Prediction Points**: Earned through exploration and combat\n\n## Branching Story\n\nKey story nodes offer 4 choices:\n\n1. Each choice leads to different developments\n2. You can revisit and experience all branches across loops\n3. Some side quests have independent branches\n4. Accumulating enough clues unlocks hidden endings",
+    "tags": ["时间循环", "机制", "骰子", "分支", "Time Loop", "Mechanic", "Dice"],
+    "faq": [
+      {
+        "question": "Do I lose progress when the loop resets?",
+        "questionZh": "循环重置会丢失进度吗？",
+        "answer": "No, your character level, items, and abilities persist across loops. Only story progress resets, which is intentional.",
+        "answerZh": "不会，角色等级、物品和能力在循环间保留。只有剧情进度会重置，这是设计如此。"
+      }
+    ]
+  }
+]

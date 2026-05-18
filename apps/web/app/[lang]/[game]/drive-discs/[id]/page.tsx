@@ -1,21 +1,54 @@
-import { GAMES, CATEGORY_LABELS } from '@gachia/core';
+import { GAMES, LOCALES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { getZzzDriveDiscById, getZzzDriveDiscName, getZzzDriveDiscDesc2pc, getZzzDriveDiscDesc4pc, getZzzCharacterName } from '@gachia/data';
 import { notFound } from 'next/navigation';
+
+const BASE_URL = 'https://gachia.com';
 
 const ELEMENT_COLORS: Record<string, string> = {
   physical: '#9ca3af', fire: '#ef4444', ice: '#67e8f9', electric: '#8b5cf6', ether: '#ec4899',
 };
 
 export function generateStaticParams() {
-  return [
-    { id: 'chaos-jazz' }, { id: 'polar-metal' }, { id: 'fanged-metal' },
-    { id: 'shockstar-disco' }, { id: 'freedom-blues' }, { id: 'hormone-punk' },
-    { id: 'woodpecker-electro' }, { id: 'swing-jazz' }, { id: 'soul-rock' },
-    { id: 'inferno-metal' }, { id: 'thunder-metal' }, { id: 'puffer-electro' },
-    { id: 'branch-blade-song' }, { id: 'chaotic-metal' }, { id: 'proto-punk' },
-    { id: 'shadow-harmony' }, { id: 'astral-voice' }, { id: 'phaethon-melody' },
+  const ids = [
+    'chaos-jazz', 'polar-metal', 'fanged-metal',
+    'shockstar-disco', 'freedom-blues', 'hormone-punk',
+    'woodpecker-electro', 'swing-jazz', 'soul-rock',
+    'inferno-metal', 'thunder-metal', 'puffer-electro',
+    'branch-blade-song', 'chaotic-metal', 'proto-punk',
+    'shadow-harmony', 'astral-voice', 'phaethon-melody',
   ];
+  return LOCALES.flatMap((lang) => ids.map((id) => ({ lang, game: 'zzz', id })));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; game: string; id: string }>;
+}) {
+  const { lang, game, id } = await params;
+  const locale = lang as SupportedLocale;
+  const gameId = game as GameId;
+  if (gameId !== 'zzz') return {};
+
+  const disc = getZzzDriveDiscById(id);
+  if (!disc) return {};
+
+  const name = getZzzDriveDiscName(disc, locale);
+  const desc = getZzzDriveDiscDesc2pc(disc, locale);
+  const gameName = GAMES.zzz.name[locale];
+  const languages: Record<string, string> = {};
+  for (const l of ['zh', 'en', 'ja'] as const) {
+    const hreflang = l === 'zh' ? 'zh-Hans' : l;
+    languages[hreflang] = `${BASE_URL}/${l}/zzz/drive-discs/${id}`;
+  }
+  languages['x-default'] = `${BASE_URL}/zh/zzz/drive-discs/${id}`;
+
+  return {
+    title: `${name} - ${gameName} Wiki`,
+    description: desc ? desc.slice(0, 160) : `${name} - ${gameName}驱动盘数据`,
+    alternates: { canonical: `${BASE_URL}/${locale}/zzz/drive-discs/${id}`, languages },
+  };
 }
 
 export default async function DriveDiscDetailPage({

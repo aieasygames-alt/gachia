@@ -6,6 +6,16 @@ const ELEMENT_COLORS: Record<string, string> = {
   physical: '#9ca3af', fire: '#ef4444', ice: '#67e8f9', electric: '#8b5cf6', ether: '#ec4899',
 };
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; game: string }>;
+}) {
+  const { game } = await params;
+  if (game !== 'zzz') return { robots: { index: false, follow: false } };
+  return {};
+}
+
 export default async function DriveDiscsPage({
   params,
 }: {

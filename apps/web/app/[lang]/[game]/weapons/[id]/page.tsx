@@ -54,6 +54,18 @@ export async function generateStaticParams() {
   ]);
 }
 
+const BASE_URL = 'https://gachia.com';
+
+function buildAlternates(locale: string, gameId: string, id: string) {
+  const languages: Record<string, string> = {};
+  for (const l of ['zh', 'en', 'ja'] as const) {
+    const hreflang = l === 'zh' ? 'zh-Hans' : l;
+    languages[hreflang] = `${BASE_URL}/${l}/${gameId}/weapons/${id}`;
+  }
+  languages['x-default'] = `${BASE_URL}/zh/${gameId}/weapons/${id}`;
+  return { canonical: `${BASE_URL}/${locale}/${gameId}/weapons/${id}`, languages };
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -67,22 +79,46 @@ export async function generateMetadata({
   if (gameId === 'genshin') {
     const w = getGenshinWeaponById(id);
     if (!w) return {};
-    return { title: `${getGenshinWeaponName(w, locale)} - ${gameName} Wiki` };
+    const name = getGenshinWeaponName(w, locale);
+    const effect = getGenshinWeaponEffect(w, locale);
+    return {
+      title: `${name} - ${gameName} Wiki`,
+      description: effect ? effect.description.slice(0, 160) : `${name} - ${gameName}武器数据`,
+      alternates: buildAlternates(locale, gameId, id),
+    };
   }
   if (gameId === 'starrail') {
     const w = getStarRailLightConeById(id);
     if (!w) return {};
-    return { title: `${getStarRailLightConeName(w, locale)} - ${gameName} Wiki` };
+    const name = getStarRailLightConeName(w, locale);
+    const effect = getStarRailLightConeEffect(w, locale);
+    return {
+      title: `${name} - ${gameName} Wiki`,
+      description: effect ? effect.description.slice(0, 160) : `${name} - ${gameName}光锥数据`,
+      alternates: buildAlternates(locale, gameId, id),
+    };
   }
   if (gameId === 'wuwa') {
     const w = getWuWaWeaponById(id);
     if (!w) return {};
-    return { title: `${getWuWaWeaponName(w, locale)} - ${gameName} Wiki` };
+    const name = getWuWaWeaponName(w, locale);
+    const effect = getWuWaWeaponEffect(w, locale);
+    return {
+      title: `${name} - ${gameName} Wiki`,
+      description: effect ? effect.description.slice(0, 160) : `${name} - ${gameName}武器数据`,
+      alternates: buildAlternates(locale, gameId, id),
+    };
   }
   if (gameId === 'nte') {
     const w = getNteWeaponById(id);
     if (!w) return {};
-    return { title: `${getNteWeaponName(w, locale)} - ${gameName} Wiki` };
+    const name = getNteWeaponName(w, locale);
+    const effect = getNteWeaponEffect(w, locale);
+    return {
+      title: `${name} - ${gameName} Wiki`,
+      description: effect ? effect.description.slice(0, 160) : `${name} - ${gameName}武器数据`,
+      alternates: buildAlternates(locale, gameId, id),
+    };
   }
   return {};
 }

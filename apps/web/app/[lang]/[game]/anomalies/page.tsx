@@ -3,6 +3,16 @@ import type { GameId, SupportedLocale } from '@gachia/core';
 import { nteAnomalies, getAnomalyName } from '@gachia/data';
 import type { NteAnomaly } from '@gachia/data';
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; game: string }>;
+}) {
+  const { game } = await params;
+  if (game !== 'nte') return { robots: { index: false, follow: false } };
+  return {};
+}
+
 export default async function AnomaliesPage({
   params,
 }: {

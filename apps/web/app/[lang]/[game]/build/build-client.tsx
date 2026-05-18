@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { GAMES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import {
@@ -56,6 +56,17 @@ import {
   getZzzCharacterImage,
 } from '@gachia/data/games/zzz/characters';
 import type { ZzzCharacter } from '@gachia/data/games/zzz/types';
+import {
+  guihuanCharacters,
+  getGuihuanCharacterName,
+  getGuihuanCharacterImage,
+} from '@gachia/data/games/guihuan/characters';
+import {
+  guihuanWeapons,
+  getGuihuanWeaponName,
+  getGuihuanWeaponEffect,
+} from '@gachia/data/games/guihuan/weapons';
+import type { GuihuanCharacter, GuihuanWeapon } from '@gachia/data/games/guihuan/types';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 // --- Constants ---
@@ -153,6 +164,7 @@ export function BuildClient({ gameId, locale }: { gameId: GameId; locale: Suppor
   if (gameId === 'wuwa') return <WuWaBuildRecommender locale={locale} />;
   if (gameId === 'nte') return <NteBuildRecommender locale={locale} />;
   if (gameId === 'zzz') return <ZzzBuildRecommender locale={locale} />;
+  if (gameId === 'guihuan') return <GuihunBuildRecommender locale={locale} />;
   return <ComingSoon locale={locale} />;
 }
 
@@ -169,13 +181,13 @@ function GenshinBuildRecommender({ locale }: { locale: SupportedLocale }) {
   const [shareCopied, setShareCopied] = useState(false);
 
   // Read character ID from URL hash on mount
-  useState(() => {
+  useEffect(() => {
     const hash = window.location.hash.slice(1);
     if (hash) {
       const char = genshinCharacters.find(c => c.id === hash);
       if (char) { setSelectedChar(char); setShowSelector(false); }
     }
-  });
+  }, []);
 
   const filtered = useMemo(() => {
     let chars = genshinCharacters;
@@ -459,13 +471,13 @@ function StarRailBuildRecommender({ locale }: { locale: SupportedLocale }) {
   const [filterElement, setFilterElement] = useState<string>('all');
   const [shareCopied, setShareCopied] = useState(false);
 
-  useState(() => {
+  useEffect(() => {
     const hash = window.location.hash.slice(1);
     if (hash) {
       const char = starrailCharacters.find(c => c.id === hash);
       if (char) { setSelectedChar(char); setShowSelector(false); }
     }
-  });
+  }, []);
   const [filterRarity, setFilterRarity] = useState<string>('all');
 
   const filtered = useMemo(() => {
@@ -731,13 +743,13 @@ function WuWaBuildRecommender({ locale }: { locale: SupportedLocale }) {
   const [filterElement, setFilterElement] = useState<string>('all');
   const [shareCopied, setShareCopied] = useState(false);
 
-  useState(() => {
+  useEffect(() => {
     const hash = window.location.hash.slice(1);
     if (hash) {
       const char = wuwaCharacters.find(c => c.id === hash);
       if (char) { setSelectedChar(char); setShowSelector(false); }
     }
-  });
+  }, []);
 
   const filtered = useMemo(() => {
     let chars = wuwaCharacters;
@@ -924,13 +936,13 @@ function NteBuildRecommender({ locale }: { locale: SupportedLocale }) {
   const [filterElement, setFilterElement] = useState<string>('all');
   const [shareCopied, setShareCopied] = useState(false);
 
-  useState(() => {
+  useEffect(() => {
     const hash = window.location.hash.slice(1);
     if (hash) {
       const char = nteCharacters.find(c => c.id === hash);
       if (char) { setSelectedChar(char); setShowSelector(false); }
     }
-  });
+  }, []);
 
   const filtered = useMemo(() => {
     let chars = nteCharacters;
@@ -1133,6 +1145,22 @@ const ZZZ_SPECIALTY_LABELS: Record<string, Record<string, string>> = {
   defense: { zh: '防护', en: 'Defense', ja: '防護' },
 };
 
+// --- Guihuan Constants ---
+
+const GUIHUAN_ELEMENTS = ['flame', 'frost', 'thunder', 'gale', 'radiance', 'void'] as const;
+const GUIHUAN_ELEMENT_COLORS: Record<string, string> = {
+  flame: '#ef4444', frost: '#67e8f9', thunder: '#8b5cf6',
+  gale: '#6ee7b7', radiance: '#fbbf24', void: '#a855f7',
+};
+const GUIHUAN_ELEMENT_NAMES: Record<string, Record<string, string>> = {
+  flame: { zh: '烈焰', en: 'Flame', ja: '烈焔' },
+  frost: { zh: '霜寒', en: 'Frost', ja: '霜寒' },
+  thunder: { zh: '雷霆', en: 'Thunder', ja: '雷霆' },
+  gale: { zh: '疾风', en: 'Gale', ja: '疾風' },
+  radiance: { zh: '光辉', en: 'Radiance', ja: '光輝' },
+  void: { zh: '虚空', en: 'Void', ja: '虚空' },
+};
+
 function ZzzBuildRecommender({ locale }: { locale: SupportedLocale }) {
   const [selectedChar, setSelectedChar] = useState<ZzzCharacter | null>(null);
   const [elementFilter, setElementFilter] = useState<string>('all');
@@ -1216,6 +1244,112 @@ function BuildInfoRow({ label, value }: { label: string; value: string }) {
     <div>
       <span className="text-xs text-game-text-muted">{label}</span>
       <p className="text-game-text">{value}</p>
+    </div>
+  );
+}
+
+// =====================================================================
+// Guihun Build Recommender
+// =====================================================================
+
+function GuihunBuildRecommender({ locale }: { locale: SupportedLocale }) {
+  const [selectedChar, setSelectedChar] = useState<GuihuanCharacter | null>(null);
+  const [elementFilter, setElementFilter] = useState<string>('all');
+
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      const char = guihuanCharacters.find(c => c.id === hash);
+      if (char) setSelectedChar(char);
+    }
+  }, []);
+
+  const filtered = useMemo(() => {
+    if (elementFilter === 'all') return guihuanCharacters;
+    return guihuanCharacters.filter((c) => c.element === elementFilter);
+  }, [elementFilter]);
+
+  const resolvedWeapon = selectedChar ? guihuanWeapons.find((w) => w.nameEn.toLowerCase() === selectedChar.recommendedBuild.bestWeaponEn.toLowerCase()) ?? null : null;
+
+  return (
+    <div>
+      <div className="mb-6">
+        <h2 className="mb-2 text-lg font-semibold text-game-primary">
+          {t(locale, '选择角色查看推荐配装', 'Select a character to view recommended build', 'キャラを選択してビルドを確認')}
+        </h2>
+        <div className="flex flex-wrap gap-2">
+          <button onClick={() => setElementFilter('all')} className={`rounded-md px-3 py-1 text-xs font-medium ${elementFilter === 'all' ? 'bg-game-primary text-game-bg' : 'bg-game-surface-alt text-game-text-muted'}`}>{t(locale, '全部', 'All', '全部')}</button>
+          {GUIHUAN_ELEMENTS.map((el) => (
+            <button key={el} onClick={() => setElementFilter(el)} className={`rounded-md px-3 py-1 text-xs font-medium ${elementFilter === el ? 'text-white' : 'bg-game-surface-alt text-game-text-muted'}`} style={elementFilter === el ? { backgroundColor: GUIHUAN_ELEMENT_COLORS[el] } : {}}>{GUIHUAN_ELEMENT_NAMES[el]?.[locale] ?? el}</button>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-6 lg:flex-row">
+        {/* Character grid */}
+        <div className="grid flex-1 grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
+          {filtered.map((char) => (
+            <button key={char.id} onClick={() => setSelectedChar(char)} className={`flex flex-col items-center gap-1 rounded-lg border-2 p-2 transition-colors ${selectedChar?.id === char.id ? 'border-game-primary bg-game-surface-alt' : 'border-transparent bg-game-surface hover:border-game-border'}`}>
+              <CharacterAvatar src={getGuihuanCharacterImage(char)} alt={getGuihuanCharacterName(char, locale)} element={char.element} className="h-12 w-12 rounded-lg object-cover" />
+              <span className="text-xs font-medium text-game-text truncate w-full text-center">{getGuihuanCharacterName(char, locale)}</span>
+              <div className="flex gap-1">
+                <span className={`text-[10px] px-1 rounded ${char.rarity === 5 ? 'bg-cyan-900/40 text-cyan-300' : 'bg-purple-900/40 text-purple-300'}`}>{char.rarity === 5 ? 'SSR' : 'SR'}</span>
+                <span className="text-[10px] px-1 rounded" style={{ backgroundColor: GUIHUAN_ELEMENT_COLORS[char.element], color: '#fff' }}>{GUIHUAN_ELEMENT_NAMES[char.element]?.[locale] ?? char.element}</span>
+              </div>
+            </button>
+          ))}
+        </div>
+
+        {/* Build details */}
+        <div className="lg:w-80">
+          {selectedChar ? (
+            <div className="rounded-lg border border-game-border bg-game-surface p-4">
+              <div className="mb-3 flex items-center gap-3">
+                <CharacterAvatar src={getGuihuanCharacterImage(selectedChar)} alt={getGuihuanCharacterName(selectedChar, locale)} element={selectedChar.element} className="h-12 w-12 rounded-lg object-cover" />
+                <div>
+                  <h3 className="font-semibold text-game-text">{getGuihuanCharacterName(selectedChar, locale)}</h3>
+                  <div className="flex gap-1 text-xs text-game-text-muted">
+                    <span>{selectedChar.rarity === 5 ? 'SSR' : 'SR'}</span>
+                    <span>·</span>
+                    <span>{GUIHUAN_ELEMENT_NAMES[selectedChar.element]?.[locale] ?? selectedChar.element}</span>
+                    <span>·</span>
+                    <span>{selectedChar.roleEn}</span>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-2 text-sm">
+                <BuildInfoRow label={t(locale, '最佳武器', 'Best Weapon', 'ベスト武器')} value={locale === 'zh' ? selectedChar.recommendedBuild.bestWeapon : selectedChar.recommendedBuild.bestWeaponEn} />
+                {resolvedWeapon && (
+                  <div>
+                    <span className="text-xs text-game-text-muted">{t(locale, '武器效果', 'Weapon Effect', '武器効果')}</span>
+                    <p className="text-xs text-game-text">{locale === 'zh' ? resolvedWeapon.effectDescription : resolvedWeapon.effectDescriptionEn}</p>
+                  </div>
+                )}
+                {selectedChar.recommendedBuild.alternativeWeapons.length > 0 && (
+                  <BuildInfoRow label={t(locale, '备选', 'Alt', '代替')} value={(locale === 'zh' ? selectedChar.recommendedBuild.alternativeWeapons : selectedChar.recommendedBuild.alternativeWeapons).join(', ')} />
+                )}
+                <BuildInfoRow label={t(locale, '主属性', 'Main Stats', 'メインステータス')} value={Object.values(locale === 'zh' ? selectedChar.recommendedBuild.mainStats : selectedChar.recommendedBuild.mainStatsEn).join(' / ')} />
+                <BuildInfoRow label={t(locale, '副属性', 'Sub Stats', 'サブステータス')} value={(locale === 'zh' ? selectedChar.recommendedBuild.subStatPriority : selectedChar.recommendedBuild.subStatPriorityEn).join(' > ')} />
+              </div>
+              {selectedChar.teamComps.length > 0 && (
+                <div className="mt-4">
+                  <h4 className="mb-2 text-sm font-semibold text-game-text">{t(locale, '推荐配队', 'Recommended Teams', 'おすすめパーティ')}</h4>
+                  {selectedChar.teamComps.map((team, i) => (
+                    <div key={i} className="mb-2 rounded border border-game-border bg-game-surface-alt p-2 text-xs">
+                      <p className="font-medium text-game-text">{locale === 'zh' ? team.name : team.nameEn}</p>
+                      <p className="text-game-text-muted">{team.members.join(', ')}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ) : (
+            <div className="flex h-48 items-center justify-center rounded-lg border border-dashed border-game-border text-sm text-game-text-muted">
+              {t(locale, '请选择一个角色', 'Select a character', 'キャラを選択してください')}
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,8 +1,10 @@
-import { GAMES, CATEGORY_LABELS } from '@gachia/core';
+import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { nteCharacters, getNteCharacterName, getNteCharacterImage, zzzCharacters, getZzzCharacterName, getZzzCharacterImage, getGameData } from '@gachia/data';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
+
+const BASE_URL = 'https://gachia.com';
 import { GenshinTierListClient } from './genshin-tier-client';
 import { StarRailTierListClient } from './starrail-tier-client';
 import { WuWaTierListClient } from './wuwa-tier-client';
@@ -21,6 +23,30 @@ const TIER_STYLES: Record<string, { bg: string; text: string; border: string }> 
   B: { bg: 'bg-gray-800/50', text: 'text-gray-400', border: 'border-gray-500/30' },
   C: { bg: 'bg-gray-800/30', text: 'text-gray-500', border: 'border-gray-600/30' },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; game: string }>;
+}) {
+  const { lang, game } = await params;
+  const locale = lang as SupportedLocale;
+  const gameId = game as GameId;
+  const gameName = GAMES[gameId]?.name[locale];
+  const categoryLabel = CATEGORY_LABELS['tier-list']?.[locale] ?? 'Tier List';
+  const languages: Record<string, string> = {};
+  for (const l of LOCALES) {
+    const hreflang = l === 'zh' ? 'zh-Hans' : l;
+    languages[hreflang] = `${BASE_URL}/${l}/${gameId}/tier-list`;
+  }
+  languages['x-default'] = `${BASE_URL}/zh/${gameId}/tier-list`;
+
+  return {
+    title: `${categoryLabel} - ${gameName}`,
+    description: `${categoryLabel} - ${gameName} Wiki`,
+    alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/tier-list`, languages },
+  };
+}
 
 export default async function TierListPage({
   params,

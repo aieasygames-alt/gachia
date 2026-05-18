@@ -1,1 +1,1059 @@
-[]
+[
+  {
+    "id": "chu",
+    "name": "初",
+    "nameEn": "Chu",
+    "nameJa": "初",
+    "element": "radiance",
+    "elementEn": "Radiance",
+    "role": "进攻",
+    "roleEn": "Attack",
+    "rarity": 5,
+    "description": "与归还者缔结契约的神秘人形使灵，共享时序的权能。她的存在本身就是真律的具现，是打破42天死亡循环的关键。",
+    "descriptionEn": "A mysterious humanoid Spirit who forms a contract with the Returner, sharing the power of chronosequence. Her very existence is the embodiment of True Law — the key to breaking the 42-day death loop.",
+    "faq": [
+      {
+        "question": "Is Chu good in Guihuan?",
+        "questionZh": "初值得培养吗？",
+        "answer": "Chu is the signature SSR Attack character and the story's central Spirit companion. She excels as a main DPS with strong Radiance damage and team-wide buffs.",
+        "answerZh": "初是归环的核心SSR进攻角色，也是故事中最关键的使灵伙伴。作为主C拥有极强的光辉伤害和全队增益能力。"
+      },
+      {
+        "question": "What is Chu's best team comp?",
+        "questionZh": "初的最佳配队是什么？",
+        "answer": "Chu pairs best with Yalun for elemental shred and Lianxi for healing, creating a balanced team.",
+        "answerZh": "初与亚伦搭配提供元素减抗，加上涟曦的治疗，组成均衡配队。"
+      }
+    ],
+    "relatedCharacters": ["yalun", "liro", "airu"],
+    "tierRank": "SS",
+    "tierReason": "Core story character with top-tier DPS and utility, best limited SSR at launch.",
+    "tierReasonZh": "核心剧情角色，拥有顶级输出和辅助能力，开服最强限定SSR。",
+    "skills": {
+      "normalAttack": {
+        "name": "光阴连斩",
+        "nameEn": "Chrono Slash",
+        "nameJa": "光陰連斬",
+        "description": "进行至多四段的连续剑击，造成光辉元素伤害。",
+        "descriptionEn": "Performs up to 4 consecutive sword strikes, dealing Radiance elemental damage."
+      },
+      "skill": {
+        "name": "时序·回溯",
+        "nameEn": "Chronosequence: Rewind",
+        "nameJa": "時序・回溯",
+        "description": "展开时序领域，对范围内敌人造成光辉元素伤害，并为队伍中所有角色施加「时光标记」，提升攻击力。",
+        "descriptionEn": "Unfolds a chronosequence field, dealing Radiance damage to enemies in range and granting 'Temporal Mark' to all party members, boosting ATK.",
+        "cooldown": "10s",
+        "cost": "40 灵能"
+      },
+      "ultimate": {
+        "name": "轮回·破晓",
+        "nameEn": "Samsara: Dawnbreak",
+        "nameJa": "輪廻・破暁",
+        "description": "引爆时序之力，对前方大范围敌人造成高额光辉元素伤害。命中带有「时光标记」的敌人时，额外触发一次光辉爆发。",
+        "descriptionEn": "Detonates chronosequence power, dealing massive Radiance damage in a wide area ahead. Enemies with 'Temporal Mark' trigger an additional Radiance burst.",
+        "cost": "80 灵能"
+      },
+      "passive": {
+        "name": "初醒之契",
+        "nameEn": "Pact of First Awakening",
+        "nameJa": "初醒の契約",
+        "description": "当初触发完美闪避后，使灵「初」的下一次攻击必定暴击，并恢复10点灵能。",
+        "descriptionEn": "After Chu triggers a Perfect Dodge, her Spirit's next attack is guaranteed to crit and recovers 10 Spirit Energy."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "时序之刃",
+      "bestWeaponEn": "Blade of Chronosequence",
+      "alternativeWeapons": ["蚀之终焉", "晨曦赞歌"],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "光辉伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Radiance DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": ["暴击率", "暴击伤害", "攻击力%", "灵能充能"],
+      "subStatPriorityEn": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"]
+    },
+    "teamComps": [
+      {
+        "name": "时序核心队",
+        "nameEn": "Chrono Core Team",
+        "members": ["chu", "yalun", "liro", "airu"],
+        "description": "以初为核心输出，亚伦提供元素减抗，璃洛提供增益，艾尔提供治疗和护盾。",
+        "descriptionEn": "Chu as core DPS, Yalun provides elemental shred, Liro provides buffs, and Airu provides healing and shields."
+      },
+      {
+        "name": "光辉双C队",
+        "nameEn": "Radiance Dual DPS",
+        "members": ["chu", "mingzhe", "liro", "airu"],
+        "description": "初与明珏双光辉输出，璃洛增伤，艾尔保证生存。",
+        "descriptionEn": "Chu and Mingzhe as dual Radiance DPS, Liro for damage amplification, Airu for sustain."
+      }
+    ],
+    "image": "/images/guihuan/characters/chu.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  },
+  {
+    "id": "airu",
+    "name": "艾尔",
+    "nameEn": "Airu",
+    "nameJa": "エイル",
+    "element": "frost",
+    "elementEn": "Frost",
+    "role": "灵愈",
+    "roleEn": "Support",
+    "rarity": 5,
+    "description": "亚达尔大陆最年轻的灵愈大师，能感知灵脉的涌动并引导霜寒之力治愈伤痛。性格温柔但内心坚韧，是归还者最可靠的后援。",
+    "descriptionEn": "The youngest Spirit Healer master on the continent of Yadaer, capable of sensing spirit vein fluctuations and channeling Frost power to heal wounds. Gentle in demeanor but with an unyielding spirit — the Returner's most reliable ally.",
+    "faq": [
+      {
+        "question": "Is Airu worth pulling?",
+        "questionZh": "艾尔值得抽吗？",
+        "answer": "Airu is the best healer in the game with strong shielding and team sustain. Highly recommended for all content.",
+        "answerZh": "艾尔是游戏中最强治疗角色，拥有优秀的护盾和团队续航能力，所有内容都强烈推荐。"
+      }
+    ],
+    "relatedCharacters": ["chu", "liro", "yelan"],
+    "tierRank": "SS",
+    "tierReason": "Best healer/support in the game, provides shielding, healing and team utility.",
+    "tierReasonZh": "游戏最强治疗辅助，提供护盾、治疗和全队增益。",
+    "skills": {
+      "normalAttack": {
+        "name": "霜华弹",
+        "nameEn": "Frostbloom Shot",
+        "nameJa": "霜華弾",
+        "description": "发射霜寒灵力，进行至多三段的远程攻击。",
+        "descriptionEn": "Fires Frost spirit energy, performing up to 3 consecutive ranged attacks."
+      },
+      "skill": {
+        "name": "冰心·守护",
+        "nameEn": "Ice Heart: Ward",
+        "nameJa": "氷心・守護",
+        "description": "为队伍中所有角色施加「霜华护盾」，吸收伤害并持续恢复生命值。",
+        "descriptionEn": "Applies 'Frostbloom Shield' to all party members, absorbing damage and continuously restoring HP.",
+        "cooldown": "12s",
+        "cost": "35 灵能"
+      },
+      "ultimate": {
+        "name": "极光·灵愈",
+        "nameEn": "Aurora: Spirit Heal",
+        "nameJa": "極光・霊癒",
+        "description": "召唤极光之灵，瞬间恢复队伍中所有角色大量生命值，并清除所有负面状态。",
+        "descriptionEn": "Summons the Aurora Spirit, instantly restoring a large amount of HP to all party members and cleansing all debuffs.",
+        "cost": "70 灵能"
+      },
+      "passive": {
+        "name": "灵脉感应",
+        "nameEn": "Spirit Vein Sense",
+        "nameJa": "霊脈感応",
+        "description": "当队伍中任何角色生命值低于50%时，艾尔自动为其恢复生命值，每30秒触发一次。",
+        "descriptionEn": "When any party member's HP drops below 50%, Airu automatically heals them. Triggers once every 30s."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "极光圣典",
+      "bestWeaponEn": "Aurora Codex",
+      "alternativeWeapons": ["灵脉法杖", "归环之契"],
+      "mainStats": {
+        "沙漏": "灵能充能",
+        "杯子": "生命值%",
+        "头冠": "治疗加成"
+      },
+      "mainStatsEn": {
+        "Sands": "Energy Recharge",
+        "Goblet": "HP%",
+        "Circlet": "Healing Bonus"
+      },
+      "subStatPriority": ["生命值%", "灵能充能", "防御力%", "攻击力%"],
+      "subStatPriorityEn": ["HP%", "Energy Recharge", "DEF%", "ATK%"]
+    },
+    "teamComps": [
+      {
+        "name": "全能续航队",
+        "nameEn": "Universal Sustain Team",
+        "members": ["chu", "airu", "liro", "yelan"],
+        "description": "艾尔提供治疗和护盾，确保队伍在长时间战斗中的生存能力。",
+        "descriptionEn": "Airu provides healing and shields, ensuring party survival in extended battles."
+      }
+    ],
+    "image": "/images/guihuan/characters/airu.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  },
+  {
+    "id": "mingzhe",
+    "name": "明珏",
+    "nameEn": "Mingzhe",
+    "nameJa": "明珏",
+    "element": "flame",
+    "elementEn": "Flame",
+    "role": "进攻",
+    "roleEn": "Attack",
+    "rarity": 5,
+    "description": "亚达尔王家颂灵学院的奇才，精通烈焰系真律。性格热情如火，战斗风格疾风骤雨，是最强的烈焰强攻手。",
+    "descriptionEn": "A prodigy of the Yadaer Royal Spirit Academy, mastering Flame-type True Laws. Passionate and fiery in personality, with an aggressive combat style — the strongest Flame attacker.",
+    "faq": [
+      {
+        "question": "How good is Mingzhe?",
+        "questionZh": "明珏强度如何？",
+        "answer": "Mingzhe is a top-tier Flame DPS with extremely high burst damage. His Flame field provides sustained AoE damage.",
+        "answerZh": "明珏是顶级烈焰主C，爆发伤害极高，烈焰领域提供持续范围伤害。"
+      }
+    ],
+    "relatedCharacters": ["chu", "yaqi", "heilian"],
+    "tierRank": "SS",
+    "tierReason": "Top Flame DPS with exceptional burst and AoE damage output.",
+    "tierReasonZh": "顶级烈焰主C，拥有极强的爆发和范围伤害能力。",
+    "skills": {
+      "normalAttack": {
+        "name": "烈焰拳",
+        "nameEn": "Flame Fist",
+        "nameJa": "烈焔拳",
+        "description": "进行至多五段的连续拳击，每一击都附带烈焰元素伤害。",
+        "descriptionEn": "Performs up to 5 consecutive punches, each inflicting Flame elemental damage."
+      },
+      "skill": {
+        "name": "焚天·烈焰领域",
+        "nameEn": "Scorching Heaven: Flame Domain",
+        "nameJa": "焚天・烈焔領域",
+        "description": "在脚下展开烈焰领域，持续对领域内敌人造成烈焰元素伤害，并提升自身攻击力。",
+        "descriptionEn": "Deploys a Flame domain that continuously deals Flame damage to enemies within, while boosting own ATK.",
+        "cooldown": "8s",
+        "cost": "35 灵能"
+      },
+      "ultimate": {
+        "name": "天火·焚世",
+        "nameEn": "Heavenflame: World Ablaze",
+        "nameJa": "天火・焚世",
+        "description": "跃入空中凝聚烈焰真律，向地面释放毁灭性的天火，造成巨额烈焰元素范围伤害。",
+        "descriptionEn": "Leaps into the air to condense Flame True Law, unleashing devastating heavenly fire upon the ground for massive Flame AoE damage.",
+        "cost": "75 灵能"
+      },
+      "passive": {
+        "name": "炽热之心",
+        "nameEn": "Blazing Heart",
+        "nameJa": "熾熱の心",
+        "description": "明珏的生命值越高，烈焰伤害加成越高。满生命时额外提升20%烈焰伤害。",
+        "descriptionEn": "The higher Mingzhe's HP, the higher his Flame DMG bonus. At full HP, gains an additional 20% Flame DMG."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "天火之拳",
+      "bestWeaponEn": "Fist of Heavenflame",
+      "alternativeWeapons": ["时序之刃", "蚀之终焉"],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "烈焰伤害加成",
+        "头冠": "暴击伤害"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Flame DMG Bonus",
+        "Circlet": "CRIT DMG"
+      },
+      "subStatPriority": ["暴击率", "暴击伤害", "攻击力%", "灵能充能"],
+      "subStatPriorityEn": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"]
+    },
+    "teamComps": [
+      {
+        "name": "烈焰爆发队",
+        "nameEn": "Flame Burst Team",
+        "members": ["mingzhe", "yaqi", "liro", "airu"],
+        "description": "明珏核心输出，雅琪提供控制聚怪，璃洛增伤，艾尔保证续航。",
+        "descriptionEn": "Mingzhe as core DPS, Yaqi for CC and grouping, Liro for buffs, Airu for sustain."
+      }
+    ],
+    "image": "/images/guihuan/characters/mingzhe.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  },
+  {
+    "id": "heilian",
+    "name": "黑莲",
+    "nameEn": "Heilian",
+    "nameJa": "黒蓮",
+    "element": "void",
+    "elementEn": "Void",
+    "role": "进攻",
+    "roleEn": "Attack",
+    "rarity": 5,
+    "description": "来历不明的虚空使灵颂灵者，身世与「蚀」有着千丝万缕的联系。沉默寡言，战斗中却展现出令人畏惧的虚空之力。",
+    "descriptionEn": "A Void Spirit summoner of unknown origins, with ties to the 'Eclipse' disaster. Taciturn by nature, yet terrifyingly powerful in combat with her Void abilities.",
+    "faq": [
+      {
+        "question": "Is Heilian a good DPS?",
+        "questionZh": "黑莲输出怎么样？",
+        "answer": "Heilian is a top-tier Void DPS with strong single-target damage and debuff capabilities. Her Void marks stack for massive burst.",
+        "answerZh": "黑莲是顶级虚空主C，拥有强力的单体伤害和减益能力，虚空标记叠层后爆发极高。"
+      }
+    ],
+    "relatedCharacters": ["chu", "mingzhe", "zhuque"],
+    "tierRank": "S",
+    "tierReason": "Strong single-target Void DPS with unique debuff mechanics.",
+    "tierReasonZh": "强力虚空单体输出，拥有独特的减益机制。",
+    "skills": {
+      "normalAttack": {
+        "name": "虚空之刃",
+        "nameEn": "Void Blade",
+        "nameJa": "虚空の刃",
+        "description": "挥舞虚空之力形成的暗刃，进行至多四段的连续攻击。",
+        "descriptionEn": "Wields dark blades formed from Void energy, performing up to 4 consecutive attacks."
+      },
+      "skill": {
+        "name": "蚀印·虚渊",
+        "nameEn": "Eclipse Mark: Void Abyss",
+        "nameJa": "蝕印・虚淵",
+        "description": "对目标施加「虚空印记」，降低其防御力。印记可叠加至3层，叠满时引爆造成高额虚空伤害。",
+        "descriptionEn": "Applies 'Void Mark' to the target, reducing their DEF. Stacks up to 3 times; at max stacks, detonates for high Void damage.",
+        "cooldown": "9s",
+        "cost": "40 灵能"
+      },
+      "ultimate": {
+        "name": "终焉·虚空吞噬",
+        "nameEn": "Demise: Void Devour",
+        "nameJa": "終焉・虚空吞噬",
+        "description": "展开虚空领域，持续吸取范围内敌人的生命值并转化为自身攻击力，结束时造成一次巨额虚空爆发伤害。",
+        "descriptionEn": "Opens a Void domain that continuously drains HP from enemies in range and converts it to ATK. Deals massive Void burst damage upon ending.",
+        "cost": "80 灵能"
+      },
+      "passive": {
+        "name": "虚空共鸣",
+        "nameEn": "Void Resonance",
+        "nameJa": "虚空共鳴",
+        "description": "黑莲对带有「虚空印记」的敌人造成额外15%伤害。",
+        "descriptionEn": "Heilian deals 15% additional damage to enemies with 'Void Mark'."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "蚀之终焉",
+      "bestWeaponEn": "Eclipse's Demise",
+      "alternativeWeapons": ["时序之刃", "虚空权杖"],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "虚空伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Void DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": ["暴击率", "暴击伤害", "攻击力%", "灵能充能"],
+      "subStatPriorityEn": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"]
+    },
+    "teamComps": [
+      {
+        "name": "虚空暗杀队",
+        "nameEn": "Void Assassin Team",
+        "members": ["heilian", "zhuque", "liro", "airu"],
+        "description": "黑莲核心输出，朱雀提供追击联动，璃洛增伤，艾尔保证生存。",
+        "descriptionEn": "Heilian as core DPS, Zhuque for follow-up synergy, Liro for buffs, Airu for sustain."
+      }
+    ],
+    "image": "/images/guihuan/characters/heilian.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  },
+  {
+    "id": "liro",
+    "name": "璃洛",
+    "nameEn": "Liro",
+    "nameJa": "璃洛",
+    "element": "gale",
+    "elementEn": "Gale",
+    "role": "增益",
+    "roleEn": "Buffer",
+    "rarity": 5,
+    "description": "亚达尔大陆最富盛名的吟游颂灵者，用疾风真律编织战歌为同伴注入力量。性格乐天洒脱，是队伍中的气氛担当。",
+    "descriptionEn": "The most renowned bard-spirit summoner on the continent of Yadaer, weaving war songs with Gale True Laws to empower allies. Cheerful and free-spirited — the mood maker of any party.",
+    "faq": [
+      {
+        "question": "Is Liro a must-pull support?",
+        "questionZh": "璃洛是必抽辅助吗？",
+        "answer": "Liro is one of the best supports in the game, providing massive ATK buffs and energy regeneration for the whole team.",
+        "answerZh": "璃洛是游戏最强辅助之一，能为全队提供大量攻击力增益和灵能回复。"
+      }
+    ],
+    "relatedCharacters": ["chu", "airu", "mingzhe"],
+    "tierRank": "SS",
+    "tierReason": "Best buffer in the game with team-wide ATK boost and energy recharge.",
+    "tierReasonZh": "游戏最强增益辅助，提供全队攻击力提升和灵能回复。",
+    "skills": {
+      "normalAttack": {
+        "name": "风弦弹",
+        "nameEn": "Windstring Shot",
+        "nameJa": "風弦弾",
+        "description": "拨动风之弦，发射疾风音波进行远程攻击。",
+        "descriptionEn": "Plucks the strings of wind, firing Gale soundwaves for ranged attacks."
+      },
+      "skill": {
+        "name": "风颂·战歌",
+        "nameEn": "Wind Chant: War Song",
+        "nameJa": "風頌・戦歌",
+        "description": "演奏战歌，为队伍中所有角色提升攻击力和暴击率，持续10秒。",
+        "descriptionEn": "Performs a war song, boosting ATK and CRIT Rate for all party members for 10s.",
+        "cooldown": "12s",
+        "cost": "30 灵能"
+      },
+      "ultimate": {
+        "name": "疾风·灵律回响",
+        "nameEn": "Gale: Spirit Resonance",
+        "nameJa": "疾風・霊律回響",
+        "description": "释放疾风真律的全力演奏，为全队恢复灵能并大幅提升元素伤害加成，持续12秒。",
+        "descriptionEn": "Unleashes a full-power Gale True Law performance, restoring Spirit Energy for the whole team and greatly boosting Elemental DMG Bonus for 12s.",
+        "cost": "65 灵能"
+      },
+      "passive": {
+        "name": "风之赠礼",
+        "nameEn": "Gift of the Wind",
+        "nameJa": "風の贈り物",
+        "description": "璃洛在场时，队伍中所有角色的灵能恢复速度提升15%。",
+        "descriptionEn": "While Liro is on the field, all party members' Spirit Energy recovery rate increases by 15%."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "风吟竖琴",
+      "bestWeaponEn": "Windchant Harp",
+      "alternativeWeapons": ["极光圣典", "归环之契"],
+      "mainStats": {
+        "沙漏": "灵能充能",
+        "杯子": "疾风伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "Energy Recharge",
+        "Goblet": "Gale DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": ["灵能充能", "攻击力%", "暴击率", "暴击伤害"],
+      "subStatPriorityEn": ["Energy Recharge", "ATK%", "CRIT Rate", "CRIT DMG"]
+    },
+    "teamComps": [
+      {
+        "name": "万能增益队",
+        "nameEn": "Universal Buffer Team",
+        "members": ["liro", "chu", "airu", "mingzhe"],
+        "description": "璃洛为任意主C提供强力增益，适配所有输出角色。",
+        "descriptionEn": "Liro provides powerful buffs to any main DPS, fitting all damage dealers."
+      }
+    ],
+    "image": "/images/guihuan/characters/liro.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  },
+  {
+    "id": "yalun",
+    "name": "亚伦",
+    "nameEn": "Yalun",
+    "nameJa": "亜倫",
+    "element": "thunder",
+    "elementEn": "Thunder",
+    "role": "副攻",
+    "roleEn": "Sub-DPS",
+    "rarity": 5,
+    "description": "亚达尔王家骑士团的副团长，精通雷霆真律的精英颂灵者。行事严谨负责，在战场上如雷霆般精准打击敌人弱点。",
+    "descriptionEn": "Vice-commander of the Yadaer Royal Knights, an elite Spirit summoner mastering Thunder True Laws. Disciplined and responsible — on the battlefield, he strikes enemy weaknesses with thunderous precision.",
+    "faq": [
+      {
+        "question": "Is Yalun a good sub-DPS?",
+        "questionZh": "亚伦适合做副C吗？",
+        "answer": "Yalun excels as a Thunder sub-DPS with off-field damage and elemental shred, making him a great pair for any team.",
+        "answerZh": "亚伦是非常优秀的雷霆副C，拥有后台伤害和元素减抗能力，适合搭配各种队伍。"
+      }
+    ],
+    "relatedCharacters": ["chu", "mingzhe", "airu"],
+    "tierRank": "S",
+    "tierReason": "Excellent Thunder sub-DPS with off-field damage and DEF shred utility.",
+    "tierReasonZh": "优秀雷霆副C，提供后台伤害和减防辅助。",
+    "skills": {
+      "normalAttack": {
+        "name": "雷光斩",
+        "nameEn": "Thunder Slash",
+        "nameJa": "雷光斬",
+        "description": "挥动雷霆之力附魔的长剑，进行至多四段的连续斩击。",
+        "descriptionEn": "Wields a Thunder-infused greatsword, performing up to 4 consecutive slashes."
+      },
+      "skill": {
+        "name": "雷印·破阵",
+        "nameEn": "Thunder Mark: Formation Break",
+        "nameJa": "雷印・破陣",
+        "description": "在目标位置降下雷霆，造成雷霆范围伤害并降低区域内敌人防御力15%，持续8秒。",
+        "descriptionEn": "Calls down thunder at the target location, dealing Thunder AoE damage and reducing enemy DEF by 15% in the area for 8s.",
+        "cooldown": "10s",
+        "cost": "35 灵能"
+      },
+      "ultimate": {
+        "name": "天雷·制裁",
+        "nameEn": "Sky Thunder: Judgment",
+        "nameJa": "天雷・制裁",
+        "description": "召唤多道雷霆同时轰击大范围敌人，造成高额雷霆元素伤害。命中带有「雷印」的敌人时额外触发连锁闪电。",
+        "descriptionEn": "Summons multiple thunderbolts to simultaneously bombard a wide area, dealing high Thunder damage. Enemies with 'Thunder Mark' trigger chain lightning.",
+        "cost": "75 灵能"
+      },
+      "passive": {
+        "name": "雷光速决",
+        "nameEn": "Lightning Strike",
+        "nameJa": "雷光速決",
+        "description": "亚伦切换上场时，下一次攻击附带额外雷霆伤害并减少技能冷却时间2秒。",
+        "descriptionEn": "When Yalun switches in, his next attack deals additional Thunder damage and reduces skill cooldown by 2s."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "雷神之锤",
+      "bestWeaponEn": "Hammer of the Thunder God",
+      "alternativeWeapons": ["蚀之终焉", "铁壁守护"],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "雷霆伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Thunder DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": ["暴击率", "暴击伤害", "攻击力%", "灵能充能"],
+      "subStatPriorityEn": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"]
+    },
+    "teamComps": [
+      {
+        "name": "雷霆双核队",
+        "nameEn": "Thunder Dual Core",
+        "members": ["yalun", "chu", "liro", "airu"],
+        "description": "亚伦与初组成双核输出，璃洛增伤，艾尔提供治疗。",
+        "descriptionEn": "Yalun and Chu form a dual-core DPS, with Liro buffing and Airu healing."
+      }
+    ],
+    "image": "/images/guihuan/characters/yalun.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  },
+  {
+    "id": "yaqi",
+    "name": "雅琪",
+    "nameEn": "Yaqi",
+    "nameJa": "雅琪",
+    "element": "frost",
+    "elementEn": "Frost",
+    "role": "控制",
+    "roleEn": "Control",
+    "rarity": 4,
+    "description": "来自北境冰原的颂灵者猎人，擅长利用霜寒真律冻结敌人行动。外表冷静如冰，内心却对伙伴极为温暖。",
+    "descriptionEn": "A Spirit summoner hunter from the northern ice fields, skilled at using Frost True Laws to freeze enemies in their tracks. Cold as ice on the outside, yet deeply warm toward her companions.",
+    "faq": [
+      {
+        "question": "Is Yaqi good for crowd control?",
+        "questionZh": "雅琪控制能力强吗？",
+        "answer": "Yaqi is the best crowd control character at launch, with strong freeze and grouping abilities.",
+        "answerZh": "雅琪是开服最强控制角色，拥有优秀的冻结和聚怪能力。"
+      }
+    ],
+    "relatedCharacters": ["airu", "mingzhe", "chu"],
+    "tierRank": "A",
+    "tierReason": "Strong crowd control with freeze mechanics, great for grouping enemies.",
+    "tierReasonZh": "强力控制角色，冻结机制优秀，擅长聚怪。",
+    "skills": {
+      "normalAttack": {
+        "name": "冰棱射击",
+        "nameEn": "Icicle Shot",
+        "nameJa": "氷稜射撃",
+        "description": "发射冰棱进行远程攻击，至多四段。",
+        "descriptionEn": "Fires icicles for ranged attacks, up to 4 hits."
+      },
+      "skill": {
+        "name": "冰牢·霜封",
+        "nameEn": "Ice Prison: Frostbind",
+        "nameJa": "氷牢・霜封",
+        "description": "在目标区域创造冰牢，冻结范围内敌人3秒并造成霜寒伤害。",
+        "descriptionEn": "Creates an ice prison at the target area, freezing enemies for 3s and dealing Frost damage.",
+        "cooldown": "12s",
+        "cost": "35 灵能"
+      },
+      "ultimate": {
+        "name": "极寒·冰封世界",
+        "nameEn": "Absolute Zero: Frozen World",
+        "nameJa": "極寒・氷封世界",
+        "description": "释放极寒之力，冻结大范围内所有敌人并造成高额霜寒伤害。被冻结的敌人防御力降低。",
+        "descriptionEn": "Unleashes absolute zero power, freezing all enemies in a large area and dealing high Frost damage. Frozen enemies have reduced DEF.",
+        "cost": "70 灵能"
+      },
+      "passive": {
+        "name": "冰原猎手",
+        "nameEn": "Tundra Hunter",
+        "nameJa": "氷原の狩人",
+        "description": "雅琪对冻结状态敌人造成的伤害提升25%。",
+        "descriptionEn": "Yaqi deals 25% increased damage to frozen enemies."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "霜牙长弓",
+      "bestWeaponEn": "Frostfang Bow",
+      "alternativeWeapons": ["灵脉法杖"],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "霜寒伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Frost DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": ["暴击率", "暴击伤害", "攻击力%", "灵能充能"],
+      "subStatPriorityEn": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"]
+    },
+    "teamComps": [
+      {
+        "name": "霜炎融化队",
+        "nameEn": "Frost-Flame Melt Team",
+        "members": ["yaqi", "mingzhe", "liro", "airu"],
+        "description": "雅琪冻结控制，明珏输出融化反应伤害。",
+        "descriptionEn": "Yaqi freezes enemies while Mingzhe deals Melt reaction damage."
+      }
+    ],
+    "image": "/images/guihuan/characters/yaqi.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  },
+  {
+    "id": "zhuque",
+    "name": "朱雀",
+    "nameEn": "Zhuque",
+    "nameJa": "朱雀",
+    "element": "flame",
+    "elementEn": "Flame",
+    "role": "追击",
+    "roleEn": "Follow-up",
+    "rarity": 4,
+    "description": "热情洋溢的冒险家颂灵者，使灵是一只火焰形态的山羊。战斗中利用幸运加持触发连续追击，风格华丽而高效。",
+    "descriptionEn": "An enthusiastic adventurer-spirit summoner whose Spirit takes the form of a fiery goat. In battle, she uses lucky strikes to trigger chain follow-up attacks — flashy and efficient.",
+    "faq": [
+      {
+        "question": "How does Zhuque's follow-up mechanic work?",
+        "questionZh": "朱雀的追击机制是什么？",
+        "answer": "Zhuque has a chance to trigger extra Flame attacks after any ally's hit. Her follow-ups can chain multiple times.",
+        "answerZh": "朱雀在队友攻击后有概率触发额外烈焰追击，追击可以连续触发多次。"
+      }
+    ],
+    "relatedCharacters": ["heilian", "mingzhe", "liro"],
+    "tierRank": "A",
+    "tierReason": "Solid follow-up DPS with good off-field damage potential.",
+    "tierReasonZh": "优秀的追击副C，后台伤害潜力不错。",
+    "skills": {
+      "normalAttack": {
+        "name": "焰舞连击",
+        "nameEn": "Flame Dance Combo",
+        "nameJa": "焔舞連撃",
+        "description": "挥舞烈焰长枪进行至多四段的连续攻击。",
+        "descriptionEn": "Wields a Flame spear for up to 4 consecutive attacks."
+      },
+      "skill": {
+        "name": "焰舞·幸运追击",
+        "nameEn": "Flame Dance: Lucky Strike",
+        "nameJa": "焔舞・幸運追撃",
+        "description": "标记目标为「焰舞」状态，队友攻击目标时朱雀有50%概率发动烈焰追击。",
+        "descriptionEn": "Marks the target with 'Flame Dance'. When allies attack the marked target, Zhuque has a 50% chance to trigger a Flame follow-up.",
+        "cooldown": "8s",
+        "cost": "30 灵能"
+      },
+      "ultimate": {
+        "name": "焰舞·千重火雨",
+        "nameEn": "Flame Dance: Thousand Fire",
+        "nameJa": "焔舞・千重火雨",
+        "description": "召唤火焰山羊使灵释放千重火雨，对大范围敌人造成多次烈焰伤害。",
+        "descriptionEn": "Summons the fiery goat Spirit to unleash a thousand-fire rain, dealing multiple hits of Flame damage to enemies in a wide area.",
+        "cost": "65 灵能"
+      },
+      "passive": {
+        "name": "幸运加护",
+        "nameEn": "Fortune's Blessing",
+        "nameJa": "幸運加護",
+        "description": "朱雀每次触发追击后，自身暴击率提升5%，最多叠加4层。",
+        "descriptionEn": "Each time Zhuque triggers a follow-up, her CRIT Rate increases by 5%, stacking up to 4 times."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "焰舞长枪",
+      "bestWeaponEn": "Flame Dance Spear",
+      "alternativeWeapons": ["天火之拳"],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "烈焰伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Flame DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": ["暴击率", "暴击伤害", "攻击力%", "灵能充能"],
+      "subStatPriorityEn": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"]
+    },
+    "teamComps": [
+      {
+        "name": "烈焰追击队",
+        "nameEn": "Flame Follow-up Team",
+        "members": ["zhuque", "mingzhe", "liro", "airu"],
+        "description": "朱雀和明珏组成烈焰双核，触发频繁追击。",
+        "descriptionEn": "Zhuque and Mingzhe form a Flame dual-core, triggering frequent follow-ups."
+      }
+    ],
+    "image": "/images/guihuan/characters/zhuque.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  },
+  {
+    "id": "yelan",
+    "name": "夜兰",
+    "nameEn": "Yelan",
+    "nameJa": "夜蘭",
+    "element": "thunder",
+    "elementEn": "Thunder",
+    "role": "进攻",
+    "roleEn": "Attack",
+    "rarity": 4,
+    "description": "亚达尔暗影议会的情报官，使用雷霆真律执行秘密任务。行踪神秘，只有极少数人知道她的真实身份。",
+    "descriptionEn": "An intelligence officer of Yadaer's Shadow Council, using Thunder True Laws for covert operations. Mysterious and elusive — very few know her true identity.",
+    "faq": [
+      {
+        "question": "Is Yelan a good 4-star DPS?",
+        "questionZh": "夜兰作为四星输出怎么样？",
+        "answer": "Yelan is one of the best 4-star DPS characters with fast attack speed and strong Thunder damage.",
+        "answerZh": "夜兰是最强四星输出之一，攻击速度快，雷霆伤害优秀。"
+      }
+    ],
+    "relatedCharacters": ["yalun", "heilian", "chu"],
+    "tierRank": "A",
+    "tierReason": "Best 4-star Thunder DPS with fast attacks and good burst.",
+    "tierReasonZh": "最强四星雷霆输出，攻击速度快，爆发能力好。",
+    "skills": {
+      "normalAttack": {
+        "name": "雷影双刃",
+        "nameEn": "Thunder Shadow Blades",
+        "nameJa": "雷影双刃",
+        "description": "使用双刃进行快速的近战连击，至多五段。",
+        "descriptionEn": "Wields dual blades for rapid melee combos, up to 5 hits."
+      },
+      "skill": {
+        "name": "影雷·瞬杀",
+        "nameEn": "Shadow Thunder: Instant Kill",
+        "nameJa": "影雷・瞬殺",
+        "description": "瞬间闪现至目标身后发动雷霆一击，造成高额雷霆伤害。",
+        "descriptionEn": "Instantly teleports behind the target for a Thunder strike, dealing high Thunder damage.",
+        "cooldown": "7s",
+        "cost": "30 灵能"
+      },
+      "ultimate": {
+        "name": "雷影·暗杀乱舞",
+        "nameEn": "Thunder Shadow: Assassination Dance",
+        "nameJa": "雷影・暗殺乱舞",
+        "description": "进入暗影状态，在敌人之间高速穿梭进行多次雷霆攻击。",
+        "descriptionEn": "Enters shadow state, darting between enemies at high speed for multiple Thunder attacks.",
+        "cost": "65 灵能"
+      },
+      "passive": {
+        "name": "暗影速攻",
+        "nameEn": "Shadow Strike",
+        "nameJa": "暗影速攻",
+        "description": "夜兰从背后攻击敌人时，暴击率提升15%。",
+        "descriptionEn": "When Yelan attacks enemies from behind, her CRIT Rate increases by 15%."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "影雷双刃",
+      "bestWeaponEn": "Shadow Thunder Blades",
+      "alternativeWeapons": ["雷神之锤"],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "雷霆伤害加成",
+        "头冠": "暴击伤害"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Thunder DMG Bonus",
+        "Circlet": "CRIT DMG"
+      },
+      "subStatPriority": ["暴击率", "暴击伤害", "攻击力%", "灵能充能"],
+      "subStatPriorityEn": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"]
+    },
+    "teamComps": [
+      {
+        "name": "雷霆暗影队",
+        "nameEn": "Thunder Shadow Team",
+        "members": ["yelan", "yalun", "liro", "airu"],
+        "description": "夜兰与亚伦组成雷霆双核，前后台输出兼备。",
+        "descriptionEn": "Yelan and Yalun form a Thunder dual-core with both on-field and off-field damage."
+      }
+    ],
+    "image": "/images/guihuan/characters/yelan.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  },
+  {
+    "id": "suyin",
+    "name": "素音",
+    "nameEn": "Suyin",
+    "nameJa": "素音",
+    "element": "gale",
+    "elementEn": "Gale",
+    "role": "灵愈",
+    "roleEn": "Support",
+    "rarity": 4,
+    "description": "亚达尔边境小镇的药师颂灵者，用疾风真律采集灵药并治愈伤者。性格朴实善良，是初期最容易获得的灵愈角色。",
+    "descriptionEn": "An herbalist-spirit summoner from a border town of Yadaer, using Gale True Laws to gather spirit herbs and heal the wounded. Kind-hearted and practical — the easiest Spirit Healer to obtain early on.",
+    "faq": [
+      {
+        "question": "Is Suyin good for beginners?",
+        "questionZh": "素音适合新手吗？",
+        "answer": "Suyin is the best free healer for beginners, providing solid healing and easy to build.",
+        "answerZh": "素音是新手最佳免费治疗角色，治疗量稳定且容易培养。"
+      }
+    ],
+    "relatedCharacters": ["airu", "liro", "yaqi"],
+    "tierRank": "B",
+    "tierReason": "Solid free healing support for early game, outclassed by Airu later.",
+    "tierReasonZh": "前期优秀的免费治疗角色，后期被艾尔替代。",
+    "skills": {
+      "normalAttack": {
+        "name": "风叶弹",
+        "nameEn": "Windleaf Shot",
+        "nameJa": "風葉弾",
+        "description": "发射风之叶片进行远程攻击。",
+        "descriptionEn": "Fires wind blades for ranged attacks."
+      },
+      "skill": {
+        "name": "风愈·灵草",
+        "nameEn": "Wind Heal: Spirit Herb",
+        "nameJa": "風癒・霊草",
+        "description": "召唤灵草为队伍中生命值最低的角色恢复生命值。",
+        "descriptionEn": "Summons spirit herbs to restore HP to the party member with the lowest HP.",
+        "cooldown": "10s",
+        "cost": "25 灵能"
+      },
+      "ultimate": {
+        "name": "疾风·万物复苏",
+        "nameEn": "Gale: Nature's Revival",
+        "nameJa": "疾風・万物復苏",
+        "description": "释放疾风灵力，为全队恢复大量生命值，并附加持续回血效果。",
+        "descriptionEn": "Releases Gale spirit energy, restoring a large amount of HP to the whole team and applying a regeneration effect.",
+        "cost": "60 灵能"
+      },
+      "passive": {
+        "name": "灵药加护",
+        "nameEn": "Spirit Herb Blessing",
+        "nameJa": "霊薬加護",
+        "description": "素音的治疗技能有20%概率额外触发一次治疗。",
+        "descriptionEn": "Suyin's healing skills have a 20% chance to trigger an additional heal."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "灵脉法杖",
+      "bestWeaponEn": "Spirit Vein Staff",
+      "alternativeWeapons": ["极光圣典"],
+      "mainStats": {
+        "沙漏": "灵能充能",
+        "杯子": "生命值%",
+        "头冠": "治疗加成"
+      },
+      "mainStatsEn": {
+        "Sands": "Energy Recharge",
+        "Goblet": "HP%",
+        "Circlet": "Healing Bonus"
+      },
+      "subStatPriority": ["生命值%", "灵能充能", "防御力%"],
+      "subStatPriorityEn": ["HP%", "Energy Recharge", "DEF%"]
+    },
+    "teamComps": [
+      {
+        "name": "新手入门队",
+        "nameEn": "Beginner Starter Team",
+        "members": ["suyin", "chu", "yaqi", "yelan"],
+        "description": "前期最容易组建的队伍，素音提供稳定治疗。",
+        "descriptionEn": "Easiest team to assemble early on, with Suyin providing stable healing."
+      }
+    ],
+    "image": "/images/guihuan/characters/suyin.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  },
+  {
+    "id": "guhan",
+    "name": "谷寒",
+    "nameEn": "Guhan",
+    "nameJa": "谷寒",
+    "element": "frost",
+    "elementEn": "Frost",
+    "role": "副攻",
+    "roleEn": "Sub-DPS",
+    "rarity": 4,
+    "description": "亚达尔矿产公会的采矿颂灵者，用霜寒真律在矿脉中开辟道路。体格健壮，战斗风格刚猛直接。",
+    "descriptionEn": "A mining Spirit summoner from Yadaer's Mining Guild, using Frost True Laws to carve paths through ore veins. Sturdy and straightforward in combat.",
+    "faq": [
+      {
+        "question": "Is Guhan good for a 4-star sub-DPS?",
+        "questionZh": "谷寒作为四星副C怎么样？",
+        "answer": "Guhan is a reliable Frost sub-DPS with decent off-field damage and DEF shred for the team.",
+        "answerZh": "谷寒是可靠的霜寒副C，后台伤害不错，还能为队伍提供减防。"
+      }
+    ],
+    "relatedCharacters": ["yaqi", "airu", "yalun"],
+    "tierRank": "B",
+    "tierReason": "Decent Frost sub-DPS with DEF shred utility.",
+    "tierReasonZh": "不错的霜寒副C，提供减防辅助。",
+    "skills": {
+      "normalAttack": {
+        "name": "寒铁重击",
+        "nameEn": "Frost Iron Slam",
+        "nameJa": "寒鉄重撃",
+        "description": "挥动冰霜附魔的重锤进行缓慢但强力的攻击。",
+        "descriptionEn": "Wields a Frost-infused hammer for slow but powerful attacks."
+      },
+      "skill": {
+        "name": "冰裂·碎甲",
+        "nameEn": "Frost Fracture: Armor Break",
+        "nameJa": "氷裂・砕甲",
+        "description": "重击地面造成霜寒范围伤害，降低命中敌人防御力10%。",
+        "descriptionEn": "Slams the ground for Frost AoE damage, reducing hit enemies' DEF by 10%.",
+        "cooldown": "10s",
+        "cost": "30 灵能"
+      },
+      "ultimate": {
+        "name": "冰封·地裂",
+        "nameEn": "Frost Seal: Ground Crack",
+        "nameJa": "氷封・地裂",
+        "description": "以霜寒真律碎裂地面，对前方直线范围敌人造成高额霜寒伤害。",
+        "descriptionEn": "Shatters the ground with Frost True Laws, dealing high Frost damage in a line ahead.",
+        "cost": "60 灵能"
+      },
+      "passive": {
+        "name": "矿脉感知",
+        "nameEn": "Vein Detection",
+        "nameJa": "鉱脈感知",
+        "description": "谷寒在队伍中时，小地图显示附近的矿物资源。",
+        "descriptionEn": "When Guhan is in the party, the minimap displays nearby mineral resources."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "铁壁守护",
+      "bestWeaponEn": "Ironwall Guard",
+      "alternativeWeapons": ["霜牙长弓"],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "霜寒伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Frost DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": ["暴击率", "暴击伤害", "攻击力%", "防御力%"],
+      "subStatPriorityEn": ["CRIT Rate", "CRIT DMG", "ATK%", "DEF%"]
+    },
+    "teamComps": [
+      {
+        "name": "霜寒破防队",
+        "nameEn": "Frost DEF Shred Team",
+        "members": ["guhan", "yaqi", "liro", "airu"],
+        "description": "谷寒减防，雅琪冻结控制，璃洛增伤。",
+        "descriptionEn": "Guhan shreds DEF, Yaqi freezes enemies, Liro buffs the team."
+      }
+    ],
+    "image": "/images/guihuan/characters/guhan.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  },
+  {
+    "id": "chenxi",
+    "name": "晨曦",
+    "nameEn": "Chenxi",
+    "nameJa": "晨曦",
+    "element": "radiance",
+    "elementEn": "Radiance",
+    "role": "增益",
+    "roleEn": "Buffer",
+    "rarity": 4,
+    "description": "颂灵学院的天才研究员，专门研究光辉真律的增益应用。外表年幼但学识渊博，是队伍中的智囊。",
+    "descriptionEn": "A genius researcher at the Spirit Academy, specializing in Radiance True Law buff applications. Young in appearance but deeply knowledgeable — the team's strategist.",
+    "faq": [
+      {
+        "question": "Is Chenxi worth building?",
+        "questionZh": "晨曦值得培养吗？",
+        "answer": "Chenxi is a solid 4-star buffer who provides ATK and CRIT buffs. Good alternative if you don't have Liro.",
+        "answerZh": "晨曦是优秀的四星增益角色，提供攻击力和暴击增益。没有璃洛时是很好的替代。"
+      }
+    ],
+    "relatedCharacters": ["liro", "chu", "mingzhe"],
+    "tierRank": "B",
+    "tierReason": "Solid 4-star buffer with ATK and CRIT buffs, good Liro alternative.",
+    "tierReasonZh": "优秀的四星增益角色，提供攻击和暴击增益，是璃洛的好替代。",
+    "skills": {
+      "normalAttack": {
+        "name": "光辉弹",
+        "nameEn": "Radiance Orb",
+        "nameJa": "光輝弾",
+        "description": "发射光辉能量球进行远程攻击。",
+        "descriptionEn": "Fires Radiance energy orbs for ranged attacks."
+      },
+      "skill": {
+        "name": "光阵·鼓舞",
+        "nameEn": "Light Array: Inspiration",
+        "nameJa": "光陣・鼓舞",
+        "description": "展开光辉阵法，提升范围内队伍成员攻击力15%，持续8秒。",
+        "descriptionEn": "Deploys a Radiance array, boosting party members' ATK by 15% within range for 8s.",
+        "cooldown": "12s",
+        "cost": "30 灵能"
+      },
+      "ultimate": {
+        "name": "辉耀·灵能潮涌",
+        "nameEn": "Radiance: Energy Surge",
+        "nameJa": "輝耀・霊能潮涌",
+        "description": "释放光辉灵能潮涌，为全队恢复20点灵能并提升暴击率10%，持续10秒。",
+        "descriptionEn": "Releases a Radiance energy surge, restoring 20 Spirit Energy to all party members and boosting CRIT Rate by 10% for 10s.",
+        "cost": "60 灵能"
+      },
+      "passive": {
+        "name": "真律研究",
+        "nameEn": "True Law Research",
+        "nameJa": "真律研究",
+        "description": "晨曦触发完美闪避后，全队攻击力额外提升5%，持续6秒。",
+        "descriptionEn": "After Chenxi triggers a Perfect Dodge, the whole party gains 5% ATK for 6s."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "灵脉法杖",
+      "bestWeaponEn": "Spirit Vein Staff",
+      "alternativeWeapons": ["风吟竖琴"],
+      "mainStats": {
+        "沙漏": "灵能充能",
+        "杯子": "攻击力%",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "Energy Recharge",
+        "Goblet": "ATK%",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": ["灵能充能", "攻击力%", "暴击率"],
+      "subStatPriorityEn": ["Energy Recharge", "ATK%", "CRIT Rate"]
+    },
+    "teamComps": [
+      {
+        "name": "光辉增益队",
+        "nameEn": "Radiance Buffer Team",
+        "members": ["chenxi", "chu", "yelan", "suyin"],
+        "description": "晨曦为初提供增益，适合没有璃洛时的平替方案。",
+        "descriptionEn": "Chenxi buffs Chu — a solid alternative when you don't have Liro."
+      }
+    ],
+    "image": "/images/guihuan/characters/chenxi.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  }
+]
