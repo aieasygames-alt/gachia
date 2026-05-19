@@ -1028,9 +1028,31 @@ function NteCharacterDetail({ char, locale }: { char: NteCharacter; locale: Supp
   const gameConfig = GAMES.nte;
   const imageUrl = getNteCharacterImage(char);
   const builds = getBuildsForCharacter(char.id);
+  const charName = getNteCharacterName(char, locale);
+
+  // JSON-LD structured data
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'VideoGameCharacter',
+    name: charName,
+    description: getNteCharacterDescription(char, locale).slice(0, 300),
+    image: imageUrl,
+    url: `https://gachia.com/${locale}/nte/characters/${char.id}`,
+    ...(char.tierRank ? {
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: char.tierRank === 'SS' ? 5 : char.tierRank === 'S' ? 4.5 : char.tierRank === 'A' ? 4 : char.tierRank === 'B' ? 3 : 2,
+        bestRating: 5,
+        worstRating: 1,
+      },
+    } : {}),
+  };
 
   return (
     <div>
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildBreadcrumbJsonLd('nte', charName, locale)) }} />
       <div className="mb-6 flex flex-col gap-6 md:flex-row">
         <div className="shrink-0 overflow-hidden rounded-lg border border-game-border bg-game-surface">
           <CharacterAvatar

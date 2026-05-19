@@ -53,7 +53,7 @@ export async function generateMetadata({
     const name = getArtifactSetName(set, locale);
     return {
       title: `${name} - ${gameName} Wiki`,
-      description: getArtifactSetDesc2pc(set, locale).slice(0, 160),
+      description: buildArtifactDescription(name, getArtifactSetDesc2pc(set, locale), set.bestFor.map(cid => { const c = getGenshinCharacterById(cid); return c ? getGenshinCharacterName(c, locale) : null; }).filter((x): x is string => x !== null), locale),
       alternates: {
         canonical: `https://gachia.com/${locale}/${gameId}/artifacts/${id}`,
         languages: { 'zh-Hans': `https://gachia.com/zh/${gameId}/artifacts/${id}`, en: `https://gachia.com/en/${gameId}/artifacts/${id}`, ja: `https://gachia.com/ja/${gameId}/artifacts/${id}`, 'x-default': `https://gachia.com/zh/${gameId}/artifacts/${id}` },
@@ -67,7 +67,7 @@ export async function generateMetadata({
     const name = getStarRailRelicSetName(set, locale);
     return {
       title: `${name} - ${gameName} Wiki`,
-      description: getStarRailRelicSetDesc2pc(set, locale).slice(0, 160),
+      description: buildArtifactDescription(name, getStarRailRelicSetDesc2pc(set, locale), set.bestFor.map(cid => { const c = getStarRailCharacterById(cid); return c ? getStarRailCharacterName(c, locale) : null; }).filter((x): x is string => x !== null), locale),
       alternates: {
         canonical: `https://gachia.com/${locale}/${gameId}/artifacts/${id}`,
         languages: { 'zh-Hans': `https://gachia.com/zh/${gameId}/artifacts/${id}`, en: `https://gachia.com/en/${gameId}/artifacts/${id}`, ja: `https://gachia.com/ja/${gameId}/artifacts/${id}`, 'x-default': `https://gachia.com/zh/${gameId}/artifacts/${id}` },
@@ -225,6 +225,21 @@ function GenshinArtifactDetail({
           </div>
         </section>
       )}
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: gameName, item: `https://gachia.com/${locale}/genshin` },
+              { '@type': 'ListItem', position: 2, name: locale === 'zh' ? '圣遗物' : locale === 'ja' ? '聖遺物' : 'Artifacts', item: `https://gachia.com/${locale}/genshin/artifacts` },
+              { '@type': 'ListItem', position: 3, name },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
@@ -307,6 +322,21 @@ function StarRailRelicDetail({
           </div>
         </section>
       )}
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: gameName, item: `https://gachia.com/${locale}/starrail` },
+              { '@type': 'ListItem', position: 2, name: locale === 'zh' ? '遗器' : locale === 'ja' ? '遺物' : 'Relics', item: `https://gachia.com/${locale}/starrail/artifacts` },
+              { '@type': 'ListItem', position: 3, name },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
@@ -319,4 +349,13 @@ function pcLabel(locale: SupportedLocale) {
 
 function nameEnLabel(locale: SupportedLocale) {
   return locale === 'zh' ? '英文名' : locale === 'ja' ? '英語名' : 'English Name';
+}
+
+function buildArtifactDescription(name: string, bonus2pc: string, bestForNames: string[], locale: SupportedLocale) {
+  const parts = [name, bonus2pc];
+  if (bestForNames.length > 0) {
+    const label = locale === 'zh' ? '推荐' : locale === 'ja' ? 'おすすめ' : 'Best for';
+    parts.push(`${label}: ${bestForNames.join(', ')}`);
+  }
+  return parts.join('. ').slice(0, 160);
 }

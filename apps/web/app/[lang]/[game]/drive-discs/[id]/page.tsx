@@ -1,6 +1,6 @@
 import { GAMES, LOCALES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { getZzzDriveDiscById, getZzzDriveDiscName, getZzzDriveDiscDesc2pc, getZzzDriveDiscDesc4pc, getZzzCharacterName } from '@gachia/data';
+import { getZzzDriveDiscById, getZzzDriveDiscName, getZzzDriveDiscDesc2pc, getZzzDriveDiscDesc4pc, getZzzCharacterName, zzzDriveDiscs } from '@gachia/data';
 import { notFound } from 'next/navigation';
 
 const BASE_URL = 'https://gachia.com';
@@ -10,15 +10,9 @@ const ELEMENT_COLORS: Record<string, string> = {
 };
 
 export function generateStaticParams() {
-  const ids = [
-    'chaos-jazz', 'polar-metal', 'fanged-metal',
-    'shockstar-disco', 'freedom-blues', 'hormone-punk',
-    'woodpecker-electro', 'swing-jazz', 'soul-rock',
-    'inferno-metal', 'thunder-metal', 'puffer-electro',
-    'branch-blade-song', 'chaotic-metal', 'proto-punk',
-    'shadow-harmony', 'astral-voice', 'phaethon-melody',
-  ];
-  return LOCALES.flatMap((lang) => ids.map((id) => ({ lang, game: 'zzz', id })));
+  return LOCALES.flatMap((lang) =>
+    zzzDriveDiscs.map((d) => ({ lang, game: 'zzz', id: d.id }))
+  );
 }
 
 export async function generateMetadata({
@@ -46,7 +40,7 @@ export async function generateMetadata({
 
   return {
     title: `${name} - ${gameName} Wiki`,
-    description: desc ? desc.slice(0, 160) : `${name} - ${gameName}驱动盘数据`,
+    description: desc ? `${name}: ${desc}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '驱动盘数据' : locale === 'ja' ? 'ドライブディスクデータ' : ' drive disc stats'}`,
     alternates: { canonical: `${BASE_URL}/${locale}/zzz/drive-discs/${id}`, languages },
   };
 }
@@ -115,6 +109,21 @@ export default async function DriveDiscDetailPage({
           </div>
         )}
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: gameConfig.name[locale], item: `https://gachia.com/${locale}/zzz` },
+              { '@type': 'ListItem', position: 2, name: locale === 'zh' ? '驱动盘' : locale === 'ja' ? 'ドライブディスク' : 'Drive Discs', item: `https://gachia.com/${locale}/zzz/drive-discs` },
+              { '@type': 'ListItem', position: 3, name: getZzzDriveDiscName(disc, locale) },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }

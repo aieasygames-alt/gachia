@@ -292,6 +292,21 @@ function GenshinGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: s
           {locale === 'zh' ? '← 返回攻略列表' : locale === 'ja' ? '← ガイド一覧に戻る' : '← Back to Guides'}
         </Link>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: gameConfig.name[locale], item: `https://gachia.com/${locale}/genshin` },
+              { '@type': 'ListItem', position: 2, name: CATEGORY_LABELS.guides?.[locale] ?? 'Guides', item: `https://gachia.com/${locale}/genshin/guides` },
+              { '@type': 'ListItem', position: 3, name: getGenshinGuideTitle(guide, locale) },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
@@ -369,6 +384,21 @@ function NteGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
           {locale === 'zh' ? '← 返回攻略列表' : locale === 'ja' ? '← ガイド一覧に戻る' : '← Back to Guides'}
         </Link>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: gameConfig.name[locale], item: `https://gachia.com/${locale}/nte` },
+              { '@type': 'ListItem', position: 2, name: CATEGORY_LABELS.guides?.[locale] ?? 'Guides', item: `https://gachia.com/${locale}/nte/guides` },
+              { '@type': 'ListItem', position: 3, name: getNteGuideTitle(guide, locale) },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
@@ -450,6 +480,21 @@ function WuWaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: stri
           {locale === 'zh' ? '← 返回攻略列表' : locale === 'ja' ? '← ガイド一覧に戻る' : '← Back to Guides'}
         </Link>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: gameConfig.name[locale], item: `https://gachia.com/${locale}/wuwa` },
+              { '@type': 'ListItem', position: 2, name: CATEGORY_LABELS.guides?.[locale] ?? 'Guides', item: `https://gachia.com/${locale}/wuwa/guides` },
+              { '@type': 'ListItem', position: 3, name: getWuWaGuideTitle(guide, locale) },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
@@ -526,6 +571,21 @@ function StarRailGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: 
           {locale === 'zh' ? '← 返回攻略列表' : locale === 'ja' ? '← ガイド一覧に戻る' : '← Back to Guides'}
         </Link>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: gameConfig.name[locale], item: `https://gachia.com/${locale}/starrail` },
+              { '@type': 'ListItem', position: 2, name: CATEGORY_LABELS.guides?.[locale] ?? 'Guides', item: `https://gachia.com/${locale}/starrail/guides` },
+              { '@type': 'ListItem', position: 3, name: getStarRailGuideTitle(guide, locale) },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
@@ -596,6 +656,21 @@ function ZzzGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
           {locale === 'zh' ? '← 返回攻略列表' : locale === 'ja' ? '← ガイド一覧に戻る' : '← Back to Guides'}
         </Link>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: gameConfig.name[locale], item: `https://gachia.com/${locale}/zzz` },
+              { '@type': 'ListItem', position: 2, name: CATEGORY_LABELS.guides?.[locale] ?? 'Guides', item: `https://gachia.com/${locale}/zzz/guides` },
+              { '@type': 'ListItem', position: 3, name: getZzzGuideTitle(guide, locale) },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
@@ -666,6 +741,21 @@ function GuihuanGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: s
           {locale === 'zh' ? '← 返回攻略列表' : locale === 'ja' ? '← ガイド一覧に戻る' : '← Back to Guides'}
         </Link>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: gameConfig.name[locale], item: `https://gachia.com/${locale}/guihuan` },
+              { '@type': 'ListItem', position: 2, name: CATEGORY_LABELS.guides?.[locale] ?? 'Guides', item: `https://gachia.com/${locale}/guihuan/guides` },
+              { '@type': 'ListItem', position: 3, name: getGuihuanGuideTitle(guide, locale) },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }

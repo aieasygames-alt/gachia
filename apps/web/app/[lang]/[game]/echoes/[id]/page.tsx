@@ -26,7 +26,7 @@ export async function generateMetadata({
   const name = getWuWaEchoSetName(set, locale);
   return {
     title: `${name} - ${GAMES.wuwa.name[locale]} Wiki`,
-    description: getWuWaEchoSetDesc2pc(set, locale).slice(0, 160),
+    description: buildEchoDescription(name, getWuWaEchoSetDesc2pc(set, locale), set.bestFor, locale),
     alternates: {
       canonical: `https://gachia.com/${locale}/wuwa/echoes/${id}`,
       languages: {
@@ -112,10 +112,40 @@ export default async function EchoDetailPage({
           </div>
         </section>
       )}
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: gameName, item: `https://gachia.com/${locale}/wuwa` },
+              { '@type': 'ListItem', position: 2, name: locale === 'zh' ? '回声' : locale === 'ja' ? 'エコー' : 'Echoes', item: `https://gachia.com/${locale}/wuwa/echoes` },
+              { '@type': 'ListItem', position: 3, name },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
 
 function pcLabel(locale: SupportedLocale) {
   return locale === 'zh' ? '件套' : locale === 'ja' ? 'セット' : '-Piece Set';
+}
+
+function buildEchoDescription(name: string, bonus2pc: string, bestFor: readonly string[], locale: SupportedLocale) {
+  const parts = [name, bonus2pc];
+  if (bestFor.length > 0) {
+    const names = bestFor.map((cid) => {
+      const c = getWuWaCharacterById(cid);
+      return c ? getWuWaCharacterName(c, locale) : null;
+    }).filter((x): x is string => x !== null);
+    if (names.length > 0) {
+      const label = locale === 'zh' ? '推荐' : locale === 'ja' ? 'おすすめ' : 'Best for';
+      parts.push(`${label}: ${names.join(', ')}`);
+    }
+  }
+  return parts.join('. ').slice(0, 160);
 }

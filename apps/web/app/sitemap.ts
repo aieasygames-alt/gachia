@@ -1,9 +1,9 @@
 import { GAMES, LOCALES } from '@gachia/core';
 import {
-  nteCharacters, nteGuides, nteWeapons, nteDiskSets,
-  genshinCharacters, genshinGuides, genshinArtifactSets, genshinWeapons,
-  wuwaCharacters, wuwaGuides, wuwaWeapons, wuwaEchoSets,
-  starrailCharacters, starrailGuides, starrailRelicSets, starrailLightCones,
+  nteCharacters, nteGuides, nteWeapons, nteDiskSets, nteMaterials,
+  genshinCharacters, genshinGuides, genshinArtifactSets, genshinWeapons, genshinMaterials,
+  wuwaCharacters, wuwaGuides, wuwaWeapons, wuwaEchoSets, wuwaMaterials,
+  starrailCharacters, starrailGuides, starrailRelicSets, starrailLightCones, starrailMaterials,
   zzzCharacters, zzzWeapons, zzzDriveDiscs, zzzMaterials, zzzGuides,
   guihuanCharacters, guihuanWeapons, guihuanMaterials, guihuanGuides,
 } from '@gachia/data';
@@ -19,6 +19,7 @@ const ARTIFACT_GAMES = ['genshin', 'starrail'] as const;
 const ECHO_GAMES = ['wuwa'] as const;
 const DISK_SET_GAMES = ['nte'] as const;
 const DRIVE_DISC_GAMES = ['zzz'] as const;
+const ITEM_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan'] as const;
 
 // Category routes that have real content per game
 const REAL_CONTENT_ROUTES: Record<string, string[]> = {
@@ -156,6 +157,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
           });
         }
       }
+
+      // Item / Material detail pages
+      if (ITEM_GAMES.includes(gameId as typeof ITEM_GAMES[number])) {
+        const items = getItemsForGame(gameId);
+        for (const item of items) {
+          entries.push({
+            url: `${BASE_URL}/${locale}/${gameId}/items/${item.id}`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.5,
+          });
+        }
+      }
     }
   }
 
@@ -202,6 +216,18 @@ function getArtifactsForGame(gameId: string) {
   switch (gameId) {
     case 'genshin': return genshinArtifactSets;
     case 'starrail': return starrailRelicSets;
+    default: return [];
+  }
+}
+
+function getItemsForGame(gameId: string) {
+  switch (gameId) {
+    case 'genshin': return genshinMaterials;
+    case 'starrail': return starrailMaterials;
+    case 'wuwa': return wuwaMaterials;
+    case 'nte': return nteMaterials;
+    case 'zzz': return zzzMaterials;
+    case 'guihuan': return guihuanMaterials;
     default: return [];
   }
 }

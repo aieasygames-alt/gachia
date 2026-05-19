@@ -207,6 +207,20 @@ export default async function ItemDetailPage({
           </div>
         )}
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: gameName, item: `https://gachia.com/${locale}/${gameId}` },
+              { '@type': 'ListItem', position: 2, name: locale === 'zh' ? '材料' : locale === 'ja' ? '素材' : 'Items', item: `https://gachia.com/${locale}/${gameId}/items` },
+              { '@type': 'ListItem', position: 3, name: data.name },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }

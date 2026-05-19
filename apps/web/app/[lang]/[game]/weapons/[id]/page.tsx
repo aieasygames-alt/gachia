@@ -87,7 +87,7 @@ export async function generateMetadata({
     const effect = getGenshinWeaponEffect(w, locale);
     return {
       title: `${name} - ${gameName} Wiki`,
-      description: effect ? effect.description.slice(0, 160) : `${name} - ${gameName}武器数据`,
+      description: effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`,
       alternates: buildAlternates(locale, gameId, id),
     };
   }
@@ -98,7 +98,7 @@ export async function generateMetadata({
     const effect = getStarRailLightConeEffect(w, locale);
     return {
       title: `${name} - ${gameName} Wiki`,
-      description: effect ? effect.description.slice(0, 160) : `${name} - ${gameName}光锥数据`,
+      description: effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`,
       alternates: buildAlternates(locale, gameId, id),
     };
   }
@@ -109,7 +109,7 @@ export async function generateMetadata({
     const effect = getWuWaWeaponEffect(w, locale);
     return {
       title: `${name} - ${gameName} Wiki`,
-      description: effect ? effect.description.slice(0, 160) : `${name} - ${gameName}武器数据`,
+      description: effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`,
       alternates: buildAlternates(locale, gameId, id),
     };
   }
@@ -120,7 +120,7 @@ export async function generateMetadata({
     const effect = getNteWeaponEffect(w, locale);
     return {
       title: `${name} - ${gameName} Wiki`,
-      description: effect ? effect.description.slice(0, 160) : `${name} - ${gameName}武器数据`,
+      description: effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`,
       alternates: buildAlternates(locale, gameId, id),
     };
   }
@@ -131,7 +131,7 @@ export async function generateMetadata({
     const effect = getZzzWeaponEffect(w, locale);
     return {
       title: `${name} - ${gameName} Wiki`,
-      description: effect ? effect.description.slice(0, 160) : `${name} - ${gameName}音擎数据`,
+      description: effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`,
       alternates: buildAlternates(locale, gameId, id),
     };
   }
@@ -142,7 +142,7 @@ export async function generateMetadata({
     const effect = getGuihuanWeaponEffect(w, locale);
     return {
       title: `${name} - ${gameName} Wiki`,
-      description: effect ? effect.description.slice(0, 160) : `${name} - ${gameName}武器数据`,
+      description: effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`,
       alternates: buildAlternates(locale, gameId, id),
     };
   }
@@ -222,6 +222,20 @@ function GenshinWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnTyp
         </section>
       )}
       {source && <SourceSection source={source} locale={locale} />}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: gameName, item: `https://gachia.com/${locale}/genshin` },
+              { '@type': 'ListItem', position: 2, name: locale === 'zh' ? '武器' : locale === 'ja' ? '武器' : 'Weapons', item: `https://gachia.com/${locale}/genshin/weapons` },
+              { '@type': 'ListItem', position: 3, name },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
@@ -257,6 +271,20 @@ function StarRailLightConeDetail({ lc, locale }: { lc: NonNullable<ReturnType<ty
         </section>
       )}
       {source && <SourceSection source={source} locale={locale} />}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: gameName, item: `https://gachia.com/${locale}/starrail` },
+              { '@type': 'ListItem', position: 2, name: locale === 'zh' ? '武器' : locale === 'ja' ? '武器' : 'Weapons', item: `https://gachia.com/${locale}/starrail/weapons` },
+              { '@type': 'ListItem', position: 3, name },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
@@ -291,6 +319,20 @@ function WuWaWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<t
         </section>
       )}
       {source && <SourceSection source={source} locale={locale} />}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: gameName, item: `https://gachia.com/${locale}/wuwa` },
+              { '@type': 'ListItem', position: 2, name: locale === 'zh' ? '武器' : locale === 'ja' ? '武器' : 'Weapons', item: `https://gachia.com/${locale}/wuwa/weapons` },
+              { '@type': 'ListItem', position: 3, name },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
@@ -325,6 +367,20 @@ function NteWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<ty
         </section>
       )}
       {source && <SourceSection source={source} locale={locale} />}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: gameName, item: `https://gachia.com/${locale}/nte` },
+              { '@type': 'ListItem', position: 2, name: locale === 'zh' ? '武器' : locale === 'ja' ? '武器' : 'Weapons', item: `https://gachia.com/${locale}/nte/weapons` },
+              { '@type': 'ListItem', position: 3, name },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
@@ -357,6 +413,20 @@ function ZzzWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<ty
         </section>
       )}
       {source && <SourceSection source={source} locale={locale} />}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: gameName, item: `https://gachia.com/${locale}/zzz` },
+              { '@type': 'ListItem', position: 2, name: locale === 'zh' ? '武器' : locale === 'ja' ? '武器' : 'Weapons', item: `https://gachia.com/${locale}/zzz/weapons` },
+              { '@type': 'ListItem', position: 3, name },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
@@ -390,6 +460,20 @@ function GuihuanWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnTyp
         </section>
       )}
       {source && <SourceSection source={source} locale={locale} />}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: gameName, item: `https://gachia.com/${locale}/guihuan` },
+              { '@type': 'ListItem', position: 2, name: locale === 'zh' ? '武器' : locale === 'ja' ? '武器' : 'Weapons', item: `https://gachia.com/${locale}/guihuan/weapons` },
+              { '@type': 'ListItem', position: 3, name },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
