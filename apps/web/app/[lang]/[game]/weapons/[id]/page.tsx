@@ -6,6 +6,8 @@ import {
   starrailLightCones, getStarRailLightConeById, getStarRailLightConeName, getStarRailLightConeEffect, getStarRailLightConeSource,
   wuwaWeapons, getWuWaWeaponById, getWuWaWeaponName, getWuWaWeaponEffect, getWuWaWeaponSource,
   nteWeapons, getNteWeaponById, getNteWeaponName, getNteWeaponEffect, getNteWeaponSource,
+  zzzWeapons, getZzzWeaponById, getZzzWeaponName, getZzzWeaponEffect, getZzzWeaponSource,
+  guihuanWeapons, getGuihuanWeaponById, getGuihuanWeaponName, getGuihuanWeaponEffect, getGuihuanWeaponSource,
 } from '@gachia/data';
 import { Link } from '@/lib/i18n/navigation';
 
@@ -51,6 +53,8 @@ export async function generateStaticParams() {
     ...starrailLightCones.map((w) => ({ lang, game: 'starrail', id: w.id })),
     ...wuwaWeapons.map((w) => ({ lang, game: 'wuwa', id: w.id })),
     ...nteWeapons.map((w) => ({ lang, game: 'nte', id: w.id })),
+    ...zzzWeapons.map((w) => ({ lang, game: 'zzz', id: w.id })),
+    ...guihuanWeapons.map((w) => ({ lang, game: 'guihuan', id: w.id })),
   ]);
 }
 
@@ -120,6 +124,28 @@ export async function generateMetadata({
       alternates: buildAlternates(locale, gameId, id),
     };
   }
+  if (gameId === 'zzz') {
+    const w = getZzzWeaponById(id);
+    if (!w) return {};
+    const name = getZzzWeaponName(w, locale);
+    const effect = getZzzWeaponEffect(w, locale);
+    return {
+      title: `${name} - ${gameName} Wiki`,
+      description: effect ? effect.description.slice(0, 160) : `${name} - ${gameName}音擎数据`,
+      alternates: buildAlternates(locale, gameId, id),
+    };
+  }
+  if (gameId === 'guihuan') {
+    const w = getGuihuanWeaponById(id);
+    if (!w) return {};
+    const name = getGuihuanWeaponName(w, locale);
+    const effect = getGuihuanWeaponEffect(w, locale);
+    return {
+      title: `${name} - ${gameName} Wiki`,
+      description: effect ? effect.description.slice(0, 160) : `${name} - ${gameName}武器数据`,
+      alternates: buildAlternates(locale, gameId, id),
+    };
+  }
   return {};
 }
 
@@ -151,6 +177,16 @@ export default async function WeaponDetailPage({
     const w = getNteWeaponById(id);
     if (!w) notFound();
     return <NteWeaponDetail weapon={w} locale={locale} />;
+  }
+  if (gameId === 'zzz') {
+    const w = getZzzWeaponById(id);
+    if (!w) notFound();
+    return <ZzzWeaponDetail weapon={w} locale={locale} />;
+  }
+  if (gameId === 'guihuan') {
+    const w = getGuihuanWeaponById(id);
+    if (!w) notFound();
+    return <GuihuanWeaponDetail weapon={w} locale={locale} />;
   }
 
   notFound();
@@ -281,6 +317,71 @@ function NteWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<ty
         <section className="mt-6">
           <h2 className="mb-3 text-lg font-semibold text-game-text">
             {locale === 'zh' ? '技能效果' : locale === 'ja' ? 'スキル効果' : 'Skill Effect'}
+          </h2>
+          <div className="rounded-lg border border-game-border bg-game-surface p-4">
+            <div className="mb-1 text-sm font-medium text-game-primary">{effect.name}</div>
+            <p className="text-sm text-game-text-muted">{effect.description}</p>
+          </div>
+        </section>
+      )}
+      {source && <SourceSection source={source} locale={locale} />}
+    </div>
+  );
+}
+
+/* ---------- ZZZ ---------- */
+
+function ZzzWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<typeof getZzzWeaponById>>; locale: SupportedLocale }) {
+  const gameName = GAMES.zzz.name[locale];
+  const name = getZzzWeaponName(weapon, locale);
+  const effect = getZzzWeaponEffect(weapon, locale);
+  const source = getZzzWeaponSource(weapon, locale);
+
+  return (
+    <div>
+      <Breadcrumb game="zzz" gameName={gameName} locale={locale} />
+      <Header name={name} nameAlt={locale === 'zh' ? weapon.nameEn : weapon.name} rarity={weapon.rank === 'S' ? 5 : weapon.rank === 'A' ? 4 : 3} rank={weapon.rank} />
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <InfoCard label={locale === 'zh' ? '类型' : locale === 'ja' ? 'タイプ' : 'Specialty'} value={locale === 'zh' ? weapon.specialty : weapon.specialtyEn} />
+        <InfoCard label="Base ATK" value={String(weapon.baseAtk)} />
+      </div>
+      {effect.name && (
+        <section className="mt-6">
+          <h2 className="mb-3 text-lg font-semibold text-game-text">
+            {locale === 'zh' ? '音擎效果' : locale === 'ja' ? 'Wエンジン効果' : 'W-Engine Effect'}
+          </h2>
+          <div className="rounded-lg border border-game-border bg-game-surface p-4">
+            <div className="mb-1 text-sm font-medium text-game-primary">{effect.name}</div>
+            <p className="text-sm text-game-text-muted">{effect.description}</p>
+          </div>
+        </section>
+      )}
+      {source && <SourceSection source={source} locale={locale} />}
+    </div>
+  );
+}
+
+/* ---------- Guihuan ---------- */
+
+function GuihuanWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<typeof getGuihuanWeaponById>>; locale: SupportedLocale }) {
+  const gameName = GAMES.guihuan.name[locale];
+  const name = getGuihuanWeaponName(weapon, locale);
+  const effect = getGuihuanWeaponEffect(weapon, locale);
+  const source = getGuihuanWeaponSource(weapon, locale);
+
+  return (
+    <div>
+      <Breadcrumb game="guihuan" gameName={gameName} locale={locale} />
+      <Header name={name} nameAlt={locale === 'zh' ? weapon.nameEn : weapon.name} rarity={weapon.rarity} />
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <InfoCard label={locale === 'zh' ? '武器类型' : locale === 'ja' ? '武器タイプ' : 'Weapon Type'} value={locale === 'zh' ? weapon.weaponType : weapon.weaponTypeEn} />
+        <InfoCard label="Base ATK" value={String(weapon.baseAtk)} />
+        {weapon.substat && <InfoCard label="Sub Stat" value={`${locale === 'zh' ? weapon.substat : weapon.substatEn} ${weapon.substatValue}`} />}
+      </div>
+      {effect.name && (
+        <section className="mt-6">
+          <h2 className="mb-3 text-lg font-semibold text-game-text">
+            {locale === 'zh' ? '武器技能' : locale === 'ja' ? '武器スキル' : 'Weapon Skill'}
           </h2>
           <div className="rounded-lg border border-game-border bg-game-surface p-4">
             <div className="mb-1 text-sm font-medium text-game-primary">{effect.name}</div>

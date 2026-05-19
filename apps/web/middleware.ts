@@ -12,7 +12,7 @@ export default function middleware(request: NextRequest) {
   if (!isStaticAsset) {
     response.headers.set(
       'Cache-Control',
-      'public, max-age=0, s-maxage=3600, stale-while-revalidate=86400'
+      'public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400'
     );
   }
 

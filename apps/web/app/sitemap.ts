@@ -4,16 +4,17 @@ import {
   genshinCharacters, genshinGuides, genshinArtifactSets, genshinWeapons,
   wuwaCharacters, wuwaGuides, wuwaWeapons, wuwaEchoSets,
   starrailCharacters, starrailGuides, starrailRelicSets, starrailLightCones,
-  zzzCharacters, zzzWeapons, zzzDriveDiscs,
+  zzzCharacters, zzzWeapons, zzzDriveDiscs, zzzMaterials,
+  guihuanCharacters, guihuanWeapons, guihuanMaterials, guihuanGuides,
 } from '@gachia/data';
 import type { MetadataRoute } from 'next';
 
 const BASE_URL = 'https://gachia.com';
 
 // Games with real content for each category
-const CHAR_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz'] as const;
-const WEAPON_GAMES = ['genshin', 'starrail', 'wuwa', 'nte'] as const;
-const GUIDE_GAMES = ['genshin', 'starrail', 'wuwa', 'nte'] as const;
+const CHAR_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan'] as const;
+const WEAPON_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan'] as const;
+const GUIDE_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan'] as const;
 const ARTIFACT_GAMES = ['genshin', 'starrail'] as const;
 const ECHO_GAMES = ['wuwa'] as const;
 const DISK_SET_GAMES = ['nte'] as const;
@@ -26,6 +27,7 @@ const REAL_CONTENT_ROUTES: Record<string, string[]> = {
   wuwa: ['characters', 'weapons', 'items', 'tier-list', 'map', 'guides', 'compare', 'teams'],
   nte: ['characters', 'weapons', 'items', 'tier-list', 'map', 'guides', 'disk-sets', 'redeem-codes', 'gacha', 'anomalies'],
   zzz: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'drive-discs', 'build', 'compare', 'teams'],
+  guihuan: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'compare', 'teams'],
 };
 
 // Revalidate every 24 hours
@@ -178,6 +180,7 @@ function getWeaponsForGame(gameId: string) {
     case 'wuwa': return wuwaWeapons;
     case 'nte': return nteWeapons;
     case 'zzz': return zzzWeapons;
+    case 'guihuan': return guihuanWeapons;
     default: return [];
   }
 }
@@ -188,6 +191,7 @@ function getGuidesForGame(gameId: string) {
     case 'starrail': return starrailGuides;
     case 'wuwa': return wuwaGuides;
     case 'nte': return nteGuides;
+    case 'guihuan': return guihuanGuides;
     default: return [];
   }
 }
