@@ -4,7 +4,7 @@ import {
   genshinCharacters, genshinGuides, genshinArtifactSets, genshinWeapons,
   wuwaCharacters, wuwaGuides, wuwaWeapons, wuwaEchoSets,
   starrailCharacters, starrailGuides, starrailRelicSets, starrailLightCones,
-  zzzCharacters, zzzWeapons, zzzDriveDiscs, zzzMaterials,
+  zzzCharacters, zzzWeapons, zzzDriveDiscs, zzzMaterials, zzzGuides,
   guihuanCharacters, guihuanWeapons, guihuanMaterials, guihuanGuides,
 } from '@gachia/data';
 import type { MetadataRoute } from 'next';
@@ -169,6 +169,7 @@ function getCharactersForGame(gameId: string) {
     case 'wuwa': return wuwaCharacters;
     case 'nte': return nteCharacters;
     case 'zzz': return zzzCharacters;
+    case 'guihuan': return guihuanCharacters;
     default: return [];
   }
 }
@@ -191,6 +192,7 @@ function getGuidesForGame(gameId: string) {
     case 'starrail': return starrailGuides;
     case 'wuwa': return wuwaGuides;
     case 'nte': return nteGuides;
+    case 'zzz': return zzzGuides;
     case 'guihuan': return guihuanGuides;
     default: return [];
   }

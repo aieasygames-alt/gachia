@@ -6,6 +6,8 @@ import {
   starrailMaterials, getStarRailMaterialById, getStarRailMaterialName,
   wuwaMaterials, getWuWaMaterialById, getWuWaMaterialName,
   nteMaterials, getNteMaterialById, getNteMaterialName,
+  zzzMaterials, getZzzMaterialById, getZzzMaterialName,
+  guihuanMaterials, getGuihuanMaterialById, getGuihuanMaterialName,
 } from '@gachia/data';
 import { Link } from '@/lib/i18n/navigation';
 
@@ -40,6 +42,8 @@ export async function generateStaticParams() {
     ...starrailMaterials.map((m) => ({ lang, game: 'starrail', id: m.id })),
     ...wuwaMaterials.map((m) => ({ lang, game: 'wuwa', id: m.id })),
     ...nteMaterials.map((m) => ({ lang, game: 'nte', id: m.id })),
+    ...zzzMaterials.map((m) => ({ lang, game: 'zzz', id: m.id })),
+    ...guihuanMaterials.map((m) => ({ lang, game: 'guihuan', id: m.id })),
   ]);
 }
 
@@ -76,6 +80,16 @@ export async function generateMetadata({
     if (!m) return {};
     name = getNteMaterialName(m, locale);
     description = m.source.slice(0, 160);
+  } else if (gameId === 'zzz') {
+    const m = getZzzMaterialById(id);
+    if (!m) return {};
+    name = getZzzMaterialName(m, locale);
+    description = m.source.slice(0, 160);
+  } else if (gameId === 'guihuan') {
+    const m = getGuihuanMaterialById(id);
+    if (!m) return {};
+    name = getGuihuanMaterialName(m, locale);
+    description = (locale === 'en' ? m.sourceEn : m.source).slice(0, 160);
   }
 
   return {
@@ -121,6 +135,16 @@ function getItemData(gameId: GameId, id: string, locale: SupportedLocale): ItemD
     const m = getNteMaterialById(id);
     if (!m) return null;
     return { name: getNteMaterialName(m, locale), nameAlt: locale === 'zh' ? (m.nameEn ?? '') : (m.name ?? ''), rarity: m.rarity, type: m.type, source: m.source };
+  }
+  if (gameId === 'zzz') {
+    const m = getZzzMaterialById(id);
+    if (!m) return null;
+    return { name: getZzzMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name, rarity: m.rarity, type: m.type, source: m.source };
+  }
+  if (gameId === 'guihuan') {
+    const m = getGuihuanMaterialById(id);
+    if (!m) return null;
+    return { name: getGuihuanMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name, rarity: m.rarity, type: m.type, source: locale === 'en' ? m.sourceEn : m.source };
   }
   return null;
 }
