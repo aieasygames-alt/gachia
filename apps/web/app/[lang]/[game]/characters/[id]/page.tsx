@@ -218,6 +218,12 @@ export async function generateMetadata({
     },
   });
 
+  const buildOg = (charName: string) => ({
+    title: charName,
+    images: [{ url: `/images/og/${gameId}.png`, width: 1200, height: 630, alt: charName }],
+    locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
+  });
+
   if (gameId === 'genshin') {
     const char = getGenshinCharacterById(id);
     if (!char) return {};
@@ -226,6 +232,7 @@ export async function generateMetadata({
     return {
       title: `${name} - ${gameName} Wiki`,
       description: getGenshinCharacterDescription(char, locale).slice(0, 160),
+      openGraph: buildOg(name),
       alternates: buildAlternates(id),
     };
   }
@@ -238,6 +245,7 @@ export async function generateMetadata({
     return {
       title: `${name} - ${gameName} Wiki`,
       description: getStarRailCharacterDescription(char, locale).slice(0, 160),
+      openGraph: buildOg(name),
       alternates: buildAlternates(id),
     };
   }
@@ -250,6 +258,7 @@ export async function generateMetadata({
     return {
       title: `${name} - ${gameName} Wiki`,
       description: getNteCharacterDescription(char, locale).slice(0, 160),
+      openGraph: buildOg(name),
       alternates: buildAlternates(id),
     };
   }
@@ -262,6 +271,7 @@ export async function generateMetadata({
     return {
       title: `${name} - ${gameName} Wiki`,
       description: getWuWaCharacterDescription(char, locale).slice(0, 160),
+      openGraph: buildOg(name),
       alternates: buildAlternates(id),
     };
   }
@@ -274,6 +284,7 @@ export async function generateMetadata({
     return {
       title: `${name} - ${gameName} Wiki`,
       description: getZzzCharacterDescription(char, locale).slice(0, 160),
+      openGraph: buildOg(name),
       alternates: buildAlternates(id),
     };
   }
@@ -286,6 +297,7 @@ export async function generateMetadata({
     return {
       title: `${name} - ${gameName} Wiki`,
       description: getGuihuanCharacterDescription(char, locale).slice(0, 160),
+      openGraph: buildOg(name),
       alternates: buildAlternates(id),
     };
   }
@@ -366,12 +378,9 @@ function GenshinCharacterDetail({ char, locale }: { char: GenshinCharacter; loca
   // JSON-LD structured data
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'VideoGame',
+    '@type': 'VideoGameCharacter',
     name: charName,
     description: getGenshinCharacterDescription(char, locale).slice(0, 300),
-    gamePlatform: 'Genshin Impact',
-    applicationCategory: 'Game',
-    genre: char.element,
     image: imageUrl,
     url: `https://gachia.com/${locale}/genshin/characters/${char.id}`,
     aggregateRating: {
@@ -401,6 +410,7 @@ function GenshinCharacterDetail({ char, locale }: { char: GenshinCharacter; loca
       {/* JSON-LD */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildBreadcrumbJsonLd('genshin', charName, locale)) }} />
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-4">
@@ -715,12 +725,9 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
   // JSON-LD structured data
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'VideoGame',
+    '@type': 'VideoGameCharacter',
     name: charName,
     description: getStarRailCharacterDescription(char, locale).slice(0, 300),
-    gamePlatform: 'Honkai: Star Rail',
-    applicationCategory: 'Game',
-    genre: char.element,
     image: imageUrl,
     url: `https://gachia.com/${locale}/starrail/characters/${char.id}`,
     aggregateRating: {
@@ -749,6 +756,7 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
       {/* JSON-LD */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildBreadcrumbJsonLd('starrail', charName, locale)) }} />
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-4">
@@ -996,6 +1004,22 @@ function localeStr(zh: string, en: string, locale: SupportedLocale, ja?: string)
   return zh;
 }
 
+function buildBreadcrumbJsonLd(gameId: GameId, charName: string, locale: SupportedLocale) {
+  const gameName = GAMES[gameId]?.name[locale] ?? gameId;
+  const homeLabel = locale === 'zh' ? '首页' : locale === 'ja' ? 'ホーム' : 'Home';
+  const charsLabel = CATEGORY_LABELS.characters?.[locale] ?? 'Characters';
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: homeLabel, item: `https://gachia.com/${locale}` },
+      { '@type': 'ListItem', position: 2, name: gameName, item: `https://gachia.com/${locale}/${gameId}` },
+      { '@type': 'ListItem', position: 3, name: charsLabel, item: `https://gachia.com/${locale}/${gameId}/characters` },
+      { '@type': 'ListItem', position: 4, name: charName },
+    ],
+  };
+}
+
 // ============================================================
 // NTE Character Detail
 // ============================================================
@@ -1168,12 +1192,9 @@ function WuWaCharacterDetail({ char, locale }: { char: WuWaCharacter; locale: Su
   // JSON-LD structured data
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'VideoGame',
+    '@type': 'VideoGameCharacter',
     name: charName,
     description: getWuWaCharacterDescription(char, locale).slice(0, 300),
-    gamePlatform: 'Wuthering Waves',
-    applicationCategory: 'Game',
-    genre: char.element,
     image: imageUrl,
     url: `https://gachia.com/${locale}/wuwa/characters/${char.id}`,
     ...(char.tierRank ? {
@@ -1190,6 +1211,7 @@ function WuWaCharacterDetail({ char, locale }: { char: WuWaCharacter; locale: Su
     <div>
       {/* JSON-LD */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildBreadcrumbJsonLd('wuwa', charName, locale)) }} />
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-4">
@@ -1353,12 +1375,9 @@ function ZzzCharacterDetail({ char, locale }: { char: ZzzCharacter; locale: Supp
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'VideoGame',
+    '@type': 'VideoGameCharacter',
     name: charName,
     description: getZzzCharacterDescription(char, locale).slice(0, 300),
-    gamePlatform: 'Zenless Zone Zero',
-    applicationCategory: 'Game',
-    genre: char.attribute,
     image: imageUrl,
     url: `https://gachia.com/${locale}/zzz/characters/${char.id}`,
     ...(char.tierRank ? {
@@ -1389,6 +1408,7 @@ function ZzzCharacterDetail({ char, locale }: { char: ZzzCharacter; locale: Supp
       {/* JSON-LD */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildBreadcrumbJsonLd('zzz', charName, locale)) }} />
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-4">
@@ -1619,12 +1639,9 @@ function GuihuanCharacterDetail({ char, locale }: { char: GuihuanCharacter; loca
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'VideoGame',
+    '@type': 'VideoGameCharacter',
     name: charName,
     description: getGuihuanCharacterDescription(char, locale).slice(0, 300),
-    gamePlatform: 'Guihuan',
-    applicationCategory: 'Game',
-    genre: char.element,
     image: imageUrl,
     url: `https://gachia.com/${locale}/guihuan/characters/${char.id}`,
     ...(char.tierRank ? {
@@ -1655,6 +1672,7 @@ function GuihuanCharacterDetail({ char, locale }: { char: GuihuanCharacter; loca
       {/* JSON-LD */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildBreadcrumbJsonLd('guihuan', charName, locale)) }} />
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-4">

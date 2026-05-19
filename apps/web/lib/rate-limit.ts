@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getDb } from '@/lib/db';
-import { rateLimits, eq, and, gt, sql } from '@gachia/db';
+import { rateLimits, eq, and, lt, sql } from '@gachia/db';
 
 interface RateLimitOptions {
   /** Max requests per window */
@@ -25,8 +25,8 @@ export async function checkRateLimit(
 
   const db = getDb();
 
-  // Clean up expired entries
-  await db.delete(rateLimits).where(gt(rateLimits.windowStart, sql`datetime('now', '+1 hour')`)).catch(() => {});
+  // Clean up expired entries (older than 1 hour)
+  await db.delete(rateLimits).where(lt(rateLimits.windowStart, sql`datetime('now', '-1 hour')`)).catch(() => {});
 
   // Find existing counter
   const existing = await db

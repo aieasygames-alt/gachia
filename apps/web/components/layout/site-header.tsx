@@ -43,7 +43,7 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
         <div className="container mx-auto flex h-14 items-center justify-between px-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/images/logo.png" alt="Gachia" width={32} height={32} className="h-8 w-8" />
+            <Image src="/images/logo.webp" alt="Gachia" width={32} height={32} className="h-8 w-8" />
             <span className="text-xl font-bold text-game-primary">Gachia</span>
           </Link>
 
