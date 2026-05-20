@@ -8,6 +8,7 @@ import {
   nteMaterials, getNteMaterialById, getNteMaterialName,
   zzzMaterials, getZzzMaterialById, getZzzMaterialName,
   guihuanMaterials, getGuihuanMaterialById, getGuihuanMaterialName,
+  anantaMaterials, getAnantaMaterialById, getAnantaMaterialName,
 } from '@gachia/data';
 import { Link } from '@/lib/i18n/navigation';
 
@@ -28,6 +29,8 @@ const TYPE_LABELS: Record<string, Record<string, string>> = {
   common: { zh: '普通材料', en: 'Common Material', ja: '一般素材' },
   'skill-material': { zh: '技能材料', en: 'Skill Material', ja: 'スキル素材' },
   'boss-material': { zh: 'Boss材料', en: 'Boss Material', ja: 'ボス素材' },
+  'chaos-exp': { zh: '混沌经验', en: 'Chaos EXP', ja: 'カオスEXP' },
+  'spirit-exp': { zh: '灵能经验', en: 'Spirit EXP', ja: 'スピリットEXP' },
   guide: { zh: '猎手指南', en: 'Hunter Guide', ja: 'ハンターガイド' },
   'arc-exp': { zh: '弧盘经验', en: 'Arc EXP', ja: 'アルクEXP' },
   'module-exp': { zh: '模块经验', en: 'Module EXP', ja: 'モジュールEXP' },
@@ -44,6 +47,7 @@ export async function generateStaticParams() {
     ...nteMaterials.map((m) => ({ lang, game: 'nte', id: m.id })),
     ...zzzMaterials.map((m) => ({ lang, game: 'zzz', id: m.id })),
     ...guihuanMaterials.map((m) => ({ lang, game: 'guihuan', id: m.id })),
+    ...anantaMaterials.map((m) => ({ lang, game: 'ananta', id: m.id })),
   ]);
 }
 
@@ -89,6 +93,11 @@ export async function generateMetadata({
     const m = getGuihuanMaterialById(id);
     if (!m) return {};
     name = getGuihuanMaterialName(m, locale);
+    description = (locale === 'en' ? m.sourceEn : m.source).slice(0, 160);
+  } else if (gameId === 'ananta') {
+    const m = getAnantaMaterialById(id);
+    if (!m) return {};
+    name = getAnantaMaterialName(m, locale);
     description = (locale === 'en' ? m.sourceEn : m.source).slice(0, 160);
   }
 
@@ -145,6 +154,11 @@ function getItemData(gameId: GameId, id: string, locale: SupportedLocale): ItemD
     const m = getGuihuanMaterialById(id);
     if (!m) return null;
     return { name: getGuihuanMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name, rarity: m.rarity, type: m.type, source: locale === 'en' ? m.sourceEn : m.source };
+  }
+  if (gameId === 'ananta') {
+    const m = getAnantaMaterialById(id);
+    if (!m) return null;
+    return { name: getAnantaMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name, rarity: m.rarity, type: m.type, source: locale === 'en' ? m.sourceEn : m.source };
   }
   return null;
 }

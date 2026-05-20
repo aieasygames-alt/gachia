@@ -56,7 +56,17 @@ import {
   getGuihuanGuideFaqQuestion,
   getGuihuanGuideFaqAnswer,
   GUIHUAN_GUIDE_CATEGORIES,
+  anantaGuides,
+  getAnantaGuideById,
+  getAnantaGuideTitle,
+  getAnantaGuideContent,
+  getAnantaGuideSummary,
+  getAnantaGuideCategory,
+  getAnantaGuideFaqQuestion,
+  getAnantaGuideFaqAnswer,
+  ANANTA_GUIDE_CATEGORIES,
 } from '@gachia/data';
+import type { AnantaGuide, AnantaGuideFaq } from '@gachia/data';
 import { Link } from '@/lib/i18n/navigation';
 import { ClientMarkdown } from '@/components/wiki/client-markdown';
 
@@ -91,6 +101,11 @@ export async function generateStaticParams() {
       lang,
       game: 'guihuan',
       slug: guide.id,
+    })),
+    ...anantaGuides.map((g) => ({
+      lang,
+      game: 'ananta',
+      slug: g.id,
     })),
   ]);
 }
@@ -180,6 +195,17 @@ export async function generateMetadata({
     };
   }
 
+  if (gameId === 'ananta') {
+    const guide = getAnantaGuideById(slug);
+    if (!guide) return {};
+    const gameName = GAMES.ananta.name[locale];
+    return {
+      title: `${getAnantaGuideTitle(guide, locale)} - ${gameName} Wiki`,
+      description: getAnantaGuideSummary(guide, locale).slice(0, 160),
+      alternates: buildGuideAlternates(gameId, slug),
+    };
+  }
+
   return {};
 }
 
@@ -214,6 +240,10 @@ export default async function GuideDetailPage({
 
   if (gameId === 'guihuan') {
     return <GuihuanGuideDetail locale={locale} slug={slug} />;
+  }
+
+  if (gameId === 'ananta') {
+    return <AnantaGuideDetail locale={locale} slug={slug} />;
   }
 
   notFound();
@@ -752,6 +782,91 @@ function GuihuanGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: s
               { '@type': 'ListItem', position: 1, name: gameConfig.name[locale], item: `https://gachia.com/${locale}/guihuan` },
               { '@type': 'ListItem', position: 2, name: CATEGORY_LABELS.guides?.[locale] ?? 'Guides', item: `https://gachia.com/${locale}/guihuan/guides` },
               { '@type': 'ListItem', position: 3, name: getGuihuanGuideTitle(guide, locale) },
+            ],
+          }),
+        }}
+      />
+    </div>
+  );
+}
+
+/* ---------- Ananta Guide Detail ---------- */
+
+function AnantaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: string }) {
+  const guide: AnantaGuide | undefined = getAnantaGuideById(slug);
+  if (!guide) notFound();
+
+  const gameConfig = GAMES.ananta;
+  const content = getAnantaGuideContent(guide, locale);
+  const category = getAnantaGuideCategory(guide, locale);
+
+  return (
+    <div>
+      <div className="mb-4 flex items-center gap-2 text-sm text-game-text-muted">
+        <Link href="/ananta/guides" className="transition-colors hover:text-game-primary">
+          {CATEGORY_LABELS.guides?.[locale] ?? 'Guides'}
+        </Link>
+        <span>/</span>
+        {ANANTA_GUIDE_CATEGORIES[guide.category]?.[locale] && (
+          <>
+            <span>{ANANTA_GUIDE_CATEGORIES[guide.category]?.[locale]}</span>
+            <span>/</span>
+          </>
+        )}
+        <span className="text-game-text">{getAnantaGuideTitle(guide, locale)}</span>
+      </div>
+
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {getAnantaGuideTitle(guide, locale)}
+      </h1>
+
+      <div className="mb-6 flex flex-wrap items-center gap-3 text-sm text-game-text-muted">
+        <span className="rounded bg-game-surface-alt px-2 py-0.5 text-game-primary">{category}</span>
+        {guide.tags.map((tag) => (
+          <span key={tag} className="rounded bg-game-surface-alt px-2 py-0.5">{tag}</span>
+        ))}
+      </div>
+
+      <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">
+        <ClientMarkdown content={content} />
+      </div>
+
+      {guide.faq && guide.faq.length > 0 && (
+        <section className="mb-8">
+          <h2 className="mb-4 text-lg font-semibold text-game-primary">
+            {locale === 'zh' ? '常见问题' : locale === 'ja' ? 'よくある質問' : 'FAQ'}
+          </h2>
+          <div className="space-y-3">
+            {guide.faq.map((faqItem: AnantaGuideFaq, i: number) => (
+              <details key={i} className="group rounded-lg border border-game-border bg-game-surface">
+                <summary className="cursor-pointer px-4 py-3 font-medium text-game-text transition-colors group-hover:text-game-primary">
+                  {getAnantaGuideFaqQuestion(faqItem, locale)}
+                </summary>
+                <div className="px-4 pb-3 text-sm text-game-text-muted">
+                  {getAnantaGuideFaqAnswer(faqItem, locale)}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <div className="border-t border-game-border pt-4">
+        <Link href="/ananta/guides" className="text-sm text-game-primary transition-colors hover:text-game-accent">
+          {locale === 'zh' ? '← 返回攻略列表' : locale === 'ja' ? '← ガイド一覧に戻る' : '← Back to Guides'}
+        </Link>
+      </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: gameConfig.name[locale], item: `https://gachia.com/${locale}/ananta` },
+              { '@type': 'ListItem', position: 2, name: CATEGORY_LABELS.guides?.[locale] ?? 'Guides', item: `https://gachia.com/${locale}/ananta/guides` },
+              { '@type': 'ListItem', position: 3, name: getAnantaGuideTitle(guide, locale) },
             ],
           }),
         }}

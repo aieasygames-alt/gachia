@@ -1,6 +1,6 @@
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { nteMaterials, getNteMaterialName, genshinMaterials, getGenshinMaterialName, starrailMaterials, getStarRailMaterialName, wuwaMaterials, getWuWaMaterialName, zzzMaterials, getZzzMaterialName } from '@gachia/data';
+import { nteMaterials, getNteMaterialName, genshinMaterials, getGenshinMaterialName, starrailMaterials, getStarRailMaterialName, wuwaMaterials, getWuWaMaterialName, zzzMaterials, getZzzMaterialName, anantaMaterials, getAnantaMaterialName } from '@gachia/data';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -80,6 +80,10 @@ export default async function ItemsPage({
 
   if (gameId === 'zzz') {
     return <ZzzItemsPage locale={locale} />;
+  }
+
+  if (gameId === 'ananta') {
+    return <AnantaItemsPage locale={locale} />;
   }
 
   return (
@@ -337,6 +341,61 @@ function ZzzItemsPage({ locale }: { locale: SupportedLocale }) {
                     <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
                   </div>
                   <p className="text-xs text-game-text-muted line-clamp-2">{mat.source}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
+// --- Ananta Items ---
+
+const ANANTA_TYPE_LABELS: Record<string, Record<string, string>> = {
+  guide: { zh: '触发者指南', en: 'Trigger Guide', ja: 'トリガーガイド' },
+  'chaos-exp': { zh: '混沌经验', en: 'Chaos EXP', ja: 'カオスEXP' },
+  ascension: { zh: '突破材料', en: 'Ascension', ja: '昇格素材' },
+  'boss-material': { zh: 'Boss材料', en: 'Boss Material', ja: 'ボス素材' },
+  'skill-material': { zh: '技能材料', en: 'Skill Material', ja: 'スキル素材' },
+  'local-specialty': { zh: '区域特产', en: 'Local Specialty', ja: '地域特産品' },
+  permit: { zh: '许可', en: 'Permit', ja: '許可証' },
+  currency: { zh: '货币', en: 'Currency', ja: '通貨' },
+};
+
+function AnantaItemsPage({ locale }: { locale: SupportedLocale }) {
+  const materials = anantaMaterials;
+  const grouped = groupByType(materials);
+  const typeOrder = ['guide', 'chaos-exp', 'ascension', 'boss-material', 'skill-material', 'local-specialty', 'permit', 'currency'];
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.ananta.theme.primary }}>
+        {CATEGORY_LABELS.items?.[locale] ?? 'Items'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? `共 ${materials.length} 种材料` : locale === 'ja' ? `${materials.length} 種の素材` : `${materials.length} Materials`}
+      </p>
+
+      {typeOrder.map((type) => {
+        const list = grouped[type];
+        if (!list || list.length === 0) return null;
+        const typeLabel = ANANTA_TYPE_LABELS[type]?.[locale] ?? type;
+        return (
+          <section key={type} className="mb-8">
+            <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
+            <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              {list.map((mat) => (
+                <div key={mat.id} className="rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                  <div className="mb-1 flex items-center gap-2">
+                    <h3 className="text-sm font-semibold text-game-text">{getAnantaMaterialName(mat, locale)}</h3>
+                  </div>
+                  <div className="mb-1 flex items-center gap-2">
+                    <span className="text-xs text-game-text-muted">{typeLabel}</span>
+                    <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
+                  </div>
+                  <p className="text-xs text-game-text-muted line-clamp-2">{locale === 'zh' ? mat.source : mat.sourceEn}</p>
                 </div>
               ))}
             </div>

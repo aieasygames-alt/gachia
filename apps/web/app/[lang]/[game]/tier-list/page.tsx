@@ -1,6 +1,6 @@
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { nteCharacters, getNteCharacterName, getNteCharacterImage, zzzCharacters, getZzzCharacterName, getZzzCharacterImage, getGameData } from '@gachia/data';
+import { nteCharacters, getNteCharacterName, getNteCharacterImage, zzzCharacters, getZzzCharacterName, getZzzCharacterImage, anantaCharacters, getAnantaCharacterName, getAnantaCharacterImage, getGameData } from '@gachia/data';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
@@ -78,6 +78,10 @@ export default async function TierListPage({
     return <ZzzTierListPage locale={locale} />;
   }
 
+  if (gameId === 'ananta') {
+    return <AnantaTierListPage locale={locale} />;
+  }
+
   return (
     <div>
       <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
@@ -153,6 +157,10 @@ const ZZZ_ELEMENT_COLORS: Record<string, string> = {
   physical: '#9ca3af', fire: '#ef4444', ice: '#67e8f9', electric: '#8b5cf6', ether: '#ec4899',
 };
 
+const ANANTA_ELEMENT_COLORS: Record<string, string> = {
+  chaos: '#8b5cf6', psyche: '#06b6d4', spark: '#f59e0b', surge: '#3b82f6', bloom: '#4ade80', void: '#ec4899',
+};
+
 function ZzzTierListPage({ locale }: { locale: SupportedLocale }) {
   const tierData = getGameData('zzz').tierLists.find(
     (tl) => tl.gameId === 'zzz' && tl.category === 'overall' && tl.locale === locale,
@@ -208,6 +216,76 @@ function ZzzTierListPage({ locale }: { locale: SupportedLocale }) {
                       <div className="flex items-center gap-1.5 text-xs text-game-text-muted">
                         <span className="inline-block h-2 w-2 rounded-full" style={{ backgroundColor: ZZZ_ELEMENT_COLORS[char.attribute] || '#888' }} />
                         <span>{char.specialtyEn}</span>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
+// --- Ananta Tier List ---
+
+function AnantaTierListPage({ locale }: { locale: SupportedLocale }) {
+  const tierData = getGameData('ananta').tierLists.find(
+    (tl) => tl.gameId === 'ananta' && tl.category === 'overall' && tl.locale === locale,
+  ) ?? getGameData('ananta').tierLists.find(
+    (tl) => tl.gameId === 'ananta' && tl.category === 'overall',
+  );
+
+  const tierGroups: Record<string, string[]> = {};
+  const tierOrder = ['SS', 'S', 'A', 'B'];
+
+  if (tierData) {
+    for (const entry of tierData.entries) {
+      if (!tierGroups[entry.tier]) tierGroups[entry.tier] = [];
+      tierGroups[entry.tier]!.push(entry.characterId);
+    }
+  }
+
+  const charMap = new Map(anantaCharacters.map((c) => [c.id, c]));
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.ananta.theme.primary }}>
+        {CATEGORY_LABELS['tier-list']?.[locale] ?? 'Tier List'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? '基于角色综合强度评级，仅供参考' : locale === 'ja' ? 'キャラクターの総合的な強さに基づく評価です' : 'Based on overall character strength, for reference only'}
+      </p>
+
+      {tierOrder.map((tier) => {
+        const ids = tierGroups[tier];
+        if (!ids || ids.length === 0) return null;
+        const style = TIER_STYLES[tier] ?? TIER_STYLES.B ?? { bg: '', text: '', border: '' };
+
+        return (
+          <section key={tier} className={`mb-4 rounded-lg border ${style.border} ${style.bg} p-4`}>
+            <div className="mb-3 flex items-center gap-3">
+              <span className={`text-xl font-bold ${style.text}`}>{tier}</span>
+              <span className="text-sm text-game-text-muted">({ids.length})</span>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {ids.map((id) => {
+                const char = charMap.get(id);
+                if (!char) return null;
+                const imageUrl = getAnantaCharacterImage(char);
+                return (
+                  <Link key={char.id} href={`/ananta/characters/${char.id}` as '/'}
+                    className="group flex items-center gap-2 rounded-lg border border-game-border bg-game-surface px-3 py-2 transition-colors hover:border-game-primary">
+                    <div className="h-8 w-8 shrink-0 overflow-hidden rounded-full bg-game-surface-alt">
+                      <CharacterAvatar src={imageUrl} alt="" element={char.element} className="h-full w-full object-cover object-top" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-game-text group-hover:text-game-primary">{getAnantaCharacterName(char, locale)}</p>
+                      <div className="flex items-center gap-1.5 text-xs text-game-text-muted">
+                        <span className="inline-block h-2 w-2 rounded-full" style={{ backgroundColor: ANANTA_ELEMENT_COLORS[char.element] || '#888' }} />
+                        <span>{char.roleEn}</span>
                       </div>
                     </div>
                   </Link>

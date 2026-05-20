@@ -488,6 +488,66 @@ export type {
 
 export type { GuihuanGuide, GuihuanGuideFaq } from './games/guihuan/guides';
 
+// ============================================================
+// 无限大 (Ananta) exports
+// ============================================================
+
+// Ananta character exports
+export {
+  anantaCharacters,
+  getAnantaCharacterById,
+  getAnantaCharacterName,
+  getAnantaCharacterDescription,
+  getAnantaCharacterImage,
+  getAnantaCharacterTierReason,
+} from './games/ananta/characters';
+
+// Ananta weapon exports
+export {
+  anantaWeapons,
+  getAnantaWeaponById,
+  getAnantaWeaponName,
+  getAnantaWeaponEffect,
+  getAnantaWeaponSource,
+} from './games/ananta/weapons';
+
+// Ananta material exports
+export {
+  anantaMaterials,
+  getAnantaMaterialName,
+  getAnantaMaterialById,
+} from './games/ananta/items';
+
+// Ananta guide exports
+export {
+  anantaGuides,
+  getAnantaGuideTitle,
+  getAnantaGuideContent,
+  getAnantaGuideSummary,
+  getAnantaGuideCategory,
+  getAnantaGuideCategories,
+  getAnantaGuidesByCategory,
+  getAnantaGuideById,
+  getAnantaGuideSlugs,
+  getAnantaGuideFaqQuestion,
+  getAnantaGuideFaqAnswer,
+  ANANTA_GUIDE_CATEGORIES,
+} from './games/ananta/guides';
+
+export type {
+  AnantaCharacter,
+  AnantaWeapon,
+  AnantaMaterial,
+  AnantaSkillSet,
+  AnantaSkillBase,
+  AnantaActiveSkill,
+  AnantaTeamComp,
+  AnantaFaq,
+  AnantaRecommendedBuild,
+} from './games/ananta/types';
+
+export type { AnantaGuide, AnantaGuideFaq } from './games/ananta/guides';
+
 // --- Data Access Helpers ---
 
 export interface GameData {
@@ -541,6 +601,13 @@ export function getGameData(gameId: GameId): GameData {
         items: guihuanItems,
         tierLists: guihuanTierLists,
       };
+    case 'ananta':
+      return {
+        characters: anantaCharacters,
+        weapons: anantaWeapons,
+        items: anantaItems,
+        tierLists: anantaTierLists,
+      };
   }
 }
 
@@ -550,3 +617,4 @@ import { characters as wuwaCharacters, weapons as wuwaWeapons, items as wuwaItem
 import { characters as nteCharacters, weapons as nteWeapons, items as nteItems, tierLists as nteTierLists } from './games/nte';
 import { characters as zzzCharacters, weapons as zzzWeapons, items as zzzItems, tierLists as zzzTierLists } from './games/zzz';
 import { characters as guihuanCharacters, weapons as guihuanWeapons, items as guihuanItems, tierLists as guihuanTierLists } from './games/guihuan';
+import { characters as anantaCharacters, weapons as anantaWeapons, items as anantaItems, tierLists as anantaTierLists } from './games/ananta';

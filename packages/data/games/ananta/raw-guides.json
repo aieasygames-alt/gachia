@@ -1,0 +1,134 @@
+[
+  {
+    "id": "beginner-guide",
+    "title": "《无限大》新手入门完全指南",
+    "titleEn": "Ananta Complete Beginner Guide",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "从零开始了解《无限大》的世界观、战斗系统、异能养成和新都市探索技巧，帮助新触发者快速上手。",
+    "summaryEn": "Learn everything about Ananta's world, combat system, Esper raising, and Nova City exploration tips from scratch.",
+    "content": "## 欢迎，触发者\n\n你被选为A.C.D.特遣队的「无限触发者」，进入新都市，对抗不断侵蚀城市的混沌异常。\n\n### 基础操作\n\n- **城市穿越**: 使用跑酷、蛛丝摆荡和载具在新都市中高速移动\n- **4人小队**: 战斗中可随时切换4名异能者，每人拥有独特的异能\n- **异常调查**: 追踪并消灭城市中出现的混沌异常\n\n### 异能流派系统\n\n每个异能者拥有独特的异能类型和战斗风格：\n\n1. **进攻型** — 高伤害输出\n2. **追击型** — 连锁追击\n3. **灵愈型** — 治疗和护盾\n4. **控制型** — 束缚和减益\n5. **增益型** — 团队增益\n\n### 养成优先级\n\n1. 先提升主C角色等级和技能\n2. 获取适配的武器\n3. 完成调查任务获取材料\n4. 最后考虑副C和辅助的养成",
+    "contentEn": "## Welcome, Trigger\n\nYou've been chosen as the 'Infinite Trigger' of the A.C.D. Task Force, entering Nova City to combat the Chaos anomalies threatening the city.\n\n### Basic Controls\n\n- **Urban Traversal**: Use parkour, web-swinging, and vehicles for high-speed movement across Nova City\n- **4-Person Party**: Switch between 4 Espers freely in combat, each with unique abilities\n- **Anomaly Investigation**: Track and eliminate Chaos anomalies appearing throughout the city\n\n### Esper Style System\n\nEach Esper has a unique ability type and combat style:\n\n1. **Attack** — High damage output\n2. **Follow-up** — Chain attacks\n3. **Support** — Healing and shields\n4. **Control** — Binding and debuffs\n5. **Buffer** — Team buffs\n\n### Progression Priority\n\n1. Level up your main DPS and skills first\n2. Obtain suitable weapons\n3. Complete investigation tasks for materials\n4. Then invest in sub-DPS and supports",
+    "tags": ["新手", "入门", "基础", "Beginner", "Basics", "指南"],
+    "faq": [
+      {
+        "question": "What should I do first in Ananta?",
+        "questionZh": "无限大开局应该做什么？",
+        "answer": "Follow the main story to unlock all features and districts, then focus on leveling your main DPS Esper.",
+        "answerZh": "跟随主线剧情解锁所有功能和区域，然后集中资源提升主C异能者的等级。"
+      },
+      {
+        "question": "Is there gacha in Ananta?",
+        "questionZh": "无限大有抽卡系统吗？",
+        "answer": "Ananta has confirmed no character gacha. Characters are obtained through story progression and events. Monetization is cosmetic-only.",
+        "answerZh": "无限大已确认角色不通过抽卡获取，角色通过剧情推进和活动获得。付费内容仅限外观。"
+      }
+    ]
+  },
+  {
+    "id": "download-install-guide",
+    "title": "《无限大》下载安装指南 — 全平台下载地址",
+    "titleEn": "Download Ananta — PC, Mobile, Console Install Guide",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "提供《无限大》在PC、PS5、安卓、iOS平台的下载安装教程和系统配置要求。",
+    "summaryEn": "Download and install Ananta on PC, PS5, Android, and iOS platforms with system requirements.",
+    "content": "## 系统配置要求\n\n### PC端\n- 操作系统: Windows 10 64位以上\n- 处理器: Intel i7 / 同等AMD处理器\n- 内存: 16GB RAM\n- 显卡: NVIDIA RTX 3060\n- 存储空间: 50GB\n\n### 移动端\n- 安卓: 骁龙8 Gen 2及以上，8GB RAM\n- iOS: iPhone 14及以上\n\n### 主机\n- PS5: 支持原生版本\n\n## 下载方式\n\n1. **PC端**: 前往官网 ananta.163.com 下载客户端\n2. **安卓**: 官网直接下载APK\n3. **iOS**: App Store 搜索「无限大」\n4. **PS5**: PlayStation Store 搜索 Ananta",
+    "contentEn": "## System Requirements\n\n### PC\n- OS: Windows 10 64-bit or above\n- CPU: Intel i7 / equivalent AMD\n- RAM: 16GB\n- GPU: NVIDIA RTX 3060\n- Storage: 50GB\n\n### Mobile\n- Android: Snapdragon 8 Gen 2+, 8GB RAM\n- iOS: iPhone 14+\n\n### Console\n- PS5: Native version supported\n\n## Download\n\n1. **PC**: Visit the official site ananta.163.com\n2. **Android**: Download APK from the official site\n3. **iOS**: Search 'Ananta' on the App Store\n4. **PS5**: Search 'Ananta' on PlayStation Store",
+    "tags": ["下载", "安装", "平台", "Download", "Install", "新手"],
+    "faq": [
+      {
+        "question": "Is Ananta available on all platforms?",
+        "questionZh": "无限大支持哪些平台？",
+        "answer": "Ananta supports PC, PS5, Android, and iOS with cross-save functionality.",
+        "answerZh": "无限大支持PC、PS5、安卓和iOS平台，支持跨平台存档互通。"
+      }
+    ]
+  },
+  {
+    "id": "combat-system-guide",
+    "title": "《无限大》战斗系统详解 — 异能、切换与连携",
+    "titleEn": "Ananta Combat System Guide — Abilities, Switching & Combos",
+    "category": "combat",
+    "categoryZh": "战斗攻略",
+    "categoryEn": "Combat",
+    "summary": "深入了解《无限大》的4人小队切换战斗、异能系统、连携攻击和完美闪避机制。",
+    "summaryEn": "Deep dive into Ananta's 4-person party combat, Esper abilities, combo attacks, and perfect dodge mechanics.",
+    "content": "## 战斗系统概览\n\n《无限大》采用4人小队动作战斗系统，玩家可以在4名异能者之间自由切换。\n\n### 核心机制\n\n1. **异能切换**: 战斗中可随时切换角色，切换时触发入场效果\n2. **完美闪避**: 在敌人攻击瞬间闪避，触发完美闪避获得增益\n3. **连携攻击**: 部分角色的技能可以与队友形成连携\n4. **异能爆发**: 消耗异能释放强力终极技能\n\n### 元素反应\n\n- 混沌 + 涌流 = 湮灭\n- 火花 + 涌流 = 超载\n- 精神 + 混沌 = 共鸣\n- 绽放 + 火花 = 燃烧\n- 虚空 + 任意 = 侵蚀",
+    "contentEn": "## Combat Overview\n\nAnanta features a 4-person action combat system with free character switching.\n\n### Core Mechanics\n\n1. **Esper Switch**: Switch characters freely in combat, triggering entry effects\n2. **Perfect Dodge**: Dodge at the moment of enemy attack to trigger buffs\n3. **Combo Attacks**: Some characters' skills can chain with teammates\n4. **Esper Burst**: Consume Trigger Energy for powerful ultimate skills\n\n### Elemental Reactions\n\n- Chaos + Surge = Annihilation\n- Spark + Surge = Overload\n- Psyche + Chaos = Resonance\n- Bloom + Spark = Combustion\n- Void + Any = Erosion",
+    "tags": ["战斗", "连携", "元素反应", "Combat", "Combo", "Elements"],
+    "faq": [
+      {
+        "question": "How does the party switching work in combat?",
+        "questionZh": "战斗中小队切换是怎么运作的？",
+        "answer": "You can switch between 4 Espers freely with no cooldown. Switching triggers an entry effect unique to each character.",
+        "answerZh": "可以自由切换4名异能者，没有冷却时间。切换时会触发每个角色独特的入场效果。"
+      }
+    ]
+  },
+  {
+    "id": "nova-city-exploration-guide",
+    "title": "新都市探索指南 — 区域、传送与收集",
+    "titleEn": "Nova City Exploration Guide — Districts, Teleport & Collectibles",
+    "category": "exploration",
+    "categoryZh": "探索攻略",
+    "categoryEn": "Exploration",
+    "summary": "全面介绍新都市的各个区域、传送点系统、收集品和隐藏任务。",
+    "summaryEn": "Complete guide to Nova City's districts, teleport system, collectibles, and hidden quests.",
+    "content": "## 新都市概览\n\n新都市是《无限大》的主要探索区域，是一座充满活力的现代都市。\n\n### 移动方式\n\n- **跑酷**: 攀爬墙壁、翻越障碍\n- **蛛丝摆荡**: 在建筑间快速穿梭\n- **载具**: 驾驶多种载具在街道穿行\n- **滑翔**: 使用滑翔翼在空中移动\n\n### 区域系统\n\n新都市分为多个风格各异的区域，每个区域有独特的异常事件和收集品。",
+    "contentEn": "## Nova City Overview\n\nNova City is Ananta's main exploration area — a vibrant modern metropolis.\n\n### Movement Options\n\n- **Parkour**: Climb walls, vault obstacles\n- **Web-swinging**: Quickly traverse between buildings\n- **Vehicles**: Drive various vehicles through streets\n- **Gliding**: Use glider wings for aerial movement\n\n### District System\n\nNova City is divided into multiple districts with unique styles, each featuring distinct anomaly events and collectibles.",
+    "tags": ["探索", "新都市", "收集", "Exploration", "Nova City"],
+    "faq": [
+      {
+        "question": "How big is the open world?",
+        "questionZh": "开放世界有多大？",
+        "answer": "Nova City is a dense urban open world with multiple districts, underground areas, and vertical exploration.",
+        "answerZh": "新都市是一个密集的城市开放世界，包含多个区域、地下空间和垂直探索内容。"
+      }
+    ]
+  },
+  {
+    "id": "esper-tier-list-guide",
+    "title": "《无限大》异能者节奏榜 — 全角色强度分析",
+    "titleEn": "Ananta Esper Tier List — Full Character Analysis",
+    "category": "tier-list",
+    "categoryZh": "节奏榜",
+    "categoryEn": "Tier List",
+    "summary": "当前版本所有异能者的强度评级和详细分析，帮助你决定培养优先级。",
+    "summaryEn": "Current version ratings and detailed analysis for all Espers, helping you decide build priority.",
+    "content": "## SS 级 — 必练角色\n\n- **队长** — 混沌主C，灵活多变\n- **艾琳** — 最强治疗，护盾续航\n- **凛果** — 最强增益，全队提升\n\n## S 级 — 强力角色\n\n- **西摩** — 涌流副C，后台减益\n- **泰菲** — 火花主C，独特武器\n- **班西** — 虚空主C，减益爆发\n\n## A 级 — 优秀角色\n\n- **吕凯亚** — 涌流控制，聚怪优秀\n- **迪拉** — 火花追击，连锁高效\n- **机械卡** — 混沌副C，后台减防",
+    "contentEn": "## SS Tier — Must-Build\n\n- **Captain** — Chaos DPS, versatile\n- **Aileen** — Best healer, shield sustain\n- **Ringo** — Best buffer, team-wide boost\n\n## S Tier — Strong\n\n- **Seymour** — Surge sub-DPS, off-field debuffs\n- **Taffy** — Spark DPS, unique weapon\n- **Bansy** — Void DPS, debuff burst\n\n## A Tier — Good\n\n- **Lykaia** — Surge control, excellent grouping\n- **Dila** — Spark follow-up, chain efficiency\n- **Mechanika** — Chaos sub-DPS, off-field DEF shred",
+    "tags": ["节奏榜", "强度", "角色", "Tier List", "Rating"],
+    "faq": [
+      {
+        "question": "Who should I build first?",
+        "questionZh": "应该先培养谁？",
+        "answer": "Build Captain as your main DPS first, then Aileen for healing. Ringo is the best support to build next.",
+        "answerZh": "优先培养队长作为主C，然后培养艾琳进行治疗。凛果是下一个最值得培养的辅助。"
+      }
+    ]
+  },
+  {
+    "id": "team-building-guide",
+    "title": "《无限大》配队攻略 — 最佳队伍搭配推荐",
+    "titleEn": "Ananta Team Building Guide — Best Party Compositions",
+    "category": "team",
+    "categoryZh": "配队攻略",
+    "categoryEn": "Teams",
+    "summary": "推荐《无限大》各流派最佳配队方案，包含核心输出、辅助和治疗的搭配思路。",
+    "summaryEn": "Recommended best team compositions for all playstyles, including core DPS, support, and healer pairings.",
+    "content": "## 配队原则\n\n《无限大》的队伍由4名异能者组成，通常搭配为：\n\n- 1名主C\n- 1名副C/控制\n- 1名增益辅助\n- 1名治疗/护盾\n\n## 推荐队伍\n\n### 混沌核心队\n队长 + 西摩 + 凛果 + 艾琳\n\n### 火花冲能队\n泰菲 + 迪拉 + 凛果 + 艾琳\n\n### 虚空暗杀队\n班西 + 西摩 + 凛果 + 艾琳",
+    "contentEn": "## Team Building Principles\n\nAnanta teams consist of 4 Espers, typically:\n\n- 1 Main DPS\n- 1 Sub-DPS / Control\n- 1 Buffer\n- 1 Healer / Shield\n\n## Recommended Teams\n\n### Chaos Core\nCaptain + Seymour + Ringo + Aileen\n\n### Spark Overcharge\nTaffy + Dila + Ringo + Aileen\n\n### Void Assassin\nBansy + Seymour + Ringo + Aileen",
+    "tags": ["配队", "队伍", "搭配", "Teams", "Party"],
+    "faq": [
+      {
+        "question": "What is the best team composition?",
+        "questionZh": "最佳配队是什么？",
+        "answer": "The most versatile team is Captain + Seymour + Ringo + Aileen, covering all roles effectively.",
+        "answerZh": "最通用的队伍是队长 + 西摩 + 凛果 + 艾琳，能覆盖所有职能。"
+      }
+    ]
+  }
+]

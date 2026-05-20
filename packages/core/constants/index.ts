@@ -18,7 +18,7 @@ export const LOCALE_NAMES: Record<SupportedLocale, string> = {
 // Games Registry
 // ============================================================
 
-export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan'];
+export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta'];
 
 export const GAMES: Record<GameId, GameModule> = {
   genshin: {
@@ -242,6 +242,46 @@ export const GAMES: Record<GameId, GameModule> = {
     ],
     rarities: [
       { stars: 5, color: '#22d3ee', label: { zh: 'SSR', en: 'SSR', ja: 'SSR' } },
+      { stars: 4, color: '#a855f7', label: { zh: 'SR', en: 'SR', ja: 'SR' } },
+      { stars: 3, color: '#60a5fa', label: { zh: 'R', en: 'R', ja: 'R' } },
+    ],
+    stats: {
+      baseStats: ['hp', 'atk', 'def'],
+      subStats: ['hpPercent', 'atkPercent', 'defPercent', 'critRate', 'critDmg'],
+      specialStats: [],
+    },
+    routes: {
+      characters: true,
+      weapons: true,
+      items: true,
+      'tier-list': true,
+      calculator: false,
+      map: true,
+      guides: true,
+      build: true,
+      compare: true,
+      teams: true,
+    },
+  },
+  ananta: {
+    id: 'ananta',
+    name: { zh: '无限大', en: 'Ananta', ja: 'アナンタ' },
+    theme: {
+      primary: '#8b5cf6',
+      accent: '#06b6d4',
+      background: '#0a0a1a',
+      surface: '#111827',
+    },
+    elements: [
+      { id: 'chaos', name: { zh: '混沌', en: 'Chaos', ja: 'カオス' }, color: '#8b5cf6' },
+      { id: 'psyche', name: { zh: '精神', en: 'Psyche', ja: 'サイキ' }, color: '#06b6d4' },
+      { id: 'spark', name: { zh: '火花', en: 'Spark', ja: 'スパーク' }, color: '#f59e0b' },
+      { id: 'surge', name: { zh: '涌流', en: 'Surge', ja: 'サージ' }, color: '#3b82f6' },
+      { id: 'bloom', name: { zh: '绽放', en: 'Bloom', ja: 'ブルーム' }, color: '#4ade80' },
+      { id: 'void', name: { zh: '虚空', en: 'Void', ja: 'ヴォイド' }, color: '#ec4899' },
+    ],
+    rarities: [
+      { stars: 5, color: '#8b5cf6', label: { zh: 'SSR', en: 'SSR', ja: 'SSR' } },
       { stars: 4, color: '#a855f7', label: { zh: 'SR', en: 'SR', ja: 'SR' } },
       { stars: 3, color: '#60a5fa', label: { zh: 'R', en: 'R', ja: 'R' } },
     ],

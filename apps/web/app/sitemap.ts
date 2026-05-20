@@ -6,20 +6,21 @@ import {
   starrailCharacters, starrailGuides, starrailRelicSets, starrailLightCones, starrailMaterials,
   zzzCharacters, zzzWeapons, zzzDriveDiscs, zzzMaterials, zzzGuides,
   guihuanCharacters, guihuanWeapons, guihuanMaterials, guihuanGuides,
+  anantaCharacters, anantaWeapons, anantaMaterials, anantaGuides,
 } from '@gachia/data';
 import type { MetadataRoute } from 'next';
 
 const BASE_URL = 'https://gachia.com';
 
 // Games with real content for each category
-const CHAR_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan'] as const;
-const WEAPON_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan'] as const;
-const GUIDE_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan'] as const;
+const CHAR_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta'] as const;
+const WEAPON_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta'] as const;
+const GUIDE_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta'] as const;
 const ARTIFACT_GAMES = ['genshin', 'starrail'] as const;
 const ECHO_GAMES = ['wuwa'] as const;
 const DISK_SET_GAMES = ['nte'] as const;
 const DRIVE_DISC_GAMES = ['zzz'] as const;
-const ITEM_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan'] as const;
+const ITEM_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta'] as const;
 
 // Category routes that have real content per game
 const REAL_CONTENT_ROUTES: Record<string, string[]> = {
@@ -29,6 +30,7 @@ const REAL_CONTENT_ROUTES: Record<string, string[]> = {
   nte: ['characters', 'weapons', 'items', 'tier-list', 'map', 'guides', 'disk-sets', 'redeem-codes', 'gacha', 'anomalies'],
   zzz: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'drive-discs', 'build', 'compare', 'teams'],
   guihuan: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'compare', 'teams'],
+  ananta: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'compare', 'teams'],
 };
 
 // Revalidate every 24 hours
@@ -184,6 +186,7 @@ function getCharactersForGame(gameId: string) {
     case 'nte': return nteCharacters;
     case 'zzz': return zzzCharacters;
     case 'guihuan': return guihuanCharacters;
+    case 'ananta': return anantaCharacters;
     default: return [];
   }
 }
@@ -196,6 +199,7 @@ function getWeaponsForGame(gameId: string) {
     case 'nte': return nteWeapons;
     case 'zzz': return zzzWeapons;
     case 'guihuan': return guihuanWeapons;
+    case 'ananta': return anantaWeapons;
     default: return [];
   }
 }
@@ -208,6 +212,7 @@ function getGuidesForGame(gameId: string) {
     case 'nte': return nteGuides;
     case 'zzz': return zzzGuides;
     case 'guihuan': return guihuanGuides;
+    case 'ananta': return anantaGuides;
     default: return [];
   }
 }
@@ -228,6 +233,7 @@ function getItemsForGame(gameId: string) {
     case 'nte': return nteMaterials;
     case 'zzz': return zzzMaterials;
     case 'guihuan': return guihuanMaterials;
+    case 'ananta': return anantaMaterials;
     default: return [];
   }
 }
