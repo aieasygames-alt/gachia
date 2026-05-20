@@ -1,3 +1,4 @@
+import { IMAGE_BASE } from '../../image-base';
 import type { SupportedLocale, Character } from '@gachia/core';
 import type { AnantaCharacter } from './types';
 import { localeStr } from './types';
@@ -18,7 +19,7 @@ export function getAnantaCharacterDescription(char: AnantaCharacter, locale: Sup
 }
 
 export function getAnantaCharacterImage(char: AnantaCharacter): string {
-  return `/images/ananta/characters/${char.id}.webp`;
+  return `${IMAGE_BASE}/images/ananta/characters/${char.id}.webp`;
 }
 
 export function getAnantaCharacterById(id: string): AnantaCharacter | undefined {
