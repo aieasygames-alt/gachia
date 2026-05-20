@@ -164,7 +164,7 @@ export function BuildClient({ gameId, locale }: { gameId: GameId; locale: Suppor
   if (gameId === 'wuwa') return <WuWaBuildRecommender locale={locale} />;
   if (gameId === 'nte') return <NteBuildRecommender locale={locale} />;
   if (gameId === 'zzz') return <ZzzBuildRecommender locale={locale} />;
-  if (gameId === 'guihuan') return <GuihunBuildRecommender locale={locale} />;
+  if (gameId === 'guihuan') return <GuihuanBuildRecommender locale={locale} />;
   return <ComingSoon locale={locale} />;
 }
 
@@ -1249,10 +1249,10 @@ function BuildInfoRow({ label, value }: { label: string; value: string }) {
 }
 
 // =====================================================================
-// Guihun Build Recommender
+// Guihuan Build Recommender
 // =====================================================================
 
-function GuihunBuildRecommender({ locale }: { locale: SupportedLocale }) {
+function GuihuanBuildRecommender({ locale }: { locale: SupportedLocale }) {
   const [selectedChar, setSelectedChar] = useState<GuihuanCharacter | null>(null);
   const [elementFilter, setElementFilter] = useState<string>('all');
 

@@ -35,7 +35,7 @@ export const characters: Character[] = guihuanCharacters.map((char) => ({
   name: { zh: char.name, en: char.nameEn, ja: char.nameJa ?? char.nameEn },
   rarity: char.rarity,
   element: char.element,
-  weaponType: char.roleEn,
+  weaponType: char.weaponType ?? char.roleEn,
   description: { zh: char.description, en: char.descriptionEn, ja: char.descriptionEn },
   images: {
     icon: `/images/guihuan/characters/${char.id}.webp`,

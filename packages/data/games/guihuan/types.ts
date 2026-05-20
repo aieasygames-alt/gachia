@@ -57,6 +57,7 @@ export interface GuihuanCharacter {
   elementEn: string;
   role: string;
   roleEn: string;
+  weaponType?: string;
   rarity: number;
   description: string;
   descriptionEn: string;
@@ -106,6 +107,49 @@ export interface GuihuanMaterial {
   rarity: number;
   source: string;
   sourceEn: string;
+}
+
+// --- Character Materials Types ---
+
+export interface GuihuanMaterialEntry {
+  id?: string;
+  quantity: number;
+}
+
+export interface GuihuanAscensionLevel {
+  levelRange: string;
+  materials: GuihuanMaterialEntry[];
+}
+
+export interface GuihuanTalentLevel {
+  talentLevel: string;
+  materials: GuihuanMaterialEntry[];
+}
+
+export interface GuihuanCharacterMaterials {
+  characterId: string;
+  ascensionMaterials: GuihuanAscensionLevel[];
+  talentMaterials: GuihuanTalentLevel[];
+}
+
+// --- Region Types ---
+
+export interface GuihuanRegion {
+  id: string;
+  name: string;
+  nameEn: string;
+  nameJa: string;
+  description: string;
+  descriptionEn: string;
+  descriptionJa: string;
+  highlights: string[];
+  specialties: string[];
+  bosses: string[];
+  domains: string[];
+  tips: string[];
+  teleporters: number;
+  statues: number;
+  oculi: number;
 }
 
 // --- Accessor Helpers ---

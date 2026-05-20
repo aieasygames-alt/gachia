@@ -1,0 +1,219 @@
+[
+  {
+    "id": "yadaer-central",
+    "name": "亚达尔中央区",
+    "nameEn": "Yadaer Central",
+    "nameJa": "ヤダール中央区",
+    "description": "亚达尔大陆的政治与文化中心，颂灵学院和王家骑士团总部所在地。这里是归还者最初的起点，也是最安全的区域。",
+    "descriptionEn": "The political and cultural heart of the Yadaer continent, home to the Spirit Academy and Royal Knights headquarters. The Returner's starting point and the safest region.",
+    "descriptionJa": "ヤダール大陸の政治と文化の中心。頌霊学院と王家騎士団本部がある。帰還者の最初の拠点であり、最も安全な地域。",
+    "highlights": [
+      "颂灵学院: 主线起始地点",
+      "王家骑士团: 解锁骑士团任务",
+      "颂灵交易所: 兑换材料和道具",
+      "灵脉枢纽: 连接各区域的传送中心"
+    ],
+    "specialties": [],
+    "bosses": [],
+    "domains": [
+      "颂灵学院地下训练场 (新手教程)"
+    ],
+    "tips": [
+      "先完成颂灵学院的主线任务解锁所有基础功能",
+      "交易所可以用多余的灵碎片兑换稀有材料",
+      "灵脉枢纽可以快速传送到已解锁的区域"
+    ],
+    "teleporters": 8,
+    "statues": 0,
+    "oculi": 0
+  },
+  {
+    "id": "aether-plains",
+    "name": "光辉平原",
+    "nameEn": "Aether Plains",
+    "nameJa": "光輝平原",
+    "description": "亚达尔中央区以南的广袤平原，终年被柔和的光辉笼罩。这里是光辉属性颂灵者的修炼圣地，散布着大量光辉灵脉和古代遗迹。",
+    "descriptionEn": "Vast plains south of Yadaer Central, bathed in perpetual soft radiance. A sacred training ground for Radiance-type Spirit summoners, dotted with Radiance spirit veins and ancient ruins.",
+    "descriptionJa": "ヤダール中央区の南にある広大な平原。常に柔らかな光輝に包まれている。光輝属性の頌霊者の修行の聖地。",
+    "highlights": [
+      "圣光圣殿: 光辉元素精英Boss",
+      "古代遗迹群: 解谜与隐藏宝箱",
+      "光辉灵脉: 光辉精髓采集点",
+      "归还者纪念碑: 剧情关键地点"
+    ],
+    "specialties": ["radiance-essence"],
+    "bosses": [
+      "圣光守护者 (光辉灵域Boss)"
+    ],
+    "domains": [
+      "光辉试炼 (光辉元素材料)",
+      "时序遗迹 (新手材料副本)"
+    ],
+    "tips": [
+      "光辉平原的遗迹解谜需要使用光辉颂灵术",
+      "圣光守护者Boss战建议带上护盾角色",
+      "平原高处的灵脉加速点可以配合滑空匣快速移动"
+    ],
+    "teleporters": 12,
+    "statues": 0,
+    "oculi": 15
+  },
+  {
+    "id": "frost-tundra",
+    "name": "北境冰原",
+    "nameEn": "Northern Tundra",
+    "nameJa": "北境氷原",
+    "description": "亚达尔大陆最北端的永冻之地，极寒的环境孕育了独特的霜寒生态。北境冰原是霜寒颂灵者的重要修炼地，也是雅琪的故乡。",
+    "descriptionEn": "The perpetually frozen far north of the Yadaer continent. The extreme cold nurtures unique Frost ecology. A key training ground for Frost Spirit summoners and Yaqi's homeland.",
+    "descriptionJa": "ヤダール大陸最北端の永久凍土地帯。極寒の環境が独特の霜寒生態系を育んでいる。雅琪の故郷。",
+    "highlights": [
+      "冰晶洞穴: 霜寒元素精英Boss",
+      "霜牙峰: 最高点观景台",
+      "冰原猎人营地: NPC好感度任务",
+      "冻土遗迹: 时间循环相关剧情"
+    ],
+    "specialties": ["frost-essence"],
+    "bosses": [
+      "霜寒巨兽 (霜寒灵域Boss)"
+    ],
+    "domains": [
+      "霜寒试炼 (霜寒元素材料)",
+      "冰封密室 (高级材料副本)"
+    ],
+    "tips": [
+      "冰原中移动速度会降低，建议利用滑空匣滑行",
+      "冻土区域的隐藏宝箱需要骰子检定才能开启",
+      "霜寒巨兽的弱点在背部，需要绕后攻击"
+    ],
+    "teleporters": 10,
+    "statues": 0,
+    "oculi": 12
+  },
+  {
+    "id": "flame-canyon",
+    "name": "烈焰峡谷",
+    "nameEn": "Flame Canyon",
+    "nameJa": "烈焔峡谷",
+    "description": "亚达尔大陆东部的火山峡谷地带，地表不断涌出的岩浆将天空映成橙红色。这里是烈焰颂灵者的力量源泉，也是明珏展现天赋的舞台。",
+    "descriptionEn": "Volcanic canyon region in eastern Yadaer, where magma constantly seeps through the surface, painting the sky orange-red. The wellspring of Flame Spirit power and where Mingzhe's talents shine.",
+    "descriptionJa": "ヤダール大陸東部の火山峡谷地帯。地表から絶えずマグマが湧き出し、空をオレンジ色に染める。明珏が才能を発揮する場所。",
+    "highlights": [
+      "天火熔炉: 烈焰元素精英Boss",
+      "灵脉锻造所: 武器强化材料",
+      "焰舞竞技场: 追击流训练",
+      "火山观测站: 滑空匣空中挑战"
+    ],
+    "specialties": ["flame-essence"],
+    "bosses": [
+      "焚天火龙 (烈焰灵域Boss)"
+    ],
+    "domains": [
+      "烈焰试炼 (烈焰元素材料)",
+      "熔岩深渊 (武器经验材料)"
+    ],
+    "tips": [
+      "峡谷中的熔岩区域需要使用滑空匣水面模式通过",
+      "焚天火龙在低血量时会进入狂暴状态",
+      "焰舞竞技场是测试追击流配队的好地方"
+    ],
+    "teleporters": 11,
+    "statues": 0,
+    "oculi": 14
+  },
+  {
+    "id": "thunder-plains",
+    "name": "雷暴平原",
+    "nameEn": "Thunder Plains",
+    "nameJa": "雷暴平原",
+    "description": "亚达尔大陆西部的雷暴频发地带，永不停歇的闪电在地平线上交织。这里驻扎着王家骑士团的前线营地，亚伦经常在此巡逻。",
+    "descriptionEn": "Western Yadaer's storm-battered plains, where lightning perpetually dances across the horizon. Home to the Royal Knights' forward camp, regularly patrolled by Yalun.",
+    "descriptionJa": "ヤダール大陸西部の雷暴地帯。絶え間なく稲妻が地平線を横切る。王家騎士団の前線基地がある。",
+    "highlights": [
+      "雷霆枢纽: 雷霆元素精英Boss",
+      "骑士团前线营: 支线任务集中地",
+      "闪电观测塔: 收集雷霆灵脉",
+      "暗影议会据点: 夜兰相关剧情"
+    ],
+    "specialties": ["thunder-essence"],
+    "bosses": [
+      "雷霆审判者 (雷霆灵域Boss)"
+    ],
+    "domains": [
+      "雷霆试炼 (雷霆元素材料)",
+      "雷暴要塞 (高级挑战副本)"
+    ],
+    "tips": [
+      "雷暴平原的雷击会造成持续伤害，注意走位",
+      "骑士团前线营有丰富的NPC交互和好感度任务",
+      "暗影议会据点在特定循环日才会完全解锁"
+    ],
+    "teleporters": 10,
+    "statues": 0,
+    "oculi": 13
+  },
+  {
+    "id": "sky-islands",
+    "name": "高空浮岛",
+    "nameEn": "Sky Islands",
+    "nameJa": "高空浮島",
+    "description": "亚达尔大陆上空悬浮的岛屿群，由疾风灵脉的升力支撑。这里是璃洛的故乡，疾风颂灵者的圣地，需要使用滑空匣的空中模式才能到达。",
+    "descriptionEn": "Floating islands above Yadaer, held aloft by Gale spirit veins. Liro's homeland and sacred ground for Gale Spirit summoners. Requires the Hover Glider's air mode to access.",
+    "descriptionJa": "ヤダール大陸上空に浮かぶ島群。疾風霊脈の浮力で支えられている。璃洛の故郷。滑空匣の空中モードが必要。",
+    "highlights": [
+      "疾风神殿: 疾风元素精英Boss",
+      "风歌塔: 璃洛专属剧情地点",
+      "浮岛集市: 稀有材料交易",
+      "风暴之眼: 高难度挑战"
+    ],
+    "specialties": ["gale-essence"],
+    "bosses": [
+      "疾风之王 (疾风灵域Boss)"
+    ],
+    "domains": [
+      "疾风试炼 (疾风元素材料)",
+      "风暴回廊 (灵能充能材料)"
+    ],
+    "tips": [
+      "高空浮岛之间的移动必须使用滑空匣空中模式",
+      "建议先提升滑空匣耐久度再探索高空区域",
+      "风歌塔有璃洛的好感度剧情，需要多次循环解锁"
+    ],
+    "teleporters": 8,
+    "statues": 0,
+    "oculi": 10
+  },
+  {
+    "id": "eclipse-domain",
+    "name": "蚀域",
+    "nameEn": "Eclipse Domain",
+    "nameJa": "蝕域",
+    "description": "亚达尔大陆边缘被虚空侵蚀的危险地带，空间扭曲、时间混乱。蚀域是虚空颂灵者的力量来源，也是黑莲身世之谜的关键。",
+    "descriptionEn": "A dangerous Void-corrupted zone at the edge of Yadaer, where space warps and time distorts. The source of Void Spirit power and key to Heilian's mysterious past.",
+    "descriptionJa": "ヤダール大陸の端にある虚空に侵食された危険地帯。空間が歪み、時間が混乱する。黒蓮の謎に繋がる場所。",
+    "highlights": [
+      "蚀域核心: 虚空元素精英Boss",
+      "时空裂缝: 隐藏宝箱和剧情线索",
+      "虚空祭坛: 虚空精髓采集",
+      "循环之门: 时间循环关键剧情"
+    ],
+    "specialties": ["void-essence"],
+    "bosses": [
+      "虚空领主 (虚空灵域Boss)",
+      "蚀域守护者 (周本Boss)"
+    ],
+    "domains": [
+      "虚空试炼 (虚空元素材料)",
+      "蚀域深处 (高级挑战)",
+      "时空迷宫 (周本副本)"
+    ],
+    "tips": [
+      "蚀域中的骰子检定难度更高，建议提升感知属性",
+      "时空裂缝在特定循环日会出现额外入口",
+      "虚空领主的攻击会降低灵能，注意灵能管理",
+      "蚀域深处有莫比乌斯环碎片和时序结晶的掉落"
+    ],
+    "teleporters": 6,
+    "statues": 0,
+    "oculi": 8
+  }
+]
