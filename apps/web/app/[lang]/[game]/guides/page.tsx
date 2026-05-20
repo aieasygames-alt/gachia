@@ -35,6 +35,18 @@ import {
   getZzzGuideCategory,
   getZzzGuideCategories,
   ZZZ_GUIDE_CATEGORIES,
+  guihuanGuides,
+  getGuihuanGuideTitle,
+  getGuihuanGuideSummary,
+  getGuihuanGuideCategory,
+  getGuihuanGuideCategories,
+  GUIHUAN_GUIDE_CATEGORIES,
+  anantaGuides,
+  getAnantaGuideTitle,
+  getAnantaGuideSummary,
+  getAnantaGuideCategory,
+  getAnantaGuideCategories,
+  ANANTA_GUIDE_CATEGORIES,
 } from '@gachia/data';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
@@ -82,6 +94,14 @@ export default async function GuidesPage({
 
   if (gameId === 'zzz') {
     return <ZzzGuides locale={locale} />;
+  }
+
+  if (gameId === 'guihuan') {
+    return <GuihuanGuides locale={locale} />;
+  }
+
+  if (gameId === 'ananta') {
+    return <AnantaGuides locale={locale} />;
   }
 
   // Unsupported games
@@ -490,6 +510,164 @@ function ZzzGuides({ locale }: { locale: SupportedLocale }) {
                   <div className="flex flex-wrap gap-1.5">
                     <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
                       {getZzzGuideCategory(guide, locale)}
+                    </span>
+                    {guide.tags.slice(0, 3).map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
+// --- Guihuan Guides ---
+
+function GuihuanGuides({ locale }: { locale: SupportedLocale }) {
+  const guides = guihuanGuides;
+  const categories = getGuihuanGuideCategories();
+  const gameConfig = GAMES.guihuan;
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {CATEGORY_LABELS.guides?.[locale] ?? 'Guides'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh'
+          ? `共 ${guides.length} 篇攻略`
+          : locale === 'ja'
+          ? `${guides.length} 件のガイド`
+          : `${guides.length} guides`}
+      </p>
+
+      <div className="mb-6 flex flex-wrap gap-2">
+        {categories.map((cat) => {
+          const count = guides.filter((g) => g.category === cat).length;
+          return (
+            <a
+              key={cat}
+              href={`#category-${cat}`}
+              className="rounded-full border border-game-border bg-game-surface px-3 py-1 text-sm transition-colors hover:border-game-primary hover:text-game-primary"
+            >
+              {GUIHUAN_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              <span className="ml-1 text-game-text-muted">({count})</span>
+            </a>
+          );
+        })}
+      </div>
+
+      {categories.map((cat) => {
+        const categoryGuides = guides.filter((g) => g.category === cat);
+        return (
+          <section key={cat} id={`category-${cat}`} className="mb-8">
+            <h2 className="mb-4 text-lg font-semibold text-game-text">
+              {GUIHUAN_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+            </h2>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {categoryGuides.map((guide) => (
+                <Link
+                  key={guide.id}
+                  href={`/guihuan/guides/${guide.id}`}
+                  className="group flex flex-col rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
+                >
+                  <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
+                    {getGuihuanGuideTitle(guide, locale)}
+                  </h3>
+                  <p className="mb-3 flex-1 text-sm leading-relaxed text-game-text-muted">
+                    {getGuihuanGuideSummary(guide, locale)}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
+                      {getGuihuanGuideCategory(guide, locale)}
+                    </span>
+                    {guide.tags.slice(0, 3).map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
+// --- Ananta Guides ---
+
+function AnantaGuides({ locale }: { locale: SupportedLocale }) {
+  const guides = anantaGuides;
+  const categories = getAnantaGuideCategories();
+  const gameConfig = GAMES.ananta;
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {CATEGORY_LABELS.guides?.[locale] ?? 'Guides'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh'
+          ? `共 ${guides.length} 篇攻略`
+          : locale === 'ja'
+          ? `${guides.length} 件のガイド`
+          : `${guides.length} guides`}
+      </p>
+
+      <div className="mb-6 flex flex-wrap gap-2">
+        {categories.map((cat) => {
+          const count = guides.filter((g) => g.category === cat).length;
+          return (
+            <a
+              key={cat}
+              href={`#category-${cat}`}
+              className="rounded-full border border-game-border bg-game-surface px-3 py-1 text-sm transition-colors hover:border-game-primary hover:text-game-primary"
+            >
+              {ANANTA_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              <span className="ml-1 text-game-text-muted">({count})</span>
+            </a>
+          );
+        })}
+      </div>
+
+      {categories.map((cat) => {
+        const categoryGuides = guides.filter((g) => g.category === cat);
+        return (
+          <section key={cat} id={`category-${cat}`} className="mb-8">
+            <h2 className="mb-4 text-lg font-semibold text-game-text">
+              {ANANTA_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+            </h2>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {categoryGuides.map((guide) => (
+                <Link
+                  key={guide.id}
+                  href={`/ananta/guides/${guide.id}`}
+                  className="group flex flex-col rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
+                >
+                  <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
+                    {getAnantaGuideTitle(guide, locale)}
+                  </h3>
+                  <p className="mb-3 flex-1 text-sm leading-relaxed text-game-text-muted">
+                    {getAnantaGuideSummary(guide, locale)}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
+                      {getAnantaGuideCategory(guide, locale)}
                     </span>
                     {guide.tags.slice(0, 3).map((tag) => (
                       <span
