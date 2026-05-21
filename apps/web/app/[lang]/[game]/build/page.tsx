@@ -16,6 +16,9 @@ export async function generateMetadata({
   const gameConfig = GAMES[gameId];
   const gameName = locale === 'zh' ? gameConfig.name.zh : locale === 'ja' ? (gameConfig.name.ja ?? gameConfig.name.en) : gameConfig.name.en;
   const title = locale === 'zh' ? `${gameName} 配装推荐` : locale === 'ja' ? `${gameName} ビルド` : `${gameName} Build`;
+  if (gameId === 'ananta') {
+    return { title, robots: { index: false, follow: false } };
+  }
   return {
     title,
     description: locale === 'zh' ? `${gameName} 角色配装推荐、最佳武器、圣遗物搭配` : locale === 'ja' ? `${gameName} キャラビルドおすすめ、最適武器、聖遺物・遺物・エコー組み合わせ` : `${gameName} character build recommendations, best weapons, artifact sets`,

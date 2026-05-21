@@ -16,6 +16,9 @@ export async function generateMetadata({
   const gameConfig = GAMES[gameId];
   const gameName = locale === 'zh' ? gameConfig.name.zh : locale === 'ja' ? (gameConfig.name.ja ?? gameConfig.name.en) : gameConfig.name.en;
   const title = locale === 'zh' ? `${gameName} 配队模拟器` : locale === 'ja' ? `${gameName} パーティ編成` : `${gameName} Team Builder`;
+  if (gameId === 'ananta') {
+    return { title, robots: { index: false, follow: false } };
+  }
   return {
     title,
     description: locale === 'zh' ? `${gameName} 角色配队模拟器，查看元素共鸣效果，推荐最佳阵容` : locale === 'ja' ? `${gameName} パーティ編成シミュレーター、元素共鳴効果確認、おすすめ編成` : `${gameName} team builder - element resonance, recommended compositions`,

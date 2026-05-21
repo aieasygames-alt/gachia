@@ -16,6 +16,9 @@ export async function generateMetadata({
   const gameConfig = GAMES[gameId];
   const gameName = locale === 'zh' ? gameConfig.name.zh : locale === 'ja' ? (gameConfig.name.ja ?? gameConfig.name.en) : gameConfig.name.en;
   const title = locale === 'zh' ? `${gameName} 角色对比` : locale === 'ja' ? `${gameName} キャラ比較` : `${gameName} Character Compare`;
+  if (gameId === 'ananta') {
+    return { title, robots: { index: false, follow: false } };
+  }
   return {
     title,
     description: locale === 'zh' ? `${gameName} 角色属性对比，技能比较，配装差异分析` : locale === 'ja' ? `${gameName} キャラステータス比較、スキル対比、ビルド差分析` : `${gameName} character comparison - stats, skills, builds side by side`,

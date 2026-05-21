@@ -1,5 +1,6 @@
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
+import type { Metadata } from 'next';
 import {
   genshinRegions,
   getGenshinRegionName,
@@ -21,6 +22,19 @@ const REGION_ICONS: Record<string, string> = {
   mondstadt: '🌬️', liyue: '⛰️', inazuma: '⚡', sumeru: '🌿',
   fontaine: '💧', natlan: '🔥', chasm: '⛏️',
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; game: string }>;
+}): Promise<Metadata> {
+  const { game } = await params;
+  const gameId = game as GameId;
+  if (gameId !== 'genshin' && gameId !== 'starrail' && gameId !== 'wuwa' && gameId !== 'nte') {
+    return { title: 'Map', robots: { index: false, follow: false } };
+  }
+  return { title: 'Map' };
+}
 
 export default async function MapPage({
   params,

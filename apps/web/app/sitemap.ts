@@ -30,7 +30,7 @@ const REAL_CONTENT_ROUTES: Record<string, string[]> = {
   nte: ['characters', 'weapons', 'items', 'tier-list', 'map', 'guides', 'disk-sets', 'redeem-codes', 'gacha', 'anomalies'],
   zzz: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'drive-discs', 'build', 'compare', 'teams'],
   guihuan: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'compare', 'teams'],
-  ananta: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'compare', 'teams'],
+  ananta: ['characters', 'weapons', 'items', 'tier-list', 'guides'],
 };
 
 // Revalidate every 24 hours
