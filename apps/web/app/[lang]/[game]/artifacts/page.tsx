@@ -15,6 +15,10 @@ export async function generateMetadata({
   const gameId = game as GameId;
   const gameName = GAMES[gameId]?.name[locale] ?? '';
 
+  if (gameId !== 'genshin' && gameId !== 'starrail' && gameId !== 'wuwa') {
+    return { title: `${CATEGORY_LABELS.artifacts?.[locale] ?? 'Artifacts'} - ${gameName}`, robots: { index: false, follow: false } };
+  }
+
   if (gameId === 'starrail') {
     const label = locale === 'zh' ? '遗器' : locale === 'ja' ? '遺物' : 'Relics';
     return {

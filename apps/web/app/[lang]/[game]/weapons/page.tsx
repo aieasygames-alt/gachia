@@ -1,6 +1,6 @@
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { nteWeapons, getNteWeaponName, getNteWeaponEffect, genshinWeapons, getGenshinWeaponName, getGenshinWeaponEffect, starrailLightCones, getStarRailLightConeName, getStarRailLightConeEffect, wuwaWeapons, getWuWaWeaponName, getWuWaWeaponEffect, zzzWeapons, getZzzWeaponName, getZzzWeaponEffect, anantaWeapons, getAnantaWeaponName, getAnantaWeaponEffect } from '@gachia/data';
+import { nteWeapons, getNteWeaponName, getNteWeaponEffect, genshinWeapons, getGenshinWeaponName, getGenshinWeaponEffect, starrailLightCones, getStarRailLightConeName, getStarRailLightConeEffect, wuwaWeapons, getWuWaWeaponName, getWuWaWeaponEffect, zzzWeapons, getZzzWeaponName, getZzzWeaponEffect, anantaWeapons, getAnantaWeaponName, getAnantaWeaponEffect, guihuanWeapons, getGuihuanWeaponName, getGuihuanWeaponEffect } from '@gachia/data';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -78,6 +78,10 @@ export default async function WeaponsPage({
 
   if (gameId === 'ananta') {
     return <AnantaWeaponsPage locale={locale} />;
+  }
+
+  if (gameId === 'guihuan') {
+    return <GuihuanWeaponsPage locale={locale} />;
   }
 
   return (
@@ -457,6 +461,68 @@ function AnantaWeaponsPage({ locale }: { locale: SupportedLocale }) {
                     <div className="mb-2 flex gap-3 text-sm text-game-text-muted">
                       <span>ATK {w.baseAtk}</span>
                       <span>{w.substatValue} {w.substat}</span>
+                    </div>
+                    {effect.description && <p className="text-xs leading-relaxed text-game-text-muted line-clamp-2">{effect.description}</p>}
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
+// --- Guihuan Weapons ---
+
+const GUIHUAN_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
+  Sword: { zh: '剑', en: 'Sword', ja: '剣' },
+  Gauntlet: { zh: '拳套', en: 'Gauntlet', ja: 'ガントレット' },
+  Blade: { zh: '刃', en: 'Blade', ja: 'ブレード' },
+  Catalyst: { zh: '法器', en: 'Catalyst', ja: '触媒' },
+  Instrument: { zh: '乐器', en: 'Instrument', ja: '楽器' },
+  Hammer: { zh: '重锤', en: 'Hammer', ja: 'ハンマー' },
+  Bow: { zh: '弓', en: 'Bow', ja: '弓' },
+  Spear: { zh: '长枪', en: 'Spear', ja: '槍' },
+};
+
+function GuihuanWeaponsPage({ locale }: { locale: SupportedLocale }) {
+  const weapons = guihuanWeapons;
+  const fiveStar = weapons.filter((w) => w.rarity === 5);
+  const fourStar = weapons.filter((w) => w.rarity === 4);
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.guihuan.theme.primary }}>
+        {CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? `共 ${weapons.length} 件武器` : locale === 'ja' ? `${weapons.length} 個の武器` : `${weapons.length} Weapons`}
+      </p>
+
+      {[fiveStar, fourStar].map((list) => {
+        if (list.length === 0) return null;
+        const rarity = list[0]!.rarity;
+        return (
+          <section key={rarity} className="mb-8">
+            <h2 className="mb-4 text-lg font-semibold text-game-text">
+              {rarity}★ ({list.length})
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {list.map((w) => {
+                const effect = getGuihuanWeaponEffect(w, locale);
+                const typeLabel = GUIHUAN_WEAPON_TYPE_LABELS[w.weaponTypeEn]?.[locale] ?? w.weaponTypeEn;
+                return (
+                  <div key={w.id} className="rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary">
+                    <div className="mb-2 flex items-center gap-2">
+                      <span className="text-base font-bold" style={{ color: rarity === 5 ? '#eab308' : '#a855f7' }}>{w.rarity}★</span>
+                      <h3 className="font-semibold text-game-text">{getGuihuanWeaponName(w, locale)}</h3>
+                      <span className="ml-auto rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{typeLabel}</span>
+                    </div>
+                    <div className="mb-2 flex gap-3 text-sm text-game-text-muted">
+                      <span>ATK {w.baseAtk}</span>
+                      <span>{w.substatValue} {w.substatEn}</span>
                     </div>
                     {effect.description && <p className="text-xs leading-relaxed text-game-text-muted line-clamp-2">{effect.description}</p>}
                   </div>
