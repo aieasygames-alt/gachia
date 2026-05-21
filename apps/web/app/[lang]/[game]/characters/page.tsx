@@ -1,6 +1,6 @@
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { nteCharacters, getNteCharacterName, getNteCharacterImage, genshinCharacters, getGenshinCharacterName, getGenshinCharacterImage, starrailCharacters, getStarRailCharacterName, getStarRailCharacterImage, wuwaCharacters, getWuWaCharacterName, getWuWaCharacterImage, zzzCharacters, getZzzCharacterName, getZzzCharacterImage, anantaCharacters, getAnantaCharacterName, getAnantaCharacterImage } from '@gachia/data';
+import { nteCharacters, getNteCharacterName, getNteCharacterImage, genshinCharacters, getGenshinCharacterName, getGenshinCharacterImage, starrailCharacters, getStarRailCharacterName, getStarRailCharacterImage, wuwaCharacters, getWuWaCharacterName, getWuWaCharacterImage, zzzCharacters, getZzzCharacterName, getZzzCharacterImage, anantaCharacters, getAnantaCharacterName, getAnantaCharacterImage, guihuanCharacters, getGuihuanCharacterName, getGuihuanCharacterImage } from '@gachia/data';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
@@ -13,6 +13,7 @@ const CHAR_DESC: Record<string, Record<string, string>> = {
   nte: { zh: '异环全角色图鉴，包含S级、A级角色数据', en: 'Complete Neverness to Everness character roster with S-Rank and A-Rank data', ja: '異環全キャラ図鑑、S級、A級キャラデータ' },
   zzz: { zh: '绝区零全代理人图鉴，包含属性、专精数据', en: 'Complete Zenless Zone Zero agent roster with attributes and specialties', ja: 'ゼンレスゾーンゼロ全エージェント図鑑、属性、専門データ' },
   ananta: { zh: '无限大全异能者图鉴，包含SSR、SR角色数据、异能、配装推荐', en: 'Complete Ananta Esper roster with SSR, SR data, abilities, and build recommendations', ja: 'アナンタ全エスパー図鑑、SSR、SRキャラデータ' },
+  guihuan: { zh: '归环全使灵图鉴，包含SSR、SR角色数据、元素、配装推荐', en: 'Complete Guihuan Spirit roster with SSR, SR data, elements, and build recommendations', ja: '帰環全精霊図鑑、SSR、SRキャラデータ' },
 };
 
 const NTE_ELEMENT_COLORS: Record<string, string> = {
@@ -122,6 +123,10 @@ export default async function CharactersPage({
 
   if (gameId === 'ananta') {
     return <AnantaCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />;
+  }
+
+  if (gameId === 'guihuan') {
+    return <GuihuanCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />;
   }
 
   return (
@@ -616,6 +621,89 @@ function AnantaCharacterCard({ char, locale, gameId }: { char: typeof anantaChar
       <div className="p-2.5">
         <h3 className="text-sm font-semibold text-game-text group-hover:text-game-primary truncate">
           {getAnantaCharacterName(char, locale)}
+        </h3>
+        <p className="text-xs text-game-text-muted truncate">{char.roleEn}</p>
+      </div>
+    </Link>
+  );
+}
+
+// --- Guihuan Characters ---
+
+const GUIHUAN_ELEMENT_COLORS: Record<string, string> = {
+  radiance: '#fbbf24', frost: '#67e8f9', flame: '#ef4444',
+  void: '#a855f7', gale: '#6ee7b7', thunder: '#8b5cf6',
+};
+
+function GuihuanCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedLocale; gameId: GameId; gameConfig: typeof GAMES.guihuan }) {
+  const chars = guihuanCharacters;
+  const fiveStar = chars.filter((c) => c.rarity === 5);
+  const fourStar = chars.filter((c) => c.rarity === 4);
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
+      </p>
+
+      {fiveStar.length > 0 && (
+        <section className="mb-8">
+          <h2 className="mb-4 text-lg font-semibold text-game-text">
+            5★ ({fiveStar.length})
+          </h2>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+            {fiveStar.map((char) => (
+              <GuihuanCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {fourStar.length > 0 && (
+        <section className="mb-8">
+          <h2 className="mb-4 text-lg font-semibold text-game-text">
+            4★ ({fourStar.length})
+          </h2>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+            {fourStar.map((char) => (
+              <GuihuanCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+
+function GuihuanCharacterCard({ char, locale, gameId }: { char: typeof guihuanCharacters[number]; locale: SupportedLocale; gameId: GameId }) {
+  const elementColor = GUIHUAN_ELEMENT_COLORS[char.element] || '#888';
+  const imageUrl = getGuihuanCharacterImage(char);
+
+  return (
+    <Link
+      href={`/${gameId}/characters/${char.id}` as '/'}
+      className="group flex flex-col overflow-hidden rounded-lg border border-game-border bg-game-surface transition-all hover:border-game-primary hover:shadow-lg"
+    >
+      <div className="relative aspect-square overflow-hidden bg-game-surface-alt">
+        <CharacterAvatar
+          src={imageUrl}
+          alt={getGuihuanCharacterName(char, locale)}
+          element={char.element}
+          className="h-full w-full object-cover object-top transition-transform group-hover:scale-105"
+        />
+        <span className="absolute bottom-1.5 left-1.5 rounded px-1.5 py-0.5 text-xs font-medium text-white" style={{ backgroundColor: elementColor }}>
+          {char.elementEn}
+        </span>
+        <span className="absolute top-1.5 right-1.5 rounded bg-game-bg/80 px-1.5 py-0.5 text-xs font-bold" style={{ color: '#eab308' }}>
+          {char.rarity}★
+        </span>
+      </div>
+      <div className="p-2.5">
+        <h3 className="text-sm font-semibold text-game-text group-hover:text-game-primary truncate">
+          {getGuihuanCharacterName(char, locale)}
         </h3>
         <p className="text-xs text-game-text-muted truncate">{char.roleEn}</p>
       </div>
