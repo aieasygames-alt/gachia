@@ -406,7 +406,7 @@ function GenshinCharacterDetail({ char, locale }: { char: GenshinCharacter; loca
   // JSON-LD structured data
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'VideoGameCharacter',
+    '@type': 'VideoGame',
     name: charName,
     description: getGenshinCharacterDescription(char, locale).slice(0, 300),
     image: imageUrl,
@@ -416,6 +416,8 @@ function GenshinCharacterDetail({ char, locale }: { char: GenshinCharacter; loca
       ratingValue: char.tierRank === 'SS' ? 5 : char.tierRank === 'S' ? 4.5 : char.tierRank === 'A' ? 4 : char.tierRank === 'B' ? 3 : 2,
       bestRating: 5,
       worstRating: 1,
+      ratingCount: 1,
+      reviewCount: 1,
     },
   };
 
@@ -753,7 +755,7 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
   // JSON-LD structured data
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'VideoGameCharacter',
+    '@type': 'VideoGame',
     name: charName,
     description: getStarRailCharacterDescription(char, locale).slice(0, 300),
     image: imageUrl,
@@ -763,6 +765,8 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
       ratingValue: char.tierRank === 'SS' ? 5 : char.tierRank === 'S' ? 4.5 : char.tierRank === 'A' ? 4 : char.tierRank === 'B' ? 3 : 2,
       bestRating: 5,
       worstRating: 1,
+      ratingCount: 1,
+      reviewCount: 1,
     },
   };
 
@@ -1061,7 +1065,7 @@ function NteCharacterDetail({ char, locale }: { char: NteCharacter; locale: Supp
   // JSON-LD structured data
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'VideoGameCharacter',
+    '@type': 'VideoGame',
     name: charName,
     description: getNteCharacterDescription(char, locale).slice(0, 300),
     image: imageUrl,
@@ -1072,6 +1076,8 @@ function NteCharacterDetail({ char, locale }: { char: NteCharacter; locale: Supp
         ratingValue: char.tierRank === 'SS' ? 5 : char.tierRank === 'S' ? 4.5 : char.tierRank === 'A' ? 4 : char.tierRank === 'B' ? 3 : 2,
         bestRating: 5,
         worstRating: 1,
+        ratingCount: 1,
+        reviewCount: 1,
       },
     } : {}),
   };
@@ -1242,7 +1248,7 @@ function WuWaCharacterDetail({ char, locale }: { char: WuWaCharacter; locale: Su
   // JSON-LD structured data
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'VideoGameCharacter',
+    '@type': 'VideoGame',
     name: charName,
     description: getWuWaCharacterDescription(char, locale).slice(0, 300),
     image: imageUrl,
@@ -1253,6 +1259,8 @@ function WuWaCharacterDetail({ char, locale }: { char: WuWaCharacter; locale: Su
         ratingValue: char.tierRank === 'SS' ? 5 : char.tierRank === 'S' ? 4.5 : char.tierRank === 'A' ? 4 : char.tierRank === 'B' ? 3 : 2,
         bestRating: 5,
         worstRating: 1,
+        ratingCount: 1,
+        reviewCount: 1,
       },
     } : {}),
   };
@@ -1425,7 +1433,7 @@ function ZzzCharacterDetail({ char, locale }: { char: ZzzCharacter; locale: Supp
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'VideoGameCharacter',
+    '@type': 'VideoGame',
     name: charName,
     description: getZzzCharacterDescription(char, locale).slice(0, 300),
     image: imageUrl,
@@ -1436,6 +1444,8 @@ function ZzzCharacterDetail({ char, locale }: { char: ZzzCharacter; locale: Supp
         ratingValue: char.tierRank === 'SS' ? 5 : char.tierRank === 'S' ? 4.5 : char.tierRank === 'A' ? 4 : char.tierRank === 'B' ? 3 : 2,
         bestRating: 5,
         worstRating: 1,
+        ratingCount: 1,
+        reviewCount: 1,
       },
     } : {}),
   };
@@ -1689,7 +1699,7 @@ function GuihuanCharacterDetail({ char, locale }: { char: GuihuanCharacter; loca
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'VideoGameCharacter',
+    '@type': 'VideoGame',
     name: charName,
     description: getGuihuanCharacterDescription(char, locale).slice(0, 300),
     image: imageUrl,
@@ -1700,6 +1710,8 @@ function GuihuanCharacterDetail({ char, locale }: { char: GuihuanCharacter; loca
         ratingValue: char.tierRank === 'SS' ? 5 : char.tierRank === 'S' ? 4.5 : char.tierRank === 'A' ? 4 : char.tierRank === 'B' ? 3 : 2,
         bestRating: 5,
         worstRating: 1,
+        ratingCount: 1,
+        reviewCount: 1,
       },
     } : {}),
   };
@@ -1926,7 +1938,7 @@ function AnantaCharacterDetail({ char, locale }: { char: AnantaCharacter; locale
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'VideoGameCharacter',
+    '@type': 'VideoGame',
     name: charName,
     description: getAnantaCharacterDescription(char, locale).slice(0, 300),
     image: imageUrl,
@@ -1937,6 +1949,8 @@ function AnantaCharacterDetail({ char, locale }: { char: AnantaCharacter; locale
         ratingValue: char.tierRank === 'SS' ? 5 : char.tierRank === 'S' ? 4.5 : char.tierRank === 'A' ? 4 : char.tierRank === 'B' ? 3 : 2,
         bestRating: 5,
         worstRating: 1,
+        ratingCount: 1,
+        reviewCount: 1,
       },
     } : {}),
   };
