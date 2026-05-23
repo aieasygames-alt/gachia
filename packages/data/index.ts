@@ -162,6 +162,15 @@ export {
 } from './games/genshin/regions';
 export type { GenshinRegion } from './games/genshin/regions';
 
+// Genshin interactive map data
+export {
+  genshinMapData,
+  getCategoryName,
+  getMarkerName,
+  getMarkerDescription,
+} from './games/genshin/map-data';
+export type { MapCategory, MapMarker, GameMapData } from './games/genshin/map-data';
+
 // Genshin guides
 export {
   genshinGuides,
