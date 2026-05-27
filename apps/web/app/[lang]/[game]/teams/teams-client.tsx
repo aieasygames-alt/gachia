@@ -151,6 +151,7 @@ function GenshinTeams({ locale }: { locale: SupportedLocale }) {
   const [search, setSearch] = useState('');
   const [filterElement, setFilterElement] = useState<string>('all');
   const [tab, setTab] = useState<'builder' | 'recommended'>('builder');
+  const [shareStatus, setShareStatus] = useState<'idle' | 'sharing' | 'copied' | 'error'>('idle');
 
   const filtered = useMemo(() => {
     let chars = genshinCharacters;
@@ -321,6 +322,44 @@ function GenshinTeams({ locale }: { locale: SupportedLocale }) {
                   <p className="text-xs text-game-text-muted">{t(locale, '暂无共鸣效果（需要至少两个相同元素）', 'No resonance (need 2 of same element)', '共鳴なし（同じ元素が2体必要）')}</p>
                 )}
               </div>
+            </div>
+          )}
+
+          {/* Share Team */}
+          {activeChars.length > 0 && (
+            <div className="mb-6">
+              <button
+                onClick={async () => {
+                  setShareStatus('sharing');
+                  try {
+                    const buildData = JSON.stringify({ type: 'team', characters: activeChars.map((c) => c.id) });
+                    const res = await fetch('/api/shared-builds', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify({ gameId: 'genshin', characterId: activeChars[0]!.id, buildData }),
+                    });
+                    if (!res.ok) throw new Error();
+                    const { id } = (await res.json()) as { id: string };
+                    const url = `${window.location.origin}/${locale}/genshin/teams?share=${id}`;
+                    await navigator.clipboard.writeText(url);
+                    setShareStatus('copied');
+                    setTimeout(() => setShareStatus('idle'), 2000);
+                  } catch {
+                    setShareStatus('error');
+                    setTimeout(() => setShareStatus('idle'), 2000);
+                  }
+                }}
+                disabled={shareStatus === 'sharing'}
+                className="rounded-lg bg-game-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-game-primary/80 disabled:opacity-50"
+              >
+                {shareStatus === 'copied'
+                  ? t(locale, '已复制！', 'Copied!', 'コピー済み！')
+                  : shareStatus === 'error'
+                  ? t(locale, '分享失败', 'Failed', '失敗')
+                  : shareStatus === 'sharing'
+                  ? '...'
+                  : t(locale, '分享队伍', 'Share Team', 'チームを共有')}
+              </button>
             </div>
           )}
 
