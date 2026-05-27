@@ -37,6 +37,8 @@ import {
   getStarRailCharacterImage,
   getStarRailCharacterTierReason,
   getStarRailLightConeName,
+  starrailLightCones,
+  starrailRelicSets,
   getStarRailRelicSetName,
   getStarRailRelicSetDesc2pc,
   getStarRailRelicSetDesc4pc,
@@ -229,7 +231,7 @@ export async function generateMetadata({
 
   const buildOg = (charName: string) => ({
     title: charName,
-    images: [{ url: `/images/og/${gameId}.png`, width: 1200, height: 630, alt: charName }],
+    images: [{ url: `/images/og/${gameId}.jpg`, width: 1200, height: 630, alt: charName }],
     locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
   });
 
@@ -567,18 +569,20 @@ function GenshinCharacterDetail({ char, locale }: { char: GenshinCharacter; loca
         <div className="space-y-2 text-sm">
           <BuildRowLink label={locale === 'zh' ? '最佳武器' : 'Best Weapon'}
             value={locale === 'zh' ? build.bestWeapon : build.bestWeaponEn}
-            href={buildWeapon ? `/genshin/weapons` : undefined} />
+            href={buildWeapon ? `/genshin/weapons/${buildWeapon.id}` : undefined} />
           {altWeapons.length > 0 && (
-            <BuildRow label={locale === 'zh' ? '备选武器' : 'Alt Weapons'}
-              value={altWeapons.map(w => w ? getGenshinWeaponName(w, locale) : '').filter(Boolean).join(', ')} />
+            <div className="flex gap-2">
+              <span className="text-game-text-muted">{locale === 'zh' ? '备选武器' : 'Alt Weapons'}</span>
+              <span className="text-game-text">{altWeapons.map(w => w ? <Link key={w.id} href={`/genshin/weapons/${w.id}` as '/'} className="text-game-primary hover:text-game-accent transition-colors">{getGenshinWeaponName(w, locale)}</Link> : null).filter(Boolean).reduce((prev, curr) => <>{prev}, {curr}</>)}</span>
+            </div>
           )}
           <BuildRowLink label={locale === 'zh' ? '圣遗物套装' : 'Artifact Set'}
             value={locale === 'zh' ? build.bestArtifactSet : build.bestArtifactSetEn}
-            href={buildArtifact ? `/genshin/artifacts` : undefined} />
+            href={buildArtifact ? `/genshin/artifacts#${buildArtifact.id}` : undefined} />
           {altArtifact && (
             <BuildRowLink label={locale === 'zh' ? '备选套装' : 'Alt Set'}
               value={getArtifactSetName(altArtifact, locale)}
-              href="/genshin/artifacts" />
+              href={`/genshin/artifacts#${altArtifact.id}`} />
           )}
           <BuildRow label={locale === 'zh' ? '主属性' : 'Main Stats'} value={Object.values(locale === 'zh' ? build.mainStats : build.mainStatsEn).join(' / ')} />
           <BuildRow label={locale === 'zh' ? '副属性优先' : 'Sub Stats'} value={(locale === 'zh' ? build.subStatPriority : build.subStatPriorityEn).join(' > ')} />
@@ -751,6 +755,8 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
   const pathLabel = STARRAIL_PATH_LABELS[char.path]?.[locale] ?? char.path;
   const charName = getStarRailCharacterName(char, locale);
   const build = char.recommendedBuild;
+  const buildLC = starrailLightCones.find(lc => lc.nameEn.toLowerCase() === build.bestLightConeEn.toLowerCase() || lc.name === build.bestLightCone);
+  const buildRelic = starrailRelicSets.find(rs => rs.nameEn.toLowerCase() === build.bestRelicSetEn.toLowerCase() || rs.name === build.bestRelicSet);
 
   // JSON-LD structured data
   const jsonLd = {
@@ -910,7 +916,7 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
               <h3 className="mb-2 font-semibold text-game-text">
                 {locale === 'zh' ? '最佳光锥' : 'Best Light Cone'}
               </h3>
-              <Link href="/starrail/weapons" className="text-sm font-medium text-game-primary transition-colors hover:text-game-accent">
+              <Link href={buildLC ? `/starrail/weapons/${buildLC.id}` : '/starrail/weapons'} className="text-sm font-medium text-game-primary transition-colors hover:text-game-accent">
                 {localeStr(build.bestLightCone, build.bestLightConeEn, locale)}
               </Link>
               {build.alternativeLightCones.length > 0 && (
@@ -923,7 +929,7 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
               <h3 className="mb-2 font-semibold text-game-text">
                 {locale === 'zh' ? '最佳遗器' : 'Best Relics'}
               </h3>
-              <Link href="/starrail/artifacts" className="text-sm font-medium text-game-primary transition-colors hover:text-game-accent">
+              <Link href={buildRelic ? `/starrail/artifacts#${buildRelic.id}` : '/starrail/artifacts'} className="text-sm font-medium text-game-primary transition-colors hover:text-game-accent">
                 {localeStr(build.bestRelicSet, build.bestRelicSetEn, locale)}
               </Link>
               <p className="mt-1 text-xs text-game-text-muted">

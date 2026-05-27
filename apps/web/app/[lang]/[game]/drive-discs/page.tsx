@@ -11,9 +11,24 @@ export async function generateMetadata({
 }: {
   params: Promise<{ lang: string; game: string }>;
 }) {
-  const { game } = await params;
+  const { lang, game } = await params;
+  const locale = lang as SupportedLocale;
+  const gameId = game as GameId;
+  const gameName = GAMES[gameId]?.name[locale] ?? '';
   if (game !== 'zzz') return { robots: { index: false, follow: false } };
-  return {};
+  const label = locale === 'zh' ? '驱动盘' : locale === 'ja' ? 'ドライブディスク' : 'Drive Discs';
+  return {
+    title: `${label} - ${gameName}`,
+    description: locale === 'zh'
+      ? `绝区零全驱动盘图鉴，包含通用套装和元素套装的2件套/4件套效果及推荐代理人`
+      : locale === 'ja'
+      ? `ゼンレスゾーンゼロ全ドライブディスク図鑑、2セット/4セット効果とおすすめエージェント`
+      : `Complete Zenless Zone Zero Drive Disc guide with 2pc/4pc set bonuses and recommended agents`,
+    alternates: {
+      canonical: `https://gachia.com/${locale}/zzz/drive-discs`,
+      languages: { 'zh-Hans': `https://gachia.com/zh/zzz/drive-discs`, en: `https://gachia.com/en/zzz/drive-discs`, ja: `https://gachia.com/ja/zzz/drive-discs`, 'x-default': `https://gachia.com/zh/zzz/drive-discs` },
+    },
+  };
 }
 
 export default async function DriveDiscsPage({

@@ -4,6 +4,16 @@ import { nteWeapons, getNteWeaponName, getNteWeaponEffect, genshinWeapons, getGe
 
 const BASE_URL = 'https://gachia.com';
 
+const WEAPON_DESC: Record<string, Record<string, string>> = {
+  genshin: { zh: '原神全武器图鉴，包含五星、四星、三星武器数据、技能效果、获取方式', en: 'Complete Genshin Impact weapon list with stats, passive effects, and how to obtain', ja: '原神全武器図鑑、ステータス、武器スキル、入手方法' },
+  starrail: { zh: '崩坏：星穹铁道全光锥图鉴，包含五星、四星光锥数据、技能效果', en: 'Complete Honkai: Star Rail light cone list with stats and passive effects by path', ja: 'スターレイル全光円錐図鑑、ステータス、スキル効果' },
+  wuwa: { zh: '鸣潮全武器图鉴，包含五星、四星武器数据、被动技能', en: 'Complete Wuthering Waves weapon list with stats and passive abilities', ja: '鳴潮全武器図鑑、ステータス、パッシブスキル' },
+  nte: { zh: '异环全弧盘图鉴，包含S级、A级弧盘数据、技能效果', en: 'Complete Neverness to Everness Arc list with S-Rank and A-Rank data', ja: '異環全アルク図鑑、S級、A級データ' },
+  zzz: { zh: '绝区零全音擎图鉴，包含S级、A级音擎数据', en: 'Complete Zenless Zone Zero W-Engine list with S-Rank and A-Rank data', ja: 'ゼンレスゾーンゼロ全Wエンジン図鑑、S級、A級データ' },
+  guihuan: { zh: '归环全武器图鉴，包含SSR、SR武器数据', en: 'Complete Guihuan weapon list with SSR and SR data', ja: '帰環全武器図鑑、SSR、SR武器データ' },
+  ananta: { zh: '无限大全武器图鉴，包含SSR、SR武器数据', en: 'Complete Ananta weapon list with SSR and SR data', ja: 'アナンタ全武器図鑑、SSR、SR武器データ' },
+};
+
 const NTE_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
   solid: { zh: '固体', en: 'Solid', ja: 'ソリッド' },
   synthesis: { zh: '合成', en: 'Synthesis', ja: 'シンセシス' },
@@ -39,9 +49,11 @@ export async function generateMetadata({
   }
   languages['x-default'] = `${BASE_URL}/zh/${gameId}/weapons`;
 
+  const desc = WEAPON_DESC[gameId]?.[locale] ?? `${categoryLabel} - ${gameName} Wiki`;
+
   return {
     title: `${categoryLabel} - ${gameName}`,
-    description: `${categoryLabel} - ${gameName} Wiki`,
+    description: desc,
     alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/weapons`, languages },
   };
 }

@@ -52,6 +52,16 @@ import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 const BASE_URL = 'https://gachia.com';
 
+const GUIDE_DESC: Record<string, Record<string, string>> = {
+  genshin: { zh: '原神攻略百科，包含新手指南、角色攻略、配队推荐、深渊攻略等', en: 'Genshin Impact guides including beginner tips, character builds, team comps, and Abyss strategies', ja: '原神攻略百科、初心者ガイド、キャラビルド、チーム編成、深境螺旋攻略' },
+  starrail: { zh: '崩坏：星穹铁道攻略百科，包含新手指南、角色攻略、配队推荐等', en: 'Honkai: Star Rail guides with beginner tips, character builds, and team comp recommendations', ja: 'スターレイル攻略百科、初心者ガイド、キャラビルド、チーム編成' },
+  wuwa: { zh: '鸣潮攻略百科，包含新手指南、角色攻略、声骸推荐等', en: 'Wuthering Waves guides with beginner tips, character builds, and echo recommendations', ja: '鳴潮攻略百科、初心者ガイド、キャラビルド、エコーおすすめ' },
+  nte: { zh: '异环攻略百科，包含新手指南、角色攻略、弧盘推荐等', en: 'Neverness to Everness guides with beginner tips, character builds, and arc recommendations', ja: '異環攻略百科、初心者ガイド、キャラビルド、アルクおすすめ' },
+  zzz: { zh: '绝区零攻略百科，包含新手指南、代理人攻略、音擎推荐等', en: 'Zenless Zone Zero guides with beginner tips, agent builds, and W-Engine recommendations', ja: 'ゼンレスゾーンゼロ攻略百科、初心者ガイド、エージェントビルド、Wエンジンおすすめ' },
+  guihuan: { zh: '归环攻略百科，包含新手指南、使灵攻略、武器推荐等', en: 'Guihuan guides with beginner tips, spirit builds, and weapon recommendations', ja: '帰環攻略百科、初心者ガイド、スピリットビルド、武器おすすめ' },
+  ananta: { zh: '无限大攻略百科，包含新手指南、异能者攻略、武器推荐等', en: 'Ananta guides with beginner tips, esper builds, and weapon recommendations', ja: 'アナンタ攻略百科、初心者ガイド、エスパービルド、武器おすすめ' },
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -69,9 +79,11 @@ export async function generateMetadata({
   }
   languages['x-default'] = `${BASE_URL}/zh/${gameId}/guides`;
 
+  const desc = GUIDE_DESC[gameId]?.[locale] ?? `${categoryLabel} - ${gameName} Wiki`;
+
   return {
     title: `${categoryLabel} - ${gameName}`,
-    description: `${categoryLabel} - ${gameName} Wiki`,
+    description: desc,
     alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/guides`, languages },
   };
 }

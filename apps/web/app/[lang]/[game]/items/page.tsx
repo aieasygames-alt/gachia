@@ -4,6 +4,16 @@ import { nteMaterials, getNteMaterialName, genshinMaterials, getGenshinMaterialN
 
 const BASE_URL = 'https://gachia.com';
 
+const ITEM_DESC: Record<string, Record<string, string>> = {
+  genshin: { zh: '原神全材料图鉴，包含角色突破材料、天赋书、Boss掉落、区域特产等', en: 'Complete Genshin Impact material list with ascension materials, talent books, boss drops, and local specialties', ja: '原神全素材図鑑、キャラ突破素材、天賦本、ボスドロップ、地域特産品' },
+  starrail: { zh: '崩坏：星穹铁道全材料图鉴，包含角色突破材料、行迹材料、Boss掉落等', en: 'Complete Honkai: Star Rail material list with ascension materials, trace materials, and boss drops', ja: 'スターレイル全素材図鑑、キャラ突破素材、軌跡素材、ボスドロップ' },
+  wuwa: { zh: '鸣潮全材料图鉴，包含技能材料、Boss材料、区域特产等', en: 'Complete Wuthering Waves material list with skill materials, boss materials, and local specialties', ja: '鳴潮全素材図鑑、スキル素材、ボス素材、地域特産品' },
+  nte: { zh: '异环全材料图鉴，包含突破材料、Boss掉落、技能手册等', en: 'Complete Neverness to Everness material list with ascension, boss drops, and skill manuals', ja: '異環全素材図鑑、昇格素材、ボスドロップ、スキルマニュアル' },
+  zzz: { zh: '绝区零全材料图鉴，包含突破材料、技能材料、特殊材料等', en: 'Complete Zenless Zone Zero material list with ascension, skill, and special materials', ja: 'ゼンレスゾーンゼロ全素材図鑑、突破素材、スキル素材、特殊素材' },
+  guihuan: { zh: '归环全材料图鉴，包含使灵突破、元素突破、Boss材料等', en: 'Complete Guihuan material list with spirit ascension, element ascension, and boss materials', ja: '帰環全素材図鑑、スピリット昇格、元素昇格、ボス素材' },
+  ananta: { zh: '无限大全材料图鉴，包含突破材料、Boss材料、区域特产等', en: 'Complete Ananta material list with ascension, boss materials, and local specialties', ja: 'アナンタ全素材図鑑、昇格素材、ボス素材、地域特産品' },
+};
+
 const NTE_TYPE_LABELS: Record<string, Record<string, string>> = {
   guide: { zh: '猎手指南', en: 'Hunter Guide', ja: 'ハンターガイド' },
   'arc-exp': { zh: '弧盘经验', en: 'Arc EXP', ja: 'アルクEXP' },
@@ -45,9 +55,11 @@ export async function generateMetadata({
   }
   languages['x-default'] = `${BASE_URL}/zh/${gameId}/items`;
 
+  const desc = ITEM_DESC[gameId]?.[locale] ?? `${categoryLabel} - ${gameName} Wiki`;
+
   return {
     title: `${categoryLabel} - ${gameName}`,
-    description: `${categoryLabel} - ${gameName} Wiki`,
+    description: desc,
     alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/items`, languages },
   };
 }

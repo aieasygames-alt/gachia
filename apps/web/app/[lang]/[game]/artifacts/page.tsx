@@ -35,6 +35,22 @@ export async function generateMetadata({
     };
   }
 
+  if (gameId === 'wuwa') {
+    const label = locale === 'zh' ? '声骸' : locale === 'ja' ? 'エコー' : 'Echoes';
+    return {
+      title: `${label} - ${gameName} Wiki`,
+      description: locale === 'zh'
+        ? `鸣潮全声骸图鉴，包含声骸套装的2件套/5件套效果及推荐角色`
+        : locale === 'ja'
+        ? `鳴潮エコー図鑑、2セット/5セット効果とおすすめキャラ`
+        : `Complete Wuthering Waves Echo guide with 2pc/5pc set bonuses and recommended characters`,
+      alternates: {
+        canonical: `https://gachia.com/${locale}/${gameId}/artifacts`,
+        languages: { 'zh-Hans': `https://gachia.com/zh/${gameId}/artifacts`, en: `https://gachia.com/en/${gameId}/artifacts`, ja: `https://gachia.com/ja/${gameId}/artifacts`, 'x-default': `https://gachia.com/zh/${gameId}/artifacts` },
+      },
+    };
+  }
+
   const label = CATEGORY_LABELS.artifacts?.[locale] ?? 'Artifacts';
   return {
     title: `${label} - ${gameName} Wiki`,
