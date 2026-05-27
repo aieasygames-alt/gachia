@@ -37,3 +37,14 @@ export function getD1(): D1Database {
   }
   return env.DB;
 }
+
+/**
+ * Get the R2 bucket for image/tile storage.
+ */
+export function getR2(): R2Bucket {
+  const env = getEnv();
+  if (!env?.IMAGES) {
+    throw new Error('R2 bucket binding (IMAGES) not found. Are you running in Cloudflare Workers?');
+  }
+  return env.IMAGES;
+}
