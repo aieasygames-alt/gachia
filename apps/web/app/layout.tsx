@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'zh_CN',
     siteName: 'Gachia',
-    images: [{ url: '/images/og/default.png', width: 1200, height: 630, alt: 'Gachia — Multi-Game Open World Wiki' }],
+    images: [{ url: '/images/og/default.jpg', width: 1200, height: 630, alt: 'Gachia — Multi-Game Open World Wiki' }],
   },
   robots: {
     index: true,
