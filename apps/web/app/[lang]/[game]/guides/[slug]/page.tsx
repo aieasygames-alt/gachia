@@ -69,6 +69,7 @@ import {
 import type { AnantaGuide, AnantaGuideFaq } from '@gachia/data';
 import { Link } from '@/lib/i18n/navigation';
 import { ClientMarkdown } from '@/components/wiki/client-markdown';
+import { buildGuideJsonLd } from '@/lib/jsonld';
 
 export async function generateStaticParams() {
   return LOCALES.flatMap((lang) => [
@@ -323,20 +324,20 @@ function GenshinGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: s
         </Link>
       </div>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: gameConfig.name[locale], item: `https://gachia.com/${locale}/genshin` },
-              { '@type': 'ListItem', position: 2, name: CATEGORY_LABELS.guides?.[locale] ?? 'Guides', item: `https://gachia.com/${locale}/genshin/guides` },
-              { '@type': 'ListItem', position: 3, name: getGenshinGuideTitle(guide, locale) },
-            ],
-          }),
-        }}
-      />
+      {buildGuideJsonLd({
+        gameId: 'genshin',
+        locale,
+        title: getGenshinGuideTitle(guide, locale),
+        summary: getGenshinGuideSummary(guide, locale),
+        slug,
+        faq: guide.faq?.map((f) => ({ question: getGenshinGuideFaqQuestion(f, locale), answer: getGenshinGuideFaqAnswer(f, locale) })),
+      }).map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
     </div>
   );
 }
@@ -415,20 +416,20 @@ function NteGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
         </Link>
       </div>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: gameConfig.name[locale], item: `https://gachia.com/${locale}/nte` },
-              { '@type': 'ListItem', position: 2, name: CATEGORY_LABELS.guides?.[locale] ?? 'Guides', item: `https://gachia.com/${locale}/nte/guides` },
-              { '@type': 'ListItem', position: 3, name: getNteGuideTitle(guide, locale) },
-            ],
-          }),
-        }}
-      />
+      {buildGuideJsonLd({
+        gameId: 'nte',
+        locale,
+        title: getNteGuideTitle(guide, locale),
+        summary: getNteGuideSummary(guide, locale),
+        slug,
+        faq: guide.faq?.map((f) => ({ question: getNteGuideFaqQuestion(f, locale), answer: getNteGuideFaqAnswer(f, locale) })),
+      }).map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
     </div>
   );
 }
@@ -511,20 +512,20 @@ function WuWaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: stri
         </Link>
       </div>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: gameConfig.name[locale], item: `https://gachia.com/${locale}/wuwa` },
-              { '@type': 'ListItem', position: 2, name: CATEGORY_LABELS.guides?.[locale] ?? 'Guides', item: `https://gachia.com/${locale}/wuwa/guides` },
-              { '@type': 'ListItem', position: 3, name: getWuWaGuideTitle(guide, locale) },
-            ],
-          }),
-        }}
-      />
+      {buildGuideJsonLd({
+        gameId: 'wuwa',
+        locale,
+        title: getWuWaGuideTitle(guide, locale),
+        summary: getWuWaGuideSummary(guide, locale),
+        slug,
+        faq: guide.faq?.map((f) => ({ question: getWuWaGuideFaqQuestion(f, locale), answer: getWuWaGuideFaqAnswer(f, locale) })),
+      }).map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
     </div>
   );
 }
@@ -602,20 +603,20 @@ function StarRailGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: 
         </Link>
       </div>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: gameConfig.name[locale], item: `https://gachia.com/${locale}/starrail` },
-              { '@type': 'ListItem', position: 2, name: CATEGORY_LABELS.guides?.[locale] ?? 'Guides', item: `https://gachia.com/${locale}/starrail/guides` },
-              { '@type': 'ListItem', position: 3, name: getStarRailGuideTitle(guide, locale) },
-            ],
-          }),
-        }}
-      />
+      {buildGuideJsonLd({
+        gameId: 'starrail',
+        locale,
+        title: getStarRailGuideTitle(guide, locale),
+        summary: getStarRailGuideSummary(guide, locale),
+        slug,
+        faq: guide.faq?.map((f) => ({ question: getStarRailGuideFaqQuestion(f, locale), answer: getStarRailGuideFaqAnswer(f, locale) })),
+      }).map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
     </div>
   );
 }
@@ -687,20 +688,20 @@ function ZzzGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
         </Link>
       </div>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: gameConfig.name[locale], item: `https://gachia.com/${locale}/zzz` },
-              { '@type': 'ListItem', position: 2, name: CATEGORY_LABELS.guides?.[locale] ?? 'Guides', item: `https://gachia.com/${locale}/zzz/guides` },
-              { '@type': 'ListItem', position: 3, name: getZzzGuideTitle(guide, locale) },
-            ],
-          }),
-        }}
-      />
+      {buildGuideJsonLd({
+        gameId: 'zzz',
+        locale,
+        title: getZzzGuideTitle(guide, locale),
+        summary: getZzzGuideSummary(guide, locale),
+        slug,
+        faq: guide.faq?.map((f) => ({ question: getZzzGuideFaqQuestion(f, locale), answer: getZzzGuideFaqAnswer(f, locale) })),
+      }).map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
     </div>
   );
 }
@@ -772,20 +773,20 @@ function GuihuanGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: s
         </Link>
       </div>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: gameConfig.name[locale], item: `https://gachia.com/${locale}/guihuan` },
-              { '@type': 'ListItem', position: 2, name: CATEGORY_LABELS.guides?.[locale] ?? 'Guides', item: `https://gachia.com/${locale}/guihuan/guides` },
-              { '@type': 'ListItem', position: 3, name: getGuihuanGuideTitle(guide, locale) },
-            ],
-          }),
-        }}
-      />
+      {buildGuideJsonLd({
+        gameId: 'guihuan',
+        locale,
+        title: getGuihuanGuideTitle(guide, locale),
+        summary: getGuihuanGuideSummary(guide, locale),
+        slug,
+        faq: guide.faq?.map((f) => ({ question: getGuihuanGuideFaqQuestion(f, locale), answer: getGuihuanGuideFaqAnswer(f, locale) })),
+      }).map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
     </div>
   );
 }
@@ -857,20 +858,20 @@ function AnantaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: st
         </Link>
       </div>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: gameConfig.name[locale], item: `https://gachia.com/${locale}/ananta` },
-              { '@type': 'ListItem', position: 2, name: CATEGORY_LABELS.guides?.[locale] ?? 'Guides', item: `https://gachia.com/${locale}/ananta/guides` },
-              { '@type': 'ListItem', position: 3, name: getAnantaGuideTitle(guide, locale) },
-            ],
-          }),
-        }}
-      />
+      {buildGuideJsonLd({
+        gameId: 'ananta',
+        locale,
+        title: getAnantaGuideTitle(guide, locale),
+        summary: getAnantaGuideSummary(guide, locale),
+        slug,
+        faq: guide.faq?.map((f) => ({ question: getAnantaGuideFaqQuestion(f, locale), answer: getAnantaGuideFaqAnswer(f, locale) })),
+      }).map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
     </div>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import type { SupportedLocale } from '@gachia/core';
 import { GAMES, GAME_IDS, CATEGORY_LABELS } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
+import { buildHomepageJsonLd } from '@/lib/jsonld';
 
 const DESCRIPTIONS: Record<string, string> = {
   zh: '一站式二次元开放世界游戏数据库，覆盖原神、崩铁、鸣潮、异环、绝区零、归环等游戏的角色图鉴、武器数据、攻略百科。',
@@ -85,6 +86,14 @@ export default async function LocaleHome({
           );
         })}
       </section>
+
+      {buildHomepageJsonLd(locale).map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
     </div>
   );
 }
