@@ -263,3 +263,87 @@ export const genshinMapData: GameMapData = {
   categories: GENSHIN_CATEGORIES,
   markers: GENSHIN_MARKERS,
 };
+
+// --- Sub-map configuration ---
+
+export interface SubMapConfig {
+  hoyolabMapId: number;
+  id: string;
+  nameZh: string;
+  nameEn: string;
+  nameJa: string;
+  /** Game coordinate min X (from HoYoLAB point data) */
+  coordMinX: number;
+  /** Game coordinate min Y */
+  coordMinY: number;
+  /** Game coordinate X range */
+  coordRangeX: number;
+  /** Game coordinate Y range */
+  coordRangeY: number;
+  /** HoYoLAB label IDs to show for this sub-map */
+  labelIds: number[];
+}
+
+export const GENSHIN_SUB_MAPS: SubMapConfig[] = [
+  {
+    hoyolabMapId: 2,
+    id: 'teyvat',
+    nameZh: '提瓦特',
+    nameEn: 'Teyvat',
+    nameJa: 'テイワット',
+    coordMinX: -16119,
+    coordMinY: -4105,
+    coordRangeX: 20346,
+    coordRangeY: 13220,
+    labelIds: [
+      3, 2, 154, // Teleporters, Statues, Domains
+      5, 6, 194, 403, 508, 626, 694, // Oculi
+      17, 44, 45, 46, 269, // Chests
+      132, 133, 134, 135, 136, 137, 138, 157, 181, 183, 203, 204,
+      262, 263, 318, 390, 391, 432, 433, 452, 455, 457, 497, 498,
+      539, 540, 553, 608, 609, 610, 629, 660, 687, // Bosses
+      29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43,
+      185, 196, 197, 198, 199, 200, 227, 228,
+      384, 385, 386, 387, 400, 401, 402, 413,
+      492, 500, 501, 502, 503, 519,
+      611, 613, 614, 615, 616, 617, 620, 621, // Specialties
+    ],
+  },
+  {
+    hoyolabMapId: 7,
+    id: 'enkanomiya',
+    nameZh: '渊下宫',
+    nameEn: 'Enkanomiya',
+    nameJa: '淵下宮',
+    coordMinX: -1439,
+    coordMinY: -1245,
+    coordRangeX: 2428,
+    coordRangeY: 2369,
+    labelIds: [
+      3, // Teleport Waypoint
+      17, 44, 45, 46, // Chests
+      18, // Seelie
+      64, // Time Trial Challenge
+      320, 325, 326, 327, 328, // Key Sigils I-V
+    ],
+  },
+  {
+    hoyolabMapId: 9,
+    id: 'chasm',
+    nameZh: '地下矿区',
+    nameEn: 'The Chasm: Underground',
+    nameJa: '地下鉱区',
+    coordMinX: -886,
+    coordMinY: -590,
+    coordRangeX: 1347,
+    coordRangeY: 1149,
+    labelIds: [
+      3, // Teleport Waypoint
+      17, 44, 45, 46, // Chests
+      18, // Seelie
+      64, // Time Trial Challenge
+      357, // Lumenspar
+      358, // Lumenlamp
+    ],
+  },
+];
