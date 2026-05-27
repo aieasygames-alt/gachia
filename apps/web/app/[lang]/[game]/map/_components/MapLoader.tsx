@@ -10,10 +10,10 @@ const InteractiveMap = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="flex items-center justify-center h-[calc(100dvh-8rem)] min-h-[500px] bg-game-surface rounded-lg">
+      <div className="fixed inset-0 z-40 flex items-center justify-center" style={{ background: '#0a0a1a' }}>
         <div className="text-center">
           <div className="animate-spin w-8 h-8 border-2 border-game-primary border-t-transparent rounded-full mx-auto mb-3" />
-          <p className="text-sm text-game-text-muted">
+          <p className="text-sm text-zinc-400">
             Loading Map...
           </p>
         </div>

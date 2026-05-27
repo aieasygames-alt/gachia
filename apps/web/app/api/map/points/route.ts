@@ -2,8 +2,8 @@ import { NextResponse } from 'next/server';
 
 const HOYOLAB_POINT_API = 'https://sg-public-api-static.hoyolab.com/common/map_user/ys_obc/v1/map/point/list';
 
-// Cache the response for 6 hours
-let cachedData: { json: unknown; timestamp: number } | null = null;
+// Cache responses per map_id for 6 hours
+const pointsCache = new Map<string, { json: unknown; timestamp: number }>();
 const CACHE_TTL = 6 * 60 * 60 * 1000;
 
 // Label IDs for the most important categories we want to show
@@ -44,9 +44,17 @@ const IMPORTANT_LABELS = new Set([
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const mapId = searchParams.get('map_id') || '2';
+  const labelsParam = searchParams.get('labels');
 
-  if (cachedData && Date.now() - cachedData.timestamp < CACHE_TTL) {
-    return NextResponse.json(cachedData.json, {
+  // Build label filter: use custom labels if provided, otherwise use IMPORTANT_LABELS
+  const labelFilter = labelsParam
+    ? new Set(labelsParam.split(',').map(Number).filter((n) => !isNaN(n)))
+    : IMPORTANT_LABELS;
+
+  const cacheKey = `points:${mapId}:${labelsParam ?? 'default'}`;
+  const cached = pointsCache.get(cacheKey);
+  if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
+    return NextResponse.json(cached.json, {
       headers: { 'Cache-Control': 'public, s-maxage=21600' },
     });
   }
@@ -71,12 +79,12 @@ export async function GET(request: Request) {
       labelMap.set(l.id, { id: l.id, name: l.name });
     }
 
-    // Group points by label_id, only keeping important ones
+    // Group points by label_id, only keeping filtered ones
     const categories: Record<string, { id: string; name: string; points: { id: number; x: number; y: number }[] }> = {};
 
     for (const p of pointList) {
       const labelId = p.label_id as number;
-      if (!IMPORTANT_LABELS.has(labelId)) continue;
+      if (!labelFilter.has(labelId)) continue;
 
       const label = labelMap.get(labelId);
       if (!label) continue;
@@ -98,7 +106,7 @@ export async function GET(request: Request) {
       totalPoints: Object.values(categories).reduce((s, c) => s + c.points.length, 0),
     };
 
-    cachedData = { json: result, timestamp: Date.now() };
+    pointsCache.set(cacheKey, { json: result, timestamp: Date.now() });
 
     return NextResponse.json(result, {
       headers: { 'Cache-Control': 'public, s-maxage=21600' },
