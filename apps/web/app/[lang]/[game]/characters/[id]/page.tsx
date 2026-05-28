@@ -584,7 +584,7 @@ function GenshinCharacterDetail({ char, locale }: { char: GenshinCharacter; loca
               value={getArtifactSetName(altArtifact, locale)}
               href={`/genshin/artifacts#${altArtifact.id}`} />
           )}
-          <BuildRow label={locale === 'zh' ? '主属性' : 'Main Stats'} value={Object.values(locale === 'zh' ? build.mainStats : build.mainStatsEn).join(' / ')} />
+          <BuildRow label={locale === 'zh' ? '主属性' : 'Main Stats'} value={Object.values(locale === 'zh' ? build.mainStats ?? {} : build.mainStatsEn ?? {}).join(' / ')} />
           <BuildRow label={locale === 'zh' ? '副属性优先' : 'Sub Stats'} value={(locale === 'zh' ? build.subStatPriority : build.subStatPriorityEn).join(' > ')} />
         </div>
       </Section>
@@ -919,7 +919,7 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
               <Link href={buildLC ? `/starrail/weapons/${buildLC.id}` : '/starrail/weapons'} className="text-sm font-medium text-game-primary transition-colors hover:text-game-accent">
                 {localeStr(build.bestLightCone, build.bestLightConeEn, locale)}
               </Link>
-              {build.alternativeLightCones.length > 0 && (
+              {(build.alternativeLightCones?.length ?? 0) > 0 && (
                 <p className="mt-1 text-xs text-game-text-muted">
                   {locale === 'zh' ? '替代' : 'Alt'}: {build.alternativeLightCones.join(', ')}
                 </p>
@@ -1606,16 +1606,16 @@ function ZzzCharacterDetail({ char, locale }: { char: ZzzCharacter; locale: Supp
         <div className="space-y-2 text-sm">
           <BuildRow label={locale === 'zh' ? '最佳音擎' : 'Best W-Engine'}
             value={localeStr(build.bestWeapon, build.bestWeaponEn, locale)} />
-          {build.alternativeWeapons.length > 0 && (
+          {(build.alternativeWeapons?.length ?? 0) > 0 && (
             <BuildRow label={locale === 'zh' ? '备选音擎' : 'Alt W-Engines'}
               value={build.alternativeWeapons.join(', ')} />
           )}
           <BuildRow label={locale === 'zh' ? '驱动盘套装' : 'Drive Disc Set'}
             value={localeStr(build.bestDriveDisc, build.bestDriveDiscEn, locale)} />
           <BuildRow label={locale === 'zh' ? '主属性' : 'Main Stats'}
-            value={Object.values(locale === 'zh' ? build.mainStats : build.mainStatsEn).join(' / ')} />
+            value={Object.values(locale === 'zh' ? build.mainStats ?? {} : build.mainStatsEn ?? {}).join(' / ')} />
           <BuildRow label={locale === 'zh' ? '副属性优先' : 'Sub Stats'}
-            value={(locale === 'zh' ? build.subStatPriority : build.subStatPriorityEn).join(' > ')} />
+            value={(locale === 'zh' ? build.subStatPriority : build.subStatPriorityEn)?.join(' > ')} />
         </div>
       </Section>
 
@@ -1833,14 +1833,14 @@ function GuihuanCharacterDetail({ char, locale }: { char: GuihuanCharacter; loca
         <div className="space-y-2 text-sm">
           <BuildRow label={locale === 'zh' ? '最佳武器' : 'Best Weapon'}
             value={localeStr(build.bestWeapon, build.bestWeaponEn, locale)} />
-          {build.alternativeWeapons.length > 0 && (
+          {(build.alternativeWeapons?.length ?? 0) > 0 && (
             <BuildRow label={locale === 'zh' ? '备选武器' : 'Alt Weapons'}
               value={build.alternativeWeapons.join(', ')} />
           )}
           <BuildRow label={locale === 'zh' ? '主属性' : 'Main Stats'}
-            value={Object.values(locale === 'zh' ? build.mainStats : build.mainStatsEn).join(' / ')} />
+            value={Object.values(locale === 'zh' ? build.mainStats ?? {} : build.mainStatsEn ?? {}).join(' / ')} />
           <BuildRow label={locale === 'zh' ? '副属性优先' : 'Sub Stats'}
-            value={(locale === 'zh' ? build.subStatPriority : build.subStatPriorityEn).join(' > ')} />
+            value={(locale === 'zh' ? build.subStatPriority : build.subStatPriorityEn)?.join(' > ')} />
         </div>
       </Section>
 
@@ -2072,14 +2072,14 @@ function AnantaCharacterDetail({ char, locale }: { char: AnantaCharacter; locale
         <div className="space-y-2 text-sm">
           <BuildRow label={locale === 'zh' ? '最佳武器' : 'Best Weapon'}
             value={localeStr(build.bestWeapon, build.bestWeaponEn, locale)} />
-          {build.alternativeWeapons.length > 0 && (
+          {(build.alternativeWeapons?.length ?? 0) > 0 && (
             <BuildRow label={locale === 'zh' ? '备选武器' : 'Alt Weapons'}
               value={build.alternativeWeapons.join(', ')} />
           )}
           <BuildRow label={locale === 'zh' ? '主属性' : 'Main Stats'}
-            value={Object.values(locale === 'zh' ? build.mainStats : build.mainStatsEn).join(' / ')} />
+            value={Object.values(locale === 'zh' ? build.mainStats ?? {} : build.mainStatsEn ?? {}).join(' / ')} />
           <BuildRow label={locale === 'zh' ? '副属性优先' : 'Sub Stats'}
-            value={(locale === 'zh' ? build.subStatPriority : build.subStatPriorityEn).join(' > ')} />
+            value={(locale === 'zh' ? build.subStatPriority : build.subStatPriorityEn)?.join(' > ')} />
         </div>
       </Section>
 
