@@ -1,6 +1,8 @@
-import { GAMES, CATEGORY_LABELS } from '@gachia/core';
+import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
+
+const BASE_URL = 'https://gachia.com';
 
 const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
   genshin: {
@@ -60,6 +62,38 @@ const ROUTE_ICONS: Record<string, string> = {
   'redeem-codes': '🎁',
   anomalies: '🌀',
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; game: string }>;
+}) {
+  const { lang, game } = await params;
+  const locale = lang as SupportedLocale;
+  const gameId = game as GameId;
+  const gameName = GAMES[gameId]?.name[locale];
+  const desc = GAME_DESCRIPTIONS[gameId]?.[locale] ?? `${gameName} Wiki`;
+  const languages: Record<string, string> = {};
+  for (const l of LOCALES) {
+    const hreflang = l === 'zh' ? 'zh-Hans' : l;
+    languages[hreflang] = `${BASE_URL}/${l}/${gameId}`;
+  }
+  languages['x-default'] = `${BASE_URL}/zh/${gameId}`;
+
+  return {
+    title: `${gameName} Wiki`,
+    description: desc,
+    alternates: { canonical: `${BASE_URL}/${locale}/${gameId}`, languages },
+    openGraph: {
+      title: `${gameName} Wiki`,
+      description: desc,
+      url: `${BASE_URL}/${locale}/${gameId}`,
+      siteName: 'Gachia',
+      images: [{ url: `${BASE_URL}/images/og/${gameId}.jpg`, width: 1200, height: 630 }],
+      locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
+    },
+  };
+}
 
 export default async function GameHome({
   params,

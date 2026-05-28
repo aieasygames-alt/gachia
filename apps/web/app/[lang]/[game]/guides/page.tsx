@@ -80,11 +80,24 @@ export async function generateMetadata({
   languages['x-default'] = `${BASE_URL}/zh/${gameId}/guides`;
 
   const desc = GUIDE_DESC[gameId]?.[locale] ?? `${categoryLabel} - ${gameName} Wiki`;
+  const title = locale === 'zh'
+    ? `${gameName}攻略大全 — 新手指南/配队/角色攻略`
+    : locale === 'ja'
+      ? `${gameName}攻略百科 — ガイド一覧`
+      : `${gameName} Guides — Builds, Teams & Tips`;
 
   return {
-    title: `${categoryLabel} - ${gameName}`,
+    title,
     description: desc,
     alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/guides`, languages },
+    openGraph: {
+      title,
+      description: desc,
+      url: `${BASE_URL}/${locale}/${gameId}/guides`,
+      siteName: 'Gachia',
+      images: [{ url: `${BASE_URL}/images/og/${gameId}.jpg`, width: 1200, height: 630 }],
+      locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
+    },
   };
 }
 
