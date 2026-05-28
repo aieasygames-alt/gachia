@@ -431,14 +431,6 @@ function GenshinCharacterDetail({ char, locale }: { char: GenshinCharacter; loca
     description: getGenshinCharacterDescription(char, locale).slice(0, 300),
     image: imageUrl,
     url: `https://gachia.com/${locale}/genshin/characters/${char.id}`,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: char.tierRank === 'SS' ? 5 : char.tierRank === 'S' ? 4.5 : char.tierRank === 'A' ? 4 : char.tierRank === 'B' ? 3 : 2,
-      bestRating: 5,
-      worstRating: 1,
-      ratingCount: 1,
-      reviewCount: 1,
-    },
   };
 
   // FAQ JSON-LD
@@ -784,14 +776,6 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
     description: getStarRailCharacterDescription(char, locale).slice(0, 300),
     image: imageUrl,
     url: `https://gachia.com/${locale}/starrail/characters/${char.id}`,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: char.tierRank === 'SS' ? 5 : char.tierRank === 'S' ? 4.5 : char.tierRank === 'A' ? 4 : char.tierRank === 'B' ? 3 : 2,
-      bestRating: 5,
-      worstRating: 1,
-      ratingCount: 1,
-      reviewCount: 1,
-    },
   };
 
   const faqJsonLd = char.faq.length > 0 ? {
@@ -1094,16 +1078,6 @@ function NteCharacterDetail({ char, locale }: { char: NteCharacter; locale: Supp
     description: getNteCharacterDescription(char, locale).slice(0, 300),
     image: imageUrl,
     url: `https://gachia.com/${locale}/nte/characters/${char.id}`,
-    ...(char.tierRank ? {
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: char.tierRank === 'SS' ? 5 : char.tierRank === 'S' ? 4.5 : char.tierRank === 'A' ? 4 : char.tierRank === 'B' ? 3 : 2,
-        bestRating: 5,
-        worstRating: 1,
-        ratingCount: 1,
-        reviewCount: 1,
-      },
-    } : {}),
   };
 
   return (
@@ -1277,16 +1251,6 @@ function WuWaCharacterDetail({ char, locale }: { char: WuWaCharacter; locale: Su
     description: getWuWaCharacterDescription(char, locale).slice(0, 300),
     image: imageUrl,
     url: `https://gachia.com/${locale}/wuwa/characters/${char.id}`,
-    ...(char.tierRank ? {
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: char.tierRank === 'SS' ? 5 : char.tierRank === 'S' ? 4.5 : char.tierRank === 'A' ? 4 : char.tierRank === 'B' ? 3 : 2,
-        bestRating: 5,
-        worstRating: 1,
-        ratingCount: 1,
-        reviewCount: 1,
-      },
-    } : {}),
   };
 
   return (
@@ -1462,16 +1426,6 @@ function ZzzCharacterDetail({ char, locale }: { char: ZzzCharacter; locale: Supp
     description: getZzzCharacterDescription(char, locale).slice(0, 300),
     image: imageUrl,
     url: `https://gachia.com/${locale}/zzz/characters/${char.id}`,
-    ...(char.tierRank ? {
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: char.tierRank === 'SS' ? 5 : char.tierRank === 'S' ? 4.5 : char.tierRank === 'A' ? 4 : char.tierRank === 'B' ? 3 : 2,
-        bestRating: 5,
-        worstRating: 1,
-        ratingCount: 1,
-        reviewCount: 1,
-      },
-    } : {}),
   };
 
   const faqJsonLd = char.faq.length > 0 ? {
@@ -1728,16 +1682,6 @@ function GuihuanCharacterDetail({ char, locale }: { char: GuihuanCharacter; loca
     description: getGuihuanCharacterDescription(char, locale).slice(0, 300),
     image: imageUrl,
     url: `https://gachia.com/${locale}/guihuan/characters/${char.id}`,
-    ...(char.tierRank ? {
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: char.tierRank === 'SS' ? 5 : char.tierRank === 'S' ? 4.5 : char.tierRank === 'A' ? 4 : char.tierRank === 'B' ? 3 : 2,
-        bestRating: 5,
-        worstRating: 1,
-        ratingCount: 1,
-        reviewCount: 1,
-      },
-    } : {}),
   };
 
   const faqJsonLd = char.faq.length > 0 ? {
@@ -1967,16 +1911,6 @@ function AnantaCharacterDetail({ char, locale }: { char: AnantaCharacter; locale
     description: getAnantaCharacterDescription(char, locale).slice(0, 300),
     image: imageUrl,
     url: `https://gachia.com/${locale}/ananta/characters/${char.id}`,
-    ...(char.tierRank ? {
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: char.tierRank === 'SS' ? 5 : char.tierRank === 'S' ? 4.5 : char.tierRank === 'A' ? 4 : char.tierRank === 'B' ? 3 : 2,
-        bestRating: 5,
-        worstRating: 1,
-        ratingCount: 1,
-        reviewCount: 1,
-      },
-    } : {}),
   };
 
   const faqJsonLd = char.faq.length > 0 ? {

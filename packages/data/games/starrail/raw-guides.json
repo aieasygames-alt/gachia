@@ -10,10 +10,26 @@
     "summaryEn": "Get started with Honkai: Star Rail in 30 minutes — from download to your first battle.",
     "content": "## 崩坏：星穹铁道快速上手指南\n\n### 1. 基础操作\n- 战斗为回合制，速度决定行动顺序\n- 弱点击破是核心机制：使用对应元素攻击可以击破敌人弱点\n- 战技和终结技合理使用是关键\n\n### 2. 角色培养优先级\n- 主角是免费强力角色，优先培养\n- 开局送的娜塔莎（治疗）非常重要\n- 4星角色中，丹恒、三月七、黑塔都是好用的\n\n### 3. 日常规划\n- 每日完成日常任务获取星琼\n- 开拓力不要溢出，优先刷角色突破材料\n- 模拟宇宙每周奖励必拿\n\n### 4. 抽卡建议\n- 新手池50抽保底5星\n- 建议攒够保底再下池子\n- 优先抽主C角色，辅助角色可以通过其他方式获取",
     "contentEn": "## Quick Start Guide\n\n### 1. Basic Controls\n- Combat is turn-based; Speed determines turn order\n- Weakness Break is the core mechanic: use matching elements to break enemy weaknesses\n- Proper use of Skill and Ultimate is key\n\n### 2. Character Build Priority\n- The Trailblazer is a strong free unit — build them first\n- Natasha (healer) is crucial early on\n- Among 4-stars, Dan Heng, March 7th, and Herta are all solid picks\n\n### 3. Daily Routine\n- Complete daily missions for Stellar Jade\n- Don't let Trailblaze Power overflow; prioritize ascension materials\n- Claim Simulated Universe weekly rewards\n\n### 4. Gacha Tips\n- The beginner banner guarantees a 5-star in 50 pulls\n- Save for pity before pulling\n- Prioritize main DPS characters; supports can be obtained through other means",
-    "tags": ["新手", "入门", "弱点击破", "Beginner", "Weakness Break"],
+    "tags": [
+      "新手",
+      "入门",
+      "弱点击破",
+      "Beginner",
+      "Weakness Break"
+    ],
     "faq": [
-      {"question": "Which character should I build first?", "questionZh": "先练哪个角色？", "answer": "Focus on the Trailblazer, Natasha, and one main DPS from your pulls.", "answerZh": "优先培养主角、娜塔莎和你抽到的一个主C角色。"},
-      {"question": "How do I get more Stellar Jade?", "questionZh": "怎么获得更多星琼？", "answer": "Daily missions, events, achievements, and exploring all give Stellar Jade.", "answerZh": "日常任务、活动、成就和探索都会给星琼。"}
+      {
+        "question": "Which character should I build first?",
+        "questionZh": "先练哪个角色？",
+        "answer": "Focus on the Trailblazer, Natasha, and one main DPS from your pulls.",
+        "answerZh": "优先培养主角、娜塔莎和你抽到的一个主C角色。"
+      },
+      {
+        "question": "How do I get more Stellar Jade?",
+        "questionZh": "怎么获得更多星琼？",
+        "answer": "Daily missions, events, achievements, and exploring all give Stellar Jade.",
+        "answerZh": "日常任务、活动、成就和探索都会给星琼。"
+      }
     ]
   },
   {
@@ -27,25 +43,53 @@
     "summaryEn": "Deep dive into Honkai: Star Rail's Weakness Break system and how to maximize its potential.",
     "content": "## 弱点击破机制详解\n\n### 什么是弱点击破？\n- 每个敌人都有弱点属性（显示在血条上方）\n- 使用对应属性攻击会削减韧性条\n- 韧性条归零时触发弱点击破，造成额外伤害和负面效果\n\n### 各元素击破效果\n- **火**: 造成灼烧DOT\n- **冰**: 冻结敌人1回合\n- **雷**: 造成触电DOT\n- **风**: 造成风化DOT\n- **物理**: 造成流血DOT\n- **量子**: 延迟行动并造成额外伤害\n- **想象**: 延迟行动并降低速度\n\n### 击破流队伍构建\n- 主C选择高击破效率角色\n- 辅助选择能降低敌人抗性的角色\n- 注意速度搭配，确保在敌人行动前击破",
     "contentEn": "## Weakness Break Mechanism Guide\n\n### What is Weakness Break?\n- Each enemy has weakness elements (shown above their HP bar)\n- Using matching elements reduces their Toughness bar\n- When Toughness reaches zero, a Break occurs, dealing extra damage and applying debuffs\n\n### Element Break Effects\n- **Fire**: Applies Burn DoT\n- **Ice**: Freezes enemy for 1 turn\n- **Lightning**: Applies Shock DoT\n- **Wind**: Applies Wind Shear DoT\n- **Physical**: Applies Bleed DoT\n- **Quantum**: Delays action and deals bonus damage\n- **Imaginary**: Delays action and reduces Speed\n\n### Break Team Building\n- Choose high Break Efficiency main DPS\n- Supports that reduce enemy resistance are valuable\n- Pay attention to Speed tuning for optimal Break timing",
-    "tags": ["弱点击破", "战斗", "元素", "Weakness Break", "Combat"],
+    "tags": [
+      "弱点击破",
+      "战斗",
+      "元素",
+      "Weakness Break",
+      "Combat"
+    ],
     "faq": [
-      {"question": "What is Break Efficiency?", "questionZh": "什么是击破效率？", "answer": "Break Efficiency determines how much Toughness you reduce per hit. Higher is better for Break teams.", "answerZh": "击破效率决定了每次攻击削减多少韧性。击破流队伍需要更高的击破效率。"}
+      {
+        "question": "What is Break Efficiency?",
+        "questionZh": "什么是击破效率？",
+        "answer": "Break Efficiency determines how much Toughness you reduce per hit. Higher is better for Break teams.",
+        "answerZh": "击破效率决定了每次攻击削减多少韧性。击破流队伍需要更高的击破效率。"
+      }
     ]
   },
   {
     "id": "relic-guide",
     "title": "遗器系统完全指南",
-    "titleEn": "Complete Relic Guide",
+    "titleEn": "Honkai: Star Rail Relic Guide — Best Sets, Main Stats & Substats by Character",
     "category": "equipment",
     "categoryZh": "装备攻略",
     "categoryEn": "Equipment",
     "summary": "从遗器基础到毕业搭配，全面了解崩坏：星穹铁道的遗器系统。",
-    "summaryEn": "From basics to endgame builds — everything you need to know about the Relic system.",
+    "summaryEn": "Complete HSR relic guide: all relic sets explained, main stat options, substat priority, which sets for each path, and farming efficiency tips for optimal builds.",
     "content": "## 遗器系统完全指南\n\n### 遗器基础\n- 6个遗器位：头部、手部、躯干、脚部、位面球、连接绳\n- 4件套来自侵蚀隧洞（4件洞窟遗器）\n- 2件套来自模拟宇宙（2件位面饰品）\n\n### 主词条与副词条\n- **头部**: 固定生命值\n- **手部**: 固定攻击力\n- **躯干**: 生命%/攻击%/防御%/治疗加成/暴击率/暴击伤害\n- **脚部**: 生命%/攻击%/防御%/速度\n- **位面球**: 生命%/攻击%/防御%/属性伤害加成\n- **连接绳**: 生命%/攻击%/防御%/击破特攻/能量回复\n\n### 副词条优先级\n- 暴击率和暴击伤害是最有价值的副词条\n- 速度是第二优先级\n- 攻击力%和生命值%根据角色需求选择",
-    "contentEn": "## Complete Relic Guide\n\n### Relic Basics\n- 6 slots: Head, Hands, Body, Feet, Planar Sphere, Link Rope\n- 4-piece sets from Cavern of Corrosion\n- 2-piece sets from Simulated Universe\n\n### Main & Sub Stats\n- **Head**: Fixed HP\n- **Hands**: Fixed ATK\n- **Body**: HP%/ATK%/DEF%/Healing%/CRIT Rate%/CRIT DMG%\n- **Feet**: HP%/ATK%/DEF%/SPD\n- **Planar Sphere**: HP%/ATK%/DEF%/Elemental DMG%\n- **Link Rope**: HP%/ATK%/DEF%/Break Effect%/Energy Regeneration\n\n### Sub-stat Priority\n- CRIT Rate and CRIT DMG are the most valuable sub-stats\n- Speed is second priority\n- ATK% and HP% depending on character needs",
-    "tags": ["遗器", "装备", "词条", "Relics", "Stats"],
+    "contentEn": "## Complete Relic Guide for Honkai: Star Rail\n\nRelics are the primary gear system in Honkai: Star Rail. Understanding how they work is essential for building strong characters.\n\n## Relic Basics\n\n### Slots\nCharacters have 6 relic slots divided into two categories:\n\n**Cavern Relics (4-piece sets)**\n- Head (Crown) — Fixed HP main stat\n- Hands (Gloves) — Fixed ATK main stat\n- Body (Chest) — Variable main stat\n- Feet (Boots) — Variable main stat\n\n**Planar Ornaments (2-piece sets)**\n- Planar Sphere — Variable main stat\n- Link Rope — Variable main stat\n\n### Rarity\n- **5-star relics** are the goal — significantly better than 4-star\n- Gold (5★) > Purple (4★) > Blue (3★)\n- Only farm at Equilibrium Level 5+ for guaranteed 5★ drops\n\n## Main Stats by Slot\n\n| Slot | Possible Main Stats |\n|------|-------------------|\n| Body | HP% / ATK% / DEF% / Outgoing Healing% / CRIT Rate% / CRIT DMG% |\n| Feet | HP% / ATK% / DEF% / SPD |\n| Planar Sphere | HP% / ATK% / DEF% / Elemental DMG% (Fire, Ice, Lightning, Wind, Physical, Quantum, Imaginary) |\n| Link Rope | HP% / ATK% / DEF% / Break Effect% / Energy Regeneration% |\n\n## Substats Explained\n\nEvery relic can have up to 4 substats (rolled from this pool):\n- CRIT Rate, CRIT DMG, SPD, HP%, ATK%, DEF%, Break Effect%, Effect Hit Rate%, Effect RES\n\n### Substat Priority by Role\n\n| Role | Priority |\n|------|----------|\n| DPS | CRIT Rate > CRIT DMG > SPD > ATK% |\n| Support | SPD > HP%/DEF% > Effect RES > Effect Hit Rate |\n| Sustain | SPD > HP%/DEF% > Outgoing Healing > Effect RES |\n| Break | Break Effect > SPD > HP%/DEF% > Effect Hit Rate |\n\n## Best Relic Sets by Path\n\n### Destruction\n- **4-piece**: Champion of Streetwise Boxing (stacking ATK)\n- **2-piece Planar**: Space Sealing Station or Rutilant Arena\n\n### Hunt (Single-target DPS)\n- **4-piece**: Wastelander of Banditry Desert or Musketeer of Wild Wheat\n- **2-piece Planar**: Rutilant Arena or Space Sealing Station\n\n### Erudition (AoE DPS)\n- **4-piece**: Genius of Brilliant Stars (DEF ignore) or Wastelander\n- **2-piece Planar**: Rutilant Arena or Space Sealing Station\n\n### Harmony (Buffer)\n- **4-piece**: Messenger Traversing Hackerspace (SPD team buff)\n- **2-piece Planar**: Fleet of the Ageless or Broken Keel\n\n### Nihility (Debuffer)\n- **4-piece**: Prisoner in Deep Confinement or Eagle\n- **2-piece Planar**: Pan-Cosmic Commercial Enterprise or Fleet of the Ageless\n\n### Preservation (Shielder)\n- **4-piece**: Knight of Purity Palace\n- **2-piece Planar**: Fleet of the Ageless or Belobog of the Architects\n\n### Abundance (Healer)\n- **4-piece**: Longevous Disciple or Passerby of Wandering Cloud\n- **2-piece Planar**: Fleet of the Ageless or Broken Keel\n\n## Farming Efficiency\n\n### Where to Farm\n- **Cavern of Corrosion**: 4-piece relic sets (costs 40 Trailblaze Power per run)\n- **Simulated Universe**: 2-piece planar ornaments (free, uses Trailblaze Power only for Immersifiers)\n\n### Tips for Efficient Farming\n1. **Farm Simulated Universe weekly** — use your free Immersifiers first\n2. **Focus on main stat** before worrying about substats — a correct main stat with bad substats is still usable\n3. **Keep relics with 3+ desired substats** — these have higher upgrade potential\n4. **Use the Relic Scorer** to check if your builds are optimal\n5. **Don't over-farm early** — pre-farm at Equilibrium 5+ for best efficiency\n\n## Common Mistakes\n\n1. **Ignoring SPD** — Speed is crucial for turn order; most supports want 134+ SPD\n2. **Wrong main stat on Body** — DPS characters almost always want CRIT Rate or CRIT DMG\n3. **Mixing sets randomly** — set bonuses are significant; try to complete 4-piece + 2-piece combos\n4. **Upgrading bad relics** — if a relic rolls Effect RES on your DPS, it's likely not worth maxing",
+    "tags": [
+      "遗器",
+      "装备",
+      "词条",
+      "Relics",
+      "Stats"
+    ],
     "faq": [
-      {"question": "Should I use matching set or better substats?", "questionZh": "应该优先套装还是好词条？", "answer": "For most characters, 2+2 piece sets with good substats beat a full 4-piece with bad substats. Exception: characters that heavily rely on their 4-piece bonus.", "answerZh": "大多数角色来说，好的2+2散搭比差的4件套更好。例外是那些严重依赖4件套效果的角色。"}
+      {
+        "question": "What are the best relics in Honkai: Star Rail?",
+        "questionZh": "崩坏：星穹铁道最好的遗器是什么？",
+        "answer": "Best relics depend on the character's path. DPS characters want Champion of Streetwise Boxing or Wastelander; supports want Messenger Traversing Hackerspace; healers want Longevous Disciple. Always match main stats to role.",
+        "answerZh": "最好的遗器取决于角色命途。输出位推荐街亭拳王或废土客，辅助推荐骇域漫游信使，治疗推荐长寿学习者。主词条务必匹配角色定位。"
+      },
+      {
+        "question": "How do I get 5-star relics in HSR?",
+        "questionZh": "星穹铁道怎么获得5星遗器？",
+        "answer": "Farm Cavern of Corrosion at Equilibrium Level 5+ for guaranteed 5★ drops. Simulated Universe also provides 5★ planar ornaments. Use Trailblaze Power efficiently.",
+        "answerZh": "在均衡等级5+的腐蚀隧道刷取必掉5星遗器。模拟宇宙也提供5星位面饰品。合理使用开拓力。"
+      }
     ]
   },
   {
@@ -59,9 +103,20 @@
     "summaryEn": "Learn how to build effective 4-character teams, understand roles and synergies.",
     "content": "## 配队基础与思路\n\n### 角色定位\n- **主C（DPS）**: 队伍核心输出，如希儿、景元、银枝\n- **副C（Sub-DPS）**: 补充伤害，如刃、银狼\n- **辅助（Support）**: 增伤/减防，如布洛妮娅、阮梅\n- **生存（Sustain）**: 治疗/护盾，如白露、符玄\n\n### 基础配队模板\n- **单核队**: 1主C + 1辅助 + 1副C/辅助 + 1生存\n- **双核队**: 2主C + 1辅助 + 1生存\n- **击破队**: 以弱点击破为核心的队伍\n\n### 常见强力配队\n- 希儿 + 银狼 + 布洛妮娅 + 白露\n- 景元 + 停云 + 布洛妮娅 + 罗刹\n- 刃 + 银狼 + 阮梅 + 符玄",
     "contentEn": "## Team Building Fundamentals\n\n### Character Roles\n- **Main DPS**: Core damage dealer, e.g., Seele, Jing Yuan, Silver Wolf\n- **Sub-DPS**: Supplementary damage, e.g., Blade, Silver Wolf\n- **Support**: Buff/Debuff, e.g., Bronya, Ruan Mei\n- **Sustain**: Heal/Shield, e.g., Bailu, Fu Xuan\n\n### Basic Team Templates\n- **Single Carry**: 1 DPS + 1 Support + 1 Flex + 1 Sustain\n- **Dual Carry**: 2 DPS + 1 Support + 1 Sustain\n- **Break Team**: Built around Weakness Break mechanics\n\n### Popular Teams\n- Seele + Silver Wolf + Bronya + Bailu\n- Jing Yuan + Tingyun + Bronya + Luocha\n- Blade + Silver Wolf + Ruan Mei + Fu Xuan",
-    "tags": ["配队", "协同", "阵容", "Team Building", "Synergy"],
+    "tags": [
+      "配队",
+      "协同",
+      "阵容",
+      "Team Building",
+      "Synergy"
+    ],
     "faq": [
-      {"question": "Do I need 5-star characters to clear content?", "questionZh": "需要5星角色才能通关吗？", "answer": "No. Many 4-star characters are excellent. A well-built 4-star team can clear most content.", "answerZh": "不需要。很多4星角色非常优秀，合理培养的4星队伍可以通关大部分内容。"}
+      {
+        "question": "Do I need 5-star characters to clear content?",
+        "questionZh": "需要5星角色才能通关吗？",
+        "answer": "No. Many 4-star characters are excellent. A well-built 4-star team can clear most content.",
+        "answerZh": "不需要。很多4星角色非常优秀，合理培养的4星队伍可以通关大部分内容。"
+      }
     ]
   },
   {
@@ -75,9 +130,20 @@
     "summaryEn": "How to efficiently use daily Trailblaze Power, with planning tips from early to endgame.",
     "content": "## 开拓力规划指南\n\n### 开拓力基础\n- 最大开拓力240点（可通过道具恢复）\n- 每6分钟恢复1点，每日自然恢复240点\n- 合理使用开拓力是游戏进度的关键\n\n### 前期优先级（1-50级）\n1. 角色突破材料（拟造花萼/凝滞虚影）\n2. 经验和信用点（拟造花萼）\n3. 光锥突破材料\n4. 行迹材料\n\n### 中期优先级（50-65级）\n1. 遗器（侵蚀隧洞）\n2. 行迹升级\n3. 角色等级上限\n\n### 后期优先级（65级+）\n1. 毕业遗器刷取\n2. 全角色行迹毕业\n3. 模拟宇宙每周奖励",
     "contentEn": "## Trailblaze Power Planning Guide\n\n### Trailblaze Power Basics\n- Maximum 240 Trailblaze Power (can be restored with items)\n- Recovers 1 point every 6 minutes, totaling 240 per day\n- Efficient use of Trailblaze Power is key to progression\n\n### Early Game Priority (Level 1-50)\n1. Character ascension materials (Calyx/Stagnant Shadow)\n2. EXP and Credits (Calyx)\n3. Light Cone materials\n4. Trace materials\n\n### Mid Game Priority (Level 50-65)\n1. Relics (Cavern of Corrosion)\n2. Trace upgrades\n3. Character level cap\n\n### Late Game Priority (Level 65+)\n1. Endgame relic farming\n2. Full trace completion\n3. Simulated Universe weekly rewards",
-    "tags": ["开拓力", "体力", "规划", "Trailblaze Power", "Planning"],
+    "tags": [
+      "开拓力",
+      "体力",
+      "规划",
+      "Trailblaze Power",
+      "Planning"
+    ],
     "faq": [
-      {"question": "What should I spend Trailblaze Power on first?", "questionZh": "开拓力优先刷什么？", "answer": "Early game: character ascension materials and EXP. Mid game: relics. Late game: optimizing substats.", "answerZh": "前期：角色突破材料和经验。中期：遗器。后期：刷好词条。"}
+      {
+        "question": "What should I spend Trailblaze Power on first?",
+        "questionZh": "开拓力优先刷什么？",
+        "answer": "Early game: character ascension materials and EXP. Mid game: relics. Late game: optimizing substats.",
+        "answerZh": "前期：角色突破材料和经验。中期：遗器。后期：刷好词条。"
+      }
     ]
   },
   {
@@ -91,9 +157,20 @@
     "summaryEn": "Complete Simulated Universe guide including Blessing choices, team recommendations, and weekly rewards.",
     "content": "## 模拟宇宙攻略指南\n\n### 什么是模拟宇宙？\n- 模拟宇宙是Roguelike玩法模式\n- 通过选择祝福（Blessing）和奇物（Curio）来强化队伍\n- 每周可以获取丰厚奖励\n\n### 祝福选择策略\n- **存护流**: 以护盾为核心，适合有盾辅的队伍\n- **巡猎流**: 高伤害单攻，适合单体DPS\n- **毁灭流**: 高伤害群攻，适合AOE角色\n- **丰饶流**: 高回复生存流，适合新手\n\n### 队伍推荐\n- 带上治疗或护盾角色确保生存\n- 主C选择你练度最高的角色\n- 模拟宇宙中祝福的配合比角色本身更重要",
     "contentEn": "## Simulated Universe Guide\n\n### What is Simulated Universe?\n- A Roguelike game mode\n- Strengthen your team by choosing Blessings and Curios\n- Weekly rewards are available\n\n### Blessing Strategy\n- **Preservation Path**: Shield-focused, great with shield supports\n- **Hunt Path**: High single-target damage, ideal for single DPS\n- **Destruction Path**: High AoE damage, great for AoE characters\n- **Abundance Path**: High sustain, beginner-friendly\n\n### Team Recommendations\n- Bring a healer or shielder for survival\n- Use your best-built main DPS\n- In Simulated Universe, Blessing synergies matter more than raw character power",
-    "tags": ["模拟宇宙", "祝福", "Roguelike", "Simulated Universe", "Blessing"],
+    "tags": [
+      "模拟宇宙",
+      "祝福",
+      "Roguelike",
+      "Simulated Universe",
+      "Blessing"
+    ],
     "faq": [
-      {"question": "Which Simulated Universe path is easiest?", "questionZh": "模拟宇宙哪个命途最简单？", "answer": "Abundance (preservation/healing) path is the most forgiving for beginners.", "answerZh": "丰饶命途（治疗/护盾）对新手最友好。"}
+      {
+        "question": "Which Simulated Universe path is easiest?",
+        "questionZh": "模拟宇宙哪个命途最简单？",
+        "answer": "Abundance (preservation/healing) path is the most forgiving for beginners.",
+        "answerZh": "丰饶命途（治疗/护盾）对新手最友好。"
+      }
     ]
   }
 ]
