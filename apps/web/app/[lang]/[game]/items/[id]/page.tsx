@@ -9,6 +9,7 @@ import {
   zzzMaterials, getZzzMaterialById, getZzzMaterialName,
   guihuanMaterials, getGuihuanMaterialById, getGuihuanMaterialName,
   anantaMaterials, getAnantaMaterialById, getAnantaMaterialName,
+  getCharactersNeedingMaterial,
 } from '@gachia/data';
 import { Link } from '@/lib/i18n/navigation';
 
@@ -178,6 +179,7 @@ export default async function ItemDetailPage({
 
   const typeLabel = TYPE_LABELS[data.type]?.[locale] ?? data.type;
   const gameName = gameConfig.name[locale];
+  const relatedChars = getCharactersNeedingMaterial(gameId, id);
 
   return (
     <div>
@@ -221,6 +223,23 @@ export default async function ItemDetailPage({
           </div>
         )}
       </div>
+
+      {relatedChars.length > 0 && (
+        <div className="mt-6">
+          <h2 className="mb-3 text-lg font-semibold text-game-text">
+            {locale === 'zh' ? '需要此材料的角色' : locale === 'ja' ? 'この素材が必要なキャラ' : 'Characters That Need This'}
+          </h2>
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+            {relatedChars.map(char => (
+              <Link key={char.id} href={`/${gameId}/characters/${char.id}` as '/'}
+                className="flex items-center gap-2 rounded-lg border border-game-border bg-game-surface p-2 text-sm transition-colors hover:border-game-primary">
+                <img src={char.image} alt={char.id} className="h-8 w-8 rounded-full object-cover" loading="lazy" />
+                <span className="text-game-text">{char.id}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
