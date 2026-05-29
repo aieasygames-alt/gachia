@@ -43,6 +43,18 @@
     "noGuides": "暂无攻略",
     "guideCount": "共 {count} 篇攻略"
   },
+  "homepage": {
+    "heroTitle": "一站式二次元开放世界游戏数据库",
+    "heroSubtitle": "覆盖原神、崩坏：星穹铁道、鸣潮、异环、绝区零、归环、无限大等热门游戏的角色图鉴、武器数据、配装推荐、节奏榜与攻略百科。",
+    "statsCharacters": "277+ 角色",
+    "statsWeapons": "424+ 武器",
+    "statsGuides": "87+ 攻略",
+    "statsGames": "7 款游戏",
+    "statsGamesLabel": "游戏",
+    "featuredTitle": "热门角色",
+    "aboutTitle": "关于 Gachia",
+    "aboutDescription": "Gachia 是一个面向二次元开放世界游戏玩家的综合数据库平台，致力于提供准确、全面、易用的游戏数据查询服务。我们覆盖原神、崩坏：星穹铁道、鸣潮、异环（Neverness to Everness）、绝区零、归环、无限大等多款热门游戏，提供角色图鉴、武器数据库、圣遗物/遗器推荐、配装方案、配队模拟、节奏榜、伤害计算器、交互地图等实用工具。无论你是新手玩家还是资深攻略研究者，Gachia 都能帮助你快速查找所需的游戏数据与最优配装方案。"
+  },
   "footer": {
     "disclaimer": "本站数据来源于游戏客户端，仅供学习参考。所有游戏素材版权归原厂商所有。",
     "copyright": "© {year} Gachia. All rights reserved."
