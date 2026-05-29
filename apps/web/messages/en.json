@@ -55,6 +55,12 @@
     "aboutTitle": "About Gachia",
     "aboutDescription": "Gachia is a comprehensive database platform for anime open-world game players, providing accurate, complete, and easy-to-use game data. We cover Genshin Impact, Honkai: Star Rail, Wuthering Waves, Neverness to Everness (NTE), Zenless Zone Zero (ZZZ), Guihuan, and Ananta. Our tools include character databases, weapon encyclopedias, artifact and relic recommendations, build guides, team composition simulators, tier lists, damage calculators, and interactive maps. Whether you're a new player or a seasoned guide author, Gachia helps you find the game data and optimal builds you need."
   },
+  "gameHomepage": {
+    "featuredTitle": "Featured Characters",
+    "guidesTitle": "Popular Guides",
+    "aboutTitle": "About This Game",
+    "quickNavTitle": "Quick Navigation"
+  },
   "footer": {
     "disclaimer": "Game data is sourced from the game client for reference only. All game assets are copyrighted by their respective publishers.",
     "copyright": "© {year} Gachia. All rights reserved."
