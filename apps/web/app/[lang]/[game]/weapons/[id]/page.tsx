@@ -72,6 +72,17 @@ function buildAlternates(locale: string, gameId: string, id: string) {
   return { canonical: `${BASE_URL}/${locale}/${gameId}/weapons/${id}`, languages };
 }
 
+function buildOg(title: string, description: string, gameId: string, locale: string) {
+  return {
+    title,
+    description,
+    url: `${BASE_URL}/${locale}/${gameId}/weapons`,
+    siteName: 'Gachia' as const,
+    images: [{ url: `${BASE_URL}/images/og/${gameId}.jpg`, width: 1200, height: 630 }],
+    locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
+  };
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -87,77 +98,63 @@ export async function generateMetadata({
     if (!w) return {};
     const name = getGenshinWeaponName(w, locale);
     const effect = getGenshinWeaponEffect(w, locale);
-    return {
-      title: `${name} - ${gameName} Wiki`,
-      description: effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`,
-      alternates: buildAlternates(locale, gameId, id),
-    };
+    const title = `${name} - ${gameName} Wiki`;
+    const desc = effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`;
+    return { title, description: desc, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(title, desc, gameId, locale) };
   }
   if (gameId === 'starrail') {
     const w = getStarRailLightConeById(id);
     if (!w) return {};
     const name = getStarRailLightConeName(w, locale);
     const effect = getStarRailLightConeEffect(w, locale);
-    return {
-      title: `${name} - ${gameName} Wiki`,
-      description: effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`,
-      alternates: buildAlternates(locale, gameId, id),
-    };
+    const title = `${name} - ${gameName} Wiki`;
+    const desc = effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`;
+    return { title, description: desc, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(title, desc, gameId, locale) };
   }
   if (gameId === 'wuwa') {
     const w = getWuWaWeaponById(id);
     if (!w) return {};
     const name = getWuWaWeaponName(w, locale);
     const effect = getWuWaWeaponEffect(w, locale);
-    return {
-      title: `${name} - ${gameName} Wiki`,
-      description: effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`,
-      alternates: buildAlternates(locale, gameId, id),
-    };
+    const title = `${name} - ${gameName} Wiki`;
+    const desc = effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`;
+    return { title, description: desc, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(title, desc, gameId, locale) };
   }
   if (gameId === 'nte') {
     const w = getNteWeaponById(id);
     if (!w) return {};
     const name = getNteWeaponName(w, locale);
     const effect = getNteWeaponEffect(w, locale);
-    return {
-      title: `${name} - ${gameName} Wiki`,
-      description: effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`,
-      alternates: buildAlternates(locale, gameId, id),
-    };
+    const title = `${name} - ${gameName} Wiki`;
+    const desc = effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`;
+    return { title, description: desc, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(title, desc, gameId, locale) };
   }
   if (gameId === 'zzz') {
     const w = getZzzWeaponById(id);
     if (!w) return {};
     const name = getZzzWeaponName(w, locale);
     const effect = getZzzWeaponEffect(w, locale);
-    return {
-      title: `${name} - ${gameName} Wiki`,
-      description: effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`,
-      alternates: buildAlternates(locale, gameId, id),
-    };
+    const title = `${name} - ${gameName} Wiki`;
+    const desc = effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`;
+    return { title, description: desc, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(title, desc, gameId, locale) };
   }
   if (gameId === 'guihuan') {
     const w = getGuihuanWeaponById(id);
     if (!w) return {};
     const name = getGuihuanWeaponName(w, locale);
     const effect = getGuihuanWeaponEffect(w, locale);
-    return {
-      title: `${name} - ${gameName} Wiki`,
-      description: effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`,
-      alternates: buildAlternates(locale, gameId, id),
-    };
+    const title = `${name} - ${gameName} Wiki`;
+    const desc = effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`;
+    return { title, description: desc, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(title, desc, gameId, locale) };
   }
   if (gameId === 'ananta') {
     const w = getAnantaWeaponById(id);
     if (!w) return {};
     const name = getAnantaWeaponName(w, locale);
     const effect = getAnantaWeaponEffect(w, locale);
-    return {
-      title: `${name} - ${gameName} Wiki`,
-      description: effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`,
-      alternates: buildAlternates(locale, gameId, id),
-    };
+    const title = `${name} - ${gameName} Wiki`;
+    const desc = effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`;
+    return { title, description: desc, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(title, desc, gameId, locale) };
   }
   return {};
 }
@@ -240,6 +237,7 @@ function GenshinWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnTyp
         </section>
       )}
       {source && <SourceSection source={source} locale={locale} />}
+      <UsageTipsSection name={name} gameName={gameName} locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -289,6 +287,7 @@ function StarRailLightConeDetail({ lc, locale }: { lc: NonNullable<ReturnType<ty
         </section>
       )}
       {source && <SourceSection source={source} locale={locale} />}
+      <UsageTipsSection name={name} gameName={gameName} locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -337,6 +336,7 @@ function WuWaWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<t
         </section>
       )}
       {source && <SourceSection source={source} locale={locale} />}
+      <UsageTipsSection name={name} gameName={gameName} locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -385,6 +385,7 @@ function NteWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<ty
         </section>
       )}
       {source && <SourceSection source={source} locale={locale} />}
+      <UsageTipsSection name={name} gameName={gameName} locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -431,6 +432,7 @@ function ZzzWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<ty
         </section>
       )}
       {source && <SourceSection source={source} locale={locale} />}
+      <UsageTipsSection name={name} gameName={gameName} locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -478,6 +480,7 @@ function GuihuanWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnTyp
         </section>
       )}
       {source && <SourceSection source={source} locale={locale} />}
+      <UsageTipsSection name={name} gameName={gameName} locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -525,6 +528,7 @@ function AnantaWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType
         </section>
       )}
       {source && <SourceSection source={source} locale={locale} />}
+      <UsageTipsSection name={name} gameName={gameName} locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -594,6 +598,24 @@ function SourceSection({ source, locale }: { source: string; locale: SupportedLo
       </h2>
       <div className="rounded-lg border border-game-border bg-game-surface p-4">
         <p className="text-sm text-game-text-muted">{source}</p>
+      </div>
+    </section>
+  );
+}
+
+function UsageTipsSection({ name, gameName, locale }: { name: string; gameName: string; locale: SupportedLocale }) {
+  const tips = locale === 'zh'
+    ? `${name}是${gameName}中的一把武器，选择适合角色的武器能显著提升战斗力。建议根据角色的定位和属性需求来搭配武器，优先提升主C角色的武器等级。注意武器副属性的配合，例如暴击率副属性的武器适合需要暴击的角色。`
+    : locale === 'ja'
+      ? `${name}は${gameName}の武器です。キャラクターに合った武器を選ぶことで戦力が大きく向上します。キャラの役割とステータス要件に合わせて武器を装備し、メインアタッカーの武器レベルを優先して上げましょう。サブステータスとの相性も重要です。`
+      : `${name} is a weapon in ${gameName}. Choosing the right weapon for each character significantly boosts combat effectiveness. Match weapons to character roles and stat needs — prioritize leveling your main DPS weapon first. Pay attention to substat synergy; for example, weapons with CRIT Rate substats pair well with characters who need higher crit consistency.`;
+  return (
+    <section className="mt-6">
+      <h2 className="mb-2 text-base font-semibold text-game-text">
+        {locale === 'zh' ? '使用建议' : locale === 'ja' ? '使用アドバイス' : 'Usage Tips'}
+      </h2>
+      <div className="rounded-lg border border-game-border bg-game-surface p-4">
+        <p className="text-sm leading-relaxed text-game-text-muted">{tips}</p>
       </div>
     </section>
   );

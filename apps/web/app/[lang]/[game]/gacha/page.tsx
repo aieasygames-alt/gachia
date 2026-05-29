@@ -1,4 +1,4 @@
-import { GAMES, CATEGORY_LABELS } from '@gachia/core';
+import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import {
   nteGachaBanners,
@@ -12,14 +12,46 @@ import {
 } from '@gachia/data';
 import { Link } from '@/lib/i18n/navigation';
 
+const BASE_URL = 'https://gachia.com';
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ lang: string; game: string }>;
 }) {
-  const { game } = await params;
+  const { lang, game } = await params;
   if (game !== 'nte') return { robots: { index: false, follow: false } };
-  return {};
+  const locale = lang as SupportedLocale;
+  const gameName = GAMES.nte.name[locale];
+  const title = locale === 'zh'
+    ? `异环祈愿系统 — 概率、保底机制详解`
+    : locale === 'ja'
+      ? `異環ガチャ — 確率・天井システム`
+      : `NTE Gacha — Rates, Pity & Banner Guide`;
+  const desc = locale === 'zh'
+    ? '异环祈愿系统详解：卡池类型、概率说明、保底机制、天井系统。'
+    : locale === 'ja'
+      ? '異環ガチャシステムの詳細：ガチャ種類、確率、天井システムの解説。'
+      : 'Complete NTE gacha guide: banner types, pull rates, pity system, and guaranteed mechanics.';
+  const languages: Record<string, string> = {};
+  for (const l of LOCALES) {
+    const hreflang = l === 'zh' ? 'zh-Hans' : l;
+    languages[hreflang] = `${BASE_URL}/${l}/nte/gacha`;
+  }
+  languages['x-default'] = `${BASE_URL}/zh/nte/gacha`;
+  return {
+    title,
+    description: desc,
+    alternates: { canonical: `${BASE_URL}/${locale}/nte/gacha`, languages },
+    openGraph: {
+      title,
+      description: desc,
+      url: `${BASE_URL}/${locale}/nte/gacha`,
+      siteName: 'Gachia',
+      images: [{ url: `${BASE_URL}/images/og/nte.jpg`, width: 1200, height: 630 }],
+      locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
+    },
+  };
 }
 
 export default async function GachaPage({

@@ -1,6 +1,7 @@
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { nteMaterials, getNteMaterialName, genshinMaterials, getGenshinMaterialName, starrailMaterials, getStarRailMaterialName, wuwaMaterials, getWuWaMaterialName, zzzMaterials, getZzzMaterialName, anantaMaterials, getAnantaMaterialName, guihuanMaterials, getGuihuanMaterialName } from '@gachia/data';
+import { Link } from '@/lib/i18n/navigation';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -139,7 +140,7 @@ function GenshinItemsPage({ locale }: { locale: SupportedLocale }) {
             <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
             <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {list.map((mat) => (
-                <div key={mat.id} className="rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                <Link key={mat.id} href={`/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
                     <h3 className="text-sm font-semibold text-game-text">{getGenshinMaterialName(mat, locale)}</h3>
                   </div>
@@ -148,7 +149,7 @@ function GenshinItemsPage({ locale }: { locale: SupportedLocale }) {
                     <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
                   </div>
                   <p className="text-xs text-game-text-muted line-clamp-2">{locale === 'zh' ? mat.source : mat.sourceEn}</p>
-                </div>
+                </Link>
               ))}
             </div>
           </section>
@@ -192,7 +193,7 @@ function StarRailItemsPage({ locale }: { locale: SupportedLocale }) {
             <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
             <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {list.map((mat) => (
-                <div key={mat.id} className="rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                <Link key={mat.id} href={`/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
                     <h3 className="text-sm font-semibold text-game-text">{getStarRailMaterialName(mat, locale)}</h3>
                   </div>
@@ -201,7 +202,7 @@ function StarRailItemsPage({ locale }: { locale: SupportedLocale }) {
                     <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
                   </div>
                   <p className="text-xs text-game-text-muted line-clamp-2">{locale === 'zh' ? mat.source : mat.sourceEn}</p>
-                </div>
+                </Link>
               ))}
             </div>
           </section>
@@ -236,7 +237,7 @@ function NteItemsPage({ locale }: { locale: SupportedLocale }) {
             <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
             <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {list.map((mat) => (
-                <div key={mat.id} className="rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                <Link key={mat.id} href={`/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
                     <h3 className="text-sm font-semibold text-game-text">{getNteMaterialName(mat, locale)}</h3>
                   </div>
@@ -245,7 +246,7 @@ function NteItemsPage({ locale }: { locale: SupportedLocale }) {
                     <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
                   </div>
                   <p className="text-xs text-game-text-muted line-clamp-2">{mat.source}</p>
-                </div>
+                </Link>
               ))}
             </div>
           </section>
@@ -289,7 +290,7 @@ function WuWaItemsPage({ locale }: { locale: SupportedLocale }) {
             <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
             <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {list.map((mat) => (
-                <div key={mat.id} className="rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                <Link key={mat.id} href={`/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
                     <h3 className="text-sm font-semibold text-game-text">{getWuWaMaterialName(mat, locale)}</h3>
                   </div>
@@ -298,7 +299,7 @@ function WuWaItemsPage({ locale }: { locale: SupportedLocale }) {
                     <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
                   </div>
                   <p className="text-xs text-game-text-muted line-clamp-2">{locale === 'zh' ? mat.source : mat.sourceEn}</p>
-                </div>
+                </Link>
               ))}
             </div>
           </section>
@@ -348,7 +349,7 @@ function ZzzItemsPage({ locale }: { locale: SupportedLocale }) {
             <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
             <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {list.map((mat) => (
-                <div key={mat.id} className="rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                <Link key={mat.id} href={`/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
                     <h3 className="text-sm font-semibold text-game-text">{getZzzMaterialName(mat, locale)}</h3>
                   </div>
@@ -357,7 +358,7 @@ function ZzzItemsPage({ locale }: { locale: SupportedLocale }) {
                     <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
                   </div>
                   <p className="text-xs text-game-text-muted line-clamp-2">{mat.source}</p>
-                </div>
+                </Link>
               ))}
             </div>
           </section>
@@ -403,7 +404,7 @@ function AnantaItemsPage({ locale }: { locale: SupportedLocale }) {
             <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
             <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {list.map((mat) => (
-                <div key={mat.id} className="rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                <Link key={mat.id} href={`/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
                     <h3 className="text-sm font-semibold text-game-text">{getAnantaMaterialName(mat, locale)}</h3>
                   </div>
@@ -412,7 +413,7 @@ function AnantaItemsPage({ locale }: { locale: SupportedLocale }) {
                     <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
                   </div>
                   <p className="text-xs text-game-text-muted line-clamp-2">{locale === 'zh' ? mat.source : mat.sourceEn}</p>
-                </div>
+                </Link>
               ))}
             </div>
           </section>
@@ -461,7 +462,7 @@ function GuihuanItemsPage({ locale }: { locale: SupportedLocale }) {
             <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
             <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {list.map((mat) => (
-                <div key={mat.id} className="rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                <Link key={mat.id} href={`/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
                     <h3 className="text-sm font-semibold text-game-text">{getGuihuanMaterialName(mat, locale)}</h3>
                   </div>
@@ -470,7 +471,7 @@ function GuihuanItemsPage({ locale }: { locale: SupportedLocale }) {
                     <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
                   </div>
                   <p className="text-xs text-game-text-muted line-clamp-2">{locale === 'zh' ? mat.source : mat.sourceEn}</p>
-                </div>
+                </Link>
               ))}
             </div>
           </section>

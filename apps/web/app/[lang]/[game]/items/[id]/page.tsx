@@ -104,7 +104,7 @@ export async function generateMetadata({
 
   return {
     title: `${name} - ${gameName} Wiki`,
-    description,
+    description: description || `${name} — ${gameName} material guide with source, usage, and characters that need it.`,
     alternates: {
       canonical: `https://gachia.com/${locale}/${gameId}/items/${id}`,
       languages: {
@@ -113,6 +113,14 @@ export async function generateMetadata({
         ja: `https://gachia.com/ja/${gameId}/items/${id}`,
         'x-default': `https://gachia.com/zh/${gameId}/items/${id}`,
       },
+    },
+    openGraph: {
+      title: `${name} - ${gameName} Wiki`,
+      description: description || `${name} — ${gameName} material guide`,
+      url: `https://gachia.com/${locale}/${gameId}/items/${id}`,
+      siteName: 'Gachia',
+      images: [{ url: `https://gachia.com/images/og/${gameId}.jpg`, width: 1200, height: 630 }],
+      locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
     },
   };
 }
@@ -181,6 +189,19 @@ export default async function ItemDetailPage({
   const gameName = gameConfig.name[locale];
   const relatedChars = getCharactersNeedingMaterial(gameId, id);
 
+  // Generate descriptive text for SEO
+  const descText = locale === 'zh'
+    ? `${data.name}是${gameName}中的${typeLabel}类材料。${data.source ? '获取方式：' + data.source + '。' : ''}${relatedChars.length > 0 ? '以下角色需要使用此材料进行突破或技能升级。' : '收集足够的材料以强化你的角色。'}`
+    : locale === 'ja'
+      ? `${data.name}は${gameName}の${typeLabel}素材です。${data.source ? '入手方法：' + data.source + '。' : ''}${relatedChars.length > 0 ? '以下のキャラクターがこの素材を必要とします。' : 'キャラを強化するために十分な素材を集めましょう。'}`
+      : `${data.name} is a ${typeLabel.toLowerCase()} material in ${gameName}. ${data.source ? 'Source: ' + data.source + '.' : ''} ${relatedChars.length > 0 ? `${relatedChars.length} character${relatedChars.length > 1 ? 's' : ''} require${relatedChars.length === 1 ? 's' : ''} this material for ascension or skill upgrades.` : 'Collect enough materials to strengthen your characters.'}`;
+
+  const usageText = locale === 'zh'
+    ? `在${gameName}中，${data.name}主要用于角色的等级突破和技能提升。合理安排材料刷取计划，优先满足主C角色的突破需求，可以显著提升队伍整体实力。建议在每天消耗体力时优先考虑角色突破材料的获取。`
+    : locale === 'ja'
+      ? `${gameName}では、${data.name}は主にキャラクターのレベル突破とスキル強化に使用されます。メインアタッカーの突破素材を優先して集めることで、チーム全体の戦力を大きく向上させることができます。`
+      : `In ${gameName}, ${data.name} is primarily used for character ascension and skill upgrades. Planning your material farming efficiently and prioritizing your main DPS ascension materials can significantly boost your team's overall strength.`;
+
   return (
     <div>
       <nav className="mb-4 flex items-center gap-2 text-sm text-game-text-muted">
@@ -205,6 +226,11 @@ export default async function ItemDetailPage({
         {data.nameAlt && <p className="mt-1 text-sm text-game-text-muted">{data.nameAlt}</p>}
       </div>
 
+      {/* SEO description paragraph */}
+      <div className="mb-4 rounded-lg border border-game-border bg-game-surface p-4">
+        <p className="text-sm leading-relaxed text-game-text">{descText}</p>
+      </div>
+
       <div className="grid gap-4 sm:grid-cols-2">
         {typeLabel && (
           <div className="rounded-lg border border-game-border bg-game-surface p-4">
@@ -227,7 +253,7 @@ export default async function ItemDetailPage({
       {relatedChars.length > 0 && (
         <div className="mt-6">
           <h2 className="mb-3 text-lg font-semibold text-game-text">
-            {locale === 'zh' ? '需要此材料的角色' : locale === 'ja' ? 'この素材が必要なキャラ' : 'Characters That Need This'}
+            {locale === 'zh' ? `需要此材料的角色（${relatedChars.length}个）` : locale === 'ja' ? `この素材が必要なキャラ（${relatedChars.length}体）` : `Characters That Need This (${relatedChars.length})`}
           </h2>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
             {relatedChars.map(char => (
@@ -240,6 +266,14 @@ export default async function ItemDetailPage({
           </div>
         </div>
       )}
+
+      {/* Usage tips section for additional content */}
+      <div className="mt-6 rounded-lg border border-game-border bg-game-surface p-4">
+        <h2 className="mb-2 text-base font-semibold text-game-text">
+          {locale === 'zh' ? '使用建议' : locale === 'ja' ? '使用アドバイス' : 'Usage Tips'}
+        </h2>
+        <p className="text-sm leading-relaxed text-game-text-muted">{usageText}</p>
+      </div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

@@ -1,4 +1,4 @@
-import { GAMES, CATEGORY_LABELS } from '@gachia/core';
+import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import type { Metadata } from 'next';
 import {
@@ -25,17 +25,50 @@ const REGION_ICONS: Record<string, string> = {
   fontaine: '💧', natlan: '🔥', chasm: '⛏️',
 };
 
+const BASE_URL = 'https://gachia.com';
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ lang: string; game: string }>;
 }): Promise<Metadata> {
-  const { game } = await params;
+  const { lang, game } = await params;
+  const locale = lang as SupportedLocale;
   const gameId = game as GameId;
-  if (gameId !== 'genshin' && gameId !== 'starrail' && gameId !== 'wuwa' && gameId !== 'nte') {
+  const gameConfig = GAMES[gameId];
+  if (!gameConfig || (gameId !== 'genshin' && gameId !== 'starrail' && gameId !== 'wuwa' && gameId !== 'nte')) {
     return { title: 'Map', robots: { index: false, follow: false } };
   }
-  return { title: 'Map' };
+  const gameName = gameConfig.name[locale];
+  const title = locale === 'zh'
+    ? `${gameName}互动地图 — 传送锚点、宝箱、收集品`
+    : locale === 'ja'
+      ? `${gameName}マップ — テレポート、宝箱、コレクション`
+      : `${gameName} Interactive Map — Teleports, Chests & Collectibles`;
+  const desc = locale === 'zh'
+    ? `${gameName}互动地图攻略：传送锚点位置、宝箱分布、材料采集点、世界任务标记。`
+    : locale === 'ja'
+      ? `${gameName}マップ攻略：テレポート位置、宝箱分布、素材採集ポイント。`
+      : `${gameName} interactive map guide: teleport waypoints, chest locations, material farming spots, and world quest markers.`;
+  const languages: Record<string, string> = {};
+  for (const l of LOCALES) {
+    const hreflang = l === 'zh' ? 'zh-Hans' : l;
+    languages[hreflang] = `${BASE_URL}/${l}/${gameId}/map`;
+  }
+  languages['x-default'] = `${BASE_URL}/zh/${gameId}/map`;
+  return {
+    title,
+    description: desc,
+    alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/map`, languages },
+    openGraph: {
+      title,
+      description: desc,
+      url: `${BASE_URL}/${locale}/${gameId}/map`,
+      siteName: 'Gachia',
+      images: [{ url: `${BASE_URL}/images/og/${gameId}.jpg`, width: 1200, height: 630 }],
+      locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
+    },
+  };
 }
 
 export default async function MapPage({
@@ -85,11 +118,39 @@ export default async function MapPage({
 // --- Genshin Map with Interactive Map ---
 
 function GenshinMapPage({ locale }: { locale: SupportedLocale }) {
+  const regionNames: Record<string, Record<string, string>> = {
+    mondstadt: { zh: '蒙德', en: 'Mondstadt', ja: 'モンド' },
+    liyue: { zh: '璃月', en: 'Liyue', ja: '璃月' },
+    inazuma: { zh: '稻妻', en: 'Inazuma', ja: '稲妻' },
+    sumeru: { zh: '须弥', en: 'Sumeru', ja: 'スメール' },
+    fontaine: { zh: '枫丹', en: 'Fontaine', ja: 'フォンテーヌ' },
+    natlan: { zh: '纳塔', en: 'Natlan', ja: 'ナタラン' },
+    chasm: { zh: '层岩巨渊', en: 'The Chasm', ja: '層岩巨淵' },
+  };
+
   return (
-    <MapLoader
-      mapData={genshinMapData}
-      locale={locale}
-    />
+    <div>
+      {/* SEO-visible content for crawlers */}
+      <div className="sr-only">
+        <h2>{locale === 'zh' ? '原神互动地图包含以下区域' : locale === 'ja' ? '原神マップのエリア一覧' : 'Genshin Impact map covers these regions'}</h2>
+        <ul>
+          {Object.entries(regionNames).map(([key, names]) => (
+            <li key={key}>{names[locale] || names.en}</li>
+          ))}
+        </ul>
+        <p>
+          {locale === 'zh'
+            ? '使用互动地图查看传送锚点、七天神像、宝箱、神瞳、材料采集点、世界任务位置。支持标记已收集物品和规划采集路线。'
+            : locale === 'ja'
+              ? 'インタラクティブマップでテレポート、七天神像、宝箱、神瞳、素材採集ポイント、世界任務の位置を確認できます。'
+              : 'Use the interactive map to find teleport waypoints, Statues of the Seven, chests, oculi, material farming spots, and world quest locations.'}
+        </p>
+      </div>
+      <MapLoader
+        mapData={genshinMapData}
+        locale={locale}
+      />
+    </div>
   );
 }
 
