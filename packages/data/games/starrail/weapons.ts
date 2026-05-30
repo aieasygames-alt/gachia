@@ -1,6 +1,7 @@
 import type { SupportedLocale, Weapon } from '@gachia/core';
 import type { StarRailLightCone } from './types';
 import { localeStr } from './types';
+import { IMAGE_BASE } from '../../image-base';
 import rawLightCones from './raw-light-cones.json';
 
 export const starrailLightCones: StarRailLightCone[] = rawLightCones as unknown as StarRailLightCone[];
@@ -31,7 +32,7 @@ export const weapons: Weapon[] = starrailLightCones.map((lc) => ({
   rarity: lc.rarity,
   weaponType: lc.path,
   description: { zh: lc.effectDescription, en: lc.effectDescriptionEn, ja: lc.effectDescriptionEn },
-  images: { icon: '' },
+  images: { icon: `${IMAGE_BASE}/images/starrail/weapons/${lc.id}.webp` },
   stats: { baseAtk: [lc.baseAtk] },
   passive: {
     name: { zh: lc.effectName, en: lc.effectNameEn, ja: lc.effectNameEn },

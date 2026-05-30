@@ -1,6 +1,7 @@
 import type { SupportedLocale, Weapon } from '@gachia/core';
 import type { GenshinWeapon } from './types';
 import { localeStr } from './types';
+import { IMAGE_BASE } from '../../image-base';
 import rawWeapons from './raw-weapons.json';
 
 export const genshinWeapons: GenshinWeapon[] = rawWeapons as unknown as GenshinWeapon[];
@@ -31,7 +32,7 @@ export const weapons: Weapon[] = genshinWeapons.map((w) => ({
   rarity: w.rarity,
   weaponType: w.weaponType,
   description: { zh: w.effectDescription, en: w.effectDescriptionEn, ja: w.effectDescriptionEn },
-  images: { icon: '' },
+  images: { icon: `${IMAGE_BASE}/images/genshin/weapons/${w.id}.webp` },
   stats: { baseAtk: [w.baseAtk] },
   passive: {
     name: { zh: w.effectName, en: w.effectNameEn, ja: w.effectNameEn },

@@ -1,6 +1,7 @@
 import type { SupportedLocale, Item } from '@gachia/core';
 import type { WuWaMaterial } from './types';
 import { localeStr } from './types';
+import { IMAGE_BASE } from '../../image-base';
 import rawMaterials from './raw-materials.json';
 
 export const wuwaMaterials: WuWaMaterial[] = rawMaterials as unknown as WuWaMaterial[];
@@ -20,6 +21,6 @@ export const items: Item[] = wuwaMaterials.map((m) => ({
   type: m.type,
   rarity: m.rarity,
   description: { zh: '', en: '', ja: '' },
-  icon: '',
+  icon: `${IMAGE_BASE}/images/wuwa/materials/${m.id}.webp`,
   sources: [{ zh: m.source, en: m.sourceEn, ja: m.sourceEn }],
 }));

@@ -1,6 +1,7 @@
 import type { SupportedLocale, Weapon } from '@gachia/core';
 import type { WuWaWeapon } from './types';
 import { localeStr } from './types';
+import { IMAGE_BASE } from '../../image-base';
 import rawWeapons from './raw-weapons.json';
 
 export const wuwaWeapons: WuWaWeapon[] = rawWeapons as unknown as WuWaWeapon[];
@@ -31,7 +32,7 @@ export const weapons: Weapon[] = wuwaWeapons.map((w) => ({
   rarity: w.rarity,
   weaponType: w.weaponType,
   description: { zh: '', en: '', ja: '' },
-  images: { icon: '' },
+  images: { icon: `${IMAGE_BASE}/images/wuwa/weapons/${w.id}.webp` },
   stats: {
     baseAtk: [w.baseAtk],
     subStat: w.subStat ? { name: w.subStat.name, values: [parseFloat(w.subStat.value)] } : undefined,

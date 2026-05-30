@@ -1,6 +1,7 @@
 import type { SupportedLocale, Item } from '@gachia/core';
 import type { StarRailMaterial } from './types';
 import { localeStr } from './types';
+import { IMAGE_BASE } from '../../image-base';
 import rawMaterials from './raw-materials.json';
 
 export const starrailMaterials: StarRailMaterial[] = rawMaterials as unknown as StarRailMaterial[];
@@ -20,6 +21,6 @@ export const items: Item[] = starrailMaterials.map((m) => ({
   type: m.type,
   rarity: m.rarity,
   description: { zh: '', en: '', ja: '' },
-  icon: '',
+  icon: `${IMAGE_BASE}/images/starrail/materials/${m.id}.webp`,
   sources: [{ zh: m.source, en: m.sourceEn, ja: m.sourceEn }],
 }));

@@ -2,6 +2,7 @@ import type { Item } from '@gachia/core';
 import type { NteMaterial } from './types';
 import { localeStr } from './types';
 import type { SupportedLocale } from '@gachia/core';
+import { IMAGE_BASE } from '../../image-base';
 import rawMaterials from './raw-materials.json';
 
 export const nteMaterials: NteMaterial[] = rawMaterials as unknown as NteMaterial[];
@@ -21,6 +22,6 @@ export const items: Item[] = nteMaterials.map((m) => ({
   type: m.type,
   rarity: m.rarity,
   description: { zh: '', en: '', ja: '' },
-  icon: '',
+  icon: `${IMAGE_BASE}/images/nte/materials/${m.id}.webp`,
   sources: [{ zh: m.source, en: '', ja: '' }],
 }));

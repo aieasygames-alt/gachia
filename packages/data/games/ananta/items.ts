@@ -2,6 +2,7 @@ import type { Item } from '@gachia/core';
 import type { AnantaMaterial } from './types';
 import { localeStr } from './types';
 import type { SupportedLocale } from '@gachia/core';
+import { IMAGE_BASE } from '../../image-base';
 import rawMaterials from './raw-materials.json';
 
 export const anantaMaterials: AnantaMaterial[] = rawMaterials as unknown as AnantaMaterial[];
@@ -21,6 +22,6 @@ export const items: Item[] = anantaMaterials.map((m) => ({
   type: m.type,
   rarity: m.rarity,
   description: { zh: '', en: '', ja: '' },
-  icon: '',
+  icon: `${IMAGE_BASE}/images/ananta/materials/${m.id}.webp`,
   sources: [{ zh: m.source, en: m.sourceEn, ja: m.sourceEn }],
 }));
