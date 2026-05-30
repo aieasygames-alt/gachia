@@ -194,26 +194,38 @@ export default async function LocaleHome({
             <Link
               key={gameId}
               href={`/${gameId}` as '/'}
-              className="group rounded-lg border bg-game-surface p-5 transition-colors hover:border-game-primary"
+              className="group overflow-hidden rounded-lg border bg-game-surface transition-colors hover:border-game-primary"
               style={{ borderColor: game.theme.primary + '40' }}
             >
-              <h2
-                className="mb-3 text-xl font-bold"
-                style={{ color: game.theme.primary }}
-              >
-                {game.name[locale]}
-              </h2>
-              <div className="flex flex-wrap gap-1.5">
-                {Object.entries(game.routes)
-                  .filter(([, enabled]) => enabled)
-                  .map(([route]) => (
-                    <span
-                      key={route}
-                      className="rounded-full bg-game-surface-alt px-2.5 py-0.5 text-xs text-game-text-muted"
-                    >
-                      {CATEGORY_LABELS[route]?.[locale] ?? route}
-                    </span>
-                  ))}
+              <div className="relative h-32 w-full overflow-hidden">
+                <Image
+                  src={`/images/og/${gameId}.jpg`}
+                  alt={`${game.name[locale]} - ${locale === 'zh' ? '游戏攻略Wiki' : locale === 'ja' ? 'ゲーム攻略Wiki' : 'Game Wiki'}`}
+                  width={400}
+                  height={210}
+                  className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-5">
+                <h2
+                  className="mb-3 text-xl font-bold"
+                  style={{ color: game.theme.primary }}
+                >
+                  {game.name[locale]}
+                </h2>
+                <div className="flex flex-wrap gap-1.5">
+                  {Object.entries(game.routes)
+                    .filter(([, enabled]) => enabled)
+                    .map(([route]) => (
+                      <span
+                        key={route}
+                        className="rounded-full bg-game-surface-alt px-2.5 py-0.5 text-xs text-game-text-muted"
+                      >
+                        {CATEGORY_LABELS[route]?.[locale] ?? route}
+                      </span>
+                    ))}
+                </div>
               </div>
             </Link>
           );

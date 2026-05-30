@@ -258,12 +258,24 @@ export default async function GameHome({
     <div>
       {/* Game Header */}
       <div className="mb-8">
-        <h1
-          className="mb-2 text-3xl font-bold"
-          style={{ color: gameConfig.theme.primary }}
-        >
-          {gameConfig.name[locale]}
-        </h1>
+        <div className="flex items-center gap-4 mb-2">
+          <div className="relative h-14 w-14 flex-shrink-0 overflow-hidden rounded-xl">
+            <Image
+              src={`/images/og/${gameId}.jpg`}
+              alt={`${gameConfig.name[locale]} ${locale === 'zh' ? '游戏封面' : locale === 'ja' ? 'ゲームアイコン' : 'game cover'}`}
+              width={56}
+              height={56}
+              className="h-full w-full object-cover"
+              loading="eager"
+            />
+          </div>
+          <h1
+            className="text-3xl font-bold"
+            style={{ color: gameConfig.theme.primary }}
+          >
+            {gameConfig.name[locale]}
+          </h1>
+        </div>
         {description && (
           <p className="text-sm leading-relaxed text-game-text-muted max-w-2xl">
             {description}
