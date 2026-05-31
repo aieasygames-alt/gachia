@@ -215,12 +215,18 @@ export async function generateMetadata({
   }
   languages['x-default'] = `${BASE_URL}/zh/${gameId}`;
 
+  const title = locale === 'zh'
+    ? `${gameName}攻略Wiki — 角色图鉴/武器/圣遗物/攻略`
+    : locale === 'ja'
+      ? `${gameName}攻略Wiki — キャラ/武器/ガイド`
+      : `${gameName} Wiki — Characters, Weapons, Builds & Guides`;
+
   return {
-    title: `${gameName} Wiki`,
+    title,
     description: desc,
     alternates: { canonical: `${BASE_URL}/${locale}/${gameId}`, languages },
     openGraph: {
-      title: `${gameName} Wiki`,
+      title,
       description: desc,
       url: `${BASE_URL}/${locale}/${gameId}`,
       siteName: 'Gachia',

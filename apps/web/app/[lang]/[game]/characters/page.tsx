@@ -84,8 +84,14 @@ export async function generateMetadata({
   }
   languages['x-default'] = `${BASE_URL}/zh/${gameId}/characters`;
 
+  const title = locale === 'zh'
+    ? `${gameName}角色图鉴 — 全角色Build、技能与配队`
+    : locale === 'ja'
+      ? `${gameName}キャラ図鑑 — ビルド、スキル、チーム編成`
+      : `${gameName} Characters — Builds, Skills & Best Teams`;
+
   return {
-    title: `${categoryLabel} - ${gameName}`,
+    title,
     description: desc ?? `${categoryLabel} - ${gameName} Wiki`,
     alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/characters`, languages },
   };

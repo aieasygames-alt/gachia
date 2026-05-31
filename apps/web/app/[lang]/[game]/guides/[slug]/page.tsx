@@ -139,67 +139,77 @@ export async function generateMetadata({
     },
   });
 
+  // Build intent-rich title & description per locale for guides
+  const buildGuideMeta = (guideTitle: string, summary: string, gameName: string) => {
+    const title = locale === 'zh'
+      ? `${guideTitle} — ${gameName}攻略详解`
+      : locale === 'ja'
+        ? `${guideTitle} — ${gameName}攻略ガイド`
+        : `${guideTitle} — ${gameName} Complete Guide`;
+    const desc = summary
+      ? summary.slice(0, 160)
+      : locale === 'zh'
+        ? `${guideTitle}是${gameName}的详细攻略，包含技巧、策略和FAQ。`
+        : locale === 'ja'
+          ? `${guideTitle}の${gameName}攻略ガイド。Tips、戦略、FAQを掲載。`
+          : `Complete ${guideTitle} guide for ${gameName} with tips, strategies, and FAQ.`;
+    return { title, description: desc };
+  };
+
   if (gameId === 'genshin') {
     const guide = getGenshinGuideById(slug);
     if (!guide) return {};
     const gameName = GAMES.genshin.name[locale];
-    const t = `${getGenshinGuideTitle(guide, locale)} - ${gameName} Wiki`;
-    const d = getGenshinGuideSummary(guide, locale).slice(0, 160);
-    return { title: t, description: d, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(t, d, gameId, locale) };
+    const meta = buildGuideMeta(getGenshinGuideTitle(guide, locale), getGenshinGuideSummary(guide, locale), gameName);
+    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
 
   if (gameId === 'nte') {
     const guide = getNteGuideById(slug);
     if (!guide) return {};
     const gameName = GAMES.nte.name[locale];
-    const t = `${getNteGuideTitle(guide, locale)} - ${gameName} Wiki`;
-    const d = getNteGuideSummary(guide, locale).slice(0, 160);
-    return { title: t, description: d, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(t, d, gameId, locale) };
+    const meta = buildGuideMeta(getNteGuideTitle(guide, locale), getNteGuideSummary(guide, locale), gameName);
+    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
 
   if (gameId === 'wuwa') {
     const guide = getWuWaGuideById(slug);
     if (!guide) return {};
     const gameName = GAMES.wuwa.name[locale];
-    const t = `${getWuWaGuideTitle(guide, locale)} - ${gameName} Wiki`;
-    const d = getWuWaGuideSummary(guide, locale).slice(0, 160);
-    return { title: t, description: d, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(t, d, gameId, locale) };
+    const meta = buildGuideMeta(getWuWaGuideTitle(guide, locale), getWuWaGuideSummary(guide, locale), gameName);
+    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
 
   if (gameId === 'starrail') {
     const guide = getStarRailGuideById(slug);
     if (!guide) return {};
     const gameName = GAMES.starrail.name[locale];
-    const t = `${getStarRailGuideTitle(guide, locale)} - ${gameName} Wiki`;
-    const d = getStarRailGuideSummary(guide, locale).slice(0, 160);
-    return { title: t, description: d, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(t, d, gameId, locale) };
+    const meta = buildGuideMeta(getStarRailGuideTitle(guide, locale), getStarRailGuideSummary(guide, locale), gameName);
+    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
 
   if (gameId === 'zzz') {
     const guide = getZzzGuideById(slug);
     if (!guide) return {};
     const gameName = GAMES.zzz.name[locale];
-    const t = `${getZzzGuideTitle(guide, locale)} - ${gameName} Wiki`;
-    const d = getZzzGuideSummary(guide, locale).slice(0, 160);
-    return { title: t, description: d, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(t, d, gameId, locale) };
+    const meta = buildGuideMeta(getZzzGuideTitle(guide, locale), getZzzGuideSummary(guide, locale), gameName);
+    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
 
   if (gameId === 'guihuan') {
     const guide = getGuihuanGuideById(slug);
     if (!guide) return {};
     const gameName = GAMES.guihuan.name[locale];
-    const t = `${getGuihuanGuideTitle(guide, locale)} - ${gameName} Wiki`;
-    const d = getGuihuanGuideSummary(guide, locale).slice(0, 160);
-    return { title: t, description: d, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(t, d, gameId, locale) };
+    const meta = buildGuideMeta(getGuihuanGuideTitle(guide, locale), getGuihuanGuideSummary(guide, locale), gameName);
+    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
 
   if (gameId === 'ananta') {
     const guide = getAnantaGuideById(slug);
     if (!guide) return {};
     const gameName = GAMES.ananta.name[locale];
-    const t = `${getAnantaGuideTitle(guide, locale)} - ${gameName} Wiki`;
-    const d = getAnantaGuideSummary(guide, locale).slice(0, 160);
-    return { title: t, description: d, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(t, d, gameId, locale) };
+    const meta = buildGuideMeta(getAnantaGuideTitle(guide, locale), getAnantaGuideSummary(guide, locale), gameName);
+    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
 
   return {};

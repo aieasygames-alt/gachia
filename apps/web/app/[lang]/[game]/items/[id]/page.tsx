@@ -102,9 +102,21 @@ export async function generateMetadata({
     description = (locale === 'en' ? m.sourceEn : m.source).slice(0, 160);
   }
 
+  const title = locale === 'zh'
+    ? `${name} — ${gameName}材料获取攻略 | 掉落来源与角色需求`
+    : locale === 'ja'
+      ? `${name} — ${gameName}素材入手方法 | ドロップ場所と必要キャラ一覧`
+      : `${name} — ${gameName} Material Guide | Drop Sources & Characters`;
+
+  const desc = description || (locale === 'zh'
+    ? `${name}是${gameName}中的材料，本页包含掉落来源、获取方式以及需要此材料的角色一览。`
+    : locale === 'ja'
+      ? `${name}の入手方法、ドロップ場所、この素材を必要とするキャラクター一覧を掲載。`
+      : `Where to find ${name} in ${gameName}. Drop sources, farming locations, and all characters that need this material for ascension.`);
+
   return {
-    title: `${name} - ${gameName} Wiki`,
-    description: description || `${name} — ${gameName} material guide with source, usage, and characters that need it.`,
+    title,
+    description: desc.slice(0, 160),
     alternates: {
       canonical: `https://gachia.com/${locale}/${gameId}/items/${id}`,
       languages: {
@@ -115,8 +127,8 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: `${name} - ${gameName} Wiki`,
-      description: description || `${name} — ${gameName} material guide`,
+      title,
+      description: desc.slice(0, 160),
       url: `https://gachia.com/${locale}/${gameId}/items/${id}`,
       siteName: 'Gachia',
       images: [{ url: `https://gachia.com/images/og/${gameId}.jpg`, width: 1200, height: 630 }],

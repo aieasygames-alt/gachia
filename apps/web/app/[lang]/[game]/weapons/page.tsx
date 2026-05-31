@@ -51,8 +51,14 @@ export async function generateMetadata({
 
   const desc = WEAPON_DESC[gameId]?.[locale] ?? `${categoryLabel} - ${gameName} Wiki`;
 
+  const title = locale === 'zh'
+    ? `${gameName}武器图鉴 — 全武器数据与技能效果`
+    : locale === 'ja'
+      ? `${gameName}武器一覧 — ステータスとスキル効果`
+      : `${gameName} Weapons — Complete Stats, Skills & Best Picks`;
+
   return {
-    title: `${categoryLabel} - ${gameName}`,
+    title,
     description: desc,
     alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/weapons`, languages },
   };

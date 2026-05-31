@@ -58,8 +58,14 @@ export async function generateMetadata({
 
   const desc = ITEM_DESC[gameId]?.[locale] ?? `${categoryLabel} - ${gameName} Wiki`;
 
+  const title = locale === 'zh'
+    ? `${gameName}材料图鉴 — 全材料掉落来源一览`
+    : locale === 'ja'
+      ? `${gameName}素材一覧 — 全素材のドロップ場所`
+      : `${gameName} Materials — Complete Drop Sources & Farming Guide`;
+
   return {
-    title: `${categoryLabel} - ${gameName}`,
+    title,
     description: desc,
     alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/items`, languages },
   };

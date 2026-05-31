@@ -93,68 +93,78 @@ export async function generateMetadata({
   const gameId = game as GameId;
   const gameName = GAMES[gameId]?.name[locale] ?? '';
 
+  // Build intent-rich title & description per locale
+  const buildWeaponMeta = (name: string, effectDesc: string | undefined) => {
+    const title = locale === 'zh'
+      ? `${name} — ${gameName}武器攻略 | 属性、技能效果与适用角色`
+      : locale === 'ja'
+        ? `${name} — ${gameName}武器データ | スキル効果とおすすめキャラ`
+        : `${name} — ${gameName} Weapon Stats, Skill Effect & Best Characters`;
+    const desc = effectDesc
+      ? `${name}: ${effectDesc}`.slice(0, 160)
+      : locale === 'zh'
+        ? `${name}是${gameName}中的武器，查看属性、技能效果、获取方式及推荐使用的角色。`
+        : locale === 'ja'
+          ? `${name}のステータス、スキル効果、入手方法、おすすめキャラクターを確認。`
+          : `Complete ${name} guide for ${gameName}: stats, skill effect, how to get it, and best characters to use it with.`;
+    return { title, description: desc };
+  };
+
   if (gameId === 'genshin') {
     const w = getGenshinWeaponById(id);
     if (!w) return {};
     const name = getGenshinWeaponName(w, locale);
     const effect = getGenshinWeaponEffect(w, locale);
-    const title = `${name} - ${gameName} Wiki`;
-    const desc = effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`;
-    return { title, description: desc, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(title, desc, gameId, locale) };
+    const meta = buildWeaponMeta(name, effect?.description);
+    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
   if (gameId === 'starrail') {
     const w = getStarRailLightConeById(id);
     if (!w) return {};
     const name = getStarRailLightConeName(w, locale);
     const effect = getStarRailLightConeEffect(w, locale);
-    const title = `${name} - ${gameName} Wiki`;
-    const desc = effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`;
-    return { title, description: desc, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(title, desc, gameId, locale) };
+    const meta = buildWeaponMeta(name, effect?.description);
+    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
   if (gameId === 'wuwa') {
     const w = getWuWaWeaponById(id);
     if (!w) return {};
     const name = getWuWaWeaponName(w, locale);
     const effect = getWuWaWeaponEffect(w, locale);
-    const title = `${name} - ${gameName} Wiki`;
-    const desc = effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`;
-    return { title, description: desc, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(title, desc, gameId, locale) };
+    const meta = buildWeaponMeta(name, effect?.description);
+    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
   if (gameId === 'nte') {
     const w = getNteWeaponById(id);
     if (!w) return {};
     const name = getNteWeaponName(w, locale);
     const effect = getNteWeaponEffect(w, locale);
-    const title = `${name} - ${gameName} Wiki`;
-    const desc = effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`;
-    return { title, description: desc, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(title, desc, gameId, locale) };
+    const meta = buildWeaponMeta(name, effect?.description);
+    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
   if (gameId === 'zzz') {
     const w = getZzzWeaponById(id);
     if (!w) return {};
     const name = getZzzWeaponName(w, locale);
     const effect = getZzzWeaponEffect(w, locale);
-    const title = `${name} - ${gameName} Wiki`;
-    const desc = effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`;
-    return { title, description: desc, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(title, desc, gameId, locale) };
+    const meta = buildWeaponMeta(name, effect?.description);
+    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
   if (gameId === 'guihuan') {
     const w = getGuihuanWeaponById(id);
     if (!w) return {};
     const name = getGuihuanWeaponName(w, locale);
     const effect = getGuihuanWeaponEffect(w, locale);
-    const title = `${name} - ${gameName} Wiki`;
-    const desc = effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`;
-    return { title, description: desc, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(title, desc, gameId, locale) };
+    const meta = buildWeaponMeta(name, effect?.description);
+    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
   if (gameId === 'ananta') {
     const w = getAnantaWeaponById(id);
     if (!w) return {};
     const name = getAnantaWeaponName(w, locale);
     const effect = getAnantaWeaponEffect(w, locale);
-    const title = `${name} - ${gameName} Wiki`;
-    const desc = effect ? `${name}: ${effect.description}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '武器数据' : locale === 'ja' ? '武器データ' : ' weapon stats'}`;
-    return { title, description: desc, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(title, desc, gameId, locale) };
+    const meta = buildWeaponMeta(name, effect?.description);
+    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
   return {};
 }
