@@ -322,6 +322,8 @@ function GenshinGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: s
         </section>
       )}
 
+      <RelatedGuidesSection gameId="genshin" currentSlug={slug} locale={locale} />
+
       {/* Back */}
       <div className="border-t border-game-border pt-4">
         <Link href="/genshin/guides" className="text-sm text-game-primary transition-colors hover:text-game-accent">
@@ -421,6 +423,8 @@ function NteGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
         </Link>
       </div>
 
+      <RelatedGuidesSection gameId="nte" currentSlug={slug} locale={locale} />
+
       {buildGuideJsonLd({
         gameId: 'nte',
         locale,
@@ -509,6 +513,8 @@ function WuWaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: stri
           </div>
         </section>
       )}
+
+      <RelatedGuidesSection gameId="wuwa" currentSlug={slug} locale={locale} />
 
       {/* Back */}
       <div className="border-t border-game-border pt-4">
@@ -602,6 +608,8 @@ function StarRailGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: 
         </section>
       )}
 
+      <RelatedGuidesSection gameId="starrail" currentSlug={slug} locale={locale} />
+
       <div className="border-t border-game-border pt-4">
         <Link href="/starrail/guides" className="text-sm text-game-primary transition-colors hover:text-game-accent">
           {locale === 'zh' ? '← 返回攻略列表' : locale === 'ja' ? '← ガイド一覧に戻る' : '← Back to Guides'}
@@ -686,6 +694,8 @@ function ZzzGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
           </div>
         </section>
       )}
+
+      <RelatedGuidesSection gameId="zzz" currentSlug={slug} locale={locale} />
 
       <div className="border-t border-game-border pt-4">
         <Link href="/zzz/guides" className="text-sm text-game-primary transition-colors hover:text-game-accent">
@@ -772,6 +782,8 @@ function GuihuanGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: s
         </section>
       )}
 
+      <RelatedGuidesSection gameId="guihuan" currentSlug={slug} locale={locale} />
+
       <div className="border-t border-game-border pt-4">
         <Link href="/guihuan/guides" className="text-sm text-game-primary transition-colors hover:text-game-accent">
           {locale === 'zh' ? '← 返回攻略列表' : locale === 'ja' ? '← ガイド一覧に戻る' : '← Back to Guides'}
@@ -857,6 +869,8 @@ function AnantaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: st
         </section>
       )}
 
+      <RelatedGuidesSection gameId="ananta" currentSlug={slug} locale={locale} />
+
       <div className="border-t border-game-border pt-4">
         <Link href="/ananta/guides" className="text-sm text-game-primary transition-colors hover:text-game-accent">
           {locale === 'zh' ? '← 返回攻略列表' : locale === 'ja' ? '← ガイド一覧に戻る' : '← Back to Guides'}
@@ -879,4 +893,89 @@ function AnantaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: st
       ))}
     </div>
   );
+}
+
+// --- Shared Related Guides Section ---
+
+type GuideLike = { id: string; category: string; tags: string[] };
+
+function RelatedGuidesSection({ gameId, currentSlug, locale }: { gameId: string; currentSlug: string; locale: SupportedLocale }) {
+  const allGuides = getGuidesForGame(gameId);
+  const current = allGuides.find((g) => g.id === currentSlug);
+  if (!current) return null;
+
+  const related = allGuides
+    .filter((g) => g.id !== currentSlug)
+    .map((g) => {
+      const sameCategory = g.category === current.category ? 2 : 0;
+      const sharedTags = g.tags.filter((t) => current.tags.includes(t)).length;
+      return { ...g, score: sameCategory + sharedTags };
+    })
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 4);
+
+  if (related.length === 0) return null;
+
+  const sectionTitle = locale === 'zh' ? '相关攻略' : locale === 'ja' ? '関連ガイド' : 'Related Guides';
+
+  return (
+    <section className="mb-6">
+      <h2 className="mb-3 text-base font-semibold text-game-text">{sectionTitle}</h2>
+      <div className="grid gap-3 sm:grid-cols-2">
+        {related.map((g) => {
+          const title = getGuideTitleForGame(gameId, g, locale);
+          const summary = getGuideSummaryForGame(gameId, g, locale);
+          return (
+            <Link
+              key={g.id}
+              href={`/${gameId}/guides/${g.id}` as '/'}
+              className="group rounded-lg border border-game-border bg-game-surface p-3 transition-all hover:border-game-primary"
+            >
+              <h3 className="mb-1 text-sm font-semibold text-game-text group-hover:text-game-primary">{title}</h3>
+              <p className="text-xs text-game-text-muted line-clamp-2">{summary}</p>
+            </Link>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+function getGuidesForGame(gameId: string): GuideLike[] {
+  switch (gameId) {
+    case 'genshin': return genshinGuides;
+    case 'starrail': return starrailGuides;
+    case 'wuwa': return wuwaGuides;
+    case 'nte': return nteGuides;
+    case 'zzz': return zzzGuides;
+    case 'guihuan': return guihuanGuides;
+    case 'ananta': return anantaGuides;
+    default: return [];
+  }
+}
+
+function getGuideTitleForGame(gameId: string, guide: GuideLike, locale: SupportedLocale): string {
+  switch (gameId) {
+    case 'genshin': return getGenshinGuideTitle(guide as unknown as Parameters<typeof getGenshinGuideTitle>[0], locale);
+    case 'starrail': return getStarRailGuideTitle(guide as unknown as Parameters<typeof getStarRailGuideTitle>[0], locale);
+    case 'wuwa': return getWuWaGuideTitle(guide as unknown as Parameters<typeof getWuWaGuideTitle>[0], locale);
+    case 'nte': return getNteGuideTitle(guide as unknown as Parameters<typeof getNteGuideTitle>[0], locale);
+    case 'zzz': return getZzzGuideTitle(guide as unknown as Parameters<typeof getZzzGuideTitle>[0], locale);
+    case 'guihuan': return getGuihuanGuideTitle(guide as unknown as Parameters<typeof getGuihuanGuideTitle>[0], locale);
+    case 'ananta': return getAnantaGuideTitle(guide as unknown as Parameters<typeof getAnantaGuideTitle>[0], locale);
+    default: return guide.id;
+  }
+}
+
+function getGuideSummaryForGame(gameId: string, guide: GuideLike, locale: SupportedLocale): string {
+  switch (gameId) {
+    case 'genshin': return getGenshinGuideSummary(guide as unknown as Parameters<typeof getGenshinGuideSummary>[0], locale);
+    case 'starrail': return getStarRailGuideSummary(guide as unknown as Parameters<typeof getStarRailGuideSummary>[0], locale);
+    case 'wuwa': return getWuWaGuideSummary(guide as unknown as Parameters<typeof getWuWaGuideSummary>[0], locale);
+    case 'nte': return getNteGuideSummary(guide as unknown as Parameters<typeof getNteGuideSummary>[0], locale);
+    case 'zzz': return getZzzGuideSummary(guide as unknown as Parameters<typeof getZzzGuideSummary>[0], locale);
+    case 'guihuan': return getGuihuanGuideSummary(guide as unknown as Parameters<typeof getGuihuanGuideSummary>[0], locale);
+    case 'ananta': return getAnantaGuideSummary(guide as unknown as Parameters<typeof getAnantaGuideSummary>[0], locale);
+    default: return '';
+  }
 }
