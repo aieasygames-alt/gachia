@@ -73,33 +73,43 @@ export default async function WeaponsPage({
   const gameId = game as GameId;
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];
+  const gameName = gameConfig?.name[locale] ?? '';
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: gameName, item: `${BASE_URL}/${locale}/${gameId}` },
+      { '@type': 'ListItem', position: 2, name: CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons', item: `${BASE_URL}/${locale}/${gameId}/weapons` },
+    ],
+  };
 
   if (gameId === 'genshin') {
-    return <GenshinWeaponsPage locale={locale} />;
+    return <><GenshinWeaponsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'starrail') {
-    return <StarRailWeaponsPage locale={locale} />;
+    return <><StarRailWeaponsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'nte') {
-    return <NteWeaponsPage locale={locale} />;
+    return <><NteWeaponsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'wuwa') {
-    return <WuWaWeaponsPage locale={locale} />;
+    return <><WuWaWeaponsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'zzz') {
-    return <ZzzWeaponsPage locale={locale} />;
+    return <><ZzzWeaponsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'ananta') {
-    return <AnantaWeaponsPage locale={locale} />;
+    return <><AnantaWeaponsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'guihuan') {
-    return <GuihuanWeaponsPage locale={locale} />;
+    return <><GuihuanWeaponsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   return (

@@ -9,6 +9,7 @@ import {
   zzzWeapons, getZzzWeaponById, getZzzWeaponName, getZzzWeaponEffect, getZzzWeaponSource,
   guihuanWeapons, getGuihuanWeaponById, getGuihuanWeaponName, getGuihuanWeaponEffect, getGuihuanWeaponSource,
   anantaWeapons, getAnantaWeaponById, getAnantaWeaponName, getAnantaWeaponEffect, getAnantaWeaponSource,
+  getCharactersForWeapon, getRelatedWeapons,
 } from '@gachia/data';
 import { Link } from '@/lib/i18n/navigation';
 
@@ -248,6 +249,8 @@ function GenshinWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnTyp
       )}
       {source && <SourceSection source={source} locale={locale} />}
       <UsageTipsSection name={name} gameName={gameName} locale={locale} />
+      <CharactersUsingWeaponSection gameId="genshin" weaponId={weapon.id} locale={locale} />
+      <RelatedWeaponsSection gameId="genshin" weaponId={weapon.id} locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -298,6 +301,8 @@ function StarRailLightConeDetail({ lc, locale }: { lc: NonNullable<ReturnType<ty
       )}
       {source && <SourceSection source={source} locale={locale} />}
       <UsageTipsSection name={name} gameName={gameName} locale={locale} />
+      <CharactersUsingWeaponSection gameId="starrail" weaponId={lc.id} locale={locale} />
+      <RelatedWeaponsSection gameId="starrail" weaponId={lc.id} locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -347,6 +352,8 @@ function WuWaWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<t
       )}
       {source && <SourceSection source={source} locale={locale} />}
       <UsageTipsSection name={name} gameName={gameName} locale={locale} />
+      <CharactersUsingWeaponSection gameId="wuwa" weaponId={weapon.id} locale={locale} />
+      <RelatedWeaponsSection gameId="wuwa" weaponId={weapon.id} locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -396,6 +403,8 @@ function NteWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<ty
       )}
       {source && <SourceSection source={source} locale={locale} />}
       <UsageTipsSection name={name} gameName={gameName} locale={locale} />
+      <CharactersUsingWeaponSection gameId="nte" weaponId={weapon.id} locale={locale} />
+      <RelatedWeaponsSection gameId="nte" weaponId={weapon.id} locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -443,6 +452,8 @@ function ZzzWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<ty
       )}
       {source && <SourceSection source={source} locale={locale} />}
       <UsageTipsSection name={name} gameName={gameName} locale={locale} />
+      <CharactersUsingWeaponSection gameId="zzz" weaponId={weapon.id} locale={locale} />
+      <RelatedWeaponsSection gameId="zzz" weaponId={weapon.id} locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -491,6 +502,8 @@ function GuihuanWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnTyp
       )}
       {source && <SourceSection source={source} locale={locale} />}
       <UsageTipsSection name={name} gameName={gameName} locale={locale} />
+      <CharactersUsingWeaponSection gameId="guihuan" weaponId={weapon.id} locale={locale} />
+      <RelatedWeaponsSection gameId="guihuan" weaponId={weapon.id} locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -539,6 +552,8 @@ function AnantaWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType
       )}
       {source && <SourceSection source={source} locale={locale} />}
       <UsageTipsSection name={name} gameName={gameName} locale={locale} />
+      <CharactersUsingWeaponSection gameId="ananta" weaponId={weapon.id} locale={locale} />
+      <RelatedWeaponsSection gameId="ananta" weaponId={weapon.id} locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -626,6 +641,54 @@ function UsageTipsSection({ name, gameName, locale }: { name: string; gameName: 
       </h2>
       <div className="rounded-lg border border-game-border bg-game-surface p-4">
         <p className="text-sm leading-relaxed text-game-text-muted">{tips}</p>
+      </div>
+    </section>
+  );
+}
+
+function CharactersUsingWeaponSection({ gameId, weaponId, locale }: { gameId: string; weaponId: string; locale: SupportedLocale }) {
+  const characters = getCharactersForWeapon(gameId as GameId, weaponId);
+  if (characters.length === 0) return null;
+  const label = locale === 'zh' ? '适用角色' : locale === 'ja' ? 'おすすめキャラ' : 'Best Characters';
+  return (
+    <section className="mt-6">
+      <h2 className="mb-3 text-lg font-semibold text-game-text">{label}</h2>
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+        {characters.map(c => (
+          <Link
+            key={c.id}
+            href={`/${gameId}/characters/${c.id}` as '/'}
+            className="flex items-center gap-2 rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary/50"
+          >
+            {c.image && <img src={c.image} alt={c.id} className="h-8 w-8 rounded-full object-cover" loading="lazy" />}
+            <span className="text-sm font-medium text-game-text">{c.id}</span>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function RelatedWeaponsSection({ gameId, weaponId, locale }: { gameId: string; weaponId: string; locale: SupportedLocale }) {
+  const related = getRelatedWeapons(gameId as GameId, weaponId);
+  if (related.length === 0) return null;
+  const label = locale === 'zh' ? '同类武器' : locale === 'ja' ? '同タイプ武器' : 'Related Weapons';
+  return (
+    <section className="mt-6">
+      <h2 className="mb-3 text-lg font-semibold text-game-text">{label}</h2>
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+        {related.map(w => (
+          <Link
+            key={w.id}
+            href={`/${gameId}/weapons/${w.id}` as '/'}
+            className="rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary/50"
+          >
+            <div className="text-sm font-medium text-game-text">{locale === 'zh' ? w.name : w.nameEn}</div>
+            <div className="mt-1 text-xs font-bold" style={{ color: RARITY_COLORS[typeof w.rarity === 'number' ? w.rarity : 0] || '#888' }}>
+              {'★'.repeat(typeof w.rarity === 'number' ? w.rarity : 0)}
+            </div>
+          </Link>
+        ))}
       </div>
     </section>
   );

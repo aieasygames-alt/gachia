@@ -106,33 +106,44 @@ export default async function CharactersPage({
   const gameId = game as GameId;
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];
+  const gameName = gameConfig?.name[locale] ?? '';
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: gameName, item: `${BASE_URL}/${locale}/${gameId}` },
+      { '@type': 'ListItem', position: 2, name: CATEGORY_LABELS.characters?.[locale] ?? 'Characters', item: `${BASE_URL}/${locale}/${gameId}/characters` },
+    ],
+  };
+  const ldScript = <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />;
 
   if (gameId === 'genshin') {
-    return <GenshinCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />;
+    return <><GenshinCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
   }
 
   if (gameId === 'starrail') {
-    return <StarRailCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />;
+    return <><StarRailCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
   }
 
   if (gameId === 'nte') {
-    return <NteCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />;
+    return <><NteCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
   }
 
   if (gameId === 'wuwa') {
-    return <WuWaCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />;
+    return <><WuWaCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
   }
 
   if (gameId === 'zzz') {
-    return <ZzzCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />;
+    return <><ZzzCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
   }
 
   if (gameId === 'ananta') {
-    return <AnantaCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />;
+    return <><AnantaCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
   }
 
   if (gameId === 'guihuan') {
-    return <GuihuanCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />;
+    return <><GuihuanCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
   }
 
   return (

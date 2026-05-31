@@ -561,6 +561,9 @@ export type { AnantaGuide, AnantaGuideFaq } from './games/ananta/guides';
 // --- Material-Character Reverse Lookup ---
 export { getCharactersNeedingMaterial, type MaterialCharacter } from './material-characters';
 
+// --- Weapon-Character Reverse Lookup ---
+export { getCharactersForWeapon, getRelatedWeapons } from './weapon-characters';
+
 // --- Data Access Helpers ---
 
 export interface GameData {

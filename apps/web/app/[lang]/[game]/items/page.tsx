@@ -80,33 +80,43 @@ export default async function ItemsPage({
   const gameId = game as GameId;
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];
+  const gameName = gameConfig?.name[locale] ?? '';
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: gameName, item: `${BASE_URL}/${locale}/${gameId}` },
+      { '@type': 'ListItem', position: 2, name: CATEGORY_LABELS.items?.[locale] ?? 'Items', item: `${BASE_URL}/${locale}/${gameId}/items` },
+    ],
+  };
 
   if (gameId === 'genshin') {
-    return <GenshinItemsPage locale={locale} />;
+    return <><GenshinItemsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'starrail') {
-    return <StarRailItemsPage locale={locale} />;
+    return <><StarRailItemsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'nte') {
-    return <NteItemsPage locale={locale} />;
+    return <><NteItemsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'wuwa') {
-    return <WuWaItemsPage locale={locale} />;
+    return <><WuWaItemsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'zzz') {
-    return <ZzzItemsPage locale={locale} />;
+    return <><ZzzItemsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'ananta') {
-    return <AnantaItemsPage locale={locale} />;
+    return <><AnantaItemsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'guihuan') {
-    return <GuihuanItemsPage locale={locale} />;
+    return <><GuihuanItemsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   return (
