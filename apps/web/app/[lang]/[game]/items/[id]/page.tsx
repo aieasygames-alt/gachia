@@ -184,6 +184,28 @@ function getItemData(gameId: GameId, id: string, locale: SupportedLocale): ItemD
   return null;
 }
 
+function buildItemFaqs(name: string, gameName: string, typeLabel: string, source: string, charCount: number, locale: SupportedLocale) {
+  if (locale === 'zh') {
+    return [
+      { q: `${name}在${gameName}中怎么获得？`, a: source ? `${name}的获取方式：${source}。` : `${name}可通过游戏内活动或商店获取。` },
+      { q: `${name}是${gameName}中的什么类型材料？`, a: `${name}属于${typeLabel}类材料。` },
+      { q: `哪些角色需要${name}？`, a: charCount > 0 ? `共有${charCount}个角色在突破或技能升级时需要${name}。` : `目前暂无角色需要此材料。` },
+    ];
+  }
+  if (locale === 'ja') {
+    return [
+      { q: `${gameName}で${name}の入手方法は？`, a: source ? `${name}の入手方法：${source}。` : `${name}はゲーム内イベントやショップで入手できます。` },
+      { q: `${name}は${gameName}のどんな素材ですか？`, a: `${name}は${typeLabel}素材です。` },
+      { q: `${name}を必要とするキャラクターは？`, a: charCount > 0 ? `${charCount}体のキャラクターが${name}を必要とします。` : `現在この素材を必要とするキャラクターはいません。` },
+    ];
+  }
+  return [
+    { q: `How to get ${name} in ${gameName}?`, a: source ? `${name} can be obtained from: ${source}.` : `${name} is available through in-game events or shops.` },
+    { q: `What type of material is ${name}?`, a: `${name} is classified as a ${typeLabel.toLowerCase()} material in ${gameName}.` },
+    { q: `Which characters need ${name}?`, a: charCount > 0 ? `${charCount} character${charCount > 1 ? 's' : ''} require ${name} for ascension or skill upgrades.` : `No characters currently need this material.` },
+  ];
+}
+
 export default async function ItemDetailPage({
   params,
 }: {
@@ -286,6 +308,24 @@ export default async function ItemDetailPage({
         </h2>
         <p className="text-sm leading-relaxed text-game-text-muted">{usageText}</p>
       </div>
+
+      {/* FAQ section for rich snippets */}
+      <section className="mt-6">
+        <h2 className="mb-3 text-base font-semibold text-game-text">
+          {locale === 'zh' ? '常见问题' : locale === 'ja' ? 'よくある質問' : 'FAQ'}
+        </h2>
+        <div className="space-y-2">
+          {buildItemFaqs(data.name, gameName, typeLabel, data.source, relatedChars.length, locale).map((faq, i) => (
+            <details key={i} className="group rounded-lg border border-game-border bg-game-surface">
+              <summary className="cursor-pointer px-4 py-2.5 text-sm font-medium text-game-text transition-colors group-hover:text-game-primary">
+                {faq.q}
+              </summary>
+              <div className="border-t border-game-border px-4 py-2.5 text-sm text-game-text-muted">{faq.a}</div>
+            </details>
+          ))}
+        </div>
+      </section>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -297,6 +337,20 @@ export default async function ItemDetailPage({
               { '@type': 'ListItem', position: 2, name: locale === 'zh' ? '材料' : locale === 'ja' ? '素材' : 'Items', item: `https://gachia.com/${locale}/${gameId}/items` },
               { '@type': 'ListItem', position: 3, name: data.name },
             ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: buildItemFaqs(data.name, gameName, typeLabel, data.source, relatedChars.length, locale).map((faq) => ({
+              '@type': 'Question',
+              name: faq.q,
+              acceptedAnswer: { '@type': 'Answer', text: faq.a },
+            })),
           }),
         }}
       />
