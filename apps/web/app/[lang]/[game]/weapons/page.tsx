@@ -192,6 +192,7 @@ const STARRAIL_PATH_LABELS: Record<string, Record<string, string>> = {
   preservation: { zh: '存护', en: 'Preservation', ja: '存護' },
   abundance: { zh: '丰饶', en: 'Abundance', ja: '豊穣' },
   remembrance: { zh: '记忆', en: 'Remembrance', ja: '記憶' },
+  elation: { zh: '欢愉', en: 'Elation', ja: '愉悦' },
 };
 
 function StarRailWeaponsPage({ locale }: { locale: SupportedLocale }) {
@@ -386,6 +387,7 @@ const ZZZ_SPECIALTY_LABELS: Record<string, Record<string, string>> = {
   Anomaly: { zh: '异常', en: 'Anomaly', ja: '異常' },
   Support: { zh: '支援', en: 'Support', ja: '支援' },
   Defense: { zh: '防护', en: 'Defense', ja: '防護' },
+  Rupture: { zh: '突击', en: 'Rupture', ja: '突撃' },
 };
 
 function ZzzWeaponsPage({ locale }: { locale: SupportedLocale }) {

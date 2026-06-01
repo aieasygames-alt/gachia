@@ -198,6 +198,9 @@ export const GAMES: Record<GameId, GameModule> = {
       { id: 'ice', name: { zh: '冰', en: 'Ice', ja: '氷' }, color: '#67e8f9' },
       { id: 'electric', name: { zh: '电', en: 'Electric', ja: '電' }, color: '#8b5cf6' },
       { id: 'ether', name: { zh: '以太', en: 'Ether', ja: 'エーテル' }, color: '#ec4899' },
+      { id: 'auric-ink', name: { zh: '墨韵', en: 'Auric Ink', ja: '墨韻' }, color: '#d4a017' },
+      { id: 'honed-edge', name: { zh: '利刃', en: 'Honed Edge', ja: '切刃' }, color: '#c0c0c0' },
+      { id: 'wind', name: { zh: '风', en: 'Wind', ja: '風' }, color: '#6ee7b7' },
     ],
     rarities: [
       { stars: 5, color: '#f5c518', label: { zh: 'S级', en: 'S-Rank', ja: 'S級' } },

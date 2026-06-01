@@ -138,6 +138,7 @@ const STARRAIL_PATH_LABELS: Record<string, Record<string, string>> = {
   preservation: { zh: '存护', en: 'Preservation', ja: '存護' },
   abundance: { zh: '丰饶', en: 'Abundance', ja: '豊穣' },
   remembrance: { zh: '记忆', en: 'Remembrance', ja: '記憶' },
+  elation: { zh: '欢愉', en: 'Elation', ja: '愉悦' },
 };
 
 const GENSHIN_REGION_LABELS: Record<string, Record<string, string>> = {
@@ -153,6 +154,7 @@ const GENSHIN_REGION_LABELS: Record<string, Record<string, string>> = {
 const ZZZ_ELEMENT_COLORS: Record<string, string> = {
   physical: '#9ca3af', fire: '#ef4444', ice: '#67e8f9',
   electric: '#8b5cf6', ether: '#a855f7',
+  'auric-ink': '#d4a017', 'honed-edge': '#c0c0c0', wind: '#6ee7b7',
 };
 
 const ZZZ_ELEMENT_NAMES: Record<string, Record<string, string>> = {
@@ -161,6 +163,9 @@ const ZZZ_ELEMENT_NAMES: Record<string, Record<string, string>> = {
   ice: { zh: '冰', en: 'Ice', ja: '氷' },
   electric: { zh: '电', en: 'Electric', ja: '電気' },
   ether: { zh: '以太', en: 'Ether', ja: 'エーテル' },
+  'auric-ink': { zh: '墨韵', en: 'Auric Ink', ja: '墨韻' },
+  'honed-edge': { zh: '利刃', en: 'Honed Edge', ja: '切刃' },
+  wind: { zh: '风', en: 'Wind', ja: '風' },
 };
 
 const ZZZ_SPECIALTY_LABELS: Record<string, Record<string, string>> = {
@@ -169,6 +174,7 @@ const ZZZ_SPECIALTY_LABELS: Record<string, Record<string, string>> = {
   anomaly: { zh: '异常', en: 'Anomaly', ja: '異常' },
   support: { zh: '支援', en: 'Support', ja: '支援' },
   defense: { zh: '防护', en: 'Defense', ja: '防護' },
+  rupture: { zh: '突击', en: 'Rupture', ja: '突撃' },
 };
 
 const GUIHUAN_ELEMENT_COLORS: Record<string, string> = {

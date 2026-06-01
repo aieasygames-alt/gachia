@@ -1038,6 +1038,7 @@ function NteCompare({ locale }: { locale: SupportedLocale }) {
 
 const ZZZ_CMP_ELEMENT_COLORS: Record<string, string> = {
   physical: '#9ca3af', fire: '#ef4444', ice: '#67e8f9', electric: '#8b5cf6', ether: '#a855f7',
+  'auric-ink': '#d4a017', 'honed-edge': '#c0c0c0', wind: '#6ee7b7',
 };
 
 function ZzzCompare({ locale }: { locale: SupportedLocale }) {

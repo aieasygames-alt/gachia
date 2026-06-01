@@ -32,6 +32,7 @@ const STARRAIL_PATH: Record<string, Record<string, string>> = {
   preservation: { zh: '存护', en: 'Preservation', ja: '存護' },
   abundance: { zh: '丰饶', en: 'Abundance', ja: '豊穣' },
   remembrance: { zh: '记忆', en: 'Remembrance', ja: '記憶' },
+  elation: { zh: '欢愉', en: 'Elation', ja: '愉悦' },
 };
 
 const WUWA_WEAPON_TYPE: Record<string, Record<string, string>> = {
