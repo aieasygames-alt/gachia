@@ -3335,5 +3335,2033 @@
         "descriptionEn": "Recommended team composition."
       }
     ]
+  },
+  {
+    "id": "tsukishiro-yanagi",
+    "name": "月城柳",
+    "nameEn": "Tsukishiro Yanagi",
+    "nameJa": "",
+    "attribute": "electric",
+    "specialty": "异常",
+    "specialtyEn": "Anomaly",
+    "rank": "S",
+    "faction": "对空六课",
+    "factionEn": "Section 6",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "对空六课的副课长，冷静沉着、实力强大的少女。使用电属性武器在战场上造成持续的异常伤害。",
+    "descriptionEn": "The deputy chief of Section 6. A calm and powerful girl who deals sustained Anomaly damage with Electric weapons on the battlefield.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Top-tier Electric Anomaly dealer, excellent Disorder enabler with high sustained damage",
+    "tierReasonZh": "顶级电属性异常输出，极强的紊乱触发能力，持续伤害优秀",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频",
+    "status": "available",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "vivian-banshee",
+    "name": "薇薇安・班希",
+    "nameEn": "Vivian Banshee",
+    "nameJa": "",
+    "attribute": "ether",
+    "specialty": "异常",
+    "specialtyEn": "Anomaly",
+    "rank": "S",
+    "faction": "嘲鸫",
+    "factionEn": "Mockingbird",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "嘲鸫组织的成员，神秘莫测的少女。擅长使用以太属性进行异常状态攻击，令敌人陷入混乱。",
+    "descriptionEn": "A member of the Mockingbird organization. A mysterious girl who specializes in Ether Anomaly attacks, throwing enemies into chaos.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Strong Ether Anomaly unit with great Disorder synergy and flexible team options",
+    "tierReasonZh": "强力的以太异常角色，紊乱配合出色，编队灵活度高",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频",
+    "status": "available",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "soldier-0-anby",
+    "name": "零号・安比",
+    "nameEn": "Soldier 0 - Anby",
+    "nameJa": "",
+    "attribute": "electric",
+    "specialty": "强攻",
+    "specialtyEn": "Attack",
+    "rank": "S",
+    "faction": "银牙小队",
+    "factionEn": "Silver Squad",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "银牙小队的精英战士，安比的强化形态。使用电属性武器发动迅猛的电击攻击，输出极为可观。",
+    "descriptionEn": "An elite warrior of Silver Squad and Anby's enhanced form. Unleashes devastating Electric attacks with impressive DPS output.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Premier Electric Attack dealer with high burst and sustained damage potential",
+    "tierReasonZh": "顶级电属性强攻角色，爆发与持续输出兼备",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频",
+    "status": "available",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "yixuan",
+    "name": "仪玄",
+    "nameEn": "Yixuan",
+    "nameJa": "",
+    "attribute": "auric-ink",
+    "specialty": "突击",
+    "specialtyEn": "Rupture",
+    "rank": "S",
+    "faction": "云岌岭",
+    "factionEn": "Yunkui Summit",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "云岌岭的核心成员，掌握墨韵之力的修行者。以独特的突击战斗风格对敌人造成致命打击。",
+    "descriptionEn": "A core member of Yunkui Summit who wields the power of Auric Ink. Delivers lethal strikes with a unique Rupture combat style.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "First Rupture specialist, defines the Rupture meta with excellent damage and team utility",
+    "tierReasonZh": "首个突击专精角色，定义突击流派，伤害与团队辅助俱佳",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频",
+    "status": "available",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "pan-yinhu",
+    "name": "潘引壶",
+    "nameEn": "Pan Yinhu",
+    "nameJa": "",
+    "attribute": "physical",
+    "specialty": "防护",
+    "specialtyEn": "Defense",
+    "rank": "A",
+    "faction": "云岌岭",
+    "factionEn": "Yunkui Summit",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "云岌岭的护法，憨厚可靠的防御型战士。使用物理属性为队伍提供坚实的防护与支援。",
+    "descriptionEn": "A guardian of Yunkui Summit. A sturdy Defense-type fighter who provides solid protection and support for the team using Physical attacks.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "A",
+    "tierReason": "Reliable Physical Defense unit with good shield and team sustain",
+    "tierReasonZh": "可靠的物理防护角色，护盾与团队续航表现良好",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频",
+    "status": "available",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "seed",
+    "name": "「席德」",
+    "nameEn": "Seed",
+    "nameJa": "",
+    "attribute": "electric",
+    "specialty": "强攻",
+    "specialtyEn": "Attack",
+    "rank": "S",
+    "faction": "奥波尔小队",
+    "factionEn": "Obol Squad",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "奥波尔小队的神秘成员，代号「席德」。使用电属性武器进行高输出的攻击，战斗风格凌厉果断。",
+    "descriptionEn": "A mysterious member of Obol Squad codenamed Seed. Fights with high-damage Electric attacks in a swift and decisive combat style.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Powerful Electric Attack dealer with high personal damage and strong burst windows",
+    "tierReasonZh": "强力电属性强攻角色，个人伤害突出，爆发窗口强力",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频",
+    "status": "available",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "ju-fufu",
+    "name": "橘福福",
+    "nameEn": "Ju Fufu",
+    "nameJa": "",
+    "attribute": "fire",
+    "specialty": "击破",
+    "specialtyEn": "Stun",
+    "rank": "S",
+    "faction": "云岌岭",
+    "factionEn": "Yunkui Summit",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "云岌岭的活泼少女，擅长使用火属性进行击破作战。以灵巧的战斗方式迅速积累敌人的眩晕值。",
+    "descriptionEn": "A lively girl from Yunkui Summit who specializes in Fire Stun combat. Quickly builds Daze on enemies with agile fighting techniques.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Excellent Fire Stun unit with fast Daze buildup and strong team synergy",
+    "tierReasonZh": "优秀的火属性击破角色，眩晕积累迅速，团队配合出色",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频",
+    "status": "available",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "alice-thymefield",
+    "name": "爱丽丝・泰姆菲尔德",
+    "nameEn": "Alice Thymefield",
+    "nameJa": "",
+    "attribute": "physical",
+    "specialty": "异常",
+    "specialtyEn": "Anomaly",
+    "rank": "S",
+    "faction": "惊魂小屋",
+    "factionEn": "Spook Shack",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "惊魂小屋的成员，气质优雅的异常系战士。使用物理属性进行异常攻击，以精准的控制瓦解敌人。",
+    "descriptionEn": "A member of Spook Shack. An elegant Anomaly fighter who uses Physical attacks to dismantle enemies with precise control and debuffs.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Strong Physical Anomaly dealer with reliable Assault trigger and good team flexibility",
+    "tierReasonZh": "强力的物理异常角色，强击触发稳定，编队灵活",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频",
+    "status": "available",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "aria",
+    "name": "爱芮",
+    "nameEn": "Aria",
+    "nameJa": "",
+    "attribute": "ether",
+    "specialty": "异常",
+    "specialtyEn": "Anomaly",
+    "rank": "S",
+    "faction": "迷妄天使",
+    "factionEn": "Angels of Delusion",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "迷妄天使的核心成员，擅长以太属性异常攻击。以梦幻般的战斗风格侵蚀敌人的意志与躯体。",
+    "descriptionEn": "A core member of Angels of Delusion who specializes in Ether Anomaly attacks. Erodes enemies' will and body with a dreamlike combat style.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Top Ether Anomaly unit with strong Disorder setups and high damage ceiling",
+    "tierReasonZh": "顶级以太异常角色，紊乱配合出色，伤害上限高",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频",
+    "status": "available",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "banyue",
+    "name": "般岳",
+    "nameEn": "Banyue",
+    "nameJa": "",
+    "attribute": "fire",
+    "specialty": "突击",
+    "specialtyEn": "Rupture",
+    "rank": "S",
+    "faction": "呵嚒管理局",
+    "factionEn": "Krampus Compliance Authority",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "呵嚒管理局的精锐成员，掌握火属性突击战斗方式。以烈焰之力贯穿敌人防线，造成毁灭性的突击伤害。",
+    "descriptionEn": "An elite member of Krampus Compliance Authority who masters Fire Rupture combat. Pierces enemy lines with fiery power for devastating Rupture damage.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Core Fire Rupture dealer with excellent damage output and team enablement",
+    "tierReasonZh": "核心火属性突击输出，伤害优秀且能有效驱动队伍",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频",
+    "status": "available",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "cissia",
+    "name": "希希芙",
+    "nameEn": "Cissia",
+    "nameJa": "",
+    "attribute": "electric",
+    "specialty": "强攻",
+    "specialtyEn": "Attack",
+    "rank": "S",
+    "faction": "都市秩序科",
+    "factionEn": "Metropolitan Order Division",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "都市秩序科的精英探员，使用电属性武器进行高强度攻击。战斗风格精准而致命，输出能力出色。",
+    "descriptionEn": "An elite agent of the Metropolitan Order Division who wields Electric weapons for high-intensity attacks. Fights with precision and lethal efficiency.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Strong Electric Attack unit with high personal DPS and effective combat rotation",
+    "tierReasonZh": "强力电属性强攻角色，个人输出高，战斗循环流畅",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频",
+    "status": "available",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "dialyn",
+    "name": "琉音",
+    "nameEn": "Dialyn",
+    "nameJa": "",
+    "attribute": "physical",
+    "specialty": "击破",
+    "specialtyEn": "Stun",
+    "rank": "S",
+    "faction": "呵嚒管理局",
+    "factionEn": "Krampus Compliance Authority",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "呵嚒管理局的干练成员，擅长物理属性击破战斗。以果断的攻势迅速击溃敌人的防御姿态。",
+    "descriptionEn": "A capable member of Krampus Compliance Authority who specializes in Physical Stun combat. Breaks enemy defenses swiftly with decisive offensive pressure.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Solid Physical Stun unit with fast Daze application and good team utility",
+    "tierReasonZh": "稳健的物理击破角色，眩晕积累快，团队辅助可靠",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频",
+    "status": "available",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "komano-manato",
+    "name": "狛野真斗",
+    "nameEn": "Komano Manato",
+    "nameJa": "",
+    "attribute": "fire",
+    "specialty": "突击",
+    "specialtyEn": "Rupture",
+    "rank": "A",
+    "faction": "惊魂小屋",
+    "factionEn": "Spook Shack",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "惊魂小屋的成员，使用火属性进行突击战斗。以热情洋溢的战斗风格为队伍贡献稳定的突击输出。",
+    "descriptionEn": "A member of Spook Shack who fights with Fire Rupture. Contributes consistent Rupture damage to the team with an enthusiastic combat style.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "A",
+    "tierReason": "Good budget Fire Rupture option with solid damage and accessibility",
+    "tierReasonZh": "优秀的平民火属性突击选择，伤害稳定且获取容易",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频",
+    "status": "available",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "lucia-elowen",
+    "name": "卢西娅・艾洛温",
+    "nameEn": "Lucia Elowen",
+    "nameJa": "",
+    "attribute": "ether",
+    "specialty": "支援",
+    "specialtyEn": "Support",
+    "rank": "S",
+    "faction": "惊魂小屋",
+    "factionEn": "Spook Shack",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "惊魂小屋的温柔成员，擅长以太属性支援作战。以强大的辅助能力提升队伍整体表现。",
+    "descriptionEn": "A gentle member of Spook Shack who specializes in Ether Support. Enhances overall team performance with powerful support abilities.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Top-tier Ether Support with strong buffs and team-wide damage amplification",
+    "tierReasonZh": "顶级以太支援角色，增益强力，全队伤害提升显著",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频",
+    "status": "available",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "orphie-magnusson-and-magus",
+    "name": "奥菲丝・马格努森 &「鬼火」",
+    "nameEn": "Orphie Magnusson & Magus",
+    "nameJa": "",
+    "attribute": "fire",
+    "specialty": "强攻",
+    "specialtyEn": "Attack",
+    "rank": "S",
+    "faction": "奥波尔小队",
+    "factionEn": "Obol Squad",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "奥波尔小队的双子战斗组合，奥菲丝与搭档「鬼火」协同作战。以默契的双人配合释放强力的火属性攻击。",
+    "descriptionEn": "A twin combat duo of Obol Squad. Orphie and her partner Magus fight in perfect coordination, unleashing powerful Fire attacks together.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Unique dual-unit Fire Attack dealer with high sustained damage and interesting mechanics",
+    "tierReasonZh": "独特的双人火属性强攻角色，持续伤害高，机制新颖",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频",
+    "status": "available",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "sunna",
+    "name": "千夏",
+    "nameEn": "Sunna",
+    "nameJa": "",
+    "attribute": "physical",
+    "specialty": "支援",
+    "specialtyEn": "Support",
+    "rank": "S",
+    "faction": "迷妄天使",
+    "factionEn": "Angels of Delusion",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "迷妄天使的成员，使用物理属性进行支援作战。以冷静的判断和精准的辅助为队伍提供关键支持。",
+    "descriptionEn": "A member of Angels of Delusion who provides Physical Support. Offers critical team support with calm judgment and precise assistance.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Excellent Physical Support with strong team buffs and reliable utility",
+    "tierReasonZh": "优秀的物理支援角色，队伍增益强力，实用性好",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频",
+    "status": "available",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "ukinami-yuzuha",
+    "name": "浮波柚叶",
+    "nameEn": "Ukinami Yuzuha",
+    "nameJa": "",
+    "attribute": "physical",
+    "specialty": "支援",
+    "specialtyEn": "Support",
+    "rank": "S",
+    "faction": "惊魂小屋",
+    "factionEn": "Spook Shack",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "惊魂小屋的可靠成员，擅长物理属性支援。以温柔的守护之力确保队伍在激战中的生存与输出。",
+    "descriptionEn": "A reliable member of Spook Shack who specializes in Physical Support. Ensures team survival and damage output with her gentle protective power.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Strong Physical Support with good sustain and team damage amplification",
+    "tierReasonZh": "强力物理支援角色，续航能力好，全队伤害提升明显",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频",
+    "status": "available",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "ye-shunguang",
+    "name": "叶瞬光",
+    "nameEn": "Ye Shunguang",
+    "nameJa": "",
+    "attribute": "honed-edge",
+    "specialty": "强攻",
+    "specialtyEn": "Attack",
+    "rank": "S",
+    "faction": "云岌岭",
+    "factionEn": "Yunkui Summit",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "云岌岭的精锐剑客，掌握利刃之力的攻击型战士。以迅捷如光的剑技对敌人造成毁灭性的打击。",
+    "descriptionEn": "An elite swordsman of Yunkui Summit who wields the power of Honed Edge. Delivers devastating strikes with lightning-fast sword techniques.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Premier Honed Edge Attack dealer with exceptional burst damage and fast rotation",
+    "tierReasonZh": "顶级利刃强攻角色，爆发伤害出色，战斗循环迅速",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频",
+    "status": "available",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "yidhari-murphy",
+    "name": "伊德海莉・墨菲",
+    "nameEn": "Yidhari Murphy",
+    "nameJa": "",
+    "attribute": "ice",
+    "specialty": "突击",
+    "specialtyEn": "Rupture",
+    "rank": "S",
+    "faction": "惊魂小屋",
+    "factionEn": "Spook Shack",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "惊魂小屋的冰雪战士，使用冰属性进行突击战斗。以凛冽的寒冰之力撕裂敌人，造成致命的突击伤害。",
+    "descriptionEn": "An Ice warrior of Spook Shack who specializes in Ice Rupture combat. Tears through enemies with bitter frost for lethal Rupture damage.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Strong Ice Rupture dealer with good damage and effective freeze synergy",
+    "tierReasonZh": "强力冰属性突击角色，伤害优秀，冻结配合效果好",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频",
+    "status": "available",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "zhao",
+    "name": "照",
+    "nameEn": "Zhao",
+    "nameJa": "",
+    "attribute": "ice",
+    "specialty": "防护",
+    "specialtyEn": "Defense",
+    "rank": "S",
+    "faction": "呵嚒管理局",
+    "factionEn": "Krampus Compliance Authority",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "呵嚒管理局的坚定守护者，使用冰属性进行防御作战。以冰之壁障保护队友，同时给予敌人沉重反击。",
+    "descriptionEn": "A steadfast guardian of Krampus Compliance Authority who fights with Ice Defense. Shields allies with barriers of ice while delivering heavy counterattacks.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Excellent Ice Defense unit with strong shields and good counter-attack damage",
+    "tierReasonZh": "优秀的冰属性防护角色，护盾强力，反击伤害可观",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频",
+    "status": "available",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "nangong-yu",
+    "name": "南宫羽",
+    "nameEn": "Nangong Yu",
+    "nameJa": "",
+    "attribute": "ether",
+    "specialty": "击破",
+    "specialtyEn": "Stun",
+    "rank": "S",
+    "faction": "迷妄天使",
+    "factionEn": "Angels of Delusion",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "迷妄天使的神秘成员，使用以太属性进行击破作战。以虚幻缥缈的攻击手段令敌人陷入眩晕与迷惘。",
+    "descriptionEn": "A mysterious member of Angels of Delusion who specializes in Ether Stun combat. Uses ethereal attacks to daze and disorient enemies.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Strong Ether Stun unit with effective Daze application and team utility",
+    "tierReasonZh": "强力以太击破角色，眩晕效果显著，团队辅助可靠",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频",
+    "status": "available",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "promeia",
+    "name": "普罗米娅",
+    "nameEn": "Promeia",
+    "nameJa": "",
+    "attribute": "ice",
+    "specialty": "异常",
+    "specialtyEn": "Anomaly",
+    "rank": "S",
+    "faction": "呵嚒管理局",
+    "factionEn": "Krampus Compliance Authority",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "呵嚒管理局的冰雪异能者，使用冰属性进行异常攻击。以极寒之力冻结并粉碎一切敌人的抵抗。",
+    "descriptionEn": "An Ice Anomaly specialist of Krampus Compliance Authority. Freezes and shatters all enemy resistance with the power of extreme cold.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Promising Ice Anomaly unit with strong Freeze and Disorder potential",
+    "tierReasonZh": "潜力十足的冰属性异常角色，冻结与紊乱配合前景看好",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频（即将开放）",
+    "status": "upcoming",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "norma-hollowell",
+    "name": "诺姆・霍洛维尔",
+    "nameEn": "Norma Hollowell",
+    "nameJa": "",
+    "attribute": "fire",
+    "specialty": "击破",
+    "specialtyEn": "Stun",
+    "rank": "S",
+    "faction": "对外战略科",
+    "factionEn": "External Strategy Department",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "对外战略科的资深成员，使用火属性进行击破战斗。以老练的战术和灼热的攻势迅速压制敌人。",
+    "descriptionEn": "A veteran member of the External Strategy Department who specializes in Fire Stun combat. Quickly suppresses enemies with seasoned tactics and scorching offenses.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Promising Fire Stun unit with strong Daze potential and team synergy",
+    "tierReasonZh": "潜力优秀的火属性击破角色，眩晕能力与团队配合前景看好",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频（即将开放）",
+    "status": "upcoming",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "pyrois",
+    "name": "佩洛伊斯",
+    "nameEn": "Pyrois",
+    "nameJa": "",
+    "attribute": "ether",
+    "specialty": "强攻",
+    "specialtyEn": "Attack",
+    "rank": "S",
+    "faction": "法厄同",
+    "factionEn": "Phaethon",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "法厄同的神秘战士，使用以太属性进行强力攻击。以超越常理的以太之力在战场上展现压倒性的破坏力。",
+    "descriptionEn": "A mysterious warrior of Phaethon who unleashes devastating Ether attacks. Displays overwhelming destructive power on the battlefield with transcendent Ether abilities.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Highly anticipated Ether Attack dealer with expected top-tier damage output",
+    "tierReasonZh": "备受期待的以太强攻角色，预计输出能力顶级",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频（即将开放）",
+    "status": "upcoming",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "starlight-billy-kid",
+    "name": "星徽・比利・奇德",
+    "nameEn": "Starlight - Billy Kid",
+    "nameJa": "",
+    "attribute": "physical",
+    "specialty": "突击",
+    "specialtyEn": "Rupture",
+    "rank": "S",
+    "faction": "狡兔屋",
+    "factionEn": "Cunning Hares",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "狡兔屋的星之战士，比利・奇德的觉醒形态。以全新的物理突击能力展现超越以往的力量与速度。",
+    "descriptionEn": "The Starlight awakened form of Billy Kid from Cunning Hares. Displays power and speed beyond his original form with new Physical Rupture abilities.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Highly anticipated Physical Rupture variant of popular character with strong expected performance",
+    "tierReasonZh": "备受期待的人气角色物理突击形态，预计表现强力",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频（即将开放）",
+    "status": "upcoming",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
+  },
+  {
+    "id": "velina-airgid",
+    "name": "维琳娜・艾嘉德",
+    "nameEn": "Velina Airgid",
+    "nameJa": "",
+    "attribute": "wind",
+    "specialty": "异常",
+    "specialtyEn": "Anomaly",
+    "rank": "S",
+    "faction": "对外战略科",
+    "factionEn": "External Strategy Department",
+    "attackType": "斩击",
+    "attackTypeEn": "Slash",
+    "description": "对外战略科的新锐成员，掌握全新风属性之力的异常系战士。以风暴般的攻击席卷战场，令敌人无处遁逃。",
+    "descriptionEn": "A rising member of the External Strategy Department who wields the new Wind attribute. Sweeps the battlefield with storm-like Anomaly attacks, leaving enemies nowhere to hide.",
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "First Wind Anomaly unit, introduces new attribute with strong expected meta impact",
+    "tierReasonZh": "首个风属性异常角色，引入全新属性，预计对环境有重大影响",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "weapons": [],
+      "driveDiscs": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "调频（即将开放）",
+    "status": "upcoming",
+    "cvZh": "",
+    "cvJp": "",
+    "cvEn": ""
   }
 ]
