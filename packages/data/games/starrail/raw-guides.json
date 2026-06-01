@@ -56,6 +56,18 @@
         "questionZh": "什么是击破效率？",
         "answer": "Break Efficiency determines how much Toughness you reduce per hit. Higher is better for Break teams.",
         "answerZh": "击破效率决定了每次攻击削减多少韧性。击破流队伍需要更高的击破效率。"
+      },
+      {
+        "question": "Which elements are best for Weakness Break?",
+        "questionZh": "哪些元素最适合弱点击破？",
+        "answer": "It depends on the enemy's weakness — always match the element shown above their HP bar. However, Ice (Freeze) and Imaginary (Action Delay + SPD down) are generally the strongest Break effects because they disrupt enemy turns. Fire and Lightning DoT effects are great for sustained damage.",
+        "answerZh": "取决于敌人的弱点——始终匹配血条上方显示的属性。不过冰（冻结）和想象（行动延迟+降速）通常是最强的击破效果，因为它们能打断敌人行动。火和雷的持续伤害效果适合持续输出。"
+      },
+      {
+        "question": "Does Weakness Break work on bosses?",
+        "questionZh": "弱点击破对Boss有效吗？",
+        "answer": "Yes, Weakness Break works on bosses and is actually crucial for endgame content. Bosses have much higher Toughness bars, so high Break Efficiency and the right elements are essential. Note that some bosses have multiple phases with different weakness setups.",
+        "answerZh": "有效，弱点击破对Boss有效，而且对终局内容至关重要。Boss的韧性条更长，因此高击破效率和正确属性必不可少。注意部分Boss有多个阶段，各阶段弱点可能不同。"
       }
     ]
   },
@@ -116,6 +128,18 @@
         "questionZh": "需要5星角色才能通关吗？",
         "answer": "No. Many 4-star characters are excellent. A well-built 4-star team can clear most content.",
         "answerZh": "不需要。很多4星角色非常优秀，合理培养的4星队伍可以通关大部分内容。"
+      },
+      {
+        "question": "How many teams do I need for endgame?",
+        "questionZh": "终局需要几支队伍？",
+        "answer": "You need at least 2 well-built teams for Memory of Chaos, Pure Fiction, and Apocalyptic Shadow — each mode requires two independent teams running simultaneously. Aim for 2–3 teams covering different elements and playstyles.",
+        "answerZh": "混沌回忆、虚构叙事和末日幻影都需要2支独立队伍同时作战。建议培养2–3支覆盖不同属性和流派的队伍。"
+      },
+      {
+        "question": "Can I share characters between teams?",
+        "questionZh": "不同队伍可以共用角色吗？",
+        "answer": "No — each team in endgame modes must have completely separate rosters. A character used on one side cannot appear on the other. This is why building a diverse roster of supports and sustains is so important.",
+        "answerZh": "不行——终局模式的两路队伍角色不能重复，一边用过的角色不能出现在另一边。因此培养多个辅助和生存角色非常重要。"
       }
     ]
   },
@@ -143,6 +167,18 @@
         "questionZh": "开拓力优先刷什么？",
         "answer": "Early game: character ascension materials and EXP. Mid game: relics. Late game: optimizing substats.",
         "answerZh": "前期：角色突破材料和经验。中期：遗器。后期：刷好词条。"
+      },
+      {
+        "question": "When should I use Fuel?",
+        "questionZh": "什么时候该用燃料？",
+        "answer": "Save Fuel for late-game relic farming (Equilibrium Level 5+), where drops are guaranteed 5-star. Using Fuel too early on lower-tier materials is wasteful since those are easy to farm naturally. A good rule: only spend Fuel during double-drop events or when farming endgame relics.",
+        "answerZh": "建议留到后期刷遗器（均衡等级5+）时使用，那时必掉5星。前期用在低级材料上太浪费。原则：只在双倍掉落活动或刷毕业遗器时使用燃料。"
+      },
+      {
+        "question": "What should I prioritize farming?",
+        "questionZh": "刷材料优先级是什么？",
+        "answer": "Follow this priority: (1) Character ascension materials to unlock level caps, (2) Light Cone and Trace materials to boost combat power, (3) Credits and EXP to keep your team leveled, (4) Relics only after reaching Equilibrium Level 5. Never let Trailblaze Power cap — always spend it on something useful.",
+        "answerZh": "优先级：(1) 角色突破材料解锁等级上限，(2) 光锥和行迹材料提升战力，(3) 信用点和经验保持队伍等级，(4) 均衡5级后再集中刷遗器。开拓力不要溢出，始终花在有收益的地方。"
       }
     ]
   },
@@ -170,6 +206,18 @@
         "questionZh": "模拟宇宙哪个命途最简单？",
         "answer": "Abundance (preservation/healing) path is the most forgiving for beginners.",
         "answerZh": "丰饶命途（治疗/护盾）对新手最友好。"
+      },
+      {
+        "question": "Which path is best for beginners in Simulated Universe?",
+        "questionZh": "新手模拟宇宙推荐哪个命途？",
+        "answer": "Abundance is the safest choice for beginners because it provides strong healing and lets you survive longer. Preservation is another beginner-friendly option since shields reduce damage taken. Once you are more experienced, Hunt and Destruction paths offer faster clears with higher damage.",
+        "answerZh": "丰饶是新手最安全的选择，提供强力治疗让你生存更久。存护也是新手友好选项，护盾减少受到的伤害。熟练后可以尝试巡猎和毁灭命途，伤害更高通关更快。"
+      },
+      {
+        "question": "How do I unlock higher difficulties in Simulated Universe?",
+        "questionZh": "怎么解锁模拟宇宙更高难度？",
+        "answer": "Higher difficulties unlock by completing the previous difficulty level and progressing your Equilibrium Level. Each new world in Simulated Universe also has its own unlock requirements tied to the main story. Focus on raising your Equilibrium Level and clearing each world at the current difficulty to unlock the next.",
+        "answerZh": "通过通关当前难度并提升均衡等级来解锁更高难度。模拟宇宙中每个新世界也有对应的主线进度解锁条件。优先提升均衡等级并通关当前难度即可逐步解锁。"
       }
     ]
   },

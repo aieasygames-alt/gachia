@@ -104,6 +104,18 @@
         "questionZh": "战斗中小队切换是怎么运作的？",
         "answer": "You can switch between 4 Espers freely with no cooldown. Switching triggers an entry effect unique to each character.",
         "answerZh": "可以自由切换4名异能者，没有冷却时间。切换时会触发每个角色独特的入场效果。"
+      },
+      {
+        "question": "What's the best chain combo in the game?",
+        "questionZh": "游戏中最佳的连锁连招是什么？",
+        "answer": "The strongest chain combo involves applying a debuff with your sub-DPS first, then switching to your main DPS during the debuff window for maximum damage. Chaos + Surge (Annihilation) chains are currently the highest damage option.",
+        "answerZh": "最强连锁连招是先用副C施加减益效果，然后在减益窗口期切换主C打出最大伤害。混沌+涌流（湮灭）连锁是当前伤害最高的选择。"
+      },
+      {
+        "question": "How do I trigger a perfect dodge?",
+        "questionZh": "如何触发完美闪避？",
+        "answer": "Dodge at the exact moment an enemy attack is about to hit you — you'll see a brief visual flash as the timing window. Successful perfect dodges grant a temporary damage buff and slow enemies, making it a core mechanic for high-level play.",
+        "answerZh": "在敌人攻击即将命中的瞬间闪避即可触发，成功时会出现短暂视觉闪光提示。完美闪避会获得临时伤害增益并减速敌人，是高级战斗的核心机制。"
       }
     ]
   },
@@ -116,8 +128,8 @@
     "categoryEn": "Exploration",
     "summary": "全面介绍新都市的各个区域、传送点系统、收集品和隐藏任务。",
     "summaryEn": "Complete guide to Nova City's districts, teleport system, collectibles, and hidden quests.",
-    "content": "## 新都市概览\n\n新都市是《无限大》的主要探索区域，是一座充满活力的现代都市。\n\n### 移动方式\n\n- **跑酷**: 攀爬墙壁、翻越障碍\n- **蛛丝摆荡**: 在建筑间快速穿梭\n- **载具**: 驾驶多种载具在街道穿行\n- **滑翔**: 使用滑翔翼在空中移动\n\n### 区域系统\n\n新都市分为多个风格各异的区域，每个区域有独特的异常事件和收集品。",
-    "contentEn": "## Nova City Overview\n\nNova City is Ananta's main exploration area — a vibrant modern metropolis.\n\n### Movement Options\n\n- **Parkour**: Climb walls, vault obstacles\n- **Web-swinging**: Quickly traverse between buildings\n- **Vehicles**: Drive various vehicles through streets\n- **Gliding**: Use glider wings for aerial movement\n\n### District System\n\nNova City is divided into multiple districts with unique styles, each featuring distinct anomaly events and collectibles.",
+    "content": "## 新都市概览\n\n新都市是《无限大》的主要探索区域，是一座充满活力的现代都市。城市分为多个风格各异的区域，从繁华的商业中心到废弃的工业区，每个角落都隐藏着等待发现的秘密。\n\n### 移动方式\n\n- **跑酷**: 攀爬墙壁、翻越障碍，自由穿越城市建筑\n- **蛛丝摆荡**: 在高楼间快速摆荡穿梭，是最帅气的移动方式\n- **载具**: 驾驶多种载具在街道穿行，包括摩托车和汽车\n- **滑翔**: 使用滑翔翼从高处起飞，在空中俯瞰城市全景\n\n### 区域系统\n\n新都市分为多个风格各异的区域，每个区域有独特的异常事件和收集品。\n\n#### 核心区域\n- **中央商务区**: 起始区域，高楼林立，适合新手熟悉操作\n- **旧城区**: 街道狭窄，隐藏大量暗巷和秘密通道\n- **科技园区**: 充满未来感，有大量垂直探索内容\n- **港口区**: 海边区域，有独特的天气系统和水面探索\n\n### 探索技巧\n\n1. 优先解锁每个区域的传送点，方便后续快速移动\n2. 夜间会出现白天看不到的特殊NPC和事件\n3. 使用涌流异能可以探测周围的隐藏物品\n4. 每个区域达到100%探索度会获得丰厚额外奖励\n5. 善用地图标记系统规划收集路线，提高效率",
+    "contentEn": "## Nova City Overview\n\nNova City is Ananta's main exploration area — a vibrant modern metropolis divided into multiple themed districts. From bustling commercial centers to abandoned industrial zones, every corner hides secrets waiting to be discovered.\n\n### Movement Options\n\n- **Parkour**: Climb walls, vault obstacles, freely traverse urban architecture\n- **Web-swinging**: Swing between skyscrapers — the most stylish way to travel\n- **Vehicles**: Drive various vehicles through streets, including motorcycles and cars\n- **Gliding**: Launch from heights with glider wings for aerial city views\n\n### District System\n\nNova City is divided into multiple districts with unique styles, each featuring distinct anomaly events and collectibles.\n\n#### Core Districts\n- **Central Business District**: Starting area, skyscrapers everywhere, great for beginners\n- **Old Town**: Narrow streets with hidden alleys and secret passages\n- **Tech Park**: Futuristic feel with extensive vertical exploration\n- **Harbor Zone**: Coastal area with unique weather systems and water exploration\n\n### Exploration Tips\n\n1. Prioritize unlocking teleport points in each district for fast travel\n2. Special NPCs and events appear only at night\n3. Use Surge ability to detect nearby hidden items\n4. 100% exploration completion in each area grants generous bonus rewards\n5. Use the map marker system to plan efficient collection routes",
     "tags": [
       "探索",
       "新都市",
@@ -131,6 +143,18 @@
         "questionZh": "开放世界有多大？",
         "answer": "Nova City is a dense urban open world with multiple districts, underground areas, and vertical exploration.",
         "answerZh": "新都市是一个密集的城市开放世界，包含多个区域、地下空间和垂直探索内容。"
+      },
+      {
+        "question": "How do I unlock hidden areas in Nova City?",
+        "questionZh": "如何解锁新都市中的隐藏区域？",
+        "answer": "Most hidden areas unlock through main story progression. Some require collecting specific key items scattered across districts. Using the Surge ability near suspicious walls or objects can reveal invisible entrances.",
+        "answerZh": "大部分隐藏区域通过主线剧情推进解锁。部分需要收集分散在各区域的特定钥匙道具。在可疑墙壁或物体附近使用涌流异能可以发现隐形入口。"
+      },
+      {
+        "question": "What's the best exploration order for new players?",
+        "questionZh": "新手最佳的探索顺序是什么？",
+        "answer": "Start with the Central Business District to learn mechanics, then Old Town for collectibles. Progress the main story to unlock districts naturally — don't rush into higher-level areas. Unlock all teleport points as your first priority in each new zone.",
+        "answerZh": "先从中央商务区开始学习基本机制，然后去旧城区收集物品。跟随主线自然解锁各区域——不要急于进入高等级区域。每个新区域的首要任务是解锁所有传送点。"
       }
     ]
   },
@@ -158,6 +182,18 @@
         "questionZh": "应该先培养谁？",
         "answer": "Build Captain as your main DPS first, then Aileen for healing. Ringo is the best support to build next.",
         "answerZh": "优先培养队长作为主C，然后培养艾琳进行治疗。凛果是下一个最值得培养的辅助。"
+      },
+      {
+        "question": "How often does the tier list change?",
+        "questionZh": "节奏榜多久更新一次？",
+        "answer": "The tier list typically shifts with each major version update (every 6-8 weeks). New characters, balance patches, and gear changes can all shake up the rankings. However, SS-tier characters tend to remain strong across multiple patches.",
+        "answerZh": "节奏榜通常在每个大版本更新时变动（约6-8周）。新角色、平衡性调整和装备改动都可能影响排名。不过SS级角色通常在多个版本中保持强势。"
+      },
+      {
+        "question": "Should I only build top-tier Espers?",
+        "questionZh": "我应该只练T0角色吗？",
+        "answer": "Not necessarily. A-tier and even B-tier Espers can be excellent in specific team compositions or against certain bosses. Focus on building a core team first, then expand your roster based on content needs and personal playstyle preference.",
+        "answerZh": "不一定。A级甚至B级异能者在特定队伍搭配或面对特定Boss时也表现出色。先集中练好一支核心队伍，再根据内容需求和个人玩法偏好扩展角色池。"
       }
     ]
   },
@@ -170,8 +206,8 @@
     "categoryEn": "Teams",
     "summary": "推荐《无限大》各流派最佳配队方案，包含核心输出、辅助和治疗的搭配思路。",
     "summaryEn": "Recommended best team compositions for all playstyles, including core DPS, support, and healer pairings.",
-    "content": "## 配队原则\n\n《无限大》的队伍由4名异能者组成，通常搭配为：\n\n- 1名主C\n- 1名副C/控制\n- 1名增益辅助\n- 1名治疗/护盾\n\n## 推荐队伍\n\n### 混沌核心队\n队长 + 西摩 + 凛果 + 艾琳\n\n### 火花冲能队\n泰菲 + 迪拉 + 凛果 + 艾琳\n\n### 虚空暗杀队\n班西 + 西摩 + 凛果 + 艾琳",
-    "contentEn": "## Team Building Principles\n\nAnanta teams consist of 4 Espers, typically:\n\n- 1 Main DPS\n- 1 Sub-DPS / Control\n- 1 Buffer\n- 1 Healer / Shield\n\n## Recommended Teams\n\n### Chaos Core\nCaptain + Seymour + Ringo + Aileen\n\n### Spark Overcharge\nTaffy + Dila + Ringo + Aileen\n\n### Void Assassin\nBansy + Seymour + Ringo + Aileen",
+    "content": "## 配队原则\n\n《无限大》的队伍由4名异能者组成，合理的阵容搭配是通关高难度内容的关键。通常搭配为：\n\n- 1名主C — 负责主要输出伤害\n- 1名副C/控制 — 补充伤害或控制敌人\n- 1名增益辅助 — 为全队提供增益效果\n- 1名治疗/护盾 — 维持队伍生存能力\n\n### 属性搭配要点\n\n- 队伍中至少包含两种不同属性以触发属性反应\n- 避免重复定位（如两个纯治疗角色）\n- 根据敌人属性灵活调整阵容克制关系\n- 注意角色间的技能协同和连携效果\n\n## 推荐队伍\n\n### 混沌核心队\n队长 + 西摩 + 凛果 + 艾琳\n\n- 队长作为混沌主C提供稳定输出\n- 西摩在后台提供涌流减益\n- 凛果全队增益大幅提升整体伤害\n- 艾琳保证队伍续航\n\n### 火花冲能队\n泰菲 + 迪拉 + 凛果 + 艾琳\n\n- 泰菲和迪拉的火花属性形成强力连锁\n- 凛果提升全队伤害上限\n- 艾琳提供治疗和护盾\n\n### 虚空暗杀队\n班西 + 西摩 + 凛果 + 艾琳\n\n- 班西虚空属性造成强力减益后爆发\n- 西摩补充涌流减益效果\n- 双减益叠加让敌人攻防大幅下降\n\n## 通用配队思路\n\n1. 确定队伍核心属性方向（如超载、控制、召唤）\n2. 选择对应属性的主C角色\n3. 搭配能触发属性反应的副C\n4. 补充增益辅助和治疗位\n5. 根据具体关卡调整控制或防御需求",
+    "contentEn": "## Team Building Principles\n\nAnanta teams consist of 4 Espers, and smart composition is key to clearing high-difficulty content. The typical setup is:\n\n- 1 Main DPS — Responsible for primary damage output\n- 1 Sub-DPS / Control — Supplemental damage or crowd control\n- 1 Buffer — Provides team-wide buffs\n- 1 Healer / Shield — Maintains team survivability\n\n### Attribute Synergy Tips\n\n- Include at least two different attributes to trigger reactions\n- Avoid role overlap (e.g., two pure healers)\n- Adjust your lineup based on enemy attribute weaknesses\n- Pay attention to skill synergy and combo effects between characters\n\n## Recommended Teams\n\n### Chaos Core\nCaptain + Seymour + Ringo + Aileen\n\n- Captain as Chaos DPS provides consistent damage\n- Seymour contributes Surge debuffs from off-field\n- Ringo dramatically boosts overall team damage\n- Aileen ensures team sustain\n\n### Spark Overcharge\nTaffy + Dila + Ringo + Aileen\n\n- Taffy and Dila's Spark attribute creates powerful chains\n- Ringo raises the team's damage ceiling\n- Aileen provides healing and shields\n\n### Void Assassin\nBansy + Seymour + Ringo + Aileen\n\n- Bansy applies Void debuffs before bursting\n- Seymour adds Surge debuffs on top\n- Dual debuffs massively reduce enemy offense and defense\n\n## General Team-Building Approach\n\n1. Decide your core attribute direction (Overload, Control, Summon, etc.)\n2. Pick a main DPS matching that attribute\n3. Add a sub-DPS that triggers attribute reactions\n4. Fill in buffer and healer slots\n5. Adjust for specific stage needs (more control or defense)",
     "tags": [
       "配队",
       "队伍",
@@ -185,6 +221,18 @@
         "questionZh": "最佳配队是什么？",
         "answer": "The most versatile team is Captain + Seymour + Ringo + Aileen, covering all roles effectively.",
         "answerZh": "最通用的队伍是队长 + 西摩 + 凛果 + 艾琳，能覆盖所有职能。"
+      },
+      {
+        "question": "What's the minimum needed for a viable team?",
+        "questionZh": "组建一个能用的队伍最低需要什么？",
+        "answer": "You need at least one DPS, one healer, and two flex picks. Even a simple setup of DPS + off-attribute sub-DPS + free healer + any buffer can clear most mid-game content. Focus on attribute synergy over individual character rarity.",
+        "answerZh": "至少需要一个主C、一个治疗和两个灵活位。即使简单的搭配如主C+不同属性副C+免费治疗+任意增益辅助也能通关大部分中期内容。注重属性协同比追求单角色稀有度更重要。"
+      },
+      {
+        "question": "How do I counter specific elements?",
+        "questionZh": "如何克制特定属性？",
+        "answer": "Use the attribute reaction chart to your advantage — for example, Void weakens enemy ATK and DEF, making it strong against aggressive bosses. Build a diverse roster with at least two attribute types so you can swap team members to exploit enemy weaknesses in different encounters.",
+        "answerZh": "善用属性反应表——例如虚空能削弱敌人攻防，对付攻击型Boss特别有效。培养至少两种属性的角色，这样可以根据不同敌人的弱点灵活调整队伍成员。"
       }
     ]
   },
@@ -206,6 +254,18 @@
         "questionZh": "先满练哪个异能者？",
         "answer": "Always max your main DPS Esper first — level, awakening, and core skills. Then build your primary support. A fully built DPS carries all content.",
         "answerZh": "优先满练主C异能者——等级、觉醒和核心技能。然后练主力支援。一个完全成型的输出角色能打通所有内容。"
+      },
+      {
+        "question": "What should I prioritize first: level, skills, or gear?",
+        "questionZh": "等级、技能和装备哪个优先？",
+        "answer": "Follow this order: Level > Ability Awakening > Core Skills > Gear. Levels provide the biggest raw stat boost and unlock content. Skills and awakening define your playstyle. Gear optimization is the final polish for endgame content.",
+        "answerZh": "按这个顺序：等级 > 异能觉醒 > 核心技能 > 装备。等级提供最大的基础属性提升并解锁内容。技能和觉醒决定玩法风格。装备优化是毕业前的最后打磨。"
+      },
+      {
+        "question": "Should I spread resources across multiple Espers?",
+        "questionZh": "应该把资源分散给多个异能者吗？",
+        "answer": "No — concentrate resources on one core team of 4 Espers first. Spreading resources too thin leaves your entire roster underpowered. Only start building additional characters after your main team is fully built and you have surplus materials.",
+        "answerZh": "不建议——先集中资源培养一支4人核心队伍。资源分散会导致整体实力不足。只有当核心队伍完全成型且有剩余材料后，再开始培养额外角色。"
       }
     ]
   },
@@ -227,6 +287,18 @@
         "questionZh": "哪种异能属性最强？",
         "answer": "Chaos has the highest raw damage for PvE. Psyche is strongest for PvP control. For balanced play, Surge + Bloom offers the most flexibility.",
         "answerZh": "混沌在PvE中伤害最高。精神在PvP控制中最强。综合来看，涌流+绽放灵活性最高。"
+      },
+      {
+        "question": "Which attribute reaction deals the most damage?",
+        "questionZh": "哪种属性反应伤害最高？",
+        "answer": "Overload (Chaos + Spark) currently deals the highest burst AoE damage, making it ideal for clearing waves. For single-target boss fights, Void Erosion (Void + Chaos) provides the best sustained damage amplification by shredding enemy DEF.",
+        "answerZh": "超载（混沌+火花）目前拥有最高的爆发范围伤害，非常适合清怪。对于单体Boss战，虚蚀（虚空+混沌）通过削减防御提供最佳的持续伤害增幅。"
+      },
+      {
+        "question": "Can one Esper use two different attributes?",
+        "questionZh": "一个异能者能使用两种属性吗？",
+        "answer": "Each Esper has one primary attribute that defines their core abilities. However, some Espers have secondary effects that interact with other attributes through their passive skills or awakening tree. You still need team composition to trigger most attribute reactions.",
+        "answerZh": "每个异能者有一个主要属性决定核心技能。但部分异能者通过被动技能或觉醒路线能产生与其他属性的交互效果。大部分属性反应仍需要通过队伍搭配来触发。"
       }
     ]
   },
@@ -248,6 +320,12 @@
         "questionZh": "什么时候开始刷装备？",
         "answer": "Start farming seriously after your main DPS is max level with abilities unlocked. Before that, use quest/event gear as placeholders.",
         "answerZh": "主C满级且觉醒后再开始集中刷装备。之前用任务和活动送的散件过渡。"
+      },
+      {
+        "question": "Is 4pc set always better than 2+2?",
+        "questionZh": "4件套一定比2+2好吗？",
+        "answer": "Not always. 4pc sets offer stronger effects but can be harder to farm with good substats. A well-rolled 2+2 combination with excellent substats can outperform a mediocre 4pc. Use 2+2 during mid-game and transition to 4pc once you have pieces with strong substats.",
+        "answerZh": "不一定。4件套效果更强但更难刷到好副词条。副词条优秀的2+2组合可能超过副词条一般的4件套。中期用2+2过渡，等刷到副词条好的散件再转为4件套。"
       }
     ]
   },
@@ -269,6 +347,18 @@
         "questionZh": "怎么找到所有隐藏区域？",
         "answer": "Progress the main story first — most areas unlock naturally. Use Surge ability to detect invisible entrances. Look for environmental hints like cracks in walls or unusual lighting.",
         "answerZh": "先推进主线——大部分区域会自然解锁。用涌流异能探测隐形入口。注意环境提示如墙壁裂缝或异常光线。"
+      },
+      {
+        "question": "How to find all collectibles efficiently?",
+        "questionZh": "如何高效找到所有收集品？",
+        "answer": "Use the map marker system to tag collectibles as you find them. Prioritize Anomaly Shards first since they permanently boost account stats. Visit each district at both day and night to catch time-sensitive items. The Surge detection ability reveals hidden collectibles within a radius.",
+        "answerZh": "善用地图标记系统标记已发现的收集品。优先收集异能碎片，因为它们永久提升账号属性。白天和晚上都去每个区域看看，部分收集品有时间限制。涌流探测能力可以发现一定范围内的隐藏收集品。"
+      },
+      {
+        "question": "Do hidden areas and collectibles reset?",
+        "questionZh": "隐藏区域和收集品会重置吗？",
+        "answer": "One-time collectibles like Anomaly Shards and Memory Capsules do not reset. However, Resonance Crystals in each area respawn weekly. Hidden areas remain unlocked once discovered, so you can revisit them anytime.",
+        "answerZh": "异能碎片和记忆胶囊等一次性收集品不会重置。但每个区域的共鸣水晶每周刷新。隐藏区域一旦发现后永久解锁，可以随时再次进入。"
       }
     ]
   },
@@ -290,6 +380,12 @@
         "questionZh": "PVP是必须的吗？",
         "answer": "PvP is optional but offers unique rewards including exclusive titles and gear. You can enjoy the full PvE experience without PvP, but it's worth trying for the additional resources.",
         "answerZh": "PVP是可选的但提供独特奖励包括限定称号和装备。不PVP也能享受完整PVE体验，但值得尝试获取额外资源。"
+      },
+      {
+        "question": "What's the best PvP strategy for beginners?",
+        "questionZh": "新手最佳的PVP策略是什么？",
+        "answer": "Start with a control-focused team (Psyche + Void) to slow the pace and give yourself time to learn opponent patterns. Focus on survival first — bring a strong healer like Aileen. Avoid aggressive speed comps until you understand the meta and common strategies.",
+        "answerZh": "从控制流队伍（精神+虚空）开始，放慢节奏给自己学习对手模式的时间。先注重生存——带一个强力治疗如艾琳。在了解环境和常见策略之前，避免使用速攻流阵容。"
       }
     ]
   },
@@ -311,6 +407,18 @@
         "questionZh": "无限大真的无抽卡吗？",
         "answer": "Ananta has a unique model where core characters can be earned through gameplay, with gacha as an optional acceleration method. You can build competitive teams without spending.",
         "answerZh": "无限大采用独特模式，核心角色可通过游戏内获取，抽卡只是加速获取的手段。不花钱也能组建有竞争力的队伍。"
+      },
+      {
+        "question": "How do I save for pity efficiently?",
+        "questionZh": "如何高效攒保底？",
+        "answer": "Complete all dailies and weeklies consistently — they provide a steady income of wish coins. Save event rewards and exploration one-time bonuses for banners you want. Avoid spending on standard banners with premium currency; use only free tickets there. Planning 80-90 pulls ahead before committing to a banner ensures you always hit pity.",
+        "answerZh": "坚持完成所有日常和周常——它们提供稳定的祈愿币收入。把活动奖励和探索一次性奖励留给想要的卡池。不要用珍贵货币抽常驻池，只用免费票。提前规划80-90抽再下池，确保每次都能触发保底。"
+      },
+      {
+        "question": "Is a no-gacha playthrough really viable?",
+        "questionZh": "不抽卡真的能玩吗？",
+        "answer": "Yes. Since core characters are obtainable through story and events, free players can build fully competitive teams. The progression is slower without gacha acceleration, but all PvE content is clearable and PvP remains accessible with earned characters.",
+        "answerZh": "可以。核心角色可以通过剧情和活动获取，免费玩家也能组建完全有竞争力的队伍。不抽卡的进度会慢一些，但所有PVE内容都可以通关，PVP也可以用免费角色参与。"
       }
     ]
   }
