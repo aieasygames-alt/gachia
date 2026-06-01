@@ -8111,5 +8111,1741 @@
     "tierReasonZh": "物理持续伤害输出，裂伤施加",
     "cvZh": "",
     "cvJp": ""
+  },
+  {
+    "id": "arlan",
+    "name": "阿兰",
+    "nameEn": "Arlan",
+    "element": "lightning",
+    "path": "destruction",
+    "rarity": 4,
+    "description": "黑塔空间站安保部门负责人，身边常跟着一只叫佩佩的狗。会牺牲自己的生命值来造成更高的伤害",
+    "descriptionEn": "Head of Herta Space Station's security department, often seen with a dog named Peppy. Sacrifices his own HP to deal higher damage",
+    "releaseVersion": "1.0",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "C",
+    "tierReason": "Low damage multipliers and requires maintaining low HP for peak output. Poor survivability makes him uncompetitive in the current meta",
+    "tierReasonZh": "伤害倍率较低，需要维持低血量才能发挥最大输出，生存能力差，在当前版本竞争力不足",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "dan-heng-imbibitor-lunae",
+    "name": "丹恒·饮月",
+    "nameEn": "Dan Heng • Imbibitor Lunae",
+    "element": "imaginary",
+    "path": "destruction",
+    "rarity": 5,
+    "description": "丹恒的另一种形态，持龍之力，以虚数属性进行强大的扩散攻击",
+    "descriptionEn": "An alternative form of Dan Heng wielding the power of the dragon, unleashing powerful Imaginary AoE attacks",
+    "releaseVersion": "1.3",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Imaginary Destruction DPS with extremely high enhanced basic ATK multipliers. Works as main DPS at E0 but has high SP consumption",
+    "tierReasonZh": "虚数属性毁灭输出，强化普攻倍率极高，0命即可作为主C使用，但对战技点消耗较大",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "fu-xuan",
+    "name": "符玄",
+    "nameEn": "Fu Xuan",
+    "element": "quantum",
+    "path": "preservation",
+    "rarity": 5,
+    "description": "仙舟「罗浮」太卜司司命，能通过占卜预知危险，在战斗中为队友分摊伤害并提供暴击加成",
+    "descriptionEn": "Master of the Divination Commission on the Xianzhou Luofu. Predicts danger through divination and shares damage with allies while providing CRIT buffs",
+    "releaseVersion": "1.3",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "SS",
+    "tierReason": "Top-tier Preservation unit providing team-wide CRIT Rate buffs and damage sharing. Extremely strong survivability, fits into nearly every team",
+    "tierReasonZh": "顶级存护角色，提供全队暴击率加成和伤害分摊，生存能力极强，几乎适配所有队伍",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "argenti",
+    "name": "银枝",
+    "nameEn": "Argenti",
+    "element": "physical",
+    "path": "erudition",
+    "rarity": 5,
+    "description": "纯美骑士团的忠诚骑士，以华丽的物理攻击著称，能在满能量时释放强化终结技",
+    "descriptionEn": "A loyal knight of the Knights of Beauty known for his gorgeous Physical attacks. Can unleash an enhanced Ultimate at full Energy",
+    "releaseVersion": "1.5",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "A",
+    "tierReason": "Physical AoE Erudition DPS with strong full-Energy Ultimate, but average single-target damage. Relies on Physical-weak environments",
+    "tierReasonZh": "物理群攻智识输出，满能量终结技伤害可观，但单体输出一般，对物理弱点环境有依赖",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "sparkle",
+    "name": "花火",
+    "nameEn": "Sparkle",
+    "element": "quantum",
+    "path": "harmony",
+    "rarity": 5,
+    "description": "假面愚者成员，以变幻莫测的戏法操控战局，能为队伍提供战技点和暴击伤害加成",
+    "descriptionEn": "Member of the Masked Fools who manipulates the battlefield with unpredictable tricks. Provides Skill Points and CRIT DMG buffs to the team",
+    "releaseVersion": "2.0",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "SS",
+    "tierReason": "Top-tier Harmony support whose SP generation and CRIT DMG buffs make her one of the best partners for any DPS",
+    "tierReasonZh": "顶级同谐辅助，战技点生成和暴击伤害加成让她成为所有输出角色的最佳搭档之一",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "boothill",
+    "name": "波提欧",
+    "nameEn": "Boothill",
+    "element": "physical",
+    "path": "hunt",
+    "rarity": 5,
+    "description": "银河赏金猎人，以物理弹片和决斗机制著称，能对单体目标造成毁灭性伤害",
+    "descriptionEn": "Galactic bounty hunter known for Physical bullets and duel mechanics. Can deal devastating single-target damage",
+    "releaseVersion": "2.2",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Physical Hunt single-target DPS with duel mechanics providing high DEF penetration and Break damage. Excellent against single bosses",
+    "tierReasonZh": "物理巡猎单体输出，决斗机制提供高额穿抗和击破伤害，对单体Boss表现优秀",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "jade",
+    "name": "翡翠",
+    "nameEn": "Jade",
+    "element": "quantum",
+    "path": "erudition",
+    "rarity": 5,
+    "description": "星际和平公司战略投资部的高级成员，以量子属性进行强力群攻，通过收债标记叠加伤害",
+    "descriptionEn": "Senior member of the IPC's Strategic Investment Department. Deals powerful Quantum AoE damage through debt-marking mechanics",
+    "releaseVersion": "2.3",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "A",
+    "tierReason": "Quantum AoE Erudition DPS excelling in multi-target scenarios with debt mechanics, but needs ramp-up time to reach full potential",
+    "tierReasonZh": "量子群攻智识输出，收债机制在多目标场景表现优秀，但需要一定时间叠层才能发挥全力",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "yunli",
+    "name": "云璃",
+    "nameEn": "Yunli",
+    "element": "physical",
+    "path": "destruction",
+    "rarity": 5,
+    "description": "仙舟剑首，以物理反击为主要输出手段，能在受到攻击时触发强力的反击伤害",
+    "descriptionEn": "Sword champion of the Xianzhou who uses Physical counter-attacks as her primary damage source. Triggers powerful counters when attacked",
+    "releaseVersion": "2.4",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Physical counter-attack Destruction DPS with extremely high counter damage that costs no SP. Excels against frequently-attacking enemies",
+    "tierReasonZh": "物理反击毁灭输出，反击机制伤害极高且不消耗战技点，在高频攻击环境中表现突出",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "feixiao",
+    "name": "飞霄",
+    "nameEn": "Feixiao",
+    "element": "wind",
+    "path": "hunt",
+    "rarity": 5,
+    "description": "仙舟「曜青」的天击将军，以风属性进行高频追加攻击，能在队友攻击时触发额外伤害",
+    "descriptionEn": "Heavenly General of the Xianzhou Yaoqing. Performs high-frequency Wind follow-up attacks, triggering extra damage when allies attack",
+    "releaseVersion": "2.5",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "SS",
+    "tierReason": "Wind Hunt follow-up DPS with weakness-ignoring toughness reduction. Extremely high attack frequency and versatile team compositions",
+    "tierReasonZh": "风属性巡猎追加攻击输出，无视弱点削韧，输出频率极高，适配多种队伍配置",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "lingsha",
+    "name": "灵砂",
+    "nameEn": "Lingsha",
+    "element": "fire",
+    "path": "abundance",
+    "rarity": 5,
+    "description": "仙舟「罗浮」的丹鼎司新任司鼎，以火属性进行治疗和削弱敌人，能召唤香炉提供持续支援",
+    "descriptionEn": "New head of the Alchemy Commission on the Xianzhou Luofu. Heals with Fire and weakens enemies, summoning an incense burner for sustained support",
+    "releaseVersion": "2.5",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "SS",
+    "tierReason": "Fire Abundance healer with healing, DEF reduction, and Break support capabilities. One of the most versatile sustain units available",
+    "tierReasonZh": "火属性丰饶治疗，兼具治疗、减防和击破辅助能力，是目前最全面的生存位角色之一",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "jiaoqiu",
+    "name": "椒丘",
+    "nameEn": "Jiaoqiu",
+    "element": "fire",
+    "path": "nihility",
+    "rarity": 5,
+    "description": "仙舟「曜青」的医士，以火属性施加持续伤害和削弱效果，能降低敌人的攻击和防御",
+    "descriptionEn": "Physician of the Xianzhou Yaoqing. Applies Fire DoT and debuffs, reducing enemies' ATK and DEF",
+    "releaseVersion": "2.5",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Fire Nihility support providing consistent DEF reduction and vulnerability. Synergizes well with Acheron and similar DPS",
+    "tierReasonZh": "火属性虚无辅助，提供稳定的减防和易伤效果，与黄泉等角色有良好的配合",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "rappa",
+    "name": "乱破",
+    "nameEn": "Rappa",
+    "element": "imaginary",
+    "path": "erudition",
+    "rarity": 5,
+    "description": "一位来自虚数空间的忍者，以虚数属性进行强力的扩散群攻，擅长削弱敌人韧性",
+    "descriptionEn": "A ninja from imaginary space who deals powerful Imaginary AoE attacks, specializing in reducing enemy Toughness",
+    "releaseVersion": "2.6",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Imaginary Erudition AoE DPS with unique ninja mechanics providing excellent toughness break and AoE damage in multi-target scenarios",
+    "tierReasonZh": "虚数智识群攻输出，独特的忍术机制提供出色的削韧和群伤能力，在多目标环境中表现优异",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "fugue",
+    "name": "忘归人",
+    "nameEn": "Fugue",
+    "element": "fire",
+    "path": "harmony",
+    "rarity": 5,
+    "description": "停云的另一种形态，以火属性辅助队友，能提供击破特攻加成和额外回合",
+    "descriptionEn": "An alternative form of Tingyun who supports allies with Fire. Provides Break Effect buffs and extra turns",
+    "releaseVersion": "2.7",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Fire Harmony support focused on Break Effect buffs and Super Break mechanics. A core support for Break teams",
+    "tierReasonZh": "火属性同谐辅助，专注于击破特攻加成和超击破体系，是击破队的核心辅助之一",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "anaxa",
+    "name": "那刻夏",
+    "nameEn": "Anaxa",
+    "element": "wind",
+    "path": "erudition",
+    "rarity": 5,
+    "description": "安菲利亚斯的学者，以风属性进行智识输出，擅长多目标攻击并为敌人施加弱点",
+    "descriptionEn": "Scholar of Amphoreus who deals Wind Erudition damage. Excels at multi-target attacks and applying weaknesses to enemies",
+    "releaseVersion": "3.2",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "SS",
+    "tierReason": "Wind Erudition AoE DPS who can actively implant weaknesses on enemies. Combines high damage with excellent utility, one of the best Erudition units",
+    "tierReasonZh": "风属性智识群攻输出，能主动为敌人植入弱点，输出和功能性兼备，是目前最优秀的智识角色之一",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "hyacine",
+    "name": "风堇",
+    "nameEn": "Hyacine",
+    "element": "wind",
+    "path": "remembrance",
+    "rarity": 5,
+    "description": "记忆的子嗣，以风属性进行记忆攻击，拥有忆灵「小伊卡」协助战斗，能治疗并为队友提供增益",
+    "descriptionEn": "Child of Remembrance who attacks with Wind through memory powers. Has a Memosprite named Little Ica that assists in battle, healing and buffing allies",
+    "releaseVersion": "3.3",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "SS",
+    "tierReason": "Wind Remembrance healer and support. Memosprite Little Ica provides sustained healing and SPD buffs. The strongest Remembrance sustain unit",
+    "tierReasonZh": "风属性记忆治疗兼辅助，忆灵小伊卡提供持续治疗和速度加成，是目前最强的记忆生存位角色",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "cipher",
+    "name": "赛飞儿",
+    "nameEn": "Cipher",
+    "element": "quantum",
+    "path": "nihility",
+    "rarity": 5,
+    "description": "来自盗贼之城多洛斯的克吕索斯继承者，以量子属性进行虚无攻击，擅长偷取和操控敌人的属性",
+    "descriptionEn": "Chrysos Heir from the lost city of rogues, Dolos. A Quantum Nihility character specializing in trickery, stealing and manipulating enemy attributes",
+    "releaseVersion": "3.3",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Quantum Nihility character with unique theft mechanics providing strong DEF reduction and support. Performs well with various DPS units",
+    "tierReasonZh": "量子属性虚无角色，独特的偷窃机制提供出色的减防和辅助能力，搭配多种输出角色都有不错表现",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "phainon",
+    "name": "白厄",
+    "nameEn": "Phainon",
+    "element": "physical",
+    "path": "destruction",
+    "rarity": 5,
+    "description": "安菲利亚斯的克吕索斯继承者，以物理属性进行毁灭攻击，拥有强大的变身机制和自我复活能力",
+    "descriptionEn": "Chrysos Heir of Amphoreus who deals Physical Destruction damage. Features powerful transformation mechanics and self-revival ability",
+    "releaseVersion": "3.4",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "SS",
+    "tierReason": "Physical Destruction DPS with transformation mechanics providing extremely high damage multipliers and survivability. One of the strongest Physical main DPS",
+    "tierReasonZh": "物理毁灭输出，变身机制提供极高的伤害倍率和生存能力，是目前最强的物理主C之一",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "archer",
+    "name": "Archer",
+    "nameEn": "Archer",
+    "element": "quantum",
+    "path": "hunt",
+    "rarity": 5,
+    "description": "来自Fate/stay night联动角色，以量子属性进行强力单体攻击，拥有宝具级的终结技伤害",
+    "descriptionEn": "Collaboration character from Fate/stay night. Deals powerful Quantum single-target attacks with Noble Phantasm-level Ultimate damage",
+    "releaseVersion": "3.4",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Limited collaboration Quantum Hunt DPS with devastating Noble Phantasm Ultimate. Hard to obtain but excellent performance",
+    "tierReasonZh": "联动限定量子巡猎输出，宝具终结技伤害极高，作为联动角色获得难度较大但性能优秀",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "saber",
+    "name": "Saber",
+    "nameEn": "Saber",
+    "element": "wind",
+    "path": "destruction",
+    "rarity": 5,
+    "description": "来自Fate/stay night联动角色，以风属性进行毁灭攻击，拥有誓约胜利之剑的强力终结技",
+    "descriptionEn": "Collaboration character from Fate/stay night. Deals Wind Destruction damage with a powerful Excalibur Ultimate",
+    "releaseVersion": "3.4",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Limited collaboration Wind Destruction DPS with strong Excalibur Ultimate. Limited availability but solid performance",
+    "tierReasonZh": "联动限定风属性毁灭输出，誓约胜利之剑终结技伤害优秀，联动角色获取有限但实力不俗",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "cerydra",
+    "name": "刻律德菈",
+    "nameEn": "Cerydra",
+    "element": "wind",
+    "path": "harmony",
+    "rarity": 5,
+    "description": "安菲利亚斯的克吕索斯继承者，以风属性辅助队友，能大幅提升队伍的输出能力",
+    "descriptionEn": "Chrysos Heir of Amphoreus who supports allies with Wind. Significantly boosts the team's offensive capabilities",
+    "releaseVersion": "3.5",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Wind Harmony support providing comprehensive offensive buffs. Flexible synergy with various characters, an excellent support choice",
+    "tierReasonZh": "风属性同谐辅助，提供全面的输出增益，与其他角色配合灵活，是目前优秀的辅助选择之一",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "hysilens",
+    "name": "海瑟音",
+    "nameEn": "Hysilens",
+    "element": "physical",
+    "path": "nihility",
+    "rarity": 5,
+    "description": "安菲利亚斯的克吕索斯继承者，以物理属性进行虚无攻击，擅长持续伤害和削弱敌人",
+    "descriptionEn": "Chrysos Heir of Amphoreus who deals Physical Nihility damage. Specializes in DoT and weakening enemies",
+    "releaseVersion": "3.5",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Physical Nihility DoT character with excellent DoT application and DEF reduction. Excels in Nihility-focused teams",
+    "tierReasonZh": "物理虚无持续伤害角色，拥有优秀的DoT施加和减防能力，在虚无队伍中表现突出",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "evernight",
+    "name": "长夜月",
+    "nameEn": "Evernight",
+    "element": "ice",
+    "path": "remembrance",
+    "rarity": 5,
+    "description": "记忆之子，从阴影中诞生的克吕索斯继承者，以冰属性记忆之力守护同伴，拥有忆灵「伊薇」协助战斗",
+    "descriptionEn": "Child of Remembrance born from the shadow, Chrysos Heir who conceals the Coreflame of Time. Guards allies with Ice memory powers and Memosprite Evey",
+    "releaseVersion": "3.6",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Ice Remembrance support whose Memosprite Evey provides excellent control and buffs. Unique role within the Remembrance system",
+    "tierReasonZh": "冰属性记忆辅助，忆灵伊薇提供优秀的控制和增益效果，在记忆体系中定位独特",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "dan-heng-permansor-terrae",
+    "name": "丹恒•腾荒",
+    "nameEn": "Dan Heng • Permansor Terrae",
+    "element": "physical",
+    "path": "preservation",
+    "rarity": 5,
+    "description": "丹恒在安菲利亚斯的另一种形态，以物理属性存护之力守护队友，拥有强大的护盾和减伤能力",
+    "descriptionEn": "Dan Heng's alternative form on Amphoreus. Protects allies with Physical Preservation power, providing strong shields and damage reduction",
+    "releaseVersion": "3.6",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "SS",
+    "tierReason": "Physical Preservation unit providing strong shields and damage reduction with decent personal damage. One of the best Preservation units available",
+    "tierReasonZh": "物理存护角色，提供强大的护盾和减伤效果，同时具备不错的输出能力，是目前最优秀的存护角色之一",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "cyrene",
+    "name": "昔涟",
+    "nameEn": "Cyrene",
+    "element": "ice",
+    "path": "remembrance",
+    "rarity": 5,
+    "description": "至福乐园之女，以冰属性记忆之力播种记忆的种子，让过去的花朵在未来绽放，拥有忆灵「造物主」",
+    "descriptionEn": "Daughter of Aedes Elysiae who sows the Seed of Memory with Ice Remembrance powers, so flowers of the past bloom in tomorrow. Has Memosprite Demiurge",
+    "releaseVersion": "3.7",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "SS",
+    "tierReason": "Ice Remembrance DPS and support whose Memosprite Demiurge provides powerful buffs and damage. A core unit in the Remembrance system",
+    "tierReasonZh": "冰属性记忆输出兼辅助，忆灵造物主提供强大的增益和伤害能力，是记忆体系中的核心角色",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "the-dahlia",
+    "name": "大丽花",
+    "nameEn": "The Dahlia",
+    "element": "fire",
+    "path": "nihility",
+    "rarity": 5,
+    "description": "匹诺康尼的神秘人物，以火属性虚无之力施加控制和削弱效果，擅长打乱敌人的战斗节奏",
+    "descriptionEn": "Mysterious figure from Penacony who uses Fire Nihility powers to apply crowd control and debuffs, disrupting enemy combat flow",
+    "releaseVersion": "3.8",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "A",
+    "tierReason": "Fire Nihility character with unique control and debuff value, but lower priority in the current competitive Nihility meta",
+    "tierReasonZh": "火属性虚无角色，控制和削弱效果有独特价值，但在当前版本虚无竞争激烈的环境下优先级一般",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "yao-guang",
+    "name": "爻光",
+    "nameEn": "Yao Guang",
+    "element": "physical",
+    "path": "elation",
+    "rarity": 5,
+    "description": "欢愉命途的首批角色之一，以物理属性欢愉之力进行独特攻击，拥有笑点机制带来全新的战斗体验",
+    "descriptionEn": "One of the first Elation path characters. Attacks with Physical Elation power through unique Punchline mechanics, introducing a new combat experience",
+    "releaseVersion": "4.0",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "SS",
+    "tierReason": "Physical Elation DPS introducing the new Elation path with Punchline mechanics. Extremely high damage output opens entirely new team-building directions",
+    "tierReasonZh": "物理欢愉输出，全新的欢愉命途带来独特的笑点机制，输出能力极高，开辟了全新的队伍构建方向",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "sparxie",
+    "name": "火花",
+    "nameEn": "Sparxie",
+    "element": "fire",
+    "path": "elation",
+    "rarity": 5,
+    "description": "欢愉命途的直播偶像，以火属性欢愉之力进行直播战斗，拥有「认证爆款」状态和互动式战斗机制",
+    "descriptionEn": "Elation path streaming idol who fights with Fire through interactive livestream mechanics, featuring Certified Banger state and engagement systems",
+    "releaseVersion": "4.0",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "SS",
+    "tierReason": "Fire Elation DPS with unique interactive livestream mechanics and Certified Banger state providing massive damage potential. Especially strong paired with Yao Guang",
+    "tierReasonZh": "火属性欢愉输出，独特的直播互动机制和认证爆款状态提供极高的输出潜力，与爻光搭配尤为出色",
+    "cvZh": "",
+    "cvJp": ""
+  },
+  {
+    "id": "ashveil",
+    "name": "不死途",
+    "nameEn": "Ashveil",
+    "element": "lightning",
+    "path": "hunt",
+    "rarity": 5,
+    "description": "灰烬侦探社的王牌侦探，也被称为拉曼查，以雷属性进行强力单体追击，拥有诱饵机制和贪食叠加系统",
+    "descriptionEn": "Ace detective of the Ashen Detective Agency, also known as La Mancha. A Lightning Hunt character with Bait and Gluttony stacking mechanics for powerful follow-up attacks",
+    "releaseVersion": "4.1",
+    "acquisitionMethod": "跃迁",
+    "status": "released",
+    "image": "",
+    "skills": {
+      "basicAtk": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "skill": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 1
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": "",
+        "cost": 5
+      },
+      "talent": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "technique": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "eidolons": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": [],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "Lightning Hunt follow-up DPS with unique Bait and Gluttony mechanics. Extremely high follow-up damage, ideal for follow-up attack team compositions",
+    "tierReasonZh": "雷属性巡猎追击输出，诱饵和贪食机制提供独特的输出模式，追击伤害极高，适合追击队体系",
+    "cvZh": "",
+    "cvJp": ""
   }
 ]
