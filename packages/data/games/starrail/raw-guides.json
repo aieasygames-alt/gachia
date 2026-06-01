@@ -172,5 +172,245 @@
         "answerZh": "丰饶命途（治疗/护盾）对新手最友好。"
       }
     ]
+  },
+  {
+    "id": "elation-path-guide",
+    "title": "欢愉命途完全攻略",
+    "titleEn": "Elation Path Complete Guide",
+    "category": "combat",
+    "categoryZh": "战斗攻略",
+    "categoryEn": "Combat",
+    "summary": "v4.0全新欢愉命途机制详解：笑点系统、曜青与火花机角色玩法、配队思路。",
+    "summaryEn": "Complete guide to the new Elation path introduced in v4.0 — Punchline mechanics, Yao Guang and Sparxie, team building and path synergies.",
+    "content": "## 欢愉命途完全攻略\n\n### 欢愉命途概述\n- 欢愉命途于v4.0版本正式上线，是第七个战斗命途\n- 核心机制为「笑点」（Punchline），通过特定操作积累笑点值\n- 笑点满后触发强力效果，造成大量伤害并提供团队增益\n\n### 核心机制：笑点系统\n- 队伍中欢愉命途角色使用战技或终结技可积累笑点\n- 笑点层数影响最终爆发的伤害倍率\n- 合理安排技能释放顺序以最大化笑点收益\n\n### 代表角色\n- **曜青（Yao Guang）**: 首批欢愉5星角色，擅长通过高频攻击积累笑点\n- **火花机（Sparxie）**: 欢愉命途辅助型角色，提供笑点加速和团队增伤\n\n### 配队建议\n- 欢愉队伍通常需要2名欢愉命途角色触发共鸣\n- 搭配高频率攻击的角色可加速笑点积累\n- 与谐乐命途辅助配合效果优秀\n\n### 与其他命途的协同\n- 欢愉+毁灭：爆发输出极高\n- 欢愉+谐乐：笑点积累速度最大化\n- 欢愉+虚无：利用减防进一步提升伤害",
+    "contentEn": "## Elation Path Complete Guide\n\n### Overview\nThe Elation path launched in v4.0 as the seventh combat path in Honkai: Star Rail. It revolves around the **Punchline** mechanic — a stacking resource that builds up during combat and unleashes powerful effects when fully charged.\n\n### Core Mechanic: Punchline System\n- Elation characters generate Punchline stacks through Skills and Ultimates\n- Higher Punchline stacks increase the damage multiplier of the final burst\n- Strategic skill sequencing is key to maximizing Punchline efficiency\n\n### Key Characters\n- **Yao Guang**: The first 5-star Elation DPS, excels at rapidly building Punchline through multi-hit attacks\n- **Sparxie**: An Elation support who accelerates Punchline generation and provides team-wide damage buffs\n\n### Team Building\n- Elation teams typically want at least 2 Elation characters for resonance bonuses\n- Pair with high-frequency attackers to speed up Punchline stacking\n- Harmony supports synergize extremely well with Elation compositions\n\n### Path Synergies\n| Combo | Strength |\n|-------|----------|\n| Elation + Destruction | Massive burst damage |\n| Elation + Harmony | Maximum Punchline stacking speed |\n| Elation + Nihility | DEF shred amplifies burst window |",
+    "tags": [
+      "欢愉",
+      "笑点",
+      "命途",
+      "Elation",
+      "Punchline",
+      "Path"
+    ],
+    "faq": [
+      {
+        "question": "How does the Punchline mechanic work?",
+        "questionZh": "笑点机制怎么运作？",
+        "answer": "Elation characters build Punchline stacks through Skills and Ultimates. When stacks reach max, a powerful burst effect triggers. Timing your skills to maximize stacks before bursting is the key to playing Elation effectively.",
+        "answerZh": "欢愉角色通过战技和终结技积累笑点层数。当层数叠满时触发强力爆发效果。合理安排技能顺序以最大化笑点层数是玩好欢愉的关键。"
+      },
+      {
+        "question": "Which characters work best with Elation teams?",
+        "questionZh": "欢愉队伍适合搭配哪些角色？",
+        "answer": "Yao Guang and Sparxie are the core Elation characters. Pair them with Harmony supports for faster Punchline stacking, or with Nihility debuffers to amplify the burst damage window.",
+        "answerZh": "曜青和火花机是欢愉核心角色。搭配谐乐辅助加速笑点积累，或搭配虚无减防角色放大爆发伤害。"
+      },
+      {
+        "question": "Is Elation viable for endgame content?",
+        "questionZh": "欢愉命途回合适合打终局内容吗？",
+        "answer": "Yes. Elation teams perform well in Pure Fiction and Apocalyptic Shadow where burst windows align with phase transitions. They are especially strong in AoE-heavy encounters.",
+        "answerZh": "适合。欢愉队伍在虚构叙事和末日幻影中表现出色，尤其在需要爆发窗口和多目标场景中非常强力。"
+      }
+    ]
+  },
+  {
+    "id": "remembrance-path-guide",
+    "title": "记忆命途完全攻略",
+    "titleEn": "Remembrance Path Complete Guide",
+    "category": "combat",
+    "categoryZh": "战斗攻略",
+    "categoryEn": "Combat",
+    "summary": "v3.x记忆命途详解：忆灵机制、海辛与永夜等核心角色玩法、忆灵在战斗中的运作方式。",
+    "summaryEn": "Complete guide to the Remembrance path — Memosprite mechanics, key characters like Hyacine and Evernight, and how to build effective Remembrance teams.",
+    "content": "## 记忆命途完全攻略\n\n### 记忆命途概述\n- 记忆命途于v3.x版本引入，带来全新的「忆灵」战斗机制\n- 忆灵是独立于角色之外召唤物，拥有自己的血量、速度和技能\n- 合理管理忆灵是玩好记忆命途的关键\n\n### 核心机制：忆灵（Memosprite）\n- 记忆命途角色可在战斗中召唤忆灵\n- 忆灵拥有独立的行动条和技能组\n- 忆灵可以承受伤害、施加增益或造成额外输出\n- 忆灵被击倒后可以重新召唤，但有冷却时间\n\n### 代表角色\n- **海辛（Hyacine）**: 记忆命途5星输出，忆灵可进行强力追加攻击\n- **永夜（Evernight）**: 记忆命途生存型角色，忆灵提供护盾与持续治疗\n- **赛伦（Cyrene）**: 记忆命途辅助，忆灵为全队提供增益效果\n\n### 配队思路\n- 记忆命途角色占用额外行动回合，需注意整体速度轴\n- 搭配能加速或拉条的角色可有效提升忆灵出场频率\n- 忆灵的额外行动可触发其他角色的追击或协同效果\n\n### 操作要点\n- 注意忆灵的血量，及时重新召唤\n- 利用忆灵技能与本体技能形成连招\n- 某些忆灵在特定条件下会获得强化，注意触发条件",
+    "contentEn": "## Remembrance Path Complete Guide\n\n### Overview\nThe Remembrance path was introduced in v3.x and brought the entirely new **Memosprite** mechanic to Honkai: Star Rail. Memosprites are independent summons with their own HP, Speed, and abilities — adding a new strategic layer to combat.\n\n### Core Mechanic: Memosprite\n- Remembrance characters can summon a Memosprite during battle\n- Memosprites have their own action bar, stats, and skill set\n- They can absorb damage, apply buffs, or deal additional damage\n- If a Memosprite is defeated, it can be resummoned after a cooldown\n\n### Key Characters\n- **Hyacine**: A 5-star Remembrance DPS whose Memosprite unleashes powerful follow-up attacks\n- **Evernight**: A Remembrance sustain whose Memosprite provides shields and continuous healing\n- **Cyrene**: A Remembrance support whose Memosprite grants team-wide buffs\n\n### Team Building\n- Memosprites consume additional action turns, so Speed tuning is critical\n- Pair with action-forward or Speed-boosting characters to increase Memosprite frequency\n- Memosprite extra turns can trigger follow-up attacks and synergy effects from other characters\n\n### Key Tips\n| Tip | Details |\n|-----|----------|\n| Watch Memosprite HP | Resummon promptly when defeated |\n| Chain skills | Combine Memosprite and character abilities for combos |\n| Conditional buffs | Some Memosprites gain power under specific conditions |",
+    "tags": [
+      "记忆",
+      "忆灵",
+      "命途",
+      "Remembrance",
+      "Memosprite",
+      "Path"
+    ],
+    "faq": [
+      {
+        "question": "What is a Memosprite and how does it work?",
+        "questionZh": "忆灵是什么？怎么运作？",
+        "answer": "A Memosprite is an independent summon created by Remembrance characters. It has its own HP, Speed, and abilities, and acts on its own turn. If defeated, it can be resummoned after a cooldown.",
+        "answerZh": "忆灵是记忆命途角色召唤的独立单位，拥有自己的血量、速度和技能，在独立行动条上行动。被击倒后可在冷却后重新召唤。"
+      },
+      {
+        "question": "How do I Speed-tune Remembrance teams?",
+        "questionZh": "记忆命途队伍怎么调速？",
+        "answer": "Since Memosprites take extra turns, ensure your support characters have enough SPD to act before both the main character and the Memosprite. Aim for 134+ SPD on supports to maintain smooth rotations.",
+        "answerZh": "由于忆灵会占用额外行动回合，确保辅助角色的速度高于主C和忆灵。辅助建议134+速度以保持流畅轮转。"
+      },
+      {
+        "question": "Which Remembrance character should I pull first?",
+        "questionZh": "记忆命途先抽哪个角色？",
+        "answer": "Hyacine is the recommended first pull for Remembrance — she provides strong DPS through her Memosprite's follow-up attacks. If you already have a strong DPS, Cyrene is an excellent support option.",
+        "answerZh": "推荐先抽海辛——她的忆灵追击能提供强力输出。如果已有强力输出位，赛伦是优秀的辅助选择。"
+      }
+    ]
+  },
+  {
+    "id": "planarcadia-guide",
+    "title": "Planarcadia区域探索攻略",
+    "titleEn": "Planarcadia Region Exploration Guide",
+    "category": "exploration",
+    "categoryZh": "探索攻略",
+    "categoryEn": "Exploration",
+    "summary": "全新Amphoreus/Planarcadia区域探索指南：黄金裔故事、新探索机制、新Boss与奖励。",
+    "summaryEn": "Complete exploration guide for the Amphoreus/Planarcadia region — Chrysos Heirs storyline, new mechanics, bosses, and rewards.",
+    "content": "## Planarcadia区域探索攻略\n\n### 区域概述\n- Planarcadia（星面乐园）是Amphoreus星球上的全新探索区域\n- 区域以「黄金裔」（Chrysos Heirs）故事线为核心\n- 包含大量新探索内容、解谜和隐藏奖励\n\n### 主要探索内容\n- **黄金裔主线**: 跟随Chrysos Heirs的故事揭开Amphoreus的秘密\n- **星面迷宫**: 独特的迷宫探索玩法，需要利用环境机关\n- **忆界碎片**: 收集散落在各处的记忆碎片解锁隐藏剧情\n- **世界Boss**: 多个新世界Boss掉落全新遗器套装和材料\n\n### 新探索机制\n- **维度切换**: 部分区域可在不同维度间切换，发现隐藏路径\n- **共鸣石碑**: 激活石碑可获得临时增益，帮助应对强敌\n- **裂隙挑战**: 限时战斗挑战，完成后获得珍贵奖励\n\n### Boss与奖励\n| Boss | 主要掉落 | 推荐属性 |\n|------|----------|----------|\n| 黄金守卫 | 新遗器套装 | 冰/量子 |\n| 裂隙领主 | 角色突破材料 | 风/想象 |\n| 忆界之主 | 光锥升级材料 | 火/雷 |\n\n### 探索建议\n- 优先完成主线解锁传送点\n- 维度切换机制需要仔细观察环境线索\n- 裂隙挑战建议练好队伍后再挑战",
+    "contentEn": "## Planarcadia Region Exploration Guide\n\n### Region Overview\nPlanarcadia is the new exploration area on the planet Amphoreus. The region centers around the **Chrysos Heirs** storyline and introduces a wealth of new exploration content, puzzles, and hidden rewards.\n\n### Main Exploration Content\n- **Chrysos Heirs Storyline**: Follow the narrative to uncover Amphoreus's deepest secrets\n- **Planar Labyrinth**: A unique maze mechanic that requires manipulating environmental mechanisms\n- **Memory Shards**: Collect scattered memory fragments to unlock hidden lore and side stories\n- **World Bosses**: Multiple new bosses drop brand-new relic sets and ascension materials\n\n### New Exploration Mechanics\n- **Dimension Shift**: Toggle between parallel dimensions to reveal hidden paths and treasures\n- **Resonance Monoliths**: Activate stone monoliths for temporary combat buffs against powerful enemies\n- **Rift Challenges**: Timed combat encounters with valuable rewards\n\n### Bosses and Rewards\n| Boss | Main Drops | Recommended Elements |\n|------|-----------|---------------------|\n| Golden Sentinel | New relic set | Ice / Quantum |\n| Rift Overlord | Character ascension mats | Wind / Imaginary |\n| Lord of Memoria | Light Cone upgrade mats | Fire / Lightning |\n\n### Exploration Tips\n- Complete the main quest first to unlock all teleport waypoints\n- Pay close attention to visual clues for Dimension Shift puzzles\n- Save Rift Challenges until your team is well-geared",
+    "tags": [
+      "Planarcadia",
+      "探索",
+      "Amphoreus",
+      "黄金裔",
+      "Exploration",
+      "Chrysos Heirs"
+    ],
+    "faq": [
+      {
+        "question": "How do I unlock Planarcadia?",
+        "questionZh": "怎么解锁Planarcadia区域？",
+        "answer": "Progress through the main story to the Amphoreus chapter. Planarcadia becomes accessible after completing the introductory quest line in the new region.",
+        "answerZh": "推进主线至Amphoreus章节，完成该区域的引导任务线后即可解锁Planarcadia。"
+      },
+      {
+        "question": "What are the best rewards in Planarcadia?",
+        "questionZh": "Planarcadia有什么重要奖励？",
+        "answer": "The region offers new relic sets from world bosses, exclusive Light Cones, Stellar Jade from chests and achievements, and memory shards that unlock bonus story content.",
+        "answerZh": "区域提供世界Boss掉落的新遗器套装、限定光锥、宝箱和成就给的星琼，以及忆界碎片解锁的额外剧情内容。"
+      },
+      {
+        "question": "How does Dimension Shift work?",
+        "questionZh": "维度切换怎么用？",
+        "answer": "Dimension Shift lets you toggle between two parallel versions of the same area. Hidden paths and treasures only appear in one dimension. Look for visual distortions as clues for where to switch.",
+        "answerZh": "维度切换可在同一区域的两个平行版本间切换。隐藏路径和宝箱只在一个维度中出现。注意观察视觉扭曲作为切换线索。"
+      }
+    ]
+  },
+  {
+    "id": "planar-sphere-guide",
+    "title": "位面球与连结绳选择指南",
+    "titleEn": "Planar Sphere & Link Rope Selection Guide",
+    "category": "equipment",
+    "categoryZh": "装备攻略",
+    "categoryEn": "Equipment",
+    "summary": "位面饰品选择全攻略：不同角色适合什么套装、主词条优先级、高效刷取建议。",
+    "summaryEn": "Complete guide to choosing planar ornaments — which sets for which characters, main stat priorities, and farming efficiency tips.",
+    "content": "## 位面球与连结绳选择指南\n\n### 位面饰品基础\n- 位面饰品为2件套，由位面球和连结绳组成\n- 主要通过模拟宇宙获取，也可使用沉浸器刷取\n- 2件套效果通常提供强力团队或个人增益\n\n### 热门位面饰品套装\n| 套装名 | 效果 | 适合角色 |\n|--------|------|----------|\n| 太空封印站 | 攻击力+12%，速度≥120时再+12%攻击 | 主C输出角色 |\n| 旭日竞技场 | 暴击率+8%，暴击≥70%时再+12%攻击 | 暴击型主C |\n| 不老的仙舟 | 生命+12%，速度≥120时+8%攻击（全队） | 辅助/治疗 |\n| 碎裂的龙骨 | 效果抵抗+10%，抵抗≥30%时+8%暴击伤害（全队） | 辅助/治疗 |\n| 盗贼公国 | 击破特攻+16%，击破时回复能量 | 击破流角色 |\n| 泛银河商业 | 效果命中+10%，命中提升攻击力 | 虚无命途角色 |\n\n### 位面球主词条选择\n- **输出角色**: 对应属性伤害加成（最优）> 攻击力%\n- **辅助角色**: 生命% 或 防御% 确保生存\n- **击破角色**: 攻击力% 配合击破词条\n\n### 连结绳主词条选择\n- **需要充能的角色**: 能量回复效率（如布洛妮娅、停云）\n- **击破流角色**: 击破特攻%\n- **其他角色**: 攻击力% 或 生命%\n\n### 刷取优先级\n1. 先确定角色需要的套装效果\n2. 主词条正确比副词条重要\n3. 副词条以速度和暴击为优\n4. 模拟宇宙每周免费沉浸器优先使用",
+    "contentEn": "## Planar Sphere & Link Rope Selection Guide\n\n### Planar Ornament Basics\nPlanar Ornaments are 2-piece sets composed of a Planar Sphere and a Link Rope. They are primarily obtained from Simulated Universe and can also be farmed using Immersifiers.\n\n### Popular Planar Ornament Sets\n| Set | Effect | Best For |\n|-----|--------|----------|\n| Space Sealing Station | ATK +12%; SPD >= 120 grants another +12% ATK | DPS characters |\n| Rutilant Arena | CRIT Rate +8%; CRIT >= 70% grants +12% ATK | Crit-based DPS |\n| Fleet of the Ageless | HP +12%; SPD >= 120 grants +8% ATK to team | Supports / Healers |\n| Broken Keel | Effect RES +10%; RES >= 30% grants +8% CRIT DMG to team | Supports / Healers |\n| Thief of Shooting Meteor | Break Effect +16%; Breaks regenerate Energy | Break teams |\n| Pan-Cosmic Commercial | Effect Hit Rate +10%; Hit Rate boosts ATK | Nihility characters |\n\n### Planar Sphere Main Stat Priority\n- **DPS**: Matching elemental DMG bonus (best) > ATK%\n- **Supports**: HP% or DEF% for survivability\n- **Break characters**: ATK% to supplement Break damage\n\n### Link Rope Main Stat Priority\n- **Energy-hungry characters**: Energy Regeneration% (e.g., Bronya, Tingyun)\n- **Break characters**: Break Effect%\n- **Others**: ATK% or HP%\n\n### Farming Tips\n1. Decide which set effect the character needs first\n2. Correct main stat matters more than substats\n3. Prioritize SPD and CRIT substats when possible\n4. Use your free weekly Immersifiers before spending Trailblaze Power",
+    "tags": [
+      "位面球",
+      "连结绳",
+      "位面饰品",
+      "Planar Sphere",
+      "Link Rope",
+      "Planar Ornaments"
+    ],
+    "faq": [
+      {
+        "question": "Which planar ornament set is best for DPS characters?",
+        "questionZh": "输出角色用什么位面饰品最好？",
+        "answer": "Rutilant Arena is the general best-in-slot for crit-based DPS. Space Sealing Station is a strong alternative, especially if your SPD is at least 120.",
+        "answerZh": "旭日竞技场是暴击型输出的最佳选择。太空封印站是强力替代，尤其速度达到120时。"
+      },
+      {
+        "question": "Should I use Energy Regeneration% or ATK% on Link Rope?",
+        "questionZh": "连结绳用能量回复还是攻击力？",
+        "answer": "Energy Regeneration% is essential for supports who need frequent Ultimates (Bronya, Tingyun). For most DPS characters, ATK% is preferred since their damage scaling benefits more from raw ATK.",
+        "answerZh": "需要频繁放大的辅助（布洛妮娅、停云）必用能量回复。大多数输出角色用攻击力%，因为伤害倍率更吃攻击力。"
+      },
+      {
+        "question": "How do I efficiently farm planar ornaments?",
+        "questionZh": "怎么高效刷位面饰品？",
+        "answer": "Use your free weekly Immersifiers first, then spend excess Trailblaze Power on Simulated Universe. Focus on getting the correct main stat before worrying about substats.",
+        "answerZh": "先用完每周免费沉浸器，多余的开拓力再投入模拟宇宙。优先确保主词条正确，再追求副词条。"
+      }
+    ]
+  },
+  {
+    "id": "endgame-modes-guide",
+    "title": "终局玩法攻略：虚构叙事与末日幻影",
+    "titleEn": "Endgame Modes Guide: Pure Fiction & Apocalyptic Shadow",
+    "category": "progression",
+    "categoryZh": "进阶攻略",
+    "categoryEn": "Progression",
+    "summary": "两大终局玩法攻略：虚构叙事与末日幻影的队伍需求、计分机制和策略差异。",
+    "summaryEn": "Strategy guide for HSR's two main endgame modes — team requirements, scoring mechanics, and how they differ from Memory of Chaos.",
+    "content": "## 终局玩法攻略：虚构叙事与末日幻影\n\n### 虚构叙事（Pure Fiction）\n- 以波次为核心的战斗模式，敌人分波次出现\n- 计分基于清波速度和伤害输出\n- 每期有特定增益效果，合理利用可大幅提升分数\n\n#### 虚构叙事要点\n- 需要强力的AOE输出角色（智识命途优势大）\n- 每期buff不同，根据buff调整队伍\n- 两路队伍都需要独立作战能力\n- 速度和能量回复是关键属性\n\n### 末日幻影（Apocalyptic Shadow）\n- Boss战为核心的终局模式\n- 每期有不同Boss和对应增益效果\n- 更考验单体输出和生存能力\n\n#### 末日幻影要点\n- 需要高单体DPS角色（巡猎/毁灭命途）\n- Boss机制各不相同，需针对性配队\n- 生存压力较大，治疗/护盾角色不可或缺\n- 注意Boss的弱点和阶段变化\n\n### 与混沌回忆的区别\n| 对比项 | 混沌回忆 | 虚构叙事 | 末日幻影 |\n|--------|----------|----------|----------|\n| 核心机制 | 两路精英战 | 波次清场 | Boss战 |\n| 推荐命途 | 毁灭/巡猎 | 智识/毁灭 | 巡猎/毁灭 |\n| 生存需求 | 中等 | 较低 | 较高 |\n| 速度要求 | 中等 | 高 | 中等 |\n\n### 通用策略\n- 提前了解当期增益效果并据此配队\n- 两路队伍保持均衡，不要一路过强另一路过弱\n- 每期轮换不同属性增益，需要培养多种属性角色",
+    "contentEn": "## Endgame Modes Guide: Pure Fiction & Apocalyptic Shadow\n\n### Pure Fiction\nPure Fiction is a wave-based combat mode where enemies arrive in successive waves. Your score is based on how quickly you clear waves and how much damage you deal. Each cycle features specific buffs that can dramatically boost your performance.\n\n#### Key Points\n- Strong AoE damage dealers are essential (Erudition path excels here)\n- Adjust your teams based on the current cycle's buff\n- Both sides of the stage need self-sufficient teams\n- SPD and Energy Regeneration are crucial stats\n\n### Apocalyptic Shadow\nApocalyptic Shadow is a boss-focused endgame mode. Each cycle features different bosses with unique mechanics and corresponding buffs. It tests your single-target damage output and sustain capabilities.\n\n#### Key Points\n- High single-target DPS characters are needed (Hunt / Destruction paths)\n- Each boss has unique mechanics — tailor your teams accordingly\n- Sustain pressure is heavy — healers and shielders are mandatory\n- Pay attention to boss weaknesses and phase transitions\n\n### Comparison with Memory of Chaos\n| Aspect | Memory of Chaos | Pure Fiction | Apocalyptic Shadow |\n|--------|----------------|-------------|-------------------|\n| Core Mechanic | Two-way elite fights | Wave clearing | Boss fights |\n| Best Paths | Destruction / Hunt | Erudition / Destruction | Hunt / Destruction |\n| Sustain Need | Medium | Lower | High |\n| SPD Requirement | Medium | High | Medium |\n\n### General Strategy\n- Study the current cycle's buffs and build teams around them\n- Keep both sides balanced — one overwhelmingly strong side won't compensate for a weak one\n- Each cycle rotates elemental buffs, so build a diverse roster across all elements",
+    "tags": [
+      "终局",
+      "虚构叙事",
+      "末日幻影",
+      "Endgame",
+      "Pure Fiction",
+      "Apocalyptic Shadow"
+    ],
+    "faq": [
+      {
+        "question": "What is the difference between Pure Fiction and Apocalyptic Shadow?",
+        "questionZh": "虚构叙事和末日幻影有什么区别？",
+        "answer": "Pure Fiction is wave-based and favors AoE damage dealers. Apocalyptic Shadow is boss-focused and rewards single-target DPS and sustain. They rotate on different schedules.",
+        "answerZh": "虚构叙事是波次制，适合AOE输出角色。末日幻影以Boss战为主，更考验单体输出和生存能力。两者交替开放。"
+      },
+      {
+        "question": "How many stars can I earn per cycle?",
+        "questionZh": "每期最多能拿多少星？",
+        "answer": "Each endgame mode has 3 stages with 3 stars each, for a total of 9 stars per mode. Stars award Stellar Jade and other resources. Reaching 6+ stars per mode is a good milestone.",
+        "answerZh": "每个终局模式有3个关卡，每关3星，共9星。星数奖励星琼和其他资源。每模式拿6星以上是不错的成绩。"
+      },
+      {
+        "question": "Can I clear endgame with 4-star characters?",
+        "questionZh": "4星角色能打终局吗？",
+        "answer": "Yes, but it requires strong builds and good team synergy. Focus on maxing traces, relics, and Light Cones. Some 4-stars like Herta and Serval are top picks for Pure Fiction.",
+        "answerZh": "可以，但需要好的练度和配队。重点拉满行迹、遗器和光锥。黑塔和希露瓦等4星是虚构叙事的强力选择。"
+      }
+    ]
+  },
+  {
+    "id": "meta-teams-guide",
+    "title": "当前版本主流配队推荐",
+    "titleEn": "Current Meta Team Recommendations",
+    "category": "team",
+    "categoryZh": "配队攻略",
+    "categoryEn": "Teams",
+    "summary": "v4.x当前版本主流配队一览：黄泉单核、飞霄追击、流萤击破、云璃反击等顶级队伍推荐。",
+    "summaryEn": "Up-to-date meta team guide for v4.x — Acheron hypercarry, Feixiao follow-up, Firefly break, Yunli counter, Elation and Remembrance team compositions.",
+    "content": "## 当前版本主流配队推荐\n\n### 黄泉单核队（Acheron Hypercarry）\n- **核心**: 黄泉 + 花火 + 银狼/佩拉 + 存护/丰饶\n- 黄泉是目前最强单体输出之一\n- 花火提供高额增伤和行动提前\n- 银狼或佩拉负责减防和挂弱点\n\n### 飞霄追击队（Feixiao Follow-up）\n- **核心**: 飞霄 + 知更鸟 + 停云 + 生存位\n- 飞霄的追击机制伤害极高\n- 知更鸟提供全队增伤和能量回复\n- 适合虚构叙事和混沌回忆\n\n### 流萤击破队（Firefly Break）\n- **核心**: 流萤 + 阮梅 + 同谐主 + 生存位\n- 流萤是击破流核心输出\n- 阮梅提供击破效率和减抗\n- 同谐主提供超击破加成\n\n### 云璃反击队（Yunli Counter）\n- **核心**: 云璃 + 知更鸟 + 停云/花火 + 生存位\n- 云璃以反击为核心输出方式\n- 需要吸引敌人攻击触发反击\n- 知更鸟的增伤完美适配\n\n### 欢愉队（Elation Teams）\n- **核心**: 曜青 + 火花机 + 谐乐辅助 + 生存位\n- 基于笑点系统的高爆发队伍\n- v4.0新命途配队\n\n### 记忆队（Remembrance Teams）\n- **核心**: 海辛 + 赛伦 + 辅助 + 生存位\n- 忆灵提供额外行动和输出\n- 适合长线战斗",
+    "contentEn": "## Current Meta Team Recommendations (v4.x)\n\n### Acheron Hypercarry\n- **Core**: Acheron + Sparkle + Silver Wolf / Pela + Sustain\n- Acheron is one of the strongest single-target DPS in the game\n- Sparkle provides massive damage buffs and action advance\n- Silver Wolf or Pela handles DEF shred and weakness implant\n\n### Feixiao Follow-up\n- **Core**: Feixiao + Robin + Tingyun + Sustain\n- Feixiao's follow-up attack mechanic deals incredible damage\n- Robin provides team-wide buffs and energy regeneration\n- Strong in both Pure Fiction and Memory of Chaos\n\n### Firefly Break\n- **Core**: Firefly + Ruan Mei + Harmony MC + Sustain\n- Firefly is the premier Break DPS\n- Ruan Mei provides Break Efficiency and resistance penetration\n- Harmony Trailblazer adds Super Break scaling\n\n### Yunli Counter\n- **Core**: Yunli + Robin + Tingyun / Sparkle + Sustain\n- Yunli deals damage primarily through counter-attacks\n- Requires drawing enemy aggro to trigger counters\n- Robin's buffs perfectly complement counter damage\n\n### Elation Teams (v4.0)\n- **Core**: Yao Guang + Sparxie + Harmony support + Sustain\n- Built around the Punchline burst mechanic\n- The newest path in the current meta\n\n### Remembrance Teams\n- **Core**: Hyacine + Cyrene + Support + Sustain\n- Memosprites provide additional actions and damage\n- Strong in sustained, longer fights",
+    "tags": [
+      "配队",
+      "主流",
+      "版本",
+      "Meta",
+      "Teams",
+      "v4.x"
+    ],
+    "faq": [
+      {
+        "question": "Which team should I invest in first?",
+        "questionZh": "先投资哪个队伍？",
+        "answer": "Acheron hypercarry is the most versatile and consistently strong across all endgame modes. Firefly Break is the best choice if you prefer a lower-investment team that clears efficiently.",
+        "answerZh": "黄泉单核队最全面，在各种终局模式中表现稳定。流萤击破队是低投入高效通关的最佳选择。"
+      },
+      {
+        "question": "Are the new Elation and Remembrance teams competitive?",
+        "questionZh": "新欢愉和记忆队有竞争力吗？",
+        "answer": "Yes. Elation teams excel in burst scenarios and AoE content, while Remembrance teams shine in sustained fights. Both are fully viable for clearing all endgame content.",
+        "answerZh": "有。欢愉队擅长爆发场景和AOE内容，记忆队在持久战中表现出色。两队都完全可以通关所有终局内容。"
+      },
+      {
+        "question": "How often does the meta shift?",
+        "questionZh": "环境多久变一次？",
+        "answer": "HSR's meta shifts with each major version (roughly every 6 weeks). New characters and path mechanics can shake up team rankings. However, core teams like Acheron and Firefly remain strong across multiple patches.",
+        "answerZh": "星铁环境随每个大版本变化（约6周）。新角色和新命途机制会影响排名。但黄泉和流萤等核心队伍在多个版本中保持强势。"
+      }
+    ]
   }
 ]

@@ -178,5 +178,167 @@
         "answerZh": "当主C满级且音擎拉满后再开始集中刷驱动盘。在此之前优先保证等级和技能材料。"
       }
     ]
+  },
+  {
+    "id": "rupture-specialty-guide",
+    "title": "突击专精完全攻略",
+    "titleEn": "Rupture Specialty Complete Guide",
+    "category": "combat",
+    "categoryZh": "战斗攻略",
+    "categoryEn": "Combat",
+    "summary": "深入解析v2.0新增的突击(Rupture)专精机制，包括核心代理人与配队思路。",
+    "summaryEn": "Deep dive into the Rupture specialty added in v2.0, including key agents and team building strategies.",
+    "content": "## 突击专精完全攻略\n\n突击(Rupture)是v2.0版本引入的全新专精类型，通过特定的连携机制造成高额伤害。\n\n### 一、突击机制核心\n\n- **突击值积累**：突击代理人攻击时积累突击值，满值后触发「突击爆发」\n- **无视防御**：突击爆发造成的伤害部分无视敌人防御\n- **连携加成**：突击代理人在换人连携时获得额外伤害加成\n- **弱点特效**：对处于眩晕状态的敌人造成额外伤害\n\n### 二、核心突击代理人\n\n| 代理人 | 属性 | 定位 | 特点 |\n|--------|------|------|------|\n| 仪玄(Yixuan) | 墨韵 | 核心突击输出 | 突击流派定义者，伤害与辅助兼具 |\n| 般岳(Banyue) | 火 | 火属性突击 | 火焰穿透，团队突击增益 |\n| 希希芙(Cissia) | 冰 | 冰属性突击 | 冰冻控制配合突击爆发 |\n| 狛野真斗 | 火 | A级突击 | 平民突击选择 |\n| 星徽·比利·奇德 | 物理 | 物理突击 | 比利觉醒形态 |\n\n### 三、突击队配队思路\n\n**标准突击队**：仪玄 + 般岳 + Lucia Elowen（支援）\n- 仪玄主C，般岳副C提供火属性突击，Lucia全队增伤\n\n**混合突击队**：般岳 + Dialyn（击破）+ Sunna（支援）\n- Dialyn快速积累眩晕，般岳在敌人眩晕后突击爆发\n\n### 四、驱动盘推荐\n\n- 突击套装4件：提升突击伤害和突击值积累速度\n- 暴击率/暴击伤害优先，其次攻击力%",
+    "contentEn": "## Rupture Specialty Complete Guide\n\nRupture is a new specialty type introduced in v2.0, dealing high damage through specific chain mechanics.\n\n### 1. Rupture Core Mechanics\n\n- **Rupture Gauge**: Rupture agents build gauge on attack, triggering \"Rupture Burst\" when full\n- **DEF Ignore**: Rupture Burst damage partially ignores enemy DEF\n- **Chain Bonus**: Rupture agents gain extra damage during switch-in chain attacks\n- **Weak Point Bonus**: Extra damage against Dazed enemies\n\n### 2. Key Rupture Agents\n\n| Agent | Attribute | Role | Highlight |\n|-------|-----------|------|----------|\n| Yixuan | Auric Ink | Core Rupture DPS | Defines the Rupture meta |\n| Banyue | Fire | Fire Rupture | Fire penetration + team buff |\n| Yidhari Murphy | Ice | Ice Rupture | Freeze synergy with Rupture |\n| Komano Manato | Fire | A-Rank Rupture | Budget option |\n| Starlight Billy Kid | Physical | Physical Rupture | Awakened Billy |\n\n### 3. Team Building\n\n**Standard Rupture**: Yixuan + Banyue + Lucia Elowen (Support)\n- Yixuan main DPS, Banyue sub-DPS, Lucia full-team buffs\n\n**Hybrid Rupture**: Banyue + Dialyn (Stun) + Sunna (Support)\n- Dialyn builds Daze fast, Banyue bursts after enemies are Dazed\n\n### 4. Drive Disc Recommendations\n\n- Rupture 4pc set: Boosts Rupture damage and gauge build speed\n- Priority: CRIT Rate/CRIT DMG > ATK%",
+    "tags": ["突击", "Rupture", "专精", "战斗", "Combat", "Specialty"],
+    "faq": [
+      {
+        "question": "Is Rupture better than Attack specialty?",
+        "questionZh": "突击比强攻更好吗？",
+        "answer": "Rupture excels at burst damage against Dazed enemies and has strong DEF-ignore. Attack is more consistent for sustained DPS. Both are viable — choose based on your roster.",
+        "answerZh": "突击在敌人眩晕后的爆发伤害更强且有穿防效果，强攻则持续输出更稳定。两者都可用，根据已有角色选择。"
+      },
+      {
+        "question": "Which Rupture agent should I build first?",
+        "questionZh": "先练哪个突击代理人？",
+        "answer": "Yixuan is the defining Rupture agent and the best starting point. If you don't have her, Komano Manato is a solid A-Rank alternative.",
+        "answerZh": "仪玄是突击流派的核心代理人，最佳起点。如果没有仪玄，狛野真斗是不错的A级替代。"
+      }
+    ]
+  },
+  {
+    "id": "new-attributes-guide",
+    "title": "新属性攻略：墨韵、利刃与风",
+    "titleEn": "New Attribute Guide: Auric Ink, Honed Edge & Wind",
+    "category": "combat",
+    "categoryZh": "战斗攻略",
+    "categoryEn": "Combat",
+    "summary": "全面解析v2.x新增的三种属性：墨韵(Auric Ink)、利刃(Honed Edge)和风(Wind)。",
+    "summaryEn": "Complete guide to the three new attributes in v2.x: Auric Ink, Honed Edge, and Wind.",
+    "content": "## 新属性攻略：墨韵、利刃与风\n\nv2.x版本为绝区零引入了三种全新属性，每种都有独特的战斗机制。\n\n### 一、墨韵(Auric Ink)\n\n- **代表代理人**：仪玄(Yixuan) — 云岌岭核心成员\n- **核心机制**：墨韵攻击施加「墨印」标记，叠加后触发范围墨爆\n- **异常状态**：墨韵侵蚀 — 持续降低敌人防御力\n- **配队思路**：墨韵+支援+击破的组合最为稳定\n\n### 二、利刃(Honed Edge)\n\n- **代表代理人**：叶瞬光(Ye Shunguang) — 云岌岭精锐剑客\n- **核心机制**：利刃攻击有「蓄刃」系统，蓄满后下一次攻击造成巨额伤害\n- **战斗风格**：快节奏的剑技连段，强调操作节奏感\n- **配队思路**：利刃输出+眩晕辅助+支援的标准三角阵型\n\n### 三、风(Wind)\n\n- **代表代理人**：维琳娜(Velina Airgid) — 对外战略科新锐\n- **核心机制**：风属性异常「风蚀」— 持续造成伤害并降低敌人异常抗性\n- **独特价值**：风属性可以与其他属性的异常状态产生额外反应\n- **配队思路**：风异常+其他异常属性的紊乱(Disorder)队伍\n\n### 四、新属性与现有体系的配合\n\n- 墨韵+电：墨印触发电属性额外伤害\n- 利刃+火：蓄刃攻击可触发火属性追加伤害\n- 风+以太：风蚀与以太异常形成双重异常(Disorder)效果",
+    "contentEn": "## New Attribute Guide: Auric Ink, Honed Edge & Wind\n\nv2.x introduced three brand-new attributes, each with unique combat mechanics.\n\n### 1. Auric Ink (墨韵)\n\n- **Key Agent**: Yixuan — Core member of Yunkui Summit\n- **Core Mechanic**: Ink attacks apply Ink Marks, stacking to trigger AoE Ink Bursts\n- **Anomaly**: Ink Erosion — continuously reduces enemy DEF\n- **Team Style**: Auric Ink + Support + Stun for stable output\n\n### 2. Honed Edge (利刃)\n\n- **Key Agent**: Ye Shunguang — Elite swordsman of Yunkui Summit\n- **Core Mechanic**: Edge Charge system — fully charged next attack deals massive damage\n- **Combat Style**: Fast-paced sword combos emphasizing rhythm\n- **Team Style**: Honed Edge DPS + Stun + Support triangle\n\n### 3. Wind (风)\n\n- **Key Agent**: Velina Airgid — Rising star of External Strategy Dept\n- **Core Mechanic**: Wind Erosion anomaly — continuous damage + lowers enemy Anomaly RES\n- **Unique Value**: Wind can create extra reactions with other attributes\n- **Team Style**: Wind Anomaly + another Anomaly for Disorder teams\n\n### 4. Cross-Attribute Synergies\n\n- Auric Ink + Electric: Ink Marks trigger bonus Electric damage\n- Honed Edge + Fire: Charged attacks trigger bonus Fire follow-up\n- Wind + Ether: Wind Erosion + Ether Anomaly creates Disorder effects",
+    "tags": ["新属性", "墨韵", "利刃", "风", "Auric Ink", "Honed Edge", "Wind"],
+    "faq": [
+      {
+        "question": "Which new attribute is the strongest?",
+        "questionZh": "哪个新属性最强？",
+        "answer": "Auric Ink has the strongest current meta presence due to Yixuan's dominance. Wind has the most potential for Disorder teams. Honed Edge is excellent for players who enjoy fast-paced combat.",
+        "answerZh": "墨韵因仪玄的强势表现目前meta地位最高。风属性在紊乱队中潜力最大。利刃适合喜欢快节奏操作的玩家。"
+      },
+      {
+        "question": "Do I need new Drive Discs for these attributes?",
+        "questionZh": "需要为新属性刷专用驱动盘吗？",
+        "answer": "Some new 4pc sets are optimized for the new attributes, but existing universal sets like Woodpecker Electro and Hormone Punk remain strong. Prioritize attribute-specific sets only if you main that attribute.",
+        "answerZh": "部分新4件套针对新属性优化，但现有通用的啄木鸟电音和激素朋克依然强力。只有主玩某属性时才优先刷专属套装。"
+      }
+    ]
+  },
+  {
+    "id": "shiyu-tactical-guide",
+    "title": "式舆战术攻略",
+    "titleEn": "Shiyu Defense Tactical Guide",
+    "category": "combat",
+    "categoryZh": "战斗攻略",
+    "categoryEn": "Combat",
+    "summary": "式舆防卫战(Shiyu Defense)终局模式攻略，包括阵容推荐与战术要点。",
+    "summaryEn": "Shiyu Defense endgame guide with team recommendations and tactical tips.",
+    "content": "## 式舆战术攻略\n\n式舆防卫战(Shiyu Defense)是绝区零的终局挑战模式，需要策略性地配置代理人队伍。\n\n### 一、基础机制\n\n- **关卡结构**：每期7个节点，逐步提升难度\n- **队伍要求**：需要配置多支3人小队应对不同节点\n- **评分系统**：根据通关时间和剩余生命值评分，追求S评价\n- **周期刷新**：定期更新敌人配置和环境Buff\n\n### 二、队伍搭配原则\n\n1. **核心输出+眩晕+支援**：标准三角阵型\n2. **属性克制**：根据节点敌人弱点选择对应属性\n3. **连携循环**：确保3个代理人之间有流畅的换人连携\n4. **生存保障**：至少一个角色具备防御或回复能力\n\n### 三、节点策略\n\n| 节点类型 | 推荐策略 | 注意事项 |\n|----------|----------|----------|\n| 精英怪群 | 范围输出+聚怪 | 优先清理小怪 |\n| Boss单挑 | 单体爆发+闪避 | 熟悉Boss攻击模式 |\n| 混合波次 | 控制+持续输出 | 保留大招给最后一波 |\n\n### 四、常见阵容推荐\n\n- **电击队**：零号安比 + Seed + 露西\n- **以太队**：Aria + Vivian + Lucia Elowen\n- **突击队**：仪玄 + 般岳 + Pan Yinhu\n- **通用队**：朱鸢 + 妮可 + 安比\n\n### 五、操作技巧\n\n- 善用极限闪避进入子弹时间，创造输出窗口\n- 连携攻击是主要伤害来源，练习换人时机\n- Boss的红色闪光提示无法闪避的攻击，需要换人躲避",
+    "contentEn": "## Shiyu Defense Tactical Guide\n\nShiyu Defense is ZZZ's endgame challenge mode requiring strategic agent deployment.\n\n### 1. Basic Mechanics\n\n- **Structure**: 7 nodes per season, increasing difficulty\n- **Teams**: Deploy multiple 3-agent squads for different nodes\n- **Scoring**: Based on clear time and remaining HP, aim for S-rank\n- **Reset**: Enemy lineups and environmental buffs update periodically\n\n### 2. Team Building Principles\n\n1. **DPS + Stun + Support**: Standard triangle formation\n2. **Attribute counter**: Match agent elements to node enemy weaknesses\n3. **Chain loop**: Ensure smooth switch-in chains between all 3 agents\n4. **Survival**: At least one agent with defensive or healing capabilities\n\n### 3. Node Strategy\n\n| Node Type | Strategy | Notes |\n|-----------|----------|-------|\n| Elite mobs | AoE DPS + grouping | Clear adds first |\n| Boss fight | Single-target burst + dodge | Learn Boss attack patterns |\n| Mixed waves | Control + sustained DPS | Save Ultimate for last wave |\n\n### 4. Recommended Teams\n\n- **Electric**: Soldier 0 Anby + Seed + Lucy\n- **Ether**: Aria + Vivian + Lucia Elowen\n- **Rupture**: Yixuan + Banyue + Pan Yinhu\n- **Universal**: Zhu Yuan + Nicole + Anby\n\n### 5. Combat Tips\n\n- Use Perfect Dodge to enter bullet time for damage windows\n- Chain attacks are your main damage source — practice switch timing\n- Boss red flash indicates un-dodgeable attacks — switch out to avoid",
+    "tags": ["式舆", "终局", "战术", "Shiyu", "Endgame", "Tactical"],
+    "faq": [
+      {
+        "question": "What level should my agents be for Shiyu Defense?",
+        "questionZh": "代理人需要多少级打式舆？",
+        "answer": "Aim for Level 50+ with maxed W-Engines and decent Drive Discs for comfortable clears. S-rank may require Level 60 with optimized builds.",
+        "answerZh": "建议50级以上、满级音擎和不错的驱动盘。S评价可能需要60级和优化后的配装。"
+      },
+      {
+        "question": "Can I reuse agents across nodes?",
+        "questionZh": "不同节点可以重复使用代理人吗？",
+        "answer": "No. Each agent can only be used once per Shiyu Defense run, so you need multiple well-built teams to clear all nodes.",
+        "answerZh": "不行。每个代理人每轮只能使用一次，所以需要多支练度足够的队伍才能通关所有节点。"
+      }
+    ]
+  },
+  {
+    "id": "drive-disc-advanced-guide",
+    "title": "驱动盘进阶攻略：词条选择与搭配",
+    "titleEn": "Advanced Drive Disc Guide: Substats & Combinations",
+    "category": "equipment",
+    "categoryZh": "装备攻略",
+    "categoryEn": "Equipment",
+    "summary": "进阶驱动盘指南，详解副词条优先级、套装选择与驱动盘刷取策略。",
+    "summaryEn": "Advanced Drive Disc guide covering substat priority, set selection, and farming strategy.",
+    "content": "## 驱动盘进阶攻略\n\n驱动盘系统是绝区零角色养成的核心，占代理人总属性的50%以上。\n\n### 一、副词条优先级\n\n**输出型代理人**\n1. 暴击率 / 暴击伤害（最优先）\n2. 攻击力%\n3. 穿透率 / 穿透值\n4. 属性伤害加成\n\n**击破型代理人**\n1. 冲击力（最优先）\n2. 攻击力% / 属性伤害\n3. 能量自动回复\n\n**支援型代理人**\n1. 能量自动回复（最优先）\n2. 生命值% / 防御力%\n3. 为团队提供增益的相关词条\n\n### 二、热门套装速查\n\n| 套装 | 适用类型 | 核心效果 |\n|------|----------|----------|\n| 啄木鸟电音 | 通用输出 | 暴击+普攻增伤 |\n| 激素朋克 | 爆发输出 | 开局增伤 |\n| 自由布鲁斯 | 异常输出 | 异常精通+异常伤害 |\n| 摇滚节拍 | 击破型 | 冲击力+眩晕效率 |\n| 原始朋克 | 支援型 | 为团队提供增益 |\n| 灵魂摇滚 | 防御型 | 护盾+减伤 |\n\n### 三、4件套 vs 2+2搭配\n\n- **4件套**：套装效果完整，通常比2+2强10-15%\n- **2+2搭配**：毕业速度快，适合过渡期\n- **推荐**：先用2+2快速成型，再逐步替换为4件套\n\n### 四、刷取策略\n\n1. **主词条正确**优先：先用主词条正确的散件\n2. **+9测试**：强化到+9看副词条，歪了就放弃\n3. **暴击比例**：暴击率:暴击伤害 ≈ 1:2\n4. **集中刷一个本**：优先刷利用率最高的副本",
+    "contentEn": "## Advanced Drive Disc Guide\n\nDrive Discs contribute over 50% of an agent's total stats, making them essential for endgame content.\n\n### 1. Substat Priority\n\n**DPS Agents**\n1. CRIT Rate / CRIT DMG (highest priority)\n2. ATK%\n3. Penetration Ratio / Penetration Value\n4. Attribute DMG Bonus\n\n**Stun Agents**\n1. Impact (highest priority)\n2. ATK% / Attribute DMG\n3. Energy Auto-Recovery\n\n**Support Agents**\n1. Energy Auto-Recovery (highest priority)\n2. HP% / DEF%\n3. Team buff-related stats\n\n### 2. Popular Set Quick Reference\n\n| Set | Best For | Core Effect |\n|-----|----------|-------------|\n| Woodpecker Electro | Universal DPS | CRIT + Normal ATK bonus |\n| Hormone Punk | Burst DPS | Opening damage buff |\n| Freedom Blues | Anomaly DPS | Anomaly Mastery + Anomaly DMG |\n| Swing Jazz | Stun agents | Impact + Daze efficiency |\n| Proto Punk | Support | Team-wide buffs |\n| Soul Rock | Defense | Shield + DMG reduction |\n\n### 3. 4pc Set vs 2+2 Mix\n\n- **4pc**: Full set bonus, usually 10-15% stronger than 2+2\n- **2+2**: Faster to build, great for transition period\n- **Recommendation**: Start with 2+2, gradually replace with 4pc\n\n### 4. Farming Strategy\n\n1. **Correct main stat first**: Use pieces with the right main stat\n2. **Test at +9**: Upgrade to +9 and check substats — scrap bad rolls\n3. **CRIT ratio**: Aim for ~1:2 CRIT Rate to CRIT DMG\n4. **Focus one domain**: Farm the most versatile domain first",
+    "tags": ["驱动盘", "装备", "词条", "Drive Disc", "Equipment", "Substats"],
+    "faq": [
+      {
+        "question": "Should I use 4pc or 2+2?",
+        "questionZh": "4件套好还是2+2好？",
+        "answer": "4pc is stronger but harder to build. Use 2+2 during transition, then upgrade to 4pc as you get better pieces. Woodpecker Electro 4pc is a safe universal choice for DPS.",
+        "answerZh": "4件套更强但更难毕业。过渡期用2+2，之后逐步替换为4件套。啄木鸟电音4件套是输出代理人的安全选择。"
+      },
+      {
+        "question": "Which Drive Disc domain should I farm first?",
+        "questionZh": "优先刷哪个驱动盘副本？",
+        "answer": "Farm the domain that drops Woodpecker Electro + Freedom Blues. Both sets are widely used, making it the most resin-efficient choice.",
+        "answerZh": "优先刷掉落啄木鸟电音+自由布鲁斯的副本。两套都通用性强，性价比最高。"
+      }
+    ]
+  },
+  {
+    "id": "meta-teams-v2-guide",
+    "title": "v2.x版本主流配队推荐",
+    "titleEn": "v2.x Meta Team Recommendations",
+    "category": "team",
+    "categoryZh": "配队攻略",
+    "categoryEn": "Teams",
+    "summary": "v2.x版本最强配队推荐，涵盖突击队、新属性队和经典队伍。",
+    "summaryEn": "Best teams for v2.x, covering Rupture, new attribute, and classic compositions.",
+    "content": "## v2.x版本主流配队推荐\n\n### 一、突击队（当前版本最强体系）\n\n**仪玄突击队**\n- 仪玄(Yixuan) + 般岳(Banyue) + Lucia Elowen\n- 核心：仪玄墨韵突击爆发 + Lucia全队增伤\n- 评价：★★★★★ 版本T0\n\n**般岳火突击队**\n- 般岳 + Dialyn(击破) + Sunna(支援)\n- 核心：Dialyn快速眩晕 + 般岳突击爆发\n- 评价：★★★★★\n\n### 二、电属性队伍\n\n**零号安比电队**\n- 零号安比 + Seed + 露西\n- 核心：安比爆发 + Seed持续输出\n- 评价：★★★★☆\n\n**希希芙电队**\n- 希希芙 + Orphie & Magus + 露西\n- 核心：希希芙高输出 + 露西火属性支援\n- 评价：★★★★☆\n\n### 三、异常队伍\n\n**以太紊乱队**\n- Aria + Vivian + Lucia Elowen\n- 核心：双重以太异常触发紊乱(Disorder)\n- 评价：★★★★★\n\n**风属性紊乱队**\n- Velina Airgid + Aria + Sunna\n- 核心：风+以太双重异常\n- 评价：★★★★☆\n\n### 四、物理队伍\n\n**叶瞬光利刃队**\n- 叶瞬光 + 浮波柚叶 + Ukinami Yuzuha\n- 核心：叶瞬光利刃爆发 + Yuzuha物理支援\n- 评价：★★★★☆\n\n**Alice物理异常队**\n- Alice Thymefield + Ukinami Yuzuha + Sunna\n- 核心：Alice物理异常 + Yuzuha支援\n- 评价：★★★★☆\n\n### 五、配队通用原则\n\n1. 三角阵型：输出 + 控制/击破 + 支援\n2. 属性一致：尽量同属性触发共鸣\n3. 连携循环：确保换人连携流畅\n4. 灵活调整：根据敌人弱点替换代理人",
+    "contentEn": "## v2.x Meta Team Recommendations\n\n### 1. Rupture Teams (Current Top Meta)\n\n**Yixuan Rupture**\n- Yixuan + Banyue + Lucia Elowen\n- Core: Yixuan Auric Ink Rupture burst + Lucia team buffs\n- Rating: ★★★★★ Tier 0\n\n**Banyue Fire Rupture**\n- Banyue + Dialyn (Stun) + Sunna (Support)\n- Core: Dialyn fast Daze + Banyue Rupture burst\n- Rating: ★★★★★\n\n### 2. Electric Teams\n\n**Soldier 0 Anby Electric**\n- Soldier 0 Anby + Seed + Lucy\n- Core: Anby burst + Seed sustained damage\n- Rating: ★★★★☆\n\n**Cissia Electric**\n- Cissia + Orphie & Magus + Lucy\n- Core: Cissia high DPS + Lucy fire support\n- Rating: ★★★★☆\n\n### 3. Anomaly Teams\n\n**Ether Disorder**\n- Aria + Vivian + Lucia Elowen\n- Core: Double Ether anomaly triggering Disorder\n- Rating: ★★★★★\n\n**Wind Disorder**\n- Velina Airgid + Aria + Sunna\n- Core: Wind + Ether double anomaly\n- Rating: ★★★★☆\n\n### 4. Physical Teams\n\n**Ye Shunguang Honed Edge**\n- Ye Shunguang + Ukinami Yuzuha + Sunna\n- Core: Honed Edge burst + Physical support\n- Rating: ★★★★☆\n\n**Alice Physical Anomaly**\n- Alice Thymefield + Ukinami Yuzuha + Sunna\n- Core: Alice Physical Anomaly + Yuzuha support\n- Rating: ★★★★☆\n\n### 5. Universal Team Principles\n\n1. Triangle: DPS + Stun/Control + Support\n2. Attribute match: Same-attribute agents for resonance\n3. Chain loop: Smooth switch-in chains\n4. Flexibility: Swap agents based on enemy weaknesses",
+    "tags": ["配队", "meta", "v2.x", "Teams", "Meta", "Current"],
+    "faq": [
+      {
+        "question": "What is the best team in v2.x?",
+        "questionZh": "v2.x最强队伍是什么？",
+        "answer": "Yixuan Rupture team (Yixuan + Banyue + Lucia Elowen) is currently the strongest. It excels in both Shiyu Defense and general content.",
+        "answerZh": "仪玄突击队（仪玄+般岳+Lucia Elowen）目前最强，在式舆和日常内容中都表现出色。"
+      },
+      {
+        "question": "Can I build a strong team with A-Rank agents?",
+        "questionZh": "A级代理人能组强队吗？",
+        "answer": "Yes. Komano Manato (A-Rank Rupture) + Pan Yinhu (A-Rank Defense) + any S-Rank Support can clear most content. A-Rank agents are viable with good builds.",
+        "answerZh": "可以。狛野真斗(A级突击)+潘引壶(A级防护)+任意S级支援可以通关大部分内容。A级代理人在好的配装下完全可用。"
+      }
+    ]
+  },
+  {
+    "id": "agent-progression-guide",
+    "title": "代理人养成完全指南",
+    "titleEn": "Complete Agent Progression Guide",
+    "category": "progression",
+    "categoryZh": "进阶攻略",
+    "categoryEn": "Progression",
+    "summary": "从零到毕业的代理人养成路线，包括等级、技能、音擎和驱动盘的优先级规划。",
+    "summaryEn": "Complete agent building roadmap from zero to endgame, including level, skills, W-Engine, and Drive Disc priorities.",
+    "content": "## 代理人养成完全指南\n\n### 一、养成优先级顺序\n\n1. **等级提升** → 2. **音擎(武器)** → 3. **核心被动** → 4. **技能升级** → 5. **驱动盘**\n\n### 二、等级与突破\n\n- 代理人最高等级为60级\n- 每10级需要突破材料（通过模拟作战获取）\n- **优先将主C升满**，辅助可以暂缓\n- 突破材料分为通用材料和属性专属材料\n\n### 三、音擎(W-Engine)选择\n\n| 代理人类型 | 推荐音擎副词条 | 推荐获取方式 |\n|------------|---------------|-------------|\n| 输出型 | 暴击率/攻击力% | 限定音擎池 |\n| 击破型 | 冲击力 | 常驻/锻造 |\n| 异常型 | 异常精通 | 限定/常驻 |\n| 支援型 | 能量回复/生命% | 常驻 |\n\n**免费音擎推荐**：\n- 任务和活动送的音擎通常够用\n- 锻造系统可以制作实用的A级音擎\n\n### 四、技能升级优先级\n\n**输出代理人**\n1. 核心被动（最重要）\n2. 特殊技\n3. 终结技\n4. 普攻（最后）\n\n**支援/击破代理人**\n1. 核心被动\n2. 特殊技（含增益效果）\n3. 连携技\n4. 其他\n\n### 五、驱动盘刷取路线\n\n1. **前期**：用散件凑主属性正确的即可\n2. **中期**：刷2+2过渡套装\n3. **后期**：追求4件套+极品副词条\n\n### 六、资源规划建议\n\n- **丁尼(金币)**：永远不够用，优先花在主C上\n- **调查点数(体力)**：每天必须用完\n- **技能材料**：根据上述优先级分配\n- **突破材料**：提前规划，按周刷取",
+    "contentEn": "## Complete Agent Progression Guide\n\n### 1. Priority Order\n\n1. **Level Up** → 2. **W-Engine** → 3. **Core Passive** → 4. **Skill Upgrades** → 5. **Drive Discs**\n\n### 2. Level & Ascension\n\n- Max agent level is 60\n- Every 10 levels requires ascension materials (from Simulation Battles)\n- **Max out your DPS first**, supports can wait\n- Materials include universal + attribute-specific types\n\n### 3. W-Engine Selection\n\n| Agent Type | Recommended Substat | Source |\n|------------|-------------------|--------|\n| DPS | CRIT Rate/ATK% | Limited W-Engine banner |\n| Stun | Impact | Standard/Forge |\n| Anomaly | Anomaly Mastery | Limited/Standard |\n| Support | Energy Regen/HP% | Standard |\n\n**Free W-Engine Tips**:\n- Event and quest W-Engines are usually sufficient\n- Forging system can craft useful A-Rank W-Engines\n\n### 4. Skill Upgrade Priority\n\n**DPS Agents**\n1. Core Passive (most important)\n2. Special Skill\n3. Ultimate\n4. Normal Attack (last)\n\n**Support/Stun Agents**\n1. Core Passive\n2. Special Skill (including buff effects)\n3. Chain Attack\n4. Others\n\n### 5. Drive Disc Farming Route\n\n1. **Early**: Use random pieces with correct main stats\n2. **Mid**: Farm 2+2 transitional sets\n3. **Late**: Pursue 4pc sets with optimal substats\n\n### 6. Resource Planning\n\n- **Denny (gold)**: Never enough — spend on DPS first\n- **Survey Points (stamina)**: Use daily, never waste\n- **Skill materials**: Allocate based on priority above\n- **Ascension materials**: Plan ahead, farm weekly",
+    "tags": ["养成", "进阶", "规划", "Progression", "Building", "Guide"],
+    "faq": [
+      {
+        "question": "Which agent should I max first?",
+        "questionZh": "先满练哪个代理人？",
+        "answer": "Always max your main DPS first — level, W-Engine, core passive, and skills. Then build your Stun agent, and finally your Support.",
+        "answerZh": "优先满练主C——等级、音擎、核心被动和技能。然后练击破代理人，最后练支援。"
+      },
+      {
+        "question": "Should I spread resources or focus one agent?",
+        "questionZh": "分散资源还是集中培养？",
+        "answer": "Always focus on one agent at a time. A fully built agent is far more valuable than three half-built ones. Complete your DPS before starting the next agent.",
+        "answerZh": "集中培养一个代理人。一个完全成型的角色远比三个半成品有价值。先把主C练完再练下一个。"
+      }
+    ]
   }
 ]

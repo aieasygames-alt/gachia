@@ -218,5 +218,245 @@
         "answerZh": "当觉得当前难度可以轻松应对时再提升。更高的SOL3掉落更好但敌人更强。太难了可以随时降低。"
       }
     ]
+  },
+  {
+    "id": "roya-frostlands-guide",
+    "title": "Roya Frostlands区域探索攻略",
+    "titleEn": "Roya Frostlands Region Exploration Guide",
+    "category": "exploration",
+    "categoryZh": "探索攻略",
+    "categoryEn": "Exploration",
+    "summary": "v3.x全新冰冻区域Roya Frostlands探索攻略：新声骸类型、探索机制、Boss遭遇和收集品。",
+    "summaryEn": "Complete exploration guide for the new v3.x frozen region Roya Frostlands: new Echo types, exploration mechanics, boss encounters, and collectibles.",
+    "content": "## Roya Frostlands区域探索攻略\n\n### 1. 区域概览\nRoya Frostlands是v3.x版本新增的冰冻区域，拥有独特的冰雪环境和全新探索机制：\n- 区域等级建议：Union Level 40+\n- 新环境机制：暴风雪、冰面滑行、冻结陷阱\n- 区域Boss：Frost Sovereign、Glacial Titan\n- 新增声骸类型：冰系Cost 4灾厄声骸\n\n### 2. 探索机制\n- **冰面滑行**: 在冻结湖面上可高速滑行，节省探索时间\n- **暴风雪区域**: 视野受限，需要使用保暖道具或特定角色技能\n- **冰封宝箱**: 需要用火属性攻击或特定机关解冻\n- **冰裂地形**: 小心薄冰区域，踩踏会掉入下方洞穴\n\n### 3. 新声骸\n- **Frost Sovereign**: 4-COST灾厄声骸，冰属性AOE技能\n- **Glacial Wraith**: 3-COST精英声骸，提供冰伤加成\n- **Frost Whisp**: 1-COST普通声骸，冰属性辅助\n\n### 4. 收集品\n- 区域特产：永冻花、霜晶石\n- 声骸数据银行新增12种冰系声骸\n- 隐藏宝箱共计47个\n- 共鸣灯塔4座\n\n### 5. 探索建议\n1. 优先激活共鸣灯塔照亮地图\n2. 携带火属性角色应对冰封机关\n3. 完成区域主线后再进行深度探索\n4. 暴风雪区域建议组队探索",
+    "contentEn": "## Roya Frostlands Region Exploration Guide\n\n### 1. Region Overview\nRoya Frostlands is the new frozen region added in v3.x, featuring unique icy environments and new exploration mechanics:\n- Recommended level: Union Level 40+\n- New environmental mechanics: Blizzard zones, ice sliding, freeze traps\n- Region Bosses: Frost Sovereign, Glacial Titan\n- New Echo types: Glacio-elemental Calamity Echoes (Cost 4)\n\n### 2. Exploration Mechanics\n- **Ice Sliding**: Skate across frozen lakes for fast travel\n- **Blizzard Zones**: Reduced visibility, use warming items or specific character skills\n- **Frozen Chests**: Require fire-element attacks or puzzle mechanisms to unfreeze\n- **Cracked Ice**: Watch for thin ice that breaks and drops you into caverns below\n\n### 3. New Echoes\n- **Frost Sovereign**: 4-COST Calamity Echo, Glacio AOE skill\n- **Glacial Wraith**: 3-COST Elite Echo, provides Glacio DMG bonus\n- **Frost Whisp**: 1-COST Common Echo, Glacio support utility\n\n### 4. Collectibles\n- Regional specialties: Permafrost Bloom, Frost Crystal Ore\n- 12 new Glacio Echoes added to the Data Bank\n- 47 hidden chests total\n- 4 Resonance Beacons to activate\n\n### 5. Tips\n1. Activate Resonance Beacons first to reveal the map\n2. Bring a fire-element character for frozen mechanisms\n3. Complete the regional story quest before deep exploration\n4. Blizzard zones are easier to navigate in co-op",
+    "tags": [
+      "探索",
+      "Roya Frostlands",
+      "冰冻区域",
+      "Exploration",
+      "Frozen Region",
+      "v3.x"
+    ],
+    "faq": [
+      {
+        "question": "What level should I be for Roya Frostlands?",
+        "questionZh": "Roya Frostlands建议什么等级去？",
+        "answer": "Union Level 40+ is recommended. Enemies in the region scale from Lv.60-80, and the main boss encounters require well-built teams with at least one fire-element character.",
+        "answerZh": "建议Union Level 40+。区域敌人等级60-80，主线Boss需要成型队伍，建议至少带一个火属性角色。"
+      },
+      {
+        "question": "How do I unlock the Frost Sovereign boss?",
+        "questionZh": "怎么解锁Frost Sovereign Boss？",
+        "answer": "Complete the Roya Frostlands main story quest line. The boss arena becomes accessible after finishing the quest 'The Frozen Throne'. It costs 60 Waveplate per attempt.",
+        "answerZh": "完成Roya Frostlands主线任务线。完成「冰封王座」任务后Boss竞技场解锁，每次挑战消耗60波片。"
+      },
+      {
+        "question": "Are there any hidden areas in Roya Frostlands?",
+        "questionZh": "Roya Frostlands有隐藏区域吗？",
+        "answer": "Yes, there are several ice caverns hidden beneath cracked ice surfaces and a secret underground lake accessible through a frozen waterfall. These areas contain rare chests and Echo spawns.",
+        "answerZh": "有，薄冰下方隐藏着多个冰洞，还有通过冰冻瀑布进入的地下湖。这些区域包含稀有宝箱和声骸刷新点。"
+      }
+    ]
+  },
+  {
+    "id": "echo-advanced-guide",
+    "title": "声骸进阶攻略：词条与套装搭配",
+    "titleEn": "Advanced Echo Guide: Stats & Set Combinations",
+    "category": "echo",
+    "categoryZh": "声骸攻略",
+    "categoryEn": "Echo",
+    "summary": "深入解析声骸副词条优先级、各角色套装选择、Cost搭配策略和调律技巧。",
+    "summaryEn": "In-depth guide to Echo substat priorities, set choices per character, COST optimization strategies, and tuning techniques.",
+    "content": "## 声骸进阶攻略：词条与套装搭配\n\n### 1. 副词条优先级\n不同定位角色的副词条优先级不同：\n- **主C**: 暴击率 > 暴击伤害 > 攻击力% > 元素伤害加成 > 充能\n- **副C**: 暴击率 > 暴击伤害 > 元素伤害加成 > 攻击力% > 充能\n- **辅助**: 充能效率 > 生命值% > 防御力% > 攻击力%\n- **治疗**: 充能效率 > 生命值% > 治疗加成 > 防御力%\n\n### 2. 套装选择指南\n| 定位 | 推荐套装 | 备选 |\n|------|----------|------|\n| 冰系主C | 凝寒霜焰5件 | 2+2+1混搭 |\n| 火系主C | 热熔裂隙5件 | 2+2+1混搭 |\n| 雷系主C | 雷啸霆击5件 | 2+2+1混搭 |\n| 通用辅助 | 月华之力5件 | 治愈之光2+月华2 |\n| 治疗角色 | 治愈之光5件 | 月华2+治愈2 |\n\n### 3. Cost搭配策略\n- **4+4+3+1+1**: 最大化5件套，适合大多数情况\n- **4+3+3+1+1**: 两个3-COST提供更灵活的属性选择\n- **Cost 4声骸**优先选择灾厄/霸主声骸，主属性更强\n\n### 4. 调律(Tuning)技巧\n- 每次调律随机强化一个副词条\n- 前两次调律先用低级材料测试\n- 如果前两次强化到无用词条，建议换一个声骸\n- 目标：暴击率+暴击伤害合计40%以上为合格\n\n### 5. 常见误区\n- 不要为了套装效果牺牲优质副词条\n- 2件套+散搭有时优于5件套烂词条\n- 主C的暴击率建议稳定在70%以上再堆暴击伤害",
+    "contentEn": "## Advanced Echo Guide: Stats & Set Combinations\n\n### 1. Substat Priority\nSubstat priority varies by role:\n- **Main DPS**: CRIT Rate > CRIT DMG > ATK% > Elemental DMG Bonus > Energy Recharge\n- **Sub DPS**: CRIT Rate > CRIT DMG > Elemental DMG Bonus > ATK% > Energy Recharge\n- **Support**: Energy Recharge > HP% > DEF% > ATK%\n- **Healer**: Energy Recharge > HP% > Healing Bonus > DEF%\n\n### 2. Set Selection Guide\n| Role | Recommended Set | Alternative |\n|------|----------------|-------------|\n| Glacio DPS | Glacio 5-piece | 2+2+1 mixed |\n| Fusion DPS | Fusion 5-piece | 2+2+1 mixed |\n| Electro DPS | Electro 5-piece | 2+2+1 mixed |\n| General Support | Moonlit 5-piece | Healing 2 + Moonlit 2 |\n| Healer | Healing 5-piece | Moonlit 2 + Healing 2 |\n\n### 3. COST Strategy\n- **4+4+3+1+1**: Maximizes 5-piece set, suitable for most cases\n- **4+3+3+1+1**: Two 3-COST Echoes for more flexible stat options\n- Prioritize Calamity/Overlord Echoes for Cost 4 slots due to stronger main stats\n\n### 4. Tuning Tips\n- Each tuning randomly upgrades one substat\n- Use low-grade materials for the first two rolls as a test\n- If the first two rolls hit useless stats, switch to a different Echo\n- Target: combined CRIT Rate + CRIT DMG above 40% is acceptable\n\n### 5. Common Mistakes\n- Don't sacrifice good substats for set bonuses\n- 2-piece + off-set pieces with great stats can outperform 5-piece with bad stats\n- Aim for 70%+ CRIT Rate on main DPS before stacking CRIT DMG",
+    "tags": [
+      "声骸",
+      "词条",
+      "套装",
+      "Echo",
+      "Substats",
+      "Sets"
+    ],
+    "faq": [
+      {
+        "question": "Should I use 5-piece set or 2+2+1 mixed?",
+        "questionZh": "用5件套还是2+2+1混搭？",
+        "answer": "5-piece sets are ideal for main DPS characters. For supports and sub-DPS, 2+2+1 with better substats often performs equally well or better. Always compare total stats, not just set count.",
+        "answerZh": "主C建议5件套。辅助和副C用2+2+1且副词条更好的话，效果可能等同甚至更优。要比较总词条而非仅看套装数。"
+      },
+      {
+        "question": "What is a good CRIT ratio to aim for?",
+        "questionZh": "暴击率/暴击伤害比例多少合适？",
+        "answer": "Aim for approximately 1:2 ratio of CRIT Rate to CRIT DMG (e.g., 70% CRIT Rate / 140% CRIT DMG). Prioritize reaching at least 70% CRIT Rate before investing heavily into CRIT DMG.",
+        "answerZh": "建议暴击率:暴击伤害约1:2（如70%/140%）。优先保证暴击率70%以上再大量堆暴击伤害。"
+      },
+      {
+        "question": "How many tuning rolls should I invest in an Echo?",
+        "questionZh": "一个声骸应该调律几次？",
+        "answer": "Roll the first two substats using cheap materials. If both land on priority stats, continue investing. If both land on low-value stats (DEF flat, HP flat), consider moving to a different Echo.",
+        "answerZh": "先用低级材料开两个副词条。如果都强化到优先词条就继续投资。如果都强化到低价值词条（防御力固定值、生命值固定值），考虑换声骸。"
+      }
+    ]
+  },
+  {
+    "id": "team-advanced-guide",
+    "title": "鸣潮进阶配队攻略",
+    "titleEn": "Advanced Team Building Guide",
+    "category": "team",
+    "categoryZh": "配队攻略",
+    "categoryEn": "Teams",
+    "summary": "进阶配队指南：v3.x主流队伍、Camellya配队、Carlotta配队、Jinhsi超载队、Shorekeeper辅助体系。",
+    "summaryEn": "Advanced team building guide: v3.x meta teams, Camellya teams, Carlotta teams, Jinhsi hypercarry, and Shorekeeper support compositions.",
+    "content": "## 鸣潮进阶配队攻略\n\n### 1. 配队基本原则\n- 属性共鸣：同属性角色触发入战/退战增益\n- 协奏循环：确保三个角色能顺畅循环切换\n- 功能互补：主C + 副C/增幅 + 辅助/治疗\n- 波片效率：共用材料的角色一起练更省资源\n\n### 2. Carlotta超载队\n- **Carlotta (主C)** + **Roccia (副C)** + **Shorekeeper (辅助)**\n- Carlotta与Roccia形成强力双核输出\n- Shorekeeper提供全队增益和治疗\n- 替换：Roccia可换为其他衍射副C\n\n### 3. Camellya衍射队\n- **Camellya (主C)** + **Rover-Spectro (副C)** + **Shorekeeper/Baizhi (辅助)**\n- Camellya为核心的高爆发衍射队伍\n- Rover-Spectro提供共鸣能量和衍射增益\n- 灵活切换输出窗口\n\n### 4. Jinhsi超载队\n- **Jinhsi (主C)** + **Yinlin (副C)** + **Jianxin/Baizhi (辅助)**\n- Jinhsi的Forte回路需要队友持续充能\n- Yinlin提供导电增幅和副输出\n- Jianxin提供护盾和聚怪能力\n\n### 5. 配队优先级\n1. 先确定主C，围绕主C属性构建\n2. 选择能触发入战/退战增益的队友\n3. 确保队伍有治疗或护盾保障生存\n4. 根据内容调整：单体Boss vs 多怪场景",
+    "contentEn": "## Advanced Team Building Guide\n\n### 1. Team Building Principles\n- Elemental synergy: Same-element characters trigger enhanced Intro/Outro effects\n- Concerto loop: Ensure all three characters cycle smoothly\n- Role coverage: Main DPS + Sub DPS/Amplifier + Support/Healer\n- Resource efficiency: Characters sharing upgrade materials save farming time\n\n### 2. Carlotta Hypercarry\n- **Carlotta (Main DPS)** + **Roccia (Sub DPS)** + **Shorekeeper (Support)**\n- Carlotta and Roccia form a powerful dual-core damage engine\n- Shorekeeper provides team-wide buffs and healing\n- Flex: Roccia can be replaced with other Spectro sub-DPS options\n\n### 3. Camellya Spectro Team\n- **Camellya (Main DPS)** + **Rover-Spectro (Sub DPS)** + **Shorekeeper/Baizhi (Support)**\n- High-burst Spectro team centered on Camellya\n- Rover-Spectro provides Resonance Energy and Spectro buffs\n- Flexible damage windows through character switching\n\n### 4. Jinhsi Hypercarry\n- **Jinhsi (Main DPS)** + **Yinlin (Sub DPS)** + **Jianxin/Baizhi (Support)**\n- Jinhsi's Forte Circuit requires teammates to continuously feed energy\n- Yinlin provides Electro amplification and off-field damage\n- Jianxin contributes shielding and enemy grouping\n\n### 5. Team Priority Checklist\n1. Pick a main DPS, then build around their element\n2. Select teammates who trigger beneficial Intro/Outro combos\n3. Ensure the team has healing or shielding for survival\n4. Adjust for content: single-target boss vs multi-enemy scenarios",
+    "tags": [
+      "配队",
+      "Carlotta",
+      "Camellya",
+      "Jinhsi",
+      "Teams",
+      "Meta"
+    ],
+    "faq": [
+      {
+        "question": "What is the best team for Carlotta?",
+        "questionZh": "Carlotta最强配队是什么？",
+        "answer": "Carlotta + Roccia + Shorekeeper is her premium team. Carlotta/Roccia form a potent duo with strong Spectro synergy. If you lack Roccia, any Spectro sub-DPS works as a substitute.",
+        "answerZh": "Carlotta + Roccia + Shorekeeper是最佳阵容。Carlotta/Roccia组成强力双核，衍射协同优秀。没有Roccia可用其他衍射副C替代。"
+      },
+      {
+        "question": "Do I need Shorekeeper for meta teams?",
+        "questionZh": "主流配队必须要有Shorekeeper吗？",
+        "answer": "Shorekeeper is the strongest general-purpose support, but not mandatory. Baizhi is an excellent free alternative. Taoqi and Jianxin also provide strong utility for specific team compositions.",
+        "answerZh": "Shorekeeper是最强通用辅助但不是必须的。白芷是优秀的免费替代。桃祈和鉴心在特定队伍中也提供强力辅助能力。"
+      },
+      {
+        "question": "How do I build a team around Jinhsi?",
+        "questionZh": "怎么围绕Jinhsi配队？",
+        "answer": "Jinhsi needs teammates who can quickly fill her Forte gauge. Pair her with characters who attack frequently (Yinlin, Sanhua) and bring a healer. The key is keeping her Forte circuit cycling.",
+        "answerZh": "Jinhsi需要能快速填充Forte槽的队友。搭配攻击频率高的角色（吟霖、散华）并带治疗。关键是保持她的固有回路循环。"
+      }
+    ]
+  },
+  {
+    "id": "tower-adversity-guide",
+    "title": "深境区与逆境深塔攻略",
+    "titleEn": "Depths of Illusive Realm & Tower of Adversity Guide",
+    "category": "combat",
+    "categoryZh": "战斗攻略",
+    "categoryEn": "Combat",
+    "summary": "终局内容攻略：逆境深塔楼层策略、深境区机制解析、各层推荐配队。",
+    "summaryEn": "Endgame content guide: Tower of Adversity floor strategies, Depths of Illusive Realm mechanics, and recommended teams per floor.",
+    "content": "## 深境区与逆境深塔攻略\n\n### 1. 逆境深塔(Tower of Adversity)\n逆境深塔是鸣潮的核心终局挑战：\n- 共分为稳定区、实验区、深域区三个区域\n- 每个区域有多层，难度逐层递增\n- 需要多支队伍轮换挑战\n- 每两周刷新一次\n\n### 2. 楼层策略\n- **稳定区(1-4层)**: 属性克制是关键，建议使用对应属性主C\n- **实验区(5-8层)**: 敌人机制更复杂，需要闪避技巧和入战/退战循环\n- **深域区(9层+)**: 高难度，要求角色练度高、声骸毕业、配队合理\n\n### 3. 深境区(Depths of Illusive Realm)\nRoguelike模式，每次进入随机获得增益：\n- 选择与主C属性匹配的增益\n- 优先选择暴击率和伤害类增益\n- 回避生存类增益（除非队伍缺乏治疗）\n- 深境区有独特声骸可获取\n\n### 4. 推荐配队\n| 楼层 | 推荐队伍 | 注意事项 |\n|------|----------|----------|\n| 稳定区 | 主力队+二队 | 确保两队都有治疗 |\n| 实验区 | 属性针对性配队 | 注意敌人机制 |\n| 深域区 | 最强队伍 | 需要毕业声骸 |\n\n### 5. 通用技巧\n1. 深塔前检查角色状态，确保声骸已装备\n2. 合理分配队伍，不要把所有强力角色放一队\n3. 深境区优先选伤害增益，生存靠操作弥补\n4. 每2周刷新前尽量打完，不要浪费奖励",
+    "contentEn": "## Depths of Illusive Realm & Tower of Adversity Guide\n\n### 1. Tower of Adversity\nThe Tower of Adversity is the core endgame challenge:\n- Divided into Stable Zone, Experimental Zone, and Deep Zone\n- Multiple floors per zone with increasing difficulty\n- Requires rotating multiple teams\n- Resets every two weeks\n\n### 2. Floor Strategies\n- **Stable Zone (Floors 1-4)**: Elemental advantage is key, use matching-element main DPS\n- **Experimental Zone (Floors 5-8)**: More complex enemy mechanics, requires dodge skills and Intro/Outro cycling\n- **Deep Zone (Floor 9+)**: High difficulty, demands well-built characters, finished Echo sets, and optimized teams\n\n### 3. Depths of Illusive Realm\nA roguelike mode where you gain random buffs each run:\n- Pick buffs that match your main DPS element\n- Prioritize CRIT Rate and damage-type buffs\n- Avoid survival buffs unless your team lacks healing\n- The Depths features unique Echoes you can collect\n\n### 4. Recommended Teams\n| Zone | Recommended Teams | Notes |\n|------|-------------------|-------|\n| Stable | Main team + Team 2 | Ensure both teams have healers |\n| Experimental | Element-specific builds | Watch for enemy mechanics |\n| Deep | Strongest available | Requires finished Echo sets |\n\n### 5. General Tips\n1. Check character loadouts before entering — ensure Echoes are equipped\n2. Distribute strong characters across teams, don't stack one team\n3. In the Depths, prioritize damage buffs and rely on skill for survival\n4. Clear before each biweekly reset to avoid missing rewards",
+    "tags": [
+      "逆境深塔",
+      "深境区",
+      "终局",
+      "Tower of Adversity",
+      "Depths",
+      "Endgame"
+    ],
+    "faq": [
+      {
+        "question": "How often does the Tower of Adversity reset?",
+        "questionZh": "逆境深塔多久刷新一次？",
+        "answer": "The Tower resets every two weeks on Monday at 4:00 AM server time. Rewards are distributed based on the highest floor cleared. Make sure to clear before reset.",
+        "answerZh": "每两周周一凌晨4:00刷新。奖励根据通关最高层数发放。确保刷新前打完。"
+      },
+      {
+        "question": "What teams do I need for Deep Zone?",
+        "questionZh": "深域区需要什么样的队伍？",
+        "answer": "You need at least 2-3 well-built teams with finished Echo sets. Each team should have a main DPS at Lv.80+ with proper CRIT stats. Healers are essential for survival on higher floors.",
+        "answerZh": "至少需要2-3支成型队伍且声骸毕业。每队应有Lv.80+的主C且暴击属性合格。高层必须带治疗保障生存。"
+      },
+      {
+        "question": "What buffs should I pick in Depths of Illusive Realm?",
+        "questionZh": "深境区应该选什么增益？",
+        "answer": "Prioritize damage and CRIT buffs that match your main DPS element. Buffs that boost your Resonance Skill or Liberation damage are especially valuable. Avoid defense buffs unless struggling to survive.",
+        "answerZh": "优先选与主C属性匹配的伤害和暴击增益。提升共鸣技能或大招伤害的增益特别有价值。除非生存困难否则避免防御类增益。"
+      }
+    ]
+  },
+  {
+    "id": "tuning-system-guide",
+    "title": "调律与共鸣链系统指南",
+    "titleEn": "Tuning & Resonance Chain System Guide",
+    "category": "system",
+    "categoryZh": "系统攻略",
+    "categoryEn": "System",
+    "summary": "角色养成系统详解：调律(突破)系统、共鸣链机制、材料规划与优先级。",
+    "summaryEn": "Detailed character progression guide: Tuning (ascension) system, Resonance Chain mechanics, material planning, and priority order.",
+    "content": "## 调律与共鸣链系统指南\n\n### 1. 调律(Tuning)系统\n调律是角色的突破升级系统：\n- 角色等级分为多个阶段，每阶段需要突破\n- 每次突破提升等级上限并解锁新能力\n- 突破材料：通用材料 + 属性材料 + Boss材料 + 特产\n\n### 2. 突破材料需求\n| 阶段 | 等级上限 | 主要材料 |\n|------|----------|----------|\n| Phase 1 | Lv.20 | 通用素材 + 属性碎片 |\n| Phase 2 | Lv.40 | 属性晶体 + Boss掉落 |\n| Phase 3 | Lv.50 | 高级属性晶体 + 周常Boss素材 |\n| Phase 4 | Lv.60 | 顶级属性宝石 + 稀有特产 |\n| Phase 5 | Lv.70+ | 全部最高级素材 |\n\n### 3. 共鸣链(Resonance Chain)\n- 通过重复获取角色获得波带(Waveband)\n- 每个角色有6个共鸣链节点(S1-S6)\n- 关键节点通常在S1、S3、S6\n- 大部分角色S0即可体验完整机制\n\n### 4. 养成优先级\n1. **主C优先**: 先将主C升至满级满突破\n2. **武器同步**: 主C武器同步升级\n3. **辅助次之**: 辅助角色等级可略低于主C\n4. **声骸最后**: 声骸强化消耗大，后期再追求毕业\n\n### 5. 材料规划建议\n- 提前查看角色突破材料，集中刷取\n- 通用材料(经验书、信用点)永远不嫌多\n- 特产材料刷新周期长，路过随手采集\n- 周常Boss材料有次数限制，每周必打\n- 利用游戏内材料日历规划刷取日程",
+    "contentEn": "## Tuning & Resonance Chain System Guide\n\n### 1. Tuning (Ascension) System\nTuning is the character ascension system:\n- Character levels are divided into phases, each requiring ascension\n- Each ascension raises the level cap and may unlock new abilities\n- Materials needed: Universal materials + Elemental materials + Boss drops + Local specialties\n\n### 2. Ascension Material Requirements\n| Phase | Level Cap | Key Materials |\n|-------|-----------|---------------|\n| Phase 1 | Lv.20 | Common materials + Elemental shards |\n| Phase 2 | Lv.40 | Elemental crystals + Boss drops |\n| Phase 3 | Lv.50 | Advanced crystals + Weekly Boss materials |\n| Phase 4 | Lv.60 | Premium elemental gems + Rare specialties |\n| Phase 5 | Lv.70+ | All top-tier materials |\n\n### 3. Resonance Chain\n- Acquire Wavebands by pulling duplicate characters\n- Each character has 6 Resonance Chain nodes (S1-S6)\n- Key nodes are typically at S1, S3, and S6\n- Most characters have complete kits at S0\n\n### 4. Progression Priority\n1. **Main DPS first**: Max level and full ascension on your primary DPS\n2. **Weapon sync**: Upgrade the main DPS weapon alongside\n3. **Support second**: Supports can be slightly lower level\n4. **Echoes last**: Echo enhancement is expensive, chase perfect sets in late game\n\n### 5. Material Planning Tips\n- Check ascension materials in advance and farm in bulk\n- Universal materials (EXP books, Credits) are always needed\n- Local specialties have long respawn timers, gather when passing by\n- Weekly Boss materials are limited per week, always clear them\n- Use in-game material calendar to plan your farming schedule",
+    "tags": [
+      "调律",
+      "共鸣链",
+      "养成",
+      "Tuning",
+      "Resonance Chain",
+      "Progression"
+    ],
+    "faq": [
+      {
+        "question": "Which characters should I ascend first?",
+        "questionZh": "先突破哪个角色？",
+        "answer": "Always prioritize your main DPS. A fully built DPS carries more content than several half-built supports. After your main DPS, ascend a healer (Baizhi is free and excellent) and then a sub-DPS.",
+        "answerZh": "始终优先主C。一个满练主C比多个半练辅助更能通关。主C之后突破治疗（白芷免费且优秀），然后副C。"
+      },
+      {
+        "question": "Is S1 worth pulling for on my main DPS?",
+        "questionZh": "给主C抽S1值得吗？",
+        "answer": "Generally yes, S1 for main DPS characters offers the best resonance chain value. It typically enhances their core damage mechanic. However, a new character is often more valuable than S1 if your roster needs coverage.",
+        "answerZh": "通常值得。主C的S1性价比最高，一般强化核心输出机制。但如果角色池需要补全，新角色往往比S1更有价值。"
+      },
+      {
+        "question": "How do I plan materials efficiently?",
+        "questionZh": "怎么高效规划材料？",
+        "answer": "Use the in-game material tracker to bookmark what you need. Farm boss materials on reset day, gather specialties daily, and spend Waveplate on the most urgent material first. Never let Waveplate cap.",
+        "answerZh": "使用游戏内材料追踪器标记所需材料。刷新日打Boss材料，每日采集特产，波片优先刷最紧急的材料。永远不要让波片溢出。"
+      }
+    ]
+  },
+  {
+    "id": "meta-teams-v3-guide",
+    "title": "v3.x版本主流配队推荐",
+    "titleEn": "v3.x Meta Team Recommendations",
+    "category": "team",
+    "categoryZh": "配队攻略",
+    "categoryEn": "Teams",
+    "summary": "v3.x最新主流配队推荐：Carlotta超载、Camellya衍射队、Jinhsi队、Zani/Lupa新角色组合。",
+    "summaryEn": "Current v3.x meta team recommendations: Carlotta hypercarry, Camellya Spectro teams, Jinhsi teams, Zani/Lupa combos, and new character synergies.",
+    "content": "## v3.x版本主流配队推荐\n\n### 1. T0级配队\n- **Carlotta超载队**: Carlotta + Roccia + Shorekeeper\n  - 当前版本最强队伍之一\n  - Carlotta/Roccia双核输出，Shorekeeper全队增益\n- **Camellya衍射队**: Camellya + Rover-Spectro + Shorekeeper\n  - 高爆发衍射输出\n  - 操作简单，适合大部分玩家\n\n### 2. T1级配队\n- **Jinhsi超载队**: Jinhsi + Yinlin + Jianxin\n  - Jinhsi依赖队友快速充能Forte回路\n  - 吟霖提供导电增幅和副输出\n- **Zani/Lupa组合**: Zani + Lupa + Shorekeeper/Baizhi\n  - v3.x新角色协同配队\n  - 适合缺少老牌主C的新玩家\n\n### 3. 配队强度排行\n| 排名 | 队伍 | 评级 |\n|------|------|------|\n| 1 | Carlotta + Roccia + SK | T0 |\n| 2 | Camellya + Rover-S + SK | T0 |\n| 3 | Jinhsi + Yinlin + Jianxin | T1 |\n| 4 | Zani + Lupa + SK | T1 |\n| 5 | Changli + Taoqi + Baizhi | T1 |\n\n### 4. 新玩家推荐\n如果没有以上限定角色，以下免费/常驻配队也很好用：\n- Rover-Spectro + Sanhua + Baizhi\n- Aalto + Chixia + Baizhi\n- 优先抽Carlotta或Camellya作为第一个限定主C\n\n### 5. 版本趋势\n- 双核输出队伍(如Carlotta/Roccia)越来越主流\n- Shorekeeper几乎是万金油辅助\n- 新角色越来越强调入战/退战协同\n- 属性克制在深塔中更加重要",
+    "contentEn": "## v3.x Meta Team Recommendations\n\n### 1. T0 Teams\n- **Carlotta Hypercarry**: Carlotta + Roccia + Shorekeeper\n  - One of the strongest teams in the current version\n  - Carlotta/Roccia dual-core damage with Shorekeeper team buffs\n- **Camellya Spectro**: Camellya + Rover-Spectro + Shorekeeper\n  - High-burst Spectro damage\n  - Simple to pilot, suitable for most players\n\n### 2. T1 Teams\n- **Jinhsi Hypercarry**: Jinhsi + Yinlin + Jianxin\n  - Jinhsi relies on teammates to quickly charge her Forte Circuit\n  - Yinlin provides Electro amplification and off-field damage\n- **Zani/Lupa Combo**: Zani + Lupa + Shorekeeper/Baizhi\n  - New v3.x character synergy team\n  - Great for newer players who lack older limited DPS units\n\n### 3. Team Tier List\n| Rank | Team | Tier |\n|------|------|------|\n| 1 | Carlotta + Roccia + SK | T0 |\n| 2 | Camellya + Rover-S + SK | T0 |\n| 3 | Jinhsi + Yinlin + Jianxin | T1 |\n| 4 | Zani + Lupa + SK | T1 |\n| 5 | Changli + Taoqi + Baizhi | T1 |\n\n### 4. New Player Recommendations\nIf you lack the limited characters above, these free/standard teams perform well:\n- Rover-Spectro + Sanhua + Baizhi\n- Aalto + Chixia + Baizhi\n- Pull Carlotta or Camellya as your first limited main DPS\n\n### 5. Version Trends\n- Dual-core teams (e.g., Carlotta/Roccia) are becoming the meta standard\n- Shorekeeper is nearly universal as a support pick\n- New characters increasingly emphasize Intro/Outro synergy\n- Elemental advantage matters more in the Tower of Adversity",
+    "tags": [
+      "配队",
+      "主流",
+      "v3.x",
+      "Carlotta",
+      "Meta",
+      "Teams"
+    ],
+    "faq": [
+      {
+        "question": "Who should I pull for as a new player?",
+        "questionZh": "新玩家应该抽谁？",
+        "answer": "Carlotta or Camellya as your first limited main DPS. Both define top-tier teams. If you already have a DPS, Shorekeeper is the best support to pull for as she fits into almost every team.",
+        "answerZh": "优先抽Carlotta或Camellya作为第一个限定主C。两人都是T0队伍核心。如果已有主C，Shorekeeper是最值得抽的辅助，几乎适配所有队伍。"
+      },
+      {
+        "question": "Is the Zani/Lupa team competitive?",
+        "questionZh": "Zani/Lupa队有竞争力吗？",
+        "answer": "Yes, the Zani/Lupa duo is a solid T1 option. It performs especially well for newer players who don't have older limited characters. With Shorekeeper, it can challenge T0 content.",
+        "answerZh": "是的，Zani/Lupa双核是稳定的T1选择。特别适合没有老牌限定角色的新玩家。搭配Shorekeeper可以挑战T0内容。"
+      },
+      {
+        "question": "Can I clear Tower of Adversity without limited characters?",
+        "questionZh": "没有限定角色能打逆境深塔吗？",
+        "answer": "Yes, but it requires more investment in Echo quality and player skill. Free characters like Rover-Spectro, Sanhua, and Baizhi can clear Stable and Experimental zones with good Echo builds and mechanics.",
+        "answerZh": "可以，但需要更高的声骸品质和操作水平。免费角色如漂泊者-衍射、散华、白芷在声骸毕业、操作熟练的情况下可通关稳定区和实验区。"
+      }
+    ]
   }
 ]

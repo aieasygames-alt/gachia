@@ -341,5 +341,239 @@
         "answerZh": "全部神瞳供奉后体力上限约240。建议至少200以上才能舒适地探索和战斗。优先供奉神瞳获取体力提升。"
       }
     ]
+  },
+  {
+    "id": "nod-krai-guide",
+    "title": "Nod-Krai区域探索指南",
+    "titleEn": "Nod-Krai Region Exploration Guide",
+    "category": "exploration",
+    "categoryZh": "探索攻略",
+    "categoryEn": "Exploration",
+    "summary": "v6.x新增Nod-Krai区域完全探索攻略：冰霜反应机制、新世界Boss、特产收集与解谜指南。",
+    "summaryEn": "Complete exploration guide for the Nod-Krai region added in v6.x: Frost reaction mechanics, new world bosses, local specialties, and puzzle solutions.",
+    "content": "## Nod-Krai区域探索指南\n\nNod-Krai是v6.x版本开放的全新区域，位于至冬国(Snezhnaya)以北的冰原之地。这片冰霜覆盖的土地带来了全新的探索机制和挑战。\n\n### 一、区域概览\n\n- **地理特征**: 永冻冰原、冰川峡谷、极光湖泊、地下冰窟\n- **推荐等级**: 冒险等级40+，建议完成至冬国主线后前往\n- **核心机制**: 冰霜反应系统（与Lunar元素联动）\n- **传送锚点**: 约45个新锚点，优先解锁方便探索\n\n### 二、新机制——冰霜反应\n\nNod-Krai引入了独特的环境冰霜系统：\n- **霜冻值**: 角色在户外会累积霜冻值，过高会持续扣血\n- **温暖源**: 区域内散布火堆和温泉，靠近可降低霜冻值\n- **Frost反应**: 冰元素+Lunar元素触发Frost，冻结并碎裂造成范围伤害\n- **霜华结晶**: 新采集物，用于新区域武器和圣遗物强化\n\n### 三、新世界Boss\n\n| Boss | 位置 | 掉落材料 | 适用角色 |\n|------|------|----------|----------|\n| 冰渊守卫·极光 | 极光湖底 | 永冻之心 | Nod-Krai新角色 |\n| 霜狼王·凛冬 | 冰川峡谷深处 | 凛冬之牙 | 冰系/Lunar系角色 |\n\n### 四、新特产与收集品\n\n- **极光花**: Nod-Krai区域特产，新角色突破必需\n- **霜华结晶**: 新环境材料，用于锻造和强化\n- **冰神瞳**: 新区域神瞳类型，供奉后提升体力和获得原石\n\n### 五、探索建议\n\n1. 优先解锁所有传送锚点和七天神像\n2. 携带火系角色（如班尼特、香菱）应对霜冻环境\n3. 完成Nod-Krai世界任务线解锁隐藏区域\n4. 利用新的冰面滑行机制快速移动\n5. 注意极光天气会增强冰系敌人，调整队伍配置",
+    "contentEn": "## Nod-Krai Region Exploration Guide\n\nNod-Krai is a brand-new region introduced in v6.x, located beyond Snezhnaya in the frozen north. This ice-covered land brings entirely new exploration mechanics and challenges.\n\n### 1. Region Overview\n\n- **Geography**: Permafrost tundra, glacier canyons, aurora lakes, underground ice caverns\n- **Recommended AR**: 40+, best experienced after completing the Snezhnaya Archon Quest\n- **Core mechanic**: Frost reaction system (synergizes with the Lunar element)\n- **Teleport Waypoints**: ~45 new waypoints, unlock them first for easier navigation\n\n### 2. New Mechanic — Frost Reactions\n\nNod-Krai introduces a unique environmental Frost system:\n- **Frost Gauge**: Characters accumulate frost exposure outdoors; too much causes HP drain\n- **Warmth Sources**: Campfires and hot springs scattered throughout the region reduce frost\n- **Frost Reaction**: Cryo + Lunar triggers Frost, freezing and shattering for AoE damage\n- **Frostbloom Crystals**: New gathering material for weapon forging and artifact enhancement\n\n### 3. New World Bosses\n\n| Boss | Location | Drop Material | Used By |\n|------|----------|---------------|----------|\n| Ice Abyss Guard · Aurora | Aurora Lake depths | Heart of Permafrost | New Nod-Krai characters |\n| Frostwolf King · Winter | Glacier Canyon depths | Fang of Winter | Cryo/Lunar characters |\n\n### 4. New Specialties and Collectibles\n\n- **Aurora Flower**: Nod-Krai local specialty, required for new character ascension\n- **Frostbloom Crystal**: New environmental material for forging and enhancement\n- **Cryo Oculus**: New oculus type, offering increases stamina and grants Primogems\n\n### 5. Exploration Tips\n\n1. Unlock all Teleport Waypoints and Statues of the Seven first\n2. Bring Pyro characters (Bennett, Xiangling) to counter frost exposure\n3. Complete Nod-Krai world quest chains to unlock hidden areas\n4. Use the new ice-gliding mechanic for faster traversal\n5. Watch for aurora weather which buffs Cryo enemies — adjust your team accordingly",
+    "tags": [
+      "Nod-Krai",
+      "探索",
+      "冰霜",
+      "Exploration",
+      "Frost"
+    ],
+    "faq": [
+      {
+        "question": "How do I survive the Frost Gauge mechanic?",
+        "questionZh": "怎么应对霜冻值机制？",
+        "answer": "Keep near warmth sources (campfires, hot springs) to reduce frost accumulation. Bringing a Pyro character like Bennett or Xiangling helps maintain warmth. The Sheer Cold resistance food from Nod-Krai cooks also slows frost buildup.",
+        "answerZh": "靠近温暖源（火堆、温泉）降低霜冻积累。携带班尼特、香菱等火系角色有助于维持体温。Nod-Krai烹饪的抗寒食物也能减缓霜冻积累。"
+      },
+      {
+        "question": "When can I access Nod-Krai?",
+        "questionZh": "什么时候可以去Nod-Krai？",
+        "answer": "You need Adventure Rank 40+ and should complete the Snezhnaya Archon Quest first for story context. Some areas are gated behind Nod-Krai world quests that unlock progressively.",
+        "answerZh": "需要冒险等级40+，建议先完成至冬国魔神任务以了解剧情背景。部分区域需要完成Nod-Krai世界任务逐步解锁。"
+      },
+      {
+        "question": "What are Frostbloom Crystals used for?",
+        "questionZh": "霜华结晶有什么用？",
+        "answer": "Frostbloom Crystals are used to forge new Nod-Krai weapons and enhance region-specific artifacts. You can also exchange surplus crystals for Mora at the Nod-Krai crafting station.",
+        "answerZh": "霜华结晶用于锻造Nod-Krai新武器和强化区域专属圣遗物。多余的结晶还可以在Nod-Krai加工台兑换摩拉。"
+      }
+    ]
+  },
+  {
+    "id": "lunar-reaction-guide",
+    "title": "Lunar元素反应指南",
+    "titleEn": "Lunar Elemental Reaction Guide",
+    "category": "combat",
+    "categoryZh": "战斗攻略",
+    "categoryEn": "Combat",
+    "summary": "v6.x新增Lunar元素反应机制详解：与其他七元素的联动、新反应类型、Lunar角色配队建议。",
+    "summaryEn": "Complete guide to the new Lunar element in v6.x: interactions with all existing elements, new reaction types, Lunar character team building.",
+    "content": "## Lunar元素反应指南\n\nLunar（月华）是v6.x版本引入的第8种元素，为提瓦特的战斗系统带来全新维度。理解Lunar反应机制是掌握当前版本的关键。\n\n### 一、Lunar元素特性\n\n- **元素颜色**: 银白色带月光粒子效果\n- **核心定位**: 增幅型辅助元素，与多种元素产生强力反应\n- **附着特性**: Lunar附着持续较长（12秒），适合作为底元素\n- **获取方式**: 通过Lunar角色的技能和大招施加\n\n### 二、Lunar反应一览\n\n| 反应名 | 触发条件 | 效果 | 反应类型 |\n|--------|----------|------|----------|\n| Frost | Lunar+冰 | 冻结碎裂，范围冰伤 | 剧变 |\n| Eclipse | Lunar+火 | 提升触发者攻击力30% | 增幅 |\n| Tide | Lunar+水 | 持续回复全队HP | 治愈 |\n| Storm | Lunar+雷 | 范围雷伤+减防15% | 剧变 |\n| Bloom-Nova | Lunar+草 | 强化草原核爆炸范围 | 剧变 |\n| Crescent | Lunar+风 | 扩散Lunar并降低对应抗性 | 扩散 |\n| Lunar-Resonance | Lunar+岩 | 生成强化护盾 | 结晶 |\n\n### 三、核心Lunar角色\n\n**5星Lunar角色**\n- **月华使·塞勒涅**: Lunar主C，大招高额Lunar伤害，E技能持续挂Lunar\n- **星轨祭司·露娜**: Lunar增伤辅助，被动提升全队Lunar反应伤害\n\n### 四、Lunar配队推荐\n\n**Eclipse增幅队（高伤害）**\n- 塞勒涅+阿蕾奇诺+班尼特+万叶\n- 核心：Lunar+火触发Eclipse大幅提升攻击力\n\n**Tide治愈队（高生存）**\n- 露娜+芙宁娜+珊瑚宫心海+万叶\n- 核心：Lunar+水触发Tide持续回血，配合芙宁娜增伤\n\n**Frost碎冰队（高爆发）**\n- 塞勒涅+神里绫华+申鹤+万叶\n- 核心：Lunar+冰触发Frost，碎冰造成高额范围伤害",
+    "contentEn": "## Lunar Elemental Reaction Guide\n\nLunar is the 8th element introduced in v6.x, adding an entirely new dimension to Teyvat's combat system. Understanding Lunar reactions is essential for mastering the current meta.\n\n### 1. Lunar Element Characteristics\n\n- **Color**: Silvery-white with moonlight particle effects\n- **Role**: Amplifying support element that synergizes with many elements\n- **Application**: Long aura duration (12s), ideal as a base element\n- **Source**: Applied through Lunar characters' skills and bursts\n\n### 2. Lunar Reaction Chart\n\n| Reaction | Trigger | Effect | Type |\n|----------|---------|--------|------|\n| Frost | Lunar+Cryo | Freeze and shatter for AoE Cryo DMG | Transformative |\n| Eclipse | Lunar+Pyro | Boosts trigger's ATK by 30% | Amplifying |\n| Tide | Lunar+Hydro | Continuous team HP restoration | Healing |\n| Storm | Lunar+Electro | AoE Electro DMG + 15% DEF shred | Transformative |\n| Bloom-Nova | Lunar+Dendro | Empowered Dendro Core explosions | Transformative |\n| Crescent | Lunar+Anemo | Swirls Lunar and reduces corresponding RES | Swirl |\n| Lunar-Resonance | Lunar+Geo | Generates strengthened shield | Crystallize |\n\n### 3. Key Lunar Characters\n\n**5-Star Lunar Characters**\n- **Selene, Lunar Emissary**: Lunar DPS, burst deals massive Lunar DMG, skill applies sustained Lunar\n- **Luna, Starlit Priestess**: Lunar support, passive boosts team Lunar reaction damage\n\n### 4. Lunar Team Recommendations\n\n**Eclipse Amplify Team (high damage)**\n- Selene + Arlecchino + Bennett + Kazuha\n- Core: Lunar+Pyro triggers Eclipse for massive ATK boost\n\n**Tide Sustain Team (high survivability)**\n- Luna + Furina + Kokomi + Kazuha\n- Core: Lunar+Hydro triggers Tide for continuous healing, paired with Furina's DMG bonus\n\n**Frost Shatter Team (burst damage)**\n- Selene + Ayaka + Shenhe + Kazuha\n- Core: Lunar+Cryo triggers Frost, shatter deals massive AoE damage",
+    "tags": [
+      "Lunar",
+      "月华",
+      "元素反应",
+      "Combat",
+      "Reactions"
+    ],
+    "faq": [
+      {
+        "question": "How does Lunar interact with existing reactions?",
+        "questionZh": "Lunar和现有反应有什么区别？",
+        "answer": "Lunar creates entirely new reactions rather than modifying existing ones. For example, Lunar+Hydro produces Tide (healing) instead of Freeze. This means Lunar teams play very differently from traditional element combinations.",
+        "answerZh": "Lunar创造全新的反应而非修改现有反应。例如Lunar+水产生Tide（治愈）而非冻结。这意味着Lunar队伍的玩法与传统元素组合截然不同。"
+      },
+      {
+        "question": "Is Eclipse better than Vaporize for Pyro teams?",
+        "questionZh": "Eclipse比蒸发更强吗？",
+        "answer": "Eclipse provides a 30% ATK buff which stacks additively, while Vaporize gives a 1.5-2.0x multiplier. For high-investment teams, Vaporize still wins on raw damage, but Eclipse offers more consistent team-wide damage and easier execution.",
+        "answerZh": "Eclipse提供30%攻击力加成（加算），而蒸发提供1.5-2.0倍乘区。高投入队伍中蒸发在纯粹伤害上仍然更高，但Eclipse提供更稳定的全队伤害和更简单的操作。"
+      },
+      {
+        "question": "Which Lunar character should I pull first?",
+        "questionZh": "先抽哪个Lunar角色？",
+        "answer": "Selene is the priority if you want a new DPS carry. Luna is the priority if you want a versatile support that fits into many existing teams. Both are strong, so pick based on your roster needs.",
+        "answerZh": "想要新主C就优先抽塞勒涅。想要适配现有多种队伍的万能辅助就优先抽露娜。两个都很强，根据你的阵容需求选择。"
+      }
+    ]
+  },
+  {
+    "id": "character-progression-guide",
+    "title": "角色养成完全指南",
+    "titleEn": "Complete Character Progression Guide",
+    "category": "system",
+    "categoryZh": "系统攻略",
+    "categoryEn": "System",
+    "summary": "从零到毕业的角色养成全流程：经验、突破、天赋、命座，以及新手养成优先级。",
+    "summaryEn": "Full character progression guide from zero to endgame: EXP, ascension, talents, constellations, and new player priority order.",
+    "content": "## 角色养成完全指南\n\n角色养成是原神的核心玩法。本指南系统讲解从获取角色到完全毕业的每一步，帮助你高效分配资源。\n\n### 一、养成阶段总览\n\n| 阶段 | 内容 | 消耗资源 | 优先级 |\n|------|------|----------|--------|\n| 1 | 等级提升 | 经验书+摩拉 | 最高 |\n| 2 | 角色突破 | 区域特产+Boss材料 | 最高 |\n| 3 | 武器强化 | 强化矿+摩拉 | 高 |\n| 4 | 天赋升级 | 天赋书+周本材料 | 中高 |\n| 5 | 圣遗物搭配 | 体力/树脂 | 中 |\n| 6 | 命座提升 | 重复角色（抽卡） | 低（按需） |\n\n### 二、经验与突破\n\n**等级提升策略**\n- 主C优先拉到90级：基础属性影响最终伤害\n- 辅助可停在80级突破后：80/90即可，主要收益来自突破属性\n- 不建议所有角色都拉90，资源消耗巨大\n\n**突破材料获取**\n- 区域特产：每个区域有独特特产，用于该区域角色突破\n- Boss材料：对应元素Boss掉落（如火系角色需要火属性宝石）\n- 建议：提前查看角色突破材料，按计划收集\n\n### 三、天赋升级\n\n**优先级排序**\n- 主C：普攻/技能 > 大招（根据输出占比决定）\n- 副C：大招 > 技能 > 普攻\n- 辅助：核心技能 > 大招 > 其他\n- 治疗：治疗技能最优先\n\n**关键等级**\n- Lv6是性价比最高的停手点（资源消耗适中）\n- Lv8需要周本材料，建议只给核心角色\n- Lv9-10需要皇冠，极其珍贵，只给最核心技能\n\n### 四、命座(星座)系统\n\n- **C0**: 基础角色，大多数角色C0即可用\n- **C1-C2**: 通常有显著提升，部分角色命座质变\n- **C4-C5**: 中等提升，辅助功能增强\n- **C6**: 满命，最大提升但成本极高\n\n**关键命座推荐**: 香菱C4（大招延长）、行秋C2（水抗降低）、班尼特C1（攻击加成取消上限）\n\n### 五、新手养成优先级\n\n1. **第一批练2个主C**: 选择1个火系+1个冰系/雷系\n2. **然后练核心辅助**: 班尼特、行秋、香菱（四星三巨头）\n3. **再练生存位**: 钟离/迪奥娜/芭芭拉\n4. **最后练工具人**: 根据深渊需求灵活培养",
+    "contentEn": "## Complete Character Progression Guide\n\nCharacter building is Genshin's core gameplay loop. This guide covers every step from obtaining a character to full endgame build, helping you allocate resources efficiently.\n\n### 1. Progression Overview\n\n| Stage | Content | Resource Cost | Priority |\n|-------|---------|---------------|----------|\n| 1 | Level Up | EXP Books + Mora | Highest |\n| 2 | Ascension | Local Specialties + Boss Materials | Highest |\n| 3 | Weapon Enhancement | Enhancement Ore + Mora | High |\n| 4 | Talent Upgrade | Talent Books + Weekly Boss Materials | Medium-High |\n| 5 | Artifact Setup | Resin | Medium |\n| 6 | Constellations | Duplicate Characters (Wishes) | Low (as needed) |\n\n### 2. EXP and Ascension\n\n**Leveling Strategy**\n- Main DPS to Lv90 first: Base stats significantly impact final damage\n- Supports can stop at Lv80/90 ascended: Most value comes from the ascension stat bonus\n- Don't level every character to 90 — the resource cost is enormous\n\n**Ascension Materials**\n- Local specialties: Each region has unique materials for its characters\n- Boss materials: Elemental bosses drop elemental gemstones (e.g., Pyro characters need Agnidus Agate)\n- Tip: Check ascension materials in advance and plan your farming\n\n### 3. Talent Upgrades\n\n**Priority Order**\n- Main DPS: Normal Attack/Skill > Burst (based on damage contribution)\n- Sub DPS: Burst > Skill > Normal Attack\n- Support: Core buff skill > Burst > Others\n- Healer: Healing skill first\n\n**Key Levels**\n- Lv6 is the best value stopping point (moderate resource cost)\n- Lv8 requires Weekly Boss materials — reserve for core characters only\n- Lv9-10 requires Crowns — extremely rare, use only on your most important skills\n\n### 4. Constellation System\n\n- **C0**: Base character, perfectly usable for most\n- **C1-C2**: Often significant upgrades, some characters have transformative constellations\n- **C4-C5**: Moderate improvements, enhanced utility\n- **C6**: Full constellation, maximum power but extremely expensive\n\n**Key Constellations**: Xiangling C4 (extended burst), Xingqiu C2 (Hydro RES shred), Bennett C1 (removes ATK buff cap)\n\n### 5. New Player Build Priority\n\n1. **Build 2 main DPS first**: Pick 1 Pyro + 1 Cryo/Electro\n2. **Then build core supports**: Bennett, Xingqiu, Xiangling (the 4-star trinity)\n3. **Next add a sustain unit**: Zhongli/Diona/Barbara\n4. **Finally build flex picks**: Based on Abyss needs",
+    "tags": [
+      "角色养成",
+      "突破",
+      "天赋",
+      "Progression",
+      "Talents"
+    ],
+    "faq": [
+      {
+        "question": "Should I level characters to 90 or is 80 enough?",
+        "questionZh": "角色拉到90级还是80级够用？",
+        "answer": "Main DPS characters benefit significantly from Lv90 due to higher base stats and transformative reaction scaling. Supports are fine at Lv80 ascended (80/90). Only level supports to 90 if they trigger transformative reactions like Hyperbloom.",
+        "answerZh": "主C拉90级收益显著，因为基础属性更高且剧变反应和等级挂钩。辅助80级突破（80/90）即可。只有触发剧变反应（如超绽放）的辅助才需要拉90。"
+      },
+      {
+        "question": "When should I use Crowns on talents?",
+        "questionZh": "皇冠(智识之冕)什么时候用？",
+        "answer": "Crowns are extremely rare (1-2 per major event). Only use them on your most-used character's most important talent. For most DPS, crown their primary damage talent first.",
+        "answerZh": "皇冠极其稀有（每个大型活动仅1-2个）。只用在你最常用角色的最重要天赋上。大多数主C优先皇冠核心输出天赋。"
+      },
+      {
+        "question": "What is the most efficient talent level to stop at?",
+        "questionZh": "天赋升到几级性价比最高？",
+        "answer": "Talent Lv6 is the best value point — it does not require Weekly Boss materials and provides a solid boost. Lv8 is the next good breakpoint if you have spare weekly materials. Lv9-10 is luxury.",
+        "answerZh": "天赋6级是性价比最高的停手点——不需要周本材料且提升显著。如果周本材料充裕，8级是下一个好节点。9-10级是锦上添花。"
+      }
+    ]
+  },
+  {
+    "id": "teapot-guide",
+    "title": "尘歌壶系统指南",
+    "titleEn": "Serenitea Pot System Guide",
+    "category": "system",
+    "categoryZh": "系统攻略",
+    "categoryEn": "System",
+    "summary": "尘歌壶(家园系统)完全指南：洞天布局、摆设制作、洞天宝币、同伴入驻与原石获取。",
+    "summaryEn": "Complete Serenitea Pot (housing) guide: realm layouts, furnishing crafting, realm currency, companion move-in, and earning Primogems.",
+    "content": "## 尘歌壶系统指南\n\n尘歌壶是原神的家园系统，不仅是一个休闲玩法，更是获取免费原石和资源的重要途径。\n\n### 一、解锁条件\n\n- 完成璃月主线任务（约冒险等级28）\n- 接取并完成世界任务「翠石砌玉壶」\n- 从萍姥姥处获得尘歌壶道具\n\n### 二、洞天形态\n\n| 形态 | 风格 | 特点 |\n|------|------|------|\n| 翠黛峰 | 璃月山景 | 经典中式园林 |\n| 罗浮洞 | 空中浮岛 | 高空景观 |\n| 绘绮庭 | 日式庭院 | 稻妻风格 |\n| 旋流屿 | 水上建筑 | 枫丹风格 |\n| 燃炽巨树 | 火山洞穴 | 纳塔风格 |\n\n**形态切换**: 与壶灵对话可切换形态，已有摆设保留。\n\n### 三、洞天宝币与商店\n\n- **获取速度**: 取决于洞天仙力（摆设越多，仙力越高，宝币产出越快）\n- **最大存储**: 2400洞天宝币（不收取会溢出浪费）\n- **推荐购买**:\n  - 大英雄的经验（优先）\n  - 摩拉\n  - 脆弱树脂（每周限购）\n  - 天赋书（按需）\n\n### 四、同伴入驻系统\n\n- 将角色放入尘歌壶可获得好感度经验\n- 每个角色入驻可获得原石奖励（首次）\n- 优先将常用角色放入以积累好感度\n- 放入角色偏好套装可获得额外好感加成\n\n### 五、原石获取途径\n\n1. **套装图纸赠送**: 制作新摆设套装，邀请对应角色获得原石\n2. **角色首次入驻**: 每个角色首次放入壶中获得原石\n3. **成就系统**: 完成尘歌壶相关成就获得原石\n4. **洞天百宝**: 部分版本活动在壶中设置特殊商店\n\n### 六、快速提升仙力技巧\n\n- 大量制作「石狮子」或「户外庭院」等高仙力/低材料摆设\n- 重复放置同类摆设也可增加仙力\n- 每周购买壶灵商店的加速道具\n- 利用复制功能快速摆放",
+    "contentEn": "## Serenitea Pot System Guide\n\nThe Serenitea Pot is Genshin's housing system — not just a relaxing side activity, but an important source of free Primogems and resources.\n\n### 1. Unlock Requirements\n\n- Complete the Liyue Archon Quest (around AR28)\n- Accept and complete the world quest 'A Teapot to Call Home'\n- Receive the Serenitea Pot item from Madame Ping\n\n### 2. Realm Layouts\n\n| Layout | Style | Features |\n|--------|-------|----------|\n| Emerald Peak | Liyue mountain | Classic Chinese garden |\n| Floating Abode | Sky islands | Aerial views |\n| Elegant Mansion | Japanese courtyard | Inazuma aesthetic |\n| Cool Isle | Water architecture | Fontaine style |\n| Blaze-Titan Tree | Volcanic cave | Natlan style |\n\n**Switching**: Talk to the teapot spirit to switch layouts. Existing furnishings are preserved.\n\n### 3. Realm Currency and Shop\n\n- **Earning rate**: Based on Realm Adeptal Energy (more furnishings = higher energy = faster currency)\n- **Max storage**: 2,400 Realm Currency (overflows if not collected)\n- **Best purchases**:\n  - Hero's Wit EXP books (priority)\n  - Mora\n  - Fragile Resin (weekly limit)\n  - Talent books (as needed)\n\n### 4. Companion Move-In System\n\n- Placing characters in the teapot earns Friendship EXP\n- Each character grants Primogems the first time they move in\n- Prioritize frequently used characters to accumulate Friendship levels\n- Placing characters in their preferred furniture sets grants bonus Friendship\n\n### 5. Primogem Sources\n\n1. **Gift sets**: Craft new furnishing sets and invite matching characters for Primogems\n2. **First move-in**: Each character gives Primogems when placed in the teapot for the first time\n3. **Achievements**: Complete teapot-related achievements for Primogems\n4. **Special events**: Some version events feature teapot-specific shops\n\n### 6. Quick Adeptal Energy Tips\n\n- Mass-craft high-energy, low-cost furnishings like Stone Lion statues or outdoor courtyard sets\n- Placing duplicate furnishings still increases energy\n- Buy speed-up items from the teapot spirit's shop weekly\n- Use the copy function for fast placement",
+    "tags": [
+      "尘歌壶",
+      "家园",
+      "摆设",
+      "Teapot",
+      "Housing"
+    ],
+    "faq": [
+      {
+        "question": "How do I earn Primogems from the teapot?",
+        "questionZh": "尘歌壶怎么获取原石？",
+        "answer": "Craft furnishing gift sets and invite matching characters to receive Primogems. Each character also gives Primogems the first time you place them in the teapot. Complete teapot achievements for additional Primogems.",
+        "answerZh": "制作摆设套装并邀请对应角色可以获得原石。每个角色首次放入尘歌壶也会给原石。完成尘歌壶相关成就也能获得额外原石。"
+      },
+      {
+        "question": "What should I buy with Realm Currency first?",
+        "questionZh": "洞天宝币优先买什么？",
+        "answer": "Prioritize Fragile Resin (weekly limit), then Hero's Wit and Mora. Only buy talent books and other items if you have surplus currency after the essentials.",
+        "answerZh": "优先购买脆弱树脂（每周限购），然后是大英雄的经验和摩拉。只有买完必需品后还有剩余宝币才考虑天赋书等物品。"
+      },
+      {
+        "question": "How do I increase Realm Adeptal Energy quickly?",
+        "questionZh": "怎么快速提升洞天仙力？",
+        "answer": "Mass-produce high-energy furnishings like Stone Lions or courtyard walls. Place as many as possible in your realm. Duplicate placements all contribute to energy. Focus on one layout at a time for maximum density.",
+        "answerZh": "大量制作石狮子或院墙等高仙力摆设，尽可能多地放置。重复摆放同一摆设也能增加仙力。集中在一个形态里摆放以获得最大密度。"
+      }
+    ]
+  },
+  {
+    "id": "natlan-exploration-guide",
+    "title": "纳塔区域探索完全攻略",
+    "titleEn": "Complete Natlan Exploration Guide",
+    "category": "exploration",
+    "categoryZh": "探索攻略",
+    "categoryEn": "Exploration",
+    "summary": "纳塔(v5.x)完全探索攻略：龙众伙伴、夜魂系统、部族声望、火神瞳收集与纳塔特产。",
+    "summaryEn": "Complete Natlan (v5.x) exploration guide: Saurian companions, Nightsoul system, tribal reputation, Pyroculus locations, and Natlan specialties.",
+    "content": "## 纳塔区域探索完全攻略\n\n纳塔是火之国度，以龙众伙伴和夜魂系统为核心特色。这片充满活力的土地有着独特的探索机制和丰富的收集内容。\n\n### 一、核心新机制——龙众伙伴\n\n纳塔引入了可变身为龙众(Saurian)的全新探索方式：\n- **腾龙(Tepetlisaur)**: 地下穿行，挖掘隐藏通道\n- **翼龙(Yumkasaur)**: 空中抓取与滑翔，到达高处\n- **水龙(Koholasaur)**: 水面高速移动，水下探索\n- **迅龙(Iktomisaur)**: 墙壁吸附，垂直攀爬\n\n**使用方式**: 在纳塔野外找到龙众雕像即可变身，每种龙有独特能力用于解谜和探索。\n\n### 二、夜魂(Nightsoul)系统\n\n夜魂是纳塔特有的战斗资源系统：\n- **获取**: 纳塔角色通过普攻/技能积累夜魂点数\n- **消耗**: 释放强化版技能，大幅提升伤害和效果\n- **夜魂爆发**: 积满后释放强力攻击\n- **夜魂传递**: 切换角色时可以传递部分夜魂给下个角色\n\n### 三、部族声望系统\n\n纳塔分为六大部族，各有独立的声望系统：\n\n| 部族 | 特色 | 声望奖励 |\n|------|------|----------|\n| 花羽会 | 采集/烹饪 | 食谱、摩拉 |\n| 悬木人 | 战斗挑战 | 武器突破材料 |\n| 回声之子 | 探索辅助 | 地图标记道具 |\n| 万火之竞技场 | 对战竞技 | 竞技场货币 |\n| 流泉之众 | 水域探索 | 潜水道具 |\n| 悠古之民 | 古代遗迹 | 古代锻造图 |\n\n### 四、火神瞳(Pyroculus)收集\n\n- 纳塔共有约260个火神瞳\n- 推荐使用火神瞳共鸣石辅助定位\n- 部分火神瞳需要变身为对应龙众才能获取\n- 供奉满级后获得大量原石、摩拉和体力提升\n\n### 五、纳塔特产\n\n- **焰硝花**: 纳塔角色突破必需品\n- **灼灼果实**: 部分角色天赋升级材料\n- **明彩晶石**: 纳塔武器锻造材料\n\n### 六、探索建议\n\n1. 优先完成纳塔主线解锁所有龙众变身能力\n2. 每个部族至少做到声望2级解锁关键道具\n3. 火神瞳分区域收集，避免遗漏\n4. 利用龙众能力探索隐藏洞穴和高处平台",
+    "contentEn": "## Complete Natlan Exploration Guide\n\nNatlan, the Pyro Nation, features Saurian companions and the Nightsoul system as its core mechanics. This vibrant land offers unique exploration gameplay and rich collectibles.\n\n### 1. Core Mechanic — Saurian Companions\n\nNatlan introduces transformation into Saurians for exploration:\n- **Tepetlisaur**: Burrow underground, dig hidden tunnels\n- **Yumkasaur**: Aerial grapple and glide, reach high places\n- **Koholasaur**: High-speed water traversal, underwater exploration\n- **Iktomisaur**: Wall cling, vertical climbing\n\n**How to use**: Find Saurian statues in the Natlan overworld to transform. Each Saurian type has unique abilities for puzzles and exploration.\n\n### 2. Nightsoul System\n\nNightsoul is Natlan's unique combat resource:\n- **Gain**: Natlan characters accumulate Nightsoul points through attacks/skills\n- **Spend**: Release enhanced skills with significantly boosted damage and effects\n- **Nightsoul Burst**: Full gauge unleashes a powerful attack\n- **Nightsoul Transfer**: Switch characters to pass some Nightsoul to the next character\n\n### 3. Tribal Reputation System\n\nNatlan has six major tribes, each with an independent reputation track:\n\n| Tribe | Specialty | Reputation Rewards |\n|-------|-----------|-------------------|\n| Flower-Feather Clan | Gathering/Cooking | Recipes, Mora |\n| Scions of the Canopy | Combat challenges | Weapon ascension materials |\n| Children of Echoes | Exploration aids | Map marker gadgets |\n| Arena of Millelites | Battle arena | Arena currency |\n| People of the Springs | Water exploration | Diving gear |\n| Ancient Ones | Ancient ruins | Ancient forging blueprints |\n\n### 4. Pyroculus Collection\n\n- Natlan has approximately 260 Pyroculi\n- Use the Pyroculus Resonance Stone gadget to help locate them\n- Some Pyroculi require transforming into specific Saurians to reach\n- Max offering grants Primogems, Mora, and stamina increase\n\n### 5. Natlan Specialties\n\n- **Flaming Nectar Flower**: Required for Natlan character ascension\n- **Blazing Berry**: Talent upgrade material for certain characters\n- **Bright Crystal Ore**: Natlan weapon forging material\n\n### 6. Exploration Tips\n\n1. Complete the Natlan Archon Quest first to unlock all Saurian transformations\n2. Get each tribe to reputation rank 2 for key gadgets\n3. Collect Pyroculi region by region to avoid missing any\n4. Use Saurian abilities to discover hidden caves and elevated platforms",
+    "tags": [
+      "纳塔",
+      "探索",
+      "龙众",
+      "Natlan",
+      "Saurian"
+    ],
+    "faq": [
+      {
+        "question": "Do I need Natlan characters to explore Natlan effectively?",
+        "questionZh": "探索纳塔需要纳塔角色吗？",
+        "answer": "No — Saurian transformations are available to all players through environmental statues. However, Natlan characters with Nightsoul mechanics make combat significantly easier in the region.",
+        "answerZh": "不需要——所有玩家都可以通过环境中的龙众雕像变身。不过拥有夜魂机制的纳塔角色会显著降低该区域的战斗难度。"
+      },
+      {
+        "question": "How does the Nightsoul system work in teams?",
+        "questionZh": "夜魂系统在队伍里怎么运作？",
+        "answer": "Only Natlan characters can generate Nightsoul points. When switching between Natlan characters, Nightsoul Transfer passes a portion of the gauge. This encourages running 2+ Natlan characters together for optimal synergy.",
+        "answerZh": "只有纳塔角色能生成夜魂点数。在纳塔角色之间切换时，夜魂传递会将部分点数传给下一个角色。建议队伍中放2个以上纳塔角色以获得最佳协同。"
+      },
+      {
+        "question": "Which tribe reputation should I prioritize?",
+        "questionZh": "先做哪个部族的声望？",
+        "answer": "Prioritize Children of Echoes for the map marker gadget and Scions of the Canopy for weapon materials. Flower-Feather Clan recipes are also useful early on. Focus on one tribe at a time to reach rank 2 quickly.",
+        "answerZh": "优先回声之子获取地图标记道具，和悬木人获取武器材料。花羽会的食谱在前期也很实用。集中做一个部族快速到2级。"
+      }
+    ]
+  },
+  {
+    "id": "meta-teams-guide",
+    "title": "当前版本主流配队推荐",
+    "titleEn": "Current Meta Team Recommendations",
+    "category": "team",
+    "categoryZh": "配队攻略",
+    "categoryEn": "Teams",
+    "summary": "v6.x版本主流强力配队推荐：那维莱特、阿蕾奇诺、芙宁娜、Lunar体系及国家队变体。",
+    "summaryEn": "Top meta team recommendations for v6.x: Neuvillette hypercarry, Arlecchino Vaporize, Furina teams, Lunar archetypes, and updated National variants.",
+    "content": "## 当前版本主流配队推荐\n\nv6.x版本的配队格局有了新变化，Lunar元素的加入带来了全新的队伍体系。以下是当前版本各层级的主流配队推荐。\n\n### 一、T0级配队（版本最强）\n\n**那维莱特水核队**\n- 那维莱特+芙宁娜+万叶+白术/希格雯\n- 核心机制：芙宁娜大招叠加增伤，万叶减抗，那维莱特重击输出\n- 适用场景：深渊全层、周本Boss\n\n**阿蕾奇诺蒸发队**\n- 阿蕾奇诺+班尼特+万叶+夜兰/行秋\n- 核心机制：班尼特增伤+万叶减抗，阿蕾奇诺火附魔普攻蒸发\n- 适用场景：对单Boss、高难度挑战\n\n### 二、T1级配队（强力稳定）\n\n**Lunar-Eclipse队（新）**\n- 塞勒涅+阿蕾奇诺+班尼特+万叶\n- 核心机制：Lunar+火触发Eclipse提升攻击力30%，双元素增幅\n- 适用场景：需要高持续伤害的场合\n\n**芙宁娜超绽放队**\n- 芙宁娜+纳西妲+雷电将军/久岐忍+珊瑚宫心海\n- 核心机制：芙宁娜增伤+纳西妲挂草+雷触发超绽放\n- 适用场景：对群、需要自动化输出的场合\n\n**雷国（永恒经典）**\n- 雷电将军+香菱+行秋+班尼特\n- 核心机制：雷神充能+香菱蒸发+行秋减伤，循环完美\n- 适用场景：万能配队，适用一切\n\n### 三、T2级配队（高性价比）\n\n| 配队 | 成员 | 核心反应 | 特点 |\n|------|------|----------|------|\n| 神鹤万心 | 神里绫华+申鹤+万叶+珊瑚宫心海 | 冻结 | 经典永冻，对群强力 |\n| 胡行钟夜 | 胡桃+行秋+钟离+夜兰 | 蒸发 | 对单天花板 |\n| 妮绽放 | 妮露+纳西妲+珊瑚宫心海+白术 | 绽放 | 低操作高收益 |\n| 刻晴激化 | 刻晴+纳西妲+菲谢尔+万叶 | 超激化 | F2P友好 |\n| Lunar-Tide | 露娜+芙宁娜+珊瑚宫心海+万叶 | Tide治愈 | 超高生存 |\n\n### 四、配队原则\n\n1. **1主C+1副C+1辅助+1生存**是万能公式\n2. **万叶**和**芙宁娜**是当前版本最强的两个通用辅助\n3. **班尼特**依然是火系核心，优先级极高\n4. 新手建议从「雷国」或「超绽放」起步，成本低强度高\n5. Lunar体系是v6.x新方向，有Lunar角色的话优先尝试",
+    "contentEn": "## Current Meta Team Recommendations\n\nThe v6.x meta has shifted with the addition of the Lunar element. Here are the top team recommendations across all tiers for the current version.\n\n### 1. T0 Teams (Meta Defining)\n\n**Neuvillette Hydro Hypercarry**\n- Neuvillette + Furina + Kazuha + Baizhu/Sigewinne\n- Core: Furina burst stacks DMG bonus, Kazuha shreds RES, Neuvillette charged attacks deal massive Hydro DMG\n- Best for: All Abyss floors, Weekly Bosses\n\n**Arlecchino Vaporize**\n- Arlecchino + Bennett + Kazuha + Yelan/Xingqiu\n- Core: Bennett buffs, Kazuha shreds, Arlecchino's Bond of Life-infused attacks Vaporize\n- Best for: Single-target Bosses, high-difficulty challenges\n\n### 2. T1 Teams (Strong and Reliable)\n\n**Lunar-Eclipse Team (NEW)**\n- Selene + Arlecchino + Bennett + Kazuha\n- Core: Lunar+Pyro triggers Eclipse for 30% ATK boost, dual-element amplification\n- Best for: Sustained high-damage encounters\n\n**Furina Hyperbloom**\n- Furina + Nahida + Raiden/Kuki Shinobu + Kokomi\n- Core: Furina DMG bonus + Nahida Dendro application + Electro triggers Hyperbloom\n- Best for: AoE, auto-pilot damage situations\n\n**Raiden National (Timeless Classic)**\n- Raiden + Xiangling + Xingqiu + Bennett\n- Core: Raiden battery + Xiangling Vaporize + Xingqiu damage reduction, perfect rotation\n- Best for: Universal — works everywhere\n\n### 3. T2 Teams (High Value)\n\n| Team | Members | Core Reaction | Strength |\n|------|---------|---------------|----------|\n| Ayaka Freeze | Ayaka + Shenhe + Kazuha + Kokomi | Freeze | Classic, strong AoE |\n| Hu Tao Double Hydro | Hu Tao + Xingqiu + Zhongli + Yelan | Vaporize | Single-target king |\n| Nilou Bloom | Nilou + Nahida + Kokomi + Baizhu | Bloom | Low effort, high reward |\n| Keqing Aggravate | Keqing + Nahida + Fischl + Kazuha | Aggravate | F2P friendly |\n| Lunar-Tide | Luna + Furina + Kokomi + Kazuha | Tide Healing | Ultra sustain |\n\n### 4. Team Building Principles\n\n1. **1 DPS + 1 Sub DPS + 1 Support + 1 Sustain** is the universal formula\n2. **Kazuha** and **Furina** are the two strongest universal supports in the current meta\n3. **Bennett** remains the Pyro anchor — extremely high priority\n4. New players should start with Raiden National or Hyperbloom — low cost, high power\n5. Lunar teams are the v6.x direction — prioritize testing them if you have Lunar characters",
+    "tags": [
+      "配队",
+      "主流",
+      "Meta",
+      "Teams",
+      "v6"
+    ],
+    "faq": [
+      {
+        "question": "What is the best team for a new player?",
+        "questionZh": "新手最强配队是什么？",
+        "answer": "Raiden National (Raiden + Xiangling + Xingqiu + Bennett) is the strongest all-rounder with minimal investment. If you don't have Raiden, the standard National Team with Sucrose works nearly as well.",
+        "answerZh": "雷国（雷电将军+香菱+行秋+班尼特）是投入最少、强度最均衡的万能队。没有雷电将军的话，用砂糖替换的普通国家队也几乎一样强。"
+      },
+      {
+        "question": "Are Lunar teams better than traditional teams?",
+        "questionZh": "Lunar队比传统队更强吗？",
+        "answer": "Lunar teams are competitive with T0 traditional teams but not strictly superior. Eclipse teams rival Vaporize, while Tide teams offer unique sustain. Traditional teams like Neuvillette hypercarry remain top-tier. Play what fits your roster.",
+        "answerZh": "Lunar队与T0传统队强度相当但并非更强。Eclipse队可与蒸发队比肩，Tide队提供独特的生存能力。那维莱特等传统强队依然是T0。根据你的角色库选择即可。"
+      },
+      {
+        "question": "Should I pull for Furina or Kazuha first?",
+        "questionZh": "先抽芙宁娜还是万叶？",
+        "answer": "Both are top-tier universal supports. Pull Kazuha if you need grouping and RES shred. Pull Furina if you need massive team-wide DMG buffs. If you have neither, Kazuha is slightly more flexible for newer accounts.",
+        "answerZh": "两个都是T0通用辅助。需要聚怪和减抗就抽万叶。需要全队大幅增伤就抽芙宁娜。两个都没有的话，万叶对新账号稍微更灵活一些。"
+      }
+    ]
   }
 ]
