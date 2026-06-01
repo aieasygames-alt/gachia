@@ -12708,5 +12708,1202 @@
     "tierRank": "S",
     "tierReason": "岩系全能辅助",
     "tierReasonZh": "Geo all-round support"
+  },
+  {
+    "id": "yumemizuki-mizuki",
+    "name": "梦见月瑞希",
+    "nameEn": "Yumemizuki Mizuki",
+    "element": "anemo",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "region": "Inazuma",
+    "description": "稻妻知名临床心理咨询师，秋莎浴场的核心创始投资者和最大股东，能吞噬噩梦的食梦貘",
+    "descriptionEn": "A renowned clinical psychologist from Inazuma and major shareholder of Aisa Bathhouse, a yumekui-baku who devours nightmares",
+    "releaseVersion": "5.4",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "A",
+    "tierReason": "风系治疗辅助，提供持续治疗和增益",
+    "tierReasonZh": "Anemo healer support with sustained healing and buffs",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击",
+        "nameEn": "Normal Attack",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "varesa",
+    "name": "瓦雷莎",
+    "nameEn": "Varesa",
+    "element": "electro",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "region": "Natlan",
+    "description": "纳塔战士，以电元素进行强力输出",
+    "descriptionEn": "A Natlan warrior who deals powerful Electro damage",
+    "releaseVersion": "5.5",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "A",
+    "tierReason": "雷系驻场主C，高爆发输出",
+    "tierReasonZh": "Electro on-field DPS with high burst damage",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击",
+        "nameEn": "Normal Attack",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "iansan",
+    "name": "伊安珊",
+    "nameEn": "Iansan",
+    "element": "electro",
+    "weaponType": "Polearm",
+    "rarity": 4,
+    "region": "Natlan",
+    "description": "纳塔战士，敏捷的长枪使用者",
+    "descriptionEn": "A Natlan warrior and agile polearm fighter",
+    "releaseVersion": "5.5",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "B",
+    "tierReason": "雷系四星输出，具备一定辅助能力",
+    "tierReasonZh": "4-star Electro DPS with some support utility",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击",
+        "nameEn": "Normal Attack",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "escoffier",
+    "name": "爱可菲",
+    "nameEn": "Escoffier",
+    "element": "cryo",
+    "weaponType": "Polearm",
+    "rarity": 5,
+    "region": "Fontaine",
+    "description": "枫丹名厨，以冰元素长枪进行优雅的战斗",
+    "descriptionEn": "A renowned Fontaine chef who fights elegantly with Cryo polearm",
+    "releaseVersion": "5.6",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "S",
+    "tierReason": "冰系减抗辅助，提供强力团队增益",
+    "tierReasonZh": "Cryo resistance shred support with strong team buffs",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击",
+        "nameEn": "Normal Attack",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "ifa",
+    "name": "伊法",
+    "nameEn": "Ifa",
+    "element": "anemo",
+    "weaponType": "Catalyst",
+    "rarity": 4,
+    "region": "Natlan",
+    "description": "纳塔部族的治愈者，以风元素法器进行支援",
+    "descriptionEn": "A Natlan tribal healer who supports with Anemo catalyst",
+    "releaseVersion": "5.6",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "B",
+    "tierReason": "风系四星治疗辅助",
+    "tierReasonZh": "4-star Anemo healer support",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击",
+        "nameEn": "Normal Attack",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "skirk",
+    "name": "丝柯克",
+    "nameEn": "Skirk",
+    "element": "cryo",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "region": "Another World",
+    "description": "来自星海的神秘剑客，曾是达达利亚在深渊中的师父，也是罪人苏尔特洛奇的弟子",
+    "descriptionEn": "A mysterious swordswoman from beyond the stars, Tartaglia's master in the Abyss and disciple of Surtalogi of the Five Sinners",
+    "releaseVersion": "5.7",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "S",
+    "tierReason": "冰系强力主C，独特机制高伤害",
+    "tierReasonZh": "Cryo DPS with unique mechanics and high damage output",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击",
+        "nameEn": "Normal Attack",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "dahlia",
+    "name": "塔利雅",
+    "nameEn": "Dahlia",
+    "element": "hydro",
+    "weaponType": "Sword",
+    "rarity": 4,
+    "region": "Mondstadt",
+    "description": "蒙德教堂执事，同时是巴巴托斯的传令官，知晓温迪的真实身份",
+    "descriptionEn": "A deacon of the Church of Favonius and Herald of Barbatos who knows Venti's true identity",
+    "releaseVersion": "5.7",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "B",
+    "tierReason": "水系四星辅助，提供攻速和治疗增益",
+    "tierReasonZh": "4-star Hydro support providing ATK SPD and healing buffs",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击",
+        "nameEn": "Normal Attack",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "ineffa",
+    "name": "伊涅芙",
+    "nameEn": "Ineffa",
+    "element": "electro",
+    "weaponType": "Polearm",
+    "rarity": 5,
+    "region": "Nod-Krai",
+    "description": "诺德克莱的战士，能够触发月充能反应进行支援",
+    "descriptionEn": "A warrior of Nod-Krai who enables Lunar-Charged reactions for team support",
+    "releaseVersion": "5.8",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "S",
+    "tierReason": "雷系月印辅助，月充能反应核心角色",
+    "tierReasonZh": "Electro Moonsign support, core enabler for Lunar-Charged reactions",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击",
+        "nameEn": "Normal Attack",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "lauma",
+    "name": "菈乌玛",
+    "nameEn": "Lauma",
+    "element": "dendro",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "region": "Nod-Krai",
+    "description": "诺德克莱的脱手草系辅助，擅长月绽放反应",
+    "descriptionEn": "An off-field Dendro support from Nod-Krai specializing in Lunar-Bloom reactions",
+    "releaseVersion": "6.0",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "S",
+    "tierReason": "草系脱手辅助，月绽放反应核心",
+    "tierReasonZh": "Dendro off-field support, core for Lunar-Bloom reactions",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击",
+        "nameEn": "Normal Attack",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "flins",
+    "name": "克里洛·楚德米洛维奇·菲林斯",
+    "nameEn": "Flins",
+    "element": "electro",
+    "weaponType": "Polearm",
+    "rarity": 5,
+    "region": "Nod-Krai",
+    "description": "诺德克莱的战士，擅长月充能反应的驻场输出",
+    "descriptionEn": "A Nod-Krai warrior and on-field DPS specializing in Lunar-Charged reactions",
+    "releaseVersion": "6.0",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "A",
+    "tierReason": "雷系驻场主C，月充能反应输出",
+    "tierReasonZh": "Electro on-field DPS focused on Lunar-Charged reactions",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击",
+        "nameEn": "Normal Attack",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "aino",
+    "name": "爱诺",
+    "nameEn": "Aino",
+    "element": "hydro",
+    "weaponType": "Claymore",
+    "rarity": 4,
+    "region": "Nod-Krai",
+    "description": "诺德克莱的脱手水系辅助，通过魔神任务免费获得",
+    "descriptionEn": "An off-field Hydro support from Nod-Krai, obtained for free through the Archon Quest",
+    "releaseVersion": "6.0",
+    "status": "released",
+    "acquisitionMethod": "free",
+    "tierRank": "B",
+    "tierReason": "水系四星脱手辅助，免费角色",
+    "tierReasonZh": "4-star Hydro off-field support, free character",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击",
+        "nameEn": "Normal Attack",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "nefer",
+    "name": "奈芙尔",
+    "nameEn": "Nefer",
+    "element": "dendro",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "region": "Nod-Krai",
+    "description": "秘密馆馆长，北方情报网的成员，同时也是须弥学者出身",
+    "descriptionEn": "Owner of the Curatorium of Secrets and member of the Northern Intelligence Network, originally from Sumeru",
+    "releaseVersion": "6.1",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "A",
+    "tierReason": "草系驻场主C，月绽放反应输出",
+    "tierReasonZh": "Dendro on-field DPS focused on Lunar-Bloom reactions",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击",
+        "nameEn": "Normal Attack",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "wonderland-manekin",
+    "name": "奇域人偶",
+    "nameEn": "Wonderland Manekin",
+    "element": "none",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "region": "Another World",
+    "description": "女巫奥克塔维亚赠予旅行者的人偶，擅长探索密利亚斯特拉奇境中的秘密，元素随旅行者当前元素变化",
+    "descriptionEn": "A Manekin gifted by the witch Octavia, skilled at exploring Miliastra Wonderland, element adapts to the Traveler's current element",
+    "releaseVersion": "6.1",
+    "status": "released",
+    "acquisitionMethod": "gameplay-mode",
+    "tierRank": "B",
+    "tierReason": "特殊玩法角色，元素随旅行者变化",
+    "tierReasonZh": "Special gameplay character, element follows the Traveler",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击",
+        "nameEn": "Normal Attack",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "durin",
+    "name": "杜林",
+    "nameEn": "Durin",
+    "element": "pyro",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "region": "Mondstadt",
+    "description": "由魔女会成员安德斯多特在 simulanka 故事书世界中创造的龙，被阿贝多通过炼金术赋予合成人体后融入蒙德社会",
+    "descriptionEn": "A dragon created by Hexenzirkel witch Andersdotter in Simulanka, granted a synthetic human body by Albedo to integrate into Mondstadt society",
+    "releaseVersion": "6.2",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "S",
+    "tierReason": "火系赫克塞雷角色，强力驻场输出",
+    "tierReasonZh": "Pyro Hexerei character, powerful on-field DPS",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击",
+        "nameEn": "Normal Attack",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "jahoda",
+    "name": "雅珂达",
+    "nameEn": "Jahoda",
+    "element": "anemo",
+    "weaponType": "Bow",
+    "rarity": 4,
+    "region": "Nod-Krai",
+    "description": "秘密馆的前员工，自称传奇赏金猎人，曾为海钩帮成员",
+    "descriptionEn": "A self-proclaimed legendary bounty hunter and former member of the Seahook Gang, working for the Curatorium of Secrets",
+    "releaseVersion": "6.2",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "B",
+    "tierReason": "风系四星弓箭输出",
+    "tierReasonZh": "4-star Anemo Bow DPS",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击",
+        "nameEn": "Normal Attack",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "zibai",
+    "name": "兹白",
+    "nameEn": "Zibai",
+    "element": "geo",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "region": "Liyue",
+    "description": "曾经是治理琅干文明的天使，被崇拜为社稷之神，后成为八仙之一",
+    "descriptionEn": "Once an Angel who governed the civilization of Lang-Gan, worshipped as the God of Soil and Grain before becoming one of the Eight Adepts",
+    "releaseVersion": "6.3",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "S",
+    "tierReason": "岩系剑士主C，强力驻场输出",
+    "tierReasonZh": "Geo Sword DPS, powerful on-field damage dealer",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击",
+        "nameEn": "Normal Attack",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "columbina",
+    "name": "哥伦比娅",
+    "nameEn": "Columbina",
+    "element": "hydro",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "region": "Nod-Krai",
+    "description": "诺德克莱的月之女神，霜月之子称其为库塔，前愚人众第三席少女",
+    "descriptionEn": "Moon Goddess of Nod-Krai, known as Kuutar to the Frostmoon Scions, formerly the Damselette, Third of the Fatui Harbingers",
+    "releaseVersion": "6.3",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "S",
+    "tierReason": "水系月印全能辅助，可触发多种月印反应",
+    "tierReasonZh": "Hydro Moonsign all-round support enabling multiple Lunar reactions",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击",
+        "nameEn": "Normal Attack",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "illuga",
+    "name": "叶洛亚",
+    "nameEn": "Illuga",
+    "element": "geo",
+    "weaponType": "Polearm",
+    "rarity": 4,
+    "region": "Nod-Krai",
+    "description": "守光者调查小队噩梦黄鹂的现任队长，因与狂猎的战斗经历而深爱他的每一位队员",
+    "descriptionEn": "Current Squad Leader of the Nightmare Orioles, a Lightkeeper investigation squad, who deeply cares for every squadmate",
+    "releaseVersion": "6.3",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "B",
+    "tierReason": "岩系四星长枪辅助",
+    "tierReasonZh": "4-star Geo Polearm support",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击",
+        "nameEn": "Normal Attack",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "varka",
+    "name": "法尔伽",
+    "nameEn": "Varka",
+    "element": "anemo",
+    "weaponType": "Claymore",
+    "rarity": 5,
+    "region": "Mondstadt",
+    "description": "现任北风骑士，蒙德骑士团大团长，赫克塞雷角色",
+    "descriptionEn": "Current Knight of Boreas and Grand Master of the Knights of Favonius, a Hexerei character",
+    "releaseVersion": "6.4",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "S",
+    "tierReason": "风系赫克塞雷角色，强力双手剑主C",
+    "tierReasonZh": "Anemo Hexerei character, powerful Claymore DPS",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击",
+        "nameEn": "Normal Attack",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "linnea",
+    "name": "莉奈娅",
+    "nameEn": "Linnea",
+    "element": "geo",
+    "weaponType": "Bow",
+    "rarity": 5,
+    "region": "Nod-Krai",
+    "description": "诺德克莱最后的雪地精灵之一，也是现存的占卜鸟之一，担任冒险家协会顾问和博物学家",
+    "descriptionEn": "One of the last Snowland Fae in Nod-Krai and last Augury Birds, working as advisor to the Adventurer's Guild and a naturalist",
+    "releaseVersion": "6.5",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "S",
+    "tierReason": "岩系脱手辅助，月结晶反应核心",
+    "tierReasonZh": "Geo off-field support, core for Lunar-Crystallize reactions",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击",
+        "nameEn": "Normal Attack",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "nicole",
+    "name": "尼可",
+    "nameEn": "Nicole",
+    "element": "pyro",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "region": "Other",
+    "description": "无声天使，魔女会成员，代号N，赫克塞雷角色",
+    "descriptionEn": "A voiceless angel and member of the Hexenzirkel known by her codename N, a Hexerei character",
+    "releaseVersion": "6.6",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "S",
+    "tierReason": "火系赫克塞雷脱手辅助，强力团队增益",
+    "tierReasonZh": "Pyro Hexerei off-field support with strong team buffs",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击",
+        "nameEn": "Normal Attack",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
   }
 ]
