@@ -40,68 +40,68 @@ const HOME_MSG: Record<string, HomeMessages> = {
 // --- Game descriptions (SEO meta + on-page) ---
 const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
   genshin: {
-    zh: '原神角色图鉴、武器数据库、圣遗物推荐、攻略百科。查看角色 builds、配队推荐、材料路线图。',
-    en: 'Genshin Impact character builds, weapon database, artifact recommendations, and guides. Find team comps, material farming routes, and tier lists.',
-    ja: '原神キャラビルド、武器データベース、聖遺物おすすめ、攻略百科。チーム編成、素材周回ルート、Tierリスト。',
+    zh: '原神角色图鉴、武器数据库、圣遗物推荐、攻略百科。覆盖至6.x版本Nod-Krai区域，116+角色builds、配队推荐、材料路线图、交互地图。',
+    en: 'Genshin Impact character builds, weapon database, artifact recommendations, and guides up to v6.x Nod-Krai. 116+ characters, team comps, interactive map, and tier lists.',
+    ja: '原神キャラビルド、武器データベース、聖遺物おすすめ、攻略百科。v6.x Nod-Krai対応、116+キャラ、チーム編成、インタラクティブマップ、Tierリスト。',
   },
   starrail: {
-    zh: '崩坏：星穹铁道角色图鉴、光锥数据库、遗器推荐、攻略百科。',
-    en: 'Honkai: Star Rail character builds, light cone database, relic recommendations, and guides.',
-    ja: '崩壊：スターレイルキャラビルド、光円錐データベース、遺物おすすめ、攻略百科。',
+    zh: '崩坏：星穹铁道角色图鉴、光锥数据库、遗器推荐、攻略百科。覆盖至4.x版本Planarcadia星球，86+角色、愉悦命途、伤害计算器。',
+    en: 'Honkai: Star Rail character builds, light cone database, relic recommendations, and guides up to v4.x Planarcadia. 86+ characters, Elation Path, damage calculator.',
+    ja: '崩壊：スターレイルキャラビルド、光円錐データベース、遺物おすすめ、攻略百科。v4.x Planarcadia対応、86+キャラ、エレーション運命、ダメージ計算機。',
   },
   wuwa: {
-    zh: '鸣潮角色图鉴、武器数据、声骸推荐、攻略百科。',
-    en: 'Wuthering Waves character builds, weapon database, echo recommendations, and guides.',
-    ja: '鳴潮キャラビルド、武器データベース、エコーおすすめ、攻略百科。',
+    zh: '鸣潮角色图鉴、武器数据、声骸推荐、攻略百科。覆盖至3.x版本Roya Frostlands，48+角色、Tune Break战斗系统、声骸套装搭配。',
+    en: 'Wuthering Waves character builds, weapon database, echo recommendations, and guides up to v3.x Roya Frostlands. 48+ characters, Tune Break combat, echo set guides.',
+    ja: '鳴潮キャラビルド、武器データベース、エコーおすすめ、攻略百科。v3.x Roya Frostlands対応、48+キャラ、Tune Break戦闘、エコーセットガイド。',
   },
   nte: {
-    zh: '异环角色图鉴、武器数据、光盘推荐、攻略百科。',
-    en: 'Neverness to Everness character builds, weapon database, disk set guides, and more.',
-    ja: '異環キャラビルド、武器データベース、ディスクおすすめ、攻略百科。',
+    zh: '异环（NTE）角色图鉴、武器数据、光盘推荐、兑换码、祈愿模拟。已正式发布，覆盖19个可玩角色、技能解析与配装方案。',
+    en: 'Neverness to Everness (NTE) character guides, weapon data, disk set recommendations, redeem codes, and gacha simulator. Now released with 19 playable characters.',
+    ja: '異環（NTE）キャラ図鑑、武器データ、ディスクおすすめ、交換コード、ガチャシミュレーター。正式リリース済み、19体のプレイアブルキャラ。',
   },
   zzz: {
-    zh: '绝区零代理人图鉴、音擎数据、驱动盘推荐、攻略百科。',
-    en: 'Zenless Zone Zero agent builds, W-Engine database, drive disc recommendations, and guides.',
-    ja: 'ゼンレスゾーンゼロエージェントビルド、Wエンジンデータ、ドライブディスクおすすめ、攻略百科。',
+    zh: '绝区零代理人图鉴、音擎数据、驱动盘推荐、攻略百科。覆盖至2.8版本，52+代理人、Rupture职业、最佳配队方案。',
+    en: 'Zenless Zone Zero agent builds, W-Engine database, drive disc recommendations, and guides up to v2.8. 52+ agents, Rupture specialty, best team comps.',
+    ja: 'ゼンレスゾーンゼロエージェントビルド、Wエンジンデータ、ドライブディスクおすすめ、攻略百科。v2.8対応、52+エージェント、ラプチャースペシャリティ。',
   },
   guihuan: {
-    zh: '归环角色图鉴、武器数据、攻略百科。',
-    en: 'Guihuan character builds, weapon database, and guides.',
-    ja: '帰環キャラビルド、武器データ、攻略百科。',
+    zh: '归环角色图鉴、武器数据、攻略百科。覆盖全部可用角色的技能数据与配装推荐。',
+    en: 'Guihuan character builds, weapon database, and guides. Full skill data and build recommendations for all characters.',
+    ja: '帰環キャラビルド、武器データ、攻略百科。全キャラのスキルデータとビルドおすすめ。',
   },
   ananta: {
-    zh: '无限大角色图鉴、武器数据、攻略百科。',
-    en: 'Ananta character builds, weapon database, and guides.',
-    ja: '無限大キャラビルド、武器データ、攻略百科。',
+    zh: '无限大角色图鉴、武器数据、攻略百科。网易开发的无抽卡开放世界游戏，角色通过游戏进程获取。',
+    en: 'Ananta character builds, weapon database, and guides. A no-gacha open-world game by NetEase where all characters are unlocked through gameplay.',
+    ja: '無限大キャラビルド、武器データ、攻略百科。NetEase開発のガチャなしオープンワールドゲーム、全キャラがゲーム進行で解放。',
   },
 };
 
 // SEO-rich about paragraphs per game per locale
 const GAME_ABOUT: Record<string, Record<string, string>> = {
   genshin: {
-    zh: '原神（Genshin Impact）是米哈游开发的开放世界动作 RPG 游戏。Gachia 提供完整的原神角色图鉴，覆盖全部五星、四星角色的属性、技能、命之座、突破材料与配装推荐。圣遗物数据库包含所有套装效果与最佳适配角色。武器数据库按类型和稀有度分类，提供满级属性与特效说明。节奏榜帮助玩家了解当前版本强势角色，配队工具支持多种元素反应组合。',
-    en: 'Genshin Impact is an open-world action RPG developed by HoYoverse. Gachia provides a complete Genshin character database covering all 5-star and 4-star characters with stats, talents, constellations, ascension materials, and recommended builds. Our artifact database lists every set with 2pc/4pc effects and best characters. The weapon database is organized by type and rarity with max-level stats and passive descriptions. Use the tier list to find meta characters and the team builder to explore elemental reaction combos.',
-    ja: '原神（Genshin Impact）はHoYoverseが開発したオープンワールドアクションRPGです。Gachiaでは全★5・★4キャラクターのステータス、スキル、命ノ星座、突破素材、おすすめビルドを網羅したキャラ図鑑を提供しています。聖遺物データベースには全セットの2セット/4セット効果と最適キャラを掲載。武器はタイプ別・レアリティ別に分類し、最大レベルステータスと特殊効果を確認できます。',
+    zh: '原神（Genshin Impact）是米哈游开发的开放世界动作 RPG，当前版本6.x「空月之歌」已开放Nod-Krai区域。Gachia 提供完整的原神角色图鉴，覆盖116+五星、四星角色的属性、技能、命之座、突破材料与配装推荐。圣遗物数据库包含所有套装效果与最佳适配角色。武器数据库按类型和稀有度分类。交互地图支持实时标记与进度追踪，节奏榜帮助玩家了解当前版本强势角色。',
+    en: 'Genshin Impact is an open-world action RPG by HoYoverse, currently in v6.x "Song of the Hollow Moon" with the new Nod-Krai region. Gachia provides a complete character database covering 116+ 5-star and 4-star characters with stats, talents, constellations, ascension materials, and builds. Our artifact database lists every set with effects and best characters. The interactive map supports real-time markers and progress tracking. Use the tier list to find meta characters.',
+    ja: '原神（Genshin Impact）はHoYoverseのオープンワールドアクションRPG、現在v6.x「空月の歌」Nod-Krai地域が開放済み。Gachiaでは116+キャラクターのステータス、スキル、命ノ星座、突破素材、ビルドを網羅。聖遺物データベースには全セット効果と最適キャラを掲載。インタラクティブマップでリアルタイムマーカーと進捗追跡に対応。Tierリストでメタキャラを確認できます。',
   },
   starrail: {
-    zh: '崩坏：星穹铁道（Honkai: Star Rail）是米哈游开发的回合制策略 RPG。Gachia 提供全角色图鉴、光锥数据库、遗器推荐、配队方案与伤害计算器。角色按命途（毁灭、存护、巡猎、智识、谐乐、虚无、丰饶）分类，包含完整技能与行迹数据。',
-    en: 'Honkai: Star Rail is a turn-based strategy RPG by HoYoverse. Gachia offers a full character database, light cone encyclopedia, relic recommendations, team comps, and a damage calculator. Characters are organized by Path (Destruction, Preservation, Hunt, Erudition, Harmony, Nihility, Abundance) with complete skill and trace data.',
-    ja: '崩壊：スターレイル（Honkai: Star Rail）はHoYoverseのターン制ストラテジーRPGです。Gachiaでは全キャラ図鑑、光円錐データベース、遺物おすすめ、パーティ編成、ダメージ計算機を提供しています。キャラは運命（壊滅、存護、巡狩、知恵、調和、虚無、豊穣）別に分類し、スキルと軌跡データを完全網羅。',
+    zh: '崩坏：星穹铁道（Honkai: Star Rail）是米哈游开发的回合制策略 RPG，当前版本4.x已开放Planarcadia星球并新增「愉悦」命途。Gachia 提供全86+角色图鉴、光锥数据库、遗器推荐、配队方案与伤害计算器。角色按8条命途（毁灭、存护、巡猎、智识、谐乐、虚无、丰饶、愉悦）分类，包含完整技能与行迹数据。',
+    en: 'Honkai: Star Rail is a turn-based strategy RPG by HoYoverse, currently in v4.x with the new Planarcadia planet and Elation Path. Gachia offers a full 86+ character database, light cone encyclopedia, relic recommendations, team comps, and damage calculator. Characters are organized by 8 Paths (Destruction, Preservation, Hunt, Erudition, Harmony, Nihility, Abundance, Elation) with complete skill and trace data.',
+    ja: '崩壊：スターレイル（Honkai: Star Rail）はHoYoverseのターン制ストラテジーRPG、現在v4.x Planarcadia星球と「愉悦」運命が追加済み。Gachiaでは86+キャラ図鑑、光円錐データベース、遺物おすすめ、パーティ編成、ダメージ計算機を提供。キャラは8つの運命（壊滅、存護、巡狩、知恵、調和、虚無、豊穣、愉悦）別に分類し、スキルと軌跡データを完全網羅。',
   },
   wuwa: {
-    zh: '鸣潮（Wuthering Waves）是库洛游戏开发的开放世界动作 RPG。Gachia 提供鸣潮角色图鉴、武器数据、声骸系统详解、配装推荐与配队方案。声骸按cost等级和套装效果分类，帮助玩家快速找到最优搭配。',
-    en: 'Wuthering Waves is an open-world action RPG developed by Kuro Games. Gachia provides character guides, weapon data, an echo system encyclopedia, build recommendations, and team comps. Echoes are organized by cost tier and set effects to help you find the best combos quickly.',
-    ja: '鳴潮（Wuthering Waves）はKuro Gamesが開発したオープンワールドアクションRPGです。Gachiaではキャラ図鑑、武器データ、エコーシステム解説、ビルドおすすめ、パーティ編成を提供。エコーはコストティアとセット効果別に分類し、最適な組み合わせを素早く見つけられます。',
+    zh: '鸣潮（Wuthering Waves）是库洛游戏开发的开放世界动作 RPG，当前版本3.x已开放Roya Frostlands区域，引入Tune Break战斗系统与Motorbike探索载具。Gachia 提供鸣潮48+角色图鉴、武器数据、声骸系统详解、配装推荐与配队方案。声骸按cost等级和Sonata套装效果分类，帮助玩家快速找到最优搭配。',
+    en: 'Wuthering Waves is an open-world action RPG by Kuro Games, currently in v3.x with the Roya Frostlands region, Tune Break combat system, and Motorbike traversal. Gachia provides 48+ character guides, weapon data, echo encyclopedia with Sonata set effects, build recommendations, and team comps organized by echo cost tier and set bonuses.',
+    ja: '鳴潮（Wuthering Waves）はKuro GamesのオープンワールドアクションRPG、現在v3.x Roya Frostlands地域、Tune Break戦闘システム、バイク探索が追加済み。Gachiaでは48+キャラ図鑑、武器データ、エコー百科（Sonataセット効果付き）、ビルドおすすめ、パーティ編成を提供。',
   },
   nte: {
-    zh: '异环（Neverness to Everness）是 Hotta Studio 开发的超自然开放世界游戏。Gachia 提供最全的异环数据库，包含角色图鉴、武器数据、光盘套装推荐、兑换码汇总、祈愿模拟与异象系统。覆盖全部 S 级与 A 级角色，提供详细的技能解析与配装方案。',
-    en: 'Neverness to Everness (NTE) is a supernatural open-world game by Hotta Studio. Gachia offers the most comprehensive NTE database with character guides, weapon data, disk set recommendations, redeem codes, gacha simulator, and anomaly system. All S-rank and A-rank characters are covered with detailed skill breakdowns and build guides.',
-    ja: '異環（Neverness to Everness）はHotta Studioの超自然オープンワールドゲームです。Gachiaは最も充実したNTEデータベースを提供。キャラ図鑑、武器データ、ディスクセットおすすめ、交換コード、ガチャシミュレーター、アノマリーシステムを網羅。全S級・A級キャラのスキル解説とビルドガイドを掲載。',
+    zh: '异环（Neverness to Everness）是 Hotta Studio 基于 UE5 开发的超自然开放世界游戏，2026年4月已正式发布。Gachia 提供最全的异环数据库，包含19个可玩角色的图鉴、武器数据、光盘套装推荐、兑换码汇总、祈愿模拟与异象系统，提供详细的技能解析与配装方案。',
+    en: 'Neverness to Everness (NTE) is a supernatural open-world game by Hotta Studio built on UE5, officially released in April 2026. Gachia offers the most comprehensive NTE database with 19 playable character guides, weapon data, disk set recommendations, redeem codes, gacha simulator, and anomaly system with detailed skill breakdowns and build guides.',
+    ja: '異環（Neverness to Everness）はHotta StudioのUE5製超自然オープンワールドゲーム、2026年4月正式リリース。Gachiaは最も充実したNTEデータベースを提供。19体のプレイアブルキャラ図鑑、武器データ、ディスクセットおすすめ、交換コード、ガチャシミュレーター、アノマリーシステムを網羅。',
   },
   zzz: {
-    zh: '绝区零（Zenless Zone Zero）是米哈游开发的都市动作游戏。Gachia 提供代理人图鉴、音擎（W-Engine）数据库、驱动盘推荐与配装方案。角色按属性和特殊类型分类，包含完整技能数据与最佳配队推荐。',
-    en: 'Zenless Zone Zero (ZZZ) is an urban action game by HoYoverse. Gachia provides an agent database, W-Engine encyclopedia, drive disc recommendations, and build guides. Characters are organized by attribute and specialty with complete skill data and best team suggestions.',
-    ja: 'ゼンレスゾーンゼロ（ZZZ）はHoYoverseの都市アクションゲームです。Gachiaではエージェント図鑑、Wエンジンデータベース、ドライブディスクおすすめ、ビルドガイドを提供。キャラは属性とスペシャリティ別に分類し、スキルデータと最適パーティを完全網羅。',
+    zh: '绝区零（Zenless Zone Zero）是米哈游开发的都市动作游戏，当前版本2.8。Gachia 提供52+代理人图鉴、音擎（W-Engine）数据库、驱动盘推荐与配装方案。角色按6种职业（攻击、眩晕、异常、支援、防御、破裂）和5种属性分类，包含完整技能数据与最佳配队推荐。',
+    en: 'Zenless Zone Zero (ZZZ) is an urban action game by HoYoverse, currently in v2.8. Gachia provides a 52+ agent database, W-Engine encyclopedia, drive disc recommendations, and build guides. Characters are organized by 6 specialties (Attack, Stun, Anomaly, Support, Defense, Rupture) and 5 attributes with complete skill data and best team suggestions.',
+    ja: 'ゼンレスゾーンゼロ（ZZZ）はHoYoverseの都市アクションゲーム、現在v2.8。Gachiaでは52+エージェント図鑑、Wエンジンデータベース、ドライブディスクおすすめ、ビルドガイドを提供。キャラは6つのスペシャリティ（アタック、スタン、アノマリー、サポート、ディフェンス、ラプチャー）と5属性別に分類。',
   },
   guihuan: {
     zh: '归环（Guihuan）是一款二次元开放世界冒险游戏。Gachia 提供归环角色图鉴、武器数据库、配装推荐与攻略百科，帮助玩家快速上手游戏并了解各角色的最优培养路线。',
@@ -109,9 +109,9 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
     ja: '帰環（Guihuan）は二次元オープンワールドアドベンチャーゲームです。Gachiaではキャラ図鑑、武器データベース、ビルドおすすめ、攻略百科を提供し、プレイヤーの迅速なスタートとキャラ育成をサポートします。',
   },
   ananta: {
-    zh: '无限大（Ananta）是一款二次元开放世界动作游戏。Gachia 提供角色图鉴、武器数据库、配装推荐与攻略百科，覆盖全部可用角色的技能解析与最佳装备搭配。',
-    en: 'Ananta is an anime open-world action game. Gachia offers a character database, weapon encyclopedia, build recommendations, and strategy guides covering all available characters with skill breakdowns and optimal equipment.',
-    ja: '無限大（Ananta）は二次元オープンワールドアクションゲームです。Gachiaではキャラ図鑑、武器データベース、ビルドおすすめ、攻略百科を提供。全キャラのスキル解説と最適装備を網羅しています。',
+    zh: '无限大（Ananta）是网易旗下 Naked Rain 工作室开发的开放世界动作游戏（前称 Project Mugen），采用无抽卡模式——所有角色通过游戏进程免费获取。Gachia 提供角色图鉴、武器数据库、配装推荐与攻略百科，覆盖全部已公布角色。',
+    en: 'Ananta (formerly Project Mugen) is an open-world action game by Naked Rain / NetEase with a no-gacha model — all characters are unlocked through gameplay for free. Gachia offers a character database, weapon encyclopedia, build recommendations, and strategy guides for all announced characters.',
+    ja: '無限大（Ananta、旧称Project Mugen）はNaked Rain / NetEaseのオープンワールドアクションゲーム。ガチャなしモデルで全キャラがゲーム進行で無料解放されます。Gachiaではキャラ図鑑、武器データベース、ビルドおすすめ、攻略百科を提供。',
   },
 };
 
