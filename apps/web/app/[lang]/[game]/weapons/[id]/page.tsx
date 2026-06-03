@@ -95,20 +95,33 @@ export async function generateMetadata({
   const gameId = game as GameId;
   const gameName = GAMES[gameId]?.name[locale] ?? '';
 
-  // Build intent-rich title & description per locale
-  const buildWeaponMeta = (name: string, effectDesc: string | undefined) => {
+  // Build intent-rich title & description per locale — includes stats in description for SERP CTR
+  const buildWeaponMeta = (name: string, effectDesc: string | undefined, statsLine?: string, hasPassive = true) => {
     const title = locale === 'zh'
-      ? `${name} — ${gameName}武器攻略 | 属性、技能效果与适用角色`
+      ? `${name} — ${gameName}武器攻略 | 属性${hasPassive ? '、技能效果' : ''}与适用角色`
       : locale === 'ja'
-        ? `${name} — ${gameName}武器データ | スキル効果とおすすめキャラ`
-        : `${name} — ${gameName} Weapon Stats, Skill Effect & Best Characters`;
-    const desc = effectDesc
-      ? `${name}: ${effectDesc}`.slice(0, 160)
-      : locale === 'zh'
-        ? `${name}是${gameName}中的武器，查看属性、技能效果、获取方式及推荐使用的角色。`
+        ? `${name} — ${gameName}武器データ${hasPassive ? ' | スキル効果とおすすめキャラ' : ' | ステータスとおすすめキャラ'}`
+        : statsLine
+          ? `${name} ${statsLine} — ${gameName} Weapon`
+          : `${name} — ${gameName} Weapon Stats${hasPassive ? ', Skill Effect &' : '&'} Best Characters`;
+    let desc: string;
+    if (effectDesc && statsLine) {
+      desc = `${statsLine}. ${effectDesc}`.slice(0, 160);
+    } else if (statsLine) {
+      desc = locale === 'zh'
+        ? `${name}：${statsLine}。查看${hasPassive ? '技能效果、' : ''}获取方式及推荐角色。`
         : locale === 'ja'
-          ? `${name}のステータス、スキル効果、入手方法、おすすめキャラクターを確認。`
-          : `Complete ${name} guide for ${gameName}: stats, skill effect, how to get it, and best characters to use it with.`;
+          ? `${name}：${statsLine}。${hasPassive ? 'スキル効果、' : ''}入手方法、おすすめキャラを確認。`
+          : `${name} — ${statsLine}. See ${hasPassive ? 'skill effect, ' : ''}how to get it, and best characters.`;
+    } else if (effectDesc) {
+      desc = `${name}: ${effectDesc}`.slice(0, 160);
+    } else {
+      desc = locale === 'zh'
+        ? `${name}是${gameName}中的武器，查看属性、${hasPassive ? '技能效果、' : ''}获取方式及推荐使用的角色。`
+        : locale === 'ja'
+          ? `${name}のステータス${hasPassive ? '、スキル効果' : ''}、入手方法、おすすめキャラクターを確認。`
+          : `Complete ${name} guide for ${gameName}: stats${hasPassive ? ', skill effect' : ''}, how to get it, and best characters to use it with.`;
+    }
     return { title, description: desc };
   };
 
@@ -117,7 +130,11 @@ export async function generateMetadata({
     if (!w) return {};
     const name = getGenshinWeaponName(w, locale);
     const effect = getGenshinWeaponEffect(w, locale);
-    const meta = buildWeaponMeta(name, effect?.description);
+    const sub90 = w.subStat ? (() => { const v = parseFloat(w.subStatValue); return isNaN(v) ? '' : `${w.subStat} ${(v * 4.6).toFixed(1)}%`; })() : '';
+    const stats = locale === 'zh'
+      ? `${w.rarity}★, 基础攻击力${w.baseAtk}${sub90 ? `, 满级${sub90}` : ''}`
+      : `★${w.rarity}, Base ATK ${w.baseAtk}${sub90 ? `, Lv.90 ${sub90}` : ''}`;
+    const meta = buildWeaponMeta(name, effect?.description, stats);
     return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
   if (gameId === 'starrail') {
@@ -125,7 +142,10 @@ export async function generateMetadata({
     if (!w) return {};
     const name = getStarRailLightConeName(w, locale);
     const effect = getStarRailLightConeEffect(w, locale);
-    const meta = buildWeaponMeta(name, effect?.description);
+    const stats = locale === 'zh'
+      ? `${w.rarity}★, 生命${w.baseHp} 攻击${w.baseAtk} 防御${w.baseDef}`
+      : `★${w.rarity}, HP ${w.baseHp} / ATK ${w.baseAtk} / DEF ${w.baseDef}`;
+    const meta = buildWeaponMeta(name, effect?.description, stats);
     return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
   if (gameId === 'wuwa') {
@@ -133,7 +153,12 @@ export async function generateMetadata({
     if (!w) return {};
     const name = getWuWaWeaponName(w, locale);
     const effect = getWuWaWeaponEffect(w, locale);
-    const meta = buildWeaponMeta(name, effect?.description);
+    const sub = w.subStat ? (locale === 'zh' ? `${w.subStat.name}${w.subStat.value}` : `${w.subStat.name} ${w.subStat.value}`) : '';
+    const stats = locale === 'zh'
+      ? `${w.rarity}★, 基础攻击力${w.baseAtk}${sub ? `, ${sub}` : ''}`
+      : `★${w.rarity}, Base ATK ${w.baseAtk}${sub ? `, ${sub}` : ''}`;
+    const hasPassive = !!effect?.name;
+    const meta = buildWeaponMeta(name, effect?.description, stats, hasPassive);
     return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
   if (gameId === 'nte') {
@@ -141,7 +166,11 @@ export async function generateMetadata({
     if (!w) return {};
     const name = getNteWeaponName(w, locale);
     const effect = getNteWeaponEffect(w, locale);
-    const meta = buildWeaponMeta(name, effect?.description);
+    const sub = w.substat ? (locale === 'zh' ? `${w.substat}${w.substatValue}` : `${w.substat} ${w.substatValue}`) : '';
+    const stats = locale === 'zh'
+      ? `${w.rank}级, 基础攻击力${w.baseAtk}${sub ? `, ${sub}` : ''}`
+      : `${w.rank}-Rank, Base ATK ${w.baseAtk}${sub ? `, ${sub}` : ''}`;
+    const meta = buildWeaponMeta(name, effect?.description, stats);
     return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
   if (gameId === 'zzz') {
@@ -149,7 +178,11 @@ export async function generateMetadata({
     if (!w) return {};
     const name = getZzzWeaponName(w, locale);
     const effect = getZzzWeaponEffect(w, locale);
-    const meta = buildWeaponMeta(name, effect?.description);
+    const sub = w.substat ? (locale === 'zh' ? `${w.substat}${w.substatValue}` : `${w.substatEn ?? w.substat} ${w.substatValue}`) : '';
+    const stats = locale === 'zh'
+      ? `${w.rank}级, 基础攻击力${w.baseAtk}${sub ? `, ${sub}` : ''}`
+      : `${w.rank}-Rank, Base ATK ${w.baseAtk}${sub ? `, ${sub}` : ''}`;
+    const meta = buildWeaponMeta(name, effect?.description, stats);
     return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
   if (gameId === 'guihuan') {
@@ -157,7 +190,11 @@ export async function generateMetadata({
     if (!w) return {};
     const name = getGuihuanWeaponName(w, locale);
     const effect = getGuihuanWeaponEffect(w, locale);
-    const meta = buildWeaponMeta(name, effect?.description);
+    const sub = w.substat ? (locale === 'zh' ? `${w.substat}${w.substatValue}` : `${w.substatEn ?? w.substat} ${w.substatValue}`) : '';
+    const stats = locale === 'zh'
+      ? `${w.rarity}★, 基础攻击力${w.baseAtk}${sub ? `, ${sub}` : ''}`
+      : `★${w.rarity}, Base ATK ${w.baseAtk}${sub ? `, ${sub}` : ''}`;
+    const meta = buildWeaponMeta(name, effect?.description, stats);
     return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
   if (gameId === 'ananta') {
@@ -165,7 +202,11 @@ export async function generateMetadata({
     if (!w) return {};
     const name = getAnantaWeaponName(w, locale);
     const effect = getAnantaWeaponEffect(w, locale);
-    const meta = buildWeaponMeta(name, effect?.description);
+    const sub = w.substat ? (locale === 'zh' ? `${w.substat}${w.substatValue}` : `${w.substatEn ?? w.substat} ${w.substatValue}`) : '';
+    const stats = locale === 'zh'
+      ? `${w.rarity}★, 基础攻击力${w.baseAtk}${sub ? `, ${sub}` : ''}`
+      : `★${w.rarity}, Base ATK ${w.baseAtk}${sub ? `, ${sub}` : ''}`;
+    const meta = buildWeaponMeta(name, effect?.description, stats);
     return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
   return {};
@@ -235,8 +276,18 @@ function GenshinWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnTyp
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <InfoCard label={locale === 'zh' ? '武器类型' : locale === 'ja' ? '武器タイプ' : 'Weapon Type'} value={weaponType} />
         <InfoCard label="Base ATK" value={String(weapon.baseAtk)} />
-        {weapon.subStat && <InfoCard label="Sub Stat" value={`${weapon.subStat} ${weapon.subStatValue}`} />}
+        {weapon.subStat && <InfoCard label="Sub Stat (Lv.1)" value={`${weapon.subStat} ${weapon.subStatValue}`} />}
       </div>
+      {weapon.subStat && (() => {
+        const baseVal = parseFloat(weapon.subStatValue);
+        if (isNaN(baseVal)) return null;
+        const maxVal = (baseVal * 4.6).toFixed(1);
+        return (
+          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <InfoCard label={locale === 'zh' ? '满级副属性 (Lv.90)' : locale === 'ja' ? 'Lv.90サブステータス' : 'Sub Stat at Lv.90'} value={`${weapon.subStat} ${maxVal}%`} />
+          </div>
+        );
+      })()}
       {effect.name && (
         <section className="mt-6">
           <h2 className="mb-3 text-lg font-semibold text-game-text">
@@ -340,7 +391,7 @@ function WuWaWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<t
         <InfoCard label="Base ATK" value={String(weapon.baseAtk)} />
         {weapon.subStat && <InfoCard label="Sub Stat" value={`${weapon.subStat.name} ${weapon.subStat.value}`} />}
       </div>
-      {effect.name && (
+      {effect.name ? (
         <section className="mt-6">
           <h2 className="mb-3 text-lg font-semibold text-game-text">
             {locale === 'zh' ? '武器技能' : locale === 'ja' ? '武器スキル' : 'Weapon Skill'}
@@ -348,6 +399,17 @@ function WuWaWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<t
           <div className="rounded-lg border border-game-border bg-game-surface p-4">
             <div className="mb-1 text-sm font-medium text-game-primary">{effect.name}</div>
             <p className="text-sm text-game-text-muted">{effect.description}</p>
+          </div>
+        </section>
+      ) : (
+        <section className="mt-6">
+          <h2 className="mb-3 text-lg font-semibold text-game-text">
+            {locale === 'zh' ? '武器技能' : locale === 'ja' ? '武器スキル' : 'Weapon Skill'}
+          </h2>
+          <div className="rounded-lg border border-dashed border-game-border bg-game-surface p-4 text-center">
+            <p className="text-sm text-game-text-muted">
+              {locale === 'zh' ? '暂无技能效果数据' : locale === 'ja' ? 'スキル効果データなし' : 'Passive skill data not yet available'}
+            </p>
           </div>
         </section>
       )}
