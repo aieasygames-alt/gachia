@@ -36,12 +36,12 @@
   {
     "id": "download-install-guide",
     "title": "《无限大》下载安装指南 — 全平台下载地址",
-    "titleEn": "Ananta Download & Install Guide — System Requirements, PC, Mobile, APK",
+    "titleEn": "Ananta System Requirements & Download Guide — PC, Mobile, Android, iOS",
     "category": "beginner",
     "categoryZh": "新手指南",
     "categoryEn": "Beginner",
     "summary": "提供《无限大》在PC、PS5、安卓、iOS平台的下载安装教程和系统配置要求。",
-    "summaryEn": "Complete Ananta download guide: minimum and recommended system requirements for PC, Android, iOS. Step-by-step install instructions, APK download links, and storage requirements.",
+    "summaryEn": "Ananta system requirements for PC, Android (Snapdragon 8 Gen 1+), and iOS (iPhone 12+). Mobile requirements, minimum specs, download links, and install guide for all platforms.",
     "content": "## 系统配置要求\n\n### PC端\n- 操作系统: Windows 10 64位以上\n- 处理器: Intel i7 / 同等AMD处理器\n- 内存: 16GB RAM\n- 显卡: NVIDIA RTX 3060\n- 存储空间: 50GB\n\n### 移动端\n- 安卓: 骁龙8 Gen 2及以上，8GB RAM\n- iOS: iPhone 14及以上\n\n### 主机\n- PS5: 支持原生版本\n\n## 下载方式\n\n1. **PC端**: 前往官网 ananta.163.com 下载客户端\n2. **安卓**: 官网直接下载APK\n3. **iOS**: App Store 搜索「无限大」\n4. **PS5**: PlayStation Store 搜索 Ananta",
     "contentEn": "## System Requirements\n\nBefore downloading Ananta (无限大), make sure your device meets the minimum requirements.\n\n### PC Minimum Requirements\n- **OS**: Windows 10 64-bit or above\n- **CPU**: Intel Core i5-8400 / AMD Ryzen 5 2600\n- **RAM**: 8GB\n- **GPU**: NVIDIA GTX 1060 6GB / AMD Radeon RX 580\n- **Storage**: 50GB SSD recommended\n\n### PC Recommended Requirements\n- **OS**: Windows 10/11 64-bit\n- **CPU**: Intel Core i7-9700 / AMD Ryzen 7 3700X\n- **RAM**: 16GB\n- **GPU**: NVIDIA RTX 3060 / AMD Radeon RX 6600 XT\n- **Storage**: 50GB SSD\n\n### Mobile Requirements\n\n#### Android\n- **Minimum**: Snapdragon 8 Gen 1, 6GB RAM, Android 12+\n- **Recommended**: Snapdragon 8 Gen 2+, 8GB RAM, Android 13+\n- **Storage**: 20GB free space\n\n#### iOS\n- **Minimum**: iPhone 12 / iPad with A14 Bionic\n- **Recommended**: iPhone 14 or later\n- **Storage**: 20GB free space\n\n### Console\n- **PS5**: Native version supported with 4K@60fps\n\n## How to Download Ananta\n\n### PC Download\n1. Visit the official Ananta website at **ananta.163.com**\n2. Click the \"Download PC Client\" button\n3. Run the installer (AnantaSetup.exe)\n4. Choose your installation directory (50GB+ free space needed)\n5. Launch and log in with your NetEase account\n\n### Android Download\n1. Visit **ananta.163.com** on your mobile browser\n2. Download the APK directly from the official site\n3. Enable \"Install from unknown sources\" in your phone settings\n4. Install the APK file\n5. Additional resource packs will download on first launch (~15GB)\n\n### iOS Download\n1. Open the **App Store** on your iPhone or iPad\n2. Search for \"Ananta\" or \"无限大\"\n3. Tap \"Get\" to download\n4. The game requires iOS 15.0 or later\n\n### PS5 Download\n1. Open the **PlayStation Store** on your PS5\n2. Search for \"Ananta\"\n3. Select \"Download\" — the game supports PS5 features including DualSense haptic feedback\n\n## Cross-Save & Cross-Play\n\nAnanta supports **cross-save** across all platforms. Your progress syncs automatically when logged into the same NetEase account. Note that some platform-exclusive items may not transfer.\n\n## Storage Management Tips\n\n- PC: Install on an SSD for faster loading times\n- Mobile: Connect to WiFi before downloading the initial resource packs (~15GB)\n- Clear cache periodically in Settings → Storage → Clear Cache\n\n## Troubleshooting Common Issues\n\n- **Download speed slow**: Use a wired connection on PC; avoid peak hours\n- **Install failed on Android**: Check that you have enough storage (20GB+ free)\n- **Game crashes on startup**: Update your GPU drivers to the latest version\n- **\"Device not compatible\" on mobile**: Your device may not meet minimum specs",
     "tags": [
@@ -70,6 +70,12 @@
         "questionZh": "无限大可以在手机上玩吗？",
         "answer": "Yes, Ananta is available on Android (Snapdragon 8 Gen 1+, 6GB RAM) and iOS (iPhone 12+). Download from the official site or App Store.",
         "answerZh": "可以，无限大支持安卓（骁龙8 Gen 1+，6GB内存）和iOS（iPhone 12+），从官网或App Store下载。"
+      },
+      {
+        "question": "What are the mobile requirements for Ananta?",
+        "questionZh": "无限大手机配置要求是什么？",
+        "answer": "Android minimum: Snapdragon 8 Gen 1, 6GB RAM, Android 12+, 20GB storage. Recommended: Snapdragon 8 Gen 2+, 8GB RAM. iOS minimum: iPhone 12 (A14 Bionic), iOS 15+. Recommended: iPhone 14+.",
+        "answerZh": "安卓最低：骁龙8 Gen 1，6GB内存，Android 12+，20GB存储。推荐：骁龙8 Gen 2+，8GB内存。iOS最低：iPhone 12（A14芯片），iOS 15+。推荐：iPhone 14+。"
       },
       {
         "question": "How much storage does Ananta need?",
