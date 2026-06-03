@@ -170,80 +170,87 @@
     "image": "/images/genshin/characters/diluc.webp",
     "skills": {
       "normalAttack": {
-        "name": "普通攻击·迪卢克",
-        "nameEn": "Normal Attack · Diluc",
-        "description": "进行至多五段的连续攻击",
-        "descriptionEn": "Performs up to 5 consecutive strikes"
+        "name": "普通攻击·淬炼之剑",
+        "nameEn": "Normal Attack: Tempered Sword",
+        "description": "进行至多四段的连续攻击。",
+        "descriptionEn": "Performs up to 4 consecutive strikes."
       },
       "elementalSkill": {
-        "name": "迪卢克的元素战技",
-        "nameEn": "Diluc's Elemental Skill",
-        "description": "释放火元素战技，造成火元素伤害",
-        "descriptionEn": "Releases Pyro Elemental Skill, dealing Pyro DMG",
+        "name": "逆焰之刃",
+        "nameEn": "Searing Onslaught",
+        "description": "向前方挥出大剑进行火元素攻击。可以连续施放3次，每次攻击间可以穿插普通攻击。",
+        "descriptionEn": "Unleashes a fierce forward slash dealing Pyro DMG. Can be cast 3 times in succession, with Normal Attacks able to be woven between casts.",
         "cooldown": "10s"
       },
       "elementalBurst": {
-        "name": "迪卢克的元素爆发",
-        "nameEn": "Diluc's Elemental Burst",
-        "description": "释放强大的火元素爆发，造成大量火元素伤害",
-        "descriptionEn": "Unleashes powerful Pyro Elemental Burst, dealing massive Pyro DMG",
-        "cost": 60
+        "name": "黎明",
+        "nameEn": "Dawn",
+        "description": "释放炽热的火焰之力，将大剑上的火焰化为火鸟飞向前方，对路径上的敌人造成大量火元素伤害，并赋予迪卢克火元素附魔。",
+        "descriptionEn": "Releases a fiery phoenix that deals massive Pyro DMG to opponents along its path, infuses Diluc's weapon with Pyro, and knocks back enemies.",
+        "cost": 40,
+        "cooldown": "12s"
       },
       "passive1": {
-        "name": "迪卢克的天赋1",
-        "nameEn": "Diluc's Talent 1",
-        "description": "固有天赋，提升战斗能力",
-        "descriptionEn": "Passive talent that enhances combat abilities"
+        "name": "不休之火",
+        "nameEn": "Unrelenting Flame",
+        "description": "黎明提供的火元素附魔持续时间延长4秒。",
+        "descriptionEn": "Dawn's Pyro infusion duration is extended by 4s."
       },
       "passive2": {
-        "name": "迪卢克的天赋2",
-        "nameEn": "Diluc's Talent 2",
-        "description": "固有天赋，提供额外效果",
-        "descriptionEn": "Passive talent that provides additional effects"
+        "name": "熔毁之翼",
+        "nameEn": "Blessing of Phoenix",
+        "description": "黎明命中敌人后，迪卢克的攻击力提升20%，持续10秒。",
+        "descriptionEn": "After Dawn hits an opponent, Diluc's ATK is increased by 20% for 10s."
+      },
+      "passive4": {
+        "name": "晨曦的暗影",
+        "nameEn": "Dark Shadow",
+        "description": "在黎明附魔期间，普通攻击和重击伤害提升。白日时间（6:00-18:00）迪卢克的攻击力提升10%。",
+        "descriptionEn": "During Dawn's Pyro infusion, Normal and Charged Attack DMG is increased. During daytime (6:00-18:00), Diluc's ATK is increased by 10%."
       }
     },
     "constellations": [
       {
         "level": 1,
-        "name": "迪卢克·C1",
-        "nameEn": "Diluc C1",
-        "description": "命之座第1层效果",
-        "descriptionEn": "Constellation 1 effect"
+        "name": "罪行之誓",
+        "nameEn": "Conviction",
+        "description": "迪卢克对生命值高于50%的敌人造成的伤害提升15%。",
+        "descriptionEn": "Diluc deals 15% increased DMG to opponents with HP above 50%."
       },
       {
         "level": 2,
-        "name": "迪卢克·C2",
-        "nameEn": "Diluc C2",
-        "description": "命之座第2层效果",
-        "descriptionEn": "Constellation 2 effect"
+        "name": "灰烬之河",
+        "nameEn": "Searing Ember",
+        "description": "受到伤害时攻击力提升10%，持续10秒，最多叠加3层。每1.5秒触发一次。",
+        "descriptionEn": "When Diluc takes DMG, ATK increases by 10% for 10s. Max 3 stacks. Triggers once every 1.5s."
       },
       {
         "level": 3,
-        "name": "迪卢克·C3",
-        "nameEn": "Diluc C3",
-        "description": "命之座第3层效果",
-        "descriptionEn": "Constellation 3 effect"
+        "name": "钢铁之焰",
+        "nameEn": "Fire and Steel",
+        "description": "逆焰之刃的技能等级提高3级，最高提升至15级。",
+        "descriptionEn": "Increases Searing Onslaught Level by 3. Maximum upgrade level is 15."
       },
       {
         "level": 4,
-        "name": "迪卢克·C4",
-        "nameEn": "Diluc C4",
-        "description": "命之座第4层效果",
-        "descriptionEn": "Constellation 4 effect"
+        "name": "流火焦灼",
+        "nameEn": "Flowing Flame",
+        "description": "在逆焰之刃的两次施放间穿插普通攻击时，逆焰之刃的伤害提升40%。",
+        "descriptionEn": "Casting Searing Onslaught in sequence greatly increases its DMG. Weaving Normal Attacks between Searing Onslaught casts increases the next cast DMG by 40%."
       },
       {
         "level": 5,
-        "name": "迪卢克·C5",
-        "nameEn": "Diluc C5",
-        "description": "命之座第5层效果",
-        "descriptionEn": "Constellation 5 effect"
+        "name": "昭启的黎明",
+        "nameEn": "Phoenix, Harbinger of Dawn",
+        "description": "黎明的技能等级提高3级，最高提升至15级。",
+        "descriptionEn": "Increases Dawn Level by 3. Maximum upgrade level is 15."
       },
       {
         "level": 6,
-        "name": "迪卢克·C6",
-        "nameEn": "Diluc C6",
-        "description": "命之座第6层效果",
-        "descriptionEn": "Constellation 6 effect"
+        "name": "清算黑暗之剑",
+        "nameEn": "Sword of Nemesis",
+        "description": "逆焰之刃施放后，接下来2次普通攻击的攻击速度和伤害大幅提升。",
+        "descriptionEn": "After casting Searing Onslaught, the next 2 Normal Attacks within 6s have their ATK SPD increased by 30% and deal 30% increased DMG."
       }
     ],
     "recommendedBuild": {
@@ -277,13 +284,40 @@
     },
     "teamComps": [
       {
-        "name": "通用队伍",
-        "nameEn": "General Team",
+        "name": "迪卢克蒸发队",
+        "nameEn": "Diluc Vaporize",
         "members": [
-          "diluc"
+          "diluc",
+          "xingqiu",
+          "kazuha",
+          "bennett"
         ],
-        "description": "包含迪卢克的通用队伍配置",
-        "descriptionEn": "General team composition with Diluc"
+        "description": "迪卢克主C，行秋挂水，枫原万叶减抗，班尼特增攻",
+        "descriptionEn": "Diluc main DPS, Xingqiu for Hydro, Kazuha for RES shred, Bennett for ATK buff"
+      },
+      {
+        "name": "迪卢克融化队",
+        "nameEn": "Diluc Melt",
+        "members": [
+          "diluc",
+          "rosaria",
+          "kaeya",
+          "bennett"
+        ],
+        "description": "双冰融化，罗莎莉亚和凯亚挂冰",
+        "descriptionEn": "Double Cryo Melt team, Rosaria and Kaeya for Cryo application"
+      },
+      {
+        "name": "迪卢克纯火",
+        "nameEn": "Mono Pyro",
+        "members": [
+          "diluc",
+          "kazuha",
+          "bennett",
+          "xiangling"
+        ],
+        "description": "全火队伍，双火共鸣增加攻击力",
+        "descriptionEn": "Full Pyro team with Pyro resonance for ATK boost"
       }
     ],
     "faq": [
@@ -945,80 +979,87 @@
     "image": "/images/genshin/characters/bennett.webp",
     "skills": {
       "normalAttack": {
-        "name": "普通攻击·班尼特",
-        "nameEn": "Normal Attack · Bennett",
-        "description": "进行至多五段的连续攻击",
-        "descriptionEn": "Performs up to 5 consecutive strikes"
+        "name": "普通攻击·好运剑",
+        "nameEn": "Normal Attack: Strike of Fortune",
+        "description": "进行至多五段的连续攻击。",
+        "descriptionEn": "Performs up to 5 consecutive strikes."
       },
       "elementalSkill": {
-        "name": "班尼特的元素战技",
-        "nameEn": "Bennett's Elemental Skill",
-        "description": "释放火元素战技，造成火元素伤害",
-        "descriptionEn": "Releases Pyro Elemental Skill, dealing Pyro DMG",
-        "cooldown": "10s"
+        "name": "热情过载",
+        "nameEn": "Passion Overload",
+        "description": "向敌人方向发动迅猛的火焰斩击，造成火元素伤害。长按可以进行蓄力，释放更强大的攻击。",
+        "descriptionEn": "Unleashes a swift flame slash dealing Pyro DMG. Hold to charge and unleash a more powerful attack with increased DMG and knockback. At Charge Level 2, launches enemies and explodes for additional Pyro DMG.",
+        "cooldown": "5s"
       },
       "elementalBurst": {
-        "name": "班尼特的元素爆发",
-        "nameEn": "Bennett's Elemental Burst",
-        "description": "释放强大的火元素爆发，造成大量火元素伤害",
-        "descriptionEn": "Unleashes powerful Pyro Elemental Burst, dealing massive Pyro DMG",
-        "cost": 60
+        "name": "美妙旅程",
+        "nameEn": "Fantastic Voyage",
+        "description": "向地面进行全力跳跃攻击，造成火元素范围伤害，并生成鼓舞领域。领域内的角色恢复生命值，如果生命值高于70%，则获得攻击力加成。",
+        "descriptionEn": "Performs a jumping attack dealing AoE Pyro DMG and creates an Inspiration Field. Characters within the field regenerate HP. If HP is above 70%, gain an ATK bonus based on Bennett's Base ATK.",
+        "cost": 60,
+        "cooldown": "15s"
       },
       "passive1": {
-        "name": "班尼特的天赋1",
-        "nameEn": "Bennett's Talent 1",
-        "description": "固有天赋，提升战斗能力",
-        "descriptionEn": "Passive talent that enhances combat abilities"
+        "name": "热情复燃",
+        "nameEn": "Rekindle",
+        "description": "热情过载的冷却时间减少20%。",
+        "descriptionEn": "Passion Overload CD decreased by 20%."
       },
       "passive2": {
-        "name": "班尼特的天赋2",
-        "nameEn": "Bennett's Talent 2",
-        "description": "固有天赋，提供额外效果",
-        "descriptionEn": "Passive talent that provides additional effects"
+        "name": "无畏",
+        "nameEn": "Fearnaught",
+        "description": "美妙旅程的鼓舞领域内，热情过载的冷却时间减少50%，且第二段蓄力不会将班尼特击飞。",
+        "descriptionEn": "Within the Inspiration Field of Fantastic Voyage, Passion Overload CD is reduced by 50% and Bennett is not launched by Charge Level 2."
+      },
+      "passive4": {
+        "name": "应该安全",
+        "nameEn": "It Should Be Safe...",
+        "description": "在蒙德执行探索派遣任务时，消耗的时间缩短25%。",
+        "descriptionEn": "Expedition duration in Mondstadt reduced by 25%."
       }
     },
     "constellations": [
       {
         "level": 1,
-        "name": "班尼特·C1",
-        "nameEn": "Bennett C1",
-        "description": "命之座第1层效果",
-        "descriptionEn": "Constellation 1 effect"
+        "name": "冒险憧憬",
+        "nameEn": "Grand Expectations",
+        "description": "美妙旅程的攻击力加成不再有生命值限制，且基础攻击力加成比例额外提升20%。",
+        "descriptionEn": "Fantastic Voyage ATK bonus no longer has the 70% HP restriction. Additionally, the Base ATK bonus is further increased by 20%."
       },
       {
         "level": 2,
-        "name": "班尼特·C2",
-        "nameEn": "Bennett C2",
-        "description": "命之座第2层效果",
-        "descriptionEn": "Constellation 2 effect"
+        "name": "踏破绝境",
+        "nameEn": "Impasse Conqueror",
+        "description": "班尼特的生命值低于70%时，元素充能效率提高30%。",
+        "descriptionEn": "When Bennett's HP falls below 70%, Energy Recharge is increased by 30%."
       },
       {
         "level": 3,
-        "name": "班尼特·C3",
-        "nameEn": "Bennett C3",
-        "description": "命之座第3层效果",
-        "descriptionEn": "Constellation 3 effect"
+        "name": "火热激情",
+        "nameEn": "Unstoppable Fervor",
+        "description": "美妙旅程的技能等级提高3级，最高提升至15级。",
+        "descriptionEn": "Increases Fantastic Voyage Level by 3. Maximum upgrade level is 15."
       },
       {
         "level": 4,
-        "name": "班尼特·C4",
-        "nameEn": "Bennett C4",
-        "description": "命之座第4层效果",
-        "descriptionEn": "Constellation 4 effect"
+        "name": "热血的火之魔女",
+        "nameEn": "Unexpected Odyssey",
+        "description": "热情过载第二段蓄力攻击时追加额外的火元素伤害。",
+        "descriptionEn": "Passion Overload at Charge Level 2 unleashes an additional Pyro attack."
       },
       {
         "level": 5,
-        "name": "班尼特·C5",
-        "nameEn": "Bennett C5",
-        "description": "命之座第5层效果",
-        "descriptionEn": "Constellation 5 effect"
+        "name": "开拓的心",
+        "nameEn": "True Explorer",
+        "description": "热情过载的技能等级提高3级，最高提升至15级。",
+        "descriptionEn": "Increases Passion Overload Level by 3. Maximum upgrade level is 15."
       },
       {
         "level": 6,
-        "name": "班尼特·C6",
-        "nameEn": "Bennett C6",
-        "description": "命之座第6层效果",
-        "descriptionEn": "Constellation 6 effect"
+        "name": "烈火与勇气",
+        "nameEn": "Fire Sword of Courage",
+        "description": "美妙旅程鼓舞领域内使用单手剑、双手剑和长柄武器的角色获得火元素附魔和15%火元素伤害加成。",
+        "descriptionEn": "Characters within Fantastic Voyage's Inspiration Field wielding Sword, Claymore, or Polearm weapons receive a Pyro infusion and 15% Pyro DMG Bonus."
       }
     ],
     "recommendedBuild": {
@@ -1052,13 +1093,40 @@
     },
     "teamComps": [
       {
-        "name": "通用队伍",
-        "nameEn": "General Team",
+        "name": "雷国队",
+        "nameEn": "Raiden National",
         "members": [
+          "raiden-shogun",
+          "xingqiu",
+          "xiangling",
           "bennett"
         ],
-        "description": "包含班尼特的通用队伍配置",
-        "descriptionEn": "General team composition with Bennett"
+        "description": "雷电将军主C，行秋挂水，香菱蒸发，班尼特增攻和治疗",
+        "descriptionEn": "Raiden main DPS, Xingqiu for Hydro, Xiangling for Vaporize, Bennett for ATK buff and healing"
+      },
+      {
+        "name": "融化甘雨",
+        "nameEn": "Ganyu Melt",
+        "members": [
+          "ganyu",
+          "xiangling",
+          "bennett",
+          "zhongli"
+        ],
+        "description": "甘雨主C融化反应，班尼特增攻和治疗，钟离护盾",
+        "descriptionEn": "Ganyu Melt DPS, Bennett for ATK buff, Zhongli for shield"
+      },
+      {
+        "name": "纯火队",
+        "nameEn": "Mono Pyro",
+        "members": [
+          "arlecchino",
+          "kazuha",
+          "bennett",
+          "xiangling"
+        ],
+        "description": "班尼特增攻双火共鸣，枫原万叶减抗，香菱后台输出",
+        "descriptionEn": "Bennett ATK buff and Pyro resonance, Kazuha for RES shred, Xiangling off-field DPS"
       }
     ],
     "faq": [
@@ -1875,80 +1943,87 @@
     "image": "/images/genshin/characters/arlecchino.webp",
     "skills": {
       "normalAttack": {
-        "name": "普通攻击·阿蕾奇诺",
-        "nameEn": "Normal Attack · Arlecchino",
-        "description": "进行至多五段的连续攻击",
-        "descriptionEn": "Performs up to 5 consecutive strikes"
+        "name": "普通攻击·斩首之邀",
+        "nameEn": "Normal Attack: Invitation to a Beheading",
+        "description": "进行至多六段的连续枪击。",
+        "descriptionEn": "Performs up to 6 consecutive spear strikes."
       },
       "elementalSkill": {
-        "name": "阿蕾奇诺的元素战技",
-        "nameEn": "Arlecchino's Elemental Skill",
-        "description": "释放火元素战技，造成火元素伤害",
-        "descriptionEn": "Releases Pyro Elemental Skill, dealing Pyro DMG",
-        "cooldown": "10s"
+        "name": "万种之厄",
+        "nameEn": "All Is Ash",
+        "description": "召唤厄月血火，对附近的敌人造成火元素伤害，并对其中的敌人进行冲刺斩击，造成火元素范围伤害。被命中的敌人会被施加血债令状。",
+        "descriptionEn": "Summons Balemoon Bloodfire, dealing Pyro DMG to multiple nearby opponents and performing a dash-cleave against one of them, dealing AoE Pyro DMG. Opponents hit will have a Blood-Debt Directive applied to them. Blood-Debt Directive lasts 30s, dealing Pyro DMG every 5s (max 2 instances). Absorbing Directives via Charged Attack or Elemental Burst grants Bond of Life worth 65% Max HP each.",
+        "cooldown": "30s"
       },
       "elementalBurst": {
-        "name": "阿蕾奇诺的元素爆发",
-        "nameEn": "Arlecchino's Elemental Burst",
-        "description": "释放强大的火元素爆发，造成大量火元素伤害",
-        "descriptionEn": "Unleashes powerful Pyro Elemental Burst, dealing massive Pyro DMG",
-        "cost": 60
+        "name": "厄月将升",
+        "nameEn": "Balemoon Rising",
+        "description": "展开厄月血火的巨大翅膀，吸收并清除附近的血债令状，造成火元素范围伤害，清除万种之厄的冷却时间并治疗自身。治疗量基于生命之契的值和攻击力。",
+        "descriptionEn": "Arlecchino's great wing of Balemoon Bloodfire beats as she absorbs and clears Blood-Debt Directives around her, dealing AoE Pyro DMG, clearing All Is Ash's CD and healing herself based on Bond of Life value and ATK.",
+        "cost": 60,
+        "cooldown": "15s"
       },
       "passive1": {
-        "name": "阿蕾奇诺的天赋1",
-        "nameEn": "Arlecchino's Talent 1",
-        "description": "固有天赋，提升战斗能力",
-        "descriptionEn": "Passive talent that enhances combat abilities"
+        "name": "唯苦痛方可偿",
+        "nameEn": "Agony Alone May Be Repaid",
+        "description": "血债令状具有以下特性：击败被施加了血债令状的敌人时，为阿蕾奇诺提供生命之契。血债令状施加5秒后会升级为血债清算，吸收时提供更高的生命之契。",
+        "descriptionEn": "Blood-Debt Directives grant Bond of Life worth 130% Max HP when an opponent with a Directive is defeated. After 5s, Directives upgrade to Blood-Debt Due, granting 130% Bond of Life when absorbed."
       },
       "passive2": {
-        "name": "阿蕾奇诺的天赋2",
-        "nameEn": "Arlecchino's Talent 2",
-        "description": "固有天赋，提供额外效果",
-        "descriptionEn": "Passive talent that provides additional effects"
+        "name": "唯力量方可守",
+        "nameEn": "Strength Alone Can Defend",
+        "description": "阿蕾奇诺的攻击力超过1000的部分，每100点增加1%全元素和物理抗性，最高增加20%。",
+        "descriptionEn": "Arlecchino gains 1% All Elemental and Physical RES for every 100 ATK in excess of 1,000. Maximum 20% RES increase each."
+      },
+      "passive4": {
+        "name": "唯厄月可知",
+        "nameEn": "The Balemoon Alone May Know",
+        "description": "战斗中阿蕾奇诺获得40%火元素伤害加成，且只能通过厄月将升获得治疗。",
+        "descriptionEn": "While in combat, Arlecchino gains a 40% Pyro DMG Bonus and can only be healed through Balemoon Rising."
       }
     },
     "constellations": [
       {
         "level": 1,
-        "name": "阿蕾奇诺·C1",
-        "nameEn": "Arlecchino C1",
-        "description": "命之座第1层效果",
-        "descriptionEn": "Constellation 1 effect"
+        "name": "所有的惩罚与欠债，由我承担",
+        "nameEn": "All Reprisals and Arrears, Mine to Bear...",
+        "description": "红死之宴状态进一步强化，提升幅度为100%。此外，在红死之宴状态下进行普通攻击或重击时，阿蕾奇诺的抗打断能力提升。",
+        "descriptionEn": "Masque of the Red Death is further enhanced, the value of the increase is 100%. Additionally, Arlecchino's interruption resistance is increased when she performs Normal or Charged Attacks while in Masque of the Red Death."
       },
       {
         "level": 2,
-        "name": "阿蕾奇诺·C2",
-        "nameEn": "Arlecchino C2",
-        "description": "命之座第2层效果",
-        "descriptionEn": "Constellation 2 effect"
+        "name": "所有的赏赐与报偿，由我赐予",
+        "nameEn": "All Rewards and Retribution, Mine to Bestow...",
+        "description": "血债令状初次施加时即为血债清算状态。吸收时在身前释放厄月血火，造成900%攻击力的火元素范围伤害，并提升全元素和物理抗性20%，持续15秒。",
+        "descriptionEn": "Blood-Debt Directives are already Blood-Debt Due when first applied. When absorbed, releases Balemoon Bloodfire dealing 900% ATK as AoE Pyro DMG, and increases All Elemental and Physical RES by 20% for 15s."
       },
       {
         "level": 3,
-        "name": "阿蕾奇诺·C3",
-        "nameEn": "Arlecchino C3",
-        "description": "命之座第3层效果",
-        "descriptionEn": "Constellation 3 effect"
+        "name": "你将成为我们家族的新成员",
+        "nameEn": "You Shall Become a New Member of Our Family...",
+        "description": "普通攻击·斩首之邀的技能等级提高3级，最高提升至15级。",
+        "descriptionEn": "Increases the Level of Normal Attack: Invitation to a Beheading by 3. Maximum upgrade level is 15."
       },
       {
         "level": 4,
-        "name": "阿蕾奇诺·C4",
-        "nameEn": "Arlecchino C4",
-        "description": "命之座第4层效果",
-        "descriptionEn": "Constellation 4 effect"
+        "name": "从今以后，你们要互相关爱",
+        "nameEn": "You Shall Love and Protect Each Other Henceforth...",
+        "description": "成功吸收血债令状时，厄月将升的冷却时间减少2秒，并恢复15点元素能量。",
+        "descriptionEn": "When Arlecchino successfully absorbs a Blood-Debt Directive, Balemoon Rising's CD decreases by 2s and 15 Elemental Energy is restored to her."
       },
       {
         "level": 5,
-        "name": "阿蕾奇诺·C5",
-        "nameEn": "Arlecchino C5",
-        "description": "命之座第5层效果",
-        "descriptionEn": "Constellation 5 effect"
+        "name": "因为我们独自一人，如同死亡",
+        "nameEn": "For Alone, We Are as Good as Dead...",
+        "description": "厄月将升的技能等级提高3级，最高提升至15级。",
+        "descriptionEn": "Increases the Level of Balemoon Rising by 3. Maximum upgrade level is 15."
       },
       {
         "level": 6,
-        "name": "阿蕾奇诺·C6",
-        "nameEn": "Arlecchino C6",
-        "description": "命之座第6层效果",
-        "descriptionEn": "Constellation 6 effect"
+        "name": "从今以后，我们将一同欢享新生",
+        "nameEn": "From This Day On, We Shall Delight in New Life Together.",
+        "description": "厄月将升的伤害增加，额外伤害基于阿蕾奇诺当前生命之契百分比的700%攻击力。使用万种之厄后20秒内，普通攻击和元素爆发获得10%暴击率和70%暴击伤害提升。",
+        "descriptionEn": "Balemoon Rising DMG increased by ATK × 700% of current Bond of Life percentage. For 20s after using All Is Ash, Normal Attacks and Elemental Burst gain 10% CRIT Rate and 70% CRIT DMG."
       }
     ],
     "recommendedBuild": {
@@ -1965,7 +2040,7 @@
       "mainStatsEn": {
         "Sands": "ATK%",
         "Goblet": "Pyro DMG",
-        "Circlet": "CRIT Rate"
+        "Circlet": "CRIT Rate / CRIT DMG"
       },
       "subStatPriority": [
         "CRIT Rate",
@@ -1982,13 +2057,52 @@
     },
     "teamComps": [
       {
-        "name": "通用队伍",
-        "nameEn": "General Team",
+        "name": "蒸发队（豪华）",
+        "nameEn": "Vaporize Premium",
         "members": [
-          "arlecchino"
+          "arlecchino",
+          "xingqiu",
+          "kazuha",
+          "bennett"
         ],
-        "description": "包含阿蕾奇诺的通用队伍配置",
-        "descriptionEn": "General team composition with Arlecchino"
+        "description": "阿蕾奇诺前台输出搭配行秋后台挂水、枫原万叶增伤减抗、班尼特攻击加成",
+        "descriptionEn": "Arlecchino on-field DPS with Xingqiu off-field Hydro, Kazuha for buffing/CC, Bennett for ATK buff"
+      },
+      {
+        "name": "蒸发队（双水）",
+        "nameEn": "Double Hydro Vaporize",
+        "members": [
+          "arlecchino",
+          "xingqiu",
+          "yelan",
+          "zhongli"
+        ],
+        "description": "双水共鸣增加生命值，夜兰和行秋提供强力后台挂水和增伤，钟离护盾保护",
+        "descriptionEn": "Double Hydro resonance for HP, Yelan and Xingqiu for strong off-field Hydro, Zhongli for shield"
+      },
+      {
+        "name": "超载队",
+        "nameEn": "Overloaded",
+        "members": [
+          "arlecchino",
+          "fischl",
+          "beidou",
+          "chevreuse"
+        ],
+        "description": "夏沃蕾触发超载减抗，菲谢尔和北斗提供后台雷元素",
+        "descriptionEn": "Chevreuse enables Overloaded team with RES shred, Fischl/Beidou for off-field Electro"
+      },
+      {
+        "name": "纯火队",
+        "nameEn": "Mono Pyro",
+        "members": [
+          "arlecchino",
+          "kazuha",
+          "bennett",
+          "xiangling"
+        ],
+        "description": "全火队伍，枫原万叶翠绿之影减抗，班尼特增攻，香菱后台输出和双火共鸣",
+        "descriptionEn": "Full Pyro team with Kazuha VV shred, Bennett ATK buff, Xiangling off-field DPS and Pyro resonance"
       }
     ],
     "faq": [
@@ -2805,80 +2919,87 @@
     "image": "/images/genshin/characters/ayato.webp",
     "skills": {
       "normalAttack": {
-        "name": "普通攻击·神里绫人",
-        "nameEn": "Normal Attack · Kamisato Ayato",
-        "description": "进行至多五段的连续攻击",
-        "descriptionEn": "Performs up to 5 consecutive strikes"
+        "name": "普通攻击·神里流·转",
+        "nameEn": "Normal Attack: Kamisato Art - Marobashi",
+        "description": "进行至多五段的连续攻击。",
+        "descriptionEn": "Performs up to 5 consecutive strikes."
       },
       "elementalSkill": {
-        "name": "神里绫人的元素战技",
-        "nameEn": "Kamisato Ayato's Elemental Skill",
-        "description": "释放水元素战技，造成水元素伤害",
-        "descriptionEn": "Releases Hydro Elemental Skill, dealing Hydro DMG",
-        "cooldown": "10s"
+        "name": "神里流·镜花",
+        "nameEn": "Kamisato Art: Kyouka",
+        "description": "进入泷回鉴花状态，将普通攻击转化为水元素伤害的水光破。攻击范围增大，攻击速度提升。泷回鉴花状态下击败敌人时延长持续时间。",
+        "descriptionEn": "Enters the Takimeguri Kanka state, converting Normal Attacks into Shunsuiken that deal Hydro DMG. Increases attack range and SPD. Defeating opponents extends the duration.",
+        "cooldown": "12s"
       },
       "elementalBurst": {
-        "name": "神里绫人的元素爆发",
-        "nameEn": "Kamisato Ayato's Elemental Burst",
-        "description": "释放强大的水元素爆发，造成大量水元素伤害",
-        "descriptionEn": "Unleashes powerful Hydro Elemental Burst, dealing massive Hydro DMG",
-        "cost": 60
+        "name": "神里流·水囿",
+        "nameEn": "Kamisato Art: Suiyuu",
+        "description": "释放水之领域，持续对领域内敌人造成水元素范围伤害，并提升队伍中角色的普通攻击伤害。",
+        "descriptionEn": "Unleashes a watersphere that creates a Bloomwater zone, continuously dealing AoE Hydro DMG to opponents within and increasing Normal Attack DMG for party members.",
+        "cost": 80,
+        "cooldown": "20s"
       },
       "passive1": {
-        "name": "神里绫人的天赋1",
-        "nameEn": "Kamisato Ayato's Talent 1",
-        "description": "固有天赋，提升战斗能力",
-        "descriptionEn": "Passive talent that enhances combat abilities"
+        "name": "神里流·日常茶事",
+        "nameEn": "Kamisato Art: Daily Cooking",
+        "description": "泷回鉴花状态下，每击水光破有概率生成涟漪，对附近敌人造成额外的波及伤害。泷回鉴花结束后基于触发次数提升攻击力。",
+        "descriptionEn": "After Takimeguri Kanka ends, each Namisen stack generated during the state will increase Ayato's Max HP by a certain amount."
       },
       "passive2": {
-        "name": "神里绫人的天赋2",
-        "nameEn": "Kamisato Ayato's Talent 2",
-        "description": "固有天赋，提供额外效果",
-        "descriptionEn": "Passive talent that provides additional effects"
+        "name": "鉴水",
+        "nameEn": "Kendonsen Kyaku",
+        "description": "绫人的生命值越高，水光破造成的伤害越高。施放神里流·镜花时获得涟漪叠层。",
+        "descriptionEn": "When Ayato uses Kamisato Art: Kyouka, he gains Namisen stacks based on his Max HP. Higher HP means more stacks and stronger Shunsuiken."
+      },
+      "passive4": {
+        "name": "神里流·社交之术",
+        "nameEn": "Kamisato Art: Wind Mail",
+        "description": "合成武器突破素材时，有10%概率获得双倍产出。",
+        "descriptionEn": "When Ayato crafts Weapon Ascension Materials, he has a 10% chance to receive double the product."
       }
     },
     "constellations": [
       {
         "level": 1,
-        "name": "神里绫人·C1",
-        "nameEn": "Kamisato Ayato C1",
-        "description": "命之座第1层效果",
-        "descriptionEn": "Constellation 1 effect"
+        "name": "镜水风雅",
+        "nameEn": "Mirror of the World",
+        "description": "泷回鉴花状态下的水光破命中生命值低于50%的敌人时，攻击速度提升。",
+        "descriptionEn": "While in Takimeguri Kanka, Shunsuiken hitting opponents below 50% HP increases ATK SPD."
       },
       {
         "level": 2,
-        "name": "神里绫人·C2",
-        "nameEn": "Kamisato Ayato C2",
-        "description": "命之座第2层效果",
-        "descriptionEn": "Constellation 2 effect"
+        "name": "世无双鉴",
+        "nameEn": "Source of Clear Water",
+        "description": "涟漪叠层超过3层时，水光破的暴击伤害提升。",
+        "descriptionEn": "When Namisen stacks exceed 3, Shunsuiken CRIT DMG is increased."
       },
       {
         "level": 3,
-        "name": "神里绫人·C3",
-        "nameEn": "Kamisato Ayato C3",
-        "description": "命之座第3层效果",
-        "descriptionEn": "Constellation 3 effect"
+        "name": "绮景渐倾",
+        "nameEn": "The Closer to This World",
+        "description": "神里流·镜花的技能等级提高3级，最高提升至15级。",
+        "descriptionEn": "Increases Kamisato Art: Kyouka Level by 3. Maximum upgrade level is 15."
       },
       {
         "level": 4,
-        "name": "神里绫人·C4",
-        "nameEn": "Kamisato Ayato C4",
-        "description": "命之座第4层效果",
-        "descriptionEn": "Constellation 4 effect"
+        "name": "涓流尽止",
+        "nameEn": "Endless Streams",
+        "description": "神里流·水囿命中敌人后提升队伍中角色20%攻击速度，持续15秒。",
+        "descriptionEn": "Kamisato Art: Suiyuu hits increase party members' ATK SPD by 20% for 15s."
       },
       {
         "level": 5,
-        "name": "神里绫人·C5",
-        "nameEn": "Kamisato Ayato C5",
-        "description": "命之座第5层效果",
-        "descriptionEn": "Constellation 5 effect"
+        "name": "乱樱盛放",
+        "nameEn": "Blossoming Stream",
+        "description": "神里流·水囿的技能等级提高3级，最高提升至15级。",
+        "descriptionEn": "Increases Kamisato Art: Suiyuu Level by 3. Maximum upgrade level is 15."
       },
       {
         "level": 6,
-        "name": "神里绫人·C6",
-        "nameEn": "Kamisato Ayato C6",
-        "description": "命之座第6层效果",
-        "descriptionEn": "Constellation 6 effect"
+        "name": "究极万华",
+        "nameEn": "Boundless Origin",
+        "description": "泷回鉴花状态下施放水光破时，有概率释放额外的两记水光破，造成额外的水元素伤害。",
+        "descriptionEn": "While in Takimeguri Kanka, Shunsuiken has a chance to unleash 2 extra strikes dealing additional Hydro DMG."
       }
     ],
     "recommendedBuild": {
@@ -2912,13 +3033,40 @@
     },
     "teamComps": [
       {
-        "name": "通用队伍",
-        "nameEn": "General Team",
+        "name": "绫人蒸发队",
+        "nameEn": "Ayato Vaporize",
         "members": [
-          "ayato"
+          "ayato",
+          "xiangling",
+          "kazuha",
+          "bennett"
         ],
-        "description": "包含神里绫人的通用队伍配置",
-        "descriptionEn": "General team composition with Kamisato Ayato"
+        "description": "绫人前台输出，香菱后台火，枫原万叶减抗，班尼特增攻",
+        "descriptionEn": "Ayato on-field DPS, Xiangling off-field Pyro, Kazuha for RES shred, Bennett for ATK buff"
+      },
+      {
+        "name": "绫人绽放队",
+        "nameEn": "Ayato Bloom",
+        "members": [
+          "ayato",
+          "nahida",
+          "kazuha",
+          "kuki-shinobu"
+        ],
+        "description": "纳西妲挂草，久岐忍触发超绽放，枫原万叶聚怪",
+        "descriptionEn": "Nahida for Dendro, Kuki for Hyperbloom triggers, Kazuha for grouping"
+      },
+      {
+        "name": "绫人纯水",
+        "nameEn": "Ayato Mono Hydro",
+        "members": [
+          "ayato",
+          "yelan",
+          "furina",
+          "kazuha"
+        ],
+        "description": "纯水队伍，夜兰增伤，芙宁娜增伤，枫原万叶减抗",
+        "descriptionEn": "Mono Hydro team, Yelan and Furina for buffing, Kazuha for RES shred"
       }
     ],
     "faq": [
@@ -3580,80 +3728,87 @@
     "image": "/images/genshin/characters/xingqiu.webp",
     "skills": {
       "normalAttack": {
-        "name": "普通攻击·行秋",
-        "nameEn": "Normal Attack · Xingqiu",
-        "description": "进行至多五段的连续攻击",
-        "descriptionEn": "Performs up to 5 consecutive strikes"
+        "name": "普通攻击·古华剑法",
+        "nameEn": "Normal Attack: Guhua Sword Style",
+        "description": "进行至多五段的连续攻击。",
+        "descriptionEn": "Performs up to 5 consecutive strikes."
       },
       "elementalSkill": {
-        "name": "行秋的元素战技",
-        "nameEn": "Xingqiu's Elemental Skill",
-        "description": "释放水元素战技，造成水元素伤害",
-        "descriptionEn": "Releases Hydro Elemental Skill, dealing Hydro DMG",
-        "cooldown": "10s"
+        "name": "古华剑·画雨笼山",
+        "nameEn": "Guhua Sword: Fatal Rainscreen",
+        "description": "释放两道水之剑进行攻击，造成水元素伤害。同时生成雨帘剑环绕角色，提供减伤和抗打断效果。受到攻击时会消耗一把雨帘剑减少伤害。",
+        "descriptionEn": "Performs twin strikes dealing Hydro DMG and creates Rain Swords around the active character. Rain Swords provide DMG reduction and resistance to interruption. When taking DMG, a Rain Sword is consumed to further reduce DMG.",
+        "cooldown": "21s"
       },
       "elementalBurst": {
-        "name": "行秋的元素爆发",
-        "nameEn": "Xingqiu's Elemental Burst",
-        "description": "释放强大的水元素爆发，造成大量水元素伤害",
-        "descriptionEn": "Unleashes powerful Hydro Elemental Burst, dealing massive Hydro DMG",
-        "cost": 60
+        "name": "古华剑·裁雨天留",
+        "nameEn": "Guhua Sword: Raincutter",
+        "description": "展开虹剑之势，在普通攻击时协同触发水元素剑雨攻击，持续对敌人造成水元素伤害。",
+        "descriptionEn": "Triggers continuous Rain Sword attacks coordinated with Normal Attacks, dealing Hydro DMG to opponents. Persists even when Xingqiu is off-field.",
+        "cost": 80,
+        "cooldown": "15s"
       },
       "passive1": {
-        "name": "行秋的天赋1",
-        "nameEn": "Xingqiu's Talent 1",
-        "description": "固有天赋，提升战斗能力",
-        "descriptionEn": "Passive talent that enhances combat abilities"
+        "name": "生水要诀",
+        "nameEn": "Flash of ingenuity",
+        "description": "雨帘剑被破坏或持续时间结束时，基于行秋最大生命值的6%恢复当前角色的生命值。",
+        "descriptionEn": "When a Rain Sword is destroyed or duration ends, the active character's HP is restored by 6% of Xingqiu's Max HP."
       },
       "passive2": {
-        "name": "行秋的天赋2",
-        "nameEn": "Xingqiu's Talent 2",
-        "description": "固有天赋，提供额外效果",
-        "descriptionEn": "Passive talent that provides additional effects"
+        "name": "虚实明暗生灭去来",
+        "nameEn": "Rain of Sugagaki",
+        "description": "行秋获得20%水元素伤害加成。",
+        "descriptionEn": "Xingqiu gains a 20% Hydro DMG Bonus."
+      },
+      "passive4": {
+        "name": "灵光乍现",
+        "nameEn": "Craft of the Master",
+        "description": "烹饪带有回复效果的食物时，有12%概率获得双倍产出。",
+        "descriptionEn": "When Xingqiu cooks a dish with restorative effects, there is a 12% chance to obtain double the product."
       }
     },
     "constellations": [
       {
         "level": 1,
-        "name": "行秋·C1",
-        "nameEn": "Xingqiu C1",
-        "description": "命之座第1层效果",
-        "descriptionEn": "Constellation 1 effect"
+        "name": "破华时雨",
+        "nameEn": "Tears of the Rain Heaven",
+        "description": "雨帘剑的最大数量增加一把。",
+        "descriptionEn": "Maximum number of Rain Swords increased by 1."
       },
       {
         "level": 2,
-        "name": "行秋·C2",
-        "nameEn": "Xingqiu C2",
-        "description": "命之座第2层效果",
-        "descriptionEn": "Constellation 2 effect"
+        "name": "天青洪流",
+        "nameEn": "Rain of Heaven",
+        "description": "古华剑·裁雨天留的持续时间延长3秒。被剑雨命中的敌人水元素抗性降低15%，持续4秒。",
+        "descriptionEn": "Raincutter duration extended by 3s. Opponents hit by Rain Swords have their Hydro RES decreased by 15% for 4s."
       },
       {
         "level": 3,
-        "name": "行秋·C3",
-        "nameEn": "Xingqiu C3",
-        "description": "命之座第3层效果",
-        "descriptionEn": "Constellation 3 effect"
+        "name": "云诗雅韵",
+        "nameEn": "Shower of Spring",
+        "description": "古华剑·裁雨天留的技能等级提高3级，最高提升至15级。",
+        "descriptionEn": "Increases Guhua Sword: Raincutter Level by 3. Maximum upgrade level is 15."
       },
       {
         "level": 4,
-        "name": "行秋·C4",
-        "nameEn": "Xingqiu C4",
-        "description": "命之座第4层效果",
-        "descriptionEn": "Constellation 4 effect"
+        "name": "孤舟斩蛟",
+        "nameEn": "Hamstringing Sword",
+        "description": "古华剑·裁雨天留期间，古华剑·画雨笼山的伤害提升50%。",
+        "descriptionEn": "During Raincutter, Fatal Rainscreen DMG is increased by 50%."
       },
       {
         "level": 5,
-        "name": "行秋·C5",
-        "nameEn": "Xingqiu C5",
-        "description": "命之座第5层效果",
-        "descriptionEn": "Constellation 5 effect"
+        "name": "雨深闭门",
+        "nameEn": "Favor of the Rain God",
+        "description": "古华剑·画雨笼山的技能等级提高3级，最高提升至15级。",
+        "descriptionEn": "Increases Guhua Sword: Fatal Rainscreen Level by 3. Maximum upgrade level is 15."
       },
       {
         "level": 6,
-        "name": "行秋·C6",
-        "nameEn": "Xingqiu C6",
-        "description": "命之座第6层效果",
-        "descriptionEn": "Constellation 6 effect"
+        "name": "万文集此义",
+        "nameEn": "Wings of Heaven",
+        "description": "古华剑·裁雨天留的剑雨攻击模式优化，每两轮攻击触发一次强化剑雨。",
+        "descriptionEn": "Raincutter's Rain Sword pattern is enhanced. Every 3rd sword is replaced by 2 enhanced swords dealing increased DMG."
       }
     ],
     "recommendedBuild": {
@@ -3687,13 +3842,40 @@
     },
     "teamComps": [
       {
-        "name": "通用队伍",
-        "nameEn": "General Team",
+        "name": "胡桃蒸发队",
+        "nameEn": "Hu Tao Vaporize",
         "members": [
-          "xingqiu"
+          "hu-tao",
+          "xingqiu",
+          "kazuha",
+          "zhongli"
         ],
-        "description": "包含行秋的通用队伍配置",
-        "descriptionEn": "General team composition with Xingqiu"
+        "description": "行秋后台挂水配合胡桃打出蒸发反应，钟离护盾",
+        "descriptionEn": "Xingqiu off-field Hydro for Hu Tao Vaporize, Zhongli for shield"
+      },
+      {
+        "name": "雷国队",
+        "nameEn": "Raiden National",
+        "members": [
+          "raiden-shogun",
+          "xingqiu",
+          "xiangling",
+          "bennett"
+        ],
+        "description": "行秋挂水配合香菱蒸发，雷电将军充能和输出",
+        "descriptionEn": "Xingqiu for Hydro, Xiangling for Vaporize, Raiden for Energy and DPS"
+      },
+      {
+        "name": "国家队",
+        "nameEn": "National Team",
+        "members": [
+          "xingqiu",
+          "xiangling",
+          "bennett",
+          "sucrose"
+        ],
+        "description": "经典平民队伍，砂糖减抗增伤",
+        "descriptionEn": "Classic budget team with Sucrose for RES shred and buffing"
       }
     ],
     "faq": [
@@ -3735,80 +3917,87 @@
     "image": "/images/genshin/characters/neuvillette.webp",
     "skills": {
       "normalAttack": {
-        "name": "普通攻击·那维莱特",
-        "nameEn": "Normal Attack · Neuvillette",
-        "description": "进行至多五段的连续攻击",
-        "descriptionEn": "Performs up to 5 consecutive strikes"
+        "name": "普通攻击·如水从源",
+        "nameEn": "Normal Attack: As Water Seeks Equilibrium",
+        "description": "进行至多三段的连续攻击。",
+        "descriptionEn": "Performs up to 3 consecutive attacks."
       },
       "elementalSkill": {
-        "name": "那维莱特的元素战技",
-        "nameEn": "Neuvillette's Elemental Skill",
-        "description": "释放水元素战技，造成水元素伤害",
-        "descriptionEn": "Releases Hydro Elemental Skill, dealing Hydro DMG",
-        "cooldown": "10s"
+        "name": "万水之溯",
+        "nameEn": "Weeping Morn",
+        "description": "释放水元素战技，召唤源水之滴，对附近敌人造成水元素范围伤害。根据源水之滴的数量提升伤害。",
+        "descriptionEn": "Summons a Raging Waterfall that deals AoE Hydro DMG to nearby opponents and creates Sourcewater Droplets. Damage scales with the number of Droplets absorbed.",
+        "cooldown": "12s"
       },
       "elementalBurst": {
-        "name": "那维莱特的元素爆发",
-        "nameEn": "Neuvillette's Elemental Burst",
-        "description": "释放强大的水元素爆发，造成大量水元素伤害",
-        "descriptionEn": "Unleashes powerful Hydro Elemental Burst, dealing massive Hydro DMG",
-        "cost": 60
+        "name": "潮水啊，我已归来",
+        "nameEn": "O Tides, I Have Returned",
+        "description": "释放强大的水元素攻击，对前方大范围敌人造成水元素伤害，并产生源水之滴。源水之滴可被那维莱特吸收以强化他的重击。",
+        "descriptionEn": "Unleashes a devastating Hydro attack dealing massive AoE Hydro DMG in a wide area ahead, and generates Sourcewater Droplets. Droplets can be absorbed to power up Neuvillette's Charged Attack.",
+        "cost": 70,
+        "cooldown": "15s"
       },
       "passive1": {
-        "name": "那维莱特的天赋1",
-        "nameEn": "Neuvillette's Talent 1",
-        "description": "固有天赋，提升战斗能力",
-        "descriptionEn": "Passive talent that enhances combat abilities"
+        "name": "须臾安可忘",
+        "nameEn": "Heir to the Sea of Clouds",
+        "description": "那维莱特的重击受到源水之滴强化时，当前生命值高于50%则继续消耗生命值以延长蓄力时间。重击期间具有抗打断能力。",
+        "descriptionEn": "When Neuvillette's Charged Attack is powered by Sourcewater Droplets, he gains interruption resistance and can continue channeling by consuming HP above 50%."
       },
       "passive2": {
-        "name": "那维莱特的天赋2",
-        "nameEn": "Neuvillette's Talent 2",
-        "description": "固有天赋，提供额外效果",
-        "descriptionEn": "Passive talent that provides additional effects"
+        "name": "古海之遗威",
+        "nameEn": "Gather Like the Tide",
+        "description": "队伍中每存在一种元素类型的角色，那维莱特获得一层遗威，每层提升水元素伤害加成。",
+        "descriptionEn": "For each party member of a different element, Neuvillette gains a stack that increases his Hydro DMG Bonus. Each element type provides one stack."
+      },
+      "passive4": {
+        "name": "天狐的祝福",
+        "nameEn": "The Blessing of the Dragon",
+        "description": "游泳时消耗的体力减少35%。",
+        "descriptionEn": "Sprinting Stamina consumption decreased by 35%."
       }
     },
     "constellations": [
       {
         "level": 1,
-        "name": "那维莱特·C1",
-        "nameEn": "Neuvillette C1",
-        "description": "命之座第1层效果",
-        "descriptionEn": "Constellation 1 effect"
+        "name": "尊敬的行为",
+        "nameEn": "Venerable Authority",
+        "description": "重击的源水之滴吸收范围增大。当前生命值高于50%时重击不中断。",
+        "descriptionEn": "Sourcewater Droplet absorption range increased for Charged Attacks. Charged Attack not interrupted when HP is above 50%."
       },
       {
         "level": 2,
-        "name": "那维莱特·C2",
-        "nameEn": "Neuvillette C2",
-        "description": "命之座第2层效果",
-        "descriptionEn": "Constellation 2 effect"
+        "name": "公正的判决",
+        "nameEn": "Judicious Verification",
+        "description": "每层遗威额外提升重击的暴击伤害。",
+        "descriptionEn": "Each stack of Heir to the Sea of Clouds additionally increases Charged Attack CRIT DMG."
       },
       {
         "level": 3,
-        "name": "那维莱特·C3",
-        "nameEn": "Neuvillette C3",
-        "description": "命之座第3层效果",
-        "descriptionEn": "Constellation 3 effect"
+        "name": "仁慈的恩惠",
+        "nameEn": "Benevolent Grace",
+        "description": "潮水啊，我已归来的技能等级提高3级，最高提升至15级。",
+        "descriptionEn": "Increases O Tides, I Have Returned Level by 3. Maximum upgrade level is 15."
       },
       {
         "level": 4,
-        "name": "那维莱特·C4",
-        "nameEn": "Neuvillette C4",
-        "description": "命之座第4层效果",
-        "descriptionEn": "Constellation 4 effect"
+        "name": "谦卑的聆听",
+        "nameEn": "Humble Offering",
+        "description": "队伍中角色触发水元素相关反应时，那维莱特恢复生命值。",
+        "descriptionEn": "When party members trigger Hydro-related reactions, Neuvillette recovers HP."
       },
       {
         "level": 5,
-        "name": "那维莱特·C5",
-        "nameEn": "Neuvillette C5",
-        "description": "命之座第5层效果",
-        "descriptionEn": "Constellation 5 effect"
+        "name": "智慧的传承",
+        "nameEn": "Inherited Wisdom",
+        "description": "万水之溯的技能等级提高3级，最高提升至15级。",
+        "descriptionEn": "Increases Weeping Morn Level by 3. Maximum upgrade level is 15."
       },
       {
         "level": 6,
-        "name": "那维莱特·C6",
-        "nameEn": "Neuvillette C6",
-        "description": "命之座第6层效果",
-        "descriptionEn": "Constellation 6 effect"
+        "name": "万物为一",
+        "nameEn": "All Are One",
+        "description": "重击持续时间延长，且每次命中敌人时恢复生命值。源水之滴存在时间延长。",
+        "descriptionEn": "Charged Attack duration extended, recovers HP on each hit. Sourcewater Droplets persist longer."
       }
     ],
     "recommendedBuild": {
@@ -3842,13 +4031,40 @@
     },
     "teamComps": [
       {
-        "name": "通用队伍",
-        "nameEn": "General Team",
+        "name": "那维莱特纯水",
+        "nameEn": "Neuvillette Hypercarry",
         "members": [
-          "neuvillette"
+          "neuvillette",
+          "furina",
+          "kazuha",
+          "zhongli"
         ],
-        "description": "包含那维莱特的通用队伍配置",
-        "descriptionEn": "General team composition with Neuvillette"
+        "description": "芙宁娜提供增伤和气氛值，枫原万叶减抗，钟离护盾保护",
+        "descriptionEn": "Furina for DMG buff and Fanfare, Kazuha for RES shred, Zhongli for shield protection"
+      },
+      {
+        "name": "那维莱特双水",
+        "nameEn": "Double Hydro",
+        "members": [
+          "neuvillette",
+          "furina",
+          "nahida",
+          "kazuha"
+        ],
+        "description": "纳西妲提供草元素附着，配合水元素生成草原核",
+        "descriptionEn": "Nahida for Dendro application, creates Dendro Cores with Hydro"
+      },
+      {
+        "name": "那维莱特超绽放",
+        "nameEn": "Neuvillette Hyperbloom",
+        "members": [
+          "neuvillette",
+          "furina",
+          "nahida",
+          "kuki-shinobu"
+        ],
+        "description": "芙宁娜和纳西妲生成草原核，久岐忍触发超绽放",
+        "descriptionEn": "Furina and Nahida generate Dendro Cores, Kuki triggers Hyperbloom"
       }
     ],
     "faq": [
@@ -3890,80 +4106,87 @@
     "image": "/images/genshin/characters/furina.webp",
     "skills": {
       "normalAttack": {
-        "name": "普通攻击·芙宁娜",
-        "nameEn": "Normal Attack · Furina",
-        "description": "进行至多五段的连续攻击",
-        "descriptionEn": "Performs up to 5 consecutive strikes"
+        "name": "普通攻击·独舞之邀",
+        "nameEn": "Normal Attack: Soloist's Solicitation",
+        "description": "进行至多四段的连续攻击。",
+        "descriptionEn": "Performs up to 4 consecutive strikes."
       },
       "elementalSkill": {
-        "name": "芙宁娜的元素战技",
-        "nameEn": "Furina's Elemental Skill",
-        "description": "释放水元素战技，造成水元素伤害",
-        "descriptionEn": "Releases Hydro Elemental Skill, dealing Hydro DMG",
-        "cooldown": "10s"
+        "name": "沙龙游戏",
+        "nameEn": "Salon Solitaire",
+        "description": "邀请沙龙的宾客前来助演。根据芙宁娜当前的芒性/荒性属性，召唤沙龙成员或众水之歌者。沙龙成员会间歇性攻击附近的敌人，造成基于芙宁娜最大生命值的水元素伤害；众水之歌者会间歇性治疗附近角色。",
+        "descriptionEn": "Invites guests of the Salon Solitaire to come forth. Summons Salon Members or the Singer of Many Waters based on Furina's current Arkhe alignment. Salon Members attack nearby opponents at intervals, dealing Hydro DMG based on Max HP. The Singer of Many Waters heals nearby active characters based on Max HP. Members consume HP of characters above 50% HP to boost their damage.",
+        "cooldown": "20s"
       },
       "elementalBurst": {
-        "name": "芙宁娜的元素爆发",
-        "nameEn": "Furina's Elemental Burst",
-        "description": "释放强大的水元素爆发，造成大量水元素伤害",
-        "descriptionEn": "Unleashes powerful Hydro Elemental Burst, dealing massive Hydro DMG",
-        "cost": 60
+        "name": "万众狂欢",
+        "nameEn": "Let the People Rejoice",
+        "description": "唤起欢庆的冲动，造成基于芙宁娜最大生命值的水元素范围伤害，使附近的队伍成员进入普世欢腾状态。在此期间，附近角色的生命值上升或下降时，芙宁娜获得气氛值。根据气氛值提升队伍角色的伤害和受治疗加成。",
+        "descriptionEn": "Creates a stage of foam dealing AoE Hydro DMG based on Max HP and causes nearby party members to enter the Universal Revelry state. When nearby party members' HP increases or decreases, Furina gains Fanfare points. DMG dealt by and Incoming Healing Bonus of nearby party members increase based on Fanfare.",
+        "cost": 60,
+        "cooldown": "15s"
       },
       "passive1": {
-        "name": "芙宁娜的天赋1",
-        "nameEn": "Furina's Talent 1",
-        "description": "固有天赋，提升战斗能力",
-        "descriptionEn": "Passive talent that enhances combat abilities"
+        "name": "无尽的圆舞",
+        "nameEn": "Endless Waltz",
+        "description": "当前场上角色受到治疗时，如果治疗溢出且不是来自芙宁娜本人，则在接下来的4秒内每2秒为附近队伍成员恢复2%最大生命值。",
+        "descriptionEn": "When the active character receives healing, if the source is not Furina and the healing overflows, Furina will heal a nearby party member for 2% of their Max HP once every 2s within the next 4s."
       },
       "passive2": {
-        "name": "芙宁娜的天赋2",
-        "nameEn": "Furina's Talent 2",
-        "description": "固有天赋，提供额外效果",
-        "descriptionEn": "Passive talent that provides additional effects"
+        "name": "未倾听的倾诉",
+        "nameEn": "Unheard Confession",
+        "description": "每1000点最大生命值提升沙龙成员造成的伤害0.7%（最高28%），或缩短众水之歌者的治疗间隔0.4%（最高16%）。",
+        "descriptionEn": "Every 1,000 points of Max HP increases Salon Member DMG by 0.7% (max 28%) or decreases Singer of Many Waters healing interval by 0.4% (max 16%)."
+      },
+      "passive4": {
+        "name": "大海就是我舞台",
+        "nameEn": "The Sea Is My Stage",
+        "description": "异色枫丹异兽能力冷却时间减少30%。",
+        "descriptionEn": "Xenochromatic Fontemer Aberrant ability CD decreased by 30%."
       }
     },
     "constellations": [
       {
         "level": 1,
-        "name": "芙宁娜·C1",
-        "nameEn": "Furina C1",
-        "description": "命之座第1层效果",
-        "descriptionEn": "Constellation 1 effect"
+        "name": "爱是难以驯服的叛逆之鸟",
+        "nameEn": "Love Is a Rebellious Bird That None Can Tame",
+        "description": "使用万众狂欢时，芙宁娜获得150气氛值，且气氛值上限提高100。",
+        "descriptionEn": "When using Let the People Rejoice, Furina gains 150 Fanfare. Fanfare limit increased by 100."
       },
       {
         "level": 2,
-        "name": "芙宁娜·C2",
-        "nameEn": "Furina C2",
-        "description": "命之座第2层效果",
-        "descriptionEn": "Constellation 2 effect"
+        "name": "女人如浮萍般随遇而安",
+        "nameEn": "A Woman Adapts Like Duckweed in Water",
+        "description": "万众狂欢期间，气氛值获取效率提升250%。超出上限的每点气氛值使芙宁娜最大生命值提升0.35%，最高提升140%。",
+        "descriptionEn": "During Let the People Rejoice, Fanfare gain increased by 250%. Each Fanfare above limit increases Max HP by 0.35%, max 140%."
       },
       {
         "level": 3,
-        "name": "芙宁娜·C3",
-        "nameEn": "Furina C3",
-        "description": "命之座第3层效果",
-        "descriptionEn": "Constellation 3 effect"
+        "name": "我的秘密藏于我心，无人知晓我名",
+        "nameEn": "My Secret Is Hidden Within Me, No One Will Know My Name",
+        "description": "万众狂欢的技能等级提高3级，最高提升至15级。",
+        "descriptionEn": "Increases the Level of Let the People Rejoice by 3. Maximum upgrade level is 15."
       },
       {
         "level": 4,
-        "name": "芙宁娜·C4",
-        "nameEn": "Furina C4",
-        "description": "命之座第4层效果",
-        "descriptionEn": "Constellation 4 effect"
+        "name": "不知生者，不曾居于冥界",
+        "nameEn": "They Know Not Life, Who Dwelt in the Netherworld Not!",
+        "description": "沙龙成员命中敌人或众水之歌者治疗时，芙宁娜恢复4点能量，每5秒触发一次。",
+        "descriptionEn": "When Salon Members hit opponents or Singer of Many Waters heals, Furina restores 4 Energy. Triggers once every 5s."
       },
       {
         "level": 5,
-        "name": "芙宁娜·C5",
-        "nameEn": "Furina C5",
-        "description": "命之座第5层效果",
-        "descriptionEn": "Constellation 5 effect"
+        "name": "他的名字我现在知道了，是……",
+        "nameEn": "His Name I Now Know, It Is...!",
+        "description": "沙龙游戏的技能等级提高3级，最高提升至15级。",
+        "descriptionEn": "Increases the Level of Salon Solitaire by 3. Maximum upgrade level is 15."
       },
       {
         "level": 6,
-        "name": "芙宁娜·C6",
-        "nameEn": "Furina C6",
-        "description": "命之座第6层效果",
-        "descriptionEn": "Constellation 6 effect"
+        "name": "听我说——让我们举起爱的酒杯",
+        "nameEn": "Hear Me — Let Us Raise the Chalice of Love!",
+        "description": "使用沙龙游戏时获得万众瞩目状态，持续10秒。期间普通攻击、重击和下落攻击转化为水元素伤害，伤害提升基于芙宁娜最大生命值的18%。",
+        "descriptionEn": "When using Salon Solitaire, gains Center of Attention for 10s. Normal/Charged/Plunging Attacks converted to Hydro DMG, increased by 18% of Max HP. Different effects based on Arkhe alignment."
       }
     ],
     "recommendedBuild": {
@@ -3997,13 +4220,52 @@
     },
     "teamComps": [
       {
-        "name": "通用队伍",
-        "nameEn": "General Team",
+        "name": "那维莱特队伍",
+        "nameEn": "Neuvillette Team",
         "members": [
-          "furina"
+          "neuvillette",
+          "furina",
+          "kazuha",
+          "zhongli"
         ],
-        "description": "包含芙宁娜的通用队伍配置",
-        "descriptionEn": "General team composition with Furina"
+        "description": "那维莱特主C，芙宁娜提供增伤和后台挂水，枫原万叶减抗，钟离护盾",
+        "descriptionEn": "Neuvillette main DPS, Furina for DMG buff and off-field Hydro, Kazuha for RES shred, Zhongli shield"
+      },
+      {
+        "name": "胡桃蒸发队",
+        "nameEn": "Hu Tao Vaporize",
+        "members": [
+          "hu-tao",
+          "furina",
+          "yelan",
+          "xianyun"
+        ],
+        "description": "胡桃主C，芙宁娜和夜兰双水增伤，闲云提供下落攻击和治疗触发气氛值",
+        "descriptionEn": "Hu Tao main DPS, Furina and Yelan for Hydro application and buffing, Xianyun for plunge and healing"
+      },
+      {
+        "name": "雷电将军超绽放",
+        "nameEn": "Raiden Hyperbloom",
+        "members": [
+          "raiden-shogun",
+          "furina",
+          "nahida",
+          "kuki-shinobu"
+        ],
+        "description": "雷电将军主C，纳西妲草元素附着，久岐忍触发超绽放，芙宁娜增伤",
+        "descriptionEn": "Raiden main DPS, Nahida for Dendro, Kuki for Hyperbloom triggers, Furina for buffing"
+      },
+      {
+        "name": "纯水队",
+        "nameEn": "Mono Hydro",
+        "members": [
+          "neuvillette",
+          "furina",
+          "yelan",
+          "kazuha"
+        ],
+        "description": "全员水元素，芙宁娜和夜兰增伤，枫原万叶减水抗",
+        "descriptionEn": "All Hydro team with Furina and Yelan buffing, Kazuha for Hydro RES shred"
       }
     ],
     "faq": [
@@ -4045,80 +4307,87 @@
     "image": "/images/genshin/characters/sigewinne.webp",
     "skills": {
       "normalAttack": {
-        "name": "普通攻击·希格雯",
-        "nameEn": "Normal Attack · Sigewinne",
-        "description": "进行至多五段的连续攻击",
-        "descriptionEn": "Performs up to 5 consecutive strikes"
+        "name": "普通攻击·靶向治疗",
+        "nameEn": "Normal Attack: Targeted Treatment",
+        "description": "进行至多三段的连续攻击。",
+        "descriptionEn": "Performs up to 3 consecutive attacks."
       },
       "elementalSkill": {
-        "name": "希格雯的元素战技",
-        "nameEn": "Sigewinne's Elemental Skill",
-        "description": "释放水元素战技，造成水元素伤害",
-        "descriptionEn": "Releases Hydro Elemental Skill, dealing Hydro DMG",
-        "cooldown": "10s"
+        "name": "弹跳水疗法",
+        "nameEn": "Rebound Hydrotherapy",
+        "description": "用梅洛彼得堡特制的泡泡枪吹出能活血助眠的提振水气球。水气球会在附近的敌人之间弹跳，对命中敌人造成基于希格雯最大生命值的水元素伤害，并为队伍中除希格雯外的所有角色恢复生命值。弹跳5次后水气球消失并治疗希格雯。",
+        "descriptionEn": "Blows a Bolstering Bubblebalm that bounces between nearby opponents, dealing Hydro DMG based on Sigewinne's Max HP and healing nearby party members. After 5 bounces, it disappears and heals Sigewinne. Hold to enter Aiming Mode for a bigger Bubblebalm with increased DMG and healing. Creates 2 Sourcewater Droplets granting Bond of Life.",
+        "cooldown": "18s"
       },
       "elementalBurst": {
-        "name": "希格雯的元素爆发",
-        "nameEn": "Sigewinne's Elemental Burst",
-        "description": "释放强大的水元素爆发，造成大量水元素伤害",
-        "descriptionEn": "Unleashes powerful Hydro Elemental Burst, dealing massive Hydro DMG",
-        "cost": 60
+        "name": "超饱和注射",
+        "nameEn": "Super Saturated Syringing",
+        "description": "取出特制的梅洛彼得堡注射器，以善意和药剂对前方区域进行连续攻击，造成基于希格雯最大生命值的水元素范围伤害。持续期间希格雯浮空并可在水面和液态燃素上移动。",
+        "descriptionEn": "Assault the area in front with waves of medicine, dealing AoE Hydro DMG based on Sigewinne's Max HP. During duration, Sigewinne levitates and can move over water and Liquid Phlogiston.",
+        "cost": 70,
+        "cooldown": "18s"
       },
       "passive1": {
-        "name": "希格雯的天赋1",
-        "nameEn": "Sigewinne's Talent 1",
-        "description": "固有天赋，提升战斗能力",
-        "descriptionEn": "Passive talent that enhances combat abilities"
+        "name": "应当适度休息",
+        "nameEn": "Requires Appropriate Rest",
+        "description": "使用弹跳水疗法后获得半严格卧床状态18秒，提升水元素伤害加成，并为后台角色的元素技能提供额外伤害加成。",
+        "descriptionEn": "After using Rebound Hydrotherapy, grants Semi-Strict Bedrest for 18s: increases Hydro DMG Bonus and provides Convalescence stacks that boost off-field party members' Elemental Skill DMG based on Max HP."
       },
       "passive2": {
-        "name": "希格雯的天赋2",
-        "nameEn": "Sigewinne's Talent 2",
-        "description": "固有天赋，提供额外效果",
-        "descriptionEn": "Passive talent that provides additional effects"
+        "name": "详细诊断，彻底治疗",
+        "nameEn": "Detailed Diagnosis, Thorough Treatment",
+        "description": "队伍中所有角色所持有的生命之契总值每1000点生命值，治疗量提升3%，最高提升30%。",
+        "descriptionEn": "Healing increased by 3% per 1,000 HP worth of Bonds of Life on all party members (max 30% increase)."
+      },
+      "passive4": {
+        "name": "紧急剂量",
+        "nameEn": "Emergency Dose",
+        "description": "水下时当前角色生命值低于50%时自动治疗，并降低所有元素和物理抗性10%持续10秒，每20秒触发一次。",
+        "descriptionEn": "While underwater, heals active character when HP falls below 50% and decreases All Elemental and Physical RES by 10% for 10s. Once every 20s."
       }
     },
     "constellations": [
       {
         "level": 1,
-        "name": "希格雯·C1",
-        "nameEn": "Sigewinne C1",
-        "description": "命之座第1层效果",
-        "descriptionEn": "Constellation 1 effect"
+        "name": "最幸福的精神也会不安吗",
+        "nameEn": "Can the Happiest of Spirits Understand Anxiety?",
+        "description": "提振水气球额外弹跳3次，前3次不缩小。每层痊愈度提供的伤害提升增加。",
+        "descriptionEn": "Bolstering Bubblebalm bounces 3 extra times. First 3 bounces don't reduce size. Enhanced Convalescence DMG bonus scaling."
       },
       {
         "level": 2,
-        "name": "希格雯·C2",
-        "nameEn": "Sigewinne C2",
-        "description": "命之座第2层效果",
-        "descriptionEn": "Constellation 2 effect"
+        "name": "最慈悲的精神也会战胜敌人吗",
+        "nameEn": "Can the Most Merciful of Spirits Defeat Its Foes?",
+        "description": "使用技能或爆发时创建水泡护盾，命中后降低敌人水元素抗性35%持续8秒。",
+        "descriptionEn": "Creates Bubbly Shield when using Skill/Burst. After hits, decreases opponent Hydro RES by 35% for 8s."
       },
       {
         "level": 3,
-        "name": "希格雯·C3",
-        "nameEn": "Sigewinne C3",
-        "description": "命之座第3层效果",
-        "descriptionEn": "Constellation 3 effect"
+        "name": "最健康的精神也会发烧吗",
+        "nameEn": "Can the Healthiest of Spirits Cure Fevers?",
+        "description": "弹跳水疗法的技能等级提高3级，最高提升至15级。",
+        "descriptionEn": "Increases Rebound Hydrotherapy Level by 3. Maximum upgrade level is 15."
       },
       {
         "level": 4,
-        "name": "希格雯·C4",
-        "nameEn": "Sigewinne C4",
-        "description": "命之座第4层效果",
-        "descriptionEn": "Constellation 4 effect"
+        "name": "最可爱的精神也会抵御腐朽吗",
+        "nameEn": "Can the Loveliest of Spirits Keep Decay at Bay?",
+        "description": "超饱和注射的持续时间延长3秒。",
+        "descriptionEn": "Super Saturated Syringing duration extended by 3s."
       },
       {
         "level": 5,
-        "name": "希格雯·C5",
-        "nameEn": "Sigewinne C5",
-        "description": "命之座第5层效果",
-        "descriptionEn": "Constellation 5 effect"
+        "name": "最欢乐的精神也会感到痛苦吗",
+        "nameEn": "Can the Most Joyful of Spirits Alleviate Agony?",
+        "description": "超饱和注射的技能等级提高3级，最高提升至15级。",
+        "descriptionEn": "Increases Super Saturated Syringing Level by 3. Maximum upgrade level is 15."
       },
       {
         "level": 6,
-        "name": "希格雯·C6",
-        "nameEn": "Sigewinne C6",
-        "description": "命之座第6层效果",
-        "descriptionEn": "Constellation 6 effect"
+        "name": "最光辉的精神也会为我祈祷吗",
+        "nameEn": "Can the Most Radiant of Spirits Pray For Me?",
+        "description": "治疗时基于每1000点最大生命值提升暴击率和暴击伤害，持续15秒。",
+        "descriptionEn": "When healing, increases CRIT Rate by 0.4% and CRIT DMG by 2.2% per 1,000 Max HP for Burst (max 20% CRIT Rate, 110% CRIT DMG) for 15s."
       }
     ],
     "recommendedBuild": {
@@ -4152,13 +4421,40 @@
     },
     "teamComps": [
       {
-        "name": "通用队伍",
-        "nameEn": "General Team",
+        "name": "那维莱特队伍",
+        "nameEn": "Neuvillette Team",
         "members": [
-          "sigewinne"
+          "neuvillette",
+          "sigewinne",
+          "furina",
+          "kazuha"
         ],
-        "description": "包含希格雯的通用队伍配置",
-        "descriptionEn": "General team composition with Sigewinne"
+        "description": "希格雯提供治疗和后台水元素增伤，与芙宁娜配合叠加气氛值",
+        "descriptionEn": "Sigewinne provides healing and off-field Hydro DMG buff, synergizes with Furina for Fanfare stacking"
+      },
+      {
+        "name": "蒸发队",
+        "nameEn": "Vaporize Team",
+        "members": [
+          "ayato",
+          "sigewinne",
+          "xiangling",
+          "bennett"
+        ],
+        "description": "绫人前台输出，希格雯后台挂水和治疗，香菱后台火输出",
+        "descriptionEn": "Ayato on-field DPS, Sigewinne for off-field Hydro and healing, Xiangling for off-field Pyro"
+      },
+      {
+        "name": "绽放队",
+        "nameEn": "Bloom Team",
+        "members": [
+          "nilou",
+          "sigewinne",
+          "nahida",
+          "baizhu"
+        ],
+        "description": "尼露绽放队伍，希格雯提供水元素附着和持续治疗",
+        "descriptionEn": "Nilou Bloom team, Sigewinne adds Hydro application and sustained healing"
       }
     ],
     "faq": [
@@ -4820,80 +5116,87 @@
     "image": "/images/genshin/characters/beidou.webp",
     "skills": {
       "normalAttack": {
-        "name": "普通攻击·北斗",
-        "nameEn": "Normal Attack · Beidou",
-        "description": "进行至多五段的连续攻击",
-        "descriptionEn": "Performs up to 5 consecutive strikes"
+        "name": "普通攻击·征涛",
+        "nameEn": "Normal Attack: Oceanborne",
+        "description": "进行至多五段的连续攻击。",
+        "descriptionEn": "Performs up to 5 consecutive strikes."
       },
       "elementalSkill": {
-        "name": "北斗的元素战技",
-        "nameEn": "Beidou's Elemental Skill",
-        "description": "释放雷元素战技，造成雷元素伤害",
-        "descriptionEn": "Releases Electro Elemental Skill, dealing Electro DMG",
-        "cooldown": "10s"
+        "name": "捉浪",
+        "nameEn": "Tidecaller",
+        "description": "举盾格挡敌人的攻击，释放时进行反击造成雷元素伤害。在受到攻击的瞬间释放可获得完美格挡，大幅增加反击伤害。",
+        "descriptionEn": "Parry: Counters incoming attacks with Electro DMG. Release at the moment of being hit for a Perfect Parry, greatly increasing counter DMG. Hold to build up DMG resistance and absorb incoming attacks before countering.",
+        "cooldown": "7.5s"
       },
       "elementalBurst": {
-        "name": "北斗的元素爆发",
-        "nameEn": "Beidou's Elemental Burst",
-        "description": "释放强大的雷元素爆发，造成大量雷元素伤害",
-        "descriptionEn": "Unleashes powerful Electro Elemental Burst, dealing massive Electro DMG",
-        "cost": 60
+        "name": "断雷",
+        "nameEn": "Stormbreaker",
+        "description": "召唤持续的雷电守护，对周围敌人造成雷元素伤害。普通攻击和重击触发闪电链，对敌人造成雷元素伤害。持续期间获得减伤。",
+        "descriptionEn": "Summons a Thunderbeast Targe that deals Electro DMG to surrounding enemies. Normal and Charged Attacks trigger Lightning Arcs dealing Electro DMG to opponents. Provides DMG reduction while active.",
+        "cost": 80,
+        "cooldown": "20s"
       },
       "passive1": {
-        "name": "北斗的天赋1",
-        "nameEn": "Beidou's Talent 1",
-        "description": "固有天赋，提升战斗能力",
-        "descriptionEn": "Passive talent that enhances combat abilities"
+        "name": "无双",
+        "nameEn": "Retribution",
+        "description": "完美格挡时，反击的伤害提升至最大。",
+        "descriptionEn": "Counter DMG is maximized when performing a Perfect Parry during Tidecaller."
       },
       "passive2": {
-        "name": "北斗的天赋2",
-        "nameEn": "Beidou's Talent 2",
-        "description": "固有天赋，提供额外效果",
-        "descriptionEn": "Passive talent that provides additional effects"
+        "name": "霹雳",
+        "nameEn": "Thunderstorm",
+        "description": "断雷的闪电链可以额外弹跳2个敌人。",
+        "descriptionEn": "Stormbreaker's Lightning Arcs can bounce to 2 additional targets."
+      },
+      "passive4": {
+        "name": "最稳的海员",
+        "nameEn": "Conqueror of Tides",
+        "description": "队伍中自己的角色游泳消耗的体力减少20%。无法与效果完全相同的固有天赋叠加。",
+        "descriptionEn": "Swimming Stamina consumption for your own party members decreased by 20%."
       }
     },
     "constellations": [
       {
         "level": 1,
-        "name": "北斗·C1",
-        "nameEn": "Beidou C1",
-        "description": "命之座第1层效果",
-        "descriptionEn": "Constellation 1 effect"
+        "name": "鱼龙沉四方",
+        "nameEn": "Sea Beast's Scourge",
+        "description": "断雷的雷电护盾被攻击时触发额外的雷元素伤害。",
+        "descriptionEn": "When Stormbreaker's Thunderbeast Targe is attacked, it triggers additional Electro DMG."
       },
       {
         "level": 2,
-        "name": "北斗·C2",
-        "nameEn": "Beidou C2",
-        "description": "命之座第2层效果",
-        "descriptionEn": "Constellation 2 effect"
+        "name": "赫赫雷涌起",
+        "nameEn": "Tidecaller's Wrath",
+        "description": "断雷的闪电链弹跳次数增加，伤害提升。",
+        "descriptionEn": "Stormbreaker Lightning Arcs bounce to additional targets and deal increased DMG."
       },
       {
         "level": 3,
-        "name": "北斗·C3",
-        "nameEn": "Beidou C3",
-        "description": "命之座第3层效果",
-        "descriptionEn": "Constellation 3 effect"
+        "name": "潮奔蓦引电",
+        "nameEn": "Summoner of Lightning",
+        "description": "断雷的技能等级提高3级，最高提升至15级。",
+        "descriptionEn": "Increases Stormbreaker Level by 3. Maximum upgrade level is 15."
       },
       {
         "level": 4,
-        "name": "北斗·C4",
-        "nameEn": "Beidou C4",
-        "description": "命之座第4层效果",
-        "descriptionEn": "Constellation 4 effect"
+        "name": "牵星觅横梁",
+        "nameEn": "Stunning Revenge",
+        "description": "受到攻击后10秒内，普通攻击获得额外的雷元素伤害。",
+        "descriptionEn": "Within 10s after being hit, Normal Attacks gain additional Electro DMG."
       },
       {
         "level": 5,
-        "name": "北斗·C5",
-        "nameEn": "Beidou C5",
-        "description": "命之座第5层效果",
-        "descriptionEn": "Constellation 5 effect"
+        "name": "浪无限引长",
+        "nameEn": "Crimson Tidewalker",
+        "description": "捉浪的技能等级提高3级，最高提升至15级。",
+        "descriptionEn": "Increases Tidecaller Level by 3. Maximum upgrade level is 15."
       },
       {
         "level": 6,
-        "name": "北斗·C6",
-        "nameEn": "Beidou C6",
-        "description": "命之座第6层效果",
-        "descriptionEn": "Constellation 6 effect"
+        "name": "北斗祟幽鬼",
+        "nameEn": "Bane of Evil",
+        "description": "断雷持续期间，周围敌人的雷元素抗性降低15%。",
+        "descriptionEn": "During Stormbreaker, nearby opponents' Electro RES is decreased by 15%."
       }
     ],
     "recommendedBuild": {
@@ -4927,13 +5230,40 @@
     },
     "teamComps": [
       {
-        "name": "通用队伍",
-        "nameEn": "General Team",
+        "name": "北斗感电队",
+        "nameEn": "Electro-Charged Team",
         "members": [
-          "beidou"
+          "beidou",
+          "fischl",
+          "xingqiu",
+          "sucrose"
         ],
-        "description": "包含北斗的通用队伍配置",
-        "descriptionEn": "General team composition with Beidou"
+        "description": "双雷共鸣，行秋挂水，菲谢尔后台雷，砂糖扩散减抗",
+        "descriptionEn": "Double Electro resonance, Xingqiu for Hydro, Fischl for off-field Electro, Sucrose for Swirl"
+      },
+      {
+        "name": "北斗超绽放",
+        "nameEn": "Hyperbloom Team",
+        "members": [
+          "beidou",
+          "xingqiu",
+          "nahida",
+          "kuki-shinobu"
+        ],
+        "description": "行秋和纳西妲生成草原核，久岐忍触发超绽放",
+        "descriptionEn": "Xingqiu and Nahida generate Dendro Cores, Kuki triggers Hyperbloom"
+      },
+      {
+        "name": "超载队",
+        "nameEn": "Overloaded Team",
+        "members": [
+          "arlecchino",
+          "beidou",
+          "fischl",
+          "chevreuse"
+        ],
+        "description": "夏沃蕾触发超载减抗，菲谢尔和北斗提供后台雷",
+        "descriptionEn": "Chevreuse for Overloaded RES shred, Fischl and Beidou for off-field Electro"
       }
     ],
     "faq": [
@@ -7455,80 +7785,87 @@
     "image": "/images/genshin/characters/kaeya.webp",
     "skills": {
       "normalAttack": {
-        "name": "普通攻击·凯亚",
-        "nameEn": "Normal Attack · Kaeya",
-        "description": "进行至多五段的连续攻击",
-        "descriptionEn": "Performs up to 5 consecutive strikes"
+        "name": "普通攻击·仪典剑术",
+        "nameEn": "Normal Attack: Ceremonial Bladework",
+        "description": "进行至多五段的连续攻击。",
+        "descriptionEn": "Performs up to 5 consecutive strikes."
       },
       "elementalSkill": {
-        "name": "凯亚的元素战技",
-        "nameEn": "Kaeya's Elemental Skill",
-        "description": "释放冰元素战技，造成冰元素伤害",
-        "descriptionEn": "Releases Cryo Elemental Skill, dealing Cryo DMG",
-        "cooldown": "10s"
+        "name": "霜袭",
+        "nameEn": "Frostgnaw",
+        "description": "释放冰之寒气，对前方敌人造成冰元素伤害。",
+        "descriptionEn": "Unleashes a blast of cold air, dealing Cryo DMG to opponents in front of Kaeya.",
+        "cooldown": "6s"
       },
       "elementalBurst": {
-        "name": "凯亚的元素爆发",
-        "nameEn": "Kaeya's Elemental Burst",
-        "description": "释放强大的冰元素爆发，造成大量冰元素伤害",
-        "descriptionEn": "Unleashes powerful Cryo Elemental Burst, dealing massive Cryo DMG",
-        "cost": 60
+        "name": "凛冽轮舞",
+        "nameEn": "Glacial Waltz",
+        "description": "凝聚寒霜形成冰棱围绕角色旋转，对接触到的敌人造成冰元素伤害。",
+        "descriptionEn": "Condenses frost to create an icicle that circles around the character, dealing Cryo DMG to opponents it touches. Persists even when Kaeya is off-field.",
+        "cost": 60,
+        "cooldown": "15s"
       },
       "passive1": {
-        "name": "凯亚的天赋1",
-        "nameEn": "Kaeya's Talent 1",
-        "description": "固有天赋，提升战斗能力",
-        "descriptionEn": "Passive talent that enhances combat abilities"
+        "name": "冷血之剑",
+        "nameEn": "Cold-Blooded Strike",
+        "description": "霜袭命中受冰元素影响的敌人时，恢复生命值。",
+        "descriptionEn": "Frostgnaw heals Kaeya for 15% of his ATK when hitting opponents affected by Cryo."
       },
       "passive2": {
-        "name": "凯亚的天赋2",
-        "nameEn": "Kaeya's Talent 2",
-        "description": "固有天赋，提供额外效果",
-        "descriptionEn": "Passive talent that provides additional effects"
+        "name": "冰渊引路人",
+        "nameEn": "Glacial Heart",
+        "description": "霜袭命中敌人时，额外产出冰元素粒子。",
+        "descriptionEn": "Frostgnaw generates additional Elemental Particles when hitting opponents."
+      },
+      "passive4": {
+        "name": "隐藏的体能",
+        "nameEn": "Hidden Strength",
+        "description": "队伍中自己的角色冲刺消耗的体力减少20%。",
+        "descriptionEn": "Sprinting Stamina consumption for your own party members decreased by 20%."
       }
     },
     "constellations": [
       {
         "level": 1,
-        "name": "凯亚·C1",
-        "nameEn": "Kaeya C1",
-        "description": "命之座第1层效果",
-        "descriptionEn": "Constellation 1 effect"
+        "name": "卓越的血脉",
+        "nameEn": "Excellent Blood",
+        "description": "对受冰元素影响的敌人进行普通攻击时，暴击率提升15%。",
+        "descriptionEn": "Normal Attack CRIT Rate against opponents affected by Cryo increased by 15%."
       },
       {
         "level": 2,
-        "name": "凯亚·C2",
-        "nameEn": "Kaeya C2",
-        "description": "命之座第2层效果",
-        "descriptionEn": "Constellation 2 effect"
+        "name": "无尽之霜舞",
+        "nameEn": "Never-Ending Performance",
+        "description": "凛冽轮舞期间击败敌人时，持续时间延长2.5秒，最多延长至15秒。",
+        "descriptionEn": "During Glacial Waltz, defeating an opponent extends its duration by 2.5s (max 15s)."
       },
       {
         "level": 3,
-        "name": "凯亚·C3",
-        "nameEn": "Kaeya C3",
-        "description": "命之座第3层效果",
-        "descriptionEn": "Constellation 3 effect"
+        "name": "凛冽的冰华",
+        "nameEn": "Dance of Frost",
+        "description": "凛冽轮舞的技能等级提高3级，最高提升至15级。",
+        "descriptionEn": "Increases Glacial Waltz Level by 3. Maximum upgrade level is 15."
       },
       {
         "level": 4,
-        "name": "凯亚·C4",
-        "nameEn": "Kaeya C4",
-        "description": "命之座第4层效果",
-        "descriptionEn": "Constellation 4 effect"
+        "name": "极寒的轻吻",
+        "nameEn": "Frozen Kiss",
+        "description": "生命值低于20%时自动生成护盾吸收伤害，持续20秒。",
+        "descriptionEn": "When HP falls below 20%, automatically generates a shield that lasts for 20s."
       },
       {
         "level": 5,
-        "name": "凯亚·C5",
-        "nameEn": "Kaeya C5",
-        "description": "命之座第5层效果",
-        "descriptionEn": "Constellation 5 effect"
+        "name": "冰寒的怒涛",
+        "nameEn": "Frostbiting Embrace",
+        "description": "霜袭的技能等级提高3级，最高提升至15级。",
+        "descriptionEn": "Increases Frostgnaw Level by 3. Maximum upgrade level is 15."
       },
       {
         "level": 6,
-        "name": "凯亚·C6",
-        "nameEn": "Kaeya C6",
-        "description": "命之座第6层效果",
-        "descriptionEn": "Constellation 6 effect"
+        "name": "轮转的凛冽",
+        "nameEn": "Waltz of Cold",
+        "description": "凛冽轮舞额外生成一个冰棱，并降低敌人物理抗性。",
+        "descriptionEn": "Glacial Waltz creates an additional icicle and decreases opponents' Physical RES."
       }
     ],
     "recommendedBuild": {
@@ -7562,13 +7899,40 @@
     },
     "teamComps": [
       {
-        "name": "通用队伍",
-        "nameEn": "General Team",
+        "name": "冻结队",
+        "nameEn": "Freeze Team",
         "members": [
-          "kaeya"
+          "kaeya",
+          "xingqiu",
+          "sucrose",
+          "diona"
         ],
-        "description": "包含凯亚的通用队伍配置",
-        "descriptionEn": "General team composition with Kaeya"
+        "description": "行秋挂水，凯亚和迪奥娜双冰冻结，砂糖减抗",
+        "descriptionEn": "Xingqiu for Hydro, double Cryo with Diona for Freeze, Sucrose for RES shred"
+      },
+      {
+        "name": "融化队",
+        "nameEn": "Melt Team",
+        "members": [
+          "kaeya",
+          "xiangling",
+          "bennett",
+          "rosaria"
+        ],
+        "description": "双冰配合香菱触发融化反应",
+        "descriptionEn": "Double Cryo with Xiangling for Melt reactions"
+      },
+      {
+        "name": "物理队",
+        "nameEn": "Physical Team",
+        "members": [
+          "kaeya",
+          "fischl",
+          "xingqiu",
+          "diona"
+        ],
+        "description": "菲谢尔超导减物抗，行秋挂水触发冻结碎冰",
+        "descriptionEn": "Fischl for Superconduct Physical RES shred, Xingqiu for Hydro and Freeze"
       }
     ],
     "faq": [
