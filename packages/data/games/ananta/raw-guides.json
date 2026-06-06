@@ -427,5 +427,137 @@
         "answerZh": "可以。核心角色可以通过剧情和活动获取，免费玩家也能组建完全有竞争力的队伍。不抽卡的进度会慢一些，但所有PVE内容都可以通关，PVP也可以用免费角色参与。"
       }
     ]
+  },
+  {
+    "id": "version-roadmap-guide",
+    "title": "无限大版本路线图与更新前瞻",
+    "titleEn": "Ananta Version Roadmap & Update Preview",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "summary": "无限大版本更新路线图，包括已确认的新内容、预测更新时间和长期规划。",
+    "summaryEn": "Ananta version update roadmap covering confirmed new content, predicted timelines, and long-term plans.",
+    "content": "## 无限大版本路线图与更新前瞻\n\n### 一、当前版本(v1.x)回顾\n\n- 12名可玩异能者，6种异能属性\n- 新都市主城区完整开放\n- 竞技场PVP系统上线\n- 异象讨伐共8个Boss\n- 装备系统5个部位全部实装\n\n### 二、近期更新预测(v1.1-v1.3)\n\n**v1.1 — 新区域扩展**\n- 预计新增新都市·港口区域\n- 2名新异能者（绽放属性SSR + 精神属性SR）\n- 新异象Boss（涌流属性）\n- 装备系统新增套装\n\n**v1.2 — 新玩法模式**\n- 深渊探索模式（Roguelike）\n- 公会系统上线\n- 合作讨伐模式\n- 新都市·地下区域解锁\n\n**v1.3 — 大型活动**\n- 限时故事活动\n- 新异能者（虚空属性SSR）\n- 竞技场第二赛季\n- QoL优化更新\n\n### 三、长期路线图\n\n| 时间 | 内容 | 优先级 |\n|------|------|--------|\n| 近期 | 新区域+新角色 | 最高 |\n| 中期 | 公会+合作模式 | 高 |\n| 远期 | 新都市完全体 | 中 |\n| 未来 | 全新城市区域 | 待定 |\n\n### 四、社区期望最高内容\n\n1. 更多异能者（当前box深度不足）\n2. 新都市更多可探索区域\n3. 更多异象Boss和挑战内容\n4. 装备系统套装多样化\n5. 社交功能（公会、好友协作）",
+    "contentEn": "## Ananta Version Roadmap & Update Preview\n\n### 1. Current Version (v1.x) Review\n\n- 12 playable Espers across 6 anomaly attributes\n- Nova City main district fully accessible\n- PvP Arena system online\n- 8 Anomaly Hunt bosses\n- Full 5-slot gear system implemented\n\n### 2. Near-term Updates (v1.1–v1.3)\n\n**v1.1 — New Area Expansion**\n- Nova City Port District expected\n- 2 new Espers (Bloom SSR + Psyche SR)\n- New Anomaly Boss (Surge attribute)\n- Additional gear set bonuses\n\n**v1.2 — New Game Modes**\n- Abyss Exploration mode (Roguelike)\n- Guild system launch\n- Cooperative Hunt mode\n- Nova City Underground area unlock\n\n**v1.3 — Major Event**\n- Limited-time story event\n- New Esper (Void SSR)\n- Arena Season 2\n- QoL improvements\n\n### 3. Long-term Roadmap\n\n| Timeline | Content | Priority |\n|----------|---------|----------|\n| Near | New areas + characters | Highest |\n| Mid | Guild + co-op | High |\n| Far | Full Nova City | Medium |\n| Future | Entirely new city areas | TBD |\n\n### 4. Top Community Requests\n\n1. More Espers (current roster depth is limited)\n2. More explorable areas in Nova City\n3. More Anomaly Bosses and challenging content\n4. Greater gear set diversity\n5. Social features (guilds, friend co-op)",
+    "tags": ["版本", "路线图", "更新", "Version", "Roadmap", "Update"],
+    "faq": [
+      {
+        "question": "How often does Ananta get updates?",
+        "questionZh": "无限大多久更新一次？",
+        "answer": "Ananta follows a 6-8 week major update cycle with smaller patches in between. Events and quality-of-life updates may come more frequently.",
+        "answerZh": "无限大遵循6-8周的大版本更新周期，中间有小更新。活动和优化更新可能更频繁。"
+      },
+      {
+        "question": "Will there be new playable areas?",
+        "questionZh": "会有新的可玩区域吗？",
+        "answer": "Yes. The roadmap includes expanding Nova City with new districts (Port, Underground) and potentially entirely new city areas in future major updates.",
+        "answerZh": "会的。路线图包括新都市新区域（港口、地下区域）以及未来大版本中可能出现的全新城市区域。"
+      },
+      {
+        "question": "How many new Espers are expected?",
+        "questionZh": "预计会有多少新异能者？",
+        "answer": "Based on the current pace, expect 2-3 new Espers per major update. The team has indicated plans to significantly expand the roster to support more team-building variety.",
+        "answerZh": "按照目前的节奏，每个大版本预计2-3名新异能者。开发团队已表示计划大幅扩展角色池以支持更多配队变化。"
+      }
+    ]
+  },
+  {
+    "id": "esper-tier-advanced-guide",
+    "title": "异能者强度排行与培养优先级",
+    "titleEn": "Esper Tier List & Build Priority Guide",
+    "category": "tier-list",
+    "categoryZh": "排行榜",
+    "categoryEn": "Tier List",
+    "summary": "按角色定位分类的异能者强度排行，配合培养优先级和投资建议。",
+    "summaryEn": "Esper tier rankings organized by role with build priority and investment recommendations.",
+    "content": "## 异能者强度排行与培养优先级\n\n### 一、主C输出排行\n\n| 排名 | 异能者 | 属性 | 评价 | 培养优先级 |\n|------|--------|------|------|------------|\n| SS | 队长 | 混沌 | 伤害天花板，灵活多变 | ★★★★★ |\n| S | 泰菲 | 火花 | 独特武器机制，持续输出 | ★★★★☆ |\n| S | 班西 | 虚空 | 减益后爆发，单体极强 | ★★★★☆ |\n| A | 迪拉 | 火花 | 追击连锁效率高 | ★★★☆☆ |\n\n### 二、辅助增益排行\n\n| 排名 | 异能者 | 属性 | 评价 | 培养优先级 |\n|------|--------|------|------|------------|\n| SS | 凛果 | 涌流 | 全队增伤最全面 | ★★★★★ |\n| S | 西摩 | 涌流 | 后台减益+副C | ★★★★☆ |\n| A | 吕凯亚 | 涌流 | 聚怪+控制 | ★★★☆☆ |\n\n### 三、治疗防御排行\n\n| 排名 | 异能者 | 属性 | 评价 | 培养优先级 |\n|------|--------|------|------|------------|\n| SS | 艾琳 | 绽放 | 最强治疗+护盾 | ★★★★★ |\n| A | 机械卡 | 混沌 | 后台减防副C | ★★★☆☆ |\n\n### 四、培养优先级建议\n\n**新手玩家**\n1. 队长（主C）→ 必练\n2. 艾琳（治疗）→ 必练\n3. 凛果（增益）→ 高优先\n4. 第四人根据队伍需求选择\n\n**进阶玩家**\n1. 确定核心队伍方向\n2. 按属性需求补充角色\n3. 每个角色投入前评估ROI\n4. 保留资源给未来强力角色",
+    "contentEn": "## Esper Tier List & Build Priority Guide\n\n### 1. Main DPS Rankings\n\n| Rank | Esper | Attribute | Assessment | Build Priority |\n|------|-------|-----------|------------|---------------|\n| SS | Captain | Chaos | Damage ceiling, versatile | ★★★★★ |\n| S | Taffy | Spark | Unique weapon mechanic, sustained DPS | ★★★★☆ |\n| S | Bansy | Void | Post-debuff burst, exceptional ST | ★★★★☆ |\n| A | Dila | Spark | Efficient follow-up chains | ★★★☆☆ |\n\n### 2. Support/Buffer Rankings\n\n| Rank | Esper | Attribute | Assessment | Build Priority |\n|------|-------|-----------|------------|---------------|\n| SS | Ringo | Surge | Most comprehensive team buff | ★★★★★ |\n| S | Seymour | Surge | Off-field debuff + sub-DPS | ★★★★☆ |\n| A | Lykaia | Surge | Grouping + control | ★★★☆☆ |\n\n### 3. Healer/Defense Rankings\n\n| Rank | Esper | Attribute | Assessment | Build Priority |\n|------|-------|-----------|------------|---------------|\n| SS | Aileen | Bloom | Best healer + shield | ★★★★★ |\n| A | Mechanika | Chaos | Off-field DEF shred sub-DPS | ★★★☆☆ |\n\n### 4. Build Priority Recommendations\n\n**New Players**\n1. Captain (DPS) → Must-build\n2. Aileen (Healer) → Must-build\n3. Ringo (Buffer) → High priority\n4. Fourth slot based on team needs\n\n**Advanced Players**\n1. Determine core team direction\n2. Fill roster gaps by attribute\n3. Evaluate ROI before investing in each character\n4. Reserve resources for future strong characters",
+    "tags": ["排行榜", "强度", "培养", "Tier List", "Build", "Priority"],
+    "faq": [
+      {
+        "question": "Who should I build first as a new player?",
+        "questionZh": "新手应该先练谁？",
+        "answer": "Build Captain first (your main DPS), then Aileen for healing. These two form the core of any team. Add Ringo as your third priority for team-wide buffs.",
+        "answerZh": "先练队长（主C），然后练艾琳（治疗）。这两个人是任何队伍的核心。第三个优先练凛果提供全队增益。"
+      },
+      {
+        "question": "Are lower-tier Espers worth building?",
+        "questionZh": "低排名异能者值得练吗？",
+        "answer": "Yes, in specific contexts. Some A-tier Espers excel against certain bosses or in PvP. Build them after your core team is established and you have surplus resources.",
+        "answerZh": "值得，在特定场景中。部分A级异能者对付特定Boss或在PVP中表现出色。核心队伍成型且有剩余资源后再培养。"
+      },
+      {
+        "question": "How often do tier rankings shift?",
+        "questionZh": "强度排名多久变动一次？",
+        "answer": "Major balance patches and new Esper releases can shift rankings every 6-8 weeks. However, SS-tier Espers like Captain and Aileen are likely to remain strong due to their fundamental role coverage.",
+        "answerZh": "大型平衡性调整和新异能者发布可能每6-8周改变排名。但队长和艾琳等SS级角色因为基础定位覆盖全面，大概率持续强势。"
+      }
+    ]
+  },
+  {
+    "id": "advanced-combat-guide",
+    "title": "高阶战斗技巧与连招进阶",
+    "titleEn": "Advanced Combat Techniques & Combo Guide",
+    "category": "combat",
+    "categoryZh": "战斗攻略",
+    "categoryEn": "Combat",
+    "summary": "无限大高阶战斗技巧，包括属性连招、时机把控和队伍协作的高级操作。",
+    "summaryEn": "Advanced combat techniques for Ananta including attribute combos, timing mastery, and team coordination.",
+    "content": "## 高阶战斗技巧与连招进阶\n\n### 一、属性连招核心\n\n掌握属性反应的触发顺序是提高伤害的关键：\n\n**超载连招（混沌+火花）**\n1. 先用火花角色施放点燃效果\n2. 切换混沌角色触发超载\n3. 超载伤害=基础伤害×反应倍率\n4. 连续触发可叠加超载层数\n\n**虚蚀连招（虚空+混沌）**\n1. 虚空角色施放虚弱debuff\n2. 切换混沌角色在debuff期间输出\n3. 敌人攻防同时降低，输出窗口扩大\n4. 注意debuff持续时间，在结束前完成输出\n\n### 二、时机把控\n\n**异能技释放时机**\n- 不要CD好就用，等debuff叠加后再释放\n- 终结技留给Boss虚弱阶段\n- 异能技之间留间隔触发更多反应\n\n**换人时机**\n- 前台角色技能CD时切人\n- 属性反应需要时立刻切人\n- 队友增益效果激活时切C位吃buff\n\n### 三、高级操作\n\n1. **双反应链**：A属性→B属性→A属性，连续触发两种反应\n2. **预判切换**：在敌人动作前切换角色，利用无敌帧躲避\n3. **能量管理**：合理分配4个角色的技能使用，确保关键时刻有大招\n4. **走位拉怪**：利用走位聚怪后AOE效率最大化\n\n### 四、Boss战进阶\n\n- 学习Boss攻击模式，预判安全窗口\n- 在Boss蓄力时全力输出\n- 保留终结技给Boss转阶段时的虚弱期\n- 控制角色在Boss狂暴前施加debuff降低难度",
+    "contentEn": "## Advanced Combat Techniques & Combo Guide\n\n### 1. Attribute Combo Core\n\nMastering reaction trigger order is key to maximizing damage:\n\n**Overload Combo (Chaos + Spark)**\n1. Use Spark character to apply Ignite first\n2. Switch to Chaos character to trigger Overload\n3. Overload DMG = Base DMG × Reaction multiplier\n4. Consecutive triggers stack Overload layers\n\n**Void Erosion Combo (Void + Chaos)**\n1. Void character applies Weakness debuff\n2. Switch to Chaos character to attack during debuff\n3. Enemy ATK and DEF both reduced, maximizing damage window\n4. Watch debuff duration — finish your burst before it expires\n\n### 2. Timing Mastery\n\n**Ability Skill Timing**\n- Don't use skills on cooldown — wait for debuff stacks\n- Save Ultimates for boss vulnerable phases\n- Space ability uses to trigger more reactions\n\n**Switch Timing**\n- Switch when on-field character's skills are on cooldown\n- Switch immediately when attribute reactions are needed\n- Switch to DPS when teammate buffs are active\n\n### 3. Advanced Techniques\n\n1. **Double Reaction Chain**: Attribute A → B → A for consecutive reactions\n2. **Predictive Switching**: Switch before enemy attacks to use invincibility frames\n3. **Energy Management**: Distribute skill usage across all 4 members for key ultimates\n4. **Positioning & Grouping**: Use movement to group enemies for maximum AoE efficiency\n\n### 4. Advanced Boss Strategies\n\n- Learn boss attack patterns to predict safe windows\n- Unload during boss charge-up phases\n- Save ultimates for boss phase-transition vulnerability\n- Apply debuffs before boss enrage phases to reduce difficulty",
+    "tags": ["战斗", "连招", "进阶", "Combat", "Combo", "Advanced"],
+    "faq": [
+      {
+        "question": "What is the most important combat technique?",
+        "questionZh": "最重要的战斗技巧是什么？",
+        "answer": "Attribute reaction timing. Triggering the right reaction at the right time (e.g., Overload when enemies are grouped, Void Erosion before a burst window) dramatically increases your damage output compared to random skill usage.",
+        "answerZh": "属性反应时机。在正确的时间触发正确的反应（如敌人聚集时触发超载，爆发窗口前触发虚蚀）比随机使用技能能大幅提高伤害输出。"
+      },
+      {
+        "question": "How do I improve my combat timing?",
+        "questionZh": "如何提高战斗时机把控？",
+        "answer": "Practice in the Arena against different team compositions. Pay attention to debuff timers and learn to switch characters fluidly. Start with simple two-character combos before attempting full four-character chains.",
+        "answerZh": "在竞技场中对抗不同阵容练习。注意debuff计时器，学习流畅地切换角色。先从简单的双人组合开始，再尝试完整的四人连锁。"
+      },
+      {
+        "question": "Are there animation cancel techniques?",
+        "questionZh": "有动画取消技巧吗？",
+        "answer": "Yes. Switching characters during ability animations cancels the recovery animation, allowing faster combos. This is especially useful for chaining reactions — cancel into a switch immediately after triggering an attribute effect.",
+        "answerZh": "有。在技能动画期间切换角色可以取消后摇动画，实现更快的连招。这对连锁反应特别有用——在触发属性效果后立刻切换取消后摇。"
+      }
+    ]
+  },
+  {
+    "id": "farming-efficiency-guide",
+    "title": "材料刷取与资源规划效率指南",
+    "titleEn": "Material Farming & Resource Planning Guide",
+    "category": "farming",
+    "categoryZh": "刷取攻略",
+    "categoryEn": "Farming",
+    "summary": "无限大材料刷取效率最大化指南，包括体力规划、刷取路线和资源分配。",
+    "summaryEn": "Maximize farming efficiency with stamina planning, optimal routes, and resource allocation for Ananta.",
+    "content": "## 材料刷取与资源规划效率指南\n\n### 一、体力(Stamina)规划\n\n每日体力有限，合理分配是效率的关键：\n\n| 优先级 | 内容 | 体力分配 |\n|--------|------|----------|\n| 1 | 异能者突破材料 | 40% |\n| 2 | 觉醒材料 | 30% |\n| 3 | 装备刷取 | 20% |\n| 4 | 金币副本 | 10% |\n\n### 二、各阶段刷取重点\n\n**前期（1-30级）**\n- 集中体力刷突破材料，保证主C等级跟上\n- 觉醒材料适度刷取（核心觉醒即可）\n- 不刷装备，用任务奖励散件\n\n**中期（30-50级）**\n- 平衡突破材料和觉醒材料\n- 开始刷主C的2+2装备套装\n- 金币需求增加，每天刷1-2次金币本\n\n**后期（50级+）**\n- 装备优化为主要消耗\n- 追求4件套+极品副词条\n- 突破材料需求减少\n\n### 三、刷取效率技巧\n\n1. **优先级排序**：先保证等级和觉醒，再刷装备\n2. **集中刷取**：一次集中刷一个副本直到毕业\n3. **使用加成道具**：活动送的加成道具留给高价值副本\n4. **每日任务必做**：稳定的资源来源\n5. **异象讨伐每日清**：Boss材料掉落有上限，别浪费\n\n### 四、资源分配原则\n\n- 主C优先投入（等级>觉醒>装备）\n- 辅助次要投入（等级和核心技能即可）\n- 保留20%资源给未来新角色\n- 不要同时培养超过2个角色\n\n### 五、免费资源获取\n\n| 来源 | 频率 | 价值 |\n|------|------|------|\n| 每日任务 | 每天 | 稳定基础收入 |\n| 周常任务 | 每周 | 中等资源 |\n| 活动奖励 | 每版本 | 大量资源 |\n| 探索收集 | 一次性 | 大量资源 |\n| 成就奖励 | 一次性 | 中等资源 |",
+    "contentEn": "## Material Farming & Resource Planning Guide\n\n### 1. Stamina Planning\n\nDaily stamina is limited — smart allocation is key:\n\n| Priority | Content | Stamina Allocation |\n|-----------|---------|-------------------|\n| 1 | Ascension materials | 40% |\n| 2 | Awakening materials | 30% |\n| 3 | Gear farming | 20% |\n| 4 | Gold dungeon | 10% |\n\n### 2. Phase-Specific Farming Focus\n\n**Early (Lv.1-30)**\n- Focus stamina on ascension materials, keep main DPS leveled\n- Moderate awakening material farming (core awakening only)\n- Skip gear farming, use quest reward pieces\n\n**Mid (Lv.30-50)**\n- Balance ascension and awakening materials\n- Start farming 2+2 gear sets for main DPS\n- Gold needs increase — run gold dungeon 1-2 times daily\n\n**Late (Lv.50+)**\n- Gear optimization becomes primary stamina sink\n- Pursue 4pc sets with perfect substats\n- Ascension material needs decrease\n\n### 3. Farming Efficiency Tips\n\n1. **Priority order**: Levels and awakening first, then gear\n2. **Concentrated farming**: Farm one dungeon until complete before moving on\n3. **Use boost items**: Save event boost items for high-value dungeons\n4. **Daily tasks are mandatory**: Stable resource income\n5. **Clear Anomaly Hunts daily**: Boss drops have caps — don't waste them\n\n### 4. Resource Allocation Principles\n\n- Main DPS gets priority (Level > Awakening > Gear)\n- Supports get secondary investment (Level and core skills)\n- Reserve 20% resources for future new characters\n- Don't build more than 2 characters simultaneously\n\n### 5. Free Resource Sources\n\n| Source | Frequency | Value |\n|--------|-----------|-------|\n| Daily tasks | Daily | Stable baseline |\n| Weekly tasks | Weekly | Moderate |\n| Event rewards | Per patch | Large |\n| Exploration | One-time | Large |\n| Achievements | One-time | Moderate |",
+    "tags": ["刷取", "资源", "效率", "Farming", "Resource", "Efficiency"],
+    "faq": [
+      {
+        "question": "What should I spend stamina on first?",
+        "questionZh": "体力优先刷什么？",
+        "answer": "Ascension materials for your main DPS first. A max-level DPS with basic gear outperforms a low-level DPS with great gear. Only start gear farming after your core team is max level with abilities unlocked.",
+        "answerZh": "优先刷主C的突破材料。一个满级配基础装备的主C比低级配极品装备的主C更强。核心队伍满级且觉醒后再开始集中刷装备。"
+      },
+      {
+        "question": "When should I start optimizing gear?",
+        "questionZh": "什么时候开始优化装备？",
+        "answer": "Start serious gear farming in the late game (Lv.50+) after your main DPS is max level and awakened. Before that, use 2+2 sets with correct main stats as placeholders.",
+        "answerZh": "后期（50级+）主C满级且觉醒后再开始集中刷装备。之前用主属性正确的2+2套装过渡即可。"
+      },
+      {
+        "question": "How to manage resources for new characters?",
+        "questionZh": "如何为新角色留资源？",
+        "answer": "Always reserve about 20% of your weekly resources for new releases. Don't invest in more than 2 characters at a time. Save event rewards and one-time bonuses specifically for upcoming characters you want to build.",
+        "answerZh": "始终保留约20%的周常资源给新角色。同时不要培养超过2个角色。把活动奖励和一次性奖励专门留给即将发布且你想培养的角色。"
+      }
+    ]
   }
 ]

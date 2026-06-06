@@ -2578,7 +2578,7 @@
     "weaponType": "Catalyst",
     "baseAtk": 42,
     "subStat": "CRIT Rate",
-    "subStatValue": "6.0%",
+    "subStatValue": "8.0%",
     "effectName": "遗祀玉珑",
     "effectNameEn": "Sacrificial Jade",
     "effectDescription": "不在场上时提升生命值和元素精通",
