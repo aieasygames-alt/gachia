@@ -1,0 +1,134 @@
+[
+  {
+    "id": "beginner-guide",
+    "title": "《明日方舟：终末地》新手入门完全指南",
+    "titleEn": "Arknights: Endfield Complete Beginner Guide",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "从零开始了解《明日方舟：终末地》的世界观、战斗系统、干员养成和塔拉探索技巧，帮助新玩家快速上手。",
+    "summaryEn": "Learn everything about Arknights: Endfield's world, combat system, operator raising, and Talos exploration tips from scratch.",
+    "content": "## 欢迎，博士\n\n你已抵达塔拉二号，这个被天灾和源石虫侵袭的边境开拓地。作为罗德岛的驻派博士，你需要带领干员们在这里建立据点、探索未知。\n\n### 基础操作\n\n- **基地建设**: 建造和升级各类设施，生产资源\n- **即时战斗**: 指挥干员进行实时战斗，合理分配部署费用\n- **探索开采**: 在开放世界中采集资源、发现秘境\n\n### 干员职业系统\n\n每个干员拥有独特的职业和战斗风格：\n\n1. **先锋 (Vanguard)** — 快速展开，获取部署费用\n2. **近卫 (Guard)** — 近战输出主力\n3. **重装 (Defender)** — 防御和坦克\n4. **狙击 (Sniper)** — 远程物理输出\n5. **术师 (Caster)** — 源石技艺输出\n6. **辅助 (Supporter)** — 团队增益\n7. **医疗 (Medic)** — 治疗支援\n8. **特种 (Specialist)** — 特殊能力\n\n### 养成优先级\n\n1. 先提升主C干员等级和技能\n2. 获取适配的武器\n3. 完成开拓任务获取材料\n4. 最后考虑副C和辅助的养成",
+    "contentEn": "## Welcome, Doctor\n\nYou've arrived at Talos II, a frontier development zone ravaged by Catastrophes and Originium creatures. As a dispatched Doctor from Rhodes Island, you must lead operators to establish bases and explore the unknown.\n\n### Basic Controls\n\n- **Base Building**: Construct and upgrade facilities, produce resources\n- **Real-time Combat**: Command operators in real-time battles, manage Deployment Points (DP)\n- **Open World Exploration**: Gather resources, discover secret areas\n\n### Operator Profession System\n\nEach operator has a unique profession and combat style:\n\n1. **Vanguard** — Rapid deployment, DP generation\n2. **Guard** — Melee DPS mainstay\n3. **Defender** — Defense and tanking\n4. **Sniper** — Ranged Physical DPS\n5. **Caster** — Arts DPS\n6. **Supporter** — Team buffs\n7. **Medic** — Healing support\n8. **Specialist** — Unique abilities\n\n### Progression Priority\n\n1. Level up your main DPS and skills first\n2. Obtain suitable weapons\n3. Complete development tasks for materials\n4. Then invest in sub-DPS and supports",
+    "tags": ["新手", "入门", "基础", "Beginner", "Basics", "指南"],
+    "faq": [
+      {
+        "question": "What should I do first in Endfield?",
+        "questionZh": "终末地开局应该做什么？",
+        "answer": "Follow the main story to unlock all features and base facilities, then focus on leveling your main DPS operator.",
+        "answerZh": "跟随主线剧情解锁所有功能和基地设施，然后集中资源提升主C干员的等级。"
+      },
+      {
+        "question": "How does the gacha system work?",
+        "questionZh": "终末地的抽卡系统是怎样的？",
+        "answer": "Endfield features a headhunting (gacha) system for obtaining operators and weapons. Pity system guarantees a 6-star within 100 pulls.",
+        "answerZh": "终末地使用寻访（抽卡）系统获取干员和武器。保底系统在100抽内保证获得六星干员。"
+      }
+    ]
+  },
+  {
+    "id": "download-install-guide",
+    "title": "《明日方舟：终末地》下载安装指南 — 全平台下载地址",
+    "titleEn": "Arknights: Endfield System Requirements & Download Guide — PC, Mobile, Android, iOS",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "提供《明日方舟：终末地》在PC、安卓、iOS平台的下载安装教程和系统配置要求。",
+    "summaryEn": "Arknights: Endfield system requirements for PC, Android, and iOS. Download links, install guide, and troubleshooting for all platforms.",
+    "content": "## 系统配置要求\n\n### PC端\n- 操作系统: Windows 10 64位以上\n- 处理器: Intel i5 / 同等AMD处理器\n- 内存: 8GB RAM\n- 显卡: NVIDIA GTX 1060 6GB\n- 存储空间: 40GB\n\n### 推荐配置\n- 处理器: Intel i7 / AMD Ryzen 7\n- 内存: 16GB RAM\n- 显卡: NVIDIA RTX 3060\n- 存储空间: 40GB SSD\n\n### 移动端\n- 安卓: 骁龙8 Gen 1及以上，6GB RAM\n- iOS: iPhone 12及以上\n\n## 下载方式\n\n1. **PC端**: 前往官网下载客户端\n2. **安卓**: 官网下载APK或Google Play\n3. **iOS**: App Store 搜索「Arknights: Endfield」",
+    "contentEn": "## System Requirements\n\n### PC Minimum\n- **OS**: Windows 10 64-bit or above\n- **CPU**: Intel Core i5-8400 / AMD Ryzen 5 2600\n- **RAM**: 8GB\n- **GPU**: NVIDIA GTX 1060 6GB / AMD Radeon RX 580\n- **Storage**: 40GB\n\n### PC Recommended\n- **CPU**: Intel Core i7-9700 / AMD Ryzen 7 3700X\n- **RAM**: 16GB\n- **GPU**: NVIDIA RTX 3060 / AMD Radeon RX 6600 XT\n- **Storage**: 40GB SSD\n\n### Mobile\n- **Android**: Snapdragon 8 Gen 1+, 6GB RAM, Android 12+\n- **iOS**: iPhone 12 or later, iOS 15.0+\n\n## Download\n\n1. **PC**: Download from the official website\n2. **Android**: Download APK from official site or Google Play\n3. **iOS**: Search 'Arknights: Endfield' on the App Store",
+    "tags": ["下载", "安装", "平台", "Download", "Install"],
+    "faq": [
+      {
+        "question": "Is Endfield available on all platforms?",
+        "questionZh": "终末地支持哪些平台？",
+        "answer": "Endfield supports PC (Windows), Android, and iOS with cross-save functionality.",
+        "answerZh": "终末地支持PC、安卓和iOS平台，支持跨平台存档互通。"
+      }
+    ]
+  },
+  {
+    "id": "combat-system-guide",
+    "title": "《明日方舟：终末地》战斗系统详解 — 部署费用与干员配合",
+    "titleEn": "Arknights: Endfield Combat System Guide — DP Management & Operator Synergy",
+    "category": "combat",
+    "categoryZh": "战斗攻略",
+    "categoryEn": "Combat",
+    "summary": "深入解析终末地的即时战斗系统，包括部署费用管理、干员切换、元素反应和Boss战策略。",
+    "summaryEn": "In-depth guide to Endfield's real-time combat system, including DP management, operator switching, and boss fight strategies.",
+    "content": "## 战斗系统概述\n\n终末地采用即时战斗系统，区别于原作的塔防模式。玩家需要在开放世界中实时操控干员进行战斗。\n\n### 部署费用 (DP) 系统\n\n- 每个干员的技能消耗DP\n- DP随时间自动恢复\n- 先锋干员可以加速DP获取\n- 合理分配DP是战斗的关键\n\n### 干员切换\n\n- 战斗中可随时切换4名干员\n- 切换时有短暂无敌帧\n- 不同干员之间可以触发连锁技能\n\n### Boss战策略\n\n1. 先用先锋积攒DP\n2. 切换到主C输出\n3. 注意Boss的攻击模式，及时切换到坦克\n4. 在Boss虚弱期全力输出",
+    "contentEn": "## Combat Overview\n\nEndfield features a real-time combat system, different from the original's tower defense. Players directly control operators in open-world battles.\n\n### Deployment Points (DP) System\n\n- Each operator's skill costs DP\n- DP regenerates over time\n- Vanguard operators accelerate DP generation\n- Proper DP allocation is key to combat\n\n### Operator Switching\n\n- Switch between 4 operators freely in combat\n- Brief invincibility frames during switch\n- Different operators can trigger chain skills\n\n### Boss Fight Strategy\n\n1. Start with Vanguard to build DP\n2. Switch to main DPS for damage\n3. Watch boss attack patterns, switch to tank when needed\n4. Full damage during boss vulnerability windows",
+    "tags": ["战斗", "攻略", "Combat", "Guide", "Boss"],
+    "faq": [
+      {
+        "question": "How does the DP system work in Endfield?",
+        "questionZh": "终末地的DP系统怎么运作？",
+        "answer": "DP (Deployment Points) are consumed when using skills. They regenerate over time and can be accelerated by Vanguard operators.",
+        "answerZh": "DP（部署费用）在使用技能时消耗，会随时间自动恢复，先锋干员可以加速获取。"
+      }
+    ]
+  },
+  {
+    "id": "best-operators-tier-list",
+    "title": "《明日方舟：终末地》干员节奏榜 — 最佳干员推荐",
+    "titleEn": "Arknights: Endfield Operator Tier List — Best Operators Ranked",
+    "category": "tier-list",
+    "categoryZh": "节奏榜",
+    "categoryEn": "Tier List",
+    "summary": "终末地最新干员强度排行，从SS到B级全面评估，帮助你选择最优的干员培养优先级。",
+    "summaryEn": "Latest Endfield operator ranking from SS to B tier, helping you prioritize which operators to build.",
+    "content": "## SS级干员\n\n### 史尔特尔 (Surtr)\n- 源石技艺爆发输出天花板\n- 真实伤害终极技无视防御\n- 必练角色\n\n### 安洁莉娜 (Angelina)\n- 顶级辅助，提供攻速和源石技艺增益\n- 被动增强全队源石技艺输出\n- 适配任何源石技艺队伍\n\n### 塞雷娅 (Saria)\n- 最强坦克治疗混合体\n- 提供治疗、护盾和嘲讽\n- 任何队伍都需要她\n\n## S级干员\n\n### 银灰 (SilverAsh)\n- 物理输出巅峰\n- 真实伤害终极技\n- 对付高防敌人首选\n\n### 能天使 (Exusiai)\n- 远程物理射击天花板\n- 极高攻击速度\n- 清杂效率极高",
+    "contentEn": "## SS-Tier Operators\n\n### Surtr\n- Peak Arts burst DPS\n- True damage ultimate ignores DEF\n- Must-build character\n\n### Angelina\n- Top-tier supporter, provides ATK speed and Arts buffs\n- Passive enhances team Arts damage\n- Fits any Arts team\n\n### Saria\n- Best tank-healer hybrid\n- Provides healing, shields, and taunt\n- Needed in every team\n\n## S-Tier Operators\n\n### SilverAsh\n- Peak Physical DPS\n- True damage ultimate\n- Best against high-DEF enemies\n\n### Exusiai\n- Peak ranged Physical shooter\n- Extremely high ATK speed\n- Excellent wave clearing",
+    "tags": ["节奏榜", "Tier List", "排行", "Ranking"],
+    "faq": [
+      {
+        "question": "Who is the best operator in Endfield?",
+        "questionZh": "终末地最强干员是谁？",
+        "answer": "Surtr, Angelina, and Saria are the top 3 operators. Surtr for DPS, Angelina for support, and Saria for tank/healing.",
+        "answerZh": "史尔特尔、安洁莉娜和塞雷娅是前三名。史尔特尔负责输出，安洁莉娜辅助，塞雷娅坦克治疗。"
+      }
+    ]
+  },
+  {
+    "id": "base-building-guide",
+    "title": "《明日方舟：终末地》基地建设攻略 — 设施优先级与资源管理",
+    "titleEn": "Arknights: Endfield Base Building Guide — Facility Priority & Resource Management",
+    "category": "base",
+    "categoryZh": "基地建设",
+    "categoryEn": "Base Building",
+    "summary": "详解终末地的基地建设系统，包括各类设施的功能、升级优先级和资源管理策略。",
+    "summaryEn": "Detailed guide to Endfield's base building system, including facility functions, upgrade priorities, and resource management strategies.",
+    "content": "## 基地系统概述\n\n终末地的基地是你在塔拉二号的核心据点，通过建设和升级各类设施来生产资源、强化干员。\n\n### 设施类型\n\n1. **制造站** — 生产武器和材料\n2. **贸易站** — 交换资源和物资\n3. **发电站** — 为其他设施供电\n4. **训练室** — 提升干员技能等级\n5. **宿舍** — 恢复干员体力\n\n### 建设优先级\n\n1. 首先升级发电站确保电力供应\n2. 然后升级制造站获取基础材料\n3. 训练室尽早建造以提升战斗力\n4. 贸易站和宿舍后续补充",
+    "contentEn": "## Base System Overview\n\nYour base in Talos II is your central hub, where you build and upgrade facilities to produce resources and strengthen operators.\n\n### Facility Types\n\n1. **Workshop** — Produce weapons and materials\n2. **Trading Post** — Exchange resources\n3. **Power Plant** — Supply power to facilities\n4. **Training Room** — Upgrade operator skills\n5. **Dormitory** — Restore operator stamina\n\n### Build Priority\n\n1. First upgrade Power Plant for energy supply\n2. Then upgrade Workshop for basic materials\n3. Build Training Room early to boost combat power\n4. Trading Post and Dormitory later",
+    "tags": ["基地", "建设", "Base", "Building", "资源"],
+    "faq": [
+      {
+        "question": "What should I build first in my base?",
+        "questionZh": "基地应该先建什么？",
+        "answer": "Prioritize Power Plant first, then Workshop for materials, and Training Room for skill upgrades.",
+        "answerZh": "优先建造发电站，然后是制造站获取材料，接着是训练室提升技能。"
+      }
+    ]
+  },
+  {
+    "id": "gacha-headhunting-guide",
+    "title": "《明日方舟：终末地》寻访系统攻略 — 保底机制与抽卡建议",
+    "titleEn": "Arknights: Endfield Headhunting Guide — Pity System & Pulling Strategy",
+    "category": "gacha",
+    "categoryZh": "寻访系统",
+    "categoryEn": "Headhunting",
+    "summary": "全面解析终末地的寻访（抽卡）系统，包括保底机制、概率计算和最优抽卡策略。",
+    "summaryEn": "Complete guide to Endfield's headhunting (gacha) system, including pity mechanics, probability calculations, and optimal pulling strategies.",
+    "content": "## 寻访系统概述\n\n终末地使用寻访系统获取干员和武器，保留了一定的保底机制。\n\n### 保底机制\n\n- **软保底**: 50抽后每抽6星概率递增\n- **硬保底**: 100抽必定获得6星干员\n- **定向保底**: 200抽可兑换指定6星干员\n\n### 抽卡建议\n\n1. 优先抽取主C干员\n2. 6星武器可以后续获取\n3. 不要在常驻池浪费太多资源\n4. 限定池的干员强度通常更高\n\n### 资源获取\n\n- 每日任务获得少量寻访凭证\n- 周常任务额外奖励\n- 活动赠送免费抽卡次数",
+    "contentEn": "## Headhunting Overview\n\nEndfield uses a headhunting system to obtain operators and weapons, with pity mechanics.\n\n### Pity System\n\n- **Soft Pity**: 6-star probability increases after 50 pulls\n- **Hard Pity**: Guaranteed 6-star at 100 pulls\n- **Targeted Pity**: Exchange for a specific 6-star at 200 pulls\n\n### Pulling Strategy\n\n1. Prioritize pulling for main DPS operators\n2. 6-star weapons can wait\n3. Don't spend too much on standard banner\n4. Limited banners usually have stronger operators\n\n### Resource Sources\n\n- Daily quests give small amounts of permits\n- Weekly quests for extra rewards\n- Events provide free pulls",
+    "tags": ["寻访", "抽卡", "保底", "Gacha", "Headhunting"],
+    "faq": [
+      {
+        "question": "What is the pity system in Endfield?",
+        "questionZh": "终末地的保底机制是什么？",
+        "answer": "Hard pity at 100 pulls guarantees a 6-star. At 200 pulls you can exchange for a specific 6-star operator.",
+        "answerZh": "100抽硬保底保证获得六星。200抽可兑换指定六星干员。"
+      }
+    ]
+  }
+]

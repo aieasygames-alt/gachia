@@ -4,9 +4,11 @@ import { nteCharacters, getNteCharacterName, getNteCharacterImage } from '@gachi
 import { zzzCharacters, getZzzCharacterName, getZzzCharacterImage } from '@gachia/data/games/zzz/characters';
 import { anantaCharacters, getAnantaCharacterName, getAnantaCharacterImage } from '@gachia/data/games/ananta/characters';
 import { guihuanCharacters, getGuihuanCharacterName, getGuihuanCharacterImage } from '@gachia/data/games/guihuan/characters';
+import { endfieldCharacters, getEndfieldCharacterName, getEndfieldCharacterImage } from '@gachia/data/games/endfield/characters';
 import { tierLists as zzzTierLists } from '@gachia/data/games/zzz';
 import { tierLists as anantaTierLists } from '@gachia/data/games/ananta';
 import { tierLists as guihuanTierLists } from '@gachia/data/games/guihuan';
+import { tierLists as endfieldTierLists } from '@gachia/data/games/endfield';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
@@ -20,6 +22,7 @@ const TIER_DESC: Record<string, Record<string, string>> = {
   zzz: { zh: '绝区零代理人强度排行，包含SS/S/A/B分级', en: 'Zenless Zone Zero agent tier list with SS/S/A/B rankings', ja: 'ゼンレスゾーンゼロエージェントTierリスト、SS/S/A/B評価' },
   guihuan: { zh: '归环使灵强度排行，包含SS/S/A/B分级', en: 'Guihuan spirit tier list with SS/S/A/B rankings', ja: '帰環スピリットTierリスト、SS/S/A/B評価' },
   ananta: { zh: '无限大异能者强度排行，包含SS/S/A/B分级', en: 'Ananta esper tier list with SS/S/A/B rankings', ja: 'アナンタエスパーTierリスト、SS/S/A/B評価' },
+  endfield: { zh: '明日方舟：终末地干员强度排行，包含SS/S/A/B分级', en: 'Arknights: Endfield operator tier list with SS/S/A/B rankings', ja: 'アークナイツ：エンドフィールドオペレーターTierリスト、SS/S/A/B評価' },
 };
 
 import { GenshinTierListClient } from './genshin-tier-client';
@@ -116,6 +119,10 @@ export default async function TierListPage({
 
   if (gameId === 'guihuan') {
     return <GuihuanTierListPage locale={locale} />;
+  }
+
+  if (gameId === 'endfield') {
+    return <EndfieldTierListPage locale={locale} />;
   }
 
   return (
@@ -398,6 +405,80 @@ function GuihuanTierListPage({ locale }: { locale: SupportedLocale }) {
                       <div className="flex items-center gap-1.5 text-xs text-game-text-muted">
                         <span className="inline-block h-2 w-2 rounded-full" style={{ backgroundColor: GUIHUAN_ELEMENT_COLORS[char.element] || '#888' }} />
                         <span>{char.roleEn}</span>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
+// --- Endfield Tier List ---
+
+const ENDFIELD_ELEMENT_COLORS: Record<string, string> = {
+  arts: '#8b5cf6', physical: '#9ca3af',
+};
+
+function EndfieldTierListPage({ locale }: { locale: SupportedLocale }) {
+  const tierData = endfieldTierLists.find(
+    (tl) => tl.gameId === 'endfield' && tl.category === 'overall' && tl.locale === locale,
+  ) ?? endfieldTierLists.find(
+    (tl) => tl.gameId === 'endfield' && tl.category === 'overall',
+  );
+
+  const tierGroups: Record<string, string[]> = {};
+  const tierOrder = ['SS', 'S', 'A', 'B'];
+
+  if (tierData) {
+    for (const entry of tierData.entries) {
+      if (!tierGroups[entry.tier]) tierGroups[entry.tier] = [];
+      tierGroups[entry.tier]!.push(entry.characterId);
+    }
+  }
+
+  const charMap = new Map(endfieldCharacters.map((c) => [c.id, c]));
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.endfield.theme.primary }}>
+        {CATEGORY_LABELS['tier-list']?.[locale] ?? 'Tier List'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? '基于角色综合强度评级，仅供参考' : locale === 'ja' ? 'キャラクターの総合的な強さに基づく評価です' : 'Based on overall character strength, for reference only'}
+      </p>
+
+      {tierOrder.map((tier) => {
+        const ids = tierGroups[tier];
+        if (!ids || ids.length === 0) return null;
+        const style = TIER_STYLES[tier] ?? TIER_STYLES.B ?? { bg: '', text: '', border: '' };
+
+        return (
+          <section key={tier} className={`mb-4 rounded-lg border ${style.border} ${style.bg} p-4`}>
+            <div className="mb-3 flex items-center gap-3">
+              <span className={`text-xl font-bold ${style.text}`}>{tier}</span>
+              <span className="text-sm text-game-text-muted">({ids.length})</span>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {ids.map((id) => {
+                const char = charMap.get(id);
+                if (!char) return null;
+                const imageUrl = getEndfieldCharacterImage(char);
+                return (
+                  <Link key={char.id} href={`/endfield/characters/${char.id}` as '/'}
+                    className="group flex items-center gap-2 rounded-lg border border-game-border bg-game-surface px-3 py-2 transition-colors hover:border-game-primary">
+                    <div className="h-8 w-8 shrink-0 overflow-hidden rounded-full bg-game-surface-alt">
+                      <CharacterAvatar src={imageUrl} alt="" element={char.element} className="h-full w-full object-cover object-top" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-game-text group-hover:text-game-primary">{getEndfieldCharacterName(char, locale)}</p>
+                      <div className="flex items-center gap-1.5 text-xs text-game-text-muted">
+                        <span className="inline-block h-2 w-2 rounded-full" style={{ backgroundColor: ENDFIELD_ELEMENT_COLORS[char.element] || '#888' }} />
+                        <span>{char.professionEn}</span>
                       </div>
                     </div>
                   </Link>

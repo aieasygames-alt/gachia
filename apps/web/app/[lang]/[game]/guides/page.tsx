@@ -8,6 +8,7 @@ import { wuwaGuides, getGuideTitle as getWuWaGuideTitle, getGuideSummary as getW
 import { zzzGuides, getZzzGuideTitle, getZzzGuideSummary, getZzzGuideCategory, getZzzGuideCategories, ZZZ_GUIDE_CATEGORIES } from '@gachia/data/games/zzz/guides';
 import { anantaGuides, getAnantaGuideTitle, getAnantaGuideSummary, getAnantaGuideCategory, getAnantaGuideCategories, ANANTA_GUIDE_CATEGORIES } from '@gachia/data/games/ananta/guides';
 import { guihuanGuides, getGuihuanGuideTitle, getGuihuanGuideSummary, getGuihuanGuideCategory, getGuihuanGuideCategories, GUIHUAN_GUIDE_CATEGORIES } from '@gachia/data/games/guihuan/guides';
+import { endfieldGuides, getEndfieldGuideTitle, getEndfieldGuideSummary, getEndfieldGuideCategory, getEndfieldGuideCategories, ENDFIELD_GUIDE_CATEGORIES } from '@gachia/data/games/endfield/guides';
 import { starrailCharacters, getStarRailCharacterName, getStarRailCharacterImage } from '@gachia/data/games/starrail/characters';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
@@ -21,6 +22,7 @@ const GUIDE_DESC: Record<string, Record<string, string>> = {
   zzz: { zh: '绝区零攻略百科，包含新手指南、代理人攻略、音擎推荐等', en: 'Zenless Zone Zero guides with beginner tips, agent builds, and W-Engine recommendations', ja: 'ゼンレスゾーンゼロ攻略百科、初心者ガイド、エージェントビルド、Wエンジンおすすめ' },
   guihuan: { zh: '归环攻略百科，包含新手指南、使灵攻略、武器推荐等', en: 'Guihuan guides with beginner tips, spirit builds, and weapon recommendations', ja: '帰環攻略百科、初心者ガイド、スピリットビルド、武器おすすめ' },
   ananta: { zh: '无限大攻略百科，包含新手指南、异能者攻略、武器推荐等', en: 'Ananta guides with beginner tips, esper builds, and weapon recommendations', ja: 'アナンタ攻略百科、初心者ガイド、エスパービルド、武器おすすめ' },
+  endfield: { zh: '明日方舟：终末地攻略百科，包含新手指南、干员攻略、武器推荐等', en: 'Arknights: Endfield guides with beginner tips, operator builds, and weapon recommendations', ja: 'アークナイツ：エンドフィールド攻略百科、初心者ガイド、オペレータービルド、武器おすすめ' },
 };
 
 export async function generateMetadata({
@@ -88,6 +90,10 @@ export default async function GuidesPage({
 
   if (gameId === 'ananta') {
     return <AnantaGuides locale={locale} />;
+  }
+
+  if (gameId === 'endfield') {
+    return <EndfieldGuides locale={locale} />;
   }
 
   // Unsupported games
@@ -654,6 +660,85 @@ function AnantaGuides({ locale }: { locale: SupportedLocale }) {
                   <div className="flex flex-wrap gap-1.5">
                     <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
                       {getAnantaGuideCategory(guide, locale)}
+                    </span>
+                    {guide.tags.slice(0, 3).map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
+// --- Endfield Guides ---
+
+function EndfieldGuides({ locale }: { locale: SupportedLocale }) {
+  const guides = endfieldGuides;
+  const categories = getEndfieldGuideCategories();
+  const gameConfig = GAMES.endfield;
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {CATEGORY_LABELS.guides?.[locale] ?? 'Guides'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh'
+          ? `共 ${guides.length} 篇攻略`
+          : locale === 'ja'
+          ? `${guides.length} 件のガイド`
+          : `${guides.length} guides`}
+      </p>
+
+      <div className="mb-6 flex flex-wrap gap-2">
+        {categories.map((cat) => {
+          const count = guides.filter((g) => g.category === cat).length;
+          return (
+            <a
+              key={cat}
+              href={`#category-${cat}`}
+              className="rounded-full border border-game-border bg-game-surface px-3 py-1 text-sm transition-colors hover:border-game-primary hover:text-game-primary"
+            >
+              {ENDFIELD_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              <span className="ml-1 text-game-text-muted">({count})</span>
+            </a>
+          );
+        })}
+      </div>
+
+      {categories.map((cat) => {
+        const categoryGuides = guides.filter((g) => g.category === cat);
+        return (
+          <section key={cat} id={`category-${cat}`} className="mb-8">
+            <h2 className="mb-4 text-lg font-semibold text-game-text">
+              {ENDFIELD_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+            </h2>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {categoryGuides.map((guide) => (
+                <Link
+                  key={guide.id}
+                  href={`/endfield/guides/${guide.id}`}
+                  className="group flex flex-col rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
+                >
+                  <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
+                    {getEndfieldGuideTitle(guide, locale)}
+                  </h3>
+                  <p className="mb-3 flex-1 text-sm leading-relaxed text-game-text-muted">
+                    {getEndfieldGuideSummary(guide, locale)}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
+                      {getEndfieldGuideCategory(guide, locale)}
                     </span>
                     {guide.tags.slice(0, 3).map((tag) => (
                       <span

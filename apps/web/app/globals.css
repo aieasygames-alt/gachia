@@ -85,6 +85,17 @@
   --color-text-muted: #94a3b8;
 }
 
+:root[data-game="endfield"] {
+  --color-primary: #00b4d8;
+  --color-accent: #90e0ef;
+  --color-bg: #0a0e1a;
+  --color-surface: #111827;
+  --color-surface-alt: #1a2332;
+  --color-border: #2a3a4c;
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+}
+
 /* ============================================================
    Rarity Border Colors
    ============================================================ */

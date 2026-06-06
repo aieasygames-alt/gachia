@@ -22,6 +22,9 @@ import {
 import {
   anantaWeapons, getAnantaWeaponById, getAnantaWeaponName, getAnantaWeaponEffect, getAnantaWeaponSource,
 } from '@gachia/data/games/ananta/weapons';
+import {
+  endfieldWeapons, getEndfieldWeaponById, getEndfieldWeaponName, getEndfieldWeaponEffect, getEndfieldWeaponSource,
+} from '@gachia/data/games/endfield/weapons';
 import { getCharactersForWeapon, getRelatedWeapons } from '@gachia/data/weapon-characters';
 import { Link } from '@/lib/i18n/navigation';
 
@@ -71,6 +74,7 @@ export async function generateStaticParams() {
     ...zzzWeapons.map((w) => ({ lang, game: 'zzz', id: w.id })),
     ...guihuanWeapons.map((w) => ({ lang, game: 'guihuan', id: w.id })),
     ...anantaWeapons.map((w) => ({ lang, game: 'ananta', id: w.id })),
+    ...endfieldWeapons.map((w) => ({ lang, game: 'endfield', id: w.id })),
   ]);
 }
 
@@ -221,6 +225,18 @@ export async function generateMetadata({
     const meta = buildWeaponMeta(name, effect?.description, stats);
     return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
+  if (gameId === 'endfield') {
+    const w = getEndfieldWeaponById(id);
+    if (!w) return {};
+    const name = getEndfieldWeaponName(w, locale);
+    const effect = getEndfieldWeaponEffect(w, locale);
+    const sub = w.substat ? (locale === 'zh' ? `${w.substat}${w.substatValue}` : `${w.substatEn ?? w.substat} ${w.substatValue}`) : '';
+    const stats = locale === 'zh'
+      ? `${w.rarity}★, 基础攻击力${w.baseAtk}${sub ? `, ${sub}` : ''}`
+      : `★${w.rarity}, Base ATK ${w.baseAtk}${sub ? `, ${sub}` : ''}`;
+    const meta = buildWeaponMeta(name, effect?.description, stats);
+    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+  }
   return {};
 }
 
@@ -267,6 +283,11 @@ export default async function WeaponDetailPage({
     const w = getAnantaWeaponById(id);
     if (!w) notFound();
     return <AnantaWeaponDetail weapon={w} locale={locale} />;
+  }
+  if (gameId === 'endfield') {
+    const w = getEndfieldWeaponById(id);
+    if (!w) notFound();
+    return <EndfieldWeaponDetail weapon={w} locale={locale} />;
   }
 
   notFound();
@@ -638,6 +659,64 @@ function AnantaWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType
             itemListElement: [
               { '@type': 'ListItem', position: 1, name: gameName, item: `https://gachia.com/${locale}/ananta` },
               { '@type': 'ListItem', position: 2, name: locale === 'zh' ? '武器' : locale === 'ja' ? '武器' : 'Weapons', item: `https://gachia.com/${locale}/ananta/weapons` },
+              { '@type': 'ListItem', position: 3, name },
+            ],
+          }),
+        }}
+      />
+    </div>
+  );
+}
+
+/* ---------- Endfield ---------- */
+
+const ENDFIELD_WEAPON_TYPE: Record<string, Record<string, string>> = {
+  Sword: { zh: '剑', en: 'Sword', ja: '剣' },
+  Greatsword: { zh: '大剑', en: 'Greatsword', ja: '大剣' },
+  Spear: { zh: '长枪', en: 'Spear', ja: '槍' },
+  Shield: { zh: '盾', en: 'Shield', ja: '盾' },
+  Staff: { zh: '法杖', en: 'Staff', ja: '杖' },
+};
+
+function EndfieldWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<typeof getEndfieldWeaponById>>; locale: SupportedLocale }) {
+  const gameName = GAMES.endfield.name[locale];
+  const name = getEndfieldWeaponName(weapon, locale);
+  const effect = getEndfieldWeaponEffect(weapon, locale);
+  const source = getEndfieldWeaponSource(weapon, locale);
+
+  return (
+    <div>
+      <Breadcrumb game="endfield" gameName={gameName} locale={locale} />
+      <Header name={name} nameAlt={locale === 'zh' ? weapon.nameEn : weapon.name} rarity={weapon.rarity} />
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <InfoCard label={locale === 'zh' ? '武器类型' : locale === 'ja' ? '武器タイプ' : 'Weapon Type'} value={locale === 'zh' ? weapon.weaponType : weapon.weaponTypeEn} />
+        <InfoCard label="Base ATK" value={String(weapon.baseAtk)} />
+        {weapon.substat && <InfoCard label="Sub Stat" value={`${locale === 'zh' ? weapon.substat : weapon.substatEn} ${weapon.substatValue}`} />}
+      </div>
+      {effect.name && (
+        <section className="mt-6">
+          <h2 className="mb-3 text-lg font-semibold text-game-text">
+            {locale === 'zh' ? '武器技能' : locale === 'ja' ? '武器スキル' : 'Weapon Skill'}
+          </h2>
+          <div className="rounded-lg border border-game-border bg-game-surface p-4">
+            <div className="mb-1 text-sm font-medium text-game-primary">{effect.name}</div>
+            <p className="text-sm text-game-text-muted">{effect.description}</p>
+          </div>
+        </section>
+      )}
+      {source && <SourceSection source={source} locale={locale} />}
+      <UsageTipsSection name={name} gameName={gameName} locale={locale} />
+      <CharactersUsingWeaponSection gameId="endfield" weaponId={weapon.id} locale={locale} />
+      <RelatedWeaponsSection gameId="endfield" weaponId={weapon.id} locale={locale} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: gameName, item: `https://gachia.com/${locale}/endfield` },
+              { '@type': 'ListItem', position: 2, name: locale === 'zh' ? '武器' : locale === 'ja' ? '武器' : 'Weapons', item: `https://gachia.com/${locale}/endfield/weapons` },
               { '@type': 'ListItem', position: 3, name },
             ],
           }),

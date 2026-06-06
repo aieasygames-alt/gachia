@@ -1,0 +1,137 @@
+[
+  {
+    "id": "originium-shard",
+    "name": "源石碎片",
+    "nameEn": "Originium Shard",
+    "type": "ascension",
+    "rarity": 1,
+    "source": "基础物资关卡、新手任务奖励",
+    "sourceEn": "Basic supply stages, beginner quest rewards"
+  },
+  {
+    "id": "originium-crystal",
+    "name": "源石晶体",
+    "nameEn": "Originium Crystal",
+    "type": "ascension",
+    "rarity": 2,
+    "source": "物资关卡、材料合成",
+    "sourceEn": "Supply stages, material crafting"
+  },
+  {
+    "id": "originium-cluster",
+    "name": "源石簇",
+    "nameEn": "Originium Cluster",
+    "type": "ascension",
+    "rarity": 3,
+    "source": "精英物资关卡、材料合成",
+    "sourceEn": "Elite supply stages, material crafting"
+  },
+  {
+    "id": "originium-concentrate",
+    "name": "源石浓缩液",
+    "nameEn": "Originium Concentrate",
+    "type": "ascension",
+    "rarity": 4,
+    "source": "高级物资关卡、材料合成",
+    "sourceEn": "Advanced supply stages, material crafting"
+  },
+  {
+    "id": "polymerized-gel",
+    "name": "聚酸酯凝胶",
+    "nameEn": "Polymerized Gel",
+    "type": "skill",
+    "rarity": 3,
+    "source": "技能训练关卡、物资关卡",
+    "sourceEn": "Skill training stages, supply stages"
+  },
+  {
+    "id": "polymerized-preparation",
+    "name": "聚酸酯制备",
+    "nameEn": "Polymerized Preparation",
+    "type": "skill",
+    "rarity": 4,
+    "source": "高级技能训练关卡、材料合成",
+    "sourceEn": "Advanced skill training stages, material crafting"
+  },
+  {
+    "id": "grindstone",
+    "name": "研磨石",
+    "nameEn": "Grindstone",
+    "type": "weapon",
+    "rarity": 3,
+    "source": "武器升级关卡、世界探索",
+    "sourceEn": "Weapon upgrade stages, world exploration"
+  },
+  {
+    "id": "manganese-ore",
+    "name": "锰矿石",
+    "nameEn": "Manganese Ore",
+    "type": "weapon",
+    "rarity": 3,
+    "source": "采矿点、武器升级关卡",
+    "sourceEn": "Mining nodes, weapon upgrade stages"
+  },
+  {
+    "id": "incandescent-alloy",
+    "name": "炽热合金",
+    "nameEn": "Incandescent Alloy",
+    "type": "weapon",
+    "rarity": 4,
+    "source": "高级武器升级关卡、Boss战掉落",
+    "sourceEn": "Advanced weapon upgrade stages, boss drops"
+  },
+  {
+    "id": "crystalline-component",
+    "name": "晶体元件",
+    "nameEn": "Crystalline Component",
+    "type": "weapon",
+    "rarity": 4,
+    "source": "高级武器升级关卡、材料合成",
+    "sourceEn": "Advanced weapon upgrade stages, material crafting"
+  },
+  {
+    "id": "lmd",
+    "name": "龙门币",
+    "nameEn": "LMD",
+    "type": "currency",
+    "rarity": 1,
+    "source": "物资关卡、任务奖励、世界探索",
+    "sourceEn": "Supply stages, quest rewards, world exploration"
+  },
+  {
+    "id": "battle-record",
+    "name": "作战记录",
+    "nameEn": "Battle Record",
+    "type": "exp",
+    "rarity": 2,
+    "source": "经验关卡、任务奖励",
+    "sourceEn": "EXP stages, quest rewards"
+  },
+  {
+    "id": "elite-battle-record",
+    "name": "精英作战记录",
+    "nameEn": "Elite Battle Record",
+    "type": "exp",
+    "rarity": 3,
+    "source": "高级经验关卡、材料合成",
+    "sourceEn": "Advanced EXP stages, material crafting"
+  },
+  {
+    "id": "tactical-battle-record",
+    "name": "战术作战记录",
+    "nameEn": "Tactical Battle Record",
+    "type": "exp",
+    "rarity": 4,
+    "source": "高级经验关卡、活动奖励",
+    "sourceEn": "Advanced EXP stages, event rewards"
+  },
+  {
+    "id": "headhunting-permit",
+    "name": "寻访凭证",
+    "nameEn": "Headhunting Permit",
+    "type": "gacha",
+    "rarity": 4,
+    "source": "商店购买、活动奖励",
+    "sourceEn": "Shop purchase, event rewards"
+  }
+]

@@ -18,7 +18,7 @@ export const LOCALE_NAMES: Record<SupportedLocale, string> = {
 // Games Registry
 // ============================================================
 
-export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta'];
+export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield'];
 
 export const GAMES: Record<GameId, GameModule> = {
   genshin: {
@@ -291,6 +291,42 @@ export const GAMES: Record<GameId, GameModule> = {
       { stars: 5, color: '#8b5cf6', label: { zh: 'SSR', en: 'SSR', ja: 'SSR' } },
       { stars: 4, color: '#a855f7', label: { zh: 'SR', en: 'SR', ja: 'SR' } },
       { stars: 3, color: '#60a5fa', label: { zh: 'R', en: 'R', ja: 'R' } },
+    ],
+    stats: {
+      baseStats: ['hp', 'atk', 'def'],
+      subStats: ['hpPercent', 'atkPercent', 'defPercent', 'critRate', 'critDmg'],
+      specialStats: [],
+    },
+    routes: {
+      characters: true,
+      weapons: true,
+      items: true,
+      'tier-list': true,
+      calculator: false,
+      map: true,
+      guides: true,
+      build: true,
+      compare: true,
+      teams: true,
+    },
+  },
+  endfield: {
+    id: 'endfield',
+    name: { zh: '明日方舟：终末地', en: 'Arknights: Endfield', ja: 'アークナイツ：エンドフィールド' },
+    theme: {
+      primary: '#00b4d8',
+      accent: '#90e0ef',
+      background: '#0a0e1a',
+      surface: '#111827',
+    },
+    elements: [
+      { id: 'physical', name: { zh: '物理', en: 'Physical', ja: '物理' }, color: '#9ca3af' },
+      { id: 'arts', name: { zh: '源石技艺', en: 'Originium Arts', ja: 'オリジニウムアーツ' }, color: '#8b5cf6' },
+    ],
+    rarities: [
+      { stars: 6, color: '#f59e0b', label: { zh: '六星', en: '6-Star', ja: '★6' } },
+      { stars: 5, color: '#eab308', label: { zh: '五星', en: '5-Star', ja: '★5' } },
+      { stars: 4, color: '#a855f7', label: { zh: '四星', en: '4-Star', ja: '★4' } },
     ],
     stats: {
       baseStats: ['hp', 'atk', 'def'],

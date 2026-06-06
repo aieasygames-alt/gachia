@@ -7,6 +7,7 @@ import { nteWeapons, getNteWeaponName, getNteWeaponEffect } from '@gachia/data/g
 import { zzzWeapons, getZzzWeaponName, getZzzWeaponEffect } from '@gachia/data/games/zzz/weapons';
 import { anantaWeapons, getAnantaWeaponName, getAnantaWeaponEffect } from '@gachia/data/games/ananta/weapons';
 import { guihuanWeapons, getGuihuanWeaponName, getGuihuanWeaponEffect } from '@gachia/data/games/guihuan/weapons';
+import { endfieldWeapons, getEndfieldWeaponName, getEndfieldWeaponEffect } from '@gachia/data/games/endfield/weapons';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -18,6 +19,7 @@ const WEAPON_DESC: Record<string, Record<string, string>> = {
   zzz: { zh: '绝区零全音擎图鉴，包含S级、A级音擎数据', en: 'Complete Zenless Zone Zero W-Engine list with S-Rank and A-Rank data', ja: 'ゼンレスゾーンゼロ全Wエンジン図鑑、S級、A級データ' },
   guihuan: { zh: '归环全武器图鉴，包含SSR、SR武器数据', en: 'Complete Guihuan weapon list with SSR and SR data', ja: '帰環全武器図鑑、SSR、SR武器データ' },
   ananta: { zh: '无限大全武器图鉴，包含SSR、SR武器数据', en: 'Complete Ananta weapon list with SSR and SR data', ja: 'アナンタ全武器図鑑、SSR、SR武器データ' },
+  endfield: { zh: '明日方舟：终末地全武器图鉴，包含六星、五星、四星武器数据', en: 'Complete Arknights: Endfield weapon list with 6-star, 5-star, and 4-star data', ja: 'アークナイツ：エンドフィールド全武器図鑑、6星、5星、4星武器データ' },
 };
 
 const NTE_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
@@ -116,6 +118,10 @@ export default async function WeaponsPage({
 
   if (gameId === 'guihuan') {
     return <><GuihuanWeaponsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+  }
+
+  if (gameId === 'endfield') {
+    return <><EndfieldWeaponsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   return (
@@ -554,6 +560,68 @@ function GuihuanWeaponsPage({ locale }: { locale: SupportedLocale }) {
                     <div className="mb-2 flex items-center gap-2">
                       <span className="text-base font-bold" style={{ color: rarity === 5 ? '#eab308' : '#a855f7' }}>{w.rarity}★</span>
                       <h3 className="font-semibold text-game-text">{getGuihuanWeaponName(w, locale)}</h3>
+                      <span className="ml-auto rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{typeLabel}</span>
+                    </div>
+                    <div className="mb-2 flex gap-3 text-sm text-game-text-muted">
+                      <span>ATK {w.baseAtk}</span>
+                      <span>{w.substatValue} {w.substatEn}</span>
+                    </div>
+                    {effect.description && <p className="text-xs leading-relaxed text-game-text-muted line-clamp-2">{effect.description}</p>}
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
+// --- Endfield Weapons ---
+
+const ENDFIELD_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
+  Sword: { zh: '剑', en: 'Sword', ja: '剣' },
+  Greatsword: { zh: '大剑', en: 'Greatsword', ja: '大剣' },
+  Spear: { zh: '长枪', en: 'Spear', ja: '槍' },
+  Shield: { zh: '盾', en: 'Shield', ja: '盾' },
+  Staff: { zh: '法杖', en: 'Staff', ja: '杖' },
+};
+
+const ENDFIELD_RARITY_COLORS: Record<number, string> = { 4: '#a855f7', 5: '#eab308', 6: '#ef4444' };
+
+function EndfieldWeaponsPage({ locale }: { locale: SupportedLocale }) {
+  const weapons = endfieldWeapons;
+  const sixStar = weapons.filter((w) => w.rarity === 6);
+  const fiveStar = weapons.filter((w) => w.rarity === 5);
+  const fourStar = weapons.filter((w) => w.rarity === 4);
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.endfield.theme.primary }}>
+        {CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? `共 ${weapons.length} 件武器` : locale === 'ja' ? `${weapons.length} 個の武器` : `${weapons.length} Weapons`}
+      </p>
+
+      {[sixStar, fiveStar, fourStar].map((list) => {
+        if (list.length === 0) return null;
+        const rarity = list[0]!.rarity;
+        return (
+          <section key={rarity} className="mb-8">
+            <h2 className="mb-4 text-lg font-semibold text-game-text">
+              {rarity}★ ({list.length})
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {list.map((w) => {
+                const effect = getEndfieldWeaponEffect(w, locale);
+                const typeLabel = ENDFIELD_WEAPON_TYPE_LABELS[w.weaponTypeEn]?.[locale] ?? w.weaponTypeEn;
+                return (
+                  <div key={w.id} className="rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary">
+                    <div className="mb-2 flex items-center gap-2">
+                      <span className="text-base font-bold" style={{ color: ENDFIELD_RARITY_COLORS[w.rarity] || '#888' }}>{w.rarity}★</span>
+                      <h3 className="font-semibold text-game-text">{getEndfieldWeaponName(w, locale)}</h3>
                       <span className="ml-auto rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{typeLabel}</span>
                     </div>
                     <div className="mb-2 flex gap-3 text-sm text-game-text-muted">

@@ -7,6 +7,7 @@ import { nteCharacters, getNteCharacterName, getNteCharacterImage } from '@gachi
 import { zzzCharacters, getZzzCharacterName, getZzzCharacterImage } from '@gachia/data/games/zzz/characters';
 import { anantaCharacters, getAnantaCharacterName, getAnantaCharacterImage } from '@gachia/data/games/ananta/characters';
 import { guihuanCharacters, getGuihuanCharacterName, getGuihuanCharacterImage } from '@gachia/data/games/guihuan/characters';
+import { endfieldCharacters, getEndfieldCharacterName, getEndfieldCharacterImage } from '@gachia/data/games/endfield/characters';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
@@ -20,6 +21,7 @@ const CHAR_DESC: Record<string, Record<string, string>> = {
   zzz: { zh: '绝区零全代理人图鉴，包含属性、专精数据', en: 'Complete Zenless Zone Zero agent roster with attributes and specialties', ja: 'ゼンレスゾーンゼロ全エージェント図鑑、属性、専門データ' },
   ananta: { zh: '无限大全异能者图鉴，包含SSR、SR角色数据、异能、配装推荐', en: 'Complete Ananta Esper roster with SSR, SR data, abilities, and build recommendations', ja: 'アナンタ全エスパー図鑑、SSR、SRキャラデータ' },
   guihuan: { zh: '归环全使灵图鉴，包含SSR、SR角色数据、元素、配装推荐', en: 'Complete Guihuan Spirit roster with SSR, SR data, elements, and build recommendations', ja: '帰環全精霊図鑑、SSR、SRキャラデータ' },
+  endfield: { zh: '明日方舟：终末地全干员图鉴，包含六星、五星、四星角色数据、源石技艺、配装推荐', en: 'Complete Arknights: Endfield operator roster with 6-Star, 5-Star, 4-Star data, Arts, and build recommendations', ja: 'エンドフィールド全オペレーター図鑑、★6、★5、★4キャラデータ' },
 };
 
 const NTE_ELEMENT_COLORS: Record<string, string> = {
@@ -153,6 +155,10 @@ export default async function CharactersPage({
 
   if (gameId === 'guihuan') {
     return <><GuihuanCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
+  }
+
+  if (gameId === 'endfield') {
+    return <><EndfieldCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
   }
 
   return (
@@ -732,6 +738,102 @@ function GuihuanCharacterCard({ char, locale, gameId }: { char: typeof guihuanCh
           {getGuihuanCharacterName(char, locale)}
         </h3>
         <p className="text-xs text-game-text-muted truncate">{char.roleEn}</p>
+      </div>
+    </Link>
+  );
+}
+
+// --- Endfield Characters ---
+
+const ENDFIELD_ELEMENT_COLORS: Record<string, string> = {
+  arts: '#8b5cf6', physical: '#9ca3af',
+};
+
+function EndfieldCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedLocale; gameId: GameId; gameConfig: typeof GAMES.endfield }) {
+  const chars = endfieldCharacters;
+  const sixStar = chars.filter((c) => c.rarity === 6);
+  const fiveStar = chars.filter((c) => c.rarity === 5);
+  const fourStar = chars.filter((c) => c.rarity === 4);
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
+      </p>
+
+      {sixStar.length > 0 && (
+        <section className="mb-8">
+          <h2 className="mb-4 text-lg font-semibold text-game-text">
+            6★ ({sixStar.length})
+          </h2>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+            {sixStar.map((char) => (
+              <EndfieldCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {fiveStar.length > 0 && (
+        <section className="mb-8">
+          <h2 className="mb-4 text-lg font-semibold text-game-text">
+            5★ ({fiveStar.length})
+          </h2>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+            {fiveStar.map((char) => (
+              <EndfieldCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {fourStar.length > 0 && (
+        <section className="mb-8">
+          <h2 className="mb-4 text-lg font-semibold text-game-text">
+            4★ ({fourStar.length})
+          </h2>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+            {fourStar.map((char) => (
+              <EndfieldCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+
+function EndfieldCharacterCard({ char, locale, gameId }: { char: typeof endfieldCharacters[number]; locale: SupportedLocale; gameId: GameId }) {
+  const elementColor = ENDFIELD_ELEMENT_COLORS[char.element] || '#888';
+  const imageUrl = getEndfieldCharacterImage(char);
+
+  return (
+    <Link
+      href={`/${gameId}/characters/${char.id}` as '/'}
+      className="group flex flex-col overflow-hidden rounded-lg border border-game-border bg-game-surface transition-all hover:border-game-primary hover:shadow-lg"
+    >
+      <div className="relative aspect-square overflow-hidden bg-game-surface-alt">
+        <CharacterAvatar
+          src={imageUrl}
+          alt={getEndfieldCharacterName(char, locale)}
+          element={char.element}
+          className="h-full w-full object-cover object-top transition-transform group-hover:scale-105"
+        />
+        <span className="absolute bottom-1.5 left-1.5 rounded px-1.5 py-0.5 text-xs font-medium text-white" style={{ backgroundColor: elementColor }}>
+          {char.element.charAt(0).toUpperCase() + char.element.slice(1)}
+        </span>
+        <span className="absolute top-1.5 right-1.5 rounded bg-game-bg/80 px-1.5 py-0.5 text-xs font-bold" style={{ color: '#eab308' }}>
+          {char.rarity}★
+        </span>
+      </div>
+      <div className="p-2.5">
+        <h3 className="text-sm font-semibold text-game-text group-hover:text-game-primary truncate">
+          {getEndfieldCharacterName(char, locale)}
+        </h3>
+        <p className="text-xs text-game-text-muted truncate">{char.professionEn}</p>
       </div>
     </Link>
   );

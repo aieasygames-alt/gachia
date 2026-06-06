@@ -79,6 +79,18 @@ import {
   ANANTA_GUIDE_CATEGORIES,
 } from '@gachia/data/games/ananta/guides';
 import type { AnantaGuide, AnantaGuideFaq } from '@gachia/data/games/ananta/guides';
+import {
+  endfieldGuides,
+  getEndfieldGuideById,
+  getEndfieldGuideTitle,
+  getEndfieldGuideContent,
+  getEndfieldGuideSummary,
+  getEndfieldGuideCategory,
+  getEndfieldGuideFaqQuestion,
+  getEndfieldGuideFaqAnswer,
+  ENDFIELD_GUIDE_CATEGORIES,
+} from '@gachia/data/games/endfield/guides';
+import type { EndfieldGuide, EndfieldGuideFaq } from '@gachia/data/games/endfield/guides';
 import { Link } from '@/lib/i18n/navigation';
 import { ClientMarkdown } from '@/components/wiki/client-markdown';
 import { buildGuideJsonLd } from '@/lib/jsonld';
@@ -118,6 +130,11 @@ export async function generateStaticParams() {
     ...anantaGuides.map((g) => ({
       lang,
       game: 'ananta',
+      slug: g.id,
+    })),
+    ...endfieldGuides.map((g) => ({
+      lang,
+      game: 'endfield',
       slug: g.id,
     })),
   ]);
@@ -224,6 +241,14 @@ export async function generateMetadata({
     return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
 
+  if (gameId === 'endfield') {
+    const guide = getEndfieldGuideById(slug);
+    if (!guide) return {};
+    const gameName = GAMES.endfield.name[locale];
+    const meta = buildGuideMeta(getEndfieldGuideTitle(guide, locale), getEndfieldGuideSummary(guide, locale), gameName);
+    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+  }
+
   return {};
 }
 
@@ -262,6 +287,10 @@ export default async function GuideDetailPage({
 
   if (gameId === 'ananta') {
     return <AnantaGuideDetail locale={locale} slug={slug} />;
+  }
+
+  if (gameId === 'endfield') {
+    return <EndfieldGuideDetail locale={locale} slug={slug} />;
   }
 
   notFound();
@@ -907,6 +936,93 @@ function AnantaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: st
   );
 }
 
+/* ---------- Endfield Guide Detail ---------- */
+
+function EndfieldGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: string }) {
+  const guide: EndfieldGuide | undefined = getEndfieldGuideById(slug);
+  if (!guide) notFound();
+
+  const gameConfig = GAMES.endfield;
+  const content = getEndfieldGuideContent(guide, locale);
+  const category = getEndfieldGuideCategory(guide, locale);
+
+  return (
+    <div>
+      <div className="mb-4 flex items-center gap-2 text-sm text-game-text-muted">
+        <Link href="/endfield/guides" className="transition-colors hover:text-game-primary">
+          {CATEGORY_LABELS.guides?.[locale] ?? 'Guides'}
+        </Link>
+        <span>/</span>
+        {ENDFIELD_GUIDE_CATEGORIES[guide.category]?.[locale] && (
+          <>
+            <span>{ENDFIELD_GUIDE_CATEGORIES[guide.category]?.[locale]}</span>
+            <span>/</span>
+          </>
+        )}
+        <span className="text-game-text">{getEndfieldGuideTitle(guide, locale)}</span>
+      </div>
+
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {getEndfieldGuideTitle(guide, locale)}
+      </h1>
+
+      <div className="mb-6 flex flex-wrap items-center gap-3 text-sm text-game-text-muted">
+        <span className="rounded bg-game-surface-alt px-2 py-0.5 text-game-primary">{category}</span>
+        {guide.tags.map((tag) => (
+          <span key={tag} className="rounded bg-game-surface-alt px-2 py-0.5">{tag}</span>
+        ))}
+      </div>
+
+      <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">
+        <ClientMarkdown content={content} />
+      </div>
+
+      {guide.faq && guide.faq.length > 0 && (
+        <section className="mb-8">
+          <h2 className="mb-4 text-lg font-semibold text-game-primary">
+            {locale === 'zh' ? '常见问题' : locale === 'ja' ? 'よくある質問' : 'FAQ'}
+          </h2>
+          <div className="space-y-3">
+            {guide.faq.map((faqItem: EndfieldGuideFaq, i: number) => (
+              <details key={i} className="group rounded-lg border border-game-border bg-game-surface">
+                <summary className="cursor-pointer px-4 py-3 font-medium text-game-text transition-colors group-hover:text-game-primary">
+                  {getEndfieldGuideFaqQuestion(faqItem, locale)}
+                </summary>
+                <div className="px-4 pb-3 text-sm text-game-text-muted">
+                  {getEndfieldGuideFaqAnswer(faqItem, locale)}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <RelatedGuidesSection gameId="endfield" currentSlug={slug} locale={locale} />
+
+      <div className="border-t border-game-border pt-4">
+        <Link href="/endfield/guides" className="text-sm text-game-primary transition-colors hover:text-game-accent">
+          {locale === 'zh' ? '← 返回攻略列表' : locale === 'ja' ? '← ガイド一覧に戻る' : '← Back to Guides'}
+        </Link>
+      </div>
+
+      {buildGuideJsonLd({
+        gameId: 'endfield',
+        locale,
+        title: getEndfieldGuideTitle(guide, locale),
+        summary: getEndfieldGuideSummary(guide, locale),
+        slug,
+        faq: guide.faq?.map((f) => ({ question: getEndfieldGuideFaqQuestion(f, locale), answer: getEndfieldGuideFaqAnswer(f, locale) })),
+      }).map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+    </div>
+  );
+}
+
 // --- Shared Related Guides Section ---
 
 type GuideLike = { id: string; category: string; tags: string[] };
@@ -962,6 +1078,7 @@ function getGuidesForGame(gameId: string): GuideLike[] {
     case 'zzz': return zzzGuides;
     case 'guihuan': return guihuanGuides;
     case 'ananta': return anantaGuides;
+    case 'endfield': return endfieldGuides;
     default: return [];
   }
 }
@@ -975,6 +1092,7 @@ function getGuideTitleForGame(gameId: string, guide: GuideLike, locale: Supporte
     case 'zzz': return getZzzGuideTitle(guide as unknown as Parameters<typeof getZzzGuideTitle>[0], locale);
     case 'guihuan': return getGuihuanGuideTitle(guide as unknown as Parameters<typeof getGuihuanGuideTitle>[0], locale);
     case 'ananta': return getAnantaGuideTitle(guide as unknown as Parameters<typeof getAnantaGuideTitle>[0], locale);
+    case 'endfield': return getEndfieldGuideTitle(guide as unknown as Parameters<typeof getEndfieldGuideTitle>[0], locale);
     default: return guide.id;
   }
 }
@@ -988,6 +1106,7 @@ function getGuideSummaryForGame(gameId: string, guide: GuideLike, locale: Suppor
     case 'zzz': return getZzzGuideSummary(guide as unknown as Parameters<typeof getZzzGuideSummary>[0], locale);
     case 'guihuan': return getGuihuanGuideSummary(guide as unknown as Parameters<typeof getGuihuanGuideSummary>[0], locale);
     case 'ananta': return getAnantaGuideSummary(guide as unknown as Parameters<typeof getAnantaGuideSummary>[0], locale);
+    case 'endfield': return getEndfieldGuideSummary(guide as unknown as Parameters<typeof getEndfieldGuideSummary>[0], locale);
     default: return '';
   }
 }

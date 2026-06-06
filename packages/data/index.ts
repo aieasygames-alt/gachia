@@ -590,6 +590,66 @@ export type {
 
 export type { AnantaGuide, AnantaGuideFaq } from './games/ananta/guides';
 
+// ============================================================
+// 明日方舟：终末地 (Endfield) exports
+// ============================================================
+
+// Endfield character exports
+export {
+  endfieldCharacters,
+  getEndfieldCharacterById,
+  getEndfieldCharacterName,
+  getEndfieldCharacterDescription,
+  getEndfieldCharacterImage,
+  getEndfieldCharacterTierReason,
+} from './games/endfield/characters';
+
+// Endfield weapon exports
+export {
+  endfieldWeapons,
+  getEndfieldWeaponById,
+  getEndfieldWeaponName,
+  getEndfieldWeaponEffect,
+  getEndfieldWeaponSource,
+} from './games/endfield/weapons';
+
+// Endfield material exports
+export {
+  endfieldMaterials,
+  getEndfieldMaterialName,
+  getEndfieldMaterialById,
+} from './games/endfield/items';
+
+// Endfield guide exports
+export {
+  endfieldGuides,
+  getEndfieldGuideTitle,
+  getEndfieldGuideContent,
+  getEndfieldGuideSummary,
+  getEndfieldGuideCategory,
+  getEndfieldGuideCategories,
+  getEndfieldGuidesByCategory,
+  getEndfieldGuideById,
+  getEndfieldGuideSlugs,
+  getEndfieldGuideFaqQuestion,
+  getEndfieldGuideFaqAnswer,
+  ENDFIELD_GUIDE_CATEGORIES,
+} from './games/endfield/guides';
+
+export type {
+  EndfieldCharacter,
+  EndfieldWeapon,
+  EndfieldMaterial,
+  EndfieldSkillSet,
+  EndfieldSkillBase,
+  EndfieldActiveSkill,
+  EndfieldTeamComp,
+  EndfieldFaq,
+  EndfieldRecommendedBuild,
+} from './games/endfield/types';
+
+export type { EndfieldGuide, EndfieldGuideFaq } from './games/endfield/guides';
+
 // --- Material-Character Reverse Lookup ---
 export { getCharactersNeedingMaterial, type MaterialCharacter } from './material-characters';
 
@@ -633,6 +693,10 @@ export async function getGameData(gameId: GameId): Promise<GameData> {
     }
     case 'ananta': {
       const { characters, weapons, items, tierLists } = await import('./games/ananta');
+      return { characters, weapons, items, tierLists };
+    }
+    case 'endfield': {
+      const { characters, weapons, items, tierLists } = await import('./games/endfield');
       return { characters, weapons, items, tierLists };
     }
   }

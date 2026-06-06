@@ -16,6 +16,8 @@ import { guihuanCharacters, getGuihuanCharacterName, getGuihuanCharacterImage } 
 import { guihuanGuides, getGuihuanGuideTitle, getGuihuanGuideSummary } from '@gachia/data/games/guihuan/guides';
 import { anantaCharacters, getAnantaCharacterName, getAnantaCharacterImage } from '@gachia/data/games/ananta/characters';
 import { anantaGuides, getAnantaGuideTitle, getAnantaGuideSummary } from '@gachia/data/games/ananta/guides';
+import { endfieldCharacters, getEndfieldCharacterName, getEndfieldCharacterImage } from '@gachia/data/games/endfield/characters';
+import { endfieldGuides, getEndfieldGuideTitle, getEndfieldGuideSummary } from '@gachia/data/games/endfield/guides';
 import Image from 'next/image';
 import zhMessages from '@/messages/zh.json';
 import enMessages from '@/messages/en.json';
@@ -68,6 +70,11 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     en: 'Ananta character builds, weapon database, and guides. A no-gacha open-world game by NetEase where all characters are unlocked through gameplay.',
     ja: '無限大キャラビルド、武器データ、攻略百科。NetEase開発のガチャなしオープンワールドゲーム、全キャラがゲーム進行で解放。',
   },
+  endfield: {
+    zh: '《明日方舟：终末地》是鹰角网络开发的开放世界动作RPG，以明日方舟IP为背景，玩家扮演博士在塔拉二号星球上建立据点、指挥干员进行即时战斗和探索。',
+    en: 'Arknights: Endfield is an open-world action RPG by Hypergryph, set in the Arknights universe. Players take on the role of the Doctor, establishing bases and commanding operators in real-time combat on the planet Talos II.',
+    ja: 'アークナイツ：エンドフィールドはハイパーグリフ開発のオープンワールドアクションRPG。アークナイツIPを背景に、プレイヤーはドクターとしてタロスII号星で拠点を建設し、オペレーターを指揮してリアルタイム戦闘と探索を行います。',
+  },
 };
 
 // SEO-rich about paragraphs per game per locale
@@ -107,6 +114,11 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
     en: 'Ananta (formerly Project Mugen) is an open-world action game by Naked Rain / NetEase with a no-gacha model — all characters are unlocked through gameplay for free. Gachia offers a character database, weapon encyclopedia, build recommendations, and strategy guides for all announced characters.',
     ja: '無限大（Ananta、旧称Project Mugen）はNaked Rain / NetEaseのオープンワールドアクションゲーム。ガチャなしモデルで全キャラがゲーム進行で無料解放されます。Gachiaではキャラ図鑑、武器データベース、ビルドおすすめ、攻略百科を提供。',
   },
+  endfield: {
+    zh: '《明日方舟：终末地》（Arknights: Endfield）是鹰角网络（Hypergryph）开发的开放世界动作 RPG，以明日方舟 IP 为背景，玩家扮演博士在塔拉二号星球上建立据点、指挥干员进行即时战斗和探索。Gachia 提供角色图鉴、武器数据库、配装推荐与攻略百科，覆盖全部可玩角色。',
+    en: 'Arknights: Endfield is an open-world action RPG by Hypergryph set in the Arknights universe. Players take on the role of the Doctor, establishing bases and commanding operators in real-time combat on the planet Talos II. Gachia offers a character database, weapon encyclopedia, build recommendations, and strategy guides for all playable characters.',
+    ja: 'アークナイツ：エンドフィールドはハイパーグリフ開発のオープンワールドアクションRPG。アークナイツの世界観を背景に、プレイヤーはドクターとしてタロスII号星で拠点を建設し、オペレーターを指揮してリアルタイム戦闘と探索を行います。Gachiaではキャラ図鑑、武器データベース、ビルドおすすめ、攻略百科を提供。',
+  },
 };
 
 // --- Featured character IDs per game ---
@@ -118,6 +130,7 @@ const FEATURED_CHARS: Record<string, string[]> = {
   zzz: ['ellen-joe', 'zhu-yuan', 'miyabi', 'burnice-white', 'caesar-king'],
   guihuan: [],
   ananta: [],
+  endfield: ['surtr', 'angelina', 'saria'],
 };
 
 // --- Route icons ---
@@ -163,6 +176,9 @@ function getCharInfos(gameId: string, locale: SupportedLocale): CharInfo[] {
     case 'ananta':
       for (const id of ids) { const c = anantaCharacters.find(x => x.id === id); if (c) results.push({ id: c.id, name: getAnantaCharacterName(c, locale), image: toAbs(getAnantaCharacterImage(c)) }); }
       break;
+    case 'endfield':
+      for (const id of ids) { const c = endfieldCharacters.find(x => x.id === id); if (c) results.push({ id: c.id, name: getEndfieldCharacterName(c, locale), image: toAbs(getEndfieldCharacterImage(c)) }); }
+      break;
   }
   return results;
 }
@@ -186,6 +202,8 @@ function getGuideInfos(gameId: string, locale: SupportedLocale): GuideInfo[] {
       return guihuanGuides.slice(0, 3).map(g => ({ id: g.id, title: getGuihuanGuideTitle(g, locale), summary: getGuihuanGuideSummary(g, locale) }));
     case 'ananta':
       return anantaGuides.slice(0, 3).map(g => ({ id: g.id, title: getAnantaGuideTitle(g, locale), summary: getAnantaGuideSummary(g, locale) }));
+    case 'endfield':
+      return endfieldGuides.slice(0, 3).map(g => ({ id: g.id, title: getEndfieldGuideTitle(g, locale), summary: getEndfieldGuideSummary(g, locale) }));
     default:
       return [];
   }
