@@ -1,6 +1,11 @@
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { genshinArtifactSets, getArtifactSetName, getArtifactSetDesc2pc, getArtifactSetDesc4pc, getArtifactSetById, getGenshinCharacterName, getGenshinCharacterById, starrailRelicSets, getStarRailRelicSetName, getStarRailRelicSetDesc2pc, getStarRailRelicSetDesc4pc, getStarRailCavernRelics as getCavernRelics, getStarRailPlanarOrnaments as getPlanarOrnaments, getStarRailCharacterById, getStarRailCharacterName, wuwaEchoSets, getWuWaEchoSetName, getWuWaEchoSetDesc2pc, getWuWaEchoSetDesc5pc, getWuWaCharacterById, getWuWaCharacterName } from '@gachia/data';
+import { artifactSets as genshinArtifactSets, getArtifactSetName, getArtifactSetDesc2pc, getArtifactSetDesc4pc, getArtifactSetById } from '@gachia/data/games/genshin/artifacts';
+import { getGenshinCharacterById, getGenshinCharacterName } from '@gachia/data/games/genshin/characters';
+import { relicSets as starrailRelicSets, getRelicSetName as getStarRailRelicSetName, getRelicSetDesc2pc as getStarRailRelicSetDesc2pc, getRelicSetDesc4pc as getStarRailRelicSetDesc4pc, getCavernRelics, getPlanarOrnaments } from '@gachia/data/games/starrail/relics';
+import { getStarRailCharacterById, getStarRailCharacterName } from '@gachia/data/games/starrail/characters';
+import { echoSets as wuwaEchoSets, getEchoSetName as getWuWaEchoSetName, getEchoSetDesc2pc as getWuWaEchoSetDesc2pc, getEchoSetDesc5pc as getWuWaEchoSetDesc5pc } from '@gachia/data/games/wuwa/echoes';
+import { getWuWaCharacterById, getWuWaCharacterName } from '@gachia/data/games/wuwa/characters';
 import { Link } from '@/lib/i18n/navigation';
 
 const RARITY_COLORS: Record<number, string> = { 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };

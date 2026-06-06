@@ -1,6 +1,12 @@
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { nteMaterials, getNteMaterialName, genshinMaterials, getGenshinMaterialName, starrailMaterials, getStarRailMaterialName, wuwaMaterials, getWuWaMaterialName, zzzMaterials, getZzzMaterialName, anantaMaterials, getAnantaMaterialName, guihuanMaterials, getGuihuanMaterialName } from '@gachia/data';
+import { genshinMaterials, getGenshinMaterialName } from '@gachia/data/games/genshin/items';
+import { starrailMaterials, getStarRailMaterialName } from '@gachia/data/games/starrail/items';
+import { wuwaMaterials, getWuWaMaterialName } from '@gachia/data/games/wuwa/items';
+import { nteMaterials, getNteMaterialName } from '@gachia/data/games/nte/items';
+import { zzzMaterials, getZzzMaterialName } from '@gachia/data/games/zzz/items';
+import { anantaMaterials, getAnantaMaterialName } from '@gachia/data/games/ananta/items';
+import { guihuanMaterials, getGuihuanMaterialName } from '@gachia/data/games/guihuan/items';
 import { Link } from '@/lib/i18n/navigation';
 
 const BASE_URL = 'https://gachia.com';

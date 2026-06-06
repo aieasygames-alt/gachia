@@ -10,8 +10,8 @@ import {
   useMap,
 } from 'react-leaflet';
 import MarkerClusterGroup from 'react-leaflet-cluster';
-import type { GameMapData, SubMapConfig } from '@gachia/data';
-import { GENSHIN_SUB_MAPS } from '@gachia/data';
+import type { GameMapData, SubMapConfig } from '@gachia/data/games/genshin/map-data';
+import { GENSHIN_SUB_MAPS } from '@gachia/data/games/genshin/map-data';
 import type { SupportedLocale } from '@gachia/core';
 import { MapSidebar } from './MapSidebar';
 import { useSession } from '@/lib/auth-client';

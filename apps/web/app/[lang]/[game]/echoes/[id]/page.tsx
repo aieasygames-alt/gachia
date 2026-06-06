@@ -2,10 +2,15 @@ import { GAMES, LOCALES } from '@gachia/core';
 import type { SupportedLocale } from '@gachia/core';
 import { notFound } from 'next/navigation';
 import {
-  wuwaEchoSets, getWuWaEchoSetById, getWuWaEchoSetName,
-  getWuWaEchoSetDesc2pc, getWuWaEchoSetDesc5pc,
+  echoSets as wuwaEchoSets,
+  getEchoSetById as getWuWaEchoSetById,
+  getEchoSetName as getWuWaEchoSetName,
+  getEchoSetDesc2pc as getWuWaEchoSetDesc2pc,
+  getEchoSetDesc5pc as getWuWaEchoSetDesc5pc,
+} from '@gachia/data/games/wuwa/echoes';
+import {
   getWuWaCharacterById, getWuWaCharacterName,
-} from '@gachia/data';
+} from '@gachia/data/games/wuwa/characters';
 import { Link } from '@/lib/i18n/navigation';
 
 export async function generateStaticParams() {

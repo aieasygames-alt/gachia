@@ -1,6 +1,6 @@
 'use client';
 
-import type { SubMapConfig } from '@gachia/data';
+import type { SubMapConfig } from '@gachia/data/games/genshin/map-data';
 import type { SupportedLocale } from '@gachia/core';
 
 function getSubMapName(subMap: SubMapConfig, locale: SupportedLocale): string {

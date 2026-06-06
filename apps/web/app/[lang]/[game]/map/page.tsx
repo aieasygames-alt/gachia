@@ -2,20 +2,26 @@ import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import type { Metadata } from 'next';
 import {
-  genshinRegions,
-  getGenshinRegionName,
-  getGenshinRegionDescription,
-  wuwaRegions,
-  getWuWaRegionName,
-  getWuWaRegionDescription,
-  starrailRegions,
-  getStarRailRegionName,
-  getStarRailRegionDescription,
-  nteRegions,
-  getNteRegionName,
-  getNteRegionDescription,
-  genshinMapData,
-} from '@gachia/data';
+  regions as genshinRegions,
+  getRegionName as getGenshinRegionName,
+  getRegionDescription as getGenshinRegionDescription,
+} from '@gachia/data/games/genshin/regions';
+import {
+  regions as wuwaRegions,
+  getRegionName as getWuWaRegionName,
+  getRegionDescription as getWuWaRegionDescription,
+} from '@gachia/data/games/wuwa/regions';
+import {
+  regions as starrailRegions,
+  getRegionName as getStarRailRegionName,
+  getRegionDescription as getStarRailRegionDescription,
+} from '@gachia/data/games/starrail/regions';
+import {
+  regions as nteRegions,
+  getRegionName as getNteRegionName,
+  getRegionDescription as getNteRegionDescription,
+} from '@gachia/data/games/nte/regions';
+import { genshinMapData } from '@gachia/data/games/genshin/map-data';
 import type { StarRailRegion } from '@gachia/data/games/starrail/types';
 import type { NteRegion } from '@gachia/data/games/nte/types';
 import { MapLoader } from './_components/MapLoader';

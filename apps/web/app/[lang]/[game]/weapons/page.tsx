@@ -1,6 +1,12 @@
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { nteWeapons, getNteWeaponName, getNteWeaponEffect, genshinWeapons, getGenshinWeaponName, getGenshinWeaponEffect, starrailLightCones, getStarRailLightConeName, getStarRailLightConeEffect, wuwaWeapons, getWuWaWeaponName, getWuWaWeaponEffect, zzzWeapons, getZzzWeaponName, getZzzWeaponEffect, anantaWeapons, getAnantaWeaponName, getAnantaWeaponEffect, guihuanWeapons, getGuihuanWeaponName, getGuihuanWeaponEffect } from '@gachia/data';
+import { genshinWeapons, getGenshinWeaponName, getGenshinWeaponEffect } from '@gachia/data/games/genshin/weapons';
+import { starrailLightCones, getStarRailLightConeName, getStarRailLightConeEffect } from '@gachia/data/games/starrail/weapons';
+import { wuwaWeapons, getWuWaWeaponName, getWuWaWeaponEffect } from '@gachia/data/games/wuwa/weapons';
+import { nteWeapons, getNteWeaponName, getNteWeaponEffect } from '@gachia/data/games/nte/weapons';
+import { zzzWeapons, getZzzWeaponName, getZzzWeaponEffect } from '@gachia/data/games/zzz/weapons';
+import { anantaWeapons, getAnantaWeaponName, getAnantaWeaponEffect } from '@gachia/data/games/ananta/weapons';
+import { guihuanWeapons, getGuihuanWeaponName, getGuihuanWeaponEffect } from '@gachia/data/games/guihuan/weapons';
 
 const BASE_URL = 'https://gachia.com';
 

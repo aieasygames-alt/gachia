@@ -1,7 +1,7 @@
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { nteAnomalies, getAnomalyName } from '@gachia/data';
-import type { NteAnomaly } from '@gachia/data';
+import { anomalies as nteAnomalies, getAnomalyName } from '@gachia/data/games/nte/anomalies';
+import type { NteAnomaly } from '@gachia/data/games/nte/anomalies';
 
 export async function generateMetadata({
   params,

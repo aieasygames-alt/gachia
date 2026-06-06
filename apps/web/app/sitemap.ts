@@ -1,13 +1,46 @@
 import { GAMES, LOCALES } from '@gachia/core';
-import {
-  nteCharacters, nteGuides, nteWeapons, nteDiskSets, nteMaterials,
-  genshinCharacters, genshinGuides, genshinArtifactSets, genshinWeapons, genshinMaterials,
-  wuwaCharacters, wuwaGuides, wuwaWeapons, wuwaEchoSets, wuwaMaterials,
-  starrailCharacters, starrailGuides, starrailRelicSets, starrailLightCones, starrailMaterials,
-  zzzCharacters, zzzWeapons, zzzDriveDiscs, zzzMaterials, zzzGuides,
-  guihuanCharacters, guihuanWeapons, guihuanMaterials, guihuanGuides,
-  anantaCharacters, anantaWeapons, anantaMaterials, anantaGuides,
-} from '@gachia/data';
+// Characters
+import { genshinCharacters } from '@gachia/data/games/genshin/characters';
+import { starrailCharacters } from '@gachia/data/games/starrail/characters';
+import { wuwaCharacters } from '@gachia/data/games/wuwa/characters';
+import { nteCharacters } from '@gachia/data/games/nte/characters';
+import { zzzCharacters } from '@gachia/data/games/zzz/characters';
+import { guihuanCharacters } from '@gachia/data/games/guihuan/characters';
+import { anantaCharacters } from '@gachia/data/games/ananta/characters';
+
+// Weapons
+import { genshinWeapons } from '@gachia/data/games/genshin/weapons';
+import { starrailLightCones } from '@gachia/data/games/starrail/weapons';
+import { wuwaWeapons } from '@gachia/data/games/wuwa/weapons';
+import { nteWeapons } from '@gachia/data/games/nte/weapons';
+import { zzzWeapons } from '@gachia/data/games/zzz/weapons';
+import { guihuanWeapons } from '@gachia/data/games/guihuan/weapons';
+import { anantaWeapons } from '@gachia/data/games/ananta/weapons';
+
+// Guides
+import { genshinGuides } from '@gachia/data/games/genshin/guides';
+import { starrailGuides } from '@gachia/data/games/starrail/guides';
+import { wuwaGuides } from '@gachia/data/games/wuwa/guides';
+import { guides as nteGuides } from '@gachia/data/games/nte/guides';
+import { zzzGuides } from '@gachia/data/games/zzz/guides';
+import { guihuanGuides } from '@gachia/data/games/guihuan/guides';
+import { anantaGuides } from '@gachia/data/games/ananta/guides';
+
+// Materials / Items
+import { genshinMaterials } from '@gachia/data/games/genshin/items';
+import { starrailMaterials } from '@gachia/data/games/starrail/items';
+import { wuwaMaterials } from '@gachia/data/games/wuwa/items';
+import { nteMaterials } from '@gachia/data/games/nte/items';
+import { zzzMaterials } from '@gachia/data/games/zzz/items';
+import { guihuanMaterials } from '@gachia/data/games/guihuan/items';
+import { anantaMaterials } from '@gachia/data/games/ananta/items';
+
+// Game-specific gear
+import { artifactSets as genshinArtifactSets } from '@gachia/data/games/genshin/artifacts';
+import { relicSets as starrailRelicSets } from '@gachia/data/games/starrail/relics';
+import { echoSets as wuwaEchoSets } from '@gachia/data/games/wuwa/echoes';
+import { diskSets as nteDiskSets } from '@gachia/data/games/nte/extras';
+import { zzzDriveDiscs } from '@gachia/data/games/zzz/drive-discs';
 import type { MetadataRoute } from 'next';
 
 const BASE_URL = 'https://gachia.com';

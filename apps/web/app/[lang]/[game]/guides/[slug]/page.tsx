@@ -10,34 +10,42 @@ import {
   getGuideFaqQuestion as getNteGuideFaqQuestion,
   getGuideFaqAnswer as getNteGuideFaqAnswer,
   NTE_GUIDE_CATEGORIES,
-  nteGuides,
-  getGenshinGuideById,
-  getGenshinGuideTitle,
-  getGenshinGuideContent,
-  getGenshinGuideSummary,
-  getGenshinGuideCategory,
-  getGenshinGuideFaqQuestion,
-  getGenshinGuideFaqAnswer,
-  GENSHIN_GUIDE_CATEGORIES,
+  guides as nteGuides,
+} from '@gachia/data/games/nte/guides';
+import {
   genshinGuides,
+  getGuideById as getGenshinGuideById,
+  getGuideTitle as getGenshinGuideTitle,
+  getGuideContent as getGenshinGuideContent,
+  getGuideSummary as getGenshinGuideSummary,
+  getGuideCategory as getGenshinGuideCategory,
+  getGuideFaqQuestion as getGenshinGuideFaqQuestion,
+  getGuideFaqAnswer as getGenshinGuideFaqAnswer,
+  GENSHIN_GUIDE_CATEGORIES,
+} from '@gachia/data/games/genshin/guides';
+import {
   starrailGuides,
-  getStarRailGuideById,
-  getStarRailGuideTitle,
-  getStarRailGuideContent,
-  getStarRailGuideSummary,
-  getStarRailGuideCategory,
-  getStarRailGuideFaqQuestion,
-  getStarRailGuideFaqAnswer,
+  getGuideById as getStarRailGuideById,
+  getGuideTitle as getStarRailGuideTitle,
+  getGuideContent as getStarRailGuideContent,
+  getGuideSummary as getStarRailGuideSummary,
+  getGuideCategory as getStarRailGuideCategory,
+  getGuideFaqQuestion as getStarRailGuideFaqQuestion,
+  getGuideFaqAnswer as getStarRailGuideFaqAnswer,
   STARRAIL_GUIDE_CATEGORIES,
+} from '@gachia/data/games/starrail/guides';
+import {
   wuwaGuides,
-  getWuWaGuideById,
-  getWuWaGuideTitle,
-  getWuWaGuideContent,
-  getWuWaGuideSummary,
-  getWuWaGuideCategory,
-  getWuWaGuideFaqQuestion,
-  getWuWaGuideFaqAnswer,
+  getGuideById as getWuWaGuideById,
+  getGuideTitle as getWuWaGuideTitle,
+  getGuideContent as getWuWaGuideContent,
+  getGuideSummary as getWuWaGuideSummary,
+  getGuideCategory as getWuWaGuideCategory,
+  getGuideFaqQuestion as getWuWaGuideFaqQuestion,
+  getGuideFaqAnswer as getWuWaGuideFaqAnswer,
   WUWA_GUIDE_CATEGORIES,
+} from '@gachia/data/games/wuwa/guides';
+import {
   zzzGuides,
   getZzzGuideById,
   getZzzGuideTitle,
@@ -47,6 +55,8 @@ import {
   getZzzGuideFaqQuestion,
   getZzzGuideFaqAnswer,
   ZZZ_GUIDE_CATEGORIES,
+} from '@gachia/data/games/zzz/guides';
+import {
   guihuanGuides,
   getGuihuanGuideById,
   getGuihuanGuideTitle,
@@ -56,6 +66,8 @@ import {
   getGuihuanGuideFaqQuestion,
   getGuihuanGuideFaqAnswer,
   GUIHUAN_GUIDE_CATEGORIES,
+} from '@gachia/data/games/guihuan/guides';
+import {
   anantaGuides,
   getAnantaGuideById,
   getAnantaGuideTitle,
@@ -65,8 +77,8 @@ import {
   getAnantaGuideFaqQuestion,
   getAnantaGuideFaqAnswer,
   ANANTA_GUIDE_CATEGORIES,
-} from '@gachia/data';
-import type { AnantaGuide, AnantaGuideFaq } from '@gachia/data';
+} from '@gachia/data/games/ananta/guides';
+import type { AnantaGuide, AnantaGuideFaq } from '@gachia/data/games/ananta/guides';
 import { Link } from '@/lib/i18n/navigation';
 import { ClientMarkdown } from '@/components/wiki/client-markdown';
 import { buildGuideJsonLd } from '@/lib/jsonld';

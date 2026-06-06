@@ -1,17 +1,10 @@
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import {
-  getActiveRedeemCodes as getNteActiveRedeemCodes,
-  getRedeemCodeReward as getNteRedeemCodeReward,
-  getGenshinActiveRedeemCodes,
-  getGenshinRedeemCodeReward,
-  getStarRailActiveRedeemCodes,
-  getStarRailRedeemCodeReward,
-  getZzzActiveRedeemCodes,
-  getZzzRedeemCodeReward,
-  getWuWaActiveRedeemCodes,
-  getWuWaRedeemCodeReward,
-} from '@gachia/data';
+import { getActiveRedeemCodes as getGenshinActiveRedeemCodes, getRedeemCodeReward as getGenshinRedeemCodeReward } from '@gachia/data/games/genshin/redeem-codes';
+import { getActiveRedeemCodes as getStarRailActiveRedeemCodes, getRedeemCodeReward as getStarRailRedeemCodeReward } from '@gachia/data/games/starrail/redeem-codes';
+import { getActiveRedeemCodes as getWuWaActiveRedeemCodes, getRedeemCodeReward as getWuWaRedeemCodeReward } from '@gachia/data/games/wuwa/redeem-codes';
+import { getActiveRedeemCodes as getZzzActiveRedeemCodes, getRedeemCodeReward as getZzzRedeemCodeReward } from '@gachia/data/games/zzz/redeem-codes';
+import { getActiveRedeemCodes as getNteActiveRedeemCodes, getRedeemCodeReward as getNteRedeemCodeReward } from '@gachia/data/games/nte/redeem-codes';
 
 interface CodeItem {
   code: string;

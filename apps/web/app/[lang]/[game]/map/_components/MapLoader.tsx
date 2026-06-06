@@ -1,7 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import type { GameMapData } from '@gachia/data';
+import type { GameMapData } from '@gachia/data/games/genshin/map-data';
 import type { SupportedLocale } from '@gachia/core';
 
 // Dynamic import with ssr: false — must be in a Client Component

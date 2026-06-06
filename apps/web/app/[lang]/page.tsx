@@ -4,29 +4,13 @@ import { GAMES, GAME_IDS, CATEGORY_LABELS } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
 import { buildHomepageJsonLd } from '@/lib/jsonld';
 import { IMAGE_BASE } from '@gachia/data/image-base';
-import {
-  genshinCharacters,
-  starrailCharacters,
-  wuwaCharacters,
-  nteCharacters,
-  zzzCharacters,
-  guihuanCharacters,
-  anantaCharacters,
-  getGenshinCharacterName,
-  getGenshinCharacterImage,
-  getStarRailCharacterName,
-  getStarRailCharacterImage,
-  getWuWaCharacterName,
-  getWuWaCharacterImage,
-  getNteCharacterName,
-  getNteCharacterImage,
-  getZzzCharacterName,
-  getZzzCharacterImage,
-  getGuihuanCharacterName,
-  getGuihuanCharacterImage,
-  getAnantaCharacterName,
-  getAnantaCharacterImage,
-} from '@gachia/data';
+import { genshinCharacters, getGenshinCharacterName, getGenshinCharacterImage } from '@gachia/data/games/genshin/characters';
+import { starrailCharacters, getStarRailCharacterName, getStarRailCharacterImage } from '@gachia/data/games/starrail/characters';
+import { wuwaCharacters, getWuWaCharacterName, getWuWaCharacterImage } from '@gachia/data/games/wuwa/characters';
+import { nteCharacters, getNteCharacterName, getNteCharacterImage } from '@gachia/data/games/nte/characters';
+import { zzzCharacters, getZzzCharacterName, getZzzCharacterImage } from '@gachia/data/games/zzz/characters';
+import { guihuanCharacters, getGuihuanCharacterName, getGuihuanCharacterImage } from '@gachia/data/games/guihuan/characters';
+import { anantaCharacters, getAnantaCharacterName, getAnantaCharacterImage } from '@gachia/data/games/ananta/characters';
 import zhMessages from '@/messages/zh.json';
 import enMessages from '@/messages/en.json';
 import jaMessages from '@/messages/ja.json';

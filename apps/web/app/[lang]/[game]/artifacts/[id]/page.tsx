@@ -2,21 +2,27 @@ import { GAMES, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { notFound } from 'next/navigation';
 import {
-  genshinArtifactSets,
+  artifactSets as genshinArtifactSets,
   getArtifactSetById,
   getArtifactSetName,
   getArtifactSetDesc2pc,
   getArtifactSetDesc4pc,
+} from '@gachia/data/games/genshin/artifacts';
+import {
   getGenshinCharacterById,
   getGenshinCharacterName,
-  getStarRailRelicSetById,
-  getStarRailRelicSetName,
-  getStarRailRelicSetDesc2pc,
-  getStarRailRelicSetDesc4pc,
+} from '@gachia/data/games/genshin/characters';
+import {
+  relicSets,
+  getRelicSetById as getStarRailRelicSetById,
+  getRelicSetName as getStarRailRelicSetName,
+  getRelicSetDesc2pc as getStarRailRelicSetDesc2pc,
+  getRelicSetDesc4pc as getStarRailRelicSetDesc4pc,
+} from '@gachia/data/games/starrail/relics';
+import {
   getStarRailCharacterById,
   getStarRailCharacterName,
-} from '@gachia/data';
-import { relicSets } from '@gachia/data/games/starrail/relics';
+} from '@gachia/data/games/starrail/characters';
 import { Link } from '@/lib/i18n/navigation';
 
 const RARITY_COLORS: Record<number, string> = { 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };

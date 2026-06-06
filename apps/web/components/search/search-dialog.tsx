@@ -2,28 +2,26 @@
 
 import { useState, useEffect, useMemo, useRef } from 'react';
 import type { SupportedLocale, GameId } from '@gachia/core';
-import {
-  // Characters
-  genshinCharacters, getGenshinCharacterName,
-  starrailCharacters, getStarRailCharacterName,
-  wuwaCharacters, getWuWaCharacterName,
-  nteCharacters, getNteCharacterName,
-  // Weapons
-  genshinWeapons, getGenshinWeaponName,
-  starrailLightCones, getStarRailLightConeName,
-  wuwaWeapons, getWuWaWeaponName,
-  nteWeapons, getNteWeaponName,
-  // Items
-  genshinMaterials, getGenshinMaterialName,
-  starrailMaterials, getStarRailMaterialName,
-  wuwaMaterials, getWuWaMaterialName,
-  nteMaterials, getNteMaterialName,
-  // Equipment sets
-  genshinArtifactSets, getArtifactSetName,
-  starrailRelicSets, getStarRailRelicSetName,
-  wuwaEchoSets, getWuWaEchoSetName,
-  nteDiskSets, getNteDiskSetName,
-} from '@gachia/data';
+// Characters
+import { genshinCharacters, getGenshinCharacterName } from '@gachia/data/games/genshin/characters';
+import { starrailCharacters, getStarRailCharacterName } from '@gachia/data/games/starrail/characters';
+import { wuwaCharacters, getWuWaCharacterName } from '@gachia/data/games/wuwa/characters';
+import { nteCharacters, getNteCharacterName } from '@gachia/data/games/nte/characters';
+// Weapons
+import { genshinWeapons, getGenshinWeaponName } from '@gachia/data/games/genshin/weapons';
+import { starrailLightCones, getStarRailLightConeName } from '@gachia/data/games/starrail/weapons';
+import { wuwaWeapons, getWuWaWeaponName } from '@gachia/data/games/wuwa/weapons';
+import { nteWeapons, getNteWeaponName } from '@gachia/data/games/nte/weapons';
+// Items
+import { genshinMaterials, getGenshinMaterialName } from '@gachia/data/games/genshin/items';
+import { starrailMaterials, getStarRailMaterialName } from '@gachia/data/games/starrail/items';
+import { wuwaMaterials, getWuWaMaterialName } from '@gachia/data/games/wuwa/items';
+import { nteMaterials, getNteMaterialName } from '@gachia/data/games/nte/items';
+// Equipment sets
+import { artifactSets as genshinArtifactSets, getArtifactSetName } from '@gachia/data/games/genshin/artifacts';
+import { relicSets as starrailRelicSets, getRelicSetName as getStarRailRelicSetName } from '@gachia/data/games/starrail/relics';
+import { echoSets as wuwaEchoSets, getEchoSetName as getWuWaEchoSetName } from '@gachia/data/games/wuwa/echoes';
+import { diskSets as nteDiskSets, getNteDiskSetName } from '@gachia/data/games/nte/extras';
 
 interface SearchItem {
   id: string;

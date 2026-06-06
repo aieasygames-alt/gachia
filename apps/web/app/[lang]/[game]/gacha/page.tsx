@@ -1,15 +1,14 @@
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import {
-  nteGachaBanners,
-  nteGachaFaqs,
+  gachaBanners as nteGachaBanners,
+  gachaFaqs as nteGachaFaqs,
   getGachaBannerName,
   getGachaBannerDesc,
   getGachaFaqQuestion,
   getGachaFaqAnswer,
-  getNteCharacterName,
-  getNteCharacterById,
-} from '@gachia/data';
+} from '@gachia/data/games/nte/gacha';
+import { getNteCharacterName, getNteCharacterById } from '@gachia/data/games/nte/characters';
 import { Link } from '@/lib/i18n/navigation';
 
 const BASE_URL = 'https://gachia.com';

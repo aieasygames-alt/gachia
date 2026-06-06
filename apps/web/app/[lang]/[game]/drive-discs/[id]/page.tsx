@@ -1,6 +1,7 @@
 import { GAMES, LOCALES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { getZzzDriveDiscById, getZzzDriveDiscName, getZzzDriveDiscDesc2pc, getZzzDriveDiscDesc4pc, getZzzCharacterName, zzzDriveDiscs } from '@gachia/data';
+import { getZzzDriveDiscById, getZzzDriveDiscName, getZzzDriveDiscDesc2pc, getZzzDriveDiscDesc4pc, zzzDriveDiscs } from '@gachia/data/games/zzz/drive-discs';
+import { getZzzCharacterName } from '@gachia/data/games/zzz/characters';
 import { notFound } from 'next/navigation';
 
 const BASE_URL = 'https://gachia.com';

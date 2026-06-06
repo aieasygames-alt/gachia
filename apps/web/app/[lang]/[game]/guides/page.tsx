@@ -1,53 +1,14 @@
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
-import {
-  nteGuides,
-  getGuideTitle as getNteGuideTitle,
-  getGuideSummary as getNteGuideSummary,
-  getGuideCategory as getNteGuideCategory,
-  getGuideCategories as getNteGuideCategories,
-  NTE_GUIDE_CATEGORIES,
-  genshinGuides,
-  getGenshinGuideTitle,
-  getGenshinGuideSummary,
-  getGenshinGuideCategory,
-  getGenshinGuideCategories,
-  GENSHIN_GUIDE_CATEGORIES,
-  starrailCharacters,
-  getStarRailCharacterName,
-  getStarRailCharacterImage,
-  starrailGuides,
-  getStarRailGuideTitle,
-  getStarRailGuideSummary,
-  getStarRailGuideCategory,
-  getStarRailGuideCategories,
-  STARRAIL_GUIDE_CATEGORIES,
-  wuwaGuides,
-  getWuWaGuideTitle,
-  getWuWaGuideSummary,
-  getWuWaGuideCategory,
-  getWuWaGuideCategories,
-  WUWA_GUIDE_CATEGORIES,
-  zzzGuides,
-  getZzzGuideTitle,
-  getZzzGuideSummary,
-  getZzzGuideCategory,
-  getZzzGuideCategories,
-  ZZZ_GUIDE_CATEGORIES,
-  guihuanGuides,
-  getGuihuanGuideTitle,
-  getGuihuanGuideSummary,
-  getGuihuanGuideCategory,
-  getGuihuanGuideCategories,
-  GUIHUAN_GUIDE_CATEGORIES,
-  anantaGuides,
-  getAnantaGuideTitle,
-  getAnantaGuideSummary,
-  getAnantaGuideCategory,
-  getAnantaGuideCategories,
-  ANANTA_GUIDE_CATEGORIES,
-} from '@gachia/data';
+import { genshinGuides, getGuideTitle as getGenshinGuideTitle, getGuideSummary as getGenshinGuideSummary, getGuideCategory as getGenshinGuideCategory, getGuideCategories as getGenshinGuideCategories, GENSHIN_GUIDE_CATEGORIES } from '@gachia/data/games/genshin/guides';
+import { starrailGuides, getGuideTitle as getStarRailGuideTitle, getGuideSummary as getStarRailGuideSummary, getGuideCategory as getStarRailGuideCategory, getGuideCategories as getStarRailGuideCategories, STARRAIL_GUIDE_CATEGORIES } from '@gachia/data/games/starrail/guides';
+import { guides as nteGuides, getGuideTitle as getNteGuideTitle, getGuideSummary as getNteGuideSummary, getGuideCategory as getNteGuideCategory, getGuideCategories as getNteGuideCategories, NTE_GUIDE_CATEGORIES } from '@gachia/data/games/nte/guides';
+import { wuwaGuides, getGuideTitle as getWuWaGuideTitle, getGuideSummary as getWuWaGuideSummary, getGuideCategory as getWuWaGuideCategory, getGuideCategories as getWuWaGuideCategories, WUWA_GUIDE_CATEGORIES } from '@gachia/data/games/wuwa/guides';
+import { zzzGuides, getZzzGuideTitle, getZzzGuideSummary, getZzzGuideCategory, getZzzGuideCategories, ZZZ_GUIDE_CATEGORIES } from '@gachia/data/games/zzz/guides';
+import { anantaGuides, getAnantaGuideTitle, getAnantaGuideSummary, getAnantaGuideCategory, getAnantaGuideCategories, ANANTA_GUIDE_CATEGORIES } from '@gachia/data/games/ananta/guides';
+import { guihuanGuides, getGuihuanGuideTitle, getGuihuanGuideSummary, getGuihuanGuideCategory, getGuihuanGuideCategories, GUIHUAN_GUIDE_CATEGORIES } from '@gachia/data/games/guihuan/guides';
+import { starrailCharacters, getStarRailCharacterName, getStarRailCharacterImage } from '@gachia/data/games/starrail/characters';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 const BASE_URL = 'https://gachia.com';

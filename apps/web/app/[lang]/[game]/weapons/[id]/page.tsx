@@ -3,14 +3,26 @@ import type { GameId, SupportedLocale } from '@gachia/core';
 import { notFound } from 'next/navigation';
 import {
   genshinWeapons, getGenshinWeaponById, getGenshinWeaponName, getGenshinWeaponEffect, getGenshinWeaponSource,
+} from '@gachia/data/games/genshin/weapons';
+import {
   starrailLightCones, getStarRailLightConeById, getStarRailLightConeName, getStarRailLightConeEffect, getStarRailLightConeSource,
+} from '@gachia/data/games/starrail/weapons';
+import {
   wuwaWeapons, getWuWaWeaponById, getWuWaWeaponName, getWuWaWeaponEffect, getWuWaWeaponSource,
+} from '@gachia/data/games/wuwa/weapons';
+import {
   nteWeapons, getNteWeaponById, getNteWeaponName, getNteWeaponEffect, getNteWeaponSource,
+} from '@gachia/data/games/nte/weapons';
+import {
   zzzWeapons, getZzzWeaponById, getZzzWeaponName, getZzzWeaponEffect, getZzzWeaponSource,
+} from '@gachia/data/games/zzz/weapons';
+import {
   guihuanWeapons, getGuihuanWeaponById, getGuihuanWeaponName, getGuihuanWeaponEffect, getGuihuanWeaponSource,
+} from '@gachia/data/games/guihuan/weapons';
+import {
   anantaWeapons, getAnantaWeaponById, getAnantaWeaponName, getAnantaWeaponEffect, getAnantaWeaponSource,
-  getCharactersForWeapon, getRelatedWeapons,
-} from '@gachia/data';
+} from '@gachia/data/games/ananta/weapons';
+import { getCharactersForWeapon, getRelatedWeapons } from '@gachia/data/weapon-characters';
 import { Link } from '@/lib/i18n/navigation';
 
 const RARITY_COLORS: Record<number, string> = { 1: '#9ca3af', 2: '#4ade80', 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };

@@ -9,45 +9,69 @@ import {
   getNteCharacterDescription,
   getNteCharacterImage,
   getNteCharacterTierReason,
+} from '@gachia/data/games/nte/characters';
+import {
   getNteWeaponName,
+} from '@gachia/data/games/nte/weapons';
+import {
   getNteMaterialName,
   getNteMaterialById,
+} from '@gachia/data/games/nte/items';
+import {
   getBuildsForCharacter,
   getMaterialsForCharacter,
   getNteDiskSetName,
   getNteDiskSetDesc2pc,
   getNteDiskSetDesc4pc,
+} from '@gachia/data/games/nte/extras';
+import {
   genshinCharacters,
   getGenshinCharacterById,
   getGenshinCharacterName,
   getGenshinCharacterDescription,
   getGenshinCharacterImage,
   getGenshinCharacterTierReason,
+} from '@gachia/data/games/genshin/characters';
+import {
   getGenshinWeaponName,
   genshinWeapons,
+} from '@gachia/data/games/genshin/weapons';
+import {
   getGenshinMaterialName,
   getGenshinMaterialById,
-  getGenshinMaterialsForCharacter,
+} from '@gachia/data/games/genshin/items';
+import {
+  getMaterialsForCharacter as getGenshinMaterialsForCharacter,
+} from '@gachia/data/games/genshin/extras';
+import {
   getArtifactSetName,
-  genshinArtifactSets,
+  artifactSets as genshinArtifactSets,
+} from '@gachia/data/games/genshin/artifacts';
+import {
   starrailCharacters,
   getStarRailCharacterById,
   getStarRailCharacterName,
   getStarRailCharacterDescription,
   getStarRailCharacterImage,
   getStarRailCharacterTierReason,
+} from '@gachia/data/games/starrail/characters';
+import {
   getStarRailLightConeName,
   starrailLightCones,
-  starrailRelicSets,
-  getStarRailRelicSetName,
-  getStarRailRelicSetDesc2pc,
-  getStarRailRelicSetDesc4pc,
+} from '@gachia/data/games/starrail/weapons';
+import {
+  relicSets as starrailRelicSets,
+  getRelicSetName as getStarRailRelicSetName,
+  getRelicSetDesc2pc as getStarRailRelicSetDesc2pc,
+  getRelicSetDesc4pc as getStarRailRelicSetDesc4pc,
+} from '@gachia/data/games/starrail/relics';
+import {
   wuwaCharacters,
   getWuWaCharacterById,
   getWuWaCharacterName,
   getWuWaCharacterDescription,
   getWuWaCharacterImage,
-} from '@gachia/data';
+} from '@gachia/data/games/wuwa/characters';
 import {
   zzzCharacters,
   getZzzCharacterById,
@@ -55,20 +79,30 @@ import {
   getZzzCharacterDescription,
   getZzzCharacterImage,
   getZzzCharacterTierReason,
+} from '@gachia/data/games/zzz/characters';
+import {
   guihuanCharacters,
   getGuihuanCharacterById,
   getGuihuanCharacterName,
   getGuihuanCharacterDescription,
   getGuihuanCharacterImage,
   getGuihuanCharacterTierReason,
+} from '@gachia/data/games/guihuan/characters';
+import {
   anantaCharacters,
   getAnantaCharacterById,
   getAnantaCharacterName,
   getAnantaCharacterDescription,
   getAnantaCharacterImage,
   getAnantaCharacterTierReason,
-} from '@gachia/data';
-import type { NteCharacter, GenshinCharacter, StarRailCharacter, WuWaCharacter, ZzzCharacter, GuihuanCharacter, AnantaCharacter } from '@gachia/data';
+} from '@gachia/data/games/ananta/characters';
+import type { NteCharacter } from '@gachia/data/games/nte/types';
+import type { GenshinCharacter } from '@gachia/data/games/genshin/types';
+import type { StarRailCharacter } from '@gachia/data/games/starrail/types';
+import type { WuWaCharacter } from '@gachia/data/games/wuwa/types';
+import type { ZzzCharacter } from '@gachia/data/games/zzz/types';
+import type { GuihuanCharacter } from '@gachia/data/games/guihuan/types';
+import type { AnantaCharacter } from '@gachia/data/games/ananta/types';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 import dynamic from 'next/dynamic';

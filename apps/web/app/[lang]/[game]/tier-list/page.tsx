@@ -1,6 +1,12 @@
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { nteCharacters, getNteCharacterName, getNteCharacterImage, zzzCharacters, getZzzCharacterName, getZzzCharacterImage, anantaCharacters, getAnantaCharacterName, getAnantaCharacterImage, guihuanCharacters, getGuihuanCharacterName, getGuihuanCharacterImage, getGameData } from '@gachia/data';
+import { nteCharacters, getNteCharacterName, getNteCharacterImage } from '@gachia/data/games/nte/characters';
+import { zzzCharacters, getZzzCharacterName, getZzzCharacterImage } from '@gachia/data/games/zzz/characters';
+import { anantaCharacters, getAnantaCharacterName, getAnantaCharacterImage } from '@gachia/data/games/ananta/characters';
+import { guihuanCharacters, getGuihuanCharacterName, getGuihuanCharacterImage } from '@gachia/data/games/guihuan/characters';
+import { tierLists as zzzTierLists } from '@gachia/data/games/zzz';
+import { tierLists as anantaTierLists } from '@gachia/data/games/ananta';
+import { tierLists as guihuanTierLists } from '@gachia/data/games/guihuan';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
@@ -193,9 +199,9 @@ const ANANTA_ELEMENT_COLORS: Record<string, string> = {
 };
 
 function ZzzTierListPage({ locale }: { locale: SupportedLocale }) {
-  const tierData = getGameData('zzz').tierLists.find(
+  const tierData = zzzTierLists.find(
     (tl) => tl.gameId === 'zzz' && tl.category === 'overall' && tl.locale === locale,
-  ) ?? getGameData('zzz').tierLists.find(
+  ) ?? zzzTierLists.find(
     (tl) => tl.gameId === 'zzz' && tl.category === 'overall',
   );
 
@@ -263,9 +269,9 @@ function ZzzTierListPage({ locale }: { locale: SupportedLocale }) {
 // --- Ananta Tier List ---
 
 function AnantaTierListPage({ locale }: { locale: SupportedLocale }) {
-  const tierData = getGameData('ananta').tierLists.find(
+  const tierData = anantaTierLists.find(
     (tl) => tl.gameId === 'ananta' && tl.category === 'overall' && tl.locale === locale,
-  ) ?? getGameData('ananta').tierLists.find(
+  ) ?? anantaTierLists.find(
     (tl) => tl.gameId === 'ananta' && tl.category === 'overall',
   );
 
@@ -338,9 +344,9 @@ const GUIHUAN_ELEMENT_COLORS: Record<string, string> = {
 };
 
 function GuihuanTierListPage({ locale }: { locale: SupportedLocale }) {
-  const tierData = getGameData('guihuan').tierLists.find(
+  const tierData = guihuanTierLists.find(
     (tl) => tl.gameId === 'guihuan' && tl.category === 'overall' && tl.locale === locale,
-  ) ?? getGameData('guihuan').tierLists.find(
+  ) ?? guihuanTierLists.find(
     (tl) => tl.gameId === 'guihuan' && tl.category === 'overall',
   );
 

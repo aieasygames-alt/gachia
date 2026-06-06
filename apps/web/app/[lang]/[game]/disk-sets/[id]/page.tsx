@@ -2,9 +2,11 @@ import { GAMES, LOCALES } from '@gachia/core';
 import type { SupportedLocale } from '@gachia/core';
 import { notFound } from 'next/navigation';
 import {
-  nteDiskSets, getNteDiskSetName, getNteDiskSetDesc2pc, getNteDiskSetDesc4pc,
+  diskSets as nteDiskSets, getNteDiskSetName, getNteDiskSetDesc2pc, getNteDiskSetDesc4pc,
+} from '@gachia/data/games/nte/extras';
+import {
   getNteCharacterById, getNteCharacterName,
-} from '@gachia/data';
+} from '@gachia/data/games/nte/characters';
 import { Link } from '@/lib/i18n/navigation';
 
 export async function generateStaticParams() {

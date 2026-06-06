@@ -1,6 +1,7 @@
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { nteDiskSets, getNteDiskSetName, getNteDiskSetDesc2pc, getNteDiskSetDesc4pc, getNteCharacterName, getNteCharacterById } from '@gachia/data';
+import { diskSets as nteDiskSets, getNteDiskSetName, getNteDiskSetDesc2pc, getNteDiskSetDesc4pc } from '@gachia/data/games/nte/extras';
+import { getNteCharacterName, getNteCharacterById } from '@gachia/data/games/nte/characters';
 
 const ELEMENT_COLORS: Record<string, string> = {
   anima: '#4ade80', chaos: '#8b5cf6', cosmos: '#3b82f6',

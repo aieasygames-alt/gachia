@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import type { SupportedLocale } from '@gachia/core';
-import { wuwaCharacters, getWuWaCharacterName, getWuWaCharacterImage } from '@gachia/data';
+import { wuwaCharacters, getWuWaCharacterName, getWuWaCharacterImage } from '@gachia/data/games/wuwa/characters';
 import type { WuWaCharacter } from '@gachia/data/games/wuwa/types';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';

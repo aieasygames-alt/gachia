@@ -3,14 +3,26 @@ import type { GameId, SupportedLocale } from '@gachia/core';
 import { notFound } from 'next/navigation';
 import {
   genshinMaterials, getGenshinMaterialById, getGenshinMaterialName,
+} from '@gachia/data/games/genshin/items';
+import {
   starrailMaterials, getStarRailMaterialById, getStarRailMaterialName,
+} from '@gachia/data/games/starrail/items';
+import {
   wuwaMaterials, getWuWaMaterialById, getWuWaMaterialName,
+} from '@gachia/data/games/wuwa/items';
+import {
   nteMaterials, getNteMaterialById, getNteMaterialName,
+} from '@gachia/data/games/nte/items';
+import {
   zzzMaterials, getZzzMaterialById, getZzzMaterialName,
+} from '@gachia/data/games/zzz/items';
+import {
   guihuanMaterials, getGuihuanMaterialById, getGuihuanMaterialName,
+} from '@gachia/data/games/guihuan/items';
+import {
   anantaMaterials, getAnantaMaterialById, getAnantaMaterialName,
-  getCharactersNeedingMaterial,
-} from '@gachia/data';
+} from '@gachia/data/games/ananta/items';
+import { getCharactersNeedingMaterial } from '@gachia/data/material-characters';
 import { Link } from '@/lib/i18n/navigation';
 
 const RARITY_COLORS = ['', '#9ca3af', '#4ade80', '#60a5fa', '#a855f7', '#eab308'];
