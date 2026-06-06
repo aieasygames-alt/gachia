@@ -162,6 +162,14 @@ export {
 } from './games/genshin/regions';
 export type { GenshinRegion } from './games/genshin/regions';
 
+// Genshin redeem codes
+export {
+  redeemCodes as genshinRedeemCodes,
+  getActiveRedeemCodes as getGenshinActiveRedeemCodes,
+  getRedeemCodeReward as getGenshinRedeemCodeReward,
+} from './games/genshin/redeem-codes';
+export type { GenshinRedeemCode } from './games/genshin/redeem-codes';
+
 // Genshin interactive map data
 export {
   genshinMapData,
@@ -251,6 +259,14 @@ export {
   getMaterialsForCharacter as getStarRailMaterialsForCharacter,
 } from './games/starrail/extras';
 
+// StarRail redeem codes
+export {
+  redeemCodes as starrailRedeemCodes,
+  getActiveRedeemCodes as getStarRailActiveRedeemCodes,
+  getRedeemCodeReward as getStarRailRedeemCodeReward,
+} from './games/starrail/redeem-codes';
+export type { StarRailRedeemCode } from './games/starrail/redeem-codes';
+
 // StarRail regions
 export {
   regions as starrailRegions,
@@ -332,6 +348,14 @@ export type {
   WuWaSequence,
 } from './games/wuwa/types';
 
+// WuWa redeem codes
+export {
+  redeemCodes as wuwaRedeemCodes,
+  getActiveRedeemCodes as getWuWaActiveRedeemCodes,
+  getRedeemCodeReward as getWuWaRedeemCodeReward,
+} from './games/wuwa/redeem-codes';
+export type { WuWaRedeemCode } from './games/wuwa/redeem-codes';
+
 // WuWa region exports
 export {
   regions as wuwaRegions,
@@ -396,6 +420,14 @@ export {
   getZzzMaterialName,
   getZzzMaterialById,
 } from './games/zzz/items';
+
+// ZZZ redeem codes
+export {
+  redeemCodes as zzzRedeemCodes,
+  getActiveRedeemCodes as getZzzActiveRedeemCodes,
+  getRedeemCodeReward as getZzzRedeemCodeReward,
+} from './games/zzz/redeem-codes';
+export type { ZzzRedeemCode } from './games/zzz/redeem-codes';
 
 // ZZZ drive disc exports
 export {

@@ -1,0 +1,52 @@
+[
+  {
+    "code": "WUWA2024GIFT",
+    "reward": "星声x50、声匣经验x5000",
+    "rewardEn": "Astrite x50, Shell Credit x5,000",
+    "status": "active",
+    "expiresAt": "2027-12-31",
+    "source": "permanent",
+    "region": "global",
+    "revealedAt": "2024-05-23"
+  },
+  {
+    "code": "WUWAVER30UPDATE",
+    "reward": "星声x100、声匣经验x50000",
+    "rewardEn": "Astrite x100, Shell Credit x50,000",
+    "status": "active",
+    "expiresAt": "2026-07-31",
+    "source": "livestream",
+    "region": "global",
+    "revealedAt": "2026-05-20"
+  },
+  {
+    "code": "WUTHRINGWAVES",
+    "reward": "星声x80、高级复苏协议x2",
+    "rewardEn": "Astrite x80, Advanced Revival Kit x2",
+    "status": "active",
+    "expiresAt": "2026-09-30",
+    "source": "event",
+    "region": "global",
+    "revealedAt": "2025-01-15"
+  },
+  {
+    "code": "WUWACNY2026",
+    "reward": "星声x60、声匣经验x30000",
+    "rewardEn": "Astrite x60, Shell Credit x30,000",
+    "status": "active",
+    "expiresAt": "2026-12-31",
+    "source": "event",
+    "region": "global",
+    "revealedAt": "2026-01-29"
+  },
+  {
+    "code": "ROYALFROST2026",
+    "reward": "星声x50、铸潮手册x3",
+    "rewardEn": "Astrite x50, Forge Tide Manual x3",
+    "status": "active",
+    "expiresAt": "2026-08-31",
+    "source": "event",
+    "region": "global",
+    "revealedAt": "2026-04-10"
+  }
+]

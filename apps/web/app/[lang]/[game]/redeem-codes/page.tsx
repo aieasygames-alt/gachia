@@ -1,6 +1,52 @@
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { getActiveRedeemCodes, getRedeemCodeReward } from '@gachia/data';
+import {
+  getActiveRedeemCodes as getNteActiveRedeemCodes,
+  getRedeemCodeReward as getNteRedeemCodeReward,
+  getGenshinActiveRedeemCodes,
+  getGenshinRedeemCodeReward,
+  getStarRailActiveRedeemCodes,
+  getStarRailRedeemCodeReward,
+  getZzzActiveRedeemCodes,
+  getZzzRedeemCodeReward,
+  getWuWaActiveRedeemCodes,
+  getWuWaRedeemCodeReward,
+} from '@gachia/data';
+
+interface CodeItem {
+  code: string;
+  reward: string;
+  rewardEn: string;
+  status: string;
+  expiresAt: string;
+  source: string;
+  region: string;
+  revealedAt: string;
+}
+
+const GAMES_WITH_CODES: GameId[] = ['genshin', 'starrail', 'wuwa', 'zzz', 'nte'];
+
+function getCodesForGame(gameId: GameId): CodeItem[] {
+  switch (gameId) {
+    case 'genshin': return getGenshinActiveRedeemCodes() as unknown as CodeItem[];
+    case 'starrail': return getStarRailActiveRedeemCodes() as unknown as CodeItem[];
+    case 'wuwa': return getWuWaActiveRedeemCodes() as unknown as CodeItem[];
+    case 'zzz': return getZzzActiveRedeemCodes() as unknown as CodeItem[];
+    case 'nte': return getNteActiveRedeemCodes() as unknown as CodeItem[];
+    default: return [];
+  }
+}
+
+function getRewardText(gameId: GameId, code: CodeItem, locale: SupportedLocale): string {
+  switch (gameId) {
+    case 'genshin': return getGenshinRedeemCodeReward(code as never, locale);
+    case 'starrail': return getStarRailRedeemCodeReward(code as never, locale);
+    case 'wuwa': return getWuWaRedeemCodeReward(code as never, locale);
+    case 'zzz': return getZzzRedeemCodeReward(code as never, locale);
+    case 'nte': return getNteRedeemCodeReward(code as never, locale);
+    default: return code.rewardEn;
+  }
+}
 
 export async function generateMetadata({
   params,
@@ -8,7 +54,8 @@ export async function generateMetadata({
   params: Promise<{ lang: string; game: string }>;
 }) {
   const { game } = await params;
-  if (game !== 'nte') return { robots: { index: false, follow: false } };
+  const gameId = game as GameId;
+  if (!GAMES_WITH_CODES.includes(gameId)) return { robots: { index: false, follow: false } };
   return {};
 }
 
@@ -22,7 +69,7 @@ export default async function RedeemCodesPage({
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];
 
-  if (gameId !== 'nte') {
+  if (!GAMES_WITH_CODES.includes(gameId)) {
     return (
       <div>
         <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
@@ -35,7 +82,7 @@ export default async function RedeemCodesPage({
     );
   }
 
-  const codes = getActiveRedeemCodes();
+  const codes = getCodesForGame(gameId);
   const cnCodes = codes.filter((c) => c.region === 'cn');
   const globalCodes = codes.filter((c) => c.region === 'global');
 
@@ -43,6 +90,35 @@ export default async function RedeemCodesPage({
     livestream: { zh: '前瞻直播', en: 'Livestream', ja: '生放送' },
     launch: { zh: '公测福利', en: 'Launch Bonus', ja: 'リリース特典' },
     event: { zh: '活动', en: 'Event', ja: 'イベント' },
+    permanent: { zh: '永久', en: 'Permanent', ja: '恒常' },
+  };
+
+  const redeemInstructions: Record<string, Record<string, string>> = {
+    genshin: {
+      zh: '前往官方兑换页面或游戏内设置→账户→兑换码，输入兑换码即可领取奖励。需冒险等级10+。',
+      en: 'Go to the official redemption page or in-game Settings → Account → Redeem Code. Requires AR 10+.',
+      ja: '公式交換ページまたはゲーム内の設定→アカウント→コード交換から入力。冒険ランク10以上が必要。',
+    },
+    starrail: {
+      zh: '前往官方兑换页面或游戏内手机→设置→兑换码，输入兑换码领取奖励。',
+      en: 'Visit the official redemption page or in-game Phone → Settings → Redemption Code to claim rewards.',
+      ja: '公式交換ページまたはゲーム内の携帯→設定→交換コードから入力して報酬を受け取ります。',
+    },
+    zzz: {
+      zh: '前往官方兑换页面或游戏内设置→其他→兑换码，输入兑换码领取奖励。',
+      en: 'Go to the official redemption page or in-game Settings → Other → Redeem Code to claim rewards.',
+      ja: '公式交換ページまたはゲーム内の設定→その他→交換コードから入力して報酬を受け取ります。',
+    },
+    nte: {
+      zh: '前往官方兑换页面或游戏内设置→兑换码，输入兑换码领取奖励。',
+      en: 'Visit the official redemption page or in-game Settings → Redeem Code to claim rewards.',
+      ja: '公式交換ページまたはゲーム内の設定→交換コードから入力して報酬を受け取ります。',
+    },
+    wuwa: {
+      zh: '前往官方兑换页面或游戏内设置→其他→兑换码，输入兑换码领取奖励。',
+      en: 'Go to the official redemption page or in-game Settings → Other → Redeem Code to claim rewards.',
+      ja: '公式交換ページまたはゲーム内の設定→その他→交換コードから入力して報酬を受け取ります。',
+    },
   };
 
   return (
@@ -50,9 +126,14 @@ export default async function RedeemCodesPage({
       <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
         {CATEGORY_LABELS['redeem-codes']?.[locale] ?? 'Redeem Codes'}
       </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
+      <p className="mb-2 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${codes.length} 个有效兑换码` : locale === 'ja' ? `${codes.length} 個の有効なコード` : `${codes.length} active codes`}
       </p>
+      {redeemInstructions[gameId] && (
+        <p className="mb-6 text-xs text-game-text-muted">
+          {redeemInstructions[gameId][locale] ?? redeemInstructions[gameId]['en']}
+        </p>
+      )}
 
       {cnCodes.length > 0 && (
         <section className="mb-8">
@@ -61,7 +142,7 @@ export default async function RedeemCodesPage({
           </h2>
           <div className="space-y-3">
             {cnCodes.map((code) => (
-              <CodeCard key={code.code} code={code} locale={locale} sourceLabels={sourceLabels} />
+              <CodeCard key={code.code} gameId={gameId} code={code} locale={locale} sourceLabels={sourceLabels} />
             ))}
           </div>
         </section>
@@ -74,7 +155,7 @@ export default async function RedeemCodesPage({
           </h2>
           <div className="space-y-3">
             {globalCodes.map((code) => (
-              <CodeCard key={code.code} code={code} locale={locale} sourceLabels={sourceLabels} />
+              <CodeCard key={code.code} gameId={gameId} code={code} locale={locale} sourceLabels={sourceLabels} />
             ))}
           </div>
         </section>
@@ -83,7 +164,7 @@ export default async function RedeemCodesPage({
   );
 }
 
-function CodeCard({ code, locale, sourceLabels }: { code: ReturnType<typeof getActiveRedeemCodes>[number]; locale: SupportedLocale; sourceLabels: Record<string, Record<string, string>> }) {
+function CodeCard({ gameId, code, locale, sourceLabels }: { gameId: GameId; code: CodeItem; locale: SupportedLocale; sourceLabels: Record<string, Record<string, string>> }) {
   const expired = code.expiresAt && new Date(code.expiresAt) < new Date();
   const sourceLabel = sourceLabels[code.source]?.[locale] ?? code.source;
 
@@ -98,7 +179,7 @@ function CodeCard({ code, locale, sourceLabels }: { code: ReturnType<typeof getA
         )}
         <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{sourceLabel}</span>
       </div>
-      <p className="text-sm text-game-text-muted">{getRedeemCodeReward(code, locale)}</p>
+      <p className="text-sm text-game-text-muted">{getRewardText(gameId, code, locale)}</p>
       {code.expiresAt && (
         <p className="mt-1 text-xs text-game-text-muted">
           {locale === 'zh' ? `有效期至 ${code.expiresAt}` : locale === 'ja' ? `期限: ${code.expiresAt}` : `Expires: ${code.expiresAt}`}

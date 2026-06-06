@@ -60,6 +60,7 @@ export const GAMES: Record<GameId, GameModule> = {
       build: true,
       compare: true,
       teams: true,
+      'redeem-codes': true,
     },
   },
   starrail: {
@@ -101,6 +102,7 @@ export const GAMES: Record<GameId, GameModule> = {
       build: true,
       compare: true,
       teams: true,
+      'redeem-codes': true,
     },
   },
   wuwa: {
@@ -140,6 +142,7 @@ export const GAMES: Record<GameId, GameModule> = {
       build: true,
       compare: true,
       teams: true,
+      'redeem-codes': true,
     },
   },
   nte: {
@@ -224,6 +227,7 @@ export const GAMES: Record<GameId, GameModule> = {
       build: true,
       compare: true,
       teams: true,
+      'redeem-codes': true,
     },
   },
   guihuan: {
