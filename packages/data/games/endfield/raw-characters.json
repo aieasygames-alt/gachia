@@ -100,7 +100,22 @@
     ],
     "image": "/images/endfield/characters/endministrator.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 319,
+      "str": 14,
+      "strMax": 123,
+      "agl": 14,
+      "aglMax": 140,
+      "int": 9,
+      "intMax": 96,
+      "wil": 10,
+      "wilMax": 107,
+      "critRate": 0.05
+    }
   },
   {
     "id": "lifeng",
@@ -203,7 +218,22 @@
     ],
     "image": "/images/endfield/characters/lifeng.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 312,
+      "str": 14,
+      "strMax": 123,
+      "agl": 20,
+      "aglMax": 132,
+      "int": 13,
+      "intMax": 115,
+      "wil": 12,
+      "wilMax": 117,
+      "critRate": 0.05
+    }
   },
   {
     "id": "mi-fu",
@@ -306,7 +336,22 @@
     ],
     "image": "/images/endfield/characters/mi-fu.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 315,
+      "str": 22,
+      "strMax": 173,
+      "agl": 10,
+      "aglMax": 92,
+      "int": 9,
+      "intMax": 90,
+      "wil": 14,
+      "wilMax": 119,
+      "critRate": 0.05
+    }
   },
   {
     "id": "rossi",
@@ -409,7 +454,22 @@
     ],
     "image": "/images/endfield/characters/rossi.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 323,
+      "str": 9,
+      "strMax": 97,
+      "agl": 23,
+      "aglMax": 176,
+      "int": 14,
+      "intMax": 118,
+      "wil": 9,
+      "wilMax": 89,
+      "critRate": 0.05
+    }
   },
   {
     "id": "ember",
@@ -512,7 +572,22 @@
     ],
     "image": "/images/endfield/characters/ember.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 323,
+      "str": 21,
+      "strMax": 176,
+      "agl": 9,
+      "aglMax": 96,
+      "int": 8,
+      "intMax": 86,
+      "wil": 13,
+      "wilMax": 120,
+      "critRate": 0.05
+    }
   },
   {
     "id": "ardelia",
@@ -615,7 +690,22 @@
     ],
     "image": "/images/endfield/characters/ardelia.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 323,
+      "str": 9,
+      "strMax": 112,
+      "agl": 9,
+      "aglMax": 93,
+      "int": 20,
+      "intMax": 145,
+      "wil": 15,
+      "wilMax": 118,
+      "critRate": 0.05
+    }
   },
   {
     "id": "gilberta",
@@ -718,7 +808,22 @@
     ],
     "image": "/images/endfield/characters/gilberta.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 329,
+      "str": 9,
+      "strMax": 89,
+      "agl": 9,
+      "aglMax": 92,
+      "int": 16,
+      "intMax": 127,
+      "wil": 20,
+      "wilMax": 171,
+      "critRate": 0.05
+    }
   },
   {
     "id": "tangtang",
@@ -821,7 +926,22 @@
     ],
     "image": "/images/endfield/characters/tangtang.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 321,
+      "str": 13,
+      "strMax": 123,
+      "agl": 23,
+      "aglMax": 179,
+      "int": 8,
+      "intMax": 85,
+      "wil": 10,
+      "wilMax": 102,
+      "critRate": 0.05
+    }
   },
   {
     "id": "laevatain",
@@ -924,7 +1044,22 @@
     ],
     "image": "/images/endfield/characters/laevatain.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 318,
+      "str": 13,
+      "strMax": 121,
+      "agl": 9,
+      "aglMax": 99,
+      "int": 22,
+      "intMax": 177,
+      "wil": 9,
+      "wilMax": 89,
+      "critRate": 0.05
+    }
   },
   {
     "id": "last-rite",
@@ -1027,7 +1162,22 @@
     ],
     "image": "/images/endfield/characters/last-rite.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 332,
+      "str": 21,
+      "strMax": 155,
+      "agl": 8,
+      "aglMax": 104,
+      "int": 9,
+      "intMax": 93,
+      "wil": 15,
+      "wilMax": 109,
+      "critRate": 0.05
+    }
   },
   {
     "id": "yvonne",
@@ -1130,7 +1280,22 @@
     ],
     "image": "/images/endfield/characters/yvonne.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 321,
+      "str": 8,
+      "strMax": 82,
+      "agl": 14,
+      "aglMax": 128,
+      "int": 24,
+      "intMax": 176,
+      "wil": 10,
+      "wilMax": 105,
+      "critRate": 0.05
+    }
   },
   {
     "id": "zhuang-fangyi",
@@ -1233,7 +1398,22 @@
     ],
     "image": "/images/endfield/characters/zhuang-fangyi.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 326,
+      "str": 10,
+      "strMax": 99,
+      "agl": 10,
+      "aglMax": 99,
+      "int": 17,
+      "intMax": 123,
+      "wil": 24,
+      "wilMax": 184,
+      "critRate": 0.05
+    }
   },
   {
     "id": "pogranichnik",
@@ -1336,7 +1516,22 @@
     ],
     "image": "/images/endfield/characters/pogranichnik.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 321,
+      "str": 12,
+      "strMax": 101,
+      "agl": 13,
+      "aglMax": 110,
+      "int": 10,
+      "intMax": 97,
+      "wil": 20,
+      "wilMax": 173,
+      "critRate": 0.05
+    }
   },
   {
     "id": "chen-qianyu",
@@ -1439,7 +1634,22 @@
     ],
     "image": "/images/endfield/characters/chen-qianyu.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 297,
+      "str": 10,
+      "strMax": 106,
+      "agl": 20,
+      "aglMax": 171,
+      "int": 8,
+      "intMax": 85,
+      "wil": 9,
+      "wilMax": 93,
+      "critRate": 0.05
+    }
   },
   {
     "id": "snowshine",
@@ -1542,7 +1752,22 @@
     ],
     "image": "/images/endfield/characters/snowshine.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 297,
+      "str": 18,
+      "strMax": 154,
+      "agl": 12,
+      "aglMax": 104,
+      "int": 9,
+      "intMax": 93,
+      "wil": 10,
+      "wilMax": 108,
+      "critRate": 0.05
+    }
   },
   {
     "id": "xaihi",
@@ -1645,7 +1870,22 @@
     ],
     "image": "/images/endfield/characters/xaihi.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 291,
+      "str": 9,
+      "strMax": 89,
+      "agl": 9,
+      "aglMax": 91,
+      "int": 15,
+      "intMax": 127,
+      "wil": 15,
+      "wilMax": 150,
+      "critRate": 0.05
+    }
   },
   {
     "id": "perlica",
@@ -1748,7 +1988,22 @@
     ],
     "image": "/images/endfield/characters/perlica.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 303,
+      "str": 9,
+      "strMax": 91,
+      "agl": 9,
+      "aglMax": 93,
+      "int": 21,
+      "intMax": 161,
+      "wil": 13,
+      "wilMax": 113,
+      "critRate": 0.05
+    }
   },
   {
     "id": "wulfgard",
@@ -1851,7 +2106,22 @@
     ],
     "image": "/images/endfield/characters/wulfgard.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 294,
+      "str": 18,
+      "strMax": 161,
+      "agl": 9,
+      "aglMax": 95,
+      "int": 9,
+      "intMax": 92,
+      "wil": 13,
+      "wilMax": 111,
+      "critRate": 0.05
+    }
   },
   {
     "id": "avywenna",
@@ -1954,7 +2224,22 @@
     ],
     "image": "/images/endfield/characters/avywenna.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 312,
+      "str": 12,
+      "strMax": 107,
+      "agl": 10,
+      "aglMax": 106,
+      "int": 14,
+      "intMax": 110,
+      "wil": 15,
+      "wilMax": 148,
+      "critRate": 0.05
+    }
   },
   {
     "id": "da-pan",
@@ -2057,7 +2342,22 @@
     ],
     "image": "/images/endfield/characters/da-pan.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 303,
+      "str": 24,
+      "strMax": 175,
+      "agl": 9,
+      "aglMax": 96,
+      "int": 10,
+      "intMax": 94,
+      "wil": 10,
+      "wilMax": 102,
+      "critRate": 0.05
+    }
   },
   {
     "id": "camille",
@@ -2263,7 +2563,22 @@
     ],
     "image": "/images/endfield/characters/arclight.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 306,
+      "str": 14,
+      "strMax": 107,
+      "agl": 14,
+      "aglMax": 145,
+      "int": 12,
+      "intMax": 123,
+      "wil": 10,
+      "wilMax": 100,
+      "critRate": 0.05
+    }
   },
   {
     "id": "alesh",
@@ -2366,7 +2681,22 @@
     ],
     "image": "/images/endfield/characters/alesh.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 309,
+      "str": 20,
+      "strMax": 158,
+      "agl": 9,
+      "aglMax": 95,
+      "int": 13,
+      "intMax": 125,
+      "wil": 10,
+      "wilMax": 89,
+      "critRate": 0.05
+    }
   },
   {
     "id": "estella",
@@ -2469,7 +2799,22 @@
     ],
     "image": "/images/endfield/characters/estella.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 312,
+      "str": 13,
+      "strMax": 104,
+      "agl": 8,
+      "aglMax": 97,
+      "int": 14,
+      "intMax": 110,
+      "wil": 15,
+      "wilMax": 151,
+      "critRate": 0.05
+    }
   },
   {
     "id": "catcher",
@@ -2572,7 +2917,22 @@
     ],
     "image": "/images/endfield/characters/catcher.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 300,
+      "str": 21,
+      "strMax": 176,
+      "agl": 9,
+      "aglMax": 96,
+      "int": 8,
+      "intMax": 86,
+      "wil": 11,
+      "wilMax": 106,
+      "critRate": 0.05
+    }
   },
   {
     "id": "antal",
@@ -2675,7 +3035,22 @@
     ],
     "image": "/images/endfield/characters/antal.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 297,
+      "str": 15,
+      "strMax": 129,
+      "agl": 9,
+      "aglMax": 86,
+      "int": 15,
+      "intMax": 165,
+      "wil": 9,
+      "wilMax": 82,
+      "critRate": 0.05
+    }
   },
   {
     "id": "fluorite",
@@ -2778,7 +3153,22 @@
     ],
     "image": "/images/endfield/characters/fluorite.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 303,
+      "str": 14,
+      "strMax": 90,
+      "agl": 14,
+      "aglMax": 168,
+      "int": 12,
+      "intMax": 114,
+      "wil": 10,
+      "wilMax": 91,
+      "critRate": 0.05
+    }
   },
   {
     "id": "akekuri",
@@ -2881,6 +3271,21 @@
     ],
     "image": "/images/endfield/characters/akekuri.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 319,
+      "str": 13,
+      "strMax": 110,
+      "agl": 15,
+      "aglMax": 140,
+      "int": 12,
+      "intMax": 106,
+      "wil": 9,
+      "wilMax": 108,
+      "critRate": 0.05
+    }
   }
 ]

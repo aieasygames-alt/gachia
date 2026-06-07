@@ -43,7 +43,9 @@ export const characters: Character[] = endfieldCharacters.map((char) => ({
     card: `/images/endfield/characters/${char.id}.webp`,
     gachaSplash: `/images/endfield/characters/${char.id}.webp`,
   },
-  stats: { baseHp: [], baseAtk: [], baseDef: [] },
+  stats: char.stats
+    ? { baseHp: [char.stats.hp, char.stats.hpMax], baseAtk: [char.stats.atk, char.stats.atkMax], baseDef: [char.stats.str, char.stats.strMax] }
+    : { baseHp: [], baseAtk: [], baseDef: [] },
   materials: [],
   skills: mapSkills(char.skills),
   releaseVersion: '1.0',

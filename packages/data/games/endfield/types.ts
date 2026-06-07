@@ -47,6 +47,22 @@ export interface EndfieldRecommendedBuild {
   subStatPriorityEn: string[];
 }
 
+export interface EndfieldCharacterStats {
+  hp: number;
+  hpMax: number;
+  atk: number;
+  atkMax: number;
+  str: number;
+  strMax: number;
+  agl: number;
+  aglMax: number;
+  int: number;
+  intMax: number;
+  wil: number;
+  wilMax: number;
+  critRate: number;
+}
+
 export interface EndfieldCharacter {
   id: string;
   name: string;
@@ -61,6 +77,7 @@ export interface EndfieldCharacter {
   description: string;
   descriptionEn: string;
   descriptionJa?: string;
+  stats?: EndfieldCharacterStats;
   faq: EndfieldFaq[];
   relatedCharacters: string[];
   tierRank: string;
