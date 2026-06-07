@@ -2460,7 +2460,22 @@
     ],
     "image": "/images/endfield/characters/camille.webp",
     "availableAtLaunch": true,
-    "status": "available"
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 308,
+      "str": 18,
+      "strMax": 145,
+      "agl": 14,
+      "aglMax": 138,
+      "int": 10,
+      "intMax": 95,
+      "wil": 10,
+      "wilMax": 100,
+      "critRate": 0.05
+    }
   },
   {
     "id": "arclight",
