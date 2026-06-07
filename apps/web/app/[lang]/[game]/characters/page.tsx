@@ -21,7 +21,7 @@ const CHAR_DESC: Record<string, Record<string, string>> = {
   zzz: { zh: '绝区零全代理人图鉴，包含属性、专精数据', en: 'Complete Zenless Zone Zero agent roster with attributes and specialties', ja: 'ゼンレスゾーンゼロ全エージェント図鑑、属性、専門データ' },
   ananta: { zh: '无限大全异能者图鉴，包含SSR、SR角色数据、异能、配装推荐', en: 'Complete Ananta Esper roster with SSR, SR data, abilities, and build recommendations', ja: 'アナンタ全エスパー図鑑、SSR、SRキャラデータ' },
   guihuan: { zh: '归环全使灵图鉴，包含SSR、SR角色数据、元素、配装推荐', en: 'Complete Guihuan Spirit roster with SSR, SR data, elements, and build recommendations', ja: '帰環全精霊図鑑、SSR、SRキャラデータ' },
-  endfield: { zh: '明日方舟：终末地全干员图鉴，包含六星、五星、四星角色数据、源石技艺、配装推荐', en: 'Complete Arknights: Endfield operator roster with 6-Star, 5-Star, 4-Star data, Arts, and build recommendations', ja: 'エンドフィールド全オペレーター図鑑、★6、★5、★4キャラデータ' },
+  endfield: { zh: '明日方舟：终末地全干员图鉴，包含六星、五星、四星角色数据、元素属性、配装推荐', en: 'Complete Arknights: Endfield operator roster with 6-Star, 5-Star, 4-Star data, elements, and build recommendations', ja: 'エンドフィールド全オペレーター図鑑、★6、★5、★4キャラデータ' },
 };
 
 const NTE_ELEMENT_COLORS: Record<string, string> = {
@@ -746,7 +746,7 @@ function GuihuanCharacterCard({ char, locale, gameId }: { char: typeof guihuanCh
 // --- Endfield Characters ---
 
 const ENDFIELD_ELEMENT_COLORS: Record<string, string> = {
-  arts: '#8b5cf6', physical: '#9ca3af',
+  physical: '#9ca3af', heat: '#ef4444', cryo: '#67e8f9', nature: '#4ade80', electric: '#facc15',
 };
 
 function EndfieldCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedLocale; gameId: GameId; gameConfig: typeof GAMES.endfield }) {

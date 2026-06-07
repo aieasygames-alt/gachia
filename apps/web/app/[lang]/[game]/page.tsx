@@ -130,7 +130,7 @@ const FEATURED_CHARS: Record<string, string[]> = {
   zzz: ['ellen-joe', 'zhu-yuan', 'miyabi', 'burnice-white', 'caesar-king'],
   guihuan: [],
   ananta: [],
-  endfield: ['surtr', 'angelina', 'saria'],
+  endfield: ['laevatain', 'ardelia', 'tangtang', 'endministrator', 'lifeng'],
 };
 
 // --- Route icons ---

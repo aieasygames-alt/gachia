@@ -235,12 +235,15 @@ const GUIHUAN_ELEMENT_NAMES: Record<string, Record<string, string>> = {
 };
 
 const ENDFIELD_ELEMENT_COLORS: Record<string, string> = {
-  arts: '#8b5cf6', physical: '#9ca3af',
+  physical: '#9ca3af', heat: '#ef4444', cryo: '#67e8f9', nature: '#4ade80', electric: '#facc15',
 };
 
 const ENDFIELD_ELEMENT_NAMES: Record<string, Record<string, string>> = {
-  arts: { zh: '源石技艺', en: 'Originium Arts', ja: 'オリジニウムアーツ' },
   physical: { zh: '物理', en: 'Physical', ja: '物理' },
+  heat: { zh: '炽燃', en: 'Heat', ja: 'ヒート' },
+  cryo: { zh: '霜凝', en: 'Cryo', ja: 'クリオ' },
+  nature: { zh: '自然', en: 'Nature', ja: 'ネイチャー' },
+  electric: { zh: '电击', en: 'Electric', ja: 'エレクトリック' },
 };
 
 export async function generateStaticParams() {

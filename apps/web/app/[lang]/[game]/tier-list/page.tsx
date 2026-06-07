@@ -421,7 +421,7 @@ function GuihuanTierListPage({ locale }: { locale: SupportedLocale }) {
 // --- Endfield Tier List ---
 
 const ENDFIELD_ELEMENT_COLORS: Record<string, string> = {
-  arts: '#8b5cf6', physical: '#9ca3af',
+  physical: '#9ca3af', heat: '#ef4444', cryo: '#67e8f9', nature: '#4ade80', electric: '#facc15',
 };
 
 function EndfieldTierListPage({ locale }: { locale: SupportedLocale }) {

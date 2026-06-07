@@ -321,7 +321,10 @@ export const GAMES: Record<GameId, GameModule> = {
     },
     elements: [
       { id: 'physical', name: { zh: '物理', en: 'Physical', ja: '物理' }, color: '#9ca3af' },
-      { id: 'arts', name: { zh: '源石技艺', en: 'Originium Arts', ja: 'オリジニウムアーツ' }, color: '#8b5cf6' },
+      { id: 'heat', name: { zh: '热能', en: 'Heat', ja: 'ヒート' }, color: '#ef4444' },
+      { id: 'cryo', name: { zh: '冷冻', en: 'Cryo', ja: 'フロスト' }, color: '#67e8f9' },
+      { id: 'nature', name: { zh: '自然', en: 'Nature', ja: 'ネイチャー' }, color: '#4ade80' },
+      { id: 'electric', name: { zh: '电击', en: 'Electric', ja: 'エレキ' }, color: '#facc15' },
     ],
     rarities: [
       { stars: 6, color: '#f59e0b', label: { zh: '六星', en: '6-Star', ja: '★6' } },
