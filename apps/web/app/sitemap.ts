@@ -68,7 +68,7 @@ const REAL_CONTENT_ROUTES: Record<string, string[]> = {
   zzz: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'drive-discs', 'build', 'compare', 'teams'],
   guihuan: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'compare', 'teams'],
   ananta: ['characters', 'weapons', 'items', 'tier-list', 'guides'],
-  endfield: ['characters', 'weapons', 'items', 'tier-list', 'guides'],
+  endfield: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'compare', 'teams', 'map'],
 };
 
 // Revalidate every 24 hours
