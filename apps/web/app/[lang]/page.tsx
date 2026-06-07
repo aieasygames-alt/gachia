@@ -11,6 +11,7 @@ import { nteCharacters, getNteCharacterName, getNteCharacterImage } from '@gachi
 import { zzzCharacters, getZzzCharacterName, getZzzCharacterImage } from '@gachia/data/games/zzz/characters';
 import { guihuanCharacters, getGuihuanCharacterName, getGuihuanCharacterImage } from '@gachia/data/games/guihuan/characters';
 import { anantaCharacters, getAnantaCharacterName, getAnantaCharacterImage } from '@gachia/data/games/ananta/characters';
+import { endfieldCharacters, getEndfieldCharacterName, getEndfieldCharacterImage } from '@gachia/data/games/endfield/characters';
 import zhMessages from '@/messages/zh.json';
 import enMessages from '@/messages/en.json';
 import jaMessages from '@/messages/ja.json';
@@ -31,6 +32,7 @@ const FEATURED: Record<string, string[]> = {
   zzz: ['ellen-joe', 'zhu-yuan', 'miyabi', 'burnice-white', 'caesar-king'],
   guihuan: [], // too few characters, skip
   ananta: [], // too few characters, skip
+  endfield: ['laevatain', 'ardelia', 'tangtang', 'endministrator', 'lifeng'],
 };
 
 // --- Image URL helpers per game ---
@@ -92,6 +94,12 @@ function getFeaturedChars(gameId: string, locale: SupportedLocale): CharAccessor
       for (const id of ids) {
         const c = anantaCharacters.find((ch) => ch.id === id);
         if (c) chars.push({ id: c.id, getName: (l) => getAnantaCharacterName(c, l), getImage: () => toAbsoluteUrl(getAnantaCharacterImage(c)) });
+      }
+      break;
+    case 'endfield':
+      for (const id of ids) {
+        const c = endfieldCharacters.find((ch) => ch.id === id);
+        if (c) chars.push({ id: c.id, getName: (l) => getEndfieldCharacterName(c, l), getImage: () => toAbsoluteUrl(getEndfieldCharacterImage(c)) });
       }
       break;
   }

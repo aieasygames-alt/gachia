@@ -10,6 +10,8 @@ import { characterMaterials as guihuanCharacterMaterials } from './games/guihuan
 import { guihuanCharacters, getGuihuanCharacterImage } from './games/guihuan/characters';
 import { characterMaterials as anantaCharacterMaterials } from './games/ananta/extras';
 import { anantaCharacters, getAnantaCharacterImage } from './games/ananta/characters';
+import { characterMaterials as endfieldCharacterMaterials } from './games/endfield/extras';
+import { endfieldCharacters, getEndfieldCharacterImage } from './games/endfield/characters';
 
 export interface MaterialCharacter {
   id: string;
@@ -108,6 +110,20 @@ export function getCharactersNeedingMaterial(gameId: GameId, materialId: string)
     return dedupeById([...charIds].map(id => {
       const c = anantaCharacters.find(ch => ch.id === id);
       return c ? { id: c.id, element: c.element, image: getAnantaCharacterImage(c) } : null;
+    }).filter(Boolean) as MaterialCharacter[]);
+  }
+
+  if (gameId === 'endfield') {
+    const charIds = new Set<string>();
+    for (const cm of endfieldCharacterMaterials) {
+      if (cm.ascensionMaterials.some(a => a.materials.some(m => m.materialId === materialId))
+        || cm.talentMaterials.some(t => t.materials.some(m => m.materialId === materialId))) {
+        charIds.add(cm.characterId);
+      }
+    }
+    return dedupeById([...charIds].map(id => {
+      const c = endfieldCharacters.find(ch => ch.id === id);
+      return c ? { id: c.id, element: c.element, image: getEndfieldCharacterImage(c) } : null;
     }).filter(Boolean) as MaterialCharacter[]);
   }
 

@@ -22,6 +22,9 @@ import {
 import {
   anantaMaterials, getAnantaMaterialById, getAnantaMaterialName,
 } from '@gachia/data/games/ananta/items';
+import {
+  endfieldMaterials, getEndfieldMaterialById, getEndfieldMaterialName,
+} from '@gachia/data/games/endfield/items';
 import { getCharactersNeedingMaterial } from '@gachia/data/material-characters';
 import { Link } from '@/lib/i18n/navigation';
 
@@ -61,6 +64,7 @@ export async function generateStaticParams() {
     ...zzzMaterials.map((m) => ({ lang, game: 'zzz', id: m.id })),
     ...guihuanMaterials.map((m) => ({ lang, game: 'guihuan', id: m.id })),
     ...anantaMaterials.map((m) => ({ lang, game: 'ananta', id: m.id })),
+    ...endfieldMaterials.map((m) => ({ lang, game: 'endfield', id: m.id })),
   ]);
 }
 
@@ -111,6 +115,11 @@ export async function generateMetadata({
     const m = getAnantaMaterialById(id);
     if (!m) return {};
     name = getAnantaMaterialName(m, locale);
+    description = (locale === 'en' ? m.sourceEn : m.source).slice(0, 160);
+  } else if (gameId === 'endfield') {
+    const m = getEndfieldMaterialById(id);
+    if (!m) return {};
+    name = getEndfieldMaterialName(m, locale);
     description = (locale === 'en' ? m.sourceEn : m.source).slice(0, 160);
   }
 
@@ -192,6 +201,11 @@ function getItemData(gameId: GameId, id: string, locale: SupportedLocale): ItemD
     const m = getAnantaMaterialById(id);
     if (!m) return null;
     return { name: getAnantaMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name, rarity: m.rarity, type: m.type, source: locale === 'en' ? m.sourceEn : m.source };
+  }
+  if (gameId === 'endfield') {
+    const m = getEndfieldMaterialById(id);
+    if (!m) return null;
+    return { name: getEndfieldMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name, rarity: m.rarity, type: m.type, source: locale === 'en' ? m.sourceEn : m.source };
   }
   return null;
 }

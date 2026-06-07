@@ -7,16 +7,28 @@ import { genshinCharacters, getGenshinCharacterName } from '@gachia/data/games/g
 import { starrailCharacters, getStarRailCharacterName } from '@gachia/data/games/starrail/characters';
 import { wuwaCharacters, getWuWaCharacterName } from '@gachia/data/games/wuwa/characters';
 import { nteCharacters, getNteCharacterName } from '@gachia/data/games/nte/characters';
+import { zzzCharacters, getZzzCharacterName } from '@gachia/data/games/zzz/characters';
+import { guihuanCharacters, getGuihuanCharacterName } from '@gachia/data/games/guihuan/characters';
+import { anantaCharacters, getAnantaCharacterName } from '@gachia/data/games/ananta/characters';
+import { endfieldCharacters, getEndfieldCharacterName } from '@gachia/data/games/endfield/characters';
 // Weapons
 import { genshinWeapons, getGenshinWeaponName } from '@gachia/data/games/genshin/weapons';
 import { starrailLightCones, getStarRailLightConeName } from '@gachia/data/games/starrail/weapons';
 import { wuwaWeapons, getWuWaWeaponName } from '@gachia/data/games/wuwa/weapons';
 import { nteWeapons, getNteWeaponName } from '@gachia/data/games/nte/weapons';
+import { zzzWeapons, getZzzWeaponName } from '@gachia/data/games/zzz/weapons';
+import { guihuanWeapons, getGuihuanWeaponName } from '@gachia/data/games/guihuan/weapons';
+import { anantaWeapons, getAnantaWeaponName } from '@gachia/data/games/ananta/weapons';
+import { endfieldWeapons, getEndfieldWeaponName } from '@gachia/data/games/endfield/weapons';
 // Items
 import { genshinMaterials, getGenshinMaterialName } from '@gachia/data/games/genshin/items';
 import { starrailMaterials, getStarRailMaterialName } from '@gachia/data/games/starrail/items';
 import { wuwaMaterials, getWuWaMaterialName } from '@gachia/data/games/wuwa/items';
 import { nteMaterials, getNteMaterialName } from '@gachia/data/games/nte/items';
+import { zzzMaterials, getZzzMaterialName } from '@gachia/data/games/zzz/items';
+import { guihuanMaterials, getGuihuanMaterialName } from '@gachia/data/games/guihuan/items';
+import { anantaMaterials, getAnantaMaterialName } from '@gachia/data/games/ananta/items';
+import { endfieldMaterials, getEndfieldMaterialName } from '@gachia/data/games/endfield/items';
 // Equipment sets
 import { artifactSets as genshinArtifactSets, getArtifactSetName } from '@gachia/data/games/genshin/artifacts';
 import { relicSets as starrailRelicSets, getRelicSetName as getStarRailRelicSetName } from '@gachia/data/games/starrail/relics';
@@ -74,6 +86,38 @@ function buildIndex(locale: SupportedLocale): SearchItem[] {
       type: 'character', url: `/nte/characters/${c.id}`,
     });
   }
+  for (const c of zzzCharacters) {
+    items.push({
+      id: `zzz-char-${c.id}`, gameId: 'zzz',
+      name: getZzzCharacterName(c, locale),
+      nameAlt: locale === 'zh' ? c.nameEn : c.name,
+      type: 'character', url: `/zzz/characters/${c.id}`,
+    });
+  }
+  for (const c of guihuanCharacters) {
+    items.push({
+      id: `guihuan-char-${c.id}`, gameId: 'guihuan',
+      name: getGuihuanCharacterName(c, locale),
+      nameAlt: locale === 'zh' ? c.nameEn : c.name,
+      type: 'character', url: `/guihuan/characters/${c.id}`,
+    });
+  }
+  for (const c of anantaCharacters) {
+    items.push({
+      id: `ananta-char-${c.id}`, gameId: 'ananta',
+      name: getAnantaCharacterName(c, locale),
+      nameAlt: locale === 'zh' ? c.nameEn : c.name,
+      type: 'character', url: `/ananta/characters/${c.id}`,
+    });
+  }
+  for (const c of endfieldCharacters) {
+    items.push({
+      id: `endfield-char-${c.id}`, gameId: 'endfield',
+      name: getEndfieldCharacterName(c, locale),
+      nameAlt: locale === 'zh' ? c.nameEn : c.name,
+      type: 'character', url: `/endfield/characters/${c.id}`,
+    });
+  }
 
   // Weapons
   for (const w of genshinWeapons) {
@@ -108,6 +152,38 @@ function buildIndex(locale: SupportedLocale): SearchItem[] {
       type: 'weapon', url: `/nte/weapons/${w.id}`,
     });
   }
+  for (const w of zzzWeapons) {
+    items.push({
+      id: `zzz-weapon-${w.id}`, gameId: 'zzz',
+      name: getZzzWeaponName(w, locale),
+      nameAlt: locale === 'zh' ? w.nameEn : w.name,
+      type: 'weapon', url: `/zzz/weapons/${w.id}`,
+    });
+  }
+  for (const w of guihuanWeapons) {
+    items.push({
+      id: `guihuan-weapon-${w.id}`, gameId: 'guihuan',
+      name: getGuihuanWeaponName(w, locale),
+      nameAlt: locale === 'zh' ? w.nameEn : w.name,
+      type: 'weapon', url: `/guihuan/weapons/${w.id}`,
+    });
+  }
+  for (const w of anantaWeapons) {
+    items.push({
+      id: `ananta-weapon-${w.id}`, gameId: 'ananta',
+      name: getAnantaWeaponName(w, locale),
+      nameAlt: locale === 'zh' ? w.nameEn : w.name,
+      type: 'weapon', url: `/ananta/weapons/${w.id}`,
+    });
+  }
+  for (const w of endfieldWeapons) {
+    items.push({
+      id: `endfield-weapon-${w.id}`, gameId: 'endfield',
+      name: getEndfieldWeaponName(w, locale),
+      nameAlt: locale === 'zh' ? w.nameEn : w.name,
+      type: 'weapon', url: `/endfield/weapons/${w.id}`,
+    });
+  }
 
   // Items
   for (const m of genshinMaterials) {
@@ -140,6 +216,38 @@ function buildIndex(locale: SupportedLocale): SearchItem[] {
       name: getNteMaterialName(m, locale),
       nameAlt: locale === 'zh' ? (m.nameEn ?? '') : (m.name ?? ''),
       type: 'item', url: `/nte/items/${m.id}`,
+    });
+  }
+  for (const m of zzzMaterials) {
+    items.push({
+      id: `zzz-item-${m.id}`, gameId: 'zzz',
+      name: getZzzMaterialName(m, locale),
+      nameAlt: locale === 'zh' ? m.nameEn : m.name,
+      type: 'item', url: `/zzz/items/${m.id}`,
+    });
+  }
+  for (const m of guihuanMaterials) {
+    items.push({
+      id: `guihuan-item-${m.id}`, gameId: 'guihuan',
+      name: getGuihuanMaterialName(m, locale),
+      nameAlt: locale === 'zh' ? m.nameEn : m.name,
+      type: 'item', url: `/guihuan/items/${m.id}`,
+    });
+  }
+  for (const m of anantaMaterials) {
+    items.push({
+      id: `ananta-item-${m.id}`, gameId: 'ananta',
+      name: getAnantaMaterialName(m, locale),
+      nameAlt: locale === 'zh' ? m.nameEn : m.name,
+      type: 'item', url: `/ananta/items/${m.id}`,
+    });
+  }
+  for (const m of endfieldMaterials) {
+    items.push({
+      id: `endfield-item-${m.id}`, gameId: 'endfield',
+      name: getEndfieldMaterialName(m, locale),
+      nameAlt: locale === 'zh' ? m.nameEn : m.name,
+      type: 'item', url: `/endfield/items/${m.id}`,
     });
   }
 
@@ -185,6 +293,10 @@ const GAME_NAMES: Record<string, Record<string, string>> = {
   starrail: { zh: '星铁', en: 'Star Rail', ja: 'スタレ' },
   wuwa: { zh: '鸣潮', en: 'WuWa', ja: '鳴潮' },
   nte: { zh: '无限暖暖', en: 'NTE', ja: 'NTE' },
+  zzz: { zh: '绝区零', en: 'ZZZ', ja: 'ゼンゼロ' },
+  guihuan: { zh: '归环', en: 'Guihuan', ja: '帰環' },
+  ananta: { zh: '无限大', en: 'Ananta', ja: 'アナンタ' },
+  endfield: { zh: '终末地', en: 'Endfield', ja: 'エンドフィールド' },
 };
 
 const TYPE_LABELS: Record<string, Record<string, string>> = {
