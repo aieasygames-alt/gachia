@@ -27,19 +27,18 @@ export function getEndfieldWeaponSource(weapon: EndfieldWeapon, locale: Supporte
 
 function getWeaponMaterials(weaponType: string, rarity: number): { itemId: string; quantities: number[] }[] {
   const typeMaterial: Record<string, string> = {
-    'Sword': 'grindstone',
-    'Great Sword': 'manganese-ore',
-    'Polearm': 'crystalline-component',
-    'Handcannon': 'incandescent-alloy',
-    'Arts Unit': 'protocolized-weapon-pattern',
+    'Sword': 'protoprism',
+    'Great Sword': 'protoprism',
+    'Polearm': 'protoprism',
+    'Handcannon': 'protoprism',
+    'Arts Unit': 'protoprism',
   };
-  const baseMat = typeMaterial[weaponType] ?? 'grindstone';
+  const baseMat = typeMaterial[weaponType] ?? 'protoprism';
   const tierMultiplier = rarity >= 6 ? 1.5 : 1;
   return [
     { itemId: baseMat, quantities: [3, 5, 8, 12, 18, 25].map(q => Math.round(q * tierMultiplier)) },
-    { itemId: 'arms-inspector', quantities: [5, 8, 12, 18, 25, 35].map(q => Math.round(q * tierMultiplier)) },
-    { itemId: 'arms-insp-kit', quantities: [0, 3, 5, 8, 12, 18].map(q => Math.round(q * tierMultiplier)) },
-    { itemId: 'arms-insp-set', quantities: [0, 0, 2, 4, 6, 10].map(q => Math.round(q * tierMultiplier)) },
+    { itemId: 'protodisk', quantities: [5, 8, 12, 18, 25, 35].map(q => Math.round(q * tierMultiplier)) },
+    { itemId: 'protoset', quantities: [0, 3, 5, 8, 12, 18].map(q => Math.round(q * tierMultiplier)) },
   ];
 }
 
