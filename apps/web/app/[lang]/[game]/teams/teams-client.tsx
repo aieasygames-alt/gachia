@@ -40,6 +40,13 @@ import {
   getGuihuanCharacterImage,
 } from '@gachia/data/games/guihuan/characters';
 import type { GuihuanCharacter } from '@gachia/data/games/guihuan/types';
+import {
+  endfieldCharacters,
+  getEndfieldCharacterName,
+  getEndfieldCharacterImage,
+  getEndfieldCharacterById,
+} from '@gachia/data/games/endfield/characters';
+import type { EndfieldCharacter } from '@gachia/data/games/endfield/types';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 // --- Constants ---
@@ -138,6 +145,7 @@ export function TeamsClient({ gameId, locale }: { gameId: GameId; locale: Suppor
   if (gameId === 'nte') return <NteTeams locale={locale} />;
   if (gameId === 'zzz') return <ZzzTeams locale={locale} />;
   if (gameId === 'guihuan') return <GuihuanTeams locale={locale} />;
+  if (gameId === 'endfield') return <EndfieldTeams locale={locale} />;
   return <ComingSoon locale={locale} />;
 }
 
@@ -1123,6 +1131,116 @@ function GuihuanTeams({ locale }: { locale: SupportedLocale }) {
           </div>
         ))}
       </div>
+    </div>
+  );
+}
+
+// =====================================================================
+// Endfield Teams
+// =====================================================================
+
+const ENDFIELD_ELEMENT_COLORS: Record<string, string> = {
+  physical: '#9ca3af', heat: '#ef4444', cryo: '#67e8f9',
+  nature: '#4ade80', electric: '#facc15',
+};
+
+function EndfieldTeams({ locale }: { locale: SupportedLocale }) {
+  const [filterElement, setFilterElement] = useState<string>('all');
+  const [filterRarity, setFilterRarity] = useState<string>('all');
+
+  const allElements = useMemo(() => {
+    const elSet = new Set<string>();
+    endfieldCharacters.forEach((c) => elSet.add(c.element));
+    return Array.from(elSet);
+  }, []);
+
+  const filtered = useMemo(() => {
+    let chars = endfieldCharacters.filter((c) => c.teamComps.length > 0);
+    if (filterElement !== 'all') chars = chars.filter((c) => c.element === filterElement);
+    if (filterRarity !== 'all') chars = chars.filter((c) => String(c.rarity) === filterRarity);
+    return chars;
+  }, [filterElement, filterRarity]);
+
+  return (
+    <div>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {t(locale, `共 ${filtered.length} 位干员的推荐配队`, `${filtered.length} operators with recommended teams`, `${filtered.length}オペレーターのおすすめ編成`)}
+      </p>
+
+      {/* Filters */}
+      <div className="mb-4 flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-1.5">
+          <button onClick={() => setFilterElement('all')}
+            className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${filterElement === 'all' ? 'bg-game-primary text-white' : 'bg-game-surface-alt text-game-text-muted hover:text-game-text'}`}>
+            {t(locale, '全部元素', 'All Elements', '全元素')}
+          </button>
+          {allElements.map((el) => (
+            <button key={el} onClick={() => setFilterElement(el)}
+              className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${filterElement === el ? 'text-white' : 'bg-game-surface-alt text-game-text-muted hover:text-game-text'}`}
+              style={filterElement === el ? { backgroundColor: ENDFIELD_ELEMENT_COLORS[el] ?? '#6b7280' } : {}}>
+              {el.charAt(0).toUpperCase() + el.slice(1)}
+            </button>
+          ))}
+        </div>
+        <div className="flex flex-wrap gap-1.5">
+          <button onClick={() => setFilterRarity('all')}
+            className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${filterRarity === 'all' ? 'bg-game-primary text-white' : 'bg-game-surface-alt text-game-text-muted hover:text-game-text'}`}>
+            {t(locale, '全部稀有度', 'All Rarity', '全レアリティ')}
+          </button>
+          {['6', '5'].map((r) => (
+            <button key={r} onClick={() => setFilterRarity(r)}
+              className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${filterRarity === r ? 'bg-game-primary text-white' : 'bg-game-surface-alt text-game-text-muted hover:text-game-text'}`}>
+              {r}{'★'}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="space-y-4">
+        {filtered.map((char) => (
+          <div key={char.id} className="rounded-lg border border-game-border bg-game-surface p-4">
+            <div className="mb-3 flex items-center gap-3">
+              <CharacterAvatar src={getEndfieldCharacterImage(char)} alt={getEndfieldCharacterName(char, locale)} element={char.element} className="h-10 w-10 rounded-lg object-cover" />
+              <div>
+                <h3 className="font-semibold text-game-text">{getEndfieldCharacterName(char, locale)}</h3>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-xs rounded px-1" style={{ backgroundColor: ENDFIELD_ELEMENT_COLORS[char.element] ?? '#6b7280', color: '#fff' }}>{char.elementEn}</span>
+                  <span className="text-[10px] text-yellow-500">{char.rarity}{'★'}</span>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-3">
+              {char.teamComps.map((team, i) => (
+                <div key={i} className="rounded border border-game-border/50 bg-game-surface-alt p-3">
+                  <div className="mb-1 flex items-center gap-2">
+                    <span className="text-sm font-medium text-game-text">{locale === 'zh' ? team.name : team.nameEn}</span>
+                  </div>
+                  <p className="mb-2 text-xs text-game-text-muted">{locale === 'zh' ? team.description : team.descriptionEn}</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {team.members.map((memberId) => {
+                      const member = getEndfieldCharacterById(memberId);
+                      return member ? (
+                        <span key={memberId} className="flex items-center gap-1.5 rounded bg-game-surface px-2 py-0.5 text-xs text-game-primary">
+                          <CharacterAvatar src={getEndfieldCharacterImage(member)} alt={getEndfieldCharacterName(member, locale)} element={member.element} className="h-5 w-5 rounded object-cover" />
+                          {getEndfieldCharacterName(member, locale)}
+                        </span>
+                      ) : (
+                        <span key={memberId} className="rounded bg-game-surface px-2 py-0.5 text-xs text-game-text-muted">{memberId}</span>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {filtered.length === 0 && (
+        <div className="rounded-xl border-2 border-dashed border-game-border p-8 text-center">
+          <p className="text-sm text-game-text-muted">{t(locale, '暂无配队数据', 'No team data available', 'チームデータなし')}</p>
+        </div>
+      )}
     </div>
   );
 }

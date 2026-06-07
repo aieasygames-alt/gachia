@@ -25,6 +25,24 @@ export function getEndfieldWeaponSource(weapon: EndfieldWeapon, locale: Supporte
   return localeStr(weapon.howToObtain, weapon.howToObtainEn, locale);
 }
 
+function getWeaponMaterials(weaponType: string, rarity: number): { itemId: string; quantities: number[] }[] {
+  const typeMaterial: Record<string, string> = {
+    'Sword': 'grindstone',
+    'Great Sword': 'manganese-ore',
+    'Polearm': 'crystalline-component',
+    'Handcannon': 'incandescent-alloy',
+    'Arts Unit': 'protocolized-weapon-pattern',
+  };
+  const baseMat = typeMaterial[weaponType] ?? 'grindstone';
+  const tierMultiplier = rarity >= 6 ? 1.5 : 1;
+  return [
+    { itemId: baseMat, quantities: [3, 5, 8, 12, 18, 25].map(q => Math.round(q * tierMultiplier)) },
+    { itemId: 'arms-inspector', quantities: [5, 8, 12, 18, 25, 35].map(q => Math.round(q * tierMultiplier)) },
+    { itemId: 'arms-insp-kit', quantities: [0, 3, 5, 8, 12, 18].map(q => Math.round(q * tierMultiplier)) },
+    { itemId: 'arms-insp-set', quantities: [0, 0, 2, 4, 6, 10].map(q => Math.round(q * tierMultiplier)) },
+  ];
+}
+
 export const weapons: Weapon[] = endfieldWeapons.map((w) => ({
   id: w.id,
   gameId: 'endfield' as const,
@@ -38,5 +56,5 @@ export const weapons: Weapon[] = endfieldWeapons.map((w) => ({
     name: { zh: w.effectName, en: w.effectNameEn, ja: w.effectNameEn },
     description: { zh: w.effectDescription, en: w.effectDescriptionEn, ja: w.effectDescriptionEn },
   },
-  ascensionMaterials: [],
+  ascensionMaterials: getWeaponMaterials(w.weaponTypeEn, w.rarity),
 }));

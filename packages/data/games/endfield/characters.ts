@@ -46,7 +46,7 @@ export const characters: Character[] = endfieldCharacters.map((char) => ({
   stats: { baseHp: [], baseAtk: [], baseDef: [] },
   materials: [],
   skills: mapSkills(char.skills),
-  releaseVersion: '',
+  releaseVersion: '1.0',
 }));
 
 function mapSkills(skills: EndfieldCharacter['skills']): Character['skills'] {

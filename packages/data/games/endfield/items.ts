@@ -21,7 +21,7 @@ export const items: Item[] = endfieldMaterials.map((m) => ({
   name: { zh: m.name, en: m.nameEn, ja: m.nameEn },
   type: m.type,
   rarity: m.rarity,
-  description: { zh: '', en: '', ja: '' },
+  description: { zh: (m as any).description ?? '', en: (m as any).descriptionEn ?? '', ja: (m as any).descriptionEn ?? '' },
   icon: `${IMAGE_BASE}/images/endfield/materials/${m.id}.webp`,
   sources: [{ zh: m.source, en: m.sourceEn, ja: m.sourceEn }],
 }));

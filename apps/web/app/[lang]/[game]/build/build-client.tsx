@@ -67,6 +67,18 @@ import {
   getGuihuanWeaponEffect,
 } from '@gachia/data/games/guihuan/weapons';
 import type { GuihuanCharacter, GuihuanWeapon } from '@gachia/data/games/guihuan/types';
+import {
+  endfieldCharacters,
+  getEndfieldCharacterName,
+  getEndfieldCharacterImage,
+  getEndfieldCharacterTierReason,
+} from '@gachia/data/games/endfield/characters';
+import {
+  endfieldWeapons,
+  getEndfieldWeaponName,
+  getEndfieldWeaponEffect,
+} from '@gachia/data/games/endfield/weapons';
+import type { EndfieldCharacter } from '@gachia/data/games/endfield/types';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 // --- Constants ---
@@ -166,6 +178,7 @@ export function BuildClient({ gameId, locale }: { gameId: GameId; locale: Suppor
   if (gameId === 'nte') return <NteBuildRecommender locale={locale} />;
   if (gameId === 'zzz') return <ZzzBuildRecommender locale={locale} />;
   if (gameId === 'guihuan') return <GuihuanBuildRecommender locale={locale} />;
+  if (gameId === 'endfield') return <EndfieldBuildRecommender locale={locale} />;
   return <ComingSoon locale={locale} />;
 }
 
@@ -1167,6 +1180,30 @@ const GUIHUAN_ELEMENT_NAMES: Record<string, Record<string, string>> = {
   void: { zh: '虚空', en: 'Void', ja: '虚空' },
 };
 
+// --- Endfield Constants ---
+
+const ENDFIELD_ELEMENT_COLORS: Record<string, string> = {
+  physical: '#9ca3af', heat: '#ef4444', cryo: '#67e8f9',
+  nature: '#4ade80', electric: '#facc15',
+};
+const ENDFIELD_ELEMENT_NAMES: Record<string, Record<string, string>> = {
+  physical: { zh: '物理', en: 'Physical', ja: '物理' },
+  heat: { zh: '热能', en: 'Heat', ja: 'ヒート' },
+  cryo: { zh: '冷冻', en: 'Cryo', ja: 'フロスト' },
+  nature: { zh: '自然', en: 'Nature', ja: 'ネイチャー' },
+  electric: { zh: '电击', en: 'Electric', ja: 'エレキ' },
+};
+const ENDFIELD_PROFESSION_NAMES: Record<string, Record<string, string>> = {
+  fighter: { zh: '战士', en: 'Fighter', ja: 'ファイター' },
+  guardian: { zh: '守护', en: 'Guardian', ja: 'ガーディアン' },
+  engineer: { zh: '工程师', en: 'Engineer', ja: 'エンジニア' },
+  sniper: { zh: '狙击', en: 'Sniper', ja: 'スナイパー' },
+  medic: { zh: '医疗', en: 'Medic', ja: 'メディック' },
+  caster: { zh: '术师', en: 'Caster', ja: 'キャスター' },
+  pioneer: { zh: '先锋', en: 'Pioneer', ja: 'パイオニア' },
+  specialist: { zh: '特种', en: 'Specialist', ja: 'スペシャリスト' },
+};
+
 function ZzzBuildRecommender({ locale }: { locale: SupportedLocale }) {
   const [selectedChar, setSelectedChar] = useState<ZzzCharacter | null>(null);
   const [elementFilter, setElementFilter] = useState<string>('all');
@@ -1356,6 +1393,294 @@ function GuihuanBuildRecommender({ locale }: { locale: SupportedLocale }) {
           )}
         </div>
       </div>
+    </div>
+  );
+}
+
+// =====================================================================
+// Endfield Build Recommender
+// =====================================================================
+
+function EndfieldBuildRecommender({ locale }: { locale: SupportedLocale }) {
+  const [selectedChar, setSelectedChar] = useState<EndfieldCharacter | null>(null);
+  const [showSelector, setShowSelector] = useState(true);
+  const [search, setSearch] = useState('');
+  const [filterElement, setFilterElement] = useState<string>('all');
+  const [filterRarity, setFilterRarity] = useState<string>('all');
+  const [shareCopied, setShareCopied] = useState(false);
+
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      const char = endfieldCharacters.find(c => c.id === hash);
+      if (char) { setSelectedChar(char); setShowSelector(false); }
+    }
+  }, []);
+
+  const filtered = useMemo(() => {
+    let chars = endfieldCharacters;
+    if (filterElement !== 'all') chars = chars.filter((c) => c.elementEn.toLowerCase() === filterElement.toLowerCase());
+    if (filterRarity !== 'all') chars = chars.filter((c) => c.rarity === Number(filterRarity));
+    if (search.trim()) {
+      const q = search.toLowerCase();
+      chars = chars.filter((c) => c.name.toLowerCase().includes(q) || c.nameEn.toLowerCase().includes(q) || c.id.includes(q));
+    }
+    return chars;
+  }, [search, filterElement, filterRarity]);
+
+  const gameConfig = GAMES.endfield;
+  const build = selectedChar?.recommendedBuild;
+
+  // Resolve weapon from endfieldWeapons
+  const weapon = build ? endfieldWeapons.find((w) => w.nameEn.toLowerCase() === build.bestWeaponEn.toLowerCase()) ?? null : null;
+
+  // Resolve alternative weapons
+  const altWeapons = useMemo(() => {
+    if (!build || build.alternativeWeapons.length === 0) return [];
+    return build.alternativeWeapons
+      .map((name) => endfieldWeapons.find((w) => w.nameEn.toLowerCase() === name.toLowerCase()))
+      .filter((w): w is NonNullable<typeof w> => w != null);
+  }, [build]);
+
+  return (
+    <div>
+      <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {t(locale, '配装推荐', 'Build Recommender', 'ビルドおすすめ')}
+      </h1>
+
+      {selectedChar && !showSelector ? (
+        <div className="mb-4 flex items-center gap-4 rounded-xl border border-game-primary/30 bg-game-surface p-4">
+          <CharacterAvatar src={getEndfieldCharacterImage(selectedChar)} alt={selectedChar.nameEn} element={selectedChar.elementEn} className="h-16 w-16 rounded-xl object-cover ring-2 ring-game-primary/50" />
+          <div className="flex-1">
+            <div className="flex items-center gap-2">
+              <h2 className="text-lg font-bold text-game-text">{getEndfieldCharacterName(selectedChar, locale)}</h2>
+              <span className="text-sm font-bold text-yellow-500">{selectedChar.rarity}★</span>
+              <span className="rounded-full px-2 py-0.5 text-xs font-medium text-white" style={{ backgroundColor: ENDFIELD_ELEMENT_COLORS[selectedChar.elementEn.toLowerCase()] || '#888' }}>
+                {ENDFIELD_ELEMENT_NAMES[selectedChar.elementEn.toLowerCase()]?.[locale] ?? selectedChar.elementEn}
+              </span>
+              <span className="text-xs text-game-text-muted">{ENDFIELD_PROFESSION_NAMES[selectedChar.professionEn.toLowerCase()]?.[locale] ?? selectedChar.professionEn}</span>
+            </div>
+          </div>
+          <button onClick={() => setShowSelector(true)} className="rounded-lg border border-game-border bg-game-surface-alt px-3 py-1.5 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+            {t(locale, '更换角色', 'Change', '変更')}
+          </button>
+          <button onClick={() => {
+            const url = window.location.origin + window.location.pathname + '#' + selectedChar.id;
+            navigator.clipboard.writeText(url);
+            setShareCopied(true);
+            setTimeout(() => setShareCopied(false), 2000);
+          }} className="rounded-lg border border-game-primary/30 bg-game-primary/10 px-3 py-1.5 text-sm text-game-primary transition-colors hover:bg-game-primary/20">
+            {shareCopied ? '✓' : t(locale, '分享', 'Share', '共有')}
+          </button>
+        </div>
+      ) : null}
+
+      {showSelector ? (
+        <div className="mb-6 rounded-xl border border-game-border bg-game-surface p-4">
+          <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder={t(locale, '搜索角色名称...', 'Search character...', 'キャラを検索...')}
+            className="mb-3 w-full rounded-lg border border-game-border bg-game-surface-alt px-4 py-2.5 text-sm text-game-text placeholder-game-text-muted/50 outline-none transition-colors focus:border-game-primary" />
+          <div className="mb-3 flex flex-wrap gap-1.5">
+            <button onClick={() => setFilterElement('all')} className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${filterElement === 'all' ? 'bg-game-primary text-white' : 'bg-game-surface-alt text-game-text-muted hover:text-game-text'}`}>
+              {t(locale, '全部', 'All', '全')}
+            </button>
+            {Object.keys(ENDFIELD_ELEMENT_COLORS).map((el) => (
+              <button key={el} onClick={() => setFilterElement(el)}
+                className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${filterElement === el ? 'text-white' : 'bg-game-surface-alt text-game-text-muted hover:text-game-text'}`}
+                style={filterElement === el ? { backgroundColor: ENDFIELD_ELEMENT_COLORS[el] } : {}}>
+                {ENDFIELD_ELEMENT_NAMES[el]?.[locale] ?? el}
+              </button>
+            ))}
+          </div>
+          <div className="mb-4 flex gap-1.5">
+            {['all', '5', '6'].map((r) => (
+              <button key={r} onClick={() => setFilterRarity(r)}
+                className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${filterRarity === r ? 'bg-game-primary text-white' : 'bg-game-surface-alt text-game-text-muted hover:text-game-text'}`}>
+                {r === 'all' ? t(locale, '全部稀有度', 'All Rarities', '全レアリティ') : `${r}★`}
+              </button>
+            ))}
+          </div>
+          <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8">
+            {filtered.map((c) => (
+              <button key={c.id} onClick={() => { setSelectedChar(c); setShowSelector(false); setSearch(''); setFilterElement('all'); setFilterRarity('all'); }}
+                className={`group flex flex-col items-center gap-1 rounded-lg border p-2 transition-all ${selectedChar?.id === c.id ? 'border-game-primary bg-game-primary/10 ring-1 ring-game-primary/30' : 'border-game-border bg-game-surface-alt hover:border-game-primary/50'}`}>
+                <CharacterAvatar src={getEndfieldCharacterImage(c)} alt={c.nameEn} element={c.elementEn} className="h-10 w-10 rounded-lg object-cover" />
+                <span className={`text-center text-[11px] leading-tight ${selectedChar?.id === c.id ? 'font-medium text-game-primary' : 'text-game-text-muted group-hover:text-game-text'}`}>
+                  {getEndfieldCharacterName(c, locale)}
+                </span>
+                <span className="text-[10px] text-yellow-500">{c.rarity}★</span>
+              </button>
+            ))}
+            {filtered.length === 0 && (
+              <div className="col-span-full py-8 text-center text-sm text-game-text-muted">
+                {t(locale, '没有找到角色', 'No characters found', 'キャラが見つかりません')}
+              </div>
+            )}
+          </div>
+        </div>
+      ) : null}
+
+      {selectedChar && build && (
+        <div className="space-y-4">
+          {selectedChar.tierReason && (
+            <div className="rounded-xl border border-game-border bg-game-surface p-4">
+              <p className="text-sm text-game-primary">{getEndfieldCharacterTierReason(selectedChar, locale)}</p>
+            </div>
+          )}
+
+          {/* Best Weapon */}
+          <div className="rounded-xl border border-game-border bg-game-surface p-4">
+            <h3 className="mb-3 text-sm font-semibold text-game-primary">
+              {t(locale, '最佳武器', 'Best Weapon', '最佳武器')}
+            </h3>
+            {weapon ? (
+              <div className={`rounded-lg border p-3 ${RARITY_BG[weapon.rarity] || ''} ${RARITY_BORDER[weapon.rarity] || 'border-game-border'}`}>
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="font-semibold text-game-text">{getEndfieldWeaponName(weapon, locale)}</span>
+                  <span className="text-xs text-yellow-500">{'★'.repeat(weapon.rarity)}</span>
+                </div>
+                <div className="flex gap-4 text-xs text-game-text-muted mb-2">
+                  <span>{t(locale, '基础攻击', 'Base ATK', '基礎攻撃')}: <span className="font-medium text-game-text">{weapon.baseAtk}</span></span>
+                  {weapon.substatEn && <span>{weapon.substatEn}: <span className="font-medium text-game-text">{weapon.substatValue}</span></span>}
+                </div>
+                {weapon.effectNameEn && (
+                  <div className="text-xs text-game-text-muted">
+                    <span className="font-medium text-game-text">{getEndfieldWeaponEffect(weapon, locale).name}</span>
+                    <span className="ml-1">{getEndfieldWeaponEffect(weapon, locale).description}</span>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <p className="text-sm text-game-text-muted">{locale === 'zh' ? build.bestWeapon : build.bestWeaponEn}</p>
+            )}
+            {altWeapons.length > 0 && (
+              <div className="mt-3 space-y-2">
+                <div className="text-xs text-game-text-muted">{t(locale, '备选武器', 'Alternative Weapons', '代替武器')}</div>
+                {altWeapons.map((w) => (
+                  <div key={w.id} className={`rounded-lg border p-2 ${RARITY_BG[w.rarity] || ''} ${RARITY_BORDER[w.rarity] || 'border-game-border'}`}>
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm font-medium text-game-text">{getEndfieldWeaponName(w, locale)}</span>
+                      <span className="text-[10px] text-yellow-500">{'★'.repeat(w.rarity)}</span>
+                      <span className="text-xs text-game-text-muted">ATK {w.baseAtk}</span>
+                      {w.substatEn && <span className="text-xs text-game-text-muted">{w.substatEn} {w.substatValue}</span>}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Alternative Weapons (text fallback) */}
+          {build.alternativeWeapons.length > 0 && altWeapons.length === 0 && (
+            <div className="rounded-xl border border-game-border bg-game-surface p-4">
+              <h3 className="mb-3 text-sm font-semibold text-game-primary">
+                {t(locale, '备选武器', 'Alternative Weapons', '代替武器')}
+              </h3>
+              <p className="text-sm text-game-text-muted">{build.alternativeWeapons.join(', ')}</p>
+            </div>
+          )}
+
+          {/* Main Stats */}
+          <div className="rounded-xl border border-game-border bg-game-surface p-4">
+            <h3 className="mb-3 text-sm font-semibold text-game-primary">
+              {t(locale, '主属性', 'Main Stats', 'メインステータス')}
+            </h3>
+            <div className="grid grid-cols-3 gap-3">
+              {Object.entries(locale === 'zh' ? build.mainStats : build.mainStatsEn).map(([slot, stat]) => (
+                <div key={slot} className="rounded-lg bg-game-surface-alt p-3 text-center">
+                  <div className="text-xs text-game-text-muted mb-1">{slot}</div>
+                  <div className="rounded-full bg-game-primary/20 px-2 py-0.5 text-xs font-medium text-game-primary inline-block">
+                    {stat}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Substat Priority */}
+          <div className="rounded-xl border border-game-border bg-game-surface p-4">
+            <h3 className="mb-3 text-sm font-semibold text-game-primary">
+              {t(locale, '副属性优先级', 'Substat Priority', 'サブステータス優先度')}
+            </h3>
+            <div className="flex flex-wrap items-center gap-1.5">
+              {(locale === 'zh' ? build.subStatPriority : build.subStatPriorityEn).map((stat, i) => (
+                <span key={i} className="flex items-center gap-1.5">
+                  <span className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium ${
+                    i === 0 ? 'bg-game-primary text-white' : i <= 2 ? 'bg-game-primary/20 text-game-primary' : 'bg-game-surface-alt text-game-text-muted'
+                  }`}>
+                    <span className="text-[10px] opacity-70">#{i + 1}</span> {stat}
+                  </span>
+                  {i < (locale === 'zh' ? build.subStatPriority : build.subStatPriorityEn).length - 1 && (
+                    <span className="text-game-text-muted text-xs">&gt;</span>
+                  )}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Skills */}
+          <div className="rounded-xl border border-game-border bg-game-surface p-4">
+            <h3 className="mb-3 text-sm font-semibold text-game-primary">{t(locale, '技能', 'Skills', 'スキル')}</h3>
+            <div className="space-y-2">
+              <details className="group rounded-lg border border-game-border bg-game-surface-alt">
+                <summary className="cursor-pointer px-3 py-2 text-sm">
+                  <span className="mr-2 text-xs text-game-primary">[{t(locale, '普通攻击', 'Normal Attack', '通常攻撃')}]</span>
+                  <span className="font-medium text-game-text">{locale === 'zh' ? selectedChar.skills.normalAttack.name : selectedChar.skills.normalAttack.nameEn}</span>
+                </summary>
+                <div className="border-t border-game-border px-3 py-2 text-xs text-game-text-muted">{locale === 'zh' ? selectedChar.skills.normalAttack.description : selectedChar.skills.normalAttack.descriptionEn}</div>
+              </details>
+              <details className="group rounded-lg border border-game-border bg-game-surface-alt">
+                <summary className="cursor-pointer px-3 py-2 text-sm">
+                  <span className="mr-2 text-xs text-game-primary">[{t(locale, '战技', 'Skill', '戦技')}]</span>
+                  <span className="font-medium text-game-text">{locale === 'zh' ? selectedChar.skills.skill.name : selectedChar.skills.skill.nameEn}</span>
+                </summary>
+                <div className="border-t border-game-border px-3 py-2 text-xs text-game-text-muted">{locale === 'zh' ? selectedChar.skills.skill.description : selectedChar.skills.skill.descriptionEn}</div>
+              </details>
+              <details className="group rounded-lg border border-game-border bg-game-surface-alt">
+                <summary className="cursor-pointer px-3 py-2 text-sm">
+                  <span className="mr-2 text-xs text-game-primary">[{t(locale, '终结技', 'Ultimate', '必殺技')}]</span>
+                  <span className="font-medium text-game-text">{locale === 'zh' ? selectedChar.skills.ultimate.name : selectedChar.skills.ultimate.nameEn}</span>
+                </summary>
+                <div className="border-t border-game-border px-3 py-2 text-xs text-game-text-muted">{locale === 'zh' ? selectedChar.skills.ultimate.description : selectedChar.skills.ultimate.descriptionEn}</div>
+              </details>
+              <details className="group rounded-lg border border-game-border bg-game-surface-alt">
+                <summary className="cursor-pointer px-3 py-2 text-sm">
+                  <span className="mr-2 text-xs text-game-primary">[{t(locale, '被动', 'Passive', 'パッシブ')}]</span>
+                  <span className="font-medium text-game-text">{locale === 'zh' ? selectedChar.skills.passive.name : selectedChar.skills.passive.nameEn}</span>
+                </summary>
+                <div className="border-t border-game-border px-3 py-2 text-xs text-game-text-muted">{locale === 'zh' ? selectedChar.skills.passive.description : selectedChar.skills.passive.descriptionEn}</div>
+              </details>
+            </div>
+          </div>
+
+          {/* Team Comps */}
+          {selectedChar.teamComps.length > 0 && (
+            <div className="rounded-xl border border-game-border bg-game-surface p-4">
+              <h3 className="mb-3 text-sm font-semibold text-game-primary">{t(locale, '推荐配队', 'Team Comps', 'おすすめパーティ')}</h3>
+              <div className="space-y-3">
+                {selectedChar.teamComps.map((team, i) => (
+                  <div key={i} className="rounded-lg border border-game-border bg-game-surface-alt p-3">
+                    <h4 className="mb-1 text-sm font-semibold text-game-text">{locale === 'zh' ? team.name : team.nameEn}</h4>
+                    <p className="mb-2 text-xs text-game-text-muted">{locale === 'zh' ? team.description : team.descriptionEn}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {team.members.map((memberId) => {
+                        const member = endfieldCharacters.find(c => c.id === memberId || c.name === memberId || c.nameEn === memberId);
+                        return member ? (
+                          <button key={memberId} onClick={() => { setSelectedChar(member); setShowSelector(false); }}
+                            className="rounded bg-game-surface px-2 py-0.5 text-xs text-game-primary hover:text-game-accent">
+                            {getEndfieldCharacterName(member, locale)}
+                          </button>
+                        ) : (
+                          <span key={memberId} className="rounded bg-game-surface px-2 py-0.5 text-xs text-game-text-muted">{memberId}</span>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

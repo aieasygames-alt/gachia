@@ -6,7 +6,9 @@
     "type": "currency",
     "rarity": 3,
     "source": "任务奖励、战斗掉落、世界探索",
-    "sourceEn": "Quest rewards, battle drops, world exploration"
+    "sourceEn": "Quest rewards, battle drops, world exploration",
+    "description": "塔洛斯-II上通用的标准化货币，可用于购买各类物资和装备。",
+    "descriptionEn": "Standardized currency used across Talos-II for purchasing supplies and equipment."
   },
   {
     "id": "arms-inspector",
@@ -15,7 +17,9 @@
     "type": "weapon",
     "rarity": 2,
     "source": "日常副本",
-    "sourceEn": "Daily dungeons"
+    "sourceEn": "Daily dungeons",
+    "description": "基础的武器升级材料，用于低级武器的强化和突破。",
+    "descriptionEn": "Basic weapon upgrade material used for enhancing and ascending lower-rarity weapons."
   },
   {
     "id": "arms-insp-kit",
@@ -24,7 +28,9 @@
     "type": "weapon",
     "rarity": 3,
     "source": "日常副本、制造",
-    "sourceEn": "Daily dungeons, crafting"
+    "sourceEn": "Daily dungeons, crafting",
+    "description": "进阶武器升级套件，用于中级武器的强化和突破。",
+    "descriptionEn": "Advanced weapon upgrade kit used for enhancing and ascending mid-rarity weapons."
   },
   {
     "id": "arms-insp-set",
@@ -33,7 +39,9 @@
     "type": "weapon",
     "rarity": 4,
     "source": "制造、周常副本",
-    "sourceEn": "Crafting, weekly dungeons"
+    "sourceEn": "Crafting, weekly dungeons",
+    "description": "高级武器升级套装，用于高星级武器的强化和突破。",
+    "descriptionEn": "Premium weapon upgrade set used for enhancing and ascending high-rarity weapons."
   },
   {
     "id": "originium-shard",
@@ -42,7 +50,9 @@
     "type": "ascension",
     "rarity": 2,
     "source": "探索、采矿",
-    "sourceEn": "Exploration, mining"
+    "sourceEn": "Exploration, mining",
+    "description": "从源石矿脉中提取的碎片，含有微量的源石能量。用于低级角色晋升。",
+    "descriptionEn": "Fragments extracted from Originium veins containing trace amounts of Originium energy. Used for lower-tier operator ascension."
   },
   {
     "id": "originium-crystal",
@@ -51,7 +61,9 @@
     "type": "ascension",
     "rarity": 3,
     "source": "精英敌人掉落",
-    "sourceEn": "Elite enemy drops"
+    "sourceEn": "Elite enemy drops",
+    "description": "经过自然结晶的源石，蕴含更纯净的能量。用于中级角色晋升。",
+    "descriptionEn": "Naturally crystallized Originium containing purer energy. Used for mid-tier operator ascension."
   },
   {
     "id": "originium-cluster",
@@ -60,7 +72,9 @@
     "type": "ascension",
     "rarity": 4,
     "source": "Boss掉落、制造",
-    "sourceEn": "Boss drops, crafting"
+    "sourceEn": "Boss drops, crafting",
+    "description": "多个源石结晶聚合形成的簇状体，能量密度极高。用于高级角色晋升。",
+    "descriptionEn": "Clusters formed by multiple Originium crystals with extremely high energy density. Used for high-tier operator ascension."
   },
   {
     "id": "originium-concentrate",
@@ -69,7 +83,9 @@
     "type": "ascension",
     "rarity": 5,
     "source": "高难Boss掉落",
-    "sourceEn": "High-level boss drops"
+    "sourceEn": "High-level boss drops",
+    "description": "高度提纯的源石浓缩液，蕴含最为纯净和强大的源石能量。用于顶级角色晋升。",
+    "descriptionEn": "Highly purified Originium concentrate containing the purest and most powerful Originium energy. Used for top-tier operator ascension."
   },
   {
     "id": "polymerized-gel",
@@ -78,7 +94,9 @@
     "type": "skill",
     "rarity": 3,
     "source": "材料副本",
-    "sourceEn": "Material dungeons"
+    "sourceEn": "Material dungeons",
+    "description": "经过聚合处理的凝胶材料，用于低级技能升级。",
+    "descriptionEn": "Polymerized gel material used for lower-tier skill upgrades."
   },
   {
     "id": "polymerized-preparation",
@@ -87,7 +105,9 @@
     "type": "skill",
     "rarity": 4,
     "source": "材料副本、制造",
-    "sourceEn": "Material dungeons, crafting"
+    "sourceEn": "Material dungeons, crafting",
+    "description": "高纯度聚合制备物，用于中高级技能升级。",
+    "descriptionEn": "High-purity polymerized preparation used for mid-to-high tier skill upgrades."
   },
   {
     "id": "grindstone",
@@ -96,7 +116,9 @@
     "type": "weapon",
     "rarity": 3,
     "source": "材料副本",
-    "sourceEn": "Material dungeons"
+    "sourceEn": "Material dungeons",
+    "description": "用于磨砺刀剑的研磨石，剑类武器升级的常用材料。",
+    "descriptionEn": "Grindstone used for sharpening blades, a common material for sword-type weapon upgrades."
   },
   {
     "id": "manganese-ore",
@@ -105,7 +127,9 @@
     "type": "weapon",
     "rarity": 3,
     "source": "采矿、商店兑换",
-    "sourceEn": "Mining, shop exchange"
+    "sourceEn": "Mining, shop exchange",
+    "description": "坚硬的锰矿石，用于大剑类武器的锻造和升级。",
+    "descriptionEn": "Hard manganese ore used for forging and upgrading great sword-type weapons."
   },
   {
     "id": "incandescent-alloy",
@@ -114,7 +138,9 @@
     "type": "weapon",
     "rarity": 4,
     "source": "材料副本、Boss掉落",
-    "sourceEn": "Material dungeons, boss drops"
+    "sourceEn": "Material dungeons, boss drops",
+    "description": "高温锻造的特殊合金，用于高级武器的强化升级。",
+    "descriptionEn": "Special alloy forged at high temperatures, used for high-tier weapon enhancement."
   },
   {
     "id": "crystalline-component",
@@ -123,7 +149,9 @@
     "type": "weapon",
     "rarity": 3,
     "source": "击败敌人掉落",
-    "sourceEn": "Enemy drops"
+    "sourceEn": "Enemy drops",
+    "description": "精密的晶体元件，用于铳类武器的维修和升级。",
+    "descriptionEn": "Precision crystalline component used for handcannon-type weapon maintenance and upgrades."
   },
   {
     "id": "protocolized-weapon-pattern",
@@ -132,6 +160,8 @@
     "type": "weapon",
     "rarity": 4,
     "source": "周常副本、活动奖励",
-    "sourceEn": "Weekly dungeons, event rewards"
+    "sourceEn": "Weekly dungeons, event rewards",
+    "description": "通过协议网络标准化的武器设计图纸，可用于制造高级武器。",
+    "descriptionEn": "Weapon blueprint standardized through the Protocol Network, used for crafting high-tier weapons."
   }
 ]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "talos-frontier",
+    "name": "塔洛斯前沿",
+    "nameEn": "Talos Frontier",
+    "description": "塔洛斯-II星球的前沿基地与探索起点，新手教程与初期资源采集区域。",
+    "descriptionEn": "The frontier base and starting zone on Talos-II, serving as the tutorial area and early resource gathering region.",
+    "highlights": ["传送点: 20个", "资源节点: 大量", "安全区域为主", "新手引导任务集中"],
+    "specialties": ["塔洛斯矿石碎片", "前沿补给品", "源石微晶"],
+    "bosses": ["源石侵蚀体", "巡逻机械兽"],
+    "domains": ["基础战术训练", "新手材料本"],
+    "tips": ["优先解锁所有传送点以便后续探索", "完成新手引导任务可获得大量升级材料", "前沿区域资源丰富但等级较低，适合前期练级"],
+    "subRegions": ["前哨基地", "外围荒野", "通讯中继站", "资源采集场"],
+    "collectibles": 35
+  },
+  {
+    "id": "originium-mines",
+    "name": "源石矿区",
+    "nameEn": "Originium Mines",
+    "description": "富含源石的地下矿区，工业设施密集，是重要的材料产出区域。",
+    "descriptionEn": "Originium-rich underground mining area with dense industrial facilities, a major material production zone.",
+    "highlights": ["传送点: 24个", "采矿点: 40+", "工业设施: 6处", "精英怪区域: 3处"],
+    "specialties": ["纯净源石结晶", "矿区催化剂", "工业合金材料"],
+    "bosses": ["源石巨像", "矿洞守护者", "侵蚀源石虫群"],
+    "domains": ["源石开采模拟", "装备强化关卡", "材料挑战关卡"],
+    "tips": ["矿区Boss掉落角色突破核心材料", "部分矿脉需要特定角色技能才能开采", "深层矿区有更强的敌人但产出更稀有的材料"],
+    "subRegions": ["浅层矿道", "深层矿脉", "精炼工厂", "废弃巷道"],
+    "collectibles": 40
+  },
+  {
+    "id": "protocol-city",
+    "name": "协议之城",
+    "nameEn": "Protocol City",
+    "description": "塔洛斯-II上的核心城市设施，高度自动化的都市区域，隐藏着关于协议的重要秘密。",
+    "descriptionEn": "The core urban facility on Talos-II, a highly automated city hiding important secrets about the Protocol.",
+    "highlights": ["传送点: 30个", "NPC交互: 15+", "商店与交易所", "主线剧情关键区域"],
+    "specialties": ["协议数据碎片", "城市特产材料", "高级合成素材"],
+    "bosses": ["协议守卫Alpha", "失控AI核心", "城市防卫系统"],
+    "domains": ["协议验证挑战", "高级材料本", "战术模拟终端"],
+    "tips": ["城市中有很多隐藏交互点，仔细探索每个角落", "完成城市委托可以获得稀有兑换券", "部分建筑需要完成前置任务才能进入"],
+    "subRegions": ["中央指挥塔", "居住区块", "商业中心", "地下通道网络", "数据中心"],
+    "collectibles": 50
+  },
+  {
+    "id": "barren-wastes",
+    "name": "荒芜废土",
+    "nameEn": "Barren Wastes",
+    "description": "塔洛斯-II上被严重侵蚀的荒漠地带，高等级敌人出没的危险区域。",
+    "descriptionEn": "A severely corrupted desert wasteland on Talos-II, a dangerous high-level zone teeming with powerful enemies.",
+    "highlights": ["传送点: 16个", "精英怪: 6处", "隐藏宝箱: 20+", "高难度挑战区域"],
+    "specialties": ["荒芜结晶", "侵蚀残留物", "远古遗物碎片"],
+    "bosses": ["荒芜领主", "沙暴巨虫", "侵蚀核心", "远古守卫"],
+    "domains": ["侵蚀净化挑战", "极限材料本", "远古遗迹探索"],
+    "tips": ["废土区域的敌人等级较高，建议队伍等级达标后再进入", "沙暴天气会降低视野并强化敌人属性", "远古遗迹中有大量珍贵收集品但需要解谜才能获取"],
+    "subRegions": ["沙暴腹地", "侵蚀裂谷", "远古遗迹群", "废弃据点"],
+    "collectibles": 30
+  },
+  {
+    "id": "frozen-depths",
+    "name": "冰冻深渊",
+    "nameEn": "Frozen Depths",
+    "description": "塔洛斯-II极地冰层下的巨大地下空间，终局挑战与最稀有的资源所在地。",
+    "descriptionEn": "A massive underground space beneath Talos-II's polar ice, home to endgame challenges and the rarest resources.",
+    "highlights": ["传送点: 10个", "终局Boss: 3处", "稀有材料: 大量", "隐藏区域: 多处"],
+    "specialties": ["永冻结晶", "深渊源石", "极光精华"],
+    "bosses": ["冰渊巨兽", "永冻领主", "深渊之心"],
+    "domains": ["深渊挑战", "极限模拟", "终极材料本"],
+    "tips": ["冰冻深渊是最高难度区域，需要满练度队伍", "极寒环境会持续消耗队伍状态，注意携带恢复道具", "深渊之心是游戏中最强的Boss，需要特定策略才能击败"],
+    "subRegions": ["冰封走廊", "永冻湖", "深渊裂隙", "核心密室"],
+    "collectibles": 20
+  }
+]

@@ -126,6 +126,21 @@ export interface EndfieldCharacterMaterials {
   talentMaterials: EndfieldTalentLevel[];
 }
 
+export interface EndfieldRegion {
+  id: string;
+  name: string;
+  nameEn: string;
+  description: string;
+  descriptionEn: string;
+  highlights: string[];
+  specialties: string[];
+  bosses: string[];
+  domains: string[];
+  tips: string[];
+  subRegions: string[];
+  collectibles: number;
+}
+
 export function localeStr(zh: string, en: string, locale: SupportedLocale, ja?: string): string {
   if (locale === 'en') return en;
   if (locale === 'ja') return ja ?? en;
