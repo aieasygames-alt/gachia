@@ -111,7 +111,7 @@ export async function generateMetadata({
   const gameId = game as GameId;
   const gameName = GAMES[gameId]?.name[locale] ?? '';
 
-  // Build intent-rich title & description per locale — stats in description for SERP CTR
+  // Build intent-rich title & description per locale — includes stats in description for SERP CTR
   const buildWeaponMeta = (name: string, effectDesc: string | undefined, statsLine?: string, hasPassive = true) => {
     const title = locale === 'zh'
       ? `${name} — ${gameName}武器攻略 | 属性${hasPassive ? '、技能效果' : ''}与适用角色`
@@ -119,12 +119,8 @@ export async function generateMetadata({
         ? `${name} — ${gameName}武器データ${hasPassive ? ' | スキル効果とおすすめキャラ' : ' | ステータスとおすすめキャラ'}`
         : `${name} — ${gameName} Weapon Stats${hasPassive ? ', Skill Effect &' : '&'} Best Characters`;
     let desc: string;
-    if (statsLine && effectDesc) {
-      desc = locale === 'zh'
-        ? `${name}：${statsLine}。${effectDesc}。查看获取方式及推荐角色。`
-        : locale === 'ja'
-          ? `${name}：${statsLine}。${effectDesc}。入手方法、おすすめキャラを確認。`
-          : `${name} — ${statsLine}. ${effectDesc}. See how to get it and best characters.`;
+    if (effectDesc && statsLine) {
+      desc = `${statsLine}. ${effectDesc}`.slice(0, 160);
     } else if (statsLine) {
       desc = locale === 'zh'
         ? `${name}：${statsLine}。查看${hasPassive ? '技能效果、' : ''}获取方式及推荐角色。`
@@ -140,7 +136,7 @@ export async function generateMetadata({
           ? `${name}のステータス${hasPassive ? '、スキル効果' : ''}、入手方法、おすすめキャラクターを確認。`
           : `Complete ${name} guide for ${gameName}: stats${hasPassive ? ', skill effect' : ''}, how to get it, and best characters to use it with.`;
     }
-    return { title, description: desc.slice(0, 160) };
+    return { title, description: desc };
   };
 
   if (gameId === 'genshin') {
@@ -150,10 +146,8 @@ export async function generateMetadata({
     const effect = getGenshinWeaponEffect(w, locale);
     const sub90 = w.subStat ? (() => { const v = parseFloat(w.subStatValue); return isNaN(v) ? '' : `${w.subStat} ${(v * 4.6).toFixed(1)}%`; })() : '';
     const stats = locale === 'zh'
-      ? `${w.rarity}★${w.weaponType ? ` ${GENSHIN_WEAPON_TYPE[w.weaponType]?.zh ?? w.weaponType}` : ''}, 基础攻击力${w.baseAtk}${sub90 ? `, Lv.90 ${sub90}` : ''}`
-      : locale === 'ja'
-        ? `${w.rarity}★${w.weaponType ? ` ${GENSHIN_WEAPON_TYPE[w.weaponType]?.ja ?? w.weaponType}` : ''}, Base ATK ${w.baseAtk}${sub90 ? `, Lv.90 ${sub90}` : ''}`
-        : `${w.rarity}★ ${w.weaponType ?? 'Weapon'}, Base ATK ${w.baseAtk}${sub90 ? `, Lv.90 ${sub90}` : ''}`;
+      ? `${w.rarity}★, 基础攻击力${w.baseAtk}${sub90 ? `, 满级${sub90}` : ''}`
+      : `★${w.rarity}, Base ATK ${w.baseAtk}${sub90 ? `, Lv.90 ${sub90}` : ''}`;
     const meta = buildWeaponMeta(name, effect?.description, stats);
     return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
