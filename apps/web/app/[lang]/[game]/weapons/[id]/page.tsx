@@ -27,7 +27,6 @@ import {
 } from '@gachia/data/games/endfield/weapons';
 import { getCharactersForWeapon, getRelatedWeapons } from '@gachia/data/weapon-characters';
 import { Link } from '@/lib/i18n/navigation';
-import { buildWeaponJsonLd } from '@/lib/jsonld';
 
 const RARITY_COLORS: Record<number, string> = { 1: '#9ca3af', 2: '#4ade80', 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };
 
@@ -65,16 +64,6 @@ const NTE_WEAPON_TYPE: Record<string, Record<string, string>> = {
   liquid: { zh: '液体', en: 'Liquid', ja: 'リキッド' },
   synthesis: { zh: '合成', en: 'Synthesis', ja: '合成' },
 };
-
-function WeaponJsonLd({ gameId, locale, name, description, weaponId }: { gameId: GameId; locale: SupportedLocale; name: string; description: string; weaponId: string }) {
-  const schemas = buildWeaponJsonLd({ gameId, locale, name, description, weaponId });
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
-    />
-  );
-}
 
 export async function generateStaticParams() {
   return LOCALES.flatMap((lang) => [
@@ -267,66 +256,42 @@ export default async function WeaponDetailPage({
   if (gameId === 'genshin') {
     const w = getGenshinWeaponById(id);
     if (!w) notFound();
-    const name = getGenshinWeaponName(w, locale);
-    const effect = getGenshinWeaponEffect(w, locale);
-    const desc = effect?.description ?? '';
-    return <><WeaponJsonLd gameId={gameId} locale={locale} name={name} description={desc} weaponId={id} /><GenshinWeaponDetail weapon={w} locale={locale} /></>;
+    return <GenshinWeaponDetail weapon={w} locale={locale} />;
   }
   if (gameId === 'starrail') {
     const w = getStarRailLightConeById(id);
     if (!w) notFound();
-    const name = getStarRailLightConeName(w, locale);
-    const effect = getStarRailLightConeEffect(w, locale);
-    const desc = effect?.description ?? '';
-    return <><WeaponJsonLd gameId={gameId} locale={locale} name={name} description={desc} weaponId={id} /><StarRailLightConeDetail lc={w} locale={locale} /></>;
+    return <StarRailLightConeDetail lc={w} locale={locale} />;
   }
   if (gameId === 'wuwa') {
     const w = getWuWaWeaponById(id);
     if (!w) notFound();
-    const name = getWuWaWeaponName(w, locale);
-    const effect = getWuWaWeaponEffect(w, locale);
-    const desc = effect?.description ?? '';
-    return <><WeaponJsonLd gameId={gameId} locale={locale} name={name} description={desc} weaponId={id} /><WuWaWeaponDetail weapon={w} locale={locale} /></>;
+    return <WuWaWeaponDetail weapon={w} locale={locale} />;
   }
   if (gameId === 'nte') {
     const w = getNteWeaponById(id);
     if (!w) notFound();
-    const name = getNteWeaponName(w, locale);
-    const effect = getNteWeaponEffect(w, locale);
-    const desc = effect?.description ?? '';
-    return <><WeaponJsonLd gameId={gameId} locale={locale} name={name} description={desc} weaponId={id} /><NteWeaponDetail weapon={w} locale={locale} /></>;
+    return <NteWeaponDetail weapon={w} locale={locale} />;
   }
   if (gameId === 'zzz') {
     const w = getZzzWeaponById(id);
     if (!w) notFound();
-    const name = getZzzWeaponName(w, locale);
-    const effect = getZzzWeaponEffect(w, locale);
-    const desc = effect?.description ?? '';
-    return <><WeaponJsonLd gameId={gameId} locale={locale} name={name} description={desc} weaponId={id} /><ZzzWeaponDetail weapon={w} locale={locale} /></>;
+    return <ZzzWeaponDetail weapon={w} locale={locale} />;
   }
   if (gameId === 'guihuan') {
     const w = getGuihuanWeaponById(id);
     if (!w) notFound();
-    const name = getGuihuanWeaponName(w, locale);
-    const effect = getGuihuanWeaponEffect(w, locale);
-    const desc = effect?.description ?? '';
-    return <><WeaponJsonLd gameId={gameId} locale={locale} name={name} description={desc} weaponId={id} /><GuihuanWeaponDetail weapon={w} locale={locale} /></>;
+    return <GuihuanWeaponDetail weapon={w} locale={locale} />;
   }
   if (gameId === 'ananta') {
     const w = getAnantaWeaponById(id);
     if (!w) notFound();
-    const name = getAnantaWeaponName(w, locale);
-    const effect = getAnantaWeaponEffect(w, locale);
-    const desc = effect?.description ?? '';
-    return <><WeaponJsonLd gameId={gameId} locale={locale} name={name} description={desc} weaponId={id} /><AnantaWeaponDetail weapon={w} locale={locale} /></>;
+    return <AnantaWeaponDetail weapon={w} locale={locale} />;
   }
   if (gameId === 'endfield') {
     const w = getEndfieldWeaponById(id);
     if (!w) notFound();
-    const name = getEndfieldWeaponName(w, locale);
-    const effect = getEndfieldWeaponEffect(w, locale);
-    const desc = effect?.description ?? '';
-    return <><WeaponJsonLd gameId={gameId} locale={locale} name={name} description={desc} weaponId={id} /><EndfieldWeaponDetail weapon={w} locale={locale} /></>;
+    return <EndfieldWeaponDetail weapon={w} locale={locale} />;
   }
 
   notFound();
