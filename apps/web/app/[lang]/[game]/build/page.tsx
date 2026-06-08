@@ -19,9 +19,23 @@ export async function generateMetadata({
   if (gameId === 'ananta') {
     return { title, robots: { index: false, follow: false } };
   }
+  const gearTerm = locale === 'zh'
+    ? (gameId === 'zzz' ? '驱动盘' : gameId === 'wuwa' ? '声骸' : gameId === 'starrail' ? '遗器' : gameId === 'nte' ? '弧盘' : '圣遗物')
+    : locale === 'ja'
+      ? (gameId === 'zzz' ? 'ドライブディスク' : gameId === 'wuwa' ? 'エコー' : gameId === 'starrail' ? '遺物' : gameId === 'nte' ? 'ディスク' : '聖遺物')
+      : (gameId === 'zzz' ? 'drive discs' : gameId === 'wuwa' ? 'echoes' : gameId === 'starrail' ? 'relics' : gameId === 'nte' ? 'disk sets' : 'artifact sets');
+  const weaponTerm = locale === 'zh'
+    ? (gameId === 'zzz' ? '音擎' : gameId === 'starrail' ? '光锥' : '武器')
+    : locale === 'ja'
+      ? (gameId === 'zzz' ? 'Wエンジン' : gameId === 'starrail' ? '光円錐' : '武器')
+      : (gameId === 'zzz' ? 'W-Engines' : gameId === 'starrail' ? 'light cones' : 'weapons');
   return {
     title,
-    description: locale === 'zh' ? `${gameName} 角色配装推荐、最佳武器、圣遗物搭配` : locale === 'ja' ? `${gameName} キャラビルドおすすめ、最適武器、聖遺物・遺物・エコー組み合わせ` : `${gameName} character build recommendations, best weapons, artifact sets`,
+    description: locale === 'zh'
+      ? `${gameName} 角色配装推荐、最佳${weaponTerm}、${gearTerm}搭配`
+      : locale === 'ja'
+        ? `${gameName} キャラビルドおすすめ、最適${weaponTerm}、${gearTerm}組み合わせ`
+        : `${gameName} character build recommendations, best ${weaponTerm}, ${gearTerm}`,
     alternates: {
       canonical: `https://gachia.com/${locale}/${gameId}/build`,
       languages: { 'zh-Hans': `https://gachia.com/zh/${gameId}/build`, en: `https://gachia.com/en/${gameId}/build`, ja: `https://gachia.com/ja/${gameId}/build`, 'x-default': `https://gachia.com/zh/${gameId}/build` },

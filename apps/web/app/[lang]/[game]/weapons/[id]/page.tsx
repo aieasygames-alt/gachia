@@ -27,6 +27,7 @@ import {
 } from '@gachia/data/games/endfield/weapons';
 import { getCharactersForWeapon, getRelatedWeapons } from '@gachia/data/weapon-characters';
 import { Link } from '@/lib/i18n/navigation';
+import { buildWeaponJsonLd } from '@/lib/jsonld';
 
 const RARITY_COLORS: Record<number, string> = { 1: '#9ca3af', 2: '#4ade80', 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };
 
@@ -64,6 +65,16 @@ const NTE_WEAPON_TYPE: Record<string, Record<string, string>> = {
   liquid: { zh: '液体', en: 'Liquid', ja: 'リキッド' },
   synthesis: { zh: '合成', en: 'Synthesis', ja: '合成' },
 };
+
+function WeaponJsonLd({ gameId, locale, name, description, weaponId }: { gameId: GameId; locale: SupportedLocale; name: string; description: string; weaponId: string }) {
+  const schemas = buildWeaponJsonLd({ gameId, locale, name, description, weaponId });
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
+    />
+  );
+}
 
 export async function generateStaticParams() {
   return LOCALES.flatMap((lang) => [
@@ -111,18 +122,20 @@ export async function generateMetadata({
   const gameId = game as GameId;
   const gameName = GAMES[gameId]?.name[locale] ?? '';
 
-  // Build intent-rich title & description per locale — includes stats in description for SERP CTR
+  // Build intent-rich title & description per locale — stats in description for SERP CTR
   const buildWeaponMeta = (name: string, effectDesc: string | undefined, statsLine?: string, hasPassive = true) => {
     const title = locale === 'zh'
       ? `${name} — ${gameName}武器攻略 | 属性${hasPassive ? '、技能效果' : ''}与适用角色`
       : locale === 'ja'
         ? `${name} — ${gameName}武器データ${hasPassive ? ' | スキル効果とおすすめキャラ' : ' | ステータスとおすすめキャラ'}`
-        : statsLine
-          ? `${name} ${statsLine} — ${gameName} Weapon`
-          : `${name} — ${gameName} Weapon Stats${hasPassive ? ', Skill Effect &' : '&'} Best Characters`;
+        : `${name} — ${gameName} Weapon Stats${hasPassive ? ', Skill Effect &' : '&'} Best Characters`;
     let desc: string;
-    if (effectDesc && statsLine) {
-      desc = `${statsLine}. ${effectDesc}`.slice(0, 160);
+    if (statsLine && effectDesc) {
+      desc = locale === 'zh'
+        ? `${name}：${statsLine}。${effectDesc}。查看获取方式及推荐角色。`
+        : locale === 'ja'
+          ? `${name}：${statsLine}。${effectDesc}。入手方法、おすすめキャラを確認。`
+          : `${name} — ${statsLine}. ${effectDesc}. See how to get it and best characters.`;
     } else if (statsLine) {
       desc = locale === 'zh'
         ? `${name}：${statsLine}。查看${hasPassive ? '技能效果、' : ''}获取方式及推荐角色。`
@@ -138,7 +151,7 @@ export async function generateMetadata({
           ? `${name}のステータス${hasPassive ? '、スキル効果' : ''}、入手方法、おすすめキャラクターを確認。`
           : `Complete ${name} guide for ${gameName}: stats${hasPassive ? ', skill effect' : ''}, how to get it, and best characters to use it with.`;
     }
-    return { title, description: desc };
+    return { title, description: desc.slice(0, 160) };
   };
 
   if (gameId === 'genshin') {
@@ -148,8 +161,10 @@ export async function generateMetadata({
     const effect = getGenshinWeaponEffect(w, locale);
     const sub90 = w.subStat ? (() => { const v = parseFloat(w.subStatValue); return isNaN(v) ? '' : `${w.subStat} ${(v * 4.6).toFixed(1)}%`; })() : '';
     const stats = locale === 'zh'
-      ? `${w.rarity}★, 基础攻击力${w.baseAtk}${sub90 ? `, 满级${sub90}` : ''}`
-      : `★${w.rarity}, Base ATK ${w.baseAtk}${sub90 ? `, Lv.90 ${sub90}` : ''}`;
+      ? `${w.rarity}★${w.weaponType ? ` ${GENSHIN_WEAPON_TYPE[w.weaponType]?.zh ?? w.weaponType}` : ''}, 基础攻击力${w.baseAtk}${sub90 ? `, Lv.90 ${sub90}` : ''}`
+      : locale === 'ja'
+        ? `${w.rarity}★${w.weaponType ? ` ${GENSHIN_WEAPON_TYPE[w.weaponType]?.ja ?? w.weaponType}` : ''}, Base ATK ${w.baseAtk}${sub90 ? `, Lv.90 ${sub90}` : ''}`
+        : `${w.rarity}★ ${w.weaponType ?? 'Weapon'}, Base ATK ${w.baseAtk}${sub90 ? `, Lv.90 ${sub90}` : ''}`;
     const meta = buildWeaponMeta(name, effect?.description, stats);
     return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
@@ -252,42 +267,66 @@ export default async function WeaponDetailPage({
   if (gameId === 'genshin') {
     const w = getGenshinWeaponById(id);
     if (!w) notFound();
-    return <GenshinWeaponDetail weapon={w} locale={locale} />;
+    const name = getGenshinWeaponName(w, locale);
+    const effect = getGenshinWeaponEffect(w, locale);
+    const desc = effect?.description ?? '';
+    return <><WeaponJsonLd gameId={gameId} locale={locale} name={name} description={desc} weaponId={id} /><GenshinWeaponDetail weapon={w} locale={locale} /></>;
   }
   if (gameId === 'starrail') {
     const w = getStarRailLightConeById(id);
     if (!w) notFound();
-    return <StarRailLightConeDetail lc={w} locale={locale} />;
+    const name = getStarRailLightConeName(w, locale);
+    const effect = getStarRailLightConeEffect(w, locale);
+    const desc = effect?.description ?? '';
+    return <><WeaponJsonLd gameId={gameId} locale={locale} name={name} description={desc} weaponId={id} /><StarRailLightConeDetail lc={w} locale={locale} /></>;
   }
   if (gameId === 'wuwa') {
     const w = getWuWaWeaponById(id);
     if (!w) notFound();
-    return <WuWaWeaponDetail weapon={w} locale={locale} />;
+    const name = getWuWaWeaponName(w, locale);
+    const effect = getWuWaWeaponEffect(w, locale);
+    const desc = effect?.description ?? '';
+    return <><WeaponJsonLd gameId={gameId} locale={locale} name={name} description={desc} weaponId={id} /><WuWaWeaponDetail weapon={w} locale={locale} /></>;
   }
   if (gameId === 'nte') {
     const w = getNteWeaponById(id);
     if (!w) notFound();
-    return <NteWeaponDetail weapon={w} locale={locale} />;
+    const name = getNteWeaponName(w, locale);
+    const effect = getNteWeaponEffect(w, locale);
+    const desc = effect?.description ?? '';
+    return <><WeaponJsonLd gameId={gameId} locale={locale} name={name} description={desc} weaponId={id} /><NteWeaponDetail weapon={w} locale={locale} /></>;
   }
   if (gameId === 'zzz') {
     const w = getZzzWeaponById(id);
     if (!w) notFound();
-    return <ZzzWeaponDetail weapon={w} locale={locale} />;
+    const name = getZzzWeaponName(w, locale);
+    const effect = getZzzWeaponEffect(w, locale);
+    const desc = effect?.description ?? '';
+    return <><WeaponJsonLd gameId={gameId} locale={locale} name={name} description={desc} weaponId={id} /><ZzzWeaponDetail weapon={w} locale={locale} /></>;
   }
   if (gameId === 'guihuan') {
     const w = getGuihuanWeaponById(id);
     if (!w) notFound();
-    return <GuihuanWeaponDetail weapon={w} locale={locale} />;
+    const name = getGuihuanWeaponName(w, locale);
+    const effect = getGuihuanWeaponEffect(w, locale);
+    const desc = effect?.description ?? '';
+    return <><WeaponJsonLd gameId={gameId} locale={locale} name={name} description={desc} weaponId={id} /><GuihuanWeaponDetail weapon={w} locale={locale} /></>;
   }
   if (gameId === 'ananta') {
     const w = getAnantaWeaponById(id);
     if (!w) notFound();
-    return <AnantaWeaponDetail weapon={w} locale={locale} />;
+    const name = getAnantaWeaponName(w, locale);
+    const effect = getAnantaWeaponEffect(w, locale);
+    const desc = effect?.description ?? '';
+    return <><WeaponJsonLd gameId={gameId} locale={locale} name={name} description={desc} weaponId={id} /><AnantaWeaponDetail weapon={w} locale={locale} /></>;
   }
   if (gameId === 'endfield') {
     const w = getEndfieldWeaponById(id);
     if (!w) notFound();
-    return <EndfieldWeaponDetail weapon={w} locale={locale} />;
+    const name = getEndfieldWeaponName(w, locale);
+    const effect = getEndfieldWeaponEffect(w, locale);
+    const desc = effect?.description ?? '';
+    return <><WeaponJsonLd gameId={gameId} locale={locale} name={name} description={desc} weaponId={id} /><EndfieldWeaponDetail weapon={w} locale={locale} /></>;
   }
 
   notFound();

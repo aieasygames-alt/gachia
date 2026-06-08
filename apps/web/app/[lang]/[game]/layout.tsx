@@ -4,6 +4,7 @@ import type { GameId, SupportedLocale } from '@gachia/core';
 import { GameNav } from '@/components/layout/game-nav';
 import { Breadcrumbs } from '@/components/layout/breadcrumbs';
 import { GameDataSetter } from '@/components/layout/game-data-setter';
+import { Link } from '@/lib/i18n/navigation';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -97,19 +98,43 @@ export default async function GameLayout({
 }) {
   const { lang, game } = await params;
   const gameId = game as GameId;
+  const locale = lang as SupportedLocale;
 
   if (!GAMES[gameId]) {
     notFound();
   }
 
+  const otherGames = Object.keys(GAMES).filter((g) => g !== gameId) as GameId[];
+
   return (
     <>
       <GameDataSetter gameId={gameId} />
-      <GameNav gameId={gameId} locale={lang as SupportedLocale} />
+      <GameNav gameId={gameId} locale={locale} />
       <div className="container mx-auto px-4 py-6">
         <Breadcrumbs lang={lang} game={gameId} />
         {children}
       </div>
+      <footer className="border-t border-game-border bg-game-surface-alt mt-12">
+        <div className="container mx-auto px-4 py-8">
+          <h3 className="text-sm font-semibold text-game-text-muted mb-4">
+            {locale === 'zh' ? '探索更多游戏' : locale === 'ja' ? '他のゲームを探す' : 'Explore More Games'}
+          </h3>
+          <div className="flex flex-wrap gap-3">
+            {otherGames.map((g) => {
+              const gc = GAMES[g];
+              return (
+                <Link
+                  key={g}
+                  href={`/${g}`}
+                  className="rounded-lg border border-game-border bg-game-surface px-4 py-2 text-sm text-game-text transition-colors hover:border-game-accent hover:text-game-accent"
+                >
+                  {gc.name[locale]}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

@@ -45,7 +45,7 @@ export default async function LocaleLayout({
   const messages = allMessages[locale] ?? allMessages[DEFAULT_LOCALE];
 
   return (
-    <html lang={locale} className={poppins.variable}>
+    <html lang={locale === 'zh' ? 'zh-Hans' : locale} className={poppins.variable}>
       <head>
         <GoogleAnalytics gaId="G-4L1VKXGY2Y" />
       </head>

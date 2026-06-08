@@ -21,7 +21,7 @@ export async function generateMetadata({
   }
   return {
     title,
-    description: locale === 'zh' ? `${gameName} 角色配队模拟器，查看元素共鸣效果，推荐最佳阵容` : locale === 'ja' ? `${gameName} パーティ編成シミュレーター、元素共鳴効果確認、おすすめ編成` : `${gameName} team builder - element resonance, recommended compositions`,
+    description: locale === 'zh' ? `${gameName} 角色配队模拟器，查看最佳阵容搭配` : locale === 'ja' ? `${gameName} パーティ編成シミュレーター、おすすめ編成` : `${gameName} team builder - best team compositions and synergies`,
     alternates: {
       canonical: `https://gachia.com/${locale}/${gameId}/teams`,
       languages: { 'zh-Hans': `https://gachia.com/zh/${gameId}/teams`, en: `https://gachia.com/en/${gameId}/teams`, ja: `https://gachia.com/ja/${gameId}/teams`, 'x-default': `https://gachia.com/zh/${gameId}/teams` },

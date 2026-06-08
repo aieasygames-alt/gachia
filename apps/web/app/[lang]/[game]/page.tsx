@@ -56,9 +56,9 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     ja: '異環（NTE）キャラ図鑑、武器データ、ディスクおすすめ、交換コード、ガチャシミュレーター。正式リリース済み、19体のプレイアブルキャラ。',
   },
   zzz: {
-    zh: '绝区零代理人图鉴、音擎数据、驱动盘推荐、攻略百科。覆盖至2.8版本，52+代理人、Rupture职业、最佳配队方案。',
-    en: 'Zenless Zone Zero agent builds, W-Engine database, drive disc recommendations, and guides up to v2.8. 52+ agents, Rupture specialty, best team comps.',
-    ja: 'ゼンレスゾーンゼロエージェントビルド、Wエンジンデータ、ドライブディスクおすすめ、攻略百科。v2.8対応、52+エージェント、ラプチャースペシャリティ。',
+    zh: '绝区零代理人图鉴、音擎数据、驱动盘推荐、攻略百科。覆盖至2.8版本，56+代理人、Rupture职业、最佳配队方案。',
+    en: 'Zenless Zone Zero agent builds, W-Engine database, drive disc recommendations, and guides up to v2.8. 56+ agents, Rupture specialty, best team comps.',
+    ja: 'ゼンレスゾーンゼロエージェントビルド、Wエンジンデータ、ドライブディスクおすすめ、攻略百科。v2.8対応、56+エージェント、ラプチャースペシャリティ。',
   },
   guihuan: {
     zh: '归环角色图鉴、武器数据、攻略百科。覆盖全部可用角色的技能数据与配装推荐。',

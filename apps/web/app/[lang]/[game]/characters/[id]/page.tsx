@@ -2,6 +2,7 @@ import { GAMES, LOCALES, CATEGORY_LABELS } from '@gachia/core';
 import { ChevronRight } from 'lucide-react';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { notFound } from 'next/navigation';
+import { buildCharacterJsonLd } from '@/lib/jsonld';
 import {
   nteCharacters,
   getNteCharacterById,
@@ -276,6 +277,16 @@ export async function generateStaticParams() {
   return [...nteParams, ...genshinParams, ...starrailParams, ...wuwaParams, ...zzzParams, ...guihuanParams, ...anantaParams, ...endfieldParams];
 }
 
+function CharJsonLd({ gameId, locale, name, description, charId }: { gameId: GameId; locale: SupportedLocale; name: string; description: string; charId: string }) {
+  const schemas = buildCharacterJsonLd({ gameId, locale, name, description, charId });
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
+    />
+  );
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -310,10 +321,10 @@ export async function generateMetadata({
     const wName = GENSHIN_WEAPON_LABELS[char.weaponType]?.[locale] ?? char.weaponType;
     const title = locale === 'zh'
       ? `${name}配装攻略 — ${elName}${wName}最佳武器、圣遗物、配队`
-      : `${name} — ${elName} ${wName} Build: Best Weapons, Artifacts & Teams`;
+      : `${name} Build Guide — ${elName} ${wName} Best Weapons, Artifacts & Teams`;
     const desc = locale === 'zh'
       ? `${name}配装攻略：推荐武器、圣遗物套装、主副词条、配队组合，${char.tierRank} Tier`
-      : `Complete ${name} build guide for Genshin Impact: best weapons, artifact sets, main stats, team comps, and ascension materials. ${char.tierRank} tier.`;
+      : `${name} build guide for Genshin Impact: best weapons, artifact sets, main stats, team comps, and ascension materials. ${char.tierRank} tier.`;
     return { title, description: desc.slice(0, 160), openGraph: buildOg(name), alternates: buildAlternates(id) };
   }
 
@@ -326,10 +337,10 @@ export async function generateMetadata({
     const pathName = STARRAIL_PATH_LABELS[char.path]?.[locale] ?? char.path;
     const title = locale === 'zh'
       ? `${name}配装攻略 — ${elName}${pathName}最佳光锥、遗器、配队`
-      : `${name} — ${elName} ${pathName} Build: Best Light Cones, Relics & Teams`;
+      : `${name} Build Guide — ${elName} ${pathName} Best Light Cones, Relics & Teams`;
     const desc = locale === 'zh'
       ? `${name}配装攻略：推荐光锥、遗器套装、主词条、配队组合，${char.tierRank} Tier`
-      : `Complete ${name} build guide for Honkai: Star Rail: best light cones, relic sets, main stats, team comps. ${char.tierRank} tier.`;
+      : `${name} build guide for Honkai: Star Rail: best light cones, relic sets, main stats, team comps. ${char.tierRank} tier.`;
     return { title, description: desc.slice(0, 160), openGraph: buildOg(name), alternates: buildAlternates(id) };
   }
 
@@ -357,10 +368,10 @@ export async function generateMetadata({
     const wName = WUWA_WEAPON_LABELS[char.weaponType]?.[locale] ?? char.weaponType;
     const title = locale === 'zh'
       ? `${name}配装攻略 — ${elName}${wName}最佳武器、声骸、配队`
-      : `${name} — ${elName} ${wName} Build: Best Weapons, Echoes & Teams`;
+      : `${name} Build Guide — ${elName} ${wName} Best Weapons, Echoes & Teams`;
     const desc = locale === 'zh'
       ? `${name}配装攻略：推荐武器、声骸套装、配队组合，${char.tierRank ?? ''} Tier`
-      : `Complete ${name} build guide for Wuthering Waves: best weapons, echo sets, team comps. ${char.tierRank ?? ''} tier.`;
+      : `${name} build guide for Wuthering Waves: best weapons, echo sets, team comps. ${char.tierRank ?? ''} tier.`;
     return { title, description: desc.slice(0, 160), openGraph: buildOg(name), alternates: buildAlternates(id) };
   }
 
@@ -373,10 +384,10 @@ export async function generateMetadata({
     const specName = ZZZ_SPECIALTY_LABELS[char.specialtyEn]?.[locale] ?? char.specialtyEn;
     const title = locale === 'zh'
       ? `${name}配装攻略 — ${elName}${specName}最佳音擎、驱动盘、配队`
-      : `${name} — ${elName} ${specName} Build: Best W-Engines, Discs & Teams | ZZZ`;
+      : `${name} Build Guide — ${elName} ${specName} Best W-Engines, Discs & Teams | ZZZ`;
     const desc = locale === 'zh'
       ? `${name}配装攻略：推荐音擎、驱动盘套装、配队组合，${char.tierRank} Tier`
-      : `Complete ${name} build guide for Zenless Zone Zero: best W-Engines, drive disc sets, team comps. ${char.tierRank} tier.`;
+      : `${name} build guide for Zenless Zone Zero: best W-Engines, drive disc sets, team comps. ${char.tierRank} tier.`;
     return { title, description: desc.slice(0, 160), openGraph: buildOg(name), alternates: buildAlternates(id) };
   }
 
@@ -440,49 +451,65 @@ export default async function CharacterDetailPage({
   if (gameId === 'genshin') {
     const char = getGenshinCharacterById(id);
     if (!char) notFound();
-    return <GenshinCharacterDetail char={char} locale={locale} />;
+    const name = getGenshinCharacterName(char, locale);
+    const desc = getGenshinCharacterDescription(char, locale);
+    return <><CharJsonLd gameId={gameId} locale={locale} name={name} description={desc} charId={id} /><GenshinCharacterDetail char={char} locale={locale} /></>;
   }
 
   if (gameId === 'starrail') {
     const char = getStarRailCharacterById(id);
     if (!char) notFound();
-    return <StarRailCharacterDetail char={char} locale={locale} />;
+    const name = getStarRailCharacterName(char, locale);
+    const desc = getStarRailCharacterDescription(char, locale);
+    return <><CharJsonLd gameId={gameId} locale={locale} name={name} description={desc} charId={id} /><StarRailCharacterDetail char={char} locale={locale} /></>;
   }
 
   if (gameId === 'nte') {
     const char = getNteCharacterById(id);
     if (!char) notFound();
-    return <NteCharacterDetail char={char} locale={locale} />;
+    const name = getNteCharacterName(char, locale);
+    const desc = getNteCharacterDescription(char, locale);
+    return <><CharJsonLd gameId={gameId} locale={locale} name={name} description={desc} charId={id} /><NteCharacterDetail char={char} locale={locale} /></>;
   }
 
   if (gameId === 'wuwa') {
     const char = getWuWaCharacterById(id);
     if (!char) notFound();
-    return <WuWaCharacterDetail char={char} locale={locale} />;
+    const name = getWuWaCharacterName(char, locale);
+    const desc = getWuWaCharacterDescription(char, locale);
+    return <><CharJsonLd gameId={gameId} locale={locale} name={name} description={desc} charId={id} /><WuWaCharacterDetail char={char} locale={locale} /></>;
   }
 
   if (gameId === 'zzz') {
     const char = getZzzCharacterById(id);
     if (!char) notFound();
-    return <ZzzCharacterDetail char={char} locale={locale} />;
+    const name = getZzzCharacterName(char, locale);
+    const desc = getZzzCharacterDescription(char, locale);
+    return <><CharJsonLd gameId={gameId} locale={locale} name={name} description={desc} charId={id} /><ZzzCharacterDetail char={char} locale={locale} /></>;
   }
 
   if (gameId === 'guihuan') {
     const char = getGuihuanCharacterById(id);
     if (!char) notFound();
-    return <GuihuanCharacterDetail char={char} locale={locale} />;
+    const name = getGuihuanCharacterName(char, locale);
+    const desc = getGuihuanCharacterDescription(char, locale);
+    return <><CharJsonLd gameId={gameId} locale={locale} name={name} description={desc} charId={id} /><GuihuanCharacterDetail char={char} locale={locale} /></>;
   }
 
   if (gameId === 'ananta') {
     const char = getAnantaCharacterById(id);
     if (!char) notFound();
-    return <AnantaCharacterDetail char={char} locale={locale} />;
+    const name = getAnantaCharacterName(char, locale);
+    const desc = getAnantaCharacterDescription(char, locale);
+    return <><CharJsonLd gameId={gameId} locale={locale} name={name} description={desc} charId={id} /><AnantaCharacterDetail char={char} locale={locale} /></>;
   }
 
   if (gameId === 'endfield') {
     const char = getEndfieldCharacterById(id);
     if (!char) notFound();
-    return <EndfieldCharacterDetail char={char} locale={locale} />;
+    const name = getEndfieldCharacterName(char, locale);
+    const desc = getEndfieldCharacterDescription(char, locale);
+    return <><CharJsonLd gameId={gameId} locale={locale} name={name} description={desc} charId={id} /><EndfieldCharacterDetail char={char} locale={locale} /></>;
   }
 
   notFound();

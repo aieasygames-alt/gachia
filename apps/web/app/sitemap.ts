@@ -65,7 +65,7 @@ const REAL_CONTENT_ROUTES: Record<string, string[]> = {
   starrail: ['characters', 'weapons', 'items', 'tier-list', 'calculator', 'map', 'guides', 'artifacts', 'compare', 'teams'],
   wuwa: ['characters', 'weapons', 'items', 'tier-list', 'map', 'guides', 'compare', 'teams'],
   nte: ['characters', 'weapons', 'items', 'tier-list', 'map', 'guides', 'disk-sets', 'redeem-codes', 'gacha', 'anomalies'],
-  zzz: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'drive-discs', 'build', 'compare', 'teams'],
+  zzz: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'drive-discs', 'build', 'compare', 'teams', 'redeem-codes'],
   guihuan: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'compare', 'teams'],
   ananta: ['characters', 'weapons', 'items', 'tier-list', 'guides'],
   endfield: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'compare', 'teams', 'map'],

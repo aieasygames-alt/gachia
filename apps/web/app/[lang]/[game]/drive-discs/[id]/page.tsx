@@ -1,7 +1,7 @@
 import { GAMES, LOCALES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { getZzzDriveDiscById, getZzzDriveDiscName, getZzzDriveDiscDesc2pc, getZzzDriveDiscDesc4pc, zzzDriveDiscs } from '@gachia/data/games/zzz/drive-discs';
-import { getZzzCharacterName } from '@gachia/data/games/zzz/characters';
+import { getZzzCharacterName, getZzzCharacterById } from '@gachia/data/games/zzz/characters';
 import { notFound } from 'next/navigation';
 
 const BASE_URL = 'https://gachia.com';
@@ -100,10 +100,11 @@ export default async function DriveDiscDetailPage({
             </h3>
             <div className="flex flex-wrap gap-2">
               {disc.bestFor.map((charId) => {
-                const char = getZzzCharacterName as unknown as (id: string) => { name: string };
+                const char = getZzzCharacterById(charId);
+                const charName = char ? getZzzCharacterName(char, locale) : charId;
                 return (
                   <span key={charId} className="rounded bg-game-surface-alt px-3 py-1 text-sm text-game-text-muted">
-                    {charId}
+                    {charName}
                   </span>
                 );
               })}
