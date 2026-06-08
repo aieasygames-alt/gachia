@@ -1,0 +1,304 @@
+[
+  {
+    "id": "aic-heavy",
+    "name": "AIC重型",
+    "nameEn": "AIC Heavy",
+    "effect": "装备者HP+500。装备者击败敌人后，恢复100HP。效果触发冷却：5秒。",
+    "effectEn": "Wearer's HP +500. After the wearer defeats an enemy, the wearer restores 100 HP. Effect trigger cooldown: 5s.",
+    "mainStat": "HP",
+    "recommendedFor": [
+      "Guard",
+      "Defender"
+    ],
+    "rarity": 4,
+    "tierRank": "B"
+  },
+  {
+    "id": "aic-light",
+    "name": "AIC轻型",
+    "nameEn": "AIC Light",
+    "effect": "装备者HP+500。装备者击败敌人后，ATK+20，持续5秒。",
+    "effectEn": "Wearer's HP +500. After the wearer defeats an enemy, the wearer gains ATK +20 for 5s.",
+    "mainStat": "HP",
+    "recommendedFor": [
+      "Vanguard",
+      "Guard"
+    ],
+    "rarity": 4,
+    "tierRank": "B"
+  },
+  {
+    "id": "armored-msgr",
+    "name": "装甲MSGR",
+    "nameEn": "Armored MSGR",
+    "effect": "装备者STR+50。当装备者HP低于50%时，获得30%全伤害减免。",
+    "effectEn": "Wearer's Strength +50. When the wearer's HP is below 50%, the wearer gains 30% DMG Reduction against all types of damage.",
+    "mainStat": "STR",
+    "recommendedFor": [
+      "Defender"
+    ],
+    "rarity": 4,
+    "tierRank": "A"
+  },
+  {
+    "id": "roving-msgr",
+    "name": "漫游MSGR",
+    "nameEn": "Roving MSGR",
+    "effect": "装备者AGL+50。当装备者HP高于80%时，Physical DMG+20%。",
+    "effectEn": "Wearer's Agility +50. When the wearer's HP is above 80%, Physical DMG +20%.",
+    "mainStat": "AGL",
+    "recommendedFor": [
+      "Guard",
+      "Striker"
+    ],
+    "rarity": 4,
+    "tierRank": "A"
+  },
+  {
+    "id": "mordvolt-insulation",
+    "name": "莫德伏绝缘",
+    "nameEn": "Mordvolt Insulation",
+    "effect": "装备者INT+50。当装备者HP高于80%时，Arts DMG+20%。",
+    "effectEn": "Wearer's Intellect +50. When the wearer's HP is above 80%, Arts DMG +20%.",
+    "mainStat": "INT",
+    "recommendedFor": [
+      "Caster"
+    ],
+    "rarity": 4,
+    "tierRank": "A"
+  },
+  {
+    "id": "mordvolt-resistant",
+    "name": "莫德伏抗性",
+    "nameEn": "Mordvolt Resistant",
+    "effect": "装备者WIL+50。当装备者HP低于50%时，Treatment Effect+30%。",
+    "effectEn": "Wearer's Will +50. When the wearer's HP is below 50%, Treatment Effect +30%.",
+    "mainStat": "WIL",
+    "recommendedFor": [
+      "Supporter"
+    ],
+    "rarity": 4,
+    "tierRank": "A"
+  },
+  {
+    "id": "aburreys-legacy",
+    "name": "阿伯雷遗产",
+    "nameEn": "Aburrey's Legacy",
+    "effect": "装备者Skill DMG+24%。施放战技、连携技或终结技时，ATK+5%，持续15秒。三种技能类型的增益独立且不叠加。",
+    "effectEn": "Wearer's Skill DMG +24%. When the wearer casts a battle skill, combo skill, or ultimate, the wearer gains ATK +5% for 15s. The buff from each of the three skill types is unique and does not stack with itself.",
+    "mainStat": "Skill DMG",
+    "recommendedFor": [
+      "Guard",
+      "Caster",
+      "Striker"
+    ],
+    "rarity": 5,
+    "tierRank": "S"
+  },
+  {
+    "id": "catastrophe",
+    "name": "灾变",
+    "nameEn": "Catastrophe",
+    "effect": "装备者Ultimate Gain Efficiency+20%。施放战技时，SP回复+50。每场战斗仅触发1次。",
+    "effectEn": "Wearer's Ultimate Gain Efficiency +20%. The wearer casts a battle skill, the action returns +50 SP. This effect only triggers 1 time per battle.",
+    "mainStat": "Ultimate Gain",
+    "recommendedFor": [
+      "Supporter",
+      "Caster"
+    ],
+    "rarity": 5,
+    "tierRank": "A"
+  },
+  {
+    "id": "swordmancer",
+    "name": "剑术师",
+    "nameEn": "Swordmancer",
+    "effect": "装备者Stagger Efficiency Bonus+20%。施加Physical Status后，造成一次250%ATK的Physical DMG和10 Stagger。冷却15秒。",
+    "effectEn": "Wearer's Stagger Efficiency Bonus +20%. After the wearer applies a Physical Status, the wearer also performs 1 hit that deals +250% ATK of Physical DMG and 10 Stagger. Effect trigger cooldown: 15s.",
+    "mainStat": "Stagger",
+    "recommendedFor": [
+      "Guard",
+      "Striker"
+    ],
+    "rarity": 5,
+    "tierRank": "S"
+  },
+  {
+    "id": "lynx",
+    "name": "LYNX",
+    "nameEn": "LYNX",
+    "effect": "装备者HP Treatment Efficiency+20%。治疗后目标获得15%全伤害减免10秒。溢出治疗量提升至30%。",
+    "effectEn": "Wearer's HP Treatment Efficiency +20%. After the wearer gives HP treatment to an allied target, that target also gains +15% DMG Reduction for 10s. If the treatment exceeds the target's Max HP, the target gains +30% DMG Reduction.",
+    "mainStat": "Treatment",
+    "recommendedFor": [
+      "Supporter"
+    ],
+    "rarity": 5,
+    "tierRank": "S"
+  },
+  {
+    "id": "aethertech",
+    "name": "源石技艺",
+    "nameEn": "Æthertech",
+    "effect": "装备者ATK+8%。施加Vulnerable后，Physical DMG+8%持续15秒，可叠4层。目标已有4层Vulnerable时，额外Physical DMG+16%持续10秒。",
+    "effectEn": "Wearer's ATK +8%. After the wearer applies Vulnerability, the wearer gains Physical DMG +8% for 15s. This effect can reach 4 stacks. If the target already has 4 stacks of Vulnerability, the wearer gains an additional Physical DMG +16% for 10s.",
+    "mainStat": "ATK",
+    "recommendedFor": [
+      "Guard",
+      "Vanguard"
+    ],
+    "rarity": 5,
+    "tierRank": "SS"
+  },
+  {
+    "id": "bonekrusha",
+    "name": "碎骨者",
+    "nameEn": "Bonekrusha",
+    "effect": "装备者ATK+15%。施放连携技时获得1层Bonekrushing Smash，使下一次战技DMG+30%。最多叠2层。",
+    "effectEn": "Wearer's ATK +15%. When the wearer casts a combo skill, the wearer gains 1 stack of Bonekrushing Smash that grants the wearer's next battle skill DMG Dealt +30%. Can stack 2 times.",
+    "mainStat": "ATK",
+    "recommendedFor": [
+      "Striker",
+      "Guard"
+    ],
+    "rarity": 5,
+    "tierRank": "SS"
+  },
+  {
+    "id": "pulser-labs",
+    "name": "脉冲实验室",
+    "nameEn": "Pulser Labs",
+    "effect": "装备者Arts Intensity+30。施加Electrification后Electric DMG+50%持续10秒；施加Solidification后Cryo DMG+50%持续10秒。不可叠加。",
+    "effectEn": "Wearer's Arts Intensity +30. After the wearer applies Electrification, the wearer gains Electric DMG +50% for 10s. After the wearer applies Solidification, the wearer gains Cryo DMG +50% for 10s.",
+    "mainStat": "Arts Intensity",
+    "recommendedFor": [
+      "Caster"
+    ],
+    "rarity": 5,
+    "tierRank": "SS"
+  },
+  {
+    "id": "frontiers",
+    "name": "前线",
+    "nameEn": "Frontiers",
+    "effect": "装备者Combo Skill CD Reduction+15%。技能回复SP后，全队DMG+16%持续15秒。不可叠加。",
+    "effectEn": "Wearer's Combo Skill Cooldown Reduction +15%. After the wearer's skill recovers SP, the team gains DMG +16% for 15s. This effect cannot stack.",
+    "mainStat": "CDR",
+    "recommendedFor": [
+      "Supporter",
+      "Vanguard"
+    ],
+    "rarity": 5,
+    "tierRank": "S"
+  },
+  {
+    "id": "hot-work",
+    "name": "热工",
+    "nameEn": "Hot Work",
+    "effect": "装备者Arts Intensity+30。施加Combustion后Heat DMG+50%持续10秒；施加Corrosion后Nature DMG+50%持续10秒。不可叠加。",
+    "effectEn": "Wearer's Arts Intensity +30. After the wearer applies Combustion, the wearer gains Heat DMG +50% for 10s. After the wearer applies Corrosion, the wearer gains Nature DMG +50% for 10s.",
+    "mainStat": "Arts Intensity",
+    "recommendedFor": [
+      "Caster"
+    ],
+    "rarity": 5,
+    "tierRank": "SS"
+  },
+  {
+    "id": "mi-security",
+    "name": "MI安保",
+    "nameEn": "MI Security",
+    "effect": "装备者CRIT Rate+5%。暴击后ATK+5%持续5秒，可叠5层。满层时额外CRIT Rate+5%。",
+    "effectEn": "Wearer's Critical Rate +5%. After the wearer scores a critical hit, the wearer gains ATK +5% for 5s. This effect can reach 5 stacks. At max stacks, grant an additional Critical Rate +5%.",
+    "mainStat": "CRIT Rate",
+    "recommendedFor": [
+      "Guard",
+      "Striker",
+      "Caster"
+    ],
+    "rarity": 5,
+    "tierRank": "S"
+  },
+  {
+    "id": "type-50-yinglung",
+    "name": "50型应龙",
+    "nameEn": "Type 50 Yinglung",
+    "effect": "装备者ATK+15%。队伍中任意角色施放战技时，获得1层Yinglung's Edge，使下一次连携技DMG+20%。最多叠3层。",
+    "effectEn": "Wearer's ATK +15%. When any operator in the team casts a battle skill, the wearer gains 1 stack of Yinglung's Edge that gives DMG +20% to the wearer's next combo skill. Can stack 3 times.",
+    "mainStat": "ATK",
+    "recommendedFor": [
+      "Striker",
+      "Guard"
+    ],
+    "rarity": 5,
+    "tierRank": "S"
+  },
+  {
+    "id": "tide-surge",
+    "name": "潮涌",
+    "nameEn": "Tide Surge",
+    "effect": "装备者Skill DMG+20%。施加2层以上Arts Infliction后，Arts DMG+35%持续15秒。不可叠加。",
+    "effectEn": "Wearer's Skill DMG Dealt +20%. After the wearer applies 2 or more stacks of Arts Infliction on the enemy, the wearer gains Arts DMG Dealt +35% for 15s. This effect cannot stack.",
+    "mainStat": "Skill DMG",
+    "recommendedFor": [
+      "Caster"
+    ],
+    "rarity": 5,
+    "tierRank": "S"
+  },
+  {
+    "id": "eternal-xiranite",
+    "name": "永恒锡兰石",
+    "nameEn": "Eternal Xiranite",
+    "effect": "装备者HP+1000。施加Amp/Protect/Susceptibility/Weaken时，其他队友DMG+16%持续15秒。不可叠加。",
+    "effectEn": "Wearer's HP +1000. After the wearer applies Amp, Protected, Susceptibility, or Weakened, other teammates gain DMG Dealt +16% for 15s. This effect cannot stack.",
+    "mainStat": "HP",
+    "recommendedFor": [
+      "Supporter",
+      "Defender"
+    ],
+    "rarity": 5,
+    "tierRank": "S"
+  },
+  {
+    "id": "qingbo",
+    "name": "清波",
+    "nameEn": "Qingbo",
+    "effect": "装备者Combo Skill CD Reduction+15%。施放连携技时，Skill DMG+20%（所有技能）持续15秒，可叠2层。",
+    "effectEn": "Wearer's Combo Skill Cooldown Reduction +15%. When the wearer casts a combo skill, the wearer gains Skill DMG Dealt +20% (for every skill) for 15s. This effect can reach 2 stacks.",
+    "mainStat": "CDR",
+    "recommendedFor": [
+      "Striker",
+      "Guard"
+    ],
+    "rarity": 5,
+    "tierRank": "S"
+  },
+  {
+    "id": "xiranflow",
+    "name": "锡兰流",
+    "nameEn": "Xiranflow",
+    "effect": "装备者ATK+10%。消耗Electrification或Corrosion时，获得层数等于Status Level的增益，每层Electric/Nature DMG+15%持续25秒。最多3层。",
+    "effectEn": "Wearer's ATK +10%. Whenever the wearer consumes Electrification or Corrosion, the wearer gains buff stacks equal to the Status Level, with each stack giving Electric and Nature DMG +15% for 25s. Max 3 stacks.",
+    "mainStat": "ATK",
+    "recommendedFor": [
+      "Caster"
+    ],
+    "rarity": 5,
+    "tierRank": "SS"
+  },
+  {
+    "id": "grizzled-edge",
+    "name": "苍刃",
+    "nameEn": "Grizzled Edge",
+    "effect": "装备者ATK+8%。施加Crush或Breach时，Physical DMG+[6%×消耗的Vulnerable层数]持续20秒。目标有Physical Susceptibility/Stagger/Originium Crystal时提升至1.5倍。",
+    "effectEn": "Wearer's ATK +8%. When the wearer applies Crush or Breach, the wearer gains Physical DMG Dealt +[6% × number of Vulnerability stacks consumed] for 20s. If the target has Physical Susceptibility, is Staggered, or has Originium Crystals, increase to 1.5 times.",
+    "mainStat": "ATK",
+    "recommendedFor": [
+      "Guard",
+      "Vanguard"
+    ],
+    "rarity": 5,
+    "tierRank": "SS"
+  }
+]

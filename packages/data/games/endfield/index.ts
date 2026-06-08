@@ -5,3 +5,4 @@ export { tierLists } from './tier-lists';
 export { characterMaterials, getMaterialsForCharacter } from './extras';
 export { endfieldGuides, getEndfieldGuideTitle, getEndfieldGuideContent, getEndfieldGuideSummary, getEndfieldGuideCategory, getEndfieldGuideCategories, getEndfieldGuidesByCategory, getEndfieldGuideById, getEndfieldGuideSlugs, getEndfieldGuideFaqQuestion, getEndfieldGuideFaqAnswer, ENDFIELD_GUIDE_CATEGORIES } from './guides';
 export { regions, getRegionName, getRegionDescription } from './regions';
+export { gearSets, getGearSetById, getGearSetName, getGearSetEffect } from './gear-sets';

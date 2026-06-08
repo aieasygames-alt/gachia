@@ -48,19 +48,25 @@ export interface EndfieldRecommendedBuild {
 }
 
 export interface EndfieldCharacterStats {
-  hp: number;
-  hpMax: number;
-  atk: number;
-  atkMax: number;
-  str: number;
-  strMax: number;
-  agl: number;
-  aglMax: number;
-  int: number;
-  intMax: number;
-  wil: number;
-  wilMax: number;
+  hp: number[];
+  atk: number[];
+  str: number[];
+  agl: number[];
+  int: number[];
+  wil: number[];
   critRate: number;
+  levels: string[];
+}
+
+export interface EndfieldPotential {
+  name: string;
+  description: string;
+  descriptionEn: string;
+}
+
+export interface EndfieldEliteCost {
+  elite: number;
+  materials: { name: string; quantity: number }[];
 }
 
 export interface EndfieldCharacter {
@@ -89,6 +95,8 @@ export interface EndfieldCharacter {
   image: string;
   availableAtLaunch: boolean;
   status: string;
+  potentials?: EndfieldPotential[];
+  eliteCosts?: EndfieldEliteCost[];
 }
 
 export interface EndfieldWeapon {
@@ -156,6 +164,18 @@ export interface EndfieldRegion {
   tips: string[];
   subRegions: string[];
   collectibles: number;
+}
+
+export interface EndfieldGearSet {
+  id: string;
+  name: string;
+  nameEn: string;
+  effect: string;
+  effectEn: string;
+  mainStat: string;
+  recommendedFor: string[];
+  rarity: number;
+  tierRank: string;
 }
 
 export function localeStr(zh: string, en: string, locale: SupportedLocale, ja?: string): string {

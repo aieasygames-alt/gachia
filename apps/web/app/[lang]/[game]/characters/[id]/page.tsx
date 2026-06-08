@@ -112,6 +112,8 @@ import type { ZzzCharacter } from '@gachia/data/games/zzz/types';
 import type { GuihuanCharacter } from '@gachia/data/games/guihuan/types';
 import type { AnantaCharacter } from '@gachia/data/games/ananta/types';
 import type { EndfieldCharacter } from '@gachia/data/games/endfield/types';
+import { getMaterialsForCharacter as getEndfieldMaterialsForCharacter } from '@gachia/data/games/endfield/extras';
+import { getEndfieldMaterialById } from '@gachia/data/games/endfield/items';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 import dynamic from 'next/dynamic';
@@ -2348,6 +2350,126 @@ function EndfieldCharacterDetail({ char, locale }: { char: EndfieldCharacter; lo
           )}
         </div>
       </div>
+
+      {/* Stats Progression Table */}
+      {char.stats && char.stats.hp.length > 0 && (
+        <Section title={locale === 'zh' ? '属性成长' : locale === 'ja' ? 'ステータス成長' : 'Stats Progression'}>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-game-border">
+                  <th className="px-3 py-2 text-left text-game-text-muted"></th>
+                  {(char.stats.levels ?? ['Lv.1', 'E1', 'E2', 'E3', 'E4', 'E4 Max']).map((lvl) => (
+                    <th key={lvl} className="px-3 py-2 text-center text-game-text-muted whitespace-nowrap">{lvl}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { key: 'HP', values: char.stats.hp },
+                  { key: 'ATK', values: char.stats.atk },
+                  { key: 'STR', values: char.stats.str },
+                  { key: 'AGL', values: char.stats.agl },
+                  { key: 'INT', values: char.stats.int },
+                  { key: 'WIL', values: char.stats.wil },
+                ].map(({ key, values }) => (
+                  <tr key={key} className="border-b border-game-border/50">
+                    <td className="px-3 py-2 font-medium text-game-text">{key}</td>
+                    {values.map((v: number, i: number) => (
+                      <td key={i} className="px-3 py-2 text-center text-game-text">{key === 'HP' || key === 'ATK' ? Math.round(v) : v.toFixed(1)}</td>
+                    ))}
+                  </tr>
+                ))}
+                <tr className="border-b border-game-border/50">
+                  <td className="px-3 py-2 font-medium text-game-text">CRIT Rate</td>
+                  <td colSpan={char.stats.hp.length} className="px-3 py-2 text-center text-game-text">{(char.stats.critRate * 100).toFixed(0)}%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </Section>
+      )}
+
+      {/* Elite Promotion Costs */}
+      {char.eliteCosts && char.eliteCosts.length > 0 && (
+        <Section title={locale === 'zh' ? '精英晋升材料' : locale === 'ja' ? 'エリート昇進素材' : 'Elite Promotion Costs'}>
+          <div className="space-y-3">
+            {char.eliteCosts.map((tier) => (
+              <div key={tier.elite} className="rounded-lg border border-game-border bg-game-surface p-3">
+                <h4 className="mb-2 font-medium text-game-text">
+                  {locale === 'zh' ? `精英${tier.elite}` : `Elite ${tier.elite}`}
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {tier.materials.map((mat, i) => (
+                    <span key={i} className="rounded bg-game-surface-alt px-2 py-1 text-xs text-game-text-muted">
+                      {mat.name} x{mat.quantity}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {/* Potentials */}
+      {char.potentials && char.potentials.length > 0 && (
+        <Section title={locale === 'zh' ? '潜能' : locale === 'ja' ? 'ポテンシャル' : 'Potentials'}>
+          <div className="space-y-2">
+            {char.potentials.map((pot, i) => (
+              <div key={i} className="rounded-lg border border-game-border bg-game-surface p-3">
+                <div className="mb-1 text-sm font-medium text-game-text">
+                  <span className="mr-2 text-game-primary">P{i + 1}</span>
+                  {pot.name}
+                </div>
+                <div className="text-sm text-game-text-muted">{pot.descriptionEn}</div>
+              </div>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {/* Skill Upgrade Materials */}
+      {(() => {
+        const charMats = getEndfieldMaterialsForCharacter(char.id);
+        if (!charMats || charMats.talentMaterials.length === 0) return null;
+        return (
+          <Section title={locale === 'zh' ? '技能升级材料' : locale === 'ja' ? 'スキル強化素材' : 'Skill Upgrade Materials'}>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-game-border">
+                    <th className="px-3 py-2 text-left text-game-text-muted">{locale === 'zh' ? '等级' : 'Rank'}</th>
+                    <th className="px-3 py-2 text-left text-game-text-muted">{locale === 'zh' ? '材料' : 'Materials'}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {charMats.talentMaterials.map((tier, i) => (
+                    <tr key={i} className="border-b border-game-border/50">
+                      <td className="px-3 py-2 font-medium text-game-text whitespace-nowrap">{tier.talentLevel}</td>
+                      <td className="px-3 py-2">
+                        <div className="flex flex-wrap gap-2">
+                          {tier.materials.map((mat, j) => {
+                            const matInfo = getEndfieldMaterialById(mat.materialId);
+                            return (
+                              <span key={j} className="inline-flex items-center gap-1.5 rounded bg-game-surface-alt px-2 py-1 text-xs text-game-text-muted">
+                                {matInfo && (
+                                  <img src={`/images/endfield/materials/${matInfo.id}.webp`} alt="" className="h-4 w-4 rounded" loading="lazy" />
+                                )}
+                                {matInfo ? (locale === 'zh' ? matInfo.name : matInfo.nameEn) : mat.materialId} x{mat.quantity}
+                              </span>
+                            );
+                          })}
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </Section>
+        );
+      })()}
 
       {/* Skills */}
       <Section title={locale === 'zh' ? '技能' : locale === 'ja' ? 'スキル' : 'Skills'}>

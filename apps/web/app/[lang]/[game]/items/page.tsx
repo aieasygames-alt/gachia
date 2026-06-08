@@ -8,6 +8,7 @@ import { zzzMaterials, getZzzMaterialName } from '@gachia/data/games/zzz/items';
 import { anantaMaterials, getAnantaMaterialName } from '@gachia/data/games/ananta/items';
 import { guihuanMaterials, getGuihuanMaterialName } from '@gachia/data/games/guihuan/items';
 import { endfieldMaterials, getEndfieldMaterialName } from '@gachia/data/games/endfield/items';
+import { gearSets, getGearSetName, getGearSetEffect } from '@gachia/data/games/endfield/gear-sets';
 import { Link } from '@/lib/i18n/navigation';
 
 const BASE_URL = 'https://gachia.com';
@@ -525,13 +526,15 @@ function EndfieldItemsPage({ locale }: { locale: SupportedLocale }) {
   const grouped = groupByType(materials);
   const typeOrder = ['ascension', 'skill', 'weapon', 'exp', 'currency', 'gacha'];
 
+  const TIER_COLORS: Record<string, string> = { SS: '#ef4444', S: '#f59e0b', A: '#3b82f6', B: '#6b7280' };
+
   return (
     <div>
       <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.endfield.theme.primary }}>
         {CATEGORY_LABELS.items?.[locale] ?? 'Items'}
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${materials.length} 种材料` : locale === 'ja' ? `${materials.length} 種の素材` : `${materials.length} Materials`}
+        {locale === 'zh' ? `共 ${materials.length} 种材料，${gearSets.length} 套装备` : locale === 'ja' ? `${materials.length} 種の素材、${gearSets.length} ギアセット` : `${materials.length} Materials, ${gearSets.length} Gear Sets`}
       </p>
 
       {typeOrder.map((type) => {
@@ -558,6 +561,35 @@ function EndfieldItemsPage({ locale }: { locale: SupportedLocale }) {
           </section>
         );
       })}
+
+      {/* Gear Sets */}
+      <section className="mb-8">
+        <h2 className="mb-4 text-lg font-semibold text-game-text">
+          {locale === 'zh' ? '装备套装' : locale === 'ja' ? 'ギアセット' : 'Gear Sets'} ({gearSets.length})
+        </h2>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {gearSets.map((set) => (
+            <div key={set.id} className="rounded-lg border border-game-border bg-game-surface p-4">
+              <div className="mb-2 flex items-center justify-between">
+                <h3 className="text-sm font-bold text-game-text">{getGearSetName(set, locale)}</h3>
+                <span className="text-xs font-bold" style={{ color: TIER_COLORS[set.tierRank] || '#888' }}>{set.tierRank}</span>
+              </div>
+              <div className="mb-2 flex items-center gap-2">
+                <span className="rounded bg-game-surface-alt px-2 py-0.5 text-[11px] text-game-text-muted">{set.mainStat}</span>
+                <span className="text-xs" style={{ color: RARITY_COLORS[set.rarity] || '#888' }}>{'★'.repeat(set.rarity)}</span>
+              </div>
+              <p className="text-xs leading-relaxed text-game-text-muted">{getGearSetEffect(set, locale)}</p>
+              {set.recommendedFor.length > 0 && (
+                <div className="mt-2 flex flex-wrap gap-1">
+                  {set.recommendedFor.map((cls) => (
+                    <span key={cls} className="rounded bg-game-primary/10 px-1.5 py-0.5 text-[10px] text-game-primary">{cls}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
