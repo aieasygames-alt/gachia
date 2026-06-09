@@ -101,35 +101,35 @@ export default async function ItemsPage({
   };
 
   if (gameId === 'genshin') {
-    return <><GenshinItemsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    return <><GenshinItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'starrail') {
-    return <><StarRailItemsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    return <><StarRailItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'nte') {
-    return <><NteItemsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    return <><NteItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'wuwa') {
-    return <><WuWaItemsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    return <><WuWaItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'zzz') {
-    return <><ZzzItemsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    return <><ZzzItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'ananta') {
-    return <><AnantaItemsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    return <><AnantaItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'guihuan') {
-    return <><GuihuanItemsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    return <><GuihuanItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'endfield') {
-    return <><EndfieldItemsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    return <><EndfieldItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   return (
@@ -146,7 +146,7 @@ export default async function ItemsPage({
 
 // --- Genshin Items ---
 
-function GenshinItemsPage({ locale }: { locale: SupportedLocale }) {
+function GenshinItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
   const materials = genshinMaterials;
   const grouped = groupByType(materials);
   const typeOrder = ['character-ascension', 'talent-book', 'boss-drop', 'weekly-boss', 'local-specialty', 'common-drop', 'exp-material', 'currency'];
@@ -169,7 +169,7 @@ function GenshinItemsPage({ locale }: { locale: SupportedLocale }) {
             <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
             <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {list.map((mat) => (
-                <Link key={mat.id} href={`/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                <Link key={mat.id} href={`/${gameId}/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
                     <h3 className="text-sm font-semibold text-game-text">{getGenshinMaterialName(mat, locale)}</h3>
                   </div>
@@ -199,7 +199,7 @@ const STARRAIL_TYPE_LABELS: Record<string, Record<string, string>> = {
   'exp-material': { zh: '经验材料', en: 'EXP Material', ja: '経験値素材' },
 };
 
-function StarRailItemsPage({ locale }: { locale: SupportedLocale }) {
+function StarRailItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
   const materials = starrailMaterials;
   const grouped = groupByType(materials);
   const typeOrder = ['character-ascension', 'trace', 'boss', 'common', 'exp-material', 'currency'];
@@ -222,7 +222,7 @@ function StarRailItemsPage({ locale }: { locale: SupportedLocale }) {
             <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
             <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {list.map((mat) => (
-                <Link key={mat.id} href={`/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                <Link key={mat.id} href={`/${gameId}/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
                     <h3 className="text-sm font-semibold text-game-text">{getStarRailMaterialName(mat, locale)}</h3>
                   </div>
@@ -243,7 +243,7 @@ function StarRailItemsPage({ locale }: { locale: SupportedLocale }) {
 
 // --- NTE Items ---
 
-function NteItemsPage({ locale }: { locale: SupportedLocale }) {
+function NteItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
   const materials = nteMaterials;
   const grouped = groupByType(materials);
   const typeOrder = ['guide', 'arc-exp', 'module-exp', 'ascension', 'boss', 'manual', 'permit', 'currency'];
@@ -266,7 +266,7 @@ function NteItemsPage({ locale }: { locale: SupportedLocale }) {
             <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
             <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {list.map((mat) => (
-                <Link key={mat.id} href={`/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                <Link key={mat.id} href={`/${gameId}/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
                     <h3 className="text-sm font-semibold text-game-text">{getNteMaterialName(mat, locale)}</h3>
                   </div>
@@ -296,7 +296,7 @@ const WUWA_TYPE_LABELS: Record<string, Record<string, string>> = {
   currency: { zh: '货币', en: 'Currency', ja: '通貨' },
 };
 
-function WuWaItemsPage({ locale }: { locale: SupportedLocale }) {
+function WuWaItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
   const materials = wuwaMaterials;
   const grouped = groupByType(materials);
   const typeOrder = ['common-drop', 'skill-material', 'boss-material', 'weekly-boss', 'local-specialty', 'currency'];
@@ -319,7 +319,7 @@ function WuWaItemsPage({ locale }: { locale: SupportedLocale }) {
             <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
             <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {list.map((mat) => (
-                <Link key={mat.id} href={`/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                <Link key={mat.id} href={`/${gameId}/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
                     <h3 className="text-sm font-semibold text-game-text">{getWuWaMaterialName(mat, locale)}</h3>
                   </div>
@@ -355,7 +355,7 @@ const ZZZ_TYPE_LABELS: Record<string, Record<string, string>> = {
   '抽卡道具': { zh: '抽卡道具', en: 'Gacha Item', ja: 'ガチャアイテム' },
 };
 
-function ZzzItemsPage({ locale }: { locale: SupportedLocale }) {
+function ZzzItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
   const materials = zzzMaterials;
   const grouped = groupByType(materials);
   const typeOrder = ['突破材料', '技能材料', '特殊材料', '通用货币', '抽卡道具'];
@@ -378,7 +378,7 @@ function ZzzItemsPage({ locale }: { locale: SupportedLocale }) {
             <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
             <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {list.map((mat) => (
-                <Link key={mat.id} href={`/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                <Link key={mat.id} href={`/${gameId}/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
                     <h3 className="text-sm font-semibold text-game-text">{getZzzMaterialName(mat, locale)}</h3>
                   </div>
@@ -410,7 +410,7 @@ const ANANTA_TYPE_LABELS: Record<string, Record<string, string>> = {
   currency: { zh: '货币', en: 'Currency', ja: '通貨' },
 };
 
-function AnantaItemsPage({ locale }: { locale: SupportedLocale }) {
+function AnantaItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
   const materials = anantaMaterials;
   const grouped = groupByType(materials);
   const typeOrder = ['guide', 'chaos-exp', 'ascension', 'boss-material', 'skill-material', 'local-specialty', 'permit', 'currency'];
@@ -433,7 +433,7 @@ function AnantaItemsPage({ locale }: { locale: SupportedLocale }) {
             <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
             <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {list.map((mat) => (
-                <Link key={mat.id} href={`/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                <Link key={mat.id} href={`/${gameId}/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
                     <h3 className="text-sm font-semibold text-game-text">{getAnantaMaterialName(mat, locale)}</h3>
                   </div>
@@ -468,7 +468,7 @@ const GUIHUAN_TYPE_LABELS: Record<string, Record<string, string>> = {
   permit: { zh: '许可', en: 'Permit', ja: '許可証' },
 };
 
-function GuihuanItemsPage({ locale }: { locale: SupportedLocale }) {
+function GuihuanItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
   const materials = guihuanMaterials;
   const grouped = groupByType(materials);
   const typeOrder = ['guide', 'spirit-exp', 'weapon-exp', 'ascension', 'element-ascension', 'rare', 'boss', 'skill', 'local-specialty', 'currency', 'permit'];
@@ -491,7 +491,7 @@ function GuihuanItemsPage({ locale }: { locale: SupportedLocale }) {
             <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
             <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {list.map((mat) => (
-                <Link key={mat.id} href={`/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                <Link key={mat.id} href={`/${gameId}/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
                     <h3 className="text-sm font-semibold text-game-text">{getGuihuanMaterialName(mat, locale)}</h3>
                   </div>
@@ -521,7 +521,7 @@ const ENDFIELD_TYPE_LABELS: Record<string, Record<string, string>> = {
   gacha: { zh: '抽卡道具', en: 'Gacha Item', ja: 'ガチャアイテム' },
 };
 
-function EndfieldItemsPage({ locale }: { locale: SupportedLocale }) {
+function EndfieldItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
   const materials = endfieldMaterials;
   const grouped = groupByType(materials);
   const typeOrder = ['ascension', 'skill', 'weapon', 'exp', 'currency', 'gacha'];

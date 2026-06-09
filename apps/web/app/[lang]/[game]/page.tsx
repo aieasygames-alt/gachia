@@ -125,9 +125,9 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
 const FEATURED_CHARS: Record<string, string[]> = {
   genshin: ['hu-tao', 'raiden-shogun', 'furina', 'nahida', 'kazuha', 'zhongli', 'yelan'],
   starrail: ['kafka', 'jingliu', 'acheron', 'firefly', 'robin', 'ruan-mei'],
-  wuwa: ['jiyan', 'yinlin', 'jiinshi', 'camellya', 'rover-aero'],
+  wuwa: ['jiyan', 'yinlin', 'jinhsi', 'camellya', 'rover-spectro'],
   nte: ['chiz', 'aurelia', 'skia', 'haniel', 'sakiri', 'nanally'],
-  zzz: ['ellen-joe', 'zhu-yuan', 'miyabi', 'burnice-white', 'caesar-king'],
+  zzz: ['ellen', 'zhu-yuan', 'miyabi', 'burnice', 'caesar'],
   guihuan: [],
   ananta: [],
   endfield: ['laevatain', 'ardelia', 'tangtang', 'endministrator', 'lifeng'],
