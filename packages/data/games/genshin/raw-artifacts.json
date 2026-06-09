@@ -68,7 +68,7 @@
     "bonus2pcEn": "Dendro DMG Bonus +15%",
     "bonus4pc": "元素战技或元素爆发命中敌人后，使命中目标的草元素抗性降低30%，持续8秒。装备者处于队伍后台时，依然能触发该效果",
     "bonus4pcEn": "After Elemental Skills or Bursts hit opponents, the targets' Dendro RES will be decreased by 30% for 8s. This effect can be triggered even if the equipping character is off-field.",
-    "bestFor": ["nahida", "tighnari", "alhaitham", "baizhuer"],
+    "bestFor": ["nahida", "tighnari", "alhaitham", "baizhu"],
     "characters": ["nahida", "tighnari", "alhaitham", "baizhu", "collei", "kirara", "yaoyao", "kaveh", "emilie", "kinich", "dendro-traveler"]
   },
   {
@@ -164,7 +164,7 @@
     "bonus2pcEn": "Hydro DMG Bonus +15%",
     "bonus4pc": "施放元素战技后的15秒内，普通攻击与重击造成的伤害提高30%",
     "bonus4pcEn": "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 30% for 15s.",
-    "bestFor": ["childe", "kokomi", "mualani"],
+    "bestFor": ["tartaglia", "kokomi"],
     "characters": ["childe", "kokomi", "mualani", "mona", "ayato", "barbara", "xingqiu", "yelan", "hydro-traveler"]
   },
   {
@@ -248,7 +248,7 @@
     "bonus2pcEn": "Elemental Burst DMG +20%",
     "bonus4pc": "施放元素爆发后，队伍中所有角色（不包括装备者自己）的攻击力提升20%，持续12秒。该效果不可叠加",
     "bonus4pcEn": "Using an Elemental Burst increases all party members' ATK by 20% for 12s. This effect cannot stack.",
-    "bestFor": ["bennett", "mona", "sara"],
+    "bestFor": ["bennett", "mona", "kujou-sara"],
     "characters": ["bennett", "mona", "sara", "kujou-sara", "xingqiu", "xiangling", "fischl", "beidou", "rosaria", "kaeya", "lynette", "charlotte", "shenhe", "gorou", "faruzan", "yun-jin", "sethos"]
   },
   {
@@ -476,7 +476,7 @@
     "bonus2pcEn": "When the equipping character triggers a Nightsoul Burst, all nearby party members' (excluding the equipping character) ATK is increased by 12% for 15s.",
     "bonus4pc": "装备者触发对应元素反应后，该元素的伤害加成提升12%，持续15秒。通过这种方式至多提升2种元素伤害加成。如果装备者为「夜魂」角色，还会额外提升元素伤害加成12%",
     "bonus4pcEn": "After the equipping character triggers a corresponding Elemental Reaction, Elemental DMG Bonus for the corresponding element is increased by 12% for 15s. Max 2 elements. If the equipping character has Nightsoul points, the Elemental DMG Bonus is increased by an additional 12%.",
-    "bestFor": ["kachina", "xilonen", "citlali", "oron"],
+    "bestFor": ["xilonen"],
     "characters": ["kachina", "xilonen", "citlali", "oron", "mavuika", "iansan", "pyro-traveler"]
   }
 ]

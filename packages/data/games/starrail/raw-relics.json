@@ -8,7 +8,7 @@
     "bonus2pcEn": "Lightning DMG +10%.",
     "bonus4pc": "当装备者施放终结技时，速度提高20%，持续1回合",
     "bonus4pcEn": "When the wearer uses their Ultimate, increases SPD by 20% for 1 turn.",
-    "bestFor": ["kepler", "arlan", "serval"]
+    "bestFor": ["arlan", "serval"]
   },
   {
     "id": "champion-of-streetwise-boxing",
@@ -30,7 +30,7 @@
     "bonus2pcEn": "Break Effect +16%.",
     "bonus4pc": "当装备者造成弱点击破后，额外提高16%击破特攻，并恢复3点能量",
     "bonus4pcEn": "Increases the wearer's Break Effect by 16%. After the wearer inflicts Weakness Break, regenerates 3 Energy.",
-    "bestFor": ["xueyi", " Gallagher", "griseo"]
+    "bestFor": ["xueyi", "gallagher"]
   },
   {
     "id": "genius-of-brilliant-stars",
@@ -74,7 +74,7 @@
     "bonus2pcEn": "Increases Shield effect by 20%.",
     "bonus4pc": "当装备者为队友提供护盾时，护盾持有者造成的伤害提高10%",
     "bonus4pcEn": "When the wearer provides a Shield to an ally, increases the Shield holder's DMG by 10%.",
-    "bestFor": ["gepard", "march-7th", "preservation-trailblazer"]
+    "bestFor": ["gepard", "march-7th"]
   },
   {
     "id": "longevous-disciple",
@@ -107,7 +107,7 @@
     "bonus2pcEn": "ATK +12%.",
     "bonus4pc": "装备者的速度提高6%，普攻伤害提高10%",
     "bonus4pcEn": "The wearer's SPD increases by 6% and Basic ATK DMG increases by 10%.",
-    "bestFor": ["danheng", "sushang", "serval"]
+    "bestFor": ["dan-heng", "sushang", "serval"]
   },
   {
     "id": "passerby-of-wandering-cloud",
@@ -162,7 +162,7 @@
     "bonus2pcEn": "Wind DMG +10%.",
     "bonus4pc": "当装备者施放终结技后，行动提前25%",
     "bonus4pcEn": "After the wearer uses Ultimate, advances action by 25%.",
-    "bestFor": ["danheng", "sampo", "bronya"]
+    "bestFor": ["dan-heng", "sampo", "bronya"]
   },
   {
     "id": "guard-of-wuthering-snow",
@@ -173,7 +173,7 @@
     "bonus2pcEn": "Reduces DMG taken by 8%.",
     "bonus4pc": "回合开始时，恢复等同于装备者生命值上限8%的生命值",
     "bonus4pcEn": "At the start of the turn, restores HP equal to 8% of the wearer's Max HP.",
-    "bestFor": ["gepard", "preservation-trailblazer", "march-7th"]
+    "bestFor": ["gepard", "march-7th"]
   },
   {
     "id": "watchmaker-master-of-dream-machinations",
@@ -184,7 +184,7 @@
     "bonus2pcEn": "Break Effect +16%.",
     "bonus4pc": "当装备者施放终结技时，全体队友的击破特攻提高30%，持续2回合",
     "bonus4pcEn": "When the wearer uses Ultimate, increases all allies' Break Effect by 30% for 2 turns.",
-    "bestFor": ["harmony-trailblazer", "rappa", "griseo"]
+    "bestFor": ["rappa"]
   },
   {
     "id": "iron-cavalry-against-the-scourge",
@@ -195,7 +195,7 @@
     "bonus2pcEn": "Increases Break Effect by 16%.",
     "bonus4pc": "当装备者的击破特攻大于等于150%时，击破伤害无视10%防御力。当击破特攻大于等于250%时，额外无视15%防御力",
     "bonus4pcEn": "When Break Effect is 150% or higher, Break DMG ignores 10% DEF. When Break Effect is 250% or higher, additionally ignores 15% DEF.",
-    "bestFor": ["firefly", "rappa", "harmony-trailblazer"]
+    "bestFor": ["firefly", "rappa"]
   },
   {
     "id": "the-ashblazing-grand-duke",
@@ -206,7 +206,7 @@
     "bonus2pcEn": "Follow-up ATK DMG +20%.",
     "bonus4pc": "追加攻击命中后，攻击力提高6%，最多叠加8层，持续3回合。追加攻击再次命中时刷新层数",
     "bonus4pcEn": "When follow-up attack hits, ATK increases by 6%, stacking up to 8 times for 3 turns. Stacks are refreshed when follow-up attack hits again.",
-    "bestFor": ["jingyuan", "topaz", "himeko"]
+    "bestFor": ["jing-yuan", "topaz", "himeko"]
   },
   {
     "id": "poet-of-mourning-collapse",
@@ -226,7 +226,7 @@
     "type": "planar",
     "bonus2pc": "攻击力提高12%。当装备者速度大于等于120时，攻击力额外提高12%",
     "bonus2pcEn": "ATK +12%. When SPD is 120 or higher, ATK increases by an additional 12%.",
-    "bestFor": ["seele", "jingyuan", "yanqing"]
+    "bestFor": ["seele", "jing-yuan", "yanqing"]
   },
   {
     "id": "fleet-of-the-ageless",
@@ -253,7 +253,7 @@
     "type": "planar",
     "bonus2pc": "防御力提高15%。当防御力大于等于1200时，攻击力提高12%",
     "bonus2pcEn": "DEF +15%. When DEF is 1200 or higher, ATK increases by 12%.",
-    "bestFor": ["preservation-trailblazer", "march-7th", "gepard"]
+    "bestFor": ["march-7th", "gepard"]
   },
   {
     "id": "celestial-differentiator",
@@ -262,7 +262,7 @@
     "type": "planar",
     "bonus2pc": "暴击伤害提高16%。当暴击伤害大于等于120%时，终结技和追加攻击暴击率提高15%",
     "bonus2pcEn": "CRIT DMG +16%. When CRIT DMG is 120% or higher, increases Ultimate and Follow-up ATK CRIT Rate by 15%.",
-    "bestFor": ["jingyuan", "yanqing", "topaz"]
+    "bestFor": ["jing-yuan", "yanqing", "topaz"]
   },
   {
     "id": "rutilant-arena",
@@ -298,7 +298,7 @@
     "type": "planar",
     "bonus2pc": "暴击率提高4%。当敌方目标被击败时，暴击伤害提高4%，最多叠加10层",
     "bonus2pcEn": "CRIT Rate +4%. When enemies are defeated, increases CRIT DMG by 4%, stacking up to 10 times.",
-    "bestFor": ["jingyuan", "himeko", "argenti"]
+    "bestFor": ["jing-yuan", "himeko", "argenti"]
   },
   {
     "id": "izumo-gensei-and-takama-divine-realm",
@@ -307,7 +307,7 @@
     "type": "planar",
     "bonus2pc": "攻击力提高12%。当队伍中至少2名角色命途相同，暴击率提高12%",
     "bonus2pcEn": "ATK +12%. When at least 2 allies follow the same Path, increases CRIT Rate by 12%.",
-    "bestFor": ["topaz", "dr-ratio", "jingyuan"]
+    "bestFor": ["topaz", "dr-ratio", "jing-yuan"]
   },
   {
     "id": "duran-dynasty-of-running-wolves",
@@ -316,7 +316,7 @@
     "type": "planar",
     "bonus2pc": "当队友施放追加攻击时，追加攻击伤害提高5%，最多叠加5层",
     "bonus2pcEn": "When allies use follow-up attacks, increases follow-up ATK DMG by 5%, stacking up to 5 times.",
-    "bestFor": ["jingyuan", "topaz", "himeko"]
+    "bestFor": ["jing-yuan", "topaz", "himeko"]
   },
   {
     "id": "forge-of-the-kalpagni-lantern",
@@ -325,6 +325,6 @@
     "type": "planar",
     "bonus2pc": "速度提高6%。当装备者攻击拥有火属性弱点的敌方目标时，击破特攻提高40%",
     "bonus2pcEn": "SPD +6%. When the wearer hits an enemy with Fire Weakness, increases Break Effect by 40%.",
-    "bestFor": ["harmony-trailblazer", "rappa", "firefly"]
+    "bestFor": ["rappa", "firefly"]
   }
 ]

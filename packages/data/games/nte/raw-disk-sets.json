@@ -11,7 +11,7 @@
     "setDescription2pcEn": "ATK +10%",
     "setDescription4pc": "施放技能后，佩戴者攻击力提高25%，持续20秒",
     "setDescription4pcEn": "After using a Skill, the equipping character's ATK +25% for 20s",
-    "bestFor": ["进攻", "Attack"],
+    "bestFor": ["nanally", "skia", "chiz", "jiuyuan", "daffodil", "hathor", "baicang", "mint"],
     "characters": ["nanally", "skia", "chiz", "jiuyuan", "daffodil", "hathor", "baicang", "mint"],
     "image": "/images/cassettes/shadow-creed.webp"
   },
@@ -27,7 +27,7 @@
     "setDescription2pcEn": "Chaos DMG +10%",
     "setDescription4pc": "无视敌人12%暗属性抗性。佩戴者触发Nova或Scorch反应后，无视效果提高至24%，持续20秒",
     "setDescription4pcEn": "Ignores 12% of enemies' Chaos RES. After triggering Nova or Scorch reactions, ignores 24% Chaos RES for 20s",
-    "bestFor": ["进攻", "Attack"],
+    "bestFor": ["lacrimosa", "daffodil"],
     "characters": ["lacrimosa", "daffodil"],
     "image": "/images/cassettes/diabolos.webp"
   },
@@ -43,7 +43,7 @@
     "setDescription2pcEn": "Cosmos DMG +10%",
     "setDescription4pc": "佩戴者施放必杀技后，造成的伤害无视25%防御力，持续20秒（不可叠加）",
     "setDescription4pcEn": "After using Ultimate, DMG dealt ignores 25% of targets' DEF for 20s (does not stack)",
-    "bestFor": ["进攻", "Attack"],
+    "bestFor": ["chiz", "skia", "xun"],
     "characters": ["chiz", "skia", "xun"],
     "image": "/images/cassettes/lost-radiance.webp"
   },
@@ -59,7 +59,7 @@
     "setDescription2pcEn": "Incantation DMG +10%",
     "setDescription4pc": "附近敌人受到队伍造成的咒属性伤害时，佩戴者攻击力提高6%，最多叠加6层，每层持续10秒（后台也生效）",
     "setDescription4pcEn": "When nearby enemies take Incantation DMG from the team, ATK +6%. Max 6 stacks, each lasting 10s. Activates off-field",
-    "bestFor": ["进攻", "Attack"],
+    "bestFor": ["baicang", "sakiri"],
     "characters": ["baicang", "sakiri"],
     "image": "/images/cassettes/crimson-twin-butterflies.webp"
   },
@@ -75,7 +75,7 @@
     "setDescription2pcEn": "Anima DMG +10%",
     "setDescription4pc": "附近敌人受到队伍造成的灵属性伤害时，佩戴者暴击伤害提高8%，最多叠加7层，每层持续10秒（后台也生效）",
     "setDescription4pcEn": "When nearby enemies take Anima DMG from the team, CRIT DMG +8%. Max 7 stacks, each lasting 10s. Activates off-field",
-    "bestFor": ["进攻", "Attack"],
+    "bestFor": ["nanally", "jiuyuan", "mint"],
     "characters": ["nanally", "jiuyuan", "mint"],
     "image": "/images/cassettes/fireflies-forest.webp"
   },
@@ -91,7 +91,7 @@
     "setDescription2pcEn": "Psyche DMG +10%",
     "setDescription4pc": "佩戴者造成的伤害提高18%。攻击处于Nova或Stain状态的敌人时，伤害提升效果变为36%",
     "setDescription4pcEn": "DMG dealt +18%. When attacking enemies under Nova or Stain status, the DMG bonus increases to 36%",
-    "bestFor": ["进攻", "Attack"],
+    "bestFor": ["aurelia"],
     "characters": ["aurelia"],
     "image": "/images/cassettes/devils-blood-curse.webp"
   },
@@ -107,7 +107,7 @@
     "setDescription2pcEn": "Lakshana DMG +10%",
     "setDescription4pc": "暴击率提高14%。队伍触发Remora或Stain时，额外获得14%暴击率，持续20秒",
     "setDescription4pcEn": "CRIT Rate +14%. When the team triggers Remora or Stain, gain an additional 14% CRIT Rate for 20s",
-    "bestFor": ["进攻", "Attack"],
+    "bestFor": ["hathor", "skia"],
     "characters": ["hathor", "skia"],
     "image": "/images/cassettes/street-boxer.webp"
   },
@@ -123,7 +123,7 @@
     "setDescription2pcEn": "Charge Efficiency +12%",
     "setDescription4pc": "佩戴者施放必杀技后，全队攻击力提高15%，持续20秒（不可叠加）",
     "setDescription4pcEn": "After the equipping character uses Ultimate, all party members' ATK +15% for 20s (does not stack)",
-    "bestFor": ["支援", "Support"],
+    "bestFor": ["sakiri", "haniel", "edgar", "mint", "jiuyuan", "baicang"],
     "characters": ["sakiri", "haniel", "edgar", "mint", "jiuyuan", "baicang"],
     "image": "/images/cassettes/speedy-hedgehog.webp"
   },
@@ -139,7 +139,7 @@
     "setDescription2pcEn": "Max HP +10%",
     "setDescription4pc": "佩戴者的治疗加成提高20%",
     "setDescription4pcEn": "Healing Bonus +20%",
-    "bestFor": ["治疗", "Healer"],
+    "bestFor": ["edgar"],
     "characters": ["edgar"],
     "image": "/images/cassettes/theas-night-tavern.webp"
   },
@@ -155,7 +155,7 @@
     "setDescription2pcEn": "Max HP +10%",
     "setDescription4pc": "佩戴者HP降低时，最大HP提高4%，最多叠加10层，每层持续10秒。施放必杀技立即获得10层",
     "setDescription4pcEn": "When HP decreases, Max HP +4%. Max 10 stacks, each lasting 10s. Using Ultimate instantly grants 10 stacks",
-    "bestFor": ["生存", "Survival"],
+    "bestFor": ["fadia"],
     "characters": ["fadia"],
     "image": "/images/cassettes/tiny-big-adventure.webp"
   },
@@ -171,7 +171,7 @@
     "setDescription2pcEn": "Mental DMG +10%",
     "setDescription4pc": "佩戴者使用普通攻击时，心灵伤害提高12%，最多叠加3层，每层持续6秒",
     "setDescription4pcEn": "When using Basic Attacks, Mental DMG +12%. Max 3 stacks, each lasting 6s",
-    "bestFor": ["进攻", "Attack"],
+    "bestFor": ["adler"],
     "characters": ["adler"],
     "image": "/images/cassettes/quiet-manor.webp"
   },
@@ -187,7 +187,7 @@
     "setDescription2pcEn": "DEF +15%",
     "setDescription4pc": "佩戴者的护盾效果提高20%",
     "setDescription4pcEn": "Shield effect +20%",
-    "bestFor": ["防御", "Defense"],
+    "bestFor": ["adler"],
     "characters": ["adler"],
     "image": "/images/cassettes/kingdoms-guard.webp"
   }
