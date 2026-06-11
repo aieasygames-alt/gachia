@@ -11,6 +11,7 @@ import { zzzCharacters, getZzzCharacterName } from '@gachia/data/games/zzz/chara
 import { guihuanCharacters, getGuihuanCharacterName } from '@gachia/data/games/guihuan/characters';
 import { anantaCharacters, getAnantaCharacterName } from '@gachia/data/games/ananta/characters';
 import { endfieldCharacters, getEndfieldCharacterName } from '@gachia/data/games/endfield/characters';
+import { seaCharacters, getSeaCharacterName } from '@gachia/data/games/sea/characters';
 // Weapons
 import { genshinWeapons, getGenshinWeaponName } from '@gachia/data/games/genshin/weapons';
 import { starrailLightCones, getStarRailLightConeName } from '@gachia/data/games/starrail/weapons';
@@ -118,6 +119,14 @@ function buildIndex(locale: SupportedLocale): SearchItem[] {
       type: 'character', url: `/endfield/characters/${c.id}`,
     });
   }
+  for (const c of seaCharacters) {
+    items.push({
+      id: `sea-char-${c.id}`, gameId: 'sea',
+      name: getSeaCharacterName(c, locale),
+      nameAlt: locale === 'zh' ? c.nameEn : c.name,
+      type: 'character', url: `/sea/characters/${c.id}`,
+    });
+  }
 
   // Weapons
   for (const w of genshinWeapons) {
@@ -184,7 +193,6 @@ function buildIndex(locale: SupportedLocale): SearchItem[] {
       type: 'weapon', url: `/endfield/weapons/${w.id}`,
     });
   }
-
   // Items
   for (const m of genshinMaterials) {
     items.push({
@@ -250,7 +258,6 @@ function buildIndex(locale: SupportedLocale): SearchItem[] {
       type: 'item', url: `/endfield/items/${m.id}`,
     });
   }
-
   // Equipment sets (artifacts / relics / echoes / disk sets)
   for (const s of genshinArtifactSets) {
     items.push({
@@ -297,6 +304,7 @@ const GAME_NAMES: Record<string, Record<string, string>> = {
   guihuan: { zh: '归环', en: 'Guihuan', ja: '帰環' },
   ananta: { zh: '无限大', en: 'Ananta', ja: 'アナンタ' },
   endfield: { zh: '终末地', en: 'Endfield', ja: 'エンドフィールド' },
+  sea: { zh: '遗忘之海', en: 'Sea of Remnants', ja: 'シー・オブ・レムナンツ' },
 };
 
 const TYPE_LABELS: Record<string, Record<string, string>> = {

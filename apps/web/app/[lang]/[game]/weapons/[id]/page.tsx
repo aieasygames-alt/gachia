@@ -287,6 +287,10 @@ export default async function WeaponDetailPage({
     return <EndfieldWeaponDetail weapon={w} locale={locale} />;
   }
 
+  if (gameId === 'sea') {
+    notFound();
+  }
+
   notFound();
 }
 

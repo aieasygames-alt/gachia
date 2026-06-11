@@ -18,6 +18,8 @@ import { anantaCharacters, getAnantaCharacterName, getAnantaCharacterImage } fro
 import { anantaGuides, getAnantaGuideTitle, getAnantaGuideSummary } from '@gachia/data/games/ananta/guides';
 import { endfieldCharacters, getEndfieldCharacterName, getEndfieldCharacterImage } from '@gachia/data/games/endfield/characters';
 import { endfieldGuides, getEndfieldGuideTitle, getEndfieldGuideSummary } from '@gachia/data/games/endfield/guides';
+import { seaCharacters, getSeaCharacterName, getSeaCharacterImage } from '@gachia/data/games/sea/characters';
+import { seaGuides, getSeaGuideTitle, getSeaGuideSummary } from '@gachia/data/games/sea/guides';
 import Image from 'next/image';
 import zhMessages from '@/messages/zh.json';
 import enMessages from '@/messages/en.json';
@@ -75,6 +77,11 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     en: 'Arknights: Endfield is an open-world action RPG by Hypergryph, set in the Arknights universe. Players take on the role of the Doctor, establishing bases and commanding operators in real-time combat on the planet Talos II.',
     ja: 'アークナイツ：エンドフィールドはハイパーグリフ開発のオープンワールドアクションRPG。アークナイツIPを背景に、プレイヤーはドクターとしてタロスII号星で拠点を建設し、オペレーターを指揮してリアルタイム戦闘と探索を行います。',
   },
+  sea: {
+    zh: '遗忘之海是网易Joker工作室自研的海洋奇遇开放世界RPG。你将成为一名木偶船长，在海上开启奇遇之旅。',
+    en: 'Sea of Remnants is an ocean adventure open-world RPG by NetEase Joker Studio. Become a puppet captain on a fantastical sea voyage.',
+    ja: 'シー・オブ・レムナンツはNetEase Joker Studioの海洋アドベンチャーオープンワールドRPG。人形の船長として海の冒険に出よう。',
+  },
 };
 
 // SEO-rich about paragraphs per game per locale
@@ -119,6 +126,11 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
     en: 'Arknights: Endfield is an open-world action RPG by Hypergryph set in the Arknights universe. Players take on the role of the Doctor, establishing bases and commanding operators in real-time combat on the planet Talos II. Gachia offers a character database, weapon encyclopedia, build recommendations, and strategy guides for all playable characters.',
     ja: 'アークナイツ：エンドフィールドはハイパーグリフ開発のオープンワールドアクションRPG。アークナイツの世界観を背景に、プレイヤーはドクターとしてタロスII号星で拠点を建設し、オペレーターを指揮してリアルタイム戦闘と探索を行います。Gachiaではキャラ図鑑、武器データベース、ビルドおすすめ、攻略百科を提供。',
   },
+  sea: {
+    zh: '遗忘之海是一款极具美术风格的海洋冒险RPG，采用回合制战斗与即时海战双模式。玩家将扮演失去记忆的木偶船长，与300+阵营迥异的伙伴一起寻找传说中的遗忘之海。游戏包含城镇经营、航海冒险、Roguelike等多种玩法。',
+    en: 'Sea of Remnants is a stylized ocean adventure RPG with turn-based combat and real-time naval battles. Play as an amnesiac puppet captain, recruit 300+ unique companions across factions, and search for the legendary Sea of Remnants.',
+    ja: 'ターン制バトルとリアルタイム海戦を特徴とする海洋アドベンチャーRPG。記憶を失った人形の船長となり、300以上の個性的な仲間と共に伝説のシー・オブ・レムナンツを探そう。',
+  },
 };
 
 // --- Featured character IDs per game ---
@@ -131,6 +143,7 @@ const FEATURED_CHARS: Record<string, string[]> = {
   guihuan: [],
   ananta: [],
   endfield: ['laevatain', 'ardelia', 'tangtang', 'endministrator', 'lifeng'],
+  sea: ['traveler', 'ais', 'little-axe', 'molly'],
 };
 
 // --- Route icons ---
@@ -179,6 +192,9 @@ function getCharInfos(gameId: string, locale: SupportedLocale): CharInfo[] {
     case 'endfield':
       for (const id of ids) { const c = endfieldCharacters.find(x => x.id === id); if (c) results.push({ id: c.id, name: getEndfieldCharacterName(c, locale), image: toAbs(getEndfieldCharacterImage(c)) }); }
       break;
+    case 'sea':
+      for (const id of ids) { const c = seaCharacters.find(x => x.id === id); if (c) results.push({ id: c.id, name: getSeaCharacterName(c, locale), image: toAbs(getSeaCharacterImage(c)) }); }
+      break;
   }
   return results;
 }
@@ -204,6 +220,8 @@ function getGuideInfos(gameId: string, locale: SupportedLocale): GuideInfo[] {
       return anantaGuides.slice(0, 3).map(g => ({ id: g.id, title: getAnantaGuideTitle(g, locale), summary: getAnantaGuideSummary(g, locale) }));
     case 'endfield':
       return endfieldGuides.slice(0, 3).map(g => ({ id: g.id, title: getEndfieldGuideTitle(g, locale), summary: getEndfieldGuideSummary(g, locale) }));
+    case 'sea':
+      return seaGuides.slice(0, 3).map(g => ({ id: g.id, title: getSeaGuideTitle(g, locale), summary: getSeaGuideSummary(g, locale) }));
     default:
       return [];
   }

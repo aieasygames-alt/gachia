@@ -1,0 +1,62 @@
+[
+  {
+    "id": "beginner-guide",
+    "title": "《遗忘之海》新手入门完全指南",
+    "titleEn": "Sea of Remnants Complete Beginner Guide",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "从零开始了解《遗忘之海》的世界观、回合制战斗系统、船员招募和奥托皮亚城镇经营。",
+    "summaryEn": "Learn everything about Sea of Remnants' world, turn-based combat, crew recruitment, and Orbtopia city management.",
+    "content": "## 欢迎，船长\n\n你是一个失去记忆的木偶船长，与自称天才冒险家的少女艾丝一起，在这片被诅咒的海洋中寻找遗忘之海。\n\n### 基础操作\n\n- **回合制战斗**：陆地战斗为回合制策略，合理安排船员行动顺序\n- **海战**：实时操控船只进行海战\n- **船队编组**：根据船员属性和技能搭配甲板小队\n\n### 属性系统\n\n每个船员有一个主属性，决定其技能成长方向：\n\n1. **力量 (STR)** — 物理伤害主属性\n2. **敏捷 (AGI)** — 速度与暴击相关\n3. **体质 (CON)** — 生存与防御\n4. **智力 (INT)** — 技能伤害\n5. **感知 (PER)** — 命中与辅助\n6. **魅力 (CHA)** — 控制与治疗\n\n### 稀有度说明\n\n- **黑券船员**：更稀有的船员，但官方声明与紫券战力平等\n- **紫券船员**：标准稀有度\n\n### 招募优先级\n\n1. 新手池40抽保底黑券角色，首抽推荐选择王女或小斧头\n2. 完成主线获取羽毛票据进行招募\n3. 优先培养1名主攻+1名辅助+1名生存",
+    "contentEn": "## Welcome, Captain\n\nYou are a puppet captain who has lost their memory. Together with Ais, a self-proclaimed genius adventurer, you sail the cursed seas in search of the Sea of Remnants.\n\n### Basic Controls\n\n- **Turn-based Combat**: Land combat uses turn-based strategy\n- **Naval Combat**: Real-time ship battles\n- **Fleet Composition**: Build your deck crew based on crew attributes and skills\n\n### Attribute System\n\nEach crew member has a primary attribute:\n\n1. **Strength (STR)** — Physical damage\n2. **Agility (AGI)** — Speed and critical hits\n3. **Constitution (CON)** — Survival and defense\n4. **Intelligence (INT)** — Skill damage\n5. **Perception (PER)** — Accuracy and support\n6. **Charisma (CHA)** — Control and healing\n\n### Rarity\n\n- **Black Ticket**: Higher rarity crew, but officially balanced equal to Purple Ticket\n- **Purple Ticket**: Standard rarity\n\n### Recruitment Priority\n\n1. Beginner banner: 40-pull guarantee for Black Ticket character\n2. Complete main story for Feather Tickets\n3. Build 1 Main DPS + 1 Support + 1 Survival first",
+    "tags": ["新手", "入门", "基础", "Beginner", "Basics", "指南"],
+    "faq": [
+      {
+        "question": "What should I do first in Sea of Remnants?",
+        "questionZh": "遗忘之海开局应该做什么？",
+        "answer": "Follow the main story to unlock Orbtopia features, then focus on recruiting and leveling your main DPS crew member.",
+        "answerZh": "跟随主线剧情解锁奥托皮亚功能，然后集中资源招募和提升主攻船员。"
+      },
+      {
+        "question": "Is there a gacha system?",
+        "questionZh": "遗忘之海有抽卡系统吗？",
+        "answer": "Yes, the game uses a Recruitment system with ticket currencies. Beginner banner has 40-pull pity, limited banners have 80-pull pity.",
+        "answerZh": "有的，游戏使用票据货币的招募系统。新手池40抽保底，限定池80抽保底。"
+      },
+      {
+        "question": "Are Black Ticket characters stronger than Purple Ticket?",
+        "questionZh": "黑券角色比紫券强吗？",
+        "answer": "No. The developers have explicitly stated that Black Ticket and Purple Ticket characters are equal in combat power.",
+        "answerZh": "不是。官方明确声明黑券与紫券角色战力平等。"
+      }
+    ]
+  },
+  {
+    "id": "download-install-guide",
+    "title": "《遗忘之海》下载安装指南 — 全平台下载地址",
+    "titleEn": "Sea of Remnants System Requirements & Download Guide",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "提供《遗忘之海》在PC、PS5、安卓、iOS平台的下载安装教程和系统配置要求。",
+    "summaryEn": "Sea of Remnants system requirements for PC, Android, iOS, and PS5. Download links and install guide.",
+    "content": "## 系统配置要求\n\n### PC最低配置\n- 操作系统: Windows 10/11 64-bit\n- 处理器: Intel i7-9700 / AMD Ryzen 5 3600X\n- 内存: 16GB RAM\n- 显卡: GTX 1060 (6GB) / RX 480 (8GB)\n- 存储空间: 60GB\n\n### PC推荐配置\n- 操作系统: Windows 10/11 64-bit\n- 处理器: Intel i7-12700 / AMD Ryzen 7 7700X\n- 内存: 32GB RAM\n- 显卡: RTX 3070 Ti / RX 6800XT\n- 存储空间: 80GB\n\n### 下载方式\n\n1. **PC端**: Steam 搜索\"Sea of Remnants\"或\"遗忘之海\"\n2. **移动端**: 官网 sea.163.com 下载\n3. **PS5**: PlayStation Store 搜索 Sea of Remnants",
+    "contentEn": "## System Requirements\n\n### PC Minimum\n- OS: Windows 10/11 64-bit\n- CPU: Intel i7-9700 / AMD Ryzen 5 3600X\n- RAM: 16GB\n- GPU: GTX 1060 (6GB) / RX 480 (8GB)\n- Storage: 60GB\n\n### PC Recommended\n- OS: Windows 10/11 64-bit\n- CPU: Intel i7-12700 / AMD Ryzen 7 7700X\n- RAM: 32GB\n- GPU: RTX 3070 Ti / RX 6800XT\n- Storage: 80GB\n\n## How to Download\n\n1. **PC**: Search \"Sea of Remnants\" on Steam\n2. **Mobile**: Visit sea.163.com\n3. **PS5**: Search on PlayStation Store",
+    "tags": ["下载", "安装", "Download", "Install", "配置"],
+    "faq": [
+      {
+        "question": "Is Sea of Remnants free to play?",
+        "questionZh": "遗忘之海是免费游戏吗？",
+        "answer": "Yes, Sea of Remnants is free-to-play with optional in-app purchases.",
+        "answerZh": "是的，遗忘之海免费游玩，有可选的应用内购买。"
+      },
+      {
+        "question": "What platforms are supported?",
+        "questionZh": "遗忘之海支持哪些平台？",
+        "answer": "PC (Steam), Android, iOS, PlayStation 5, and Xbox Series X/S.",
+        "answerZh": "支持 PC (Steam)、安卓、iOS、PS5 和 Xbox Series X/S。"
+      }
+    ]
+  }
+]

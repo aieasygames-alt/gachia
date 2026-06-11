@@ -6,6 +6,7 @@ import { wuwaCharacters, getWuWaCharacterName, getWuWaCharacterImage } from '@ga
 import { nteCharacters, getNteCharacterName, getNteCharacterImage } from '@gachia/data/games/nte/characters';
 import { zzzCharacters, getZzzCharacterName, getZzzCharacterImage } from '@gachia/data/games/zzz/characters';
 import { guihuanCharacters, getGuihuanCharacterName, getGuihuanCharacterImage } from '@gachia/data/games/guihuan/characters';
+import { seaCharacters, getSeaCharacterName, getSeaCharacterImage } from '@gachia/data/games/sea/characters';
 import { notFound } from 'next/navigation';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
@@ -186,6 +187,24 @@ function SharedTeamView({ gameId, locale, characterIds }: { gameId: GameId; loca
               <CharacterAvatar src={getGuihuanCharacterImage(char)} alt={char.nameEn} element={char.element}
                 className="h-20 w-20 rounded-xl object-cover ring-2 ring-game-primary/30" />
               <span className="mt-2 text-sm font-medium text-game-text">{getGuihuanCharacterName(char, locale)}</span>
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
+
+  if (gameId === 'sea') {
+    return (
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+        {characterIds.map((id) => {
+          const char = seaCharacters.find((c) => c.id === id);
+          if (!char) return null;
+          return (
+            <div key={id} className="flex flex-col items-center rounded-xl border border-game-border bg-game-surface p-4">
+              <CharacterAvatar src={getSeaCharacterImage(char)} alt={char.nameEn} element={char.attribute}
+                className="h-20 w-20 rounded-xl object-cover ring-2 ring-game-primary/30" />
+              <span className="mt-2 text-sm font-medium text-game-text">{getSeaCharacterName(char, locale)}</span>
             </div>
           );
         })}

@@ -121,6 +121,8 @@ export async function generateMetadata({
     if (!m) return {};
     name = getEndfieldMaterialName(m, locale);
     description = (locale === 'en' ? m.sourceEn : m.source).slice(0, 160);
+  } else if (gameId === 'sea') {
+    return {};
   }
 
   const title = locale === 'zh'
@@ -206,6 +208,9 @@ function getItemData(gameId: GameId, id: string, locale: SupportedLocale): ItemD
     const m = getEndfieldMaterialById(id);
     if (!m) return null;
     return { name: getEndfieldMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name, rarity: m.rarity, type: m.type, source: locale === 'en' ? m.sourceEn : m.source };
+  }
+  if (gameId === 'sea') {
+    return null;
   }
   return null;
 }

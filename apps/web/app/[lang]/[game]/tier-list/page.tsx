@@ -5,10 +5,12 @@ import { zzzCharacters, getZzzCharacterName, getZzzCharacterImage } from '@gachi
 import { anantaCharacters, getAnantaCharacterName, getAnantaCharacterImage } from '@gachia/data/games/ananta/characters';
 import { guihuanCharacters, getGuihuanCharacterName, getGuihuanCharacterImage } from '@gachia/data/games/guihuan/characters';
 import { endfieldCharacters, getEndfieldCharacterName, getEndfieldCharacterImage } from '@gachia/data/games/endfield/characters';
+import { seaCharacters, getSeaCharacterName, getSeaCharacterImage } from '@gachia/data/games/sea/characters';
 import { tierLists as zzzTierLists } from '@gachia/data/games/zzz';
 import { tierLists as anantaTierLists } from '@gachia/data/games/ananta';
 import { tierLists as guihuanTierLists } from '@gachia/data/games/guihuan';
 import { tierLists as endfieldTierLists } from '@gachia/data/games/endfield';
+import { tierLists as seaTierLists } from '@gachia/data/games/sea';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
@@ -23,6 +25,7 @@ const TIER_DESC: Record<string, Record<string, string>> = {
   guihuan: { zh: '归环使灵强度排行，包含SS/S/A/B分级', en: 'Guihuan spirit tier list (2026) — best spirits ranked SS to B', ja: '帰環スピリットTierリスト、SS/S/A/B評価' },
   ananta: { zh: '无限大异能者强度排行，包含SS/S/A/B分级', en: 'Ananta esper tier list (2026) — best espers ranked SS to B', ja: 'アナンタエスパーTierリスト、SS/S/A/B評価' },
   endfield: { zh: '明日方舟：终末地干员强度排行，包含SS/S/A/B分级', en: 'Arknights: Endfield operator tier list (2026) — best operators ranked SS to B', ja: 'アークナイツ：エンドフィールドオペレーターTierリスト、SS/S/A/B評価' },
+  sea: { zh: '遗忘之海角色强度排行，包含SS/S/A/B分级', en: 'Sea of Remnants character tier list (2026) — best characters ranked SS to B', ja: 'シー・オブ・レムナンツキャラTierリスト、SS/S/A/B評価' },
 };
 
 import { GenshinTierListClient } from './genshin-tier-client';
@@ -123,6 +126,10 @@ export default async function TierListPage({
 
   if (gameId === 'endfield') {
     return <EndfieldTierListPage locale={locale} />;
+  }
+
+  if (gameId === 'sea') {
+    return <SeaTierListPage locale={locale} />;
   }
 
   return (
@@ -479,6 +486,81 @@ function EndfieldTierListPage({ locale }: { locale: SupportedLocale }) {
                       <div className="flex items-center gap-1.5 text-xs text-game-text-muted">
                         <span className="inline-block h-2 w-2 rounded-full" style={{ backgroundColor: ENDFIELD_ELEMENT_COLORS[char.element] || '#888' }} />
                         <span>{char.professionEn}</span>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
+// --- Sea of Remnants Tier List ---
+
+const SEA_ELEMENT_COLORS: Record<string, string> = {
+  str: '#ef4444', agi: '#22c55e', con: '#f97316',
+  int: '#8b5cf6', per: '#3b82f6', cha: '#ec4899',
+};
+
+function SeaTierListPage({ locale }: { locale: SupportedLocale }) {
+  const tierData = seaTierLists.find(
+    (tl) => tl.gameId === 'sea' && tl.category === 'overall' && tl.locale === locale,
+  ) ?? seaTierLists.find(
+    (tl) => tl.gameId === 'sea' && tl.category === 'overall',
+  );
+
+  const tierGroups: Record<string, string[]> = {};
+  const tierOrder = ['SS', 'S', 'A', 'B'];
+
+  if (tierData) {
+    for (const entry of tierData.entries) {
+      if (!tierGroups[entry.tier]) tierGroups[entry.tier] = [];
+      tierGroups[entry.tier]!.push(entry.characterId);
+    }
+  }
+
+  const charMap = new Map(seaCharacters.map((c) => [c.id, c]));
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.sea.theme.primary }}>
+        {CATEGORY_LABELS['tier-list']?.[locale] ?? 'Tier List'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? '基于角色综合强度评级，仅供参考' : locale === 'ja' ? 'キャラクターの総合的な強さに基づく評価です' : 'Based on overall character strength, for reference only'}
+      </p>
+
+      {tierOrder.map((tier) => {
+        const ids = tierGroups[tier];
+        if (!ids || ids.length === 0) return null;
+        const style = TIER_STYLES[tier] ?? TIER_STYLES.B ?? { bg: '', text: '', border: '' };
+
+        return (
+          <section key={tier} className={`mb-4 rounded-lg border ${style.border} ${style.bg} p-4`}>
+            <div className="mb-3 flex items-center gap-3">
+              <span className={`text-xl font-bold ${style.text}`}>{tier}</span>
+              <span className="text-sm text-game-text-muted">({ids.length})</span>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {ids.map((id) => {
+                const char = charMap.get(id);
+                if (!char) return null;
+                const imageUrl = getSeaCharacterImage(char);
+                return (
+                  <Link key={char.id} href={`/sea/characters/${char.id}` as '/'}
+                    className="group flex items-center gap-2 rounded-lg border border-game-border bg-game-surface px-3 py-2 transition-colors hover:border-game-primary">
+                    <div className="h-8 w-8 shrink-0 overflow-hidden rounded-full bg-game-surface-alt">
+                      <CharacterAvatar src={imageUrl} alt="" element={char.attribute} className="h-full w-full object-cover object-top" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-game-text group-hover:text-game-primary">{getSeaCharacterName(char, locale)}</p>
+                      <div className="flex items-center gap-1.5 text-xs text-game-text-muted">
+                        <span className="inline-block h-2 w-2 rounded-full" style={{ backgroundColor: SEA_ELEMENT_COLORS[char.attribute] || '#888' }} />
+                        <span>{char.roleEn}</span>
                       </div>
                     </div>
                   </Link>

@@ -18,7 +18,7 @@ export const LOCALE_NAMES: Record<SupportedLocale, string> = {
 // Games Registry
 // ============================================================
 
-export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield'];
+export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea'];
 
 export const GAMES: Record<GameId, GameModule> = {
   genshin: {
@@ -347,6 +347,45 @@ export const GAMES: Record<GameId, GameModule> = {
       build: true,
       compare: true,
       teams: true,
+    },
+  },
+  sea: {
+    id: 'sea',
+    name: { zh: '遗忘之海', en: 'Sea of Remnants', ja: 'シー・オブ・レムナンツ' },
+    theme: {
+      primary: '#e11d48',
+      accent: '#06b6d4',
+      background: '#0c1222',
+      surface: '#1e293b',
+    },
+    elements: [
+      { id: 'str', name: { zh: '力量', en: 'Strength', ja: '筋力' }, color: '#ef4444' },
+      { id: 'agi', name: { zh: '敏捷', en: 'Agility', ja: '俊敏' }, color: '#22c55e' },
+      { id: 'con', name: { zh: '体质', en: 'Constitution', ja: '体質' }, color: '#f97316' },
+      { id: 'int', name: { zh: '智力', en: 'Intelligence', ja: '知力' }, color: '#8b5cf6' },
+      { id: 'per', name: { zh: '感知', en: 'Perception', ja: '感知' }, color: '#3b82f6' },
+      { id: 'cha', name: { zh: '魅力', en: 'Charisma', ja: '魅力' }, color: '#ec4899' },
+    ],
+    rarities: [
+      { stars: 5, color: '#fbbf24', label: { zh: '黑券', en: 'Black Ticket', ja: '黒券' } },
+      { stars: 4, color: '#a855f7', label: { zh: '紫券', en: 'Purple Ticket', ja: '紫券' } },
+    ],
+    stats: {
+      baseStats: ['hp', 'atk', 'def'],
+      subStats: ['speed', 'critRate', 'critDmg'],
+      specialStats: [],
+    },
+    routes: {
+      characters: true,
+      weapons: false,
+      items: false,
+      'tier-list': true,
+      calculator: false,
+      map: false,
+      guides: true,
+      build: false,
+      compare: false,
+      teams: false,
     },
   },
 } as const;

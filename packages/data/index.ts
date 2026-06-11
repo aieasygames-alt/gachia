@@ -650,6 +650,48 @@ export type {
 
 export type { EndfieldGuide, EndfieldGuideFaq } from './games/endfield/guides';
 
+// ============================================================
+// 遗忘之海 (Sea of Remnants) exports
+// ============================================================
+
+// Sea character exports
+export {
+  seaCharacters,
+  getSeaCharacterById,
+  getSeaCharacterName,
+  getSeaCharacterDescription,
+  getSeaCharacterImage,
+  getSeaCharacterTierReason,
+} from './games/sea/characters';
+
+// Sea guide exports
+export {
+  seaGuides,
+  getSeaGuideTitle,
+  getSeaGuideContent,
+  getSeaGuideSummary,
+  getSeaGuideCategory,
+  getSeaGuideCategories,
+  getSeaGuidesByCategory,
+  getSeaGuideById,
+  getSeaGuideSlugs,
+  getSeaGuideFaqQuestion,
+  getSeaGuideFaqAnswer,
+  SEA_GUIDE_CATEGORIES,
+} from './games/sea/guides';
+
+export type {
+  SeaCharacter,
+  SeaSkillSet,
+  SeaSkillBase,
+  SeaActiveSkill,
+  SeaFaq,
+  SeaTeamComp,
+  SeaRecommendedBuild,
+} from './games/sea/types';
+
+export type { SeaGuide, SeaGuideFaq } from './games/sea/guides';
+
 // --- Material-Character Reverse Lookup ---
 export { getCharactersNeedingMaterial, type MaterialCharacter } from './material-characters';
 
@@ -697,6 +739,10 @@ export async function getGameData(gameId: GameId): Promise<GameData> {
     }
     case 'endfield': {
       const { characters, weapons, items, tierLists } = await import('./games/endfield');
+      return { characters, weapons, items, tierLists };
+    }
+    case 'sea': {
+      const { characters, weapons, items, tierLists } = await import('./games/sea');
       return { characters, weapons, items, tierLists };
     }
   }

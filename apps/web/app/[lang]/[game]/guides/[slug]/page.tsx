@@ -91,6 +91,18 @@ import {
   ENDFIELD_GUIDE_CATEGORIES,
 } from '@gachia/data/games/endfield/guides';
 import type { EndfieldGuide, EndfieldGuideFaq } from '@gachia/data/games/endfield/guides';
+import {
+  seaGuides,
+  getSeaGuideById,
+  getSeaGuideTitle,
+  getSeaGuideContent,
+  getSeaGuideSummary,
+  getSeaGuideCategory,
+  getSeaGuideFaqQuestion,
+  getSeaGuideFaqAnswer,
+  SEA_GUIDE_CATEGORIES,
+} from '@gachia/data/games/sea/guides';
+import type { SeaGuide, SeaGuideFaq } from '@gachia/data/games/sea/guides';
 import { Link } from '@/lib/i18n/navigation';
 import { ClientMarkdown } from '@/components/wiki/client-markdown';
 import { buildGuideJsonLd } from '@/lib/jsonld';
@@ -135,6 +147,11 @@ export async function generateStaticParams() {
     ...endfieldGuides.map((g) => ({
       lang,
       game: 'endfield',
+      slug: g.id,
+    })),
+    ...seaGuides.map((g) => ({
+      lang,
+      game: 'sea',
       slug: g.id,
     })),
   ]);
@@ -249,6 +266,14 @@ export async function generateMetadata({
     return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
 
+  if (gameId === 'sea') {
+    const guide = getSeaGuideById(slug);
+    if (!guide) return {};
+    const gameName = GAMES.sea.name[locale];
+    const meta = buildGuideMeta(getSeaGuideTitle(guide, locale), getSeaGuideSummary(guide, locale), gameName);
+    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+  }
+
   return {};
 }
 
@@ -291,6 +316,10 @@ export default async function GuideDetailPage({
 
   if (gameId === 'endfield') {
     return <EndfieldGuideDetail locale={locale} slug={slug} />;
+  }
+
+  if (gameId === 'sea') {
+    return <SeaGuideDetail locale={locale} slug={slug} />;
   }
 
   notFound();
@@ -1023,6 +1052,93 @@ function EndfieldGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: 
   );
 }
 
+/* ---------- Sea of Remnants Guide Detail ---------- */
+
+function SeaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: string }) {
+  const guide: SeaGuide | undefined = getSeaGuideById(slug);
+  if (!guide) notFound();
+
+  const gameConfig = GAMES.sea;
+  const content = getSeaGuideContent(guide, locale);
+  const category = getSeaGuideCategory(guide, locale);
+
+  return (
+    <div>
+      <div className="mb-4 flex items-center gap-2 text-sm text-game-text-muted">
+        <Link href="/sea/guides" className="transition-colors hover:text-game-primary">
+          {CATEGORY_LABELS.guides?.[locale] ?? 'Guides'}
+        </Link>
+        <span>/</span>
+        {SEA_GUIDE_CATEGORIES[guide.category]?.[locale] && (
+          <>
+            <span>{SEA_GUIDE_CATEGORIES[guide.category]?.[locale]}</span>
+            <span>/</span>
+          </>
+        )}
+        <span className="text-game-text">{getSeaGuideTitle(guide, locale)}</span>
+      </div>
+
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {getSeaGuideTitle(guide, locale)}
+      </h1>
+
+      <div className="mb-6 flex flex-wrap items-center gap-3 text-sm text-game-text-muted">
+        <span className="rounded bg-game-surface-alt px-2 py-0.5 text-game-primary">{category}</span>
+        {guide.tags.map((tag) => (
+          <span key={tag} className="rounded bg-game-surface-alt px-2 py-0.5">{tag}</span>
+        ))}
+      </div>
+
+      <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">
+        <ClientMarkdown content={content} />
+      </div>
+
+      {guide.faq && guide.faq.length > 0 && (
+        <section className="mb-8">
+          <h2 className="mb-4 text-lg font-semibold text-game-primary">
+            {locale === 'zh' ? '常见问题' : locale === 'ja' ? 'よくある質問' : 'FAQ'}
+          </h2>
+          <div className="space-y-3">
+            {guide.faq.map((faqItem: SeaGuideFaq, i: number) => (
+              <details key={i} className="group rounded-lg border border-game-border bg-game-surface">
+                <summary className="cursor-pointer px-4 py-3 font-medium text-game-text transition-colors group-hover:text-game-primary">
+                  {getSeaGuideFaqQuestion(faqItem, locale)}
+                </summary>
+                <div className="px-4 pb-3 text-sm text-game-text-muted">
+                  {getSeaGuideFaqAnswer(faqItem, locale)}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <RelatedGuidesSection gameId="sea" currentSlug={slug} locale={locale} />
+
+      <div className="border-t border-game-border pt-4">
+        <Link href="/sea/guides" className="text-sm text-game-primary transition-colors hover:text-game-accent">
+          {locale === 'zh' ? '← 返回攻略列表' : locale === 'ja' ? '← ガイド一覧に戻る' : '← Back to Guides'}
+        </Link>
+      </div>
+
+      {buildGuideJsonLd({
+        gameId: 'sea',
+        locale,
+        title: getSeaGuideTitle(guide, locale),
+        summary: getSeaGuideSummary(guide, locale),
+        slug,
+        faq: guide.faq?.map((f) => ({ question: getSeaGuideFaqQuestion(f, locale), answer: getSeaGuideFaqAnswer(f, locale) })),
+      }).map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+    </div>
+  );
+}
+
 // --- Shared Related Guides Section ---
 
 type GuideLike = { id: string; category: string; tags: string[] };
@@ -1079,6 +1195,7 @@ function getGuidesForGame(gameId: string): GuideLike[] {
     case 'guihuan': return guihuanGuides;
     case 'ananta': return anantaGuides;
     case 'endfield': return endfieldGuides;
+    case 'sea': return seaGuides;
     default: return [];
   }
 }
@@ -1093,6 +1210,7 @@ function getGuideTitleForGame(gameId: string, guide: GuideLike, locale: Supporte
     case 'guihuan': return getGuihuanGuideTitle(guide as unknown as Parameters<typeof getGuihuanGuideTitle>[0], locale);
     case 'ananta': return getAnantaGuideTitle(guide as unknown as Parameters<typeof getAnantaGuideTitle>[0], locale);
     case 'endfield': return getEndfieldGuideTitle(guide as unknown as Parameters<typeof getEndfieldGuideTitle>[0], locale);
+    case 'sea': return getSeaGuideTitle(guide as unknown as Parameters<typeof getSeaGuideTitle>[0], locale);
     default: return guide.id;
   }
 }
@@ -1107,6 +1225,7 @@ function getGuideSummaryForGame(gameId: string, guide: GuideLike, locale: Suppor
     case 'guihuan': return getGuihuanGuideSummary(guide as unknown as Parameters<typeof getGuihuanGuideSummary>[0], locale);
     case 'ananta': return getAnantaGuideSummary(guide as unknown as Parameters<typeof getAnantaGuideSummary>[0], locale);
     case 'endfield': return getEndfieldGuideSummary(guide as unknown as Parameters<typeof getEndfieldGuideSummary>[0], locale);
+    case 'sea': return getSeaGuideSummary(guide as unknown as Parameters<typeof getSeaGuideSummary>[0], locale);
     default: return '';
   }
 }

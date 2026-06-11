@@ -105,6 +105,14 @@ import {
   getEndfieldCharacterImage,
   getEndfieldCharacterTierReason,
 } from '@gachia/data/games/endfield/characters';
+import {
+  seaCharacters,
+  getSeaCharacterById,
+  getSeaCharacterName,
+  getSeaCharacterDescription,
+  getSeaCharacterImage,
+  getSeaCharacterTierReason,
+} from '@gachia/data/games/sea/characters';
 import type { NteCharacter } from '@gachia/data/games/nte/types';
 import type { GenshinCharacter } from '@gachia/data/games/genshin/types';
 import type { StarRailCharacter } from '@gachia/data/games/starrail/types';
@@ -113,6 +121,7 @@ import type { ZzzCharacter } from '@gachia/data/games/zzz/types';
 import type { GuihuanCharacter } from '@gachia/data/games/guihuan/types';
 import type { AnantaCharacter } from '@gachia/data/games/ananta/types';
 import type { EndfieldCharacter } from '@gachia/data/games/endfield/types';
+import type { SeaCharacter } from '@gachia/data/games/sea/types';
 import { getMaterialsForCharacter as getEndfieldMaterialsForCharacter } from '@gachia/data/games/endfield/extras';
 import { getEndfieldMaterialById } from '@gachia/data/games/endfield/items';
 import { Link } from '@/lib/i18n/navigation';
@@ -249,6 +258,24 @@ const ENDFIELD_ELEMENT_NAMES: Record<string, Record<string, string>> = {
   electric: { zh: '电击', en: 'Electric', ja: 'エレクトリック' },
 };
 
+const SEA_ELEMENT_NAMES: Record<string, Record<string, string>> = {
+  str: { zh: '力量', en: 'STR', ja: '力' },
+  agi: { zh: '敏捷', en: 'AGI', ja: '敏' },
+  con: { zh: '体质', en: 'CON', ja: '体' },
+  int: { zh: '智力', en: 'INT', ja: '知' },
+  per: { zh: '感知', en: 'PER', ja: '感' },
+  cha: { zh: '魅力', en: 'CHA', ja: '魅' },
+};
+
+const SEA_ELEMENT_COLORS: Record<string, string> = {
+  str: '#ef4444',
+  agi: '#22c55e',
+  con: '#f97316',
+  int: '#8b5cf6',
+  per: '#3b82f6',
+  cha: '#ec4899',
+};
+
 export async function generateStaticParams() {
   const nteParams = LOCALES.flatMap((lang) =>
     nteCharacters.map((char) => ({ lang, game: 'nte', id: char.id }))
@@ -274,7 +301,10 @@ export async function generateStaticParams() {
   const endfieldParams = LOCALES.flatMap((lang) =>
     endfieldCharacters.map((char) => ({ lang, game: 'endfield', id: char.id }))
   );
-  return [...nteParams, ...genshinParams, ...starrailParams, ...wuwaParams, ...zzzParams, ...guihuanParams, ...anantaParams, ...endfieldParams];
+  const seaParams = LOCALES.flatMap((lang) =>
+    seaCharacters.map((char) => ({ lang, game: 'sea', id: char.id }))
+  );
+  return [...nteParams, ...genshinParams, ...starrailParams, ...wuwaParams, ...zzzParams, ...guihuanParams, ...anantaParams, ...endfieldParams, ...seaParams];
 }
 
 function CharJsonLd({ gameId, locale, name, description, charId }: { gameId: GameId; locale: SupportedLocale; name: string; description: string; charId: string }) {
@@ -436,6 +466,21 @@ export async function generateMetadata({
     return { title, description: desc.slice(0, 160), openGraph: buildOg(name), alternates: buildAlternates(id) };
   }
 
+  if (gameId === 'sea') {
+    const char = getSeaCharacterById(id);
+    if (!char) return {};
+    const gameName = GAMES.sea.name[locale];
+    const name = getSeaCharacterName(char, locale);
+    const elName = SEA_ELEMENT_NAMES[char.attribute]?.[locale] ?? char.attributeEn;
+    const title = locale === 'zh'
+      ? `${name}配装攻略 — ${elName}属性最佳配队`
+      : `${name} — ${elName} Build: Best Teams | Sea of Remnants`;
+    const desc = locale === 'zh'
+      ? `${name}配装攻略：推荐配队组合`
+      : `Complete ${name} build guide for Sea of Remnants: best team comps.`;
+    return { title, description: desc.slice(0, 160), openGraph: buildOg(name), alternates: buildAlternates(id) };
+  }
+
   return {};
 }
 
@@ -510,6 +555,14 @@ export default async function CharacterDetailPage({
     const name = getEndfieldCharacterName(char, locale);
     const desc = getEndfieldCharacterDescription(char, locale);
     return <><CharJsonLd gameId={gameId} locale={locale} name={name} description={desc} charId={id} /><EndfieldCharacterDetail char={char} locale={locale} /></>;
+  }
+
+  if (gameId === 'sea') {
+    const char = getSeaCharacterById(id);
+    if (!char) notFound();
+    const name = getSeaCharacterName(char, locale);
+    const desc = getSeaCharacterDescription(char, locale);
+    return <><CharJsonLd gameId={gameId} locale={locale} name={name} description={desc} charId={id} /><SeaCharacterDetail char={char} locale={locale} /></>;
   }
 
   notFound();
@@ -2604,6 +2657,171 @@ function EndfieldCharacterDetail({ char, locale }: { char: EndfieldCharacter; lo
       {/* Back */}
       <div className="border-t border-game-border pt-4">
         <Link href="/endfield/characters" className="text-sm text-game-primary transition-colors hover:text-game-accent">
+          {locale === 'zh' ? '← 返回角色列表' : locale === 'ja' ? '← キャラ一覧に戻る' : '← Back to Characters'}
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+// ============================================================
+// Sea Character Detail
+// ============================================================
+
+function SeaCharacterDetail({ char, locale }: { char: SeaCharacter; locale: SupportedLocale }) {
+  const gameConfig = GAMES.sea;
+  const imageUrl = getSeaCharacterImage(char);
+  const elementColor = SEA_ELEMENT_COLORS[char.attribute] || '#888';
+  const elementName = SEA_ELEMENT_NAMES[char.attribute]?.[locale] ?? char.attributeEn;
+  const charName = getSeaCharacterName(char, locale);
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'VideoGame',
+    name: charName,
+    description: getSeaCharacterDescription(char, locale).slice(0, 300),
+    image: imageUrl,
+    url: `https://gachia.com/${locale}/sea/characters/${char.id}`,
+  };
+
+  const faqJsonLd = char.faq.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: char.faq.map((f) => ({
+      '@type': 'Question',
+      name: localeStr(f.questionZh, f.question, locale),
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: localeStr(f.answerZh, f.answer, locale),
+      },
+    })),
+  } : null;
+
+  return (
+    <div>
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildBreadcrumbJsonLd('sea', charName, locale)) }} />
+
+      {/* Breadcrumb */}
+      <nav aria-label="Breadcrumb" className="mb-4">
+        <ol className="flex items-center gap-1 text-sm text-game-text-muted">
+          <li className="flex items-center gap-1">
+            <Link href="/" className="hover:text-game-primary transition-colors">{locale === 'zh' ? '首页' : 'Home'}</Link>
+            <ChevronRight className="h-3 w-3" />
+          </li>
+          <li className="flex items-center gap-1">
+            <Link href="/sea" className="hover:text-game-primary transition-colors">{GAMES.sea.name[locale]}</Link>
+            <ChevronRight className="h-3 w-3" />
+          </li>
+          <li className="flex items-center gap-1">
+            <Link href="/sea/characters" className="hover:text-game-primary transition-colors">{CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}</Link>
+            <ChevronRight className="h-3 w-3" />
+          </li>
+          <li><span className="text-game-text">{charName}</span></li>
+        </ol>
+      </nav>
+
+      {/* Header */}
+      <div className="mb-6 flex flex-col gap-6 md:flex-row">
+        <div className="shrink-0 overflow-hidden rounded-lg border border-game-border bg-game-surface">
+          <CharacterAvatar
+            src={imageUrl}
+            alt={charName}
+            element={char.attribute}
+            className="h-64 w-64 object-cover object-top"
+          />
+        </div>
+        <div className="flex-1">
+          <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+            {charName}
+          </h1>
+          <div className="mb-3">
+            <FavoriteButton gameId="sea" characterId={char.id} />
+          </div>
+          <div className="mb-3 flex flex-wrap gap-2">
+            <span className="rounded px-2 py-0.5 text-sm font-medium text-white" style={{ backgroundColor: elementColor }}>
+              {elementName}
+            </span>
+            <span className="rounded bg-game-surface-alt px-2 py-0.5 text-sm font-bold" style={{ color: '#eab308' }}>
+              {'★'.repeat(char.rarity)}
+            </span>
+            <span className="rounded bg-game-surface-alt px-2 py-0.5 text-sm text-game-text-muted">
+              {localeStr(char.role, char.roleEn, locale)}
+            </span>
+            {char.tierRank && (
+              <span className="rounded px-2 py-0.5 text-sm font-bold" style={{ color: '#ef4444' }}>
+                {char.tierRank}
+              </span>
+            )}
+          </div>
+          <p className="mb-3 text-sm leading-relaxed text-game-text-muted">
+            {getSeaCharacterDescription(char, locale)}
+          </p>
+          {char.tierReason && (
+            <p className="mt-3 text-sm text-game-primary">{getSeaCharacterTierReason(char, locale)}</p>
+          )}
+        </div>
+      </div>
+
+      {/* Skills */}
+      <Section title={locale === 'zh' ? '技能' : locale === 'ja' ? 'スキル' : 'Skills'}>
+        <div className="grid gap-4 lg:grid-cols-2">
+          {char.skills.passive && (
+            <div className="rounded-lg border border-game-border bg-game-surface p-4">
+              <h3 className="mb-2 font-semibold text-game-text">
+                {localeStr(char.skills.passive.name, char.skills.passive.nameEn, locale)}
+              </h3>
+              <p className="text-sm text-game-text-muted">
+                {localeStr(char.skills.passive.description, char.skills.passive.descriptionEn, locale)}
+              </p>
+            </div>
+          )}
+          {char.skills.signature && (
+            <div className="rounded-lg border border-game-border bg-game-surface p-4">
+              <h3 className="mb-2 font-semibold text-game-text">
+                {localeStr(char.skills.signature.name, char.skills.signature.nameEn, locale)}
+              </h3>
+              <p className="text-sm text-game-text-muted">
+                {localeStr(char.skills.signature.description, char.skills.signature.descriptionEn, locale)}
+              </p>
+            </div>
+          )}
+          {char.skills.personal && (
+            <div className="rounded-lg border border-game-border bg-game-surface p-4">
+              <h3 className="mb-2 font-semibold text-game-text">
+                {localeStr(char.skills.personal.name, char.skills.personal.nameEn, locale)}
+              </h3>
+              <p className="text-sm text-game-text-muted">
+                {localeStr(char.skills.personal.description, char.skills.personal.descriptionEn, locale)}
+              </p>
+            </div>
+          )}
+        </div>
+      </Section>
+
+      {/* FAQ */}
+      {char.faq.length > 0 && (
+        <Section title={locale === 'zh' ? '常见问题' : locale === 'ja' ? 'よくある質問' : 'FAQ'}>
+          <div className="space-y-2">
+            {char.faq.map((faqItem, i) => (
+              <details key={i} className="group rounded-lg border border-game-border bg-game-surface">
+                <summary className="cursor-pointer px-4 py-3 font-medium text-game-text transition-colors group-hover:text-game-primary">
+                  {localeStr(faqItem.questionZh, faqItem.question, locale)}
+                </summary>
+                <div className="border-t border-game-border px-4 py-3 text-sm leading-relaxed text-game-text-muted">
+                  {localeStr(faqItem.answerZh, faqItem.answer, locale)}
+                </div>
+              </details>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {/* Back */}
+      <div className="border-t border-game-border pt-4">
+        <Link href="/sea/characters" className="text-sm text-game-primary transition-colors hover:text-game-accent">
           {locale === 'zh' ? '← 返回角色列表' : locale === 'ja' ? '← キャラ一覧に戻る' : '← Back to Characters'}
         </Link>
       </div>

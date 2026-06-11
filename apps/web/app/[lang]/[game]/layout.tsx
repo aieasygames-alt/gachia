@@ -39,6 +39,11 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     en: 'Guihuan character guide, weapon database, wiki — Gachia',
     ja: '帰環キャラ図鑑、武器データ、攻略百科 — Gachia',
   },
+  sea: {
+    zh: '遗忘之海角色图鉴、攻略百科 — Gachia',
+    en: 'Sea of Remnants character guide, wiki — Gachia',
+    ja: 'シー・オブ・レムナンツキャラ図鑑、攻略百科 — Gachia',
+  },
 };
 
 export function generateStaticParams() {

@@ -124,6 +124,19 @@ export default async function WeaponsPage({
     return <><EndfieldWeaponsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
+  if (gameId === 'sea') {
+    return (
+      <div>
+        <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+          {CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons'}
+        </h1>
+        <div className="rounded-lg border border-dashed border-game-border bg-game-surface p-8 text-center text-sm text-game-text-muted">
+          {locale === 'zh' ? '该游戏没有武器系统' : locale === 'ja' ? 'このゲームには武器システムがありません' : 'This game does not have a weapon system'}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div>
       <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>

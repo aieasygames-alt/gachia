@@ -4,7 +4,7 @@ import { routing } from './lib/i18n/routing';
 
 const intlMiddleware = createMiddleware(routing);
 
-const GAME_IDS = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield'] as const;
+const GAME_IDS = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea'] as const;
 
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -36,6 +36,6 @@ export const config = {
     '/',
     '/(zh|en|ja)/:path*',
     '/(sitemap|api|privacy|terms|contact)',
-    '/(genshin|starrail|wuwa|nte|zzz|guihuan|ananta|endfield)/:path*',
+    '/(genshin|starrail|wuwa|nte|zzz|guihuan|ananta|endfield|sea)/:path*',
   ],
 };

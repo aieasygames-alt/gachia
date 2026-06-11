@@ -132,6 +132,19 @@ export default async function ItemsPage({
     return <><EndfieldItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
+  if (gameId === 'sea') {
+    return (
+      <div>
+        <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+          {CATEGORY_LABELS.items?.[locale] ?? 'Items'}
+        </h1>
+        <div className="rounded-lg border border-dashed border-game-border bg-game-surface p-8 text-center text-sm text-game-text-muted">
+          {locale === 'zh' ? '暂无材料数据' : locale === 'ja' ? '素材データはまだありません' : 'No material data available yet'}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div>
       <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>

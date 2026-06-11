@@ -38,6 +38,7 @@ export default async function SitemapPage({
     { id: 'nte', name: { zh: '无限暖暖', en: 'Infinity Nikki', ja: '無限ニキ' } },
     { id: 'zzz', name: { zh: '绝区零', en: 'Zenless Zone Zero', ja: 'ゼンレスゾーンゼロ' } },
     { id: 'guihuan', name: { zh: '归环', en: 'Guihuan', ja: '帰環' } },
+    { id: 'sea', name: { zh: '遗忘之海', en: 'Sea of Remnants', ja: 'シー・オブ・レムナンツ' } },
   ];
 
   const categories: { key: string; label: Record<string, string> }[] = [

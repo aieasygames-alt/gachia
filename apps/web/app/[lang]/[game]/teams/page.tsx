@@ -16,7 +16,7 @@ export async function generateMetadata({
   const gameConfig = GAMES[gameId];
   const gameName = locale === 'zh' ? gameConfig.name.zh : locale === 'ja' ? (gameConfig.name.ja ?? gameConfig.name.en) : gameConfig.name.en;
   const title = locale === 'zh' ? `${gameName} 配队模拟器` : locale === 'ja' ? `${gameName} パーティ編成` : `${gameName} Team Builder`;
-  if (gameId === 'ananta') {
+  if (gameId === 'ananta' || gameId === 'sea') {
     return { title, robots: { index: false, follow: false } };
   }
   return {

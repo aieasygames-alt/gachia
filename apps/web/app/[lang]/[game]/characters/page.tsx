@@ -8,6 +8,7 @@ import { zzzCharacters, getZzzCharacterName, getZzzCharacterImage } from '@gachi
 import { anantaCharacters, getAnantaCharacterName, getAnantaCharacterImage } from '@gachia/data/games/ananta/characters';
 import { guihuanCharacters, getGuihuanCharacterName, getGuihuanCharacterImage } from '@gachia/data/games/guihuan/characters';
 import { endfieldCharacters, getEndfieldCharacterName, getEndfieldCharacterImage } from '@gachia/data/games/endfield/characters';
+import { seaCharacters, getSeaCharacterName, getSeaCharacterImage } from '@gachia/data/games/sea/characters';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
@@ -22,6 +23,7 @@ const CHAR_DESC: Record<string, Record<string, string>> = {
   ananta: { zh: '无限大全异能者图鉴，包含SSR、SR角色数据、异能、配装推荐', en: 'Complete Ananta Esper roster with SSR, SR data, abilities, and build recommendations', ja: 'アナンタ全エスパー図鑑、SSR、SRキャラデータ' },
   guihuan: { zh: '归环全使灵图鉴，包含SSR、SR角色数据、元素、配装推荐', en: 'Complete Guihuan Spirit roster with SSR, SR data, elements, and build recommendations', ja: '帰環全精霊図鑑、SSR、SRキャラデータ' },
   endfield: { zh: '明日方舟：终末地全干员图鉴，包含六星、五星、四星角色数据、元素属性、配装推荐', en: 'Complete Arknights: Endfield operator roster with 6-Star, 5-Star, 4-Star data, elements, and build recommendations', ja: 'エンドフィールド全オペレーター図鑑、★6、★5、★4キャラデータ' },
+  sea: { zh: '遗忘之海全角色图鉴，包含属性、配装推荐', en: 'Complete Sea of Remnants character roster with attributes and build recommendations', ja: 'シー・オブ・レムナンツ全キャラ図鑑、属性、ビルドおすすめ' },
 };
 
 const NTE_ELEMENT_COLORS: Record<string, string> = {
@@ -159,6 +161,10 @@ export default async function CharactersPage({
 
   if (gameId === 'endfield') {
     return <><EndfieldCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
+  }
+
+  if (gameId === 'sea') {
+    return <><SeaCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
   }
 
   return (
@@ -749,6 +755,15 @@ const ENDFIELD_ELEMENT_COLORS: Record<string, string> = {
   physical: '#9ca3af', heat: '#ef4444', cryo: '#67e8f9', nature: '#4ade80', electric: '#facc15',
 };
 
+const SEA_ELEMENT_COLORS: Record<string, string> = {
+  str: '#ef4444',
+  agi: '#22c55e',
+  con: '#f97316',
+  int: '#8b5cf6',
+  per: '#3b82f6',
+  cha: '#ec4899',
+};
+
 function EndfieldCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedLocale; gameId: GameId; gameConfig: typeof GAMES.endfield }) {
   const chars = endfieldCharacters;
   const sixStar = chars.filter((c) => c.rarity === 6);
@@ -834,6 +849,63 @@ function EndfieldCharacterCard({ char, locale, gameId }: { char: typeof endfield
           {getEndfieldCharacterName(char, locale)}
         </h3>
         <p className="text-xs text-game-text-muted truncate">{char.professionEn}</p>
+      </div>
+    </Link>
+  );
+}
+
+// --- Sea Characters ---
+
+function SeaCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedLocale; gameId: GameId; gameConfig: typeof GAMES.sea }) {
+  const chars = seaCharacters;
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
+      </p>
+
+      {chars.length > 0 && (
+        <section className="mb-8">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+            {chars.map((char) => (
+              <SeaCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+
+function SeaCharacterCard({ char, locale, gameId }: { char: typeof seaCharacters[number]; locale: SupportedLocale; gameId: GameId }) {
+  const elementColor = SEA_ELEMENT_COLORS[char.attribute] || '#888';
+  const imageUrl = getSeaCharacterImage(char);
+
+  return (
+    <Link
+      href={`/${gameId}/characters/${char.id}` as '/'}
+      className="group flex flex-col overflow-hidden rounded-lg border border-game-border bg-game-surface transition-all hover:border-game-primary hover:shadow-lg"
+    >
+      <div className="relative aspect-square overflow-hidden bg-game-surface-alt">
+        <CharacterAvatar
+          src={imageUrl}
+          alt={getSeaCharacterName(char, locale)}
+          element={char.attribute}
+          className="h-full w-full object-cover object-top transition-transform group-hover:scale-105"
+        />
+        <span className="absolute bottom-1.5 left-1.5 rounded px-1.5 py-0.5 text-xs font-medium text-white" style={{ backgroundColor: elementColor }}>
+          {char.attribute.charAt(0).toUpperCase() + char.attribute.slice(1)}
+        </span>
+      </div>
+      <div className="p-2.5">
+        <h3 className="text-sm font-semibold text-game-text group-hover:text-game-primary truncate">
+          {getSeaCharacterName(char, locale)}
+        </h3>
+        <p className="text-xs text-game-text-muted truncate">{char.roleEn}</p>
       </div>
     </Link>
   );

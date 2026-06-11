@@ -14,6 +14,8 @@ import { guihuanCharacters, getGuihuanCharacterImage } from './games/guihuan/cha
 import { guihuanWeapons } from './games/guihuan/weapons';
 import { anantaCharacters, getAnantaCharacterImage } from './games/ananta/characters';
 import { anantaWeapons } from './games/ananta/weapons';
+import { seaCharacters, getSeaCharacterImage } from './games/sea/characters';
+import { seaWeapons } from './games/sea/weapons';
 
 function dedupeById(chars: MaterialCharacter[]): MaterialCharacter[] {
   const seen = new Set<string>();
@@ -141,6 +143,10 @@ export function getCharactersForWeapon(gameId: GameId, weaponId: string): Materi
     return dedupeById(matches.map(c => ({ id: c.id, element: c.element, image: getAnantaCharacterImage(c) })));
   }
 
+  if (gameId === 'sea') {
+    return []; // No weapons in Sea of Remnants
+  }
+
   return [];
 }
 
@@ -179,6 +185,7 @@ function getWeaponList(gameId: GameId): WeaponLike[] {
     case 'zzz': return zzzWeapons.map(w => ({ id: w.id, name: w.name, nameEn: w.nameEn, rarity: w.rank === 'S' ? 5 : w.rank === 'A' ? 4 : 3, weaponType: w.specialty }));
     case 'guihuan': return guihuanWeapons as WeaponLike[];
     case 'ananta': return anantaWeapons as WeaponLike[];
+    case 'sea': return seaWeapons as WeaponLike[];
     default: return [];
   }
 }

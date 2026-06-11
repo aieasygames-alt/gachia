@@ -12,6 +12,8 @@ import { characterMaterials as anantaCharacterMaterials } from './games/ananta/e
 import { anantaCharacters, getAnantaCharacterImage } from './games/ananta/characters';
 import { characterMaterials as endfieldCharacterMaterials } from './games/endfield/extras';
 import { endfieldCharacters, getEndfieldCharacterImage } from './games/endfield/characters';
+import { seaCharacters, getSeaCharacterImage } from './games/sea/characters';
+import { characterMaterials as seaCharacterMaterials } from './games/sea/extras';
 
 export interface MaterialCharacter {
   id: string;
@@ -124,6 +126,17 @@ export function getCharactersNeedingMaterial(gameId: GameId, materialId: string)
     return dedupeById([...charIds].map(id => {
       const c = endfieldCharacters.find(ch => ch.id === id);
       return c ? { id: c.id, element: c.element, image: getEndfieldCharacterImage(c) } : null;
+    }).filter(Boolean) as MaterialCharacter[]);
+  }
+
+  if (gameId === 'sea') {
+    const charIds = new Set<string>();
+    for (const cm of seaCharacterMaterials as never[]) {
+      charIds.add((cm as { characterId: string }).characterId);
+    }
+    return dedupeById([...charIds].map(id => {
+      const c = seaCharacters.find(ch => ch.id === id);
+      return c ? { id: c.id, element: c.attribute, image: getSeaCharacterImage(c) } : null;
     }).filter(Boolean) as MaterialCharacter[]);
   }
 

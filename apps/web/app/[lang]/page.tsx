@@ -12,6 +12,7 @@ import { zzzCharacters, getZzzCharacterName, getZzzCharacterImage } from '@gachi
 import { guihuanCharacters, getGuihuanCharacterName, getGuihuanCharacterImage } from '@gachia/data/games/guihuan/characters';
 import { anantaCharacters, getAnantaCharacterName, getAnantaCharacterImage } from '@gachia/data/games/ananta/characters';
 import { endfieldCharacters, getEndfieldCharacterName, getEndfieldCharacterImage } from '@gachia/data/games/endfield/characters';
+import { seaCharacters, getSeaCharacterName, getSeaCharacterImage } from '@gachia/data/games/sea/characters';
 import zhMessages from '@/messages/zh.json';
 import enMessages from '@/messages/en.json';
 import jaMessages from '@/messages/ja.json';
@@ -33,6 +34,7 @@ const FEATURED: Record<string, string[]> = {
   guihuan: [], // too few characters, skip
   ananta: [], // too few characters, skip
   endfield: ['laevatain', 'ardelia', 'tangtang', 'endministrator', 'lifeng'],
+  sea: ['traveler', 'ais', 'little-axe', 'molly'],
 };
 
 // --- Image URL helpers per game ---
@@ -102,15 +104,21 @@ function getFeaturedChars(gameId: string, locale: SupportedLocale): CharAccessor
         if (c) chars.push({ id: c.id, getName: (l) => getEndfieldCharacterName(c, l), getImage: () => toAbsoluteUrl(getEndfieldCharacterImage(c)) });
       }
       break;
+    case 'sea':
+      for (const id of ids) {
+        const c = seaCharacters.find((ch) => ch.id === id);
+        if (c) chars.push({ id: c.id, getName: (l) => getSeaCharacterName(c, l), getImage: () => toAbsoluteUrl(getSeaCharacterImage(c)) });
+      }
+      break;
   }
 
   return chars;
 }
 
 const DESCRIPTIONS: Record<string, string> = {
-  zh: '一站式二次元开放世界游戏数据库，覆盖原神、崩铁、鸣潮、异环、绝区零、归环等游戏的角色图鉴、武器数据、攻略百科。',
-  en: 'Multi-game open world wiki covering Genshin Impact, Honkai: Star Rail, Wuthering Waves, Neverness to Everness, Zenless Zone Zero, and Guihuan.',
-  ja: '原神・スターレイル・鳴潮・NTE・ゼンレスゾーンゼロ・帰環など、マルチゲームのオープンワールドWikiデータベース。',
+  zh: '一站式二次元开放世界游戏数据库，覆盖原神、崩铁、鸣潮、异环、绝区零、归环、遗忘之海等游戏的角色图鉴、武器数据、攻略百科。',
+  en: 'Multi-game open world wiki covering Genshin Impact, Honkai: Star Rail, Wuthering Waves, Neverness to Everness, Zenless Zone Zero, Guihuan, and Sea of Remnants.',
+  ja: '原神・スターレイル・鳴潮・NTE・ゼンレスゾーンゼロ・帰環・シー・オブ・レムナンツなど、マルチゲームのオープンワールドWikiデータベース。',
 };
 
 export async function generateMetadata({
