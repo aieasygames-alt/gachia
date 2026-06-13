@@ -1751,5 +1751,80 @@
       "critRate": 5,
       "critDmg": 150
     }
+  },
+  {
+    "id": "lucy",
+    "name": "露西",
+    "nameEn": "Lucy",
+    "element": "spectro",
+    "weaponType": "Pistols",
+    "rarity": 5,
+    "description": "赛博朋克：边缘行者联动角色，以衍射属性佩枪进行强力输出。",
+    "descriptionEn": "Cyberpunk: Edgerunners collaboration character. A Spectro Pistols main DPS with powerful damage output.",
+    "releaseVersion": "3.4",
+    "status": "released",
+    "tierRank": "SS",
+    "tierReason": {
+      "zh": "衍射主C，赛博朋克联动限定角色，输出能力极强",
+      "en": "Spectro main DPS, Cyberpunk collab limited character with excellent damage output"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "rebecca",
+    "name": "丽贝卡",
+    "nameEn": "Rebecca",
+    "element": "electro",
+    "weaponType": "Pistols",
+    "rarity": 5,
+    "description": "赛博朋克：边缘行者联动角色，导电属性佩枪角色，活动期间免费获取。",
+    "descriptionEn": "Cyberpunk: Edgerunners collaboration character. An Electro Pistols character available for free during the event.",
+    "releaseVersion": "3.4",
+    "status": "released",
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "导电输出/辅助，赛博朋克联动免费角色，性价比极高",
+      "en": "Electro DPS/support, Cyberpunk collab free character with great value"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "lucilla",
+    "name": "洛瑟菈",
+    "nameEn": "Lucilla",
+    "element": "glacio",
+    "weaponType": "Rectifier",
+    "rarity": 5,
+    "description": "星炬学院校长，冷凝属性音感仪角色，拥有快速切换和冷凝焦灼机制。",
+    "descriptionEn": "Principal of Startorch Academy. A Glacio Rectifier sub-DPS with quick-swap and Glacio Chafe mechanics.",
+    "releaseVersion": "3.4",
+    "status": "released",
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "冷凝副C，快速切换机制与冷凝焦灼配合出色",
+      "en": "Glacio sub-DPS with excellent quick-swap mechanics and Glacio Chafe synergy"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
   }
 ]

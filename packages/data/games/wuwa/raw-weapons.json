@@ -66,5 +66,8 @@
   { "id": "cadenza", "name": "华彩", "nameEn": "Cadenza", "rarity": 4, "weaponType": "Pistols", "baseAtk": 337, "subStat": { "name": "Energy Regen", "value": "51.8%" } },
   { "id": "comet-flare", "name": "彗星闪光", "nameEn": "Comet Flare", "rarity": 4, "weaponType": "Pistols", "baseAtk": 412, "subStat": { "name": "HP%", "value": "30.3%" } },
   { "id": "fusion-accretion", "name": "熔融聚积", "nameEn": "Fusion Accretion", "rarity": 4, "weaponType": "Rectifier", "baseAtk": 462, "subStat": { "name": "ATK%", "value": "18.2%" } },
-  { "id": "variation", "name": "变奏", "nameEn": "Variation", "rarity": 4, "weaponType": "Gauntlets", "baseAtk": 337, "subStat": { "name": "Energy Regen", "value": "51.8%" } }
+  { "id": "variation", "name": "变奏", "nameEn": "Variation", "rarity": 4, "weaponType": "Gauntlets", "baseAtk": 337, "subStat": { "name": "Energy Regen", "value": "51.8%" } },
+  { "id": "spectral-trigger", "name": "光谱扳机", "nameEn": "Spectral Trigger", "rarity": 5, "weaponType": "Pistols", "baseAtk": 587, "subStat": { "name": "CRIT Rate", "value": "24.3%" }, "signatureCharacter": "lucy" },
+  { "id": "skull-thrasher", "name": "颅骨碎击", "nameEn": "Skull Thrasher", "rarity": 5, "weaponType": "Pistols", "baseAtk": 587, "subStat": { "name": "CRIT DMG", "value": "48.6%" }, "signatureCharacter": "rebecca" },
+  { "id": "freeze-frame", "name": "定格瞬间", "nameEn": "Freeze Frame", "rarity": 5, "weaponType": "Rectifier", "baseAtk": 500, "subStat": { "name": "CRIT Rate", "value": "24.3%" }, "signatureCharacter": "lucilla" }
 ]

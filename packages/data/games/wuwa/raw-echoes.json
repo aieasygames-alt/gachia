@@ -98,5 +98,25 @@
     "bonus5pc": "施放共鸣技能后，共鸣解放伤害提升24%，持续15秒",
     "bonus5pcEn": "After using Resonance Skill, Resonance Liberation DMG +24% for 15s",
     "bestFor": ["jinhsi", "xiangli-yao", "zhezhi", "calcharo"]
+  },
+  {
+    "id": "wishes-of-quiet-snowfall",
+    "name": "凛冬之愿",
+    "nameEn": "Wishes of Quiet Snowfall",
+    "bonus2pc": "冷凝伤害提升10%",
+    "bonus2pcEn": "Glacio DMG Bonus +10%",
+    "bonus5pc": "触发冷凝焦灼时，装备者攻击力提升15%，持续15秒",
+    "bonus5pcEn": "When triggering Glacio Chafe, equipper's ATK increases by 15% for 15s",
+    "bestFor": ["hiyuki", "lucilla", "sanhua"]
+  },
+  {
+    "id": "shadow-of-shattered-dreams",
+    "name": "碎梦之影",
+    "nameEn": "Shadow of Shattered Dreams",
+    "bonus2pc": "攻击力提升10%",
+    "bonus2pcEn": "ATK +10%",
+    "bonus5pc": "对目标施加「骇入·偏移」时触发效果，适合Lucy的技能机制",
+    "bonus5pcEn": "Triggers effects when inflicting Hack - Shifting on targets. Tailored for Lucy's kit",
+    "bestFor": ["lucy"]
   }
 ]

@@ -5046,8 +5046,8 @@
     "teamComps": [],
     "image": "",
     "availableAtLaunch": false,
-    "acquisitionMethod": "调频（即将开放）",
-    "status": "upcoming",
+    "acquisitionMethod": "调频（独家频道）",
+    "status": "available",
     "cvZh": "",
     "cvJp": "",
     "cvEn": ""
@@ -5280,8 +5280,8 @@
     "teamComps": [],
     "image": "",
     "availableAtLaunch": false,
-    "acquisitionMethod": "调频（即将开放）",
-    "status": "upcoming",
+    "acquisitionMethod": "调频（独家频道）",
+    "status": "available",
     "cvZh": "",
     "cvJp": "",
     "cvEn": ""

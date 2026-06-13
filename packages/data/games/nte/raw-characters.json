@@ -786,9 +786,9 @@
     ],
     "image": "/images/characters/lacrimosa.webp",
     "availableAtLaunch": false,
-    "acquisitionMethod": "future",
+    "acquisitionMethod": "gacha",
     "descriptionEn": "A member of the Bureau of Anomaly Control's ETD-4 squad. Laid-back and easygoing, she controls multiple Esper constructs in coordinated combat.",
-    "status": "upcoming",
+    "status": "available",
     "nameTw": "拉克莉莫薩",
     "cvZh": "宴宁",
     "cvJp": "長縄まりあ",
@@ -7278,5 +7278,50 @@
     "nameTw": "浔",
     "arcType": "liquid",
     "signatureArc": "clear-skies"
+  },
+  {
+    "id": "chaos",
+    "name": "卡厄斯",
+    "nameEn": "Chaos",
+    "rank": "S",
+    "attribute": "lakshana",
+    "attributeEn": "Lakshana",
+    "faction": "ETD-6",
+    "factionEn": "ETD-6",
+    "description": "ETD-6小队成员，与Exe和Linko并肩作战。以相属性进行战斗，技能机制独特。",
+    "descriptionEn": "A member of ETD-6 squad, fighting alongside Exe and Linko. A Lakshana-attribute combatant with unique skill mechanics.",
+    "faq": [
+      {
+        "question": "Is Chaos good in Neverness to Everness?",
+        "questionZh": "卡厄斯值得培养吗？",
+        "answer": "Chaos is a S-rank Lakshana character with strong team synergy. Check our tier list for the latest ranking.",
+        "answerZh": "卡厄斯是S级相属性角色，团队配合能力出色。查看我们的Tier榜了解最新排名。"
+      }
+    ],
+    "relatedCharacters": [],
+    "tierRank": "S",
+    "tierReason": "S-rank Lakshana character from v1.1 Phase 2 banner with strong combat capabilities",
+    "tierReasonZh": "v1.1下半卡池S级相属性角色，战斗能力出色",
+    "skills": {
+      "normalAttack": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" },
+      "dodge": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" },
+      "assist": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" },
+      "special": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" },
+      "ultimate": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" },
+      "chain": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" },
+      "corePassive": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "",
+      "bestWeaponEn": "",
+      "alternativeWeapons": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "限定池(下半)",
+    "descriptionEn_extra": "A member of ETD-6 squad, fighting alongside Exe and Linko. A Lakshana-attribute combatant with unique skill mechanics.",
+    "status": "available",
+    "arcType": "liquid"
   }
 ]
