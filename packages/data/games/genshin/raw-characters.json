@@ -14269,5 +14269,632 @@
     },
     "teamComps": [],
     "faq": []
+  },
+  {
+    "id": "aloy",
+    "name": "埃洛伊",
+    "nameEn": "Aloy",
+    "element": "cryo",
+    "weaponType": "Bow",
+    "rarity": 5,
+    "region": "Other",
+    "description": "来自另一个世界的诺拉族的勇者，机敏果敢的猎人",
+    "descriptionEn": "A brave and agile hunter from the Nora tribe of another world",
+    "releaseVersion": "2.1",
+    "status": "released",
+    "acquisitionMethod": "free-event",
+    "tierRank": "B",
+    "tierReason": "Limited crossover character with decent Cryo bow DPS but low team synergy",
+    "tierReasonZh": "联动限定角色，冰系弓箭输出尚可但团队配合较弱",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击·埃洛伊",
+        "nameEn": "Normal Attack · Aloy",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "cyno",
+    "name": "赛诺",
+    "nameEn": "Cyno",
+    "element": "electro",
+    "weaponType": "Polearm",
+    "rarity": 5,
+    "region": "Sumeru",
+    "description": "须弥教令院的大风纪官，执行律法绝不徇私",
+    "descriptionEn": "General Mahamatra of the Akademiya, strict enforcer of the law in Sumeru",
+    "releaseVersion": "3.1",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "S",
+    "tierReason": "Strong Electro on-field DPS with burst-dependent playstyle and Aggravate synergy",
+    "tierReasonZh": "强力雷系站场输出，依赖大招，与超激化队伍配合优秀",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击·赛诺",
+        "nameEn": "Normal Attack · Cyno",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "mika",
+    "name": "米卡",
+    "nameEn": "Mika",
+    "element": "cryo",
+    "weaponType": "Polearm",
+    "rarity": 4,
+    "region": "Mondstadt",
+    "description": "西风骑士团游击小队的测绘员",
+    "descriptionEn": "Front-line surveyor of the Knights of Favonius Reconnaissance Company",
+    "releaseVersion": "3.5",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "A",
+    "tierReason": "Physical team buffer with ATK speed and Cryo support capabilities",
+    "tierReasonZh": "物理队增益辅助，提供攻速和冰系支援",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击·米卡",
+        "nameEn": "Normal Attack · Mika",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "lynette",
+    "name": "琳妮特",
+    "nameEn": "Lynette",
+    "element": "anemo",
+    "weaponType": "Sword",
+    "rarity": 4,
+    "region": "Fontaine",
+    "description": "林尼的双胞胎妹妹，魔术助手的灵动身影",
+    "descriptionEn": "Lyney's twin sister, the agile magician's assistant",
+    "releaseVersion": "4.0",
+    "status": "released",
+    "acquisitionMethod": "free-archon-quest",
+    "tierRank": "A",
+    "tierReason": "Versatile Anemo support with taunt and energy recharge utility",
+    "tierReasonZh": "多功能风系辅助，具备嘲讽和充能 utility",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击·琳妮特",
+        "nameEn": "Normal Attack · Lynette",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "xianyun",
+    "name": "闲云",
+    "nameEn": "Xianyun",
+    "element": "anemo",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "region": "Liyue",
+    "description": "留云借风真君的凡身，璃月仙人中的鹤发仙人",
+    "descriptionEn": "The mortal form of Cloud Retainer, a Liyue adeptus",
+    "releaseVersion": "4.4",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "S",
+    "tierReason": "Premium Anemo support enabling plunge attacks and providing healing",
+    "tierReasonZh": "顶级风系辅助，开启下落攻击体系并提供治疗",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击·闲云",
+        "nameEn": "Normal Attack · Xianyun",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "chasca",
+    "name": "恰斯卡",
+    "nameEn": "Chasca",
+    "element": "anemo",
+    "weaponType": "Bow",
+    "rarity": 5,
+    "region": "Natlan",
+    "description": "纳塔的飞翔射手，以多元素弹药进行空中打击",
+    "descriptionEn": "A flying marksman of Natlan who fires multi-elemental aerial attacks",
+    "releaseVersion": "5.2",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "S",
+    "tierReason": "Unique Anemo DPS with multi-element reaction-based charged attacks",
+    "tierReasonZh": "独特的风系输出，以多元素反应蓄力攻击为核心",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击·恰斯卡",
+        "nameEn": "Normal Attack · Chasca",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "kachina",
+    "name": "卡齐娜",
+    "nameEn": "Kachina",
+    "element": "geo",
+    "weaponType": "Polearm",
+    "rarity": 4,
+    "region": "Natlan",
+    "description": "纳茨卡的勇敢少女，骑着 Turbo Drill 冲刺战场",
+    "descriptionEn": "A brave young warrior of Natlan who rides her Turbo Drill into battle",
+    "releaseVersion": "5.0",
+    "status": "released",
+    "acquisitionMethod": "free-archon-quest",
+    "tierRank": "A",
+    "tierReason": "Solid Geo off-field sub-DPS with reliable Crystalize support",
+    "tierReasonZh": "优秀的岩系脱场副输出，提供稳定的结晶支援",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击·卡齐娜",
+        "nameEn": "Normal Attack · Kachina",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "citlali",
+    "name": "茜特菈莉",
+    "nameEn": "Citlali",
+    "element": "cryo",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "region": "Natlan",
+    "description": "纳塔的黑曜祖母，精通星辰与冰霜的古老术士",
+    "descriptionEn": "The Obsidian Grandmother of Natlan, an ancient sorceress mastering stars and frost",
+    "releaseVersion": "5.3",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "S",
+    "tierReason": "Premier Cryo shielder and support with strong Elemental Mastery buffs",
+    "tierReasonZh": "顶级冰系护盾辅助，提供强力的元素精通增益",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击·茜特菈莉",
+        "nameEn": "Normal Attack · Citlali",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "mavuika",
+    "name": "玛薇卡",
+    "nameEn": "Mavuika",
+    "element": "pyro",
+    "weaponType": "Claymore",
+    "rarity": 5,
+    "region": "Natlan",
+    "description": "纳塔的火神，以太阳般的热焰守护人民",
+    "descriptionEn": "The Pyro Archon of Natlan, protecting her people with solar flames",
+    "releaseVersion": "5.3",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "SS",
+    "tierReason": "Top-tier Pyro main DPS and Archon with massive burst and Nightsoul synergy",
+    "tierReasonZh": "顶级火系主输出，火神，具备极高爆发和夜魂体系配合",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击·玛薇卡",
+        "nameEn": "Normal Attack · Mavuika",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "prune",
+    "name": "普鲁涅",
+    "nameEn": "Prune",
+    "element": "anemo",
+    "weaponType": "Catalyst",
+    "rarity": 4,
+    "region": "Other",
+    "description": "来自诺德克劳的猎巫人",
+    "descriptionEn": "A witch hunter from Nod-Krai",
+    "releaseVersion": "6.6",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "A",
+    "tierReason": "Anemo support with grouping and Elemental Mastery utility",
+    "tierReasonZh": "风系辅助，具备聚怪和元素精通 utility",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击·普鲁涅",
+        "nameEn": "Normal Attack · Prune",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
+  },
+  {
+    "id": "lohen",
+    "name": "洛恩",
+    "nameEn": "Lohen",
+    "element": "cryo",
+    "weaponType": "Polearm",
+    "rarity": 5,
+    "region": "Mondstadt",
+    "description": "西风骑士团第五连连长",
+    "descriptionEn": "Vice Captain of the Knights of Favonius' Fifth Company",
+    "releaseVersion": "6.6",
+    "status": "released",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "S",
+    "tierReason": "Strong Cryo DPS with excellent freeze and shatter mechanics",
+    "tierReasonZh": "强力冰系输出，冰冻与碎冰机制优秀",
+    "skills": {
+      "normalAttack": {
+        "name": "普通攻击·洛恩",
+        "nameEn": "Normal Attack · Lohen",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "元素战技",
+        "nameEn": "Elemental Skill",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalBurst": {
+        "name": "元素爆发",
+        "nameEn": "Elemental Burst",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [],
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
+    "teamComps": [],
+    "faq": []
   }
 ]
