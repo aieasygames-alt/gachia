@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { zzzDriveDiscs, getZzzDriveDiscName, getZzzDriveDiscDesc2pc, getZzzDriveDiscDesc4pc } from '@gachia/data/games/zzz/drive-discs';
@@ -104,7 +105,11 @@ function DriveDiscCard({ dd, locale }: { dd: typeof zzzDriveDiscs[number]; local
   return (
     <div className="rounded-lg border border-game-border bg-game-surface p-4">
       <div className="mb-2 flex items-center gap-2">
-        <h3 className="font-semibold text-game-text">{getZzzDriveDiscName(dd, locale)}</h3>
+        <h3 className="font-semibold text-game-text">
+          <Link href={`/${locale}/zzz/drive-discs/${dd.id}`} className="transition-colors hover:text-game-accent">
+            {getZzzDriveDiscName(dd, locale)}
+          </Link>
+        </h3>
         {dd.element && (
           <span className="rounded px-1.5 py-0.5 text-xs text-white" style={{ backgroundColor: elementColor || '#888' }}>
             {dd.element}
@@ -120,9 +125,10 @@ function DriveDiscCard({ dd, locale }: { dd: typeof zzzDriveDiscs[number]; local
           {dd.characters.slice(0, 6).map((charId) => {
             const char = getZzzCharacterById(charId);
             return char ? (
-              <span key={charId} className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">
+              <Link key={charId} href={`/${locale}/zzz/characters/${charId}`}
+                className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary transition-colors hover:text-game-accent">
                 {getZzzCharacterName(char, locale)}
-              </span>
+              </Link>
             ) : null;
           })}
           {dd.characters.length > 6 && <span className="text-xs text-game-text-muted">+{dd.characters.length - 6}</span>}

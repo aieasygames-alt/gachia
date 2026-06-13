@@ -81,6 +81,8 @@ import {
   getZzzCharacterImage,
   getZzzCharacterTierReason,
 } from '@gachia/data/games/zzz/characters';
+import { zzzWeapons } from '@gachia/data/games/zzz/weapons';
+import { zzzDriveDiscs } from '@gachia/data/games/zzz/drive-discs';
 import {
   guihuanCharacters,
   getGuihuanCharacterById,
@@ -350,11 +352,13 @@ export async function generateMetadata({
     const elName = GENSHIN_ELEMENT_NAMES[char.element]?.[locale] ?? char.element;
     const wName = GENSHIN_WEAPON_LABELS[char.weaponType]?.[locale] ?? char.weaponType;
     const title = locale === 'zh'
-      ? `${name}配装攻略 — ${elName}${wName}最佳武器、圣遗物、配队`
-      : `${name} Build Guide — ${elName} ${wName} Best Weapons, Artifacts & Teams`;
+      ? `${name}最佳配装 — 武器、圣遗物、配队推荐（${char.tierRank}级）`
+      : locale === 'ja'
+        ? `${name}最佳ビルド — 武器、聖遺物、編成（Tier ${char.tierRank}）`
+        : `${name} Best Build — Weapons, Artifacts & Teams (${char.tierRank} Tier)`;
     const desc = locale === 'zh'
-      ? `${name}配装攻略：推荐武器、圣遗物套装、主副词条、配队组合，${char.tierRank} Tier`
-      : `${name} build guide for Genshin Impact: best weapons, artifact sets, main stats, team comps, and ascension materials. ${char.tierRank} tier.`;
+      ? `${name}（${elName}${wName}）配装攻略：推荐武器、圣遗物套装、主副词条、配队组合。${char.tierRank}级角色全面解析。`
+      : `${name} ${elName} ${wName} best build: recommended weapons, artifact sets, main stats, team comps, and F2P alternatives. ${char.tierRank} tier character.`;
     return { title, description: desc.slice(0, 160), openGraph: buildOg(name), alternates: buildAlternates(id) };
   }
 
@@ -1743,18 +1747,45 @@ function ZzzCharacterDetail({ char, locale }: { char: ZzzCharacter; locale: Supp
       {/* Recommended Build */}
       <Section title={locale === 'zh' ? '推荐配装' : locale === 'ja' ? 'おすすめビルド' : 'Recommended Build'}>
         <div className="space-y-2 text-sm">
-          <BuildRow label={locale === 'zh' ? '最佳音擎' : 'Best W-Engine'}
-            value={localeStr(build.bestWeapon, build.bestWeaponEn, locale)} />
-          {(build.alternativeWeapons?.length ?? 0) > 0 && (
-            <BuildRow label={locale === 'zh' ? '备选音擎' : 'Alt W-Engines'}
-              value={build.alternativeWeapons.join(', ')} />
-          )}
-          <BuildRow label={locale === 'zh' ? '驱动盘套装' : 'Drive Disc Set'}
-            value={localeStr(build.bestDriveDisc, build.bestDriveDiscEn, locale)} />
-          <BuildRow label={locale === 'zh' ? '主属性' : 'Main Stats'}
-            value={Object.values(locale === 'zh' ? build.mainStats ?? {} : build.mainStatsEn ?? {}).join(' / ')} />
-          <BuildRow label={locale === 'zh' ? '副属性优先' : 'Sub Stats'}
-            value={(locale === 'zh' ? build.subStatPriority : build.subStatPriorityEn)?.join(' > ')} />
+          {(() => {
+            const bestWeaponName = localeStr(build.bestWeapon, build.bestWeaponEn, locale);
+            const weaponMatch = zzzWeapons.find(w => w.name === build.bestWeapon || w.nameEn === build.bestWeaponEn);
+            const altWeaponMatches = (build.alternativeWeapons ?? []).map(altName => {
+              const match = zzzWeapons.find(w => w.name === altName || w.nameEn === altName);
+              return match ? { name: localeStr(match.name, match.nameEn, locale), id: match.id } : { name: altName, id: null };
+            });
+            const discName = localeStr(build.bestDriveDisc, build.bestDriveDiscEn, locale);
+            const discMatch = zzzDriveDiscs.find(d => d.name === build.bestDriveDisc || d.nameEn === build.bestDriveDiscEn);
+            return (
+              <>
+                <BuildRowLink label={locale === 'zh' ? '最佳音擎' : 'Best W-Engine'}
+                  value={bestWeaponName}
+                  href={weaponMatch ? `/${locale}/zzz/weapons/${weaponMatch.id}` : undefined} />
+                {(build.alternativeWeapons?.length ?? 0) > 0 && (
+                  <div className="flex gap-2">
+                    <span className="w-24 shrink-0 text-game-text-muted">{locale === 'zh' ? '备选音擎' : 'Alt W-Engines'}</span>
+                    <span className="text-game-text">
+                      {altWeaponMatches.map((aw, i) => (
+                        <span key={i}>
+                          {aw.id ? (
+                            <Link href={`/${locale}/zzz/weapons/${aw.id}` as '/'} className="text-game-primary hover:text-game-accent transition-colors">{aw.name}</Link>
+                          ) : aw.name}
+                          {i < altWeaponMatches.length - 1 ? ', ' : ''}
+                        </span>
+                      ))}
+                    </span>
+                  </div>
+                )}
+                <BuildRowLink label={locale === 'zh' ? '驱动盘套装' : 'Drive Disc Set'}
+                  value={discName}
+                  href={discMatch ? `/${locale}/zzz/drive-discs/${discMatch.id}` : undefined} />
+                <BuildRow label={locale === 'zh' ? '主属性' : 'Main Stats'}
+                  value={Object.values(locale === 'zh' ? build.mainStats ?? {} : build.mainStatsEn ?? {}).join(' / ')} />
+                <BuildRow label={locale === 'zh' ? '副属性优先' : 'Sub Stats'}
+                  value={(locale === 'zh' ? build.subStatPriority : build.subStatPriorityEn)?.join(' > ')} />
+              </>
+            );
+          })()}
         </div>
       </Section>
 

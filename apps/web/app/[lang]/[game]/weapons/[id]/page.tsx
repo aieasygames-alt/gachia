@@ -111,12 +111,13 @@ export async function generateMetadata({
   const gameName = GAMES[gameId]?.name[locale] ?? '';
 
   // Build intent-rich title & description per locale — includes stats in description for SERP CTR
-  const buildWeaponMeta = (name: string, effectDesc: string | undefined, statsLine?: string, hasPassive = true) => {
+  const buildWeaponMeta = (name: string, effectDesc: string | undefined, statsLine?: string, hasPassive = true, titleStat?: string) => {
+    const statSuffix = titleStat ? ` (${titleStat})` : '';
     const title = locale === 'zh'
-      ? `${name} — ${gameName}武器攻略 | 属性${hasPassive ? '、技能效果' : ''}与适用角色`
+      ? `${name}${statSuffix} — ${gameName}武器攻略 | 属性${hasPassive ? '、技能效果' : ''}与适用角色`
       : locale === 'ja'
-        ? `${name} — ${gameName}武器データ${hasPassive ? ' | スキル効果とおすすめキャラ' : ' | ステータスとおすすめキャラ'}`
-        : `${name} — ${gameName} Weapon Stats${hasPassive ? ', Skill Effect &' : '&'} Best Characters`;
+        ? `${name}${statSuffix} — ${gameName}武器データ${hasPassive ? ' | スキル効果とおすすめキャラ' : ' | ステータスとおすすめキャラ'}`
+        : `${name}${statSuffix} — ${gameName} Weapon Stats${hasPassive ? ', Skill Effect &' : '&'} Best Characters`;
     let desc: string;
     if (effectDesc && statsLine) {
       desc = `${statsLine}. ${effectDesc}`.slice(0, 160);
@@ -147,7 +148,7 @@ export async function generateMetadata({
     const stats = locale === 'zh'
       ? `${w.rarity}★, 基础攻击力${w.baseAtk}${sub90 ? `, 满级${sub90}` : ''}`
       : `★${w.rarity}, Base ATK ${w.baseAtk}${sub90 ? `, Lv.90 ${sub90}` : ''}`;
-    const meta = buildWeaponMeta(name, effect?.description, stats);
+    const meta = buildWeaponMeta(name, effect?.description, stats, true, sub90 || undefined);
     return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
   if (gameId === 'starrail') {

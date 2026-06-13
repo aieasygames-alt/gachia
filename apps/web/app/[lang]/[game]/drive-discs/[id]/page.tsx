@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { GAMES, LOCALES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { getZzzDriveDiscById, getZzzDriveDiscName, getZzzDriveDiscDesc2pc, getZzzDriveDiscDesc4pc, zzzDriveDiscs } from '@gachia/data/games/zzz/drive-discs';
@@ -102,7 +103,12 @@ export default async function DriveDiscDetailPage({
               {disc.bestFor.map((charId) => {
                 const char = getZzzCharacterById(charId);
                 const charName = char ? getZzzCharacterName(char, locale) : charId;
-                return (
+                return char ? (
+                  <Link key={charId} href={`/${locale}/zzz/characters/${charId}`}
+                    className="rounded bg-game-surface-alt px-3 py-1 text-sm text-game-primary transition-colors hover:text-game-accent">
+                    {charName}
+                  </Link>
+                ) : (
                   <span key={charId} className="rounded bg-game-surface-alt px-3 py-1 text-sm text-game-text-muted">
                     {charName}
                   </span>
