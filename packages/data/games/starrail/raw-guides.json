@@ -881,5 +881,32 @@
         "answerZh": "喜欢探索冒险就选原神——经过多年更新，内容量最大、完成度最高。想要轻松体验就选崩铁。追求动作手感就选绝区零。想体验不断进步的新作就选鸣潮。四款都有活跃社区和稳定更新，无论选哪款都不会失望。"
       }
     ]
+  },
+  {
+    "id": "v4-3-version-guide",
+    "title": "崩坏星穹铁道4.3版本指南 — 千冶·刃与Fate联动第二弹",
+    "titleEn": "Honkai Star Rail v4.3 Guide — Mortenax Blade & Fate Collab Wave 2",
+    "category": "version",
+    "categoryZh": "版本",
+    "categoryEn": "Version",
+    "summary": "星铁v4.3「沉于生者的忘川」版本指南：新角色千冶·刃(Mortenax Blade)、Fate/stay night联动第二弹、新光锥与活动一览。",
+    "summaryEn": "HSR v4.3 'Let the Dead Lay in the Lethe' guide: new character Mortenax Blade, Fate/stay night collab Wave 2, new light cones and events.",
+    "content": "## v4.3 版本概览\n\n**版本名称**：沉于生者的忘川\n**上线日期**：2026年6月1日\n\n### 新角色\n\n#### 千冶·刃 (Mortenax Blade)\n\n| 属性 | 详情 |\n|------|------|\n| 命途 | 虚无 (Nihility) |\n| 属性 | 火 (Fire) |\n| 星级 | 5星 |\n| 原名 | 应星 (Yingxing) |\n\n- HP上限Scaling的火系主C\n- 拥有嘲讽机制，与原版刃(风/毁灭)不同\n- 叠加HP获得增伤效果\n- 专属光锥：Reforged in Hellfire\n\n### Fate/stay night联动 第二弹\n\n- v4.3继续Fate/stay night联动\n- 多个复刻限定五星角色卡池\n- 联动光锥可能返场\n\n### 新光锥\n\n| 光锥 | 命途 | 星级 | 专属角色 |\n|------|------|------|----------|\n| Reforged in Hellfire | 虚无 | 5星 | 千冶·刃 |\n\n### v4.2回顾\n\nv4.2「如是，众生欢笑不已」（3周年）新增：\n- Silver Wolf LV.999（欢愉/虚数）\n- Evanescia/绯英（欢愉/物理）\n- 开拓者获得欢愉命途\n- Firefly、Huohuo、Seele、Welt获得强化（Novaflare系统）\n\n### 抽卡建议\n\n1. **千冶·刃**：火虚无主C，如果缺火系输出建议抽取\n2. **Fate联动复刻**：如果错过第一弹，这是补票机会\n3. **光锥**：Reforged in Hellfire是千冶·刃的专属，非必需",
+    "contentEn": "## v4.3 Overview\n\n**Version**: Let the Dead Lay in the Lethe\n**Release**: June 1, 2026\n\n### New Character\n\n#### Mortenax Blade (千冶·刃)\n\n| Attribute | Detail |\n|-----------|--------|\n| Path | Nihility |\n| Element | Fire |\n| Rarity | 5-star |\n| Real Name | Yingxing |\n\n- HP-scaling Fire main DPS\n- Has taunt mechanics, different from original Blade (Wind/Destruction)\n- Stacks HP for damage bonus\n- Signature Light Cone: Reforged in Hellfire\n\n### Fate/stay night Collab Wave 2\n\n- v4.3 continues the Fate/stay night collaboration\n- Multiple rerun limited 5-star banners\n- Collab light cones may return\n\n### New Light Cone\n\n| Light Cone | Path | Rarity | Signature |\n|------------|------|--------|----------|\n| Reforged in Hellfire | Nihility | 5-star | Mortenax Blade |\n\n### v4.2 Recap\n\nv4.2 'So Laughed the Masses' (3rd Anniversary) added:\n- Silver Wolf LV.999 (Elation/Imaginary)\n- Evanescia (Elation/Physical)\n- Trailblazer gained Elation path\n- Firefly, Huohuo, Seele, Welt received buffs (Novaflare system)\n\n### Pull Recommendations\n\n1. **Mortenax Blade**: Fire Nihility DPS, recommended if you lack Fire damage\n2. **Fate collab reruns**: Good chance to pick up characters you missed\n3. **Light Cone**: Reforged in Hellfire is Mortenax Blade's signature, not mandatory",
+    "tags": ["v4.3", "版本", "更新", "Mortenax Blade", "千冶刃", "Fate", "联动"],
+    "faq": [
+      {
+        "question": "Is Mortenax Blade different from regular Blade in HSR?",
+        "questionZh": "千冶·刃和普通刃有什么区别？",
+        "answer": "Yes. Original Blade is Wind/Destruction. Mortenax Blade is Fire/Nihility with HP-scaling and taunt mechanics. They play very differently despite being the same character (Yingxing).",
+        "answerZh": "是的。原版刃是风/毁灭命途。千冶·刃是火/虚无命途，HP上限Scaling和嘲讽机制，玩法完全不同，尽管都是应星。"
+      },
+      {
+        "question": "Should I pull Mortenax Blade or save for Fate reruns?",
+        "questionZh": "抽千冶·刃还是留星琼给Fate复刻？",
+        "answer": "If you lack Fire DPS, Mortenax Blade is strong. If you missed Fate collab Wave 1 characters, Wave 2 reruns may be your only chance as collabs may not return again.",
+        "answerZh": "如果缺火系输出，千冶·刃很强。如果错过Fate联动第一弹角色，第二弹复刻可能是唯一机会，因为联动可能不会再复刻。"
+      }
+    ]
   }
 ]

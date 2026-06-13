@@ -815,5 +815,32 @@
         "answerZh": "所有结晶溶剂都留到联觉等级50级以上再用。高联觉等级下沉寂域和Boss掉落的奖励明显更好，每份溶剂的价值更高。建议在双倍掉落活动期间使用，或者急需材料立刻培养刚抽到的新角色时使用。"
       }
     ]
+  },
+  {
+    "id": "v3-4-version-guide",
+    "title": "鸣潮3.4版本完整更新指南 — 赛博朋克联动与新角色",
+    "titleEn": "Wuthering Waves v3.4 Complete Update Guide — Cyberpunk Collab & New Characters",
+    "category": "version",
+    "categoryZh": "版本",
+    "categoryEn": "Version",
+    "summary": "鸣潮v3.4「未做的梦」版本指南：Cyberpunk Edgerunners联动角色Lucy和Rebecca、新角色Lucilla、新武器与新声骸套装一览。",
+    "summaryEn": "WuWa v3.4 'The Dream Not Dreamed' guide: Cyberpunk Edgerunners collab characters Lucy and Rebecca, new Resonator Lucilla, new weapons and echo sets.",
+    "content": "## v3.4 版本概览\n\n**版本名称**：未做的梦（The Dream Not Dreamed）\n**上线日期**：2026年6月8日\n\n### 新角色\n\n| 角色 | 属性 | 武器 | 星级 | 获取方式 |\n|------|------|------|------|----------|\n| Lucy | 衍射(Spectro) | 佩枪 | 5星 | 限定卡池 Phase 1 |\n| Rebecca | 导电(Electro) | 佩枪 | 5星 | 活动免费获取 |\n| Lucilla | 冷凝(Glacio) | 音感仪 | 5星 | 限定卡池 Phase 2 |\n\n#### Lucy（赛博朋克联动）\n- Cyberpunk: Edgerunners 联动限定角色\n- 定位：衍射主C，高爆发远程输出\n- 专属武器：Spectral Trigger\n\n#### Rebecca（赛博朋克联动）\n- Cyberpunk: Edgerunners 联动角色\n- 定位：导电输出\n- **活动期间免费获取**\n- 专属武器：Skull Thrasher\n\n#### Lucilla\n- Startorch学院校长\n- 定位：冷凝副C，快速切换输出\n- 利用Glacio Chafe机制\n- 专属武器：Freeze Frame\n\n### 新武器\n\n| 武器 | 类型 | 星级 | 专属角色 |\n|------|------|------|----------|\n| Spectral Trigger | 佩枪 | 5星 | Lucy |\n| Skull Thrasher | 佩枪 | 5星 | Rebecca |\n| Freeze Frame | 音感仪 | 5星 | Lucilla |\n\n### 新声骸套装\n\n| 套装 | 效果 |\n|------|------|\n| Shadow of Shattered Dreams | 施加Hack - Shifting时触发特殊效果，Lucy专属 |\n\n### 注意事项\n\n- 联动角色为限时获取，未来可能不会复刻\n- Rebecca免费获取，务必完成活动任务\n- Wishes of Quiet Snowfall（v3.3声骸）是Lucilla的最佳搭配",
+    "contentEn": "## v3.4 Overview\n\n**Version**: The Dream Not Dreamed\n**Release**: June 8, 2026\n\n### New Characters\n\n| Character | Element | Weapon | Rarity | Acquisition |\n|-----------|---------|--------|--------|-------------|\n| Lucy | Spectro | Pistols | 5-star | Limited Banner Phase 1 |\n| Rebecca | Electro | Pistols | 5-star | Free from Event |\n| Lucilla | Glacio | Rectifier | 5-star | Limited Banner Phase 2 |\n\n#### Lucy (Cyberpunk Collab)\n- Cyberpunk: Edgerunners crossover character\n- Role: Spectro Main DPS, high-burst ranged\n- Signature Weapon: Spectral Trigger\n\n#### Rebecca (Cyberpunk Collab)\n- Cyberpunk: Edgerunners crossover character\n- Role: Electro DPS\n- **Free during the event**\n- Signature Weapon: Skull Thrasher\n\n#### Lucilla\n- Principal of Startorch Academy\n- Role: Glacio Sub-DPS, quick-swap\n- Uses Glacio Chafe mechanics\n- Signature Weapon: Freeze Frame\n\n### New Weapons\n\n| Weapon | Type | Rarity | Signature |\n|--------|------|--------|----------|\n| Spectral Trigger | Pistol | 5-star | Lucy |\n| Skull Thrasher | Pistol | 5-star | Rebecca |\n| Freeze Frame | Rectifier | 5-star | Lucilla |\n\n### New Echo Set\n\n| Set | Effect |\n|-----|--------|\n| Shadow of Shattered Dreams | Triggers special effects when inflicting Hack - Shifting, tailored for Lucy |\n\n### Notes\n\n- Collab characters are time-limited and may not rerun\n- Rebecca is free — complete the event before it ends\n- Wishes of Quiet Snowfall (v3.3 echo) is Lucilla's best set",
+    "tags": ["v3.4", "版本", "更新", "Cyberpunk", "联动", "Lucy", "Rebecca", "Lucilla"],
+    "faq": [
+      {
+        "question": "Is the WuWa Cyberpunk collab permanent?",
+        "questionZh": "鸣潮赛博朋克联动是永久的吗？",
+        "answer": "The Cyberpunk: Edgerunners collab characters Lucy and Rebecca are time-limited. Rebecca can be obtained for free during the event. The collab may not rerun, so don't miss it.",
+        "answerZh": "赛博朋克联动角色Lucy和Rebecca是限时获取。Rebecca活动期间免费获取。联动可能不会复刻，请勿错过。"
+      },
+      {
+        "question": "Should I pull for Lucy or Lucilla?",
+        "questionZh": "抽Lucy还是Lucilla？",
+        "answer": "Lucy is a limited collab character that may not rerun, making her higher priority. Lucilla is a strong Glacio Sub-DPS but can be skipped if you have other Glacio options.",
+        "answerZh": "Lucy是限时联动角色可能不会复刻，优先级更高。Lucilla是强力冷凝副C，但如果已有冷凝角色可以跳过。"
+      }
+    ]
   }
 ]

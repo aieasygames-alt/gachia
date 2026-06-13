@@ -58,5 +58,167 @@
         "answerZh": "支持 PC (Steam)、安卓、iOS、PS5 和 Xbox Series X/S。"
       }
     ]
+  },
+  {
+    "id": "tier-list-guide",
+    "title": "《遗忘之海》船员强度节奏榜 — 最新Tier排行",
+    "titleEn": "Sea of Remnants Crew Tier List — Best Characters Ranked",
+    "category": "tier-list",
+    "categoryZh": "节奏榜",
+    "categoryEn": "Tier List",
+    "summary": "遗忘之海全船员强度排行，按SS/S/A/B分级，涵盖输出、辅助、生存各定位，含黑券与紫券角色推荐。",
+    "summaryEn": "Complete Sea of Remnants crew tier list with SS/S/A/B rankings across DPS, support, and survival roles. Includes both Black Ticket and Purple Ticket characters.",
+    "content": "## 船员Tier排行标准\n\n本节奏榜基于以下维度评级：\n- 输出能力 (DPS)\n- 辅助能力 (增益/减抗/控制)\n- 生存能力 (治疗/护盾/减伤)\n- 泛用性 (队伍适配度)\n- 获取难度 (是否需要命座)\n\n### SS级船员（最强推荐）\n\n| 船员 | 定位 | 属性 | 推荐理由 |\n|------|------|------|----------|\n| 王女 | 辅助 | CHA | 全队增益强大，适配所有队伍 |\n| 小斧头 | 主C | STR | 前期物理输出天花板，开荒首选 |\n\n### S级船员（强力推荐）\n\n| 船员 | 定位 | 属性 | 推荐理由 |\n|------|------|------|----------|\n| 艾丝 | 副C | AGI | 速度与暴击优秀，追加攻击机制 |\n| 船长（木偶） | 生存 | CON | 高生存能力，嘲讽保护队友 |\n\n### A级船员（可用选择）\n\n- 各属性紫券输出船员\n- 功能性辅助（控制/治疗）\n\n### B级船员（过渡使用）\n\n- 早期过渡船员，资源富余后再培养\n\n## 黑券 vs 紫券选择建议\n\n官方明确黑券与紫券战力平等。选择时优先考虑：\n1. 队伍缺什么定位就选什么\n2. 黑券的追击/追加机制更强\n3. 紫券的基础面板也很扎实",
+    "contentEn": "## Tier List Criteria\n\nCrew members are evaluated on:\n- Damage output (DPS)\n- Support capability (buffs/debuffs/control)\n- Survival (healing/shielding/DMG reduction)\n- Versatility (team compatibility)\n- Investment cost (constellation dependency)\n\n### SS Tier (Top Recommendations)\n\n| Crew | Role | Attribute | Reason |\n|------|------|-----------|--------|\n| Princess | Support | CHA | Powerful team buffs, fits all teams |\n| Little Axe | Main DPS | STR | Highest early physical DPS, best for progression |\n\n### S Tier (Strong Picks)\n\n| Crew | Role | Attribute | Reason |\n|------|------|-----------|--------|\n| Ais | Sub-DPS | AGI | Excellent speed and crit, follow-up attack mechanic |\n| Captain (Puppet) | Survival | CON | High survivability, taunts to protect allies |\n\n### A Tier (Viable Choices)\n\n- Purple Ticket DPS of various attributes\n- Utility supports (control/healing)\n\n### B Tier (Transitional)\n\n- Early-game crew, invest only with surplus resources\n\n## Black Ticket vs Purple Ticket\n\nDevelopers confirmed both rarities are equal in power. Choose based on:\n1. What role your team needs\n2. Black Ticket has stronger follow-up mechanics\n3. Purple Ticket has solid base stats",
+    "tags": ["Tier", "节奏榜", "排行", "Ranking", "Tier List", "强度"],
+    "faq": [
+      {
+        "question": "Who is the best character in Sea of Remnants?",
+        "questionZh": "遗忘之海最强角色是谁？",
+        "answer": "The Princess (support) and Little Axe (DPS) are currently SS-tier. For beginners, Little Axe is the top pick from the beginner banner.",
+        "answerZh": "王女（辅助）和小斧头（输出）目前为SS级。新手推荐从小斧头开始。"
+      },
+      {
+        "question": "Should I pull for Black Ticket characters?",
+        "questionZh": "应该抽黑券角色吗？",
+        "answer": "Black Ticket characters have unique follow-up mechanics but are equal in raw power to Purple Ticket. Pull based on team composition needs.",
+        "answerZh": "黑券角色有独特的追击机制，但基础战力与紫券相等。根据队伍需求抽取。"
+      }
+    ]
+  },
+  {
+    "id": "combat-system-guide",
+    "title": "《遗忘之海》战斗系统详解 — 回合制与海战机制",
+    "titleEn": "Sea of Remnants Combat System Guide — Turn-Based & Naval Battles",
+    "category": "combat",
+    "categoryZh": "战斗",
+    "categoryEn": "Combat",
+    "summary": "详解遗忘之海双战斗系统：陆地回合制策略战斗的速度/行动序列、属性克制、追击机制，以及实时海战的操控与炮击。",
+    "summaryEn": "Complete guide to Sea of Remnants dual combat systems: turn-based land combat (speed, action order, attribute advantage, follow-up attacks) and real-time naval battles.",
+    "content": "## 陆地战斗：回合制策略\n\n### 行动序列与速度\n\n战斗中每位船员的速度决定行动顺序。速度越高越先出手。\n\n- 速度公式：基础速度 + 装备加成 + 技能加速\n- 部分技能可以推迟敌人行动或加速己方\n\n### 属性克制\n\n船员的6大属性之间存在克制关系：\n- 力量 > 体质 > 敏捷 > 力量（三角克制）\n- 智力 > 感知 > 魅力 > 智力（三角克制）\n\n克制时造成额外伤害，被克制时伤害降低。\n\n### 追击/追加攻击\n\n部分黑券船员拥有追击机制：\n- 满足特定条件时追加一次攻击\n- 不消耗行动回合\n- 是黑券角色的核心优势\n\n### 技能类型\n\n1. **普攻** — 无消耗，基础伤害\n2. **战技** — 消耗技能点，核心输出\n3. **终结技** — 消耗能量条，大招\n4. **被动** — 自动触发效果\n\n## 海战系统\n\n### 基本操作\n\n- **操控**：实时操控船只移动方向\n- **炮击**：选择弹药类型攻击敌舰\n- **闪避**：规避敌方炮弹\n\n### 弹药类型\n\n1. **普通炮弹** — 基础伤害\n2. **燃烧弹** — 持续火焰伤害\n3. **链弹** — 减速敌舰\n4. **特殊弹药** — 任务/活动获取\n\n### 海战奖励\n\n击败敌舰可获得：航海物资、装备、金币。",
+    "contentEn": "## Land Combat: Turn-Based Strategy\n\n### Action Sequence & Speed\n\nEach crew member's speed determines turn order. Higher speed acts first.\n\n- Speed formula: Base speed + equipment bonus + skill acceleration\n- Some skills can delay enemy actions or speed up allies\n\n### Attribute Advantage\n\nThe 6 attributes form two triangles of advantage:\n- STR > CON > AGI > STR\n- INT > PER > CHA > INT\n\nAttacking with advantage deals bonus damage; disadvantage reduces damage.\n\n### Follow-Up Attacks\n\nSome Black Ticket crew members have follow-up mechanics:\n- Extra attack when conditions are met\n- Does not consume a turn\n- Core advantage of Black Ticket characters\n\n### Skill Types\n\n1. **Basic Attack** — Free, base damage\n2. **Combat Skill** — Costs skill points, core DPS\n3. **Ultimate** — Costs energy gauge, big effect\n4. **Passive** — Auto-triggered effects\n\n## Naval Combat\n\n### Basic Controls\n\n- **Steering**: Real-time ship movement\n- **Cannon Fire**: Select ammo type to attack\n- **Dodge**: Evade enemy fire\n\n### Ammo Types\n\n1. **Standard Shells** — Base damage\n2. **Incendiary** — Ongoing fire damage\n3. **Chain Shot** — Slows enemy ships\n4. **Special Ammo** — Quest/event exclusive\n\n### Naval Rewards\n\nDefeating enemy ships yields: sailing materials, equipment, gold.",
+    "tags": ["战斗", "回合制", "海战", "Combat", "Turn-based", "Naval", "属性克制"],
+    "faq": [
+      {
+        "question": "How does speed work in Sea of Remnants combat?",
+        "questionZh": "遗忘之海速度机制是怎样的？",
+        "answer": "Speed determines turn order. Higher speed acts first. Some skills can manipulate action order by speeding up allies or delaying enemies.",
+        "answerZh": "速度决定行动顺序，速度越高越先出手。部分技能可以加速己方或推迟敌方行动。"
+      },
+      {
+        "question": "Are follow-up attacks important?",
+        "questionZh": "追击攻击重要吗？",
+        "answer": "Follow-up attacks are the core advantage of Black Ticket crew. They deal extra damage without consuming a turn, making them very valuable.",
+        "answerZh": "追击是黑券船员的核心优势，不消耗回合即可造成额外伤害，非常有价值。"
+      }
+    ]
+  },
+  {
+    "id": "team-building-guide",
+    "title": "《遗忘之海》船队编组指南 — 最佳阵容搭配",
+    "titleEn": "Sea of Remnants Team Building Guide — Best Fleet Compositions",
+    "category": "team",
+    "categoryZh": "阵容",
+    "categoryEn": "Team",
+    "summary": "遗忘之海船队搭配攻略：主C+辅助+生存铁三角阵容、属性克制队、追击连锁队，以及不同场景的阵容调整建议。",
+    "summaryEn": "Sea of Remnants fleet composition guide: DPS+Support+Survival core trio, attribute advantage teams, follow-up chain teams, and scenario-specific adjustments.",
+    "content": "## 阵伍编组基础\n\n标准船队由3名船员组成甲板小队，建议遵循铁三角原则：\n\n1. **主C（输出核心）** — 负责主要伤害输出\n2. **辅助（增益/控制）** — 提升主C伤害或限制敌人\n3. **生存（治疗/护盾）** — 保证队伍续航\n\n## 推荐阵容搭配\n\n### 1. 物理追击队\n\n| 位置 | 船员 | 作用 |\n|------|------|------|\n| 主C | 小斧头 | 高物理伤害，追击触发 |\n| 辅助 | 王女 | 全队攻击力增益 |\n| 生存 | 船长 | 嘲讽+减伤 |\n\n**思路**：王女提供攻击力增益，小斧头触发追击快速清怪，船长吸引仇恨保护。\n\n### 2. 敏捷暴击队\n\n| 位置 | 船员 | 作用 |\n|------|------|------|\n| 主C | 艾丝 | 速度+暴击输出 |\n| 辅助 | 感知系辅助 | 命中+减防 |\n| 生存 | 治疗系船员 | 持续回复 |\n\n**思路**：利用速度优势先手攻击，暴击快速削减敌人血量。\n\n### 3. 属性克制队\n\n根据敌人属性选择克制船员：\n- 面对力量系敌人 → 选敏捷系\n- 面对体质系敌人 → 选力量系\n- 面对敏捷系敌人 → 选体质系\n\n## 不同场景阵容调整\n\n### 主线推图\n- 以快速清怪为目标\n- 优先AOE输出船员\n- 携带1名治疗保证续航\n\n### Boss战\n- 单体输出为主\n- 携带减防/减抗辅助\n- 保证生存位质量\n\n### 海战\n- 海战不使用船员技能\n- 依赖船只装备和弹药类型\n- 提升船只等级和炮击伤害",
+    "contentEn": "## Team Building Basics\n\nA standard fleet consists of 3 crew members in a deck squad. Follow the core trio principle:\n\n1. **Main DPS** — Primary damage dealer\n2. **Support** — Buffs main DPS or controls enemies\n3. **Survival** — Heals or shields for sustain\n\n## Recommended Compositions\n\n### 1. Physical Follow-Up Team\n\n| Position | Crew | Role |\n|----------|------|------|\n| DPS | Little Axe | High physical damage, follow-up triggers |\n| Support | Princess | Team ATK buff |\n| Survival | Captain | Taunt + DMG reduction |\n\n**Strategy**: Princess buffs ATK, Little Axe chains follow-ups for quick clears, Captain protects.\n\n### 2. Agility Crit Team\n\n| Position | Crew | Role |\n|----------|------|------|\n| DPS | Ais | Speed + crit output |\n| Support | PER support | Hit rate + DEF down |\n| Survival | Healer | Sustain |\n\n**Strategy**: Use speed advantage to act first, crit to quickly reduce enemy HP.\n\n### 3. Attribute Counter Team\n\nSelect crew that counters the enemy's attribute:\n- STR enemies → Use AGI crew\n- CON enemies → Use STR crew\n- AGI enemies → Use CON crew\n\n## Scenario Adjustments\n\n### Main Story\n- Focus on fast mob clearing\n- Prioritize AoE DPS\n- Bring 1 healer for sustain\n\n### Boss Fights\n- Single-target DPS focus\n- Bring DEF/resistance down supports\n- Ensure survival quality\n\n### Naval Battles\n- Crew skills are not used in naval combat\n- Depends on ship equipment and ammo types\n- Upgrade ship level and cannon damage",
+    "tags": ["阵容", "搭配", "队伍", "Team", "Fleet", "Composition", "搭配"],
+    "faq": [
+      {
+        "question": "What is the best team composition in Sea of Remnants?",
+        "questionZh": "遗忘之海最佳阵容是什么？",
+        "answer": "The standard DPS + Support + Survival trio works best. Little Axe + Princess + Captain is the most recommended beginner team.",
+        "answerZh": "标准的输出+辅助+生存铁三角最稳定。推荐新手使用小斧头+王女+船长。"
+      },
+      {
+        "question": "How many crew members are in a team?",
+        "questionZh": "一个队伍有几个船员？",
+        "answer": "A standard deck squad has 3 crew members. You can also have reserve crew on your ship for naval combat.",
+        "answerZh": "标准甲板小队由3名船员组成。船上还可以有预备船员用于海战。"
+      }
+    ]
+  },
+  {
+    "id": "gacha-recruitment-guide",
+    "title": "《遗忘之海》招募系统指南 — 抽卡保底与船员获取",
+    "titleEn": "Sea of Remnants Gacha & Recruitment Guide — Pity System & Crew Acquisition",
+    "category": "system",
+    "categoryZh": "系统",
+    "categoryEn": "System",
+    "summary": "遗忘之海招募（抽卡）系统详解：票券类型、保底机制、新手池策略、限定池推荐，以及零氪/微氪的招募规划。",
+    "summaryEn": "Complete guide to Sea of Remnants recruitment (gacha) system: ticket types, pity mechanics, beginner banner strategy, limited banner recommendations, and F2P/low-spender planning.",
+    "content": "## 招募系统概览\n\n### 票券类型\n\n1. **羽毛票据** — 标准招募券，可通过主线/活动/商店获取\n2. **航海勋章** — 限定招募券，主要通过充值获取\n\n### 卡池类型\n\n1. **新手池** — 40抽保底黑券船员，仅限前50抽\n2. **限定池** — 80抽保底当期限定黑券船员\n3. **常驻池** — 80抽保底黑券船员\n\n### 保底机制\n\n- **小保底**：80抽必定获得黑券船员\n- **大保底**：若上一次黑券为非限定，下一次必定为限定（限定池）\n- **新手池独立**：50抽后新手池关闭\n\n## 招募策略\n\n### 零氪玩家\n\n1. 新手池40抽 → 拿到首个黑券船员\n2. 羽毛票据全部投入常驻池\n3. 攒航海勋章等限定池强力辅助\n4. 优先抽辅助 > 输出（输出可用紫券替代）\n\n### 微氪玩家\n\n1. 购买月卡（日常票据来源）\n2. 性价比最高的礼包\n3. 集中资源抽1-2个核心限定\n\n### 新手池选择推荐\n\n| 优先级 | 船员 | 理由 |\n|--------|------|------|\n| 1 | 小斧头 | 前期最强物理输出 |\n| 2 | 王女 | 顶级辅助，全队增益 |\n| 3 | 船长 | 高生存，保护队友 |",
+    "contentEn": "## Recruitment System Overview\n\n### Ticket Types\n\n1. **Feather Tickets** — Standard recruitment tickets from story/events/shop\n2. **Voyager Medals** — Limited recruitment currency, primarily from purchases\n\n### Banner Types\n\n1. **Beginner Banner** — 40-pull pity for Black Ticket crew, limited to first 50 pulls\n2. **Limited Banner** — 80-pull pity for featured Black Ticket crew\n3. **Standard Banner** — 80-pull pity for Black Ticket crew\n\n### Pity System\n\n- **Soft Pity**: 80 pulls guarantee a Black Ticket crew member\n- **Hard Pity (Limited)**: If last Black Ticket was not the featured one, next is guaranteed\n- **Beginner Banner**: Closes after 50 pulls\n\n## Recruitment Strategy\n\n### F2P Players\n\n1. Beginner banner 40 pulls → Get first Black Ticket crew\n2. Spend all Feather Tickets on Standard Banner\n3. Save Voyager Medals for limited support characters\n4. Prioritize supports > DPS (DPS can be replaced by Purple Ticket)\n\n### Low Spenders\n\n1. Buy monthly pass (daily ticket source)\n2. Best value gift packs\n3. Focus resources on 1-2 core limited characters\n\n### Beginner Banner Recommendations\n\n| Priority | Crew | Reason |\n|----------|------|--------|\n| 1 | Little Axe | Best early physical DPS |\n| 2 | Princess | Top support, team-wide buffs |\n| 3 | Captain | High survival, protects allies |",
+    "tags": ["抽卡", "招募", "保底", "Gacha", "Recruitment", "Pity", "零氪"],
+    "faq": [
+      {
+        "question": "What is the pity system in Sea of Remnants?",
+        "questionZh": "遗忘之海的保底机制是怎样的？",
+        "answer": "Standard and limited banners have 80-pull pity for Black Ticket crew. Beginner banner has 40-pull pity and is limited to 50 pulls total.",
+        "answerZh": "常驻池和限定池80抽保底黑券船员。新手池40抽保底，总计限抽50次。"
+      },
+      {
+        "question": "Should I spend on the limited banner as F2P?",
+        "questionZh": "零氪应该抽限定池吗？",
+        "answer": "Save for limited support characters that can't be replaced by Purple Ticket alternatives. DPS can often be substituted.",
+        "answerZh": "建议攒资源抽限定辅助角色，输出位通常可用紫券替代。"
+      }
+    ]
+  },
+  {
+    "id": "progression-guide",
+    "title": "《遗忘之海》养成系统指南 — 船员升级与船只强化",
+    "titleEn": "Sea of Remnants Progression Guide — Crew Leveling & Ship Upgrades",
+    "category": "progression",
+    "categoryZh": "养成",
+    "categoryEn": "Progression",
+    "summary": "遗忘之海船员养成路线：等级提升、技能升级、装备搭配、船只升级优先级，以及前期资源分配建议。",
+    "summaryEn": "Sea of Remnants crew progression roadmap: leveling, skill upgrades, equipment, ship upgrade priorities, and early-game resource allocation tips.",
+    "content": "## 船员养成\n\n### 等级提升\n\n- **经验来源**：战斗经验、经验书（日常副本/活动）\n- **等级上限**：受船员星级限制\n- **突破**：每20级需要突破材料\n\n### 技能升级\n\n- 优先升级主C的战技和终结技\n- 辅助优先升级增益技能\n- 生存优先升级治疗/护盾技能\n\n### 装备系统\n\n- 每名船员可装备：武器 + 防具 + 饰品\n- 装备有主词条和副词条\n- 优先选择符合船员主属性的装备\n\n## 船只升级\n\n### 升级优先级\n\n1. **船体等级** — 提升基础属性（最优先）\n2. **主炮强化** — 提升海战伤害\n3. **船帆升级** — 提升航速\n4. **装甲升级** — 提升防御\n\n### 奥托皮亚城镇建设\n\n- 优先升级资源产出建筑（农场/矿场）\n- 其次升级船坞（解锁船只强化功能）\n- 最后升级民居（增加人口上限）\n\n## 资源分配优先级\n\n1. 主C等级 > 技能 > 装备\n2. 辅助等级 > 增益技能\n3. 船只等级 > 主炮\n4. 城镇资源建筑",
+    "contentEn": "## Crew Progression\n\n### Leveling\n\n- **EXP Sources**: Combat, EXP books (daily dungeons/events)\n- **Level Cap**: Determined by crew star level\n- **Breakthrough**: Required every 20 levels\n\n### Skill Upgrades\n\n- Prioritize main DPS combat skill and ultimate\n- Supports: prioritize buff skills\n- Survival: prioritize heal/shield skills\n\n### Equipment\n\n- Each crew equips: Weapon + Armor + Accessory\n- Equipment has main stat and substats\n- Choose equipment matching the crew's primary attribute\n\n## Ship Upgrades\n\n### Priority\n\n1. **Hull Level** — Base stats (highest priority)\n2. **Main Cannon** — Naval combat damage\n3. **Sails** — Sailing speed\n4. **Armor** — Defense\n\n### Orbtopia Town Development\n\n- Prioritize resource buildings (farm/mine)\n- Then shipyard (unlocks ship upgrades)\n- Last: housing (population cap)\n\n## Resource Allocation Priority\n\n1. Main DPS level > Skills > Equipment\n2. Support level > Buff skills\n3. Ship level > Main cannon\n4. Town resource buildings",
+    "tags": ["养成", "升级", "船只", "Progression", "Leveling", "Ship", "装备"],
+    "faq": [
+      {
+        "question": "What should I upgrade first in Sea of Remnants?",
+        "questionZh": "遗忘之海先升级什么？",
+        "answer": "Prioritize your main DPS crew level and skills first, then ship hull level, then Orbtopia resource buildings.",
+        "answerZh": "优先提升主C船员等级和技能，然后是船体等级，最后是奥托皮亚资源建筑。"
+      },
+      {
+        "question": "How do I get EXP books?",
+        "questionZh": "经验书怎么获取？",
+        "answer": "EXP books are obtained from daily dungeons, events, and the Orbtopia shop. Always spend your daily stamina on EXP dungeons.",
+        "answerZh": "经验书可通过日常副本、活动和奥托皮亚商店获取。建议每天用体力刷经验副本。"
+      }
+    ]
+  },
+  {
+    "id": "farming-guide",
+    "title": "《遗忘之海》资源刷取指南 — 日常副本与材料规划",
+    "titleEn": "Sea of Remnants Farming Guide — Daily Dungeons & Material Planning",
+    "category": "farming",
+    "categoryZh": "刷取",
+    "categoryEn": "Farming",
+    "summary": "遗忘之海每日/每周资源刷取路线：经验副本、突破材料、装备材料、金币副本，以及体力分配策略。",
+    "summaryEn": "Sea of Remnants daily/weekly resource farming routes: EXP dungeons, breakthrough materials, equipment materials, gold dungeons, and stamina allocation strategy.",
+    "content": "## 日常必做\n\n### 每日任务\n\n1. **日常委托** — 完成所有日常任务获取票据和金币\n2. **体力消耗** — 每日体力不要溢出\n3. **商店刷新** — 查看每日商店折扣商品\n\n### 每周必刷\n\n1. **周常Boss** — 掉落高级突破材料\n2. **活动副本** — 限定活动期间优先刷\n3. **商店周限购** — 每周限购材料\n\n## 副本类型\n\n| 副本 | 掉落 | 建议次数 |\n|------|------|----------|\n| 经验副本 | 经验书 | 每天3-4次 |\n| 突破副本 | 突破材料 | 按需刷 |\n| 装备副本 | 装备+强化材料 | 每天2-3次 |\n| 金币副本 | 金币 | 每天1-2次 |\n\n## 体力分配策略\n\n### 前期（1-30级）\n- 70% 经验副本（快速提升等级）\n- 20% 突破材料（跟上等级需求）\n- 10% 金币（基础开销）\n\n### 中期（30-50级）\n- 40% 装备副本（提升战力）\n- 30% 突破材料\n- 20% 经验副本\n- 10% 金币副本\n\n### 后期（50+级）\n- 50% 装备副本（精炼副词条）\n- 30% 周常Boss材料\n- 20% 金币副本\n\n## 金币管理\n\n- 前期不要在商店大量购买材料\n- 优先投资城镇升级（长期回报）\n- 金币副本每天至少1次",
+    "contentEn": "## Daily Routine\n\n### Daily Tasks\n\n1. **Daily Commissions** — Complete all for tickets and gold\n2. **Stamina** — Never let stamina cap\n3. **Shop Refresh** — Check daily shop discounts\n\n### Weekly\n\n1. **Weekly Boss** — Drops advanced breakthrough materials\n2. **Event Dungeons** — Priority during limited events\n3. **Weekly Shop** — Purchase weekly-limited materials\n\n## Dungeon Types\n\n| Dungeon | Drops | Recommended |\n|---------|-------|-------------|\n| EXP Dungeon | EXP books | 3-4/day |\n| Breakthrough | Breakthrough materials | As needed |\n| Equipment | Gear + upgrade materials | 2-3/day |\n| Gold | Gold | 1-2/day |\n\n## Stamina Allocation\n\n### Early Game (Lv 1-30)\n- 70% EXP Dungeon (fast leveling)\n- 20% Breakthrough (keep up with level)\n- 10% Gold (basic expenses)\n\n### Mid Game (Lv 30-50)\n- 40% Equipment (boost combat power)\n- 30% Breakthrough\n- 20% EXP\n- 10% Gold\n\n### Late Game (Lv 50+)\n- 50% Equipment (refine substats)\n- 30% Weekly Boss materials\n- 20% Gold\n\n## Gold Management\n\n- Don't bulk-buy materials from shop early\n- Prioritize town upgrades (long-term ROI)\n- Gold dungeon at least 1x daily",
+    "tags": ["刷取", "资源", "体力", "Farming", "Resources", "Stamina", "日常"],
+    "faq": [
+      {
+        "question": "What is the best way to spend stamina in Sea of Remnants?",
+        "questionZh": "遗忘之海体力怎么用最划算？",
+        "answer": "Early game: focus 70% on EXP dungeons. Mid game: shift to equipment dungeons. Late game: prioritize equipment refinement and weekly boss materials.",
+        "answerZh": "前期70%用于经验副本。中期转向装备副本。后期优先精炼装备和周常Boss材料。"
+      },
+      {
+        "question": "How do I get more Feather Tickets?",
+        "questionZh": "怎么获取更多羽毛票据？",
+        "answer": "Complete daily commissions, events, main story chapters, and check the Orbtopia shop for ticket exchanges.",
+        "answerZh": "完成日常委托、活动、主线章节，以及奥托皮亚商店的票据兑换。"
+      }
+    ]
   }
 ]
