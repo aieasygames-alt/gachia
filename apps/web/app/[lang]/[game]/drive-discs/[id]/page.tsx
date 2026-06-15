@@ -41,9 +41,17 @@ export async function generateMetadata({
   }
   languages['x-default'] = `${BASE_URL}/zh/zzz/drive-discs/${id}`;
 
+  const desc4pc = getZzzDriveDiscDesc4pc(disc, locale);
+  const bestForNames = disc.bestFor.slice(0, 3).map(cid => {
+    const c = getZzzCharacterById(cid);
+    return c ? getZzzCharacterName(c, locale) : null;
+  }).filter(Boolean).join(', ');
+
   return {
-    title: `${name} - ${gameName} Wiki`,
-    description: desc ? `${name}: ${desc}`.slice(0, 160) : `${name} - ${gameName}${locale === 'zh' ? '驱动盘数据' : locale === 'ja' ? 'ドライブディスクデータ' : ' drive disc stats'}`,
+    title: `${name} — ${gameName} Drive Disc: 2pc & 4pc Set Bonus${bestForNames ? `, Best for ${bestForNames}` : ''}`,
+    description: locale === 'zh'
+      ? `${name}驱动盘：2件套${desc}；4件套${desc4pc}。${bestForNames ? `推荐角色：${bestForNames}。` : ''}查看全部属性与搭配建议。`.slice(0, 160)
+      : `${name} ZZZ drive disc: 2pc — ${desc}. 4pc — ${desc4pc}.${bestForNames ? ` Best for ${bestForNames}.` : ''} Full stats and build guide.`.slice(0, 160),
     alternates: { canonical: `${BASE_URL}/${locale}/zzz/drive-discs/${id}`, languages },
   };
 }
