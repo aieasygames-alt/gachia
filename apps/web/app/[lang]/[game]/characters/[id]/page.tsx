@@ -417,11 +417,11 @@ export async function generateMetadata({
     const elName = ZZZ_ELEMENT_NAMES[char.attribute]?.[locale] ?? char.attribute;
     const specName = ZZZ_SPECIALTY_LABELS[char.specialtyEn]?.[locale] ?? char.specialtyEn;
     const title = locale === 'zh'
-      ? `${name}配装攻略 — ${elName}${specName}最佳音擎、驱动盘、配队`
-      : `${name} Build Guide — ${elName} ${specName} Best W-Engines, Discs & Teams | ZZZ`;
+      ? `${name}最佳配装 — 音擎、驱动盘、配队推荐（${char.tierRank}级）`
+      : `${name} Best Build — W-Engines, Drive Discs & Teams (${char.tierRank} Tier)`;
     const desc = locale === 'zh'
-      ? `${name}配装攻略：推荐音擎、驱动盘套装、配队组合，${char.tierRank} Tier`
-      : `${name} build guide for Zenless Zone Zero: best W-Engines, drive disc sets, team comps. ${char.tierRank} tier.`;
+      ? `${name}（${elName}${specName}）配装攻略：推荐音擎、驱动盘套装、主副词条、配队组合。${char.tierRank}级角色全面解析。`
+      : `${name} ${elName} ${specName} best build: recommended W-Engines, drive disc sets, main stats, and team comps. ${char.tierRank} tier ZZZ agent.`;
     return { title, description: desc.slice(0, 160), openGraph: buildOg(name), alternates: buildAlternates(id) };
   }
 

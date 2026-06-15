@@ -188,7 +188,7 @@
   {
     "id": "beginner-tips",
     "title": "新手必看技巧",
-    "titleEn": "Essential Tips for New Players",
+    "titleEn": "WuWa Beginner Tips — 15 Things to Know Before You Start",
     "category": "beginner",
     "categoryZh": "新手入门",
     "categoryEn": "Beginner",
@@ -262,7 +262,7 @@
   {
     "id": "echo-advanced-guide",
     "title": "声骸进阶攻略：词条与套装搭配",
-    "titleEn": "Advanced Echo Guide: Stats & Set Combinations",
+    "titleEn": "WuWa Echo Guide — Best Stats, Sets & Cost Optimization",
     "category": "echo",
     "categoryZh": "声骸攻略",
     "categoryEn": "Echo",
@@ -382,7 +382,7 @@
   {
     "id": "tuning-system-guide",
     "title": "调律与共鸣链系统指南",
-    "titleEn": "Tuning & Resonance Chain System Guide",
+    "titleEn": "WuWa Tuning & Resonance Chain System Explained",
     "category": "system",
     "categoryZh": "系统攻略",
     "categoryEn": "System",
