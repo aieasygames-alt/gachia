@@ -586,13 +586,14 @@ function GenshinCharacterDetail({ char, locale }: { char: GenshinCharacter; loca
   const charName = getGenshinCharacterName(char, locale);
 
   const build = char.recommendedBuild;
-  const buildArtifactSet = genshinArtifactSets.find(s => s.id === build.bestArtifactSet);
+  const hasBuild = !!(build && (build as unknown as Record<string, unknown>).bestWeaponEn);
+  const buildArtifactSet = hasBuild ? genshinArtifactSets.find(s => s.id === build.bestArtifactSet) : undefined;
 
   // Resolve build items for linking
-  const buildWeapon = genshinWeapons.find(w => w.nameEn.toLowerCase() === build.bestWeaponEn.toLowerCase());
-  const buildArtifact = genshinArtifactSets.find(s => s.nameEn.toLowerCase() === build.bestArtifactSetEn.toLowerCase());
-  const altArtifact = build.alternativeArtifactSetEn ? genshinArtifactSets.find(s => s.nameEn.toLowerCase() === build.alternativeArtifactSetEn!.toLowerCase()) : null;
-  const altWeapons = build.alternativeWeapons.map(aw => genshinWeapons.find(w => w.nameEn.toLowerCase() === aw.toLowerCase() || w.name === aw)).filter(Boolean);
+  const buildWeapon = hasBuild ? genshinWeapons.find(w => w.nameEn.toLowerCase() === build.bestWeaponEn.toLowerCase()) : undefined;
+  const buildArtifact = hasBuild ? genshinArtifactSets.find(s => s.nameEn.toLowerCase() === build.bestArtifactSetEn.toLowerCase()) : undefined;
+  const altArtifact = hasBuild && build.alternativeArtifactSetEn ? genshinArtifactSets.find(s => s.nameEn.toLowerCase() === build.alternativeArtifactSetEn!.toLowerCase()) : null;
+  const altWeapons = hasBuild ? (build.alternativeWeapons ?? []).map(aw => genshinWeapons.find(w => w.nameEn.toLowerCase() === aw.toLowerCase() || w.name === aw)).filter(Boolean) : [];
 
   // JSON-LD structured data
   const jsonLd = {
@@ -746,6 +747,7 @@ function GenshinCharacterDetail({ char, locale }: { char: GenshinCharacter; loca
       )}
 
       {/* Recommended Build */}
+      {hasBuild && (
       <Section title={locale === 'zh' ? '推荐配装' : locale === 'ja' ? 'おすすめビルド' : 'Recommended Build'}>
         <div className="space-y-2 text-sm">
           <BuildRowLink label={locale === 'zh' ? '最佳武器' : 'Best Weapon'}
@@ -769,6 +771,7 @@ function GenshinCharacterDetail({ char, locale }: { char: GenshinCharacter; loca
           <BuildRow label={locale === 'zh' ? '副属性优先' : 'Sub Stats'} value={(locale === 'zh' ? build.subStatPriority : build.subStatPriorityEn).join(' > ')} />
         </div>
       </Section>
+      )}
 
       {/* Team Compositions */}
       {char.teamComps.length > 0 && (
@@ -898,7 +901,7 @@ function GenshinCharacterDetail({ char, locale }: { char: GenshinCharacter; loca
       )}
 
       {/* Related Characters */}
-      {char.relatedCharacters.length > 0 && (
+      {char.relatedCharacters?.length > 0 && (
         <Section title={locale === 'zh' ? '相关角色' : locale === 'ja' ? '関連キャラ' : 'Related Characters'}>
           <div className="flex flex-wrap gap-2">
             {char.relatedCharacters.map((relId) => {
@@ -936,8 +939,9 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
   const pathLabel = STARRAIL_PATH_LABELS[char.path]?.[locale] ?? char.path;
   const charName = getStarRailCharacterName(char, locale);
   const build = char.recommendedBuild;
-  const buildLC = starrailLightCones.find(lc => lc.nameEn.toLowerCase() === build.bestLightConeEn.toLowerCase() || lc.name === build.bestLightCone);
-  const buildRelic = starrailRelicSets.find(rs => rs.nameEn.toLowerCase() === build.bestRelicSetEn.toLowerCase() || rs.name === build.bestRelicSet);
+  const hasBuild = !!(build && (build as unknown as Record<string, unknown>).bestLightConeEn);
+  const buildLC = hasBuild ? starrailLightCones.find(lc => lc.nameEn.toLowerCase() === build.bestLightConeEn.toLowerCase() || lc.name === build.bestLightCone) : undefined;
+  const buildRelic = hasBuild ? starrailRelicSets.find(rs => rs.nameEn.toLowerCase() === build.bestRelicSetEn.toLowerCase() || rs.name === build.bestRelicSet) : undefined;
 
   // JSON-LD structured data
   const jsonLd = {
@@ -1079,7 +1083,7 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
       )}
 
       {/* Recommended Build */}
-      {build && (
+      {hasBuild && (
         <section>
           <h2 className="mb-4 text-xl font-semibold" style={{ color: gameConfig.theme.primary }}>
             {locale === 'zh' ? '推荐配装' : locale === 'ja' ? 'おすすめ装備' : 'Recommended Build'}
@@ -1180,7 +1184,7 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
       )}
 
       {/* Related Characters */}
-      {char.relatedCharacters.length > 0 && (
+      {char.relatedCharacters?.length > 0 && (
         <section>
           <h2 className="mb-4 text-xl font-semibold" style={{ color: gameConfig.theme.primary }}>
             {locale === 'zh' ? '相关角色' : locale === 'ja' ? '関連キャラ' : 'Related Characters'}
@@ -1365,7 +1369,7 @@ function NteCharacterDetail({ char, locale }: { char: NteCharacter; locale: Supp
         </Section>
       )}
 
-      {char.relatedCharacters.length > 0 && (
+      {char.relatedCharacters?.length > 0 && (
         <Section title={locale === 'zh' ? '相关角色' : locale === 'ja' ? '関連キャラ' : 'Related Characters'}>
           <div className="flex flex-wrap gap-2">
             {char.relatedCharacters.map((relId) => { const rel = getNteCharacterById(relId); return rel ? (<Link key={relId} href={`/nte/characters/${relId}` as '/'} className="rounded-lg border border-game-border bg-game-surface px-3 py-2 text-sm font-medium text-game-text hover:border-game-primary hover:text-game-primary">{getNteCharacterName(rel, locale)}</Link>) : null; })}
@@ -1835,7 +1839,7 @@ function ZzzCharacterDetail({ char, locale }: { char: ZzzCharacter; locale: Supp
       )}
 
       {/* Related Characters */}
-      {char.relatedCharacters.length > 0 && (
+      {char.relatedCharacters?.length > 0 && (
         <Section title={locale === 'zh' ? '相关角色' : locale === 'ja' ? '関連キャラ' : 'Related Characters'}>
           <div className="flex flex-wrap gap-2">
             {char.relatedCharacters.map((relId) => {
@@ -2050,7 +2054,7 @@ function GuihuanCharacterDetail({ char, locale }: { char: GuihuanCharacter; loca
       )}
 
       {/* Related Characters */}
-      {char.relatedCharacters.length > 0 && (
+      {char.relatedCharacters?.length > 0 && (
         <Section title={locale === 'zh' ? '相关角色' : locale === 'ja' ? '関連キャラ' : 'Related Characters'}>
           <div className="flex flex-wrap gap-2">
             {char.relatedCharacters.map((relId) => {
@@ -2279,7 +2283,7 @@ function AnantaCharacterDetail({ char, locale }: { char: AnantaCharacter; locale
       )}
 
       {/* Related Characters */}
-      {char.relatedCharacters.length > 0 && (
+      {char.relatedCharacters?.length > 0 && (
         <Section title={locale === 'zh' ? '相关角色' : locale === 'ja' ? '関連キャラ' : 'Related Characters'}>
           <div className="flex flex-wrap gap-2">
             {char.relatedCharacters.map((relId) => {
@@ -2669,7 +2673,7 @@ function EndfieldCharacterDetail({ char, locale }: { char: EndfieldCharacter; lo
       )}
 
       {/* Related Characters */}
-      {char.relatedCharacters.length > 0 && (
+      {char.relatedCharacters?.length > 0 && (
         <Section title={locale === 'zh' ? '相关角色' : locale === 'ja' ? '関連キャラ' : 'Related Characters'}>
           <div className="flex flex-wrap gap-2">
             {char.relatedCharacters.map((relId) => {
