@@ -6,9 +6,9 @@
     "category": "beginner",
     "categoryZh": "新手指南",
     "categoryEn": "Beginner",
-    "summary": "从零开始了解《无限大》的世界观、战斗系统、异能养成和新都市探索技巧，帮助新触发者快速上手。",
+    "summary": "《无限大》新手入门指南：对策局队长系统、异能者搭配、新都市探索、最新玩法预告（团队重建系统）。从零开始了解《无限大》的世界观、战斗系统、异能养成和新都市探索技巧，帮助新触发者快速上手。",
     "summaryEn": "Learn everything about Ananta's world, combat system, Esper raising, and Nova City exploration tips from scratch.",
-    "content": "## 欢迎，触发者\n\n你被选为A.C.D.特遣队的「无限触发者」，进入新都市，对抗不断侵蚀城市的混沌异常。\n\n### 基础操作\n\n- **城市穿越**: 使用跑酷、蛛丝摆荡和载具在新都市中高速移动\n- **4人小队**: 战斗中可随时切换4名异能者，每人拥有独特的异能\n- **异常调查**: 追踪并消灭城市中出现的混沌异常\n\n### 异能流派系统\n\n每个异能者拥有独特的异能类型和战斗风格：\n\n1. **进攻型** — 高伤害输出\n2. **追击型** — 连锁追击\n3. **灵愈型** — 治疗和护盾\n4. **控制型** — 束缚和减益\n5. **增益型** — 团队增益\n\n### 养成优先级\n\n1. 先提升主C角色等级和技能\n2. 获取适配的武器\n3. 完成调查任务获取材料\n4. 最后考虑副C和辅助的养成",
+    "content": "## 欢迎，触发者\n\n你被选为A.C.D.特遣队的「无限触发者」，进入新都市，对抗不断侵蚀城市的混沌异常。\n\n### 基础操作\n\n- **城市穿越**: 使用跑酷、蛛丝摆荡和载具在新都市中高速移动\n- **4人小队**: 战斗中可随时切换4名异能者，每人拥有独特的异能\n- **异常调查**: 追踪并消灭城市中出现的混沌异常\n\n### 异能流派系统\n\n每个异能者拥有独特的异能类型和战斗风格：\n\n1. **进攻型** — 高伤害输出\n2. **追击型** — 连锁追击\n3. **灵愈型** — 治疗和护盾\n4. **控制型** — 束缚和减益\n5. **增益型** — 团队增益\n\n### 养成优先级\n\n1. 先提升主C角色等级和技能\n2. 获取适配的武器\n3. 完成调查任务获取材料\n4. 最后考虑副C和辅助的养成\n\n### 最新玩法预告（2026年6月更新）\n\n#### 对策局系统\n\n- **玩家身份**: 扮演对策局新任队长\n- **核心玩法**: 重建属于你自己的团队，结识各具魅力的成员\n- **团队成员**: 每个成员有独特的性格和战斗能力，部分角色设计独特（奇形怪状的朋友）\n- **策略性**: 根据任务需求搭配不同团队成员\n\n#### 最新情报\n- 官方持续放出玩法预告\n- 巨大娘内容引发社区讨论\n- 社区关注度持续上升\n- 测试/上线时间待官方确认",
     "contentEn": "## Welcome, Trigger\n\nYou've been chosen as the 'Infinite Trigger' of the A.C.D. Task Force, entering Nova City to combat the Chaos anomalies threatening the city.\n\n### Basic Controls\n\n- **Urban Traversal**: Use parkour, web-swinging, and vehicles for high-speed movement across Nova City\n- **4-Person Party**: Switch between 4 Espers freely in combat, each with unique abilities\n- **Anomaly Investigation**: Track and eliminate Chaos anomalies appearing throughout the city\n\n### Esper Style System\n\nEach Esper has a unique ability type and combat style:\n\n1. **Attack** — High damage output\n2. **Follow-up** — Chain attacks\n3. **Support** — Healing and shields\n4. **Control** — Binding and debuffs\n5. **Buffer** — Team buffs\n\n### Progression Priority\n\n1. Level up your main DPS and skills first\n2. Obtain suitable weapons\n3. Complete investigation tasks for materials\n4. Then invest in sub-DPS and supports",
     "tags": [
       "新手",
@@ -253,7 +253,14 @@
     "summaryEn": "Complete Esper building roadmap from zero to endgame, including level, skills, ability upgrades, and gear priorities.",
     "content": "## 异能者养成完全指南\n\n### 一、养成优先级\n\n1. **等级** → 2. **异能觉醒** → 3. **核心技能** → 4. **装备** → 5. **词条优化**\n\n### 二、等级与突破\n\n- 异能者最高等级随账号等级解锁\n- 突破需要「共鸣碎片」（日常副本）+ 属性材料（异象讨伐）\n- 优先将主C升满，辅助次之\n- 突破不仅提升属性，还解锁技能等级上限\n\n### 三、异能觉醒\n\n- 每个异能者有独特的觉醒路线\n- 觉醒材料通过「异象研究」获取\n- **核心觉醒**优先解锁（大幅提升角色机制）\n- 觉醒分3阶段，每阶段有分支选择\n\n### 四、技能升级优先级\n\n**输出异能者**\n1. 异能技（核心输出技能）\n2. 终结技（爆发大招）\n3. 被动技能\n4. 普通攻击\n\n**辅助异能者**\n1. 增益/减益技能\n2. 治疗技能\n3. 被动技能\n4. 普通攻击\n\n### 五、资源规划\n\n| 阶段 | 体力分配 | 重点 |\n|------|----------|------|\n| 前期 | 突破材料70% + 金币30% | 快速提升等级 |\n| 中期 | 觉醒材料50% + 装备50% | 核心机制成型 |\n| 后期 | 装备优化80% + 其他20% | 追求毕业词条 |",
     "contentEn": "## Complete Esper Progression Guide\n\n### 1. Priority Order\n\n1. **Level** → 2. **Ability Awakening** → 3. **Core Skills** → 4. **Equipment** → 5. **Stat Optimization**\n\n### 2. Level & Ascension\n\n- Max Esper level unlocks with account level\n- Ascension needs Resonance Shards (daily dungeons) + attribute materials (Anomaly Hunts)\n- Prioritize maxing your DPS, supports second\n- Ascension boosts stats AND raises skill level caps\n\n### 3. Ability Awakening\n\n- Each Esper has a unique awakening tree\n- Awakening materials from Anomaly Research\n- **Core awakening** first (massively improves mechanics)\n- 3 stages per awakening, each with branching choices\n\n### 4. Skill Upgrade Priority\n\n**DPS Espers**\n1. Ability Skill (core damage)\n2. Ultimate (burst)\n3. Passive\n4. Normal Attack\n\n**Support Espers**\n1. Buff/Debuff skill\n2. Healing skill\n3. Passive\n4. Normal Attack\n\n### 5. Resource Planning\n\n| Phase | Stamina Split | Focus |\n|-------|--------------|-------|\n| Early | Ascension 70% + Gold 30% | Fast leveling |\n| Mid | Awakening 50% + Gear 50% | Core mechanics |\n| Late | Gear optimization 80% + Other 20% | Perfect stats |",
-    "tags": ["养成", "异能者", "规划", "Progression", "Esper", "Building"],
+    "tags": [
+      "养成",
+      "异能者",
+      "规划",
+      "Progression",
+      "Esper",
+      "Building"
+    ],
     "faq": [
       {
         "question": "Which Esper should I max first?",
@@ -286,7 +293,14 @@
     "summaryEn": "Complete guide to Ananta's 6 anomaly attributes including reactions, best combos, and combat applications.",
     "content": "## 异能属性与搭配攻略\n\n### 一、6种异能属性\n\n| 属性 | 特点 | 代表效果 |\n|------|------|----------|\n| 混沌 | 高爆发 | 侵蚀debuff |\n| 精神 | 控制 | 精神干扰 |\n| 火花 | 持续伤害 | 点燃效果 |\n| 涌流 | 治疗/增益 | 回复+净化 |\n| 绽放 | 召唤/辅助 | 生成造物 |\n| 虚空 | 减益 | 虚弱debuff |\n\n### 二、属性反应\n\n**超载反应**\n- 混沌 + 火花 → 超载爆发，高额范围伤害\n- 适合清理密集敌人\n\n**干扰反应**\n- 精神 + 涌流 → 精神共鸣，全队增益\n- 适合长时间Boss战\n\n**绽放反应**\n- 绽放 + 任意属性 → 根据搭配产生不同效果\n- 最灵活的反应类型\n\n**虚蚀反应**\n- 虚空 + 混沌 → 虚蚀，同时削弱敌人攻防\n- 适合高难度内容\n\n### 三、推荐搭配\n\n1. **超载队**：混沌主C + 火花副C + 涌流治疗\n2. **控制队**：精神控制 + 虚空减益 + 任意输出\n3. **召唤队**：绽放召唤 + 涌流治疗 + 混沌输出\n4. **全能队**：涌流 + 绽放 + 混沌，攻守兼备",
     "contentEn": "## Anomaly Attributes & Combination Guide\n\n### 1. Six Anomaly Attributes\n\n| Attribute | Trait | Key Effect |\n|-----------|-------|------------|\n| Chaos | Burst damage | Erosion debuff |\n| Psyche | Control | Mental disruption |\n| Spark | Sustained DMG | Ignite effect |\n| Surge | Heal/Buff | Recovery + cleanse |\n| Bloom | Summon/Support | Create constructs |\n| Void | Debuff | Weakness debuff |\n\n### 2. Attribute Reactions\n\n**Overload**\n- Chaos + Spark → Overload burst, high AoE damage\n- Great for dense enemy groups\n\n**Resonance**\n- Psyche + Surge → Mental resonance, team-wide buff\n- Ideal for prolonged boss fights\n\n**Bloom**\n- Bloom + any → Different effects based on combination\n- Most flexible reaction type\n\n**Void Erosion**\n- Void + Chaos → Void erosion, reduces enemy ATK and DEF\n- Best for high-difficulty content\n\n### 3. Recommended Combinations\n\n1. **Overload**: Chaos DPS + Spark sub-DPS + Surge healer\n2. **Control**: Psyche control + Void debuff + any DPS\n3. **Summon**: Bloom summoner + Surge healer + Chaos DPS\n4. **All-rounder**: Surge + Bloom + Chaos, balanced offense/defense",
-    "tags": ["异能", "属性", "搭配", "Anomaly", "Attribute", "Combo"],
+    "tags": [
+      "异能",
+      "属性",
+      "搭配",
+      "Anomaly",
+      "Attribute",
+      "Combo"
+    ],
     "faq": [
       {
         "question": "Which attribute is strongest?",
@@ -319,7 +333,14 @@
     "summaryEn": "Complete Ananta gear guide covering equipment types, stat selection, and farming strategy.",
     "content": "## 装备系统完全指南\n\n### 一、装备类型\n\n| 部位 | 主属性范围 | 核心作用 |\n|------|-----------|----------|\n| 异能核心 | 攻击%/异能伤害% | 主C核心装备 |\n| 防护外壳 | 防御%/伤害减免 | 坦克位关键 |\n| 感知模块 | 暴击率/暴击伤害 | 输出必备 |\n| 动力单元 | 速度/能量回复 | 决定行动顺序 |\n| 增幅芯片 | 属性精通/效果命中 | 反应队核心 |\n\n### 二、词条优先级\n\n**输出型**：暴击率 > 暴击伤害 > 攻击力% > 异能伤害\n**辅助型**：速度 > 能量回复 > 生命% > 效果命中\n**坦克型**：防御% > 伤害减免 > 生命% > 效果抵抗\n\n### 三、套装效果\n\n- 2件套：基础属性加成\n- 4件套：强力特殊效果（通常比2+2强10-15%）\n- 推荐先用2+2过渡，再替换为4件套\n\n### 四、刷取路线\n\n1. **前期**：散件凑主属性正确即可\n2. **中期**：刷2+2过渡套装（约2周可成型）\n3. **后期**：追求4件套+极品副词条\n\n### 五、强化策略\n\n- 只强化4副词条起步的装备\n- +6测试：歪2次以上就弃\n- 暴击比例保持1:2（暴击率:暴击伤害）\n- 集中资源强化主C装备",
     "contentEn": "## Complete Gear System Guide\n\n### 1. Equipment Types\n\n| Slot | Main Stat Range | Core Role |\n|------|----------------|----------|\n| Anomaly Core | ATK%/Anomaly DMG% | DPS core |\n| Protection Shell | DEF%/DMG Reduction | Tank key |\n| Perception Module | CRIT Rate/CRIT DMG | DPS essential |\n| Power Unit | SPD/Energy Regen | Determines turn order |\n| Amplifier Chip | Attribute Mastery/Effect Hit | Reaction team core |\n\n### 2. Stat Priority\n\n**DPS**: CRIT Rate > CRIT DMG > ATK% > Anomaly DMG\n**Support**: SPD > Energy Regen > HP% > Effect Hit\n**Tank**: DEF% > DMG Reduction > HP% > Effect Resist\n\n### 3. Set Bonuses\n\n- 2pc: Base stat bonus\n- 4pc: Powerful special effect (usually 10-15% stronger than 2+2)\n- Start with 2+2 transition, then upgrade to 4pc\n\n### 4. Farming Route\n\n1. **Early**: Use random pieces with correct main stats\n2. **Mid**: Farm 2+2 sets (~2 weeks to build)\n3. **Late**: Pursue 4pc + perfect substats\n\n### 5. Enhancement Strategy\n\n- Only enhance gear with 4 starting substats\n- Test at +6: Scrap if 2+ bad rolls\n- Maintain 1:2 CRIT ratio\n- Concentrate resources on DPS gear",
-    "tags": ["装备", "词条", "强化", "Gear", "Stats", "Enhancement"],
+    "tags": [
+      "装备",
+      "词条",
+      "强化",
+      "Gear",
+      "Stats",
+      "Enhancement"
+    ],
     "faq": [
       {
         "question": "When should I start farming gear?",
@@ -346,7 +367,14 @@
     "summaryEn": "Advanced Nova City exploration with hidden areas, secret missions, and full collectible guide.",
     "content": "## 新都市进阶探索攻略\n\n### 一、隐藏区域解锁\n\n新都市有多个隐藏区域，需要特定条件解锁：\n\n- **地下管网**：完成主线第三章后自动解锁\n- **废弃实验室**：收集3把钥匙（分散在不同区域）\n- **天空花园**：完成所有悬赏任务后开启\n- **时空裂缝**：异能等级达到要求后出现\n\n### 二、收集品类型\n\n| 收集品 | 用途 | 数量 |\n|--------|------|------|\n| 异能碎片 | 提升账号属性 | 120+\n| 记忆胶囊 | 解锁角色背景故事 | 50+\n| 共鸣水晶 | 兑换稀有材料 | 每周刷新 |\n| 暗号碎片 | 解锁隐藏任务 | 20+\n\n### 三、秘密任务\n\n1. **暗巷传闻**：在特定时间段访问NPC触发\n2. **异象残响**：使用特定异能感知隐藏线索\n3. **都市传说**：收集5个相关物品后触发\n4. **时空悖论**：需要回到特定时间节点完成\n\n### 四、探索效率技巧\n\n- 优先解锁所有传送点\n- 使用涌流异能探测隐藏物品\n- 夜间部分NPC和事件才会出现\n- 每个区域100%探索度有额外奖励\n- 使用地图标记系统规划路线",
     "contentEn": "## Advanced Nova City Exploration Guide\n\n### 1. Hidden Area Unlocks\n\nNova City has multiple hidden areas requiring specific conditions:\n\n- **Underground Network**: Auto-unlocks after Chapter 3 main story\n- **Abandoned Lab**: Collect 3 keys scattered across areas\n- **Sky Garden**: Opens after completing all bounty missions\n- **Space-Time Rifts**: Appear when Anomaly level requirement is met\n\n### 2. Collectible Types\n\n| Collectible | Purpose | Count |\n|-------------|---------|-------|\n| Anomaly Shards | Boost account stats | 120+ |\n| Memory Capsules | Unlock character backstories | 50+ |\n| Resonance Crystals | Exchange for rare materials | Weekly reset |\n| Cipher Fragments | Unlock hidden missions | 20+ |\n\n### 3. Secret Missions\n\n1. **Alley Rumors**: Visit NPCs at specific times\n2. **Anomaly Echoes**: Use specific abilities to detect hidden clues\n3. **Urban Legends**: Triggered after collecting 5 related items\n4. **Temporal Paradox**: Requires returning to specific time nodes\n\n### 4. Exploration Efficiency Tips\n\n- Unlock all teleport points first\n- Use Surge ability to detect hidden items\n- Some NPCs and events only appear at night\n- 100% exploration in each area gives bonus rewards\n- Use the map marker system to plan routes",
-    "tags": ["探索", "收集", "隐藏", "Exploration", "Collection", "Hidden"],
+    "tags": [
+      "探索",
+      "收集",
+      "隐藏",
+      "Exploration",
+      "Collection",
+      "Hidden"
+    ],
     "faq": [
       {
         "question": "How to find all hidden areas?",
@@ -379,7 +407,14 @@
     "summaryEn": "Ananta PvP arena guide with team strategy, ban/pick thinking, and ranking tips.",
     "content": "## 竞技场PVP攻略\n\n### 一、竞技场基础\n\n- 每赛季持续4周\n- 积分制：胜利+分，失败-分\n- 段位奖励：青铜→白银→黄金→铂金→钻石\n- 每场Ban 2个角色，Pick 4v4\n\n### 二、Ban/Pick策略\n\n**优先Ban**\n1. 当前版本T0角色（影响平衡的角色）\n2. 你队伍最怕的克制角色\n3. 高出场率的万金油角色\n\n**Pick思路**\n1. 先选核心角色（确定队伍方向）\n2. 补充控制或治疗\n3. 最后选反制角色\n4. 保持队伍元素多样性\n\n### 三、PVP阵容推荐\n\n**控制流**\n- 精神控制 + 虚空减益 + 涌流治疗 + 混沌输出\n- 通过控制链限制对手行动\n\n**速攻流**\n- 混沌爆发 + 火花点燃 + 高速辅助\n- 争取前2回合结束战斗\n\n**消耗流**\n- 绽放召唤 + 涌流治疗 + 虚空减益\n- 通过召唤物和持续恢复消耗对手\n\n### 四、排名技巧\n\n1. 赛季初段位波动大，中旬再冲分\n2. 观察对手阵容选择克制策略\n3. 速度属性在PVP中极为重要\n4. 保留大招给关键时刻翻盘",
     "contentEn": "## PvP Arena Guide\n\n### 1. Arena Basics\n\n- Each season lasts 4 weeks\n- Point system: Win +points, Lose -points\n- Rank rewards: Bronze → Silver → Gold → Platinum → Diamond\n- Each match: Ban 2 characters, Pick 4v4\n\n### 2. Ban/Pick Strategy\n\n**Priority Bans**\n1. Current T0 meta characters\n2. Characters that counter your team hardest\n3. High-pick-rate universal characters\n\n**Pick Thinking**\n1. Pick core character first (determines team direction)\n2. Add control or healing\n3. Last pick for counter\n4. Maintain attribute diversity\n\n### 3. PvP Team Recommendations\n\n**Control Team**\n- Psyche control + Void debuff + Surge healer + Chaos DPS\n- Lock down opponents with control chains\n\n**Speed Rush**\n- Chaos burst + Spark ignite + High-speed support\n- Try to end fights in first 2 turns\n\n**Attrition Team**\n- Bloom summon + Surge heal + Void debuff\n- Wear down opponents with summons and sustain\n\n### 4. Ranking Tips\n\n1. Early season has high volatility, push rank mid-season\n2. Observe opponent lineup and pick counters\n3. Speed stat is extremely important in PvP\n4. Save ultimate for clutch moments",
-    "tags": ["PVP", "竞技场", "阵容", "Arena", "PvP", "Teams"],
+    "tags": [
+      "PVP",
+      "竞技场",
+      "阵容",
+      "Arena",
+      "PvP",
+      "Teams"
+    ],
     "faq": [
       {
         "question": "Is PvP necessary for progression?",
@@ -406,7 +441,14 @@
     "summaryEn": "Complete Ananta wish system guide covering banner types, pity mechanics, and optimal pulling strategy.",
     "content": "## 祈愿系统与抽卡策略\n\n### 一、卡池类型\n\n| 卡池 | SSR概率 | 保底 | 建议 |\n|------|---------|------|------|\n| 限定祈愿 | 1.2% | 90抽保底 | 优先投入 |\n| 常驻祈愿 | 1.2% | 90抽保底 | 用免费票 |\n| 装备祈愿 | 2.0% | 70抽保底 | 有余力再抽 |\n| 新手祈愿 | 2.5% | 20抽保底SSR | 必抽 |\n\n### 二、保底机制\n\n- **软保底**：约60抽起概率提升\n- **硬保底**：90抽必出SSR\n- **大保底**：歪了非UP后，下次必出UP\n- 保底在同类卡池间继承\n\n### 三、抽卡优先级\n\n1. **新手池**：20抽保底SSR，性价比最高\n2. **限定角色**：限定通常比常驻更强或更独特\n3. **常驻用免费票**：不要花珍贵货币在常驻池\n4. **装备池最后**：角色永远比装备重要\n\n### 四、免费祈愿资源\n\n- 每日任务：约80祈愿币/天\n- 周常任务：约400/周\n- 活动奖励：每版本1500-2500\n- 探索收集：一次性大量奖励\n- 成就系统：按完成度给奖励\n- PVP赛季奖励：每赛季额外祈愿币\n\n### 五、省钱建议\n\n- 不冲动抽卡：确定目标再投入\n- 存够保底（80+抽）再下池\n- 关注版本预告提前规划\n- 无限大采用无抽卡设计，核心角色可通过游戏内获取",
     "contentEn": "## Wish System & Gacha Strategy\n\n### 1. Banner Types\n\n| Banner | SSR Rate | Pity | Recommendation |\n|--------|----------|------|----------------|\n| Limited Wish | 1.2% | 90 pity | Priority |\n| Standard Wish | 1.2% | 90 pity | Use free tickets |\n| Equipment Wish | 2.0% | 70 pity | Only with surplus |\n| Beginner Wish | 2.5% | 20 pity SSR | Must pull |\n\n### 2. Pity Mechanics\n\n- **Soft pity**: Rates increase from ~60 pulls\n- **Hard pity**: Guaranteed SSR at 90 pulls\n- **Guarantee**: Lost 50/50 means next SSR is featured\n- Pity carries over between same banner types\n\n### 3. Pulling Priority\n\n1. **Beginner banner**: 20-pity SSR is best value\n2. **Limited characters**: Limited usually stronger or more unique\n3. **Standard with free tickets**: Don't spend premium currency here\n4. **Equipment last**: Characters always matter more than gear\n\n### 4. Free Wish Resources\n\n- Daily tasks: ~80 wish coins/day\n- Weekly tasks: ~400/week\n- Event rewards: 1500-2500 per patch\n- Exploration: Large one-time rewards\n- Achievement system: Rewards by completion\n- PvP season rewards: Extra wish coins per season\n\n### 5. Saving Tips\n\n- Don't impulse pull: Set a target before spending\n- Save for pity (80+ pulls) before pulling\n- Plan ahead using version previews\n- Ananta features a no-gacha design where core characters can be obtained through gameplay",
-    "tags": ["祈愿", "抽卡", "保底", "Wish", "Gacha", "Pity"],
+    "tags": [
+      "祈愿",
+      "抽卡",
+      "保底",
+      "Wish",
+      "Gacha",
+      "Pity"
+    ],
     "faq": [
       {
         "question": "Is Ananta truly no-gacha?",
@@ -439,7 +481,14 @@
     "summaryEn": "Ananta version update roadmap covering confirmed new content, predicted timelines, and long-term plans.",
     "content": "## 无限大版本路线图与更新前瞻\n\n### 一、当前版本(v1.x)回顾\n\n- 12名可玩异能者，6种异能属性\n- 新都市主城区完整开放\n- 竞技场PVP系统上线\n- 异象讨伐共8个Boss\n- 装备系统5个部位全部实装\n\n### 二、近期更新预测(v1.1-v1.3)\n\n**v1.1 — 新区域扩展**\n- 预计新增新都市·港口区域\n- 2名新异能者（绽放属性SSR + 精神属性SR）\n- 新异象Boss（涌流属性）\n- 装备系统新增套装\n\n**v1.2 — 新玩法模式**\n- 深渊探索模式（Roguelike）\n- 公会系统上线\n- 合作讨伐模式\n- 新都市·地下区域解锁\n\n**v1.3 — 大型活动**\n- 限时故事活动\n- 新异能者（虚空属性SSR）\n- 竞技场第二赛季\n- QoL优化更新\n\n### 三、长期路线图\n\n| 时间 | 内容 | 优先级 |\n|------|------|--------|\n| 近期 | 新区域+新角色 | 最高 |\n| 中期 | 公会+合作模式 | 高 |\n| 远期 | 新都市完全体 | 中 |\n| 未来 | 全新城市区域 | 待定 |\n\n### 四、社区期望最高内容\n\n1. 更多异能者（当前box深度不足）\n2. 新都市更多可探索区域\n3. 更多异象Boss和挑战内容\n4. 装备系统套装多样化\n5. 社交功能（公会、好友协作）",
     "contentEn": "## Ananta Version Roadmap & Update Preview\n\n### 1. Current Version (v1.x) Review\n\n- 12 playable Espers across 6 anomaly attributes\n- Nova City main district fully accessible\n- PvP Arena system online\n- 8 Anomaly Hunt bosses\n- Full 5-slot gear system implemented\n\n### 2. Near-term Updates (v1.1–v1.3)\n\n**v1.1 — New Area Expansion**\n- Nova City Port District expected\n- 2 new Espers (Bloom SSR + Psyche SR)\n- New Anomaly Boss (Surge attribute)\n- Additional gear set bonuses\n\n**v1.2 — New Game Modes**\n- Abyss Exploration mode (Roguelike)\n- Guild system launch\n- Cooperative Hunt mode\n- Nova City Underground area unlock\n\n**v1.3 — Major Event**\n- Limited-time story event\n- New Esper (Void SSR)\n- Arena Season 2\n- QoL improvements\n\n### 3. Long-term Roadmap\n\n| Timeline | Content | Priority |\n|----------|---------|----------|\n| Near | New areas + characters | Highest |\n| Mid | Guild + co-op | High |\n| Far | Full Nova City | Medium |\n| Future | Entirely new city areas | TBD |\n\n### 4. Top Community Requests\n\n1. More Espers (current roster depth is limited)\n2. More explorable areas in Nova City\n3. More Anomaly Bosses and challenging content\n4. Greater gear set diversity\n5. Social features (guilds, friend co-op)",
-    "tags": ["版本", "路线图", "更新", "Version", "Roadmap", "Update"],
+    "tags": [
+      "版本",
+      "路线图",
+      "更新",
+      "Version",
+      "Roadmap",
+      "Update"
+    ],
     "faq": [
       {
         "question": "How often does Ananta get updates?",
@@ -472,7 +521,14 @@
     "summaryEn": "Esper tier rankings organized by role with build priority and investment recommendations.",
     "content": "## 异能者强度排行与培养优先级\n\n### 一、主C输出排行\n\n| 排名 | 异能者 | 属性 | 评价 | 培养优先级 |\n|------|--------|------|------|------------|\n| SS | 队长 | 混沌 | 伤害天花板，灵活多变 | ★★★★★ |\n| S | 泰菲 | 火花 | 独特武器机制，持续输出 | ★★★★☆ |\n| S | 班西 | 虚空 | 减益后爆发，单体极强 | ★★★★☆ |\n| A | 迪拉 | 火花 | 追击连锁效率高 | ★★★☆☆ |\n\n### 二、辅助增益排行\n\n| 排名 | 异能者 | 属性 | 评价 | 培养优先级 |\n|------|--------|------|------|------------|\n| SS | 凛果 | 涌流 | 全队增伤最全面 | ★★★★★ |\n| S | 西摩 | 涌流 | 后台减益+副C | ★★★★☆ |\n| A | 吕凯亚 | 涌流 | 聚怪+控制 | ★★★☆☆ |\n\n### 三、治疗防御排行\n\n| 排名 | 异能者 | 属性 | 评价 | 培养优先级 |\n|------|--------|------|------|------------|\n| SS | 艾琳 | 绽放 | 最强治疗+护盾 | ★★★★★ |\n| A | 机械卡 | 混沌 | 后台减防副C | ★★★☆☆ |\n\n### 四、培养优先级建议\n\n**新手玩家**\n1. 队长（主C）→ 必练\n2. 艾琳（治疗）→ 必练\n3. 凛果（增益）→ 高优先\n4. 第四人根据队伍需求选择\n\n**进阶玩家**\n1. 确定核心队伍方向\n2. 按属性需求补充角色\n3. 每个角色投入前评估ROI\n4. 保留资源给未来强力角色",
     "contentEn": "## Esper Tier List & Build Priority Guide\n\n### 1. Main DPS Rankings\n\n| Rank | Esper | Attribute | Assessment | Build Priority |\n|------|-------|-----------|------------|---------------|\n| SS | Captain | Chaos | Damage ceiling, versatile | ★★★★★ |\n| S | Taffy | Spark | Unique weapon mechanic, sustained DPS | ★★★★☆ |\n| S | Bansy | Void | Post-debuff burst, exceptional ST | ★★★★☆ |\n| A | Dila | Spark | Efficient follow-up chains | ★★★☆☆ |\n\n### 2. Support/Buffer Rankings\n\n| Rank | Esper | Attribute | Assessment | Build Priority |\n|------|-------|-----------|------------|---------------|\n| SS | Ringo | Surge | Most comprehensive team buff | ★★★★★ |\n| S | Seymour | Surge | Off-field debuff + sub-DPS | ★★★★☆ |\n| A | Lykaia | Surge | Grouping + control | ★★★☆☆ |\n\n### 3. Healer/Defense Rankings\n\n| Rank | Esper | Attribute | Assessment | Build Priority |\n|------|-------|-----------|------------|---------------|\n| SS | Aileen | Bloom | Best healer + shield | ★★★★★ |\n| A | Mechanika | Chaos | Off-field DEF shred sub-DPS | ★★★☆☆ |\n\n### 4. Build Priority Recommendations\n\n**New Players**\n1. Captain (DPS) → Must-build\n2. Aileen (Healer) → Must-build\n3. Ringo (Buffer) → High priority\n4. Fourth slot based on team needs\n\n**Advanced Players**\n1. Determine core team direction\n2. Fill roster gaps by attribute\n3. Evaluate ROI before investing in each character\n4. Reserve resources for future strong characters",
-    "tags": ["排行榜", "强度", "培养", "Tier List", "Build", "Priority"],
+    "tags": [
+      "排行榜",
+      "强度",
+      "培养",
+      "Tier List",
+      "Build",
+      "Priority"
+    ],
     "faq": [
       {
         "question": "Who should I build first as a new player?",
@@ -505,7 +561,14 @@
     "summaryEn": "Advanced combat techniques for Ananta including attribute combos, timing mastery, and team coordination.",
     "content": "## 高阶战斗技巧与连招进阶\n\n### 一、属性连招核心\n\n掌握属性反应的触发顺序是提高伤害的关键：\n\n**超载连招（混沌+火花）**\n1. 先用火花角色施放点燃效果\n2. 切换混沌角色触发超载\n3. 超载伤害=基础伤害×反应倍率\n4. 连续触发可叠加超载层数\n\n**虚蚀连招（虚空+混沌）**\n1. 虚空角色施放虚弱debuff\n2. 切换混沌角色在debuff期间输出\n3. 敌人攻防同时降低，输出窗口扩大\n4. 注意debuff持续时间，在结束前完成输出\n\n### 二、时机把控\n\n**异能技释放时机**\n- 不要CD好就用，等debuff叠加后再释放\n- 终结技留给Boss虚弱阶段\n- 异能技之间留间隔触发更多反应\n\n**换人时机**\n- 前台角色技能CD时切人\n- 属性反应需要时立刻切人\n- 队友增益效果激活时切C位吃buff\n\n### 三、高级操作\n\n1. **双反应链**：A属性→B属性→A属性，连续触发两种反应\n2. **预判切换**：在敌人动作前切换角色，利用无敌帧躲避\n3. **能量管理**：合理分配4个角色的技能使用，确保关键时刻有大招\n4. **走位拉怪**：利用走位聚怪后AOE效率最大化\n\n### 四、Boss战进阶\n\n- 学习Boss攻击模式，预判安全窗口\n- 在Boss蓄力时全力输出\n- 保留终结技给Boss转阶段时的虚弱期\n- 控制角色在Boss狂暴前施加debuff降低难度",
     "contentEn": "## Advanced Combat Techniques & Combo Guide\n\n### 1. Attribute Combo Core\n\nMastering reaction trigger order is key to maximizing damage:\n\n**Overload Combo (Chaos + Spark)**\n1. Use Spark character to apply Ignite first\n2. Switch to Chaos character to trigger Overload\n3. Overload DMG = Base DMG × Reaction multiplier\n4. Consecutive triggers stack Overload layers\n\n**Void Erosion Combo (Void + Chaos)**\n1. Void character applies Weakness debuff\n2. Switch to Chaos character to attack during debuff\n3. Enemy ATK and DEF both reduced, maximizing damage window\n4. Watch debuff duration — finish your burst before it expires\n\n### 2. Timing Mastery\n\n**Ability Skill Timing**\n- Don't use skills on cooldown — wait for debuff stacks\n- Save Ultimates for boss vulnerable phases\n- Space ability uses to trigger more reactions\n\n**Switch Timing**\n- Switch when on-field character's skills are on cooldown\n- Switch immediately when attribute reactions are needed\n- Switch to DPS when teammate buffs are active\n\n### 3. Advanced Techniques\n\n1. **Double Reaction Chain**: Attribute A → B → A for consecutive reactions\n2. **Predictive Switching**: Switch before enemy attacks to use invincibility frames\n3. **Energy Management**: Distribute skill usage across all 4 members for key ultimates\n4. **Positioning & Grouping**: Use movement to group enemies for maximum AoE efficiency\n\n### 4. Advanced Boss Strategies\n\n- Learn boss attack patterns to predict safe windows\n- Unload during boss charge-up phases\n- Save ultimates for boss phase-transition vulnerability\n- Apply debuffs before boss enrage phases to reduce difficulty",
-    "tags": ["战斗", "连招", "进阶", "Combat", "Combo", "Advanced"],
+    "tags": [
+      "战斗",
+      "连招",
+      "进阶",
+      "Combat",
+      "Combo",
+      "Advanced"
+    ],
     "faq": [
       {
         "question": "What is the most important combat technique?",
@@ -538,7 +601,14 @@
     "summaryEn": "Maximize farming efficiency with stamina planning, optimal routes, and resource allocation for Ananta.",
     "content": "## 材料刷取与资源规划效率指南\n\n### 一、体力(Stamina)规划\n\n每日体力有限，合理分配是效率的关键：\n\n| 优先级 | 内容 | 体力分配 |\n|--------|------|----------|\n| 1 | 异能者突破材料 | 40% |\n| 2 | 觉醒材料 | 30% |\n| 3 | 装备刷取 | 20% |\n| 4 | 金币副本 | 10% |\n\n### 二、各阶段刷取重点\n\n**前期（1-30级）**\n- 集中体力刷突破材料，保证主C等级跟上\n- 觉醒材料适度刷取（核心觉醒即可）\n- 不刷装备，用任务奖励散件\n\n**中期（30-50级）**\n- 平衡突破材料和觉醒材料\n- 开始刷主C的2+2装备套装\n- 金币需求增加，每天刷1-2次金币本\n\n**后期（50级+）**\n- 装备优化为主要消耗\n- 追求4件套+极品副词条\n- 突破材料需求减少\n\n### 三、刷取效率技巧\n\n1. **优先级排序**：先保证等级和觉醒，再刷装备\n2. **集中刷取**：一次集中刷一个副本直到毕业\n3. **使用加成道具**：活动送的加成道具留给高价值副本\n4. **每日任务必做**：稳定的资源来源\n5. **异象讨伐每日清**：Boss材料掉落有上限，别浪费\n\n### 四、资源分配原则\n\n- 主C优先投入（等级>觉醒>装备）\n- 辅助次要投入（等级和核心技能即可）\n- 保留20%资源给未来新角色\n- 不要同时培养超过2个角色\n\n### 五、免费资源获取\n\n| 来源 | 频率 | 价值 |\n|------|------|------|\n| 每日任务 | 每天 | 稳定基础收入 |\n| 周常任务 | 每周 | 中等资源 |\n| 活动奖励 | 每版本 | 大量资源 |\n| 探索收集 | 一次性 | 大量资源 |\n| 成就奖励 | 一次性 | 中等资源 |",
     "contentEn": "## Material Farming & Resource Planning Guide\n\n### 1. Stamina Planning\n\nDaily stamina is limited — smart allocation is key:\n\n| Priority | Content | Stamina Allocation |\n|-----------|---------|-------------------|\n| 1 | Ascension materials | 40% |\n| 2 | Awakening materials | 30% |\n| 3 | Gear farming | 20% |\n| 4 | Gold dungeon | 10% |\n\n### 2. Phase-Specific Farming Focus\n\n**Early (Lv.1-30)**\n- Focus stamina on ascension materials, keep main DPS leveled\n- Moderate awakening material farming (core awakening only)\n- Skip gear farming, use quest reward pieces\n\n**Mid (Lv.30-50)**\n- Balance ascension and awakening materials\n- Start farming 2+2 gear sets for main DPS\n- Gold needs increase — run gold dungeon 1-2 times daily\n\n**Late (Lv.50+)**\n- Gear optimization becomes primary stamina sink\n- Pursue 4pc sets with perfect substats\n- Ascension material needs decrease\n\n### 3. Farming Efficiency Tips\n\n1. **Priority order**: Levels and awakening first, then gear\n2. **Concentrated farming**: Farm one dungeon until complete before moving on\n3. **Use boost items**: Save event boost items for high-value dungeons\n4. **Daily tasks are mandatory**: Stable resource income\n5. **Clear Anomaly Hunts daily**: Boss drops have caps — don't waste them\n\n### 4. Resource Allocation Principles\n\n- Main DPS gets priority (Level > Awakening > Gear)\n- Supports get secondary investment (Level and core skills)\n- Reserve 20% resources for future new characters\n- Don't build more than 2 characters simultaneously\n\n### 5. Free Resource Sources\n\n| Source | Frequency | Value |\n|--------|-----------|-------|\n| Daily tasks | Daily | Stable baseline |\n| Weekly tasks | Weekly | Moderate |\n| Event rewards | Per patch | Large |\n| Exploration | One-time | Large |\n| Achievements | One-time | Moderate |",
-    "tags": ["刷取", "资源", "效率", "Farming", "Resource", "Efficiency"],
+    "tags": [
+      "刷取",
+      "资源",
+      "效率",
+      "Farming",
+      "Resource",
+      "Efficiency"
+    ],
     "faq": [
       {
         "question": "What should I spend stamina on first?",

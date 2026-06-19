@@ -284,7 +284,14 @@
     "summaryEn": "Endfield team composition guide: elemental reaction teams, physical Shatter teams, mono-element teams, and mode-specific adjustments.",
     "content": "## 阵伍构建基础\n\n终末地通常使用4-6名干员的战斗编队，核心思路：\n\n1. **主C** — 核心输出，资源优先投入\n2. **副C** — 补充伤害，触发元素反应\n3. **辅助** — 增益/减抗/控制\n4. **生存** — 治疗/护盾/坦克\n5. **先锋** — 快速展开，获取DP\n\n## 推荐阵容\n\n### 1. 碎冰队（Cryo + Physical）\n\n| 位置 | 干员 | 作用 |\n|------|------|------|\n| 主C | 物理近卫 | 利用Shatter反应打爆发 |\n| 副C | Cryo术师 | 施加Solidification |\n| 辅助 | Nature辅助 | 减抗 |\n| 生存 | Defender | 前排抗压 |\n\n**思路**：Cryo干员先施加Solidification冻结敌人，物理干员触发Shatter造成大量物理伤害。\n\n### 2. 燃烧队（Heat + Nature）\n\n| 位置 | 干员 | 作用 |\n|------|------|------|\n| 主C | Heat狙击 | 持续燃烧输出 |\n| 副C | Laevatain | 触发Combustion |\n| 辅助 | Electric辅助 | 触发Electrification |\n| 生存 | 治疗 | 续航 |\n\n**思路**：Heat + Nature触发Combustion持续伤害，配合Electrification增伤。\n\n### 3. 快速展开队\n\n- 多先锋开局快速获取DP\n- 尽早部署主C和辅助\n- 适合需要快速应对的关卡\n\n## DP管理技巧\n\n- 先锋优先部署，确保DP产出\n- 高费用干员留到中期部署\n- 注意撤退回收DP（部分干员）",
     "contentEn": "## Team Building Basics\n\nEndfield uses 4-6 operator combat squads. Core structure:\n\n1. **Main DPS** — Primary damage, priority investment\n2. **Sub-DPS** — Supplemental damage, elemental reactions\n3. **Support** — Buffs/debuffs/control\n4. **Survival** — Healing/shield/tank\n5. **Vanguard** — Fast deployment, DP generation\n\n## Recommended Teams\n\n### 1. Shatter Team (Cryo + Physical)\n\n| Position | Operator | Role |\n|----------|----------|------|\n| DPS | Physical Guard | Exploits Shatter reaction |\n| Sub-DPS | Cryo Caster | Applies Solidification |\n| Support | Nature Support | Resistance down |\n| Survival | Defender | Frontline |\n\n**Strategy**: Cryo operator applies Solidification to freeze enemies, Physical operator triggers Shatter for massive damage.\n\n### 2. Combustion Team (Heat + Nature)\n\n| Position | Operator | Role |\n|----------|----------|------|\n| DPS | Heat Striker | Sustained burn damage |\n| Sub-DPS | Laevatain | Triggers Combustion |\n| Support | Electric Support | Triggers Electrification |\n| Survival | Healer | Sustain |\n\n**Strategy**: Heat + Nature triggers Combustion DoT, combined with Electrification for increased Arts DMG.\n\n### 3. Rush Deployment Team\n\n- Multiple Vanguards for early DP\n- Deploy main DPS and supports quickly\n- Best for stages requiring fast response\n\n## DP Management\n\n- Deploy Vanguards first for DP generation\n- Save high-cost operators for mid-game\n- Retreat operators to refund DP when possible",
-    "tags": ["阵容", "搭配", "队伍", "Team", "Composition", "组合"],
+    "tags": [
+      "阵容",
+      "搭配",
+      "队伍",
+      "Team",
+      "Composition",
+      "组合"
+    ],
     "faq": [
       {
         "question": "What is the best team in Arknights: Endfield?",
@@ -305,7 +312,15 @@
     "summaryEn": "Endfield operator progression roadmap: leveling, promotion, skill upgrades, base development priorities, and early-game resource allocation.",
     "content": "## 干员养成\n\n### 等级与精英化\n\n- 干员等级上限受精英化阶段限制\n- 每50级需要精英化突破\n- 精英化材料从主线和活动获取\n\n### 技能升级\n\n| 优先级 | 内容 |\n|--------|------|\n| 1 | 主C核心技能 → 满级 |\n| 2 | 辅助增益技能 → 7级 |\n| 3 | 副C输出技能 → 7级 |\n| 4 | 生存技能 → 5级 |\n\n### 潜能系统\n\n- 重复获取干员提升潜能\n- 潜能降低部署费用和再部署时间\n- 非必需，但对高难关卡有帮助\n\n## 基地发展优先级\n\n### 第一阶段（前期）\n1. 制造站 — 生产基础材料\n2. 经验本 — 快速提升干员等级\n3. 交易所 — 金币来源\n\n### 第二阶段（中期）\n1. 精英化材料本 — 突破瓶颈\n2. 技能本 — 技能升级\n3. 装备本 — 提升战力\n\n### 第三阶段（后期）\n1. 高级装备本\n2. 挑战副本\n3. 基地全升级\n\n## 体力分配\n\n| 阶段 | 体力优先 |\n|------|----------|\n| 前期 | 经验本 70%, 突破本 20%, 金币 10% |\n| 中期 | 技能本 40%, 装备本 30%, 突破 20%, 金币 10% |\n| 后期 | 装备本 50%, 技能 30%, 高级材料 20% |",
     "contentEn": "## Operator Progression\n\n### Level & Promotion\n\n- Level cap is determined by promotion stage\n- Promotion required every ~50 levels\n- Promotion materials from main story and events\n\n### Skill Upgrades\n\n| Priority | Target |\n|----------|--------|\n| 1 | Main DPS core skill → Max |\n| 2 | Support buff skill → Lv 7 |\n| 3 | Sub-DPS skill → Lv 7 |\n| 4 | Survival skill → Lv 5 |\n\n### Potential System\n\n- Duplicates increase Potential\n- Potential reduces DP cost and redeploy time\n- Not required but helpful for hard stages\n\n## Base Development Priority\n\n### Phase 1 (Early)\n1. Factory — Basic material production\n2. EXP Dungeon — Fast operator leveling\n3. Trade Station — Gold income\n\n### Phase 2 (Mid)\n1. Promotion Material Dungeon — Breakthrough\n2. Skill Dungeon — Skill upgrades\n3. Gear Dungeon — Combat power\n\n### Phase 3 (Late)\n1. Advanced Gear Dungeon\n2. Challenge Stages\n3. Full base upgrades\n\n## Stamina Allocation\n\n| Phase | Priority |\n|-------|----------|\n| Early | EXP 70%, Breakthrough 20%, Gold 10% |\n| Mid | Skill 40%, Gear 30%, Breakthrough 20%, Gold 10% |\n| Late | Gear 50%, Skill 30%, Advanced Materials 20% |",
-    "tags": ["养成", "升级", "资源", "Progression", "Leveling", "Resources", "精英化"],
+    "tags": [
+      "养成",
+      "升级",
+      "资源",
+      "Progression",
+      "Leveling",
+      "Resources",
+      "精英化"
+    ],
     "faq": [
       {
         "question": "What should I level first in Endfield?",
@@ -326,7 +341,15 @@
     "summaryEn": "Endfield daily/weekly farming routes: EXP dungeons, promotion materials, gear materials, gold dungeons, and optimal stamina allocation.",
     "content": "## 每日必做\n\n### 日常清单\n\n1. **日常任务** — 完成所有日常获取体力/材料\n2. **体力消耗** — 刷推荐副本，不溢出\n3. **基地收菜** — 制造站/交易所产出\n4. **商店查看** — 每日折扣商品\n\n### 每周必刷\n\n1. **周常挑战** — 高级突破材料\n2. **活动副本** — 限定期间优先\n3. **商店周限购** — 稀有材料\n\n## 副本掉落一览\n\n| 副本 | 主要掉落 | 推荐体力 |\n|------|----------|----------|\n| 经验本 | 经验材料 | 前期每日3次 |\n| 突破本 | 精英化材料 | 按需刷 |\n| 技能本 | 技能升级材料 | 中期每日2-3次 |\n| 装备本 | 装备+强化材料 | 中后期每日2次 |\n| 金币本 | 龙门币 | 每日1次 |\n\n## 材料刷取优先级\n\n### 前期目标\n- 主C等级 → 满级\n- 解锁全部基地功能\n- 存够精英化材料\n\n### 中期目标\n- 全队精英化1次\n- 主C技能 → 7级\n- 刷一套金色装备\n\n### 后期目标\n- 精英化2次\n- 全队技能 → 满\n- 装备Artificing强化\n\n## 效率技巧\n\n- 活动期间副本掉率提升，优先刷\n- 自动战斗可用于低难度副本\n- 合理利用扫荡券（如有）",
     "contentEn": "## Daily Routine\n\n### Daily Checklist\n\n1. **Daily Tasks** — Complete all for stamina/materials\n2. **Stamina** — Run recommended dungeons, don't cap\n3. **Base Collection** — Factory/Trade Station output\n4. **Daily Shop** — Check discounted items\n\n### Weekly\n\n1. **Weekly Challenge** — Advanced breakthrough materials\n2. **Event Dungeons** — Priority during limited events\n3. **Weekly Shop** — Rare materials\n\n## Dungeon Drops\n\n| Dungeon | Main Drop | Recommended |\n|---------|-----------|-------------|\n| EXP | EXP materials | 3x/day early |\n| Promotion | Elite materials | As needed |\n| Skill | Skill upgrade materials | 2-3x/day mid |\n| Gear | Equipment + upgrade | 2x/day mid-late |\n| Gold | Lungmen Dollars | 1x/day |\n\n## Material Priority\n\n### Early Goals\n- Main DPS → Max level\n- Unlock all base features\n- Stockpile promotion materials\n\n### Mid Goals\n- Full team Promotion 1\n- Main DPS skills → Lv 7\n- Farm a gold gear set\n\n### Late Goals\n- Promotion 2\n- Full team skills → Max\n- Equipment Artificing\n\n## Efficiency Tips\n\n- Event dungeons have boosted drops, prioritize them\n- Auto-deploy works for low-difficulty stages\n- Use sweep tickets efficiently",
-    "tags": ["刷取", "资源", "材料", "Farming", "Resources", "Materials", "日常"],
+    "tags": [
+      "刷取",
+      "资源",
+      "材料",
+      "Farming",
+      "Resources",
+      "Materials",
+      "日常"
+    ],
     "faq": [
       {
         "question": "What should I farm first in Endfield?",
@@ -347,13 +370,49 @@
     "summaryEn": "Endfield endgame guide: high-difficulty challenge dungeons, deep zones, crisis-style content with team recommendations and clear strategies.",
     "content": "## 终局内容概览\n\n终末地的终局玩法主要包括：\n\n1. **高难挑战副本** — 需要满配阵容和策略\n2. **深层探索** — 多层Rougelike模式\n3. **限时活动** — 高难EX关卡\n4. **Boss歼灭战** — 特殊机制Boss\n\n## 高难挑战副本\n\n### 阵容要求\n- 全员满级+精英化\n- 核心技能满级\n- 金色装备+精炼\n\n### 通用策略\n1. 先观察Boss机制和弱点\n2. 搭配属性克制队伍\n3. 合理分配DP，优先部署生存位\n4. 保留终结技用于关键阶段\n\n## 深层探索（Rougelike）\n\n- 每层选择增益效果\n- 资源有限，需要取舍\n- 推荐携带泛用性高的干员\n- 随机事件可能改变路线\n\n### 推荐干员\n- 生存能力强的Guard/Defender\n- 自带治疗的干员\n- AOE伤害优秀的术师/狙击\n\n## Boss歼灭战\n\n### Boss机制要点\n- Boss通常有多阶段\n- 注意狂暴倒计时\n- 部分Boss需要特定元素反应才能有效破盾\n- 优先清理召唤的小怪\n\n### 推荐阵容\n| Boss类型 | 推荐元素 | 备注 |\n|----------|----------|------|\n| 护盾型 | Cryo+Physical | Shatter快速破盾 |\n| 高血量型 | Heat+Nature | Combustion持续伤害 |\n| 多目标 | Electric | Chain AoE |\n\n## 评分提升技巧\n\n- 快速通关 → 时间加分\n- 低战力通关 → 效率加分\n- 不损失干员 → 完美加分",
     "contentEn": "## Endgame Content Overview\n\nEndfield's endgame includes:\n\n1. **High-Difficulty Challenges** — Requires fully built teams\n2. **Deep Exploration** — Multi-floor roguelike mode\n3. **Limited Events** — EX stages\n4. **Boss Annihilation** — Special mechanic bosses\n\n## High-Difficulty Dungeons\n\n### Requirements\n- All operators max level + promoted\n- Core skills maxed\n- Gold gear + refined\n\n### General Strategy\n1. Study boss mechanics and weaknesses\n2. Build attribute advantage team\n3. Manage DP, deploy survival first\n4. Save ultimates for critical phases\n\n## Deep Exploration (Roguelike)\n\n- Choose buffs each floor\n- Limited resources, prioritize wisely\n- Bring versatile operators\n- Random events may alter your path\n\n### Recommended Operators\n- High-survival Guards/Defenders\n- Self-healing operators\n- Strong AoE Casters/Strikers\n\n## Boss Annihilation\n\n### Key Mechanics\n- Bosses have multiple phases\n- Watch enrage timers\n- Some bosses need specific reactions to break shields\n- Clear summoned minions first\n\n### Team Recommendations\n| Boss Type | Recommended Elements | Notes |\n|-----------|---------------------|-------|\n| Shielded | Cryo + Physical | Shatter for fast shield break |\n| High HP | Heat + Nature | Combustion DoT |\n| Multi-target | Electric | Chain AoE |\n\n## Score Optimization\n\n- Fast clear → Time bonus\n- Low power clear → Efficiency bonus\n- No operator loss → Perfect bonus",
-    "tags": ["终局", "高难", "挑战", "Endgame", "Challenge", "Boss", "深层"],
+    "tags": [
+      "终局",
+      "高难",
+      "挑战",
+      "Endgame",
+      "Challenge",
+      "Boss",
+      "深层"
+    ],
     "faq": [
       {
         "question": "What is the hardest content in Endfield?",
         "questionZh": "终末地最难的内容是什么？",
         "answer": "Deep Exploration (roguelike mode) and high-difficulty Boss Annihilation are the most challenging endgame contents, requiring fully built teams and strategic planning.",
         "answerZh": "深层探索（Rougelike模式）和高难Boss歼灭战是最具挑战性的终局内容，需要满配阵容和策略规划。"
+      }
+    ]
+  },
+  {
+    "id": "crisis-contract-guide",
+    "title": "明日方舟终末地 — 危机合约重燃测试作战攻略",
+    "titleEn": "Arknights Endfield — Crisis Contract Retest Operation Guide",
+    "category": "combat",
+    "categoryZh": "战斗攻略",
+    "categoryEn": "Combat",
+    "summary": "终末地危机合约重燃测试攻略：40-45星难度打法、埃特拉主T无脑攻略、平民42星构筑、指标搭配推荐。",
+    "summaryEn": "Endfield Crisis Contract Retest guide: 40-45 star difficulty strategies, Etra main tank no-brainer guide, F2P 42-star builds, indicator loadout recommendations.",
+    "content": "## 危机合约·重燃测试作战攻略\n\n「危机合约·重燃测试」是终末地最新高难度挑战活动，提供 40-45 星难度层级，需要合理的干员搭配和指标组合。\n\n### 一、活动概要\n\n- **名称**: 危机合约·重燃测试作战\n- **难度**: 40星 - 45星\n- **核心**: 选择指标组合提升难度，通过策略搭配通关\n\n### 二、40星难度 — 埃特拉主T无脑攻略\n\n**队伍配置**：\n- **主T**: 埃特拉 (Etra) — 核心坦克，高防御高生存\n- **输出**: 高爆发输出干员 ×2\n- **辅助**: 增益/治疗干员 ×1\n\n**指标组合**：\n- 选择降低输出但不影响生存的指标\n- 保持埃特拉坦度足够扛住所有攻击\n- 利用高台位和卡位减少受伤\n\n**打法要点**：\n1. 埃特拉放置在前线卡位，吸收主要伤害\n2. 输出干员在高台位安全输出\n3. 辅助干员在中后排提供增益和治疗\n4. 无脑推进，靠埃特拉坦度硬抗\n\n### 三、42星 — 平民攻略\n\n**队伍配置**：\n- 基于已有干员的灵活搭配\n- 关键：选择降低防御但提升输出的指标\n- 利用干员技能组合弥补面板不足\n\n**策略**：\n- 不需要满配干员，4星干员也能通关\n- 关键在于指标的选择和干员站位\n- 参考社区已验证的平民构筑\n\n### 四、45星 — 极限挑战\n\n- 目前社区已有45星通关记录\n- 需要满配干员 + 最优指标组合\n- 建议参考通关视频学习站位和技能时机\n\n### 五、指标搭配推荐\n\n| 指标类型 | 推荐策略 | 说明 |\n|----------|----------|------|\n| 敌人增强 | 谨慎选择 | 避免同时选多个进攻增强 |\n| 部署限制 | 可接受 | 限制高台位可用地砖 |\n| 技能限制 | 适度选择 | 不选禁用核心技能的指标 |\n| 输出削弱 | 避免大幅 | 保留足够输出能力 |\n\n### 六、奖励一览\n\n- 完成40星难度可获得主要奖励\n- 42-45星为额外挑战奖励\n- 活动代币可兑换限定素材",
+    "contentEn": "## Crisis Contract Retest Operation Guide\n\nThe Crisis Contract Retest is Endfield's latest high-difficulty challenge, featuring 40-45 star difficulty tiers.\n\n### 1. 40-Star — Etra Main Tank Guide\n\n**Team**: Etra (Main Tank) + 2 DPS + 1 Support\n- Place Etra forward to absorb damage\n- DPS on high ground for safe output\n- Support provides buffs and healing\n\n### 2. 42-Star — F2P Guide\n- 4-star operators can clear with right indicators\n- Key is indicator selection and positioning\n- Reference community-verified F2P builds\n\n### 3. 45-Star — Extreme Challenge\n- Requires fully built operators + optimal indicators\n- Reference clear videos for positioning and timing\n\n### 4. Indicator Loadout Tips\n- Avoid stacking multiple offense-enhancing enemy indicators\n- Deployment restrictions are acceptable\n- Never disable core skills",
+    "tags": [
+      "危机合约",
+      "重燃测试",
+      "埃特拉",
+      "高难度",
+      "挑战",
+      "攻略"
+    ],
+    "faq": [
+      {
+        "question": "How many stars are needed for all rewards in Crisis Contract Retest?",
+        "questionZh": "危机合约重燃测试多少星能拿完奖励？",
+        "answer": "Completing the 40-star difficulty earns the main rewards. The 42-45 star tiers provide additional challenge rewards — attempt as able. F2P players should aim for 40-42 stars.",
+        "answerZh": "完成40星难度即可获得主要奖励。42-45星为额外挑战奖励，量力而行。平民玩家建议以40-42星为目标。"
       }
     ]
   }
