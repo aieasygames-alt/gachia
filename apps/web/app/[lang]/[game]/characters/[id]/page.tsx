@@ -352,13 +352,13 @@ export async function generateMetadata({
     const elName = GENSHIN_ELEMENT_NAMES[char.element]?.[locale] ?? char.element;
     const wName = GENSHIN_WEAPON_LABELS[char.weaponType]?.[locale] ?? char.weaponType;
     const title = locale === 'zh'
-      ? `${name}最佳配装 — 武器、圣遗物、配队推荐（${char.tierRank}级）`
+      ? `${name}最佳配装攻略 — 武器、圣遗物、配队推荐（${char.tierRank}级）`
       : locale === 'ja'
-        ? `${name}最佳ビルド — 武器、聖遺物、編成（Tier ${char.tierRank}）`
-        : `${name} Best Build — Weapons, Artifacts & Teams (${char.tierRank} Tier)`;
+        ? `${name}最強ビルド — 武器、聖遺物、編成（Tier ${char.tierRank}）`
+        : `${name} Build Guide — Best Weapons, Artifacts & Teams (${char.tierRank})`;
     const desc = locale === 'zh'
       ? `${name}（${elName}${wName}）配装攻略：推荐武器、圣遗物套装、主副词条、配队组合。${char.tierRank}级角色全面解析。`
-      : `${name} ${elName} ${wName} best build: recommended weapons, artifact sets, main stats, team comps, and F2P alternatives. ${char.tierRank} tier character.`;
+      : `${name} ${elName} ${wName} build guide: best weapons, artifact sets, main stats, team comps, and F2P options. ${char.tierRank} tier.`;
     return { title, description: desc.slice(0, 160), openGraph: buildOg(name), alternates: buildAlternates(id) };
   }
 

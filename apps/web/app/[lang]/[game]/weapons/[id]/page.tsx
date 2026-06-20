@@ -114,10 +114,10 @@ export async function generateMetadata({
   const buildWeaponMeta = (name: string, effectDesc: string | undefined, statsLine?: string, hasPassive = true, titleStat?: string) => {
     const statSuffix = titleStat ? ` (${titleStat})` : '';
     const title = locale === 'zh'
-      ? `${name}${statSuffix} — ${gameName}武器攻略 | 属性${hasPassive ? '、技能效果' : ''}与适用角色`
+      ? `${name}${statSuffix} — ${gameName}武器攻略 | 给谁用最好？`
       : locale === 'ja'
-        ? `${name}${statSuffix} — ${gameName}武器データ${hasPassive ? ' | スキル効果とおすすめキャラ' : ' | ステータスとおすすめキャラ'}`
-        : `${name}${statSuffix} — ${gameName} Weapon Stats${hasPassive ? ', Skill Effect &' : '&'} Best Characters`;
+        ? `${name}${statSuffix} — ${gameName}武器評価${hasPassive ? ' | スキルとおすすめキャラ' : ' | おすすめキャラ'}`
+        : `${name}${statSuffix} — Is It Worth It? Best Characters & Builds`;
     let desc: string;
     if (effectDesc && statsLine) {
       desc = `${statsLine}. ${effectDesc}`.slice(0, 160);

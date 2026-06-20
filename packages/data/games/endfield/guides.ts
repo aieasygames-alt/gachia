@@ -13,11 +13,13 @@ export interface EndfieldGuide {
   id: string;
   title: string;
   titleEn: string;
+  titleJa?: string;
   category: string;
   categoryZh: string;
   categoryEn: string;
   summary: string;
   summaryEn: string;
+  summaryJa?: string;
   content: string;
   contentEn: string;
   tags: string[];
@@ -27,7 +29,7 @@ export interface EndfieldGuide {
 export const endfieldGuides: EndfieldGuide[] = rawGuides as unknown as EndfieldGuide[];
 
 export function getEndfieldGuideTitle(guide: EndfieldGuide, locale: SupportedLocale): string {
-  return localeStr(guide.title, guide.titleEn, locale);
+  return localeStr(guide.title, guide.titleEn, locale, guide.titleJa);
 }
 
 export function getEndfieldGuideContent(guide: EndfieldGuide, locale: SupportedLocale): string {
@@ -35,7 +37,7 @@ export function getEndfieldGuideContent(guide: EndfieldGuide, locale: SupportedL
 }
 
 export function getEndfieldGuideSummary(guide: EndfieldGuide, locale: SupportedLocale): string {
-  return localeStr(guide.summary, guide.summaryEn, locale);
+  return localeStr(guide.summary, guide.summaryEn, locale, guide.summaryJa);
 }
 
 export function getEndfieldGuideCategory(guide: EndfieldGuide, locale: SupportedLocale): string {

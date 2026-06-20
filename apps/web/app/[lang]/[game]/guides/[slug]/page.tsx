@@ -187,11 +187,15 @@ export async function generateMetadata({
 
   // Build intent-rich title & description per locale for guides
   const buildGuideMeta = (guideTitle: string, summary: string, gameName: string) => {
-    const title = locale === 'zh'
-      ? `${guideTitle} — ${gameName}攻略详解`
-      : locale === 'ja'
-        ? `${guideTitle} — ${gameName}攻略ガイド`
-        : `${guideTitle} — ${gameName} Complete Guide`;
+    // For long descriptive titles, skip the game-name suffix to stay within SERP display limits
+    const titleSuffix = guideTitle.length > 45
+      ? ''
+      : locale === 'zh'
+        ? ` — ${gameName}攻略详解`
+        : locale === 'ja'
+          ? ` — ${gameName}攻略ガイド`
+          : ` — ${gameName} Guide`;
+    const title = `${guideTitle}${titleSuffix}`;
     const desc = summary
       ? summary.slice(0, 160)
       : locale === 'zh'
