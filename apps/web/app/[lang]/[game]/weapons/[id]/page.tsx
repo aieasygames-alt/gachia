@@ -113,11 +113,12 @@ export async function generateMetadata({
   // Build intent-rich title & description per locale — includes stats in description for SERP CTR
   const buildWeaponMeta = (name: string, effectDesc: string | undefined, statsLine?: string, hasPassive = true, titleStat?: string) => {
     const statSuffix = titleStat ? ` (${titleStat})` : '';
+    const weaponNoun = gameId === 'zzz' ? 'W-Engine' : 'Weapon';
     const title = locale === 'zh'
       ? `${name}${statSuffix} — ${gameName}武器攻略 | 给谁用最好？`
       : locale === 'ja'
         ? `${name}${statSuffix} — ${gameName}武器評価${hasPassive ? ' | スキルとおすすめキャラ' : ' | おすすめキャラ'}`
-        : `${name}${statSuffix} — Is It Worth It? Best Characters & Builds`;
+        : `${name}${statSuffix} — ${gameName} ${weaponNoun}: Stats, Best Characters & Builds`;
     let desc: string;
     if (effectDesc && statsLine) {
       desc = `${statsLine}. ${effectDesc}`.slice(0, 160);
