@@ -46,7 +46,8 @@
       }
     },
     "image": "",
-    "status": "available"
+    "status": "available",
+    "nameJa": "旅人"
   },
   {
     "id": "ais",
@@ -95,14 +96,15 @@
       }
     },
     "image": "",
-    "status": "available"
+    "status": "available",
+    "nameJa": "アイス"
   },
   {
     "id": "nonsense-prophet",
     "number": "3",
     "name": "胡话先知",
     "nameEn": "Nonsense Prophet",
-    "nameJa": "",
+    "nameJa": "戯言の予言者",
     "nickname": "迪洛芮丝",
     "attribute": "cha",
     "attributeEn": "CHA",
@@ -194,14 +196,15 @@
       }
     },
     "image": "",
-    "status": "available"
+    "status": "available",
+    "nameJa": "ソシア"
   },
   {
     "id": "omen-eye",
     "number": "5",
     "name": "预兆之眼",
     "nameEn": "Omen Eye",
-    "nameJa": "",
+    "nameJa": "前兆の瞳",
     "nickname": "英诺森",
     "attribute": "cha",
     "attributeEn": "CHA",
@@ -251,7 +254,7 @@
     "number": "6",
     "name": "鬼手船匠",
     "nameEn": "Ghost Shipwright",
-    "nameJa": "",
+    "nameJa": "幽霊船工匠",
     "nickname": "提姆",
     "attribute": "agi",
     "attributeEn": "AGI",
@@ -301,7 +304,7 @@
     "number": "7",
     "name": "懦夫",
     "nameEn": "Coward",
-    "nameJa": "",
+    "nameJa": "臆病者",
     "nickname": "崔维斯",
     "attribute": "con",
     "attributeEn": "CON",
@@ -351,7 +354,7 @@
     "number": "8",
     "name": "跟屁虫",
     "nameEn": "Tagalong",
-    "nameJa": "",
+    "nameJa": "尾行者",
     "nickname": "里昂",
     "attribute": "agi",
     "attributeEn": "AGI",
@@ -443,14 +446,15 @@
       }
     },
     "image": "",
-    "status": "available"
+    "status": "available",
+    "nameJa": "ハイヘ"
   },
   {
     "id": "watchmaker",
     "number": "10",
     "name": "钟表匠",
     "nameEn": "Watchmaker",
-    "nameJa": "",
+    "nameJa": "時計職人",
     "nickname": "哈里森",
     "attribute": "per",
     "attributeEn": "PER",
@@ -500,7 +504,7 @@
     "number": "11",
     "name": "王女",
     "nameEn": "Princess",
-    "nameJa": "",
+    "nameJa": "王女",
     "nickname": "艾蕾诺尔",
     "attribute": "str",
     "attributeEn": "STR",
@@ -550,7 +554,7 @@
     "number": "12",
     "name": "小斧头",
     "nameEn": "Little Axe",
-    "nameJa": "",
+    "nameJa": "小斧",
     "nickname": "尤利乌斯",
     "attribute": "agi",
     "attributeEn": "AGI",
@@ -642,7 +646,8 @@
       }
     },
     "image": "",
-    "status": "available"
+    "status": "available",
+    "nameJa": "モリー"
   },
   {
     "id": "heige",
@@ -691,7 +696,8 @@
       }
     },
     "image": "",
-    "status": "available"
+    "status": "available",
+    "nameJa": "ハイゲ"
   },
   {
     "id": "edward",
@@ -740,14 +746,15 @@
       }
     },
     "image": "",
-    "status": "available"
+    "status": "available",
+    "nameJa": "エドワード"
   },
   {
     "id": "burnt-colonel",
     "number": "16",
     "name": "焦面上校",
     "nameEn": "Burnt Colonel",
-    "nameJa": "",
+    "nameJa": "焦面の大佐",
     "nickname": "托马斯",
     "attribute": "str",
     "attributeEn": "STR",
@@ -839,14 +846,15 @@
       }
     },
     "image": "",
-    "status": "available"
+    "status": "available",
+    "nameJa": "ゲイル"
   },
   {
     "id": "iron-commander",
     "number": "18",
     "name": "铁腕统领",
     "nameEn": "Iron Commander",
-    "nameJa": "",
+    "nameJa": "鉄腕の統率者",
     "nickname": "莫里斯",
     "attribute": "con",
     "attributeEn": "CON",

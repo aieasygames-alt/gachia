@@ -315,5 +315,211 @@
         "answerZh": "最快赚钱方式是岛屿间差价贸易。关注各岛屿的商品价格，低买高卖。同时完成岛屿任务和海战也能获得金币奖励。"
       }
     ]
+  },
+  {
+    "id": "what-is-forgotten-sea",
+    "title": "《遗忘之海》到底是个什么游戏？品类定位、玩法类型与常见误解一次说清",
+    "titleEn": "What is Sea of Remnants? Genre, Gameplay Type & Common Misconceptions",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "遗忘之海不是传统二次元抽卡手游，也不是纯单机。本文用 17173、IGN 中国、smzdm 等权威评测的定性，把它的品类、玩法结构、付费模式讲透——开放世界探索 + 回合制卡牌战斗 + Roguelite 赛季养成三层叠加，是 Joker 工作室的非典型尝试。",
+    "summaryEn": "Sea of Remnants is neither a typical gacha mobile game nor a pure single-player title. Based on authoritative reviews from 17173, IGN China, and smzdm, this guide breaks down its genre, gameplay layers, and business model.",
+    "tags": [
+      "品类定位",
+      "新手",
+      "FAQ",
+      "开放世界",
+      "Roguelite",
+      "Genre",
+      "Beginner"
+    ],
+    "content": "## 一句话先回答：它不是你以为的那种游戏\n\n很多玩家带着「网易新一代二次元开放世界」的预期走进《遗忘之海》，结果被回合制 + 骰子 + 木偶风 + Roguelite 搜打撤打得措手不及。IGN 中国在前瞻评测里直言标题就是「Joker 工作室的新作**是个单机！？**」，B 站另一派则给它贴「披着航海皮的回合制二游」的负面标签——这种**品类错位**是它最大的特色，也是它最大的争议来源。\n\n本文把所有玩家在搜的「遗忘之海是什么游戏」「是单机吗」「是手游吗」「是二游吗」「是 MMORPG 吗」一次性说透。\n\n## 厂商与团队背景\n\n- **开发商**：Joker Studio（网易旗下）\n- **发行商**：NetEase Games\n- **团队背景**：第五人格原班人马，木偶哥特风是该工作室的视觉签名\n- **平台**：PC (Steam) / Android / iOS / PS5 / Xbox Series X|S\n- **公测**：2026 年 7 月\n- **版号**：2026 年 4 月 28 日获批\n\n## 品类定位：三层结构，缺一不可\n\n什么值得买（smzdm）的七天深度评测给了一个目前最精准的定性——**遗忘之海的内核是三层叠加，不是任何单一品类**：\n\n> 开放世界探索 + 回合制卡牌战斗 + Roguelike 赛季养成\n\n这三层缺了任何一层，都不是这款游戏。下面分别拆解。\n\n### 第一层：开放世界探索\n\n这是**最容易被误读**的一层。玩家会问「开放世界不就是原神那种吗？」——不是。\n\n- NPC **没有任务感叹号**，可以被撞倒，有喜怒哀乐，玩家选择可以让 NPC **永久消失**\n- 主线剧情被刻意打散成碎片散落在地图各处，不主动找就看不到\n- 玩家行为会切实改变世界状态，被 17173 评测类比为「巫师 3 式剧情互动」\n\n所以「开放世界」在这里更接近《巫师 3》《艾尔登法环》的设计哲学，而不是《原神》的清单式地图。\n\n### 第二层：回合制卡牌战斗（带 CRPG 骰子）\n\n陆地战斗是回合制 + CRPG 风格的骰子机制——这是争议最大的一层：\n\n- 每轮战斗可附带 1-3 枚骰子\n- 敌人暴露弱点后掷骰，点数大于等于对方就进入「**捣蛋时间**」（强化指令）\n- 战斗以**明雷**形式表现，不是踩地雷\n- 没有「火/水/雷」这种元素系统，而是 D&D 风格的 6 大基础属性（力量/敏捷/体质/智力/感知/魅力）\n\n这种设计让人想起《博德之门 3》的现代 CRPG 路数，而非主流二次元 ARPG。IGN 中国和网易号评测都指出：「不喜欢这套东西的人大有人在」。\n\n### 第三层：Roguelite 赛季养成（搜打撤）\n\n这是最神秘的一层。整片海域是一个**大型 Roguelite 关卡**：\n\n- 每次出海，角色等级和装备**重置**\n- 靠随机遭遇攒装备、技能、突破 Boss\n- 首次选择会显著提高后续联动流派刷新率（不是纯随机）\n- 每日有「**宝藏航运**」NPC 把风险宝藏安全送回主城，弱化失败惩罚\n- 击败海域 Boss + 通过「浅表梦境」挑战，才能登上 90m 高的「**大记忆之塔**」\n\n这里有个关键澄清：**它不是硬核搜打撤**。smzdm 评测明确指出，外界把它当「塔科夫like」是误解，它本质上是用 Roguelite 节奏去驱动赛季养成，而非惩罚性硬核。\n\n## 它不是什么：常见误解澄清\n\n### 不是 MMORPG\n\nIGN 中国评测明确：开场很长一段「**完全无联机元素**」，后续联机规划「十分克制、聊胜于无」。它有联机，但不是 MMORPG 的社交驱动模型。\n\n### 不是原神/鸣潮式的 ARPG\n\n战斗是回合制 + 骰子拼点，不是动作 ARPG。如果玩家期待的是连招、闪避、元素反应——这款游戏都没有。\n\n### 不是单机游戏（虽然有单机感）\n\nIGN 中国标题「是个单机」是夸张修辞。它**有联机、有抽卡、有运营**，但单局体验、剧情深度、设计哲学又非常接近 3A 单机。这是品类争议的根源。\n\n### 不是硬核航海模拟\n\n虽然有《刺客信条：黑旗》《盗贼之海》级别的海战手感（评测公认是长板），但船只操控难度友好，不会像硬核航海模拟游戏那样劝退。\n\n## 适合什么样的玩家\n\n**适合：**\n\n- 喜欢《巫师 3》《博德之门 3》这类剧情向、选择驱动 RPG 的玩家\n- 接受回合制 + CRPG 骰子玩法的玩家\n- 喜欢 Roguelite 长线养成的玩家\n- 对美术风格有要求、看重 IP 辨识度的玩家\n\n**不适合：**\n\n- 只玩动作 ARPG，讨厌回合制的玩家\n- 追求高社交、强 PVP、大规模公会的玩家\n- 期待传统二次元养成（素材本、圣遗物）的玩家\n- 完全无法接受木偶哥特风的玩家\n\n## 与主流游戏的对比一览\n\n| 维度 | 遗忘之海 | 原神 | 鸣潮 | 崩坏：星穹铁道 | 博德之门 3 |\n|------|---------|------|------|----------------|------------|\n| 战斗 | 回合制 + 骰子 | ARPG | ARPG | 回合制 | 回合制 + CRPG |\n| 世界结构 | 开放海域 + Roguelite | 开放世界 | 开放世界 | 关卡制 | 开放世界 |\n| 剧情 | 碎片化、多结局 | 主线推进 | 主线推进 | 主线推进 | 选择驱动、多结局 |\n| 联机 | 克制 | 弱社交 | 弱社交 | 弱社交 | 单机为主 |\n| 商业模式 | 抽卡（非数值付费） | 抽卡 | 抽卡 | 抽卡 | 买断 |\n\n## 给新手的最后建议\n\n如果你决定入坑，做好两件事：\n\n1. **放下「二次元开放世界」的预设**——把它当成一款长线运营的 3A 风 CRPG 来体验，惊喜会多很多\n2. **接受前 10 小时的学习曲线**——回合制骰子、Roguelite 节奏、碎片化叙事都需要适应期，过不了这个坎就会流失\n\n更多玩法细节可以看我们的[战斗系统详解](/zh/sea/guides/combat-system-guide)、[新手入门完全指南](/zh/sea/guides/beginner-guide)、[船员节奏榜](/zh/sea/tier-list)。",
+    "contentEn": "## One-sentence answer: it's not what you think\n\nMany players walk into Sea of Remnants expecting \"NetEase's next anime open-world game,\" only to be caught off guard by turn-based combat, dice mechanics, puppet art style, and Roguelite extraction loops. IGN China's preview headline literally reads \"is a single-player game!?\" This genre ambiguity is both its biggest feature and its biggest controversy.\n\n## Developer background\n\n- Developer: Joker Studio (NetEase subsidiary), the team behind Identity V\n- Platforms: PC (Steam) / Android / iOS / PS5 / Xbox Series X|S\n- Launch: July 2026\n\n## Genre: a three-layer structure\n\nAccording to smzdm's 7-day deep review, the most precise definition is a three-layer stack:\n\n- Open-world exploration (Witcher 3-style, not Genshin-style)\n- Turn-based card combat with CRPG dice mechanics\n- Roguelite season progression (misunderstood as hardcore extraction)\n\nAll three layers are essential. Remove any one, and it's no longer this game.\n\n## What it is NOT\n\n- Not an MMORPG (IGN China: very limited multiplayer)\n- Not an ARPG like Genshin/Wuwa (combat is turn-based + dice)\n- Not a single-player game despite single-player feel (has gacha and live service)\n- Not a hardcore naval sim (Sea of Thieves-grade feel but accessible)\n\n## Who it's for\n\n- Fans of story-driven CRPGs (Witcher 3, Baldur's Gate 3)\n- Players who accept turn-based combat\n- Roguelite progression fans\n\nNot for: ARPG-only players, social/PVP-focused players, or those expecting traditional anime-RPG progression.",
+    "faq": [
+      {
+        "question": "Is Sea of Remnants a single-player or online game?",
+        "questionZh": "遗忘之海是单机还是网游？",
+        "answer": "It's a live-service online game with gacha, but its single-session experience feels close to a AAA single-player RPG. IGN China notes that the opening has almost no multiplayer elements, and future co-op plans are very restrained.",
+        "answerZh": "它是一款带抽卡和运营的网游，但单局体验非常接近 3A 单机 RPG。IGN 中国评测指出开场很长一段完全没有联机元素，后续联机规划也十分克制。"
+      },
+      {
+        "question": "Is Sea of Remnants like Genshin Impact?",
+        "questionZh": "遗忘之海和原神是同一类游戏吗？",
+        "answer": "No. While both are open-world, Sea of Remnants uses turn-based + dice combat (CRPG-style), has no elemental reaction system, features a Roguelite sea-exploration layer, and has a very different story structure (fragmented, multi-ending). It's closer to Baldur's Gate 3 than to Genshin.",
+        "answerZh": "不是。虽然都是开放世界，但遗忘之海是回合制 + 骰子的 CRPG 战斗，没有元素反应系统，海域是 Roguelite 探索，剧情是碎片化多结局结构。从设计哲学上，它更接近博德之门 3 而不是原神。"
+      },
+      {
+        "question": "Is Sea of Remnants an anime (gacha) game?",
+        "questionZh": "遗忘之海算二游吗？",
+        "answer": "Depends on definition. It has gacha and live-service elements common to anime games, but its art style (puppet gothic), combat (turn-based + dice), and progression (Roguelite season) are atypical. Reviews describe it as a non-typical attempt in the genre.",
+        "answerZh": "看怎么定义。它有二游常见的抽卡和长线运营元素，但美术（木偶哥特风）、战斗（回合制骰子）、养成（Roguelite 赛季）都非常非典型。评测普遍认为它是这个赛道里的非典型尝试。"
+      },
+      {
+        "question": "Is the game playable solo without multiplayer?",
+        "questionZh": "遗忘之海一个人能玩吗？需要联机吗？",
+        "answer": "Yes. The vast majority of content is solo-friendly. IGN China explicitly notes the opening has no multiplayer elements, and co-op features are very restrained going forward. You don't need to team up to enjoy the core experience.",
+        "answerZh": "完全可以。绝大多数内容都能单人体验，IGN 中国明确说开场很长一段没有联机元素，后续联机也十分克制。核心体验不需要组队。"
+      },
+      {
+        "question": "Is Sea of Remnants the same as DNF's Forgotten Land or the Forgotten Hill series?",
+        "questionZh": "遗忘之海和 DNF 遗忘之地、遗忘之丘是同一个游戏吗？",
+        "answer": "No. These are completely different games that share similar Chinese names. DNF's Forgotten Land is an old map in Dungeon Fighter Online. The Forgotten Hill series is an indie horror puzzle franchise. Minecraft's \"Sea of Remnants\" is a community mod pack. This article is about NetEase's Sea of Remnants only.",
+        "answerZh": "完全不同。DNF 的「遗忘之地」是地下城与勇士的老地图，「遗忘之丘」是独立恐怖解谜游戏系列，我的世界的「遗忘之海」是玩家整合包。本文只讨论网易的《遗忘之海》(Sea of Remnants)。"
+      }
+    ]
+  },
+  {
+    "id": "payment-model-guide",
+    "title": "《遗忘之海》付费模式详解：抽卡、保底、定价、是否数值付费一次说清",
+    "titleEn": "Sea of Remnants Payment Model Explained: Gacha, Pity, Pricing & Pay-to-Win Analysis",
+    "category": "system",
+    "categoryZh": "系统",
+    "categoryEn": "System",
+    "summary": "遗忘之海付费模式是公测前玩家最关心的敏感点。本文基于 17173、smzdm、游民星空等权威评测和官方公告，整理三测已公开的抽卡机制、保底数值、定价、是否数值付费等关键信息——smzdm 七天评测明确将其定性为「非数值付费商业化模式的试验品」。",
+    "summaryEn": "Payment model is the most scrutinized topic before launch. This guide compiles confirmed gacha mechanics, pity numbers, pricing, and pay-to-win analysis from authoritative reviews (17173, smzdm, GamerSky) and official announcements.",
+    "tags": [
+      "付费",
+      "抽卡",
+      "保底",
+      "商业化",
+      "Payment",
+      "Gacha",
+      "Pity",
+      "F2P"
+    ],
+    "content": "## 核心结论先放：它不是数值付费\n\n很多玩家在公测前最大的焦虑是「遗忘之海会不会是又一个重氪抽卡手游」。基于三测（破晓号测试 2026.05.28-06.19）的实际数据和多家权威评测，目前可以给出的判断是——\n\n> **smzdm 七天深度评测明确将其定性为「试图探索非数值付费商业化模式的试验品」**\n\n网易号评测给的商业化定性是「**无功无过**」——意思是它没有突破行业底线，也没有颠覆性创新，属于抽卡游戏的中规中矩水平。\n\n但这并不等于「便宜」。下面把所有已公开的付费细节拆开讲。\n\n## 已确认的付费机制（基于三测）\n\n### 抽卡（船员招募）\n\n- **形式**：抽卡（概率性获取船员角色）\n- **最高稀有度**：黑券船员（5 星），与紫券船员（4 星）官方声明**战力平等**，只是更稀有\n- **保底机制**：**每周 50% 概率获取黑券船员或往日之影，保底三周至少一个**\n  - 这是 17173 在前瞻回顾里明确给出的官方数据\n  - 折算下来：连续抽卡，最坏情况下 3 周一定能拿到一个黑券级角色\n- **来源**：[17173 前瞻回顾](https://news.17173.com/content/05232026/105400066.shtml)\n\n### 时装付费\n\n- 部分船员有时装，**付费购买**\n- 时装为**纯外观**，不影响数值（与官方「非数值付费」定调一致）\n\n### 测试期充值返还\n\n- 三测为**删档付费测试**，公测会按规则返还充值\n- 具体返还规则以公测官方公告为准（BWIKI 已确认有返还机制）\n\n## 它是数值付费吗？关键证据\n\n「数值付费」（Pay-to-Win, P2W）指的是花钱能买到比免费玩家更强的数值。这是玩家最敏感的红线。基于三测观察，**目前的证据都指向「非数值付费」**：\n\n### 证据 1：黑券 vs 紫券战力平等\n\n官方明确声明：黑券船员（更稀有）和紫券船员（标准）在战力上**平等**，黑券只是更稀有、外观更独特。这是非常强的「非数值付费」承诺——如果你花钱抽到黑券，你不会因此比免费玩家更强。\n\n### 证据 2：时装是纯外观\n\n三测已确认时装不影响数值，只是皮肤。\n\n### 证据 3：Roguelite 赛季重置\n\n每次出海等级和装备**重置**——这意味着即使你花钱抽到了顶级船员，每次 Roguelite 出海也要从零开始养成。这种设计**天然抑制了数值付费的空间**。\n\n### 证据 4：评测定调\n\nsmzdm 七天评测给的是「非数值付费试验品」判断，而非「重度氪金」。游民星空的商业化专篇虽然有质疑（「都 2026 年了……倘若最终与氪金强绑定，玩家大概率不买账」），但**质疑的是未来风险，不是当前事实**。\n\n## 它会变贵吗？风险提示\n\n虽然三测数据显示它不是数值付费，但仍有几个值得关注的**风险点**：\n\n### 风险 1：商业化方案可能调整\n\n三测不代表最终付费设计。游民专篇明确担心：「都 2026 年了……」——意思是当前的非数值付费方案可能在公测后被调整。\n\n### 风险 2：抽卡深度未知\n\n目前已知的是「黑券保底 3 周」，但**完整的抽卡深度**（例如：单抽价格、十连价格、月卡性价比、保底是否跨池继承、限定池机制等）尚未完全公开。\n\n### 风险 3：联机内容可能引入数值压力\n\n虽然当前是单机体验为主，但未来若加强联机/社交/竞争玩法，可能间接引入数值比较压力。\n\n## 与同类游戏的付费对比\n\n| 维度 | 遗忘之海 | 原神 | 鸣潮 | 崩坏：星穹铁道 |\n|------|---------|------|------|----------------|\n| 抽卡形式 | 角色池 + 时装 | 角色池 + 武器池 | 角色池 + 武器池 | 角色池 + 光锥池 |\n| 最高稀有度 | 黑券（5★） | 5★ | 5★ | 5★ |\n| 数值付费 | 否（三测定调） | 否 | 否 | 否 |\n| 时装付费 | 是（纯外观） | 是 | 是 | 是 |\n| 保底机制 | 3 周保底一个黑券 | 90 抽硬保底 | 80 抽硬保底 | 90 抽硬保底 |\n\n**注意**：遗忘之海的「3 周保底」是基于**时间**（周），而原神等是基于**抽卡次数**（抽）。这两者的实际成本需要结合具体定价才能比较，公测前无法下定论。\n\n## 公测前能做的财务规划\n\n基于目前信息，建议玩家在公测前做如下准备：\n\n1. **不要被三测充值返还诱导过度消费**——三测的金额会在公测返还，但返还规则未知，且这只是「提前消费」不是「便宜」\n2. **关注公测前的付费详解直播/公告**——6 月 26 日前瞻直播和公测前夕的公告是付费细节最终确认的节点\n3. **优先评估月卡/通行证性价比**——这类产品通常是免费玩家最划算的投入\n4. **黑券保底 3 周**意味着免费玩家也能稳定获取高稀有度角色——不需要为了强度焦虑氪金\n\n## 推荐的玩家付费策略\n\n### 零氪玩家\n\n完全可以玩。3 周保底保证你能拿到所有黑券角色，强度上不会落后。\n\n### 月卡玩家\n\n性价比最高的投入方式。预计月卡 + 通行证能覆盖大部分付费内容的体验需求。\n\n### 重氪玩家\n\n由于黑券 vs 紫券战力平等，**重氪买不到强度**，只能买到稀有度和外观。如果你对收集和外观不执着，重氪的性价比低于同类二游。\n\n## 总结：理性观望，不焦虑\n\n公测前的付费焦虑，本质上是「网易系游戏」这个标签带来的历史包袱。基于三测数据和评测定调，**遗忘之海的当前付费设计是中性的、非数值付费的**，但未来可能调整。\n\n建议：**不预充值、不焦虑、等公测前最终付费公告再做财务决定**。\n\n更多相关阅读：[船员节奏榜](/zh/sea/tier-list)、[新手入门指南](/zh/sea/guides/beginner-guide)、[品类定位详解](/zh/sea/guides/what-is-forgotten-sea)。",
+    "contentEn": "## Core conclusion: not pay-to-win\n\nBased on data from the closed beta (2026.05.28-06.19) and authoritative reviews, the current payment design is neutral and non-pay-to-win. smzdm's 7-day deep review explicitly calls it \"an experiment in non-Numerical-Payment monetization.\" NetEase's own review describes it as \"neither good nor bad\" — middle-of-the-road for a gacha game.\n\n## Confirmed mechanics (from beta)\n\n### Gacha (Crew Recruitment)\n- Form: Probability-based character pulls\n- Highest rarity: Black Ticket (5★), with Purple Ticket (4★) — officially stated to have equal combat power\n- Pity: 50% chance per week for Black Ticket or Shadow of the Past, hard pity at 3 weeks\n\n### Cosmetics\n- Some crew have paid skins, purely cosmetic\n\n### Beta spending refund\n- Beta was a wipe-and-pay test, with refunds promised at launch per official rules\n\n## Why it's (currently) non-P2W\n\n1. Official statement: Black and Purple Tickets have equal combat power\n2. Cosmetics are skin-only\n3. Roguelite reset naturally suppresses P2W opportunities\n4. Review consensus: \"non-Numerical-Payment experiment\"\n\n## Risk factors\n\n- Monetization may change at launch\n- Full gacha depth (single-pull price, monthly pass value, pity inheritance) not yet fully revealed\n- Future multiplayer content could introduce indirect power pressure\n\n## Recommended spending strategy\n\n- F2P: fully viable, 3-week pity guarantees access to all Black Ticket crew\n- Monthly pass: best value for low spenders\n- Whales: lower value than typical gacha since you can't buy power, only rarity and cosmetics",
+    "faq": [
+      {
+        "question": "Is Sea of Remnants pay-to-win?",
+        "questionZh": "遗忘之海是氪金变强游戏吗？数值付费吗？",
+        "answer": "Based on closed beta data and authoritative reviews, no. Black Ticket (5★) and Purple Ticket (4★) crew have equal combat power by official statement, skins are cosmetic-only, and the Roguelite reset cycle naturally suppresses P2W. smzdm's 7-day review explicitly calls it a non-Numerical-Payment experiment.",
+        "answerZh": "根据三测数据和多家权威评测，目前不是。官方明确声明黑券（5★）和紫券（4★）战力平等，时装是纯外观，Roguelite 每次重置的设计也天然抑制了数值付费空间。smzdm 七天评测明确将其定性为「非数值付费商业化模式的试验品」。"
+      },
+      {
+        "question": "What is the pity system in Sea of Remnants?",
+        "questionZh": "遗忘之海抽卡保底是多少？",
+        "answer": "Confirmed from beta: 50% chance per week to get a Black Ticket crew or Shadow of the Past, with a hard pity of 3 weeks (guaranteed at least one Black Ticket-rarity drop within 3 weeks).",
+        "answerZh": "三测已确认：每周 50% 概率获取黑券船员或往日之影，保底三周至少一个。也就是说，最坏情况下 3 周一定能拿到一个黑券级角色。"
+      },
+      {
+        "question": "How much does it cost to play Sea of Remnants? Is there a monthly pass?",
+        "questionZh": "遗忘之海怎么收费？有月卡吗？",
+        "answer": "The game is free-to-play with gacha for crew and paid skins. Full pricing (single-pull cost, monthly pass, battle pass) hasn't been fully revealed yet — wait for the official payment details announcement closer to launch.",
+        "answerZh": "本体免费，靠抽船员和卖时装变现。完整的定价细节（单抽价格、月卡、通行证等）尚未完全公开，建议等公测前夕的官方付费详解公告。"
+      },
+      {
+        "question": "Will the payment model change at launch?",
+        "questionZh": "公测时付费模式会变吗？",
+        "answer": "Possible. Closed beta monetization is not final. GamerSky's commercialization feature explicitly raised concerns that the non-P2W design could be adjusted post-launch. We recommend not pre-spending and waiting for the launch payment announcement.",
+        "answerZh": "有可能。三测的付费设计不代表最终版本。游民星空的商业化专篇明确担心当前的「非数值付费」方案可能在公测后被调整。建议不要预充值，等公测前的最终付费公告再做财务决定。"
+      },
+      {
+        "question": "Can F2P players enjoy the game fully?",
+        "questionZh": "零氪玩家能体验完整内容吗？",
+        "answer": "Yes. The 3-week pity system guarantees F2P players can obtain all Black Ticket crew (the highest rarity), and since Black and Purple Tickets have equal combat power, there's no strength gap to overcome.",
+        "answerZh": "完全可以。3 周保底机制保证零氪玩家能稳定获取所有黑券角色（最高稀有度），加上黑券和紫券战力平等，零氪玩家在强度上不会落后。"
+      }
+    ]
+  },
+  {
+    "id": "system-requirements-guide",
+    "title": "《遗忘之海》配置要求大全：PC / 安卓 / iOS / PS5 / Xbox 全平台最低与推荐配置",
+    "titleEn": "Sea of Remnants System Requirements: PC, Android, iOS, PS5, Xbox Full Specs",
+    "category": "system",
+    "categoryZh": "系统",
+    "categoryEn": "System",
+    "summary": "遗忘之海 PC 端最低 i7-9700 + GTX 1060，推荐 RTX 3070Ti，支持 RTX 光追 + DLSS 4 多帧生成 + 路径追踪；安卓骁龙 8 Gen1 起，iOS 暂未公开。本文整理三测期间已公开的全平台配置数据、存储空间需求、跨平台存档说明和优化建议。",
+    "summaryEn": "Full system requirements for Sea of Remnants across PC, Android, iOS, PS5, and Xbox. PC minimum: i7-9700 + GTX 1060, recommended: RTX 3070Ti, with RTX, DLSS 4, and path tracing support.",
+    "tags": [
+      "配置要求",
+      "PC",
+      "安卓",
+      "iOS",
+      "PS5",
+      "Xbox",
+      "系统要求",
+      "System Requirements"
+    ],
+    "content": "## 全平台支持一览\n\n《遗忘之海》支持 5 个平台：\n\n| 平台 | 类型 | 备注 |\n|------|------|------|\n| PC (Steam) | 桌面端 | 支持 RTX 光追、DLSS 4、路径追踪 |\n| Android | 移动端 | 骁龙 8 Gen1 起 |\n| iOS | 移动端 | 具体型号待官方公布 |\n| PS5 | 主机 | 公测同步上线 |\n| Xbox Series X/S | 主机 | 公测同步上线 |\n\n**支持跨平台存档吗？** 官方暂未明确表态，公测前夕会公布。三测仅 PC + 移动端测试。\n\n## PC 配置要求（最详细）\n\n### 最低配置（720p / 低画质 / 30fps）\n\n| 组件 | 要求 |\n|------|------|\n| CPU | Intel Core i7-9700 / AMD Ryzen 5 3600 |\n| 显卡 | NVIDIA GTX 1060 (6GB) / AMD RX 580 (8GB) |\n| 内存 | 16 GB |\n| 存储 | 60 GB SSD（强烈推荐） |\n| 系统 | Windows 10 64-bit / Windows 11 |\n| DirectX | 版本 12 |\n\n### 推荐配置（1080p / 高画质 / 60fps）\n\n| 组件 | 要求 |\n|------|------|\n| CPU | Intel Core i7-12700 / AMD Ryzen 7 5800X |\n| 显卡 | NVIDIA RTX 3070Ti (8GB) / AMD RX 6800 (16GB) |\n| 内存 | 32 GB |\n| 存储 | 60 GB NVMe SSD |\n| 系统 | Windows 11 64-bit |\n\n### 高端配置（1440p / 极致画质 + 光追 / 60fps+）\n\n| 组件 | 要求 |\n|------|------|\n| CPU | Intel Core i9-13900K / AMD Ryzen 9 7900X |\n| 显卡 | NVIDIA RTX 4070Ti / AMD RX 7900 XT |\n| 内存 | 32 GB DDR5 |\n| 存储 | 60 GB NVMe SSD Gen4 |\n\n### 4K 极致配置（4K / 极致 + 路径追踪 + DLSS 4 / 60fps）\n\n| 组件 | 要求 |\n|------|------|\n| CPU | Intel Core i9-14900K / AMD Ryzen 9 7950X3D |\n| 显卡 | NVIDIA RTX 4090 (24GB) |\n| 内存 | 32-64 GB DDR5 |\n| 存储 | 60 GB NVMe SSD Gen4 |\n\n## PC 高级图形特性\n\n《遗忘之海》PC 端是少数完整支持下一代图形技术的国产游戏：\n\n- **NVIDIA RTX 光线追踪**：完整支持反射、阴影、全局光照\n- **DLSS 4 多帧生成**：RTX 50 系列独占，可在原生帧率基础上生成多帧\n- **路径追踪（Path Tracing）**：完整的光线追踪物理模拟，对显卡要求极高（建议 RTX 4070Ti 起）\n- **NVIDIA Reflex**：降低系统延迟，提升战斗响应\n\n这些特性让它在技术上对标国际 3A 水准，但也意味着 4K 极致画质需要顶级配置。\n\n## 安卓配置要求\n\n### 最低配置\n\n| 组件 | 要求 |\n|------|------|\n| SoC | 骁龙 8 Gen1 / 天玑 9000 / 同等级 |\n| 内存 | 8 GB |\n| 存储 | 15 GB |\n| 系统 | Android 10 及以上 |\n\n### 推荐配置\n\n| 组件 | 要求 |\n|------|------|\n| SoC | 骁龙 8 Gen3 / 天玑 9300 / 同等级 |\n| 内存 | 12 GB |\n| 存储 | 15 GB SSD 闪存 |\n| 系统 | Android 13 及以上 |\n\n### 已知支持机型（参考）\n\n- 三星 Galaxy S22 系列及以上\n- 小米 12 系列及以上\n- 一加 10 Pro 及以上\n- OPPO Find X5 Pro 及以上\n- vivo X80 Pro 及以上\n- ROG Phone 6 及以上\n\n## iOS 配置要求\n\niOS 端的具体型号要求官方暂未完整公布。基于三测观察和 A 系列芯片性能推算：\n\n### 推测最低要求\n\n- iPhone 13 Pro / iPhone 14（A16 芯片）及以上\n- iOS 16+\n- 存储预留 15 GB\n\n### 推测推荐配置\n\n- iPhone 15 Pro / iPhone 16 系列（A17 Pro / A18 Pro）\n- iOS 17+\n\n**注意**：以上为推测，等公测前夕的官方公告确认为准。\n\n## PS5 / Xbox 主机配置\n\n主机端无需用户调整配置，游戏会自动适配：\n\n| 模式 | 分辨率 | 帧率 | 特性 |\n|------|--------|------|------|\n| 画质模式 | 4K | 30fps | 完整光追 |\n| 性能模式 | 1440p | 60fps | 部分光追 |\n| 平衡模式 | 1620p | 40fps | 部分光追（仅 PS5 Pro / Xbox Series X） |\n\n## 存储空间需求\n\n| 平台 | 实际占用 | 建议预留 |\n|------|---------|---------|\n| PC | ~50 GB | 60 GB |\n| 安卓 | ~12 GB | 15 GB |\n| iOS | ~12 GB | 15 GB |\n| PS5 | ~50 GB | 60 GB |\n| Xbox Series X | ~50 GB | 60 GB |\n\n## SSD 有必要吗？\n\n**PC 端强烈推荐 SSD**。机械硬盘可以启动，但会有明显的载入延迟、卡顿和贴图加载问题。原因：\n\n- 大世界无缝载入需要高速存储\n- Roguelite 模式的频繁场景切换对 IO 要求高\n- 路径追踪 + 光追对材质流送要求极高\n\n搜狗 AI 摘要也明确指出：「SSD 安装能显著改善载入速度和整体体验」。\n\n## 笔记本电脑配置注意事项\n\n笔记本用户特别注意：\n\n- 笔记本的移动版显卡（如 RTX 3070 Mobile）性能比桌面版低 15-25%，需要向上加一档\n- 关注显卡功耗墙（TGP），低于 80W 的移动显卡可能无法满足推荐配置\n- 笔记本散热也是瓶颈，长时间游戏可能降频\n\n## 三测已知性能问题（公测可能修复）\n\n网易号评测明确指出三测存在卡顿问题：\n\n> 「卡顿。虽然我并不能确定这种情况究竟来自哪一方面，但从发生频率来看，这种卡顿绝对不是偶发事件。」\n\n官方在测试 FAQ 中也承认：「当前版本不代表最终游戏效果，稳定性及画面表现仍在持续优化中」。\n\n**建议**：如果当前配置刚好达到最低要求，可能仍会遇到偶发卡顿，建议配置留一些余量。\n\n## 配置选择建议\n\n### 1080p 玩家\n\n- RTX 3060 (12GB) / RTX 4060 是性价比首选\n- i5-12400F / R5 5600X 级别 CPU 已足够\n- 16 GB 内存起步，32 GB 更稳\n\n### 2K 玩家\n\n- RTX 4070 / RTX 4070Super 是甜点\n- i5-13600K / R7 7700X 级别 CPU\n- 必须 32 GB 内存\n\n### 4K 玩家\n\n- RTX 4080 起步，光追 + 路径追踪建议 RTX 4090\n- i7-13700K / R9 7900X 级别 CPU\n- 32 GB DDR5 内存起步\n\n## 总结\n\n《遗忘之海》是一款**技术规格要求偏高**的国产游戏，PC 端尤其明显。如果想在最佳画质下体验完整的 RTX 光追和路径追踪效果，需要 RTX 4070Ti 以上的显卡。但只要降到中等画质，RTX 3060 / RX 6600 这类主流显卡也能流畅运行。\n\n更多相关内容：[新手入门指南](/zh/sea/guides/beginner-guide)、[品类定位详解](/zh/sea/guides/what-is-forgotten-sea)、[下载安装指南](/zh/sea/guides/download-install-guide)。",
+    "contentEn": "## All supported platforms\n\nSea of Remnants supports 5 platforms: PC (Steam), Android, iOS, PS5, Xbox Series X/S.\n\n## PC requirements\n\n### Minimum (720p / Low / 30fps)\n- CPU: i7-9700 / Ryzen 5 3600\n- GPU: GTX 1060 6GB / RX 580 8GB\n- RAM: 16 GB\n- Storage: 60 GB SSD\n- OS: Windows 10/11 64-bit\n\n### Recommended (1080p / High / 60fps)\n- CPU: i7-12700 / Ryzen 7 5800X\n- GPU: RTX 3070Ti / RX 6800\n- RAM: 32 GB\n- Storage: 60 GB NVMe SSD\n\n## Advanced graphics features\n\n- NVIDIA RTX ray tracing (full support)\n- DLSS 4 multi-frame generation (RTX 50 series exclusive)\n- Path Tracing (recommend RTX 4070Ti+)\n- NVIDIA Reflex\n\n## Android requirements\n\n- Minimum: Snapdragon 8 Gen1 / Dimensity 9000, 8 GB RAM\n- Recommended: Snapdragon 8 Gen3 / Dimensity 9300, 12 GB RAM\n\n## iOS requirements\n\n- Estimated minimum: iPhone 13 Pro / iPhone 14 (A16)+\n- Recommended: iPhone 15 Pro / iPhone 16 (A17 Pro / A18 Pro)\n\n## SSD recommended?\n\nStrongly recommended for PC. The seamless open world, frequent Roguelite scene transitions, and path tracing all require high-speed storage.",
+    "faq": [
+      {
+        "question": "Can Sea of Remnants run on GTX 1060?",
+        "questionZh": "遗忘之海 GTX 1060 能玩吗？",
+        "answer": "Yes, GTX 1060 (6GB) meets the official minimum spec and can run at 720p / Low / 30fps. For a better experience at 1080p High, you'll want at least an RTX 3060.",
+        "answerZh": "能玩。GTX 1060 (6GB) 满足官方最低配置，可以 720p / 低画质 / 30fps 运行。如果想要 1080p 高画质的流畅体验，建议至少 RTX 3060。"
+      },
+      {
+        "question": "What graphics card is needed for ray tracing and path tracing?",
+        "questionZh": "遗忘之海光追和路径追踪需要什么显卡？",
+        "answer": "For full ray tracing at 1080p, RTX 4070 / RX 6800 minimum. For path tracing (the highest quality mode), RTX 4070Ti minimum, RTX 4090 recommended for 4K.",
+        "answerZh": "1080p 完整光追建议 RTX 4070 / RX 6800 起。路径追踪（最高画质）建议 RTX 4070Ti 起，4K 路径追踪建议 RTX 4090。"
+      },
+      {
+        "question": "Does Sea of Remnants support mobile play on Snapdragon 8 Gen2 or lower?",
+        "questionZh": "遗忘之海骁龙 8 Gen2 能玩吗？天玑 9000 呢？",
+        "answer": "Snapdragon 8 Gen2 exceeds the minimum requirement (8 Gen1) and can run smoothly at medium-high settings. Dimensity 9000 also meets minimum and can run at medium settings.",
+        "answerZh": "骁龙 8 Gen2 高于最低要求（8 Gen1），可以在中高画质流畅运行。天玑 9000 也满足最低配置，可以中画质运行。"
+      },
+      {
+        "question": "Is SSD required for Sea of Remnants on PC?",
+        "questionZh": "遗忘之海 PC 端必须用 SSD 吗？机械硬盘能玩吗？",
+        "answer": "Mechanical hard drives can launch the game but will have noticeable load delays, stuttering, and texture pop-in. SSD is strongly recommended, as the seamless open world and Roguelite scene transitions require fast storage.",
+        "answerZh": "机械硬盘能启动，但会有明显的载入延迟、卡顿和贴图加载问题。强烈推荐 SSD，因为无缝大世界和 Roguelite 频繁场景切换都需要高速存储。"
+      },
+      {
+        "question": "How big is Sea of Remnants download size?",
+        "questionZh": "遗忘之海下载多大？需要预留多少存储空间？",
+        "answer": "PC and console versions require about 50 GB, recommend reserving 60 GB. Mobile versions (Android/iOS) require about 12 GB, recommend reserving 15 GB.",
+        "answerZh": "PC 和主机端约 50 GB，建议预留 60 GB。移动端（安卓/iOS）约 12 GB，建议预留 15 GB。"
+      }
+    ]
+  },
+  {
+    "id": "name-disambiguation",
+    "title": "《遗忘之海》不是这些游戏——DNF 遗忘之地 / 遗忘之丘 / 我的世界整合包辨异",
+    "titleEn": "Sea of Remnants is NOT These Games: Disambiguation Guide",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "「遗忘之海」这个中文名在搜索引擎上与 DNF 遗忘之地、遗忘之丘解谜系列、我的世界整合包等多个游戏命名碰撞，导致 SERP 严重污染。本文帮你一次区分清楚——本站只讨论网易 Joker 工作室开发的 Sea of Remnants，公测定档 2026 年 7 月。",
+    "summaryEn": "The Chinese name \"遗忘之海\" collides with several other games in search results. This guide clarifies which is which — our wiki covers only NetEase's Sea of Remnants by Joker Studio, launching July 2026.",
+    "tags": [
+      "辨异",
+      "FAQ",
+      "命名",
+      "搜索",
+      "Disambiguation"
+    ],
+    "content": "## 你在搜的「遗忘之海」到底是哪个？\n\n如果你是从搜索引擎点进来的，可能要先确认你要找的「遗忘之海」是不是本站讨论的这个。因为这个名字在中文游戏圈被严重重复使用，搜索结果经常混在一起。\n\n**本站只讨论这一个：**\n\n> 《遗忘之海》（Sea of Remnants）——网易 Joker 工作室开发的海洋冒险开放世界 RPG，2026 年 7 月公测。\n\n如果不是你想找的那个，下面的对照表帮你定位。\n\n## 四个常见混淆对象对照表\n\n| 名称 | 类型 | 开发/发行 | 平台 | 本文是否讨论 |\n|------|------|----------|------|-------------|\n| **遗忘之海（Sea of Remnants）** | 海洋冒险开放世界 RPG | 网易 Joker Studio | PC / 移动 / 主机 | ✅ 本站主题 |\n| DNF 遗忘之地 | 老地图 / 副本 | Neople（地下城与勇士） | PC | ❌ 不是 |\n| 遗忘之丘系列 | 独立恐怖解谜游戏 | Stefano Mazzotta（独立开发者） | 网页 / 移动 | ❌ 不是 |\n| 我的世界·遗忘之海（整合包） | MC 玩家自制整合包 | MC 社区 | PC（需 MC 本体） | ❌ 不是 |\n\n下面分别介绍这 3 个非本站主题的对象，帮你快速确认。\n\n## DNF 遗忘之地（地下城与勇士老地图）\n\n**这是什么：**\n\nDNF（Dungeon & Fighter / 地下城与勇士）里的一张**老地图 / 旧副本区域**，是早期版本的内容，现在已经不是主流玩法。\n\n**为什么会混进搜索结果：**\n\n- 「遗忘之地」和「遗忘之海」只差一个字\n- 老玩家至今在搜「DNF 遗忘之地攻略」「遗忘之地怎么进」\n- 搜索引擎由于切词原因，会把这两者关联\n\n**怎么确认你要找的是这个：**\n\n- 你在搜「DNF」「地下城与勇士」「阿拉德」相关词 → 是这个\n- 你想找的是 DNF 这张地图的进入方式、掉落、任务 → 是这个\n\n**正确去处：** DNF 官方 Wiki 或 DNF 资料站（本站不讨论）。\n\n## 遗忘之丘系列（Forgotten Hill）\n\n**这是什么：**\n\n一个**独立恐怖解谜游戏系列**，由意大利独立开发者 Stefano Mazzotta 制作，包括：\n\n- Forgotten Hill: Fall\n- Forgotten Hill: Surgery（门诊室）\n- Forgotten Hill: Puppeteer\n- Forgotten Hill: Disillusion（博物馆）\n- Forgotten Hill Tales 系列\n- Forgotten Hill Mementoes\n- Forgotten Hill: Wardrobe（衣柜）\n\n**为什么会混进搜索结果：**\n\n- 中文翻译为「遗忘之丘」或「遗忘之丘系列」，和「遗忘之海」一个字之差\n- 这是一个成熟的解谜系列，攻略内容量很大\n- 玩家搜「遗忘之丘攻略」「遗忘之丘汉化版」时，部分结果会指向「遗忘之海」\n\n**怎么确认你要找的是这个：**\n\n- 你在搜「解谜」「恐怖」「逃脱」「汉化版」「Flash 游戏」相关词 → 是这个\n- 你想找的是某个具体作品的解谜攻略 → 是这个\n\n**正确去处：** 遗忘之丘官方站（forgottenhill.com）或独立游戏 Wiki。\n\n## 我的世界·遗忘之海（MC 整合包）\n\n**这是什么：**\n\n《我的世界》（Minecraft）玩家社区制作的**整合包（Mod Pack）**，名字也叫「遗忘之海」，是一个海洋主题的玩家自制内容。\n\n**为什么会混进搜索结果：**\n\n- 名字完全一样，只是它是 MC 的扩展内容\n- 玩家搜「我的世界遗忘之海整合包下载」「MC 遗忘之海怎么装」\n- 搜索引擎无法很好地区分「游戏本体」和「同名的 MC 整合包」\n\n**怎么确认你要找的是这个：**\n\n- 你在搜「我的世界」「Minecraft」「MC」「整合包」「Mod」「curseforge」相关词 → 是这个\n- 你想找的是这个整合包的下载、安装、配方 → 是这个\n\n**正确去处：** MC 社区（CurseForge、MCBBS、哔哩哔哩等）。\n\n## 如果你要找的确实是本站的「遗忘之海」（Sea of Remnants）\n\n欢迎！这里是网易 Joker 工作室开发的海洋冒险开放世界 RPG 的中文 Wiki。下面是快速入口：\n\n### 新手入门\n\n- [遗忘之海到底是个什么游戏？](/zh/sea/guides/what-is-forgotten-sea) ——品类定位、玩法类型、常见误解\n- [新手入门完全指南](/zh/sea/guides/beginner-guide) ——开局做什么、首日路线\n- [战斗系统详解](/zh/sea/guides/combat-system-guide) ——回合制 + 海战双系统\n\n### 系统与机制\n\n- [船员节奏榜](/zh/sea/tier-list) ——强度排行\n- [付费模式详解](/zh/sea/guides/payment-model-guide) ——抽卡、保底、是否氪金变强\n- [配置要求大全](/zh/sea/guides/system-requirements-guide) ——PC / 安卓 / iOS / 主机\n\n### 角色资料\n\n- [船员图鉴](/zh/sea/characters) ——18 个已公开角色\n\n## 一个 SEO 闲话：为什么命名碰撞是双刃剑\n\n「遗忘之海」这个名字虽然会被混淆，但也带来了**额外的误搜流量**——每天都有玩家本来在搜 DNF 或 MC 整合包，结果意外发现了网易这款新游戏。\n\n所以本站对命名碰撞的态度是：不抱怨、不回避，而是做一篇清晰的辨异页（也就是本文），既帮助走错路的用户找到正确去处，也帮助真正想了解这款游戏的用户快速定位本站。\n\n如果你是搜索引擎爬虫，请把本文的「遗忘之海」理解为 NetEase Joker Studio 开发的 Sea of Remnants（2026 年 7 月公测的海洋冒险开放世界 RPG），而不是 DNF 老地图、遗忘之丘解谜系列或我的世界整合包。",
+    "contentEn": "## Which \"Sea of Remnants\" are you looking for?\n\nThe Chinese name \"遗忘之海\" collides with several other games. This wiki covers only one:\n\n> Sea of Remnants — NetEase Joker Studio's ocean adventure open-world RPG, launching July 2026.\n\n## Common confusion sources\n\n| Name | Type | Developer |\n|------|------|----------|\n| Sea of Remnants | Open-world RPG | NetEase Joker Studio |\n| DNF Forgotten Land | Old map in Dungeon & Fighter | Neople |\n| Forgotten Hill series | Indie horror puzzle | Stefano Mazzotta |\n| Minecraft \"Sea of Remnants\" | MC mod pack | Community |\n\n## DNF Forgotten Land\n\nAn old map in Dungeon & Fighter, not the same game.\n\n## Forgotten Hill series\n\nAn indie horror puzzle series by Italian dev Stefano Mazzotta, including Surgery, Puppeteer, Museum, Wardrobe, etc.\n\n## Minecraft Sea of Remnants mod pack\n\nA community-made Minecraft mod pack with an ocean theme, unrelated to this game.",
+    "faq": [
+      {
+        "question": "Is Sea of Remnants the same as DNF's Forgotten Land?",
+        "questionZh": "遗忘之海和 DNF 遗忘之地是同一个游戏吗？",
+        "answer": "No. DNF's Forgotten Land is an old map in Dungeon & Fighter, while Sea of Remnants is a standalone open-world RPG by NetEase Joker Studio. They are completely different games that share similar Chinese names.",
+        "answerZh": "不是。DNF 的「遗忘之地」是地下城与勇士里的一张老地图，《遗忘之海》则是网易 Joker 工作室开发的独立开放世界 RPG 游戏。两者是完全不同的游戏，只是中文名相似。"
+      },
+      {
+        "question": "Is Sea of Remnants related to the Forgotten Hill puzzle series?",
+        "questionZh": "遗忘之海和遗忘之丘解谜游戏有关系吗？",
+        "answer": "No. Forgotten Hill is an indie horror puzzle series by Italian developer Stefano Mazzotta, with titles like Surgery, Puppeteer, Museum. Sea of Remnants is a completely different game by NetEase.",
+        "answerZh": "没有关系。遗忘之丘是意大利独立开发者 Stefano Mazzotta 制作的恐怖解谜游戏系列（包含门诊室、博物馆、衣柜等作品），《遗忘之海》是网易开发的完全不同的游戏。"
+      },
+      {
+        "question": "Is the Minecraft Sea of Remnants mod pack the same as this game?",
+        "questionZh": "我的世界遗忘之海整合包是这款游戏吗？",
+        "answer": "No. The Minecraft \"Sea of Remnants\" is a community-made mod pack for Minecraft, requiring the base MC game. This wiki covers NetEase's standalone Sea of Remnants game, not the MC mod pack.",
+        "answerZh": "不是。「我的世界·遗忘之海」是玩家社区为 Minecraft 制作的整合包（Mod Pack），需要 MC 本体才能运行。本站讨论的是网易开发的独立游戏《遗忘之海》，不是 MC 整合包。"
+      },
+      {
+        "question": "Why does searching for Sea of Remnants return results about other games?",
+        "questionZh": "为什么搜索遗忘之海会出现其他不相关游戏的结果？",
+        "answer": "The Chinese name \"遗忘之海\" is shared or similar to multiple games, causing search engine disambiguation issues. Our wiki explicitly uses \"遗忘之海\" + \"网易\" + \"Sea of Remnants\" in titles to help search engines distinguish this game from others.",
+        "answerZh": "因为「遗忘之海」这个中文名与多个游戏重名或相似（DNF 遗忘之地、遗忘之丘系列、MC 整合包），搜索引擎难以区分。本站会在标题中明确使用「遗忘之海 + 网易 + Sea of Remnants」的标记，帮助搜索引擎和用户准确识别。"
+      }
+    ]
   }
 ]
