@@ -8,6 +8,7 @@ import { zzzMaterials, getZzzMaterialName } from '@gachia/data/games/zzz/items';
 import { anantaMaterials, getAnantaMaterialName } from '@gachia/data/games/ananta/items';
 import { guihuanMaterials, getGuihuanMaterialName } from '@gachia/data/games/guihuan/items';
 import { endfieldMaterials, getEndfieldMaterialName } from '@gachia/data/games/endfield/items';
+import { seaMaterials, getSeaMaterialName } from '@gachia/data/games/sea/items';
 import { gearSets, getGearSetName, getGearSetEffect } from '@gachia/data/games/endfield/gear-sets';
 import { Link } from '@/lib/i18n/navigation';
 
@@ -133,16 +134,7 @@ export default async function ItemsPage({
   }
 
   if (gameId === 'sea') {
-    return (
-      <div>
-        <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-          {CATEGORY_LABELS.items?.[locale] ?? 'Items'}
-        </h1>
-        <div className="rounded-lg border border-dashed border-game-border bg-game-surface p-8 text-center text-sm text-game-text-muted">
-          {locale === 'zh' ? '暂无材料数据' : locale === 'ja' ? '素材データはまだありません' : 'No material data available yet'}
-        </div>
-      </div>
-    );
+    return <><SeaItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   return (
@@ -603,6 +595,59 @@ function EndfieldItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId
           ))}
         </div>
       </section>
+    </div>
+  );
+}
+
+// --- Sea of Remnants Items ---
+
+const SEA_TYPE_LABELS: Record<string, Record<string, string>> = {
+  currency: { zh: '货币', en: 'Currency', ja: '通貨' },
+  'character-ascension': { zh: '船员突破材料', en: 'Crew Ascension', ja: 'クルー突破素材' },
+  'ship-upgrade': { zh: '船只升级材料', en: 'Ship Upgrade', ja: '船強化素材' },
+  craft: { zh: '制造材料', en: 'Crafting', ja: '製作素材' },
+  consumable: { zh: '消耗品', en: 'Consumable', ja: '消耗品' },
+  fragment: { zh: '碎片 / 记忆', en: 'Fragment / Memory', ja: '欠片 / 記憶' },
+};
+
+function SeaItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
+  const materials = seaMaterials;
+  const grouped = groupByType(materials);
+  const typeOrder = ['currency', 'character-ascension', 'ship-upgrade', 'craft', 'consumable', 'fragment'];
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.sea.theme.primary }}>
+        {CATEGORY_LABELS.items?.[locale] ?? 'Items'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? `共 ${materials.length} 种材料` : locale === 'ja' ? `${materials.length} 種の素材` : `${materials.length} Materials`}
+      </p>
+
+      {typeOrder.map((type) => {
+        const list = grouped[type];
+        if (!list || list.length === 0) return null;
+        const typeLabel = SEA_TYPE_LABELS[type]?.[locale] ?? type;
+        return (
+          <section key={type} className="mb-8">
+            <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
+            <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              {list.map((mat) => (
+                <Link key={mat.id} href={`/${gameId}/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                  <div className="mb-1 flex items-center gap-2">
+                    <h3 className="text-sm font-semibold text-game-text">{getSeaMaterialName(mat, locale)}</h3>
+                  </div>
+                  <div className="mb-1 flex items-center gap-2">
+                    <span className="text-xs text-game-text-muted">{typeLabel}</span>
+                    <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
+                  </div>
+                  <p className="text-xs text-game-text-muted line-clamp-2">{locale === 'zh' ? mat.source : mat.sourceEn}</p>
+                </Link>
+              ))}
+            </div>
+          </section>
+        );
+      })}
     </div>
   );
 }

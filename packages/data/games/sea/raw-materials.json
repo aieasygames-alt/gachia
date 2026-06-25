@@ -1,1 +1,182 @@
-[]
+[
+  {
+    "id": "gold-coin",
+    "name": "金币",
+    "nameEn": "Gold Coin",
+    "type": "currency",
+    "rarity": 1,
+    "source": "主线任务奖励、海域宝箱、击败敌舰掉落、港口商店出售物品、日常活动",
+    "sourceEn": "Main quest rewards, sea area chests, defeating enemy ships, selling items at port shops, daily activities"
+  },
+  {
+    "id": "gacha-ticket",
+    "name": "招募券",
+    "nameEn": "Recruit Ticket",
+    "type": "currency",
+    "rarity": 4,
+    "source": "每周 50% 概率从船员招募中获得黑券级船员或往日之影（保底三周一个），完成周常任务、活动奖励",
+    "sourceEn": "50% chance per week to get Black Ticket-rarity crew or Shadow of the Past from recruitment (3-week pity), weekly tasks, event rewards"
+  },
+  {
+    "id": "memory-fragment",
+    "name": "记忆碎片",
+    "nameEn": "Memory Fragment",
+    "type": "currency",
+    "rarity": 3,
+    "source": "完成浅表梦境挑战、海域 Roguelite 关卡掉落、大记忆之塔进度奖励",
+    "sourceEn": "Complete Shallow Dream challenges, drops from sea Roguelite stages, Memory Tower progress rewards"
+  },
+  {
+    "id": "sailor-jade",
+    "name": "船员玉",
+    "nameEn": "Sailor Jade",
+    "type": "currency",
+    "rarity": 2,
+    "source": "完成港口委托、海域探索奖励、分解多余船员、商店兑换",
+    "sourceEn": "Port commissions, sea exploration rewards, decomposing duplicate crew, shop exchange"
+  },
+  {
+    "id": "drift-bottle-shard",
+    "name": "漂流瓶碎片",
+    "nameEn": "Drift Bottle Shard",
+    "type": "character-ascension",
+    "rarity": 3,
+    "source": "漂流瓶号船队专属突破材料，漂流海域普通/精英怪掉落、港口商店兑换、活动奖励",
+    "sourceEn": "Drift Bottle faction exclusive ascension material, drops from Drift Sea normal/elite enemies, port shop exchange, event rewards"
+  },
+  {
+    "id": "wanderer-emblem",
+    "name": "流浪者徽章",
+    "nameEn": "Wanderer Emblem",
+    "type": "character-ascension",
+    "rarity": 3,
+    "source": "流浪号船队专属突破材料，流浪号相关海域掉落、活动奖励、商店兑换",
+    "sourceEn": "Wanderer faction exclusive ascension material, drops from Wanderer-related sea areas, event rewards, shop exchange"
+  },
+  {
+    "id": "dawnbreaker-medal",
+    "name": "破晓者勋章",
+    "nameEn": "Dawnbreaker Medal",
+    "type": "character-ascension",
+    "rarity": 4,
+    "source": "破晓者船队专属突破材料，破晓者据点海域 Boss 掉落、周常任务奖励",
+    "sourceEn": "Dawnbreaker faction exclusive ascension material, drops from Dawnbreaker stronghold sea bosses, weekly task rewards"
+  },
+  {
+    "id": "black-baron-seal",
+    "name": "黑男爵封印",
+    "nameEn": "Black Baron Seal",
+    "type": "character-ascension",
+    "rarity": 5,
+    "source": "黑男爵船队专属突破材料，黑男爵家族秘境掉落、限时活动、稀有兑换",
+    "sourceEn": "Black Baron faction exclusive ascension material, drops from Black Baron family secret realms, limited events, rare exchange"
+  },
+  {
+    "id": "ramble-band-token",
+    "name": "蓝波乐队信物",
+    "nameEn": "Ramble Band Token",
+    "type": "character-ascension",
+    "rarity": 4,
+    "source": "蓝波乐队船队专属突破材料，音乐会活动、蓝波乐队专属任务、商店兑换",
+    "sourceEn": "Ramble Band faction exclusive ascension material, concert events, Ramble Band exclusive quests, shop exchange"
+  },
+  {
+    "id": "iron-ore",
+    "name": "铁矿石",
+    "nameEn": "Iron Ore",
+    "type": "ship-upgrade",
+    "rarity": 1,
+    "source": "所有海域岛屿矿点采集、商店购买、敌舰掉落。前期最常见的船只升级材料",
+    "sourceEn": "Mine at island ore nodes across all sea areas, shop purchase, enemy ship drops. The most common early-game ship upgrade material"
+  },
+  {
+    "id": "sea-wood",
+    "name": "海木",
+    "nameEn": "Sea Wood",
+    "type": "ship-upgrade",
+    "rarity": 2,
+    "source": "岛屿森林伐木、海怪掉落、港口木匠商店。用于船体结构升级",
+    "sourceEn": "Logging at island forests, sea monster drops, port carpenter shops. Used for hull structure upgrades"
+  },
+  {
+    "id": "canvas-sail",
+    "name": "帆布",
+    "nameEn": "Canvas Sail",
+    "type": "ship-upgrade",
+    "rarity": 2,
+    "source": "港口裁缝店制作（需要植物纤维）、活动奖励。用于船帆升级，影响航速",
+    "sourceEn": "Crafted at port tailor shops (requires plant fiber), event rewards. Used for sail upgrades, affects sailing speed"
+  },
+  {
+    "id": "ship-blueprint",
+    "name": "船只图纸",
+    "nameEn": "Ship Blueprint",
+    "type": "ship-upgrade",
+    "rarity": 4,
+    "source": "完成大型 Boss 战、海域深处宝箱、限时活动奖励、商店稀有兑换。用于船只改装",
+    "sourceEn": "Complete major boss battles, deep-sea area chests, limited event rewards, shop rare exchange. Used for ship modifications"
+  },
+  {
+    "id": "cannon-core",
+    "name": "大炮核心",
+    "nameEn": "Cannon Core",
+    "type": "craft",
+    "rarity": 3,
+    "source": "Boss 战掉落、港口军工厂兑换、活动奖励。制造高阶大炮的核心部件",
+    "sourceEn": "Boss battle drops, port armory exchange, event rewards. Core component for crafting high-tier cannons"
+  },
+  {
+    "id": "gunpowder-powder",
+    "name": "火药粉",
+    "nameEn": "Gunpowder",
+    "type": "craft",
+    "rarity": 1,
+    "source": "商店购买、岛屿矿点采集、敌舰掉落。制造各类炮弹的基础材料",
+    "sourceEn": "Shop purchase, mine at island ore nodes, enemy ship drops. Base material for crafting all types of cannonballs"
+  },
+  {
+    "id": "ancient-part",
+    "name": "远古零件",
+    "nameEn": "Ancient Part",
+    "type": "craft",
+    "rarity": 5,
+    "source": "古代遗迹宝箱、稀有 Boss 掉落、记忆之塔奖励。合成顶级装备的稀有材料",
+    "sourceEn": "Ancient ruin chests, rare boss drops, Memory Tower rewards. Rare material for synthesizing top-tier equipment"
+  },
+  {
+    "id": "healing-rum",
+    "name": "治疗朗姆酒",
+    "nameEn": "Healing Rum",
+    "type": "consumable",
+    "rarity": 2,
+    "source": "港口酒馆购买、活动奖励、海域宝箱。战斗中恢复 HP",
+    "sourceEn": "Buy at port taverns, event rewards, sea area chests. Restores HP during combat"
+  },
+  {
+    "id": "battle-feast",
+    "name": "战斗大餐",
+    "nameEn": "Battle Feast",
+    "type": "consumable",
+    "rarity": 3,
+    "source": "厨房烹饪（需要食材）、活动奖励、商店购买。战斗前提供攻击/防御 Buff",
+    "sourceEn": "Cooked at kitchen (requires ingredients), event rewards, shop purchase. Provides attack/defense buffs before combat"
+  },
+  {
+    "id": "shadow-of-past",
+    "name": "往日之影",
+    "nameEn": "Shadow of the Past",
+    "type": "fragment",
+    "rarity": 5,
+    "source": "抽卡保底产出（与黑券船员并列）、稀有剧情事件、记忆之塔高层奖励。剧情系统核心收集物",
+    "sourceEn": "Gacha pity output (alongside Black Ticket crew), rare story events, high-level Memory Tower rewards. Core collectible for the story system"
+  },
+  {
+    "id": "ancient-memory-shard",
+    "name": "远古记忆碎片",
+    "nameEn": "Ancient Memory Shard",
+    "type": "fragment",
+    "rarity": 4,
+    "source": "大记忆之塔挑战掉落、剧情 Boss 战、海域深处探索。用于解锁多结局分支",
+    "sourceEn": "Drops from Memory Tower challenges, story boss battles, deep sea exploration. Used to unlock multiple ending branches"
+  }
+]

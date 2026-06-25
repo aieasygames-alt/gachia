@@ -102,6 +102,16 @@ export interface SeaGuide {
   faq: SeaGuideFaq[];
 }
 
+export interface SeaMaterial {
+  id: string;
+  name: string;
+  nameEn: string;
+  type: string;
+  rarity: number;
+  source: string;
+  sourceEn: string;
+}
+
 // --- Accessor Helpers ---
 
 export function localeStr(zh: string, en: string, locale: SupportedLocale, ja?: string): string {

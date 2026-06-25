@@ -25,6 +25,9 @@ import {
 import {
   endfieldMaterials, getEndfieldMaterialById, getEndfieldMaterialName,
 } from '@gachia/data/games/endfield/items';
+import {
+  seaMaterials, getSeaMaterialById, getSeaMaterialName,
+} from '@gachia/data/games/sea/items';
 import { getCharactersNeedingMaterial } from '@gachia/data/material-characters';
 import { Link } from '@/lib/i18n/navigation';
 
@@ -53,6 +56,10 @@ const TYPE_LABELS: Record<string, Record<string, string>> = {
   ascension: { zh: '突破材料', en: 'Ascension', ja: '昇格素材' },
   permit: { zh: '许可', en: 'Permit', ja: '許可証' },
   manual: { zh: '技能手册', en: 'Skill Manual', ja: 'スキルマニュアル' },
+  'ship-upgrade': { zh: '船只升级材料', en: 'Ship Upgrade', ja: '船強化素材' },
+  craft: { zh: '制造材料', en: 'Crafting', ja: '製作素材' },
+  consumable: { zh: '消耗品', en: 'Consumable', ja: '消耗品' },
+  fragment: { zh: '碎片 / 记忆', en: 'Fragment / Memory', ja: '欠片 / 記憶' },
 };
 
 export async function generateStaticParams() {
@@ -65,6 +72,7 @@ export async function generateStaticParams() {
     ...guihuanMaterials.map((m) => ({ lang, game: 'guihuan', id: m.id })),
     ...anantaMaterials.map((m) => ({ lang, game: 'ananta', id: m.id })),
     ...endfieldMaterials.map((m) => ({ lang, game: 'endfield', id: m.id })),
+    ...seaMaterials.map((m) => ({ lang, game: 'sea', id: m.id })),
   ]);
 }
 
@@ -122,7 +130,10 @@ export async function generateMetadata({
     name = getEndfieldMaterialName(m, locale);
     description = (locale === 'en' ? m.sourceEn : m.source).slice(0, 160);
   } else if (gameId === 'sea') {
-    return {};
+    const m = getSeaMaterialById(id);
+    if (!m) return {};
+    name = getSeaMaterialName(m, locale);
+    description = (locale === 'en' ? m.sourceEn : m.source).slice(0, 160);
   }
 
   const title = locale === 'zh'
@@ -210,7 +221,9 @@ function getItemData(gameId: GameId, id: string, locale: SupportedLocale): ItemD
     return { name: getEndfieldMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name, rarity: m.rarity, type: m.type, source: locale === 'en' ? m.sourceEn : m.source };
   }
   if (gameId === 'sea') {
-    return null;
+    const m = getSeaMaterialById(id);
+    if (!m) return null;
+    return { name: getSeaMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name, rarity: m.rarity, type: m.type, source: locale === 'en' ? m.sourceEn : m.source };
   }
   return null;
 }

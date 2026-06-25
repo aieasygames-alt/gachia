@@ -378,7 +378,7 @@ export const GAMES: Record<GameId, GameModule> = {
     routes: {
       characters: true,
       weapons: false,
-      items: false,
+      items: true,
       'tier-list': true,
       calculator: false,
       map: false,
