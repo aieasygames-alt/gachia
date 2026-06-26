@@ -18,8 +18,32 @@
     "description": "你也不知道自己的来历，但你现在有了一艘船，请尽情的扬帆起航！",
     "descriptionEn": "You don't know your own origins, but now you have a ship — set sail to your heart's content!",
     "speed": 101,
-    "faq": [],
-    "relatedCharacters": [],
+    "faq": [
+      {
+        "question": "Is Traveler (旅人) good in Sea of Remnants?",
+        "questionZh": "遗忘之海旅人强吗？值得培养吗？",
+        "answer": "Yes. Traveler is SS-tier in the latest tier list, with a unique follow-up attack mechanic triggered at 9 激昂 stacks. Self-sufficient DPS with self-buffing, no team dependency.",
+        "answerZh": "强。旅人在最新节奏榜评 SS 级，核心机制是 [激昂] 达 9 层触发追击。自带增益、不依赖队友，是漂流瓶号开局首选主攻。"
+      },
+      {
+        "question": "Which fleet does Traveler belong to?",
+        "questionZh": "旅人属于哪个船队？",
+        "answer": "Traveler is a 4★ Purple Ticket crew from the Drift Bottle (漂流瓶号) fleet — the starter free-sailor faction. No faction-lock on team composition.",
+        "answerZh": "旅人是漂流瓶号船队的 4★ 紫券船员，自由航海者阵营。组队不受船队限制。"
+      },
+      {
+        "question": "How does Traveler's follow-up attack work?",
+        "questionZh": "旅人的追击机制怎么触发？",
+        "answer": "When 激昂 (Excited) stacks reach 9, Traveler instantly consumes all stacks to launch a follow-up attack on the target. This is the core DPS mechanic — build stacks fast through normal attacks and skills.",
+        "answerZh": "当 [激昂] 达到 9 层时，旅人立即消耗所有层数对目标发动追击。这是核心输出机制——通过普攻和技能快速堆叠层数。"
+      }
+    ],
+    "relatedCharacters": [
+      "ais",
+      "coward",
+      "little-axe",
+      "princess"
+    ],
     "tierRank": "SS",
     "tierReason": "Strong self-sufficient DPS with follow-up attack mechanic and self-buffing",
     "tierReasonZh": "自带追击机制和自我增益的强力输出",
@@ -47,7 +71,31 @@
     },
     "image": "",
     "status": "available",
-    "nameJa": "旅人"
+    "nameJa": "旅人",
+    "teamComps": [
+      {
+        "name": "漂流瓶开荒队",
+        "nameEn": "Drift Bottle Starter Comp",
+        "members": [
+          "traveler",
+          "ais",
+          "coward"
+        ],
+        "description": "旅人主攻 + 艾丝副攻 + 懦夫生存，三漂流瓶号船员组合，前期无羁绊门槛，开荒平滑。",
+        "descriptionEn": "Traveler main DPS + Ais sub DPS + Coward survival. Three Drift Bottle crew, no faction gate, smooth early game."
+      },
+      {
+        "name": "追击输出队",
+        "nameEn": "Follow-up Attack Comp",
+        "members": [
+          "traveler",
+          "little-axe",
+          "princess"
+        ],
+        "description": "旅人自带追击机制，配合小斧头的爆发和王女辅助，形成多段追击链，对单体 Boss 战表现优秀。",
+        "descriptionEn": "Traveler's innate follow-up + Little Axe burst + Princess support creates a multi-hit follow-up chain, strong vs single-target bosses."
+      }
+    ]
   },
   {
     "id": "ais",
@@ -68,8 +116,26 @@
     "description": "奥托皮亚的冒险家，热爱航海与寻宝的欢脱少女。",
     "descriptionEn": "An adventurer from Otopia, a cheerful girl who loves sailing and treasure hunting.",
     "speed": 98,
-    "faq": [],
-    "relatedCharacters": [],
+    "faq": [
+      {
+        "question": "Is Ais (艾丝) a main DPS or sub DPS?",
+        "questionZh": "艾丝是主攻还是副攻？",
+        "answer": "Ais is best as a sub DPS. Her kit provides consistent off-turn damage and skill-point generation, complementing main DPS units like Traveler.",
+        "answerZh": "艾丝最适合做副攻。她的技能组提供稳定的非回合输出和技能点生成，是旅人等主攻的最佳搭档。"
+      },
+      {
+        "question": "What is Ais's role in the story?",
+        "questionZh": "艾丝在剧情里是什么角色？",
+        "answer": "Ais is a self-proclaimed genius adventurer who accompanies the amnesiac puppet captain (player) throughout the main story. She's the deuteragonist and primary navigator.",
+        "answerZh": "艾丝自称天才冒险家，是陪伴失忆木偶船长（玩家）走完主线的关键角色，担任剧情女二号和首席向导。"
+      }
+    ],
+    "relatedCharacters": [
+      "coward",
+      "molly",
+      "princess",
+      "traveler"
+    ],
     "tierRank": "SS",
     "tierReason": "Excellent AoE sub-DPS with debuff stacking and team support",
     "tierReasonZh": "优秀的群体协攻，可叠加debuff并提供团队辅助",
@@ -97,7 +163,31 @@
     },
     "image": "",
     "status": "available",
-    "nameJa": "アイス"
+    "nameJa": "アイス",
+    "teamComps": [
+      {
+        "name": "漂流瓶双输出",
+        "nameEn": "Drift Bottle Dual DPS",
+        "members": [
+          "ais",
+          "traveler",
+          "coward"
+        ],
+        "description": "艾丝副攻 + 旅人主攻 + 懦夫生存。艾丝的辅助输出能补足旅人集火时的真空期。",
+        "descriptionEn": "Ais sub DPS + Traveler main DPS + Coward survival. Ais fills Traveler's downtime with consistent sub-DPS."
+      },
+      {
+        "name": "女主角国家队",
+        "nameEn": "Heroine National Comp",
+        "members": [
+          "ais",
+          "princess",
+          "molly"
+        ],
+        "description": "艾丝 + 王女 + 茉莉，三位高人气女性角色的输出/辅助/治疗组合，PvE 表现稳健。",
+        "descriptionEn": "Ais + Princess + Molly — three popular female crew in DPS/support/heal roles, solid for PvE."
+      }
+    ]
   },
   {
     "id": "nonsense-prophet",
@@ -119,8 +209,18 @@
     "description": "流浪号的航海士，整天说胡话的预言家。",
     "descriptionEn": "The navigator of the Wanderer, a prophet who speaks nonsense all day.",
     "speed": 0,
-    "faq": [],
-    "relatedCharacters": [],
+    "faq": [
+      {
+        "question": "What does Nonsense Prophet (胡话先知) do?",
+        "questionZh": "胡话先知是什么定位？",
+        "answer": "Nonsense Prophet is an Intelligence-attribute support specializing in team skill damage amplification and enemy weakness exposure. Pairs well with skill-heavy DPS.",
+        "answerZh": "胡话先知是智力属性辅助，专精团队技能伤害放大和敌方弱点暴露。和技能依赖型主攻配合最佳。"
+      }
+    ],
+    "relatedCharacters": [
+      "edward",
+      "tagalong"
+    ],
     "tierRank": "B",
     "tierReason": "Niche survival unit with limited utility",
     "tierReasonZh": "功能有限的生存角色",
@@ -147,7 +247,20 @@
       }
     },
     "image": "",
-    "status": "available"
+    "status": "available",
+    "teamComps": [
+      {
+        "name": "流浪号智囊队",
+        "nameEn": "Wanderer Strategist Comp",
+        "members": [
+          "nonsense-prophet",
+          "edward",
+          "tagalong"
+        ],
+        "description": "胡话先知辅助 + 爱德华主攻 + 跟屁虫副攻。胡话先知的智力属性提供团队技能伤害加成。",
+        "descriptionEn": "Nonsense Prophet support + Edward main DPS + Tagalong sub-DPS. Nonsense Prophet's Intelligence boosts team skill damage."
+      }
+    ]
   },
   {
     "id": "soscia",
@@ -168,8 +281,18 @@
     "description": "破晓者的机械师，既是天才，也是疯子。",
     "descriptionEn": "The mechanic of the Dawnbreaker, both a genius and a madwoman.",
     "speed": 95,
-    "faq": [],
-    "relatedCharacters": [],
+    "faq": [
+      {
+        "question": "Is Soscia (索西亚) a 5★ worth pulling?",
+        "questionZh": "索西亚值得抽吗？",
+        "answer": "Soscia is a versatile sub-DPS in the Dawnbreaker faction. Pull if building Dawnbreaker comps; otherwise Princess provides better faction-agnostic support.",
+        "answerZh": "索西亚是破晓者船队的多面手副攻。如果你玩破晓者阵容值得抽；否则王女是更通用的辅助选择。"
+      }
+    ],
+    "relatedCharacters": [
+      "burnt-colonel",
+      "princess"
+    ],
     "tierRank": "A",
     "tierReason": "Strong single-target DPS with stacking mechanic and turn-free personal skill",
     "tierReasonZh": "强力单体输出，拥有叠层机制和不结束回合的个人技能",
@@ -197,7 +320,20 @@
     },
     "image": "",
     "status": "available",
-    "nameJa": "ソシア"
+    "nameJa": "ソシア",
+    "teamComps": [
+      {
+        "name": "破晓者阵营队",
+        "nameEn": "Dawnbreaker Faction Comp",
+        "members": [
+          "soscia",
+          "princess",
+          "burnt-colonel"
+        ],
+        "description": "索西亚副攻 + 王女辅助 + 焦面上校生存，破晓者船队三人组激活阵营加成。",
+        "descriptionEn": "Soscia sub-DPS + Princess support + Burnt Colonel survival — Dawnbreaker faction trio."
+      }
+    ]
   },
   {
     "id": "omen-eye",
@@ -219,8 +355,18 @@
     "description": "破晓者的瞭望员，从圣者学院出逃的'神子'。",
     "descriptionEn": "The lookout of the Dawnbreaker, the 'Child of God' who escaped from the Sage Academy.",
     "speed": 107,
-    "faq": [],
-    "relatedCharacters": [],
+    "faq": [
+      {
+        "question": "What role does Omen Eye (预兆之眼) play?",
+        "questionZh": "预兆之眼是什么定位？",
+        "answer": "Omen Eye is a Perception-attribute support focusing on team-wide accuracy/crit buffs and enemy debuffs. Key enabler for high-evasion bosses.",
+        "answerZh": "预兆之眼是感知属性辅助，提供团队命中率/暴击增益和敌方减益。是高闪避 Boss 战的关键辅助。"
+      }
+    ],
+    "relatedCharacters": [
+      "princess",
+      "soscia"
+    ],
     "tierRank": "S",
     "tierReason": "Strong healer with AoE damage and team shielding",
     "tierReasonZh": "强力治疗者，兼具群体伤害和团队护盾",
@@ -247,7 +393,20 @@
       }
     },
     "image": "",
-    "status": "available"
+    "status": "available",
+    "teamComps": [
+      {
+        "name": "破晓者控制队",
+        "nameEn": "Dawnbreaker Control Comp",
+        "members": [
+          "omen-eye",
+          "soscia",
+          "princess"
+        ],
+        "description": "预兆之眼控制 + 索西亚副攻 + 王女辅助。预兆之眼的感知属性提供团队命中率和暴击增益。",
+        "descriptionEn": "Omen Eye control + Soscia sub-DPS + Princess support. Omen Eye's Perception attribute provides team-wide accuracy and crit buffs."
+      }
+    ]
   },
   {
     "id": "ghost-shipwright",
@@ -269,8 +428,18 @@
     "description": "流浪号的改造者，恃才傲物的造船艺术家。",
     "descriptionEn": "The modifier of the Wanderer, an arrogant shipbuilding artist.",
     "speed": 104,
-    "faq": [],
-    "relatedCharacters": [],
+    "faq": [
+      {
+        "question": "Is Ghost Shipwright (鬼手船匠) a good tank?",
+        "questionZh": "鬼手船匠是好的坦克吗？",
+        "answer": "Ghost Shipwright is a survival-role unit in the Wanderer faction, offering shields and healing rather than pure tanking. Off-tank/support hybrid.",
+        "answerZh": "鬼手船匠是流浪号船队的生存位，提供护盾和治疗而非纯坦克。属于副坦/辅助混合定位。"
+      }
+    ],
+    "relatedCharacters": [
+      "edward",
+      "tagalong"
+    ],
     "tierRank": "A",
     "tierReason": "Solid sub-DPS with DEF shred debuff for team damage amplification",
     "tierReasonZh": "可靠的协攻角色，拥有降防debuff可提升团队伤害",
@@ -297,7 +466,20 @@
       }
     },
     "image": "",
-    "status": "available"
+    "status": "available",
+    "teamComps": [
+      {
+        "name": "流浪号维修队",
+        "nameEn": "Wanderer Sustain Comp",
+        "members": [
+          "ghost-shipwright",
+          "edward",
+          "tagalong"
+        ],
+        "description": "鬼手船匠生存 + 爱德华主攻 + 跟屁虫副攻。鬼手船匠的护盾和回复让队伍容错率提升。",
+        "descriptionEn": "Ghost Shipwright survival + Edward main DPS + Tagalong sub-DPS. Shields and healing improve team survivability."
+      }
+    ]
   },
   {
     "id": "coward",
@@ -319,8 +501,18 @@
     "description": "破晓者的侦察兵，但他毫不避讳地承认自己是一个懦夫。",
     "descriptionEn": "The scout of the Dawnbreaker, who unabashedly admits he is a coward.",
     "speed": 0,
-    "faq": [],
-    "relatedCharacters": [],
+    "faq": [
+      {
+        "question": "Is Coward (懦夫) a joke character?",
+        "questionZh": "懦夫是个梗角色吗？真的能用吗？",
+        "answer": "No. Despite the name, Coward is a legitimate 4★ survival unit with strong evasion and counter-attack mechanics. Viable F2P tank for Drift Bottle comps.",
+        "answerZh": "不是。虽然名字像梗，懦夫是正经的 4★ 生存位，有强力闪避和反击机制。漂流瓶号阵容的零氪坦克优选。"
+      }
+    ],
+    "relatedCharacters": [
+      "ais",
+      "traveler"
+    ],
     "tierRank": "B",
     "tierReason": "Limited survival utility",
     "tierReasonZh": "生存能力有限",
@@ -347,7 +539,20 @@
       }
     },
     "image": "",
-    "status": "available"
+    "status": "available",
+    "teamComps": [
+      {
+        "name": "漂流瓶开荒队",
+        "nameEn": "Drift Bottle Starter Comp",
+        "members": [
+          "coward",
+          "traveler",
+          "ais"
+        ],
+        "description": "懦夫生存 + 旅人主攻 + 艾丝副攻。懦夫的回避机制让前期开荒更稳。",
+        "descriptionEn": "Coward survival + Traveler main DPS + Ais sub-DPS. Coward's evasion mechanics stabilize early game."
+      }
+    ]
   },
   {
     "id": "tagalong",
@@ -369,8 +574,18 @@
     "description": "流浪号的火炮手，船长爱德华最忠实的跟随者。",
     "descriptionEn": "The gunner of the Wanderer, Captain Edward's most loyal follower.",
     "speed": 0,
-    "faq": [],
-    "relatedCharacters": [],
+    "faq": [
+      {
+        "question": "What does Tagalong (跟屁虫) do?",
+        "questionZh": "跟屁虫是什么定位？",
+        "answer": "Tagalong is an Agility-attribute sub-DPS focused on action-economy exploits — extra turns and follow-up attacks. Speed enabler for the team.",
+        "answerZh": "跟屁虫是敏捷属性副攻，专注行动次数经济——额外回合和追击。是团队的速度增益核心。"
+      }
+    ],
+    "relatedCharacters": [
+      "edward",
+      "nonsense-prophet"
+    ],
     "tierRank": "A",
     "tierReason": "Solid main DPS option",
     "tierReasonZh": "可靠的主攻输出",
@@ -397,7 +612,20 @@
       }
     },
     "image": "",
-    "status": "available"
+    "status": "available",
+    "teamComps": [
+      {
+        "name": "流浪号均衡队",
+        "nameEn": "Wanderer Balanced Comp",
+        "members": [
+          "tagalong",
+          "edward",
+          "nonsense-prophet"
+        ],
+        "description": "跟屁虫副攻 + 爱德华主攻 + 胡话先知辅助。跟屁虫的敏捷属性提供团队速度加成。",
+        "descriptionEn": "Tagalong sub-DPS + Edward main DPS + Nonsense Prophet support. Tagalong's Agility boosts team speed."
+      }
+    ]
   },
   {
     "id": "haihe",
@@ -418,8 +646,18 @@
     "description": "破晓者的狙击手，言行精准地像一台机器。",
     "descriptionEn": "The sniper of the Dawnbreaker, whose words and actions are as precise as a machine.",
     "speed": 0,
-    "faq": [],
-    "relatedCharacters": [],
+    "faq": [
+      {
+        "question": "Is Haihe (海赫) main DPS or sub DPS?",
+        "questionZh": "海赫是主攻还是副攻？",
+        "answer": "Haihe is a 5★ Black Ticket main DPS in the Dawnbreaker faction. Constitution-based bruiser playstyle — high damage with good survivability.",
+        "answerZh": "海赫是破晓者船队的 5★ 黑券主攻。体质属性战士打法——高伤害且自身耐久优秀。"
+      }
+    ],
+    "relatedCharacters": [
+      "iron-commander",
+      "princess"
+    ],
     "tierRank": "A",
     "tierReason": "Reliable support and sub-DPS hybrid",
     "tierReasonZh": "可靠的辅助与协攻混合角色",
@@ -447,7 +685,20 @@
     },
     "image": "",
     "status": "available",
-    "nameJa": "ハイヘ"
+    "nameJa": "ハイヘ",
+    "teamComps": [
+      {
+        "name": "破晓者攻城队",
+        "nameEn": "Dawnbreaker Siege Comp",
+        "members": [
+          "haihe",
+          "princess",
+          "iron-commander"
+        ],
+        "description": "海赫主攻 + 王女辅助 + 铁腕统领主坦，破晓者攻城高耐久阵容。",
+        "descriptionEn": "Haihe main DPS + Princess support + Iron Commander tank — Dawnbreaker siege comp with high durability."
+      }
+    ]
   },
   {
     "id": "watchmaker",
@@ -469,8 +720,18 @@
     "description": "黑男爵的航海士，神经衰弱的航海钟研究员。",
     "descriptionEn": "The navigator of the Black Baron, a nervous maritime chronometer researcher.",
     "speed": 0,
-    "faq": [],
-    "relatedCharacters": [],
+    "faq": [
+      {
+        "question": "Is Watchmaker (钟表匠) a good support?",
+        "questionZh": "钟表匠是好的辅助吗？",
+        "answer": "Watchmaker is the premier Intelligence-attribute support in the Black Baron faction, providing team-wide cooldown reduction — highly valued in burst comps.",
+        "answerZh": "钟表匠是黑男爵船队的首席智力辅助，提供团队冷却缩减——在爆发队里价值极高。"
+      }
+    ],
+    "relatedCharacters": [
+      "little-axe",
+      "traveler"
+    ],
     "tierRank": "A",
     "tierReason": "Solid sub-DPS and support hybrid",
     "tierReasonZh": "可靠的协攻与辅助混合角色",
@@ -497,7 +758,20 @@
       }
     },
     "image": "",
-    "status": "available"
+    "status": "available",
+    "teamComps": [
+      {
+        "name": "黑男爵爆发队",
+        "nameEn": "Black Baron Burst Comp",
+        "members": [
+          "watchmaker",
+          "little-axe",
+          "traveler"
+        ],
+        "description": "钟表匠辅助 + 小斧头爆发 + 旅人追击。钟表匠的智力属性提供技能冷却缩减，让小斧头爆发节奏更密。",
+        "descriptionEn": "Watchmaker support + Little Axe burst + Traveler follow-up. Watchmaker's Intelligence provides cooldown reduction for denser burst windows."
+      }
+    ]
   },
   {
     "id": "princess",
@@ -519,8 +793,20 @@
     "description": "破晓者的领袖，僭越王权的'王女'，海鹰中声名卓著的将领。",
     "descriptionEn": "The leader of the Dawnbreaker, the 'Princess' who usurped royal authority, a renowned general among the Sea Hawks.",
     "speed": 0,
-    "faq": [],
-    "relatedCharacters": [],
+    "faq": [
+      {
+        "question": "Is Princess (王女) a must-pull support?",
+        "questionZh": "王女是必抽辅助吗？",
+        "answer": "Yes. Princess is the top-tier support in Sea of Remnants, providing team-wide buffs that scale well into endgame. SS-tier in the support role.",
+        "answerZh": "必抽。王女是遗忘之海顶级辅助，团队增益在终局依然强力，辅助位 SS 级。"
+      }
+    ],
+    "relatedCharacters": [
+      "ais",
+      "burnt-colonel",
+      "soscia",
+      "traveler"
+    ],
     "tierRank": "SS",
     "tierReason": "Top-tier main DPS as faction leader",
     "tierReasonZh": "顶级主攻输出，作为阵营领袖",
@@ -547,7 +833,31 @@
       }
     },
     "image": "",
-    "status": "available"
+    "status": "available",
+    "teamComps": [
+      {
+        "name": "王女辅助队",
+        "nameEn": "Princess Support Comp",
+        "members": [
+          "princess",
+          "traveler",
+          "ais"
+        ],
+        "description": "王女辅助 + 旅人主攻 + 艾丝副攻。王女的增益让双输出打出超额伤害。",
+        "descriptionEn": "Princess support + Traveler main DPS + Ais sub DPS. Princess's buffs enable both DPS to over-perform."
+      },
+      {
+        "name": "破晓者阵营队",
+        "nameEn": "Dawnbreaker Faction Comp",
+        "members": [
+          "princess",
+          "soscia",
+          "burnt-colonel"
+        ],
+        "description": "王女 + 索西亚 + 焦面上校，三破晓者船员组队，激活船队阵营加成。",
+        "descriptionEn": "Princess + Soscia + Burnt Colonel — three Dawnbreaker crew, activates faction bonus."
+      }
+    ]
   },
   {
     "id": "little-axe",
@@ -569,8 +879,18 @@
     "description": "黑男爵中温和优雅的少年，但另一面则藏着凶狠。",
     "descriptionEn": "A gentle and elegant boy in the Black Baron, but hides a fierce side.",
     "speed": 104,
-    "faq": [],
-    "relatedCharacters": [],
+    "faq": [
+      {
+        "question": "Is Little Axe (小斧头) a 5★ Black Ticket worth pulling?",
+        "questionZh": "小斧头是 5★ 黑券船员，值得抽吗？",
+        "answer": "Yes. Little Axe is one of the strongest burst DPS in the Black Baron faction, with excellent single-target damage. Worth the 3-week pity pull.",
+        "answerZh": "值得。小斧头是黑男爵船队最强爆发输出之一，单体伤害优秀，3 周保底抽到稳赚。"
+      }
+    ],
+    "relatedCharacters": [
+      "traveler",
+      "watchmaker"
+    ],
     "tierRank": "SS",
     "tierReason": "Top-tier single-target DPS with mark-and-execute mechanic",
     "tierReasonZh": "顶级单体输出，拥有标记处决机制",
@@ -597,7 +917,20 @@
       }
     },
     "image": "",
-    "status": "available"
+    "status": "available",
+    "teamComps": [
+      {
+        "name": "黑男爵爆发队",
+        "nameEn": "Black Baron Burst Comp",
+        "members": [
+          "little-axe",
+          "watchmaker",
+          "traveler"
+        ],
+        "description": "小斧头主爆发 + 钟表匠辅助 + 旅人追击补充。黑男爵船队体系的高单体伤害组合。",
+        "descriptionEn": "Little Axe burst + Watchmaker support + Traveler follow-up. Black Baron faction high single-target damage."
+      }
+    ]
   },
   {
     "id": "molly",
@@ -618,8 +951,20 @@
     "description": "蓝波乐队最安静的乐手，也是于梦中寻找灵感的裁缝师。",
     "descriptionEn": "The quietest musician of the Rambo Band, a tailor who finds inspiration in dreams.",
     "speed": 107,
-    "faq": [],
-    "relatedCharacters": [],
+    "faq": [
+      {
+        "question": "Is Molly (茉莉) the best healer in Sea of Remnants?",
+        "questionZh": "茉莉是遗忘之海最强治疗吗？",
+        "answer": "Molly is the top healer in the Ramble Band faction and one of the best healers overall. Her HoT (heal-over-time) scales well into endgame.",
+        "answerZh": "茉莉是蓝波乐队船队的首席治疗，也是全游戏顶级治疗之一。她的持续恢复（HoT）在终局依然强力。"
+      }
+    ],
+    "relatedCharacters": [
+      "ais",
+      "gail",
+      "heige",
+      "princess"
+    ],
     "tierRank": "S",
     "tierReason": "Strong DPS with follow-up attack and shadow stacking mechanic",
     "tierReasonZh": "强力输出，拥有追击和暗影叠层机制",
@@ -647,7 +992,31 @@
     },
     "image": "",
     "status": "available",
-    "nameJa": "モリー"
+    "nameJa": "モリー",
+    "teamComps": [
+      {
+        "name": "蓝波乐队治疗队",
+        "nameEn": "Ramble Band Heal Comp",
+        "members": [
+          "molly",
+          "heige",
+          "gail"
+        ],
+        "description": "茉莉治疗 + 黑格输出 + 盖尔辅助，蓝波乐队三人组激活船队加成，长线战斗优势明显。",
+        "descriptionEn": "Molly heal + Heige DPS + Gail support — three Ramble Band members activate faction bonus, strong in long fights."
+      },
+      {
+        "name": "女主角国家队",
+        "nameEn": "Heroine National Comp",
+        "members": [
+          "molly",
+          "ais",
+          "princess"
+        ],
+        "description": "茉莉 + 艾丝 + 王女，治疗/副攻/辅助的铁三角组合，PvE 推图稳健。",
+        "descriptionEn": "Molly + Ais + Princess — heal/sub-DPS/support triangle, stable for PvE clearing."
+      }
+    ]
   },
   {
     "id": "heige",
@@ -668,8 +1037,18 @@
     "description": "蓝波乐队的疯狂琴师，也是令人发怵的暗巷医生。",
     "descriptionEn": "The mad pianist of the Rambo Band, also a fearsome back-alley doctor.",
     "speed": 0,
-    "faq": [],
-    "relatedCharacters": [],
+    "faq": [
+      {
+        "question": "Is Heige (黑格) a 5★ worth pulling?",
+        "questionZh": "黑格这个 5★ 值得抽吗？",
+        "answer": "Heige is the primary DPS option for Ramble Band comps. If you build Ramble Band, Heige is essential; otherwise skip for higher-tier DPS like Little Axe.",
+        "answerZh": "黑格是蓝波乐队体系的主攻。如果你玩蓝波乐队阵容，黑格必备；否则建议优先抽小斧头等更高优先级的输出。"
+      }
+    ],
+    "relatedCharacters": [
+      "gail",
+      "molly"
+    ],
     "tierRank": "S",
     "tierReason": "Strong DPS with unique INT scaling",
     "tierReasonZh": "强力输出，拥有独特的INT属性加成",
@@ -697,7 +1076,20 @@
     },
     "image": "",
     "status": "available",
-    "nameJa": "ハイゲ"
+    "nameJa": "ハイゲ",
+    "teamComps": [
+      {
+        "name": "蓝波乐队输出队",
+        "nameEn": "Ramble Band DPS Comp",
+        "members": [
+          "heige",
+          "molly",
+          "gail"
+        ],
+        "description": "黑格主攻 + 茉莉治疗 + 盖尔辅助，蓝波乐队标准阵容。",
+        "descriptionEn": "Heige main DPS + Molly heal + Gail support — standard Ramble Band comp."
+      }
+    ]
   },
   {
     "id": "edward",
@@ -718,8 +1110,18 @@
     "description": "流浪号现任船长，昔日威震八方的海上传奇，如今却沦为一滩烂泥。",
     "descriptionEn": "The current captain of the Wanderer, once a legendary figure on the seas, now reduced to a shell of his former self.",
     "speed": 0,
-    "faq": [],
-    "relatedCharacters": [],
+    "faq": [
+      {
+        "question": "Is Edward (爱德华) free-to-play friendly?",
+        "questionZh": "爱德华对零氪玩家友好吗？",
+        "answer": "Yes. Edward is part of the Wanderer faction and performs well even at base investment. Solid F2P option for the 3-week pity cycle.",
+        "answerZh": "友好。爱德华属于流浪号船队，基础投入就有不错表现，3 周保底周期内的零氪优选。"
+      }
+    ],
+    "relatedCharacters": [
+      "nonsense-prophet",
+      "tagalong"
+    ],
     "tierRank": "S",
     "tierReason": "Strong support as faction captain",
     "tierReasonZh": "作为阵营船长的强力辅助",
@@ -747,7 +1149,20 @@
     },
     "image": "",
     "status": "available",
-    "nameJa": "エドワード"
+    "nameJa": "エドワード",
+    "teamComps": [
+      {
+        "name": "流浪号均衡队",
+        "nameEn": "Wanderer Balanced Comp",
+        "members": [
+          "edward",
+          "nonsense-prophet",
+          "tagalong"
+        ],
+        "description": "爱德华 + 胡话先知 + 跟屁虫，三流浪号船员，攻守均衡，适合中长线战斗。",
+        "descriptionEn": "Edward + Nonsense Prophet + Tagalong — three Wanderer crew, balanced for mid-to-long fights."
+      }
+    ]
   },
   {
     "id": "burnt-colonel",
@@ -769,8 +1184,18 @@
     "description": "破晓者的参谋官，曾效命于国王，为其敛财。",
     "descriptionEn": "The staff officer of the Dawnbreaker, once served the king as his tax collector.",
     "speed": 0,
-    "faq": [],
-    "relatedCharacters": [],
+    "faq": [
+      {
+        "question": "Is Burnt Colonel (焦面上校) a tank or DPS?",
+        "questionZh": "焦面上校是坦克还是输出？",
+        "answer": "Burnt Colonel is a survival-role frontline hybrid — high durability with counter-attack mechanics. Functions as off-tank + secondary DPS.",
+        "answerZh": "焦面上校是生存位的前排混合角色——高耐久 + 反击机制。可担任副坦 + 次要输出。"
+      }
+    ],
+    "relatedCharacters": [
+      "iron-commander",
+      "princess"
+    ],
     "tierRank": "S",
     "tierReason": "Solid STR main DPS option",
     "tierReasonZh": "可靠的STR主攻输出",
@@ -797,7 +1222,20 @@
       }
     },
     "image": "",
-    "status": "available"
+    "status": "available",
+    "teamComps": [
+      {
+        "name": "破晓者攻坚队",
+        "nameEn": "Dawnbreaker Hard Counter",
+        "members": [
+          "burnt-colonel",
+          "princess",
+          "iron-commander"
+        ],
+        "description": "焦面上校 + 王女 + 铁腕统领，破晓者阵营高硬度阵容，针对 Boss 战。",
+        "descriptionEn": "Burnt Colonel + Princess + Iron Commander — Dawnbreaker hard-counter comp for boss fights."
+      }
+    ]
   },
   {
     "id": "gail",
@@ -818,8 +1256,18 @@
     "description": "蓝波乐队的主唱，奥托皮亚最闪亮的音乐之星。",
     "descriptionEn": "The lead vocalist of the Rambo Band, the brightest music star in Otopia.",
     "speed": 0,
-    "faq": [],
-    "relatedCharacters": [],
+    "faq": [
+      {
+        "question": "Is Gail (盖尔) F2P friendly?",
+        "questionZh": "盖尔适合零氪吗？",
+        "answer": "Yes. Gail's buff toolkit works well at base rarity investment, a solid F2P-friendly support option.",
+        "answerZh": "适合。盖尔的 Buff 工具包在基础投入下就有效，是零氪友好的辅助选择。"
+      }
+    ],
+    "relatedCharacters": [
+      "heige",
+      "molly"
+    ],
     "tierRank": "S",
     "tierReason": "Versatile support and survival hybrid",
     "tierReasonZh": "多功能的辅助与生存混合角色",
@@ -847,7 +1295,20 @@
     },
     "image": "",
     "status": "available",
-    "nameJa": "ゲイル"
+    "nameJa": "ゲイル",
+    "teamComps": [
+      {
+        "name": "蓝波乐队辅助队",
+        "nameEn": "Ramble Band Support Comp",
+        "members": [
+          "gail",
+          "molly",
+          "heige"
+        ],
+        "description": "盖尔辅助 + 茉莉治疗 + 黑格输出。盖尔的副攻 + Buff 能力让队伍容错率提升。",
+        "descriptionEn": "Gail support + Molly heal + Heige DPS. Gail's sub-DPS + buffs improve team consistency."
+      }
+    ]
   },
   {
     "id": "iron-commander",
@@ -869,8 +1330,18 @@
     "description": "破晓者的副官，爱兵如子的将领。",
     "descriptionEn": "The deputy commander of the Dawnbreaker, a general who loves his soldiers like his own children.",
     "speed": 0,
-    "faq": [],
-    "relatedCharacters": [],
+    "faq": [
+      {
+        "question": "Is Iron Commander (铁腕统领) the best tank?",
+        "questionZh": "铁腕统领是最强坦克吗？",
+        "answer": "Iron Commander is the top survival-role unit in the Dawnbreaker faction, with strong taunt + damage mitigation. Best pure tank in the current meta.",
+        "answerZh": "铁腕统领是破晓者船队的首席生存位，嘲讽 + 减伤机制出色。当前环境最强纯坦。"
+      }
+    ],
+    "relatedCharacters": [
+      "burnt-colonel",
+      "princess"
+    ],
     "tierRank": "A",
     "tierReason": "Reliable tanky survival unit",
     "tierReasonZh": "可靠的坦克型生存角色",
@@ -897,6 +1368,19 @@
       }
     },
     "image": "",
-    "status": "available"
+    "status": "available",
+    "teamComps": [
+      {
+        "name": "破晓者攻坚队",
+        "nameEn": "Dawnbreaker Hard Counter",
+        "members": [
+          "iron-commander",
+          "princess",
+          "burnt-colonel"
+        ],
+        "description": "铁腕统领主坦 + 王女辅助 + 焦面上校副坦，破晓者高硬度阵容。",
+        "descriptionEn": "Iron Commander main tank + Princess support + Burnt Colonel off-tank — Dawnbreaker hard-counter comp."
+      }
+    ]
   }
 ]

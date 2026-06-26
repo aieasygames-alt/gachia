@@ -41,8 +41,8 @@
     "nameEn": "Drift Bottle Shard",
     "type": "character-ascension",
     "rarity": 3,
-    "source": "漂流瓶号船队专属突破材料，漂流海域普通/精英怪掉落、港口商店兑换、活动奖励",
-    "sourceEn": "Drift Bottle faction exclusive ascension material, drops from Drift Sea normal/elite enemies, port shop exchange, event rewards"
+    "source": "漂流瓶号船队专属突破材料，漂流海域普通/精英怪掉落、港口商店兑换、活动奖励。用于 漂流瓶号 船队角色突破：旅人、艾丝。",
+    "sourceEn": "Drift Bottle faction exclusive ascension material, drops from Drift Sea normal/elite enemies, port shop exchange, event rewards. Used for ascension of Drift Bottle faction crew: Traveler, Ais."
   },
   {
     "id": "wanderer-emblem",
@@ -50,8 +50,8 @@
     "nameEn": "Wanderer Emblem",
     "type": "character-ascension",
     "rarity": 3,
-    "source": "流浪号船队专属突破材料，流浪号相关海域掉落、活动奖励、商店兑换",
-    "sourceEn": "Wanderer faction exclusive ascension material, drops from Wanderer-related sea areas, event rewards, shop exchange"
+    "source": "流浪号船队专属突破材料，流浪号相关海域掉落、活动奖励、商店兑换。用于 流浪号 船队角色突破：胡话先知、鬼手船匠、跟屁虫、爱德华。",
+    "sourceEn": "Wanderer faction exclusive ascension material, drops from Wanderer-related sea areas, event rewards, shop exchange. Used for ascension of Wanderer faction crew: Nonsense Prophet, Ghost Shipwright, Tagalong, Edward."
   },
   {
     "id": "dawnbreaker-medal",
@@ -59,8 +59,8 @@
     "nameEn": "Dawnbreaker Medal",
     "type": "character-ascension",
     "rarity": 4,
-    "source": "破晓者船队专属突破材料，破晓者据点海域 Boss 掉落、周常任务奖励",
-    "sourceEn": "Dawnbreaker faction exclusive ascension material, drops from Dawnbreaker stronghold sea bosses, weekly task rewards"
+    "source": "破晓者船队专属突破材料，破晓者据点海域 Boss 掉落、周常任务奖励。用于 破晓者 船队角色突破：索西亚、预兆之眼、懦夫、海赫等 7 个。",
+    "sourceEn": "Dawnbreaker faction exclusive ascension material, drops from Dawnbreaker stronghold sea bosses, weekly task rewards. Used for ascension of Dawnbreaker faction crew: Soscia, Omen Eye, Coward, Haihe and 3 more."
   },
   {
     "id": "black-baron-seal",
@@ -68,8 +68,8 @@
     "nameEn": "Black Baron Seal",
     "type": "character-ascension",
     "rarity": 5,
-    "source": "黑男爵船队专属突破材料，黑男爵家族秘境掉落、限时活动、稀有兑换",
-    "sourceEn": "Black Baron faction exclusive ascension material, drops from Black Baron family secret realms, limited events, rare exchange"
+    "source": "黑男爵船队专属突破材料，黑男爵家族秘境掉落、限时活动、稀有兑换。用于 黑男爵 船队角色突破：钟表匠、小斧头。",
+    "sourceEn": "Black Baron faction exclusive ascension material, drops from Black Baron family secret realms, limited events, rare exchange. Used for ascension of Black Baron faction crew: Watchmaker, Little Axe."
   },
   {
     "id": "ramble-band-token",
@@ -77,8 +77,8 @@
     "nameEn": "Ramble Band Token",
     "type": "character-ascension",
     "rarity": 4,
-    "source": "蓝波乐队船队专属突破材料，音乐会活动、蓝波乐队专属任务、商店兑换",
-    "sourceEn": "Ramble Band faction exclusive ascension material, concert events, Ramble Band exclusive quests, shop exchange"
+    "source": "蓝波乐队船队专属突破材料，音乐会活动、蓝波乐队专属任务、商店兑换。用于 蓝波乐队 船队角色突破：茉莉、黑格、盖尔。",
+    "sourceEn": "Ramble Band faction exclusive ascension material, concert events, Ramble Band exclusive quests, shop exchange. Used for ascension of Ramble Band faction crew: Molly, Heige, Gail."
   },
   {
     "id": "iron-ore",

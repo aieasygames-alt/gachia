@@ -2836,6 +2836,40 @@ function SeaCharacterDetail({ char, locale }: { char: SeaCharacter; locale: Supp
         </div>
       </Section>
 
+      {/* Team Comps */}
+      {char.teamComps && char.teamComps.length > 0 && (
+        <Section title={locale === 'zh' ? '推荐配队' : locale === 'ja' ? 'おすすめ編成' : 'Recommended Teams'}>
+          <div className="space-y-3">
+            {char.teamComps.map((team, i) => {
+              const members = team.members
+                .map((mid) => getSeaCharacterById(mid))
+                .filter((m): m is NonNullable<typeof m> => Boolean(m));
+              return (
+                <div key={i} className="rounded-lg border border-game-border bg-game-surface p-4">
+                  <h3 className="mb-2 font-semibold text-game-text">
+                    {localeStr(team.name, team.nameEn, locale)}
+                  </h3>
+                  <div className="mb-2 flex flex-wrap gap-1.5">
+                    {members.map((m) => (
+                      <Link
+                        key={m.id}
+                        href={`/sea/characters/${m.id}`}
+                        className="rounded-full border border-game-border bg-game-surface-alt px-2.5 py-0.5 text-xs text-game-text transition-colors hover:border-game-primary hover:text-game-primary"
+                      >
+                        {getSeaCharacterName(m, locale)}
+                      </Link>
+                    ))}
+                  </div>
+                  <p className="text-sm leading-relaxed text-game-text-muted">
+                    {localeStr(team.description, team.descriptionEn, locale)}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </Section>
+      )}
+
       {/* FAQ */}
       {char.faq.length > 0 && (
         <Section title={locale === 'zh' ? '常见问题' : locale === 'ja' ? 'よくある質問' : 'FAQ'}>
