@@ -370,60 +370,6 @@
     ]
   },
   {
-    "id": "payment-model-guide",
-    "title": "《遗忘之海》付费模式详解：抽卡、保底、定价、是否数值付费一次说清",
-    "titleEn": "Sea of Remnants Payment Model Explained: Gacha, Pity, Pricing & Pay-to-Win Analysis",
-    "category": "system",
-    "categoryZh": "系统",
-    "categoryEn": "System",
-    "summary": "遗忘之海付费模式是公测前玩家最关心的敏感点。本文基于 17173、smzdm、游民星空等权威评测和官方公告，整理三测已公开的抽卡机制、保底数值、定价、是否数值付费等关键信息——smzdm 七天评测明确将其定性为「非数值付费商业化模式的试验品」。",
-    "summaryEn": "Payment model is the most scrutinized topic before launch. This guide compiles confirmed gacha mechanics, pity numbers, pricing, and pay-to-win analysis from authoritative reviews (17173, smzdm, GamerSky) and official announcements.",
-    "tags": [
-      "付费",
-      "抽卡",
-      "保底",
-      "商业化",
-      "Payment",
-      "Gacha",
-      "Pity",
-      "F2P"
-    ],
-    "content": "## 核心结论先放：它不是数值付费\n\n很多玩家在公测前最大的焦虑是「遗忘之海会不会是又一个重氪抽卡手游」。基于三测（破晓号测试 2026.05.28-06.19）的实际数据和多家权威评测，目前可以给出的判断是——\n\n> **smzdm 七天深度评测明确将其定性为「试图探索非数值付费商业化模式的试验品」**\n\n网易号评测给的商业化定性是「**无功无过**」——意思是它没有突破行业底线，也没有颠覆性创新，属于抽卡游戏的中规中矩水平。\n\n但这并不等于「便宜」。下面把所有已公开的付费细节拆开讲。\n\n## 已确认的付费机制（基于三测）\n\n### 抽卡（船员招募）\n\n- **形式**：抽卡（概率性获取船员角色）\n- **最高稀有度**：黑券船员（5 星），与紫券船员（4 星）官方声明**战力平等**，只是更稀有\n- **保底机制**：**每周 50% 概率获取黑券船员或往日之影，保底三周至少一个**\n  - 这是 17173 在前瞻回顾里明确给出的官方数据\n  - 折算下来：连续抽卡，最坏情况下 3 周一定能拿到一个黑券级角色\n- **来源**：[17173 前瞻回顾](https://news.17173.com/content/05232026/105400066.shtml)\n\n### 时装付费\n\n- 部分船员有时装，**付费购买**\n- 时装为**纯外观**，不影响数值（与官方「非数值付费」定调一致）\n\n### 测试期充值返还\n\n- 三测为**删档付费测试**，公测会按规则返还充值\n- 具体返还规则以公测官方公告为准（BWIKI 已确认有返还机制）\n\n## 它是数值付费吗？关键证据\n\n「数值付费」（Pay-to-Win, P2W）指的是花钱能买到比免费玩家更强的数值。这是玩家最敏感的红线。基于三测观察，**目前的证据都指向「非数值付费」**：\n\n### 证据 1：黑券 vs 紫券战力平等\n\n官方明确声明：黑券船员（更稀有）和紫券船员（标准）在战力上**平等**，黑券只是更稀有、外观更独特。这是非常强的「非数值付费」承诺——如果你花钱抽到黑券，你不会因此比免费玩家更强。\n\n### 证据 2：时装是纯外观\n\n三测已确认时装不影响数值，只是皮肤。\n\n### 证据 3：Roguelite 赛季重置\n\n每次出海等级和装备**重置**——这意味着即使你花钱抽到了顶级船员，每次 Roguelite 出海也要从零开始养成。这种设计**天然抑制了数值付费的空间**。\n\n### 证据 4：评测定调\n\nsmzdm 七天评测给的是「非数值付费试验品」判断，而非「重度氪金」。游民星空的商业化专篇虽然有质疑（「都 2026 年了……倘若最终与氪金强绑定，玩家大概率不买账」），但**质疑的是未来风险，不是当前事实**。\n\n## 它会变贵吗？风险提示\n\n虽然三测数据显示它不是数值付费，但仍有几个值得关注的**风险点**：\n\n### 风险 1：商业化方案可能调整\n\n三测不代表最终付费设计。游民专篇明确担心：「都 2026 年了……」——意思是当前的非数值付费方案可能在公测后被调整。\n\n### 风险 2：抽卡深度未知\n\n目前已知的是「黑券保底 3 周」，但**完整的抽卡深度**（例如：单抽价格、十连价格、月卡性价比、保底是否跨池继承、限定池机制等）尚未完全公开。\n\n### 风险 3：联机内容可能引入数值压力\n\n虽然当前是单机体验为主，但未来若加强联机/社交/竞争玩法，可能间接引入数值比较压力。\n\n## 与同类游戏的付费对比\n\n| 维度 | 遗忘之海 | 原神 | 鸣潮 | 崩坏：星穹铁道 |\n|------|---------|------|------|----------------|\n| 抽卡形式 | 角色池 + 时装 | 角色池 + 武器池 | 角色池 + 武器池 | 角色池 + 光锥池 |\n| 最高稀有度 | 黑券（5★） | 5★ | 5★ | 5★ |\n| 数值付费 | 否（三测定调） | 否 | 否 | 否 |\n| 时装付费 | 是（纯外观） | 是 | 是 | 是 |\n| 保底机制 | 3 周保底一个黑券 | 90 抽硬保底 | 80 抽硬保底 | 90 抽硬保底 |\n\n**注意**：遗忘之海的「3 周保底」是基于**时间**（周），而原神等是基于**抽卡次数**（抽）。这两者的实际成本需要结合具体定价才能比较，公测前无法下定论。\n\n## 公测前能做的财务规划\n\n基于目前信息，建议玩家在公测前做如下准备：\n\n1. **不要被三测充值返还诱导过度消费**——三测的金额会在公测返还，但返还规则未知，且这只是「提前消费」不是「便宜」\n2. **关注公测前的付费详解直播/公告**——6 月 26 日前瞻直播和公测前夕的公告是付费细节最终确认的节点\n3. **优先评估月卡/通行证性价比**——这类产品通常是免费玩家最划算的投入\n4. **黑券保底 3 周**意味着免费玩家也能稳定获取高稀有度角色——不需要为了强度焦虑氪金\n\n## 推荐的玩家付费策略\n\n### 零氪玩家\n\n完全可以玩。3 周保底保证你能拿到所有黑券角色，强度上不会落后。\n\n### 月卡玩家\n\n性价比最高的投入方式。预计月卡 + 通行证能覆盖大部分付费内容的体验需求。\n\n### 重氪玩家\n\n由于黑券 vs 紫券战力平等，**重氪买不到强度**，只能买到稀有度和外观。如果你对收集和外观不执着，重氪的性价比低于同类二游。\n\n## 总结：理性观望，不焦虑\n\n公测前的付费焦虑，本质上是「网易系游戏」这个标签带来的历史包袱。基于三测数据和评测定调，**遗忘之海的当前付费设计是中性的、非数值付费的**，但未来可能调整。\n\n建议：**不预充值、不焦虑、等公测前最终付费公告再做财务决定**。\n\n更多相关阅读：[船员节奏榜](/zh/sea/tier-list)、[新手入门指南](/zh/sea/guides/beginner-guide)、[品类定位详解](/zh/sea/guides/what-is-forgotten-sea)。",
-    "contentEn": "## Core conclusion: not pay-to-win\n\nBased on data from the closed beta (2026.05.28-06.19) and authoritative reviews, the current payment design is neutral and non-pay-to-win. smzdm's 7-day deep review explicitly calls it \"an experiment in non-Numerical-Payment monetization.\" NetEase's own review describes it as \"neither good nor bad\" — middle-of-the-road for a gacha game.\n\n## Confirmed mechanics (from beta)\n\n### Gacha (Crew Recruitment)\n- Form: Probability-based character pulls\n- Highest rarity: Black Ticket (5★), with Purple Ticket (4★) — officially stated to have equal combat power\n- Pity: 50% chance per week for Black Ticket or Shadow of the Past, hard pity at 3 weeks\n\n### Cosmetics\n- Some crew have paid skins, purely cosmetic\n\n### Beta spending refund\n- Beta was a wipe-and-pay test, with refunds promised at launch per official rules\n\n## Why it's (currently) non-P2W\n\n1. Official statement: Black and Purple Tickets have equal combat power\n2. Cosmetics are skin-only\n3. Roguelite reset naturally suppresses P2W opportunities\n4. Review consensus: \"non-Numerical-Payment experiment\"\n\n## Risk factors\n\n- Monetization may change at launch\n- Full gacha depth (single-pull price, monthly pass value, pity inheritance) not yet fully revealed\n- Future multiplayer content could introduce indirect power pressure\n\n## Recommended spending strategy\n\n- F2P: fully viable, 3-week pity guarantees access to all Black Ticket crew\n- Monthly pass: best value for low spenders\n- Whales: lower value than typical gacha since you can't buy power, only rarity and cosmetics",
-    "faq": [
-      {
-        "question": "Is Sea of Remnants pay-to-win?",
-        "questionZh": "遗忘之海是氪金变强游戏吗？数值付费吗？",
-        "answer": "Based on closed beta data and authoritative reviews, no. Black Ticket (5★) and Purple Ticket (4★) crew have equal combat power by official statement, skins are cosmetic-only, and the Roguelite reset cycle naturally suppresses P2W. smzdm's 7-day review explicitly calls it a non-Numerical-Payment experiment.",
-        "answerZh": "根据三测数据和多家权威评测，目前不是。官方明确声明黑券（5★）和紫券（4★）战力平等，时装是纯外观，Roguelite 每次重置的设计也天然抑制了数值付费空间。smzdm 七天评测明确将其定性为「非数值付费商业化模式的试验品」。"
-      },
-      {
-        "question": "What is the pity system in Sea of Remnants?",
-        "questionZh": "遗忘之海抽卡保底是多少？",
-        "answer": "Confirmed from beta: 50% chance per week to get a Black Ticket crew or Shadow of the Past, with a hard pity of 3 weeks (guaranteed at least one Black Ticket-rarity drop within 3 weeks).",
-        "answerZh": "三测已确认：每周 50% 概率获取黑券船员或往日之影，保底三周至少一个。也就是说，最坏情况下 3 周一定能拿到一个黑券级角色。"
-      },
-      {
-        "question": "How much does it cost to play Sea of Remnants? Is there a monthly pass?",
-        "questionZh": "遗忘之海怎么收费？有月卡吗？",
-        "answer": "The game is free-to-play with gacha for crew and paid skins. Full pricing (single-pull cost, monthly pass, battle pass) hasn't been fully revealed yet — wait for the official payment details announcement closer to launch.",
-        "answerZh": "本体免费，靠抽船员和卖时装变现。完整的定价细节（单抽价格、月卡、通行证等）尚未完全公开，建议等公测前夕的官方付费详解公告。"
-      },
-      {
-        "question": "Will the payment model change at launch?",
-        "questionZh": "公测时付费模式会变吗？",
-        "answer": "Possible. Closed beta monetization is not final. GamerSky's commercialization feature explicitly raised concerns that the non-P2W design could be adjusted post-launch. We recommend not pre-spending and waiting for the launch payment announcement.",
-        "answerZh": "有可能。三测的付费设计不代表最终版本。游民星空的商业化专篇明确担心当前的「非数值付费」方案可能在公测后被调整。建议不要预充值，等公测前的最终付费公告再做财务决定。"
-      },
-      {
-        "question": "Can F2P players enjoy the game fully?",
-        "questionZh": "零氪玩家能体验完整内容吗？",
-        "answer": "Yes. The 3-week pity system guarantees F2P players can obtain all Black Ticket crew (the highest rarity), and since Black and Purple Tickets have equal combat power, there's no strength gap to overcome.",
-        "answerZh": "完全可以。3 周保底机制保证零氪玩家能稳定获取所有黑券角色（最高稀有度），加上黑券和紫券战力平等，零氪玩家在强度上不会落后。"
-      }
-    ]
-  },
-  {
     "id": "system-requirements-guide",
     "title": "《遗忘之海》配置要求大全：PC / 安卓 / iOS / PS5 / Xbox 全平台最低与推荐配置",
     "titleEn": "Sea of Remnants System Requirements: PC, Android, iOS, PS5, Xbox Full Specs",
@@ -519,6 +465,197 @@
         "questionZh": "为什么搜索遗忘之海会出现其他不相关游戏的结果？",
         "answer": "The Chinese name \"遗忘之海\" is shared or similar to multiple games, causing search engine disambiguation issues. Our wiki explicitly uses \"遗忘之海\" + \"网易\" + \"Sea of Remnants\" in titles to help search engines distinguish this game from others.",
         "answerZh": "因为「遗忘之海」这个中文名与多个游戏重名或相似（DNF 遗忘之地、遗忘之丘系列、MC 整合包），搜索引擎难以区分。本站会在标题中明确使用「遗忘之海 + 网易 + Sea of Remnants」的标记，帮助搜索引擎和用户准确识别。"
+      }
+    ]
+  },
+  {
+    "id": "launch-day-guide",
+    "title": "《遗忘之海》PC 端 7 月 9 日公测完整指南：开服时间、平台互通、首月福利与下载入口",
+    "titleEn": "Sea of Remnants PC Launch Guide: July 9 Release, Cross-Platform, Launch Month Rewards",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "遗忘之海 PC 端 7 月 9 日公测正式上线，移动端 7 月内开放。本文整理 6/26 前瞻直播公布的全部公测情报：开服时间、三端互通、首月 100 抽资源、自选黑券船员、PC 配置要求、预下载入口、新手首日路线、常见问题 FAQ。新人入坑必读。",
+    "summaryEn": "Complete guide to Sea of Remnants' July 9 PC launch: cross-platform support, 100 pulls in launch month, free Black Ticket crew selection, PC specs, pre-load info, and beginner FAQ.",
+    "tags": [
+      "公测",
+      "7月9日",
+      "前瞻直播",
+      "新手",
+      "FAQ",
+      "PC",
+      "互通",
+      "Launch",
+      "Cross-platform"
+    ],
+    "content": "## 公测时间表：7 月 9 日 PC 先行，移动端 7 月内\n\n2026 年 6 月 26 日官方举办了公测前瞻直播，正式确认《遗忘之海》公测时间表：\n\n| 里程碑 | 时间 | 平台 |\n|---|---|---|\n| **PC 端正式公测** | **2026.07.09** | Steam / 官方启动器 |\n| 移动端公测 | 2026 年 7 月内（具体日期未点死） | iOS / Android |\n| 隐秘海海区解锁 | 2026.07 月底 | 全平台 |\n| 第五人格联动上线 | PC 公测第三周 | 全平台 |\n\n**开服具体钟点（如 10:00 / 11:00）官方暂未明确公布**，建议关注[官网 /news/update/ 频道](https://sea.163.com/news/update/) 公告补充。\n\n来源：[官方前瞻情报稿](https://sea.163.com/news/official/20260625/42726_1305601.html)\n\n## 平台与跨端互通：PC / 安卓 / iOS 三端同步\n\n这是本作核心卖点之一——**PC、安卓、iOS 三端数据完全互通**。同一个账号可以在 PC 上深度探索、在手机上日常收菜，进度同步无缝衔接。\n\n| 平台组合 | 互通状态 |\n|---------|---------|\n| PC / Android / iOS | ✅ 完全互通（6/6 公告 + 6/26 直播再次确认） |\n| PS5 | ⚠️ 公测首发不含 PS5，未来版本规划中 |\n| Xbox Series X/S | ⚠️ 暂未官宣节点 |\n\n**Steam 商店页已上线**：[Sea of Remnants on Steam](https://store.steampowered.com/app/3633680/_/?l=schinese)，发行日显示为 2026 年。\n\n## 首月福利：100 抽资源 + 自选黑券船员\n\n公测首月累计可获得 **100 抽招募资源（蔷薇石）**，加上预约礼和叠加活动，零氪玩家也能在开服两周内稳定获取 1-2 名黑券级船员。\n\n### 预约专属福利（公测后完成任务领取）\n\n- **自选黑券船员 ×1**（限时 UP 池的茉莉 / 蓝波乐队黑格 / 其他）\n- **灵感品质时装 ×2 套**\n- 专属头像 + 头像框\n- 丰厚蔷薇石\n\n### 叠加活动\n\n- **仓鼠神见面礼**：开服签到\n- **老船长的七日宝藏**：连续 7 天登录\n- **艾丝的航行好礼**：新手引导任务\n\n### 预约礼（来自 6/6 公告）\n\n- 「来一杯」银币 ×20\n- 紫券船员 6 选 1\n\n**预约人数里程碑奖励阶梯明细官方暂未公开**，关注官方社媒后续公告。\n\n## 公测首月船员阵容（20 余名）\n\n公测首月将上线 **6 大属性、20 余名船员**，分属 5 大船队。其中 18 名是三测破晓号测试已公开角色，剩余是新加入的「妄想剧团」船队成员。\n\n### 重点船员\n\n| 角色 | 阵营 | 定位 / 获取方式 |\n|------|------|---------------|\n| **茉莉（Molly）** | 蓝波乐队 | **限时 UP 池船员**（公测首发 UP） |\n| **黑格（Heige）** | 蓝波乐队 | **赛季船员**（赛季奖励线） |\n| **盖尔（Gail）** | 蓝波乐队 | 后续上线（主唱） |\n| **爱德华（Edward）** | 流浪号 | 后续上线（船长） |\n| **神秘联动船员 ×1** | （未公开） | 公测首月陆续上线 |\n\n### 5 大船队（公测版本）\n\n| 船队 | 备注 |\n|------|------|\n| 蓝波乐队 | 主唱盖尔后续上线 |\n| 破晓者 | — |\n| 黑男爵 | — |\n| **妄想剧团** | **公测新公开船队**（替换/扩充原漂流瓶号位） |\n| 流浪号 | 船长爱德华后续上线 |\n\n**重大变化：** 三测期间的「漂流瓶号」**未出现在公测船队名单**，取而代之的是新「妄想剧团」船队。旅人/艾丝/懦夫等原漂流瓶号船员的最终归属，需等公测实机确认。\n\n## 公测首日路线建议\n\n### 上午 10:00 开服（预估时间）\n\n1. 完成新手引导，跟随主线到奥托皮亚（主城）\n2. 领取全部预约福利 + 七日宝藏首日\n3. 在 6 位黑券船员中**免费自选一位**（推荐：王女 / 小斧头 / 焦面上校 三选一，根据定位）\n4. 完成首抽，看是否需要重开\n\n### 下午\n\n5. 主线推进到「记忆重逢」机制解锁\n6. 完成首次「遗忘之海」打捞，免费获取黑券船员或往日之影（50% 概率）\n7. 探索白沙海、渡桥海，开启 Roguelite 出海循环\n\n### 晚上\n\n8. 完成 7 日宝藏第 1 天任务\n9. 检查 [节奏榜](/zh/sea/tier-list) 调整阵容\n10. 解锁奥托皮亚首个主题结局（与暗巷「地下之王」关联）\n\n## PC 配置要求\n\n详细配置表见[《遗忘之海》配置要求大全](/zh/sea/guides/system-requirements-guide)。简要：\n\n| 画质 | CPU | 显卡 | 内存 |\n|------|-----|------|------|\n| 最低（720p/30fps） | i7-9700 / R5 3600 | GTX 1060 6GB | 16 GB |\n| 推荐（1080p/60fps） | i7-12700 / R7 5800X | RTX 3070Ti | 32 GB |\n| 4K 极致 + 光追 | i9-13900K / R9 7900X | RTX 4090 | 32-64 GB |\n\nPC 支持 NVIDIA RTX 光追、DLSS 4 多帧生成、路径追踪。\n\n## 下载入口\n\n### PC 端\n\n- **Steam**：[Sea of Remnants 商店页](https://store.steampowered.com/app/3633680/_/?l=schinese)（7/9 上线）\n- **官方启动器**：[sea.163.com](https://sea.163.com) 首页下载\n\n### 移动端\n\n- **iOS**：App Store（7 月内上线，搜索「遗忘之海」）\n- **Android**：官网 / TapTap / 各大应用商店（7 月内）\n\n**预下载开启时间官方暂未公布**，预计开服前 24-48 小时开放。\n\n## 公测版本六大新系统速览\n\n直播公布了 6 项公测版本全新内容：\n\n1. **奥托皮亚「多结局」**：玩家行为累积解锁结局，首个主题结局与暗巷「地下之王」关联，已解锁的结局可自由切换\n2. **三大海区**：白沙海 + 渡桥海首发；**隐秘海 7 月底解锁**（含新霸主「猩红女爵」）\n3. **记忆重逢优化**：开局 6 位黑券船员免费自选一位；每周免费打捞黑券船员或往日之影\n4. **贸易场自由交易**：通过探索获取「好金砖」货币，自主交易高品质外观/资源\n5. **个性装扮扩展**：小斧头时装「妄想羽翼」、流浪烟花号专属船皮\n6. **云捏脸前置玩法**：公测前无需下载，上传照片一键生成木偶形象\n\n更多机制详解见：\n\n- [付费模式详解](/zh/sea/guides/payment-model-guide)\n- [贸易场与好金砖系统详解](/zh/sea/guides/trade-market-guide)\n- [品类教育：到底是个什么游戏](/zh/sea/guides/what-is-forgotten-sea)\n\n## 7 月 9 日 vs 同期竞品\n\n公测首周撞期严重，主要竞品：\n\n| 游戏 | 上线/版本 | 与遗忘之海公测时间差 |\n|------|---------|------------------|\n| 原神「月之八」版本 | 2026.07.01 | 遗忘之海公测前 8 天 |\n| 绝区零 3.0 | 同期运行 | — |\n| 崩坏：星穹铁道 4.3 | 同期运行 | — |\n\n**给玩家的建议：** 忘记「二选一」叙事，遗忘之海和原神不是同品类——本作核心是回合制 CRPG + Roguelite 探索，对标的是《博德之门 3》《刺客信条：黑旗》《盗贼之海》，不是 ARPG 抽卡手游。可以同时玩。\n\n## 公测首月推荐阵容\n\n### 漂流瓶号开局队（待公测确认阵营归属）\n\n- 旅人（主攻，SS） + 艾丝（副攻） + 懦夫（生存）\n\n### 黑男爵爆发队\n\n- 小斧头（爆发） + 钟表匠（辅助） + 旅人（追击）\n\n### 蓝波乐队 UP 队（公测首发）\n\n- 茉莉（限时 UP，治疗） + 黑格（赛季船员，输出） + 盖尔（后续上线，辅助）\n\n更多阵容组合见[船员节奏榜](/zh/sea/tier-list) 和各[角色详情页](/zh/sea/characters)。\n\n## 新人 FAQ\n\n更多问题见[新手入门完全指南](/zh/sea/guides/beginner-guide) 和[品类教育页](/zh/sea/guides/what-is-forgotten-sea)。",
+    "contentEn": "## Launch Timeline: PC July 9, Mobile in July\n\nOfficial livestream on 2026.06.26 confirmed the launch schedule:\n\n- **PC launch**: 2026.07.09 (Steam / Official Launcher)\n- **Mobile**: sometime in July 2026 (exact date TBA)\n- Hidden Sea region: late July\n- Identity V crossover: 3rd week after PC launch\n\nSource: [Official livestream summary](https://sea.163.com/news/official/20260625/42726_1305601.html)\n\n## Cross-platform: PC / Android / iOS\n\nFull data interoperability across PC, Android, iOS — same account, seamless progress sync.\n\nPS5 is not in the launch lineup; future version planned.\n\n## Launch Month Rewards: 100 Pulls + Free Black Ticket Crew\n\nAccumulate 100 pulls worth of Astrite (gacha currency) in launch month, plus:\n- Free self-select of 1 Black Ticket crew (6 options)\n- 2 Inspiration-quality skins\n- Exclusive avatar + frame\n- Stackable activities: Hamster God meet-and-greet, 7-day treasure, Ais' voyage gifts\n\n## PC Specs\n\n- Minimum: i7-9700 + GTX 1060 (720p/30fps)\n- Recommended: i7-12700 + RTX 3070Ti (1080p/60fps)\n- 4K Ultra + RT: i9-13900K + RTX 4090\n\nFull table: see system requirements guide.\n\n## 6 New Systems in Launch Version\n\n1. Orbtopia multi-ending system\n2. Three sea regions (White Sand + Crossing Sea at launch; Hidden Sea late July)\n3. Memory Reunion: free 6-select Black Ticket + weekly free salvage\n4. Trade Market (free trading with Good Gold Bar currency)\n5. Expanded cosmetics (Little Axe 'Delusional Wings' skin)\n6. Cloud face-sculpting pre-launch mini-game",
+    "faq": [
+      {
+        "question": "When does Sea of Remnants launch on PC?",
+        "questionZh": "遗忘之海 PC 端什么时候公测？",
+        "answer": "PC version officially launches on July 9, 2026, on Steam and the official launcher. Mobile (iOS/Android) launches sometime in July 2026, exact date not yet announced.",
+        "answerZh": "PC 端 2026 年 7 月 9 日正式公测，登陆 Steam 和官方启动器。移动端（iOS/Android）在 7 月内上线，具体日期官方尚未明确。"
+      },
+      {
+        "question": "Is Sea of Remnants cross-platform? Can PC and mobile play together?",
+        "questionZh": "遗忘之海 PC 和手机能一起玩吗？跨平台数据互通吗？",
+        "answer": "Yes. PC, Android, and iOS have full data interoperability — same account, seamless progress sync. PS5 is not in launch lineup; future version planned.",
+        "answerZh": "可以。PC、安卓、iOS 三端数据完全互通——同一账号可跨设备游玩，进度同步。PS5 暂未在公测首发阵容中，未来版本规划中。"
+      },
+      {
+        "question": "How many free pulls can F2P players get in launch month?",
+        "questionZh": "遗忘之海公测首月零氪能拿多少抽？",
+        "answer": "Launch month accumulates 100 pulls worth of Astrite (gacha currency) through events, daily login, and progression. Plus a free 6-select Black Ticket crew from pre-registration rewards. Effectively 100+ pulls and a guaranteed top-rarity character.",
+        "answerZh": "公测首月累计可获得 100 抽资源（蔷薇石），加上预约礼自选黑券船员一名。零氪玩家能在开服两周内稳定获得 1-2 名黑券级（最高稀有度）船员。"
+      },
+      {
+        "question": "Should I play Sea of Remnants or wait for Genshin's Moon-VIII on July 1?",
+        "questionZh": "7 月 9 日遗忘之海公测，和原神月之八版本（7/1）撞期，怎么选？",
+        "answer": "Not an either-or choice — they're different genres. Sea of Remnants is a turn-based CRPG + Roguelite exploration game, similar to Baldur's Gate 3 / Sea of Thieves, not an action RPG. You can play both; they fill different niches.",
+        "answerZh": "不是二选一——根本不是同品类。遗忘之海是回合制 CRPG + Roguelite 探索游戏，对标的是《博德之门 3》《盗贼之海》，不是动作 RPG。两款可以同时玩，互不冲突。"
+      },
+      {
+        "question": "Can I pre-load Sea of Remnants before July 9 launch?",
+        "questionZh": "遗忘之海可以预下载吗？什么时候开放？",
+        "answer": "Pre-load timing has not been officially announced yet. Expected to open 24-48 hours before July 9 launch. Watch the official site's news/update channel for the latest.",
+        "answerZh": "官方暂未公布预下载开启时间。预计开服前 24-48 小时开放。请关注官网 /news/update/ 频道获取最新公告。"
+      },
+      {
+        "question": "Which Black Ticket crew should I pick from the 6-select?",
+        "questionZh": "公测预约 6 选 1 黑券船员，选哪个？",
+        "answer": "Role-dependent: Princess (top support) / Little Axe (burst DPS) / Burnt Colonel (off-tank). If unsure, Princess is the safest all-around pick. The 6-select is a one-time free choice — save before confirming.",
+        "answerZh": "看你想玩什么定位：王女（顶级辅助）/ 小斧头（爆发输出）/ 焦面上校（副坦）。不确定选哪个时，王女是最稳的通用选择。6 选 1 是一次性免费机会，确认前先存档。"
+      }
+    ]
+  },
+  {
+    "id": "payment-model-guide",
+    "title": "《遗忘之海》付费模式详解：抽卡、贸易场、免费百抽与零氪能否全收集",
+    "titleEn": "Sea of Remnants Payment Model: Gacha, Trade Market, 100 Free Pulls & F2P Viability",
+    "category": "system",
+    "categoryZh": "系统",
+    "categoryEn": "System",
+    "summary": "遗忘之海 7/9 公测版本付费机制全解。6/26 前瞻直播官方明确定调「不氪金也能逐步集齐想要的收藏」，本文基于官方通稿整理：开局六选一自选黑券船员、每周免费打捞 50% 黑券概率、贸易场自由交易、好金砖货币机制。零氪玩家能否全收集？公测付费设计是否真的非数值付费？答案都在这里。",
+    "summaryEn": "Complete payment model analysis for Sea of Remnants' July 9 launch. The June 26 livestream officially committed to 'free players can eventually collect everything' through free 6-select Black Ticket crew, weekly free salvage, and the new Trade Market system.",
+    "tags": [
+      "付费",
+      "抽卡",
+      "保底",
+      "贸易场",
+      "好金砖",
+      "六选一",
+      "免费百抽",
+      "非数值付费",
+      "Payment",
+      "Gacha",
+      "F2P"
+    ],
+    "content": "## 公测版本核心叙事转变：从「非数值付费」判断到官方承诺\n\n三测期间（2026.05.28-06.19），《遗忘之海》的付费模式一直是最大敏感点。媒体（smzdm 七天评测）当时将其定性为「试图探索非数值付费商业化模式的试验品」——是**媒体判断**。\n\n2026 年 6 月 26 日前瞻直播后，叙事彻底转变。官方通稿明确承诺：\n\n> 「**只要持续活跃积攒好金砖，不氪金也能逐步集齐想要的收藏**」\n>\n> —— [官方前瞻情报稿](https://sea.163.com/news/official/20260625/42726_1305601.html)\n\n这是把「非数值付费」从**媒体判断**升级为**官方承诺**的关键转折点。本文详细拆解公测版本的付费机制，看官方到底靠什么变现、零氪能玩到什么程度。\n\n## 公测付费机制全图\n\n| 变现通道 | 是否数值付费 | 公测细节 |\n|---------|------------|---------|\n| 船员招募（抽卡） | 否（黑券/紫券战力平等） | 6 选 1 自选开局 + 每周 50% 黑券概率打捞 |\n| 时装/外观 | 否（纯外观） | 部分付费购买，部分可通过贸易场用「好金砖」兑换 |\n| 贸易场交易 | 否（玩家间） | 用探索所得「好金砖」购买/出售，价格随供需波动 |\n| 跨平台充值 | — | PC / 安卓 / iOS 三端互通 |\n\n**注意：** 官方没有任何「花钱买数值」的通道——连抽卡都设计了保底让零氪稳定获取顶级角色。\n\n## 开局六选一：免费自选黑券船员\n\n### 机制\n\n新手首次抵达遗忘之海时，可在 **6 位黑券船员中免费自选一位** 加入船队。这是 6/26 直播公布的新机制，比三测期的「随机开局」友好得多。\n\n### 推荐选择\n\n| 角色 | 定位 | 适合场景 |\n|------|------|--------|\n| **王女（Princess）** | 辅助 SS | 通用性最强，所有阵容都能带 |\n| **小斧头（Little Axe）** | 爆发输出 SS | 黑男爵船队主攻，单体伤害顶级 |\n| **焦面上校（Burnt Colonel）** | 副坦 SS | 破晓者阵容前排，PvE 攻坚 |\n| 钟表匠（Watchmaker） | 辅助 A | 黑男爵冷却缩减体系 |\n| 海赫（Haihe） | 主攻 A | 破晓者体质战士 |\n| 铁腕统领（Iron Commander） | 主坦 A | 破晓者纯坦克 |\n\n**最稳选择：王女**（顶级辅助，跨阵容可用）。**最爽选择：小斧头**（爆发输出，开荒体验最爽）。\n\n### 时机\n\n6 选 1 是**一次性免费机会**，确认前务必：\n\n1. 完成新手引导，看是否能拿到其他免费船员\n2. 看自己想玩哪个船队阵营\n3. 再做最终选择\n\n## 每周免费打捞：50% 黑券概率\n\n### 机制\n\n每周击败「最后一位遗忘风物」后，进入遗忘之海可 **免费打捞黑券船员或往日之影**，黑券概率 **50%**。\n\n### 数学解读\n\n- **单周期望**：0.5 个黑券船员\n- **三周保底**：1 个黑券船员（最坏情况）\n- **全年（52 周）期望**：26 个黑券船员\n\n这意味着，**只要坚持每周完成一次打捞，零氪玩家在一年内可以稳定获取所有黑券船员**。\n\n### 触发条件\n\n「最后一位遗忘风物」指遗忘之海 Roguelite 关卡的最后 Boss。完成一次完整出海循环（平均 2-3 小时）即可触发。\n\n## 贸易场：自由交易系统（公测全新内容）⚡️\n\n### 核心机制\n\n通过海域探索免费获取：\n- **殿堂级宝藏**（Roguelite 关卡稀有掉落）\n- **金罐**（探索奖励）\n\n出售上述物品获得专属流通货币 **「好金砖」**，可用它在贸易场自主交易：\n\n| 可购买项 | 来源 |\n|---------|------|\n| 高品质船员时装 | 其他玩家出售 |\n| 船只涂装 | 其他玩家出售 |\n| 蔷薇石（抽卡资源） | 其他玩家出售 |\n| 调律纺锤（养成材料） | 其他玩家出售 |\n\n### 价格机制\n\n价格随**全服供需实时波动**——类似 MMORPG 的拍卖行机制。这意味着：\n- 热门外观在公测首周会非常贵\n- 冷门外观/资源相对便宜\n- 玩家可以通过低买高卖赚好金砖\n\n### 官方承诺\n\n> 「**只要持续活跃积攒好金砖，不氪金也能逐步集齐想要的收藏**」\n>\n> —— [官方前瞻情报稿](https://sea.163.com/news/official/20260625/42726_1305601.html)\n\n这是付费叙事转变的核心。**稀有外观从「氪金买」变成「肝出好金砖买」**，零氪玩家的体验根本性改善。\n\n更多贸易场细节见[《贸易场与好金砖系统详解》](/zh/sea/guides/trade-market-guide)。\n\n## 跨平台充值互通\n\nPC、安卓、iOS 三端充值互通（[IT 之家报道](https://www.ithome.com/0/960/891.htm)）。这意味着：\n\n- 在 PC 上充值的钱，可以在手机上花\n- iOS 用户不需要额外充值（避免苹果税损失，因为本作是网易官方充值体系）\n- 三端同账号，所有付费内容同步\n\n## 三测充值返还\n\n三测为**删档付费测试**，公测按规则返还。返还规则详见[官方返还公告](https://sea.163.com/news/update/20260525/42727_1301409.html)。\n\n**重要提醒：** 不要被「三测充值返还」诱导过度消费。这只是「提前消费」不是「便宜」，返还规则可能有上限。\n\n## 公测首月福利汇总\n\n| 项目 | 数量/性质 |\n|------|----------|\n| 招募资源（蔷薇石） | **100 抽**（首月累计） |\n| 自选黑券船员 | 1 名（预约礼） |\n| 灵感品质时装 | 2 套 |\n| 专属头像 + 头像框 | 1 套 |\n| 七日宝藏（每日登录） | 7 天奖励 |\n| 仓鼠神见面礼 | 开服签到 |\n| 艾丝的航行好礼 | 新手引导 |\n| 紫券船员 6 选 1 | 预约礼 |\n\n**总计：** 100 抽 + 1 黑券船员 + 1 紫券船员 + 大量资源——零氪也能在开服两周内组出有强度的阵容。\n\n## 与同类游戏的付费对比\n\n| 维度 | 遗忘之海（公测） | 原神 | 鸣潮 | 崩坏：星穹铁道 |\n|------|----------------|------|------|----------------|\n| 抽卡保底 | **每周 50% 黑券概率**（时间维） | 90 抽硬保底（次数维） | 80 抽硬保底 | 90 抽硬保底 |\n| 开局自选 | **6 选 1 黑券** | 无 | 无 | 无 |\n| 玩家间交易 | **贸易场**（核心特色） | 无 | 无 | 无 |\n| 数值付费 | 否 | 否 | 否 | 否 |\n| 时装付费 | 是（部分可肝） | 是 | 是 | 是 |\n| 月卡预期 | 公测后确认 | 是 | 是 | 是 |\n\n**遗忘之海最大差异点：** 玩家间贸易 + 开局自选 + 时间维保底——这三点在二次元/抽卡游戏里非常罕见。\n\n## 三类玩家的付费策略\n\n### 零氪玩家\n\n- **完全可玩**：100 抽 + 自选黑券 + 每周打捞保底\n- **能拿到的内容**：所有船员（含黑券级）、部分时装（通过贸易场用好金砖换）\n- **限制**：某些顶级时装可能要等长期积累\n\n### 月卡玩家\n\n- **预计性价比最高**：等待公测前付费详解公告\n- **能拿到的内容**：上述 + 月卡专属时装/资源\n- **建议**：先观察首月实机表现再决定是否续费\n\n### 重氪玩家\n\n- **性价比较低**：因为黑券 vs 紫券战力平等，**氪金买不到强度**，只能买到稀有度和外观\n- **能拿到的内容**：所有付费外观、限定 UP 池首发（如茉莉）\n- **建议**：除非是收藏党，否则不建议重氪\n\n## 公测付费设计的潜在风险\n\n虽然官方承诺非数值付费，仍有几个值得关注的**风险点**：\n\n### 风险 1：贸易场可能出现「氪金买好金砖」入口\n\n官方通稿未明确「好金砖」是否能直接用现金购买。如果可以，那就不是真正的「玩家间交易」而是变相付费。**等公测实机验证**。\n\n### 风险 2：限定池机制未公开\n\n茉莉作为限时 UP 池首发，**保底是否跨池继承**、**UP 概率多少**官方暂未明确。这是付费设计的细节深水区。\n\n### 风险 3：未来版本可能调整\n\n三测 → 公测的付费设计已经优化（增加 6 选 1 + 贸易场），**未来版本仍可能调整**。游民专篇明确担心：「都 2026 年了……倘若最终与氪金强绑定，玩家大概率不买账」。\n\n## 总结：理性乐观\n\n基于 6/26 直播官方通稿，公测版本的付费设计可以总结为：\n\n- **官方承诺非数值付费**（首次明确定调）\n- **零氪可玩到完整内容**（每周打捞 + 贸易场 + 首月 100 抽）\n- **付费点集中在稀有外观/限定 UP**\n- **未来版本仍有调整风险**\n\n建议：**不预充值、不焦虑、等公测首周实机反馈再做财务决定**。但总体上，这是 2026 年国产抽卡游戏里最友好的付费设计之一。\n\n## 相关阅读\n\n- [7/9 公测完整指南](/zh/sea/guides/launch-day-guide)\n- [贸易场与好金砖系统详解](/zh/sea/guides/trade-market-guide)\n- [品类教育：到底是个什么游戏](/zh/sea/guides/what-is-forgotten-sea)\n- [船员节奏榜](/zh/sea/tier-list)",
+    "contentEn": "## Core narrative shift: from non-P2W judgment to official commitment\n\nDuring the 2026.05.28-06.19 beta, payment model was Sea of Remnants' biggest controversy. smzdm's 7-day review called it \"an experiment in non-Numerical-Payment monetization\" — a media judgment.\n\nThe 2026.06.26 launch preview livestream turned this into an official commitment:\n\n> \"As long as you keep accumulating Good Gold Bars through active play, F2P players can eventually collect everything they want.\"\n>\n> — [Official livestream summary](https://sea.163.com/news/official/20260625/42726_1305601.html)\n\n## Launch payment channels\n\n| Channel | P2W? | Details |\n|---------|------|---------|\n| Crew gacha | No (Black/Purple equal power) | 6-select at start + weekly 50% salvage |\n| Cosmetics | No (skin-only) | Some paid, some via Trade Market |\n| Trade Market | No (player-to-player) | Trade with Good Gold Bar currency |\n| Cross-platform payment | — | PC/Android/iOS unified |\n\n## Free 6-select Black Ticket crew\n\nNew players get one free pick from 6 Black Ticket crew. Recommended: Princess (top support, universal) or Little Axe (burst DPS).\n\n## Weekly free salvage: 50% Black Ticket chance\n\nAfter beating the final \"Forgotten Thing\" each week, enter Sea of Remnants to salvage a free Black Ticket crew or Shadow of the Past, 50% Black Ticket chance. Hard pity at 3 weeks; expected ~26 Black Ticket crew per year for free.\n\n## Trade Market (new in launch version)\n\nEarn Good Gold Bars by selling Hall-grade Treasures and Gold Pots from exploration. Use them to trade cosmetics, ship paints, Astrite (gacha currency), and tuning materials with other players. Prices fluctuate with server-wide supply and demand.\n\nOfficial commitment: \"F2P players can eventually collect everything they want through accumulated Good Gold Bars.\"\n\n## Launch month rewards: 100 pulls + free Black Ticket crew\n\n100 pulls of Astrite + 1 free Black Ticket crew (6-select) + 1 Purple Ticket crew (6-select) + 2 Inspiration skins + 7-day login rewards.\n\n## Comparison with Genshin / WuWa / Star Rail\n\n- Pity: weekly 50% Black Ticket chance (time-based, not pull-based)\n- Start: free 6-select Black Ticket (rare in gacha games)\n- Player trading: Trade Market (unique to this game)\n- P2W: no\n\n## Risk factors\n\n- Good Gold Bars may be purchasable with cash (unconfirmed)\n- Limited pool pity inheritance not yet detailed\n- Future versions may adjust (GamerSky explicitly raised concerns)\n\n## Verdict\n\nCautiously optimistic. Official commitment to non-P2W is now explicit. F2P players can experience full content through weekly salvage + Trade Market + 100 launch pulls. Don't pre-spend; wait for launch week real-money feedback.",
+    "faq": [
+      {
+        "question": "Is Sea of Remnants pay-to-win in the launch version?",
+        "questionZh": "遗忘之海公测版本会氪金变强吗？数值付费吗？",
+        "answer": "Based on the 2026.06.26 official livestream commitment, no. The official summary explicitly states: 'F2P players can eventually collect everything they want through accumulated Good Gold Bars.' Black Ticket (5★) and Purple Ticket (4★) crew have equal combat power by design. There is no cash channel to buy numerical strength.",
+        "answerZh": "根据 2026.06.26 官方前瞻直播的明确承诺，公测版本不是数值付费。官方通稿明确说：「只要持续活跃积攒好金砖，不氪金也能逐步集齐想要的收藏。」黑券（5★）和紫券（4★）船员战力平等。没有任何花钱买数值的通道。"
+      },
+      {
+        "question": "What is the Black Ticket pity system in the launch version?",
+        "questionZh": "遗忘之海公测保底机制是什么？",
+        "answer": "Two mechanisms: (1) 6-select at game start — pick 1 free Black Ticket crew from 6 options. (2) Weekly free salvage — after beating the weekly 'final Forgotten Thing,' you can salvage a free Black Ticket crew or Shadow of the Past, with 50% Black Ticket chance. Worst case 3 weeks to guarantee one Black Ticket.",
+        "answerZh": "两套机制：(1) 开局六选一——从 6 位黑券船员中免费自选一位；(2) 每周免费打捞——击败每周「最后一位遗忘风物」后，可免费打捞一次黑券船员或往日之影，黑券概率 50%，保底三周一个。"
+      },
+      {
+        "question": "What is the Trade Market / Good Gold Bar system?",
+        "questionZh": "遗忘之海贸易场是什么？好金砖怎么用？",
+        "answer": "Trade Market is a free player-to-player trading system launching with the public beta. Players earn Good Gold Bars by selling Hall-grade Treasures and Gold Pots (obtained from free exploration). Use Good Gold Bars to buy high-quality crew cosmetics, ship paints, Astrite (gacha currency), and tuning materials from other players. Prices fluctuate with server-wide supply and demand.",
+        "answerZh": "贸易场是公测版本上线的玩家间自由交易系统。玩家通过海域探索免费获取殿堂级宝藏、金罐 → 出售获得专属货币「好金砖」 → 用好金砖自主交易高品质船员时装、船只涂装、蔷薇石（抽卡资源）、调律纺锤等。价格随全服供需实时波动。"
+      },
+      {
+        "question": "Can F2P players collect all characters and cosmetics?",
+        "questionZh": "零氪玩家能收集到所有船员和外观吗？",
+        "answer": "Yes, per official commitment. Weekly 50% Black Ticket salvage means ~26 free Black Ticket crew per year. Trade Market allows earning Good Gold Bars through active play to purchase cosmetics. Some limited-time cosmetics may require patience, but no character or major cosmetic is locked behind a paywall.",
+        "answerZh": "可以，根据官方承诺。每周 50% 黑券打捞意味着零氪一年能稳定获取约 26 个黑券船员。贸易场允许通过活跃探索赚好金砖买外观。某些限时外观可能需要耐心积累，但没有任何船员或重要外观是付费墙锁死的。"
+      },
+      {
+        "question": "How does launch month's 100 free pulls compare to other gacha games?",
+        "questionZh": "公测首月 100 抽在同类游戏里算多吗？",
+        "answer": "100 pulls in launch month is above average for gacha games — Genshin typically offers ~30-50 free pulls per major patch. Combined with the free 6-select Black Ticket crew and weekly 50% salvage, Sea of Remnants' launch month F2P friendliness is among the most generous in the genre.",
+        "answerZh": "公测首月 100 抽在抽卡游戏里高于平均水平——原神一个大版本通常送 30-50 抽。遗忘之海加上自选黑券船员和每周 50% 打捞，公测首月的零氪友好度在同类里属于最慷慨一档。"
+      },
+      {
+        "question": "Should I pre-spend money before July 9 launch?",
+        "questionZh": "公测前需要预充值吗？",
+        "answer": "No. Don't pre-spend. Beta spending refunds (from the May-June test) will be returned per rules, but this is not a discount — just deferred spending. Wait for launch week to see actual monetization (especially whether Good Gold Bars can be bought with cash) before deciding.",
+        "answerZh": "不建议预充值。三测充值的返还会按规则进行（这只是「提前消费」不是「便宜」），等公测首周实机反馈，特别是确认「好金砖」是否能直接用现金购买，再做财务决定。"
+      },
+      {
+        "question": "Will the payment model change after launch?",
+        "questionZh": "公测后付费模式还会变吗？",
+        "answer": "Possible. Beta → launch already saw significant positive changes (added 6-select + Trade Market). Future versions may continue to adjust. GamerSky's commercialization feature explicitly raised this concern. The non-P2W commitment is current as of June 2026 livestream but should be re-evaluated after launch.",
+        "answerZh": "有可能。三测 → 公测的付费设计已经显著优化（增加了 6 选 1 + 贸易场），未来版本仍可能调整。游民星空商业化专篇明确担心过这点。「非数值付费」承诺是 2026 年 6 月直播时点的，公测后需要重新评估。"
+      }
+    ]
+  },
+  {
+    "id": "trade-market-guide",
+    "title": "《遗忘之海》贸易场系统详解：好金砖怎么赚、能买什么、价格机制与玩家交易策略",
+    "titleEn": "Sea of Remnants Trade Market Guide: Good Gold Bar Economy, Trading Strategies & F2P Viability",
+    "category": "system",
+    "categoryZh": "系统",
+    "categoryEn": "System",
+    "summary": "遗忘之海公测版本全新上线的贸易场系统是核心商业化设计。本文基于 6/26 官方前瞻直播通稿，详细解读：好金砖怎么获得（探索殿堂级宝藏/金罐）、贸易场能买什么（高品质船员时装、船只涂装、蔷薇石、调律纺锤）、价格机制（全服供需实时波动）、玩家交易策略。零氪玩家必读——这是官方承诺「不氪金也能集齐收藏」的核心实现机制。",
+    "summaryEn": "Complete guide to Sea of Remnants' Trade Market system (launch version). How to earn Good Gold Bars, what you can buy, price mechanics, and player-to-player trading strategies. The official commitment 'F2P can collect everything' depends on this system.",
+    "tags": [
+      "贸易场",
+      "好金砖",
+      "交易",
+      "经济系统",
+      "F2P",
+      "公测",
+      "Trade Market",
+      "Economy",
+      "Good Gold Bar"
+    ],
+    "content": "## 贸易场是什么？一句话定义\n\n贸易场是《遗忘之海》公测版本全新上线的**玩家间自由交易系统**，于 2026 年 7 月 9 日 PC 公测同步开放。\n\n核心机制：玩家通过探索获得稀有物品（殿堂级宝藏、金罐）→ 出售获得专属货币 **「好金砖」** → 用好金砖自主交易高品质外观/资源/材料。\n\n官方原文（[前瞻情报稿](https://sea.163.com/news/official/20260625/42726_1305601.html)）：\n\n> 「船长可通过海域自由探索免费获取殿堂级宝藏、金罐，出售获取『好金砖』……在贸易场内，船长们可自主交易高品质船员时装、船只涂装、招募资源蔷薇石等。」\n\n## 为什么贸易场是公测版本最重磅的新系统？\n\n三测期间，付费争议是游戏最大敏感点。玩家焦虑的核心是：「会不会有重氪抽卡、氪金才能玩」。\n\n贸易场的设计**直接回应了这条焦虑**——把稀有外观从「现金购买」变成「探索获得 + 玩家间流通」。这是官方叙事转变的关键：\n\n| 阶段 | 付费叙事 |\n|------|---------|\n| 三测期 | 媒体判断（smzdm）：「试图探索非数值付费商业化模式的试验品」 |\n| 6/26 直播 | **官方承诺**：「只要持续活跃积攒好金砖，不氪金也能逐步集齐想要的收藏」 |\n\n贸易场就是这条承诺的**核心实现机制**。\n\n## 好金砖：贸易场的唯一流通货币\n\n### 什么是好金砖\n\n好金砖是贸易场的**专属流通货币**，只能通过出售殿堂级宝藏/金罐获得，**官方通稿未明确是否能直接用现金购买**（这是贸易场设计的关键问题，需等公测实机验证）。\n\n### 怎么获取好金砖\n\n| 物品 | 获取方式 | 出售所得 |\n|------|---------|---------|\n| **殿堂级宝藏** | 海域 Roguelite 关卡稀有掉落 | 较多好金砖 |\n| **金罐** | 探索奖励、Boss 战掉落 | 中量好金砖 |\n| **其他稀有物品** | 隐秘海（7 月底解锁）深层探索 | 待公测验证 |\n\n**关键点：** 殿堂级宝藏和金罐是**探索免费获取**的，不是充值送的。这意味着好金砖的产出源头是玩家活跃度，不是充值额。\n\n### 好金砖的产出估算\n\n公测实机数据未出，但基于三测期间 Roguelite 关卡的物品掉率，预估：\n\n- 普通玩家每周打捞 2-3 个金罐（每个约 50-100 好金砖）\n- 殿堂级宝藏较稀有，每周约 0-1 个（每个约 500-2000 好金砖）\n- 月产出估算：**400-3000 好金砖/月**\n\n实际数字需等公测首周实机统计。\n\n## 贸易场能买什么\n\n官方通稿列出的可交易品类：\n\n| 品类 | 来源 | 是否影响数值 |\n|------|------|------------|\n| **高品质船员时装** | 其他玩家出售 / 部分付费 | 否（纯外观） |\n| **船只涂装** | 其他玩家出售 / 部分付费 | 否（纯外观） |\n| **蔷薇石**（抽卡资源） | 其他玩家出售 | 间接（可换抽） |\n| **调律纺锤**（养成材料） | 其他玩家出售 | 间接（可加速养成） |\n\n**关键发现：** 蔷薇石（抽卡资源）和调律纺锤（养成材料）可以交易——这意味着**零氪玩家可以通过贸易场获得抽卡机会**，不止是外观。\n\n## 价格机制：全服供需实时波动\n\n### 类比：MMORPG 拍卖行\n\n贸易场采用**全服供需实时波动**的价格机制，类似《魔兽世界》《最终幻想 14》的拍卖行。这意味着：\n\n- 热门外观在公测首周会非常贵（少数稀缺 + 大量需求）\n- 冷门外观/资源相对便宜\n- 玩家可以通过低买高卖赚好金砖（套利空间）\n- 价格由市场决定，不是官方定价\n\n### 公测首周价格预测\n\n基于抽卡游戏公测首周的市场规律：\n\n| 品类 | 公测首周价格趋势 |\n|------|----------------|\n| 茉莉限时 UP 池外观 | 🔴 高开（限时 + 高需求） |\n| 小斧头「妄想羽翼」时装 | 🔴 高开（直播宣传高曝光） |\n| 蔷薇石 | 🟡 中等（100 抽福利让短期需求降低） |\n| 调律纺锤 | 🟢 相对便宜（养成材料非稀缺） |\n| 冷门船员时装 | 🟢 低开 |\n\n**玩家策略：** 公测首周**不急着买**，等 2-3 周后市场稳定再入手。手头的好金砖可以先囤积或低买高卖。\n\n## 玩家交易策略\n\n### 策略 1：囤积好金砖等市场稳定\n\n公测首周好金砖价格波动剧烈，**先把探索所得的好金砖囤起来**，等 2-3 周后市场稳定再消费。这期间可以观察各类物品的真实价值。\n\n### 策略 2：套利低买高卖\n\n观察市场，找「价值被低估」的物品（如某些套装虽然便宜但属性/外观很好），低价买入，等市场需求起来后再高价卖出。\n\n### 策略 3：专注蔷薇石/调律纺锤\n\n如果零氪玩家想最大化账号强度，可以**把好金砖都用来买蔷薇石和调律纺锤**，加速船员抽卡和养成。这种策略牺牲外观换强度。\n\n### 策略 4：专注限时外观\n\n如果玩家是收藏党，可以**优先用好金砖买限时外观**（错过就没），无视数值资源。\n\n## 贸易场 vs 抽卡：哪个更划算？\n\n零氪玩家常问：好金砖该换抽卡资源还是直接换外观？\n\n| 选项 | 收益 |\n|------|------|\n| 用好金砖换蔷薇石（抽卡） | 平均 1 抽 = X 好金砖，期望产出 0.5 个黑券船员（每周保底已够） |\n| 用好金砖换限定外观 | 错过就没了，且市场稀缺度高 |\n\n**结论：** 公测首月每周打捞保底已经能稳定获取黑券船员，**用抽卡获得船员的边际价值低**；**用限定外观提升收藏价值的边际价值高**。建议优先换限定外观。\n\n## 贸易场对零氪玩家的意义\n\n### 三大改善\n\n1. **稀有外观不再锁死付费**：三测期部分顶级时装只能现金购买，公测后可以肝出好金砖换\n2. **抽卡资源有补充渠道**：零氪玩家可以通过贸易场买蔷薇石，不止靠每周保底\n3. **市场博弈的乐趣**：低买高卖、囤货、套利——这本身就是一种游戏内容\n\n### 零氪的「最终目标」\n\n官方承诺：**「只要持续活跃积攒好金砖，不氪金也能逐步集齐想要的收藏」**。\n\n这意味着，**只要玩得足够久**，零氪玩家可以：\n\n- 集齐所有船员（通过每周打捞 + 贸易场买蔷薇石）\n- 集齐所有外观（通过贸易场用好金砖换）\n- 不需要充值一分钱\n\n唯一的代价是**时间**。\n\n## 风险提示：贸易场的设计仍有未解之谜\n\n虽然官方通稿承诺良好，但以下细节**暂未公开**：\n\n| 待确认问题 | 影响 |\n|----------|------|\n| 好金砖是否能直接用现金购买？ | 如果能，就不是真正的「玩家间交易」，是变相付费 |\n| 贸易场是否有官方定价区间？ | 如果无限制，可能出现恶意炒作 |\n| 是否有交易税/手续费？ | 影响套利空间 |\n| 限时外观是否可交易？ | 影响稀缺性 |\n| 跨平台贸易场是否同步？ | PC/移动端价格是否一致 |\n\n这些问题需等公测首周实机验证。**建议玩家在答案明确前，谨慎使用好金砖**。\n\n## 贸易场 vs 其他游戏的交易系统\n\n| 游戏 | 玩家间交易 | F2P 友好度 |\n|------|----------|-----------|\n| **遗忘之海（公测）** | ✅ 贸易场（外观/资源全可交易） | 🔴 高 |\n| 原神 | ❌ 无玩家交易 | 🟡 中 |\n| 鸣潮 | ❌ 无玩家交易 | 🟡 中 |\n| 崩坏：星穹铁道 | ❌ 无玩家交易 | 🟡 中 |\n| 魔兽世界（MMO 参考） | ✅ 拍卖行 | — |\n\n**遗忘之海是少数开放玩家交易的网络游戏**，这个设计在抽卡游戏里非常罕见，是其最大差异化卖点之一。\n\n## 总结：贸易场是付费叙事的核心转折\n\n贸易场不只是「多了一个交易系统」这么简单——它是**官方把「非数值付费」从判断升级为承诺的核心实现机制**。\n\n对玩家的建议：\n\n1. **零氪玩家**：积极通过探索获取好金砖，规划自己的交易策略，享受市场博弈\n2. **月卡玩家**：把好金砖作为主要补充资源，配合月卡产出\n3. **重氪玩家**：评估贸易场设计是否符合预期，**不要急着充值**——先看公测首周实机反馈\n\n更多相关阅读：\n\n- [付费模式详解](/zh/sea/guides/payment-model-guide) ——贸易场在整体付费设计里的位置\n- [7/9 公测完整指南](/zh/sea/guides/launch-day-guide) —— 公测时间表和福利\n- [船员节奏榜](/zh/sea/tier-list) —— 哪些船员值得换",
+    "contentEn": "## What is the Trade Market?\n\nThe Trade Market is Sea of Remnants' new player-to-player trading system, launching with the public beta on July 9, 2026. Players earn 'Good Gold Bars' by selling Hall-grade Treasures and Gold Pots (from exploration), then use them to trade cosmetics, ship paints, Astrite (gacha currency), and tuning materials with other players.\n\nOfficial quote: 'Captains can obtain Hall-grade Treasures and Gold Pots through free exploration, sell them for Good Gold Bars... and freely trade high-quality crew cosmetics, ship paints, recruitment resources Astrite, etc. in the Trade Market.'\n\n## Why Trade Market is the launch version's most important new system\n\nDuring beta, payment controversy was the game's biggest issue. The Trade Market directly addresses this concern by turning premium cosmetics from 'cash-only' into 'earnable through play + tradeable between players.' This is the implementation mechanism behind the official commitment: 'F2P players can eventually collect everything they want.'\n\n## Good Gold Bar: the Trade Market's sole currency\n\nOnly obtainable by selling Hall-grade Treasures and Gold Pots. Official livestream didn't clarify whether Good Gold Bars can be directly purchased with cash — this is a critical design question that needs launch-week verification.\n\nEstimated production: 400-3000 Good Gold Bars per month for active players.\n\n## What you can buy\n\n- High-quality crew cosmetics (other players' listings)\n- Ship paints\n- Astrite (gacha currency)\n- Tuning Spindles (progression materials)\n\nNote: Astrite and Tuning Spindles being tradeable means F2P players can earn gacha pulls through trade, not just cosmetics.\n\n## Price mechanics\n\nReal-time supply-and-demand pricing across the entire server, similar to WoW's auction house. Expect high prices for limited cosmetics in launch week, cheaper for cold/popular resources.\n\n## Player trading strategies\n\n1. Stockpile Good Gold Bars until market stabilizes (2-3 weeks)\n2. Buy low / sell high (arbitrage)\n3. Focus on Astrite/Tuning Spindles for account strength\n4. Focus on limited cosmetics for collection\n\n## F2P implications\n\nThe official commitment 'F2P can collect everything' depends on this system. With weekly Black Ticket salvage + Trade Market purchases, F2P players can eventually obtain all crew and cosmetics without spending cash.\n\n## Risk factors\n\n- Can Good Gold Bars be bought with cash? (unconfirmed)\n- Are there trading fees?\n- Are limited cosmetics tradeable?\n- Cross-platform price sync?\n\nVerify these in launch week before committing Good Gold Bars.\n\n## Comparison with other gacha games\n\nSea of Remnants is one of the few gacha-style games with open player-to-player trading — a major differentiator from Genshin/WuWa/Star Rail which have no trading.",
+    "faq": [
+      {
+        "question": "What is the Trade Market in Sea of Remnants?",
+        "questionZh": "遗忘之海贸易场是什么？",
+        "answer": "Trade Market is a player-to-player free trading system launching with the public beta on July 9. Players earn Good Gold Bars by selling Hall-grade Treasures and Gold Pots (obtained from free exploration), then use them to trade crew cosmetics, ship paints, Astrite (gacha currency), and tuning materials with other players.",
+        "answerZh": "贸易场是公测版本（7 月 9 日上线）的玩家间自由交易系统。玩家通过海域探索免费获取殿堂级宝藏、金罐，出售获得专属货币「好金砖」，再用好金砖自主交易高品质船员时装、船只涂装、蔷薇石（抽卡资源）、调律纺锤等。"
+      },
+      {
+        "question": "How do I earn Good Gold Bars?",
+        "questionZh": "好金砖怎么获得？",
+        "answer": "By selling Hall-grade Treasures (rare drops from Roguelite sea stages) and Gold Pots (exploration rewards, boss drops) at the Trade Market. Estimated monthly production for active players: 400-3000 Good Gold Bars. Official has not clarified whether Good Gold Bars can be directly purchased with cash.",
+        "answerZh": "在贸易场出售「殿堂级宝藏」（Roguelite 关卡稀有掉落）和「金罐」（探索奖励、Boss 掉落）获得。活跃玩家月产出估算 400-3000 好金砖。官方暂未明确「好金砖」是否能直接用现金购买——这是公测首周需重点验证的设计点。"
+      },
+      {
+        "question": "Can Good Gold Bars be bought with real money?",
+        "questionZh": "好金砖能充值买吗？",
+        "answer": "Not confirmed. The official livestream summary didn't explicitly address this. If Good Gold Bars can be purchased with cash, the 'F2P can collect everything' commitment weakens significantly. Verify in launch week before making spending decisions based on this assumption.",
+        "answerZh": "暂未确认。官方通稿没有明确表态。如果好金砖能直接充值购买，那「不氪金也能集齐收藏」的承诺就要打折。公测首周重点验证这一点，再做财务决定。"
+      },
+      {
+        "question": "Can I trade characters/crew in the Trade Market?",
+        "questionZh": "遗忘之海能交易船员吗？",
+        "answer": "Based on the official summary, crew themselves are not listed as tradeable. What's tradeable are: high-quality crew cosmetics, ship paints, Astrite (gacha currency), and tuning materials. To get specific crew, use Astrite in gacha pulls.",
+        "answerZh": "根据官方通稿，船员本身不在可交易列表里。可交易的是：高品质船员时装、船只涂装、蔷薇石（抽卡资源）、调律纺锤等。想获得特定船员，需要用蔷薇石抽卡。"
+      },
+      {
+        "question": "Is the Trade Market F2P friendly?",
+        "questionZh": "贸易场对零氪玩家友好吗？",
+        "answer": "Very. The official commitment 'F2P can eventually collect everything through Good Gold Bars' depends entirely on this system. F2P players can earn Good Gold Bars through active exploration, then trade for premium cosmetics and even gacha pulls — no cash required.",
+        "answerZh": "非常友好。官方「不氪金也能集齐收藏」的承诺完全依赖这个系统。零氪玩家通过活跃探索获得好金砖，再用好金砖换高品质外观甚至抽卡资源——不需要充值一分钱。"
+      },
+      {
+        "question": "When does the Trade Market unlock?",
+        "questionZh": "贸易场什么时候解锁？",
+        "answer": "Trade Market launches with the public beta on July 9, 2026 (PC version). Specific unlock timing within progression (e.g., reaching Orbtopia, completing tutorial) not detailed in official summary — expect early-game unlock similar to other core systems.",
+        "answerZh": "贸易场随公测版本同步上线（2026 年 7 月 9 日 PC 端）。具体的进度解锁节点（如到达奥托皮亚、完成新手引导）官方通稿未详细说明——预计是早期游戏解锁，和其他核心系统一致。"
       }
     ]
   }
