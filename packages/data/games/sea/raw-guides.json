@@ -843,5 +843,183 @@
         "answerZh": "按总资金（5000 万+）算，逐浪计划是 2026 年国产游戏里规模最大的创作者扶持项目，超过蛋仔派对圆梦计划、米哈游创作者计划、鸣潮创作者计划。但资金多也意味着竞争激烈——内容质量比以往更重要。"
       }
     ]
+  },
+  {
+    "id": "ps5-release-guide",
+    "title": "《遗忘之海》PS5 版本什么时候上线？公测首发不含 PS5 的原因与上线时间预测",
+    "titleEn": "Sea of Remnants PS5 Release: Why PS5 Is Not in Launch Lineup, Release Date Prediction",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "遗忘之海 PC 端 7/9 公测、移动端 7 月内，PS5 不在首发阵容。本文详解 PS5 版本的官方表态历史、不在首发的原因推测、上线时间预测、与 PC 移动端跨端可能性、PS5 玩家是否值得等待。Google Trends 数据显示 sea of remnants ps5 是过去一周全球上升 40% 的高 intent 搜索词。",
+    "summaryEn": "Complete guide to Sea of Remnants PS5 version: official statements history, why PS5 is not in July 9 launch lineup, release date prediction, cross-platform possibilities.",
+    "tags": [
+      "PS5",
+      "主机版",
+      "公测",
+      "上线时间",
+      "PlayStation",
+      "release date",
+      "PS5 Pro"
+    ],
+    "content": "## PS5 版本现状：不在 7/9 公测首发阵容\n\n《遗忘之海》2026 年 7 月 9 日 PC 端公测、7 月内移动端公测，但 **PS5 版本不在首发阵容**，目前**官方没有明确的 PS5 上线节点**。\n\n这是过去一周（2026.06.19-06.26）Google Trends 全球数据上升 **40%** 的搜索词——大量 PS5 玩家在英文 Google 搜「sea of remnants ps5」，但官方信息缺。本文整理所有公开信息，给出最权威的解答。\n\n来源：\n- [6/26 公测前瞻情报稿](https://sea.163.com/news/official/20260625/42726_1305601.html)\n- [6/6 公测定档公告](https://sea.163.com/news/official/20260604/42726_1302937.html)\n- [PlayStation.Blog 繁体中文官宣](https://blog.zh-hant.playstation.com/2025/06/06/20250606-sor/)\n\n## PS5 版本官宣时间线\n\n| 时间 | 事件 |\n|------|------|\n| 2025.06.06 | **PS5 版本首次官宣** —— PlayStation.Blog 繁体中文发布专题文章确认 PS5 在开发计划中 |\n| 2026.04.28 | 游戏获版号（中国大陆） |\n| 2026.05.28-06.19 | 三测「破晓号测试」**仅 PC + 移动端**，PS5 未参与 |\n| 2026.06.06 | 公测定档公告：**PC + 移动端 7 月**，PS5 未提节点 |\n| 2026.06.26 | 前瞻直播：PS5 仍未提节点，公测首发明确为 PC + 移动端 |\n| 2026.07.09 | PC 端公测（PS5 仍未上线） |\n| 2026.07 月底 | 移动端公测（PS5 仍未上线） |\n\n**关键节点：** 2025.06.06 PS5 已官宣在开发，但**时隔一年多仍未给上线节点**，这是 PS5 玩家焦虑的根源。\n\n## 为什么 PS5 不在公测首发？三大推测原因\n\n官方未公开解释，但基于行业惯例和游戏特性，可推测三大原因：\n\n### 原因 1：跨平台开发的工程复杂度\n\nPS5 是主机平台，需要：\n\n- 适配 DualSense 手柄特性（自适应扳机、触觉反馈）\n- 通过索尼 TRC（技术要求清单）认证\n- 适配 PS5 Pro 增强功能\n- 平台独占优化（与 PC/移动端架构差异大）\n\n这些工程量比 PC + 移动端要大得多，需要额外开发周期。\n\n### 原因 2：主机版本审核流程长\n\n主机版本上架 PlayStation Store 需要：\n\n- 索尼审核（数月）\n- 平台政策协调（特别是中国大陆 PSN 服务）\n- 主机版本评级（如 ESRB、PEGI、CERO）\n\n整个流程通常需要 3-6 个月，远长于 PC Steam 上架。\n\n### 原因 3：市场策略——先 PC + 移动端起量，再上主机\n\n这是大多数国产网络游戏的主机策略：\n\n- PC + 移动端先建立用户基数\n- 主机版作为「延伸体验」后期上线\n- 避免首发主机版需要同时维护多平台的运营压力\n\n《原神》《崩坏：星穹铁道》都是 PC + 移动端先上，PS 版本延后数月到一年。\n\n## PS5 版本上线时间预测\n\n基于公开信息和行业惯例，给出三种情景预测：\n\n### 乐观情景：2026 Q4（10-12 月）\n\n**触发条件：**\n\n- 公测首月（7-8 月）PC + 移动端表现优秀\n- 索尼审核顺利\n- PS5 适配工作提前完成\n\n**概率：** 30%\n\n### 基准情景：2027 Q1（1-3 月）\n\n**触发条件：**\n\n- 公测半年后上线 PS5（参照原神节奏：2020.09 公测，2021.04 PS5 上线，约 7 个月）\n- 跨平台存档功能就绪\n\n**概率：** 50%\n\n### 保守情景：2027 下半年\n\n**触发条件：**\n\n- 主机版优先级降低\n- 公测运营压力大，资源转移到内容更新\n\n**概率：** 20%\n\n**最可能的时间窗：2027 Q1（1-3 月）**，距公测约 6-9 个月。\n\n## PS5 vs PC vs 移动端：跨端可能性\n\n### 官方明确支持\n\n- ✅ **PC / Android / iOS 三端互通**（6/6 公告 + 6/26 直播再次确认）\n- 同一账号跨平台数据同步\n\n### PS5 跨端不明朗\n\nPS5 版本上线后，是否会与 PC/移动端数据互通，官方**暂未官宣**。两种可能：\n\n#### 情景 A：完全互通（乐观）\n\nPS5 也加入跨端，玩家可以在 PS5 上继续 PC 的进度。参照原神做法。\n\n#### 情景 B：独立服务器（保守）\n\nPS5 版本独立运营，与 PC/移动端不互通。这种情况下：\n\n- PS5 玩家需要重新建号\n- 付费充值在 PSN 体系内（可能影响价格）\n- 不能和 PC 朋友联机\n\n**建议：** PS5 玩家等待官方明确跨端政策后再决定是否入手。\n\n## PS5 版本的技术优势预期\n\n如果 PS5 版本上线，预期会带来以下技术优势：\n\n### 视觉强化\n\n- **原生 4K 60fps**（PC 端要 RTX 4070Ti 才能跑到 4K 极致）\n- PS5 Pro 增强：可能支持 8K 或更高帧率\n- 路径追踪 + 光追完整支持\n\n### 操作体验\n\n- DualSense 自适应扳机（海战炮击、船只操控）\n- 触觉反馈（战斗冲击、海洋波涛）\n- 控制台式 UI 优化（无键盘鼠标需求）\n\n### 大屏体验\n\n- 客厅大屏 + 家庭影院，海洋冒险氛围更沉浸\n- 适合长期探索、剧情向玩家\n\n## PS5 玩家是否值得等待？决策建议\n\n### 立刻入手 PC 版的情况\n\n- 等 7/9 公测，希望第一时间体验\n- 有合格 PC（推荐配置 RTX 3070Ti）\n- 重视与移动端跨端（手机日常收菜）\n- 不想错过公测首月 100 抽福利\n- 关注逐浪计划创作者扶持（早入场优势）\n\n### 等待 PS5 版本的情况\n\n- 没有合格 PC，也不想用手机玩\n- 重视大屏 + 手柄体验\n- 不介意等 6-12 个月\n- 已有 PS5 或 PS5 Pro\n- 想要主机版独占优化（DualSense 等）\n\n### 双版本策略\n\n- 现在 PC 入坑，享受公测福利\n- PS5 版本上线后再开 PS5 号，做第二账号\n- 风险：如果 PS5 不互通，需要重新建号；如果互通，双版本共享进度\n\n## PS5 版本的价格预期\n\nPS5 版本预期定价策略（推测）：\n\n- **本体免费**（与 PC/移动端一致）\n- 抽卡/外观价格：PSN 渠道可能略贵（索尼抽成 30%）\n- PS Plus 会员福利：可能有 PS Plus 独占奖励\n\n**注意：** PS5 版本的「好金砖」是否能直接用现金购买，这是个关键问题（详见[贸易场系统详解](/zh/sea/guides/trade-market-guide)）。如果 PSN 渠道的好金砖定价高于 PC，那 PS5 玩家的零氪友好度会打折扣。\n\n## 玩家 FAQ\n\n更多公测通用问题见 [公测完整指南](/zh/sea/guides/launch-day-guide)。",
+    "contentEn": "## PS5 Status: Not in July 9 Launch Lineup\n\nSea of Remnants launches July 9 on PC, July for mobile, but **PS5 is not in the launch lineup**. No official release date for PS5 yet.\n\nThis is the question driving 'sea of remnants ps5' — a Google Trends search term up 40% in the past week (2026.06.19-06.26). Massive PS5 player demand, but limited official info.\n\n## PS5 Announcement Timeline\n\n| Date | Event |\n|------|-------|\n| 2025.06.06 | PS5 version officially announced on PlayStation.Blog |\n| 2026.04.28 | Game receives China ISBN |\n| 2026.05.28-06.19 | Beta test: PC + mobile only, no PS5 |\n| 2026.06.06 | Launch date confirmed for PC + mobile; PS5 not mentioned |\n| 2026.06.26 | Livestream: PS5 still no date |\n| 2026.07.09 | PC launch (PS5 still not released) |\n\n## Three probable reasons PS5 isn't in launch lineup\n\n1. **Cross-platform engineering complexity**: PS5 needs DualSense adaptation, Sony TRC certification, PS5 Pro enhancements — significantly more work than PC/mobile.\n2. **Console certification takes longer**: Sony review, platform policy coordination, console ratings (3-6 months vs. weeks for Steam).\n3. **Market strategy**: Most Chinese online games launch PC+mobile first, console version later (Genshin did the same — 7 months between PC launch and PS5 release).\n\n## PS5 release date prediction\n\n- **Optimistic (Q4 2026)**: 30% probability — requires smooth certification and successful launch\n- **Baseline (Q1 2027)**: 50% probability — matches Genshin's 7-month PC-to-PS5 gap\n- **Conservative (H2 2027)**: 20% probability — if console priority lowers\n\nMost likely window: **Q1 2027 (Jan-Mar)**, about 6-9 months after PC launch.\n\n## Cross-platform with PS5?\n\nPC/Android/iOS confirmed cross-platform. PS5 cross-platform status: unconfirmed.\n\n- Scenario A: Full cross-platform (like Genshin) — continue PC progress on PS5\n- Scenario B: Separate servers — restart on PS5\n\nWait for official confirmation before committing.\n\n## PS5 technical advantages expected\n\n- Native 4K 60fps (PC needs RTX 4070Ti for this)\n- PS5 Pro: possible 8K / higher framerate\n- Path tracing + ray tracing full support\n- DualSense adaptive triggers (naval combat, ship steering)\n- Haptic feedback (combat impacts, ocean waves)\n- Console-optimized UI (no keyboard/mouse needed)\n- Living room big-screen experience\n\n## Should you wait for PS5?\n\n**Get PC now if:**\n- Want to play at July 9 launch\n- Have a capable PC (RTX 3070Ti recommended)\n- Want mobile cross-platform\n- Don't want to miss 100-pull launch rewards\n\n**Wait for PS5 if:**\n- No capable PC, don't want mobile\n- Value big-screen + controller experience\n- Don't mind waiting 6-12 months\n- Already have PS5 or PS5 Pro\n\n## PS5 price expectations\n\n- Base game free (same as PC/mobile)\n- Gacha/cosmetics: PSN channel may be slightly more expensive (Sony's 30% cut)\n- Possible PS Plus exclusive rewards\n- Critical question: will Good Gold Bars be purchasable with cash via PSN? Price parity with PC unconfirmed.",
+    "faq": [
+      {
+        "question": "When does Sea of Remnants launch on PS5?",
+        "questionZh": "遗忘之海 PS5 版本什么时候上线？",
+        "answer": "PS5 version has no official release date yet. Most likely window is Q1 2027 (January-March), about 6-9 months after the July 9 PC launch, based on similar Chinese game launches like Genshin Impact.",
+        "answerZh": "PS5 版本目前官方没有明确的上线节点。基于同类国产游戏（如原神 PC 到 PS5 间隔 7 个月）推测，最可能的时间窗是 2027 年 Q1（1-3 月），距 PC 公测约 6-9 个月。"
+      },
+      {
+        "question": "Why is PS5 not in the July 9 launch lineup?",
+        "questionZh": "为什么 PS5 不在公测首发阵容？",
+        "answer": "Three likely reasons: (1) PS5 requires additional engineering for DualSense, Sony TRC certification, and PS5 Pro enhancements; (2) Console certification takes 3-6 months versus weeks for Steam; (3) Chinese online games typically launch PC+mobile first, console later, following Genshin's pattern.",
+        "answerZh": "三个推测原因：(1) PS5 需要额外适配 DualSense 手柄、通过索尼 TRC 认证、PS5 Pro 增强；(2) 主机版本审核流程通常需要 3-6 个月，远长于 Steam 的几周；(3) 国产网络游戏一般先上 PC + 移动端起量，主机版作为延伸后期上线（参照原神节奏）。"
+      },
+      {
+        "question": "Is Sea of Remnants PS5 version cross-platform with PC?",
+        "questionZh": "遗忘之海 PS5 和 PC 能跨端吗？数据互通吗？",
+        "answer": "Not officially confirmed. PC/Android/iOS are confirmed cross-platform, but PS5 cross-platform status is unclear. Two scenarios: full cross-platform (continue PC progress on PS5, like Genshin) OR separate servers (restart on PS5). Wait for official confirmation before committing.",
+        "answerZh": "官方暂未明确。PC/安卓/iOS 三端已确认完全互通，但 PS5 是否加入跨端不明朗。两种可能：完全互通（参照原神，PS5 上继续 PC 进度）或独立服务器（PS5 上重新建号）。建议等官方明确跨端政策后再决定是否入手 PS5 版本。"
+      },
+      {
+        "question": "Should I wait for PS5 version or get PC at launch?",
+        "questionZh": "应该等 PS5 版本还是 7/9 直接 PC 入坑？",
+        "answer": "Get PC at launch if: you want to play July 9, have a capable PC, want mobile cross-platform, or don't want to miss 100-pull launch rewards. Wait for PS5 if: no capable PC, value big-screen controller experience, don't mind waiting 6-12 months, or already have PS5/PS5 Pro.",
+        "answerZh": "立刻入手 PC 版的情况：想 7/9 第一时间体验、有合格 PC（推荐 RTX 3070Ti）、重视与移动端跨端、不想错过公测首月 100 抽福利。等待 PS5 版本的情况：没有合格 PC、不想用手机玩、重视大屏手柄体验、不介意等 6-12 个月、已有 PS5 或 PS5 Pro。"
+      },
+      {
+        "question": "Will PS5 version have better graphics than PC?",
+        "questionZh": "PS5 版本画质会比 PC 好吗？",
+        "answer": "On high-end PC (RTX 4070Ti+), PC can match or exceed PS5 graphics with path tracing and 4K. On mid-range PC, PS5 may perform better due to console optimization. PS5 Pro (if supported) could offer 8K or higher framerates. The biggest PS5 advantage is DualSense adaptive triggers and haptic feedback for naval combat.",
+        "answerZh": "高端 PC（RTX 4070Ti 以上）开启路径追踪和 4K 可以达到或超过 PS5 画质。中端 PC 上，PS5 由于主机优化可能表现更好。PS5 Pro（如果支持）可能提供 8K 或更高帧率。PS5 最大的优势是 DualSense 自适应扳机和触觉反馈——海战炮击、船只操控的体验感更强。"
+      },
+      {
+        "question": "Will PS5 version pricing be different from PC?",
+        "questionZh": "PS5 版本定价会和 PC 不同吗？",
+        "answer": "Base game will be free (same as PC/mobile). However, PSN channel gacha/cosmetics may be slightly more expensive due to Sony's 30% platform cut. Critical question: whether Good Gold Bars can be purchased with cash via PSN, and whether pricing matches PC. Wait for official PS5 launch details to confirm.",
+        "answerZh": "本体免费（与 PC/移动端一致）。但 PSN 渠道的抽卡/外观可能略贵，因为索尼抽成 30%。关键问题是：PSN 渠道是否能直接用现金购买「好金砖」，定价是否与 PC 一致。等 PS5 版本正式上线时官方会确认细节。"
+      }
+    ]
+  },
+  {
+    "id": "vs-aniimo-guide",
+    "title": "《遗忘之海》vs Aniimo：两款网易开放世界游戏怎么选？玩法、付费、定位全面对比",
+    "titleEn": "Sea of Remnants vs Aniimo: Two NetEase Open-World Games Compared",
+    "category": "system",
+    "categoryZh": "系统",
+    "categoryEn": "System",
+    "summary": "Aniimo 是网易另一款同期开放的开放世界游戏，过去一周 Google Trends 全球搜索上升 300%。本文详细对比遗忘之海与 Aniimo 的玩法、付费、定位、上线节点、目标玩家。两款同为网易出品的开放世界，但品类、节奏、风格差异巨大——帮你决定玩哪个、还是两个都玩。",
+    "summaryEn": "Complete comparison between Sea of Remnants and Aniimo (both NetEase open-world games). Gameplay, payment model, target players, launch timeline.",
+    "tags": [
+      "对比",
+      "Aniimo",
+      "网易",
+      "开放世界",
+      "竞品",
+      "vs",
+      "Comparison"
+    ],
+    "content": "## Aniimo 是什么？为什么玩家在对比？\n\n**Aniimo** 是网易旗下另一款开放世界游戏，过去一周（2026.06.19-06.26）Google Trends 全球搜索数据上升 **300%**，是过去一周上升最快的二游相关词。\n\n玩家在搜「sea of remnants vs aniimo」是因为：\n\n- 两款都是网易出品\n- 两款都是开放世界\n- 两款都在 2026 年公测/上线\n- 玩家预算有限，想知道该投哪个\n\n**核心结论先放：两款游戏品类差异巨大，本质上不构成直接竞品，玩家可以同时玩。**\n\n## 一句话定位区别\n\n| 游戏 | 定位 |\n|------|------|\n| **遗忘之海** | 海洋冒险开放世界 RPG（回合制 CRPG + Roguelite 探索 + 多结局剧情） |\n| **Aniimo** | 萌系宠物收集开放世界（类「幻兽帕鲁 + 动森」缝合） |\n\n**品类差异：** 遗忘之海对标《博德之门 3》《刺客信条：黑旗》，Aniimo 对标《幻兽帕鲁》《动物森友会》。完全是两个赛道。\n\n## 玩法对比\n\n### 战斗系统\n\n| 维度 | 遗忘之海 | Aniimo |\n|------|---------|--------|\n| 类型 | **回合制 + CRPG 骰子** | **即时动作** |\n| 战斗节奏 | 慢节奏、策略性 | 快节奏、操作感强 |\n| 核心机制 | 「捣蛋时间」骰子拼点、6 大 D&D 属性 | 宠物收集 + 即时战斗 |\n| 元素系统 | 无传统元素，D&D 6 属性 | 类宝可梦属性克制 |\n| 适合玩家 | 喜欢策略深度、CRPG 爱好者 | 喜欢 ARPG、即时战斗 |\n\n### 探索玩法\n\n| 维度 | 遗忘之海 | Aniimo |\n|------|---------|--------|\n| 探索类型 | **Roguelite 海域**（每次重置） | **开放世界**（持久地图） |\n| 主城 | 奥托皮亚（多结局） | 萌系家园（自由建造） |\n| 收集对象 | 船员、船只、记忆碎片 | Aniimo 怪物（类宝可梦） |\n| 探索驱动 | 剧情 + Roguelite 养成 | 收集 + 建造 |\n\n### 联机模式\n\n| 维度 | 遗忘之海 | Aniimo |\n|------|---------|--------|\n| 联机强度 | **单机为主**，联机克制 | **强联机**，多人合作 |\n| PVP | 暂未官宣 | 暂未官宣 |\n| 社交 | 弱社交 | 强社交（朋友联机建造） |\n\n## 付费模式对比\n\n### 遗忘之海（公测版本）\n\n- **抽卡**：每周 50% 黑券概率，保底三周一个黑券船员\n- **开局六选一**：免费自选一位黑券船员\n- **首月福利**：100 抽资源\n- **贸易场**：玩家间自由交易（货币「好金砖」）\n- **数值付费**：官方明确**不是数值付费**\n\n详见[《遗忘之海》付费模式详解](/zh/sea/guides/payment-model-guide)。\n\n### Aniimo\n\n- **抽卡形式**：宠物/角色抽卡（具体概率未公开）\n- **建造系统**：免费建造，部分家具付费\n- **数值付费**：暂未明确\n\n**关键差异：** 遗忘之海的「贸易场玩家间交易」是其最大差异化设计，Aniimo 没有类似机制。\n\n## 美术风格对比\n\n### 遗忘之海\n\n- **木偶哥特风**（Joker 工作室标志性风格）\n- 深色海洋、戏剧化光影\n- 角色造型偏写实 + 卡通融合\n- 适合喜欢成熟、戏剧化美学的玩家\n\n### Aniimo\n\n- **萌系卡通风**\n- 明亮色彩、Q 版角色\n- Aniimo 怪物造型类似宝可梦\n- 适合喜欢可爱、轻松氛围的玩家\n\n**美术风格反差极大**——遗忘之海是「暗黑戏剧」，Aniimo 是「明快治愈」，没有交集。\n\n## 上线时间对比\n\n| 游戏 | 公测时间 | 平台 |\n|------|---------|------|\n| **遗忘之海** | **2026.07.09**（PC） | PC + 移动端 + PS5（后续）+ Xbox |\n| **Aniimo** | 公测时间未官宣 | PC + 移动端（可能） |\n\n**遗忘之海上线更早**，公测首月（7 月）没有 Aniimo 竞争压力。Aniimo 公测节点未定，预计在遗忘之海公测半年后或更晚。\n\n## 目标玩家画像对比\n\n### 遗忘之海的目标玩家\n\n- 喜欢《巫师 3》《博德之门 3》等剧情向 RPG\n- 接受回合制 + CRPG 玩法\n- 喜欢 Roguelite 长线养成\n- 对美术风格有要求（成熟、戏剧化）\n- 重视剧情深度、碎片化叙事\n- 25+ 玩家居多\n\n### Aniimo 的目标玩家\n\n- 喜欢《幻兽帕鲁》《动物森友会》\n- 喜欢 ARPG 即时战斗\n- 重视收集 + 建造玩法\n- 喜欢 Q 版萌系美术\n- 重视社交、联机\n- 全年龄段玩家，女性玩家比例高\n\n**玩家画像几乎不重叠**——遗忘之海玩家可能不会喜欢 Aniimo，反之亦然。\n\n## 玩家决策建议\n\n### 选遗忘之海的情况\n\n- 想要深度剧情 + 多结局\n- 接受回合制战斗\n- 喜欢木偶哥特风\n- 重视玩家间交易（贸易场）\n- 不介意弱联机（单机为主）\n- 公测就玩，不想等\n\n### 选 Aniimo 的情况\n\n- 想要轻松收集 + 建造\n- 喜欢 ARPG 即时战斗\n- 喜欢萌系卡通美学\n- 重视社交联机\n- 不介意等公测节点\n\n### 两款都玩的情况\n\n- 预算时间够\n- 想体验不同品类\n- 遗忘之海当深度 RPG 玩，Aniimo 当休闲收集玩\n- 两款定位反差大，可以互补不冲突\n\n## Gachia 子站的 SEO 截流策略\n\n「aniimo」过去一周全球搜索上升 300%，这是 SEO 蓝海。玩家在搜「遗忘之海 vs aniimo」「aniimo vs sea of remnants」「网易两款开放世界怎么选」时，Gachia 中文站通过本对比页可截流：\n\n- 英文长尾：「sea of remnants vs aniimo」\n- 中文长尾：「遗忘之海 aniimo 对比」「遗忘之海和 Aniimo 哪个好」\n- 决策类搜索：「网易开放世界怎么选」\n\n## 其他相关对比\n\n- [遗忘之海 vs 盗贼之海](/zh/sea/guides/vs-sea-of-thieves-guide) —— 海战玩法的国产 vs 海外对比\n- [公测完整指南](/zh/sea/guides/launch-day-guide) —— 公测具体信息\n- [品类教育：到底是个什么游戏](/zh/sea/guides/what-is-forgotten-sea) —— 遗忘之海深度定位",
+    "contentEn": "## What is Aniimo? Why compare?\n\nAniimo is another NetEase open-world game, with global Google Trends search up 300% in the past week (June 19-26, 2026). Players compare because both are NetEase open-world titles launching in 2026.\n\n**Core conclusion: The two games are in completely different genres and don't directly compete. You can play both.**\n\n## Positioning\n\n- **Sea of Remnants**: Ocean adventure open-world RPG (turn-based CRPG + Roguelite + multi-ending story)\n- **Aniimo**: Cute creature-collecting open-world (Palworld + Animal Crossing hybrid)\n\n## Gameplay comparison\n\n### Combat\n| | Sea of Remnants | Aniimo |\n|---|---|---|\n| Type | Turn-based CRPG with dice | Real-time action |\n| Pace | Slow, strategic | Fast, action |\n| Core | 'Mischief Time' dice, D&D 6 attributes | Creature collection + real-time combat |\n\n### Exploration\n| | Sea of Remnants | Aniimo |\n|---|---|---|\n| Type | Roguelite sea (resets per run) | Persistent open world |\n| Hub | Orbtopia (multi-ending) | Cute homeland (free building) |\n| Collect | Crew, ships, memory fragments | Aniimo creatures (Pokémon-like) |\n\n### Multiplayer\n| | Sea of Remnants | Aniimo |\n|---|---|---|\n| Co-op | Single-player focused, restrained co-op | Strong co-op, multiplayer building |\n\n## Payment model\n\n### Sea of Remnants (launch version)\n- Gacha: weekly 50% Black Ticket chance, 3-week pity\n- Free 6-select Black Ticket crew at start\n- 100 pulls in launch month\n- Trade Market (player-to-player with Good Gold Bars)\n- Official commitment: NOT pay-to-win\n\n### Aniimo\n- Gacha for creatures/characters (rates not public)\n- Free building with some paid furniture\n- P2W status unconfirmed\n\n**Key difference:** Sea of Remnants' Trade Market is its biggest differentiator; Aniimo has no similar system.\n\n## Art style\n\n- **Sea of Remnants**: Puppet gothic (Joker Studio signature), dark ocean, dramatic lighting\n- **Aniimo**: Cute cartoon, bright colors, Pokémon-like creatures\n\n**Massive aesthetic contrast** — Sea of Remnants is 'dark drama', Aniimo is 'bright healing'.\n\n## Launch timeline\n\n- **Sea of Remnants**: July 9, 2026 (PC) + mobile July + PS5 later\n- **Aniimo**: launch date not announced, likely H2 2026 or later\n\n## Target player profiles\n\n### Sea of Remnants players\n- Fans of Witcher 3, Baldur's Gate 3\n- Accept turn-based CRPG\n- Like Roguelite progression\n- Prefer mature, dramatic aesthetics\n- 25+ demographic\n\n### Aniimo players\n- Fans of Palworld, Animal Crossing\n- Prefer ARPG real-time combat\n- Value collection + building\n- Like cute cartoon style\n- Strong social/co-op preference\n- All ages, more female players\n\n**Almost no overlap** — Sea of Remnants players may not like Aniimo and vice versa.\n\n## Decision guide\n\n**Pick Sea of Remnants if:** want deep story + multi-ending, accept turn-based, like puppet gothic, value Trade Market, don't mind weak multiplayer, want to play at July launch.\n\n**Pick Aniimo if:** want casual collection + building, like ARPG action, like cute aesthetics, value social co-op, can wait for launch.\n\n**Play both if:** budget allows, want different genres — Sea of Remnants as deep RPG, Aniimo as casual collection. They're complementary, not conflicting.",
+    "faq": [
+      {
+        "question": "Is Aniimo better than Sea of Remnants?",
+        "questionZh": "Aniimo 和遗忘之海哪个好玩？",
+        "answer": "Neither is objectively 'better' — they're different genres. Sea of Remnants is a turn-based CRPG + Roguelite with puppet gothic style for mature players. Aniimo is a creature-collecting open-world with cute cartoon style for casual/social players. Pick based on your taste; both are NetEase titles so you can also play both.",
+        "answerZh": "没有客观的「更好」——两款是不同品类。遗忘之海是回合制 CRPG + Roguelite，木偶哥特风，面向成熟玩家。Aniimo 是宠物收集开放世界，萌系卡通风，面向休闲社交玩家。根据个人口味选，也可以同时玩。"
+      },
+      {
+        "question": "Can my Sea of Remnants account work on Aniimo?",
+        "questionZh": "遗忘之海账号能玩 Aniimo 吗？",
+        "answer": "Both games use NetEase account system, so the same NetEase account can log in to both. But progression, characters, and purchases are completely separate — no shared data between the two games.",
+        "answerZh": "两款游戏都用网易账号体系，同一个网易账号可以登录两款游戏。但游戏内的进度、角色、付费内容完全独立，不互通。"
+      },
+      {
+        "question": "Which launches first, Sea of Remnants or Aniimo?",
+        "questionZh": "遗忘之海和 Aniimo 哪个先公测？",
+        "answer": "Sea of Remnants launches first on July 9, 2026 (PC), with mobile in July. Aniimo's launch date has not been officially announced; likely H2 2026 or later. So Sea of Remnants players get a head start of at least several months.",
+        "answerZh": "遗忘之海先公测。PC 端 2026 年 7 月 9 日上线，移动端 7 月内。Aniimo 公测节点尚未官宣，预计 2026 下半年或更晚。遗忘之海玩家至少提前几个月。"
+      },
+      {
+        "question": "Are Sea of Remnants and Aniimo made by the same studio?",
+        "questionZh": "遗忘之海和 Aniimo 是同一个工作室开发的吗？",
+        "answer": "Both are NetEase games but developed by different internal studios. Sea of Remnants is by Joker Studio (Identity V team, known for puppet gothic style). Aniimo's development studio is different and not as well-known. The two studios have very different aesthetic and gameplay DNA.",
+        "answerZh": "都是网易出品，但开发工作室不同。遗忘之海由 Joker 工作室开发（第五人格团队，以木偶哥特风著称）。Aniimo 的开发工作室不同，知名度较低。两个工作室的美学和玩法基因差异很大。"
+      },
+      {
+        "question": "I like Genshin Impact. Which should I play, Sea of Remnants or Aniimo?",
+        "questionZh": "我喜欢原神，遗忘之海和 Aniimo 选哪个？",
+        "answer": "Depends on what you like about Genshin. If you like Genshin's story and exploration, Sea of Remnants offers deeper narrative + Roguelite exploration. If you like Genshin's collection and casual play, Aniimo's creature-collecting may appeal more. Neither is a direct Genshin clone.",
+        "answerZh": "取决于你喜欢原神的哪一点。如果喜欢剧情和探索，遗忘之海提供更深度的剧情 + Roguelite 探索。如果喜欢收集和休闲，Aniimo 的宠物收集更对胃口。两款都不是原神的直接复制品。"
+      },
+      {
+        "question": "Will Sea of Remnants and Aniimo have crossover events?",
+        "questionZh": "遗忘之海和 Aniimo 会有联动吗？",
+        "answer": "No official announcement of cross-game collaboration between Sea of Remnants and Aniimo. Both are NetEase titles so it's theoretically possible, but the genres and aesthetics are so different that a crossover would be challenging. Watch official channels for any future announcements.",
+        "answerZh": "官方暂未官宣两款游戏之间的联动。同为网易游戏理论上可能，但品类和美术风格差异太大，联动设计难度高。关注官方社媒获取未来公告。"
+      }
+    ]
+  },
+  {
+    "id": "vs-sea-of-thieves-guide",
+    "title": "《遗忘之海》vs《盗贼之海》：海战玩法、单机定位、付费模式、美术风格的全面对比",
+    "titleEn": "Sea of Remnants vs Sea of Thieves: Naval Combat, Single-Player, Payment, Art Style Compared",
+    "category": "system",
+    "categoryZh": "系统",
+    "categoryEn": "System",
+    "summary": "《盗贼之海》(Sea of Thieves) 是过去一周 Google Trends 全球搜索上升 120% 的海战游戏参照系。本文对比遗忘之海与盗贼之海的海战玩法、单机/联机定位、付费模式、美术风格。两款都主打海洋冒险，但定位、节奏、目标玩家差异巨大——帮你决定玩哪个。",
+    "summaryEn": "Complete comparison between Sea of Remnants and Sea of Thieves. Naval combat, single-player vs multiplayer focus, payment model, art style.",
+    "tags": [
+      "对比",
+      "盗贼之海",
+      "Sea of Thieves",
+      "海战",
+      "Rare",
+      "Microsoft",
+      "竞品",
+      "vs"
+    ],
+    "content": "## 玩家为什么在搜「sea of thieves」？\n\n过去一周（2026.06.19-06.26）Google Trends 全球数据显示：「sea of thieves」搜索上升 **120%**，与「sea of remnants」高度关联。这是玩家在用盗贼之海做遗忘之海的**海战玩法参照系**。\n\n原因：\n\n- 《盗贼之海》是 Rare 工作室 2018 年推出的**海战玩法标杆**\n- 评测里反复被引用（[17173 评测](https://news.17173.com/content/02112026/095748535.shtml) 称遗忘之海海战手感「类似盗贼之海」）\n- 玩家想知道：遗忘之海是不是另一个盗贼之海？\n\n**核心结论先放：两款都主打海洋冒险，但根本定位不同——盗贼之海是「共享世界海战沙盒」，遗忘之海是「单机向剧情 RPG」。**\n\n## 一句话定位区别\n\n| 游戏 | 定位 |\n|------|------|\n| **遗忘之海** | 海洋冒险 RPG（剧情驱动 + Roguelite 探索 + 回合制战斗） |\n| **盗贼之海** | 共享世界海战沙盒（强联机 PVP + 即时海战 + 玩家驱动叙事） |\n\n**根本差异：** 遗忘之海是 RPG，盗贼之海是沙盒 MMO。完全不同品类。\n\n## 玩法对比\n\n### 海战系统\n\n| 维度 | 遗忘之海 | 盗贼之海 |\n|------|---------|--------|\n| 类型 | **海战是玩法的一部分**（陆地战斗是回合制） | **海战是核心玩法**（纯即时海战） |\n| 操作 | 即时（受风向/船速/提前量影响） | 即时（玩家分工：操舵、装填、射击、修理） |\n| PVP | **PvE 为主**，海战 PvE | **强 PVP**，玩家互抢宝藏 |\n| 玩家分工 | 单人操控 + AI 船员 | 多人合作必需（推荐 3-4 人） |\n| 战斗节奏 | 节奏明确，剧情驱动 | 自由沙盒，玩家自定节奏 |\n\n**关键差异：** 盗贼之海的海战更硬核、更强调多人协作；遗忘之海的海战更友好、可单人体验。\n\n### 探索玩法\n\n| 维度 | 遗忘之海 | 盗贼之海 |\n|------|---------|--------|\n| 世界结构 | **Roguelite 海域**（每次重置） | **持久开放世界**（地图固定） |\n| 剧情驱动 | **强**（多结局、记忆系统） | **弱**（玩家自创故事） |\n| NPC 互动 | **深度**（巫师 3 式） | **简单**（任务发布者） |\n| 进度系统 | Roguelite 养成 + 永久船员解锁 | 玩家声望 + 外观解锁 |\n\n### 战斗系统（陆地）\n\n| 维度 | 遗忘之海 | 盗贼之海 |\n|------|---------|--------|\n| 陆地战斗 | **回合制 + CRPG 骰子** | **第三人称即时射击** |\n| 武器 | 船员技能 + 招牌技 | 枪械 + 近战武器 |\n| 适合玩家 | CRPG 爱好者 | 动作游戏爱好者 |\n\n## 联机模式对比\n\n### 遗忘之海\n\n- **联机克制**（IGN 中国评价）\n- 开场很长一段完全无联机元素\n- 后续联机「十分克制、聊胜于无」\n- **不是 MMORPG，单机体验为主**\n\n### 盗贼之海\n\n- **强联机**（必须组队才能完整体验）\n- 共享世界，所有船只是真实玩家\n- 1-4 人小队，最多 4 队共 16 人一局\n- 单人也能玩但体验不完整\n\n**关键差异：** 盗贼之海是社交驱动，遗忘之海是单机驱动。如果你喜欢单人深度体验，选遗忘之海；如果喜欢和朋友组队社交，选盗贼之海。\n\n## 付费模式对比\n\n### 遗忘之海（公测版本）\n\n- **本体免费**（F2P）\n- **抽卡**：船员招募\n- **付费内容**：部分时装、船只涂装\n- **贸易场**：玩家间自由交易（货币「好金砖」）\n- **官方承诺**：非数值付费\n\n详见[付费模式详解](/zh/sea/guides/payment-model-guide)。\n\n### 盗贼之海\n\n- **本体买断**（一次性购买，约 60 美元）\n- **无抽卡**\n- **付费内容**：DLC、外观、赛季通行证\n- **数值付费**：否（外观为主）\n- **Game Pass**：可通过 Xbox Game Pass 免费玩\n\n**关键差异：**\n- 遗忘之海 F2P + 抽卡，盗贼之海买断制\n- 遗忘之海可以零氪体验全部内容，盗贼之海要先买本体\n- 遗忘之海的「贸易场」是独有设计，盗贼之海没有玩家间交易\n\n## 美术风格对比\n\n### 遗忘之海\n\n- **木偶哥特风**（Joker 工作室风格）\n- 角色是「木偶」设定，戏剧化光影\n- 海洋有幻想色彩，深邃神秘\n- 适合喜欢成熟、戏剧化美学的玩家\n\n### 盗贼之海\n\n- **卡通海盗风**\n- 角色夸张的卡通比例\n- 海洋明亮、阳光普照\n- 适合喜欢迪士尼式卡通海盗的玩家\n\n**美术风格取向完全不同**——遗忘之海偏暗黑戏剧，盗贼之海偏明亮卡通。\n\n## 平台与跨端对比\n\n### 遗忘之海（公测版本）\n\n- ✅ PC（Steam / 官方启动器）\n- ✅ Android / iOS\n- ⚠️ PS5（不在首发，2027 Q1 预测）\n- ✅ **PC/移动端三端互通**\n\n### 盗贼之海\n\n- ✅ PC（Steam / Microsoft Store）\n- ✅ Xbox Series X/S\n- ✅ PS5（2024 年加入）\n- ✅ **全平台跨端**（含 Xbox/PC/PS5）\n- ✅ Xbox Game Pass 免费玩\n\n**关键差异：**\n- 盗贼之海平台覆盖更广，全平台跨端成熟\n- 遗忘之海 PS5 未上，跨端范围暂时较小\n- 盗贼之海可通过 Game Pass 低成本体验\n\n## 上线时间对比\n\n| 游戏 | 上线时间 |\n|------|---------|\n| **遗忘之海** | **2026.07.09 公测**（PC） |\n| **盗贼之海** | 2018 年发布，已运营 8 年 |\n\n**盗贼之海是成熟老游戏**，遗忘之海是新游戏。盗贼之海内容成熟、生态稳定；遗忘之海首月有公测红利期。\n\n## 目标玩家画像对比\n\n### 遗忘之海的目标玩家\n\n- 喜欢剧情驱动 RPG（《巫师 3》《博德之门 3》）\n- 接受回合制 + CRPG 玩法\n- 喜欢单机深度体验\n- 喜欢 Roguelite 养成\n- 重视剧情深度、碎片化叙事\n- 不重视 PVP\n\n### 盗贼之海的目标玩家\n\n- 喜欢 PVP 海战沙盒\n- 重视多人组队社交\n- 喜欢自由度高的开放世界\n- 重视即时战斗、操作感\n- 不介意反复被玩家抢\n- 重视长期内容更新（已运营 8 年）\n\n**玩家画像几乎不重叠**——遗忘之海玩家可能受不了盗贼之海的 PVP 骚扰，盗贼之海玩家可能受不了遗忘之海的回合制。\n\n## 玩家决策建议\n\n### 选遗忘之海的情况\n\n- 想要深度剧情 + 多结局\n- 喜欢单人体验，不重视 PVP\n- 接受回合制战斗\n- 喜欢木偶哥特风\n- F2P 起步，不想先付本体钱\n- 公测就玩，不想错过首月红利\n\n### 选盗贼之海的情况\n\n- 想要 PVP 海战沙盒\n- 有固定队友，重视联机\n- 喜欢即时战斗、操作感\n- 不介意卡通海盗风\n- 已经有 Xbox Game Pass\n- 想玩成熟稳定的老游戏\n\n### 两款都玩的情况\n\n- 想体验不同的海洋冒险品类\n- 遗忘之海当深度 RPG 玩，盗贼之海当社交 PVP 玩\n- 两款定位反差大，可以互补\n\n## Gachia 子站的 SEO 截流策略\n\n「sea of thieves」过去一周全球搜索上升 120%，与「sea of remnants」高度关联。Gachia 中文站通过本对比页可截流：\n\n- 英文长尾：「sea of remnants vs sea of thieves」\n- 中文长尾：「遗忘之海 盗贼之海 对比」「遗忘之海和盗贼之海哪个好玩」\n- 决策类搜索：「海战游戏推荐」\n\n## 其他相关对比\n\n- [遗忘之海 vs Aniimo](/zh/sea/guides/vs-aniimo-guide) —— 同为网易开放世界的对比\n- [公测完整指南](/zh/sea/guides/launch-day-guide) —— 公测具体信息\n- [品类教育：到底是个什么游戏](/zh/sea/guides/what-is-forgotten-sea) —— 遗忘之海深度定位",
+    "contentEn": "## Why are players searching for 'Sea of Thieves'?\n\nPast week (2026.06.19-06.26) Google Trends shows 'sea of thieves' searches up 120%, highly correlated with 'sea of remnants'. Players use Sea of Thieves as the naval combat reference point.\n\nReasons:\n- Sea of Thieves (Rare, 2018) is the gold standard for naval combat\n- Reviews cite it (17173 says Sea of Remnants' naval feel is 'similar to Sea of Thieves')\n- Players wonder if Sea of Remnants is just another Sea of Thieves\n\n**Core conclusion: Both feature ocean adventure, but fundamentally different — Sea of Thieves is a 'shared world naval sandbox', Sea of Remnants is a 'single-player narrative RPG'.**\n\n## Positioning\n\n- **Sea of Remnants**: Ocean adventure RPG (narrative + Roguelite + turn-based)\n- **Sea of Thieves**: Shared world naval sandbox (PvP + real-time naval + player-driven stories)\n\n## Gameplay comparison\n\n### Naval combat\n| | Sea of Remnants | Sea of Thieves |\n|---|---|---|\n| Type | Part of gameplay (land combat is turn-based) | Core gameplay (pure real-time naval) |\n| Operation | Real-time (wind/speed/lead) | Real-time (crew roles: helm, load, fire, repair) |\n| PvP | PvE-focused | Strong PvP, players rob each other |\n| Crew | Single-player + AI crew | Multiplayer required (3-4 recommended) |\n\n**Key:** Sea of Thieves naval is harder, multiplayer-focused. Sea of Remnants naval is friendly, single-player viable.\n\n### Exploration\n| | Sea of Remnants | Sea of Thieves |\n|---|---|---|\n| World | Roguelite (resets per run) | Persistent open world |\n| Story | Strong (multi-ending, memory) | Weak (player-driven) |\n| NPCs | Deep (Witcher 3-style) | Simple (quest givers) |\n\n### Land combat\n| | Sea of Remnants | Sea of Thieves |\n|---|---|---|\n| Type | Turn-based CRPG with dice | Third-person shooter |\n| Weapons | Crew skills + signature | Guns + melee |\n\n## Multiplayer\n\n### Sea of Remnants\n- 'Restrained co-op' (IGN China)\n- Long opening has no multiplayer elements\n- Mostly single-player experience\n- Not an MMORPG\n\n### Sea of Thieves\n- Strong multiplayer (required for full experience)\n- Shared world, all ships are real players\n- 1-4 players per crew, up to 16 players per session\n- Single-player possible but incomplete\n\n**Key:** Sea of Thieves is social-driven, Sea of Remnants is single-player-driven.\n\n## Payment model\n\n### Sea of Remnants (launch version)\n- Base: F2P\n- Gacha for crew\n- Cosmetics (some paid)\n- Trade Market (player-to-player, Good Gold Bars)\n- Official commitment: NOT pay-to-win\n\n### Sea of Thieves\n- Base: Buy-to-play (~$60 USD)\n- No gacha\n- DLC, cosmetics, season passes\n- Not P2W (cosmetic-focused)\n- Available on Xbox Game Pass\n\n## Art style\n\n- **Sea of Remnants**: Puppet gothic, dramatic lighting, fantasy ocean\n- **Sea of Thieves**: Cartoon pirate, bright sun, Disney-like\n\n## Platforms\n\n### Sea of Remnants (launch version)\n- PC (Steam, official launcher)\n- Android / iOS\n- PS5 (Q1 2027 predicted)\n- PC/mobile cross-platform\n\n### Sea of Thieves\n- PC (Steam, Microsoft Store)\n- Xbox Series X/S\n- PS5 (added 2024)\n- Full cross-platform across Xbox/PC/PS5\n- Free on Xbox Game Pass\n\n## Launch timeline\n\n- **Sea of Remnants**: July 9, 2026 launch\n- **Sea of Thieves**: Released 2018, 8 years of operation\n\n## Target player profiles\n\n### Sea of Remnants players\n- Story-driven RPG fans (Witcher 3, BG3)\n- Accept turn-based CRPG\n- Single-player preference\n- Roguelite progression fans\n- Don't care about PvP\n\n### Sea of Thieves players\n- PvP naval sandbox fans\n- Multiplayer social preference\n- Freedom-heavy open world fans\n- Real-time combat fans\n- Don't mind PVP robbery\n- Want mature, stable game (8 years of content)\n\n**Almost no overlap.**\n\n## Decision guide\n\n**Pick Sea of Remnants if:** want deep story, single-player, accept turn-based, like puppet gothic, want F2P, want to play at launch.\n\n**Pick Sea of Thieves if:** want PvP naval sandbox, have fixed crew, like real-time combat, don't mind cartoon style, have Xbox Game Pass, want mature game.\n\n**Play both if:** want different ocean adventure genres — Sea of Remnants as deep RPG, Sea of Thieves as social PvP.",
+    "faq": [
+      {
+        "question": "Is Sea of Remnants like Sea of Thieves?",
+        "questionZh": "遗忘之海和盗贼之海是同类游戏吗？",
+        "answer": "Both feature ocean adventure, but they're fundamentally different genres. Sea of Thieves is a shared-world PvP naval sandbox with real-time combat, requiring multiplayer. Sea of Remnants is a single-player RPG with Roguelite exploration and turn-based CRPG combat. They share the ocean theme but little else.",
+        "answerZh": "两款都主打海洋冒险，但根本品类不同。盗贼之海是共享世界 PVP 海战沙盒，即时战斗，必须联机。遗忘之海是单机向 RPG，Roguelite 探索 + 回合制 CRPG 战斗。共享的只有「海洋主题」，其他基本不同。"
+      },
+      {
+        "question": "Which has better naval combat, Sea of Remnants or Sea of Thieves?",
+        "questionZh": "遗忘之海和盗贼之海哪个海战更好？",
+        "answer": "Depends on what you want. Sea of Thieves has deeper, more hardcore multiplayer naval combat (crew roles, wind mechanics, player-vs-player). Sea of Remnants has more accessible single-player naval combat. 17173's review noted Sea of Remnants' naval feel is 'similar to Sea of Thieves' but more forgiving for solo players.",
+        "answerZh": "看你想要什么。盗贼之海的海战更深硬核、更强调多人协作（船员分工、风向机制、玩家对玩家）。遗忘之海的海战更友好、可单人体验。17173 评测说遗忘之海的海战手感「类似盗贼之海」但对单人玩家更友好。"
+      },
+      {
+        "question": "Is Sea of Remnants multiplayer like Sea of Thieves?",
+        "questionZh": "遗忘之海是像盗贼之海那样的联机游戏吗？",
+        "answer": "No. Sea of Thieves is heavily multiplayer — shared world, all ships are real players, PVP robbery is core gameplay. Sea of Remnants is 'restrained co-op' (IGN China's words) — long opening has no multiplayer, future co-op plans are very limited. Single-player experience is the focus.",
+        "answerZh": "不是。盗贼之海强联机——共享世界，所有船只是真实玩家，PVP 抢劫是核心玩法。遗忘之海是「联机克制」（IGN 中国原话）——开场很长一段没有联机元素，后续联机「十分克制、聊胜于无」。单机体验为主。"
+      },
+      {
+        "question": "Why is Sea of Thieves suddenly trending alongside Sea of Remnants?",
+        "questionZh": "为什么盗贼之海和遗忘之海一起火了？",
+        "answer": "Players use Sea of Thieves as the naval combat reference when discussing Sea of Remnants. The 2026.06.26 livestream and reviews frequently cited Sea of Thieves. Past week (June 19-26) Google Trends shows 'sea of thieves' up 120%, indicating player cross-search behavior.",
+        "answerZh": "玩家在讨论遗忘之海时用盗贼之海做海战玩法参照系。2026.06.26 直播和评测里反复引用盗贼之海。过去一周（6/19-6/26）Google Trends 显示「sea of thieves」上升 120%，反映玩家的交叉搜索行为。"
+      },
+      {
+        "question": "Is Sea of Remnants free-to-play like a gacha, or buy-to-play like Sea of Thieves?",
+        "questionZh": "遗忘之海是免费抽卡还是买断制？",
+        "answer": "Sea of Remnants is F2P (free-to-play) with optional gacha and cosmetics. Sea of Thieves is buy-to-play (~$60 USD or free with Xbox Game Pass). For F2P viability, Sea of Remnants is more accessible; for one-time purchase with no gacha, Sea of Thieves is cleaner.",
+        "answerZh": "遗忘之海是 F2P（本体免费）+ 抽卡 + 部分外观付费。盗贼之海是买断制（约 60 美元，或通过 Xbox Game Pass 免费玩）。零氪友好度遗忘之海更友好，一次性买断无抽卡盗贼之海更干净。"
+      },
+      {
+        "question": "Should I play Sea of Remnants if I already play Sea of Thieves?",
+        "questionZh": "已经在玩盗贼之海，还要玩遗忘之海吗？",
+        "answer": "Yes, if you want a different genre. Sea of Remnants offers deep single-player RPG narrative that Sea of Thieves lacks. If you enjoy story-driven games like Witcher 3 or Baldur's Gate 3 alongside your Sea of Thieves multiplayer sessions, Sea of Remnants fills that niche. If you only play for PVP naval combat, stick with Sea of Thieves.",
+        "answerZh": "可以，如果你想体验不同品类。遗忘之海提供盗贼之海缺乏的深度单机 RPG 叙事。如果你在玩盗贼之海的联机 PVP 之外，也喜欢《巫师 3》《博德之门 3》这类剧情向游戏，遗忘之海正好填补这个空缺。如果只玩 PVP 海战，继续玩盗贼之海即可。"
+      }
+    ]
   }
 ]
