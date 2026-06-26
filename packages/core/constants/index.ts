@@ -386,6 +386,7 @@ export const GAMES: Record<GameId, GameModule> = {
       build: false,
       compare: false,
       teams: false,
+      'redeem-codes': true,
     },
   },
 } as const;
