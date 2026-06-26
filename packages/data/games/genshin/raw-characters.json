@@ -14896,5 +14896,160 @@
     },
     "teamComps": [],
     "faq": []
+  },
+  {
+    "id": "sandrone",
+    "name": "桑多涅",
+    "nameEn": "Sandrone",
+    "nameJa": "",
+    "element": "cryo",
+    "weaponType": "",
+    "rarity": 5,
+    "region": "Snezhnaya",
+    "description": "愚人众十一执行官第七席「木偶」，绰号「镜水析谬」。来自至冬国的冰系角色，月之八版本（2026-07-01）通过「镜中的茶宴」祈愿活动上线。在「晨光熹微」PV 中走下山谷，与千织、女士、哥伦比娅等旧识重逢；技能演示显示她在枫丹做战斗实验时大量报废警卫机关。",
+    "descriptionEn": "Sandrone, codenamed 'Mirror-Water Fallacy', is the Seventh of the Eleven Fatui Harbingers known as 'Marionette'. A Cryo character from Snezhnaya debuting in the 'Moon-VIII' version (2026-07-01) via the 'Tea Banquet in the Mirror' event wish. Her character PV 'Morning Light' shows her walking down a valley to reunite with Chiori, Signora and Columbina; her skill demo shows her destroying many Gardemek constructs during combat experiments in Fontaine.",
+    "releaseVersion": "月之八",
+    "acquisitionMethod": "limited-banner",
+    "tierRank": "S",
+    "tierReason": "Speculative (no hard numbers yet). Officially positioned as a main DPS Cryo carry built around the new 'Star Superconduct' (星超导) elemental reaction introduced in Moon-VIII. As the headline 5-star of the banner with a new reaction mechanic, an S-tier baseline is reasonable, but actual tuning will determine if she lands at S or S+.",
+    "tierReasonZh": "（基于技能演示推测，无实战数值）桑多涅定位为冰系主C，围绕月之八版本引入的全新「星超导」元素反应机制构建。作为版本主推五星和新反应机制的承载者，节奏榜初步给到 S 级合理；实际强度取决于上线后的数值平衡，可能落在 S 到 S+ 之间。",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "elementalSkill": {
+        "name": "",
+        "nameEn": "",
+        "description": "（基于演示推测）桑多涅的元素战技与她在枫丹报废警卫机关的实验场景相关，疑似召唤或操控木偶/机械进行冰元素攻击，并施加可触发「星超导」的附着状态。具体数值与冷却待官方实装后补充。",
+        "descriptionEn": "(Speculative, based on demo) Sandrone's Elemental Skill appears tied to her Fontaine Gardemek-destroying experiments — likely summoning or puppeteering constructs that deal Cryo damage and apply an aura capable of triggering the new 'Star Superconduct' reaction. Exact numbers and cooldown pending live version.",
+        "cooldown": ""
+      },
+      "elementalBurst": {
+        "name": "",
+        "nameEn": "",
+        "description": "（基于演示推测）元素爆发的画面中桑多涅展现了大范围冰元素控制能力，评论中提到类似「让敌人冷静」与冰封效果。具体能量消耗与冷却待补充。",
+        "descriptionEn": "(Speculative, based on demo) Her Elemental Burst showcases wide-area Cryo control; community comments reference 'calming enemies' and freezing effects. Energy cost and cooldown pending live version.",
+        "cost": 0,
+        "cooldown": ""
+      },
+      "passive1": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "passive2": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "constellations": [
+      {
+        "level": 1,
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      {
+        "level": 2,
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      {
+        "level": 3,
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      {
+        "level": 4,
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      {
+        "level": 5,
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      {
+        "level": 6,
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    ],
+    "recommendedBuild": {
+      "bestWeapon": "",
+      "bestWeaponEn": "",
+      "alternativeWeapons": [],
+      "bestArtifactSet": "",
+      "bestArtifactSetEn": "",
+      "mainStats": {
+        "sands": "",
+        "goblet": "",
+        "circlet": ""
+      },
+      "mainStatsEn": {
+        "sands": "",
+        "goblet": "",
+        "circlet": ""
+      },
+      "subStatPriority": [],
+      "subStatPriorityEn": []
+    },
+    "teamComps": [
+      {
+        "name": "冰辅双冰（推测）",
+        "nameEn": "Cryo Support Double-Cryo (speculative)",
+        "members": [
+          "sandrone",
+          "aikefei"
+        ],
+        "description": "（基于米游社评论推测）桑多涅与爱可菲（冰系辅助，定位类似莉奈娅）组双冰，由爱可菲提供充能与附着辅助，触发星超导反应。",
+        "descriptionEn": "(Speculative, based on miyoushe comments) Sandrone paired with Aikefei (cryo support, Lyney-line role) for double-Cryo, with Aikefei providing energy and application support to trigger Star Superconduct."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is Sandrone worth pulling?",
+        "questionZh": "桑多涅值得抽吗？",
+        "answer": "If you need a Cryo main DPS built around the brand-new 'Star Superconduct' reaction and are willing to invest in future-version reaction teams, Sandrone as the banner headline 5-star is worth pulling. Veterans with mature teams may want to wait for live-version testing.",
+        "answerZh": "如果你需要一个围绕全新「星超导」机制构建的冰系主C，且愿意为未来版本的相关反应配队铺路，桑多涅作为版本主推五星值得抽取；老队伍玩家可观望实装后实测。"
+      },
+      {
+        "question": "What is Sandrone's team comp strategy?",
+        "questionZh": "桑多涅的配队思路是什么？",
+        "answer": "Built around the new 'Star Superconduct' reaction. Official/community references pair her with the Cryo support Aikefei (Lyney-line role) for double-Cryo with application and energy support. Specific comps pending live testing.",
+        "answerZh": "围绕「星超导」新反应搭配，官方/社区提及与冰系辅助爱可菲（定位类似莉奈娅）组双冰，并提供附着与充能；具体配队待实装后实测。"
+      },
+      {
+        "question": "How impactful are Sandrone's constellations?",
+        "questionZh": "桑多涅命座提升大吗？",
+        "answer": "Official has not released any constellation names or effects (added to unknownFields). Cannot evaluate constellation impact yet. If you have strength requirements, consider 0+1 first; constellation evaluation pending live release.",
+        "answerZh": "目前官方未公布任何命座名称与效果（已加入 unknownFields），无法判断命座提升；如有强度需求建议先抽 0+1，命座效果等实装后评测。"
+      }
+    ],
+    "relatedCharacters": [
+      "aikefei",
+      "gelunbiya",
+      "qianzhi",
+      "shinv"
+    ],
+    "status": "upcoming",
+    "image": ""
   }
 ]
