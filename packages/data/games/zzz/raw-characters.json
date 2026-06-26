@@ -5363,5 +5363,179 @@
     "cvZh": "",
     "cvJp": "",
     "cvEn": ""
+  },
+  {
+    "id": "remielle",
+    "name": "蕾米埃尔",
+    "nameEn": "Remielle",
+    "nameJa": "レミエル",
+    "attribute": "",
+    "specialty": "",
+    "specialtyEn": "",
+    "rank": "S",
+    "faction": "罗斯凯利法",
+    "factionEn": "Roschelle",
+    "attackType": "",
+    "attackTypeEn": "",
+    "description": "全名「蕾米埃尔·丹」。神秘而魅惑的代理人，喜欢以谜语和问答游戏与法厄同周旋，自称与法厄同为「共犯」「舞伴」。登场口号：「欢迎来到罗斯凯利法！」。3.0 版本「挽昼」三人组之一（与希格莉德、林德薇恩并列）。",
+    "descriptionEn": "Full name 'Remielle Dan'. A mysterious, alluring Proxy who toys with Phaethon through riddles and Q&A games, calling them 'accomplices' and 'dance partners'. Tagline: 'Welcome to Roschelle!' One of the 'Three Valedictions' in v3.0 alongside Sigrid and Lindwein.",
+    "faq": [],
+    "relatedCharacters": [
+      "sigrid"
+    ],
+    "tierRank": "",
+    "tierReason": "",
+    "tierReasonZh": "",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "",
+      "bestWeaponEn": "",
+      "alternativeWeapons": [],
+      "bestDriveDisc": "",
+      "bestDriveDiscEn": "",
+      "mainStats": {},
+      "mainStatsEn": {},
+      "subStatPriority": [],
+      "subStatPriorityEn": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "限定信号检索（卡池）",
+    "status": "upcoming",
+    "cvZh": "醋醋",
+    "cvJp": "大西沙织",
+    "cvEn": "",
+    "mindscapeCinema": []
+  },
+  {
+    "id": "sigrid",
+    "name": "希格莉德",
+    "nameEn": "Sigrid",
+    "nameJa": "シグリッド",
+    "attribute": "",
+    "specialty": "",
+    "specialtyEn": "",
+    "rank": "S",
+    "faction": "罗斯凯利法",
+    "factionEn": "Roschelle",
+    "attackType": "",
+    "attackTypeEn": "",
+    "description": "全名「希格莉德·德拉叙尔」。骑马姿态、崇尚荣光的代理人，口头禅「荣光，引领我们前行！」。对现代器具（空气炸锅）感到新奇，似有把面坯塞进诺姆研究员帽子的奇怪兴趣。3.0 版本「挽昼」三人组之一（与蕾米埃尔、林德薇恩并列）。",
+    "descriptionEn": "Full name 'Sigrid de Lasure'. A mounted, glory-obsessed Proxy whose motto is 'Glory leads us forward!'. Fascinated by modern gadgets (air fryers) and reportedly considers baking dough in Researcher Nom's hat. One of the 'Three Valedictions' alongside Remielle and Lindwein.",
+    "faq": [],
+    "relatedCharacters": [
+      "remielle"
+    ],
+    "tierRank": "",
+    "tierReason": "",
+    "tierReasonZh": "",
+    "skills": {
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "",
+      "bestWeaponEn": "",
+      "alternativeWeapons": [],
+      "bestDriveDisc": "",
+      "bestDriveDiscEn": "",
+      "mainStats": {},
+      "mainStatsEn": {},
+      "subStatPriority": [],
+      "subStatPriorityEn": []
+    },
+    "teamComps": [],
+    "image": "",
+    "availableAtLaunch": false,
+    "acquisitionMethod": "限定信号检索（卡池）",
+    "status": "upcoming",
+    "cvZh": "贺若帆",
+    "cvJp": "甲斐田裕子",
+    "cvEn": "",
+    "mindscapeCinema": []
   }
 ]
