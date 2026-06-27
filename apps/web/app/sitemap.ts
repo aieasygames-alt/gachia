@@ -73,7 +73,7 @@ const REAL_CONTENT_ROUTES: Record<string, string[]> = {
   guihuan: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'compare', 'teams'],
   ananta: ['characters', 'weapons', 'items', 'tier-list', 'guides'],
   endfield: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'compare', 'teams', 'map'],
-  sea: ['characters', 'guides'],
+  sea: ['characters', 'guides', 'items', 'tier-list', 'redeem-codes'],
 };
 
 // Revalidate every 24 hours
