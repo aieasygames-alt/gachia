@@ -31,18 +31,15 @@ const TIER_DESC: Record<string, Record<string, string>> = {
 
 // P1-2: Lazy load tier list client components to reduce initial bundle size
 const GenshinTierListClient = dynamic(() => import('./genshin-tier-client').then(mod => ({ default: mod.GenshinTierListClient })), {
-  loading: () => <div className="p-8 text-center">Loading tier list...</div>,
-  ssr: false
+  loading: () => <div className="p-8 text-center">Loading tier list...</div>
 });
 
 const StarRailTierListClient = dynamic(() => import('./starrail-tier-client').then(mod => ({ default: mod.StarRailTierListClient })), {
-  loading: () => <div className="p-8 text-center">Loading tier list...</div>,
-  ssr: false
+  loading: () => <div className="p-8 text-center">Loading tier list...</div>
 });
 
 const WuWaTierListClient = dynamic(() => import('./wuwa-tier-client').then(mod => ({ default: mod.WuWaTierListClient })), {
-  loading: () => <div className="p-8 text-center">Loading tier list...</div>,
-  ssr: false
+  loading: () => <div className="p-8 text-center">Loading tier list...</div>
 });
 
 const NTE_ELEMENT_COLORS: Record<string, string> = {
