@@ -41,10 +41,23 @@ const IMPORTANT_LABELS = new Set([
   611, 613, 614, 615, 616, 617, 620, 621, // Natlan
 ]);
 
+// Known valid map IDs for Genshin Impact maps
+const VALID_MAP_IDS = new Set(['1', '2', '3', '4', '5', '6', '7', '8', '9']);
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const mapId = searchParams.get('map_id') || '2';
   const labelsParam = searchParams.get('labels');
+
+  // P1-29: Validate map_id to prevent SSRF and injection attacks
+  if (!VALID_MAP_IDS.has(mapId)) {
+    return NextResponse.json({ error: 'Invalid map_id' }, { status: 400 });
+  }
+
+  // Validate labels parameter format
+  if (labelsParam && !labelsParam.split(',').every(id => /^\d+$/.test(id.trim()))) {
+    return NextResponse.json({ error: 'Invalid labels format' }, { status: 400 });
+  }
 
   // Build label filter: use custom labels if provided, otherwise use IMPORTANT_LABELS
   const labelFilter = labelsParam
@@ -60,8 +73,9 @@ export async function GET(request: Request) {
   }
 
   try {
+    // P1-29: Use encodeURIComponent to prevent injection via map_id
     const res = await fetch(
-      `${HOYOLAB_POINT_API}?map_id=${mapId}&app_sn=ys_obc`,
+      `${HOYOLAB_POINT_API}?map_id=${encodeURIComponent(mapId)}&app_sn=ys_obc`,
       { next: { revalidate: 21600 } }
     );
 
