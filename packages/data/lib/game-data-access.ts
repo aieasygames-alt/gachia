@@ -158,14 +158,6 @@ export async function getItems(gameId: GameId) {
 }
 
 /**
- * Get guides for a specific game
- */
-export async function getGuides(gameId: GameId) {
-  const gameData = await getGameData(gameId);
-  return gameData.guides;
-}
-
-/**
  * Get tier lists for a specific game
  */
 export async function getTierLists(gameId: GameId) {

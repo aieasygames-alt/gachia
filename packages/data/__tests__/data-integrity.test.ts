@@ -40,7 +40,7 @@ describe('Honkai: Star Rail', () => {
     starrailCharacters.forEach((c) => {
       expect(c.id).toBeTruthy();
       expect(c.name).toBeTruthy();
-      expect(c.element || c.combatType).toBeTruthy();
+      expect(c.element).toBeTruthy();
       expect(c.rarity).toBeGreaterThanOrEqual(4);
     });
   });
