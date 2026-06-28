@@ -9,18 +9,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
   images: {
-    // CRITICAL FIX: Remove unoptimized to enable image optimization
-    // Note: Cloudflare Workers doesn't support Sharp, but we can use external optimization
-    unoptimized: false,
-    // Configure image formats for optimization
-    formats: ['image/avif', 'image/webp'],
-    // Responsive image sizes
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    // For Cloudflare Workers compatibility
-    dangerouslyAllowSVG: true,
-    contentDispositionType: 'attachment',
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // CRITICAL: Use unoptimized for Cloudflare Workers compatibility
+    // Cloudflare Workers doesn't support Sharp-based image optimization
+    // Set unoptimized: true to avoid Error 1101 from image optimization failures
+    unoptimized: true,
   },
   trailingSlash: false,
   outputFileTracingRoot: join(__dirname, '../..'),
