@@ -1,0 +1,52 @@
+{
+  "gameId": "zzz",
+  "updateTime": "2026-06-28T07:19:17.715Z",
+  "teams": [
+    {
+      "id": "以太强攻队",
+      "name": "以太强攻队",
+      "nameEn": "Ether Attack Team",
+      "description": "以太属性强攻队伍，爆发伤害高。",
+      "descriptionEn": "Ether Attribute Attack team with high burst damage.",
+      "coreCharacters": [
+        "zhu-yuan",
+        "nicole"
+      ],
+      "supportCharacters": [
+        "ellen",
+        "billy",
+        "anby"
+      ],
+      "buildExample": {
+        "mainDPS": "zhu-yuan",
+        "support": "nicole",
+        "subDPS": "ellen",
+        "flex": "anby"
+      },
+      "playstyle": "朱鸢主输出，妮可减防，艾莲副C，安比控制。"
+    },
+    {
+      "id": "狡兔屋队",
+      "name": "狡兔屋队",
+      "nameEn": "Cunning Hares Team",
+      "description": "狡兔屋三人组，新手友好队伍。",
+      "descriptionEn": "Cunning Hares trio, beginner-friendly team.",
+      "coreCharacters": [
+        "anby",
+        "billy",
+        "nicole"
+      ],
+      "supportCharacters": [
+        "ellen",
+        "souverain"
+      ],
+      "buildExample": {
+        "mainDPS": "billy",
+        "subDPS": "anby",
+        "support": "nicole",
+        "flex": "ellen"
+      },
+      "playstyle": "比利主C，安比控制，妮可辅助，灵活搭配第四人。"
+    }
+  ]
+}

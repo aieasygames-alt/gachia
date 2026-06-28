@@ -1,0 +1,48 @@
+{
+  "gameId": "zzz",
+  "updateTime": "2026-06-28T07:19:17.714Z",
+  "equipment": [
+    {
+      "id": "混沌爵士",
+      "name": "混沌爵士",
+      "nameEn": "Chaos Jazz",
+      "bonus": "2件套：以太伤害提高10%。4件套：对处于异常状态敌人造成伤害提高20%。",
+      "bonusEn": "2-piece: Ether DMG +10%. 4-piece: DMG to enemies with Status Ailments increased by 20%.",
+      "bestCharacters": [
+        "zhu-yuan",
+        "ellen",
+        "billy"
+      ],
+      "description": "以太系角色首选，配合异常效果输出强力。",
+      "descriptionEn": "Best for Ether characters, excellent synergy with status effects."
+    },
+    {
+      "id": "蓝调摇滚",
+      "name": "蓝调摇滚",
+      "nameEn": "Blues Rock",
+      "bonus": "2件套：暴击伤害提高15%。4件套：暴击时，额外造成50%攻击力的伤害。",
+      "bonusEn": "2-piece: CRIT DMG +15%. 4-piece: On CRIT hit, deal additional 50% ATK as DMG.",
+      "bestCharacters": [
+        "ellen",
+        "anby",
+        "nicole"
+      ],
+      "description": "暴击流角色首选，输出稳定。",
+      "descriptionEn": "Best for crit-focused builds, consistent damage output."
+    },
+    {
+      "id": "重金属风暴",
+      "name": "重金属风暴",
+      "nameEn": "Heavy Metal Storm",
+      "bonus": "2件套：生命值上限提高15%。4件套：受到伤害时，对周围敌人造成100%攻击力的伤害。",
+      "bonusEn": "2-piece: Max HP +15%. 4-piece: When taking DMG, deal 100% ATK as DMG to surrounding enemies.",
+      "bestCharacters": [
+        "ben-bigger",
+        "koleda",
+        "sober"
+      ],
+      "description": "生存套装，适合高血量角色。",
+      "descriptionEn": "Survival set, suitable for high HP characters."
+    }
+  ]
+}

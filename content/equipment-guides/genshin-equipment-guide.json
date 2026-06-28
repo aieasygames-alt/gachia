@@ -1,0 +1,54 @@
+{
+  "gameId": "genshin",
+  "updateTime": "2026-06-28T07:19:17.713Z",
+  "equipment": [
+    {
+      "id": "冰风迷途的勇士",
+      "name": "冰风迷途的勇士",
+      "nameEn": "Blizzard Strayer",
+      "bonus": "2件套：获得15%冰元素伤害加成。4件套：攻击冻结状态的敌人时，暴击率提高20%。",
+      "bonusEn": "2-piece: +15% Cryo DMG Bonus. 4-piece: CRIT Rate increased by 20% against frozen enemies.",
+      "bestCharacters": [
+        "ayaka",
+        "lohen",
+        "ganyu",
+        "eula",
+        "kaeya"
+      ],
+      "description": "冰系角色首选套装，配合永冻队使用效果最佳。",
+      "descriptionEn": "Best-in-slot for Cryo characters, excels in permafreeze teams."
+    },
+    {
+      "id": "炽烈的炎之魔女",
+      "name": "炽烈的炎之魔女",
+      "nameEn": "Crimson Witch of Flames",
+      "bonus": "2件套：获得15%火元素伤害加成。4件套：超载、燃烧、绽放反应造成的伤害提升40%，蒸发、融化反应的加成系数提升15%。",
+      "bonusEn": "2-piece: +15% Pyro DMG Bonus. 4-piece: Overloaded, Burning, Bloom DMG increased by 40%, Vaporize and Melt DMG increased by 15%.",
+      "bestCharacters": [
+        "hu-tao",
+        "diluc",
+        "klee",
+        "yoimiya",
+        "xiangling"
+      ],
+      "description": "火系输出角色通用套装，反应流首选。",
+      "descriptionEn": "Universal set for Pyro DPS, best for reaction-focused builds."
+    },
+    {
+      "id": "绝缘之旗印",
+      "name": "绝缘之旗印",
+      "nameEn": "Emblem of Severed Fate",
+      "bonus": "2件套：元素充能效率提高20%。4件套：元素爆发造成的伤害提高25%，该效果基于元素充能效率的140%为上限。",
+      "bonusEn": "2-piece: Energy Recharge +20%. 4-piece: Elemental Burst DMG increased by 25% of Energy Recharge, up to 75%.",
+      "bestCharacters": [
+        "raiden",
+        "xiangling",
+        "kokomi",
+        "yelan",
+        "chongyun"
+      ],
+      "description": "依赖元素爆发的角色首选，副C和充电宝适用。",
+      "descriptionEn": "Best for characters dependent on Elemental Burst, suitable for sub-DPS and battery roles."
+    }
+  ]
+}

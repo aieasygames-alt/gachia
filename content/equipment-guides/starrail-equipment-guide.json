@@ -1,0 +1,50 @@
+{
+  "gameId": "starrail",
+  "updateTime": "2026-06-28T07:19:17.714Z",
+  "equipment": [
+    {
+      "id": "焰骸筑城者的Hurag式",
+      "name": "焰骸筑城者的Hurag式",
+      "nameEn": "Hurag's Prison of Pyro",
+      "bonus": "2件套：火属性伤害提高10%。4件套：施放战技时，装备者灼烧状态下的敌人受到的伤害提高12%，持续2回合。",
+      "bonusEn": "2-piece: Fire DMG +10%. 4-piece: When using Skill, DMG dealt to Burn-afflicted enemies increases by 12% for 2 turns.",
+      "bestCharacters": [
+        "mortenax-blade",
+        "kafka",
+        "hook",
+        "asta"
+      ],
+      "description": "火系持续伤害角色首选，适合虚无命途。",
+      "descriptionEn": "Best for Fire DoT characters, suitable for Nihility path."
+    },
+    {
+      "id": "停转的萨尔索图",
+      "name": "停转的萨尔索图",
+      "nameEn": "Broken Keel",
+      "bonus": "2件套：使装备者受到的伤害降低16%。4件套：当装备者对敌方目标施加弱点击破效果时，恢复10点能量。",
+      "bonusEn": "2-piece: DMG taken -16%. 4-piece: Regain 10 Energy when breaking enemy Weakness.",
+      "bestCharacters": [
+        "fu-xuan",
+        "gepard",
+        "gneiss",
+        "pela"
+      ],
+      "description": "生存型遗器，适合坦克和辅助角色。",
+      "descriptionEn": "Defensive relic set, suitable for tanks and supports."
+    },
+    {
+      "id": "繁星璀璨的天才",
+      "name": "繁星璀璨的天才",
+      "nameEn": "Genius of Brilliant Stars",
+      "bonus": "2件套：量子属性伤害提高10%。4件套：对处于量子属性弱点的敌方目标造成伤害时，无视其20%的防御力。",
+      "bonusEn": "2-piece: Quantum DMG +10%. 4-piece: When attacking enemies with Quantum weakness, ignore 20% of their DEF.",
+      "bestCharacters": [
+        "seele",
+        "qingque",
+        "silver-wolf-lv999"
+      ],
+      "description": "量子系输出角色首选，无视防御效果优秀。",
+      "descriptionEn": "Best for Quantum DPS, excellent DEF ignore effect."
+    }
+  ]
+}

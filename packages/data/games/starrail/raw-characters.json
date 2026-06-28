@@ -9862,17 +9862,22 @@
     "status": "released",
     "image": "",
     "skills": {
-      "basicAtk": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" },
-      "skill": { "name": "", "nameEn": "", "description": "", "descriptionEn": "", "cost": 1 },
-      "ultimate": { "name": "", "nameEn": "", "description": "", "descriptionEn": "", "cost": 5 },
-      "talent": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" },
-      "technique": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" }
+      "basicAtk": {
+        "description": "对敌方单体造成虚数属性伤害，并有概率降低敌方防御。",
+        "descriptionEn": "Deals Imaginary DMG to a single enemy, with chance to reduce enemy DEF."
+      }
     },
     "eidolons": [],
-    "recommendedBuild": { "artifacts": [], "weapons": [], "teams": [] },
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
     "teamComps": [],
     "faq": [],
-    "relatedCharacters": ["silver-wolf"],
+    "relatedCharacters": [
+      "silver-wolf"
+    ],
     "tierRank": "SS",
     "tierReason": "Imaginary Elation main DPS with extremely high speed and damage potential. Converts team laughs into personal damage, defining the Elation meta",
     "tierReasonZh": "虚数欢愉高速主C，伤害极高，将全队笑点转化为自身输出，定义欢愉体系核心",
@@ -9893,14 +9898,17 @@
     "status": "released",
     "image": "",
     "skills": {
-      "basicAtk": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" },
-      "skill": { "name": "", "nameEn": "", "description": "", "descriptionEn": "", "cost": 1 },
-      "ultimate": { "name": "", "nameEn": "", "description": "", "descriptionEn": "", "cost": 5 },
-      "talent": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" },
-      "technique": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" }
+      "basicAtk": {
+        "description": "对敌方单体造成物理属性伤害。",
+        "descriptionEn": "Deals Physical DMG to a single enemy."
+      }
     },
     "eidolons": [],
-    "recommendedBuild": { "artifacts": [], "weapons": [], "teams": [] },
+    "recommendedBuild": {
+      "artifacts": [],
+      "weapons": [],
+      "teams": []
+    },
     "teamComps": [],
     "faq": [],
     "relatedCharacters": [],
@@ -9924,17 +9932,33 @@
     "status": "released",
     "image": "",
     "skills": {
-      "basicAtk": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" },
-      "skill": { "name": "", "nameEn": "", "description": "", "descriptionEn": "", "cost": 1 },
-      "ultimate": { "name": "", "nameEn": "", "description": "", "descriptionEn": "", "cost": 5 },
-      "talent": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" },
-      "technique": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" }
+      "basicAtk": {
+        "name": "炎刃斩击",
+        "nameEn": "Flame Blade Strike",
+        "description": "对指定敌方单体造成等同于千冶·刃100%攻击力的火属性伤害。",
+        "descriptionEn": "Deals Fire DMG to a single enemy equal to 100% of Mortenax Blade's ATK."
+      },
+      "skill": {
+        "description": "消耗战技点，对敌方全体造成火属性伤害，并使目标受到的持续伤害增加20%，持续2回合。",
+        "descriptionEn": "Consumes Skill Points to deal Fire DMG to all enemies and increases DoT they take by 20% for 2 turns."
+      },
+      "ultimate": {
+        "description": "消耗能量，对敌方全体造成巨额火属性伤害，并有100%基础概率使目标陷入灼烧状态，持续3回合。",
+        "descriptionEn": "Consumes Energy to deal massive Fire DMG to all enemies, with 100% base chance to apply Burn for 3 turns."
+      }
     },
     "eidolons": [],
-    "recommendedBuild": { "artifacts": [], "weapons": [], "teams": [] },
+    "recommendedBuild": {
+      "bestRelicSet": "焰骸筑城者的Hurag式",
+      "bestRelicSetEn": "Hurag's Prison of Pyro",
+      "bestLightCone": "不见得",
+      "bestLightConeEn": "Nowhere to Run"
+    },
     "teamComps": [],
     "faq": [],
-    "relatedCharacters": ["blade"],
+    "relatedCharacters": [
+      "blade"
+    ],
     "tierRank": "SS",
     "tierReason": "Fire Nihility DPS with HP-scaling damage and taunt mechanics. His Zone grants allies +50% DMG, strong in Nihility teams",
     "tierReasonZh": "火属性虚无输出，生命值倍率伤害+嘲讽机制，领域为全队提供50%增伤，虚无队伍核心",

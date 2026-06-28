@@ -1,0 +1,52 @@
+{
+  "gameId": "wuwa",
+  "updateTime": "2026-06-28T07:19:17.715Z",
+  "teams": [
+    {
+      "id": "冷凝爆发队",
+      "name": "冷凝爆发队",
+      "nameEn": "Glacio Burst Team",
+      "description": "冷凝系爆发输出队伍，快速切换机制强。",
+      "descriptionEn": "Glacio burst DPS team with strong quick-swap mechanics.",
+      "coreCharacters": [
+        "changli",
+        "lucilla"
+      ],
+      "supportCharacters": [
+        "jianxin",
+        "baizhi",
+        "yangyang"
+      ],
+      "buildExample": {
+        "mainDPS": "changli",
+        "subDPS": "lucilla",
+        "tank": "jianxin",
+        "healer": "baizhi"
+      },
+      "playstyle": "长离主C，洛瑟菈副C快速切换，剑心坦克，白芷治疗。"
+    },
+    {
+      "id": "雷光队",
+      "name": "雷光队",
+      "nameEn": "Electro Flash Team",
+      "description": "雷系高频输出队伍，闪电链伤害丰富。",
+      "descriptionEn": "Electro high-frequency team with rich lightning chain damage.",
+      "coreCharacters": [
+        "jiemain",
+        " Encore"
+      ],
+      "supportCharacters": [
+        "baizhi",
+        "verina",
+        "yangyang"
+      ],
+      "buildExample": {
+        "mainDPS": "jiemain",
+        "subDPS": "encore",
+        "healer": "verina",
+        "support": "yangyang"
+      },
+      "playstyle": "戒文主C，安可副C，维里奈治疗，阳阳辅助。"
+    }
+  ]
+}

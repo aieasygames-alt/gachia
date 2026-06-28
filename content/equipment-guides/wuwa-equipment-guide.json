@@ -1,0 +1,49 @@
+{
+  "gameId": "wuwa",
+  "updateTime": "2026-06-28T07:19:17.714Z",
+  "equipment": [
+    {
+      "id": "轻云出月",
+      "name": "轻云出月",
+      "nameEn": "Moonlit Clouds",
+      "bonus": "2件套：冷凝伤害提高10%。5件套：施放技能时，冷凝伤害提高15%，持续10秒。",
+      "bonusEn": "2-piece: Glacio DMG +10%. 5-piece: Glacio DMG increased by 15% for 10s after using Skill.",
+      "bestCharacters": [
+        "lucilla",
+        "changli",
+        "jianxin",
+        "yangyang"
+      ],
+      "description": "冷凝系角色首选套装，适合副C和主C。",
+      "descriptionEn": "Best-in-slot for Glacio characters, suitable for both main and sub-DPS."
+    },
+    {
+      "id": "彻空的长吟",
+      "name": "彻空的长吟",
+      "nameEn": "Echoes of the Sky",
+      "bonus": "2件套：重击伤害提高15%。5件套：重击时，有50%概率触发连发，再次造成50%重击伤害。",
+      "bonusEn": "2-piece: Charged Attack DMG +15%. 5-piece: Charged Attacks have 50% chance to trigger repeat dealing 50% Charged Attack DMG.",
+      "bestCharacters": [
+        "calcharo",
+        "encore",
+        "jiemain"
+      ],
+      "description": "重击流角色专用，输出爆发力强。",
+      "descriptionEn": "Specialized for Charged Attack builds, high burst potential."
+    },
+    {
+      "id": "凝夜的披甲",
+      "name": "凝夜的披甲",
+      "nameEn": "Night Armor",
+      "bonus": "2件套：受到伤害降低15%。5件套：受到致命伤害时，保留1点生命值并恢复30%生命值，每120秒触发一次。",
+      "bonusEn": "2-piece: DMG taken -15%. 5-piece: When receiving fatal damage, survive with 1 HP and restore 30% HP, triggers every 120s.",
+      "bestCharacters": [
+        "baizhi",
+        "verina",
+        "jianxin"
+      ],
+      "description": "生存套装，适合坦克和治疗角色。",
+      "descriptionEn": "Survival set, suitable for tanks and healers."
+    }
+  ]
+}

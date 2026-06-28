@@ -1,0 +1,75 @@
+{
+  "gameId": "genshin",
+  "updateTime": "2026-06-28T07:19:17.714Z",
+  "teams": [
+    {
+      "id": "永冻队",
+      "name": "永冻队",
+      "nameEn": "Permafreeze Team",
+      "description": "经典的冰水永冻控制队伍，持续输出强，生存能力优秀。",
+      "descriptionEn": "Classic Cryo-Hydro permafreeze control team with consistent DPS and great survivability.",
+      "coreCharacters": [
+        "ayaka",
+        "kokomi"
+      ],
+      "supportCharacters": [
+        "kazuha",
+        "shenhe",
+        "mona"
+      ],
+      "buildExample": {
+        "mainDPS": "ayaka",
+        "subDPS": "shenhe",
+        "support": "kazuha",
+        "healer": "kokomi"
+      },
+      "playstyle": "神里绫华主输出，珊瑚宫心海挂水并提供治疗，枫原万叶聚怪减抗，神华增伤。"
+    },
+    {
+      "id": "融化队",
+      "name": "融化队",
+      "nameEn": "Melt Team",
+      "description": "冰火反应输出队伍，爆发伤害极高。",
+      "descriptionEn": "Cryo-Pyro reaction team with extremely high burst damage.",
+      "coreCharacters": [
+        "ayaka",
+        "bennett",
+        "xiangling"
+      ],
+      "supportCharacters": [
+        "kazuha",
+        "sucrose"
+      ],
+      "buildExample": {
+        "mainDPS": "ayaka",
+        "subDPS": "xiangling",
+        "support": "kazuha",
+        "buffer": "bennett"
+      },
+      "playstyle": "冰系主C配合香菱脱手火和班尼特增攻，万叶减抗聚怪，实现高额融化伤害。"
+    },
+    {
+      "id": "胡桃蒸发队",
+      "name": "胡桃蒸发队",
+      "nameEn": "Hu Tao Vaporize Team",
+      "description": "火水反应输出队伍，胡桃最优配队。",
+      "descriptionEn": "Pyro-Hydro reaction team, optimal build for Hu Tao.",
+      "coreCharacters": [
+        "hu-tao",
+        "xingqiu"
+      ],
+      "supportCharacters": [
+        "zhongli",
+        "yelan",
+        "bennett"
+      ],
+      "buildExample": {
+        "mainDPS": "hu-tao",
+        "subDPS": "xingqiu",
+        "support": "yelan",
+        "shielder": "zhongli"
+      },
+      "playstyle": "胡桃主输出，行秋挂水触发蒸发，夜兰副C，钟离护盾减抗。"
+    }
+  ]
+}

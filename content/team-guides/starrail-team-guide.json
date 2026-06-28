@@ -1,0 +1,52 @@
+{
+  "gameId": "starrail",
+  "updateTime": "2026-06-28T07:19:17.715Z",
+  "teams": [
+    {
+      "id": "虚无持续队",
+      "name": "虚无持续队",
+      "nameEn": "Nihility DoT Team",
+      "description": "持续伤害输出队伍，依赖dot触发机制。",
+      "descriptionEn": "Damage over Time team relying on DoT trigger mechanics.",
+      "coreCharacters": [
+        "kafka",
+        "mortenax-blade"
+      ],
+      "supportCharacters": [
+        "silver-wolf-lv999",
+        "luocha",
+        "sparkle"
+      ],
+      "buildExample": {
+        "mainDPS": "kafka",
+        "subDPS": "mortenax-blade",
+        "debuffer": "silver-wolf-lv999",
+        "healer": "luocha"
+      },
+      "playstyle": "卡芙卡触发dot，银狼植入弱点，罗刹治疗，布洛妮娅拉条。"
+    },
+    {
+      "id": "真托队",
+      "name": "真托队",
+      "nameEn": "Truth and Troupe Team",
+      "description": "真理医生和托帕的组合队伍，追击输出强。",
+      "descriptionEn": "Dr. Ratio and Topaz team with excellent follow-up attack synergy.",
+      "coreCharacters": [
+        "dr-ratio",
+        "topaz"
+      ],
+      "supportCharacters": [
+        "robin",
+        "rupert",
+        "ast"
+      ],
+      "buildExample": {
+        "mainDPS": "dr-ratio",
+        "subDPS": "topaz",
+        "support": "robin",
+        "harmony": "robin"
+      },
+      "playstyle": "真理医生主输出，托帕账账协同攻击，罗布鸟增伤拉条。"
+    }
+  ]
+}

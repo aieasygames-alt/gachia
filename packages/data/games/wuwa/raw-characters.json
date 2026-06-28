@@ -1775,6 +1775,12 @@
       "energy": 100,
       "critRate": 5,
       "critDmg": 150
+    },
+    "skills": {
+      "basicAtk": {
+        "description": "进行光谱属性的连击攻击，积累光谱能量。",
+        "descriptionEn": "Performs Spectro combo attacks to build Spectro energy."
+      }
     }
   },
   {
@@ -1800,6 +1806,12 @@
       "energy": 100,
       "critRate": 5,
       "critDmg": 150
+    },
+    "skills": {
+      "basicAtk": {
+        "description": "使用双枪进行快速射击，造成雷属性伤害。",
+        "descriptionEn": "Fires rapid shots with dual pistols, dealing Electro DMG."
+      }
     }
   },
   {
@@ -1825,6 +1837,26 @@
       "energy": 100,
       "critRate": 5,
       "critDmg": 150
+    },
+    "skills": {
+      "basicAtk": {
+        "description": "进行至多五段的冷凝属性连击攻击，快速积累冷凝能量。",
+        "descriptionEn": "Performs up to 5 consecutive Glacio attacks, rapidly building Glacio energy."
+      },
+      "skill": {
+        "description": "释放积累的冷凝能量，对前方大范围敌人造成冷凝伤害并施加冷凝焦灼效果。",
+        "descriptionEn": "Releases accumulated Glacio energy to deal Glacio DMG to enemies in a large area and apply Glacio Chafe."
+      },
+      "ultimate": {
+        "description": "创造超低温领域，对领域内敌人造成持续冷凝伤害并降低其移动速度。",
+        "descriptionEn": "Creates an ultra-low temperature field dealing continuous Glacio DMG and reducing movement speed of enemies within."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "霜月之环",
+      "bestWeaponEn": "Frostmoon Ring",
+      "bestEchoSet": "轻云出月",
+      "bestEchoSetEn": "Moonlit Clouds"
     }
   }
 ]

@@ -14230,42 +14230,22 @@
     "tierReason": "火系赫克塞雷脱手辅助，强力团队增益",
     "tierReasonZh": "Pyro Hexerei off-field support with strong team buffs",
     "skills": {
-      "normalAttack": {
-        "name": "普通攻击",
-        "nameEn": "Normal Attack",
-        "description": "",
-        "descriptionEn": ""
-      },
       "elementalSkill": {
-        "name": "元素战技",
-        "nameEn": "Elemental Skill",
-        "description": "",
-        "descriptionEn": ""
-      },
-      "elementalBurst": {
-        "name": "元素爆发",
-        "nameEn": "Elemental Burst",
-        "description": "",
-        "descriptionEn": ""
-      },
-      "passive1": {
-        "name": "",
-        "nameEn": "",
-        "description": "",
-        "descriptionEn": ""
-      },
-      "passive2": {
-        "name": "",
-        "nameEn": "",
-        "description": "",
-        "descriptionEn": ""
+        "description": "释放火元素花粉，对周围敌人造成火元素伤害并施加燃烧效果。",
+        "descriptionEn": "Releases Pyro pollen to deal AoE Pyro DMG and apply Burning to enemies.",
+        "cooldown": "7s"
       }
     },
     "constellations": [],
     "recommendedBuild": {
-      "artifacts": [],
-      "weapons": [],
-      "teams": []
+      "bestWeapon": "四风原典",
+      "bestWeaponEn": "Skyward Atlas",
+      "alternativeWeapons": [
+        "尘世之锁",
+        "千夜浮梦"
+      ],
+      "bestArtifactSet": "炽烈的炎之魔女",
+      "bestArtifactSetEn": "Crimson Witch of Flames"
     },
     "teamComps": [],
     "faq": []
@@ -14801,41 +14781,25 @@
     "tierReasonZh": "风系辅助，具备聚怪和元素精通 utility",
     "skills": {
       "normalAttack": {
-        "name": "普通攻击·普鲁涅",
-        "nameEn": "Normal Attack · Prune",
-        "description": "",
-        "descriptionEn": ""
+        "description": "释放风元素子弹，进行至多五段的远程攻击。",
+        "descriptionEn": "Fires Anemo projectiles for up to 5 consecutive ranged attacks."
       },
       "elementalSkill": {
-        "name": "元素战技",
-        "nameEn": "Elemental Skill",
-        "description": "",
-        "descriptionEn": ""
-      },
-      "elementalBurst": {
-        "name": "元素爆发",
-        "nameEn": "Elemental Burst",
-        "description": "",
-        "descriptionEn": ""
-      },
-      "passive1": {
-        "name": "",
-        "nameEn": "",
-        "description": "",
-        "descriptionEn": ""
-      },
-      "passive2": {
-        "name": "",
-        "nameEn": "",
-        "description": "",
-        "descriptionEn": ""
+        "description": "创造风刃对敌人造成风元素伤害，并扩散周围元素的元素效果。",
+        "descriptionEn": "Creates wind blades to deal Anemo DMG and swirl elemental effects from surrounding enemies.",
+        "cooldown": "6s"
       }
     },
     "constellations": [],
     "recommendedBuild": {
-      "artifacts": [],
-      "weapons": [],
-      "teams": []
+      "bestWeapon": "流浪乐章",
+      "bestWeaponEn": "The Widsith",
+      "alternativeWeapons": [
+        "讨龙英杰谭",
+        "拂玉之前"
+      ],
+      "bestArtifactSet": "翠绿之影",
+      "bestArtifactSetEn": "Viridescent Venerer"
     },
     "teamComps": [],
     "faq": []
@@ -14858,44 +14822,99 @@
     "tierReasonZh": "强力冰系输出，冰冻与碎冰机制优秀",
     "skills": {
       "normalAttack": {
-        "name": "普通攻击·洛恩",
-        "nameEn": "Normal Attack · Lohen",
-        "description": "",
-        "descriptionEn": ""
+        "description": "进行至多五段的连续长柄攻击，最后一段攻击造成更强的冰元素伤害。",
+        "descriptionEn": "Performs up to 5 consecutive Polearm strikes, with the final strike dealing greater Cryo DMG."
       },
       "elementalSkill": {
-        "name": "元素战技",
-        "nameEn": "Elemental Skill",
-        "description": "",
-        "descriptionEn": ""
+        "name": "霜寒连斩",
+        "nameEn": "Frostbreeze Strike",
+        "description": "释放冰霜之力，对前方敌人造成冰元素伤害并施加霜寒标记。标记存在期间，敌人受到的冰元素伤害增加15%。",
+        "descriptionEn": "Unleashes frost power to deal Cryo DMG to enemies ahead and apply Frost Mark. While marked, enemies take 15% increased Cryo DMG.",
+        "cooldown": "8s"
       },
       "elementalBurst": {
-        "name": "元素爆发",
-        "nameEn": "Elemental Burst",
-        "description": "",
-        "descriptionEn": ""
+        "name": "凛冬领域",
+        "nameEn": "Winter Domain",
+        "description": "创造冰霜领域，对领域内敌人造成持续冰元素伤害，并使领域内角色获得冰元素伤害加成。",
+        "descriptionEn": "Creates a frost domain that deals continuous Cryo DMG to enemies within and grants Cryo DMG bonus to characters inside.",
+        "cost": 70,
+        "cooldown": "15s"
       },
       "passive1": {
-        "name": "",
-        "nameEn": "",
-        "description": "",
-        "descriptionEn": ""
+        "name": "寒冰之心",
+        "nameEn": "Heart of Ice",
+        "description": "当洛恩处于冰元素附魔状态时，暴击率提升10%。",
+        "descriptionEn": "When Lohen is infused with Cryo, CRIT Rate increases by 10%."
       },
       "passive2": {
-        "name": "",
-        "nameEn": "",
-        "description": "",
-        "descriptionEn": ""
+        "name": "西风骑士",
+        "nameEn": "Knight of Favonius",
+        "description": "队伍中每有一个冰系角色，洛恩的冰元素伤害提升8%。",
+        "descriptionEn": "For every Cryo character in the party, Lohen's Cryo DMG increases by 8%."
       }
     },
     "constellations": [],
     "recommendedBuild": {
-      "artifacts": [],
-      "weapons": [],
-      "teams": []
+      "bestWeapon": "赤月之杖",
+      "bestWeaponEn": "Staff of the Scarlet Moon",
+      "alternativeWeapons": [
+        "护摩之杖",
+        "息灾",
+        "贯月矢"
+      ],
+      "bestArtifactSet": "冰风迷途的勇士",
+      "bestArtifactSetEn": "Blizzard Strayer",
+      "mainStats": {
+        "时之沙": "ATK%",
+        "空之杯": "Cryo DMG",
+        "理之冠": "CRIT Rate"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Cryo DMG",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%",
+        "Energy Recharge"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%",
+        "Energy Recharge"
+      ]
     },
-    "teamComps": [],
-    "faq": []
+    "teamComps": [
+      {
+        "name": "永冻队",
+        "nameEn": "Permafreeze Team",
+        "members": [
+          "lohen",
+          "kokomi",
+          "kazuha",
+          "shenhe"
+        ],
+        "description": "洛恩主C，心海挂水，万叶聚怪减抗，神华增伤",
+        "descriptionEn": "Lohen main DPS, Kokomi for Hydro, Kazuha for CC and RES shred, Shenhe for buff"
+      }
+    ],
+    "faq": [
+      {
+        "question": "洛恩值得培养吗？",
+        "questionZh": "洛恩值得培养吗？",
+        "answer": "洛恩是6.6版本的限定5星冰系长柄角色，拥有优秀的冰冻和碎冰机制，是目前最强的冰系主C之一。",
+        "answerZh": "洛恩是6.6版本的限定5星冰系长柄角色，拥有优秀的冰冻和碎冰机制，是目前最强的冰系主C之一。"
+      },
+      {
+        "question": "洛恩最佳配装是什么？",
+        "questionZh": "洛恩最佳配装是什么？",
+        "answer": "推荐使用赤月之杖或护摩之杖，圣遗物选择冰风迷途的勇士4件套，主属性优先攻击沙、冰伤杯、暴击头。",
+        "answerEn": "Recommend Staff of the Scarlet Moon or Staff of Homa, with Blizzard Strayer 4-piece set. Main stats: ATK% Sands, Cryo DMG Goblet, CRIT Rate Circlet."
+      }
+    ]
   },
   {
     "id": "sandrone",
