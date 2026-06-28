@@ -46,12 +46,18 @@ export const characters: Character[] = nteCharacters.map((char) => ({
   },
   stats: { baseHp: [], baseAtk: [], baseDef: [] },
   materials: [],
-  skills: mapSkills(char.skills),
+  skills: mapSkills(char.skills || []),
   releaseVersion: '',
 }));
 
 function mapSkills(skills: NteCharacter['skills']): Character['skills'] {
   const result: Character['skills'] = [];
+
+  // Handle missing skills object
+  if (!skills) {
+    return result;
+  }
+
   if (skills.normalAttack) {
     result.push({
       id: 'normal-attack',

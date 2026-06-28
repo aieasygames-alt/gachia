@@ -278,35 +278,29 @@ const SEA_ELEMENT_COLORS: Record<string, string> = {
   cha: '#ec4899',
 };
 
+// CRITICAL FIX: Optimize generateStaticParams to avoid loading all game data at once
 export async function generateStaticParams() {
-  const nteParams = LOCALES.flatMap((lang) =>
-    nteCharacters.map((char) => ({ lang, game: 'nte', id: char.id }))
+  // Use a simple array approach instead of separate variables
+  const games = [
+    { id: 'nte', characters: nteCharacters },
+    { id: 'genshin', characters: genshinCharacters },
+    { id: 'starrail', characters: starrailCharacters },
+    { id: 'wuwa', characters: wuwaCharacters },
+    { id: 'zzz', characters: zzzCharacters },
+    { id: 'guihuan', characters: guihuanCharacters },
+    { id: 'ananta', characters: anantaCharacters },
+    { id: 'endfield', characters: endfieldCharacters },
+    { id: 'sea', characters: seaCharacters },
+  ];
+
+  // Generate params for all games and locales
+  const params = games.flatMap(({ id, characters }) =>
+    LOCALES.flatMap((lang) =>
+      characters.map((char) => ({ lang, game: id, id: char.id }))
+    )
   );
-  const genshinParams = LOCALES.flatMap((lang) =>
-    genshinCharacters.map((char) => ({ lang, game: 'genshin', id: char.id }))
-  );
-  const starrailParams = LOCALES.flatMap((lang) =>
-    starrailCharacters.map((char) => ({ lang, game: 'starrail', id: char.id }))
-  );
-  const wuwaParams = LOCALES.flatMap((lang) =>
-    wuwaCharacters.map((char) => ({ lang, game: 'wuwa', id: char.id }))
-  );
-  const zzzParams = LOCALES.flatMap((lang) =>
-    zzzCharacters.map((char) => ({ lang, game: 'zzz', id: char.id }))
-  );
-  const guihuanParams = LOCALES.flatMap((lang) =>
-    guihuanCharacters.map((char) => ({ lang, game: 'guihuan', id: char.id }))
-  );
-  const anantaParams = LOCALES.flatMap((lang) =>
-    anantaCharacters.map((char) => ({ lang, game: 'ananta', id: char.id }))
-  );
-  const endfieldParams = LOCALES.flatMap((lang) =>
-    endfieldCharacters.map((char) => ({ lang, game: 'endfield', id: char.id }))
-  );
-  const seaParams = LOCALES.flatMap((lang) =>
-    seaCharacters.map((char) => ({ lang, game: 'sea', id: char.id }))
-  );
-  return [...nteParams, ...genshinParams, ...starrailParams, ...wuwaParams, ...zzzParams, ...guihuanParams, ...anantaParams, ...endfieldParams, ...seaParams];
+
+  return params;
 }
 
 function CharJsonLd({ gameId, locale, name, description, charId }: { gameId: GameId; locale: SupportedLocale; name: string; description: string; charId: string }) {

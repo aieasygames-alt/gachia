@@ -44,7 +44,11 @@ export const characters: Character[] = endfieldCharacters.map((char) => ({
     gachaSplash: `/images/endfield/characters/${char.id}.webp`,
   },
   stats: char.stats
-    ? { baseHp: char.stats.hp, baseAtk: char.stats.atk, baseDef: char.stats.str }
+    ? {
+        baseHp: Array.isArray(char.stats.hp) ? char.stats.hp : [char.stats.hp],
+        baseAtk: Array.isArray(char.stats.atk) ? char.stats.atk : [char.stats.atk],
+        baseDef: Array.isArray(char.stats.str) ? char.stats.str : [char.stats.str]
+      }
     : { baseHp: [], baseAtk: [], baseDef: [] },
   materials: [],
   skills: mapSkills(char.skills),

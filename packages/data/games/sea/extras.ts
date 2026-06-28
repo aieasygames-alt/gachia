@@ -1,7 +1,16 @@
 import rawData from './raw-character-materials.json';
 
-export const characterMaterials: never[] = rawData as unknown as never[];
+// CRITICAL FIX: Define proper types instead of using never[]
+interface CharacterMaterial {
+  characterId: string;
+  materials: Array<{
+    materialId: string;
+    quantity: number;
+  }>;
+}
 
-export function getMaterialsForCharacter(_charId: string): undefined {
-  return undefined;
+export const characterMaterials: CharacterMaterial[] = rawData as CharacterMaterial[];
+
+export function getMaterialsForCharacter(charId: string): CharacterMaterial | undefined {
+  return characterMaterials.find(cm => cm.characterId === charId);
 }

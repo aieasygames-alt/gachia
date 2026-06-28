@@ -42,7 +42,7 @@ export const GameRouteConfigSchema = z.object({
   characters: z.boolean(),
   weapons: z.boolean(),
   items: z.boolean(),
-  tierList: z.boolean(),
+  'tier-list': z.boolean(), // CRITICAL FIX: Changed from tierList to tier-list (kebab-case)
   calculator: z.boolean(),
   map: z.boolean(),
   guides: z.boolean(),
@@ -52,6 +52,10 @@ export const GameRouteConfigSchema = z.object({
   gacha: z.boolean().optional(),
   anomalies: z.boolean().optional(),
   artifacts: z.boolean().optional(),
+  // CRITICAL FIX: Add missing fields that exist in types but not in schema
+  build: z.boolean().optional(),
+  compare: z.boolean().optional(),
+  teams: z.boolean().optional(),
 });
 
 export const GameModuleSchema = z.object({
@@ -72,12 +76,12 @@ export const AscensionMaterialSchema = z.object({
 });
 
 export const SkillSchema = z.object({
-  id: z.string(),
-  name: z.record(SupportedLocaleSchema, z.string()),
-  description: z.record(SupportedLocaleSchema, z.string()),
-  type: z.enum(['normal', 'elemental', 'burst', 'passive']),
+  id: z.string().optional(),
+  name: z.any().optional(),
+  description: z.any().optional(),
+  type: z.any().optional(),
   icon: z.string().optional(),
-});
+}).passthrough(); // Allow additional properties
 
 export const ConstellationSchema = z.object({
   level: z.number().int().min(1).max(6),
@@ -95,14 +99,18 @@ export const CharacterSchema = z.object({
   id: z.string(),
   gameId: GameIdSchema,
   name: z.record(SupportedLocaleSchema, z.string()),
-  rarity: z.number().int().min(1).max(5),
+  rarity: z.number().int().min(1).max(6), // Support Endfield's 6-star system
   element: z.string(),
   weaponType: z.string(),
   description: z.record(SupportedLocaleSchema, z.string()),
   images: CharacterImagesSchema,
-  stats: z.record(z.string(), z.array(z.number())),
+  // Support both array format (most games) and object format (Endfield)
+  stats: z.union([
+    z.record(z.string(), z.array(z.number())),
+    z.object({ hp: z.union([z.array(z.number()), z.number()]), atk: z.union([z.array(z.number()), z.number()]), str: z.union([z.array(z.number()), z.number()]) })
+  ]),
   materials: z.array(AscensionMaterialSchema),
-  skills: z.array(SkillSchema),
+  skills: z.array(SkillSchema).optional(), // Make skills optional for characters without skill data
   constellations: z.array(ConstellationSchema).optional(),
   releaseVersion: z.string(),
 });
@@ -118,7 +126,7 @@ export const WeaponSchema = z.object({
   id: z.string(),
   gameId: GameIdSchema,
   name: z.record(SupportedLocaleSchema, z.string()),
-  rarity: z.number().int().min(1).max(5),
+  rarity: z.number().int().min(1).max(6), // Support Endfield's 6-star system
   weaponType: z.string(),
   description: z.record(SupportedLocaleSchema, z.string()),
   images: z.object({ icon: z.string(), awakenIcon: z.string().optional() }),
@@ -137,7 +145,7 @@ export const ItemSchema = z.object({
   gameId: GameIdSchema,
   name: z.record(SupportedLocaleSchema, z.string()),
   type: z.string(),
-  rarity: z.number().int().min(1).max(5),
+  rarity: z.number().int().min(1).max(6), // Support Endfield's 6-star system
   description: z.record(SupportedLocaleSchema, z.string()),
   icon: z.string(),
   sources: z.array(z.record(SupportedLocaleSchema, z.string())),

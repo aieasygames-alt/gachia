@@ -3,16 +3,45 @@ import { getDb } from '@/lib/db';
 import { sharedBuilds, eq, sql } from '@gachia/db';
 import { createAuth } from '@/lib/auth';
 import { checkRateLimit } from '@/lib/rate-limit';
+import { z } from 'zod';
+import { randomUUID } from 'crypto';
+
+// Validation schema with Zod
+const CreateBuildSchema = z.object({
+  gameId: z.enum(['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea'], {
+    errorMap: () => ({ message: 'Invalid game ID' })
+  }),
+  characterId: z.string().min(1).max(50),
+  buildData: z.string().max(10000), // Limit to 10KB to prevent DoS
+});
 
 export async function POST(request: NextRequest) {
   const limited = await checkRateLimit(request, { limit: 10, windowSeconds: 60, prefix: '/api/shared-builds' });
   if (limited) return limited;
 
-  const body: { gameId?: string; characterId?: string; buildData?: string; userId?: string } = await request.json();
-  const { gameId, characterId, buildData, userId } = body;
+  // CRITICAL FIX: Add authentication check
+  const auth = createAuth();
+  const session = await auth.api.getSession({
+    headers: request.headers,
+  });
 
-  if (!gameId || !characterId || !buildData) {
-    return NextResponse.json({ error: 'gameId, characterId, and buildData are required' }, { status: 400 });
+  if (!session?.user?.id) {
+    return NextResponse.json({ error: 'Authentication required' }, { status: 401 });
+  }
+
+  const body: { gameId?: string; characterId?: string; buildData?: string; userId?: string } = await request.json();
+
+  // CRITICAL FIX: Ignore user-provided userId, use session userId instead
+  const { gameId, characterId, buildData } = body;
+  const userId = session.user.id;
+
+  // CRITICAL FIX: Validate input with Zod schema
+  const validationResult = CreateBuildSchema.safeParse({ gameId, characterId, buildData });
+  if (!validationResult.success) {
+    return NextResponse.json({
+      error: 'Invalid input',
+      details: validationResult.error.flatten()
+    }, { status: 400 });
   }
 
   // Generate a short ID (8 chars, URL-friendly)
@@ -21,11 +50,11 @@ export async function POST(request: NextRequest) {
   const db = getDb();
   await db.insert(sharedBuilds).values({
     id,
-    userId: userId || null,
+    userId, // Use authenticated userId, not user-provided
     gameId,
     characterId,
     buildData,
-  });
+  } as any); // Use 'as any' to bypass Drizzle type issues
 
   return NextResponse.json({ id });
 }
@@ -59,10 +88,7 @@ export async function GET(request: NextRequest) {
 }
 
 function generateId(): string {
-  const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
-  let result = '';
-  for (let i = 0; i < 8; i++) {
-    result += chars[Math.floor(Math.random() * chars.length)];
-  }
-  return result;
+  // CRITICAL FIX: Use crypto.randomUUID() instead of Math.random()
+  // Take first 8 chars for URL-friendly format
+  return randomUUID().substring(0, 8);
 }

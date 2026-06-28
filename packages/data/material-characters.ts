@@ -129,14 +129,24 @@ export function getCharactersNeedingMaterial(gameId: GameId, materialId: string)
     }).filter(Boolean) as MaterialCharacter[]);
   }
 
+  // CRITICAL FIX: Proper implementation for Sea game
   if (gameId === 'sea') {
     const charIds = new Set<string>();
-    for (const cm of seaCharacterMaterials as never[]) {
-      charIds.add((cm as { characterId: string }).characterId);
+    for (const cm of seaCharacterMaterials) {
+      // Check if this character uses the requested material
+      if (cm.materials?.some((m: { materialId: string }) => m.materialId === materialId)) {
+        charIds.add(cm.characterId);
+      }
     }
     return dedupeById([...charIds].map(id => {
       const c = seaCharacters.find(ch => ch.id === id);
-      return c ? { id: c.id, element: c.attribute, image: getSeaCharacterImage(c) } : null;
+      if (!c) return null;
+      // Sea characters use 'attribute' field instead of 'element'
+      return {
+        id: c.id,
+        element: c.attribute || (c as any).element, // Fallback to element if attribute doesn't exist
+        image: getSeaCharacterImage(c)
+      };
     }).filter(Boolean) as MaterialCharacter[]);
   }
 

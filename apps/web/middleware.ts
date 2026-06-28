@@ -28,6 +28,15 @@ export default function middleware(request: NextRequest) {
     );
   }
 
+  // CRITICAL FIX: Add security headers
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+  response.headers.set('X-Frame-Options', 'SAMEORIGIN');
+  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  response.headers.set('X-DNS-Prefetch-Control', 'on');
+
+  // Add Vary header for proper caching of multilingual content
+  response.headers.set('Vary', 'Accept-Language');
+
   return response;
 }
 

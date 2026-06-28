@@ -14,6 +14,8 @@ import { guihuanCharacters, getGuihuanCharacterImage } from './games/guihuan/cha
 import { guihuanWeapons } from './games/guihuan/weapons';
 import { anantaCharacters, getAnantaCharacterImage } from './games/ananta/characters';
 import { anantaWeapons } from './games/ananta/weapons';
+import { endfieldCharacters, getEndfieldCharacterImage } from './games/endfield/characters';
+import { endfieldWeapons } from './games/endfield/weapons';
 import { seaCharacters, getSeaCharacterImage } from './games/sea/characters';
 import { seaWeapons } from './games/sea/weapons';
 
@@ -141,6 +143,19 @@ export function getCharactersForWeapon(gameId: GameId, weaponId: string): Materi
         || (build.alternativeWeapons as string[]).some(aw => aw === weapon.name);
     });
     return dedupeById(matches.map(c => ({ id: c.id, element: c.element, image: getAnantaCharacterImage(c) })));
+  }
+
+  // CRITICAL FIX: Add missing endfield branch
+  if (gameId === 'endfield') {
+    const weapon = endfieldWeapons.find(w => w.id === weaponId);
+    if (!weapon) return [];
+    const matches = endfieldCharacters.filter(c => {
+      const build = c.recommendedBuild;
+      return build.bestWeapon === weapon.name
+        || build.bestWeaponEn === weapon.nameEn
+        || (build.alternativeWeapons as string[]).some(aw => aw === weapon.name);
+    });
+    return dedupeById(matches.map(c => ({ id: c.id, element: c.element, image: getEndfieldCharacterImage(c) })));
   }
 
   if (gameId === 'sea') {
