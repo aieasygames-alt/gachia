@@ -15,6 +15,20 @@ import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 import dynamic from 'next/dynamic';
 
+const BASE_URL = 'https://gachia.com';
+
+const TIER_DESC: Record<string, Record<string, string>> = {
+  genshin: { zh: '2026年原神角色强度排行，包含深渊、大世界综合评级，SS/S/A/B分级，每月更新', en: 'Genshin Impact character tier list (2026) — best characters ranked SS to B for Spiral Abyss and overworld, updated monthly', ja: '2026年原神キャラTierリスト、深境螺旋・大世界総合評価、毎月更新' },
+  starrail: { zh: '2026年崩坏：星穹铁道角色强度排行，包含忘却之庭、虚构叙事综合评级，每月更新', en: 'Honkai: Star Rail character tier list (2026) — best characters ranked for Forgotten Hall, Pure Fiction & Apocalyptic Shadow, updated monthly', ja: '2026年スターレイルキャラTierリスト、忘却の庭・虚構叙事総合評価、毎月更新' },
+  wuwa: { zh: '2026年鸣潮角色强度排行，包含全角色综合评级，SS/S/A/B分级，每月更新', en: 'Wuthering Waves character tier list (2026) — best characters ranked SS to B for Tower of Adversity and endgame, updated monthly', ja: '2026年鳴潮キャラTierリスト、全キャラ総合評価、毎月更新' },
+  nte: { zh: '异环角色强度排行，包含SS/S+/A+/A/B分级', en: 'Neverness to Everness character tier list (2026) — best characters ranked SS to B, updated', ja: '2026年異環キャラTierリスト、SS/S+/A+/A/B評価' },
+  zzz: { zh: '2026年绝区零代理人强度排行，包含SS/S/A/B分级，每月更新', en: 'Zenless Zone Zero agent tier list (2026) — best agents ranked SS to B for Shiyu Defense and Deadly Assault, updated monthly', ja: '2026年ゼンレスゾーンゼロエージェントTierリスト、SS/S/A/B評価、毎月更新' },
+  guihuan: { zh: '归环使灵强度排行，包含SS/S/A/B分级', en: 'Guihuan spirit tier list (2026) — best spirits ranked SS to B', ja: '帰環スピリットTierリスト、SS/S/A/B評価' },
+  ananta: { zh: '无限大异能者强度排行，包含SS/S/A/B分级', en: 'Ananta esper tier list (2026) — best espers ranked SS to B', ja: 'アナンタエスパーTierリスト、SS/S/A/B評価' },
+  endfield: { zh: '明日方舟：终末地干员强度排行，包含SS/S/A/B分级', en: 'Arknights: Endfield operator tier list (2026) — best operators ranked SS to B', ja: 'アークナイツ：エンドフィールドオペレーターTierリスト、SS/S/A/B評価' },
+  sea: { zh: '遗忘之海角色强度排行，包含SS/S/A/B分级', en: 'Sea of Remnants character tier list (2026) — best characters ranked SS to B', ja: 'シー・オブ・レムナンツキャラTierリスト、SS/S/A/B評価' },
+};
+
 // P1-2: Lazy load tier list client components to reduce initial bundle size
 const GenshinTierListClient = dynamic(() => import('./genshin-tier-client').then(mod => ({ default: mod.GenshinTierListClient })), {
   loading: () => <div className="p-8 text-center">Loading tier list...</div>,
