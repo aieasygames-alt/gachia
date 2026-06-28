@@ -9,11 +9,20 @@ const GAME_IDS = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'anant
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Redirect lang-less game URLs to /zh/ prefix (301 permanent)
+  // P1-8: Redirect lang-less game URLs to user's preferred language (Accept-Language header)
   const firstSegment = pathname.split('/')[1];
   if (GAME_IDS.includes(firstSegment as typeof GAME_IDS[number])) {
+    const acceptLanguage = request.headers.get('accept-language') || '';
+    let preferredLang = 'en'; // Default to English
+
+    if (acceptLanguage.includes('zh')) {
+      preferredLang = 'zh';
+    } else if (acceptLanguage.includes('ja')) {
+      preferredLang = 'ja';
+    }
+
     const url = request.nextUrl.clone();
-    url.pathname = `/zh${pathname}`;
+    url.pathname = `/${preferredLang}${pathname}`;
     return NextResponse.redirect(url, 301);
   }
 

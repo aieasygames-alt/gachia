@@ -1,9 +1,16 @@
 import { NextResponse } from 'next/server';
 
 const INDEXNOW_KEY = 'gachia2026indexnowkey';
+const AUTH_TOKEN = process.env.INDEXNOW_AUTH_TOKEN || 'your_indexnow_auth_token_change_in_production';
 
 // IndexNow API endpoint — ping search engines when content changes
 export async function POST(request: Request) {
+  // P1-7: Add authentication to prevent abuse
+  const authHeader = request.headers.get('authorization');
+  if (!authHeader || !authHeader.startsWith('Bearer ') || authHeader.slice(7) !== AUTH_TOKEN) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
   try {
     const { urls } = await request.json() as { urls: string[] };
 
