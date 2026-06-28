@@ -2,6 +2,11 @@ import { CharacterSchema, WeaponSchema, ItemSchema, TierListSchema } from '@gach
 import { getGameData } from '../index';
 import { GAME_IDS } from '@gachia/core';
 
+// Declare process type for Node.js environment
+declare const process: {
+  exit: (code?: number) => never;
+};
+
 async function validate() {
   let errors = 0;
 

@@ -5,31 +5,129 @@
  */
 
 import type { GameId } from '@gachia/core';
+import {
+  characters as genshinCharacters,
+  weapons as genshinWeapons,
+  items as genshinItems,
+  tierLists as genshinTierLists,
+} from '../games/genshin';
+import {
+  characters as starrailCharacters,
+  weapons as starrailWeapons,
+  items as starrailItems,
+  tierLists as starrailTierLists,
+} from '../games/starrail';
+import {
+  characters as wuwaCharacters,
+  weapons as wuwaWeapons,
+  items as wuwaItems,
+  tierLists as wuwaTierLists,
+} from '../games/wuwa';
+import {
+  characters as nteCharacters,
+  weapons as nteWeapons,
+  items as nteItems,
+  tierLists as nteTierLists,
+} from '../games/nte';
+import {
+  characters as zzzCharacters,
+  weapons as zzzWeapons,
+  items as zzzItems,
+  tierLists as zzzTierLists,
+} from '../games/zzz';
+import {
+  characters as guihuanCharacters,
+  weapons as guihuanWeapons,
+  items as guihuanItems,
+  tierLists as guihuanTierLists,
+} from '../games/guihuan';
+import {
+  characters as anantaCharacters,
+  weapons as anantaWeapons,
+  items as anantaItems,
+  tierLists as anantaTierLists,
+} from '../games/ananta';
+import {
+  characters as endfieldCharacters,
+  weapons as endfieldWeapons,
+  items as endfieldItems,
+  tierLists as endfieldTierLists,
+} from '../games/endfield';
+import {
+  characters as seaCharacters,
+  weapons as seaWeapons,
+  items as seaItems,
+  tierLists as seaTierLists,
+} from '../games/sea';
 
 /**
- * Get game data dynamically by game ID
- * This allows on-demand loading instead of importing all games at once
+ * Get game data by game ID
  */
 export async function getGameData(gameId: GameId) {
   switch (gameId) {
     case 'genshin':
-      return import('@gachia/data/games/genshin');
+      return {
+        characters: genshinCharacters,
+        weapons: genshinWeapons,
+        items: genshinItems,
+        tierLists: genshinTierLists,
+      };
     case 'starrail':
-      return import('@gachia/data/games/starrail');
+      return {
+        characters: starrailCharacters,
+        weapons: starrailWeapons,
+        items: starrailItems,
+        tierLists: starrailTierLists,
+      };
     case 'wuwa':
-      return import('@gachia/data/games/wuwa');
+      return {
+        characters: wuwaCharacters,
+        weapons: wuwaWeapons,
+        items: wuwaItems,
+        tierLists: wuwaTierLists,
+      };
     case 'nte':
-      return import('@gachia/data/games/nte');
+      return {
+        characters: nteCharacters,
+        weapons: nteWeapons,
+        items: nteItems,
+        tierLists: nteTierLists,
+      };
     case 'zzz':
-      return import('@gachia/data/games/zzz');
+      return {
+        characters: zzzCharacters,
+        weapons: zzzWeapons,
+        items: zzzItems,
+        tierLists: zzzTierLists,
+      };
     case 'guihuan':
-      return import('@gachia/data/games/guihuan');
+      return {
+        characters: guihuanCharacters,
+        weapons: guihuanWeapons,
+        items: guihuanItems,
+        tierLists: guihuanTierLists,
+      };
     case 'ananta':
-      return import('@gachia/data/games/ananta');
+      return {
+        characters: anantaCharacters,
+        weapons: anantaWeapons,
+        items: anantaItems,
+        tierLists: anantaTierLists,
+      };
     case 'endfield':
-      return import('@gachia/data/games/endfield');
+      return {
+        characters: endfieldCharacters,
+        weapons: endfieldWeapons,
+        items: endfieldItems,
+        tierLists: endfieldTierLists,
+      };
     case 'sea':
-      return import('@gachia/data/games/sea');
+      return {
+        characters: seaCharacters,
+        weapons: seaWeapons,
+        items: seaItems,
+        tierLists: seaTierLists,
+      };
     default:
       throw new Error(`Unknown game ID: ${gameId}`);
   }
