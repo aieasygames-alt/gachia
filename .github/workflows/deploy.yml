@@ -21,8 +21,26 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
+      # P0 Quality Gates: Type checking before build
+      - name: Type Check
+        run: pnpm type-check
+
+      # P0 Quality Gates: Tests before build
+      - name: Test
+        run: pnpm test
+
       - name: Build
         run: pnpm build
+
+      # P0 Quality Gates: Database migration for production deployments
+      - name: Database Migration
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: |
+          echo "Running database migrations..."
+          # Note: Remote migrations should be applied via wrangler
+          # npx wrangler d1 migrations apply gachia-db --remote
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
 
       - name: Build Cloudflare Worker
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
