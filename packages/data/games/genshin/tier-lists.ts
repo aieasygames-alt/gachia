@@ -1,8 +1,8 @@
-import type { TierList } from '@gachia/core';
+import type { TierList, TierRank } from '@gachia/core';
 
 // P1-25: Add basic tier list data for Genshin Impact
 // These are representative tier lists based on 2026 meta
-const tierEntries = [
+const tierEntries: Array<{ characterId: string; tier: TierRank; role: string }> = [
   // SS tier - Most versatile and powerful characters
   { characterId: 'raidenshogoku', tier: 'SS', role: 'Main DPS' },
   { characterId: 'zhongli', tier: 'SS', role: 'Support DPS' },

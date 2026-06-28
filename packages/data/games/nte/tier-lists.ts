@@ -1,8 +1,8 @@
-import type { TierList } from '@gachia/core';
+import type { TierList, TierRank } from '@gachia/core';
 
 // P1-25: Add basic tier list data for Neverness to Everness
 // These are representative tier lists based on 2026 early access
-const tierEntries = [
+const tierEntries: Array<{ characterId: string; tier: TierRank; role: string }> = [
   // S tier - Top performers
   { characterId: 'fadia', tier: 'S', role: 'DPS' },
   { characterId: 'baicang', tier: 'S', role: 'Support' },

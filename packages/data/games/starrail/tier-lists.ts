@@ -1,8 +1,8 @@
-import type { TierList } from '@gachia/core';
+import type { TierList, TierRank } from '@gachia/core';
 
 // P1-25: Add basic tier list data for Honkai: Star Rail
 // These are representative tier lists based on 2026 meta
-const tierEntries = [
+const tierEntries: Array<{ characterId: string; tier: TierRank; role: string }> = [
   // SS tier - Most powerful characters
   { characterId: 'trailblazer', tier: 'SS', role: 'Main DPS' },
   { characterId: 'kafka', tier: 'SS', role: 'Support' },
