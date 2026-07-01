@@ -833,7 +833,7 @@
       }
     },
     "image": "",
-    "status": "available",
+    "status": "upcoming",
     "teamComps": [
       {
         "name": "王女辅助队",
@@ -1148,7 +1148,7 @@
       }
     },
     "image": "",
-    "status": "available",
+    "status": "upcoming",
     "nameJa": "エドワード",
     "teamComps": [
       {
@@ -1294,7 +1294,7 @@
       }
     },
     "image": "",
-    "status": "available",
+    "status": "upcoming",
     "nameJa": "ゲイル",
     "teamComps": [
       {
@@ -1382,5 +1382,377 @@
         "descriptionEn": "Iron Commander main tank + Princess support + Burnt Colonel off-tank — Dawnbreaker hard-counter comp."
       }
     ]
+  },
+  {
+    "id": "sea-burial",
+    "number": "19",
+    "name": "海葬",
+    "nameEn": "Sea Burial",
+    "nameJa": "海葬",
+    "nickname": "海葬",
+    "attribute": "int",
+    "attributeEn": "INT",
+    "role": "待实测",
+    "roleEn": "TBD",
+    "rarity": 5,
+    "fleet": "妄想剧团",
+    "fleetEn": "Delusion Troupe",
+    "faction": "",
+    "position": "",
+    "favoriteFood": "",
+    "description": "妄想剧团黑券船员，公测前公开图鉴已收录，具体技能与定位待正式服实测补充。",
+    "descriptionEn": "A Black Ticket crew member from the Delusion Troupe. Public pre-launch databases list this crew member; exact kit and role await launch testing.",
+    "speed": 0,
+    "faq": [
+      {
+        "question": "Is Sea Burial available in Sea of Remnants?",
+        "questionZh": "海葬在遗忘之海中已公开吗？",
+        "answer": "Yes. Sea Burial appears in public pre-launch crew lists as a Black Ticket Intelligence crew from the Delusion Troupe. Exact kit details need launch verification.",
+        "answerZh": "已公开。海葬在公测前船员图鉴中列为妄想剧团智力属性黑券船员，具体技能需要正式服实测确认。"
+      }
+    ],
+    "relatedCharacters": [
+      "tonino",
+      "miser",
+      "puppeteer"
+    ],
+    "tierRank": "TBD",
+    "tierReason": "Publicly listed crew member; combat value awaits launch testing",
+    "tierReasonZh": "已公开船员，强度待正式服实测",
+    "skills": {
+      "passive": {
+        "name": "被动技能",
+        "nameEn": "Passive Skill",
+        "description": "待公测实测补充",
+        "descriptionEn": "Pending launch testing"
+      },
+      "signature": {
+        "name": "招牌技能",
+        "nameEn": "Signature Skill",
+        "description": "待公测实测补充",
+        "descriptionEn": "Pending launch testing",
+        "cost": "待补充"
+      },
+      "personal": {
+        "name": "个人技能",
+        "nameEn": "Personal Skill",
+        "description": "待公测实测补充",
+        "descriptionEn": "Pending launch testing",
+        "cooldown": "待补充"
+      }
+    },
+    "image": "",
+    "status": "available",
+    "teamComps": []
+  },
+  {
+    "id": "tonino",
+    "number": "20",
+    "name": "托尼诺",
+    "nameEn": "Tonino",
+    "nameJa": "トニーノ",
+    "nickname": "托尼诺",
+    "attribute": "str",
+    "attributeEn": "STR",
+    "role": "待实测",
+    "roleEn": "TBD",
+    "rarity": 4,
+    "fleet": "妄想剧团",
+    "fleetEn": "Delusion Troupe",
+    "faction": "",
+    "position": "",
+    "favoriteFood": "",
+    "description": "妄想剧团紫券船员，公测前公开图鉴已收录，具体技能与定位待正式服实测补充。",
+    "descriptionEn": "A Purple Ticket crew member from the Delusion Troupe. Public pre-launch databases list this crew member; exact kit and role await launch testing.",
+    "speed": 0,
+    "faq": [
+      {
+        "question": "What fleet is Tonino from?",
+        "questionZh": "托尼诺属于哪个船队？",
+        "answer": "Tonino is listed as a Strength Purple Ticket crew member from the Delusion Troupe.",
+        "answerZh": "托尼诺在公开图鉴中列为妄想剧团力量属性紫券船员。"
+      }
+    ],
+    "relatedCharacters": [
+      "sea-burial",
+      "miser",
+      "puppeteer"
+    ],
+    "tierRank": "TBD",
+    "tierReason": "Publicly listed crew member; combat value awaits launch testing",
+    "tierReasonZh": "已公开船员，强度待正式服实测",
+    "skills": {
+      "passive": {
+        "name": "被动技能",
+        "nameEn": "Passive Skill",
+        "description": "待公测实测补充",
+        "descriptionEn": "Pending launch testing"
+      },
+      "signature": {
+        "name": "招牌技能",
+        "nameEn": "Signature Skill",
+        "description": "待公测实测补充",
+        "descriptionEn": "Pending launch testing",
+        "cost": "待补充"
+      },
+      "personal": {
+        "name": "个人技能",
+        "nameEn": "Personal Skill",
+        "description": "待公测实测补充",
+        "descriptionEn": "Pending launch testing",
+        "cooldown": "待补充"
+      }
+    },
+    "image": "",
+    "status": "available",
+    "teamComps": []
+  },
+  {
+    "id": "miser",
+    "number": "21",
+    "name": "吝啬鬼",
+    "nameEn": "Miser",
+    "nameJa": "守銭奴",
+    "nickname": "吝啬鬼",
+    "attribute": "int",
+    "attributeEn": "INT",
+    "role": "待实测",
+    "roleEn": "TBD",
+    "rarity": 4,
+    "fleet": "妄想剧团",
+    "fleetEn": "Delusion Troupe",
+    "faction": "",
+    "position": "",
+    "favoriteFood": "",
+    "description": "妄想剧团紫券船员，公测前公开图鉴已收录，具体技能与定位待正式服实测补充。",
+    "descriptionEn": "A Purple Ticket crew member from the Delusion Troupe. Public pre-launch databases list this crew member; exact kit and role await launch testing.",
+    "speed": 0,
+    "faq": [
+      {
+        "question": "What attribute does Miser use?",
+        "questionZh": "吝啬鬼是什么属性？",
+        "answer": "Miser is listed as an Intelligence Purple Ticket crew member from the Delusion Troupe.",
+        "answerZh": "吝啬鬼在公开图鉴中列为妄想剧团智力属性紫券船员。"
+      }
+    ],
+    "relatedCharacters": [
+      "sea-burial",
+      "tonino",
+      "puppeteer"
+    ],
+    "tierRank": "TBD",
+    "tierReason": "Publicly listed crew member; combat value awaits launch testing",
+    "tierReasonZh": "已公开船员，强度待正式服实测",
+    "skills": {
+      "passive": {
+        "name": "被动技能",
+        "nameEn": "Passive Skill",
+        "description": "待公测实测补充",
+        "descriptionEn": "Pending launch testing"
+      },
+      "signature": {
+        "name": "招牌技能",
+        "nameEn": "Signature Skill",
+        "description": "待公测实测补充",
+        "descriptionEn": "Pending launch testing",
+        "cost": "待补充"
+      },
+      "personal": {
+        "name": "个人技能",
+        "nameEn": "Personal Skill",
+        "description": "待公测实测补充",
+        "descriptionEn": "Pending launch testing",
+        "cooldown": "待补充"
+      }
+    },
+    "image": "",
+    "status": "available",
+    "teamComps": []
+  },
+  {
+    "id": "puppeteer",
+    "number": "22",
+    "name": "人偶师",
+    "nameEn": "Puppeteer",
+    "nameJa": "人形師",
+    "nickname": "人偶师",
+    "attribute": "str",
+    "attributeEn": "STR",
+    "role": "待实测",
+    "roleEn": "TBD",
+    "rarity": 4,
+    "fleet": "妄想剧团",
+    "fleetEn": "Delusion Troupe",
+    "faction": "",
+    "position": "",
+    "favoriteFood": "",
+    "description": "妄想剧团紫券船员，公测前公开图鉴已收录，具体技能与定位待正式服实测补充。",
+    "descriptionEn": "A Purple Ticket crew member from the Delusion Troupe. Public pre-launch databases list this crew member; exact kit and role await launch testing.",
+    "speed": 0,
+    "faq": [
+      {
+        "question": "What fleet is Puppeteer from?",
+        "questionZh": "人偶师属于哪个船队？",
+        "answer": "Puppeteer is listed as a Strength Purple Ticket crew member from the Delusion Troupe.",
+        "answerZh": "人偶师在公开图鉴中列为妄想剧团力量属性紫券船员。"
+      }
+    ],
+    "relatedCharacters": [
+      "sea-burial",
+      "tonino",
+      "miser"
+    ],
+    "tierRank": "TBD",
+    "tierReason": "Publicly listed crew member; combat value awaits launch testing",
+    "tierReasonZh": "已公开船员，强度待正式服实测",
+    "skills": {
+      "passive": {
+        "name": "被动技能",
+        "nameEn": "Passive Skill",
+        "description": "待公测实测补充",
+        "descriptionEn": "Pending launch testing"
+      },
+      "signature": {
+        "name": "招牌技能",
+        "nameEn": "Signature Skill",
+        "description": "待公测实测补充",
+        "descriptionEn": "Pending launch testing",
+        "cost": "待补充"
+      },
+      "personal": {
+        "name": "个人技能",
+        "nameEn": "Personal Skill",
+        "description": "待公测实测补充",
+        "descriptionEn": "Pending launch testing",
+        "cooldown": "待补充"
+      }
+    },
+    "image": "",
+    "status": "available",
+    "teamComps": []
+  },
+  {
+    "id": "isabella",
+    "number": "23",
+    "name": "伊莎贝拉",
+    "nameEn": "Isabella",
+    "nameJa": "イザベラ",
+    "nickname": "伊莎贝拉",
+    "attribute": "cha",
+    "attributeEn": "CHA",
+    "role": "待实测",
+    "roleEn": "TBD",
+    "rarity": 5,
+    "fleet": "流浪号",
+    "fleetEn": "Wanderer",
+    "faction": "",
+    "position": "",
+    "favoriteFood": "",
+    "description": "流浪号黑券船员，公测前公开图鉴已收录，具体技能与定位待正式服实测补充。",
+    "descriptionEn": "A Black Ticket crew member from the Wanderer fleet. Public pre-launch databases list this crew member; exact kit and role await launch testing.",
+    "speed": 0,
+    "faq": [
+      {
+        "question": "Is Isabella a Wanderer crew member?",
+        "questionZh": "伊莎贝拉属于流浪号吗？",
+        "answer": "Yes. Isabella is listed as a Charisma Black Ticket crew member from the Wanderer fleet.",
+        "answerZh": "是。伊莎贝拉在公开图鉴中列为流浪号魅力属性黑券船员。"
+      }
+    ],
+    "relatedCharacters": [
+      "edward",
+      "glutton-cat",
+      "nonsense-prophet"
+    ],
+    "tierRank": "TBD",
+    "tierReason": "Publicly listed crew member; combat value awaits launch testing",
+    "tierReasonZh": "已公开船员，强度待正式服实测",
+    "skills": {
+      "passive": {
+        "name": "被动技能",
+        "nameEn": "Passive Skill",
+        "description": "待公测实测补充",
+        "descriptionEn": "Pending launch testing"
+      },
+      "signature": {
+        "name": "招牌技能",
+        "nameEn": "Signature Skill",
+        "description": "待公测实测补充",
+        "descriptionEn": "Pending launch testing",
+        "cost": "待补充"
+      },
+      "personal": {
+        "name": "个人技能",
+        "nameEn": "Personal Skill",
+        "description": "待公测实测补充",
+        "descriptionEn": "Pending launch testing",
+        "cooldown": "待补充"
+      }
+    },
+    "image": "",
+    "status": "available",
+    "teamComps": []
+  },
+  {
+    "id": "glutton-cat",
+    "number": "24",
+    "name": "饿猫",
+    "nameEn": "Glutton Cat",
+    "nameJa": "飢えた猫",
+    "nickname": "饿猫",
+    "attribute": "per",
+    "attributeEn": "PER",
+    "role": "待实测",
+    "roleEn": "TBD",
+    "rarity": 5,
+    "fleet": "流浪号",
+    "fleetEn": "Wanderer",
+    "faction": "",
+    "position": "",
+    "favoriteFood": "",
+    "description": "流浪号黑券船员，公测前公开图鉴已收录，具体技能与定位待正式服实测补充。",
+    "descriptionEn": "A Black Ticket crew member from the Wanderer fleet. Public pre-launch databases list this crew member; exact kit and role await launch testing.",
+    "speed": 0,
+    "faq": [
+      {
+        "question": "What attribute does Glutton Cat use?",
+        "questionZh": "饿猫是什么属性？",
+        "answer": "Glutton Cat is listed as a Perception Black Ticket crew member from the Wanderer fleet.",
+        "answerZh": "饿猫在公开图鉴中列为流浪号感知属性黑券船员。"
+      }
+    ],
+    "relatedCharacters": [
+      "edward",
+      "isabella",
+      "nonsense-prophet"
+    ],
+    "tierRank": "TBD",
+    "tierReason": "Publicly listed crew member; combat value awaits launch testing",
+    "tierReasonZh": "已公开船员，强度待正式服实测",
+    "skills": {
+      "passive": {
+        "name": "被动技能",
+        "nameEn": "Passive Skill",
+        "description": "待公测实测补充",
+        "descriptionEn": "Pending launch testing"
+      },
+      "signature": {
+        "name": "招牌技能",
+        "nameEn": "Signature Skill",
+        "description": "待公测实测补充",
+        "descriptionEn": "Pending launch testing",
+        "cost": "待补充"
+      },
+      "personal": {
+        "name": "个人技能",
+        "nameEn": "Personal Skill",
+        "description": "待公测实测补充",
+        "descriptionEn": "Pending launch testing",
+        "cooldown": "待补充"
+      }
+    },
+    "image": "",
+    "status": "available",
+    "teamComps": []
   }
 ]
