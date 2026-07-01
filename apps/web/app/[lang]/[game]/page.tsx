@@ -78,8 +78,8 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     ja: 'アークナイツ：エンドフィールドはハイパーグリフ開発のオープンワールドアクションRPG。アークナイツIPを背景に、プレイヤーはドクターとしてタロスII号星で拠点を建設し、オペレーターを指揮してリアルタイム戦闘と探索を行います。',
   },
   sea: {
-    zh: '遗忘之海是网易Joker工作室自研的海洋奇遇开放世界RPG。你将成为一名木偶船长，在海上开启奇遇之旅。',
-    en: 'Sea of Remnants is an ocean adventure open-world RPG by NetEase Joker Studio. Become a puppet captain on a fantastical sea voyage.',
+    zh: '遗忘之海是网易Joker工作室自研的海洋奇遇开放世界RPG。PC端定档2026年7月9日公测，移动端7月内上线，Gachia整理角色、船队、版本、公测福利与开荒攻略。',
+    en: 'Sea of Remnants is an ocean adventure open-world RPG by NetEase Joker Studio. PC open beta is scheduled for July 9, 2026, with mobile launching later in July. Gachia tracks crews, fleets, version news, launch rewards, and beginner guides.',
     ja: 'シー・オブ・レムナンツはNetEase Joker Studioの海洋アドベンチャーオープンワールドRPG。人形の船長として海の冒険に出よう。',
   },
 };
@@ -127,8 +127,8 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
     ja: 'アークナイツ：エンドフィールドはハイパーグリフ開発のオープンワールドアクションRPG。アークナイツの世界観を背景に、プレイヤーはドクターとしてタロスII号星で拠点を建設し、オペレーターを指揮してリアルタイム戦闘と探索を行います。Gachiaではキャラ図鑑、武器データベース、ビルドおすすめ、攻略百科を提供。',
   },
   sea: {
-    zh: '遗忘之海是一款极具美术风格的海洋冒险RPG，采用回合制战斗与即时海战双模式。玩家将扮演失去记忆的木偶船长，与300+阵营迥异的伙伴一起寻找传说中的遗忘之海。游戏包含城镇经营、航海冒险、Roguelike等多种玩法。',
-    en: 'Sea of Remnants is a stylized ocean adventure RPG with turn-based combat and real-time naval battles. Play as an amnesiac puppet captain, recruit 300+ unique companions across factions, and search for the legendary Sea of Remnants.',
+    zh: '遗忘之海是一款极具美术风格的海洋冒险RPG，采用回合制战斗、即时海战与Roguelite遗忘之旅多模式。PC端2026年7月9日公测，移动端预计7月内上线。公测首月重点内容包括白沙海、渡桥海、7月底隐秘海，新船员茉莉、黑格、盖尔、爱德华，以及记忆重逢、奥托皮亚多结局、全服交易行、噩梦深潜和大漩涡等系统。Gachia会持续整理公测版本日志、兑换码、角色与BOSS档案、开荒Build和海区探索路线。',
+    en: 'Sea of Remnants is a stylized ocean adventure RPG with turn-based combat, real-time naval battles, and Roguelite Remnant Journey runs. PC open beta is scheduled for July 9, 2026, with mobile expected later in July. Launch-month coverage includes White Sand Sea, Bridge Sea, the late-July Hidden Sea, crews such as Molly, Heige, Gail, and Edward, plus Memory Reunion, Orbtopia endings, the server-wide trade market, Nightmare Dive, and Maelstrom systems. Gachia tracks version logs, codes, crews, bosses, builds, and sea-region routes.',
     ja: 'ターン制バトルとリアルタイム海戦を特徴とする海洋アドベンチャーRPG。記憶を失った人形の船長となり、300以上の個性的な仲間と共に伝説のシー・オブ・レムナンツを探そう。',
   },
 };
@@ -143,7 +143,7 @@ const FEATURED_CHARS: Record<string, string[]> = {
   guihuan: [],
   ananta: [],
   endfield: ['laevatain', 'ardelia', 'tangtang', 'endministrator', 'lifeng'],
-  sea: ['traveler', 'ais', 'little-axe', 'molly'],
+  sea: ['traveler', 'ais', 'little-axe', 'molly', 'heige', 'gail', 'edward'],
 };
 
 // --- Route icons ---

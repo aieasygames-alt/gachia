@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "code": "ywzh2026",
+    "reward": "前瞻直播礼包，具体奖励以游戏内兑换结果为准",
+    "rewardEn": "Preview livestream gift pack. Exact rewards depend on the in-game redemption result.",
+    "status": "active",
+    "expiresAt": "2026-07-09T23:59:59+08:00",
+    "source": "2026-06-26 公测前瞻直播",
+    "region": "CN",
+    "revealedAt": "2026-06-26"
+  }
+]

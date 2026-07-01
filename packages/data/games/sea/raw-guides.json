@@ -1021,5 +1021,175 @@
         "answerZh": "可以，如果你想体验不同品类。遗忘之海提供盗贼之海缺乏的深度单机 RPG 叙事。如果你在玩盗贼之海的联机 PVP 之外，也喜欢《巫师 3》《博德之门 3》这类剧情向游戏，遗忘之海正好填补这个空缺。如果只玩 PVP 海战，继续玩盗贼之海即可。"
       }
     ]
+  },
+  {
+    "id": "open-beta-version-center",
+    "title": "《遗忘之海》公测版本中心 — 7月9日PC公测与首月更新",
+    "titleEn": "Sea of Remnants Open Beta Version Center — July 9 PC Launch and First-Month Updates",
+    "category": "version",
+    "categoryZh": "版本中心",
+    "categoryEn": "Version",
+    "summary": "汇总《遗忘之海》2026年7月9日PC公测、移动端7月内上线、三端互通、首月新海域、新船员、系统玩法和公测福利。",
+    "summaryEn": "Tracks the July 9, 2026 PC open beta, mobile launch window, cross-platform progress, new sea regions, crews, systems, and launch rewards.",
+    "tags": [
+      "公测",
+      "版本",
+      "7月9日",
+      "移动端",
+      "Version",
+      "Launch"
+    ],
+    "content": "## 公测时间与平台\n\n《遗忘之海》PC端公测定档 **2026年7月9日**，移动端预计在7月内上线。官方前瞻信息提到PC与移动端会围绕三端互通体验展开，账号进度、开荒节奏和兑换码领取需要以正式上线后的游戏内公告为准。\n\n## 首月重点内容\n\n| 模块 | 公测信息 | Gachia跟进 |\n|------|---------|-----------|\n| 海域 | 白沙海、渡桥海首批开放，隐秘海预计7月底解锁 | 建立海区攻略、材料点与BOSS坐标页 |\n| 船员 | 首月20+船员，茉莉限时UP，黑格为赛季船员 | 角色页补充获取方式、UP状态、所属船队 |\n| 船队 | 蓝波乐队、破晓者、黑男爵、妄想剧团、流浪号 | 增加船队标签与组队筛选 |\n| 系统 | 记忆重逢、记忆共鸣、噩梦深潜、大漩涡、交易行 | 拆分机制指南与收益规划 |\n| 福利 | 公测100抽、新手40抽黑券保底、前瞻直播码 | 兑换码页每日巡检 |\n\n## 新海域与BOSS\n\n公测前瞻重点提到白沙海、渡桥海，以及7月底开放的隐秘海。已知高关注目标包括海上霸主猩红女爵，以及疯老头穆雷、猩猩与海盗团、鬼新娘等BOSS。Gachia会优先记录出现海域、阶段机制、推荐队伍和掉落物。\n\n## 数据状态\n\n本文为公测前瞻整合页，最后更新：2026-07-01。所有数值、开放时间和奖励以官方正式公告及游戏内实装为准。",
+    "contentEn": "## Launch Time and Platforms\n\nSea of Remnants PC open beta is scheduled for **July 9, 2026**, with mobile expected later in July. Cross-platform progress details should be confirmed against official launch announcements and in-game notices.\n\n## First-Month Highlights\n\n| Module | Launch Info | Gachia Coverage |\n|------|---------|-----------|\n| Regions | White Sand Sea and Bridge Sea at launch; Hidden Sea expected in late July | Sea-region guides, material points, boss coordinates |\n| Crews | 20+ launch-month crews, Molly limited UP, Heige as season crew | Obtain method, UP status, fleet tags |\n| Fleets | Blue Wave Band, Dawnbringers, Black Baron, Delusion Troupe, Wanderer | Fleet tags and team filters |\n| Systems | Memory Reunion, Memory Resonance, Nightmare Dive, Maelstrom, trade market | System guides and reward planning |\n| Rewards | 100 launch pulls, beginner 40-pull Black Ticket guarantee, preview livestream code | Code tracking and daily checks |\n\n## New Regions and Bosses\n\nThe preview highlighted White Sand Sea, Bridge Sea, and the late-July Hidden Sea. High-interest encounters include the sea overlord Crimson Duchess, Mad Old Murray, the Gorilla Pirate Crew, and Ghost Bride. Gachia will track region, mechanics, teams, and drops.\n\n## Data Status\n\nLast updated: 2026-07-01. Values, timing, and rewards may change at launch; always confirm with official notices and the in-game client.",
+    "faq": [
+      {
+        "question": "When does Sea of Remnants launch on PC?",
+        "questionZh": "遗忘之海PC端什么时候公测？",
+        "answer": "The current launch target is July 9, 2026 for PC open beta. Mobile is expected later in July.",
+        "answerZh": "当前公测节点为2026年7月9日PC端公测，移动端预计7月内上线。"
+      },
+      {
+        "question": "What should Gachia update first for launch?",
+        "questionZh": "Gachia公测前应该优先更新什么？",
+        "answer": "Prioritize the version center, launch rewards and codes, Molly/Heige/Gail/Edward crew entries, Memory Reunion, and the first boss-region guides.",
+        "answerZh": "优先更新版本中心、公测福利与兑换码、茉莉/黑格/盖尔/爱德华角色条目、记忆重逢机制，以及首批BOSS和海区攻略。"
+      }
+    ]
+  },
+  {
+    "id": "memory-reunion-guide",
+    "title": "《遗忘之海》记忆重逢机制详解 — 黑券获取、每周打捞与零氪路线",
+    "titleEn": "Sea of Remnants Memory Reunion Guide — Black Ticket Picks, Weekly Salvage, and F2P Route",
+    "category": "system",
+    "categoryZh": "系统",
+    "categoryEn": "System",
+    "summary": "解析公测版记忆重逢机制：开局黑券6选1、每周遗忘之旅打捞、免费黑券概率、保底规划与零氪抽取策略。",
+    "summaryEn": "Explains the launch Memory Reunion system: opening Black Ticket pick, weekly Remnant Journey salvage, free-ticket odds, pity planning, and F2P pull strategy.",
+    "tags": [
+      "记忆重逢",
+      "黑券",
+      "零氪",
+      "抽卡",
+      "Memory Reunion",
+      "F2P"
+    ],
+    "content": "## 机制定位\n\n记忆重逢是公测版最需要新手提前理解的船员获取系统。它和传统招募池不同，重点在于开局选择、每周遗忘之旅打捞，以及长期免费资源规划。\n\n## 已知规则整理\n\n| 规则 | 当前情报 | 开荒影响 |\n|------|---------|---------|\n| 开局选择 | 黑券船员6选1 | 决定前期主C、辅助或生存轴 |\n| 每周打捞 | 遗忘之旅有概率免费捞黑券 | 周常收益很高，尽量不要漏打 |\n| 概率提示 | 前瞻提到每周约50%概率获得免费黑券机会 | 适合零氪长期规划，不建议急躁补氪 |\n| 新手保底 | 新手40抽必得黑券 | 与开局6选1搭配，避免重复定位 |\n\n## 开局选择建议\n\n1. 缺输出：优先小斧头、茉莉、旅人相关追击体系。\n2. 缺辅助：优先王女、盖尔、爱德华等团队增益或续航角色。\n3. 想稳开荒：主C + 辅助 + 生存三角比单抽一个高伤角色更重要。\n\n## 零氪路线\n\n- 第1天：完成主线解锁招募、奥托皮亚和遗忘之旅入口。\n- 第1周：先拿新手40抽保底，再决定是否投入限时UP。\n- 每周：优先完成遗忘之旅打捞，不要错过免费黑券机会。\n- 每次版本更新：检查兑换码、活动任务和邮件补偿。\n\n## 注意事项\n\n公测前瞻中的概率与奖励仍可能在正式服微调。本文用于开荒规划，具体保底、池子继承和免费打捞次数以游戏内说明为准。",
+    "contentEn": "## System Role\n\nMemory Reunion is one of the most important launch systems for new players. It differs from standard recruitment because it focuses on opening choices, weekly Remnant Journey salvage, and long-term free resource planning.\n\n## Known Rules\n\n| Rule | Current Info | Impact |\n|------|---------|---------|\n| Opening pick | Choose 1 Black Ticket crew from 6 | Defines early DPS, support, or survival core |\n| Weekly salvage | Remnant Journey can provide free Black Ticket chances | High weekly value; do not skip |\n| Odds note | Preview mentioned roughly 50% weekly free Black Ticket chance | Good for F2P planning |\n| Beginner pity | 40 pulls guarantee a Black Ticket | Pair with opening pick to avoid role overlap |\n\n## Opening Pick Advice\n\n1. Need damage: prioritize Little Axe, Molly, or follow-up cores.\n2. Need support: prioritize Princess, Gail, Edward, or other team-value crew.\n3. Want stable progression: DPS + support + survival matters more than one high-damage unit.\n\n## F2P Route\n\n- Day 1: unlock recruitment, Orbtopia, and Remnant Journey through story.\n- Week 1: claim beginner 40-pull guarantee before committing to limited UP.\n- Weekly: finish Remnant Journey salvage for free-ticket chances.\n- Every update: check codes, events, and mail compensation.\n\n## Notes\n\nPreview rules may change at launch. Use this guide for planning, then confirm pity, banner carryover, and salvage counts in the live client.",
+    "faq": [
+      {
+        "question": "Is Memory Reunion important for F2P players?",
+        "questionZh": "记忆重逢对零氪玩家重要吗？",
+        "answer": "Yes. Weekly salvage and the opening Black Ticket choice can define long-term account value without spending.",
+        "answerZh": "很重要。每周打捞和开局黑券选择会直接影响零氪账号的长期强度和角色覆盖。"
+      },
+      {
+        "question": "Should I pick DPS or support first?",
+        "questionZh": "开局黑券应该先选输出还是辅助？",
+        "answer": "If you lack a reliable damage dealer, pick DPS first. If beginner pity already gave you a main DPS, choose a support or survival crew.",
+        "answerZh": "缺稳定输出就先选主C；如果新手保底已经出了主C，优先补辅助或生存位。"
+      }
+    ]
+  },
+  {
+    "id": "launch-boss-map-guide",
+    "title": "《遗忘之海》公测海域与BOSS攻略 — 白沙海、渡桥海、隐秘海",
+    "titleEn": "Sea of Remnants Launch Region and Boss Guide — White Sand Sea, Bridge Sea, Hidden Sea",
+    "category": "map",
+    "categoryZh": "地图探索",
+    "categoryEn": "Map",
+    "summary": "整理公测首月海域开放节奏、白沙海与渡桥海探索重点、隐秘海7月底预告，以及猩红女爵、疯老头穆雷、鬼新娘等BOSS档案框架。",
+    "summaryEn": "Covers launch-month region rollout, White Sand Sea and Bridge Sea exploration priorities, late-July Hidden Sea, and early boss dossier templates.",
+    "tags": [
+      "地图",
+      "BOSS",
+      "白沙海",
+      "渡桥海",
+      "隐秘海",
+      "探索"
+    ],
+    "content": "## 海域开放节奏\n\n| 海域 | 开放窗口 | 内容重点 |\n|------|---------|---------|\n| 白沙海 | 公测首批 | 新手航线、材料点、首批霸主挑战 |\n| 渡桥海 | 公测首批 | 中期探索、奇遇事件、进阶敌人 |\n| 隐秘海 | 预计7月底 | 高阶海域、隐藏事件、后续BOSS |\n\n## 首批BOSS档案\n\n| BOSS | 类型 | 当前记录重点 |\n|------|------|-------------|\n| 猩红女爵 | 海上霸主 | 出现海域、阶段转换、船队推荐、掉落物 |\n| 疯老头穆雷 | 精英BOSS | 攻击模式、弱点属性、开荒等级建议 |\n| 猩猩与海盗团 | 团队战 | 多目标处理、控制与AOE队伍 |\n| 鬼新娘 | 机制BOSS | 召唤物、异常状态、净化或治疗需求 |\n\n## 探索优先级\n\n1. 先解锁传送锚点和航行节点，减少重复跑图成本。\n2. 标记奇遇点、材料点、霸主刷新点，后续交互地图会按这些POI维护。\n3. 开荒期优先挑战可稳定掉落养成材料的BOSS，不要越级硬打高难目标。\n4. 进入隐秘海前，优先准备一队单体Boss队和一队AOE清杂队。\n\n## Gachia地图计划\n\n短期以文字版海区档案为主；公测后将根据实测补充坐标、刷新周期、材料路线和BOSS掉落表。",
+    "contentEn": "## Region Rollout\n\n| Region | Window | Focus |\n|------|---------|---------|\n| White Sand Sea | Launch batch | Starter routes, material points, first overlord fights |\n| Bridge Sea | Launch batch | Midgame exploration, encounters, stronger enemies |\n| Hidden Sea | Expected late July | Advanced region, hidden events, later bosses |\n\n## Early Boss Dossiers\n\n| Boss | Type | Tracking Focus |\n|------|------|-------------|\n| Crimson Duchess | Sea overlord | Region, phases, recommended teams, drops |\n| Mad Old Murray | Elite boss | Attack patterns, weaknesses, progression level |\n| Gorilla Pirate Crew | Multi-target fight | AoE, control, target priority |\n| Ghost Bride | Mechanic boss | Summons, status effects, cleanse/heal demand |\n\n## Exploration Priorities\n\n1. Unlock travel nodes first to reduce route time.\n2. Mark encounter points, material points, and overlord spawns for future map POIs.\n3. Farm reliable progression bosses before forcing high-level fights.\n4. Prepare one single-target boss team and one AoE clearing team before Hidden Sea.\n\n## Gachia Map Plan\n\nShort term: text dossiers. After launch: coordinates, refresh cycles, material routes, and drop tables based on live testing.",
+    "faq": [
+      {
+        "question": "Which Sea of Remnants regions are available at launch?",
+        "questionZh": "遗忘之海公测首批开放哪些海域？",
+        "answer": "White Sand Sea and Bridge Sea are the key launch regions, with Hidden Sea expected later in July.",
+        "answerZh": "首批重点是白沙海和渡桥海，隐秘海预计7月底开放。"
+      },
+      {
+        "question": "Which boss should beginners watch first?",
+        "questionZh": "新手最需要关注哪个BOSS？",
+        "answer": "Crimson Duchess is the highest-profile sea overlord from the preview, so Gachia will prioritize her mechanics and drops.",
+        "answerZh": "猩红女爵是前瞻中最高关注度的海上霸主，Gachia会优先补她的机制和掉落。"
+      }
+    ]
+  },
+  {
+    "id": "otopia-endings-trade-guide",
+    "title": "《遗忘之海》奥托皮亚多结局与交易行指南 — 结局树、好金砖与搬砖思路",
+    "titleEn": "Sea of Remnants Orbtopia Endings and Trade Market Guide — Ending Tree, Good Gold Bars, and Trading Route",
+    "category": "system",
+    "categoryZh": "系统",
+    "categoryEn": "System",
+    "summary": "介绍奥托皮亚主城多结局、荒凉结局与地下之王等分支记录方式，以及全服交易行、好金砖、时装和涂装交易的开荒注意点。",
+    "summaryEn": "Introduces Orbtopia ending branches and the server-wide trade market, including Good Gold Bars, cosmetics, ship paints, and early trading notes.",
+    "tags": [
+      "奥托皮亚",
+      "多结局",
+      "交易行",
+      "好金砖",
+      "搬砖",
+      "Orbtopia"
+    ],
+    "content": "## 奥托皮亚为什么重要\n\n奥托皮亚不是单纯的主城菜单，而是公测版叙事与养成的核心节点。前瞻信息提到主城存在多结局，例如荒凉结局、地下之王等分支。不同NPC选择、资源投入和事件顺序可能影响结局走向。\n\n## 结局树记录模板\n\n| 记录项 | 说明 |\n|--------|------|\n| NPC | 触发事件的NPC或阵营 |\n| 条件 | 好感、主线进度、资源消耗、特定选择 |\n| 分支 | 当前选择会导向哪个阶段 |\n| 奖励 | 道具、货币、剧情解锁或城镇功能 |\n| 可逆性 | 是否可以回档、重置或二周目补完 |\n\n## 全服交易行重点\n\n公测前瞻提到全服交易行与好金砖流通。开荒期建议关注三类物品：\n\n1. 外观类：时装、船只涂装，价格波动大，适合记录行情。\n2. 稀有材料：若允许交易，优先观察养成瓶颈材料。\n3. 活动物品：首月活动产物可能具有短期溢价。\n\n## 搬砖注意事项\n\n- 不要把测试期价格当作正式服价格。\n- 公测第一周价格波动极大，记录区间比给出单点价格更可靠。\n- 优先确认交易税、上架限制、绑定规则和跨服范围。\n- 涉及现金交易或第三方平台的行为风险很高，Gachia只记录游戏内规则和公开行情。\n\n## 后续更新\n\n公测后本页会补充奥托皮亚结局流程图、交易税率、热门道具价格区间和每周行情基线。",
+    "contentEn": "## Why Orbtopia Matters\n\nOrbtopia is not just a city menu. It is a core narrative and progression hub. Preview information mentioned multiple endings, such as desolate ending and underground king branches. NPC choices, resources, and event order may influence outcomes.\n\n## Ending Tree Template\n\n| Field | Meaning |\n|--------|------|\n| NPC | NPC or faction triggering the event |\n| Condition | Affinity, story progress, resource cost, specific choice |\n| Branch | Which route the choice advances |\n| Reward | Items, currency, story unlocks, city functions |\n| Reversibility | Whether it can be reset or completed later |\n\n## Trade Market Focus\n\nThe preview mentioned a server-wide market and Good Gold Bars. Watch three item types at launch:\n\n1. Cosmetics: outfits and ship paints, likely volatile.\n2. Rare materials: especially progression bottlenecks if tradable.\n3. Event items: launch-month items may carry short-term premium.\n\n## Trading Notes\n\n- Do not treat test prices as launch prices.\n- In week one, price ranges are more reliable than single values.\n- Confirm trade tax, listing limits, binding rules, and server scope first.\n- Gachia only tracks in-game rules and public market info, not third-party cash trades.\n\n## Future Updates\n\nAfter launch this page will add Orbtopia ending charts, tax rates, popular item price ranges, and weekly market baselines.",
+    "faq": [
+      {
+        "question": "Does Orbtopia have multiple endings?",
+        "questionZh": "奥托皮亚有多结局吗？",
+        "answer": "Preview information suggests multiple branches such as desolate and underground-king outcomes. Exact triggers need launch verification.",
+        "answerZh": "前瞻信息显示存在荒凉、地下之王等分支结局，具体触发条件需要公测后实测确认。"
+      },
+      {
+        "question": "Can I make currency through the trade market?",
+        "questionZh": "可以通过交易行搬砖吗？",
+        "answer": "Potentially, but launch rules, taxes, binding restrictions, and price volatility must be confirmed first.",
+        "answerZh": "有潜力，但必须先确认交易税、绑定规则、上架限制和首周价格波动。"
+      }
+    ]
+  },
+  {
+    "id": "launch-rewards-codes-guide",
+    "title": "《遗忘之海》公测福利与兑换码汇总 — 100抽、新手黑券与ywzh2026",
+    "titleEn": "Sea of Remnants Launch Rewards and Codes — 100 Pulls, Beginner Black Ticket, and ywzh2026",
+    "category": "codes",
+    "categoryZh": "兑换码",
+    "categoryEn": "Codes",
+    "summary": "汇总公测福利、前瞻直播码、新手40抽必得黑券、预约礼包和平台专属码，并说明兑换码巡检与过期处理规则。",
+    "summaryEn": "Tracks launch rewards, preview livestream code, beginner 40-pull Black Ticket guarantee, reservation gifts, platform codes, and expiration checks.",
+    "tags": [
+      "兑换码",
+      "福利",
+      "100抽",
+      "ywzh2026",
+      "Codes",
+      "Rewards"
+    ],
+    "content": "## 当前已记录兑换码\n\n| 兑换码 | 来源 | 状态 | 备注 |\n|--------|------|------|------|\n| `ywzh2026` | 2026年6月26日公测前瞻直播 | 待公测验证 | 建议公测首日优先尝试 |\n\n## 公测福利重点\n\n- 公测福利：前瞻信息提到公测送100抽，具体领取路径以游戏内活动页为准。\n- 新手保底：新手40抽必得黑券船员，适合配合开局6选1规划阵容。\n- 平台礼包：TapTap、B站、微信、官网预约等平台可能存在专属礼包码。\n- 邮件补偿：公测首周如遇排队、维护或热修，通常需要检查系统邮件。\n\n## 每日巡检流程\n\n1. 公测首周每天检查官方公告、微博、公众号、TapTap、B站动态。\n2. 新码记录兑换码、奖励、有效期、适用服务器和来源链接。\n3. 过期码灰显，不删除，保留历史记录方便用户排查。\n4. 奖励未确认时标注以游戏内兑换结果为准，避免误导。\n\n## 兑换建议\n\n公测当天先兑换限时直播码，再领取预约礼包和平台礼包。若提示服务器繁忙，建议截图保留错误提示，稍后重试。",
+    "contentEn": "## Currently Tracked Codes\n\n| Code | Source | Status | Note |\n|--------|------|------|------|\n| `ywzh2026` | June 26, 2026 open beta preview livestream | Awaiting launch verification | Try on launch day first |\n\n## Launch Rewards\n\n- Launch rewards: preview info mentioned 100 pulls; claim path depends on in-game event pages.\n- Beginner guarantee: 40 pulls guarantee a Black Ticket crew, best planned with the opening 6-choice pick.\n- Platform gifts: TapTap, Bilibili, WeChat, and official reservations may have platform codes.\n- Mail compensation: check system mail during launch week for maintenance or hotfix rewards.\n\n## Daily Check Process\n\n1. During launch week, check official notices, Weibo, WeChat, TapTap, and Bilibili daily.\n2. Record code, reward, expiry, server scope, and source.\n3. Grey out expired codes but keep history.\n4. If rewards are unclear, mark them as dependent on in-game redemption results.\n\n## Redemption Advice\n\nOn launch day, redeem limited livestream codes first, then reservation and platform gifts. If servers are busy, keep the error screenshot and retry later.",
+    "faq": [
+      {
+        "question": "What is the latest Sea of Remnants code?",
+        "questionZh": "遗忘之海目前记录的兑换码是什么？",
+        "answer": "Gachia currently tracks ywzh2026 from the June 26, 2026 preview livestream. It should be verified again on launch day.",
+        "answerZh": "当前记录的是2026年6月26日前瞻直播码 ywzh2026，公测当天需要再次验证。"
+      },
+      {
+        "question": "Does Sea of Remnants give 100 pulls at launch?",
+        "questionZh": "遗忘之海公测送100抽吗？",
+        "answer": "Preview information mentioned 100 launch pulls, but the exact claim route and timing should be checked in the live event page.",
+        "answerZh": "前瞻信息提到公测100抽，但具体领取路径和时间以正式服活动页为准。"
+      }
+    ]
   }
 ]
