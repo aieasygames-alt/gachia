@@ -15,13 +15,21 @@ export async function generateMetadata({
   const gameId = game as GameId;
   const gameConfig = GAMES[gameId];
   const gameName = locale === 'zh' ? gameConfig.name.zh : locale === 'ja' ? (gameConfig.name.ja ?? gameConfig.name.en) : gameConfig.name.en;
-  const title = locale === 'zh' ? `${gameName} 配队模拟器` : locale === 'ja' ? `${gameName} パーティ編成` : `${gameName} Team Builder`;
+  const title = gameId === 'skjh'
+    ? locale === 'zh' ? `${gameName} 小队分工模拟器` : locale === 'ja' ? `${gameName} チーム役割シミュレーター` : `${gameName} Squad Role Simulator`
+    : locale === 'zh' ? `${gameName} 配队模拟器` : locale === 'ja' ? `${gameName} パーティ編成` : `${gameName} Team Builder`;
   if (gameId === 'ananta' || gameId === 'sea') {
     return { title, robots: { index: false, follow: false } };
   }
   return {
     title,
-    description: locale === 'zh' ? `${gameName} 角色配队模拟器，查看最佳阵容搭配` : locale === 'ja' ? `${gameName} パーティ編成シミュレーター、おすすめ編成` : `${gameName} team builder - best team compositions and synergies`,
+    description: gameId === 'skjh'
+      ? locale === 'zh'
+        ? `${gameName}小队分工模拟器，按独狼、双人队、三人队、四人以上队伍规划建筑位、资源位、侦查位、战斗位和后勤位。`
+        : locale === 'ja'
+          ? `${gameName}チーム役割シミュレーター。ソロ、デュオ、トリオ、4人以上の役割分担を計画。`
+          : `${gameName} squad role simulator for solo, duo, trio, and 4+ player groups across builder, runner, scout, fighter, and logistics roles.`
+      : locale === 'zh' ? `${gameName} 角色配队模拟器，查看最佳阵容搭配` : locale === 'ja' ? `${gameName} パーティ編成シミュレーター、おすすめ編成` : `${gameName} team builder - best team compositions and synergies`,
     alternates: {
       canonical: `https://gachia.com/${locale}/${gameId}/teams`,
       languages: { 'zh-Hans': `https://gachia.com/zh/${gameId}/teams`, en: `https://gachia.com/en/${gameId}/teams`, ja: `https://gachia.com/ja/${gameId}/teams`, 'x-default': `https://gachia.com/zh/${gameId}/teams` },

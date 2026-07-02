@@ -77,7 +77,7 @@ const REAL_CONTENT_ROUTES: Record<string, string[]> = {
   ananta: ['characters', 'weapons', 'items', 'tier-list', 'guides'],
   endfield: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'compare', 'teams', 'map'],
   sea: ['characters', 'guides', 'items', 'tier-list', 'redeem-codes'],
-  skjh: ['weapons', 'guides', 'items', 'redeem-codes'],
+  skjh: ['weapons', 'guides', 'items', 'redeem-codes', 'calculator', 'teams', 'map'],
 };
 
 // Revalidate every 24 hours

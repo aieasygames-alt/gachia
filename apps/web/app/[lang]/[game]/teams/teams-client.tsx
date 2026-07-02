@@ -139,6 +139,7 @@ function getResonances(team: (GenshinCharacter | null)[]) {
 // =====================================================================
 
 export function TeamsClient({ gameId, locale }: { gameId: GameId; locale: SupportedLocale }) {
+  if (gameId === 'skjh') return <SkjhSquadSimulator locale={locale} />;
   if (gameId === 'genshin') return <GenshinTeams locale={locale} />;
   if (gameId === 'starrail') return <StarRailTeams locale={locale} />;
   if (gameId === 'wuwa') return <WuWaTeams locale={locale} />;
@@ -147,6 +148,117 @@ export function TeamsClient({ gameId, locale }: { gameId: GameId; locale: Suppor
   if (gameId === 'guihuan') return <GuihuanTeams locale={locale} />;
   if (gameId === 'endfield') return <EndfieldTeams locale={locale} />;
   return <ComingSoon locale={locale} />;
+}
+
+// =====================================================================
+// Ashfall Evolution Squad Role Simulator
+// =====================================================================
+
+type SquadSize = 'solo' | 'duo' | 'trio' | 'squad';
+
+const SKJH_ROLES: Record<SquadSize, Array<{ role: string; roleEn: string; focus: string; focusEn: string; firstDay: string; firstDayEn: string }>> = {
+  solo: [
+    { role: '独狼全能位', roleEn: 'Solo Generalist', focus: '低曝光建家、短路线、分仓储物、保命撤离', focusEn: 'Low-profile base, short routes, split storage, escape planning', firstDay: '睡袋、领地柜、石质核心、猎弓和一条稳定废料路线', firstDayEn: 'Sleeping bag, territory cabinet, stone core, bow, and one scrap loop' },
+  ],
+  duo: [
+    { role: '建筑/后勤位', roleEn: 'Builder / Logistics', focus: '房型、维护、储物、水源、补给', focusEn: 'Base layout, upkeep, storage, water, supplies', firstDay: '石质核心区、双门缓冲、维护资源和小仓库', firstDayEn: 'Stone core, airlocks, upkeep materials, and storage' },
+    { role: '资源/战斗位', roleEn: 'Runner / Fighter', focus: '废料路线、护送、侦查、基础枪械', focusEn: 'Scrap loop, escorting, scouting, basic weapons', firstDay: '低级据点循环、猎弓或冲锋枪路线、周边敌情记录', firstDayEn: 'Low-tier POI loop, bow or SMG path, nearby enemy notes' },
+  ],
+  trio: [
+    { role: '建筑位', roleEn: 'Builder', focus: '房型、防御、维护、反抄家通道', focusEn: 'Layout, defense, upkeep, anti-raid paths', firstDay: '完成石质核心和第二层门', firstDayEn: 'Finish stone core and second door layer' },
+    { role: '资源位', roleEn: 'Resource Runner', focus: '木石矿、废料、食物水源、熔炼', focusEn: 'Wood, stone, scrap, food, water, smelting', firstDay: '建立两条资源路线并分批回家', firstDayEn: 'Set up two routes and bank loot often' },
+    { role: '战斗/侦查位', roleEn: 'Fighter / Scout', focus: '护送、报点、据点入口观察、守家', focusEn: 'Escorts, callouts, POI watch, base defense', firstDay: '记录邻居、撤离路线和高危门口', firstDayEn: 'Track neighbors, exits, and high-risk entrances' },
+  ],
+  squad: [
+    { role: '建筑指挥', roleEn: 'Build Lead', focus: '主基地、外墙、诱导通道、电力规划', focusEn: 'Main base, outer walls, funnels, electricity', firstDay: '确定主基地和备用点', firstDayEn: 'Choose main base and fallback spot' },
+    { role: '资源队', roleEn: 'Resource Team', focus: '分组跑木石矿、废料和组件', focusEn: 'Wood, stone, scrap, components in pairs', firstDay: '建立安全回收节奏', firstDayEn: 'Create safe banking rhythm' },
+    { role: '战斗队', roleEn: 'Combat Team', focus: '护送、抢点、守家、反打', focusEn: 'Escort, contest, defend, counter-push', firstDay: '保护资源队和关键门口', firstDayEn: 'Protect runners and key doors' },
+    { role: '侦查/外交', roleEn: 'Scout / Diplomacy', focus: '邻居识别、路线预警、临时联盟、冲突规避', focusEn: 'Neighbor tracking, route warnings, temporary alliances, conflict avoidance', firstDay: '绘制周边势力和撤离路线', firstDayEn: 'Map nearby groups and escape routes' },
+  ],
+};
+
+function SkjhSquadSimulator({ locale }: { locale: SupportedLocale }) {
+  const [size, setSize] = useState<SquadSize>('trio');
+  const [goal, setGoal] = useState<'safe' | 'standard' | 'challenge'>('standard');
+  const roles = SKJH_ROLES[size];
+  const gameConfig = GAMES.skjh;
+  const riskText = {
+    safe: t(locale, '安全区优先学习系统，资源收益较稳，战斗位可减少，后勤和路线记忆更重要。', 'Safe-zone play prioritizes learning systems and stable income. Reduce combat pressure and focus on logistics and routes.', '安全区ではシステム理解と安定収入を優先します。'),
+    standard: t(locale, '标准模式需要兼顾发育与守家，建议至少保留一名能随时回防的成员。', 'Standard mode balances growth and defense. Keep at least one player ready to return and defend.', '標準モードでは成長と守家の両立が重要です。'),
+    challenge: t(locale, '挑战模式容错低，必须固定报点词、撤离路线和资源回存节奏。', 'Challenge mode has low tolerance. Standardize callouts, exits, and banking rhythm.', '挑戦モードはミスの許容度が低く、報告と撤退ルートが重要です。'),
+  }[goal];
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {t(locale, '小队分工模拟器', 'Squad Role Simulator', 'チーム役割シミュレーター')}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {t(locale, '按人数和服务器目标分配建筑位、资源位、侦查位、战斗位和后勤位。', 'Assign builder, runner, scout, fighter, and logistics roles by squad size and server goal.', '人数と目標に応じて役割を割り当てます。')}
+      </p>
+
+      <div className="mb-6 grid gap-3 md:grid-cols-2">
+        <div className="rounded-lg border border-game-border bg-game-surface p-3">
+          <div className="mb-2 text-xs font-medium text-game-text-muted">{t(locale, '队伍人数', 'Squad Size', '人数')}</div>
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+            {([
+              ['solo', t(locale, '独狼', 'Solo', 'ソロ')],
+              ['duo', t(locale, '双人队', 'Duo', 'デュオ')],
+              ['trio', t(locale, '三人队', 'Trio', 'トリオ')],
+              ['squad', t(locale, '四人以上', '4+', '4人以上')],
+            ] as Array<[SquadSize, string]>).map(([id, label]) => (
+              <button
+                key={id}
+                onClick={() => setSize(id)}
+                className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${size === id ? 'bg-game-primary text-white' : 'bg-game-surface-alt text-game-text-muted hover:text-game-text'}`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="rounded-lg border border-game-border bg-game-surface p-3">
+          <div className="mb-2 text-xs font-medium text-game-text-muted">{t(locale, '服务器目标', 'Server Goal', 'サーバー目標')}</div>
+          <div className="grid grid-cols-3 gap-2">
+            {([
+              ['safe', t(locale, '安全区', 'Safe', '安全区')],
+              ['standard', t(locale, '标准', 'Standard', '標準')],
+              ['challenge', t(locale, '挑战', 'Challenge', '挑戦')],
+            ] as Array<['safe' | 'standard' | 'challenge', string]>).map(([id, label]) => (
+              <button
+                key={id}
+                onClick={() => setGoal(id)}
+                className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${goal === id ? 'bg-game-primary text-white' : 'bg-game-surface-alt text-game-text-muted hover:text-game-text'}`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="mb-6 rounded-lg border border-game-border bg-game-surface p-4">
+        <h2 className="mb-2 text-base font-semibold text-game-text">{t(locale, '策略提示', 'Strategy Note', '戦略メモ')}</h2>
+        <p className="text-sm leading-relaxed text-game-text-muted">{riskText}</p>
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-2">
+        {roles.map((role) => (
+          <div key={role.role} className="rounded-lg border border-game-border bg-game-surface p-4">
+            <h3 className="mb-2 text-lg font-semibold text-game-primary">{locale === 'zh' ? role.role : role.roleEn}</h3>
+            <div className="mb-3 rounded bg-game-surface-alt p-3">
+              <div className="mb-1 text-xs text-game-text-muted">{t(locale, '职责重点', 'Focus', '重点')}</div>
+              <p className="text-sm text-game-text">{locale === 'zh' ? role.focus : role.focusEn}</p>
+            </div>
+            <div className="rounded bg-game-surface-alt p-3">
+              <div className="mb-1 text-xs text-game-text-muted">{t(locale, '首日目标', 'Day-One Goal', '初日目標')}</div>
+              <p className="text-sm text-game-text">{locale === 'zh' ? role.firstDay : role.firstDayEn}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 // =====================================================================

@@ -48,16 +48,28 @@ export async function generateMetadata({
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
   const gameConfig = GAMES[gameId];
-  if (!gameConfig || (gameId !== 'genshin' && gameId !== 'starrail' && gameId !== 'wuwa' && gameId !== 'nte' && gameId !== 'endfield')) {
+  if (!gameConfig || (gameId !== 'genshin' && gameId !== 'starrail' && gameId !== 'wuwa' && gameId !== 'nte' && gameId !== 'endfield' && gameId !== 'skjh')) {
     return { title: 'Map', robots: { index: false, follow: false } };
   }
   const gameName = gameConfig.name[locale];
-  const title = locale === 'zh'
+  const title = gameId === 'skjh'
+    ? locale === 'zh'
+      ? `${gameName}荒岛路线地图 — 据点、采集线、基地选址`
+      : locale === 'ja'
+        ? `${gameName}島ルートマップ — 拠点、採集、基地候補`
+        : `${gameName} Island Route Map — POIs, Farming Routes & Base Spots`
+    : locale === 'zh'
     ? `${gameName}互动地图 — 传送锚点、宝箱、收集品`
     : locale === 'ja'
       ? `${gameName}マップ — テレポート、宝箱、コレクション`
       : `${gameName} Interactive Map — Teleports, Chests & Collectibles`;
-  const desc = locale === 'zh'
+  const desc = gameId === 'skjh'
+    ? locale === 'zh'
+      ? `${gameName}荒岛路线地图预留：4×4km荒岛、一级据点、废弃超市、加油站、高价值据点、安全区/危险区、新手采集线和基地选址建议。`
+      : locale === 'ja'
+        ? `${gameName}島ルートマップ：4x4km島、低級拠点、廃スーパー、ガソリンスタンド、高価値拠点、安全区/危険区、採集ルート。`
+        : `${gameName} island route map placeholder: 4x4km island, tier-one POIs, abandoned supermarket, gas station, high-value zones, safe and danger routes, and base-spot planning.`
+    : locale === 'zh'
     ? `${gameName}互动地图攻略：传送锚点位置、宝箱分布、材料采集点、世界任务标记。`
     : locale === 'ja'
       ? `${gameName}マップ攻略：テレポート位置、宝箱分布、素材採集ポイント。`
@@ -116,6 +128,10 @@ export default async function MapPage({
     return <EndfieldMapPage locale={locale} />;
   }
 
+  if (gameId === 'skjh') {
+    return <SkjhMapPage locale={locale} />;
+  }
+
   // Unsupported games: Coming Soon
   return (
     <div>
@@ -126,6 +142,139 @@ export default async function MapPage({
         <div className="flex h-48 items-center justify-center rounded-lg border border-dashed border-game-border text-sm text-game-text-muted">
           {locale === 'zh' ? '敬请期待' : 'Coming Soon'}
         </div>
+      </div>
+    </div>
+  );
+}
+
+// --- Ashfall Evolution Map Placeholder ---
+
+const SKJH_MAP_STATS = [
+  ['4×4km', '荒岛范围', 'Island Size', '島サイズ'],
+  ['5', '路线类型', 'Route Types', 'ルート種類'],
+  ['安全/危险', '区域风险', 'Zone Risk', '危険度'],
+  ['预留', '交互地图', 'Interactive Map', 'インタラクティブ地図'],
+] as const;
+
+const SKJH_ROUTE_CARDS = [
+  {
+    title: '新手安全采集线',
+    titleEn: 'Beginner Safe Farming Route',
+    titleJa: '初心者安全採集ルート',
+    risk: '低',
+    riskEn: 'Low',
+    focus: '安全区边缘、木石矿、食物水源、短回家路线',
+    focusEn: 'Safe-zone edge, wood and stone, food and water, short bank route',
+    suitable: '刚登岛、独狼、双人队首日',
+    suitableEn: 'First landing, solo, duo day one',
+  },
+  {
+    title: '一级据点路线',
+    titleEn: 'Tier-One POI Route',
+    titleJa: '低級拠点ルート',
+    risk: '中',
+    riskEn: 'Medium',
+    focus: '一级据点、废弃超市、加油站、基础组件和废料',
+    focusEn: 'Tier-one POIs, abandoned supermarket, gas station, basic components and scrap',
+    suitable: '完成睡袋、领地柜和石质核心后',
+    suitableEn: 'After sleeping bag, territory cabinet, and stone core',
+  },
+  {
+    title: '高风险资源区',
+    titleEn: 'High-Risk Resource Zone',
+    titleJa: '高リスク資源区',
+    risk: '高',
+    riskEn: 'High',
+    focus: '高价值据点、稀有组件、枪械路线、撤离点观察',
+    focusEn: 'High-value POIs, rare components, firearm path, exit scouting',
+    suitable: '有护送、可语音报点、能快速回防的小队',
+    suitableEn: 'Escorted squads with callouts and fast fallback',
+  },
+  {
+    title: '基地选址推荐区',
+    titleEn: 'Base Location Planning',
+    titleJa: '基地候補エリア',
+    risk: '可控',
+    riskEn: 'Managed',
+    focus: '靠近资源但不贴据点、双撤离线、低曝光外观、可扩建地形',
+    focusEn: 'Near resources but away from POIs, two exits, low profile, expandable terrain',
+    suitable: '准备跨赛季复用房型和电力自动化的队伍',
+    suitableEn: 'Teams planning reusable layouts and automation',
+  },
+] as const;
+
+const SKJH_POIS = [
+  ['一级据点', 'Tier-One POIs', '低級拠点'],
+  ['废弃超市', 'Abandoned Supermarket', '廃スーパー'],
+  ['加油站', 'Gas Station', 'ガソリンスタンド'],
+  ['高价值据点', 'High-Value POIs', '高価値拠点'],
+  ['安全区/危险区', 'Safe / Danger Zones', '安全区/危険区'],
+] as const;
+
+function SkjhMapPage({ locale }: { locale: SupportedLocale }) {
+  const gameConfig = GAMES.skjh;
+  const pick = (zh: string, en: string, ja?: string) => locale === 'zh' ? zh : locale === 'ja' ? (ja ?? en) : en;
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {pick('荒岛路线地图预留', 'Island Route Map', '島ルートマップ')}
+      </h1>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {pick(
+          '基于 4×4km 荒岛、一级据点、废弃超市、加油站、高价值据点、安全区/危险区做路线规划。当前先提供路线和选址框架，等官方地图素材稳定后再升级为完整交互地图。',
+          'Route planning for the 4x4km island, tier-one POIs, abandoned supermarket, gas station, high-value POIs, safe zones, and danger zones. This page starts as a planning hub and can become a full interactive map once reliable map assets are available.',
+          '4x4km島、低級拠点、廃スーパー、ガソリンスタンド、高価値拠点、安全区/危険区のルート計画です。地図素材が安定したら完全なインタラクティブ版へ拡張します。'
+        )}
+      </p>
+
+      <div className="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+        {SKJH_MAP_STATS.map(([value, zh, en, ja]) => (
+          <div key={zh} className="rounded-lg border border-game-border bg-game-surface p-3 text-center">
+            <div className="text-lg font-bold text-game-primary">{value}</div>
+            <div className="text-xs text-game-text-muted">{pick(zh, en, ja)}</div>
+          </div>
+        ))}
+      </div>
+
+      <section className="mb-6 rounded-lg border border-game-border bg-game-surface p-4">
+        <h2 className="mb-3 text-lg font-semibold text-game-text">
+          {pick('据点与区域入口', 'POI & Zone Entries', '拠点と区域')}
+        </h2>
+        <div className="flex flex-wrap gap-2">
+          {SKJH_POIS.map(([zh, en, ja]) => (
+            <span key={zh} className="rounded bg-game-surface-alt px-3 py-1.5 text-sm text-game-text">
+              {pick(zh, en, ja)}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      <div className="grid gap-4 md:grid-cols-2">
+        {SKJH_ROUTE_CARDS.map((route) => (
+          <article key={route.title} className="rounded-lg border border-game-border bg-game-surface p-4">
+            <div className="mb-3 flex items-start justify-between gap-3">
+              <h2 className="text-lg font-semibold text-game-text">
+                {pick(route.title, route.titleEn, route.titleJa)}
+              </h2>
+              <span className="shrink-0 rounded bg-game-surface-alt px-2 py-1 text-xs font-medium text-game-primary">
+                {pick(`风险：${route.risk}`, `Risk: ${route.riskEn}`, `危険度：${route.risk}`)}
+              </span>
+            </div>
+            <div className="mb-3 rounded bg-game-surface-alt p-3">
+              <div className="mb-1 text-xs text-game-text-muted">{pick('路线重点', 'Route Focus', 'ルート重点')}</div>
+              <p className="text-sm leading-relaxed text-game-text">
+                {pick(route.focus, route.focusEn)}
+              </p>
+            </div>
+            <div className="rounded bg-game-surface-alt p-3">
+              <div className="mb-1 text-xs text-game-text-muted">{pick('适合人群', 'Best For', 'おすすめ')}</div>
+              <p className="text-sm leading-relaxed text-game-text">
+                {pick(route.suitable, route.suitableEn)}
+              </p>
+            </div>
+          </article>
+        ))}
       </div>
     </div>
   );

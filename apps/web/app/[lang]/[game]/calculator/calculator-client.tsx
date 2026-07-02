@@ -139,10 +139,160 @@ type Tab = 'ascension' | 'damage' | 'planner';
 // =====================================================================
 
 export function CalculatorClient({ gameId, locale }: { gameId: GameId; locale: SupportedLocale }) {
+  if (gameId === 'skjh') return <SkjhResourceCalculator locale={locale} />;
   if (gameId === 'wuwa') return <WuWaCalculator locale={locale} />;
   if (gameId === 'starrail') return <StarRailCalculator locale={locale} />;
   if (gameId !== 'genshin') return <ComingSoon locale={locale} />;
   return <GenshinCalculator locale={locale} />;
+}
+
+// =====================================================================
+// Ashfall Evolution Resource Calculator
+// =====================================================================
+
+function SkjhResourceCalculator({ locale }: { locale: SupportedLocale }) {
+  const [stoneWalls, setStoneWalls] = useState(12);
+  const [metalDoors, setMetalDoors] = useState(3);
+  const [stoneFoundations, setStoneFoundations] = useState(6);
+  const [hours, setHours] = useState(24);
+  const [raidStoneWalls, setRaidStoneWalls] = useState(2);
+  const [raidMetalDoors, setRaidMetalDoors] = useState(1);
+  const [ore, setOre] = useState(1000);
+  const [furnaces, setFurnaces] = useState(2);
+
+  const upkeep = useMemo(() => {
+    const stone = Math.ceil((stoneWalls * 30 + stoneFoundations * 45) * (hours / 24));
+    const metal = Math.ceil(metalDoors * 35 * (hours / 24));
+    const wood = Math.ceil((stoneWalls + stoneFoundations + metalDoors) * 8 * (hours / 24));
+    return { stone, metal, wood };
+  }, [stoneWalls, metalDoors, stoneFoundations, hours]);
+
+  const buildCost = useMemo(() => ({
+    stone: stoneWalls * 300 + stoneFoundations * 450,
+    metal: metalDoors * 200,
+    wood: metalDoors * 80,
+  }), [stoneWalls, stoneFoundations, metalDoors]);
+
+  const raidCost = useMemo(() => {
+    const explosiveAmmo = raidStoneWalls * 160 + raidMetalDoors * 80;
+    const rockets = Math.ceil(raidStoneWalls * 2 + raidMetalDoors * 1.5);
+    const sulfur = explosiveAmmo * 25 + rockets * 1400;
+    return { explosiveAmmo, rockets, sulfur };
+  }, [raidStoneWalls, raidMetalDoors]);
+
+  const smelt = useMemo(() => {
+    const throughput = Math.max(1, furnaces) * 600;
+    const hoursNeeded = ore / throughput;
+    return {
+      metalFragments: Math.floor(ore * 0.65),
+      charcoal: Math.floor(ore * 0.2),
+      hoursNeeded,
+    };
+  }, [ore, furnaces]);
+
+  const numberInput = (label: string, value: number, onChange: (value: number) => void, min = 0) => (
+    <label className="block">
+      <span className="mb-1 block text-xs font-medium text-game-text-muted">{label}</span>
+      <input
+        type="number"
+        min={min}
+        value={value}
+        onChange={(e) => onChange(Math.max(min, Number(e.target.value) || 0))}
+        className="w-full rounded-lg border border-game-border bg-game-surface-alt px-3 py-2 text-sm text-game-text outline-none transition-colors focus:border-game-primary"
+      />
+    </label>
+  );
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.skjh.theme.primary }}>
+        {t(locale, '资源计算器', 'Resource Calculator', '資源計算機')}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {t(locale, '估算领地柜维护、建筑升级、抄家爆破和自动化烧矿收益。数值用于开荒规划，后续可随实测数据微调。', 'Estimate territory upkeep, build costs, raid costs, and automated smelting returns. Values are planning references and can be tuned after live testing.', '領地維持、建築コスト、レイドコスト、自動精錬の目安を計算します。')}
+      </p>
+
+      <div className="grid gap-4 lg:grid-cols-2">
+        <section className="rounded-lg border border-game-border bg-game-surface p-4">
+          <h2 className="mb-3 text-lg font-semibold text-game-text">{t(locale, '领地柜维护估算', 'Territory Upkeep', '領地維持')}</h2>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {numberInput(t(locale, '石墙数量', 'Stone Walls', '石壁数'), stoneWalls, setStoneWalls)}
+            {numberInput(t(locale, '石地基数量', 'Stone Foundations', '石土台数'), stoneFoundations, setStoneFoundations)}
+            {numberInput(t(locale, '金属门数量', 'Metal Doors', '金属扉数'), metalDoors, setMetalDoors)}
+            {numberInput(t(locale, '维护小时数', 'Upkeep Hours', '維持時間'), hours, setHours, 1)}
+          </div>
+          <ResultGrid
+            items={[
+              [t(locale, '石头', 'Stone', '石'), upkeep.stone],
+              [t(locale, '金属碎片', 'Metal Fragments', '金属片'), upkeep.metal],
+              [t(locale, '木材', 'Wood', '木材'), upkeep.wood],
+            ]}
+          />
+        </section>
+
+        <section className="rounded-lg border border-game-border bg-game-surface p-4">
+          <h2 className="mb-3 text-lg font-semibold text-game-text">{t(locale, '建筑升级成本', 'Build Upgrade Cost', '建築強化コスト')}</h2>
+          <div className="grid gap-3 sm:grid-cols-3">
+            <SummaryCard label={t(locale, '石质结构', 'Stone Structures', '石構造')} value={buildCost.stone} />
+            <SummaryCard label={t(locale, '金属碎片', 'Metal Fragments', '金属片')} value={buildCost.metal} />
+            <SummaryCard label={t(locale, '木材', 'Wood', '木材')} value={buildCost.wood} />
+          </div>
+          <p className="mt-3 text-xs text-game-text-muted">
+            {t(locale, '按当前墙体、地基和门数量估算，用于开服第一天规划石质核心区和金属门。', 'Estimated from the current walls, foundations, and doors for day-one stone core and metal door planning.', '現在の壁、土台、扉数から初日の石造コアと金属扉を見積もります。')}
+          </p>
+        </section>
+
+        <section className="rounded-lg border border-game-border bg-game-surface p-4">
+          <h2 className="mb-3 text-lg font-semibold text-game-text">{t(locale, '抄家爆破成本', 'Raid Cost', 'レイドコスト')}</h2>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {numberInput(t(locale, '目标石墙', 'Target Stone Walls', '対象石壁'), raidStoneWalls, setRaidStoneWalls)}
+            {numberInput(t(locale, '目标金属门', 'Target Metal Doors', '対象金属扉'), raidMetalDoors, setRaidMetalDoors)}
+          </div>
+          <ResultGrid
+            items={[
+              [t(locale, '爆炸弹药', 'Explosive Ammo', '爆発弾薬'), raidCost.explosiveAmmo],
+              [t(locale, '火箭弹', 'Rockets', 'ロケット'), raidCost.rockets],
+              [t(locale, '硫磺预算', 'Sulfur Budget', '硫黄目安'), raidCost.sulfur],
+            ]}
+          />
+        </section>
+
+        <section className="rounded-lg border border-game-border bg-game-surface p-4">
+          <h2 className="mb-3 text-lg font-semibold text-game-text">{t(locale, '自动化烧矿收益', 'Automated Smelting', '自動精錬')}</h2>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {numberInput(t(locale, '矿石数量', 'Ore', '鉱石'), ore, setOre)}
+            {numberInput(t(locale, '熔炉数量', 'Furnaces', '炉数'), furnaces, setFurnaces, 1)}
+          </div>
+          <ResultGrid
+            items={[
+              [t(locale, '金属碎片产出', 'Metal Output', '金属片出力'), smelt.metalFragments],
+              [t(locale, '木炭副产物', 'Charcoal', '木炭'), smelt.charcoal],
+              [t(locale, '预计小时', 'Hours Needed', '必要時間'), smelt.hoursNeeded.toFixed(1)],
+            ]}
+          />
+        </section>
+      </div>
+    </div>
+  );
+}
+
+function ResultGrid({ items }: { items: Array<[string, string | number]> }) {
+  return (
+    <div className="mt-4 grid gap-2 sm:grid-cols-3">
+      {items.map(([label, value]) => (
+        <SummaryCard key={label} label={label} value={value} />
+      ))}
+    </div>
+  );
+}
+
+function SummaryCard({ label, value }: { label: string; value: string | number }) {
+  return (
+    <div className="rounded-lg border border-game-border bg-game-surface-alt p-3">
+      <div className="text-xs text-game-text-muted">{label}</div>
+      <div className="mt-1 text-lg font-bold text-game-primary">{value}</div>
+    </div>
+  );
 }
 
 // =====================================================================
