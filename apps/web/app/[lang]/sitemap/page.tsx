@@ -39,6 +39,7 @@ export default async function SitemapPage({
     { id: 'zzz', name: { zh: '绝区零', en: 'Zenless Zone Zero', ja: 'ゼンレスゾーンゼロ' } },
     { id: 'guihuan', name: { zh: '归环', en: 'Guihuan', ja: '帰環' } },
     { id: 'sea', name: { zh: '遗忘之海', en: 'Sea of Remnants', ja: 'シー・オブ・レムナンツ' } },
+    { id: 'skjh', name: { zh: '失控进化', en: 'Ashfall Evolution', ja: '失控進化' } },
   ];
 
   const categories: { key: string; label: Record<string, string> }[] = [

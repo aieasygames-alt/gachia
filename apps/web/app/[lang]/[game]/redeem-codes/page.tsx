@@ -6,6 +6,7 @@ import { getActiveRedeemCodes as getWuWaActiveRedeemCodes, getRedeemCodeReward a
 import { getActiveRedeemCodes as getZzzActiveRedeemCodes, getRedeemCodeReward as getZzzRedeemCodeReward } from '@gachia/data/games/zzz/redeem-codes';
 import { getActiveRedeemCodes as getNteActiveRedeemCodes, getRedeemCodeReward as getNteRedeemCodeReward } from '@gachia/data/games/nte/redeem-codes';
 import { getActiveRedeemCodes as getSeaActiveRedeemCodes, getRedeemCodeReward as getSeaRedeemCodeReward } from '@gachia/data/games/sea/redeem-codes';
+import { getActiveRedeemCodes as getSkjhActiveRedeemCodes, getRedeemCodeReward as getSkjhRedeemCodeReward } from '@gachia/data/games/skjh/redeem-codes';
 
 interface CodeItem {
   code: string;
@@ -18,7 +19,7 @@ interface CodeItem {
   revealedAt: string;
 }
 
-const GAMES_WITH_CODES: GameId[] = ['genshin', 'starrail', 'wuwa', 'zzz', 'nte', 'sea'];
+const GAMES_WITH_CODES: GameId[] = ['genshin', 'starrail', 'wuwa', 'zzz', 'nte', 'sea', 'skjh'];
 
 function getCodesForGame(gameId: GameId): CodeItem[] {
   switch (gameId) {
@@ -28,6 +29,7 @@ function getCodesForGame(gameId: GameId): CodeItem[] {
     case 'zzz': return getZzzActiveRedeemCodes() as unknown as CodeItem[];
     case 'nte': return getNteActiveRedeemCodes() as unknown as CodeItem[];
     case 'sea': return getSeaActiveRedeemCodes() as unknown as CodeItem[];
+    case 'skjh': return getSkjhActiveRedeemCodes() as unknown as CodeItem[];
     default: return [];
   }
 }
@@ -40,6 +42,7 @@ function getRewardText(gameId: GameId, code: CodeItem, locale: SupportedLocale):
     case 'zzz': return getZzzRedeemCodeReward(code as never, locale);
     case 'nte': return getNteRedeemCodeReward(code as never, locale);
     case 'sea': return getSeaRedeemCodeReward(code as never, locale);
+    case 'skjh': return getSkjhRedeemCodeReward(code as never, locale);
     default: return code.rewardEn;
   }
 }
@@ -120,6 +123,11 @@ export default async function RedeemCodesPage({
       en: 'After Sea of Remnants launches, redeem codes will be distributed via official livestreams, social accounts, and events. Redeem at the official page or in-game Settings → Redeem Code. Bookmark this page — codes will be updated on launch day.',
       ja: '『シー・オブ・レムナンツ』リリース後、交換コードは公式生放送・SNS・イベントで配布されます。公式交換ページまたはゲーム内の設定→交換コードから入力。リリース当日に更新しますのでブックマークしてください。',
     },
+    skjh: {
+      zh: '《失控进化》公测兑换码暂未公开。上线前后请关注官网、WeGame、B站、微信公众号、TapTap 与本页更新；已确认的预约和绑定奖励会通过游戏邮箱或活动规则发放。',
+      en: 'Ashfall Evolution launch redeem codes are not public yet. Watch the official site, WeGame, Bilibili, WeChat, TapTap, and this page. Confirmed reservation and binding rewards should follow official event rules.',
+      ja: '『失控進化』のリリース交換コードはまだ公開されていません。公式サイト、WeGame、Bilibili、WeChat、TapTap、本ページを確認してください。',
+    },
   };
 
   return (
@@ -161,6 +169,26 @@ export default async function RedeemCodesPage({
               ? 'このページをブックマークしてください。リリース当日（通常 10:00 開服後 1 時間以内）に全コードを即時更新します。'
               : 'Bookmark this page — on launch day (usually within 1 hour of 10:00 server opening), we will update all public codes immediately.'}
           </p>
+        </div>
+      )}
+
+      {codes.length === 0 && gameId === 'skjh' && (
+        <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">
+          <h2 className="mb-3 text-lg font-semibold text-game-text">
+            {locale === 'zh' ? '公测兑换码暂未公开' : locale === 'ja' ? '交換コードは未公開' : 'Launch codes are not public yet'}
+          </h2>
+          <p className="mb-3 text-sm text-game-text-muted">
+            {locale === 'zh'
+              ? '官网目前公开的是预约、绑定、里程碑和抽奖奖励。若后续开放兑换码，通常会来自官网公告、官方直播、社交平台或媒体合作活动。'
+              : locale === 'ja'
+              ? '現在公式で公開されているのは事前登録、連携、マイルストーン、抽選報酬です。交換コードは公式告知や配信、SNS、メディア連携で公開される可能性があります。'
+              : 'The official site currently lists reservation, binding, milestone, and lottery rewards. If redeem codes are released later, they will likely come from official announcements, livestreams, social channels, or media campaigns.'}
+          </p>
+          <ul className="space-y-1 text-sm text-game-text-muted">
+            <li>{locale === 'zh' ? '• 个人预约奖励：登岛行动·M39步枪外观、渗透者·头像、贡献点×388' : locale === 'ja' ? '• 個人予約報酬：M39外観、アバター、貢献ポイント×388' : '• Personal reservation: M39 rifle skin, avatar, Contribution Points x388'}</li>
+            <li>{locale === 'zh' ? '• 绑定奖励：贡献点×188' : locale === 'ja' ? '• 連携報酬：貢献ポイント×188' : '• Binding reward: Contribution Points x188'}</li>
+            <li>{locale === 'zh' ? '• 4000万预约里程碑：登岛行动·步枪外观等全档奖励' : locale === 'ja' ? '• 40M milestone: rifle skin and all prior tiers' : '• 40M milestone: rifle skin and all previous tiers'}</li>
+          </ul>
         </div>
       )}
 

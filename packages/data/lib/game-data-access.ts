@@ -59,6 +59,12 @@ import {
   items as seaItems,
   tierLists as seaTierLists,
 } from '../games/sea';
+import {
+  characters as skjhCharacters,
+  weapons as skjhWeapons,
+  items as skjhItems,
+  tierLists as skjhTierLists,
+} from '../games/skjh';
 
 /**
  * Get game data by game ID
@@ -127,6 +133,13 @@ export async function getGameData(gameId: GameId) {
         weapons: seaWeapons,
         items: seaItems,
         tierLists: seaTierLists,
+      };
+    case 'skjh':
+      return {
+        characters: skjhCharacters,
+        weapons: skjhWeapons,
+        items: skjhItems,
+        tierLists: skjhTierLists,
       };
     default:
       throw new Error(`Unknown game ID: ${gameId}`);

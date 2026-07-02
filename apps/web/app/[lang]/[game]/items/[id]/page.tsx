@@ -28,6 +28,9 @@ import {
 import {
   seaMaterials, getSeaMaterialById, getSeaMaterialName,
 } from '@gachia/data/games/sea/items';
+import {
+  skjhMaterials, getSkjhMaterialById, getSkjhMaterialName,
+} from '@gachia/data/games/skjh/items';
 import { getCharactersNeedingMaterial } from '@gachia/data/material-characters';
 import { Link } from '@/lib/i18n/navigation';
 
@@ -60,6 +63,9 @@ const TYPE_LABELS: Record<string, Record<string, string>> = {
   craft: { zh: '制造材料', en: 'Crafting', ja: '製作素材' },
   consumable: { zh: '消耗品', en: 'Consumable', ja: '消耗品' },
   fragment: { zh: '碎片 / 记忆', en: 'Fragment / Memory', ja: '欠片 / 記憶' },
+  resource: { zh: '生存资源', en: 'Survival Resource', ja: '生存資源' },
+  base: { zh: '基地设施', en: 'Base Facility', ja: '拠点設備' },
+  reward: { zh: '福利奖励', en: 'Reward', ja: '報酬' },
 };
 
 export async function generateStaticParams() {
@@ -73,6 +79,7 @@ export async function generateStaticParams() {
     ...anantaMaterials.map((m) => ({ lang, game: 'ananta', id: m.id })),
     ...endfieldMaterials.map((m) => ({ lang, game: 'endfield', id: m.id })),
     ...seaMaterials.map((m) => ({ lang, game: 'sea', id: m.id })),
+    ...skjhMaterials.map((m) => ({ lang, game: 'skjh', id: m.id })),
   ]);
 }
 
@@ -134,6 +141,11 @@ export async function generateMetadata({
     if (!m) return {};
     name = getSeaMaterialName(m, locale);
     description = (locale === 'en' ? m.sourceEn : m.source).slice(0, 160);
+  } else if (gameId === 'skjh') {
+    const m = getSkjhMaterialById(id);
+    if (!m) return {};
+    name = getSkjhMaterialName(m, locale);
+    description = (locale === 'en' ? m.sourceEn : locale === 'ja' ? (m.sourceJa ?? m.sourceEn) : m.source).slice(0, 160);
   }
 
   const title = locale === 'zh'
@@ -224,6 +236,17 @@ function getItemData(gameId: GameId, id: string, locale: SupportedLocale): ItemD
     const m = getSeaMaterialById(id);
     if (!m) return null;
     return { name: getSeaMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name, rarity: m.rarity, type: m.type, source: locale === 'en' ? m.sourceEn : m.source };
+  }
+  if (gameId === 'skjh') {
+    const m = getSkjhMaterialById(id);
+    if (!m) return null;
+    return {
+      name: getSkjhMaterialName(m, locale),
+      nameAlt: locale === 'zh' ? m.nameEn : m.name,
+      rarity: m.rarity,
+      type: m.type,
+      source: locale === 'en' ? m.sourceEn : locale === 'ja' ? (m.sourceJa ?? m.sourceEn) : m.source,
+    };
   }
   return null;
 }

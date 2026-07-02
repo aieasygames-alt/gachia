@@ -8,7 +8,7 @@ import { randomUUID } from 'crypto';
 
 // Validation schema with Zod
 const CreateBuildSchema = z.object({
-  gameId: z.enum(['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea'], {
+  gameId: z.enum(['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'], {
     errorMap: () => ({ message: 'Invalid game ID' })
   }),
   characterId: z.string().min(1).max(50),

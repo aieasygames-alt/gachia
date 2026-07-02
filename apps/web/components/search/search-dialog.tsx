@@ -21,6 +21,7 @@ import { zzzWeapons, getZzzWeaponName } from '@gachia/data/games/zzz/weapons';
 import { guihuanWeapons, getGuihuanWeaponName } from '@gachia/data/games/guihuan/weapons';
 import { anantaWeapons, getAnantaWeaponName } from '@gachia/data/games/ananta/weapons';
 import { endfieldWeapons, getEndfieldWeaponName } from '@gachia/data/games/endfield/weapons';
+import { skjhWeapons, getSkjhWeaponName } from '@gachia/data/games/skjh/weapons';
 // Items
 import { genshinMaterials, getGenshinMaterialName } from '@gachia/data/games/genshin/items';
 import { starrailMaterials, getStarRailMaterialName } from '@gachia/data/games/starrail/items';
@@ -30,6 +31,7 @@ import { zzzMaterials, getZzzMaterialName } from '@gachia/data/games/zzz/items';
 import { guihuanMaterials, getGuihuanMaterialName } from '@gachia/data/games/guihuan/items';
 import { anantaMaterials, getAnantaMaterialName } from '@gachia/data/games/ananta/items';
 import { endfieldMaterials, getEndfieldMaterialName } from '@gachia/data/games/endfield/items';
+import { skjhMaterials, getSkjhMaterialName } from '@gachia/data/games/skjh/items';
 // Equipment sets
 import { artifactSets as genshinArtifactSets, getArtifactSetName } from '@gachia/data/games/genshin/artifacts';
 import { relicSets as starrailRelicSets, getRelicSetName as getStarRailRelicSetName } from '@gachia/data/games/starrail/relics';
@@ -193,6 +195,14 @@ function buildIndex(locale: SupportedLocale): SearchItem[] {
       type: 'weapon', url: `/endfield/weapons/${w.id}`,
     });
   }
+  for (const w of skjhWeapons) {
+    items.push({
+      id: `skjh-weapon-${w.id}`, gameId: 'skjh',
+      name: getSkjhWeaponName(w, locale),
+      nameAlt: locale === 'zh' ? w.nameEn : w.name,
+      type: 'weapon', url: `/skjh/weapons/${w.id}`,
+    });
+  }
   // Items
   for (const m of genshinMaterials) {
     items.push({
@@ -258,6 +268,14 @@ function buildIndex(locale: SupportedLocale): SearchItem[] {
       type: 'item', url: `/endfield/items/${m.id}`,
     });
   }
+  for (const m of skjhMaterials) {
+    items.push({
+      id: `skjh-item-${m.id}`, gameId: 'skjh',
+      name: getSkjhMaterialName(m, locale),
+      nameAlt: locale === 'zh' ? m.nameEn : m.name,
+      type: 'item', url: `/skjh/items/${m.id}`,
+    });
+  }
   // Equipment sets (artifacts / relics / echoes / disk sets)
   for (const s of genshinArtifactSets) {
     items.push({
@@ -305,6 +323,7 @@ const GAME_NAMES: Record<string, Record<string, string>> = {
   ananta: { zh: '无限大', en: 'Ananta', ja: 'アナンタ' },
   endfield: { zh: '终末地', en: 'Endfield', ja: 'エンドフィールド' },
   sea: { zh: '遗忘之海', en: 'Sea of Remnants', ja: 'シー・オブ・レムナンツ' },
+  skjh: { zh: '失控进化', en: 'Ashfall Evolution', ja: '失控進化' },
 };
 
 const TYPE_LABELS: Record<string, Record<string, string>> = {

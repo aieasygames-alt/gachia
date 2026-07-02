@@ -20,6 +20,7 @@ import { guihuanWeapons } from '@gachia/data/games/guihuan/weapons';
 import { anantaWeapons } from '@gachia/data/games/ananta/weapons';
 import { endfieldWeapons } from '@gachia/data/games/endfield/weapons';
 import { seaWeapons } from '@gachia/data/games/sea/weapons';
+import { skjhWeapons } from '@gachia/data/games/skjh/weapons';
 
 // Guides
 import { genshinGuides } from '@gachia/data/games/genshin/guides';
@@ -31,6 +32,7 @@ import { guihuanGuides } from '@gachia/data/games/guihuan/guides';
 import { anantaGuides } from '@gachia/data/games/ananta/guides';
 import { endfieldGuides } from '@gachia/data/games/endfield/guides';
 import { seaGuides } from '@gachia/data/games/sea/guides';
+import { skjhGuides } from '@gachia/data/games/skjh/guides';
 
 // Materials / Items
 import { genshinMaterials } from '@gachia/data/games/genshin/items';
@@ -42,6 +44,7 @@ import { guihuanMaterials } from '@gachia/data/games/guihuan/items';
 import { anantaMaterials } from '@gachia/data/games/ananta/items';
 import { endfieldMaterials } from '@gachia/data/games/endfield/items';
 import { seaMaterials } from '@gachia/data/games/sea/items';
+import { skjhMaterials } from '@gachia/data/games/skjh/items';
 
 // Game-specific gear
 import { artifactSets as genshinArtifactSets } from '@gachia/data/games/genshin/artifacts';
@@ -55,13 +58,13 @@ const BASE_URL = 'https://gachia.com';
 
 // Games with real content for each category
 const CHAR_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea'] as const;
-const WEAPON_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea'] as const;
-const GUIDE_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea'] as const;
+const WEAPON_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'] as const;
+const GUIDE_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'] as const;
 const ARTIFACT_GAMES = ['genshin', 'starrail'] as const;
 const ECHO_GAMES = ['wuwa'] as const;
 const DISK_SET_GAMES = ['nte'] as const;
 const DRIVE_DISC_GAMES = ['zzz'] as const;
-const ITEM_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea'] as const;
+const ITEM_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'] as const;
 
 // Category routes that have real content per game
 const REAL_CONTENT_ROUTES: Record<string, string[]> = {
@@ -74,6 +77,7 @@ const REAL_CONTENT_ROUTES: Record<string, string[]> = {
   ananta: ['characters', 'weapons', 'items', 'tier-list', 'guides'],
   endfield: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'compare', 'teams', 'map'],
   sea: ['characters', 'guides', 'items', 'tier-list', 'redeem-codes'],
+  skjh: ['weapons', 'guides', 'items', 'redeem-codes'],
 };
 
 // Revalidate every 24 hours
@@ -247,6 +251,7 @@ function getWeaponsForGame(gameId: string) {
     case 'ananta': return anantaWeapons;
     case 'endfield': return endfieldWeapons;
     case 'sea': return seaWeapons;
+    case 'skjh': return skjhWeapons;
     default: return [];
   }
 }
@@ -262,6 +267,7 @@ function getGuidesForGame(gameId: string) {
     case 'ananta': return anantaGuides;
     case 'endfield': return endfieldGuides;
     case 'sea': return seaGuides;
+    case 'skjh': return skjhGuides;
     default: return [];
   }
 }
@@ -285,6 +291,7 @@ function getItemsForGame(gameId: string) {
     case 'ananta': return anantaMaterials;
     case 'endfield': return endfieldMaterials;
     case 'sea': return seaMaterials;
+    case 'skjh': return skjhMaterials;
     default: return [];
   }
 }

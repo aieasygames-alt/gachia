@@ -8,6 +8,7 @@ import { zzzWeapons, getZzzWeaponName, getZzzWeaponEffect } from '@gachia/data/g
 import { anantaWeapons, getAnantaWeaponName, getAnantaWeaponEffect } from '@gachia/data/games/ananta/weapons';
 import { guihuanWeapons, getGuihuanWeaponName, getGuihuanWeaponEffect } from '@gachia/data/games/guihuan/weapons';
 import { endfieldWeapons, getEndfieldWeaponName, getEndfieldWeaponEffect } from '@gachia/data/games/endfield/weapons';
+import { skjhWeapons, getSkjhWeaponName, getSkjhWeaponEffect, getSkjhWeaponSource } from '@gachia/data/games/skjh/weapons';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -20,6 +21,7 @@ const WEAPON_DESC: Record<string, Record<string, string>> = {
   guihuan: { zh: '归环全武器图鉴，包含SSR、SR武器数据', en: 'Complete Guihuan weapon list with SSR and SR data', ja: '帰環全武器図鑑、SSR、SR武器データ' },
   ananta: { zh: '无限大全武器图鉴，包含SSR、SR武器数据', en: 'Complete Ananta weapon list with SSR and SR data', ja: 'アナンタ全武器図鑑、SSR、SR武器データ' },
   endfield: { zh: '明日方舟：终末地全武器图鉴，包含六星、五星、四星武器数据', en: 'Complete Arknights: Endfield weapon list with 6-star, 5-star, and 4-star data', ja: 'アークナイツ：エンドフィールド全武器図鑑、6星、5星、4星武器データ' },
+  skjh: { zh: '失控进化武器与工具图鉴，包含石斧、石镐、木矛、猎弓和预约外观', en: 'Ashfall Evolution weapon and tool list with stone tools, spear, bow, and reservation cosmetics', ja: '失控進化の武器・道具一覧。石斧、石つるはし、槍、弓、予約外観を掲載' },
 };
 
 const NTE_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
@@ -39,6 +41,13 @@ const GENSHIN_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
 };
 
 const GENSHIN_RARITY_COLORS: Record<number, string> = { 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };
+const SKJH_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
+  tool: { zh: '采集工具', en: 'Tool', ja: '採集道具' },
+  melee: { zh: '近战武器', en: 'Melee', ja: '近接武器' },
+  ranged: { zh: '远程武器', en: 'Ranged', ja: '遠距離武器' },
+  skin: { zh: '外观奖励', en: 'Cosmetic', ja: '外観報酬' },
+};
+const SKJH_RARITY_COLORS: Record<number, string> = { 1: '#9ca3af', 2: '#4ade80', 3: '#60a5fa', 4: '#f97316' };
 
 export async function generateMetadata({
   params,
@@ -122,6 +131,10 @@ export default async function WeaponsPage({
 
   if (gameId === 'endfield') {
     return <><EndfieldWeaponsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+  }
+
+  if (gameId === 'skjh') {
+    return <><SkjhWeaponsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'sea') {
@@ -642,6 +655,58 @@ function EndfieldWeaponsPage({ locale }: { locale: SupportedLocale }) {
                       <span>{w.substatValue} {w.substatEn}</span>
                     </div>
                     {effect.description && <p className="text-xs leading-relaxed text-game-text-muted line-clamp-2">{effect.description}</p>}
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
+// --- Ashfall Evolution Weapons ---
+
+function SkjhWeaponsPage({ locale }: { locale: SupportedLocale }) {
+  const weapons = skjhWeapons;
+  const typeOrder = ['tool', 'melee', 'ranged', 'skin'];
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.skjh.theme.primary }}>
+        {CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? `共 ${weapons.length} 件武器与工具` : locale === 'ja' ? `${weapons.length} 個の武器・道具` : `${weapons.length} weapons and tools`}
+      </p>
+
+      {typeOrder.map((type) => {
+        const list = weapons.filter((w) => w.weaponType === type);
+        if (list.length === 0) return null;
+        const typeLabel = SKJH_WEAPON_TYPE_LABELS[type]?.[locale] ?? type;
+        return (
+          <section key={type} className="mb-8">
+            <h2 className="mb-4 text-lg font-semibold text-game-text">
+              {typeLabel} ({list.length})
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {list.map((w) => {
+                const effect = getSkjhWeaponEffect(w, locale);
+                return (
+                  <div key={w.id} className="rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary">
+                    <div className="mb-2 flex items-center gap-2">
+                      <span className="text-base font-bold" style={{ color: SKJH_RARITY_COLORS[w.rarity] || '#888' }}>{w.rarity}★</span>
+                      <h3 className="font-semibold text-game-text">{getSkjhWeaponName(w, locale)}</h3>
+                      <span className="ml-auto rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{typeLabel}</span>
+                    </div>
+                    <p className="mb-2 text-xs leading-relaxed text-game-text-muted">{getSkjhWeaponSource(w, locale)}</p>
+                    {effect.description && (
+                      <div className="rounded bg-game-surface-alt p-3">
+                        <div className="mb-1 text-xs font-semibold text-game-primary">{effect.name}</div>
+                        <p className="text-xs leading-relaxed text-game-text-muted">{effect.description}</p>
+                      </div>
+                    )}
                   </div>
                 );
               })}

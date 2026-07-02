@@ -1,0 +1,427 @@
+[
+  {
+    "id": "overview",
+    "title": "失控进化游戏介绍与核心玩法",
+    "titleEn": "Ashfall Evolution Overview and Core Systems",
+    "titleJa": "失控進化の概要とコアシステム",
+    "category": "basics",
+    "categoryZh": "入门必读",
+    "categoryEn": "Basics",
+    "categoryJa": "基本情報",
+    "summary": "整理《失控进化》的游戏定位、生存目标、荒岛规则、赛季节奏与适合人群。",
+    "summaryEn": "A practical overview of Ashfall Evolution, covering survival goals, island rules, season pacing, and who the game is for.",
+    "summaryJa": "失控進化の生存目標、島のルール、シーズン進行、向いているプレイヤーを整理します。",
+    "content": "## 游戏定位\n\n《失控进化》是一款由腾讯游戏发行、无端科技研发，并获得 Rust 正版玩法授权的开放世界多人生存对抗游戏。玩家从徒手登岛开始，在资源稀缺、天气变化、动物威胁和其他玩家竞争中活下去。\n\n## 核心循环\n\n1. 采集木材、石头、布料和废料，先确保工具与食物供给。\n2. 搜刮路边箱、油桶、废弃超市、加油站等低级据点，积累零件和科技解锁材料。\n3. 建造庇护所，放置领地柜、睡袋、储物箱和基础防御。\n4. 解锁武器、建筑、电力与生存科技，从石器工具逐步过渡到枪械、金属工事和自动化设施。\n5. 根据服务器模式选择潜伏、联盟、交易、争夺据点或领地攻防。\n\n## 玩法关键词\n\n- 搜打拆：搜索物资、战斗压制、拆除敌方领地。\n- 领地攻防：围绕领地柜、墙体耐久、爆破资源和防御路线展开。\n- 公平竞技：官方强调不卖数值，胜负更依赖路线规划、队伍协作和操作。\n- 多端互通：官网展示 PC、移动端与 WeGame 预约下载入口。\n\n## 公测时间\n\n官网标题显示《失控进化》将于 2026 年 7 月 9 日 PC/移动正式上线。预约活动时间为 2026 年 5 月 27 日 10:00 至 2026 年 7 月 8 日 23:59。\n\n## 适合人群\n\n如果你喜欢高自由度、生存建造、开放 PvP、团队分工、资源运营和攻防博弈，《失控进化》会比传统线性 RPG 更对胃口。新手建议从安全区模式或训练/休闲模式起步，熟悉资源、建筑和死亡惩罚后再进入标准模式。",
+    "contentEn": "## Positioning\n\nAshfall Evolution is an open-world multiplayer survival game published by Tencent Games and developed by Wuduan Technology, with officially licensed Rust-style gameplay. Players arrive on a dangerous island with nothing and must survive scarcity, weather, wildlife, and other players.\n\n## Core Loop\n\n1. Gather wood, stone, cloth, and scrap to secure tools and food.\n2. Loot roadside crates, barrels, abandoned markets, gas stations, and low-tier points of interest.\n3. Build shelter with a territory cabinet, sleeping bag, storage, and basic defenses.\n4. Unlock combat, building, electrical, and survival technology.\n5. Choose stealth, alliance, trade, POI contesting, or base raiding depending on the server mode.\n\n## Key Terms\n\n- Loot, fight, raid: the core survival PvP loop.\n- Territory warfare: protection and raids revolve around the territory cabinet and wall durability.\n- Fair competition: official materials emphasize no stat-selling.\n- Multi-platform access: the official site highlights PC, mobile, and WeGame reservation/download entries.\n\n## Launch Timing\n\nThe official site states that Ashfall Evolution launches on PC and mobile on July 9, 2026. The reservation event runs from May 27, 2026 at 10:00 to July 8, 2026 at 23:59.\n\n## Who Should Play\n\nIf you enjoy survival crafting, open PvP, base building, team roles, resource planning, and raid strategy, this game fits better than a linear RPG. Beginners should start with safer or training modes before entering standard servers.",
+    "contentJa": "## ゲーム概要\n\n『失控進化』はTencent Gamesが配信し、無端科技が開発するオープンワールド型マルチプレイサバイバル対戦ゲームです。Rustの正式ライセンスを受けた玩法をベースに、プレイヤーは危険な島で資源不足、天候、野生動物、他プレイヤーと向き合います。\n\n## 基本ループ\n\n1. 木材、石、布、スクラップを集め、道具と食料を確保します。\n2. 道端の箱、ドラム缶、廃スーパー、ガソリンスタンドなどを探索します。\n3. 領地キャビネット、寝袋、収納、防衛設備を置いて拠点を作ります。\n4. 戦闘、建築、電力、生存技術を解放します。\n5. サーバーモードに応じて潜伏、同盟、交易、拠点争奪、レイドを選びます。\n\n## リリース\n\n公式サイトでは、2026年7月9日にPC/モバイルで正式リリース予定とされています。",
+    "tags": ["公测", "Rust授权", "生存对抗"],
+    "faq": [
+      {
+        "question": "Is Ashfall Evolution a gacha RPG?",
+        "questionZh": "《失控进化》是抽卡 RPG 吗？",
+        "answer": "No. It is a multiplayer survival and base-raiding game built around gathering, crafting, combat, and territory warfare.",
+        "answerZh": "不是。它更接近多人开放世界生存对抗游戏，核心是采集、制造、战斗、建家和领地攻防。"
+      }
+    ]
+  },
+  {
+    "id": "beginner-start",
+    "title": "新手 0-10 分钟开荒路线",
+    "titleEn": "Beginner 0-10 Minute Start Route",
+    "titleJa": "初心者向け最初の10分ルート",
+    "category": "beginner",
+    "categoryZh": "新手开荒",
+    "categoryEn": "Beginner",
+    "categoryJa": "初心者",
+    "summary": "从出生点到第一套工具、第一批物资和临时落脚点的开局路线。",
+    "summaryEn": "A first-route checklist from spawn to basic tools, early loot, and a temporary safe spot.",
+    "summaryJa": "スポーン直後から基本道具、初期物資、一時拠点までの動き方。",
+    "content": "## 目标\n\n前 10 分钟不要恋战，优先完成三件事：拿到工具、拿到食物/布料、找到临时落脚点。\n\n## 0-2 分钟：确认环境\n\n- 远离人群密集的海滩、道路主线和大型据点入口。\n- 观察附近是否有树木、岩石、仙人掌或亚麻。\n- 夜晚出生时优先找遮蔽物，不要开火把暴露位置。\n\n## 2-5 分钟：制作第一套工具\n\n- 采 1 棵树和 1 块岩石。\n- 优先制作石斧和石镐，提高木材、石头采集效率。\n- 如果附近有动物或玩家活动，补一把木矛或猎弓防身。\n\n## 5-8 分钟：搜刮一级资源点\n\n推荐目标是废弃超市、加油站、路边箱和油桶。新手不要一开始冲高级据点，高级区收益高但死亡概率也高。\n\n优先拿：\n\n1. 废料：科技树解锁核心资源。\n2. 布料：绷带、睡袋、绳索都需要。\n3. 食物和水：避免代谢系统拖慢节奏。\n4. 金属碎片：中期升级和维护会用到。\n\n## 8-10 分钟：临时落脚点\n\n找森林边缘、山地凹陷、岩缝或低交通路线旁的小角落，先放置睡袋和小箱子。不要急着建大房，前期过大的建筑会暴露目标。\n\n## 新手禁忌\n\n- 背包满了还继续深入据点。\n- 把家建在路边、矿点正中央或高级据点门口。\n- 不放睡袋就去打架。\n- 领地柜没有维护资源。",
+    "contentEn": "## Goal\n\nIn the first 10 minutes, avoid unnecessary fights. Secure tools, food or cloth, and a temporary safe spot.\n\n## 0-2 Minutes\n\nMove away from crowded beaches, main roads, and major POI entrances. Look for trees, rocks, cactus, or flax. At night, avoid exposing yourself with a torch unless necessary.\n\n## 2-5 Minutes\n\nGather one tree and one rock. Craft a stone hatchet and pickaxe first. If animals or players are nearby, craft a spear or bow.\n\n## 5-8 Minutes\n\nLoot low-tier locations such as abandoned markets, gas stations, roadside crates, and barrels. Prioritize scrap, cloth, food, water, and metal fragments.\n\n## 8-10 Minutes\n\nPlace a sleeping bag and small storage near forest edges, rock gaps, or low-traffic terrain. Do not build an oversized base too early.\n\n## Common Mistakes\n\nDo not overstay with a full bag, build beside roads, fight before placing a sleeping bag, or forget territory upkeep.",
+    "contentJa": "## 目標\n\n最初の10分は無理に戦わず、道具、食料または布、一時的な安全地点を確保します。\n\n## 流れ\n\n木と石を集めて石斧と石つるはしを作り、廃スーパーやガソリンスタンドなど低リスク地点を探索します。スクラップ、布、食料、水、金属片を優先しましょう。\n\n## 注意\n\n寝袋なしで戦闘に行かないこと。大きすぎる拠点は序盤から目立ちます。",
+    "tags": ["开荒", "资源", "睡袋"],
+    "faq": [
+      {
+        "question": "What should beginners craft first?",
+        "questionZh": "新手第一件装备做什么？",
+        "answer": "Craft a stone hatchet and stone pickaxe first, then add a spear or bow if the area is unsafe.",
+        "answerZh": "优先做石斧和石镐提升采集效率，周围危险时再补木矛或猎弓。"
+      }
+    ]
+  },
+  {
+    "id": "base-building",
+    "title": "基地选址、领地柜与防御建设",
+    "titleEn": "Base Location, Territory Cabinet, and Defense",
+    "titleJa": "拠点立地、領地キャビネット、防衛",
+    "category": "beginner",
+    "categoryZh": "新手开荒",
+    "categoryEn": "Beginner",
+    "categoryJa": "初心者",
+    "summary": "讲清楚前期家应该建在哪里、为什么领地柜最重要，以及如何降低被抄家的风险。",
+    "summaryEn": "Where to build early, why the territory cabinet matters, and how to reduce raid risk.",
+    "summaryJa": "序盤拠点の場所、領地キャビネットの重要性、レイドリスクの減らし方。",
+    "content": "## 选址原则\n\n前期选址的第一目标不是豪华，而是低曝光和方便撤离。推荐森林边缘、山地凹陷、岩缝、低交通路线旁的小高地。尽量避开主干道、高级据点门口、矿点正中央和多人队伍固定活动区。\n\n## 必放设施\n\n1. 领地柜：决定建筑保护和维护，是基地核心。\n2. 睡袋：保证死亡后能快速回家。\n3. 小型储物箱：把关键资源分散存放。\n4. 门锁和双门缓冲：降低被单次突破的概率。\n5. 露水收集器或水源路线：稳定代谢资源。\n\n## 建筑升级顺序\n\n- 木质结构只适合临时过渡。\n- 石质墙体是前期核心防线。\n- 有金属资源后优先升级门、门框和核心仓库区域。\n- 外围可以用诱导通道、路障和假门增加拆家成本。\n\n## 领地柜维护\n\n定期补木材、石头、金属碎片等维护资源。被抄家时，领地柜往往是敌人的第一目标。柜子不要放在一眼能看到的位置，最好放在核心区，并配合多层门、转角和储物分散。\n\n## 小队分工\n\n- 建筑位：负责房型、升级和维护。\n- 侦查位：观察附近队伍、路线和据点刷新。\n- 资源位：跑木石矿和废料路线。\n- 战斗位：护送资源、处理追击和守家。",
+    "contentEn": "## Location Rules\n\nEarly bases should be low-profile and easy to escape from. Forest edges, rock gaps, mountain dents, and low-traffic hills are safer than main roads, high-tier POI entrances, or central mining zones.\n\n## Required Facilities\n\nPlace a territory cabinet, sleeping bag, small storage, locks, airlock doors, and a water plan. The cabinet is the core of upkeep and protection.\n\n## Upgrade Order\n\nWood is temporary. Stone walls are the early defensive baseline. Upgrade doors, door frames, and the core loot room first once metal is available.\n\n## Team Roles\n\nA stable squad needs a builder, scout, resource runner, and fighter. Even two-player teams should split these responsibilities deliberately.",
+    "contentJa": "## 立地\n\n序盤は目立たず逃げやすい場所が最優先です。森の端、岩場、山のくぼみ、人通りの少ない高台が候補になります。\n\n## 必須設備\n\n領地キャビネット、寝袋、収納箱、鍵、二重扉、水源ルートを用意します。キャビネットは維持と保護の中心です。",
+    "tags": ["基地", "领地柜", "防御"],
+    "faq": [
+      {
+        "question": "Where should the territory cabinet go?",
+        "questionZh": "领地柜应该放在哪里？",
+        "answer": "Keep it inside the core base area, protected by multiple doors and turns rather than visible from the entrance.",
+        "answerZh": "放在核心区，不要入口直视，最好用多层门、转角和储物分散来保护。"
+      }
+    ]
+  },
+  {
+    "id": "resource-priority",
+    "title": "资源优先级与科技树路线",
+    "titleEn": "Resource Priority and Tech Tree Route",
+    "titleJa": "資源優先度と技術ツリー",
+    "category": "systems",
+    "categoryZh": "系统机制",
+    "categoryEn": "Systems",
+    "categoryJa": "システム",
+    "summary": "把废料、布料、木石金属、食物水源、电力材料放进同一张开荒优先级表。",
+    "summaryEn": "A clear priority table for scrap, cloth, wood, stone, metal, food, water, and electrical parts.",
+    "summaryJa": "スクラップ、布、木石金属、食料、水、電力部品の優先度を整理します。",
+    "content": "## 一句话结论\n\n前期资源优先级：废料 > 布料 > 食物/水 > 木材/石头 > 金属碎片 > 电力组件。队伍进入中期后，金属、硫磺类爆破资源和电力组件的优先级会上升。\n\n## 资源速查\n\n| 资源 | 用途 | 获取建议 |\n| --- | --- | --- |\n| 废料 | 解锁科技树、制作关键装备 | 油桶、路边箱、低级据点循环搜刮 |\n| 布料 | 绷带、睡袋、绳索、衣物 | 亚麻、仙人掌、分解针线包 |\n| 木材 | 工具、临时建筑、维护 | 森林边缘安全采集 |\n| 石头 | 石质墙体、防御升级、维护 | 山区矿点，注意背包过重 |\n| 金属碎片 | 门、门框、武器、维护 | 熔炼矿石、分解金属物件 |\n| 食物/水 | 代谢维持 | 超市、野外采集、露水收集器 |\n| 电力组件 | 自动化、防御、电力科技 | 中后期集中搜刮和回收 |\n\n## 科技树方向\n\n- 战斗科技：从弓、手枪和冲锋枪过渡到半自动步枪、AK 和火箭弹。\n- 建筑科技：从木屋过渡到石质工事、金属门、混凝土防御和自动化设施。\n- 生存科技：种植箱、露水收集器、防寒/防辐射装备优先保障续航。\n- 电力科技：太阳能、风力、燃油发电、自动化烧矿和储能适合中后期基地。\n\n## 路线建议\n\n独狼优先生存科技和隐蔽建筑；三人小队可以一人冲战斗科技、一人保建筑科技、一人补生存和电力。不要所有人都抢同一条科技线，否则会出现资源断档。",
+    "contentEn": "## Short Version\n\nEarly priority: scrap > cloth > food/water > wood/stone > metal fragments > electrical components. In midgame, metal, explosive resources, and electrical parts rise in value.\n\n## Resource Table\n\n| Resource | Use | Tips |\n| --- | --- | --- |\n| Scrap | Tech unlocks and key gear | Loot barrels, crates, and low-tier POIs |\n| Cloth | Bandages, sleeping bags, rope, clothing | Flax, cactus, and recycled sewing kits |\n| Wood | Tools, temporary builds, upkeep | Farm forest edges safely |\n| Stone | Stone walls and upkeep | Mine hills, avoid overfilling bags |\n| Metal Fragments | Doors, frames, weapons, upkeep | Smelt ore or recycle metal items |\n| Food/Water | Metabolism | Markets, foraging, dew collectors |\n| Electrical Parts | Automation and defenses | Prioritize in midgame |\n\n## Tech Paths\n\nCombat, building, survival, and electrical trees should be split across team roles when possible.",
+    "contentJa": "## 要点\n\n序盤の優先度はスクラップ、布、食料/水、木材/石、金属片、電力部品の順です。中盤以降は金属、爆破資源、電力部品の価値が上がります。",
+    "tags": ["废料", "科技树", "资源"],
+    "faq": [
+      {
+        "question": "Why is scrap so important?",
+        "questionZh": "为什么废料优先级最高？",
+        "answer": "Scrap drives tech unlocks. Without it, your base and combat gear will fall behind even if you have raw materials.",
+        "answerZh": "废料决定科技解锁。只有原材料但没有废料，武器和基地强度都会落后。"
+      }
+    ]
+  },
+  {
+    "id": "gene-builds",
+    "title": "四大基因流派搭配表",
+    "titleEn": "Four Gene Build Archetypes",
+    "titleJa": "4大遺伝子ビルド",
+    "category": "systems",
+    "categoryZh": "系统机制",
+    "categoryEn": "Systems",
+    "categoryJa": "システム",
+    "summary": "将重装壁垒、迅捷狙击、植型自愈、机械异能四种流派整理成实战表格。",
+    "summaryEn": "A practical table for tank, sniper, self-healing, and mechanical gene archetypes.",
+    "summaryJa": "タンク、狙撃、自己回復、機械系の4ビルドを整理します。",
+    "content": "## 流派总表\n\n| 流派 | 核心基因 | 辅助基因 | 定位 | 适用场景 |\n| --- | --- | --- | --- | --- |\n| 重装壁垒流 | 犀牛防御、棕熊力量、龟鳖耐受 | 根系吸收、威慑咆哮 | 高血量、高减伤，前排破门和吸引火力 | 领地攻防、团队承伤、洞穴硬刚 |\n| 迅捷狙击流 | 鹰视觉、蜂鸟速度、猎豹爆发 | 隐匿基因、听觉强化 | 高机动、高命中，负责侦查和远程压制 | 野外伏击、高点架枪、据点压制 |\n| 植型自愈流 | 自愈、光合作用、根系扎根 | 孢子迷雾、伪装色 | 低消耗长线生存，适合后勤和隐蔽采集 | 安全区开荒、长期种田、夜间摸资源 |\n| 机械异能流 | 能量护盾、无呼吸、能量脉冲 | 算力强化、痛觉屏蔽 | 后期高上限，兼顾生存与 AOE | 高资源区争夺、多人团战、极端环境探索 |\n\n## 阶段建议\n\n### 前期：先活下来\n\n0-10 小时优先植型自愈和伪装色，降低食物、药品和回家频率压力。新手不要一开始追求高输出，活着带回废料才有价值。\n\n### 中期：补队伍短板\n\n有基础武装后，根据队伍缺位补重装或狙击。三人小队推荐 1 重装 + 1 狙击 + 1 植型后勤。\n\n### 后期：插入机械能力\n\n机械型基因成型慢，但能量护盾、无呼吸和 AOE 能力在辐射区、大规模团战和高价值据点里收益很高。\n\n## 取舍原则\n\n基因不是越杂越强。每套流派都要围绕一个主要目标构建：抗伤、输出、续航或控场。对立特性会占用槽位，堆太多会导致没有明显强项。",
+    "contentEn": "## Archetype Table\n\n| Build | Core Genes | Support Genes | Role | Best Use |\n| --- | --- | --- | --- | --- |\n| Heavy Bulwark | Rhino defense, bear strength, turtle tolerance | Root absorption, intimidation roar | Tanky frontliner for raids | Territory warfare and team soaking |\n| Swift Sniper | Eagle vision, hummingbird speed, cheetah burst | Stealth, enhanced hearing | Scout and ranged pressure | Ambushes, high-ground cover, POI control |\n| Plant Self-Heal | Self-heal, photosynthesis, rooted stance | Spore fog, camouflage | Low-cost survival and logistics | Safe-mode starts, farming, night looting |\n| Mechanical Caster | Energy shield, no-breath core, pulse | Compute boost, pain suppression | Late-game AOE and survival | High-value zones and large fights |\n\n## Stage Advice\n\nEarly players should prioritize staying alive with plant self-healing and camouflage. Midgame squads should fill missing roles. Late game can incorporate mechanical genes for shields, environmental immunity, and AOE pressure.",
+    "contentJa": "## ビルド表\n\n| ビルド | コア | 役割 |\n| --- | --- | --- |\n| 重装壁塁 | 防御、筋力、耐性 | 前線で耐えて突破する |\n| 迅速狙撃 | 視覚、速度、瞬発 | 偵察と遠距離圧力 |\n| 植物自癒 | 自己回復、光合成、根付き | 低消費の長期生存 |\n| 機械異能 | シールド、無呼吸、パルス | 後半の範囲火力と特殊環境対応 |",
+    "tags": ["基因", "流派", "PVP"],
+    "faq": [
+      {
+        "question": "Which gene build is best for beginners?",
+        "questionZh": "新手最推荐哪个基因流派？",
+        "answer": "Plant self-heal is the safest first route because it reduces supply pressure and helps beginners survive longer gathering runs.",
+        "answerZh": "植型自愈流最稳，能降低补给压力，让新手更容易活着完成采集和搜刮。"
+      }
+    ]
+  },
+  {
+    "id": "modes",
+    "title": "玩法模式与死亡惩罚一览",
+    "titleEn": "Game Modes and Death Penalties",
+    "titleJa": "ゲームモードと死亡ペナルティ",
+    "category": "systems",
+    "categoryZh": "系统机制",
+    "categoryEn": "Systems",
+    "categoryJa": "システム",
+    "summary": "按新手、安全区、标准、挑战、快速对抗等模式拆解风险和适合玩家。",
+    "summaryEn": "Mode-by-mode risk breakdown for beginners, safe zones, standard play, challenge servers, and quick fights.",
+    "summaryJa": "初心者、安全区、標準、挑戦、短時間対戦のリスクを整理します。",
+    "content": "## 模式速查\n\n| 模式 | 核心特点 | 适合人群 | 风险 |\n| --- | --- | --- | --- |\n| 安全区模式 | 安危区分层，低风险资源路线 | 纯新手、探索党 | 低 |\n| 标准模式 | 接近 Rust 式完整生存体验 | 大众玩家、独狼、小队 | 中 |\n| 进阶/挑战模式 | 高资源竞争、保护更少 | 硬核老玩家 | 高 |\n| 快速对抗 | 约 15 分钟紧凑领地攻防 | 碎片化时间玩家 | 低资源成本 |\n| 训练/休闲模式 | 新手教学、种植经营、低压 PVP | 休闲玩家 | 很低 |\n\n## 如何选择\n\n- 第一次进游戏：训练/休闲或安全区模式。\n- 了解基本采集和建家后：标准模式。\n- 有固定队伍和语音沟通后：挑战模式。\n- 只想练枪和攻防：快速对抗。\n\n## 死亡惩罚思路\n\n不同模式的背包掉落、领地柜损失、残骸保留时间会影响玩法节奏。风险越高，越要养成分批存资源、放睡袋、分散储物和提前侦查的习惯。",
+    "contentEn": "## Mode Table\n\n| Mode | Feature | Best For | Risk |\n| --- | --- | --- | --- |\n| Safe Zone | Layered danger zones and safer routes | New players and explorers | Low |\n| Standard | Full survival sandbox experience | Solo and squad players | Medium |\n| Challenge | Higher competition and less protection | Veterans | High |\n| Quick Fight | Compact 15-minute territory warfare | Short sessions | Low resource cost |\n| Training/Casual | Tutorials and relaxed play | Casual players | Very low |\n\nChoose safer modes first, standard after learning building basics, challenge mode with a coordinated squad, and quick fights for combat practice.",
+    "contentJa": "## モード\n\n安全区、標準、挑戦、快速対抗、訓練/カジュアルがあります。初回は安全区または訓練から始め、建築と資源管理を覚えてから標準モードへ進むのがおすすめです。",
+    "tags": ["模式", "死亡惩罚", "安全区"],
+    "faq": [
+      {
+        "question": "Which mode should a solo player start with?",
+        "questionZh": "独狼玩家先玩哪个模式？",
+        "answer": "Start with safe-zone or standard mode, then move to challenge servers after learning low-profile base building and escape routes.",
+        "answerZh": "先从安全区或标准模式开始，熟悉隐蔽建家和撤离路线后再考虑挑战模式。"
+      }
+    ]
+  },
+  {
+    "id": "launch-rewards",
+    "title": "公测预约、绑定与里程碑福利",
+    "titleEn": "Launch Reservation, Binding, and Milestone Rewards",
+    "titleJa": "事前登録、連携、マイルストーン報酬",
+    "category": "rewards",
+    "categoryZh": "福利活动",
+    "categoryEn": "Rewards",
+    "categoryJa": "報酬",
+    "summary": "整理官网公开的 4000 万预约里程碑、个人预约、绑定奖励和抽奖活动规则。",
+    "summaryEn": "Official reservation milestones, personal reservation rewards, binding rewards, and lottery rules.",
+    "summaryJa": "公式の事前登録マイルストーン、個人予約、連携報酬、抽選ルールを整理します。",
+    "content": "## 活动时间\n\n官网公开活动时间为 2026 年 5 月 27 日 10:00 至 2026 年 7 月 8 日 23:59。预约后可在 2026 年 7 月 9 日上线后领取奖励。\n\n## 预约里程碑\n\n| 预约人数 | 奖励 |\n| --- | --- |\n| 500 万 | 登岛行动·头像框 |\n| 1000 万 | 登岛行动·名片 |\n| 2000 万 | 贡献点 ×168 |\n| 3000 万 | 贡献点 ×288 |\n| 4000 万 | 登岛行动·步枪外观 |\n\n官网页面显示预约人数已达 4000 万，因此里程碑奖励已全档解锁。\n\n## 个人预约奖励\n\n- 登岛行动·M39 步枪外观\n- 渗透者·头像\n- 贡献点 ×388\n\n## 个人绑定奖励\n\n- 贡献点 ×188\n\n## 抽奖任务\n\n完成预约游戏、绑定手机号、邀请好友预约、关注官方账号等任务可获得抽奖次数。奖池包含显卡、京东卡、周边玩偶、周边 T 恤等奖品，具体以官网活动规则为准。\n\n## 领取建议\n\n1. 公测前完成预约和手机号绑定。\n2. 保留官网活动页面入口，开服后检查邮箱。\n3. 兑换码、媒体礼包和平台礼包可能在上线当天集中出现，建议同时关注官网、WeGame、B站、微信公众号和 TapTap。",
+    "contentEn": "## Event Period\n\nThe official event runs from May 27, 2026 at 10:00 to July 8, 2026 at 23:59. Reservation rewards can be claimed after launch on July 9, 2026.\n\n## Reservation Milestones\n\n| Reservations | Reward |\n| --- | --- |\n| 5M | Landing Operation avatar frame |\n| 10M | Landing Operation name card |\n| 20M | Contribution Points x168 |\n| 30M | Contribution Points x288 |\n| 40M | Landing Operation rifle skin |\n\nThe official page shows 40 million reservations, so all milestone rewards are unlocked.\n\n## Personal Rewards\n\nPersonal reservation rewards include a Landing Operation M39 rifle skin, Infiltrator avatar, and Contribution Points x388. Phone binding grants Contribution Points x188.\n\n## Tip\n\nComplete reservation and phone binding before launch, then check in-game mail after servers open.",
+    "contentJa": "## 開催期間\n\n公式イベント期間は2026年5月27日10:00から2026年7月8日23:59までです。報酬は2026年7月9日のリリース後に受け取れます。\n\n## 主な報酬\n\n予約マイルストーン、M39ライフル外観、アバター、貢献ポイントなどが公開されています。",
+    "tags": ["预约", "福利", "贡献点"],
+    "faq": [
+      {
+        "question": "Are all reservation milestones unlocked?",
+        "questionZh": "预约里程碑是否已经全解锁？",
+        "answer": "The official page shows 40,000,000 reservations, which corresponds to the final milestone tier.",
+        "answerZh": "官网页面显示已预约 4000 万人，对应最终里程碑档位。"
+      }
+    ]
+  },
+  {
+    "id": "system-requirements",
+    "title": "配置要求与多端设备推荐",
+    "titleEn": "System Requirements and Device Recommendations",
+    "titleJa": "動作環境と端末おすすめ",
+    "category": "basics",
+    "categoryZh": "入门必读",
+    "categoryEn": "Basics",
+    "categoryJa": "基本情報",
+    "summary": "整理 PC、Android、iOS 的最低与推荐配置，并给出画质、帧率和存储预留建议。",
+    "summaryEn": "PC, Android, and iOS requirements with practical graphics, frame rate, and storage advice.",
+    "summaryJa": "PC、Android、iOSの動作環境と画質、フレームレート、容量の目安を整理します。",
+    "content": "## 配置速查\n\n| 平台 | 最低参考 | 推荐参考 | 建议 |\n| --- | --- | --- | --- |\n| PC | 以官方启动器检测为准 | i5-7500 / GTX 1060 5G / 16GB 内存 | 推荐 SSD，预留至少 30GB 空间 |\n| Android | 骁龙 710 档位 | 骁龙 8 Gen2 / 8GB 内存 | 大型团战和据点区建议中高画质以下 |\n| iOS | A12 / 4GB 内存 | A15 及以上 | 推荐关闭后台录屏和高耗电应用 |\n| 平板/鸿蒙 | 以官方适配列表为准 | 高刷新屏 + 8GB 内存更稳 | 注意散热和长时间续航 |\n\n## PC 设置建议\n\n### 入门配置\n\n如果机器接近 GTX 1060 5G 档位，优先保障稳定帧率：\n\n- 分辨率：1080p\n- 画质：中\n- 阴影：低或中\n- 体积雾/后处理：低\n- 视距：中，PVP 玩家可根据显存适当调高\n- 垂直同步：根据显示器和撕裂情况决定\n\n### 推荐配置\n\n推荐配置玩家可以把纹理和视距调高，但多人团战、雨雾天气、基地密集区仍然可能带来帧率波动。生存 PVP 中稳定帧率比单纯画面更重要。\n\n## 移动端设置建议\n\n移动端优先控制发热。长时间采集、跑图、守家时，建议使用中画质和 45/60 帧档位；进入高资源区、团战或抄家时，宁可降低特效，也要保留稳定触控和准星反馈。\n\n## 存储与网络\n\n- 公测前预留安装包、补丁和缓存空间。\n- 尽量使用稳定 Wi-Fi 或 5G 网络。\n- 标准/挑战模式下掉线风险很高，跑资源和守家前先确认网络。\n\n## 升级优先级\n\nPC 玩家优先升级 SSD 和内存，其次显卡；移动端玩家优先选择散热好、内存 8GB 及以上的设备。多人基地、动态天气和远距离视野都会放大硬件差距。",
+    "contentEn": "## Quick Requirements\n\n| Platform | Minimum Reference | Recommended Reference | Tip |\n| --- | --- | --- | --- |\n| PC | Official launcher check | i5-7500 / GTX 1060 5G / 16GB RAM | Use SSD and reserve at least 30GB |\n| Android | Snapdragon 710 tier | Snapdragon 8 Gen2 / 8GB RAM | Lower effects for large fights |\n| iOS | A12 / 4GB RAM | A15 or newer | Close background recording and heavy apps |\n\n## Practical Advice\n\nFor PC, prioritize stable frame rate over visuals. At GTX 1060 level, use 1080p, medium textures, low-to-medium shadows, and moderate draw distance. For mobile, manage heat first: medium graphics and stable 45/60 FPS are better for PvP than unstable high settings.\n\n## Network and Storage\n\nReserve space for launch patches and cache. Use stable Wi-Fi or 5G where possible. In standard and challenge modes, disconnects can cost resources or fights.",
+    "contentJa": "## 動作環境の目安\n\nPCはi5-7500 / GTX 1060 5G / 16GBメモリが推奨参考です。AndroidはSnapdragon 710が最低目安、Snapdragon 8 Gen2 / 8GBメモリ以上が安定しやすいです。iOSはA12 / 4GBが最低目安、A15以上を推奨します。\n\n## 設定の考え方\n\nサバイバルPVPでは画質より安定フレームレートが重要です。長時間プレイでは発熱を抑えるため、中画質と安定したフレームレートを優先しましょう。",
+    "tags": ["配置", "PC", "移动端"],
+    "faq": [
+      {
+        "question": "Is GTX 1060 enough for Ashfall Evolution?",
+        "questionZh": "GTX 1060 能玩《失控进化》吗？",
+        "answer": "The referenced recommended PC spec includes GTX 1060 5G with 16GB RAM. For PvP stability, use 1080p with medium settings and lower shadows or post-processing.",
+        "answerZh": "参考推荐配置包含 GTX 1060 5G 和 16GB 内存。为了 PVP 稳定，建议 1080p 中画质，并降低阴影和后处理。"
+      }
+    ]
+  },
+  {
+    "id": "season-1-launch",
+    "title": "S1 登岛赛季开服路线",
+    "titleEn": "Season 1 Landing Launch Route",
+    "titleJa": "S1上陸シーズン開幕ルート",
+    "category": "rewards",
+    "categoryZh": "福利活动",
+    "categoryEn": "Rewards",
+    "categoryJa": "報酬",
+    "summary": "围绕 2026 年 7 月 9 日开服到 9 月 9 日 S1 赛季，规划首日、前三天和首周目标。",
+    "summaryEn": "A launch plan for Season 1 from July 9 to September 9, 2026, covering day one, first three days, and week one.",
+    "summaryJa": "2026年7月9日から9月9日までのS1シーズンに向けた初日、3日間、1週間の目標。",
+    "content": "## 赛季信息\n\nS1 赛季主题为「登岛」，时间参考为 2026 年 7 月 9 日至 2026 年 9 月 9 日。开服初期的核心目标不是立刻打满高级据点，而是抢占稳定发育节奏：完成福利领取、熟悉服务器模式、建立第一个安全落脚点，并把科技树推到可持续阶段。\n\n## 开服前准备\n\n- 完成官网预约和手机号绑定。\n- 检查平台下载入口：PC、移动端、WeGame 或官方启动器。\n- 预留安装和补丁空间。\n- 固定小队提前分工：建筑、资源、侦查、战斗、后勤。\n\n## 首日路线\n\n| 时间段 | 目标 | 说明 |\n| --- | --- | --- |\n| 0-30 分钟 | 完成新手引导和基础设置 | 调整画质、按键、灵敏度，确认服务器模式 |\n| 30-90 分钟 | 建立临时小家 | 睡袋、领地柜、小箱子、基础门锁优先 |\n| 90-180 分钟 | 循环一级据点 | 废弃超市、加油站、路边箱、油桶，优先废料和布料 |\n| 首日晚间 | 推进石质防御 | 木屋过渡后尽快石质墙体和双门缓冲 |\n\n## 前三天目标\n\n1. 至少完成一条稳定资源路线。\n2. 解锁基础远程武器和关键工具。\n3. 把核心区升级为石质或更高防御。\n4. 记录周边邻居、敌对队伍和高频路线。\n5. 每次出门前确认睡袋和维护资源。\n\n## 首周目标\n\n- 标准模式：建立可持续基地，开始争夺中级资源点。\n- 安全区模式：熟悉地图、科技树和资源刷新节奏。\n- 挑战模式：固定队伍优先控制视野点和撤离路线。\n- 快速对抗：用于练枪、练破门和团队沟通。\n\n## 活动优先级\n\n开服期通常会同时出现登录、预约、里程碑、抽奖、媒体礼包和平台礼包。先领永久外观、贡献点和限定奖励，再投入长线活动。不要为了活动目标把主基地暴露在高交通区域。",
+    "contentEn": "## Season Info\n\nSeason 1 is themed Landing and runs from July 9 to September 9, 2026. The launch goal is not to rush high-tier POIs immediately, but to claim rewards, learn server modes, secure a first base, and push the tech tree into a sustainable state.\n\n## Day One Route\n\n| Time | Goal | Note |\n| --- | --- | --- |\n| 0-30 min | Tutorial and settings | Tune graphics, controls, sensitivity, and server mode |\n| 30-90 min | Temporary base | Sleeping bag, territory cabinet, storage, locks |\n| 90-180 min | Low-tier POI loop | Markets, gas stations, roadside crates, barrels |\n| First night | Stone defense | Upgrade from wood to stone and add airlocks |\n\n## First Week\n\nStandard servers should focus on a sustainable base and mid-tier POIs. Safe-zone players should learn map flow and tech progression. Challenge squads should control scouting routes and escape paths.",
+    "contentJa": "## シーズン情報\n\nS1「上陸」は2026年7月9日から2026年9月9日までの予定です。初日は高ランク拠点へ急ぐより、報酬受け取り、モード確認、初期拠点、技術ツリーの安定化を優先しましょう。\n\n## 初日の目標\n\n設定調整、寝袋と領地キャビネットの設置、低リスク拠点の周回、木造から石造への防衛強化を進めます。",
+    "tags": ["S1", "开服", "赛季"],
+    "faq": [
+      {
+        "question": "What should I do first on launch day?",
+        "questionZh": "开服第一天最优先做什么？",
+        "answer": "Claim official rewards, place a sleeping bag and territory cabinet, then run low-tier POIs for scrap and cloth before pushing dangerous areas.",
+        "answerZh": "先领取官方福利，放睡袋和领地柜，再循环低级据点拿废料和布料，不要一开始冲高危区。"
+      }
+    ]
+  },
+  {
+    "id": "gene-build-comparison",
+    "title": "四大基因流派实战效果对比",
+    "titleEn": "Four Gene Builds Combat Comparison",
+    "titleJa": "4大遺伝子ビルド実戦比較",
+    "category": "systems",
+    "categoryZh": "系统机制",
+    "categoryEn": "Systems",
+    "categoryJa": "システム",
+    "summary": "从生存、爆发、机动、资源消耗、开荒友好度和团战定位对比四套基因搭配。",
+    "summaryEn": "Compare four gene builds by survival, burst, mobility, resource cost, beginner friendliness, and team role.",
+    "summaryJa": "4つの遺伝子ビルドを生存、火力、機動、資源消費、初心者適性、チーム役割で比較します。",
+    "content": "## 多维对比表\n\n| 维度 | 重装壁垒流 | 迅捷狙击流 | 植型自愈流 | 机械异能流 |\n| --- | --- | --- | --- | --- |\n| 生存能力 | ★★★★★ 硬吃伤害 | ★★ 靠走位 | ★★★★ 续航强 | ★★★★ 护盾和免疫 |\n| 爆发输出 | ★★★ 近战稳定 | ★★★★★ 远程爆头 | ★ 几乎无爆发 | ★★★★ AOE 强 |\n| 机动灵活 | ★★ 偏笨重 | ★★★★★ 高移速 | ★★★ 偏蹲守 | ★★★ 中等 |\n| 资源消耗 | 高，修甲补药多 | 中，弹药消耗大 | 极低，自给自足 | 极高，稀有碎片 |\n| 开荒友好 | 中，需要装备 | 低，依赖准度 | ★★★★★ 新手推荐 | 低，后期成型 |\n| 团战定位 | 前排破门/承伤 | 后排输出/侦查 | 后勤采集/隐蔽修补 | AOE/控场核心 |\n\n## 前期：植型自愈优先\n\n0-10 小时的目标是活着把废料、木材、石头带回家。植型自愈、腐食消化、伪装色能降低补给压力，减少回家频率，是最适合新手和独狼的起步方案。\n\n## 中期：按队伍缺口补位\n\n有基础武装后，小队需要明确角色：缺前排就补重装，缺输出就补狙击，缺后勤就保留植型自愈。三人队推荐 1 重装 + 1 狙击 + 1 植型后勤。\n\n## 后期：机械型改变战场\n\n机械异能流成本最高，但能量护盾、无呼吸和能量脉冲适合辐射区、高价值据点、多队混战。它不适合第一天强追，但适合作为 S1 中后期目标。\n\n## 嵌合注意事项\n\n- 不要把所有强基因都硬塞进同一套，槽位有限。\n- 对立特性会互相挤占收益，例如极致爆发和极致自愈通常不能同时吃满。\n- 突变代价要看清楚：抗性、修复速度、失败率、硬直抗性都可能互相影响。\n- 建议保留一套通用生存基因链：抗寒、耐毒、夜视或环境适应，用于天气和昼夜切换。",
+    "contentEn": "## Comparison Table\n\n| Dimension | Heavy Bulwark | Swift Sniper | Plant Self-Heal | Mechanical Caster |\n| --- | --- | --- | --- | --- |\n| Survival | 5/5, absorbs damage | 2/5, relies on movement | 4/5, strong sustain | 4/5, shields and immunity |\n| Burst | 3/5 melee pressure | 5/5 ranged headshots | 1/5 low burst | 4/5 AOE pressure |\n| Mobility | 2/5 heavy | 5/5 very fast | 3/5 defensive | 3/5 balanced |\n| Resource Cost | High | Medium ammo cost | Very low | Very high fragments |\n| Beginner Friendly | Medium | Low | Very high | Low |\n| Team Role | Frontline raider | Scout and damage | Logistics and stealth | AOE control |\n\n## Stage Advice\n\nStart with plant self-heal during the first 0-10 hours. Midgame squads should fill missing roles with tank or sniper builds. Mechanical builds are best as late-season goals because they need rare fragments but offer shields, immunity, and AOE control.",
+    "contentJa": "## 比較表\n\n| 項目 | 重装壁塁 | 迅速狙撃 | 植物自癒 | 機械異能 |\n| --- | --- | --- | --- | --- |\n| 生存 | 5/5 | 2/5 | 4/5 | 4/5 |\n| 火力 | 3/5 | 5/5 | 1/5 | 4/5 |\n| 機動 | 2/5 | 5/5 | 3/5 | 3/5 |\n| 資源消費 | 高 | 中 | 低 | 非常に高い |\n| 初心者適性 | 中 | 低 | 高 | 低 |\n\n序盤は植物自癒が最も安定します。中盤はチームの不足役割に合わせ、後半は機械型で高価値エリアや大規模戦に対応しましょう。",
+    "tags": ["基因", "对比", "团战"],
+    "faq": [
+      {
+        "question": "Should I rush mechanical genes early?",
+        "questionZh": "前期要不要强追机械型基因？",
+        "answer": "Usually no. Mechanical builds have high late-game value but need rare fragments. Beginners should first secure survival and resource routes.",
+        "answerZh": "通常不建议。机械型后期上限高，但稀有碎片成本大。新手应先保证生存和资源路线。"
+      }
+    ]
+  },
+  {
+    "id": "launch-rewards-complete",
+    "title": "公测福利活动完整领取指南",
+    "titleEn": "Complete Launch Rewards Claim Guide",
+    "titleJa": "リリース報酬完全受け取りガイド",
+    "category": "rewards",
+    "categoryZh": "福利活动",
+    "categoryEn": "Rewards",
+    "categoryJa": "報酬",
+    "summary": "整合预约里程碑、个人预约、绑定礼、抽奖任务、开服登录、S1 活动和后续联动预告。",
+    "summaryEn": "Reservation milestones, personal rewards, binding rewards, lottery tasks, login bonuses, Season 1 events, and collaboration teasers.",
+    "summaryJa": "事前登録、個人報酬、連携報酬、抽選、ログイン、S1イベント、コラボ予定を整理します。",
+    "content": "## 活动总览\n\n《失控进化》公测前后福利可以分成五类：定档预约礼、个人绑定礼、开荒抽取物资礼包、开服登录福利、S1 赛季活动。官网活动时间为 2026 年 5 月 27 日 10:00 至 2026 年 7 月 8 日 23:59，预约和绑定奖励会在 7 月 9 日上线后按规则发放。\n\n## 预约里程碑奖励\n\n| 预约人数 | 奖励 | 领取判断 |\n| --- | --- | --- |\n| 500 万 | 登岛行动·头像框 ×1 | 已达成 |\n| 1000 万 | 登岛行动·名片 ×1 | 已达成 |\n| 2000 万 | 贡献点 ×168 | 已达成 |\n| 3000 万 | 贡献点 ×288 | 已达成 |\n| 4000 万 | 登岛行动·步枪外观 ×1 | 已达成 |\n\n官网页面显示已预约 40,000,000 人，因此里程碑档位已全部解锁。\n\n## 个人预约与绑定奖励\n\n| 类型 | 奖励 | 说明 |\n| --- | --- | --- |\n| 个人预约 | 登岛行动·M39 步枪外观 | 预约后上线领取 |\n| 个人预约 | 渗透者·头像 | 预约后上线领取 |\n| 个人预约 | 贡献点 ×388 | 预约后上线领取 |\n| 绑定手机号 | 贡献点 ×188 | 绑定后上线领取 |\n\n官网说明奖励会在游戏上线后自动发送至游戏邮箱内。建议开服后先检查邮箱，再确认活动页面是否有额外领取按钮。\n\n## 开荒抽取物资礼包\n\n每完成 1 项任务可获得 1 次抽奖次数，最多 6 次。任务包括预约游戏、绑定手机号、邀请 1/2/3 位好友预约、关注官方账号。奖池包含显卡、京东卡、周边小黄玩偶、周边 T 恤和谢谢参与。\n\n| 奖励 | 公示概率 |\n| --- | --- |\n| 技嘉雪鹰 5070 OC 12G 显卡 | 0.001% |\n| 100 元京东卡 | 0.03% |\n| 50 元京东卡 | 0.08% |\n| 周边小黄玩偶 | 0.03% |\n| 周边 T 恤 | 0.03% |\n| 谢谢参与 | 99.829% |\n\n实物和卡券按官网规则在活动结束后 60 个工作日内发放。中奖后务必填写正确收货信息，漏填或错填可能视为放弃。\n\n## 开服登录与 S1 活动\n\n元宝整理的开服福利还包括 4 套时装、30+ 限定外观、武器/建筑皮肤/名片、蓝战非联动时装、AK47 皮肤。S1 活动包括登岛淘金、大铁球挑战、渗透补给，相关奖励包含蓝猎弓、路标护甲等。\n\n## 联动预告\n\n后续联动预告包括《少女前线2:追放》《三体》《潜水员戴夫》《漫威》等 IP。联动通常会分批开放，建议优先领取限时外观和不可复刻纪念奖励。\n\n## 领取顺序建议\n\n1. 公测前完成预约和手机号绑定。\n2. 7 月 9 日开服后先登录游戏，检查邮箱奖励。\n3. 回到官网活动页确认预约礼、绑定礼是否到账。\n4. 完成抽奖任务并截图保存中奖记录。\n5. 关注 S1 活动入口，优先拿限时外观、贡献点和武器皮肤。\n6. 兑换码若后续公开，再到兑换码页统一补领。",
+    "contentEn": "## Overview\n\nLaunch rewards are split into reservation milestones, personal reservation rewards, phone binding rewards, lottery tasks, login bonuses, and Season 1 events. The official event runs from May 27, 2026 at 10:00 to July 8, 2026 at 23:59, with rewards distributed after launch on July 9.\n\n## Milestones\n\n| Reservations | Reward | Status |\n| --- | --- | --- |\n| 5M | Landing Operation avatar frame | Unlocked |\n| 10M | Landing Operation name card | Unlocked |\n| 20M | Contribution Points x168 | Unlocked |\n| 30M | Contribution Points x288 | Unlocked |\n| 40M | Landing Operation rifle skin | Unlocked |\n\nThe official page shows 40,000,000 reservations, so all milestone tiers are unlocked.\n\n## Personal and Binding Rewards\n\nPersonal reservation rewards include the Landing Operation M39 rifle skin, Infiltrator avatar, and Contribution Points x388. Phone binding grants Contribution Points x188. The official page states rewards will be sent to in-game mail after launch.\n\n## Lottery Tasks\n\nPlayers can gain up to six lottery attempts by reserving, binding a phone number, inviting friends, and following official accounts. Public probabilities include 0.001% for a Gigabyte 5070 OC 12G GPU, 0.03% for a 100 RMB JD card, 0.08% for a 50 RMB JD card, 0.03% for plush merchandise, 0.03% for T-shirt merchandise, and 99.829% for no prize.\n\n## Season 1 Events\n\nLaunch bonuses and Season 1 events include outfits, limited cosmetics, weapon and building skins, name cards, Landing Gold Rush, Wrecking Ball Challenge, and Infiltration Supplies. Collaboration teasers include Girls' Frontline 2, The Three-Body Problem, Dave the Diver, and Marvel.",
+    "contentJa": "## 概要\n\nリリース報酬は事前登録マイルストーン、個人予約、電話番号連携、抽選タスク、ログイン報酬、S1イベントに分かれます。公式イベント期間は2026年5月27日10:00から2026年7月8日23:59までです。\n\n## 主な報酬\n\n4000万人予約マイルストーンまで解放済みで、M39ライフル外観、アバター、貢献ポイント、歩枪外観などが含まれます。報酬はリリース後にゲーム内メールで配布される予定です。",
+    "tags": ["福利", "预约", "抽奖"],
+    "faq": [
+      {
+        "question": "Where are launch rewards delivered?",
+        "questionZh": "公测奖励发到哪里？",
+        "answer": "The official site states that launch rewards are automatically sent to in-game mail after the game goes live.",
+        "answerZh": "官网说明游戏上线后奖励会自动发送至游戏邮箱内。"
+      }
+    ]
+  },
+  {
+    "id": "tech-tree-route",
+    "title": "四大科技树路线与解锁优先级",
+    "titleEn": "Four Tech Trees and Unlock Priority",
+    "titleJa": "4大技術ツリーと解放優先度",
+    "category": "systems",
+    "categoryZh": "系统机制",
+    "categoryEn": "Systems",
+    "categoryJa": "システム",
+    "summary": "拆解战斗、建筑、生存、电力四条科技线，并给出独狼、双人队和小队的解锁顺序。",
+    "summaryEn": "Combat, building, survival, and electricity tech paths with solo, duo, and squad unlock priorities.",
+    "summaryJa": "戦闘、建築、生存、電力の技術ツリーとソロ、デュオ、チーム別の優先度。",
+    "content": "## 科技树总览\n\n《失控进化》的科技推进可以按四条线理解：战斗科技、建筑科技、生存科技、电力科技。废料是解锁核心，木材、石头、金属碎片和组件决定落地速度。\n\n| 科技线 | 早期目标 | 中期目标 | 后期目标 |\n| --- | --- | --- | --- |\n| 战斗科技 | 木矛、猎弓、废料冲锋枪 | 半自动步枪、弹药稳定产出 | AK-47、火箭弹、抄家火力 |\n| 建筑科技 | 木屋、门锁、领地柜 | 石质工事、金属门、双门缓冲 | 混凝土防御、复合墙、诱导通道 |\n| 生存科技 | 绷带、睡袋、露水收集器 | 种植箱、防寒/防辐射服 | 稳定农场、极端环境套装 |\n| 电力科技 | 基础照明、简单线路 | 太阳能/风力/燃油发电 | 自动化烧矿、储能、防御联动 |\n\n## 独狼优先级\n\n独狼最怕死后断节奏，因此优先级是生存 > 建筑 > 战斗 > 电力。\n\n1. 睡袋、绷带、露水收集器。\n2. 领地柜、石墙、门锁和小型储物。\n3. 猎弓或基础枪械。\n4. 简单电力和烧矿自动化。\n\n独狼不要过早追火箭弹和大规模抄家科技。高价值科技会吸引邻居注意，先保证隐藏和撤离路线。\n\n## 双人队优先级\n\n双人队可以分工：一人保建筑和维护，一人推战斗与资源路线。\n\n- 第 1 天：石质核心区、双门缓冲、猎弓/冲锋枪。\n- 第 2-3 天：半自动步枪、金属门、稳定熔炼。\n- 第 4 天后：电力、自动化烧矿、外墙和反抄家设计。\n\n## 三人以上小队优先级\n\n多人队伍可以更早推进战斗科技，但不要忽略后勤。\n\n| 队内角色 | 优先科技 | 目标 |\n| --- | --- | --- |\n| 建筑位 | 建筑科技、电力科技 | 房型、防御、维护、自动化 |\n| 资源位 | 生存科技、采集工具 | 木石矿、废料循环、食物水源 |\n| 战斗位 | 战斗科技 | 护送、据点争夺、守家 |\n| 侦查位 | 生存/机动相关科技 | 路线观察、敌情预警、撤离指挥 |\n\n## 解锁误区\n\n- 只点武器不点建筑，会变成有枪没家。\n- 只点建筑不点生存，会被代谢和跑图拖慢。\n- 电力科技过早投入会消耗大量组件，前期收益不如石墙和金属门直接。\n- 抄家科技需要稳定团队和补给，独狼强追风险很高。",
+    "contentEn": "## Overview\n\nTech progression can be understood through four lines: combat, building, survival, and electricity. Scrap drives unlocks, while wood, stone, metal fragments, and components determine execution speed.\n\n| Tech Line | Early | Mid | Late |\n| --- | --- | --- | --- |\n| Combat | Spear, bow, scrap SMG | Semi-auto rifle, ammo production | AK-47, rockets, raid firepower |\n| Building | Wood base, locks, cabinet | Stone defenses, metal doors, airlocks | Concrete defense and raid funnels |\n| Survival | Bandages, sleeping bags, dew collector | Planters, cold/radiation protection | Farms and extreme-environment kits |\n| Electricity | Basic lighting | Solar/wind/fuel generation | Automated smelting, batteries, defense links |\n\nSolo players should prioritize survival, then building, then combat, then electricity. Duos can split building and combat. Squads can push combat earlier but must keep logistics stable.",
+    "contentJa": "## 概要\n\n技術ツリーは戦闘、建築、生存、電力の4系統で考えると分かりやすいです。スクラップが解放の中心で、木材、石、金属片、部品が進行速度を決めます。\n\nソロは生存、建築、戦闘、電力の順が安定します。デュオは建築役と戦闘役を分担し、チームは戦闘を早めに進めつつ後勤を維持しましょう。",
+    "tags": ["科技树", "废料", "解锁"],
+    "faq": [
+      {
+        "question": "Which tech tree should solo players unlock first?",
+        "questionZh": "独狼先点哪条科技树？",
+        "answer": "Solo players should prioritize survival and building first: sleeping bags, bandages, water, territory cabinet, stone walls, locks, and storage.",
+        "answerZh": "独狼优先生存和建筑：睡袋、绷带、水源、领地柜、石墙、门锁和储物。"
+      }
+    ]
+  },
+  {
+    "id": "safe-zone-mode",
+    "title": "安全区模式攻略：低风险开荒路线",
+    "titleEn": "Safe Zone Mode Guide: Low-Risk Progression",
+    "titleJa": "安全区モード攻略：低リスク開荒",
+    "category": "modes",
+    "categoryZh": "玩法模式",
+    "categoryEn": "Modes",
+    "categoryJa": "モード",
+    "summary": "适合纯新手和探索党的安全区模式玩法，重点是低风险资源、地图熟悉和科技树入门。",
+    "summaryEn": "A low-risk route for new players and explorers focusing on resources, map learning, and tech basics.",
+    "summaryJa": "初心者と探索向けの低リスク資源、マップ理解、技術入門ルート。",
+    "content": "## 模式定位\n\n安全区模式适合第一次接触《失控进化》的玩家。它通过安危区分层降低前期被高强度 PVP 打断的概率，让新手有时间理解采集、建家、科技树和代谢系统。\n\n## 核心特点\n\n- 以约 10 天周期划分安全区和危险区。\n- 资源风险梯度更清晰，适合从低级据点开始摸路线。\n- 死亡惩罚较低，通常只掉部分背包或降低损失范围。\n- 适合练习基地选址、领地柜维护和资源循环。\n\n## 推荐路线\n\n1. 出生后先远离高人流路线。\n2. 建立小型临时家，放睡袋和领地柜。\n3. 循环废弃超市、加油站、路边箱和油桶。\n4. 把科技树推到基础工具、猎弓、石质防御。\n5. 熟悉危险区边界后，再组队进入高价值资源点。\n\n## 常见错误\n\n安全区不等于绝对安全。不要把所有资源堆在一个箱子里，也不要把家建在道路边或据点门口。低风险模式的目标是学习系统，不是无脑囤物资。",
+    "contentEn": "Safe Zone Mode is the best first stop for new players. It uses layered safe and dangerous zones to reduce early PvP pressure, giving players time to learn gathering, base building, tech unlocks, and metabolism.\n\nStart with a small base, sleeping bag, and territory cabinet. Loop low-tier markets, gas stations, roadside crates, and barrels. Push basic tools, bow, and stone defenses before entering high-value danger zones.",
+    "contentJa": "安全区モードは初心者向けです。安全区と危険区の段階により序盤PVPの圧力が下がり、採集、拠点、技術、代謝システムを学びやすくなります。",
+    "tags": ["安全区", "新手", "开荒"],
+    "faq": [
+      {
+        "question": "Is Safe Zone Mode fully safe?",
+        "questionZh": "安全区模式是不是完全安全？",
+        "answer": "No. It lowers risk but does not remove survival pressure. You still need bags, upkeep, and careful storage.",
+        "answerZh": "不是。它降低风险，但不会取消生存压力。睡袋、维护和分散储物仍然很重要。"
+      }
+    ]
+  },
+  {
+    "id": "standard-mode",
+    "title": "标准模式攻略：独狼与小队的完整生存体验",
+    "titleEn": "Standard Mode Guide: Full Survival for Solo and Squads",
+    "titleJa": "標準モード攻略：ソロとチームの本格サバイバル",
+    "category": "modes",
+    "categoryZh": "玩法模式",
+    "categoryEn": "Modes",
+    "categoryJa": "モード",
+    "summary": "标准模式接近完整 Rust 式生存节奏，适合多数玩家作为长期主模式。",
+    "summaryEn": "Standard Mode delivers the full Rust-style survival loop and is the best long-term default for most players.",
+    "summaryJa": "標準モードはRust式の本格サバイバルに近く、多くのプレイヤーのメインモードに向きます。",
+    "content": "## 模式定位\n\n标准模式是最适合长期投入的主模式。它保留搜刮、建家、科技树、领地攻防和自由 PVP 的完整循环，同时风险低于挑战模式。\n\n## 惩罚与风险\n\n元宝素材中提到标准模式的抄家惩罚为中等，领地柜相关损失约 50%，残骸存续约 12 小时。实际规则以游戏内版本为准，但可以确定的是：标准模式需要认真对待基地防御和资源分仓。\n\n## 独狼玩法\n\n独狼要避免正面卷资源。核心策略是低曝光、短路线、多睡袋、小仓库。不要把家建在高级据点门口，也不要在同一路线反复死亡。\n\n## 小队玩法\n\n小队建议明确分工：建筑位负责房型和维护，资源位跑木石矿和废料，战斗位护送与守家，侦查位记录周边敌人。语音沟通比单纯枪法更重要。\n\n## 标准模式日程\n\n- 第 1 天：睡袋、领地柜、石质核心、基础远程武器。\n- 第 2-3 天：稳定废料路线、半自动武器、金属门。\n- 第 4 天后：外墙、防御通道、电力、反抄家设计。\n\n## 胜负关键\n\n标准模式不是谁在线时间最长谁赢，而是谁能把资源带回家、把家守住、把风险控制在可接受范围内。",
+    "contentEn": "Standard Mode is the best long-term default. It keeps the full loop of looting, base building, tech progression, territory warfare, and free PvP while being less punishing than challenge servers.\n\nSolo players should use low-profile bases, short routes, multiple bags, and split storage. Squads should define builder, resource runner, fighter, and scout roles.",
+    "contentJa": "標準モードは長期プレイ向けのメインモードです。探索、拠点、技術、領地攻防、自由PVPの循環を保ちつつ、挑戦モードよりリスクは低めです。",
+    "tags": ["标准模式", "独狼", "小队"],
+    "faq": [
+      {
+        "question": "Is Standard Mode good for solo players?",
+        "questionZh": "标准模式适合独狼吗？",
+        "answer": "Yes, but solo players need low-profile bases, short routes, multiple bags, and split storage to reduce raid losses.",
+        "answerZh": "适合，但独狼需要低曝光建家、短路线、多睡袋和分仓储物来降低损失。"
+      }
+    ]
+  },
+  {
+    "id": "challenge-mode",
+    "title": "进阶挑战模式攻略：高风险服务器生存法则",
+    "titleEn": "Challenge Mode Guide: Surviving High-Risk Servers",
+    "titleJa": "挑戦モード攻略：高リスクサーバーの生存法則",
+    "category": "modes",
+    "categoryZh": "玩法模式",
+    "categoryEn": "Modes",
+    "categoryJa": "モード",
+    "summary": "挑战模式资源竞争更强、保护更少，适合硬核玩家和固定队伍。",
+    "summaryEn": "Challenge Mode has stronger resource competition and fewer protections, suited for veterans and coordinated squads.",
+    "summaryJa": "挑戦モードは資源競争が激しく保護が少ないため、上級者や固定チーム向けです。",
+    "content": "## 模式定位\n\n进阶/挑战模式面向硬核玩家。它的核心不是更快发育，而是更高强度的资源竞争、更短容错、更直接的领地攻防。\n\n## 风险特点\n\n元宝素材中提到挑战模式惩罚更高，可能出现全掉、残骸存续时间短等情况。即便具体规则随版本调整，挑战模式都应按高损失环境处理。\n\n## 入场门槛\n\n进入挑战模式前，至少要熟悉：\n\n- 石质核心房和双门缓冲。\n- 废料循环路线。\n- 基础枪械和弹药生产。\n- 守家沟通和敌情报点。\n- 被抄后的快速重建流程。\n\n## 队伍策略\n\n固定队伍优先控制视野点、撤离路线和中级据点，不要盲目冲最高价值区。高价值区收益高，但会迅速暴露队伍实力和在线时间。\n\n## 不推荐人群\n\n- 第一次进游戏的新手。\n- 没有固定沟通的小队。\n- 只能碎片化上线但又想长期囤家的玩家。\n- 无法接受资源清零或基地被拆的玩家。",
+    "contentEn": "Challenge Mode is for veterans and coordinated squads. It features stronger resource competition, fewer protections, and lower tolerance for mistakes. Enter only after learning stone core bases, airlocks, scrap loops, basic firearms, defense calls, and rebuilding after raids.",
+    "contentJa": "挑戦モードは上級者と固定チーム向けです。資源競争が激しく、ミスの許容度が低いため、石造拠点、資源ルート、基本銃器、守家連携を理解してから入りましょう。",
+    "tags": ["挑战模式", "高风险", "硬核"],
+    "faq": [
+      {
+        "question": "Should beginners play Challenge Mode?",
+        "questionZh": "新手适合挑战模式吗？",
+        "answer": "Not at first. Learn safe-zone or standard mode before entering high-risk servers.",
+        "answerZh": "不建议一开始玩。先用安全区或标准模式熟悉系统，再进高风险服务器。"
+      }
+    ]
+  },
+  {
+    "id": "quick-fight-mode",
+    "title": "快速对抗模式攻略：15 分钟领地攻防练习",
+    "titleEn": "Quick Fight Mode Guide: 15-Minute Territory Warfare",
+    "titleJa": "快速対抗モード攻略：15分領地攻防",
+    "category": "modes",
+    "categoryZh": "玩法模式",
+    "categoryEn": "Modes",
+    "categoryJa": "モード",
+    "summary": "快速对抗适合碎片化时间玩家，用低资源成本练枪、练破门和练团队沟通。",
+    "summaryEn": "Quick Fight is a low-cost mode for short sessions, aim practice, breaching, and team communication.",
+    "summaryJa": "快速対抗は短時間で射撃、突破、チーム連携を練習するモードです。",
+    "content": "## 模式定位\n\n快速对抗是约 15 分钟的紧凑领地攻防模式，适合没有时间长线发育、但想练习 PVP 和抄家节奏的玩家。\n\n## 练习重点\n\n| 目标 | 练习内容 |\n| --- | --- |\n| 枪法 | 移动射击、压枪、peek、追枪 |\n| 破门 | 判断入口、集火墙体、清理转角 |\n| 守家 | 卡门、补墙、听脚步、报点 |\n| 团队沟通 | 谁开路、谁补枪、谁守后路 |\n\n## 新手用法\n\n新手不要把快速对抗当成纯娱乐乱打。每局设一个目标：练弓、练近战、练投掷物、练守门或练报点。短局多复盘，比在标准模式里带着全部家当送死更划算。\n\n## 小队用法\n\n小队可以把快速对抗当成赛前训练。正式进标准/挑战服务器前，先用 3-5 局快速对抗磨合语音、报点词和进攻顺序。\n\n## 注意事项\n\n快速对抗没有长线资源运营压力，因此不能完全代表标准模式。练完战斗后，仍要回到标准模式练资源、建筑和维护。",
+    "contentEn": "Quick Fight is a compact 15-minute territory warfare mode for players with short sessions. Use it to practice aim, breaching, defense, and communication. Set one goal per match: bow aim, melee, peeking, door control, or callouts.",
+    "contentJa": "快速対抗は約15分の領地攻防モードです。射撃、突破、守家、報告を短時間で練習できます。各試合で一つの練習目標を決めましょう。",
+    "tags": ["快速对抗", "练枪", "攻防"],
+    "faq": [
+      {
+        "question": "Does Quick Fight replace Standard Mode practice?",
+        "questionZh": "快速对抗能替代标准模式练习吗？",
+        "answer": "No. It is great for combat and communication, but standard mode is still needed for resource, base, and upkeep practice.",
+        "answerZh": "不能。它适合练战斗和沟通，但资源、建家和维护仍要在标准模式练。"
+      }
+    ]
+  },
+  {
+    "id": "training-casual-mode",
+    "title": "训练休闲模式攻略：教学、种田与低压 PVP",
+    "titleEn": "Training and Casual Mode Guide",
+    "titleJa": "訓練・カジュアルモード攻略",
+    "category": "modes",
+    "categoryZh": "玩法模式",
+    "categoryEn": "Modes",
+    "categoryJa": "モード",
+    "summary": "训练/休闲模式适合教学、种植经营、低压 PVP 和熟悉系统。",
+    "summaryEn": "Training and Casual Mode is for tutorials, farming, low-pressure PvP, and system learning.",
+    "summaryJa": "訓練・カジュアルモードはチュートリアル、農業、低圧PVP、システム理解向けです。",
+    "content": "## 模式定位\n\n训练/休闲模式适合完全新手、休闲种田玩家、设备测试玩家和想带朋友入坑的老玩家。它的重点不是高强度争夺，而是低压力熟悉系统。\n\n## 适合练什么\n\n- 基础采集：木材、石头、布料、废料。\n- 工具制作：石斧、石镐、木矛、猎弓。\n- 建筑练习：领地柜、睡袋、门锁、双门缓冲。\n- 生存系统：食物、水、体温、天气、辐射。\n- 种植经营：种植箱、水源、长期后勤。\n\n## 休闲玩家路线\n\n1. 建一个小而完整的教学房。\n2. 练习资源分类和储物命名。\n3. 试做露水收集器和种植箱。\n4. 练习低压 PVP 和逃跑路线。\n5. 记录自己不熟悉的物品和术语，再去标准模式验证。\n\n## 带新人建议\n\n老玩家不要一上来讲太多抄家和高级科技。先让新人完成一次从采集到建家的闭环，再讲废料路线、模式风险和战斗技巧。",
+    "contentEn": "Training and Casual Mode is for total beginners, relaxed farmers, device testing, and veterans onboarding friends. Practice gathering, tools, building, survival systems, farming, and low-pressure PvP before entering standard servers.",
+    "contentJa": "訓練・カジュアルモードは初心者、農業好き、端末テスト、友人を案内する上級者向けです。採集、道具、建築、生存、農業、低圧PVPを練習しましょう。",
+    "tags": ["训练", "休闲", "种田"],
+    "faq": [
+      {
+        "question": "Who should play Training/Casual Mode?",
+        "questionZh": "谁适合训练/休闲模式？",
+        "answer": "New players, relaxed farmers, device testers, and veterans teaching friends should start here.",
+        "answerZh": "完全新手、休闲种田玩家、测试设备的玩家，以及带朋友入坑的老玩家都适合。"
+      }
+    ]
+  }
+]

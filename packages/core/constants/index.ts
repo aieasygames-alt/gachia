@@ -18,7 +18,7 @@ export const LOCALE_NAMES: Record<SupportedLocale, string> = {
 // Games Registry
 // ============================================================
 
-export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea'];
+export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'];
 
 export const GAMES: Record<GameId, GameModule> = {
   genshin: {
@@ -380,6 +380,47 @@ export const GAMES: Record<GameId, GameModule> = {
       weapons: false,
       items: true,
       'tier-list': true,
+      calculator: false,
+      map: false,
+      guides: true,
+      build: false,
+      compare: false,
+      teams: false,
+      'redeem-codes': true,
+    },
+  },
+  skjh: {
+    id: 'skjh',
+    name: { zh: '失控进化', en: 'Ashfall Evolution', ja: '失控進化' },
+    theme: {
+      primary: '#f97316',
+      accent: '#22c55e',
+      background: '#10140f',
+      surface: '#1c2419',
+    },
+    elements: [
+      { id: 'survival', name: { zh: '生存', en: 'Survival', ja: '生存' }, color: '#22c55e' },
+      { id: 'combat', name: { zh: '战斗', en: 'Combat', ja: '戦闘' }, color: '#ef4444' },
+      { id: 'building', name: { zh: '建筑', en: 'Building', ja: '建築' }, color: '#f97316' },
+      { id: 'electricity', name: { zh: '电力', en: 'Electricity', ja: '電力' }, color: '#eab308' },
+      { id: 'gene', name: { zh: '基因', en: 'Gene', ja: '遺伝子' }, color: '#8b5cf6' },
+    ],
+    rarities: [
+      { stars: 4, color: '#f97316', label: { zh: '稀有', en: 'Rare', ja: 'レア' } },
+      { stars: 3, color: '#60a5fa', label: { zh: '精良', en: 'Uncommon', ja: 'アンコモン' } },
+      { stars: 2, color: '#4ade80', label: { zh: '常用', en: 'Common', ja: 'コモン' } },
+      { stars: 1, color: '#9ca3af', label: { zh: '基础', en: 'Basic', ja: '基本' } },
+    ],
+    stats: {
+      baseStats: ['hp', 'hunger', 'thirst'],
+      subStats: ['temperature', 'radiation', 'stamina', 'upkeep'],
+      specialStats: ['radiation', 'upkeep'],
+    },
+    routes: {
+      characters: false,
+      weapons: true,
+      items: true,
+      'tier-list': false,
       calculator: false,
       map: false,
       guides: true,

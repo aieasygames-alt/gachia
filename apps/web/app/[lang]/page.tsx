@@ -35,6 +35,7 @@ const FEATURED: Record<string, string[]> = {
   ananta: [], // too few characters, skip
   endfield: ['laevatain', 'ardelia', 'tangtang', 'endministrator', 'lifeng'],
   sea: ['traveler', 'ais', 'little-axe', 'molly'],
+  skjh: [],
 };
 
 // --- Image URL helpers per game ---
@@ -116,9 +117,9 @@ function getFeaturedChars(gameId: string, locale: SupportedLocale): CharAccessor
 }
 
 const DESCRIPTIONS: Record<string, string> = {
-  zh: '一站式二次元开放世界游戏数据库，覆盖原神、崩铁、鸣潮、异环、绝区零、归环、遗忘之海等游戏的角色图鉴、武器数据、攻略百科。',
-  en: 'Multi-game open world wiki covering Genshin Impact, Honkai: Star Rail, Wuthering Waves, Neverness to Everness, Zenless Zone Zero, Guihuan, and Sea of Remnants.',
-  ja: '原神・スターレイル・鳴潮・NTE・ゼンレスゾーンゼロ・帰環・シー・オブ・レムナンツなど、マルチゲームのオープンワールドWikiデータベース。',
+  zh: '一站式开放世界游戏数据库，覆盖原神、崩铁、鸣潮、异环、绝区零、归环、遗忘之海、失控进化等游戏的角色图鉴、武器数据、攻略百科。',
+  en: 'Multi-game open world wiki covering Genshin Impact, Honkai: Star Rail, Wuthering Waves, Neverness to Everness, Zenless Zone Zero, Guihuan, Sea of Remnants, and Ashfall Evolution.',
+  ja: '原神・スターレイル・鳴潮・NTE・ゼンレスゾーンゼロ・帰環・シー・オブ・レムナンツ・失控進化など、マルチゲームのオープンワールドWikiデータベース。',
 };
 
 export async function generateMetadata({

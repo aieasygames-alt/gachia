@@ -692,6 +692,48 @@ export type {
 
 export type { SeaGuide, SeaGuideFaq } from './games/sea/guides';
 
+// ============================================================
+// 失控进化 (Ashfall Evolution) exports
+// ============================================================
+
+export { skjhCharacters } from './games/skjh/characters';
+
+export {
+  skjhGuides,
+  getSkjhGuideTitle,
+  getSkjhGuideContent,
+  getSkjhGuideSummary,
+  getSkjhGuideCategory,
+  getSkjhGuideCategories,
+  getSkjhGuidesByCategory,
+  getSkjhGuideById,
+  getSkjhGuideSlugs,
+  getSkjhGuideFaqQuestion,
+  getSkjhGuideFaqAnswer,
+  SKJH_GUIDE_CATEGORIES,
+} from './games/skjh/guides';
+
+export type { SkjhGuide, SkjhGuideFaq, SkjhMaterial, SkjhWeapon } from './games/skjh/types';
+
+export {
+  skjhMaterials,
+  getSkjhMaterialName,
+  getSkjhMaterialById,
+} from './games/skjh/items';
+
+export {
+  skjhWeapons,
+  getSkjhWeaponName,
+  getSkjhWeaponById,
+  getSkjhWeaponEffect,
+  getSkjhWeaponSource,
+} from './games/skjh/weapons';
+
+export {
+  getActiveRedeemCodes as getSkjhActiveRedeemCodes,
+  getRedeemCodeReward as getSkjhRedeemCodeReward,
+} from './games/skjh/redeem-codes';
+
 // --- Material-Character Reverse Lookup ---
 export { getCharactersNeedingMaterial, type MaterialCharacter } from './material-characters';
 
@@ -743,6 +785,10 @@ export async function getGameData(gameId: GameId): Promise<GameData> {
     }
     case 'sea': {
       const { characters, weapons, items, tierLists } = await import('./games/sea');
+      return { characters, weapons, items, tierLists };
+    }
+    case 'skjh': {
+      const { characters, weapons, items, tierLists } = await import('./games/skjh');
       return { characters, weapons, items, tierLists };
     }
   }

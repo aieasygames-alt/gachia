@@ -25,6 +25,9 @@ import {
 import {
   endfieldWeapons, getEndfieldWeaponById, getEndfieldWeaponName, getEndfieldWeaponEffect, getEndfieldWeaponSource,
 } from '@gachia/data/games/endfield/weapons';
+import {
+  skjhWeapons, getSkjhWeaponById, getSkjhWeaponName, getSkjhWeaponEffect, getSkjhWeaponSource,
+} from '@gachia/data/games/skjh/weapons';
 import { Link } from '@/lib/i18n/navigation';
 
 const RARITY_COLORS: Record<number, string> = { 1: '#9ca3af', 2: '#4ade80', 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };
@@ -64,6 +67,13 @@ const NTE_WEAPON_TYPE: Record<string, Record<string, string>> = {
   synthesis: { zh: '合成', en: 'Synthesis', ja: '合成' },
 };
 
+const SKJH_WEAPON_TYPE: Record<string, Record<string, string>> = {
+  tool: { zh: '采集工具', en: 'Tool', ja: '採集道具' },
+  melee: { zh: '近战武器', en: 'Melee', ja: '近接武器' },
+  ranged: { zh: '远程武器', en: 'Ranged', ja: '遠距離武器' },
+  skin: { zh: '外观奖励', en: 'Cosmetic', ja: '外観報酬' },
+};
+
 export async function generateStaticParams() {
   return LOCALES.flatMap((lang) => [
     ...genshinWeapons.map((w) => ({ lang, game: 'genshin', id: w.id })),
@@ -74,6 +84,7 @@ export async function generateStaticParams() {
     ...guihuanWeapons.map((w) => ({ lang, game: 'guihuan', id: w.id })),
     ...anantaWeapons.map((w) => ({ lang, game: 'ananta', id: w.id })),
     ...endfieldWeapons.map((w) => ({ lang, game: 'endfield', id: w.id })),
+    ...skjhWeapons.map((w) => ({ lang, game: 'skjh', id: w.id })),
   ]);
 }
 
@@ -236,6 +247,16 @@ export async function generateMetadata({
     const meta = buildWeaponMeta(name, effect?.description, stats);
     return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
+  if (gameId === 'skjh') {
+    const w = getSkjhWeaponById(id);
+    if (!w) return {};
+    const name = getSkjhWeaponName(w, locale);
+    const effect = getSkjhWeaponEffect(w, locale);
+    const type = SKJH_WEAPON_TYPE[w.weaponType]?.[locale] ?? w.weaponType;
+    const stats = locale === 'zh' ? `${w.rarity}★, ${type}` : `★${w.rarity}, ${type}`;
+    const meta = buildWeaponMeta(name, effect?.description, stats, true, type);
+    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+  }
   return {};
 }
 
@@ -287,6 +308,11 @@ export default async function WeaponDetailPage({
     const w = getEndfieldWeaponById(id);
     if (!w) notFound();
     return <EndfieldWeaponDetail weapon={w} locale={locale} />;
+  }
+  if (gameId === 'skjh') {
+    const w = getSkjhWeaponById(id);
+    if (!w) notFound();
+    return <SkjhWeaponDetail weapon={w} locale={locale} />;
   }
 
   if (gameId === 'sea') {
@@ -704,6 +730,55 @@ function EndfieldWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnTy
             itemListElement: [
               { '@type': 'ListItem', position: 1, name: gameName, item: `https://gachia.com/${locale}/endfield` },
               { '@type': 'ListItem', position: 2, name: locale === 'zh' ? '武器' : locale === 'ja' ? '武器' : 'Weapons', item: `https://gachia.com/${locale}/endfield/weapons` },
+              { '@type': 'ListItem', position: 3, name },
+            ],
+          }),
+        }}
+      />
+    </div>
+  );
+}
+
+/* ---------- Ashfall Evolution ---------- */
+
+function SkjhWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<typeof getSkjhWeaponById>>; locale: SupportedLocale }) {
+  const gameName = GAMES.skjh.name[locale];
+  const name = getSkjhWeaponName(weapon, locale);
+  const effect = getSkjhWeaponEffect(weapon, locale);
+  const source = getSkjhWeaponSource(weapon, locale);
+  const weaponType = SKJH_WEAPON_TYPE[weapon.weaponType]?.[locale] ?? weapon.weaponType;
+
+  return (
+    <div>
+      <Breadcrumb game="skjh" gameName={gameName} locale={locale} />
+      <Header name={name} nameAlt={locale === 'zh' ? weapon.nameEn : weapon.name} rarity={weapon.rarity} />
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <InfoCard label={locale === 'zh' ? '类型' : locale === 'ja' ? 'タイプ' : 'Type'} value={weaponType} />
+        <InfoCard label={locale === 'zh' ? '定位' : locale === 'ja' ? '役割' : 'Role'} value={effect.name} />
+        <InfoCard label={locale === 'zh' ? '稀有度' : locale === 'ja' ? 'レア度' : 'Rarity'} value={`${weapon.rarity}★`} />
+      </div>
+      {effect.name && (
+        <section className="mt-6">
+          <h2 className="mb-3 text-lg font-semibold text-game-text">
+            {locale === 'zh' ? '用途说明' : locale === 'ja' ? '用途' : 'Use Case'}
+          </h2>
+          <div className="rounded-lg border border-game-border bg-game-surface p-4">
+            <div className="mb-1 text-sm font-medium text-game-primary">{effect.name}</div>
+            <p className="text-sm text-game-text-muted">{effect.description}</p>
+          </div>
+        </section>
+      )}
+      {source && <SourceSection source={source} locale={locale} />}
+      <UsageTipsSection name={name} gameName={gameName} locale={locale} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: gameName, item: `https://gachia.com/${locale}/skjh` },
+              { '@type': 'ListItem', position: 2, name: locale === 'zh' ? '武器' : locale === 'ja' ? '武器' : 'Weapons', item: `https://gachia.com/${locale}/skjh/weapons` },
               { '@type': 'ListItem', position: 3, name },
             ],
           }),

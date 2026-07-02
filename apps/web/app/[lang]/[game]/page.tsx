@@ -20,6 +20,7 @@ import { endfieldCharacters, getEndfieldCharacterName, getEndfieldCharacterImage
 import { endfieldGuides, getEndfieldGuideTitle, getEndfieldGuideSummary } from '@gachia/data/games/endfield/guides';
 import { seaCharacters, getSeaCharacterName, getSeaCharacterImage } from '@gachia/data/games/sea/characters';
 import { seaGuides, getSeaGuideTitle, getSeaGuideSummary } from '@gachia/data/games/sea/guides';
+import { skjhGuides, getSkjhGuideTitle, getSkjhGuideSummary } from '@gachia/data/games/skjh/guides';
 import Image from 'next/image';
 import zhMessages from '@/messages/zh.json';
 import enMessages from '@/messages/en.json';
@@ -82,6 +83,11 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     en: 'Sea of Remnants is an ocean adventure open-world RPG by NetEase Joker Studio. PC open beta is scheduled for July 9, 2026, with mobile launching later in July. Gachia tracks crews, fleets, version news, launch rewards, and beginner guides.',
     ja: 'シー・オブ・レムナンツはNetEase Joker Studioの海洋アドベンチャーオープンワールドRPG。人形の船長として海の冒険に出よう。',
   },
+  skjh: {
+    zh: '失控进化是腾讯游戏发行、无端科技研发，并获得 Rust 正版玩法授权的开放世界多人生存对抗游戏。Gachia整理公测时间、开荒路线、基地建设、资源科技树、基因流派、武器和福利活动。',
+    en: 'Ashfall Evolution is an open-world multiplayer survival game published by Tencent Games and developed by Wuduan Technology with officially licensed Rust-style gameplay. Gachia tracks launch timing, beginner routes, base building, resources, gene builds, weapons, and rewards.',
+    ja: '失控進化はTencent Games配信、無端科技開発、Rust正式ライセンス玩法のオープンワールド型マルチプレイサバイバル対戦ゲームです。Gachiaでは開荒、拠点建築、資源、遺伝子ビルド、報酬を整理します。',
+  },
 };
 
 // SEO-rich about paragraphs per game per locale
@@ -131,6 +137,11 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
     en: 'Sea of Remnants is a stylized ocean adventure RPG with turn-based combat, real-time naval battles, and Roguelite Remnant Journey runs. PC open beta is scheduled for July 9, 2026, with mobile expected later in July. Launch-month coverage includes White Sand Sea, Bridge Sea, the late-July Hidden Sea, crews such as Molly, Heige, Gail, and Edward, plus Memory Reunion, Orbtopia endings, the server-wide trade market, Nightmare Dive, and Maelstrom systems. Gachia tracks version logs, codes, crews, bosses, builds, and sea-region routes.',
     ja: 'ターン制バトルとリアルタイム海戦を特徴とする海洋アドベンチャーRPG。記憶を失った人形の船長となり、300以上の個性的な仲間と共に伝説のシー・オブ・レムナンツを探そう。',
   },
+  skjh: {
+    zh: '《失控进化》是一款开放世界硬核生存对抗游戏，玩家在荒岛中从徒手采集开始，逐步完成工具制作、武器锻造、庇护所搭建、科技树解锁和领地攻防。游戏强调搜打拆、基地运营、动态天气、饥饿口渴等代谢压力，以及不同服务器模式下的风险选择。Gachia 将优先整理新手 0-10 分钟开荒、基地选址、领地柜维护、资源优先级、基因流派搭配、武器图鉴和公测预约福利。',
+    en: 'Ashfall Evolution is a hardcore open-world survival PvP game where players start from bare-handed gathering, then craft tools, forge weapons, build shelters, unlock technology, and fight over territory. The game emphasizes looting, fighting, raiding, base upkeep, dynamic weather, hunger and thirst pressure, and risk choices across server modes. Gachia covers beginner routes, territory cabinets, resource priorities, gene builds, weapons, and launch rewards.',
+    ja: '『失控進化』は、採集、道具作成、武器製作、拠点建築、技術解放、領地攻防を中心にしたハードコアなオープンワールドサバイバル対戦ゲームです。Gachiaでは初心者ルート、領地キャビネット、資源優先度、遺伝子ビルド、武器、リリース報酬を整理します。',
+  },
 };
 
 // --- Featured character IDs per game ---
@@ -144,6 +155,7 @@ const FEATURED_CHARS: Record<string, string[]> = {
   ananta: [],
   endfield: ['laevatain', 'ardelia', 'tangtang', 'endministrator', 'lifeng'],
   sea: ['traveler', 'ais', 'little-axe', 'molly', 'heige', 'gail', 'edward'],
+  skjh: [],
 };
 
 // --- Route icons ---
@@ -222,6 +234,8 @@ function getGuideInfos(gameId: string, locale: SupportedLocale): GuideInfo[] {
       return endfieldGuides.slice(0, 3).map(g => ({ id: g.id, title: getEndfieldGuideTitle(g, locale), summary: getEndfieldGuideSummary(g, locale) }));
     case 'sea':
       return seaGuides.slice(0, 3).map(g => ({ id: g.id, title: getSeaGuideTitle(g, locale), summary: getSeaGuideSummary(g, locale) }));
+    case 'skjh':
+      return skjhGuides.slice(0, 3).map(g => ({ id: g.id, title: getSkjhGuideTitle(g, locale), summary: getSkjhGuideSummary(g, locale) }));
     default:
       return [];
   }

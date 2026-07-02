@@ -9,6 +9,7 @@ import { anantaMaterials, getAnantaMaterialName } from '@gachia/data/games/anant
 import { guihuanMaterials, getGuihuanMaterialName } from '@gachia/data/games/guihuan/items';
 import { endfieldMaterials, getEndfieldMaterialName } from '@gachia/data/games/endfield/items';
 import { seaMaterials, getSeaMaterialName } from '@gachia/data/games/sea/items';
+import { skjhMaterials, getSkjhMaterialName } from '@gachia/data/games/skjh/items';
 import { gearSets, getGearSetName, getGearSetEffect } from '@gachia/data/games/endfield/gear-sets';
 import { Link } from '@/lib/i18n/navigation';
 
@@ -23,6 +24,7 @@ const ITEM_DESC: Record<string, Record<string, string>> = {
   guihuan: { zh: '归环全材料图鉴，包含使灵突破、元素突破、Boss材料等', en: 'Complete Guihuan material list with spirit ascension, element ascension, and boss materials', ja: '帰環全素材図鑑、スピリット昇格、元素昇格、ボス素材' },
   ananta: { zh: '无限大全材料图鉴，包含突破材料、Boss材料、区域特产等', en: 'Complete Ananta material list with ascension, boss materials, and local specialties', ja: 'アナンタ全素材図鑑、昇格素材、ボス素材、地域特産品' },
   endfield: { zh: '明日方舟：终末地全材料图鉴，包含突破材料、技能材料、货币等', en: 'Complete Arknights: Endfield material list with ascension, skill, and currency materials', ja: 'アークナイツ：エンドフィールド全素材図鑑、昇格素材、スキル素材、通貨' },
+  skjh: { zh: '失控进化资源道具图鉴，包含废料、布料、木石金属、领地柜、睡袋和公测奖励', en: 'Ashfall Evolution resource and item list with scrap, cloth, wood, stone, metal, territory cabinet, sleeping bag, and launch rewards', ja: '失控進化の資源・アイテム一覧。スクラップ、布、木石金属、領地キャビネット、寝袋、報酬を掲載' },
 };
 
 const NTE_TYPE_LABELS: Record<string, Record<string, string>> = {
@@ -135,6 +137,10 @@ export default async function ItemsPage({
 
   if (gameId === 'sea') {
     return <><SeaItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+  }
+
+  if (gameId === 'skjh') {
+    return <><SkjhItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   return (
@@ -609,6 +615,54 @@ const SEA_TYPE_LABELS: Record<string, Record<string, string>> = {
   consumable: { zh: '消耗品', en: 'Consumable', ja: '消耗品' },
   fragment: { zh: '碎片 / 记忆', en: 'Fragment / Memory', ja: '欠片 / 記憶' },
 };
+
+const SKJH_TYPE_LABELS: Record<string, Record<string, string>> = {
+  resource: { zh: '生存资源', en: 'Survival Resource', ja: '生存資源' },
+  base: { zh: '基地设施', en: 'Base Facility', ja: '拠点設備' },
+  reward: { zh: '福利奖励', en: 'Reward', ja: '報酬' },
+};
+
+function SkjhItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
+  const materials = skjhMaterials;
+  const grouped = groupByType(materials);
+  const typeOrder = ['resource', 'base', 'reward'];
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.skjh.theme.primary }}>
+        {CATEGORY_LABELS.items?.[locale] ?? 'Items'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? `共 ${materials.length} 种资源道具` : locale === 'ja' ? `${materials.length} 種の資源・アイテム` : `${materials.length} resources and items`}
+      </p>
+
+      {typeOrder.map((type) => {
+        const list = grouped[type];
+        if (!list || list.length === 0) return null;
+        const typeLabel = SKJH_TYPE_LABELS[type]?.[locale] ?? type;
+        return (
+          <section key={type} className="mb-8">
+            <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
+            <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              {list.map((mat) => (
+                <Link key={mat.id} href={`/${gameId}/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                  <div className="mb-1 flex items-center gap-2">
+                    <h3 className="text-sm font-semibold text-game-text">{getSkjhMaterialName(mat, locale)}</h3>
+                  </div>
+                  <div className="mb-1 flex items-center gap-2">
+                    <span className="text-xs text-game-text-muted">{typeLabel}</span>
+                    <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
+                  </div>
+                  <p className="text-xs text-game-text-muted line-clamp-2">{locale === 'zh' ? mat.source : locale === 'ja' ? (mat.sourceJa ?? mat.sourceEn) : mat.sourceEn}</p>
+                </Link>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
 
 function SeaItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
   const materials = seaMaterials;

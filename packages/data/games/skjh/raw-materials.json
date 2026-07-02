@@ -1,0 +1,90 @@
+[
+  {
+    "id": "scrap",
+    "name": "废料",
+    "nameEn": "Scrap",
+    "nameJa": "スクラップ",
+    "type": "resource",
+    "rarity": 4,
+    "source": "油桶、路边箱、零件盒、低级据点循环搜刮，是科技树解锁核心资源。",
+    "sourceEn": "Found from barrels, roadside crates, component boxes, and low-tier POIs. Core resource for tech unlocks.",
+    "sourceJa": "ドラム缶、道端の箱、部品箱、低ランク拠点で入手。技術解放の中心資源。"
+  },
+  {
+    "id": "cloth",
+    "name": "布料",
+    "nameEn": "Cloth",
+    "nameJa": "布",
+    "type": "resource",
+    "rarity": 2,
+    "source": "采集亚麻、仙人掌或分解针线包，可制作绷带、睡袋、绳索和基础衣物。",
+    "sourceEn": "Gather from flax or cactus, or recycle sewing kits. Used for bandages, sleeping bags, rope, and clothing.",
+    "sourceJa": "亜麻やサボテン、裁縫キットの分解で入手。包帯、寝袋、ロープ、衣服に使用。"
+  },
+  {
+    "id": "wood",
+    "name": "木材",
+    "nameEn": "Wood",
+    "nameJa": "木材",
+    "type": "resource",
+    "rarity": 1,
+    "source": "砍树获取，用于工具、临时建筑、燃料和领地维护。",
+    "sourceEn": "Harvested from trees. Used for tools, temporary structures, fuel, and upkeep.",
+    "sourceJa": "木から採集。道具、仮拠点、燃料、維持に使用。"
+  },
+  {
+    "id": "stone",
+    "name": "石头",
+    "nameEn": "Stone",
+    "nameJa": "石",
+    "type": "resource",
+    "rarity": 1,
+    "source": "采矿获取，是前期石质墙体、防御升级和维护的核心材料。",
+    "sourceEn": "Mined from rocks. Essential for stone walls, early defenses, and upkeep.",
+    "sourceJa": "岩から採掘。石壁、防衛強化、維持に重要。"
+  },
+  {
+    "id": "metal-fragments",
+    "name": "金属碎片",
+    "nameEn": "Metal Fragments",
+    "nameJa": "金属片",
+    "type": "resource",
+    "rarity": 3,
+    "source": "熔炼矿石或回收金属物件获得，用于门、门框、武器和基地维护。",
+    "sourceEn": "Smelt ore or recycle metal items. Used for doors, frames, weapons, and upkeep.",
+    "sourceJa": "鉱石の精錬や金属品の分解で入手。扉、枠、武器、維持に使用。"
+  },
+  {
+    "id": "territory-cabinet",
+    "name": "领地柜",
+    "nameEn": "Territory Cabinet",
+    "nameJa": "領地キャビネット",
+    "type": "base",
+    "rarity": 4,
+    "source": "基地核心设施，用于划定保护范围并消耗维护资源。",
+    "sourceEn": "Core base facility that defines protection range and consumes upkeep resources.",
+    "sourceJa": "拠点保護範囲と維持資源を管理する中心設備。"
+  },
+  {
+    "id": "sleeping-bag",
+    "name": "睡袋",
+    "nameEn": "Sleeping Bag",
+    "nameJa": "寝袋",
+    "type": "base",
+    "rarity": 2,
+    "source": "前期复活点设施，需要布料制作，开荒和跑图前应优先放置。",
+    "sourceEn": "Early respawn point crafted with cloth. Place one before risky looting or fights.",
+    "sourceJa": "布で作る序盤の復活地点。危険な探索前に設置しましょう。"
+  },
+  {
+    "id": "contribution-points",
+    "name": "贡献点",
+    "nameEn": "Contribution Points",
+    "nameJa": "貢献ポイント",
+    "type": "reward",
+    "rarity": 4,
+    "source": "官网预约里程碑、个人预约和绑定奖励公开发放。",
+    "sourceEn": "Distributed through official reservation milestones, personal reservation, and phone binding rewards.",
+    "sourceJa": "公式の事前登録マイルストーン、個人予約、連携報酬で配布。"
+  }
+]

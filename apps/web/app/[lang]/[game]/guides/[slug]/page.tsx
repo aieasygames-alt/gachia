@@ -103,6 +103,18 @@ import {
   SEA_GUIDE_CATEGORIES,
 } from '@gachia/data/games/sea/guides';
 import type { SeaGuide, SeaGuideFaq } from '@gachia/data/games/sea/guides';
+import {
+  skjhGuides,
+  getSkjhGuideById,
+  getSkjhGuideTitle,
+  getSkjhGuideContent,
+  getSkjhGuideSummary,
+  getSkjhGuideCategory,
+  getSkjhGuideFaqQuestion,
+  getSkjhGuideFaqAnswer,
+  SKJH_GUIDE_CATEGORIES,
+} from '@gachia/data/games/skjh/guides';
+import type { SkjhGuide, SkjhGuideFaq } from '@gachia/data/games/skjh/guides';
 import { Link } from '@/lib/i18n/navigation';
 import { ClientMarkdown } from '@/components/wiki/client-markdown';
 import { buildGuideJsonLd } from '@/lib/jsonld';
@@ -152,6 +164,11 @@ export async function generateStaticParams() {
     ...seaGuides.map((g) => ({
       lang,
       game: 'sea',
+      slug: g.id,
+    })),
+    ...skjhGuides.map((g) => ({
+      lang,
+      game: 'skjh',
       slug: g.id,
     })),
   ]);
@@ -278,6 +295,14 @@ export async function generateMetadata({
     return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
   }
 
+  if (gameId === 'skjh') {
+    const guide = getSkjhGuideById(slug);
+    if (!guide) return {};
+    const gameName = GAMES.skjh.name[locale];
+    const meta = buildGuideMeta(getSkjhGuideTitle(guide, locale), getSkjhGuideSummary(guide, locale), gameName);
+    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+  }
+
   return {};
 }
 
@@ -324,6 +349,10 @@ export default async function GuideDetailPage({
 
   if (gameId === 'sea') {
     return <SeaGuideDetail locale={locale} slug={slug} />;
+  }
+
+  if (gameId === 'skjh') {
+    return <SkjhGuideDetail locale={locale} slug={slug} />;
   }
 
   notFound();
@@ -1143,6 +1172,93 @@ function SeaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
   );
 }
 
+/* ---------- Ashfall Evolution Guide Detail ---------- */
+
+function SkjhGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: string }) {
+  const guide: SkjhGuide | undefined = getSkjhGuideById(slug);
+  if (!guide) notFound();
+
+  const gameConfig = GAMES.skjh;
+  const content = getSkjhGuideContent(guide, locale);
+  const category = getSkjhGuideCategory(guide, locale);
+
+  return (
+    <div>
+      <div className="mb-4 flex items-center gap-2 text-sm text-game-text-muted">
+        <Link href="/skjh/guides" className="transition-colors hover:text-game-primary">
+          {CATEGORY_LABELS.guides?.[locale] ?? 'Guides'}
+        </Link>
+        <span>/</span>
+        {SKJH_GUIDE_CATEGORIES[guide.category]?.[locale] && (
+          <>
+            <span>{SKJH_GUIDE_CATEGORIES[guide.category]?.[locale]}</span>
+            <span>/</span>
+          </>
+        )}
+        <span className="text-game-text">{getSkjhGuideTitle(guide, locale)}</span>
+      </div>
+
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {getSkjhGuideTitle(guide, locale)}
+      </h1>
+
+      <div className="mb-6 flex flex-wrap items-center gap-3 text-sm text-game-text-muted">
+        <span className="rounded bg-game-surface-alt px-2 py-0.5 text-game-primary">{category}</span>
+        {guide.tags.map((tag) => (
+          <span key={tag} className="rounded bg-game-surface-alt px-2 py-0.5">{tag}</span>
+        ))}
+      </div>
+
+      <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">
+        <ClientMarkdown content={content} />
+      </div>
+
+      {guide.faq && guide.faq.length > 0 && (
+        <section className="mb-8">
+          <h2 className="mb-4 text-lg font-semibold text-game-primary">
+            {locale === 'zh' ? '常见问题' : locale === 'ja' ? 'よくある質問' : 'FAQ'}
+          </h2>
+          <div className="space-y-3">
+            {guide.faq.map((faqItem: SkjhGuideFaq, i: number) => (
+              <details key={i} className="group rounded-lg border border-game-border bg-game-surface">
+                <summary className="cursor-pointer px-4 py-3 font-medium text-game-text transition-colors group-hover:text-game-primary">
+                  {getSkjhGuideFaqQuestion(faqItem, locale)}
+                </summary>
+                <div className="px-4 pb-3 text-sm text-game-text-muted">
+                  {getSkjhGuideFaqAnswer(faqItem, locale)}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <RelatedGuidesSection gameId="skjh" currentSlug={slug} locale={locale} />
+
+      <div className="border-t border-game-border pt-4">
+        <Link href="/skjh/guides" className="text-sm text-game-primary transition-colors hover:text-game-accent">
+          {locale === 'zh' ? '← 返回攻略列表' : locale === 'ja' ? '← ガイド一覧に戻る' : '← Back to Guides'}
+        </Link>
+      </div>
+
+      {buildGuideJsonLd({
+        gameId: 'skjh',
+        locale,
+        title: getSkjhGuideTitle(guide, locale),
+        summary: getSkjhGuideSummary(guide, locale),
+        slug,
+        faq: guide.faq?.map((f) => ({ question: getSkjhGuideFaqQuestion(f, locale), answer: getSkjhGuideFaqAnswer(f, locale) })),
+      }).map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+    </div>
+  );
+}
+
 // --- Shared Related Guides Section ---
 
 type GuideLike = { id: string; category: string; tags: string[] };
@@ -1200,6 +1316,7 @@ function getGuidesForGame(gameId: string): GuideLike[] {
     case 'ananta': return anantaGuides;
     case 'endfield': return endfieldGuides;
     case 'sea': return seaGuides;
+    case 'skjh': return skjhGuides;
     default: return [];
   }
 }
@@ -1215,6 +1332,7 @@ function getGuideTitleForGame(gameId: string, guide: GuideLike, locale: Supporte
     case 'ananta': return getAnantaGuideTitle(guide as unknown as Parameters<typeof getAnantaGuideTitle>[0], locale);
     case 'endfield': return getEndfieldGuideTitle(guide as unknown as Parameters<typeof getEndfieldGuideTitle>[0], locale);
     case 'sea': return getSeaGuideTitle(guide as unknown as Parameters<typeof getSeaGuideTitle>[0], locale);
+    case 'skjh': return getSkjhGuideTitle(guide as unknown as Parameters<typeof getSkjhGuideTitle>[0], locale);
     default: return guide.id;
   }
 }
@@ -1230,6 +1348,7 @@ function getGuideSummaryForGame(gameId: string, guide: GuideLike, locale: Suppor
     case 'ananta': return getAnantaGuideSummary(guide as unknown as Parameters<typeof getAnantaGuideSummary>[0], locale);
     case 'endfield': return getEndfieldGuideSummary(guide as unknown as Parameters<typeof getEndfieldGuideSummary>[0], locale);
     case 'sea': return getSeaGuideSummary(guide as unknown as Parameters<typeof getSeaGuideSummary>[0], locale);
+    case 'skjh': return getSkjhGuideSummary(guide as unknown as Parameters<typeof getSkjhGuideSummary>[0], locale);
     default: return '';
   }
 }
