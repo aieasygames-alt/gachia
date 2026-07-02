@@ -86,5 +86,203 @@
     "source": "官网预约里程碑、个人预约和绑定奖励公开发放。",
     "sourceEn": "Distributed through official reservation milestones, personal reservation, and phone binding rewards.",
     "sourceJa": "公式の事前登録マイルストーン、個人予約、連携報酬で配布。"
+  },
+  {
+    "id": "landing-operation-double-door",
+    "name": "登岛行动·金属双扇门皮肤",
+    "nameEn": "Landing Operation Metal Double Door Skin",
+    "nameJa": "上陸作戦・金属両開き扉外観",
+    "type": "reward",
+    "rarity": 4,
+    "source": "定档预约福利提及的建筑皮肤，预约后按官方规则领取。",
+    "sourceEn": "Building skin mentioned in launch reservation rewards. Claim according to official rules.",
+    "sourceJa": "リリース予約報酬で言及された建築外観。公式規則に従って受け取り。"
+  },
+  {
+    "id": "launch-outfit-set",
+    "name": "开服登录时装",
+    "nameEn": "Launch Login Outfit Set",
+    "nameJa": "リリースログイン衣装",
+    "type": "reward",
+    "rarity": 4,
+    "source": "开服登录福利提到 4 套时装，具体领取天数和名称以游戏内活动为准。",
+    "sourceEn": "Launch login rewards mention four outfit sets. Exact names and login days depend on in-game events.",
+    "sourceJa": "リリースログイン報酬で4セット衣装が言及。名称と条件はゲーム内イベントを確認。"
+  },
+  {
+    "id": "limited-cosmetic-pack",
+    "name": "30+ 限定外观",
+    "nameEn": "30+ Limited Cosmetics",
+    "nameJa": "30以上の限定外観",
+    "type": "reward",
+    "rarity": 4,
+    "source": "开服福利素材提及的限定外观集合，可能覆盖武器、建筑皮肤、名片等类型。",
+    "sourceEn": "Limited cosmetic set mentioned in launch reward materials, potentially covering weapons, buildings, namecards, and more.",
+    "sourceJa": "リリース報酬素材で言及された限定外観群。武器、建築、名刺などを含む可能性。"
+  },
+  {
+    "id": "blue-hunt-outfit",
+    "name": "蓝战非联动时装",
+    "nameEn": "Blue Hunt Non-Collab Outfit",
+    "nameJa": "ブルーハント非コラボ衣装",
+    "type": "reward",
+    "rarity": 4,
+    "source": "开服福利素材提及的时装奖励，建议以上线后活动中心说明为准。",
+    "sourceEn": "Outfit reward mentioned in launch materials. Follow launch event-center rules.",
+    "sourceJa": "リリース素材で言及された衣装報酬。イベントセンターの説明を確認。"
+  },
+  {
+    "id": "s1-landing-gold-rush",
+    "name": "S1 活动：登岛淘金",
+    "nameEn": "S1 Event: Landing Gold Rush",
+    "nameJa": "S1イベント：上陸ゴールドラッシュ",
+    "type": "reward",
+    "rarity": 4,
+    "source": "S1 登岛赛季活动之一，具体任务、积分和奖励以上线后公告为准。",
+    "sourceEn": "One of the S1 Landing season events. Tasks, points, and rewards depend on launch notices.",
+    "sourceJa": "S1上陸シーズンイベントの一つ。任務、ポイント、報酬はリリース後告知を確認。"
+  },
+  {
+    "id": "s1-big-iron-ball",
+    "name": "S1 活动：大铁球挑战",
+    "nameEn": "S1 Event: Big Iron Ball Challenge",
+    "nameJa": "S1イベント：大鉄球チャレンジ",
+    "type": "reward",
+    "rarity": 4,
+    "source": "S1 登岛赛季活动之一，适合开服后在活动中心检查入口。",
+    "sourceEn": "One of the S1 Landing season events. Check the event center after launch.",
+    "sourceJa": "S1上陸シーズンイベントの一つ。リリース後にイベントセンターを確認。"
+  },
+  {
+    "id": "s1-infiltration-supply",
+    "name": "S1 活动：渗透补给",
+    "nameEn": "S1 Event: Infiltration Supply",
+    "nameJa": "S1イベント：潜入補給",
+    "type": "reward",
+    "rarity": 4,
+    "source": "S1 登岛赛季活动之一，元宝素材提到蓝猎弓、路标护甲等相关奖励方向。",
+    "sourceEn": "One of the S1 Landing season events. Source brief mentions blue hunting bow and road-sign armor reward directions.",
+    "sourceJa": "S1上陸シーズンイベントの一つ。素材では青い狩猟弓や道路標識防具系報酬が言及。"
+  },
+  {
+    "id": "sulfur",
+    "name": "硫磺",
+    "nameEn": "Sulfur",
+    "nameJa": "硫黄",
+    "type": "resource",
+    "rarity": 4,
+    "source": "爆破资源预算核心材料，用于火箭弹、爆炸弹药等攻坚消耗。",
+    "sourceEn": "Core raiding budget material used for rockets, explosive ammo, and breaching.",
+    "sourceJa": "ロケットや爆発弾薬などの突破に使うレイド予算の中心素材。"
+  },
+  {
+    "id": "explosive-ammo",
+    "name": "爆炸弹药",
+    "nameEn": "Explosive Ammo",
+    "nameJa": "爆発弾薬",
+    "type": "resource",
+    "rarity": 5,
+    "source": "抄家爆破消耗品，适合拆门、补伤害和配合火箭弹攻坚。",
+    "sourceEn": "Raid consumable for doors, supplemental breach damage, and rocket-supported pushes.",
+    "sourceJa": "扉破壊、追加爆破、ロケット併用の攻めに使うレイド消耗品。"
+  },
+  {
+    "id": "food-supply",
+    "name": "食物补给",
+    "nameEn": "Food Supply",
+    "nameJa": "食料補給",
+    "type": "resource",
+    "rarity": 2,
+    "source": "废弃超市、野外采集、种植经营等路线获取，用于维持饥饿状态。",
+    "sourceEn": "Found through abandoned supermarket loops, foraging, and farming. Used to manage hunger.",
+    "sourceJa": "廃スーパー、野外採集、農業で入手。空腹管理に使用。"
+  },
+  {
+    "id": "water-supply",
+    "name": "饮水补给",
+    "nameEn": "Water Supply",
+    "nameJa": "飲水補給",
+    "type": "resource",
+    "rarity": 2,
+    "source": "废弃超市、加油站、露水收集器等路线获取，用于维持口渴状态。",
+    "sourceEn": "Found through supermarket, gas station, and dew collector routes. Used to manage thirst.",
+    "sourceJa": "廃スーパー、ガソリンスタンド、露水収集器で入手。渇き管理に使用。"
+  },
+  {
+    "id": "dew-collector",
+    "name": "露水收集器",
+    "nameEn": "Dew Collector",
+    "nameJa": "露水収集器",
+    "type": "base",
+    "rarity": 3,
+    "source": "生存科技路线设施，适合基地长期饮水补给和休闲种田玩法。",
+    "sourceEn": "Survival tech facility for long-term base water supply and casual farming play.",
+    "sourceJa": "生存技術施設。長期拠点の水供給と農業向け。"
+  },
+  {
+    "id": "planter-box",
+    "name": "种植箱",
+    "nameEn": "Planter Box",
+    "nameJa": "栽培箱",
+    "type": "base",
+    "rarity": 3,
+    "source": "生存科技路线设施，用于稳定食物来源和后勤补给。",
+    "sourceEn": "Survival tech facility for stable food production and logistics.",
+    "sourceJa": "生存技術施設。安定した食料生産と後方支援に使う。"
+  },
+  {
+    "id": "cold-resistant-gear",
+    "name": "防寒装备",
+    "nameEn": "Cold-Resistant Gear",
+    "nameJa": "耐寒装備",
+    "type": "equipment",
+    "rarity": 3,
+    "source": "应对夜晚、暴雨和寒冷区域的生存装备，减少体温压力。",
+    "sourceEn": "Survival gear for nights, storms, and cold zones. Reduces temperature pressure.",
+    "sourceJa": "夜、嵐、寒冷区域に対応する生存装備。体温圧力を下げる。"
+  },
+  {
+    "id": "radiation-suit",
+    "name": "防辐射服",
+    "nameEn": "Radiation Suit",
+    "nameJa": "耐放射線スーツ",
+    "type": "equipment",
+    "rarity": 4,
+    "source": "高风险资源区和辐射环境探索装备，用于短进短出搜刮。",
+    "sourceEn": "Exploration gear for high-risk and radiation zones, best used for short in-and-out looting.",
+    "sourceJa": "高リスク・放射線区域の探索装備。短時間探索に向く。"
+  },
+  {
+    "id": "beast-gene-fragment",
+    "name": "兽型基因碎片",
+    "nameEn": "Beast Gene Fragment",
+    "nameJa": "獣型遺伝子欠片",
+    "type": "gene",
+    "rarity": 4,
+    "source": "偏战斗、机动、承伤和侦查方向的基因素材，适合中前期补位。",
+    "sourceEn": "Gene material for combat, mobility, tanking, and scouting routes.",
+    "sourceJa": "戦闘、機動、耐久、偵察向けの遺伝子素材。"
+  },
+  {
+    "id": "plant-gene-fragment",
+    "name": "植型基因碎片",
+    "nameEn": "Plant Gene Fragment",
+    "nameJa": "植物型遺伝子欠片",
+    "type": "gene",
+    "rarity": 4,
+    "source": "偏自愈、低消耗、隐蔽采集和后勤续航的基因素材，适合第一天开荒。",
+    "sourceEn": "Gene material for self-healing, low consumption, stealth gathering, and logistics.",
+    "sourceJa": "自己回復、低消耗、隠密採集、後方支援向けの遺伝子素材。"
+  },
+  {
+    "id": "mechanical-gene-fragment",
+    "name": "机械型基因碎片",
+    "nameEn": "Mechanical Gene Fragment",
+    "nameJa": "機械型遺伝子欠片",
+    "type": "gene",
+    "rarity": 5,
+    "source": "偏后期护盾、免疫和 AOE 控场的高价值基因素材，适合中后期争夺。",
+    "sourceEn": "High-value gene material for late-game shields, immunity, and AOE control.",
+    "sourceJa": "後期のシールド、免疫、範囲制圧向け高価値遺伝子素材。"
   }
 ]
