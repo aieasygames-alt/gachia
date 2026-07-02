@@ -90,6 +90,21 @@ export async function generateStaticParams() {
 
 const BASE_URL = 'https://gachia.com';
 
+type LocaleMeta = Partial<Record<SupportedLocale, { title: string; description: string }>>;
+
+const WEAPON_META_OVERRIDES: Record<string, LocaleMeta> = {
+  'genshin/sacrificial-jade': {
+    en: {
+      title: 'Sacrificial Jade Genshin: Stats, Best Users & Builds',
+      description: 'Sacrificial Jade guide for Genshin Impact: 4-star Catalyst, CRIT Rate 36.8% at Lv.90, HP and EM passive, best users, and builds.',
+    },
+    zh: {
+      title: '遗祀玉珑攻略：属性、适用角色与配装推荐',
+      description: '原神遗祀玉珑属性解析：4星法器，满级暴击率36.8%，离场提升生命值与元素精通，查看适用角色和配装思路。',
+    },
+  },
+};
+
 function buildAlternates(locale: string, gameId: string, id: string) {
   const languages: Record<string, string> = {};
   for (const l of ['zh', 'en', 'ja'] as const) {
@@ -100,11 +115,11 @@ function buildAlternates(locale: string, gameId: string, id: string) {
   return { canonical: `${BASE_URL}/${locale}/${gameId}/weapons/${id}`, languages };
 }
 
-function buildOg(title: string, description: string, gameId: string, locale: string) {
+function buildOg(title: string, description: string, gameId: string, id: string, locale: string) {
   return {
     title,
     description,
-    url: `${BASE_URL}/${locale}/${gameId}/weapons`,
+    url: `${BASE_URL}/${locale}/${gameId}/weapons/${id}`,
     siteName: 'Gachia' as const,
     images: [{ url: `${BASE_URL}/images/og/${gameId}.jpg`, width: 1200, height: 630 }],
     locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
@@ -123,6 +138,9 @@ export async function generateMetadata({
 
   // Build intent-rich title & description per locale — includes stats in description for SERP CTR
   const buildWeaponMeta = (name: string, effectDesc: string | undefined, statsLine?: string, hasPassive = true, titleStat?: string) => {
+    const override = WEAPON_META_OVERRIDES[`${gameId}/${id}`]?.[locale];
+    if (override) return override;
+
     const statSuffix = titleStat ? ` (${titleStat})` : '';
     const weaponNoun = gameId === 'zzz' ? 'W-Engine' : 'Weapon';
     const title = locale === 'zh'
@@ -161,7 +179,7 @@ export async function generateMetadata({
       ? `${w.rarity}★, 基础攻击力${w.baseAtk}${sub90 ? `, 满级${sub90}` : ''}`
       : `★${w.rarity}, Base ATK ${w.baseAtk}${sub90 ? `, Lv.90 ${sub90}` : ''}`;
     const meta = buildWeaponMeta(name, effect?.description, stats, true, sub90 || undefined);
-    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, id, locale) };
   }
   if (gameId === 'starrail') {
     const w = getStarRailLightConeById(id);
@@ -172,7 +190,7 @@ export async function generateMetadata({
       ? `${w.rarity}★, 生命${w.baseHp} 攻击${w.baseAtk} 防御${w.baseDef}`
       : `★${w.rarity}, HP ${w.baseHp} / ATK ${w.baseAtk} / DEF ${w.baseDef}`;
     const meta = buildWeaponMeta(name, effect?.description, stats);
-    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, id, locale) };
   }
   if (gameId === 'wuwa') {
     const w = getWuWaWeaponById(id);
@@ -185,7 +203,7 @@ export async function generateMetadata({
       : `★${w.rarity}, Base ATK ${w.baseAtk}${sub ? `, ${sub}` : ''}`;
     const hasPassive = !!effect?.name;
     const meta = buildWeaponMeta(name, effect?.description, stats, hasPassive);
-    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, id, locale) };
   }
   if (gameId === 'nte') {
     const w = getNteWeaponById(id);
@@ -197,7 +215,7 @@ export async function generateMetadata({
       ? `${w.rank}级, 基础攻击力${w.baseAtk}${sub ? `, ${sub}` : ''}`
       : `${w.rank}-Rank, Base ATK ${w.baseAtk}${sub ? `, ${sub}` : ''}`;
     const meta = buildWeaponMeta(name, effect?.description, stats);
-    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, id, locale) };
   }
   if (gameId === 'zzz') {
     const w = getZzzWeaponById(id);
@@ -209,7 +227,7 @@ export async function generateMetadata({
       ? `${w.rank}级, 基础攻击力${w.baseAtk}${sub ? `, ${sub}` : ''}`
       : `${w.rank}-Rank, Base ATK ${w.baseAtk}${sub ? `, ${sub}` : ''}`;
     const meta = buildWeaponMeta(name, effect?.description, stats);
-    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, id, locale) };
   }
   if (gameId === 'guihuan') {
     const w = getGuihuanWeaponById(id);
@@ -221,7 +239,7 @@ export async function generateMetadata({
       ? `${w.rarity}★, 基础攻击力${w.baseAtk}${sub ? `, ${sub}` : ''}`
       : `★${w.rarity}, Base ATK ${w.baseAtk}${sub ? `, ${sub}` : ''}`;
     const meta = buildWeaponMeta(name, effect?.description, stats);
-    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, id, locale) };
   }
   if (gameId === 'ananta') {
     const w = getAnantaWeaponById(id);
@@ -233,7 +251,7 @@ export async function generateMetadata({
       ? `${w.rarity}★, 基础攻击力${w.baseAtk}${sub ? `, ${sub}` : ''}`
       : `★${w.rarity}, Base ATK ${w.baseAtk}${sub ? `, ${sub}` : ''}`;
     const meta = buildWeaponMeta(name, effect?.description, stats);
-    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, id, locale) };
   }
   if (gameId === 'endfield') {
     const w = getEndfieldWeaponById(id);
@@ -245,7 +263,7 @@ export async function generateMetadata({
       ? `${w.rarity}★, 基础攻击力${w.baseAtk}${sub ? `, ${sub}` : ''}`
       : `★${w.rarity}, Base ATK ${w.baseAtk}${sub ? `, ${sub}` : ''}`;
     const meta = buildWeaponMeta(name, effect?.description, stats);
-    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, id, locale) };
   }
   if (gameId === 'skjh') {
     const w = getSkjhWeaponById(id);
@@ -255,7 +273,7 @@ export async function generateMetadata({
     const type = SKJH_WEAPON_TYPE[w.weaponType]?.[locale] ?? w.weaponType;
     const stats = locale === 'zh' ? `${w.rarity}★, ${type}` : `★${w.rarity}, ${type}`;
     const meta = buildWeaponMeta(name, effect?.description, stats, true, type);
-    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, id, locale) };
   }
   return {};
 }

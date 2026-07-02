@@ -119,6 +119,81 @@ import { Link } from '@/lib/i18n/navigation';
 import { ClientMarkdown } from '@/components/wiki/client-markdown';
 import { buildGuideJsonLd } from '@/lib/jsonld';
 
+type LocaleMeta = Partial<Record<SupportedLocale, { title: string; description: string }>>;
+
+const GUIDE_META_OVERRIDES: Record<string, LocaleMeta> = {
+  'genshin/banner-schedule-guide': {
+    en: {
+      title: 'Genshin Banner Schedule 2026: Current & Next Banners',
+      description: 'Track current and upcoming Genshin Impact banners, reruns, pity rules, Primogem planning, and pull priorities for 2026.',
+    },
+    zh: {
+      title: '原神祈愿卡池排期 2026：当前卡池与下期预测',
+      description: '查看原神当前与下期祈愿卡池、复刻预测、保底规则、原石规划和抽卡优先级，帮助你决定该抽还是该存。',
+    },
+  },
+  'starrail/banner-schedule-guide': {
+    en: {
+      title: 'HSR Banner Schedule 2026: Current & Next Banners',
+      description: 'See Honkai: Star Rail current and next banners, rerun estimates, pity rules, Stellar Jade planning, and pull priority advice.',
+    },
+    zh: {
+      title: '崩坏星穹铁道卡池排期 2026：当前与下期跃迁',
+      description: '整理崩铁当前卡池、下期跃迁、复刻预测、保底机制、星琼规划和抽卡优先级，方便提前安排资源。',
+    },
+  },
+  'wuwa/banner-schedule-guide': {
+    en: {
+      title: 'WuWa Banner Schedule 2026: Current & Next Banners',
+      description: 'Follow Wuthering Waves current banners, next banners, rerun timing, pity carry-over, Astrite planning, and pull priorities.',
+    },
+    zh: {
+      title: '鸣潮卡池排期 2026：当前卡池、下期与复刻预测',
+      description: '查看鸣潮当前卡池、下期角色、复刻节奏、保底继承、星声规划和抽取优先级，适合零氪与月卡玩家。',
+    },
+  },
+  'starrail/cross-game-comparison-guide': {
+    en: {
+      title: 'ZZZ vs WuWa vs Genshin vs HSR: Which Gacha to Play?',
+      description: 'Compare ZZZ, Wuthering Waves, Genshin Impact, and Honkai: Star Rail by combat, grind, gacha, F2P value, story, and endgame.',
+    },
+    zh: {
+      title: '绝区零 vs 鸣潮 vs 原神 vs 崩铁：哪款更适合你？',
+      description: '从战斗、肝度、抽卡、零氪体验、剧情和终局内容对比四款热门二游，帮你选择最适合长期玩的游戏。',
+    },
+  },
+  'starrail/fate-collab-guide': {
+    en: {
+      title: 'HSR Fate Collab Guide: Characters, Banners & Rewards',
+      description: 'Honkai: Star Rail Fate collaboration guide covering expected characters, banners, rewards, event format, and pull planning.',
+    },
+    zh: {
+      title: '崩铁 Fate 联动攻略：角色、卡池、奖励与抽取规划',
+      description: '整理崩坏星穹铁道 Fate 联动的角色、卡池、活动奖励、玩法形式和抽取建议，方便提前规划星琼。',
+    },
+  },
+  'endfield/crisis-contract-guide': {
+    en: {
+      title: 'Endfield Crisis Contract Retest: 40-45 Star Guide',
+      description: 'Clear Arknights Endfield Crisis Contract Retest with 40, 42, and 45-star strategies, Etra tank setups, F2P builds, and indicators.',
+    },
+    zh: {
+      title: '终末地危机合约重燃测试攻略：40-45星打法',
+      description: '终末地危机合约重燃测试 40星、42星、45星打法，包含埃特拉主T思路、平民构筑、指标选择和奖励目标。',
+    },
+  },
+  'nte/boss-guide-comprehensive': {
+    en: {
+      title: 'NTE Boss Weakness Guide: All Bosses, Drops & Teams',
+      description: 'Find NTE boss weaknesses, shield counters, attack patterns, recommended teams, weekly boss rewards, and farming priorities.',
+    },
+    zh: {
+      title: '异环 Boss 弱点攻略：全 Boss 打法、掉落与配队',
+      description: '整理异环 Boss 弱点、破盾克制、攻击模式、推荐阵容、周本掉落和刷取优先级，适合快速通关和材料规划。',
+    },
+  },
+};
+
 export async function generateStaticParams() {
   return LOCALES.flatMap((lang) => [
     ...nteGuides.map((guide) => ({
@@ -183,10 +258,10 @@ export async function generateMetadata({
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
 
-  const buildOg = (title: string, description: string, gameId: string, locale: SupportedLocale) => ({
+  const buildOg = (title: string, description: string, gameId: string, slug: string, locale: SupportedLocale) => ({
     title,
     description,
-    url: `https://gachia.com/${locale}/${gameId}`,
+    url: `https://gachia.com/${locale}/${gameId}/guides/${slug}`,
     siteName: 'Gachia',
     images: [{ url: `https://gachia.com/images/og/${gameId}.jpg`, width: 1200, height: 630 }],
     locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
@@ -204,6 +279,9 @@ export async function generateMetadata({
 
   // Build intent-rich title & description per locale for guides
   const buildGuideMeta = (guideTitle: string, summary: string, gameName: string) => {
+    const override = GUIDE_META_OVERRIDES[`${gameId}/${slug}`]?.[locale];
+    if (override) return override;
+
     // For long descriptive titles, skip the game-name suffix to stay within SERP display limits
     const titleSuffix = guideTitle.length > 45
       ? ''
@@ -228,7 +306,7 @@ export async function generateMetadata({
     if (!guide) return {};
     const gameName = GAMES.genshin.name[locale];
     const meta = buildGuideMeta(getGenshinGuideTitle(guide, locale), getGenshinGuideSummary(guide, locale), gameName);
-    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) };
   }
 
   if (gameId === 'nte') {
@@ -236,7 +314,7 @@ export async function generateMetadata({
     if (!guide) return {};
     const gameName = GAMES.nte.name[locale];
     const meta = buildGuideMeta(getNteGuideTitle(guide, locale), getNteGuideSummary(guide, locale), gameName);
-    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) };
   }
 
   if (gameId === 'wuwa') {
@@ -244,7 +322,7 @@ export async function generateMetadata({
     if (!guide) return {};
     const gameName = GAMES.wuwa.name[locale];
     const meta = buildGuideMeta(getWuWaGuideTitle(guide, locale), getWuWaGuideSummary(guide, locale), gameName);
-    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) };
   }
 
   if (gameId === 'starrail') {
@@ -252,7 +330,7 @@ export async function generateMetadata({
     if (!guide) return {};
     const gameName = GAMES.starrail.name[locale];
     const meta = buildGuideMeta(getStarRailGuideTitle(guide, locale), getStarRailGuideSummary(guide, locale), gameName);
-    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) };
   }
 
   if (gameId === 'zzz') {
@@ -260,7 +338,7 @@ export async function generateMetadata({
     if (!guide) return {};
     const gameName = GAMES.zzz.name[locale];
     const meta = buildGuideMeta(getZzzGuideTitle(guide, locale), getZzzGuideSummary(guide, locale), gameName);
-    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) };
   }
 
   if (gameId === 'guihuan') {
@@ -268,7 +346,7 @@ export async function generateMetadata({
     if (!guide) return {};
     const gameName = GAMES.guihuan.name[locale];
     const meta = buildGuideMeta(getGuihuanGuideTitle(guide, locale), getGuihuanGuideSummary(guide, locale), gameName);
-    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) };
   }
 
   if (gameId === 'ananta') {
@@ -276,7 +354,7 @@ export async function generateMetadata({
     if (!guide) return {};
     const gameName = GAMES.ananta.name[locale];
     const meta = buildGuideMeta(getAnantaGuideTitle(guide, locale), getAnantaGuideSummary(guide, locale), gameName);
-    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) };
   }
 
   if (gameId === 'endfield') {
@@ -284,7 +362,7 @@ export async function generateMetadata({
     if (!guide) return {};
     const gameName = GAMES.endfield.name[locale];
     const meta = buildGuideMeta(getEndfieldGuideTitle(guide, locale), getEndfieldGuideSummary(guide, locale), gameName);
-    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) };
   }
 
   if (gameId === 'sea') {
@@ -292,7 +370,7 @@ export async function generateMetadata({
     if (!guide) return {};
     const gameName = GAMES.sea.name[locale];
     const meta = buildGuideMeta(getSeaGuideTitle(guide, locale), getSeaGuideSummary(guide, locale), gameName);
-    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) };
   }
 
   if (gameId === 'skjh') {
@@ -300,7 +378,7 @@ export async function generateMetadata({
     if (!guide) return {};
     const gameName = GAMES.skjh.name[locale];
     const meta = buildGuideMeta(getSkjhGuideTitle(guide, locale), getSkjhGuideSummary(guide, locale), gameName);
-    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, locale) };
+    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) };
   }
 
   return {};
@@ -1263,6 +1341,33 @@ function SkjhGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: stri
 
 type GuideLike = { id: string; category: string; tags: string[] };
 
+function getGuideIntentScore(current: GuideLike, candidate: GuideLike) {
+  const currentTerms = [
+    current.id,
+    current.category,
+    ...current.tags,
+  ].join(' ').toLowerCase();
+  const candidateTerms = [
+    candidate.id,
+    candidate.category,
+    ...candidate.tags,
+  ].join(' ').toLowerCase();
+
+  const intentGroups = [
+    ['banner', 'schedule', 'wish', 'pity', 'pull', 'gacha', '祈愿', '卡池', '保底', '抽卡'],
+    ['boss', 'weakness', 'drop', 'combat', 'challenge', '副本', '弱点', '掉落', '战斗'],
+    ['comparison', 'compare', 'vs', '对比', '横评'],
+    ['farming', 'route', 'material', '材料', '路线'],
+    ['team', 'meta', 'tier', 'build', '配队', '强度', '排行'],
+  ];
+
+  return intentGroups.reduce((score, group) => {
+    const currentMatches = group.some((term) => currentTerms.includes(term));
+    const candidateMatches = group.some((term) => candidateTerms.includes(term));
+    return score + (currentMatches && candidateMatches ? 3 : 0);
+  }, 0);
+}
+
 function RelatedGuidesSection({ gameId, currentSlug, locale }: { gameId: string; currentSlug: string; locale: SupportedLocale }) {
   const allGuides = getGuidesForGame(gameId);
   const current = allGuides.find((g) => g.id === currentSlug);
@@ -1273,7 +1378,7 @@ function RelatedGuidesSection({ gameId, currentSlug, locale }: { gameId: string;
     .map((g) => {
       const sameCategory = g.category === current.category ? 2 : 0;
       const sharedTags = g.tags.filter((t) => current.tags.includes(t)).length;
-      return { ...g, score: sameCategory + sharedTags };
+      return { ...g, score: sameCategory + sharedTags + getGuideIntentScore(current, g) };
     })
     .sort((a, b) => b.score - a.score)
     .slice(0, 4);
