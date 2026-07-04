@@ -64,7 +64,7 @@ export default async function EchoDetailPage({
       <nav className="mb-4 flex items-center gap-2 text-sm text-game-text-muted">
         <Link href="/wuwa" className="hover:text-game-primary">{gameName}</Link>
         <span>/</span>
-        <Link href="/wuwa/echoes" className="hover:text-game-primary">
+        <Link href="/wuwa" className="hover:text-game-primary">
           {locale === 'zh' ? '回声' : locale === 'ja' ? 'エコー' : 'Echoes'}
         </Link>
         <span>/</span>
@@ -126,7 +126,7 @@ export default async function EchoDetailPage({
             '@type': 'BreadcrumbList',
             itemListElement: [
               { '@type': 'ListItem', position: 1, name: gameName, item: `https://gachia.com/${locale}/wuwa` },
-              { '@type': 'ListItem', position: 2, name: locale === 'zh' ? '回声' : locale === 'ja' ? 'エコー' : 'Echoes', item: `https://gachia.com/${locale}/wuwa/echoes` },
+              { '@type': 'ListItem', position: 2, name: locale === 'zh' ? '回声' : locale === 'ja' ? 'エコー' : 'Echoes', item: `https://gachia.com/${locale}/wuwa` },
               { '@type': 'ListItem', position: 3, name },
             ],
           }),

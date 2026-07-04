@@ -169,11 +169,6 @@ export function buildHomepageJsonLd(locale: SupportedLocale) {
       '@type': 'WebSite',
       name: siteName,
       url: `${BASE_URL}/${locale}`,
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: `${BASE_URL}/${locale}/search?q={search_term_string}`,
-        'query-input': 'required name=search_term_string',
-      },
     },
     {
       '@context': 'https://schema.org',

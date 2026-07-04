@@ -5,25 +5,112 @@ import { routing } from './lib/i18n/routing';
 const intlMiddleware = createMiddleware(routing);
 
 const GAME_IDS = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'] as const;
+const LOCALE_IDS = ['zh', 'en', 'ja'] as const;
+
+type GameId = (typeof GAME_IDS)[number];
+type LocaleId = (typeof LOCALE_IDS)[number];
+
+const LEGACY_CHARACTER_LIST_REDIRECTS: Partial<Record<GameId, readonly string[]>> = {
+  endfield: ['angelina', 'saria', 'amiya', 'surtr', 'hound', 'fang', 'silverash', 'texas', 'orchid', 'exusiai'],
+  nte: ['lacrimosa'],
+  starrail: ['griseo'],
+};
+
+function asLocale(segment?: string): LocaleId | undefined {
+  return LOCALE_IDS.includes(segment as LocaleId) ? (segment as LocaleId) : undefined;
+}
+
+function asGame(segment?: string): GameId | undefined {
+  return GAME_IDS.includes(segment as GameId) ? (segment as GameId) : undefined;
+}
+
+function preferredLocale(request: NextRequest): LocaleId {
+  const acceptLanguage = request.headers.get('accept-language') || '';
+
+  if (acceptLanguage.includes('zh')) return 'zh';
+  if (acceptLanguage.includes('ja')) return 'ja';
+
+  return 'en';
+}
+
+function redirectTo(request: NextRequest, pathname: string, clearSearch = false) {
+  const url = request.nextUrl.clone();
+  url.pathname = pathname;
+  if (clearSearch) url.search = '';
+  return NextResponse.redirect(url, 301);
+}
 
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  const segments = pathname.split('/').filter(Boolean);
+  const [firstSegment, secondSegment, thirdSegment, fourthSegment] = segments;
+  const locale = asLocale(firstSegment);
+  const game = asGame(locale ? secondSegment : firstSegment);
+
+  const normalizedSegments = segments.map((segment) =>
+    decodeURIComponent(segment).trim().replace(/\s+/g, '-')
+  );
+  const normalizedPathname = `/${normalizedSegments.join('/')}`;
+  if (normalizedPathname !== pathname) {
+    return redirectTo(request, normalizedPathname);
+  }
+
+  // Normalize accidental double-locale URLs, e.g. /en/en/zzz/weapons/starlight-engine.
+  if (locale && asLocale(secondSegment)) {
+    return redirectTo(request, `/${locale}/${segments.slice(2).join('/')}`);
+  }
+
+  // The site does not have a public search-results route. Keep stale schema URLs indexable-safe.
+  if (locale && secondSegment === 'search') {
+    return redirectTo(request, `/${locale}`, true);
+  }
+
+  // Repair historical URLs that dropped the game segment.
+  if (locale && secondSegment === 'items' && thirdSegment === 'stagnant-shadow-shape-of-abundance') {
+    return redirectTo(request, `/${locale}/starrail/items/${thirdSegment}`);
+  }
+
+  if (locale && secondSegment === 'guides' && thirdSegment === 'detailed-tier-list') {
+    return redirectTo(request, `/${locale}/nte/guides/${thirdSegment}`);
+  }
+
+  // Old Star Rail slug without the canonical hyphen.
+  if (locale && secondSegment === 'starrail' && thirdSegment === 'characters' && fourthSegment === 'jingyuan') {
+    return redirectTo(request, `/${locale}/starrail/characters/jing-yuan`);
+  }
+
+  // Wuthering Waves echo detail pages are live, but there is no standalone echo index.
+  if (locale && secondSegment === 'wuwa' && thirdSegment === 'echoes' && !fourthSegment) {
+    return redirectTo(request, `/${locale}/wuwa`);
+  }
+
+  if (locale && game && thirdSegment === 'characters' && fourthSegment) {
+    const legacySlugs = LEGACY_CHARACTER_LIST_REDIRECTS[game];
+    if (legacySlugs?.includes(fourthSegment)) {
+      return redirectTo(request, `/${locale}/${game}/characters`);
+    }
+  }
 
   // P1-8: Redirect lang-less game URLs to user's preferred language (Accept-Language header)
-  const firstSegment = pathname.split('/')[1];
-  if (GAME_IDS.includes(firstSegment as typeof GAME_IDS[number])) {
-    const acceptLanguage = request.headers.get('accept-language') || '';
-    let preferredLang = 'en'; // Default to English
+  if (game && !locale) {
+    const targetLocale = preferredLocale(request);
 
-    if (acceptLanguage.includes('zh')) {
-      preferredLang = 'zh';
-    } else if (acceptLanguage.includes('ja')) {
-      preferredLang = 'ja';
+    if (game === 'wuwa' && secondSegment === 'echoes' && !thirdSegment) {
+      return redirectTo(request, `/${targetLocale}/wuwa`);
     }
 
-    const url = request.nextUrl.clone();
-    url.pathname = `/${preferredLang}${pathname}`;
-    return NextResponse.redirect(url, 301);
+    if (game === 'starrail' && secondSegment === 'characters' && thirdSegment === 'jingyuan') {
+      return redirectTo(request, `/${targetLocale}/starrail/characters/jing-yuan`);
+    }
+
+    if (secondSegment === 'characters' && thirdSegment) {
+      const legacySlugs = LEGACY_CHARACTER_LIST_REDIRECTS[game];
+      if (legacySlugs?.includes(thirdSegment)) {
+        return redirectTo(request, `/${targetLocale}/${game}/characters`);
+      }
+    }
+
+    return redirectTo(request, `/${targetLocale}${pathname}`);
   }
 
   const response = intlMiddleware(request);
