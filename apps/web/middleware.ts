@@ -6,6 +6,7 @@ const intlMiddleware = createMiddleware(routing);
 
 const GAME_IDS = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'] as const;
 const LOCALE_IDS = ['zh', 'en', 'ja'] as const;
+const DEFAULT_CANONICAL_LOCALE: LocaleId = 'zh';
 
 type GameId = (typeof GAME_IDS)[number];
 type LocaleId = (typeof LOCALE_IDS)[number];
@@ -22,15 +23,6 @@ function asLocale(segment?: string): LocaleId | undefined {
 
 function asGame(segment?: string): GameId | undefined {
   return GAME_IDS.includes(segment as GameId) ? (segment as GameId) : undefined;
-}
-
-function preferredLocale(request: NextRequest): LocaleId {
-  const acceptLanguage = request.headers.get('accept-language') || '';
-
-  if (acceptLanguage.includes('zh')) return 'zh';
-  if (acceptLanguage.includes('ja')) return 'ja';
-
-  return 'en';
 }
 
 function redirectTo(request: NextRequest, pathname: string, clearSearch = false) {
@@ -91,9 +83,9 @@ export default function middleware(request: NextRequest) {
     }
   }
 
-  // P1-8: Redirect lang-less game URLs to user's preferred language (Accept-Language header)
+  // Redirect legacy lang-less game URLs to one stable canonical locale.
   if (game && !locale) {
-    const targetLocale = preferredLocale(request);
+    const targetLocale = DEFAULT_CANONICAL_LOCALE;
 
     if (game === 'wuwa' && secondSegment === 'echoes' && !thirdSegment) {
       return redirectTo(request, `/${targetLocale}/wuwa`);
