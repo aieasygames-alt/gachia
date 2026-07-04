@@ -588,6 +588,27 @@ function GenshinCharacterDetail({ char, locale }: { char: GenshinCharacter; loca
   const buildArtifact = hasBuild ? genshinArtifactSets.find(s => s.nameEn.toLowerCase() === build.bestArtifactSetEn.toLowerCase()) : undefined;
   const altArtifact = hasBuild && build.alternativeArtifactSetEn ? genshinArtifactSets.find(s => s.nameEn.toLowerCase() === build.alternativeArtifactSetEn!.toLowerCase()) : null;
   const altWeapons = hasBuild ? (build.alternativeWeapons ?? []).map(aw => genshinWeapons.find(w => w.nameEn.toLowerCase() === aw.toLowerCase() || w.name === aw)).filter(Boolean) : [];
+  const mainStats = Object.values(locale === 'zh' ? build?.mainStats ?? {} : build?.mainStatsEn ?? {}).join(' / ');
+  const subStatPriority = (locale === 'zh' ? build?.subStatPriority : build?.subStatPriorityEn)?.join(' > ') ?? '';
+  const renderSkill = (
+    skill: GenshinCharacter['skills'][keyof GenshinCharacter['skills']] | undefined,
+    label: string,
+    fallbackName: string,
+    extra?: string
+  ) => {
+    if (!skill) return null;
+    const name = locale === 'zh' ? skill.name : skill.nameEn;
+    const desc = locale === 'zh' ? skill.description : skill.descriptionEn;
+    if (!name && !desc) return null;
+    return (
+      <SkillItem
+        name={name || fallbackName}
+        desc={desc || (locale === 'zh' ? '暂无详细说明。' : 'Details coming soon.')}
+        label={label}
+        extra={extra}
+      />
+    );
+  };
 
   // JSON-LD structured data
   const jsonLd = {
@@ -696,28 +717,17 @@ function GenshinCharacterDetail({ char, locale }: { char: GenshinCharacter; loca
       {/* Skills */}
       <Section title={locale === 'zh' ? '天赋' : locale === 'ja' ? '天賦' : 'Talents'}>
         <div className="space-y-3">
-          <SkillItem name={locale === 'zh' ? char.skills.normalAttack.name : char.skills.normalAttack.nameEn}
-            desc={locale === 'zh' ? char.skills.normalAttack.description : char.skills.normalAttack.descriptionEn}
-            label={locale === 'zh' ? '普通攻击' : 'Normal Attack'} />
-          <SkillItem name={locale === 'zh' ? char.skills.elementalSkill.name : char.skills.elementalSkill.nameEn}
-            desc={locale === 'zh' ? char.skills.elementalSkill.description : char.skills.elementalSkill.descriptionEn}
-            label={locale === 'zh' ? '元素战技' : 'Elemental Skill'}
-            extra={char.skills.elementalSkill.cooldown} />
-          <SkillItem name={locale === 'zh' ? char.skills.elementalBurst.name : char.skills.elementalBurst.nameEn}
-            desc={locale === 'zh' ? char.skills.elementalBurst.description : char.skills.elementalBurst.descriptionEn}
-            label={locale === 'zh' ? '元素爆发' : 'Elemental Burst'}
-            extra={[char.skills.elementalBurst.cost ? `${char.skills.elementalBurst.cost} Energy` : '', char.skills.elementalBurst.cooldown].filter(Boolean).join(' | ')} />
-          <SkillItem name={locale === 'zh' ? char.skills.passive1.name : char.skills.passive1.nameEn}
-            desc={locale === 'zh' ? char.skills.passive1.description : char.skills.passive1.descriptionEn}
-            label={locale === 'zh' ? '固有天赋1' : 'Passive 1'} />
-          <SkillItem name={locale === 'zh' ? char.skills.passive2.name : char.skills.passive2.nameEn}
-            desc={locale === 'zh' ? char.skills.passive2.description : char.skills.passive2.descriptionEn}
-            label={locale === 'zh' ? '固有天赋2' : 'Passive 2'} />
-          {char.skills.passive4 && (
-            <SkillItem name={locale === 'zh' ? char.skills.passive4.name : char.skills.passive4.nameEn}
-              desc={locale === 'zh' ? char.skills.passive4.description : char.skills.passive4.descriptionEn}
-              label={locale === 'zh' ? '实用天赋' : 'Utility Passive'} />
+          {renderSkill(char.skills.normalAttack, locale === 'zh' ? '普通攻击' : 'Normal Attack', locale === 'zh' ? '普通攻击' : 'Normal Attack')}
+          {renderSkill(char.skills.elementalSkill, locale === 'zh' ? '元素战技' : 'Elemental Skill', locale === 'zh' ? '元素战技' : 'Elemental Skill', char.skills.elementalSkill?.cooldown)}
+          {renderSkill(
+            char.skills.elementalBurst,
+            locale === 'zh' ? '元素爆发' : 'Elemental Burst',
+            locale === 'zh' ? '元素爆发' : 'Elemental Burst',
+            [char.skills.elementalBurst?.cost ? `${char.skills.elementalBurst.cost} Energy` : '', char.skills.elementalBurst?.cooldown].filter(Boolean).join(' | ')
           )}
+          {renderSkill(char.skills.passive1, locale === 'zh' ? '固有天赋1' : 'Passive 1', locale === 'zh' ? '固有天赋1' : 'Passive 1')}
+          {renderSkill(char.skills.passive2, locale === 'zh' ? '固有天赋2' : 'Passive 2', locale === 'zh' ? '固有天赋2' : 'Passive 2')}
+          {renderSkill(char.skills.passive4, locale === 'zh' ? '实用天赋' : 'Utility Passive', locale === 'zh' ? '实用天赋' : 'Utility Passive')}
         </div>
       </Section>
 
@@ -761,8 +771,8 @@ function GenshinCharacterDetail({ char, locale }: { char: GenshinCharacter; loca
               value={getArtifactSetName(altArtifact, locale)}
               href={`/genshin/artifacts#${altArtifact.id}`} />
           )}
-          <BuildRow label={locale === 'zh' ? '主属性' : 'Main Stats'} value={Object.values(locale === 'zh' ? build.mainStats ?? {} : build.mainStatsEn ?? {}).join(' / ')} />
-          <BuildRow label={locale === 'zh' ? '副属性优先' : 'Sub Stats'} value={(locale === 'zh' ? build.subStatPriority : build.subStatPriorityEn).join(' > ')} />
+          {mainStats && <BuildRow label={locale === 'zh' ? '主属性' : 'Main Stats'} value={mainStats} />}
+          {subStatPriority && <BuildRow label={locale === 'zh' ? '副属性优先' : 'Sub Stats'} value={subStatPriority} />}
         </div>
       </Section>
       )}
