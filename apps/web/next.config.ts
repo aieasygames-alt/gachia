@@ -16,7 +16,6 @@ const nextConfig: NextConfig = {
   },
   trailingSlash: false,
   outputFileTracingRoot: join(__dirname, '../..'),
-  serverExternalPackages: ['react-markdown', 'remark-gfm', 'unified', 'vfile', 'remark-parse', 'remark-rehype'],
   transpilePackages: ['react-leaflet', '@react-leaflet/core', 'react-leaflet-cluster'],
 };
 
