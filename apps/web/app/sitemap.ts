@@ -90,7 +90,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Home pages
     entries.push({
       url: `${BASE_URL}/${locale}`,
-      lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 1,
     });
@@ -103,7 +102,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       // Game home page
       entries.push({
         url: `${BASE_URL}/${locale}/${gameId}`,
-        lastModified: new Date(),
         changeFrequency: 'weekly',
         priority: 0.9,
       });
@@ -113,7 +111,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         if (!game.routes[route as keyof typeof game.routes]) continue;
         entries.push({
           url: `${BASE_URL}/${locale}/${gameId}/${route}`,
-          lastModified: new Date(),
           changeFrequency: 'weekly',
           priority: 0.8,
         });
@@ -125,7 +122,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         for (const char of chars) {
           entries.push({
             url: `${BASE_URL}/${locale}/${gameId}/characters/${char.id}`,
-            lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.7,
           });
@@ -138,7 +134,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         for (const weapon of weapons) {
           entries.push({
             url: `${BASE_URL}/${locale}/${gameId}/weapons/${weapon.id}`,
-            lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.6,
           });
@@ -151,7 +146,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         for (const guide of guides) {
           entries.push({
             url: `${BASE_URL}/${locale}/${gameId}/guides/${guide.id}`,
-            lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.7,
           });
@@ -164,7 +158,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         for (const set of sets) {
           entries.push({
             url: `${BASE_URL}/${locale}/${gameId}/artifacts/${set.id}`,
-            lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.7,
           });
@@ -176,7 +169,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         for (const echo of wuwaEchoSets) {
           entries.push({
             url: `${BASE_URL}/${locale}/wuwa/echoes/${echo.id}`,
-            lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.6,
           });
@@ -188,7 +180,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         for (const ds of nteDiskSets) {
           entries.push({
             url: `${BASE_URL}/${locale}/nte/disk-sets/${ds.id}`,
-            lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.6,
           });
@@ -200,7 +191,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         for (const dd of zzzDriveDiscs) {
           entries.push({
             url: `${BASE_URL}/${locale}/zzz/drive-discs/${dd.id}`,
-            lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.6,
           });
@@ -213,7 +203,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         for (const item of items) {
           entries.push({
             url: `${BASE_URL}/${locale}/${gameId}/items/${item.id}`,
-            lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.5,
           });
