@@ -321,6 +321,39 @@
     ]
   },
   {
+    "id": "week-one-daily-checklist",
+    "title": "《遗忘之海》公测首周每日清单 — 号角4次、奖励、材料与体力规划",
+    "titleEn": "Sea of Remnants Week One Daily Checklist",
+    "category": "farming",
+    "categoryZh": "刷取",
+    "categoryEn": "Farming",
+    "summary": "面向7月9日开服首周，整理每天必做、可延后、不要急着做的任务，覆盖号角每日4次、奖励领取和第一队养成。",
+    "summaryEn": "Week-one daily checklist for Horn attempts, rewards, farming, and first-team progression.",
+    "content": "## 首周每天先做什么\n\n开服首周最容易浪费的是时间和资源。每天先完成稳定收益，再处理探索和支线。\n\n## 每日清单\n\n| 优先级 | 内容 | 说明 |\n|---|---|---|\n| 必做 | 号角每日4次 | 稳定资源入口，尽量不要漏 |\n| 必做 | 邮件、签到、活动页 | 公测补偿和限时奖励常在这里 |\n| 必做 | 主线/系统解锁 | 先开招募、奥托皮亚、日常入口 |\n| 高 | 第一队养成 | 主攻等级、核心技能、关键遗物 |\n| 中 | BOSS尝试 | 记录机制，能打再刷 |\n| 低 | 全图收集 | 等传送点和路线稳定后补 |\n\n## 不要急着做\n\n- 不要平均培养 6 个以上船员。\n- 不要首日追满命或清空抽卡资源。\n- 不要在隐藏结局条件确认前乱改城镇状态。\n- 不要把低级遗物强化到过高等级。\n\n## 每天收尾\n\n1. 看背包里是否有未兑换票券和礼包。\n2. 检查第一队是否卡等级、技能或遗物材料。\n3. 记录今天打不过的 Boss 和缺口。\n4. 为第三周联动保留部分资源。",
+    "contentEn": "## Week-One Daily Checklist\n\nDo stable daily rewards before optional exploration.\n\n| Priority | Task | Note |\n|---|---|---|\n| Must | Four Horn attempts | Do not miss stable resources |\n| Must | Mail, login, event page | Check compensation and limited rewards |\n| Must | Story/system unlocks | Open Recruitment, Orbtopia, dailies |\n| High | First team progression | DPS level, core skills, key relics |\n| Medium | Boss attempts | Record mechanics before farming |\n| Low | Full map collection | Do later after routes are stable |",
+    "tags": [
+      "每日清单",
+      "首周",
+      "号角",
+      "Daily Checklist",
+      "Week One"
+    ],
+    "faq": [
+      {
+        "question": "What should I do daily in Sea of Remnants week one?",
+        "questionZh": "遗忘之海首周每天必做什么？",
+        "answer": "Clear four Horn attempts, claim mail/login/event rewards, push story unlocks, and invest only in your first core team.",
+        "answerZh": "优先清号角每日4次，领取邮件、签到和活动奖励，推进主线解锁系统，并集中养第一队。"
+      },
+      {
+        "question": "Should I farm the whole map on day one?",
+        "questionZh": "第一天要全图收集吗？",
+        "answer": "No. Unlock systems and routes first, then return for full collection after teleport points and farming paths are stable.",
+        "answerZh": "不建议。第一天先解锁系统和路线，等传送点和刷取路径稳定后再补全图收集。"
+      }
+    ]
+  },
+  {
     "id": "full-walkthrough-guide",
     "title": "遗忘之海全流程通关攻略 — 海洋冒险与岛屿经营指南",
     "titleEn": "Sea of Remnants Full Walkthrough — Ocean Adventure & Island Management",
@@ -763,6 +796,39 @@
     ]
   },
   {
+    "id": "identity-v-collaboration-guide",
+    "title": "《遗忘之海》第五人格联动攻略 — 第三周活动、奖励与抽卡资源规划",
+    "titleEn": "Sea of Remnants Identity V Collaboration Guide",
+    "category": "event",
+    "categoryZh": "活动",
+    "categoryEn": "Event",
+    "summary": "整理公测首月第三周第五人格联动的关注点、资源保留策略、可能奖励类型和上线前检查清单。",
+    "summaryEn": "Identity V collaboration planning for week three: rewards, resource saving, and checklist.",
+    "content": "## 为什么要为第三周联动留资源\n\n前瞻资料提到首月第三周会进入《第五人格》联动窗口。它和 Joker 工作室背景高度相关，搜索热度会比普通活动更集中。首周不建议把抽卡资源全部花完。\n\n## 联动前检查清单\n\n| 时间 | 动作 |\n|---|---|\n| 第1周 | 完成主线、拿预约和七日奖励 |\n| 第2周 | 等首批节奏榜、Boss和活动实测 |\n| 第3周前 | 至少保留一轮关键抽卡或兑换资源 |\n| 活动开启 | 先确认奖励是否限时、是否绝版、是否需要任务门槛 |\n\n## 可能需要记录的奖励\n\n- 联动船员或外观\n- 船只涂装、家具、称号\n- 活动剧情、限定头像框\n- 兑换码或平台礼包\n\n## 玩家决策建议\n\n如果你是零氪或微氪，首周先补第一队，不要为了第二输出清空资源。等联动奖励、概率、兑换商店和任务时长确认后，再决定是否投入。",
+    "contentEn": "## Identity V Collaboration Planning\n\nThe Identity V collaboration is expected around the third week of the first month. Save resources until rewards, banners, event shop, and task gates are confirmed.\n\n| Time | Action |\n|---|---|\n| Week 1 | Finish story and claim launch rewards |\n| Week 2 | Wait for tier and boss testing |\n| Before Week 3 | Keep one round of key pull/exchange resources |\n| Event launch | Check limited rewards and task requirements |",
+    "tags": [
+      "第五人格",
+      "联动",
+      "Identity V",
+      "活动",
+      "Collaboration"
+    ],
+    "faq": [
+      {
+        "question": "When is the Sea of Remnants Identity V collaboration?",
+        "questionZh": "遗忘之海第五人格联动什么时候开？",
+        "answer": "Current launch planning points to the first month, around week three. Exact dates and rewards need official in-game confirmation.",
+        "answerZh": "当前开服规划指向首月第三周左右，具体日期和奖励以游戏内公告为准。"
+      },
+      {
+        "question": "Should I save pulls for the collaboration?",
+        "questionZh": "要为第五人格联动攒抽吗？",
+        "answer": "Yes, keep some resources until the event shop and reward rules are confirmed, especially if you are F2P or low-spender.",
+        "answerZh": "建议保留部分资源，尤其是零氪和微氪玩家，等活动商店和奖励规则确认后再决定投入。"
+      }
+    ]
+  },
+  {
     "id": "cloud-face-sculpt-guide",
     "title": "《遗忘之海》云捏脸前置玩法详解：公测前无需下载、上传照片一键生成木偶形象",
     "titleEn": "Sea of Remnants Cloud Face Sculpting: Pre-Launch Mini-Game, Upload Photo to Generate Puppet Avatar",
@@ -1171,7 +1237,7 @@
     "category": "map",
     "categoryZh": "地图探索",
     "categoryEn": "Map",
-    "summary": "整理公测首月海域开放节奏、白沙海与渡桥海探索重点、隐秘海7月底预告，以及猩红女爵、疯老头穆雷、鬼新娘等BOSS档案框架。",
+    "summary": "整理公测首月海域开放节奏、白沙海与渡桥海探索重点、隐秘海7月底预告，以及猩红女爵等BOSS攻略入口。",
     "summaryEn": "Covers launch-month region rollout, White Sand Sea and Bridge Sea exploration priorities, late-July Hidden Sea, and early boss dossier templates.",
     "tags": [
       "地图",
@@ -1181,7 +1247,7 @@
       "隐秘海",
       "探索"
     ],
-    "content": "## 海域开放节奏\n\n| 海域 | 开放窗口 | 内容重点 |\n|------|---------|---------|\n| 白沙海 | 公测首批 | 新手航线、材料点、首批霸主挑战 |\n| 渡桥海 | 公测首批 | 中期探索、奇遇事件、进阶敌人 |\n| 隐秘海 | 预计7月底 | 高阶海域、隐藏事件、后续BOSS |\n\n## 首批BOSS档案\n\n| BOSS | 类型 | 当前记录重点 |\n|------|------|-------------|\n| 猩红女爵 | 海上霸主 | 出现海域、阶段转换、船队推荐、掉落物 |\n| 疯老头穆雷 | 精英BOSS | 攻击模式、弱点属性、开荒等级建议 |\n| 猩猩与海盗团 | 团队战 | 多目标处理、控制与AOE队伍 |\n| 鬼新娘 | 机制BOSS | 召唤物、异常状态、净化或治疗需求 |\n\n## 探索优先级\n\n1. 先解锁传送锚点和航行节点，减少重复跑图成本。\n2. 标记奇遇点、材料点、霸主刷新点，后续交互地图会按这些POI维护。\n3. 开荒期优先挑战可稳定掉落养成材料的BOSS，不要越级硬打高难目标。\n4. 进入隐秘海前，优先准备一队单体Boss队和一队AOE清杂队。\n\n## Gachia地图计划\n\n短期以文字版海区档案为主；公测后将根据实测补充坐标、刷新周期、材料路线和BOSS掉落表。",
+    "content": "## 海域开放节奏\n\n| 海域 | 开放窗口 | 内容重点 |\n|------|---------|---------|\n| 白沙海 | 公测首批 | 新手航线、材料点、首批霸主挑战 |\n| 渡桥海 | 公测首批 | 中期探索、奇遇事件、进阶敌人 |\n| 隐秘海 | 预计7月底 | 高阶海域、隐藏事件、后续BOSS |\n\n## 首批BOSS档案\n\n| BOSS | 类型 | 当前记录重点 |\n|------|------|-------------|\n| 猩红女爵 | 海上霸主 | 出现海域、阶段转换、船队推荐、掉落物 |\n| 疯老头穆雷 | 精英BOSS | 攻击模式、弱点属性、开荒等级建议 |\n| 猩猩与海盗团 | 团队战 | 多目标处理、控制与AOE队伍 |\n| 鬼新娘 | 机制BOSS | 召唤物、异常状态、净化或治疗需求 |\n\n## 探索优先级\n\n1. 先解锁传送锚点和航行节点，减少重复跑图成本。\n2. 标记奇遇点、材料点、霸主刷新点，后续交互地图会按这些POI维护。\n3. 开荒期优先挑战可稳定掉落养成材料的BOSS，不要越级硬打高难目标。\n4. 进入隐秘海前，优先准备一队单体Boss队和一队AOE清杂队。\n\n## Gachia地图计划\n\n短期以文字版海区档案为主；公测后将根据实测补充坐标、刷新周期、材料路线和BOSS掉落表。\n\n## 单体Boss入口\n\n猩红女爵机制预案已拆到 [猩红女爵BOSS攻略](./scarlet-duchess-boss-guide)，本页继续维护海域总览、材料点和坐标索引。",
     "contentEn": "## Region Rollout\n\n| Region | Window | Focus |\n|------|---------|---------|\n| White Sand Sea | Launch batch | Starter routes, material points, first overlord fights |\n| Bridge Sea | Launch batch | Midgame exploration, encounters, stronger enemies |\n| Hidden Sea | Expected late July | Advanced region, hidden events, later bosses |\n\n## Early Boss Dossiers\n\n| Boss | Type | Tracking Focus |\n|------|------|-------------|\n| Crimson Duchess | Sea overlord | Region, phases, recommended teams, drops |\n| Mad Old Murray | Elite boss | Attack patterns, weaknesses, progression level |\n| Gorilla Pirate Crew | Multi-target fight | AoE, control, target priority |\n| Ghost Bride | Mechanic boss | Summons, status effects, cleanse/heal demand |\n\n## Exploration Priorities\n\n1. Unlock travel nodes first to reduce route time.\n2. Mark encounter points, material points, and overlord spawns for future map POIs.\n3. Farm reliable progression bosses before forcing high-level fights.\n4. Prepare one single-target boss team and one AoE clearing team before Hidden Sea.\n\n## Gachia Map Plan\n\nShort term: text dossiers. After launch: coordinates, refresh cycles, material routes, and drop tables based on live testing.",
     "faq": [
       {
@@ -1195,6 +1261,39 @@
         "questionZh": "新手最需要关注哪个BOSS？",
         "answer": "Crimson Duchess is the highest-profile sea overlord from the preview, so Gachia will prioritize her mechanics and drops.",
         "answerZh": "猩红女爵是前瞻中最高关注度的海上霸主，Gachia会优先补她的机制和掉落。"
+      }
+    ]
+  },
+  {
+    "id": "scarlet-duchess-boss-guide",
+    "title": "《遗忘之海》猩红女爵BOSS攻略 — 公测首月海上霸主机制预案",
+    "titleEn": "Sea of Remnants Scarlet Duchess Boss Guide — Launch Month Preparation",
+    "category": "boss",
+    "categoryZh": "Boss攻略",
+    "categoryEn": "Boss",
+    "summary": "整理猩红女爵、疯老头穆雷、猩猩与海盗团、鬼新娘等首月BOSS的机制记录模板、配队预案和开服实测清单。",
+    "summaryEn": "Scarlet Duchess and launch-month boss preparation with mechanic tracking, team planning, and testing checklist.",
+    "content": "## 猩红女爵为什么要单独准备\n\n猩红女爵是公测首月最适合做 Boss 攻略的关键词：名字明确、与海上霸主相关、开服后玩家会集中搜索“在哪打、怎么打、掉什么”。公测前先做机制预案，公测后再补坐标、阶段和掉落。\n\n## 首月BOSS速查\n\n| BOSS | 关注点 | 推荐准备 |\n|---|---|---|\n| 猩红女爵 | 阶段转换、海战压力、霸主掉落 | 单体输出 + 生存位 |\n| 疯老头穆雷 | 弱点属性、控制窗口 | 克制属性 + 减伤 |\n| 猩猩与海盗团 | 多目标、小怪压力 | AOE + 控制 |\n| 鬼新娘 | 召唤物、异常状态 | 治疗/净化 + 稳定循环 |\n\n## 开服前配队预案\n\n1. **单体Boss队**：小斧头 + 饿猫（Stray Cat） + 茉莉，适合集中处理关键目标。\n2. **智力机制队**：海葬 + 伊莎贝拉 + 铁腕统领/海赫，适合多目标和机制战。\n3. **稳健容错队**：主攻 + 铁腕统领 + 海赫，适合首周越级尝试。\n\n## 实测记录表\n\n| 字段 | 记录内容 |\n|---|---|\n| 出现海域 | 白沙海、渡桥海、隐秘海或活动副本 |\n| 阶段机制 | 转阶段血线、召唤物、护盾、狂暴 |\n| 推荐等级 | 角色等级、船只等级、遗物要求 |\n| 掉落 | 过往之影、记忆烙印、金币、材料 |\n| 可重复性 | 每日、每周、首通或活动限定 |\n\n公测后优先把猩红女爵页面补成坐标 + 机制 + 掉落三段式，方便进入精选摘要。",
+    "contentEn": "## Scarlet Duchess Launch Prep\n\nScarlet Duchess is the clearest launch-month boss keyword. Before live testing, prepare teams and a tracking template; after launch, update location, phases, and drops.\n\n| Boss | Watch | Prep |\n|---|---|---|\n| Scarlet Duchess | Phase changes, naval pressure | Single-target DPS + survival |\n| Old Murray | Weakness and control windows | Counter attribute + mitigation |\n| Ape Pirate Group | Adds and multi-target pressure | AoE + control |\n| Ghost Bride | Summons and abnormal status | Healing/cleanse + stable rotation |\n\nUse Little Axe + Glutton Cat + Molly for single target, or Sea Burial + Isabella + survival for mechanic fights.",
+    "tags": [
+      "猩红女爵",
+      "BOSS",
+      "海上霸主",
+      "Boss",
+      "Scarlet Duchess"
+    ],
+    "faq": [
+      {
+        "question": "Where is Scarlet Duchess in Sea of Remnants?",
+        "questionZh": "遗忘之海猩红女爵在哪？",
+        "answer": "The exact launch location needs live confirmation. This page will track the sea region, unlock condition, and repeat rules after open beta starts.",
+        "answerZh": "具体位置需要公测实测确认。本页会在开服后记录所属海域、解锁条件和重复挑战规则。"
+      },
+      {
+        "question": "What team should I prepare for Scarlet Duchess?",
+        "questionZh": "猩红女爵推荐什么队伍？",
+        "answer": "Prepare a single-target team with one survival slot. Little Axe + Glutton Cat + Molly is the current launch-planning option.",
+        "answerZh": "建议准备单体输出队，并保留一个生存位。当前开服预案是小斧头 + 饿猫（Stray Cat） + 茉莉。"
       }
     ]
   },
@@ -1215,7 +1314,7 @@
       "搬砖",
       "Orbtopia"
     ],
-    "content": "## 奥托皮亚为什么重要\n\n奥托皮亚不是单纯的主城菜单，而是公测版叙事与养成的核心节点。前瞻信息提到主城存在多结局，例如荒凉结局、地下之王等分支。不同NPC选择、资源投入和事件顺序可能影响结局走向。\n\n## 结局树记录模板\n\n| 记录项 | 说明 |\n|--------|------|\n| NPC | 触发事件的NPC或阵营 |\n| 条件 | 好感、主线进度、资源消耗、特定选择 |\n| 分支 | 当前选择会导向哪个阶段 |\n| 奖励 | 道具、货币、剧情解锁或城镇功能 |\n| 可逆性 | 是否可以回档、重置或二周目补完 |\n\n## 全服交易行重点\n\n公测前瞻提到全服交易行与好金砖流通。开荒期建议关注三类物品：\n\n1. 外观类：时装、船只涂装，价格波动大，适合记录行情。\n2. 稀有材料：若允许交易，优先观察养成瓶颈材料。\n3. 活动物品：首月活动产物可能具有短期溢价。\n\n## 搬砖注意事项\n\n- 不要把测试期价格当作正式服价格。\n- 公测第一周价格波动极大，记录区间比给出单点价格更可靠。\n- 优先确认交易税、上架限制、绑定规则和跨服范围。\n- 涉及现金交易或第三方平台的行为风险很高，Gachia只记录游戏内规则和公开行情。\n\n## 后续更新\n\n公测后本页会补充奥托皮亚结局流程图、交易税率、热门道具价格区间和每周行情基线。",
+    "content": "## 奥托皮亚为什么重要\n\n奥托皮亚不是单纯的主城菜单，而是公测版叙事与养成的核心节点。前瞻信息提到主城存在多结局，例如荒凉结局、地下之王等分支。不同NPC选择、资源投入和事件顺序可能影响结局走向。\n\n## 结局树记录模板\n\n| 记录项 | 说明 |\n|--------|------|\n| NPC | 触发事件的NPC或阵营 |\n| 条件 | 好感、主线进度、资源消耗、特定选择 |\n| 分支 | 当前选择会导向哪个阶段 |\n| 奖励 | 道具、货币、剧情解锁或城镇功能 |\n| 可逆性 | 是否可以回档、重置或二周目补完 |\n\n## 全服交易行重点\n\n公测前瞻提到全服交易行与好金砖流通。开荒期建议关注三类物品：\n\n1. 外观类：时装、船只涂装，价格波动大，适合记录行情。\n2. 稀有材料：若允许交易，优先观察养成瓶颈材料。\n3. 活动物品：首月活动产物可能具有短期溢价。\n\n## 搬砖注意事项\n\n- 不要把测试期价格当作正式服价格。\n- 公测第一周价格波动极大，记录区间比给出单点价格更可靠。\n- 优先确认交易税、上架限制、绑定规则和跨服范围。\n- 涉及现金交易或第三方平台的行为风险很高，Gachia只记录游戏内规则和公开行情。\n\n## 后续更新\n\n公测后本页会补充奥托皮亚结局流程图、交易税率、热门道具价格区间和每周行情基线。\n\n## 隐藏结局入口\n\n隐秘海、荒凉结局和地下之王路线记录已拆到 [隐秘海与荒凉结局攻略](./hidden-sea-ending-guide)，本页继续维护奥托皮亚与交易行总览。",
     "contentEn": "## Why Orbtopia Matters\n\nOrbtopia is not just a city menu. It is a core narrative and progression hub. Preview information mentioned multiple endings, such as desolate ending and underground king branches. NPC choices, resources, and event order may influence outcomes.\n\n## Ending Tree Template\n\n| Field | Meaning |\n|--------|------|\n| NPC | NPC or faction triggering the event |\n| Condition | Affinity, story progress, resource cost, specific choice |\n| Branch | Which route the choice advances |\n| Reward | Items, currency, story unlocks, city functions |\n| Reversibility | Whether it can be reset or completed later |\n\n## Trade Market Focus\n\nThe preview mentioned a server-wide market and Good Gold Bars. Watch three item types at launch:\n\n1. Cosmetics: outfits and ship paints, likely volatile.\n2. Rare materials: especially progression bottlenecks if tradable.\n3. Event items: launch-month items may carry short-term premium.\n\n## Trading Notes\n\n- Do not treat test prices as launch prices.\n- In week one, price ranges are more reliable than single values.\n- Confirm trade tax, listing limits, binding rules, and server scope first.\n- Gachia only tracks in-game rules and public market info, not third-party cash trades.\n\n## Future Updates\n\nAfter launch this page will add Orbtopia ending charts, tax rates, popular item price ranges, and weekly market baselines.",
     "faq": [
       {
@@ -1229,6 +1328,39 @@
         "questionZh": "可以通过交易行搬砖吗？",
         "answer": "Potentially, but launch rules, taxes, binding restrictions, and price volatility must be confirmed first.",
         "answerZh": "有潜力，但必须先确认交易税、绑定规则、上架限制和首周价格波动。"
+      }
+    ]
+  },
+  {
+    "id": "hidden-sea-ending-guide",
+    "title": "《遗忘之海》隐秘海与荒凉结局攻略 — 隐藏路线记录模板",
+    "titleEn": "Sea of Remnants Hidden Sea and Bleak Ending Guide",
+    "category": "exploration",
+    "categoryZh": "探索",
+    "categoryEn": "Exploration",
+    "summary": "面向7月下旬隐秘海、荒凉结局、地下之王等隐藏路线，提供选择记录、NPC状态、结局树和补完路线模板。",
+    "summaryEn": "Hidden Sea, bleak ending, and route tracking template for late-July exploration.",
+    "content": "## 隐秘海与荒凉结局怎么准备\n\n隐秘海预计是 7 月下旬的高搜索内容，核心搜索会集中在“怎么进隐秘海”“荒凉结局怎么触发”“选择错了能不能补”。开服前先建立记录模板，避免正式服信息散落。\n\n## 隐藏路线记录模板\n\n| 记录项 | 说明 |\n|---|---|\n| 前置主线 | 触发前需要完成的章节和海域 |\n| NPC状态 | 是否存活、好感、是否离开奥托皮亚 |\n| 关键选择 | 选项原文、选择时间、后续变化 |\n| 城镇状态 | 建筑等级、资源投入、阵营倾向 |\n| 结局结果 | 荒凉结局、地下之王或其他分支 |\n\n## 首周不要做什么\n\n- 不要跳过 NPC 对话，隐藏结局往往藏在条件描述里。\n- 不要只记录最终选择，前置事件顺序可能更重要。\n- 不要急着消耗稀有资源改变城镇状态，先等结局条件确认。\n\n## 推荐截图节点\n\n1. 进入新海域前的任务列表。\n2. 涉及奥托皮亚资源分配的选择界面。\n3. NPC 离队、死亡、失踪、加入阵营等状态变化。\n4. 结局标题和奖励结算页。\n\n公测后本页会按“路线入口、关键选择、失败补救、奖励”更新。",
+    "contentEn": "## Hidden Sea and Bleak Ending Prep\n\nHidden Sea is expected to become a late-July search topic. Track story prerequisites, NPC states, key choices, town state, and ending results before changing major resources.\n\n| Field | What to record |\n|---|---|\n| Prerequisite | Chapter and sea region |\n| NPC state | Alive, affinity, left town, faction |\n| Choice | Exact option and timing |\n| Town state | Building level, resource spend |\n| Ending | Bleak ending, underground route, or other branch |",
+    "tags": [
+      "隐秘海",
+      "荒凉结局",
+      "隐藏结局",
+      "Hidden Sea",
+      "Ending"
+    ],
+    "faq": [
+      {
+        "question": "How do I unlock Hidden Sea?",
+        "questionZh": "隐秘海怎么进？",
+        "answer": "The exact unlock route needs live testing. Track main story progress, NPC choices, and Orbtopia state before late-July Hidden Sea content opens.",
+        "answerZh": "具体入口需要公测实测。建议提前记录主线进度、NPC选择和奥托皮亚状态，等7月下旬隐秘海开放后补完。"
+      },
+      {
+        "question": "Can I fix a bad ending?",
+        "questionZh": "触发荒凉结局后还能补救吗？",
+        "answer": "Unknown before launch testing. Keep screenshots and avoid irreversible resource choices until route reset rules are confirmed.",
+        "answerZh": "公测前暂不能确认。建议保留截图，并在结局重置规则确认前谨慎做不可逆资源选择。"
       }
     ]
   },
@@ -1249,7 +1381,7 @@
       "Codes",
       "Rewards"
     ],
-    "content": "## 当前已记录兑换码\n\n| 兑换码 | 来源 | 状态 | 备注 |\n|--------|------|------|------|\n| `ywzh2026` | 2026年6月26日公测前瞻直播 | 待公测验证 | 建议公测首日优先尝试 |\n\n## 公测福利重点\n\n- 公测福利：前瞻信息提到公测送100抽，具体领取路径以游戏内活动页为准。\n- 新手保底：新手40抽必得黑券船员，适合配合开局6选1规划阵容。\n- 平台礼包：TapTap、B站、微信、官网预约等平台可能存在专属礼包码。\n- 邮件补偿：公测首周如遇排队、维护或热修，通常需要检查系统邮件。\n\n## 每日巡检流程\n\n1. 公测首周每天检查官方公告、微博、公众号、TapTap、B站动态。\n2. 新码记录兑换码、奖励、有效期、适用服务器和来源链接。\n3. 过期码灰显，不删除，保留历史记录方便用户排查。\n4. 奖励未确认时标注以游戏内兑换结果为准，避免误导。\n\n## 兑换建议\n\n公测当天先兑换限时直播码，再领取预约礼包和平台礼包。若提示服务器繁忙，建议截图保留错误提示，稍后重试。",
+    "content": "## 当前已记录兑换码\n\n| 兑换码 | 来源 | 状态 | 备注 |\n|--------|------|------|------|\n| `ywzh2026` | 2026年6月26日公测前瞻直播 | 待公测验证 | 建议公测首日优先尝试 |\n\n## 公测福利重点\n\n- 公测福利：前瞻信息提到公测送100抽，具体领取路径以游戏内活动页为准。\n- 新手保底：新手40抽必得黑券船员，适合配合开局6选1规划阵容。\n- 平台礼包：TapTap、B站、微信、官网预约等平台可能存在专属礼包码。\n- 邮件补偿：公测首周如遇排队、维护或热修，通常需要检查系统邮件。\n\n## 每日巡检流程\n\n1. 公测首周每天检查官方公告、微博、公众号、TapTap、B站动态。\n2. 新码记录兑换码、奖励、有效期、适用服务器和来源链接。\n3. 过期码灰显，不删除，保留历史记录方便用户排查。\n4. 奖励未确认时标注以游戏内兑换结果为准，避免误导。\n\n## 兑换建议\n\n公测当天先兑换限时直播码，再领取预约礼包和平台礼包。若提示服务器繁忙，建议截图保留错误提示，稍后重试。\n\n## 领奖顺序建议\n\n公测首周建议先按 [首周每日清单](./week-one-daily-checklist) 完成号角、邮件、签到和活动页检查，再回头处理平台礼包和兑换码。",
     "contentEn": "## Currently Tracked Codes\n\n| Code | Source | Status | Note |\n|--------|------|------|------|\n| `ywzh2026` | June 26, 2026 open beta preview livestream | Awaiting launch verification | Try on launch day first |\n\n## Launch Rewards\n\n- Launch rewards: preview info mentioned 100 pulls; claim path depends on in-game event pages.\n- Beginner guarantee: 40 pulls guarantee a Black Ticket crew, best planned with the opening 6-choice pick.\n- Platform gifts: TapTap, Bilibili, WeChat, and official reservations may have platform codes.\n- Mail compensation: check system mail during launch week for maintenance or hotfix rewards.\n\n## Daily Check Process\n\n1. During launch week, check official notices, Weibo, WeChat, TapTap, and Bilibili daily.\n2. Record code, reward, expiry, server scope, and source.\n3. Grey out expired codes but keep history.\n4. If rewards are unclear, mark them as dependent on in-game redemption results.\n\n## Redemption Advice\n\nOn launch day, redeem limited livestream codes first, then reservation and platform gifts. If servers are busy, keep the error screenshot and retry later.",
     "faq": [
       {
