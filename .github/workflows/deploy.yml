@@ -1,4 +1,4 @@
-name: Build & Deploy
+name: Build & Verify
 
 on:
   push:
@@ -34,7 +34,7 @@ jobs:
 
       # P0 Quality Gates: Database migration for production deployments
       - name: Database Migration
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push' && vars.CLOUDFLARE_DEPLOY_FROM_GITHUB == 'true'
         run: |
           echo "Running database migrations..."
           # Note: Remote migrations should be applied via wrangler
@@ -47,7 +47,7 @@ jobs:
         run: cd apps/web && npx opennextjs-cloudflare build
 
       - name: Deploy to Cloudflare
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push' && vars.CLOUDFLARE_DEPLOY_FROM_GITHUB == 'true'
         run: cd apps/web && npx opennextjs-cloudflare deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
