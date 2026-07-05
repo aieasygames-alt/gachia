@@ -6,17 +6,18 @@
     "category": "beginner",
     "categoryZh": "新手指南",
     "categoryEn": "Beginner",
-    "summary": "从零开始了解《遗忘之海》的世界观、回合制战斗系统、船员招募和奥托皮亚城镇经营。",
-    "summaryEn": "Learn everything about Sea of Remnants' world, turn-based combat, crew recruitment, and Orbtopia city management.",
-    "content": "## 欢迎，船长\n\n你是一个失去记忆的木偶船长，与自称天才冒险家的少女艾丝一起，在这片被诅咒的海洋中寻找遗忘之海。\n\n### 基础操作\n\n- **回合制战斗**：陆地战斗为回合制策略，合理安排船员行动顺序\n- **海战**：实时操控船只进行海战\n- **船队编组**：根据船员属性和技能搭配甲板小队\n\n### 属性系统\n\n每个船员有一个主属性，决定其技能成长方向：\n\n1. **力量 (STR)** — 物理伤害主属性\n2. **敏捷 (AGI)** — 速度与暴击相关\n3. **体质 (CON)** — 生存与防御\n4. **智力 (INT)** — 技能伤害\n5. **感知 (PER)** — 命中与辅助\n6. **魅力 (CHA)** — 控制与治疗\n\n### 稀有度说明\n\n- **黑券船员**：更稀有的船员，但官方声明与紫券战力平等\n- **紫券船员**：标准稀有度\n\n### 招募优先级\n\n1. 新手池40抽保底黑券角色，首抽推荐选择王女或小斧头\n2. 完成主线获取羽毛票据进行招募\n3. 优先培养1名主攻+1名辅助+1名生存",
-    "contentEn": "## Welcome, Captain\n\nYou are a puppet captain who has lost their memory. Together with Ais, a self-proclaimed genius adventurer, you sail the cursed seas in search of the Sea of Remnants.\n\n### Basic Controls\n\n- **Turn-based Combat**: Land combat uses turn-based strategy\n- **Naval Combat**: Real-time ship battles\n- **Fleet Composition**: Build your deck crew based on crew attributes and skills\n\n### Attribute System\n\nEach crew member has a primary attribute:\n\n1. **Strength (STR)** — Physical damage\n2. **Agility (AGI)** — Speed and critical hits\n3. **Constitution (CON)** — Survival and defense\n4. **Intelligence (INT)** — Skill damage\n5. **Perception (PER)** — Accuracy and support\n6. **Charisma (CHA)** — Control and healing\n\n### Rarity\n\n- **Black Ticket**: Higher rarity crew, but officially balanced equal to Purple Ticket\n- **Purple Ticket**: Standard rarity\n\n### Recruitment Priority\n\n1. Beginner banner: 40-pull guarantee for Black Ticket character\n2. Complete main story for Feather Tickets\n3. Build 1 Main DPS + 1 Support + 1 Survival first",
+    "summary": "面向7月9日PC公测的新手路线：预下载、预约奖励、6选1黑券、首日主线、号角每日4次和第一队养成。",
+    "summaryEn": "A July 9 PC open beta beginner route covering preload, launch rewards, 6-choice Black Ticket, day-one story, four daily Horn attempts, and first-team investment.",
+    "content": "## 开服前 4 件事\n\n1. 7月6日 10:00 后完成 PC 预下载和预创角。\n2. 先确认预约奖励、七日签到和首日邮件，不要漏领抽卡资源。\n3. 读懂首次记忆重逢 6 选 1，再决定第一名黑券船员。\n4. 把第一队定为 1 主攻 + 1 辅助 + 1 生存，避免平均养成。\n\n## 首日推进顺序\n\n| 阶段 | 目标 | 不建议做的事 |\n|---|---|---|\n| 0-30分钟 | 完成登录、领奖、基础设置 | 在未解锁系统前乱刷材料 |\n| 30-120分钟 | 推主线，解锁奥托皮亚、招募、日常入口 | 频繁换队导致资源分散 |\n| 第一次招募后 | 根据 6 选 1补齐缺口 | 只看稀有度，不看队伍定位 |\n| 当天收尾 | 清号角每日 4 次、整理装备和材料 | 把所有资源投给未实测角色 |\n\n## 属性与定位\n\n每个船员有一个主属性，决定技能成长方向：力量、敏捷、体质、智力、感知、魅力。新手阶段不用追求全属性覆盖，先保证队伍有稳定输出、增益或控制、生存续航。\n\n## 黑券与紫券怎么理解\n\n黑券不等于绝对碾压。官方方向是黑券与紫券战力平等，差别更多体现在机制、追击、获取稀有度和阵容适配。开荒时应优先问三个问题：\n\n- 我缺主攻、辅助还是生存？\n- 这个船员是否能和已有船员组成连锁？\n- 未来两周活动是否可能需要保留资源？\n\n## 推荐第一队\n\n| 队伍 | 船员 | 适合场景 |\n|---|---|---|\n| 追击开荒 | 小斧头 + 饿猫（Stray Cat） + 茉莉 | 单体和首周推图，追击频率高 |\n| 智力清场 | 海葬 + 伊莎贝拉 + 生存位 | 群体战和机制战，等实测确认数值 |\n| 稳健泛用 | 茉莉 + 黑格 + 盖尔 | 蓝色乐队体系，适合长线培养 |\n\n## 资源分配原则\n\n1. 主攻等级和核心技能优先。\n2. 辅助只升关键增益或控制技能。\n3. 生存位保证不倒即可，不要抢主攻资源。\n4. 过往之影、记忆烙印等系统先保留高品质材料，等主队确定后再强化。\n\n下一步建议阅读 [招募系统指南](./gacha-recruitment-guide) 和 [阵容搭配指南](./team-building-guide)。",
+    "contentEn": "## Four Things to Do Before Launch\n\n1. Complete PC preload and character creation after July 6, 10:00.\n2. Claim reservation rewards, seven-day login rewards, and launch mail.\n3. Understand the first Memory Reunion 6-choice selector before choosing your Black Ticket unit.\n4. Build one DPS, one support, and one survival slot instead of spreading resources.\n\n## Day-One Route\n\n| Stage | Goal | Avoid |\n|---|---|---|\n| 0-30 min | Login, claim rewards, adjust settings | Farming materials before systems unlock |\n| 30-120 min | Push story to unlock Orbtopia, Recruitment, and daily entries | Swapping teams too often |\n| After first Recruitment | Use the 6-choice selector to fill your team gap | Choosing by rarity alone |\n| End of day | Clear four daily Horn attempts and sort gear | Dumping all resources into untested units |\n\n## Attributes and Roles\n\nCrew members have primary attributes such as STR, AGI, CON, INT, PER, and CHA. Early on, you do not need full coverage. Build stable damage, support/control, and survival first.\n\n## Black Ticket vs Purple Ticket\n\nBlack Ticket does not automatically mean overpowering. The current design direction is combat parity, with differences in mechanics, follow-up attacks, rarity, and team fit.\n\n## Starter Team Ideas\n\n| Team | Crew | Best for |\n|---|---|---|\n| Follow-up Starter | Little Axe + Glutton Cat (Stray Cat) + Molly | Single-target and week-one progression |\n| Intelligence Clear | Sea Burial + Isabella + Survival | AoE and mechanic fights after launch testing |\n| Stable Core | Molly + Heige + Gail | Blue Band long-term investment |\n\nRead the [Recruitment Guide](./gacha-recruitment-guide) and [Team Building Guide](./team-building-guide) next.",
     "tags": [
       "新手",
-      "入门",
-      "基础",
+      "开服",
+      "6选1",
+      "号角",
       "Beginner",
-      "Basics",
-      "指南"
+      "Launch",
+      "Basics"
     ],
     "faq": [
       {
@@ -41,34 +42,36 @@
   },
   {
     "id": "download-install-guide",
-    "title": "《遗忘之海》下载安装指南 — 全平台下载地址",
-    "titleEn": "Sea of Remnants System Requirements & Download Guide",
+    "title": "《遗忘之海》预下载与安装指南 — 7月6日PC预下载、7月9日公测",
+    "titleEn": "Sea of Remnants Preload & Install Guide — July 6 PC Preload, July 9 Open Beta",
     "category": "beginner",
     "categoryZh": "新手指南",
     "categoryEn": "Beginner",
-    "summary": "提供《遗忘之海》在PC、PS5、安卓、iOS平台的下载安装教程和系统配置要求。",
-    "summaryEn": "Sea of Remnants system requirements for PC, Android, iOS, and PS5. Download links and install guide.",
-    "content": "## 系统配置要求\n\n### PC最低配置\n- 操作系统: Windows 10/11 64-bit\n- 处理器: Intel i7-9700 / AMD Ryzen 5 3600X\n- 内存: 16GB RAM\n- 显卡: GTX 1060 (6GB) / RX 480 (8GB)\n- 存储空间: 60GB\n\n### PC推荐配置\n- 操作系统: Windows 10/11 64-bit\n- 处理器: Intel i7-12700 / AMD Ryzen 7 7700X\n- 内存: 32GB RAM\n- 显卡: RTX 3070 Ti / RX 6800XT\n- 存储空间: 80GB\n\n### 下载方式\n\n1. **PC端**: Steam 搜索\"Sea of Remnants\"或\"遗忘之海\"\n2. **移动端**: 官网 sea.163.com 下载\n3. **PS5**: PlayStation Store 搜索 Sea of Remnants",
-    "contentEn": "## System Requirements\n\n### PC Minimum\n- OS: Windows 10/11 64-bit\n- CPU: Intel i7-9700 / AMD Ryzen 5 3600X\n- RAM: 16GB\n- GPU: GTX 1060 (6GB) / RX 480 (8GB)\n- Storage: 60GB\n\n### PC Recommended\n- OS: Windows 10/11 64-bit\n- CPU: Intel i7-12700 / AMD Ryzen 7 7700X\n- RAM: 32GB\n- GPU: RTX 3070 Ti / RX 6800XT\n- Storage: 80GB\n\n## How to Download\n\n1. **PC**: Search \"Sea of Remnants\" on Steam\n2. **Mobile**: Visit sea.163.com\n3. **PS5**: Search on PlayStation Store",
+    "summary": "整理《遗忘之海》PC预下载、预创角、安装检查、配置要求和开服当天排错步骤。",
+    "summaryEn": "Sea of Remnants PC preload, pre-character creation, install checklist, system requirements, and launch-day troubleshooting.",
+    "content": "## 公测安装时间线\n\n| 时间 | 内容 | 建议 |\n|---|---|---|\n| 7月6日 10:00 | PC 预下载、预创角、预捏脸 | 当天先完成下载和角色创建 |\n| 7月9日 | PC 公测开启 | 开服后先推主线，不要先刷低收益支线 |\n| 7月内 | 移动端相关节奏继续跟进 | 等官方渠道确认后再迁移账号或设备 |\n\n## PC 安装前检查\n\n### 最低配置\n\n- 操作系统：Windows 10/11 64-bit\n- 处理器：Intel i7-9700 / AMD Ryzen 5 3600X\n- 内存：16GB RAM\n- 显卡：GTX 1060 6GB / RX 480 8GB\n- 存储空间：至少预留 60GB\n\n### 推荐配置\n\n- 操作系统：Windows 10/11 64-bit\n- 处理器：Intel i7-12700 / AMD Ryzen 7 7700X\n- 内存：32GB RAM\n- 显卡：RTX 3070 Ti / RX 6800 XT\n- 存储空间：建议预留 80GB\n\n## 预下载当天怎么做\n\n1. 使用官方 PC 客户端或官方合作渠道下载，避免安装非官方包。\n2. 下载完成后启动一次客户端，确认补丁校验通过。\n3. 进入预创角流程，提前完成昵称、外观和捏脸保存。\n4. 开服前关闭多余下载器，给首日补丁和登录留出网络空间。\n\n## 开服当天排错\n\n| 问题 | 处理方式 |\n|---|---|\n| 客户端无法更新 | 重新校验文件，确认磁盘剩余空间超过 20GB |\n| 登录排队或失败 | 避开整点高峰，优先确认公告是否有维护 |\n| 画面卡顿 | 先降低阴影、体积雾和后处理，再调整分辨率 |\n| 预创角没同步 | 确认登录账号、服务器和渠道一致 |\n\n## 下一步\n\n安装完成后先读 [公测前瞻日历](./launch-preview-calendar) 和 [新手入门指南](./beginner-guide)，把开服首日目标定为：解锁主线系统、领取预约奖励、完成号角次数、确定第一队。",
+    "contentEn": "## Launch Install Timeline\n\n| Time | Update | Recommendation |\n|---|---|---|\n| July 6, 10:00 | PC preload, character creation, face creation | Install and create your character early |\n| July 9 | PC open beta starts | Push story unlocks before low-value side farming |\n| Within July | Mobile schedule continues to roll out | Wait for official channel confirmation before switching devices |\n\n## PC Requirements\n\n### Minimum\n\n- OS: Windows 10/11 64-bit\n- CPU: Intel i7-9700 / AMD Ryzen 5 3600X\n- RAM: 16GB\n- GPU: GTX 1060 6GB / RX 480 8GB\n- Storage: 60GB free space\n\n### Recommended\n\n- OS: Windows 10/11 64-bit\n- CPU: Intel i7-12700 / AMD Ryzen 7 7700X\n- RAM: 32GB\n- GPU: RTX 3070 Ti / RX 6800 XT\n- Storage: 80GB free space recommended\n\n## Preload Checklist\n\n1. Download from the official PC client or verified official channel.\n2. Launch once after installation to complete file verification.\n3. Finish pre-character creation and save your appearance.\n4. Free up bandwidth before launch-day patches.\n\n## Launch-Day Troubleshooting\n\n| Issue | Fix |\n|---|---|\n| Client will not update | Verify files and keep more than 20GB free space |\n| Login queue or failure | Avoid peak minutes and check maintenance notices |\n| Low FPS | Lower shadows, volumetric fog, post-processing, then resolution |\n| Pre-created character missing | Confirm the same account, server, and channel |\n\nAfter installation, read the [Launch Preview Calendar](./launch-preview-calendar) and [Beginner Guide](./beginner-guide).",
     "tags": [
-      "下载",
+      "预下载",
       "安装",
+      "下载",
+      "配置",
       "Download",
-      "Install",
-      "配置"
+      "Preload",
+      "Install"
     ],
     "faq": [
       {
-        "question": "Is Sea of Remnants free to play?",
-        "questionZh": "遗忘之海是免费游戏吗？",
-        "answer": "Yes, Sea of Remnants is free-to-play with optional in-app purchases.",
-        "answerZh": "是的，遗忘之海免费游玩，有可选的应用内购买。"
+        "question": "When does Sea of Remnants preload start?",
+        "questionZh": "遗忘之海什么时候可以预下载？",
+        "answer": "PC preload and pre-character creation are scheduled for July 6, 2026 at 10:00, ahead of the July 9 PC open beta.",
+        "answerZh": "PC 预下载、预创角和预捏脸安排在 2026 年 7 月 6 日 10:00，PC 公测为 7 月 9 日。"
       },
       {
-        "question": "What platforms are supported?",
-        "questionZh": "遗忘之海支持哪些平台？",
-        "answer": "PC (Steam), Android, iOS, PlayStation 5, and Xbox Series X/S.",
-        "answerZh": "支持 PC (Steam)、安卓、iOS、PS5 和 Xbox Series X/S。"
+        "question": "How much storage do I need on PC?",
+        "questionZh": "PC需要预留多少硬盘空间？",
+        "answer": "Reserve at least 60GB for installation and preferably around 80GB so launch-day patches have enough room.",
+        "answerZh": "至少预留 60GB，建议预留约 80GB，给首日补丁和文件校验留出空间。"
       }
     ]
   },
@@ -79,17 +82,18 @@
     "category": "tier-list",
     "categoryZh": "节奏榜",
     "categoryEn": "Tier List",
-    "summary": "遗忘之海全船员强度排行，按SS/S/A/B分级，涵盖输出、辅助、生存各定位，含黑券与紫券角色推荐。",
-    "summaryEn": "Complete Sea of Remnants crew tier list with SS/S/A/B rankings across DPS, support, and survival roles. Includes both Black Ticket and Purple Ticket characters.",
-    "content": "## 船员Tier排行标准\n\n本节奏榜基于以下维度评级：\n- 输出能力 (DPS)\n- 辅助能力 (增益/减抗/控制)\n- 生存能力 (治疗/护盾/减伤)\n- 泛用性 (队伍适配度)\n- 获取难度 (是否需要命座)\n\n### SS级船员（最强推荐）\n\n| 船员 | 定位 | 属性 | 推荐理由 |\n|------|------|------|----------|\n| 王女 | 辅助 | CHA | 全队增益强大，适配所有队伍 |\n| 小斧头 | 主C | STR | 前期物理输出天花板，开荒首选 |\n\n### S级船员（强力推荐）\n\n| 船员 | 定位 | 属性 | 推荐理由 |\n|------|------|------|----------|\n| 艾丝 | 副C | AGI | 速度与暴击优秀，追加攻击机制 |\n| 船长（木偶） | 生存 | CON | 高生存能力，嘲讽保护队友 |\n\n### A级船员（可用选择）\n\n- 各属性紫券输出船员\n- 功能性辅助（控制/治疗）\n\n### B级船员（过渡使用）\n\n- 早期过渡船员，资源富余后再培养\n\n## 黑券 vs 紫券选择建议\n\n官方明确黑券与紫券战力平等。选择时优先考虑：\n1. 队伍缺什么定位就选什么\n2. 黑券的追击/追加机制更强\n3. 紫券的基础面板也很扎实",
-    "contentEn": "## Tier List Criteria\n\nCrew members are evaluated on:\n- Damage output (DPS)\n- Support capability (buffs/debuffs/control)\n- Survival (healing/shielding/DMG reduction)\n- Versatility (team compatibility)\n- Investment cost (constellation dependency)\n\n### SS Tier (Top Recommendations)\n\n| Crew | Role | Attribute | Reason |\n|------|------|-----------|--------|\n| Princess | Support | CHA | Powerful team buffs, fits all teams |\n| Little Axe | Main DPS | STR | Highest early physical DPS, best for progression |\n\n### S Tier (Strong Picks)\n\n| Crew | Role | Attribute | Reason |\n|------|------|-----------|--------|\n| Ais | Sub-DPS | AGI | Excellent speed and crit, follow-up attack mechanic |\n| Captain (Puppet) | Survival | CON | High survivability, taunts to protect allies |\n\n### A Tier (Viable Choices)\n\n- Purple Ticket DPS of various attributes\n- Utility supports (control/healing)\n\n### B Tier (Transitional)\n\n- Early-game crew, invest only with surplus resources\n\n## Black Ticket vs Purple Ticket\n\nDevelopers confirmed both rarities are equal in power. Choose based on:\n1. What role your team needs\n2. Black Ticket has stronger follow-up mechanics\n3. Purple Ticket has solid base stats",
+    "summary": "公测首周船员强度与自选建议：小斧头、饿猫（Stray Cat）、铁腕统领、海葬、伊莎贝拉、茉莉、海赫等开服角色定位。",
+    "summaryEn": "Launch-week crew tier and selector advice covering Little Axe, Glutton Cat (Stray Cat), Iron Commander, Sea Burial, Isabella, Molly, Haihe, and early roles.",
+    "content": "## 公测首周节奏榜说明\n\n本页适用于 7月9日 PC 公测首周。开服前资料来自版本前瞻和公开情报，正式强度仍需要根据实装倍率、Boss 机制和活动副本调整。\n\n## 开服优先级\n\n| 优先级 | 船员 | 定位 | 推荐理由 |\n|---|---|---|---|\n| SS | 小斧头 | 主攻/爆发 | 首次6选1可选，适合缺主C的新手 |\n| S+ | 饿猫（Stray Cat） | 协攻/追击 | 与小斧头组成追击链，首周潜力高 |\n| S+ | 茉莉 | 生存/辅助 | 蓝色乐队体系关键位，但不在首次6选1中 |\n| S | 铁腕统领 | 生存/承伤 | 首周容错率高，适合稳推主线 |\n| S | 海葬 | 智力/AoE | 群体战和机制战潜力高 |\n| S | 伊莎贝拉 | 智力/机制 | 适合智力队补伤害和机制位 |\n| A+ | 海赫 | 协攻/辅助 | 七日签到相关紫券，适合过渡和补位 |\n| A | 焦面上校 | 主攻 | 稳定输出备选，等实测决定上限 |\n\n## 6选1推荐顺序\n\n1. **小斧头**：没有稳定主C时优先。\n2. **铁腕统领**：队伍容易倒、想降低开荒压力时优先。\n3. **饿猫（Stray Cat）**：准备走追击队，或已经有小斧头时优先。\n4. **海葬 / 伊莎贝拉**：想走智力清场或机制战路线时考虑。\n5. **焦面上校**：缺输出但不想绑定追击体系时可选。\n\n## 不要只看稀有度\n\n黑券和紫券的差异不应被理解为纯数值碾压。开服首周更重要的是定位完整、循环顺畅和资源集中。海赫这类免费或易获取紫券，如果能补上队伍短板，价值会高于盲目追求第二个黑券输出。\n\n## 暂定队伍评级\n\n| 队伍 | 评级 | 说明 |\n|---|---|---|\n| 小斧头 + 饿猫（Stray Cat） + 茉莉 | S+ | 追击链清晰，适合首周单体和推图 |\n| 海葬 + 伊莎贝拉 + 生存位 | S | 群体战潜力高，等数值实测 |\n| 茉莉 + 黑格 + 盖尔 | S | 长线稳定，适合蓝色乐队玩家 |\n| 小斧头 + 铁腕统领 + 海赫 | A+ | 更稳的低成本开荒组合 |\n\n更多搭配见 [阵容搭配指南](./team-building-guide)。",
+    "contentEn": "## Launch-Week Tier Notes\n\nThis tier list targets the first week of the July 9 PC open beta. Rankings are based on preview information and should be adjusted after live multipliers, boss mechanics, and event stages are tested.\n\n## Launch Priority\n\n| Priority | Crew | Role | Why |\n|---|---|---|---|\n| SS | Little Axe | DPS / burst | Best first carry from the 6-choice selector |\n| S+ | Glutton Cat (Stray Cat) | Sub DPS / follow-up | Strong follow-up pairing with Little Axe |\n| S+ | Molly | Survival / support | Key Blue Band unit, but not in the first 6-choice selector |\n| S | Iron Commander | Survival / tank | Safer week-one story progression |\n| S | Sea Burial | INT / AoE | High AoE and mechanic-fight potential |\n| S | Isabella | INT / utility | Useful for Intelligence teams |\n| A+ | Haihe | Support / sub-DPS | Seven-day login Purple Ticket value |\n| A | Burnt Colonel | DPS | Stable carry alternative pending testing |\n\n## 6-Choice Selector Order\n\n1. **Little Axe** if you lack a stable carry.\n2. **Iron Commander** if your team needs survival.\n3. **Glutton Cat (Stray Cat)** if you plan a follow-up team.\n4. **Sea Burial / Isabella** for INT or AoE routes.\n5. **Burnt Colonel** as a stable DPS alternative.\n\nDo not rank by rarity alone. A free or easier Purple Ticket such as Haihe can be more valuable than a second Black Ticket DPS if it fills your missing role.",
     "tags": [
-      "Tier",
       "节奏榜",
-      "排行",
-      "Ranking",
+      "强度",
+      "6选1",
+      "船员",
       "Tier List",
-      "强度"
+      "Ranking",
+      "Launch"
     ],
     "faq": [
       {
@@ -148,18 +152,18 @@
     "category": "team",
     "categoryZh": "阵容",
     "categoryEn": "Team",
-    "summary": "遗忘之海船队搭配攻略：主C+辅助+生存铁三角阵容、属性克制队、追击连锁队，以及不同场景的阵容调整建议。",
-    "summaryEn": "Sea of Remnants fleet composition guide: DPS+Support+Survival core trio, attribute advantage teams, follow-up chain teams, and scenario-specific adjustments.",
-    "content": "## 阵伍编组基础\n\n标准船队由3名船员组成甲板小队，建议遵循铁三角原则：\n\n1. **主C（输出核心）** — 负责主要伤害输出\n2. **辅助（增益/控制）** — 提升主C伤害或限制敌人\n3. **生存（治疗/护盾）** — 保证队伍续航\n\n## 推荐阵容搭配\n\n### 1. 物理追击队\n\n| 位置 | 船员 | 作用 |\n|------|------|------|\n| 主C | 小斧头 | 高物理伤害，追击触发 |\n| 辅助 | 王女 | 全队攻击力增益 |\n| 生存 | 船长 | 嘲讽+减伤 |\n\n**思路**：王女提供攻击力增益，小斧头触发追击快速清怪，船长吸引仇恨保护。\n\n### 2. 敏捷暴击队\n\n| 位置 | 船员 | 作用 |\n|------|------|------|\n| 主C | 艾丝 | 速度+暴击输出 |\n| 辅助 | 感知系辅助 | 命中+减防 |\n| 生存 | 治疗系船员 | 持续回复 |\n\n**思路**：利用速度优势先手攻击，暴击快速削减敌人血量。\n\n### 3. 属性克制队\n\n根据敌人属性选择克制船员：\n- 面对力量系敌人 → 选敏捷系\n- 面对体质系敌人 → 选力量系\n- 面对敏捷系敌人 → 选体质系\n\n## 不同场景阵容调整\n\n### 主线推图\n- 以快速清怪为目标\n- 优先AOE输出船员\n- 携带1名治疗保证续航\n\n### Boss战\n- 单体输出为主\n- 携带减防/减抗辅助\n- 保证生存位质量\n\n### 海战\n- 海战不使用船员技能\n- 依赖船只装备和弹药类型\n- 提升船只等级和炮击伤害",
-    "contentEn": "## Team Building Basics\n\nA standard fleet consists of 3 crew members in a deck squad. Follow the core trio principle:\n\n1. **Main DPS** — Primary damage dealer\n2. **Support** — Buffs main DPS or controls enemies\n3. **Survival** — Heals or shields for sustain\n\n## Recommended Compositions\n\n### 1. Physical Follow-Up Team\n\n| Position | Crew | Role |\n|----------|------|------|\n| DPS | Little Axe | High physical damage, follow-up triggers |\n| Support | Princess | Team ATK buff |\n| Survival | Captain | Taunt + DMG reduction |\n\n**Strategy**: Princess buffs ATK, Little Axe chains follow-ups for quick clears, Captain protects.\n\n### 2. Agility Crit Team\n\n| Position | Crew | Role |\n|----------|------|------|\n| DPS | Ais | Speed + crit output |\n| Support | PER support | Hit rate + DEF down |\n| Survival | Healer | Sustain |\n\n**Strategy**: Use speed advantage to act first, crit to quickly reduce enemy HP.\n\n### 3. Attribute Counter Team\n\nSelect crew that counters the enemy's attribute:\n- STR enemies → Use AGI crew\n- CON enemies → Use STR crew\n- AGI enemies → Use CON crew\n\n## Scenario Adjustments\n\n### Main Story\n- Focus on fast mob clearing\n- Prioritize AoE DPS\n- Bring 1 healer for sustain\n\n### Boss Fights\n- Single-target DPS focus\n- Bring DEF/resistance down supports\n- Ensure survival quality\n\n### Naval Battles\n- Crew skills are not used in naval combat\n- Depends on ship equipment and ammo types\n- Upgrade ship level and cannon damage",
+    "summary": "面向公测首周的船队搭配：小斧头追击队、海葬智力队、茉莉黑格蓝色乐队，以及Boss战和推图换人原则。",
+    "summaryEn": "Week-one team building for Sea of Remnants: Little Axe follow-up teams, Sea Burial INT teams, Molly-Heige Blue Band core, and boss/story swaps.",
+    "content": "## 公测首周组队原则\n\n标准队伍仍然按 **主攻 + 辅助/协攻 + 生存** 来搭。7月9日开服后，第一队不要追求全角色覆盖，先让一个核心循环跑起来。\n\n## 推荐阵容\n\n### 1. 追击开荒队\n\n| 位置 | 船员 | 作用 |\n|---|---|---|\n| 主攻 | 小斧头 | 爆发输出，适合首周推图和单体 Boss |\n| 协攻 | 饿猫（Stray Cat） | 提供追击链和补刀能力 |\n| 生存/辅助 | 茉莉 | 保障续航，稳定队伍循环 |\n\n**适合场景**：主线、首周 Boss、需要快速处理关键目标的战斗。若暂时没有茉莉，可先用海赫或其他生存位过渡。\n\n### 2. 智力清场队\n\n| 位置 | 船员 | 作用 |\n|---|---|---|\n| 主攻 | 海葬 | 群体输出和机制处理 |\n| 协攻 | 伊莎贝拉 | 补充智力伤害与控制/机制位 |\n| 生存 | 铁腕统领 / 海赫 | 提高容错 |\n\n**适合场景**：白沙海、桥海等群体战和机制战。具体强度要等开服数值实测后微调。\n\n### 3. 蓝色乐队稳健队\n\n| 位置 | 船员 | 作用 |\n|---|---|---|\n| 核心 | 茉莉 | 治疗、辅助或体系核心 |\n| 输出 | 黑格 | 与乐队体系联动 |\n| 补位 | 盖尔 / 海赫 | 根据副本需求补输出或生存 |\n\n**适合场景**：长线养成、稳定推图、需要续航的副本。\n\n## Boss战换人原则\n\n- Boss 单体压力高：保留生存位，不要三输出硬打。\n- Boss 召唤小怪：上智力/AoE 位，避免被小怪拖节奏。\n- Boss 有高爆发窗口：辅助位优先选减伤、护盾或行动控制。\n\n## 推图换人原则\n\n| 遇到的问题 | 调整方式 |\n|---|---|\n| 清怪太慢 | 主攻换小斧头或海葬 |\n| 队伍容易倒 | 补铁腕统领、海赫或治疗位 |\n| Boss 打不动 | 换成克制属性或减防辅助 |\n| 技能循环断档 | 降低高耗能角色数量 |\n\n想先确定抽卡目标，请看 [招募系统指南](./gacha-recruitment-guide)。",
+    "contentEn": "## Week-One Team Principles\n\nBuild around **DPS + support/sub-DPS + survival**. For the July 9 launch, do not chase every character at once. Make one core rotation work first.\n\n## Recommended Teams\n\n### 1. Follow-Up Starter\n\n| Slot | Crew | Role |\n|---|---|---|\n| DPS | Little Axe | Burst damage for story and bosses |\n| Sub DPS | Glutton Cat (Stray Cat) | Follow-up chain and finishing damage |\n| Survival/Support | Molly | Sustain and rotation stability |\n\nIf you do not have Molly yet, use Haihe or another survival slot temporarily.\n\n### 2. Intelligence Clear Team\n\n| Slot | Crew | Role |\n|---|---|---|\n| DPS | Sea Burial | AoE and mechanic handling |\n| Sub DPS | Isabella | INT damage and utility |\n| Survival | Iron Commander / Haihe | Safer progression |\n\nBest for early regions with multiple enemies. Adjust after launch testing confirms numbers.\n\n### 3. Blue Band Stable Core\n\n| Slot | Crew | Role |\n|---|---|---|\n| Core | Molly | Healing, support, or team core |\n| Damage | Heige | Blue Band synergy |\n| Flex | Gail / Haihe | Damage or survival depending on the fight |\n\n## Boss Swaps\n\n- High single-target pressure: keep a survival slot.\n- Summoned adds: bring INT/AoE damage.\n- Burst windows: prefer shields, mitigation, or control.\n\nFor pull planning, read the [Recruitment Guide](./gacha-recruitment-guide).",
     "tags": [
       "阵容",
-      "搭配",
-      "队伍",
+      "小斧头",
+      "茉莉",
+      "海葬",
       "Team",
-      "Fleet",
       "Composition",
-      "搭配"
+      "Launch"
     ],
     "faq": [
       {
@@ -178,36 +182,36 @@
   },
   {
     "id": "gacha-recruitment-guide",
-    "title": "《遗忘之海》招募系统指南 — 抽卡保底与船员获取",
-    "titleEn": "Sea of Remnants Gacha & Recruitment Guide — Pity System & Crew Acquisition",
+    "title": "《遗忘之海》招募系统指南 — 记忆重逢6选1与开服抽卡规划",
+    "titleEn": "Sea of Remnants Recruitment Guide — Memory Reunion 6-Choice Selector and Launch Pull Plan",
     "category": "system",
     "categoryZh": "系统",
     "categoryEn": "System",
-    "summary": "遗忘之海招募（抽卡）系统详解：票券类型、保底机制、新手池策略、限定池推荐，以及零氪/微氪的招募规划。",
-    "summaryEn": "Complete guide to Sea of Remnants recruitment (gacha) system: ticket types, pity mechanics, beginner banner strategy, limited banner recommendations, and F2P/low-spender planning.",
-    "content": "## 招募系统概览\n\n### 票券类型\n\n1. **羽毛票据** — 标准招募券，可通过主线/活动/商店获取\n2. **航海勋章** — 限定招募券，主要通过充值获取\n\n### 卡池类型\n\n1. **新手池** — 40抽保底黑券船员，仅限前50抽\n2. **限定池** — 80抽保底当期限定黑券船员\n3. **常驻池** — 80抽保底黑券船员\n\n### 保底机制\n\n- **小保底**：80抽必定获得黑券船员\n- **大保底**：若上一次黑券为非限定，下一次必定为限定（限定池）\n- **新手池独立**：50抽后新手池关闭\n\n## 招募策略\n\n### 零氪玩家\n\n1. 新手池40抽 → 拿到首个黑券船员\n2. 羽毛票据全部投入常驻池\n3. 攒航海勋章等限定池强力辅助\n4. 优先抽辅助 > 输出（输出可用紫券替代）\n\n### 微氪玩家\n\n1. 购买月卡（日常票据来源）\n2. 性价比最高的礼包\n3. 集中资源抽1-2个核心限定\n\n### 新手池选择推荐\n\n| 优先级 | 船员 | 理由 |\n|--------|------|------|\n| 1 | 小斧头 | 前期最强物理输出 |\n| 2 | 王女 | 顶级辅助，全队增益 |\n| 3 | 船长 | 高生存，保护队友 |",
-    "contentEn": "## Recruitment System Overview\n\n### Ticket Types\n\n1. **Feather Tickets** — Standard recruitment tickets from story/events/shop\n2. **Voyager Medals** — Limited recruitment currency, primarily from purchases\n\n### Banner Types\n\n1. **Beginner Banner** — 40-pull pity for Black Ticket crew, limited to first 50 pulls\n2. **Limited Banner** — 80-pull pity for featured Black Ticket crew\n3. **Standard Banner** — 80-pull pity for Black Ticket crew\n\n### Pity System\n\n- **Soft Pity**: 80 pulls guarantee a Black Ticket crew member\n- **Hard Pity (Limited)**: If last Black Ticket was not the featured one, next is guaranteed\n- **Beginner Banner**: Closes after 50 pulls\n\n## Recruitment Strategy\n\n### F2P Players\n\n1. Beginner banner 40 pulls → Get first Black Ticket crew\n2. Spend all Feather Tickets on Standard Banner\n3. Save Voyager Medals for limited support characters\n4. Prioritize supports > DPS (DPS can be replaced by Purple Ticket)\n\n### Low Spenders\n\n1. Buy monthly pass (daily ticket source)\n2. Best value gift packs\n3. Focus resources on 1-2 core limited characters\n\n### Beginner Banner Recommendations\n\n| Priority | Crew | Reason |\n|----------|------|--------|\n| 1 | Little Axe | Best early physical DPS |\n| 2 | Princess | Top support, team-wide buffs |\n| 3 | Captain | High survival, protects allies |",
+    "summary": "详解开服招募、首次记忆重逢6选1、黑券船员选择、茉莉与海赫获取，以及零氪/微氪抽卡路线。",
+    "summaryEn": "Launch recruitment guide covering Memory Reunion 6-choice selector, Black Ticket picks, Molly and Haihe acquisition, and F2P pull planning.",
+    "content": "## 开服招募重点\n\n7月9日 PC 公测前，招募系统最重要的变化是：**首次记忆重逢不再是纯随机黑券，而是 6 选 1**。这会直接影响新手开局和首周阵容。\n\n## 首次记忆重逢 6 选 1\n\n| 船员 | 定位 | 适合谁选 |\n|---|---|---|\n| 铁腕统领 | 生存/承伤 | 缺前排、想稳推主线 |\n| 伊莎贝拉 | 智力/机制输出 | 想走智力队或群体战路线 |\n| 饿猫（Stray Cat） | 协攻/追击 | 想配合小斧头打追击链 |\n| 小斧头 | 主攻/爆发 | 缺主C的新手优先 |\n| 海葬 | 智力/AoE | 关注群体清场和机制战 |\n| 焦面上校 | 主攻/输出 | 想要稳定输出位的备选 |\n\n> 注意：茉莉不在首次 6 选 1名单中，不要把她当成新手自选目标规划。\n\n## 茉莉、黑格、海赫怎么拿\n\n- **茉莉**：更适合作为蓝色乐队体系的核心治疗/辅助目标，首周看卡池和活动安排再决定投入。\n- **黑格**：适合与茉莉、盖尔等组成稳定体系，开服后重点看实战倍率与循环。\n- **海赫**：七日签到相关紫券船员，适合作为前期免费协攻/辅助位纳入过渡队。\n\n## 零氪与微氪抽卡路线\n\n### 零氪\n\n1. 先拿预约、邮件、七日签到和开服任务资源。\n2. 首次 6 选 1优先补缺口：没有主C选小斧头，没有生存选铁腕统领。\n3. 不要在第一天追满命，等第三周联动和首批实测后再决定是否梭哈。\n\n### 微氪\n\n1. 优先考虑稳定返还类资源，而不是首日冲动礼包。\n2. 先凑完整第一队，再考虑第二队或收藏角色。\n3. 如果准备追限定，至少保留一轮保底资源给首月活动后半段。\n\n## 选择建议\n\n| 当前队伍缺口 | 推荐选择 | 原因 |\n|---|---|---|\n| 缺主攻 | 小斧头 | 开荒直接提升清怪和 Boss 输出 |\n| 缺追击组件 | 饿猫（Stray Cat） | 可与小斧头、茉莉形成追击队雏形 |\n| 缺生存 | 铁腕统领 | 提高首周容错率 |\n| 缺群体输出 | 海葬 / 伊莎贝拉 | 承接白沙海、桥海等群体战 |\n\n更多配队见 [阵容搭配指南](./team-building-guide)。",
+    "contentEn": "## Launch Recruitment Priority\n\nThe most important launch change is that the first Memory Reunion is no longer a fully random Black Ticket outcome. It becomes a 6-choice selector, which directly changes beginner planning.\n\n## First Memory Reunion 6-Choice Selector\n\n| Crew | Role | Best for |\n|---|---|---|\n| Iron Commander | Survival / tank | Safer story progression |\n| Isabella | INT / mechanic DPS | Intelligence teams and AoE fights |\n| Glutton Cat (Stray Cat) | Sub DPS / follow-up | Pairing with Little Axe follow-up chains |\n| Little Axe | Main DPS / burst | Best if you lack a carry |\n| Sea Burial | INT / AoE | Clearing and mechanic fights |\n| Burnt Colonel | Main DPS | Stable damage alternative |\n\nNote: Molly is not part of the first 6-choice selector, so do not plan your beginner pick around her.\n\n## Molly, Heige, and Haihe\n\n- **Molly**: A key Blue Band support/healing target, best evaluated once launch banners are visible.\n- **Heige**: Works toward the Molly/Heige/Gail stable core after testing confirms rotations.\n- **Haihe**: A seven-day login Purple Ticket crew, useful as a free early support/sub-DPS slot.\n\n## F2P and Low-Spender Pull Plan\n\n### F2P\n\n1. Claim reservation rewards, mail, seven-day login, and launch tasks first.\n2. Use the 6-choice selector to fill your biggest gap: Little Axe for DPS, Iron Commander for survival.\n3. Avoid spending every pull on day one before week-three events and launch testing settle.\n\n### Low Spenders\n\n1. Prefer steady-return packs over impulse launch bundles.\n2. Complete your first team before building a second one.\n3. Keep enough currency for the second half of the first month if chasing limited units.\n\nSee the [Team Building Guide](./team-building-guide) for compositions.",
     "tags": [
-      "抽卡",
       "招募",
-      "保底",
-      "Gacha",
+      "抽卡",
+      "记忆重逢",
+      "6选1",
       "Recruitment",
-      "Pity",
-      "零氪"
+      "Gacha",
+      "Selector"
     ],
     "faq": [
       {
-        "question": "What is the pity system in Sea of Remnants?",
-        "questionZh": "遗忘之海的保底机制是怎样的？",
-        "answer": "Standard and limited banners have 80-pull pity for Black Ticket crew. Beginner banner has 40-pull pity and is limited to 50 pulls total.",
-        "answerZh": "常驻池和限定池80抽保底黑券船员。新手池40抽保底，总计限抽50次。"
+        "question": "Who should I pick from the first 6-choice Memory Reunion?",
+        "questionZh": "首次记忆重逢6选1应该选谁？",
+        "answer": "Pick based on your missing role. Little Axe is the safest DPS pick, Iron Commander is the safer survival pick, and Glutton Cat (Stray Cat) supports follow-up teams.",
+        "answerZh": "按队伍缺口选。缺主攻优先小斧头，缺生存选铁腕统领，想打追击链可选饿猫（Stray Cat）。"
       },
       {
-        "question": "Should I spend on the limited banner as F2P?",
-        "questionZh": "零氪应该抽限定池吗？",
-        "answer": "Save for limited support characters that can't be replaced by Purple Ticket alternatives. DPS can often be substituted.",
-        "answerZh": "建议攒资源抽限定辅助角色，输出位通常可用紫券替代。"
+        "question": "Is Molly in the first 6-choice selector?",
+        "questionZh": "茉莉在首次6选1里吗？",
+        "answer": "No. Current launch planning treats Molly as outside the first Memory Reunion 6-choice selector.",
+        "answerZh": "不在。当前开服规划中，茉莉不属于首次记忆重逢6选1名单。"
       }
     ]
   },
@@ -243,6 +247,41 @@
         "questionZh": "经验书怎么获取？",
         "answer": "EXP books are obtained from daily dungeons, events, and the Orbtopia shop. Always spend your daily stamina on EXP dungeons.",
         "answerZh": "经验书可通过日常副本、活动和奥托皮亚商店获取。建议每天用体力刷经验副本。"
+      }
+    ]
+  },
+  {
+    "id": "past-shadows-guide",
+    "title": "《遗忘之海》过往之影指南 — 遗物、记忆烙印与首月养成",
+    "titleEn": "Sea of Remnants Past Shadows Guide — Relics, Memory Imprints, and Month-One Progression",
+    "category": "progression",
+    "categoryZh": "养成",
+    "categoryEn": "Progression",
+    "summary": "讲解过往之影、机械生命、鱼骨串、破碎狂想、悼亡花等遗物方向，以及开服首月记忆烙印材料分配。",
+    "summaryEn": "A guide to Past Shadows, relic targets such as Mechanical Life, Fish Bone Skewer, Broken Rhapsody, Flower of Mourning, and month-one Memory Imprint planning.",
+    "content": "## 过往之影是什么\n\n过往之影可以理解为船员养成中的遗物/套装方向，会影响输出循环、生存容错和队伍机制。开服首周不建议盲目强化所有遗物，先围绕第一队核心定位选择。\n\n## 首月重点遗物方向\n\n| 名称 | 倾向 | 适合角色 |\n|---|---|---|\n| 机械生命 | 生存、稳定循环 | 铁腕统领、海赫、生存位 |\n| 鱼骨串 | 输出或追击补强 | 小斧头、饿猫（Stray Cat） |\n| 破碎狂想 | 技能伤害、爆发窗口 | 海葬、伊莎贝拉 |\n| 悼亡花 | 辅助、续航或机制 | 茉莉、辅助位 |\n\n## 记忆烙印材料怎么分配\n\n1. 第一周只强化主队 3 人，不要平均铺满全仓库。\n2. 主攻优先拿输出词条，辅助优先拿循环和团队增益词条。\n3. 生存位以“不倒”为目标，不必和主攻抢最高级材料。\n4. 等隐藏海和首批 Boss 机制明确后，再决定第二套遗物方向。\n\n## 按队伍选择\n\n| 队伍 | 优先方向 |\n|---|---|\n| 小斧头 + 饿猫（Stray Cat） + 茉莉 | 鱼骨串 / 悼亡花 |\n| 海葬 + 伊莎贝拉 + 生存位 | 破碎狂想 / 机械生命 |\n| 茉莉 + 黑格 + 盖尔 | 悼亡花 / 稳定循环类遗物 |\n\n## 常见误区\n\n- 不要因为名字稀有就直接强化到满级。\n- 不要把所有输出遗物都给第二队，首周主线和日常更需要第一队稳定。\n- 不要忽视生存词条，隐藏海和 Boss 战可能提高承伤压力。\n\n后续开服实测后，本页会按 Boss 掉落、套装倍率和最优词条继续更新。",
+    "contentEn": "## What Are Past Shadows?\n\nPast Shadows function like relic or set-building directions for crew progression. They affect damage loops, survivability, and team mechanics. During week one, do not upgrade every relic blindly. Build around your first team.\n\n## Month-One Relic Targets\n\n| Name | Direction | Fits |\n|---|---|---|\n| Mechanical Life | Survival and stable rotation | Iron Commander, Haihe, survival units |\n| Fish Bone Skewer | Damage or follow-up support | Little Axe, Glutton Cat (Stray Cat) |\n| Broken Rhapsody | Skill damage and burst windows | Sea Burial, Isabella |\n| Flower of Mourning | Support, sustain, utility | Molly, support units |\n\n## Memory Imprint Material Plan\n\n1. Upgrade only your first three core units in week one.\n2. DPS units take damage stats; supports take rotation and team utility stats.\n3. Survival units only need enough investment to stay alive early.\n4. Wait for Hidden Sea and boss testing before building a second full set.\n\n## Team-Based Direction\n\n| Team | Priority |\n|---|---|\n| Little Axe + Glutton Cat (Stray Cat) + Molly | Fish Bone Skewer / Flower of Mourning |\n| Sea Burial + Isabella + survival | Broken Rhapsody / Mechanical Life |\n| Molly + Heige + Gail | Flower of Mourning / stable rotation sets |\n\nThis page will be updated after launch testing confirms boss drops, set multipliers, and best stats.",
+    "tags": [
+      "过往之影",
+      "遗物",
+      "记忆烙印",
+      "养成",
+      "Past Shadows",
+      "Relics",
+      "Progression"
+    ],
+    "faq": [
+      {
+        "question": "Should I farm Past Shadows on day one?",
+        "questionZh": "开服第一天要刷过往之影吗？",
+        "answer": "Only after your main story and daily unlocks are done. Early materials should go to your first team instead of every crew member.",
+        "answerZh": "建议先完成主线和日常解锁，再刷过往之影。早期材料集中给第一队，不要全角色平均投入。"
+      },
+      {
+        "question": "Which relic should Little Axe use?",
+        "questionZh": "小斧头适合什么遗物方向？",
+        "answer": "Fish Bone Skewer is the current launch-planning direction for Little Axe and follow-up damage teams, pending live testing.",
+        "answerZh": "按当前开服规划，小斧头和追击队优先关注鱼骨串方向，正式结论等开服实测。"
       }
     ]
   },
@@ -1053,6 +1092,41 @@
         "questionZh": "Gachia公测前应该优先更新什么？",
         "answer": "Prioritize the version center, launch rewards and codes, Molly/Heige/Gail/Edward crew entries, Memory Reunion, and the first boss-region guides.",
         "answerZh": "优先更新版本中心、公测福利与兑换码、茉莉/黑格/盖尔/爱德华角色条目、记忆重逢机制，以及首批BOSS和海区攻略。"
+      }
+    ]
+  },
+  {
+    "id": "launch-preview-calendar",
+    "title": "《遗忘之海》公测前瞻日历 — 7月9日PC开服与首月更新",
+    "titleEn": "Sea of Remnants Launch Preview Calendar — July 9 PC Open Beta and Month 1 Updates",
+    "category": "version",
+    "categoryZh": "版本资讯",
+    "categoryEn": "Version",
+    "summary": "整理《遗忘之海》7月9日PC公测前的预下载、预创角、首周海域、隐藏海、首月活动和开荒准备清单。",
+    "summaryEn": "A launch preview calendar for Sea of Remnants covering preload, character creation, week-one seas, Hidden Sea, month-one events, and day-one preparation.",
+    "content": "## 今日重点：公测前 4 天该准备什么\n\n截至 2026 年 7 月 5 日，《遗忘之海》已经进入 PC 公测倒计时。最值得优先关注的不是泛泛的世界观，而是**预下载、预创角、首周开放内容、首月活动和开服资源规划**。\n\n### 关键时间表\n\n| 日期 | 内容 | 玩家动作 |\n|---|---|---|\n| 7月6日 10:00 | PC 预下载、预创角、预捏脸开放 | 提前安装客户端，锁定角色名和外观 |\n| 7月9日 | PC 公测开启 | 完成主线解锁奥托皮亚与招募系统 |\n| 7月第1周 | 白沙海、桥海等首批海域 | 先推主线，再清每日和号角次数 |\n| 7月下旬 | 隐藏海、隐藏结局与后续 Boss 内容 | 保留养成资源，等首批实测阵容稳定 |\n| 首月第3周 | 联动活动进入重点窗口 | 不要把全部抽卡资源提前清空 |\n\n## 首周版本情报\n\n### 新海域与剧情\n\n首周核心内容围绕白沙海、桥海等早期海域展开。后续隐藏海预计在 7 月下旬成为高关注内容，并包含“荒凉结局”等隐藏路线。攻略优先级建议按：主线解锁、首周海域、隐藏结局线索、Boss 路线图。\n\n### Boss 与战斗目标\n\n首月需要重点跟踪绯红公爵夫人等 Boss 的机制。开服前不要只做纯输出配队，至少准备 1 名生存位和 1 名能处理群体或机制的辅助位。\n\n### 系统优化会影响开荒节奏\n\n- 首次记忆重逢从随机黑券改为 6 选 1，更适合按阵容缺口定向补位。\n- 号角每日 4 次，属于开服前期必须清的稳定资源入口。\n- 养成与便携/全局功能优化后，资源投入更适合集中给 1 队主力。\n- 首月活动按周推进，第三周联动窗口可能改变抽卡优先级。\n\n## 开服前检查清单\n\n1. 7月6日 10:00 后完成 PC 预下载，避免开服当天排队或补丁拥堵。\n2. 预创角阶段先确定昵称、外观和常用服务器信息。\n3. 先读 [招募系统指南](./gacha-recruitment-guide)，决定 6 选 1 黑券补哪个定位。\n4. 参考 [船员节奏榜](./tier-list-guide)，把资源集中给 1 名主攻、1 名辅助、1 名生存。\n5. 开服当天先推主线解锁系统，再回头补探索、日常和号角次数。\n\n## 首月内容更新顺序\n\n| 优先级 | 内容 | 更新目标 |\n|---|---|---|\n| P0 | 公测时间、下载、预创角、开服奖励 | 保证玩家能进服、领资源、少走弯路 |\n| P1 | 船员强度、6选1、首周阵容 | 解决“选谁、练谁、怎么组队” |\n| P2 | 过往之影、Boss、隐藏结局 | 承接中后期搜索和长尾攻略 |\n\n## 推荐下一步阅读\n\n- [下载安装指南](./download-install-guide)：确认预下载、平台和配置。\n- [新手入门指南](./beginner-guide)：开服首日推进顺序。\n- [阵容搭配指南](./team-building-guide)：按首周机制组第一队。\n- [过往之影指南](./past-shadows-guide)：提前理解遗物与记忆烙印材料。",
+    "contentEn": "## What to Prepare 4 Days Before Launch\n\nAs of July 5, 2026, Sea of Remnants is entering the final countdown before the PC open beta. The highest-value launch topics are preload, character creation, week-one seas, month-one events, and resource planning.\n\n### Key Dates\n\n| Date | Update | What to do |\n|---|---|---|\n| July 6, 10:00 | PC preload, pre-registration character creation, face creation | Install early and lock in your name and appearance |\n| July 9 | PC open beta begins | Push story first to unlock Orbtopia and Recruitment |\n| Week 1 | White Sand Sea, Bridge Sea, and early regions | Clear story, then daily Horn attempts |\n| Late July | Hidden Sea, hidden ending, later boss content | Save resources until launch testing stabilizes |\n| Month 1 Week 3 | Collaboration activity window | Avoid spending every pull in week one |\n\n## Week-One Version Notes\n\n### New Regions and Story\n\nThe opening week focuses on early regions such as White Sand Sea and Bridge Sea. Hidden Sea content is expected to become a late-July priority, including hidden route coverage such as the bleak ending.\n\n### Boss and Combat Goals\n\nBosses such as Scarlet Duchess are worth tracking during the first month. Before launch, prepare more than a pure damage team: keep one survival slot and one support or AoE slot ready.\n\n### System Updates That Change Progression\n\n- The first Memory Reunion changes from a random Black Ticket outcome to a 6-choice selector.\n- Horn attempts refresh 4 times per day, making them a reliable early resource source.\n- Cultivation and portable/global optimizations make focused investment into one core team more efficient.\n- Month-one events roll out weekly, and week three may change pull priorities.\n\n## Pre-Launch Checklist\n\n1. Complete the PC preload after July 6, 10:00.\n2. Use pre-creation to secure your name and appearance.\n3. Read the [Recruitment Guide](./gacha-recruitment-guide) before choosing your first Black Ticket unit.\n4. Use the [Tier List](./tier-list-guide) to build around one DPS, one support, and one survival slot.\n5. On launch day, push story unlocks before deep exploration.\n\n## Month-One Update Order\n\n| Priority | Content | Goal |\n|---|---|---|\n| P0 | Launch time, download, pre-creation, launch rewards | Help players enter, claim, and progress cleanly |\n| P1 | Crew ranking, 6-choice selector, first teams | Answer who to pick, build, and pair |\n| P2 | Past Shadows, bosses, hidden endings | Capture mid-game and long-tail guide demand |",
+    "tags": [
+      "公测",
+      "日历",
+      "预下载",
+      "开服",
+      "Launch",
+      "Calendar",
+      "Open Beta"
+    ],
+    "faq": [
+      {
+        "question": "When does Sea of Remnants PC open beta start?",
+        "questionZh": "遗忘之海PC公测什么时候开？",
+        "answer": "The current launch plan points to PC open beta on July 9, 2026, with preload and pre-character creation opening on July 6 at 10:00.",
+        "answerZh": "当前公测节奏为 2026 年 7 月 9 日 PC 公测，7 月 6 日 10:00 开放预下载、预创角和预捏脸。"
+      },
+      {
+        "question": "What should I prepare before launch?",
+        "questionZh": "开服前最应该准备什么？",
+        "answer": "Preload the PC client, create your character, decide your first 6-choice Black Ticket target, and plan one DPS/support/survival core team.",
+        "answerZh": "优先完成 PC 预下载和预创角，然后确定 6 选 1 黑券目标，并规划 1 名主攻、1 名辅助、1 名生存的开荒核心。"
       }
     ]
   },

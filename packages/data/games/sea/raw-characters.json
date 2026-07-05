@@ -658,9 +658,9 @@
       "iron-commander",
       "princess"
     ],
-    "tierRank": "A",
-    "tierReason": "Reliable support and sub-DPS hybrid",
-    "tierReasonZh": "可靠的辅助与协攻混合角色",
+    "tierRank": "A+",
+    "tierReason": "Seven-day login Purple Ticket value pick for early support, sub-DPS, and flex survival coverage",
+    "tierReasonZh": "七日签到相关紫券，适合开服过渡、协攻和生存补位",
     "skills": {
       "passive": {
         "name": "被动技能",
@@ -892,8 +892,8 @@
       "watchmaker"
     ],
     "tierRank": "SS",
-    "tierReason": "Top-tier single-target DPS with mark-and-execute mechanic",
-    "tierReasonZh": "顶级单体输出，拥有标记处决机制",
+    "tierReason": "Priority DPS from the first Memory Reunion 6-choice selector, strong for week-one follow-up progression",
+    "tierReasonZh": "首次记忆重逢6选1中的优先主攻，适合首周追击开荒",
     "skills": {
       "passive": {
         "name": "玫瑰追猎",
@@ -948,8 +948,8 @@
     "faction": "",
     "position": "",
     "favoriteFood": "",
-    "description": "蓝波乐队最安静的乐手，也是于梦中寻找灵感的裁缝师。",
-    "descriptionEn": "The quietest musician of the Rambo Band, a tailor who finds inspiration in dreams.",
+    "description": "蓝波乐队最安静的乐手，也是于梦中寻找灵感的裁缝师。 公测首周规划中，茉莉是蓝色乐队体系关键位，但不属于首次记忆重逢6选1名单。",
+    "descriptionEn": "The quietest musician of the Rambo Band, a tailor who finds inspiration in dreams. In launch-week planning, Molly is a key Blue Band unit but is not part of the first Memory Reunion 6-choice selector.",
     "speed": 107,
     "faq": [
       {
@@ -965,9 +965,9 @@
       "heige",
       "princess"
     ],
-    "tierRank": "S",
-    "tierReason": "Strong DPS with follow-up attack and shadow stacking mechanic",
-    "tierReasonZh": "强力输出，拥有追击和暗影叠层机制",
+    "tierRank": "S+",
+    "tierReason": "Key Blue Band support/survival unit, but not part of the first Memory Reunion 6-choice selector",
+    "tierReasonZh": "蓝色乐队体系关键辅助/生存位，但不在首次记忆重逢6选1名单中",
     "skills": {
       "passive": {
         "name": "梦游症",
@@ -1342,9 +1342,9 @@
       "burnt-colonel",
       "princess"
     ],
-    "tierRank": "A",
-    "tierReason": "Reliable tanky survival unit",
-    "tierReasonZh": "可靠的坦克型生存角色",
+    "tierRank": "S",
+    "tierReason": "Reliable survival pick from the 6-choice selector for safer story and boss progression",
+    "tierReasonZh": "6选1中的稳健生存位，适合降低首周主线和Boss容错压力",
     "skills": {
       "passive": {
         "name": "被动技能",
@@ -1416,9 +1416,9 @@
       "miser",
       "puppeteer"
     ],
-    "tierRank": "TBD",
-    "tierReason": "Publicly listed crew member; combat value awaits launch testing",
-    "tierReasonZh": "已公开船员，强度待正式服实测",
+    "tierRank": "S",
+    "tierReason": "Potential INT/AoE core for early multi-target and mechanic fights, pending launch testing",
+    "tierReasonZh": "智力/AoE路线核心候选，适合首周群体战与机制战，待公测数值验证",
     "skills": {
       "passive": {
         "name": "被动技能",
@@ -1664,9 +1664,9 @@
       "glutton-cat",
       "nonsense-prophet"
     ],
-    "tierRank": "TBD",
-    "tierReason": "Publicly listed crew member; combat value awaits launch testing",
-    "tierReasonZh": "已公开船员，强度待正式服实测",
+    "tierRank": "S",
+    "tierReason": "Key INT-team candidate alongside Sea Burial for AoE and mechanic fights, pending launch testing",
+    "tierReasonZh": "智力队关键候选，可与海葬组成群体和机制战核心，待公测数值验证",
     "skills": {
       "passive": {
         "name": "被动技能",
@@ -1710,8 +1710,8 @@
     "faction": "",
     "position": "",
     "favoriteFood": "",
-    "description": "流浪号黑券船员，公测前公开图鉴已收录，具体技能与定位待正式服实测补充。",
-    "descriptionEn": "A Black Ticket crew member from the Wanderer fleet. Public pre-launch databases list this crew member; exact kit and role await launch testing.",
+    "description": "流浪号黑券船员，公测前公开图鉴已收录，具体技能与定位待正式服实测补充。 公测资料中也常被称作 Stray Cat，是首次记忆重逢6选1中的追击协攻候选。",
+    "descriptionEn": "A Black Ticket crew member from the Wanderer fleet. Public pre-launch databases list this crew member; exact kit and role await launch testing. Also referenced as Stray Cat in launch materials, a follow-up sub-DPS option in the first Memory Reunion 6-choice selector.",
     "speed": 0,
     "faq": [
       {
@@ -1726,9 +1726,9 @@
       "isabella",
       "nonsense-prophet"
     ],
-    "tierRank": "TBD",
-    "tierReason": "Publicly listed crew member; combat value awaits launch testing",
-    "tierReasonZh": "已公开船员，强度待正式服实测",
+    "tierRank": "S+",
+    "tierReason": "Follow-up sub-DPS candidate from the first 6-choice selector, pairs with Little Axe for launch-week follow-up chains",
+    "tierReasonZh": "首次记忆重逢6选1中的追击协攻候选，可与小斧头组成开服追击链",
     "skills": {
       "passive": {
         "name": "被动技能",
