@@ -618,14 +618,20 @@ const SEA_TYPE_LABELS: Record<string, Record<string, string>> = {
 
 const SKJH_TYPE_LABELS: Record<string, Record<string, string>> = {
   resource: { zh: '生存资源', en: 'Survival Resource', ja: '生存資源' },
+  component: { zh: '组件材料', en: 'Component', ja: '部品素材' },
+  ammo: { zh: '弹药爆破', en: 'Ammo / Explosive', ja: '弾薬・爆破' },
+  fuel: { zh: '燃料能源', en: 'Fuel / Energy', ja: '燃料・エネルギー' },
+  medical: { zh: '医疗补给', en: 'Medical Supply', ja: '医療補給' },
   base: { zh: '基地设施', en: 'Base Facility', ja: '拠点設備' },
+  equipment: { zh: '生存装备', en: 'Survival Gear', ja: '生存装備' },
+  gene: { zh: '基因素材', en: 'Gene Material', ja: '遺伝子素材' },
   reward: { zh: '福利奖励', en: 'Reward', ja: '報酬' },
 };
 
 function SkjhItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
   const materials = skjhMaterials;
   const grouped = groupByType(materials);
-  const typeOrder = ['resource', 'base', 'reward'];
+  const typeOrder = ['resource', 'component', 'ammo', 'fuel', 'medical', 'base', 'equipment', 'gene', 'reward'];
 
   return (
     <div>

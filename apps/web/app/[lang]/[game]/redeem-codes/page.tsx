@@ -52,9 +52,27 @@ export async function generateMetadata({
 }: {
   params: Promise<{ lang: string; game: string }>;
 }) {
-  const { game } = await params;
+  const { lang, game } = await params;
+  const locale = lang as SupportedLocale;
   const gameId = game as GameId;
   if (!GAMES_WITH_CODES.includes(gameId)) return { robots: { index: false, follow: false } };
+  if (gameId === 'skjh') {
+    const title = locale === 'zh'
+      ? '失控进化兑换码大全｜开服礼包码与预约奖励'
+      : locale === 'ja'
+        ? '失控進化 交換コード一覧｜リリース特典'
+        : 'Ashfall Evolution Redeem Codes, Launch Codes & Rewards';
+    const description = locale === 'zh'
+      ? '失控进化兑换码大全，追踪官网、WeGame、B站、微信公众号、TapTap、公测礼包、预约奖励、里程碑福利和开服活动码。'
+      : locale === 'ja'
+        ? '失控進化の交換コード、リリース特典、事前登録報酬、イベントコードを追跡。'
+        : 'Ashfall Evolution redeem codes, launch gift codes, reservation rewards, milestone bonuses, and event-code tracking.';
+    return {
+      title,
+      description,
+      alternates: { canonical: `https://gachia.com/${locale}/skjh/redeem-codes` },
+    };
+  }
   return {};
 }
 
@@ -173,23 +191,7 @@ export default async function RedeemCodesPage({
       )}
 
       {codes.length === 0 && gameId === 'skjh' && (
-        <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">
-          <h2 className="mb-3 text-lg font-semibold text-game-text">
-            {locale === 'zh' ? '公测兑换码暂未公开' : locale === 'ja' ? '交換コードは未公開' : 'Launch codes are not public yet'}
-          </h2>
-          <p className="mb-3 text-sm text-game-text-muted">
-            {locale === 'zh'
-              ? '官网目前公开的是预约、绑定、里程碑和抽奖奖励。若后续开放兑换码，通常会来自官网公告、官方直播、社交平台或媒体合作活动。'
-              : locale === 'ja'
-              ? '現在公式で公開されているのは事前登録、連携、マイルストーン、抽選報酬です。交換コードは公式告知や配信、SNS、メディア連携で公開される可能性があります。'
-              : 'The official site currently lists reservation, binding, milestone, and lottery rewards. If redeem codes are released later, they will likely come from official announcements, livestreams, social channels, or media campaigns.'}
-          </p>
-          <ul className="space-y-1 text-sm text-game-text-muted">
-            <li>{locale === 'zh' ? '• 个人预约奖励：登岛行动·M39步枪外观、渗透者·头像、贡献点×388' : locale === 'ja' ? '• 個人予約報酬：M39外観、アバター、貢献ポイント×388' : '• Personal reservation: M39 rifle skin, avatar, Contribution Points x388'}</li>
-            <li>{locale === 'zh' ? '• 绑定奖励：贡献点×188' : locale === 'ja' ? '• 連携報酬：貢献ポイント×188' : '• Binding reward: Contribution Points x188'}</li>
-            <li>{locale === 'zh' ? '• 4000万预约里程碑：登岛行动·步枪外观等全档奖励' : locale === 'ja' ? '• 40M milestone: rifle skin and all prior tiers' : '• 40M milestone: rifle skin and all previous tiers'}</li>
-          </ul>
-        </div>
+        <SkjhRedeemHub locale={locale} />
       )}
 
       {cnCodes.length > 0 && (
@@ -217,6 +219,104 @@ export default async function RedeemCodesPage({
           </div>
         </section>
       )}
+    </div>
+  );
+}
+
+function SkjhRedeemHub({ locale }: { locale: SupportedLocale }) {
+  const t = (zh: string, en: string, ja?: string) => locale === 'zh' ? zh : locale === 'ja' ? (ja ?? en) : en;
+  const channels = [
+    ['官网公告', 'Official site', '公式サイト'],
+    ['WeGame', 'WeGame', 'WeGame'],
+    ['B站', 'Bilibili', 'Bilibili'],
+    ['微信公众号', 'WeChat Official Account', 'WeChat公式'],
+    ['TapTap', 'TapTap', 'TapTap'],
+    ['媒体合作活动', 'Media campaigns', 'メディア連携'],
+  ] as const;
+  const confirmedRewards = [
+    ['个人预约', '登岛行动·M39步枪外观、渗透者·头像、贡献点×388', 'Personal reservation', 'M39 rifle skin, avatar, Contribution Points x388'],
+    ['手机号绑定', '贡献点×188', 'Phone binding', 'Contribution Points x188'],
+    ['4000万预约里程碑', '登岛行动·步枪外观等全档奖励', '40M milestone', 'Landing Operation rifle skin and all previous tiers'],
+    ['S1 活动', '登岛淘金、大铁球挑战、渗透补给等奖励待上线核验', 'S1 events', 'Landing Gold Rush, Big Iron Ball Challenge, Infiltration Supply rewards to verify at launch'],
+  ] as const;
+  const updateRows = [
+    ['2026-07-05', '兑换码未公开，已建立追踪页', 'No public codes yet; tracking page prepared'],
+    ['2026-07-09', '开服后优先核验官网、邮箱、活动中心和平台礼包', 'Verify official site, mailbox, event center, and platform packs after launch'],
+    ['开服首周', '每日追踪新增礼包码、过期码和活动入口', 'Track new codes, expired codes, and event entries daily during launch week'],
+  ] as const;
+
+  return (
+    <div className="mb-8 space-y-6">
+      <section className="rounded-lg border border-game-border bg-game-surface p-6">
+        <h2 className="mb-3 text-lg font-semibold text-game-text">
+          {t('失控进化兑换码状态', 'Ashfall Evolution Code Status', '失控進化コード状況')}
+        </h2>
+        <p className="mb-4 text-sm leading-relaxed text-game-text-muted">
+          {t(
+            '截至 2026 年 7 月 5 日，公测通用兑换码暂未公开。当前已确认的是预约、绑定、4000 万里程碑、开服登录和 S1 活动奖励。本站会在 7 月 9 日开服后优先核验官网、WeGame、B站、微信公众号、TapTap 和游戏内活动中心。',
+            'As of July 5, 2026, no public universal launch code has been confirmed. Confirmed rewards are reservation, binding, 40M milestone, launch login, and S1 event rewards. This page will verify the official site, WeGame, Bilibili, WeChat, TapTap, and the in-game event center after launch.',
+            '2026年7月5日時点で、汎用リリースコードは未公開です。事前登録、連携、4000万マイルストーン、ログイン、S1イベント報酬を追跡します。'
+          )}
+        </p>
+        <div className="grid gap-3 sm:grid-cols-3">
+          <div className="rounded bg-game-surface-alt p-3">
+            <div className="text-xs text-game-text-muted">{t('当前有效码', 'Active Codes', '有効コード')}</div>
+            <div className="mt-1 text-xl font-bold text-game-primary">0</div>
+          </div>
+          <div className="rounded bg-game-surface-alt p-3">
+            <div className="text-xs text-game-text-muted">{t('待核验来源', 'Sources to Check', '確認元')}</div>
+            <div className="mt-1 text-xl font-bold text-game-primary">{channels.length}</div>
+          </div>
+          <div className="rounded bg-game-surface-alt p-3">
+            <div className="text-xs text-game-text-muted">{t('下一次重点更新', 'Next Priority Update', '次回重点更新')}</div>
+            <div className="mt-1 text-sm font-semibold text-game-text">2026-07-09</div>
+          </div>
+        </div>
+      </section>
+
+      <section className="rounded-lg border border-game-border bg-game-surface p-6">
+        <h2 className="mb-3 text-lg font-semibold text-game-text">{t('领取步骤', 'How to Claim', '受取手順')}</h2>
+        <ol className="space-y-2 text-sm text-game-text-muted">
+          <li>{t('1. 开服后先进入游戏邮箱，领取预约、绑定和里程碑奖励。', '1. After launch, check the in-game mailbox for reservation, binding, and milestone rewards.', '1. リリース後、ゲーム内メールで報酬を確認。')}</li>
+          <li>{t('2. 打开活动中心，检查开服登录、S1 活动和平台礼包入口。', '2. Open the event center and check login, S1, and platform pack entries.', '2. イベントセンターでログイン、S1、プラットフォーム報酬を確認。')}</li>
+          <li>{t('3. 若官方发布兑换码，再按游戏内设置或活动页提示输入。', '3. If official codes are released, redeem them through in-game settings or the event page instructions.', '3. 公式コードが公開されたらゲーム内設定またはイベントページで入力。')}</li>
+        </ol>
+      </section>
+
+      <section className="rounded-lg border border-game-border bg-game-surface p-6">
+        <h2 className="mb-3 text-lg font-semibold text-game-text">{t('已确认福利', 'Confirmed Rewards', '確認済み報酬')}</h2>
+        <div className="grid gap-3 md:grid-cols-2">
+          {confirmedRewards.map(([zhName, zhReward, enName, enReward]) => (
+            <div key={zhName} className="rounded bg-game-surface-alt p-3">
+              <div className="text-sm font-semibold text-game-text">{locale === 'zh' ? zhName : enName}</div>
+              <div className="mt-1 text-xs leading-relaxed text-game-text-muted">{locale === 'zh' ? zhReward : enReward}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="rounded-lg border border-game-border bg-game-surface p-6">
+        <h2 className="mb-3 text-lg font-semibold text-game-text">{t('追踪来源', 'Tracked Sources', '追跡元')}</h2>
+        <div className="flex flex-wrap gap-2">
+          {channels.map(([zh, en, ja]) => (
+            <span key={zh} className="rounded bg-game-surface-alt px-3 py-1.5 text-sm text-game-text">
+              {locale === 'zh' ? zh : locale === 'ja' ? ja : en}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      <section className="rounded-lg border border-game-border bg-game-surface p-6">
+        <h2 className="mb-3 text-lg font-semibold text-game-text">{t('更新日志', 'Update Log', '更新履歴')}</h2>
+        <div className="space-y-2">
+          {updateRows.map(([date, zh, en]) => (
+            <div key={date} className="flex gap-3 rounded bg-game-surface-alt p-3 text-sm">
+              <span className="w-24 shrink-0 font-mono text-game-primary">{date}</span>
+              <span className="text-game-text-muted">{locale === 'zh' ? zh : en}</span>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

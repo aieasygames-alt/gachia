@@ -282,6 +282,7 @@ export default async function ItemDetailPage({
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
   const gameConfig = GAMES[gameId];
+  const skjhExtra = gameId === 'skjh' ? getSkjhMaterialById(id) : undefined;
 
   const data = getItemData(gameId, id, locale);
   if (!data) notFound();
@@ -350,6 +351,63 @@ export default async function ItemDetailPage({
           </div>
         )}
       </div>
+
+      {skjhExtra && (
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+          {skjhExtra.stackLimit && (
+            <div className="rounded-lg border border-game-border bg-game-surface p-4">
+              <div className="mb-1 text-xs text-game-text-muted">
+                {locale === 'zh' ? '堆叠上限' : locale === 'ja' ? 'スタック上限' : 'Stack Limit'}
+              </div>
+              <div className="text-sm font-medium text-game-text">{skjhExtra.stackLimit}</div>
+            </div>
+          )}
+          {skjhExtra.acquisition && skjhExtra.acquisition.length > 0 && (
+            <div className="rounded-lg border border-game-border bg-game-surface p-4">
+              <div className="mb-2 text-xs text-game-text-muted">
+                {locale === 'zh' ? '获取途径' : locale === 'ja' ? '入手ルート' : 'Acquisition'}
+              </div>
+              <ul className="space-y-1 text-sm text-game-text">
+                {(locale === 'zh' ? skjhExtra.acquisition : (skjhExtra.acquisitionEn ?? skjhExtra.acquisition)).map((item) => (
+                  <li key={item}>• {item}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {skjhExtra.uses && skjhExtra.uses.length > 0 && (
+            <div className="rounded-lg border border-game-border bg-game-surface p-4">
+              <div className="mb-2 text-xs text-game-text-muted">
+                {locale === 'zh' ? '主要用途' : locale === 'ja' ? '主な用途' : 'Primary Uses'}
+              </div>
+              <ul className="space-y-1 text-sm text-game-text">
+                {(locale === 'zh' ? skjhExtra.uses : (skjhExtra.usesEn ?? skjhExtra.uses)).map((item) => (
+                  <li key={item}>• {item}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {skjhExtra.conversions && skjhExtra.conversions.length > 0 && (
+            <div className="rounded-lg border border-game-border bg-game-surface p-4">
+              <div className="mb-2 text-xs text-game-text-muted">
+                {locale === 'zh' ? '制作 / 转化' : locale === 'ja' ? '製作 / 変換' : 'Crafting / Conversion'}
+              </div>
+              <ul className="space-y-1 text-sm text-game-text">
+                {(locale === 'zh' ? skjhExtra.conversions : (skjhExtra.conversionsEn ?? skjhExtra.conversions)).map((item) => (
+                  <li key={item}>• {item}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {(skjhExtra.notes || skjhExtra.notesEn) && (
+            <div className="rounded-lg border border-game-border bg-game-surface p-4">
+              <div className="mb-1 text-xs text-game-text-muted">
+                {locale === 'zh' ? '备注' : locale === 'ja' ? 'メモ' : 'Notes'}
+              </div>
+              <div className="text-sm text-game-text">{locale === 'zh' ? skjhExtra.notes : (skjhExtra.notesEn ?? skjhExtra.notes)}</div>
+            </div>
+          )}
+        </div>
+      )}
 
       {relatedChars.length > 0 && (
         <div className="mt-6">

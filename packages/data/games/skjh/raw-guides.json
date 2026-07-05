@@ -629,5 +629,130 @@
         "answerZh": "公开素材强调多端互通和混服体验，但最终服务器规则仍建议以上线后官方公告为准。"
       }
     ]
+  },
+  {
+    "id": "preload-install-guide",
+    "title": "预下载与安装指引：7月9日开服前检查清单",
+    "titleEn": "Preload and Install Guide: Pre-Launch Checklist",
+    "titleJa": "事前ダウンロードとインストールガイド",
+    "category": "beginner",
+    "categoryZh": "入门必读",
+    "categoryEn": "Beginner",
+    "categoryJa": "初心者",
+    "summary": "围绕预下载、安装路径、账号、补丁空间、设备性能和首次设置做开服前准备。",
+    "summaryEn": "A pre-launch checklist for preload, install path, account, patch space, device performance, and first settings.",
+    "summaryJa": "事前DL、インストール先、アカウント、容量、端末性能、初回設定のチェックリスト。",
+    "content": "## 一句话结论\n\n7 月 9 日开服前，先把下载、账号、储存空间和画质设置准备好。生存对抗游戏开服首小时最怕排队、补丁、闪退和设置没调好；提前完成预下载，能把时间留给抢昵称、进服选点和首轮开荒。\n\n## 开服前检查清单\n\n| 项目 | 检查内容 | 建议 |\n| --- | --- | --- |\n| 下载入口 | 官网、WeGame、Android、iOS、鸿蒙 | 选择和预约账号一致的平台 |\n| 储存空间 | 本体、补丁、缓存 | 预留额外空间，避免边下边删 |\n| 账号 | QQ/微信/平台账号 | 提前登录并确认区服/昵称 |\n| 网络 | Wi-Fi、加速、移动网络 | PC 用稳定网络，移动端避免弱网 |\n| 设备 | CPU/GPU/内存/系统版本 | 低配先保帧率，不追最高画质 |\n\n## PC 玩家设置\n\nPC 推荐优先确认安装路径、显卡驱动和输入设备。第一次进游戏后先调分辨率、帧率上限、鼠标灵敏度、脚步声和语音音量。键鼠玩家可以提前想好常用键位：开门、切武器、治疗、建造、语音报点。\n\n## 移动端玩家设置\n\n移动端重点是帧率稳定、发热控制和按键布局。开服前关闭后台应用，预留电量和散热环境。第一次进游戏后先调低阴影和后处理，保留能看清玩家、动物、道路和资源点的画面清晰度。\n\n## 常见问题\n\n如果安装失败，先检查储存空间、系统版本、网络和平台权限。若开服当天进不去，优先查看官方公告，不要反复卸载重装浪费时间。",
+    "contentEn": "## Quick Answer\n\nBefore the July 9 launch, prepare download, account, storage, and graphics settings. The first launch hour is where queues, patches, crashes, and bad settings cost the most time. Preload early so you can focus on server selection and your first survival route.\n\nCheck official site, WeGame, Android, iOS, HarmonyOS, account login, storage, network, device specs, and first graphics/control settings.",
+    "contentJa": "## 要点\n\n7月9日の開始前に、ダウンロード、アカウント、容量、画質設定を準備しましょう。開始直後は待機、パッチ、クラッシュ、設定不足が時間を奪います。",
+    "tags": ["预下载", "安装", "开服"],
+    "faq": [
+      {
+        "question": "What should I prepare before launch?",
+        "questionZh": "开服前要准备什么？",
+        "answer": "Prepare the client, account login, storage space, network, graphics settings, sensitivity, and your first route plan.",
+        "answerZh": "准备客户端、账号登录、储存空间、网络、画质设置、灵敏度和首轮开荒路线。"
+      }
+    ]
+  },
+  {
+    "id": "day-one-route",
+    "title": "开服首日完整流程：0-180分钟开荒路线",
+    "titleEn": "Day-One Route: 0-180 Minute Launch Plan",
+    "titleJa": "初日ルート：0-180分開荒計画",
+    "category": "beginner",
+    "categoryZh": "入门必读",
+    "categoryEn": "Beginner",
+    "categoryJa": "初心者",
+    "summary": "把开服首日拆成 0-10、10-30、30-90、90-180 分钟和首日晚间目标。",
+    "summaryEn": "A launch-day plan split into 0-10, 10-30, 30-90, 90-180 minutes, and first-night goals.",
+    "summaryJa": "初日を0-10、10-30、30-90、90-180分、初夜目標に分けて整理。",
+    "content": "## 一句话结论\n\n首日目标不是一上来抄家，而是活着建立循环：工具、睡袋、领地柜、小家、废料路线、石质核心。只要第一晚有石质核心、双门缓冲和稳定回家路线，就已经超过大多数乱跑玩家。\n\n## 0-10 分钟：先活下来\n\n远离出生点人群，先采木材、石头和布料。做石斧、石镐、木矛或猎弓，找到可以短暂停留的地形。不要背着第一包资源冲高价值据点。\n\n## 10-30 分钟：放睡袋和临时箱\n\n找森林边缘、山地凹陷或低交通路线，放睡袋和临时箱。独狼可以先做 1x1 或 2x1，小队则确定主基地方向和备用睡袋点。\n\n## 30-90 分钟：跑废料和基础组件\n\n围绕废弃超市、加油站、路边箱、油桶和零件盒做短循环。背包到 60%-70% 就回存，优先拿废料、布料、金属碎片、食物和水。\n\n## 90-180 分钟：推进石质核心\n\n把木屋过渡到石质核心，做双门缓冲和基础储物分仓。资源位继续跑路线，建筑位补维护，侦查位记录邻居、道路和据点门口。\n\n## 首日晚间目标\n\n| 玩家类型 | 首日晚间目标 |\n| --- | --- |\n| 独狼 | 2x1 小家、2 个睡袋、短废料路线、猎弓或基础枪械 |\n| 双人队 | 石质核心、双门缓冲、一人跑资源一人守家 |\n| 三人以上 | 主基地选址、资源/战斗/侦查分工、至少一条安全回家线 |",
+    "contentEn": "## Quick Answer\n\nDay one is not about raiding immediately. Build a survival loop: tools, sleeping bag, territory cabinet, starter base, scrap route, and stone core. If your first night ends with a stone core, airlock, and stable return route, you are already ahead.\n\nSplit your first 180 minutes into survival, bag placement, short scrap loops, and stone-core upgrades.",
+    "contentJa": "## 要点\n\n初日はすぐレイドする日ではありません。道具、寝袋、領地キャビネット、小拠点、スクラップルート、石造コアを作る日です。",
+    "tags": ["开服", "首日", "路线"],
+    "faq": [
+      {
+        "question": "What is the most important day-one goal?",
+        "questionZh": "首日最重要目标是什么？",
+        "answer": "Build a stable survival loop: sleeping bag, territory cabinet, starter base, scrap route, and stone core before chasing high-risk fights.",
+        "answerZh": "先建立稳定循环：睡袋、领地柜、小家、废料路线和石质核心，再考虑高风险战斗。"
+      }
+    ]
+  },
+  {
+    "id": "server-mode-choice",
+    "title": "服务器模式选择指南：安全区、标准、进阶、挑战与自定义",
+    "titleEn": "Server Mode Choice: Safe Zone, Standard, Advanced, Challenge, and Custom",
+    "titleJa": "サーバーモード選択：安全区、標準、上級、挑戦、カスタム",
+    "category": "modes",
+    "categoryZh": "玩法模式",
+    "categoryEn": "Modes",
+    "categoryJa": "モード",
+    "summary": "按周期、压力、适合人群和开局策略对比安全区、标准、进阶、挑战、快速对抗和自定义。",
+    "summaryEn": "Compare safe zone, standard, advanced, challenge, quick fight, and custom by cycle, pressure, audience, and opener.",
+    "summaryJa": "周期、圧力、対象、序盤戦略で各モードを比較します。",
+    "content": "## 一句话结论\n\n第一次登岛选安全区或训练模式；想长期体验完整搜打拆选标准；有固定队伍再考虑进阶和挑战。上班族、独狼和新手不要被高收益区诱惑，先选能稳定学习机制的服务器。\n\n## 模式对比表\n\n| 模式 | 周期参考 | 压力 | 适合人群 | 开局建议 |\n| --- | --- | --- | --- | --- |\n| 安全区 | 约 10 天 | 低 | 新手、探索党、低在线玩家 | 学资源、建家和科技树 |\n| 标准 | 约 7 天 | 中 | 大多数玩家、独狼、小队 | 完整体验生存、建造和攻防 |\n| 进阶 | 约 6 天 | 高 | 有经验玩家 | 提前固定分工和撤离路线 |\n| 挑战 | 约 5 天 | 极高 | 硬核队伍 | 必须语音、报点和守家轮换 |\n| 快速对抗 | 约 15 分钟 | 短局 | 练枪、练破门玩家 | 每局只练一个目标 |\n| 自定义 BETA | 服主设定 | 可变 | 社群、训练、特殊规则 | 看清倍率、规则和报名方式 |\n\n## 快速对抗子模式\n\n全面武装适合练热武器和小队推进；原始攻防适合练弓、近战和基础房型；手枪对决适合练移动射击；轻武突袭适合练低成本进攻节奏。\n\n## 自定义服务器怎么判断\n\n自定义服务器的关键不是倍率越高越好，而是规则是否清楚。进服前看资源倍率、PVP 时间、抄家限制、队伍人数、管理员规则和赛季周期。",
+    "contentEn": "## Quick Answer\n\nFirst-time players should choose Safe Zone or Training. Standard is the best full survival loop. Advanced and Challenge are for coordinated squads. Workers, solos, and beginners should prioritize learning stability over high-risk rewards.\n\nCompare modes by cycle length, pressure, audience, and opening strategy before committing.",
+    "contentJa": "## 要点\n\n初回は安全区または訓練がおすすめ。標準は完全な生存体験向け。上級と挑戦は固定チーム向けです。",
+    "tags": ["服务器", "模式", "自定义"],
+    "faq": [
+      {
+        "question": "Which mode should solo players choose?",
+        "questionZh": "独狼适合哪个模式？",
+        "answer": "Start with Safe Zone or Standard. Avoid Challenge until you have stable routes, bags, and anti-raid habits.",
+        "answerZh": "先选安全区或标准。等路线、睡袋和防抄家习惯稳定后，再考虑挑战。"
+      }
+    ]
+  },
+  {
+    "id": "scrap-economy",
+    "title": "废料经济学：科技解锁、商人兑换、换马换船与速刷路线",
+    "titleEn": "Scrap Economy: Tech Unlocks, Trader Exchanges, Horses, Boats, and Farming Routes",
+    "titleJa": "スクラップ経済：技術解放、商人交換、馬・船、周回ルート",
+    "category": "systems",
+    "categoryZh": "系统机制",
+    "categoryEn": "Systems",
+    "categoryJa": "システム",
+    "summary": "解释废料为什么是硬通货，以及开服前期科技、商人、载具和资源路线的取舍。",
+    "summaryEn": "Why scrap is the hard currency, and how to balance tech, traders, vehicles, and farming routes.",
+    "summaryJa": "スクラップが重要通貨である理由と、技術、商人、乗り物、周回の取捨選択。",
+    "content": "## 一句话结论\n\n废料是《失控进化》前期最重要的硬通货。它既影响科技解锁，也影响商人兑换、载具获取和队伍发育节奏。新手最大的错误不是废料少，而是把废料花在当前阶段用不上的东西上。\n\n## 废料优先级\n\n| 阶段 | 优先用途 | 不建议 |\n| --- | --- | --- |\n| 前 30 分钟 | 睡袋、基础工具、路线稳定 | 盲目买高价物品 |\n| 第 1 天 | 工作台、研究台、基础武器、防御 | 一次性花光追后期科技 |\n| 第 2-3 天 | 半自动、金属门、电力前置 | 忽略维护和医疗补给 |\n| 中后期 | AK、火箭弹、电力自动化、载具 | 没撤离路线就囤高价值资源 |\n\n## 商人兑换\n\n社区讨论提到废料可用于换马、换船等移动能力，约 75 废料换马、125 废料换船的说法需要开服后实测。即便数值变化，原则不变：如果载具能让你更安全地回收两趟资源，它就可能比一把短期武器更值。\n\n## 速刷路线\n\n废弃超市、加油站、路边箱、油桶和零件盒是前期废料循环核心。独狼小包多跑，小队则分资源位和侦查位。背包 60%-70% 满就回存，不要为了多一个箱子丢掉全部废料。\n\n## 花费纪律\n\n每次出门前定一个目标：解锁科技、买载具、补维护、做武器或准备抄家。没有目标就不要随手消费废料。",
+    "contentEn": "## Quick Answer\n\nScrap is the early hard currency. It controls tech unlocks, trader exchanges, vehicles, and squad pacing. The biggest beginner mistake is not having little scrap; it is spending scrap on things your current stage cannot use.\n\nCommunity discussion mentions around 75 scrap for a horse and 125 for a boat, but these values need launch verification.",
+    "contentJa": "## 要点\n\nスクラップは序盤の重要通貨です。技術解放、商人交換、乗り物、チーム成長に関わります。必要ないものに使わないことが大切です。",
+    "tags": ["废料", "商人", "载具"],
+    "faq": [
+      {
+        "question": "Should I spend scrap on vehicles early?",
+        "questionZh": "前期要不要用废料换载具？",
+        "answer": "Only if the vehicle lets you safely complete more resource trips. Otherwise prioritize workbench, research, base defense, and weapons.",
+        "answerZh": "只有载具能帮你更安全地跑更多资源时才值得。否则优先工作台、研究、防御和武器。"
+      }
+    ]
+  },
+  {
+    "id": "gene-team-comps",
+    "title": "基因流派配队方案：独狼、双人、三人和四人小队",
+    "titleEn": "Gene Team Comps: Solo, Duo, Trio, and Four-Player Squads",
+    "titleJa": "遺伝子チーム構成：ソロ、デュオ、トリオ、4人チーム",
+    "category": "systems",
+    "categoryZh": "系统机制",
+    "categoryEn": "Systems",
+    "categoryJa": "システム",
+    "summary": "把重装壁垒、迅捷狙击、植型自愈和机械异能拆成不同人数队伍的搭配模板。",
+    "summaryEn": "Team templates for tank, sniper, plant sustain, and mechanical control gene routes by squad size.",
+    "summaryJa": "重装、狙撃、植物回復、機械制御を人数別テンプレに整理。",
+    "content": "## 一句话结论\n\n失控进化没有传统职业，但基因流派会形成队伍定位。独狼优先生存和隐蔽，双人队要一人后勤一人战斗，三人队最稳是重装+狙击+植型后勤，四人以上再加入机械控场和专职侦查。\n\n## 队伍模板\n\n| 队伍 | 推荐基因 | 分工 |\n| --- | --- | --- |\n| 独狼 | 植型自愈 + 伪装 + 环境适应 | 低消耗、低曝光、短路线 |\n| 双人 | 植型后勤 + 迅捷狙击 | 一人建家和补给，一人侦查和护送 |\n| 三人 | 重装壁垒 + 迅捷狙击 + 植型自愈 | 前排、输出、后勤三角稳定 |\n| 四人以上 | 重装 + 狙击 + 植型 + 机械异能 | 攻防、控场、侦查、资源分线 |\n\n## 上班族低在线方案\n\n低在线玩家不要追极限战斗基因。优先植型自愈、抗寒、耐毒、夜视和伪装，减少每次上线的补给成本。房型也要配合低曝光和分仓，不要让基因强度变成基地暴露的理由。\n\n## 前 7 天切换\n\n第 1 天用生存链保证资源带回家；第 2-3 天补输出或承伤；第 4 天后根据邻居压力选择机械护盾、能量脉冲或继续强化后勤。不要每天换流派，先让队伍职责稳定。",
+    "contentEn": "## Quick Answer\n\nAshfall Evolution has no traditional classes, but gene routes create team roles. Solo players prioritize sustain and stealth. Duo teams split logistics and combat. Trio teams are strongest with tank, sniper, and plant sustain. Four-player squads can add mechanical control and dedicated scouting.\n\nLow-online players should prioritize sustain, resistance, night vision, and camouflage over extreme damage.",
+    "contentJa": "## 要点\n\n職業はありませんが、遺伝子流派が役割を作ります。ソロは生存と隠密、デュオは後勤と戦闘、トリオは重装・狙撃・植物回復が安定です。",
+    "tags": ["基因", "配队", "小队"],
+    "faq": [
+      {
+        "question": "What is the best three-player gene comp?",
+        "questionZh": "三人队最推荐什么基因搭配？",
+        "answer": "A stable trio uses one tank route, one sniper/scout route, and one plant sustain/logistics route.",
+        "answerZh": "稳定三人队推荐一名重装承伤、一名狙击侦查、一名植型后勤续航。"
+      }
+    ]
   }
 ]

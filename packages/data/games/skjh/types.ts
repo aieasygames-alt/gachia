@@ -36,6 +36,15 @@ export interface SkjhMaterial {
   source: string;
   sourceEn: string;
   sourceJa?: string;
+  stackLimit?: number | string;
+  acquisition?: string[];
+  acquisitionEn?: string[];
+  uses?: string[];
+  usesEn?: string[];
+  conversions?: string[];
+  conversionsEn?: string[];
+  notes?: string;
+  notesEn?: string;
 }
 
 export interface SkjhWeapon {
