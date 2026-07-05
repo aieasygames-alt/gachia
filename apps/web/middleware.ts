@@ -17,6 +17,19 @@ const LEGACY_CHARACTER_LIST_REDIRECTS: Partial<Record<GameId, readonly string[]>
   starrail: ['griseo'],
 };
 
+const INDEXABLE_GAME_ROUTES: Record<GameId, readonly string[]> = {
+  genshin: ['characters', 'weapons', 'items', 'tier-list', 'calculator', 'map', 'guides', 'artifacts', 'compare', 'teams'],
+  starrail: ['characters', 'weapons', 'items', 'tier-list', 'calculator', 'map', 'guides', 'artifacts', 'compare', 'teams'],
+  wuwa: ['characters', 'weapons', 'items', 'tier-list', 'map', 'guides', 'compare', 'teams'],
+  nte: ['characters', 'weapons', 'items', 'tier-list', 'map', 'guides', 'disk-sets', 'redeem-codes', 'gacha', 'anomalies'],
+  zzz: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'drive-discs', 'build', 'compare', 'teams', 'redeem-codes'],
+  guihuan: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'compare', 'teams'],
+  ananta: ['characters', 'weapons', 'items', 'tier-list', 'guides'],
+  endfield: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'compare', 'teams', 'map'],
+  sea: ['characters', 'guides', 'items', 'tier-list', 'redeem-codes'],
+  skjh: ['weapons', 'guides', 'items', 'redeem-codes', 'calculator', 'teams', 'map'],
+};
+
 function asLocale(segment?: string): LocaleId | undefined {
   return LOCALE_IDS.includes(segment as LocaleId) ? (segment as LocaleId) : undefined;
 }
@@ -83,9 +96,23 @@ export default function middleware(request: NextRequest) {
     }
   }
 
+  if (locale && game && thirdSegment && !fourthSegment) {
+    const indexableRoutes = INDEXABLE_GAME_ROUTES[game];
+    if (!indexableRoutes.includes(thirdSegment)) {
+      return redirectTo(request, `/${locale}/${game}`);
+    }
+  }
+
   // Redirect legacy lang-less game URLs to one stable canonical locale.
   if (game && !locale) {
     const targetLocale = DEFAULT_CANONICAL_LOCALE;
+
+    if (secondSegment && !thirdSegment) {
+      const indexableRoutes = INDEXABLE_GAME_ROUTES[game];
+      if (!indexableRoutes.includes(secondSegment)) {
+        return redirectTo(request, `/${targetLocale}/${game}`);
+      }
+    }
 
     if (game === 'wuwa' && secondSegment === 'echoes' && !thirdSegment) {
       return redirectTo(request, `/${targetLocale}/wuwa`);
