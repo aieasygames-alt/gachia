@@ -117,9 +117,15 @@ function getFeaturedChars(gameId: string, locale: SupportedLocale): CharAccessor
 }
 
 const DESCRIPTIONS: Record<string, string> = {
-  zh: '一站式开放世界游戏数据库，覆盖原神、崩铁、鸣潮、异环、绝区零、归环、遗忘之海、失控进化等游戏的角色图鉴、武器与材料数据、配装推荐、版本攻略和最新热点入口。',
-  en: 'Multi-game open world wiki covering Genshin Impact, Honkai: Star Rail, Wuthering Waves, Neverness to Everness, Zenless Zone Zero, Guihuan, Sea of Remnants, and Ashfall Evolution, with characters, weapons, materials, builds, and guides.',
-  ja: '原神・スターレイル・鳴潮・NTE・ゼンレスゾーンゼロ・帰環・シー・オブ・レムナンツ・失控進化などをまとめた、キャラ・武器・素材・ビルド・攻略導線を備えるマルチゲームWikiです。',
+  zh: '一站式二次元开放世界游戏数据库，覆盖原神、崩坏：星穹铁道、鸣潮、异环、绝区零、归环、无限大、明日方舟：终末地、遗忘之海和失控进化，提供角色图鉴、武器数据、配装推荐、版本攻略与热点入口。',
+  en: 'The anime open-world game database for Genshin Impact, Honkai: Star Rail, Wuthering Waves, NTE, ZZZ, Guihuan, Ananta, Endfield, Sea of Remnants, and Ashfall Evolution, with character guides, weapon data, build recommendations, tier lists, and version hubs.',
+  ja: '原神、崩壊：スターレイル、鳴潮、NTE、ゼンレスゾーンゼロ、帰環、無限大、アークナイツ：エンドフィールド、海の遺跡、失控進化までまとめた、キャラ・武器・素材・ビルド・攻略導線を備えるゲームDBです。',
+};
+
+const TITLES: Record<string, string> = {
+  zh: 'Gachia — 一站式二次元开放世界游戏数据库',
+  en: 'Gachia — Your Ultimate Anime Open-World Game Database',
+  ja: 'Gachia — アニメ系オープンワールドゲームDB',
 };
 
 export const dynamic = 'force-dynamic';
@@ -132,8 +138,10 @@ export async function generateMetadata({
   const { lang } = await params;
   const locale = lang as SupportedLocale;
   const description = DESCRIPTIONS[locale] ?? DESCRIPTIONS.zh;
+  const title = TITLES[locale] ?? TITLES.zh;
 
   return {
+    title,
     description,
     alternates: {
       canonical: `https://gachia.com/${locale}`,
