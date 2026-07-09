@@ -1,8 +1,8 @@
 import type { SupportedLocale, Weapon } from '@gachia/core';
 import type { AnantaWeapon } from './types';
+import rawWeapons from './raw-weapons.json';
 import { localeStr } from './types';
 import { IMAGE_BASE } from '../../image-base';
-import rawWeapons from './raw-weapons.json';
 
 export const anantaWeapons: AnantaWeapon[] = rawWeapons as unknown as AnantaWeapon[];
 

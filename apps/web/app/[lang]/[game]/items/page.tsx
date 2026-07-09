@@ -16,15 +16,15 @@ import { Link } from '@/lib/i18n/navigation';
 const BASE_URL = 'https://gachia.com';
 
 const ITEM_DESC: Record<string, Record<string, string>> = {
-  genshin: { zh: '原神全材料图鉴，包含角色突破材料、天赋书、Boss掉落、区域特产等', en: 'Complete Genshin Impact material list with ascension materials, talent books, boss drops, and local specialties', ja: '原神全素材図鑑、キャラ突破素材、天賦本、ボスドロップ、地域特産品' },
-  starrail: { zh: '崩坏：星穹铁道全材料图鉴，包含角色突破材料、行迹材料、Boss掉落等', en: 'Complete Honkai: Star Rail material list with ascension materials, trace materials, and boss drops', ja: 'スターレイル全素材図鑑、キャラ突破素材、軌跡素材、ボスドロップ' },
-  wuwa: { zh: '鸣潮全材料图鉴，包含技能材料、Boss材料、区域特产等', en: 'Complete Wuthering Waves material list with skill materials, boss materials, and local specialties', ja: '鳴潮全素材図鑑、スキル素材、ボス素材、地域特産品' },
-  nte: { zh: '异环全材料图鉴，包含突破材料、Boss掉落、技能手册等', en: 'Complete Neverness to Everness material list with ascension, boss drops, and skill manuals', ja: '異環全素材図鑑、昇格素材、ボスドロップ、スキルマニュアル' },
-  zzz: { zh: '绝区零全材料图鉴，包含突破材料、技能材料、特殊材料等', en: 'Complete Zenless Zone Zero material list with ascension, skill, and special materials', ja: 'ゼンレスゾーンゼロ全素材図鑑、突破素材、スキル素材、特殊素材' },
-  guihuan: { zh: '归环全材料图鉴，包含使灵突破、元素突破、Boss材料等', en: 'Complete Guihuan material list with spirit ascension, element ascension, and boss materials', ja: '帰環全素材図鑑、スピリット昇格、元素昇格、ボス素材' },
-  ananta: { zh: '无限大全材料图鉴，包含突破材料、Boss材料、区域特产等', en: 'Complete Ananta material list with ascension, boss materials, and local specialties', ja: 'アナンタ全素材図鑑、昇格素材、ボス素材、地域特産品' },
-  endfield: { zh: '明日方舟：终末地全材料图鉴，包含突破材料、技能材料、货币等', en: 'Complete Arknights: Endfield material list with ascension, skill, and currency materials', ja: 'アークナイツ：エンドフィールド全素材図鑑、昇格素材、スキル素材、通貨' },
-  skjh: { zh: '失控进化资源道具图鉴，包含废料、布料、木石金属、领地柜、睡袋和公测奖励', en: 'Ashfall Evolution resource and item list with scrap, cloth, wood, stone, metal, territory cabinet, sleeping bag, and launch rewards', ja: '失控進化の資源・アイテム一覧。スクラップ、布、木石金属、領地キャビネット、寝袋、報酬を掲載' },
+  genshin: { zh: '原神全材料图鉴，覆盖角色突破材料、天赋书、Boss掉落、区域特产和日常刷取路线，帮助你快速定位每个角色的培养来源。', en: 'Complete Genshin Impact material list with ascension materials, talent books, boss drops, local specialties, and farming sources to help you plan character upgrades.', ja: '原神全素材図鑑。キャラ突破素材、天賦本、ボスドロップ、地域特産品、周回場所をまとめて確認できます。' },
+  starrail: { zh: '崩坏：星穹铁道全材料图鉴，覆盖角色突破材料、行迹材料、Boss掉落和刷取来源，方便你按角色或用途快速查找所需素材。', en: 'Complete Honkai: Star Rail material list with ascension materials, trace materials, boss drops, and farming sources organized for quick character planning.', ja: 'スターレイル全素材図鑑。キャラ突破素材、軌跡素材、ボスドロップ、周回先を整理して確認できます。' },
+  wuwa: { zh: '鸣潮全材料图鉴，整理技能材料、Boss材料、区域特产和养成来源，适合在培养角色前先看清每种素材该去哪里刷。', en: 'Complete Wuthering Waves material list with skill materials, boss materials, local specialties, and farming routes so you can prep upgrades efficiently.', ja: '鳴潮全素材図鑑。スキル素材、ボス素材、地域特産品、周回ルートを整理して案内します。' },
+  nte: { zh: '异环全材料图鉴，覆盖突破材料、Boss掉落、技能手册和养成来源，方便你按角色、阶段或用途快速整理资源。', en: 'Complete Neverness to Everness material list with ascension materials, boss drops, skill manuals, and farming sources for efficient progression planning.', ja: '異環全素材図鑑。昇格素材、ボスドロップ、スキルマニュアル、周回先を整理しています。' },
+  zzz: { zh: '绝区零全材料图鉴，覆盖突破材料、技能材料、特殊材料和周回来源，方便按代理人培养阶段快速找到需要的资源。', en: 'Complete Zenless Zone Zero material list with ascension, skill, and special materials plus farming sources for faster agent upgrade planning.', ja: 'ゼンレスゾーンゼロ全素材図鑑。突破素材、スキル素材、特殊素材、周回先をまとめています。' },
+  guihuan: { zh: '归环全材料图鉴，覆盖使灵突破、元素突破、Boss材料和对应来源，便于你在培养前快速确认每类素材的获取方式。', en: 'Complete Guihuan material list with spirit ascension, element ascension, boss materials, and acquisition sources for easy build planning.', ja: '帰環全素材図鑑。スピリット昇格、元素昇格、ボス素材、入手先をまとめています。' },
+  ananta: { zh: '无限大全材料图鉴，覆盖突破材料、Boss材料、区域特产和刷取来源，帮助你在培养角色时快速整理所有所需资源。', en: 'Complete Ananta material list with ascension, boss materials, local specialties, and farming sources to keep your upgrade path organized.', ja: 'アナンタ全素材図鑑。昇格素材、ボス素材、地域特産品、周回先を整理して確認できます。' },
+  endfield: { zh: '明日方舟：终末地全材料图鉴，覆盖突破材料、技能材料、货币材料和来源，方便你从培养计划一路查到具体掉落。', en: 'Complete Arknights: Endfield material list with ascension materials, skill materials, currency materials, and farming sources for full upgrade planning.', ja: 'アークナイツ：エンドフィールド全素材図鑑。昇格素材、スキル素材、通貨素材、入手先を確認できます。' },
+  skjh: { zh: '失控进化资源道具图鉴，覆盖废料、布料、木石金属、领地柜、睡袋和公测奖励，方便你规划开荒阶段的资源收集路线。', en: 'Ashfall Evolution resource and item list with scrap, cloth, wood, stone, metal, territory cabinet, sleeping bag, and launch rewards for early-game planning.', ja: '失控進化の資源・アイテム一覧。スクラップ、布、木石金属、領地キャビネット、寝袋、報酬を整理しています。' },
 };
 
 const NTE_TYPE_LABELS: Record<string, Record<string, string>> = {
@@ -50,6 +50,29 @@ const GENSHIN_TYPE_LABELS: Record<string, Record<string, string>> = {
 };
 
 const RARITY_COLORS = ['', '#9ca3af', '#4ade80', '#60a5fa', '#a855f7', '#eab308'];
+type NextStepLink = {
+  href: string;
+  label: Record<SupportedLocale, string>;
+  description: Record<SupportedLocale, string>;
+};
+
+const ENDFIELD_ITEM_NEXT_STEPS: NextStepLink[] = [
+  {
+    href: '/endfield/version',
+    label: { zh: '先看测试专题', en: 'Start with test hub', ja: 'まずテスト特集へ' },
+    description: { zh: '先看测试进度、入口和最新节点', en: 'Review the test progress, entry, and current status', ja: 'テスト進行、入口、最新状況を確認', },
+  },
+  {
+    href: '/endfield/characters',
+    label: { zh: '继续看干员图鉴', en: 'Browse characters', ja: '干員図鑑へ' },
+    description: { zh: '按干员反查材料需求和养成路线', en: 'Match material needs to each operator', ja: '干員ごとの素材需要を確認', },
+  },
+  {
+    href: '/endfield/guides/crisis-contract-guide',
+    label: { zh: '看危机合约攻略', en: 'Read crisis guide', ja: '危機合約攻略へ' },
+    description: { zh: '把材料、装备和高难打法串起来', en: 'Connect materials, gear, and high-difficulty prep', ja: '素材、装備、高難度対策を接続', },
+  },
+];
 
 export async function generateMetadata({
   params,
@@ -68,7 +91,7 @@ export async function generateMetadata({
   }
   languages['x-default'] = `${BASE_URL}/zh/${gameId}/items`;
 
-  const desc = ITEM_DESC[gameId]?.[locale] ?? `${categoryLabel} - ${gameName} Wiki`;
+  const desc = ITEM_DESC[gameId]?.[locale] ?? `${gameName} ${categoryLabel} database with farming sources, upgrade materials, and drop locations`;
 
   const title = locale === 'zh'
     ? `${gameName}材料图鉴 — 全材料掉落来源一览`
@@ -601,6 +624,8 @@ function EndfieldItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId
           ))}
         </div>
       </section>
+
+      <NextStepStrip locale={locale} links={ENDFIELD_ITEM_NEXT_STEPS} />
     </div>
   );
 }
@@ -709,5 +734,33 @@ function SeaItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: str
         );
       })}
     </div>
+  );
+}
+
+function NextStepStrip({ locale, links }: { locale: SupportedLocale; links?: NextStepLink[] }) {
+  if (!links?.length) return null;
+
+  return (
+    <section className="mb-8">
+      <h2 className="mb-3 text-base font-semibold text-game-text">
+        {locale === 'zh' ? '继续往下看' : locale === 'ja' ? '次に見る' : 'Next steps'}
+      </h2>
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {links.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href as '/'}
+            className="group rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary"
+          >
+            <h3 className="mb-1 text-sm font-semibold text-game-text group-hover:text-game-primary">
+              {link.label[locale]}
+            </h3>
+            <p className="text-xs text-game-text-muted line-clamp-2">
+              {link.description[locale]}
+            </p>
+          </Link>
+        ))}
+      </div>
+    </section>
   );
 }

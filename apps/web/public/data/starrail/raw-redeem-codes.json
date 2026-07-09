@@ -1,0 +1,82 @@
+[
+  {
+    "code": "STARRAILGIFT",
+    "reward": "星琼x50、信用点x10000",
+    "rewardEn": "Stellar Jade x50, Credits x10,000",
+    "status": "active",
+    "expiresAt": "2027-12-31",
+    "source": "permanent",
+    "region": "global",
+    "revealedAt": "2023-04-26"
+  },
+  {
+    "code": "BS3265PKCVXT",
+    "reward": "星琼x100、信用点x50000",
+    "rewardEn": "Stellar Jade x100, Credits x50,000",
+    "status": "active",
+    "expiresAt": "2026-07-15",
+    "source": "livestream",
+    "region": "global",
+    "revealedAt": "2026-06-01"
+  },
+  {
+    "code": "RTKJPM6JVCFF",
+    "reward": "星琼x100、漫游指南x5",
+    "rewardEn": "Stellar Jade x100, Traveler's Guide x5",
+    "status": "active",
+    "expiresAt": "2026-07-15",
+    "source": "livestream",
+    "region": "global",
+    "revealedAt": "2026-06-01"
+  },
+  {
+    "code": "EAJJPMN3DDE3",
+    "reward": "星琼x100、提纯以太x4",
+    "rewardEn": "Stellar Jade x100, Refined Aether x4",
+    "status": "active",
+    "expiresAt": "2026-07-15",
+    "source": "livestream",
+    "region": "global",
+    "revealedAt": "2026-06-01"
+  },
+  {
+    "code": "HELLOAMPHOREUS",
+    "reward": "信用点x10000、高科技防护装备x2",
+    "rewardEn": "Credits x10,000, High-Tech Protective Gear x2",
+    "status": "active",
+    "expiresAt": "2026-08-31",
+    "source": "event",
+    "region": "global",
+    "revealedAt": "2026-01-15"
+  },
+  {
+    "code": "REMEMBRANCE",
+    "reward": "信用点x5000、薯条圣代x2",
+    "rewardEn": "Credits x5,000, Potato Fries Sundae x2",
+    "status": "active",
+    "expiresAt": "2026-08-31",
+    "source": "event",
+    "region": "global",
+    "revealedAt": "2026-01-15"
+  },
+  {
+    "code": "AWAITSYOURLIGHT",
+    "reward": "信用点x5000、金蕉梦蕉x2",
+    "rewardEn": "Credits x5,000, Golden Slumbernana x2",
+    "status": "active",
+    "expiresAt": "2026-08-31",
+    "source": "event",
+    "region": "global",
+    "revealedAt": "2026-01-15"
+  },
+  {
+    "code": "HSRNEWYEAR2025",
+    "reward": "信用点x20000、漫游指南x3",
+    "rewardEn": "Credits x20,000, Traveler's Guide x3",
+    "status": "active",
+    "expiresAt": "2026-12-31",
+    "source": "event",
+    "region": "global",
+    "revealedAt": "2025-01-01"
+  }
+]

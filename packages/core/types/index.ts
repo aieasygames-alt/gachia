@@ -42,6 +42,7 @@ export interface GameRouteConfig {
   calculator: boolean;
   map: boolean;
   guides: boolean;
+  version?: boolean;
   'disk-sets'?: boolean;
   'drive-discs'?: boolean;
   'redeem-codes'?: boolean;

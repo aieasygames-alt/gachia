@@ -1,0 +1,18 @@
+- generic [ref=e2]:
+  - separator [ref=e3]
+  - iframe [ref=e8]:
+    - generic [ref=f12e2]:
+      - generic [ref=f12e3]:
+        - checkbox "进行人机身份验证" [ref=f12e7]
+        - generic [ref=f12e11]: 进行人机身份验证
+      - generic [ref=f12e15]: reCAPTCHA
+  - separator [ref=e9]
+  - generic [ref=e10]:
+    - text: 关于此网页
+    - text: 我们的系统检测到您的计算机网络中存在异常流量。此网页用于确认这些请求是由您而不是自动程序发出的。
+    - link "为什么会这样？" [ref=e11] [cursor=pointer]:
+      - /url: "#"
+    - generic [ref=e12]:
+      - text: IP 地址：108.95.186.188
+      - text: 时间：2026-06-26T06:29:47Z
+      - text: 网址：https://www.google.com/search?q=%E5%8E%9F%E7%A5%9E+%E6%96%B0%E7%89%88%E6%9C%AC+2026%E5%B9%B46%E6%9C%88&hl=zh-CN&sei=WRw-aqWwH4TFkPIP7_XOoQc

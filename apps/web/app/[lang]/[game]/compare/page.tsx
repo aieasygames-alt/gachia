@@ -21,7 +21,11 @@ export async function generateMetadata({
   }
   return {
     title,
-    description: locale === 'zh' ? `${gameName} 角色属性对比，技能比较，配装差异分析` : locale === 'ja' ? `${gameName} キャラステータス比較、スキル対比、ビルド差分析` : `${gameName} character comparison - stats, skills, builds side by side`,
+    description: locale === 'zh'
+      ? `${gameName} 角色属性对比、技能比较、配装差异分析和培养优先级参考，帮助你在抽卡、练角和组队前快速筛选最合适的角色。`
+      : locale === 'ja'
+        ? `${gameName} キャラステータス比較、スキル対比、ビルド差分析、育成優先度の確認に使える比較ガイドです。`
+        : `${gameName} character comparison with stat breakdowns, skill differences, build comparisons, and priority guidance so you can choose the right unit before pulling or investing.`,
     alternates: {
       canonical: `https://gachia.com/${locale}/${gameId}/compare`,
       languages: { 'zh-Hans': `https://gachia.com/zh/${gameId}/compare`, en: `https://gachia.com/en/${gameId}/compare`, ja: `https://gachia.com/ja/${gameId}/compare`, 'x-default': `https://gachia.com/zh/${gameId}/compare` },

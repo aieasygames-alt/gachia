@@ -18,15 +18,15 @@ import dynamic from 'next/dynamic';
 const BASE_URL = 'https://gachia.com';
 
 const TIER_DESC: Record<string, Record<string, string>> = {
-  genshin: { zh: '2026年原神角色强度排行，包含深渊、大世界综合评级，SS/S/A/B分级，每月更新', en: 'Genshin Impact character tier list (2026) — best characters ranked SS to B for Spiral Abyss and overworld, updated monthly', ja: '2026年原神キャラTierリスト、深境螺旋・大世界総合評価、毎月更新' },
-  starrail: { zh: '2026年崩坏：星穹铁道角色强度排行，包含忘却之庭、虚构叙事综合评级，每月更新', en: 'Honkai: Star Rail character tier list (2026) — best characters ranked for Forgotten Hall, Pure Fiction & Apocalyptic Shadow, updated monthly', ja: '2026年スターレイルキャラTierリスト、忘却の庭・虚構叙事総合評価、毎月更新' },
-  wuwa: { zh: '2026年鸣潮角色强度排行，包含全角色综合评级，SS/S/A/B分级，每月更新', en: 'Wuthering Waves character tier list (2026) — best characters ranked SS to B for Tower of Adversity and endgame, updated monthly', ja: '2026年鳴潮キャラTierリスト、全キャラ総合評価、毎月更新' },
-  nte: { zh: '异环角色强度排行，包含SS/S+/A+/A/B分级', en: 'Neverness to Everness character tier list (2026) — best characters ranked SS to B, updated', ja: '2026年異環キャラTierリスト、SS/S+/A+/A/B評価' },
-  zzz: { zh: '2026年绝区零代理人强度排行，包含SS/S/A/B分级，每月更新', en: 'Zenless Zone Zero agent tier list (2026) — best agents ranked SS to B for Shiyu Defense and Deadly Assault, updated monthly', ja: '2026年ゼンレスゾーンゼロエージェントTierリスト、SS/S/A/B評価、毎月更新' },
-  guihuan: { zh: '归环使灵强度排行，包含SS/S/A/B分级', en: 'Guihuan spirit tier list (2026) — best spirits ranked SS to B', ja: '帰環スピリットTierリスト、SS/S/A/B評価' },
-  ananta: { zh: '无限大异能者强度排行，包含SS/S/A/B分级', en: 'Ananta esper tier list (2026) — best espers ranked SS to B', ja: 'アナンタエスパーTierリスト、SS/S/A/B評価' },
-  endfield: { zh: '明日方舟：终末地干员强度排行，包含SS/S/A/B分级', en: 'Arknights: Endfield operator tier list (2026) — best operators ranked SS to B', ja: 'アークナイツ：エンドフィールドオペレーターTierリスト、SS/S/A/B評価' },
-  sea: { zh: '遗忘之海角色强度排行，包含SS/S/A/B分级', en: 'Sea of Remnants character tier list (2026) — best characters ranked SS to B', ja: 'シー・オブ・レムナンツキャラTierリスト、SS/S/A/B評価' },
+  genshin: { zh: '2026年原神角色强度排行，覆盖深渊与大世界综合评级，提供SS/S/A/B分级、主流配队参考和每月更新的培养优先级建议。', en: 'Genshin Impact character tier list (2026) with SS to B rankings for Spiral Abyss and overworld, plus team context, build priority, and monthly updates.', ja: '2026年原神キャラTierリスト。深境螺旋と大世界の総合評価、SS/S/A/B分類、編成参考、毎月更新を掲載。' },
+  starrail: { zh: '2026年崩坏：星穹铁道角色强度排行，覆盖忘却之庭、虚构叙事与末日幻影综合评级，提供分级、队伍思路和月度更新。', en: 'Honkai: Star Rail character tier list (2026) with SS to B rankings for Forgotten Hall, Pure Fiction, and endgame content, plus team and build guidance.', ja: '2026年スターレイルキャラTierリスト。忘却の庭、虚構叙事、末日幻影の評価、編成参考、毎月更新をまとめています。' },
+  wuwa: { zh: '2026年鸣潮角色强度排行，覆盖全角色综合评级、SS/S/A/B分级、主流玩法与培养优先级，帮助你把资源投到最值得的角色上。', en: 'Wuthering Waves character tier list (2026) with SS to B rankings for endgame and exploration value, plus build priority and team context.', ja: '2026年鳴潮キャラTierリスト。全キャラの総合評価、SS/S/A/B分類、育成優先度、編成参考を掲載。' },
+  nte: { zh: '异环角色强度排行，覆盖SS/S+/A+/A/B分级、场景表现和推荐优先级，帮助你在抽卡与养成前快速判断角色价值。', en: 'Neverness to Everness character tier list (2026) with SS to B rankings, content performance, and investment priority for pull planning.', ja: '異環キャラTierリスト。SS/S+/A+/A/B評価、場面別性能、育成優先度を整理しています。' },
+  zzz: { zh: '2026年绝区零代理人强度排行，覆盖SS/S/A/B分级、深渊与高难表现、配队定位和每月更新，方便你按版本答案选人。', en: 'Zenless Zone Zero agent tier list (2026) with SS to B rankings for Shiyu Defense and other endgame modes, plus role and team context.', ja: '2026年ゼンレスゾーンゼロTierリスト。SS/S/A/B評価、深層評価、編成参考、毎月更新を掲載。' },
+  guihuan: { zh: '归环使灵强度排行，覆盖SS/S/A/B分级、场景表现、配队定位和培养优先级，帮助你更快决定先养谁。', en: 'Guihuan spirit tier list (2026) with SS to B rankings, performance notes, and priority guidance so you know which spirits to build first.', ja: '帰環スピリットTierリスト。SS/S/A/B評価、場面別性能、育成優先度をまとめています。' },
+  ananta: { zh: '无限大异能者强度排行，覆盖SS/S/A/B分级、玩法表现和培养优先级，方便你在开服阶段快速选出主力角色。', en: 'Ananta esper tier list (2026) with SS to B rankings, gameplay notes, and investment priority to help you pick early-game mains.', ja: 'アナンタTierリスト。SS/S/A/B評価、性能メモ、育成優先度を整理しています。' },
+  endfield: { zh: '明日方舟：终末地干员强度排行，覆盖SS/S/A/B分级、战斗表现、配队定位和培养优先级，方便你按版本节奏安排资源。', en: 'Arknights: Endfield operator tier list (2026) with SS to B rankings, combat notes, team roles, and build priority for smarter resource planning.', ja: 'エンドフィールド干員Tierリスト。SS/S/A/B評価、戦闘評価、編成参考、育成優先度を掲載。' },
+  sea: { zh: '遗忘之海角色强度排行，覆盖SS/S/A/B分级、场景表现和培养优先级，帮助你在开荒和中期资源分配时更快做决定。', en: 'Sea of Remnants character tier list (2026) with SS to B rankings, performance notes, and investment priority for early and mid-game planning.', ja: 'シー・オブ・レムナンツTierリスト。SS/S/A/B評価、場面別性能、育成優先度を整理しています。' },
 };
 
 // P1-2: Lazy load tier list client components to reduce initial bundle size

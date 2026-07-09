@@ -1,0 +1,7211 @@
+[
+  {
+    "id": "endministrator",
+    "name": "终管者",
+    "nameEn": "Endministrator",
+    "nameJa": "エンドミニストレーター",
+    "element": "physical",
+    "elementEn": "Physical",
+    "profession": "近卫",
+    "professionEn": "Guard",
+    "weaponType": "Sword",
+    "rarity": 6,
+    "description": "文明的神秘守护者，掌握源石与协议网络的奥秘。作为玩家的初始角色，拥有强大的粉碎和控场能力。",
+    "descriptionEn": "A mysterious guardian of civilization who masters Originium and the Protocol Network. The starting operator with powerful Crush and Crowd Control mechanics.",
+    "descriptionJa": "文明の謎めいた守護者。オリジニウムとプロトコルネットワークを操る。粉砕とCCメカニズムを持つ初期オペレーター。",
+    "faq": [
+      {
+        "question": "Is Endministrator good in Endfield?",
+        "questionZh": "终管者值得培养吗？",
+        "answer": "Endministrator is a SS-tier Guard with excellent performance in their role.",
+        "answerZh": "终管者是SS级近卫，在其定位上表现出色。"
+      }
+    ],
+    "relatedCharacters": [
+      "lifeng",
+      "chen-qianyu",
+      "pogranichnik"
+    ],
+    "tierRank": "SS",
+    "tierReason": "Top-tier Guard with Crush and CC mechanics.",
+    "tierReasonZh": "顶级近卫，粉碎和控场机制出色。",
+    "skills": {
+      "normalAttack": {
+        "name": "破坏序列",
+        "nameEn": "Destructive Sequence",
+        "description": "使用Sword进行物理攻击，造成Physical伤害。",
+        "descriptionEn": "Performs attacks with Sword, dealing Physical damage."
+      },
+      "skill": {
+        "name": "建设序列",
+        "nameEn": "Constructive Sequence",
+        "description": "释放强力Physical技能，对敌人造成大量Physical伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Physical skill, dealing massive Physical damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "封印序列",
+        "nameEn": "Sealing Sequence",
+        "description": "释放终极技，造成大量Physical伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Physical damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "轰击序列",
+        "nameEn": "Bombardment Sequence",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "卡尔科尼克斯",
+      "bestWeaponEn": "kalkonyx",
+      "alternativeWeapons": [
+        "aspirant"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "physical伤害加成",
+        "头冠": "暴击伤害"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Physical DMG Bonus",
+        "Circlet": "CRIT DMG"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "physical元素队",
+        "nameEn": "Physical Element Team",
+        "members": [
+          "lifeng",
+          "chen-qianyu",
+          "pogranichnik"
+        ],
+        "description": "以终管者为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Endministrator with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/endministrator.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        92.0,
+        157.0,
+        222.0,
+        287.0,
+        319.0
+      ],
+      "str": [
+        14.742,
+        38.003,
+        62.489,
+        86.974,
+        111.46,
+        123.703
+      ],
+      "agl": [
+        14.226,
+        41.257,
+        69.711,
+        98.164,
+        126.618,
+        140.845
+      ],
+      "int": [
+        9.793,
+        28.402,
+        47.989,
+        67.577,
+        87.164,
+        96.958
+      ],
+      "wil": [
+        10.824,
+        31.391,
+        53.041,
+        74.69,
+        96.34,
+        107.164
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Final Awakening",
+        "description": "Battle skill Constructive Sequence improved: Debuff Consumption Originium Crystal SP Return 50 SP.",
+        "descriptionEn": "Battle skill Constructive Sequence improved: Debuff Consumption Originium Crystal SP Return 50 SP."
+      },
+      {
+        "name": "Reflection of Authority",
+        "description": "Talent Essence Disintegration improved: When the Endministrator gains the ATK buff, other allied operators gain half of this ATK buff.",
+        "descriptionEn": "Talent Essence Disintegration improved: When the Endministrator gains the ATK buff, other allied operators gain half of this ATK buff."
+      },
+      {
+        "name": "The Guide",
+        "description": "Ultimate Bombardment Sequence improved: After Debuff Consumption Originium Crystal, the Endministrator gains 15 Ultimate Energy.",
+        "descriptionEn": "Ultimate Bombardment Sequence improved: After Debuff Consumption Originium Crystal, the Endministrator gains 15 Ultimate Energy."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Metadiastima Photoemission Tube",
+            "quantity": 20
+          },
+          {
+            "name": "Bloodcap",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lifeng",
+    "name": "丽风",
+    "nameEn": "Lifeng",
+    "nameJa": "リーフェン",
+    "element": "physical",
+    "elementEn": "Physical",
+    "profession": "近卫",
+    "professionEn": "Guard",
+    "weaponType": "Polearm",
+    "rarity": 6,
+    "description": "武陵出身的干员，在特种技术部门实习时失去一臂。后经大潘训练枪术，现为终末地产业的长枪近卫。",
+    "descriptionEn": "Born in Wuling City, lost an arm in an accident but persevered. Trained by Da Pan in spear fighting, now serves as a skilled Polearm Guard.",
+    "descriptionJa": "武陵出身のオペレーター。事故で片腕を失ったが、大潘の槍術訓練を受け、現在は終末地産業の長槍近衛。",
+    "faq": [
+      {
+        "question": "Is Lifeng good in Endfield?",
+        "questionZh": "丽风值得培养吗？",
+        "answer": "Lifeng is a S-tier Guard with strong performance in their role.",
+        "answerZh": "丽风是S级近卫，在其定位上表现强力。"
+      }
+    ],
+    "relatedCharacters": [
+      "mi-fu",
+      "da-pan",
+      "tangtang"
+    ],
+    "tierRank": "S",
+    "tierReason": "Solid Physical Guard with polearm specialization.",
+    "tierReasonZh": "稳健的物理近卫，长枪专精。",
+    "skills": {
+      "normalAttack": {
+        "name": "灭形",
+        "nameEn": "Ruination",
+        "description": "使用Polearm进行物理攻击，造成Physical伤害。",
+        "descriptionEn": "Performs attacks with Polearm, dealing Physical damage."
+      },
+      "skill": {
+        "name": "浊相",
+        "nameEn": "Turbid Avatar",
+        "description": "释放强力Physical技能，对敌人造成大量Physical伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Physical skill, dealing massive Physical damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "怒相",
+        "nameEn": "Aspect of Wrath",
+        "description": "释放终极技，造成大量Physical伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Physical damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "不动心",
+        "nameEn": "Heart of the Unmoving",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "责任信标",
+      "bestWeaponEn": "beacon-of-duty",
+      "alternativeWeapons": [
+        "beacon-of-duty"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "physical伤害加成",
+        "头冠": "暴击伤害"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Physical DMG Bonus",
+        "Circlet": "CRIT DMG"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "physical元素队",
+        "nameEn": "Physical Element Team",
+        "members": [
+          "mi-fu",
+          "da-pan",
+          "tangtang"
+        ],
+        "description": "以丽风为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Lifeng with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/lifeng.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        90.0,
+        153.0,
+        217.0,
+        280.0,
+        312.0
+      ],
+      "str": [
+        14.742,
+        38.003,
+        62.489,
+        86.974,
+        111.46,
+        123.703
+      ],
+      "agl": [
+        20.103,
+        44.051,
+        69.261,
+        94.47,
+        119.679,
+        132.284
+      ],
+      "int": [
+        13.402,
+        35.196,
+        58.137,
+        81.078,
+        104.02,
+        115.49
+      ],
+      "wil": [
+        12.886,
+        35.212,
+        58.713,
+        82.214,
+        105.715,
+        117.465
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Breaking the Obsession",
+        "description": "Battle skill Turbid Avatar improved: Physical Susceptibility +5%; also triggers this additional effect to enemies with no more than 2 Vulnerable stacks.",
+        "descriptionEn": "Battle skill Turbid Avatar improved: Physical Susceptibility +5%; also triggers this additional effect to enemies with no more than 2 Vulnerable stacks."
+      },
+      {
+        "name": "Self Refinement",
+        "description": "All attributes +15.",
+        "descriptionEn": "All attributes +15."
+      },
+      {
+        "name": "Spiritual Cultivation",
+        "description": "Talent Illumination improved: Every point in the attributes of Intellect and Will grants Lifeng an additional ATK +0.05%.",
+        "descriptionEn": "Talent Illumination improved: Every point in the attributes of Intellect and Will grants Lifeng an additional ATK +0.05%."
+      },
+      {
+        "name": "Brief Instant",
+        "description": "Ultimate Heart of the Unmoving improved: Ultimate Energy cost -15%.",
+        "descriptionEn": "Ultimate Heart of the Unmoving improved: Ultimate Energy cost -15%."
+      },
+      {
+        "name": "Unremitting",
+        "description": "Talent Subduer of Evil improved: Every 15s, the next effect triggered deals another 250% ATK of Physical DMG and 5 Stagger.",
+        "descriptionEn": "Talent Subduer of Evil improved: Every 15s, the next effect triggered deals another 250% ATK of Physical DMG and 5 Stagger."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Metadiastima Photoemission Tube",
+            "quantity": 20
+          },
+          {
+            "name": "Bloodcap",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mi-fu",
+    "name": "米芙",
+    "nameEn": "Mi Fu",
+    "nameJa": "ミーフー",
+    "element": "physical",
+    "elementEn": "Physical",
+    "profession": "近卫",
+    "professionEn": "Guard",
+    "weaponType": "Great Sword",
+    "rarity": 6,
+    "description": "武陵卫队队长，天师庄方仪的信任部下。清波武术的真正继承者，唐唐的青梅竹马对手。三段式战技轮换机制极为强力。",
+    "descriptionEn": "Captain of the Wuling Watch and trusted subordinate of Viceroy Zhuang Fangyi. The true successor of Qingbo Martial Arts, Tangtang's childhood friend and rival.",
+    "descriptionJa": "武陵衛隊隊長、天師荘方儀の信頼する部下。清波武術の真の継承者、唐々の幼馴染のライバル。",
+    "faq": [
+      {
+        "question": "Is Mi Fu good in Endfield?",
+        "questionZh": "米芙值得培养吗？",
+        "answer": "Mi Fu is a SS-tier Guard with excellent performance in their role.",
+        "answerZh": "米芙是SS级近卫，在其定位上表现出色。"
+      }
+    ],
+    "relatedCharacters": [
+      "tangtang",
+      "zhuang-fangyi",
+      "da-pan"
+    ],
+    "tierRank": "SS",
+    "tierReason": "Peak Physical Guard with 3-move rotation mechanic and massive Crush DMG.",
+    "tierReasonZh": "物理近卫巅峰，三段式战技轮换+粉碎伤害。",
+    "skills": {
+      "normalAttack": {
+        "name": "刃拳师",
+        "nameEn": "Fistmancer of Blades",
+        "description": "使用Great Sword进行物理攻击，造成Physical伤害。",
+        "descriptionEn": "Performs attacks with Great Sword, dealing Physical damage."
+      },
+      "skill": {
+        "name": "清波三连",
+        "nameEn": "Qingbo Triplex",
+        "description": "释放强力Physical技能，对敌人造成大量Physical伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Physical skill, dealing massive Physical damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "无悔之拳",
+        "nameEn": "Fists of No Regrets",
+        "description": "释放终极技，造成大量Physical伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Physical damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "无情之桩",
+        "nameEn": "Pile of No Mercy",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "掷骰",
+      "bestWeaponEn": "cast-die",
+      "alternativeWeapons": [
+        "chivalric-virtues"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "physical伤害加成",
+        "头冠": "暴击伤害"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Physical DMG Bonus",
+        "Circlet": "CRIT DMG"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "physical元素队",
+        "nameEn": "Physical Element Team",
+        "members": [
+          "tangtang",
+          "zhuang-fangyi",
+          "da-pan"
+        ],
+        "description": "以米芙为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Mi Fu with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/mi-fu.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        91.0,
+        155.0,
+        219.0,
+        283.0,
+        315.0
+      ],
+      "str": [
+        22.577,
+        54.788,
+        88.695,
+        122.602,
+        156.509,
+        173.463
+      ],
+      "agl": [
+        10.103,
+        27.787,
+        46.403,
+        65.019,
+        83.634,
+        92.942
+      ],
+      "int": [
+        9.896,
+        27.189,
+        45.393,
+        63.596,
+        81.799,
+        90.901
+      ],
+      "wil": [
+        14.742,
+        37.053,
+        60.539,
+        84.025,
+        107.511,
+        119.254
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Restless Watch",
+        "description": "Combo skill Fists of No Regrets improved: Length of cooldown -2s. Physical Susceptibility effect applied by the skill is further increased by +5% and has +4s duration.",
+        "descriptionEn": "Combo skill Fists of No Regrets improved: Length of cooldown -2s. Physical Susceptibility effect applied by the skill is further increased by +5% and has +4s duration."
+      },
+      {
+        "name": "Kinesthesia of Harmony",
+        "description": "Strength +20, Arts Intensity +16.",
+        "descriptionEn": "Strength +20, Arts Intensity +16."
+      },
+      {
+        "name": "Complete Warmup",
+        "description": "Talent Vigilant Fury improved: Shield duration +5s. Shield trigger cooldown -15s. Each time the shield is triggered, Mi Fu gains ATK +6% for 20s.",
+        "descriptionEn": "Talent Vigilant Fury improved: Shield duration +5s. Shield trigger cooldown -15s. Each time the shield is triggered, Mi Fu gains ATK +6% for 20s."
+      },
+      {
+        "name": "Qi Thrice-Refined",
+        "description": "Ultimate Pile of No Mercy improved: Ultimate Energy cost -15%.",
+        "descriptionEn": "Ultimate Pile of No Mercy improved: Ultimate Energy cost -15%."
+      },
+      {
+        "name": "Pugilist of the Stockade",
+        "description": "Battle skill improved: DMG Multipliers of the moves Cloudtrapper, Trail and Mangle, and World Splitter are increased to 1.1 times the original. Ultimate Pile of No Mercy improved: Stagger Dealt +5.",
+        "descriptionEn": "Battle skill improved: DMG Multipliers of the moves Cloudtrapper, Trail and Mangle, and World Splitter are increased to 1.1 times the original. Ultimate Pile of No Mercy improved: Stagger Dealt +5."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "D96 Steel Sample 4",
+            "quantity": 20
+          },
+          {
+            "name": "Bloodcap",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rossi",
+    "name": "罗西",
+    "nameEn": "Rossi",
+    "nameJa": "ロッシ",
+    "element": "physical",
+    "elementEn": "Physical",
+    "profession": "近卫",
+    "professionEn": "Guard",
+    "weaponType": "Sword",
+    "rarity": 6,
+    "description": "全名罗西娜·沃尔夫珀尔·卢皮诺，鲁珀族干员。被称为「狼群之珠」，沃尔夫加德的妹妹。擅长物理和热能双重伤害。",
+    "descriptionEn": "Full name Rossina Wulfperl Lupinno, a Lupo race operator known as the Pearl of the Pack, Wulfgard's younger sister. Specializes in dual Physical/Heat DMG.",
+    "descriptionJa": "本名ロッシーナ・ヴルフペルル・ルピーノ、ルポ族のオペレーター。狼の群れの真珠と呼ばれ、ヴルフガルドの妹。",
+    "faq": [
+      {
+        "question": "Is Rossi good in Endfield?",
+        "questionZh": "罗西值得培养吗？",
+        "answer": "Rossi is a S-tier Guard with strong performance in their role.",
+        "answerZh": "罗西是S级近卫，在其定位上表现强力。"
+      }
+    ],
+    "relatedCharacters": [
+      "wulfgard",
+      "endministrator",
+      "pogranichnik"
+    ],
+    "tierRank": "S",
+    "tierReason": "Versatile Physical Guard with dual Physical/Heat DMG via Razor Clawmark.",
+    "tierReasonZh": "多面手物理近卫，通过爪痕机制造成物理/热能双重伤害。",
+    "skills": {
+      "normalAttack": {
+        "name": "沸腾狼血",
+        "nameEn": "Seething Wolfblood",
+        "description": "使用Sword进行物理攻击，造成Physical伤害。",
+        "descriptionEn": "Performs attacks with Sword, dealing Physical damage."
+      },
+      "skill": {
+        "name": "猩红之影",
+        "nameEn": "Crimson Shadow",
+        "description": "释放强力Physical技能，对敌人造成大量Physical伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Physical skill, dealing massive Physical damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "炽影之刻",
+        "nameEn": "Moment of Blazing Shadow",
+        "description": "释放终极技，造成大量Physical伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Physical damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "利爪伏击",
+        "nameEn": "Razorclaw Ambuscade",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "卡尔科尼克斯",
+      "bestWeaponEn": "kalkonyx",
+      "alternativeWeapons": [
+        "aspirant"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "physical伤害加成",
+        "头冠": "暴击伤害"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Physical DMG Bonus",
+        "Circlet": "CRIT DMG"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "physical元素队",
+        "nameEn": "Physical Element Team",
+        "members": [
+          "wulfgard",
+          "endministrator",
+          "pogranichnik"
+        ],
+        "description": "以罗西为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Rossi with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/rossi.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        93.0,
+        159.0,
+        225.0,
+        291.0,
+        323.0
+      ],
+      "str": [
+        9.896,
+        28.701,
+        48.494,
+        68.288,
+        88.082,
+        97.979
+      ],
+      "agl": [
+        23.195,
+        55.935,
+        90.397,
+        124.86,
+        159.322,
+        176.553
+      ],
+      "int": [
+        14.061,
+        36.267,
+        59.642,
+        83.017,
+        106.391,
+        118.079
+      ],
+      "wil": [
+        9.072,
+        26.309,
+        44.453,
+        62.597,
+        80.742,
+        89.814
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Origin of Admiration",
+        "description": "Battle skill Crimson Shadow and combo skill Moment of Blazing Shadow improved: The DMG Multipliers of these skills are increased to 1.15 times of the original.",
+        "descriptionEn": "Battle skill Crimson Shadow and combo skill Moment of Blazing Shadow improved: The DMG Multipliers of these skills are increased to 1.15 times of the original."
+      },
+      {
+        "name": "Gap to Perfection",
+        "description": "Agility +20, Critical Rate +7%.",
+        "descriptionEn": "Agility +20, Critical Rate +7%."
+      },
+      {
+        "name": "Tangible Duties",
+        "description": "Talent Seething Blood improved: When triggered, it grants Base DMG Multiplier +8% and restores HP +[Intellect × 0.04].",
+        "descriptionEn": "Talent Seething Blood improved: When triggered, it grants Base DMG Multiplier +8% and restores HP +[Intellect × 0.04]."
+      },
+      {
+        "name": "Innocent Wish",
+        "description": "Ultimate \"Razorclaw\" Ambuscade improved: Ultimate Energy cost -15%.",
+        "descriptionEn": "Ultimate \"Razorclaw\" Ambuscade improved: Ultimate Energy cost -15%."
+      },
+      {
+        "name": "Legendary Destination",
+        "description": "Ultimate \"Razorclaw\" Ambuscade improved: DMG Multiplier is increased to 1.1 times of the original; Critical DMG Dealt is increased by +30%.",
+        "descriptionEn": "Ultimate \"Razorclaw\" Ambuscade improved: DMG Multiplier is increased to 1.1 times of the original; Critical DMG Dealt is increased by +30%."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Quadrant Fitting Fluid",
+            "quantity": 20
+          },
+          {
+            "name": "Cosmagaric",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ember",
+    "name": "烬",
+    "nameEn": "Ember",
+    "nameJa": "エンバー",
+    "element": "heat",
+    "elementEn": "Heat",
+    "profession": "重装",
+    "professionEn": "Defender",
+    "weaponType": "Great Sword",
+    "rarity": 6,
+    "description": "来自北方荒芜的钢铁誓约骑士团成员，沉默寡言但战斗经验丰富的老练战士。作为热能重装，在前线承伤的同时能造成可观的反击伤害。",
+    "descriptionEn": "An Oathkeeper Knight from the Northern Desolation, not skilled in conversation but a veteran warrior excelling as a frontline Heat Defender.",
+    "descriptionJa": "北方の荒野出身の鉄の誓約騎士団員。口下手だが歴戦の戦士。熱能重装として前線でタンク兼反撃ダメージを担う。",
+    "faq": [
+      {
+        "question": "Is Ember good in Endfield?",
+        "questionZh": "烬值得培养吗？",
+        "answer": "Ember is a SS-tier Defender with excellent performance in their role.",
+        "answerZh": "烬是SS级重装，在其定位上表现出色。"
+      }
+    ],
+    "relatedCharacters": [
+      "snowshine",
+      "catcher",
+      "pogranichnik"
+    ],
+    "tierRank": "SS",
+    "tierReason": "Best Heat Defender with strong frontline tanking and counter damage.",
+    "tierReasonZh": "最强热能重装，前排承伤+反击输出。",
+    "skills": {
+      "normalAttack": {
+        "name": "征伐剑术",
+        "nameEn": "Art of the Crusading Sword",
+        "description": "使用Great Sword进行热能攻击，造成Heat伤害。",
+        "descriptionEn": "Performs attacks with Great Sword, dealing Heat damage."
+      },
+      "skill": {
+        "name": "余烬远征",
+        "nameEn": "Crusade of Cinders",
+        "description": "释放强力Heat技能，对敌人造成大量Heat伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Heat skill, dealing massive Heat damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "审判终结",
+        "nameEn": "Judgement's End",
+        "description": "释放终极技，造成大量Heat伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Heat damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "不灭誓言",
+        "nameEn": "Undying Oath",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "掷骰",
+      "bestWeaponEn": "cast-die",
+      "alternativeWeapons": [
+        "chivalric-virtues"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "heat伤害加成",
+        "头冠": "暴击伤害"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Heat DMG Bonus",
+        "Circlet": "CRIT DMG"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "heat元素队",
+        "nameEn": "Heat Element Team",
+        "members": [
+          "snowshine",
+          "catcher",
+          "pogranichnik"
+        ],
+        "description": "以烬为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Ember with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/ember.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        93.0,
+        159.0,
+        225.0,
+        291.0,
+        323.0
+      ],
+      "str": [
+        21.649,
+        54.688,
+        89.466,
+        124.244,
+        159.022,
+        176.411
+      ],
+      "agl": [
+        9.793,
+        28.402,
+        47.989,
+        67.577,
+        87.164,
+        96.958
+      ],
+      "int": [
+        8.762,
+        25.412,
+        42.938,
+        60.463,
+        77.989,
+        86.752
+      ],
+      "wil": [
+        13.608,
+        36.377,
+        60.344,
+        84.311,
+        108.278,
+        120.262
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Nomadic Fort",
+        "description": "Talent Inflamed for the Assault improved: Protect effect +20%; hitting an enemy extends the duration by 1.5s.",
+        "descriptionEn": "Talent Inflamed for the Assault improved: Protect effect +20%; hitting an enemy extends the duration by 1.5s."
+      },
+      {
+        "name": "Steel-Hardened Veteran",
+        "description": "Strength +20, Will +20.",
+        "descriptionEn": "Strength +20, Will +20."
+      },
+      {
+        "name": "Indomitable Front",
+        "description": "Combo skill Frontline Support improved: Restores the HP of another teammate with the lowest percentage HP at 50% of the base effect.",
+        "descriptionEn": "Combo skill Frontline Support improved: Restores the HP of another teammate with the lowest percentage HP at 50% of the base effect."
+      },
+      {
+        "name": "Undying Embers",
+        "description": "Ultimate Re-Ignited Oath improved: Ultimate Energy cost -15%.",
+        "descriptionEn": "Ultimate Re-Ignited Oath improved: Ultimate Energy cost -15%."
+      },
+      {
+        "name": "The Steel Oath",
+        "description": "Ultimate Re-Ignited Oath improved: Shield effect is multiplied by 1.2; while this Shield is active, the wielder gains ATK +10%.",
+        "descriptionEn": "Ultimate Re-Ignited Oath improved: Shield effect is multiplied by 1.2; while this Shield is active, the wielder gains ATK +10%."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "D96 Steel Sample 4",
+            "quantity": 20
+          },
+          {
+            "name": "Cosmagaric",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ardelia",
+    "name": "安德莉亚",
+    "nameEn": "Ardelia",
+    "nameJa": "アルデリア",
+    "element": "nature",
+    "elementEn": "Nature",
+    "profession": "辅助",
+    "professionEn": "Supporter",
+    "weaponType": "Arts Unit",
+    "rarity": 6,
+    "description": "卡普里尼族地质学家，研究以太侧和地质灾害。伴生生物「多利先生」协同作战，在战场上创造治疗暗影。",
+    "descriptionEn": "A Caprinae geologist researching Aetherside and geological disasters. Accompanied by companion Mr. Dolly, creates healing shadows on the battlefield.",
+    "descriptionJa": "カプリニウム族の地質学者。伴侶クリーチャー「ドリーさん」と共に戦場で治癒の影を創り出す。",
+    "faq": [
+      {
+        "question": "Is Ardelia good in Endfield?",
+        "questionZh": "安德莉亚值得培养吗？",
+        "answer": "Ardelia is a SS-tier Supporter with excellent performance in their role.",
+        "answerZh": "安德莉亚是SS级辅助，在其定位上表现出色。"
+      }
+    ],
+    "relatedCharacters": [
+      "gilberta",
+      "snowshine",
+      "xaihi"
+    ],
+    "tierRank": "SS",
+    "tierReason": "Top-tier Nature healer/supporter with Corrode and Susceptibility debuffs.",
+    "tierReasonZh": "顶级自然治疗辅助，提供腐蚀和易伤效果。",
+    "skills": {
+      "normalAttack": {
+        "name": "岩语",
+        "nameEn": "Rocky Whispers",
+        "description": "使用Arts Unit进行自然攻击，造成Nature伤害。",
+        "descriptionEn": "Performs attacks with Arts Unit, dealing Nature damage."
+      },
+      "skill": {
+        "name": "多利冲锋",
+        "nameEn": "Dolly Rush",
+        "description": "释放强力Nature技能，对敌人造成大量Nature伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Nature skill, dealing massive Nature damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "喷发柱",
+        "nameEn": "Eruption Column",
+        "description": "释放终极技，造成大量Nature伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Nature damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "羊毛派对",
+        "nameEn": "Wooly Party",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "奥罗尼克斯",
+      "bestWeaponEn": "auronyx",
+      "alternativeWeapons": [
+        "exemplar"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "nature伤害加成",
+        "头冠": "暴击伤害"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Nature DMG Bonus",
+        "Circlet": "CRIT DMG"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "nature元素队",
+        "nameEn": "Nature Element Team",
+        "members": [
+          "gilberta",
+          "snowshine",
+          "xaihi"
+        ],
+        "description": "以安德莉亚为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Ardelia with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/ardelia.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        93.0,
+        159.0,
+        225.0,
+        291.0,
+        323.0
+      ],
+      "str": [
+        9.793,
+        31.64,
+        54.636,
+        77.632,
+        100.628,
+        112.126
+      ],
+      "agl": [
+        9.484,
+        27.505,
+        46.474,
+        65.443,
+        84.412,
+        93.896
+      ],
+      "int": [
+        20.103,
+        46.966,
+        75.243,
+        103.519,
+        131.796,
+        145.935
+      ],
+      "wil": [
+        15.876,
+        37.73,
+        60.734,
+        83.739,
+        106.743,
+        118.245
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Dolly Paradise",
+        "description": "Battle skill Dolly Rush improved: Debuff Consumption Corrosion now applies Physical Susceptibility and Arts Susceptibility with effects +8%.",
+        "descriptionEn": "Battle skill Dolly Rush improved: Debuff Consumption Corrosion now applies Physical Susceptibility and Arts Susceptibility with effects +8%."
+      },
+      {
+        "name": "Game Rewards",
+        "description": "Talent Friendly Presence improved: When the controlled operator touches the Shadow of Mr. Dolly, Ardelia also treats another allied operator with the lowest percentage HP with half of the treatment effects.",
+        "descriptionEn": "Talent Friendly Presence improved: When the controlled operator touches the Shadow of Mr. Dolly, Ardelia also treats another allied operator with the lowest percentage HP with half of the treatment effects."
+      },
+      {
+        "name": "Explosive Eruption",
+        "description": "Ultimate Wooly Party improved: Duration +1s; chance to create Shadow of Mr. Dolly is increased to 1.2 times the original.",
+        "descriptionEn": "Ultimate Wooly Party improved: Duration +1s; chance to create Shadow of Mr. Dolly is increased to 1.2 times the original."
+      },
+      {
+        "name": "Rock Blossom",
+        "description": "Ultimate Wooly Party improved: Ultimate Energy cost -15%.",
+        "descriptionEn": "Ultimate Wooly Party improved: Ultimate Energy cost -15%."
+      },
+      {
+        "name": "Volcanic Steam",
+        "description": "Combo skill Eruption Column improved: Length of cooldown -2s; DMG multiplier is increased to 1.2 times the original; duration of Corrosion applied +4s.",
+        "descriptionEn": "Combo skill Eruption Column improved: Length of cooldown -2s; DMG multiplier is increased to 1.2 times the original; duration of Corrosion applied +4s."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Quadrant Fitting Fluid",
+            "quantity": 20
+          },
+          {
+            "name": "Cosmagaric",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gilberta",
+    "name": "吉尔伯塔",
+    "nameEn": "Gilberta",
+    "nameJa": "ジルベルタ",
+    "element": "nature",
+    "elementEn": "Nature",
+    "profession": "辅助",
+    "professionEn": "Supporter",
+    "weaponType": "Arts Unit",
+    "rarity": 6,
+    "description": "罗德岛驻终末地产业通讯员，拥有极为罕见的重力控制源石技艺。乐观向上的冒险者，能为大范围友方提供艺术易伤和增益。",
+    "descriptionEn": "A Rhodes Island Messenger with exceptionally rare gravity-controlling Originium Arts. Applies large-area Arts Susceptibility and Amp buffs to teammates.",
+    "descriptionJa": "ローズアイランドの通信員。極めて稀な重力制御オリジニウムアーツを持つ。広範囲のアーツ耐性低下とバフを味方に付与。",
+    "faq": [
+      {
+        "question": "Is Gilberta good in Endfield?",
+        "questionZh": "吉尔伯塔值得培养吗？",
+        "answer": "Gilberta is a S-tier Supporter with strong performance in their role.",
+        "answerZh": "吉尔伯塔是S级辅助，在其定位上表现强力。"
+      }
+    ],
+    "relatedCharacters": [
+      "ardelia",
+      "perlica",
+      "antal"
+    ],
+    "tierRank": "S",
+    "tierReason": "Excellent Nature Supporter with gravity Arts and large-area team buffs.",
+    "tierReasonZh": "优秀的自然辅助，重力源石技艺和大范围团队增益。",
+    "skills": {
+      "normalAttack": {
+        "name": "秘杖：光线凝聚术",
+        "nameEn": "Arcane Staff: Beam Cohesion Arts",
+        "description": "使用Arts Unit进行自然攻击，造成Nature伤害。",
+        "descriptionEn": "Performs attacks with Arts Unit, dealing Nature damage."
+      },
+      "skill": {
+        "name": "秘杖：重力模式",
+        "nameEn": "Arcane Staff: Gravity Mode",
+        "description": "释放强力Nature技能，对敌人造成大量Nature伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Nature skill, dealing massive Nature damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "秘杖：矩阵置换",
+        "nameEn": "Arcane Staff: Matrix Displacement",
+        "description": "释放终极技，造成大量Nature伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Nature damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "秘杖：重力场",
+        "nameEn": "Arcane Staff: Gravity Field",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "奥罗尼克斯",
+      "bestWeaponEn": "auronyx",
+      "alternativeWeapons": [
+        "exemplar"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "nature伤害加成",
+        "头冠": "暴击伤害"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Nature DMG Bonus",
+        "Circlet": "CRIT DMG"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "nature元素队",
+        "nameEn": "Nature Element Team",
+        "members": [
+          "ardelia",
+          "perlica",
+          "antal"
+        ],
+        "description": "以吉尔伯塔为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Gilberta with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/gilberta.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        94.0,
+        161.0,
+        228.0,
+        296.0,
+        329.0
+      ],
+      "str": [
+        9.072,
+        26.309,
+        44.453,
+        62.597,
+        80.742,
+        89.814
+      ],
+      "agl": [
+        9.381,
+        27.206,
+        45.969,
+        64.731,
+        83.494,
+        92.876
+      ],
+      "int": [
+        16.103,
+        39.812,
+        64.77,
+        89.728,
+        114.686,
+        127.164
+      ],
+      "wil": [
+        20.412,
+        52.719,
+        86.727,
+        120.735,
+        154.743,
+        171.747
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Above the Clouds",
+        "description": "Battle skill Arcane Staff: Gravity Mode improved: Effect radius +20%.",
+        "descriptionEn": "Battle skill Arcane Staff: Gravity Mode improved: Effect radius +20%."
+      },
+      {
+        "name": "Wind Walker",
+        "description": "Ultimate Arcane Staff: Gravity Field improved: When an enemy is affected by the Anomalous Gravity Field of the ultimate, double the Arts Susceptibility increase per Vulnerable stack. When finalizing this effect, the target is treated as having 1 additional stack of Vulnerable (total stacks max out at 4).",
+        "descriptionEn": "Ultimate Arcane Staff: Gravity Field improved: When an enemy is affected by the Anomalous Gravity Field of the ultimate, double the Arts Susceptibility increase per Vulnerable stack. When finalizing this effect, the target is treated as having 1 additional stack of Vulnerable (total stacks max out at 4)."
+      },
+      {
+        "name": "Quick, Gentle Steps",
+        "description": "Talent Messenger's Song improved: Ultimate Gain Efficiency +5%.",
+        "descriptionEn": "Talent Messenger's Song improved: Ultimate Gain Efficiency +5%."
+      },
+      {
+        "name": "Dances with Clouds",
+        "description": "Ultimate Arcane Staff: Gravity Field improved: Ultimate Energy cost -15%.",
+        "descriptionEn": "Ultimate Arcane Staff: Gravity Field improved: Ultimate Energy cost -15%."
+      },
+      {
+        "name": "Special Mail",
+        "description": "Combo skill Arcane Staff: Matrix Displacement improved: Length of cooldown -2s; DMG multiplier is increased to 1.3 times the original.",
+        "descriptionEn": "Combo skill Arcane Staff: Matrix Displacement improved: Length of cooldown -2s; DMG multiplier is increased to 1.3 times the original."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Tachyon Screening Lattice",
+            "quantity": 20
+          },
+          {
+            "name": "Bloodcap",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tangtang",
+    "name": "唐唐",
+    "nameEn": "Tangtang",
+    "nameJa": "タンタン",
+    "element": "cryo",
+    "elementEn": "Cryo",
+    "profession": "术师",
+    "professionEn": "Caster",
+    "weaponType": "Handcannon",
+    "rarity": 6,
+    "description": "清波寨大当家，婴儿时期被发现在竹篮中漂流在水上。性格豪爽活泼，技能名称充满个性。米芙的青梅竹马对手。",
+    "descriptionEn": "Supreme Chief of Qingbo Stockade, found as an infant in a bamboo basket. Boisterous personality with colorful skill names, Mi Fu's childhood rival.",
+    "descriptionJa": "清波寨の大親分。乳児時代に竹かごで川を流されているところを発見された。豪快な性格。ミーフーの幼馴染のライバル。",
+    "faq": [
+      {
+        "question": "Is Tangtang good in Endfield?",
+        "questionZh": "唐唐值得培养吗？",
+        "answer": "Tangtang is a SS-tier Caster with excellent performance in their role.",
+        "answerZh": "唐唐是SS级术师，在其定位上表现出色。"
+      }
+    ],
+    "relatedCharacters": [
+      "mi-fu",
+      "wulfgard",
+      "fluorite"
+    ],
+    "tierRank": "SS",
+    "tierReason": "Top-tier Cryo Caster with handcannon and high elemental damage output.",
+    "tierReasonZh": "顶级冷冻术师，手炮高元素伤害输出。",
+    "skills": {
+      "normalAttack": {
+        "name": "我要让你大吃一惊！",
+        "nameEn": "I'LL BLOW YOUR MIND!",
+        "description": "使用Handcannon进行冷冻攻击，造成Cryo伤害。",
+        "descriptionEn": "Performs attacks with Handcannon, dealing Cryo damage."
+      },
+      "skill": {
+        "name": "我是冲浪达人！",
+        "nameEn": "IMA WAVERIDAAH!",
+        "description": "释放强力Cryo技能，对敌人造成大量Cryo伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Cryo skill, dealing massive Cryo damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "河流，向我涌来！",
+        "nameEn": "RIVER, TO ME!",
+        "description": "释放终极技，造成大量Cryo伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Cryo damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "老大看着你呢！",
+        "nameEn": "DA CHIEF SEES YOU!",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "重骰",
+      "bestWeaponEn": "heavy-cast-die",
+      "alternativeWeapons": [
+        "darhoff-7"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "cryo伤害加成",
+        "头冠": "暴击伤害"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Cryo DMG Bonus",
+        "Circlet": "CRIT DMG"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "cryo元素队",
+        "nameEn": "Cryo Element Team",
+        "members": [
+          "mi-fu",
+          "wulfgard",
+          "fluorite"
+        ],
+        "description": "以唐唐为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Tangtang with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/tangtang.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        92.0,
+        157.0,
+        223.0,
+        288.0,
+        321.0
+      ],
+      "str": [
+        13.608,
+        37.089,
+        61.806,
+        86.523,
+        111.24,
+        123.598
+      ],
+      "agl": [
+        23.505,
+        56.832,
+        91.913,
+        126.994,
+        162.075,
+        179.615
+      ],
+      "int": [
+        8.865,
+        25.279,
+        42.557,
+        59.834,
+        77.112,
+        85.75
+      ],
+      "wil": [
+        10.309,
+        29.896,
+        50.515,
+        71.134,
+        91.752,
+        102.061
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Reserve Hoard",
+        "description": "Combo skill RIVER, TO ME! improved: DMG Multiplier is increased to 1.2 times of the original. Length of cooldown -2s.",
+        "descriptionEn": "Combo skill RIVER, TO ME! improved: DMG Multiplier is increased to 1.2 times of the original. Length of cooldown -2s."
+      },
+      {
+        "name": "River's Daughter",
+        "description": "Agility +20, Cryo DMG Dealt +10%",
+        "descriptionEn": "Agility +20, Cryo DMG Dealt +10%"
+      },
+      {
+        "name": "Chiefly Vibe",
+        "description": "Battle skill IMA WAVERIDAAH! improved: DMG Multiplier is increased to 1.1 times the original. When forming multiple Waterspouts, the resulting Arts Susceptibility effect is increased by +5%.",
+        "descriptionEn": "Battle skill IMA WAVERIDAAH! improved: DMG Multiplier is increased to 1.1 times the original. When forming multiple Waterspouts, the resulting Arts Susceptibility effect is increased by +5%."
+      },
+      {
+        "name": "Qingbo Meditation",
+        "description": "Ultimate DA CHIEF SEES YOU! improved: Ultimate Energy cost -15%.",
+        "descriptionEn": "Ultimate DA CHIEF SEES YOU! improved: Ultimate Energy cost -15%."
+      },
+      {
+        "name": "Chief's All-Eldritch Gaze",
+        "description": "Ultimate DA CHIEF SEES YOU! improved: DMG Multiplier is increased to 1.15 times the original.",
+        "descriptionEn": "Ultimate DA CHIEF SEES YOU! improved: DMG Multiplier is increased to 1.15 times the original."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Metadiastima Photoemission Tube",
+            "quantity": 20
+          },
+          {
+            "name": "Bloodcap",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "laevatain",
+    "name": "莱瓦汀",
+    "nameEn": "Laevatain",
+    "nameJa": "レーヴァテイン",
+    "element": "heat",
+    "elementEn": "Heat",
+    "profession": "狙击",
+    "professionEn": "Striker",
+    "weaponType": "Sword",
+    "rarity": 6,
+    "description": "萨卡兹族干员，擅长造成优秀的群体伤害。吸收热能附加层数后释放，再燃天赋在低血量时提供保护。",
+    "descriptionEn": "A Sarkaz Striker who excels at outstanding mass damage. Absorbs Heat Inflictions for power, with Re-ignition talent for survivability when HP drops low.",
+    "descriptionJa": "サルカズ族のオペレーター。優秀な範囲ダメージに長ける。ヒート蓄積を吸収し、再燃タレントで低HP時に保護を得る。",
+    "faq": [
+      {
+        "question": "Is Laevatain good in Endfield?",
+        "questionZh": "莱瓦汀值得培养吗？",
+        "answer": "Laevatain is a SS-tier Striker with excellent performance in their role.",
+        "answerZh": "莱瓦汀是SS级狙击，在其定位上表现出色。"
+      }
+    ],
+    "relatedCharacters": [
+      "ember",
+      "wulfgard",
+      "arclight"
+    ],
+    "tierRank": "SS",
+    "tierReason": "Best Heat Striker with massive AoE damage and Heat absorption mechanics.",
+    "tierReasonZh": "最强热能狙击，超大范围伤害和热能吸收机制。",
+    "skills": {
+      "normalAttack": {
+        "name": "炽烬",
+        "nameEn": "Flaming Cinders",
+        "description": "使用Sword进行热能攻击，造成Heat伤害。",
+        "descriptionEn": "Performs attacks with Sword, dealing Heat damage."
+      },
+      "skill": {
+        "name": "闷燃",
+        "nameEn": "Smouldering Fire",
+        "description": "释放强力Heat技能，对敌人造成大量Heat伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Heat skill, dealing massive Heat damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "沸腾",
+        "nameEn": "Seethe",
+        "description": "释放终极技，造成大量Heat伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Heat damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "黄昏",
+        "nameEn": "Twilight",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "卡尔科尼克斯",
+      "bestWeaponEn": "kalkonyx",
+      "alternativeWeapons": [
+        "aspirant"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "heat伤害加成",
+        "头冠": "暴击伤害"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Heat DMG Bonus",
+        "Circlet": "CRIT DMG"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "heat元素队",
+        "nameEn": "Heat Element Team",
+        "members": [
+          "ember",
+          "wulfgard",
+          "arclight"
+        ],
+        "description": "以莱瓦汀为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Laevatain with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/laevatain.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        91.0,
+        156.0,
+        221.0,
+        285.0,
+        318.0
+      ],
+      "str": [
+        13.608,
+        36.614,
+        60.831,
+        85.048,
+        109.265,
+        121.374
+      ],
+      "agl": [
+        9.587,
+        28.883,
+        49.194,
+        69.506,
+        89.817,
+        99.973
+      ],
+      "int": [
+        22.268,
+        55.511,
+        90.503,
+        125.496,
+        160.488,
+        177.985
+      ],
+      "wil": [
+        9.072,
+        26.309,
+        44.453,
+        62.597,
+        80.742,
+        89.814
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Heart of Melting Flame",
+        "description": "Battle skill Smouldering Fire improved: Additional attack multiplier is increased to 1.2 times the original, and scoring a hit SP Return 20 SP.",
+        "descriptionEn": "Battle skill Smouldering Fire improved: Additional attack multiplier is increased to 1.2 times the original, and scoring a hit SP Return 20 SP."
+      },
+      {
+        "name": "Pursuit of Memories",
+        "description": "Intellect +20, Basic Attack DMG Dealt +15%.",
+        "descriptionEn": "Intellect +20, Basic Attack DMG Dealt +15%."
+      },
+      {
+        "name": "Fragments from the Past",
+        "description": "Battle skill Smouldering Fire improved: Duration of the Combustion applied by the skill is increased by 50%. DMG of the Combustion applied by the skills is increased to 1.5 times the original.",
+        "descriptionEn": "Battle skill Smouldering Fire improved: Duration of the Combustion applied by the skill is increased by 50%. DMG of the Combustion applied by the skills is increased to 1.5 times the original."
+      },
+      {
+        "name": "Ice Cream Furnace",
+        "description": "Ultimate Twilight improved: Ultimate Energy cost -15%.",
+        "descriptionEn": "Ultimate Twilight improved: Ultimate Energy cost -15%."
+      },
+      {
+        "name": "Proof of Existence",
+        "description": "Ultimate Twilight improved: Enhanced basic attack DMG multiplier is increased to 1.2 times the original; during the ultimate, every enemy defeated by Laevatain extends ultimate duration by +1s (max: +7s).",
+        "descriptionEn": "Ultimate Twilight improved: Enhanced basic attack DMG multiplier is increased to 1.2 times the original; during the ultimate, every enemy defeated by Laevatain extends ultimate duration by +1s (max: +7s)."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "D96 Steel Sample 4",
+            "quantity": 20
+          },
+          {
+            "name": "Cosmagaric",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "last-rite",
+    "name": "末仪",
+    "nameEn": "Last Rite",
+    "nameJa": "ラストライト",
+    "element": "cryo",
+    "elementEn": "Cryo",
+    "profession": "狙击",
+    "professionEn": "Striker",
+    "weaponType": "Great Sword",
+    "rarity": 6,
+    "description": "萨卡兹食尸鬼族少女，被守墓人收养。使用霜寒与钢铁为塞什卡执行契约战斗，是一位强力的冷冻元素狙击干员。",
+    "descriptionEn": "A Sarkaz Nachzehrer girl adopted by gravekeepers. Wields frost and steel as a contracted fighter for Seš'qa, a powerful Cryo Striker.",
+    "descriptionJa": "サルカズ・ナハツェーラーの少女。墓守に育てられた。霜と鋼を操るセシュカの契約戦闘員。",
+    "faq": [
+      {
+        "question": "Is Last Rite good in Endfield?",
+        "questionZh": "末仪值得培养吗？",
+        "answer": "Last Rite is a S-tier Striker with strong performance in their role.",
+        "answerZh": "末仪是S级狙击，在其定位上表现强力。"
+      }
+    ],
+    "relatedCharacters": [
+      "camille",
+      "yvonne",
+      "snowshine"
+    ],
+    "tierRank": "S",
+    "tierReason": "Strong Cryo Striker with freezing damage and sustained output.",
+    "tierReasonZh": "强力的冷冻狙击，冰冻伤害和持续输出。",
+    "skills": {
+      "normalAttack": {
+        "name": "霜华之舞",
+        "nameEn": "Dance of Rime",
+        "description": "使用Great Sword进行冷冻攻击，造成Cryo伤害。",
+        "descriptionEn": "Performs attacks with Great Sword, dealing Cryo damage."
+      },
+      "skill": {
+        "name": "塞什卡秘传",
+        "nameEn": "Esoteric Legacy of Seš'qa",
+        "description": "释放强力Cryo技能，对敌人造成大量Cryo伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Cryo skill, dealing massive Cryo damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "凛冬吞噬者",
+        "nameEn": "Winter's Devourer",
+        "description": "释放终极技，造成大量Cryo伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Cryo damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "守夜仪典",
+        "nameEn": "Vigil Services",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "掷骰",
+      "bestWeaponEn": "cast-die",
+      "alternativeWeapons": [
+        "chivalric-virtues"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "cryo伤害加成",
+        "头冠": "暴击伤害"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Cryo DMG Bonus",
+        "Circlet": "CRIT DMG"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "cryo元素队",
+        "nameEn": "Cryo Element Team",
+        "members": [
+          "camille",
+          "yvonne",
+          "snowshine"
+        ],
+        "description": "以末仪为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Last Rite with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/last-rite.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        95.0,
+        162.0,
+        230.0,
+        298.0,
+        332.0
+      ],
+      "str": [
+        21.649,
+        50.155,
+        80.161,
+        110.168,
+        140.174,
+        155.177
+      ],
+      "agl": [
+        8.762,
+        29.146,
+        50.603,
+        72.06,
+        93.517,
+        104.245
+      ],
+      "int": [
+        9.484,
+        27.505,
+        46.474,
+        65.443,
+        84.412,
+        93.896
+      ],
+      "wil": [
+        15.876,
+        35.83,
+        56.835,
+        77.84,
+        98.845,
+        109.347
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Undertaker's Gift",
+        "description": "When the controlled operator with Hypothermic Perfusion performs a Final Strike that hits the enemy, it deals another 20% DMG and 5 Stagger.",
+        "descriptionEn": "When the controlled operator with Hypothermic Perfusion performs a Final Strike that hits the enemy, it deals another 20% DMG and 5 Stagger."
+      },
+      {
+        "name": "Absolute Zero Armament",
+        "description": "Strength +20, Cryo DMG Dealt +10%.",
+        "descriptionEn": "Strength +20, Cryo DMG Dealt +10%."
+      },
+      {
+        "name": "Overlord of Winter",
+        "description": "Combo skill Winter's Devourer and ultimate Vigil Services improved: DMG multiplier increased to 1.15 times the original.",
+        "descriptionEn": "Combo skill Winter's Devourer and ultimate Vigil Services improved: DMG multiplier increased to 1.15 times the original."
+      },
+      {
+        "name": "Sincere Wake",
+        "description": "Ultimate Vigil Services improved: Ultimate Energy cost -15%.",
+        "descriptionEn": "Ultimate Vigil Services improved: Ultimate Energy cost -15%."
+      },
+      {
+        "name": "Winter is Returning",
+        "description": "Battle skill Esoteric Legacy of Seš'qa improved: Amount of SP SP Return is increased by another 5; Mirage Additional ATK Multiplier is increased to 1.2 times the original.",
+        "descriptionEn": "Battle skill Esoteric Legacy of Seš'qa improved: Amount of SP SP Return is increased by another 5; Mirage Additional ATK Multiplier is increased to 1.2 times the original."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Triphasic Nanoflake",
+            "quantity": 20
+          },
+          {
+            "name": "Bloodcap",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yvonne",
+    "name": "伊冯娜",
+    "nameEn": "Yvonne",
+    "nameJa": "イヴォンヌ",
+    "element": "cryo",
+    "elementEn": "Cryo",
+    "profession": "狙击",
+    "professionEn": "Striker",
+    "weaponType": "Handcannon",
+    "rarity": 6,
+    "description": "终末地产业特种技术部的天才研究员，利用暴击和固化机制造成大量冷冻伤害。",
+    "descriptionEn": "A genius researcher in Endfield's Specialist Tech Division who leverages critical hits and Solidification mechanics for massive Cryo DMG.",
+    "descriptionJa": "終末地産業特種技術部の天才研究者。会心と固化メカニズムを活用した大量のフロストダメージ。",
+    "faq": [
+      {
+        "question": "Is Yvonne good in Endfield?",
+        "questionZh": "伊冯娜值得培养吗？",
+        "answer": "Yvonne is a S-tier Striker with strong performance in their role.",
+        "answerZh": "伊冯娜是S级狙击，在其定位上表现强力。"
+      }
+    ],
+    "relatedCharacters": [
+      "tangtang",
+      "perlica",
+      "endministrator"
+    ],
+    "tierRank": "S",
+    "tierReason": "Strong Cryo Striker with crit-focused damage and Solidification mechanics.",
+    "tierReasonZh": "强力冷冻狙击，暴击伤害和固化机制。",
+    "skills": {
+      "normalAttack": {
+        "name": "欢快扳机",
+        "nameEn": "Exuberant Trigger",
+        "description": "使用Handcannon进行冷冻攻击，造成Cryo伤害。",
+        "descriptionEn": "Performs attacks with Handcannon, dealing Cryo damage."
+      },
+      "skill": {
+        "name": "哗哗炸弹β",
+        "nameEn": "Brr-Brr-Bomb β",
+        "description": "释放强力Cryo技能，对敌人造成大量Cryo伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Cryo skill, dealing massive Cryo damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "速冻υ37",
+        "nameEn": "Flashfreezer υ37",
+        "description": "释放终极技，造成大量Cryo伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Cryo damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "冷冻爆破枪手",
+        "nameEn": "Cryoblasting Pistolier",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "重骰",
+      "bestWeaponEn": "heavy-cast-die",
+      "alternativeWeapons": [
+        "darhoff-7"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "cryo伤害加成",
+        "头冠": "暴击伤害"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Cryo DMG Bonus",
+        "Circlet": "CRIT DMG"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "cryo元素队",
+        "nameEn": "Cryo Element Team",
+        "members": [
+          "tangtang",
+          "perlica",
+          "endministrator"
+        ],
+        "description": "以伊冯娜为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Yvonne with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/yvonne.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        92.0,
+        157.0,
+        223.0,
+        288.0,
+        321.0
+      ],
+      "str": [
+        8.35,
+        24.216,
+        40.917,
+        57.618,
+        74.319,
+        82.67
+      ],
+      "agl": [
+        14.742,
+        38.953,
+        64.438,
+        89.924,
+        115.409,
+        128.152
+      ],
+      "int": [
+        24.587,
+        57.057,
+        91.235,
+        125.413,
+        159.592,
+        176.681
+      ],
+      "wil": [
+        10.618,
+        30.793,
+        52.03,
+        73.268,
+        94.505,
+        105.123
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Flash Freezer",
+        "description": "Combo skill Flashfreezer υ37 improved: Effect radius +20%; releases energy 2 more times; and gains an additional 15 Ultimate Energy after dealing DMG.",
+        "descriptionEn": "Combo skill Flashfreezer υ37 improved: Effect radius +20%; releases energy 2 more times; and gains an additional 15 Ultimate Energy after dealing DMG."
+      },
+      {
+        "name": "Flawless Creation",
+        "description": "Intellect +20, Critical Rate +7%.",
+        "descriptionEn": "Intellect +20, Critical Rate +7%."
+      },
+      {
+        "name": "Tink-a-Power",
+        "description": "Talent Freezing Point improved: Against enemies with Cryo Infliction, Critical DMG Dealt +10%; this effect is also doubled against enemies with Solidification.",
+        "descriptionEn": "Talent Freezing Point improved: Against enemies with Cryo Infliction, Critical DMG Dealt +10%; this effect is also doubled against enemies with Solidification."
+      },
+      {
+        "name": "Rebellious Mood",
+        "description": "Battle skill Brr-Brr-Bomb β improved: If the explosion hits only one enemy, SP Return 10 SP.",
+        "descriptionEn": "Battle skill Brr-Brr-Bomb β improved: If the explosion hits only one enemy, SP Return 10 SP."
+      },
+      {
+        "name": "Expert Mechcrafter",
+        "description": "Ultimate Cryoblasting Pistolier improved: During the ultimate, ATK +10% and Critical DMG Dealt +30%.",
+        "descriptionEn": "Ultimate Cryoblasting Pistolier improved: During the ultimate, ATK +10% and Critical DMG Dealt +30%."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Tachyon Screening Lattice",
+            "quantity": 20
+          },
+          {
+            "name": "Bloodcap",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zhuang-fangyi",
+    "name": "庄方仪",
+    "nameEn": "Zhuang Fangyi",
+    "nameJa": "荘方儀",
+    "element": "electric",
+    "elementEn": "Electric",
+    "profession": "狙击",
+    "professionEn": "Striker",
+    "weaponType": "Arts Unit",
+    "rarity": 6,
+    "description": "武陵天师，宏山科学院的领袖。创造碎裂之刃释放雷击造成持续电击伤害，是电击元素输出的核心。",
+    "descriptionEn": "Viceroy of Wuling and Tianshi of HAS. Creates Sunderblades that unleash Thunder Strikes for continuous Electric DMG.",
+    "descriptionJa": "武陵の天師、宏山科学院のリーダー。砕裂の刃を創り、雷撃で連続のエレキダメージを与える。",
+    "faq": [
+      {
+        "question": "Is Zhuang Fangyi good in Endfield?",
+        "questionZh": "庄方仪值得培养吗？",
+        "answer": "Zhuang Fangyi is a S-tier Striker with strong performance in their role.",
+        "answerZh": "庄方仪是S级狙击，在其定位上表现强力。"
+      }
+    ],
+    "relatedCharacters": [
+      "mi-fu",
+      "da-pan",
+      "perlica"
+    ],
+    "tierRank": "S",
+    "tierReason": "Core Electric Striker with Sunderblade and continuous Thunder Strike damage.",
+    "tierReasonZh": "电击输出核心，碎裂之刃+持续雷击伤害。",
+    "skills": {
+      "normalAttack": {
+        "name": "惊电术",
+        "nameEn": "Jolting Arts",
+        "description": "使用Arts Unit进行电击攻击，造成Electric伤害。",
+        "descriptionEn": "Performs attacks with Arts Unit, dealing Electric damage."
+      },
+      "skill": {
+        "name": "碎裂真言",
+        "nameEn": "Mantra of Sundering",
+        "description": "释放强力Electric技能，对敌人造成大量Electric伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Electric skill, dealing massive Electric damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "蜕变之息",
+        "nameEn": "Breath of Transformation",
+        "description": "释放终极技，造成大量Electric伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Electric damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "天罚风暴",
+        "nameEn": "Smiting Tempest",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "奥罗尼克斯",
+      "bestWeaponEn": "auronyx",
+      "alternativeWeapons": [
+        "exemplar"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "electric伤害加成",
+        "头冠": "暴击伤害"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Electric DMG Bonus",
+        "Circlet": "CRIT DMG"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "electric元素队",
+        "nameEn": "Electric Element Team",
+        "members": [
+          "mi-fu",
+          "da-pan",
+          "perlica"
+        ],
+        "description": "以庄方仪为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Zhuang Fangyi with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/zhuang-fangyi.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        93.0,
+        160.0,
+        227.0,
+        293.0,
+        326.0
+      ],
+      "str": [
+        10.0,
+        29.0,
+        49.0,
+        69.0,
+        89.0,
+        99.0
+      ],
+      "agl": [
+        10.0,
+        29.0,
+        49.0,
+        69.0,
+        89.0,
+        99.0
+      ],
+      "int": [
+        17.01,
+        39.831,
+        63.854,
+        87.877,
+        111.9,
+        123.911
+      ],
+      "wil": [
+        24.742,
+        58.8,
+        94.651,
+        130.502,
+        166.353,
+        184.279
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Four Symbols of Harmony",
+        "description": "Battle skill Mantra of Sundering improved: DMG multiplier is increased to 1.15 times the original. After entering battle, Zhuang Fangyi's first battle skill casting also creates 1 more Sunderblade.",
+        "descriptionEn": "Battle skill Mantra of Sundering improved: DMG multiplier is increased to 1.15 times the original. After entering battle, Zhuang Fangyi's first battle skill casting also creates 1 more Sunderblade."
+      },
+      {
+        "name": "Acuity of Fine Details",
+        "description": "Will +20, Battle Skill DMG Dealt +15%.",
+        "descriptionEn": "Will +20, Battle Skill DMG Dealt +15%."
+      },
+      {
+        "name": "Sense and Response",
+        "description": "Battle skill Mantra of Sundering improved: After Debuff Consumption Electrification, the battle skill SP Return 10 SP. Sunderblade duration +10s.",
+        "descriptionEn": "Battle skill Mantra of Sundering improved: After Debuff Consumption Electrification, the battle skill SP Return 10 SP. Sunderblade duration +10s."
+      },
+      {
+        "name": "Absolute Composure",
+        "description": "Ultimate Smiting Tempest improved: Ultimate Energy cost -15%.",
+        "descriptionEn": "Ultimate Smiting Tempest improved: Ultimate Energy cost -15%."
+      },
+      {
+        "name": "Storm of Transformation",
+        "description": "During the Empyrean of Truth transformation, DMG Dealt by Zhuang Fangyi ignores 15 of the enemy's Electric Resistance.",
+        "descriptionEn": "During the Empyrean of Truth transformation, DMG Dealt by Zhuang Fangyi ignores 15 of the enemy's Electric Resistance."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Triphasic Nanoflake",
+            "quantity": 20
+          },
+          {
+            "name": "Cosmagaric",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pogranichnik",
+    "name": "边境行者",
+    "nameEn": "Pogranichnik",
+    "nameJa": "ポグラニチニク",
+    "element": "physical",
+    "elementEn": "Physical",
+    "profession": "先锋",
+    "professionEn": "Vanguard",
+    "weaponType": "Sword",
+    "rarity": 6,
+    "description": "鲁珀族干员，前钢铁誓约盾卫旗指挥官。现任军事顾问，利用热情士气叠加机制加速SP获取和突破能力。",
+    "descriptionEn": "A Liberi operator, former Shieldguard Banner commander. Military consultant with Fervent Morale stacking mechanic for SP recovery and Breach.",
+    "descriptionJa": "リベリ族のオペレーター。元鉄の誓約盾衛旗指揮官。熱情士気スタックメカニズムでSP回復と突破を加速。",
+    "faq": [
+      {
+        "question": "Is Pogranichnik good in Endfield?",
+        "questionZh": "边境行者值得培养吗？",
+        "answer": "Pogranichnik is a S-tier Vanguard with strong performance in their role.",
+        "answerZh": "边境行者是S级先锋，在其定位上表现强力。"
+      }
+    ],
+    "relatedCharacters": [
+      "ember",
+      "arclight",
+      "akekuri"
+    ],
+    "tierRank": "S",
+    "tierReason": "Top Physical Vanguard with Fervent Morale stacking for SP recovery.",
+    "tierReasonZh": "顶级物理先锋，热情士气叠加加速SP恢复。",
+    "skills": {
+      "normalAttack": {
+        "name": "全力进攻",
+        "nameEn": "All-Out Offensive",
+        "description": "使用Sword进行物理攻击，造成Physical伤害。",
+        "descriptionEn": "Performs attacks with Sword, dealing Physical damage."
+      },
+      "skill": {
+        "name": "碾压前线",
+        "nameEn": "The Pulverizing Front",
+        "description": "释放强力Physical技能，对敌人造成大量Physical伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Physical skill, dealing massive Physical damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "满月斩",
+        "nameEn": "Full Moon Slash",
+        "description": "释放终极技，造成大量Physical伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Physical damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "盾卫旗，前进",
+        "nameEn": "Shieldguard Banner, Forward",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "卡尔科尼克斯",
+      "bestWeaponEn": "kalkonyx",
+      "alternativeWeapons": [
+        "aspirant"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "physical伤害加成",
+        "头冠": "暴击伤害"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Physical DMG Bonus",
+        "Circlet": "CRIT DMG"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "physical元素队",
+        "nameEn": "Physical Element Team",
+        "members": [
+          "ember",
+          "arclight",
+          "akekuri"
+        ],
+        "description": "以边境行者为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Pogranichnik with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/pogranichnik.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        92.0,
+        157.0,
+        223.0,
+        288.0,
+        321.0
+      ],
+      "str": [
+        12.371,
+        31.343,
+        51.313,
+        71.284,
+        91.254,
+        101.24
+      ],
+      "agl": [
+        13.608,
+        34.24,
+        55.957,
+        77.675,
+        99.392,
+        110.251
+      ],
+      "int": [
+        10.309,
+        28.817,
+        48.3,
+        67.782,
+        87.264,
+        97.006
+      ],
+      "wil": [
+        20.103,
+        52.794,
+        87.206,
+        121.618,
+        156.03,
+        173.236
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Frontline Sweep",
+        "description": "Battle skill The Pulverizing Front improved: When hitting at least 2 enemies, 15 SP is SP Return.",
+        "descriptionEn": "Battle skill The Pulverizing Front improved: When hitting at least 2 enemies, 15 SP is SP Return."
+      },
+      {
+        "name": "\"Advance\"",
+        "description": "Will +20, Physical DMG Dealt +10%.",
+        "descriptionEn": "Will +20, Physical DMG Dealt +10%."
+      },
+      {
+        "name": "When the Banner Flutters",
+        "description": "Talent The Living Banner improved: Amount of SP recovery needed to gain Fervent Morale is reduced to 60. Max Fervent Morale stacks on self +2.",
+        "descriptionEn": "Talent The Living Banner improved: Amount of SP recovery needed to gain Fervent Morale is reduced to 60. Max Fervent Morale stacks on self +2."
+      },
+      {
+        "name": "Shield of Talos-II",
+        "description": "Ultimate Shieldguard Banner, Forward improved: Ultimate Energy cost -15%.",
+        "descriptionEn": "Ultimate Shieldguard Banner, Forward improved: Ultimate Energy cost -15%."
+      },
+      {
+        "name": "Newly Forged Blade",
+        "description": "Combo skill Full Moon Slash improved: Length of cooldown -2s; SP recovery is increased to 1.2 times the original.",
+        "descriptionEn": "Combo skill Full Moon Slash improved: Length of cooldown -2s; SP recovery is increased to 1.2 times the original."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Metadiastima Photoemission Tube",
+            "quantity": 20
+          },
+          {
+            "name": "Cosmagaric",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chen-qianyu",
+    "name": "陈千语",
+    "nameEn": "Chen Qianyu",
+    "nameJa": "チェン・チエンユィ",
+    "element": "physical",
+    "elementEn": "Physical",
+    "profession": "近卫",
+    "professionEn": "Guard",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "description": "终末地产业的武术家干员，能快速叠加易伤层数，对单体目标造成大量伤害和硬直。",
+    "descriptionEn": "A martial artist at Endfield Industries who quickly builds Vulnerability stacks and deals massive DMG/Stagger to single targets.",
+    "descriptionJa": "終末地産業の武術家オペレーター。脆弱スタックを素早く蓄積し、単体に大量のダメージとスタガーを与える。",
+    "faq": [
+      {
+        "question": "Is Chen Qianyu good in Endfield?",
+        "questionZh": "陈千语值得培养吗？",
+        "answer": "Chen Qianyu is a A-tier Guard with solid performance in their role.",
+        "answerZh": "陈千语是A级近卫，在其定位上表现稳健。"
+      }
+    ],
+    "relatedCharacters": [
+      "endministrator",
+      "rossi",
+      "pogranichnik"
+    ],
+    "tierRank": "A",
+    "tierReason": "Solid Physical Guard with fast Vulnerability stacking.",
+    "tierReasonZh": "稳健的物理近卫，快速叠加易伤。",
+    "skills": {
+      "normalAttack": {
+        "name": "腾空击",
+        "nameEn": "Soaring Break",
+        "description": "使用Sword进行物理攻击，造成Physical伤害。",
+        "descriptionEn": "Performs attacks with Sword, dealing Physical damage."
+      },
+      "skill": {
+        "name": "升龙击",
+        "nameEn": "Ascending Strike",
+        "description": "释放强力Physical技能，对敌人造成大量Physical伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Physical skill, dealing massive Physical damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "凌空之星",
+        "nameEn": "Soar to the Stars",
+        "description": "释放终极技，造成大量Physical伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Physical damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "刃风",
+        "nameEn": "Blade Gale",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "卡尔科尼克斯",
+      "bestWeaponEn": "kalkonyx",
+      "alternativeWeapons": [
+        "aspirant"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "physical伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Physical DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "physical元素队",
+        "nameEn": "Physical Element Team",
+        "members": [
+          "endministrator",
+          "rossi",
+          "pogranichnik"
+        ],
+        "description": "以陈千语为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Chen Qianyu with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/chen-qianyu.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        87.0,
+        147.0,
+        207.0,
+        267.0,
+        297.0
+      ],
+      "str": [
+        10.773,
+        31.242,
+        52.788,
+        74.335,
+        95.881,
+        106.654
+      ],
+      "agl": [
+        20.567,
+        52.844,
+        86.821,
+        120.797,
+        154.773,
+        171.762
+      ],
+      "int": [
+        8.865,
+        25.279,
+        42.557,
+        59.834,
+        77.112,
+        85.75
+      ],
+      "wil": [
+        9.69,
+        27.671,
+        46.598,
+        65.525,
+        84.452,
+        93.915
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "\"Shadowless\"",
+        "description": "DMG Dealt +20% to enemies below 50% HP.",
+        "descriptionEn": "DMG Dealt +20% to enemies below 50% HP."
+      },
+      {
+        "name": "Heirloom Martial Arts",
+        "description": "Agility +15, Physical DMG Dealt +8%.",
+        "descriptionEn": "Agility +15, Physical DMG Dealt +8%."
+      },
+      {
+        "name": "Dual-Wielding Swordmancer",
+        "description": "Battle skill Ascending Strike, combo skill Soar to the Stars, and ultimate Blade Gale improved: DMG Multiplier is increased to 1.1 times the original.",
+        "descriptionEn": "Battle skill Ascending Strike, combo skill Soar to the Stars, and ultimate Blade Gale improved: DMG Multiplier is increased to 1.1 times the original."
+      },
+      {
+        "name": "Improvised Chi Xiao",
+        "description": "Ultimate Blade Gale improved: Ultimate Energy cost -15%.",
+        "descriptionEn": "Ultimate Blade Gale improved: Ultimate Energy cost -15%."
+      },
+      {
+        "name": "Bonded with the World",
+        "description": "Combo skill Soar to the Stars improved: Length of cooldown -3s.",
+        "descriptionEn": "Combo skill Soar to the Stars improved: Length of cooldown -3s."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Quadrant Fitting Fluid",
+            "quantity": 20
+          },
+          {
+            "name": "Cosmagaric",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "snowshine",
+    "name": "雪耀",
+    "nameEn": "Snowshine",
+    "nameJa": "スノーシャイン",
+    "element": "cryo",
+    "elementEn": "Cryo",
+    "profession": "重装",
+    "professionEn": "Defender",
+    "weaponType": "Great Sword",
+    "rarity": 5,
+    "description": "罗德岛搜救专员，通过反击攻击保护队友，提供治疗和固化效果。",
+    "descriptionEn": "A Rhodes Island SAR specialist who protects teammates by retaliating attacks, healing, and applying Solidification.",
+    "descriptionJa": "ローズアイランドの救助専門員。反撃で味方を守り、治癒と固化効果を提供。",
+    "faq": [
+      {
+        "question": "Is Snowshine good in Endfield?",
+        "questionZh": "雪耀值得培养吗？",
+        "answer": "Snowshine is a A-tier Defender with solid performance in their role.",
+        "answerZh": "雪耀是A级重装，在其定位上表现稳健。"
+      }
+    ],
+    "relatedCharacters": [
+      "ardelia",
+      "ember",
+      "last-rite"
+    ],
+    "tierRank": "A",
+    "tierReason": "Reliable Cryo Defender with healing and Solidification support.",
+    "tierReasonZh": "可靠的冷冻重装，治疗和固化支援。",
+    "skills": {
+      "normalAttack": {
+        "name": "低温突击",
+        "nameEn": "Hypothermic Assault",
+        "description": "使用Great Sword进行冷冻攻击，造成Cryo伤害。",
+        "descriptionEn": "Performs attacks with Great Sword, dealing Cryo damage."
+      },
+      "skill": {
+        "name": "饱和防御",
+        "nameEn": "Saturated Defense",
+        "description": "释放强力Cryo技能，对敌人造成大量Cryo伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Cryo skill, dealing massive Cryo damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "极地营救",
+        "nameEn": "Polar Rescue",
+        "description": "释放终极技，造成大量Cryo伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Cryo damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "凛冬雪原",
+        "nameEn": "Frigid Snowfield",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "掷骰",
+      "bestWeaponEn": "cast-die",
+      "alternativeWeapons": [
+        "chivalric-virtues"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "cryo伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Cryo DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "cryo元素队",
+        "nameEn": "Cryo Element Team",
+        "members": [
+          "ardelia",
+          "ember",
+          "last-rite"
+        ],
+        "description": "以雪耀为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Snowshine with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/snowshine.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        87.0,
+        147.0,
+        207.0,
+        267.0,
+        297.0
+      ],
+      "str": [
+        18.556,
+        47.662,
+        78.299,
+        108.937,
+        139.574,
+        154.893
+      ],
+      "agl": [
+        12.371,
+        32.055,
+        52.775,
+        73.496,
+        94.216,
+        104.576
+      ],
+      "int": [
+        9.484,
+        27.505,
+        46.474,
+        65.443,
+        84.412,
+        93.896
+      ],
+      "wil": [
+        10.999,
+        31.9,
+        53.9,
+        75.9,
+        97.9,
+        108.9
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Cold Shelter",
+        "description": "Battle skill Saturated Defense improved: During the blocking effect, Arts Infliction cannot be applied to allied operators with Protect.",
+        "descriptionEn": "Battle skill Saturated Defense improved: During the blocking effect, Arts Infliction cannot be applied to allied operators with Protect."
+      },
+      {
+        "name": "Storm Region",
+        "description": "Ultimate Frigid Snowfield improved: Effect radius +20%.",
+        "descriptionEn": "Ultimate Frigid Snowfield improved: Effect radius +20%."
+      },
+      {
+        "name": "Polar Survival Guide",
+        "description": "Ultimate Frigid Snowfield improved: Duration of the Solidification applied by the skill is increased by 2s.",
+        "descriptionEn": "Ultimate Frigid Snowfield improved: Duration of the Solidification applied by the skill is increased by 2s."
+      },
+      {
+        "name": "Tundra Aegis",
+        "description": "DEF +20, Will +20.",
+        "descriptionEn": "DEF +20, Will +20."
+      },
+      {
+        "name": "Cold Disaster Specialist",
+        "description": "Battle skill Saturated Defense improved: Successfully retaliating an enemy attack SP Return 10 SP.",
+        "descriptionEn": "Battle skill Saturated Defense improved: Successfully retaliating an enemy attack SP Return 10 SP."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Quadrant Fitting Fluid",
+            "quantity": 20
+          },
+          {
+            "name": "Bloodcap",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "xaihi",
+    "name": "赛希",
+    "nameEn": "Xaihi",
+    "nameJa": "サイヒ",
+    "element": "cryo",
+    "elementEn": "Cryo",
+    "profession": "辅助",
+    "professionEn": "Supporter",
+    "weaponType": "Arts Unit",
+    "rarity": 5,
+    "description": "宁静之会的萨卡兹会话师，用战技治疗并为团队提供增幅增益。",
+    "descriptionEn": "A Sarkaz Sessionite from the Cabal of Tranquility who heals with battle skills and grants Amp buffs to the team.",
+    "descriptionJa": "静寂の会のサルカズ・セッショニスト。戦闘スキルで治癒し、チームにアンプバフを付与。",
+    "faq": [
+      {
+        "question": "Is Xaihi good in Endfield?",
+        "questionZh": "赛希值得培养吗？",
+        "answer": "Xaihi is a A-tier Supporter with solid performance in their role.",
+        "answerZh": "赛希是A级辅助，在其定位上表现稳健。"
+      }
+    ],
+    "relatedCharacters": [
+      "ardelia",
+      "gilberta",
+      "antal"
+    ],
+    "tierRank": "A",
+    "tierReason": "Solid Cryo Supporter with healing and Amp buffs.",
+    "tierReasonZh": "稳健的冷冻辅助，治疗和增幅增益。",
+    "skills": {
+      "normalAttack": {
+        "name": "冷却",
+        "nameEn": "Cooldown",
+        "description": "使用Arts Unit进行冷冻攻击，造成Cryo伤害。",
+        "descriptionEn": "Performs attacks with Arts Unit, dealing Cryo damage."
+      },
+      "skill": {
+        "name": "分布式拒绝服务",
+        "nameEn": "Distributed DoS",
+        "description": "释放强力Cryo技能，对敌人造成大量Cryo伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Cryo skill, dealing massive Cryo damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "压力测试",
+        "nameEn": "Stress Testing",
+        "description": "释放终极技，造成大量Cryo伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Cryo damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "栈溢出",
+        "nameEn": "Stack Overflow",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "奥罗尼克斯",
+      "bestWeaponEn": "auronyx",
+      "alternativeWeapons": [
+        "exemplar"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "cryo伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Cryo DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "cryo元素队",
+        "nameEn": "Cryo Element Team",
+        "members": [
+          "ardelia",
+          "gilberta",
+          "antal"
+        ],
+        "description": "以赛希为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Xaihi with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/xaihi.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        86.0,
+        144.0,
+        203.0,
+        262.0,
+        291.0
+      ],
+      "str": [
+        9.329,
+        26.517,
+        44.608,
+        62.7,
+        80.792,
+        89.838
+      ],
+      "agl": [
+        9.381,
+        26.99,
+        45.525,
+        64.061,
+        82.597,
+        91.865
+      ],
+      "int": [
+        15.876,
+        39.63,
+        64.634,
+        89.638,
+        114.642,
+        127.144
+      ],
+      "wil": [
+        15.154,
+        43.948,
+        74.257,
+        104.567,
+        134.876,
+        150.03
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Agile Execution",
+        "description": "Arts Amp granted by the Auxiliary Crystal is increased by another 5%.",
+        "descriptionEn": "Arts Amp granted by the Auxiliary Crystal is increased by another 5%."
+      },
+      {
+        "name": "Link Aggregation",
+        "description": "Ultimate Stack Overflow improved: Ultimate Energy cost -10%.",
+        "descriptionEn": "Ultimate Stack Overflow improved: Ultimate Energy cost -10%."
+      },
+      {
+        "name": "Mapping Node",
+        "description": "Combo skill Stress Testing improved: When hitting the target, the hit chains 1 time to 1 additional target nearby.",
+        "descriptionEn": "Combo skill Stress Testing improved: When hitting the target, the hit chains 1 time to 1 additional target nearby."
+      },
+      {
+        "name": "Grayscale Release",
+        "description": "Intellect +15, Treatment Efficiency +10%.",
+        "descriptionEn": "Intellect +15, Treatment Efficiency +10%."
+      },
+      {
+        "name": "Controlled Recursion",
+        "description": "Ultimate Stack Overflow improved: Amp effect is increased to 1.1 times the original.",
+        "descriptionEn": "Ultimate Stack Overflow improved: Amp effect is increased to 1.1 times the original."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "D96 Steel Sample 4",
+            "quantity": 20
+          },
+          {
+            "name": "Bloodcap",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "perlica",
+    "name": "珀莉卡",
+    "nameEn": "Perlica",
+    "nameJa": "ペリカ",
+    "element": "electric",
+    "elementEn": "Electric",
+    "profession": "术师",
+    "professionEn": "Caster",
+    "weaponType": "Arts Unit",
+    "rarity": 5,
+    "description": "终末地产业主管，施加电击附加和带电效果创造战斗优势。",
+    "descriptionEn": "Supervisor of Endfield Industries who applies Electric Infliction and Electrification to create combat opportunities.",
+    "descriptionJa": "終末地産業のスーパーバイザー。エレキ蓄積と帯電効果で戦闘の優位性を創出。",
+    "faq": [
+      {
+        "question": "Is Perlica good in Endfield?",
+        "questionZh": "珀莉卡值得培养吗？",
+        "answer": "Perlica is a A-tier Caster with solid performance in their role.",
+        "answerZh": "珀莉卡是A级术师，在其定位上表现稳健。"
+      }
+    ],
+    "relatedCharacters": [
+      "zhuang-fangyi",
+      "yvonne",
+      "antal"
+    ],
+    "tierRank": "A",
+    "tierReason": "Good Electric Caster with Infliction and Electrification mechanics.",
+    "tierReasonZh": "不错的电击术师，蓄积和带电机制。",
+    "skills": {
+      "normalAttack": {
+        "name": "协议α：突破",
+        "nameEn": "Protocol α: Breach",
+        "description": "使用Arts Unit进行电击攻击，造成Electric伤害。",
+        "descriptionEn": "Performs attacks with Arts Unit, dealing Electric damage."
+      },
+      "skill": {
+        "name": "协议ω：打击",
+        "nameEn": "Protocol ω: Strike",
+        "description": "释放强力Electric技能，对敌人造成大量Electric伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Electric skill, dealing massive Electric damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "即时协议：连锁",
+        "nameEn": "Instant Protocol: Chain",
+        "description": "释放终极技，造成大量Electric伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Electric damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "协议ε：70.41K",
+        "nameEn": "Protocol ε: 70.41K",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "奥罗尼克斯",
+      "bestWeaponEn": "auronyx",
+      "alternativeWeapons": [
+        "exemplar"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "electric伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Electric DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "electric元素队",
+        "nameEn": "Electric Element Team",
+        "members": [
+          "zhuang-fangyi",
+          "yvonne",
+          "antal"
+        ],
+        "description": "以珀莉卡为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Perlica with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/perlica.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        88.0,
+        150.0,
+        211.0,
+        272.0,
+        303.0
+      ],
+      "str": [
+        9.278,
+        26.907,
+        45.463,
+        64.02,
+        82.577,
+        91.855
+      ],
+      "agl": [
+        9.484,
+        27.505,
+        46.474,
+        65.443,
+        84.412,
+        93.896
+      ],
+      "int": [
+        21.649,
+        51.547,
+        83.019,
+        114.491,
+        145.963,
+        161.699
+      ],
+      "wil": [
+        13.608,
+        34.952,
+        57.419,
+        79.887,
+        102.354,
+        113.588
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Crisis Handling",
+        "description": "Combo skill Instant Protocol: Chain improved: Electrification duration +75%.",
+        "descriptionEn": "Combo skill Instant Protocol: Chain improved: Electrification duration +75%."
+      },
+      {
+        "name": "Negotiation Tactics",
+        "description": "Ultimate Protocol ε: 70.41K improved: Ultimate Energy cost -15%.",
+        "descriptionEn": "Ultimate Protocol ε: 70.41K improved: Ultimate Energy cost -15%."
+      },
+      {
+        "name": "Supervisory Duties",
+        "description": "After Perlica applies Electrification to the enemy, she gains ATK +20% for 5s. This effect can reach 2 stacks.",
+        "descriptionEn": "After Perlica applies Electrification to the enemy, she gains ATK +20% for 5s. This effect can reach 2 stacks."
+      },
+      {
+        "name": "Constant Guidance",
+        "description": "Combo skill Instant Protocol: Chain improved: The DMG Type debuff effects on the enemy applied by the skill's Electrification are increased to 1.33 times the original.",
+        "descriptionEn": "Combo skill Instant Protocol: Chain improved: The DMG Type debuff effects on the enemy applied by the skill's Electrification are increased to 1.33 times the original."
+      },
+      {
+        "name": "Reentry Control",
+        "description": "Ultimate Protocol ε: 70.41K improved: Critical Rate +30%.",
+        "descriptionEn": "Ultimate Protocol ε: 70.41K improved: Critical Rate +30%."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Tachyon Screening Lattice",
+            "quantity": 20
+          },
+          {
+            "name": "Bloodcap",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wulfgard",
+    "name": "沃尔夫加德",
+    "nameEn": "Wulfgard",
+    "nameJa": "ヴルフガルド",
+    "element": "heat",
+    "elementEn": "Heat",
+    "profession": "术师",
+    "professionEn": "Caster",
+    "weaponType": "Handcannon",
+    "rarity": 5,
+    "description": "地碎佣兵，罗西的哥哥。擅长施加热能附加和燃烧效果，消耗反应造成大量伤害。",
+    "descriptionEn": "A Landbreaker mercenary, Rossi's brother. Skilled in applying Heat Infliction and Combustion, consuming reactions for massive DMG.",
+    "descriptionJa": "地砕傭兵、ロッシの兄。ヒート蓄積と燃焼効果に優れ、反応を消費して大量のダメージを与える。",
+    "faq": [
+      {
+        "question": "Is Wulfgard good in Endfield?",
+        "questionZh": "沃尔夫加德值得培养吗？",
+        "answer": "Wulfgard is a A-tier Caster with solid performance in their role.",
+        "answerZh": "沃尔夫加德是A级术师，在其定位上表现稳健。"
+      }
+    ],
+    "relatedCharacters": [
+      "rossi",
+      "laevatain",
+      "tangtang"
+    ],
+    "tierRank": "A",
+    "tierReason": "Good Heat Caster with Combustion reaction mechanics.",
+    "tierReasonZh": "不错的烈热术师，燃烧反应机制。",
+    "skills": {
+      "normalAttack": {
+        "name": "双枪速射",
+        "nameEn": "Rapid Fire Akimbo",
+        "description": "使用Handcannon进行热能攻击，造成Heat伤害。",
+        "descriptionEn": "Performs attacks with Handcannon, dealing Heat damage."
+      },
+      "skill": {
+        "name": "铝热追踪弹",
+        "nameEn": "Thermite Tracers",
+        "description": "释放强力Heat技能，对敌人造成大量Heat伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Heat skill, dealing massive Heat damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "破片手雷·β",
+        "nameEn": "Frag Grenade·β",
+        "description": "释放终极技，造成大量Heat伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Heat damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "狼性狂怒",
+        "nameEn": "Wolven Fury",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "重骰",
+      "bestWeaponEn": "heavy-cast-die",
+      "alternativeWeapons": [
+        "darhoff-7"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "heat伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Heat DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "heat元素队",
+        "nameEn": "Heat Element Team",
+        "members": [
+          "rossi",
+          "laevatain",
+          "tangtang"
+        ],
+        "description": "以沃尔夫加德为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Wulfgard with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/wulfgard.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        86.0,
+        146.0,
+        205.0,
+        264.0,
+        294.0
+      ],
+      "str": [
+        18.556,
+        49.119,
+        81.29,
+        113.461,
+        145.633,
+        161.718
+      ],
+      "agl": [
+        9.639,
+        27.953,
+        47.231,
+        66.51,
+        85.788,
+        95.427
+      ],
+      "int": [
+        9.381,
+        27.206,
+        45.969,
+        64.731,
+        83.494,
+        92.876
+      ],
+      "wil": [
+        13.814,
+        34.665,
+        56.613,
+        78.561,
+        100.509,
+        111.484
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Lone Wolf",
+        "description": "Strength +15, Agility +15.",
+        "descriptionEn": "Strength +15, Agility +15."
+      },
+      {
+        "name": "Firearm Mods",
+        "description": "Talent Code of Restraint improved: SP Return 10 additional SP.",
+        "descriptionEn": "Talent Code of Restraint improved: SP Return 10 additional SP."
+      },
+      {
+        "name": "Hunting Hour",
+        "description": "While Scorching Fangs is active, triggering the battle skill's additional effects immediately resets the Scorching Fangs duration and grants other teammates Scorching Fangs with 50% of the base effects.",
+        "descriptionEn": "While Scorching Fangs is active, triggering the battle skill's additional effects immediately resets the Scorching Fangs duration and grants other teammates Scorching Fangs with 50% of the base effects."
+      },
+      {
+        "name": "Will of the Pack",
+        "description": "Ultimate Wolven Fury improved: Ultimate Energy cost -15%.",
+        "descriptionEn": "Ultimate Wolven Fury improved: Ultimate Energy cost -15%."
+      },
+      {
+        "name": "Natural Predator",
+        "description": "Casting the ultimate Wolven Fury immediately resets the cooldown of the combo skill Frag Grenade·β.",
+        "descriptionEn": "Casting the ultimate Wolven Fury immediately resets the cooldown of the combo skill Frag Grenade·β."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Triphasic Nanoflake",
+            "quantity": 20
+          },
+          {
+            "name": "Cosmagaric",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "avywenna",
+    "name": "阿维文娜",
+    "nameEn": "Avywenna",
+    "nameJa": "アヴィウェナ",
+    "element": "electric",
+    "elementEn": "Electric",
+    "profession": "狙击",
+    "professionEn": "Striker",
+    "weaponType": "Polearm",
+    "rarity": 5,
+    "description": "武装通讯员，投掷雷枪并回收造成大量电击伤害爆发。",
+    "descriptionEn": "An Armed Messenger who throws Thunderlances and retrieves them for massive Electric DMG bursts.",
+    "descriptionJa": "武装通信員。サンダーランスを投擲し回収して大爆発のエレキダメージを与える。",
+    "faq": [
+      {
+        "question": "Is Avywenna good in Endfield?",
+        "questionZh": "阿维文娜值得培养吗？",
+        "answer": "Avywenna is a A-tier Striker with solid performance in their role.",
+        "answerZh": "阿维文娜是A级狙击，在其定位上表现稳健。"
+      }
+    ],
+    "relatedCharacters": [
+      "zhuang-fangyi",
+      "arclight",
+      "perlica"
+    ],
+    "tierRank": "A",
+    "tierReason": "Good Electric Striker with Thunderlance throw-and-retrieve mechanic.",
+    "tierReasonZh": "不错的电击狙击，雷枪投掷回收机制。",
+    "skills": {
+      "normalAttack": {
+        "name": "雷枪：闪击",
+        "nameEn": "Thunderlance: Blitz",
+        "description": "使用Polearm进行电击攻击，造成Electric伤害。",
+        "descriptionEn": "Performs attacks with Polearm, dealing Electric damage."
+      },
+      "skill": {
+        "name": "雷枪：阻击",
+        "nameEn": "Thunderlance: Interdiction",
+        "description": "释放强力Electric技能，对敌人造成大量Electric伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Electric skill, dealing massive Electric damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "雷枪：打击",
+        "nameEn": "Thunderlance: Strike",
+        "description": "释放终极技，造成大量Electric伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Electric damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "雷枪：终极电击",
+        "nameEn": "Thunderlance: Final Shock",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "责任信标",
+      "bestWeaponEn": "beacon-of-duty",
+      "alternativeWeapons": [
+        "beacon-of-duty"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "electric伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Electric DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "electric元素队",
+        "nameEn": "Electric Element Team",
+        "members": [
+          "zhuang-fangyi",
+          "arclight",
+          "perlica"
+        ],
+        "description": "以阿维文娜为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Avywenna with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/avywenna.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        90.0,
+        153.0,
+        217.0,
+        280.0,
+        312.0
+      ],
+      "str": [
+        12.886,
+        33.053,
+        54.282,
+        75.511,
+        96.739,
+        107.354
+      ],
+      "agl": [
+        10.773,
+        31.242,
+        52.788,
+        74.335,
+        95.881,
+        106.654
+      ],
+      "int": [
+        14.123,
+        34.698,
+        56.356,
+        78.014,
+        99.672,
+        110.501
+      ],
+      "wil": [
+        15.0,
+        43.5,
+        73.5,
+        103.5,
+        133.5,
+        148.5
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Doubling Down",
+        "description": "Talent Expedited Delivery improved: Ultimate Energy gain +2.",
+        "descriptionEn": "Talent Expedited Delivery improved: Ultimate Energy gain +2."
+      },
+      {
+        "name": "Pole of Menace",
+        "description": "Thunderlance and Thunderlance EX duration +20s.",
+        "descriptionEn": "Thunderlance and Thunderlance EX duration +20s."
+      },
+      {
+        "name": "Hard Negotiator",
+        "description": "Will +15, Electric DMG Dealt +8%.",
+        "descriptionEn": "Will +15, Electric DMG Dealt +8%."
+      },
+      {
+        "name": "Very Experienced",
+        "description": "Ultimate Thunderlance: Final Shock improved: Ultimate Energy cost -15%.",
+        "descriptionEn": "Ultimate Thunderlance: Final Shock improved: Ultimate Energy cost -15%."
+      },
+      {
+        "name": "Carrot and Sharp Stick",
+        "description": "When returning Thunderlances or Thunderlances EX hit an Electric Susceptibility enemy, the DMG multipliers are increased to 1.15 times the original.",
+        "descriptionEn": "When returning Thunderlances or Thunderlances EX hit an Electric Susceptibility enemy, the DMG multipliers are increased to 1.15 times the original."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Tachyon Screening Lattice",
+            "quantity": 20
+          },
+          {
+            "name": "Bloodcap",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "da-pan",
+    "name": "大潘",
+    "nameEn": "Da Pan",
+    "nameJa": "ダーパン",
+    "element": "physical",
+    "elementEn": "Physical",
+    "profession": "狙击",
+    "professionEn": "Striker",
+    "weaponType": "Great Sword",
+    "rarity": 5,
+    "description": "宏山科学院的旅行厨师兼先锋科学家，用独特的料理战斗风格施加物理状态并造成大量伤害。",
+    "descriptionEn": "A traveling chef and Vanguard Scientist from HAS who applies Physical statuses and deals massive Physical DMG with unique cooking-themed combos.",
+    "descriptionJa": "宏山科学院の旅する料理人。料理テーマのユニークなコンボで物理ステータスを付与し、大量の物理ダメージを与える。",
+    "faq": [
+      {
+        "question": "Is Da Pan good in Endfield?",
+        "questionZh": "大潘值得培养吗？",
+        "answer": "Da Pan is a A-tier Striker with solid performance in their role.",
+        "answerZh": "大潘是A级狙击，在其定位上表现稳健。"
+      }
+    ],
+    "relatedCharacters": [
+      "lifeng",
+      "mi-fu",
+      "zhuang-fangyi"
+    ],
+    "tierRank": "A",
+    "tierReason": "Unique Physical Striker with cooking-themed combat style.",
+    "tierReasonZh": "独特的物理狙击，料理风格战斗。",
+    "skills": {
+      "normalAttack": {
+        "name": "滚切！",
+        "nameEn": "ROLLING CUT!",
+        "description": "使用Great Sword进行物理攻击，造成Physical伤害。",
+        "descriptionEn": "Performs attacks with Great Sword, dealing Physical damage."
+      },
+      "skill": {
+        "name": "翻锅！",
+        "nameEn": "FLIP DA WOK!",
+        "description": "释放强力Physical技能，对敌人造成大量Physical伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Physical skill, dealing massive Physical damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "加辣！",
+        "nameEn": "MORE SPICE!",
+        "description": "释放终极技，造成大量Physical伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Physical damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "劈扣！",
+        "nameEn": "CHOP 'N DUNK!",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "掷骰",
+      "bestWeaponEn": "cast-die",
+      "alternativeWeapons": [
+        "chivalric-virtues"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "physical伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Physical DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "physical元素队",
+        "nameEn": "Physical Element Team",
+        "members": [
+          "lifeng",
+          "mi-fu",
+          "zhuang-fangyi"
+        ],
+        "description": "以大潘为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Da Pan with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/da-pan.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        88.0,
+        150.0,
+        211.0,
+        272.0,
+        303.0
+      ],
+      "str": [
+        24.278,
+        56.484,
+        90.384,
+        124.285,
+        158.186,
+        175.136
+      ],
+      "agl": [
+        9.793,
+        28.402,
+        47.989,
+        67.577,
+        87.164,
+        96.958
+      ],
+      "int": [
+        10.103,
+        28.219,
+        47.289,
+        66.359,
+        85.429,
+        94.964
+      ],
+      "wil": [
+        10.432,
+        30.018,
+        50.634,
+        71.25,
+        91.866,
+        102.174
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Fine Cooking",
+        "description": "Ultimate CHOP 'N DUNK! improved: If the ultimate defeats at least one enemy, Da Pan deals +30% Physical DMG for 15s. This effect cannot stack.",
+        "descriptionEn": "Ultimate CHOP 'N DUNK! improved: If the ultimate defeats at least one enemy, Da Pan deals +30% Physical DMG for 15s. This effect cannot stack."
+      },
+      {
+        "name": "Harmonized Flavors",
+        "description": "Talent Salty or Mild improved: Prep Ingredients buff duration +10s, max stacks +1.",
+        "descriptionEn": "Talent Salty or Mild improved: Prep Ingredients buff duration +10s, max stacks +1."
+      },
+      {
+        "name": "Model Employee",
+        "description": "Strength +15, Physical DMG Dealt +8%.",
+        "descriptionEn": "Strength +15, Physical DMG Dealt +8%."
+      },
+      {
+        "name": "Special Blend",
+        "description": "Ultimate CHOP 'N DUNK! improved: Ultimate Energy cost -15%.",
+        "descriptionEn": "Ultimate CHOP 'N DUNK! improved: Ultimate Energy cost -15%."
+      },
+      {
+        "name": "Fire it Up",
+        "description": "Battle skill FLIP DA WOK! improved: If the skill hits only one enemy, apply 1 more stack of Vulnerable on the target. This effect can only trigger once every 45s.",
+        "descriptionEn": "Battle skill FLIP DA WOK! improved: If the skill hits only one enemy, apply 1 more stack of Vulnerable on the target. This effect can only trigger once every 45s."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Triphasic Nanoflake",
+            "quantity": 20
+          },
+          {
+            "name": "Bloodcap",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "camille",
+    "name": "卡米尔",
+    "nameEn": "Camille",
+    "nameJa": "カミーユ",
+    "element": "heat",
+    "elementEn": "Heat",
+    "profession": "先锋",
+    "professionEn": "Vanguard",
+    "weaponType": "Polearm",
+    "rarity": 5,
+    "description": "塞什卡的守护者，擅长血液相关的源石技艺和驱邪术。",
+    "descriptionEn": "A Seš'qa Keeper specializing in blood-related Originium Arts and countering witchcraft.",
+    "descriptionJa": "セシュカの守護者。血に関連するオリジニウムアーツと魔術退治に特化。",
+    "faq": [
+      {
+        "question": "Is Camille good in Endfield?",
+        "questionZh": "卡米尔值得培养吗？",
+        "answer": "Camille is a A-tier Vanguard with solid performance in their role.",
+        "answerZh": "卡米尔是A级先锋，在其定位上表现稳健。"
+      }
+    ],
+    "relatedCharacters": [
+      "last-rite",
+      "ember",
+      "akekuri"
+    ],
+    "tierRank": "A",
+    "tierReason": "Good Heat Vanguard with blood-themed Arts mechanics.",
+    "tierReasonZh": "不错的烈热先锋，血系源石技艺。",
+    "skills": {
+      "normalAttack": {
+        "name": "血之赦免",
+        "nameEn": "Sanguine Absolution",
+        "description": "使用Polearm进行热能攻击，造成Heat伤害。",
+        "descriptionEn": "Performs attacks with Polearm, dealing Heat damage."
+      },
+      "skill": {
+        "name": "灼热驱邪",
+        "nameEn": "Blazing Exorcism",
+        "description": "释放强力Heat技能，对敌人造成大量Heat伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Heat skill, dealing massive Heat damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "心桩荆棘",
+        "nameEn": "Heartstake Thorn",
+        "description": "释放终极技，造成大量Heat伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Heat damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "血之倾盆",
+        "nameEn": "Sanguine Downpour",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "责任信标",
+      "bestWeaponEn": "beacon-of-duty",
+      "alternativeWeapons": [
+        "beacon-of-duty"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "heat伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Heat DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "heat元素队",
+        "nameEn": "Heat Element Team",
+        "members": [
+          "last-rite",
+          "ember",
+          "akekuri"
+        ],
+        "description": "以卡米尔为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Camille with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/camille.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": 500,
+      "hpMax": 5495,
+      "atk": 30,
+      "atkMax": 308,
+      "str": 18,
+      "strMax": 145,
+      "agl": 14,
+      "aglMax": 138,
+      "int": 10,
+      "intMax": 95,
+      "wil": 10,
+      "wilMax": 100,
+      "critRate": 0.05
+    }
+  },
+  {
+    "id": "arclight",
+    "name": "弧光",
+    "nameEn": "Arclight",
+    "nameJa": "アークライト",
+    "element": "electric",
+    "elementEn": "Electric",
+    "profession": "先锋",
+    "professionEn": "Vanguard",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "description": "汉纳比特回路的寻声者，消耗带电效果为队伍恢复大量SP。",
+    "descriptionEn": "A Songseeker from Hannabit Circuit who consumes Electrification to recover massive SP for the team.",
+    "descriptionJa": "ハナビット回路の探求者。帯電を消費してチームのSPを大量に回復。",
+    "faq": [
+      {
+        "question": "Is Arclight good in Endfield?",
+        "questionZh": "弧光值得培养吗？",
+        "answer": "Arclight is a A-tier Vanguard with solid performance in their role.",
+        "answerZh": "弧光是A级先锋，在其定位上表现稳健。"
+      }
+    ],
+    "relatedCharacters": [
+      "perlica",
+      "avywenna",
+      "pogranichnik"
+    ],
+    "tierRank": "A",
+    "tierReason": "Excellent Electric Vanguard with team SP recovery via Electrification.",
+    "tierReasonZh": "优秀的电击先锋，通过带电恢复团队SP。",
+    "skills": {
+      "normalAttack": {
+        "name": "搜寻与狩猎",
+        "nameEn": "Seek and Hunt",
+        "description": "使用Sword进行电击攻击，造成Electric伤害。",
+        "descriptionEn": "Performs attacks with Sword, dealing Electric damage."
+      },
+      "skill": {
+        "name": "暴风弧光",
+        "nameEn": "Tempestuous Arc",
+        "description": "释放强力Electric技能，对敌人造成大量Electric伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Electric skill, dealing massive Electric damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "雷鸣",
+        "nameEn": "Peal of Thunder",
+        "description": "释放终极技，造成大量Electric伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Electric damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "爆炸突袭",
+        "nameEn": "Exploding Blitz",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "卡尔科尼克斯",
+      "bestWeaponEn": "kalkonyx",
+      "alternativeWeapons": [
+        "aspirant"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "electric伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Electric DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "electric元素队",
+        "nameEn": "Electric Element Team",
+        "members": [
+          "perlica",
+          "avywenna",
+          "pogranichnik"
+        ],
+        "description": "以弧光为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Arclight with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/arclight.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        89.0,
+        151.0,
+        213.0,
+        275.0,
+        306.0
+      ],
+      "str": [
+        14.02,
+        33.968,
+        54.965,
+        75.962,
+        96.959,
+        107.458
+      ],
+      "agl": [
+        14.69,
+        42.603,
+        71.984,
+        101.365,
+        130.747,
+        145.438
+      ],
+      "int": [
+        12.474,
+        36.175,
+        61.123,
+        86.072,
+        111.02,
+        123.494
+      ],
+      "wil": [
+        10.103,
+        29.298,
+        49.505,
+        69.711,
+        89.917,
+        100.02
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Child of the Storm",
+        "description": "Battle skill Tempestuous Arc improved: After triggering additional effects, the skill recovers another 10 SP.",
+        "descriptionEn": "Battle skill Tempestuous Arc improved: After triggering additional effects, the skill recovers another 10 SP."
+      },
+      {
+        "name": "Speed Battler",
+        "description": "Agility +15, Intellect +15.",
+        "descriptionEn": "Agility +15, Intellect +15."
+      },
+      {
+        "name": "\"Hanna\"",
+        "description": "Talent Wildland Trekker improved: DMG Boost effect increased to 1.3 times the original.",
+        "descriptionEn": "Talent Wildland Trekker improved: DMG Boost effect increased to 1.3 times the original."
+      },
+      {
+        "name": "Aldertone's Teachings",
+        "description": "Ultimate Exploding Blitz improved: Ultimate Energy cost -15%.",
+        "descriptionEn": "Ultimate Exploding Blitz improved: Ultimate Energy cost -15%."
+      },
+      {
+        "name": "Servant of the Wildlands",
+        "description": "Talent Wildland Trekker improved: Trigger requirement is reduced to 2 time(s).",
+        "descriptionEn": "Talent Wildland Trekker improved: Trigger requirement is reduced to 2 time(s)."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Metadiastima Photoemission Tube",
+            "quantity": 20
+          },
+          {
+            "name": "Cosmagaric",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "alesh",
+    "name": "阿列什",
+    "nameEn": "Alesh",
+    "nameJa": "アレシュ",
+    "element": "cryo",
+    "elementEn": "Cryo",
+    "profession": "先锋",
+    "professionEn": "Vanguard",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "description": "塔拉二号联合工会的成员，前线的鱼贩和钓鱼教练。消耗冷冻附加恢复SP。",
+    "descriptionEn": "A former frontier underclass member turned fin seller from UWST. Consumes Cryo Infliction to recover SP.",
+    "descriptionJa": "タロスII統一労働組合のメンバー。元前線下層民で魚売り。フロスト蓄積を消費してSPを回復。",
+    "faq": [
+      {
+        "question": "Is Alesh good in Endfield?",
+        "questionZh": "阿列什值得培养吗？",
+        "answer": "Alesh is a B-tier Vanguard with decent performance in their role.",
+        "answerZh": "阿列什是B级先锋，在其定位上表现不错。"
+      }
+    ],
+    "relatedCharacters": [
+      "akekuri",
+      "arclight",
+      "pogranichnik"
+    ],
+    "tierRank": "B",
+    "tierReason": "Decent Cryo Vanguard with SP recovery via Cryo consumption.",
+    "tierReasonZh": "不错的冷冻先锋，通过冷冻消耗恢复SP。",
+    "skills": {
+      "normalAttack": {
+        "name": "基础抛竿",
+        "nameEn": "Basic Rod Casting",
+        "description": "使用Sword进行冷冻攻击，造成Cryo伤害。",
+        "descriptionEn": "Performs attacks with Sword, dealing Cryo damage."
+      },
+      "skill": {
+        "name": "异规诱饵",
+        "nameEn": "Unconventional Lure",
+        "description": "释放强力Cryo技能，对敌人造成大量Cryo伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Cryo skill, dealing massive Cryo damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "螺旋钓鱼",
+        "nameEn": "Auger Angling",
+        "description": "释放终极技，造成大量Cryo伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Cryo damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "大物上钩！",
+        "nameEn": "One Monster Catch!",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "卡尔科尼克斯",
+      "bestWeaponEn": "kalkonyx",
+      "alternativeWeapons": [
+        "aspirant"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "cryo伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Cryo DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "cryo元素队",
+        "nameEn": "Cryo Element Team",
+        "members": [
+          "akekuri",
+          "arclight",
+          "pogranichnik"
+        ],
+        "description": "以阿列什为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Alesh with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/alesh.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        90.0,
+        152.0,
+        215.0,
+        277.0,
+        309.0
+      ],
+      "str": [
+        20.103,
+        49.556,
+        80.56,
+        111.563,
+        142.567,
+        158.069
+      ],
+      "agl": [
+        9.484,
+        27.936,
+        47.36,
+        66.783,
+        86.207,
+        95.919
+      ],
+      "int": [
+        13.608,
+        37.564,
+        62.781,
+        87.998,
+        113.215,
+        125.823
+      ],
+      "wil": [
+        10.824,
+        27.722,
+        45.508,
+        63.295,
+        81.082,
+        89.975
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Super Salty Comeback",
+        "description": "Battle skill Unconventional Lure improved: SP Recovery grants an additional 10 SP.",
+        "descriptionEn": "Battle skill Unconventional Lure improved: SP Recovery grants an additional 10 SP."
+      },
+      {
+        "name": "Calm and Tranquil",
+        "description": "Strength +15, Intellect +15.",
+        "descriptionEn": "Strength +15, Intellect +15."
+      },
+      {
+        "name": "May the Willing Bite",
+        "description": "Combo skill Auger Angling improved: After catching a Rare Fin, the entire team gains ATK +15% for 10s. This effect cannot stack.",
+        "descriptionEn": "Combo skill Auger Angling improved: After catching a Rare Fin, the entire team gains ATK +15% for 10s. This effect cannot stack."
+      },
+      {
+        "name": "Insane Angling Set",
+        "description": "Ultimate One Monster Catch! improved: Ultimate Energy cost -15%.",
+        "descriptionEn": "Ultimate One Monster Catch! improved: Ultimate Energy cost -15%."
+      },
+      {
+        "name": "Mega Lunker Rumors",
+        "description": "Ultimate One Monster Catch! improved: Hitting a target below 50% HP increases the DMG Multiplier to 1.5 times the original.",
+        "descriptionEn": "Ultimate One Monster Catch! improved: Hitting a target below 50% HP increases the DMG Multiplier to 1.5 times the original."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Metadiastima Photoemission Tube",
+            "quantity": 20
+          },
+          {
+            "name": "Bloodcap",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "estella",
+    "name": "埃斯特拉",
+    "nameEn": "Estella",
+    "nameJa": "エステラ",
+    "element": "cryo",
+    "elementEn": "Cryo",
+    "profession": "近卫",
+    "professionEn": "Guard",
+    "weaponType": "Polearm",
+    "rarity": 4,
+    "description": "终末地产业的四星冷冻近卫干员，使用长枪进行冷冻元素近战攻击。",
+    "descriptionEn": "A 4-star Cryo Guard at Endfield Industries, wielding a polearm for Cryo melee attacks.",
+    "descriptionJa": "終末地産業の4星フロスト近衛。長槍でフロスト近接攻撃を行う。",
+    "faq": [
+      {
+        "question": "Is Estella good in Endfield?",
+        "questionZh": "埃斯特拉值得培养吗？",
+        "answer": "Estella is a B-tier Guard with decent performance in their role.",
+        "answerZh": "埃斯特拉是B级近卫，在其定位上表现不错。"
+      }
+    ],
+    "relatedCharacters": [
+      "catcher",
+      "antal",
+      "akekuri"
+    ],
+    "tierRank": "B",
+    "tierReason": "Decent 4-star Cryo Guard for early game.",
+    "tierReasonZh": "不错的四星冷冻近卫，前期实用。",
+    "skills": {
+      "normalAttack": {
+        "name": "冰枪",
+        "nameEn": "Ice Lance",
+        "description": "使用Polearm进行冷冻攻击，造成Cryo伤害。",
+        "descriptionEn": "Performs attacks with Polearm, dealing Cryo damage."
+      },
+      "skill": {
+        "name": "霜寒冲",
+        "nameEn": "Frost Rush",
+        "description": "释放强力Cryo技能，对敌人造成大量Cryo伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Cryo skill, dealing massive Cryo damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "冰冻冲击",
+        "nameEn": "Frozen Impact",
+        "description": "释放终极技，造成大量Cryo伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Cryo damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "冬日守卫",
+        "nameEn": "Winter Guard",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "责任信标",
+      "bestWeaponEn": "beacon-of-duty",
+      "alternativeWeapons": [
+        "beacon-of-duty"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "cryo伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Cryo DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "cryo元素队",
+        "nameEn": "Cryo Element Team",
+        "members": [
+          "catcher",
+          "antal",
+          "akekuri"
+        ],
+        "description": "以埃斯特拉为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Estella with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/estella.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        90.0,
+        153.0,
+        217.0,
+        280.0,
+        312.0
+      ],
+      "str": [
+        13.041,
+        32.595,
+        53.179,
+        73.762,
+        94.346,
+        104.638
+      ],
+      "agl": [
+        8.762,
+        27.786,
+        47.812,
+        67.837,
+        87.862,
+        97.875
+      ],
+      "int": [
+        14.123,
+        34.698,
+        56.356,
+        78.014,
+        99.672,
+        110.501
+      ],
+      "wil": [
+        15.0,
+        44.147,
+        74.829,
+        105.51,
+        136.192,
+        151.533
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Habitual Delay",
+        "description": "Combo skill Distortion improved: Physical Susceptibility duration +3s.",
+        "descriptionEn": "Combo skill Distortion improved: Physical Susceptibility duration +3s."
+      },
+      {
+        "name": "Lowered Expectations",
+        "description": "Ultimate Tremolo improved: Ultimate Energy cost -10%.",
+        "descriptionEn": "Ultimate Tremolo improved: Ultimate Energy cost -10%."
+      },
+      {
+        "name": "Delayed Work",
+        "description": "Battle skill Onomatopoeia improved: Freezing sound wave range +50% and DMG Dealt +40% to the first enemy hit.",
+        "descriptionEn": "Battle skill Onomatopoeia improved: Freezing sound wave range +50% and DMG Dealt +40% to the first enemy hit."
+      },
+      {
+        "name": "Life Over Mission",
+        "description": "Will +10, Strength +10.",
+        "descriptionEn": "Will +10, Strength +10."
+      },
+      {
+        "name": "Survival is a Win",
+        "description": "After applying Solidification to an enemy, Estella gains 5 Ultimate Energy. Effect can only trigger once every 1s.",
+        "descriptionEn": "After applying Solidification to an enemy, Estella gains 5 Ultimate Energy. Effect can only trigger once every 1s."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Quadrant Fitting Fluid",
+            "quantity": 20
+          },
+          {
+            "name": "Cosmagaric",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "catcher",
+    "name": "卡切尔",
+    "nameEn": "Catcher",
+    "nameJa": "キャッチャー",
+    "element": "physical",
+    "elementEn": "Physical",
+    "profession": "重装",
+    "professionEn": "Defender",
+    "weaponType": "Great Sword",
+    "rarity": 4,
+    "description": "作战小队Z7的成员，为友方提供保护并削弱敌人。",
+    "descriptionEn": "Operations Team Z7 member who provides Protection to allies and Weaken to enemies.",
+    "descriptionJa": "作戦チームZ7のメンバー。味方に保護、敵に弱体を付与。",
+    "faq": [
+      {
+        "question": "Is Catcher good in Endfield?",
+        "questionZh": "卡切尔值得培养吗？",
+        "answer": "Catcher is a B-tier Defender with decent performance in their role.",
+        "answerZh": "卡切尔是B级重装，在其定位上表现不错。"
+      }
+    ],
+    "relatedCharacters": [
+      "estella",
+      "antal",
+      "fluorite"
+    ],
+    "tierRank": "B",
+    "tierReason": "Solid 4-star Physical Defender with team Protection.",
+    "tierReasonZh": "稳健的四星物理重装，团队保护。",
+    "skills": {
+      "normalAttack": {
+        "name": "基础战术",
+        "nameEn": "Basic Tactics",
+        "description": "使用Great Sword进行物理攻击，造成Physical伤害。",
+        "descriptionEn": "Performs attacks with Great Sword, dealing Physical damage."
+      },
+      "skill": {
+        "name": "刚性阻断",
+        "nameEn": "Rigid Interdiction",
+        "description": "释放强力Physical技能，对敌人造成大量Physical伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Physical skill, dealing massive Physical damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "及时压制",
+        "nameEn": "Timely Suppression",
+        "description": "释放终极技，造成大量Physical伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Physical damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "教科书突击",
+        "nameEn": "Textbook Assault",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "掷骰",
+      "bestWeaponEn": "cast-die",
+      "alternativeWeapons": [
+        "chivalric-virtues"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "physical伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Physical DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "physical元素队",
+        "nameEn": "Physical Element Team",
+        "members": [
+          "estella",
+          "antal",
+          "fluorite"
+        ],
+        "description": "以卡切尔为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Catcher with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/catcher.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        88.0,
+        148.0,
+        209.0,
+        270.0,
+        300.0
+      ],
+      "str": [
+        21.649,
+        54.688,
+        89.466,
+        124.244,
+        159.022,
+        176.411
+      ],
+      "agl": [
+        9.793,
+        28.402,
+        47.989,
+        67.577,
+        87.164,
+        96.958
+      ],
+      "int": [
+        8.762,
+        25.412,
+        42.938,
+        60.463,
+        77.989,
+        86.752
+      ],
+      "wil": [
+        11.453,
+        31.79,
+        53.198,
+        74.605,
+        96.013,
+        106.717
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Multi-layered Readiness",
+        "description": "Battle skill Rigid Interdiction and ultimate Textbook Assault improved: After hitting the enemy, deals another strike that deals [300 + DEF×5.0] of Physical DMG.",
+        "descriptionEn": "Battle skill Rigid Interdiction and ultimate Textbook Assault improved: After hitting the enemy, deals another strike that deals [300 + DEF×5.0] of Physical DMG."
+      },
+      {
+        "name": "Bonus Spec Training",
+        "description": "DEF +20, Will +10.",
+        "descriptionEn": "DEF +20, Will +10."
+      },
+      {
+        "name": "Unwavering Post",
+        "description": "Combo skill Timely Suppression improved: Shield duration +5s.",
+        "descriptionEn": "Combo skill Timely Suppression improved: Shield duration +5s."
+      },
+      {
+        "name": "Compensated Suffering",
+        "description": "Ultimate Textbook Assault improved: Ultimate Energy cost -10%.",
+        "descriptionEn": "Ultimate Textbook Assault improved: Ultimate Energy cost -10%."
+      },
+      {
+        "name": "Choice Without Regrets",
+        "description": "Battle skill Rigid Interdiction improved: Hitting an enemy while the Shield is active SP Return 10 SP.",
+        "descriptionEn": "Battle skill Rigid Interdiction improved: Hitting an enemy while the Shield is active SP Return 10 SP."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Tachyon Screening Lattice",
+            "quantity": 20
+          },
+          {
+            "name": "Bloodcap",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "antal",
+    "name": "安塔尔",
+    "nameEn": "Antal",
+    "nameJa": "アンタル",
+    "element": "electric",
+    "elementEn": "Electric",
+    "profession": "辅助",
+    "professionEn": "Supporter",
+    "weaponType": "Arts Unit",
+    "rarity": 4,
+    "description": "作战小队Z7的源石技术顾问，对目标施加减益并为队友提供增幅。",
+    "descriptionEn": "An Originium technology consultant on Op Team Z7 who debuffs targets and provides Amp to teammates.",
+    "descriptionJa": "作戦チームZ7のオリジニウム技術顧問。敵にデバフをかけ、味方にアンプを提供。",
+    "faq": [
+      {
+        "question": "Is Antal good in Endfield?",
+        "questionZh": "安塔尔值得培养吗？",
+        "answer": "Antal is a B-tier Supporter with decent performance in their role.",
+        "answerZh": "安塔尔是B级辅助，在其定位上表现不错。"
+      }
+    ],
+    "relatedCharacters": [
+      "catcher",
+      "perlica",
+      "fluorite"
+    ],
+    "tierRank": "B",
+    "tierReason": "Decent 4-star Electric Supporter with debuff and Amp.",
+    "tierReasonZh": "不错的四星电击辅助，减益和增幅。",
+    "skills": {
+      "normalAttack": {
+        "name": "交流电",
+        "nameEn": "Exchange Current",
+        "description": "使用Arts Unit进行电击攻击，造成Electric伤害。",
+        "descriptionEn": "Performs attacks with Arts Unit, dealing Electric damage."
+      },
+      "skill": {
+        "name": "指定研究对象",
+        "nameEn": "Specified Research Subject",
+        "description": "释放强力Electric技能，对敌人造成大量Electric伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Electric skill, dealing massive Electric damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "EMP试验场",
+        "nameEn": "EMP Test Site",
+        "description": "释放终极技，造成大量Electric伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Electric damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "超频时刻",
+        "nameEn": "Overclocked Moment",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "奥罗尼克斯",
+      "bestWeaponEn": "auronyx",
+      "alternativeWeapons": [
+        "exemplar"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "electric伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Electric DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "electric元素队",
+        "nameEn": "Electric Element Team",
+        "members": [
+          "catcher",
+          "perlica",
+          "fluorite"
+        ],
+        "description": "以安塔尔为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Antal with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/antal.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        87.0,
+        147.0,
+        207.0,
+        267.0,
+        297.0
+      ],
+      "str": [
+        15.876,
+        40.104,
+        65.608,
+        91.112,
+        116.616,
+        129.368
+      ],
+      "agl": [
+        9.484,
+        25.994,
+        43.372,
+        60.751,
+        78.129,
+        86.818
+      ],
+      "int": [
+        15.463,
+        47.435,
+        81.09,
+        114.744,
+        148.399,
+        165.226
+      ],
+      "wil": [
+        9.793,
+        25.379,
+        41.786,
+        58.192,
+        74.599,
+        82.802
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Arts Talent",
+        "description": "Ultimate Overclocked Moment improved: Electric Amp and Heat Amp effects are increased to 1.1 times the original.",
+        "descriptionEn": "Ultimate Overclocked Moment improved: Electric Amp and Heat Amp effects are increased to 1.1 times the original."
+      },
+      {
+        "name": "Improved Automation",
+        "description": "Ultimate Overclocked Moment improved: Ultimate Energy cost -10%.",
+        "descriptionEn": "Ultimate Overclocked Moment improved: Ultimate Energy cost -10%."
+      },
+      {
+        "name": "Applied Originium Theory",
+        "description": "When an enemy with an active Focus debuff is defeated, SP Return 15 SP.",
+        "descriptionEn": "When an enemy with an active Focus debuff is defeated, SP Return 15 SP."
+      },
+      {
+        "name": "Granny's Reminder",
+        "description": "Intellect +10, Max HP +10%.",
+        "descriptionEn": "Intellect +10, Max HP +10%."
+      },
+      {
+        "name": "High Specs Tech Tester",
+        "description": "Applying Focus on the same target for 20s increases Electric Susceptibility and Heat Susceptibility effects by 4%.",
+        "descriptionEn": "Applying Focus on the same target for 20s increases Electric Susceptibility and Heat Susceptibility effects by 4%."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Metadiastima Photoemission Tube",
+            "quantity": 20
+          },
+          {
+            "name": "Cosmagaric",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fluorite",
+    "name": "萤石",
+    "nameEn": "Fluorite",
+    "nameJa": "フローライト",
+    "element": "nature",
+    "elementEn": "Nature",
+    "profession": "术师",
+    "professionEn": "Caster",
+    "weaponType": "Handcannon",
+    "rarity": 4,
+    "description": "作战小队Z7的前线侦察员，利用自然附加和简易炸药扰乱敌人阵线。",
+    "descriptionEn": "An Op Z7 skirmisher responsible for scouting and disrupting enemy lines using Nature Infliction and Improvised Explosives.",
+    "descriptionJa": "作戦チームZ7の前線偵察員。自然蓄積と即席爆弾で敵陣を撹乱。",
+    "faq": [
+      {
+        "question": "Is Fluorite good in Endfield?",
+        "questionZh": "萤石值得培养吗？",
+        "answer": "Fluorite is a B-tier Caster with decent performance in their role.",
+        "answerZh": "萤石是B级术师，在其定位上表现不错。"
+      }
+    ],
+    "relatedCharacters": [
+      "tangtang",
+      "catcher",
+      "antal"
+    ],
+    "tierRank": "B",
+    "tierReason": "Decent 4-star Nature Caster with scouting and disruption.",
+    "tierReasonZh": "不错的四星自然术师，侦察和扰乱。",
+    "skills": {
+      "normalAttack": {
+        "name": "招牌枪道",
+        "nameEn": "Signature Gun Kata",
+        "description": "使用Handcannon进行自然攻击，造成Nature伤害。",
+        "descriptionEn": "Performs attacks with Handcannon, dealing Nature damage."
+      },
+      "skill": {
+        "name": "小惊喜",
+        "nameEn": "Tiny Surprise",
+        "description": "释放强力Nature技能，对敌人造成大量Nature伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Nature skill, dealing massive Nature damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "免费赠送",
+        "nameEn": "Free Giveaway",
+        "description": "释放终极技，造成大量Nature伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Nature damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "顶级恶作剧",
+        "nameEn": "Apex Prankster",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "重骰",
+      "bestWeaponEn": "heavy-cast-die",
+      "alternativeWeapons": [
+        "darhoff-7"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "nature伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Nature DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "nature元素队",
+        "nameEn": "Nature Element Team",
+        "members": [
+          "tangtang",
+          "catcher",
+          "antal"
+        ],
+        "description": "以萤石为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Fluorite with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/fluorite.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        88.0,
+        150.0,
+        211.0,
+        272.0,
+        303.0
+      ],
+      "str": [
+        14.02,
+        30.298,
+        47.432,
+        64.567,
+        81.701,
+        90.268
+      ],
+      "agl": [
+        14.69,
+        47.46,
+        81.954,
+        116.448,
+        150.942,
+        168.189
+      ],
+      "int": [
+        12.474,
+        34.275,
+        57.224,
+        80.173,
+        103.122,
+        114.596
+      ],
+      "wil": [
+        10.103,
+        27.572,
+        45.96,
+        64.348,
+        82.737,
+        91.931
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Ten-Finger Smith",
+        "description": "Agility +10, Intellect +10.",
+        "descriptionEn": "Agility +10, Intellect +10."
+      },
+      {
+        "name": "Mind Reading Technique",
+        "description": "Talent Unpredictable improved: Chance to ignore Arts DMG +10%.",
+        "descriptionEn": "Talent Unpredictable improved: Chance to ignore Arts DMG +10%."
+      },
+      {
+        "name": "Triple Surprise",
+        "description": "Battle skill Tiny Surprise improved: After Improvised Explosive explodes, the Slow effect is applied to all enemies hit and lasts 6s.",
+        "descriptionEn": "Battle skill Tiny Surprise improved: After Improvised Explosive explodes, the Slow effect is applied to all enemies hit and lasts 6s."
+      },
+      {
+        "name": "Prank Master",
+        "description": "Ultimate Apex Prankster improved: Ultimate Energy cost -10%.",
+        "descriptionEn": "Ultimate Apex Prankster improved: Ultimate Energy cost -10%."
+      },
+      {
+        "name": "Craver of Chaos",
+        "description": "Combo skill Free Giveaway improved: Whenever Cryo Infliction or Nature Infliction is applied to the enemy, cooldown is shortened by 1s. Effect can only trigger once every 1s.",
+        "descriptionEn": "Combo skill Free Giveaway improved: Whenever Cryo Infliction or Nature Infliction is applied to the enemy, cooldown is shortened by 1s. Effect can only trigger once every 1s."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "Triphasic Nanoflake",
+            "quantity": 20
+          },
+          {
+            "name": "Cosmagaric",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "akekuri",
+    "name": "阿克库里",
+    "nameEn": "Akekuri",
+    "nameJa": "アケクリ",
+    "element": "heat",
+    "elementEn": "Heat",
+    "profession": "先锋",
+    "professionEn": "Vanguard",
+    "weaponType": "Sword",
+    "rarity": 4,
+    "description": "作战小队Z7队长，通过连携技和终极技恢复SP。",
+    "descriptionEn": "Captain of Operations Team Z7 who recovers SP with combo skills and ultimate.",
+    "descriptionJa": "作戦チームZ7隊長。コンボスキルと必殺技でSPを回復。",
+    "faq": [
+      {
+        "question": "Is Akekuri good in Endfield?",
+        "questionZh": "阿克库里值得培养吗？",
+        "answer": "Akekuri is a B-tier Vanguard with decent performance in their role.",
+        "answerZh": "阿克库里是B级先锋，在其定位上表现不错。"
+      }
+    ],
+    "relatedCharacters": [
+      "catcher",
+      "antal",
+      "estella"
+    ],
+    "tierRank": "B",
+    "tierReason": "Decent 4-star Heat Vanguard with SP recovery.",
+    "tierReasonZh": "不错的四星烈热先锋，SP恢复。",
+    "skills": {
+      "normalAttack": {
+        "name": "志向之剑",
+        "nameEn": "Sword of Aspiration",
+        "description": "使用Sword进行热能攻击，造成Heat伤害。",
+        "descriptionEn": "Performs attacks with Sword, dealing Heat damage."
+      },
+      "skill": {
+        "name": "热情爆发",
+        "nameEn": "Burst of Passion",
+        "description": "释放强力Heat技能，对敌人造成大量Heat伤害并施加特殊效果。",
+        "descriptionEn": "Unleashes a powerful Heat skill, dealing massive Heat damage and applying special effects.",
+        "cooldown": "10s",
+        "cost": "30 DP"
+      },
+      "ultimate": {
+        "name": "闪冲",
+        "nameEn": "Flash and Dash",
+        "description": "释放终极技，造成大量Heat伤害。",
+        "descriptionEn": "Unleashes ultimate, dealing massive Heat damage.",
+        "cost": "80 DP"
+      },
+      "passive": {
+        "name": "小队！跟我来！",
+        "nameEn": "SQUAD! ON ME!",
+        "description": "在场时提供被动增益效果。",
+        "descriptionEn": "Provides passive bonuses while on the field."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "卡尔科尼克斯",
+      "bestWeaponEn": "kalkonyx",
+      "alternativeWeapons": [
+        "aspirant"
+      ],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "heat伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Heat DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "teamComps": [
+      {
+        "name": "heat元素队",
+        "nameEn": "Heat Element Team",
+        "members": [
+          "catcher",
+          "antal",
+          "estella"
+        ],
+        "description": "以阿克库里为核心，搭配同属性或互补角色。",
+        "descriptionEn": "Centered on Akekuri with complementary operators."
+      }
+    ],
+    "image": "/images/endfield/characters/akekuri.webp",
+    "availableAtLaunch": true,
+    "status": "available",
+    "stats": {
+      "hp": [
+        500.0,
+        1566.0,
+        2689.0,
+        3811.0,
+        4934.0,
+        5495.0
+      ],
+      "atk": [
+        30.0,
+        92.0,
+        157.0,
+        222.0,
+        287.0,
+        319.0
+      ],
+      "str": [
+        13.402,
+        34.116,
+        55.922,
+        77.727,
+        99.532,
+        110.435
+      ],
+      "agl": [
+        15.154,
+        42.005,
+        70.269,
+        98.534,
+        126.798,
+        140.93
+      ],
+      "int": [
+        12.474,
+        32.613,
+        53.812,
+        75.011,
+        96.211,
+        106.81
+      ],
+      "wil": [
+        9.278,
+        30.361,
+        52.553,
+        74.745,
+        96.937,
+        108.034
+      ],
+      "critRate": 0.05,
+      "levels": [
+        "Lv.1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E4 Max"
+      ]
+    },
+    "potentials": [
+      {
+        "name": "Positive Feedback",
+        "description": "After recovering SP with skills, Akekuri gains ATK +10% for 10s. This effect can reach 5 stacks.",
+        "descriptionEn": "After recovering SP with skills, Akekuri gains ATK +10% for 10s. This effect can reach 5 stacks."
+      },
+      {
+        "name": "Passionate Idealist",
+        "description": "Agility +10, Intellect +10.",
+        "descriptionEn": "Agility +10, Intellect +10."
+      },
+      {
+        "name": "Committed Team Player",
+        "description": "Ultimate SQUAD! ON ME! improved: While ultimate is active, entire team gains ATK +10%.",
+        "descriptionEn": "Ultimate SQUAD! ON ME! improved: While ultimate is active, entire team gains ATK +10%."
+      },
+      {
+        "name": "Super Perfect Status",
+        "description": "Ultimate SQUAD! ON ME! improved: Ultimate Energy cost -10%.",
+        "descriptionEn": "Ultimate SQUAD! ON ME! improved: Ultimate Energy cost -10%."
+      },
+      {
+        "name": "Tempo of Awareness",
+        "description": "Talent Staying in the Zone improved: Even when the ultimate SQUAD! ON ME! ends, the Link buff persists for 5s.",
+        "descriptionEn": "Talent Staying in the Zone improved: Even when the ultimate SQUAD! ON ME! ends, the Link buff persists for 5s."
+      }
+    ],
+    "eliteCosts": [
+      {
+        "elite": 1,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 8
+          },
+          {
+            "name": "Pink Bolete",
+            "quantity": 3
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 1600
+          }
+        ]
+      },
+      {
+        "elite": 2,
+        "materials": [
+          {
+            "name": "Protodisk",
+            "quantity": 25
+          },
+          {
+            "name": "Red Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 6500
+          }
+        ]
+      },
+      {
+        "elite": 3,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 24
+          },
+          {
+            "name": "Ruby Bolete",
+            "quantity": 5
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 18000
+          }
+        ]
+      },
+      {
+        "elite": 4,
+        "materials": [
+          {
+            "name": "Protoset",
+            "quantity": 36
+          },
+          {
+            "name": "D96 Steel Sample 4",
+            "quantity": 20
+          },
+          {
+            "name": "Cosmagaric",
+            "quantity": 8
+          },
+          {
+            "name": "T-Creds",
+            "quantity": 100000
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,8 +1,8 @@
 import type { SupportedLocale, Item } from '@gachia/core';
 import type { WuWaMaterial } from './types';
+import rawMaterials from './raw-materials.json';
 import { localeStr } from './types';
 import { IMAGE_BASE } from '../../image-base';
-import rawMaterials from './raw-materials.json';
 
 export const wuwaMaterials: WuWaMaterial[] = rawMaterials as unknown as WuWaMaterial[];
 

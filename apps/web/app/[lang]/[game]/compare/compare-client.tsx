@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, type ReactNode } from 'react';
 import { GAMES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
+import { NextStepStrip, type NextStepLink } from '@/components/wiki/next-step-strip';
 import {
   genshinCharacters,
   getGenshinCharacterName,
@@ -146,6 +147,59 @@ function t(locale: SupportedLocale, zh: string, en: string, ja?: string) {
   return locale === 'zh' ? zh : locale === 'ja' ? (ja ?? en) : en;
 }
 
+function getCompareNextSteps(gameId: GameId, locale: SupportedLocale): NextStepLink[] {
+  const titles = {
+    characters: { zh: '看角色图鉴', en: 'Browse Characters', ja: 'キャラ図鑑を見る' },
+    build: { zh: '看配装推荐', en: 'Open Build Recommender', ja: 'ビルドを見る' },
+    version: { zh: '看版本更新', en: 'Check Version Updates', ja: '更新情報を見る' },
+  } as const;
+
+  const descriptions = {
+    characters: {
+      zh: '先确认角色定位和养成基础，再回来对比更容易看出差异。',
+      en: 'Review character roles and basics first, then compare with more context.',
+      ja: 'まず役割と基礎情報を確認すると、比較しやすくなります。',
+    },
+    build: {
+      zh: '如果你已经选好角色，这里可以直接看对应配装和替代方案。',
+      en: 'If you already picked a character, jump straight to the recommended build and backups.',
+      ja: 'キャラが決まっているなら、推奨ビルドと代替案へ進めます。',
+    },
+    version: {
+      zh: '想看当前版本更适合谁、谁被加强了，可以从这里继续。',
+      en: 'For current patch winners, buffs, and meta shifts, this is the next stop.',
+      ja: '現行バージョンの強化対象や環境変化を見るならここです。',
+    },
+  } as const;
+
+  return [
+    {
+      href: `/${gameId}/characters`,
+      title: titles.characters,
+      description: descriptions.characters,
+    },
+    {
+      href: `/${gameId}/build`,
+      title: titles.build,
+      description: descriptions.build,
+    },
+    {
+      href: `/${gameId}/version`,
+      title: titles.version,
+      description: descriptions.version,
+    },
+  ];
+}
+
+function withNextSteps(content: ReactNode, locale: SupportedLocale, links: NextStepLink[]) {
+  return (
+    <>
+      {content}
+      <NextStepStrip locale={locale} links={links} />
+    </>
+  );
+}
+
 // --- Resolver helpers ---
 
 function resolveWeapon(build: { bestWeaponEn: string }): GenshinWeapon | null {
@@ -161,13 +215,13 @@ function resolveArtifact(build: { bestArtifactSetEn: string }) {
 // =====================================================================
 
 export function CompareClient({ gameId, locale }: { gameId: GameId; locale: SupportedLocale }) {
-  if (gameId === 'genshin') return <GenshinCompare locale={locale} />;
-  if (gameId === 'starrail') return <StarRailCompare locale={locale} />;
-  if (gameId === 'wuwa') return <WuWaCompare locale={locale} />;
-  if (gameId === 'nte') return <NteCompare locale={locale} />;
-  if (gameId === 'zzz') return <ZzzCompare locale={locale} />;
-  if (gameId === 'guihuan') return <GuihunCompare locale={locale} />;
-  if (gameId === 'endfield') return <EndfieldCompare locale={locale} />;
+  if (gameId === 'genshin') return withNextSteps(<GenshinCompare locale={locale} />, locale, getCompareNextSteps(gameId, locale));
+  if (gameId === 'starrail') return withNextSteps(<StarRailCompare locale={locale} />, locale, getCompareNextSteps(gameId, locale));
+  if (gameId === 'wuwa') return withNextSteps(<WuWaCompare locale={locale} />, locale, getCompareNextSteps(gameId, locale));
+  if (gameId === 'nte') return withNextSteps(<NteCompare locale={locale} />, locale, getCompareNextSteps(gameId, locale));
+  if (gameId === 'zzz') return withNextSteps(<ZzzCompare locale={locale} />, locale, getCompareNextSteps(gameId, locale));
+  if (gameId === 'guihuan') return withNextSteps(<GuihunCompare locale={locale} />, locale, getCompareNextSteps(gameId, locale));
+  if (gameId === 'endfield') return withNextSteps(<EndfieldCompare locale={locale} />, locale, getCompareNextSteps(gameId, locale));
   return <ComingSoon locale={locale} />;
 }
 

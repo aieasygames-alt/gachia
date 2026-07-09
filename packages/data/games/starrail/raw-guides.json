@@ -1,5 +1,75 @@
 [
   {
+    "id": "v4-4-preview-guide",
+    "title": "崩坏星穹铁道4.4版本前瞻 — 姬子联动与新角色爆料",
+    "titleEn": "HSR v4.4 Preview — Himeko Collab & New Character Leaks",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "summary": "星铁v4.4版本前瞻信息：姬子联动卡池预告、4.5新角色立绘曝光、4.3星琼收入统计与后续活动福利盘点。",
+    "summaryEn": "HSR v4.4 preview: Himeko collaboration banner teaser, v4.5 new character reveals, v4.3 Stellar Jade income report and upcoming event rewards.",
+    "content": "## 崩坏星穹铁道v4.4版本前瞻\n\nv4.3版本正在运行，v4.4前瞻直播即将开启。以下是已知的爆料和前瞻信息。\n\n### 一、v4.4已知信息\n\n#### 姬子联动卡池\n- v4.4预计推出姬子联动内容\n- 联动角色和光锥详情待前瞻直播确认\n\n#### 4.5新角色立绘已曝光\n- 官方已放出v4.5新角色立绘\n- 具体属性和命途待公布\n\n### 二、v4.3星琼收入统计\n\n| 来源 | 星琼数量 |\n|------|----------|\n| 日常活跃 | ~2520 |\n| 版本活动 | ~1000-1500 |\n| 深渊/混沌回忆 | ~800 |\n| 位面分裂活动 | 额外遗器收益 |\n| 版本更新补偿 | 600 |\n| 总计（免费） | ~5000-6000（约30-37抽） |\n\n### 三、后续活动盘点\n\n- 位面分裂活动（6月16日起）— 双倍遗器掉落\n- 新差分宇宙赛季 — DoT构筑加强\n- 垃圾屋推荐兑换表更新 — v4.3最新\n- 万神屋/琳琅屋觉醒装备统计\n\n### 四、抽卡规划建议\n\n1. **v4.3剩余**: 如果已有千冶·刃，建议为昔涟复刻储备星琼\n2. **v4.4规划**: 姬子联动值得提前准备，联动角色可能不下架复刻\n3. **长期**: v4.5新角色立绘已出，建议至少保留一个大保底\n\n### 五、关键时间节点\n\n- v4.3位面分裂: 6月16日起\n- v4.4前瞻直播: 预计6月下旬\n- v4.4上线: 预计7月中旬",
+    "contentEn": "## HSR v4.4 Version Preview\n\nv4.3 is currently running, with the v4.4 livestream coming soon. Here are known leaks and preview info.\n\n### 1. Known v4.4 Information\n\n#### Himeko Collaboration Banner\n- v4.4 expected to feature Himeko collaboration content\n- Details TBD pending livestream\n\n#### v4.5 New Character Reveals\n- Official v4.5 character art has been released\n- Element and Path TBD\n\n### 2. v4.3 Stellar Jade Income\n\n| Source | Jade Amount |\n|--------|-------------|\n| Daily Activity | ~2520 |\n| Version Events | ~1000-1500 |\n| Abyss/Chaos Memory | ~800 |\n| Update Compensation | 600 |\n| Total (F2P) | ~5000-6000 (~30-37 pulls) |\n\n### 3. Upcoming Events\n\n- Plane Split (from June 16) — Double relic drops\n- New Differential Universe season — DoT build enhanced\n- Trash Shop exchange recommendations updated\n\n### 4. Pull Planning\n\n1. **v4.3 remaining**: Save for Xilian rerun if you have Mortenax Blade\n2. **v4.4 planning**: Himeko collab may be limited — prepare in advance\n3. **Long-term**: v4.5 new characters revealed — keep at least one pity ready",
+    "tags": [
+      "v4.4",
+      "前瞻",
+      "姬子",
+      "联动",
+      "版本",
+      "爆料",
+      "星琼"
+    ],
+    "faq": [
+      {
+        "question": "When will HSR v4.4 release?",
+        "questionZh": "星铁v4.4什么时候上线？",
+        "answer": "HSR v4.4 is expected to release in mid-July 2026. The livestream typically airs about 2 weeks before launch. Exact date pending official announcement.",
+        "answerZh": "星铁v4.4预计2026年7月中旬上线，前瞻直播通常在上线前2周左右。具体日期待官方公布。"
+      },
+      {
+        "question": "Is the Himeko collaboration limited?",
+        "questionZh": "姬子联动是限定吗？",
+        "answer": "Based on current information, the v4.4 Himeko collaboration is expected to be limited content. Based on the Fate collaboration experience, collab characters may not receive standard reruns, so it's recommended to save Stellar Jades in advance.",
+        "answerZh": "根据目前信息，v4.4姬子联动预计为限定内容。参考Fate联动经验，联动角色可能不会常规复刻，建议提前储备星琼。"
+      }
+    ]
+  },
+  {
+    "id": "v4-3-version-guide",
+    "title": "崩坏星穹铁道4.3版本指南 — 千冶·刃与Fate联动第二弹",
+    "titleEn": "Honkai Star Rail v4.3 Guide — Mortenax Blade & Fate Collab Wave 2",
+    "category": "version",
+    "categoryZh": "版本",
+    "categoryEn": "Version",
+    "summary": "星铁v4.3「沉于生者的忘川」完整攻略：千冶·刃（火虚无主C）、昔涟复刻、记忆体系养成速查、差分宇宙DoT构筑、位面分裂双倍活动、Fate联动第二弹。",
+    "summaryEn": "HSR v4.3 'Sunken in the Lethe of the Living' complete guide: Mortenax Blade (Fire Nihility DPS), Xilian rerun, Memory system build guide, Differential Universe DoT build, Plane Split double drops, Fate collab Part 2.",
+    "content": "## v4.3「沉于生者的忘川」版本完整攻略\n\n**版本名称**：沉于生者的忘川\n**上线日期**：2026年6月1日\n\n### 一、新角色\n\n#### 千冶·刃 (Mortenax Blade) — 5星火·虚无\n\n| 属性 | 详情 |\n|------|------|\n| 命途 | 虚无 (Nihility) |\n| 属性 | 火 (Fire) |\n| 星级 | 5星 |\n| 原名 | 应星 (Yingxing) — 工艺大师的过去形态 |\n| 专属光锥 | Reforged in Hellfire |\n\n- HP上限Scaling的火系主C，拥有嘲讽机制\n- 与原版刃（风/毁灭）完全不同的战斗风格\n- 叠加HP获得增伤效果，需要高HP遗器搭配\n- 嘲讽机制使其可作为半生存位使用\n\n#### 昔涟 (Xilian) — 复刻角色\n\nv4.3 Phase 2 复刻限定五星，记忆体系核心角色。配合记忆命途体系可打出极高输出。\n\n### 二、卡池排期\n\n**Phase 1**\n- 千冶·刃 (新·火虚无) — 限定\n- Fate联动角色复刻\n\n**Phase 2**\n- 昔涟 (复刻) — 记忆体系核心\n- 其他限定复刻\n\n### 三、记忆体系养成速查\n\nv4.3版本记忆体系成为热门玩法，以下是养成优先级：\n\n| 角色 | 定位 | 优先级 | 关键光锥 |\n|------|------|--------|----------|\n| 昔涟 | 记忆主C | T0 | 专属限定光锥 |\n| 千冶·刃 | 火虚无主C | T0 | Reforged in Hellfire |\n| 银狼LV.999 | 欢愉/虚数 | T1 | Novaflare强化 |\n\n### 四、差分宇宙 — 标准四虚无DoT构筑\n\nv4.3差分宇宙最强构筑之一：\n\n- **核心**: 4名虚无命途角色组成DoT队\n- **关键祝福**: 火DOT增强、风化增强、触电增强\n- **输出循环**: 挂满5种DOT → 触发终结技 → 全DOT引爆\n- **优势**: 自动战斗友好，对群清杂极强\n- **注意**: 需要合理的速度配装保证DOT覆盖率\n\n### 五、版本活动\n\n#### 1. 「位面分裂」（6月16日起）\n- 位面饰品限时双倍掉落\n- 建议集中刷取记忆体系遗器\n- 最佳刷遗器时机\n\n#### 2. 千冶·刃主线任务「沉于生者的忘川」\n- 版本主线任务，免费原石来源\n- 揭示应星/刃的过去故事\n\n#### 3. v4.3新增关卡\n- 新遗忘花园/虚构叙事关卡更新\n- 新深渊环境适配火虚无体系\n\n### 六、Fate/stay night联动 第二弹\n\n- v4.3继续Fate/stay night联动\n- 联动角色: Saber、Archer可能复刻\n- 联动光锥可能返场\n- 联动为限定，错过不再有\n\n### 七、抽卡建议\n\n1. **千冶·刃**: 火虚无主C，全新HP Scaling机制，缺火系输出强烈推荐\n2. **昔涟复刻**: 记忆体系核心，补强记忆队的最佳选择\n3. **Fate联动**: 如果错过第一弹，这是最后补票机会\n4. **光锥**: Reforged in Hellfire是千冶·刃的专属，有千冶·刃必抽\n\n### 八、养成建议\n\n- 千冶·刃需要高HP遗器，提前储备位面饰品\n- 记忆体系角色需要专属光锥，位面分裂活动是最佳时机\n- 差分宇宙DoT队需要4名虚无角色，确保box深度",
+    "contentEn": "## v4.3 \"Sunken in the Lethe of the Living\" Complete Guide\n\n**Version Name**: Sunken in the Lethe of the Living\n**Release Date**: June 1, 2026\n\n### 1. New Characters\n\n#### Mortenax Blade — 5-Star Fire Nihility\n\n| Attribute | Details |\n|-----------|---------|\n| Path | Nihility |\n| Element | Fire |\n| Rarity | 5-Star |\n| Original Name | Yingxing — the past form of the Craftsman Master |\n| Signature Light Cone | Reforged in Hellfire |\n\n- HP-scaling Fire main DPS with taunt mechanics\n- Completely different playstyle from original Blade (Wind/Destruction)\n- Stacks HP for damage bonus, requires high-HP relic builds\n- Taunt enables semi-sustain role\n\n#### Xilian — Rerun Character\n\nv4.3 Phase 2 rerun limited 5-star, core of the Memory system.\n\n### 2. Banner Schedule\n\n**Phase 1**: Mortenax Blade (New) + Fate collab reruns\n**Phase 2**: Xilian (Rerun) + other limited reruns\n\n### 3. Memory System Build Priority Guide\n\n| Character | Role | Priority | Key Light Cone |\n|-----------|------|----------|----------------|\n| Xilian | Memory Main DPS | T0 | Signature limited LC |\n| Mortenax Blade | Fire Nihility DPS | T0 | Reforged in Hellfire |\n| Silver Wolf LV.999 | Elation/Imaginary | T1 | Novaflare enhanced |\n\n### 4. Differential Universe — Standard 4-Nihility DoT Build\n\n- **Core**: 4 Nihility path characters forming a DoT team\n- **Key Blessings**: Fire DoT, Wind Shear, Shock enhancements\n- **Rotation**: Apply all 5 DoTs → Trigger Ultimate → Detonate all DoTs\n- **Advantage**: Auto-battle friendly, excellent AoE clearing\n\n### 5. Version Events\n\n#### Plane Split (from June 16)\n- Double drop rate for Planar Ornaments\n- Best time to farm Memory system relics\n\n### 6. Fate/stay night Collab Part 2\n- Saber and Archer may return\n- Collab light cones may be available again\n- Limited time only — do not miss\n\n### 7. Pull Recommendations\n\n1. **Mortenax Blade**: New HP-scaling Fire DPS — highly recommended if lacking Fire damage\n2. **Xilian Rerun**: Memory system core, best choice to strengthen Memory teams\n3. **Fate Collab**: Last chance if you missed Part 1",
+    "tags": [
+      "v4.3",
+      "版本",
+      "更新",
+      "Mortenax Blade",
+      "千冶刃",
+      "Fate",
+      "联动"
+    ],
+    "faq": [
+      {
+        "question": "Is Mortenax Blade different from regular Blade in HSR?",
+        "questionZh": "千冶·刃和普通刃有什么区别？",
+        "answer": "Yes. Original Blade is Wind/Destruction. Mortenax Blade is Fire/Nihility with HP-scaling and taunt mechanics. They play very differently despite being the same character (Yingxing).",
+        "answerZh": "是的。原版刃是风/毁灭命途。千冶·刃是火/虚无命途，HP上限Scaling和嘲讽机制，玩法完全不同，尽管都是应星。"
+      },
+      {
+        "question": "Should I pull Mortenax Blade or save for Fate reruns?",
+        "questionZh": "抽千冶·刃还是留星琼给Fate复刻？",
+        "answer": "If you lack Fire DPS, Mortenax Blade is strong. If you missed Fate collab Wave 1 characters, Wave 2 reruns may be your only chance as collabs may not return again.",
+        "answerZh": "如果缺火系输出，千冶·刃很强。如果错过Fate联动第一弹角色，第二弹复刻可能是唯一机会，因为联动可能不会再复刻。"
+      }
+    ]
+  },
+  {
     "id": "quick-start-guide",
     "title": "崩坏：星穹铁道快速上手指南",
     "titleEn": "Honkai: Star Rail Quick Start Guide",
@@ -963,76 +1033,6 @@
         "questionZh": "2025年新手应该入坑哪款？",
         "answer": "For exploration and adventure, start with Genshin Impact — it has the most content and polish after years of updates. For a relaxed experience, try Honkai: Star Rail. For pure action, pick ZZZ. If you want something fresh with improving quality, try Wuthering Waves. All four have active communities and regular updates, so you can't go wrong.",
         "answerZh": "喜欢探索冒险就选原神——经过多年更新，内容量最大、完成度最高。想要轻松体验就选崩铁。追求动作手感就选绝区零。想体验不断进步的新作就选鸣潮。四款都有活跃社区和稳定更新，无论选哪款都不会失望。"
-      }
-    ]
-  },
-  {
-    "id": "v4-3-version-guide",
-    "title": "崩坏星穹铁道4.3版本指南 — 千冶·刃与Fate联动第二弹",
-    "titleEn": "Honkai Star Rail v4.3 Guide — Mortenax Blade & Fate Collab Wave 2",
-    "category": "version",
-    "categoryZh": "版本",
-    "categoryEn": "Version",
-    "summary": "星铁v4.3「沉于生者的忘川」完整攻略：千冶·刃（火虚无主C）、昔涟复刻、记忆体系养成速查、差分宇宙DoT构筑、位面分裂双倍活动、Fate联动第二弹。",
-    "summaryEn": "HSR v4.3 'Sunken in the Lethe of the Living' complete guide: Mortenax Blade (Fire Nihility DPS), Xilian rerun, Memory system build guide, Differential Universe DoT build, Plane Split double drops, Fate collab Part 2.",
-    "content": "## v4.3「沉于生者的忘川」版本完整攻略\n\n**版本名称**：沉于生者的忘川\n**上线日期**：2026年6月1日\n\n### 一、新角色\n\n#### 千冶·刃 (Mortenax Blade) — 5星火·虚无\n\n| 属性 | 详情 |\n|------|------|\n| 命途 | 虚无 (Nihility) |\n| 属性 | 火 (Fire) |\n| 星级 | 5星 |\n| 原名 | 应星 (Yingxing) — 工艺大师的过去形态 |\n| 专属光锥 | Reforged in Hellfire |\n\n- HP上限Scaling的火系主C，拥有嘲讽机制\n- 与原版刃（风/毁灭）完全不同的战斗风格\n- 叠加HP获得增伤效果，需要高HP遗器搭配\n- 嘲讽机制使其可作为半生存位使用\n\n#### 昔涟 (Xilian) — 复刻角色\n\nv4.3 Phase 2 复刻限定五星，记忆体系核心角色。配合记忆命途体系可打出极高输出。\n\n### 二、卡池排期\n\n**Phase 1**\n- 千冶·刃 (新·火虚无) — 限定\n- Fate联动角色复刻\n\n**Phase 2**\n- 昔涟 (复刻) — 记忆体系核心\n- 其他限定复刻\n\n### 三、记忆体系养成速查\n\nv4.3版本记忆体系成为热门玩法，以下是养成优先级：\n\n| 角色 | 定位 | 优先级 | 关键光锥 |\n|------|------|--------|----------|\n| 昔涟 | 记忆主C | T0 | 专属限定光锥 |\n| 千冶·刃 | 火虚无主C | T0 | Reforged in Hellfire |\n| 银狼LV.999 | 欢愉/虚数 | T1 | Novaflare强化 |\n\n### 四、差分宇宙 — 标准四虚无DoT构筑\n\nv4.3差分宇宙最强构筑之一：\n\n- **核心**: 4名虚无命途角色组成DoT队\n- **关键祝福**: 火DOT增强、风化增强、触电增强\n- **输出循环**: 挂满5种DOT → 触发终结技 → 全DOT引爆\n- **优势**: 自动战斗友好，对群清杂极强\n- **注意**: 需要合理的速度配装保证DOT覆盖率\n\n### 五、版本活动\n\n#### 1. 「位面分裂」（6月16日起）\n- 位面饰品限时双倍掉落\n- 建议集中刷取记忆体系遗器\n- 最佳刷遗器时机\n\n#### 2. 千冶·刃主线任务「沉于生者的忘川」\n- 版本主线任务，免费原石来源\n- 揭示应星/刃的过去故事\n\n#### 3. v4.3新增关卡\n- 新遗忘花园/虚构叙事关卡更新\n- 新深渊环境适配火虚无体系\n\n### 六、Fate/stay night联动 第二弹\n\n- v4.3继续Fate/stay night联动\n- 联动角色: Saber、Archer可能复刻\n- 联动光锥可能返场\n- 联动为限定，错过不再有\n\n### 七、抽卡建议\n\n1. **千冶·刃**: 火虚无主C，全新HP Scaling机制，缺火系输出强烈推荐\n2. **昔涟复刻**: 记忆体系核心，补强记忆队的最佳选择\n3. **Fate联动**: 如果错过第一弹，这是最后补票机会\n4. **光锥**: Reforged in Hellfire是千冶·刃的专属，有千冶·刃必抽\n\n### 八、养成建议\n\n- 千冶·刃需要高HP遗器，提前储备位面饰品\n- 记忆体系角色需要专属光锥，位面分裂活动是最佳时机\n- 差分宇宙DoT队需要4名虚无角色，确保box深度",
-    "contentEn": "## v4.3 \"Sunken in the Lethe of the Living\" Complete Guide\n\n**Version Name**: Sunken in the Lethe of the Living\n**Release Date**: June 1, 2026\n\n### 1. New Characters\n\n#### Mortenax Blade — 5-Star Fire Nihility\n\n| Attribute | Details |\n|-----------|---------|\n| Path | Nihility |\n| Element | Fire |\n| Rarity | 5-Star |\n| Original Name | Yingxing — the past form of the Craftsman Master |\n| Signature Light Cone | Reforged in Hellfire |\n\n- HP-scaling Fire main DPS with taunt mechanics\n- Completely different playstyle from original Blade (Wind/Destruction)\n- Stacks HP for damage bonus, requires high-HP relic builds\n- Taunt enables semi-sustain role\n\n#### Xilian — Rerun Character\n\nv4.3 Phase 2 rerun limited 5-star, core of the Memory system.\n\n### 2. Banner Schedule\n\n**Phase 1**: Mortenax Blade (New) + Fate collab reruns\n**Phase 2**: Xilian (Rerun) + other limited reruns\n\n### 3. Memory System Build Priority Guide\n\n| Character | Role | Priority | Key Light Cone |\n|-----------|------|----------|----------------|\n| Xilian | Memory Main DPS | T0 | Signature limited LC |\n| Mortenax Blade | Fire Nihility DPS | T0 | Reforged in Hellfire |\n| Silver Wolf LV.999 | Elation/Imaginary | T1 | Novaflare enhanced |\n\n### 4. Differential Universe — Standard 4-Nihility DoT Build\n\n- **Core**: 4 Nihility path characters forming a DoT team\n- **Key Blessings**: Fire DoT, Wind Shear, Shock enhancements\n- **Rotation**: Apply all 5 DoTs → Trigger Ultimate → Detonate all DoTs\n- **Advantage**: Auto-battle friendly, excellent AoE clearing\n\n### 5. Version Events\n\n#### Plane Split (from June 16)\n- Double drop rate for Planar Ornaments\n- Best time to farm Memory system relics\n\n### 6. Fate/stay night Collab Part 2\n- Saber and Archer may return\n- Collab light cones may be available again\n- Limited time only — do not miss\n\n### 7. Pull Recommendations\n\n1. **Mortenax Blade**: New HP-scaling Fire DPS — highly recommended if lacking Fire damage\n2. **Xilian Rerun**: Memory system core, best choice to strengthen Memory teams\n3. **Fate Collab**: Last chance if you missed Part 1",
-    "tags": [
-      "v4.3",
-      "版本",
-      "更新",
-      "Mortenax Blade",
-      "千冶刃",
-      "Fate",
-      "联动"
-    ],
-    "faq": [
-      {
-        "question": "Is Mortenax Blade different from regular Blade in HSR?",
-        "questionZh": "千冶·刃和普通刃有什么区别？",
-        "answer": "Yes. Original Blade is Wind/Destruction. Mortenax Blade is Fire/Nihility with HP-scaling and taunt mechanics. They play very differently despite being the same character (Yingxing).",
-        "answerZh": "是的。原版刃是风/毁灭命途。千冶·刃是火/虚无命途，HP上限Scaling和嘲讽机制，玩法完全不同，尽管都是应星。"
-      },
-      {
-        "question": "Should I pull Mortenax Blade or save for Fate reruns?",
-        "questionZh": "抽千冶·刃还是留星琼给Fate复刻？",
-        "answer": "If you lack Fire DPS, Mortenax Blade is strong. If you missed Fate collab Wave 1 characters, Wave 2 reruns may be your only chance as collabs may not return again.",
-        "answerZh": "如果缺火系输出，千冶·刃很强。如果错过Fate联动第一弹角色，第二弹复刻可能是唯一机会，因为联动可能不会再复刻。"
-      }
-    ]
-  },
-  {
-    "id": "v4-4-preview-guide",
-    "title": "崩坏星穹铁道4.4版本前瞻 — 姬子联动与新角色爆料",
-    "titleEn": "HSR v4.4 Preview — Himeko Collab & New Character Leaks",
-    "category": "version",
-    "categoryZh": "版本攻略",
-    "categoryEn": "Version Guide",
-    "summary": "星铁v4.4版本前瞻信息：姬子联动卡池预告、4.5新角色立绘曝光、4.3星琼收入统计与后续活动福利盘点。",
-    "summaryEn": "HSR v4.4 preview: Himeko collaboration banner teaser, v4.5 new character reveals, v4.3 Stellar Jade income report and upcoming event rewards.",
-    "content": "## 崩坏星穹铁道v4.4版本前瞻\n\nv4.3版本正在运行，v4.4前瞻直播即将开启。以下是已知的爆料和前瞻信息。\n\n### 一、v4.4已知信息\n\n#### 姬子联动卡池\n- v4.4预计推出姬子联动内容\n- 联动角色和光锥详情待前瞻直播确认\n\n#### 4.5新角色立绘已曝光\n- 官方已放出v4.5新角色立绘\n- 具体属性和命途待公布\n\n### 二、v4.3星琼收入统计\n\n| 来源 | 星琼数量 |\n|------|----------|\n| 日常活跃 | ~2520 |\n| 版本活动 | ~1000-1500 |\n| 深渊/混沌回忆 | ~800 |\n| 位面分裂活动 | 额外遗器收益 |\n| 版本更新补偿 | 600 |\n| 总计（免费） | ~5000-6000（约30-37抽） |\n\n### 三、后续活动盘点\n\n- 位面分裂活动（6月16日起）— 双倍遗器掉落\n- 新差分宇宙赛季 — DoT构筑加强\n- 垃圾屋推荐兑换表更新 — v4.3最新\n- 万神屋/琳琅屋觉醒装备统计\n\n### 四、抽卡规划建议\n\n1. **v4.3剩余**: 如果已有千冶·刃，建议为昔涟复刻储备星琼\n2. **v4.4规划**: 姬子联动值得提前准备，联动角色可能不下架复刻\n3. **长期**: v4.5新角色立绘已出，建议至少保留一个大保底\n\n### 五、关键时间节点\n\n- v4.3位面分裂: 6月16日起\n- v4.4前瞻直播: 预计6月下旬\n- v4.4上线: 预计7月中旬",
-    "contentEn": "## HSR v4.4 Version Preview\n\nv4.3 is currently running, with the v4.4 livestream coming soon. Here are known leaks and preview info.\n\n### 1. Known v4.4 Information\n\n#### Himeko Collaboration Banner\n- v4.4 expected to feature Himeko collaboration content\n- Details TBD pending livestream\n\n#### v4.5 New Character Reveals\n- Official v4.5 character art has been released\n- Element and Path TBD\n\n### 2. v4.3 Stellar Jade Income\n\n| Source | Jade Amount |\n|--------|-------------|\n| Daily Activity | ~2520 |\n| Version Events | ~1000-1500 |\n| Abyss/Chaos Memory | ~800 |\n| Update Compensation | 600 |\n| Total (F2P) | ~5000-6000 (~30-37 pulls) |\n\n### 3. Upcoming Events\n\n- Plane Split (from June 16) — Double relic drops\n- New Differential Universe season — DoT build enhanced\n- Trash Shop exchange recommendations updated\n\n### 4. Pull Planning\n\n1. **v4.3 remaining**: Save for Xilian rerun if you have Mortenax Blade\n2. **v4.4 planning**: Himeko collab may be limited — prepare in advance\n3. **Long-term**: v4.5 new characters revealed — keep at least one pity ready",
-    "tags": [
-      "v4.4",
-      "前瞻",
-      "姬子",
-      "联动",
-      "版本",
-      "爆料",
-      "星琼"
-    ],
-    "faq": [
-      {
-        "question": "When will HSR v4.4 release?",
-        "questionZh": "星铁v4.4什么时候上线？",
-        "answer": "HSR v4.4 is expected to release in mid-July 2026. The livestream typically airs about 2 weeks before launch. Exact date pending official announcement.",
-        "answerZh": "星铁v4.4预计2026年7月中旬上线，前瞻直播通常在上线前2周左右。具体日期待官方公布。"
-      },
-      {
-        "question": "Is the Himeko collaboration limited?",
-        "questionZh": "姬子联动是限定吗？",
-        "answer": "Based on current information, the v4.4 Himeko collaboration is expected to be limited content. Based on the Fate collaboration experience, collab characters may not receive standard reruns, so it's recommended to save Stellar Jades in advance.",
-        "answerZh": "根据目前信息，v4.4姬子联动预计为限定内容。参考Fate联动经验，联动角色可能不会常规复刻，建议提前储备星琼。"
       }
     ]
   }

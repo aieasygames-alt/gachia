@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, type ReactNode } from 'react';
 import { GAMES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
+import { NextStepStrip, type NextStepLink } from '@/components/wiki/next-step-strip';
 import {
   genshinCharacters,
   getGenshinCharacterName,
@@ -113,6 +114,59 @@ function t(locale: SupportedLocale, zh: string, en: string, ja?: string) {
   return locale === 'zh' ? zh : locale === 'ja' ? (ja ?? en) : en;
 }
 
+function getTeamNextSteps(gameId: GameId, locale: SupportedLocale): NextStepLink[] {
+  const titles = {
+    characters: { zh: '看角色图鉴', en: 'Browse Characters', ja: 'キャラ図鑑を見る' },
+    build: { zh: '看配装推荐', en: 'Open Build Recommender', ja: 'ビルドを見る' },
+    guides: { zh: '看攻略专题', en: 'Open Guides', ja: '攻略を見る' },
+  } as const;
+
+  const descriptions = {
+    characters: {
+      zh: '先确认角色定位和技能，再回来搭队会更顺手。',
+      en: 'Review roles and skills first, then come back and build teams faster.',
+      ja: 'まず役割とスキルを確認すると編成しやすくなります。',
+    },
+    build: {
+      zh: '如果你已经有主 C 或主坦，直接看配装会更快。',
+      en: 'If your main carry or tank is already chosen, jump straight to builds.',
+      ja: '主力が決まっているなら、ビルドから入るのが早いです。',
+    },
+    guides: {
+      zh: '想看更完整的养成、站位和版本思路，可以继续往攻略页走。',
+      en: 'For deeper setup, positioning, and patch notes, head to the guides hub.',
+      ja: '育成、配置、更新方針まで見たいなら攻略ページへどうぞ。',
+    },
+  } as const;
+
+  return [
+    {
+      href: `/${gameId}/characters`,
+      title: titles.characters,
+      description: descriptions.characters,
+    },
+    {
+      href: `/${gameId}/build`,
+      title: titles.build,
+      description: descriptions.build,
+    },
+    {
+      href: `/${gameId}/guides`,
+      title: titles.guides,
+      description: descriptions.guides,
+    },
+  ];
+}
+
+function withNextSteps(content: ReactNode, locale: SupportedLocale, links: NextStepLink[]) {
+  return (
+    <>
+      {content}
+      <NextStepStrip locale={locale} links={links} />
+    </>
+  );
+}
+
 // --- Resonance calculator ---
 
 function getResonances(team: (GenshinCharacter | null)[]) {
@@ -139,14 +193,14 @@ function getResonances(team: (GenshinCharacter | null)[]) {
 // =====================================================================
 
 export function TeamsClient({ gameId, locale }: { gameId: GameId; locale: SupportedLocale }) {
-  if (gameId === 'skjh') return <SkjhSquadSimulator locale={locale} />;
-  if (gameId === 'genshin') return <GenshinTeams locale={locale} />;
-  if (gameId === 'starrail') return <StarRailTeams locale={locale} />;
-  if (gameId === 'wuwa') return <WuWaTeams locale={locale} />;
-  if (gameId === 'nte') return <NteTeams locale={locale} />;
-  if (gameId === 'zzz') return <ZzzTeams locale={locale} />;
-  if (gameId === 'guihuan') return <GuihuanTeams locale={locale} />;
-  if (gameId === 'endfield') return <EndfieldTeams locale={locale} />;
+  if (gameId === 'skjh') return withNextSteps(<SkjhSquadSimulator locale={locale} />, locale, getTeamNextSteps(gameId, locale));
+  if (gameId === 'genshin') return withNextSteps(<GenshinTeams locale={locale} />, locale, getTeamNextSteps(gameId, locale));
+  if (gameId === 'starrail') return withNextSteps(<StarRailTeams locale={locale} />, locale, getTeamNextSteps(gameId, locale));
+  if (gameId === 'wuwa') return withNextSteps(<WuWaTeams locale={locale} />, locale, getTeamNextSteps(gameId, locale));
+  if (gameId === 'nte') return withNextSteps(<NteTeams locale={locale} />, locale, getTeamNextSteps(gameId, locale));
+  if (gameId === 'zzz') return withNextSteps(<ZzzTeams locale={locale} />, locale, getTeamNextSteps(gameId, locale));
+  if (gameId === 'guihuan') return withNextSteps(<GuihuanTeams locale={locale} />, locale, getTeamNextSteps(gameId, locale));
+  if (gameId === 'endfield') return withNextSteps(<EndfieldTeams locale={locale} />, locale, getTeamNextSteps(gameId, locale));
   return <ComingSoon locale={locale} />;
 }
 

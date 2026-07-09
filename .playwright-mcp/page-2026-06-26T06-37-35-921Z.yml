@@ -1,0 +1,77 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - banner [ref=e4]
+    - generic [ref=e8]:
+      - heading [level=1] [ref=e9]
+      - list [ref=e10]
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - generic [ref=e15]: 扫码下载
+          - generic [ref=e16]: 了解更多官方资讯
+          - generic [ref=e17]: —
+          - generic [ref=e18]: ©KuroGames All Rights Reserved
+        - img "库街区二维码" [ref=e20]
+      - generic [ref=e21]:
+        - paragraph [ref=e22]: 更多库街区资讯，请关注官方社交账号：
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - link "库洛官方微信公众号" [ref=e25] [cursor=pointer]:
+              - /url: https://weibo.com/kurobbs
+              - img "库洛官方微信公众号" [ref=e26]
+          - listitem [ref=e27]:
+            - link "库洛官方微信公众号" [ref=e28] [cursor=pointer]:
+              - /url: https://space.bilibili.com/1249567477
+              - img "库洛官方微信公众号" [ref=e29]
+  - contentinfo [ref=e30]:
+    - generic [ref=e31]:
+      - img "kuroGame" [ref=e33]
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - link "粤公网安备 44010602011222号" [ref=e38] [cursor=pointer]:
+              - /url: https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010602011222
+              - img [ref=e39]
+              - text: 粤公网安备 44010602011222号
+            - link "粤ICP备18069368号" [ref=e41] [cursor=pointer]:
+              - /url: https://beian.miit.gov.cn/#/Integrated/index
+          - generic [ref=e42]: Copyright©2026广州库洛科技有限公司
+        - generic [ref=e44]:
+          - list [ref=e45]:
+            - generic [ref=e46]:
+              - generic [ref=e47]: 友情链接
+              - generic [ref=e48]: LINK
+            - listitem [ref=e49]:
+              - link "库洛游戏" [ref=e50] [cursor=pointer]:
+                - /url: https://kurogames.com/
+            - listitem [ref=e51]:
+              - link "战双帕弥什" [ref=e52] [cursor=pointer]:
+                - /url: https://pns.kurogame.com/
+            - listitem [ref=e53]:
+              - link "鸣潮" [ref=e54] [cursor=pointer]:
+                - /url: https://mc.kurogame.com/
+          - list [ref=e55]:
+            - generic [ref=e56]:
+              - generic [ref=e57]: 了解我们
+              - generic [ref=e58]: ABOUT US
+            - listitem [ref=e59]:
+              - link "关于我们" [ref=e60] [cursor=pointer]:
+                - /url: https://www.kurogames.com/introduction
+            - listitem [ref=e61]:
+              - link "联系库洛" [ref=e62] [cursor=pointer]:
+                - /url: https://www.kurogames.com/contact
+            - listitem [ref=e63]:
+              - link "加入库洛" [ref=e64] [cursor=pointer]:
+                - /url: https://kurogame.jobs.feishu.cn/index
+          - list [ref=e65]:
+            - generic [ref=e66]:
+              - generic [ref=e67]: 相关信息
+              - generic [ref=e68]: OTHER
+            - listitem [ref=e69]:
+              - link "用户协议" [ref=e70] [cursor=pointer]:
+                - /url: https://www.kurobbs.com/p/privacy_policy.html
+            - listitem [ref=e71]:
+              - link "隐私协议" [ref=e72] [cursor=pointer]:
+                - /url: https://www.kurobbs.com/p/privacy.html
+            - listitem [ref=e73]:
+              - link "儿童协议" [ref=e74] [cursor=pointer]:
+                - /url: https://www.kurobbs.com/p/privacy_guide_children.html

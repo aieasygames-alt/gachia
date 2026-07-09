@@ -1,0 +1,82 @@
+[
+  {
+    "code": "GENSHINGIFT",
+    "reward": "原石x50、大英雄的经验x3、摩拉x10000",
+    "rewardEn": "Primogems x50, Hero's Wit x3, Mora x10,000",
+    "status": "active",
+    "expiresAt": "2027-12-31",
+    "source": "permanent",
+    "region": "global",
+    "revealedAt": "2020-09-28"
+  },
+  {
+    "code": "FIGHTLIKESKIRK57",
+    "reward": "原石x40、大英雄的经验x3、深渊猎赏x2",
+    "rewardEn": "Primogems x40, Hero's Wit x3, Abyssal Bounty x2",
+    "status": "active",
+    "expiresAt": "2026-07-15",
+    "source": "livestream",
+    "region": "global",
+    "revealedAt": "2026-06-06"
+  },
+  {
+    "code": "8QD412QXCEU1",
+    "reward": "原石x60、冒险家的经验x5",
+    "rewardEn": "Primogems x60, Adventurer's Experience x5",
+    "status": "active",
+    "expiresAt": "2026-07-15",
+    "source": "event",
+    "region": "global",
+    "revealedAt": "2026-05-20"
+  },
+  {
+    "code": "GS57YTSNLJ",
+    "reward": "摩拉x30000、大英雄的经验x3、精锻用魔矿x5、教导·「纷争」x3",
+    "rewardEn": "Mora x30,000, Hero's Wit x3, Mystic Enhancement Ore x5, Teachings of Contention x3",
+    "status": "active",
+    "expiresAt": "2026-07-15",
+    "source": "event",
+    "region": "global",
+    "revealedAt": "2026-05-20"
+  },
+  {
+    "code": "HS4NM7YDGC99",
+    "reward": "原石x60、冒险家的经验x5",
+    "rewardEn": "Primogems x60, Adventurer's Experience x5",
+    "status": "active",
+    "expiresAt": "2026-07-01",
+    "source": "event",
+    "region": "global",
+    "revealedAt": "2026-04-15"
+  },
+  {
+    "code": "5AM75NYUGTTR",
+    "reward": "原石x30、摩拉x20000、大英雄的经验x3、烤肉焖饭x5",
+    "rewardEn": "Primogems x30, Mora x20,000, Hero's Wit x3, Blazed Meat Stew x5",
+    "status": "active",
+    "expiresAt": "2026-06-30",
+    "source": "event",
+    "region": "global",
+    "revealedAt": "2026-04-01"
+  },
+  {
+    "code": "RB5PPN4BV355",
+    "reward": "原石x30、海灵芝x3、摩拉x20000、冒险家的经验x3",
+    "rewardEn": "Primogems x30, Sea Ganoderma x3, Mora x20,000, Adventurer's Experience x3",
+    "status": "active",
+    "expiresAt": "2026-06-30",
+    "source": "event",
+    "region": "global",
+    "revealedAt": "2026-03-15"
+  },
+  {
+    "code": "FORNATLAN",
+    "reward": "原石x30",
+    "rewardEn": "Primogems x30",
+    "status": "active",
+    "expiresAt": "2026-08-31",
+    "source": "event",
+    "region": "global",
+    "revealedAt": "2025-08-15"
+  }
+]

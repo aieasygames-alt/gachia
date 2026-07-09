@@ -1,0 +1,293 @@
+[
+  {
+    "id": "mondstadt",
+    "name": "蒙德",
+    "nameEn": "Mondstadt",
+    "nameJa": "モンド",
+    "description": "自由之城蒙德，风之神巴巴托斯的领地。广袤的平原、清澈的湖泊和古老的风车构成了这座自由之邦的独特风景。",
+    "descriptionEn": "The City of Freedom, blessed by the Anemo Archon Barbatos. Vast plains, clear lakes, and ancient windmills define this land of liberty.",
+    "descriptionJa": "風神バルバトスが守護する自由の城。広大な平原、澄んだ湖、古い風車が特徴の自由の国。",
+    "highlights": [
+      "风神瞳: 66个",
+      "七天神像: 7座",
+      "传送锚点: 42个",
+      "秘境: 10个"
+    ],
+    "specialties": [
+      "dandelion-seed",
+      "cecilia",
+      "small-lamp-grass",
+      "valberry",
+      "windwheel-aster",
+      "wolfhook",
+      "calla-lily",
+      "philanemo-mushroom"
+    ],
+    "bosses": [
+      "lightning-prism (无相雷)",
+      "everflame-seed (急冻树... 不对)",
+      "hoarfrost-core (急冻树)",
+      "cleansing-heart (纯水精灵)"
+    ],
+    "domains": [
+      "忘记之峡 (自由/抗争/诗文)",
+      "仲夏庭园 (如雷的盛怒/平雷)",
+      "铭记之谷 (翠绿/少女)",
+      "孤云凌霄之处 (宗室/骑士)"
+    ],
+    "tips": [
+      "风神瞳建议用互动地图标记收集",
+      "蒙德城内NPC对话可获得大量食谱",
+      "低语森林和星落湖区域集中大量宝箱",
+      "每天和蒙德声望NPC领取探索派遣"
+    ],
+    "teleporters": 42,
+    "statues": 7,
+    "oculi": 66
+  },
+  {
+    "id": "liyue",
+    "name": "璃月",
+    "nameEn": "Liyue",
+    "nameJa": "璃月",
+    "description": "契约之地璃月，岩之神摩拉克斯的领地。层峦叠嶂的山峰、险峻的绝壁和繁华的璃月港构成了这片古老的商港。",
+    "descriptionEn": "The Land of Contracts, governed by the Geo Archon Morax. Towering mountains, perilous cliffs, and the bustling Liyue Harbor define this ancient commercial hub.",
+    "descriptionJa": "岩神モラックスが治める契約の地。険しい山々、切り立った崖、賑やかな璃月港が特徴の古き商港。",
+    "highlights": [
+      "岩神瞳: 131个",
+      "七天神像: 8座",
+      "传送锚点: 64个",
+      "秘境: 14个"
+    ],
+    "specialties": [
+      "cor-lapis",
+      "glaze-lily",
+      "jueyun-chili",
+      "noctilucous-jade",
+      "qingxin",
+      "silk-flower",
+      "starconch",
+      "violetgrass"
+    ],
+    "bosses": [
+      "basalt-petrification (无相岩)",
+      "everflame-seed (爆炎树)",
+      "hoarfrost-core (急冻树)"
+    ],
+    "domains": [
+      "太山府 (繁荣/勤劳/黄金)",
+      "华池岩岫 (宗室/骑士)",
+      "孤云凌霄之处 (如雷/平雷)",
+      "芬德尼尔之顶 (冰风/水)"
+    ],
+    "tips": [
+      "绝云间区域有大量岩神瞳，建议带岩主",
+      "璃月港商店每天可购买特产",
+      "天衡山矿点丰富，记得每日采矿",
+      "青墟浦和灵矩关有大量隐藏宝箱"
+    ],
+    "teleporters": 64,
+    "statues": 8,
+    "oculi": 131
+  },
+  {
+    "id": "inazuma",
+    "name": "稻妻",
+    "nameEn": "Inazuma",
+    "nameJa": "稲妻",
+    "description": "雷电永恒之国稻妻，雷之神巴尔泽布的领地。樱花飘落的群岛、雷暴交加的海域和封闭的国度形成了独特的文化。",
+    "descriptionEn": "The Eternal Nation of Thunder, ruled by the Electro Archon Beelzebul. Cherry blossom-adorned islands, stormy seas, and an isolationist culture define this unique land.",
+    "descriptionJa": "雷神バルゼブが統治する永遠の国。桜が舞う島々、雷鳴轉く海、鎖国された独特の文化。",
+    "highlights": [
+      "雷神瞳: 181个",
+      "七天神像: 7座",
+      "传送锚点: 56个",
+      "秘境: 12个"
+    ],
+    "specialties": [
+      "amakumo-fruit",
+      "crystal-marrow",
+      "dendrobium",
+      "fluorescent-fungus",
+      "naku-weed",
+      "onikabuto",
+      "sakura-bloom",
+      "sea-ganoderma"
+    ],
+    "bosses": [
+      "storm-beads (雷音权现)",
+      "perpetual-heart (恒常机关阵列)",
+      "dew-of-repudiation (无相水)",
+      "dragonheirs-false-fin (深海龙蜥)"
+    ],
+    "domains": [
+      "菫色之庭 (浮世/风雅/天光)",
+      "沉眠之庭 (华馆/海染)",
+      "芬德尼尔之顶 (追忆/绝缘)"
+    ],
+    "tips": [
+      "雷神瞳数量多且分布密集，建议分岛收集",
+      "神无冢和八酝岛有大量雷樱树需要净化",
+      "清籁岛需要完成世界任务才能解锁部分区域",
+      "海祇岛和渊下宫有独立的世界任务线"
+    ],
+    "teleporters": 56,
+    "statues": 7,
+    "oculi": 181
+  },
+  {
+    "id": "sumeru",
+    "name": "须弥",
+    "nameEn": "Sumeru",
+    "nameJa": "スメール",
+    "description": "智慧之国须弥，草之神纳西妲的领地。茂密的热带雨林、干旱的沙漠和宏伟的教令院构成了这片知识的圣域。",
+    "descriptionEn": "The Nation of Wisdom, home to the Dendro Archon Nahida. Lush rainforests, arid deserts, and the grand Akademiya define this sanctuary of knowledge.",
+    "descriptionJa": "草神ナヒーダの国・知恵の国。密林、乾燥した砂漠、壮大な教令院が特徴の知識の聖域。",
+    "highlights": [
+      "草神瞳: 271个",
+      "七天神像: 10座",
+      "传送锚点: 72个",
+      "秘境: 16个"
+    ],
+    "specialties": [
+      "ajilenakh-nut",
+      "kalpalata-lotus",
+      "padisarah",
+      "rukkhashava-mushroom",
+      "sand-grease-pupa",
+      "scarab",
+      "viparyas",
+      "zaytun-peach"
+    ],
+    "bosses": [
+      "smaragdistite-jade-branch (翠翎恐蕙)",
+      "perpetual-heart (半永恒机关阵列)",
+      "dew-of-repudiation (无相草)"
+    ],
+    "domains": [
+      "昏识之塔 (诤言/巧思/笃行)",
+      "缘觉之塔 (深林/饰金)",
+      "赤金的城墟 (沙上/乐园)"
+    ],
+    "tips": [
+      "须弥城地下有大量隐藏区域",
+      "雨林地区利用四叶印快速移动",
+      "沙漠地区需要完成世界任务解锁更多区域",
+      "每周完成须弥声望任务获取奖励"
+    ],
+    "teleporters": 72,
+    "statues": 10,
+    "oculi": 271
+  },
+  {
+    "id": "fontaine",
+    "name": "枫丹",
+    "nameEn": "Fontaine",
+    "nameJa": "フォンテーヌ",
+    "description": "正义之水国枫丹，水之神芙卡洛斯的领地。优雅的法院、水下世界和蒸汽朋克风格的建筑构成了这片独特的国度。",
+    "descriptionEn": "The Nation of Justice, home to the Hydro Archon. Elegant courts, underwater worlds, and steampunk architecture define this unique nation.",
+    "descriptionJa": "水神フォカロルスの国・正義の国。優雅な法廷、水中世界、スチームパンク建築が特徴。",
+    "highlights": [
+      "水神瞳: 152个",
+      "七天神像: 8座",
+      "传送锚点: 58个",
+      "秘境: 12个"
+    ],
+    "specialties": [
+      "beryl-conch",
+      "lumitoile",
+      "marcotte",
+      "rainbow-rose",
+      "subdetection-unit",
+      "bulle-fruit"
+    ],
+    "bosses": [
+      "dew-of-repudiation (无相水)",
+      "perpetual-heart (冰风组曲)"
+    ],
+    "domains": [
+      "深潮的废都 (公平/正义/秩序)",
+      "罪祸的终途 (逐影/黄金)"
+    ],
+    "tips": [
+      "枫丹水域可以自由潜水探索",
+      "水下有大量宝箱和神瞳",
+      "枫丹廷地区有大量机关谜题",
+      "完成美露莘系列世界任务解锁隐藏区域"
+    ],
+    "teleporters": 58,
+    "statues": 8,
+    "oculi": 152
+  },
+  {
+    "id": "natlan",
+    "name": "纳塔",
+    "nameEn": "Natlan",
+    "nameJa": "ナタ",
+    "description": "火之国纳塔，火之神玛薇卡的领地。炽热的火山、神秘的部族和勇武的战士文化构成了这片充满活力的土地。",
+    "descriptionEn": "The Nation of War, home to the Pyro Archon Mavuika. Fiery volcanoes, mystical tribes, and warrior culture define this vibrant land.",
+    "descriptionJa": "火神マヴィカの国・戦争の国。灼熱の火山、神秘的な部族、勇猛な戦士文化。",
+    "highlights": [
+      "火神瞳: 约108个",
+      "七天神像: 6座",
+      "传送锚点: 48个",
+      "秘境: 8个"
+    ],
+    "specialties": [
+      "saurian-claw",
+      "quenching-weed",
+      "sparkclaw-fruit",
+      "embercore-flower"
+    ],
+    "bosses": [
+      "everflame-seed (爆炎树·纳塔版)"
+    ],
+    "domains": [
+      "烈火的铁牢 (燃灼/灰烬)",
+      "焦土的遗迹 (未完/谐律)"
+    ],
+    "tips": [
+      "纳塔龙伙伴可以帮助快速移动和战斗",
+      "各部族有独立的声望系统",
+      "夜域机制是纳塔特有的探索方式",
+      "火山区域需要特殊装备才能探索"
+    ],
+    "teleporters": 48,
+    "statues": 6,
+    "oculi": 108
+  },
+  {
+    "id": "chasm",
+    "name": "层岩巨渊",
+    "nameEn": "The Chasm",
+    "nameJa": "層岩巨淵",
+    "description": "璃月西部的巨大矿坑，地下深处隐藏着古老的秘密。黑暗的地下世界、发光的矿物和神秘的遗迹等待冒险者探索。",
+    "descriptionEn": "A massive mining area west of Liyue. Dark underground worlds, luminescent minerals, and mysterious ruins await adventurers.",
+    "descriptionJa": "璃月西部の巨大鉱山。暗い地下世界、光る鉱物、謎の遺跡が冒険者を待つ。",
+    "highlights": [
+      "流明石: 80个",
+      "传送锚点: 22个",
+      "秘境: 3个"
+    ],
+    "specialties": [
+      "cor-lapis",
+      "qingxin",
+      "starconch"
+    ],
+    "bosses": [
+      "dragonheirs-false-fin (深海龙蜥·地下)"
+    ],
+    "domains": [
+      "岩石之底 (绝缘/追忆)"
+    ],
+    "tips": [
+      "需要完成世界任务获取流明石触媒",
+      "流明石升级后可以照亮更远区域",
+      "地下区域有毒雾需要用流明石净化",
+      "上下层各有独立的传送网络"
+    ],
+    "teleporters": 22,
+    "statues": 0,
+    "oculi": 80
+  }
+]

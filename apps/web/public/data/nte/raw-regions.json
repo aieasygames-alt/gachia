@@ -1,0 +1,58 @@
+[
+  {
+    "id": "central-district",
+    "name": "中央区",
+    "nameEn": "Central District",
+    "description": "异环世界的核心区域，拥有丰富的异常现象和变异体。",
+    "descriptionEn": "The core region of the NTE world, rich with anomalies and variants.",
+    "highlights": ["传送点: 28个", "异常Boss: 4处", "收集品: 大量"],
+    "specialties": ["异常核心碎片", "能量结晶"],
+    "bosses": ["变异体Alpha", "裂隙守卫", "虚数回廊Boss", "混沌核心"],
+    "domains": ["战术模拟室", "材料挑战关卡"],
+    "tips": ["中央区是开局区域，优先解锁所有传送点", "异常Boss掉落角色升级材料", "每日收集品刷新后记得重新拾取"],
+    "subRegions": ["商业街", "住宅区", "中央公园", "地下通道"],
+    "collectibles": 45
+  },
+  {
+    "id": "industrial-zone",
+    "name": "工业区",
+    "nameEn": "Industrial Zone",
+    "description": "废弃的工业设施，充满了危险的变异体和珍贵的材料。",
+    "descriptionEn": "Abandoned industrial facilities filled with dangerous variants and precious materials.",
+    "highlights": ["传送点: 22个", "异常Boss: 3处", "收集品: 30+"],
+    "specialties": ["工业废料精华", "金属催化剂"],
+    "bosses": ["机械巨蛇", "熔炉守护者", "电磁核心"],
+    "domains": ["装备挑战关卡", "材料挑战关卡"],
+    "tips": ["工业区的Boss掉落武器升级材料", "部分区域需要解谜才能进入", "夜间出现的怪物会更强但掉落更好"],
+    "subRegions": ["钢铁工厂", "能源站", "仓库区"],
+    "collectibles": 30
+  },
+  {
+    "id": "research-lab",
+    "name": "研究所",
+    "nameEn": "Research Laboratory",
+    "description": "神秘的异象研究中心，隐藏着关于异环世界的秘密。",
+    "descriptionEn": "A mysterious anomaly research center hiding secrets about the NTE world.",
+    "highlights": ["传送点: 18个", "异常Boss: 3处", "收集品: 25+"],
+    "specialties": ["研究数据芯片", "异象结晶"],
+    "bosses": ["实验体Omega", "数据侵蚀者", "维度裂隙"],
+    "domains": ["高级战术模拟", "高级材料挑战"],
+    "tips": ["研究所是中后期区域，敌人较强", "需要完成前置任务才能解锁", "隐藏房间里有稀有材料"],
+    "subRegions": ["实验室A区", "实验室B区", "地下设施"],
+    "collectibles": 25
+  },
+  {
+    "id": "abyss-zone",
+    "name": "深渊区域",
+    "nameEn": "Abyss Zone",
+    "description": "异环世界最深处的危险区域，只有最强的小队才能挑战。",
+    "descriptionEn": "The deepest and most dangerous region, reserved for the strongest squads.",
+    "highlights": ["传送点: 12个", "异常Boss: 2处", "收集品: 15+"],
+    "specialties": ["深渊结晶", "混沌核心碎片"],
+    "bosses": ["深渊领主", "终极裂隙"],
+    "domains": ["深渊挑战", "极限模拟"],
+    "tips": ["深渊区域是终局内容，建议队伍全满级后再来", "Boss有特殊机制需要特定策略应对", "深渊结晶是高级材料的必要素材"],
+    "subRegions": ["浅层区域", "深层区域"],
+    "collectibles": 15
+  }
+]

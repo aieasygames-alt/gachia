@@ -1,6 +1,8 @@
 import type { SupportedLocale } from '@gachia/core';
+import { join } from 'node:path';
+import { loadJson } from '../../load-json';
 import { localeStr } from './types';
-import rawGachaSystem from './raw-gacha-system.json';
+const rawGachaSystem = await loadJson<unknown>(join(process.cwd(), '../../packages/data/games/nte/raw-gacha-system.json'), '/data/nte/raw-gacha-system.json');
 
 export interface NteGachaBanner {
   id: string;

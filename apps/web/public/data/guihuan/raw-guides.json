@@ -1,0 +1,611 @@
+[
+  {
+    "id": "beginner-guide",
+    "title": "《归环》新手入门完全指南",
+    "titleEn": "Guihuan Complete Beginner Guide",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "从零开始了解《归环》的世界观、战斗系统、使灵养成和探索技巧，帮助新归还者快速上手。",
+    "summaryEn": "Learn everything about Guihuan's world, combat system, Spirit raising, and exploration tips from scratch.",
+    "content": "## 欢迎，归还者\n\n你来到故事的尾声，星球的未来仅剩42天。作为预言中的「归还者」，你将与神秘使灵「初」缔结契约，不断迈入42天的死亡循环，重塑因果，改写未来。\n\n### 基础操作\n\n- **移动与探索**: 使用滑空匣进行高速移动，支持陆/水/空三栖\n- **战斗切换**: 3人小队轮换战斗，每人拥有独立使灵\n- **骰子检定**: 与NPC对话和交互时，20面骰子决定结果\n\n### 使灵流派系统\n\n每个使灵拥有4种战斗流派，玩家选择2种搭配：\n\n1. **强攻流** — 高伤害输出\n2. **追击流** — 连锁追击，幸运加持\n3. **灵愈流** — 治疗和护盾\n4. **控场流** — 控制和减益\n\n### 养成优先级\n\n1. 先提升主C角色等级和技能\n2. 获取适配的武器\n3. 刷取合适的圣遗物/灵装\n4. 最后考虑副C和辅助的养成",
+    "contentEn": "## Welcome, Returner\n\nYou arrive at the end of the story, with only 42 days remaining for the planet. As the prophesied 'Returner,' you will form a contract with the mysterious Spirit 'Chu,' repeatedly entering the 42-day death loop to reshape causality and rewrite the future.\n\n### Basic Controls\n\n- **Movement & Exploration**: Use the Hover Glider for high-speed travel across land, water, and air\n- **Combat Switching**: 3-person party rotation, each with their own Spirit companion\n- **Dice Checks**: A D20 die determines outcomes during NPC interactions\n\n### Spirit Style System\n\nEach Spirit has 4 combat styles. Players equip 2:\n\n1. **Assault** — High damage output\n2. **Follow-up** — Chain attacks with luck bonuses\n3. **Healing** — Recovery and shields\n4. **Control** — CC and debuffs\n\n### Progression Priority\n\n1. Level up your main DPS and skills first\n2. Obtain suitable weapons\n3. Farm appropriate gear/artifacts\n4. Then invest in sub-DPS and supports",
+    "tags": [
+      "新手",
+      "入门",
+      "基础",
+      "Beginner",
+      "Basics",
+      "指南"
+    ],
+    "faq": [
+      {
+        "question": "What should I do first in Guihuan?",
+        "questionZh": "归环开局应该做什么？",
+        "answer": "Follow the main story to unlock all features, then focus on leveling your main DPS character.",
+        "answerZh": "跟随主线剧情解锁所有功能，然后集中资源提升主C角色的等级。"
+      },
+      {
+        "question": "How does the time loop work?",
+        "questionZh": "时间循环机制是怎样的？",
+        "answer": "The 42-day loop is the core story mechanic. After dying, you restart the loop but keep your memories and progress. Each loop reveals new story branches.",
+        "answerZh": "42天循环是核心剧情机制。死亡后重启循环但保留记忆和进度，每次循环揭示新的剧情分支。"
+      }
+    ]
+  },
+  {
+    "id": "download-install-guide",
+    "title": "《归环》下载安装指南 — 全平台下载地址",
+    "titleEn": "Download Guihuan — PC, Mobile Install Guide",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "提供《归环》在PC、安卓、iOS平台的下载安装教程和系统配置要求。",
+    "summaryEn": "Download and install Guihuan on PC, Android, and iOS platforms with system requirements.",
+    "content": "## 系统配置要求\n\n### PC端\n- 操作系统: Windows 10 64位以上\n- 处理器: Intel i5 / 同等AMD处理器\n- 内存: 8GB RAM\n- 显卡: NVIDIA GTX 1060 6GB\n- 存储空间: 40GB\n\n### 移动端\n- 安卓: 骁龙845及以上，6GB RAM\n- iOS: iPhone 12及以上，A14芯片\n\n## 下载方式\n\n1. **PC端**: 前往官网 gh.sarosgame.com 下载客户端\n2. **安卓**: TapTap、好游快爆等平台下载\n3. **iOS**: App Store 搜索「归环」",
+    "contentEn": "## System Requirements\n\n### PC\n- OS: Windows 10 64-bit or above\n- CPU: Intel i5 / equivalent AMD\n- RAM: 8GB\n- GPU: NVIDIA GTX 1060 6GB\n- Storage: 40GB\n\n### Mobile\n- Android: Snapdragon 845+, 6GB RAM\n- iOS: iPhone 12+, A14 chip\n\n## Download\n\n1. **PC**: Visit the official site gh.sarosgame.com\n2. **Android**: TapTap, 3839 and other platforms\n3. **iOS**: Search 'Guihuan' on the App Store",
+    "tags": [
+      "下载",
+      "安装",
+      "平台",
+      "Download",
+      "Install",
+      "新手"
+    ],
+    "faq": [
+      {
+        "question": "Is Guihuan available on all platforms?",
+        "questionZh": "归环支持哪些平台？",
+        "answer": "Guihuan supports PC, Android, and iOS with cross-save functionality.",
+        "answerZh": "归环支持PC、安卓和iOS平台，支持跨平台存档互通。"
+      },
+      {
+        "question": "What are the minimum system requirements for PC?",
+        "questionZh": "PC端最低配置要求是什么？",
+        "answer": "Minimum PC specs are Windows 10 64-bit, Intel i5 processor, 8GB RAM, GTX 1060 6GB GPU, and 40GB storage. For a smoother experience, 16GB RAM and RTX 2060 or better are recommended.",
+        "answerZh": "PC最低配置为Windows 10 64位、Intel i5处理器、8GB内存、GTX 1060 6GB显卡和40GB存储空间。如需更流畅的体验，建议16GB内存和RTX 2060及以上显卡。"
+      },
+      {
+        "question": "Which platform is best for playing Guihuan?",
+        "questionZh": "归环在哪个平台体验最好？",
+        "answer": "PC offers the best graphics and performance. Mobile is convenient for dailies on the go. Since cross-save is supported, many players use PC at home and mobile when outside.",
+        "answerZh": "PC端画质和性能最佳，移动端方便随时随地做日常。由于支持跨平台存档互通，很多玩家在家用PC、出门用手机。"
+      }
+    ]
+  },
+  {
+    "id": "spirit-system-guide",
+    "title": "使灵系统详解 — 流派选择与搭配指南",
+    "titleEn": "Spirit System Guide — Style Selection and Synergy",
+    "category": "combat",
+    "categoryZh": "战斗攻略",
+    "categoryEn": "Combat",
+    "summary": "深入解析归环的使灵流派系统，教你如何选择最佳流派组合和队伍搭配。",
+    "summaryEn": "Deep dive into Guihuan's Spirit style system — learn how to choose the best style combinations and team synergies.",
+    "content": "## 使灵流派系统\n\n每个角色拥有独立的使灵，使灵拥有4种战斗流派。玩家从中选择2种搭配使用，不同的流派组合会显著改变角色的定位。\n\n### 流派详解\n\n**强攻流**\n- 特点：高额直接伤害\n- 适合：主C角色\n- 代表角色：明珏、初\n\n**追击流**\n- 特点：队友攻击后概率触发追加攻击\n- 适合：副C角色\n- 代表角色：朱雀\n\n**灵愈流**\n- 特点：治疗、护盾、增益\n- 适合：辅助角色\n- 代表角色：艾尔、素音\n\n**控场流**\n- 特点：冻结、眩晕、减益\n- 适合：控制角色\n- 代表角色：雅琪\n\n### 推荐搭配\n\n- 主C: 强攻 + 追击（最大化输出）\n- 副C: 追击 + 控场（辅助输出+控制）\n- 辅助: 灵愈 + 控场（保命+控场）",
+    "contentEn": "## Spirit Style System\n\nEach character has their own Spirit companion with 4 combat styles. Players choose 2 to equip — different combinations significantly change a character's role.\n\n### Style Breakdown\n\n**Assault Style**\n- Feature: High direct damage\n- Best for: Main DPS\n- Representative: Mingzhe, Chu\n\n**Follow-up Style**\n- Feature: Chance to trigger extra attacks after ally hits\n- Best for: Sub-DPS\n- Representative: Zhuque\n\n**Healing Style**\n- Feature: Healing, shields, buffs\n- Best for: Support\n- Representative: Airu, Suyin\n\n**Control Style**\n- Feature: Freeze, stun, debuffs\n- Best for: CC units\n- Representative: Yaqi\n\n### Recommended Combos\n\n- Main DPS: Assault + Follow-up (maximize damage)\n- Sub-DPS: Follow-up + Control (support damage + CC)\n- Support: Healing + Control (sustain + CC)",
+    "tags": [
+      "使灵",
+      "流派",
+      "战斗",
+      "Spirit",
+      "Style",
+      "Combat"
+    ],
+    "faq": [
+      {
+        "question": "Can I change Spirit styles later?",
+        "questionZh": "之后能更换使灵流派吗？",
+        "answer": "Yes, you can switch between styles freely outside of combat.",
+        "answerZh": "可以，在非战斗状态下可以自由切换流派搭配。"
+      },
+      {
+        "question": "Which Spirit style is best for beginners?",
+        "questionZh": "新手适合选哪种使灵流派？",
+        "answer": "Assault + Follow-up is the most beginner-friendly combo. It provides strong damage output without complex setup, letting you learn combat mechanics comfortably.",
+        "answerZh": "强攻+追击是最适合新手的流派组合，输出强力且操作简单，能让你轻松上手战斗系统。"
+      },
+      {
+        "question": "Can I reset my Spirit type if I picked the wrong one?",
+        "questionZh": "选错使灵流派可以重置吗？",
+        "answer": "There is no permanent commitment — you can freely swap style loadouts outside of combat at any time. Experiment freely to find what suits your playstyle.",
+        "answerZh": "不存在永久绑定，在非战斗状态下随时可以自由更换流派搭配，大胆尝试不同的组合吧。"
+      }
+    ]
+  },
+  {
+    "id": "tier-list-guide",
+    "title": "《归环》开服角色节奏榜",
+    "titleEn": "Guihuan Launch Character Tier List",
+    "category": "tier-list",
+    "categoryZh": "节奏榜",
+    "categoryEn": "Tier List",
+    "summary": "归环开服全角色强度排行，包含各定位角色推荐和培养优先级。",
+    "summaryEn": "Complete launch character tier list for Guihuan, including role recommendations and build priority.",
+    "content": "## SS级角色\n\n### 限定核心\n\n- **初** (光辉/进攻) — 核心限定SSR，顶级输出+增益\n- **艾尔** (霜寒/灵愈) — 最强治疗，护盾+回复\n\n### 最强辅助\n\n- **璃洛** (疾风/增益) — 最强辅助，全队增益\n- **明珏** (烈焰/进攻) — 顶级烈焰主C\n\n## S级角色\n\n### 输出与副攻\n\n- **亚伦** (雷霆/副攻) — 优秀后台输出+减防\n- **黑莲** (虚空/进攻) — 强力单体输出\n\n## A级角色\n\n### 控制与副C\n\n- **雅琪** (霜寒/控制) — 最强控制角色\n- **朱雀** (烈焰/追击) — 优秀追击副C\n- **夜兰** (雷霆/进攻) — 最强四星输出\n\n## B级角色\n\n### 过渡与辅助\n\n- **素音** (疾风/灵愈) — 前期免费治疗\n- **谷寒** (霜寒/副攻) — 减防辅助\n- **晨曦** (光辉/增益) — 四星增伤辅助",
+    "contentEn": "## SS Tier\n\n### Limited Core\n\n- **Chu** (Radiance/Attack) — Core limited SSR, top DPS + utility\n- **Airu** (Frost/Support) — Best healer, shields + sustain\n\n### Top Supports\n\n- **Liro** (Gale/Buffer) — Best support, team-wide buffs\n- **Mingzhe** (Flame/Attack) — Top Flame main DPS\n\n## S Tier\n\n### DPS & Sub-DPS\n\n- **Yalun** (Thunder/Sub-DPS) — Excellent off-field DPS + DEF shred\n- **Heilian** (Void/Attack) — Strong single-target DPS\n\n## A Tier\n\n### Control & Sub-DPS\n\n- **Yaqi** (Frost/Control) — Best crowd control\n- **Zhuque** (Flame/Follow-up) — Solid follow-up sub-DPS\n- **Yelan** (Thunder/Attack) — Best 4-star DPS\n\n## B Tier\n\n### Transition & Support\n\n- **Suyin** (Gale/Support) — Early free healer\n- **Guhan** (Frost/Sub-DPS) — DEF shred support\n- **Chenxi** (Radiance/Buffer) — 4-star ATK buffer",
+    "tags": [
+      "节奏榜",
+      "强度",
+      "排行",
+      "Tier List",
+      "Ranking",
+      "强度榜"
+    ],
+    "faq": [
+      {
+        "question": "Who should I pull first?",
+        "questionZh": "第一个应该抽谁？",
+        "answer": "Chu is the recommended first pull as the core story DPS. Airu is the best support to pull next.",
+        "answerZh": "推荐先抽初作为核心输出，其次抽艾尔获取最强治疗辅助。"
+      },
+      {
+        "question": "How often is the tier list updated?",
+        "questionZh": "节奏榜多久更新一次？",
+        "answer": "The tier list is updated with each major patch when new characters are released. Mid-patch adjustments are made if balance changes significantly affect rankings.",
+        "answerZh": "节奏榜会在每次大型版本更新时随新角色上线一起更新。如果中间有重大平衡调整，也会相应修改排名。"
+      },
+      {
+        "question": "Should I only build top-tier characters?",
+        "questionZh": "只练T0角色吗？",
+        "answer": "No — A-tier and even B-tier characters can clear all content with proper investment. Build characters you enjoy, especially since Abyss requires multiple teams with diverse elements.",
+        "answerZh": "不一定——A级甚至B级角色在合理投入后也能通关所有内容。练自己喜欢的角色就好，尤其是深渊需要多支不同元素队伍。"
+      }
+    ]
+  },
+  {
+    "id": "exploration-guide",
+    "title": "亚达尔大陆探索指南 — 滑空匣与隐藏宝箱",
+    "titleEn": "Yadaer Exploration Guide — Hover Glider & Hidden Chests",
+    "category": "exploration",
+    "categoryZh": "探索攻略",
+    "categoryEn": "Exploration",
+    "summary": "亚达尔大陆探索指南：滑空匣收集、隐藏宝箱、全地图沉浸式2K实景演示。归环独特美术风格的最佳探索路线。",
+    "summaryEn": "Complete guide to exploring the continent of Yadaer, including Hover Glider tips, Spirit vein gathering, hidden chests, and NPC interactions.",
+    "content": "## 滑空匣系统\n\n滑空匣是上古灵器，点亮源晶后可使用。支持三种模式：\n\n- **陆地模式**: 高速滑行，无视小型障碍物\n- **水面模式**: 水面滑行，不消耗体力\n- **空中模式**: 短暂飞行，跨越地形\n\n### 使用技巧\n\n1. 在高处起飞可获得更长的空中滑翔距离\n2. 遇到灵脉加速点时冲过去可获得额外加速\n3. 滑空匣有耐久度，在灵脉节点可恢复\n\n## 隐藏宝箱\n\n亚达尔大陆遍布隐藏宝箱，部分需要：\n- 特定元素的颂灵术解锁\n- 骰子检定成功才能打开\n- 在特定时间循环日才会出现\n\n## NPC交互\n\n每个命名NPC都可交互，拥有完整的个人档案：\n- 姓名、年龄、职业\n- 性格和喜好\n- 随身物品（可偷窃）\n- 好感度系统\n\n### 全地图沉浸式实景演示（2026年6月更新）\n\n社区已发布归环全地图2K沉浸式实景演示视频，带你领略独属于归环的地图美术：\n\n#### 新增探索内容\n\n1. **亚达尔大陆全貌** — 2K画质实景漫游，展示完整地图风貌\n2. **隐藏区域发现** — 通过沉浸式探索发现之前遗漏的隐藏区域\n3. **滑空匣新路线** — 利用滑空匣发现全新的探索路线\n4. **地图美术细节** — 归环独特的美术风格在2K分辨率下更加精美\n\n#### 探索建议\n\n- **按区域推进**: 不要急于赶进度，每个区域都有丰富的细节\n- **滑空匣全收集**: 滑空匣是探索的核心工具，优先解锁全部\n- **隐藏宝箱**: 注意观察环境中的异常，可能隐藏宝箱\n- **沉浸式体验**: 归环的地图美术是其最大卖点，建议慢节奏探索",
+    "contentEn": "## Hover Glider System\n\nThe Hover Glider is an ancient Spirit tool activated by lighting source crystals. Three modes:\n\n- **Land Mode**: High-speed gliding, ignores small obstacles\n- **Water Mode**: Glide across water without stamina cost\n- **Air Mode**: Short flight, cross terrain gaps\n\n### Tips\n\n1. Launch from high ground for longer air glides\n2. Hit Spirit vein boost points for extra speed\n3. The glider has durability; recharge at Spirit vein nodes\n\n## Hidden Chests\n\nYadaer is filled with hidden chests. Some require:\n- Specific elemental Spirit chanting to unlock\n- Successful dice checks to open\n- Appearing only on specific loop days\n\n## NPC Interaction\n\nEvery named NPC is interactable with full profiles:\n- Name, age, profession\n- Personality and preferences\n- Carried items (can be pickpocketed)\n- Affinity system",
+    "tags": [
+      "探索",
+      "滑空匣",
+      "宝箱",
+      "Exploration",
+      "Hover Glider",
+      "Chests"
+    ],
+    "faq": [
+      {
+        "question": "How do I get the Hover Glider?",
+        "questionZh": "怎么获得滑空匣？",
+        "answer": "The Hover Glider is obtained during the main story quest in Chapter 1, after visiting the Spirit Academy.",
+        "answerZh": "滑空匣在第一章主线剧情中，访问颂灵学院后自动获得。"
+      },
+      {
+        "question": "How do I find hidden areas?",
+        "questionZh": "怎么找到隐藏区域？",
+        "answer": "Look for unusual terrain features like cracked walls, glowing Spirit veins, and areas only reachable with the Hover Glider's air mode. Some hidden areas only appear on specific loop days.",
+        "answerZh": "留意特殊地形特征如裂缝墙壁、发光灵脉，以及需要滑空匣空中模式才能到达的位置。部分隐藏区域只在特定循环日出现。"
+      },
+      {
+        "question": "What is the best exploration order?",
+        "questionZh": "探索的最佳顺序是什么？",
+        "answer": "Follow the main story first to unlock all regions and the Hover Glider. Then explore each region fully before moving on, starting with the starting area and progressing outward. Prioritize activating Spirit vein nodes for fast travel.",
+        "answerZh": "先跟随主线解锁所有区域和滑空匣，然后从起始区域开始逐片完全探索再推进下一片。优先激活灵脉节点以开启传送。"
+      }
+    ]
+  },
+  {
+    "id": "time-loop-mechanic",
+    "title": "时间循环机制详解 — 42天循环与分支剧情",
+    "titleEn": "Time Loop Mechanic Guide — 42-Day Cycle & Branching Story",
+    "category": "mechanic",
+    "categoryZh": "机制解析",
+    "categoryEn": "Mechanics",
+    "summary": "深入解析归环的核心时间循环机制，包括42天死亡循环、骰子检定、分支选择和多结局解锁。",
+    "summaryEn": "Deep dive into Guihuan's core time loop mechanic, including the 42-day death cycle, dice checks, branching choices, and multiple endings.",
+    "content": "## 42天循环机制\n\n归环的核心玩法围绕42天时间循环展开：\n\n- 每次循环持续游戏内42天\n- 死亡后重启循环，但保留角色养成进度\n- 每次循环可以做出不同选择，解锁新的剧情分支\n- 收集的线索和记忆会在循环间累积\n\n## 骰子检定系统\n\n游戏中几乎所有交互都可能触发D20骰子检定：\n\n- **说服NPC**: 基于魅力属性\n- **威吓NPC**: 基于力量属性\n- **观察线索**: 基于感知属性\n- **偷窃物品**: 基于敏捷属性\n\n### 特殊骰子机制\n\n- **重投**: 消耗预言点数重新投掷\n- **多投**: 投掷多个骰子取最高\n- **预言点数**: 通过探索和战斗获得\n\n## 分支剧情\n\n关键剧情节点会出现4个选项：\n\n1. 每个选择通向不同的发展\n2. 可以在循环中回溯体验所有分支\n3. 部分支线任务也有独立分支\n4. 累积足够线索可解锁隐藏结局",
+    "contentEn": "## 42-Day Cycle Mechanic\n\nGuihuan's core gameplay revolves around the 42-day time loop:\n\n- Each loop lasts 42 in-game days\n- Death restarts the loop, but character progression is retained\n- Each loop lets you make different choices, unlocking new story branches\n- Clues and memories accumulate across loops\n\n## Dice Check System\n\nNearly all interactions can trigger a D20 dice check:\n\n- **Persuade NPCs**: Based on Charisma stat\n- **Intimidate NPCs**: Based on Strength stat\n- **Observe Clues**: Based on Perception stat\n- **Pickpocket Items**: Based on Agility stat\n\n### Special Dice Mechanics\n\n- **Reroll**: Spend prediction points to reroll\n- **Multi-roll**: Roll multiple dice, take the highest\n- **Prediction Points**: Earned through exploration and combat\n\n## Branching Story\n\nKey story nodes offer 4 choices:\n\n1. Each choice leads to different developments\n2. You can revisit and experience all branches across loops\n3. Some side quests have independent branches\n4. Accumulating enough clues unlocks hidden endings",
+    "tags": [
+      "时间循环",
+      "机制",
+      "骰子",
+      "分支",
+      "Time Loop",
+      "Mechanic",
+      "Dice"
+    ],
+    "faq": [
+      {
+        "question": "Do I lose progress when the loop resets?",
+        "questionZh": "循环重置会丢失进度吗？",
+        "answer": "No, your character level, items, and abilities persist across loops. Only story progress resets, which is intentional.",
+        "answerZh": "不会，角色等级、物品和能力在循环间保留。只有剧情进度会重置，这是设计如此。"
+      },
+      {
+        "question": "What exactly carries over between loops?",
+        "questionZh": "循环之间具体保留什么？",
+        "answer": "Character levels, Spirit builds, equipment, currencies, and collected clues all carry over. Story flags, NPC affinity, and quest progress reset with each new loop.",
+        "answerZh": "角色等级、使灵养成、装备、货币和已收集的线索都会保留。剧情标记、NPC好感度和任务进度会在每次循环中重置。"
+      },
+      {
+        "question": "How many loops does it take to finish the story?",
+        "questionZh": "完成剧情需要几次循环？",
+        "answer": "The main story takes roughly 3-4 loops to complete. To unlock all branches and the hidden ending, expect 6-8 loops. Speed runners can finish in 2 loops by optimizing choices.",
+        "answerZh": "主线剧情大约需要3-4次循环完成。要解锁所有分支和隐藏结局，预计需要6-8次循环。速通玩家优化选择后可在2次循环内完成。"
+      }
+    ]
+  },
+  {
+    "id": "spirit-build-guide",
+    "title": "使灵培养与配装指南",
+    "titleEn": "Spirit Building & Equipment Guide",
+    "category": "equipment",
+    "categoryZh": "装备攻略",
+    "categoryEn": "Equipment",
+    "summary": "详解使灵的养成路线，包括升级、突破、装备选择和词条优先级。",
+    "summaryEn": "Complete guide to Spirit development including leveling, ascension, equipment selection, and stat priority.",
+    "content": "## 使灵培养与配装指南\n\n### 一、养成优先级\n\n1. **等级提升** → 2. **突破** → 3. **核心技能** → 4. **装备** → 5. **词条优化**\n\n### 二、等级与突破\n\n- 使灵最高等级随主角等级解锁\n- 突破需要特定材料（区域Boss掉落 + 日常副本）\n- **优先突破主C使灵**，辅助可以暂缓\n- 每次突破大幅提升基础属性并解锁新技能\n\n### 三、装备系统\n\n| 装备部位 | 主属性 | 说明 |\n|----------|--------|------|\n| 武器 | 攻击力/元素伤害 | 主C最优先强化 |\n| 头盔 | 生命值/防御 | 提升生存 |\n| 胸甲 | 防御力/伤害减免 | 坦克位优先 |\n| 饰品 | 暴击率/元素精通 | 输出核心 |\n| 靴子 | 速度/攻击力% | 决定行动顺序 |\n\n### 四、词条优先级\n\n**输出使灵**：暴击率 > 暴击伤害 > 攻击力% > 元素伤害\n**辅助使灵**：速度 > 生命% > 效果命中 > 能量回复\n**坦克使灵**：防御% > 生命% > 伤害减免 > 效果抵抗\n\n### 五、装备获取途径\n\n- **日常副本**：主要来源，每天刷取\n- **区域Boss**：掉落特定套装\n- **活动兑换**：限时活动可获得高品质装备\n- **商店兑换**：使用副本货币兑换指定装备",
+    "contentEn": "## Spirit Building & Equipment Guide\n\n### 1. Priority Order\n\n1. **Level Up** → 2. **Ascension** → 3. **Core Skills** → 4. **Equipment** → 5. **Stat Optimization**\n\n### 2. Level & Ascension\n\n- Max Spirit level unlocks with protagonist level\n- Ascension requires specific materials (Region Boss drops + daily dungeons)\n- **Prioritize ascending your main DPS Spirit**, supports can wait\n- Each ascension significantly boosts base stats and unlocks new skills\n\n### 3. Equipment System\n\n| Slot | Main Stat | Notes |\n|------|-----------|-------|\n| Weapon | ATK/Elemental DMG | Prioritize for DPS |\n| Helmet | HP/DEF | Survival |\n| Chest Armor | DEF/DMG Reduction | Tank priority |\n| Accessory | CRIT Rate/EM | DPS core |\n| Boots | SPD/ATK% | Determines turn order |\n\n### 4. Stat Priority\n\n**DPS Spirits**: CRIT Rate > CRIT DMG > ATK% > Elemental DMG\n**Support Spirits**: SPD > HP% > Effect Hit > Energy Regen\n**Tank Spirits**: DEF% > HP% > DMG Reduction > Effect Resist\n\n### 5. Equipment Sources\n\n- **Daily Dungeons**: Main source, farm daily\n- **Region Bosses**: Drop specific set pieces\n- **Event Exchange**: Limited events offer high-quality gear\n- **Shop Exchange**: Use dungeon currency for targeted pieces",
+    "tags": [
+      "装备",
+      "培养",
+      "使灵",
+      "Equipment",
+      "Building",
+      "Spirit"
+    ],
+    "faq": [
+      {
+        "question": "Which equipment set should I prioritize?",
+        "questionZh": "优先刷哪个装备套装？",
+        "answer": "The universal DPS set from daily dungeons is the best starting point. After that, farm region-specific sets for your main Spirits.",
+        "answerZh": "日常副本的通用输出套装是最佳起点。之后刷主C使灵对应的区域专属套装。"
+      },
+      {
+        "question": "How to get rare equipment?",
+        "questionZh": "怎么获取稀有装备？",
+        "answer": "Higher difficulty dungeons and Region Bosses on hard mode drop rare equipment. Events also offer guaranteed high-rarity pieces.",
+        "answerZh": "高难度副本和困难模式的区域Boss掉落稀有装备。活动也会提供保底的高品质装备。"
+      }
+    ]
+  },
+  {
+    "id": "element-combo-guide",
+    "title": "元素搭配与反应攻略",
+    "titleEn": "Element Combination & Reaction Guide",
+    "category": "combat",
+    "categoryZh": "战斗攻略",
+    "categoryEn": "Combat",
+    "summary": "深入解析归环6种元素的搭配机制，包括元素反应、流派组合和实战运用。",
+    "summaryEn": "Deep dive into Guihuan's 6-element system including reactions, school combinations, and combat applications.",
+    "content": "## 元素搭配与反应攻略\n\n### 一、6种元素概览\n\n| 元素 | 定位 | 代表效果 |\n|------|------|----------|\n| 烈焰 | 高爆发 | 范围灼烧 |\n| 霜寒 | 控制 | 冻结减速 |\n| 雷霆 | 持续伤害 | 连锁雷击 |\n| 疾风 | 聚怪扩散 | 吸引+扩散 |\n| 光辉 | 增益治疗 | 全队回复 |\n| 虚空 | 减益debuff | 削弱敌人 |\n\n### 二、元素反应\n\n**蒸发反应**\n- 烈焰 + 霜寒 → 融化爆发，高额单体伤害\n- 适合Boss战的单体爆发\n\n**超导反应**\n- 雷霆 + 霜寒 → 超导减防，降低敌人防御力\n- 适合长时间战斗\n\n**扩散反应**\n- 疾风 + 任意元素 → 扩散到周围敌人\n- 适合清理大量小怪\n\n**消融反应**\n- 虚空 + 烈焰 → 消融，无视部分防御的灼烧\n- 对高防敌人效果显著\n\n### 三、推荐流派\n\n1. **融化流**：烈焰主C + 霜寒辅助 + 光辉治疗\n2. **超导流**：雷霆持续 + 霜寒减防 + 虚空debuff\n3. **扩散流**：疾风聚怪 + 雷霆群伤 + 光辉回复\n4. **虚空debuff流**：虚空削防 + 任意主C + 辅助",
+    "contentEn": "## Element Combination & Reaction Guide\n\n### 1. Six Elements Overview\n\n| Element | Role | Key Effect |\n|---------|------|------------|\n| Flame | Burst damage | AoE burn |\n| Frost | Control | Freeze & slow |\n| Thunder | Sustained DMG | Chain lightning |\n| Gale | Grouping & spread | Attract + spread |\n| Radiance | Buffs & healing | Team recovery |\n| Void | Debuffs | Weaken enemies |\n\n### 2. Elemental Reactions\n\n**Melt**\n- Flame + Frost → Melt burst, high single-target damage\n- Great for boss fights\n\n**Superconduct**\n- Thunder + Frost → DEF shred, reduces enemy defense\n- Ideal for prolonged fights\n\n**Spread**\n- Gale + any element → Spreads to nearby enemies\n- Best for clearing mob groups\n\n**Dissolve**\n- Void + Flame → Dissolve, DEF-ignoring burn\n- Effective against high-DEF enemies\n\n### 3. Recommended Schools\n\n1. **Melt**: Flame DPS + Frost support + Radiance healer\n2. **Superconduct**: Thunder sustain + Frost DEF shred + Void debuff\n3. **Spread**: Gale grouping + Thunder AoE + Radiance recovery\n4. **Void Debuff**: Void DEF shred + any DPS + support",
+    "tags": [
+      "元素",
+      "反应",
+      "搭配",
+      "Element",
+      "Reaction",
+      "Combo"
+    ],
+    "faq": [
+      {
+        "question": "Which element combination is best for beginners?",
+        "questionZh": "新手推荐哪种元素组合？",
+        "answer": "Flame + Frost (Melt) is the most beginner-friendly with high burst damage. Add a Radiance healer for survival.",
+        "answerZh": "烈焰+霜寒（融化）最适合新手，爆发伤害高。搭配光辉治疗保证生存。"
+      },
+      {
+        "question": "Can I use multiple elements on one Spirit?",
+        "questionZh": "一个使灵能用多种元素吗？",
+        "answer": "Each Spirit has a primary element, but equipment and skills can add secondary elemental effects. Focus on your Spirit's primary element for best results.",
+        "answerZh": "每个使灵有主元素，但装备和技能可以附加副元素效果。建议围绕主元素搭配以获得最佳效果。"
+      }
+    ]
+  },
+  {
+    "id": "progression-guide",
+    "title": "角色养成与资源规划",
+    "titleEn": "Character Progression & Resource Planning",
+    "category": "progression",
+    "categoryZh": "进阶攻略",
+    "categoryEn": "Progression",
+    "summary": "归环角色养成完全指南，包括每日必做、资源分配和养成优先级。",
+    "summaryEn": "Complete Guihuan progression guide covering daily routine, resource allocation, and building priorities.",
+    "content": "## 角色养成与资源规划\n\n### 一、每日必做清单\n\n| 任务 | 奖励 | 耗时 |\n|------|------|------|\n| 日常委托 | 经验/货币 | 10分钟 |\n| 体力消耗 | 材料/装备 | 15分钟 |\n| 区域扫荡 | 区域特产 | 10分钟 |\n| 骰子挑战 | 预言点数 | 5分钟 |\n| 商店兑换 | 突破材料 | 2分钟 |\n\n### 二、资源分配优先级\n\n**前期（1-20级）**\n- 主线推进 > 日常委托 > 体力消耗\n- 不建议刷装备，用任务送的过渡\n- 优先提升主角和主C使灵等级\n\n**中期（20-40级）**\n- 日常副本 > 使灵突破 > 技能升级\n- 开始有目标地刷装备套装\n- 解锁更多循环内容\n\n**后期（40级+）**\n- 装备优化 > 使灵毕业 > 全角色培养\n- 挑战高难度内容\n- 完成所有剧情分支\n\n### 三、体力规划\n\n- 自然恢复体力必须每天用完\n- 优先刷主C的突破材料\n- 有活动时优先刷活动副本\n- 周末双倍收益副本不要错过\n\n### 四、货币管理\n\n- **金币**：永远不够，优先花在主C上\n- **副本币**：攒够换保底装备\n- **活动币**：限时货币，优先兑换稀有材料",
+    "contentEn": "## Character Progression & Resource Planning\n\n### 1. Daily Checklist\n\n| Task | Reward | Time |\n|------|--------|------|\n| Daily Commissions | EXP/Currency | 10 min |\n| Spend Stamina | Materials/Equipment | 15 min |\n| Region Sweep | Region Specialties | 10 min |\n| Dice Challenge | Prediction Points | 5 min |\n| Shop Exchange | Ascension Materials | 2 min |\n\n### 2. Resource Priority\n\n**Early Game (Lv1-20)**\n- Main story > Daily commissions > Stamina\n- Don't farm equipment — use quest rewards\n- Prioritize protagonist and main DPS Spirit levels\n\n**Mid Game (Lv20-40)**\n- Daily dungeons > Spirit ascension > Skill upgrades\n- Start targeted equipment set farming\n- Unlock more loop content\n\n**Late Game (Lv40+)**\n- Equipment optimization > Spirit completion > Full roster building\n- Challenge high-difficulty content\n- Complete all story branches\n\n### 3. Stamina Planning\n\n- Always spend natural stamina daily\n- Prioritize main DPS ascension materials\n- During events, prioritize event dungeons\n- Don't miss weekend double-reward dungeons\n\n### 4. Currency Management\n\n- **Gold**: Never enough — spend on DPS first\n- **Dungeon coins**: Save for guaranteed equipment\n- **Event currency**: Time-limited, prioritize rare materials",
+    "tags": [
+      "养成",
+      "资源",
+      "规划",
+      "Progression",
+      "Resources",
+      "Planning"
+    ],
+    "faq": [
+      {
+        "question": "What should I spend stamina on first?",
+        "questionZh": "体力优先刷什么？",
+        "answer": "Early game: Ascension materials for your main DPS. Mid game: Equipment sets. Late game: Stat optimization materials.",
+        "answerZh": "前期：主C的突破材料。中期：装备套装。后期：词条优化材料。"
+      },
+      {
+        "question": "When should I start farming equipment?",
+        "questionZh": "什么时候开始刷装备？",
+        "answer": "Start targeted equipment farming around level 20-25 when you unlock higher-tier dungeons. Before that, use quest and event rewards — they are good enough for early content.",
+        "answerZh": "大约在20-25级解锁高阶副本后开始有目标地刷装备。之前用任务和活动送的装备过渡即可。"
+      }
+    ]
+  },
+  {
+    "id": "gacha-guide",
+    "title": "召唤系统与抽卡攻略",
+    "titleEn": "Summoning System & Gacha Guide",
+    "category": "system",
+    "categoryZh": "系统攻略",
+    "categoryEn": "System",
+    "summary": "归环召唤系统详解，包括保底机制、卡池类型和抽卡策略。",
+    "summaryEn": "Complete Guihuan summoning guide covering pity mechanics, banner types, and pulling strategy.",
+    "content": "## 召唤系统与抽卡攻略\n\n### 一、卡池类型\n\n| 卡池 | SSR概率 | 保底 | 建议 |\n|------|---------|------|------|\n| 限定召唤 | 1.5% | 100抽保底 | 优先投入 |\n| 常驻召唤 | 1.5% | 100抽保底 | 免费票抽 |\n| 使灵召唤 | 2.0% | 80抽保底 | 按需抽取 |\n| 新手召唤 | 3.0% | 30抽保底SSR | 必抽 |\n\n### 二、保底机制\n\n- **硬保底**：100抽必出SSR\n- **软保底**：约70抽起概率逐步提升\n- **大保底**：歪了非UP角色后，下次必出UP\n- 保底计数在同类型卡池间继承\n\n### 三、抽卡策略\n\n1. **新手池优先**：30抽保底SSR，必抽\n2. **存够保底再抽**：至少攒够80抽再下池\n3. **优先限定角色**：限定角色通常比常驻更强\n4. **不要分散**：集中在一个池子抽，不要东抽西抽\n\n### 四、免费资源获取\n\n- 每日任务：约100召唤货币/天\n- 周常任务：约500/周\n- 活动奖励：每版本约2000-3000\n- 循环进度：首次通关奖励丰厚\n- 成就系统：一次性大量奖励",
+    "contentEn": "## Summoning System & Gacha Guide\n\n### 1. Banner Types\n\n| Banner | SSR Rate | Pity | Recommendation |\n|--------|----------|------|----------------|\n| Limited Summon | 1.5% | 100 pity | Priority |\n| Standard Summon | 1.5% | 100 pity | Use free tickets |\n| Spirit Summon | 2.0% | 80 pity | Pull as needed |\n| Beginner Summon | 3.0% | 30 pity SSR | Must pull |\n\n### 2. Pity Mechanics\n\n- **Hard pity**: Guaranteed SSR at 100 pulls\n- **Soft pity**: Rates increase from ~70 pulls\n- **Guarantee**: If you lose 50/50, next SSR is featured\n- Pity carries over between same banner types\n\n### 3. Pulling Strategy\n\n1. **Beginner banner first**: 30-pity SSR is a must\n2. **Save for pity**: Accumulate at least 80 pulls before pulling\n3. **Limited characters priority**: Limited usually stronger than standard\n4. **Don't spread pulls**: Focus on one banner at a time\n\n### 4. Free Resource Sources\n\n- Daily tasks: ~100 summon currency/day\n- Weekly tasks: ~500/week\n- Event rewards: ~2000-3000 per patch\n- Loop progress: Generous first-clear rewards\n- Achievement system: Large one-time rewards",
+    "tags": [
+      "召唤",
+      "抽卡",
+      "保底",
+      "Summon",
+      "Gacha",
+      "Pity"
+    ],
+    "faq": [
+      {
+        "question": "Should I pull for SSR characters or SSR Spirits?",
+        "questionZh": "抽SSR角色还是SSR使灵？",
+        "answer": "Prioritize SSR characters first — they provide more team flexibility. SSR Spirits can be supplemented with free alternatives.",
+        "answerZh": "优先抽SSR角色，角色带来更多配队灵活性。SSR使灵可以用免费替代品过渡。"
+      },
+      {
+        "question": "Is the beginner banner worth it?",
+        "questionZh": "新手池值得抽吗？",
+        "answer": "Absolutely. The 30-pity SSR guarantee is the best value in the game. Pull it to completion before anything else.",
+        "answerZh": "非常值得。30抽保底SSR是游戏里性价比最高的，优先抽完新手池再考虑其他。"
+      }
+    ]
+  },
+  {
+    "id": "region-boss-guide",
+    "title": "区域Boss攻略",
+    "titleEn": "Region Boss Guide",
+    "category": "combat",
+    "categoryZh": "战斗攻略",
+    "categoryEn": "Combat",
+    "summary": "归环各区域Boss详解，包括机制、弱点和推荐阵容。",
+    "summaryEn": "Detailed Guihuan Region Boss guide covering mechanics, weaknesses, and recommended teams.",
+    "content": "## 区域Boss攻略\n\n### 一、Boss机制概述\n\n每个区域有一个专属Boss，击败后掉落稀有装备和突破材料。\n\n- Boss每24小时可挑战一次\n- 困难模式在通关主线后解锁\n- 困难模式掉落概率更高\n- 部分Boss有特殊机制需要特定策略\n\n### 二、各区域Boss详解\n\n**烈焰之主**\n- 弱点：霜寒元素\n- 机制：周期性释放全屏火焰AOE\n- 策略：霜寒角色冻结打断AOE，光辉角色维持治疗\n- 推荐阵容：霜寒主C + 光辉治疗 + 疾风聚怪\n\n**霜寒巨兽**\n- 弱点：烈焰元素\n- 机制：召唤冰墙阻挡，冰墙需要打破\n- 策略：烈焰角色快速破冰，雷霆角色持续输出\n- 推荐阵容：烈焰主C + 雷霆副C + 辅助\n\n**虚空领主**\n- 弱点：光辉元素\n- 机制：施加大量debuff，降低队伍属性\n- 策略：光辉角色净化debuff并治疗\n- 推荐阵容：光辉主C/治疗 + 高爆发输出\n\n### 三、通用Boss技巧\n\n1. 观察Boss攻击前摇，及时闪避\n2. 利用骰子检定在Boss战中获得优势\n3. 保持队伍血量健康，不要贪输出\n4. 合理使用使灵大招打出爆发",
+    "contentEn": "## Region Boss Guide\n\n### 1. Boss Overview\n\nEach region has a unique boss that drops rare equipment and ascension materials.\n\n- Challengeable once every 24 hours\n- Hard mode unlocks after clearing main story\n- Hard mode has better drop rates\n- Some bosses have special mechanics requiring specific strategies\n\n### 2. Region Boss Details\n\n**Flame Lord**\n- Weakness: Frost element\n- Mechanic: Periodic screen-wide flame AoE\n- Strategy: Frost characters freeze to interrupt AoE, Radiance for healing\n- Team: Frost DPS + Radiance healer + Gale for grouping\n\n**Frost Behemoth**\n- Weakness: Flame element\n- Mechanic: Summons ice walls that must be destroyed\n- Strategy: Flame chars break ice fast, Thunder for sustained damage\n- Team: Flame DPS + Thunder sub-DPS + Support\n\n**Void Overlord**\n- Weakness: Radiance element\n- Mechanic: Applies many debuffs reducing team stats\n- Strategy: Radiance characters cleanse debuffs and heal\n- Team: Radiance DPS/Healer + High burst damage\n\n### 3. General Boss Tips\n\n1. Watch boss attack windups, dodge timely\n2. Use dice checks to gain advantages in boss fights\n3. Keep team HP healthy, don't greed for damage\n4. Save Spirit ultimates for burst windows",
+    "tags": [
+      "Boss",
+      "区域",
+      "攻略",
+      "Boss",
+      "Region",
+      "Strategy"
+    ],
+    "faq": [
+      {
+        "question": "How often can I fight Region Bosses?",
+        "questionZh": "区域Boss多久能打一次？",
+        "answer": "Once every 24 hours per boss. Hard mode shares the same cooldown. Plan which bosses to fight based on your material needs.",
+        "answerZh": "每个Boss每24小时可挑战一次。困难模式共享冷却。根据材料需求规划打哪个Boss。"
+      },
+      {
+        "question": "Can I co-op Region Bosses with other players?",
+        "questionZh": "区域Boss可以联机打吗？",
+        "answer": "Yes, you can invite up to 2 other players to fight Region Bosses together. Co-op makes hard mode bosses significantly easier and does not affect loot drops.",
+        "answerZh": "可以，最多邀请2名其他玩家一起挑战区域Boss。联机打困难模式Boss会轻松很多，且不影响掉落奖励。"
+      },
+      {
+        "question": "What is the best team for each Region Boss?",
+        "questionZh": "每个区域Boss最佳阵容是什么？",
+        "answer": "Always bring a character matching the boss's weakness element: Frost for Flame Lord, Flame for Frost Behemoth, and Radiance for Void Overlord. Add a healer and a support for a well-rounded team.",
+        "answerZh": "始终带一名克制Boss弱点的角色：霜寒克烈焰之主、烈焰克霜寒巨兽、光辉克虚空领主。再配一名治疗和一名辅助即可。"
+      }
+    ]
+  },
+  {
+    "id": "endgame-guide",
+    "title": "终局内容攻略",
+    "titleEn": "Endgame Content Guide",
+    "category": "progression",
+    "categoryZh": "进阶攻略",
+    "categoryEn": "Progression",
+    "summary": "归环终局玩法详解，包括深渊挑战、循环竞技和隐藏成就。",
+    "summaryEn": "Complete Guihuan endgame guide covering Abyss challenges, loop arena, and hidden achievements.",
+    "content": "## 终局内容攻略\n\n### 一、深渊挑战\n\n- 每月刷新的高难度副本\n- 需要3支队伍分别挑战不同层\n- 根据通关时间评分，满星获得大量奖励\n- 需要多个元素流派的成型的队伍\n\n### 二、循环竞技场\n\n- PvP模式，与其他玩家的队伍对战\n- 每赛季有独特规则和ban/pick机制\n- 排名奖励丰厚，包括限定称号\n- 建议至少培养3个不同流派的队伍\n\n### 三、隐藏结局解锁\n\n通过多次循环收集线索，可以解锁隐藏剧情：\n\n1. **真相线**：收集所有核心线索后解锁\n2. **暗线**：在特定选择中做出反直觉的决定\n3. **完美结局**：需要达成所有支线任务\n\n### 四、全成就规划\n\n- **探索成就**：找到所有隐藏宝箱和区域\n- **战斗成就**：用特定条件击败Boss\n- **收集成就**：收集所有使灵和角色\n- **循环成就**：体验所有剧情分支\n\n### 五、终局养成建议\n\n1. 至少培养3个不同元素的主C\n2. 每个辅助只练一个但练到毕业\n3. 装备追求主词条正确+副词条优秀\n4. 合理分配每日体力到不同用途",
+    "contentEn": "## Endgame Content Guide\n\n### 1. Abyss Challenge\n\n- Monthly reset high-difficulty dungeon\n- Requires 3 teams for different floors\n- Scored by clear time, full stars give generous rewards\n- Needs multiple well-built element-school teams\n\n### 2. Loop Arena\n\n- PvP mode against other players' teams\n- Each season has unique rules and ban/pick\n- Ranking rewards are generous, including limited titles\n- Build at least 3 different school teams\n\n### 3. Hidden Endings\n\nCollect clues across loops to unlock hidden stories:\n\n1. **Truth Route**: Unlock after collecting all core clues\n2. **Dark Route**: Make counter-intuitive choices at key moments\n3. **Perfect Ending**: Complete all side quests\n\n### 4. Achievement Planning\n\n- **Exploration**: Find all hidden chests and areas\n- **Combat**: Defeat bosses with specific conditions\n- **Collection**: Collect all Spirits and characters\n- **Loop**: Experience all story branches\n\n### 5. Endgame Building Tips\n\n1. Build at least 3 DPS from different elements\n2. Each support should be fully built\n3. Aim for correct main stats + good substats on equipment\n4. Distribute daily stamina wisely across needs",
+    "tags": [
+      "终局",
+      "深渊",
+      "成就",
+      "Endgame",
+      "Abyss",
+      "Achievement"
+    ],
+    "faq": [
+      {
+        "question": "How many teams do I need for endgame?",
+        "questionZh": "终局需要几支队伍？",
+        "answer": "Abyss requires 3 teams with different element compositions. Loop Arena needs at least 2 flexible teams. Build 3 DPS from different elements to cover all content.",
+        "answerZh": "深渊需要3支不同元素队伍。循环竞技场至少需要2支灵活队伍。培养3个不同元素的主C以覆盖所有内容。"
+      },
+      {
+        "question": "What rewards do I get from Abyss?",
+        "questionZh": "深渊挑战有什么奖励？",
+        "answer": "Abyss gives premium currency, rare equipment materials, and exclusive cosmetics based on your star rating. Full stars reward enough currency for multiple pulls.",
+        "answerZh": "深渊根据星级评价给予珍贵货币、稀有装备材料和限定外观。满星奖励足够进行多次抽卡的货币。"
+      }
+    ]
+  },
+  {
+    "id": "version-roadmap-guide",
+    "title": "归环版本路线图与更新前瞻",
+    "titleEn": "Guihuan Version Roadmap & Update Preview",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version",
+    "summary": "归环未来版本更新路线图，包含新角色预测、新区域预告、玩法更新和活动时间线。",
+    "summaryEn": "Guihuan version roadmap covering upcoming character predictions, new region previews, gameplay updates, and event timelines.",
+    "content": "## 归环版本路线图与更新前瞻\n\n### 一、当前版本概览\n\n归环自上线以来持续保持6周一个大版本的更新节奏。每个大版本通常包含一名限定SSR角色、新剧情章节、限时活动以及系统优化。了解版本节奏有助于玩家合理规划资源和抽卡策略，避免在错误的池子投入珍贵货币。\n\n### 二、已确认的新内容\n\n**新角色预告**\n\n根据官方预告和数据挖掘信息，接下来的版本预计将推出以下角色：\n\n- **虚空白莲（限定SSR）**：虚空元素主C，拥有独特的领域展开机制，可在场地上制造虚空领域持续对敌人造成伤害\n- **光辉使者·曦光（限定SSR）**：光辉元素辅助，全队增益+自动复活一次的强大机制\n- **雷霆新锐（SR四星）**：雷霆元素追击型副C，可作为雷霆体系的平民替代\n\n**新区域：幽冥裂隙**\n\n- 全新探索区域，以虚空元素为核心的环境\n- 包含新的灵脉节点、隐藏宝箱和解谜内容\n- 区域Boss为「深渊守望者」，掉落虚空专属装备套装\n- 预计需要完成特定主线章节后解锁\n\n### 三、预测更新时间线\n\n| 版本 | 预计时间 | 核心内容 |\n|------|----------|----------|\n| 1.X | 当前 | 新虚空SSR + 幽冥裂隙区域 |\n| 1.X+1 | +6周 | 新光辉SSR辅助 + 深渊赛季更新 |\n| 1.X+2 | +12周 | 周年庆版本 + 免费SSR自选 + 新玩法 |\n| 2.0 | +18-24周 | 大版本更新 + 新大陆区域 + 等级上限提升 |\n\n### 四、系统优化方向\n\n根据开发组访谈和玩家反馈，以下系统正在优化中：\n\n1. **自动战斗系统**：日常副本将支持自动扫荡功能\n2. **装备强化保底**：强化装备时增加保底机制，避免连续强化失败\n3. **骰子检定优化**：降低关键剧情骰子检定的失败惩罚\n4. **跨平台联机**：支持PC和移动端跨平台组队\n\n### 五、资源规划建议\n\n根据版本节奏提前规划：\n\n- 当前版本免费资源约可获取60-80抽\n- 每个大版本活动奖励约2000-3000召唤货币\n- 周年庆等大型活动奖励翻倍\n- 建议预留至少一个大保底（100抽）给心仪的限定角色",
+    "contentEn": "## Guihuan Version Roadmap & Update Preview\n\n### 1. Current Version Overview\n\nGuihuan maintains a consistent 6-week major patch cycle since launch. Each major version typically includes one limited SSR character, a new story chapter, limited-time events, and system improvements. Understanding the patch cadence helps players plan resources and pulling strategy wisely, avoiding spending precious currency on the wrong banner.\n\n### 2. Confirmed New Content\n\n**Upcoming Characters**\n\nBased on official previews and community datamines, the following characters are expected:\n\n- **Void White Lotus (Limited SSR)**: Void-element main DPS with a unique domain expansion mechanic that creates a Void zone on the battlefield dealing continuous damage\n- **Radiance Envoy Xiguang (Limited SSR)**: Radiance-element support with team-wide buffs and a powerful auto-revive mechanic (one-time per battle)\n- **Thunder Rising Star (SR 4-star)**: Thunder-element follow-up sub-DPS, a free-to-play alternative for Thunder team compositions\n\n**New Region: Nether Rift**\n\n- Brand-new exploration zone themed around the Void element\n- Contains new Spirit vein nodes, hidden chests, and puzzle content\n- Region Boss is the Abyssal Watcher, dropping Void-specific equipment sets\n- Expected to unlock after completing a specific main story chapter\n\n### 3. Predicted Update Timeline\n\n| Version | Estimated | Core Content |\n|---------|-----------|-------------|\n| 1.X | Current | New Void SSR + Nether Rift region |\n| 1.X+1 | +6 weeks | New Radiance SSR support + Abyss season update |\n| 1.X+2 | +12 weeks | Anniversary version + Free SSR selector + New mode |\n| 2.0 | +18-24 weeks | Major update + New continent + Level cap increase |\n\n### 4. System Optimization Roadmap\n\nBased on developer interviews and player feedback, the following improvements are in progress:\n\n1. **Auto-Battle System**: Daily dungeons will support auto-sweep functionality\n2. **Equipment Enhancement Pity**: Adding a pity mechanic to prevent consecutive enhancement failures\n3. **Dice Check Optimization**: Reduced penalties for failing critical story dice checks\n4. **Cross-Platform Co-op**: PC and mobile cross-platform party support\n\n### 5. Resource Planning Tips\n\nPlan ahead based on the patch cadence:\n\n- Current version free resources yield approximately 60-80 pulls\n- Each major patch event gives roughly 2000-3000 summon currency\n- Anniversary and major events double the rewards\n- Always reserve at least one hard pity (100 pulls) for your most-wanted limited character",
+    "tags": [
+      "版本",
+      "路线图",
+      "更新",
+      "前瞻",
+      "Version",
+      "Roadmap",
+      "Update"
+    ],
+    "faq": [
+      {
+        "question": "How often does Guihuan release new versions?",
+        "questionZh": "归环多久更新一次版本？",
+        "answer": "Guihuan follows a 6-week major patch cycle. Each version brings a new limited SSR character, story content, and events. Minor hotfixes and balance patches may arrive between major versions.",
+        "answerZh": "归环保持每6周一个大版本的更新节奏。每个版本带来一名新限定SSR角色、剧情内容和活动。大版本之间可能有小型热修复和平衡调整。"
+      },
+      {
+        "question": "Should I save my pulls for future banners?",
+        "questionZh": "应该囤抽卡资源等未来卡池吗？",
+        "answer": "It depends on your roster. If you already have a strong DPS, save for upcoming supports or key limited characters. Check the roadmap to see if a character that fits your team is coming soon. Never spend without enough for pity.",
+        "answerZh": "取决于你的阵容。如果已有强力主C，可以存资源等未来的强力辅助或限定角色。查看路线图看是否有适合你队伍的角色即将上线。永远不要在不够保底的情况下抽卡。"
+      },
+      {
+        "question": "Will there be a level cap increase in future versions?",
+        "questionZh": "未来版本会提高等级上限吗？",
+        "answer": "Based on the developer roadmap, a level cap increase is planned for the 2.0 major update (approximately 18-24 weeks out). This will come with new ascension materials and upgraded equipment tiers, so start stockpiling resources in advance.",
+        "answerZh": "根据开发组路线图，等级上限提升计划在2.0大版本更新中（大约18-24周后）。届时会引入新的突破材料和更高阶的装备等级，建议提前囤积资源。"
+      }
+    ]
+  },
+  {
+    "id": "spirit-tier-advanced-guide",
+    "title": "灵体强度排行与培养优先级",
+    "titleEn": "Spirit Tier List & Build Priority",
+    "category": "tier-list",
+    "categoryZh": "排行榜",
+    "categoryEn": "Tier List",
+    "summary": "归环使灵强度详细排行榜，按DPS、辅助、坦克分类，包含培养优先级和队伍搭配建议。",
+    "summaryEn": "Detailed Guihuan Spirit tier list categorized by DPS, support, and tank roles with build priority and team composition recommendations.",
+    "content": "## 灵体强度排行与培养优先级\n\n### 一、排行标准说明\n\n本排行基于使灵在深渊高层的实战表现、循环竞技场中的胜率以及日常推图效率综合评定。排行会随版本平衡调整而变化，建议关注每次版本更新后的排行变动。\n\n评级标准：\n- **T0**：版本最强，几乎所有队伍都想带\n- **T1**：强力选择，核心队伍成员\n- **T2**：优秀替代，特定场景表现突出\n- **T3**：过渡选择，后期可被替代\n\n### 二、DPS使灵排行\n\n**T0级**\n- **初（光辉·强攻）**：全游戏最高倍率的大招，配合追击流派可实现恐怖的连续输出。限定使灵中最值得投入资源的毫无疑问是初。\n- **明珏（烈焰·强攻）**：烈焰体系的绝对核心，自带增伤和火元素附魔，融化反应的最佳触发器。\n\n**T1级**\n- **黑莲（虚空·强攻）**：虚空系最强单体DPS，对Boss战表现极佳。消融反应的持续伤害不可小觑。\n- **夜兰（雷霆·追击）**：四星使灵中的输出天花板，追击触发频率极高，可媲美部分SSR。\n\n**T2级**\n- **朱雀（烈焰·追击）**：烈焰追击副C，在融化队中表现优秀。作为SR使灵容易获取。\n\n### 三、辅助使灵排行\n\n**T0级**\n- **艾尔（霜寒·灵愈）**：最强治疗使灵，护盾+持续回复+解控，一个使灵解决所有生存问题。\n- **璃洛（疾风·灵愈）**：最强增益使灵，全队攻击力提升+速度提升+元素精通加成，三重增益无可替代。\n\n**T1级**\n- **晨曦（光辉·灵愈）**：四星增伤辅助，光辉系队伍的免费核心。性价比极高。\n- **雅琪（霜寒·控场）**：最强控制使灵，群体冻结+减速，控制覆盖率极高。\n\n### 四、坦克使灵排行\n\n**T1级**\n- **谷寒（霜寒·控场）**：前排承伤+减防辅助，在超导队伍中不可或缺。\n\n**T2级**\n- **素音（疾风·灵愈）**：前期免费获取的防御型治疗，虽然后期输出不足但坦度可靠。\n\n### 五、培养优先级建议\n\n| 优先级 | 推荐使灵 | 原因 |\n|--------|----------|------|\n| 第一优先 | 初/明珏（主C） | 主C决定队伍上限 |\n| 第二优先 | 艾尔/璃洛（辅助） | 辅助决定队伍下限 |\n| 第三优先 | 雅琪/夜兰 | 补充控制和副C |\n| 第四优先 | 其余T2使灵 | 多队伍培养 |\n\n**零氪玩家建议**：优先培养夜兰（四星输出天花板）+ 艾尔/璃洛（抽到哪个练哪个）+ 晨曦（免费增伤）",
+    "contentEn": "## Spirit Tier List & Build Priority\n\n### 1. Ranking Criteria\n\nThis tier list is based on Spirit performance in high-level Abyss, win rates in Loop Arena, and general content clear efficiency. Rankings shift with balance patches, so check back after each version update.\n\nTier definitions:\n- **T0**: Meta-defining, nearly every team wants them\n- **T1**: Strong picks, core team members\n- **T2**: Solid alternatives, excel in specific scenarios\n- **T3**: Transition picks, replaceable in late game\n\n### 2. DPS Spirit Rankings\n\n**T0**\n- **Chu (Radiance / Assault)**: Highest ultimate multiplier in the game. Combined with Follow-up style, achieves terrifying sustained damage output. The most worthwhile limited Spirit to invest in.\n- **Mingzhe (Flame / Assault)**: The absolute core of Flame teams. Self-buffs ATK and applies Flame infusion — the best Melt trigger in the game.\n\n**T1**\n- **Heilian (Void / Assault)**: Strongest single-target Void DPS, exceptional in boss fights. Dissolve reaction sustained damage is no joke.\n- **Yelan (Thunder / Follow-up)**: DPS ceiling among 4-star Spirits. Extremely high follow-up trigger rate, comparable to some SSRs.\n\n**T2**\n- **Zhuque (Flame / Follow-up)**: Flame follow-up sub-DPS, performs well in Melt teams. Easy to obtain as an SR Spirit.\n\n### 3. Support Spirit Rankings\n\n**T0**\n- **Airu (Frost / Healing)**: Strongest healer Spirit — shields + sustained recovery + cleanse. One Spirit solves all survival needs.\n- **Liro (Gale / Healing)**: Strongest buffer Spirit — team ATK boost + SPD boost + Elemental Mastery boost. Triple buff is irreplaceable.\n\n**T1**\n- **Chenxi (Radiance / Healing)**: 4-star ATK buffer, free core for Radiance teams. Incredible value for cost.\n- **Yaqi (Frost / Control)**: Strongest CC Spirit — AoE freeze + slow with extremely high uptime.\n\n### 4. Tank Spirit Rankings\n\n**T1**\n- **Guhan (Frost / Control)**: Frontline damage sponge + DEF shred support. Indispensable in Superconduct teams.\n\n**T2**\n- **Suyin (Gale / Healing)**: Free early-game defensive healer. Lacks late-game damage contribution but reliable tankiness.\n\n### 5. Build Priority Recommendations\n\n| Priority | Recommended Spirit | Reason |\n|----------|-------------------|--------|\n| First | Chu/Mingzhe (DPS) | Main DPS determines team ceiling |\n| Second | Airu/Liro (Support) | Supports determine team floor |\n| Third | Yaqi/Yelan | Fill CC and sub-DPS roles |\n| Fourth | Other T2 Spirits | Multi-team building |\n\n**F2P Recommendation**: Prioritize Yelan (4-star DPS ceiling) + Airu or Liro (build whichever you pull) + Chenxi (free ATK buffer)",
+    "tags": [
+      "使灵",
+      "排行",
+      "培养",
+      "强度",
+      "Spirit",
+      "Tier List",
+      "Build"
+    ],
+    "faq": [
+      {
+        "question": "Which Spirit should I build first as a new player?",
+        "questionZh": "新手第一个应该培养哪个使灵？",
+        "answer": "Build your main DPS Spirit first (Chu if you have him, otherwise Mingzhe or Yelan). A strong DPS carries you through early and mid game content. After your DPS is built, invest in a healer (Airu preferred).",
+        "answerZh": "优先培养主C使灵（有初就练初，没有就练明珏或夜兰）。强力的主C能带你推过前中期所有内容。主C成型后再投入治疗使灵（优先艾尔）。"
+      },
+      {
+        "question": "Are 4-star Spirits viable in endgame content?",
+        "questionZh": "四星使灵在终局内容中能用吗？",
+        "answer": "Absolutely. Yelan is a top-tier 4-star DPS that competes with SSRs. Chenxi is a core free buffer. With proper equipment and investment, 4-star Spirits can clear all content including Abyss.",
+        "answerZh": "完全可以。夜兰是四星输出天花板，实力堪比SSR。晨曦是免费增伤核心。装备和投入到位后，四星使灵也能通关深渊等所有终局内容。"
+      },
+      {
+        "question": "How do I decide between building two Spirits at the same tier?",
+        "questionZh": "同级使灵之间怎么选练哪个？",
+        "answer": "Consider your existing team composition first. Build the Spirit that fills a gap in your roster. If both fill the same role, prioritize the one matching your main DPS element for better elemental reactions.",
+        "answerZh": "先看现有队伍构成，优先培养能补齐阵容空缺的使灵。如果两者定位相同，选与你主C元素匹配的那个以获得更好的元素反应效果。"
+      }
+    ]
+  },
+  {
+    "id": "advanced-combat-guide",
+    "title": "高阶战斗技巧与操作进阶",
+    "titleEn": "Advanced Combat Techniques & Mechanics",
+    "category": "combat",
+    "categoryZh": "战斗攻略",
+    "categoryEn": "Combat",
+    "summary": "归环高阶战斗技巧详解，涵盖动画取消、元素连携时机、爆发轮转优化和骰子战斗运用。",
+    "summaryEn": "Advanced Guihuan combat guide covering animation canceling, elemental combo timing, burst rotation optimization, and dice combat strategies.",
+    "content": "## 高阶战斗技巧与操作进阶\n\n### 一、动画取消技巧\n\n动画取消（Animation Cancel）是归环高阶操作的核心。通过特定操作打断技能后摇，可以显著提升输出效率。\n\n**普攻取消**\n\n- 在普攻第三段（重击）动画出现前的2帧窗口内输入闪避指令，可取消后摇并保持连击计数\n- 成功取消后可立即接下一个普攻循环，DPS提升约15%\n- 练习建议：在训练场对着木桩反复练习第三段取消时机\n\n**技能取消**\n\n- 使灵技能释放后有一个固定的收招动画，大约0.5秒\n- 在收招动画期间切换角色可立即取消，不会有任何伤害损失\n- 这意味着在使灵技能打出伤害的瞬间切换队友，可以实现无缝衔接\n\n**大招取消**\n\n- 大招的无敌帧可以取消任何动作的硬直\n- 合理利用大招的无敌帧躲避Boss的关键技能\n- 部分角色的大招有额外的派生攻击，需要完整播放才能触发\n\n### 二、元素连携时机优化\n\n元素反应存在隐藏的内置冷却（ICD），了解ICD是优化输出的关键。\n\n**反应ICD规则**\n\n- 同一角色对同一敌人触发同种元素反应时，存在约1.5秒的ICD\n- 不同角色触发不受ICD限制\n- 因此快速切人触发反应比单角色站场更高效\n\n**最优连携顺序**\n\n1. **融化流**：霜寒先手挂冰 → 切烈焰角色触发融化 → 切辅助充能 → 循环\n2. **超导流**：霜寒先手 → 雷霆角色触发超导减防 → 切虚空上debuff → 主C输出\n3. **扩散流**：疾风聚怪 → 任意元素触发扩散 → 切第二元素再次扩散 → 循环清场\n\n### 三、爆发轮转优化\n\n**能量管理**\n\n- 每个使灵大招需要80-120点能量\n- 普攻回复约2-3点/次，技能回复约8-12点/次\n- 同元素粒子对同元素角色回复量+50%\n- 因此队伍中带同元素角色可加速充能\n\n**完美轮转流程**\n\n一个标准的20秒爆发窗口：\n1. 辅助释放技能（挂元素+充能）— 3秒\n2. 副C释放技能（触发反应+充能）— 3秒\n3. 主C释放技能+大招（爆发输出）— 5秒\n4. 辅助释放大招（增伤+治疗）— 3秒\n5. 主C追击输出（追击流派触发）— 6秒\n\n### 四、骰子战斗运用\n\n- Boss战中特定的骰子检定成功可获得临时增益\n- 高难度战斗建议预留预言点数用于重投关键检定\n- 检定成功后的增益可叠加，合理利用可大幅提升伤害",
+    "contentEn": "## Advanced Combat Techniques & Mechanics\n\n### 1. Animation Canceling\n\nAnimation canceling is the core of high-level Guihuan gameplay. By interrupting skill recovery frames with specific inputs, you can significantly increase DPS.\n\n**Normal Attack Canceling**\n\n- Input a dodge command within a 2-frame window before the third normal attack (heavy strike) animation begins to cancel recovery frames while maintaining the combo counter\n- Successful cancels let you immediately start the next attack cycle, boosting DPS by approximately 15%\n- Practice tip: Use the training dummy in the practice arena to drill the third-hit cancel timing\n\n**Skill Canceling**\n\n- Spirit skills have a fixed recovery animation of about 0.5 seconds after the damage applies\n- Switching characters during the recovery animation cancels it instantly with zero damage loss\n- This means you can swap the moment the skill deals damage, creating seamless rotations\n\n**Ultimate Canceling**\n\n- Ultimate invincibility frames can cancel any action's recovery\n- Strategically use ultimate i-frames to dodge boss mechanics\n- Some characters have bonus follow-up attacks on their ultimates that require the full animation\n\n### 2. Elemental Combo Timing Optimization\n\nElemental reactions have a hidden internal cooldown (ICD). Understanding ICD is key to maximizing reaction damage.\n\n**Reaction ICD Rules**\n\n- Same character triggering the same reaction on the same enemy has a ~1.5 second ICD\n- Different characters are not affected by each other's ICD\n- Therefore, fast character swapping for reactions is more efficient than extended field time\n\n**Optimal Combo Order**\n\n1. **Melt**: Frost applies Cryo first → swap to Flame character to trigger Melt → swap to support for energy → loop\n2. **Superconduct**: Frost applies Cryo → Thunder character triggers Superconduct DEF shred → swap to Void for debuffs → main DPS attacks\n3. **Spread**: Gale groups enemies → any element triggers Spread → swap to second element for another Spread → loop for AoE clear\n\n### 3. Burst Rotation Optimization\n\n**Energy Management**\n\n- Each Spirit ultimate costs 80-120 energy\n- Normal attacks restore ~2-3 energy per hit, skills restore ~8-12\n- Same-element particles grant +50% energy to same-element characters\n- Therefore, bringing same-element characters accelerates energy recharge\n\n**Perfect Rotation Flow**\n\nA standard 20-second burst window:\n1. Support uses skill (applies element + charges energy) — 3 seconds\n2. Sub-DPS uses skill (triggers reaction + charges energy) — 3 seconds\n3. Main DPS uses skill + ultimate (burst damage) — 5 seconds\n4. Support uses ultimate (buffs + healing) — 3 seconds\n5. Main DPS follow-up attacks (Follow-up style triggers) — 6 seconds\n\n### 4. Dice Combat Strategies\n\n- Specific dice checks in boss fights grant temporary buffs on success\n- In high-difficulty content, reserve prediction points for rerolling critical checks\n- Buffs from successful checks can stack, providing significant damage boosts when used strategically",
+    "tags": [
+      "战斗",
+      "技巧",
+      "进阶",
+      "操作",
+      "Combat",
+      "Advanced",
+      "Mechanics"
+    ],
+    "faq": [
+      {
+        "question": "What is animation canceling and why does it matter?",
+        "questionZh": "什么是动画取消，为什么重要？",
+        "answer": "Animation canceling means interrupting the recovery frames of attacks and skills by dodging or switching characters. It matters because it can increase your DPS by 10-15% and make your rotations smoother, which is critical for Abyss star ratings.",
+        "answerZh": "动画取消是指通过闪避或切换角色打断攻击和技能的收招后摇。它很重要，因为能提升10-15%的DPS并让轮转更流畅，对深渊拿满星至关重要。"
+      },
+      {
+        "question": "How do I optimize my burst rotation?",
+        "questionZh": "怎么优化爆发轮转？",
+        "answer": "Follow the principle of 'support first, DPS last.' Apply buffs and elemental setups before your main DPS takes the field. Make sure every character contributes energy before swapping. A clean 20-second rotation should have all ultimates used within the buff window.",
+        "answerZh": "遵循「辅助先上，主C收尾」的原则。在主C上场前先挂好增益和元素。确保每个角色在切换前都贡献了能量。一个干净的20秒轮转应该在增益窗口内放出所有大招。"
+      },
+      {
+        "question": "How important are dice checks in combat?",
+        "questionZh": "战斗中骰子检定有多重要？",
+        "answer": "In normal content, dice checks are a nice bonus. In high-level Abyss and hard mode bosses, successful dice checks can provide 20-30% damage buffs that make or break your clear time. Always carry prediction points for rerolls in challenging content.",
+        "answerZh": "普通内容中骰子检定只是锦上添花。但在高层深渊和困难模式Boss中，成功的骰子检定可提供20-30%的伤害增益，直接影响通关时间。挑战高难度内容时一定要带够预言点数用于重投。"
+      }
+    ]
+  },
+  {
+    "id": "farming-efficiency-guide",
+    "title": "材料刷取效率最大化指南",
+    "titleEn": "Material Farming Efficiency Guide",
+    "category": "farming",
+    "categoryZh": "刷取攻略",
+    "categoryEn": "Farming",
+    "summary": "归环材料刷取效率最大化攻略，包含最佳刷取路线、体力分配策略和材料规划指南。",
+    "summaryEn": "Maximize your farming efficiency in Guihuan with optimal routes, stamina allocation strategies, and material planning guides.",
+    "content": "## 材料刷取效率最大化指南\n\n### 一、体力系统详解\n\n体力是归环中最宝贵的有限资源。合理规划体力使用直接决定你的养成速度。\n\n**体力基础**\n\n- 自然恢复：每8分钟恢复1点体力，每天共180点\n- 体力上限：默认120点，可通过提升主角等级增加\n- 溢出的体力不会积累，必须及时消耗\n- 每天可购买额外体力（花费珍贵货币，建议最多买1-2次）\n\n**体力价值换算**\n\n不同副本的体力投入产出比差异很大：\n\n| 副本类型 | 体力/次 | 核心掉落 | 效率评级 |\n|----------|---------|----------|----------|\n| 突破材料本 | 20 | 角色突破材料 | A |\n| 装备本 | 30 | 装备与强化材料 | B |\n| 技能书本 | 15 | 技能升级材料 | A |\n| 金币本 | 20 | 大量金币 | S（金币紧缺时） |\n| 经验本 | 15 | 经验材料 | B |\n\n### 二、按阶段规划体力\n\n**前期（1-25级）：突破材料优先**\n\n- 70%体力：主C突破材料副本\n- 20%体力：技能书副本\n- 10%体力：经验材料副本\n- 装备用任务送的即可，不刷装备本\n\n**中期（25-40级）：均衡发展**\n\n- 40%体力：突破材料（主C+关键辅助）\n- 30%体力：装备副本（刷主C套装）\n- 20%体力：技能书副本\n- 10%体力：金币副本（随时紧缺）\n\n**后期（40级+）：装备优化**\n\n- 50%体力：装备副本（追求毕业词条）\n- 20%体力：突破材料（多角色培养）\n- 15%体力：金币副本\n- 15%体力：活动副本（限时高收益）\n\n### 三、最优刷取路线\n\n**日常刷取路线（每日）**\n\n1. 登录后先清日常委托（10分钟）\n2. 消耗体力刷核心副本（15-20分钟）\n3. 区域扫荡收集特产（10分钟）\n4. 骰子挑战获取预言点数（5分钟）\n5. 商店兑换当日刷新的折扣材料\n\n**周常刷取路线（每周）**\n\n1. 周一/三/五：突破材料副本（掉率加成日）\n2. 周二/四/六：装备副本\n3. 周日：自由分配（建议刷最缺的材料）\n4. 周末双倍副本不要错过\n\n### 四、材料规划\n\n**养成一个SSR角色到毕业需要**\n\n| 材料 | 数量 | 主要来源 |\n|------|------|----------|\n| 突破材料 | 约300个 | 突破副本 |\n| 技能书 | 约120本 | 技能副本 |\n| 金币 | 约200万 | 金币副本+活动 |\n| 经验材料 | 约80万 | 经验副本+任务 |\n| 毕业装备 | 5件套 | 装备副本+Boss |\n\n**提前囤积建议**\n\n- 关注版本前瞻中的新角色元素，提前囤对应突破材料\n- 通用材料（金币、经验）永远不嫌多\n- 活动兑换优先选不可刷取的稀有材料\n- 每周商店的打折材料必买",
+    "contentEn": "## Material Farming Efficiency Guide\n\n### 1. Stamina System Deep Dive\n\nStamina is Guihuan's most precious limited resource. How you allocate it directly determines your progression speed.\n\n**Stamina Basics**\n\n- Natural recovery: 1 point every 8 minutes, totaling 180 per day\n- Stamina cap: Default 120, increases with protagonist level\n- Overflow stamina does not accumulate — spend it before it caps\n- Extra stamina can be purchased daily (costs premium currency, recommend max 1-2 purchases)\n\n**Stamina Value Comparison**\n\nDifferent dungeons have significantly different value per stamina point:\n\n| Dungeon Type | Stamina/Run | Core Drop | Efficiency Rating |\n|-------------|-------------|-----------|-------------------|\n| Ascension Mat | 20 | Ascension materials | A |\n| Equipment | 30 | Equipment & upgrade mats | B |\n| Skill Books | 15 | Skill upgrade materials | A |\n| Gold | 20 | Large gold amounts | S (when gold-starved) |\n| EXP | 15 | EXP materials | B |\n\n### 2. Stage-Based Stamina Planning\n\n**Early Game (Lv1-25): Ascension Materials First**\n\n- 70% stamina: Main DPS ascension material dungeons\n- 20% stamina: Skill book dungeons\n- 10% stamina: EXP material dungeons\n- Use quest reward equipment — skip equipment dungeons\n\n**Mid Game (Lv25-40): Balanced Development**\n\n- 40% stamina: Ascension materials (main DPS + key supports)\n- 30% stamina: Equipment dungeons (farm main DPS set)\n- 20% stamina: Skill book dungeons\n- 10% stamina: Gold dungeons (always in demand)\n\n**Late Game (Lv40+): Equipment Optimization**\n\n- 50% stamina: Equipment dungeons (chase perfect substats)\n- 20% stamina: Ascension materials (multi-character building)\n- 15% stamina: Gold dungeons\n- 15% stamina: Event dungeons (limited-time high value)\n\n### 3. Optimal Farming Routes\n\n**Daily Farming Route**\n\n1. Clear daily commissions first after login (10 minutes)\n2. Spend stamina on priority dungeons (15-20 minutes)\n3. Region sweep for local specialties (10 minutes)\n4. Dice challenges for prediction points (5 minutes)\n5. Shop exchange for discounted materials\n\n**Weekly Farming Route**\n\n1. Mon/Wed/Fri: Ascension material dungeons (drop rate bonus days)\n2. Tue/Thu/Sat: Equipment dungeons\n3. Sunday: Free allocation (farm whatever you need most)\n4. Don't miss weekend double-reward dungeons\n\n### 4. Material Planning\n\n**Cost to Fully Build One SSR Character**\n\n| Material | Quantity | Primary Source |\n|-----------|----------|----------------|\n| Ascension mats | ~300 | Ascension dungeons |\n| Skill books | ~120 | Skill dungeons |\n| Gold | ~2,000,000 | Gold dungeons + events |\n| EXP materials | ~800,000 | EXP dungeons + quests |\n| Best-in-slot gear | 5-piece set | Equipment dungeons + Bosses |\n\n**Stockpiling Tips**\n\n- Watch version previews for upcoming character elements, farm their ascension materials early\n- Universal materials (gold, EXP) are never enough — hoard aggressively\n- Event shops: prioritize rare materials that cannot be farmed normally\n- Weekly shop discounted materials are always worth buying",
+    "tags": [
+      "刷取",
+      "材料",
+      "体力",
+      "效率",
+      "Farming",
+      "Materials",
+      "Stamina"
+    ],
+    "faq": [
+      {
+        "question": "What should I spend my stamina on each day?",
+        "questionZh": "每天体力应该刷什么？",
+        "answer": "Early game: 70% on ascension materials for your main DPS. Mid game: Split between ascension and equipment. Late game: 50% on equipment optimization. Always prioritize event dungeons when available as they have the best stamina-to-reward ratio.",
+        "answerZh": "前期：70%刷主C突破材料。中期：突破和装备对半分。后期：50%刷装备优化。有活动副本时优先刷活动，性价比最高。"
+      },
+      {
+        "question": "How do I avoid wasting stamina?",
+        "questionZh": "怎么避免浪费体力？",
+        "answer": "Never let stamina cap naturally — set a timer if needed. Don't spread stamina across too many dungeon types in one day. Focus on 1-2 priorities per day. Buy discounted materials from the weekly shop to supplement your farming.",
+        "answerZh": "永远不要让体力自然溢满——必要时设闹钟。不要一天内分散刷太多类型的副本，每天集中1-2个优先目标。每周商店的打折材料也记得买来补充。"
+      },
+      {
+        "question": "Is it worth using premium currency to refill stamina?",
+        "questionZh": "用付费货币买体力值得吗？",
+        "answer": "The first 1-2 stamina refills per day are decent value if you are actively progressing a character. Beyond that, the cost increases while the value stays the same. Never refill stamina if you don't have a clear plan for what to farm.",
+        "answerZh": "每天前1-2次体力补充性价比较高，前提是你有明确的养成目标。超过2次后成本递增但收益不变。如果没有明确的刷取计划，不要盲目买体力。"
+      }
+    ]
+  }
+]

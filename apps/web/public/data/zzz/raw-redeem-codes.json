@@ -1,0 +1,82 @@
+[
+  {
+    "code": "ZZZCUTENESS",
+    "reward": "音擎能源模块x1、丁尼x20000",
+    "rewardEn": "W-Engine Energy Module x1, Denny x20,000",
+    "status": "active",
+    "expiresAt": "2027-12-31",
+    "source": "permanent",
+    "region": "global",
+    "revealedAt": "2024-07-04"
+  },
+  {
+    "code": "ZZZGIGO",
+    "reward": "音擎能源模块x1、高级调查员记录x1、丁尼x15000",
+    "rewardEn": "W-Engine Energy Module x1, Senior Investigator Log x1, Denny x15,000",
+    "status": "active",
+    "expiresAt": "2027-12-31",
+    "source": "permanent",
+    "region": "global",
+    "revealedAt": "2024-07-04"
+  },
+  {
+    "code": "ZENLESSGIFT",
+    "reward": "菲林x50、正式调查员记录x2、音擎能源补给x3、邦布算法模块x1",
+    "rewardEn": "Polychrome x50, Official Investigator Log x2, W-Engine Power Supply x3, Bangboo Algorithm Module x1",
+    "status": "active",
+    "expiresAt": "2027-12-31",
+    "source": "permanent",
+    "region": "global",
+    "revealedAt": "2024-07-04"
+  },
+  {
+    "code": "AODDEBUT",
+    "reward": "菲林x30、高级调查员记录x3、丁尼x6666",
+    "rewardEn": "Polychrome x30, Senior Investigator Log x3, Denny x6,666",
+    "status": "active",
+    "expiresAt": "2026-12-31",
+    "source": "event",
+    "region": "global",
+    "revealedAt": "2025-11-01"
+  },
+  {
+    "code": "ZZZ26DELUSION",
+    "reward": "菲林x60、丁尼x6666",
+    "rewardEn": "Polychrome x60, Denny x6,666",
+    "status": "active",
+    "expiresAt": "2026-12-31",
+    "source": "event",
+    "region": "global",
+    "revealedAt": "2026-01-15"
+  },
+  {
+    "code": "ZZZCREATOR26",
+    "reward": "高级调查员记录x2、音擎能源模块x3、丁尼x10000",
+    "rewardEn": "Senior Investigator Log x2, W-Engine Energy Module x3, Denny x10,000",
+    "status": "active",
+    "expiresAt": "2026-12-31",
+    "source": "event",
+    "region": "global",
+    "revealedAt": "2026-02-01"
+  },
+  {
+    "code": "ZZZANGELS",
+    "reward": "菲林x50",
+    "rewardEn": "Polychrome x50",
+    "status": "active",
+    "expiresAt": "2026-12-31",
+    "source": "event",
+    "region": "global",
+    "revealedAt": "2026-03-01"
+  },
+  {
+    "code": "ZHAOISFREE",
+    "reward": "菲林x50",
+    "rewardEn": "Polychrome x50",
+    "status": "active",
+    "expiresAt": "2026-12-31",
+    "source": "event",
+    "region": "global",
+    "revealedAt": "2026-03-06"
+  }
+]

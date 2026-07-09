@@ -21,6 +21,44 @@ interface CodeItem {
 
 const GAMES_WITH_CODES: GameId[] = ['genshin', 'starrail', 'wuwa', 'zzz', 'nte', 'sea', 'skjh'];
 
+const REDEEM_DESC: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
+  genshin: {
+    zh: '原神兑换码大全，整理前瞻直播、活动福利、永久码和领取方法，帮助你快速查看当前可用礼包并及时兑换原石、经验书和摩拉。',
+    en: 'Genshin Impact redeem code tracker covering livestream codes, event rewards, permanent codes, and redemption steps so you can claim Primogems and resources quickly.',
+    ja: '原神の交換コード一覧。生放送コード、イベント報酬、恒常コード、受け取り方法を整理し、原石や育成素材を素早く回収できます。',
+  },
+  starrail: {
+    zh: '崩坏：星穹铁道兑换码大全，追踪前瞻直播、活动奖励、长期有效码和领取入口，方便你第一时间兑换星琼和养成资源。',
+    en: 'Honkai: Star Rail redeem code tracker covering livestream codes, event rewards, permanent codes, and redemption steps so you can claim Stellar Jade and materials fast.',
+    ja: 'スターレイルの交換コード一覧。生放送コード、イベント報酬、恒常コード、受け取り方法をまとめて確認できます。',
+  },
+  wuwa: {
+    zh: '鸣潮兑换码大全，汇总前瞻直播、活动福利、长期兑换码和领取方式，帮助你快速兑换星声、材料和其他开荒资源。',
+    en: 'Wuthering Waves redeem code tracker covering livestream codes, event rewards, permanent codes, and redemption steps so you can claim Astrite and resources quickly.',
+    ja: '鳴潮の交換コード一覧。生放送コード、イベント報酬、恒常コード、受け取り方法を整理しています。',
+  },
+  zzz: {
+    zh: '绝区零兑换码大全，整理前瞻直播、活动福利、长期有效码和领取方法，帮助你快速兑换菲林、材料和开服资源。',
+    en: 'Zenless Zone Zero redeem code tracker covering livestream codes, event rewards, permanent codes, and redemption steps so you can claim Polychromes and materials quickly.',
+    ja: 'ゼンレスゾーンゼロの交換コード一覧。生放送コード、イベント報酬、恒常コード、受け取り方法をまとめています。',
+  },
+  nte: {
+    zh: '异环兑换码大全，追踪官方直播、预约奖励、活动福利和可用礼包码，帮助你在开服和后续版本第一时间领取资源。',
+    en: 'Neverness to Everness redeem code tracker covering official livestreams, reservation rewards, event bonuses, and active gift codes so you can claim launch resources fast.',
+    ja: '異環の交換コード一覧。公式生放送、事前登録報酬、イベント特典、有効コードを整理しています。',
+  },
+  sea: {
+    zh: '遗忘之海兑换码大全，追踪公测直播、预约奖励、活动福利和后续礼包码，方便你在开服和版本更新时第一时间领取资源。',
+    en: 'Sea of Remnants redeem code tracker covering livestreams, reservation rewards, event bonuses, and upcoming launch codes so you can claim rewards on day one.',
+    ja: 'シー・オブ・レムナンツの交換コード一覧。生放送、事前登録報酬、イベント特典を整理しています。',
+  },
+  skjh: {
+    zh: '失控进化兑换码大全，追踪官网、WeGame、B站、微信公众号、TapTap、公测礼包、预约奖励和开服活动码，方便你及时领取福利。',
+    en: 'Ashfall Evolution redeem code tracker covering official site, WeGame, Bilibili, WeChat, TapTap, launch gifts, reservation rewards, and event codes.',
+    ja: '失控進化の交換コード一覧。公式サイト、WeGame、Bilibili、WeChat、TapTap、リリース特典を整理しています。',
+  },
+};
+
 function getCodesForGame(gameId: GameId): CodeItem[] {
   switch (gameId) {
     case 'genshin': return getGenshinActiveRedeemCodes() as unknown as CodeItem[];
@@ -56,24 +94,17 @@ export async function generateMetadata({
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
   if (!GAMES_WITH_CODES.includes(gameId)) return { robots: { index: false, follow: false } };
-  if (gameId === 'skjh') {
-    const title = locale === 'zh'
-      ? '失控进化兑换码大全｜开服礼包码与预约奖励'
-      : locale === 'ja'
-        ? '失控進化 交換コード一覧｜リリース特典'
-        : 'Ashfall Evolution Redeem Codes, Launch Codes & Rewards';
-    const description = locale === 'zh'
-      ? '失控进化兑换码大全，追踪官网、WeGame、B站、微信公众号、TapTap、公测礼包、预约奖励、里程碑福利和开服活动码。'
-      : locale === 'ja'
-        ? '失控進化の交換コード、リリース特典、事前登録報酬、イベントコードを追跡。'
-        : 'Ashfall Evolution redeem codes, launch gift codes, reservation rewards, milestone bonuses, and event-code tracking.';
-    return {
-      title,
-      description,
-      alternates: { canonical: `https://gachia.com/${locale}/skjh/redeem-codes` },
-    };
-  }
-  return {};
+  const title = locale === 'zh'
+    ? `${GAMES[gameId].name.zh}兑换码大全｜最新礼包码与领取方法`
+    : locale === 'ja'
+      ? `${GAMES[gameId].name.ja ?? GAMES[gameId].name.en} 交換コード一覧｜最新特典と受け取り方法`
+      : `${GAMES[gameId].name.en} Redeem Codes, Gift Codes & Rewards`;
+  const description = REDEEM_DESC[gameId]?.[locale] ?? REDEEM_DESC[gameId]?.en ?? '';
+  return {
+    title,
+    description,
+    alternates: { canonical: `https://gachia.com/${locale}/${gameId}/redeem-codes` },
+  };
 }
 
 export default async function RedeemCodesPage({

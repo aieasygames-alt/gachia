@@ -1,0 +1,1862 @@
+[
+  {
+    "id": "aalto",
+    "name": "秋水",
+    "nameEn": "Aalto",
+    "element": "aero",
+    "weaponType": "Pistols",
+    "rarity": 4,
+    "description": "一名神秘的信息贩子，有着变色龙般的个性和行事风格。他总是在寻找有价值的情报，并将其出售给合适的人。",
+    "descriptionEn": "A mysterious information dealer with a chameleon-like personality and style. He is always on the lookout for valuable intel to sell to the right buyer.",
+    "releaseVersion": "1.0",
+    "status": "released",
+    "image": "/images/wuwa/characters/aalto.webp",
+    "stats": {
+      "hp": 10025,
+      "atk": 275,
+      "def": 1053,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Howler Core",
+      "boss": "Elegy Tacet Core",
+      "localSpecialty": "Belle Poppy"
+    },
+    "skillMaterials": {
+      "commonDrop": "Waveworn Residue",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "Aero DMG",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Chris Tergliafera",
+      "jp": "Itou Kento",
+      "cn": "Chen Zhang Tai Kang",
+      "kr": "Kim Myung Jun"
+    },
+    "tierRank": "B",
+    "tierReason": {
+      "zh": "气动副C，功能性一般",
+      "en": "Aero sub-DPS with limited utility"
+    }
+  },
+  {
+    "id": "baizhi",
+    "name": "白芷",
+    "nameEn": "Baizhi",
+    "element": "glacio",
+    "weaponType": "Rectifier",
+    "rarity": 4,
+    "description": "一名专注于研究残星门现象的年轻学者。她性格内向，但对研究充满热情，渴望揭开世界的真相。",
+    "descriptionEn": "A researcher at Huaxu Academy who focuses on studying Remnants. She has a quiet personality but is deeply passionate about her research.",
+    "releaseVersion": "1.0",
+    "status": "released",
+    "image": "/images/wuwa/characters/baizhi.webp",
+    "stats": {
+      "hp": 10372,
+      "atk": 250,
+      "def": 1100,
+      "energy": 135,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Whisperin Core",
+      "boss": "Sound-Keeping Tacet Core",
+      "localSpecialty": "Wintry Bell"
+    },
+    "skillMaterials": {
+      "commonDrop": "Helix",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "Healing Bonus",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Sara Ragsdale",
+      "jp": "Kato Emiri",
+      "cn": "Mu Xu Ting",
+      "kr": "Lee Sae Byeok"
+    },
+    "tierRank": "B",
+    "tierReason": {
+      "zh": "治疗辅助，回复能力稳定",
+      "en": "Healer support with stable recovery"
+    }
+  },
+  {
+    "id": "calcharo",
+    "name": "卡卡罗",
+    "nameEn": "Calcharo",
+    "element": "electro",
+    "weaponType": "Broadblade",
+    "rarity": 5,
+    "description": "孤军的统帅，独来独往的佣兵头目。他从不拒绝任何有价值的委托，但也从不为任何人停留。",
+    "descriptionEn": "The leader of the Ghost Hounds, a solitary mercenary captain. He never turns down a valuable commission, but never stays for anyone either.",
+    "releaseVersion": "1.0",
+    "status": "released",
+    "image": "/images/wuwa/characters/calcharo.webp",
+    "stats": {
+      "hp": 10625,
+      "atk": 425,
+      "def": 1222,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Howler Core",
+      "boss": "Hidden Thunder Tacet Core",
+      "localSpecialty": "Belle Poppy"
+    },
+    "skillMaterials": {
+      "commonDrop": "Cadence",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "CRIT Rate",
+        "value": "+8%"
+      },
+      {
+        "stat": "ATK%",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Ry McKeandin",
+      "jp": "Kobayashi Chiaki",
+      "cn": "Xie Ying Tong",
+      "kr": "Kim Hyun Wook"
+    },
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "强力雷属性主C，输出稳定",
+      "en": "Strong Electro main DPS with consistent damage"
+    }
+  },
+  {
+    "id": "changli",
+    "name": "长离",
+    "nameEn": "Changli",
+    "element": "fusion",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "description": "今汐的老师，一位拥有强大洞察力和谋略的女性。她的言谈举止优雅从容，但内心却藏着不可小觑的锋芒。",
+    "descriptionEn": "The mentor of Jinhsi, a woman possessing powerful insight and strategy. Her speech and demeanor are elegant and unhurried, but she hides a formidable edge within.",
+    "releaseVersion": "1.1",
+    "status": "released",
+    "image": "/images/wuwa/characters/changli.webp",
+    "stats": {
+      "hp": 10825,
+      "atk": 413,
+      "def": 1259,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Ring",
+      "boss": "Rage Tacet Core",
+      "localSpecialty": "Coriolus"
+    },
+    "skillMaterials": {
+      "commonDrop": "Phlogiston",
+      "weeklyBoss": "Unwarranted Feather"
+    },
+    "minorFortes": [
+      {
+        "stat": "CRIT DMG",
+        "value": "+16%"
+      },
+      {
+        "stat": "ATK%",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Amber May",
+      "jp": "Ueda Kana",
+      "cn": "Xue Jun",
+      "kr": "Kim Ji Yul"
+    },
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "强力热熔主C，爆发输出能力出众",
+      "en": "Strong Fusion main DPS with outstanding burst capability"
+    }
+  },
+  {
+    "id": "chixia",
+    "name": "赤霞",
+    "nameEn": "Chixia",
+    "element": "fusion",
+    "weaponType": "Pistols",
+    "rarity": 4,
+    "description": "一名充满正义感的新入行巡卫，她总是冲在最前线，用自己的双枪守护着身边的人。",
+    "descriptionEn": "A righteous and energetic patrol member who always rushes to the frontline, using her dual pistols to protect those around her.",
+    "releaseVersion": "1.0",
+    "status": "released",
+    "image": "/images/wuwa/characters/chixia.webp",
+    "stats": {
+      "hp": 10025,
+      "atk": 275,
+      "def": 1053,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Whisperin Core",
+      "boss": "Rage Tacet Core",
+      "localSpecialty": "Coriolus"
+    },
+    "skillMaterials": {
+      "commonDrop": "Phlogiston",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "Fusion DMG",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Luisa Guerreiro",
+      "jp": "Uchida Shu",
+      "cn": "Yang Ting Ting",
+      "kr": "Yu Hye Jung"
+    },
+    "tierRank": "B",
+    "tierReason": {
+      "zh": "热熔远程输出，前期可用",
+      "en": "Fusion ranged DPS, usable early game"
+    }
+  },
+  {
+    "id": "danjin",
+    "name": "丹瑾",
+    "nameEn": "Danjin",
+    "element": "havoc",
+    "weaponType": "Sword",
+    "rarity": 4,
+    "description": "一名行事果断、雷厉风行的女性。她以双刀为武器，游走在危险的边缘，却总能化险为夷。",
+    "descriptionEn": "A decisive and swift woman who wields dual blades. She walks on the edge of danger but always manages to turn peril into safety.",
+    "releaseVersion": "1.0",
+    "status": "released",
+    "image": "/images/wuwa/characters/danjin.webp",
+    "stats": {
+      "hp": 10063,
+      "atk": 275,
+      "def": 941,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Whisperin Core",
+      "boss": "Sound-Keeping Tacet Core",
+      "localSpecialty": "Wintry Bell"
+    },
+    "skillMaterials": {
+      "commonDrop": "Metallic Drip",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "Havoc DMG",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Suzie Yeung",
+      "jp": "Kawamura Reina",
+      "cn": "Cang Ci",
+      "kr": "Yu Hye Jung"
+    },
+    "tierRank": "B",
+    "tierReason": {
+      "zh": "湮灭近战输出，操作要求较高",
+      "en": "Havoc melee DPS, requires skill to play well"
+    }
+  },
+  {
+    "id": "encore",
+    "name": "安可",
+    "nameEn": "Encore",
+    "element": "fusion",
+    "weaponType": "Rectifier",
+    "rarity": 5,
+    "description": "一个天真无邪、永远充满好奇心的少女。她携带着名为「呆呆」和「萌萌」的两只毛绒玩偶，看似无害，却拥有惊人的力量。",
+    "descriptionEn": "An innocent and eternally curious girl. She carries two plush dolls named Doudou and Mengmeng. Though she appears harmless, she possesses astonishing power.",
+    "releaseVersion": "1.0",
+    "status": "released",
+    "image": "/images/wuwa/characters/encore.webp",
+    "stats": {
+      "hp": 10825,
+      "atk": 413,
+      "def": 1259,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Howler Core",
+      "boss": "Rage Tacet Core",
+      "localSpecialty": "Belle Poppy"
+    },
+    "skillMaterials": {
+      "commonDrop": "Phlogiston",
+      "weeklyBoss": "Unwarranted Feather"
+    },
+    "minorFortes": [
+      {
+        "stat": "CRIT Rate",
+        "value": "+8%"
+      },
+      {
+        "stat": "ATK%",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Courtney Lin",
+      "jp": "Kakuma Ai",
+      "cn": "Ying Ying",
+      "kr": "Kim Ha Ru"
+    },
+    "tierRank": "SS",
+    "tierReason": {
+      "zh": "顶级热熔主C，输出循环流畅，伤害极高",
+      "en": "Top-tier Fusion main DPS with smooth rotation and high damage"
+    }
+  },
+  {
+    "id": "jianxin",
+    "name": "鉴心",
+    "nameEn": "Jianxin",
+    "element": "aero",
+    "weaponType": "Gauntlets",
+    "rarity": 4,
+    "description": "一名修行拳术的武术家，性格温和敦厚，但对武学有着执着的追求。他相信真正的力量来自于内心的平静。",
+    "descriptionEn": "A martial artist who practices fist techniques. He has a gentle and honest personality, but an unwavering pursuit of martial arts. He believes true power comes from inner peace.",
+    "releaseVersion": "1.0",
+    "status": "released",
+    "image": "/images/wuwa/characters/jianxin.webp",
+    "stats": {
+      "hp": 10063,
+      "atk": 250,
+      "def": 1137,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Whisperin Core",
+      "boss": "Elegy Tacet Core",
+      "localSpecialty": "Belle Poppy"
+    },
+    "skillMaterials": {
+      "commonDrop": "Waveworn Residue",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "Aero DMG",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Brianna Roberts",
+      "jp": "Nanase Ao",
+      "cn": "Ruo Bing",
+      "kr": "Lee Sae Byeok"
+    },
+    "tierRank": "A",
+    "tierReason": {
+      "zh": "气动辅助，提供护盾和聚怪",
+      "en": "Aero support providing shields and grouping"
+    }
+  },
+  {
+    "id": "jinhsi",
+    "name": "今汐",
+    "nameEn": "Jinhsi",
+    "element": "spectro",
+    "weaponType": "Broadblade",
+    "rarity": 5,
+    "description": "今州的令尹，一个身负重任的年轻领袖。她在面临危机时表现出超乎年龄的沉着和决断力。",
+    "descriptionEn": "The Magistrate of Jinzhou, a young leader burdened with great responsibility. She displays composure and decisiveness beyond her age when facing crises.",
+    "releaseVersion": "1.1",
+    "status": "released",
+    "image": "/images/wuwa/characters/jinhsi.webp",
+    "stats": {
+      "hp": 11400,
+      "atk": 375,
+      "def": 1369,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Howler Core",
+      "boss": "Sound-Keeping Tacet Core",
+      "localSpecialty": "Pecok Flower"
+    },
+    "skillMaterials": {
+      "commonDrop": "Waveworn Residue",
+      "weeklyBoss": "Unwarranted Feather"
+    },
+    "minorFortes": [
+      {
+        "stat": "CRIT Rate",
+        "value": "+8%"
+      },
+      {
+        "stat": "ATK%",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Anairis Quinones",
+      "jp": "Awano Maki",
+      "cn": "Xue Jun",
+      "kr": "Kim Chae Rin"
+    },
+    "tierRank": "SS",
+    "tierReason": {
+      "zh": "顶级光谱主C，爆发伤害极高，对群对单均表现优秀",
+      "en": "Top-tier Spectro main DPS with exceptional burst damage"
+    }
+  },
+  {
+    "id": "jiyan",
+    "name": "忌炎",
+    "nameEn": "Jiyan",
+    "element": "aero",
+    "weaponType": "Broadblade",
+    "rarity": 5,
+    "description": "夜归军的统帅，是一位勇敢且充满正义感的战士。他手握长枪，以保护同伴和消灭威胁为己任。",
+    "descriptionEn": "The General of the Midnight Rangers, a brave and righteous warrior. He wields his weapon with the mission of protecting his comrades and eliminating threats.",
+    "releaseVersion": "1.0",
+    "status": "released",
+    "image": "/images/wuwa/characters/jiyan.webp",
+    "stats": {
+      "hp": 10625,
+      "atk": 425,
+      "def": 1222,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Howler Core",
+      "boss": "Elegy Tacet Core",
+      "localSpecialty": "Belle Poppy"
+    },
+    "skillMaterials": {
+      "commonDrop": "Waveworn Residue",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "CRIT DMG",
+        "value": "+16%"
+      },
+      {
+        "stat": "ATK%",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Grahame Kuers",
+      "jp": "Toshiyuki Toyonaga",
+      "cn": "Ding Jian Cun",
+      "kr": "Kim Sin Woo"
+    },
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "强力气动主C，大范围AOE伤害",
+      "en": "Strong Aero main DPS with large AoE damage"
+    }
+  },
+  {
+    "id": "lingyang",
+    "name": "凌阳",
+    "nameEn": "Lingyang",
+    "element": "glacio",
+    "weaponType": "Gauntlets",
+    "rarity": 5,
+    "description": "一个性格热情开朗的舞狮少年。他总是面带笑容，以积极乐观的态度面对生活中的每一天。",
+    "descriptionEn": "A passionate and cheerful lion dance performer. He always wears a smile and faces each day with a positive and optimistic attitude.",
+    "releaseVersion": "1.0",
+    "status": "released",
+    "image": "/images/wuwa/characters/lingyang.webp",
+    "stats": {
+      "hp": 10625,
+      "atk": 425,
+      "def": 1222,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Howler Core",
+      "boss": "Sound-Keeping Tacet Core",
+      "localSpecialty": "Wintry Bell"
+    },
+    "skillMaterials": {
+      "commonDrop": "Metallic Drip",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "CRIT Rate",
+        "value": "+8%"
+      },
+      {
+        "stat": "ATK%",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Kevin K. Greviou",
+      "jp": "Itou Ayasa",
+      "cn": "Mao Luo Mao",
+      "kr": "Song Ha Rim"
+    },
+    "tierRank": "A",
+    "tierReason": {
+      "zh": "冰凝主C，输出中规中矩",
+      "en": "Glacio main DPS with decent damage output"
+    }
+  },
+  {
+    "id": "mortefi",
+    "name": "莫特斐",
+    "nameEn": "Mortefi",
+    "element": "fusion",
+    "weaponType": "Pistols",
+    "rarity": 4,
+    "description": "莫特斐是一位擅长声学研究与应用的专家，华胥研究院安全部的成员。他拥有将积累的烦躁转化为炽热火焰的独特能力。",
+    "descriptionEn": "Mortefi, a skilled expert in Applied Tacetite Study and a member of the Academy's Department of Safety, possesses the unique ability to transform his accumulated frustration into fiery flames.",
+    "releaseVersion": "1.0",
+    "status": "released",
+    "image": "/images/wuwa/characters/mortefi.webp",
+    "stats": {
+      "hp": 10025,
+      "atk": 250,
+      "def": 1137,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Whisperin Core",
+      "boss": "Rage Tacet Core",
+      "localSpecialty": "Coriolus"
+    },
+    "skillMaterials": {
+      "commonDrop": "Phlogiston",
+      "weeklyBoss": "Monument Bell"
+    },
+    "minorFortes": [
+      {
+        "stat": "Fusion DMG",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Kyle McKeegie",
+      "jp": "Takahashi Rie",
+      "cn": "Xin Chen",
+      "kr": "Kim Ha Ru"
+    },
+    "tierRank": "A",
+    "tierReason": {
+      "zh": "热熔辅助，为队伍提供增伤",
+      "en": "Fusion support providing team damage buffs"
+    }
+  },
+  {
+    "id": "rover-havoc",
+    "name": "漂泊者·湮灭",
+    "nameEn": "Rover (Havoc)",
+    "element": "havoc",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "description": "带着未知的过去苏醒，漂泊者踏上了一段揭开真相的旅途。",
+    "descriptionEn": "Awakened with an unknown past, Rover embarks on a journey to uncover the truths.",
+    "releaseVersion": "1.0",
+    "status": "released",
+    "image": "/images/wuwa/characters/rover-havoc.webp",
+    "stats": {
+      "hp": 10825,
+      "atk": 413,
+      "def": 1259,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Whisperin Core",
+      "boss": "Mysterious Code",
+      "localSpecialty": "Pecok Flower"
+    },
+    "skillMaterials": {
+      "commonDrop": "Metallic Drip",
+      "weeklyBoss": "Unwarranted Feather"
+    },
+    "minorFortes": [
+      {
+        "stat": "Havoc DMG",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Jane Jackson / Chase Brown",
+      "jp": "Tanaka Minami / Toshiki Masuda",
+      "cn": "Du QingQing / Ma Yang",
+      "kr": "Song Ha Rim / Kim Sin Woo"
+    },
+    "tierRank": "A+",
+    "tierReason": {
+      "zh": "免费强力湮灭主C，养成成本低",
+      "en": "Free strong Havoc main DPS with low investment"
+    }
+  },
+  {
+    "id": "rover-spectro",
+    "name": "漂泊者·衍射",
+    "nameEn": "Rover (Spectro)",
+    "element": "spectro",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "description": "带着未知的过去苏醒，漂泊者踏上了一段揭开真相的旅途。",
+    "descriptionEn": "Awakened with an unknown past, Rover embarks on a journey to uncover the truths.",
+    "releaseVersion": "1.0",
+    "status": "released",
+    "image": "/images/wuwa/characters/rover-spectro.webp",
+    "stats": {
+      "hp": 11400,
+      "atk": 375,
+      "def": 1369,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Whisperin Core",
+      "boss": "Mysterious Code",
+      "localSpecialty": "Pecok Flower"
+    },
+    "skillMaterials": {
+      "commonDrop": "Metallic Drip",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "Spectro DMG",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Jane Jackson / Chase Brown",
+      "jp": "Tanaka Minami / Toshiki Masuda",
+      "cn": "Du QingQing / Ma Yang",
+      "kr": "Song Ha Rim / Kim Sin Woo"
+    },
+    "tierRank": "A+",
+    "tierReason": {
+      "zh": "免费强力光谱输出，配合金犀效果优秀",
+      "en": "Free strong Spectro DPS, excellent with Jinhsi"
+    }
+  },
+  {
+    "id": "sanhua",
+    "name": "散华",
+    "nameEn": "Sanhua",
+    "element": "glacio",
+    "weaponType": "Sword",
+    "rarity": 4,
+    "description": "今州令尹的贴身侍卫，以冷酷的性格著称。曾被称为'灾厄之阿修罗'的散华，如今是一位沉默寡言的守护者。",
+    "descriptionEn": "The bodyguard of Jinzhou's Magistrate, known for having an icy personality. Once regarded as the Asura of Calamity, Sanhua is now a taciturn guardian.",
+    "releaseVersion": "1.0",
+    "status": "released",
+    "image": "/images/wuwa/characters/sanhua.webp",
+    "stats": {
+      "hp": 10063,
+      "atk": 275,
+      "def": 941,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Whisperin Core",
+      "boss": "Sound-Keeping Tacet Core",
+      "localSpecialty": "Wintry Bell"
+    },
+    "skillMaterials": {
+      "commonDrop": "Metallic Drip",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "Glacio DMG",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Megan MacKenzie",
+      "jp": "Uchida Maaya",
+      "cn": "Qiu Qiu",
+      "kr": "Kim Chae Rin"
+    },
+    "tierRank": "B",
+    "tierReason": {
+      "zh": "冰凝辅助，能为队伍提供增益",
+      "en": "Glacio support providing team buffs"
+    }
+  },
+  {
+    "id": "taoqi",
+    "name": "桃祈",
+    "nameEn": "Taoqi",
+    "element": "havoc",
+    "weaponType": "Broadblade",
+    "rarity": 4,
+    "description": "桃祈是发展部边防司的司长。虽然看起来懒散，但她总能在关键时刻展现出可靠的实力。",
+    "descriptionEn": "Taoqi is the director of border defense at the Ministry of Development. Despite her seemingly laid-back demeanor, she consistently proves to be a dependable and supportive individual.",
+    "releaseVersion": "1.0",
+    "status": "released",
+    "image": "/images/wuwa/characters/taoqi.webp",
+    "stats": {
+      "hp": 8950,
+      "atk": 225,
+      "def": 1564,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Howler Core",
+      "boss": "Gold-Dissolving Feather",
+      "localSpecialty": "Iris"
+    },
+    "skillMaterials": {
+      "commonDrop": "Waveworn Residue",
+      "weeklyBoss": "Unwarranted Feather"
+    },
+    "minorFortes": [
+      {
+        "stat": "DEF%",
+        "value": "+15.2%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Elizabeth Neale",
+      "jp": "Sakura Kaori",
+      "cn": "Zhang Yu Mo",
+      "kr": "Lee Sae Byeok"
+    },
+    "tierRank": "B",
+    "tierReason": {
+      "zh": "气动防御型角色，提供护盾",
+      "en": "Aero defensive character providing shields"
+    }
+  },
+  {
+    "id": "verina",
+    "name": "维里奈",
+    "nameEn": "Verina",
+    "element": "spectro",
+    "weaponType": "Rectifier",
+    "rarity": 5,
+    "description": "维里奈拥有丰富的植物学知识，她总是关切地微笑着，希望每一朵花都能被赋予生命的奇迹。",
+    "descriptionEn": "With an extensive knowledge of botany, Verina is always solicitous, always smiling, and always wishing for every flower to be blessed with the miracle of life.",
+    "releaseVersion": "1.0",
+    "status": "released",
+    "image": "/images/wuwa/characters/verina.webp",
+    "stats": {
+      "hp": 14238,
+      "atk": 338,
+      "def": 1100,
+      "energy": 175,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Howler Core",
+      "boss": "Elegy Tacet Core",
+      "localSpecialty": "Belle Poppy"
+    },
+    "skillMaterials": {
+      "commonDrop": "Helix",
+      "weeklyBoss": "Monument Bell"
+    },
+    "minorFortes": [
+      {
+        "stat": "Healing Bonus",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Hollie Holt",
+      "jp": "Yamashita Seiya",
+      "cn": "Cai Shu Meng",
+      "kr": "Kim Chae Rin"
+    },
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "最强辅助之一，治疗+增伤一体化",
+      "en": "One of the best supports with healing and damage boost"
+    }
+  },
+  {
+    "id": "xiangli-yao",
+    "name": "相里要",
+    "nameEn": "Xiangli Yao",
+    "element": "electro",
+    "weaponType": "Gauntlets",
+    "rarity": 5,
+    "description": "华胥研究院的首席研究员，相里要在年轻时就展现出在多个研究领域非凡的专业能力。",
+    "descriptionEn": "Huaxu Academy's Principal Investigator, Xiangli Yao, displays exceptional expertise in various research fields despite his young age.",
+    "releaseVersion": "1.2",
+    "status": "released",
+    "image": "/images/wuwa/characters/xiangli-yao.webp",
+    "stats": {
+      "hp": 10625,
+      "atk": 425,
+      "def": 1222,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Whisperin Core",
+      "boss": "Hidden Thunder Tacet Core",
+      "localSpecialty": "Violet Coral"
+    },
+    "skillMaterials": {
+      "commonDrop": "Cadence",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "CRIT DMG",
+        "value": "+16%"
+      },
+      {
+        "stat": "ATK%",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Shaun Mendum",
+      "jp": "Kobayashi Chiaki",
+      "cn": "Ban Ma",
+      "kr": "Jung Eui Jin"
+    },
+    "tierRank": "A+",
+    "tierReason": {
+      "zh": "导电输出角色，机制独特",
+      "en": "Electro DPS with unique mechanics"
+    }
+  },
+  {
+    "id": "yangyang",
+    "name": "秧秧",
+    "nameEn": "Yangyang",
+    "element": "aero",
+    "weaponType": "Sword",
+    "rarity": 4,
+    "description": "夜归军的斥候。曾经被保护的人，如今已成长为守护者。她乘风翱翔，守护他人，如飞鸟凌空。",
+    "descriptionEn": "Yangyang is an Outrider of the Midnight Rangers. Once sheltered, now a fighter. She soars with the wind to protect others, like a skylark in flight.",
+    "releaseVersion": "1.0",
+    "status": "released",
+    "image": "/images/wuwa/characters/yangyang.webp",
+    "stats": {
+      "hp": 10200,
+      "atk": 250,
+      "def": 1100,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Ring",
+      "boss": "Roaring Rock Fist",
+      "localSpecialty": "Wintry Bell"
+    },
+    "skillMaterials": {
+      "commonDrop": "Metallic Drip",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "Aero DMG",
+        "value": "+12%"
+      },
+      {
+        "stat": "ATK%",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Amber Aviles",
+      "jp": "Ishikawa Yui",
+      "cn": "Cai Na",
+      "kr": "Kim Chae Rin"
+    },
+    "tierRank": "B",
+    "tierReason": {
+      "zh": "气动聚怪辅助，前期实用",
+      "en": "Aero grouping support, useful early game"
+    }
+  },
+  {
+    "id": "yinlin",
+    "name": "吟霖",
+    "nameEn": "Yinlin",
+    "element": "electro",
+    "weaponType": "Rectifier",
+    "rarity": 5,
+    "description": "一位才华横溢的傀儡师，也是皇龙手下最出色的审判官之一。她的手段精明而冷酷，但内心深处仍保有温柔的一面。",
+    "descriptionEn": "A brilliant puppeteer and one of the Jinzhou's most outstanding judges. Her methods are shrewd and ruthless, but deep down she still retains a gentle side.",
+    "releaseVersion": "1.0",
+    "status": "released",
+    "image": "/images/wuwa/characters/yinlin.webp",
+    "stats": {
+      "hp": 10825,
+      "atk": 413,
+      "def": 1259,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Howler Core",
+      "boss": "Hidden Thunder Tacet Core",
+      "localSpecialty": "Belle Poppy"
+    },
+    "skillMaterials": {
+      "commonDrop": "Waveworn Residue",
+      "weeklyBoss": "Unwarranted Feather"
+    },
+    "minorFortes": [
+      {
+        "stat": "CRIT Rate",
+        "value": "+8%"
+      },
+      {
+        "stat": "ATK%",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "AIMEE-X",
+      "jp": "Endou Yurika",
+      "cn": "Xiao Nian",
+      "kr": "Kim Chae Rin"
+    },
+    "tierRank": "SS",
+    "tierReason": {
+      "zh": "顶级雷属性副C/主C，后台协同攻击伤害优秀",
+      "en": "Top-tier Electro sub-DPS/main DPS with excellent off-field damage"
+    }
+  },
+  {
+    "id": "yuanwu",
+    "name": "渊武",
+    "nameEn": "Yuanwu",
+    "element": "electro",
+    "weaponType": "Gauntlets",
+    "rarity": 4,
+    "description": "渊武经营着一家拳击馆，教授武术和养生之道。他以温和亲切的性格在社区中备受尊敬。",
+    "descriptionEn": "Yuanwu owns a boxing gym where he teaches martial arts and health management. He is well-respected in the community for his cordial demeanor and pleasant temperament.",
+    "releaseVersion": "1.0",
+    "status": "released",
+    "image": "/images/wuwa/characters/yuanwu.webp",
+    "stats": {
+      "hp": 8525,
+      "atk": 225,
+      "def": 1638,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Ring",
+      "boss": "Hidden Thunder Tacet Core",
+      "localSpecialty": "???"
+    },
+    "skillMaterials": {
+      "commonDrop": "Cadence",
+      "weeklyBoss": "Unending Destruction"
+    },
+    "minorFortes": [
+      {
+        "stat": "Electro DMG",
+        "value": "+12%"
+      },
+      {
+        "stat": "DEF%",
+        "value": "+15.2%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Chris Tergliafera",
+      "jp": "Matsuda Kenichiro",
+      "cn": "Zhao Yi",
+      "kr": "Park Ki Ryun"
+    },
+    "tierRank": "B",
+    "tierReason": {
+      "zh": "导电辅助，功能性有限",
+      "en": "Electro support with limited utility"
+    }
+  },
+  {
+    "id": "zhezhi",
+    "name": "折枝",
+    "nameEn": "Zhezhi",
+    "element": "glacio",
+    "weaponType": "Rectifier",
+    "rarity": 5,
+    "description": "折枝是一名受雇画家，性格安静害羞，对绘画有着执着的热爱。她不善言辞，但她的坚持和对绘画的热爱胜过千言万语。",
+    "descriptionEn": "Zhezhi is a commissioned painter, quiet and shy with a dedication to her craft. She's not very eloquent, but her persistence and love for painting speak volumes.",
+    "releaseVersion": "1.2",
+    "status": "released",
+    "image": "/images/wuwa/characters/zhezhi.webp",
+    "stats": {
+      "hp": 12250,
+      "atk": 375,
+      "def": 1198,
+      "energy": 125,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "ascensionMaterials": {
+      "commonDrop": "Howler Core",
+      "boss": "Sound-Keeping Tacet Core",
+      "localSpecialty": "Lanternberry"
+    },
+    "skillMaterials": {
+      "commonDrop": "Helix",
+      "weeklyBoss": "Monument Bell"
+    },
+    "minorFortes": [
+      {
+        "stat": "CRIT Rate",
+        "value": "+8%"
+      },
+      {
+        "stat": "ATK%",
+        "value": "+12%"
+      }
+    ],
+    "voiceActors": {
+      "en": "Shin-Fei Chen",
+      "jp": "Makino Yui",
+      "cn": "Miao Zi",
+      "kr": "Kim Ha Ru"
+    },
+    "tierRank": "A+",
+    "tierReason": {
+      "zh": "冰凝副C/辅助，后台输出能力强",
+      "en": "Glacio sub-DPS/support with strong off-field damage"
+    }
+  },
+  {
+    "id": "shorekeeper",
+    "name": "守岸人",
+    "nameEn": "The Shorekeeper",
+    "element": "spectro",
+    "weaponType": "Rectifier",
+    "rarity": 5,
+    "description": "被称为「第二实例」的黑海岸守护者，由高纯度回音能量晶体组成，拥有操控星云的力量。她只在危机时刻现身，协助黑海岸的真正领袖。",
+    "descriptionEn": "She is known as \"the Second Instance,\" the Guardian of the Black Shores, and is a mythical entity composed of Sonoro Spheres and high-purity Remnant Energy crystals with the power to guide the Tethys System and control the stars themselves.",
+    "releaseVersion": "1.3",
+    "status": "released",
+    "tierRank": "SS",
+    "tierReason": {
+      "zh": "顶级辅助，提供全队暴击加深和持续治疗，几乎适配所有阵容",
+      "en": "Top-tier support providing team-wide Crit DMG Deepen and sustained healing, fits nearly every team"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "youhu",
+    "name": "釉瑚",
+    "nameEn": "Youhu",
+    "element": "glacio",
+    "weaponType": "Gauntlets",
+    "rarity": 4,
+    "description": "来自皇龙的古董鉴定师，性格活泼风趣，善于即兴创作打油诗。她在街头摆摊，让古董找到真正珍惜它们的人。",
+    "descriptionEn": "She is an antiquarian from Huanglong. A voluble and whimsical antique appraiser, known for creating limericks on the spot, she presents her appraisals with flair and precision.",
+    "releaseVersion": "1.3",
+    "status": "released",
+    "tierRank": "B",
+    "tierReason": {
+      "zh": "四星辅助，协奏加伤能力有限",
+      "en": "4-star support with limited Concerto DMG amplification"
+    },
+    "stats": {
+      "hp": 8500,
+      "atk": 240,
+      "def": 850,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "camellya",
+    "name": "椿",
+    "nameEn": "Camellya",
+    "element": "havoc",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "description": "黑海岸的执花，负责对新候选人进行战斗导向的新手测试。她拒绝承担任何责任，沉溺于战斗和个人享乐，追求战斗的刺激。",
+    "descriptionEn": "She is a Bloom Bearer of the Black Shores, and handles the combat-oriented germination tests given to new candidates. However, she refuses all sense of responsibility, delighting in satiating her unquenchable thirst for battle and personal amusement.",
+    "releaseVersion": "1.4",
+    "status": "released",
+    "tierRank": "SS",
+    "tierReason": {
+      "zh": "湮灭主C，普攻输出极高，自带续航，独狼也能打出爆炸伤害",
+      "en": "Havoc main DPS with extreme Basic Attack damage and self-sustain, can carry solo"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "lumi",
+    "name": "灯灯",
+    "nameEn": "Lumi",
+    "element": "electro",
+    "weaponType": "Broadblade",
+    "rarity": 4,
+    "description": "洛洛物流的领航员和运输小队队长。性格开朗如阳光，恪守职责，以准时送达为荣。",
+    "descriptionEn": "She is a navigator at Lollo Logistics and leader of a transport squad team. Born disciplined, she honors her duty of punctual delivery with charming personality like a shaft of sunlight.",
+    "releaseVersion": "1.4",
+    "status": "released",
+    "tierRank": "B",
+    "tierReason": {
+      "zh": "四星雷属性输出，伤害中规中矩",
+      "en": "4-star Electro DPS with average damage output"
+    },
+    "stats": {
+      "hp": 8500,
+      "atk": 240,
+      "def": 850,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "carlotta",
+    "name": "珂莱塔",
+    "nameEn": "Carlotta",
+    "element": "glacio",
+    "weaponType": "Pistols",
+    "rarity": 5,
+    "description": "莫塔里家族的二小姐，天生的贵族气质与对艺术的精妙品味并存。表面上优雅从容，实则心思缜密、手段果决。",
+    "descriptionEn": "She is the second daughter of the esteemed Montelli Family of Rinascita, embodying innate nobility and a refined appreciation for art. Her graceful composure conceals a calculating and decisive mind.",
+    "releaseVersion": "2.0",
+    "status": "released",
+    "tierRank": "SS",
+    "tierReason": {
+      "zh": "冷凝主C，共振技能爆发伤害极高，速切输出核心",
+      "en": "Glacio main DPS with extremely high Resonance Skill burst damage, quick-swap carry"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "roccia",
+    "name": "洛可可",
+    "nameEn": "Roccia",
+    "element": "havoc",
+    "weaponType": "Gauntlets",
+    "rarity": 5,
+    "description": "愚人剧团的大副，天赋异禀的即兴喜剧演员。性格害羞内向，但与挚友佩罗一起，用丰富的道具和才能守护剧团的朋友。",
+    "descriptionEn": "She is a gifted improvisational comedian and the First Mate of the Troupe of Fools. While bashful and introverted, she, alongside Pero, her closest companion, possesses a repertoire of tools and talents to protect and nurture her friends.",
+    "releaseVersion": "2.0",
+    "status": "released",
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "湮灭副C，提供普攻加深和聚怪，与椿配合极佳",
+      "en": "Havoc sub-DPS providing Basic Attack DMG Deepen and grouping, excellent with Camellya"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "brant",
+    "name": "布兰特",
+    "nameEn": "Brant",
+    "element": "fusion",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "description": "愚人剧团的团长，性格自由随性洒脱，面具下是对家人和伙伴的珍视，引领剧团众人找到最温暖的港湾。",
+    "descriptionEn": "He is the captain of the Troupe of Fools, exuding a carefree, easygoing charm and charisma, unbound by convention. Beneath his flamboyant persona lies a kind heart deeply devoted to ensuring his crew's safety and freedom.",
+    "releaseVersion": "2.1",
+    "status": "released",
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "热熔辅助输出，治疗加深兼备，灵活切换姿态",
+      "en": "Fusion support/DPS hybrid with healing and DMG Deepen, flexible stance switching"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "phoebe",
+    "name": "菲比",
+    "nameEn": "Phoebe",
+    "element": "spectro",
+    "weaponType": "Rectifier",
+    "rarity": 5,
+    "description": "隐海修会的教士，性格温和虔诚。她以慈悲和善良对待每个人，坚定地信奉岁主英白拉多的教诲。",
+    "descriptionEn": "She is an Acolyte of the Order of the Deep. A young woman of quiet devotion and compassionate, nurturing nature, she upholds the teachings of her faith with unwavering diligence.",
+    "releaseVersion": "2.1",
+    "status": "released",
+    "tierRank": "SS",
+    "tierReason": {
+      "zh": "衍射主C，光噪体系核心，对光噪状态敌人伤害极高",
+      "en": "Spectro main DPS and core of the Spectro Frazzle system, massive damage against Frazzled enemies"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "cantarella",
+    "name": "坎特蕾拉",
+    "nameEn": "Cantarella",
+    "element": "havoc",
+    "weaponType": "Rectifier",
+    "rarity": 5,
+    "description": "翡萨烈家族第三十六代家主，同时也是前任圣女。她优雅从容的外表下隐藏着黑暗而令人不安的过去，始终在寻找解放自己和家族的方法。",
+    "descriptionEn": "She is the thirty-sixth matriarch of the Fisalia family, and the former Blessed Maiden of Imperator. Her elegant, composed demeanor and captivating beauty conceal a dark and disturbing past.",
+    "releaseVersion": "2.2",
+    "status": "released",
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "湮灭辅助，提供协同攻击和全队伤害加深",
+      "en": "Havoc support providing coordinated attacks and team-wide DMG amplification"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "zani",
+    "name": "赞妮",
+    "nameEn": "Zani",
+    "element": "spectro",
+    "weaponType": "Gauntlets",
+    "rarity": 5,
+    "description": "莫塔里家族埃弗拉德金库的防卫科雇员，认真可靠。多年来从不缺席打卡，从井然有序的生活和精心计划的休闲中寻找乐趣。",
+    "descriptionEn": "She is a staff member of the Montelli Family's Averado Bank in Ragunna. As a serious and reliable Montelli employee, she follows a strict routine and manages tasks with ease.",
+    "releaseVersion": "2.3",
+    "status": "released",
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "衍射副C，光噪体系重要成员，协奏效率高",
+      "en": "Spectro sub-DPS and key member of the Spectro Frazzle team with high Concerto Efficiency"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "ciaccona",
+    "name": "夏空",
+    "nameEn": "Ciaccona",
+    "element": "aero",
+    "weaponType": "Pistols",
+    "rarity": 5,
+    "description": "自由奔放、浪漫真挚的吟游诗人，在黎那汐塔四处游荡寻找灵感。她是一位充满激情的音乐家和诗人，致力于将激情与真理传播给所有勇于聆听的人。",
+    "descriptionEn": "She is a free-spirited, romantic, sincere, and whimsical bard wandering Rinascita in search of inspiration. She is a passionate musician and poet dedicated to spreading her passion and truth to all who dare to listen.",
+    "releaseVersion": "2.3",
+    "status": "released",
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "气动副C，提供气动伤害加深和聚怪牵引",
+      "en": "Aero sub-DPS providing Aero DMG amplification and enemy traction"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "cartethyia",
+    "name": "卡提希娅",
+    "nameEn": "Cartethyia",
+    "element": "aero",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "description": "在黎那汐塔被尊崇为芙露德莉斯，即「圣女」或「殉道圣女」。她与岁主英白拉多和鸣式利维亚坦有着深远的关系，但真正渴望的是摆脱头衔的束缚，成为正义的游侠骑士。",
+    "descriptionEn": "Throughout Rinascita, she is revered as Fleurdelys, the \"Blessed Maiden.\" As a key figure in the region's history, she holds profound influence with connections to the Sentinel Imperator and the Threnodian Leviathan.",
+    "releaseVersion": "2.4",
+    "status": "released",
+    "tierRank": "SS",
+    "tierReason": {
+      "zh": "气动主C，气动侵蚀体系核心，输出能力极强",
+      "en": "Aero main DPS and core of the Aero Erosion system with extreme damage output"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "lupa",
+    "name": "露帕",
+    "nameEn": "Lupa",
+    "element": "fusion",
+    "weaponType": "Broadblade",
+    "rarity": 5,
+    "description": "来自七丘的角斗士、竞技场上的不败冠军。她兼具狂野的竞争精神和高尚勇敢的心，沉迷于艰苦奋斗带来的胜利和刺激。",
+    "descriptionEn": "She is a gladiator from Septimont, a warrior and undefeated champion of the arena. She combines a wild competitive spirit with a noble, courageous heart.",
+    "releaseVersion": "2.4",
+    "status": "released",
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "热熔主C，输出稳定，适合新手",
+      "en": "Fusion main DPS with consistent damage, beginner-friendly"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "phrolova",
+    "name": "弗洛洛",
+    "nameEn": "Phrolova",
+    "element": "havoc",
+    "weaponType": "Rectifier",
+    "rarity": 5,
+    "description": "残星会的前任监察者，实力极为强大的共鸣者。她曾是残星会的核心人物，对组织有着复杂而深远的影响。",
+    "descriptionEn": "She is a particularly powerful Resonator and a former Overseer of the Fractsidus. She was a central figure in the organization with complex and far-reaching influence.",
+    "releaseVersion": "2.5",
+    "status": "released",
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "湮灭输出，技能机制独特，召唤物协同攻击",
+      "en": "Havoc DPS with unique mechanics and summoned creature coordinated attacks"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "augusta",
+    "name": "奥古斯塔",
+    "nameEn": "Augusta",
+    "element": "electro",
+    "weaponType": "Broadblade",
+    "rarity": 5,
+    "description": "七丘的无畏领袖，拥有钢铁般的意志，同时也是竞技场上不败的角斗士。她虽为凡人，却已达到鲜有人能及的荣耀巅峰。",
+    "descriptionEn": "The fearless Ephor of Septimont with a will of iron. She is also an undefeated gladiator in the arena who, though mortal, has reached a pinnacle of glory few can match.",
+    "releaseVersion": "2.6",
+    "status": "released",
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "导电主C，技能倍率高，操作手感流畅",
+      "en": "Electro main DPS with high skill multipliers and smooth gameplay feel"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "iuno",
+    "name": "尤诺",
+    "nameEn": "Iuno",
+    "element": "aero",
+    "weaponType": "Gauntlets",
+    "rarity": 5,
+    "description": "七丘的谕女，天赋异禀的著名祭司。她侍奉于四角神殿，拥有预知未来的能力。",
+    "descriptionEn": "She is a prodigious and renowned Priestess of Septimont's Tetragon Temple, possessing the ability to foresee the future.",
+    "releaseVersion": "2.6",
+    "status": "released",
+    "tierRank": "A",
+    "tierReason": {
+      "zh": "气动辅助，提供气动伤害加深，但自身输出有限",
+      "en": "Aero support providing Aero DMG Deepen, but limited personal damage"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "qiuyuan",
+    "name": "仇远",
+    "nameEn": "Qiuyuan",
+    "element": "aero",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "description": "前镇抚司成员，因曾被陷害杀害自己的上司而成为明庭逃犯。性格冷静坚韧，剑术精湛。",
+    "descriptionEn": "Former senior agent of Mingting's Internal Security Agency, he is a swordsman of cool resilience who became a fugitive after being framed for his superior's murder.",
+    "releaseVersion": "2.7",
+    "status": "released",
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "气动输出，技能循环流畅，适合气动队",
+      "en": "Aero DPS with smooth skill rotation, fits well in Aero teams"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "galbrena",
+    "name": "嘉贝莉娜",
+    "nameEn": "Galbrena",
+    "element": "fusion",
+    "weaponType": "Pistols",
+    "rarity": 5,
+    "description": "曾被称为「天使」的七丘人，如今是身经百战的猎魔人。她体内寄宿着名为奇美拉的特殊残象，每当召唤时便会与她并肩作战。",
+    "descriptionEn": "Once a Septimontian known as \"Angel\", she is now a formidable \"Discord Slayer\" who hosts a special Echo called Chimera that fights alongside her when summoned.",
+    "releaseVersion": "2.7",
+    "status": "released",
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "热熔输出，奇美拉协同攻击伤害可观",
+      "en": "Fusion DPS with notable Chimera coordinated attack damage"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "buling",
+    "name": "卜灵",
+    "nameEn": "Buling",
+    "element": "electro",
+    "weaponType": "Rectifier",
+    "rarity": 4,
+    "description": "黑海岸的客卿，被称为「追灵道士」。她是鉴心的师妹，擅长灵异相关的术法。",
+    "descriptionEn": "She is a Black Shores Consultant, known as the \"Spiritchaser Taoist\" and junior to Jianxin. She specializes in spiritual arts.",
+    "releaseVersion": "2.8",
+    "status": "released",
+    "tierRank": "B",
+    "tierReason": {
+      "zh": "四星导电辅助，功能性一般",
+      "en": "4-star Electro support with limited utility"
+    },
+    "stats": {
+      "hp": 8500,
+      "atk": 240,
+      "def": 850,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "chisa",
+    "name": "千咲",
+    "nameEn": "Chisa",
+    "element": "havoc",
+    "weaponType": "Broadblade",
+    "rarity": 5,
+    "description": "星炬学院的学生，性格严谨认真、冷静凛然。因虚质磁暴被卷入穗波市长达二十年。",
+    "descriptionEn": "Chisa is a conscientious, level-headed student from the Startorch Academy who was trapped in Minamibo for 20 years due to a Voidmatter Storm.",
+    "releaseVersion": "2.8",
+    "status": "released",
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "湮灭主C，输出手法独特，爆发力强",
+      "en": "Havoc main DPS with unique playstyle and strong burst potential"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "mornye",
+    "name": "莫宁",
+    "nameEn": "Mornye",
+    "element": "fusion",
+    "weaponType": "Broadblade",
+    "rarity": 5,
+    "description": "深空联合的研究员，同时也是星炬学院隧者工学部的教授。她专注于宇宙探索和隧者工程的研究。",
+    "descriptionEn": "She is a researcher for the Spacetrek Collective and a professor for Exostrider Engineering at Startorch Academy, focused on space exploration research.",
+    "releaseVersion": "3.0",
+    "status": "released",
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "热熔主C，技能范围大，输出稳定",
+      "en": "Fusion main DPS with wide AoE and consistent damage"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "lynae",
+    "name": "琳奈",
+    "nameEn": "Lynae",
+    "element": "spectro",
+    "weaponType": "Pistols",
+    "rarity": 5,
+    "description": "星炬学院预科学生。事实上她曾是新联邦无法地带的雇佣兵，盗用了原本琳奈的身份进入学院。",
+    "descriptionEn": "She is a Preparatory Program student at Startorch Academy. Before attending Startorch she was a mercenary from the Lawless Zone who assumed the identity of the real Lynae.",
+    "releaseVersion": "3.0",
+    "status": "released",
+    "tierRank": "A",
+    "tierReason": {
+      "zh": "衍射输出，机制有趣但强度中上",
+      "en": "Spectro DPS with interesting mechanics but mid-to-upper power level"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "aemeath",
+    "name": "爱弥斯",
+    "nameEn": "Aemeath",
+    "element": "fusion",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "description": "来自霜原罗伊族的原住民，曾是星炬学院的同步者。作为歌手的艺名为飞行雪绒，也是漂泊者的养女。",
+    "descriptionEn": "She is a Frostlands native from the Roya Tribe who was once a Synchronist at Startorch Academy. Known by the stage name \"Flying Snowdown\" as a singer, and is the Rover's adopted daughter.",
+    "releaseVersion": "3.1",
+    "status": "released",
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "热熔输出，剧情角色人气高，实战强度在线",
+      "en": "Fusion DPS with high story relevance and solid combat performance"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "luuk-herssen",
+    "name": "陆·赫斯",
+    "nameEn": "Luuk Herssen",
+    "element": "spectro",
+    "weaponType": "Gauntlets",
+    "rarity": 5,
+    "description": "星炬学院共鸣医疗科的主执校医，曾在残星会当卧底。因养父和义弟被残星会作为实验体对待，对组织恨之入骨。",
+    "descriptionEn": "He is the head physician of the Resonator Nursing Unit at Startorch Academy. He was once an undercover agent within the Fractsidus, harboring deep hatred for the organization.",
+    "releaseVersion": "3.1",
+    "status": "released",
+    "tierRank": "A",
+    "tierReason": {
+      "zh": "衍射辅助治疗，治疗能力强但输出偏低",
+      "en": "Spectro support/healer with strong healing but lower personal damage"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "sigrika",
+    "name": "西格莉卡",
+    "nameEn": "Sigrika",
+    "element": "aero",
+    "weaponType": "Gauntlets",
+    "rarity": 5,
+    "description": "罗伊族的少女，原秘日六席候补，星炬学院的助教。与达妮娅和娜波摩为好友。",
+    "descriptionEn": "She is a student in the Preparatory Program at Startorch Academy and a member of its Birding Fan Club as well as a Solsworn from the Roya Tribe.",
+    "releaseVersion": "3.2",
+    "status": "released",
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "气动输出，技能组合灵活，适配气动队",
+      "en": "Aero DPS with flexible skill combos, fits well in Aero teams"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "denia",
+    "name": "达妮娅",
+    "nameEn": "Denia",
+    "element": "fusion",
+    "weaponType": "Rectifier",
+    "rarity": 5,
+    "description": "星炬学院的学生，西格莉卡的好友。她暗中作为残星会的特工行动，隐藏着不为人知的秘密。",
+    "descriptionEn": "She is a student from Startorch Academy's Department of Voidmatters who secretly serves as an agent for the Fractsidus.",
+    "releaseVersion": "3.3",
+    "status": "released",
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "热熔输出，技能倍率优秀，输出环境良好",
+      "en": "Fusion DPS with excellent skill multipliers and comfortable damage windows"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "hiyuki",
+    "name": "绯雪",
+    "nameEn": "Hiyuki",
+    "element": "glacio",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "description": "星炬学院传说中的巫女，同时也是「特别对策组」的成员。她与鸣灾者有着悠久的联系。",
+    "descriptionEn": "She is a miko and member of the Special Response Force with a long-standing connection to the Threnodian.",
+    "releaseVersion": "3.3",
+    "status": "released",
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "冷凝主C，技能优雅高伤，冷凝队核心输出",
+      "en": "Glacio main DPS with elegant and high-damage skills, core Glacio team carry"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    }
+  },
+  {
+    "id": "lucy",
+    "name": "露西",
+    "nameEn": "Lucy",
+    "element": "spectro",
+    "weaponType": "Pistols",
+    "rarity": 5,
+    "description": "赛博朋克：边缘行者联动角色，以衍射属性佩枪进行强力输出。",
+    "descriptionEn": "Cyberpunk: Edgerunners collaboration character. A Spectro Pistols main DPS with powerful damage output.",
+    "releaseVersion": "3.4",
+    "status": "released",
+    "tierRank": "SS",
+    "tierReason": {
+      "zh": "衍射主C，赛博朋克联动限定角色，输出能力极强",
+      "en": "Spectro main DPS, Cyberpunk collab limited character with excellent damage output"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "skills": {
+      "basicAtk": {
+        "description": "进行光谱属性的连击攻击，积累光谱能量。",
+        "descriptionEn": "Performs Spectro combo attacks to build Spectro energy."
+      }
+    }
+  },
+  {
+    "id": "rebecca",
+    "name": "丽贝卡",
+    "nameEn": "Rebecca",
+    "element": "electro",
+    "weaponType": "Pistols",
+    "rarity": 5,
+    "description": "赛博朋克：边缘行者联动角色，导电属性佩枪角色，活动期间免费获取。",
+    "descriptionEn": "Cyberpunk: Edgerunners collaboration character. An Electro Pistols character available for free during the event.",
+    "releaseVersion": "3.4",
+    "status": "released",
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "导电输出/辅助，赛博朋克联动免费角色，性价比极高",
+      "en": "Electro DPS/support, Cyberpunk collab free character with great value"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "skills": {
+      "basicAtk": {
+        "description": "使用双枪进行快速射击，造成雷属性伤害。",
+        "descriptionEn": "Fires rapid shots with dual pistols, dealing Electro DMG."
+      }
+    }
+  },
+  {
+    "id": "lucilla",
+    "name": "洛瑟菈",
+    "nameEn": "Lucilla",
+    "element": "glacio",
+    "weaponType": "Rectifier",
+    "rarity": 5,
+    "description": "星炬学院校长，冷凝属性音感仪角色，拥有快速切换和冷凝焦灼机制。",
+    "descriptionEn": "Principal of Startorch Academy. A Glacio Rectifier sub-DPS with quick-swap and Glacio Chafe mechanics.",
+    "releaseVersion": "3.4",
+    "status": "released",
+    "tierRank": "S",
+    "tierReason": {
+      "zh": "冷凝副C，快速切换机制与冷凝焦灼配合出色",
+      "en": "Glacio sub-DPS with excellent quick-swap mechanics and Glacio Chafe synergy"
+    },
+    "stats": {
+      "hp": 10000,
+      "atk": 300,
+      "def": 1000,
+      "energy": 100,
+      "critRate": 5,
+      "critDmg": 150
+    },
+    "skills": {
+      "basicAtk": {
+        "description": "进行至多五段的冷凝属性连击攻击，快速积累冷凝能量。",
+        "descriptionEn": "Performs up to 5 consecutive Glacio attacks, rapidly building Glacio energy."
+      },
+      "skill": {
+        "description": "释放积累的冷凝能量，对前方大范围敌人造成冷凝伤害并施加冷凝焦灼效果。",
+        "descriptionEn": "Releases accumulated Glacio energy to deal Glacio DMG to enemies in a large area and apply Glacio Chafe."
+      },
+      "ultimate": {
+        "description": "创造超低温领域，对领域内敌人造成持续冷凝伤害并降低其移动速度。",
+        "descriptionEn": "Creates an ultra-low temperature field dealing continuous Glacio DMG and reducing movement speed of enemies within."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "霜月之环",
+      "bestWeaponEn": "Frostmoon Ring",
+      "bestEchoSet": "轻云出月",
+      "bestEchoSetEn": "Moonlit Clouds"
+    }
+  }
+]

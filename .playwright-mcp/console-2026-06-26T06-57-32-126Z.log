@@ -1,0 +1,2 @@
+[     891ms] [INFO] %c bili-fe-mirror %c v2.1.0  padding: 2px 6px; border-radius: 3px 0 0 3px; color: #fff; background: #FF6699; font-weight: bold; padding: 2px 6px; border-radius: 0 3px 3px 0; color: #fff; background: #FF9999; font-weight: bold; @ https://s1.hdslb.com/bfs/seed/jinkela/short/b-mirror/biliMirror.umd.mini.js:1
+[     896ms] [LOG] 白屏检测是否正常 {status: ok, loop: 0, data: Object} @ https://search.bilibili.com/all?keyword=%E9%81%97%E5%BF%98%E4%B9%8B%E6%B5%B7%20%E5%85%AC%E6%B5%8B%E5%89%8D%E7%9E%BB:228

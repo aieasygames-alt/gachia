@@ -1,6 +1,8 @@
 import type { SupportedLocale } from '@gachia/core';
+import { join } from 'node:path';
+import { loadJson } from '../../load-json';
 import { localeStr } from './types';
-import rawGuides from './raw-guides.json';
+const rawGuides = await loadJson<unknown>(join(process.cwd(), '../../packages/data/games/guihuan/raw-guides.json'), '/data/guihuan/raw-guides.json');
 
 export interface GuihuanGuideFaq {
   question: string;

@@ -134,6 +134,66 @@ const FavoriteButton = dynamic(
   () => import('@/components/auth/favorite-button').then((m) => m.FavoriteButton),
 );
 
+type NextStepLink = {
+  href: string;
+  title: Record<SupportedLocale, string>;
+  description: Record<SupportedLocale, string>;
+};
+
+const CHARACTER_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
+  wuwa: [
+    {
+      href: '/wuwa/version',
+      title: { zh: '回到版本专题', en: 'Back to version hub', ja: 'バージョン特集へ戻る' },
+      description: { zh: '先确认最新版本节点，再回头看角色强度', en: 'Check the current version node before comparing builds', ja: '現在の版本を確認してからビルドへ' },
+    },
+    {
+      href: '/wuwa/artifacts',
+      title: { zh: '看声骸图鉴', en: 'Browse echo sets', ja: 'エコー図鑑へ' },
+      description: { zh: '补齐角色对应的声骸和套装思路', en: 'Fill in the matching echo sets and bonuses', ja: '対応エコーとセット効果を補完' },
+    },
+    {
+      href: '/wuwa/guides/roya-frostlands-guide',
+      title: { zh: '看新区域攻略', en: 'Read the region guide', ja: '新エリア攻略へ' },
+      description: { zh: '把刷图、地图和养成路线接起来', en: 'Connect farming, map flow, and progression paths', ja: '周回、マップ、育成導線を接続' },
+    },
+  ],
+  zzz: [
+    {
+      href: '/zzz/version',
+      title: { zh: '回到 3.0 专题', en: 'Back to v3.0 hub', ja: 'v3.0特集へ戻る' },
+      description: { zh: '先把版本热词、福利和卡池信息补齐', en: 'Revisit version topics, rewards, and banner info', ja: '版本トピック、報酬、バナー情報を確認' },
+    },
+    {
+      href: '/zzz/weapons',
+      title: { zh: '看音擎图鉴', en: 'Browse W-Engines', ja: '音擎図鑑へ' },
+      description: { zh: '继续补角色与武器的搭配关系', en: 'Continue matching characters with weapons', ja: 'キャラと武器の相性を補完' },
+    },
+    {
+      href: '/zzz/drive-discs',
+      title: { zh: '看驱动盘图鉴', en: 'Browse drive discs', ja: 'ドライブディスクへ' },
+      description: { zh: '把毕业盘和替代盘补完整', en: 'Complete the endgame disc and fallback set picture', ja: '完成形と代替セットを整理' },
+    },
+  ],
+  endfield: [
+    {
+      href: '/endfield/version',
+      title: { zh: '回到测试专题', en: 'Back to test hub', ja: 'テスト特集へ戻る' },
+      description: { zh: '先确认当前测试节奏和入口', en: 'Re-check the test cadence and entry points', ja: 'テスト時期と入口を再確認' },
+    },
+    {
+      href: '/endfield/guides/combat-system-guide',
+      title: { zh: '看战斗系统', en: 'Read combat guide', ja: '戦闘ガイドへ' },
+      description: { zh: '把职业定位和战斗理解接起来', en: 'Link roles, kits, and combat understanding', ja: '職分、スキル、戦闘理解を接続' },
+    },
+    {
+      href: '/endfield/items',
+      title: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
+      description: { zh: '继续看养成材料和职业需求', en: 'Continue with materials and role requirements', ja: '育成素材と職分要件を確認' },
+    },
+  ],
+};
+
 const NTE_ELEMENT_COLORS: Record<string, string> = {
   anima: '#4ade80', chaos: '#8b5cf6', cosmos: '#3b82f6',
   incantation: '#f59e0b', lakshana: '#ec4899', psyche: '#06b6d4',
@@ -338,6 +398,16 @@ export async function generateMetadata({
     locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
   });
 
+  const buildCharacterMetaDescription = (base: string, name: string, gameName: string) => {
+    const addition = locale === 'zh'
+      ? `适合想了解${name}的定位、配装、配队和培养优先级的玩家。`
+      : locale === 'ja'
+        ? `${name}の役割、ビルド、編成、育成優先度を知りたい人向けの詳細ガイドです。`
+        : `Useful for players who want to understand ${name}'s role, build options, team fit, and investment priority in ${gameName}.`;
+    const text = base.trim().length >= 120 ? base.trim() : `${base.trim()} ${addition}`;
+    return text.slice(0, 160);
+  };
+
   if (gameId === 'genshin') {
     const char = getGenshinCharacterById(id);
     if (!char) return {};
@@ -353,7 +423,7 @@ export async function generateMetadata({
     const desc = locale === 'zh'
       ? `${name}（${elName}${wName}）配装攻略：推荐武器、圣遗物套装、主副词条、配队组合。${char.tierRank}级角色全面解析。`
       : `${name} ${elName} ${wName} build guide: best weapons, artifact sets, main stats, team comps, and F2P options. ${char.tierRank} tier.`;
-    return { title, description: desc.slice(0, 160), openGraph: buildOg(name), alternates: buildAlternates(id) };
+    return { title, description: buildCharacterMetaDescription(desc, name, gameName), openGraph: buildOg(name), alternates: buildAlternates(id) };
   }
 
   if (gameId === 'starrail') {
@@ -369,7 +439,7 @@ export async function generateMetadata({
     const desc = locale === 'zh'
       ? `${name}配装攻略：推荐光锥、遗器套装、主词条、配队组合，${char.tierRank} Tier`
       : `${name} build guide for Honkai: Star Rail: best light cones, relic sets, main stats, team comps. ${char.tierRank} tier.`;
-    return { title, description: desc.slice(0, 160), openGraph: buildOg(name), alternates: buildAlternates(id) };
+    return { title, description: buildCharacterMetaDescription(desc, name, gameName), openGraph: buildOg(name), alternates: buildAlternates(id) };
   }
 
   if (gameId === 'nte') {
@@ -384,7 +454,7 @@ export async function generateMetadata({
     const desc = locale === 'zh'
       ? `${name}配装攻略：推荐弧盘、弧盘套装、配队组合，${char.tierRank} Tier`
       : `Complete ${name} build guide for Neverness to Everness: best arcs, disk sets, team comps. ${char.tierRank} tier.`;
-    return { title, description: desc.slice(0, 160), openGraph: buildOg(name), alternates: buildAlternates(id) };
+    return { title, description: buildCharacterMetaDescription(desc, name, gameName), openGraph: buildOg(name), alternates: buildAlternates(id) };
   }
 
   if (gameId === 'wuwa') {
@@ -400,7 +470,7 @@ export async function generateMetadata({
     const desc = locale === 'zh'
       ? `${name}配装攻略：推荐武器、声骸套装、配队组合，${char.tierRank ?? ''} Tier`
       : `${name} build guide for Wuthering Waves: best weapons, echo sets, team comps. ${char.tierRank ?? ''} tier.`;
-    return { title, description: desc.slice(0, 160), openGraph: buildOg(name), alternates: buildAlternates(id) };
+    return { title, description: buildCharacterMetaDescription(desc, name, gameName), openGraph: buildOg(name), alternates: buildAlternates(id) };
   }
 
   if (gameId === 'zzz') {
@@ -416,7 +486,7 @@ export async function generateMetadata({
     const desc = locale === 'zh'
       ? `${name}（${elName}${specName}）配装攻略：推荐音擎、驱动盘套装、主副词条、配队组合。${char.tierRank}级角色全面解析。`
       : `${name} ${elName} ${specName} best build: recommended W-Engines, drive disc sets, main stats, and team comps. ${char.tierRank} tier ZZZ agent.`;
-    return { title, description: desc.slice(0, 160), openGraph: buildOg(name), alternates: buildAlternates(id) };
+    return { title, description: buildCharacterMetaDescription(desc, name, gameName), openGraph: buildOg(name), alternates: buildAlternates(id) };
   }
 
   if (gameId === 'guihuan') {
@@ -431,7 +501,7 @@ export async function generateMetadata({
     const desc = locale === 'zh'
       ? `${name}配装攻略：推荐武器、配队组合，${char.tierRank} Tier`
       : `Complete ${name} build guide for Guihuan: best weapons, team comps. ${char.tierRank} tier.`;
-    return { title, description: desc.slice(0, 160), openGraph: buildOg(name), alternates: buildAlternates(id) };
+    return { title, description: buildCharacterMetaDescription(desc, name, gameName), openGraph: buildOg(name), alternates: buildAlternates(id) };
   }
 
   if (gameId === 'ananta') {
@@ -446,7 +516,7 @@ export async function generateMetadata({
     const desc = locale === 'zh'
       ? `${name}配装攻略：推荐武器、配队组合，${char.tierRank} Tier`
       : `Complete ${name} build guide for Ananta: best weapons, team comps. ${char.tierRank} tier.`;
-    return { title, description: desc.slice(0, 160), openGraph: buildOg(name), alternates: buildAlternates(id) };
+    return { title, description: buildCharacterMetaDescription(desc, name, gameName), openGraph: buildOg(name), alternates: buildAlternates(id) };
   }
 
   if (gameId === 'endfield') {
@@ -461,7 +531,7 @@ export async function generateMetadata({
     const desc = locale === 'zh'
       ? `${name}配装攻略：推荐武器、配队组合，${char.tierRank} Tier`
       : `Complete ${name} build guide for Arknights: Endfield: best weapons, team comps. ${char.tierRank} tier.`;
-    return { title, description: desc.slice(0, 160), openGraph: buildOg(name), alternates: buildAlternates(id) };
+    return { title, description: buildCharacterMetaDescription(desc, name, gameName), openGraph: buildOg(name), alternates: buildAlternates(id) };
   }
 
   if (gameId === 'sea') {
@@ -476,7 +546,7 @@ export async function generateMetadata({
     const desc = locale === 'zh'
       ? `${name}配装攻略：推荐配队组合`
       : `Complete ${name} build guide for Sea of Remnants: best team comps.`;
-    return { title, description: desc.slice(0, 160), openGraph: buildOg(name), alternates: buildAlternates(id) };
+    return { title, description: buildCharacterMetaDescription(desc, name, gameName), openGraph: buildOg(name), alternates: buildAlternates(id) };
   }
 
   return {};
@@ -1575,6 +1645,8 @@ function WuWaCharacterDetail({ char, locale }: { char: WuWaCharacter; locale: Su
         </Section>
       )}
 
+      <NextStepSection locale={locale} gameId="wuwa" />
+
       {/* Back */}
       <div className="border-t border-game-border pt-4">
         <Link href="/wuwa/characters" className="text-sm text-game-primary transition-colors hover:text-game-accent">
@@ -1768,7 +1840,7 @@ function ZzzCharacterDetail({ char, locale }: { char: ZzzCharacter; locale: Supp
               <>
                 <BuildRowLink label={locale === 'zh' ? '最佳音擎' : 'Best W-Engine'}
                   value={bestWeaponName}
-                  href={weaponMatch ? `/${locale}/zzz/weapons/${weaponMatch.id}` : undefined} />
+                  href={weaponMatch ? `/zzz/weapons/${weaponMatch.id}` : undefined} />
                 {(build.alternativeWeapons?.length ?? 0) > 0 && (
                   <div className="flex gap-2">
                     <span className="w-24 shrink-0 text-game-text-muted">{locale === 'zh' ? '备选音擎' : 'Alt W-Engines'}</span>
@@ -1776,7 +1848,7 @@ function ZzzCharacterDetail({ char, locale }: { char: ZzzCharacter; locale: Supp
                       {altWeaponMatches.map((aw, i) => (
                         <span key={i}>
                           {aw.id ? (
-                            <Link href={`/${locale}/zzz/weapons/${aw.id}` as '/'} className="text-game-primary hover:text-game-accent transition-colors">{aw.name}</Link>
+                            <Link href={`/zzz/weapons/${aw.id}` as '/'} className="text-game-primary hover:text-game-accent transition-colors">{aw.name}</Link>
                           ) : aw.name}
                           {i < altWeaponMatches.length - 1 ? ', ' : ''}
                         </span>
@@ -1786,7 +1858,7 @@ function ZzzCharacterDetail({ char, locale }: { char: ZzzCharacter; locale: Supp
                 )}
                 <BuildRowLink label={locale === 'zh' ? '驱动盘套装' : 'Drive Disc Set'}
                   value={discName}
-                  href={discMatch ? `/${locale}/zzz/drive-discs/${discMatch.id}` : undefined} />
+                  href={discMatch ? `/zzz/drive-discs/${discMatch.id}` : undefined} />
                 <BuildRow label={locale === 'zh' ? '主属性' : 'Main Stats'}
                   value={Object.values(locale === 'zh' ? build.mainStats ?? {} : build.mainStatsEn ?? {}).join(' / ')} />
                 <BuildRow label={locale === 'zh' ? '副属性优先' : 'Sub Stats'}
@@ -1858,6 +1930,8 @@ function ZzzCharacterDetail({ char, locale }: { char: ZzzCharacter; locale: Supp
           </div>
         </Section>
       )}
+
+      <NextStepSection locale={locale} gameId="zzz" />
 
       {/* Back */}
       <div className="border-t border-game-border pt-4">
@@ -2368,6 +2442,32 @@ function BuildRowLink({ label, value, href }: { label: string; value: string; hr
   );
 }
 
+function NextStepSection({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
+  const links = CHARACTER_NEXT_STEPS[gameId];
+  if (!links?.length) return null;
+
+  return (
+    <Section title={locale === 'zh' ? '下一步去看' : locale === 'ja' ? '次に見るページ' : 'Next Steps'}>
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {links.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href as '/'}
+            className="group rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary"
+          >
+            <h3 className="mb-1 text-sm font-semibold text-game-text group-hover:text-game-primary">
+              {link.title[locale]}
+            </h3>
+            <p className="text-xs text-game-text-muted line-clamp-2">
+              {link.description[locale]}
+            </p>
+          </Link>
+        ))}
+      </div>
+    </Section>
+  );
+}
+
 // ============================================================
 // Endfield Character Detail
 // ============================================================
@@ -2692,6 +2792,8 @@ function EndfieldCharacterDetail({ char, locale }: { char: EndfieldCharacter; lo
           </div>
         </Section>
       )}
+
+      <NextStepSection locale={locale} gameId="endfield" />
 
       {/* Back */}
       <div className="border-t border-game-border pt-4">

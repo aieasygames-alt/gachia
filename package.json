@@ -7,7 +7,8 @@
     "lint": "turbo lint",
     "type-check": "turbo type-check",
     "test": "turbo test",
-    "clean": "turbo clean"
+    "clean": "turbo clean",
+    "indexnow:new-pages": "node scripts/indexnow-submit-new-pages.mjs"
   },
   "devDependencies": {
     "turbo": "^2.5.0",

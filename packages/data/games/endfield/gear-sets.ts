@@ -1,7 +1,9 @@
 import type { SupportedLocale } from '@gachia/core';
+import { join } from 'node:path';
+import { loadJson } from '../../load-json';
 import type { EndfieldGearSet } from './types';
 import { localeStr } from './types';
-import rawData from './raw-gear-sets.json';
+const rawData = await loadJson<unknown>(join(process.cwd(), '../../packages/data/games/endfield/raw-gear-sets.json'), '/data/endfield/raw-gear-sets.json');
 
 export const gearSets: EndfieldGearSet[] = rawData as unknown as EndfieldGearSet[];
 

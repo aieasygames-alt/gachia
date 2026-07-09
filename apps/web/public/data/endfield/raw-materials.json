@@ -1,0 +1,200 @@
+[
+  {
+    "id": "t-creds",
+    "name": "T币",
+    "nameEn": "T-Creds",
+    "type": "currency",
+    "rarity": 3,
+    "source": "任务奖励、战斗掉落、世界探索",
+    "sourceEn": "Quest rewards, battle drops, world exploration",
+    "description": "塔洛斯-II上通用的标准化货币。",
+    "descriptionEn": "Standardized currency used across Talos-II."
+  },
+  {
+    "id": "protodisk",
+    "name": "原型盘",
+    "nameEn": "Protodisk",
+    "type": "ascension",
+    "rarity": 2,
+    "source": "日常副本、世界探索",
+    "sourceEn": "Daily dungeons, world exploration",
+    "description": "基础晋升材料，用于干员Elite 1-2晋升。",
+    "descriptionEn": "Basic ascension material used for Elite 1-2 promotion."
+  },
+  {
+    "id": "protoset",
+    "name": "原型套装",
+    "nameEn": "Protoset",
+    "type": "ascension",
+    "rarity": 3,
+    "source": "日常副本、制造",
+    "sourceEn": "Daily dungeons, crafting",
+    "description": "进阶晋升材料，用于干员Elite 3-4晋升。",
+    "descriptionEn": "Advanced ascension material used for Elite 3-4 promotion."
+  },
+  {
+    "id": "pink-bolete",
+    "name": "粉色牛肝菌",
+    "nameEn": "Pink Bolete",
+    "type": "ascension",
+    "rarity": 2,
+    "source": "野外采集",
+    "sourceEn": "Field collection",
+    "description": "常见的真菌类材料，用于低级晋升。",
+    "descriptionEn": "Common fungal material used for lower-tier promotion."
+  },
+  {
+    "id": "red-bolete",
+    "name": "红色牛肝菌",
+    "nameEn": "Red Bolete",
+    "type": "ascension",
+    "rarity": 3,
+    "source": "野外采集、商人兑换",
+    "sourceEn": "Field collection, shop exchange",
+    "description": "较稀有的真菌类材料，用于中级晋升。",
+    "descriptionEn": "Relatively rare fungal material used for mid-tier promotion."
+  },
+  {
+    "id": "ruby-bolete",
+    "name": "红宝石牛肝菌",
+    "nameEn": "Ruby Bolete",
+    "type": "ascension",
+    "rarity": 4,
+    "source": "特殊区域采集",
+    "sourceEn": "Special area collection",
+    "description": "珍贵的真菌类材料，用于高级晋升。",
+    "descriptionEn": "Precious fungal material used for high-tier promotion."
+  },
+  {
+    "id": "bloodcap",
+    "name": "血帽菇",
+    "nameEn": "Bloodcap",
+    "type": "ascension",
+    "rarity": 4,
+    "source": "精英敌人掉落",
+    "sourceEn": "Elite enemy drops",
+    "description": "稀有的血液感染真菌，用于部分干员Elite 4晋升。",
+    "descriptionEn": "Rare blood-infected fungus used for certain operators' Elite 4 promotion."
+  },
+  {
+    "id": "cosmagaric",
+    "name": "宇宙菌",
+    "nameEn": "Cosmagaric",
+    "type": "ascension",
+    "rarity": 4,
+    "source": "精英敌人掉落",
+    "sourceEn": "Elite enemy drops",
+    "description": "宇宙辐射变异的真菌，用于部分干员Elite 4晋升。",
+    "descriptionEn": "Cosmic radiation mutated fungus used for certain operators' Elite 4 promotion."
+  },
+  {
+    "id": "metadiastima-photoemission-tube",
+    "name": "超维光发射管",
+    "nameEn": "Metadiastima Photoemission Tube",
+    "type": "ascension",
+    "rarity": 5,
+    "source": "高难Boss掉落",
+    "sourceEn": "High-level boss drops",
+    "description": "高科技光电子元件，用于特定干员Elite 4晋升。",
+    "descriptionEn": "High-tech optoelectronic component used for specific operators' Elite 4 promotion."
+  },
+  {
+    "id": "d96-steel-sample-4",
+    "name": "D96钢样品4号",
+    "nameEn": "D96 Steel Sample 4",
+    "type": "ascension",
+    "rarity": 5,
+    "source": "高难Boss掉落",
+    "sourceEn": "High-level boss drops",
+    "description": "特种合金样品，用于特定干员Elite 4晋升。",
+    "descriptionEn": "Special alloy sample used for specific operators' Elite 4 promotion."
+  },
+  {
+    "id": "quadrant-fitting-fluid",
+    "name": "象限拟合液",
+    "nameEn": "Quadrant Fitting Fluid",
+    "type": "ascension",
+    "rarity": 5,
+    "source": "高难Boss掉落",
+    "sourceEn": "High-level boss drops",
+    "description": "精密流体材料，用于特定干员Elite 4晋升。",
+    "descriptionEn": "Precision fluid material used for specific operators' Elite 4 promotion."
+  },
+  {
+    "id": "tachyon-screening-lattice",
+    "name": "快子筛晶格",
+    "nameEn": "Tachyon Screening Lattice",
+    "type": "ascension",
+    "rarity": 5,
+    "source": "高难Boss掉落",
+    "sourceEn": "High-level boss drops",
+    "description": "高速粒子筛分晶格，用于特定干员Elite 4晋升。",
+    "descriptionEn": "High-speed particle screening lattice used for specific operators' Elite 4 promotion."
+  },
+  {
+    "id": "triphase-nanoflake",
+    "name": "三相纳米片",
+    "nameEn": "Triphase Nanoflake",
+    "type": "ascension",
+    "rarity": 5,
+    "source": "高难Boss掉落",
+    "sourceEn": "High-level boss drops",
+    "description": "纳米级三相材料，用于特定干员Elite 4晋升。",
+    "descriptionEn": "Nano-scale triphase material used for specific operators' Elite 4 promotion."
+  },
+  {
+    "id": "protoprism",
+    "name": "原型棱镜",
+    "nameEn": "Protoprism",
+    "type": "skill",
+    "rarity": 3,
+    "source": "材料副本",
+    "sourceEn": "Material dungeons",
+    "description": "基础技能升级材料。",
+    "descriptionEn": "Basic skill upgrade material."
+  },
+  {
+    "id": "protohedron",
+    "name": "原型多面体",
+    "nameEn": "Protohedron",
+    "type": "skill",
+    "rarity": 4,
+    "source": "材料副本、制造",
+    "sourceEn": "Material dungeons, crafting",
+    "description": "高级技能升级材料。",
+    "descriptionEn": "Advanced skill upgrade material."
+  },
+  {
+    "id": "kalkodendra",
+    "name": "钙树枝",
+    "nameEn": "Kalkodendra",
+    "type": "skill",
+    "rarity": 2,
+    "source": "野外采集",
+    "sourceEn": "Field collection",
+    "description": "常见的树木结晶物，用于低级技能升级。",
+    "descriptionEn": "Common tree crystallization used for lower-tier skill upgrades."
+  },
+  {
+    "id": "chrysodendra",
+    "name": "金树枝",
+    "nameEn": "Chrysodendra",
+    "type": "skill",
+    "rarity": 3,
+    "source": "野外采集、商人兑换",
+    "sourceEn": "Field collection, shop exchange",
+    "description": "稀有的金色树木结晶物，用于中级技能升级。",
+    "descriptionEn": "Rare golden tree crystallization used for mid-tier skill upgrades."
+  },
+  {
+    "id": "vitrodendra",
+    "name": "玻璃树枝",
+    "nameEn": "Vitrodendra",
+    "type": "skill",
+    "rarity": 4,
+    "source": "特殊区域采集",
+    "sourceEn": "Special area collection",
+    "description": "珍贵的透明树木结晶物，用于高级技能升级。",
+    "descriptionEn": "Precious transparent tree crystallization used for high-tier skill upgrades."
+  }
+]

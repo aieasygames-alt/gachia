@@ -126,6 +126,16 @@ function buildOg(title: string, description: string, gameId: string, id: string,
   };
 }
 
+function buildWeaponMetaDescription(base: string, locale: SupportedLocale) {
+  const addition = locale === 'zh'
+    ? '本页补充适配角色、获取方式和实战定位，方便你判断这把武器是否值得优先培养。'
+    : locale === 'ja'
+      ? 'おすすめキャラ、入手方法、実戦での役割を補足し、育成優先度の判断に役立てます。'
+      : 'The page also covers recommended users, acquisition, and practical role so you can judge whether the weapon is worth investing in.';
+  const text = base.trim().length >= 120 ? base.trim() : `${base.trim()} ${addition}`;
+  return text.slice(0, 160);
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -166,7 +176,7 @@ export async function generateMetadata({
           ? `${name}のステータス${hasPassive ? '、スキル効果' : ''}、入手方法、おすすめキャラクターを確認。`
           : `Complete ${name} guide for ${gameName}: stats${hasPassive ? ', skill effect' : ''}, how to get it, and best characters to use it with.`;
     }
-    return { title, description: desc };
+    return { title, description: buildWeaponMetaDescription(desc, locale) };
   };
 
   if (gameId === 'genshin') {

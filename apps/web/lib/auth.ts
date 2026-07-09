@@ -1,10 +1,21 @@
 import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
+import type { NextRequest } from 'next/server';
 import { nextCookies } from 'better-auth/next-js';
 import { getDb } from './db';
 import { users, sessions, accounts, verifications } from '@gachia/db';
 
-export function createAuth() {
+function resolveBaseURL(request?: NextRequest) {
+  if (request) {
+    return request.nextUrl.origin;
+  }
+
+  return process.env.BETTER_AUTH_URL
+    || process.env.NEXT_PUBLIC_APP_URL
+    || 'https://gachia.com';
+}
+
+export function createAuth(request?: NextRequest) {
   // CRITICAL FIX: Validate required environment variables
   const googleClientId = process.env.GOOGLE_CLIENT_ID;
   const googleClientSecret = process.env.GOOGLE_CLIENT_SECRET;
@@ -38,7 +49,7 @@ export function createAuth() {
       },
     },
     plugins: [nextCookies()],
-    baseURL: betterAuthUrl || 'https://gachia.com',
+    baseURL: betterAuthUrl || resolveBaseURL(request),
     secret: betterAuthSecret || 'dev-secret-change-in-production', // Fallback for dev only
   });
 }

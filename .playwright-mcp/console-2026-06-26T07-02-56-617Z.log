@@ -1,0 +1,3 @@
+[     300ms] [LOG] Fri Jun 26 2026 15:02:56 GMT+0800 (中国标准时间) @ https://o.alicdn.com/frontend-lib/common-lib/jquery.min.js:0
+[     841ms] [INFO] %c[TapTap]%c uid=%s uuid=%s color:#fff;background:#1ab39e;padding:2px 6px;border-radius:3px;font-weight:bold; color:inherit; - 83d07cf1-1bad-4241-9b1f-0cfe567edb43 @ https://assets.tapimg.com/apps/web-app-next/_nuxt/apm.7c69372a.js:0
+[     898ms] [LOG] Service worker has been registered. @ https://assets.tapimg.com/apps/web-app-next/_nuxt/apm.7c69372a.js:0

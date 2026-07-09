@@ -17,16 +17,29 @@ import { CharacterAvatar } from '@/components/wiki/character-avatar';
 const BASE_URL = 'https://gachia.com';
 
 const GUIDE_DESC: Record<string, Record<string, string>> = {
-  genshin: { zh: '原神攻略百科，包含新手指南、角色攻略、配队推荐、深渊攻略等', en: 'Genshin Impact guides including beginner tips, character builds, team comps, and Abyss strategies', ja: '原神攻略百科、初心者ガイド、キャラビルド、チーム編成、深境螺旋攻略' },
-  starrail: { zh: '崩坏：星穹铁道攻略百科，包含新手指南、角色攻略、配队推荐等', en: 'Honkai: Star Rail guides with beginner tips, character builds, and team comp recommendations', ja: 'スターレイル攻略百科、初心者ガイド、キャラビルド、チーム編成' },
-  wuwa: { zh: '鸣潮攻略百科，包含新手指南、角色攻略、声骸推荐等', en: 'Wuthering Waves guides with beginner tips, character builds, and echo recommendations', ja: '鳴潮攻略百科、初心者ガイド、キャラビルド、エコーおすすめ' },
-  nte: { zh: '异环攻略百科，包含新手指南、角色攻略、弧盘推荐等', en: 'Neverness to Everness guides with beginner tips, character builds, and arc recommendations', ja: '異環攻略百科、初心者ガイド、キャラビルド、アルクおすすめ' },
-  zzz: { zh: '绝区零攻略百科，包含新手指南、代理人攻略、音擎推荐等', en: 'Zenless Zone Zero guides with beginner tips, agent builds, and W-Engine recommendations', ja: 'ゼンレスゾーンゼロ攻略百科、初心者ガイド、エージェントビルド、Wエンジンおすすめ' },
-  guihuan: { zh: '归环攻略百科，包含新手指南、使灵攻略、武器推荐等', en: 'Guihuan guides with beginner tips, spirit builds, and weapon recommendations', ja: '帰環攻略百科、初心者ガイド、スピリットビルド、武器おすすめ' },
-  ananta: { zh: '无限大攻略百科，包含新手指南、异能者攻略、武器推荐等', en: 'Ananta guides with beginner tips, esper builds, and weapon recommendations', ja: 'アナンタ攻略百科、初心者ガイド、エスパービルド、武器おすすめ' },
-  endfield: { zh: '明日方舟：终末地攻略百科，包含新手指南、干员攻略、武器推荐等', en: 'Arknights: Endfield guides with beginner tips, operator builds, and weapon recommendations', ja: 'アークナイツ：エンドフィールド攻略百科、初心者ガイド、オペレータービルド、武器おすすめ' },
-  sea: { zh: '遗忘之海攻略百科，包含新手指南、角色攻略等', en: 'Sea of Remnants guides with beginner tips and character builds', ja: 'シー・オブ・レムナンツ攻略百科、初心者ガイド、キャラビルド' },
-  skjh: { zh: '失控进化攻略百科，包含新手开荒、基地建设、资源科技树、基因流派、武器和公测福利', en: 'Ashfall Evolution guides with beginner routes, base building, resources, gene builds, weapons, and launch rewards', ja: '失控進化攻略百科、初心者ルート、拠点建築、資源、遺伝子ビルド、報酬' },
+  genshin: { zh: '原神攻略百科，覆盖新手开荒、角色培养、配队推荐、深渊挑战、版本专题与热点攻略，帮助你快速找到当前版本最实用的下一步。', en: 'Genshin Impact guides covering beginner tips, character builds, team comps, Abyss strategies, version hubs, and practical walkthroughs so you can jump to the right next page faster.', ja: '原神攻略百科。初心者向け、キャラ育成、編成、深境螺旋、版本特集までまとめて、今知りたい攻略へすぐ進めます。' },
+  starrail: { zh: '崩坏：星穹铁道攻略百科，涵盖新手指南、角色培养、配队思路、忘却之庭、虚构叙事和版本热点，让你更快进入可执行的攻略页面。', en: 'Honkai: Star Rail guides covering beginner tips, character builds, team recommendations, endgame modes, version hubs, and practical next steps for fast progress.', ja: 'スターレイル攻略百科。初心者ガイド、キャラ育成、編成、忘却の庭、虚構叙事、版本トピックをまとめて案内します。' },
+  wuwa: { zh: '鸣潮攻略百科，收录新手开荒、角色培养、声骸搭配、版本专题和实战攻略，方便你从首页直接进入最需要的养成或战斗内容。', en: 'Wuthering Waves guides covering beginner routes, character builds, echo setups, version hubs, and combat breakdowns so you can move from overview to action.', ja: '鳴潮攻略百科。初心者ルート、キャラ育成、エコー構成、版本特集、実戦攻略をまとめて、必要な導線へつなぎます。' },
+  nte: { zh: '异环攻略百科，包含新手指南、角色培养、弧盘推荐、版本专题、抽卡策略和实战攻略，帮助你快速了解当前版本最值得关注的内容。', en: 'Neverness to Everness guides with beginner tips, character builds, arc recommendations, version hubs, gacha planning, and combat guides focused on the current patch.', ja: '異環攻略百科。初心者ガイド、キャラ育成、アルク、版本特集、ガチャ戦略、戦闘攻略を整理して案内します。' },
+  zzz: { zh: '绝区零攻略百科，覆盖新手指引、代理人培养、音擎搭配、驱动盘思路、版本专题与高阶攻略，适合先看总览再进入细分页面。', en: 'Zenless Zone Zero guides covering beginner tips, agent builds, W-Engine choices, drive disc setups, version hubs, and endgame advice in one place.', ja: 'ゼンレスゾーンゼロ攻略百科。初心者ガイド、エージェント育成、Wエンジン、ディスク、版本特集、高難度攻略をまとめています。' },
+  guihuan: { zh: '归环攻略百科，整理新手开荒、使灵培养、武器推荐、版本专题与实战思路，方便你按内容类型快速找到下一步该看什么。', en: 'Guihuan guides with beginner routes, spirit builds, weapon recommendations, version hubs, and practical combat notes that help you choose the best next page.', ja: '帰環攻略百科。初心者ルート、使霊育成、武器、版本特集、実戦メモをまとめて、次に読むべきページへ導きます。' },
+  ananta: { zh: '无限大攻略百科，收录新手入门、异能者培养、武器推荐、版本专题和玩法拆解，让你快速进入最实用的培养与配队内容。', en: 'Ananta guides covering beginner tips, esper builds, weapon recommendations, version hubs, and gameplay breakdowns that route you into the most useful build pages.', ja: 'アナンタ攻略百科。初心者入門、異能者育成、武器、版本特集、遊び方の解説をまとめて、実用ページへ案内します。' },
+  endfield: { zh: '明日方舟：终末地攻略百科，覆盖新手教程、干员培养、武器推荐、测试专题、危机合约与版本热点，方便你快速跳转到对应攻略。', en: 'Arknights: Endfield guides covering beginner tips, operator builds, weapon recommendations, test hubs, crisis content, and version-focused walkthroughs.', ja: 'アークナイツ：エンドフィールド攻略百科。初心者、オペレーター育成、武器、テスト特集、危機コンテンツ、版本トピックを整理。' },
+  sea: { zh: '遗忘之海攻略百科，提供新手开荒、角色培养、版本专题和后续攻略入口，帮助你先抓住最重要的信息，再继续深入浏览。', en: 'Sea of Remnants guides with beginner routes, character builds, version hubs, and follow-up pages that help you catch the important basics before going deeper.', ja: 'シー・オブ・レムナンツ攻略百科。初心者ルート、キャラ育成、版本特集、追加攻略への導線をまとめています。' },
+  skjh: { zh: '失控进化攻略百科，整理新手开荒、基地建设、资源科技树、基因流派、武器和公测福利，适合从版本总览一路看到账户养成。', en: 'Ashfall Evolution guides covering beginner routes, base building, resource tech, gene builds, weapons, and launch rewards so players can plan progression end to end.', ja: '失控進化攻略百科。初心者ルート、拠点建築、資源テック、遺伝子ビルド、武器、公測報酬をまとめて案内します。' },
+};
+
+const FEATURED_GUIDE_IDS: Record<GameId, string[]> = {
+  genshin: ['snezhnaya-version-guide', 'lunar-reaction-guide', 'artifact-guide'],
+  starrail: ['v4-4-preview-guide', 'v4-3-version-guide', 'fate-collab-guide'],
+  wuwa: ['v3-5-preview-guide', 'v3-4-version-guide', 'roya-frostlands-guide'],
+  nte: ['beginner-guide', 'download-install-guide', 'gacha-strategy'],
+  zzz: ['v3-0-version-guide', 'meta-teams-v3-guide', 'rupture-specialty-guide'],
+  guihuan: ['beginner-guide', 'download-install-guide', 'spirit-build-guide'],
+  ananta: ['beginner-guide', 'download-install-guide', 'combat-system-guide'],
+  endfield: ['download-install-guide', 'combat-system-guide', 'crisis-contract-guide'],
+  sea: ['launch-day-guide', 'collaborations-guide', 'open-beta-version-center'],
+  skjh: ['season-1-launch', 'launch-rewards-complete', 'download-crossplay-faq'],
 };
 
 export async function generateMetadata({
@@ -46,7 +59,7 @@ export async function generateMetadata({
   }
   languages['x-default'] = `${BASE_URL}/zh/${gameId}/guides`;
 
-  const desc = GUIDE_DESC[gameId]?.[locale] ?? `${categoryLabel} - ${gameName} Wiki`;
+  const desc = GUIDE_DESC[gameId]?.[locale] ?? `${gameName} ${categoryLabel} with beginner tips, builds, teams, and practical walkthroughs`;
   const title = locale === 'zh'
     ? `${gameName}攻略大全 — 新手指南/配队/角色攻略`
     : locale === 'ja'
@@ -139,6 +152,7 @@ function GenshinGuides({ locale }: { locale: SupportedLocale }) {
   const guides = genshinGuides;
   const categories = getGenshinGuideCategories();
   const gameConfig = GAMES.genshin;
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.genshin);
 
   return (
     <div>
@@ -152,6 +166,41 @@ function GenshinGuides({ locale }: { locale: SupportedLocale }) {
           ? `${guides.length} 件のガイド`
           : `${guides.length} guides`}
       </p>
+
+      {featuredGuides.length > 0 && (
+        <section className="mb-8">
+          <div className="mb-4 flex items-center justify-between gap-4">
+            <h2 className="text-lg font-semibold text-game-text">
+              {locale === 'zh' ? '热门攻略' : locale === 'ja' ? '注目ガイド' : 'Featured Guides'}
+            </h2>
+            <span className="text-xs text-game-text-muted">
+              {locale === 'zh' ? '版本热词入口' : locale === 'ja' ? 'バージョン注目' : 'Version hot topics'}
+            </span>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {featuredGuides.map((guide) => (
+              <Link
+                key={guide.id}
+                href={`/genshin/guides/${guide.id}`}
+                className="group flex flex-col rounded-xl border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
+              >
+                <div className="mb-3 flex items-center justify-between gap-3">
+                  <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
+                    {getGenshinGuideCategory(guide, locale)}
+                  </span>
+                  <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
+                </div>
+                <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
+                  {getGenshinGuideTitle(guide, locale)}
+                </h3>
+                <p className="text-sm leading-relaxed text-game-text-muted">
+                  {getGenshinGuideSummary(guide, locale)}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Category filter */}
       <div className="mb-6 flex flex-wrap gap-2">
@@ -218,6 +267,7 @@ function StarRailGuides({ locale }: { locale: SupportedLocale }) {
   const guides = starrailGuides;
   const categories = getStarRailGuideCategories();
   const gameConfig = GAMES.starrail;
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.starrail);
 
   return (
     <div>
@@ -231,6 +281,41 @@ function StarRailGuides({ locale }: { locale: SupportedLocale }) {
           ? `${guides.length} 件のガイド`
           : `${guides.length} guides`}
       </p>
+
+      {featuredGuides.length > 0 && (
+        <section className="mb-8">
+          <div className="mb-4 flex items-center justify-between gap-4">
+            <h2 className="text-lg font-semibold text-game-text">
+              {locale === 'zh' ? '热门攻略' : locale === 'ja' ? '注目ガイド' : 'Featured Guides'}
+            </h2>
+            <span className="text-xs text-game-text-muted">
+              {locale === 'zh' ? '版本热词入口' : locale === 'ja' ? 'バージョン注目' : 'Version hot topics'}
+            </span>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {featuredGuides.map((guide) => (
+              <Link
+                key={guide.id}
+                href={`/starrail/guides/${guide.id}`}
+                className="group flex flex-col rounded-xl border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
+              >
+                <div className="mb-3 flex items-center justify-between gap-3">
+                  <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
+                    {getStarRailGuideCategory(guide, locale)}
+                  </span>
+                  <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
+                </div>
+                <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
+                  {getStarRailGuideTitle(guide, locale)}
+                </h3>
+                <p className="text-sm leading-relaxed text-game-text-muted">
+                  {getStarRailGuideSummary(guide, locale)}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Category filter */}
       <div className="mb-6 flex flex-wrap gap-2">
@@ -297,6 +382,7 @@ function NteGuides({ locale, gameId }: { locale: SupportedLocale; gameId: string
   const guides = nteGuides;
   const categories = getNteGuideCategories();
   const gameConfig = GAMES.nte;
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.nte);
 
   return (
     <div>
@@ -310,6 +396,41 @@ function NteGuides({ locale, gameId }: { locale: SupportedLocale; gameId: string
           ? `${guides.length} 件のガイド`
           : `${guides.length} guides`}
       </p>
+
+      {featuredGuides.length > 0 && (
+        <section className="mb-8">
+          <div className="mb-4 flex items-center justify-between gap-4">
+            <h2 className="text-lg font-semibold text-game-text">
+              {locale === 'zh' ? '热门攻略' : locale === 'ja' ? '注目ガイド' : 'Featured Guides'}
+            </h2>
+            <span className="text-xs text-game-text-muted">
+              {locale === 'zh' ? '版本热词入口' : locale === 'ja' ? 'バージョン注目' : 'Version hot topics'}
+            </span>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {featuredGuides.map((guide) => (
+              <Link
+                key={guide.id}
+                href={`/${gameId}/guides/${guide.id}`}
+                className="group flex flex-col rounded-xl border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
+              >
+                <div className="mb-3 flex items-center justify-between gap-3">
+                  <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
+                    {getNteGuideCategory(guide, locale)}
+                  </span>
+                  <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
+                </div>
+                <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
+                  {getNteGuideTitle(guide, locale)}
+                </h3>
+                <p className="text-sm leading-relaxed text-game-text-muted">
+                  {getNteGuideSummary(guide, locale)}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Category filter */}
       <div className="mb-6 flex flex-wrap gap-2">
@@ -378,6 +499,7 @@ function WuWaGuides({ locale }: { locale: SupportedLocale }) {
   const guides = wuwaGuides;
   const categories = getWuWaGuideCategories();
   const gameConfig = GAMES.wuwa;
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.wuwa);
 
   return (
     <div>
@@ -391,6 +513,41 @@ function WuWaGuides({ locale }: { locale: SupportedLocale }) {
           ? `${guides.length} 件のガイド`
           : `${guides.length} guides`}
       </p>
+
+      {featuredGuides.length > 0 && (
+        <section className="mb-8">
+          <div className="mb-4 flex items-center justify-between gap-4">
+            <h2 className="text-lg font-semibold text-game-text">
+              {locale === 'zh' ? '热门攻略' : locale === 'ja' ? '注目ガイド' : 'Featured Guides'}
+            </h2>
+            <span className="text-xs text-game-text-muted">
+              {locale === 'zh' ? '版本热词入口' : locale === 'ja' ? 'バージョン注目' : 'Version hot topics'}
+            </span>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {featuredGuides.map((guide) => (
+              <Link
+                key={guide.id}
+                href={`/wuwa/guides/${guide.id}`}
+                className="group flex flex-col rounded-xl border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
+              >
+                <div className="mb-3 flex items-center justify-between gap-3">
+                  <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
+                    {getWuWaGuideCategory(guide, locale)}
+                  </span>
+                  <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
+                </div>
+                <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
+                  {getWuWaGuideTitle(guide, locale)}
+                </h3>
+                <p className="text-sm leading-relaxed text-game-text-muted">
+                  {getWuWaGuideSummary(guide, locale)}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Category filter */}
       <div className="mb-6 flex flex-wrap gap-2">
@@ -459,6 +616,7 @@ function ZzzGuides({ locale }: { locale: SupportedLocale }) {
   const guides = zzzGuides;
   const categories = getZzzGuideCategories();
   const gameConfig = GAMES.zzz;
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.zzz);
 
   return (
     <div>
@@ -472,6 +630,41 @@ function ZzzGuides({ locale }: { locale: SupportedLocale }) {
           ? `${guides.length} 件のガイド`
           : `${guides.length} guides`}
       </p>
+
+      {featuredGuides.length > 0 && (
+        <section className="mb-8">
+          <div className="mb-4 flex items-center justify-between gap-4">
+            <h2 className="text-lg font-semibold text-game-text">
+              {locale === 'zh' ? '热门攻略' : locale === 'ja' ? '注目ガイド' : 'Featured Guides'}
+            </h2>
+            <span className="text-xs text-game-text-muted">
+              {locale === 'zh' ? '版本热词入口' : locale === 'ja' ? 'バージョン注目' : 'Version hot topics'}
+            </span>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {featuredGuides.map((guide) => (
+              <Link
+                key={guide.id}
+                href={`/zzz/guides/${guide.id}`}
+                className="group flex flex-col rounded-xl border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
+              >
+                <div className="mb-3 flex items-center justify-between gap-3">
+                  <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
+                    {getZzzGuideCategory(guide, locale)}
+                  </span>
+                  <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
+                </div>
+                <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
+                  {getZzzGuideTitle(guide, locale)}
+                </h3>
+                <p className="text-sm leading-relaxed text-game-text-muted">
+                  {getZzzGuideSummary(guide, locale)}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Category filter */}
       <div className="mb-6 flex flex-wrap gap-2">
@@ -540,6 +733,7 @@ function GuihuanGuides({ locale }: { locale: SupportedLocale }) {
   const guides = guihuanGuides;
   const categories = getGuihuanGuideCategories();
   const gameConfig = GAMES.guihuan;
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.guihuan);
 
   return (
     <div>
@@ -553,6 +747,41 @@ function GuihuanGuides({ locale }: { locale: SupportedLocale }) {
           ? `${guides.length} 件のガイド`
           : `${guides.length} guides`}
       </p>
+
+      {featuredGuides.length > 0 && (
+        <section className="mb-8">
+          <div className="mb-4 flex items-center justify-between gap-4">
+            <h2 className="text-lg font-semibold text-game-text">
+              {locale === 'zh' ? '热门攻略' : locale === 'ja' ? '注目ガイド' : 'Featured Guides'}
+            </h2>
+            <span className="text-xs text-game-text-muted">
+              {locale === 'zh' ? '版本热词入口' : locale === 'ja' ? 'バージョン注目' : 'Version hot topics'}
+            </span>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {featuredGuides.map((guide) => (
+              <Link
+                key={guide.id}
+                href={`/guihuan/guides/${guide.id}`}
+                className="group flex flex-col rounded-xl border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
+              >
+                <div className="mb-3 flex items-center justify-between gap-3">
+                  <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
+                    {getGuihuanGuideCategory(guide, locale)}
+                  </span>
+                  <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
+                </div>
+                <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
+                  {getGuihuanGuideTitle(guide, locale)}
+                </h3>
+                <p className="text-sm leading-relaxed text-game-text-muted">
+                  {getGuihuanGuideSummary(guide, locale)}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       <div className="mb-6 flex flex-wrap gap-2">
         {categories.map((cat) => {
@@ -619,6 +848,7 @@ function AnantaGuides({ locale }: { locale: SupportedLocale }) {
   const guides = anantaGuides;
   const categories = getAnantaGuideCategories();
   const gameConfig = GAMES.ananta;
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.ananta);
 
   return (
     <div>
@@ -632,6 +862,41 @@ function AnantaGuides({ locale }: { locale: SupportedLocale }) {
           ? `${guides.length} 件のガイド`
           : `${guides.length} guides`}
       </p>
+
+      {featuredGuides.length > 0 && (
+        <section className="mb-8">
+          <div className="mb-4 flex items-center justify-between gap-4">
+            <h2 className="text-lg font-semibold text-game-text">
+              {locale === 'zh' ? '热门攻略' : locale === 'ja' ? '注目ガイド' : 'Featured Guides'}
+            </h2>
+            <span className="text-xs text-game-text-muted">
+              {locale === 'zh' ? '版本热词入口' : locale === 'ja' ? 'バージョン注目' : 'Version hot topics'}
+            </span>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {featuredGuides.map((guide) => (
+              <Link
+                key={guide.id}
+                href={`/ananta/guides/${guide.id}`}
+                className="group flex flex-col rounded-xl border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
+              >
+                <div className="mb-3 flex items-center justify-between gap-3">
+                  <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
+                    {getAnantaGuideCategory(guide, locale)}
+                  </span>
+                  <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
+                </div>
+                <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
+                  {getAnantaGuideTitle(guide, locale)}
+                </h3>
+                <p className="text-sm leading-relaxed text-game-text-muted">
+                  {getAnantaGuideSummary(guide, locale)}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       <div className="mb-6 flex flex-wrap gap-2">
         {categories.map((cat) => {
@@ -698,6 +963,7 @@ function EndfieldGuides({ locale }: { locale: SupportedLocale }) {
   const guides = endfieldGuides;
   const categories = getEndfieldGuideCategories();
   const gameConfig = GAMES.endfield;
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.endfield);
 
   return (
     <div>
@@ -711,6 +977,41 @@ function EndfieldGuides({ locale }: { locale: SupportedLocale }) {
           ? `${guides.length} 件のガイド`
           : `${guides.length} guides`}
       </p>
+
+      {featuredGuides.length > 0 && (
+        <section className="mb-8">
+          <div className="mb-4 flex items-center justify-between gap-4">
+            <h2 className="text-lg font-semibold text-game-text">
+              {locale === 'zh' ? '热门攻略' : locale === 'ja' ? '注目ガイド' : 'Featured Guides'}
+            </h2>
+            <span className="text-xs text-game-text-muted">
+              {locale === 'zh' ? '版本热词入口' : locale === 'ja' ? 'バージョン注目' : 'Version hot topics'}
+            </span>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {featuredGuides.map((guide) => (
+              <Link
+                key={guide.id}
+                href={`/endfield/guides/${guide.id}`}
+                className="group flex flex-col rounded-xl border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
+              >
+                <div className="mb-3 flex items-center justify-between gap-3">
+                  <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
+                    {getEndfieldGuideCategory(guide, locale)}
+                  </span>
+                  <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
+                </div>
+                <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
+                  {getEndfieldGuideTitle(guide, locale)}
+                </h3>
+                <p className="text-sm leading-relaxed text-game-text-muted">
+                  {getEndfieldGuideSummary(guide, locale)}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       <div className="mb-6 flex flex-wrap gap-2">
         {categories.map((cat) => {
@@ -777,6 +1078,7 @@ function SeaGuides({ locale }: { locale: SupportedLocale }) {
   const guides = seaGuides;
   const categories = getSeaGuideCategories();
   const gameConfig = GAMES.sea;
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.sea);
 
   return (
     <div>
@@ -790,6 +1092,41 @@ function SeaGuides({ locale }: { locale: SupportedLocale }) {
           ? `${guides.length} 件のガイド`
           : `${guides.length} guides`}
       </p>
+
+      {featuredGuides.length > 0 && (
+        <section className="mb-8">
+          <div className="mb-4 flex items-center justify-between gap-4">
+            <h2 className="text-lg font-semibold text-game-text">
+              {locale === 'zh' ? '热门攻略' : locale === 'ja' ? '注目ガイド' : 'Featured Guides'}
+            </h2>
+            <span className="text-xs text-game-text-muted">
+              {locale === 'zh' ? '抢 7 月时效词入口' : locale === 'ja' ? '速報トピック' : 'Time-sensitive topics'}
+            </span>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {featuredGuides.map((guide) => (
+              <Link
+                key={guide.id}
+                href={`/sea/guides/${guide.id}`}
+                className="group flex flex-col rounded-xl border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
+              >
+                <div className="mb-3 flex items-center justify-between gap-3">
+                  <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
+                    {getSeaGuideCategory(guide, locale)}
+                  </span>
+                  <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
+                </div>
+                <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
+                  {getSeaGuideTitle(guide, locale)}
+                </h3>
+                <p className="text-sm leading-relaxed text-game-text-muted">
+                  {getSeaGuideSummary(guide, locale)}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       <div className="mb-6 flex flex-wrap gap-2">
         {categories.map((cat) => {
@@ -856,6 +1193,7 @@ function SkjhGuides({ locale }: { locale: SupportedLocale }) {
   const guides = skjhGuides;
   const categories = getSkjhGuideCategories();
   const gameConfig = GAMES.skjh;
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.skjh);
 
   return (
     <div>
@@ -869,6 +1207,41 @@ function SkjhGuides({ locale }: { locale: SupportedLocale }) {
           ? `${guides.length} 件のガイド`
           : `${guides.length} guides`}
       </p>
+
+      {featuredGuides.length > 0 && (
+        <section className="mb-8">
+          <div className="mb-4 flex items-center justify-between gap-4">
+            <h2 className="text-lg font-semibold text-game-text">
+              {locale === 'zh' ? '热门攻略' : locale === 'ja' ? '注目ガイド' : 'Featured Guides'}
+            </h2>
+            <span className="text-xs text-game-text-muted">
+              {locale === 'zh' ? '首发强时效入口' : locale === 'ja' ? 'ローンチ速報' : 'Launch-day topics'}
+            </span>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {featuredGuides.map((guide) => (
+              <Link
+                key={guide.id}
+                href={`/skjh/guides/${guide.id}`}
+                className="group flex flex-col rounded-xl border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
+              >
+                <div className="mb-3 flex items-center justify-between gap-3">
+                  <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
+                    {getSkjhGuideCategory(guide, locale)}
+                  </span>
+                  <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
+                </div>
+                <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
+                  {getSkjhGuideTitle(guide, locale)}
+                </h3>
+                <p className="text-sm leading-relaxed text-game-text-muted">
+                  {getSkjhGuideSummary(guide, locale)}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       <div className="mb-6 flex flex-wrap gap-2">
         {categories.map((cat) => {
@@ -927,4 +1300,9 @@ function SkjhGuides({ locale }: { locale: SupportedLocale }) {
       })}
     </div>
   );
+}
+
+function pickFeaturedGuides<T extends { id: string }>(guides: T[], featuredIds: string[]): T[] {
+  const guideMap = new Map(guides.map((guide) => [guide.id, guide] as const));
+  return featuredIds.map((id) => guideMap.get(id)).filter((guide): guide is T => Boolean(guide));
 }

@@ -9,19 +9,20 @@ import { anantaWeapons, getAnantaWeaponName, getAnantaWeaponEffect } from '@gach
 import { guihuanWeapons, getGuihuanWeaponName, getGuihuanWeaponEffect } from '@gachia/data/games/guihuan/weapons';
 import { endfieldWeapons, getEndfieldWeaponName, getEndfieldWeaponEffect } from '@gachia/data/games/endfield/weapons';
 import { skjhWeapons, getSkjhWeaponName, getSkjhWeaponEffect, getSkjhWeaponSource } from '@gachia/data/games/skjh/weapons';
+import { Link } from '@/lib/i18n/navigation';
 
 const BASE_URL = 'https://gachia.com';
 
 const WEAPON_DESC: Record<string, Record<string, string>> = {
-  genshin: { zh: '原神全武器图鉴，包含五星、四星、三星武器数据、技能效果、获取方式', en: 'Complete Genshin Impact weapon list with stats, passive effects, and how to obtain', ja: '原神全武器図鑑、ステータス、武器スキル、入手方法' },
-  starrail: { zh: '崩坏：星穹铁道全光锥图鉴，包含五星、四星光锥数据、技能效果', en: 'Complete Honkai: Star Rail light cone list with stats and passive effects by path', ja: 'スターレイル全光円錐図鑑、ステータス、スキル効果' },
-  wuwa: { zh: '鸣潮全武器图鉴，包含五星、四星武器数据、被动技能', en: 'Complete Wuthering Waves weapon list with stats and passive abilities', ja: '鳴潮全武器図鑑、ステータス、パッシブスキル' },
-  nte: { zh: '异环全弧盘图鉴，包含S级、A级弧盘数据、技能效果', en: 'Complete Neverness to Everness Arc list with S-Rank and A-Rank data', ja: '異環全アルク図鑑、S級、A級データ' },
-  zzz: { zh: '绝区零全音擎图鉴，包含S级、A级音擎数据', en: 'Complete Zenless Zone Zero W-Engine list with S-Rank and A-Rank data', ja: 'ゼンレスゾーンゼロ全Wエンジン図鑑、S級、A級データ' },
-  guihuan: { zh: '归环全武器图鉴，包含SSR、SR武器数据', en: 'Complete Guihuan weapon list with SSR and SR data', ja: '帰環全武器図鑑、SSR、SR武器データ' },
-  ananta: { zh: '无限大全武器图鉴，包含SSR、SR武器数据', en: 'Complete Ananta weapon list with SSR and SR data', ja: 'アナンタ全武器図鑑、SSR、SR武器データ' },
-  endfield: { zh: '明日方舟：终末地全武器图鉴，包含六星、五星、四星武器数据', en: 'Complete Arknights: Endfield weapon list with 6-star, 5-star, and 4-star data', ja: 'アークナイツ：エンドフィールド全武器図鑑、6星、5星、4星武器データ' },
-  skjh: { zh: '失控进化武器与工具图鉴，包含石斧、石镐、木矛、猎弓和预约外观', en: 'Ashfall Evolution weapon and tool list with stone tools, spear, bow, and reservation cosmetics', ja: '失控進化の武器・道具一覧。石斧、石つるはし、槍、弓、予約外観を掲載' },
+  genshin: { zh: '原神全武器图鉴，覆盖五星、四星、三星武器的属性、被动效果、适配角色和获取方式，方便你快速筛选毕业武器。', en: 'Complete Genshin Impact weapon list with stats, passive effects, rarity tiers, recommended users, and acquisition methods for faster build planning.', ja: '原神全武器図鑑。ステータス、武器スキル、適性キャラ、入手方法をまとめて、武器選びをしやすくします。' },
+  starrail: { zh: '崩坏：星穹铁道全光锥图鉴，覆盖五星、四星光锥的属性、效果、适配命途和获取方式，方便你迅速判断是否值得培养。', en: 'Complete Honkai: Star Rail light cone list with stats, passive effects, path fit, rarity tiers, and acquisition methods for efficient gear decisions.', ja: 'スターレイル全光円錐図鑑。ステータス、効果、命途相性、入手方法をまとめて確認できます。' },
+  wuwa: { zh: '鸣潮全武器图鉴，整理五星、四星武器的属性、被动技能、推荐角色和获取来源，帮助你快速找到最适合的武器。', en: 'Complete Wuthering Waves weapon list with stats, passive abilities, best-fit characters, and acquisition routes for quick gearing decisions.', ja: '鳴潮全武器図鑑。ステータス、パッシブ、適性キャラ、入手先を整理して案内します。' },
+  nte: { zh: '异环全弧盘图鉴，覆盖S级、A级弧盘的属性、技能效果、推荐角色和获取来源，适合在配装前先看核心加成。', en: 'Complete Neverness to Everness Arc list with S-Rank and A-Rank data, skill effects, best users, and acquisition info for build planning.', ja: '異環全アルク図鑑。S級・A級データ、効果、適性キャラ、入手先をまとめています。' },
+  zzz: { zh: '绝区零全音擎图鉴，覆盖S级、A级音擎的属性、被动效果、适配角色和获取方式，方便你快速查出最值得升阶的装备。', en: 'Complete Zenless Zone Zero W-Engine list with S-Rank and A-Rank data, passive effects, best users, and acquisition routes for upgrade planning.', ja: 'ゼンレスゾーンゼロ全Wエンジン図鑑。S級・A級、効果、適性キャラ、入手先を整理しています。' },
+  guihuan: { zh: '归环全武器图鉴，覆盖SSR、SR武器的属性、技能和获取方式，帮助你更快判断武器是否适合当前角色。', en: 'Complete Guihuan weapon list with SSR and SR data, passive effects, and acquisition methods to help you compare weapon choices faster.', ja: '帰環全武器図鑑。SSR・SRのステータス、効果、入手方法をまとめて確認できます。' },
+  ananta: { zh: '无限大全武器图鉴，覆盖SSR、SR武器的属性、技能和获取方式，方便你在培养角色前先确定武器优先级。', en: 'Complete Ananta weapon list with SSR and SR data, passive effects, and acquisition methods so you can prioritize the right gear first.', ja: 'アナンタ全武器図鑑。SSR・SRのステータス、効果、入手方法を整理しています。' },
+  endfield: { zh: '明日方舟：终末地全武器图鉴，覆盖六星、五星、四星武器的属性、效果和适配方向，适合提前规划配装。', en: 'Complete Arknights: Endfield weapon list with 6-star, 5-star, and 4-star data, passive effects, and best-fit roles for build planning.', ja: 'アークナイツ：エンドフィールド全武器図鑑。6星・5星・4星の性能、効果、適性をまとめています。' },
+  skjh: { zh: '失控进化武器与工具图鉴，覆盖石斧、石镐、木矛、猎弓和预约外观，方便你区分开荒工具、战斗武器和外观奖励。', en: 'Ashfall Evolution weapon and tool list with stone tools, spear, bow, and reservation cosmetics, covering early-game tools, combat gear, and rewards.', ja: '失控進化の武器・道具一覧。石斧、石つるはし、槍、弓、予約外観を整理しています。' },
 };
 
 const NTE_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
@@ -66,7 +67,7 @@ export async function generateMetadata({
   }
   languages['x-default'] = `${BASE_URL}/zh/${gameId}/weapons`;
 
-  const desc = WEAPON_DESC[gameId]?.[locale] ?? `${categoryLabel} - ${gameName} Wiki`;
+  const desc = WEAPON_DESC[gameId]?.[locale] ?? `${gameName} ${categoryLabel} database with stats, effects, recommended users, and acquisition methods`;
 
   const title = locale === 'zh'
     ? `${gameName}武器图鉴 — 全武器数据与技能效果`
@@ -404,6 +405,8 @@ function WuWaWeaponsPage({ locale }: { locale: SupportedLocale }) {
           </section>
         );
       })}
+
+      <NextStepStrip locale={locale} links={WUWA_WEAPON_NEXT_STEPS} />
     </div>
   );
 }
@@ -474,6 +477,8 @@ function ZzzWeaponsPage({ locale }: { locale: SupportedLocale }) {
           </section>
         );
       })}
+
+      <NextStepStrip locale={locale} links={ZZZ_WEAPON_NEXT_STEPS} />
     </div>
   );
 }
@@ -615,6 +620,65 @@ const ENDFIELD_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
 };
 
 const ENDFIELD_RARITY_COLORS: Record<number, string> = { 4: '#a855f7', 5: '#eab308', 6: '#ef4444' };
+type NextStepLink = {
+  href: string;
+  title: Record<SupportedLocale, string>;
+  description: Record<SupportedLocale, string>;
+};
+
+const WUWA_WEAPON_NEXT_STEPS: NextStepLink[] = [
+  {
+    href: '/wuwa/version',
+    title: { zh: '先看版本专题', en: 'Start with version hub', ja: 'まず版本特集へ' },
+    description: { zh: '把当前版本、福利和热词先看一遍', en: 'Review the current version, rewards, and hot topics', ja: '版本、報酬、注目トピックを確認', },
+  },
+  {
+    href: '/wuwa/characters',
+    title: { zh: '继续看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+    description: { zh: '按角色反查武器适配和毕业方向', en: 'Check which characters want which weapons', ja: 'キャラ別の適性と完成形を見る', },
+  },
+  {
+    href: '/wuwa/guides/roya-frostlands-guide',
+    title: { zh: '看新区域攻略', en: 'Read region guide', ja: '新エリア攻略へ' },
+    description: { zh: '把刷图、材料和养成路径接起来', en: 'Connect farming, materials, and progression', ja: '周回、素材、育成導線を接続', },
+  },
+];
+
+const ZZZ_WEAPON_NEXT_STEPS: NextStepLink[] = [
+  {
+    href: '/zzz/version',
+    title: { zh: '先看 3.0 专题', en: 'Start with v3.0 hub', ja: 'まずv3.0特集へ' },
+    description: { zh: '版本重点、卡池和热词都在这里', en: 'Version focus, banners, and hot topics live here', ja: '版本重点、バナー、注目トピックを確認', },
+  },
+  {
+    href: '/zzz/characters',
+    title: { zh: '继续看代理人图鉴', en: 'Browse agents', ja: '代理人図鑑へ' },
+    description: { zh: '按代理人反查音擎适配和毕业配置', en: 'Match W-Engines to the right agents', ja: '代理人ごとの適性を確認', },
+  },
+  {
+    href: '/zzz/drive-discs',
+    title: { zh: '看驱动盘图鉴', en: 'Browse drive discs', ja: 'ドライブディスクへ' },
+    description: { zh: '把驱动盘套装和成型思路补齐', en: 'Complete disc sets and build paths', ja: 'セット効果と完成形を整理', },
+  },
+];
+
+const ENDFIELD_WEAPON_NEXT_STEPS: NextStepLink[] = [
+  {
+    href: '/endfield/version',
+    title: { zh: '先看测试专题', en: 'Start with test hub', ja: 'まずテスト特集へ' },
+    description: { zh: '先确认测试节奏、入口和当前节点', en: 'Check the test cadence, entry, and current status', ja: 'テスト時期、入口、進行状況を確認', },
+  },
+  {
+    href: '/endfield/characters',
+    title: { zh: '继续看干员图鉴', en: 'Browse characters', ja: '干員図鑑へ' },
+    description: { zh: '按干员回看武器适配和队伍分工', en: 'Revisit weapon fit and team roles by operator', ja: '干員ごとの武器適性と役割を確認', },
+  },
+  {
+    href: '/endfield/guides/combat-system-guide',
+    title: { zh: '看战斗系统', en: 'Read combat guide', ja: '戦闘ガイドへ' },
+    description: { zh: '把武器、职业和战斗逻辑串起来', en: 'Connect weapons, roles, and combat flow', ja: '武器、職分、戦闘理解を接続', },
+  },
+];
 
 function EndfieldWeaponsPage({ locale }: { locale: SupportedLocale }) {
   const weapons = endfieldWeapons;
@@ -662,6 +726,8 @@ function EndfieldWeaponsPage({ locale }: { locale: SupportedLocale }) {
           </section>
         );
       })}
+
+      <NextStepStrip locale={locale} links={ENDFIELD_WEAPON_NEXT_STEPS} />
     </div>
   );
 }
@@ -715,5 +781,33 @@ function SkjhWeaponsPage({ locale }: { locale: SupportedLocale }) {
         );
       })}
     </div>
+  );
+}
+
+function NextStepStrip({ locale, links }: { locale: SupportedLocale; links?: NextStepLink[] }) {
+  if (!links?.length) return null;
+
+  return (
+    <section className="mb-8">
+      <h2 className="mb-3 text-base font-semibold text-game-text">
+        {locale === 'zh' ? '继续往下看' : locale === 'ja' ? '次に見る' : 'Next steps'}
+      </h2>
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {links.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href as '/'}
+            className="group rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary"
+          >
+            <h3 className="mb-1 text-sm font-semibold text-game-text group-hover:text-game-primary">
+              {link.title[locale]}
+            </h3>
+            <p className="text-xs text-game-text-muted line-clamp-2">
+              {link.description[locale]}
+            </p>
+          </Link>
+        ))}
+      </div>
+    </section>
   );
 }

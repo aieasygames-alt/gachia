@@ -1,0 +1,119 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e7]:
+      - generic [ref=e24] [cursor=pointer]: Mac version available
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - paragraph [ref=e33]:
+            - generic [ref=e34]: Rebecca
+          - paragraph
+        - generic [ref=e36]:
+          - generic [ref=e38]: Electro
+          - generic [ref=e40]: Pistols
+        - generic [ref=e41]: C'mon, need to hit somethin'!
+    - generic [ref=e61]:
+      - generic [ref=e62]:
+        - img [ref=e63]
+        - img [ref=e64]
+        - img [ref=e65]
+      - generic [ref=e67]:
+        - heading "Copyright ©KURO GAMES. ALL RIGHTS RESERVED." [level=3] [ref=e68]
+        - 'heading "Contact: wutheringwaves_ensupport@kurogames.com丨 Privacy Policy丨 Terms of Service" [level=3] [ref=e69]':
+          - text: "Contact:"
+          - link "wutheringwaves_ensupport@kurogames.com" [ref=e70] [cursor=pointer]:
+            - /url: mailto:wutheringwaves_ensupport@kurogames.com
+          - text: 丨
+          - link "Privacy Policy" [ref=e71] [cursor=pointer]:
+            - /url: https://wutheringwaves.kurogame.com/p/language_en/privacy_policy.html
+          - text: 丨
+          - link "Terms of Service" [ref=e72] [cursor=pointer]:
+            - /url: https://wutheringwaves.kurogame.com/p/language_en/terms_of_service.html
+        - paragraph [ref=e73]: "\"PlayStation Family Mark\" ,\"PlayStation\" and \"PS5 logo\" are registtered trademarks or trademarks of Sony Interactive Entertainmeninc."
+        - paragraph [ref=e74]: Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are trademarks and/or registered trademarks of Epic Games. All other trademarks are the property of their respective owners.
+  - generic [ref=e77]:
+    - img "earth-icon" [ref=e88] [cursor=pointer]
+    - link [ref=e90] [cursor=pointer]:
+      - /url: https://wutheringwaves.kurogames.com/en/main
+  - generic:
+    - generic:
+      - generic:
+        - generic: 《鸣潮》适龄提示
+        - generic:
+          - generic: 1.本游戏是一款开放世界动作游戏。适用于年满16周岁以上的用户，建议未成年人在监护人的监护下使用游戏产品。
+          - generic: 2.本游戏基于架空的故事背景和世界观，与真实历史和现实世界均无任何关联。
+          - generic: 3.根据国家相关要求，本游戏中有用户实名认证系统，未通过实名认证的用户不可进入游戏；游戏中部分玩法和道具需要付费。认证为未成年的用户将受到以下游戏限制： 未满8周岁的用户不能充值；8周岁以上未满16周岁的未成年用户，单次充值金额不得超过50元人民币，每月充值金额累计不得超过200元人民币；16周岁以上的未成年用户，单次充值金额不得超过100元人民币，每月充值金额累计不得超过400元人民币。游戏仅会在周五、周六、周日和法定节假日的20时至21时，向未成年人提供1小时游戏服务。
+          - generic: 4.游戏中设置了主线、支线剧情，并且提供了开放世界探索玩法。游戏内有丰富多彩的剧情，精美的游戏画面，优质的游戏配音以及新颖的系统玩法。
+  - generic:
+    - generic:
+      - generic:
+        - heading "官方QQ群" [level=2]
+        - generic:
+          - generic:
+            - generic: 官方3群
+            - generic: "640667267"
+            - generic: 复制
+          - generic:
+            - generic: 官方5群
+            - generic: "102429533"
+            - generic: 复制
+          - generic:
+            - generic: 官方52群
+            - generic: "837018708"
+            - generic: 复制
+          - generic:
+            - generic: 官方54群
+            - generic: "102429533"
+            - generic: 复制
+  - generic:
+    - generic:
+      - img "qrcode_wechat"
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic: 扫码前往App Store预订
+  - generic:
+    - generic:
+      - generic:
+        - generic: 《鸣潮》适龄提示
+        - generic:
+          - generic: 1.本游戏是一款开放世界动作游戏。适用于年满16周岁以上的用户，建议未成年人在监护人的监护下使用游戏产品。
+          - generic: 2.本游戏基于架空的故事背景和世界观，与真实历史和现实世界均无任何关联。
+          - generic: 3.根据国家相关要求，本游戏中有用户实名认证系统，未通过实名认证的用户不可进入游戏；游戏中部分玩法和道具需要付费。认证为未成年的用户将受到以下游戏限制： 未满8周岁的用户不能充值；8周岁以上未满16周岁的未成年用户，单次充值金额不得超过50元人民币，每月充值金额累计不得超过200元人民币；16周岁以上的未成年用户，单次充值金额不得超过100元人民币，每月充值金额累计不得超过400元人民币。游戏仅会在周五、周六、周日和法定节假日的20时至21时，向未成年人提供1小时游戏服务。
+          - generic: 4.游戏中设置了主线、支线剧情，并且提供了开放世界探索玩法。游戏内有丰富多彩的剧情，精美的游戏画面，优质的游戏配音以及新颖的系统玩法。
+  - generic:
+    - generic:
+      - generic:
+        - heading "官方QQ群" [level=2]
+        - generic:
+          - generic:
+            - generic: 官方3群
+            - generic: "640667267"
+            - generic: 复制
+          - generic:
+            - generic: 官方5群
+            - generic: "102429533"
+            - generic: 复制
+          - generic:
+            - generic: 官方52群
+            - generic: "837018708"
+            - generic: 复制
+          - generic:
+            - generic: 官方54群
+            - generic: "102429533"
+            - generic: 复制
+  - generic:
+    - generic:
+      - img "qrcode_wechat"
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic: 扫码前往App Store预订
+  - generic [ref=e91]:
+    - generic [ref=e93]:
+      - text: We use cookies to help personalize content and provide a better experience. By continuing to browse this site or use our services, you agree to this use as outlined in our
+      - link "Privacy Policy" [ref=e94] [cursor=pointer]:
+        - /url: https://wutheringwaves.kurogame.com/p/language_en/privacy_policy.html
+      - text: .
+    - button "OK" [ref=e95] [cursor=pointer]

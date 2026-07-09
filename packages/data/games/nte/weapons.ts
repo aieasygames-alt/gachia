@@ -1,8 +1,8 @@
 import type { SupportedLocale, Weapon } from '@gachia/core';
 import type { NteWeapon } from './types';
+import rawWeapons from './raw-weapons.json';
 import { localeStr } from './types';
 import { IMAGE_BASE } from '../../image-base';
-import rawWeapons from './raw-weapons.json';
 
 export const nteWeapons: NteWeapon[] = rawWeapons as unknown as NteWeapon[];
 

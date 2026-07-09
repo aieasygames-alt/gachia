@@ -1,5 +1,7 @@
 import type { SupportedLocale } from '@gachia/core';
-import rawGuides from './raw-guides.json';
+import { join } from 'node:path';
+import { loadJson } from '../../load-json';
+const rawGuides = await loadJson<unknown>(join(process.cwd(), '../../packages/data/games/starrail/raw-guides.json'), '/data/starrail/raw-guides.json');
 
 export interface StarRailGuideFaq {
   question: string;

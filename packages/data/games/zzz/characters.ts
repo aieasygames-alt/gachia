@@ -1,7 +1,7 @@
 import type { SupportedLocale, Character } from '@gachia/core';
 import type { ZzzCharacter } from './types';
-import { localeStr } from './types';
 import rawCharacters from './raw-characters.json';
+import { localeStr } from './types';
 
 const allCharacters: ZzzCharacter[] = rawCharacters as unknown as ZzzCharacter[];
 

@@ -1,0 +1,4496 @@
+[
+  {
+    "characterId": "endministrator",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "metadiastima-photoemission-tube",
+            "quantity": 20
+          },
+          {
+            "materialId": "bloodcap",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "lifeng",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "metadiastima-photoemission-tube",
+            "quantity": 20
+          },
+          {
+            "materialId": "bloodcap",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "mi-fu",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "d96-steel-sample-4",
+            "quantity": 20
+          },
+          {
+            "materialId": "bloodcap",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "rossi",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "quadrant-fitting-fluid",
+            "quantity": 20
+          },
+          {
+            "materialId": "cosmagaric",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "ember",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "d96-steel-sample-4",
+            "quantity": 20
+          },
+          {
+            "materialId": "cosmagaric",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "ardelia",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "quadrant-fitting-fluid",
+            "quantity": 20
+          },
+          {
+            "materialId": "cosmagaric",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "gilberta",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "tachyon-screening-lattice",
+            "quantity": 20
+          },
+          {
+            "materialId": "bloodcap",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "tangtang",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "metadiastima-photoemission-tube",
+            "quantity": 20
+          },
+          {
+            "materialId": "bloodcap",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "laevatain",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "d96-steel-sample-4",
+            "quantity": 20
+          },
+          {
+            "materialId": "cosmagaric",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "last-rite",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "bloodcap",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "yvonne",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "tachyon-screening-lattice",
+            "quantity": 20
+          },
+          {
+            "materialId": "bloodcap",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "zhuang-fangyi",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "cosmagaric",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "pogranichnik",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "metadiastima-photoemission-tube",
+            "quantity": 20
+          },
+          {
+            "materialId": "cosmagaric",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "chen-qianyu",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "quadrant-fitting-fluid",
+            "quantity": 20
+          },
+          {
+            "materialId": "cosmagaric",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "snowshine",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "quadrant-fitting-fluid",
+            "quantity": 20
+          },
+          {
+            "materialId": "bloodcap",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "xaihi",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "d96-steel-sample-4",
+            "quantity": 20
+          },
+          {
+            "materialId": "bloodcap",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "perlica",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "tachyon-screening-lattice",
+            "quantity": 20
+          },
+          {
+            "materialId": "bloodcap",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "wulfgard",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "cosmagaric",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "avywenna",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "tachyon-screening-lattice",
+            "quantity": 20
+          },
+          {
+            "materialId": "bloodcap",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "da-pan",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "bloodcap",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "camille",
+    "ascensionMaterials": [],
+    "talentMaterials": []
+  },
+  {
+    "characterId": "arclight",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "metadiastima-photoemission-tube",
+            "quantity": 20
+          },
+          {
+            "materialId": "cosmagaric",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "alesh",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "metadiastima-photoemission-tube",
+            "quantity": 20
+          },
+          {
+            "materialId": "bloodcap",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "estella",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "quadrant-fitting-fluid",
+            "quantity": 20
+          },
+          {
+            "materialId": "cosmagaric",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "catcher",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "tachyon-screening-lattice",
+            "quantity": 20
+          },
+          {
+            "materialId": "bloodcap",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "antal",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "metadiastima-photoemission-tube",
+            "quantity": 20
+          },
+          {
+            "materialId": "cosmagaric",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "fluorite",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "cosmagaric",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "akekuri",
+    "ascensionMaterials": [
+      {
+        "level": 20,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 8
+          },
+          {
+            "materialId": "pink-bolete",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          {
+            "materialId": "protodisk",
+            "quantity": 25
+          },
+          {
+            "materialId": "red-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 24
+          },
+          {
+            "materialId": "ruby-bolete",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          {
+            "materialId": "protoset",
+            "quantity": 36
+          },
+          {
+            "materialId": "d96-steel-sample-4",
+            "quantity": 20
+          },
+          {
+            "materialId": "cosmagaric",
+            "quantity": 8
+          }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "Rank 2",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 6
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 3",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 12
+          },
+          {
+            "materialId": "kalkodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 4",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 16
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 5",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 21
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 6",
+        "materials": [
+          {
+            "materialId": "protoprism",
+            "quantity": 27
+          },
+          {
+            "materialId": "chrysodendra",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 7",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 6
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 8",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 8
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "talentLevel": "Rank 9",
+        "materials": [
+          {
+            "materialId": "protohedron",
+            "quantity": 15
+          },
+          {
+            "materialId": "vitrodendra",
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,240 @@
+[
+  {
+    "id": "huanglong",
+    "name": "瑝珑",
+    "nameEn": "Huanglong",
+    "nameJa": "瑝瓏",
+    "description": "瑝珑是鸣潮世界中人类文明的中心国度，以金曜山脉为脊梁，周围环绕着广袤的平原、湖泊和古老遗迹。作为最先觉醒的人类聚居地，瑝珑承载着对抗声骸威胁的最前线，同时保留着丰富的历史文化和独特的共鸣技术。",
+    "descriptionEn": "Huanglong is the central nation of human civilization in Wuthering Waves. Anchored by the Mt. Firmament range, it features vast plains, lakes, and ancient ruins. As the first human settlement to awaken, Huanglong stands on the frontlines against the Tacet Discord threat while preserving a rich cultural heritage and unique Resonance technology.",
+    "descriptionJa": "瑝瓏は鳴潮の世界における人類文明の中心国です。金曜山脈を背骨とし、広大な平原、湖、古代遺跡が広がっています。最初に覚醒した人類の居住地として、タセットディスコードの脅威に立ち向かう最前線でありながら、豊かな文化遺産と共鳴技術を保全しています。",
+    "highlights": [
+      "共鸣者之城: 瑝珑主城区域",
+      "金曜山脉: 贯穿全境的山脉",
+      "遗忘之潮: 古代文明遗迹",
+      "地下洞穴网络: 多个隐藏区域",
+      "声骸聚集地: 多种声骸栖息地"
+    ],
+    "specialties": [
+      "灯笼果 (Lantern Berry)",
+      "清心 (Qingxin Flower)",
+      "琉璃袋 (Glass Marigold)",
+      "星银矿石 (Star Silver Ore)"
+    ],
+    "bosses": [
+      "mechanical-division (机械师)",
+      "crownless (无冠者)",
+      "dreamless (无梦者)",
+      "feilian-beringal (飞廉贝林格)",
+      "impermanence-heron (无常鹤)",
+      "bell-borne-geochelone (载铃龟)"
+    ],
+    "domains": [
+      "遗忘之潮 (Tide of Forgetfulness)",
+      "共鸣训练场 (Resonance Training Ground)",
+      "金曜秘境 (Mt. Firmament Domain)"
+    ],
+    "tips": [
+      "优先解锁共鸣灯塔以照亮地图区域",
+      "金曜山脉区域有大量隐藏宝箱需要仔细探索",
+      "声骸精英怪掉落高品质声骸，每日刷新",
+      "主线任务会引导解锁大部分传送点"
+    ],
+    "subRegions": [
+      "Central Plains",
+      "Sea of Clouds",
+      "Gorges",
+      "Mt. Firmament",
+      "Grand Library Ruins",
+      "Stormy Coast",
+      "Whispering Woods",
+      "Golden Plains",
+      "Shattered Bridge",
+      "Desolate Highlands",
+      "Echoing Valley"
+    ]
+  },
+  {
+    "id": "black-shores",
+    "name": "黑海岸",
+    "nameEn": "The Black Shores",
+    "nameJa": "ブラックショア",
+    "description": "黑海岸是一片被深邃黑暗笼罩的神秘海岸区域。这里曾经是繁荣的港口城市，如今被声骸灾变所侵蚀，残留着破碎的建筑和危险的变异生物。海岸线上散布着古代灯塔和地下遗迹，等待着共鸣者的探索。",
+    "descriptionEn": "The Black Shores is a mysterious coastal region shrouded in deep darkness. Once a thriving port city, it has been eroded by the Tacet Discord catastrophe, leaving behind shattered architecture and dangerous mutated creatures. Ancient lighthouses and underground ruins scatter the coastline, awaiting Resonators' exploration.",
+    "descriptionJa": "ブラックショアは深い闇に包まれた神秘的な海岸地域です。かつて繁栄した港町でしたが、タセットディスコードの災厄に侵食され、砕かれた建築物と危険な変異生物が残されています。海岸沿いには古代の灯台や地下遺跡が点在し、レゾネーターの探索を待っています。",
+    "highlights": [
+      "破碎港口: 被灾变摧毁的港口遗迹",
+      "黑暗灯塔群: 多座古代灯塔",
+      "地下遗迹: 声骸技术实验室",
+      "变异声骸巢穴: 高危险区域",
+      "时裂都市: 时间扭曲现象区域"
+    ],
+    "specialties": [
+      "暗影花 (Shadow Bloom)",
+      "深渊珊瑚 (Abyssal Coral)",
+      "幽暗矿石 (Umbral Ore)",
+      "墨色珍珠 (Ink Pearl)"
+    ],
+    "bosses": [
+      "hecate (赫卡忒)",
+      "crownless-shadow (暗影无冠者)"
+    ],
+    "domains": [
+      "暗潮深渊 (Abyssal Tide)",
+      "破碎港口秘境 (Shattered Port Domain)",
+      "时裂裂缝 (Chronorift Domain)"
+    ],
+    "tips": [
+      "黑海岸区域视野较差，建议携带光源型共鸣者",
+      "时裂都市区域有时间机制，注意时间限制",
+      "暗影声骸在夜间更强，白天挑战更容易",
+      "灯塔解谜是解锁隐藏区域的关键"
+    ],
+    "subRegions": [
+      "Shattered Port",
+      "Dark Lighthouse",
+      "Abyssal Ruins",
+      "Chronorift Metropolis",
+      "Shadow Coast",
+      "Temporal Rift",
+      "Black Tide Beach",
+      "Forgotten Harbor",
+      "Twilight Cave",
+      "Echoing Abyss"
+    ]
+  },
+  {
+    "id": "rinascita",
+    "name": "黎那汐塔",
+    "nameEn": "Rinascita",
+    "nameJa": "リナシータ",
+    "description": "黎那汐塔是一座浮于云端之上的华丽国度，以其壮丽的建筑和高度发达的共鸣技术闻名。这里的人们将共鸣视为艺术与科学的结合，城市中随处可见精巧的共鸣装置和装饰。然而在这美丽表象之下，隐藏着关于声骸起源的深层秘密。",
+    "descriptionEn": "Rinascita is a magnificent nation floating above the clouds, renowned for its splendid architecture and highly developed Resonance technology. Its people view Resonance as the union of art and science, with intricate Resonance devices and decorations visible throughout the city. Yet beneath this beautiful facade lie deep secrets about the origin of the Tacet Discords.",
+    "descriptionJa": "リナシータは雲の上に浮かぶ壮大な国で、その壮麗な建築と高度に発達した共鳴技術で知られています。人々は共鳴を芸術と科学の融合と見なし、街中には精巧な共鳴装置や装飾が見られます。しかし美しい外観の下には、タセットディスコードの起源に関する深い秘密が隠されています。",
+    "highlights": [
+      "浮空都市: 悬浮在云端的中心城市",
+      "共鸣科学院: 研究共鸣技术的核心机构",
+      "天空花园: 壮丽的空中花园",
+      "声骸竞技场: 与声骸对战的竞技场",
+      "云端图书馆: 收藏大量古代知识的图书馆"
+    ],
+    "specialties": [
+      "云纹石 (Cloud Pattern Stone)",
+      "天空花 (Sky Blossom)",
+      "共鸣晶体 (Resonance Crystal)",
+      "浮空矿石 (Levitas Ore)"
+    ],
+    "bosses": [
+      "thundering-mephis (雷鸣墨菲斯)",
+      "abomination (憎恶体)",
+      "luminous-crown (光冠者)"
+    ],
+    "domains": [
+      "共鸣科学院秘境 (Academy Domain)",
+      "天空竞技场 (Sky Arena)",
+      "云端书库 (Cloud Library Domain)"
+    ],
+    "tips": [
+      "浮空区域有坠落风险，注意空中平台边缘",
+      "共鸣科学院有多个解谜需要特定元素共鸣者",
+      "天空花是稀有特产，刷新周期较长",
+      "声骸竞技场每日可挑战获取大量声骸经验"
+    ],
+    "subRegions": [
+      "Floating City Center",
+      "Resonance Academy",
+      "Sky Garden",
+      "Cloud Arena",
+      "Sky Library",
+      "Aether Plaza",
+      "Crystal Spire",
+      "Prism Bridge",
+      "Harmony Hall",
+      "Resonance Tower",
+      "Celestial Walkway",
+      "Cloud Forge",
+      "Wind Chime Terrace",
+      "Ascension Gate",
+      "Starfall Promenade",
+      "Echo Chamber"
+    ]
+  },
+  {
+    "id": "lahai-roi",
+    "name": "拉海洛",
+    "nameEn": "Lahai-Roi",
+    "nameJa": "ラハイロイ",
+    "description": "拉海洛是隐藏在罗伊冰原地表之下的巨大地下国度。这片地下世界拥有独特的生态系统和发光矿物，古老的文明遗迹散布在巨大的地下洞穴之中。地下世界与地表冰原形成了鲜明对比，温暖的地热区域与冰冷的洞穴交错分布。",
+    "descriptionEn": "Lahai-Roi is a vast underground nation hidden beneath the surface of the Roya Frostlands. This subterranean world features a unique ecosystem with luminescent minerals, and ruins of ancient civilizations scatter across enormous underground caverns. The underground world contrasts sharply with the surface frostlands, with warm geothermal zones interweaving with icy caverns.",
+    "descriptionJa": "ラハイロイはロイ氷原の地表の下に隠された広大な地下国家です。この地下世界は発光鉱物を持つ独特の生態系を備え、古代文明の遺跡が巨大な地下洞窟に散在しています。地下世界は地表の氷原と鮮やかな対照をなしており、温暖な地熱地帯と冷たい洞窟が交錯しています。",
+    "highlights": [
+      "罗伊冰原: 覆盖地表的永冻冰原",
+      "地下溶洞: 巨大的地下空间网络",
+      "地热温泉: 地下温暖区域",
+      "发光矿脉: 独特的地下矿物景观",
+      "古代地下城市: 被遗忘的文明遗迹"
+    ],
+    "specialties": [
+      "霜晶花 (Frost Crystal Flower)",
+      "地热蘑菇 (Geothermal Mushroom)",
+      "永冻石 (Permafrost Stone)",
+      "地下荧光藻 (Luminescent Algae)"
+    ],
+    "bosses": [
+      "frost-blaze (霜焰兽)",
+      "glacial-crown (冰冠者)",
+      "abyss-walker (深渊行者)"
+    ],
+    "domains": [
+      "永冻深渊 (Permafrost Abyss)",
+      "地热熔炉 (Geothermal Forge)",
+      "古代城市遗迹 (Ancient City Ruins)"
+    ],
+    "tips": [
+      "地表冰原区域寒冷值会持续下降，注意保暖",
+      "地下区域有独特光源，暗视觉角色有优势",
+      "霜晶花只在极寒区域生长",
+      "地热区域有治疗buff，善加利用"
+    ],
+    "subRegions": [
+      "Roya Frostlands Surface",
+      "Frozen Tundra",
+      "Glacial Caverns",
+      "Crystal Depths",
+      "Geothermal Valley",
+      "Luminescent Grotto",
+      "Ancient Undercity",
+      "Ice Crown Citadel",
+      "Frostbite Gorge",
+      "Magma Veins",
+      "Echoing Chasm",
+      "Frozen Lake District",
+      "Subterranean Garden",
+      "Deep Abyss"
+    ]
+  },
+  {
+    "id": "new-federation",
+    "name": "新联邦",
+    "nameEn": "New Federation",
+    "nameJa": "ニュー・フェデレーション",
+    "description": "新联邦是鸣潮世界中尚未完全开放的区域，据传是一个由多个幸存者聚落联合组成的新兴势力。目前仅可通过法外之地边境窥见其一部分，更多内容将在后续版本更新中开放。",
+    "descriptionEn": "The New Federation is a yet-to-be-fully-released region in Wuthering Waves. It is rumored to be an emerging power formed by an alliance of multiple survivor settlements. Currently only accessible through the Lawless Zone border, with more content to be released in future updates.",
+    "descriptionJa": "ニュー・フェデレーションは鳴潮でまだ完全に開放されていない地域です。複数の生存者集落の連合によって形成された新興勢力とされています。現在は無法地帯の国境から一部を垣見するのみで、今後のアップデートで更なる内容が開放される予定です。",
+    "highlights": [
+      "法外之地: 目前进度可到达的边境区域",
+      "联邦哨站: 新联邦的前沿阵地",
+      "未开放区域: 后续版本将解锁"
+    ],
+    "specialties": [],
+    "bosses": [],
+    "domains": [],
+    "tips": [
+      "法外之地是当前版本最高等级区域",
+      "边境区域敌人强度较高，建议高等级后再探索",
+      "关注后续版本更新解锁更多内容"
+    ],
+    "subRegions": [
+      "Lawless Zone"
+    ]
+  }
+]

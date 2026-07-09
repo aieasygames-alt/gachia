@@ -1,6 +1,8 @@
 import type { SupportedLocale } from '@gachia/core';
+import { join } from 'node:path';
+import { loadJson } from '../../load-json';
 import { localeStr } from './types';
-import rawRegions from './raw-regions.json';
+const rawRegions = await loadJson<unknown>(join(process.cwd(), '../../packages/data/games/wuwa/raw-regions.json'), '/data/wuwa/raw-regions.json');
 
 export interface WuWaRegion {
   id: string;

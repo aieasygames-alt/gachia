@@ -1,6 +1,8 @@
 import type { SupportedLocale } from '@gachia/core';
+import { join } from 'node:path';
+import { loadJson } from '../../load-json';
 import type { EndfieldRegion } from './types';
-import rawRegions from './raw-regions.json';
+const rawRegions = await loadJson<unknown>(join(process.cwd(), '../../packages/data/games/endfield/raw-regions.json'), '/data/endfield/raw-regions.json');
 
 export const regions: EndfieldRegion[] = rawRegions as unknown as EndfieldRegion[];
 

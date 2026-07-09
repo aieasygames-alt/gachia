@@ -60,7 +60,7 @@ export function generateSocialMetadata(config: SocialMetadata): Metadata {
  * Generate metadata for game pages
  */
 export function generateGameMetadata(gameId: string, gameName: string, gameDescription: string): Metadata {
-  const ogImage = `/images/og/${gameId}.png`;
+  const ogImage = `/images/og/${gameId}.jpg`;
 
   return generateSocialMetadata({
     title: `${gameName} - 角色图鉴、武器、攻略大全 | Gachia`,
@@ -103,7 +103,7 @@ export function generateGuideMetadata(
   return generateSocialMetadata({
     title: `${guideTitle} - ${gameName}攻略 | Gachia`,
     description: guideDescription,
-    images: [`/images/og/${gameId}.png`],
+    images: [`/images/og/${gameId}.jpg`],
     imageAlt: `${gameName} Guide`,
     twitterCard: { card: 'summary_large_image' },
   });

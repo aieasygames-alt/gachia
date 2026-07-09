@@ -1,0 +1,1075 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - link [ref=e8] [cursor=pointer]:
+          - /url: //game.bilibili.com/?spm_id_from=555.117.0.0
+        - list [ref=e9]:
+          - listitem [ref=e10]:
+            - link " 主站" [ref=e11] [cursor=pointer]:
+              - /url: //www.bilibili.com/?spm_id_from=555.117.0.0
+              - generic [ref=e12]: 
+              - generic [ref=e13]: 主站
+          - listitem [ref=e14]:
+            - link "首页" [ref=e15] [cursor=pointer]:
+              - /url: //game.bilibili.com/platform?spm_id_from=555.117.0.0
+          - listitem [ref=e16]:
+            - link "排行榜" [ref=e17] [cursor=pointer]:
+              - /url: //game.bilibili.com/platform/ranks?spm_id_from=555.117.0.0
+          - listitem [ref=e18]:
+            - link "发现" [ref=e19] [cursor=pointer]:
+              - /url: //game.bilibili.com/platform/discover?spm_id_from=555.117.0.0
+          - listitem [ref=e20]:
+            - link "WIKI" [ref=e21] [cursor=pointer]:
+              - /url: //wiki.biligame.com/?spm_id_from=555.117.0.0
+          - listitem [ref=e22]:
+            - link "大会员礼包" [ref=e23] [cursor=pointer]:
+              - /url: //b-gift.biligame.com/?spm_id_from=555.117.0.0
+          - listitem [ref=e24]:
+            - link "充值中心" [ref=e25] [cursor=pointer]:
+              - /url: //pay.biligame.com/?spm_id_from=555.117.0.0#/?from=gc&selectedNav=pay
+          - listitem [ref=e26]:
+            - link "我的" [ref=e27] [cursor=pointer]:
+              - /url: //game.bilibili.com/platform/mine?spm_id_from=555.117.0.0
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - textbox "搜索更多游戏&WIKI" [ref=e30]
+          - generic [ref=e32] [cursor=pointer]: 
+        - link [ref=e36] [cursor=pointer]:
+          - /url: https://passport.bilibili.com/login?gourl=https%3A%2F%2Fwiki.biligame.com%2Fwiki%2F%25E9%25A6%2596%25E9%25A1%25B5
+  - generic [ref=e37]:
+    - generic [ref=e38]:
+      - link [ref=e40] [cursor=pointer]:
+        - /url: /wiki/%E9%A6%96%E9%A1%B5
+        - img [ref=e41]
+      - listitem [ref=e42]:
+        - link "我的消息" [ref=e43] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - generic [ref=e45]:
+        - generic [ref=e47]:
+          - link "首页" [ref=e49] [cursor=pointer]:
+            - /url: javascript:;
+            - text: 首页
+          - link "社区规范" [ref=e52] [cursor=pointer]:
+            - /url: javascript:;
+            - text: 社区规范
+          - link "教程合集" [ref=e55] [cursor=pointer]:
+            - /url: javascript:;
+            - text: 教程合集
+          - link "建站必读" [ref=e58] [cursor=pointer]:
+            - /url: javascript:;
+            - text: 建站必读
+          - link "创建WIKI" [ref=e61] [cursor=pointer]:
+            - /url: /wiki/WIKI%E7%94%B3%E8%AF%B7%E9%A1%B5%E9%9D%A2
+          - link "编辑帮助" [ref=e63] [cursor=pointer]:
+            - /url: javascript:;
+            - text: 编辑帮助
+          - link "玩家自制" [ref=e66] [cursor=pointer]:
+            - /url: javascript:;
+            - text: 玩家自制
+        - generic [ref=e71]:
+          - textbox "搜索bilibili游戏中心 - WIKI[ctrl-option-f]" [ref=e72]:
+            - /placeholder: 本WIKI中搜索
+          - button "搜索" [ref=e73] [cursor=pointer]
+          - button "前往" [ref=e74] [cursor=pointer]
+    - main [ref=e75]:
+      - generic: 
+      - generic [ref=e76]:
+        - link "跳到导航" [ref=e77] [cursor=pointer]:
+          - /url: "#mw-head"
+        - link "跳到搜索" [ref=e78] [cursor=pointer]:
+          - /url: "#p-search"
+        - generic [ref=e80]:
+          - generic [ref=e81]:
+            - generic [ref=e82]:
+              - generic [ref=e83]:
+                - generic [ref=e84]:
+                  - group "5 / 5" [ref=e85]:
+                    - link "申请创建WIKI960.png" [ref=e86] [cursor=pointer]:
+                      - /url: /wiki/WIKI%E7%94%B3%E8%AF%B7%E9%A1%B5%E9%9D%A2
+                      - img "申请创建WIKI960.png" [ref=e87]
+                  - group "1 / 5" [ref=e88]:
+                    - link "战双帕弥什" [ref=e89] [cursor=pointer]:
+                      - /url: https://wiki.biligame.com/zspms/%E9%A6%96%E9%A1%B5
+                      - img "战双帕弥什" [ref=e90]
+                  - group "2 / 5" [ref=e91]:
+                    - link "代号鸢" [ref=e92] [cursor=pointer]:
+                      - /url: https://wiki.biligame.com/yuan/%E9%A6%96%E9%A1%B5
+                      - img "代号鸢" [ref=e93]
+                  - group "3 / 5" [ref=e94]:
+                    - link "对决剑之川轮播图banner.jpg" [ref=e95] [cursor=pointer]:
+                      - /url: https://wiki.biligame.com/jzc/%E9%A6%96%E9%A1%B5
+                      - img "对决剑之川轮播图banner.jpg" [ref=e96]
+                  - group "4 / 5" [ref=e97]:
+                    - link "马老师小课堂" [ref=e98] [cursor=pointer]:
+                      - /url: https://space.bilibili.com/123855714/lists/4937?type=season
+                      - img "马老师小课堂" [ref=e99]
+                  - group "5 / 5" [ref=e100]:
+                    - link "申请创建WIKI960.png" [ref=e101] [cursor=pointer]:
+                      - /url: /wiki/WIKI%E7%94%B3%E8%AF%B7%E9%A1%B5%E9%9D%A2
+                      - img "申请创建WIKI960.png" [ref=e102]
+                  - group "1 / 5" [ref=e103]:
+                    - link "战双帕弥什" [ref=e104] [cursor=pointer]:
+                      - /url: https://wiki.biligame.com/zspms/%E9%A6%96%E9%A1%B5
+                      - img "战双帕弥什" [ref=e105]
+                - generic [ref=e106]:
+                  - button "Go to slide 1" [ref=e107] [cursor=pointer]
+                  - button "Go to slide 2" [ref=e108] [cursor=pointer]
+                  - button "Go to slide 3" [ref=e109] [cursor=pointer]
+                  - button "Go to slide 4" [ref=e110] [cursor=pointer]
+                  - button "Go to slide 5" [ref=e111] [cursor=pointer]
+                - button "Next slide" [ref=e112] [cursor=pointer]: next
+                - button "Previous slide" [ref=e113] [cursor=pointer]: prev
+              - paragraph
+              - generic [ref=e115]:
+                - group "1 / 5" [ref=e116] [cursor=pointer]:
+                  - link "战双帕弥什":
+                    - /url: https://wiki.biligame.com/zspms/%E9%A6%96%E9%A1%B5
+                    - img "战双帕弥什"
+                - group "2 / 5" [ref=e117] [cursor=pointer]:
+                  - link "代号鸢":
+                    - /url: https://wiki.biligame.com/yuan/%E9%A6%96%E9%A1%B5
+                    - img "代号鸢"
+                - group "3 / 5" [ref=e118] [cursor=pointer]:
+                  - link "对决剑之川轮播图banner.jpg":
+                    - /url: https://wiki.biligame.com/jzc/%E9%A6%96%E9%A1%B5
+                    - img "对决剑之川轮播图banner.jpg"
+                - group "4 / 5" [ref=e119] [cursor=pointer]:
+                  - link "马老师小课堂":
+                    - /url: https://space.bilibili.com/123855714/lists/4937?type=season
+                    - img "马老师小课堂"
+                - group "5 / 5" [ref=e120] [cursor=pointer]:
+                  - link "申请创建WIKI960.png":
+                    - /url: /wiki/WIKI%E7%94%B3%E8%AF%B7%E9%A1%B5%E9%9D%A2
+                    - img "申请创建WIKI960.png"
+              - generic [ref=e122]:
+                - generic [ref=e123]: 热门WIKI
+                - generic:
+                  - generic [ref=e124]:
+                    - generic [ref=e125]:
+                      - link "碧蓝航线WIKI" [ref=e126] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/blhx/
+                        - img "碧蓝航线WIKI" [ref=e127]
+                      - link "碧蓝航线WIKI" [ref=e129] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/blhx/
+                    - generic [ref=e130]:
+                      - link "游戏WIKI" [ref=e132] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/blhx/
+                      - link "游戏详情" [ref=e134] [cursor=pointer]:
+                        - /url: https://app.biligame.com/page/detail_share.html?id=97&sourceFrom=400001
+                  - generic [ref=e135]:
+                    - generic [ref=e136]:
+                      - link "洛克王国：世界WIKI" [ref=e137] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/rocom/
+                        - img "洛克王国：世界WIKI" [ref=e138]
+                      - link "洛克王国：世界WIKI" [ref=e140] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/rocom/
+                    - generic [ref=e141]:
+                      - link "游戏WIKI" [ref=e143] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/rocom/
+                      - link "游戏详情" [ref=e145] [cursor=pointer]:
+                        - /url: https://app.biligame.com/page/detail_share.html?id=1600810011&sourceFrom=400001
+                  - generic [ref=e146]:
+                    - generic [ref=e147]:
+                      - link "星穹铁道WIKI" [ref=e148] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/sr/
+                        - img "星穹铁道WIKI" [ref=e149]
+                      - link "星穹铁道WIKI" [ref=e151] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/sr/
+                    - generic [ref=e152]:
+                      - link "游戏WIKI" [ref=e154] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/sr/
+                      - link "游戏详情" [ref=e156] [cursor=pointer]:
+                        - /url: https://app.biligame.com/page/detail_share.html?id=107800&sourceFrom=400001
+                  - generic [ref=e157]:
+                    - generic [ref=e158]:
+                      - link "星露谷物语WIKI" [ref=e159] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/stardewvalley/
+                        - img "星露谷物语WIKI" [ref=e160]
+                      - link "星露谷物语WIKI" [ref=e162] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/stardewvalley/
+                    - link "游戏WIKI" [ref=e165] [cursor=pointer]:
+                      - /url: https://wiki.biligame.com/stardewvalley/
+                  - generic [ref=e166]:
+                    - generic [ref=e167]:
+                      - link "明日方舟WIKI" [ref=e168] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/arknights/
+                        - img "明日方舟WIKI" [ref=e169]
+                      - link "明日方舟WIKI" [ref=e171] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/arknights/
+                    - generic [ref=e172]:
+                      - link "游戏WIKI" [ref=e174] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/arknights/
+                      - link "游戏详情" [ref=e176] [cursor=pointer]:
+                        - /url: https://app.biligame.com/page/detail_share.html?id=101772&sourceFrom=400001
+                  - generic [ref=e177]:
+                    - generic [ref=e178]:
+                      - link "赛马娘WIKI" [ref=e179] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/umamusume/
+                        - img "赛马娘WIKI" [ref=e180]
+                      - link "赛马娘WIKI" [ref=e182] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/umamusume/
+                    - generic [ref=e183]:
+                      - link "游戏WIKI" [ref=e185] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/umamusume/
+                      - link "游戏详情" [ref=e187] [cursor=pointer]:
+                        - /url: https://app.biligame.com/page/detail_share.html?id=106749&sourceFrom=400001
+                  - generic [ref=e188]:
+                    - generic [ref=e189]:
+                      - link "第五人格WIKI" [ref=e190] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/dwrg/
+                        - img "第五人格WIKI" [ref=e191]
+                      - link "第五人格WIKI" [ref=e193] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/dwrg/
+                    - generic [ref=e194]:
+                      - link "游戏WIKI" [ref=e196] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/dwrg/
+                      - link "游戏详情" [ref=e198] [cursor=pointer]:
+                        - /url: https://app.biligame.com/page/detail_share.html?id=183&sourceFrom=400001
+                  - generic [ref=e199]:
+                    - generic [ref=e200]:
+                      - link "烟雨江湖WIKI" [ref=e201] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/yanyu/
+                        - img "烟雨江湖WIKI" [ref=e202]
+                      - link "烟雨江湖WIKI" [ref=e204] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/yanyu/
+                    - generic [ref=e205]:
+                      - link "游戏WIKI" [ref=e207] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/yanyu/
+                      - link "游戏详情" [ref=e209] [cursor=pointer]:
+                        - /url: https://app.biligame.com/page/detail_share.html?id=104850&sourceFrom=400001
+            - generic [ref=e210]:
+              - generic [ref=e211]:
+                - generic [ref=e212]:
+                  - img "BWIKI logo.png" [ref=e213]
+                  - text: 关于BWIKI
+                - generic [ref=e214]:
+                  - paragraph [ref=e215]: BWIKI是bilibili游戏旗下以玩家兴趣为导向、用户共建为基础的免费WIKI平台，所有WIKI均来自用户的申请与维护，众多玩家群体在此无偿地分享自己的游戏经验，希望得到您持续的关注与支持。
+                  - paragraph [ref=e216]
+                  - paragraph [ref=e217]:
+                    - text: BWIKI旨在打造稳定高效的WIKI搭建平台，基于
+                    - link "MediaWiki" [ref=e218] [cursor=pointer]:
+                      - /url: https://www.mediawiki.org/wiki/MediaWiki
+                    - text: 开源版本进行了部分本地化处理，欢迎有建设能力的个人或团队通过我们的
+                    - link "WIKI申请页面" [ref=e219] [cursor=pointer]:
+                      - /url: /wiki/WIKI%E7%94%B3%E8%AF%B7%E9%A1%B5%E9%9D%A2
+                    - text: 进行申请。
+                  - paragraph [ref=e220]:
+                    - link "申请创建WIKI >>>" [ref=e221] [cursor=pointer]:
+                      - /url: /wiki/WIKI%E7%94%B3%E8%AF%B7%E9%A1%B5%E9%9D%A2
+                      - generic [ref=e222]: 申请创建WIKI >>>
+                    - link "WIKI教程合集 >>>" [ref=e223] [cursor=pointer]:
+                      - /url: /wiki/%E6%95%99%E7%A8%8B%E5%90%88%E9%9B%86
+                      - generic [ref=e224]: WIKI教程合集 >>>
+                    - link "WIKI问题反馈 >>>" [ref=e226] [cursor=pointer]:
+                      - /url: https://message.bilibili.com/?spm_id_from=333.999.0.0#/whisper/mid477233102
+              - generic [ref=e227]:
+                - paragraph
+                - generic [ref=e228]:
+                  - generic [ref=e229]:
+                    - generic [ref=e230]: 总WIKI：
+                    - generic [ref=e231]: "930"
+                  - generic [ref=e232]:
+                    - generic [ref=e233]: 页面数：
+                    - generic [ref=e234]: 4,729,527
+                  - generic [ref=e235]:
+                    - generic [ref=e236]: 总编辑数：
+                    - generic [ref=e237]: 14,546,204
+                  - generic [ref=e238]:
+                    - generic [ref=e239]: 总文件数：
+                    - generic [ref=e240]: 3,000,915
+                  - generic [ref=e241]:
+                    - generic [ref=e242]: 活跃用户：
+                    - generic [ref=e243]: 9,639
+                - paragraph
+          - generic [ref=e244]:
+            - generic [ref=e248]:
+              - generic [ref=e249]:
+                - list [ref=e250]:
+                  - listitem [ref=e251]:
+                    - generic [ref=e252]: 已上线WIKI
+                  - listitem [ref=e253]:
+                    - generic [ref=e254]: 建设中WIKI
+                - generic [ref=e257]:
+                  - textbox [ref=e258]
+                  - button "搜索WIKI" [ref=e259] [cursor=pointer]
+              - generic [ref=e264]:
+                - list [ref=e265]:
+                  - listitem [ref=e266]:
+                    - link "ABC" [ref=e267] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=e268]:
+                    - link "DEF" [ref=e269] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=e270]:
+                    - link "GHI" [ref=e271] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=e272]:
+                    - link "JKL" [ref=e273] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=e274]:
+                    - link "MNO" [ref=e275] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=e276]:
+                    - link "PQR" [ref=e277] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=e278]:
+                    - link "STU" [ref=e279] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=e280]:
+                    - link "VWX" [ref=e281] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=e282]:
+                    - link "YZ" [ref=e283] [cursor=pointer]:
+                      - /url: "#"
+                - generic "ABC" [ref=e284]:
+                  - generic [ref=e286]:
+                    - generic [ref=e287]:
+                      - link "崩坏：星穹铁道" [ref=e289] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/sr/首页
+                        - img "崩坏：星穹铁道" [ref=e290]
+                      - generic [ref=e291]: 崩坏：星穹铁道
+                    - generic [ref=e292]:
+                      - link "碧蓝航线" [ref=e294] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/blhx/首页
+                        - img "碧蓝航线" [ref=e295]
+                      - generic [ref=e296]: 碧蓝航线
+                    - generic [ref=e297]:
+                      - link "A3满开剧团" [ref=e299] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/a3/首页
+                        - img "A3满开剧团" [ref=e300]
+                      - generic [ref=e301]: A3满开剧团
+                    - generic [ref=e302]:
+                      - link "ARGONAVIS" [ref=e304] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/aaside/首页
+                        - img "ARGONAVIS" [ref=e305]
+                      - generic [ref=e306]: ARGONAVIS
+                    - generic [ref=e307]:
+                      - link "BangDream!少女乐团派对" [ref=e309] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/bangdream/首页
+                        - img "BangDream!少女乐团派对" [ref=e310]
+                      - generic [ref=e311]: BangDream!少女乐团派对
+                    - generic [ref=e312]:
+                      - link "Break My Case" [ref=e314] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/breakmycase/首页
+                        - img "Break My Case" [ref=e315]
+                      - generic [ref=e316]: Break My Case
+                    - generic [ref=e317]:
+                      - link "Catalyst Black" [ref=e319] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/cbwiki/首页
+                        - img "Catalyst Black" [ref=e320]
+                      - generic [ref=e321]: Catalyst Black
+                    - generic [ref=e322]:
+                      - link "Chronicon" [ref=e324] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/chronicon/首页
+                        - img "Chronicon" [ref=e325]
+                      - generic [ref=e326]: Chronicon
+                    - generic [ref=e327]:
+                      - link "CrashFever" [ref=e329] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/crashfever/首页
+                        - img "CrashFever" [ref=e330]
+                      - generic [ref=e331]: CrashFever
+                    - generic [ref=e332]:
+                      - link "Cyphers" [ref=e334] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/cyphers/首页
+                        - img "Cyphers" [ref=e335]
+                      - generic [ref=e336]: Cyphers
+                    - generic [ref=e337]:
+                      - link "保卫萝卜4" [ref=e339] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/luobo4/首页
+                        - img "保卫萝卜4" [ref=e340]
+                      - generic [ref=e341]: 保卫萝卜4
+                    - generic [ref=e342]:
+                      - link "冰原守卫者" [ref=e344] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/wintersurvival/首页
+                        - img "冰原守卫者" [ref=e345]
+                      - generic [ref=e346]: 冰原守卫者
+                    - generic [ref=e347]:
+                      - link "冲呀！饼干人王国" [ref=e349] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/bgrwg/首页
+                        - img "冲呀！饼干人王国" [ref=e350]
+                      - generic [ref=e351]: 冲呀！饼干人王国
+                    - generic [ref=e352]:
+                      - link "凹凸世界" [ref=e354] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/aotu/首页
+                        - img "凹凸世界" [ref=e355]
+                      - generic [ref=e356]: 凹凸世界
+                    - generic [ref=e357]:
+                      - link "宝可梦大探险" [ref=e359] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/pq/首页
+                        - img "宝可梦大探险" [ref=e360]
+                      - generic [ref=e361]: 宝可梦大探险
+                    - generic [ref=e362]:
+                      - link "宝石争霸" [ref=e364] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/gemcraft/首页
+                        - img "宝石争霸" [ref=e365]
+                      - generic [ref=e366]: 宝石争霸
+                    - generic [ref=e367]:
+                      - link "宝石研物语" [ref=e369] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/bsywy/首页
+                        - img "宝石研物语" [ref=e370]
+                      - generic [ref=e371]: 宝石研物语
+                    - generic [ref=e372]:
+                      - link "寻路者wayfinder" [ref=e374] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/wayfindersanmu/首页
+                        - img "寻路者wayfinder" [ref=e375]
+                      - generic [ref=e376]: 寻路者wayfinder
+                    - generic [ref=e377]:
+                      - link "尘白禁区" [ref=e379] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/sonw/首页
+                        - img "尘白禁区" [ref=e380]
+                      - generic [ref=e381]: 尘白禁区
+                    - generic [ref=e382]:
+                      - link "崩坏3rd" [ref=e384] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/bh3/首页
+                        - img "崩坏3rd" [ref=e385]
+                      - generic [ref=e386]: 崩坏3rd
+                    - generic [ref=e387]:
+                      - link "杯杯倒满" [ref=e389] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/feedthecups/首页
+                        - img "杯杯倒满" [ref=e390]
+                      - generic [ref=e391]: 杯杯倒满
+                    - generic [ref=e392]:
+                      - link "爆裂魔女" [ref=e394] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/burstwitch/首页
+                        - img "爆裂魔女" [ref=e395]
+                      - generic [ref=e396]: 爆裂魔女
+                    - generic [ref=e397]:
+                      - link "爱丽丝的衣橱" [ref=e399] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/alsdyc/首页
+                        - img "爱丽丝的衣橱" [ref=e400]
+                      - generic [ref=e401]: 爱丽丝的衣橱
+                    - generic [ref=e402]:
+                      - link "白夜极光" [ref=e404] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/byjg/首页
+                        - img "白夜极光" [ref=e405]
+                      - generic [ref=e406]: 白夜极光
+                    - generic [ref=e407]:
+                      - link "白荆回廊" [ref=e409] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/bjhl/首页
+                        - img "白荆回廊" [ref=e410]
+                      - generic [ref=e411]: 白荆回廊
+                    - generic [ref=e412]:
+                      - link "百家谜案集" [ref=e414] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/bjmaj/首页
+                        - img "百家谜案集" [ref=e415]
+                      - generic [ref=e416]: 百家谜案集
+                    - generic [ref=e417]:
+                      - link "碧蓝档案" [ref=e419] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/ba/首页
+                        - img "碧蓝档案" [ref=e420]
+                      - generic [ref=e421]: 碧蓝档案
+                    - generic [ref=e422]:
+                      - link "背包闯江湖" [ref=e424] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/bpjh/首页
+                        - img "背包闯江湖" [ref=e425]
+                      - generic [ref=e426]: 背包闯江湖
+                    - generic [ref=e427]:
+                      - link "艾尔登法环" [ref=e429] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/eldenring/首页
+                        - img "艾尔登法环" [ref=e430]
+                      - generic [ref=e431]: 艾尔登法环
+                    - generic [ref=e432]:
+                      - link "苍蓝境界" [ref=e434] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/cljj/首页
+                        - img "苍蓝境界" [ref=e435]
+                      - generic [ref=e436]: 苍蓝境界
+                    - generic [ref=e437]:
+                      - link "苍蓝誓约" [ref=e439] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/clsy/首页
+                        - img "苍蓝誓约" [ref=e440]
+                      - generic [ref=e441]: 苍蓝誓约
+                    - generic [ref=e442]:
+                      - link "重返未来：1999" [ref=e444] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/reverse1999/首页
+                        - img "重返未来：1999" [ref=e445]
+                      - generic [ref=e446]: 重返未来：1999
+                    - generic [ref=e447]:
+                      - link "音乐世界Cytus II" [ref=e449] [cursor=pointer]:
+                        - /url: https://wiki.biligame.com/cytus2/首页
+                        - img "音乐世界Cytus II" [ref=e450]
+                      - generic [ref=e451]: 音乐世界Cytus II
+            - generic [ref=e452]:
+              - generic [ref=e453]: WIKI公告
+              - generic [ref=e454]:
+                - generic [ref=e455]: 公告
+                - link "9月3日WIKI评论区维护公告" [ref=e457] [cursor=pointer]:
+                  - /url: /wiki/9%E6%9C%883%E6%97%A5WIKI%E8%AF%84%E8%AE%BA%E5%8C%BA%E7%BB%B4%E6%8A%A4%E5%85%AC%E5%91%8A
+              - generic [ref=e458]:
+                - generic [ref=e459]: 公告
+                - link "9月14日BWIKI卡顿情况说明" [ref=e461] [cursor=pointer]:
+                  - /url: /wiki/9%E6%9C%8814%E6%97%A5BWIKI%E5%8D%A1%E9%A1%BF%E6%83%85%E5%86%B5%E8%AF%B4%E6%98%8E
+              - generic [ref=e462]:
+                - generic [ref=e463]: 公告
+                - link "8月21日可视化编辑器下线公告" [ref=e465] [cursor=pointer]:
+                  - /url: /wiki/8%E6%9C%8821%E6%97%A5%E5%8F%AF%E8%A7%86%E5%8C%96%E7%BC%96%E8%BE%91%E5%99%A8%E4%B8%8B%E7%BA%BF%E5%85%AC%E5%91%8A
+              - generic [ref=e466]:
+                - generic [ref=e467]: 公告
+                - link "BWIKI卡顿报错情况说明" [ref=e469] [cursor=pointer]:
+                  - /url: /wiki/BWIKI%E5%8D%A1%E9%A1%BF%E6%8A%A5%E9%94%99%E6%83%85%E5%86%B5%E8%AF%B4%E6%98%8E
+              - generic [ref=e470]:
+                - generic [ref=e471]: 公告
+                - link "6月2日WIKI评论区维护公告" [ref=e473] [cursor=pointer]:
+                  - /url: /wiki/6%E6%9C%882%E6%97%A5WIKI%E8%AF%84%E8%AE%BA%E5%8C%BA%E7%BB%B4%E6%8A%A4%E5%85%AC%E5%91%8A
+              - generic [ref=e474]:
+                - text: WIKI申请通过列表
+                - link "更多 >":
+                  - /url: /wiki/WIKI%E7%94%B3%E8%AF%B7%E9%80%9A%E8%BF%87%E5%88%97%E8%A1%A8
+                  - generic [ref=e475] [cursor=pointer]: 更多 >
+              - generic [ref=e476]:
+                - generic [ref=e477]: 已开通WIKI
+                - generic [ref=e478]: 申请人
+                - generic [ref=e479]: 开通时间
+              - generic [ref=e480]:
+                - link "黎明门前的吹笛人WIKI" [ref=e483] [cursor=pointer]:
+                  - /url: https://wiki.biligame.com/pod
+                - link "亚衣琴" [ref=e486] [cursor=pointer]:
+                  - /url: https://space.bilibili.com/1284793979
+                - generic [ref=e487]: 2026/06/10
+              - generic [ref=e488]:
+                - link "像素生存者2WIKI" [ref=e491] [cursor=pointer]:
+                  - /url: https://wiki.biligame.com/pixelsurvivalgame2
+                - link "是海氵啊" [ref=e494] [cursor=pointer]:
+                  - /url: https://space.bilibili.com/495038454
+                - generic [ref=e495]: 2026/06/10
+              - generic [ref=e496]:
+                - link "罗马拓荒录WIKI" [ref=e499] [cursor=pointer]:
+                  - /url: https://wiki.biligame.com/luomatuohuanglu
+                - link "字符超出限制的血月" [ref=e502] [cursor=pointer]:
+                  - /url: https://space.bilibili.com/13990394
+                - generic [ref=e503]: 2026/06/09
+              - generic [ref=e504]:
+                - link "龙与麻雀WIKI" [ref=e507] [cursor=pointer]:
+                  - /url: https://wiki.biligame.com/dragonandmahjong
+                - link "龙与麻雀制作组" [ref=e510] [cursor=pointer]:
+                  - /url: https://space.bilibili.com/3706968489331332
+                - generic [ref=e511]: 2026/05/27
+              - generic [ref=e512]:
+                - link "山海奇旅WIKI" [ref=e515] [cursor=pointer]:
+                  - /url: https://wiki.biligame.com/shql
+                - link "漫威616档案馆" [ref=e518] [cursor=pointer]:
+                  - /url: https://space.bilibili.com/20922654
+                - generic [ref=e519]: 2026/05/22
+              - generic [ref=e520]:
+                - link "叛逆神魂WIKI" [ref=e523] [cursor=pointer]:
+                  - /url: https://wiki.biligame.com/godsoul
+                - link "一只淤酱_Official" [ref=e526] [cursor=pointer]:
+                  - /url: https://space.bilibili.com/442923595
+                - generic [ref=e527]: 2026/05/21
+              - generic [ref=e528]:
+                - link "工匠物语2WIKI" [ref=e531] [cursor=pointer]:
+                  - /url: https://wiki.biligame.com/smithstory2
+                - link "风落拾羽" [ref=e534] [cursor=pointer]:
+                  - /url: https://space.bilibili.com/14572833
+                - generic [ref=e535]: 2026/05/20
+              - generic [ref=e536]:
+                - link "弹头奇兵WIKI" [ref=e539] [cursor=pointer]:
+                  - /url: https://wiki.biligame.com/dantouqibing
+                - link "福禄寿喜财运势滚滚来" [ref=e542] [cursor=pointer]:
+                  - /url: https://space.bilibili.com/68011226
+                - generic [ref=e543]: 2026/05/18
+              - generic [ref=e544]:
+                - link "模拟江湖WIKI" [ref=e547] [cursor=pointer]:
+                  - /url: https://wiki.biligame.com/mnjh3121
+                - link "中庸即是最好" [ref=e550] [cursor=pointer]:
+                  - /url: https://space.bilibili.com/1457512797
+                - generic [ref=e551]: 2026/05/18
+              - generic [ref=e552]:
+                - link "梦幻魔法公主WIKI" [ref=e555] [cursor=pointer]:
+                  - /url: https://wiki.biligame.com/magicalprincess
+                - link "YahiroSarina" [ref=e558] [cursor=pointer]:
+                  - /url: https://space.bilibili.com/324707380
+                - generic [ref=e559]: 2026/05/06
+              - generic [ref=e560]:
+                - link "乱涂彩世界WIKI" [ref=e563] [cursor=pointer]:
+                  - /url: https://wiki.biligame.com/ltcsj
+                - link "十二进制的夕景9079" [ref=e566] [cursor=pointer]:
+                  - /url: https://space.bilibili.com/3546930661558825
+                - generic [ref=e567]: 2026/04/30
+              - generic [ref=e568]:
+                - link "降调WIKI" [ref=e571] [cursor=pointer]:
+                  - /url: https://wiki.biligame.com/fakeway
+                - link "博戏的桓发" [ref=e574] [cursor=pointer]:
+                  - /url: https://space.bilibili.com/31965118
+                - generic [ref=e575]: 2026/04/30
+          - generic:
+            - generic [ref=e577]:
+              - generic [ref=e578]: 建站必读
+              - generic [ref=e579]:
+                - generic [ref=e580]:
+                  - link "BWIKI平台技术规范初稿" [ref=e582] [cursor=pointer]:
+                    - /url: /wiki/BWIKI%E5%B9%B3%E5%8F%B0%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83%E5%88%9D%E7%A8%BF
+                  - generic [ref=e583]: ">"
+                - generic [ref=e584]:
+                  - link "用户组权限说明" [ref=e586] [cursor=pointer]:
+                    - /url: /wiki/%E7%94%A8%E6%88%B7%E7%BB%84%E6%9D%83%E9%99%90%E8%AF%B4%E6%98%8E
+                  - generic [ref=e587]: ">"
+                - generic [ref=e588]:
+                  - link "评论区管理教程" [ref=e590] [cursor=pointer]:
+                    - /url: /wiki/%E5%B8%AE%E5%8A%A9:%E8%AF%84%E8%AE%BA%E5%8C%BA%E7%AE%A1%E7%90%86%E6%95%99%E7%A8%8B
+                  - generic [ref=e591]: ">"
+                - generic [ref=e592]:
+                  - link "BWIKI页面设计手册" [ref=e594] [cursor=pointer]:
+                    - /url: /wiki/BWiki%E6%94%AF%E6%8C%81%E6%89%8B%E5%86%8C
+                  - generic [ref=e595]: ">"
+                - generic [ref=e596]:
+                  - link "BWIKI状态转换标准" [ref=e598] [cursor=pointer]:
+                    - /url: /wiki/BWIKI_WIKI%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2%E6%A0%87%E5%87%86
+                  - generic [ref=e599]: ">"
+              - img "建站必读.png" [ref=e604]
+            - generic [ref=e606]:
+              - generic [ref=e607]: 玩家教程
+              - generic [ref=e608]:
+                - generic [ref=e609]:
+                  - link "马老师WIKI编辑小课堂" [ref=e611] [cursor=pointer]:
+                    - /url: /wiki/%E9%A9%AC%E8%80%81%E5%B8%88%E5%B0%8F%E8%AF%BE%E5%A0%82
+                  - generic [ref=e612]: ">"
+                - generic [ref=e613]:
+                  - link "Excel一键转BWIKI表格工具" [ref=e615] [cursor=pointer]:
+                    - /url: /wiki/Excel%E4%B8%80%E9%94%AE%E8%BD%ACBWIKI%E8%A1%A8%E6%A0%BC%E5%B7%A5%E5%85%B7
+                  - generic [ref=e616]: ">"
+                - generic [ref=e617]:
+                  - link "BWIKI批量编辑器" [ref=e619] [cursor=pointer]:
+                    - /url: https://wiki.biligame.com/tools/Be
+                  - generic [ref=e620]: ">"
+                - generic [ref=e621]:
+                  - link "进度条模板" [ref=e623] [cursor=pointer]:
+                    - /url: https://wiki.biligame.com/wiki/%E6%A8%A1%E6%9D%BF:%E8%BF%9B%E5%BA%A6%E6%9D%A1
+                  - generic [ref=e624]: ">"
+                - generic [ref=e625]:
+                  - link "BWIKI图文排版进阶心得" [ref=e627] [cursor=pointer]:
+                    - /url: https://wiki.biligame.com/blhx/BWIKI%E5%9B%BE%E6%96%87%E6%8E%92%E7%89%88%E8%BF%9B%E9%98%B6%E5%BF%83%E5%BE%97
+                  - generic [ref=e628]: ">"
+              - img "玩家教程.png" [ref=e633]
+            - generic [ref=e635]:
+              - generic [ref=e636]: 快速入口
+              - generic [ref=e637]:
+                - generic [ref=e638]:
+                  - link "WIKI社区规则" [ref=e640] [cursor=pointer]:
+                    - /url: https://wiki.biligame.com/wiki/WIKI%E7%A4%BE%E5%8C%BA%E8%A7%84%E5%88%99
+                  - generic [ref=e641]: ">"
+                - generic [ref=e642]:
+                  - link "BWIKI作者/攻略组/编辑组管理规则" [ref=e644] [cursor=pointer]:
+                    - /url: https://wiki.biligame.com/wiki/BWIKI%E4%BD%9C%E8%80%85/%E6%94%BB%E7%95%A5%E7%BB%84/%E7%BC%96%E8%BE%91%E7%BB%84%E7%AE%A1%E7%90%86%E8%A7%84%E5%88%99
+                  - generic [ref=e645]: ">"
+                - generic [ref=e646]:
+                  - link "WIKI反馈" [ref=e648] [cursor=pointer]:
+                    - /url: https://message.bilibili.com/?spm_id_from%3D333.999.0.0#/whisper/mid394339
+                  - generic [ref=e649]: ">"
+              - img "编辑帮助.png" [ref=e654]
+          - generic [ref=e655]:
+            - text: 入驻攻略组
+            - generic [ref=e656]: 排名不分先后
+          - generic [ref=e658]:
+            - generic [ref=e659]:
+              - link "碧蓝海事局.png" [ref=e660] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/blhx/碧蓝海事局
+                - img "碧蓝海事局.png" [ref=e661]
+              - link "碧蓝海事局" [ref=e662] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/blhx/碧蓝海事局
+            - generic [ref=e663]:
+              - link "旅行者酒馆.png" [ref=e664] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/ys/旅行者酒馆
+                - img "旅行者酒馆.png" [ref=e665]
+              - link "旅行者酒馆" [ref=e666] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/ys/旅行者酒馆
+            - generic [ref=e667]:
+              - link "萌新攻略组.png" [ref=e668] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/borderlands3/%E8%90%8C%E6%96%B0%E6%94%BB%E7%95%A5%E7%BB%84
+                - img "萌新攻略组.png" [ref=e669]
+              - link "萌新攻略组" [ref=e670] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/borderlands3/%E8%90%8C%E6%96%B0%E6%94%BB%E7%95%A5%E7%BB%84
+            - generic [ref=e671]:
+              - link "誓灵档案室.png" [ref=e672] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/fzzl/誓灵档案室
+                - img "誓灵档案室.png" [ref=e673]
+              - link "誓灵档案室" [ref=e674] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/fzzl/誓灵档案室
+            - generic [ref=e675]:
+              - link "史莱姆养殖基地.png" [ref=e676] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/myrzx/WIKI成员组
+                - img "史莱姆养殖基地.png" [ref=e677]
+              - link "史莱姆养殖基地" [ref=e678] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/myrzx/WIKI成员组
+            - generic [ref=e679]:
+              - link "苍蓝研究议会.png" [ref=e680] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/clsy/苍蓝研究议会
+                - img "苍蓝研究议会.png" [ref=e681]
+              - link "苍蓝研究议会" [ref=e682] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/clsy/苍蓝研究议会
+            - generic [ref=e683]:
+              - link "迷蝶战略研究所.png" [ref=e684] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/sssj/迷蝶战略研究所
+                - img "迷蝶战略研究所.png" [ref=e685]
+              - link "迷蝶战略研究所" [ref=e686] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/sssj/迷蝶战略研究所
+            - generic [ref=e687]:
+              - link "十字军攻略组.png" [ref=e688] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/cq/CQWIKI延续计划
+                - img "十字军攻略组.png" [ref=e689]
+              - link "十字军攻略组" [ref=e690] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/cq/CQWIKI延续计划
+            - generic [ref=e691]:
+              - link "神谕司攻略组.png" [ref=e692] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/elf/神谕司攻略组
+                - img "神谕司攻略组.png" [ref=e693]
+              - link "神谕司攻略组" [ref=e694] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/elf/神谕司攻略组
+            - generic [ref=e695]:
+              - link "远征小屋.png" [ref=e696] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/afk/远征小屋
+                - img "远征小屋.png" [ref=e697]
+              - link "远征小屋" [ref=e698] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/afk/远征小屋
+            - generic [ref=e699]:
+              - link "NSG同好社.png" [ref=e700] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/klbq/卡丘作战室
+                - img "NSG同好社.png" [ref=e701]
+              - link "NSG同好社" [ref=e702] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/klbq/卡丘作战室
+            - generic [ref=e703]:
+              - link "新东方攻略组.png" [ref=e704] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/szqy/WIKI成员组
+                - img "新东方攻略组.png" [ref=e705]
+              - link "新东方攻略组" [ref=e706] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/szqy/WIKI成员组
+            - generic [ref=e707]:
+              - link "办事处X攻略组.png" [ref=e708] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/cxbs/办事处X攻略组
+                - img "办事处X攻略组.png" [ref=e709]
+              - link "办事处X攻略组" [ref=e710] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/cxbs/办事处X攻略组
+            - generic [ref=e711]:
+              - link "人偶解析中心.png" [ref=e712] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/yydtenn/WIKI成员组
+                - img "人偶解析中心.png" [ref=e713]
+              - link "人偶解析中心" [ref=e714] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/yydtenn/WIKI成员组
+            - generic [ref=e715]:
+              - link "Fraxinus观测站.png" [ref=e716] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/datealive/WIKI成员
+                - img "Fraxinus观测站.png" [ref=e717]
+              - link "Fraxinus观测站" [ref=e718] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/datealive/WIKI成员
+            - generic [ref=e719]:
+              - link "XxM.风媒攻略组.png" [ref=e720] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/xxmcjh/首页
+                - img "XxM.风媒攻略组.png" [ref=e721]
+              - link "xxM.风媒攻略组" [ref=e722] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/xxmcjh/首页
+            - generic [ref=e723]:
+              - link "H&H.E.D.重装建设部.png" [ref=e724] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/finalgear/H&H.E.D.重装建设部
+                - img "H&H.E.D.重装建设部.png" [ref=e725]
+              - link "H&H.E.D.重装建设部" [ref=e726] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/finalgear/H&H.E.D.重装建设部
+            - generic [ref=e727]:
+              - link "逃脱者2百科组.png" [ref=e728] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/theescapists2/WIKI成员
+                - img "逃脱者2百科组.png" [ref=e729]
+              - link "逃脱者2百科组" [ref=e730] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/theescapists2/WIKI成员
+            - generic [ref=e731]:
+              - link "妃十三学生会攻略组.png" [ref=e732] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/alterna/妃十三学生会攻略组
+                - img "妃十三学生会攻略组.png" [ref=e733]
+              - link "妃十三学生会攻略组" [ref=e734] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/alterna/妃十三学生会攻略组
+            - generic [ref=e735]:
+              - link "某摸鱼的禁书目录.png" [ref=e736] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/index/某摸鱼的禁书目录
+                - img "某摸鱼的禁书目录.png" [ref=e737]
+              - link "某摸鱼的禁书目录" [ref=e738] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/index/某摸鱼的禁书目录
+            - generic [ref=e739]:
+              - link "灾兽对抗管理局.png" [ref=e740] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/hjzx/灾兽对抗管理局
+                - img "灾兽对抗管理局.png" [ref=e741]
+              - link "灾兽对抗管理局" [ref=e742] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/hjzx/灾兽对抗管理局
+            - generic [ref=e743]:
+              - link "公主连结WIKI制作委员会.png" [ref=e744] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/pcr/公主连结WIKI制作委员会
+                - img "公主连结WIKI制作委员会.png" [ref=e745]
+              - link "公主连结WIKI制作委员会" [ref=e746] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/pcr/公主连结WIKI制作委员会
+            - generic [ref=e747]:
+              - link "天赐良螈攻略组.png" [ref=e748] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/shjh/WIKI介绍
+                - img "天赐良螈攻略组.png" [ref=e749]
+              - link "天赐良螈攻略组" [ref=e750] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/shjh/WIKI介绍
+            - generic [ref=e751]:
+              - link "蔷薇骑士团.png" [ref=e752] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/burstwitch/首页
+                - img "蔷薇骑士团.png" [ref=e753]
+              - link "蔷薇骑士团" [ref=e754] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/burstwitch/首页
+            - generic [ref=e755]:
+              - link "动森搬砖部.png" [ref=e756] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/dongsen/动森搬砖部
+                - img "动森搬砖部.png" [ref=e757]
+              - link "动森搬砖部" [ref=e758] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/dongsen/动森搬砖部
+            - generic [ref=e759]:
+              - link "P.E.T.S.教务处.png" [ref=e760] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/nyhx/P.E.T.S.教务处
+                - img "P.E.T.S.教务处.png" [ref=e761]
+              - link "P.E.T.S.教务处" [ref=e762] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/nyhx/P.E.T.S.教务处
+            - generic [ref=e763]:
+              - link "无畏源能编辑组.png" [ref=e764] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/valorant/无畏源能编辑组
+                - img "无畏源能编辑组.png" [ref=e765]
+              - link "无畏源能编辑组" [ref=e766] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/valorant/无畏源能编辑组
+            - generic [ref=e767]:
+              - link "最强蜗牛WIKI维护组招募.png" [ref=e768] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/zqwn/最强蜗牛WIKI维护组招募
+                - img "最强蜗牛WIKI维护组招募.png" [ref=e769]
+              - link "最强蜗牛WIKI维护组招募" [ref=e770] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/zqwn/最强蜗牛WIKI维护组招募
+            - generic [ref=e771]:
+              - link "万灵编年史情报站.png" [ref=e772] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/wlqy/%E4%B8%87%E7%81%B5%E5%90%AF%E6%BA%90%E6%94%BB%E7%95%A5%E7%BB%84
+                - img "万灵编年史情报站.png" [ref=e773]
+              - link "万灵编年史情报站" [ref=e774] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/wlqy/%E4%B8%87%E7%81%B5%E5%90%AF%E6%BA%90%E6%94%BB%E7%95%A5%E7%BB%84
+            - generic [ref=e775]:
+              - link "寰宇重工.png" [ref=e776] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/zspms/%E5%AF%B0%E5%AE%87%E9%87%8D%E5%B7%A5%E4%BB%8B%E7%BB%8D
+                - img "寰宇重工.png" [ref=e777]
+              - link "寰宇重工" [ref=e778] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/zspms/%E5%AF%B0%E5%AE%87%E9%87%8D%E5%B7%A5%E4%BB%8B%E7%BB%8D
+            - generic [ref=e779]:
+              - link "Nitrome吧攻略组.png" [ref=e780] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/nitrome/Nitrome:%E5%85%B3%E4%BA%8E
+                - img "Nitrome吧攻略组.png" [ref=e781]
+              - link "Nitrome吧攻略组" [ref=e782] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/nitrome/Nitrome:%E5%85%B3%E4%BA%8E
+            - generic [ref=e783]:
+              - link "AEGIS茶会.png" [ref=e784] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/aga/Wiki%E5%85%AC%E5%91%8A
+                - img "AEGIS茶会.png" [ref=e785]
+              - link "AEGIS茶会" [ref=e786] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/aga/Wiki%E5%85%AC%E5%91%8A
+            - generic [ref=e787]:
+              - link "索菲亚市政厅.png" [ref=e788] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/toramonline/%E7%B4%A2%E8%8F%B2%E4%BA%9A%E5%B8%82%E6%94%BF%E5%8E%85
+                - img "索菲亚市政厅.png" [ref=e789]
+              - link "索菲亚市政厅" [ref=e790] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/toramonline/%E7%B4%A2%E8%8F%B2%E4%BA%9A%E5%B8%82%E6%94%BF%E5%8E%85
+            - generic [ref=e791]:
+              - link "MapleStory支援攻略组.png" [ref=e792] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/maplestory/MapleStory%E6%94%AF%E6%8F%B4%E6%94%BB%E7%95%A5%E7%BB%84
+                - img "MapleStory支援攻略组.png" [ref=e793]
+              - link "MapleStory支援攻略组" [ref=e794] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/maplestory/MapleStory%E6%94%AF%E6%8F%B4%E6%94%BB%E7%95%A5%E7%BB%84
+            - generic [ref=e795]:
+              - link "盗心社.png" [ref=e796] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/persona/%E6%94%BB%E7%95%A5%E7%BB%84%E6%8B%9B%E5%8B%9F%E5%85%AC%E5%91%8A
+                - img "盗心社.png" [ref=e797]
+              - link "盗心社" [ref=e798] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/persona/%E6%94%BB%E7%95%A5%E7%BB%84%E6%8B%9B%E5%8B%9F%E5%85%AC%E5%91%8A
+            - generic [ref=e799]:
+              - link "暗影阁.png" [ref=e800] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/yzr3/%E6%9A%97%E5%BD%B1%E9%98%81
+                - img "暗影阁.png" [ref=e801]
+              - link "暗影阁" [ref=e802] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/yzr3/%E6%9A%97%E5%BD%B1%E9%98%81
+            - generic [ref=e803]:
+              - link "终末咸鱼突击队.png" [ref=e804] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/zmzx/首页
+                - img "终末咸鱼突击队.png" [ref=e805]
+              - link "终末咸鱼突击队" [ref=e806] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/zmzx/首页
+            - generic [ref=e807]:
+              - link "归藏十二楼.png" [ref=e808] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/hsqsl/幻书攻略组：归藏十二楼
+                - img "归藏十二楼.png" [ref=e809]
+              - link "归藏十二楼" [ref=e810] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/hsqsl/幻书攻略组：归藏十二楼
+            - generic [ref=e811]:
+              - link "几何冲刺攻略组.png" [ref=e812] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/gd/几何冲刺:关于
+                - img "几何冲刺攻略组.png" [ref=e813]
+              - link "几何冲刺攻略组" [ref=e814] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/gd/几何冲刺:关于
+            - generic [ref=e815]:
+              - link "安东星兵科所.png" [ref=e816] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/warthunder/安东星兵科所
+                - img "安东星兵科所.png" [ref=e817]
+              - link "安东星兵科所" [ref=e818] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/warthunder/安东星兵科所
+            - generic [ref=e819]:
+              - link "桃源乡攻略组.png" [ref=e820] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/jhyy/桃源乡攻略组
+                - img "桃源乡攻略组.png" [ref=e821]
+              - link "桃源乡攻略组" [ref=e822] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/jhyy/桃源乡攻略组
+            - generic [ref=e823]:
+              - link "梦璃数据组.png" [ref=e824] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/allb/首页
+                - img "梦璃数据组.png" [ref=e825]
+              - link "梦璃数据组" [ref=e826] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/allb/首页
+            - generic [ref=e827]:
+              - link "鄂木斯克科学部.png" [ref=e828] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/redalert3/鄂木斯克科学部
+                - img "鄂木斯克科学部.png" [ref=e829]
+              - link "鄂木斯克科学部" [ref=e830] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/redalert3/鄂木斯克科学部
+            - generic [ref=e831]:
+              - link "特雷森学园理事会.png" [ref=e832] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/umamusume/特雷森学园理事会
+                - img "特雷森学园理事会.png" [ref=e833]
+              - link "特雷森学园理事会" [ref=e834] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/umamusume/特雷森学园理事会
+            - generic [ref=e835]:
+              - link "宇宙精英团.png" [ref=e836] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/seerwar/%E5%AE%87%E5%AE%99%E7%B2%BE%E8%8B%B1%E5%9B%A2
+                - img "宇宙精英团.png" [ref=e837]
+              - link "宇宙精英团" [ref=e838] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/seerwar/%E5%AE%87%E5%AE%99%E7%B2%BE%E8%8B%B1%E5%9B%A2
+            - generic [ref=e839]:
+              - link "轨迹系列-Café制作组.png" [ref=e840] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/kiseki/轨迹系列_-_Café
+                - img "轨迹系列-Café制作组.png" [ref=e841]
+              - link "轨迹系列-Café制作组" [ref=e842] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/kiseki/轨迹系列_-_Café
+            - generic [ref=e843]:
+              - link "AG研究所.png" [ref=e844] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/ag/AG研究所
+                - img "AG研究所.png" [ref=e845]
+              - link "AG研究所" [ref=e846] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/ag/AG研究所
+            - generic [ref=e847]:
+              - link "坎特伯雷攻略组.png" [ref=e848] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/gt/守护者攻略组
+                - img "坎特伯雷攻略组.png" [ref=e849]
+              - link "坎特伯雷攻略组" [ref=e850] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/gt/守护者攻略组
+            - generic [ref=e851]:
+              - link "白鲸攻略组.png" [ref=e852] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/arknights/加入我们
+                - img "白鲸攻略组.png" [ref=e853]
+              - link "白鲸攻略组" [ref=e854] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/arknights/加入我们
+            - generic [ref=e855]:
+              - link "露希姆的炼金厨坊.png" [ref=e856] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/nofland/露希姆的炼金厨坊
+                - img "露希姆的炼金厨坊.png" [ref=e857]
+              - link "露希姆的炼金厨坊" [ref=e858] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/nofland/露希姆的炼金厨坊
+            - generic [ref=e859]:
+              - link "夜鸦大食堂.png" [ref=e860] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/twst/首页
+                - img "夜鸦大食堂.png" [ref=e861]
+              - link "夜鸦大食堂" [ref=e862] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/twst/首页
+            - generic [ref=e863]:
+              - link "胡萝卜攻略组.png" [ref=e864] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/mohun/首页
+                - img "胡萝卜攻略组.png" [ref=e865]
+              - link "胡萝卜攻略组" [ref=e866] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/mohun/首页
+            - generic [ref=e867]:
+              - link "守望监测站.png" [ref=e868] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/ow/守望监测站
+                - img "守望监测站.png" [ref=e869]
+              - link "守望监测站" [ref=e870] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/ow/守望监测站
+            - generic [ref=e871]:
+              - link "盘古开天攻略组.png" [ref=e872] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/sgyly/加入我们
+                - img "盘古开天攻略组.png" [ref=e873]
+              - link "盘古开天攻略组" [ref=e874] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/sgyly/加入我们
+            - generic [ref=e875]:
+              - link "寻短见攻略组.png" [ref=e876] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/mcs/寻短见攻略组
+                - img "寻短见攻略组.png" [ref=e877]
+              - link "寻短见攻略组" [ref=e878] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/mcs/寻短见攻略组
+            - generic [ref=e879]:
+              - link "管理者协会.png" [ref=e880] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/dhmmr/—Bwiki现役成员
+                - img "管理者协会.png" [ref=e881]
+              - link "管理者协会" [ref=e882] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/dhmmr/—Bwiki现役成员
+            - generic [ref=e883]:
+              - link "鱡须记.png" [ref=e884] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/spld3/%E9%B1%A1%E9%A1%BB%E8%AE%B0
+                - img "鱡须记.png" [ref=e885]
+              - link "鱡须记" [ref=e886] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/spld3/%E9%B1%A1%E9%A1%BB%E8%AE%B0
+            - generic [ref=e887]:
+              - link "轮回攻略组.png" [ref=e888] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/re0/轮回攻略组
+                - img "轮回攻略组.png" [ref=e889]
+              - link "轮回攻略组" [ref=e890] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/re0/轮回攻略组
+            - generic [ref=e891]:
+              - link "吴萨敏星ROCK天团.png" [ref=e892] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/imascg/吴萨敏星ROCK天团
+                - img "吴萨敏星ROCK天团.png" [ref=e893]
+              - link "吴萨敏星ROCK天团" [ref=e894] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/imascg/吴萨敏星ROCK天团
+            - generic [ref=e895]:
+              - link "GyrFalcon参谋室.png" [ref=e896] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/falconbms/GyrFalcon参谋室
+                - img "GyrFalcon参谋室.png" [ref=e897]
+              - link "GyrFalcon参谋室" [ref=e898] [cursor=pointer]:
+                - /url: https://wiki.biligame.com/falconbms/GyrFalcon参谋室
+          - paragraph [ref=e899]
+    - generic [ref=e900]:
+      - link "BWIKI首页" [ref=e901] [cursor=pointer]:
+        - /url: https://wiki.biligame.com/wiki/%E9%A6%96%E9%A1%B5
+        - img
+        - generic [ref=e902]: BWIKI首页
+      - link "创建WIKI" [ref=e903] [cursor=pointer]:
+        - /url: "https://wiki.biligame.com/wiki/WIKI%E7%94%B3%E8%AF%B7%E9%A1%B5%E9%9D%A2 "
+        - img
+        - generic [ref=e904]: 创建WIKI
+      - link "BWIKI君" [ref=e905] [cursor=pointer]:
+        - /url: https://space.bilibili.com/477233102
+        - img
+        - generic [ref=e906]: BWIKI君
+      - link "分享" [ref=e907] [cursor=pointer]:
+        - /url: javascript:void(false)
+        - img
+        - generic: 分享
+      - link "BWIKI客服" [ref=e908] [cursor=pointer]:
+        - /url: https://message.bilibili.com/?spm_id_from=333.999.0.0#/whisper/mid477233102
+        - img [ref=e909]
+        - generic [ref=e910]: BWIKI客服
+  - generic [ref=e912]:
+    - generic [ref=e913]:
+      - link [ref=e914] [cursor=pointer]:
+        - /url: //www.bilibili.com
+      - img [ref=e917]
+    - generic [ref=e918]:
+      - paragraph [ref=e919]:
+        - link "游戏中心" [ref=e920] [cursor=pointer]:
+          - /url: //www.biligame.com/
+        - text: "|"
+        - link "帐号安全" [ref=e921] [cursor=pointer]:
+          - /url: https://account.bilibili.com/
+        - text: "|"
+        - link "找回密码" [ref=e922] [cursor=pointer]:
+          - /url: https://account.bilibili.com/resetpwd
+        - text: "|"
+        - link "家长监控" [ref=e923] [cursor=pointer]:
+          - /url: //jiazhang.biligame.com/
+        - text: "|"
+        - link "用户协议" [ref=e924] [cursor=pointer]:
+          - /url: //yhxy.biligame.com/
+      - paragraph
+      - paragraph [ref=e925]: 抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活
+      - paragraph [ref=e926]: 芜湖享游网络技术有限公司 | COPYRIGHT © 2009-2026 BILIBILI ALL RIGHTS RESERVED.
+      - paragraph [ref=e927]: 皖网文[2023]1840-026号 | 皖B2-20180007-2 | 皖ICP证：皖B2-20180007
+      - paragraph [ref=e928]:
+        - link "沪公网安备 31011002002714 号" [ref=e929] [cursor=pointer]:
+          - /url: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011002002714
+          - img [ref=e930]
+          - text: 沪公网安备 31011002002714 号

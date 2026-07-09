@@ -1,5 +1,182 @@
 [
   {
+    "id": "launch-day-guide",
+    "title": "《遗忘之海》PC 端 7 月 9 日公测完整指南：开服时间、平台互通、首月福利与下载入口",
+    "titleEn": "Sea of Remnants PC Launch Guide: July 9 Release, Cross-Platform, Launch Month Rewards",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "遗忘之海 PC 端 7 月 9 日公测正式上线，移动端 7 月内开放。本文整理 6/26 前瞻直播公布的全部公测情报：开服时间、三端互通、首月 100 抽资源、自选黑券船员、PC 配置要求、预下载入口、新手首日路线、常见问题 FAQ。新人入坑必读，也适合今天开服直接照着做。",
+    "summaryEn": "Complete guide to Sea of Remnants' July 9 PC launch: cross-platform support, 100 pulls in launch month, free Black Ticket crew selection, PC specs, pre-load info, and beginner FAQ.",
+    "tags": [
+      "公测",
+      "7月9日",
+      "前瞻直播",
+      "新手",
+      "FAQ",
+      "PC",
+      "互通",
+      "Launch",
+      "Cross-platform"
+    ],
+    "content": "## 今天先看这几件事\n\n《遗忘之海》今天是 **2026 年 7 月 9 日 PC 端公测**，如果你想第一时间吃到搜索流量，正文里最好先把下面几件事放前面：\n\n- **平台先说清**：PC 端今天先开，移动端是 7 月内上线，不要写成全平台同日开。\n- **福利先落地**：首月 100 抽资源、自选黑券船员、七日签到、预约礼要单独列出来。\n- **玩法先降噪**：这不是纯抽卡手游，核心是海洋探索、回合制战斗、船员养成和岛屿经营。\n- **用户最关心的 FAQ 先答**：是否互通、是否删档、预下载什么时候开、6 选 1 选谁。\n- **选择建议先给结论**：想看风格和探索，先玩《遗忘之海》；想看生存对抗，可以先看别的硬核作品。\n\n## 公测时间表：7 月 9 日 PC 先行，移动端 7 月内\n\n2026 年 6 月 26 日官方举办了公测前瞻直播，正式确认《遗忘之海》公测时间表：\n\n| 里程碑 | 时间 | 平台 |\n|---|---|---|\n| **PC 端正式公测** | **2026.07.09** | Steam / 官方启动器 |\n| 移动端公测 | 2026 年 7 月内（具体日期未点死） | iOS / Android |\n| 隐秘海海区解锁 | 2026.07 月底 | 全平台 |\n| 第五人格联动上线 | PC 公测第三周 | 全平台 |\n\n**开服具体钟点（如 10:00 / 11:00）官方暂未明确公布**，建议关注[官网 /news/update/ 频道](https://sea.163.com/news/update/)公告补充。\n\n来源：[官方前瞻情报稿](https://sea.163.com/news/official/20260625/42726_1305601.html)\n\n## 平台与跨端互通：PC / 安卓 / iOS 三端同步\n\n这是本作核心卖点之一，**PC、安卓、iOS 三端数据完全互通**。同一个账号可以在 PC 上深度探索、在手机上日常收菜，进度同步无缝衔接。\n\n| 平台组合 | 互通状态 |\n|---------|---------|\n| PC / Android / iOS | ✅ 完全互通（6/6 公告 + 6/26 直播再次确认） |\n| PS5 | ⚠️ 公测首发不含 PS5，未来版本规划中 |\n| Xbox Series X/S | ⚠️ 暂未官宣节点 |\n\n**Steam 商店页已上线**：[Sea of Remnants on Steam](https://store.steampowered.com/app/3633680/_/?l=schinese)，发行日显示为 2026 年。\n\n## 首月福利：100 抽资源 + 自选黑券船员\n\n公测首月累计可获得 **100 抽招募资源（蔷薇石）**，加上预约礼和叠加活动，零氪玩家也能在开服两周内稳定获取 1-2 名黑券级船员。\n\n### 预约专属福利（公测后完成任务领取）\n\n- **自选黑券船员 ×1**（限时 UP 池的茉莉 / 蓝波乐队黑格 / 其他）\n- **灵感品质时装 ×2 套**\n- 专属头像 + 头像框\n- 丰厚蔷薇石\n\n### 叠加活动\n\n- **仓鼠神见面礼**：开服签到\n- **老船长的七日宝藏**：连续 7 天登录\n- **艾丝的航行好礼**：新手引导任务\n\n### 预约礼（来自 6/6 公告）\n\n- 「来一杯」银币 ×20\n- 紫券船员 6 选 1\n\n**预约人数里程碑奖励阶梯明细官方暂未公开**，关注官方社媒后续公告。\n\n## 公测首月船员阵容（20 余名）\n\n公测首月将上线 **6 大属性、20 余名船员**，分属 5 大船队。其中 18 名是三测破晓号测试已公开角色，剩余是新加入的「妄想剧团」船队成员。\n\n### 重点船员\n\n| 角色 | 阵营 | 定位 / 获取方式 |\n|------|------|---------------|\n| **茉莉（Molly）** | 蓝波乐队 | **限时 UP 池船员**（公测首发 UP） |\n| **黑格（Heige）** | 蓝波乐队 | **赛季船员**（赛季奖励线） |\n| **盖尔（Gail）** | 蓝波乐队 | 后续上线（主唱） |\n| **爱德华（Edward）** | 流浪号 | 后续上线（船长） |\n| **神秘联动船员 ×1** | （未公开） | 公测首月陆续上线 |\n\n### 5 大船队（公测版本）\n\n| 船队 | 备注 |\n|------|------|\n| 蓝波乐队 | 主唱盖尔后续上线 |\n| 破晓者 | — |\n| 黑男爵 | — |\n| **妄想剧团** | **公测新公开船队**（替换/扩充原漂流瓶号位） |\n| 流浪号 | 船长爱德华后续上线 |\n\n**重大变化：** 三测期间的「漂流瓶号」**未出现在公测船队名单**，取而代之的是新「妄想剧团」船队。旅人/艾丝/懦夫等原漂流瓶号船员的最终归属，需等公测实机确认。\n\n## 公测首日路线建议\n\n### 上午 10:00 开服（预估时间）\n\n1. 完成新手引导，跟随主线到奥托皮亚（主城）\n2. 领取全部预约福利 + 七日宝藏首日\n3. 在 6 位黑券船员中**免费自选一位**（推荐：王女 / 小斧头 / 焦面上校 三选一，根据定位）\n4. 完成首抽，看是否需要重开\n\n### 下午\n\n5. 主线推进到「记忆重逢」机制解锁\n6. 完成首次「遗忘之海」打捞，免费获取黑券船员或往日之影（50% 概率）\n7. 探索白沙海、渡桥海，开启 Roguelite 出海循环\n\n### 晚上\n\n8. 完成 7 日宝藏第 1 天任务\n9. 检查 [节奏榜](/zh/sea/tier-list) 调整阵容\n10. 解锁奥托皮亚首个主题结局（与暗巷「地下之王」关联）\n\n## PC 配置要求\n\n详细配置表见[《遗忘之海》配置要求大全](/zh/sea/guides/system-requirements-guide)。简要：\n\n| 画质 | CPU | 显卡 | 内存 |\n|------|-----|------|------|\n| 最低（720p/30fps） | i7-9700 / R5 3600 | GTX 1060 6GB | 16 GB |\n| 推荐（1080p/60fps） | i7-12700 / R7 5800X | RTX 3070Ti | 32 GB |\n| 4K 极致 + 光追 | i9-13900K / R9 7900X | RTX 4090 | 32-64 GB |\n\nPC 支持 NVIDIA RTX 光追、DLSS 4 多帧生成、路径追踪。\n\n## 下载入口\n\n### PC 端\n\n- **Steam**：[Sea of Remnants 商店页](https://store.steampowered.com/app/3633680/_/?l=schinese)（7/9 上线）\n- **官方启动器**：[sea.163.com](https://sea.163.com) 首页下载\n\n### 移动端\n\n- **iOS**：App Store（7 月内上线，搜索「遗忘之海」）\n- **Android**：官网 / TapTap / 各大应用商店（7 月内）\n\n**预下载开启时间官方暂未公布**，预计开服前 24-48 小时开放。\n\n## 公测版本六大新系统速览\n\n直播公布了 6 项公测版本全新内容：\n\n1. **奥托皮亚「多结局」**：玩家行为累积解锁结局，首个主题结局与暗巷「地下之王」关联，已解锁的结局可自由切换\n2. **三大海区**：白沙海 + 渡桥海首发；**隐秘海 7 月底解锁**（含新霸主「猩红女爵」）\n3. **记忆重逢优化**：开局 6 位黑券船员免费自选一位；每周免费打捞黑券船员或往日之影\n4. **贸易场自由交易**：通过探索获取「好金砖」货币，自主交易高品质外观/资源\n5. **个性装扮扩展**：小斧头时装「妄想羽翼」、流浪烟花号专属船皮\n6. **云捏脸前置玩法**：公测前无需下载，上传照片一键生成木偶形象\n\n更多机制详解见：\n\n- [付费模式详解](/zh/sea/guides/payment-model-guide)\n- [贸易场与好金砖系统详解](/zh/sea/guides/trade-market-guide)\n- [品类教育：到底是个什么游戏](/zh/sea/guides/what-is-forgotten-sea)\n\n## 7 月 9 日 vs 同期竞品\n\n公测首周撞期严重，主要竞品：\n\n| 游戏 | 上线/版本 | 与遗忘之海公测时间差 |\n|------|---------|------------------|\n| 原神「月之八」版本 | 2026.07.01 | 遗忘之海公测前 8 天 |\n| 绝区零 3.0 | 同期运行 | — |\n| 崩坏：星穹铁道 4.3 | 同期运行 | — |\n\n**给玩家的建议：** 忘记「二选一」叙事，遗忘之海和原神不是同品类——本作核心是回合制 CRPG + Roguelite 探索，对标的是《博德之门 3》《刺客信条：黑旗》《盗贼之海》，不是 ARPG 抽卡手游。可以同时玩。\n\n## 公测首月推荐阵容\n\n### 漂流瓶号开局队（待公测确认阵营归属）\n\n- 旅人（主攻，SS） + 艾丝（副攻） + 懦夫（生存）\n\n### 黑男爵爆发队\n\n- 小斧头（爆发） + 钟表匠（辅助） + 旅人（追击）\n\n### 蓝波乐队 UP 队（公测首发）\n\n- 茉莉（限时 UP，治疗） + 黑格（赛季船员，输出） + 盖尔（后续上线，辅助）\n\n更多阵容组合见[船员节奏榜](/zh/sea/tier-list) 和各[角色详情页](/zh/sea/characters)。\n\n## 新人 FAQ\n\n更多问题见[新手入门完全指南](/zh/sea/guides/beginner-guide) 和[品类教育页](/zh/sea/guides/what-is-forgotten-sea)。",
+    "contentEn": "## Launch Day Plan\n\nSea of Remnants PC open beta is planned for July 9, 2026. Preload and pre-character creation open on July 6 at 10:00.\n\n| Step | Goal |\n|---|---|\n| Before launch | Preload, create character, confirm account/server |\n| First login | Claim mail, reservation rewards, and login rewards |\n| First session | Push story to unlock Orbtopia, Recruitment, and dailies |\n| Day-one close | Clear daily Horn attempts and plan your first team |\n\nDo not spend every pull before checking the first Memory Reunion 6-choice selector and week-one testing.",
+    "faq": [
+      {
+        "question": "When does Sea of Remnants launch on PC?",
+        "questionZh": "遗忘之海 PC 端什么时候公测？",
+        "answer": "PC version officially launches on July 9, 2026, on Steam and the official launcher. Mobile (iOS/Android) launches sometime in July 2026, exact date not yet announced.",
+        "answerZh": "PC 端 2026 年 7 月 9 日正式公测，登陆 Steam 和官方启动器。移动端（iOS/Android）在 7 月内上线，具体日期官方尚未明确。"
+      },
+      {
+        "question": "Is Sea of Remnants cross-platform? Can PC and mobile play together?",
+        "questionZh": "遗忘之海 PC 和手机能一起玩吗？跨平台数据互通吗？",
+        "answer": "Yes. PC, Android, and iOS have full data interoperability — same account, seamless progress sync. PS5 is not in launch lineup; future version planned.",
+        "answerZh": "可以。PC、安卓、iOS 三端数据完全互通——同一账号可跨设备游玩，进度同步。PS5 暂未在公测首发阵容中，未来版本规划中。"
+      },
+      {
+        "question": "How many free pulls can F2P players get in launch month?",
+        "questionZh": "遗忘之海公测首月零氪能拿多少抽？",
+        "answer": "Launch month accumulates 100 pulls worth of Astrite (gacha currency) through events, daily login, and progression. Plus a free 6-select Black Ticket crew from pre-registration rewards. Effectively 100+ pulls and a guaranteed top-rarity character.",
+        "answerZh": "公测首月累计可获得 100 抽资源（蔷薇石），加上预约礼自选黑券船员一名。零氪玩家能在开服两周内稳定获得 1-2 名黑券级（最高稀有度）船员。"
+      },
+      {
+        "question": "Should I play Sea of Remnants or wait for Genshin's Moon-VIII on July 1?",
+        "questionZh": "7 月 9 日遗忘之海公测，和原神月之八版本（7/1）撞期，怎么选？",
+        "answer": "Not an either-or choice — they're different genres. Sea of Remnants is a turn-based CRPG + Roguelite exploration game, similar to Baldur's Gate 3 / Sea of Thieves, not an action RPG. You can play both; they fill different niches.",
+        "answerZh": "不是二选一——根本不是同品类。遗忘之海是回合制 CRPG + Roguelite 探索游戏，对标的是《博德之门 3》《盗贼之海》，不是动作 RPG。两款可以同时玩，互不冲突。"
+      },
+      {
+        "question": "Can I pre-load Sea of Remnants before July 9 launch?",
+        "questionZh": "遗忘之海可以预下载吗？什么时候开放？",
+        "answer": "Pre-load timing has not been officially announced yet. Expected to open 24-48 hours before July 9 launch. Watch the official site's news/update channel for the latest.",
+        "answerZh": "官方暂未公布预下载开启时间。预计开服前 24-48 小时开放。请关注官网 /news/update/ 频道获取最新公告。"
+      },
+      {
+        "question": "Which Black Ticket crew should I pick from the 6-select?",
+        "questionZh": "公测预约 6 选 1 黑券船员，选哪个？",
+        "answer": "Role-dependent: Princess (top support) / Little Axe (burst DPS) / Burnt Colonel (off-tank). If unsure, Princess is the safest all-around pick. The 6-select is a one-time free choice — save before confirming.",
+        "answerZh": "看你想玩什么定位：王女（顶级辅助）/ 小斧头（爆发输出）/ 焦面上校（副坦）。不确定选哪个时，王女是最稳的通用选择。6 选 1 是一次性免费机会，确认前先存档。"
+      },
+      {
+        "question": "What should I do in the first 30 minutes?",
+        "questionZh": "开服前 30 分钟最该做什么？",
+        "answer": "Check your account, claim reservation and mail rewards, inspect the 6-choice selector, push story until key systems unlock, and only then start farming.",
+        "answerZh": "先确认账号、领取预约和邮件奖励、看一眼 6 选 1、把主线推到系统解锁点，然后再开始刷资源。"
+      },
+      {
+        "question": "Should I wait for the mobile launch instead of playing PC now?",
+        "questionZh": "要不要等移动端再玩，还是今天先上 PC？",
+        "answer": "If you want the earliest rewards and launch-month content, start on PC now. Mobile is within July, but the launch-day progression, events, and reward window begin today.",
+        "answerZh": "如果你想第一时间拿开服福利和首月内容，今天先玩 PC 更合适。移动端虽然 7 月内也会上，但首日进度和活动窗口是从今天开始的。"
+      },
+      {
+        "question": "What is the safest spending rule for launch resources?",
+        "questionZh": "开服资源最稳的使用规则是什么？",
+        "answer": "Do not spend everything immediately. Keep enough resources for the first selector, the first event round, and the first week of testing before committing to a full build.",
+        "answerZh": "不要一口气全花掉。先留足 6 选 1、首轮活动和第一周测试的资源，再决定完整养成方向。"
+      }
+    ]
+  },
+  {
+    "id": "collaborations-guide",
+    "title": "《遗忘之海》2026 下半年联动矩阵全汇总：KOL、游戏 IP、动漫、音乐、艺术、线下全覆盖",
+    "titleEn": "Sea of Remnants 2026 Collaboration Matrix: KOL, Game IP, Anime, Music, Art, Offline",
+    "category": "system",
+    "categoryZh": "系统",
+    "categoryEn": "System",
+    "summary": "遗忘之海 6/26 前瞻直播一次性官宣 10+ 联动，覆盖 KOL（小潮院长+影月月）、游戏 IP（第五人格）、动漫（海绵宝宝）、音乐（Alan Walker×张韶涵）、艺术（Underverse×Ashley Wood）、文化（云锦博物馆×劳伦斯·许）、线下（万达/罗森/海岸线文旅）。本文详细解读每个联动的内容、上线节点、玩家获取方式与 SEO 关键词。",
+    "summaryEn": "Complete guide to all 10+ collaborations announced at Sea of Remnants' June 26 livestream: KOL creators, Identity V crossover, SpongeBob, Alan Walker×Angela Chang, Underverse×Ashley Wood, Nanjing Cloud Brocade×Laurence Xu, offline events.",
+    "tags": [
+      "联动",
+      "第五人格",
+      "海绵宝宝",
+      "Alan Walker",
+      "小潮院长",
+      "影月月",
+      "Underverse",
+      "云锦",
+      "劳伦斯许",
+      "万达",
+      "罗森",
+      "Collaboration"
+    ],
+    "content": "## 联动矩阵总览：6 大类 10+ 联动官宣\n\n2026 年 6 月 26 日前瞻直播一次性官宣了超过 10 个联动，覆盖 KOL、游戏 IP、动漫、音乐、艺术、线下文旅 6 大类。本文逐一拆解每个联动的内容、节点、玩家获取方式。\n\n来源：[官方前瞻情报稿](https://sea.163.com/news/official/20260625/42726_1305601.html)\n\n### 联动矩阵速查表\n\n| 类别 | 联动对象 | 上线节点 | SEO 价值 |\n|------|---------|---------|---------|\n| **KOL 创作者** | 小潮院长 × 你的影月月 | 直播嘉宾（已上线） | 🔴 最高 |\n| **游戏 IP** | 第五人格 | PC 公测第三周 | 🔴 高 |\n| **动漫 IP** | 海绵宝宝（SpongeBob） | 暑期 | 🔴 高 |\n| **音乐** | Alan Walker × 张韶涵 | 直播首播 MV 预告 | 🟡 中 |\n| **艺术** | Underverse × Ashley Wood | 公测版本内 | 🟡 中 |\n| **文化非遗** | 南京云锦博物馆 × 劳伦斯·许 | 未来版本 | 🟢 低（长尾） |\n| **线下文旅** | 海岸线 6 城（大连/青岛/象山/三亚/汕头/北海） | 7/10–7/26 | 🟢 低 |\n| **线下消费** | 万达广场（10 城 110 家） | 公测期 | 🟢 低 |\n| **线下消费** | 罗森（主题门店+周边） | 开学季 | 🟢 低 |\n| **主题周边** | 上海交通卡（300+ 城市通用+痛车） | — | 🟢 低 |\n\n---\n\n## 一、KOL 联动：小潮院长 × 你的影月月\n\n### 联动内容\n\n两位 B 站头部 UP 主作为直播嘉宾登场，合作整活向节目：\n\n> **「策划你先打自己设计的怪物！」**\n>\n> —— 让策划亲自挑战自己设计的 Boss，玩家围观\n\n这是直播后 B 站检索热度最高的切片之一（[原视频 BV1D67V6PEHf](https://www.bilibili.com/video/BV1D67V6PEHf/)）。\n\n### 玩家获取方式\n\nKOL 联动是**纯内容联动**，没有专属游戏内奖励。玩家通过观看 B 站相关视频获取游戏资讯和二创内容。\n\n### 预热铺垫\n\n影月月在 5/28 已发过预热视频「影月月玩遗忘之海三测，发现自己 ID 全被抢！」——公测期二创种子已经埋好。建议关注两位 UP 主的公测后内容。\n\n### SEO 关键词\n\n- 遗忘之海 小潮院长\n- 遣忘之海 影月月\n- 遗忘之海 策划你先打自己设计的怪物\n\n---\n\n## 二、第五人格联动（PC 公测第三周）\n\n### 上线节点\n\n**PC 端公测第三周**（约 2026.07.23 前后）。这是公测首月最重磅的游戏 IP 联动。\n\n### 联动内容\n\n第五人格（同为 Joker 工作室作品，自家 IP 联动）专属内容：\n\n| 项目 | 类型 |\n|------|------|\n| 旅人「纽扣眼」五官 | 角色定制选项（免费） |\n| 狂欢之椅 | 家具/拍照道具 |\n| 拍照动作「不解」 | 表情动作 |\n\n### 玩家获取方式\n\n预计完成专属联动任务或签到即可免费获取（官方通稿未明确，但第五人格是同工作室联动，免费概率高）。\n\n### 设计意图\n\nJoker 工作室通过这次联动把第五人格的玩家画像（哥特、悬疑、木偶风）自然延伸到遗忘之海，是**美术风格同源的 IP 互通**。\n\n### SEO 关键词\n\n- 遗忘之海 第五人格联动\n- 遗忘之海 纽扣眼\n- 遗忘之海 狂欢之椅\n- 遗忘之海 第五人格什么时候上线\n\n---\n\n## 三、海绵宝宝联动（暑期）\n\n### 上线节点\n\n**暑期**（公测首月之后，具体日期未公开）。这是面向全球市场的全球动画 IP 联动。\n\n### 联动内容\n\n海绵宝宝、派大星、章鱼哥、蟹老板四位经典角色登场奥托皮亚，**蟹堡王分店**作为新场景落户海港。\n\n### 玩家获取方式（推测）\n\n基于同类联动惯例，预计：\n- 蟹堡王分店作为活动场景开放\n- 海绵宝宝等角色作为限时 NPC\n- 可能有限时外观/道具\n\n### 设计意图\n\n木偶哥特风 + 海绵宝宝这种反差萌组合，制造话题性和二创素材。官方明确选择暑期上线，承接暑期学生流量。\n\n### SEO 关键词\n\n- 遗忘之海 海绵宝宝\n- 遗忘之海 蟹堡王\n- 遗忘之海 海绵宝宝联动什么时候\n\n---\n\n## 四、Alan Walker × 张韶涵（主题曲 MV）\n\n### 联动内容\n\nEDM 巨星 Alan Walker（编曲制作）+ 华语天后张韶涵（人声）联合打造《遗忘之海》主题曲，MV 预告片在 6/26 直播首播。\n\n### 玩家获取方式\n\n主题曲 MV 通过官方渠道发布，玩家可在 [官方稿内嵌视频](https://sea.163.com/news/official/20260625/42726_1305601.html) 观看完整版。\n\n### 上线节点\n\nMV 预告已首播，完整版预计 7/9 公测同步发布。\n\n### SEO 关键词\n\n- 遗忘之海 主题曲\n- 遗忘之海 Alan Walker\n- 遣忘之海 张韶涵\n\n---\n\n## 五、Underverse × Ashley Wood（限定角色）\n\n### 联动内容\n\n澳洲潮流艺术大师 Ashley Wood 与 Underverse 品牌联合共创**限定角色**，公测版本内上线。\n\n### 设计意图\n\n引入国际艺术 IP 提升品牌格调，Ashley Wood 的机械废土风与遗忘之海的木偶哥特风有共同的「手工质感」基因。\n\n### 玩家获取方式\n\n限定角色预计通过专属活动获取，具体方式待官宣。\n\n### SEO 关键词\n\n- 遗忘之海 Ashley Wood\n- 遗忘之海 Underverse\n- 遗忘之海 限定角色 Ashley\n\n---\n\n## 六、南京云锦博物馆 × 劳伦斯·许（非遗高定）\n\n### 联动内容\n\n南京云锦博物馆（人类非物质文化遗产）+ 高定设计师劳伦斯·许联名，以「东方织造之美」为主题推出未来版本内容。\n\n### 设计意图\n\n非遗 + 高定的双重文化资本提升，呼应木偶哥特风的「手工质感」美学。预计是船员时装/船只涂装形式的限定外观。\n\n### 上线节点\n\n**未来版本**（公测首月之后）。\n\n### SEO 关键词\n\n- 遗忘之海 云锦\n- 遣忘之海 劳伦斯许\n- 遗忘之海 非遗联动\n\n---\n\n## 七、线下文旅：海岸线 6 城打卡（7/10–7/26）\n\n### 联动内容\n\n大连、青岛、象山、三亚、汕头、北海 6 个海滨城市的海滩将**还原游戏内场景**：\n\n- 「营地篝火」实景装置\n- 「伟大鼠鼠雕像」打卡点\n\n### 上线节点\n\n**2026.07.10 – 07.26**，公测首周末开始。\n\n### 玩家参与方式\n\n线下打卡，预计有限定周边/预约福利。\n\n---\n\n## 八、线下消费：万达广场（10 城 110 家）\n\n### 联动内容\n\n万达广场限定打卡活动，覆盖 10 个城市、110 家门店。\n\n### 上线节点\n\n公测期（具体日期未公开）。\n\n### 玩家参与方式\n\n线下打卡，预计有限定周边兑换。\n\n---\n\n## 九、线下消费：罗森（开学季）\n\n### 联动内容\n\n罗森便利店限定主题门店、联动周边、食玩产品。\n\n### 上线节点\n\n**开学季**（约 8 月底–9 月初）。\n\n---\n\n## 十、上海交通卡主题周边\n\n### 联动内容\n\n上海交通卡推出遗忘之海主题卡面，全国 300+ 城市通用，配套主题痛车巡游。\n\n### 上线节点\n\n具体日期未公开。\n\n---\n\n## 联动矩阵的 SEO 价值分析\n\n### 第一梯队（高搜索量 + 高竞争）\n\n- **遗忘之海 第五人格联动** —— 同 IP 玩家重合度高\n- **遗忘之海 海绵宝宝** —— 全球 IP 知名度\n- **遗忘之海 小潮院长 / 影月月** —— B 站头部 KOL 流量\n\n### 第二梯队（蓝海词）\n\n- **遗忘之海 Alan Walker / 张韶涵** —— 音乐向长尾\n- **遗忘之海 Ashley Wood / Underverse** —— 艺术 IP 小众但精准\n- **遗忘之海 纽扣眼 / 狂欢之椅** —— 第五人格联动专属词\n\n### 长尾词\n\n- **遗忘之海 云锦 / 劳伦斯许** —— 非遗文化向\n- **遗忘之海 万达 / 罗森 / 海岸线** —— 线下打卡向\n\n---\n\n## 玩家建议：如何规划联动内容\n\n### 优先级排序\n\n1. **第三周必做**：第五人格联动（免费福利高，专属定制内容）\n2. **暑期关注**：海绵宝宝联动（限时机，错过可能没了）\n3. **公测首日领取**：主题曲 MV 完整版（无成本，纯欣赏）\n4. **可选**：Underverse × Ashley Wood 限定角色（如果是免费活动）\n5. **未来版本**：云锦联名时装（如果推出）\n\n### 关注官方渠道\n\n- 官网：[sea.163.com](https://sea.163.com)\n- B 站官方账号\n- 官方微博\n- TapTap 官方论坛\n\n---\n\n## 总结：联动矩阵的战略意义\n\n遗忘之海公测版本的联动矩阵覆盖 6 大类、10+ 对象，是 2026 年国产网络游戏里**联动规模最大的项目之一**。这反映了网易对该项目的战略级投入——通过多维度 IP 联动：\n\n1. **破圈引流**：第五人格（自家 IP）、海绵宝宝（全球 IP）覆盖不同玩家群体\n2. **品牌建设**：Alan Walker、Ashley Wood、劳伦斯·许提升品牌格调\n3. **线下渗透**：海岸线 + 万达 + 罗森覆盖日常生活场景\n4. **UGC 催化**：小潮院长 + 影月月 + 逐浪计划（[详见专题页](/zh/sea/guides/wave-chaser-program-guide)）引爆 B 站二创\n\n对玩家而言，这是好消息——大量免费/低成本联动内容将持续供给到 2026 年下半年。\n\n## 相关阅读\n\n- [公测完整指南](/zh/sea/guides/launch-day-guide) —— 公测 7/9 上线时间表\n- [云捏脸前置玩法](/zh/sea/guides/cloud-face-sculpt-guide) —— 公测前就能玩的内容\n- [逐浪计划创作者扶持](/zh/sea/guides/wave-chaser-program-guide) —— 5000 万 UP 主扶持基金",
+    "contentEn": "## Collaboration Roadmap\n\nSea of Remnants has a broad month-one and post-launch collaboration plan. For players, the most important point is resource timing: do not spend every pull or premium currency in the first days if a week-three collaboration window may change priorities.\n\nThis page will be updated as official collaboration names, rewards, banners, and event rules are confirmed.",
+    "faq": [
+      {
+        "question": "When does the Identity V crossover launch in Sea of Remnants?",
+        "questionZh": "遗忘之海第五人格联动什么时候上线？",
+        "answer": "Identity V crossover launches in the 3rd week after PC public beta (around July 23, 2026). Free content includes Traveler 'button-eye' facial customization, Chair of狂欢 furniture, and '不解' photo action. Same Joker Studio IP, so likely all free via events.",
+        "answerZh": "第五人格联动在 PC 端公测第三周上线（约 2026 年 7 月 23 日前后）。免费内容包括旅人「纽扣眼」五官定制、狂欢之椅家具、拍照动作「不解」。同为 Joker 工作室自家 IP，预计全部通过活动免费获取。"
+      },
+      {
+        "question": "When does SpongeBob crossover launch?",
+        "questionZh": "遗忘之海海绵宝宝联动什么时候上？",
+        "answer": "Summer 2026 (after launch month, exact date not yet announced). SpongeBob, Patrick, Squidward, and Mr. Krabs appear in Orbtopia; Krusty Krab branch lands in the harbor as a new scene.",
+        "answerZh": "2026 年暑期上线（公测首月之后，具体日期官方暂未公布）。海绵宝宝、派大星、章鱼哥、蟹老板登场奥托皮亚，蟹堡王分店作为新场景落户海港。"
+      },
+      {
+        "question": "Which KOLs are collaborating with Sea of Remnants?",
+        "questionZh": "遗忘之海联动了哪些 UP 主？",
+        "answer": "Two Bilibili top creators as livestream guests: 小潮院长 (Xiao Chao Yuan Zhang) and 你的影月月 (Ni De Ying Yue Yue). They appeared in the 'design your own monster' segment. 影月月 also posted a May 28 pre-release video building hype.",
+        "answerZh": "两位 B 站头部 UP 主作为直播嘉宾登场：小潮院长 + 你的影月月。两人合作了「策划你先打自己设计的怪物！」整活切片。影月月此前在 5/28 已发过预热视频「影月月玩遗忘之海三测，发现自己 ID 全被抢！」。"
+      },
+      {
+        "question": "Are the collaborations free or paid?",
+        "questionZh": "遗忘之海联动内容要钱吗？",
+        "answer": "Most collaboration content appears free: Identity V crossover (same studio IP, likely free via events), KOL collabs (pure content), music MV (free to watch). SpongeBob / Ashley Wood collaborations may include paid cosmetics via Trade Market, but no official confirmation yet.",
+        "answerZh": "大部分联动内容预计免费：第五人格联动（同工作室 IP，预计通过活动免费获取）、KOL 联动（纯内容向）、主题曲 MV（免费观看）。海绵宝宝 / Ashley Wood 联动可能包含付费外观（通过贸易场用「好金砖」换），但官方尚未明确。"
+      },
+      {
+        "question": "What is the theme song of Sea of Remnants?",
+        "questionZh": "遗忘之海主题曲是谁唱的？",
+        "answer": "Theme song is produced by Alan Walker (music) featuring Angela Chang (张韶涵, vocals). MV preview premiered during the June 26 livestream; full version expected with the July 9 launch.",
+        "answerZh": "主题曲由 Alan Walker 编曲制作，张韶涵（人声）演唱。MV 预告片在 6/26 直播首播，完整版预计随 7/9 公测同步发布。"
+      },
+      {
+        "question": "Where can I find offline Sea of Remnants events?",
+        "questionZh": "遗忘之海有哪些线下活动？",
+        "answer": "Coastline cultural tourism events at 6 cities (Dalian, Qingdao, Xiangshan, Sanya, Shantou, Beihai) from July 10-26, replicating in-game scenes like 'camp bonfire' and 'Great Hamster Statue'. Wanda Plaza events in 10 cities (110 stores) during launch period. Lawson themed stores in back-to-school season.",
+        "answerZh": "海岸线文旅打卡：大连、青岛、象山、三亚、汕头、北海 6 城海滩（7/10–7/26），还原游戏内「营地篝火」「伟大鼠鼠雕像」。万达广场限定打卡：10 城 110 家门店（公测期）。罗森主题门店：开学季。"
+      }
+    ]
+  },
+  {
+    "id": "open-beta-version-center",
+    "title": "《遗忘之海》公测版本中心 — 7月9日PC公测与首月更新",
+    "titleEn": "Sea of Remnants Open Beta Version Center — July 9 PC Launch and First-Month Updates",
+    "category": "version",
+    "categoryZh": "版本中心",
+    "categoryEn": "Version",
+    "summary": "汇总《遗忘之海》2026年7月9日PC公测、移动端7月内上线、三端互通、首月新海域、新船员、系统玩法和公测福利。",
+    "summaryEn": "Tracks the July 9, 2026 PC open beta, mobile launch window, cross-platform progress, new sea regions, crews, systems, and launch rewards.",
+    "tags": [
+      "公测",
+      "版本",
+      "7月9日",
+      "移动端",
+      "Version",
+      "Launch"
+    ],
+    "content": "## 公测时间与平台\n\n《遗忘之海》PC端公测定档 **2026年7月9日**，移动端预计在7月内上线。官方前瞻信息提到PC与移动端会围绕三端互通体验展开，账号进度、开荒节奏和兑换码领取需要以正式上线后的游戏内公告为准。\n\n## 首月重点内容\n\n| 模块 | 公测信息 | Gachia跟进 |\n|------|---------|-----------|\n| 海域 | 白沙海、渡桥海首批开放，隐秘海预计7月底解锁 | 建立海区攻略、材料点与BOSS坐标页 |\n| 船员 | 首月20+船员，茉莉限时UP，黑格为赛季船员 | 角色页补充获取方式、UP状态、所属船队 |\n| 船队 | 蓝波乐队、破晓者、黑男爵、妄想剧团、流浪号 | 增加船队标签与组队筛选 |\n| 系统 | 记忆重逢、记忆共鸣、噩梦深潜、大漩涡、交易行 | 拆分机制指南与收益规划 |\n| 福利 | 公测100抽、新手40抽黑券保底、前瞻直播码 | 兑换码页每日巡检 |\n\n## 新海域与BOSS\n\n公测前瞻重点提到白沙海、渡桥海，以及7月底开放的隐秘海。已知高关注目标包括海上霸主猩红女爵，以及疯老头穆雷、猩猩与海盗团、鬼新娘等BOSS。Gachia会优先记录出现海域、阶段机制、推荐队伍和掉落物。\n\n## 数据状态\n\n本文为公测前瞻整合页，最后更新：2026-07-01。所有数值、开放时间和奖励以官方正式公告及游戏内实装为准。",
+    "contentEn": "## Launch Time and Platforms\n\nSea of Remnants PC open beta is scheduled for **July 9, 2026**, with mobile expected later in July. Cross-platform progress details should be confirmed against official launch announcements and in-game notices.\n\n## First-Month Highlights\n\n| Module | Launch Info | Gachia Coverage |\n|------|---------|-----------|\n| Regions | White Sand Sea and Bridge Sea at launch; Hidden Sea expected in late July | Sea-region guides, material points, boss coordinates |\n| Crews | 20+ launch-month crews, Molly limited UP, Heige as season crew | Obtain method, UP status, fleet tags |\n| Fleets | Blue Wave Band, Dawnbringers, Black Baron, Delusion Troupe, Wanderer | Fleet tags and team filters |\n| Systems | Memory Reunion, Memory Resonance, Nightmare Dive, Maelstrom, trade market | System guides and reward planning |\n| Rewards | 100 launch pulls, beginner 40-pull Black Ticket guarantee, preview livestream code | Code tracking and daily checks |\n\n## New Regions and Bosses\n\nThe preview highlighted White Sand Sea, Bridge Sea, and the late-July Hidden Sea. High-interest encounters include the sea overlord Crimson Duchess, Mad Old Murray, the Gorilla Pirate Crew, and Ghost Bride. Gachia will track region, mechanics, teams, and drops.\n\n## Data Status\n\nLast updated: 2026-07-01. Values, timing, and rewards may change at launch; always confirm with official notices and the in-game client.",
+    "faq": [
+      {
+        "question": "When does Sea of Remnants launch on PC?",
+        "questionZh": "遗忘之海PC端什么时候公测？",
+        "answer": "The current launch target is July 9, 2026 for PC open beta. Mobile is expected later in July.",
+        "answerZh": "当前公测节点为2026年7月9日PC端公测，移动端预计7月内上线。"
+      },
+      {
+        "question": "What should Gachia update first for launch?",
+        "questionZh": "Gachia公测前应该优先更新什么？",
+        "answer": "Prioritize the version center, launch rewards and codes, Molly/Heige/Gail/Edward crew entries, Memory Reunion, and the first boss-region guides.",
+        "answerZh": "优先更新版本中心、公测福利与兑换码、茉莉/黑格/盖尔/爱德华角色条目、记忆重逢机制，以及首批BOSS和海区攻略。"
+      }
+    ]
+  },
+  {
     "id": "beginner-guide",
     "title": "《遗忘之海》新手入门完全指南",
     "titleEn": "Sea of Remnants Complete Beginner Guide",
@@ -541,67 +718,6 @@
     ]
   },
   {
-    "id": "launch-day-guide",
-    "title": "《遗忘之海》PC 端 7 月 9 日公测完整指南：开服时间、平台互通、首月福利与下载入口",
-    "titleEn": "Sea of Remnants PC Launch Guide: July 9 Release, Cross-Platform, Launch Month Rewards",
-    "category": "beginner",
-    "categoryZh": "新手指南",
-    "categoryEn": "Beginner",
-    "summary": "遗忘之海 PC 端 7 月 9 日公测正式上线，移动端 7 月内开放。本文整理 6/26 前瞻直播公布的全部公测情报：开服时间、三端互通、首月 100 抽资源、自选黑券船员、PC 配置要求、预下载入口、新手首日路线、常见问题 FAQ。新人入坑必读。",
-    "summaryEn": "Complete guide to Sea of Remnants' July 9 PC launch: cross-platform support, 100 pulls in launch month, free Black Ticket crew selection, PC specs, pre-load info, and beginner FAQ.",
-    "tags": [
-      "公测",
-      "7月9日",
-      "前瞻直播",
-      "新手",
-      "FAQ",
-      "PC",
-      "互通",
-      "Launch",
-      "Cross-platform"
-    ],
-    "content": "## 公测时间表：7 月 9 日 PC 先行，移动端 7 月内\n\n2026 年 6 月 26 日官方举办了公测前瞻直播，正式确认《遗忘之海》公测时间表：\n\n| 里程碑 | 时间 | 平台 |\n|---|---|---|\n| **PC 端正式公测** | **2026.07.09** | Steam / 官方启动器 |\n| 移动端公测 | 2026 年 7 月内（具体日期未点死） | iOS / Android |\n| 隐秘海海区解锁 | 2026.07 月底 | 全平台 |\n| 第五人格联动上线 | PC 公测第三周 | 全平台 |\n\n**开服具体钟点（如 10:00 / 11:00）官方暂未明确公布**，建议关注[官网 /news/update/ 频道](https://sea.163.com/news/update/) 公告补充。\n\n来源：[官方前瞻情报稿](https://sea.163.com/news/official/20260625/42726_1305601.html)\n\n## 平台与跨端互通：PC / 安卓 / iOS 三端同步\n\n这是本作核心卖点之一——**PC、安卓、iOS 三端数据完全互通**。同一个账号可以在 PC 上深度探索、在手机上日常收菜，进度同步无缝衔接。\n\n| 平台组合 | 互通状态 |\n|---------|---------|\n| PC / Android / iOS | ✅ 完全互通（6/6 公告 + 6/26 直播再次确认） |\n| PS5 | ⚠️ 公测首发不含 PS5，未来版本规划中 |\n| Xbox Series X/S | ⚠️ 暂未官宣节点 |\n\n**Steam 商店页已上线**：[Sea of Remnants on Steam](https://store.steampowered.com/app/3633680/_/?l=schinese)，发行日显示为 2026 年。\n\n## 首月福利：100 抽资源 + 自选黑券船员\n\n公测首月累计可获得 **100 抽招募资源（蔷薇石）**，加上预约礼和叠加活动，零氪玩家也能在开服两周内稳定获取 1-2 名黑券级船员。\n\n### 预约专属福利（公测后完成任务领取）\n\n- **自选黑券船员 ×1**（限时 UP 池的茉莉 / 蓝波乐队黑格 / 其他）\n- **灵感品质时装 ×2 套**\n- 专属头像 + 头像框\n- 丰厚蔷薇石\n\n### 叠加活动\n\n- **仓鼠神见面礼**：开服签到\n- **老船长的七日宝藏**：连续 7 天登录\n- **艾丝的航行好礼**：新手引导任务\n\n### 预约礼（来自 6/6 公告）\n\n- 「来一杯」银币 ×20\n- 紫券船员 6 选 1\n\n**预约人数里程碑奖励阶梯明细官方暂未公开**，关注官方社媒后续公告。\n\n## 公测首月船员阵容（20 余名）\n\n公测首月将上线 **6 大属性、20 余名船员**，分属 5 大船队。其中 18 名是三测破晓号测试已公开角色，剩余是新加入的「妄想剧团」船队成员。\n\n### 重点船员\n\n| 角色 | 阵营 | 定位 / 获取方式 |\n|------|------|---------------|\n| **茉莉（Molly）** | 蓝波乐队 | **限时 UP 池船员**（公测首发 UP） |\n| **黑格（Heige）** | 蓝波乐队 | **赛季船员**（赛季奖励线） |\n| **盖尔（Gail）** | 蓝波乐队 | 后续上线（主唱） |\n| **爱德华（Edward）** | 流浪号 | 后续上线（船长） |\n| **神秘联动船员 ×1** | （未公开） | 公测首月陆续上线 |\n\n### 5 大船队（公测版本）\n\n| 船队 | 备注 |\n|------|------|\n| 蓝波乐队 | 主唱盖尔后续上线 |\n| 破晓者 | — |\n| 黑男爵 | — |\n| **妄想剧团** | **公测新公开船队**（替换/扩充原漂流瓶号位） |\n| 流浪号 | 船长爱德华后续上线 |\n\n**重大变化：** 三测期间的「漂流瓶号」**未出现在公测船队名单**，取而代之的是新「妄想剧团」船队。旅人/艾丝/懦夫等原漂流瓶号船员的最终归属，需等公测实机确认。\n\n## 公测首日路线建议\n\n### 上午 10:00 开服（预估时间）\n\n1. 完成新手引导，跟随主线到奥托皮亚（主城）\n2. 领取全部预约福利 + 七日宝藏首日\n3. 在 6 位黑券船员中**免费自选一位**（推荐：王女 / 小斧头 / 焦面上校 三选一，根据定位）\n4. 完成首抽，看是否需要重开\n\n### 下午\n\n5. 主线推进到「记忆重逢」机制解锁\n6. 完成首次「遗忘之海」打捞，免费获取黑券船员或往日之影（50% 概率）\n7. 探索白沙海、渡桥海，开启 Roguelite 出海循环\n\n### 晚上\n\n8. 完成 7 日宝藏第 1 天任务\n9. 检查 [节奏榜](/zh/sea/tier-list) 调整阵容\n10. 解锁奥托皮亚首个主题结局（与暗巷「地下之王」关联）\n\n## PC 配置要求\n\n详细配置表见[《遗忘之海》配置要求大全](/zh/sea/guides/system-requirements-guide)。简要：\n\n| 画质 | CPU | 显卡 | 内存 |\n|------|-----|------|------|\n| 最低（720p/30fps） | i7-9700 / R5 3600 | GTX 1060 6GB | 16 GB |\n| 推荐（1080p/60fps） | i7-12700 / R7 5800X | RTX 3070Ti | 32 GB |\n| 4K 极致 + 光追 | i9-13900K / R9 7900X | RTX 4090 | 32-64 GB |\n\nPC 支持 NVIDIA RTX 光追、DLSS 4 多帧生成、路径追踪。\n\n## 下载入口\n\n### PC 端\n\n- **Steam**：[Sea of Remnants 商店页](https://store.steampowered.com/app/3633680/_/?l=schinese)（7/9 上线）\n- **官方启动器**：[sea.163.com](https://sea.163.com) 首页下载\n\n### 移动端\n\n- **iOS**：App Store（7 月内上线，搜索「遗忘之海」）\n- **Android**：官网 / TapTap / 各大应用商店（7 月内）\n\n**预下载开启时间官方暂未公布**，预计开服前 24-48 小时开放。\n\n## 公测版本六大新系统速览\n\n直播公布了 6 项公测版本全新内容：\n\n1. **奥托皮亚「多结局」**：玩家行为累积解锁结局，首个主题结局与暗巷「地下之王」关联，已解锁的结局可自由切换\n2. **三大海区**：白沙海 + 渡桥海首发；**隐秘海 7 月底解锁**（含新霸主「猩红女爵」）\n3. **记忆重逢优化**：开局 6 位黑券船员免费自选一位；每周免费打捞黑券船员或往日之影\n4. **贸易场自由交易**：通过探索获取「好金砖」货币，自主交易高品质外观/资源\n5. **个性装扮扩展**：小斧头时装「妄想羽翼」、流浪烟花号专属船皮\n6. **云捏脸前置玩法**：公测前无需下载，上传照片一键生成木偶形象\n\n更多机制详解见：\n\n- [付费模式详解](/zh/sea/guides/payment-model-guide)\n- [贸易场与好金砖系统详解](/zh/sea/guides/trade-market-guide)\n- [品类教育：到底是个什么游戏](/zh/sea/guides/what-is-forgotten-sea)\n\n## 7 月 9 日 vs 同期竞品\n\n公测首周撞期严重，主要竞品：\n\n| 游戏 | 上线/版本 | 与遗忘之海公测时间差 |\n|------|---------|------------------|\n| 原神「月之八」版本 | 2026.07.01 | 遗忘之海公测前 8 天 |\n| 绝区零 3.0 | 同期运行 | — |\n| 崩坏：星穹铁道 4.3 | 同期运行 | — |\n\n**给玩家的建议：** 忘记「二选一」叙事，遗忘之海和原神不是同品类——本作核心是回合制 CRPG + Roguelite 探索，对标的是《博德之门 3》《刺客信条：黑旗》《盗贼之海》，不是 ARPG 抽卡手游。可以同时玩。\n\n## 公测首月推荐阵容\n\n### 漂流瓶号开局队（待公测确认阵营归属）\n\n- 旅人（主攻，SS） + 艾丝（副攻） + 懦夫（生存）\n\n### 黑男爵爆发队\n\n- 小斧头（爆发） + 钟表匠（辅助） + 旅人（追击）\n\n### 蓝波乐队 UP 队（公测首发）\n\n- 茉莉（限时 UP，治疗） + 黑格（赛季船员，输出） + 盖尔（后续上线，辅助）\n\n更多阵容组合见[船员节奏榜](/zh/sea/tier-list) 和各[角色详情页](/zh/sea/characters)。\n\n## 新人 FAQ\n\n更多问题见[新手入门完全指南](/zh/sea/guides/beginner-guide) 和[品类教育页](/zh/sea/guides/what-is-forgotten-sea)。",
-    "contentEn": "## Launch Day Plan\n\nSea of Remnants PC open beta is planned for July 9, 2026. Preload and pre-character creation open on July 6 at 10:00.\n\n| Step | Goal |\n|---|---|\n| Before launch | Preload, create character, confirm account/server |\n| First login | Claim mail, reservation rewards, and login rewards |\n| First session | Push story to unlock Orbtopia, Recruitment, and dailies |\n| Day-one close | Clear daily Horn attempts and plan your first team |\n\nDo not spend every pull before checking the first Memory Reunion 6-choice selector and week-one testing.",
-    "faq": [
-      {
-        "question": "When does Sea of Remnants launch on PC?",
-        "questionZh": "遗忘之海 PC 端什么时候公测？",
-        "answer": "PC version officially launches on July 9, 2026, on Steam and the official launcher. Mobile (iOS/Android) launches sometime in July 2026, exact date not yet announced.",
-        "answerZh": "PC 端 2026 年 7 月 9 日正式公测，登陆 Steam 和官方启动器。移动端（iOS/Android）在 7 月内上线，具体日期官方尚未明确。"
-      },
-      {
-        "question": "Is Sea of Remnants cross-platform? Can PC and mobile play together?",
-        "questionZh": "遗忘之海 PC 和手机能一起玩吗？跨平台数据互通吗？",
-        "answer": "Yes. PC, Android, and iOS have full data interoperability — same account, seamless progress sync. PS5 is not in launch lineup; future version planned.",
-        "answerZh": "可以。PC、安卓、iOS 三端数据完全互通——同一账号可跨设备游玩，进度同步。PS5 暂未在公测首发阵容中，未来版本规划中。"
-      },
-      {
-        "question": "How many free pulls can F2P players get in launch month?",
-        "questionZh": "遗忘之海公测首月零氪能拿多少抽？",
-        "answer": "Launch month accumulates 100 pulls worth of Astrite (gacha currency) through events, daily login, and progression. Plus a free 6-select Black Ticket crew from pre-registration rewards. Effectively 100+ pulls and a guaranteed top-rarity character.",
-        "answerZh": "公测首月累计可获得 100 抽资源（蔷薇石），加上预约礼自选黑券船员一名。零氪玩家能在开服两周内稳定获得 1-2 名黑券级（最高稀有度）船员。"
-      },
-      {
-        "question": "Should I play Sea of Remnants or wait for Genshin's Moon-VIII on July 1?",
-        "questionZh": "7 月 9 日遗忘之海公测，和原神月之八版本（7/1）撞期，怎么选？",
-        "answer": "Not an either-or choice — they're different genres. Sea of Remnants is a turn-based CRPG + Roguelite exploration game, similar to Baldur's Gate 3 / Sea of Thieves, not an action RPG. You can play both; they fill different niches.",
-        "answerZh": "不是二选一——根本不是同品类。遗忘之海是回合制 CRPG + Roguelite 探索游戏，对标的是《博德之门 3》《盗贼之海》，不是动作 RPG。两款可以同时玩，互不冲突。"
-      },
-      {
-        "question": "Can I pre-load Sea of Remnants before July 9 launch?",
-        "questionZh": "遗忘之海可以预下载吗？什么时候开放？",
-        "answer": "Pre-load timing has not been officially announced yet. Expected to open 24-48 hours before July 9 launch. Watch the official site's news/update channel for the latest.",
-        "answerZh": "官方暂未公布预下载开启时间。预计开服前 24-48 小时开放。请关注官网 /news/update/ 频道获取最新公告。"
-      },
-      {
-        "question": "Which Black Ticket crew should I pick from the 6-select?",
-        "questionZh": "公测预约 6 选 1 黑券船员，选哪个？",
-        "answer": "Role-dependent: Princess (top support) / Little Axe (burst DPS) / Burnt Colonel (off-tank). If unsure, Princess is the safest all-around pick. The 6-select is a one-time free choice — save before confirming.",
-        "answerZh": "看你想玩什么定位：王女（顶级辅助）/ 小斧头（爆发输出）/ 焦面上校（副坦）。不确定选哪个时，王女是最稳的通用选择。6 选 1 是一次性免费机会，确认前先存档。"
-      }
-    ]
-  },
-  {
     "id": "payment-model-guide",
     "title": "《遗忘之海》付费模式详解：抽卡、贸易场、免费百抽与零氪能否全收集",
     "titleEn": "Sea of Remnants Payment Model: Gacha, Trade Market, 100 Free Pulls & F2P Viability",
@@ -728,70 +844,6 @@
         "questionZh": "贸易场什么时候解锁？",
         "answer": "Trade Market launches with the public beta on July 9, 2026 (PC version). Specific unlock timing within progression (e.g., reaching Orbtopia, completing tutorial) not detailed in official summary — expect early-game unlock similar to other core systems.",
         "answerZh": "贸易场随公测版本同步上线（2026 年 7 月 9 日 PC 端）。具体的进度解锁节点（如到达奥托皮亚、完成新手引导）官方通稿未详细说明——预计是早期游戏解锁，和其他核心系统一致。"
-      }
-    ]
-  },
-  {
-    "id": "collaborations-guide",
-    "title": "《遗忘之海》2026 下半年联动矩阵全汇总：KOL、游戏 IP、动漫、音乐、艺术、线下全覆盖",
-    "titleEn": "Sea of Remnants 2026 Collaboration Matrix: KOL, Game IP, Anime, Music, Art, Offline",
-    "category": "system",
-    "categoryZh": "系统",
-    "categoryEn": "System",
-    "summary": "遗忘之海 6/26 前瞻直播一次性官宣 10+ 联动，覆盖 KOL（小潮院长+影月月）、游戏 IP（第五人格）、动漫（海绵宝宝）、音乐（Alan Walker×张韶涵）、艺术（Underverse×Ashley Wood）、文化（云锦博物馆×劳伦斯·许）、线下（万达/罗森/海岸线文旅）。本文详细解读每个联动的内容、上线节点、玩家获取方式与 SEO 关键词。",
-    "summaryEn": "Complete guide to all 10+ collaborations announced at Sea of Remnants' June 26 livestream: KOL creators, Identity V crossover, SpongeBob, Alan Walker×Angela Chang, Underverse×Ashley Wood, Nanjing Cloud Brocade×Laurence Xu, offline events.",
-    "tags": [
-      "联动",
-      "第五人格",
-      "海绵宝宝",
-      "Alan Walker",
-      "小潮院长",
-      "影月月",
-      "Underverse",
-      "云锦",
-      "劳伦斯许",
-      "万达",
-      "罗森",
-      "Collaboration"
-    ],
-    "content": "## 联动矩阵总览：6 大类 10+ 联动官宣\n\n2026 年 6 月 26 日前瞻直播一次性官宣了超过 10 个联动，覆盖 KOL、游戏 IP、动漫、音乐、艺术、线下文旅 6 大类。本文逐一拆解每个联动的内容、节点、玩家获取方式。\n\n来源：[官方前瞻情报稿](https://sea.163.com/news/official/20260625/42726_1305601.html)\n\n### 联动矩阵速查表\n\n| 类别 | 联动对象 | 上线节点 | SEO 价值 |\n|------|---------|---------|---------|\n| **KOL 创作者** | 小潮院长 × 你的影月月 | 直播嘉宾（已上线） | 🔴 最高 |\n| **游戏 IP** | 第五人格 | PC 公测第三周 | 🔴 高 |\n| **动漫 IP** | 海绵宝宝（SpongeBob） | 暑期 | 🔴 高 |\n| **音乐** | Alan Walker × 张韶涵 | 直播首播 MV 预告 | 🟡 中 |\n| **艺术** | Underverse × Ashley Wood | 公测版本内 | 🟡 中 |\n| **文化非遗** | 南京云锦博物馆 × 劳伦斯·许 | 未来版本 | 🟢 低（长尾） |\n| **线下文旅** | 海岸线 6 城（大连/青岛/象山/三亚/汕头/北海） | 7/10–7/26 | 🟢 低 |\n| **线下消费** | 万达广场（10 城 110 家） | 公测期 | 🟢 低 |\n| **线下消费** | 罗森（主题门店+周边） | 开学季 | 🟢 低 |\n| **主题周边** | 上海交通卡（300+ 城市通用+痛车） | — | 🟢 低 |\n\n---\n\n## 一、KOL 联动：小潮院长 × 你的影月月\n\n### 联动内容\n\n两位 B 站头部 UP 主作为直播嘉宾登场，合作整活向节目：\n\n> **「策划你先打自己设计的怪物！」**\n>\n> —— 让策划亲自挑战自己设计的 Boss，玩家围观\n\n这是直播后 B 站检索热度最高的切片之一（[原视频 BV1D67V6PEHf](https://www.bilibili.com/video/BV1D67V6PEHf/)）。\n\n### 玩家获取方式\n\nKOL 联动是**纯内容联动**，没有专属游戏内奖励。玩家通过观看 B 站相关视频获取游戏资讯和二创内容。\n\n### 预热铺垫\n\n影月月在 5/28 已发过预热视频「影月月玩遗忘之海三测，发现自己 ID 全被抢！」——公测期二创种子已经埋好。建议关注两位 UP 主的公测后内容。\n\n### SEO 关键词\n\n- 遗忘之海 小潮院长\n- 遣忘之海 影月月\n- 遗忘之海 策划你先打自己设计的怪物\n\n---\n\n## 二、第五人格联动（PC 公测第三周）\n\n### 上线节点\n\n**PC 端公测第三周**（约 2026.07.23 前后）。这是公测首月最重磅的游戏 IP 联动。\n\n### 联动内容\n\n第五人格（同为 Joker 工作室作品，自家 IP 联动）专属内容：\n\n| 项目 | 类型 |\n|------|------|\n| 旅人「纽扣眼」五官 | 角色定制选项（免费） |\n| 狂欢之椅 | 家具/拍照道具 |\n| 拍照动作「不解」 | 表情动作 |\n\n### 玩家获取方式\n\n预计完成专属联动任务或签到即可免费获取（官方通稿未明确，但第五人格是同工作室联动，免费概率高）。\n\n### 设计意图\n\nJoker 工作室通过这次联动把第五人格的玩家画像（哥特、悬疑、木偶风）自然延伸到遗忘之海，是**美术风格同源的 IP 互通**。\n\n### SEO 关键词\n\n- 遗忘之海 第五人格联动\n- 遗忘之海 纽扣眼\n- 遗忘之海 狂欢之椅\n- 遗忘之海 第五人格什么时候上线\n\n---\n\n## 三、海绵宝宝联动（暑期）\n\n### 上线节点\n\n**暑期**（公测首月之后，具体日期未公开）。这是面向全球市场的全球动画 IP 联动。\n\n### 联动内容\n\n海绵宝宝、派大星、章鱼哥、蟹老板四位经典角色登场奥托皮亚，**蟹堡王分店**作为新场景落户海港。\n\n### 玩家获取方式（推测）\n\n基于同类联动惯例，预计：\n- 蟹堡王分店作为活动场景开放\n- 海绵宝宝等角色作为限时 NPC\n- 可能有限时外观/道具\n\n### 设计意图\n\n木偶哥特风 + 海绵宝宝这种反差萌组合，制造话题性和二创素材。官方明确选择暑期上线，承接暑期学生流量。\n\n### SEO 关键词\n\n- 遗忘之海 海绵宝宝\n- 遗忘之海 蟹堡王\n- 遗忘之海 海绵宝宝联动什么时候\n\n---\n\n## 四、Alan Walker × 张韶涵（主题曲 MV）\n\n### 联动内容\n\nEDM 巨星 Alan Walker（编曲制作）+ 华语天后张韶涵（人声）联合打造《遗忘之海》主题曲，MV 预告片在 6/26 直播首播。\n\n### 玩家获取方式\n\n主题曲 MV 通过官方渠道发布，玩家可在 [官方稿内嵌视频](https://sea.163.com/news/official/20260625/42726_1305601.html) 观看完整版。\n\n### 上线节点\n\nMV 预告已首播，完整版预计 7/9 公测同步发布。\n\n### SEO 关键词\n\n- 遗忘之海 主题曲\n- 遗忘之海 Alan Walker\n- 遣忘之海 张韶涵\n\n---\n\n## 五、Underverse × Ashley Wood（限定角色）\n\n### 联动内容\n\n澳洲潮流艺术大师 Ashley Wood 与 Underverse 品牌联合共创**限定角色**，公测版本内上线。\n\n### 设计意图\n\n引入国际艺术 IP 提升品牌格调，Ashley Wood 的机械废土风与遗忘之海的木偶哥特风有共同的「手工质感」基因。\n\n### 玩家获取方式\n\n限定角色预计通过专属活动获取，具体方式待官宣。\n\n### SEO 关键词\n\n- 遗忘之海 Ashley Wood\n- 遗忘之海 Underverse\n- 遗忘之海 限定角色 Ashley\n\n---\n\n## 六、南京云锦博物馆 × 劳伦斯·许（非遗高定）\n\n### 联动内容\n\n南京云锦博物馆（人类非物质文化遗产）+ 高定设计师劳伦斯·许联名，以「东方织造之美」为主题推出未来版本内容。\n\n### 设计意图\n\n非遗 + 高定的双重文化资本提升，呼应木偶哥特风的「手工质感」美学。预计是船员时装/船只涂装形式的限定外观。\n\n### 上线节点\n\n**未来版本**（公测首月之后）。\n\n### SEO 关键词\n\n- 遗忘之海 云锦\n- 遣忘之海 劳伦斯许\n- 遗忘之海 非遗联动\n\n---\n\n## 七、线下文旅：海岸线 6 城打卡（7/10–7/26）\n\n### 联动内容\n\n大连、青岛、象山、三亚、汕头、北海 6 个海滨城市的海滩将**还原游戏内场景**：\n\n- 「营地篝火」实景装置\n- 「伟大鼠鼠雕像」打卡点\n\n### 上线节点\n\n**2026.07.10 – 07.26**，公测首周末开始。\n\n### 玩家参与方式\n\n线下打卡，预计有限定周边/预约福利。\n\n---\n\n## 八、线下消费：万达广场（10 城 110 家）\n\n### 联动内容\n\n万达广场限定打卡活动，覆盖 10 个城市、110 家门店。\n\n### 上线节点\n\n公测期（具体日期未公开）。\n\n### 玩家参与方式\n\n线下打卡，预计有限定周边兑换。\n\n---\n\n## 九、线下消费：罗森（开学季）\n\n### 联动内容\n\n罗森便利店限定主题门店、联动周边、食玩产品。\n\n### 上线节点\n\n**开学季**（约 8 月底–9 月初）。\n\n---\n\n## 十、上海交通卡主题周边\n\n### 联动内容\n\n上海交通卡推出遗忘之海主题卡面，全国 300+ 城市通用，配套主题痛车巡游。\n\n### 上线节点\n\n具体日期未公开。\n\n---\n\n## 联动矩阵的 SEO 价值分析\n\n### 第一梯队（高搜索量 + 高竞争）\n\n- **遗忘之海 第五人格联动** —— 同 IP 玩家重合度高\n- **遗忘之海 海绵宝宝** —— 全球 IP 知名度\n- **遗忘之海 小潮院长 / 影月月** —— B 站头部 KOL 流量\n\n### 第二梯队（蓝海词）\n\n- **遗忘之海 Alan Walker / 张韶涵** —— 音乐向长尾\n- **遗忘之海 Ashley Wood / Underverse** —— 艺术 IP 小众但精准\n- **遗忘之海 纽扣眼 / 狂欢之椅** —— 第五人格联动专属词\n\n### 长尾词\n\n- **遗忘之海 云锦 / 劳伦斯许** —— 非遗文化向\n- **遗忘之海 万达 / 罗森 / 海岸线** —— 线下打卡向\n\n---\n\n## 玩家建议：如何规划联动内容\n\n### 优先级排序\n\n1. **第三周必做**：第五人格联动（免费福利高，专属定制内容）\n2. **暑期关注**：海绵宝宝联动（限时机，错过可能没了）\n3. **公测首日领取**：主题曲 MV 完整版（无成本，纯欣赏）\n4. **可选**：Underverse × Ashley Wood 限定角色（如果是免费活动）\n5. **未来版本**：云锦联名时装（如果推出）\n\n### 关注官方渠道\n\n- 官网：[sea.163.com](https://sea.163.com)\n- B 站官方账号\n- 官方微博\n- TapTap 官方论坛\n\n---\n\n## 总结：联动矩阵的战略意义\n\n遗忘之海公测版本的联动矩阵覆盖 6 大类、10+ 对象，是 2026 年国产网络游戏里**联动规模最大的项目之一**。这反映了网易对该项目的战略级投入——通过多维度 IP 联动：\n\n1. **破圈引流**：第五人格（自家 IP）、海绵宝宝（全球 IP）覆盖不同玩家群体\n2. **品牌建设**：Alan Walker、Ashley Wood、劳伦斯·许提升品牌格调\n3. **线下渗透**：海岸线 + 万达 + 罗森覆盖日常生活场景\n4. **UGC 催化**：小潮院长 + 影月月 + 逐浪计划（[详见专题页](/zh/sea/guides/wave-chaser-program-guide)）引爆 B 站二创\n\n对玩家而言，这是好消息——大量免费/低成本联动内容将持续供给到 2026 年下半年。\n\n## 相关阅读\n\n- [公测完整指南](/zh/sea/guides/launch-day-guide) —— 公测 7/9 上线时间表\n- [云捏脸前置玩法](/zh/sea/guides/cloud-face-sculpt-guide) —— 公测前就能玩的内容\n- [逐浪计划创作者扶持](/zh/sea/guides/wave-chaser-program-guide) —— 5000 万 UP 主扶持基金",
-    "contentEn": "## Collaboration Roadmap\n\nSea of Remnants has a broad month-one and post-launch collaboration plan. For players, the most important point is resource timing: do not spend every pull or premium currency in the first days if a week-three collaboration window may change priorities.\n\nThis page will be updated as official collaboration names, rewards, banners, and event rules are confirmed.",
-    "faq": [
-      {
-        "question": "When does the Identity V crossover launch in Sea of Remnants?",
-        "questionZh": "遗忘之海第五人格联动什么时候上线？",
-        "answer": "Identity V crossover launches in the 3rd week after PC public beta (around July 23, 2026). Free content includes Traveler 'button-eye' facial customization, Chair of狂欢 furniture, and '不解' photo action. Same Joker Studio IP, so likely all free via events.",
-        "answerZh": "第五人格联动在 PC 端公测第三周上线（约 2026 年 7 月 23 日前后）。免费内容包括旅人「纽扣眼」五官定制、狂欢之椅家具、拍照动作「不解」。同为 Joker 工作室自家 IP，预计全部通过活动免费获取。"
-      },
-      {
-        "question": "When does SpongeBob crossover launch?",
-        "questionZh": "遗忘之海海绵宝宝联动什么时候上？",
-        "answer": "Summer 2026 (after launch month, exact date not yet announced). SpongeBob, Patrick, Squidward, and Mr. Krabs appear in Orbtopia; Krusty Krab branch lands in the harbor as a new scene.",
-        "answerZh": "2026 年暑期上线（公测首月之后，具体日期官方暂未公布）。海绵宝宝、派大星、章鱼哥、蟹老板登场奥托皮亚，蟹堡王分店作为新场景落户海港。"
-      },
-      {
-        "question": "Which KOLs are collaborating with Sea of Remnants?",
-        "questionZh": "遗忘之海联动了哪些 UP 主？",
-        "answer": "Two Bilibili top creators as livestream guests: 小潮院长 (Xiao Chao Yuan Zhang) and 你的影月月 (Ni De Ying Yue Yue). They appeared in the 'design your own monster' segment. 影月月 also posted a May 28 pre-release video building hype.",
-        "answerZh": "两位 B 站头部 UP 主作为直播嘉宾登场：小潮院长 + 你的影月月。两人合作了「策划你先打自己设计的怪物！」整活切片。影月月此前在 5/28 已发过预热视频「影月月玩遗忘之海三测，发现自己 ID 全被抢！」。"
-      },
-      {
-        "question": "Are the collaborations free or paid?",
-        "questionZh": "遗忘之海联动内容要钱吗？",
-        "answer": "Most collaboration content appears free: Identity V crossover (same studio IP, likely free via events), KOL collabs (pure content), music MV (free to watch). SpongeBob / Ashley Wood collaborations may include paid cosmetics via Trade Market, but no official confirmation yet.",
-        "answerZh": "大部分联动内容预计免费：第五人格联动（同工作室 IP，预计通过活动免费获取）、KOL 联动（纯内容向）、主题曲 MV（免费观看）。海绵宝宝 / Ashley Wood 联动可能包含付费外观（通过贸易场用「好金砖」换），但官方尚未明确。"
-      },
-      {
-        "question": "What is the theme song of Sea of Remnants?",
-        "questionZh": "遗忘之海主题曲是谁唱的？",
-        "answer": "Theme song is produced by Alan Walker (music) featuring Angela Chang (张韶涵, vocals). MV preview premiered during the June 26 livestream; full version expected with the July 9 launch.",
-        "answerZh": "主题曲由 Alan Walker 编曲制作，张韶涵（人声）演唱。MV 预告片在 6/26 直播首播，完整版预计随 7/9 公测同步发布。"
-      },
-      {
-        "question": "Where can I find offline Sea of Remnants events?",
-        "questionZh": "遗忘之海有哪些线下活动？",
-        "answer": "Coastline cultural tourism events at 6 cities (Dalian, Qingdao, Xiangshan, Sanya, Shantou, Beihai) from July 10-26, replicating in-game scenes like 'camp bonfire' and 'Great Hamster Statue'. Wanda Plaza events in 10 cities (110 stores) during launch period. Lawson themed stores in back-to-school season.",
-        "answerZh": "海岸线文旅打卡：大连、青岛、象山、三亚、汕头、北海 6 城海滩（7/10–7/26），还原游戏内「营地篝火」「伟大鼠鼠雕像」。万达广场限定打卡：10 城 110 家门店（公测期）。罗森主题门店：开学季。"
       }
     ]
   },
@@ -1128,40 +1180,6 @@
     ]
   },
   {
-    "id": "open-beta-version-center",
-    "title": "《遗忘之海》公测版本中心 — 7月9日PC公测与首月更新",
-    "titleEn": "Sea of Remnants Open Beta Version Center — July 9 PC Launch and First-Month Updates",
-    "category": "version",
-    "categoryZh": "版本中心",
-    "categoryEn": "Version",
-    "summary": "汇总《遗忘之海》2026年7月9日PC公测、移动端7月内上线、三端互通、首月新海域、新船员、系统玩法和公测福利。",
-    "summaryEn": "Tracks the July 9, 2026 PC open beta, mobile launch window, cross-platform progress, new sea regions, crews, systems, and launch rewards.",
-    "tags": [
-      "公测",
-      "版本",
-      "7月9日",
-      "移动端",
-      "Version",
-      "Launch"
-    ],
-    "content": "## 公测时间与平台\n\n《遗忘之海》PC端公测定档 **2026年7月9日**，移动端预计在7月内上线。官方前瞻信息提到PC与移动端会围绕三端互通体验展开，账号进度、开荒节奏和兑换码领取需要以正式上线后的游戏内公告为准。\n\n## 首月重点内容\n\n| 模块 | 公测信息 | Gachia跟进 |\n|------|---------|-----------|\n| 海域 | 白沙海、渡桥海首批开放，隐秘海预计7月底解锁 | 建立海区攻略、材料点与BOSS坐标页 |\n| 船员 | 首月20+船员，茉莉限时UP，黑格为赛季船员 | 角色页补充获取方式、UP状态、所属船队 |\n| 船队 | 蓝波乐队、破晓者、黑男爵、妄想剧团、流浪号 | 增加船队标签与组队筛选 |\n| 系统 | 记忆重逢、记忆共鸣、噩梦深潜、大漩涡、交易行 | 拆分机制指南与收益规划 |\n| 福利 | 公测100抽、新手40抽黑券保底、前瞻直播码 | 兑换码页每日巡检 |\n\n## 新海域与BOSS\n\n公测前瞻重点提到白沙海、渡桥海，以及7月底开放的隐秘海。已知高关注目标包括海上霸主猩红女爵，以及疯老头穆雷、猩猩与海盗团、鬼新娘等BOSS。Gachia会优先记录出现海域、阶段机制、推荐队伍和掉落物。\n\n## 数据状态\n\n本文为公测前瞻整合页，最后更新：2026-07-01。所有数值、开放时间和奖励以官方正式公告及游戏内实装为准。",
-    "contentEn": "## Launch Time and Platforms\n\nSea of Remnants PC open beta is scheduled for **July 9, 2026**, with mobile expected later in July. Cross-platform progress details should be confirmed against official launch announcements and in-game notices.\n\n## First-Month Highlights\n\n| Module | Launch Info | Gachia Coverage |\n|------|---------|-----------|\n| Regions | White Sand Sea and Bridge Sea at launch; Hidden Sea expected in late July | Sea-region guides, material points, boss coordinates |\n| Crews | 20+ launch-month crews, Molly limited UP, Heige as season crew | Obtain method, UP status, fleet tags |\n| Fleets | Blue Wave Band, Dawnbringers, Black Baron, Delusion Troupe, Wanderer | Fleet tags and team filters |\n| Systems | Memory Reunion, Memory Resonance, Nightmare Dive, Maelstrom, trade market | System guides and reward planning |\n| Rewards | 100 launch pulls, beginner 40-pull Black Ticket guarantee, preview livestream code | Code tracking and daily checks |\n\n## New Regions and Bosses\n\nThe preview highlighted White Sand Sea, Bridge Sea, and the late-July Hidden Sea. High-interest encounters include the sea overlord Crimson Duchess, Mad Old Murray, the Gorilla Pirate Crew, and Ghost Bride. Gachia will track region, mechanics, teams, and drops.\n\n## Data Status\n\nLast updated: 2026-07-01. Values, timing, and rewards may change at launch; always confirm with official notices and the in-game client.",
-    "faq": [
-      {
-        "question": "When does Sea of Remnants launch on PC?",
-        "questionZh": "遗忘之海PC端什么时候公测？",
-        "answer": "The current launch target is July 9, 2026 for PC open beta. Mobile is expected later in July.",
-        "answerZh": "当前公测节点为2026年7月9日PC端公测，移动端预计7月内上线。"
-      },
-      {
-        "question": "What should Gachia update first for launch?",
-        "questionZh": "Gachia公测前应该优先更新什么？",
-        "answer": "Prioritize the version center, launch rewards and codes, Molly/Heige/Gail/Edward crew entries, Memory Reunion, and the first boss-region guides.",
-        "answerZh": "优先更新版本中心、公测福利与兑换码、茉莉/黑格/盖尔/爱德华角色条目、记忆重逢机制，以及首批BOSS和海区攻略。"
-      }
-    ]
-  },
-  {
     "id": "launch-preview-calendar",
     "title": "《遗忘之海》公测前瞻日历 — 7月9日PC开服与首月更新",
     "titleEn": "Sea of Remnants Launch Preview Calendar — July 9 PC Open Beta and Month 1 Updates",
@@ -1395,6 +1413,72 @@
         "questionZh": "遗忘之海公测送100抽吗？",
         "answer": "Preview information mentioned 100 launch pulls, but the exact claim route and timing should be checked in the live event page.",
         "answerZh": "前瞻信息提到公测100抽，但具体领取路径和时间以正式服活动页为准。"
+      }
+    ]
+  },
+  {
+    "id": "launch-30min-checklist",
+    "title": "《遗忘之海》开服 30 分钟清单",
+    "titleEn": "Sea of Remnants First 30 Minutes Checklist",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "今天开服后最该先做的 5 件事：领福利、确认账号、看 6 选 1、推主线、再开始刷图。",
+    "summaryEn": "The first five actions to take after launch: claim rewards, confirm account details, review the 6-choice selector, push story, then farm.",
+    "tags": [
+      "开服",
+      "清单",
+      "FAQ",
+      "Launch",
+      "Checklist"
+    ],
+    "content": "## 开服 30 分钟清单\n\n1. 先确认账号、服务器和角色名没有填错。\n2. 先把预约礼、邮件礼和七日签到全部领掉。\n3. 先看一眼 6 选 1 黑券船员，不要冲动确认。\n4. 先把主线推到功能解锁节点，再回头整理资源。\n5. 先把画质、帧率和键位调顺，再开始长线刷图。\n\n## 今天最容易踩的坑\n\n- 不要一进游戏就把资源全花掉。\n- 不要在没看 6 选 1 的情况下先锁定主力。\n- 不要忽略 PC / 手机互通和后续移动端上线节点。\n",
+    "contentEn": "## First 30 Minutes Checklist\n\n1. Verify your account, server, and character name.\n2. Claim reservation, mail, and seven-day login rewards.\n3. Review the 6-choice Black Ticket selector before confirming.\n4. Push story until key systems unlock.\n5. Tune graphics, frame rate, and controls before long-term farming.\n\n## Common Mistakes\n\n- Do not spend all launch resources immediately.\n- Do not lock your main build before checking the free selector.\n- Do not forget that PC starts today and mobile follows in July.\n",
+    "faq": [
+      {
+        "question": "What is the single best thing to do first?",
+        "questionZh": "开服后第一件事最该做什么？",
+        "answer": "Claim rewards first, then push the story until core systems unlock. That keeps your launch resources and choices flexible.",
+        "answerZh": "先领奖励，再把主线推到核心系统解锁点。这样资源和选择空间都会更稳。"
+      },
+      {
+        "question": "Should I spend the 6-choice selector right away?",
+        "questionZh": "6 选 1 要不要立刻选？",
+        "answer": "No. Review your early pulls, team gap, and preferred role first. The selector is best used after you know what your account is missing.",
+        "answerZh": "不要立刻定。先看首抽、队伍缺口和你想玩的定位，再决定最划算。"
+      }
+    ]
+  },
+  {
+    "id": "platform-download-guide",
+    "title": "《遗忘之海》平台入口速查：Steam、官方启动器与移动端",
+    "titleEn": "Sea of Remnants Platform Quick Guide: Steam, Launcher, and Mobile",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "今天开服最先要找的入口页：Steam、官方启动器、移动端上线节奏和常见下载问题。",
+    "summaryEn": "The quickest way to find launch access: Steam, the official launcher, mobile timing, and common download issues.",
+    "tags": [
+      "下载",
+      "平台",
+      "入口",
+      "Steam",
+      "Launcher"
+    ],
+    "content": "## 平台入口怎么选\n\n《遗忘之海》今天是 PC 端先行公测。最稳的顺序是：先用 Steam 或官方启动器进 PC，等 7 月内移动端上线后再补手机端。\n\n| 平台 | 适合谁 | 备注 |\n| --- | --- | --- |\n| Steam | 想直接在商店页下载的 PC 玩家 | 适合习惯 Steam 库管理的玩家 |\n| 官方启动器 | 想跟官方活动和公告走的玩家 | 下载、更新和公告会更集中 |\n| iOS | 等移动端的苹果玩家 | 7 月内上线，具体时间以公告为准 |\n| Android | 等移动端的安卓玩家 | 7 月内上线，适合后续日常收菜 |\n\n## 今天下载前先检查\n\n1. 账号是否和预约/活动页面一致。\n2. PC 端磁盘空间是否足够。\n3. 预约礼和邮箱是否已经绑定好。\n4. 是否已经看过 6 选 1 黑券船员说明。\n\n## 常见问题\n\n- 如果 Steam 页面打不开，先切换官方启动器入口。\n- 如果更新慢，先确认磁盘空间和网络稳定性。\n- 如果只想先看内容，今天先上 PC，移动端后续补齐。\n",
+    "contentEn": "## Which Platform Should I Use?\n\nSea of Remnants launches on PC first today. The safest order is to use Steam or the official launcher on PC now, then add mobile once it goes live later in July.\n\n| Platform | Best For | Note |\n| --- | --- | --- |\n| Steam | PC players who prefer store-based downloads | Good for players who manage games through Steam |\n| Official launcher | Players who want official notices and launch events | Keeps downloads, updates, and announcements in one place |\n| iOS | Apple players waiting for mobile | Launches later in July; exact time is announcement-based |\n| Android | Android players waiting for mobile | Launches later in July; useful for daily cleanup later |\n\n## Before You Download\n\n1. Verify your account matches your reservation/event page.\n2. Check that you have enough disk space on PC.\n3. Make sure reservation and mail rewards are already linked.\n4. Review the 6-choice Black Ticket explanation before picking.\n\n## Common Issues\n\n- If Steam is unavailable, use the official launcher.\n- If updates are slow, check disk space and network stability.\n- If you only want to start today, choose PC now and add mobile later.\n",
+    "faq": [
+      {
+        "question": "Where should I download Sea of Remnants first?",
+        "questionZh": "遗忘之海先从哪里下载？",
+        "answer": "Start with Steam or the official launcher on PC today. Mobile comes later in July, so PC is the launch-day path.",
+        "answerZh": "今天先从 Steam 或官方启动器下 PC 版。移动端会在 7 月内上线，所以今天的开服路径是 PC。"
+      },
+      {
+        "question": "Can I wait for mobile and skip PC?",
+        "questionZh": "可以等移动端上线再玩吗？",
+        "answer": "You can, but you will miss the launch-day progression window and early rewards. If launch content matters, PC is the better starting point.",
+        "answerZh": "可以，但你会错过首日进度窗口和早期福利。如果你在意开服内容，PC 更适合作为起点。"
       }
     ]
   }

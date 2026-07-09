@@ -273,6 +273,22 @@ function buildItemFaqs(name: string, gameName: string, typeLabel: string, source
   ];
 }
 
+function buildItemMetaDescription(
+  name: string,
+  gameName: string,
+  typeLabel: string,
+  source: string,
+  charCount: number,
+  locale: SupportedLocale,
+) {
+  const base = locale === 'zh'
+    ? `${name}是${gameName}中的${typeLabel}类材料。${source ? `获取方式：${source}。` : ''}${charCount > 0 ? `共有${charCount}个角色需要此材料用于突破或技能升级。` : '本页整理该材料的用途、掉落来源和获取路径。'}`
+    : locale === 'ja'
+      ? `${name}は${gameName}の${typeLabel}素材です。${source ? `入手方法：${source}。` : ''}${charCount > 0 ? `${charCount}体のキャラクターがこの素材を突破やスキル強化に必要とします。` : 'このページでは用途、入手先、必要キャラを整理しています。'}`
+      : `${name} is a ${typeLabel.toLowerCase()} material in ${gameName}. ${source ? `Source: ${source}.` : ''}${charCount > 0 ? `${charCount} characters require this material for ascension or skill upgrades.` : 'This page covers the material\'s uses, drop sources, and farming paths.'}`;
+  return base.slice(0, 160);
+}
+
 export default async function ItemDetailPage({
   params,
 }: {
@@ -292,11 +308,7 @@ export default async function ItemDetailPage({
   const relatedChars = getCharactersNeedingMaterial(gameId, id);
 
   // Generate descriptive text for SEO
-  const descText = locale === 'zh'
-    ? `${data.name}是${gameName}中的${typeLabel}类材料。${data.source ? '获取方式：' + data.source + '。' : ''}${relatedChars.length > 0 ? '以下角色需要使用此材料进行突破或技能升级。' : '收集足够的材料以强化你的角色。'}`
-    : locale === 'ja'
-      ? `${data.name}は${gameName}の${typeLabel}素材です。${data.source ? '入手方法：' + data.source + '。' : ''}${relatedChars.length > 0 ? '以下のキャラクターがこの素材を必要とします。' : 'キャラを強化するために十分な素材を集めましょう。'}`
-      : `${data.name} is a ${typeLabel.toLowerCase()} material in ${gameName}. ${data.source ? 'Source: ' + data.source + '.' : ''} ${relatedChars.length > 0 ? `${relatedChars.length} character${relatedChars.length > 1 ? 's' : ''} require${relatedChars.length === 1 ? 's' : ''} this material for ascension or skill upgrades.` : 'Collect enough materials to strengthen your characters.'}`;
+  const descText = buildItemMetaDescription(data.name, gameName, typeLabel, data.source, relatedChars.length, locale);
 
   const usageText = locale === 'zh'
     ? `在${gameName}中，${data.name}主要用于角色的等级突破和技能提升。合理安排材料刷取计划，优先满足主C角色的突破需求，可以显著提升队伍整体实力。建议在每天消耗体力时优先考虑角色突破材料的获取。`

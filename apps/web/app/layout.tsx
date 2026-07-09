@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     default: 'Gachia — 多游戏开放世界 Wiki',
     template: '%s | Gachia',
   },
-  description: '一站式二次元开放世界游戏数据库，覆盖原神、崩铁、鸣潮、异环等游戏的角色图鉴、武器数据、攻略百科。',
+  description: '一站式二次元开放世界游戏数据库，收录原神、崩铁、鸣潮、异环、绝区零、归环、遗忘之海、失控进化等游戏的角色图鉴、武器与材料数据、配装推荐、版本攻略和热点入口。',
   metadataBase: new URL('https://gachia.com'),
   openGraph: {
     type: 'website',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Gachia — 多游戏开放世界 Wiki',
-    description: '一站式二次元开放世界游戏数据库，覆盖原神、崩铁、鸣潮、异环等游戏的角色图鉴、武器数据、攻略百科。',
+    description: '一站式二次元开放世界游戏数据库，收录原神、崩铁、鸣潮、异环、绝区零、归环、遗忘之海、失控进化等游戏的角色图鉴、武器与材料数据、配装推荐、版本攻略和热点入口。',
     images: ['/images/og/default.jpg'],
     site: '@gachia',
   },

@@ -1,5 +1,7 @@
 import type { SupportedLocale } from '@gachia/core';
-import rawData from './raw-guides.json';
+import { join } from 'node:path';
+import { loadJson } from '../../load-json';
+const rawData = await loadJson<unknown>(join(process.cwd(), '../../packages/data/games/nte/raw-guides.json'), '/data/nte/raw-guides.json');
 
 // --- NTE Guide Types ---
 

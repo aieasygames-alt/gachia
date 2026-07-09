@@ -8,6 +8,12 @@ const withNextIntl = createNextIntlPlugin('./lib/i18n/request.ts');
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
+  webpack: (config) => {
+    // The content-heavy data and copy modules produce large serialized strings in the webpack cache.
+    // Disabling the disk cache keeps CI/build output quiet and avoids the repeated warning noise.
+    config.cache = false;
+    return config;
+  },
   images: {
     // CRITICAL: Use unoptimized for Cloudflare Workers compatibility
     // Cloudflare Workers doesn't support Sharp-based image optimization

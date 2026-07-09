@@ -13,9 +13,34 @@ export async function generateMetadata({
 }: {
   params: Promise<{ lang: string; game: string }>;
 }) {
-  const { game } = await params;
-  if (game !== 'nte') return { robots: { index: false, follow: false } };
-  return {};
+  const { lang, game } = await params;
+  const locale = lang as SupportedLocale;
+  const gameId = game as GameId;
+  if (gameId !== 'nte') return { robots: { index: false, follow: false } };
+  const gameName = GAMES.nte.name[locale];
+  const title = locale === 'zh'
+    ? `${gameName}磁盘套装图鉴 — 2件/4件效果与推荐角色`
+    : locale === 'ja'
+      ? `${gameName}ディスクセット図鑑 — 2セット/4セット効果とおすすめキャラ`
+      : `${gameName} Disk Sets — 2pc/4pc Effects, Recommended Users & Build Notes`;
+  const description = locale === 'zh'
+    ? '异环磁盘套装图鉴，整理2件套与4件套效果、元素倾向、推荐角色和配装思路，帮助你快速判断哪些套装值得优先刷取。'
+    : locale === 'ja'
+      ? '異環のディスクセット図鑑。2セット・4セット効果、属性傾向、おすすめキャラ、ビルド方針を整理し、優先して周回すべきセットを判断できます。'
+      : 'Neverness to Everness disk set guide with 2pc and 4pc effects, element fit, recommended characters, and build notes so you can decide what to farm first.';
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `https://gachia.com/${locale}/nte/disk-sets`,
+      languages: {
+        'zh-Hans': `https://gachia.com/zh/nte/disk-sets`,
+        en: `https://gachia.com/en/nte/disk-sets`,
+        ja: `https://gachia.com/ja/nte/disk-sets`,
+        'x-default': `https://gachia.com/zh/nte/disk-sets`,
+      },
+    },
+  };
 }
 
 export default async function DiskSetsPage({

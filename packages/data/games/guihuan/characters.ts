@@ -1,7 +1,7 @@
 import type { SupportedLocale, Character } from '@gachia/core';
 import type { GuihuanCharacter } from './types';
-import { localeStr } from './types';
 import rawCharacters from './raw-characters.json';
+import { localeStr } from './types';
 
 const allCharacters: GuihuanCharacter[] = rawCharacters as unknown as GuihuanCharacter[];
 

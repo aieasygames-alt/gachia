@@ -1,13 +1,37 @@
-import Link from 'next/link';
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { zzzDriveDiscs, getZzzDriveDiscName, getZzzDriveDiscDesc2pc, getZzzDriveDiscDesc4pc } from '@gachia/data/games/zzz/drive-discs';
 import { getZzzCharacterName, getZzzCharacterById } from '@gachia/data/games/zzz/characters';
+import { Link } from '@/lib/i18n/navigation';
 
 const ELEMENT_COLORS: Record<string, string> = {
   physical: '#9ca3af', fire: '#ef4444', ice: '#67e8f9', electric: '#8b5cf6', ether: '#ec4899',
   'auric-ink': '#d4a017', 'honed-edge': '#c0c0c0', wind: '#6ee7b7',
 };
+
+type NextStepLink = {
+  href: string;
+  label: Record<SupportedLocale, string>;
+  description: Record<SupportedLocale, string>;
+};
+
+const ZZZ_DRIVE_DISC_NEXT_STEPS: NextStepLink[] = [
+  {
+    href: '/zzz/version',
+    label: { zh: '先看 3.0 专题', en: 'Start with v3.0 hub', ja: 'まずv3.0特集へ' },
+    description: { zh: '版本重点、福利和热词先看一遍', en: 'Review the version focus, rewards, and hot topics', ja: '版本重点、報酬、注目トピックを確認', },
+  },
+  {
+    href: '/zzz/characters',
+    label: { zh: '继续看代理人图鉴', en: 'Browse agents', ja: '代理人図鑑へ' },
+    description: { zh: '按代理人反查驱动盘毕业方向', en: 'See which agents want which disc sets', ja: '代理人ごとの完成形を確認', },
+  },
+  {
+    href: '/zzz/weapons',
+    label: { zh: '再看音擎图鉴', en: 'Browse W-Engines', ja: '音擎図鑑へ' },
+    description: { zh: '把音擎和驱动盘一起配起来看', en: 'Pair W-Engines with disc planning', ja: '音擎とディスクの組み合わせを確認', },
+  },
+];
 
 export async function generateMetadata({
   params,
@@ -95,6 +119,8 @@ export default async function DriveDiscsPage({
           </div>
         </section>
       )}
+
+      <NextStepStrip locale={locale} links={ZZZ_DRIVE_DISC_NEXT_STEPS} />
     </div>
   );
 }
@@ -106,7 +132,7 @@ function DriveDiscCard({ dd, locale }: { dd: typeof zzzDriveDiscs[number]; local
     <div className="rounded-lg border border-game-border bg-game-surface p-4">
       <div className="mb-2 flex items-center gap-2">
         <h3 className="font-semibold text-game-text">
-          <Link href={`/${locale}/zzz/drive-discs/${dd.id}`} className="transition-colors hover:text-game-accent">
+          <Link href={`/zzz/drive-discs/${dd.id}`} className="transition-colors hover:text-game-accent">
             {getZzzDriveDiscName(dd, locale)}
           </Link>
         </h3>
@@ -125,7 +151,7 @@ function DriveDiscCard({ dd, locale }: { dd: typeof zzzDriveDiscs[number]; local
           {dd.characters.slice(0, 6).map((charId) => {
             const char = getZzzCharacterById(charId);
             return char ? (
-              <Link key={charId} href={`/${locale}/zzz/characters/${charId}`}
+              <Link key={charId} href={`/zzz/characters/${charId}`}
                 className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary transition-colors hover:text-game-accent">
                 {getZzzCharacterName(char, locale)}
               </Link>
@@ -135,5 +161,33 @@ function DriveDiscCard({ dd, locale }: { dd: typeof zzzDriveDiscs[number]; local
         </div>
       )}
     </div>
+  );
+}
+
+function NextStepStrip({ locale, links }: { locale: SupportedLocale; links?: NextStepLink[] }) {
+  if (!links?.length) return null;
+
+  return (
+    <section className="mb-8">
+      <h2 className="mb-3 text-base font-semibold text-game-text">
+        {locale === 'zh' ? '继续往下看' : locale === 'ja' ? '次に見る' : 'Next steps'}
+      </h2>
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {links.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href as '/'}
+            className="group rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary"
+          >
+            <h3 className="mb-1 text-sm font-semibold text-game-text group-hover:text-game-primary">
+              {link.label[locale]}
+            </h3>
+            <p className="text-xs text-game-text-muted line-clamp-2">
+              {link.description[locale]}
+            </p>
+          </Link>
+        ))}
+      </div>
+    </section>
   );
 }

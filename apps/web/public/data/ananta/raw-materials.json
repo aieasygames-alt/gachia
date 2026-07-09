@@ -1,0 +1,182 @@
+[
+  {
+    "id": "novice-trigger-guide",
+    "name": "初级触发者指南",
+    "nameEn": "Novice Trigger Guide",
+    "type": "guide",
+    "rarity": 1,
+    "source": "A.C.D.训练课程、世界探索、异能交易所",
+    "sourceEn": "A.C.D. training courses, world exploration, Esper Exchange"
+  },
+  {
+    "id": "advanced-trigger-guide",
+    "name": "进阶触发者指南",
+    "nameEn": "Advanced Trigger Guide",
+    "type": "guide",
+    "rarity": 2,
+    "source": "材料合成、A.C.D.高级课程、世界探索",
+    "sourceEn": "Material crafting, A.C.D. advanced courses, world exploration"
+  },
+  {
+    "id": "elite-trigger-guide",
+    "name": "精英触发者指南",
+    "nameEn": "Elite Trigger Guide",
+    "type": "guide",
+    "rarity": 3,
+    "source": "材料合成、精英异常域挑战、异能交易所",
+    "sourceEn": "Material crafting, Elite Anomaly Domain challenges, Esper Exchange"
+  },
+  {
+    "id": "faint-chaos-shard",
+    "name": "微光混沌碎片",
+    "nameEn": "Faint Chaos Shard",
+    "type": "chaos-exp",
+    "rarity": 1,
+    "source": "异常域探索、每日调查任务、世界探索",
+    "sourceEn": "Anomaly Domain exploration, daily investigation tasks, world exploration"
+  },
+  {
+    "id": "glowing-chaos-shard",
+    "name": "辉光混沌碎片",
+    "nameEn": "Glowing Chaos Shard",
+    "type": "chaos-exp",
+    "rarity": 2,
+    "source": "材料合成、异常域探索、每日调查任务",
+    "sourceEn": "Material crafting, Anomaly Domain exploration, daily investigation tasks"
+  },
+  {
+    "id": "radiant-chaos-shard",
+    "name": "耀光混沌碎片",
+    "nameEn": "Radiant Chaos Shard",
+    "type": "chaos-exp",
+    "rarity": 3,
+    "source": "材料合成、高级异常域挑战",
+    "sourceEn": "Material crafting, Advanced Anomaly Domain challenges"
+  },
+  {
+    "id": "nova-coin",
+    "name": "新都市币",
+    "nameEn": "Nova Coin",
+    "type": "currency",
+    "rarity": 1,
+    "source": "任务奖励、调查任务、异常域探索",
+    "sourceEn": "Quest rewards, investigation tasks, Anomaly Domain exploration"
+  },
+  {
+    "id": "anomaly-crystal",
+    "name": "异常结晶",
+    "nameEn": "Anomaly Crystal",
+    "type": "ascension",
+    "rarity": 3,
+    "source": "异常域Boss挑战、异能交易所",
+    "sourceEn": "Anomaly Domain Boss challenges, Esper Exchange"
+  },
+  {
+    "id": "pure-anomaly-crystal",
+    "name": "纯净异常结晶",
+    "nameEn": "Pure Anomaly Crystal",
+    "type": "ascension",
+    "rarity": 4,
+    "source": "高级异常域Boss挑战、材料合成",
+    "sourceEn": "Advanced Anomaly Domain Boss challenges, material crafting"
+  },
+  {
+    "id": "pristine-anomaly-core",
+    "name": "原初异常核心",
+    "nameEn": "Pristine Anomaly Core",
+    "type": "ascension",
+    "rarity": 5,
+    "source": "周常异常域Boss、材料合成",
+    "sourceEn": "Weekly Anomaly Domain Boss, material crafting"
+  },
+  {
+    "id": "urban-spirit-fragment",
+    "name": "都市灵能碎片",
+    "nameEn": "Urban Spirit Fragment",
+    "type": "skill-material",
+    "rarity": 2,
+    "source": "都市调查任务、异常域探索",
+    "sourceEn": "Urban investigation tasks, Anomaly Domain exploration"
+  },
+  {
+    "id": "urban-spirit-crystal",
+    "name": "都市灵能结晶",
+    "nameEn": "Urban Spirit Crystal",
+    "type": "skill-material",
+    "rarity": 3,
+    "source": "材料合成、高级都市调查任务",
+    "sourceEn": "Material crafting, advanced urban investigation tasks"
+  },
+  {
+    "id": "chaos-tainted-fang",
+    "name": "混沌侵蚀之牙",
+    "nameEn": "Chaos-Tainted Fang",
+    "type": "boss-material",
+    "rarity": 3,
+    "source": "混沌裂隙Boss挑战",
+    "sourceEn": "Chaos Rift Boss challenges"
+  },
+  {
+    "id": "surge-conductor",
+    "name": "涌流导体",
+    "nameEn": "Surge Conductor",
+    "type": "boss-material",
+    "rarity": 3,
+    "source": "涌流异常域Boss挑战",
+    "sourceEn": "Surge Anomaly Domain Boss challenges"
+  },
+  {
+    "id": "spark-ember",
+    "name": "火花余烬",
+    "nameEn": "Spark Ember",
+    "type": "boss-material",
+    "rarity": 3,
+    "source": "火花异常域Boss挑战",
+    "sourceEn": "Spark Anomaly Domain Boss challenges"
+  },
+  {
+    "id": "psyche-prism",
+    "name": "精神棱镜",
+    "nameEn": "Psyche Prism",
+    "type": "boss-material",
+    "rarity": 3,
+    "source": "精神异常域Boss挑战",
+    "sourceEn": "Psyche Anomaly Domain Boss challenges"
+  },
+  {
+    "id": "void-essence",
+    "name": "虚空精华",
+    "nameEn": "Void Essence",
+    "type": "boss-material",
+    "rarity": 4,
+    "source": "虚空裂隙周常Boss",
+    "sourceEn": "Void Rift Weekly Boss"
+  },
+  {
+    "id": "bloom-petal",
+    "name": "绽放花瓣",
+    "nameEn": "Bloom Petal",
+    "type": "boss-material",
+    "rarity": 3,
+    "source": "绽放异常域Boss挑战",
+    "sourceEn": "Bloom Anomaly Domain Boss challenges"
+  },
+  {
+    "id": "nova-city-specialty",
+    "name": "新都市特产·霓虹花",
+    "nameEn": "Nova City Specialty: Neon Flower",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "新都市各区采集",
+    "sourceEn": "Gathered in Nova City districts"
+  },
+  {
+    "id": "trigger-permit",
+    "name": "触发者许可",
+    "nameEn": "Trigger Permit",
+    "type": "permit",
+    "rarity": 4,
+    "source": "调查等级奖励、异能交易所",
+    "sourceEn": "Investigation level rewards, Esper Exchange"
+  }
+]

@@ -121,6 +121,12 @@ import { buildGuideJsonLd } from '@/lib/jsonld';
 
 type LocaleMeta = Partial<Record<SupportedLocale, { title: string; description: string }>>;
 
+type NextStepLink = {
+  href: string;
+  label: Record<SupportedLocale, string>;
+  description: Record<SupportedLocale, string>;
+};
+
 const GUIDE_META_OVERRIDES: Record<string, LocaleMeta> = {
   'genshin/banner-schedule-guide': {
     en: {
@@ -191,6 +197,133 @@ const GUIDE_META_OVERRIDES: Record<string, LocaleMeta> = {
       title: '异环 Boss 弱点攻略：全 Boss 打法、掉落与配队',
       description: '整理异环 Boss 弱点、破盾克制、攻击模式、推荐阵容、周本掉落和刷取优先级，适合快速通关和材料规划。',
     },
+  },
+};
+
+const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> = {
+  zzz: {
+    'v3-0-version-guide': [
+      {
+        href: '/zzz/version',
+        label: { zh: '去 3.0 版本专题', en: 'Open v3.0 hub', ja: 'v3.0特集へ' },
+        description: { zh: '版本总览、福利和热词入口', en: 'Version overview, rewards, and hot topics', ja: 'バージョン概要、報酬、注目トピック' },
+      },
+      {
+        href: '/zzz/guides/meta-teams-v3-guide',
+        label: { zh: '看 3.0 主流配队', en: 'Read meta teams', ja: '編成を見る' },
+        description: { zh: '继续看版本答案队伍思路', en: 'Continue with the best team ideas', ja: '定番編成の考え方へ' },
+      },
+      {
+        href: '/zzz/guides/rupture-specialty-guide',
+        label: { zh: '看突击专精', en: 'Read Rupture guide', ja: 'ラプチャー解説へ' },
+        description: { zh: '补齐新专精与新属性机制', en: 'Learn the new specialty and attribute system', ja: '新専精と新属性を補完', },
+      },
+    ],
+    'meta-teams-v3-guide': [
+      {
+        href: '/zzz/version',
+        label: { zh: '回到版本专题', en: 'Back to version hub', ja: 'バージョン特集へ戻る' },
+        description: { zh: '先确认版本核心词再做配队', en: 'Re-check the version keywords first', ja: 'まず版本キーワードを確認', },
+      },
+      {
+        href: '/zzz/guides/v3-0-version-guide',
+        label: { zh: '看完整版本指南', en: 'Read full version guide', ja: '完全版ガイドを見る' },
+        description: { zh: '先把 3.0 节点补齐', en: 'Fill in the 3.0 nodes first', ja: '3.0ノードを補完', },
+      },
+    ],
+    'rupture-specialty-guide': [
+      {
+        href: '/zzz/characters',
+        label: { zh: '看代理人图鉴', en: 'Open agent roster', ja: '代理人図鑑へ' },
+        description: { zh: '把突击角色和强度先认全', en: 'Identify the key Rupture agents', ja: '主要ラプチャー代理人を確認', },
+      },
+      {
+        href: '/zzz/version',
+        label: { zh: '回到版本专题', en: 'Return to version hub', ja: 'バージョン特集へ戻る' },
+        description: { zh: '版本词和专精词一起看', en: 'Review the version topics together', ja: '版本トピックをまとめて確認', },
+      },
+    ],
+  },
+  wuwa: {
+    'v3-4-version-guide': [
+      {
+        href: '/wuwa/version',
+        label: { zh: '去鸣潮版本专题', en: 'Open WuWa version hub', ja: '鳴潮バージョン特集へ' },
+        description: { zh: '先看版本总览与热词', en: 'Version overview and current hot topics', ja: '版本概要と注目トピック', },
+      },
+      {
+        href: '/wuwa/guides/v3-5-preview-guide',
+        label: { zh: '看 v3.5 前瞻', en: 'Read v3.5 preview', ja: 'v3.5前瞻へ' },
+        description: { zh: '继续看后续版本排期', en: 'Continue into the next version timing', ja: '次版本の流れを確認', },
+      },
+      {
+        href: '/wuwa/guides/roya-frostlands-guide',
+        label: { zh: '看新区域攻略', en: 'Read the region guide', ja: '新区域攻略へ' },
+        description: { zh: '把新地图和养成一起串起来', en: 'Connect the new area with farming', ja: '新マップと育成導線を接続', },
+      },
+    ],
+    'v3-5-preview-guide': [
+      {
+        href: '/wuwa/version',
+        label: { zh: '回到版本专题', en: 'Back to version hub', ja: 'バージョン特集へ戻る' },
+        description: { zh: '先确认当前版本节点', en: 'Confirm the current version node', ja: '現在の版本を確認', },
+      },
+      {
+        href: '/wuwa/guides/v3-4-version-guide',
+        label: { zh: '看 v3.4 版本', en: 'Read v3.4 guide', ja: 'v3.4を見る' },
+        description: { zh: '前一个版本的内容补齐', en: 'Fill in the previous version context', ja: '前版本の文脈を補完', },
+      },
+    ],
+    'roya-frostlands-guide': [
+      {
+        href: '/wuwa/characters',
+        label: { zh: '看角色图鉴', en: 'Open character roster', ja: 'キャラ図鑑へ' },
+        description: { zh: '找适合刷图的角色和配队', en: 'Find suitable characters and teams', ja: '周回向きキャラと編成を確認', },
+      },
+      {
+        href: '/wuwa/version',
+        label: { zh: '回到版本专题', en: 'Return to version hub', ja: 'バージョン特集へ戻る' },
+        description: { zh: '把新地图放回版本节奏里', en: 'Place the new area back in version timing', ja: '新エリアを版本導線に戻す', },
+      },
+    ],
+  },
+  endfield: {
+    'download-install-guide': [
+      {
+        href: '/endfield/version',
+        label: { zh: '去测试专题', en: 'Open test hub', ja: 'テスト特集へ' },
+        description: { zh: '先确认是否在测试阶段', en: 'Check whether the game is in test phase', ja: 'テスト段階か確認', },
+      },
+      {
+        href: '/endfield/guides/combat-system-guide',
+        label: { zh: '看战斗系统', en: 'Read combat guide', ja: '戦闘ガイドへ' },
+        description: { zh: '下载之后直接接战斗理解', en: 'Move straight into combat basics', ja: 'DL後に戦闘理解へ進む', },
+      },
+    ],
+    'combat-system-guide': [
+      {
+        href: '/endfield/version',
+        label: { zh: '回到测试专题', en: 'Back to test hub', ja: 'テスト特集へ戻る' },
+        description: { zh: '确认测试节奏和入口', en: 'Confirm test timing and entry points', ja: 'テスト時期と入口を確認', },
+      },
+      {
+        href: '/endfield/guides/crisis-contract-guide',
+        label: { zh: '看高难攻略', en: 'Read crisis content', ja: '高難度攻略へ' },
+        description: { zh: '把战斗系统接到高难玩法', en: 'Connect combat to high-difficulty content', ja: '戦闘から高難度へ接続', },
+      },
+    ],
+    'crisis-contract-guide': [
+      {
+        href: '/endfield/characters',
+        label: { zh: '看干员图鉴', en: 'Open operator roster', ja: 'オペレーター図鑑へ' },
+        description: { zh: '回头补阵容和职业', en: 'Review roster and roles', ja: '編成と職分を確認', },
+      },
+      {
+        href: '/endfield/version',
+        label: { zh: '回到测试专题', en: 'Return to test hub', ja: 'テスト特集へ戻る' },
+        description: { zh: '继续看测试与下载信息', en: 'Continue with test and download info', ja: 'テストとDL情報へ戻る', },
+      },
+    ],
   },
 };
 
@@ -291,13 +424,14 @@ export async function generateMetadata({
           ? ` — ${gameName}攻略ガイド`
           : ` — ${gameName} Guide`;
     const title = `${guideTitle}${titleSuffix}`;
-    const desc = summary
-      ? summary.slice(0, 160)
+    const baseSummary = summary?.trim() ?? '';
+    const desc = baseSummary.length >= 100
+      ? baseSummary.slice(0, 160)
       : locale === 'zh'
-        ? `${guideTitle}是${gameName}的详细攻略，包含技巧、策略和FAQ。`
+        ? `${guideTitle}是${gameName}的详细攻略，包含技巧、策略、FAQ、版本要点和实战思路，帮助你快速掌握这页最重要的内容。${baseSummary ? ` 额外摘要：${baseSummary}` : ''}`
         : locale === 'ja'
-          ? `${guideTitle}の${gameName}攻略ガイド。Tips、戦略、FAQを掲載。`
-          : `Complete ${guideTitle} guide for ${gameName} with tips, strategies, and FAQ.`;
+          ? `${guideTitle}の${gameName}攻略ガイド。Tips、戦略、FAQ、版本要点、実戦の考え方をまとめ、必要な情報へすぐ進めます。${baseSummary ? ` 補足: ${baseSummary}` : ''}`
+          : `Complete ${guideTitle} guide for ${gameName} with tips, strategies, FAQ, version notes, and practical advice. ${baseSummary ? `Summary: ${baseSummary}` : ''}`;
     return { title, description: desc };
   };
 
@@ -695,6 +829,8 @@ function WuWaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: stri
         </section>
       )}
 
+      <NextStepSection gameId="wuwa" currentSlug={slug} locale={locale} />
+
       <RelatedGuidesSection gameId="wuwa" currentSlug={slug} locale={locale} />
 
       {/* Back */}
@@ -875,6 +1011,8 @@ function ZzzGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
           </div>
         </section>
       )}
+
+      <NextStepSection gameId="zzz" currentSlug={slug} locale={locale} />
 
       <RelatedGuidesSection gameId="zzz" currentSlug={slug} locale={locale} />
 
@@ -1136,6 +1274,8 @@ function EndfieldGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: 
           </div>
         </section>
       )}
+
+      <NextStepSection gameId="endfield" currentSlug={slug} locale={locale} />
 
       <RelatedGuidesSection gameId="endfield" currentSlug={slug} locale={locale} />
 
@@ -1405,6 +1545,35 @@ function RelatedGuidesSection({ gameId, currentSlug, locale }: { gameId: string;
             </Link>
           );
         })}
+      </div>
+    </section>
+  );
+}
+
+function NextStepSection({ gameId, currentSlug, locale }: { gameId: string; currentSlug: string; locale: SupportedLocale }) {
+  const nextSteps = GUIDE_NEXT_STEPS[gameId as GameId]?.[currentSlug];
+  if (!nextSteps?.length) return null;
+
+  return (
+    <section className="mb-6">
+      <h2 className="mb-3 text-base font-semibold text-game-text">
+        {locale === 'zh' ? '下一步去看' : locale === 'ja' ? '次に見るページ' : 'Next Steps'}
+      </h2>
+      <div className="grid gap-3 sm:grid-cols-2">
+        {nextSteps.map((step) => (
+          <Link
+            key={step.href}
+            href={step.href as '/'}
+            className="group rounded-lg border border-game-border bg-game-surface p-3 transition-all hover:border-game-primary"
+          >
+            <h3 className="mb-1 text-sm font-semibold text-game-text group-hover:text-game-primary">
+              {step.label[locale]}
+            </h3>
+            <p className="text-xs text-game-text-muted line-clamp-2">
+              {step.description[locale]}
+            </p>
+          </Link>
+        ))}
       </div>
     </section>
   );

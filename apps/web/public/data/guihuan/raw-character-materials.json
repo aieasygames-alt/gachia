@@ -1,0 +1,1034 @@
+[
+  {
+    "characterId": "chu",
+    "ascensionMaterials": [
+      {
+        "levelRange": "20-40",
+        "materials": [
+          { "id": "radiance-essence", "quantity": 1 },
+          { "id": "fading-whisper", "quantity": 3 },
+          { "id": "faint-spirit-shard", "quantity": 5 },
+          { "quantity": 20000 }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          { "id": "radiance-essence", "quantity": 2 },
+          { "id": "echoing-whisper", "quantity": 3 },
+          { "id": "glowing-spirit-shard", "quantity": 4 },
+          { "quantity": 40000 }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          { "id": "radiance-essence", "quantity": 4 },
+          { "id": "echoing-whisper", "quantity": 5 },
+          { "id": "glowing-spirit-shard", "quantity": 6 },
+          { "quantity": 60000 }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          { "id": "radiance-essence", "quantity": 6 },
+          { "id": "roaring-whisper", "quantity": 4 },
+          { "id": "radiant-spirit-shard", "quantity": 4 },
+          { "quantity": 80000 }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          { "id": "radiance-essence", "quantity": 8 },
+          { "id": "roaring-whisper", "quantity": 6 },
+          { "id": "radiant-spirit-shard", "quantity": 6 },
+          { "id": "mobius-ring-fragment", "quantity": 1 },
+          { "quantity": 120000 }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "2-3",
+        "materials": [
+          { "id": "novice-spirit-guide", "quantity": 3 },
+          { "id": "fading-whisper", "quantity": 3 },
+          { "quantity": 5000 }
+        ]
+      },
+      {
+        "talentLevel": "4-5",
+        "materials": [
+          { "id": "advanced-spirit-guide", "quantity": 3 },
+          { "id": "echoing-whisper", "quantity": 3 },
+          { "quantity": 15000 }
+        ]
+      },
+      {
+        "talentLevel": "6-7",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 2 },
+          { "id": "roaring-whisper", "quantity": 3 },
+          { "quantity": 30000 }
+        ]
+      },
+      {
+        "talentLevel": "8-10",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 4 },
+          { "id": "roaring-whisper", "quantity": 4 },
+          { "id": "time-crystal", "quantity": 1 },
+          { "quantity": 60000 }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "airu",
+    "ascensionMaterials": [
+      {
+        "levelRange": "20-40",
+        "materials": [
+          { "id": "frost-essence", "quantity": 1 },
+          { "id": "fading-whisper", "quantity": 3 },
+          { "id": "faint-spirit-shard", "quantity": 5 },
+          { "quantity": 20000 }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          { "id": "frost-essence", "quantity": 2 },
+          { "id": "echoing-whisper", "quantity": 3 },
+          { "id": "glowing-spirit-shard", "quantity": 4 },
+          { "quantity": 40000 }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          { "id": "frost-essence", "quantity": 4 },
+          { "id": "echoing-whisper", "quantity": 5 },
+          { "id": "glowing-spirit-shard", "quantity": 6 },
+          { "quantity": 60000 }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          { "id": "frost-essence", "quantity": 6 },
+          { "id": "roaring-whisper", "quantity": 4 },
+          { "id": "radiant-spirit-shard", "quantity": 4 },
+          { "quantity": 80000 }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          { "id": "frost-essence", "quantity": 8 },
+          { "id": "roaring-whisper", "quantity": 6 },
+          { "id": "radiant-spirit-shard", "quantity": 6 },
+          { "id": "mobius-ring-fragment", "quantity": 1 },
+          { "quantity": 120000 }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "2-3",
+        "materials": [
+          { "id": "novice-spirit-guide", "quantity": 3 },
+          { "id": "fading-whisper", "quantity": 3 },
+          { "quantity": 5000 }
+        ]
+      },
+      {
+        "talentLevel": "4-5",
+        "materials": [
+          { "id": "advanced-spirit-guide", "quantity": 3 },
+          { "id": "echoing-whisper", "quantity": 3 },
+          { "quantity": 15000 }
+        ]
+      },
+      {
+        "talentLevel": "6-7",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 2 },
+          { "id": "roaring-whisper", "quantity": 3 },
+          { "quantity": 30000 }
+        ]
+      },
+      {
+        "talentLevel": "8-10",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 4 },
+          { "id": "roaring-whisper", "quantity": 4 },
+          { "id": "time-crystal", "quantity": 1 },
+          { "quantity": 60000 }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "mingzhe",
+    "ascensionMaterials": [
+      {
+        "levelRange": "20-40",
+        "materials": [
+          { "id": "flame-essence", "quantity": 1 },
+          { "id": "fading-whisper", "quantity": 3 },
+          { "id": "faint-spirit-shard", "quantity": 5 },
+          { "quantity": 20000 }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          { "id": "flame-essence", "quantity": 2 },
+          { "id": "echoing-whisper", "quantity": 3 },
+          { "id": "glowing-spirit-shard", "quantity": 4 },
+          { "quantity": 40000 }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          { "id": "flame-essence", "quantity": 4 },
+          { "id": "echoing-whisper", "quantity": 5 },
+          { "id": "glowing-spirit-shard", "quantity": 6 },
+          { "quantity": 60000 }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          { "id": "flame-essence", "quantity": 6 },
+          { "id": "roaring-whisper", "quantity": 4 },
+          { "id": "radiant-spirit-shard", "quantity": 4 },
+          { "quantity": 80000 }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          { "id": "flame-essence", "quantity": 8 },
+          { "id": "roaring-whisper", "quantity": 6 },
+          { "id": "radiant-spirit-shard", "quantity": 6 },
+          { "id": "mobius-ring-fragment", "quantity": 1 },
+          { "quantity": 120000 }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "2-3",
+        "materials": [
+          { "id": "novice-spirit-guide", "quantity": 3 },
+          { "id": "fading-whisper", "quantity": 3 },
+          { "quantity": 5000 }
+        ]
+      },
+      {
+        "talentLevel": "4-5",
+        "materials": [
+          { "id": "advanced-spirit-guide", "quantity": 3 },
+          { "id": "echoing-whisper", "quantity": 3 },
+          { "quantity": 15000 }
+        ]
+      },
+      {
+        "talentLevel": "6-7",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 2 },
+          { "id": "roaring-whisper", "quantity": 3 },
+          { "quantity": 30000 }
+        ]
+      },
+      {
+        "talentLevel": "8-10",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 4 },
+          { "id": "roaring-whisper", "quantity": 4 },
+          { "id": "time-crystal", "quantity": 1 },
+          { "quantity": 60000 }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "heilian",
+    "ascensionMaterials": [
+      {
+        "levelRange": "20-40",
+        "materials": [
+          { "id": "void-essence", "quantity": 1 },
+          { "id": "fading-whisper", "quantity": 3 },
+          { "id": "faint-spirit-shard", "quantity": 5 },
+          { "quantity": 20000 }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          { "id": "void-essence", "quantity": 2 },
+          { "id": "echoing-whisper", "quantity": 3 },
+          { "id": "glowing-spirit-shard", "quantity": 4 },
+          { "quantity": 40000 }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          { "id": "void-essence", "quantity": 4 },
+          { "id": "echoing-whisper", "quantity": 5 },
+          { "id": "glowing-spirit-shard", "quantity": 6 },
+          { "quantity": 60000 }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          { "id": "void-essence", "quantity": 6 },
+          { "id": "roaring-whisper", "quantity": 4 },
+          { "id": "radiant-spirit-shard", "quantity": 4 },
+          { "quantity": 80000 }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          { "id": "void-essence", "quantity": 8 },
+          { "id": "roaring-whisper", "quantity": 6 },
+          { "id": "radiant-spirit-shard", "quantity": 6 },
+          { "id": "mobius-ring-fragment", "quantity": 1 },
+          { "quantity": 120000 }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "2-3",
+        "materials": [
+          { "id": "novice-spirit-guide", "quantity": 3 },
+          { "id": "fading-whisper", "quantity": 3 },
+          { "quantity": 5000 }
+        ]
+      },
+      {
+        "talentLevel": "4-5",
+        "materials": [
+          { "id": "advanced-spirit-guide", "quantity": 3 },
+          { "id": "echoing-whisper", "quantity": 3 },
+          { "quantity": 15000 }
+        ]
+      },
+      {
+        "talentLevel": "6-7",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 2 },
+          { "id": "roaring-whisper", "quantity": 3 },
+          { "quantity": 30000 }
+        ]
+      },
+      {
+        "talentLevel": "8-10",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 4 },
+          { "id": "roaring-whisper", "quantity": 4 },
+          { "id": "time-crystal", "quantity": 1 },
+          { "quantity": 60000 }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "liro",
+    "ascensionMaterials": [
+      {
+        "levelRange": "20-40",
+        "materials": [
+          { "id": "gale-essence", "quantity": 1 },
+          { "id": "fading-whisper", "quantity": 3 },
+          { "id": "faint-spirit-shard", "quantity": 5 },
+          { "quantity": 20000 }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          { "id": "gale-essence", "quantity": 2 },
+          { "id": "echoing-whisper", "quantity": 3 },
+          { "id": "glowing-spirit-shard", "quantity": 4 },
+          { "quantity": 40000 }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          { "id": "gale-essence", "quantity": 4 },
+          { "id": "echoing-whisper", "quantity": 5 },
+          { "id": "glowing-spirit-shard", "quantity": 6 },
+          { "quantity": 60000 }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          { "id": "gale-essence", "quantity": 6 },
+          { "id": "roaring-whisper", "quantity": 4 },
+          { "id": "radiant-spirit-shard", "quantity": 4 },
+          { "quantity": 80000 }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          { "id": "gale-essence", "quantity": 8 },
+          { "id": "roaring-whisper", "quantity": 6 },
+          { "id": "radiant-spirit-shard", "quantity": 6 },
+          { "id": "mobius-ring-fragment", "quantity": 1 },
+          { "quantity": 120000 }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "2-3",
+        "materials": [
+          { "id": "novice-spirit-guide", "quantity": 3 },
+          { "id": "fading-whisper", "quantity": 3 },
+          { "quantity": 5000 }
+        ]
+      },
+      {
+        "talentLevel": "4-5",
+        "materials": [
+          { "id": "advanced-spirit-guide", "quantity": 3 },
+          { "id": "echoing-whisper", "quantity": 3 },
+          { "quantity": 15000 }
+        ]
+      },
+      {
+        "talentLevel": "6-7",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 2 },
+          { "id": "roaring-whisper", "quantity": 3 },
+          { "quantity": 30000 }
+        ]
+      },
+      {
+        "talentLevel": "8-10",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 4 },
+          { "id": "roaring-whisper", "quantity": 4 },
+          { "id": "time-crystal", "quantity": 1 },
+          { "quantity": 60000 }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "yalun",
+    "ascensionMaterials": [
+      {
+        "levelRange": "20-40",
+        "materials": [
+          { "id": "thunder-essence", "quantity": 1 },
+          { "id": "fading-whisper", "quantity": 3 },
+          { "id": "faint-spirit-shard", "quantity": 5 },
+          { "quantity": 20000 }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          { "id": "thunder-essence", "quantity": 2 },
+          { "id": "echoing-whisper", "quantity": 3 },
+          { "id": "glowing-spirit-shard", "quantity": 4 },
+          { "quantity": 40000 }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          { "id": "thunder-essence", "quantity": 4 },
+          { "id": "echoing-whisper", "quantity": 5 },
+          { "id": "glowing-spirit-shard", "quantity": 6 },
+          { "quantity": 60000 }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          { "id": "thunder-essence", "quantity": 6 },
+          { "id": "roaring-whisper", "quantity": 4 },
+          { "id": "radiant-spirit-shard", "quantity": 4 },
+          { "quantity": 80000 }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          { "id": "thunder-essence", "quantity": 8 },
+          { "id": "roaring-whisper", "quantity": 6 },
+          { "id": "radiant-spirit-shard", "quantity": 6 },
+          { "id": "mobius-ring-fragment", "quantity": 1 },
+          { "quantity": 120000 }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "2-3",
+        "materials": [
+          { "id": "novice-spirit-guide", "quantity": 3 },
+          { "id": "fading-whisper", "quantity": 3 },
+          { "quantity": 5000 }
+        ]
+      },
+      {
+        "talentLevel": "4-5",
+        "materials": [
+          { "id": "advanced-spirit-guide", "quantity": 3 },
+          { "id": "echoing-whisper", "quantity": 3 },
+          { "quantity": 15000 }
+        ]
+      },
+      {
+        "talentLevel": "6-7",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 2 },
+          { "id": "roaring-whisper", "quantity": 3 },
+          { "quantity": 30000 }
+        ]
+      },
+      {
+        "talentLevel": "8-10",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 4 },
+          { "id": "roaring-whisper", "quantity": 4 },
+          { "id": "time-crystal", "quantity": 1 },
+          { "quantity": 60000 }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "yaqi",
+    "ascensionMaterials": [
+      {
+        "levelRange": "20-40",
+        "materials": [
+          { "id": "frost-essence", "quantity": 1 },
+          { "id": "fading-whisper", "quantity": 2 },
+          { "id": "faint-spirit-shard", "quantity": 3 },
+          { "quantity": 15000 }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          { "id": "frost-essence", "quantity": 2 },
+          { "id": "echoing-whisper", "quantity": 2 },
+          { "id": "glowing-spirit-shard", "quantity": 3 },
+          { "quantity": 30000 }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          { "id": "frost-essence", "quantity": 3 },
+          { "id": "echoing-whisper", "quantity": 4 },
+          { "id": "glowing-spirit-shard", "quantity": 4 },
+          { "quantity": 45000 }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          { "id": "frost-essence", "quantity": 5 },
+          { "id": "roaring-whisper", "quantity": 3 },
+          { "id": "radiant-spirit-shard", "quantity": 3 },
+          { "quantity": 60000 }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          { "id": "frost-essence", "quantity": 6 },
+          { "id": "roaring-whisper", "quantity": 5 },
+          { "id": "radiant-spirit-shard", "quantity": 5 },
+          { "id": "mobius-ring-fragment", "quantity": 1 },
+          { "quantity": 100000 }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "2-3",
+        "materials": [
+          { "id": "novice-spirit-guide", "quantity": 2 },
+          { "id": "fading-whisper", "quantity": 2 },
+          { "quantity": 3750 }
+        ]
+      },
+      {
+        "talentLevel": "4-5",
+        "materials": [
+          { "id": "advanced-spirit-guide", "quantity": 2 },
+          { "id": "echoing-whisper", "quantity": 2 },
+          { "quantity": 12000 }
+        ]
+      },
+      {
+        "talentLevel": "6-7",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 2 },
+          { "id": "roaring-whisper", "quantity": 2 },
+          { "quantity": 22500 }
+        ]
+      },
+      {
+        "talentLevel": "8-10",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 3 },
+          { "id": "roaring-whisper", "quantity": 3 },
+          { "id": "time-crystal", "quantity": 1 },
+          { "quantity": 45000 }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "zhuque",
+    "ascensionMaterials": [
+      {
+        "levelRange": "20-40",
+        "materials": [
+          { "id": "flame-essence", "quantity": 1 },
+          { "id": "fading-whisper", "quantity": 2 },
+          { "id": "faint-spirit-shard", "quantity": 3 },
+          { "quantity": 15000 }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          { "id": "flame-essence", "quantity": 2 },
+          { "id": "echoing-whisper", "quantity": 2 },
+          { "id": "glowing-spirit-shard", "quantity": 3 },
+          { "quantity": 30000 }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          { "id": "flame-essence", "quantity": 3 },
+          { "id": "echoing-whisper", "quantity": 4 },
+          { "id": "glowing-spirit-shard", "quantity": 4 },
+          { "quantity": 45000 }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          { "id": "flame-essence", "quantity": 5 },
+          { "id": "roaring-whisper", "quantity": 3 },
+          { "id": "radiant-spirit-shard", "quantity": 3 },
+          { "quantity": 60000 }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          { "id": "flame-essence", "quantity": 6 },
+          { "id": "roaring-whisper", "quantity": 5 },
+          { "id": "radiant-spirit-shard", "quantity": 5 },
+          { "id": "mobius-ring-fragment", "quantity": 1 },
+          { "quantity": 100000 }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "2-3",
+        "materials": [
+          { "id": "novice-spirit-guide", "quantity": 2 },
+          { "id": "fading-whisper", "quantity": 2 },
+          { "quantity": 3750 }
+        ]
+      },
+      {
+        "talentLevel": "4-5",
+        "materials": [
+          { "id": "advanced-spirit-guide", "quantity": 2 },
+          { "id": "echoing-whisper", "quantity": 2 },
+          { "quantity": 12000 }
+        ]
+      },
+      {
+        "talentLevel": "6-7",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 2 },
+          { "id": "roaring-whisper", "quantity": 2 },
+          { "quantity": 22500 }
+        ]
+      },
+      {
+        "talentLevel": "8-10",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 3 },
+          { "id": "roaring-whisper", "quantity": 3 },
+          { "id": "time-crystal", "quantity": 1 },
+          { "quantity": 45000 }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "yelan",
+    "ascensionMaterials": [
+      {
+        "levelRange": "20-40",
+        "materials": [
+          { "id": "thunder-essence", "quantity": 1 },
+          { "id": "fading-whisper", "quantity": 2 },
+          { "id": "faint-spirit-shard", "quantity": 3 },
+          { "quantity": 15000 }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          { "id": "thunder-essence", "quantity": 2 },
+          { "id": "echoing-whisper", "quantity": 2 },
+          { "id": "glowing-spirit-shard", "quantity": 3 },
+          { "quantity": 30000 }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          { "id": "thunder-essence", "quantity": 3 },
+          { "id": "echoing-whisper", "quantity": 4 },
+          { "id": "glowing-spirit-shard", "quantity": 4 },
+          { "quantity": 45000 }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          { "id": "thunder-essence", "quantity": 5 },
+          { "id": "roaring-whisper", "quantity": 3 },
+          { "id": "radiant-spirit-shard", "quantity": 3 },
+          { "quantity": 60000 }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          { "id": "thunder-essence", "quantity": 6 },
+          { "id": "roaring-whisper", "quantity": 5 },
+          { "id": "radiant-spirit-shard", "quantity": 5 },
+          { "id": "mobius-ring-fragment", "quantity": 1 },
+          { "quantity": 100000 }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "2-3",
+        "materials": [
+          { "id": "novice-spirit-guide", "quantity": 2 },
+          { "id": "fading-whisper", "quantity": 2 },
+          { "quantity": 3750 }
+        ]
+      },
+      {
+        "talentLevel": "4-5",
+        "materials": [
+          { "id": "advanced-spirit-guide", "quantity": 2 },
+          { "id": "echoing-whisper", "quantity": 2 },
+          { "quantity": 12000 }
+        ]
+      },
+      {
+        "talentLevel": "6-7",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 2 },
+          { "id": "roaring-whisper", "quantity": 2 },
+          { "quantity": 22500 }
+        ]
+      },
+      {
+        "talentLevel": "8-10",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 3 },
+          { "id": "roaring-whisper", "quantity": 3 },
+          { "id": "time-crystal", "quantity": 1 },
+          { "quantity": 45000 }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "suyin",
+    "ascensionMaterials": [
+      {
+        "levelRange": "20-40",
+        "materials": [
+          { "id": "gale-essence", "quantity": 1 },
+          { "id": "fading-whisper", "quantity": 2 },
+          { "id": "faint-spirit-shard", "quantity": 3 },
+          { "quantity": 15000 }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          { "id": "gale-essence", "quantity": 2 },
+          { "id": "echoing-whisper", "quantity": 2 },
+          { "id": "glowing-spirit-shard", "quantity": 3 },
+          { "quantity": 30000 }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          { "id": "gale-essence", "quantity": 3 },
+          { "id": "echoing-whisper", "quantity": 4 },
+          { "id": "glowing-spirit-shard", "quantity": 4 },
+          { "quantity": 45000 }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          { "id": "gale-essence", "quantity": 5 },
+          { "id": "roaring-whisper", "quantity": 3 },
+          { "id": "radiant-spirit-shard", "quantity": 3 },
+          { "quantity": 60000 }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          { "id": "gale-essence", "quantity": 6 },
+          { "id": "roaring-whisper", "quantity": 5 },
+          { "id": "radiant-spirit-shard", "quantity": 5 },
+          { "id": "mobius-ring-fragment", "quantity": 1 },
+          { "quantity": 100000 }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "2-3",
+        "materials": [
+          { "id": "novice-spirit-guide", "quantity": 2 },
+          { "id": "fading-whisper", "quantity": 2 },
+          { "quantity": 3750 }
+        ]
+      },
+      {
+        "talentLevel": "4-5",
+        "materials": [
+          { "id": "advanced-spirit-guide", "quantity": 2 },
+          { "id": "echoing-whisper", "quantity": 2 },
+          { "quantity": 12000 }
+        ]
+      },
+      {
+        "talentLevel": "6-7",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 2 },
+          { "id": "roaring-whisper", "quantity": 2 },
+          { "quantity": 22500 }
+        ]
+      },
+      {
+        "talentLevel": "8-10",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 3 },
+          { "id": "roaring-whisper", "quantity": 3 },
+          { "id": "time-crystal", "quantity": 1 },
+          { "quantity": 45000 }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "guhan",
+    "ascensionMaterials": [
+      {
+        "levelRange": "20-40",
+        "materials": [
+          { "id": "frost-essence", "quantity": 1 },
+          { "id": "fading-whisper", "quantity": 2 },
+          { "id": "faint-spirit-shard", "quantity": 3 },
+          { "quantity": 15000 }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          { "id": "frost-essence", "quantity": 2 },
+          { "id": "echoing-whisper", "quantity": 2 },
+          { "id": "glowing-spirit-shard", "quantity": 3 },
+          { "quantity": 30000 }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          { "id": "frost-essence", "quantity": 3 },
+          { "id": "echoing-whisper", "quantity": 4 },
+          { "id": "glowing-spirit-shard", "quantity": 4 },
+          { "quantity": 45000 }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          { "id": "frost-essence", "quantity": 5 },
+          { "id": "roaring-whisper", "quantity": 3 },
+          { "id": "radiant-spirit-shard", "quantity": 3 },
+          { "quantity": 60000 }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          { "id": "frost-essence", "quantity": 6 },
+          { "id": "roaring-whisper", "quantity": 5 },
+          { "id": "radiant-spirit-shard", "quantity": 5 },
+          { "id": "mobius-ring-fragment", "quantity": 1 },
+          { "quantity": 100000 }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "2-3",
+        "materials": [
+          { "id": "novice-spirit-guide", "quantity": 2 },
+          { "id": "fading-whisper", "quantity": 2 },
+          { "quantity": 3750 }
+        ]
+      },
+      {
+        "talentLevel": "4-5",
+        "materials": [
+          { "id": "advanced-spirit-guide", "quantity": 2 },
+          { "id": "echoing-whisper", "quantity": 2 },
+          { "quantity": 12000 }
+        ]
+      },
+      {
+        "talentLevel": "6-7",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 2 },
+          { "id": "roaring-whisper", "quantity": 2 },
+          { "quantity": 22500 }
+        ]
+      },
+      {
+        "talentLevel": "8-10",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 3 },
+          { "id": "roaring-whisper", "quantity": 3 },
+          { "id": "time-crystal", "quantity": 1 },
+          { "quantity": 45000 }
+        ]
+      }
+    ]
+  },
+  {
+    "characterId": "chenxi",
+    "ascensionMaterials": [
+      {
+        "levelRange": "20-40",
+        "materials": [
+          { "id": "radiance-essence", "quantity": 1 },
+          { "id": "fading-whisper", "quantity": 2 },
+          { "id": "faint-spirit-shard", "quantity": 3 },
+          { "quantity": 15000 }
+        ]
+      },
+      {
+        "levelRange": "40-50",
+        "materials": [
+          { "id": "radiance-essence", "quantity": 2 },
+          { "id": "echoing-whisper", "quantity": 2 },
+          { "id": "glowing-spirit-shard", "quantity": 3 },
+          { "quantity": 30000 }
+        ]
+      },
+      {
+        "levelRange": "50-60",
+        "materials": [
+          { "id": "radiance-essence", "quantity": 3 },
+          { "id": "echoing-whisper", "quantity": 4 },
+          { "id": "glowing-spirit-shard", "quantity": 4 },
+          { "quantity": 45000 }
+        ]
+      },
+      {
+        "levelRange": "60-70",
+        "materials": [
+          { "id": "radiance-essence", "quantity": 5 },
+          { "id": "roaring-whisper", "quantity": 3 },
+          { "id": "radiant-spirit-shard", "quantity": 3 },
+          { "quantity": 60000 }
+        ]
+      },
+      {
+        "levelRange": "70-80",
+        "materials": [
+          { "id": "radiance-essence", "quantity": 6 },
+          { "id": "roaring-whisper", "quantity": 5 },
+          { "id": "radiant-spirit-shard", "quantity": 5 },
+          { "id": "mobius-ring-fragment", "quantity": 1 },
+          { "quantity": 100000 }
+        ]
+      }
+    ],
+    "talentMaterials": [
+      {
+        "talentLevel": "2-3",
+        "materials": [
+          { "id": "novice-spirit-guide", "quantity": 2 },
+          { "id": "fading-whisper", "quantity": 2 },
+          { "quantity": 3750 }
+        ]
+      },
+      {
+        "talentLevel": "4-5",
+        "materials": [
+          { "id": "advanced-spirit-guide", "quantity": 2 },
+          { "id": "echoing-whisper", "quantity": 2 },
+          { "quantity": 12000 }
+        ]
+      },
+      {
+        "talentLevel": "6-7",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 2 },
+          { "id": "roaring-whisper", "quantity": 2 },
+          { "quantity": 22500 }
+        ]
+      },
+      {
+        "talentLevel": "8-10",
+        "materials": [
+          { "id": "elite-spirit-guide", "quantity": 3 },
+          { "id": "roaring-whisper", "quantity": 3 },
+          { "id": "time-crystal", "quantity": 1 },
+          { "quantity": 45000 }
+        ]
+      }
+    ]
+  }
+]

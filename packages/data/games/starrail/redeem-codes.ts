@@ -1,6 +1,8 @@
 import type { SupportedLocale } from '@gachia/core';
 import { localeStr } from './types';
-import rawRedeemCodes from './raw-redeem-codes.json';
+import { join } from 'node:path';
+import { loadJson } from '../../load-json';
+const rawRedeemCodes = await loadJson<unknown>(join(process.cwd(), '../../packages/data/games/starrail/raw-redeem-codes.json'), '/data/starrail/raw-redeem-codes.json');
 
 export interface StarRailRedeemCode {
   code: string;

@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, type ReactNode } from 'react';
 import { GAMES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
+import { NextStepStrip, type NextStepLink } from '@/components/wiki/next-step-strip';
 import {
   genshinCharacters,
   getGenshinCharacterName,
@@ -152,6 +153,59 @@ function t(locale: SupportedLocale, zh: string, en: string, ja?: string) {
   return locale === 'zh' ? zh : locale === 'ja' ? (ja ?? en) : en;
 }
 
+function getBuildNextSteps(gameId: GameId, locale: SupportedLocale): NextStepLink[] {
+  const titles = {
+    characters: { zh: '看角色图鉴', en: 'Browse Characters', ja: 'キャラ図鑑を見る' },
+    weapons: { zh: '看武器图鉴', en: 'Browse Weapons', ja: '武器図鑑を見る' },
+    version: { zh: '看版本更新', en: 'Check Version Updates', ja: '更新情報を見る' },
+  } as const;
+
+  const descriptions = {
+    characters: {
+      zh: '先把角色底池和定位看清，再回到配装页挑最合适的方案。',
+      en: 'Review the roster and roles first, then come back to the build page for the best fit.',
+      ja: 'まずキャラの役割を確認してから、最適なビルドに戻りましょう。',
+    },
+    weapons: {
+      zh: '对照可用武器和替代方案，快速补齐主武器选择。',
+      en: 'Compare available weapons and backups to lock in the best main option.',
+      ja: '候補武器を見比べて、主武器の選択を絞り込みます。',
+    },
+    version: {
+      zh: '如果想看当前版本的角色调整、活动和趋势，这里是下一站。',
+      en: 'For current patch changes, events, and meta shifts, this is the next stop.',
+      ja: '最新パッチの調整、イベント、環境変化を見るならここです。',
+    },
+  } as const;
+
+  return [
+    {
+      href: `/${gameId}/characters`,
+      title: titles.characters,
+      description: descriptions.characters,
+    },
+    {
+      href: `/${gameId}/weapons`,
+      title: titles.weapons,
+      description: descriptions.weapons,
+    },
+    {
+      href: `/${gameId}/version`,
+      title: titles.version,
+      description: descriptions.version,
+    },
+  ];
+}
+
+function withNextSteps(content: ReactNode, locale: SupportedLocale, links: NextStepLink[]) {
+  return (
+    <>
+      {content}
+      <NextStepStrip locale={locale} links={links} />
+    </>
+  );
+}
+
 // --- Resolver helpers ---
 
 function resolveWeapon(build: { bestWeaponEn: string }): GenshinWeapon | null {
@@ -172,13 +226,13 @@ function resolveAltArtifactSet(build: { alternativeArtifactSetEn?: string }): Ge
 // =====================================================================
 
 export function BuildClient({ gameId, locale }: { gameId: GameId; locale: SupportedLocale }) {
-  if (gameId === 'genshin') return <GenshinBuildRecommender locale={locale} />;
-  if (gameId === 'starrail') return <StarRailBuildRecommender locale={locale} />;
-  if (gameId === 'wuwa') return <WuWaBuildRecommender locale={locale} />;
-  if (gameId === 'nte') return <NteBuildRecommender locale={locale} />;
-  if (gameId === 'zzz') return <ZzzBuildRecommender locale={locale} />;
-  if (gameId === 'guihuan') return <GuihuanBuildRecommender locale={locale} />;
-  if (gameId === 'endfield') return <EndfieldBuildRecommender locale={locale} />;
+  if (gameId === 'genshin') return withNextSteps(<GenshinBuildRecommender locale={locale} />, locale, getBuildNextSteps(gameId, locale));
+  if (gameId === 'starrail') return withNextSteps(<StarRailBuildRecommender locale={locale} />, locale, getBuildNextSteps(gameId, locale));
+  if (gameId === 'wuwa') return withNextSteps(<WuWaBuildRecommender locale={locale} />, locale, getBuildNextSteps(gameId, locale));
+  if (gameId === 'nte') return withNextSteps(<NteBuildRecommender locale={locale} />, locale, getBuildNextSteps(gameId, locale));
+  if (gameId === 'zzz') return withNextSteps(<ZzzBuildRecommender locale={locale} />, locale, getBuildNextSteps(gameId, locale));
+  if (gameId === 'guihuan') return withNextSteps(<GuihuanBuildRecommender locale={locale} />, locale, getBuildNextSteps(gameId, locale));
+  if (gameId === 'endfield') return withNextSteps(<EndfieldBuildRecommender locale={locale} />, locale, getBuildNextSteps(gameId, locale));
   return <ComingSoon locale={locale} />;
 }
 

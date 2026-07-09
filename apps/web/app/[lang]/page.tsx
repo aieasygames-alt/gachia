@@ -117,9 +117,9 @@ function getFeaturedChars(gameId: string, locale: SupportedLocale): CharAccessor
 }
 
 const DESCRIPTIONS: Record<string, string> = {
-  zh: '一站式开放世界游戏数据库，覆盖原神、崩铁、鸣潮、异环、绝区零、归环、遗忘之海、失控进化等游戏的角色图鉴、武器数据、攻略百科。',
-  en: 'Multi-game open world wiki covering Genshin Impact, Honkai: Star Rail, Wuthering Waves, Neverness to Everness, Zenless Zone Zero, Guihuan, Sea of Remnants, and Ashfall Evolution.',
-  ja: '原神・スターレイル・鳴潮・NTE・ゼンレスゾーンゼロ・帰環・シー・オブ・レムナンツ・失控進化など、マルチゲームのオープンワールドWikiデータベース。',
+  zh: '一站式开放世界游戏数据库，覆盖原神、崩铁、鸣潮、异环、绝区零、归环、遗忘之海、失控进化等游戏的角色图鉴、武器与材料数据、配装推荐、版本攻略和最新热点入口。',
+  en: 'Multi-game open world wiki covering Genshin Impact, Honkai: Star Rail, Wuthering Waves, Neverness to Everness, Zenless Zone Zero, Guihuan, Sea of Remnants, and Ashfall Evolution, with characters, weapons, materials, builds, and guides.',
+  ja: '原神・スターレイル・鳴潮・NTE・ゼンレスゾーンゼロ・帰環・シー・オブ・レムナンツ・失控進化などをまとめた、キャラ・武器・素材・ビルド・攻略導線を備えるマルチゲームWikiです。',
 };
 
 export async function generateMetadata({

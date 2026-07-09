@@ -6,7 +6,7 @@ async function handler(request: NextRequest) {
   const limited = await checkRateLimit(request, { limit: 20, windowSeconds: 60, prefix: '/api/auth' });
   if (limited) return limited;
 
-  const auth = createAuth();
+  const auth = createAuth(request);
   return auth.handler(request);
 }
 

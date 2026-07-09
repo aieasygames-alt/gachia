@@ -1,5 +1,7 @@
 import { GAMES, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
+import { getDb } from '@/lib/db';
+import { sharedBuilds, eq } from '@gachia/db';
 import { genshinCharacters, getGenshinCharacterName, getGenshinCharacterImage } from '@gachia/data/games/genshin/characters';
 import { starrailCharacters, getStarRailCharacterName, getStarRailCharacterImage } from '@gachia/data/games/starrail/characters';
 import { wuwaCharacters, getWuWaCharacterName, getWuWaCharacterImage } from '@gachia/data/games/wuwa/characters';
@@ -33,18 +35,25 @@ export default async function SharedBuildPage({
     notFound();
   }
 
-  const baseUrl = process.env.BETTER_AUTH_URL || 'https://gachia.com';
-  const res = await fetch(`${baseUrl}/api/shared-builds?id=${id}`, {
-    cache: 'no-store',
-  });
+  const db = getDb();
+  const builds = await db
+    .select()
+    .from(sharedBuilds)
+    .where(eq(sharedBuilds.id, id))
+    .limit(1);
 
-  if (!res.ok) {
+  if (builds.length === 0) {
     notFound();
   }
 
-  const build = await res.json() as { buildData: string | Record<string, unknown>; [key: string]: unknown };
+  const build = builds[0] as { buildData: string | Record<string, unknown>; [key: string]: unknown };
   const gameConfig = GAMES[gameId];
-  const buildData = typeof build.buildData === 'string' ? JSON.parse(build.buildData) : build.buildData;
+  let buildData: Record<string, unknown> | null = null;
+  try {
+    buildData = typeof build.buildData === 'string' ? JSON.parse(build.buildData) : build.buildData;
+  } catch {
+    buildData = null;
+  }
 
   return (
     <div className="container mx-auto px-4 py-8">

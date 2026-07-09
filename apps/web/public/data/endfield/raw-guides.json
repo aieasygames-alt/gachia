@@ -1,0 +1,424 @@
+[
+  {
+    "id": "beginner-guide",
+    "title": "《明日方舟：终末地》新手入门完全指南",
+    "titleEn": "Arknights: Endfield Complete Beginner Guide",
+    "titleJa": "エンドフィールド 初心者向け完全ガイド — 序盤の進め方",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "从零开始了解《明日方舟：终末地》的世界观、战斗系统、干员养成和塔拉探索技巧，帮助新玩家快速上手。",
+    "summaryEn": "Learn everything about Arknights: Endfield's world, combat system, operator raising, and Talos exploration tips from scratch.",
+    "content": "## 欢迎，博士\n\n你已抵达塔拉二号，这个被天灾和源石虫侵袭的边境开拓地。作为罗德岛的驻派博士，你需要带领干员们在这里建立据点、探索未知。\n\n### 基础操作\n\n- **基地建设**: 建造和升级各类设施，生产资源\n- **即时战斗**: 指挥干员进行实时战斗，合理分配部署费用\n- **探索开采**: 在开放世界中采集资源、发现秘境\n\n### 干员职业系统\n\n每个干员拥有独特的职业和战斗风格：\n\n1. **先锋 (Vanguard)** — 快速展开，获取部署费用\n2. **近卫 (Guard)** — 近战输出主力\n3. **重装 (Defender)** — 防御和坦克\n4. **狙击 (Striker)** — 远程元素输出\n5. **术师 (Caster)** — 元素输出\n6. **辅助 (Supporter)** — 团队增益与治疗\n\n### 养成优先级\n\n1. 先提升主C干员等级和技能\n2. 获取适配的武器\n3. 完成开拓任务获取材料\n4. 最后考虑副C和辅助的养成",
+    "contentEn": "## Welcome, Doctor\n\nYou've arrived at Talos II, a frontier development zone ravaged by Catastrophes and Originium creatures. As a dispatched Doctor from Rhodes Island, you must lead operators to establish bases and explore the unknown.\n\n### Basic Controls\n\n- **Base Building**: Construct and upgrade facilities, produce resources\n- **Real-time Combat**: Command operators in real-time battles, manage Deployment Points (DP)\n- **Open World Exploration**: Gather resources, discover secret areas\n\n### Operator Profession System\n\nEach operator has a unique profession and combat style:\n\n1. **Vanguard** — Rapid deployment, DP generation\n2. **Guard** — Melee DPS mainstay\n3. **Defender** — Defense and tanking\n4. **Striker** — Ranged elemental DPS\n5. **Caster** — Elemental DPS\n6. **Supporter** — Team buffs and healing\n\n### Progression Priority\n\n1. Level up your main DPS and skills first\n2. Obtain suitable weapons\n3. Complete development tasks for materials\n4. Then invest in sub-DPS and supports",
+    "tags": [
+      "新手",
+      "入门",
+      "基础",
+      "Beginner",
+      "Basics",
+      "指南"
+    ],
+    "faq": [
+      {
+        "question": "What should I do first in Endfield?",
+        "questionZh": "终末地开局应该做什么？",
+        "answer": "Follow the main story to unlock all features and base facilities, then focus on leveling your main DPS operator.",
+        "answerZh": "跟随主线剧情解锁所有功能和基地设施，然后集中资源提升主C干员的等级。"
+      },
+      {
+        "question": "How does the gacha system work?",
+        "questionZh": "终末地的抽卡系统是怎样的？",
+        "answer": "Endfield features a headhunting (gacha) system for obtaining operators and weapons. Pity system guarantees a 6-star within 100 pulls.",
+        "answerZh": "终末地使用寻访（抽卡）系统获取干员和武器。保底系统在100抽内保证获得六星干员。"
+      }
+    ]
+  },
+  {
+    "id": "download-install-guide",
+    "title": "《明日方舟：终末地》下载安装指南 — 全平台下载地址",
+    "titleEn": "Arknights: Endfield System Requirements & Download Guide — PC, Mobile, Android, iOS",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "提供《明日方舟：终末地》在PC、安卓、iOS平台的下载安装教程和系统配置要求。",
+    "summaryEn": "Arknights: Endfield system requirements for PC, Android, and iOS. Download links, install guide, and troubleshooting for all platforms.",
+    "content": "## 系统配置要求\n\n### PC端\n- 操作系统: Windows 10 64位以上\n- 处理器: Intel i5 / 同等AMD处理器\n- 内存: 8GB RAM\n- 显卡: NVIDIA GTX 1060 6GB\n- 存储空间: 40GB\n\n### 推荐配置\n- 处理器: Intel i7 / AMD Ryzen 7\n- 内存: 16GB RAM\n- 显卡: NVIDIA RTX 3060\n- 存储空间: 40GB SSD\n\n### 移动端\n- 安卓: 骁龙8 Gen 1及以上，6GB RAM\n- iOS: iPhone 12及以上\n\n## 下载方式\n\n1. **PC端**: 前往官网下载客户端\n2. **安卓**: 官网下载APK或Google Play\n3. **iOS**: App Store 搜索「Arknights: Endfield」",
+    "contentEn": "## System Requirements\n\n### PC Minimum\n- **OS**: Windows 10 64-bit or above\n- **CPU**: Intel Core i5-8400 / AMD Ryzen 5 2600\n- **RAM**: 8GB\n- **GPU**: NVIDIA GTX 1060 6GB / AMD Radeon RX 580\n- **Storage**: 40GB\n\n### PC Recommended\n- **CPU**: Intel Core i7-9700 / AMD Ryzen 7 3700X\n- **RAM**: 16GB\n- **GPU**: NVIDIA RTX 3060 / AMD Radeon RX 6600 XT\n- **Storage**: 40GB SSD\n\n### Mobile\n- **Android**: Snapdragon 8 Gen 1+, 6GB RAM, Android 12+\n- **iOS**: iPhone 12 or later, iOS 15.0+\n\n## Download\n\n1. **PC**: Download from the official website\n2. **Android**: Download APK from official site or Google Play\n3. **iOS**: Search 'Arknights: Endfield' on the App Store",
+    "tags": [
+      "下载",
+      "安装",
+      "平台",
+      "Download",
+      "Install"
+    ],
+    "faq": [
+      {
+        "question": "Is Endfield available on all platforms?",
+        "questionZh": "终末地支持哪些平台？",
+        "answer": "Endfield supports PC (Windows), Android, and iOS with cross-save functionality.",
+        "answerZh": "终末地支持PC、安卓和iOS平台，支持跨平台存档互通。"
+      }
+    ]
+  },
+  {
+    "id": "combat-system-guide",
+    "title": "《明日方舟：终末地》战斗系统详解 — 部署费用与干员配合",
+    "titleEn": "Arknights: Endfield Combat System Guide — DP Management & Operator Synergy",
+    "category": "combat",
+    "categoryZh": "战斗攻略",
+    "categoryEn": "Combat",
+    "summary": "深入解析终末地的即时战斗系统，包括部署费用管理、干员切换、元素反应和Boss战策略。",
+    "summaryEn": "In-depth guide to Endfield's real-time combat system, including DP management, operator switching, and boss fight strategies.",
+    "content": "## 战斗系统概述\n\n终末地采用即时战斗系统，区别于原作的塔防模式。玩家需要在开放世界中实时操控干员进行战斗。\n\n### 部署费用 (DP) 系统\n\n- 每个干员的技能消耗DP\n- DP随时间自动恢复\n- 先锋干员可以加速DP获取\n- 合理分配DP是战斗的关键\n\n### 干员切换\n\n- 战斗中可随时切换4名干员\n- 切换时有短暂无敌帧\n- 不同干员之间可以触发连锁技能\n\n### Boss战策略\n\n1. 先用先锋积攒DP\n2. 切换到主C输出\n3. 注意Boss的攻击模式，及时切换到坦克\n4. 在Boss虚弱期全力输出",
+    "contentEn": "## Combat Overview\n\nEndfield features a real-time combat system, different from the original's tower defense. Players directly control operators in open-world battles.\n\n### Deployment Points (DP) System\n\n- Each operator's skill costs DP\n- DP regenerates over time\n- Vanguard operators accelerate DP generation\n- Proper DP allocation is key to combat\n\n### Operator Switching\n\n- Switch between 4 operators freely in combat\n- Brief invincibility frames during switch\n- Different operators can trigger chain skills\n\n### Boss Fight Strategy\n\n1. Start with Vanguard to build DP\n2. Switch to main DPS for damage\n3. Watch boss attack patterns, switch to tank when needed\n4. Full damage during boss vulnerability windows",
+    "tags": [
+      "战斗",
+      "攻略",
+      "Combat",
+      "Guide",
+      "Boss"
+    ],
+    "faq": [
+      {
+        "question": "How does the DP system work in Endfield?",
+        "questionZh": "终末地的DP系统怎么运作？",
+        "answer": "DP (Deployment Points) are consumed when using skills. They regenerate over time and can be accelerated by Vanguard operators.",
+        "answerZh": "DP（部署费用）在使用技能时消耗，会随时间自动恢复，先锋干员可以加速获取。"
+      }
+    ]
+  },
+  {
+    "id": "best-operators-tier-list",
+    "title": "《明日方舟：终末地》干员节奏榜 — 最佳干员推荐",
+    "titleEn": "Arknights: Endfield Operator Tier List — Best Operators Ranked",
+    "titleJa": "エンドフィールド オペレーター Tier List — 最強キャラランキング",
+    "category": "tier-list",
+    "categoryZh": "节奏榜",
+    "categoryEn": "Tier List",
+    "summary": "终末地最新干员强度排行，从SS到B级全面评估，帮助你选择最优的干员培养优先级。",
+    "summaryEn": "Latest Endfield operator ranking from SS to B tier, helping you prioritize which operators to build.",
+    "content": "## SS级干员\n\n### 终管者 (Endministrator)\n- 初始角色，物理近卫天花板\n- 拥有粉碎和控场机制\n- 被动提升全队攻击力\n\n### 米芙 (Mi Fu)\n- 武陵卫队队长，物理近卫巅峰\n- 三段式战技轮换机制\n- 物理易伤+粉碎伤害\n\n### 安德莉亚 (Ardelia)\n- 自然元素治疗辅助\n- 伴生生物「多利先生」协同作战\n- 提供腐蚀和易伤效果\n\n### 烬 (Ember)\n- 热能重装坦克\n- 钢铁誓约骑士团成员\n- 前排承伤+反击输出\n\n### 唐唐 (Tangtang)\n- 冷冻术师，手炮输出\n- 清波寨大当家\n- 米芙的青梅竹马对手\n\n### 莱瓦汀 (Laevatain)\n- 热能狙击，群伤王者\n- 吸收热能附加层数\n- 再燃天赋提供生存保障\n\n## S级干员\n\n### 丽风 (Lifeng)\n- 物理近卫，长枪专精\n- 失去一臂后依然坚强\n- 由大潘指导训练\n\n### 罗西 (Rossi)\n- 物理近卫，剑术精湛\n- 鲁珀族，沃尔夫加德的妹妹\n- 双重物理/热能伤害\n\n### 吉尔伯塔 (Gilberta)\n- 自然辅助，重力源石技艺\n- 极为罕见的重力控制能力\n- 提供大范围艺术易伤\n\n### 边境行者 (Pogranichnik)\n- 物理先锋，SP恢复专家\n- 前钢铁誓约盾卫旗指挥官\n- 热情士气叠加机制",
+    "contentEn": "## SS-Tier Operators\n\n### Endministrator\n- Starting character, top-tier Physical Guard\n- Crush and Crowd Control mechanics\n- Passive boosts team ATK\n\n### Mi Fu\n- Captain of Wuling Watch, peak Physical Guard\n- 3-move battle skill rotation mechanic\n- Physical Susceptibility + Crush DMG\n\n### Ardelia\n- Nature-element healer/supporter\n- Companion creature Mr. Dolly fights alongside\n- Applies Corrode and Susceptibility debuffs\n\n### Ember\n- Heat Defender tank\n- Oathkeeper Knight from the Order of Steel Oath\n- Frontline tanking + counter damage\n\n### Tangtang\n- Cryo Caster with handcannon\n- Supreme Chief of Qingbo Stockade\n- Mi Fu's childhood friend and rival\n\n### Laevatain\n- Heat Striker, mass damage king\n- Absorbs Heat Inflictions for power\n- Re-ignition talent for survivability\n\n## S-Tier Operators\n\n### Lifeng\n- Physical Guard, polearm specialist\n- Persevered after losing an arm\n- Trained by Da Pan\n\n### Rossi\n- Physical Guard, skilled swordswoman\n- Lupo race, Wulfgard's sister\n- Dual Physical/Heat DMG\n\n### Gilberta\n- Nature Supporter, gravity Originium Arts\n- Extremely rare gravity manipulation\n- Large-area Arts Susceptibility\n\n### Pogranichnik\n- Physical Vanguard, SP recovery expert\n- Former Shieldguard Banner commander\n- Fervent Morale stacking mechanic",
+    "tags": [
+      "节奏榜",
+      "Tier List",
+      "排行",
+      "Ranking"
+    ],
+    "faq": [
+      {
+        "question": "Who is the best operator in Endfield?",
+        "questionZh": "终末地最强干员是谁？",
+        "answer": "Endministrator, Mi Fu, and Ardelia are the top 3 operators. Endministrator for Physical DPS, Mi Fu for burst damage, and Ardelia for healing/support.",
+        "answerZh": "终管者、米芙和安德莉亚是前三名。终管者物理输出，米芙爆发伤害，安德莉亚治疗支援。"
+      }
+    ]
+  },
+  {
+    "id": "base-building-guide",
+    "title": "《明日方舟：终末地》基地建设攻略 — 设施优先级与资源管理",
+    "titleEn": "Arknights: Endfield Base Building Guide — Facility Priority & Resource Management",
+    "category": "base",
+    "categoryZh": "基地建设",
+    "categoryEn": "Base Building",
+    "summary": "详解终末地的基地建设系统，包括各类设施的功能、升级优先级和资源管理策略。",
+    "summaryEn": "Detailed guide to Endfield's base building system, including facility functions, upgrade priorities, and resource management strategies.",
+    "content": "## 基地系统概述\n\n终末地的基地是你在塔拉二号的核心据点，通过建设和升级各类设施来生产资源、强化干员。\n\n### 设施类型\n\n1. **制造站** — 生产武器和材料\n2. **贸易站** — 交换资源和物资\n3. **发电站** — 为其他设施供电\n4. **训练室** — 提升干员技能等级\n5. **宿舍** — 恢复干员体力\n\n### 建设优先级\n\n1. 首先升级发电站确保电力供应\n2. 然后升级制造站获取基础材料\n3. 训练室尽早建造以提升战斗力\n4. 贸易站和宿舍后续补充",
+    "contentEn": "## Base System Overview\n\nYour base in Talos II is your central hub, where you build and upgrade facilities to produce resources and strengthen operators.\n\n### Facility Types\n\n1. **Workshop** — Produce weapons and materials\n2. **Trading Post** — Exchange resources\n3. **Power Plant** — Supply power to facilities\n4. **Training Room** — Upgrade operator skills\n5. **Dormitory** — Restore operator stamina\n\n### Build Priority\n\n1. First upgrade Power Plant for energy supply\n2. Then upgrade Workshop for basic materials\n3. Build Training Room early to boost combat power\n4. Trading Post and Dormitory later",
+    "tags": [
+      "基地",
+      "建设",
+      "Base",
+      "Building",
+      "资源"
+    ],
+    "faq": [
+      {
+        "question": "What should I build first in my base?",
+        "questionZh": "基地应该先建什么？",
+        "answer": "Prioritize Power Plant first, then Workshop for materials, and Training Room for skill upgrades.",
+        "answerZh": "优先建造发电站，然后是制造站获取材料，接着是训练室提升技能。"
+      }
+    ]
+  },
+  {
+    "id": "gacha-headhunting-guide",
+    "title": "《明日方舟：终末地》寻访系统攻略 — 保底机制与抽卡建议",
+    "titleEn": "Arknights: Endfield Headhunting Guide — Pity System & Pulling Strategy",
+    "titleJa": "エンドフィールド スカウト（ガチャ）攻略 — 天井・排出率まとめ",
+    "category": "gacha",
+    "categoryZh": "寻访系统",
+    "categoryEn": "Headhunting",
+    "summary": "全面解析终末地的寻访（抽卡）系统，包括保底机制、概率计算和最优抽卡策略。",
+    "summaryEn": "Complete guide to Endfield's headhunting (gacha) system, including pity mechanics, probability calculations, and optimal pulling strategies.",
+    "content": "## 寻访系统概述\n\n终末地使用寻访系统获取干员和武器，保留了一定的保底机制。\n\n### 保底机制\n\n- **软保底**: 50抽后每抽6星概率递增\n- **硬保底**: 100抽必定获得6星干员\n- **定向保底**: 200抽可兑换指定6星干员\n\n### 抽卡建议\n\n1. 优先抽取主C干员\n2. 6星武器可以后续获取\n3. 不要在常驻池浪费太多资源\n4. 限定池的干员强度通常更高\n\n### 资源获取\n\n- 每日任务获得少量寻访凭证\n- 周常任务额外奖励\n- 活动赠送免费抽卡次数",
+    "contentEn": "## Headhunting Overview\n\nEndfield uses a headhunting system to obtain operators and weapons, with pity mechanics.\n\n### Pity System\n\n- **Soft Pity**: 6-star probability increases after 50 pulls\n- **Hard Pity**: Guaranteed 6-star at 100 pulls\n- **Targeted Pity**: Exchange for a specific 6-star at 200 pulls\n\n### Pulling Strategy\n\n1. Prioritize pulling for main DPS operators\n2. 6-star weapons can wait\n3. Don't spend too much on standard banner\n4. Limited banners usually have stronger operators\n\n### Resource Sources\n\n- Daily quests give small amounts of permits\n- Weekly quests for extra rewards\n- Events provide free pulls",
+    "tags": [
+      "寻访",
+      "抽卡",
+      "保底",
+      "Gacha",
+      "Headhunting"
+    ],
+    "faq": [
+      {
+        "question": "What is the pity system in Endfield?",
+        "questionZh": "终末地的保底机制是什么？",
+        "answer": "Hard pity at 100 pulls guarantees a 6-star. At 200 pulls you can exchange for a specific 6-star operator.",
+        "answerZh": "100抽硬保底保证获得六星。200抽可兑换指定六星干员。"
+      }
+    ]
+  },
+  {
+    "id": "elements-reactions-guide",
+    "title": "《明日方舟：终末地》元素与反应机制详解",
+    "titleEn": "Arknights: Endfield Elements & Arts Reactions — Complete Guide",
+    "category": "combat",
+    "categoryZh": "战斗攻略",
+    "categoryEn": "Combat",
+    "summary": "深入解析终末地的5大元素属性（Physical、Heat、Cryo、Nature、Electric）和4种Arts Reaction（Combustion、Electrification、Solidification、Corrosion）机制。",
+    "summaryEn": "Complete guide to Endfield's 5 elements (Physical, Heat, Cryo, Nature, Electric) and 4 Arts Reactions (Combustion, Electrification, Solidification, Corrosion).",
+    "content": "## 元素与反应系统概述\n\n终末地有5种元素属性，每个干员拥有特定元素，决定其伤害类型和可触发的反应。\n\n### 5大元素\n\n1. **Physical (物理)** — 白色伤害，Guard/Defender为主，可造成Crush、Breach等物理状态\n2. **Heat (热能)** — 红色伤害，可施加Heat Infliction，触发Combustion反应\n3. **Cryo (冷冻)** — 青色伤害，可施加Cryo Infliction，触发Solidification反应\n4. **Nature (自然)** — 绿色伤害，可施加Nature Infliction，触发Corrosion反应\n5. **Electric (电击)** — 黄色伤害，可施加Electric Infliction，触发Electrification反应\n\n### Arts Reaction 触发规则\n\n当施加一种元素的Infliction给已有不同元素Infliction的敌人时，两种Infliction被消耗，触发Arts Reaction：\n\n- **叠加元素**（第一个施加的）决定反应的强度/Status Level\n- **触发元素**（第二个施加的）决定反应的类型和元素伤害属性\n\n### 4种Arts Reaction\n\n| 反应 | 触发条件 | 效果 |\n|------|---------|------|\n| Combustion (燃烧) | Heat + 非Heat | Heat DMG + 持续Heat DOT 10秒 |\n| Electrification (感电) | Electric + 非Electric | Electric DMG + 增加受到的Arts DMG |\n| Solidification (凝固) | Cryo + 非Cryo | Cryo DMG + 冻结敌人，可被Shatter消耗 |\n| Corrosion (腐蚀) | Nature + 非Nature | Nature DMG + 降低抗性 15秒 |\n\n### Physical Status 系统\n\nPhysical元素独特之处在于Vulnerable机制：\n- 首次对敌人施加Physical Status时，产生Vulnerable（破盾）\n- 被Lift或Knock Down的Vulnerable敌人可叠加Vulnerable层数（最多4层）\n- 使用Crush或Breach攻击会消耗Vulnerable层数造成额外伤害\n\n### Shatter 反应\n\n当对处于Solidification状态的敌人施加Vulnerable或Physical Status时：\n- 消耗Solidification\n- 造成大量Physical DMG\n\n### 配队建议\n\n- 双元素配队：选择两种元素以触发特定Reaction\n- 热门组合：Heat + Nature（Laevatain），Cryo + Physical（Shatter流）\n- 三元素配队：更具灵活性但需要更多DP管理",
+    "contentEn": "## Elements & Reactions Overview\n\nEndfield features 5 elements. Each operator has a specific element that determines their damage type and available reactions.\n\n### 5 Elements\n\n1. **Physical** — White damage numbers. Primarily Guards and Defenders. Can inflict Crush, Breach, and other Physical Statuses.\n2. **Heat** — Red damage numbers. Applies Heat Infliction, triggers Combustion reaction.\n3. **Cryo** — Cyan damage numbers. Applies Cryo Infliction, triggers Solidification reaction.\n4. **Nature** — Green damage numbers. Applies Nature Infliction, triggers Corrosion reaction.\n5. **Electric** — Yellow damage numbers. Applies Electric Infliction, triggers Electrification reaction.\n\n### Arts Reaction Trigger Rules\n\nWhen applying an element's Infliction to an enemy already affected by a different element's Infliction, both are consumed to trigger an Arts Reaction:\n\n- **Stacking Element** (applied first) determines the reaction's strength/Status Level\n- **Triggering Element** (applied second) determines the reaction type and elemental damage\n\n### 4 Arts Reactions\n\n| Reaction | Trigger | Effect |\n|----------|---------|--------|\n| Combustion | Heat + Non-Heat | Heat DMG + Heat DOT for 10s |\n| Electrification | Electric + Non-Electric | Electric DMG + Increased Arts DMG Taken |\n| Solidification | Cryo + Non-Cryo | Cryo DMG + Freezes enemy, consumable by Shatter |\n| Corrosion | Nature + Non-Nature | Nature DMG + Reduced resistance for 15s |\n\n### Physical Status System\n\nPhysical element has a unique Vulnerable mechanic:\n- First Physical Status application inflicts Vulnerable (broken shield)\n- Vulnerable enemies can be Lifted or Knocked Down to add Vulnerable stacks (up to 4)\n- Using Crush or Breach consumes Vulnerable stacks for extra damage\n\n### Shatter Reaction\n\nWhen applying Vulnerable or a Physical Status to a Solidified enemy:\n- Consumes Solidification\n- Deals massive Physical DMG\n\n### Team Building Tips\n\n- Dual-element teams: Choose two elements for specific Reactions\n- Popular combos: Heat + Nature (Laevatain), Cryo + Physical (Shatter)\n- Triple-element teams: More flexibility but harder DP management",
+    "tags": [
+      "元素",
+      "反应",
+      "Arts Reaction",
+      "Elements",
+      "Heat",
+      "Cryo",
+      "Nature",
+      "Electric",
+      "Physical"
+    ],
+    "faq": [
+      {
+        "question": "What are Arts Reactions in Endfield?",
+        "questionZh": "终末地的Arts Reaction是什么？",
+        "answer": "Arts Reactions are triggered when you apply one element's Infliction to an enemy with a different element's Infliction. Both are consumed to create a powerful elemental reaction with unique effects.",
+        "answerZh": "当对已有不同元素Infliction的敌人施加一种元素的Infliction时，两种都会被消耗，触发具有独特效果的强力元素反应。"
+      },
+      {
+        "question": "What is the best element combo?",
+        "questionZh": "最佳元素组合是什么？",
+        "answer": "It depends on your operators. Heat + Nature (Corrosion + Combustion via Laevatain) and Cryo + Physical (Shatter) are popular choices.",
+        "answerZh": "取决于你的干员。热能+自然（Laevatain的燃烧+腐蚀流）和冷冻+物理（碎冰流）都是热门选择。"
+      }
+    ]
+  },
+  {
+    "id": "damage-formula-guide",
+    "title": "《明日方舟：终末地》伤害计算公式详解",
+    "titleEn": "Arknights: Endfield Damage Formula & Calculation Guide",
+    "titleJa": "エンドフィールド ダメージ計算式まとめ — 火力を最大化する方法",
+    "category": "combat",
+    "categoryZh": "战斗攻略",
+    "categoryEn": "Combat",
+    "summary": "深入解析终末地的伤害计算公式，包括基础伤害、属性加成、抗性计算、暴击、Arts Reaction伤害等。",
+    "summaryEn": "Detailed breakdown of Endfield's damage formula including base damage, stat scaling, resistance, crits, and Arts Reaction damage calculations.",
+    "summaryJa": "エンドフィールドのダメージ計算式を完全解説。基礎ダメージ、ステータス倍率、耐性、クリティカル、Arts Reactionの仕組みを理解して火力を最適化。",
+    "content": "## 伤害类型\n\n终末地有以下伤害类型：\n- **Physical DMG** — 白色数字，受DEF减免\n- **Heat DMG** — 红色数字\n- **Cryo DMG** — 青色数字\n- **Nature DMG** — 绿色数字\n- **Electric DMG** — 黄色数字\n- **Arts DMG** — 元素伤害的统称\n\n## 核心属性\n\n### 6大基础属性\n\n| 属性 | 作用 |\n|------|------|\n| HP | 生命值 |\n| ATK | 攻击力，影响所有伤害 |\n| STR (Strength) | 影响Physical DMG和DEF |\n| AGL (Agility) | 影响CRIT Rate和闪避 |\n| INT (Intellect) | 影响Arts DMG |\n| WIL (Will) | 影响Treatment效果和Ultimate增益 |\n\n### 关键二级属性\n\n- **CRIT Rate** — 基础5%，受AGL和装备影响\n- **CRIT DMG** — 暴击伤害倍率\n- **Arts Intensity** — 每点增加1% Arts DMG\n- **Stagger Efficiency** — 影响失衡效果\n- **DMG Reduction** — 伤害减免\n\n## Arts Reaction 伤害计算\n\n### 初始基础Arts DMG\n\n触发Arts Reaction时的初始伤害受以下因素影响：\n\n1. **等级倍率**: `(195 + 角色等级) / 196` — 每级约增加0.51%\n2. **Arts Intensity倍率**: `(100 + Arts Intensity) / 100` — 每点AI增加1%\n\n### 公式\n\n`最终伤害 = 基础Arts DMG × 等级倍率 × Arts Intensity倍率 × 抗性系数 × 增伤系数`\n\n### Combustion DOT\n\n燃烧反应每秒造成Heat DMG，持续10秒，伤害量受Status Level影响。\n\n## 提升伤害的方法\n\n1. **提升ATK** — 基础乘区\n2. **提升对应属性** — STR(Physical) / INT(Arts) 专属乘区\n3. **Arts Intensity** — Arts DMG独立乘区\n4. **CRIT Rate/DMG** — 暴击乘区\n5. **Arts Reaction** — 反应乘区\n6. **装备套装效果** — 各种专属加成\n7. **降低敌人抗性** — Corrosion等debuff",
+    "contentEn": "## Damage Types\n\nEndfield features the following damage types:\n- **Physical DMG** — White numbers, reduced by DEF\n- **Heat DMG** — Red numbers\n- **Cryo DMG** — Cyan numbers\n- **Nature DMG** — Green numbers\n- **Electric DMG** — Yellow numbers\n- **Arts DMG** — Collective term for elemental damage\n\n## Core Stats\n\n### 6 Base Stats\n\n| Stat | Role |\n|------|------|\n| HP | Health Points |\n| ATK | Attack Power, affects all damage |\n| STR (Strength) | Affects Physical DMG and DEF |\n| AGL (Agility) | Affects CRIT Rate and evasion |\n| INT (Intellect) | Affects Arts DMG |\n| WIL (Will) | Affects Treatment and Ultimate增益 |\n\n### Key Secondary Stats\n\n- **CRIT Rate** — Base 5%, affected by AGL and gear\n- **CRIT DMG** — Critical damage multiplier\n- **Arts Intensity** — Each point increases Arts DMG by 1%\n- **Stagger Efficiency** — Affects stagger effects\n- **DMG Reduction** — Reduces incoming damage\n\n## Arts Reaction Damage Calculation\n\n### Initial Base Arts DMG\n\nThe initial damage from triggering an Arts Reaction is affected by:\n\n1. **Level Multiplier**: `(195 + Operator Level) / 196` — ~0.51% per level\n2. **Arts Intensity Multiplier**: `(100 + Arts Intensity) / 100` — +1% per AI point\n\n### Formula\n\n`Final DMG = Base Arts DMG × Level Multiplier × Arts Intensity Multiplier × Resistance Factor × DMG Bonus Factor`\n\n### Combustion DOT\n\nCombustion deals Heat DMG per second for 10s. Damage amount scales with Status Level.\n\n## Ways to Increase Damage\n\n1. **Increase ATK** — Base multiplier\n2. **Increase relevant stat** — STR (Physical) / INT (Arts) dedicated multiplier\n3. **Arts Intensity** — Independent Arts DMG multiplier\n4. **CRIT Rate/DMG** — Critical multiplier\n5. **Arts Reactions** — Reaction multiplier\n6. **Gear Set effects** — Various dedicated bonuses\n7. **Reduce enemy resistance** — Corrosion and other debuffs",
+    "tags": [
+      "伤害",
+      "公式",
+      "计算",
+      "Damage",
+      "Formula",
+      "Stats",
+      "属性"
+    ],
+    "faq": [
+      {
+        "question": "How does ATK affect damage in Endfield?",
+        "questionZh": "ATK如何影响终末地的伤害？",
+        "answer": "ATK is the base multiplier for all damage types. Skills and reactions scale off ATK. Increasing ATK benefits both Physical and Arts damage.",
+        "answerZh": "ATK是所有伤害类型的基础乘区。技能和反应都以ATK为基础计算。提升ATK同时增加Physical和Arts伤害。"
+      },
+      {
+        "question": "What is Arts Intensity?",
+        "questionZh": "Arts Intensity是什么？",
+        "answer": "Arts Intensity increases Arts DMG by 1% per point. It affects initial Arts Reaction damage and is a key stat for Caster builds.",
+        "answerZh": "每点Arts Intensity增加1%的Arts DMG。它影响Arts Reaction的初始伤害，是术师Build的核心属性。"
+      }
+    ]
+  },
+  {
+    "id": "gear-guide",
+    "title": "《明日方舟：终末地》装备系统与Gear套装选择指南",
+    "titleEn": "Arknights: Endfield Gear System & Best Gear Sets Guide",
+    "category": "equipment",
+    "categoryZh": "装备攻略",
+    "categoryEn": "Equipment",
+    "summary": "详解终末地装备系统，包含22套Gear套装效果一览、最佳套装推荐、装备制作材料和Artificing精炼系统。",
+    "summaryEn": "Complete guide to Endfield's gear system with all 22 gear set effects, best set recommendations, crafting costs, and Artificing upgrade system.",
+    "content": "## 装备系统概述\n\n每个干员可装备4件装备：1件Armor、1双Gloves、2个Kit。装备提供DEF和多种属性加成。\n\n### 装备制作\n\n在Gear Assembly菜单中使用Component材料和Stock Bills制作。大多数配方通过Authority Level解锁。\n\n### 装备等级与材料\n\n| 等级 | 材料 |\n|------|------|\n| 10 | Wood x2, Origocrust x10 |\n| 20 | Amethyst Component x5, Valley Stock Bill x30 |\n| 28 | Amethyst Component x20, Valley Stock Bill x160 |\n| 36 | Ferrium Component x50, Valley Stock Bill x1200 |\n| 50 | Cryston Component x50, Valley Stock Bill x9600 |\n| 70 | Xiranite/Cuprium/Hetonite Component x50, Wuling Stock Bill x8000-25000 |\n\n## 套装效果一览\n\n### SS级套装\n\n1. **Æthertech (源石技艺)** — ATK+8%，施加Vulnerable后Physical DMG+8%/层(4层)，满4层Vulnerable时额外+16%\n2. **Bonekrusha (碎骨者)** — ATK+15%，连携技后下一次战技DMG+30%(2层)\n3. **Pulser Labs (脉冲实验室)** — Arts Intensity+30，Electric/Cryo DMG+50%\n4. **Hot Work (热工)** — Arts Intensity+30，Heat/Nature DMG+50%\n5. **Xiranflow (锡兰流)** — ATK+10%，消耗Electric/Nature反应后DMG+15%/层(3层)\n6. **Grizzled Edge (苍刃)** — ATK+8%，Crush/Breach时Physical DMG+[6%×Vulnerable层数]\n\n### S级套装\n\n- **Aburrey's Legacy** — Skill DMG+24%，三技能类型独立ATK+5%\n- **LYNX** — 治疗+20%，目标获得15-30% DMG Reduction\n- **Swordmancer** — Stagger+20%，Physical Status额外250%ATK伤害\n- **Frontiers** — 连携CDR+15%，SP回复后全队DMG+16%\n- **MI Security** — CRIT+5%，暴击后ATK+5%(5层)，满层额外CRIT+5%\n- **Type 50 Yinglung** — ATK+15%，队友战技触发连携技DMG+20%(3层)\n- **Eternal Xiranite** — HP+1000，施加debuff时队友DMG+16%\n- **Qingbo** — 连携CDR+15%，连携技后Skill DMG+20%(2层)\n- **Tide Surge** — Skill DMG+20%，2层以上Arts Infliction后Arts DMG+35%\n\n## Artificing 精炼系统\n\n解锁条件：完成Wuling City的Gear Artificing任务。\n\n- 消耗一件金色装备和对应的Artificing Catalyst\n- 每个属性最多成功精炼3次（共9次）\n- 使用高基础值材料（Good Match）提高成功率\n- 失败会增加精炼进度，进度满后下次必定成功\n\n## 推荐配装\n\n| 职业 | 推荐套装 |\n|------|----------|\n| Guard (物理) | Æthertech / Grizzled Edge / Swordmancer |\n| Guard (元素) | Tide Surge / Aburrey's Legacy |\n| Striker | Bonekrusha / Type 50 Yinglung / Qingbo |\n| Caster (Heat/Nature) | Hot Work / Xiranflow |\n| Caster (Electric/Cryo) | Pulser Labs |\n| Supporter | LYNX / Eternal Xiranite / Frontiers |\n| Defender | Armored MSGR / Eternal Xiranite |\n| Vanguard | Æthertech / Roving MSGR / Frontiers |",
+    "contentEn": "## Gear System Overview\n\nEach operator can equip 4 gear pieces: 1 Armor, 1 pair of Gloves, and 2 Kits. Gear provides DEF and various stat bonuses.\n\n### Gear Crafting\n\nCraft gear in the Gear Assembly menu using Component materials and Stock Bills. Most recipes unlock through Authority Levels.\n\n### Gear Levels & Costs\n\n| Level | Cost |\n|-------|------|\n| 10 | Wood x2, Origocrust x10 |\n| 20 | Amethyst Component x5, Valley Stock Bill x30 |\n| 28 | Amethyst Component x20, Valley Stock Bill x160 |\n| 36 | Ferrium Component x50, Valley Stock Bill x1200 |\n| 50 | Cryston Component x50, Valley Stock Bill x9600 |\n| 70 | Xiranite/Cuprium/Hetonite Component x50, Wuling Stock Bill x8000-25000 |\n\n## Gear Set Effects\n\n### SS-Tier Sets\n\n1. **Æthertech** — ATK +8%, Physical DMG +8%/stack (4 stacks) on Vulnerability application. Extra +16% at 4 Vulnerability stacks.\n2. **Bonekrusha** — ATK +15%, next battle skill DMG +30% after combo skill (2 stacks).\n3. **Pulser Labs** — Arts Intensity +30, Electric/Cryo DMG +50%.\n4. **Hot Work** — Arts Intensity +30, Heat/Nature DMG +50%.\n5. **Xiranflow** — ATK +10%, Electric/Nature DMG +15%/stack (3 stacks) on reaction consumption.\n6. **Grizzled Edge** — ATK +8%, Physical DMG +[6% × Vulnerable stacks consumed] on Crush/Breach.\n\n### S-Tier Sets\n\n- **Aburrey's Legacy** — Skill DMG +24%, independent ATK +5% from each skill type.\n- **LYNX** — Treatment +20%, targets gain 15-30% DMG Reduction.\n- **Swordmancer** — Stagger +20%, Physical Status triggers 250% ATK bonus hit.\n- **Frontiers** — Combo CDR +15%, team DMG +16% on SP recovery.\n- **MI Security** — CRIT +5%, ATK +5% on crit (5 stacks), extra CRIT +5% at max.\n- **Type 50 Yinglung** — ATK +15%, combo DMG +20%/stack (3 stacks) from team skills.\n- **Eternal Xiranite** — HP +1000, teammates DMG +16% on debuff application.\n- **Qingbo** — Combo CDR +15%, Skill DMG +20%/stack (2 stacks) on combo.\n- **Tide Surge** — Skill DMG +20%, Arts DMG +35% with 2+ Arts Infliction stacks.\n\n## Artificing System\n\nUnlocked by completing the Gear Artificing mission in Wuling City.\n\n- Costs one gold-quality gear + matching Artificing Catalyst\n- Each stat can be successfully upgraded up to 3 times (9 total per piece)\n- Higher base value material (Good Match) increases success rate\n- Failed attempts add Artificing Progress; full progress guarantees next success\n\n## Recommended Sets by Class\n\n| Class | Recommended Sets |\n|-------|-----------------|\n| Guard (Physical) | Æthertech / Grizzled Edge / Swordmancer |\n| Guard (Elemental) | Tide Surge / Aburrey's Legacy |\n| Striker | Bonekrusha / Type 50 Yinglung / Qingbo |\n| Caster (Heat/Nature) | Hot Work / Xiranflow |\n| Caster (Electric/Cryo) | Pulser Labs |\n| Supporter | LYNX / Eternal Xiranite / Frontiers |\n| Defender | Armored MSGR / Eternal Xiranite |\n| Vanguard | Æthertech / Roving MSGR / Frontiers |",
+    "tags": [
+      "装备",
+      "Gear",
+      "套装",
+      "Equipment",
+      "Artificing",
+      "Build"
+    ],
+    "faq": [
+      {
+        "question": "What is the best gear set for Physical DPS?",
+        "questionZh": "物理输出最佳Gear套装是什么？",
+        "answer": "Æthertech is the best for Physical DPS, offering ATK +8% and scaling Physical DMG based on Vulnerability stacks. Grizzled Edge is also excellent for Crush/Breach focused builds.",
+        "answerZh": "Æthertech是物理输出的最佳选择，提供ATK+8%和基于Vulnerable层数的Physical DMG。专注于Crush/Breach的Build也很适合Grizzled Edge。"
+      },
+      {
+        "question": "How does the Artificing system work?",
+        "questionZh": "Artificing精炼系统怎么运作？",
+        "answer": "Artificing lets you upgrade gold gear stats. Each attempt costs one gold gear + a Catalyst. Use higher-value gear as material for better success rates. Each stat can be upgraded 3 times (9 total per piece).",
+        "answerZh": "Artificing可以强化金色装备属性。每次消耗一件金装+Catalyst。使用更高基础值的材料提高成功率。每个属性最多强化3次（每件9次）。"
+      }
+    ]
+  },
+  {
+    "id": "team-building-guide",
+    "title": "《明日方舟：终末地》阵容搭配指南 — 最佳干员组合",
+    "titleEn": "Arknights: Endfield Team Building Guide — Best Operator Compositions",
+    "category": "team",
+    "categoryZh": "阵容",
+    "categoryEn": "Team",
+    "summary": "终末地阵容搭配攻略：元素反应队、物理碎冰队、纯色队构建思路，以及不同模式下的阵容调整建议。",
+    "summaryEn": "Endfield team composition guide: elemental reaction teams, physical Shatter teams, mono-element teams, and mode-specific adjustments.",
+    "content": "## 阵伍构建基础\n\n终末地通常使用4-6名干员的战斗编队，核心思路：\n\n1. **主C** — 核心输出，资源优先投入\n2. **副C** — 补充伤害，触发元素反应\n3. **辅助** — 增益/减抗/控制\n4. **生存** — 治疗/护盾/坦克\n5. **先锋** — 快速展开，获取DP\n\n## 推荐阵容\n\n### 1. 碎冰队（Cryo + Physical）\n\n| 位置 | 干员 | 作用 |\n|------|------|------|\n| 主C | 物理近卫 | 利用Shatter反应打爆发 |\n| 副C | Cryo术师 | 施加Solidification |\n| 辅助 | Nature辅助 | 减抗 |\n| 生存 | Defender | 前排抗压 |\n\n**思路**：Cryo干员先施加Solidification冻结敌人，物理干员触发Shatter造成大量物理伤害。\n\n### 2. 燃烧队（Heat + Nature）\n\n| 位置 | 干员 | 作用 |\n|------|------|------|\n| 主C | Heat狙击 | 持续燃烧输出 |\n| 副C | Laevatain | 触发Combustion |\n| 辅助 | Electric辅助 | 触发Electrification |\n| 生存 | 治疗 | 续航 |\n\n**思路**：Heat + Nature触发Combustion持续伤害，配合Electrification增伤。\n\n### 3. 快速展开队\n\n- 多先锋开局快速获取DP\n- 尽早部署主C和辅助\n- 适合需要快速应对的关卡\n\n## DP管理技巧\n\n- 先锋优先部署，确保DP产出\n- 高费用干员留到中期部署\n- 注意撤退回收DP（部分干员）",
+    "contentEn": "## Team Building Basics\n\nEndfield uses 4-6 operator combat squads. Core structure:\n\n1. **Main DPS** — Primary damage, priority investment\n2. **Sub-DPS** — Supplemental damage, elemental reactions\n3. **Support** — Buffs/debuffs/control\n4. **Survival** — Healing/shield/tank\n5. **Vanguard** — Fast deployment, DP generation\n\n## Recommended Teams\n\n### 1. Shatter Team (Cryo + Physical)\n\n| Position | Operator | Role |\n|----------|----------|------|\n| DPS | Physical Guard | Exploits Shatter reaction |\n| Sub-DPS | Cryo Caster | Applies Solidification |\n| Support | Nature Support | Resistance down |\n| Survival | Defender | Frontline |\n\n**Strategy**: Cryo operator applies Solidification to freeze enemies, Physical operator triggers Shatter for massive damage.\n\n### 2. Combustion Team (Heat + Nature)\n\n| Position | Operator | Role |\n|----------|----------|------|\n| DPS | Heat Striker | Sustained burn damage |\n| Sub-DPS | Laevatain | Triggers Combustion |\n| Support | Electric Support | Triggers Electrification |\n| Survival | Healer | Sustain |\n\n**Strategy**: Heat + Nature triggers Combustion DoT, combined with Electrification for increased Arts DMG.\n\n### 3. Rush Deployment Team\n\n- Multiple Vanguards for early DP\n- Deploy main DPS and supports quickly\n- Best for stages requiring fast response\n\n## DP Management\n\n- Deploy Vanguards first for DP generation\n- Save high-cost operators for mid-game\n- Retreat operators to refund DP when possible",
+    "tags": [
+      "阵容",
+      "搭配",
+      "队伍",
+      "Team",
+      "Composition",
+      "组合"
+    ],
+    "faq": [
+      {
+        "question": "What is the best team in Arknights: Endfield?",
+        "questionZh": "终末地最强阵容是什么？",
+        "answer": "The Shatter team (Cryo + Physical) is one of the strongest compositions due to Shatter's massive burst damage potential.",
+        "answerZh": "碎冰队（Cryo+Physical）是最强阵容之一，Shatter反应的爆发伤害非常高。"
+      }
+    ]
+  },
+  {
+    "id": "progression-guide",
+    "title": "《明日方舟：终末地》养成进度指南 — 干员升级与资源规划",
+    "titleEn": "Arknights: Endfield Progression Guide — Operator Leveling & Resource Planning",
+    "category": "progression",
+    "categoryZh": "养成",
+    "categoryEn": "Progression",
+    "summary": "终末地干员养成路线：等级提升、精英化、技能升级、基建发展优先级，以及前期资源分配策略。",
+    "summaryEn": "Endfield operator progression roadmap: leveling, promotion, skill upgrades, base development priorities, and early-game resource allocation.",
+    "content": "## 干员养成\n\n### 等级与精英化\n\n- 干员等级上限受精英化阶段限制\n- 每50级需要精英化突破\n- 精英化材料从主线和活动获取\n\n### 技能升级\n\n| 优先级 | 内容 |\n|--------|------|\n| 1 | 主C核心技能 → 满级 |\n| 2 | 辅助增益技能 → 7级 |\n| 3 | 副C输出技能 → 7级 |\n| 4 | 生存技能 → 5级 |\n\n### 潜能系统\n\n- 重复获取干员提升潜能\n- 潜能降低部署费用和再部署时间\n- 非必需，但对高难关卡有帮助\n\n## 基地发展优先级\n\n### 第一阶段（前期）\n1. 制造站 — 生产基础材料\n2. 经验本 — 快速提升干员等级\n3. 交易所 — 金币来源\n\n### 第二阶段（中期）\n1. 精英化材料本 — 突破瓶颈\n2. 技能本 — 技能升级\n3. 装备本 — 提升战力\n\n### 第三阶段（后期）\n1. 高级装备本\n2. 挑战副本\n3. 基地全升级\n\n## 体力分配\n\n| 阶段 | 体力优先 |\n|------|----------|\n| 前期 | 经验本 70%, 突破本 20%, 金币 10% |\n| 中期 | 技能本 40%, 装备本 30%, 突破 20%, 金币 10% |\n| 后期 | 装备本 50%, 技能 30%, 高级材料 20% |",
+    "contentEn": "## Operator Progression\n\n### Level & Promotion\n\n- Level cap is determined by promotion stage\n- Promotion required every ~50 levels\n- Promotion materials from main story and events\n\n### Skill Upgrades\n\n| Priority | Target |\n|----------|--------|\n| 1 | Main DPS core skill → Max |\n| 2 | Support buff skill → Lv 7 |\n| 3 | Sub-DPS skill → Lv 7 |\n| 4 | Survival skill → Lv 5 |\n\n### Potential System\n\n- Duplicates increase Potential\n- Potential reduces DP cost and redeploy time\n- Not required but helpful for hard stages\n\n## Base Development Priority\n\n### Phase 1 (Early)\n1. Factory — Basic material production\n2. EXP Dungeon — Fast operator leveling\n3. Trade Station — Gold income\n\n### Phase 2 (Mid)\n1. Promotion Material Dungeon — Breakthrough\n2. Skill Dungeon — Skill upgrades\n3. Gear Dungeon — Combat power\n\n### Phase 3 (Late)\n1. Advanced Gear Dungeon\n2. Challenge Stages\n3. Full base upgrades\n\n## Stamina Allocation\n\n| Phase | Priority |\n|-------|----------|\n| Early | EXP 70%, Breakthrough 20%, Gold 10% |\n| Mid | Skill 40%, Gear 30%, Breakthrough 20%, Gold 10% |\n| Late | Gear 50%, Skill 30%, Advanced Materials 20% |",
+    "tags": [
+      "养成",
+      "升级",
+      "资源",
+      "Progression",
+      "Leveling",
+      "Resources",
+      "精英化"
+    ],
+    "faq": [
+      {
+        "question": "What should I level first in Endfield?",
+        "questionZh": "终末地先升级什么？",
+        "answer": "Focus on your main DPS level and core skill first, then unlock base facilities, then invest in supports.",
+        "answerZh": "优先提升主C干员等级和核心技能，然后解锁基地设施，最后投入辅助。"
+      }
+    ]
+  },
+  {
+    "id": "farming-guide",
+    "title": "《明日方舟：终末地》资源刷取指南 — 日常副本与材料规划",
+    "titleEn": "Arknights: Endfield Farming Guide — Daily Dungeons & Material Planning",
+    "category": "farming",
+    "categoryZh": "刷取",
+    "categoryEn": "Farming",
+    "summary": "终末地每日/每周资源刷取路线：经验本、突破材料、装备材料、金币本，以及体力最优分配方案。",
+    "summaryEn": "Endfield daily/weekly farming routes: EXP dungeons, promotion materials, gear materials, gold dungeons, and optimal stamina allocation.",
+    "content": "## 每日必做\n\n### 日常清单\n\n1. **日常任务** — 完成所有日常获取体力/材料\n2. **体力消耗** — 刷推荐副本，不溢出\n3. **基地收菜** — 制造站/交易所产出\n4. **商店查看** — 每日折扣商品\n\n### 每周必刷\n\n1. **周常挑战** — 高级突破材料\n2. **活动副本** — 限定期间优先\n3. **商店周限购** — 稀有材料\n\n## 副本掉落一览\n\n| 副本 | 主要掉落 | 推荐体力 |\n|------|----------|----------|\n| 经验本 | 经验材料 | 前期每日3次 |\n| 突破本 | 精英化材料 | 按需刷 |\n| 技能本 | 技能升级材料 | 中期每日2-3次 |\n| 装备本 | 装备+强化材料 | 中后期每日2次 |\n| 金币本 | 龙门币 | 每日1次 |\n\n## 材料刷取优先级\n\n### 前期目标\n- 主C等级 → 满级\n- 解锁全部基地功能\n- 存够精英化材料\n\n### 中期目标\n- 全队精英化1次\n- 主C技能 → 7级\n- 刷一套金色装备\n\n### 后期目标\n- 精英化2次\n- 全队技能 → 满\n- 装备Artificing强化\n\n## 效率技巧\n\n- 活动期间副本掉率提升，优先刷\n- 自动战斗可用于低难度副本\n- 合理利用扫荡券（如有）",
+    "contentEn": "## Daily Routine\n\n### Daily Checklist\n\n1. **Daily Tasks** — Complete all for stamina/materials\n2. **Stamina** — Run recommended dungeons, don't cap\n3. **Base Collection** — Factory/Trade Station output\n4. **Daily Shop** — Check discounted items\n\n### Weekly\n\n1. **Weekly Challenge** — Advanced breakthrough materials\n2. **Event Dungeons** — Priority during limited events\n3. **Weekly Shop** — Rare materials\n\n## Dungeon Drops\n\n| Dungeon | Main Drop | Recommended |\n|---------|-----------|-------------|\n| EXP | EXP materials | 3x/day early |\n| Promotion | Elite materials | As needed |\n| Skill | Skill upgrade materials | 2-3x/day mid |\n| Gear | Equipment + upgrade | 2x/day mid-late |\n| Gold | Lungmen Dollars | 1x/day |\n\n## Material Priority\n\n### Early Goals\n- Main DPS → Max level\n- Unlock all base features\n- Stockpile promotion materials\n\n### Mid Goals\n- Full team Promotion 1\n- Main DPS skills → Lv 7\n- Farm a gold gear set\n\n### Late Goals\n- Promotion 2\n- Full team skills → Max\n- Equipment Artificing\n\n## Efficiency Tips\n\n- Event dungeons have boosted drops, prioritize them\n- Auto-deploy works for low-difficulty stages\n- Use sweep tickets efficiently",
+    "tags": [
+      "刷取",
+      "资源",
+      "材料",
+      "Farming",
+      "Resources",
+      "Materials",
+      "日常"
+    ],
+    "faq": [
+      {
+        "question": "What should I farm first in Endfield?",
+        "questionZh": "终末地先刷什么副本？",
+        "answer": "Early game: prioritize EXP dungeon to level your main DPS, then promotion materials. Mid game: shift to skill and gear dungeons.",
+        "answerZh": "前期优先刷经验本提升主C等级，然后是突破材料。中期转向技能本和装备本。"
+      }
+    ]
+  },
+  {
+    "id": "endgame-guide",
+    "title": "《明日方舟：终末地》终局玩法指南 — 高难副本与挑战内容",
+    "titleEn": "Arknights: Endfield Endgame Guide — High-Difficulty Content & Challenges",
+    "category": "endgame",
+    "categoryZh": "终局",
+    "categoryEn": "Endgame",
+    "summary": "终末地终局玩法指南：高难度挑战副本、深渊模式、危机合约等高难内容的阵容推荐与通关策略。",
+    "summaryEn": "Endfield endgame guide: high-difficulty challenge dungeons, deep zones, crisis-style content with team recommendations and clear strategies.",
+    "content": "## 终局内容概览\n\n终末地的终局玩法主要包括：\n\n1. **高难挑战副本** — 需要满配阵容和策略\n2. **深层探索** — 多层Rougelike模式\n3. **限时活动** — 高难EX关卡\n4. **Boss歼灭战** — 特殊机制Boss\n\n## 高难挑战副本\n\n### 阵容要求\n- 全员满级+精英化\n- 核心技能满级\n- 金色装备+精炼\n\n### 通用策略\n1. 先观察Boss机制和弱点\n2. 搭配属性克制队伍\n3. 合理分配DP，优先部署生存位\n4. 保留终结技用于关键阶段\n\n## 深层探索（Rougelike）\n\n- 每层选择增益效果\n- 资源有限，需要取舍\n- 推荐携带泛用性高的干员\n- 随机事件可能改变路线\n\n### 推荐干员\n- 生存能力强的Guard/Defender\n- 自带治疗的干员\n- AOE伤害优秀的术师/狙击\n\n## Boss歼灭战\n\n### Boss机制要点\n- Boss通常有多阶段\n- 注意狂暴倒计时\n- 部分Boss需要特定元素反应才能有效破盾\n- 优先清理召唤的小怪\n\n### 推荐阵容\n| Boss类型 | 推荐元素 | 备注 |\n|----------|----------|------|\n| 护盾型 | Cryo+Physical | Shatter快速破盾 |\n| 高血量型 | Heat+Nature | Combustion持续伤害 |\n| 多目标 | Electric | Chain AoE |\n\n## 评分提升技巧\n\n- 快速通关 → 时间加分\n- 低战力通关 → 效率加分\n- 不损失干员 → 完美加分",
+    "contentEn": "## Endgame Content Overview\n\nEndfield's endgame includes:\n\n1. **High-Difficulty Challenges** — Requires fully built teams\n2. **Deep Exploration** — Multi-floor roguelike mode\n3. **Limited Events** — EX stages\n4. **Boss Annihilation** — Special mechanic bosses\n\n## High-Difficulty Dungeons\n\n### Requirements\n- All operators max level + promoted\n- Core skills maxed\n- Gold gear + refined\n\n### General Strategy\n1. Study boss mechanics and weaknesses\n2. Build attribute advantage team\n3. Manage DP, deploy survival first\n4. Save ultimates for critical phases\n\n## Deep Exploration (Roguelike)\n\n- Choose buffs each floor\n- Limited resources, prioritize wisely\n- Bring versatile operators\n- Random events may alter your path\n\n### Recommended Operators\n- High-survival Guards/Defenders\n- Self-healing operators\n- Strong AoE Casters/Strikers\n\n## Boss Annihilation\n\n### Key Mechanics\n- Bosses have multiple phases\n- Watch enrage timers\n- Some bosses need specific reactions to break shields\n- Clear summoned minions first\n\n### Team Recommendations\n| Boss Type | Recommended Elements | Notes |\n|-----------|---------------------|-------|\n| Shielded | Cryo + Physical | Shatter for fast shield break |\n| High HP | Heat + Nature | Combustion DoT |\n| Multi-target | Electric | Chain AoE |\n\n## Score Optimization\n\n- Fast clear → Time bonus\n- Low power clear → Efficiency bonus\n- No operator loss → Perfect bonus",
+    "tags": [
+      "终局",
+      "高难",
+      "挑战",
+      "Endgame",
+      "Challenge",
+      "Boss",
+      "深层"
+    ],
+    "faq": [
+      {
+        "question": "What is the hardest content in Endfield?",
+        "questionZh": "终末地最难的内容是什么？",
+        "answer": "Deep Exploration (roguelike mode) and high-difficulty Boss Annihilation are the most challenging endgame contents, requiring fully built teams and strategic planning.",
+        "answerZh": "深层探索（Rougelike模式）和高难Boss歼灭战是最具挑战性的终局内容，需要满配阵容和策略规划。"
+      }
+    ]
+  },
+  {
+    "id": "crisis-contract-guide",
+    "title": "明日方舟终末地 — 危机合约重燃测试作战攻略",
+    "titleEn": "Arknights Endfield — Crisis Contract Retest Operation Guide",
+    "category": "combat",
+    "categoryZh": "战斗攻略",
+    "categoryEn": "Combat",
+    "summary": "终末地危机合约重燃测试攻略：40-45星难度打法、埃特拉主T无脑攻略、平民42星构筑、指标搭配推荐。",
+    "summaryEn": "Endfield Crisis Contract Retest guide: 40-45 star difficulty strategies, Etra main tank no-brainer guide, F2P 42-star builds, indicator loadout recommendations.",
+    "content": "## 危机合约·重燃测试作战攻略\n\n「危机合约·重燃测试」是终末地最新高难度挑战活动，提供 40-45 星难度层级，需要合理的干员搭配和指标组合。\n\n### 一、活动概要\n\n- **名称**: 危机合约·重燃测试作战\n- **难度**: 40星 - 45星\n- **核心**: 选择指标组合提升难度，通过策略搭配通关\n\n### 二、40星难度 — 埃特拉主T无脑攻略\n\n**队伍配置**：\n- **主T**: 埃特拉 (Etra) — 核心坦克，高防御高生存\n- **输出**: 高爆发输出干员 ×2\n- **辅助**: 增益/治疗干员 ×1\n\n**指标组合**：\n- 选择降低输出但不影响生存的指标\n- 保持埃特拉坦度足够扛住所有攻击\n- 利用高台位和卡位减少受伤\n\n**打法要点**：\n1. 埃特拉放置在前线卡位，吸收主要伤害\n2. 输出干员在高台位安全输出\n3. 辅助干员在中后排提供增益和治疗\n4. 无脑推进，靠埃特拉坦度硬抗\n\n### 三、42星 — 平民攻略\n\n**队伍配置**：\n- 基于已有干员的灵活搭配\n- 关键：选择降低防御但提升输出的指标\n- 利用干员技能组合弥补面板不足\n\n**策略**：\n- 不需要满配干员，4星干员也能通关\n- 关键在于指标的选择和干员站位\n- 参考社区已验证的平民构筑\n\n### 四、45星 — 极限挑战\n\n- 目前社区已有45星通关记录\n- 需要满配干员 + 最优指标组合\n- 建议参考通关视频学习站位和技能时机\n\n### 五、指标搭配推荐\n\n| 指标类型 | 推荐策略 | 说明 |\n|----------|----------|------|\n| 敌人增强 | 谨慎选择 | 避免同时选多个进攻增强 |\n| 部署限制 | 可接受 | 限制高台位可用地砖 |\n| 技能限制 | 适度选择 | 不选禁用核心技能的指标 |\n| 输出削弱 | 避免大幅 | 保留足够输出能力 |\n\n### 六、奖励一览\n\n- 完成40星难度可获得主要奖励\n- 42-45星为额外挑战奖励\n- 活动代币可兑换限定素材",
+    "contentEn": "## Crisis Contract Retest Operation Guide\n\nThe Crisis Contract Retest is Endfield's latest high-difficulty challenge, featuring 40-45 star difficulty tiers.\n\n### 1. 40-Star — Etra Main Tank Guide\n\n**Team**: Etra (Main Tank) + 2 DPS + 1 Support\n- Place Etra forward to absorb damage\n- DPS on high ground for safe output\n- Support provides buffs and healing\n\n### 2. 42-Star — F2P Guide\n- 4-star operators can clear with right indicators\n- Key is indicator selection and positioning\n- Reference community-verified F2P builds\n\n### 3. 45-Star — Extreme Challenge\n- Requires fully built operators + optimal indicators\n- Reference clear videos for positioning and timing\n\n### 4. Indicator Loadout Tips\n- Avoid stacking multiple offense-enhancing enemy indicators\n- Deployment restrictions are acceptable\n- Never disable core skills",
+    "tags": [
+      "危机合约",
+      "重燃测试",
+      "埃特拉",
+      "高难度",
+      "挑战",
+      "攻略"
+    ],
+    "faq": [
+      {
+        "question": "How many stars are needed for all rewards in Crisis Contract Retest?",
+        "questionZh": "危机合约重燃测试多少星能拿完奖励？",
+        "answer": "Completing the 40-star difficulty earns the main rewards. The 42-45 star tiers provide additional challenge rewards — attempt as able. F2P players should aim for 40-42 stars.",
+        "answerZh": "完成40星难度即可获得主要奖励。42-45星为额外挑战奖励，量力而行。平民玩家建议以40-42星为目标。"
+      }
+    ]
+  }
+]

@@ -1,9 +1,9 @@
 import type { Item } from '@gachia/core';
 import type { GuihuanMaterial } from './types';
+import rawMaterials from './raw-materials.json';
 import { localeStr } from './types';
 import type { SupportedLocale } from '@gachia/core';
 import { IMAGE_BASE } from '../../image-base';
-import rawMaterials from './raw-materials.json';
 
 export const guihuanMaterials: GuihuanMaterial[] = rawMaterials as unknown as GuihuanMaterial[];
 

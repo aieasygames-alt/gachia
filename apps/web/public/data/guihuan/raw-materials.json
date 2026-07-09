@@ -1,0 +1,182 @@
+[
+  {
+    "id": "novice-spirit-guide",
+    "name": "初级颂灵指南",
+    "nameEn": "Novice Spirit Guide",
+    "type": "guide",
+    "rarity": 1,
+    "source": "颂灵学院课程、世界探索、颂灵交易所",
+    "sourceEn": "Spirit Academy courses, world exploration, Spirit Exchange"
+  },
+  {
+    "id": "advanced-spirit-guide",
+    "name": "进阶颂灵指南",
+    "nameEn": "Advanced Spirit Guide",
+    "type": "guide",
+    "rarity": 2,
+    "source": "材料合成、颂灵学院高级课程、世界探索",
+    "sourceEn": "Material crafting, Spirit Academy advanced courses, world exploration"
+  },
+  {
+    "id": "elite-spirit-guide",
+    "name": "精英颂灵指南",
+    "nameEn": "Elite Spirit Guide",
+    "type": "guide",
+    "rarity": 3,
+    "source": "材料合成、精英灵域挑战、颂灵交易所",
+    "sourceEn": "Material crafting, Elite Spirit Domain challenges, Spirit Exchange"
+  },
+  {
+    "id": "faint-spirit-shard",
+    "name": "微光灵碎片",
+    "nameEn": "Faint Spirit Shard",
+    "type": "spirit-exp",
+    "rarity": 1,
+    "source": "灵域探索、每日委托、世界探索",
+    "sourceEn": "Spirit Domain exploration, daily commissions, world exploration"
+  },
+  {
+    "id": "glowing-spirit-shard",
+    "name": "辉光灵碎片",
+    "nameEn": "Glowing Spirit Shard",
+    "type": "spirit-exp",
+    "rarity": 2,
+    "source": "材料合成、灵域探索、每日委托",
+    "sourceEn": "Material crafting, Spirit Domain exploration, daily commissions"
+  },
+  {
+    "id": "radiant-spirit-shard",
+    "name": "耀光灵碎片",
+    "nameEn": "Radiant Spirit Shard",
+    "type": "spirit-exp",
+    "rarity": 3,
+    "source": "材料合成、精英灵域挑战、颂灵交易所",
+    "sourceEn": "Material crafting, Elite Spirit Domain challenges, Spirit Exchange"
+  },
+  {
+    "id": "basic-vein-crystal",
+    "name": "基础灵脉结晶",
+    "nameEn": "Basic Vein Crystal",
+    "type": "weapon-exp",
+    "rarity": 1,
+    "source": "灵域探索、世界探索、矿物采集",
+    "sourceEn": "Spirit Domain exploration, world exploration, mineral gathering"
+  },
+  {
+    "id": "refined-vein-crystal",
+    "name": "精炼灵脉结晶",
+    "nameEn": "Refined Vein Crystal",
+    "type": "weapon-exp",
+    "rarity": 2,
+    "source": "材料合成、灵域探索、矿物采集",
+    "sourceEn": "Material crafting, Spirit Domain exploration, mineral gathering"
+  },
+  {
+    "id": "pure-vein-crystal",
+    "name": "纯净灵脉结晶",
+    "nameEn": "Pure Vein Crystal",
+    "type": "weapon-exp",
+    "rarity": 3,
+    "source": "材料合成、精英灵域挑战、颂灵交易所",
+    "sourceEn": "Material crafting, Elite Spirit Domain challenges, Spirit Exchange"
+  },
+  {
+    "id": "fading-whisper",
+    "name": "消逝低语",
+    "nameEn": "Fading Whisper",
+    "type": "ascension",
+    "rarity": 1,
+    "source": "蚀域边缘、每日委托、世界探索",
+    "sourceEn": "Eclipse Domain edge, daily commissions, world exploration"
+  },
+  {
+    "id": "echoing-whisper",
+    "name": "回响低语",
+    "nameEn": "Echoing Whisper",
+    "type": "ascension",
+    "rarity": 2,
+    "source": "材料合成、蚀域深处、每日委托",
+    "sourceEn": "Material crafting, Eclipse Domain depths, daily commissions"
+  },
+  {
+    "id": "roaring-whisper",
+    "name": "轰鸣低语",
+    "nameEn": "Roaring Whisper",
+    "type": "ascension",
+    "rarity": 3,
+    "source": "材料合成、蚀域核心、精英Boss挑战",
+    "sourceEn": "Material crafting, Eclipse Domain core, Elite Boss challenges"
+  },
+  {
+    "id": "flame-essence",
+    "name": "烈焰精髓",
+    "nameEn": "Flame Essence",
+    "type": "element-ascension",
+    "rarity": 3,
+    "source": "烈焰灵域Boss、蚀域烈焰区域",
+    "sourceEn": "Flame Spirit Domain Boss, Eclipse Domain Flame zone"
+  },
+  {
+    "id": "frost-essence",
+    "name": "霜寒精髓",
+    "nameEn": "Frost Essence",
+    "type": "element-ascension",
+    "rarity": 3,
+    "source": "霜寒灵域Boss、北境冰原精英怪",
+    "sourceEn": "Frost Spirit Domain Boss, Northern Tundra elite enemies"
+  },
+  {
+    "id": "thunder-essence",
+    "name": "雷霆精髓",
+    "nameEn": "Thunder Essence",
+    "type": "element-ascension",
+    "rarity": 3,
+    "source": "雷霆灵域Boss、雷暴平原精英怪",
+    "sourceEn": "Thunder Spirit Domain Boss, Thunder Plains elite enemies"
+  },
+  {
+    "id": "gale-essence",
+    "name": "疾风精髓",
+    "nameEn": "Gale Essence",
+    "type": "element-ascension",
+    "rarity": 3,
+    "source": "疾风灵域Boss、高空浮岛精英怪",
+    "sourceEn": "Gale Spirit Domain Boss, Sky Island elite enemies"
+  },
+  {
+    "id": "radiance-essence",
+    "name": "光辉精髓",
+    "nameEn": "Radiance Essence",
+    "type": "element-ascension",
+    "rarity": 3,
+    "source": "光辉灵域Boss、圣光圣殿精英怪",
+    "sourceEn": "Radiance Spirit Domain Boss, Holy Radiance Temple elite enemies"
+  },
+  {
+    "id": "void-essence",
+    "name": "虚空精髓",
+    "nameEn": "Void Essence",
+    "type": "element-ascension",
+    "rarity": 3,
+    "source": "虚空灵域Boss、蚀域核心精英怪",
+    "sourceEn": "Void Spirit Domain Boss, Eclipse Domain core elite enemies"
+  },
+  {
+    "id": "mobius-ring-fragment",
+    "name": "莫比乌斯环碎片",
+    "nameEn": "Möbius Strip Fragment",
+    "type": "rare",
+    "rarity": 3,
+    "source": "周本Boss挑战、活动奖励",
+    "sourceEn": "Weekly Boss challenges, event rewards"
+  },
+  {
+    "id": "time-crystal",
+    "name": "时序结晶",
+    "nameEn": "Time Crystal",
+    "type": "rare",
+    "rarity": 3,
+    "source": "周本Boss挑战、高难度蚀域",
+    "sourceEn": "Weekly Boss challenges, high-difficulty Eclipse Domain"
+  }
+]

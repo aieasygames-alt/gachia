@@ -1,6 +1,8 @@
 import type { SupportedLocale } from '@gachia/core';
+import { join } from 'node:path';
+import { loadJson } from '../../load-json';
 import { localeStr } from './types';
-import rawRedeemCodes from './raw-redeem-codes.json';
+const rawRedeemCodes = await loadJson<unknown>(join(process.cwd(), '../../packages/data/games/genshin/raw-redeem-codes.json'), '/data/genshin/raw-redeem-codes.json');
 
 export interface GenshinRedeemCode {
   code: string;

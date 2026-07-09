@@ -9,6 +9,29 @@ import { getWuWaCharacterById, getWuWaCharacterName } from '@gachia/data/games/w
 import { Link } from '@/lib/i18n/navigation';
 
 const RARITY_COLORS: Record<number, string> = { 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };
+type NextStepLink = {
+  href: string;
+  label: Record<SupportedLocale, string>;
+  description: Record<SupportedLocale, string>;
+};
+
+const WUWA_ECHO_NEXT_STEPS: NextStepLink[] = [
+  {
+    href: '/wuwa/version',
+    label: { zh: '先看版本专题', en: 'Start with version hub', ja: 'まず版本特集へ' },
+    description: { zh: '版本重点、福利和热词入口都在这里', en: 'Version highlights, rewards, and hot topics', ja: '版本重点、報酬、注目トピックを確認', },
+  },
+  {
+    href: '/wuwa/characters',
+    label: { zh: '继续看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+    description: { zh: '按角色反查声骸适配和毕业方向', en: 'Check which characters want which echo sets', ja: 'キャラ別の適性と完成形を見る', },
+  },
+  {
+    href: '/wuwa/weapons',
+    label: { zh: '再看武器图鉴', en: 'Browse weapons', ja: '武器図鑑へ' },
+    description: { zh: '把武器和声骸一起配起来看', en: 'Pair weapons with echo set planning', ja: '武器とエコーの組み合わせを確認', },
+  },
+];
 
 export async function generateMetadata({
   params,
@@ -287,6 +310,36 @@ function WuWaEchoSetsPage({ locale }: { locale: SupportedLocale }) {
           </div>
         ))}
       </div>
+
+      <NextStepStrip locale={locale} links={WUWA_ECHO_NEXT_STEPS} />
     </div>
+  );
+}
+
+function NextStepStrip({ locale, links }: { locale: SupportedLocale; links?: NextStepLink[] }) {
+  if (!links?.length) return null;
+
+  return (
+    <section className="mb-8">
+      <h2 className="mb-3 text-base font-semibold text-game-text">
+        {locale === 'zh' ? '继续往下看' : locale === 'ja' ? '次に見る' : 'Next steps'}
+      </h2>
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {links.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href as '/'}
+            className="group rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary"
+          >
+            <h3 className="mb-1 text-sm font-semibold text-game-text group-hover:text-game-primary">
+              {link.label[locale]}
+            </h3>
+            <p className="text-xs text-game-text-muted line-clamp-2">
+              {link.description[locale]}
+            </p>
+          </Link>
+        ))}
+      </div>
+    </section>
   );
 }

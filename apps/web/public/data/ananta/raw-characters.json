@@ -1,0 +1,888 @@
+[
+  {
+    "id": "captain",
+    "name": "队长",
+    "nameEn": "Captain",
+    "nameJa": "キャプテン",
+    "element": "chaos",
+    "elementEn": "Chaos",
+    "role": "进攻",
+    "roleEn": "Attack",
+    "weaponType": "Gauntlet",
+    "rarity": 5,
+    "description": "A.C.D.特遣队的领袖，被选中的「无限触发者」，拥有感知和操控混沌异常的能力。战斗风格灵活多变，擅长近远兼顾的战斗方式和跑酷穿越。",
+    "descriptionEn": "Leader of the A.C.D. Task Force and the chosen 'Infinite Trigger,' capable of sensing and manipulating Chaos anomalies. A versatile combatant excelling in both close and ranged combat with parkour traversal.",
+    "faq": [
+      {
+        "question": "Is Captain good in Ananta?",
+        "questionZh": "队长值得培养吗？",
+        "answer": "Captain is the protagonist and a top-tier Chaos DPS with versatile combat abilities, strong in both melee and ranged situations.",
+        "answerZh": "队长是主角兼顶级混沌主C，战斗方式灵活多变，近远兼顾，非常值得培养。"
+      },
+      {
+        "question": "What is Captain's best team comp?",
+        "questionZh": "队长的最佳配队是什么？",
+        "answer": "Captain pairs best with Taffy for off-field damage and Ringo for support, with Aileen as healer.",
+        "answerZh": "队长与塔菲搭配提供后台伤害，凛果提供辅助，艾琳担任治疗。"
+      }
+    ],
+    "relatedCharacters": ["aileen", "ringo", "taffy"],
+    "tierRank": "SS",
+    "tierReason": "Core protagonist with top-tier DPS and utility, versatile in all combat situations.",
+    "tierReasonZh": "核心主角，拥有顶级输出和辅助能力，各种战斗场景都能胜任。",
+    "skills": {
+      "normalAttack": {
+        "name": "混沌连击",
+        "nameEn": "Chaos Combo",
+        "nameJa": "カオスコンボ",
+        "description": "进行至多五段的连续攻击，灵活切换近战和远程模式，造成混沌元素伤害。",
+        "descriptionEn": "Performs up to 5 consecutive attacks, flexibly switching between melee and ranged modes, dealing Chaos damage."
+      },
+      "skill": {
+        "name": "异能·混沌冲击",
+        "nameEn": "Trigger: Chaos Impact",
+        "nameJa": "異能・カオスインパクト",
+        "description": "释放混沌之力对前方敌人造成范围伤害，并在短时间内提升自身攻击速度。",
+        "descriptionEn": "Unleashes Chaos power to deal AoE damage to enemies ahead, briefly boosting own attack speed.",
+        "cooldown": "8s",
+        "cost": "35 异能"
+      },
+      "ultimate": {
+        "name": "无限·混沌裂隙",
+        "nameEn": "Infinity: Chaos Rift",
+        "nameJa": "無限・カオスリフト",
+        "description": "撕裂空间释放混沌裂隙，对大范围敌人造成巨额混沌元素伤害。裂隙持续期间，区域内敌人持续受到混沌侵蚀。",
+        "descriptionEn": "Tears space to unleash a Chaos rift, dealing massive Chaos damage to enemies in a wide area. While the rift persists, enemies inside continuously take Chaos erosion damage.",
+        "cost": "80 异能"
+      },
+      "passive": {
+        "name": "无限触发",
+        "nameEn": "Infinite Trigger",
+        "nameJa": "無限トリガー",
+        "description": "队长触发完美闪避后，下一次攻击造成额外混沌伤害并恢复10点异能。",
+        "descriptionEn": "After Captain triggers a Perfect Dodge, the next attack deals additional Chaos damage and recovers 10 Trigger Energy."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "无限触发拳套",
+      "bestWeaponEn": "Infinite Trigger Gauntlet",
+      "alternativeWeapons": ["混沌裂隙拳套", "新都市拳王"],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "混沌伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Chaos DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": ["暴击率", "暴击伤害", "攻击力%", "异能充能"],
+      "subStatPriorityEn": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"]
+    },
+    "teamComps": [
+      {
+        "name": "混沌核心队",
+        "nameEn": "Chaos Core Team",
+        "members": ["captain", "seymour", "ringo", "aileen"],
+        "description": "以队长为核心输出，西摩提供后台伤害和减益，凛果提供增益，艾琳保证生存。",
+        "descriptionEn": "Captain as core DPS, Seymour for off-field damage and debuffs, Ringo for buffs, and Aileen for sustain."
+      }
+    ],
+    "image": "/images/ananta/characters/captain.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  },
+  {
+    "id": "aileen",
+    "name": "艾琳",
+    "nameEn": "Aileen",
+    "nameJa": "アイリーン",
+    "element": "bloom",
+    "elementEn": "Bloom",
+    "role": "灵愈",
+    "roleEn": "Support",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "description": "梦境花园的管理者，一位拥有非凡武艺的女仆。致力于不断的自我提升，外表优雅但战斗中展现出惊人的力量。",
+    "descriptionEn": "Manager at Dream Garden, a maid with remarkable martial prowess. Dedicated to perpetual self-improvement — elegant in appearance yet surprisingly powerful in combat.",
+    "faq": [
+      {
+        "question": "Is Aileen worth pulling?",
+        "questionZh": "艾琳值得抽吗？",
+        "answer": "Aileen is the best healer in Ananta with strong shielding and team sustain capabilities.",
+        "answerZh": "艾琳是无限大中最强治疗角色，拥有优秀的护盾和团队续航能力。"
+      }
+    ],
+    "relatedCharacters": ["captain", "ringo", "taffy"],
+    "tierRank": "SS",
+    "tierReason": "Best healer/support in the game, provides shielding, healing and team utility.",
+    "tierReasonZh": "游戏最强治疗辅助，提供护盾、治疗和全队增益。",
+    "skills": {
+      "normalAttack": {
+        "name": "花园绽放",
+        "nameEn": "Garden Bloom",
+        "nameJa": "ガーデンブルーム",
+        "description": "发射绽放灵力进行远程攻击，至多三段。",
+        "descriptionEn": "Fires Bloom spirit energy for ranged attacks, up to 3 hits."
+      },
+      "skill": {
+        "name": "花护·梦境之盾",
+        "nameEn": "Floral Ward: Dream Shield",
+        "nameJa": "花護・ドリームシールド",
+        "description": "为全队施加「梦境护盾」，吸收伤害并持续恢复生命值。",
+        "descriptionEn": "Applies 'Dream Shield' to all party members, absorbing damage and continuously restoring HP.",
+        "cooldown": "12s",
+        "cost": "35 异能"
+      },
+      "ultimate": {
+        "name": "梦境·花之复苏",
+        "nameEn": "Dream: Floral Revival",
+        "nameJa": "夢境・フローラルリバイバル",
+        "description": "召唤梦境花园之力，瞬间恢复全队大量生命值并清除所有负面状态。",
+        "descriptionEn": "Summons the power of Dream Garden, instantly restoring a large amount of HP to all party members and cleansing all debuffs.",
+        "cost": "70 异能"
+      },
+      "passive": {
+        "name": "女仆的关怀",
+        "nameEn": "Maid's Devotion",
+        "nameJa": "メイドの献身",
+        "description": "队伍中任何角色生命值低于50%时，艾琳自动为其恢复生命值，每30秒触发一次。",
+        "descriptionEn": "When any party member's HP drops below 50%, Aileen automatically heals them. Triggers once every 30s."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "梦境花束",
+      "bestWeaponEn": "Dream Bouquet",
+      "alternativeWeapons": ["都市灵杖", "花园钥匙"],
+      "mainStats": {
+        "沙漏": "异能充能",
+        "杯子": "生命值%",
+        "头冠": "治疗加成"
+      },
+      "mainStatsEn": {
+        "Sands": "Energy Recharge",
+        "Goblet": "HP%",
+        "Circlet": "Healing Bonus"
+      },
+      "subStatPriority": ["生命值%", "异能充能", "防御力%", "攻击力%"],
+      "subStatPriorityEn": ["HP%", "Energy Recharge", "DEF%", "ATK%"]
+    },
+    "teamComps": [
+      {
+        "name": "全能续航队",
+        "nameEn": "Universal Sustain Team",
+        "members": ["captain", "aileen", "ringo", "seymour"],
+        "description": "艾琳提供治疗和护盾，确保队伍在长时间战斗中的生存能力。",
+        "descriptionEn": "Aileen provides healing and shields, ensuring party survival in extended battles."
+      }
+    ],
+    "image": "/images/ananta/characters/aileen.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  },
+  {
+    "id": "seymour",
+    "name": "西摩",
+    "nameEn": "Seymour",
+    "nameJa": "シーモア",
+    "element": "surge",
+    "elementEn": "Surge",
+    "role": "副攻",
+    "roleEn": "Sub-DPS",
+    "weaponType": "Yo-yo",
+    "rarity": 5,
+    "description": "Eonbug组织的黑客和监控专家，从不摘下面具。驾驶改装的移动房车行动，有一只宠物猫。使用溜溜球进行远程攻击，并部署蜘蛛无人机辅助战斗。",
+    "descriptionEn": "A hacker and surveillance expert from Eonbug, never seen without a mask. Operates from a custom mobile RV with a pet cat. Fights with a yo-yo and deploys spider drones for combat support.",
+    "faq": [
+      {
+        "question": "Is Seymour a good sub-DPS?",
+        "questionZh": "西摩适合做副C吗？",
+        "answer": "Seymour excels as a Surge sub-DPS with off-field damage through his drones and excellent debuff capabilities.",
+        "answerZh": "西摩是非常优秀的涌流副C，通过无人机提供后台伤害，减益能力出色。"
+      }
+    ],
+    "relatedCharacters": ["captain", "ringo", "taffy"],
+    "tierRank": "S",
+    "tierReason": "Excellent Surge sub-DPS with off-field damage through drones and strong debuff utility.",
+    "tierReasonZh": "优秀的涌流副C，通过无人机提供后台伤害和强大的减益辅助。",
+    "skills": {
+      "normalAttack": {
+        "name": "溜溜球连击",
+        "nameEn": "Yo-yo Combo",
+        "nameJa": "ヨーヨーコンボ",
+        "description": "操控溜溜球进行远程连击，至多四段。",
+        "descriptionEn": "Controls a yo-yo for ranged combos, up to 4 hits."
+      },
+      "skill": {
+        "name": "蛛网·骇入",
+        "nameEn": "Web: Hack",
+        "nameJa": "ウェブ・ハック",
+        "description": "部署蜘蛛无人机标记敌人，降低其防御力并持续造成涌流伤害。",
+        "descriptionEn": "Deploys spider drones to mark enemies, reducing their DEF and dealing continuous Surge damage.",
+        "cooldown": "10s",
+        "cost": "35 异能"
+      },
+      "ultimate": {
+        "name": "全面监控·数据风暴",
+        "nameEn": "Omnisurveillance: Data Storm",
+        "nameJa": "全面監視・データストーム",
+        "description": "激活所有无人机释放数据风暴，对大范围敌人造成高额涌流伤害并降低其抗性。",
+        "descriptionEn": "Activates all drones to unleash a data storm, dealing high Surge damage and reducing enemy resistance in a wide area.",
+        "cost": "75 异能"
+      },
+      "passive": {
+        "name": "黑客直觉",
+        "nameEn": "Hacker Instinct",
+        "nameJa": "ハッカーの直感",
+        "description": "西摩切换上场时，标记场上所有敌人3秒，被标记敌人受到的伤害提升10%。",
+        "descriptionEn": "When Seymour switches in, marks all on-field enemies for 3s. Marked enemies take 10% increased damage."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "数据螺旋",
+      "bestWeaponEn": "Data Spiral",
+      "alternativeWeapons": ["城市猎手", "虚拟之线"],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "涌流伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Surge DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": ["暴击率", "暴击伤害", "攻击力%", "异能充能"],
+      "subStatPriorityEn": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"]
+    },
+    "teamComps": [
+      {
+        "name": "数据流核心队",
+        "nameEn": "Data Stream Core",
+        "members": ["seymour", "captain", "ringo", "aileen"],
+        "description": "西摩提供后台伤害和减益，配合队长前台输出。",
+        "descriptionEn": "Seymour provides off-field damage and debuffs, synergizing with Captain's on-field DPS."
+      }
+    ],
+    "image": "/images/ananta/characters/seymour.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  },
+  {
+    "id": "ringo",
+    "name": "凛果",
+    "nameEn": "Ringo",
+    "nameJa": "リンゴ",
+    "element": "psyche",
+    "elementEn": "Psyche",
+    "role": "增益",
+    "roleEn": "Buffer",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "description": "D.P.A.联络官，热爱购物和布丁的高中生。表情包达人，性格活泼可爱，用精神系异能为队友注入力量。",
+    "descriptionEn": "D.P.A. liaison and high schooler who loves shopping and pudding from Dream Garden. An emoji enthusiast with a lively personality, using Psyche abilities to empower teammates.",
+    "faq": [
+      {
+        "question": "Is Ringo a must-pull support?",
+        "questionZh": "凛果是必抽辅助吗？",
+        "answer": "Ringo is one of the best supports in the game, providing massive ATK buffs and energy regeneration for the whole team.",
+        "answerZh": "凛果是游戏最强辅助之一，能为全队提供大量攻击力增益和异能回复。"
+      }
+    ],
+    "relatedCharacters": ["captain", "aileen", "seymour"],
+    "tierRank": "SS",
+    "tierReason": "Best buffer in the game with team-wide ATK boost and energy regeneration.",
+    "tierReasonZh": "游戏最强增益辅助，提供全队攻击力提升和异能回复。",
+    "skills": {
+      "normalAttack": {
+        "name": "精神弹",
+        "nameEn": "Psyche Bolt",
+        "nameJa": "サイキボルト",
+        "description": "发射精神能量球进行远程攻击。",
+        "descriptionEn": "Fires Psyche energy orbs for ranged attacks."
+      },
+      "skill": {
+        "name": "表情包·力量注入",
+        "nameEn": "Emoji: Power Infusion",
+        "nameJa": "エモジ・パワー注入",
+        "description": "发送能量表情包，为全队提升攻击力和暴击率，持续10秒。",
+        "descriptionEn": "Sends power emojis, boosting ATK and CRIT Rate for all party members for 10s.",
+        "cooldown": "12s",
+        "cost": "30 异能"
+      },
+      "ultimate": {
+        "name": "全屏·无限能量",
+        "nameEn": "Fullscreen: Infinite Energy",
+        "nameJa": "フルスクリーン・無限エナジー",
+        "description": "释放精神风暴，为全队恢复异能并大幅提升元素伤害加成，持续12秒。",
+        "descriptionEn": "Unleashes a Psyche storm, restoring Trigger Energy for the whole team and greatly boosting Elemental DMG Bonus for 12s.",
+        "cost": "65 异能"
+      },
+      "passive": {
+        "name": "快乐传递",
+        "nameEn": "Joy Transfer",
+        "nameJa": "ジョイトランスファー",
+        "description": "凛果在场时，队伍中所有角色的异能恢复速度提升15%。",
+        "descriptionEn": "While Ringo is on the field, all party members' Trigger Energy recovery rate increases by 15%."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "快乐法杖",
+      "bestWeaponEn": "Joy Staff",
+      "alternativeWeapons": ["梦境花束", "花园钥匙"],
+      "mainStats": {
+        "沙漏": "异能充能",
+        "杯子": "精神伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "Energy Recharge",
+        "Goblet": "Psyche DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": ["异能充能", "攻击力%", "暴击率", "暴击伤害"],
+      "subStatPriorityEn": ["Energy Recharge", "ATK%", "CRIT Rate", "CRIT DMG"]
+    },
+    "teamComps": [
+      {
+        "name": "万能增益队",
+        "nameEn": "Universal Buffer Team",
+        "members": ["ringo", "captain", "aileen", "seymour"],
+        "description": "凛果为任意主C提供强力增益，适配所有输出角色。",
+        "descriptionEn": "Ringo provides powerful buffs to any main DPS, fitting all damage dealers."
+      }
+    ],
+    "image": "/images/ananta/characters/ringo.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  },
+  {
+    "id": "taffy",
+    "name": "泰菲",
+    "nameEn": "Taffy",
+    "nameJa": "タフィー",
+    "element": "spark",
+    "elementEn": "Spark",
+    "role": "进攻",
+    "roleEn": "Attack",
+    "weaponType": "Hammer",
+    "rarity": 5,
+    "description": "A.C.D.调查员，骑乘的平衡车同时充当锤类武器使用。信奉节能理念，梦想加入ACTF。战斗风格独特而高效。",
+    "descriptionEn": "An A.C.D. investigator who rides a segway that doubles as a hammer-like weapon. An energy-saving enthusiast who dreams of joining the ACTF. Her combat style is unique and efficient.",
+    "faq": [
+      {
+        "question": "Is Taffy a good DPS?",
+        "questionZh": "泰菲输出怎么样？",
+        "answer": "Taffy is a top-tier Spark DPS with unique hammer-segway combat and strong burst damage potential.",
+        "answerZh": "泰菲是顶级火花主C，独特的平衡车锤类战斗方式和强力的爆发潜力。"
+      }
+    ],
+    "relatedCharacters": ["captain", "ringo", "aileen"],
+    "tierRank": "S",
+    "tierReason": "Top Spark DPS with unique weapon mechanics and strong burst damage.",
+    "tierReasonZh": "顶级火花主C，拥有独特的武器机制和强力爆发伤害。",
+    "skills": {
+      "normalAttack": {
+        "name": "冲能重击",
+        "nameEn": "Power Slam",
+        "nameJa": "パワースラム",
+        "description": "骑乘平衡车挥动火花充能重锤，进行至多四段的连续攻击。",
+        "descriptionEn": "Rides segway while wielding a Spark-charged hammer, performing up to 4 consecutive attacks."
+      },
+      "skill": {
+        "name": "冲能·过载打击",
+        "nameEn": "Overcharge: Power Strike",
+        "nameJa": "オーバーチャージ・パワーストライク",
+        "description": "蓄力后释放火花过载打击，对前方锥形范围敌人造成高额火花伤害。",
+        "descriptionEn": "Charges up and unleashes an overcharged Spark strike, dealing high Spark damage in a cone ahead.",
+        "cooldown": "8s",
+        "cost": "35 异能"
+      },
+      "ultimate": {
+        "name": "冲能·无限碰撞",
+        "nameEn": "Overcharge: Infinite Crash",
+        "nameJa": "オーバーチャージ・インフィニットクラッシュ",
+        "description": "驾驶平衡车高速冲刺，沿途撞击敌人造成多段火花伤害，最终引爆产生范围火花爆发。",
+        "descriptionEn": "Drives segway at high speed, crashing through enemies for multi-hit Spark damage, ending with a massive Spark explosion.",
+        "cost": "75 异能"
+      },
+      "passive": {
+        "name": "节能达人",
+        "nameEn": "Energy Saver",
+        "nameJa": "省エネ達人",
+        "description": "泰菲触发完美闪避后，恢复15点异能，比其他角色多恢复5点。",
+        "descriptionEn": "After Taffy triggers a Perfect Dodge, she recovers 15 Trigger Energy — 5 more than other characters."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "过载重锤",
+      "bestWeaponEn": "Overcharge Hammer",
+      "alternativeWeapons": ["新都市拳王", "无限触发拳套"],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "火花伤害加成",
+        "头冠": "暴击伤害"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Spark DMG Bonus",
+        "Circlet": "CRIT DMG"
+      },
+      "subStatPriority": ["暴击率", "暴击伤害", "攻击力%", "异能充能"],
+      "subStatPriorityEn": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"]
+    },
+    "teamComps": [
+      {
+        "name": "火花冲能队",
+        "nameEn": "Spark Overcharge Team",
+        "members": ["taffy", "ringo", "seymour", "aileen"],
+        "description": "泰菲核心输出，凛果增伤，西摩减防，艾琳保证续航。",
+        "descriptionEn": "Taffy as core DPS, Ringo for buffs, Seymour for DEF shred, and Aileen for sustain."
+      }
+    ],
+    "image": "/images/ananta/characters/taffy.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  },
+  {
+    "id": "bansy",
+    "name": "班西",
+    "nameEn": "Bansy",
+    "nameJa": "バンシー",
+    "element": "void",
+    "elementEn": "Void",
+    "role": "进攻",
+    "roleEn": "Attack",
+    "weaponType": "Blade",
+    "rarity": 5,
+    "description": "来历神秘的虚空异能者，身世与城市地下的混沌裂缝有着密切联系。沉默寡言，战斗中展现出令人畏惧的虚空之力。",
+    "descriptionEn": "A mysterious Void Esper with ties to the Chaos rifts beneath the city. Taciturn by nature, yet terrifyingly powerful in combat with Void abilities.",
+    "faq": [
+      {
+        "question": "Is Bansy a good DPS?",
+        "questionZh": "班西输出怎么样？",
+        "answer": "Bansy is a strong single-target Void DPS with unique debuff mechanics and high burst potential.",
+        "answerZh": "班西是强力的虚空单体输出，拥有独特的减益机制和高爆发潜力。"
+      }
+    ],
+    "relatedCharacters": ["captain", "taffy", "dila"],
+    "tierRank": "S",
+    "tierReason": "Strong Void DPS with unique debuff mechanics and high burst potential.",
+    "tierReasonZh": "强力虚空主C，拥有独特的减益机制和高爆发潜力。",
+    "skills": {
+      "normalAttack": {
+        "name": "虚空之刃",
+        "nameEn": "Void Blade",
+        "nameJa": "ヴォイドブレード",
+        "description": "挥舞虚空之力形成的暗刃，进行至多四段的连续攻击。",
+        "descriptionEn": "Wields dark blades formed from Void energy, performing up to 4 consecutive attacks."
+      },
+      "skill": {
+        "name": "蚀印·虚渊",
+        "nameEn": "Eclipse Mark: Void Abyss",
+        "nameJa": "エクリプス・ヴォイドアビス",
+        "description": "对目标施加「虚空印记」，降低其防御力。印记可叠加至3层，叠满时引爆造成高额虚空伤害。",
+        "descriptionEn": "Applies 'Void Mark' to the target, reducing their DEF. Stacks up to 3 times; at max stacks, detonates for high Void damage.",
+        "cooldown": "9s",
+        "cost": "40 异能"
+      },
+      "ultimate": {
+        "name": "终焉·虚空吞噬",
+        "nameEn": "Demise: Void Devour",
+        "nameJa": "ターミナス・ヴォイドデボア",
+        "description": "展开虚空领域，持续吸取范围内敌人的生命值并转化为自身攻击力，结束时造成巨额虚空爆发伤害。",
+        "descriptionEn": "Opens a Void domain that continuously drains HP from enemies and converts it to ATK. Deals massive Void burst damage upon ending.",
+        "cost": "80 异能"
+      },
+      "passive": {
+        "name": "虚空共鸣",
+        "nameEn": "Void Resonance",
+        "nameJa": "ヴォイドレゾナンス",
+        "description": "班西对带有「虚空印记」的敌人造成额外15%伤害。",
+        "descriptionEn": "Bansy deals 15% additional damage to enemies with 'Void Mark'."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "虚空之噬",
+      "bestWeaponEn": "Void Devourer",
+      "alternativeWeapons": ["混沌裂隙拳套", "数据螺旋"],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "虚空伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Void DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": ["暴击率", "暴击伤害", "攻击力%", "异能充能"],
+      "subStatPriorityEn": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"]
+    },
+    "teamComps": [
+      {
+        "name": "虚空暗杀队",
+        "nameEn": "Void Assassin Team",
+        "members": ["bansy", "seymour", "ringo", "aileen"],
+        "description": "班西核心输出，西摩提供减益联动，凛果增伤，艾琳保证生存。",
+        "descriptionEn": "Bansy as core DPS, Seymour for debuff synergy, Ringo for buffs, Aileen for sustain."
+      }
+    ],
+    "image": "/images/ananta/characters/bansy.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  },
+  {
+    "id": "lykaia",
+    "name": "吕凯亚",
+    "nameEn": "Lykaia",
+    "nameJa": "リュカイア",
+    "element": "surge",
+    "elementEn": "Surge",
+    "role": "控制",
+    "roleEn": "Control",
+    "weaponType": "Bow",
+    "rarity": 4,
+    "description": "来自新都市暗区的涌流系异能者，擅长利用涌流脉冲束缚敌人行动。外表冷漠但内心重视伙伴。",
+    "descriptionEn": "A Surge Esper from Nova City's dark district, skilled at using Surge pulses to restrain enemies. Cold on the outside but deeply values her companions.",
+    "faq": [
+      {
+        "question": "Is Lykaia good for crowd control?",
+        "questionZh": "吕凯亚控制能力强吗？",
+        "answer": "Lykaia is the best crowd control character with strong Surge-based binding and grouping abilities.",
+        "answerZh": "吕凯亚是最强控制角色，拥有优秀的涌流束缚和聚怪能力。"
+      }
+    ],
+    "relatedCharacters": ["aileen", "taffy", "captain"],
+    "tierRank": "A",
+    "tierReason": "Strong crowd control with Surge binding mechanics, great for grouping enemies.",
+    "tierReasonZh": "强力控制角色，涌流束缚机制优秀，擅长聚怪。",
+    "skills": {
+      "normalAttack": {
+        "name": "涌流脉冲",
+        "nameEn": "Surge Pulse",
+        "nameJa": "サージパルス",
+        "description": "发射涌流脉冲进行远程攻击，至多四段。",
+        "descriptionEn": "Fires Surge pulses for ranged attacks, up to 4 hits."
+      },
+      "skill": {
+        "name": "脉冲·束缚",
+        "nameEn": "Pulse: Bind",
+        "nameJa": "パルス・バインド",
+        "description": "在目标区域释放涌流网络，束缚范围内敌人3秒并造成涌流伤害。",
+        "descriptionEn": "Releases a Surge network at the target area, binding enemies for 3s and dealing Surge damage.",
+        "cooldown": "12s",
+        "cost": "35 异能"
+      },
+      "ultimate": {
+        "name": "全城·涌流封锁",
+        "nameEn": "Citywide: Surge Lockdown",
+        "nameJa": "都市全域・サージロックダウン",
+        "description": "释放涌流封锁网，束缚大范围内所有敌人并造成高额涌流伤害。被束缚的敌人防御力降低。",
+        "descriptionEn": "Unleashes a Surge lockdown net, binding all enemies in a large area and dealing high Surge damage. Bound enemies have reduced DEF.",
+        "cost": "70 异能"
+      },
+      "passive": {
+        "name": "暗区直觉",
+        "nameEn": "Dark District Instinct",
+        "nameJa": "ダーク地区の直感",
+        "description": "吕凯亚对束缚状态敌人造成的伤害提升25%。",
+        "descriptionEn": "Lykaia deals 25% increased damage to bound enemies."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "涌流脉冲弓",
+      "bestWeaponEn": "Surge Pulse Bow",
+      "alternativeWeapons": ["城市猎手"],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "涌流伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Surge DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": ["暴击率", "暴击伤害", "攻击力%", "异能充能"],
+      "subStatPriorityEn": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"]
+    },
+    "teamComps": [
+      {
+        "name": "涌流控制队",
+        "nameEn": "Surge Control Team",
+        "members": ["lykaia", "taffy", "ringo", "aileen"],
+        "description": "吕凯亚束缚控制，泰菲输出爆发伤害。",
+        "descriptionEn": "Lykaia binds enemies while Taffy deals burst damage."
+      }
+    ],
+    "image": "/images/ananta/characters/lykaia.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  },
+  {
+    "id": "dila",
+    "name": "迪拉",
+    "nameEn": "Dila",
+    "nameJa": "ディラ",
+    "element": "spark",
+    "elementEn": "Spark",
+    "role": "追击",
+    "roleEn": "Follow-up",
+    "weaponType": "Spear",
+    "rarity": 4,
+    "description": "热情洋溢的D.P.A.行动特工，异能形态是火花闪电貂。战斗中利用火花加持触发连续追击，风格华丽高效。",
+    "descriptionEn": "An enthusiastic D.P.A. field agent whose Esper form is a Spark lightning ferret. Uses Spark boosts to trigger chain follow-up attacks — flashy and efficient.",
+    "faq": [
+      {
+        "question": "How does Dila's follow-up mechanic work?",
+        "questionZh": "迪拉的追击机制是什么？",
+        "answer": "Dila has a chance to trigger extra Spark attacks after any ally's hit. Her follow-ups can chain multiple times.",
+        "answerZh": "迪拉在队友攻击后有概率触发额外火花追击，追击可以连续触发多次。"
+      }
+    ],
+    "relatedCharacters": ["bansy", "taffy", "ringo"],
+    "tierRank": "A",
+    "tierReason": "Solid follow-up DPS with good off-field damage potential.",
+    "tierReasonZh": "优秀的追击副C，后台伤害潜力不错。",
+    "skills": {
+      "normalAttack": {
+        "name": "火花连击",
+        "nameEn": "Spark Combo",
+        "nameJa": "スパークコンボ",
+        "description": "挥舞火花长枪进行至多四段的连续攻击。",
+        "descriptionEn": "Wields a Spark spear for up to 4 consecutive attacks."
+      },
+      "skill": {
+        "name": "火花·幸运追击",
+        "nameEn": "Spark: Lucky Strike",
+        "nameJa": "スパーク・ラッキーストライク",
+        "description": "标记目标为「火花」状态，队友攻击目标时迪拉有50%概率发动火花追击。",
+        "descriptionEn": "Marks the target with 'Spark'. When allies attack the marked target, Dila has a 50% chance to trigger a Spark follow-up.",
+        "cooldown": "8s",
+        "cost": "30 异能"
+      },
+      "ultimate": {
+        "name": "火花·闪电风暴",
+        "nameEn": "Spark: Lightning Storm",
+        "nameJa": "スパーク・ライトニングストーム",
+        "description": "召唤火花闪电貂释放闪电风暴，对大范围敌人造成多次火花伤害。",
+        "descriptionEn": "Summons the Spark lightning ferret to unleash a lightning storm, dealing multiple hits of Spark damage in a wide area.",
+        "cost": "65 异能"
+      },
+      "passive": {
+        "name": "幸运加护",
+        "nameEn": "Fortune's Blessing",
+        "nameJa": "フォーチュンブレッシング",
+        "description": "迪拉每次触发追击后，自身暴击率提升5%，最多叠加4层。",
+        "descriptionEn": "Each time Dila triggers a follow-up, her CRIT Rate increases by 5%, stacking up to 4 times."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "火花长矛",
+      "bestWeaponEn": "Spark Lance",
+      "alternativeWeapons": ["过载重锤"],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "火花伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Spark DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": ["暴击率", "暴击伤害", "攻击力%", "异能充能"],
+      "subStatPriorityEn": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"]
+    },
+    "teamComps": [
+      {
+        "name": "火花追击队",
+        "nameEn": "Spark Follow-up Team",
+        "members": ["dila", "taffy", "ringo", "aileen"],
+        "description": "迪拉和泰菲组成火花双核，触发频繁追击。",
+        "descriptionEn": "Dila and Taffy form a Spark dual-core, triggering frequent follow-ups."
+      }
+    ],
+    "image": "/images/ananta/characters/dila.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  },
+  {
+    "id": "mechanika",
+    "name": "机械卡",
+    "nameEn": "Mechanika",
+    "nameJa": "メカニカ",
+    "element": "chaos",
+    "elementEn": "Chaos",
+    "role": "副攻",
+    "roleEn": "Sub-DPS",
+    "weaponType": "Gauntlet",
+    "rarity": 4,
+    "description": "新都市的天才机械师异能者，擅长将混沌能量融入机械装置。战斗中使用混沌动力拳套，风格刚猛且精准。",
+    "descriptionEn": "A genius mechanic Esper in Nova City, skilled at infusing Chaos energy into mechanical devices. Fights with Chaos-powered gauntlets — brutal and precise.",
+    "faq": [
+      {
+        "question": "Is Mechanika a good sub-DPS?",
+        "questionZh": "机械卡作为副C怎么样？",
+        "answer": "Mechanika is a solid Chaos sub-DPS with decent off-field damage and DEF shred utility.",
+        "answerZh": "机械卡是可靠的混沌副C，后台伤害不错，还能提供减防辅助。"
+      }
+    ],
+    "relatedCharacters": ["captain", "lykaia", "seymour"],
+    "tierRank": "A",
+    "tierReason": "Solid Chaos sub-DPS with off-field damage and DEF shred utility.",
+    "tierReasonZh": "可靠的混沌副C，提供后台伤害和减防辅助。",
+    "skills": {
+      "normalAttack": {
+        "name": "混沌铁拳",
+        "nameEn": "Chaos Iron Fist",
+        "nameJa": "カオスアイアンフィスト",
+        "description": "使用混沌动力拳套进行快速连击，至多五段。",
+        "descriptionEn": "Wields Chaos-powered gauntlets for rapid combos, up to 5 hits."
+      },
+      "skill": {
+        "name": "超载·碎甲",
+        "nameEn": "Overload: Armor Break",
+        "nameJa": "オーバーロード・アーマーブレイク",
+        "description": "重击地面造成混沌范围伤害，降低命中敌人防御力10%。",
+        "descriptionEn": "Slams the ground for Chaos AoE damage, reducing hit enemies' DEF by 10%.",
+        "cooldown": "10s",
+        "cost": "30 异能"
+      },
+      "ultimate": {
+        "name": "混沌·机械风暴",
+        "nameEn": "Chaos: Mechanika Storm",
+        "nameJa": "カオス・メカニカストーム",
+        "description": "释放全部混沌动力装置，对前方大范围敌人造成多段混沌伤害。",
+        "descriptionEn": "Unleashes all Chaos-powered devices, dealing multi-hit Chaos damage to enemies in a wide area ahead.",
+        "cost": "60 异能"
+      },
+      "passive": {
+        "name": "机械改装",
+        "nameEn": "Mech Mod",
+        "nameJa": "メカモッド",
+        "description": "机械卡切换上场时，下一次攻击附带额外混沌伤害并减少技能冷却时间2秒。",
+        "descriptionEn": "When Mechanika switches in, her next attack deals additional Chaos damage and reduces skill cooldown by 2s."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "混沌动力拳套",
+      "bestWeaponEn": "Chaos Power Gauntlet",
+      "alternativeWeapons": ["无限触发拳套"],
+      "mainStats": {
+        "沙漏": "攻击力%",
+        "杯子": "混沌伤害加成",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Chaos DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": ["暴击率", "暴击伤害", "攻击力%", "防御力%"],
+      "subStatPriorityEn": ["CRIT Rate", "CRIT DMG", "ATK%", "DEF%"]
+    },
+    "teamComps": [
+      {
+        "name": "混沌双核队",
+        "nameEn": "Chaos Dual Core",
+        "members": ["mechanika", "captain", "ringo", "aileen"],
+        "description": "机械卡与队长组成混沌双核输出，前后台兼备。",
+        "descriptionEn": "Mechanika and Captain form a Chaos dual-core with both on-field and off-field damage."
+      }
+    ],
+    "image": "/images/ananta/characters/mechanika.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  },
+  {
+    "id": "alan",
+    "name": "艾伦",
+    "nameEn": "Alan",
+    "nameJa": "アラン",
+    "element": "psyche",
+    "elementEn": "Psyche",
+    "role": "增益",
+    "roleEn": "Buffer",
+    "weaponType": "Catalyst",
+    "rarity": 4,
+    "description": "新都市精神研究所的年轻研究员，专门研究精神系异能的增益应用。学识渊博，是队伍中的智囊。",
+    "descriptionEn": "A young researcher at Nova City's Psyche Institute, specializing in Psyche buff applications. Deeply knowledgeable — the team's strategist.",
+    "faq": [
+      {
+        "question": "Is Alan worth building?",
+        "questionZh": "艾伦值得培养吗？",
+        "answer": "Alan is a solid 4-star buffer providing ATK and CRIT buffs. Good alternative if you don't have Ringo.",
+        "answerZh": "艾伦是优秀的四星增益角色，提供攻击力和暴击增益。没有凛果时是很好的替代。"
+      }
+    ],
+    "relatedCharacters": ["ringo", "captain", "taffy"],
+    "tierRank": "B",
+    "tierReason": "Solid 4-star buffer with ATK and CRIT buffs, good Ringo alternative.",
+    "tierReasonZh": "优秀的四星增益角色，提供攻击和暴击增益，是凛果的好替代。",
+    "skills": {
+      "normalAttack": {
+        "name": "精神球",
+        "nameEn": "Psyche Orb",
+        "nameJa": "サイキオーブ",
+        "description": "发射精神能量球进行远程攻击。",
+        "descriptionEn": "Fires Psyche energy orbs for ranged attacks."
+      },
+      "skill": {
+        "name": "精神阵·鼓舞",
+        "nameEn": "Psyche Array: Inspiration",
+        "nameJa": "サイキアレイ・インスピレーション",
+        "description": "展开精神阵法，提升范围内队伍成员攻击力15%，持续8秒。",
+        "descriptionEn": "Deploys a Psyche array, boosting party members' ATK by 15% within range for 8s.",
+        "cooldown": "12s",
+        "cost": "30 异能"
+      },
+      "ultimate": {
+        "name": "精神·能量涌潮",
+        "nameEn": "Psyche: Energy Surge",
+        "nameJa": "サイキ・エナジーサージ",
+        "description": "释放精神能量涌潮，为全队恢复20点异能并提升暴击率10%，持续10秒。",
+        "descriptionEn": "Releases a Psyche energy surge, restoring 20 Trigger Energy to all party members and boosting CRIT Rate by 10% for 10s.",
+        "cost": "60 异能"
+      },
+      "passive": {
+        "name": "研究心得",
+        "nameEn": "Research Insight",
+        "nameJa": "リサーチインサイト",
+        "description": "艾伦触发完美闪避后，全队攻击力额外提升5%，持续6秒。",
+        "descriptionEn": "After Alan triggers a Perfect Dodge, the whole party gains 5% ATK for 6s."
+      }
+    },
+    "recommendedBuild": {
+      "bestWeapon": "都市灵杖",
+      "bestWeaponEn": "City Spirit Staff",
+      "alternativeWeapons": ["快乐法杖"],
+      "mainStats": {
+        "沙漏": "异能充能",
+        "杯子": "攻击力%",
+        "头冠": "暴击率"
+      },
+      "mainStatsEn": {
+        "Sands": "Energy Recharge",
+        "Goblet": "ATK%",
+        "Circlet": "CRIT Rate"
+      },
+      "subStatPriority": ["异能充能", "攻击力%", "暴击率"],
+      "subStatPriorityEn": ["Energy Recharge", "ATK%", "CRIT Rate"]
+    },
+    "teamComps": [
+      {
+        "name": "精神增益队",
+        "nameEn": "Psyche Buffer Team",
+        "members": ["alan", "captain", "lykaia", "aileen"],
+        "description": "艾伦为队长提供增益，适合没有凛果时的平替方案。",
+        "descriptionEn": "Alan buffs Captain — a solid alternative when you don't have Ringo."
+      }
+    ],
+    "image": "/images/ananta/characters/alan.webp",
+    "availableAtLaunch": true,
+    "status": "available"
+  }
+]

@@ -1,7 +1,7 @@
 import type { SupportedLocale } from '@gachia/core';
 import type { GenshinArtifactSet } from './types';
-import { localeStr } from './types';
 import rawArtifacts from './raw-artifacts.json';
+import { localeStr } from './types';
 
 export const artifactSets: GenshinArtifactSet[] = rawArtifacts as unknown as GenshinArtifactSet[];
 

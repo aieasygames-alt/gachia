@@ -1,6 +1,8 @@
 import type { SupportedLocale } from '@gachia/core';
+import { join } from 'node:path';
+import { loadJson } from '../../load-json';
 import type { NteRegion } from './types';
-import rawRegions from './raw-regions.json';
+const rawRegions = await loadJson<unknown>(join(process.cwd(), '../../packages/data/games/nte/raw-regions.json'), '/data/nte/raw-regions.json');
 
 export const regions: NteRegion[] = rawRegions as unknown as NteRegion[];
 

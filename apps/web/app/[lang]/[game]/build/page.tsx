@@ -32,10 +32,10 @@ export async function generateMetadata({
   return {
     title,
     description: locale === 'zh'
-      ? `${gameName} 角色配装推荐、最佳${weaponTerm}、${gearTerm}搭配`
+      ? `${gameName} 角色配装推荐、最佳${weaponTerm}、${gearTerm}搭配，整理毕业思路、词条优先级、常见阵容与版本答案，帮助你快速完成养成决策。`
       : locale === 'ja'
-        ? `${gameName} キャラビルドおすすめ、最適${weaponTerm}、${gearTerm}組み合わせ`
-        : `${gameName} character build recommendations, best ${weaponTerm}, ${gearTerm}`,
+        ? `${gameName} キャラビルドおすすめ、最適${weaponTerm}、${gearTerm}組み合わせ、育成優先度、主要編成、完成形の考え方をまとめた実用ガイドです。`
+        : `${gameName} character build recommendations, best ${weaponTerm}, ${gearTerm}, stat priorities, common team setups, and endgame build paths to help you make the right upgrade decisions.`,
     alternates: {
       canonical: `https://gachia.com/${locale}/${gameId}/build`,
       languages: { 'zh-Hans': `https://gachia.com/zh/${gameId}/build`, en: `https://gachia.com/en/${gameId}/build`, ja: `https://gachia.com/ja/${gameId}/build`, 'x-default': `https://gachia.com/zh/${gameId}/build` },

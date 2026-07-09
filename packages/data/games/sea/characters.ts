@@ -1,8 +1,8 @@
 import { IMAGE_BASE } from '../../image-base';
 import type { SupportedLocale, Character } from '@gachia/core';
 import type { SeaCharacter } from './types';
-import { localeStr } from './types';
 import rawCharacters from './raw-characters.json';
+import { localeStr } from './types';
 
 const allCharacters: SeaCharacter[] = rawCharacters as unknown as SeaCharacter[];
 

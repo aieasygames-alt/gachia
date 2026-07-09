@@ -1,7 +1,9 @@
+'use client';
+
 import { createAuthClient } from 'better-auth/react';
 
-const authClient = createAuthClient({
-  baseURL: process.env.NEXT_PUBLIC_APP_URL || 'https://gachia.com',
-});
+// Keep the client on the current origin by letting better-auth use its
+// built-in same-origin `/api/auth` fallback.
+const authClient = createAuthClient();
 
 export const { useSession, signIn, signOut } = authClient;

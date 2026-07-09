@@ -1,6 +1,8 @@
 import type { SupportedLocale } from '@gachia/core';
+import { join } from 'node:path';
+import { loadJson } from '../../load-json';
 import { localeStr } from './types';
-import rawAnomalies from './raw-anomalies.json';
+const rawAnomalies = await loadJson<unknown>(join(process.cwd(), '../../packages/data/games/nte/raw-anomalies.json'), '/data/nte/raw-anomalies.json');
 
 export interface NteAnomaly {
   id: string;
