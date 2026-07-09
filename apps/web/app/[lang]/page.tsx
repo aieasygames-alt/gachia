@@ -122,6 +122,8 @@ const DESCRIPTIONS: Record<string, string> = {
   ja: '原神・スターレイル・鳴潮・NTE・ゼンレスゾーンゼロ・帰環・シー・オブ・レムナンツ・失控進化などをまとめた、キャラ・武器・素材・ビルド・攻略導線を備えるマルチゲームWikiです。',
 };
 
+export const dynamic = 'force-dynamic';
+
 export async function generateMetadata({
   params,
 }: {
