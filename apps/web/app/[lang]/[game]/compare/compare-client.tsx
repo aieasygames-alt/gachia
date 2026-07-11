@@ -67,7 +67,7 @@ import {
   getEndfieldCharacterImage,
   getEndfieldCharacterTierReason,
 } from '@gachia/data/games/endfield/characters';
-import type { EndfieldCharacter } from '@gachia/data/games/endfield/types';
+import type { EndfieldCharacter, EndfieldCharacterStats } from '@gachia/data/games/endfield/types';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 // --- Constants ---
@@ -1513,18 +1513,18 @@ function EndfieldCompare({ locale }: { locale: SupportedLocale }) {
                   <StatRow label={t(locale, '元素', 'Element', '元素')} valueA={ENDFIELD_ELEMENT_NAMES[charA.element]?.[locale] ?? charA.elementEn} valueB={ENDFIELD_ELEMENT_NAMES[charB.element]?.[locale] ?? charB.elementEn} />
                   <StatRow label={t(locale, '职业', 'Profession', '職業')} valueA={locale === 'zh' ? charA.profession : charA.professionEn} valueB={locale === 'zh' ? charB.profession : charB.professionEn} />
                   <StatRow label={t(locale, '获取方式', 'Acquisition', '入手方法')} valueA={charA.status} valueB={charB.status} />
-                  {charA.stats && charB.stats && charA.stats.hp.length > 0 && charB.stats.hp.length > 0 && [
-                    { label: 'HP', aIdx: 'hp', bIdx: 'hp', fmt: 'round' },
-                    { label: 'ATK', aIdx: 'atk', bIdx: 'atk', fmt: 'round' },
-                    { label: 'STR', aIdx: 'str', bIdx: 'str', fmt: 'dec' },
-                    { label: 'AGL', aIdx: 'agl', bIdx: 'agl', fmt: 'dec' },
-                    { label: 'INT', aIdx: 'int', bIdx: 'int', fmt: 'dec' },
-                    { label: 'WIL', aIdx: 'wil', bIdx: 'wil', fmt: 'dec' },
-                  ].map(({ label, aIdx, bIdx, fmt }) => {
-                    const vA = (charA.stats as any)[aIdx];
-                    const vB = (charB.stats as any)[bIdx];
-                    const maxA = vA[vA.length - 1];
-                    const maxB = vB[vB.length - 1];
+                  {charA.stats && charB.stats && charA.stats.hp.length > 0 && charB.stats.hp.length > 0 && ([
+                    { label: 'HP', key: 'hp', fmt: 'round' },
+                    { label: 'ATK', key: 'atk', fmt: 'round' },
+                    { label: 'STR', key: 'str', fmt: 'dec' },
+                    { label: 'AGL', key: 'agl', fmt: 'dec' },
+                    { label: 'INT', key: 'int', fmt: 'dec' },
+                    { label: 'WIL', key: 'wil', fmt: 'dec' },
+                  ] satisfies { label: string; key: keyof Pick<EndfieldCharacterStats, 'hp' | 'atk' | 'str' | 'agl' | 'int' | 'wil'>; fmt: 'round' | 'dec' }[]).map(({ label, key, fmt }) => {
+                    const vA = charA.stats![key];
+                    const vB = charB.stats![key];
+                    const maxA = vA[vA.length - 1] ?? 0;
+                    const maxB = vB[vB.length - 1] ?? 0;
                     return <StatRow key={label} label={`${label} (${t(locale, '满级', 'Max', '最大')})`} valueA={fmt === 'round' ? String(Math.round(maxA)) : maxA.toFixed(1)} valueB={fmt === 'round' ? String(Math.round(maxB)) : maxB.toFixed(1)} />;
                   })}
                 </tbody>

@@ -85,7 +85,7 @@ function createCategoryIcon(svgPath: string, color: string): L.DivIcon {
 }
 
 // --- Cluster icon ---
-function createClusterIcon(cluster: any) {
+function createClusterIcon(cluster: { getChildCount(): number }) {
   const count = cluster.getChildCount();
   return L.divIcon({
     html: `<div style="

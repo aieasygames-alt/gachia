@@ -40,6 +40,13 @@ const IMPORTANT_LABELS = new Set([
 // Known valid map IDs for Genshin Impact maps
 const VALID_MAP_IDS = new Set(['1', '2', '3', '4', '5', '6', '7', '8', '9']);
 
+interface HoyolabPointResponse {
+  data?: {
+    point_list?: { id: number; label_id: number; x_pos: number; y_pos: number }[];
+    label_list?: { id: number; name: string }[];
+  };
+}
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const mapId = searchParams.get('map_id') || '2';
@@ -76,7 +83,7 @@ export async function GET(request: Request) {
       return NextResponse.json({ error: 'Failed to fetch points' }, { status: 502 });
     }
 
-    const raw: any = await res.json();
+    const raw = await res.json() as HoyolabPointResponse;
     const pointList = raw?.data?.point_list ?? [];
     const labelList = raw?.data?.label_list ?? [];
 

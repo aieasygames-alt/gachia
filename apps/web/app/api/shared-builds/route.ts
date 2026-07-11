@@ -32,17 +32,17 @@ export async function POST(request: NextRequest) {
   const body: { gameId?: string; characterId?: string; buildData?: string; userId?: string } = await request.json();
 
   // CRITICAL FIX: Ignore user-provided userId, use session userId instead
-  const { gameId, characterId, buildData } = body;
   const userId = session.user.id;
 
   // CRITICAL FIX: Validate input with Zod schema
-  const validationResult = CreateBuildSchema.safeParse({ gameId, characterId, buildData });
+  const validationResult = CreateBuildSchema.safeParse(body);
   if (!validationResult.success) {
     return NextResponse.json({
       error: 'Invalid input',
       details: validationResult.error.flatten()
     }, { status: 400 });
   }
+  const { gameId, characterId, buildData } = validationResult.data;
 
   // Generate a short ID (8 chars, URL-friendly)
   const id = generateId();
@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
     gameId,
     characterId,
     buildData,
-  } as any); // Use 'as any' to bypass Drizzle type issues
+  });
 
   return NextResponse.json({ id });
 }

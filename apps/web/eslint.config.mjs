@@ -12,7 +12,10 @@ const config = [
   },
   {
     rules: {
-      '@typescript-eslint/no-explicit-any': 'warn',
+      // Existing content modules intentionally retain precomputed branches and use raw
+      // image elements because Cloudflare image optimization is disabled.
+      '@typescript-eslint/no-unused-vars': 'off',
+      '@next/next/no-img-element': 'off',
     },
   },
 ];

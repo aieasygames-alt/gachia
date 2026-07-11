@@ -31,12 +31,7 @@ function getEnv(): CloudflareEnv {
 
   // CRITICAL FIX: Better fallback for local development
   if (isLocalDevelopment()) {
-    console.warn('Running in local development mode - database bindings may be unavailable');
-    // Return a minimal environment object for local dev
-    return {
-      DB: null as any, // Local dev needs special handling
-      IMAGES: null as any,
-    } as CloudflareEnv;
+    throw new Error('D1 database binding (DB) not found in local development');
   }
 
   throw new Error('Cannot find Cloudflare environment bindings. Are you running in Cloudflare Workers?');

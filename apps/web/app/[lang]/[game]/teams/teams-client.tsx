@@ -381,7 +381,7 @@ function GenshinTeams({ locale }: { locale: SupportedLocale }) {
     }
 
     // Show teams that include any selected character
-    const teams: { name: string; nameEn: string; members: string[]; description: string; descriptionEn: string; sourceChar: string }[] = [];
+    const teams: { name: string; nameEn: string; members: string[]; description: string; descriptionEn: string; sourceChar: string; overlap: number }[] = [];
     const seen = new Set<string>();
     const activeIds = new Set(activeChars.map((c) => c.id));
 
@@ -395,13 +395,13 @@ function GenshinTeams({ locale }: { locale: SupportedLocale }) {
             const mc = genshinCharacters.find((c) => c.id === m || c.name === m || c.nameEn === m);
             return mc && activeIds.has(mc.id);
           }).length;
-          teams.push({ ...comp, sourceChar: char.nameEn, _overlap: overlap } as typeof teams[0] & { _overlap: number });
+          teams.push({ ...comp, sourceChar: char.nameEn, overlap });
         }
       }
     }
 
     // Sort by overlap (teams matching more selected chars first)
-    teams.sort((a, b) => ((b as any)._overlap || 0) - ((a as any)._overlap || 0));
+    teams.sort((a, b) => b.overlap - a.overlap);
     return teams;
   }, [activeChars]);
 
