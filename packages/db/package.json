@@ -8,7 +8,8 @@
     "type-check": "tsc --noEmit",
     "generate": "drizzle-kit generate",
     "migrate:local": "wrangler d1 migrations apply gachia-db --local --config ../../apps/web/wrangler.jsonc",
-    "migrate:remote": "wrangler d1 migrations apply gachia-db --remote --config ../../apps/web/wrangler.jsonc",
+    "migrate:staging": "wrangler d1 migrations apply gachia-db-staging --remote --env staging --config ../../apps/web/wrangler.jsonc",
+    "migrate:remote": "wrangler d1 migrations apply gachia-db --remote --env \"\" --config ../../apps/web/wrangler.jsonc",
     "clean": "rm -rf dist node_modules"
   },
   "dependencies": {

@@ -1,3 +1,5 @@
+import 'server-only';
+
 const BASE_URL = 'https://gachia.com';
 
 /**
@@ -16,12 +18,21 @@ export async function notifyIndexNow(paths: string[]): Promise<void> {
     return;
   }
 
-  const urls = paths.map((p) => `${BASE_URL}${p}`);
+  const baseUrl = process.env.BETTER_AUTH_URL || BASE_URL;
+  const urls = paths.map((p) => `${baseUrl}${p}`);
+  const authToken = process.env.INDEXNOW_AUTH_TOKEN;
+  if (!authToken) {
+    console.error('INDEXNOW_AUTH_TOKEN is not configured');
+    return;
+  }
 
   try {
-    const response = await fetch('/api/indexnow', {
+    const response = await fetch(`${baseUrl}/api/indexnow`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Authorization': `Bearer ${authToken}`,
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({ urls }),
     });
 

@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { getCloudflareContext } from '@opennextjs/cloudflare';
 import { getR2 } from '@/lib/db';
 
 const ALLOWED_HOST = 'act-webstatic.hoyoverse.com';
@@ -53,10 +54,11 @@ export async function GET(request: Request) {
 
     const body = await res.arrayBuffer();
 
-    // Store to R2 (fire and forget — don't block response)
-    r2.put(key, body, {
+    // Keep the Worker alive until the cache write completes without delaying the response.
+    const cacheWrite = r2.put(key, body, {
       httpMetadata: { contentType: 'image/png' },
-    }).catch(() => {});
+    }).catch((error) => console.error('Failed to cache map tile in R2', error));
+    getCloudflareContext().ctx.waitUntil(cacheWrite);
 
     return new Response(body, {
       headers: {

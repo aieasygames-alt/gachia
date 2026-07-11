@@ -8,6 +8,21 @@ const withNextIntl = createNextIntlPlugin('./lib/i18n/request.ts');
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
+  async headers() {
+    const privateApiHeaders = [
+      { key: 'Cache-Control', value: 'private, no-store, max-age=0' },
+      { key: 'Vary', value: 'Cookie, Authorization' },
+    ];
+
+    return [
+      { source: '/api/auth/:path*', headers: privateApiHeaders },
+      { source: '/api/indexnow/:path*', headers: privateApiHeaders },
+      { source: '/api/favorites/:path*', headers: privateApiHeaders },
+      { source: '/api/user-characters/:path*', headers: privateApiHeaders },
+      { source: '/api/shared-builds/:path*', headers: privateApiHeaders },
+      { source: '/api/map/progress/:path*', headers: privateApiHeaders },
+    ];
+  },
   webpack: (config) => {
     // The content-heavy data and copy modules produce large serialized strings in the webpack cache.
     // Disabling the disk cache keeps CI/build output quiet and avoids the repeated warning noise.
