@@ -118,6 +118,7 @@ import type { SkjhGuide, SkjhGuideFaq } from '@gachia/data/games/skjh/guides';
 import { Link } from '@/lib/i18n/navigation';
 import { ClientMarkdown } from '@/components/wiki/client-markdown';
 import { buildGuideJsonLd } from '@/lib/jsonld';
+import { ensureMetaLength } from '@/lib/seo-metadata';
 
 type LocaleMeta = Partial<Record<SupportedLocale, { title: string; description: string }>>;
 
@@ -125,6 +126,77 @@ type NextStepLink = {
   href: string;
   label: Record<SupportedLocale, string>;
   description: Record<SupportedLocale, string>;
+};
+
+const GUIDE_FALLBACK_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
+  genshin: [
+    {
+      href: '/genshin/characters',
+      label: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+      description: { zh: '继续看角色、配装和定位', en: 'Continue with characters, builds, and roles', ja: 'キャラ・育成・役割を確認' },
+    },
+    {
+      href: '/genshin/weapons',
+      label: { zh: '看武器图鉴', en: 'Browse weapons', ja: '武器図鑑へ' },
+      description: { zh: '补齐角色适配武器思路', en: 'Fill in the best weapon ideas', ja: '適性武器を補完' },
+    },
+    {
+      href: '/genshin/items',
+      label: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
+      description: { zh: '把养成材料和刷取路径接起来', en: 'Connect materials with farming routes', ja: '素材と周回ルートを接続' },
+    },
+  ],
+  starrail: [
+    {
+      href: '/starrail/characters',
+      label: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+      description: { zh: '继续看角色、光锥和配队', en: 'Continue with characters, light cones, and teams', ja: 'キャラ・光円錐・編成へ' },
+    },
+    {
+      href: '/starrail/weapons',
+      label: { zh: '看光锥图鉴', en: 'Browse light cones', ja: '光円錐図鑑へ' },
+      description: { zh: '补齐武器与适配角色', en: 'Match light cones to characters', ja: '光円錐と適性キャラを確認' },
+    },
+    {
+      href: '/starrail/items',
+      label: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
+      description: { zh: '继续看突破和行迹材料', en: 'Continue with ascension and trace materials', ja: '昇格・軌跡素材を確認' },
+    },
+  ],
+  guihuan: [
+    {
+      href: '/guihuan/characters',
+      label: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+      description: { zh: '继续看角色、武器和配队', en: 'Continue with characters, weapons, and teams', ja: 'キャラ・武器・編成へ' },
+    },
+    {
+      href: '/guihuan/weapons',
+      label: { zh: '看武器图鉴', en: 'Browse weapons', ja: '武器図鑑へ' },
+      description: { zh: '补齐武器与使用者关系', en: 'Match weapons to their users', ja: '武器と使い手を確認' },
+    },
+    {
+      href: '/guihuan/items',
+      label: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
+      description: { zh: '继续看培养材料和来源', en: 'Continue with upgrade materials and sources', ja: '育成素材と入手先を確認' },
+    },
+  ],
+  ananta: [
+    {
+      href: '/ananta/characters',
+      label: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+      description: { zh: '继续看角色、武器和养成', en: 'Continue with characters, weapons, and growth', ja: 'キャラ・武器・育成へ' },
+    },
+    {
+      href: '/ananta/weapons',
+      label: { zh: '看武器图鉴', en: 'Browse weapons', ja: '武器図鑑へ' },
+      description: { zh: '补齐武器适配角色', en: 'Match weapons to suitable characters', ja: '武器と適性キャラを確認' },
+    },
+    {
+      href: '/ananta/items',
+      label: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
+      description: { zh: '继续看突破材料和需求', en: 'Continue with upgrade materials and requirements', ja: '突破素材と必要数を確認' },
+    },
+  ],
 };
 
 const GUIDE_META_OVERRIDES: Record<string, LocaleMeta> = {
@@ -150,7 +222,7 @@ const GUIDE_META_OVERRIDES: Record<string, LocaleMeta> = {
   },
   'wuwa/banner-schedule-guide': {
     en: {
-      title: 'WuWa Banner Schedule 2026: Current & Next Banners',
+      title: 'WuWa Banner Schedule 2026: Current, Next & Rerun Banners',
       description: 'Follow Wuthering Waves current banners, next banners, rerun timing, pity carry-over, Astrite planning, and pull priorities.',
     },
     zh: {
@@ -158,9 +230,29 @@ const GUIDE_META_OVERRIDES: Record<string, LocaleMeta> = {
       description: '查看鸣潮当前卡池、下期角色、复刻节奏、保底继承、星声规划和抽取优先级，适合零氪与月卡玩家。',
     },
   },
+  'wuwa/echo-advanced-guide': {
+    en: {
+      title: 'WuWa Echo Advanced Guide: Main Stats, Substats & Sets',
+      description: 'Learn how Wuthering Waves echo mains work, which substats matter, how to choose Sonata sets, and what to farm first.',
+    },
+    zh: {
+      title: '鸣潮声骸进阶攻略：主词条、副词条与套装',
+      description: '讲清鸣潮声骸主词条、副词条、Sonata 套装选择和刷取优先级，帮助你更快完成毕业配装。',
+    },
+  },
+  'wuwa/meta-teams-v3-guide': {
+    en: {
+      title: 'WuWa Meta Teams v3: Best Teams, Rotations & Builds',
+      description: 'Best Wuthering Waves meta teams, rotation patterns, core characters, and build notes for the current patch.',
+    },
+    zh: {
+      title: '鸣潮版本强队 v3：主流配队、循环与配装',
+      description: '整理鸣潮当前版本强队、循环手法、核心角色与配装思路，适合直接抄作业。',
+    },
+  },
   'starrail/cross-game-comparison-guide': {
     en: {
-      title: 'ZZZ vs WuWa vs Genshin vs HSR: Which Gacha to Play?',
+      title: 'Genshin vs WuWa vs ZZZ vs HSR: Which Gacha Should You Play?',
       description: 'Compare ZZZ, Wuthering Waves, Genshin Impact, and Honkai: Star Rail by combat, grind, gacha, F2P value, story, and endgame.',
     },
     zh: {
@@ -196,6 +288,56 @@ const GUIDE_META_OVERRIDES: Record<string, LocaleMeta> = {
     zh: {
       title: '异环 Boss 弱点攻略：全 Boss 打法、掉落与配队',
       description: '整理异环 Boss 弱点、破盾克制、攻击模式、推荐阵容、周本掉落和刷取优先级，适合快速通关和材料规划。',
+    },
+  },
+  'nte/photo-mode-guide': {
+    en: {
+      title: 'NTE Photo Mode Guide: Unlock, Use & Best Settings',
+      description: 'Learn how to unlock NTE photo mode, find the best settings, and capture cleaner shots with your favorite characters.',
+    },
+    zh: {
+      title: '异环拍照模式攻略：解锁、使用与最佳设置',
+      description: '整理异环拍照模式的解锁方式、使用方法和最佳设置，帮助你更快拍出高质量截图。',
+    },
+  },
+  'nte/damage-formula': {
+    en: {
+      title: 'NTE Damage Formula Guide: Crit, Elements & Multipliers',
+      description: 'Break down the NTE damage formula, including crit, elemental bonuses, skill multipliers, and build implications.',
+    },
+    zh: {
+      title: '异环伤害公式攻略：暴击、属性与倍率计算',
+      description: '讲清异环伤害公式中的暴击、属性加成、技能倍率和实战影响，帮助你理解如何提升输出。',
+    },
+  },
+  'sea/launch-day-guide': {
+    en: {
+      title: 'Sea of Remnants Launch Guide: Day 1 Tips, Rewards & Route',
+      description: 'Sea of Remnants launch-day guide covering first-day rewards, starter priorities, exploration tips, and early route planning.',
+    },
+    zh: {
+      title: '遗忘之海开服攻略：首日福利、开荒优先级与路线',
+      description: '整理遗忘之海开服首日福利、开荒优先级、探索路线和新手注意事项，适合刚进坑的玩家。',
+    },
+  },
+  'sea/open-beta-version-center': {
+    en: {
+      title: 'Sea of Remnants Open Beta Center: Date, Rewards & FAQ',
+      description: 'Find the Sea of Remnants open beta date, launch rewards, FAQs, PC requirements, and version highlights in one place.',
+    },
+    zh: {
+      title: '遗忘之海公测版本中心：时间、福利与 FAQ',
+      description: '汇总遗忘之海公测时间、开服福利、FAQ、PC 配置和版本重点，适合先看总览再深入。',
+    },
+  },
+  'sea/download-install-guide': {
+    en: {
+      title: 'Sea of Remnants Download & Install Guide: PC Setup',
+      description: 'Sea of Remnants download and install guide with PC setup tips, common fixes, and what to prepare before launch.',
+    },
+    zh: {
+      title: '遗忘之海下载安装攻略：PC 安装与常见问题',
+      description: '整理遗忘之海 PC 端下载安装、配置准备和常见问题，方便开服前快速完成准备。',
     },
   },
 };
@@ -325,6 +467,82 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
       },
     ],
   },
+  nte: {
+    'photo-mode-guide': [
+      {
+        href: '/nte/guides/beginner-guide',
+        label: { zh: '看新手入门', en: 'Read beginner guide', ja: '初心者ガイドへ' },
+        description: { zh: '先补齐基础操作，再看拍照技巧', en: 'Learn basics before photo tips', ja: '基本操作を先に確認', },
+      },
+      {
+        href: '/nte/guides/download-install-guide',
+        label: { zh: '看下载安装', en: 'Read install guide', ja: 'DLガイドへ' },
+        description: { zh: '拍照之前先完成安装和启动', en: 'Finish install and launch first', ja: 'インストールと起動を先に', },
+      },
+    ],
+    'damage-formula': [
+      {
+        href: '/nte/guides/boss-guide',
+        label: { zh: '看 Boss 攻略', en: 'Read boss guide', ja: 'ボス攻略へ' },
+        description: { zh: '把倍率理解和实战对象对上', en: 'Match formula theory to bosses', ja: '倍率理解を実戦へつなぐ', },
+      },
+      {
+        href: '/nte/guides/gacha-strategy',
+        label: { zh: '看抽卡策略', en: 'Read gacha strategy', ja: 'ガチャ戦略へ' },
+        description: { zh: '算伤害之后再看资源规划', en: 'Plan resources after damage math', ja: '計算後に資源計画へ', },
+      },
+    ],
+    'boss-guide-comprehensive': [
+      {
+        href: '/nte/guides/damage-formula',
+        label: { zh: '看伤害公式', en: 'Read damage formula', ja: 'ダメージ計算へ' },
+        description: { zh: '先理解数值，再回看 Boss 弱点', en: 'Understand numbers before weakness', ja: '数値を先に理解', },
+      },
+      {
+        href: '/nte/version',
+        label: { zh: '回到版本专题', en: 'Back to version hub', ja: 'バージョン特集へ戻る' },
+        description: { zh: '把 Boss 词放回版本节点里', en: 'Place boss topics back into the version hub', ja: 'ボス話題を版本へ戻す', },
+      },
+    ],
+  },
+  sea: {
+    'launch-day-guide': [
+      {
+        href: '/sea/guides/open-beta-version-center',
+        label: { zh: '看公测中心', en: 'Read open beta center', ja: 'CBT特集へ' },
+        description: { zh: '先确认版本时间和福利', en: 'Check timing and rewards first', ja: '時期と報酬を確認', },
+      },
+      {
+        href: '/sea/guides/download-install-guide',
+        label: { zh: '看下载安装', en: 'Read install guide', ja: 'DLガイドへ' },
+        description: { zh: '开服前先把安装准备好', en: 'Get set up before launch', ja: '開始前に準備', },
+      },
+    ],
+    'open-beta-version-center': [
+      {
+        href: '/sea/guides/launch-day-guide',
+        label: { zh: '看开服攻略', en: 'Read launch guide', ja: '開服攻略へ' },
+        description: { zh: '把时间、福利和首日路线串起来', en: 'Tie timing, rewards, and first-day route together', ja: '時期、報酬、初日ルートを接続', },
+      },
+      {
+        href: '/sea/guides/collaborations-guide',
+        label: { zh: '看联动总表', en: 'Read collab matrix', ja: 'コラボ一覧へ' },
+        description: { zh: '把角色与联动内容一起看', en: 'Review crews and collabs together', ja: '船員とコラボを一緒に確認', },
+      },
+    ],
+    'download-install-guide': [
+      {
+        href: '/sea/guides/system-requirements-guide',
+        label: { zh: '看配置要求', en: 'Read system requirements', ja: '必要環境へ' },
+        description: { zh: '先确认电脑是否能跑', en: 'Check whether your PC can run it', ja: 'PC要件を先に確認', },
+      },
+      {
+        href: '/sea/guides/launch-day-guide',
+        label: { zh: '看开服攻略', en: 'Read launch guide', ja: '開服攻略へ' },
+        description: { zh: '安装后直接接首日路线', en: 'Move straight into day-one routing', ja: 'DL後に初日ルートへ', },
+      },
+    ],
+  },
 };
 
 export async function generateStaticParams() {
@@ -396,7 +614,7 @@ export async function generateMetadata({
     description,
     url: `https://gachia.com/${locale}/${gameId}/guides/${slug}`,
     siteName: 'Gachia',
-    images: [{ url: `https://gachia.com/images/og/${gameId}.jpg`, width: 1200, height: 630 }],
+    images: [{ url: `https://gachia.com/images/og/${gameId}.webp`, width: 1200, height: 630 }],
     locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
   });
 
@@ -413,7 +631,12 @@ export async function generateMetadata({
   // Build intent-rich title & description per locale for guides
   const buildGuideMeta = (guideTitle: string, summary: string, gameName: string) => {
     const override = GUIDE_META_OVERRIDES[`${gameId}/${slug}`]?.[locale];
-    if (override) return override;
+    if (override) {
+      return {
+        ...override,
+        description: ensureMetaLength(override.description, locale),
+      };
+    }
 
     // For long descriptive titles, skip the game-name suffix to stay within SERP display limits
     const titleSuffix = guideTitle.length > 45
@@ -432,7 +655,7 @@ export async function generateMetadata({
         : locale === 'ja'
           ? `${guideTitle}の${gameName}攻略ガイド。Tips、戦略、FAQ、版本要点、実戦の考え方をまとめ、必要な情報へすぐ進めます。${baseSummary ? ` 補足: ${baseSummary}` : ''}`
           : `Complete ${guideTitle} guide for ${gameName} with tips, strategies, FAQ, version notes, and practical advice. ${baseSummary ? `Summary: ${baseSummary}` : ''}`;
-    return { title, description: desc };
+    return { title, description: ensureMetaLength(desc, locale) };
   };
 
   if (gameId === 'genshin') {
@@ -638,6 +861,7 @@ function GenshinGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: s
       )}
 
       <RelatedGuidesSection gameId="genshin" currentSlug={slug} locale={locale} />
+      <NextStepSection gameId="genshin" currentSlug={slug} locale={locale} />
 
       {/* Back */}
       <div className="border-t border-game-border pt-4">
@@ -731,14 +955,16 @@ function NteGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
         </section>
       )}
 
+      <NextStepSection gameId="nte" currentSlug={slug} locale={locale} />
+
+      <RelatedGuidesSection gameId="nte" currentSlug={slug} locale={locale} />
+
       {/* Back */}
       <div className="border-t border-game-border pt-4">
         <Link href="/nte/guides" className="text-sm text-game-primary transition-colors hover:text-game-accent">
           {locale === 'zh' ? '← 返回攻略列表' : locale === 'ja' ? '← ガイド一覧に戻る' : '← Back to Guides'}
         </Link>
       </div>
-
-      <RelatedGuidesSection gameId="nte" currentSlug={slug} locale={locale} />
 
       {buildGuideJsonLd({
         gameId: 'nte',
@@ -926,6 +1152,7 @@ function StarRailGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: 
       )}
 
       <RelatedGuidesSection gameId="starrail" currentSlug={slug} locale={locale} />
+      <NextStepSection gameId="starrail" currentSlug={slug} locale={locale} />
 
       <div className="border-t border-game-border pt-4">
         <Link href="/starrail/guides" className="text-sm text-game-primary transition-colors hover:text-game-accent">
@@ -1102,6 +1329,7 @@ function GuihuanGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: s
       )}
 
       <RelatedGuidesSection gameId="guihuan" currentSlug={slug} locale={locale} />
+      <NextStepSection gameId="guihuan" currentSlug={slug} locale={locale} />
 
       <div className="border-t border-game-border pt-4">
         <Link href="/guihuan/guides" className="text-sm text-game-primary transition-colors hover:text-game-accent">
@@ -1189,6 +1417,7 @@ function AnantaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: st
       )}
 
       <RelatedGuidesSection gameId="ananta" currentSlug={slug} locale={locale} />
+      <NextStepSection gameId="ananta" currentSlug={slug} locale={locale} />
 
       <div className="border-t border-game-border pt-4">
         <Link href="/ananta/guides" className="text-sm text-game-primary transition-colors hover:text-game-accent">
@@ -1363,6 +1592,8 @@ function SeaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
           </div>
         </section>
       )}
+
+      <NextStepSection gameId="sea" currentSlug={slug} locale={locale} />
 
       <RelatedGuidesSection gameId="sea" currentSlug={slug} locale={locale} />
 
@@ -1551,7 +1782,7 @@ function RelatedGuidesSection({ gameId, currentSlug, locale }: { gameId: string;
 }
 
 function NextStepSection({ gameId, currentSlug, locale }: { gameId: string; currentSlug: string; locale: SupportedLocale }) {
-  const nextSteps = GUIDE_NEXT_STEPS[gameId as GameId]?.[currentSlug];
+  const nextSteps = GUIDE_NEXT_STEPS[gameId as GameId]?.[currentSlug] ?? GUIDE_FALLBACK_NEXT_STEPS[gameId as GameId];
   if (!nextSteps?.length) return null;
 
   return (
