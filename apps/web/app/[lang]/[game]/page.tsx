@@ -27,6 +27,12 @@ import enMessages from '@/messages/en.json';
 import jaMessages from '@/messages/ja.json';
 
 const BASE_URL = 'https://gachia.com';
+const META_MIN_LENGTH = 150;
+const META_SUFFIX: Record<SupportedLocale, string> = {
+  zh: '同时收录版本专题、图鉴页、攻略页和实用工具入口，方便继续深入浏览与查找。',
+  en: 'It also links to version hubs, character pages, guides, and useful tools for deeper browsing.',
+  ja: 'さらに版本特集、図鑑、攻略、実用ツールへの導線もまとめています。',
+};
 
 // --- i18n ---
 type HomeMessages = Record<string, string>;
@@ -39,54 +45,54 @@ const HOME_MSG: Record<string, HomeMessages> = {
 // --- Game descriptions (SEO meta + on-page) ---
 const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
   genshin: {
-    zh: '原神角色图鉴、武器数据库、圣遗物推荐、攻略百科。覆盖至6.x版本Nod-Krai区域，116+角色builds、配队推荐、材料路线图、交互地图。',
-    en: 'Genshin Impact character builds, weapon database, artifact recommendations, and guides up to v6.x Nod-Krai. 116+ characters, team comps, interactive map, and tier lists.',
-    ja: '原神キャラビルド、武器データベース、聖遺物おすすめ、攻略百科。v6.x Nod-Krai対応、116+キャラ、チーム編成、インタラクティブマップ、Tierリスト。',
+    zh: '原神角色图鉴、武器数据库、圣遗物推荐与攻略百科，覆盖 6.x Nod-Krai 区域，整理 116+ 角色属性、技能、突破材料、命座、配队推荐、材料路线、交互地图和版本热点，方便你快速查资料、规划培养并持续跟进版本变化，同时附版本专题和实用入口。',
+    en: 'Genshin Impact character builds, weapon database, artifact recommendations, and guides up to v6.x Nod-Krai. Browse 116+ characters, team comps, maps, materials, and version topics for faster farming and build planning.',
+    ja: '原神のキャラビルド、武器データベース、聖遺物おすすめ、攻略百科をまとめ、v6.x Nod-Krai まで対応。116+ キャラの性能、突破素材、命ノ星座、編成、素材ルート、インタラクティブマップ、版本トピックを一度に確認でき、育成計画にも役立ちます。版本特集と実用導線も整理済みです。',
   },
   starrail: {
-    zh: '崩坏：星穹铁道角色图鉴、光锥数据库、遗器推荐、攻略百科。覆盖至4.x版本Planarcadia星球，86+角色、愉悦命途、伤害计算器。',
-    en: 'Honkai: Star Rail character builds, light cone database, relic recommendations, and guides up to v4.x Planarcadia. 86+ characters, Elation Path, damage calculator.',
-    ja: '崩壊：スターレイルキャラビルド、光円錐データベース、遺物おすすめ、攻略百科。v4.x Planarcadia対応、86+キャラ、エレーション運命、ダメージ計算機。',
+    zh: '崩坏：星穹铁道角色图鉴、光锥数据库、遗器推荐与攻略百科，覆盖 4.x Planarcadia 星球，整理 86+ 角色命途、技能、行迹、遗器搭配、配队方案、伤害计算器和版本专题，适合抽卡前、养成期与版本回流时快速查阅，并补充联动和实用工具入口。',
+    en: 'Honkai: Star Rail character builds, light cone database, relic recommendations, and guides up to v4.x Planarcadia. Browse 86+ characters, Paths, traces, relic sets, team comps, tools, and version topics in one place.',
+    ja: '崩壊：スターレイルのキャラビルド、光円錐データベース、遺物おすすめ、攻略百科を整理し、v4.x Planarcadia に対応。86+ キャラの運命、軌跡、遺物、編成、ダメージ計算、版本特集をまとめて確認でき、育成と周回の判断に使えます。コラボ情報と便利ツールも掲載しています。',
   },
   wuwa: {
-    zh: '鸣潮角色图鉴、武器数据、声骸推荐、攻略百科。覆盖至3.x版本Roya Frostlands，48+角色、Tune Break战斗系统、声骸套装搭配。',
-    en: 'Wuthering Waves character builds, weapon database, echo recommendations, and guides up to v3.x Roya Frostlands. 48+ characters, Tune Break combat, echo set guides.',
-    ja: '鳴潮キャラビルド、武器データベース、エコーおすすめ、攻略百科。v3.x Roya Frostlands対応、48+キャラ、Tune Break戦闘、エコーセットガイド。',
+    zh: '鸣潮角色图鉴、武器数据、声骸推荐与攻略百科，覆盖 3.x Roya Frostlands，整理 48+ 角色共鸣链、技能、武器、声骸套装、Tune Break 战斗系统、配队思路和版本热点，方便你查找养成、刷图和版本更新入口，并继续查看版本专题。',
+    en: 'Wuthering Waves character builds, weapon database, echo recommendations, and guides up to v3.x Roya Frostlands. Browse 48+ characters, Resonance Chain notes, echo sets, teams, combat tips, and version topics for progression.',
+    ja: '鳴潮のキャラビルド、武器データベース、エコーおすすめ、攻略百科をまとめ、v3.x Roya Frostlands に対応。48+ キャラの共鳴チェーン、武器、エコーセット、Tune Break 戦闘、編成、版本トピックをすぐ確認でき、周回導線も分かります。前瞻や実用ページも探しやすいです。',
   },
   nte: {
-    zh: '异环（NTE）角色图鉴、武器数据、光盘推荐、兑换码、祈愿模拟。已正式发布，覆盖19个可玩角色、技能解析与配装方案。',
-    en: 'Neverness to Everness (NTE) character guides, weapon data, disk set recommendations, redeem codes, and gacha simulator. Now released with 19 playable characters.',
-    ja: '異環（NTE）キャラ図鑑、武器データ、ディスクおすすめ、交換コード、ガチャシミュレーター。正式リリース済み、19体のプレイアブルキャラ。',
+    zh: '异环（NTE）角色图鉴、武器数据、光盘推荐、兑换码和祈愿模拟，已正式发布。页面覆盖 19 个可玩角色、下载安装、新手入门、Boss 攻略、伤害公式和养成路线，适合开服期快速查资料、规划资源并确认当前热门玩法，同时附版本专题和福利入口。',
+    en: 'Neverness to Everness character guides, weapon data, disk set recommendations, redeem codes, and gacha simulator. Now released with 19 playable characters, download help, beginner routes, boss guides, and damage formulas.',
+    ja: '異環（NTE）のキャラ図鑑、武器データ、ディスクおすすめ、交換コード、ガチャシミュレーターを提供し、正式リリース済みです。19体のキャラ、DL、入門、ボス攻略、ダメージ計算、育成導線をまとめて確認でき、開服期の準備に役立ちます。版本特集や報酬導線もあります。',
   },
   zzz: {
-    zh: '绝区零代理人图鉴、音擎数据、驱动盘推荐、攻略百科。覆盖至2.8版本，56+代理人、Rupture职业、最佳配队方案。',
-    en: 'Zenless Zone Zero agent builds, W-Engine database, drive disc recommendations, and guides up to v2.8. 56+ agents, Rupture specialty, best team comps.',
-    ja: 'ゼンレスゾーンゼロエージェントビルド、Wエンジンデータ、ドライブディスクおすすめ、攻略百科。v2.8対応、56+エージェント、ラプチャースペシャリティ。',
+    zh: '绝区零代理人图鉴、音擎数据、驱动盘推荐与攻略百科，覆盖至 2.8 版本，整理 56+ 代理人、职业定位、属性、技能、驱动盘套装、最佳配队和伤害思路，适合版本更新后快速查看与继续规划养成，并配有版本专题和计算器入口。',
+    en: 'Zenless Zone Zero agent builds, W-Engines, drive discs, and guides up to v2.8. Browse 56+ agents, specialties, attributes, best team comps, and patch topics for efficient build planning.',
+    ja: 'ゼンレスゾーンゼロのエージェントビルド、Wエンジンデータ、ドライブディスクおすすめ、攻略百科を整理し、v2.8 まで対応。56+ エージェントの職業、属性、ディスク、編成、版本トピックをまとめて確認でき、効率よく育成できます。計算機や特集導線も整えています。',
   },
   guihuan: {
-    zh: '归环角色图鉴、武器数据、攻略百科。覆盖全部可用角色的技能数据与配装推荐。',
-    en: 'Guihuan character builds, weapon database, and guides. Full skill data and build recommendations for all characters.',
-    ja: '帰環キャラビルド、武器データ、攻略百科。全キャラのスキルデータとビルドおすすめ。',
+    zh: '归环角色图鉴、武器数据与攻略百科，整理全部可用角色的技能数据、定位说明、配装推荐和成长思路，帮助你更快了解游戏基础玩法、完成入门判断并找到适合当前版本的培养方向，同时持续补充图鉴与攻略专题。',
+    en: 'Guihuan character builds, weapon database, and guides. Full skill data, role notes, build recommendations, and progression ideas for every available character.',
+    ja: '帰環のキャラビルド、武器データ、攻略百科をまとめ、全キャラのスキルデータ、役割、ビルド、おすすめ育成を整理。ゲームの基礎理解と現在の育成方針を素早くつかめるので、迷わず次のページへ進めます。図鑑と攻略特集も継続更新中です。',
   },
   ananta: {
-    zh: '无限大角色图鉴、武器数据、攻略百科。网易开发的无抽卡开放世界游戏，角色通过游戏进程获取。',
-    en: 'Ananta character builds, weapon database, and guides. A no-gacha open-world game by NetEase where all characters are unlocked through gameplay.',
-    ja: '無限大キャラビルド、武器データ、攻略百科。NetEase開発のガチャなしオープンワールドゲーム、全キャラがゲーム進行で解放。',
+    zh: '无限大角色图鉴、武器数据与攻略百科，介绍网易开发的无抽卡开放世界玩法、角色获取方式、基础战斗理解和养成路线，方便玩家在了解游戏设定后快速进入角色与武器页面并继续查看攻略入口，还能补看版本专题。',
+    en: 'Ananta character builds, weapon database, and guides. This NetEase open-world game uses a no-gacha model, with unlock paths, progression notes, weapons, and build planning essentials.',
+    ja: '無限大のキャラビルド、武器データ、攻略百科を整理し、NetEase のガチャなしオープンワールド設計、キャラ解放方法、基礎戦闘、育成導線をわかりやすく案内します。入門後の次のページも探しやすい構成で、版本特集も見つけやすいです。',
   },
   endfield: {
-    zh: '《明日方舟：终末地》是鹰角网络开发的开放世界动作RPG，以明日方舟IP为背景，玩家扮演博士在塔拉二号星球上建立据点、指挥干员进行即时战斗和探索。',
-    en: 'Arknights: Endfield is an open-world action RPG by Hypergryph, set in the Arknights universe. Players take on the role of the Doctor, establishing bases and commanding operators in real-time combat on the planet Talos II.',
-    ja: 'アークナイツ：エンドフィールドはハイパーグリフ開発のオープンワールドアクションRPG。アークナイツIPを背景に、プレイヤーはドクターとしてタロスII号星で拠点を建設し、オペレーターを指揮してリアルタイム戦闘と探索を行います。',
+    zh: '《明日方舟：终末地》是鹰角网络开发的开放世界动作 RPG，背景来自明日方舟 IP。页面介绍博士在塔洛斯 II 号星建立据点、指挥干员实时战斗、探索地图与版本节点，方便测试期和入坑期快速查阅并继续进入攻略页，同时保留测试专题入口。',
+    en: 'Arknights: Endfield is an open-world action RPG by Hypergryph. Pages cover Talos II base building, operator combat, exploration, test timing, and launch topics players search for first.',
+    ja: 'アークナイツ：エンドフィールドはハイパーグリフ開発のオープンワールドアクションRPG。ドクターによるタロスII号星での拠点建設、リアルタイム戦闘、探索、テスト時期、入門導線を整理しています。初心者が次に開くページも見つけやすく、実用導線も明確です。',
   },
   sea: {
-    zh: '遗忘之海是网易Joker工作室自研的海洋奇遇开放世界RPG。PC端定档2026年7月9日公测，移动端7月内上线，Gachia整理角色、船队、版本、公测福利与开荒攻略。',
-    en: 'Sea of Remnants is an ocean adventure open-world RPG by NetEase Joker Studio. PC open beta is scheduled for July 9, 2026, with mobile launching later in July. Gachia tracks crews, fleets, version news, launch rewards, and beginner guides.',
-    ja: 'シー・オブ・レムナンツはNetEase Joker Studioの海洋アドベンチャーオープンワールドRPG。人形の船長として海の冒険に出よう。',
+    zh: '遗忘之海是网易 Joker Studio 自研的海洋冒险开放世界 RPG，PC 端已于 2026 年 7 月 9 日公测。Gachia 整理角色、捏脸、云捏脸、PC 配置、下载安装、开服福利和开荒攻略，方便先看总览再深入了解角色与系统，并补看公测专题。',
+    en: 'Sea of Remnants is an ocean adventure RPG by NetEase Joker Studio. Gachia tracks crews, face sculpting, PC specs, download/install, rewards, and beginner routes.',
+    ja: 'シー・オブ・レムナンツはNetEase Joker Studioの海洋アドベンチャー型オープンワールドRPG。PC版は2026年7月9日にCBT開始。Gachiaではキャラ、顔作成、クラウド作成、PC環境、DL、報酬、開荒ルートを整理します。先に全体像を把握したい人向けで、公測特集も見やすいです。',
   },
   skjh: {
-    zh: '失控进化是腾讯游戏发行、无端科技研发，并获得 Rust 正版玩法授权的开放世界多人生存对抗游戏。Gachia整理公测时间、开荒路线、基地建设、资源科技树、基因流派、武器和福利活动。',
-    en: 'Ashfall Evolution is an open-world multiplayer survival game published by Tencent Games and developed by Wuduan Technology with officially licensed Rust-style gameplay. Gachia tracks launch timing, beginner routes, base building, resources, gene builds, weapons, and rewards.',
-    ja: '失控進化はTencent Games配信、無端科技開発、Rust正式ライセンス玩法のオープンワールド型マルチプレイサバイバル対戦ゲームです。Gachiaでは開荒、拠点建築、資源、遺伝子ビルド、報酬を整理します。',
+    zh: '失控进化是腾讯游戏发行、无端科技研发并获得 Rust 正版玩法授权的开放世界多人生存对抗游戏。Gachia 整理公测时间、开荒路线、基地建设、资源科技树、基因流派、武器和福利活动，便于玩家快速上手并找到后续攻略入口，同时补充公测专题。',
+    en: 'Ashfall Evolution is an open-world survival game published by Tencent Games and developed by Wuduan Technology. Gachia covers launch timing, beginner routes, base building, resources, weapons, and rewards.',
+    ja: '失控進化はTencent Games配信、無端科技開発、Rust正式ライセンスの多人数サバイバル対戦型オープンワールドゲームです。Gachiaでは公測時期、開荒ルート、拠点建設、資源、遺伝子ビルド、武器、報酬を整理します。初心者が次に見るべきページも案内し、公測特集へもつなげます。',
   },
 };
 
@@ -108,9 +114,9 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
     ja: '鳴潮（Wuthering Waves）はKuro GamesのオープンワールドアクションRPG、現在v3.x Roya Frostlands地域、Tune Break戦闘システム、バイク探索が追加済み。Gachiaでは48+キャラ図鑑、武器データ、エコー百科（Sonataセット効果付き）、ビルドおすすめ、パーティ編成を提供。',
   },
   nte: {
-    zh: '异环（Neverness to Everness）是 Hotta Studio 基于 UE5 开发的超自然开放世界游戏，2026年4月已正式发布。Gachia 提供最全的异环数据库，包含19个可玩角色的图鉴、武器数据、光盘套装推荐、兑换码汇总、祈愿模拟与异象系统，提供详细的技能解析与配装方案。',
-    en: 'Neverness to Everness (NTE) is a supernatural open-world game by Hotta Studio built on UE5, officially released in April 2026. Gachia offers the most comprehensive NTE database with 19 playable character guides, weapon data, disk set recommendations, redeem codes, gacha simulator, and anomaly system with detailed skill breakdowns and build guides.',
-    ja: '異環（Neverness to Everness）はHotta StudioのUE5製超自然オープンワールドゲーム、2026年4月正式リリース。Gachiaは最も充実したNTEデータベースを提供。19体のプレイアブルキャラ図鑑、武器データ、ディスクセットおすすめ、交換コード、ガチャシミュレーター、アノマリーシステムを網羅。',
+    zh: '异环（Neverness to Everness）是 Hotta Studio 基于 UE5 开发的超自然开放世界游戏，2026年4月已正式发布。Gachia 提供最全的异环数据库，包含19个可玩角色的图鉴、武器数据、光盘套装推荐、下载安装、新手入门、Boss 攻略、伤害公式、兑换码汇总与祈愿模拟。',
+    en: 'Neverness to Everness (NTE) is a supernatural open-world game by Hotta Studio built on UE5, officially released in April 2026. Gachia offers the most comprehensive NTE database with 19 playable character guides, weapon data, disk set recommendations, download/install help, beginner routes, boss guides, damage formulas, redeem codes, and a gacha simulator.',
+    ja: '異環（Neverness to Everness）はHotta StudioのUE5製超自然オープンワールドゲーム、2026年4月正式リリース。Gachiaは最も充実したNTEデータベースを提供。19体のプレイアブルキャラ図鑑、武器データ、ディスクセットおすすめ、DL/入門、ボス攻略、ダメージ計算、交換コード、ガチャシミュレーターを網羅。',
   },
   zzz: {
     zh: '绝区零（Zenless Zone Zero）是米哈游开发的都市动作游戏，当前版本2.8。Gachia 提供52+代理人图鉴、音擎（W-Engine）数据库、驱动盘推荐与配装方案。角色按6种职业（攻击、眩晕、异常、支援、防御、破裂）和5种属性分类，包含完整技能数据与最佳配队推荐。',
@@ -133,9 +139,9 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
     ja: 'アークナイツ：エンドフィールドはハイパーグリフ開発のオープンワールドアクションRPG。アークナイツの世界観を背景に、プレイヤーはドクターとしてタロスII号星で拠点を建設し、オペレーターを指揮してリアルタイム戦闘と探索を行います。Gachiaではキャラ図鑑、武器データベース、ビルドおすすめ、攻略百科を提供。',
   },
   sea: {
-    zh: '遗忘之海是一款极具美术风格的海洋冒险RPG，采用回合制战斗、即时海战与Roguelite遗忘之旅多模式。PC端2026年7月9日公测，移动端预计7月内上线。公测首月重点内容包括白沙海、渡桥海、7月底隐秘海，新船员茉莉、黑格、盖尔、爱德华，以及记忆重逢、奥托皮亚多结局、全服交易行、噩梦深潜和大漩涡等系统。Gachia会持续整理公测版本日志、兑换码、角色与BOSS档案、开荒Build和海区探索路线。',
-    en: 'Sea of Remnants is a stylized ocean adventure RPG with turn-based combat, real-time naval battles, and Roguelite Remnant Journey runs. PC open beta is scheduled for July 9, 2026, with mobile expected later in July. Launch-month coverage includes White Sand Sea, Bridge Sea, the late-July Hidden Sea, crews such as Molly, Heige, Gail, and Edward, plus Memory Reunion, Orbtopia endings, the server-wide trade market, Nightmare Dive, and Maelstrom systems. Gachia tracks version logs, codes, crews, bosses, builds, and sea-region routes.',
-    ja: 'ターン制バトルとリアルタイム海戦を特徴とする海洋アドベンチャーRPG。記憶を失った人形の船長となり、300以上の個性的な仲間と共に伝説のシー・オブ・レムナンツを探そう。',
+    zh: '遗忘之海是一款极具美术风格的海洋冒险RPG，采用回合制战斗、即时海战与 Roguelite 遗忘之旅多模式。PC端2026年7月9日公测，移动端预计7月内上线。Gachia 会持续整理公测中心、兑换码、角色与 BOSS 档案、捏脸、云捏脸、配置要求、开荒 Build 和海区探索路线。',
+    en: 'Sea of Remnants is a stylized ocean adventure RPG with turn-based combat, real-time naval battles, and Roguelite Remnant Journey runs. PC open beta is scheduled for July 9, 2026, with mobile expected later in July. Gachia tracks the open beta center, codes, crews, bosses, builds, face sculpting, cloud sculpting, PC specs, and sea-region routes.',
+    ja: 'ターン制バトルとリアルタイム海戦を特徴とする海洋アドベンチャーRPG。PC版は2026年7月9日にオープンベータ開始、モバイル版は7月内予定。Gachiaでは公測特集、交換コード、キャラとボス、顔作成、クラウド作成、PC環境、開荒ビルド、海域ルートを整理します。',
   },
   skjh: {
     zh: '《失控进化》是一款开放世界硬核生存对抗游戏，玩家在荒岛中从徒手采集开始，逐步完成工具制作、武器锻造、庇护所搭建、科技树解锁和领地攻防。游戏强调搜打拆、基地运营、动态天气、饥饿口渴等代谢压力，以及不同服务器模式下的风险选择。Gachia 将优先整理新手 0-10 分钟开荒、基地选址、领地柜维护、资源优先级、基因流派搭配、武器图鉴和公测预约福利。',
@@ -148,13 +154,13 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
 const FEATURED_CHARS: Record<string, string[]> = {
   genshin: ['hu-tao', 'raiden-shogun', 'furina', 'nahida', 'kazuha', 'zhongli', 'yelan'],
   starrail: ['kafka', 'jingliu', 'acheron', 'firefly', 'robin', 'ruan-mei'],
-  wuwa: ['jiyan', 'yinlin', 'jinhsi', 'camellya', 'rover-spectro'],
+  wuwa: ['jiyan', 'yinlin', 'jinhsi', 'changli', 'zhezhi'],
   nte: ['chiz', 'aurelia', 'skia', 'haniel', 'sakiri', 'nanally'],
   zzz: ['ellen', 'zhu-yuan', 'miyabi', 'burnice', 'caesar'],
   guihuan: [],
   ananta: [],
   endfield: ['laevatain', 'ardelia', 'tangtang', 'endministrator', 'lifeng'],
-  sea: ['traveler', 'ais', 'little-axe', 'molly', 'heige', 'gail', 'edward'],
+  sea: ['traveler', 'ais', 'little-axe'],
   skjh: [],
 };
 
@@ -401,14 +407,14 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     eyebrow: { zh: '更新与入坑专题', en: 'Update & onboarding hub', ja: '更新・入門特集' },
     title: { zh: '异环更新与下载承接', en: 'NTE update and download hub', ja: 'NTE 更新・DL導線' },
     description: {
-      zh: '把下载、入门、配装和版本更新节点一起放进首页，优先承接最常见的问题。',
-      en: 'Put download, onboarding, builds, and update nodes on the homepage to catch common queries first.',
-      ja: 'DL、入門、ビルド、更新ノードをトップで受け止めます。',
+      zh: '把下载、入门、Boss、伤害公式和配装入口一起放进首页，优先承接最常见的问题。',
+      en: 'Put download, onboarding, boss, damage formula, and build pages on the homepage to catch common queries first.',
+      ja: 'DL、入門、ボス、ダメージ計算、ビルドをトップで受け止めます。',
     },
     chips: {
-      zh: ['下载安装', '新手入门', '配装推荐', '抽卡策略', '版本更新', '兑换码'],
-      en: ['Download/install', 'Beginner guide', 'Builds', 'Gacha strategy', 'Updates', 'Redeem codes'],
-      ja: ['DL/インストール', '初心者ガイド', 'ビルド', 'ガチャ戦略', '更新', '交換コード'],
+      zh: ['下载安装', '新手入门', 'Boss 攻略', '伤害公式', '弧盘推荐', '兑换码'],
+      en: ['Download/install', 'Beginner guide', 'Boss guide', 'Damage formula', 'Disk builds', 'Redeem codes'],
+      ja: ['DL/インストール', '初心者ガイド', 'ボス攻略', 'ダメージ計算', '弧盤', '交換コード'],
     },
     cta: { zh: '去版本专题', en: 'Open version hub', ja: 'バージョン特集へ' },
     tracks: {
@@ -422,18 +428,19 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           ],
         },
         {
-          title: '养成与配装',
-          description: '围绕弧盘、配装和抽卡策略继续分流。',
+          title: 'Boss 与机制',
+          description: '围绕 Boss、伤害公式和机制理解继续分流。',
           links: [
-            { href: '/nte/build', label: '配装推荐' },
-            { href: '/nte/guides/gacha-strategy', label: '抽卡策略' },
+            { href: '/nte/guides/boss-guide', label: 'Boss 攻略' },
+            { href: '/nte/guides/damage-formula', label: '伤害公式' },
           ],
         },
         {
           title: '版本与福利',
-          description: '把版本更新和兑换码整成更清晰的路径。',
+          description: '把版本更新、抽卡策略和兑换码整成更清晰的路径。',
           links: [
             { href: '/nte/version', label: '版本专题' },
+            { href: '/nte/guides/gacha-strategy', label: '抽卡策略' },
             { href: '/nte/redeem-codes', label: '兑换码' },
           ],
         },
@@ -448,18 +455,19 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           ],
         },
         {
-          title: 'Builds and gacha',
-          description: 'Route arc builds, gear, and gacha strategy into useful pages.',
+          title: 'Boss and mechanics',
+          description: 'Route boss, damage formula, and mechanics questions into useful pages.',
           links: [
-            { href: '/nte/build', label: 'Builds' },
-            { href: '/nte/guides/gacha-strategy', label: 'Gacha strategy' },
+            { href: '/nte/guides/boss-guide', label: 'Boss guide' },
+            { href: '/nte/guides/damage-formula', label: 'Damage formula' },
           ],
         },
         {
           title: 'Updates and rewards',
-          description: 'Keep version updates and redeem codes moving deeper.',
+          description: 'Keep version updates, gacha strategy, and redeem codes moving deeper.',
           links: [
             { href: '/nte/version', label: 'Version hub' },
+            { href: '/nte/guides/gacha-strategy', label: 'Gacha strategy' },
             { href: '/nte/redeem-codes', label: 'Redeem codes' },
           ],
         },
@@ -474,18 +482,19 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           ],
         },
         {
-          title: '育成とガチャ',
-          description: '弧盤、ビルド、ガチャ戦略を実用ページへつなげます。',
+          title: 'ボスと機構',
+          description: 'ボス、ダメージ計算、機構理解を実用ページへつなげます。',
           links: [
-            { href: '/nte/build', label: 'ビルド' },
-            { href: '/nte/guides/gacha-strategy', label: 'ガチャ戦略' },
+            { href: '/nte/guides/boss-guide', label: 'ボス攻略' },
+            { href: '/nte/guides/damage-formula', label: 'ダメージ計算' },
           ],
         },
         {
           title: '更新と報酬',
-          description: '更新情報と交換コードの流れを整えます。',
+          description: '更新情報、ガチャ戦略、交換コードの流れを整えます。',
           links: [
             { href: '/nte/version', label: 'バージョン特集' },
+            { href: '/nte/guides/gacha-strategy', label: 'ガチャ戦略' },
             { href: '/nte/redeem-codes', label: '交換コード' },
           ],
         },
@@ -510,14 +519,14 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     eyebrow: { zh: '7 月 9 日公测总专题', en: 'July 9 Open Beta Hub', ja: '7月9日CBT特集' },
     title: { zh: '遗忘之海开服热词入口', en: 'Sea of Remnants launch keywords', ja: '遺忘之海ローンチ特集' },
     description: {
-      zh: '把公测时间、第五人格联动、海绵宝宝、木偶捏脸和首月福利集中放进首页，先接住最强搜索词。',
-      en: 'Bring the open beta date, Identity V collab, SpongeBob, face sculpting, and launch rewards to the front page.',
-      ja: 'CBT時期、第5人格コラボ、スポンジボブ、顔作成、初月報酬をトップに集約します。',
+      zh: '把公测时间、捏脸、云捏脸、PC配置、第五人格联动和首月福利集中放进首页，先接住最强搜索词。',
+      en: 'Bring the open beta date, face sculpting, cloud sculpting, PC specs, Identity V collab, and launch rewards to the front page.',
+      ja: 'CBT時期、顔作成、クラウド作成、PC環境、第5人格コラボ、初月報酬をトップに集約します。',
     },
     chips: {
-      zh: ['7/9 公测', '第五人格联动', '海绵宝宝', '木偶捏脸', '100 抽福利', '新手入坑'],
-      en: ['July 9 launch', 'Identity V collab', 'SpongeBob', 'Face sculpting', '100 pulls', 'Beginner route'],
-      ja: ['7/9CBT', '第五人格コラボ', 'スポンジボブ', '顔作成', '100連報酬', '初心者'],
+      zh: ['7/9 公测', '第五人格联动', '捏脸', '云捏脸', 'PC 配置', '新手入坑'],
+      en: ['July 9 launch', 'Identity V collab', 'Face sculpting', 'Cloud sculpt', 'PC specs', 'Beginner route'],
+      ja: ['7/9CBT', '第五人格コラボ', '顔作成', 'クラウド作成', 'PC環境', '初心者'],
     },
     cta: { zh: '去版本中心', en: 'Open version center', ja: 'バージョン特集へ' },
     tracks: {
@@ -527,7 +536,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           description: '先把 7 月 9 日公测和首月节奏接住。',
           links: [
             { href: '/sea/guides/open-beta-version-center', label: '公测版本中心' },
-            { href: '/sea/version', label: '版本专题' },
+            { href: '/sea/guides/launch-day-guide', label: '开服攻略' },
           ],
         },
         {
@@ -540,10 +549,10 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
         },
         {
           title: '新手与开荒',
-          description: '把新手入门和开荒路线做成更直接的下一步。',
+          description: '把新手入门、安装和配置要求做成更直接的下一步。',
           links: [
             { href: '/sea/guides/beginner-guide', label: '新手入门' },
-            { href: '/sea/guides/launch-day-guide', label: '开服攻略' },
+            { href: '/sea/guides/download-install-guide', label: '下载安装' },
           ],
         },
       ],
@@ -553,7 +562,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           description: 'Catch the July 9 open beta timing and first-month momentum.',
           links: [
             { href: '/sea/guides/open-beta-version-center', label: 'Open beta center' },
-            { href: '/sea/version', label: 'Version hub' },
+            { href: '/sea/guides/launch-day-guide', label: 'Launch guide' },
           ],
         },
         {
@@ -566,10 +575,10 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
         },
         {
           title: 'Starter path',
-          description: 'Turn beginner and launch-route searches into clear next clicks.',
+          description: 'Turn beginner, install, and PC-spec searches into clear next clicks.',
           links: [
             { href: '/sea/guides/beginner-guide', label: 'Beginner guide' },
-            { href: '/sea/guides/launch-day-guide', label: 'Launch guide' },
+            { href: '/sea/guides/download-install-guide', label: 'Download/install' },
           ],
         },
       ],
@@ -579,7 +588,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           description: '7月9日CBTと初月の流れを受け止めます。',
           links: [
             { href: '/sea/guides/open-beta-version-center', label: 'CBT特集' },
-            { href: '/sea/version', label: 'バージョン特集' },
+            { href: '/sea/guides/launch-day-guide', label: '開服攻略' },
           ],
         },
         {
@@ -592,10 +601,10 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
         },
         {
           title: '入門ルート',
-          description: '初心者ガイドと開服攻略を次のページへ送ります。',
+          description: '初心者ガイド、DL、PC環境を次のページへ送ります。',
           links: [
             { href: '/sea/guides/beginner-guide', label: '初心者ガイド' },
-            { href: '/sea/guides/launch-day-guide', label: '開服攻略' },
+            { href: '/sea/guides/download-install-guide', label: 'DLと環境' },
           ],
         },
       ],
@@ -1114,12 +1123,12 @@ const FEATURED_GUIDE_IDS: Record<string, string[]> = {
   genshin: ['snezhnaya-version-guide', 'lunar-reaction-guide', 'artifact-guide'],
   starrail: ['v4-4-preview-guide', 'v4-3-version-guide', 'fate-collab-guide'],
   wuwa: ['v3-5-preview-guide', 'v3-4-version-guide', 'roya-frostlands-guide'],
-  nte: ['beginner-guide', 'download-install-guide', 'gacha-strategy'],
+  nte: ['photo-mode-guide', 'damage-formula', 'boss-guide'],
   zzz: ['v3-0-version-guide', 'meta-teams-v3-guide', 'rupture-specialty-guide'],
   guihuan: ['beginner-guide', 'download-install-guide', 'spirit-build-guide'],
   ananta: ['beginner-guide', 'download-install-guide', 'combat-system-guide'],
   endfield: ['download-install-guide', 'combat-system-guide', 'crisis-contract-guide'],
-  sea: ['launch-day-guide', 'collaborations-guide', 'open-beta-version-center'],
+  sea: ['launch-day-guide', 'open-beta-version-center', 'download-install-guide'],
   skjh: ['season-1-launch', 'launch-rewards-complete', 'download-crossplay-faq'],
 };
 
@@ -1170,6 +1179,11 @@ function pickFeaturedGuides<T extends { id: string }>(
   }));
 }
 
+function ensureMetaLength(value: string, locale: SupportedLocale, target = META_MIN_LENGTH) {
+  if ([...value].length >= target) return value;
+  return `${value}${META_SUFFIX[locale] ?? META_SUFFIX.zh}`;
+}
+
 // --- Metadata ---
 export async function generateMetadata({
   params,
@@ -1180,7 +1194,7 @@ export async function generateMetadata({
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
   const gameName = GAMES[gameId]?.name[locale];
-  const desc = GAME_DESCRIPTIONS[gameId]?.[locale] ?? `${gameName} Wiki`;
+  const desc = ensureMetaLength(GAME_DESCRIPTIONS[gameId]?.[locale] ?? `${gameName} Wiki`, locale);
   const languages: Record<string, string> = {};
   for (const l of LOCALES) {
     const hreflang = l === 'zh' ? 'zh-Hans' : l;
@@ -1203,7 +1217,7 @@ export async function generateMetadata({
       description: desc,
       url: `${BASE_URL}/${locale}/${gameId}`,
       siteName: 'Gachia',
-      images: [{ url: `${BASE_URL}/images/og/${gameId}.jpg`, width: 1200, height: 630 }],
+      images: [{ url: `${BASE_URL}/images/og/${gameId}.webp`, width: 1200, height: 630 }],
       locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
     },
   };
@@ -1226,7 +1240,7 @@ export default async function GameHome({
     .filter(([, enabled]) => enabled)
     .map(([route]) => route);
 
-  const description = GAME_DESCRIPTIONS[gameId]?.[locale] ?? '';
+  const description = ensureMetaLength(GAME_DESCRIPTIONS[gameId]?.[locale] ?? '', locale);
   const about = GAME_ABOUT[gameId]?.[locale] ?? '';
   const t = HOME_MSG[locale] ?? HOME_MSG['zh']!;
   const specialCopy = SPECIAL_HOME_COPY[gameId];
@@ -1241,7 +1255,7 @@ export default async function GameHome({
         <div className="flex items-center gap-4 mb-2">
           <div className="relative h-14 w-14 flex-shrink-0 overflow-hidden rounded-xl">
             <Image
-              src={`/images/og/${gameId}.jpg`}
+              src={`/images/og/${gameId}.webp`}
               alt={`${gameConfig.name[locale]} ${locale === 'zh' ? '游戏封面' : locale === 'ja' ? 'ゲームアイコン' : 'game cover'}`}
               width={56}
               height={56}
@@ -1335,6 +1349,19 @@ export default async function GameHome({
                 >
                   {specialCopy.cta[locale]}
                 </Link>
+                {gameId === 'nte' && (
+                  <>
+                    <Link href={`/${gameId}/guides/download-install-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '下载安装' : locale === 'ja' ? 'DLとインストール' : 'Download/install'}
+                    </Link>
+                    <Link href={`/${gameId}/guides/beginner-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '新手入门' : locale === 'ja' ? '初心者ガイド' : 'Beginner Guide'}
+                    </Link>
+                    <Link href={`/${gameId}/guides/boss-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? 'Boss 攻略' : locale === 'ja' ? 'ボス攻略' : 'Boss Guide'}
+                    </Link>
+                  </>
+                )}
                 {gameId === 'sea' && (
                   <>
                     <Link href={`/${gameId}/guides/open-beta-version-center` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
