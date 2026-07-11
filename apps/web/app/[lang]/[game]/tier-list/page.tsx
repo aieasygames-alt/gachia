@@ -14,6 +14,7 @@ import { tierLists as seaTierLists } from '@gachia/data/games/sea';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 import dynamic from 'next/dynamic';
+import { ensureMetaLength } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -81,16 +82,21 @@ export async function generateMetadata({
       ? `${gameName}キャラTierリスト 2026 — SS/S/A/B評価`
       : `${gameName} Character Tier List 2026 — Best Characters SS/S/A/B Ranked`;
 
+  const description = ensureMetaLength(
+    desc,
+    locale,
+  );
+
   return {
     title,
-    description: desc,
+    description,
     alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/tier-list`, languages },
     openGraph: {
       title,
-      description: desc,
+      description,
       url: `${BASE_URL}/${locale}/${gameId}/tier-list`,
       siteName: 'Gachia',
-      images: [{ url: `${BASE_URL}/images/og/${gameId}.jpg`, width: 1200, height: 630 }],
+      images: [{ url: `${BASE_URL}/images/og/${gameId}.webp`, width: 1200, height: 630 }],
       locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
     },
   };

@@ -11,6 +11,7 @@ import { endfieldCharacters, getEndfieldCharacterName, getEndfieldCharacterImage
 import { seaCharacters, getSeaCharacterName, getSeaCharacterImage } from '@gachia/data/games/sea/characters';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
+import { ensureMetaLength } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -139,6 +140,58 @@ const ANANTA_ELEMENT_COLORS: Record<string, string> = {
   chaos: '#8b5cf6', psyche: '#06b6d4', spark: '#f59e0b', surge: '#3b82f6', bloom: '#4ade80', void: '#ec4899',
 };
 
+const CHARACTER_INTRO: Record<string, Record<SupportedLocale, string>> = {
+  genshin: {
+    zh: '按属性、武器、星级快速浏览原神角色图鉴，适合在抽卡前先看定位、培养方向和组队思路。',
+    en: 'Browse the Genshin Impact character wiki by element, weapon, and rarity to check roles, build direction, and team fit before pulling.',
+    ja: '属性、武器、レアリティで原神キャラ図鑑を素早く確認し、役割・育成方針・編成相性を把握できます。',
+  },
+  starrail: {
+    zh: '按属性、命途、星级快速浏览星穹铁道角色图鉴，适合在配队前先看定位、培养顺序和替代方案。',
+    en: 'Browse the Honkai: Star Rail character wiki by element, path, and rarity to review roles, build order, and substitutes before team planning.',
+    ja: '属性、運命、レアリティでスターレイルキャラ図鑑を確認し、役割・育成順・代替案を把握できます。',
+  },
+  wuwa: {
+    zh: '按属性、武器类型和星级快速浏览鸣潮角色图鉴，适合先看声骸搭配、队伍定位和养成路线。',
+    en: 'Browse the Wuthering Waves character wiki by element, weapon type, and rarity to review echo setup, team roles, and progression routes.',
+    ja: '属性、武器タイプ、レアリティで鳴潮キャラ図鑑を確認し、声骸、役割、育成導線を把握できます。',
+  },
+  nte: {
+    zh: '按属性、评级和定位快速浏览异环角色图鉴，适合先看抽卡价值、队伍分工和培养优先级。',
+    en: 'Browse the Neverness to Everness character wiki by attribute, rank, and role to review pull value, team duties, and upgrade priority.',
+    ja: '属性、ランク、役割で異環キャラ図鑑を確認し、ガチャ価値、編成分担、育成優先度を把握できます。',
+  },
+  zzz: {
+    zh: '按属性、专精和星级快速浏览绝区零代理人图鉴，适合先看版本用途、站场逻辑和配队方向。',
+    en: 'Browse the Zenless Zone Zero agent wiki by attribute, specialty, and rarity to review patch value, field time, and team fit.',
+    ja: '属性、専門、レアリティでゼンゼロ代理人図鑑を確認し、版本用途、立ち回り、編成相性を把握できます。',
+  },
+  ananta: {
+    zh: '按元素、稀有度和职业快速浏览无限大角色图鉴，适合先看强度、定位和培养优先级。',
+    en: 'Browse the Ananta esper wiki by element, rarity, and role to review strength, positioning, and build priority.',
+    ja: '属性、レアリティ、役割でアナンタ図鑑を確認し、強さ、役割、育成優先度を把握できます。',
+  },
+  guihuan: {
+    zh: '按元素、星级和定位快速浏览归环使灵图鉴，适合先看配装方向、主力选择和培养顺序。',
+    en: 'Browse the Guihuan spirit wiki by element, rarity, and role to review build direction, main picks, and upgrade order.',
+    ja: '元素、レアリティ、役割で帰環図鑑を確認し、ビルド方向、主力候補、育成順を把握できます。',
+  },
+  endfield: {
+    zh: '按属性、职业和星级快速浏览终末地干员图鉴，适合先看战斗分工、队伍配置和养成路径。',
+    en: 'Browse the Arknights: Endfield operator wiki by element, role, and rarity to review combat duties, squad fit, and progression paths.',
+    ja: '属性、職分、レアリティでエンドフィールド干員図鑑を確認し、戦闘分担、編成相性、育成導線を把握できます。',
+  },
+  sea: {
+    zh: '按属性和定位快速浏览遗忘之海角色图鉴，适合先看开荒强度、队伍分工和培养路线。',
+    en: 'Browse the Sea of Remnants character wiki by attribute and role to review early-game value, team duties, and progression paths.',
+    ja: '属性と役割で遺忘之海キャラ図鑑を確認し、開拓強度、編成分担、育成導線を把握できます。',
+  },
+};
+
+function getCharacterIntro(gameId: string, locale: SupportedLocale) {
+  return CHARACTER_INTRO[gameId]?.[locale] ?? CHARACTER_INTRO.genshin?.[locale] ?? '';
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -150,6 +203,7 @@ export async function generateMetadata({
   const gameName = GAMES[gameId]?.name[locale];
   const categoryLabel = CATEGORY_LABELS.characters?.[locale] ?? 'Characters';
   const desc = CHAR_DESC[gameId]?.[locale];
+  const intro = CHARACTER_INTRO[gameId]?.[locale];
   const languages: Record<string, string> = {};
   for (const l of LOCALES) {
     const hreflang = l === 'zh' ? 'zh-Hans' : l;
@@ -158,15 +212,28 @@ export async function generateMetadata({
   languages['x-default'] = `${BASE_URL}/zh/${gameId}/characters`;
 
   const title = locale === 'zh'
-    ? `${gameName}角色图鉴 — 全角色Build、技能与配队`
+    ? `${gameName}角色图鉴 — 全角色Wiki、Build、技能与配队`
     : locale === 'ja'
-      ? `${gameName}キャラ図鑑 — ビルド、スキル、チーム編成`
-      : `${gameName} Characters — Builds, Skills & Best Teams`;
+      ? `${gameName}キャラ図鑑 — Wiki、ビルド、スキル、編成`
+      : `${gameName} Characters Wiki — Builds, Skills & Team Planning`;
+
+  const description = ensureMetaLength(
+    intro ?? desc ?? `${gameName} ${categoryLabel} roster with stats, skills, roles, and build recommendations`,
+    locale,
+  );
 
   return {
     title,
-    description: desc ?? `${gameName} ${categoryLabel} roster with stats, skills, roles, and build recommendations`,
+    description,
     alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/characters`, languages },
+    openGraph: {
+      title,
+      description,
+      url: `${BASE_URL}/${locale}/${gameId}/characters`,
+      siteName: 'Gachia',
+      images: [{ url: `${BASE_URL}/images/og/${gameId}.webp`, width: 1200, height: 630 }],
+      locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
+    },
   };
 }
 
@@ -256,6 +323,9 @@ function GenshinCharactersPage({ locale, gameId, gameConfig }: { locale: Support
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
       </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getCharacterIntro(gameId, locale)}
+      </p>
 
       {fiveStar.length > 0 && (
         <section className="mb-8">
@@ -335,6 +405,9 @@ function StarRailCharactersPage({ locale, gameId, gameConfig }: { locale: Suppor
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
       </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getCharacterIntro(gameId, locale)}
+      </p>
 
       {fiveStar.length > 0 && (
         <section className="mb-8">
@@ -413,6 +486,9 @@ function NteCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedLo
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
+      </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getCharacterIntro(gameId, locale)}
       </p>
 
       {sRank.length > 0 && (
@@ -505,6 +581,9 @@ function WuWaCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedL
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
       </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getCharacterIntro(gameId, locale)}
+      </p>
 
       <NextStepStrip locale={locale} links={CHARACTER_NEXT_STEPS.wuwa} />
 
@@ -586,6 +665,9 @@ function ZzzCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedLo
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
       </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getCharacterIntro(gameId, locale)}
+      </p>
 
       <NextStepStrip locale={locale} links={CHARACTER_NEXT_STEPS.zzz} />
 
@@ -666,6 +748,9 @@ function AnantaCharactersPage({ locale, gameId, gameConfig }: { locale: Supporte
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
+      </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getCharacterIntro(gameId, locale)}
       </p>
 
       {ssr.length > 0 && (
@@ -749,6 +834,9 @@ function GuihuanCharactersPage({ locale, gameId, gameConfig }: { locale: Support
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
+      </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getCharacterIntro(gameId, locale)}
       </p>
 
       {fiveStar.length > 0 && (

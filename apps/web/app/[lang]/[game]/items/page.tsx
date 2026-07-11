@@ -12,6 +12,7 @@ import { seaMaterials, getSeaMaterialName } from '@gachia/data/games/sea/items';
 import { skjhMaterials, getSkjhMaterialName } from '@gachia/data/games/skjh/items';
 import { gearSets, getGearSetName, getGearSetEffect } from '@gachia/data/games/endfield/gear-sets';
 import { Link } from '@/lib/i18n/navigation';
+import { ensureMetaLength } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -74,6 +75,63 @@ const ENDFIELD_ITEM_NEXT_STEPS: NextStepLink[] = [
   },
 ];
 
+const ITEM_INTRO: Record<string, Record<SupportedLocale, string>> = {
+  genshin: {
+    zh: '按突破材料、天赋书、Boss 掉落和区域特产快速浏览原神材料图鉴，适合在养角色前先看来源与刷取路线。',
+    en: 'Browse the Genshin Impact material wiki by ascension items, talent books, boss drops, and specialties to review sources and farming routes before upgrading.',
+    ja: '突破素材、天賦本、ボスドロップ、地域特産品で原神素材図鑑を確認し、入手先と周回ルートを把握できます。',
+  },
+  starrail: {
+    zh: '按突破材料、行迹材料、Boss 掉落和通用材料快速浏览星穹铁道材料图鉴，适合先看培养需求和刷取来源。',
+    en: 'Browse the Honkai: Star Rail material wiki by ascension items, trace materials, boss drops, and common mats to review upgrade needs and farming sources.',
+    ja: '突破素材、軌跡素材、ボスドロップ、汎用素材でスターレイル素材図鑑を確認し、育成需要と入手先を把握できます。',
+  },
+  wuwa: {
+    zh: '按技能材料、Boss 材料、周本和区域特产快速浏览鸣潮材料图鉴，适合先看每个素材该去哪里刷。',
+    en: 'Browse the Wuthering Waves material wiki by skill items, boss mats, weekly drops, and specialties to review where each resource comes from.',
+    ja: 'スキル素材、ボス素材、週ボス、地域特産品で鳴潮素材図鑑を確認し、入手場所を把握できます。',
+  },
+  nte: {
+    zh: '按猎手指南、弧盘经验、模块经验和突破材料快速浏览异环材料图鉴，适合先看阶段需求与来源。',
+    en: 'Browse the Neverness to Everness material wiki by guides, Arc EXP, module EXP, and ascension items to review stage needs and sources.',
+    ja: 'ガイド、アルクEXP、モジュールEXP、昇格素材で異環素材図鑑を確認し、段階別の需要と入手先を把握できます。',
+  },
+  zzz: {
+    zh: '按突破材料、技能材料、特殊材料和货币快速浏览绝区零材料图鉴，适合先看代理人养成和刷取来源。',
+    en: 'Browse the Zenless Zone Zero material wiki by ascension, skill, special, and currency items to review agent upgrades and farming sources.',
+    ja: '突破素材、スキル素材、特殊素材、通貨でゼンゼロ素材図鑑を確認し、エージェント育成と入手先を把握できます。',
+  },
+  ananta: {
+    zh: '按触发者指南、突破材料、Boss 材料和技能材料快速浏览无限大材料图鉴，适合先看资源需求和来源。',
+    en: 'Browse the Ananta material wiki by trigger guides, ascension, boss, and skill materials to review resource needs and sources.',
+    ja: 'トリガーガイド、突破素材、ボス素材、スキル素材でアナンタ素材図鑑を確認し、必要資源と入手先を把握できます。',
+  },
+  guihuan: {
+    zh: '按使灵指南、突破材料、元素突破和 Boss 材料快速浏览归环材料图鉴，适合先看配装与培养路径。',
+    en: 'Browse the Guihuan material wiki by spirit guides, ascension, element ascension, and boss materials to review build and progression paths.',
+    ja: 'スピリットガイド、突破素材、元素昇格、ボス素材で帰環素材図鑑を確認し、ビルドと育成導線を把握できます。',
+  },
+  endfield: {
+    zh: '按突破材料、技能材料、武器材料和装备套装快速浏览终末地材料图鉴，适合先看升级需求和掉落来源。',
+    en: 'Browse the Arknights: Endfield material wiki by ascension, skill, weapon mats, and gear sets to review upgrade needs and drop sources.',
+    ja: '突破素材、スキル素材、武器素材、装備セットでエンドフィールド素材図鑑を確認し、強化需要とドロップ元を把握できます。',
+  },
+  sea: {
+    zh: '按货币、船员突破、船只升级和制造材料快速浏览遗忘之海材料图鉴，适合先看开荒消耗和获取路线。',
+    en: 'Browse the Sea of Remnants material wiki by currency, crew ascension, ship upgrades, and crafting to review early-game costs and routes.',
+    ja: '通貨、クルー突破、船強化、製作素材で遺忘之海素材図鑑を確認し、序盤消費と入手ルートを把握できます。',
+  },
+  skjh: {
+    zh: '按生存资源、组件、弹药、燃料和医疗补给快速浏览失控进化资源图鉴，适合先看开荒消耗和收集路线。',
+    en: 'Browse the Ashfall Evolution resource wiki by survival items, components, ammo, fuel, and medical supplies to review early-game costs and collection routes.',
+    ja: '生存資源、部品、弾薬、燃料、医療補給で失控進化資源図鑑を確認し、序盤消費と収集ルートを把握できます。',
+  },
+};
+
+function getItemIntro(gameId: string, locale: SupportedLocale) {
+  return ITEM_INTRO[gameId]?.[locale] ?? ITEM_INTRO.genshin?.[locale] ?? '';
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -92,17 +150,28 @@ export async function generateMetadata({
   languages['x-default'] = `${BASE_URL}/zh/${gameId}/items`;
 
   const desc = ITEM_DESC[gameId]?.[locale] ?? `${gameName} ${categoryLabel} database with farming sources, upgrade materials, and drop locations`;
+  const intro = ITEM_INTRO[gameId]?.[locale];
 
   const title = locale === 'zh'
-    ? `${gameName}材料图鉴 — 全材料掉落来源一览`
+    ? `${gameName}材料图鉴 — 全材料Wiki、掉落来源与刷取路线`
     : locale === 'ja'
-      ? `${gameName}素材一覧 — 全素材のドロップ場所`
-      : `${gameName} Materials — Complete Drop Sources & Farming Guide`;
+      ? `${gameName}素材図鑑 — Wiki、ドロップ場所、周回ルート`
+      : `${gameName} Materials Wiki — Complete Drop Sources & Farming Guide`;
+
+  const description = ensureMetaLength(intro ?? desc, locale);
 
   return {
     title,
-    description: desc,
+    description,
     alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/items`, languages },
+    openGraph: {
+      title,
+      description,
+      url: `${BASE_URL}/${locale}/${gameId}/items`,
+      siteName: 'Gachia',
+      images: [{ url: `${BASE_URL}/images/og/${gameId}.webp`, width: 1200, height: 630 }],
+      locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
+    },
   };
 }
 
@@ -193,6 +262,9 @@ function GenshinItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId:
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${materials.length} 种材料` : locale === 'ja' ? `${materials.length} 種の素材` : `${materials.length} Materials`}
       </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getItemIntro('genshin', locale)}
+      </p>
 
       {typeOrder.map((type) => {
         const list = grouped[type];
@@ -246,6 +318,9 @@ function StarRailItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${materials.length} 种材料` : locale === 'ja' ? `${materials.length} 種の素材` : `${materials.length} Materials`}
       </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getItemIntro('starrail', locale)}
+      </p>
 
       {typeOrder.map((type) => {
         const list = grouped[type];
@@ -289,6 +364,9 @@ function NteItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: str
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${materials.length} 种材料` : locale === 'ja' ? `${materials.length} 種の素材` : `${materials.length} Materials`}
+      </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getItemIntro('nte', locale)}
       </p>
 
       {typeOrder.map((type) => {
@@ -342,6 +420,9 @@ function WuWaItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: st
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${materials.length} 种材料` : locale === 'ja' ? `${materials.length} 種の素材` : `${materials.length} Materials`}
+      </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getItemIntro('wuwa', locale)}
       </p>
 
       {typeOrder.map((type) => {
@@ -402,6 +483,9 @@ function ZzzItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: str
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${materials.length} 种材料` : locale === 'ja' ? `${materials.length} 種の素材` : `${materials.length} Materials`}
       </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getItemIntro('zzz', locale)}
+      </p>
 
       {typeOrder.map((type) => {
         const list = grouped[type];
@@ -456,6 +540,9 @@ function AnantaItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: 
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${materials.length} 种材料` : locale === 'ja' ? `${materials.length} 種の素材` : `${materials.length} Materials`}
+      </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getItemIntro('ananta', locale)}
       </p>
 
       {typeOrder.map((type) => {
@@ -515,6 +602,9 @@ function GuihuanItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId:
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${materials.length} 种材料` : locale === 'ja' ? `${materials.length} 種の素材` : `${materials.length} Materials`}
       </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getItemIntro('guihuan', locale)}
+      </p>
 
       {typeOrder.map((type) => {
         const list = grouped[type];
@@ -569,6 +659,9 @@ function EndfieldItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${materials.length} 种材料，${gearSets.length} 套装备` : locale === 'ja' ? `${materials.length} 種の素材、${gearSets.length} ギアセット` : `${materials.length} Materials, ${gearSets.length} Gear Sets`}
+      </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getItemIntro('endfield', locale)}
       </p>
 
       {typeOrder.map((type) => {
@@ -666,6 +759,9 @@ function SkjhItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: st
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${materials.length} 种资源道具` : locale === 'ja' ? `${materials.length} 種の資源・アイテム` : `${materials.length} resources and items`}
       </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getItemIntro('skjh', locale)}
+      </p>
 
       {typeOrder.map((type) => {
         const list = grouped[type];
@@ -707,6 +803,9 @@ function SeaItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: str
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${materials.length} 种材料` : locale === 'ja' ? `${materials.length} 種の素材` : `${materials.length} Materials`}
+      </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getItemIntro('sea', locale)}
       </p>
 
       {typeOrder.map((type) => {

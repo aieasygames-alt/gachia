@@ -2,8 +2,10 @@ import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { GAMES } from '@gachia/core';
+import { ensureMetaLength } from '@/lib/seo-metadata';
 
 const CompareClient = dynamic(() => import('./compare-client').then((m) => m.CompareClient));
+const BASE_URL = 'https://gachia.com';
 
 export async function generateMetadata({
   params,
@@ -15,20 +17,37 @@ export async function generateMetadata({
   const gameId = game as GameId;
   const gameConfig = GAMES[gameId];
   const gameName = locale === 'zh' ? gameConfig.name.zh : locale === 'ja' ? (gameConfig.name.ja ?? gameConfig.name.en) : gameConfig.name.en;
-  const title = locale === 'zh' ? `${gameName} 角色对比` : locale === 'ja' ? `${gameName} キャラ比較` : `${gameName} Character Compare`;
+  const title = locale === 'zh'
+    ? `${gameName}角色对比｜X vs Y 强度、定位与培养优先级`
+    : locale === 'ja'
+      ? `${gameName}キャラ比較｜X vs Y の性能、役割、育成優先度`
+      : `${gameName} Character Compare | X vs Y, Roles, Builds & Priority`;
   if (gameId === 'ananta' || gameId === 'sea') {
     return { title, robots: { index: false, follow: false } };
   }
+  const description = ensureMetaLength(
+    locale === 'zh'
+      ? `${gameName} 角色对比工具，适合做 X vs Y 强度比较、定位分析、配装差异判断和培养优先级筛选，帮助你在抽卡和组队前先选对角色。`
+      : locale === 'ja'
+        ? `${gameName} のキャラ比較ツールです。X vs Y の性能差、役割、ビルド差、育成優先度をまとめて確認できます。`
+        : `${gameName} character comparison tool for X vs Y stat checks, role matching, build differences, and upgrade priority so you can choose the right unit before pulling or investing.`,
+    locale,
+  );
+
   return {
     title,
-    description: locale === 'zh'
-      ? `${gameName} 角色属性对比、技能比较、配装差异分析和培养优先级参考，帮助你在抽卡、练角和组队前快速筛选最合适的角色。`
-      : locale === 'ja'
-        ? `${gameName} キャラステータス比較、スキル対比、ビルド差分析、育成優先度の確認に使える比較ガイドです。`
-        : `${gameName} character comparison with stat breakdowns, skill differences, build comparisons, and priority guidance so you can choose the right unit before pulling or investing.`,
+    description,
     alternates: {
-      canonical: `https://gachia.com/${locale}/${gameId}/compare`,
-      languages: { 'zh-Hans': `https://gachia.com/zh/${gameId}/compare`, en: `https://gachia.com/en/${gameId}/compare`, ja: `https://gachia.com/ja/${gameId}/compare`, 'x-default': `https://gachia.com/zh/${gameId}/compare` },
+      canonical: `${BASE_URL}/${locale}/${gameId}/compare`,
+      languages: { 'zh-Hans': `${BASE_URL}/zh/${gameId}/compare`, en: `${BASE_URL}/en/${gameId}/compare`, ja: `${BASE_URL}/ja/${gameId}/compare`, 'x-default': `${BASE_URL}/zh/${gameId}/compare` },
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${BASE_URL}/${locale}/${gameId}/compare`,
+      siteName: 'Gachia',
+      images: [{ url: `${BASE_URL}/images/og/${gameId}.webp`, width: 1200, height: 630 }],
+      locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
     },
   };
 }

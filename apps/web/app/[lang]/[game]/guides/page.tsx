@@ -13,6 +13,7 @@ import { seaGuides, getSeaGuideTitle, getSeaGuideSummary, getSeaGuideCategory, g
 import { skjhGuides, getSkjhGuideTitle, getSkjhGuideSummary, getSkjhGuideCategory, getSkjhGuideCategories, SKJH_GUIDE_CATEGORIES } from '@gachia/data/games/skjh/guides';
 import { starrailCharacters, getStarRailCharacterName, getStarRailCharacterImage } from '@gachia/data/games/starrail/characters';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
+import { ensureMetaLength } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -20,12 +21,12 @@ const GUIDE_DESC: Record<string, Record<string, string>> = {
   genshin: { zh: '原神攻略百科，覆盖新手开荒、角色培养、配队推荐、深渊挑战、版本专题与热点攻略，帮助你快速找到当前版本最实用的下一步。', en: 'Genshin Impact guides covering beginner tips, character builds, team comps, Abyss strategies, version hubs, and practical walkthroughs so you can jump to the right next page faster.', ja: '原神攻略百科。初心者向け、キャラ育成、編成、深境螺旋、版本特集までまとめて、今知りたい攻略へすぐ進めます。' },
   starrail: { zh: '崩坏：星穹铁道攻略百科，涵盖新手指南、角色培养、配队思路、忘却之庭、虚构叙事和版本热点，让你更快进入可执行的攻略页面。', en: 'Honkai: Star Rail guides covering beginner tips, character builds, team recommendations, endgame modes, version hubs, and practical next steps for fast progress.', ja: 'スターレイル攻略百科。初心者ガイド、キャラ育成、編成、忘却の庭、虚構叙事、版本トピックをまとめて案内します。' },
   wuwa: { zh: '鸣潮攻略百科，收录新手开荒、角色培养、声骸搭配、版本专题和实战攻略，方便你从首页直接进入最需要的养成或战斗内容。', en: 'Wuthering Waves guides covering beginner routes, character builds, echo setups, version hubs, and combat breakdowns so you can move from overview to action.', ja: '鳴潮攻略百科。初心者ルート、キャラ育成、エコー構成、版本特集、実戦攻略をまとめて、必要な導線へつなぎます。' },
-  nte: { zh: '异环攻略百科，包含新手指南、角色培养、弧盘推荐、版本专题、抽卡策略和实战攻略，帮助你快速了解当前版本最值得关注的内容。', en: 'Neverness to Everness guides with beginner tips, character builds, arc recommendations, version hubs, gacha planning, and combat guides focused on the current patch.', ja: '異環攻略百科。初心者ガイド、キャラ育成、アルク、版本特集、ガチャ戦略、戦闘攻略を整理して案内します。' },
+  nte: { zh: '异环攻略百科，包含下载安装、新手指南、角色培养、Boss 攻略、伤害公式、弧盘推荐和版本专题，帮助你快速了解当前版本最值得关注的内容。', en: 'Neverness to Everness guides with download/install help, beginner tips, character builds, boss guides, damage formulas, arc recommendations, and version hubs focused on the current patch.', ja: '異環攻略百科。DL/インストール、初心者ガイド、キャラ育成、ボス攻略、ダメージ計算、弧盤、版本特集を整理して案内します。' },
   zzz: { zh: '绝区零攻略百科，覆盖新手指引、代理人培养、音擎搭配、驱动盘思路、版本专题与高阶攻略，适合先看总览再进入细分页面。', en: 'Zenless Zone Zero guides covering beginner tips, agent builds, W-Engine choices, drive disc setups, version hubs, and endgame advice in one place.', ja: 'ゼンレスゾーンゼロ攻略百科。初心者ガイド、エージェント育成、Wエンジン、ディスク、版本特集、高難度攻略をまとめています。' },
   guihuan: { zh: '归环攻略百科，整理新手开荒、使灵培养、武器推荐、版本专题与实战思路，方便你按内容类型快速找到下一步该看什么。', en: 'Guihuan guides with beginner routes, spirit builds, weapon recommendations, version hubs, and practical combat notes that help you choose the best next page.', ja: '帰環攻略百科。初心者ルート、使霊育成、武器、版本特集、実戦メモをまとめて、次に読むべきページへ導きます。' },
   ananta: { zh: '无限大攻略百科，收录新手入门、异能者培养、武器推荐、版本专题和玩法拆解，让你快速进入最实用的培养与配队内容。', en: 'Ananta guides covering beginner tips, esper builds, weapon recommendations, version hubs, and gameplay breakdowns that route you into the most useful build pages.', ja: 'アナンタ攻略百科。初心者入門、異能者育成、武器、版本特集、遊び方の解説をまとめて、実用ページへ案内します。' },
   endfield: { zh: '明日方舟：终末地攻略百科，覆盖新手教程、干员培养、武器推荐、测试专题、危机合约与版本热点，方便你快速跳转到对应攻略。', en: 'Arknights: Endfield guides covering beginner tips, operator builds, weapon recommendations, test hubs, crisis content, and version-focused walkthroughs.', ja: 'アークナイツ：エンドフィールド攻略百科。初心者、オペレーター育成、武器、テスト特集、危機コンテンツ、版本トピックを整理。' },
-  sea: { zh: '遗忘之海攻略百科，提供新手开荒、角色培养、版本专题和后续攻略入口，帮助你先抓住最重要的信息，再继续深入浏览。', en: 'Sea of Remnants guides with beginner routes, character builds, version hubs, and follow-up pages that help you catch the important basics before going deeper.', ja: 'シー・オブ・レムナンツ攻略百科。初心者ルート、キャラ育成、版本特集、追加攻略への導線をまとめています。' },
+  sea: { zh: '遗忘之海攻略百科，提供公测中心、下载安装、新手开荒、捏脸、云捏脸、配置要求和版本专题，帮助你先抓住最重要的信息，再继续深入浏览。', en: 'Sea of Remnants guides with an open beta center, download/install help, beginner routes, face sculpting, cloud sculpting, PC requirements, version hubs, and follow-up pages that help you catch the important basics before going deeper.', ja: 'シー・オブ・レムナンツ攻略百科。CBT特集、DL/インストール、初心者ルート、顔作成、クラウド作成、PC環境、版本特集をまとめています。' },
   skjh: { zh: '失控进化攻略百科，整理新手开荒、基地建设、资源科技树、基因流派、武器和公测福利，适合从版本总览一路看到账户养成。', en: 'Ashfall Evolution guides covering beginner routes, base building, resource tech, gene builds, weapons, and launch rewards so players can plan progression end to end.', ja: '失控進化攻略百科。初心者ルート、拠点建築、資源テック、遺伝子ビルド、武器、公測報酬をまとめて案内します。' },
 };
 
@@ -33,12 +34,12 @@ const FEATURED_GUIDE_IDS: Record<GameId, string[]> = {
   genshin: ['snezhnaya-version-guide', 'lunar-reaction-guide', 'artifact-guide'],
   starrail: ['v4-4-preview-guide', 'v4-3-version-guide', 'fate-collab-guide'],
   wuwa: ['v3-5-preview-guide', 'v3-4-version-guide', 'roya-frostlands-guide'],
-  nte: ['beginner-guide', 'download-install-guide', 'gacha-strategy'],
+  nte: ['photo-mode-guide', 'damage-formula', 'boss-guide'],
   zzz: ['v3-0-version-guide', 'meta-teams-v3-guide', 'rupture-specialty-guide'],
   guihuan: ['beginner-guide', 'download-install-guide', 'spirit-build-guide'],
   ananta: ['beginner-guide', 'download-install-guide', 'combat-system-guide'],
   endfield: ['download-install-guide', 'combat-system-guide', 'crisis-contract-guide'],
-  sea: ['launch-day-guide', 'collaborations-guide', 'open-beta-version-center'],
+  sea: ['launch-day-guide', 'open-beta-version-center', 'download-install-guide'],
   skjh: ['season-1-launch', 'launch-rewards-complete', 'download-crossplay-faq'],
 };
 
@@ -66,16 +67,18 @@ export async function generateMetadata({
       ? `${gameName}攻略百科 — ガイド一覧`
       : `${gameName} Guides — Builds, Teams & Tips`;
 
+  const description = ensureMetaLength(desc, locale);
+
   return {
     title,
-    description: desc,
+    description,
     alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/guides`, languages },
     openGraph: {
       title,
-      description: desc,
+      description,
       url: `${BASE_URL}/${locale}/${gameId}/guides`,
       siteName: 'Gachia',
-      images: [{ url: `${BASE_URL}/images/og/${gameId}.jpg`, width: 1200, height: 630 }],
+      images: [{ url: `${BASE_URL}/images/og/${gameId}.webp`, width: 1200, height: 630 }],
       locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
     },
   };

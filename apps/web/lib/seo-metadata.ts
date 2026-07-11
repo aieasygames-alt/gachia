@@ -4,6 +4,7 @@
  */
 
 import type { Metadata, ResolvingMetadata } from 'next';
+import type { SupportedLocale } from '@gachia/core';
 
 export interface TwitterCardConfig {
   card?: 'summary' | 'summary_large_image' | 'app' | 'player';
@@ -56,11 +57,23 @@ export function generateSocialMetadata(config: SocialMetadata): Metadata {
   return metadata;
 }
 
+const META_MIN_LENGTH = 150;
+const META_SUFFIX: Record<SupportedLocale, string> = {
+  zh: '，同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。',
+  en: ' It also links to characters, weapons, guides, and useful tools for deeper browsing.',
+  ja: 'さらにキャラ、武器、攻略、実用ツールへの導線もまとめています。',
+};
+
+export function ensureMetaLength(value: string, locale: SupportedLocale, target = META_MIN_LENGTH) {
+  if ([...value].length >= target) return value;
+  return `${value}${META_SUFFIX[locale] ?? META_SUFFIX.zh}`;
+}
+
 /**
  * Generate metadata for game pages
  */
 export function generateGameMetadata(gameId: string, gameName: string, gameDescription: string): Metadata {
-  const ogImage = `/images/og/${gameId}.jpg`;
+  const ogImage = `/images/og/${gameId}.webp`;
 
   return generateSocialMetadata({
     title: `${gameName} - 角色图鉴、武器、攻略大全 | Gachia`,
@@ -103,7 +116,7 @@ export function generateGuideMetadata(
   return generateSocialMetadata({
     title: `${guideTitle} - ${gameName}攻略 | Gachia`,
     description: guideDescription,
-    images: [`/images/og/${gameId}.jpg`],
+    images: [`/images/og/${gameId}.webp`],
     imageAlt: `${gameName} Guide`,
     twitterCard: { card: 'summary_large_image' },
   });

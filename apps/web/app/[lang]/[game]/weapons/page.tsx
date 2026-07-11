@@ -10,6 +10,7 @@ import { guihuanWeapons, getGuihuanWeaponName, getGuihuanWeaponEffect } from '@g
 import { endfieldWeapons, getEndfieldWeaponName, getEndfieldWeaponEffect } from '@gachia/data/games/endfield/weapons';
 import { skjhWeapons, getSkjhWeaponName, getSkjhWeaponEffect, getSkjhWeaponSource } from '@gachia/data/games/skjh/weapons';
 import { Link } from '@/lib/i18n/navigation';
+import { ensureMetaLength } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -50,6 +51,58 @@ const SKJH_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
 };
 const SKJH_RARITY_COLORS: Record<number, string> = { 1: '#9ca3af', 2: '#4ade80', 3: '#60a5fa', 4: '#f97316' };
 
+const WEAPON_INTRO: Record<string, Record<SupportedLocale, string>> = {
+  genshin: {
+    zh: '按武器类型、稀有度和适配角色快速浏览原神武器图鉴，适合在配装前先看主词条、特效和毕业选择。',
+    en: 'Browse the Genshin Impact weapon wiki by type, rarity, and best users to review main stats, passives, and endgame picks before building.',
+    ja: '武器種別、レアリティ、適性キャラで原神武器図鑑を確認し、メインステ、効果、最終候補を把握できます。',
+  },
+  starrail: {
+    zh: '按命途、星级和适配角色快速浏览星穹铁道光锥图鉴，适合在配装前先看效果、替代品和培养价值。',
+    en: 'Browse the Honkai: Star Rail light cone wiki by path, rarity, and best users to review effects, alternatives, and upgrade value before building.',
+    ja: '運命、レアリティ、適性キャラでスターレイル光円錐図鑑を確認し、効果、代替品、育成価値を把握できます。',
+  },
+  wuwa: {
+    zh: '按武器类型、稀有度和适配角色快速浏览鸣潮武器图鉴，适合先看面板、被动和声骸配装方向。',
+    en: 'Browse the Wuthering Waves weapon wiki by weapon type, rarity, and best users to review stats, passives, and echo build direction.',
+    ja: '武器種別、レアリティ、適性キャラで鳴潮武器図鑑を確認し、性能、パッシブ、声骸ビルドを把握できます。',
+  },
+  nte: {
+    zh: '按弧盘类型、评级和适配角色快速浏览异环弧盘图鉴，适合先看核心加成、推荐角色和配装取舍。',
+    en: 'Browse the Neverness to Everness Arc wiki by type, rank, and best users to review core bonuses, recommended roles, and build tradeoffs.',
+    ja: 'タイプ、ランク、適性キャラで異環アルク図鑑を確認し、コア加成、推奨役割、配装判断を把握できます。',
+  },
+  zzz: {
+    zh: '按音擎类型、评级和适配代理人快速浏览绝区零音擎图鉴，适合先看被动、定位和升阶优先级。',
+    en: 'Browse the Zenless Zone Zero W-Engine wiki by type, rank, and best agents to review passives, roles, and upgrade priority.',
+    ja: 'タイプ、ランク、適性エージェントでゼンゼロW-エンジン図鑑を確認し、効果、役割、昇格優先度を把握できます。',
+  },
+  ananta: {
+    zh: '按武器类型、稀有度和适配角色快速浏览无限大武器图鉴，适合先看定位、面板和培养优先级。',
+    en: 'Browse the Ananta weapon wiki by type, rarity, and best users to review role fit, stats, and build priority.',
+    ja: '武器種別、レアリティ、適性キャラでアナンタ武器図鑑を確認し、役割、性能、育成優先度を把握できます。',
+  },
+  guihuan: {
+    zh: '按武器类型、稀有度和适配角色快速浏览归环武器图鉴，适合先看效果、职业适配和毕业方向。',
+    en: 'Browse the Guihuan weapon wiki by type, rarity, and best users to review effects, class fit, and endgame direction.',
+    ja: '武器種別、レアリティ、適性キャラで帰環武器図鑑を確認し、効果、職分適性、最終方向を把握できます。',
+  },
+  endfield: {
+    zh: '按武器类型、星级和适配干员快速浏览终末地武器图鉴，适合先看属性、被动和配装路线。',
+    en: 'Browse the Arknights: Endfield weapon wiki by type, rarity, and best operators to review stats, passives, and build routes.',
+    ja: '武器種別、レアリティ、適性オペレーターでエンドフィールド武器図鑑を確認し、性能、効果、配装導線を把握できます。',
+  },
+  skjh: {
+    zh: '按工具、近战、远程和外观分类快速浏览失控进化武器图鉴，适合区分开荒工具、战斗装备和预约奖励。',
+    en: 'Browse the Ashfall Evolution weapon and tool wiki by category to separate early-game tools, combat gear, and reservation rewards.',
+    ja: 'ツール、近接、遠距離、外観で失控進化武器図鑑を確認し、序盤道具、戦闘装備、予約報酬を区別できます。',
+  },
+};
+
+function getWeaponIntro(gameId: string, locale: SupportedLocale) {
+  return WEAPON_INTRO[gameId]?.[locale] ?? WEAPON_INTRO.genshin?.[locale] ?? '';
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -68,17 +121,28 @@ export async function generateMetadata({
   languages['x-default'] = `${BASE_URL}/zh/${gameId}/weapons`;
 
   const desc = WEAPON_DESC[gameId]?.[locale] ?? `${gameName} ${categoryLabel} database with stats, effects, recommended users, and acquisition methods`;
+  const intro = WEAPON_INTRO[gameId]?.[locale];
 
   const title = locale === 'zh'
-    ? `${gameName}武器图鉴 — 全武器数据与技能效果`
+    ? `${gameName}武器图鉴 — 全武器Wiki、数据与技能效果`
     : locale === 'ja'
-      ? `${gameName}武器一覧 — ステータスとスキル効果`
-      : `${gameName} Weapons — Complete Stats, Skills & Best Picks`;
+      ? `${gameName}武器図鑑 — Wiki、ステータス、スキル効果`
+      : `${gameName} Weapons Wiki — Complete Stats, Skills & Best Picks`;
+
+  const description = ensureMetaLength(intro ?? desc, locale);
 
   return {
     title,
-    description: desc,
+    description,
     alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/weapons`, languages },
+    openGraph: {
+      title,
+      description,
+      url: `${BASE_URL}/${locale}/${gameId}/weapons`,
+      siteName: 'Gachia',
+      images: [{ url: `${BASE_URL}/images/og/${gameId}.webp`, width: 1200, height: 630 }],
+      locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
+    },
   };
 }
 
@@ -179,6 +243,9 @@ function GenshinWeaponsPage({ locale }: { locale: SupportedLocale }) {
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${weapons.length} 件武器` : locale === 'ja' ? `${weapons.length} 個の武器` : `${weapons.length} Weapons`}
       </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getWeaponIntro('genshin', locale)}
+      </p>
 
       {[fiveStar, fourStar, threeStar].map((list) => {
         if (list.length === 0) return null;
@@ -250,6 +317,9 @@ function StarRailWeaponsPage({ locale }: { locale: SupportedLocale }) {
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${weapons.length} 件光锥` : locale === 'ja' ? `${weapons.length} 個の光円錐` : `${weapons.length} Light Cones`}
       </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getWeaponIntro('starrail', locale)}
+      </p>
 
       {[fiveStar, fourStar, threeStar].map((list) => {
         if (list.length === 0) return null;
@@ -306,6 +376,9 @@ function NteWeaponsPage({ locale }: { locale: SupportedLocale }) {
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${weapons.length} 件弧盘` : locale === 'ja' ? `${weapons.length} 個のアルク` : `${weapons.length} Arcs`}
+      </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getWeaponIntro('nte', locale)}
       </p>
 
       {ranks.map((rank) => {
@@ -367,6 +440,9 @@ function WuWaWeaponsPage({ locale }: { locale: SupportedLocale }) {
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${weapons.length} 件武器` : locale === 'ja' ? `${weapons.length} 個の武器` : `${weapons.length} Weapons`}
+      </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getWeaponIntro('wuwa', locale)}
       </p>
 
       {[fiveStar, fourStar, threeStar].map((list) => {
@@ -446,6 +522,9 @@ function ZzzWeaponsPage({ locale }: { locale: SupportedLocale }) {
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${weapons.length} 件音擎` : locale === 'ja' ? `${weapons.length} 個のW-エンジン` : `${weapons.length} W-Engines`}
       </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getWeaponIntro('zzz', locale)}
+      </p>
 
       {ranks.map((rank) => {
         const list = grouped[rank];
@@ -511,6 +590,9 @@ function AnantaWeaponsPage({ locale }: { locale: SupportedLocale }) {
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${weapons.length} 件武器` : locale === 'ja' ? `${weapons.length} 個の武器` : `${weapons.length} Weapons`}
       </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getWeaponIntro('ananta', locale)}
+      </p>
 
       {[fiveStar, fourStar, threeStar].map((list) => {
         if (list.length === 0) return null;
@@ -572,6 +654,9 @@ function GuihuanWeaponsPage({ locale }: { locale: SupportedLocale }) {
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${weapons.length} 件武器` : locale === 'ja' ? `${weapons.length} 個の武器` : `${weapons.length} Weapons`}
+      </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getWeaponIntro('guihuan', locale)}
       </p>
 
       {[fiveStar, fourStar].map((list) => {
@@ -694,6 +779,9 @@ function EndfieldWeaponsPage({ locale }: { locale: SupportedLocale }) {
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${weapons.length} 件武器` : locale === 'ja' ? `${weapons.length} 個の武器` : `${weapons.length} Weapons`}
       </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getWeaponIntro('endfield', locale)}
+      </p>
 
       {[sixStar, fiveStar, fourStar].map((list) => {
         if (list.length === 0) return null;
@@ -745,6 +833,9 @@ function SkjhWeaponsPage({ locale }: { locale: SupportedLocale }) {
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${weapons.length} 件武器与工具` : locale === 'ja' ? `${weapons.length} 個の武器・道具` : `${weapons.length} weapons and tools`}
+      </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getWeaponIntro('skjh', locale)}
       </p>
 
       {typeOrder.map((type) => {

@@ -31,6 +31,7 @@ import type { StarRailRegion } from '@gachia/data/games/starrail/types';
 import type { NteRegion } from '@gachia/data/games/nte/types';
 import type { EndfieldRegion } from '@gachia/data/games/endfield/types';
 import { MapLoader } from './_components/MapLoader';
+import { ensureMetaLength } from '@/lib/seo-metadata';
 
 const REGION_ICONS: Record<string, string> = {
   mondstadt: '🌬️', liyue: '⛰️', inazuma: '⚡', sumeru: '🌿',
@@ -80,16 +81,18 @@ export async function generateMetadata({
     languages[hreflang] = `${BASE_URL}/${l}/${gameId}/map`;
   }
   languages['x-default'] = `${BASE_URL}/zh/${gameId}/map`;
+  const description = ensureMetaLength(desc, locale);
+
   return {
     title,
-    description: desc,
+    description,
     alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/map`, languages },
     openGraph: {
       title,
-      description: desc,
+      description,
       url: `${BASE_URL}/${locale}/${gameId}/map`,
       siteName: 'Gachia',
-      images: [{ url: `${BASE_URL}/images/og/${gameId}.jpg`, width: 1200, height: 630 }],
+      images: [{ url: `${BASE_URL}/images/og/${gameId}.webp`, width: 1200, height: 630 }],
       locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
     },
   };

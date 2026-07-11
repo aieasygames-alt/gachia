@@ -10,6 +10,7 @@ import {
 } from '@gachia/data/games/nte/gacha';
 import { getNteCharacterName, getNteCharacterById } from '@gachia/data/games/nte/characters';
 import { Link } from '@/lib/i18n/navigation';
+import { ensureMetaLength } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -38,16 +39,18 @@ export async function generateMetadata({
     languages[hreflang] = `${BASE_URL}/${l}/nte/gacha`;
   }
   languages['x-default'] = `${BASE_URL}/zh/nte/gacha`;
+  const description = ensureMetaLength(desc, locale);
+
   return {
     title,
-    description: desc,
+    description,
     alternates: { canonical: `${BASE_URL}/${locale}/nte/gacha`, languages },
     openGraph: {
       title,
-      description: desc,
+      description,
       url: `${BASE_URL}/${locale}/nte/gacha`,
       siteName: 'Gachia',
-      images: [{ url: `${BASE_URL}/images/og/nte.jpg`, width: 1200, height: 630 }],
+      images: [{ url: `${BASE_URL}/images/og/nte.webp`, width: 1200, height: 630 }],
       locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
     },
   };

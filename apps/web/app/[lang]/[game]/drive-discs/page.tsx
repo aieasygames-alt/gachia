@@ -3,6 +3,7 @@ import type { GameId, SupportedLocale } from '@gachia/core';
 import { zzzDriveDiscs, getZzzDriveDiscName, getZzzDriveDiscDesc2pc, getZzzDriveDiscDesc4pc } from '@gachia/data/games/zzz/drive-discs';
 import { getZzzCharacterName, getZzzCharacterById } from '@gachia/data/games/zzz/characters';
 import { Link } from '@/lib/i18n/navigation';
+import { ensureMetaLength } from '@/lib/seo-metadata';
 
 const ELEMENT_COLORS: Record<string, string> = {
   physical: '#9ca3af', fire: '#ef4444', ice: '#67e8f9', electric: '#8b5cf6', ether: '#ec4899',
@@ -44,13 +45,18 @@ export async function generateMetadata({
   const gameName = GAMES[gameId]?.name[locale] ?? '';
   if (game !== 'zzz') return { robots: { index: false, follow: false } };
   const label = locale === 'zh' ? '驱动盘' : locale === 'ja' ? 'ドライブディスク' : 'Drive Discs';
-  return {
-    title: `${label} - ${gameName}`,
-    description: locale === 'zh'
+  const description = ensureMetaLength(
+    locale === 'zh'
       ? `绝区零全驱动盘图鉴，包含通用套装和元素套装的2件套/4件套效果及推荐代理人`
       : locale === 'ja'
-      ? `ゼンレスゾーンゼロ全ドライブディスク図鑑、2セット/4セット効果とおすすめエージェント`
-      : `Complete Zenless Zone Zero Drive Disc guide with 2pc/4pc set bonuses and recommended agents`,
+        ? `ゼンレスゾーンゼロ全ドライブディスク図鑑、2セット/4セット効果とおすすめエージェント`
+        : `Complete Zenless Zone Zero Drive Disc guide with 2pc/4pc set bonuses and recommended agents`,
+    locale,
+  );
+
+  return {
+    title: `${label} - ${gameName}`,
+    description,
     alternates: {
       canonical: `https://gachia.com/${locale}/zzz/drive-discs`,
       languages: { 'zh-Hans': `https://gachia.com/zh/zzz/drive-discs`, en: `https://gachia.com/en/zzz/drive-discs`, ja: `https://gachia.com/ja/zzz/drive-discs`, 'x-default': `https://gachia.com/zh/zzz/drive-discs` },
