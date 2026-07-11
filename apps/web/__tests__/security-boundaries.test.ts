@@ -3,7 +3,11 @@ import { NextRequest } from 'next/server';
 
 const first = vi.fn();
 const bind = vi.fn(() => ({ first }));
-const prepare = vi.fn((_query: string) => ({ bind }));
+const preparedQueries: string[] = [];
+const prepare = vi.fn((query: string) => {
+  preparedQueries.push(query);
+  return { bind };
+});
 
 vi.mock('@/lib/db', () => ({ getD1: () => ({ prepare }) }));
 vi.mock('@opennextjs/cloudflare', () => ({
@@ -19,6 +23,7 @@ import { POST as postIndexNow } from '@/app/api/indexnow/route';
 describe('rate limiting', () => {
   beforeEach(() => {
     prepare.mockClear();
+    preparedQueries.length = 0;
     bind.mockClear();
     first.mockReset();
     vi.spyOn(Math, 'random').mockReturnValue(1);
@@ -33,7 +38,7 @@ describe('rate limiting', () => {
     await expect(checkRateLimit(request, { limit: 20, windowSeconds: 60, prefix: '/api/auth' }))
       .resolves.toBeNull();
     expect(prepare).toHaveBeenCalledOnce();
-    expect(prepare.mock.calls[0]?.[0]).toContain('ON CONFLICT(key) DO UPDATE');
+    expect(preparedQueries[0]).toContain('ON CONFLICT(key) DO UPDATE');
     expect(bind).toHaveBeenCalledWith('192.0.2.1:/api/auth', expect.any(Number), 60, 60);
   });
 
