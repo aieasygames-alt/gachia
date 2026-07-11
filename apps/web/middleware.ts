@@ -149,8 +149,10 @@ export default function middleware(request: NextRequest) {
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   response.headers.set('X-DNS-Prefetch-Control', 'on');
 
-  // Add Vary header for proper caching of multilingual content
-  response.headers.set('Vary', 'Accept-Language');
+  if (pathname === '/') {
+    const vary = response.headers.get('Vary');
+    response.headers.set('Vary', vary ? `${vary}, Accept-Language` : 'Accept-Language');
+  }
 
   return response;
 }

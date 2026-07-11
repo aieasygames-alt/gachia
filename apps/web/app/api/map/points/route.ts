@@ -2,10 +2,6 @@ import { NextResponse } from 'next/server';
 
 const HOYOLAB_POINT_API = 'https://sg-public-api-static.hoyolab.com/common/map_user/ys_obc/v1/map/point/list';
 
-// Cache responses per map_id for 6 hours
-const pointsCache = new Map<string, { json: unknown; timestamp: number }>();
-const CACHE_TTL = 6 * 60 * 60 * 1000;
-
 // Label IDs for the most important categories we want to show
 const IMPORTANT_LABELS = new Set([
   // Teleporters & Statues
@@ -55,22 +51,19 @@ export async function GET(request: Request) {
   }
 
   // Validate labels parameter format
-  if (labelsParam && !labelsParam.split(',').every(id => /^\d+$/.test(id.trim()))) {
+  const requestedLabels = labelsParam?.split(',').map((id) => id.trim()) ?? [];
+  if (labelsParam && (
+    labelsParam.length > 500
+    || requestedLabels.length > 100
+    || !requestedLabels.every((id) => /^\d{1,6}$/.test(id))
+  )) {
     return NextResponse.json({ error: 'Invalid labels format' }, { status: 400 });
   }
 
   // Build label filter: use custom labels if provided, otherwise use IMPORTANT_LABELS
   const labelFilter = labelsParam
-    ? new Set(labelsParam.split(',').map(Number).filter((n) => !isNaN(n)))
+    ? new Set(requestedLabels.map(Number))
     : IMPORTANT_LABELS;
-
-  const cacheKey = `points:${mapId}:${labelsParam ?? 'default'}`;
-  const cached = pointsCache.get(cacheKey);
-  if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
-    return NextResponse.json(cached.json, {
-      headers: { 'Cache-Control': 'public, s-maxage=21600' },
-    });
-  }
 
   try {
     // P1-29: Use encodeURIComponent to prevent injection via map_id
@@ -119,8 +112,6 @@ export async function GET(request: Request) {
       categories: Object.values(categories),
       totalPoints: Object.values(categories).reduce((s, c) => s + c.points.length, 0),
     };
-
-    pointsCache.set(cacheKey, { json: result, timestamp: Date.now() });
 
     return NextResponse.json(result, {
       headers: { 'Cache-Control': 'public, s-maxage=21600' },

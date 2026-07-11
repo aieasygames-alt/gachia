@@ -3,6 +3,7 @@ import { getDb } from '@/lib/db';
 import { userCharacters, eq, and } from '@gachia/db';
 import { createAuth } from '@/lib/auth';
 import { checkRateLimit } from '@/lib/rate-limit';
+import { z } from 'zod';
 
 const RL = { limit: 100, windowSeconds: 60, prefix: '/api/user-characters' };
 
@@ -11,13 +12,15 @@ async function getSession(request: NextRequest) {
   return auth.api.getSession({ headers: request.headers });
 }
 
-interface CharacterBody {
-  gameId?: string;
-  characterId?: string;
-  level?: number;
-  constellation?: number;
-  notes?: string;
-}
+const CharacterKeySchema = z.object({
+  gameId: z.enum(['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh']),
+  characterId: z.string().trim().min(1).max(100).regex(/^[a-zA-Z0-9_-]+$/),
+});
+const CharacterBodySchema = CharacterKeySchema.extend({
+  level: z.number().int().min(1).max(100).optional(),
+  constellation: z.number().int().min(0).max(6).optional(),
+  notes: z.string().trim().max(1000).optional(),
+});
 
 export async function GET(request: NextRequest) {
   const limited = await checkRateLimit(request, RL);
@@ -54,12 +57,11 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const body: CharacterBody = await request.json();
-  const { gameId, characterId, level, constellation, notes } = body;
-
-  if (!gameId || !characterId) {
-    return NextResponse.json({ error: 'gameId and characterId are required' }, { status: 400 });
+  const parsedBody = CharacterBodySchema.safeParse(await request.json());
+  if (!parsedBody.success) {
+    return NextResponse.json({ error: 'Invalid character data' }, { status: 400 });
   }
+  const { gameId, characterId, level, constellation, notes } = parsedBody.data;
 
   const db = getDb();
 
@@ -102,12 +104,11 @@ export async function DELETE(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const body: CharacterBody = await request.json();
-  const { gameId, characterId } = body;
-
-  if (!gameId || !characterId) {
-    return NextResponse.json({ error: 'gameId and characterId are required' }, { status: 400 });
+  const parsedBody = CharacterKeySchema.safeParse(await request.json());
+  if (!parsedBody.success) {
+    return NextResponse.json({ error: 'Invalid character data' }, { status: 400 });
   }
+  const { gameId, characterId } = parsedBody.data;
 
   const db = getDb();
   await db

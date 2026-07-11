@@ -16,7 +16,11 @@
   },
   "packageManager": "pnpm@10.10.0",
   "pnpm": {
-    "onlyBuiltDependencies": ["@swc/core", "esbuild", "sharp", "workerd", "@parcel/watcher"]
+    "onlyBuiltDependencies": ["@swc/core", "esbuild", "sharp", "workerd", "@parcel/watcher"],
+    "overrides": {
+      "kysely": "0.28.17",
+      "vite": "8.0.16"
+    }
   },
   "engines": {
     "node": ">=20"

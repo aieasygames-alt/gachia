@@ -3,8 +3,13 @@ import { getDb } from '@/lib/db';
 import { userFavorites, eq, and } from '@gachia/db';
 import { createAuth } from '@/lib/auth';
 import { checkRateLimit } from '@/lib/rate-limit';
+import { z } from 'zod';
 
 const RL = { limit: 100, windowSeconds: 60, prefix: '/api/favorites' };
+const FavoriteSchema = z.object({
+  gameId: z.enum(['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh']),
+  characterId: z.string().trim().min(1).max(100).regex(/^[a-zA-Z0-9_-]+$/),
+});
 
 async function getSession(request: NextRequest) {
   const auth = createAuth();
@@ -46,12 +51,11 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const body: { gameId?: string; characterId?: string } = await request.json();
-  const { gameId, characterId } = body;
-
-  if (!gameId || !characterId) {
-    return NextResponse.json({ error: 'gameId and characterId are required' }, { status: 400 });
+  const parsedBody = FavoriteSchema.safeParse(await request.json());
+  if (!parsedBody.success) {
+    return NextResponse.json({ error: 'Invalid favorite' }, { status: 400 });
   }
+  const { gameId, characterId } = parsedBody.data;
 
   const db = getDb();
 
@@ -77,12 +81,11 @@ export async function DELETE(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const body: { gameId?: string; characterId?: string } = await request.json();
-  const { gameId, characterId } = body;
-
-  if (!gameId || !characterId) {
-    return NextResponse.json({ error: 'gameId and characterId are required' }, { status: 400 });
+  const parsedBody = FavoriteSchema.safeParse(await request.json());
+  if (!parsedBody.success) {
+    return NextResponse.json({ error: 'Invalid favorite' }, { status: 400 });
   }
+  const { gameId, characterId } = parsedBody.data;
 
   const db = getDb();
   await db

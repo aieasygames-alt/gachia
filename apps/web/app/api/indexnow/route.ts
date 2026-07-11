@@ -1,6 +1,10 @@
 import { NextResponse } from 'next/server';
+import { z } from 'zod';
 
 const INDEXNOW_KEY = 'gachia2026indexnowkey';
+const UrlListSchema = z.object({
+  urls: z.array(z.string().url().max(2048)).min(1).max(10000),
+});
 
 // IndexNow API endpoint — ping search engines when content changes
 export async function POST(request: Request) {
@@ -17,14 +21,17 @@ export async function POST(request: Request) {
   }
 
   try {
-    const { urls } = await request.json() as { urls: string[] };
-
-    if (!urls || !Array.isArray(urls) || urls.length === 0) {
-      return NextResponse.json({ error: 'urls array required' }, { status: 400 });
+    const parsedBody = UrlListSchema.safeParse(await request.json());
+    if (!parsedBody.success) {
+      return NextResponse.json({ error: 'Invalid urls array' }, { status: 400 });
     }
+    const urls = parsedBody.data.urls;
 
-    if (urls.length > 10000) {
-      return NextResponse.json({ error: 'Max 10000 URLs per request' }, { status: 400 });
+    if (urls.some((url) => {
+      const parsedUrl = new URL(url);
+      return parsedUrl.protocol !== 'https:' || parsedUrl.hostname !== 'gachia.com' || Boolean(parsedUrl.port);
+    })) {
+      return NextResponse.json({ error: 'Only gachia.com URLs are allowed' }, { status: 400 });
     }
 
     const body = {

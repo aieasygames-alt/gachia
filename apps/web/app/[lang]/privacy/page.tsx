@@ -23,11 +23,11 @@ const CONTENT: Record<string, { title: string; sections: { heading: string; body
       },
       {
         heading: '2. 信息收集',
-        body: '我们使用 Google Analytics 收集匿名访问数据，包括页面浏览量、访问时长、浏览器类型和设备信息。这些数据不包含个人身份信息。我们不收集姓名、邮箱、电话号码等个人身份信息。我们不使用 Cookie 进行广告追踪。',
+        body: '我们使用 Google Analytics 收集访问数据，包括页面浏览量、访问时长、浏览器类型和设备信息。使用 Google 登录时，我们会从 Google 获取并存储您的姓名、邮箱地址、头像和账号标识。我们还会处理会话令牌、IP 地址、User-Agent，以及您主动保存的收藏、角色、地图进度和共享配装。我们不使用这些信息进行广告追踪。',
       },
       {
         heading: '3. 本地存储',
-        body: '我们使用浏览器的 localStorage 存储您的偏好设置（如材料规划器中的库存数据）。这些数据仅保存在您的设备上，不会发送到我们的服务器。您可以随时通过清除浏览器数据来删除这些信息。',
+        body: '材料规划器库存等未启用同步的偏好保存在浏览器 localStorage 中。登录后主动使用收藏、角色、地图进度或共享功能时，相应数据会发送并保存在我们的服务器。您可以清除浏览器数据来删除本地信息，并通过联系我们请求删除账号及服务器数据。',
       },
       {
         heading: '4. 第三方服务',
@@ -35,7 +35,7 @@ const CONTENT: Record<string, { title: string; sections: { heading: string; body
       },
       {
         heading: '5. 数据安全',
-        body: '我们通过 Cloudflare 提供的 HTTPS 加密来保护数据传输安全。我们不存储用户的个人数据。',
+        body: '我们通过 HTTPS、访问控制和受限的服务密钥保护数据。账号与用户内容会在提供服务所需期间保存；会话和验证记录按其有效期保存。您可以通过 GitHub Issue 或联系邮箱请求访问或删除个人数据。',
       },
       {
         heading: '6. 儿童隐私',
@@ -60,11 +60,11 @@ const CONTENT: Record<string, { title: string; sections: { heading: string; body
       },
       {
         heading: '2. Information Collection',
-        body: 'We use Google Analytics to collect anonymous usage data, including page views, visit duration, browser type, and device information. This data does not contain personally identifiable information. We do not collect names, email addresses, phone numbers, or other personal identifiers. We do not use cookies for advertising tracking.',
+        body: 'We use Google Analytics to collect usage data such as page views, visit duration, browser type, and device information. When you sign in with Google, we receive and store your name, email address, profile image, and account identifier. We also process session tokens, IP addresses, user agents, and information you choose to save, including favorites, characters, map progress, and shared builds. We do not use this information for advertising tracking.',
       },
       {
         heading: '3. Local Storage',
-        body: 'We use your browser\'s localStorage to store your preferences (such as inventory data in the material planner). This data is stored only on your device and is never sent to our servers. You can delete this data at any time by clearing your browser data.',
+        body: 'Preferences that are not synchronized, such as material planner inventory, are stored in your browser\'s localStorage. When signed in, data you intentionally save through favorites, characters, map progress, or sharing features is sent to and stored on our servers. You can clear browser data to remove local information and contact us to request deletion of your account and server data.',
       },
       {
         heading: '4. Third-Party Services',
@@ -72,7 +72,7 @@ const CONTENT: Record<string, { title: string; sections: { heading: string; body
       },
       {
         heading: '5. Data Security',
-        body: 'We protect data transmission through HTTPS encryption provided by Cloudflare. We do not store personal user data.',
+        body: 'We protect data using HTTPS, access controls, and restricted service credentials. Account information and user content are retained while needed to provide the service; sessions and verification records are retained for their validity period. You may request access to or deletion of personal data through a GitHub Issue or the contact email.',
       },
       {
         heading: '6. Children\'s Privacy',
@@ -97,11 +97,11 @@ const CONTENT: Record<string, { title: string; sections: { heading: string; body
       },
       {
         heading: '2. 情報収集',
-        body: '当方は Google Analytics を使用して、ページビュー、訪問時間、ブラウザタイプ、デバイス情報などの匿名利用データを収集しています。このデータには個人を特定できる情報は含まれません。当方は氏名、メールアドレス、電話番号などの個人識別情報を収集しません。当方は広告追跡のために Cookie を使用しません。',
+        body: 'Google Analytics を使用し、ページビュー、訪問時間、ブラウザタイプ、デバイス情報などの利用データを収集します。Google でログインすると、氏名、メールアドレス、プロフィール画像、アカウント識別子を取得して保存します。また、セッショントークン、IP アドレス、User-Agent、およびお気に入り、キャラクター、マップ進捗、共有ビルドなど利用者が保存した情報を処理します。これらを広告追跡には使用しません。',
       },
       {
         heading: '3. ローカルストレージ',
-        body: '当方はブラウザの localStorage を使用して、お客様の設定（素材プランナーの在庫データなど）を保存します。このデータはお客様のデバイスにのみ保存され、当方のサーバーに送信されることはありません。ブラウザデータをクリアすることで、いつでもこのデータを削除できます。',
+        body: '同期されない素材プランナーの在庫などはブラウザの localStorage に保存されます。ログイン後にお気に入り、キャラクター、マップ進捗、共有機能で保存したデータはサーバーへ送信され保存されます。ローカル情報はブラウザデータの消去で削除でき、アカウントとサーバーデータの削除は当方へ請求できます。',
       },
       {
         heading: '4. サードパーティサービス',
@@ -109,7 +109,7 @@ const CONTENT: Record<string, { title: string; sections: { heading: string; body
       },
       {
         heading: '5. データセキュリティ',
-        body: '当方は Cloudflare が提供する HTTPS 暗号化によりデータ転送のセキュリティを保護しています。当方はユーザーの個人データを保存しません。',
+        body: 'HTTPS、アクセス制御、制限されたサービス認証情報によりデータを保護します。アカウント情報と利用者コンテンツはサービス提供に必要な期間保存し、セッションと検証記録は有効期間中保存します。GitHub Issue または連絡先メールから個人データの開示・削除を請求できます。',
       },
       {
         heading: '6. 子供のプライバシー',
@@ -143,7 +143,7 @@ export default async function PrivacyPage({
       <div className="mx-auto max-w-3xl">
         <h1 className="mb-2 text-3xl font-bold text-game-text">{content.title}</h1>
         <p className="mb-8 text-sm text-game-text-muted">
-          {locale === 'zh' ? '最后更新：2026年5月11日' : locale === 'ja' ? '最終更新：2026年5月11日' : 'Last Updated: May 11, 2026'}
+          {locale === 'zh' ? '最后更新：2026年7月11日' : locale === 'ja' ? '最終更新：2026年7月11日' : 'Last Updated: July 11, 2026'}
         </p>
 
         {content.sections.map((section) => (

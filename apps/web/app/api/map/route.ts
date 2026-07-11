@@ -22,19 +22,14 @@ interface MapData {
   };
 }
 
-// Cache responses per map_id for 24 hours
-const tileCache = new Map<string, { data: unknown; timestamp: number }>();
-const CACHE_TTL = 24 * 60 * 60 * 1000;
+const VALID_MAP_IDS = new Set(['1', '2', '3', '4', '5', '6', '7', '8', '9']);
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const mapId = searchParams.get('map_id') || '2';
 
-  // Return cached data if fresh
-  const cacheKey = `tiles:${mapId}`;
-  const cached = tileCache.get(cacheKey);
-  if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
-    return NextResponse.json(cached.data);
+  if (!VALID_MAP_IDS.has(mapId)) {
+    return NextResponse.json({ error: 'Invalid map_id' }, { status: 400 });
   }
 
   try {
@@ -75,8 +70,6 @@ export async function GET(request: Request) {
       totalHeight: rows * 2048,
       tiles: tileGrid,
     };
-
-    tileCache.set(cacheKey, { data: result, timestamp: Date.now() });
 
     return NextResponse.json(result, {
       headers: {

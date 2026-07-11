@@ -19,7 +19,6 @@ const nextConfig: NextConfig = {
       { source: '/api/indexnow/:path*', headers: privateApiHeaders },
       { source: '/api/favorites/:path*', headers: privateApiHeaders },
       { source: '/api/user-characters/:path*', headers: privateApiHeaders },
-      { source: '/api/shared-builds/:path*', headers: privateApiHeaders },
       { source: '/api/map/progress/:path*', headers: privateApiHeaders },
     ];
   },

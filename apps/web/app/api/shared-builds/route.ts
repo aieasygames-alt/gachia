@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getDb } from '@/lib/db';
-import { sharedBuilds, eq, sql } from '@gachia/db';
+import { sharedBuilds, eq } from '@gachia/db';
 import { createAuth } from '@/lib/auth';
 import { checkRateLimit } from '@/lib/rate-limit';
 import { z } from 'zod';
@@ -78,17 +78,12 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'Build not found' }, { status: 404 });
   }
 
-  // Increment view count
-  await db
-    .update(sharedBuilds)
-    .set({ viewCount: sql`${sharedBuilds.viewCount} + 1` })
-    .where(eq(sharedBuilds.id, id));
-
-  return NextResponse.json(builds[0]);
+  return NextResponse.json(builds[0], {
+    headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600' },
+  });
 }
 
 function generateId(): string {
   // CRITICAL FIX: Use crypto.randomUUID() instead of Math.random()
-  // Take first 8 chars for URL-friendly format
-  return randomUUID().substring(0, 8);
+  return randomUUID().replaceAll('-', '').substring(0, 16);
 }

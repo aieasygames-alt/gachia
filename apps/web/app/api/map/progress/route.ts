@@ -3,6 +3,8 @@ import { getDb, getD1 } from '@/lib/db';
 import { mapProgress, eq, and } from '@gachia/db';
 import { createAuth } from '@/lib/auth';
 import { checkRateLimit } from '@/lib/rate-limit';
+import { z } from 'zod';
+import { BatchSchema, MapIdSchema, MarkerIdSchema } from '@/lib/map-validation';
 
 const RL = { limit: 60, windowSeconds: 60, prefix: '/api/map/progress' };
 
@@ -22,11 +24,12 @@ export async function GET(request: NextRequest) {
   }
 
   const { searchParams } = new URL(request.url);
-  const mapId = searchParams.get('map_id');
-  if (!mapId) {
+  const parsedMapId = MapIdSchema.safeParse(searchParams.get('map_id'));
+  if (!parsedMapId.success) {
     return NextResponse.json({ error: 'map_id is required' }, { status: 400 });
   }
 
+  const mapId = parsedMapId.data;
   const db = getDb();
   const rows = await db
     .select({ markerId: mapProgress.markerId })
@@ -49,13 +52,12 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const body: { mapId?: string; markerId?: string } = await request.json();
-  const { mapId, markerId } = body;
-
-  if (!mapId || !markerId) {
+  const parsedBody = z.object({ mapId: MapIdSchema, markerId: MarkerIdSchema }).safeParse(await request.json());
+  if (!parsedBody.success) {
     return NextResponse.json({ error: 'mapId and markerId are required' }, { status: 400 });
   }
 
+  const { mapId, markerId } = parsedBody.data;
   const db = getDb();
   const d1 = getD1();
 
@@ -95,30 +97,24 @@ export async function PUT(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const body: { mapId?: string; collected?: string[]; removed?: string[] } = await request.json();
-  const { mapId, collected = [], removed = [] } = body;
-
-  if (!mapId) {
-    return NextResponse.json({ error: 'mapId is required' }, { status: 400 });
+  const parsedBody = BatchSchema.safeParse(await request.json());
+  if (!parsedBody.success) {
+    return NextResponse.json({ error: 'Invalid marker batch' }, { status: 400 });
   }
 
-  const db = getDb();
+  const { mapId, collected, removed } = parsedBody.data;
   const d1 = getD1();
 
-  // Batch insert collected (ignore duplicates)
-  for (const markerId of collected) {
-    try {
-      await d1.prepare('INSERT OR IGNORE INTO map_progress (user_id, map_id, marker_id, created_at) VALUES (?, ?, ?, unixepoch())')
-        .bind(session.user.id, mapId, markerId)
-        .run();
-    } catch { /* ignore */ }
-  }
-
-  // Batch delete removed
-  for (const markerId of removed) {
-    await d1.prepare('DELETE FROM map_progress WHERE user_id = ? AND map_id = ? AND marker_id = ?')
-      .bind(session.user.id, mapId, markerId)
-      .run();
+  const statements = [
+    ...collected.map((markerId) => d1
+      .prepare('INSERT OR IGNORE INTO map_progress (user_id, map_id, marker_id, created_at) VALUES (?, ?, ?, unixepoch())')
+      .bind(session.user.id, mapId, markerId)),
+    ...removed.map((markerId) => d1
+      .prepare('DELETE FROM map_progress WHERE user_id = ? AND map_id = ? AND marker_id = ?')
+      .bind(session.user.id, mapId, markerId)),
+  ];
+  if (statements.length > 0) {
+    await d1.batch(statements);
   }
 
   return NextResponse.json({ success: true, added: collected.length, removed: removed.length });

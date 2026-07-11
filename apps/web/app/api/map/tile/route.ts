@@ -3,14 +3,17 @@ import { getCloudflareContext } from '@opennextjs/cloudflare';
 import { getR2 } from '@/lib/db';
 
 const ALLOWED_HOST = 'act-webstatic.hoyoverse.com';
+const VALID_MAP_IDS = new Set(['1', '2', '3', '4', '5', '6', '7', '8', '9']);
+const TILE_PATH = /^\/map_manage\/\d{8}\/[a-zA-Z0-9_-]+\.png$/;
+const MAX_TILE_BYTES = 8 * 1024 * 1024;
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const url = searchParams.get('url');
   const mapId = searchParams.get('map_id') || '2';
 
-  if (!url) {
-    return NextResponse.json({ error: 'Missing url parameter' }, { status: 400 });
+  if (!url || !VALID_MAP_IDS.has(mapId)) {
+    return NextResponse.json({ error: 'Invalid tile request' }, { status: 400 });
   }
 
   // Validate URL domain to prevent open proxy
@@ -21,17 +24,25 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: 'Invalid URL' }, { status: 400 });
   }
 
-  if (parsedUrl.hostname !== ALLOWED_HOST) {
+  if (
+    parsedUrl.protocol !== 'https:'
+    || parsedUrl.hostname !== ALLOWED_HOST
+    || parsedUrl.port
+    || parsedUrl.username
+    || parsedUrl.password
+    || parsedUrl.search
+    || parsedUrl.hash
+    || !TILE_PATH.test(parsedUrl.pathname)
+  ) {
     return NextResponse.json({ error: 'Domain not allowed' }, { status: 403 });
   }
 
   // Compute R2 key from URL
   const key = `map-tiles/${mapId}/${hashUrl(url)}`;
 
+  let r2: R2Bucket | null = null;
   try {
-    const r2 = getR2();
-
-    // Check R2 cache first
+    r2 = getR2();
     const cached = await r2.get(key);
     if (cached) {
       return new Response(cached.body, {
@@ -42,47 +53,52 @@ export async function GET(request: Request) {
         },
       });
     }
+  } catch (error) {
+    console.error('R2 tile cache is unavailable', error);
+    r2 = null;
+  }
 
-    // Fetch from HoYoLAB
-    const res = await fetch(url, {
-      headers: { 'User-Agent': 'Mozilla/5.0' },
-    });
+  let body: ArrayBuffer;
+  try {
+    body = await fetchTile(parsedUrl);
+  } catch {
+    return NextResponse.json({ error: 'Failed to fetch tile' }, { status: 502 });
+  }
 
-    if (!res.ok) {
-      return NextResponse.json({ error: 'Failed to fetch tile' }, { status: 502 });
-    }
-
-    const body = await res.arrayBuffer();
-
-    // Keep the Worker alive until the cache write completes without delaying the response.
+  if (r2) {
     const cacheWrite = r2.put(key, body, {
       httpMetadata: { contentType: 'image/png' },
     }).catch((error) => console.error('Failed to cache map tile in R2', error));
     getCloudflareContext().ctx.waitUntil(cacheWrite);
-
-    return new Response(body, {
-      headers: {
-        'Content-Type': 'image/png',
-        'Cache-Control': 'public, max-age=31536000, immutable',
-        'X-Cache': 'MISS',
-      },
-    });
-  } catch (error) {
-    // R2 not available (dev mode) — proxy directly
-    const res = await fetch(url, {
-      headers: { 'User-Agent': 'Mozilla/5.0' },
-    });
-    if (!res.ok) {
-      return NextResponse.json({ error: 'Failed to fetch tile' }, { status: 502 });
-    }
-    const body = await res.arrayBuffer();
-    return new Response(body, {
-      headers: {
-        'Content-Type': 'image/png',
-        'Cache-Control': 'public, max-age=86400',
-      },
-    });
   }
+
+  return new Response(body, {
+    headers: {
+      'Content-Type': 'image/png',
+      'Cache-Control': r2 ? 'public, max-age=31536000, immutable' : 'public, max-age=86400',
+      'X-Cache': 'MISS',
+    },
+  });
+}
+
+async function fetchTile(url: URL): Promise<ArrayBuffer> {
+  const response = await fetch(url, { headers: { 'User-Agent': 'Gachia/1.0' } });
+  const contentLength = Number(response.headers.get('content-length'));
+  if (
+    !response.ok
+    || response.headers.get('content-type')?.split(';')[0] !== 'image/png'
+    || !Number.isSafeInteger(contentLength)
+    || contentLength <= 0
+    || contentLength > MAX_TILE_BYTES
+  ) {
+    throw new Error('Invalid tile response');
+  }
+
+  const body = await response.arrayBuffer();
+  if (body.byteLength !== contentLength || body.byteLength > MAX_TILE_BYTES) {
+    throw new Error('Tile response size mismatch');
+  }
+  return body;
 }
 
 /** Simple hash for R2 key dedup */
