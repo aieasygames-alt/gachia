@@ -228,7 +228,7 @@ export const GAMES: Record<GameId, GameModule> = {
       weapons: true,
       items: true,
       'tier-list': true,
-      calculator: false,
+      calculator: true,
       map: false,
       version: true,
       download: true,

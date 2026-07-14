@@ -139,11 +139,320 @@ type Tab = 'ascension' | 'damage' | 'planner';
 // =====================================================================
 
 export function CalculatorClient({ gameId, locale }: { gameId: GameId; locale: SupportedLocale }) {
+  if (gameId === 'sea') return <SeaBlackTicketSelector locale={locale} />;
   if (gameId === 'skjh') return <SkjhResourceCalculator locale={locale} />;
   if (gameId === 'wuwa') return <WuWaCalculator locale={locale} />;
   if (gameId === 'starrail') return <StarRailCalculator locale={locale} />;
   if (gameId !== 'genshin') return <ComingSoon locale={locale} />;
   return <GenshinCalculator locale={locale} />;
+}
+
+// =====================================================================
+// Sea of Remnants Black Ticket Selector
+// =====================================================================
+
+type SeaRoleGap = 'main-dps' | 'survival' | 'follow-up' | 'aoe' | 'stable-dps';
+type SeaPlaystyle = 'safe' | 'fast' | 'mechanic' | 'favorite';
+type SeaSpendPlan = 'f2p' | 'light' | 'collector';
+
+type SeaCandidate = {
+  id: string;
+  name: Record<SupportedLocale, string>;
+  role: Record<SupportedLocale, string>;
+  bestFor: Record<SupportedLocale, string>;
+  caution: Record<SupportedLocale, string>;
+  scores: Record<SeaRoleGap | SeaPlaystyle | SeaSpendPlan, number>;
+  tags: Record<SupportedLocale, string[]>;
+};
+
+const SEA_BLACK_TICKET_CANDIDATES: SeaCandidate[] = [
+  {
+    id: 'little-axe',
+    name: { zh: '小斧头', en: 'Little Axe', ja: 'Little Axe' },
+    role: { zh: '主攻 / 爆发', en: 'Main DPS / Burst', ja: '主攻 / バースト' },
+    bestFor: {
+      zh: '没有稳定主 C，想让首日推图和 Boss 输出都更直接。',
+      en: 'Best if you lack a stable carry and want cleaner day-one story and boss damage.',
+      ja: '安定した主力がなく、初日のストーリーとボス火力を伸ばしたい人向け。',
+    },
+    caution: {
+      zh: '如果你已经抽到强主攻，优先级会下降，转而补生存或追击组件。',
+      en: 'Drops in priority if you already pulled a strong carry; then fill survival or follow-up gaps.',
+      ja: '強い主攻を既に引いた場合は優先度が下がり、生存や追撃を補う方が安全です。',
+    },
+    scores: { 'main-dps': 9, survival: 2, 'follow-up': 7, aoe: 5, 'stable-dps': 7, safe: 5, fast: 9, mechanic: 6, favorite: 6, f2p: 8, light: 8, collector: 6 },
+    tags: {
+      zh: ['缺主 C 首选', '追击轴', '首日提速'],
+      en: ['Carry first', 'Follow-up core', 'Fast launch'],
+      ja: ['主力候補', '追撃軸', '初日加速'],
+    },
+  },
+  {
+    id: 'iron-fist-commander',
+    name: { zh: '铁腕统领', en: 'Iron Fist Commander', ja: 'Iron Fist Commander' },
+    role: { zh: '生存 / 承伤', en: 'Survival / Tank', ja: '生存 / タンク' },
+    bestFor: {
+      zh: '队伍容易倒、想降低开荒压力，或准备慢慢打海域和高压关。',
+      en: 'Best if your team dies often, you want lower launch pressure, or you plan to push harder zones slowly.',
+      ja: '倒れやすい編成、安定重視、難しめの海域をゆっくり進めたい人向け。',
+    },
+    caution: {
+      zh: '如果你追求最快清图，先补主攻或追击组件可能更有效。',
+      en: 'If you only care about clear speed, a carry or follow-up piece may be more efficient.',
+      ja: '最速周回だけを狙うなら、主攻や追撃パーツの方が効率的です。',
+    },
+    scores: { 'main-dps': 2, survival: 10, 'follow-up': 2, aoe: 3, 'stable-dps': 3, safe: 10, fast: 3, mechanic: 4, favorite: 5, f2p: 8, light: 7, collector: 5 },
+    tags: {
+      zh: ['稳开荒', '容错率', '前排缺口'],
+      en: ['Safe start', 'Forgiveness', 'Frontline gap'],
+      ja: ['安定開荒', '許容度', '前衛不足'],
+    },
+  },
+  {
+    id: 'stray-cat',
+    name: { zh: '饿猫', en: 'Stray Cat', ja: 'Stray Cat' },
+    role: { zh: '协攻 / 追击', en: 'Assist / Follow-up', ja: '協攻 / 追撃' },
+    bestFor: {
+      zh: '已经有小斧头或想提前押追击链，适合喜欢连携输出的玩家。',
+      en: 'Best if you already have Little Axe or want to commit early to follow-up chains.',
+      ja: 'Little Axeを持っている、または追撃チェーンに寄せたい人向け。',
+    },
+    caution: {
+      zh: '单独拿时不一定解决所有输出问题，最好确认第一队已有主攻。',
+      en: 'May not solve damage alone; make sure your first team already has a carry.',
+      ja: '単体では火力不足を解決しにくいため、主攻がいるか確認してください。',
+    },
+    scores: { 'main-dps': 5, survival: 2, 'follow-up': 10, aoe: 4, 'stable-dps': 6, safe: 4, fast: 8, mechanic: 8, favorite: 7, f2p: 7, light: 8, collector: 7 },
+    tags: {
+      zh: ['追击组件', '连携输出', '已有主 C 更香'],
+      en: ['Follow-up piece', 'Synergy damage', 'Better with carry'],
+      ja: ['追撃パーツ', '連携火力', '主攻ありで強い'],
+    },
+  },
+  {
+    id: 'sea-burial',
+    name: { zh: '海葬', en: 'Sea Burial', ja: 'Sea Burial' },
+    role: { zh: '智力 / 群体', en: 'Intelligence / AoE', ja: '知力 / 範囲' },
+    bestFor: {
+      zh: '想走智力队、群体清场或机制战路线，适合不想只押单体爆发的玩家。',
+      en: 'Best for Intelligence teams, AoE clears, and mechanic-heavy fights.',
+      ja: '知力編成、範囲処理、ギミック戦を重視する人向け。',
+    },
+    caution: {
+      zh: '首日如果主要卡在单体 Boss，可能没有小斧头那么直接。',
+      en: 'If day-one blockers are mostly single-target bosses, Little Axe may feel more direct.',
+      ja: '初日に単体ボスで詰まるならLittle Axeの方が直接的です。',
+    },
+    scores: { 'main-dps': 6, survival: 2, 'follow-up': 3, aoe: 10, 'stable-dps': 6, safe: 5, fast: 7, mechanic: 9, favorite: 6, f2p: 7, light: 7, collector: 7 },
+    tags: {
+      zh: ['智力队', '群体清场', '机制战'],
+      en: ['INT team', 'AoE clear', 'Mechanics'],
+      ja: ['知力編成', '範囲処理', 'ギミック'],
+    },
+  },
+  {
+    id: 'isabella',
+    name: { zh: '伊莎贝拉', en: 'Isabella', ja: 'Isabella' },
+    role: { zh: '智力 / 机制', en: 'Intelligence / Utility', ja: '知力 / ギミック' },
+    bestFor: {
+      zh: '想围绕机制战、智力队补位或长期构筑，而不是只看首日输出。',
+      en: 'Best if you value mechanic coverage, Intelligence teams, and long-term roster shape.',
+      ja: 'ギミック対応、知力編成、長期的な手持ち作りを重視する人向け。',
+    },
+    caution: {
+      zh: '如果账号缺最基础的输出和生存，她不是最省心的一号选择。',
+      en: 'Not the easiest first pick if you lack both basic damage and survival.',
+      ja: '基本火力と生存が両方不足している場合、最初の選択としてはやや難しめです。',
+    },
+    scores: { 'main-dps': 4, survival: 3, 'follow-up': 3, aoe: 8, 'stable-dps': 5, safe: 5, fast: 5, mechanic: 10, favorite: 7, f2p: 6, light: 7, collector: 8 },
+    tags: {
+      zh: ['机制位', '智力队', '长期构筑'],
+      en: ['Utility', 'INT team', 'Long-term'],
+      ja: ['ギミック', '知力編成', '長期育成'],
+    },
+  },
+  {
+    id: 'scorched-colonel',
+    name: { zh: '焦面上校', en: 'Scorched Colonel', ja: 'Scorched Colonel' },
+    role: { zh: '主攻 / 稳定输出', en: 'Main DPS / Stable Damage', ja: '主攻 / 安定火力' },
+    bestFor: {
+      zh: '想要不太绑定体系的稳定输出位，或不喜欢追击链的操作/构筑成本。',
+      en: 'Best if you want stable damage without committing hard to follow-up chains.',
+      ja: '追撃チェーンに強く寄せず、安定火力が欲しい人向け。',
+    },
+    caution: {
+      zh: '上限可能要等实测确认；如果你追求爆发和热门路线，小斧头更激进。',
+      en: 'Ceiling needs live testing; Little Axe is the more aggressive pick for burst routes.',
+      ja: '上限は実測待ち。バースト重視ならLittle Axeの方が攻めた選択です。',
+    },
+    scores: { 'main-dps': 8, survival: 2, 'follow-up': 4, aoe: 4, 'stable-dps': 10, safe: 7, fast: 6, mechanic: 4, favorite: 6, f2p: 7, light: 7, collector: 5 },
+    tags: {
+      zh: ['稳定输出', '不强绑体系', '备选主攻'],
+      en: ['Stable DPS', 'Low commitment', 'Carry option'],
+      ja: ['安定火力', '低依存', '主攻候補'],
+    },
+  },
+];
+
+function SeaBlackTicketSelector({ locale }: { locale: SupportedLocale }) {
+  const [roleGap, setRoleGap] = useState<SeaRoleGap>('main-dps');
+  const [playstyle, setPlaystyle] = useState<SeaPlaystyle>('safe');
+  const [spendPlan, setSpendPlan] = useState<SeaSpendPlan>('f2p');
+
+  const ranked = useMemo(() => {
+    return SEA_BLACK_TICKET_CANDIDATES.map((candidate) => {
+      const score = candidate.scores[roleGap] * 1.4 + candidate.scores[playstyle] + candidate.scores[spendPlan] * 0.8;
+      return { candidate, score: Math.round(score * 10) / 10 };
+    }).sort((a, b) => b.score - a.score);
+  }, [roleGap, playstyle, spendPlan]);
+
+  const roleOptions: Array<{ id: SeaRoleGap; label: Record<SupportedLocale, string>; hint: Record<SupportedLocale, string> }> = [
+    { id: 'main-dps', label: { zh: '缺主攻', en: 'Need carry', ja: '主攻不足' }, hint: { zh: '推主线和打 Boss 都缺核心输出。', en: 'You need damage for story and bosses.', ja: 'ストーリーとボス用の火力が不足。' } },
+    { id: 'survival', label: { zh: '缺生存', en: 'Need survival', ja: '生存不足' }, hint: { zh: '队伍容易倒，想稳住首周。', en: 'Your team dies too often.', ja: '編成が倒れやすい。' } },
+    { id: 'follow-up', label: { zh: '想玩追击', en: 'Follow-up chain', ja: '追撃軸' }, hint: { zh: '围绕追加攻击和连携输出建队。', en: 'Build around extra attacks and synergy.', ja: '追加攻撃と連携を重視。' } },
+    { id: 'aoe', label: { zh: '缺群攻', en: 'Need AoE', ja: '範囲不足' }, hint: { zh: '想提升清怪和机制战覆盖。', en: 'Improve mob clears and mechanic fights.', ja: '雑魚処理とギミック対応を強化。' } },
+    { id: 'stable-dps', label: { zh: '要稳定输出', en: 'Stable DPS', ja: '安定火力' }, hint: { zh: '不想绑定复杂体系，先要通用输出。', en: 'You want low-commitment damage.', ja: '複雑な軸に縛られない火力。' } },
+  ];
+
+  const playstyleOptions: Array<{ id: SeaPlaystyle; label: Record<SupportedLocale, string>; hint: Record<SupportedLocale, string> }> = [
+    { id: 'safe', label: { zh: '稳开荒', en: 'Safe start', ja: '安定開荒' }, hint: { zh: '降低翻车和资源浪费。', en: 'Reduce wipes and wasted resources.', ja: '事故と資源浪費を減らす。' } },
+    { id: 'fast', label: { zh: '冲进度', en: 'Push fast', ja: '高速進行' }, hint: { zh: '优先推图、清怪和 Boss 速度。', en: 'Prioritize story and boss speed.', ja: '進行速度とボス処理を優先。' } },
+    { id: 'mechanic', label: { zh: '机制党', en: 'Mechanics', ja: 'ギミック重視' }, hint: { zh: '想提前覆盖复杂战斗。', en: 'Prepare for tricky encounters.', ja: '複雑な戦闘に備える。' } },
+    { id: 'favorite', label: { zh: '厨力优先', en: 'Favorite first', ja: '推し優先' }, hint: { zh: '强度之外，也看长期喜欢。', en: 'Balance power with long-term attachment.', ja: '性能と好みを両立。' } },
+  ];
+
+  const spendOptions: Array<{ id: SeaSpendPlan; label: Record<SupportedLocale, string>; hint: Record<SupportedLocale, string> }> = [
+    { id: 'f2p', label: { zh: '零氪', en: 'F2P', ja: '無課金' }, hint: { zh: '每次选择都要补最关键缺口。', en: 'Every pick must cover a core gap.', ja: '重要な不足を優先。' } },
+    { id: 'light', label: { zh: '轻氪', en: 'Light spender', ja: '微課金' }, hint: { zh: '可先凑第一队，再看限定。', en: 'Build first team, then chase limited picks.', ja: '第一編成後に限定を検討。' } },
+    { id: 'collector', label: { zh: '收藏', en: 'Collector', ja: 'コレクター' }, hint: { zh: '接受短期效率稍低，换长期喜好。', en: 'Accept lower short-term efficiency for favorites.', ja: '短期効率より好みを重視。' } },
+  ];
+
+  const top = ranked[0]!;
+
+  return (
+    <div className="space-y-6">
+      <section className="rounded-2xl border border-game-border bg-game-surface p-5">
+        <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-game-primary">
+          {t(locale, '首周资源决策', 'Week-one resource decision', '初週リソース判断')}
+        </p>
+        <h1 className="text-2xl font-bold text-game-text">
+          {t(locale, '遗忘之海黑券 6 选 1 推荐器', 'Sea of Remnants Black Ticket Selector', 'Sea of Remnants 黒券6択おすすめ')}
+        </h1>
+        <p className="mt-3 max-w-3xl text-sm leading-6 text-game-text-muted">
+          {t(
+            locale,
+            '根据你当前最缺的位置、开荒风格和付费计划，给首次记忆重逢 6 选 1 一个可执行排序。结果用于开服规划，正式数值和卡池规则仍以游戏内为准。',
+            'Pick your first Black Ticket crew member based on roster gaps, launch style, and spending plan. Use it for planning; live stats and pool rules still follow the game.',
+            '不足ロール、序盤スタイル、課金予定から初回黒券6択の優先度を出します。正式な数値とプール規則はゲーム内表記を基準にしてください。'
+          )}
+        </p>
+      </section>
+
+      <section className="grid gap-4 lg:grid-cols-3">
+        <SelectorGroup title={t(locale, '你现在最缺什么？', 'What is your biggest gap?', '今一番足りないもの')} options={roleOptions} selected={roleGap} onSelect={setRoleGap} locale={locale} />
+        <SelectorGroup title={t(locale, '你想怎么开荒？', 'How do you want to start?', 'どう進めたい？')} options={playstyleOptions} selected={playstyle} onSelect={setPlaystyle} locale={locale} />
+        <SelectorGroup title={t(locale, '资源计划', 'Resource plan', 'リソース方針')} options={spendOptions} selected={spendPlan} onSelect={setSpendPlan} locale={locale} />
+      </section>
+
+      <section className="rounded-2xl border border-game-primary/40 bg-game-primary/10 p-5">
+        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p className="text-sm font-semibold text-game-primary">
+              {t(locale, '当前推荐', 'Current recommendation', '現在のおすすめ')}
+            </p>
+            <h2 className="mt-1 text-3xl font-black text-game-text">{top.candidate.name[locale]}</h2>
+            <p className="mt-2 text-sm text-game-text-muted">{top.candidate.role[locale]}</p>
+          </div>
+          <div className="rounded-2xl border border-game-border bg-game-surface px-5 py-4 text-center">
+            <div className="text-xs text-game-text-muted">{t(locale, '匹配分', 'Match score', '適性スコア')}</div>
+            <div className="mt-1 text-3xl font-black text-game-primary">{top.score}</div>
+          </div>
+        </div>
+        <p className="mt-4 text-sm leading-6 text-game-text-muted">{top.candidate.bestFor[locale]}</p>
+      </section>
+
+      <section>
+        <h2 className="mb-4 text-xl font-bold text-game-text">
+          {t(locale, '完整排序', 'Full ranking', '全順位')}
+        </h2>
+        <div className="grid gap-4 lg:grid-cols-2">
+          {ranked.map(({ candidate, score }, index) => (
+            <article key={candidate.id} className="rounded-2xl border border-game-border bg-game-surface p-5">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <div className="text-xs font-bold text-game-primary">#{index + 1}</div>
+                  <h3 className="mt-1 text-lg font-bold text-game-text">{candidate.name[locale]}</h3>
+                  <p className="mt-1 text-sm text-game-text-muted">{candidate.role[locale]}</p>
+                </div>
+                <span className="rounded-full bg-game-surface-alt px-3 py-1 text-sm font-bold text-game-primary">{score}</span>
+              </div>
+              <p className="mt-3 text-sm leading-6 text-game-text-muted">{candidate.bestFor[locale]}</p>
+              <p className="mt-2 text-xs leading-5 text-game-text-muted">{candidate.caution[locale]}</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {candidate.tags[locale].map((tag) => (
+                  <span key={tag} className="rounded-full border border-game-border bg-game-surface-alt px-2 py-1 text-xs text-game-text-muted">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="grid gap-4 md:grid-cols-3">
+        <a href={`/${locale}/sea/guides/gacha-recruitment-guide`} className="rounded-2xl border border-game-border bg-game-surface p-4 transition hover:border-game-primary">
+          <h3 className="font-bold text-game-text">{t(locale, '招募系统指南', 'Recruitment guide', '募集ガイド')}</h3>
+          <p className="mt-2 text-sm text-game-text-muted">{t(locale, '看 6 选 1、40 抽保底和零氪路线。', 'Check selector, 40-pull guarantee, and F2P route.', '6択、40連保証、無課金ルートを確認。')}</p>
+        </a>
+        <a href={`/${locale}/sea/tier-list`} className="rounded-2xl border border-game-border bg-game-surface p-4 transition hover:border-game-primary">
+          <h3 className="font-bold text-game-text">{t(locale, '船员节奏榜', 'Crew tier list', '船員Tier')}</h3>
+          <p className="mt-2 text-sm text-game-text-muted">{t(locale, '对照首周队伍和角色定位。', 'Compare week-one teams and roles.', '初週編成と役割を確認。')}</p>
+        </a>
+        <a href={`/${locale}/sea/guides/launch-30min-checklist`} className="rounded-2xl border border-game-border bg-game-surface p-4 transition hover:border-game-primary">
+          <h3 className="font-bold text-game-text">{t(locale, '开服 30 分钟', 'First 30 minutes', '最初の30分')}</h3>
+          <p className="mt-2 text-sm text-game-text-muted">{t(locale, '选完黑券后继续走首日清单。', 'After choosing, continue into the day-one checklist.', '選択後は初日チェックリストへ。')}</p>
+        </a>
+      </section>
+    </div>
+  );
+}
+
+function SelectorGroup<T extends string>({
+  title,
+  options,
+  selected,
+  onSelect,
+  locale,
+}: {
+  title: string;
+  options: Array<{ id: T; label: Record<SupportedLocale, string>; hint: Record<SupportedLocale, string> }>;
+  selected: T;
+  onSelect: (value: T) => void;
+  locale: SupportedLocale;
+}) {
+  return (
+    <section className="rounded-2xl border border-game-border bg-game-surface p-4">
+      <h2 className="mb-3 text-base font-bold text-game-text">{title}</h2>
+      <div className="space-y-2">
+        {options.map((option) => (
+          <button
+            key={option.id}
+            type="button"
+            onClick={() => onSelect(option.id)}
+            className={`w-full rounded-xl border p-3 text-left transition ${
+              selected === option.id
+                ? 'border-game-primary bg-game-primary/10 text-game-text'
+                : 'border-game-border bg-game-surface-alt text-game-text-muted hover:border-game-primary/60'
+            }`}
+          >
+            <div className="text-sm font-bold">{option.label[locale]}</div>
+            <div className="mt-1 text-xs leading-5 opacity-80">{option.hint[locale]}</div>
+          </button>
+        ))}
+      </div>
+    </section>
+  );
 }
 
 // =====================================================================

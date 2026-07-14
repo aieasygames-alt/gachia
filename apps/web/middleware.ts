@@ -26,7 +26,7 @@ const INDEXABLE_GAME_ROUTES: Record<GameId, readonly string[]> = {
   guihuan: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'version', 'download', 'compare', 'teams'],
   ananta: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'version', 'download'],
   endfield: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'version', 'download', 'compare', 'teams', 'map'],
-  sea: ['characters', 'guides', 'items', 'tier-list', 'redeem-codes', 'build', 'version', 'download'],
+  sea: ['characters', 'guides', 'items', 'tier-list', 'redeem-codes', 'build', 'version', 'download', 'calculator'],
   skjh: ['weapons', 'guides', 'items', 'redeem-codes', 'calculator', 'teams', 'map', 'build', 'version', 'download'],
 };
 

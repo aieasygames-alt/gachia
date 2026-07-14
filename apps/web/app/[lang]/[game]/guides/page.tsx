@@ -105,6 +105,20 @@ const SEA_DECISION_LINKS: Array<{
       ja: 'Sea of Thieves や Aniimo と迷っている人向けの判断入口です。',
     },
   },
+  {
+    id: 'black-ticket-selector',
+    href: '/sea/calculator',
+    label: {
+      zh: '六黑券自选推荐器',
+      en: 'Black Ticket selector',
+      ja: '黒券6択おすすめ',
+    },
+    description: {
+      zh: '按队伍缺口、开荒风格和资源计划，直接算首次记忆重逢该先选谁。',
+      en: 'Choose your first Memory Reunion crew by roster gap, playstyle, and resource plan.',
+      ja: '編成不足、序盤スタイル、資源方針から初回黒券の候補を出します。',
+    },
+  },
 ];
 
 export async function generateMetadata({

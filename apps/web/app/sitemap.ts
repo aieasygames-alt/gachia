@@ -77,7 +77,7 @@ const REAL_CONTENT_ROUTES: Record<string, string[]> = {
   guihuan: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'guides', 'build', 'compare', 'teams'],
   ananta: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'guides'],
   endfield: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'guides', 'build', 'compare', 'teams', 'map'],
-  sea: ['characters', 'guides', 'items', 'tier-list', 'version', 'download', 'redeem-codes'],
+  sea: ['characters', 'guides', 'items', 'tier-list', 'version', 'download', 'calculator', 'redeem-codes'],
   skjh: ['weapons', 'guides', 'items', 'redeem-codes', 'version', 'download', 'calculator', 'teams', 'map'],
 };
 
