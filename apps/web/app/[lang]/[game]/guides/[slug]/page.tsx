@@ -344,6 +344,16 @@ const GUIDE_META_OVERRIDES: Record<string, LocaleMeta> = {
       description: '整理《遗忘之海》PC 预下载、预创角、安装检查、配置要求、官网下载入口和开服当天排错步骤。',
     },
   },
+  'sea/mechanics-faq-guide': {
+    en: {
+      title: 'Sea of Remnants Mechanics FAQ: Damage Reduction, Trading, Weekly Dredging',
+      description: 'Answer Sea of Remnants launch-week mechanics questions: damage reduction, trade gifting, weekly dredging value, character vs outfit pulls, and F2P resource decisions.',
+    },
+    zh: {
+      title: '《遗忘之海》机制 FAQ：减伤、交易送人、周常打捞、角色还是服装',
+      description: '集中回答遗忘之海开服后最常见的机制问题：减伤怎么算、交易物品能不能送人、周常打捞值不值做、角色和服装资源是否冲突。',
+    },
+  },
 };
 
 const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> = {
@@ -553,6 +563,11 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
     ],
     'payment-model-guide': [
       {
+        href: '/sea/guides/mechanics-faq-guide',
+        label: { zh: '看机制 FAQ', en: 'Read mechanics FAQ', ja: 'システムFAQへ' },
+        description: { zh: '先回答减伤、交易、周常和服装资源冲突', en: 'Answer damage reduction, trading, weekly, and outfit-resource questions', ja: '軽減、交易、週課、衣装資源の疑問を確認', },
+      },
+      {
         href: '/sea/guides/trade-market-guide',
         label: { zh: '看贸易场总览', en: 'Read trade market guide', ja: '交易所総覧へ' },
         description: { zh: '先把贸易场机制和可交易内容看全', en: 'See how the market works and what is tradeable', ja: '交易所の仕組みと取引対象を確認', },
@@ -569,6 +584,11 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
       },
     ],
     'trade-market-guide': [
+      {
+        href: '/sea/guides/mechanics-faq-guide',
+        label: { zh: '看机制 FAQ', en: 'Read mechanics FAQ', ja: 'システムFAQへ' },
+        description: { zh: '补充交易送人、周常和资源冲突的常见问答', en: 'Follow up with gifting, weekly, and resource-conflict answers', ja: '贈与、週課、資源衝突のFAQを確認', },
+      },
       {
         href: '/sea/guides/good-gold-bricks-farming-guide',
         label: { zh: '看好金砖速刷', en: 'Read gold bricks guide', ja: '好金砖ガイドへ' },
@@ -587,6 +607,11 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
     ],
     'good-gold-bricks-farming-guide': [
       {
+        href: '/sea/guides/mechanics-faq-guide',
+        label: { zh: '看机制 FAQ', en: 'Read mechanics FAQ', ja: 'システムFAQへ' },
+        description: { zh: '继续确认交易、送人、囤货和周常收益', en: 'Confirm trading, gifting, hoarding, and weekly value', ja: '交易、贈与、貯蓄、週課価値を確認', },
+      },
+      {
         href: '/sea/guides/trade-market-guide',
         label: { zh: '回看贸易场总览', en: 'Back to trade market guide', ja: '交易所総覧へ戻る' },
         description: { zh: '先把总规则再对一遍，再做价格判断', en: 'Review the core rules before making market calls', ja: '価格判断前にルールを再確認', },
@@ -604,6 +629,11 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
     ],
     'character-vs-outfit-pull-guide': [
       {
+        href: '/sea/guides/mechanics-faq-guide',
+        label: { zh: '看机制 FAQ', en: 'Read mechanics FAQ', ja: 'システムFAQへ' },
+        description: { zh: '先确认服装、角色和周常资源是否冲突', en: 'Check whether outfits, characters, and weekly resources conflict', ja: '衣装、キャラ、週課資源の衝突を確認', },
+      },
+      {
         href: '/sea/guides/payment-model-guide',
         label: { zh: '回到付费模式', en: 'Back to payment model', ja: '課金モデルへ戻る' },
         description: { zh: '重新确认角色、外观和保底的整体关系', en: 'Re-check the bigger relationship between pulls, cosmetics, and pity', ja: 'ガチャ・衣装・保底の全体関係へ戻る', },
@@ -617,6 +647,35 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
         href: '/sea/guides/launch-day-guide',
         label: { zh: '回到开服攻略', en: 'Back to launch guide', ja: '開服攻略へ戻る' },
         description: { zh: '把抽卡判断放回首日路线和资源节奏里', en: 'Place the pull decision back into your day-one route', ja: '判断を初日ルートに戻して確認', },
+      },
+    ],
+    'memory-reunion-guide': [
+      {
+        href: '/sea/calculator',
+        label: { zh: '用黑券推荐器', en: 'Use Black Ticket selector', ja: '黒券おすすめを使う' },
+        description: { zh: '按队伍缺口直接算 6 选 1 顺序', en: 'Rank the 6-choice selector by roster gap', ja: '編成不足から6択順位を出す', },
+      },
+      {
+        href: '/sea/guides/mechanics-faq-guide',
+        label: { zh: '看机制 FAQ', en: 'Read mechanics FAQ', ja: 'システムFAQへ' },
+        description: { zh: '继续看周常打捞、减伤和资源冲突', en: 'Continue with weekly dredging, mitigation, and resource conflicts', ja: '週課、軽減、資源衝突を確認', },
+      },
+    ],
+    'mechanics-faq-guide': [
+      {
+        href: '/sea/calculator',
+        label: { zh: '用黑券推荐器', en: 'Use Black Ticket selector', ja: '黒券おすすめを使う' },
+        description: { zh: '把 FAQ 里的队伍缺口变成 6 选 1 排序', en: 'Turn roster-gap answers into a 6-choice ranking', ja: '不足ロールを6択順位に変換', },
+      },
+      {
+        href: '/sea/guides/good-gold-bricks-farming-guide',
+        label: { zh: '看好金砖速刷', en: 'Read Gold Bricks guide', ja: '好金砖ガイドへ' },
+        description: { zh: '继续看交易、囤货和首周赚钱路线', en: 'Continue with trading, hoarding, and week-one earning routes', ja: '交易、貯蓄、初週金策へ', },
+      },
+      {
+        href: '/sea/guides/character-vs-outfit-pull-guide',
+        label: { zh: '看角色还是服装', en: 'Character vs outfit pulls', ja: 'キャラか衣装かを見る' },
+        description: { zh: '把资源冲突落到首月抽取判断', en: 'Turn resource conflicts into launch-month pull decisions', ja: '資源衝突を初月判断へ落とす', },
       },
     ],
   },
