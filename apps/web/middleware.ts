@@ -18,16 +18,16 @@ const LEGACY_CHARACTER_LIST_REDIRECTS: Partial<Record<GameId, readonly string[]>
 };
 
 const INDEXABLE_GAME_ROUTES: Record<GameId, readonly string[]> = {
-  genshin: ['characters', 'weapons', 'items', 'tier-list', 'calculator', 'map', 'guides', 'artifacts', 'build', 'version', 'compare', 'teams'],
-  starrail: ['characters', 'weapons', 'items', 'tier-list', 'calculator', 'map', 'guides', 'artifacts', 'build', 'version', 'compare', 'teams'],
-  wuwa: ['characters', 'weapons', 'items', 'tier-list', 'map', 'guides', 'build', 'version', 'compare', 'teams'],
-  nte: ['characters', 'weapons', 'items', 'tier-list', 'map', 'guides', 'disk-sets', 'redeem-codes', 'gacha', 'anomalies', 'build', 'version'],
-  zzz: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'drive-discs', 'build', 'version', 'compare', 'teams', 'redeem-codes'],
-  guihuan: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'version', 'compare', 'teams'],
-  ananta: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'version'],
-  endfield: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'version', 'compare', 'teams', 'map'],
-  sea: ['characters', 'guides', 'items', 'tier-list', 'redeem-codes', 'build', 'version'],
-  skjh: ['weapons', 'guides', 'items', 'redeem-codes', 'calculator', 'teams', 'map', 'build', 'version'],
+  genshin: ['characters', 'weapons', 'items', 'tier-list', 'calculator', 'map', 'guides', 'artifacts', 'build', 'version', 'download', 'compare', 'teams'],
+  starrail: ['characters', 'weapons', 'items', 'tier-list', 'calculator', 'map', 'guides', 'artifacts', 'build', 'version', 'download', 'compare', 'teams'],
+  wuwa: ['characters', 'weapons', 'items', 'tier-list', 'map', 'guides', 'build', 'version', 'download', 'compare', 'teams'],
+  nte: ['characters', 'weapons', 'items', 'tier-list', 'map', 'guides', 'disk-sets', 'redeem-codes', 'gacha', 'anomalies', 'build', 'version', 'download'],
+  zzz: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'drive-discs', 'build', 'version', 'download', 'compare', 'teams', 'redeem-codes'],
+  guihuan: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'version', 'download', 'compare', 'teams'],
+  ananta: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'version', 'download'],
+  endfield: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'version', 'download', 'compare', 'teams', 'map'],
+  sea: ['characters', 'guides', 'items', 'tier-list', 'redeem-codes', 'build', 'version', 'download'],
+  skjh: ['weapons', 'guides', 'items', 'redeem-codes', 'calculator', 'teams', 'map', 'build', 'version', 'download'],
 };
 
 function asLocale(segment?: string): LocaleId | undefined {
