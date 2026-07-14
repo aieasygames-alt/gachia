@@ -69,16 +69,16 @@ const STATIC_SITE_PAGES = ['contact', 'privacy', 'terms', 'sitemap'] as const;
 
 // Category routes that have real content per game
 const REAL_CONTENT_ROUTES: Record<string, string[]> = {
-  genshin: ['characters', 'weapons', 'items', 'tier-list', 'calculator', 'map', 'guides', 'artifacts', 'compare', 'teams'],
-  starrail: ['characters', 'weapons', 'items', 'tier-list', 'calculator', 'map', 'guides', 'artifacts', 'compare', 'teams'],
-  wuwa: ['characters', 'weapons', 'items', 'tier-list', 'map', 'guides', 'compare', 'teams'],
-  nte: ['characters', 'weapons', 'items', 'tier-list', 'map', 'guides', 'disk-sets', 'redeem-codes', 'gacha', 'anomalies'],
-  zzz: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'drive-discs', 'build', 'compare', 'teams', 'redeem-codes'],
-  guihuan: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'compare', 'teams'],
-  ananta: ['characters', 'weapons', 'items', 'tier-list', 'guides'],
-  endfield: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'compare', 'teams', 'map'],
-  sea: ['characters', 'guides', 'items', 'tier-list', 'redeem-codes'],
-  skjh: ['weapons', 'guides', 'items', 'redeem-codes', 'calculator', 'teams', 'map'],
+  genshin: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'calculator', 'map', 'guides', 'artifacts', 'compare', 'teams'],
+  starrail: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'calculator', 'map', 'guides', 'artifacts', 'compare', 'teams'],
+  wuwa: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'map', 'guides', 'compare', 'teams'],
+  nte: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'map', 'guides', 'disk-sets', 'redeem-codes', 'gacha', 'anomalies'],
+  zzz: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'guides', 'drive-discs', 'build', 'compare', 'teams', 'redeem-codes'],
+  guihuan: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'guides', 'build', 'compare', 'teams'],
+  ananta: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'guides'],
+  endfield: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'guides', 'build', 'compare', 'teams', 'map'],
+  sea: ['characters', 'guides', 'items', 'tier-list', 'version', 'download', 'redeem-codes'],
+  skjh: ['weapons', 'guides', 'items', 'redeem-codes', 'version', 'download', 'calculator', 'teams', 'map'],
 };
 
 // Revalidate every 24 hours
