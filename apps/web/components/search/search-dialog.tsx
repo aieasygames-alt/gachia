@@ -317,7 +317,7 @@ const GAME_NAMES: Record<string, Record<string, string>> = {
   genshin: { zh: '原神', en: 'Genshin', ja: '原神' },
   starrail: { zh: '星铁', en: 'Star Rail', ja: 'スタレ' },
   wuwa: { zh: '鸣潮', en: 'WuWa', ja: '鳴潮' },
-  nte: { zh: '无限暖暖', en: 'NTE', ja: 'NTE' },
+  nte: { zh: '异环', en: 'NTE', ja: 'NTE' },
   zzz: { zh: '绝区零', en: 'ZZZ', ja: 'ゼンゼロ' },
   guihuan: { zh: '归环', en: 'Guihuan', ja: '帰環' },
   ananta: { zh: '无限大', en: 'Ananta', ja: 'アナンタ' },
@@ -339,6 +339,18 @@ const TYPE_ORDER: Record<SearchType, number> = {
   artifact: 2,
   item: 3,
 };
+
+const SEARCH_NOISE_TERMS = [
+  '18+', '18禁', 'r18', 'nsfw', 'adult', 'porn', 'hentai', 'nude',
+  '成人', '同人', '本子', '裸', '涩图', '色图',
+  '内鬼', '爆料', 'leak', 'leaks', 'datamine', 'mod',
+];
+
+function isBlockedNoiseQuery(query: string) {
+  const normalized = query.trim().toLowerCase();
+  if (!normalized) return false;
+  return SEARCH_NOISE_TERMS.some((term) => normalized.includes(term.toLowerCase()));
+}
 
 export function SearchDialog({ locale, open, onClose }: {
   locale: SupportedLocale;
@@ -373,6 +385,7 @@ export function SearchDialog({ locale, open, onClose }: {
 
   const results = useMemo(() => {
     if (!query.trim()) return [];
+    if (isBlockedNoiseQuery(query)) return [];
     const q = query.toLowerCase();
     return index
       .filter((item) =>
@@ -387,6 +400,7 @@ export function SearchDialog({ locale, open, onClose }: {
   if (!open) return null;
 
   const lang = locale === 'ja' ? 'ja' : locale;
+  const blockedNoiseQuery = isBlockedNoiseQuery(query);
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center pt-[15vh]" onClick={(e) => {
@@ -412,7 +426,9 @@ export function SearchDialog({ locale, open, onClose }: {
         <div className="max-h-[60vh] overflow-y-auto p-2">
           {query.trim() && results.length === 0 && (
             <div className="px-4 py-8 text-center text-sm text-game-text-muted">
-              {t(locale, '未找到相关结果', 'No results found')}
+              {blockedNoiseQuery
+                ? t(locale, '搜索只承接官方资料、攻略、角色、装备、材料和健康玩法意图。', 'Search only supports official data, guides, characters, gear, materials, and safe gameplay intent.')
+                : t(locale, '未找到相关结果', 'No results found')}
             </div>
           )}
           {results.map((r) => (
