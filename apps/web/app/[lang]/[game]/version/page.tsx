@@ -41,6 +41,78 @@ type FocusLane = {
   }>;
 };
 
+type IntentLink = {
+  href: string;
+  label: Record<SupportedLocale, string>;
+  description: Record<SupportedLocale, string>;
+};
+
+const OFFICIAL_STATUS_NOTES: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
+  guihuan: {
+    zh: '归环正式公测日期如未由官方明确公布，请以官网、平台商店和官方社区公告为准。',
+    en: 'If Guihuan has not announced a final public release date, use the official site, platform stores, and official community posts as the source of truth.',
+    ja: '帰環の正式リリース日が公式発表されていない場合、公式サイト、ストア、公式コミュニティ告知を基準にしてください。',
+  },
+  ananta: {
+    zh: '无限大正式公测日期和商业模式细节如未最终公布，请以官网、预注册页和官方公告为准。',
+    en: 'If Ananta has not finalized its release date or monetization details, use the official site, preregistration page, and official notices as the source of truth.',
+    ja: 'Anantaの正式リリース日や収益モデルが未確定の場合、公式サイト、事前登録ページ、公式告知を基準にしてください。',
+  },
+};
+
+const INTENT_LINKS: Partial<Record<GameId, IntentLink[]>> = {
+  genshin: [
+    { href: '/genshin/version', label: { zh: '官网 / 版本入口', en: 'Official / Version hub', ja: '公式 / バージョン' }, description: { zh: '承接官网、版本、活动和卡池查询。', en: 'Capture official, version, event, and banner queries.', ja: '公式、版本、イベント、バナー検索を承接します。' } },
+    { href: '/genshin/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '直播码、版本码和过期状态集中查看。', en: 'Check livestream, version, and expired code status.', ja: '配信コード、版本コード、期限切れを確認。' } },
+    { href: '/genshin/guides/banner-schedule-guide', label: { zh: '卡池规划', en: 'Banner planning', ja: 'バナー計画' }, description: { zh: '把抽卡、原石和保底放到同一条路线里。', en: 'Plan pulls, Primogems, and pity in one path.', ja: 'ガチャ、原石、天井を一緒に計画。' } },
+  ],
+  starrail: [
+    { href: '/starrail/version', label: { zh: '官网 / 版本入口', en: 'Official / Version hub', ja: '公式 / バージョン' }, description: { zh: '承接 4.4、联动、角色和活动时间。', en: 'Capture v4.4, collab, character, and event timing.', ja: 'v4.4、コラボ、キャラ、イベントを承接。' } },
+    { href: '/starrail/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '直播兑换码和版本补偿码入口。', en: 'Livestream and version compensation code entry.', ja: '配信コードと補償コード入口。' } },
+    { href: '/starrail/guides/v4-4-preview-guide', label: { zh: '抽卡规划', en: 'Pull planning', ja: 'ガチャ計画' }, description: { zh: 'Himeko Nova、Fate 联动和星琼缺口。', en: 'Himeko Nova, Fate collab, and Stellar Jade gaps.', ja: 'Himeko Nova、Fate、星玉不足を確認。' } },
+  ],
+  wuwa: [
+    { href: '/wuwa/version', label: { zh: '官网 / 版本入口', en: 'Official / Version hub', ja: '公式 / バージョン' }, description: { zh: '承接 3.5、Xbox/Game Pass 和 SP 机制。', en: 'Capture v3.5, Xbox/Game Pass, and SP mechanics.', ja: 'v3.5、Xbox/Game Pass、SP機構を承接。' } },
+    { href: '/wuwa/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '版本码、活动码和过期状态。', en: 'Version codes, event codes, and expiry status.', ja: '版本コード、イベントコード、期限確認。' } },
+    { href: '/wuwa/guides/v3-5-preview-guide', label: { zh: 'Xbox 入坑', en: 'Xbox starter', ja: 'Xbox入門' }, description: { zh: '平台登录、手柄、首周资源和活动路线。', en: 'Platform login, controller, first-week resources, and events.', ja: 'ログイン、コントローラー、初週資源、イベント。' } },
+  ],
+  nte: [
+    { href: '/nte/guides/download-install-guide', label: { zh: '官网 / 下载', en: 'Official / Download', ja: '公式 / DL' }, description: { zh: '承接官网、下载、安装和设备问题。', en: 'Capture official, download, install, and device queries.', ja: '公式、DL、インストール、端末検索を承接。' } },
+    { href: '/nte/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '1.2 版本码和活动奖励入口。', en: 'v1.2 codes and event reward entry.', ja: 'v1.2コードとイベント報酬入口。' } },
+    { href: '/nte/version', label: { zh: 'Shinku / Iroi', en: 'Shinku / Iroi', ja: 'Shinku / Iroi' }, description: { zh: '角色抽取、版本活动和抽卡机制。', en: 'Character pulls, version events, and gacha mechanics.', ja: 'キャラガチャ、版本イベント、ガチャ機構。' } },
+  ],
+  zzz: [
+    { href: '/zzz/guides/steam-3-0-start-guide', label: { zh: 'Steam 入坑', en: 'Steam starter', ja: 'Steam入門' }, description: { zh: '下载、账号绑定、存档互通和新区路线。', en: 'Download, account linking, cross-save, and new-area route.', ja: 'DL、アカウント連携、クロスセーブ、新エリア。' } },
+    { href: '/zzz/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '版本码、直播码和回流奖励。', en: 'Version codes, livestream codes, and returnee rewards.', ja: '版本コード、配信コード、復帰報酬。' } },
+    { href: '/zzz/drive-discs', label: { zh: '驱动盘', en: 'Drive discs', ja: 'ディスク' }, description: { zh: '把 3.0 角色直接接到配装页。', en: 'Route v3.0 agents directly into build pages.', ja: 'v3.0エージェントをビルドへ接続。' } },
+  ],
+  guihuan: [
+    { href: '/guihuan/guides/test-release-timeline-guide', label: { zh: '官网 / 测试', en: 'Official / Tests', ja: '公式 / テスト' }, description: { zh: '公测时间、测试资格和官方状态。', en: 'Release timing, test access, and official status.', ja: 'リリース時期、テスト資格、公式状態。' } },
+    { href: '/guihuan/guides/download-install-guide', label: { zh: '下载 / 配置', en: 'Download / Specs', ja: 'DL / 環境' }, description: { zh: '下载入口、设备准备和安装问题。', en: 'Download entry, device prep, and install issues.', ja: 'DL入口、端末準備、インストール。' } },
+    { href: '/guihuan/guides/time-loop-mechanic', label: { zh: '42 天循环', en: '42-day loop', ja: '42日ループ' }, description: { zh: '解释玩法类型和时间循环核心。', en: 'Explain gameplay type and time-loop core.', ja: '玩法タイプと時間ループを解説。' } },
+  ],
+  ananta: [
+    { href: '/ananta/guides/preregistration-no-gacha-guide', label: { zh: '官网 / 预注册', en: 'Official / Prereg', ja: '公式 / 事前登録' }, description: { zh: '预注册、测试资格和官方状态。', en: 'Preregistration, test access, and official status.', ja: '事前登録、テスト資格、公式状態。' } },
+    { href: '/ananta/guides/download-install-guide', label: { zh: '下载 / 测试', en: 'Download / Tests', ja: 'DL / テスト' }, description: { zh: '下载入口、平台状态和测试说明。', en: 'Download entry, platform status, and test notes.', ja: 'DL入口、プラットフォーム、テスト説明。' } },
+    { href: '/ananta/guides/preregistration-no-gacha-guide', label: { zh: '无抽卡 FAQ', en: 'No-gacha FAQ', ja: 'ガチャなしFAQ' }, description: { zh: '把商业模式已知信息和推测分开。', en: 'Separate confirmed monetization facts from speculation.', ja: '収益モデルの確定情報と推測を分離。' } },
+  ],
+  endfield: [
+    { href: '/endfield/guides/download-install-guide', label: { zh: '官网 / 下载', en: 'Official / Download', ja: '公式 / DL' }, description: { zh: '下载、配置、平台和测试状态入口。', en: 'Download, specs, platform, and test-status entry.', ja: 'DL、環境、プラットフォーム、テスト状態。' } },
+    { href: '/endfield/guides/homecoming-update-guide', label: { zh: 'Homecoming', en: 'Homecoming', ja: 'Homecoming' }, description: { zh: '新地图、AIC 工厂和新干员。', en: 'New maps, AIC factory, and operators.', ja: '新マップ、AIC工場、新オペレーター。' } },
+    { href: '/endfield/guides/combat-system-guide', label: { zh: '玩法 / 配置', en: 'Gameplay / Specs', ja: '玩法 / 環境' }, description: { zh: '承接 wiki、角色、配置和玩法问题。', en: 'Capture wiki, character, specs, and gameplay questions.', ja: 'Wiki、キャラ、環境、玩法検索を承接。' } },
+  ],
+  sea: [
+    { href: '/sea/guides/official-2026-test-timeline-guide', label: { zh: '官网 / 测试', en: 'Official / Tests', ja: '公式 / テスト' }, description: { zh: '官网、Wanderer Test、预约和发行状态。', en: 'Official site, Wanderer Test, preregistration, and release status.', ja: '公式、Wanderer Test、事前登録、リリース状態。' } },
+    { href: '/sea/guides/download-install-guide', label: { zh: '下载 / 配置', en: 'Download / Specs', ja: 'DL / 環境' }, description: { zh: '下载入口、PC 配置和平台节奏。', en: 'Download entry, PC specs, and platform timing.', ja: 'DL入口、PC環境、プラットフォーム時期。' } },
+    { href: '/sea/guides/trade-market-guide', label: { zh: '贸易场', en: 'Trade market', ja: '交易場' }, description: { zh: '好金砖、交易和零氪首周路线。', en: 'Good Gold Bricks, trading, and F2P week-one route.', ja: '好金砖、交易、無課金初週ルート。' } },
+  ],
+  skjh: [
+    { href: '/skjh/guides/download-crossplay-faq', label: { zh: '官网 / 下载', en: 'Official / Download', ja: '公式 / DL' }, description: { zh: 'PC、移动端、多端互通和安装问题。', en: 'PC, mobile, cross-play, and install questions.', ja: 'PC、モバイル、多端連携、インストール。' } },
+    { href: '/skjh/guides/launch-30min-checklist', label: { zh: '新手 30 分钟', en: 'First 30 minutes', ja: '最初の30分' }, description: { zh: '开荒、服务器模式和基地第一步。', en: 'Launch route, server mode, and first base step.', ja: '開荒、サーバーモード、最初の拠点。' } },
+    { href: '/skjh/guides/server-mode-choice', label: { zh: '服务器模式', en: 'Server modes', ja: 'サーバーモード' }, description: { zh: '安全区、标准、挑战和速战选择。', en: 'Safe-zone, standard, challenge, and quick-fight choice.', ja: '安全区、標準、挑戦、速戦の選択。' } },
+  ],
+};
+
 const VERSION_COPY: Record<GameId, HubCopy> = {
   genshin: {
     title: { zh: 'Luna VIII / Sandrone 专题', en: 'Luna VIII / Sandrone Hub', ja: 'Luna VIII / Sandrone 特集' },
@@ -1964,6 +2036,8 @@ export default async function VersionHubPage({
   const faqJsonLd = buildFaqJsonLd(hub.faq, locale);
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(gameId, locale, pageTitle);
   const focusLanes = VERSION_FOCUS_LANES[gameId]?.[locale] ?? [];
+  const officialStatusNote = OFFICIAL_STATUS_NOTES[gameId]?.[locale];
+  const intentLinks = INTENT_LINKS[gameId] ?? [];
 
   return (
     <div>
@@ -1992,6 +2066,14 @@ export default async function VersionHubPage({
             {locale === 'zh' ? '持续对接近期热搜与版本节点' : locale === 'ja' ? '最新検索語とバージョン動向を継続反映' : 'Continuously aligned with recent search demand and version timing'}
           </span>
         </div>
+        {officialStatusNote && (
+          <div className="mt-4 rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm leading-relaxed text-game-text-muted">
+            <span className="font-semibold text-amber-300">
+              {locale === 'zh' ? '官方状态提示：' : locale === 'ja' ? '公式ステータス：' : 'Official status: '}
+            </span>
+            {officialStatusNote}
+          </div>
+        )}
       </section>
 
       <section className="mb-8">
@@ -2010,6 +2092,40 @@ export default async function VersionHubPage({
           ))}
         </div>
       </section>
+
+      {intentLinks.length > 0 && (
+        <section className="mb-8 rounded-2xl border border-game-border bg-game-surface p-5">
+          <div className="mb-4 flex items-center justify-between gap-4">
+            <div>
+              <h2 className="text-xl font-bold text-game-text">
+                {locale === 'zh' ? '高频搜索入口' : locale === 'ja' ? '頻出検索入口' : 'High-Intent Shortcuts'}
+              </h2>
+              <p className="mt-1 text-sm text-game-text-muted">
+                {locale === 'zh'
+                  ? '统一承接官网、下载、云游戏、配置、兑换码和核心机制问题。'
+                  : locale === 'ja'
+                    ? '公式、DL、クラウド、環境、コード、主要機構の検索をまとめます。'
+                    : 'Route official, download, cloud, specs, code, and core-mechanic queries into stable pages.'}
+              </p>
+            </div>
+            <span className="text-xs text-game-text-muted">
+              {locale === 'zh' ? '模板化导流' : locale === 'ja' ? 'テンプレ導線' : 'Template funnel'}
+            </span>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {intentLinks.map((link) => (
+              <Link
+                key={`${link.href}-${link.label[locale]}`}
+                href={link.href as '/'}
+                className="rounded-xl border border-game-border bg-game-bg/80 p-4 transition-all hover:border-game-primary hover:shadow-lg"
+              >
+                <div className="mb-2 text-sm font-semibold text-game-primary">{link.label[locale]}</div>
+                <p className="text-sm leading-relaxed text-game-text-muted">{link.description[locale]}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {focusLanes.length > 0 && (
         <section className="mb-8 rounded-2xl border border-game-border bg-gradient-to-br from-game-surface via-game-surface to-game-surface/80 p-5 shadow-lg">
