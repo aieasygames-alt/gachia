@@ -1,5 +1,40 @@
 [
   {
+    "id": "luna-viii-sandrone-guide",
+    "title": "原神 Luna VIII / Sandrone 版本专题：卡池、活动、兑换码与抽卡规划",
+    "titleEn": "Genshin Impact Luna VIII / Sandrone Guide: Banners, Events, Codes, and Pull Planning",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "summary": "承接 Luna VIII、Sandrone、Sunny Summer Fontinalia、卡池阶段、活动奖励、兑换码和角色抽取规划等高频搜索。",
+    "summaryEn": "A search-focused hub for Luna VIII, Sandrone, Sunny Summer Fontinalia, banner phases, event rewards, codes, and pull planning.",
+    "content": "## Luna VIII / Sandrone 版本专题\n\nLuna VIII 的搜索重点集中在 Sandrone、版本活动、卡池阶段、兑换码和后续至冬线索。玩家真正想解决的不是“新闻标题是什么”，而是：现在该抽谁、活动先做什么、资源够不够，以及 Sandrone 是否值得作为当前版本目标。\n\n### 先看结论\n\n- **角色焦点**：Sandrone 是当前版本最强角色搜索词，适合放在版本首屏承接。\n- **活动焦点**：Sunny Summer Fontinalia 适合拆成活动奖励、限时任务、兑换商店三类内容。\n- **抽卡焦点**：把 Phase I、Phase II、复刻角色和后续 Snezhnaya 预期放在同一张规划表。\n- **搜索焦点**：原神 wiki、角色、卡池、地图、兑换码、云游戏和 Genshin Impact codes。\n\n### Sandrone 值不值得抽\n\n先按账号需求判断，而不是只看热度：\n\n1. 如果你缺当前版本对应定位，Sandrone 可以作为版本核心目标。\n2. 如果你已经有完整主队，先确认她是否能提供机制差异，而不是只补面板。\n3. 如果你还想留资源给后续 Snezhnaya 角色，至少保留一轮大保底。\n4. 轻度玩家优先试用、看材料压力和队伍适配，再决定是否补专武或命座。\n\n### Luna VIII 上线后先做什么\n\n1. 领取维护补偿、直播码和版本邮件。\n2. 查看活动页，把限时奖励和商店兑换先排期。\n3. 记录当前保底、纠缠之缘和原石缺口。\n4. 先刷 Sandrone 或当前目标角色的突破材料。\n5. 如果只想等后续至冬角色，不要被短期活动池带偏。\n\n### 内容承接路线\n\n- 想查卡池：进入版本专题和祈愿排期页。\n- 想查角色：进入 Sandrone 角色页和配队页。\n- 想查材料：进入材料图鉴与刷取路线。\n- 想查活动：进入 Sunny Summer Fontinalia 与活动日历。\n- 想查兑换码：进入兑换码页，区分可用码和过期码。\n\n### 风险提示\n\n不要承接同人、成人、泄露和未证实内鬼词。版本页只做官方更新、玩法、卡池、兑换码、wiki 和健康攻略需求。",
+    "contentEn": "## Luna VIII / Sandrone Version Hub\n\nLuna VIII demand is clustering around Sandrone, events, banner phases, redeem codes, and future Snezhnaya expectations. Players need practical answers: who to pull, what to do first, whether resources are enough, and whether Sandrone should be the current-version target.\n\n### Quick Take\n\n- **Character focus**: Sandrone is the strongest version character keyword and should be surfaced in the version hub.\n- **Event focus**: Sunny Summer Fontinalia can be split into rewards, limited tasks, and event-shop routing.\n- **Pull focus**: Put Phase I, Phase II, reruns, and future Snezhnaya expectations in one planning table.\n- **Search focus**: wiki, characters, banners, map, redeem codes, cloud gaming, and Genshin Impact codes.\n\n### Is Sandrone Worth Pulling?\n\nJudge by account needs rather than hype:\n\n1. If your account lacks the role Sandrone fills, she can be a core version target.\n2. If your teams are already complete, check whether she adds unique mechanics instead of only more stats.\n3. If you want to save for later Snezhnaya characters, keep at least one full pity reserved.\n4. Casual players should trial her, check material pressure, and then decide on weapon or copies.\n\n### What to Do First After Luna VIII\n\n1. Claim maintenance compensation, livestream codes, and version mail.\n2. Open the event page and schedule limited rewards and shop items.\n3. Record pity, Intertwined Fates, and Primogem gaps.\n4. Farm materials for Sandrone or your current target.\n5. If saving for later Snezhnaya characters, avoid spending because of short-term banner pressure.\n\n### Internal Path\n\n- Banners: version hub and wish schedule.\n- Characters: Sandrone page and team pages.\n- Materials: item wiki and farming routes.\n- Events: Sunny Summer Fontinalia and event calendar.\n- Codes: redeem-code page with active and expired status.\n\n### Safety Note\n\nDo not capture adult/fan-content, leak, or unverified rumor intent. Keep version coverage to official updates, gameplay, banners, codes, wiki, and healthy guide demand.",
+    "tags": [
+      "Luna VIII",
+      "Sandrone",
+      "Sunny Summer Fontinalia",
+      "卡池",
+      "兑换码",
+      "抽卡规划",
+      "原神"
+    ],
+    "faq": [
+      {
+        "question": "What should I check first in Luna VIII?",
+        "questionZh": "Luna VIII 版本先看什么？",
+        "answer": "Start with Sandrone, banner phases, event rewards, codes, and your pity/resource gap.",
+        "answerZh": "先看 Sandrone、卡池阶段、活动奖励、兑换码和自己的保底/资源缺口。"
+      },
+      {
+        "question": "Should I pull Sandrone?",
+        "questionZh": "Sandrone 值得抽吗？",
+        "answer": "Pull if she fills a real team gap and you can still reserve resources for future targets. Otherwise, trial her first and wait for team data.",
+        "answerZh": "如果她能补真实队伍短板且还能给后续目标留资源，可以考虑抽；否则先试用并等配队数据。"
+      }
+    ]
+  },
+  {
     "id": "snezhnaya-version-guide",
     "title": "至冬国版本更新前瞻指南",
     "titleEn": "Snezhnaya Version Update Preview Guide",

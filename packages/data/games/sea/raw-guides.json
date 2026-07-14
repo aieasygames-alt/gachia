@@ -1,5 +1,41 @@
 [
   {
+    "id": "official-2026-test-timeline-guide",
+    "title": "遗忘之海 2026 官方动态时间线：官网、测试、预约、NVIDIA 与发行信息",
+    "titleEn": "Sea of Remnants 2026 Official Timeline: Site, Tests, Pre-registration, NVIDIA, and Release Notes",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "summary": "整理遗忘之海 2026 年官网、Wanderer Test、NVIDIA 合作、Make it Loud 预告、预约/测试/发行状态与玩家常见疑问。",
+    "summaryEn": "A 2026 official-status timeline for Sea of Remnants covering the official site, Wanderer Test, NVIDIA partnership, Make it Loud trailer, preregistration/testing/release status, and player FAQs.",
+    "content": "## 遗忘之海 2026 官方动态时间线\n\n这页用来承接“遗忘之海官网、下载、测试、公测、是什么类型、云游戏、NVIDIA、Wanderer Test”这类查询。不同地区和平台的测试/上线节奏可能不同，所有日期最终以官网和平台商店公告为准。\n\n### 当前适合先看什么\n\n- 想确认官方入口：先看官网、新闻页和平台商店。\n- 想知道能不能玩：看测试/预约状态和平台公告。\n- 想判断是不是适合自己：看“是什么游戏”和付费模式页。\n- 想开服后少走弯路：看开服路线、交易系统和角色/服装资源分配。\n\n### 2026 重点线索\n\n- **Wanderer Test**：适合承接测试资格、测试反馈、玩法类型等搜索。\n- **NVIDIA 合作**：适合承接 PC、画质、性能、云游戏和设备配置需求。\n- **Make it Loud 预告**：适合承接美术、音乐、海盗题材和世界观兴趣。\n- **预约/发行信息**：如果官网未给出某平台正式日期，页面必须明确“以官方公告为准”。\n\n### 玩家最容易混淆的点\n\n1. 它不是传统 MMO 的硬核组队压力。\n2. 它也不是只靠角色抽卡驱动的纯二游。\n3. 交易、岛屿经营、海洋探索和船员养成是差异化核心。\n4. 测试资格、预下载、正式上线时间要按平台分开看。\n\n### 站内路线\n\n- 认知澄清：先看“遗忘之海到底是什么游戏”。\n- 开服行动：再看开服攻略和首周每日清单。\n- 差异化机制：重点看贸易场、好金砖和零氪首周路线。\n- 资源决策：看抽角色还是抽服装。",
+    "contentEn": "## Sea of Remnants 2026 Official Timeline\n\nThis page captures searches around the official site, download, tests, open beta/release, game type, cloud gaming, NVIDIA, and Wanderer Test. Regional and platform schedules may differ, so final dates should always follow official site and store notices.\n\n### What to Check First\n\n- Official entry: official site, news page, and platform stores.\n- Can I play now: test/preregistration status and platform notices.\n- Is it for me: game-type explainer and monetization page.\n- How to avoid launch mistakes: launch route, trade system, and character-vs-outfit resource planning.\n\n### 2026 Signals\n\n- **Wanderer Test**: captures test access, feedback, and gameplay-type searches.\n- **NVIDIA partnership**: captures PC, graphics, performance, cloud gaming, and device-spec demand.\n- **Make it Loud trailer**: captures art, music, pirate theme, and worldbuilding interest.\n- **Preregistration/release notes**: if an official date is not announced for a platform, say so clearly and point back to official notices.\n\n### Common Confusion\n\n1. It is not a traditional MMO with heavy forced grouping.\n2. It is not only a character-gacha mobile game.\n3. Trading, island management, ocean exploration, and crew progression are differentiators.\n4. Test access, preload, and release timing must be checked per platform.\n\n### Internal Path\n\n- Positioning: what-is-this-game page.\n- Launch action: launch guide and week-one checklist.\n- Differentiator: trade market, good gold bricks, F2P week-one route.\n- Resource choice: character vs outfit pull guide.",
+    "tags": [
+      "官网",
+      "Wanderer Test",
+      "NVIDIA",
+      "预约",
+      "测试",
+      "发行时间",
+      "云游戏",
+      "Sea of Remnants"
+    ],
+    "faq": [
+      {
+        "question": "Is Sea of Remnants released everywhere?",
+        "questionZh": "遗忘之海所有平台都上线了吗？",
+        "answer": "Check the official site and platform store for your region. Platform schedules can differ, so avoid assuming one date applies everywhere.",
+        "answerZh": "请按所在地区查看官网和平台商店公告。不同平台节奏可能不同，不要默认同一天适用于所有平台。"
+      },
+      {
+        "question": "Is it an MMO or a gacha game?",
+        "questionZh": "它是 MMO 还是抽卡游戏？",
+        "answer": "It mixes ocean exploration, crew progression, trading, and island systems. Use the positioning guide before judging it as a traditional MMO or pure gacha game.",
+        "answerZh": "它混合海洋探索、船员养成、交易和岛屿系统，建议先看品类定位页，不要直接按传统 MMO 或纯抽卡手游理解。"
+      }
+    ]
+  },
+  {
     "id": "launch-day-guide",
     "title": "《遗忘之海》官网入口与开服攻略：7 月 9 日公测、平台互通、首月福利",
     "titleEn": "Sea of Remnants Official Hub & Launch Guide: July 9 PC Open Beta, Cross-Platform, Launch Rewards",

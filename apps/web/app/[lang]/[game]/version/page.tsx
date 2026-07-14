@@ -43,16 +43,16 @@ type FocusLane = {
 
 const VERSION_COPY: Record<GameId, HubCopy> = {
   genshin: {
-    title: { zh: '月之八版本专题', en: 'Moon 8 Version Hub', ja: '月之八バージョン特集' },
+    title: { zh: 'Luna VIII / Sandrone 专题', en: 'Luna VIII / Sandrone Hub', ja: 'Luna VIII / Sandrone 特集' },
     description: {
-      zh: '围绕月之八、桑多涅、千灵节、星超导反应、卡池规划和活动日历，快速定位版本重点。',
-      en: 'Track Moon 8, Sandrone, the 千灵节 event, the new reaction system, banner planning, and the event calendar.',
-      ja: '月之八、桑多涅、千霊節、新反応システム、バナー計画、イベント日程をまとめて確認できます。',
+      zh: '围绕 Luna VIII、Sandrone、Sunny Summer Fontinalia、卡池规划、兑换码和活动日历定位版本重点。',
+      en: 'Track Luna VIII, Sandrone, Sunny Summer Fontinalia, banner planning, codes, and the event calendar.',
+      ja: 'Luna VIII、Sandrone、Sunny Summer Fontinalia、バナー計画、コード、イベント日程をまとめます。',
     },
     highlights: {
-      zh: ['月之八开启', '桑多涅实装', '千灵节剧情', '幽境危战'],
-      en: ['Moon 8 launch', 'Sandrone release', '千灵节 story', 'Dangerous Domain event'],
-      ja: ['月之八開始', '桑多涅実装', '千霊節', 'イベント挑戦'],
+      zh: ['Luna VIII', 'Sandrone', '活动日历', '兑换码'],
+      en: ['Luna VIII', 'Sandrone', 'Event calendar', 'Redeem codes'],
+      ja: ['Luna VIII', 'Sandrone', 'イベント日程', '交換コード'],
     },
     kicker: { zh: '抢版本词', en: 'Version rush', ja: 'バージョン対策' },
     freshness: {
@@ -68,9 +68,9 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
           ja: 'このバージョン特集では何を見ればいいですか？',
         },
         answer: {
-          zh: '这里会优先收录当前版本最容易被搜索的主题，例如桑多涅、千灵节、星超导反应、卡池规划、活动日历和实装节点。',
-          en: 'It highlights the most searched current topics, including Sandrone, the 千灵节 story, the new reaction system, banner planning, the event calendar, and release timing.',
-          ja: '桑多涅、千霊節、新反応システム、バナー計画、イベント日程、実装時期など、今よく検索される話題を優先整理しています。',
+          zh: '这里优先收录 Luna VIII、Sandrone、活动奖励、兑换码、卡池阶段和原石规划。',
+          en: 'It highlights Luna VIII, Sandrone, event rewards, redeem codes, banner phases, and Primogem planning.',
+          ja: 'Luna VIII、Sandrone、イベント報酬、交換コード、バナー段階、原石計画を優先整理します。',
         },
       },
       {
@@ -86,7 +86,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['snezhnaya-version-guide', 'lunar-reaction-guide', 'artifact-guide'],
+    guideIds: ['luna-viii-sandrone-guide', 'banner-schedule-guide', 'lunar-reaction-guide'],
   },
   starrail: {
     title: { zh: '4.4 版本专题', en: 'v4.4 Version Hub', ja: 'v4.4 バージョン特集' },
@@ -227,16 +227,16 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
     guideIds: ['v1-2-999-nights-guide', 'download-install-guide', 'gacha-strategy'],
   },
   zzz: {
-    title: { zh: '3.0 版本专题', en: 'v3.0 Version Hub', ja: 'v3.0 バージョン特集' },
+    title: { zh: 'Steam / 3.0 入坑专题', en: 'Steam / v3.0 Starter Hub', ja: 'Steam / v3.0 入門特集' },
     description: {
-      zh: '聚焦 v3.0「新秩序」、首席跟班、980 底片福利与新配队思路。',
-      en: 'Focus on v3.0 "New Order", the main update, 980 Polychrome rewards, and team building.',
-      ja: 'v3.0「新秩序」、980フィル、配隊の考え方を整理します。',
+      zh: '聚焦 Steam 发行、3.0 新区、账号绑定、下载安装、兑换码、驱动盘与配队思路。',
+      en: 'Focus on Steam launch, v3.0 area, account linking, install flow, redeem codes, Drive Discs, and teams.',
+      ja: 'Steam配信、v3.0新エリア、アカウント連携、DL、コード、ディスクと編成を整理します。',
     },
     highlights: {
-      zh: ['v3.0 新秩序', '980 底片', '首席跟班', '驱动盘 / 音擎搭配'],
-      en: ['v3.0 New Order', '980 Polychrome', 'Key update guides', 'W-Engine / Drive Disc builds'],
-      ja: ['v3.0新秩序', '980フィル', '主要攻略', 'Wエンジン/ディスク'],
+      zh: ['Steam 入坑', '账号绑定', '3.0 新区', '兑换码'],
+      en: ['Steam start', 'Account linking', 'v3.0 area', 'Redeem codes'],
+      ja: ['Steam入門', 'アカウント連携', 'v3.0エリア', '交換コード'],
     },
     kicker: { zh: '版本热词', en: 'Hot topics', ja: '注目トピック' },
     freshness: {
@@ -252,9 +252,9 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
           ja: 'v3.0特集では何を最初に見ればいいですか？',
         },
         answer: {
-          zh: '建议先看版本专题，再看 980 底片相关内容和队伍搭配。',
-          en: 'Start with the version hub, then check the 980 Polychrome topic and team-building pages.',
-          ja: 'まずバージョン特集、次に980フィル関連と編成ページを確認してください。',
+          zh: 'Steam 新玩家先看账号绑定和下载安装；回流玩家先看 3.0 专题、兑换码和配队更新。',
+          en: 'Steam newcomers should start with account linking and install flow; returning players should check v3.0, codes, and team updates.',
+          ja: 'Steam新規はアカウント連携とDLから、復帰勢はv3.0、コード、編成更新から確認してください。',
         },
       },
       {
@@ -270,21 +270,21 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['v3-0-version-guide', 'meta-teams-v3-guide', 'rupture-specialty-guide'],
+    guideIds: ['steam-3-0-start-guide', 'v3-0-version-guide', 'meta-teams-v3-guide'],
   },
   guihuan: {
-    title: { zh: '开服与入门专题', en: 'Launch & Starter Hub', ja: 'ローンチ・入門特集' },
+    title: { zh: '测试 / 公测时间线专题', en: 'Test & Release Timeline Hub', ja: 'テスト・リリース時期特集' },
     description: {
-      zh: '围绕归环的下载、开服、使灵和配装信息，提供当前阶段的承接页。',
-      en: 'A launch hub for downloads, starter tips, spirit builds, and build planning.',
-      ja: 'DL、開服、使霊、ビルド情報をまとめた現段階の承接ページです。',
+      zh: '围绕归环官网、下载、公测时间、测试资格、42 天循环、使灵系统和玩法定位承接搜索。',
+      en: 'A hub for official site, download status, release timing, test access, the 42-day loop, Spirit system, and gameplay positioning.',
+      ja: '公式サイト、DL、リリース時期、テスト資格、42日ループ、使霊、玩法定位をまとめます。',
     },
     highlights: {
-      zh: ['下载安装', '新手入门', '使灵系统', '节奏榜'],
-      en: ['Download/install', 'Starter guide', 'Spirit system', 'Tier list'],
-      ja: ['DL/インストール', '初心者', '使霊システム', 'Tier'],
+      zh: ['测试资格', '公测时间', '42 天循环', '使灵系统'],
+      en: ['Test access', 'Release timing', '42-day loop', 'Spirit system'],
+      ja: ['テスト資格', 'リリース時期', '42日ループ', '使霊'],
     },
-    kicker: { zh: '开服承接', en: 'Launch anchor', ja: 'ローンチ軸' },
+    kicker: { zh: '测试承接', en: 'Test anchor', ja: 'テスト軸' },
     freshness: {
       zh: '围绕开服、使灵和配装思路持续补充。',
       en: 'Launch, spirit, and build-planning topics are kept fresh here.',
@@ -298,9 +298,9 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
           ja: '帰環ではまずどこを見ればいいですか？',
         },
         answer: {
-          zh: '先看新手入门和下载安装，再进入使灵系统和节奏榜。',
-          en: 'Start with beginner and install info, then move into the spirit system and tier list.',
-          ja: '初心者ガイドとDL情報から始めて、使霊システムとTierへ進むのがおすすめです。',
+          zh: '先看测试与公测时间线，确认官方状态后再进入下载安装、时间循环机制和使灵系统。',
+          en: 'Start with the test/release timeline, confirm official status, then move into install, time-loop mechanics, and Spirit systems.',
+          ja: 'まずテスト・リリース時期を確認し、その後DL、時間ループ、使霊へ進んでください。',
         },
       },
       {
@@ -316,19 +316,19 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['beginner-guide', 'download-install-guide', 'spirit-build-guide'],
+    guideIds: ['test-release-timeline-guide', 'time-loop-mechanic', 'download-install-guide'],
   },
   ananta: {
-    title: { zh: '预约与入门专题', en: 'Pre-register & Starter Hub', ja: '事前登録・入門特集' },
+    title: { zh: '预注册 / 无抽卡 FAQ', en: 'Preregistration / No-Gacha FAQ', ja: '事前登録 / ガチャなしFAQ' },
     description: {
-      zh: '围绕预约、下载、战斗系统与异能者培养，先把玩家最常搜的问题接住。',
-      en: 'An intake hub for preregistration, downloads, combat basics, and esper builds.',
-      ja: '事前登録、DL、戦闘、異能者育成の入口をまとめています。',
+      zh: '围绕官网、预注册、无抽卡、测试资格、公测时间、网易/塔菲和都市开放世界玩法承接搜索。',
+      en: 'A hub for official site, preregistration, no-gacha model, test access, release timing, NetEase/Taffy, and urban open-world gameplay.',
+      ja: '公式サイト、事前登録、ガチャなし、テスト資格、リリース時期、NetEase/Taffy、都市OWを整理します。',
     },
     highlights: {
-      zh: ['预约承接', '下载安装', '战斗系统', '异能者节奏榜'],
-      en: ['Pre-registration', 'Download/install', 'Combat basics', 'Esper tier list'],
-      ja: ['事前登録', 'DL/インストール', '戦闘', 'Tier'],
+      zh: ['预注册', '无抽卡', '测试资格', '公测时间'],
+      en: ['Preregistration', 'No gacha', 'Test access', 'Release timing'],
+      ja: ['事前登録', 'ガチャなし', 'テスト資格', 'リリース時期'],
     },
     kicker: { zh: '预约导流', en: 'Pre-reg funnel', ja: '事前登録導線' },
     freshness: {
@@ -344,9 +344,9 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
           ja: 'Anantaで今いちばん見るべきものは？',
         },
         answer: {
-          zh: '先看预约与下载信息，再看战斗系统和异能者培养路线。',
-          en: 'Check preregistration and downloads first, then combat basics and esper progression.',
-          ja: '事前登録とDLを先に確認し、その後に戦闘と異能者育成を見てください。',
+          zh: '先看预注册与无抽卡 FAQ，确认官方状态后再看下载、战斗系统和新都市探索。',
+          en: 'Start with preregistration and no-gacha FAQ, then check download, combat, and Nova City exploration.',
+          ja: 'まず事前登録とガチャなしFAQを確認し、その後DL、戦闘、新都市探索へ進んでください。',
         },
       },
       {
@@ -362,7 +362,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['download-install-guide', 'combat-system-guide', 'crisis-contract-guide'],
+    guideIds: ['preregistration-no-gacha-guide', 'download-install-guide', 'combat-system-guide'],
   },
   endfield: {
     title: { zh: 'Homecoming 半周年专题', en: 'Homecoming Half-Year Hub', ja: 'Homecoming 半周年特集' },
@@ -411,16 +411,16 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
     guideIds: ['homecoming-update-guide', 'beginner-guide', 'download-install-guide'],
   },
   sea: {
-    title: { zh: '7 月 9 日公测专题', en: 'July 9 Open Beta Hub', ja: '7月9日CBT特集' },
+    title: { zh: '官网 / 测试 / 开服专题', en: 'Official / Test / Launch Hub', ja: '公式・テスト・ローンチ特集' },
     description: {
-      zh: '聚焦公测时间、版本中心、下载安装、角色图鉴、队伍思路、节奏榜与首月开服信息。',
-      en: 'Focus on the open beta date, version center, download/install, character wiki, team building, tier list, and launch basics.',
-      ja: 'CBT日程、バージョン特集、DL、キャラ図鑑、編成案、Tier、初月情報を整理します。',
+      zh: '聚焦官网入口、2026 测试/预约动态、版本中心、下载安装、开服攻略、交易系统与资源决策。',
+      en: 'Focus on official entry, 2026 test/preregistration signals, version center, download/install, launch guide, trade system, and resource decisions.',
+      ja: '公式導線、2026テスト/事前登録、バージョン特集、DL、開服攻略、交易、資源判断を整理します。',
     },
     highlights: {
-      zh: ['7/9 公测', '版本中心', '下载安装', '队伍思路'],
-      en: ['July 9 open beta', 'Version center', 'Download/install', 'Team building'],
-      ja: ['7/9CBT', 'バージョン特集', 'DL', '編成案'],
+      zh: ['官网入口', '测试时间线', '开服攻略', '贸易场'],
+      en: ['Official entry', 'Test timeline', 'Launch guide', 'Trade market'],
+      ja: ['公式導線', 'テスト時期', '開服攻略', '交易場'],
     },
     kicker: { zh: '开服抢词', en: 'Launch capture', ja: '開服対策' },
     freshness: {
@@ -454,7 +454,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['open-beta-version-center', 'launch-day-guide', 'download-install-guide', 'tier-list-guide'],
+    guideIds: ['official-2026-test-timeline-guide', 'open-beta-version-center', 'launch-day-guide', 'trade-market-guide'],
   },
   skjh: {
     title: { zh: '7 月 9 日上线专题', en: 'July 9 Launch Hub', ja: '7月9日ローンチ特集' },
