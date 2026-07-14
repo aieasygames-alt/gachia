@@ -7,7 +7,33 @@ interface GuideJsonLdOptions {
   title: string;
   summary?: string;
   slug: string;
+  tags?: string[];
+  categoryLabel?: string;
   faq?: { question: string; answer: string }[];
+}
+
+interface EntityJsonLdOptions {
+  gameId: GameId;
+  locale: SupportedLocale;
+  name: string;
+  description: string;
+  url: string;
+  image?: string;
+  faq?: { question: string; answer: string }[];
+  categoryLabel?: string;
+  tags?: string[];
+}
+
+interface ItemJsonLdOptions {
+  gameId: GameId;
+  locale: SupportedLocale;
+  name: string;
+  description: string;
+  itemId: string;
+  image?: string;
+  faq?: { question: string; answer: string }[];
+  categoryLabel?: string;
+  tags?: string[];
 }
 
 const BASE_URL = 'https://gachia.com';
@@ -16,15 +42,34 @@ function homeLabel(locale: SupportedLocale) {
   return locale === 'zh' ? '首页' : locale === 'ja' ? 'ホーム' : 'Home';
 }
 
+function buildWebPageSchema(options: EntityJsonLdOptions) {
+  const { name, description, url, image } = options;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name,
+    description,
+    url,
+    mainEntity: {
+      '@type': 'Thing',
+      name,
+      description,
+      url,
+      ...(image ? { image } : {}),
+    },
+  };
+}
+
 /**
  * Build combined JSON-LD for guide pages: BreadcrumbList + Article + FAQPage
  */
 export function buildGuideJsonLd(options: GuideJsonLdOptions) {
-  const { gameId, locale, title, summary, slug, faq } = options;
+  const { gameId, locale, title, summary, slug, tags, categoryLabel, faq } = options;
   const gameConfig = GAMES[gameId];
   const gameName = gameConfig?.name[locale] ?? gameId;
   const guidesLabel = CATEGORY_LABELS.guides?.[locale] ?? 'Guides';
   const url = `${BASE_URL}/${locale}/${gameId}/guides/${slug}`;
+  const keywords = tags?.filter(Boolean) ?? [];
 
   const schemas: object[] = [];
 
@@ -47,12 +92,20 @@ export function buildGuideJsonLd(options: GuideJsonLdOptions) {
     headline: title,
     description: summary || title,
     url,
+    articleSection: categoryLabel ?? guidesLabel,
+    keywords: keywords.length > 0 ? keywords.join(', ') : undefined,
+    isPartOf: {
+      '@type': 'CollectionPage',
+      name: `${gameName} ${guidesLabel}`,
+      url: `${BASE_URL}/${locale}/${gameId}/guides`,
+    },
     publisher: {
       '@type': 'Organization',
       name: 'Gachia',
       url: BASE_URL,
     },
   });
+  schemas.push(buildWebPageSchema({ gameId, locale, name: title, description: summary || title, url }));
 
   // FAQPage (only if FAQ items exist)
   if (faq && faq.length > 0) {
@@ -82,14 +135,19 @@ export function buildCharacterJsonLd(options: {
   name: string;
   description: string;
   charId: string;
+  image?: string;
+  faq?: { question: string; answer: string }[];
+  tags?: string[];
+  categoryLabel?: string;
 }) {
-  const { gameId, locale, name, description, charId } = options;
+  const { gameId, locale, name, description, charId, image, faq, tags, categoryLabel } = options;
   const gameConfig = GAMES[gameId];
   const gameName = gameConfig?.name[locale] ?? gameId;
   const charsLabel = CATEGORY_LABELS.characters?.[locale] ?? 'Characters';
   const url = `${BASE_URL}/${locale}/${gameId}/characters/${charId}`;
+  const keywords = tags?.filter(Boolean) ?? [];
 
-  return [
+  const schemas: object[] = [
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -106,13 +164,38 @@ export function buildCharacterJsonLd(options: {
       headline: name,
       description,
       url,
+      articleSection: categoryLabel ?? charsLabel,
+      keywords: keywords.length > 0 ? keywords.join(', ') : undefined,
+      isPartOf: {
+        '@type': 'CollectionPage',
+        name: `${gameName} ${charsLabel}`,
+        url: `${BASE_URL}/${locale}/${gameId}/characters`,
+      },
       publisher: {
         '@type': 'Organization',
         name: 'Gachia',
         url: BASE_URL,
       },
     },
+    buildWebPageSchema({ gameId, locale, name, description, url, image }),
   ];
+
+  if (faq && faq.length > 0) {
+    schemas.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faq.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
+        },
+      })),
+    });
+  }
+
+  return schemas;
 }
 
 /**
@@ -124,14 +207,19 @@ export function buildWeaponJsonLd(options: {
   name: string;
   description: string;
   weaponId: string;
+  image?: string;
+  faq?: { question: string; answer: string }[];
+  categoryLabel?: string;
+  tags?: string[];
 }) {
-  const { gameId, locale, name, description, weaponId } = options;
+  const { gameId, locale, name, description, weaponId, image, faq, categoryLabel, tags } = options;
   const gameConfig = GAMES[gameId];
   const gameName = gameConfig?.name[locale] ?? gameId;
   const weaponsLabel = CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons';
   const url = `${BASE_URL}/${locale}/${gameId}/weapons/${weaponId}`;
+  const keywords = tags?.filter(Boolean) ?? [];
 
-  return [
+  const schemas: object[] = [
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -148,13 +236,97 @@ export function buildWeaponJsonLd(options: {
       headline: name,
       description,
       url,
+      articleSection: categoryLabel ?? weaponsLabel,
+      keywords: keywords.length > 0 ? keywords.join(', ') : undefined,
+      isPartOf: {
+        '@type': 'CollectionPage',
+        name: `${gameName} ${weaponsLabel}`,
+        url: `${BASE_URL}/${locale}/${gameId}/weapons`,
+      },
       publisher: {
         '@type': 'Organization',
         name: 'Gachia',
         url: BASE_URL,
       },
     },
+    buildWebPageSchema({ gameId, locale, name, description, url, image }),
   ];
+
+  if (faq && faq.length > 0) {
+    schemas.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faq.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: { '@type': 'Answer', text: item.answer },
+      })),
+    });
+  }
+
+  return schemas;
+}
+
+/**
+ * Build JSON-LD for item detail pages: BreadcrumbList + Article + FAQPage
+ */
+export function buildItemJsonLd(options: ItemJsonLdOptions) {
+  const { gameId, locale, name, description, itemId, image, faq, categoryLabel, tags } = options;
+  const gameConfig = GAMES[gameId];
+  const gameName = gameConfig?.name[locale] ?? gameId;
+  const itemsLabel = CATEGORY_LABELS.items?.[locale] ?? 'Items';
+  const url = `${BASE_URL}/${locale}/${gameId}/items/${itemId}`;
+  const keywords = tags?.filter(Boolean) ?? [];
+
+  const schemas: object[] = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: homeLabel(locale), item: `${BASE_URL}/${locale}` },
+        { '@type': 'ListItem', position: 2, name: gameName, item: `${BASE_URL}/${locale}/${gameId}` },
+        { '@type': 'ListItem', position: 3, name: itemsLabel, item: `${BASE_URL}/${locale}/${gameId}/items` },
+        { '@type': 'ListItem', position: 4, name },
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: name,
+      description,
+      url,
+      articleSection: categoryLabel ?? itemsLabel,
+      keywords: keywords.length > 0 ? keywords.join(', ') : undefined,
+      isPartOf: {
+        '@type': 'CollectionPage',
+        name: `${gameName} ${itemsLabel}`,
+        url: `${BASE_URL}/${locale}/${gameId}/items`,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Gachia',
+        url: BASE_URL,
+      },
+    },
+    buildWebPageSchema({ gameId, locale, name, description, url, image }),
+  ];
+
+  if (faq && faq.length > 0) {
+    schemas.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faq.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
+        },
+      })),
+    });
+  }
+
+  return schemas;
 }
 
 /**

@@ -84,7 +84,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${gameName} Wiki`,
       description,
-      images: [{ url: `/images/og/${gameId}.jpg`, width: 1200, height: 630, alt: `${gameName} Wiki — Gachia` }],
+      images: [{ url: `/images/og/${gameId}.webp`, width: 1200, height: 630, alt: `${gameName} Wiki — Gachia` }],
       locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
     },
     alternates: {

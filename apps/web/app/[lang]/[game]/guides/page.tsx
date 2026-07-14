@@ -39,9 +39,73 @@ const FEATURED_GUIDE_IDS: Record<GameId, string[]> = {
   guihuan: ['beginner-guide', 'download-install-guide', 'spirit-build-guide'],
   ananta: ['beginner-guide', 'download-install-guide', 'combat-system-guide'],
   endfield: ['download-install-guide', 'combat-system-guide', 'crisis-contract-guide'],
-  sea: ['launch-day-guide', 'open-beta-version-center', 'download-install-guide'],
+  sea: ['launch-day-guide', 'what-is-forgotten-sea', 'good-gold-bricks-farming-guide'],
   skjh: ['season-1-launch', 'launch-rewards-complete', 'download-crossplay-faq'],
 };
+
+const SEA_DECISION_LINKS: Array<{
+  id: string;
+  href: string;
+  label: Record<SupportedLocale, string>;
+  description: Record<SupportedLocale, string>;
+}> = [
+  {
+    id: 'positioning',
+    href: '/sea/guides/what-is-forgotten-sea',
+    label: {
+      zh: '先看它是什么游戏',
+      en: 'What kind of game is it?',
+      ja: 'まずゲーム定位を見る',
+    },
+    description: {
+      zh: '先解决“是不是 MMO、是不是纯抽卡、适不适合我”这些高频误解。',
+      en: 'Clear up the MMO, gacha, and player-fit questions before going deeper.',
+      ja: 'MMOなのか、ガチャ中心なのか、自分向きかを先に整理します。',
+    },
+  },
+  {
+    id: 'launch',
+    href: '/sea/guides/launch-day-guide',
+    label: {
+      zh: '今天开服先做什么',
+      en: 'What to do on launch day',
+      ja: '開服日に何をするか',
+    },
+    description: {
+      zh: '把平台、福利、黑券自选、首日路线和常见问题集中看完。',
+      en: 'Review platform, rewards, selector choices, day-one routing, and key FAQs.',
+      ja: 'プラットフォーム、配布、初日ルート、FAQをまとめて確認できます。',
+    },
+  },
+  {
+    id: 'economy',
+    href: '/sea/guides/good-gold-bricks-farming-guide',
+    label: {
+      zh: '零氪先看交易系统',
+      en: 'Start with the trade market',
+      ja: '無課金は交易所から',
+    },
+    description: {
+      zh: '这是遗忘之海最有差异化的内容，先看好金砖、交易逻辑和搬砖思路。',
+      en: 'The trade economy is the clearest differentiator, so start with bricks, pricing, and routes.',
+      ja: '好金砖、価格変動、金策ルートを先に押さえて差別化要素を理解できます。',
+    },
+  },
+  {
+    id: 'comparison',
+    href: '/sea/guides/vs-sea-of-thieves-guide',
+    label: {
+      zh: '和竞品到底怎么选',
+      en: 'How it compares',
+      ja: '競合作とどう違うか',
+    },
+    description: {
+      zh: '如果你在犹豫遗忘之海、盗贼之海或 Aniimo，这里先帮你快速做决定。',
+      en: 'Use the comparison pages if you are choosing between Sea of Remnants, Sea of Thieves, or Aniimo.',
+      ja: 'Sea of Thieves や Aniimo と迷っている人向けの判断入口です。',
+    },
+  },
+];
 
 export async function generateMetadata({
   params,
@@ -1096,6 +1160,42 @@ function SeaGuides({ locale }: { locale: SupportedLocale }) {
           : `${guides.length} guides`}
       </p>
 
+      <section className="mb-8 rounded-2xl border border-game-border bg-game-surface p-5">
+        <div className="mb-4 flex items-center justify-between gap-4">
+          <div>
+            <h2 className="text-lg font-semibold text-game-text">
+              {locale === 'zh' ? '先按决策入口看' : locale === 'ja' ? '目的別ショートカット' : 'Start with decision hubs'}
+            </h2>
+            <p className="mt-1 text-sm text-game-text-muted">
+              {locale === 'zh'
+                ? '遗忘之海现在最重要的不是把页面全点一遍，而是先解决认知、开荒、交易和对比这四类问题。'
+                : locale === 'ja'
+                ? 'まずは認知、序盤、交易、比較の4つから入ると迷いません。'
+                : 'The fastest path is to settle positioning, launch planning, trading, and comparisons first.'}
+            </p>
+          </div>
+          <span className="text-xs text-game-text-muted">
+            {locale === 'zh' ? '高意图入口' : locale === 'ja' ? '高意図導線' : 'High-intent shortcuts'}
+          </span>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          {SEA_DECISION_LINKS.map((entry) => (
+            <Link
+              key={entry.id}
+              href={entry.href}
+              className="group rounded-xl border border-game-border bg-game-surface-alt p-4 transition-all hover:border-game-primary hover:shadow-lg"
+            >
+              <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
+                {entry.label[locale]}
+              </h3>
+              <p className="text-sm leading-relaxed text-game-text-muted">
+                {entry.description[locale]}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {featuredGuides.length > 0 && (
         <section className="mb-8">
           <div className="mb-4 flex items-center justify-between gap-4">
@@ -1103,7 +1203,7 @@ function SeaGuides({ locale }: { locale: SupportedLocale }) {
               {locale === 'zh' ? '热门攻略' : locale === 'ja' ? '注目ガイド' : 'Featured Guides'}
             </h2>
             <span className="text-xs text-game-text-muted">
-              {locale === 'zh' ? '抢 7 月时效词入口' : locale === 'ja' ? '速報トピック' : 'Time-sensitive topics'}
+              {locale === 'zh' ? '先看认知澄清 + 开荒 + 交易' : locale === 'ja' ? '認知整理と序盤導線を優先' : 'Prioritize positioning, launch, and economy'}
             </span>
           </div>
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">

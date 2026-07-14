@@ -348,7 +348,16 @@ export function SearchDialog({ locale, open, onClose }: {
   const [query, setQuery] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const index = useMemo(() => buildIndex(locale), [locale]);
+  const index = useMemo(() => {
+    if (!open) return [];
+
+    try {
+      return buildIndex(locale);
+    } catch (error) {
+      console.error('Failed to build search index', error);
+      return [];
+    }
+  }, [open, locale]);
 
   useEffect(() => {
     if (open && inputRef.current) inputRef.current.focus();

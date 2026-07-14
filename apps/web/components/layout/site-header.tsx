@@ -23,7 +23,7 @@ interface SiteHeaderProps {
 export function SiteHeader({ locale }: SiteHeaderProps) {
   const [searchOpen, setSearchOpen] = useState(false);
   const [authOpen, setAuthOpen] = useState(false);
-  const { data: session } = useSession();
+  const [mounted, setMounted] = useState(false);
 
   // Keyboard shortcut: Cmd/Ctrl+K to open search
   useEffect(() => {
@@ -35,6 +35,10 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
     };
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
+  }, []);
+
+  useEffect(() => {
+    setMounted(true);
   }, []);
 
   return (
@@ -81,8 +85,8 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
             <LocaleSwitcher locale={locale} />
 
             {/* Auth */}
-            {session ? (
-              <UserMenu />
+            {mounted ? (
+              <AuthGate locale={locale} onOpenAuth={() => setAuthOpen(true)} />
             ) : (
               <button
                 onClick={() => setAuthOpen(true)}
@@ -95,8 +99,25 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
         </div>
       </header>
 
-      <SearchDialog locale={locale} open={searchOpen} onClose={() => setSearchOpen(false)} />
-      <AuthDialog open={authOpen} onClose={() => setAuthOpen(false)} />
+      {searchOpen ? <SearchDialog locale={locale} open={searchOpen} onClose={() => setSearchOpen(false)} /> : null}
+      {authOpen ? <AuthDialog open={authOpen} onClose={() => setAuthOpen(false)} /> : null}
     </>
+  );
+}
+
+function AuthGate({ locale, onOpenAuth }: { locale: SupportedLocale; onOpenAuth: () => void }) {
+  const { data: session } = useSession();
+
+  if (session) {
+    return <UserMenu />;
+  }
+
+  return (
+    <button
+      onClick={onOpenAuth}
+      className="rounded-lg border border-game-border bg-game-surface px-3 py-1.5 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary"
+    >
+      {locale === 'zh' ? '登录' : locale === 'ja' ? 'ログイン' : 'Login'}
+    </button>
   );
 }

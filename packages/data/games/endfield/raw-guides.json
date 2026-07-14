@@ -1,5 +1,43 @@
 [
   {
+    "id": "homecoming-update-guide",
+    "title": "终末地 Homecoming 半周年更新专题：7 月 16 日、新地图、AIC 工厂与新干员",
+    "titleEn": "Arknights: Endfield Homecoming Update Guide: July 16, New Maps, AIC Factory, and Operators",
+    "titleJa": "エンドフィールド Homecoming 更新ガイド",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "summary": "整理 Homecoming 半周年更新重点：7 月 16 日上线、乌陵剧情收束、新地图、Arcane/Liino、新 AIC 工厂流程和庆典奖励。",
+    "summaryEn": "A Homecoming hub for the July 16 half-year update, Wuling story, new maps, Arcane and Liino, AIC factory expansion, and celebration rewards.",
+    "summaryJa": "7月16日のHomecoming半周年更新、新マップ、AIC拡張、新オペレーターを整理します。",
+    "content": "## 终末地 Homecoming 半周年更新专题\n\nHomecoming 将在 2026 年 7 月 16 日上线，是《明日方舟：终末地》的半周年大型更新。它同时承担三个搜索意图：新剧情/新地图、Arcane 与 Liino 新干员、AIC 工厂系统扩展。\n\n### 更新重点速览\n\n- **上线时间**：2026 年 7 月 16 日。\n- **版本定位**：半周年更新，也是乌陵主线的重要收束节点。\n- **地图扩展**：新增 Yinglung Pass 与 North Wuling Exclusion Zone 两张主线地图。\n- **新干员**：Arcane 与 Liino 登场。\n- **系统更新**：AIC 工厂加入气体物料状态、更多配方、机器和生产线。\n- **庆典奖励**：登录、邮件和活动奖励适合放在版本页首屏承接。\n\n### 新地图与剧情\n\nHomecoming 聚焦乌陵故事线，玩家会继续推进归乡、灾难遗留和封锁区重建相关内容。新地图适合拆成两类页面：\n\n1. **探索路线**：解锁条件、主线推进、隐藏路线、采集点。\n2. **敌人与 Boss**：新敌人机制、Boss 打断窗口、队伍配置建议。\n\n### Arcane 与 Liino 承接方式\n\nArcane 是版本旗舰干员，适合做角色页和配队页双入口；Liino 是偏支援定位，适合承接“辅助值得抽吗”“低成本队伍”这类搜索。\n\n建议站内路径：版本专题 -> 角色页 -> 配队/武器 -> AIC 材料需求。\n\n### AIC 工厂系统为什么要单独写\n\nHomecoming 的差异化核心在 AIC。气体物料状态会改变生产链路，让玩家能用更短流程生产部分材料，也会带来更密集的工厂布局需求。\n\n建议独立拆一篇 AIC 入门：\n\n- 气体、液体、固体物料怎么互转。\n- 新机器和新配方优先解锁什么。\n- 新手如何避免管线和物流拥堵。\n- 半周年回流玩家怎样快速补工厂进度。\n\n### 新玩家入口\n\n如果你是 Homecoming 才入坑，优先顺序是：\n\n1. 下载与配置要求。\n2. 新手主线和功能解锁。\n3. Homecoming 早期解锁条件。\n4. Arcane/Liino 试用与抽取建议。\n5. AIC 工厂基础布局。",
+    "contentEn": "## Arknights: Endfield Homecoming Update Hub\n\nHomecoming launches on July 16, 2026 as Endfield's half-year celebration update. It captures three major search intents at once: new story/maps, Arcane and Liino, and the AIC factory expansion.\n\n### Quick Update Summary\n\n- **Launch date**: July 16, 2026.\n- **Update role**: half-year celebration and a major Wuling storyline milestone.\n- **Map expansion**: Yinglung Pass and North Wuling Exclusion Zone.\n- **New operators**: Arcane and Liino.\n- **System update**: AIC factory expansion with gas-state materials, new recipes, machines, and production lines.\n- **Rewards**: login, mail, and event rewards should be surfaced near the top of the version page.\n\n### New Maps and Story\n\nHomecoming continues the Wuling arc with themes of returning home, disaster aftermath, and reclaiming sealed territory. Split map coverage into:\n\n1. **Exploration route**: unlock requirements, main-story path, hidden routes, and gathering points.\n2. **Enemies and boss**: new mechanics, interruption windows, and team suggestions.\n\n### Arcane and Liino Content Path\n\nArcane is the flagship operator and should connect to both character and team pages. Liino is a support-focused operator, making her a good fit for searches like \"is Liino worth pulling\" and \"low-cost Endfield team\".\n\nRecommended path: version hub -> operator page -> team/weapon guide -> AIC material needs.\n\n### Why AIC Needs a Separate Guide\n\nAIC is the differentiator for Homecoming. Gas-state materials can shorten production chains and create denser factory layouts.\n\nA dedicated AIC guide should cover:\n\n- Gas, liquid, and solid material conversion.\n- New machines and recipe unlock priority.\n- How beginners avoid conduit and logistics bottlenecks.\n- How returning players catch up on factory progress.\n\n### New Player Path\n\n1. Download and system requirements.\n2. Beginner story and feature unlocks.\n3. Homecoming early unlock requirements.\n4. Arcane/Liino trials and pull advice.\n5. Basic AIC factory layout.",
+    "tags": [
+      "Homecoming",
+      "7月16日",
+      "半周年",
+      "AIC",
+      "工厂系统",
+      "Arcane",
+      "Liino",
+      "新地图"
+    ],
+    "faq": [
+      {
+        "question": "When does Homecoming launch?",
+        "questionZh": "Homecoming 什么时候上线？",
+        "answer": "Homecoming is scheduled for July 16, 2026 as Endfield's half-year celebration update.",
+        "answerZh": "Homecoming 计划于 2026 年 7 月 16 日上线，是终末地半周年大型更新。"
+      },
+      {
+        "question": "What should returning players check first?",
+        "questionZh": "回流玩家先看什么？",
+        "answer": "Start with the new maps and early unlock requirements, then check Arcane/Liino trials and the AIC factory expansion.",
+        "answerZh": "先看新地图和早期解锁条件，再看 Arcane/Liino 试用与 AIC 工厂扩展。"
+      }
+    ]
+  },
+  {
     "id": "beginner-guide",
     "title": "《明日方舟：终末地》新手入门完全指南",
     "titleEn": "Arknights: Endfield Complete Beginner Guide",

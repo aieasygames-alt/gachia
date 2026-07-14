@@ -405,11 +405,11 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
   },
   nte: {
     eyebrow: { zh: '更新与入坑专题', en: 'Update & onboarding hub', ja: '更新・入門特集' },
-    title: { zh: '异环更新与下载承接', en: 'NTE update and download hub', ja: 'NTE 更新・DL導線' },
+    title: { zh: '异环 Wiki / 官网入口｜下载、入门、兑换码', en: 'NTE wiki / official hub | download, starter guide, codes', ja: 'NTE Wiki / 公式導線｜DL・入門・コード' },
     description: {
-      zh: '把下载、入门、Boss、伤害公式和配装入口一起放进首页，优先承接最常见的问题。',
-      en: 'Put download, onboarding, boss, damage formula, and build pages on the homepage to catch common queries first.',
-      ja: 'DL、入門、ボス、ダメージ計算、ビルドをトップで受け止めます。',
+      zh: '把异环 Wiki、官网入口、下载、入门、Boss、伤害公式和配装入口一起放进首页，优先承接最常见的问题。',
+      en: 'Put the NTE wiki, official hub, download, onboarding, boss, damage formula, and build pages on the homepage to catch common queries first.',
+      ja: 'NTE Wiki、公式導線、DL、入門、ボス、ダメージ計算、ビルドをトップで受け止めます。',
     },
     chips: {
       zh: ['下载安装', '新手入门', 'Boss 攻略', '伤害公式', '弧盘推荐', '兑换码'],
@@ -513,20 +513,32 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           ja: 'まずDLと初心者ガイド、その後にビルドと更新情報を見るのがおすすめです。',
         },
       },
+      {
+        question: {
+          zh: '异环 Wiki 和官网入口先看哪里？',
+          en: 'Where should I start for the NTE wiki and official hub?',
+          ja: 'NTE Wiki と公式導線はどこから見ればいいですか？',
+        },
+        answer: {
+          zh: '先点首页的 Wiki / 官网入口，再继续看下载安装、兑换码和版本专题。',
+          en: 'Start from the wiki / official hub on the homepage, then continue into download/install, codes, and the version hub.',
+          ja: 'まずホームの Wiki / 公式導線を見て、その後にDL、コード、バージョン特集へ進んでください。',
+        },
+      },
     ],
   },
   sea: {
     eyebrow: { zh: '7 月 9 日公测总专题', en: 'July 9 Open Beta Hub', ja: '7月9日CBT特集' },
-    title: { zh: '遗忘之海开服热词入口', en: 'Sea of Remnants launch keywords', ja: '遺忘之海ローンチ特集' },
+    title: { zh: '遗忘之海官网入口｜Wiki、开服攻略、捏脸', en: 'Sea of Remnants official hub | wiki, launch guide, face sculpt', ja: '遺忘之海 公式導線｜Wiki・開服攻略・顔作成' },
     description: {
-      zh: '把公测时间、捏脸、云捏脸、PC配置、第五人格联动和首月福利集中放进首页，先接住最强搜索词。',
-      en: 'Bring the open beta date, face sculpting, cloud sculpting, PC specs, Identity V collab, and launch rewards to the front page.',
-      ja: 'CBT時期、顔作成、クラウド作成、PC環境、第5人格コラボ、初月報酬をトップに集約します。',
+      zh: '把遗忘之海官网入口、Wiki、公测版本中心、开服路线、下载安装、角色图鉴、队伍思路和首月福利集中放进首页，优先接住最强搜索词。',
+      en: 'Bring the Sea of Remnants official hub, wiki, open beta center, launch route, download/install help, character wiki, team ideas, and launch rewards to the front page.',
+      ja: '遺忘之海の公式導線、Wiki、CBT特集、開服ルート、DL、キャラ図鑑、編成案、初月報酬をトップに集約します。',
     },
     chips: {
-      zh: ['7/9 公测', '第五人格联动', '捏脸', '云捏脸', 'PC 配置', '新手入坑'],
-      en: ['July 9 launch', 'Identity V collab', 'Face sculpting', 'Cloud sculpt', 'PC specs', 'Beginner route'],
-      ja: ['7/9CBT', '第五人格コラボ', '顔作成', 'クラウド作成', 'PC環境', '初心者'],
+      zh: ['7/9 公测', '版本中心', '捏脸', '下载安装', '队伍思路', '节奏榜'],
+      en: ['July 9 launch', 'Version center', 'Face sculpting', 'Download/install', 'Team ideas', 'Tier list'],
+      ja: ['7/9CBT', 'バージョン特集', '顔作成', 'DL', '編成案', 'Tier'],
     },
     cta: { zh: '去版本中心', en: 'Open version center', ja: 'バージョン特集へ' },
     tracks: {
@@ -540,19 +552,20 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           ],
         },
         {
-          title: '联动与角色',
-          description: '第五人格、海绵宝宝和船员信息继续往下分流。',
+          title: '安装与配置',
+          description: '把下载安装和设备配置问题继续分流到可执行页面。',
           links: [
-            { href: '/sea/guides/collaborations-guide', label: '联动总表' },
-            { href: '/sea/characters', label: '角色图鉴' },
+            { href: '/sea/guides/download-install-guide', label: '下载安装' },
+            { href: '/sea/guides/platform-download-guide', label: '平台下载' },
           ],
         },
         {
-          title: '新手与开荒',
-          description: '把新手入门、安装和配置要求做成更直接的下一步。',
+          title: '角色与配队',
+          description: '把角色图鉴、节奏榜和队伍思路接到更具体的养成页。',
           links: [
-            { href: '/sea/guides/beginner-guide', label: '新手入门' },
-            { href: '/sea/guides/download-install-guide', label: '下载安装' },
+            { href: '/sea/characters', label: '角色图鉴' },
+            { href: '/sea/guides/tier-list-guide', label: '节奏榜' },
+            { href: '/sea/guides/team-building-guide', label: '队伍思路' },
           ],
         },
       ],
@@ -566,19 +579,20 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           ],
         },
         {
-          title: 'Collabs and crews',
-          description: 'Route Identity V, SpongeBob, and crew queries deeper.',
+          title: 'Install and specs',
+          description: 'Route download and device-setup questions into actionable pages.',
           links: [
-            { href: '/sea/guides/collaborations-guide', label: 'Collab matrix' },
-            { href: '/sea/characters', label: 'Characters' },
+            { href: '/sea/guides/download-install-guide', label: 'Download/install' },
+            { href: '/sea/guides/platform-download-guide', label: 'Platform download' },
           ],
         },
         {
-          title: 'Starter path',
-          description: 'Turn beginner, install, and PC-spec searches into clear next clicks.',
+          title: 'Characters and teams',
+          description: 'Push character, tier, and team searches into deeper build pages.',
           links: [
-            { href: '/sea/guides/beginner-guide', label: 'Beginner guide' },
-            { href: '/sea/guides/download-install-guide', label: 'Download/install' },
+            { href: '/sea/characters', label: 'Characters' },
+            { href: '/sea/guides/tier-list-guide', label: 'Tier list' },
+            { href: '/sea/guides/team-building-guide', label: 'Team building' },
           ],
         },
       ],
@@ -592,19 +606,20 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           ],
         },
         {
-          title: 'コラボと船員',
-          description: '第五人格、スポンジボブ、船員情報へつなげます。',
+          title: 'DLと環境',
+          description: 'DLと端末環境の検索を実用ページへつなげます。',
           links: [
-            { href: '/sea/guides/collaborations-guide', label: 'コラボ一覧' },
-            { href: '/sea/characters', label: 'キャラ図鑑' },
+            { href: '/sea/guides/download-install-guide', label: 'DLとインストール' },
+            { href: '/sea/guides/platform-download-guide', label: 'プラットフォームDL' },
           ],
         },
         {
-          title: '入門ルート',
-          description: '初心者ガイド、DL、PC環境を次のページへ送ります。',
+          title: 'キャラと編成',
+          description: 'キャラ図鑑、Tier、編成案へつなげます。',
           links: [
-            { href: '/sea/guides/beginner-guide', label: '初心者ガイド' },
-            { href: '/sea/guides/download-install-guide', label: 'DLと環境' },
+            { href: '/sea/characters', label: 'キャラ図鑑' },
+            { href: '/sea/guides/tier-list-guide', label: 'Tier' },
+            { href: '/sea/guides/team-building-guide', label: '編成案' },
           ],
         },
       ],
@@ -617,9 +632,21 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           ja: '遺忘之海で最初に見るべきものは？',
         },
         answer: {
-          zh: '先看公测版本中心，再看联动总表和新手入门，能最快接住最新热词。',
-          en: 'Start with the open beta version center, then the collab matrix and beginner guide.',
-          ja: 'まずCBT特集、次にコラボ一覧と初心者ガイドを見るのが最短です。',
+          zh: '先看公测版本中心，再看开服攻略、下载安装和队伍思路，能最快接住最新热词。',
+          en: 'Start with the open beta version center, then launch guide, download/install, and team-building pages.',
+          ja: 'まずCBT特集、次に開服攻略、DL、編成案を見るのが最短です。',
+        },
+      },
+      {
+        question: {
+          zh: '遗忘之海官网入口和 Wiki 应该先看哪？',
+          en: 'Where should I start for the Sea of Remnants official hub and wiki?',
+          ja: '遺忘之海の公式導線とWikiはどこから見ればいいですか？',
+        },
+        answer: {
+          zh: '先从首页的版本中心入口进入，再往下看开服攻略、下载安装、角色图鉴和节奏榜。',
+          en: 'Start from the version center on the homepage, then move into launch guides, download/install, characters, and tier list pages.',
+          ja: 'まずホームのバージョン特集から入り、その後に開服攻略、DL、キャラ図鑑、Tierへ進んでください。',
         },
       },
     ],
@@ -1367,11 +1394,20 @@ export default async function GameHome({
                     <Link href={`/${gameId}/guides/open-beta-version-center` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
                       {locale === 'zh' ? '公测版本中心' : locale === 'ja' ? 'CBT特集' : 'Open Beta Center'}
                     </Link>
-                    <Link href={`/${gameId}/guides/collaborations-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
-                      {locale === 'zh' ? '联动总表' : locale === 'ja' ? 'コラボ一覧' : 'Collab Matrix'}
+                    <Link href={`/${gameId}/guides/launch-day-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '开服攻略' : locale === 'ja' ? '開服攻略' : 'Launch guide'}
                     </Link>
-                    <Link href={`/${gameId}/guides/beginner-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
-                      {locale === 'zh' ? '新手入门' : locale === 'ja' ? '初心者ガイド' : 'Beginner Guide'}
+                    <Link href={`/${gameId}/guides/download-install-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '下载安装' : locale === 'ja' ? 'DLとインストール' : 'Download/install'}
+                    </Link>
+                    <Link href={`/${gameId}/guides/tier-list-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '节奏榜' : locale === 'ja' ? 'Tier' : 'Tier list'}
+                    </Link>
+                    <Link href={`/${gameId}/guides/team-building-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '队伍思路' : locale === 'ja' ? '編成案' : 'Team building'}
+                    </Link>
+                    <Link href={`/${gameId}/characters` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '角色图鉴' : locale === 'ja' ? 'キャラ図鑑' : 'Characters'}
                     </Link>
                   </>
                 )}

@@ -91,20 +91,20 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
   starrail: {
     title: { zh: '4.4 版本专题', en: 'v4.4 Version Hub', ja: 'v4.4 バージョン特集' },
     description: {
-      zh: '聚焦 4.4 前瞻、Fate 联动、芬达联名、4.3 资源规划、卡池节奏与后续活动节点。',
-      en: 'Focus on the v4.4 preview, Fate collab, Fanta collaboration, v4.3 resource planning, banner rhythm, and upcoming event timing.',
-      ja: 'v4.4前瞻、Fateコラボ、ファンタ連動、v4.3の資源管理、バナー節奏、今後のイベントを整理します。',
+      zh: '聚焦 7 月 15 日 4.4 上线、Himeko Nova、Fate 联动、兑换码、星琼与卡池规划。',
+      en: 'Focus on the July 15 v4.4 launch, Himeko Nova, Fate collab, redeem codes, Stellar Jade, and banner planning.',
+      ja: '7月15日のv4.4、Himeko Nova、Fateコラボ、交換コード、星玉とバナー計画を整理します。',
     },
     highlights: {
-      zh: ['4.4 前瞻', 'Fate 联动', '芬达联名', '4.3 星琼规划'],
-      en: ['v4.4 preview', 'Fate collab', 'Fanta collab', 'v4.3 jade planning'],
-      ja: ['v4.4前瞻', 'Fateコラボ', 'ファンタ連動', '星玉計画'],
+      zh: ['4.4 上线', 'Himeko Nova', 'Fate 联动', '星琼规划'],
+      en: ['v4.4 launch', 'Himeko Nova', 'Fate collab', 'Jade planning'],
+      ja: ['v4.4開始', 'Himeko Nova', 'Fateコラボ', '星玉計画'],
     },
     kicker: { zh: '版本卡池', en: 'Banner watch', ja: 'バナー確認' },
     freshness: {
-      zh: '围绕前瞻、联动、卡池规划与资源管理持续补充最新入口。',
-      en: 'Kept fresh with preview coverage, collab notes, banner planning, and resource-management angles.',
-      ja: '前瞻、コラボ、バナー計画、資源管理の入口を継続更新しています。',
+      zh: '已从前瞻口径切换为上线专题，持续承接联动、角色、兑换码与抽卡规划。',
+      en: 'Updated from preview framing to launch coverage for collab, character, code, and pull-planning intent.',
+      ja: '前瞻からローンチ特集に切り替え、コラボ、キャラ、コード、ガチャ計画を承接します。',
     },
     faq: [
       {
@@ -114,9 +114,9 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
           ja: 'v4.4特集では最初に何を見ればいいですか？',
         },
         answer: {
-          zh: '建议先看 4.4 前瞻和 4.3 资源规划，再根据自己的抽卡目标决定是否关注 Fate 与芬达联名。',
-          en: 'Start with the v4.4 preview and v4.3 resource planning, then check the Fate and Fanta collabs if they fit your pull goals.',
-          ja: 'まずv4.4前瞻とv4.3資源計画を確認し、その後にFateとファンタ連動をチェックするのがおすすめです。',
+          zh: '先看 4.4 上线专题和 Himeko Nova/Fate 联动说明，再检查兑换码和星琼缺口。',
+          en: 'Start with the v4.4 launch guide and Himeko Nova/Fate notes, then check codes and Jade gaps.',
+          ja: 'まずv4.4ローンチ特集とHimeko Nova/Fate情報を確認し、コードと星玉不足を見てください。',
         },
       },
       {
@@ -135,22 +135,22 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
     guideIds: ['v4-4-preview-guide', 'v4-3-version-guide', 'fate-collab-guide'],
   },
   wuwa: {
-    title: { zh: '版本与入坑专题', en: 'Version & Start Hub', ja: 'バージョン・入門特集' },
+    title: { zh: '3.5 版本与入坑专题', en: 'v3.5 Version & Start Hub', ja: 'v3.5 バージョン・入門特集' },
     description: {
-      zh: '围绕最新版本节点、战斗系统、声骸体系和新手路线，帮助玩家快速入门。',
-      en: 'A practical hub for the latest version node, combat system, echo build basics, and starter routes.',
-      ja: '最新バージョン、戦闘システム、エコー基礎、入門ルートをまとめた実用ハブです。',
+      zh: '围绕 7 月 10 日 3.5 上线、Yangyang: Xuanling、Suisui、Xbox/Game Pass 与 SP 机制入坑。',
+      en: 'A practical hub for the July 10 v3.5 launch, Yangyang: Xuanling, Suisui, Xbox/Game Pass, and SP mechanics.',
+      ja: '7月10日のv3.5、Yangyang: Xuanling、Suisui、Xbox/Game Pass、SP機構をまとめます。',
     },
     highlights: {
-      zh: ['最新版本节点', '战斗系统', '声骸搭配', '新手入坑'],
-      en: ['Version node', 'Combat system', 'Echo setup', 'Starter guide'],
-      ja: ['最新ノード', '戦闘システム', 'エコー構成', '入門'],
+      zh: ['3.5 上线', 'Yangyang: Xuanling', 'Suisui', 'Xbox/Game Pass'],
+      en: ['v3.5 launch', 'Yangyang: Xuanling', 'Suisui', 'Xbox/Game Pass'],
+      ja: ['v3.5開始', 'Yangyang: Xuanling', 'Suisui', 'Xbox/Game Pass'],
     },
     kicker: { zh: '承接更新', en: 'Update anchor', ja: '更新軸' },
     freshness: {
-      zh: '版本更新、声骸搭配、新手路线和活动节点会持续同步。',
-      en: 'Version updates, echo builds, starter routes, and event timing are kept in sync here.',
-      ja: 'バージョン更新、エコー構成、入門導線、イベント時期を継続同期しています。',
+      zh: '3.5 角色、SP 机制、Xbox/Game Pass 新玩家入口和声骸路线会持续同步。',
+      en: 'v3.5 characters, SP mechanics, Xbox/Game Pass onboarding, and Echo routes stay in sync here.',
+      ja: 'v3.5キャラ、SP機構、Xbox/Game Pass入門、エコー導線を継続同期します。',
     },
     faq: [
       {
@@ -160,9 +160,9 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
           ja: '新バージョン後にまず何を見ればいいですか？',
         },
         answer: {
-          zh: '先看版本节点和新手入口，再继续看战斗系统、声骸搭配和活动信息。',
-          en: 'Check the version node and starter path first, then move to combat, echo setup, and event info.',
-          ja: 'まずバージョン情報と入門導線を見て、その後に戦闘、エコー構成、イベント情報を確認してください。',
+          zh: '先看 3.5 专题确认 Yangyang: Xuanling、Suisui 和活动，再根据平台进入 Xbox/Game Pass 入坑路线。',
+          en: 'Check the v3.5 guide for Yangyang: Xuanling, Suisui, and events, then use the Xbox/Game Pass starter path if needed.',
+          ja: 'まずv3.5特集でYangyang: Xuanling、Suisui、イベントを確認し、必要ならXbox/Game Pass入門へ進んでください。',
         },
       },
       {
@@ -181,22 +181,22 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
     guideIds: ['v3-4-version-guide', 'v3-5-preview-guide', 'roya-frostlands-guide'],
   },
   nte: {
-    title: { zh: '更新与下载专题', en: 'Update & Download Hub', ja: '更新・DL特集' },
+    title: { zh: '1.2「999 Nights」专题', en: 'v1.2 999 Nights Hub', ja: 'v1.2 999 Nights 特集' },
     description: {
-      zh: '围绕下载、入门、抽卡、版本更新和玩法入口，提供异环当前阶段的快速入口。',
-      en: 'A concise hub for downloads, onboarding, gacha planning, version updates, and gameplay entry points.',
-      ja: 'DL、入門、ガチャ計画、更新情報、導线をまとめています。',
+      zh: '围绕 1.2「999 Nights」、Shinku、Iroi、兑换码、下载入口和抽卡机制承接当前搜索。',
+      en: 'A concise hub for v1.2 999 Nights, Shinku, Iroi, redeem codes, downloads, and gacha planning.',
+      ja: 'v1.2「999 Nights」、Shinku、Iroi、交換コード、DL、ガチャ計画をまとめます。',
     },
     highlights: {
-      zh: ['下载安装', '新手入门', '抽卡策略', '版本更新'],
-      en: ['Download/install', 'Beginner guide', 'Gacha strategy', 'Version updates'],
-      ja: ['DL/インストール', '初心者ガイド', 'ガチャ戦略', '更新情報'],
+      zh: ['999 Nights', 'Shinku', 'Iroi', '兑换码'],
+      en: ['999 Nights', 'Shinku', 'Iroi', 'Redeem codes'],
+      ja: ['999 Nights', 'Shinku', 'Iroi', '交換コード'],
     },
     kicker: { zh: '入坑入口', en: 'Starter hub', ja: '入門ハブ' },
     freshness: {
-      zh: '围绕下载、抽卡策略、新手入门和版本更新持续整理。',
-      en: 'Kept current with download, gacha, beginner-entry, and version-update coverage.',
-      ja: 'DL、ガチャ戦略、初心者導線、更新情報を継続整理しています。',
+      zh: '1.2 版本、Shinku/Iroi 抽取、兑换码和下载入口会持续整理。',
+      en: 'Kept current with v1.2 coverage, Shinku/Iroi pull planning, codes, and download entry points.',
+      ja: 'v1.2、Shinku/Iroiガチャ、コード、DL入口を継続整理します。',
     },
     faq: [
       {
@@ -206,9 +206,9 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
           ja: 'NTEで今よく聞かれる内容は何ですか？',
         },
         answer: {
-          zh: '下载、安装、抽卡策略和新手入门是最常见的搜索主题。',
-          en: 'Download, install, gacha strategy, and beginner onboarding are the most common topics.',
-          ja: 'DL、インストール、ガチャ戦略、初心者入門が最も多い検索テーマです。',
+          zh: '1.2「999 Nights」、Shinku、Iroi、兑换码、下载和抽卡机制是当前最常见主题。',
+          en: 'v1.2 999 Nights, Shinku, Iroi, redeem codes, downloads, and gacha mechanics are the most common topics.',
+          ja: 'v1.2「999 Nights」、Shinku、Iroi、交換コード、DL、ガチャ機構が主なテーマです。',
         },
       },
       {
@@ -224,7 +224,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['download-install-guide', 'beginner-guide', 'gacha-strategy'],
+    guideIds: ['v1-2-999-nights-guide', 'download-install-guide', 'gacha-strategy'],
   },
   zzz: {
     title: { zh: '3.0 版本专题', en: 'v3.0 Version Hub', ja: 'v3.0 バージョン特集' },
@@ -365,68 +365,68 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
     guideIds: ['download-install-guide', 'combat-system-guide', 'crisis-contract-guide'],
   },
   endfield: {
-    title: { zh: '测试与入门专题', en: 'Test & Starter Hub', ja: 'テスト・入門特集' },
+    title: { zh: 'Homecoming 半周年专题', en: 'Homecoming Half-Year Hub', ja: 'Homecoming 半周年特集' },
     description: {
-      zh: '围绕终末地的测试节点、下载、战斗和基地建设信息，提供一页式承接。',
-      en: 'A one-page hub for Endfield test timing, downloads, combat, and base building.',
-      ja: 'テスト時期、DL、戦闘、基地建設を一望できるハブです。',
+      zh: '围绕 7 月 16 日 Homecoming、新地图、Arcane/Liino、新 AIC 工厂与回流入坑承接。',
+      en: 'A one-page hub for the July 16 Homecoming update, new maps, Arcane/Liino, AIC factory expansion, and returning players.',
+      ja: '7月16日のHomecoming、新マップ、Arcane/Liino、AIC拡張、復帰導線をまとめます。',
     },
     highlights: {
-      zh: ['测试节点', '下载安装', '战斗系统', '基地建设'],
-      en: ['Test timing', 'Download/install', 'Combat system', 'Base building'],
-      ja: ['テスト時期', 'DL/インストール', '戦闘システム', '基地建設'],
+      zh: ['7/16 Homecoming', '新地图', 'Arcane/Liino', 'AIC 工厂'],
+      en: ['July 16 Homecoming', 'New maps', 'Arcane/Liino', 'AIC factory'],
+      ja: ['7/16 Homecoming', '新マップ', 'Arcane/Liino', 'AIC工場'],
     },
-    kicker: { zh: '测试承接', en: 'Test anchor', ja: 'テスト軸' },
+    kicker: { zh: '半周年承接', en: 'Half-year anchor', ja: '半周年軸' },
     freshness: {
-      zh: '测试节点、下载安装和基地建设内容会持续补充。',
-      en: 'Test timing, installs, and base-building coverage are kept current.',
-      ja: 'テスト時期、DL、基地建設の情報を継続更新しています。',
+      zh: 'Homecoming、新地图、新干员、AIC 工厂和庆典奖励会持续补充。',
+      en: 'Homecoming, new maps, operators, AIC factory, and celebration rewards are kept current.',
+      ja: 'Homecoming、新マップ、新オペレーター、AIC工場、報酬を継続更新します。',
     },
     faq: [
       {
         question: {
-          zh: '终末地先看什么最实用？',
-          en: 'What is the most practical starting point for Endfield?',
-          ja: 'Endfieldで最初に見ると実用的なものは？',
+          zh: 'Homecoming 先看什么最实用？',
+          en: 'What should I read first for Homecoming?',
+          ja: 'Homecomingで最初に見るべきものは？',
         },
         answer: {
-          zh: '优先看测试节点、下载安装，再看战斗和基地建设。',
-          en: 'Start with test timing and download/install, then move to combat and base building.',
-          ja: 'まずテスト時期とDL、次に戦闘と基地建設を確認してください。',
+          zh: '优先看 Homecoming 专题确认 7 月 16 日更新、新地图、Arcane/Liino 和 AIC 工厂变化。',
+          en: 'Start with the Homecoming guide for the July 16 update, new maps, Arcane/Liino, and AIC factory changes.',
+          ja: 'まずHomecoming特集で7月16日更新、新マップ、Arcane/Liino、AIC工場の変更を確認してください。',
         },
       },
       {
         question: {
-          zh: '我只想知道这游戏有没有测试消息？',
-          en: 'I just want the test news. Where should I look?',
-          ja: 'テスト情報だけ知りたい場合は？',
+          zh: '回流玩家先补哪一块？',
+          en: 'What should returning players catch up on first?',
+          ja: '復帰プレイヤーは何から確認すべきですか？',
         },
         answer: {
-          zh: '直接看版本专题首屏和测试相关攻略就能快速确认。',
-          en: 'Check the version hub hero and the test-related guides for the latest status.',
-          ja: 'バージョン特集の冒頭とテスト関連ガイドを見ればすぐ分かります。',
+          zh: '先补新地图解锁与 AIC 工厂，再看 Arcane/Liino 试用、抽取和队伍需求。',
+          en: 'Catch up on map unlocks and the AIC factory first, then review Arcane/Liino trials, pulls, and team needs.',
+          ja: 'まず新マップ解放とAIC工場を確認し、その後Arcane/Liinoの試用、ガチャ、編成需要を見てください。',
         },
       },
     ],
-    guideIds: ['beginner-guide', 'download-install-guide', 'combat-system-guide'],
+    guideIds: ['homecoming-update-guide', 'beginner-guide', 'download-install-guide'],
   },
   sea: {
     title: { zh: '7 月 9 日公测专题', en: 'July 9 Open Beta Hub', ja: '7月9日CBT特集' },
     description: {
-      zh: '聚焦公测时间、第五人格联动、海绵宝宝、木偶捏脸与首月开服信息。',
-      en: 'Focus on the open beta date, Identity V collab, SpongeBob, face sculpting, and launch basics.',
-      ja: 'CBT日程、第五人格コラボ、スポンジボブ、顔作成、初月情報を整理します。',
+      zh: '聚焦公测时间、版本中心、下载安装、角色图鉴、队伍思路、节奏榜与首月开服信息。',
+      en: 'Focus on the open beta date, version center, download/install, character wiki, team building, tier list, and launch basics.',
+      ja: 'CBT日程、バージョン特集、DL、キャラ図鑑、編成案、Tier、初月情報を整理します。',
     },
     highlights: {
-      zh: ['7/9 公测', '第五人格联动', '海绵宝宝', '木偶捏脸'],
-      en: ['July 9 open beta', 'Identity V collab', 'SpongeBob', 'Face sculpting'],
-      ja: ['7/9CBT', '第五人格コラボ', 'スポンジボブ', '顔作成'],
+      zh: ['7/9 公测', '版本中心', '下载安装', '队伍思路'],
+      en: ['July 9 open beta', 'Version center', 'Download/install', 'Team building'],
+      ja: ['7/9CBT', 'バージョン特集', 'DL', '編成案'],
     },
     kicker: { zh: '开服抢词', en: 'Launch capture', ja: '開服対策' },
     freshness: {
-      zh: '围绕公测、联动和开服玩法持续整理。',
-      en: 'Open beta, collaboration, and launch-play topics are refreshed here.',
-      ja: 'CBT、コラボ、開服コンテンツを継続整理しています。',
+      zh: '围绕公测、版本中心、开服玩法和养成路线持续整理。',
+      en: 'Open beta, version center, launch-play, and build-route topics are refreshed here.',
+      ja: 'CBT、バージョン特集、開服コンテンツ、育成導線を継続整理しています。',
     },
     faq: [
       {
@@ -436,9 +436,9 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
           ja: 'Sea関連で今よく検索されるものは？',
         },
         answer: {
-          zh: '公测时间、联动内容、木偶捏脸和首月开服玩法最常被搜索。',
-          en: 'The open beta date, collabs, face sculpting, and launch basics are the biggest search topics.',
-          ja: 'CBT日程、コラボ、顔作成、初月の遊び方が主な検索テーマです。',
+          zh: '公测时间、版本中心、下载安装、角色图鉴、队伍思路和首月开服玩法最常被搜索。',
+          en: 'The open beta date, version center, download/install, character wiki, team building, and launch basics are the biggest search topics.',
+          ja: 'CBT日程、バージョン特集、DL、キャラ図鑑、編成案、初月の遊び方が主な検索テーマです。',
         },
       },
       {
@@ -448,13 +448,13 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
           ja: 'コラボと入門ルートはどこで見られますか？',
         },
         answer: {
-          zh: '先看联动专题，再打开公测版本中心和入门攻略。',
-          en: 'Start with the collaboration page, then open the open beta hub and starter guides.',
-          ja: 'まずコラボ特集、次にCBT特集と入門攻略を見てください。',
+          zh: '先看公测版本中心，再打开开服攻略、下载安装和队伍思路。',
+          en: 'Start with the open beta hub, then open the launch guide, download/install, and team-building pages.',
+          ja: 'まずCBT特集、次に開服攻略、DL、編成案を見てください。',
         },
       },
     ],
-    guideIds: ['launch-day-guide', 'collaborations-guide', 'open-beta-version-center'],
+    guideIds: ['open-beta-version-center', 'launch-day-guide', 'download-install-guide', 'tier-list-guide'],
   },
   skjh: {
     title: { zh: '7 月 9 日上线专题', en: 'July 9 Launch Hub', ja: '7月9日ローンチ特集' },
@@ -813,6 +813,116 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
         links: [
           { href: '/endfield/version', label: { zh: '版本专题', en: 'Version hub', ja: 'バージョン特集' } },
           { href: '/endfield/guides/crisis-contract-guide', label: { zh: '机制攻略', en: 'Mechanics guide', ja: '機構攻略' } },
+        ],
+      },
+    ],
+  },
+  sea: {
+    zh: [
+      {
+        title: { zh: '公测节点', en: 'Open Beta', ja: 'CBT' },
+        description: { zh: '先把 7 月 9 日公测和首月节奏接住。', en: 'Catch the July 9 beta timing and month-one momentum first.', ja: '7月9日CBTと初月の流れを先に押さえます。' },
+        links: [
+          { href: '/sea/guides/open-beta-version-center', label: { zh: '公测版本中心', en: 'Open Beta Center', ja: 'CBT特集' } },
+          { href: '/sea/guides/launch-day-guide', label: { zh: '开服攻略', en: 'Launch guide', ja: '開服攻略' } },
+        ],
+      },
+      {
+        title: { zh: '安装与入门', en: 'Install & onboarding', ja: 'DL・入門' },
+        description: { zh: '下载安装、平台支持和开服准备一并整理。', en: 'Group download/install, platform support, and launch prep together.', ja: 'DL、対応プラットフォーム、開服準備をまとめます。' },
+        links: [
+          { href: '/sea/guides/download-install-guide', label: { zh: '下载安装', en: 'Download/install', ja: 'DLとインストール' } },
+          { href: '/sea/guides/platform-download-guide', label: { zh: '平台下载', en: 'Platform download', ja: 'プラットフォームDL' } },
+        ],
+      },
+      {
+        title: { zh: '养成与配队', en: 'Builds & teams', ja: '育成・編成' },
+        description: { zh: '把角色、队伍和节奏榜做成下一跳。', en: 'Turn character, team, and tier questions into the next click.', ja: 'キャラ、編成、Tierの質問を次の導線に変えます。' },
+        links: [
+          { href: '/sea/characters', label: { zh: '角色图鉴', en: 'Character wiki', ja: 'キャラ図鑑' } },
+          { href: '/sea/guides/tier-list-guide', label: { zh: '节奏榜', en: 'Tier list', ja: 'Tier' } },
+          { href: '/sea/guides/team-building-guide', label: { zh: '队伍思路', en: 'Team building', ja: '編成案' } },
+        ],
+      },
+      {
+        title: { zh: '机制与抽卡', en: 'Combat & gacha', ja: '戦闘・ガチャ' },
+        description: { zh: '战斗系统、抽卡和 BOSS 路线继续下沉。', en: 'Push combat system, gacha, and boss-route questions deeper.', ja: '戦闘、ガチャ、ボス導線へつなげます。' },
+        links: [
+          { href: '/sea/guides/combat-system-guide', label: { zh: '战斗系统', en: 'Combat system', ja: '戦闘システム' } },
+          { href: '/sea/guides/gacha-recruitment-guide', label: { zh: '抽卡指南', en: 'Gacha guide', ja: 'ガチャ解説' } },
+          { href: '/sea/guides/launch-boss-map-guide', label: { zh: 'BOSS 路线', en: 'Boss routes', ja: 'ボスルート' } },
+        ],
+      },
+    ],
+    en: [
+      {
+        title: { zh: 'Open Beta', en: 'Open Beta', ja: 'CBT' },
+        description: { zh: '先把 7 月 9 日公测和首月节奏接住。', en: 'Catch the July 9 beta timing and month-one momentum first.', ja: '7月9日CBTと初月の流れを先に押さえます。' },
+        links: [
+          { href: '/sea/guides/open-beta-version-center', label: { zh: '公测版本中心', en: 'Open Beta Center', ja: 'CBT特集' } },
+          { href: '/sea/guides/launch-day-guide', label: { zh: '开服攻略', en: 'Launch guide', ja: '開服攻略' } },
+        ],
+      },
+      {
+        title: { zh: 'Install & onboarding', en: 'Install & onboarding', ja: 'DL・入門' },
+        description: { zh: '下载安装、平台支持和开服准备一并整理。', en: 'Group download/install, platform support, and launch prep together.', ja: 'DL、対応プラットフォーム、開服準備をまとめます。' },
+        links: [
+          { href: '/sea/guides/download-install-guide', label: { zh: '下载安装', en: 'Download/install', ja: 'DLとインストール' } },
+          { href: '/sea/guides/platform-download-guide', label: { zh: '平台下载', en: 'Platform download', ja: 'プラットフォームDL' } },
+        ],
+      },
+      {
+        title: { zh: 'Builds & teams', en: 'Builds & teams', ja: '育成・編成' },
+        description: { zh: '把角色、队伍和节奏榜做成下一跳。', en: 'Turn character, team, and tier questions into the next click.', ja: 'キャラ、編成、Tierの質問を次の導線に変えます。' },
+        links: [
+          { href: '/sea/characters', label: { zh: '角色图鉴', en: 'Character wiki', ja: 'キャラ図鑑' } },
+          { href: '/sea/guides/tier-list-guide', label: { zh: '节奏榜', en: 'Tier list', ja: 'Tier' } },
+          { href: '/sea/guides/team-building-guide', label: { zh: '队伍思路', en: 'Team building', ja: '編成案' } },
+        ],
+      },
+      {
+        title: { zh: 'Combat & gacha', en: 'Combat & gacha', ja: '戦闘・ガチャ' },
+        description: { zh: '战斗系统、抽卡和 BOSS 路线继续下沉。', en: 'Push combat system, gacha, and boss-route questions deeper.', ja: '戦闘、ガチャ、ボス導線へつなげます。' },
+        links: [
+          { href: '/sea/guides/combat-system-guide', label: { zh: '战斗系统', en: 'Combat system', ja: '戦闘システム' } },
+          { href: '/sea/guides/gacha-recruitment-guide', label: { zh: '抽卡指南', en: 'Gacha guide', ja: 'ガチャ解説' } },
+          { href: '/sea/guides/launch-boss-map-guide', label: { zh: 'BOSS 路线', en: 'Boss routes', ja: 'ボスルート' } },
+        ],
+      },
+    ],
+    ja: [
+      {
+        title: { zh: 'Open Beta', en: 'Open Beta', ja: 'CBT' },
+        description: { zh: '先把 7 月 9 日公测和首月节奏接住。', en: 'Catch the July 9 beta timing and month-one momentum first.', ja: '7月9日CBTと初月の流れを先に押さえます。' },
+        links: [
+          { href: '/sea/guides/open-beta-version-center', label: { zh: '公测版本中心', en: 'Open Beta Center', ja: 'CBT特集' } },
+          { href: '/sea/guides/launch-day-guide', label: { zh: '开服攻略', en: 'Launch guide', ja: '開服攻略' } },
+        ],
+      },
+      {
+        title: { zh: 'DL・入門', en: 'DL & onboarding', ja: 'DL・入門' },
+        description: { zh: 'DLと対応プラットフォーム、開服準備をまとめます。', en: 'Group download/install, platform support, and launch prep together.', ja: 'DL、対応プラットフォーム、開服準備をまとめます。' },
+        links: [
+          { href: '/sea/guides/download-install-guide', label: { zh: '下载安装', en: 'Download/install', ja: 'DLとインストール' } },
+          { href: '/sea/guides/platform-download-guide', label: { zh: '平台下载', en: 'Platform download', ja: 'プラットフォームDL' } },
+        ],
+      },
+      {
+        title: { zh: '育成・編成', en: 'Builds & teams', ja: '育成・編成' },
+        description: { zh: '把角色、队伍和节奏榜做成下一跳。', en: 'Turn character, team, and tier questions into the next click.', ja: 'キャラ、編成、Tierの質問を次の導線に変えます。' },
+        links: [
+          { href: '/sea/characters', label: { zh: '角色图鉴', en: 'Character wiki', ja: 'キャラ図鑑' } },
+          { href: '/sea/guides/tier-list-guide', label: { zh: '节奏榜', en: 'Tier list', ja: 'Tier' } },
+          { href: '/sea/guides/team-building-guide', label: { zh: '队伍思路', en: 'Team building', ja: '編成案' } },
+        ],
+      },
+      {
+        title: { zh: '戦闘・ガチャ', en: 'Combat & gacha', ja: '戦闘・ガチャ' },
+        description: { zh: '戦闘、ガチャ、ボス導線へつなげます。', en: 'Push combat system, gacha, and boss-route questions deeper.', ja: '戦闘、ガチャ、ボス導線へつなげます。' },
+        links: [
+          { href: '/sea/guides/combat-system-guide', label: { zh: '战斗系统', en: 'Combat system', ja: '戦闘システム' } },
+          { href: '/sea/guides/gacha-recruitment-guide', label: { zh: '抽卡指南', en: 'Gacha guide', ja: 'ガチャ解説' } },
+          { href: '/sea/guides/launch-boss-map-guide', label: { zh: 'BOSS 路线', en: 'Boss routes', ja: 'ボスルート' } },
         ],
       },
     ],
@@ -1337,110 +1447,6 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
     ],
   },
-  sea: {
-    zh: [
-      {
-        title: { zh: '角色', en: 'Characters', ja: 'キャラ' },
-        description: { zh: '开服专题之后，先看角色和队伍怎么接。', en: 'After launch info, look at character roles and party planning.', ja: 'ローンチ情報の後は、役割と編成を見ていきます。' },
-        links: [
-          { href: '/sea/characters', label: { zh: '角色图鉴', en: 'Character wiki', ja: 'キャラ図鑑' } },
-          { href: '/sea/guides/beginner-guide', label: { zh: '新手入门', en: 'Beginner guide', ja: '初心者ガイド' } },
-        ],
-      },
-      {
-        title: { zh: '资源', en: 'Resources', ja: '資源' },
-        description: { zh: '材料、道具和兑换码适合做成一条承接线。', en: 'Materials, items, and redeem codes work well as one resource lane.', ja: '素材、アイテム、交換コードを1本の導线にまとめます。' },
-        links: [
-          { href: '/sea/items', label: { zh: '材料道具', en: 'Items', ja: 'アイテム' } },
-          { href: '/sea/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
-        ],
-      },
-      {
-        title: { zh: '工具', en: 'Tools', ja: 'ツール' },
-        description: { zh: '版本相关的查询可以继续往版本中心接。', en: 'Route version-related queries into the open beta center.', ja: 'バージョン関連の問い合わせはCBT特集へ。' },
-        links: [
-          { href: '/sea/version', label: { zh: '版本中心', en: 'Version center', ja: 'バージョン特集' } },
-          { href: '/sea/guides/open-beta-version-center', label: { zh: '公测专题', en: 'Open Beta Center', ja: 'CBT特集' } },
-        ],
-      },
-      {
-        title: { zh: '机制', en: 'Mechanics', ja: '機構' },
-        description: { zh: '联动、入坑和开服攻略继续接住搜索。', en: 'Continue into collabs, starter routes, and launch guides.', ja: 'コラボ、入門ルート、ローンチ攻略へ進めます。' },
-        links: [
-          { href: '/sea/guides', label: { zh: '攻略专题', en: 'Guides', ja: '攻略' } },
-          { href: '/sea/guides/collaborations-guide', label: { zh: '联动专题', en: 'Collabs', ja: 'コラボ' } },
-        ],
-      },
-    ],
-    en: [
-      {
-        title: { zh: '角色', en: 'Characters', ja: 'キャラ' },
-        description: { zh: '开服专题之后，先看角色和队伍怎么接。', en: 'After launch info, look at character roles and party planning.', ja: 'ローンチ情報の後は、役割と編成を見ていきます。' },
-        links: [
-          { href: '/sea/characters', label: { zh: '角色图鉴', en: 'Character wiki', ja: 'キャラ図鑑' } },
-          { href: '/sea/teams', label: { zh: '队伍思路', en: 'Team ideas', ja: '編成案' } },
-        ],
-      },
-      {
-        title: { zh: '资源', en: 'Resources', ja: '資源' },
-        description: { zh: '材料、道具和兑换码适合做成一条承接线。', en: 'Materials, items, and redeem codes work well as one resource lane.', ja: '素材、アイテム、交換コードを1本の導线にまとめます。' },
-        links: [
-          { href: '/sea/items', label: { zh: '材料道具', en: 'Items', ja: 'アイテム' } },
-          { href: '/sea/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
-        ],
-      },
-      {
-        title: { zh: '工具', en: 'Tools', ja: 'ツール' },
-        description: { zh: '版本相关的查询可以继续往版本中心接。', en: 'Route version-related queries into the open beta center.', ja: 'バージョン関連の問い合わせはCBT特集へ。' },
-        links: [
-          { href: '/sea/version', label: { zh: '版本中心', en: 'Version center', ja: 'バージョン特集' } },
-          { href: '/sea/guides/open-beta-version-center', label: { zh: '公测专题', en: 'Open Beta Center', ja: 'CBT特集' } },
-        ],
-      },
-      {
-        title: { zh: '机制', en: 'Mechanics', ja: '機構' },
-        description: { zh: '联动、入坑和开服攻略继续接住搜索。', en: 'Continue into collabs, starter routes, and launch guides.', ja: 'コラボ、入門ルート、ローンチ攻略へ進めます。' },
-        links: [
-          { href: '/sea/guides', label: { zh: '攻略专题', en: 'Guides', ja: '攻略' } },
-          { href: '/sea/guides/collaborations-guide', label: { zh: '联动专题', en: 'Collabs', ja: 'コラボ' } },
-        ],
-      },
-    ],
-    ja: [
-      {
-        title: { zh: '角色', en: 'Characters', ja: 'キャラ' },
-        description: { zh: '开服专题之后，先看角色和队伍怎么接。', en: 'After launch info, look at character roles and party planning.', ja: 'ローンチ情報の後は、役割と編成を見ていきます。' },
-        links: [
-          { href: '/sea/characters', label: { zh: '角色图鉴', en: 'Character wiki', ja: 'キャラ図鑑' } },
-          { href: '/sea/teams', label: { zh: '队伍思路', en: 'Team ideas', ja: '編成案' } },
-        ],
-      },
-      {
-        title: { zh: '资源', en: 'Resources', ja: '資源' },
-        description: { zh: '材料、道具和兑换码适合做成一条承接线。', en: 'Materials, items, and redeem codes work well as one resource lane.', ja: '素材、アイテム、交換コードを1本の導线にまとめます。' },
-        links: [
-          { href: '/sea/items', label: { zh: '材料道具', en: 'Items', ja: 'アイテム' } },
-          { href: '/sea/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
-        ],
-      },
-      {
-        title: { zh: '工具', en: 'Tools', ja: 'ツール' },
-        description: { zh: '版本相关的查询可以继续往版本中心接。', en: 'Route version-related queries into the open beta center.', ja: 'バージョン関連の問い合わせはCBT特集へ。' },
-        links: [
-          { href: '/sea/version', label: { zh: '版本中心', en: 'Version center', ja: 'バージョン特集' } },
-          { href: '/sea/guides/open-beta-version-center', label: { zh: '公测专题', en: 'Open Beta Center', ja: 'CBT特集' } },
-        ],
-      },
-      {
-        title: { zh: '机制', en: 'Mechanics', ja: '機構' },
-        description: { zh: '联动、入坑和开服攻略继续接住搜索。', en: 'Continue into collabs, starter routes, and launch guides.', ja: 'コラボ、入門ルート、ローンチ攻略へ進めます。' },
-        links: [
-          { href: '/sea/guides', label: { zh: '攻略专题', en: 'Guides', ja: '攻略' } },
-          { href: '/sea/guides/collaborations-guide', label: { zh: '联动专题', en: 'Collabs', ja: 'コラボ' } },
-        ],
-      },
-    ],
-  },
   skjh: {
     zh: [
       {
@@ -1816,27 +1822,36 @@ function getVersionNextSteps(gameId: GameId): NextStepLink[] {
         href: '/sea/guides/open-beta-version-center',
         title: { zh: '公测版本中心', en: 'Open Beta Center', ja: 'CBT特集' },
         description: {
-          zh: '先把 7 月 9 日公测、福利和入坑路线接住。',
-          en: 'Capture the July 9 beta timing, rewards, and starter route first.',
-          ja: '7月9日CBT、報酬、入門導線を先に押さえます。',
+          zh: '先把 7 月 9 日公测、版本核心信息和首月路线接住。',
+          en: 'Catch the July 9 beta timing, version core topics, and month-one route first.',
+          ja: '7月9日CBT、版本の要点、初月ルートを先に押さえます。',
         },
       },
       {
-        href: '/sea/guides/collaborations-guide',
-        title: { zh: '联动总表', en: 'Collab Matrix', ja: 'コラボ一覧' },
+        href: '/sea/guides/launch-day-guide',
+        title: { zh: '开服攻略', en: 'Launch Guide', ja: '開服攻略' },
         description: {
-          zh: '第五人格、海绵宝宝等联动内容能在这里继续看。',
-          en: 'Continue into Identity V, SpongeBob, and other collaboration details.',
-          ja: '第五人格やスポンジボブなどのコラボ詳細へ進めます。',
+          zh: '继续看开服流程、首月规划和实战路线。',
+          en: 'Continue into launch flow, month-one planning, and practical routes.',
+          ja: '開服手順、初月計画、実用ルートへ進めます。',
         },
       },
       {
-        href: '/sea/guides/beginner-guide',
-        title: { zh: '新手入门', en: 'Beginner Guide', ja: '初心者ガイド' },
+        href: '/sea/guides/download-install-guide',
+        title: { zh: '下载安装', en: 'Download/Install', ja: 'DLとインストール' },
         description: {
-          zh: '如果刚进坑，先看开服路线和首月规划。',
-          en: 'If you are just starting, check the launch route and month-one plan.',
-          ja: '始めたばかりなら、開服ルートと初月計画を先に見てください。',
+          zh: '下载、安装和平台支持可以直接从这里继续。',
+          en: 'Move directly into download, install, and platform support.',
+          ja: 'DL、インストール、対応プラットフォームへ進めます。',
+        },
+      },
+      {
+        href: '/sea/guides/team-building-guide',
+        title: { zh: '队伍思路', en: 'Team Building', ja: '編成案' },
+        description: {
+          zh: '角色、节奏榜和配队思路继续往下接。',
+          en: 'Continue into characters, tier lists, and team ideas.',
+          ja: 'キャラ、Tier、編成案へつなげます。',
         },
       },
     ],
@@ -1902,7 +1917,7 @@ export async function generateMetadata({
       description,
       url: `${BASE_URL}/${locale}/${gameId}/version`,
       siteName: 'Gachia',
-      images: [{ url: `${BASE_URL}/images/og/${gameId}.jpg`, width: 1200, height: 630 }],
+      images: [{ url: `${BASE_URL}/images/og/${gameId}.webp`, width: 1200, height: 630 }],
       locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
     },
   };

@@ -393,7 +393,7 @@ export const GAMES: Record<GameId, GameModule> = {
       version: true,
       guides: true,
       build: false,
-      compare: false,
+      compare: true,
       teams: false,
       'redeem-codes': true,
     },

@@ -25,6 +25,9 @@ export interface NteGuide {
   contentEn: string;
   tags: string[];
   faq: NteGuideFaq[];
+  relatedCharacters?: string[];
+  relatedLocations?: string[];
+  relatedLore?: string[];
   date?: string;
 }
 

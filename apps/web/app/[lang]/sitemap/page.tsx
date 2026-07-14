@@ -3,6 +3,8 @@ import { LOCALES } from '@gachia/core';
 import type { SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
 
+const BASE_URL = 'https://gachia.com';
+
 const TITLE: Record<string, string> = { zh: '网站地图', en: 'Sitemap', ja: 'サイトマップ' };
 const DESCRIPTION: Record<string, string> = {
   zh: 'Gachia 网站地图 — 浏览所有页面和资源',
@@ -17,9 +19,19 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale = lang as SupportedLocale;
+  const languages: Record<string, string> = {};
+  for (const l of LOCALES) {
+    const hreflang = l === 'zh' ? 'zh-Hans' : l;
+    languages[hreflang] = `${BASE_URL}/${l}/sitemap`;
+  }
+  languages['x-default'] = `${BASE_URL}/zh/sitemap`;
   return {
     title: TITLE[locale],
     description: DESCRIPTION[locale],
+    alternates: {
+      canonical: `${BASE_URL}/${locale}/sitemap`,
+      languages,
+    },
   };
 }
 
@@ -63,6 +75,11 @@ export default async function SitemapPage({
   const legal: { key: string; label: Record<string, string> }[] = [
     { key: 'privacy', label: { zh: '隐私政策', en: 'Privacy Policy', ja: 'プライバシーポリシー' } },
     { key: 'terms', label: { zh: '服务条款', en: 'Terms of Service', ja: '利用規約' } },
+  ];
+
+  const sitePages: { key: string; label: Record<string, string> }[] = [
+    { key: `${locale}/sitemap`, label: { zh: '网站地图', en: 'Sitemap', ja: 'サイトマップ' } },
+    { key: `${locale}/contact`, label: { zh: '联系我们', en: 'Contact', ja: 'お問い合わせ' } },
   ];
 
   return (
@@ -113,6 +130,21 @@ export default async function SitemapPage({
         </h2>
         <ul className="space-y-2">
           {legal.map((item) => (
+            <li key={item.key}>
+              <Link href={`/${item.key}` as '/'} className="text-game-text-muted hover:text-game-primary">
+                {item.label[locale]}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="mb-4 text-xl font-semibold text-game-text">
+          {locale === 'zh' ? '站点页面' : locale === 'ja' ? 'サイトページ' : 'Site Pages'}
+        </h2>
+        <ul className="space-y-2">
+          {sitePages.map((item) => (
             <li key={item.key}>
               <Link href={`/${item.key}` as '/'} className="text-game-text-muted hover:text-game-primary">
                 {item.label[locale]}

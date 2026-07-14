@@ -383,7 +383,7 @@ function WuWaMapPage({ locale }: { locale: SupportedLocale }) {
       {/* Region cards */}
       <div className="space-y-6">
         {regions.map((region) => (
-          <div key={region.id} className="rounded-lg border border-game-border bg-game-surface overflow-hidden">
+          <div key={region.id} id={region.id} className="scroll-mt-24 rounded-lg border border-game-border bg-game-surface overflow-hidden">
             <div className="border-b border-game-border bg-game-surface-alt px-6 py-4">
               <div className="flex items-center gap-3">
                 <span className="text-2xl">{WUWA_REGION_ICONS[region.id] || '🗺️'}</span>
@@ -623,6 +623,13 @@ const NTE_REGION_ICONS: Record<string, string> = {
   'abyss-zone': '🕳️',
 };
 
+const NTE_LOCATION_SPOTS = [
+  { id: 'hethereau', zh: '海瑟劳', en: 'Hethereau', ja: 'ヘテロー' },
+  { id: 'sixth-street', zh: '六街', en: 'Sixth Street', ja: 'シックスストリート' },
+  { id: 'hollow-zero', zh: '空洞零号', en: 'Hollow Zero', ja: 'ホロウ・ゼロ' },
+  { id: 'lumina-square', zh: '光映广场', en: 'Lumina Square', ja: 'ルミナスクエア' },
+] as const;
+
 function NteMapPage({ locale }: { locale: SupportedLocale }) {
   const regions: NteRegion[] = nteRegions;
   const gameConfig = GAMES.nte;
@@ -658,6 +665,24 @@ function NteMapPage({ locale }: { locale: SupportedLocale }) {
           <div className="text-xs text-game-text-muted">{locale === 'zh' ? '挑战关卡' : locale === 'ja' ? '挑戦ステージ' : 'Domains'}</div>
         </div>
       </div>
+
+      <section className="mb-8">
+        <h2 className="mb-3 text-lg font-semibold text-game-text">
+          {locale === 'zh' ? '常见地点锚点' : locale === 'ja' ? 'よく見る地点アンカー' : 'Common Location Anchors'}
+        </h2>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {NTE_LOCATION_SPOTS.map((spot) => (
+            <article key={spot.id} id={spot.id} className="scroll-mt-24 rounded-lg border border-game-border bg-game-surface p-4">
+              <div className="text-sm font-semibold text-game-primary">
+                {locale === 'zh' ? spot.zh : locale === 'ja' ? spot.ja : spot.en}
+              </div>
+              <div className="mt-1 text-xs text-game-text-muted">
+                {locale === 'zh' ? '地图锚点 / 路线入口' : locale === 'ja' ? 'マップアンカー / ルート入口' : 'Map anchor / route entry'}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
 
       <div className="space-y-6">
         {regions.map((region) => (

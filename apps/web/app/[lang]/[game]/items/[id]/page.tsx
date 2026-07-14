@@ -33,8 +33,188 @@ import {
 } from '@gachia/data/games/skjh/items';
 import { getCharactersNeedingMaterial } from '@gachia/data/material-characters';
 import { Link } from '@/lib/i18n/navigation';
+import { buildItemJsonLd } from '@/lib/jsonld';
 
 const RARITY_COLORS = ['', '#9ca3af', '#4ade80', '#60a5fa', '#a855f7', '#eab308'];
+
+type NextStepLink = {
+  href: string;
+  title: Record<SupportedLocale, string>;
+  description: Record<SupportedLocale, string>;
+};
+
+const ITEM_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
+  genshin: [
+    {
+      href: '/genshin/characters',
+      title: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+      description: { zh: '直接看哪些角色会消耗这些材料', en: 'See which characters consume these materials', ja: '誰が使うかを確認' },
+    },
+    {
+      href: '/genshin/weapons',
+      title: { zh: '看武器图鉴', en: 'Browse weapons', ja: '武器図鑑へ' },
+      description: { zh: '把角色材料和武器材料一起规划', en: 'Plan character and weapon materials together', ja: 'キャラと武器の素材を一緒に計画' },
+    },
+    {
+      href: '/genshin/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '继续看养成、版本和活动专题', en: 'Continue with build, version, and event guides', ja: '育成・版本・イベントへ' },
+    },
+  ],
+  starrail: [
+    {
+      href: '/starrail/characters',
+      title: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+      description: { zh: '把材料和需求角色对上', en: 'Match materials to the characters that need them', ja: '素材と必要キャラを確認' },
+    },
+    {
+      href: '/starrail/weapons',
+      title: { zh: '看光锥图鉴', en: 'Browse light cones', ja: '光円錐図鑑へ' },
+      description: { zh: '继续看武器与养成材料', en: 'Continue with light cone and upgrade materials', ja: '光円錐と育成素材を確認' },
+    },
+    {
+      href: '/starrail/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '继续看配队、版本和抽卡专题', en: 'Continue with teams, version, and pull guides', ja: '編成・版本・ガチャへ' },
+    },
+  ],
+  wuwa: [
+    {
+      href: '/wuwa/characters',
+      title: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+      description: { zh: '先看哪些角色要这个材料', en: 'See which characters need this material', ja: '必要キャラを確認' },
+    },
+    {
+      href: '/wuwa/weapons',
+      title: { zh: '看武器图鉴', en: 'Browse weapons', ja: '武器図鑑へ' },
+      description: { zh: '把角色突破和武器升级路线接起来', en: 'Connect character ascension with weapon upgrade paths', ja: 'キャラ昇格と武器強化を接続' },
+    },
+    {
+      href: '/wuwa/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '继续看声骸、版本和刷取专题', en: 'Continue with echo, version, and farming guides', ja: '声骸・版本・周回へ' },
+    },
+  ],
+  nte: [
+    {
+      href: '/nte/characters',
+      title: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+      description: { zh: '把材料和角色需求直接对接', en: 'Directly connect materials with character needs', ja: '素材と必要キャラを接続' },
+    },
+    {
+      href: '/nte/weapons',
+      title: { zh: '看武器图鉴', en: 'Browse weapons', ja: '武器図鑑へ' },
+      description: { zh: '继续看武器培养材料', en: 'Continue with weapon upgrade materials', ja: '武器強化素材を確認' },
+    },
+    {
+      href: '/nte/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '继续看 Boss、伤害和新手专题', en: 'Continue with boss, damage, and beginner guides', ja: 'ボス・ダメージ・初心者へ' },
+    },
+  ],
+  zzz: [
+    {
+      href: '/zzz/characters',
+      title: { zh: '看代理人图鉴', en: 'Browse agents', ja: 'エージェント図鑑へ' },
+      description: { zh: '先看哪些代理人会消耗这个材料', en: 'See which agents consume this material', ja: '消費するエージェントを確認' },
+    },
+    {
+      href: '/zzz/weapons',
+      title: { zh: '看音擎图鉴', en: 'Browse W-Engines', ja: '音擎図鑑へ' },
+      description: { zh: '把材料和武器培养一起规划', en: 'Plan materials alongside weapon growth', ja: '素材と武器育成を一緒に計画' },
+    },
+    {
+      href: '/zzz/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '继续看版本、配队和驱动盘专题', en: 'Continue with version, teams, and disc guides', ja: '版本・編成・ディスクへ' },
+    },
+  ],
+  guihuan: [
+    {
+      href: '/guihuan/characters',
+      title: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+      description: { zh: '先看哪些角色需要这些材料', en: 'See which characters need these materials', ja: '必要キャラを確認' },
+    },
+    {
+      href: '/guihuan/weapons',
+      title: { zh: '看武器图鉴', en: 'Browse weapons', ja: '武器図鑑へ' },
+      description: { zh: '把角色和武器培养一起看', en: 'Review character and weapon growth together', ja: 'キャラと武器育成を確認' },
+    },
+    {
+      href: '/guihuan/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '继续看玩法和系统攻略', en: 'Continue with gameplay and system guides', ja: '遊び方とシステム攻略へ' },
+    },
+  ],
+  ananta: [
+    {
+      href: '/ananta/characters',
+      title: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+      description: { zh: '先看材料会被谁消耗', en: 'See which characters consume the material', ja: '消費するキャラを確認' },
+    },
+    {
+      href: '/ananta/weapons',
+      title: { zh: '看武器图鉴', en: 'Browse weapons', ja: '武器図鑑へ' },
+      description: { zh: '把材料需求和武器需求一起规划', en: 'Plan material and weapon needs together', ja: '素材と武器の需要を一緒に計画' },
+    },
+    {
+      href: '/ananta/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '继续看版本和养成专题', en: 'Continue with version and build guides', ja: '版本・育成へ' },
+    },
+  ],
+  endfield: [
+    {
+      href: '/endfield/characters',
+      title: { zh: '看干员图鉴', en: 'Browse operators', ja: 'オペレーター図鑑へ' },
+      description: { zh: '先看哪些干员需要这个材料', en: 'See which operators need this material', ja: '必要オペレーターを確認' },
+    },
+    {
+      href: '/endfield/weapons',
+      title: { zh: '看武器图鉴', en: 'Browse weapons', ja: '武器図鑑へ' },
+      description: { zh: '把升级材料和武器培养一起看', en: 'Review upgrade materials and weapon growth together', ja: '強化素材と武器育成を確認' },
+    },
+    {
+      href: '/endfield/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '继续看测试、系统和版本内容', en: 'Continue with test, system, and version guides', ja: 'テスト・システム・版本へ' },
+    },
+  ],
+  sea: [
+    {
+      href: '/sea/characters',
+      title: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+      description: { zh: '先看哪些角色会消耗这个材料', en: 'See which characters consume this material', ja: '消費するキャラを確認' },
+    },
+    {
+      href: '/sea/version',
+      title: { zh: '看版本专题', en: 'Version hub', ja: 'バージョン特集へ' },
+      description: { zh: '先回到版本中心看开服节点', en: 'Return to the version hub for launch timing', ja: '版本中心で開服ノードを確認' },
+    },
+    {
+      href: '/sea/guides/open-beta-version-center',
+      title: { zh: '看公测中心', en: 'Open beta center', ja: '公測センターへ' },
+      description: { zh: '继续接公测总览和首月路线', en: 'Continue into the beta overview and first-month routing', ja: '公測概要と初月ルートへ' },
+    },
+  ],
+  skjh: [
+    {
+      href: '/skjh/characters',
+      title: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+      description: { zh: '先看哪些角色需要这些材料', en: 'See which characters need these materials', ja: '必要キャラを確認' },
+    },
+    {
+      href: '/skjh/weapons',
+      title: { zh: '看武器图鉴', en: 'Browse weapons', ja: '武器図鑑へ' },
+      description: { zh: '把材料与武器培养串起来', en: 'Connect materials with weapon growth', ja: '素材と武器育成を接続' },
+    },
+    {
+      href: '/skjh/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '继续看专题攻略', en: 'Continue with guide content', ja: '攻略コンテンツへ進む' },
+    },
+  ],
+};
 
 const TYPE_LABELS: Record<string, Record<string, string>> = {
   'character-ascension': { zh: '角色突破材料', en: 'Character Ascension', ja: 'キャラ突破素材' },
@@ -66,6 +246,21 @@ const TYPE_LABELS: Record<string, Record<string, string>> = {
   resource: { zh: '生存资源', en: 'Survival Resource', ja: '生存資源' },
   base: { zh: '基地设施', en: 'Base Facility', ja: '拠点設備' },
   reward: { zh: '福利奖励', en: 'Reward', ja: '報酬' },
+};
+
+type LocaleMeta = Partial<Record<SupportedLocale, { title: string; description: string }>>;
+
+const ITEM_META_OVERRIDES: Record<string, LocaleMeta> = {
+  'genshin/subdetection-unit': {
+    zh: {
+      title: '子探测单元获取攻略：用途、位置与刷取路线',
+      description: '原神子探测单元材料攻略，整理用途说明、获取位置和刷取路线，方便你快速规划材料。',
+    },
+    en: {
+      title: 'Subdetection Unit Guide: Uses, Locations & Farming',
+      description: 'Genshin Impact Subdetection Unit guide with uses, locations, and farming routes so you can plan ahead.',
+    },
+  },
 };
 
 export async function generateStaticParams() {
@@ -148,6 +343,33 @@ export async function generateMetadata({
     description = (locale === 'en' ? m.sourceEn : locale === 'ja' ? (m.sourceJa ?? m.sourceEn) : m.source).slice(0, 160);
   }
 
+  const override = ITEM_META_OVERRIDES[`${gameId}/${id}`]?.[locale];
+  if (override) {
+    const title = override.title;
+    const desc = override.description;
+    return {
+      title,
+      description: desc,
+      alternates: {
+        canonical: `https://gachia.com/${locale}/${gameId}/items/${id}`,
+        languages: {
+          'zh-Hans': `https://gachia.com/zh/${gameId}/items/${id}`,
+          en: `https://gachia.com/en/${gameId}/items/${id}`,
+          ja: `https://gachia.com/ja/${gameId}/items/${id}`,
+          'x-default': `https://gachia.com/zh/${gameId}/items/${id}`,
+        },
+      },
+      openGraph: {
+        title,
+        description: desc,
+        url: `https://gachia.com/${locale}/${gameId}/items/${id}`,
+        siteName: 'Gachia',
+        images: [{ url: `https://gachia.com/images/og/${gameId}.webp`, width: 1200, height: 630 }],
+        locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
+      },
+    };
+  }
+
   const title = locale === 'zh'
     ? `${name} — ${gameName}材料获取攻略 | 掉落来源与角色需求`
     : locale === 'ja'
@@ -177,7 +399,7 @@ export async function generateMetadata({
       description: desc.slice(0, 160),
       url: `https://gachia.com/${locale}/${gameId}/items/${id}`,
       siteName: 'Gachia',
-      images: [{ url: `https://gachia.com/images/og/${gameId}.jpg`, width: 1200, height: 630 }],
+      images: [{ url: `https://gachia.com/images/og/${gameId}.webp`, width: 1200, height: 630 }],
       locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
     },
   };
@@ -463,34 +685,47 @@ export default async function ItemDetailPage({
         </div>
       </section>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: gameName, item: `https://gachia.com/${locale}/${gameId}` },
-              { '@type': 'ListItem', position: 2, name: locale === 'zh' ? '材料' : locale === 'ja' ? '素材' : 'Items', item: `https://gachia.com/${locale}/${gameId}/items` },
-              { '@type': 'ListItem', position: 3, name: data.name },
-            ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: buildItemFaqs(data.name, gameName, typeLabel, data.source, relatedChars.length, locale).map((faq) => ({
-              '@type': 'Question',
-              name: faq.q,
-              acceptedAnswer: { '@type': 'Answer', text: faq.a },
-            })),
-          }),
-        }}
-      />
+      <section className="mt-6">
+        <h2 className="mb-3 text-base font-semibold text-game-text">
+          {locale === 'zh' ? '下一步去看' : locale === 'ja' ? '次に見るページ' : 'Next Steps'}
+        </h2>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {(ITEM_NEXT_STEPS[gameId] ?? []).map((link) => (
+            <Link
+              key={link.href}
+              href={link.href as '/'}
+              className="group rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary"
+            >
+              <h3 className="mb-1 text-sm font-semibold text-game-text group-hover:text-game-primary">
+                {link.title[locale]}
+              </h3>
+              <p className="text-xs text-game-text-muted line-clamp-2">
+                {link.description[locale]}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {buildItemJsonLd({
+        gameId,
+        locale,
+        name: data.name,
+        description: descText,
+        itemId: id,
+        categoryLabel: typeLabel,
+        tags: [gameName, typeLabel],
+        faq: buildItemFaqs(data.name, gameName, typeLabel, data.source, relatedChars.length, locale).map((faq) => ({
+          question: faq.q,
+          answer: faq.a,
+        })),
+      }).map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
     </div>
   );
 }

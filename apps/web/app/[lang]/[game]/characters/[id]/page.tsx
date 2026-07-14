@@ -140,7 +140,46 @@ type NextStepLink = {
   description: Record<SupportedLocale, string>;
 };
 
+type CharacterFaqEntry = {
+  question: string;
+  answer: string;
+};
+
 const CHARACTER_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
+  genshin: [
+    {
+      href: '/genshin/weapons',
+      title: { zh: '看武器图鉴', en: 'Browse weapons', ja: '武器図鑑へ' },
+      description: { zh: '先把角色适配武器补齐', en: 'Fill in the best weapon options first', ja: '相性の良い武器を先に確認' },
+    },
+    {
+      href: '/genshin/items',
+      title: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
+      description: { zh: '继续看养成材料和刷取路径', en: 'Continue with ascension materials and farming routes', ja: '育成素材と周回ルートを確認' },
+    },
+    {
+      href: '/genshin/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '把角色页接到版本、活动和抽卡内容', en: 'Connect characters with version, event, and pull planning', ja: 'キャラを版本・イベント・抽選へ接続' },
+    },
+  ],
+  starrail: [
+    {
+      href: '/starrail/weapons',
+      title: { zh: '看光锥图鉴', en: 'Browse light cones', ja: '光円錐図鑑へ' },
+      description: { zh: '补齐角色最适合的光锥选择', en: 'Fill in the best light cone choices', ja: '最適な光円錐を補完' },
+    },
+    {
+      href: '/starrail/items',
+      title: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
+      description: { zh: '把突破和行迹材料路线接起来', en: 'Connect ascension and trace materials', ja: '昇格素材と軌跡素材を接続' },
+    },
+    {
+      href: '/starrail/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '继续看版本、卡池和队伍内容', en: 'Continue into version, banner, and team content', ja: '版本・ガチャ・編成へ進む' },
+    },
+  ],
   wuwa: [
     {
       href: '/wuwa/version',
@@ -156,6 +195,23 @@ const CHARACTER_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
       href: '/wuwa/guides/roya-frostlands-guide',
       title: { zh: '看新区域攻略', en: 'Read the region guide', ja: '新エリア攻略へ' },
       description: { zh: '把刷图、地图和养成路线接起来', en: 'Connect farming, map flow, and progression paths', ja: '周回、マップ、育成導線を接続' },
+    },
+  ],
+  nte: [
+    {
+      href: '/nte/weapons',
+      title: { zh: '看武器图鉴', en: 'Browse weapons', ja: '武器図鑑へ' },
+      description: { zh: '先补齐角色对应的武器选择', en: 'Review the best weapon picks first', ja: '適性武器を先に確認' },
+    },
+    {
+      href: '/nte/items',
+      title: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
+      description: { zh: '把突破材料和天赋材料串起来', en: 'Connect ascension and upgrade materials', ja: '突破素材と育成素材を接続' },
+    },
+    {
+      href: '/nte/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '继续看 Boss、伤害和新手专题', en: 'Continue with boss, damage, and beginner guides', ja: 'ボス・ダメージ・初心者攻略へ' },
     },
   ],
   zzz: [
@@ -175,6 +231,40 @@ const CHARACTER_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
       description: { zh: '把毕业盘和替代盘补完整', en: 'Complete the endgame disc and fallback set picture', ja: '完成形と代替セットを整理' },
     },
   ],
+  guihuan: [
+    {
+      href: '/guihuan/weapons',
+      title: { zh: '看武器图鉴', en: 'Browse weapons', ja: '武器図鑑へ' },
+      description: { zh: '先把角色的武器选择补齐', en: 'Review the best weapon picks first', ja: '武器候補を先に確認' },
+    },
+    {
+      href: '/guihuan/items',
+      title: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
+      description: { zh: '把突破材料和培养消耗接起来', en: 'Connect ascension materials and upgrade costs', ja: '突破素材と育成コストを接続' },
+    },
+    {
+      href: '/guihuan/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '继续看玩法、版本和系统专题', en: 'Continue with gameplay, version, and system guides', ja: '遊び方・版本・システム解説へ' },
+    },
+  ],
+  ananta: [
+    {
+      href: '/ananta/weapons',
+      title: { zh: '看武器图鉴', en: 'Browse weapons', ja: '武器図鑑へ' },
+      description: { zh: '先看角色最适合的武器', en: 'Check the best weapons for the character first', ja: '最適武器を先に確認' },
+    },
+    {
+      href: '/ananta/items',
+      title: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
+      description: { zh: '继续看突破和培养材料', en: 'Continue with ascension and growth materials', ja: '突破・育成素材を確認' },
+    },
+    {
+      href: '/ananta/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '把角色页接到专题攻略', en: 'Connect the character page to broader guides', ja: 'キャラページを攻略特集へ接続' },
+    },
+  ],
   endfield: [
     {
       href: '/endfield/version',
@@ -190,6 +280,28 @@ const CHARACTER_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
       href: '/endfield/items',
       title: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
       description: { zh: '继续看养成材料和职业需求', en: 'Continue with materials and role requirements', ja: '育成素材と職分要件を確認' },
+    },
+  ],
+  sea: [
+    {
+      href: '/sea/version',
+      title: { zh: '回到版本中心', en: 'Back to version hub', ja: 'バージョン特集へ戻る' },
+      description: { zh: '先看版本节点和首月路线', en: 'Check the version nodes and launch route first', ja: '版本ノードと開服ルートを先に確認' },
+    },
+    {
+      href: '/sea/tier-list',
+      title: { zh: '看节奏榜', en: 'Browse tier list', ja: 'Tierへ' },
+      description: { zh: '继续确认船员强度和抽取优先级', en: 'Review crew strength and pull priorities', ja: '船員強度と抽選優先度を確認' },
+    },
+    {
+      href: '/sea/guides/open-beta-version-center',
+      title: { zh: '看公测专题', en: 'Open beta center', ja: 'CBT特集へ' },
+      description: { zh: '继续看开服、安装和系统问题', en: 'Continue with launch, install, and system pages', ja: '開服、DL、システムへ進める' },
+    },
+    {
+      href: '/sea/items',
+      title: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
+      description: { zh: '把角色培养材料和掉落来源接起来', en: 'Connect character materials with drop sources', ja: '育成素材と入手先を接続' },
     },
   ],
 };
@@ -338,6 +450,51 @@ const SEA_ELEMENT_COLORS: Record<string, string> = {
   cha: '#ec4899',
 };
 
+type LocaleMeta = Partial<Record<SupportedLocale, { title: string; description: string }>>;
+
+const CHARACTER_META_OVERRIDES: Record<string, LocaleMeta> = {
+  'genshin/barbara': {
+    zh: {
+      title: '芭芭拉培养攻略：武器、圣遗物、配队与治疗手法',
+      description: '原神芭芭拉培养攻略，整理武器选择、圣遗物搭配、队伍定位和治疗循环，适合想快速上手的玩家。',
+    },
+    en: {
+      title: 'Barbara Build Guide: Weapons, Artifacts, Teams & Healing',
+      description: 'Genshin Impact Barbara build guide covering weapons, artifact sets, team roles, and healing rotation tips.',
+    },
+  },
+  'genshin/fischl': {
+    zh: {
+      title: '菲谢尔培养攻略：武器、圣遗物、配队与输出思路',
+      description: '原神菲谢尔培养攻略，整理武器、圣遗物、配队和输出思路，帮助你把奥兹伤害吃满。',
+    },
+    en: {
+      title: 'Fischl Build Guide: Weapons, Artifacts, Teams & DPS',
+      description: 'Genshin Impact Fischl build guide covering best weapons, artifact sets, teams, and damage-focused setup tips.',
+    },
+  },
+  'genshin/kirara': {
+    zh: {
+      title: '绮良良培养攻略：护盾、武器、圣遗物与配队',
+      description: '原神绮良良培养攻略，包含护盾强度、武器选择、圣遗物搭配和实用配队建议。',
+    },
+    en: {
+      title: 'Kirara Build Guide: Shields, Weapons, Artifacts & Teams',
+      description: 'Genshin Impact Kirara build guide with shield value, weapon picks, artifact sets, and team options.',
+    },
+  },
+  'genshin/beidou': {
+    zh: {
+      title: '北斗培养攻略：武器、圣遗物、配队与反击玩法',
+      description: '原神北斗培养攻略，整理武器、圣遗物、配队与弹反思路，方便你快速搭建雷系副 C。',
+    },
+    en: {
+      title: 'Beidou Build Guide: Weapons, Artifacts, Teams & Counterplay',
+      description: 'Genshin Impact Beidou build guide covering weapons, artifact sets, teams, and counter/parry play patterns.',
+    },
+  },
+};
+
 // CRITICAL FIX: Optimize generateStaticParams to avoid loading all game data at once
 export async function generateStaticParams() {
   // Use a simple array approach instead of separate variables
@@ -363,8 +520,28 @@ export async function generateStaticParams() {
   return params;
 }
 
-function CharJsonLd({ gameId, locale, name, description, charId }: { gameId: GameId; locale: SupportedLocale; name: string; description: string; charId: string }) {
-  const schemas = buildCharacterJsonLd({ gameId, locale, name, description, charId });
+function CharacterJsonLd({
+  gameId,
+  locale,
+  name,
+  description,
+  charId,
+  image,
+  faq,
+  tags,
+  categoryLabel,
+}: {
+  gameId: GameId;
+  locale: SupportedLocale;
+  name: string;
+  description: string;
+  charId: string;
+  image?: string;
+  faq?: CharacterFaqEntry[];
+  tags?: string[];
+  categoryLabel?: string;
+}) {
+  const schemas = buildCharacterJsonLd({ gameId, locale, name, description, charId, image, faq, tags, categoryLabel });
   return (
     <script
       type="application/ld+json"
@@ -394,7 +571,7 @@ export async function generateMetadata({
 
   const buildOg = (charName: string) => ({
     title: charName,
-    images: [{ url: `/images/og/${gameId}.jpg`, width: 1200, height: 630, alt: charName }],
+    images: [{ url: `/images/og/${gameId}.webp`, width: 1200, height: 630, alt: charName }],
     locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
   });
 
@@ -413,6 +590,10 @@ export async function generateMetadata({
     if (!char) return {};
     const gameName = GAMES.genshin.name[locale];
     const name = getGenshinCharacterName(char, locale);
+    const override = CHARACTER_META_OVERRIDES[`${gameId}/${id}`]?.[locale];
+    if (override) {
+      return { ...override, openGraph: buildOg(name), alternates: buildAlternates(id) };
+    }
     const elName = GENSHIN_ELEMENT_NAMES[char.element]?.[locale] ?? char.element;
     const wName = GENSHIN_WEAPON_LABELS[char.weaponType]?.[locale] ?? char.weaponType;
     const title = locale === 'zh'
@@ -431,6 +612,10 @@ export async function generateMetadata({
     if (!char) return {};
     const gameName = GAMES.starrail.name[locale];
     const name = getStarRailCharacterName(char, locale);
+    const override = CHARACTER_META_OVERRIDES[`${gameId}/${id}`]?.[locale];
+    if (override) {
+      return { ...override, openGraph: buildOg(name), alternates: buildAlternates(id) };
+    }
     const elName = STARRAIL_ELEMENT_NAMES[char.element]?.[locale] ?? char.element;
     const pathName = STARRAIL_PATH_LABELS[char.path]?.[locale] ?? char.path;
     const title = locale === 'zh'
@@ -447,6 +632,10 @@ export async function generateMetadata({
     if (!char) return {};
     const gameName = GAMES.nte.name[locale];
     const name = getNteCharacterName(char, locale);
+    const override = CHARACTER_META_OVERRIDES[`${gameId}/${id}`]?.[locale];
+    if (override) {
+      return { ...override, openGraph: buildOg(name), alternates: buildAlternates(id) };
+    }
     const elName = NTE_ELEMENT_NAMES[char.attribute]?.[locale] ?? char.attribute;
     const title = locale === 'zh'
       ? `${name}配装攻略 — ${elName}属性最佳弧盘、弧盘套装、配队`
@@ -462,6 +651,10 @@ export async function generateMetadata({
     if (!char) return {};
     const gameName = GAMES.wuwa.name[locale];
     const name = getWuWaCharacterName(char, locale);
+    const override = CHARACTER_META_OVERRIDES[`${gameId}/${id}`]?.[locale];
+    if (override) {
+      return { ...override, openGraph: buildOg(name), alternates: buildAlternates(id) };
+    }
     const elName = WUWA_ELEMENT_NAMES[char.element]?.[locale] ?? char.element;
     const wName = WUWA_WEAPON_LABELS[char.weaponType]?.[locale] ?? char.weaponType;
     const title = locale === 'zh'
@@ -478,6 +671,10 @@ export async function generateMetadata({
     if (!char) return {};
     const gameName = GAMES.zzz.name[locale];
     const name = getZzzCharacterName(char, locale);
+    const override = CHARACTER_META_OVERRIDES[`${gameId}/${id}`]?.[locale];
+    if (override) {
+      return { ...override, openGraph: buildOg(name), alternates: buildAlternates(id) };
+    }
     const elName = ZZZ_ELEMENT_NAMES[char.attribute]?.[locale] ?? char.attribute;
     const specName = ZZZ_SPECIALTY_LABELS[char.specialtyEn]?.[locale] ?? char.specialtyEn;
     const title = locale === 'zh'
@@ -566,7 +763,7 @@ export default async function CharacterDetailPage({
     if (!char) notFound();
     const name = getGenshinCharacterName(char, locale);
     const desc = getGenshinCharacterDescription(char, locale);
-    return <><CharJsonLd gameId={gameId} locale={locale} name={name} description={desc} charId={id} /><GenshinCharacterDetail char={char} locale={locale} /></>;
+    return <GenshinCharacterDetail char={char} locale={locale} />;
   }
 
   if (gameId === 'starrail') {
@@ -574,7 +771,7 @@ export default async function CharacterDetailPage({
     if (!char) notFound();
     const name = getStarRailCharacterName(char, locale);
     const desc = getStarRailCharacterDescription(char, locale);
-    return <><CharJsonLd gameId={gameId} locale={locale} name={name} description={desc} charId={id} /><StarRailCharacterDetail char={char} locale={locale} /></>;
+    return <StarRailCharacterDetail char={char} locale={locale} />;
   }
 
   if (gameId === 'nte') {
@@ -582,7 +779,7 @@ export default async function CharacterDetailPage({
     if (!char) notFound();
     const name = getNteCharacterName(char, locale);
     const desc = getNteCharacterDescription(char, locale);
-    return <><CharJsonLd gameId={gameId} locale={locale} name={name} description={desc} charId={id} /><NteCharacterDetail char={char} locale={locale} /></>;
+    return <NteCharacterDetail char={char} locale={locale} />;
   }
 
   if (gameId === 'wuwa') {
@@ -590,7 +787,7 @@ export default async function CharacterDetailPage({
     if (!char) notFound();
     const name = getWuWaCharacterName(char, locale);
     const desc = getWuWaCharacterDescription(char, locale);
-    return <><CharJsonLd gameId={gameId} locale={locale} name={name} description={desc} charId={id} /><WuWaCharacterDetail char={char} locale={locale} /></>;
+    return <WuWaCharacterDetail char={char} locale={locale} />;
   }
 
   if (gameId === 'zzz') {
@@ -598,7 +795,7 @@ export default async function CharacterDetailPage({
     if (!char) notFound();
     const name = getZzzCharacterName(char, locale);
     const desc = getZzzCharacterDescription(char, locale);
-    return <><CharJsonLd gameId={gameId} locale={locale} name={name} description={desc} charId={id} /><ZzzCharacterDetail char={char} locale={locale} /></>;
+    return <ZzzCharacterDetail char={char} locale={locale} />;
   }
 
   if (gameId === 'guihuan') {
@@ -606,7 +803,7 @@ export default async function CharacterDetailPage({
     if (!char) notFound();
     const name = getGuihuanCharacterName(char, locale);
     const desc = getGuihuanCharacterDescription(char, locale);
-    return <><CharJsonLd gameId={gameId} locale={locale} name={name} description={desc} charId={id} /><GuihuanCharacterDetail char={char} locale={locale} /></>;
+    return <GuihuanCharacterDetail char={char} locale={locale} />;
   }
 
   if (gameId === 'ananta') {
@@ -614,7 +811,7 @@ export default async function CharacterDetailPage({
     if (!char) notFound();
     const name = getAnantaCharacterName(char, locale);
     const desc = getAnantaCharacterDescription(char, locale);
-    return <><CharJsonLd gameId={gameId} locale={locale} name={name} description={desc} charId={id} /><AnantaCharacterDetail char={char} locale={locale} /></>;
+    return <AnantaCharacterDetail char={char} locale={locale} />;
   }
 
   if (gameId === 'endfield') {
@@ -622,7 +819,7 @@ export default async function CharacterDetailPage({
     if (!char) notFound();
     const name = getEndfieldCharacterName(char, locale);
     const desc = getEndfieldCharacterDescription(char, locale);
-    return <><CharJsonLd gameId={gameId} locale={locale} name={name} description={desc} charId={id} /><EndfieldCharacterDetail char={char} locale={locale} /></>;
+    return <EndfieldCharacterDetail char={char} locale={locale} />;
   }
 
   if (gameId === 'sea') {
@@ -630,7 +827,7 @@ export default async function CharacterDetailPage({
     if (!char) notFound();
     const name = getSeaCharacterName(char, locale);
     const desc = getSeaCharacterDescription(char, locale);
-    return <><CharJsonLd gameId={gameId} locale={locale} name={name} description={desc} charId={id} /><SeaCharacterDetail char={char} locale={locale} /></>;
+    return <SeaCharacterDetail char={char} locale={locale} />;
   }
 
   notFound();
@@ -680,36 +877,24 @@ function GenshinCharacterDetail({ char, locale }: { char: GenshinCharacter; loca
     );
   };
 
-  // JSON-LD structured data
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'VideoGame',
-    name: charName,
-    description: getGenshinCharacterDescription(char, locale).slice(0, 300),
-    image: imageUrl,
-    url: `https://gachia.com/${locale}/genshin/characters/${char.id}`,
-  };
-
-  // FAQ JSON-LD
-  const faqJsonLd = char.faq.length > 0 ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: char.faq.map((f) => ({
-      '@type': 'Question',
-      name: locale === 'zh' ? f.questionZh : f.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: locale === 'zh' ? f.answerZh : f.answer,
-      },
-    })),
-  } : null;
+  const faq = char.faq.length > 0
+    ? char.faq.map((f) => ({
+        question: locale === 'zh' ? f.questionZh : f.question,
+        answer: locale === 'zh' ? f.answerZh : f.answer,
+      }))
+    : undefined;
 
   return (
     <div>
-      {/* JSON-LD */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildBreadcrumbJsonLd('genshin', charName, locale)) }} />
+      <CharacterJsonLd
+        gameId="genshin"
+        locale={locale}
+        name={charName}
+        description={getGenshinCharacterDescription(char, locale).slice(0, 300)}
+        charId={char.id}
+        image={imageUrl}
+        faq={faq}
+      />
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-4">
@@ -991,6 +1176,8 @@ function GenshinCharacterDetail({ char, locale }: { char: GenshinCharacter; loca
         </Section>
       )}
 
+      <NextStepSection locale={locale} gameId="genshin" />
+
       {/* Back */}
       <div className="border-t border-game-border pt-4">
         <Link href="/genshin/characters" className="text-sm text-game-primary transition-colors hover:text-game-accent">
@@ -1018,34 +1205,24 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
   const buildRelic = hasBuild ? starrailRelicSets.find(rs => rs.nameEn.toLowerCase() === build.bestRelicSetEn.toLowerCase() || rs.name === build.bestRelicSet) : undefined;
 
   // JSON-LD structured data
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'VideoGame',
-    name: charName,
-    description: getStarRailCharacterDescription(char, locale).slice(0, 300),
-    image: imageUrl,
-    url: `https://gachia.com/${locale}/starrail/characters/${char.id}`,
-  };
-
-  const faqJsonLd = char.faq.length > 0 ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: char.faq.map((f) => ({
-      '@type': 'Question',
-      name: locale === 'zh' ? f.questionZh : f.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: locale === 'zh' ? f.answerZh : f.answer,
-      },
-    })),
-  } : null;
+  const faq = char.faq.length > 0
+    ? char.faq.map((f) => ({
+        question: locale === 'zh' ? f.questionZh : f.question,
+        answer: locale === 'zh' ? f.answerZh : f.answer,
+      }))
+    : undefined;
 
   return (
     <div className="space-y-8">
-      {/* JSON-LD */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildBreadcrumbJsonLd('starrail', charName, locale)) }} />
+      <CharacterJsonLd
+        gameId="starrail"
+        locale={locale}
+        name={charName}
+        description={getStarRailCharacterDescription(char, locale).slice(0, 300)}
+        charId={char.id}
+        image={imageUrl}
+        faq={faq}
+      />
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-4">
@@ -1277,6 +1454,8 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
         </section>
       )}
 
+      <NextStepSection locale={locale} gameId="starrail" />
+
       {/* Back */}
       <div className="border-t border-game-border pt-4">
         <Link href="/starrail/characters" className="text-sm text-game-primary transition-colors hover:text-game-accent">
@@ -1318,22 +1497,24 @@ function NteCharacterDetail({ char, locale }: { char: NteCharacter; locale: Supp
   const imageUrl = getNteCharacterImage(char);
   const builds = getBuildsForCharacter(char.id);
   const charName = getNteCharacterName(char, locale);
-
-  // JSON-LD structured data
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'VideoGame',
-    name: charName,
-    description: getNteCharacterDescription(char, locale).slice(0, 300),
-    image: imageUrl,
-    url: `https://gachia.com/${locale}/nte/characters/${char.id}`,
-  };
+  const faq = char.faq.length > 0
+    ? char.faq.map((f) => ({
+        question: locale === 'zh' ? f.questionZh : f.question,
+        answer: locale === 'zh' ? f.answerZh : f.answer,
+      }))
+    : undefined;
 
   return (
     <div>
-      {/* JSON-LD */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildBreadcrumbJsonLd('nte', charName, locale)) }} />
+      <CharacterJsonLd
+        gameId="nte"
+        locale={locale}
+        name={charName}
+        description={getNteCharacterDescription(char, locale).slice(0, 300)}
+        charId={char.id}
+        image={imageUrl}
+        faq={faq}
+      />
       <div className="mb-6 flex flex-col gap-6 md:flex-row">
         <div className="shrink-0 overflow-hidden rounded-lg border border-game-border bg-game-surface">
           <CharacterAvatar
@@ -1451,6 +1632,8 @@ function NteCharacterDetail({ char, locale }: { char: NteCharacter; locale: Supp
         </Section>
       )}
 
+      <NextStepSection locale={locale} gameId="nte" />
+
       <div className="border-t border-game-border pt-4">
         <Link href="/nte/characters" className="text-sm text-game-primary hover:text-game-accent">{locale === 'zh' ? '← 返回角色列表' : locale === 'ja' ? '← キャラ一覧に戻る' : '← Back to Characters'}</Link>
       </div>
@@ -1491,22 +1674,27 @@ function WuWaCharacterDetail({ char, locale }: { char: WuWaCharacter; locale: Su
   const elementName = WUWA_ELEMENT_NAMES[char.element]?.[locale] ?? char.element;
   const weaponLabel = WUWA_WEAPON_LABELS[char.weaponType]?.[locale] ?? char.weaponType;
   const charName = getWuWaCharacterName(char, locale);
-
-  // JSON-LD structured data
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'VideoGame',
-    name: charName,
-    description: getWuWaCharacterDescription(char, locale).slice(0, 300),
-    image: imageUrl,
-    url: `https://gachia.com/${locale}/wuwa/characters/${char.id}`,
-  };
+  const rawFaq = (char as WuWaCharacter & {
+    faq?: { questionZh?: string; question?: string; answerZh?: string; answer?: string }[];
+  }).faq;
+  const faq = rawFaq?.length
+    ? rawFaq.map((f) => ({
+        question: localeStr(f.questionZh ?? '', f.question ?? '', locale),
+        answer: localeStr(f.answerZh ?? '', f.answer ?? '', locale),
+      }))
+    : undefined;
 
   return (
     <div>
-      {/* JSON-LD */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildBreadcrumbJsonLd('wuwa', charName, locale)) }} />
+      <CharacterJsonLd
+        gameId="wuwa"
+        locale={locale}
+        name={charName}
+        description={getWuWaCharacterDescription(char, locale).slice(0, 300)}
+        charId={char.id}
+        image={imageUrl}
+        faq={faq}
+      />
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-4">
@@ -1670,34 +1858,24 @@ function ZzzCharacterDetail({ char, locale }: { char: ZzzCharacter; locale: Supp
   const charName = getZzzCharacterName(char, locale);
   const build = char.recommendedBuild;
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'VideoGame',
-    name: charName,
-    description: getZzzCharacterDescription(char, locale).slice(0, 300),
-    image: imageUrl,
-    url: `https://gachia.com/${locale}/zzz/characters/${char.id}`,
-  };
-
-  const faqJsonLd = char.faq.length > 0 ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: char.faq.map((f) => ({
-      '@type': 'Question',
-      name: locale === 'zh' ? f.questionZh : f.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: locale === 'zh' ? f.answerZh : f.answer,
-      },
-    })),
-  } : null;
+  const faq = char.faq.length > 0
+    ? char.faq.map((f) => ({
+        question: localeStr(f.questionZh, f.question, locale),
+        answer: localeStr(f.answerZh, f.answer, locale),
+      }))
+    : undefined;
 
   return (
     <div>
-      {/* JSON-LD */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildBreadcrumbJsonLd('zzz', charName, locale)) }} />
+      <CharacterJsonLd
+        gameId="zzz"
+        locale={locale}
+        name={charName}
+        description={getZzzCharacterDescription(char, locale).slice(0, 300)}
+        charId={char.id}
+        image={imageUrl}
+        faq={faq}
+      />
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-4">
@@ -1955,34 +2133,24 @@ function GuihuanCharacterDetail({ char, locale }: { char: GuihuanCharacter; loca
   const charName = getGuihuanCharacterName(char, locale);
   const build = char.recommendedBuild;
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'VideoGame',
-    name: charName,
-    description: getGuihuanCharacterDescription(char, locale).slice(0, 300),
-    image: imageUrl,
-    url: `https://gachia.com/${locale}/guihuan/characters/${char.id}`,
-  };
-
-  const faqJsonLd = char.faq.length > 0 ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: char.faq.map((f) => ({
-      '@type': 'Question',
-      name: localeStr(f.questionZh, f.question, locale),
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: localeStr(f.answerZh, f.answer, locale),
-      },
-    })),
-  } : null;
+  const faq = char.faq.length > 0
+    ? char.faq.map((f) => ({
+        question: localeStr(f.questionZh, f.question, locale),
+        answer: localeStr(f.answerZh, f.answer, locale),
+      }))
+    : undefined;
 
   return (
     <div>
-      {/* JSON-LD */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildBreadcrumbJsonLd('guihuan', charName, locale)) }} />
+      <CharacterJsonLd
+        gameId="guihuan"
+        locale={locale}
+        name={charName}
+        description={getGuihuanCharacterDescription(char, locale).slice(0, 300)}
+        charId={char.id}
+        image={imageUrl}
+        faq={faq}
+      />
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-4">
@@ -2148,6 +2316,8 @@ function GuihuanCharacterDetail({ char, locale }: { char: GuihuanCharacter; loca
         </Section>
       )}
 
+      <NextStepSection locale={locale} gameId="guihuan" />
+
       {/* Back */}
       <div className="border-t border-game-border pt-4">
         <Link href="/guihuan/characters" className="text-sm text-game-primary transition-colors hover:text-game-accent">
@@ -2184,34 +2354,24 @@ function AnantaCharacterDetail({ char, locale }: { char: AnantaCharacter; locale
   const charName = getAnantaCharacterName(char, locale);
   const build = char.recommendedBuild;
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'VideoGame',
-    name: charName,
-    description: getAnantaCharacterDescription(char, locale).slice(0, 300),
-    image: imageUrl,
-    url: `https://gachia.com/${locale}/ananta/characters/${char.id}`,
-  };
-
-  const faqJsonLd = char.faq.length > 0 ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: char.faq.map((f) => ({
-      '@type': 'Question',
-      name: localeStr(f.questionZh, f.question, locale),
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: localeStr(f.answerZh, f.answer, locale),
-      },
-    })),
-  } : null;
+  const faq = char.faq.length > 0
+    ? char.faq.map((f) => ({
+        question: localeStr(f.questionZh, f.question, locale),
+        answer: localeStr(f.answerZh, f.answer, locale),
+      }))
+    : undefined;
 
   return (
     <div>
-      {/* JSON-LD */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildBreadcrumbJsonLd('ananta', charName, locale)) }} />
+      <CharacterJsonLd
+        gameId="ananta"
+        locale={locale}
+        name={charName}
+        description={getAnantaCharacterDescription(char, locale).slice(0, 300)}
+        charId={char.id}
+        image={imageUrl}
+        faq={faq}
+      />
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-4">
@@ -2377,6 +2537,8 @@ function AnantaCharacterDetail({ char, locale }: { char: AnantaCharacter; locale
         </Section>
       )}
 
+      <NextStepSection locale={locale} gameId="ananta" />
+
       {/* Back */}
       <div className="border-t border-game-border pt-4">
         <Link href="/ananta/characters" className="text-sm text-game-primary transition-colors hover:text-game-accent">
@@ -2480,34 +2642,24 @@ function EndfieldCharacterDetail({ char, locale }: { char: EndfieldCharacter; lo
   const charName = getEndfieldCharacterName(char, locale);
   const build = char.recommendedBuild;
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'VideoGame',
-    name: charName,
-    description: getEndfieldCharacterDescription(char, locale).slice(0, 300),
-    image: imageUrl,
-    url: `https://gachia.com/${locale}/endfield/characters/${char.id}`,
-  };
-
-  const faqJsonLd = char.faq.length > 0 ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: char.faq.map((f) => ({
-      '@type': 'Question',
-      name: localeStr(f.questionZh, f.question, locale),
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: localeStr(f.answerZh, f.answer, locale),
-      },
-    })),
-  } : null;
+  const faq = char.faq.length > 0
+    ? char.faq.map((f) => ({
+        question: localeStr(f.questionZh, f.question, locale),
+        answer: localeStr(f.answerZh, f.answer, locale),
+      }))
+    : undefined;
 
   return (
     <div>
-      {/* JSON-LD */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildBreadcrumbJsonLd('endfield', charName, locale)) }} />
+      <CharacterJsonLd
+        gameId="endfield"
+        locale={locale}
+        name={charName}
+        description={getEndfieldCharacterDescription(char, locale).slice(0, 300)}
+        charId={char.id}
+        image={imageUrl}
+        faq={faq}
+      />
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-4">
@@ -2816,34 +2968,27 @@ function SeaCharacterDetail({ char, locale }: { char: SeaCharacter; locale: Supp
   const elementName = SEA_ELEMENT_NAMES[char.attribute]?.[locale] ?? char.attributeEn;
   const charName = getSeaCharacterName(char, locale);
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'VideoGame',
-    name: charName,
-    description: getSeaCharacterDescription(char, locale).slice(0, 300),
-    image: imageUrl,
-    url: `https://gachia.com/${locale}/sea/characters/${char.id}`,
-  };
-
-  const faqJsonLd = char.faq.length > 0 ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: char.faq.map((f) => ({
-      '@type': 'Question',
-      name: localeStr(f.questionZh, f.question, locale),
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: localeStr(f.answerZh, f.answer, locale),
-      },
-    })),
-  } : null;
+  const faq = char.faq.length > 0
+    ? char.faq.map((f) => ({
+        question: localeStr(f.questionZh, f.question, locale),
+        answer: localeStr(f.answerZh, f.answer, locale),
+      }))
+    : undefined;
+  const seoTags = [char.attributeEn, char.roleEn, char.tierRank].filter(Boolean) as string[];
 
   return (
     <div>
-      {/* JSON-LD */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildBreadcrumbJsonLd('sea', charName, locale)) }} />
+      <CharacterJsonLd
+        gameId="sea"
+        locale={locale}
+        name={charName}
+        description={getSeaCharacterDescription(char, locale).slice(0, 300)}
+        charId={char.id}
+        image={imageUrl}
+        faq={faq}
+        tags={seoTags}
+        categoryLabel={CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
+      />
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-4">
@@ -2993,6 +3138,8 @@ function SeaCharacterDetail({ char, locale }: { char: SeaCharacter; locale: Supp
           </div>
         </Section>
       )}
+
+      <NextStepSection locale={locale} gameId="sea" />
 
       {/* Back */}
       <div className="border-t border-game-border pt-4">

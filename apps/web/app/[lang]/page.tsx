@@ -28,13 +28,13 @@ const MESSAGES: Record<string, Record<string, string>> = {
 const FEATURED: Record<string, string[]> = {
   genshin: ['hu-tao', 'raiden-shogun', 'furina', 'nahida', 'kazuha'],
   starrail: ['kafka', 'jingliu', 'acheron', 'firefly', 'robin'],
-  wuwa: ['jiyan', 'yinlin', 'jiinshi', 'camellya', 'rover-aero'],
+  wuwa: ['jiyan', 'yinlin', 'jinhsi', 'changli', 'zhezhi'],
   nte: ['chiz', 'aurelia', 'skia', 'haniel', 'sakiri'],
   zzz: ['ellen-joe', 'zhu-yuan', 'miyabi', 'burnice-white', 'caesar-king'],
   guihuan: [], // too few characters, skip
   ananta: [], // too few characters, skip
   endfield: ['laevatain', 'ardelia', 'tangtang', 'endministrator', 'lifeng'],
-  sea: ['traveler', 'ais', 'little-axe', 'molly'],
+  sea: ['traveler', 'ais', 'little-axe'],
   skjh: [],
 };
 
@@ -210,7 +210,7 @@ export default async function LocaleHome({
             >
               <div className="relative h-32 w-full overflow-hidden">
                 <Image
-                  src={`/images/og/${gameId}.jpg`}
+                  src={`/images/og/${gameId}.webp`}
                   alt={`${game.name[locale]} - ${locale === 'zh' ? '游戏攻略Wiki' : locale === 'ja' ? 'ゲーム攻略Wiki' : 'Game Wiki'}`}
                   width={400}
                   height={210}

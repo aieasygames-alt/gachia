@@ -68,6 +68,13 @@ import {
   getEndfieldCharacterTierReason,
 } from '@gachia/data/games/endfield/characters';
 import type { EndfieldCharacter, EndfieldCharacterStats } from '@gachia/data/games/endfield/types';
+import {
+  seaCharacters,
+  getSeaCharacterName,
+  getSeaCharacterImage,
+  getSeaCharacterTierReason,
+} from '@gachia/data/games/sea/characters';
+import type { SeaCharacter } from '@gachia/data/games/sea/types';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 // --- Constants ---
@@ -141,6 +148,25 @@ const ENDFIELD_ELEMENT_NAMES: Record<string, Record<string, string>> = {
   electric: { zh: '电击', en: 'Electric', ja: 'エレキ' },
 };
 
+// --- Sea Constants ---
+const SEA_ATTRIBUTES = ['str', 'agi', 'con', 'int', 'per', 'cha'] as const;
+const SEA_ATTRIBUTE_COLORS: Record<string, string> = {
+  str: '#ef4444',
+  agi: '#22c55e',
+  con: '#f97316',
+  int: '#8b5cf6',
+  per: '#3b82f6',
+  cha: '#ec4899',
+};
+const SEA_ATTRIBUTE_NAMES: Record<string, Record<string, string>> = {
+  str: { zh: '力量', en: 'Strength', ja: '筋力' },
+  agi: { zh: '敏捷', en: 'Agility', ja: '俊敏' },
+  con: { zh: '体质', en: 'Constitution', ja: '体質' },
+  int: { zh: '智力', en: 'Intelligence', ja: '知力' },
+  per: { zh: '感知', en: 'Perception', ja: '感知' },
+  cha: { zh: '魅力', en: 'Charisma', ja: '魅力' },
+};
+
 // --- i18n helper ---
 
 function t(locale: SupportedLocale, zh: string, en: string, ja?: string) {
@@ -148,6 +174,38 @@ function t(locale: SupportedLocale, zh: string, en: string, ja?: string) {
 }
 
 function getCompareNextSteps(gameId: GameId, locale: SupportedLocale): NextStepLink[] {
+  if (gameId === 'sea') {
+    return [
+      {
+        href: '/sea/characters',
+        title: { zh: '看船员图鉴', en: 'Browse Crew', ja: '船員図鑑を見る' },
+        description: {
+          zh: '先看船员定位和技能，再回到对比页判断会更稳。',
+          en: 'Review crew roles and skills first, then compare with more context.',
+          ja: 'まず船員の役割とスキルを見てから比較すると判断しやすくなります。',
+        },
+      },
+      {
+        href: '/sea/guides/launch-day-guide',
+        title: { zh: '看开服路线', en: 'Open launch guide', ja: '開服ガイドを見る' },
+        description: {
+          zh: '把角色选择放回首日路线和资源节奏里看，会更接近真实决策。',
+          en: 'Place crew choices back into your day-one route and resource rhythm.',
+          ja: 'キャラ選択を初日ルートと資源配分に戻して考えると現実的です。',
+        },
+      },
+      {
+        href: '/sea/guides/character-vs-outfit-pull-guide',
+        title: { zh: '看资源怎么花', en: 'Read spend plan', ja: '資源プランを見る' },
+        description: {
+          zh: '对比完角色后，继续解决首月抽角色还是追外观的问题。',
+          en: 'After comparing crews, decide whether launch resources go to power or cosmetics.',
+          ja: '比較の次は、初月の資源を戦力か外観かどちらに使うかを決めましょう。',
+        },
+      },
+    ];
+  }
+
   const titles = {
     characters: { zh: '看角色图鉴', en: 'Browse Characters', ja: 'キャラ図鑑を見る' },
     build: { zh: '看配装推荐', en: 'Open Build Recommender', ja: 'ビルドを見る' },
@@ -222,6 +280,7 @@ export function CompareClient({ gameId, locale }: { gameId: GameId; locale: Supp
   if (gameId === 'zzz') return withNextSteps(<ZzzCompare locale={locale} />, locale, getCompareNextSteps(gameId, locale));
   if (gameId === 'guihuan') return withNextSteps(<GuihunCompare locale={locale} />, locale, getCompareNextSteps(gameId, locale));
   if (gameId === 'endfield') return withNextSteps(<EndfieldCompare locale={locale} />, locale, getCompareNextSteps(gameId, locale));
+  if (gameId === 'sea') return withNextSteps(<SeaCompare locale={locale} />, locale, getCompareNextSteps(gameId, locale));
   return <ComingSoon locale={locale} />;
 }
 
@@ -1246,6 +1305,150 @@ function GuihunCompare({ locale }: { locale: SupportedLocale }) {
               </div>
             );
           })}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// =====================================================================
+// Sea Compare
+// =====================================================================
+
+function SeaCompare({ locale }: { locale: SupportedLocale }) {
+  const [char1, setChar1] = useState<SeaCharacter | null>(null);
+  const [char2, setChar2] = useState<SeaCharacter | null>(null);
+  const [selecting, setSelecting] = useState<1 | 2>(1);
+  const [search, setSearch] = useState('');
+  const [filterAttribute, setFilterAttribute] = useState<string>('all');
+
+  function selectChar(c: SeaCharacter) {
+    if (selecting === 1) {
+      setChar1(c);
+      setSelecting(2);
+    } else {
+      setChar2(c);
+      setSelecting(1);
+    }
+  }
+
+  const filtered = useMemo(() => {
+    let chars = seaCharacters;
+    if (filterAttribute !== 'all') chars = chars.filter((c) => c.attribute === filterAttribute);
+    if (search.trim()) {
+      const q = search.toLowerCase();
+      chars = chars.filter(
+        (c) =>
+          c.name.toLowerCase().includes(q) ||
+          c.nameEn.toLowerCase().includes(q) ||
+          c.role.toLowerCase().includes(q) ||
+          c.roleEn.toLowerCase().includes(q) ||
+          c.id.includes(q)
+      );
+    }
+    return chars;
+  }, [filterAttribute, search]);
+
+  return (
+    <div>
+      <h1 className="mb-6 text-2xl font-bold" style={{ color: GAMES.sea.theme.primary }}>
+        {t(locale, '船员对比', 'Crew Compare', '船員比較')}
+      </h1>
+
+      <p className="mb-4 text-sm text-game-text-muted">
+        {t(
+          locale,
+          '先选两位船员，对比定位、船队、速度、强度理由和核心技能。',
+          'Select two crew members to compare roles, fleet, speed, tier reason, and core skills.',
+          '2人の船員を選び、役割、船隊、速度、評価理由、主要スキルを比較します。'
+        )}
+        {selecting === 1
+          ? ` (${t(locale, '正在选第一位', 'Selecting 1st', '1人目を選択中')})`
+          : ` (${t(locale, '正在选第二位', 'Selecting 2nd', '2人目を選択中')})`}
+      </p>
+
+      <div className="mb-4 flex flex-col gap-3 rounded-xl border border-game-border bg-game-surface p-4 sm:flex-row sm:items-center">
+        <input
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder={t(locale, '搜索船员名 / 定位', 'Search crew or role', '船員名 / 役割で検索')}
+          className="w-full rounded-lg border border-game-border bg-transparent px-3 py-2 text-sm text-game-text outline-none placeholder:text-game-text-muted"
+        />
+        <div className="flex flex-wrap gap-2">
+          <button
+            onClick={() => setFilterAttribute('all')}
+            className={`rounded-full border px-3 py-1 text-xs ${filterAttribute === 'all' ? 'border-game-primary text-game-primary' : 'border-game-border text-game-text-muted'}`}
+          >
+            {t(locale, '全部属性', 'All Attributes', '全属性')}
+          </button>
+          {SEA_ATTRIBUTES.map((attribute) => (
+            <button
+              key={attribute}
+              onClick={() => setFilterAttribute(attribute)}
+              className={`rounded-full border px-3 py-1 text-xs ${filterAttribute === attribute ? 'border-game-primary text-game-primary' : 'border-game-border text-game-text-muted'}`}
+            >
+              {SEA_ATTRIBUTE_NAMES[attribute]?.[locale] ?? attribute}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="mb-6 grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8">
+        {filtered.map((c) => (
+          <button
+            key={c.id}
+            onClick={() => selectChar(c)}
+            className={`group flex flex-col items-center gap-1 rounded-lg border p-2 transition-all hover:border-game-primary ${char1?.id === c.id || char2?.id === c.id ? 'border-game-primary bg-game-surface' : 'border-game-border'}`}
+          >
+            <CharacterAvatar src={getSeaCharacterImage(c)} alt={getSeaCharacterName(c, locale)} element={c.attribute} className="h-10 w-10 rounded object-cover" />
+            <span className="text-center text-[10px] leading-tight text-game-text">{getSeaCharacterName(c, locale)}</span>
+            <span className="text-[10px] text-game-text-muted">{locale === 'zh' ? c.role : c.roleEn}</span>
+          </button>
+        ))}
+      </div>
+
+      {char1 && char2 && (
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+          {[char1, char2].map((ch) => (
+            <div key={ch.id} className="rounded-xl border border-game-border bg-game-surface p-4">
+              <div className="mb-4 flex items-start gap-3">
+                <CharacterAvatar src={getSeaCharacterImage(ch)} alt={getSeaCharacterName(ch, locale)} element={ch.attribute} className="h-16 w-16 rounded-xl object-cover" />
+                <div className="min-w-0">
+                  <h3 className="font-semibold text-game-text">{getSeaCharacterName(ch, locale)}</h3>
+                  <div className="mt-1 flex flex-wrap gap-2 text-xs">
+                    <span className="rounded px-2 py-0.5 text-white" style={{ backgroundColor: SEA_ATTRIBUTE_COLORS[ch.attribute] ?? '#6b7280' }}>
+                      {SEA_ATTRIBUTE_NAMES[ch.attribute]?.[locale] ?? ch.attribute}
+                    </span>
+                    <span className="rounded border border-game-border px-2 py-0.5 text-game-text-muted">{locale === 'zh' ? ch.role : ch.roleEn}</span>
+                    <span className="rounded border border-game-border px-2 py-0.5 text-game-text-muted">{ch.rarity === 5 ? t(locale, '黑券', 'Black Ticket', '黒券') : t(locale, '紫券', 'Purple Ticket', '紫券')}</span>
+                    <span className="inline-flex items-center justify-center rounded px-2 py-0.5 text-white" style={{ backgroundColor: TIER_COLORS[ch.tierRank] || '#6b7280' }}>{ch.tierRank}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-2 text-sm">
+                <p><span className="text-game-text-muted">{t(locale, '船队', 'Fleet', '船隊')}:</span> {locale === 'zh' ? ch.fleet : ch.fleetEn}</p>
+                <p><span className="text-game-text-muted">{t(locale, '速度', 'Speed', '速度')}:</span> {ch.speed}</p>
+                <p><span className="text-game-text-muted">{t(locale, '定位理由', 'Tier Reason', '評価理由')}:</span> {getSeaCharacterTierReason(ch, locale)}</p>
+                <p><span className="text-game-text-muted">{t(locale, '角色简介', 'Overview', '概要')}:</span> {locale === 'zh' ? ch.description : ch.descriptionEn}</p>
+              </div>
+
+              <div className="mt-4 space-y-3">
+                <div className="rounded-lg border border-game-border/70 p-3">
+                  <h4 className="mb-1 text-sm font-semibold text-game-primary">{locale === 'zh' ? ch.skills.signature.name : ch.skills.signature.nameEn}</h4>
+                  <p className="text-sm text-game-text-muted">{locale === 'zh' ? ch.skills.signature.description : ch.skills.signature.descriptionEn}</p>
+                </div>
+                <div className="rounded-lg border border-game-border/70 p-3">
+                  <h4 className="mb-1 text-sm font-semibold text-game-primary">{locale === 'zh' ? ch.skills.personal.name : ch.skills.personal.nameEn}</h4>
+                  <p className="text-sm text-game-text-muted">{locale === 'zh' ? ch.skills.personal.description : ch.skills.personal.descriptionEn}</p>
+                </div>
+                <div className="rounded-lg border border-game-border/70 p-3">
+                  <h4 className="mb-1 text-sm font-semibold text-game-primary">{locale === 'zh' ? ch.skills.passive.name : ch.skills.passive.nameEn}</h4>
+                  <p className="text-sm text-game-text-muted">{locale === 'zh' ? ch.skills.passive.description : ch.skills.passive.descriptionEn}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       )}
     </div>

@@ -29,6 +29,7 @@ import {
   skjhWeapons, getSkjhWeaponById, getSkjhWeaponName, getSkjhWeaponEffect, getSkjhWeaponSource,
 } from '@gachia/data/games/skjh/weapons';
 import { Link } from '@/lib/i18n/navigation';
+import { buildWeaponJsonLd } from '@/lib/jsonld';
 
 const RARITY_COLORS: Record<number, string> = { 1: '#9ca3af', 2: '#4ade80', 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };
 
@@ -74,6 +75,168 @@ const SKJH_WEAPON_TYPE: Record<string, Record<string, string>> = {
   skin: { zh: '外观奖励', en: 'Cosmetic', ja: '外観報酬' },
 };
 
+type NextStepLink = {
+  href: string;
+  title: Record<SupportedLocale, string>;
+  description: Record<SupportedLocale, string>;
+};
+
+const WEAPON_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
+  genshin: [
+    {
+      href: '/genshin/characters',
+      title: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+      description: { zh: '把武器和适合它的角色对上', en: 'Match the weapon to the right characters', ja: '適性キャラを確認' },
+    },
+    {
+      href: '/genshin/items',
+      title: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
+      description: { zh: '继续看武器突破材料来源', en: 'Continue with ascension material sources', ja: '突破素材の入手先を確認' },
+    },
+    {
+      href: '/genshin/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '把武器页接到版本与养成专题', en: 'Connect the weapon page to version and build guides', ja: '武器ページを版本・育成へ接続' },
+    },
+  ],
+  starrail: [
+    {
+      href: '/starrail/characters',
+      title: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+      description: { zh: '先看谁最适合这把光锥', en: 'See which characters fit this light cone', ja: '相性キャラを確認' },
+    },
+    {
+      href: '/starrail/items',
+      title: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
+      description: { zh: '补齐光锥升级材料和掉落来源', en: 'Review light cone upgrade materials and drop sources', ja: '強化素材と入手先を確認' },
+    },
+    {
+      href: '/starrail/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '继续看养成、卡池和版本攻略', en: 'Continue with build, banner, and version guides', ja: '育成・ガチャ・版本攻略へ' },
+    },
+  ],
+  wuwa: [
+    {
+      href: '/wuwa/characters',
+      title: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+      description: { zh: '把武器和适配角色串起来', en: 'Connect weapons with their best characters', ja: '武器と適性キャラを接続' },
+    },
+    {
+      href: '/wuwa/items',
+      title: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
+      description: { zh: '继续看突破材料和刷取路线', en: 'Continue with ascension materials and farming routes', ja: '突破素材と周回ルートを確認' },
+    },
+    {
+      href: '/wuwa/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '把武器页接到版本和声骸专题', en: 'Connect the weapon page to version and echo guides', ja: '版本・声骸攻略へ接続' },
+    },
+  ],
+  nte: [
+    {
+      href: '/nte/characters',
+      title: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+      description: { zh: '先确认武器适配的角色', en: 'Check the characters this weapon suits', ja: '適性キャラを確認' },
+    },
+    {
+      href: '/nte/items',
+      title: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
+      description: { zh: '继续看武器升级材料', en: 'Continue with weapon upgrade materials', ja: '武器強化素材を確認' },
+    },
+    {
+      href: '/nte/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '把武器页接到 Boss 和养成攻略', en: 'Connect the weapon page to boss and build guides', ja: 'ボス・育成攻略へ接続' },
+    },
+  ],
+  zzz: [
+    {
+      href: '/zzz/characters',
+      title: { zh: '看代理人图鉴', en: 'Browse agents', ja: 'エージェント図鑑へ' },
+      description: { zh: '先看适配这把音擎的代理人', en: 'See which agents fit this W-Engine', ja: '適性エージェントを確認' },
+    },
+    {
+      href: '/zzz/drive-discs',
+      title: { zh: '看驱动盘图鉴', en: 'Browse drive discs', ja: 'ドライブディスクへ' },
+      description: { zh: '把音擎和驱动盘配套思路补齐', en: 'Fill in the disc pairing logic', ja: '音擎とディスクの組み合わせを補完' },
+    },
+    {
+      href: '/zzz/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '继续看配队、版本和养成专题', en: 'Continue with team, version, and build guides', ja: '編成・版本・育成へ' },
+    },
+  ],
+  guihuan: [
+    {
+      href: '/guihuan/characters',
+      title: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+      description: { zh: '先看这把武器适合谁', en: 'Check which characters suit this weapon', ja: '適性キャラを確認' },
+    },
+    {
+      href: '/guihuan/items',
+      title: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
+      description: { zh: '继续看培养材料和来源', en: 'Continue with upgrade materials and sources', ja: '育成素材と入手先を確認' },
+    },
+    {
+      href: '/guihuan/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '把武器页接到系统和版本专题', en: 'Connect the weapon page to system and version guides', ja: '武器ページをシステム・版本へ接続' },
+    },
+  ],
+  ananta: [
+    {
+      href: '/ananta/characters',
+      title: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+      description: { zh: '先找最适合的使用者', en: 'Find the best users first', ja: '適性キャラを確認' },
+    },
+    {
+      href: '/ananta/items',
+      title: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
+      description: { zh: '继续看武器升级材料', en: 'Continue with weapon upgrade materials', ja: '武器強化素材を確認' },
+    },
+    {
+      href: '/ananta/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '把武器页接到养成专题', en: 'Connect the weapon page to build guides', ja: '武器ページを育成攻略へ接続' },
+    },
+  ],
+  endfield: [
+    {
+      href: '/endfield/characters',
+      title: { zh: '看干员图鉴', en: 'Browse operators', ja: 'オペレーター図鑑へ' },
+      description: { zh: '先看这把武器适合哪些干员', en: 'Check which operators suit this weapon', ja: '適性オペレーターを確認' },
+    },
+    {
+      href: '/endfield/items',
+      title: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
+      description: { zh: '继续看升级材料和获取地点', en: 'Continue with upgrade materials and sources', ja: '強化素材と入手先を確認' },
+    },
+    {
+      href: '/endfield/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '把武器页接到测试与养成专题', en: 'Connect the weapon page to test and build guides', ja: '武器ページをテスト・育成へ接続' },
+    },
+  ],
+  skjh: [
+    {
+      href: '/skjh/characters',
+      title: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+      description: { zh: '先找最合适的使用者', en: 'Find the best users first', ja: '適性キャラを確認' },
+    },
+    {
+      href: '/skjh/items',
+      title: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
+      description: { zh: '继续看武器获取和强化路线', en: 'Continue with acquisition and upgrade paths', ja: '入手と強化ルートを確認' },
+    },
+    {
+      href: '/skjh/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '把武器页接到专题攻略', en: 'Connect the weapon page to guide content', ja: '武器ページを攻略コンテンツへ接続' },
+    },
+  ],
+};
+
 export async function generateStaticParams() {
   return LOCALES.flatMap((lang) => [
     ...genshinWeapons.map((w) => ({ lang, game: 'genshin', id: w.id })),
@@ -103,6 +266,36 @@ const WEAPON_META_OVERRIDES: Record<string, LocaleMeta> = {
       description: '原神遗祀玉珑属性解析：4星法器，满级暴击率36.8%，离场提升生命值与元素精通，查看适用角色和配装思路。',
     },
   },
+  'genshin/jadefalls-splendor': {
+    en: {
+      title: "Jadefall's Splendor Genshin: Stats, Best Users & Build Tips",
+      description: "Jadefall's Splendor guide for Genshin Impact: 5-star Catalyst stats, passive details, best characters, and build tips.",
+    },
+    zh: {
+      title: '碧落之珑攻略：属性、适用角色与配装推荐',
+      description: '原神碧落之珑攻略，整理属性、技能效果、适用角色与配装建议，帮助你判断是否值得培养。',
+    },
+  },
+  'genshin/favonius-codex': {
+    en: {
+      title: 'Favonius Codex Genshin: Stats, Best Users & Builds',
+      description: 'Favonius Codex guide for Genshin Impact: 4-star Catalyst stats, Energy Recharge passive, best users, and build recommendations.',
+    },
+    zh: {
+      title: '西风秘典攻略：属性、适用角色与配装推荐',
+      description: '原神西风秘典攻略，整理属性、充能效果、适用角色和配装建议，方便快速做出培养判断。',
+    },
+  },
+  'genshin/a-thousand-blazing-suns': {
+    en: {
+      title: 'A Thousand Blazing Suns Genshin: Stats, Best Users & Builds',
+      description: 'A Thousand Blazing Suns guide for Genshin Impact: 5-star Claymore stats, passive, best users, and build tips.',
+    },
+    zh: {
+      title: 'A Thousand Blazing Suns 攻略：属性、适用角色与配装推荐',
+      description: '原神 A Thousand Blazing Suns 攻略，整理属性、技能效果、适用角色与配装建议，适合想快速判断是否培养。',
+    },
+  },
 };
 
 function buildAlternates(locale: string, gameId: string, id: string) {
@@ -121,7 +314,7 @@ function buildOg(title: string, description: string, gameId: string, id: string,
     description,
     url: `${BASE_URL}/${locale}/${gameId}/weapons/${id}`,
     siteName: 'Gachia' as const,
-    images: [{ url: `${BASE_URL}/images/og/${gameId}.jpg`, width: 1200, height: 630 }],
+    images: [{ url: `${BASE_URL}/images/og/${gameId}.webp`, width: 1200, height: 630 }],
     locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
   };
 }
@@ -134,6 +327,29 @@ function buildWeaponMetaDescription(base: string, locale: SupportedLocale) {
       : 'The page also covers recommended users, acquisition, and practical role so you can judge whether the weapon is worth investing in.';
   const text = base.trim().length >= 120 ? base.trim() : `${base.trim()} ${addition}`;
   return text.slice(0, 160);
+}
+
+function WeaponJsonLd({
+  gameId,
+  locale,
+  name,
+  description,
+  weaponId,
+}: {
+  gameId: GameId;
+  locale: SupportedLocale;
+  name: string;
+  description: string;
+  weaponId: string;
+}) {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(buildWeaponJsonLd({ gameId, locale, name, description, weaponId })),
+      }}
+    />
+  );
 }
 
 export async function generateMetadata({
@@ -361,6 +577,7 @@ function GenshinWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnTyp
 
   return (
     <div>
+      <WeaponJsonLd gameId="genshin" locale={locale} name={name} description={effect.description || source || name} weaponId={weapon.id} />
       <Breadcrumb game="genshin" gameName={gameName} locale={locale} />
       <Header name={name} nameAlt={locale === 'zh' ? weapon.nameEn : weapon.name} rarity={weapon.rarity} />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -391,6 +608,7 @@ function GenshinWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnTyp
       )}
       {source && <SourceSection source={source} locale={locale} />}
       <UsageTipsSection name={name} gameName={gameName} locale={locale} />
+      <NextStepSection gameId="genshin" locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -420,6 +638,7 @@ function StarRailLightConeDetail({ lc, locale }: { lc: NonNullable<ReturnType<ty
 
   return (
     <div>
+      <WeaponJsonLd gameId="starrail" locale={locale} name={name} description={effect.description || source || name} weaponId={lc.id} />
       <Breadcrumb game="starrail" gameName={gameName} locale={locale} />
       <Header name={name} nameAlt={locale === 'zh' ? lc.nameEn : lc.name} rarity={lc.rarity} />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -441,6 +660,7 @@ function StarRailLightConeDetail({ lc, locale }: { lc: NonNullable<ReturnType<ty
       )}
       {source && <SourceSection source={source} locale={locale} />}
       <UsageTipsSection name={name} gameName={gameName} locale={locale} />
+      <NextStepSection gameId="starrail" locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -470,6 +690,7 @@ function WuWaWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<t
 
   return (
     <div>
+      <WeaponJsonLd gameId="wuwa" locale={locale} name={name} description={effect.description || source || name} weaponId={weapon.id} />
       <Breadcrumb game="wuwa" gameName={gameName} locale={locale} />
       <Header name={name} nameAlt={locale === 'zh' ? weapon.nameEn : weapon.name} rarity={weapon.rarity} />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -501,6 +722,7 @@ function WuWaWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<t
       )}
       {source && <SourceSection source={source} locale={locale} />}
       <UsageTipsSection name={name} gameName={gameName} locale={locale} />
+      <NextStepSection gameId="wuwa" locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -530,6 +752,7 @@ function NteWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<ty
 
   return (
     <div>
+      <WeaponJsonLd gameId="nte" locale={locale} name={name} description={effect.description || source || name} weaponId={weapon.id} />
       <Breadcrumb game="nte" gameName={gameName} locale={locale} />
       <Header name={name} nameAlt={locale === 'zh' ? (weapon.nameEn ?? '') : (weapon.name ?? '')} rarity={0} rank={weapon.rank} />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -550,6 +773,7 @@ function NteWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<ty
       )}
       {source && <SourceSection source={source} locale={locale} />}
       <UsageTipsSection name={name} gameName={gameName} locale={locale} />
+      <NextStepSection gameId="nte" locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -578,6 +802,7 @@ function ZzzWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<ty
 
   return (
     <div>
+      <WeaponJsonLd gameId="zzz" locale={locale} name={name} description={effect.description || source || name} weaponId={weapon.id} />
       <Breadcrumb game="zzz" gameName={gameName} locale={locale} />
       <Header name={name} nameAlt={locale === 'zh' ? weapon.nameEn : weapon.name} rarity={weapon.rank === 'S' ? 5 : weapon.rank === 'A' ? 4 : 3} rank={weapon.rank} />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -597,6 +822,7 @@ function ZzzWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<ty
       )}
       {source && <SourceSection source={source} locale={locale} />}
       <UsageTipsSection name={name} gameName={gameName} locale={locale} />
+      <NextStepSection gameId="zzz" locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -625,6 +851,7 @@ function GuihuanWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnTyp
 
   return (
     <div>
+      <WeaponJsonLd gameId="guihuan" locale={locale} name={name} description={effect.description || source || name} weaponId={weapon.id} />
       <Breadcrumb game="guihuan" gameName={gameName} locale={locale} />
       <Header name={name} nameAlt={locale === 'zh' ? weapon.nameEn : weapon.name} rarity={weapon.rarity} />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -645,6 +872,7 @@ function GuihuanWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnTyp
       )}
       {source && <SourceSection source={source} locale={locale} />}
       <UsageTipsSection name={name} gameName={gameName} locale={locale} />
+      <NextStepSection gameId="guihuan" locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -673,6 +901,7 @@ function AnantaWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType
 
   return (
     <div>
+      <WeaponJsonLd gameId="ananta" locale={locale} name={name} description={effect.description || source || name} weaponId={weapon.id} />
       <Breadcrumb game="ananta" gameName={gameName} locale={locale} />
       <Header name={name} nameAlt={locale === 'zh' ? weapon.nameEn : weapon.name} rarity={weapon.rarity} />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -693,6 +922,7 @@ function AnantaWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType
       )}
       {source && <SourceSection source={source} locale={locale} />}
       <UsageTipsSection name={name} gameName={gameName} locale={locale} />
+      <NextStepSection gameId="ananta" locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -729,6 +959,7 @@ function EndfieldWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnTy
 
   return (
     <div>
+      <WeaponJsonLd gameId="endfield" locale={locale} name={name} description={effect.description || source || name} weaponId={weapon.id} />
       <Breadcrumb game="endfield" gameName={gameName} locale={locale} />
       <Header name={name} nameAlt={locale === 'zh' ? weapon.nameEn : weapon.name} rarity={weapon.rarity} />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -749,6 +980,7 @@ function EndfieldWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnTy
       )}
       {source && <SourceSection source={source} locale={locale} />}
       <UsageTipsSection name={name} gameName={gameName} locale={locale} />
+      <NextStepSection gameId="endfield" locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -778,6 +1010,7 @@ function SkjhWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<t
 
   return (
     <div>
+      <WeaponJsonLd gameId="skjh" locale={locale} name={name} description={effect.description || source || name} weaponId={weapon.id} />
       <Breadcrumb game="skjh" gameName={gameName} locale={locale} />
       <Header name={name} nameAlt={locale === 'zh' ? weapon.nameEn : weapon.name} rarity={weapon.rarity} />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -798,6 +1031,7 @@ function SkjhWeaponDetail({ weapon, locale }: { weapon: NonNullable<ReturnType<t
       )}
       {source && <SourceSection source={source} locale={locale} />}
       <UsageTipsSection name={name} gameName={gameName} locale={locale} />
+      <NextStepSection gameId="skjh" locale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -885,6 +1119,35 @@ function UsageTipsSection({ name, gameName, locale }: { name: string; gameName: 
       </h2>
       <div className="rounded-lg border border-game-border bg-game-surface p-4">
         <p className="text-sm leading-relaxed text-game-text-muted">{tips}</p>
+      </div>
+    </section>
+  );
+}
+
+function NextStepSection({ gameId, locale }: { gameId: GameId; locale: SupportedLocale }) {
+  const links = WEAPON_NEXT_STEPS[gameId];
+  if (!links?.length) return null;
+
+  return (
+    <section className="mt-6">
+      <h2 className="mb-3 text-lg font-semibold text-game-text">
+        {locale === 'zh' ? '下一步去看' : locale === 'ja' ? '次に見るページ' : 'Next Steps'}
+      </h2>
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {links.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href as '/'}
+            className="group rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary"
+          >
+            <h3 className="mb-1 text-sm font-semibold text-game-text group-hover:text-game-primary">
+              {link.title[locale]}
+            </h3>
+            <p className="text-xs text-game-text-muted line-clamp-2">
+              {link.description[locale]}
+            </p>
+          </Link>
+        ))}
       </div>
     </section>
   );

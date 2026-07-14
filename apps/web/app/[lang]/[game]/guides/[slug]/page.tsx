@@ -12,6 +12,9 @@ import {
   NTE_GUIDE_CATEGORIES,
   guides as nteGuides,
 } from '@gachia/data/games/nte/guides';
+import type { NteGuide } from '@gachia/data/games/nte/guides';
+import { getNteCharacterById, getNteCharacterName } from '@gachia/data/games/nte/characters';
+import { getRegionById as getNteRegionById, getRegionName as getNteRegionName } from '@gachia/data/games/nte/regions';
 import {
   genshinGuides,
   getGuideById as getGenshinGuideById,
@@ -103,6 +106,7 @@ import {
   SEA_GUIDE_CATEGORIES,
 } from '@gachia/data/games/sea/guides';
 import type { SeaGuide, SeaGuideFaq } from '@gachia/data/games/sea/guides';
+import { getSeaCharacterById, getSeaCharacterName } from '@gachia/data/games/sea/characters';
 import {
   skjhGuides,
   getSkjhGuideById,
@@ -312,32 +316,32 @@ const GUIDE_META_OVERRIDES: Record<string, LocaleMeta> = {
   },
   'sea/launch-day-guide': {
     en: {
-      title: 'Sea of Remnants Launch Guide: Day 1 Tips, Rewards & Route',
-      description: 'Sea of Remnants launch-day guide covering first-day rewards, starter priorities, exploration tips, and early route planning.',
+      title: 'Sea of Remnants Official Hub & Launch Guide: July 9 PC Open Beta, Cross-Platform, Launch Rewards',
+      description: 'Sea of Remnants official hub and launch guide covering the July 9 PC open beta, July 23 mobile launch, cross-platform support, 100 pulls in launch month, free Black Ticket crew selection, PC specs, preload, and beginner FAQ.',
     },
     zh: {
-      title: '遗忘之海开服攻略：首日福利、开荒优先级与路线',
-      description: '整理遗忘之海开服首日福利、开荒优先级、探索路线和新手注意事项，适合刚进坑的玩家。',
+      title: '《遗忘之海》官网入口与开服攻略：7 月 9 日公测、平台互通、首月福利',
+      description: '遗忘之海官网入口与开服攻略，覆盖 7 月 9 日 PC 公测、7 月 23 日移动端、三端互通、首月 100 抽资源、自选黑券船员、PC 配置要求、预下载入口、新手首日路线和 FAQ。',
     },
   },
   'sea/open-beta-version-center': {
     en: {
-      title: 'Sea of Remnants Open Beta Center: Date, Rewards & FAQ',
-      description: 'Find the Sea of Remnants open beta date, launch rewards, FAQs, PC requirements, and version highlights in one place.',
+      title: 'Sea of Remnants Open Beta Center / Official Hub: July 9 PC Launch and July 23 Mobile Updates',
+      description: 'Summarizes Sea of Remnants PC open beta on July 9, the July 23 mobile launch, official hub links, cross-platform play, first-month content, and launch rewards.',
     },
     zh: {
-      title: '遗忘之海公测版本中心：时间、福利与 FAQ',
-      description: '汇总遗忘之海公测时间、开服福利、FAQ、PC 配置和版本重点，适合先看总览再深入。',
+      title: '《遗忘之海》公测中心 / 官网入口：7 月 9 日公测与首月更新',
+      description: '汇总《遗忘之海》2026 年 7 月 9 日 PC 公测、移动端 7 月 23 日上线、官网入口、三端互通、首月新海域、新船员、系统玩法和公测福利。',
     },
   },
   'sea/download-install-guide': {
     en: {
-      title: 'Sea of Remnants Download & Install Guide: PC Setup',
-      description: 'Sea of Remnants download and install guide with PC setup tips, common fixes, and what to prepare before launch.',
+      title: 'Sea of Remnants Download, Install & PC Specs: July 6 Preload, July 9 Open Beta',
+      description: 'Sea of Remnants PC preload, pre-character creation, install checklist, official download entry, system requirements, and launch-day troubleshooting.',
     },
     zh: {
-      title: '遗忘之海下载安装攻略：PC 安装与常见问题',
-      description: '整理遗忘之海 PC 端下载安装、配置准备和常见问题，方便开服前快速完成准备。',
+      title: '《遗忘之海》下载安装与配置要求：7 月 6 日预下载、7 月 9 日公测',
+      description: '整理《遗忘之海》PC 预下载、预创角、安装检查、配置要求、官网下载入口和开服当天排错步骤。',
     },
   },
 };
@@ -517,6 +521,11 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
         label: { zh: '看下载安装', en: 'Read install guide', ja: 'DLガイドへ' },
         description: { zh: '开服前先把安装准备好', en: 'Get set up before launch', ja: '開始前に準備', },
       },
+      {
+        href: '/sea/guides/good-gold-bricks-farming-guide',
+        label: { zh: '看好金砖速刷', en: 'Read gold bricks guide', ja: '好金砖ガイドへ' },
+        description: { zh: '开服后别乱花，先看怎么赚和怎么卖', en: 'Do not spend blindly before learning the early economy', ja: '序盤の金策と売り方を先に確認', },
+      },
     ],
     'open-beta-version-center': [
       {
@@ -540,6 +549,74 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
         href: '/sea/guides/launch-day-guide',
         label: { zh: '看开服攻略', en: 'Read launch guide', ja: '開服攻略へ' },
         description: { zh: '安装后直接接首日路线', en: 'Move straight into day-one routing', ja: 'DL後に初日ルートへ', },
+      },
+    ],
+    'payment-model-guide': [
+      {
+        href: '/sea/guides/trade-market-guide',
+        label: { zh: '看贸易场总览', en: 'Read trade market guide', ja: '交易所総覧へ' },
+        description: { zh: '先把贸易场机制和可交易内容看全', en: 'See how the market works and what is tradeable', ja: '交易所の仕組みと取引対象を確認', },
+      },
+      {
+        href: '/sea/guides/good-gold-bricks-farming-guide',
+        label: { zh: '看好金砖速刷', en: 'Read gold bricks guide', ja: '好金砖ガイドへ' },
+        description: { zh: '继续看零氪首周怎么赚、怎么卖、怎么囤', en: 'Continue with first-week F2P earning and selling routes', ja: '無課金向けの初週金策へ進む', },
+      },
+      {
+        href: '/sea/guides/character-vs-outfit-pull-guide',
+        label: { zh: '看角色还是服装', en: 'Character vs outfit pulls', ja: 'キャラか衣装かを見る' },
+        description: { zh: '把资源规划落到首月抽卡决策上', en: 'Turn monetization info into a launch-month pull plan', ja: '資源計画を初月の判断に落とし込む', },
+      },
+    ],
+    'trade-market-guide': [
+      {
+        href: '/sea/guides/good-gold-bricks-farming-guide',
+        label: { zh: '看好金砖速刷', en: 'Read gold bricks guide', ja: '好金砖ガイドへ' },
+        description: { zh: '从系统总览继续走到首周实操路线', en: 'Move from system overview into practical first-week execution', ja: '総覧から初週実践へ進む', },
+      },
+      {
+        href: '/sea/guides/payment-model-guide',
+        label: { zh: '回到付费模式', en: 'Back to payment model', ja: '課金モデルへ戻る' },
+        description: { zh: '把交易系统放回整体商业化设计里看', en: 'Place the market back inside the full monetization model', ja: '交易所を全体課金設計に戻して見る', },
+      },
+      {
+        href: '/sea/guides/character-vs-outfit-pull-guide',
+        label: { zh: '看角色还是服装', en: 'Character vs outfit pulls', ja: 'キャラか衣装かを見る' },
+        description: { zh: '继续看资源该换推进、外观还是交易空间', en: 'Decide whether resources should become power, cosmetics, or flexibility', ja: '資源を火力・衣装・余地のどれに変えるか判断', },
+      },
+    ],
+    'good-gold-bricks-farming-guide': [
+      {
+        href: '/sea/guides/trade-market-guide',
+        label: { zh: '回看贸易场总览', en: 'Back to trade market guide', ja: '交易所総覧へ戻る' },
+        description: { zh: '先把总规则再对一遍，再做价格判断', en: 'Review the core rules before making market calls', ja: '価格判断前にルールを再確認', },
+      },
+      {
+        href: '/sea/guides/character-vs-outfit-pull-guide',
+        label: { zh: '看角色还是服装', en: 'Character vs outfit pulls', ja: 'キャラか衣装かを見る' },
+        description: { zh: '赚到好金砖之后，下一步就是决定怎么花', en: 'After earning bricks, decide how to spend them', ja: '好金砖を稼いだ後は使い道を決める', },
+      },
+      {
+        href: '/sea/guides/payment-model-guide',
+        label: { zh: '看付费模式', en: 'Read payment model', ja: '課金モデルへ' },
+        description: { zh: '把好金砖放回整体零氪/轻氪策略里看', en: 'Reconnect bricks to the broader F2P or light-spend plan', ja: '好金砖を全体戦略に戻して確認', },
+      },
+    ],
+    'character-vs-outfit-pull-guide': [
+      {
+        href: '/sea/guides/payment-model-guide',
+        label: { zh: '回到付费模式', en: 'Back to payment model', ja: '課金モデルへ戻る' },
+        description: { zh: '重新确认角色、外观和保底的整体关系', en: 'Re-check the bigger relationship between pulls, cosmetics, and pity', ja: 'ガチャ・衣装・保底の全体関係へ戻る', },
+      },
+      {
+        href: '/sea/guides/good-gold-bricks-farming-guide',
+        label: { zh: '看好金砖速刷', en: 'Read gold bricks guide', ja: '好金砖ガイドへ' },
+        description: { zh: '如果你决定先囤资源，就继续看怎么赚', en: 'If you decide to save, continue with how to earn bricks efficiently', ja: '先に貯めるなら金策ルートへ', },
+      },
+      {
+        href: '/sea/guides/launch-day-guide',
+        label: { zh: '回到开服攻略', en: 'Back to launch guide', ja: '開服攻略へ戻る' },
+        description: { zh: '把抽卡判断放回首日路线和资源节奏里', en: 'Place the pull decision back into your day-one route', ja: '判断を初日ルートに戻して確認', },
       },
     ],
   },
@@ -876,6 +953,8 @@ function GenshinGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: s
         title: getGenshinGuideTitle(guide, locale),
         summary: getGenshinGuideSummary(guide, locale),
         slug,
+        tags: guide.tags,
+        categoryLabel: category,
         faq: guide.faq?.map((f) => ({ question: getGenshinGuideFaqQuestion(f, locale), answer: getGenshinGuideFaqAnswer(f, locale) })),
       }).map((schema, i) => (
         <script
@@ -955,6 +1034,8 @@ function NteGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
         </section>
       )}
 
+      <NteRelatedEntitiesSection guide={guide} locale={locale} currentSlug={slug} />
+
       <NextStepSection gameId="nte" currentSlug={slug} locale={locale} />
 
       <RelatedGuidesSection gameId="nte" currentSlug={slug} locale={locale} />
@@ -972,6 +1053,8 @@ function NteGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
         title: getNteGuideTitle(guide, locale),
         summary: getNteGuideSummary(guide, locale),
         slug,
+        tags: guide.tags,
+        categoryLabel: category,
         faq: guide.faq?.map((f) => ({ question: getNteGuideFaqQuestion(f, locale), answer: getNteGuideFaqAnswer(f, locale) })),
       }).map((schema, i) => (
         <script
@@ -1072,6 +1155,8 @@ function WuWaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: stri
         title: getWuWaGuideTitle(guide, locale),
         summary: getWuWaGuideSummary(guide, locale),
         slug,
+        tags: guide.tags,
+        categoryLabel: category,
         faq: guide.faq?.map((f) => ({ question: getWuWaGuideFaqQuestion(f, locale), answer: getWuWaGuideFaqAnswer(f, locale) })),
       }).map((schema, i) => (
         <script
@@ -1166,6 +1251,8 @@ function StarRailGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: 
         title: getStarRailGuideTitle(guide, locale),
         summary: getStarRailGuideSummary(guide, locale),
         slug,
+        tags: guide.tags,
+        categoryLabel: category,
         faq: guide.faq?.map((f) => ({ question: getStarRailGuideFaqQuestion(f, locale), answer: getStarRailGuideFaqAnswer(f, locale) })),
       }).map((schema, i) => (
         <script
@@ -1255,6 +1342,8 @@ function ZzzGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
         title: getZzzGuideTitle(guide, locale),
         summary: getZzzGuideSummary(guide, locale),
         slug,
+        tags: guide.tags,
+        categoryLabel: category,
         faq: guide.faq?.map((f) => ({ question: getZzzGuideFaqQuestion(f, locale), answer: getZzzGuideFaqAnswer(f, locale) })),
       }).map((schema, i) => (
         <script
@@ -1343,6 +1432,8 @@ function GuihuanGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: s
         title: getGuihuanGuideTitle(guide, locale),
         summary: getGuihuanGuideSummary(guide, locale),
         slug,
+        tags: guide.tags,
+        categoryLabel: category,
         faq: guide.faq?.map((f) => ({ question: getGuihuanGuideFaqQuestion(f, locale), answer: getGuihuanGuideFaqAnswer(f, locale) })),
       }).map((schema, i) => (
         <script
@@ -1431,6 +1522,8 @@ function AnantaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: st
         title: getAnantaGuideTitle(guide, locale),
         summary: getAnantaGuideSummary(guide, locale),
         slug,
+        tags: guide.tags,
+        categoryLabel: category,
         faq: guide.faq?.map((f) => ({ question: getAnantaGuideFaqQuestion(f, locale), answer: getAnantaGuideFaqAnswer(f, locale) })),
       }).map((schema, i) => (
         <script
@@ -1520,6 +1613,8 @@ function EndfieldGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: 
         title: getEndfieldGuideTitle(guide, locale),
         summary: getEndfieldGuideSummary(guide, locale),
         slug,
+        tags: guide.tags,
+        categoryLabel: category,
         faq: guide.faq?.map((f) => ({ question: getEndfieldGuideFaqQuestion(f, locale), answer: getEndfieldGuideFaqAnswer(f, locale) })),
       }).map((schema, i) => (
         <script
@@ -1593,6 +1688,8 @@ function SeaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
         </section>
       )}
 
+      <SeaRelatedEntitiesSection guide={guide} locale={locale} currentSlug={slug} />
+
       <NextStepSection gameId="sea" currentSlug={slug} locale={locale} />
 
       <RelatedGuidesSection gameId="sea" currentSlug={slug} locale={locale} />
@@ -1609,6 +1706,8 @@ function SeaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
         title: getSeaGuideTitle(guide, locale),
         summary: getSeaGuideSummary(guide, locale),
         slug,
+        tags: guide.tags,
+        categoryLabel: category,
         faq: guide.faq?.map((f) => ({ question: getSeaGuideFaqQuestion(f, locale), answer: getSeaGuideFaqAnswer(f, locale) })),
       }).map((schema, i) => (
         <script
@@ -1696,6 +1795,8 @@ function SkjhGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: stri
         title: getSkjhGuideTitle(guide, locale),
         summary: getSkjhGuideSummary(guide, locale),
         slug,
+        tags: guide.tags,
+        categoryLabel: category,
         faq: guide.faq?.map((f) => ({ question: getSkjhGuideFaqQuestion(f, locale), answer: getSkjhGuideFaqAnswer(f, locale) })),
       }).map((schema, i) => (
         <script
@@ -1805,6 +1906,446 @@ function NextStepSection({ gameId, currentSlug, locale }: { gameId: string; curr
             </p>
           </Link>
         ))}
+      </div>
+    </section>
+  );
+}
+
+const NTE_LORE_LINKS: Record<string, { href: string; label: Record<SupportedLocale, string>; description: Record<SupportedLocale, string> }> = {
+  'hollow-phenomenon': {
+    href: '/nte/guides/exploration-tips',
+    label: { zh: '空洞现象与探索提示', en: 'Hollow Phenomenon & Exploration Tips', ja: 'ホロウ現象と探索ヒント' },
+    description: {
+      zh: '先看空洞现象的探索规律，再回到地图路线与隐藏内容。',
+      en: 'Learn Hollow phenomenon patterns, then return to routes and hidden content.',
+      ja: 'ホロウ現象の探索傾向を確認してから、ルートと隠し要素へ戻れます。',
+    },
+  },
+};
+
+const NTE_LOCATION_LABELS: Record<string, Record<SupportedLocale, string>> = {
+  hethereau: { zh: '海瑟劳', en: 'Hethereau', ja: 'ヘテロー' },
+  'sixth-street': { zh: '六街', en: 'Sixth Street', ja: 'シックスストリート' },
+  'hollow-zero': { zh: '空洞零号', en: 'Hollow Zero', ja: 'ホロウ・ゼロ' },
+  'lumina-square': { zh: '光映广场', en: 'Lumina Square', ja: 'ルミナスクエア' },
+};
+
+function NteRelatedEntitiesSection({
+  guide,
+  locale,
+  currentSlug,
+}: {
+  guide: NteGuide;
+  locale: SupportedLocale;
+  currentSlug: string;
+}) {
+  const isDefined = <T,>(value: T | null | undefined): value is T => value != null;
+
+  const characterLinks = (guide.relatedCharacters ?? [])
+    .map((id) => {
+      const character = getNteCharacterById(id);
+      if (!character) return null;
+      return {
+        href: `/nte/characters/${id}`,
+        label: getNteCharacterName(character, locale),
+        description:
+          locale === 'zh'
+            ? '去角色详情页看技能、定位和配装。'
+            : locale === 'ja'
+              ? 'キャラ詳細でスキル、役割、ビルドを確認。'
+              : 'Open the character page for skills, roles, and builds.',
+      };
+    })
+    .filter(isDefined)
+    .filter((item) => item.href !== `/nte/guides/${currentSlug}`);
+
+  const locationLinks = (guide.relatedLocations ?? [])
+    .map((id) => {
+      const region = getNteRegionById(id);
+      const label = region ? getNteRegionName(region, locale) : NTE_LOCATION_LABELS[id]?.[locale] ?? id;
+      return {
+        href: `/nte/map#${id}`,
+        label,
+        description:
+          locale === 'zh'
+            ? '去地图页查看区域、路线和探索入口。'
+            : locale === 'ja'
+              ? 'マップで区域、ルート、探索入口を確認。'
+              : 'Open the map for zones, routes, and exploration entry points.',
+      };
+    })
+    .filter(isDefined)
+    .filter((item) => item.href !== `/nte/guides/${currentSlug}`);
+
+  const loreLinks = (guide.relatedLore ?? [])
+    .map((id) => {
+      const preset = NTE_LORE_LINKS[id];
+      if (preset) {
+        return {
+          href: preset.href,
+          label: preset.label[locale],
+          description: preset.description[locale],
+        };
+      }
+      return {
+        href: '/nte/version',
+        label:
+          locale === 'zh'
+            ? '世界观与版本专题'
+            : locale === 'ja'
+              ? '世界観とバージョン特集'
+              : 'Lore and version hub',
+        description:
+          locale === 'zh'
+            ? '回到版本专题继续看世界观和更新节点。'
+            : locale === 'ja'
+              ? 'バージョン特集に戻って世界観と更新を確認。'
+              : 'Return to the version hub for lore and updates.',
+      };
+    })
+    .filter(isDefined)
+    .filter((item) => item.href !== `/nte/guides/${currentSlug}`);
+
+  const sections = [
+    { title: locale === 'zh' ? '相关角色' : locale === 'ja' ? '関連キャラ' : 'Related Characters', links: characterLinks },
+    { title: locale === 'zh' ? '相关地点' : locale === 'ja' ? '関連ロケーション' : 'Related Locations', links: locationLinks },
+    { title: locale === 'zh' ? '相关世界观' : locale === 'ja' ? '関連世界観' : 'Related Lore', links: loreLinks },
+  ].filter((section) => section.links.length > 0);
+
+  if (sections.length === 0) return null;
+
+  return (
+    <section className="mb-8">
+      <h2 className="mb-4 text-lg font-semibold text-game-primary">
+        {locale === 'zh' ? '继续往下看' : locale === 'ja' ? '続けて見る' : 'Continue Exploring'}
+      </h2>
+      <div className="grid gap-4 md:grid-cols-3">
+        {sections.map((section) => (
+          <div key={section.title} className="rounded-lg border border-game-border bg-game-surface p-4">
+            <h3 className="mb-3 text-sm font-semibold text-game-text">{section.title}</h3>
+            <div className="space-y-2">
+              {section.links.map((link) => (
+                <Link
+                  key={`${section.title}-${link.href}-${link.label}`}
+                  href={link.href as '/'}
+                  className="block rounded-md border border-game-border bg-game-surface-alt px-3 py-2 transition-colors hover:border-game-primary"
+                >
+                  <div className="text-sm font-medium text-game-text">{link.label}</div>
+                  <div className="mt-1 text-xs text-game-text-muted">{link.description}</div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+const SEA_GUIDE_ENTITY_LINKS: Record<string, {
+  characters?: string[];
+  guides?: Array<{ href: string; label: Record<SupportedLocale, string>; description: Record<SupportedLocale, string> }>;
+}> = {
+  'launch-day-guide': {
+    characters: ['traveler', 'ais', 'little-axe', 'princess'],
+    guides: [
+      {
+        href: '/sea/guides/open-beta-version-center',
+        label: { zh: '看公测中心', en: 'Open beta center', ja: '公測センターへ' },
+        description: { zh: '先看版本总览和首月更新。', en: 'Start with the version overview and month-one updates.', ja: '版本概要と初月更新を見る。' },
+      },
+      {
+        href: '/sea/guides/download-install-guide',
+        label: { zh: '看下载安装', en: 'Download & install', ja: 'DLガイドへ' },
+        description: { zh: '开服前把下载和安装准备好。', en: 'Get download and install ready before launch.', ja: '配信前にDLとインストールを整える。' },
+      },
+      {
+        href: '/sea/guides/launch-rewards-codes-guide',
+        label: { zh: '看福利与兑换码', en: 'Rewards & codes', ja: '報酬とコードへ' },
+        description: { zh: '别漏掉首月福利和兑换码。', en: 'Do not miss launch rewards or codes.', ja: '初月報酬とコードを見逃さない。' },
+      },
+    ],
+  },
+  'open-beta-version-center': {
+    characters: ['traveler', 'ais', 'little-axe', 'heige'],
+    guides: [
+      {
+        href: '/sea/guides/launch-day-guide',
+        label: { zh: '看开服攻略', en: 'Launch guide', ja: '開服攻略へ' },
+        description: { zh: '把时间、福利和首日路线串起来。', en: 'Tie timing, rewards, and day-one routing together.', ja: '時期、報酬、初日ルートを接続。' },
+      },
+      {
+        href: '/sea/guides/launch-preview-calendar',
+        label: { zh: '看前瞻日历', en: 'Preview calendar', ja: '前瞻カレンダーへ' },
+        description: { zh: '继续看版本节点和节奏。', en: 'Continue with version nodes and pacing.', ja: '版本ノードと進行を確認。' },
+      },
+      {
+        href: '/sea/guides/launch-rewards-codes-guide',
+        label: { zh: '看福利与兑换码', en: 'Rewards & codes', ja: '報酬とコードへ' },
+        description: { zh: '把版本更新和奖励入口接起来。', en: 'Connect version updates with reward pages.', ja: '版本更新と報酬導線をつなぐ。' },
+      },
+    ],
+  },
+  'download-install-guide': {
+    characters: ['traveler', 'ais'],
+    guides: [
+      {
+        href: '/sea/guides/system-requirements-guide',
+        label: { zh: '看配置要求', en: 'System requirements', ja: '必要環境へ' },
+        description: { zh: '先确认电脑能不能跑。', en: 'Check whether your PC can run it.', ja: 'PC要件を先に確認。' },
+      },
+      {
+        href: '/sea/guides/platform-download-guide',
+        label: { zh: '看平台入口', en: 'Platform entry', ja: 'プラットフォーム入口へ' },
+        description: { zh: '按平台确认下载路径。', en: 'Confirm the correct download path by platform.', ja: 'プラットフォーム別の導線を確認。' },
+      },
+      {
+        href: '/sea/guides/launch-day-guide',
+        label: { zh: '看开服攻略', en: 'Launch guide', ja: '開服攻略へ' },
+        description: { zh: '安装后直接接首日路线。', en: 'Move straight into day-one routing.', ja: 'DL後に初日ルートへ。' },
+      },
+    ],
+  },
+  'tier-list-guide': {
+    characters: ['traveler', 'ais', 'little-axe', 'heige', 'princess'],
+    guides: [
+      {
+        href: '/sea/guides/team-building-guide',
+        label: { zh: '看船队编组', en: 'Team building', ja: '船隊編成へ' },
+        description: { zh: '把强度和阵容搭配连起来。', en: 'Connect tier strength with team building.', ja: '強度と編成をつなぐ。' },
+      },
+      {
+        href: '/sea/guides/gacha-recruitment-guide',
+        label: { zh: '看招募规划', en: 'Recruitment plan', ja: '招募計画へ' },
+        description: { zh: '抽卡前先看资源和 6 选 1。', en: 'Check resources and the selector before pulling.', ja: '抽選前に資源と6択を確認。' },
+      },
+      {
+        href: '/sea/guides/combat-system-guide',
+        label: { zh: '看战斗系统', en: 'Combat system', ja: '戦闘システムへ' },
+        description: { zh: '理解机制后再选角色。', en: 'Understand mechanics before choosing crews.', ja: '機構を理解してから選ぶ。' },
+      },
+    ],
+  },
+  'team-building-guide': {
+    characters: ['traveler', 'ais', 'little-axe', 'princess'],
+    guides: [
+      {
+        href: '/sea/guides/tier-list-guide',
+        label: { zh: '看节奏榜', en: 'Tier list', ja: 'Tier表へ' },
+        description: { zh: '阵容前先看强度。', en: 'Check strength before building.', ja: '編成前に強度を確認。' },
+      },
+      {
+        href: '/sea/guides/gacha-recruitment-guide',
+        label: { zh: '看招募规划', en: 'Recruitment plan', ja: '招募計画へ' },
+        description: { zh: '把抽卡和队伍需求对上。', en: 'Align pulls with team needs.', ja: '抽選と編成需要を合わせる。' },
+      },
+      {
+        href: '/sea/guides/combat-system-guide',
+        label: { zh: '看战斗系统', en: 'Combat system', ja: '戦闘システムへ' },
+        description: { zh: '理解机制后再抄作业。', en: 'Learn the mechanics before copying comps.', ja: '機構理解してから真似る。' },
+      },
+    ],
+  },
+  'gacha-recruitment-guide': {
+    characters: ['traveler', 'ais', 'little-axe', 'heige', 'princess'],
+    guides: [
+      {
+        href: '/sea/guides/launch-rewards-codes-guide',
+        label: { zh: '看福利与兑换码', en: 'Rewards & codes', ja: '報酬とコードへ' },
+        description: { zh: '先拿资源再决定怎么抽。', en: 'Secure resources before deciding pulls.', ja: '資源を確保してから抽選判断。' },
+      },
+      {
+        href: '/sea/guides/tier-list-guide',
+        label: { zh: '看节奏榜', en: 'Tier list', ja: 'Tier表へ' },
+        description: { zh: '把抽卡目标和强度对齐。', en: 'Align targets with strength picks.', ja: '狙いと強度を揃える。' },
+      },
+      {
+        href: '/sea/guides/team-building-guide',
+        label: { zh: '看船队编组', en: 'Team building', ja: '船隊編成へ' },
+        description: { zh: '看完抽卡再接阵容。', en: 'Move from recruitment into team building.', ja: '招募後に編成へ進む。' },
+      },
+    ],
+  },
+  'combat-system-guide': {
+    characters: ['traveler', 'ais', 'little-axe'],
+    guides: [
+      {
+        href: '/sea/guides/launch-boss-map-guide',
+        label: { zh: '看公测海域与 BOSS', en: 'Boss map guide', ja: '海域とBOSSへ' },
+        description: { zh: '把战斗机制接到实战对象。', en: 'Apply combat mechanics to actual bosses.', ja: '戦闘機構を実戦へ。' },
+      },
+      {
+        href: '/sea/guides/team-building-guide',
+        label: { zh: '看船队编组', en: 'Team building', ja: '船隊編成へ' },
+        description: { zh: '理解机制后组队更顺。', en: 'Build teams more smoothly after mechanics.', ja: '機構理解後に編成しやすい。' },
+      },
+      {
+        href: '/sea/guides/tier-list-guide',
+        label: { zh: '看节奏榜', en: 'Tier list', ja: 'Tier表へ' },
+        description: { zh: '把机制和强度连起来。', en: 'Link mechanics with power rankings.', ja: '機構と強度を結ぶ。' },
+      },
+    ],
+  },
+  'launch-boss-map-guide': {
+    characters: ['traveler', 'ais', 'little-axe', 'heige'],
+    guides: [
+      {
+        href: '/sea/guides/combat-system-guide',
+        label: { zh: '看战斗系统', en: 'Combat system', ja: '戦闘システムへ' },
+        description: { zh: '先理解机制再看 BOSS。', en: 'Understand mechanics before bosses.', ja: '機構を先に理解。' },
+      },
+      {
+        href: '/sea/guides/launch-day-guide',
+        label: { zh: '看开服攻略', en: 'Launch guide', ja: '開服攻略へ' },
+        description: { zh: '海域和首日路线一起看。', en: 'Read sea routes alongside launch day flow.', ja: '海域と初日導線を一緒に。' },
+      },
+    ],
+  },
+  'payment-model-guide': {
+    characters: ['princess', 'little-axe', 'heige'],
+    guides: [
+      {
+        href: '/sea/guides/trade-market-guide',
+        label: { zh: '看贸易场总览', en: 'Trade market guide', ja: '交易所総覧へ' },
+        description: { zh: '继续看好金砖和玩家交易怎么运作。', en: 'Continue with how Good Gold Bricks and trading work.', ja: '好金砖と取引の仕組みを続けて確認。' },
+      },
+      {
+        href: '/sea/guides/good-gold-bricks-farming-guide',
+        label: { zh: '看好金砖速刷', en: 'Gold bricks guide', ja: '好金砖ガイドへ' },
+        description: { zh: '把付费逻辑落到首周赚钱路线。', en: 'Turn monetization theory into first-week earning routes.', ja: '課金設計を初週金策に落とし込む。' },
+      },
+      {
+        href: '/sea/guides/character-vs-outfit-pull-guide',
+        label: { zh: '看角色还是服装', en: 'Character vs outfit pulls', ja: 'キャラか衣装かを見る' },
+        description: { zh: '继续看首月资源怎么分配。', en: 'Keep going with launch-month resource splitting.', ja: '初月の資源配分を続けて確認。' },
+      },
+    ],
+  },
+  'trade-market-guide': {
+    characters: ['little-axe', 'heige', 'princess'],
+    guides: [
+      {
+        href: '/sea/guides/good-gold-bricks-farming-guide',
+        label: { zh: '看好金砖速刷', en: 'Gold bricks guide', ja: '好金砖ガイドへ' },
+        description: { zh: '从机制总览继续走到首周实操。', en: 'Move from system overview into first-week execution.', ja: '仕組みから初週実践へ進む。' },
+      },
+      {
+        href: '/sea/guides/character-vs-outfit-pull-guide',
+        label: { zh: '看角色还是服装', en: 'Character vs outfit pulls', ja: 'キャラか衣装かを見る' },
+        description: { zh: '把交易所得和抽卡决策连起来。', en: 'Connect market gains to your pull decisions.', ja: '交易利益とガチャ判断をつなぐ。' },
+      },
+    ],
+  },
+  'good-gold-bricks-farming-guide': {
+    characters: ['little-axe', 'princess', 'heige'],
+    guides: [
+      {
+        href: '/sea/guides/trade-market-guide',
+        label: { zh: '回看贸易场总览', en: 'Trade market guide', ja: '交易所総覧へ' },
+        description: { zh: '先把总规则再对一遍。', en: 'Review the core rules again.', ja: '基本ルールを再確認する。' },
+      },
+      {
+        href: '/sea/guides/character-vs-outfit-pull-guide',
+        label: { zh: '看角色还是服装', en: 'Character vs outfit pulls', ja: 'キャラか衣装かを見る' },
+        description: { zh: '赚到资源后继续决定怎么花。', en: 'After earning resources, decide how to spend them.', ja: '稼いだ後の使い道を決める。' },
+      },
+    ],
+  },
+  'character-vs-outfit-pull-guide': {
+    characters: ['little-axe', 'princess', 'molly'],
+    guides: [
+      {
+        href: '/sea/guides/payment-model-guide',
+        label: { zh: '回到付费模式', en: 'Payment model guide', ja: '課金モデルへ' },
+        description: { zh: '重新确认保底、交易和付费边界。', en: 'Re-check pity, trading, and monetization boundaries.', ja: '保底・取引・課金境界を再確認。' },
+      },
+      {
+        href: '/sea/guides/good-gold-bricks-farming-guide',
+        label: { zh: '看好金砖速刷', en: 'Gold bricks guide', ja: '好金砖ガイドへ' },
+        description: { zh: '如果决定先存，就继续看怎么赚。', en: 'If you decide to save first, continue with how to earn.', ja: '先に貯めるなら金策へ進む。' },
+      },
+    ],
+  },
+};
+
+function SeaRelatedEntitiesSection({
+  guide,
+  locale,
+  currentSlug,
+}: {
+  guide: SeaGuide;
+  locale: SupportedLocale;
+  currentSlug: string;
+}) {
+  const isDefined = <T,>(value: T | null | undefined): value is T => value != null;
+  const preset = SEA_GUIDE_ENTITY_LINKS[guide.id] ?? {};
+
+  const characterLinks = (preset.characters ?? [])
+    .map((id) => {
+      const character = getSeaCharacterById(id);
+      if (!character) return null;
+      return {
+        href: `/sea/characters/${id}`,
+        label: getSeaCharacterName(character, locale),
+        description:
+          locale === 'zh'
+            ? '去角色详情页看定位、配装和技能。'
+            : locale === 'ja'
+              ? 'キャラ詳細で役割、ビルド、スキルを見る。'
+              : 'Open the character page for roles, builds, and skills.',
+      };
+    })
+    .filter(isDefined);
+
+  const guideLinks = (preset.guides ?? [])
+    .filter((item) => item.href !== `/sea/guides/${currentSlug}`);
+
+  if (characterLinks.length === 0 && guideLinks.length === 0) return null;
+
+  return (
+    <section className="mb-8">
+      <h2 className="mb-4 text-lg font-semibold text-game-primary">
+        {locale === 'zh' ? '继续往下看' : locale === 'ja' ? '続けて見る' : 'Continue Exploring'}
+      </h2>
+      <div className="grid gap-4 md:grid-cols-2">
+        {characterLinks.length > 0 && (
+          <div className="rounded-lg border border-game-border bg-game-surface p-4">
+            <h3 className="mb-3 text-sm font-semibold text-game-text">
+              {locale === 'zh' ? '相关角色' : locale === 'ja' ? '関連キャラ' : 'Related Characters'}
+            </h3>
+            <div className="space-y-2">
+              {characterLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href as '/'}
+                  className="block rounded-md border border-game-border bg-game-surface-alt px-3 py-2 transition-colors hover:border-game-primary"
+                >
+                  <div className="text-sm font-medium text-game-text">{link.label}</div>
+                  <div className="mt-1 text-xs text-game-text-muted">{link.description}</div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+        {guideLinks.length > 0 && (
+          <div className="rounded-lg border border-game-border bg-game-surface p-4">
+            <h3 className="mb-3 text-sm font-semibold text-game-text">
+              {locale === 'zh' ? '下一步阅读' : locale === 'ja' ? '次に読む' : 'Next Reads'}
+            </h3>
+            <div className="space-y-2">
+              {guideLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href as '/'}
+                  className="block rounded-md border border-game-border bg-game-surface-alt px-3 py-2 transition-colors hover:border-game-primary"
+                >
+                  <div className="text-sm font-medium text-game-text">{link.label[locale]}</div>
+                  <div className="mt-1 text-xs text-game-text-muted">{link.description[locale]}</div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

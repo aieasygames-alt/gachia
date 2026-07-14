@@ -65,6 +65,7 @@ const ECHO_GAMES = ['wuwa'] as const;
 const DISK_SET_GAMES = ['nte'] as const;
 const DRIVE_DISC_GAMES = ['zzz'] as const;
 const ITEM_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'] as const;
+const STATIC_SITE_PAGES = ['contact', 'privacy', 'terms', 'sitemap'] as const;
 
 // Category routes that have real content per game
 const REAL_CONTENT_ROUTES: Record<string, string[]> = {
@@ -208,6 +209,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
           });
         }
       }
+    }
+
+    for (const page of STATIC_SITE_PAGES) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/${page}`,
+        changeFrequency: 'monthly',
+        priority: page === 'sitemap' ? 0.3 : 0.4,
+      });
     }
   }
 
