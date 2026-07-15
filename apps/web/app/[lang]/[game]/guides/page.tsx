@@ -106,17 +106,17 @@ const SEA_DECISION_LINKS: Array<{
     },
   },
   {
-    id: 'black-ticket-selector',
+    id: 'decision-tools',
     href: '/sea/calculator',
     label: {
-      zh: '六黑券自选推荐器',
-      en: 'Black Ticket selector',
-      ja: '黒券6択おすすめ',
+      zh: '黑券与首周资源工具',
+      en: 'Selector and resource tools',
+      ja: '黒券と初週リソース',
     },
     description: {
-      zh: '按队伍缺口、开荒风格和资源计划，直接算首次记忆重逢该先选谁。',
-      en: 'Choose your first Memory Reunion crew by roster gap, playstyle, and resource plan.',
-      ja: '編成不足、序盤スタイル、資源方針から初回黒券の候補を出します。',
+      zh: '先算首次记忆重逢该选谁，再把体力、周常打捞、好金砖和外观预算拆成首周路线。',
+      en: 'Pick your first Memory Reunion crew, then split stamina, weekly dredging, Good Gold Bricks, and outfit budget into a week-one route.',
+      ja: '初回黒券候補を決め、スタミナ、週課、好金砖、衣装予算を初週ルートに配分します。',
     },
   },
 ];

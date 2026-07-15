@@ -139,7 +139,7 @@ type Tab = 'ascension' | 'damage' | 'planner';
 // =====================================================================
 
 export function CalculatorClient({ gameId, locale }: { gameId: GameId; locale: SupportedLocale }) {
-  if (gameId === 'sea') return <SeaBlackTicketSelector locale={locale} />;
+  if (gameId === 'sea') return <SeaCalculatorHub locale={locale} />;
   if (gameId === 'skjh') return <SkjhResourceCalculator locale={locale} />;
   if (gameId === 'wuwa') return <WuWaCalculator locale={locale} />;
   if (gameId === 'starrail') return <StarRailCalculator locale={locale} />;
@@ -154,6 +154,10 @@ export function CalculatorClient({ gameId, locale }: { gameId: GameId; locale: S
 type SeaRoleGap = 'main-dps' | 'survival' | 'follow-up' | 'aoe' | 'stable-dps';
 type SeaPlaystyle = 'safe' | 'fast' | 'mechanic' | 'favorite';
 type SeaSpendPlan = 'f2p' | 'light' | 'collector';
+type SeaTool = 'selector' | 'resources';
+type SeaResourceFocus = 'balanced' | 'story' | 'market' | 'outfit';
+type SeaRiskLevel = 'safe' | 'normal' | 'greedy';
+type SeaResourceBucket = 'story' | 'dredge' | 'market' | 'build' | 'save';
 
 type SeaCandidate = {
   id: string;
@@ -294,6 +298,63 @@ const SEA_BLACK_TICKET_CANDIDATES: SeaCandidate[] = [
   },
 ];
 
+function SeaCalculatorHub({ locale }: { locale: SupportedLocale }) {
+  const [tool, setTool] = useState<SeaTool>('selector');
+
+  const tabs: Array<{ id: SeaTool; label: string; desc: string }> = [
+    {
+      id: 'selector',
+      label: t(locale, '黑券 6 选 1', 'Black Ticket selector', '黒券6択'),
+      desc: t(locale, '按队伍缺口排序首个黑券船员', 'Rank your first Black Ticket crew', '初回黒券船員を順位付け'),
+    },
+    {
+      id: 'resources',
+      label: t(locale, '首周资源分配器', 'Week-one resource planner', '初週リソース配分'),
+      desc: t(locale, '把体力、打捞、交易和外观预算拆成行动清单', 'Split stamina, dredging, trading, and cosmetics into an action plan', 'スタミナ、サルベージ、交易、衣装予算を配分'),
+    },
+  ];
+
+  return (
+    <div className="space-y-6">
+      <section className="rounded-2xl border border-game-border bg-game-surface p-5">
+        <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-game-primary">
+          {t(locale, '首周资源决策', 'Week-one resource decision', '初週リソース判断')}
+        </p>
+        <h1 className="text-2xl font-bold text-game-text">
+          {t(locale, '遗忘之海决策工具台', 'Sea of Remnants Decision Tools', 'Sea of Remnants 判断ツール')}
+        </h1>
+        <p className="mt-3 max-w-3xl text-sm leading-6 text-game-text-muted">
+          {t(
+            locale,
+            '先用黑券推荐器确定第一队核心，再用资源分配器把首周体力、周常打捞、好金砖和外观预算拆成可执行路线。结果用于开服规划，正式数值以游戏内为准。',
+            'Choose your first-team core with the Black Ticket selector, then turn stamina, weekly dredging, Good Gold Bricks, and outfit spending into an executable week-one route. Use this for planning; live values follow the game.',
+            '黒券おすすめで第一編成の核を決め、初週のスタミナ、週課サルベージ、好金砖、衣装予算を実行ルートに落とします。正式値はゲーム内を基準にしてください。'
+          )}
+        </p>
+        <div className="mt-5 grid gap-3 md:grid-cols-2">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              type="button"
+              onClick={() => setTool(tab.id)}
+              className={`rounded-2xl border p-4 text-left transition ${
+                tool === tab.id
+                  ? 'border-game-primary bg-game-primary/10'
+                  : 'border-game-border bg-game-surface-alt hover:border-game-primary/60'
+              }`}
+            >
+              <div className="text-base font-bold text-game-text">{tab.label}</div>
+              <div className="mt-1 text-xs leading-5 text-game-text-muted">{tab.desc}</div>
+            </button>
+          ))}
+        </div>
+      </section>
+
+      {tool === 'selector' ? <SeaBlackTicketSelector locale={locale} /> : <SeaWeekOneResourcePlanner locale={locale} />}
+    </div>
+  );
+}
+
 function SeaBlackTicketSelector({ locale }: { locale: SupportedLocale }) {
   const [roleGap, setRoleGap] = useState<SeaRoleGap>('main-dps');
   const [playstyle, setPlaystyle] = useState<SeaPlaystyle>('safe');
@@ -332,12 +393,9 @@ function SeaBlackTicketSelector({ locale }: { locale: SupportedLocale }) {
   return (
     <div className="space-y-6">
       <section className="rounded-2xl border border-game-border bg-game-surface p-5">
-        <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-game-primary">
-          {t(locale, '首周资源决策', 'Week-one resource decision', '初週リソース判断')}
-        </p>
-        <h1 className="text-2xl font-bold text-game-text">
+        <h2 className="text-2xl font-bold text-game-text">
           {t(locale, '遗忘之海黑券 6 选 1 推荐器', 'Sea of Remnants Black Ticket Selector', 'Sea of Remnants 黒券6択おすすめ')}
-        </h1>
+        </h2>
         <p className="mt-3 max-w-3xl text-sm leading-6 text-game-text-muted">
           {t(
             locale,
@@ -415,6 +473,238 @@ function SeaBlackTicketSelector({ locale }: { locale: SupportedLocale }) {
         </a>
       </section>
     </div>
+  );
+}
+
+function SeaWeekOneResourcePlanner({ locale }: { locale: SupportedLocale }) {
+  const [hours, setHours] = useState(2);
+  const [focus, setFocus] = useState<SeaResourceFocus>('balanced');
+  const [risk, setRisk] = useState<SeaRiskLevel>('safe');
+  const [hasCarry, setHasCarry] = useState(false);
+  const [hasSurvival, setHasSurvival] = useState(false);
+
+  const allocation = useMemo(() => {
+    const base = {
+      story: focus === 'story' ? 36 : focus === 'market' ? 24 : focus === 'outfit' ? 22 : 30,
+      dredge: focus === 'story' ? 22 : focus === 'market' ? 24 : focus === 'outfit' ? 20 : 24,
+      market: focus === 'market' ? 30 : focus === 'outfit' ? 24 : 18,
+      build: focus === 'story' ? 16 : focus === 'market' ? 12 : focus === 'outfit' ? 14 : 16,
+      save: focus === 'outfit' ? 20 : focus === 'market' ? 10 : 12,
+    };
+    if (!hasCarry) {
+      base.story += 4;
+      base.save += 2;
+      base.market -= 3;
+      base.build -= 3;
+    }
+    if (!hasSurvival) {
+      base.dredge += 3;
+      base.build += 2;
+      base.market -= 3;
+      base.save -= 2;
+    }
+    if (risk === 'safe') {
+      base.save += 6;
+      base.market -= 3;
+      base.build -= 3;
+    } else if (risk === 'greedy') {
+      base.market += 7;
+      base.save -= 5;
+      base.dredge -= 2;
+    }
+
+    const entries = (Object.entries(base) as Array<[SeaResourceBucket, number]>).map(([key, value]) => [key, Math.max(5, value)] as const);
+    const total = entries.reduce((sum, [, value]) => sum + value, 0);
+    return Object.fromEntries(entries.map(([key, value]) => [key, Math.round((value / total) * 100)])) as Record<SeaResourceBucket, number>;
+  }, [focus, hasCarry, hasSurvival, risk]);
+
+  const weeklyHours = Math.max(1, hours) * 7;
+  const taskHours = {
+    story: Math.round((weeklyHours * allocation.story) / 100),
+    dredge: Math.round((weeklyHours * allocation.dredge) / 100),
+    market: Math.round((weeklyHours * allocation.market) / 100),
+    build: Math.round((weeklyHours * allocation.build) / 100),
+    save: Math.max(1, Math.round((weeklyHours * allocation.save) / 100)),
+  };
+
+  const focusOptions: Array<{ id: SeaResourceFocus; label: string; hint: string }> = [
+    { id: 'balanced', label: t(locale, '均衡开荒', 'Balanced launch', 'バランス'), hint: t(locale, '主线、周常、交易都不漏。', 'Do not miss story, weekly, or market value.', 'メイン、週課、交易を落とさない。') },
+    { id: 'story', label: t(locale, '先推主线', 'Push story', 'メイン優先'), hint: t(locale, '尽快解锁海域、日常和系统。', 'Unlock zones, dailies, and systems faster.', '海域、日課、機能を早めに解放。') },
+    { id: 'market', label: t(locale, '交易优先', 'Market first', '交易優先'), hint: t(locale, '把好金砖和可交易资源放前面。', 'Front-load Good Gold Bricks and tradable resources.', '好金砖と交易品を前倒し。') },
+    { id: 'outfit', label: t(locale, '外观留预算', 'Save for outfits', '衣装予算'), hint: t(locale, '降低乱抽，给服装/船皮留空间。', 'Reduce impulse pulls and reserve cosmetic budget.', '衝動引きを抑え衣装予算を残す。') },
+  ];
+
+  const riskOptions: Array<{ id: SeaRiskLevel; label: string; hint: string }> = [
+    { id: 'safe', label: t(locale, '保守', 'Safe', '安全'), hint: t(locale, '少追涨，多留资源等实测。', 'Avoid chasing spikes; wait for live data.', '高騰追いを避け実測待ち。') },
+    { id: 'normal', label: t(locale, '正常', 'Normal', '通常'), hint: t(locale, '按每日收益稳定推进。', 'Progress with steady daily returns.', '日次収益で安定進行。') },
+    { id: 'greedy', label: t(locale, '抢首周交易', 'Greedy market', '初週交易狙い'), hint: t(locale, '多观察价格，但波动风险更高。', 'Watch prices harder, with higher volatility risk.', '価格を見る時間を増やすがリスク高め。') },
+  ];
+
+  const rows = [
+    { key: 'story', label: t(locale, '主线 / 系统解锁', 'Story / unlocks', 'メイン / 解放'), pct: allocation.story, hours: taskHours.story, note: t(locale, '优先解锁奥托皮亚、日常、招募和贸易入口。', 'Unlock Orbtopia, dailies, recruitment, and market access first.', 'Orbtopia、日課、募集、交易入口を優先。') },
+    { key: 'dredge', label: t(locale, '周常打捞 / 黑券机会', 'Weekly dredging / Black Ticket chances', '週課サルベージ / 黒券機会'), pct: allocation.dredge, hours: taskHours.dredge, note: t(locale, '每周免费/高价值打捞先清，不要等周末才想起。', 'Clear free and high-value dredging early, not at the weekend.', '無料・高価値サルベージは週末前に処理。') },
+    { key: 'market', label: t(locale, '贸易场 / 好金砖', 'Market / Good Gold Bricks', '交易所 / 好金砖'), pct: allocation.market, hours: taskHours.market, note: t(locale, '记录常用材料价格，低波动资源可换启动资金。', 'Track common material prices; low-volatility resources can fund launch needs.', '一般素材価格を記録し、安定品で初動資金化。') },
+    { key: 'build', label: t(locale, '第一队养成', 'First-team build', '第一編成育成'), pct: allocation.build, hours: taskHours.build, note: t(locale, '只养主攻、关键辅助、生存位，不要平均拉满。', 'Invest in carry, key support, and survival only; avoid spreading thin.', '主攻、重要支援、生存だけ育て平均育成を避ける。') },
+    { key: 'save', label: t(locale, '预留 / 外观预算', 'Reserve / outfits', '予備 / 衣装予算'), pct: allocation.save, hours: taskHours.save, note: t(locale, '留给后续活动、服装池、价格回落和补洞。', 'Reserve for events, outfit pools, price dips, and roster fixes.', 'イベント、衣装、価格下落、穴埋め用に残す。') },
+  ];
+
+  const numberInput = (
+    <label className="block rounded-2xl border border-game-border bg-game-surface p-4">
+      <span className="mb-2 block text-sm font-bold text-game-text">{t(locale, '每天可玩小时', 'Hours per day', '1日プレイ時間')}</span>
+      <input
+        type="number"
+        min={1}
+        max={12}
+        value={hours}
+        onChange={(event) => setHours(Math.min(12, Math.max(1, Number(event.target.value) || 1)))}
+        className="w-full rounded-lg border border-game-border bg-game-surface-alt px-3 py-2 text-sm text-game-text outline-none transition focus:border-game-primary"
+      />
+      <p className="mt-2 text-xs text-game-text-muted">
+        {t(locale, `按每周约 ${weeklyHours} 小时估算。`, `Estimated from about ${weeklyHours} hours per week.`, `週約${weeklyHours}時間で見積もり。`)}
+      </p>
+    </label>
+  );
+
+  return (
+    <div className="space-y-6">
+      <section className="rounded-2xl border border-game-border bg-game-surface p-5">
+        <h2 className="text-2xl font-bold text-game-text">
+          {t(locale, '首周资源分配器', 'Week-one Resource Planner', '初週リソース配分')}
+        </h2>
+        <p className="mt-3 max-w-3xl text-sm leading-6 text-game-text-muted">
+          {t(
+            locale,
+            '把“今天到底先干嘛”拆成比例：先解锁系统，再守住周常打捞，最后决定好金砖、抽卡和服装预算。适合零氪、轻氪和想少踩坑的首周玩家。',
+            'Split “what should I do today” into ratios: unlock systems, protect weekly dredging, then decide Good Gold Bricks, pulls, and outfit budget. Useful for F2P, light spenders, and cautious week-one players.',
+            '今日何をするかを比率化します。機能解放、週課サルベージ、好金砖、ガチャ、衣装予算の順で整理できます。'
+          )}
+        </p>
+      </section>
+
+      <section className="grid gap-4 lg:grid-cols-3">
+        {numberInput}
+        <PlannerGroup title={t(locale, '本周目标', 'This week focus', '今週の目標')} options={focusOptions} selected={focus} onSelect={setFocus} />
+        <PlannerGroup title={t(locale, '风险偏好', 'Risk level', 'リスク')} options={riskOptions} selected={risk} onSelect={setRisk} />
+      </section>
+
+      <section className="grid gap-3 md:grid-cols-2">
+        <ToggleCard
+          checked={hasCarry}
+          onChange={setHasCarry}
+          title={t(locale, '已有稳定主攻', 'Already have a carry', '主攻あり')}
+          body={t(locale, '勾选后会减少主线/抽卡压力，把更多时间给交易或预留。', 'Reduces story/pull pressure and frees time for market or reserves.', 'メイン/ガチャ圧を下げ、交易や予備へ回します。')}
+        />
+        <ToggleCard
+          checked={hasSurvival}
+          onChange={setHasSurvival}
+          title={t(locale, '已有可靠生存位', 'Already have survival', '生存あり')}
+          body={t(locale, '勾选后会减少容错补强，把更多资源给推进和好金砖。', 'Reduces survival patching and shifts more resources to progress and bricks.', '生存補強を減らし進行と好金砖へ回します。')}
+        />
+      </section>
+
+      <section className="rounded-2xl border border-game-primary/40 bg-game-primary/10 p-5">
+        <h3 className="text-lg font-bold text-game-text">{t(locale, '推荐分配', 'Recommended split', 'おすすめ配分')}</h3>
+        <div className="mt-4 space-y-4">
+          {rows.map((row) => (
+            <div key={row.key}>
+              <div className="mb-2 flex items-center justify-between gap-3">
+                <div>
+                  <div className="text-sm font-bold text-game-text">{row.label}</div>
+                  <div className="text-xs text-game-text-muted">{row.note}</div>
+                </div>
+                <div className="shrink-0 text-right">
+                  <div className="text-lg font-black text-game-primary">{row.pct}%</div>
+                  <div className="text-xs text-game-text-muted">{t(locale, `约 ${row.hours} 小时`, `~${row.hours}h`, `約${row.hours}h`)}</div>
+                </div>
+              </div>
+              <div className="h-2 overflow-hidden rounded-full bg-game-surface">
+                <div className="h-full rounded-full bg-game-primary" style={{ width: `${row.pct}%` }} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="grid gap-4 md:grid-cols-3">
+        <a href={`/${locale}/sea/guides/mechanics-faq-guide`} className="rounded-2xl border border-game-border bg-game-surface p-4 transition hover:border-game-primary">
+          <h3 className="font-bold text-game-text">{t(locale, '机制 FAQ', 'Mechanics FAQ', 'システムFAQ')}</h3>
+          <p className="mt-2 text-sm text-game-text-muted">{t(locale, '确认减伤、周常和资源冲突。', 'Confirm mitigation, weeklies, and resource conflicts.', '軽減、週課、資源衝突を確認。')}</p>
+        </a>
+        <a href={`/${locale}/sea/guides/good-gold-bricks-farming-guide`} className="rounded-2xl border border-game-border bg-game-surface p-4 transition hover:border-game-primary">
+          <h3 className="font-bold text-game-text">{t(locale, '好金砖速刷', 'Good Gold Bricks', '好金砖')}</h3>
+          <p className="mt-2 text-sm text-game-text-muted">{t(locale, '把交易比例落到赚钱路线。', 'Turn the market split into an earning route.', '交易配分を金策へ落とす。')}</p>
+        </a>
+        <a href={`/${locale}/sea/guides/character-vs-outfit-pull-guide`} className="rounded-2xl border border-game-border bg-game-surface p-4 transition hover:border-game-primary">
+          <h3 className="font-bold text-game-text">{t(locale, '角色还是服装', 'Crew or outfits', '船員か衣装か')}</h3>
+          <p className="mt-2 text-sm text-game-text-muted">{t(locale, '把预留预算变成抽取规则。', 'Turn reserves into pull rules.', '予備を抽選ルールへ。')}</p>
+        </a>
+      </section>
+    </div>
+  );
+}
+
+function PlannerGroup<T extends string>({
+  title,
+  options,
+  selected,
+  onSelect,
+}: {
+  title: string;
+  options: Array<{ id: T; label: string; hint: string }>;
+  selected: T;
+  onSelect: (value: T) => void;
+}) {
+  return (
+    <section className="rounded-2xl border border-game-border bg-game-surface p-4">
+      <h3 className="mb-3 text-sm font-bold text-game-text">{title}</h3>
+      <div className="space-y-2">
+        {options.map((option) => (
+          <button
+            key={option.id}
+            type="button"
+            onClick={() => onSelect(option.id)}
+            className={`w-full rounded-xl border p-3 text-left transition ${
+              selected === option.id
+                ? 'border-game-primary bg-game-primary/10 text-game-text'
+                : 'border-game-border bg-game-surface-alt text-game-text-muted hover:border-game-primary/60'
+            }`}
+          >
+            <div className="text-sm font-bold">{option.label}</div>
+            <div className="mt-1 text-xs leading-5 opacity-80">{option.hint}</div>
+          </button>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function ToggleCard({
+  checked,
+  onChange,
+  title,
+  body,
+}: {
+  checked: boolean;
+  onChange: (value: boolean) => void;
+  title: string;
+  body: string;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={() => onChange(!checked)}
+      className={`rounded-2xl border p-4 text-left transition ${
+        checked ? 'border-game-primary bg-game-primary/10' : 'border-game-border bg-game-surface hover:border-game-primary/60'
+      }`}
+    >
+      <div className="flex items-center justify-between gap-3">
+        <h3 className="font-bold text-game-text">{title}</h3>
+        <span className={`h-5 w-9 rounded-full border p-0.5 ${checked ? 'border-game-primary bg-game-primary/30' : 'border-game-border bg-game-surface-alt'}`}>
+          <span className={`block h-3.5 w-3.5 rounded-full bg-game-primary transition ${checked ? 'translate-x-4' : ''}`} />
+        </span>
+      </div>
+      <p className="mt-2 text-sm leading-6 text-game-text-muted">{body}</p>
+    </button>
   );
 }
 
