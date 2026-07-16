@@ -132,6 +132,120 @@ type NextStepLink = {
   description: Record<SupportedLocale, string>;
 };
 
+type GuideQuickAnswer = {
+  heading: Record<SupportedLocale, string>;
+  points: Record<SupportedLocale, string[]>;
+};
+
+const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, GuideQuickAnswer>>> = {
+  zzz: {
+    'v3-0-version-guide': {
+      heading: {
+        zh: '快速结论：先看 3.0 新内容、福利和角色优先级',
+        en: 'Quick answer: start with v3.0 content, rewards, and pull priorities',
+        ja: '要点：3.0内容、報酬、優先度を確認',
+      },
+      points: {
+        zh: ['先确认 3.0 版本节点、活动奖励和新专精机制。', '抽卡前把角色定位、音擎和驱动盘需求一起看。', '如果资源有限，优先补能改变队伍上限的核心角色。'],
+        en: ['Use this page to check ZZZ v3.0 content, rewards, new systems, and priority routes first.', 'Before pulling, connect agent role, W-Engine value, and Drive Disc requirements.', 'If resources are tight, prioritize characters that change team ceiling instead of sidegrades.'],
+        ja: ['3.0内容、報酬、新システムを先に確認します。', '引く前に役割、音擎、ドライブディスクをまとめて見ます。', '資源が少ない場合は編成上限を伸ばすキャラを優先します。'],
+      },
+    },
+  },
+  starrail: {
+    'banner-schedule-guide': {
+      heading: {
+        zh: '快速结论：先看当前跃迁、下期与复刻',
+        en: 'Quick answer: check current, next, and rerun banners first',
+        ja: '要点：現在、次回、復刻バナーを先に確認',
+      },
+      points: {
+        zh: ['当前卡池、下期跃迁、复刻预估要放在同一张表里看。', '抽卡前先确认保底、垫抽记录和星琼缺口。', '如果目标不是刚需角色，优先保留一次完整保底。'],
+        en: ['Use this page to compare the current banner, next banner, and likely reruns in one place.', 'Before pulling, check pity, guarantee status, Stellar Jade budget, and role gaps.', 'If the target is not account-critical, keep one full guarantee reserved for the next high-value banner.'],
+        ja: ['現在、次回、復刻予想を同じ表で確認します。', '引く前に天井、保証、星玉、編成不足を確認します。', '必須でない場合は次の重要バナー用に天井を残します。'],
+      },
+    },
+  },
+  wuwa: {
+    'banner-schedule-guide': {
+      heading: {
+        zh: '快速结论：先确认当前卡池和下期复刻',
+        en: 'Quick answer: current banner, next banner, and reruns',
+        ja: '要点：現在バナー、次回バナー、復刻',
+      },
+      points: {
+        zh: ['先看当前 UP、下期角色和复刻节点，再决定星声是否要花。', '保底继承、武器池和角色池要分开规划。', '如果你只缺主 C 或关键辅助，优先按队伍缺口抽。'],
+        en: ['Start with the current Wuthering Waves banner, next banner, and expected reruns before spending Astrite.', 'Plan character pity and weapon pity separately because their value depends on different account gaps.', 'If your roster only lacks a main DPS or a key support, pull by team need instead of hype.'],
+        ja: ['現在UP、次回、復刻予定を確認してから星声を使います。', 'キャラ天井と武器天井は別々に計画します。', '不足ロールに合わせて引くのが安定です。'],
+      },
+    },
+    'echo-advanced-guide': {
+      heading: {
+        zh: '快速结论：先主词条，再套装，最后刷副词条',
+        en: 'Quick answer: main stat first, set bonus second, substats last',
+        ja: '要点：メイン、セット、サブの順で整える',
+      },
+      points: {
+        zh: ['先保证主词条正确，再追 Sonata 套装效果。', '前期不要为了完美副词条浪费太多体力。', '毕业目标是主词条正确、套装成型、副词条服务角色定位。'],
+        en: ['For Wuthering Waves Echoes, lock the right main stat before chasing perfect substats.', 'Sonata set bonuses matter, but early builds should avoid overfarming tiny upgrades.', 'A strong build has the correct main stat, a working set bonus, and substats that match the character role.'],
+        ja: ['まず正しいメインステータスを確保します。', '序盤は完璧なサブステを追いすぎないようにします。', '完成形はメイン、セット、役割に合うサブステです。'],
+      },
+    },
+    'meta-teams-v3-guide': {
+      heading: {
+        zh: '快速结论：强队先看核心输出、辅助和循环',
+        en: 'Quick answer: judge meta teams by core DPS, support, and rotation',
+        ja: '要点：主力、支援、ローテで編成を見る',
+      },
+      points: {
+        zh: ['不要只看单个角色强度，要看队伍循环是否顺。', '先保证主输出、增伤/治疗、协同机制完整。', '缺关键角色时，用同定位替代比硬凑高星更稳。'],
+        en: ['A WuWa meta team is strong when the DPS, support, sustain, and rotation all fit together.', 'Do not rank teams by one character alone; uptime and swap flow matter.', 'If you miss a premium unit, replace the role first instead of forcing a high-rarity mismatch.'],
+        ja: ['単体評価ではなく編成全体の回り方を見ます。', '主力、支援、維持、交代の噛み合いが重要です。', '限定がいない場合は同じ役割で代用します。'],
+      },
+    },
+  },
+  nte: {
+    'damage-formula': {
+      heading: {
+        zh: '快速结论：倍率、暴击和属性加成要一起算',
+        en: 'Quick answer: multipliers, crit, and elemental bonuses all matter',
+        ja: '要点：倍率、会心、属性補正をまとめて見る',
+      },
+      points: {
+        zh: ['只堆一个数值通常不如平衡倍率、暴击和属性加成。', '实战提升要看技能倍率、敌人抗性和队伍增益。', '配装时先找短板，再决定补暴击、攻击还是属性伤害。'],
+        en: ['NTE damage is not decided by one stat; skill multiplier, crit, elemental bonus, enemy resistance, and team buffs all stack into the result.', 'Use the formula page to find the weakest part of a build before changing gear.', 'For practical upgrades, compare crit consistency, attack scaling, and elemental damage together.'],
+        ja: ['一つの数値だけでなく倍率、会心、属性、耐性、バフをまとめて見ます。', '装備変更前にビルドの弱点を確認します。', '実戦では会心、攻撃、属性ダメージを比較します。'],
+      },
+    },
+  },
+  sea: {
+    'launch-day-guide': {
+      heading: {
+        zh: '快速结论：PC 先开，移动端再跟进',
+        en: 'Quick answer: PC launches first, mobile follows later',
+        ja: '要点：PC先行、モバイルは後続',
+      },
+      points: {
+        zh: ['PC 端 7 月 9 日公测，移动端 7 月 23 日上线。', '先确认下载、互通、首月福利和首日路线。', '想快速入坑，先看角色图鉴、版本中心和开服 FAQ。'],
+        en: ['Sea of Remnants PC open beta starts July 9, with mobile launch planned for July 23.', 'Check download, cross-platform progress, launch rewards, and day-one routing before spending resources.', 'For a fast start, connect this page to characters, the open beta center, and the launch FAQ.'],
+        ja: ['PC公測は7月9日、モバイルは7月23日予定です。', 'DL、連携、報酬、初日ルートを確認します。', '早く始めるならキャラ、版本中心、FAQを見ます。'],
+      },
+    },
+    'open-beta-version-center': {
+      heading: {
+        zh: '快速结论：这是遗忘之海 Wiki 的版本入口',
+        en: 'Quick answer: use this as the Sea of Remnants wiki hub',
+        ja: '要点：Sea of Remnants Wikiの入口',
+      },
+      points: {
+        zh: ['这页承接公测时间、官网入口、福利、角色和首月更新。', '如果你只想找 Wiki 信息，先从版本中心跳角色、节奏榜和开服攻略。', '后续 Sea 新词应该优先挂回这里。'],
+        en: ['This hub connects release timing, official entry points, rewards, characters, and first-month updates.', 'If you searched for a Sea of Remnants wiki, start here, then jump to characters, tier list, launch guide, or download help.', 'New Sea launch topics should route back to this page first.'],
+        ja: ['公開日、公式入口、報酬、キャラ、初月更新をまとめます。', 'Wiki情報を探す場合はここからキャラ、Tier表、開服攻略へ進みます。', '新しい話題はまずこのページへ戻します。'],
+      },
+    },
+  },
+};
+
 const GUIDE_FALLBACK_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
   genshin: [
     {
@@ -216,8 +330,8 @@ const GUIDE_META_OVERRIDES: Record<string, LocaleMeta> = {
   },
   'starrail/banner-schedule-guide': {
     en: {
-      title: 'HSR Banner Schedule 2026: Current & Next Banners',
-      description: 'See Honkai: Star Rail current and next banners, rerun estimates, pity rules, Stellar Jade planning, and pull priority advice.',
+      title: 'HSR Banner Schedule 2026: Current, Next & Rerun Banners',
+      description: 'Track Honkai: Star Rail current banners, next banners, rerun estimates, warp schedule, pity rules, Stellar Jade planning, and pull priorities.',
     },
     zh: {
       title: '崩坏星穹铁道卡池排期 2026：当前与下期跃迁',
@@ -227,7 +341,7 @@ const GUIDE_META_OVERRIDES: Record<string, LocaleMeta> = {
   'wuwa/banner-schedule-guide': {
     en: {
       title: 'WuWa Banner Schedule 2026: Current, Next & Rerun Banners',
-      description: 'Follow Wuthering Waves current banners, next banners, rerun timing, pity carry-over, Astrite planning, and pull priorities.',
+      description: 'Follow Wuthering Waves banners, current banner, next banner, rerun timing, pity carry-over, Astrite planning, and pull priorities.',
     },
     zh: {
       title: '鸣潮卡池排期 2026：当前卡池、下期与复刻预测',
@@ -236,8 +350,8 @@ const GUIDE_META_OVERRIDES: Record<string, LocaleMeta> = {
   },
   'wuwa/echo-advanced-guide': {
     en: {
-      title: 'WuWa Echo Advanced Guide: Main Stats, Substats & Sets',
-      description: 'Learn how Wuthering Waves echo mains work, which substats matter, how to choose Sonata sets, and what to farm first.',
+      title: 'Wuthering Waves Echo Guide: Best Sets, Main Stats & Substats',
+      description: 'Choose the best Wuthering Waves Echo sets, main stats, substats, Sonata bonuses, cost setup, and farming priority for current builds.',
     },
     zh: {
       title: '鸣潮声骸进阶攻略：主词条、副词条与套装',
@@ -246,12 +360,22 @@ const GUIDE_META_OVERRIDES: Record<string, LocaleMeta> = {
   },
   'wuwa/meta-teams-v3-guide': {
     en: {
-      title: 'WuWa Meta Teams v3: Best Teams, Rotations & Builds',
-      description: 'Best Wuthering Waves meta teams, rotation patterns, core characters, and build notes for the current patch.',
+      title: 'WuWa Meta Teams 2026: Best Teams, Rotations & Builds',
+      description: 'Best Wuthering Waves teams for the current patch, with core characters, rotations, Echo notes, F2P options, and team-building priorities.',
     },
     zh: {
       title: '鸣潮版本强队 v3：主流配队、循环与配装',
       description: '整理鸣潮当前版本强队、循环手法、核心角色与配装思路，适合直接抄作业。',
+    },
+  },
+  'zzz/v3-0-version-guide': {
+    en: {
+      title: 'ZZZ v3.0 Guide: Banners, Rewards, New Agents & Teams',
+      description: 'Zenless Zone Zero v3.0 guide covering banners, rewards, new agents, team priorities, Drive Discs, W-Engines, and what to do first.',
+    },
+    zh: {
+      title: '绝区零 3.0 版本攻略：卡池、福利、新代理人与配队',
+      description: '整理绝区零 3.0 版本卡池、活动福利、新代理人、队伍优先级、驱动盘、音擎和开版本先做什么。',
     },
   },
   'starrail/cross-game-comparison-guide': {
@@ -400,7 +524,72 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
       },
     ],
   },
+  starrail: {
+    'banner-schedule-guide': [
+      {
+        href: '/starrail/version',
+        label: { zh: '去版本专题', en: 'Open version hub', ja: 'バージョン特集へ' },
+        description: { zh: '把当前跃迁和版本节点一起看', en: 'Connect banner timing with the current version hub', ja: 'バナー時期を版本情報と一緒に確認', },
+      },
+      {
+        href: '/starrail/characters',
+        label: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+        description: { zh: '抽卡前先确认角色定位和队伍缺口', en: 'Check roles and roster gaps before pulling', ja: '引く前に役割と編成不足を確認', },
+      },
+      {
+        href: '/starrail/gacha',
+        label: { zh: '看抽卡模拟', en: 'Open gacha tools', ja: 'ガチャツールへ' },
+        description: { zh: '把保底、星琼和抽取计划算清楚', en: 'Plan pity, Stellar Jade, and pull targets', ja: '天井、星玉、狙いを計画', },
+      },
+    ],
+  },
   wuwa: {
+    'banner-schedule-guide': [
+      {
+        href: '/wuwa/version',
+        label: { zh: '去版本专题', en: 'Open version hub', ja: 'バージョン特集へ' },
+        description: { zh: '把当前卡池和版本热词一起看', en: 'Connect banners with the current version hub', ja: 'バナーと版本話題を確認', },
+      },
+      {
+        href: '/wuwa/guides/meta-teams-v3-guide',
+        label: { zh: '看主流配队', en: 'Read meta teams', ja: '編成を見る' },
+        description: { zh: '抽卡前先确认角色能进哪些队', en: 'Check team value before spending Astrite', ja: '星声を使う前に編成価値を確認', },
+      },
+      {
+        href: '/wuwa/characters',
+        label: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+        description: { zh: '继续看定位、属性和养成入口', en: 'Continue with roles, attributes, and build entries', ja: '役割、属性、育成入口へ', },
+      },
+    ],
+    'echo-advanced-guide': [
+      {
+        href: '/wuwa/characters',
+        label: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
+        description: { zh: '按角色定位反推声骸主词条', en: 'Choose Echo stats from character role first', ja: 'キャラ役割からエコーを選ぶ', },
+      },
+      {
+        href: '/wuwa/guides/meta-teams-v3-guide',
+        label: { zh: '看主流配队', en: 'Read meta teams', ja: '編成を見る' },
+        description: { zh: '把声骸配置放回队伍循环里', en: 'Place Echo builds back into team rotations', ja: 'エコーを編成ローテへ戻す', },
+      },
+      {
+        href: '/wuwa/version',
+        label: { zh: '回到版本专题', en: 'Back to version hub', ja: 'バージョン特集へ戻る' },
+        description: { zh: '确认当前版本刷取优先级', en: 'Check current farming priorities', ja: '現在の周回優先度を確認', },
+      },
+    ],
+    'meta-teams-v3-guide': [
+      {
+        href: '/wuwa/guides/banner-schedule-guide',
+        label: { zh: '看卡池排期', en: 'Read banner schedule', ja: 'バナー予定へ' },
+        description: { zh: '把队伍缺口转成抽卡优先级', en: 'Turn roster gaps into pull priorities', ja: '編成不足をガチャ優先度へ', },
+      },
+      {
+        href: '/wuwa/guides/echo-advanced-guide',
+        label: { zh: '看声骸进阶', en: 'Read Echo guide', ja: 'エコーガイドへ' },
+        description: { zh: '继续补主词条、套装和副词条', en: 'Continue with main stats, sets, and substats', ja: 'メイン、セット、サブを確認', },
+      },
+    ],
     'v3-4-version-guide': [
       {
         href: '/wuwa/version',
@@ -970,6 +1159,8 @@ function GenshinGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: s
         ))}
       </div>
 
+      <QuickAnswerSection gameId="genshin" slug={slug} locale={locale} />
+
       {/* Content */}
       <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">
         <ClientMarkdown content={content} />
@@ -1066,6 +1257,8 @@ function NteGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
           </span>
         ))}
       </div>
+
+      <QuickAnswerSection gameId="nte" slug={slug} locale={locale} />
 
       {/* Content */}
       <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">
@@ -1171,6 +1364,8 @@ function WuWaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: stri
         ))}
       </div>
 
+      <QuickAnswerSection gameId="wuwa" slug={slug} locale={locale} />
+
       {/* Content */}
       <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">
         <ClientMarkdown content={content} />
@@ -1271,6 +1466,8 @@ function StarRailGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: 
         ))}
       </div>
 
+      <QuickAnswerSection gameId="starrail" slug={slug} locale={locale} />
+
       <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">
         <ClientMarkdown content={content} />
       </div>
@@ -1360,6 +1557,8 @@ function ZzzGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
           <span key={tag} className="rounded bg-game-surface-alt px-2 py-0.5">{tag}</span>
         ))}
       </div>
+
+      <QuickAnswerSection gameId="zzz" slug={slug} locale={locale} />
 
       <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">
         <ClientMarkdown content={content} />
@@ -1723,6 +1922,8 @@ function SeaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
         ))}
       </div>
 
+      <QuickAnswerSection gameId="sea" slug={slug} locale={locale} />
+
       <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">
         <ClientMarkdown content={content} />
       </div>
@@ -1937,6 +2138,25 @@ function RelatedGuidesSection({ gameId, currentSlug, locale }: { gameId: string;
           );
         })}
       </div>
+    </section>
+  );
+}
+
+function QuickAnswerSection({ gameId, slug, locale }: { gameId: GameId; slug: string; locale: SupportedLocale }) {
+  const answer = GUIDE_QUICK_ANSWERS[gameId]?.[slug];
+  if (!answer) return null;
+
+  return (
+    <section className="mb-6 rounded-lg border border-game-border bg-game-surface p-4">
+      <h2 className="mb-3 text-base font-semibold text-game-text">{answer.heading[locale]}</h2>
+      <ul className="space-y-2 text-sm leading-relaxed text-game-text-muted">
+        {answer.points[locale].map((point) => (
+          <li key={point} className="flex gap-2">
+            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-game-primary" />
+            <span>{point}</span>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }
