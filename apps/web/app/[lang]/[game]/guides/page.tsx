@@ -39,8 +39,8 @@ const FEATURED_GUIDE_IDS: Record<GameId, string[]> = {
   guihuan: ['beginner-guide', 'download-install-guide', 'spirit-build-guide'],
   ananta: ['beginner-guide', 'download-install-guide', 'combat-system-guide'],
   endfield: ['download-install-guide', 'combat-system-guide', 'crisis-contract-guide'],
-  sea: ['launch-day-guide', 'what-is-forgotten-sea', 'good-gold-bricks-farming-guide'],
-  skjh: ['season-1-launch', 'launch-rewards-complete', 'download-crossplay-faq'],
+  sea: ['week-one-live-ops-overview', 'mobile-launch-guide', 'good-gold-bricks-farming-guide'],
+  skjh: ['week-one-live-ops-overview', 'anti-cheat-reporting-guide', 'custom-mode-community-server-guide'],
 };
 
 const SEA_DECISION_LINKS: Array<{
@@ -117,6 +117,70 @@ const SEA_DECISION_LINKS: Array<{
       zh: '先算首次记忆重逢该选谁，再把体力、周常打捞、好金砖和外观预算拆成首周路线。',
       en: 'Pick your first Memory Reunion crew, then split stamina, weekly dredging, Good Gold Bricks, and outfit budget into a week-one route.',
       ja: '初回黒券候補を決め、スタミナ、週課、好金砖、衣装予算を初週ルートに配分します。',
+    },
+  },
+];
+
+const SKJH_DECISION_LINKS: Array<{
+  id: string;
+  href: string;
+  label: Record<SupportedLocale, string>;
+  description: Record<SupportedLocale, string>;
+}> = [
+  {
+    id: 'week-one',
+    href: '/skjh/guides/week-one-live-ops-overview',
+    label: {
+      zh: '先看首周分流',
+      en: 'Start with week-one routing',
+      ja: 'まず首週の分流を見る',
+    },
+    description: {
+      zh: '把反作弊、换服、自定义模式和电力四个最真实的问题先分清。',
+      en: 'Separate anti-cheat, server switching, custom mode, and electricity before going deeper.',
+      ja: '反作弊、鯖移動、カスタム、電力の4つを先に整理します。',
+    },
+  },
+  {
+    id: 'anti-cheat',
+    href: '/skjh/guides/anti-cheat-reporting-guide',
+    label: {
+      zh: '先判断环境问题',
+      en: 'Check environment risk first',
+      ja: 'まず環境リスクを見る',
+    },
+    description: {
+      zh: '外挂、非法组队和举报边界，是开服后一周最强的高意图需求之一。',
+      en: 'Cheats, illegal teaming, and reporting rules are now one of the highest-intent needs.',
+      ja: 'チート、違法チーミング、通報境界は今もっとも高意図な需要です。',
+    },
+  },
+  {
+    id: 'server-cycle',
+    href: '/skjh/guides/server-wipe-cycle-guide',
+    label: {
+      zh: '先判断要不要换服',
+      en: 'Decide whether to switch servers',
+      ja: '鯖を変えるべきか判断',
+    },
+    description: {
+      zh: '很多人不是不会玩，而是进了已经滚穿的服，先做环境判断更值。',
+      en: 'Many players are not underperforming; they are simply in a rolled server.',
+      ja: '下手なのではなく、進みすぎた鯖に入っただけのケースが多いです。',
+    },
+  },
+  {
+    id: 'custom-mode',
+    href: '/skjh/guides/custom-mode-community-server-guide',
+    label: {
+      zh: '看自定义模式前景',
+      en: 'Track custom mode next',
+      ja: 'カスタムモードを見る',
+    },
+    description: {
+      zh: '社区服、教学服和活动服已经从采访概念走向服主招募，值得提早占位。',
+      en: 'Community and creator servers have moved from interview talk to host recruitment.',
+      ja: 'コミュニティ鯖は構想から募集段階へ進み、早めの導線価値があります。',
     },
   },
 ];
@@ -1325,6 +1389,42 @@ function SkjhGuides({ locale }: { locale: SupportedLocale }) {
           : `${guides.length} guides`}
       </p>
 
+      <section className="mb-8 rounded-2xl border border-game-border bg-game-surface p-5">
+        <div className="mb-4 flex items-center justify-between gap-4">
+          <div>
+            <h2 className="text-lg font-semibold text-game-text">
+              {locale === 'zh' ? '先按首周问题分流' : locale === 'ja' ? '首週課題のショートカット' : 'Start with week-one decision hubs'}
+            </h2>
+            <p className="mt-1 text-sm text-game-text-muted">
+              {locale === 'zh'
+                ? '失控进化当前最重要的不是再看一遍基础开荒，而是先分清环境风险、换服判断、社区服方向和基地中期升级。'
+                : locale === 'ja'
+                ? '基礎開拓を繰り返すより、環境、鯖移動、コミュニティ鯖、基地中盤を先に切り分ける方が早いです。'
+                : 'The fastest path is to separate environment risk, server switching, community-server direction, and midgame base upgrades.'}
+            </p>
+          </div>
+          <span className="text-xs text-game-text-muted">
+            {locale === 'zh' ? '高意图入口' : locale === 'ja' ? '高意図導線' : 'High-intent shortcuts'}
+          </span>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          {SKJH_DECISION_LINKS.map((entry) => (
+            <Link
+              key={entry.id}
+              href={entry.href}
+              className="group rounded-xl border border-game-border bg-game-surface-alt p-4 transition-all hover:border-game-primary hover:shadow-lg"
+            >
+              <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
+                {entry.label[locale]}
+              </h3>
+              <p className="text-sm leading-relaxed text-game-text-muted">
+                {entry.description[locale]}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {featuredGuides.length > 0 && (
         <section className="mb-8">
           <div className="mb-4 flex items-center justify-between gap-4">
@@ -1332,7 +1432,7 @@ function SkjhGuides({ locale }: { locale: SupportedLocale }) {
               {locale === 'zh' ? '热门攻略' : locale === 'ja' ? '注目ガイド' : 'Featured Guides'}
             </h2>
             <span className="text-xs text-game-text-muted">
-              {locale === 'zh' ? '首发强时效入口' : locale === 'ja' ? 'ローンチ速報' : 'Launch-day topics'}
+              {locale === 'zh' ? '优先看首周问题与运营层需求' : locale === 'ja' ? '首週の運営・環境課題を優先' : 'Prioritize week-one live-ops questions'}
             </span>
           </div>
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">

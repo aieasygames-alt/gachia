@@ -219,6 +219,18 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, GuideQuickAnswe
     },
   },
   sea: {
+    'week-one-live-ops-overview': {
+      heading: {
+        zh: '快速结论：先分清入口、热修、经济还是查漏',
+        en: 'Quick answer: first separate access, hotfix, economy, or gap-check issues',
+        ja: '要点：入口、熱修、経済、取りこぼしのどれかを先に分ける',
+      },
+      points: {
+        zh: ['7 月 23 日移动端上线前，入口和互通问题会持续放大。', '7 月 16 日后的体感变化，更适合先看热修与已知问题，而不是盲目重跑。', '如果你卡的是大脸币或渡桥海补完，先走资源页和查漏页，比泛新手攻略更值。'],
+        en: ['Before the July 23 mobile launch, access and cross-progress questions will keep growing.', 'If the game feels different after July 16, start with hotfix and issue tracking instead of blind reruns.', 'If your pain is Face Coin pacing or Bridge Sea completion, the economy and gap-check pages beat generic beginner guides now.'],
+        ja: ['7月23日のモバイル開始前は入口と連携の質問が増え続けます。', '7月16日以降に感触が変わったなら、まず熱修と既知問題を見るべきです。', '大脸币不足や渡橋海の補完で詰まるなら、汎用初心者ガイドより専用ページが有効です。'],
+      },
+    },
     'launch-day-guide': {
       heading: {
         zh: '快速结论：PC 先开，移动端再跟进',
@@ -241,6 +253,20 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, GuideQuickAnswe
         zh: ['这页承接公测时间、官网入口、福利、角色和首月更新。', '如果你只想找 Wiki 信息，先从版本中心跳角色、节奏榜和开服攻略。', '后续 Sea 新词应该优先挂回这里。'],
         en: ['This hub connects release timing, official entry points, rewards, characters, and first-month updates.', 'If you searched for a Sea of Remnants wiki, start here, then jump to characters, tier list, launch guide, or download help.', 'New Sea launch topics should route back to this page first.'],
         ja: ['公開日、公式入口、報酬、キャラ、初月更新をまとめます。', 'Wiki情報を探す場合はここからキャラ、Tier表、開服攻略へ進みます。', '新しい話題はまずこのページへ戻します。'],
+      },
+    },
+  },
+  skjh: {
+    'week-one-live-ops-overview': {
+      heading: {
+        zh: '快速结论：先判断环境，再决定要不要继续肝这个服',
+        en: 'Quick answer: judge the server environment before deciding how hard to commit',
+        ja: '要点：まず環境を見て、その鯖を続けるか決める',
+      },
+      points: {
+        zh: ['7 月 14 日处罚公告之后，外挂和非法组队已经是必须单独判断的现实问题。', '如果你觉得“不是不会玩，是完全发育不起来”，先看 wipe 周期和换服判断。', '基地已经稳住后，再补自定义模式和电力，会比继续刷泛开荒内容更有效。'],
+        en: ['After the July 14 enforcement notice, cheats and illegal teaming became practical issues that deserve their own check.', 'If your feeling is not “I am bad” but “I cannot progress at all,” review server cycle and switching logic first.', 'Once the base is stable, custom mode and electricity are stronger next reads than more generic opener content.'],
+        ja: ['7月14日の処分公告以降、チートと違法チーミングは個別判断が必要な現実問題です。', '下手なのではなく全く育たない感覚なら、まずワイプ周期と鯖移動判断を見ます。', '拠点が安定した後は、汎用開拓よりカスタムモードと電力を見る方が効率的です。'],
       },
     },
   },
@@ -313,6 +339,40 @@ const GUIDE_FALLBACK_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
       href: '/ananta/items',
       label: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
       description: { zh: '继续看突破材料和需求', en: 'Continue with upgrade materials and requirements', ja: '突破素材と必要数を確認' },
+    },
+  ],
+  sea: [
+    {
+      href: '/sea/guides/week-one-live-ops-overview',
+      label: { zh: '看首周问题总览', en: 'Read week-one live-ops hub', ja: '首週ハブを見る' },
+      description: { zh: '先分清移动端、热修、经济和查漏四类问题', en: 'Separate mobile, hotfix, economy, and gap-check questions first', ja: 'モバイル、熱修、経済、補完の4つを整理', },
+    },
+    {
+      href: '/sea/guides/mobile-launch-guide',
+      label: { zh: '看移动端上线 FAQ', en: 'Read mobile launch FAQ', ja: 'モバイル開始FAQへ' },
+      description: { zh: '先确认 7 月 23 日前后该怎么选平台', en: 'Decide how to handle platforms around July 23', ja: '7月23日前後のプラットフォーム判断をする', },
+    },
+    {
+      href: '/sea/guides/horn-farming-economy-guide',
+      label: { zh: '看号角与大脸币', en: 'Read horn and Face Coin guide', ja: '号角と大脸币を見る' },
+      description: { zh: '把资源焦虑直接落到返航和收益判断上', en: 'Turn economy pressure into return-timing and income decisions', ja: '資源圧を返航と収益判断に落とす', },
+    },
+  ],
+  skjh: [
+    {
+      href: '/skjh/guides/week-one-live-ops-overview',
+      label: { zh: '看首周问题总览', en: 'Read week-one live-ops hub', ja: '首週ハブを見る' },
+      description: { zh: '先把反作弊、换服、自定义模式和电力分开判断', en: 'Separate anti-cheat, server switching, custom mode, and electricity first', ja: '反作弊、鯖移動、カスタム、電力を分けて見る', },
+    },
+    {
+      href: '/skjh/guides/anti-cheat-reporting-guide',
+      label: { zh: '看反作弊与举报', en: 'Read anti-cheat guide', ja: '反作弊ガイドへ' },
+      description: { zh: '如果环境越来越差，先确认是不是外挂或非法组队问题', en: 'If the environment feels worse, check cheats and illegal teaming first', ja: '環境悪化を感じたらまずチートと違法チーミングを見る', },
+    },
+    {
+      href: '/skjh/guides/server-wipe-cycle-guide',
+      label: { zh: '看换服与 wipe 周期', en: 'Read server cycle guide', ja: 'ワイプ周期を見る' },
+      description: { zh: '把“玩不下去”先拆成服务器节奏问题', en: 'Break “I cannot keep up” into a server-cycle diagnosis', ja: '「ついていけない」を鯖周期の問題として診断する', },
     },
   ],
 };
