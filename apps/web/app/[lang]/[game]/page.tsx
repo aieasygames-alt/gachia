@@ -504,17 +504,17 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     cta: { zh: '去 3.1 专题', en: 'Open v3.1 hub', ja: 'v3.1特集へ' },
     tracks: {
       zh: [
-        { title: '3.1 节点', description: '先承接 The Long Goodbye、周年和新代理人搜索。', links: [{ href: '/zzz/version', label: '3.1 专题' }, { href: '/zzz/guides/v3-0-version-guide', label: '3.0 回顾' }] },
+        { title: '3.1 节点', description: '先承接 The Long Goodbye、周年和新代理人搜索。', links: [{ href: '/zzz/version', label: '3.1 专题' }, { href: '/zzz/guides/anniversary-rewards-codes-plan', label: '周年奖励' }] },
         { title: '平台入坑', description: 'Steam、Microsoft Store、Xbox 用户先看账号与下载。', links: [{ href: '/zzz/guides/v3-1-anniversary-xbox-guide', label: '3.1 / 周年 FAQ' }, { href: '/zzz/redeem-codes', label: '兑换码' }] },
         { title: '养成与配队', description: '把周年回流继续送到配队、驱动盘和养成页。', links: [{ href: '/zzz/guides/meta-teams-v3-guide', label: '主流配队' }, { href: '/zzz/drive-discs', label: '驱动盘' }] },
       ],
       en: [
-        { title: 'v3.1 node', description: 'Catch The Long Goodbye, anniversary, and new-agent searches.', links: [{ href: '/zzz/version', label: 'v3.1 hub' }, { href: '/zzz/guides/v3-0-version-guide', label: 'v3.0 recap' }] },
+        { title: 'v3.1 node', description: 'Catch The Long Goodbye, anniversary, and new-agent searches.', links: [{ href: '/zzz/version', label: 'v3.1 hub' }, { href: '/zzz/guides/anniversary-rewards-codes-plan', label: 'Rewards plan' }] },
         { title: 'Platform starters', description: 'Steam, Microsoft Store, and Xbox users need account and download help.', links: [{ href: '/zzz/guides/v3-1-anniversary-xbox-guide', label: 'v3.1 FAQ' }, { href: '/zzz/redeem-codes', label: 'Codes' }] },
         { title: 'Builds and teams', description: 'Route anniversary returners into teams, discs, and progression.', links: [{ href: '/zzz/guides/meta-teams-v3-guide', label: 'Meta teams' }, { href: '/zzz/drive-discs', label: 'Drive discs' }] },
       ],
       ja: [
-        { title: 'v3.1導線', description: 'The Long Goodbye、周年、新エージェント検索を受け止めます。', links: [{ href: '/zzz/version', label: 'v3.1特集' }, { href: '/zzz/guides/v3-0-version-guide', label: 'v3.0振り返り' }] },
+        { title: 'v3.1導線', description: 'The Long Goodbye、周年、新エージェント検索を受け止めます。', links: [{ href: '/zzz/version', label: 'v3.1特集' }, { href: '/zzz/guides/anniversary-rewards-codes-plan', label: '周年報酬' }] },
         { title: 'プラットフォーム入門', description: 'Steam、Microsoft Store、Xbox勢はアカウントとDLから。', links: [{ href: '/zzz/guides/v3-1-anniversary-xbox-guide', label: 'v3.1 FAQ' }, { href: '/zzz/redeem-codes', label: 'コード' }] },
         { title: '育成と編成', description: '周年復帰勢を編成、ディスク、育成へつなげます。', links: [{ href: '/zzz/guides/meta-teams-v3-guide', label: '主要編成' }, { href: '/zzz/drive-discs', label: 'ディスク' }] },
       ],
@@ -544,7 +544,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           description: '把 v3.4 / v3.5 和 Roya Frostlands 放到最前面，先承接版本搜索。',
           links: [
             { href: '/wuwa/version', label: '版本专题' },
-            { href: '/wuwa/guides/v3-5-preview-guide', label: 'v3.5 前瞻' },
+            { href: '/wuwa/guides/yangyang-suisui-sp-pull-plan', label: 'Yangyang/Suisui' },
           ],
         },
         {
@@ -570,7 +570,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           description: 'Bring v3.4 / v3.5 and Roya Frostlands to the front of search intent.',
           links: [
             { href: '/wuwa/version', label: 'Version hub' },
-            { href: '/wuwa/guides/v3-5-preview-guide', label: 'v3.5 preview' },
+            { href: '/wuwa/guides/yangyang-suisui-sp-pull-plan', label: 'Yangyang/Suisui' },
           ],
         },
         {
@@ -596,7 +596,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           description: 'v3.4 / v3.5 と Roya Frostlands を前面に出して検索意図を受け止めます。',
           links: [
             { href: '/wuwa/version', label: 'バージョン特集' },
-            { href: '/wuwa/guides/v3-5-preview-guide', label: 'v3.5 前瞻' },
+            { href: '/wuwa/guides/yangyang-suisui-sp-pull-plan', label: 'Yangyang/Suisui' },
           ],
         },
         {
@@ -648,17 +648,17 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     cta: { zh: '去 Homecoming 专题', en: 'Open Homecoming hub', ja: 'Homecoming特集へ' },
     tracks: {
       zh: [
-        { title: 'Homecoming', description: '先承接半周年、新地图、新干员和奖励。', links: [{ href: '/endfield/version', label: 'Homecoming 专题' }, { href: '/endfield/guides/homecoming-update-guide', label: '更新指南' }] },
+        { title: 'Homecoming', description: '先承接半周年、新地图、新干员和奖励。', links: [{ href: '/endfield/version', label: 'Homecoming 专题' }, { href: '/endfield/guides/homecoming-operators-map-route', label: '新地图 / 干员' }] },
         { title: '蓝图 / AIC', description: '把工厂效率、蓝图复用和建设节奏继续下沉。', links: [{ href: '/endfield/guides/blueprint-aic-factory-guide', label: '蓝图 / AIC' }, { href: '/endfield/build', label: '配装推荐' }] },
         { title: '入坑与角色', description: '新玩家和回流玩家继续看下载、战斗和干员。', links: [{ href: '/endfield/guides/download-install-guide', label: '下载与配置' }, { href: '/endfield/characters', label: '角色图鉴' }] },
       ],
       en: [
-        { title: 'Homecoming', description: 'Catch half-year, maps, operators, and rewards first.', links: [{ href: '/endfield/version', label: 'Homecoming hub' }, { href: '/endfield/guides/homecoming-update-guide', label: 'Update guide' }] },
+        { title: 'Homecoming', description: 'Catch half-year, maps, operators, and rewards first.', links: [{ href: '/endfield/version', label: 'Homecoming hub' }, { href: '/endfield/guides/homecoming-operators-map-route', label: 'Map/operators' }] },
         { title: 'Blueprint / AIC', description: 'Push factory efficiency, blueprint reuse, and build cadence deeper.', links: [{ href: '/endfield/guides/blueprint-aic-factory-guide', label: 'Blueprint / AIC' }, { href: '/endfield/build', label: 'Builds' }] },
         { title: 'Start and roles', description: 'New and returning players continue into download, combat, and operators.', links: [{ href: '/endfield/guides/download-install-guide', label: 'Download & specs' }, { href: '/endfield/characters', label: 'Characters' }] },
       ],
       ja: [
-        { title: 'Homecoming', description: '半周年、マップ、オペレーター、報酬を先に受け止めます。', links: [{ href: '/endfield/version', label: 'Homecoming特集' }, { href: '/endfield/guides/homecoming-update-guide', label: '更新ガイド' }] },
+        { title: 'Homecoming', description: '半周年、マップ、オペレーター、報酬を先に受け止めます。', links: [{ href: '/endfield/version', label: 'Homecoming特集' }, { href: '/endfield/guides/homecoming-operators-map-route', label: 'マップ/干員' }] },
         { title: 'Blueprint / AIC', description: '工場効率、ブループリント再利用、建設テンポへつなげます。', links: [{ href: '/endfield/guides/blueprint-aic-factory-guide', label: 'Blueprint / AIC' }, { href: '/endfield/build', label: 'ビルド' }] },
         { title: '入門と役割', description: '新規と復帰勢をDL、戦闘、キャラへ誘導します。', links: [{ href: '/endfield/guides/download-install-guide', label: 'DLと環境' }, { href: '/endfield/characters', label: 'キャラ図鑑' }] },
       ],
@@ -764,12 +764,12 @@ interface GuideInfo { id: string; title: string; summary: string }
 const FEATURED_GUIDE_IDS: Record<string, string[]> = {
   genshin: ['phase-ii-columbina-raiden-pull-plan', 'snezhnaya-version-guide', 'lunar-reaction-guide'],
   starrail: ['himeko-nova-fate-pull-plan', 'v4-4-preview-guide', 'fate-collab-guide'],
-  wuwa: ['steam-xbox-game-pass-starter', 'v3-5-preview-guide', 'roya-frostlands-guide'],
+  wuwa: ['yangyang-suisui-sp-pull-plan', 'steam-xbox-game-pass-starter', 'v3-5-preview-guide'],
   nte: ['999-nights-mode-guide', 'shinku-iroi-pull-plan', 'v1-2-999-nights-guide'],
-  zzz: ['v3-1-anniversary-xbox-guide', 'steam-3-0-start-guide', 'meta-teams-v3-guide'],
+  zzz: ['anniversary-rewards-codes-plan', 'v3-1-anniversary-xbox-guide', 'meta-teams-v3-guide'],
   guihuan: ['official-release-company-faq', 'test-release-timeline-guide', 'time-loop-mechanic'],
   ananta: ['release-date-beta-pc-faq', 'preregistration-no-gacha-guide', 'download-install-guide'],
-  endfield: ['homecoming-update-guide', 'blueprint-aic-factory-guide', 'base-building-guide'],
+  endfield: ['homecoming-operators-map-route', 'homecoming-update-guide', 'blueprint-aic-factory-guide'],
   sea: ['steam-release-gacha-solo-faq', 'platform-download-guide', 'payment-model-guide'],
   skjh: ['official-pc-download-faq', 'first-2-hours-starter-route', 'base-location-anti-raid-plan'],
 };

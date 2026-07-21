@@ -1000,5 +1000,51 @@
         "answerZh": "先领邮件和周年奖励，检查有效兑换码，再看 3.1 卡池和自己队伍缺口。"
       }
     ]
+  },
+  {
+    "id": "anniversary-rewards-codes-plan",
+    "title": "绝区零 3.1 二周年奖励与兑换码规划：Remielle/Sigrid、Xbox 入坑和回流资源先领什么",
+    "titleEn": "ZZZ v3.1 Anniversary Rewards and Codes Plan: Remielle/Sigrid, Xbox Starters, and Returner Resources",
+    "titleJa": "ZZZ v3.1 2周年報酬とコード計画：Remielle/Sigrid、Xbox入門、復帰資源",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "categoryJa": "バージョン攻略",
+    "summary": "把 3.1「The Long Goodbye」、2 周年奖励、兑换码、Remielle/Sigrid、Xbox/Microsoft Store/Steam 入坑和回流资源整理成领取顺序。",
+    "summaryEn": "A v3.1 anniversary checklist for rewards, codes, Remielle/Sigrid, Xbox/Microsoft Store/Steam onboarding, and returner resources.",
+    "summaryJa": "v3.1「The Long Goodbye」、2周年報酬、コード、Remielle/Sigrid、Xbox/Microsoft Store/Steam入門を整理します。",
+    "content": "## 先看结论\n\n绝区零 3.1 和 2 周年的搜索重点不只是“版本什么时候开”，而是回流玩家和新平台玩家进来后先领什么、先绑定什么、先抽谁。最稳顺序是：确认平台与账号、领兑换码和邮件、看周年活动、再决定 Remielle / Sigrid 或复刻目标。\n\n## 领取与检查顺序\n\n| 优先级 | 先做什么 | 为什么 |\n| --- | --- | --- |\n| 1 | 确认账号和平台 | Steam、Microsoft Store、Xbox 玩家先避免绑错账号 |\n| 2 | 领取兑换码和邮件 | 先补抽卡资源缺口 |\n| 3 | 查看周年活动 | 限时奖励和回流福利不要漏 |\n| 4 | 盘点电量/养成材料 | 抽到角色后能不能马上养起来 |\n| 5 | 再决定抽卡目标 | 避免先抽后发现资源不够 |\n\n## Remielle / Sigrid 怎么看\n\nRemielle 和 Sigrid 是 3.1 搜索里的核心新代理人词，但不建议只按热度决定。先看你缺的是站场输出、异常/支援组件，还是只是周年收藏目标。\n\n抽之前问三件事：\n\n1. 你现在最缺哪个位置。\n2. 对应驱动盘、音擎和队友是否准备好。\n3. 抽完后是否还保得住后续版本资源。\n\n## Xbox / Microsoft Store / Steam 新玩家先做什么\n\n新平台玩家第一步不是抽卡，而是确认：\n\n- 下载入口是否来自官方平台。\n- HoYoverse / 平台账号是否正确绑定。\n- 存档互通和地区规则是否清楚。\n- 手柄、画质、语言和云存档是否稳定。\n\n这些确认完，再去看周年奖励和版本活动，体验会顺很多。\n\n## 兑换码怎么用最稳\n\n兑换码适合补小缺口，不适合当成完整保底来源。建议先记录：当前垫抽、是否大保底、周年活动可拿资源、每日/周常剩余资源。算完再决定是否追新代理人或武器。\n\n## 回流玩家路线\n\n1. 先打开 /zzz/version 看 3.1 节点。\n2. 领 /zzz/redeem-codes 和邮件奖励。\n3. 看 /zzz/guides/v3-1-anniversary-xbox-guide 确认平台与周年总览。\n4. 进入 /zzz/guides/meta-teams-v3-guide 看当前主流队伍。\n5. 最后再补驱动盘和音擎。",
+    "contentEn": "## Quick answer\n\nZZZ v3.1 and the second anniversary are not only about launch timing. New and returning players need to know what to claim, what to link, and who to pull first. The safe order is: confirm platform/account, claim codes and mail, check anniversary events, then decide on Remielle, Sigrid, or rerun targets.\n\n## Priority order\n\n| Priority | Action | Why |\n| --- | --- | --- |\n| 1 | Confirm account and platform | Steam, Microsoft Store, and Xbox users should avoid wrong binding |\n| 2 | Claim codes and mail | Fill pull-resource gaps first |\n| 3 | Check anniversary events | Limited and returner rewards can be missed |\n| 4 | Count battery/materials | Make sure new agents can be built |\n| 5 | Decide pull target | Avoid pulling before resource math |\n\n## Remielle / Sigrid\n\nDo not pull by hype alone. Check whether your account needs field DPS, anomaly/support components, or collection value, then verify drive discs, W-Engines, teammates, and future savings.\n\n## New platform route\n\nConfirm official download entry, account linking, cross-save/region rules, controller setup, graphics, language, and cloud save before spending resources.\n\n## Codes\n\nCodes fill small gaps. They should not be treated as a full guarantee source. Count pity, guarantee state, anniversary income, and weekly resources first.\n\n## Returner path\n\nOpen the v3.1 hub, claim codes, read the anniversary/platform FAQ, check meta teams, then update drive discs and W-Engines.",
+    "tags": [
+      "3.1",
+      "2nd anniversary",
+      "codes",
+      "Remielle",
+      "Sigrid",
+      "Xbox",
+      "Microsoft Store",
+      "Steam"
+    ],
+    "faq": [
+      {
+        "question": "What should returners do first in ZZZ v3.1?",
+        "questionZh": "绝区零 3.1 回流先做什么？",
+        "answer": "Confirm account/platform, claim codes and mail, check anniversary events, then decide pulls.",
+        "answerZh": "先确认账号和平台，领取兑换码和邮件，看周年活动，再决定抽卡。"
+      },
+      {
+        "question": "Should I pull Remielle or Sigrid first?",
+        "questionZh": "先抽 Remielle 还是 Sigrid？",
+        "answer": "Choose by account role gap, prepared discs/W-Engines, and future savings, not hype alone.",
+        "answerZh": "按账号缺口、驱动盘/音擎准备和后续资源判断，不要只按热度抽。"
+      },
+      {
+        "question": "Are codes enough for a guarantee?",
+        "questionZh": "兑换码够一轮保底吗？",
+        "answer": "Usually no. Treat codes as gap-filling resources and count anniversary/event income too.",
+        "answerZh": "通常不够。兑换码适合补差额，还要一起计算周年和活动资源。"
+      }
+    ],
+    "date": "2026-07-21"
   }
 ]

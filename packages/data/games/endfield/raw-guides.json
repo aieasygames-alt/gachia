@@ -501,5 +501,51 @@
         "answerZh": "好复用的蓝图应该模块小、命名清楚、入口出口明确，并且留出升级空间。"
       }
     ]
+  },
+  {
+    "id": "homecoming-operators-map-route",
+    "title": "终末地 Homecoming 新地图与新干员路线：Camille、Arcane/Liino、AIC 工厂和奖励先看哪",
+    "titleEn": "Arknights: Endfield Homecoming Operators and Map Route: Camille, Arcane/Liino, AIC Factory, and Rewards",
+    "titleJa": "エンドフィールド Homecoming 新マップ・新オペレーター導線：Camille、Arcane/Liino、AIC工場、報酬",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "categoryJa": "バージョン攻略",
+    "summary": "承接 Homecoming、新地图、Camille、Arcane/Liino、新干员、AIC 工厂、blueprint 和奖励搜索，把回流玩家下一步路线拆清楚。",
+    "summaryEn": "A Homecoming route for new maps, Camille, Arcane/Liino, new operators, AIC factory, blueprints, and reward checks.",
+    "summaryJa": "Homecoming、新マップ、Camille、Arcane/Liino、新オペレーター、AIC工場、報酬を整理します。",
+    "content": "## 先看结论\n\nHomecoming 后，终末地玩家最容易卡在“先看地图、先抽干员，还是先研究 AIC 工厂”。推荐顺序是：先确认 Homecoming 总览和奖励，再看新地图开放内容，然后进入新干员与蓝图 / AIC 工厂路线。\n\n## Homecoming 下一步路线\n\n| 用户类型 | 先看什么 | 下一步 |\n| --- | --- | --- |\n| 回流玩家 | Homecoming 总览 | 新地图 + 奖励 + 工厂 QoL |\n| 建设玩家 | 蓝图 / AIC 工厂 | 生产线复用和基地效率 |\n| 角色玩家 | 新干员与队伍 | Camille、Arcane/Liino 和阵容定位 |\n| 新玩家 | 下载与战斗系统 | 先理解 Talos II 探索和实时战斗 |\n\n## 新地图怎么安排\n\n新地图搜索通常不是只想看地点名，而是想知道：\n\n- 哪些区域先开放。\n- 是否影响主线推进。\n- 新资源和工厂材料在哪里接入。\n- 回流玩家需要补哪些前置。\n- 地图探索和干员培养哪个更优先。\n\n如果你刚回归，先完成版本引导和奖励，再进入探索，不要直接跳到高效率路线。\n\n## 新干员怎么判断\n\nCamille、Arcane/Liino 等名字适合做角色入口，但目前页面最好先强调定位判断：\n\n1. 这个干员补的是输出、控制、辅助还是生产效率。\n2. 是否需要新地图资源培养。\n3. 是否和 AIC 工厂或蓝图系统有间接收益。\n4. 你的现有队伍是否已经能覆盖主线和探索。\n\n## AIC 工厂与蓝图为什么要放一起看\n\nHomecoming 的差异化关键词是 blueprint / AIC。用户真正关心的是：\n\n- 蓝图能不能复用布局。\n- 工厂线路怎么少返工。\n- 新地图资源如何接进生产线。\n- 回流玩家怎样从旧基地过渡。\n\n所以建议先看 /endfield/guides/blueprint-aic-factory-guide，再回到基地建设和材料刷取页。\n\n## 奖励检查清单\n\n- 登录奖励和版本补偿。\n- Homecoming 活动任务。\n- 新地图探索奖励。\n- 工厂/基地相关任务。\n- 新干员培养材料。\n- 兑换码或社区活动奖励。\n\n## 推荐阅读顺序\n\n1. /endfield/version：Homecoming 专题。\n2. /endfield/guides/homecoming-update-guide：更新总览。\n3. /endfield/guides/blueprint-aic-factory-guide：蓝图 / AIC 工厂。\n4. /endfield/characters：干员图鉴。\n5. /endfield/guides/base-building-guide：基地建设。",
+    "contentEn": "## Quick answer\n\nAfter Homecoming, the key question is whether to check maps, operators, or the AIC factory first. The safest order is: Homecoming overview and rewards, new map content, then operators and blueprint/AIC routes.\n\n## Next-step route\n\n| User type | First page | Next step |\n| --- | --- | --- |\n| Returning player | Homecoming overview | New map, rewards, factory QoL |\n| Builder | Blueprint / AIC factory | Production reuse and base efficiency |\n| Operator-focused | New operators and teams | Camille, Arcane/Liino, role fit |\n| New player | Download and combat basics | Talos II exploration and real-time combat |\n\n## New map planning\n\nPlayers want to know which areas open first, whether story progress is affected, where resources connect to factory materials, what prerequisites returners need, and whether map exploration or operator progression comes first.\n\n## Operator checks\n\nEvaluate whether a new operator fills output, control, support, or production needs; whether new-map materials are required; and whether your current roster already handles exploration.\n\n## AIC and blueprints\n\nBlueprint/AIC demand is about layout reuse, fewer factory rebuilds, new-map resource routing, and old-base transition planning.\n\n## Read next\n\nOpen the Homecoming hub, update guide, blueprint/AIC guide, operator wiki, and base-building guide.",
+    "tags": [
+      "Homecoming",
+      "Camille",
+      "Arcane",
+      "Liino",
+      "new map",
+      "AIC",
+      "blueprint",
+      "operators"
+    ],
+    "faq": [
+      {
+        "question": "What should returning Endfield players open first?",
+        "questionZh": "终末地回流玩家先看什么？",
+        "answer": "Start with the Homecoming hub and rewards, then move into new maps, operators, and blueprint/AIC factory changes.",
+        "answerZh": "先看 Homecoming 专题和奖励，再看新地图、新干员和蓝图/AIC 工厂变化。"
+      },
+      {
+        "question": "Should I study AIC factory before operators?",
+        "questionZh": "先看 AIC 工厂还是新干员？",
+        "answer": "Builders should start with AIC/blueprints; combat-focused players can check operator roles first.",
+        "answerZh": "建设玩家先看 AIC/蓝图；战斗玩家可以先看干员定位。"
+      },
+      {
+        "question": "Why connect new maps with factory planning?",
+        "questionZh": "为什么新地图要和工厂规划一起看？",
+        "answer": "New map resources often affect production routes, material flow, and base upgrade priorities.",
+        "answerZh": "新地图资源往往会影响生产线、材料流转和基地升级优先级。"
+      }
+    ],
+    "date": "2026-07-21"
   }
 ]

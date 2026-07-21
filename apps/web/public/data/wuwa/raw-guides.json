@@ -974,5 +974,52 @@
         "answerZh": "先设置账号和操作，确认 3.5 活动是否还能追，再判断 Yangyang: Xuanling 或 Suisui 是否适合账号。"
       }
     ]
+  },
+  {
+    "id": "yangyang-suisui-sp-pull-plan",
+    "title": "鸣潮 3.5 Yangyang: Xuanling / Suisui 与 SP 机制抽取规划：Steam/Xbox 新玩家先抽谁",
+    "titleEn": "Wuthering Waves v3.5 Yangyang: Xuanling / Suisui and SP Pull Plan: Who Should Steam/Xbox Newcomers Pull?",
+    "titleJa": "鳴潮 v3.5 Yangyang: Xuanling / Suisui・SP機構ガチャ計画：Steam/Xbox新規は誰を引く？",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "categoryJa": "バージョン攻略",
+    "summary": "承接 3.5、Yangyang: Xuanling、Suisui、SP 机制、Steam、Xbox、Game Pass、codes 和新玩家抽卡搜索，给出资源与队伍缺口判断。",
+    "summaryEn": "A v3.5 pull-planning guide for Yangyang: Xuanling, Suisui, SP mechanics, Steam/Xbox/Game Pass starters, codes, and team gaps.",
+    "summaryJa": "v3.5、Yangyang: Xuanling、Suisui、SP機構、Steam/Xbox/Game Pass、コード、初心者ガチャを整理します。",
+    "content": "## 先看结论\n\n鸣潮 3.5 的 Yangyang: Xuanling、Suisui 和 SP 机制搜索，真正问题不是“谁最热门”，而是新平台玩家有没有足够资源、声骸基础和队伍位置。Steam、Xbox、Game Pass 新玩家建议先解决账号与手柄，再决定是否投入 3.5 卡池。\n\n## 30 秒决策表\n\n| 账号情况 | 先看谁 | 原因 |\n| --- | --- | --- |\n| 刚从 Steam/Xbox 入坑 | 平台入坑 + 新手资源 | 先解决账号、手柄、活动和声骸 |\n| 缺当前主力输出 | Yangyang: Xuanling | 如果定位补队伍短板，可优先评估 |\n| 已有稳定主队 | Suisui / 后续预留 | 不急着消耗全部 Astrite |\n| 声骸体系没成型 | 声骸与配装 | 抽到角色也需要基础养成支撑 |\n| 只够一次保底 | 二选一 | 不建议同时追角色和武器 |\n\n## SP 机制先怎么理解\n\nSP 机制类搜索适合先做“玩法解释 + 抽卡影响”两层：\n\n1. 它是否改变角色循环和队伍分工。\n2. 它是否要求特定声骸、武器或队友。\n3. 新玩家能不能马上用好。\n4. 老玩家是否需要重配队伍。\n\n如果你还没稳定刷声骸，不要把 SP 机制当成马上拉满的理由。\n\n## Yangyang: Xuanling 适合谁\n\n更适合当前缺对应定位的玩家。抽之前先检查：\n\n- 是否缺她补的位置。\n- 是否有可用武器和声骸。\n- 是否能和现有队友形成循环。\n- 抽完后是否还保得住后续目标。\n\n## Suisui 怎么规划\n\nSuisui 更适合做后续预留或第二目标。资源紧张时，不要在 3.5 里同时追两个角色和武器。先等实测、队伍模板和活动资源更清楚后再决定。\n\n## Steam / Xbox / Game Pass 新玩家路线\n\n1. /wuwa/guides/steam-xbox-game-pass-starter：先处理账号、平台和手柄。\n2. /wuwa/redeem-codes：领兑换码。\n3. /wuwa/guides/v3-5-preview-guide：看版本内容。\n4. /wuwa/build：理解声骸和配装。\n5. 再回到本页决定 Yangyang: Xuanling / Suisui。\n\n## 常见误区\n\n### 误区 1：新平台玩家应该马上抽热门角色\n\n不一定。先保证能稳定游玩、完成活动、理解声骸，再抽更稳。\n\n### 误区 2：SP 机制等于必须抽\n\n机制强不代表每个账号都必须立刻抽。要看队伍缺口和养成成本。\n\n### 误区 3：兑换码能补所有缺口\n\n兑换码只能补小额资源，保底仍要靠版本活动、日常和探索收入。",
+    "contentEn": "## Quick answer\n\nFor v3.5, Yangyang: Xuanling, Suisui, and SP mechanics are not just hype terms. New Steam, Xbox, and Game Pass players must check resources, Echo basics, and team slots first. Solve account, controller, events, and Echo progression before committing heavily.\n\n## 30-second table\n\n| Account state | Check first | Why |\n| --- | --- | --- |\n| New Steam/Xbox player | Platform starter + resources | Account, controller, events, and Echo basics come first |\n| Missing current carry/role | Yangyang: Xuanling | Evaluate if she fills a real gap |\n| Stable main team | Suisui / future savings | No need to spend all Astrite immediately |\n| Weak Echo foundation | Builds and Echoes | Pulled characters still need progression support |\n| One guarantee only | Pick one target | Do not chase two characters and weapons together |\n\n## SP mechanics\n\nTreat SP as both a gameplay and pull-planning topic. Ask whether it changes rotations, team roles, Echo/weapon needs, newcomer usability, and old-team rebuilds.\n\n## Yangyang: Xuanling\n\nBest for accounts that need her role and have weapon/Echo/team support ready.\n\n## Suisui\n\nBetter as a savings or second target if your current team is stable and resources are tight.\n\n## New-platform route\n\nOpen Steam/Xbox/Game Pass starter, redeem codes, v3.5 preview, builds/Echoes, then decide pulls.\n\n## Common mistakes\n\nNew players should not pull by hype immediately; SP mechanics do not mean every account must pull; codes only fill small gaps.",
+    "tags": [
+      "v3.5",
+      "Yangyang Xuanling",
+      "Suisui",
+      "SP",
+      "Steam",
+      "Xbox",
+      "Game Pass",
+      "codes",
+      "Echoes"
+    ],
+    "faq": [
+      {
+        "question": "Should Steam/Xbox newcomers pull immediately?",
+        "questionZh": "Steam/Xbox 新玩家要马上抽吗？",
+        "answer": "Usually no. Set up account/controller, claim codes, clear starter events, and understand Echoes first.",
+        "answerZh": "通常不建议马上重投入。先设置账号/手柄，领码，清新手活动并理解声骸。"
+      },
+      {
+        "question": "Yangyang: Xuanling or Suisui?",
+        "questionZh": "Yangyang: Xuanling 和 Suisui 先抽谁？",
+        "answer": "Choose Yangyang if she fills an immediate team role. Save for Suisui or later targets if your main team is stable.",
+        "answerZh": "如果 Yangyang 能补当前队伍缺口可优先；主队稳定则可留给 Suisui 或后续目标。"
+      },
+      {
+        "question": "Does SP mean must-pull?",
+        "questionZh": "SP 机制等于必抽吗？",
+        "answer": "No. SP matters only if your account can support the rotation, Echoes, weapons, and team needs.",
+        "answerZh": "不是。只有账号能支撑循环、声骸、武器和队伍需求时，SP 价值才容易落地。"
+      }
+    ],
+    "date": "2026-07-21"
   }
 ]

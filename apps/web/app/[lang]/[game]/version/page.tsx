@@ -250,7 +250,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['steam-xbox-game-pass-starter', 'v3-5-preview-guide', 'roya-frostlands-guide'],
+    guideIds: ['yangyang-suisui-sp-pull-plan', 'steam-xbox-game-pass-starter', 'v3-5-preview-guide'],
   },
   nte: {
     title: { zh: '1.2「999 Nights」Shinku / Iroi 专题', en: 'v1.2 999 Nights Shinku / Iroi Hub', ja: 'v1.2 999 Nights Shinku / Iroi 特集' },
@@ -342,7 +342,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['v3-1-anniversary-xbox-guide', 'steam-3-0-start-guide', 'meta-teams-v3-guide'],
+    guideIds: ['anniversary-rewards-codes-plan', 'v3-1-anniversary-xbox-guide', 'meta-teams-v3-guide'],
   },
   guihuan: {
     title: { zh: '测试 / 公测时间线专题', en: 'Test & Release Timeline Hub', ja: 'テスト・リリース時期特集' },
@@ -480,7 +480,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['homecoming-update-guide', 'blueprint-aic-factory-guide', 'base-building-guide'],
+    guideIds: ['homecoming-operators-map-route', 'homecoming-update-guide', 'blueprint-aic-factory-guide'],
   },
   sea: {
     title: { zh: '官网 / 测试 / 开服专题', en: 'Official / Test / Launch Hub', ja: '公式・テスト・ローンチ特集' },
