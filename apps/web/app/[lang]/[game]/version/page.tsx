@@ -204,7 +204,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['v4-4-preview-guide', 'fate-collab-guide', 'banner-schedule-guide'],
+    guideIds: ['himeko-nova-fate-pull-plan', 'v4-4-preview-guide', 'fate-collab-guide'],
   },
   wuwa: {
     title: { zh: '3.5 版本与入坑专题', en: 'v3.5 Version & Start Hub', ja: 'v3.5 バージョン・入門特集' },
@@ -342,7 +342,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['steam-3-0-start-guide', 'v3-0-version-guide', 'meta-teams-v3-guide'],
+    guideIds: ['v3-1-anniversary-xbox-guide', 'steam-3-0-start-guide', 'meta-teams-v3-guide'],
   },
   guihuan: {
     title: { zh: '测试 / 公测时间线专题', en: 'Test & Release Timeline Hub', ja: 'テスト・リリース時期特集' },
@@ -480,7 +480,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['homecoming-update-guide', 'base-building-guide', 'download-install-guide'],
+    guideIds: ['homecoming-update-guide', 'blueprint-aic-factory-guide', 'base-building-guide'],
   },
   sea: {
     title: { zh: '官网 / 测试 / 开服专题', en: 'Official / Test / Launch Hub', ja: '公式・テスト・ローンチ特集' },

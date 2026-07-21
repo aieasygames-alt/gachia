@@ -458,5 +458,48 @@
         "answerZh": "完成40星难度即可获得主要奖励。42-45星为额外挑战奖励，量力而行。平民玩家建议以40-42星为目标。"
       }
     ]
+  },
+  {
+    "id": "blueprint-aic-factory-guide",
+    "title": "终末地蓝图 / AIC 工厂系统入门：Homecoming 后生产线、蓝图复用与回流建设路线",
+    "titleEn": "Arknights: Endfield Blueprint / AIC Factory Guide: Production Lines, Blueprint Reuse, and Returner Routes after Homecoming",
+    "titleJa": "エンドフィールド Blueprint / AIC工場 入門ガイド",
+    "category": "system",
+    "categoryZh": "系统攻略",
+    "categoryEn": "System Guide",
+    "summary": "围绕 Homecoming 后升温的 blueprint、蓝图、AIC 工厂、生产线 QoL 和回流建设问题，整理从新手到回流玩家都能执行的工厂路线。",
+    "summaryEn": "A practical guide for blueprint, AIC factory, production-line QoL, and returner construction questions after Homecoming.",
+    "summaryJa": "Homecoming後のBlueprint、AIC工場、生産ライン、復帰導線を整理します。",
+    "content": "## 先看结论\n\nHomecoming 之后，终末地的高意图搜索明显从“什么时候更新”转到“蓝图怎么用、AIC 工厂怎么搭、生产线怎么更省事”。这类用户通常不是想读新闻，而是想马上把基地效率提起来。\n\n### 蓝图 / AIC 先解决什么\n\n- **蓝图**：解决重复搭建、布局复用和生产线迁移的问题。\n- **AIC 工厂**：解决材料加工、配方衔接、机器布局和自动化的问题。\n- **Homecoming QoL**：重点关注新增物料状态、更多配方、机器和生产线调整。\n- **回流玩家**：先恢复基础产能，再追新地图和新干员养成。\n\n## 新手的 AIC 工厂顺序\n\n1. **先保基础材料**：优先能稳定供给升级、装备和干员养成的材料。\n2. **再做单线闭环**：不要一开始铺太大，先做一条可理解、可维护的生产线。\n3. **最后再复制蓝图**：等路线稳定后再保存蓝图，避免把低效布局复制到全基地。\n\n### 第一条生产线建议\n\n| 阶段 | 目标 | 判断标准 |\n|---|---|---|\n| 起步 | 能持续产基础材料 | 不需要频繁手动补缺口 |\n| 扩展 | 能支撑装备和干员养成 | 日常材料不再卡主线 |\n| 优化 | 能用蓝图复制稳定模块 | 新区建设不需要重搭一次 |\n\n## 回流玩家先别重建整个基地\n\n回流玩家最常犯的错是看到 Homecoming 新系统后直接拆家。更稳的路线是：\n\n1. 先标记旧生产线还能用的模块。\n2. 把瓶颈材料、断线机器和低效搬运点列出来。\n3. 只改瓶颈处，再保存新蓝图。\n4. 等新地图材料需求明确后，再决定是否大规模迁移。\n\n## 蓝图复用的 4 个原则\n\n- **小模块优先**：保存 1 条生产线或 1 个功能区，比保存整个基地更灵活。\n- **入口出口清楚**：蓝图里要能一眼看出材料从哪里进、成品从哪里出。\n- **留升级空间**：机器、配方和物流以后会变，别把空间塞死。\n- **按用途命名**：例如“基础材料线”“装备材料线”“新地图采集处理线”。\n\n## 和 Homecoming 版本页怎么配合\n\n- 想看新地图、Arcane / Liino 和奖励：先看 /endfield/version。\n- 想把基地和生产线效率拉起来：看本页。\n- 想理解战斗和干员搭配：接 /endfield/guides/combat-system-guide 与 /endfield/characters。\n\n## 常见排查表\n\n| 问题 | 可能原因 | 先做什么 |\n|---|---|---|\n| 生产线停住 | 前置材料不足或机器断线 | 从最终产物倒推缺口 |\n| 蓝图不好复用 | 模块太大或依赖太多 | 拆成小型功能模块 |\n| 回流后看不懂基地 | 旧布局没有命名 | 先做区域标记再改造 |\n| 新地图材料卡住 | 没有独立处理线 | 建一条新材料缓冲线 |",
+    "contentEn": "## Quick answer\n\nAfter Homecoming, high-intent Endfield searches shifted from \"when is the update\" to \"how do blueprints work, how should I build the AIC factory, and how do I make production lines less painful.\" These users usually want a practical build route, not news.\n\n### What blueprints / AIC solve\n\n- **Blueprints**: Repeated builds, layout reuse, and production-line migration.\n- **AIC factory**: Material processing, recipe chains, machine layout, and automation.\n- **Homecoming QoL**: New material states, recipes, machines, and production-line improvements.\n- **Returners**: Restore core output first, then chase new maps and operator progression.\n\n## Beginner AIC factory order\n\n1. **Secure basic materials**: Prioritize materials used for upgrades, gear, and operator progression.\n2. **Build one closed loop**: Do not overbuild. Start with one understandable, maintainable line.\n3. **Save blueprints after it works**: Stabilize the route before copying it across your base.\n\n### First production line\n\n| Stage | Goal | Success check |\n|---|---|---|\n| Start | Stable basic materials | Few manual supply gaps |\n| Expand | Support gear and operators | Dailies no longer block progression |\n| Optimize | Reuse stable modules as blueprints | New areas do not require rebuilding from scratch |\n\n## Returners should not rebuild everything first\n\nA common returner mistake is tearing down the whole base after seeing new Homecoming systems. A safer route:\n\n1. Mark old production modules that still work.\n2. List bottleneck materials, disconnected machines, and weak transport points.\n3. Fix bottlenecks only, then save updated blueprints.\n4. Wait until new-map material needs are clear before large migration.\n\n## Four blueprint reuse rules\n\n- **Small modules first**: One line or one function zone is more flexible than a full-base blueprint.\n- **Clear input and output**: You should see where materials enter and products exit.\n- **Leave upgrade space**: Machines, recipes, and logistics can change.\n- **Name by purpose**: Examples: basic-material line, gear-material line, new-map processing line.\n\n## How this connects to Homecoming\n\n- New maps, Arcane / Liino, and rewards: /endfield/version.\n- Base and production-line efficiency: this guide.\n- Combat and operators: /endfield/guides/combat-system-guide and /endfield/characters.\n\n## Troubleshooting\n\n| Problem | Likely cause | First action |\n|---|---|---|\n| Line stops | Missing inputs or disconnected machines | Trace backward from final output |\n| Blueprint is hard to reuse | Module is too large or dependency-heavy | Split into smaller function modules |\n| Returner base is confusing | Old layout has no names | Label zones before rebuilding |\n| New-map material bottleneck | No dedicated processing line | Build a buffer line for new materials |",
+    "tags": [
+      "Homecoming",
+      "blueprint",
+      "AIC",
+      "factory",
+      "base building",
+      "production line",
+      "returner"
+    ],
+    "faq": [
+      {
+        "question": "What is the first AIC factory goal after Homecoming?",
+        "questionZh": "Homecoming 后 AIC 工厂先做什么？",
+        "answer": "Secure a small, stable basic-material loop before saving or copying blueprints.",
+        "answerZh": "先做一条小而稳定的基础材料闭环，再保存和复用蓝图。"
+      },
+      {
+        "question": "Should returners rebuild their whole base?",
+        "questionZh": "回流玩家要不要直接重建整个基地？",
+        "answer": "No. Mark working modules, fix bottlenecks, then save updated blueprints after the line is stable.",
+        "answerZh": "不建议。先标记还能用的模块，修瓶颈，等生产线稳定后再保存新蓝图。"
+      },
+      {
+        "question": "What makes a good blueprint?",
+        "questionZh": "什么样的蓝图更好复用？",
+        "answer": "A reusable blueprint is small, clearly named, has obvious input/output points, and leaves space for upgrades.",
+        "answerZh": "好复用的蓝图应该模块小、命名清楚、入口出口明确，并且留出升级空间。"
+      }
+    ]
   }
 ]
