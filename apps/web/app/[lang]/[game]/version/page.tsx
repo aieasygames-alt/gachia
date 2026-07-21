@@ -204,7 +204,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['himeko-nova-fate-pull-plan', 'v4-4-preview-guide', 'fate-collab-guide'],
+    guideIds: ['fate-rin-gilgamesh-reward-faq', 'himeko-nova-fate-pull-plan', 'fate-collab-guide'],
   },
   wuwa: {
     title: { zh: '3.5 版本与入坑专题', en: 'v3.5 Version & Start Hub', ja: 'v3.5 バージョン・入門特集' },
@@ -480,7 +480,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['homecoming-operators-map-route', 'homecoming-update-guide', 'blueprint-aic-factory-guide'],
+    guideIds: ['official-download-specs-homecoming-faq', 'homecoming-operators-map-route', 'blueprint-aic-factory-guide'],
   },
   sea: {
     title: { zh: '官网 / 测试 / 开服专题', en: 'Official / Test / Launch Hub', ja: '公式・テスト・ローンチ特集' },
@@ -526,7 +526,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['steam-release-gacha-solo-faq', 'official-2026-test-timeline-guide', 'platform-download-guide', 'payment-model-guide'],
+    guideIds: ['ps5-xbox-review-gameplay-faq', 'steam-release-gacha-solo-faq', 'official-2026-test-timeline-guide', 'platform-download-guide'],
   },
   skjh: {
     title: { zh: 'S1 登岛 / 服务器模式 / 防抄家专题', en: 'S1 Island Start / Server Modes / Anti-Raid Hub', ja: 'S1上陸 / サーバーモード / 防衛特集' },

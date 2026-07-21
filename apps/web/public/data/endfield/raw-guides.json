@@ -547,5 +547,59 @@
       }
     ],
     "date": "2026-07-21"
+  },
+  {
+    "id": "official-download-specs-homecoming-faq",
+    "title": "终末地官网下载安装到配置 FAQ：Homecoming 后 PC、移动端、测试资格和 AIC 入坑先确认什么",
+    "titleEn": "Arknights: Endfield Official Download and Specs FAQ: PC, Mobile, Test Access, and Homecoming Starter Checks",
+    "titleJa": "エンドフィールド公式DL・環境FAQ：PC、モバイル、テスト資格、Homecoming入門確認",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "categoryJa": "初心者ガイド",
+    "summary": "承接终末地官网、下载、PC、配置、移动端、测试资格和 Homecoming 回流搜索，把入口、设备和下一步攻略分清楚。",
+    "summaryEn": "A starter FAQ for Endfield official site, download, PC specs, mobile, test access, and Homecoming returner searches.",
+    "summaryJa": "公式サイト、DL、PC環境、モバイル、テスト資格、Homecoming復帰検索を整理します。",
+    "content": "## 先看结论\n\n搜终末地官网、下载、PC、配置或移动端时，先确认你要解决的是“能不能下载”、还是“设备能不能跑”、或者“Homecoming 回流后该看什么”。下载入口、测试资格和平台节奏都以官网、商店页和官方公告为准，不建议使用非官方安装包或未确认渠道。\n\n## 快速 FAQ\n\n| 问题 | 建议口径 |\n|---|---|\n| 官网在哪里？ | 以官方站和官方社区链接为准。 |\n| PC 能玩吗？ | 先看官方测试/发行公告与配置要求。 |\n| 移动端有吗？ | 以 App Store / Google Play / 官网渠道公布为准。 |\n| 现在能下载吗？ | 看当前测试资格、预下载和平台开放状态。 |\n| 配置不够怎么办？ | 优先确认最低/推荐配置、容量、显卡驱动和画质档位。 |\n\n## 下载前先查 5 件事\n\n1. **账号和地区**：确认账号体系、地区可用性和测试资格。\n2. **平台入口**：官网、PC 启动器、商店页是否一致。\n3. **设备配置**：CPU、显卡、内存、系统版本和存储空间。\n4. **网络与更新**：预下载、补丁大小和更新校验时间。\n5. **安全来源**：只使用官方渠道，不用来历不明的安装包。\n\n## Homecoming 后新玩家先看什么\n\nHomecoming 让终末地搜索从“什么时候能玩”转向“进来以后看什么”。推荐顺序：\n\n| 用户类型 | 先看 | 下一步 |\n|---|---|---|\n| 新玩家 | 下载与战斗系统 | 理解 Talos II 探索和实时战斗 |\n| 回流玩家 | Homecoming 专题 | 新地图、新干员、奖励和工厂 QoL |\n| 建设玩家 | 蓝图 / AIC 工厂 | 生产线、布局复用和材料流转 |\n| 角色玩家 | 干员图鉴 | Camille、Arcane/Liino 与队伍定位 |\n\n## PC 配置怎么解释\n\n配置页不要只给一张表，还要解释玩家真正会遇到的问题：\n\n- 安装包和更新包需要预留额外空间。\n- 首次启动可能需要编译缓存或校验资源。\n- 开放世界探索比菜单/剧情更吃显卡和内存。\n- 如果帧率不稳，先降阴影、体积效果和远景细节。\n- 驱动和系统版本往往比“刚好达到最低配置”更重要。\n\n## AIC / blueprint 为什么也放在入坑页\n\n很多新玩家不是只想下载，他们马上会搜 blueprint、AIC、factory 和 base building。下载页要把他们送到建设入口：\n\n- 先理解 AIC 工厂是长期效率系统。\n- 再看蓝图复用，避免每次更新都重建生产线。\n- 回流玩家优先修瓶颈，不要第一天推倒重来。\n\n## 站内下一步\n\n- /endfield/version：Homecoming 专题。\n- /endfield/guides/homecoming-operators-map-route：新地图和新干员路线。\n- /endfield/guides/blueprint-aic-factory-guide：蓝图 / AIC 工厂入门。\n- /endfield/guides/download-install-guide：基础下载指南。\n- /endfield/guides/combat-system-guide：战斗系统。",
+    "contentEn": "## Quick answer\n\nWhen users search Endfield official site, download, PC, specs, or mobile, first determine whether they need download access, device readiness, or a Homecoming returner route. Download availability, test access, and platform timing should be based on the official site, store pages, and official announcements. Avoid unofficial installers or unverified channels.\n\n## Fast FAQ\n\n| Question | Safe wording |\n|---|---|\n| Where is the official site? | Use the official site and official community links. |\n| Can I play on PC? | Check official test/release notices and specs first. |\n| Is mobile available? | Use App Store, Google Play, or official-site channels as the source of truth. |\n| Can I download now? | Check current test access, preload status, and platform availability. |\n| What if my specs are low? | Confirm minimum/recommended specs, storage, GPU driver, and graphics settings. |\n\n## Check these before downloading\n\n1. **Account and region**: account system, region availability, and test access.\n2. **Platform entry**: official site, PC launcher, and store pages.\n3. **Device specs**: CPU, GPU, RAM, OS version, and storage.\n4. **Network and updates**: preload, patch size, and file verification time.\n5. **Safe source**: use official channels only.\n\n## What to read after Homecoming\n\n| User type | First page | Next step |\n|---|---|---|\n| New player | Download and combat basics | Talos II exploration and real-time combat |\n| Returning player | Homecoming hub | New maps, operators, rewards, and factory QoL |\n| Builder | Blueprint / AIC factory | Production lines, layout reuse, and material flow |\n| Operator-focused | Operator wiki | Camille, Arcane/Liino, and team roles |\n\n## How to explain PC specs\n\nDo not only publish a table. Explain that installer and patch files need extra storage, first launch may verify or compile resources, open-world exploration is heavier than menus, and unstable FPS should be addressed by lowering shadows, volumetric effects, and distance detail first.\n\n## Why AIC / blueprint belongs here\n\nMany new users go from download intent directly into blueprint, AIC, factory, and base-building searches. Route them to AIC as a long-term efficiency system, blueprint reuse to avoid rebuilds, and bottleneck fixes before full base reconstruction.\n\n## Next steps\n\n- /endfield/version: Homecoming hub.\n- /endfield/guides/homecoming-operators-map-route: New map and operator route.\n- /endfield/guides/blueprint-aic-factory-guide: Blueprint / AIC factory starter.\n- /endfield/guides/download-install-guide: Basic download guide.\n- /endfield/guides/combat-system-guide: Combat system.",
+    "contentJa": "## 先に結論\n\nエンドフィールドの公式、DL、PC、環境、モバイルを検索する場合、まず「DLできるか」「端末で動くか」「Homecoming後に何を見るか」を分けて確認します。DL可否、テスト資格、プラットフォーム時期は公式サイト、ストア、公式告知を基準にしてください。\n\n## 確認すること\n\n- 公式サイトと公式コミュニティリンク。\n- PC版のテスト/リリース告知と必要環境。\n- App Store / Google Play / 公式サイトの案内。\n- 事前DL、テスト資格、プラットフォーム開放状態。\n- 容量、GPUドライバー、OSバージョン、画質設定。\n\n## Homecoming後の導線\n\n新規プレイヤーはDLと戦闘基本、復帰プレイヤーはHomecoming特集、建設重視ならblueprint / AIC工場、キャラ重視ならオペレーター図鑑から確認するのがおすすめです。",
+    "tags": [
+      "official site",
+      "download",
+      "PC",
+      "specs",
+      "mobile",
+      "Homecoming",
+      "AIC",
+      "blueprint",
+      "starter"
+    ],
+    "faq": [
+      {
+        "question": "Where should I download Endfield?",
+        "questionZh": "终末地应该从哪里下载？",
+        "questionJa": "エンドフィールドはどこからDLしますか？",
+        "answer": "Use the official site, official launcher, or verified store pages. Avoid unofficial installers and unverified download mirrors.",
+        "answerZh": "使用官网、官方启动器或已验证商店页；不要使用非官方安装包和来历不明的下载镜像。",
+        "answerJa": "公式サイト、公式ランチャー、確認済みストアを使用し、非公式インストーラーは避けてください。"
+      },
+      {
+        "question": "What should I check before installing on PC?",
+        "questionZh": "PC 安装前先看什么？",
+        "questionJa": "PCインストール前に何を確認しますか？",
+        "answer": "Check CPU, GPU, RAM, OS version, storage, network update size, and whether you have current test or launch access.",
+        "answerZh": "先查 CPU、显卡、内存、系统版本、存储空间、更新包大小，以及当前是否有测试或上线资格。",
+        "answerJa": "CPU、GPU、メモリ、OS、容量、更新サイズ、テスト/起動資格を確認します。"
+      },
+      {
+        "question": "What should new players read after downloading?",
+        "questionZh": "下载后新玩家先看什么？",
+        "questionJa": "DL後に何を読むべきですか？",
+        "answer": "Start with combat basics, the Homecoming hub, and the blueprint/AIC factory starter if you want efficient progression.",
+        "answerZh": "先看战斗基础、Homecoming 专题；想高效推进就接蓝图/AIC 工厂入门。",
+        "answerJa": "戦闘基本、Homecoming特集、効率重視ならblueprint/AIC工場入門を確認してください。"
+      }
+    ],
+    "date": "2026-07-21"
   }
 ]

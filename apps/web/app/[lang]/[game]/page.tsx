@@ -763,14 +763,14 @@ interface GuideInfo { id: string; title: string; summary: string }
 
 const FEATURED_GUIDE_IDS: Record<string, string[]> = {
   genshin: ['phase-ii-columbina-raiden-pull-plan', 'snezhnaya-version-guide', 'lunar-reaction-guide'],
-  starrail: ['himeko-nova-fate-pull-plan', 'v4-4-preview-guide', 'fate-collab-guide'],
+  starrail: ['fate-rin-gilgamesh-reward-faq', 'himeko-nova-fate-pull-plan', 'fate-collab-guide'],
   wuwa: ['yangyang-suisui-sp-pull-plan', 'steam-xbox-game-pass-starter', 'v3-5-preview-guide'],
   nte: ['999-nights-mode-guide', 'shinku-iroi-pull-plan', 'v1-2-999-nights-guide'],
   zzz: ['anniversary-rewards-codes-plan', 'v3-1-anniversary-xbox-guide', 'meta-teams-v3-guide'],
   guihuan: ['official-release-company-faq', 'test-release-timeline-guide', 'time-loop-mechanic'],
   ananta: ['release-date-beta-pc-faq', 'preregistration-no-gacha-guide', 'download-install-guide'],
-  endfield: ['homecoming-operators-map-route', 'homecoming-update-guide', 'blueprint-aic-factory-guide'],
-  sea: ['steam-release-gacha-solo-faq', 'platform-download-guide', 'payment-model-guide'],
+  endfield: ['official-download-specs-homecoming-faq', 'homecoming-operators-map-route', 'blueprint-aic-factory-guide'],
+  sea: ['ps5-xbox-review-gameplay-faq', 'steam-release-gacha-solo-faq', 'platform-download-guide'],
   skjh: ['official-pc-download-faq', 'first-2-hours-starter-route', 'base-location-anti-raid-plan'],
 };
 

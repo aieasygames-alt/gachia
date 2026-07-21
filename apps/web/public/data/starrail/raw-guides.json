@@ -1077,5 +1077,49 @@
         "answerZh": "先收邮件、维护补偿、兑换码、活动奖励、周期奖励和未完成探索星琼，再决定抽卡。"
       }
     ]
+  },
+  {
+    "id": "fate-rin-gilgamesh-reward-faq",
+    "title": "星铁 Fate 联动奖励 FAQ：Rin/Gilgamesh、Saber/Archer、兑换码和 4.4 后续怎么规划",
+    "titleEn": "HSR Fate Collab Reward FAQ: Rin/Gilgamesh, Saber/Archer, Codes, and v4.4 Planning",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "summary": "把 Fate/stay night 联动奖励、Rin/Gilgamesh 搜索、Saber/Archer 老内容、兑换码和星琼规划拆成一页 FAQ，方便 4.4 上线后快速判断下一步。",
+    "summaryEn": "A Fate/stay night collab FAQ covering rewards, Rin/Gilgamesh searches, Saber/Archer context, codes, and Jade planning after v4.4.",
+    "content": "## 先看结论\n\n如果你搜的是星铁 Fate 联动、Rin、Gilgamesh、Saber、Archer 或联动奖励，先把问题拆成两类：已经可以领取/确认的奖励，以及需要等官方活动页或版本公告确认的后续内容。抽卡规划不要只看角色名热度，要同时看联动窗口、星琼缺口和你账号已有队伍。\n\n## 快速判断表\n\n| 你在找什么 | 先看哪里 | 注意点 |\n|---|---|---|\n| Fate 联动奖励 | 活动页 / 版本专题 | 先确认领取时间和任务门槛 |\n| Rin / Gilgamesh | 联动 FAQ | 不把讨论热度直接等同于实装顺序 |\n| Saber / Archer | 旧联动资料 | 区分已上线内容和后续猜测 |\n| 兑换码 | 兑换码页 | 先领码再算星琼缺口 |\n| 4.4 抽卡 | Himeko Nova 规划页 | 资源有限时只保一个目标 |\n\n## Rin / Gilgamesh 怎么看\n\nRin 和 Gilgamesh 很适合承接搜索，但页面口径要稳：\n\n- 如果官方已经公布奖励或活动节点，优先写活动时间、领取条件和是否限时。\n- 如果只是社区讨论或角色期待，不要写成确定卡池。\n- 如果你是 Fate 粉丝，先预留保底，不要被短期复刻或光锥带走资源。\n- 如果你只看强度，等实测队伍、终局表现和版本环境再决定。\n\n## Saber / Archer 和新联动有什么关系\n\nSaber / Archer 适合作为联动背景页入口，但不要让旧内容混淆当前规划。建议顺序是：\n\n1. 先确认当前 4.4 活动和奖励。\n2. 再看 Saber / Archer 已有资料，判断联动体系和收藏价值。\n3. 最后把 Himeko Nova、Fate 目标和复刻目标放到同一张资源表。\n\n## 奖励和兑换码清单\n\n抽卡或换目标前，先补齐这些资源：\n\n- 版本维护补偿和站内邮件。\n- 直播兑换码、版本兑换码和社区活动码。\n- Fate 联动任务、签到和限时活动奖励。\n- 终局周期奖励、模拟宇宙/差分宇宙资源。\n- 主线、同行任务、地图宝箱和成就星琼。\n\n## 资源少时的路线\n\n| 账号状态 | 建议 |\n|---|---|\n| Fate 粉丝 | 先留联动保底，光锥放到第二优先级 |\n| 只够一次保底 | 在 Himeko Nova 和 Fate 目标之间二选一 |\n| 新玩家 | 先保证能推进主线和活动的通用队伍 |\n| 老玩家 | 可以把稀缺联动和收藏价值放到更高权重 |\n| 强度党 | 等实测和终局表现，不靠名字热度决定 |\n\n## 站内下一步\n\n- /starrail/version：4.4 与 Fate 专题。\n- /starrail/guides/himeko-nova-fate-pull-plan：Himeko Nova 和联动抽卡规划。\n- /starrail/guides/fate-collab-guide：Saber / Archer 联动背景。\n- /starrail/redeem-codes：兑换码和版本奖励入口。",
+    "contentEn": "## Quick answer\n\nIf you are searching for the HSR Fate collab, Rin, Gilgamesh, Saber, Archer, or collab rewards, split the topic into confirmed rewards and items that still need official event-page or patch-note confirmation. Do not plan pulls from name hype alone. Compare the collab window, your Jade gap, and your existing teams.\n\n## Fast routing table\n\n| Search intent | Open first | Watch out for |\n|---|---|---|\n| Fate rewards | Event page / version hub | Claim window and task requirements |\n| Rin / Gilgamesh | Collab FAQ | Discussion heat is not a banner confirmation |\n| Saber / Archer | Existing collab guide | Separate released content from future speculation |\n| Codes | Redeem-code page | Claim codes before calculating Jade gaps |\n| v4.4 pulls | Himeko Nova plan | With low resources, guarantee one target only |\n\n## How to read Rin / Gilgamesh demand\n\nRin and Gilgamesh are strong search anchors, but the wording should stay careful:\n\n- If official rewards or event timing are published, lead with dates, tasks, and whether the reward is limited.\n- If the topic is community expectation, do not phrase it as a confirmed banner.\n- Fate fans should reserve pity before spending on reruns or Light Cones.\n- Strength-focused players should wait for tested teams and endgame results.\n\n## Saber / Archer context\n\nUse Saber / Archer as background context, not as a replacement for current planning. Confirm the live v4.4 event first, then read existing collab material, and finally compare Himeko Nova, Fate targets, and reruns in one resource table.\n\n## Rewards and code checklist\n\nBefore pulling or switching targets, collect maintenance mail, livestream and patch codes, Fate event tasks, login rewards, endgame-cycle rewards, story Jade, exploration chests, and achievements.\n\n## Low-resource route\n\n| Account state | Recommendation |\n|---|---|\n| Fate fan | Reserve collab pity first; Light Cones second |\n| One guarantee only | Choose between Himeko Nova and the Fate target |\n| New player | Secure a general team for story and events |\n| Veteran | Collab scarcity and collection value can rank higher |\n| Meta-focused | Wait for testing instead of name hype |\n\n## Next steps\n\n- /starrail/version: v4.4 and Fate hub.\n- /starrail/guides/himeko-nova-fate-pull-plan: Himeko Nova and collab pull plan.\n- /starrail/guides/fate-collab-guide: Saber / Archer context.\n- /starrail/redeem-codes: Codes and rewards entry.",
+    "tags": [
+      "Fate",
+      "Rin",
+      "Gilgamesh",
+      "Saber",
+      "Archer",
+      "codes",
+      "Stellar Jade",
+      "v4.4",
+      "collab rewards"
+    ],
+    "faq": [
+      {
+        "question": "Are Rin and Gilgamesh confirmed as pull targets?",
+        "questionZh": "Rin 和 Gilgamesh 已经确定是抽卡目标吗？",
+        "answer": "Use official event pages and patch notes as the source of truth. Community discussion should not be treated as banner confirmation.",
+        "answerZh": "以官方活动页和版本公告为准；社区讨论热度不能直接当作卡池确认。"
+      },
+      {
+        "question": "Should Fate fans save before pulling Himeko Nova?",
+        "questionZh": "Fate 粉丝要先留资源再抽 Himeko Nova 吗？",
+        "answer": "Usually yes if your resources are limited. Reserve one collab guarantee first, then decide whether Himeko Nova fits your roster.",
+        "answerZh": "资源有限时通常建议先留一轮联动保底，再判断 Himeko Nova 是否补队伍短板。"
+      },
+      {
+        "question": "What should I collect before planning the collab?",
+        "questionZh": "规划联动前先收哪些资源？",
+        "answer": "Claim mail, maintenance compensation, redeem codes, event rewards, endgame-cycle rewards, story Jade, exploration chests, and achievements.",
+        "answerZh": "先领取邮件、维护补偿、兑换码、活动奖励、终局周期奖励、主线星琼、探索宝箱和成就。"
+      }
+    ],
+    "date": "2026-07-21"
   }
 ]

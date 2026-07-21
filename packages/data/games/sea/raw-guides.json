@@ -1969,5 +1969,48 @@
         "answerZh": "单人体验是核心问题之一，具体在线要求以官方版本说明为准；不要默认把它写成传统 MMORPG。"
       }
     ]
+  },
+  {
+    "id": "ps5-xbox-review-gameplay-faq",
+    "title": "Sea of Remnants PS5 / Xbox / Review / Gameplay FAQ：遗忘之海平台、评价和玩法类型怎么判断",
+    "titleEn": "Sea of Remnants PS5 / Xbox / Review / Gameplay FAQ: Platforms, Reviews, and What Kind of Game It Is",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "承接 Sea of Remnants PS5、Xbox、review、gameplay、solo、Steam 等英文长尾搜索，把平台状态、评价维度和玩法类型拆开说明。",
+    "summaryEn": "An English-first FAQ for Sea of Remnants PS5, Xbox, review, gameplay, solo, and Steam long-tail searches.",
+    "content": "## 先看结论\n\nSea of Remnants 的英文搜索正在集中到 PS5、Xbox、review 和 gameplay。最安全的回答方式是：平台以官方站和商店页为准，评价不要只看分数，玩法也不要简单写成 MMO 或抽卡手游。它更适合按海洋冒险 RPG、回合制战斗、船员养成、海战和长期运营几个层面拆开。\n\n## 平台 FAQ\n\n| 问题 | 当前建议口径 |\n|---|---|\n| PS5 有吗？ | 以 PlayStation 商店页和官方公告为准，不提前承诺日期。 |\n| Xbox 有吗？ | 以 Xbox/Microsoft Store 页面和官方公告为准。 |\n| Steam 能玩吗？ | 先看 Steam 商店页、地区状态和官方启动器说明。 |\n| 移动端呢？ | 关注 App Store、Google Play、TapTap 或官网渠道。 |\n| 账号互通吗？ | 以官方账号体系和平台公告为准，不把 PC/主机/移动默认写成全互通。 |\n\n## Review 应该看什么\n\n用户搜 review，通常不是只想看一句“好不好玩”。更有用的是把评价拆成 5 个维度：\n\n1. **美术风格**：木偶、海洋、怪诞童话感是不是你的菜。\n2. **战斗节奏**：是否接受回合制/策略战斗，而不是纯动作连招。\n3. **海上探索**：航行、海战和海区探索是否有长期吸引力。\n4. **养成压力**：角色、外观、资源和日常负担是否可接受。\n5. **单人体验**：剧情与探索是否能独立推进，联机需求是否影响你。\n\n## Gameplay：不要一句话贴标签\n\n如果你只写“开放世界”“MMO”或“gacha”，都容易误导。更稳的解释是：\n\n- 它有海洋冒险和探索，但不是原神/鸣潮式动作开放世界。\n- 它有角色获取和长期资源，但不能只按传统抽卡手游理解。\n- 它可能有社交/联机内容，但不要默认是传统 MMORPG。\n- 它适合喜欢风格化叙事、船员养成和策略战斗的玩家。\n\n## PS5 / Xbox 搜索怎么承接\n\n主机玩家更关心的不是“有没有”三个字，而是这些后续问题：\n\n- 手柄体验是否自然。\n- 账号是否能和 PC/移动端互通。\n- 主机版是否和 PC 同步更新。\n- 是否支持跨平台好友或进度。\n- 商店页地区和分级是否已经可查。\n\n这些信息必须等官方平台页确认后再写死。\n\n## 站内下一步\n\n- /sea/guides/steam-release-gacha-solo-faq：Steam、release date、gacha、solo 总 FAQ。\n- /sea/guides/platform-download-guide：平台入口与下载。\n- /sea/guides/what-is-forgotten-sea：到底是什么游戏。\n- /sea/guides/payment-model-guide：付费和资源系统。\n- /sea/guides/system-requirements-guide：PC 配置。",
+    "contentEn": "## Quick answer\n\nSea of Remnants English search demand is shifting toward PS5, Xbox, review, and gameplay. The safest answer is: use official sites and store pages for platform status, do not reduce reviews to a score, and do not describe the game as only an MMO or only a gacha title. Explain it as an ocean adventure RPG with turn-based combat, crew progression, naval systems, and live-service updates.\n\n## Platform FAQ\n\n| Question | Safe wording |\n|---|---|\n| Is it on PS5? | Use PlayStation Store and official announcements as the source of truth. Do not promise a date early. |\n| Is it on Xbox? | Use Xbox/Microsoft Store pages and official announcements first. |\n| Is it on Steam? | Check the Steam store page, regional availability, and official launcher notes. |\n| What about mobile? | Watch App Store, Google Play, TapTap, or the official site. |\n| Is there cross-save? | Confirm from official account-system and platform notices; do not assume all platforms share progress. |\n\n## What a review should check\n\nWhen users search review, they usually need more than \"is it good.\" Split the review into five lenses:\n\n1. **Art direction**: puppet style, ocean fantasy, and strange fairytale tone.\n2. **Combat pace**: whether turn-based / strategy combat works for you.\n3. **Sea exploration**: sailing, naval combat, and sea-region exploration value.\n4. **Progression pressure**: crew, outfits, resources, and daily workload.\n5. **Solo experience**: whether story and exploration progress independently.\n\n## Gameplay: avoid one-label answers\n\nCalling it only open world, MMO, or gacha can mislead users. A safer explanation:\n\n- It has ocean adventure and exploration, but not Genshin/WuWa-style pure action exploration.\n- It has character acquisition and long-term resources, but should not be reduced to a standard gacha mobile game.\n- It may include social or online systems, but do not assume it is a traditional MMORPG.\n- It is best matched to players who like stylized storytelling, crew progression, and strategic combat.\n\n## How to answer PS5 / Xbox intent\n\nConsole players care about controller feel, PC/mobile account linking, update parity, cross-platform friends or progress, store-region visibility, and ratings. Wait for official platform pages before making firm claims.\n\n## Next steps\n\n- /sea/guides/steam-release-gacha-solo-faq: Steam, release date, gacha, and solo FAQ.\n- /sea/guides/platform-download-guide: Platform and download entry.\n- /sea/guides/what-is-forgotten-sea: What kind of game it is.\n- /sea/guides/payment-model-guide: Monetization and resource systems.\n- /sea/guides/system-requirements-guide: PC specs.",
+    "tags": [
+      "PS5",
+      "Xbox",
+      "review",
+      "gameplay",
+      "Steam",
+      "solo",
+      "cross-save",
+      "Sea of Remnants"
+    ],
+    "faq": [
+      {
+        "question": "Is Sea of Remnants on PS5 or Xbox?",
+        "questionZh": "遗忘之海有 PS5 或 Xbox 版本吗？",
+        "answer": "Use official console store pages and announcements as the source of truth. Do not rely on community platform lists before a store page is confirmed.",
+        "answerZh": "以官方主机商店页和公告为准；商店页确认前，不建议用社区平台列表当定论。"
+      },
+      {
+        "question": "What kind of gameplay does Sea of Remnants have?",
+        "questionZh": "遗忘之海是什么玩法？",
+        "answer": "It is best explained as an ocean adventure RPG with exploration, crew progression, turn-based combat, naval systems, and live-service updates.",
+        "answerZh": "更适合解释为海洋冒险 RPG，包含探索、船员养成、回合制战斗、海战和长期运营内容。"
+      },
+      {
+        "question": "Should I trust review scores only?",
+        "questionZh": "只看评测分数够吗？",
+        "answer": "No. Check art style, combat pace, sea exploration, progression pressure, and solo experience because the game can be polarizing by genre preference.",
+        "answerZh": "不够。建议同时看美术风格、战斗节奏、海上探索、养成压力和单人体验，因为品类偏好会明显影响评价。"
+      }
+    ],
+    "date": "2026-07-21"
   }
 ]
