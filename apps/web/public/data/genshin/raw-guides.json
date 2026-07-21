@@ -1156,5 +1156,50 @@
         "answerZh": "星超导是v6.7引入的新元素反应，在冰+雷超导的基础上加入Lunar能量触发，造成远高于普通超导的伤害，同时降低目标抗性。是v6.7版本的核心战斗机制。"
       }
     ]
+  },
+  {
+    "id": "phase-ii-columbina-raiden-pull-plan",
+    "title": "原神 Phase II 抽取规划：Columbina、Raiden、Sandrone 余热与 Lightrace Wish 怎么看",
+    "titleEn": "Genshin Phase II Pull Plan: Columbina, Raiden, Sandrone Momentum, and Lightrace Wish FAQ",
+    "titleJa": "原神 Phase II ガチャ計画：Columbina、Raiden、Sandrone、Lightrace Wish FAQ",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "categoryJa": "バージョン攻略",
+    "summary": "承接 Luna VIII Phase II、Columbina、Raiden、Sandrone、Lightrace Wish、codes 和 banner 搜索，把当前池、后续预期与原石缺口放在一张决策表里。",
+    "summaryEn": "A Luna VIII Phase II decision page for Columbina, Raiden, Sandrone, Lightrace Wish, codes, banners, and Primogem planning.",
+    "summaryJa": "Luna VIII Phase II、Columbina、Raiden、Sandrone、Lightrace Wish、コード、バナー計画を整理します。",
+    "content": "## 先看结论\n\nPhase II 的抽卡问题不要只看单个角色热度。更稳的做法是先分清你是在追当前战力、后续角色预留，还是补老体系核心。Columbina、Raiden、Sandrone 和 Lightrace Wish 相关搜索会同时出现，但决策顺序应该是：队伍缺口 > 原石数量 > 保底位置 > 版本活动剩余。\n\n## 30 秒决策表\n\n| 账号情况 | 优先看什么 | 原因 |\n| --- | --- | --- |\n| 缺通用雷系核心或老体系补强 | Raiden | 泛用性和成熟配队更容易落地 |\n| 关注后续新角色 | Columbina 预留 | 不要被当前池耗空后续保底 |\n| 已抽 Sandrone 或围绕新机制配队 | Sandrone 后续养成 | 先把武器、圣遗物、队友和循环补完整 |\n| 原石只够一次保底 | 二选一 | 不建议同时追角色、武器和后续池 |\n| 回流玩家 | 版本专题 + 兑换码 + 活动 | 先确认可拿资源再决定抽卡 |\n\n## Phase II 先做资源盘点\n\n抽卡前先记录四个数字：\n\n1. 当前垫抽和是否大保底。\n2. 现有原石、纠缠之缘和星尘兑换。\n3. Phase II 期间还能拿到的活动、深渊和每日资源。\n4. 你愿意为后续角色保留多少底线。\n\n如果算完只能覆盖一次保底，就不要同时追角色和武器。武器池更适合资源宽裕、角色体系已经完整的账号。\n\n## Columbina 怎么看\n\nColumbina 相关搜索通常包含后续版本预期、角色定位猜测和卡池顺序。站内页面应该避免把未确认信息写成定论。更稳的表达是：如果你更在意后续新角色，Phase II 期间要给后续池预留保底，不要因为当前池短期热度打乱计划。\n\n## Raiden 适合谁\n\nRaiden 更适合需要成熟体系和稳定玩法的账号。她的优势不是“所有账号必抽”，而是配队模板成熟、循环理解清楚、回流玩家容易判断收益。\n\n适合优先考虑的情况：\n\n- 你缺一个成熟体系核心。\n- 你已经有能搭配她的队友。\n- 你不打算把全部资源留给后续新角色。\n- 你想提升当前版本的深渊或日常体验。\n\n## Sandrone 余热怎么处理\n\n如果你已经抽了 Sandrone，Phase II 更应该补完整养成，而不是马上追下一个目标。先看：\n\n- 武器和圣遗物是否能支撑循环。\n- 队友是否齐全。\n- 是否还需要刷材料和天赋。\n- 是否真的需要继续补命座或武器。\n\n## Lightrace Wish FAQ\n\nLightrace Wish 这类机制词适合先做解释型内容：它是什么、对抽卡资源有没有影响、和常规卡池怎么区分。没有官方确认的细节不要扩写成“必然规则”。\n\n## 推荐阅读顺序\n\n1. /genshin/version：先看 Luna VIII / Sandrone 版本专题。\n2. /genshin/guides/banner-schedule-guide：确认卡池和保底路线。\n3. /genshin/redeem-codes：检查兑换码。\n4. /genshin/build：抽完后再看配装。\n5. /genshin/artifacts：补圣遗物和词条。",
+    "contentEn": "## Quick answer\n\nDo not treat Phase II pull planning as a single-character popularity contest. Decide by account gap, Primogem count, pity state, and remaining event income. Columbina, Raiden, Sandrone, and Lightrace Wish searches may overlap, but the decision order should be: team need, resource count, pity state, then future-banner savings.\n\n## 30-second table\n\n| Account state | Check first | Why |\n| --- | --- | --- |\n| Missing a mature Electro/core team piece | Raiden | Easier to evaluate with established teams |\n| Saving for future new characters | Columbina savings | Avoid spending the next guarantee too early |\n| Already pulled Sandrone | Sandrone build follow-up | Finish weapon, artifacts, teammates, and rotation |\n| Only one guarantee | Pick one target | Do not chase character, weapon, and future pool together |\n| Returning player | Version hub + codes + events | Count obtainable resources first |\n\n## Resource check\n\nRecord pity, guarantee state, current Primogems/Fates, remaining event income, and the minimum savings you want for future banners. If you only cover one guarantee, avoid chasing both character and weapon.\n\n## Columbina and unconfirmed expectations\n\nKeep future-character expectations separate from confirmed banner facts. If future characters matter most to you, preserve pity during Phase II.\n\n## Raiden fit\n\nRaiden is strongest for accounts that need mature team templates, stable rotations, and a known upgrade path.\n\n## Sandrone follow-up\n\nIf you already pulled Sandrone, finish builds, teammates, materials, and rotations before chasing the next target.\n\n## Lightrace Wish\n\nTreat Lightrace Wish as a mechanism FAQ until official details are confirmed. Do not turn speculation into rules.\n\n## Next steps\n\nOpen the version hub, banner schedule, redeem codes, builds, and artifacts pages in that order.",
+    "tags": [
+      "Phase II",
+      "Columbina",
+      "Raiden",
+      "Sandrone",
+      "Lightrace Wish",
+      "banner",
+      "codes"
+    ],
+    "faq": [
+      {
+        "question": "Should I pull Raiden or save for Columbina?",
+        "questionZh": "抽雷电将军还是留给 Columbina？",
+        "answer": "Pull Raiden if she fills a clear team gap and you still keep future savings. Save if future new characters matter more and you only have one guarantee.",
+        "answerZh": "如果雷电将军能补明确队伍缺口且不影响后续储备，可以考虑；如果你只够一轮保底且更看重后续新角色，就先留。"
+      },
+      {
+        "question": "Should Sandrone owners keep pulling?",
+        "questionZh": "已经抽 Sandrone 还要继续补吗？",
+        "answer": "Only if your build, weapon, teammates, and resource plan are already stable. Otherwise finish progression first.",
+        "answerZh": "只有在配装、武器、队友和资源规划都稳定时再考虑继续补，否则先完成养成。"
+      },
+      {
+        "question": "Is Lightrace Wish confirmed as a new banner rule?",
+        "questionZh": "Lightrace Wish 是已确认的新卡池规则吗？",
+        "answer": "Treat it as a mechanism topic until official details are clear. Do not base spending on unconfirmed interpretations.",
+        "answerZh": "在官方细节清楚前，先当作机制话题理解，不建议基于未确认解读安排抽卡。"
+      }
+    ],
+    "date": "2026-07-21"
   }
 ]

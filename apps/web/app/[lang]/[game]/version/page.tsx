@@ -158,7 +158,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['luna-viii-sandrone-guide', 'banner-schedule-guide', 'lunar-reaction-guide'],
+    guideIds: ['phase-ii-columbina-raiden-pull-plan', 'luna-viii-sandrone-guide', 'banner-schedule-guide'],
   },
   starrail: {
     title: { zh: '4.4 Himeko Nova / Fate 专题', en: 'v4.4 Himeko Nova / Fate Hub', ja: 'v4.4 Himeko Nova / Fate 特集' },
@@ -388,7 +388,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['test-release-timeline-guide', 'time-loop-mechanic', 'download-install-guide'],
+    guideIds: ['official-release-company-faq', 'test-release-timeline-guide', 'time-loop-mechanic'],
   },
   ananta: {
     title: { zh: '预注册 / 无抽卡 FAQ', en: 'Preregistration / No-Gacha FAQ', ja: '事前登録 / ガチャなしFAQ' },
@@ -434,7 +434,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['preregistration-no-gacha-guide', 'download-install-guide', 'combat-system-guide'],
+    guideIds: ['release-date-beta-pc-faq', 'preregistration-no-gacha-guide', 'download-install-guide'],
   },
   endfield: {
     title: { zh: 'Homecoming / AIC 蓝图工厂专题', en: 'Homecoming / AIC Blueprint Factory Hub', ja: 'Homecoming / AICブループリント工場特集' },

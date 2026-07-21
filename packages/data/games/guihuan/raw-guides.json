@@ -642,5 +642,50 @@
         "answerZh": "每天前1-2次体力补充性价比较高，前提是你有明确的养成目标。超过2次后成本递增但收益不变。如果没有明确的刷取计划，不要盲目买体力。"
       }
     ]
+  },
+  {
+    "id": "official-release-company-faq",
+    "title": "归环官网、公测时间与开发商 FAQ：哪家公司、测试资格、42 天循环是什么",
+    "titleEn": "Guihuan Official Site, Release Timing, and Developer FAQ: Company, Tests, and 42-Day Loop",
+    "titleJa": "帰環 公式サイト・リリース時期・開発会社FAQ：会社、テスト、42日ループ",
+    "category": "basics",
+    "categoryZh": "入门必读",
+    "categoryEn": "Basics",
+    "categoryJa": "基本情報",
+    "summary": "承接“归环官网、公测时间、哪家公司、测试招募、下载、国际服”搜索，统一解释官方状态、开发背景、测试资格和时间循环玩法。",
+    "summaryEn": "A fact-check FAQ for Guihuan official site, release timing, developer, test access, download, global version, and the 42-day loop.",
+    "summaryJa": "帰環の公式、リリース時期、開発会社、テスト資格、DL、国際版、42日ループを整理します。",
+    "content": "## 先看结论\n\n归环相关搜索最容易混在一起：官网、公测时间、哪家公司、测试资格、下载、国际服。当前页面最稳的处理方式是把“已确认信息”和“等待官方公布的信息”分开。正式公测日期、国际服和下载开放状态如果没有官方明确公告，都不要写成确定结论。\n\n## 快速 FAQ\n\n| 问题 | 稳妥回答 |\n| --- | --- |\n| 归环是哪家公司？ | 以官网和官方公告展示的开发/发行信息为准。 |\n| 什么时候公测？ | 如官方未公布最终日期，就以官网、商店页和官方社区为准。 |\n| 现在能下载吗？ | 先看官网、测试资格页和平台商店状态。 |\n| 有国际服吗？ | 不把“国际服搜索词”等同于已上线海外服。 |\n| 这是什么类型？ | 时间循环开放世界、角色养成和探索叙事是核心认知点。 |\n\n## 官网和测试资格怎么看\n\n用户搜“归环官网”时，不一定只是要官网链接，更多是在确认三件事：\n\n1. 这个游戏是否还在推进。\n2. 下一轮测试或招募有没有入口。\n3. 公测日期是不是已经确定。\n\n所以页面应该先给官方状态判断，再给下载和测试步骤，而不是直接写“某天上线”。\n\n## 公测时间怎么写才安全\n\n安全模板是：\n\n> 如果官方尚未公布正式公测日期，请以官网、平台商店和官方社区公告为准。\n\n这个句子比猜测月份更有价值，因为它能承接用户问题，同时不制造错误期待。\n\n## 42 天循环是什么\n\n归环的差异化卖点是时间循环题材。用户搜“什么游戏”时，可以先这样解释：\n\n- 游戏围绕开放世界探索和角色养成展开。\n- 时间循环会影响任务、分支、NPC 状态或叙事理解。\n- 42 天循环应作为核心机制入口，而不是只当世界观设定。\n\n## 测试资格与下载准备\n\n如果你在等测试，先做这些准备：\n\n1. 关注官网和官方社区。\n2. 确认账号、手机号或平台账号是否需要绑定。\n3. 预留 PC/移动端存储空间。\n4. 不从非官方安装包开始。\n5. 等测试资格规则明确后再填写问卷或报名。\n\n## 站内下一步\n\n- /guihuan/guides/test-release-timeline-guide：测试和公测时间线。\n- /guihuan/guides/time-loop-mechanic：42 天循环机制。\n- /guihuan/guides/download-install-guide：下载和设备准备。\n- /guihuan/version：版本和官方状态入口。",
+    "contentEn": "## Quick answer\n\nGuihuan searches mix official site, release date, developer, test access, download, and global-version intent. Separate confirmed information from pending official announcements. If a final public release date, global version, or download status has not been officially confirmed, do not present it as certain.\n\n## Fast FAQ\n\n| Question | Safe answer |\n| --- | --- |\n| Who develops Guihuan? | Use the official site and official announcements as the source of truth. |\n| When is release? | If no final date is announced, rely on official site, store pages, and community notices. |\n| Can I download it? | Check official site, test access pages, and platform stores first. |\n| Is there a global version? | Do not treat global-version keywords as confirmed availability. |\n| What kind of game is it? | Time-loop open-world exploration, character progression, and narrative branching are the core positioning. |\n\n## How to write release timing safely\n\nUse: if the official final release date has not been announced, use the official site, platform stores, and official community posts as the source of truth.\n\n## What is the 42-day loop?\n\nTreat the 42-day loop as a core mechanic and search-entry topic, not just lore. It can frame quests, branches, NPC state, and exploration planning.\n\n## Next steps\n\nOpen the test/release timeline, time-loop mechanic, download guide, and version hub.",
+    "tags": [
+      "官网",
+      "公测时间",
+      "开发商",
+      "测试资格",
+      "42天循环",
+      "下载",
+      "国际服"
+    ],
+    "faq": [
+      {
+        "question": "When does Guihuan release?",
+        "questionZh": "归环什么时候公测？",
+        "answer": "If the official final release date has not been announced, use the official site, store pages, and official community notices as the source of truth.",
+        "answerZh": "如果官方尚未公布正式公测日期，请以官网、平台商店和官方社区公告为准。"
+      },
+      {
+        "question": "Can I download Guihuan now?",
+        "questionZh": "归环现在能下载吗？",
+        "answer": "Check the official site, test qualification pages, and platform stores first. Avoid unofficial installers.",
+        "answerZh": "先看官网、测试资格页和平台商店状态，不建议使用非官方安装包。"
+      },
+      {
+        "question": "What is the 42-day loop?",
+        "questionZh": "42 天循环是什么？",
+        "answer": "It is the key positioning hook for Guihuan: a time-loop structure that can affect exploration, quests, and branching narrative.",
+        "answerZh": "这是归环的核心认知点：时间循环结构可能影响探索、任务和分支叙事。"
+      }
+    ],
+    "date": "2026-07-21"
   }
 ]
