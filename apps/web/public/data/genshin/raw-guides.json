@@ -1201,5 +1201,59 @@
       }
     ],
     "date": "2026-07-21"
+  },
+  {
+    "id": "lightrace-wish-phase-ii-faq",
+    "title": "原神 Lightrace Wish 机制 FAQ：Phase II、Columbina/Raiden、原石和卡池规划怎么判断",
+    "titleEn": "Genshin Lightrace Wish FAQ: Phase II, Columbina/Raiden, Primogems, and Banner Planning",
+    "titleJa": "原神 Lightrace Wish FAQ：Phase II、Columbina/Raiden、原石、バナー計画",
+    "category": "banner",
+    "categoryZh": "卡池攻略",
+    "categoryEn": "Banner Guide",
+    "categoryJa": "バナー攻略",
+    "summary": "承接 Lightrace Wish、Phase II、Columbina、Raiden、Sandrone、banner 和 codes 搜索，把机制疑问、原石缺口和抽卡优先级分开说明。",
+    "summaryEn": "A Lightrace Wish FAQ for Phase II, Columbina, Raiden, Sandrone, banner, codes, Primogem gaps, and pull priority searches.",
+    "summaryJa": "Lightrace Wish、Phase II、Columbina、Raiden、Sandrone、バナー、コード、原石不足、ガチャ優先度を整理します。",
+    "content": "## 先看结论\n\nLightrace Wish 相关搜索最容易混在 Phase II、Columbina、Raiden、Sandrone 和兑换码里。规划时不要只问“这个池值不值得抽”，而是先确认它属于哪类祈愿/活动机制、是否影响保底、以及你的原石能不能覆盖当前池和后续目标。\n\n## 快速 FAQ\n\n| 问题 | 先看什么 | 建议 |\n|---|---|---|\n| Lightrace Wish 是什么 | 官方祈愿/活动说明 | 先确认规则，不把社区简称当最终机制 |\n| Phase II 抽谁 | 当前角色需求 | Columbina/Raiden/Sandrone 只按账号缺口排序 |\n| 原石够不够 | 保底距离 | 先算小保底和大保底，不先抽武器 |\n| codes 要不要先领 | 兑换码页 | 先领码再估算缺口 |\n| 后续版本怎么办 | 版本专题 | 给至少一个目标留资源缓冲 |\n\n## Lightrace Wish 需要确认的规则\n\n写机制页时，最重要的是把“已确认”和“玩家推测”分开：\n\n- 祈愿是否与常规角色池共享保底。\n- 活动或祈愿是否限时。\n- 目标角色、武器或奖励是否有独立获取规则。\n- 是否需要完成特定任务或版本活动。\n- 是否存在不同服务器/语言公告差异。\n\n如果官方没有明确写清，不要把社区讨论写成确定机制。\n\n## Phase II 抽卡路线\n\n| 账号状态 | 优先级 |\n|---|---|\n| 缺主 C | 先看 Columbina / Sandrone 是否补输出短板 |\n| 缺雷系或通用体系 | 再看 Raiden 是否提高队伍覆盖面 |\n| 原石只够一次保底 | 只选一个角色目标，不追武器 |\n| 老玩家角色多 | 可以把收藏、命座和复刻周期纳入判断 |\n| 新玩家 | 优先能推进主线、活动和深渊的通用角色 |\n\n## 原石与兑换码检查清单\n\n抽之前先补齐：\n\n- 版本活动、签到和限时任务。\n- 直播兑换码、版本兑换码和邮件补偿。\n- 每日委托、深渊/幻想真境剧诗周期奖励。\n- 地图探索、传说任务、世界任务和成就。\n- 纪行、月卡和商店兑换资源。\n\n## 常见误区\n\n- 不要因为 Lightrace Wish 热度高就默认它一定比常规卡池优先。\n- 不要把 Phase II 和后续版本目标拆开算资源。\n- 不要在角色未保住前先抽武器。\n- 不要用未确认爆料替代官方规则。\n\n## 站内下一步\n\n- /genshin/version：Luna VIII / Phase II 专题。\n- /genshin/guides/phase-ii-columbina-raiden-pull-plan：当前池抽取规划。\n- /genshin/guides/banner-schedule-guide：祈愿与保底机制。\n- /genshin/redeem-codes：兑换码入口。\n- /genshin/build：角色配装和养成。",
+    "contentEn": "## Quick answer\n\nLightrace Wish searches are often mixed with Phase II, Columbina, Raiden, Sandrone, and codes. Do not start with \"is this banner worth it.\" First confirm what kind of wish or event mechanic it is, whether it affects pity, and whether your Primogem budget covers both the current banner and later targets.\n\n## Fast FAQ\n\n| Question | Check first | Recommendation |\n|---|---|---|\n| What is Lightrace Wish? | Official wish/event rules | Confirm rules before treating community shorthand as final |\n| Who should I pull in Phase II? | Account needs | Rank Columbina/Raiden/Sandrone by roster gaps |\n| Do I have enough Primogems? | Pity distance | Calculate soft and hard pity before weapon pulls |\n| Should I claim codes first? | Redeem-code page | Claim codes before estimating gaps |\n| What about later patches? | Version hub | Keep a reserve for at least one future target |\n\n## Rules to confirm\n\nA useful mechanics page must separate confirmed rules from player speculation:\n\n- Whether pity is shared with regular character banners.\n- Whether the wish or event is time-limited.\n- Whether target characters, weapons, or rewards use separate acquisition rules.\n- Whether quests or version events are required.\n- Whether server or language announcements differ.\n\nIf official text is not clear, do not present community discussion as confirmed mechanics.\n\n## Phase II pull route\n\n| Account state | Priority |\n|---|---|\n| Missing main DPS | Check whether Columbina / Sandrone fills the gap |\n| Missing Electro or broad utility | Check whether Raiden improves team coverage |\n| One guarantee only | Pick one character target, not weapons |\n| Veteran roster | Include collection value, constellations, and rerun timing |\n| New player | Prioritize general characters for story, events, and Abyss |\n\n## Primogem and code checklist\n\nBefore pulling, collect version events, login rewards, limited tasks, livestream codes, patch codes, mail compensation, daily commissions, Abyss / Imaginarium cycle rewards, exploration, story quests, world quests, achievements, Battle Pass, Welkin, and shop exchanges.\n\n## Common mistakes\n\nDo not assume Lightrace Wish outranks regular banners because it is hot. Do not calculate Phase II separately from future targets. Do not pull weapons before securing characters. Do not replace official rules with unconfirmed discussion.\n\n## Next steps\n\n- /genshin/version: Luna VIII / Phase II hub.\n- /genshin/guides/phase-ii-columbina-raiden-pull-plan: Current banner planning.\n- /genshin/guides/banner-schedule-guide: Wish and pity mechanics.\n- /genshin/redeem-codes: Codes.\n- /genshin/build: Builds and progression.",
+    "contentJa": "## 先に結論\n\nLightrace Wish検索はPhase II、Columbina、Raiden、Sandrone、コードと混ざりやすいです。まず公式ルール、天井への影響、原石の余裕を確認してからガチャ優先度を決めてください。\n\n## 確認ポイント\n\n- 通常キャラ祈願と天井を共有するか。\n- 期間限定かどうか。\n- キャラ、武器、報酬の獲得ルール。\n- 任務や版本イベントの条件。\n- サーバー/言語ごとの告知差。\n\n公式が明確でない場合、コミュニティの話題を確定情報として扱わないでください。",
+    "tags": [
+      "Lightrace Wish",
+      "Phase II",
+      "Columbina",
+      "Raiden",
+      "Sandrone",
+      "banner",
+      "codes",
+      "Primogems",
+      "pity"
+    ],
+    "faq": [
+      {
+        "question": "Does Lightrace Wish share pity with regular banners?",
+        "questionZh": "Lightrace Wish 和常规卡池共享保底吗？",
+        "questionJa": "Lightrace Wishは通常バナーと天井を共有しますか？",
+        "answer": "Check the official wish or event rules first. If official text does not clearly confirm shared pity, treat it as unconfirmed.",
+        "answerZh": "先看官方祈愿或活动规则；如果官方文本没有明确确认共享保底，就按未确认处理。",
+        "answerJa": "まず公式ルールを確認し、明記がない場合は未確認として扱ってください。"
+      },
+      {
+        "question": "Should I pull Phase II before saving for later patches?",
+        "questionZh": "应该先抽 Phase II 还是留给后续版本？",
+        "questionJa": "Phase IIを引くべきですか、それとも後続版本に温存しますか？",
+        "answer": "Only pull if the banner target fills a real roster gap or you have enough Primogems to keep a future reserve.",
+        "answerZh": "只有当前目标确实补队伍短板，或原石足够保留后续缓冲时，才建议抽。",
+        "answerJa": "対象が編成の穴を埋める場合、または後続分の原石を残せる場合におすすめです。"
+      },
+      {
+        "question": "What should I claim before pulling?",
+        "questionZh": "抽卡前先领什么？",
+        "questionJa": "ガチャ前に何を受け取るべきですか？",
+        "answer": "Claim codes, mail, event rewards, daily and cycle rewards, exploration Primogems, quests, achievements, and shop exchanges first.",
+        "answerZh": "先领兑换码、邮件、活动奖励、每日和周期奖励、探索原石、任务、成就和商店兑换。",
+        "answerJa": "コード、メール、イベント報酬、日課/周期報酬、探索原石、任務、実績、ショップ交換を先に受け取りましょう。"
+      }
+    ],
+    "date": "2026-07-21"
   }
 ]
