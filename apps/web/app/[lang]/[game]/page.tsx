@@ -295,236 +295,73 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     ],
   },
   starrail: {
-    eyebrow: { zh: '4.x 版本专题入口', en: 'v4.x Version Hub', ja: 'v4.x バージョン特集' },
-    title: { zh: '星穹铁道版本热词承接', en: 'Star Rail hot-topic landing hub', ja: 'スターレイル 注目トピック導線' },
+    eyebrow: { zh: '4.4 已上线专题入口', en: 'v4.4 Live Hub', ja: 'v4.4 実装特集' },
+    title: { zh: '星穹铁道 4.4 / Fate 联动承接', en: 'Star Rail v4.4 / Fate collab hub', ja: 'スターレイル v4.4 / Fate導線' },
     description: {
-      zh: '把 4.4 前瞻、联动、遗器和配队信息一起放进首页，先接住版本和养成搜索词。',
-      en: 'Surface the v4.4 preview, collabs, relics, and team-building pages right on the homepage.',
-      ja: 'v4.4前瞻、コラボ、遺物、編成をトップにまとめます。',
+      zh: '把 Himeko Nova、Fate/stay night 联动、Rin/Gilgamesh、兑换码和星琼规划放到首页第一跳。',
+      en: 'Surface Himeko Nova, Fate/stay night, Rin/Gilgamesh, codes, and Jade planning directly on the homepage.',
+      ja: 'Himeko Nova、Fate/stay night、Rin/Gilgamesh、コード、星玉計画をトップで受け止めます。',
     },
     chips: {
-      zh: ['4.4 前瞻', '联动', '遗器', '光锥', '配队', '伤害计算器'],
-      en: ['v4.4 preview', 'Collabs', 'Relics', 'Light cones', 'Teams', 'Calculator'],
-      ja: ['v4.4前瞻', 'コラボ', '遺物', '光円錐', '編成', '計算機'],
+      zh: ['4.4 已上线', 'Himeko Nova', 'Fate 联动', 'Rin/Gilgamesh', '兑换码', '卡池规划'],
+      en: ['v4.4 live', 'Himeko Nova', 'Fate collab', 'Rin/Gilgamesh', 'Codes', 'Banner planning'],
+      ja: ['v4.4実装', 'Himeko Nova', 'Fateコラボ', 'Rin/Gilgamesh', 'コード', 'バナー計画'],
     },
-    cta: { zh: '去版本专题', en: 'Open version hub', ja: 'バージョン特集へ' },
+    cta: { zh: '去 4.4 专题', en: 'Open v4.4 hub', ja: 'v4.4特集へ' },
     tracks: {
       zh: [
-        {
-          title: '版本节点',
-          description: '把 4.4 前瞻和版本规划直接接住。',
-          links: [
-            { href: '/starrail/version', label: '版本专题' },
-            { href: '/starrail/guides/v4-4-preview-guide', label: '4.4 前瞻' },
-          ],
-        },
-        {
-          title: '遗器与配装',
-          description: '把遗器、光锥和配装推荐串成可执行的培养页。',
-          links: [
-            { href: '/starrail/build', label: '配装推荐' },
-            { href: '/starrail/weapons', label: '光锥图鉴' },
-          ],
-        },
-        {
-          title: '队伍与计算',
-          description: '继续承接主流配队、计算器和伤害类查询。',
-          links: [
-            { href: '/starrail/teams', label: '配队推荐' },
-            { href: '/starrail/calculator', label: '伤害计算器' },
-          ],
-        },
+        { title: '4.4 节点', description: '把已上线版本、Himeko Nova 和联动热词先接住。', links: [{ href: '/starrail/version', label: '4.4 专题' }, { href: '/starrail/guides/v4-4-preview-guide', label: 'Himeko Nova' }] },
+        { title: 'Fate 联动', description: '继续承接 Saber、Archer、Rin/Gilgamesh 和奖励规划。', links: [{ href: '/starrail/guides/fate-collab-guide', label: 'Fate 联动 FAQ' }, { href: '/starrail/redeem-codes', label: '兑换码' }] },
+        { title: '抽卡资源', description: '把遗器、光锥、配队和星琼缺口串成下一步。', links: [{ href: '/starrail/build', label: '配装推荐' }, { href: '/starrail/guides/banner-schedule-guide', label: '卡池规划' }] },
       ],
       en: [
-        {
-          title: 'Version node',
-          description: 'Anchor the homepage to v4.4 previews and planning topics.',
-          links: [
-            { href: '/starrail/version', label: 'Version hub' },
-            { href: '/starrail/guides/v4-4-preview-guide', label: 'v4.4 preview' },
-          ],
-        },
-        {
-          title: 'Relics and builds',
-          description: 'Route relic and light cone searches into practical build pages.',
-          links: [
-            { href: '/starrail/build', label: 'Builds' },
-            { href: '/starrail/weapons', label: 'Light cones' },
-          ],
-        },
-        {
-          title: 'Teams and tools',
-          description: 'Keep team, calculator, and damage queries moving deeper.',
-          links: [
-            { href: '/starrail/teams', label: 'Teams' },
-            { href: '/starrail/calculator', label: 'Calculator' },
-          ],
-        },
+        { title: 'v4.4 node', description: 'Catch the live patch, Himeko Nova, and collab intent first.', links: [{ href: '/starrail/version', label: 'v4.4 hub' }, { href: '/starrail/guides/v4-4-preview-guide', label: 'Himeko Nova' }] },
+        { title: 'Fate collab', description: 'Route Saber, Archer, Rin/Gilgamesh, and reward planning.', links: [{ href: '/starrail/guides/fate-collab-guide', label: 'Fate FAQ' }, { href: '/starrail/redeem-codes', label: 'Codes' }] },
+        { title: 'Pull resources', description: 'Connect relics, light cones, teams, and Jade gaps.', links: [{ href: '/starrail/build', label: 'Builds' }, { href: '/starrail/guides/banner-schedule-guide', label: 'Banner planning' }] },
       ],
       ja: [
-        {
-          title: 'バージョン導線',
-          description: 'v4.4前瞻とバージョン計画をホームで受け止めます。',
-          links: [
-            { href: '/starrail/version', label: 'バージョン特集' },
-            { href: '/starrail/guides/v4-4-preview-guide', label: 'v4.4 前瞻' },
-          ],
-        },
-        {
-          title: '遺物とビルド',
-          description: '遺物、光円錐、ビルドを実用ページへつなげます。',
-          links: [
-            { href: '/starrail/build', label: 'ビルド' },
-            { href: '/starrail/weapons', label: '光円錐図鑑' },
-          ],
-        },
-        {
-          title: '編成と計算',
-          description: '編成、計算機、火力検証の流れを続けます。',
-          links: [
-            { href: '/starrail/teams', label: '編成' },
-            { href: '/starrail/calculator', label: '計算機' },
-          ],
-        },
+        { title: 'v4.4導線', description: '実装版本、Himeko Nova、コラボ検索を先に受け止めます。', links: [{ href: '/starrail/version', label: 'v4.4特集' }, { href: '/starrail/guides/v4-4-preview-guide', label: 'Himeko Nova' }] },
+        { title: 'Fateコラボ', description: 'Saber、Archer、Rin/Gilgamesh、報酬計画へつなげます。', links: [{ href: '/starrail/guides/fate-collab-guide', label: 'Fate FAQ' }, { href: '/starrail/redeem-codes', label: 'コード' }] },
+        { title: 'ガチャ資源', description: '遺物、光円錐、編成、星玉不足を次の導線にします。', links: [{ href: '/starrail/build', label: 'ビルド' }, { href: '/starrail/guides/banner-schedule-guide', label: 'バナー計画' }] },
       ],
     },
     faq: [
-      {
-        question: {
-          zh: '星穹铁道首页先看什么最实用？',
-          en: 'What should I open first on the Star Rail homepage?',
-          ja: 'スターレイルホームで最初に見るべきものは？',
-        },
-        answer: {
-          zh: '先看版本专题和遗器/光锥入口，再看配队和计算器。',
-          en: 'Start with the version hub and relic/light cone pages, then move to teams and the calculator.',
-          ja: 'まずバージョン特集と遺物/光円錐、その後に編成と計算機を見るのがおすすめです。',
-        },
-      },
+      { question: { zh: '星铁首页现在先看什么？', en: 'What should I open first now?', ja: '今ホームで最初に見るべきものは？' }, answer: { zh: '先看 4.4 专题和 Fate 联动，再看兑换码、卡池规划和配装。', en: 'Start with the v4.4 hub and Fate collab, then codes, banner planning, and builds.', ja: 'まずv4.4特集とFateコラボ、その後コード、バナー計画、ビルドへ。' } },
     ],
   },
   nte: {
-    eyebrow: { zh: '更新与入坑专题', en: 'Update & onboarding hub', ja: '更新・入門特集' },
-    title: { zh: '异环 Wiki / 官网入口｜下载、入门、兑换码', en: 'NTE wiki / official hub | download, starter guide, codes', ja: 'NTE Wiki / 公式導線｜DL・入門・コード' },
+    eyebrow: { zh: '1.2「999 Nights」入口', en: 'v1.2 999 Nights Hub', ja: 'v1.2 999 Nights導線' },
+    title: { zh: '异环 1.2 / Shinku / Iroi 承接', en: 'NTE v1.2 / Shinku / Iroi hub', ja: 'NTE v1.2 / Shinku / Iroi導線' },
     description: {
-      zh: '把异环 Wiki、官网入口、下载、入门、Boss、伤害公式和配装入口一起放进首页，优先承接最常见的问题。',
-      en: 'Put the NTE wiki, official hub, download, onboarding, boss, damage formula, and build pages on the homepage to catch common queries first.',
-      ja: 'NTE Wiki、公式導線、DL、入門、ボス、ダメージ計算、ビルドをトップで受け止めます。',
+      zh: '把 999 Nights、Shinku 当前池、Iroi 预热、兑换码、Steam/download 和下载安装入口一起前置。',
+      en: 'Put 999 Nights, Shinku, Iroi, codes, Steam/download intent, and install help up front.',
+      ja: '999 Nights、Shinku、Iroi、コード、Steam/DL、インストール導線を前面に出します。',
     },
     chips: {
-      zh: ['下载安装', '新手入门', 'Boss 攻略', '伤害公式', '弧盘推荐', '兑换码'],
-      en: ['Download/install', 'Beginner guide', 'Boss guide', 'Damage formula', 'Disk builds', 'Redeem codes'],
-      ja: ['DL/インストール', '初心者ガイド', 'ボス攻略', 'ダメージ計算', '弧盤', '交換コード'],
+      zh: ['1.2 已上线', '999 Nights', 'Shinku', 'Iroi', '兑换码', 'Steam/download'],
+      en: ['v1.2 live', '999 Nights', 'Shinku', 'Iroi', 'Codes', 'Steam/download'],
+      ja: ['v1.2実装', '999 Nights', 'Shinku', 'Iroi', 'コード', 'Steam/DL'],
     },
-    cta: { zh: '去版本专题', en: 'Open version hub', ja: 'バージョン特集へ' },
+    cta: { zh: '去 1.2 专题', en: 'Open v1.2 hub', ja: 'v1.2特集へ' },
     tracks: {
       zh: [
-        {
-          title: '下载与入门',
-          description: '把下载安装和新手入门先接住。',
-          links: [
-            { href: '/nte/guides/download-install-guide', label: '下载安装' },
-            { href: '/nte/guides/beginner-guide', label: '新手入门' },
-          ],
-        },
-        {
-          title: 'Boss 与机制',
-          description: '围绕 Boss、伤害公式和机制理解继续分流。',
-          links: [
-            { href: '/nte/guides/boss-guide', label: 'Boss 攻略' },
-            { href: '/nte/guides/damage-formula', label: '伤害公式' },
-          ],
-        },
-        {
-          title: '版本与福利',
-          description: '把版本更新、抽卡策略和兑换码整成更清晰的路径。',
-          links: [
-            { href: '/nte/version', label: '版本专题' },
-            { href: '/nte/guides/gacha-strategy', label: '抽卡策略' },
-            { href: '/nte/redeem-codes', label: '兑换码' },
-          ],
-        },
+        { title: '版本与角色', description: '优先承接 999 Nights、Shinku 和 Iroi 搜索。', links: [{ href: '/nte/version', label: '1.2 专题' }, { href: '/nte/guides/v1-2-999-nights-guide', label: '999 Nights' }] },
+        { title: '抽卡与福利', description: '把兑换码和抽卡策略接到可执行页面。', links: [{ href: '/nte/redeem-codes', label: '兑换码' }, { href: '/nte/guides/gacha-strategy', label: '抽卡策略' }] },
+        { title: '下载与入门', description: 'Steam/download 用户先确认官方入口和设备要求。', links: [{ href: '/nte/guides/download-install-guide', label: '下载安装' }, { href: '/nte/guides/beginner-guide', label: '新手入门' }] },
       ],
       en: [
-        {
-          title: 'Download and start',
-          description: 'Catch install and onboarding questions immediately.',
-          links: [
-            { href: '/nte/guides/download-install-guide', label: 'Download/install' },
-            { href: '/nte/guides/beginner-guide', label: 'Beginner guide' },
-          ],
-        },
-        {
-          title: 'Boss and mechanics',
-          description: 'Route boss, damage formula, and mechanics questions into useful pages.',
-          links: [
-            { href: '/nte/guides/boss-guide', label: 'Boss guide' },
-            { href: '/nte/guides/damage-formula', label: 'Damage formula' },
-          ],
-        },
-        {
-          title: 'Updates and rewards',
-          description: 'Keep version updates, gacha strategy, and redeem codes moving deeper.',
-          links: [
-            { href: '/nte/version', label: 'Version hub' },
-            { href: '/nte/guides/gacha-strategy', label: 'Gacha strategy' },
-            { href: '/nte/redeem-codes', label: 'Redeem codes' },
-          ],
-        },
+        { title: 'Patch and characters', description: 'Catch 999 Nights, Shinku, and Iroi searches first.', links: [{ href: '/nte/version', label: 'v1.2 hub' }, { href: '/nte/guides/v1-2-999-nights-guide', label: '999 Nights' }] },
+        { title: 'Pulls and rewards', description: 'Route codes and gacha strategy into practical pages.', links: [{ href: '/nte/redeem-codes', label: 'Codes' }, { href: '/nte/guides/gacha-strategy', label: 'Gacha strategy' }] },
+        { title: 'Download and start', description: 'Steam/download users need official entry and device checks first.', links: [{ href: '/nte/guides/download-install-guide', label: 'Download/install' }, { href: '/nte/guides/beginner-guide', label: 'Beginner guide' }] },
       ],
       ja: [
-        {
-          title: 'DLと入門',
-          description: 'インストールと初心者導線をまず受け止めます。',
-          links: [
-            { href: '/nte/guides/download-install-guide', label: 'DLとインストール' },
-            { href: '/nte/guides/beginner-guide', label: '初心者ガイド' },
-          ],
-        },
-        {
-          title: 'ボスと機構',
-          description: 'ボス、ダメージ計算、機構理解を実用ページへつなげます。',
-          links: [
-            { href: '/nte/guides/boss-guide', label: 'ボス攻略' },
-            { href: '/nte/guides/damage-formula', label: 'ダメージ計算' },
-          ],
-        },
-        {
-          title: '更新と報酬',
-          description: '更新情報、ガチャ戦略、交換コードの流れを整えます。',
-          links: [
-            { href: '/nte/version', label: 'バージョン特集' },
-            { href: '/nte/guides/gacha-strategy', label: 'ガチャ戦略' },
-            { href: '/nte/redeem-codes', label: '交換コード' },
-          ],
-        },
+        { title: '版本とキャラ', description: '999 Nights、Shinku、Iroi検索を先に受け止めます。', links: [{ href: '/nte/version', label: 'v1.2特集' }, { href: '/nte/guides/v1-2-999-nights-guide', label: '999 Nights' }] },
+        { title: 'ガチャと報酬', description: 'コードとガチャ戦略を実用ページへつなげます。', links: [{ href: '/nte/redeem-codes', label: 'コード' }, { href: '/nte/guides/gacha-strategy', label: 'ガチャ戦略' }] },
+        { title: 'DLと入門', description: 'Steam/DLユーザーは公式入口と端末確認から。', links: [{ href: '/nte/guides/download-install-guide', label: 'DLとインストール' }, { href: '/nte/guides/beginner-guide', label: '初心者ガイド' }] },
       ],
     },
     faq: [
-      {
-        question: {
-          zh: '异环首页先看什么最省时间？',
-          en: 'What is the fastest starting point on the NTE homepage?',
-          ja: 'NTEホームで最短の入口は？',
-        },
-        answer: {
-          zh: '先看下载安装和新手入门，再看配装和版本更新。',
-          en: 'Start with download/install and the beginner guide, then move to builds and updates.',
-          ja: 'まずDLと初心者ガイド、その後にビルドと更新情報を見るのがおすすめです。',
-        },
-      },
-      {
-        question: {
-          zh: '异环 Wiki 和官网入口先看哪里？',
-          en: 'Where should I start for the NTE wiki and official hub?',
-          ja: 'NTE Wiki と公式導線はどこから見ればいいですか？',
-        },
-        answer: {
-          zh: '先点首页的 Wiki / 官网入口，再继续看下载安装、兑换码和版本专题。',
-          en: 'Start from the wiki / official hub on the homepage, then continue into download/install, codes, and the version hub.',
-          ja: 'まずホームの Wiki / 公式導線を見て、その後にDL、コード、バージョン特集へ進んでください。',
-        },
-      },
+      { question: { zh: '异环首页现在先看哪？', en: 'What should I open first for NTE?', ja: 'NTEホームで最初に見るべきものは？' }, answer: { zh: '先看 1.2 / 999 Nights，再看 Shinku、Iroi、兑换码和下载安装。', en: 'Start with v1.2 / 999 Nights, then Shinku, Iroi, codes, and download/install.', ja: 'まずv1.2 / 999 Nights、その後Shinku、Iroi、コード、DLへ。' } },
     ],
   },
   sea: {
@@ -652,112 +489,38 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     ],
   },
   zzz: {
-    eyebrow: { zh: '3.0 版本专题入口', en: 'v3.0 Version Hub', ja: 'v3.0 バージョン特集' },
-    title: { zh: '绝区零版本热词承接', en: 'ZZZ hot-topic landing hub', ja: 'ZZZ 注目トピック導線' },
+    eyebrow: { zh: '3.1 / 2 周年专题入口', en: 'v3.1 / 2nd Anniversary Hub', ja: 'v3.1 / 2周年導線' },
+    title: { zh: '绝区零 3.1、周年与 Xbox 入坑承接', en: 'ZZZ v3.1, anniversary, and Xbox onboarding hub', ja: 'ZZZ v3.1・周年・Xbox導線' },
     description: {
-      zh: '把 v3.0、新秩序、首席跟班、突击专精、维琳娜和风属性体系集中放进首页，直接承接版本搜索词。',
-      en: 'Surface v3.0, New Order, key update topics, Rupture, Velina, and the new Wind system right on the homepage.',
-      ja: 'v3.0、新秩序、主要トピック、ラプチャー、ビリナ、風属性をトップでまとめて受け止めます。',
+      zh: '把 The Long Goodbye、7 月 29 日、2 周年、Remielle/Sigrid、Microsoft Store、Xbox Play Anywhere 和 Steam 入坑放在首页第一跳。',
+      en: 'Surface The Long Goodbye, July 29, the 2nd anniversary, Remielle/Sigrid, Microsoft Store, Xbox Play Anywhere, and Steam onboarding.',
+      ja: 'The Long Goodbye、7月29日、2周年、Remielle/Sigrid、Microsoft Store、Xbox Play Anywhere、Steam入門をトップで受け止めます。',
     },
     chips: {
-      zh: ['v3.0 新秩序', '维琳娜', '首席跟班', '突击专精', '驱动盘', '风属性'],
-      en: ['v3.0 New Order', 'Velina', 'Key update topics', 'Rupture', 'Drive Disc', 'Wind'],
-      ja: ['v3.0 新秩序', 'ビリナ', '主要トピック', 'ラプチャー', 'ディスク', '風属性'],
+      zh: ['3.1 7/29', 'The Long Goodbye', '2 周年', 'Remielle/Sigrid', 'Xbox', 'Microsoft Store'],
+      en: ['v3.1 July 29', 'The Long Goodbye', '2nd anniversary', 'Remielle/Sigrid', 'Xbox', 'Microsoft Store'],
+      ja: ['v3.1 7/29', 'The Long Goodbye', '2周年', 'Remielle/Sigrid', 'Xbox', 'Microsoft Store'],
     },
-    cta: { zh: '去版本专题', en: 'Open version hub', ja: 'バージョン特集へ' },
+    cta: { zh: '去 3.1 专题', en: 'Open v3.1 hub', ja: 'v3.1特集へ' },
     tracks: {
       zh: [
-        {
-          title: '版本节点',
-          description: '先把 3.0 核心热词和新版本信息接住，避免只停在首页标题。',
-          links: [
-            { href: '/zzz/version', label: '版本专题' },
-            { href: '/zzz/guides/v3-0-version-guide', label: 'v3.0 完整指南' },
-          ],
-        },
-        {
-          title: '养成与配队',
-          description: '把驱动盘、音擎和主流阵容串起来，直接进入可操作的培养页。',
-          links: [
-            { href: '/zzz/build', label: '配装推荐' },
-            { href: '/zzz/guides/meta-teams-v3-guide', label: '3.0 主流配队' },
-          ],
-        },
-        {
-          title: '专精与定位',
-          description: '围绕突击专精、角色定位和玩法拆解，承接更细的搜索意图。',
-          links: [
-            { href: '/zzz/characters', label: '角色图鉴' },
-            { href: '/zzz/guides/rupture-specialty-guide', label: '突击专精' },
-          ],
-        },
+        { title: '3.1 节点', description: '先承接 The Long Goodbye、周年和新代理人搜索。', links: [{ href: '/zzz/version', label: '3.1 专题' }, { href: '/zzz/guides/v3-0-version-guide', label: '3.0 回顾' }] },
+        { title: '平台入坑', description: 'Steam、Microsoft Store、Xbox 用户先看账号与下载。', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: '平台入坑 FAQ' }, { href: '/zzz/redeem-codes', label: '兑换码' }] },
+        { title: '养成与配队', description: '把周年回流继续送到配队、驱动盘和养成页。', links: [{ href: '/zzz/guides/meta-teams-v3-guide', label: '主流配队' }, { href: '/zzz/drive-discs', label: '驱动盘' }] },
       ],
       en: [
-        {
-          title: 'Version node',
-          description: 'Catch the v3.0 search intent before it stops at the homepage title.',
-          links: [
-            { href: '/zzz/version', label: 'Version hub' },
-            { href: '/zzz/guides/v3-0-version-guide', label: 'v3.0 guide' },
-          ],
-        },
-        {
-          title: 'Builds and teams',
-          description: 'Connect drive discs, W-Engines, and meta comps into practical next steps.',
-          links: [
-            { href: '/zzz/build', label: 'Builds' },
-            { href: '/zzz/guides/meta-teams-v3-guide', label: 'Meta teams' },
-          ],
-        },
-        {
-          title: 'Role focus',
-          description: 'Cover Rupture, role positioning, and deeper gameplay breakdowns.',
-          links: [
-            { href: '/zzz/characters', label: 'Character wiki' },
-            { href: '/zzz/guides/rupture-specialty-guide', label: 'Rupture guide' },
-          ],
-        },
+        { title: 'v3.1 node', description: 'Catch The Long Goodbye, anniversary, and new-agent searches.', links: [{ href: '/zzz/version', label: 'v3.1 hub' }, { href: '/zzz/guides/v3-0-version-guide', label: 'v3.0 recap' }] },
+        { title: 'Platform starters', description: 'Steam, Microsoft Store, and Xbox users need account and download help.', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Platform FAQ' }, { href: '/zzz/redeem-codes', label: 'Codes' }] },
+        { title: 'Builds and teams', description: 'Route anniversary returners into teams, discs, and progression.', links: [{ href: '/zzz/guides/meta-teams-v3-guide', label: 'Meta teams' }, { href: '/zzz/drive-discs', label: 'Drive discs' }] },
       ],
       ja: [
-        {
-          title: 'バージョン導線',
-          description: 'v3.0 の検索意図をホームタイトルで止めず、次のページへつなげます。',
-          links: [
-            { href: '/zzz/version', label: 'バージョン特集' },
-            { href: '/zzz/guides/v3-0-version-guide', label: 'v3.0 ガイド' },
-          ],
-        },
-        {
-          title: '育成と編成',
-          description: 'ディスク、Wエンジン、主流編成を実用ページにつなげます。',
-          links: [
-            { href: '/zzz/build', label: 'ビルド' },
-            { href: '/zzz/guides/meta-teams-v3-guide', label: '主要編成' },
-          ],
-        },
-        {
-          title: '特化解説',
-          description: 'ラプチャー、役割、細かな攻略理解へ進めます。',
-          links: [
-            { href: '/zzz/characters', label: 'キャラ図鑑' },
-            { href: '/zzz/guides/rupture-specialty-guide', label: 'ラプチャー解説' },
-          ],
-        },
+        { title: 'v3.1導線', description: 'The Long Goodbye、周年、新エージェント検索を受け止めます。', links: [{ href: '/zzz/version', label: 'v3.1特集' }, { href: '/zzz/guides/v3-0-version-guide', label: 'v3.0振り返り' }] },
+        { title: 'プラットフォーム入門', description: 'Steam、Microsoft Store、Xbox勢はアカウントとDLから。', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: '平台FAQ' }, { href: '/zzz/redeem-codes', label: 'コード' }] },
+        { title: '育成と編成', description: '周年復帰勢を編成、ディスク、育成へつなげます。', links: [{ href: '/zzz/guides/meta-teams-v3-guide', label: '主要編成' }, { href: '/zzz/drive-discs', label: 'ディスク' }] },
       ],
     },
     faq: [
-      {
-        question: {
-          zh: '绝区零首页先看什么最接近搜索热词？',
-          en: 'What should I open first on the ZZZ homepage?',
-          ja: 'ZZZのホームで最初に見るべきものは？',
-        },
-        answer: {
-          zh: '先看版本专题，再看主流配队和突击专精，这三块最容易接住当前热词。',
-          en: 'Start with the version hub, then the meta team and Rupture pages.',
-          ja: 'まずバージョン特集、その後に編成とラプチャーページを見るのが最短です。',
-        },
-      },
+      { question: { zh: '绝区零首页现在先看什么？', en: 'What should I open first on the ZZZ homepage?', ja: 'ZZZホームで最初に見るべきものは？' }, answer: { zh: '先看 3.1 / 2 周年专题，再看平台入坑 FAQ、兑换码和主流配队。', en: 'Start with the v3.1 / anniversary hub, then platform FAQ, codes, and meta teams.', ja: 'まずv3.1 / 周年特集、その後平台FAQ、コード、主要編成へ。' } },
     ],
   },
   wuwa: {
@@ -870,223 +633,75 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     ],
   },
   endfield: {
-    eyebrow: { zh: '测试与入坑专题', en: 'Test & onboarding hub', ja: 'テスト・入門特集' },
-    title: { zh: '终末地测试与下载承接', en: 'Endfield test and download hub', ja: 'Endfield テスト・DL導線' },
+    eyebrow: { zh: 'Homecoming / AIC 工厂入口', en: 'Homecoming / AIC Factory Hub', ja: 'Homecoming / AIC工場導線' },
+    title: { zh: '终末地 Homecoming 与蓝图工厂承接', en: 'Endfield Homecoming and blueprint factory hub', ja: 'Endfield Homecoming・ブループリント工場導線' },
     description: {
-      zh: '把测试节点、下载、战斗系统、基地建设和危机合约相关内容放在首页，直接接住测试与入坑搜索词。',
-      en: 'Put test timing, download, combat, base building, and crisis-content pages on the homepage to catch launch intent.',
-      ja: 'テスト時期、DL、戦闘、基地建設、危機契約をトップで受け止めます。',
+      zh: '把 Homecoming 已上线、新地图、Arcane/Liino、蓝图、AIC 工厂 QoL 和庆典奖励放到首页。',
+      en: 'Bring live Homecoming coverage, new maps, Arcane/Liino, blueprints, AIC factory QoL, and celebration rewards to the homepage.',
+      ja: 'Homecoming実装、新マップ、Arcane/Liino、ブループリント、AIC工場QoL、報酬をトップに出します。',
     },
     chips: {
-      zh: ['测试节点', '下载安装', '战斗系统', '基地建设', '危机合约', '干员节奏榜'],
-      en: ['Test timing', 'Download/install', 'Combat system', 'Base building', 'Crisis content', 'Tier list'],
-      ja: ['テスト時期', 'DL/インストール', '戦闘システム', '基地建設', '危機契約', 'Tier'],
+      zh: ['Homecoming 已上线', '蓝图', 'AIC 工厂', '新地图', 'Arcane/Liino', '庆典奖励'],
+      en: ['Homecoming live', 'Blueprints', 'AIC factory', 'New maps', 'Arcane/Liino', 'Rewards'],
+      ja: ['Homecoming実装', 'ブループリント', 'AIC工場', '新マップ', 'Arcane/Liino', '報酬'],
     },
-    cta: { zh: '去版本专题', en: 'Open version hub', ja: 'バージョン特集へ' },
+    cta: { zh: '去 Homecoming 专题', en: 'Open Homecoming hub', ja: 'Homecoming特集へ' },
     tracks: {
       zh: [
-        {
-          title: '测试节点',
-          description: '把测试时间、下载和配置要求集中收口，减少首跳流失。',
-          links: [
-            { href: '/endfield/version', label: '测试专题' },
-            { href: '/endfield/guides/download-install-guide', label: '下载与配置' },
-          ],
-        },
-        {
-          title: '战斗与养成',
-          description: '把战斗系统、角色理解和主属性规划串成下一步动作。',
-          links: [
-            { href: '/endfield/build', label: '配装推荐' },
-            { href: '/endfield/guides/combat-system-guide', label: '战斗系统' },
-          ],
-        },
-        {
-          title: '据点与挑战',
-          description: '继续承接基地建设、危机合约与更深的玩法解读。',
-          links: [
-            { href: '/endfield/characters', label: '角色图鉴' },
-            { href: '/endfield/guides/crisis-contract-guide', label: '危机合约' },
-          ],
-        },
+        { title: 'Homecoming', description: '先承接半周年、新地图、新干员和奖励。', links: [{ href: '/endfield/version', label: 'Homecoming 专题' }, { href: '/endfield/guides/homecoming-update-guide', label: '更新指南' }] },
+        { title: '蓝图 / AIC', description: '把工厂效率、蓝图复用和建设节奏继续下沉。', links: [{ href: '/endfield/guides/base-building-guide', label: '基地建设' }, { href: '/endfield/build', label: '配装推荐' }] },
+        { title: '入坑与角色', description: '新玩家和回流玩家继续看下载、战斗和干员。', links: [{ href: '/endfield/guides/download-install-guide', label: '下载与配置' }, { href: '/endfield/characters', label: '角色图鉴' }] },
       ],
       en: [
-        {
-          title: 'Test timing',
-          description: 'Consolidate test timing, download, and setup requirements to reduce bounce.',
-          links: [
-            { href: '/endfield/version', label: 'Test hub' },
-            { href: '/endfield/guides/download-install-guide', label: 'Download & specs' },
-          ],
-        },
-        {
-          title: 'Combat and builds',
-          description: 'Turn combat, character roles, and stat planning into the next click.',
-          links: [
-            { href: '/endfield/build', label: 'Builds' },
-            { href: '/endfield/guides/combat-system-guide', label: 'Combat system' },
-          ],
-        },
-        {
-          title: 'Base and challenge',
-          description: 'Keep base building, crisis content, and deeper gameplay notes moving.',
-          links: [
-            { href: '/endfield/characters', label: 'Character wiki' },
-            { href: '/endfield/guides/crisis-contract-guide', label: 'Crisis contract' },
-          ],
-        },
+        { title: 'Homecoming', description: 'Catch half-year, maps, operators, and rewards first.', links: [{ href: '/endfield/version', label: 'Homecoming hub' }, { href: '/endfield/guides/homecoming-update-guide', label: 'Update guide' }] },
+        { title: 'Blueprint / AIC', description: 'Push factory efficiency, blueprint reuse, and build cadence deeper.', links: [{ href: '/endfield/guides/base-building-guide', label: 'Base building' }, { href: '/endfield/build', label: 'Builds' }] },
+        { title: 'Start and roles', description: 'New and returning players continue into download, combat, and operators.', links: [{ href: '/endfield/guides/download-install-guide', label: 'Download & specs' }, { href: '/endfield/characters', label: 'Characters' }] },
       ],
       ja: [
-        {
-          title: 'テスト導線',
-          description: 'テスト時期、DL、必要環境をまとめて離脱を減らします。',
-          links: [
-            { href: '/endfield/version', label: 'テスト特集' },
-            { href: '/endfield/guides/download-install-guide', label: 'DLと環境' },
-          ],
-        },
-        {
-          title: '戦闘と育成',
-          description: '戦闘、役割、ステータス設計を次の行動に変えます。',
-          links: [
-            { href: '/endfield/build', label: 'ビルド' },
-            { href: '/endfield/guides/combat-system-guide', label: '戦闘システム' },
-          ],
-        },
-        {
-          title: '拠点と挑戦',
-          description: '拠点建設、危機契約、深い攻略理解へ進めます。',
-          links: [
-            { href: '/endfield/characters', label: 'キャラ図鑑' },
-            { href: '/endfield/guides/crisis-contract-guide', label: '危機契約' },
-          ],
-        },
+        { title: 'Homecoming', description: '半周年、マップ、オペレーター、報酬を先に受け止めます。', links: [{ href: '/endfield/version', label: 'Homecoming特集' }, { href: '/endfield/guides/homecoming-update-guide', label: '更新ガイド' }] },
+        { title: 'Blueprint / AIC', description: '工場効率、ブループリント再利用、建設テンポへつなげます。', links: [{ href: '/endfield/guides/base-building-guide', label: '基地建設' }, { href: '/endfield/build', label: 'ビルド' }] },
+        { title: '入門と役割', description: '新規と復帰勢をDL、戦闘、キャラへ誘導します。', links: [{ href: '/endfield/guides/download-install-guide', label: 'DLと環境' }, { href: '/endfield/characters', label: 'キャラ図鑑' }] },
       ],
     },
     faq: [
-      {
-        question: {
-          zh: '终末地首页先看什么最不容易走偏？',
-          en: 'What should I check first on the Endfield homepage?',
-          ja: 'Endfieldホームで最初に見るべきものは？',
-        },
-        answer: {
-          zh: '先看测试节点和下载安装，再看战斗系统与基地建设，信息最完整。',
-          en: 'Start with test timing and download/install, then move to combat and base-building.',
-          ja: 'まずテスト時期とDL、その後に戦闘と基地建設を見るのが最短です。',
-        },
-      },
+      { question: { zh: '终末地首页现在先看哪？', en: 'What should I open first for Endfield?', ja: 'Endfieldホームで最初に見るべきものは？' }, answer: { zh: '先看 Homecoming 专题，再看蓝图 / AIC 工厂、下载配置和角色入口。', en: 'Start with Homecoming, then blueprint / AIC factory, download specs, and operators.', ja: 'まずHomecoming、その後ブループリント / AIC工場、DL環境、キャラへ。' } },
     ],
   },
   skjh: {
-    eyebrow: { zh: '7 月 9 日上线总专题', en: 'July 9 Launch Hub', ja: '7月9日ローンチ特集' },
-    title: { zh: '失控进化开服热词入口', en: 'Ashfall Evolution launch keywords', ja: '失控進化ローンチ特集' },
+    eyebrow: { zh: 'S1 上线后生存专题', en: 'Live S1 Survival Hub', ja: 'S1実装後サバイバル導線' },
+    title: { zh: '失控进化服务器模式、开荒与防抄家入口', en: 'Ashfall Evolution server modes, starters, and anti-raid hub', ja: '失控進化 サーバー・開荒・防衛導線' },
     description: {
-      zh: '把上线时间、预约福利、Steam、预下载、开荒路线和多端互通 FAQ 放在首页最前面，先承接最强流量。',
-      en: 'Put launch timing, reservation rewards, Steam, preload, beginner routes, and cross-play FAQ up front.',
-      ja: 'ローンチ時期、事前登録報酬、Steam、事前DL、初心者ルート、クロス端末FAQを前面に出します。',
+      zh: '把下载电脑版、官网 PC、服务器模式、安全区 / 标准 / 挑战、0-2 小时开荒、基地选址和防抄家前置。',
+      en: 'Surface PC download, official PC entry, server modes, safe-zone / standard / challenge, first 0-2 hours, base location, and anti-raid basics.',
+      ja: 'PC版DL、公式PC入口、サーバーモード、安全区/標準/挑戦、0-2時間開荒、拠点選び、防衛を前面に出します。',
     },
     chips: {
-      zh: ['7/9 上线', '预约福利', 'Steam', '预下载', '开荒路线', '多端互通'],
-      en: ['July 9 launch', 'Reservation rewards', 'Steam', 'Preload', 'Beginner route', 'Cross-play'],
-      ja: ['7/9ローンチ', '事前登録報酬', 'Steam', '事前DL', '初心者ルート', 'クロス端末'],
+      zh: ['S1 赛季', '下载电脑版', '服务器模式', '安全区', '标准/挑战', '防抄家'],
+      en: ['S1 season', 'PC download', 'Server modes', 'Safe-zone', 'Standard/challenge', 'Anti-raid'],
+      ja: ['S1シーズン', 'PC DL', 'サーバー', '安全区', '標準/挑戦', '防衛'],
     },
-    cta: { zh: '看开服攻略', en: 'View launch guides', ja: '攻略を見る' },
+    cta: { zh: '看 S1 专题', en: 'Open S1 hub', ja: 'S1特集へ' },
     tracks: {
       zh: [
-        {
-          title: '上线节点',
-          description: '把 7 月 9 日上线和预约福利先接住。',
-          links: [
-            { href: '/skjh/guides/season-1-launch', label: '上线总专题' },
-            { href: '/skjh/guides/launch-rewards-complete', label: '预约福利' },
-          ],
-        },
-        {
-          title: '生存与开荒',
-          description: '把新手开荒、基地和资源路线继续往下导。',
-          links: [
-            { href: '/skjh/guides/download-crossplay-faq', label: '下载互通 FAQ' },
-            { href: '/skjh/version', label: '版本专题' },
-          ],
-        },
-        {
-          title: '玩法与策略',
-          description: '围绕基因流派、武器和资源优先级补齐承接。',
-          links: [
-            { href: '/skjh/guides/season-1-launch', label: '开服攻略' },
-            { href: '/skjh/guides/launch-rewards-complete', label: '福利攻略' },
-          ],
-        },
+        { title: '下载与模式', description: '先解决官网 PC、下载电脑版和选服问题。', links: [{ href: '/skjh/guides/download-crossplay-faq', label: '下载互通 FAQ' }, { href: '/skjh/guides/server-mode-choice', label: '服务器模式' }] },
+        { title: '0-2 小时开荒', description: '把工具、领地柜、低风险资源线变成可执行路线。', links: [{ href: '/skjh/guides/launch-30min-checklist', label: '30 分钟清单' }, { href: '/skjh/guides/day-one-route', label: '首日路线' }] },
+        { title: '基地与防抄家', description: '继续承接基地选址、领地柜维护和反抄家布局。', links: [{ href: '/skjh/guides/anti-raid-base-layouts', label: '防抄家' }, { href: '/skjh/guides/base-building', label: '基地建设' }] },
       ],
       en: [
-        {
-          title: 'Launch node',
-          description: 'Catch the July 9 launch and preregistration rewards first.',
-          links: [
-            { href: '/skjh/guides/season-1-launch', label: 'Launch center' },
-            { href: '/skjh/guides/launch-rewards-complete', label: 'Rewards' },
-          ],
-        },
-        {
-          title: 'Survival path',
-          description: 'Keep beginner routes, base building, and resource planning moving.',
-          links: [
-            { href: '/skjh/guides/download-crossplay-faq', label: 'Download FAQ' },
-            { href: '/skjh/version', label: 'Version hub' },
-          ],
-        },
-        {
-          title: 'Strategy topics',
-          description: 'Fill in gene builds, weapons, and resource priorities.',
-          links: [
-            { href: '/skjh/guides/season-1-launch', label: 'Launch guide' },
-            { href: '/skjh/guides/launch-rewards-complete', label: 'Reward guide' },
-          ],
-        },
+        { title: 'Download and modes', description: 'Solve official PC entry, PC download, and server choice first.', links: [{ href: '/skjh/guides/download-crossplay-faq', label: 'Download FAQ' }, { href: '/skjh/guides/server-mode-choice', label: 'Server modes' }] },
+        { title: 'First 0-2 hours', description: 'Turn tools, territory cabinet, and low-risk loot lines into a route.', links: [{ href: '/skjh/guides/launch-30min-checklist', label: '30-min checklist' }, { href: '/skjh/guides/day-one-route', label: 'Day-one route' }] },
+        { title: 'Base and anti-raid', description: 'Route base sites, upkeep, and anti-raid layouts deeper.', links: [{ href: '/skjh/guides/anti-raid-base-layouts', label: 'Anti-raid' }, { href: '/skjh/guides/base-building', label: 'Base building' }] },
       ],
       ja: [
-        {
-          title: 'ローンチ導線',
-          description: '7月9日ローンチと事前登録報酬を先に受け止めます。',
-          links: [
-            { href: '/skjh/guides/season-1-launch', label: 'ローンチ特集' },
-            { href: '/skjh/guides/launch-rewards-complete', label: '事前登録報酬' },
-          ],
-        },
-        {
-          title: 'サバイバル導線',
-          description: '初心者ルート、拠点、資源管理へ進めます。',
-          links: [
-            { href: '/skjh/guides/download-crossplay-faq', label: 'DLと互通FAQ' },
-            { href: '/skjh/version', label: 'バージョン特集' },
-          ],
-        },
-        {
-          title: '攻略テーマ',
-          description: '遺伝子ビルド、武器、資源優先度を補完します。',
-          links: [
-            { href: '/skjh/guides/season-1-launch', label: '開服攻略' },
-            { href: '/skjh/guides/launch-rewards-complete', label: '報酬攻略' },
-          ],
-        },
+        { title: 'DLとモード', description: '公式PC入口、PC版DL、サーバー選択を先に解決します。', links: [{ href: '/skjh/guides/download-crossplay-faq', label: 'DL FAQ' }, { href: '/skjh/guides/server-mode-choice', label: 'サーバーモード' }] },
+        { title: '0-2時間開荒', description: '道具、領地柜、低リスク資源線を実行ルートにします。', links: [{ href: '/skjh/guides/launch-30min-checklist', label: '30分チェック' }, { href: '/skjh/guides/day-one-route', label: '初日ルート' }] },
+        { title: '拠点と防衛', description: '拠点選び、維持、防衛レイアウトへつなげます。', links: [{ href: '/skjh/guides/anti-raid-base-layouts', label: '防衛' }, { href: '/skjh/guides/base-building', label: '基地建設' }] },
       ],
     },
     faq: [
-      {
-        question: {
-          zh: '失控进化开服前先准备什么？',
-          en: 'What should I prepare before Ashfall Evolution launches?',
-          ja: '失控進化のローンチ前に何を準備する？',
-        },
-        answer: {
-          zh: '先确认下载、账号、预约福利和开荒路线，再决定要不要进更复杂的模式。',
-          en: 'Check download, account, rewards, and beginner routes before choosing a harder mode.',
-          ja: 'DL、アカウント、報酬、初心者ルートを先に確認してからモードを選びましょう。',
-        },
-      },
+      { question: { zh: '失控进化上线后首页先点哪？', en: 'What should I click first now that it is live?', ja: '実装後ホームで最初に押すべきものは？' }, answer: { zh: '先点服务器模式和下载互通 FAQ，再看 30 分钟清单、防抄家和基地建设。', en: 'Open server modes and download FAQ first, then the 30-minute checklist, anti-raid, and base building.', ja: 'まずサーバーモードとDL FAQ、その後30分チェック、防衛、基地建設へ。' } },
     ],
-  },
+  }
 };
 
 // --- Route icons ---
@@ -1150,13 +765,13 @@ const FEATURED_GUIDE_IDS: Record<string, string[]> = {
   genshin: ['snezhnaya-version-guide', 'lunar-reaction-guide', 'artifact-guide'],
   starrail: ['v4-4-preview-guide', 'v4-3-version-guide', 'fate-collab-guide'],
   wuwa: ['v3-5-preview-guide', 'v3-4-version-guide', 'roya-frostlands-guide'],
-  nte: ['photo-mode-guide', 'damage-formula', 'boss-guide'],
-  zzz: ['v3-0-version-guide', 'meta-teams-v3-guide', 'rupture-specialty-guide'],
+  nte: ['v1-2-999-nights-guide', 'gacha-strategy', 'download-install-guide'],
+  zzz: ['steam-3-0-start-guide', 'v3-0-version-guide', 'meta-teams-v3-guide'],
   guihuan: ['beginner-guide', 'download-install-guide', 'spirit-build-guide'],
   ananta: ['beginner-guide', 'download-install-guide', 'combat-system-guide'],
-  endfield: ['download-install-guide', 'combat-system-guide', 'crisis-contract-guide'],
+  endfield: ['homecoming-update-guide', 'base-building-guide', 'download-install-guide'],
   sea: ['launch-day-guide', 'open-beta-version-center', 'download-install-guide'],
-  skjh: ['season-1-launch', 'launch-rewards-complete', 'download-crossplay-faq'],
+  skjh: ['server-mode-choice', 'anti-raid-base-layouts', 'download-crossplay-faq'],
 };
 
 function getGuideInfos(gameId: string, locale: SupportedLocale): GuideInfo[] {
@@ -1459,7 +1074,7 @@ export default async function GameHome({
                 {gameId === 'endfield' && (
                   <>
                     <Link href={`/${gameId}/version` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
-                      {locale === 'zh' ? '测试专题' : locale === 'ja' ? 'テスト特集' : 'Test Hub'}
+                      {locale === 'zh' ? 'Homecoming 专题' : locale === 'ja' ? 'Homecoming特集' : 'Homecoming Hub'}
                     </Link>
                     <Link href={`/${gameId}/guides/download-install-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
                       {locale === 'zh' ? '下载与配置' : locale === 'ja' ? 'DLと環境' : 'Download & Specs'}
@@ -1467,8 +1082,8 @@ export default async function GameHome({
                     <Link href={`/${gameId}/guides/combat-system-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
                       {locale === 'zh' ? '战斗系统' : locale === 'ja' ? '戦闘システム' : 'Combat Guide'}
                     </Link>
-                    <Link href={`/${gameId}/guides/crisis-contract-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
-                      {locale === 'zh' ? '危机合约' : locale === 'ja' ? '危機契約' : 'Crisis Contract'}
+                    <Link href={`/${gameId}/guides/base-building-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '基地建设' : locale === 'ja' ? '基地建設' : 'Base Building'}
                     </Link>
                   </>
                 )}
