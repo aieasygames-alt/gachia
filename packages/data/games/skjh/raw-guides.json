@@ -1290,5 +1290,138 @@
         "answerZh": "都适合，但尤其适合已经过了首日基础层、现在想理解当前真实运营环境的玩家。"
       }
     ]
+  },
+  {
+    "id": "official-pc-download-faq",
+    "title": "失控进化官网 PC 下载 FAQ：下载电脑版、WeGame、移动端互通与配置检查",
+    "titleEn": "Ashfall Evolution Official PC Download FAQ: PC Client, WeGame, Mobile Sync, and Specs",
+    "titleJa": "失控進化 公式PCダウンロードFAQ：PC版、WeGame、モバイル連携、環境確認",
+    "category": "beginner",
+    "categoryZh": "入门必读",
+    "categoryEn": "Beginner",
+    "categoryJa": "初心者",
+    "summary": "承接“失控进化下载、官网 PC、下载电脑版、WeGame、手游、配置”搜索，先说明官方入口、账号互通、安装检查和低配优化。",
+    "summaryEn": "A download-intent FAQ for official PC, WeGame, mobile sync, installation checks, specs, and low-end performance settings.",
+    "summaryJa": "公式PC版、WeGame、モバイル連携、インストール、推奨環境、低スペック設定を整理します。",
+    "content": "## 先看结论\n\n如果你在搜“失控进化下载电脑版”“官网 PC”“WeGame”或“手游互通”，优先确认官方入口，不要从来路不明的安装包开始。失控进化是上线后的长线生存对抗游戏，账号、服务器和安装路径一开始选错，后面换服、组队和领奖都会变麻烦。\n\n## 下载入口怎么选\n\n| 入口 | 适合谁 | 先检查什么 |\n| --- | --- | --- |\n| 官网 PC 启动器 | 想跟官网活动、公告和礼包走的玩家 | 官网域名、账号登录、补丁空间 |\n| WeGame | 习惯腾讯平台管理游戏的 PC 玩家 | WeGame 账号、安装权限、启动器更新 |\n| Android / iOS | 手机和平板玩家 | 存储空间、发热、帧率、网络稳定性 |\n| 云游戏或平台服 | 设备不足或想轻量体验的玩家 | 延迟、地区、账号规则 |\n\n不要把“国际服”“非官方 APK”“加速包”直接当成官方入口。下载页最稳的做法是先指向官网、平台商店和游戏内公告。\n\n## PC 安装前检查\n\n1. 预留本体、解压和后续补丁空间。\n2. 显卡驱动和系统更新先处理完。\n3. 安装路径尽量不要放在权限复杂的系统目录。\n4. 首次启动先让启动器完整校验资源。\n5. 如果和朋友组队，先统一服务器模式和区服，不要各自随便进。\n\n## 电脑版和手游互通常见问题\n\n多端互通最容易被误解。你真正要确认的是：\n\n- 同一账号能不能跨设备继续进度。\n- PC、移动端和 WeGame 是否在同一服务器规则下组队。\n- 平台礼包、充值、外观是否完全互认。\n- 不同模式服务器之间是否能自由迁移。\n\n这些问题以上线后官方 FAQ、游戏内公告和平台说明为准；站内攻略可以给检查清单，但不应替官方承诺。\n\n## 低配设备优先调什么\n\n生存对抗游戏里，稳定帧率和可辨识画面比最高画质更重要。优先顺序是：\n\n1. 帧率稳定。\n2. 输入延迟低。\n3. 敌人、动物、资源点和门口轮廓清楚。\n4. 脚步、开门、枪声方向听得清。\n5. 最后再追求阴影、后处理和特效。\n\n## 下载后第一小时该做什么\n\n先不要急着冲高危据点。完成设置、选服、放睡袋、做工具、看服务器模式，再进入 0-2 小时开荒路线。下载页最好的下一步不是长篇世界观，而是把用户送到真正能开始玩的清单。\n\n## 推荐下一步\n\n- /skjh/guides/server-mode-choice：先选安全区、标准还是挑战。\n- /skjh/guides/first-2-hours-starter-route：从出生到第一套石质核心。\n- /skjh/guides/base-location-anti-raid-plan：基地选址和防抄家。\n- /skjh/guides/system-requirements：配置要求与设备建议。",
+    "contentEn": "## Quick answer\n\nIf you are searching for Ashfall Evolution PC download, official PC client, WeGame, mobile sync, or specs, start with official entry points. Avoid unofficial installers. In a live survival game, account choice, server mode, and installation path matter because they affect teaming, rewards, and long-term progress.\n\n## Which entry should you use?\n\n| Entry | Best for | Check first |\n| --- | --- | --- |\n| Official PC launcher | Players following official events and notices | Official domain, account login, patch space |\n| WeGame | PC players who use Tencent's launcher ecosystem | Account, install permission, launcher updates |\n| Android / iOS | Mobile and tablet players | Storage, heat, FPS, network stability |\n| Cloud/platform access | Light access or weaker devices | Latency, region, account rules |\n\nDo not treat unofficial APKs, unknown global-server packages, or third-party bundles as official downloads.\n\n## PC install checklist\n\nReserve enough space, update drivers, avoid restricted system folders, let the launcher verify files, and coordinate server mode with friends before serious progression.\n\n## Cross-device FAQ\n\nCheck whether the same account continues progress across devices, whether PC/mobile/WeGame share server rules, whether rewards and purchases are shared, and whether server modes allow migration. Use official notices as the source of truth.\n\n## Low-end performance priority\n\nStable FPS, low input delay, readable enemies/resources, and clear audio matter more than max graphics.\n\n## Next steps\n\nOpen server mode choice, first 0-2 hours route, base location, and system requirements pages before pushing dangerous POIs.",
+    "tags": [
+      "下载",
+      "官网PC",
+      "WeGame",
+      "电脑版",
+      "手游",
+      "配置",
+      "多端互通"
+    ],
+    "faq": [
+      {
+        "question": "Where should I download Ashfall Evolution?",
+        "questionZh": "失控进化应该从哪里下载？",
+        "answer": "Use the official site, WeGame, and official app store entries first. Avoid unofficial installers or unknown APK packages.",
+        "answerZh": "优先使用官网、WeGame 和官方应用商店入口，不建议使用来路不明的安装包或 APK。"
+      },
+      {
+        "question": "Can PC and mobile share progress?",
+        "questionZh": "PC 和移动端进度互通吗？",
+        "answer": "Public materials emphasize multi-platform access, but final account, server, and reward-sharing details should follow official notices.",
+        "answerZh": "公开信息强调多端入口，但账号、服务器和奖励互认细则仍应以上线后官方公告为准。"
+      },
+      {
+        "question": "What should low-end PC players lower first?",
+        "questionZh": "低配 PC 优先降低什么？",
+        "answer": "Lower shadows, post-processing, and effects first while keeping visibility, FPS, and audio clarity stable.",
+        "answerZh": "优先降低阴影、后处理和特效，同时保证视野、帧率和声音方向稳定。"
+      }
+    ],
+    "date": "2026-07-21"
+  },
+  {
+    "id": "first-2-hours-starter-route",
+    "title": "失控进化新手 0-2 小时开荒路线：工具、领地柜、石质核心与低风险据点",
+    "titleEn": "Ashfall Evolution First 0-2 Hours Starter Route: Tools, Cabinet, Stone Core, and Low-Risk Loot",
+    "titleJa": "失控進化 初心者0-2時間ルート：道具、領地柜、石造コア、低リスク探索",
+    "category": "beginner",
+    "categoryZh": "新手开荒",
+    "categoryEn": "Beginner",
+    "categoryJa": "初心者",
+    "summary": "把新手从出生点带到第一套工具、睡袋、领地柜、石质核心、一级据点循环和第一晚防守，适合上线后搜索“新手开荒”。",
+    "summaryEn": "A practical first two-hour route from spawn to tools, sleeping bag, territory cabinet, stone core, low-tier loot loop, and first-night defense.",
+    "summaryJa": "スポーンから道具、寝袋、領地柜、石造コア、低リスク探索、初夜防衛まで。",
+    "content": "## 先看结论\n\n新手 0-2 小时的目标不是打架赢人，而是活到第一晚并形成可重复发育。最稳路线是：离开出生点、做工具、拿布和废料、放睡袋、放领地柜、石质核心、跑低风险据点、晚上补门和维护。\n\n## 0-10 分钟：先离开高噪音区域\n\n- 不要沿主路一直跑。\n- 不要在出生海滩和大型据点门口停留。\n- 看到树、石头、亚麻和路边箱就先补基础资源。\n- 夜晚出生时先找遮蔽物，别用火把暴露自己。\n\n第一目标是石斧、石镐、木矛或猎弓，再补布料和食物。\n\n## 10-30 分钟：睡袋和临时箱子\n\n有布料后先放睡袋。睡袋的价值比你背包里那点资源高，因为它决定你死后能不能继续在同一区域发育。\n\n临时箱子可以藏在石缝、树后或低交通边缘，但不要把所有资源塞进一个明显位置。\n\n## 30-60 分钟：领地柜与小核心\n\n第一间房不要贪大，推荐小核心：\n\n| 组件 | 目的 |\n| --- | --- |\n| 1 个核心房间 | 放领地柜和关键箱子 |\n| 1 个双门缓冲 | 防止开门被直接冲进核心 |\n| 睡袋 | 死亡回点 |\n| 小箱子分散 | 避免一次被拿空 |\n| 维护资源 | 防止基地自然衰减 |\n\n先木质过渡可以，但第一小时内尽量把核心墙体升级到石质。\n\n## 60-90 分钟：低风险据点循环\n\n新手推荐低级路线：废弃超市、加油站、路边箱、油桶、边缘资源点。目标不是收益最大，而是死亡概率最低。\n\n优先带回：\n\n1. 废料：科技树关键。\n2. 布料：睡袋和绷带。\n3. 金属碎片：门和维护。\n4. 食物水源：避免代谢拖慢。\n5. 可回收组件：中期电力和武器会用。\n\n## 90-120 分钟：第一晚防守\n\n第一晚要做的是降低被发现和被一次突破的概率：\n\n- 把外观做小，不要在路边显眼位置扩建。\n- 门口加双门缓冲。\n- 领地柜不要入口直视。\n- 关键资源分散存放。\n- 出门前确认睡袋、门锁和维护。\n\n## 独狼路线\n\n独狼不要追求大房型。低调小家、多睡袋、边缘路线、少开枪、少带满包深入据点，才是前两小时最稳的策略。\n\n## 小队路线\n\n两人以上可以分工：一人采集建家，一人跑箱拿废料，一人侦查附近队伍。最忌讳所有人一起冲同一个高危据点，然后集体掉包。\n\n## 最常见失败点\n\n1. 不放睡袋就打架。\n2. 背包满了还继续深入。\n3. 木屋不升级石质核心。\n4. 家建在主路、高级据点门口或矿点中心。\n5. 只搜刮不维护领地柜。\n\n## 下一步\n\n完成 0-2 小时后，再去看服务器模式、防抄家基地、废料经济和电力系统。",
+    "contentEn": "## Quick answer\n\nThe goal of the first two hours is not to win fights. It is to survive the first night and create repeatable progression: leave spawn, craft tools, gather cloth and scrap, place a sleeping bag, build a territory cabinet, upgrade a small stone core, run low-risk POIs, and reinforce doors/upkeep.\n\n## 0-10 minutes\n\nLeave crowded spawn routes, avoid main roads and major POI entrances, gather wood/stone/flax, and craft a hatchet, pickaxe, spear or bow.\n\n## 10-30 minutes\n\nPlace a sleeping bag as soon as possible. A bag is more valuable than the resources in your backpack because it lets you continue from the same zone after death.\n\n## 30-60 minutes\n\nBuild a small core with a territory cabinet, airlock, sleeping bag, split storage, and upkeep. Wood is temporary; upgrade the core to stone quickly.\n\n## 60-90 minutes\n\nRun low-risk loops: abandoned markets, gas stations, roadside crates, barrels, and edge resources. Prioritize scrap, cloth, metal fragments, food/water, and recyclable components.\n\n## 90-120 minutes\n\nKeep the base small, add an airlock, hide the cabinet from direct entrance view, split loot, and confirm upkeep before leaving.\n\n## Common failures\n\nFighting before placing a bag, overstaying with a full bag, failing to upgrade the core, building beside roads, and ignoring cabinet upkeep.",
+    "tags": [
+      "新手开荒",
+      "0-2小时",
+      "领地柜",
+      "睡袋",
+      "石质核心",
+      "废料"
+    ],
+    "faq": [
+      {
+        "question": "What is the first two-hour goal?",
+        "questionZh": "前 2 小时目标是什么？",
+        "answer": "Survive, place a sleeping bag and territory cabinet, build a small stone core, and establish a low-risk scrap loop.",
+        "answerZh": "活下来，放睡袋和领地柜，做小型石质核心，并形成低风险废料循环。"
+      },
+      {
+        "question": "Should beginners fight early?",
+        "questionZh": "新手前期要不要主动打架？",
+        "answer": "Usually no. Fight only to escape or defend key resources until you have a bag, tools, and a secure core.",
+        "answerZh": "通常不建议。没有睡袋、工具和安全核心前，只在撤离或保护关键资源时打。"
+      },
+      {
+        "question": "What should solo players do differently?",
+        "questionZh": "独狼路线有什么不同？",
+        "answer": "Keep the base small, use multiple bags, avoid main roads, and prioritize survival over high-risk loot.",
+        "answerZh": "基地做小，多放睡袋，避开主路，优先生存而不是冲高风险收益。"
+      }
+    ],
+    "date": "2026-07-21"
+  },
+  {
+    "id": "base-location-anti-raid-plan",
+    "title": "失控进化基地选址与防抄家计划：独狼、小队、领地柜和第一套安全房型",
+    "titleEn": "Ashfall Evolution Base Location and Anti-Raid Plan: Solo, Squads, Cabinet, and First Safe Layout",
+    "titleJa": "失控進化 拠点立地と防衛計画：ソロ、小隊、領地柜、初期安全レイアウト",
+    "category": "systems",
+    "categoryZh": "系统机制",
+    "categoryEn": "Systems",
+    "categoryJa": "システム",
+    "summary": "承接“防抄家、基地选址、领地柜、独狼房型、小队建家”需求，给出上线后第一套低曝光基地方案。",
+    "summaryEn": "A practical anti-raid page for base location, cabinet placement, solo layouts, squad bases, and first safe expansion.",
+    "summaryJa": "防衛、拠点選び、領地柜、ソロ拠点、小隊建築に向けた初期安全案。",
+    "content": "## 先看结论\n\n防抄家不是把房子建得越大越好，而是让别人觉得“不值得拆”。新手第一套基地要低曝光、核心小、路线短、维护稳定、入口不直通领地柜。\n\n## 选址先避开这 5 类地方\n\n| 地点 | 为什么危险 |\n| --- | --- |\n| 主干道路边 | 人流大，容易被顺手标记 |\n| 高级据点门口 | 强队经常路过，抄家成本低 |\n| 大矿点中心 | 资源好但冲突高 |\n| 开阔平地 | 远处就能看到扩建和门口 |\n| 邻居过密区域 | 离线时更容易被试探和爆破 |\n\n更稳的位置是森林边缘、岩缝、山坡背面、低交通支线、小资源点之间的灰色区域。\n\n## 第一套安全房型思路\n\n新手不需要一开始研究豪宅。第一套房型只要完成四件事：\n\n1. 核心区保护领地柜。\n2. 入口有双门缓冲。\n3. 储物不要集中在入口旁。\n4. 外观不要暴露真实核心方向。\n\n最小可执行结构是小核心 + 双门缓冲 + 分散箱子 + 睡袋。资源够了再加第二层门、假门和外部小箱。\n\n## 领地柜怎么放\n\n领地柜不要入口直视，不要贴外墙，不要和全部资源放在同一个能被一眼猜到的位置。更稳的做法是放核心转角后，并用多层门、墙体和储物分散拖高爆破成本。\n\n## 独狼防抄家\n\n独狼的优势是低存在感，不是正面对抗。建议：\n\n- 小房型，不抢显眼地形。\n- 多睡袋，多撤离点。\n- 资源分批运，不要满包进出同一路线。\n- 减少夜间开枪和门口停留。\n- 只升级核心，不急着做夸张外墙。\n\n## 小队防抄家\n\n小队容易越建越大，反而变成地图地标。建议至少分工：\n\n- 建筑位管理房型和维护。\n- 侦查位记录邻居和仇家。\n- 资源位补门、墙和领地柜消耗。\n- 战斗位不要把所有枪都带出门。\n\n## 被盯上前的预警信号\n\n- 门口经常有人绕圈。\n- 附近出现临时小屋或睡袋。\n- 你的资源路线反复被截。\n- 墙体或门被试探性攻击。\n- 邻居突然开始向你这边扩张。\n\n出现这些信号时，先转移关键资源、补维护、加门，不要等到离线前才处理。\n\n## 第一晚检查清单\n\n- 领地柜有维护。\n- 门锁已装。\n- 双门缓冲可用。\n- 睡袋可复活。\n- 核心墙体是石质或更高。\n- 关键资源分散。\n- 出入口没有直通核心。\n\n## 下一步\n\n如果你已经能守住第一晚，再继续看 2x1、2x2、石质核心、爆破成本和电力自动化防御。",
+    "contentEn": "## Quick answer\n\nAnti-raid play is not about building the biggest base. It is about making your base look low-value and expensive to breach. Your first base should be low-profile, compact, easy to maintain, and designed so the entrance does not lead directly to the cabinet.\n\n## Avoid these locations\n\nMain roads, high-tier POI entrances, central mining zones, open flat ground, and dense neighbor clusters create too much traffic and make you an easy target.\n\nBetter options include forest edges, rock gaps, hill backsides, low-traffic side routes, and gray zones between minor resource points.\n\n## First safe layout\n\nA practical first base needs a protected cabinet, airlock, split storage, and a misleading entrance. Start small, then add extra doors, fake routes, and external stashes when resources allow.\n\n## Cabinet placement\n\nDo not place the territory cabinet in direct entrance view, against an outer wall, or beside all loot. Put it behind a turn inside the core and increase breach cost with doors and split storage.\n\n## Solo plan\n\nStay small, use multiple bags, avoid visible terrain, move resources in smaller batches, and upgrade the core before expanding walls.\n\n## Squad plan\n\nAssign builder, scout, resource runner, and fighter roles. Large squads should avoid turning the base into a visible landmark too early.\n\n## First-night checklist\n\nCabinet upkeep, locks, airlock, sleeping bag, stone core, split resources, and no direct path from entrance to core.",
+    "tags": [
+      "防抄家",
+      "基地选址",
+      "领地柜",
+      "独狼",
+      "小队",
+      "房型"
+    ],
+    "faq": [
+      {
+        "question": "Where should beginners build?",
+        "questionZh": "新手基地建在哪里最稳？",
+        "answer": "Use low-traffic forest edges, rock gaps, hill backsides, or side routes instead of main roads and high-tier POI entrances.",
+        "answerZh": "优先森林边缘、岩缝、山坡背面和低交通支线，不要建在主路或高级据点门口。"
+      },
+      {
+        "question": "Where should the territory cabinet go?",
+        "questionZh": "领地柜应该放哪里？",
+        "answer": "Place it inside the core behind turns and doors, not visible from the entrance or against an outer wall.",
+        "answerZh": "放在核心区转角和多层门后，不要入口直视，也不要贴外墙。"
+      },
+      {
+        "question": "Should solo players build big walls early?",
+        "questionZh": "独狼前期要不要先围大墙？",
+        "answer": "Usually no. Upgrade the core first and keep a low profile before expanding.",
+        "answerZh": "通常不建议。先升级核心并保持低存在感，再考虑扩建。"
+      }
+    ],
+    "date": "2026-07-21"
   }
 ]

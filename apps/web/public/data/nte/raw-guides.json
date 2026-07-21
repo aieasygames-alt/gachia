@@ -1821,5 +1821,50 @@
       "shinku"
     ],
     "date": "2026-07-21"
+  },
+  {
+    "id": "999-nights-mode-guide",
+    "title": "异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级",
+    "titleEn": "NTE 999 Nights Mode Guide: v1.2 Event Route, Shinku/Iroi Resources, and Daily Priority",
+    "titleJa": "異環 999 Nights モードガイド：v1.2イベント、Shinku/Iroi資源、毎日優先度",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "categoryJa": "バージョン攻略",
+    "summary": "把 1.2「999 Nights」模式、活动奖励、兑换码、Shinku 当前池和 Iroi 预留资源拆成每日执行路线。",
+    "summaryEn": "A v1.2 999 Nights event route covering mode basics, rewards, codes, Shinku current banner, Iroi savings, and daily priorities.",
+    "summaryJa": "v1.2「999 Nights」のモード、報酬、コード、Shinku、Iroi貯蓄、毎日優先度を整理します。",
+    "content": "## 先看结论\n\n1.2「999 Nights」最重要的不是把所有内容一次清完，而是每天把活动奖励、兑换码、日常资源和抽卡目标串起来。如果你在 Shinku 和 Iroi 之间摇摆，999 Nights 的资源应该先服务“保底路线”，再服务强度追逐。\n\n## 每天上线先做什么\n\n| 优先级 | 动作 | 为什么 |\n| --- | --- | --- |\n| 1 | 检查活动任务 | 限时奖励错过就少一段资源 |\n| 2 | 领取兑换码和邮件 | 补 Shinku/Iroi 保底缺口 |\n| 3 | 清日常与体力 | 稳定换取养成材料 |\n| 4 | 推 999 Nights 进度 | 解锁阶段奖励和模式资源 |\n| 5 | 再决定抽卡 | 避免先抽后发现资源不够 |\n\n## 999 Nights 怎么理解\n\n999 Nights 更像版本活动与模式承接层。它会把剧情、挑战、奖励和角色热度集中到同一时期，因此用户搜索时经常同时出现：\n\n- 999 Nights 怎么玩。\n- Shinku 值不值得抽。\n- Iroi 要不要留。\n- 兑换码有没有新码。\n- Steam/download 新玩家现在能不能追。\n\n页面不要把这些问题混成一团，最好的结构是先讲模式，再讲资源，再讲抽卡决策。\n\n## Shinku 当前期怎么安排\n\n如果你想抽 Shinku，先确认三件事：\n\n1. 当前队伍是否真的缺她的定位。\n2. 活动和兑换码补完后是否够保底。\n3. 抽完后是否还保得住 Iroi 或后续角色。\n\n如果你只差小额资源，可以先补活动、日常和兑换码；如果离保底很远，不要把 999 Nights 的奖励想象成万能补票。\n\n## Iroi 预留路线\n\n想留 Iroi 的玩家，999 Nights 期间要控制冲动消费：\n\n- 当前池只做必要尝试。\n- 武器和外观消费先降级。\n- 每天记录新增资源。\n- 等角色实测和后续公告再决定是否转向。\n\n## 新玩家追赶路线\n\n刚下载入坑的玩家建议按这个顺序：\n\n1. /nte/guides/download-install-guide：先解决下载、设备和账号。\n2. /nte/redeem-codes：领有效兑换码。\n3. /nte/guides/beginner-guide：理解基础系统。\n4. /nte/version：看 1.2 版本路线。\n5. /nte/guides/shinku-iroi-pull-plan：决定 Shinku 还是 Iroi。\n\n## 常见误区\n\n### 误区 1：活动奖励够补所有抽卡缺口\n\n不一定。活动奖励适合补差额，不适合当成完整保底来源。\n\n### 误区 2：先抽再补资源\n\n容易出问题。先算当前资源、活动剩余、兑换码和日常收入，再抽更稳。\n\n### 误区 3：新玩家必须追当前池\n\n新玩家先把基础系统、兑换码和活动解锁做好，再根据第一队缺口判断。\n\n## 推荐路线\n\n资源紧：每天先做 999 Nights 和兑换码，只锁定一个抽卡目标。\n\n想马上提升：评估 Shinku 是否补队伍短板。\n\n想长期规划：为 Iroi 和后续角色预留。",
+    "contentEn": "## Quick answer\n\nThe key to v1.2 999 Nights is not clearing everything at once. Connect event rewards, codes, daily resources, and pull goals every day. If you are choosing between Shinku and Iroi, use 999 Nights resources for pity planning before chasing hype.\n\n## Daily priority\n\n| Priority | Action | Why |\n| --- | --- | --- |\n| 1 | Check event tasks | Limited rewards can disappear |\n| 2 | Claim codes and mail | Helps cover Shinku/Iroi pity gaps |\n| 3 | Spend dailies and stamina | Stable material income |\n| 4 | Push 999 Nights progress | Unlocks stage rewards and mode resources |\n| 5 | Decide pulls after counting | Avoid spending before resource math |\n\n## What is 999 Nights?\n\nTreat it as the v1.2 event and mode layer that connects story, challenges, rewards, and character hype. Search demand usually combines how to play, Shinku value, Iroi savings, codes, and new-player download questions.\n\n## Shinku route\n\nBefore pulling Shinku, confirm whether your team needs her role, whether event/code resources cover pity, and whether you can still save for Iroi or later targets.\n\n## Iroi savings route\n\nLimit current-banner impulse pulls, delay weapon or cosmetic spending, track daily resources, and wait for testing or official notes before switching targets.\n\n## New-player route\n\nDownload/install, claim codes, read beginner basics, open the v1.2 hub, then use the Shinku vs Iroi pull plan.\n\n## Common mistakes\n\nDo not assume event rewards replace a full guarantee, do not pull before counting resources, and do not force current-banner pulls on brand-new accounts.",
+    "tags": [
+      "999 Nights",
+      "v1.2",
+      "Shinku",
+      "Iroi",
+      "兑换码",
+      "活动",
+      "抽卡规划"
+    ],
+    "faq": [
+      {
+        "question": "What should I do first in 999 Nights?",
+        "questionZh": "999 Nights 每天先做什么？",
+        "answer": "Check limited event tasks, claim codes and mail, clear daily resources, then push mode progress before pulling.",
+        "answerZh": "先看限时任务，领兑换码和邮件，清日常资源，再推模式进度，最后决定是否抽卡。"
+      },
+      {
+        "question": "Can 999 Nights rewards cover a full pity?",
+        "questionZh": "999 Nights 奖励够一轮保底吗？",
+        "answer": "Treat them as gap-filling resources, not a guaranteed full pity source. Count all resources before committing.",
+        "answerZh": "建议当成补差资源，而不是完整保底来源；抽前要先算总资源。"
+      },
+      {
+        "question": "Should new players pull Shinku immediately?",
+        "questionZh": "新玩家要马上抽 Shinku 吗？",
+        "answer": "Not immediately. Finish download setup, claim codes, unlock basics, then decide whether Shinku fills your first-team gap.",
+        "answerZh": "不建议立刻抽。先完成下载、领码、解锁基础系统，再看 Shinku 是否补第一队缺口。"
+      }
+    ],
+    "date": "2026-07-21"
   }
 ]

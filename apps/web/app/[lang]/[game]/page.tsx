@@ -347,17 +347,17 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
       zh: [
         { title: '版本与角色', description: '优先承接 999 Nights、Shinku 和 Iroi 搜索。', links: [{ href: '/nte/version', label: '1.2 专题' }, { href: '/nte/guides/shinku-iroi-pull-plan', label: 'Shinku vs Iroi' }] },
         { title: '抽卡与福利', description: '把兑换码和抽卡策略接到可执行页面。', links: [{ href: '/nte/redeem-codes', label: '兑换码' }, { href: '/nte/guides/gacha-strategy', label: '抽卡策略' }] },
-        { title: '下载与入门', description: 'Steam/download 用户先确认官方入口和设备要求。', links: [{ href: '/nte/guides/download-install-guide', label: '下载安装' }, { href: '/nte/guides/beginner-guide', label: '新手入门' }] },
+        { title: '模式与入门', description: 'Steam/download 用户先确认官方入口，再看 999 Nights 每日路线。', links: [{ href: '/nte/guides/download-install-guide', label: '下载安装' }, { href: '/nte/guides/999-nights-mode-guide', label: '999 Nights' }] },
       ],
       en: [
         { title: 'Patch and characters', description: 'Catch 999 Nights, Shinku, and Iroi searches first.', links: [{ href: '/nte/version', label: 'v1.2 hub' }, { href: '/nte/guides/shinku-iroi-pull-plan', label: 'Shinku vs Iroi' }] },
         { title: 'Pulls and rewards', description: 'Route codes and gacha strategy into practical pages.', links: [{ href: '/nte/redeem-codes', label: 'Codes' }, { href: '/nte/guides/gacha-strategy', label: 'Gacha strategy' }] },
-        { title: 'Download and start', description: 'Steam/download users need official entry and device checks first.', links: [{ href: '/nte/guides/download-install-guide', label: 'Download/install' }, { href: '/nte/guides/beginner-guide', label: 'Beginner guide' }] },
+        { title: 'Mode and start', description: 'Steam/download users need official entry, then the 999 Nights daily route.', links: [{ href: '/nte/guides/download-install-guide', label: 'Download/install' }, { href: '/nte/guides/999-nights-mode-guide', label: '999 Nights' }] },
       ],
       ja: [
         { title: '版本とキャラ', description: '999 Nights、Shinku、Iroi検索を先に受け止めます。', links: [{ href: '/nte/version', label: 'v1.2特集' }, { href: '/nte/guides/shinku-iroi-pull-plan', label: 'Shinku vs Iroi' }] },
         { title: 'ガチャと報酬', description: 'コードとガチャ戦略を実用ページへつなげます。', links: [{ href: '/nte/redeem-codes', label: 'コード' }, { href: '/nte/guides/gacha-strategy', label: 'ガチャ戦略' }] },
-        { title: 'DLと入門', description: 'Steam/DLユーザーは公式入口と端末確認から。', links: [{ href: '/nte/guides/download-install-guide', label: 'DLとインストール' }, { href: '/nte/guides/beginner-guide', label: '初心者ガイド' }] },
+        { title: 'モードと入門', description: 'Steam/DLユーザーは公式入口を確認し、999 Nightsの毎日ルートへ。', links: [{ href: '/nte/guides/download-install-guide', label: 'DLとインストール' }, { href: '/nte/guides/999-nights-mode-guide', label: '999 Nights' }] },
       ],
     },
     faq: [
@@ -683,19 +683,19 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     cta: { zh: '看 S1 专题', en: 'Open S1 hub', ja: 'S1特集へ' },
     tracks: {
       zh: [
-        { title: '下载与模式', description: '先解决官网 PC、下载电脑版和选服问题。', links: [{ href: '/skjh/guides/download-crossplay-faq', label: '下载互通 FAQ' }, { href: '/skjh/guides/server-mode-choice', label: '服务器模式' }] },
-        { title: '0-2 小时开荒', description: '把工具、领地柜、低风险资源线变成可执行路线。', links: [{ href: '/skjh/guides/launch-30min-checklist', label: '30 分钟清单' }, { href: '/skjh/guides/day-one-route', label: '首日路线' }] },
-        { title: '基地与防抄家', description: '继续承接基地选址、领地柜维护和反抄家布局。', links: [{ href: '/skjh/guides/anti-raid-base-layouts', label: '防抄家' }, { href: '/skjh/guides/base-building', label: '基地建设' }] },
+        { title: '下载与模式', description: '先解决官网 PC、下载电脑版和选服问题。', links: [{ href: '/skjh/guides/official-pc-download-faq', label: '官网 PC 下载' }, { href: '/skjh/guides/server-mode-choice', label: '服务器模式' }] },
+        { title: '0-2 小时开荒', description: '把工具、领地柜、低风险资源线变成可执行路线。', links: [{ href: '/skjh/guides/first-2-hours-starter-route', label: '0-2 小时路线' }, { href: '/skjh/guides/launch-30min-checklist', label: '30 分钟清单' }] },
+        { title: '基地与防抄家', description: '继续承接基地选址、领地柜维护和反抄家布局。', links: [{ href: '/skjh/guides/base-location-anti-raid-plan', label: '选址防抄家' }, { href: '/skjh/guides/anti-raid-base-layouts', label: '房型防抄家' }] },
       ],
       en: [
-        { title: 'Download and modes', description: 'Solve official PC entry, PC download, and server choice first.', links: [{ href: '/skjh/guides/download-crossplay-faq', label: 'Download FAQ' }, { href: '/skjh/guides/server-mode-choice', label: 'Server modes' }] },
-        { title: 'First 0-2 hours', description: 'Turn tools, territory cabinet, and low-risk loot lines into a route.', links: [{ href: '/skjh/guides/launch-30min-checklist', label: '30-min checklist' }, { href: '/skjh/guides/day-one-route', label: 'Day-one route' }] },
-        { title: 'Base and anti-raid', description: 'Route base sites, upkeep, and anti-raid layouts deeper.', links: [{ href: '/skjh/guides/anti-raid-base-layouts', label: 'Anti-raid' }, { href: '/skjh/guides/base-building', label: 'Base building' }] },
+        { title: 'Download and modes', description: 'Solve official PC entry, PC download, and server choice first.', links: [{ href: '/skjh/guides/official-pc-download-faq', label: 'Official PC FAQ' }, { href: '/skjh/guides/server-mode-choice', label: 'Server modes' }] },
+        { title: 'First 0-2 hours', description: 'Turn tools, territory cabinet, and low-risk loot lines into a route.', links: [{ href: '/skjh/guides/first-2-hours-starter-route', label: '0-2 hour route' }, { href: '/skjh/guides/launch-30min-checklist', label: '30-min checklist' }] },
+        { title: 'Base and anti-raid', description: 'Route base sites, upkeep, and anti-raid layouts deeper.', links: [{ href: '/skjh/guides/base-location-anti-raid-plan', label: 'Base sites' }, { href: '/skjh/guides/anti-raid-base-layouts', label: 'Anti-raid layouts' }] },
       ],
       ja: [
-        { title: 'DLとモード', description: '公式PC入口、PC版DL、サーバー選択を先に解決します。', links: [{ href: '/skjh/guides/download-crossplay-faq', label: 'DL FAQ' }, { href: '/skjh/guides/server-mode-choice', label: 'サーバーモード' }] },
-        { title: '0-2時間開荒', description: '道具、領地柜、低リスク資源線を実行ルートにします。', links: [{ href: '/skjh/guides/launch-30min-checklist', label: '30分チェック' }, { href: '/skjh/guides/day-one-route', label: '初日ルート' }] },
-        { title: '拠点と防衛', description: '拠点選び、維持、防衛レイアウトへつなげます。', links: [{ href: '/skjh/guides/anti-raid-base-layouts', label: '防衛' }, { href: '/skjh/guides/base-building', label: '基地建設' }] },
+        { title: 'DLとモード', description: '公式PC入口、PC版DL、サーバー選択を先に解決します。', links: [{ href: '/skjh/guides/official-pc-download-faq', label: '公式PC FAQ' }, { href: '/skjh/guides/server-mode-choice', label: 'サーバーモード' }] },
+        { title: '0-2時間開荒', description: '道具、領地柜、低リスク資源線を実行ルートにします。', links: [{ href: '/skjh/guides/first-2-hours-starter-route', label: '0-2時間ルート' }, { href: '/skjh/guides/launch-30min-checklist', label: '30分チェック' }] },
+        { title: '拠点と防衛', description: '拠点選び、維持、防衛レイアウトへつなげます。', links: [{ href: '/skjh/guides/base-location-anti-raid-plan', label: '拠点選び' }, { href: '/skjh/guides/anti-raid-base-layouts', label: '防衛レイアウト' }] },
       ],
     },
     faq: [
@@ -765,13 +765,13 @@ const FEATURED_GUIDE_IDS: Record<string, string[]> = {
   genshin: ['snezhnaya-version-guide', 'lunar-reaction-guide', 'artifact-guide'],
   starrail: ['himeko-nova-fate-pull-plan', 'v4-4-preview-guide', 'fate-collab-guide'],
   wuwa: ['steam-xbox-game-pass-starter', 'v3-5-preview-guide', 'roya-frostlands-guide'],
-  nte: ['shinku-iroi-pull-plan', 'v1-2-999-nights-guide', 'download-install-guide'],
+  nte: ['999-nights-mode-guide', 'shinku-iroi-pull-plan', 'v1-2-999-nights-guide'],
   zzz: ['v3-1-anniversary-xbox-guide', 'steam-3-0-start-guide', 'meta-teams-v3-guide'],
   guihuan: ['beginner-guide', 'download-install-guide', 'spirit-build-guide'],
   ananta: ['beginner-guide', 'download-install-guide', 'combat-system-guide'],
   endfield: ['homecoming-update-guide', 'blueprint-aic-factory-guide', 'base-building-guide'],
   sea: ['steam-release-gacha-solo-faq', 'platform-download-guide', 'payment-model-guide'],
-  skjh: ['server-mode-choice', 'anti-raid-base-layouts', 'download-crossplay-faq'],
+  skjh: ['official-pc-download-faq', 'first-2-hours-starter-route', 'base-location-anti-raid-plan'],
 };
 
 function getGuideInfos(gameId: string, locale: SupportedLocale): GuideInfo[] {
@@ -1034,8 +1034,8 @@ export default async function GameHome({
                     <Link href={`/${gameId}/guides/launch-rewards-complete` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
                       {locale === 'zh' ? '预约福利' : locale === 'ja' ? '事前登録報酬' : 'Reservation Rewards'}
                     </Link>
-                    <Link href={`/${gameId}/guides/download-crossplay-faq` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
-                      {locale === 'zh' ? '下载互通 FAQ' : locale === 'ja' ? 'DLと互通FAQ' : 'Download & Cross-play FAQ'}
+                    <Link href={`/${gameId}/guides/official-pc-download-faq` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '官网 PC 下载' : locale === 'ja' ? '公式PC DL' : 'Official PC Download'}
                     </Link>
                   </>
                 )}

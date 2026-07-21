@@ -107,8 +107,8 @@ const INTENT_LINKS: Partial<Record<GameId, IntentLink[]>> = {
     { href: '/sea/guides/trade-market-guide', label: { zh: '贸易场', en: 'Trade market', ja: '交易場' }, description: { zh: '好金砖、交易和零氪首周路线。', en: 'Good Gold Bricks, trading, and F2P week-one route.', ja: '好金砖、交易、無課金初週ルート。' } },
   ],
   skjh: [
-    { href: '/skjh/guides/download-crossplay-faq', label: { zh: '官网 / 下载', en: 'Official / Download', ja: '公式 / DL' }, description: { zh: 'PC、移动端、多端互通和安装问题。', en: 'PC, mobile, cross-play, and install questions.', ja: 'PC、モバイル、多端連携、インストール。' } },
-    { href: '/skjh/guides/launch-30min-checklist', label: { zh: '新手 30 分钟', en: 'First 30 minutes', ja: '最初の30分' }, description: { zh: '开荒、服务器模式和基地第一步。', en: 'Launch route, server mode, and first base step.', ja: '開荒、サーバーモード、最初の拠点。' } },
+    { href: '/skjh/guides/official-pc-download-faq', label: { zh: '官网 / PC 下载', en: 'Official / PC Download', ja: '公式 / PC DL' }, description: { zh: 'PC、移动端、多端互通和安装问题。', en: 'PC, mobile, cross-play, and install questions.', ja: 'PC、モバイル、多端連携、インストール。' } },
+    { href: '/skjh/guides/first-2-hours-starter-route', label: { zh: '新手 0-2 小时', en: 'First 0-2 hours', ja: '最初の0-2時間' }, description: { zh: '开荒、服务器模式和基地第一步。', en: 'Launch route, server mode, and first base step.', ja: '開荒、サーバーモード、最初の拠点。' } },
     { href: '/skjh/guides/server-mode-choice', label: { zh: '服务器模式', en: 'Server modes', ja: 'サーバーモード' }, description: { zh: '安全区、标准、挑战和速战选择。', en: 'Safe-zone, standard, challenge, and quick-fight choice.', ja: '安全区、標準、挑戦、速戦の選択。' } },
   ],
 };
@@ -296,7 +296,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['shinku-iroi-pull-plan', 'v1-2-999-nights-guide', 'download-install-guide'],
+    guideIds: ['999-nights-mode-guide', 'shinku-iroi-pull-plan', 'v1-2-999-nights-guide'],
   },
   zzz: {
     title: { zh: '3.1「The Long Goodbye」/ 2 周年专题', en: 'v3.1 The Long Goodbye / 2nd Anniversary Hub', ja: 'v3.1 The Long Goodbye / 2周年特集' },
@@ -572,7 +572,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['server-mode-choice', 'anti-raid-base-layouts', 'download-crossplay-faq'],
+    guideIds: ['official-pc-download-faq', 'first-2-hours-starter-route', 'base-location-anti-raid-plan'],
   }
 };
 
@@ -1549,7 +1549,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
         title: { zh: '机制', en: 'Mechanics', ja: '機構' },
         description: { zh: '下载、互通和攻略专题继续承接。', en: 'Continue into download, cross-play, and guide topics.', ja: 'DL、互通、攻略へ進めます。' },
         links: [
-          { href: '/skjh/guides/download-crossplay-faq', label: { zh: '下载互通 FAQ', en: 'Download & Cross-play FAQ', ja: 'DLと互通FAQ' } },
+          { href: '/skjh/guides/official-pc-download-faq', label: { zh: '官网 PC 下载 FAQ', en: 'Official PC Download FAQ', ja: '公式PC DL FAQ' } },
           { href: '/skjh/guides', label: { zh: '攻略专题', en: 'Guides', ja: '攻略' } },
         ],
       },
@@ -1583,7 +1583,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
         title: { zh: '机制', en: 'Mechanics', ja: '機構' },
         description: { zh: '下载、互通和攻略专题继续承接。', en: 'Continue into download, cross-play, and guide topics.', ja: 'DL、互通、攻略へ進めます。' },
         links: [
-          { href: '/skjh/guides/download-crossplay-faq', label: { zh: '下载互通 FAQ', en: 'Download & Cross-play FAQ', ja: 'DLと互通FAQ' } },
+          { href: '/skjh/guides/official-pc-download-faq', label: { zh: '官网 PC 下载 FAQ', en: 'Official PC Download FAQ', ja: '公式PC DL FAQ' } },
           { href: '/skjh/guides', label: { zh: '攻略专题', en: 'Guides', ja: '攻略' } },
         ],
       },
@@ -1617,7 +1617,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
         title: { zh: '机制', en: 'Mechanics', ja: '機構' },
         description: { zh: '下载、互通和攻略专题继续承接。', en: 'Continue into download, cross-play, and guide topics.', ja: 'DL、互通、攻略へ進めます。' },
         links: [
-          { href: '/skjh/guides/download-crossplay-faq', label: { zh: '下载互通 FAQ', en: 'Download & Cross-play FAQ', ja: 'DLと互通FAQ' } },
+          { href: '/skjh/guides/official-pc-download-faq', label: { zh: '官网 PC 下载 FAQ', en: 'Official PC Download FAQ', ja: '公式PC DL FAQ' } },
           { href: '/skjh/guides', label: { zh: '攻略专题', en: 'Guides', ja: '攻略' } },
         ],
       },
@@ -1947,8 +1947,8 @@ function getVersionNextSteps(gameId: GameId): NextStepLink[] {
         },
       },
       {
-        href: '/skjh/guides/download-crossplay-faq',
-        title: { zh: '下载互通 FAQ', en: 'Download & Cross-play FAQ', ja: 'DLと互通FAQ' },
+        href: '/skjh/guides/official-pc-download-faq',
+        title: { zh: '官网 PC 下载 FAQ', en: 'Official PC Download FAQ', ja: '公式PC DL FAQ' },
         description: {
           zh: '下载、平台和互通问题放这里承接最合适。',
           en: 'This is the right place for download, platform, and cross-play questions.',
