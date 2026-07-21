@@ -345,17 +345,17 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     cta: { zh: '去 1.2 专题', en: 'Open v1.2 hub', ja: 'v1.2特集へ' },
     tracks: {
       zh: [
-        { title: '版本与角色', description: '优先承接 999 Nights、Shinku 和 Iroi 搜索。', links: [{ href: '/nte/version', label: '1.2 专题' }, { href: '/nte/guides/v1-2-999-nights-guide', label: '999 Nights' }] },
+        { title: '版本与角色', description: '优先承接 999 Nights、Shinku 和 Iroi 搜索。', links: [{ href: '/nte/version', label: '1.2 专题' }, { href: '/nte/guides/shinku-iroi-pull-plan', label: 'Shinku vs Iroi' }] },
         { title: '抽卡与福利', description: '把兑换码和抽卡策略接到可执行页面。', links: [{ href: '/nte/redeem-codes', label: '兑换码' }, { href: '/nte/guides/gacha-strategy', label: '抽卡策略' }] },
         { title: '下载与入门', description: 'Steam/download 用户先确认官方入口和设备要求。', links: [{ href: '/nte/guides/download-install-guide', label: '下载安装' }, { href: '/nte/guides/beginner-guide', label: '新手入门' }] },
       ],
       en: [
-        { title: 'Patch and characters', description: 'Catch 999 Nights, Shinku, and Iroi searches first.', links: [{ href: '/nte/version', label: 'v1.2 hub' }, { href: '/nte/guides/v1-2-999-nights-guide', label: '999 Nights' }] },
+        { title: 'Patch and characters', description: 'Catch 999 Nights, Shinku, and Iroi searches first.', links: [{ href: '/nte/version', label: 'v1.2 hub' }, { href: '/nte/guides/shinku-iroi-pull-plan', label: 'Shinku vs Iroi' }] },
         { title: 'Pulls and rewards', description: 'Route codes and gacha strategy into practical pages.', links: [{ href: '/nte/redeem-codes', label: 'Codes' }, { href: '/nte/guides/gacha-strategy', label: 'Gacha strategy' }] },
         { title: 'Download and start', description: 'Steam/download users need official entry and device checks first.', links: [{ href: '/nte/guides/download-install-guide', label: 'Download/install' }, { href: '/nte/guides/beginner-guide', label: 'Beginner guide' }] },
       ],
       ja: [
-        { title: '版本とキャラ', description: '999 Nights、Shinku、Iroi検索を先に受け止めます。', links: [{ href: '/nte/version', label: 'v1.2特集' }, { href: '/nte/guides/v1-2-999-nights-guide', label: '999 Nights' }] },
+        { title: '版本とキャラ', description: '999 Nights、Shinku、Iroi検索を先に受け止めます。', links: [{ href: '/nte/version', label: 'v1.2特集' }, { href: '/nte/guides/shinku-iroi-pull-plan', label: 'Shinku vs Iroi' }] },
         { title: 'ガチャと報酬', description: 'コードとガチャ戦略を実用ページへつなげます。', links: [{ href: '/nte/redeem-codes', label: 'コード' }, { href: '/nte/guides/gacha-strategy', label: 'ガチャ戦略' }] },
         { title: 'DLと入門', description: 'Steam/DLユーザーは公式入口と端末確認から。', links: [{ href: '/nte/guides/download-install-guide', label: 'DLとインストール' }, { href: '/nte/guides/beginner-guide', label: '初心者ガイド' }] },
       ],
@@ -385,7 +385,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           description: '先把 7 月 9 日公测和首月节奏接住。',
           links: [
             { href: '/sea/guides/open-beta-version-center', label: '公测版本中心' },
-            { href: '/sea/guides/launch-day-guide', label: '开服攻略' },
+            { href: '/sea/guides/steam-release-gacha-solo-faq', label: 'Steam / FAQ' },
           ],
         },
         {
@@ -412,7 +412,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           description: 'Catch the July 9 open beta timing and first-month momentum.',
           links: [
             { href: '/sea/guides/open-beta-version-center', label: 'Open beta center' },
-            { href: '/sea/guides/launch-day-guide', label: 'Launch guide' },
+            { href: '/sea/guides/steam-release-gacha-solo-faq', label: 'Steam / FAQ' },
           ],
         },
         {
@@ -439,7 +439,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           description: '7月9日CBTと初月の流れを受け止めます。',
           links: [
             { href: '/sea/guides/open-beta-version-center', label: 'CBT特集' },
-            { href: '/sea/guides/launch-day-guide', label: '開服攻略' },
+            { href: '/sea/guides/steam-release-gacha-solo-faq', label: 'Steam / FAQ' },
           ],
         },
         {
@@ -560,7 +560,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           description: '把开荒路线、版本回流和基础玩法整合成可直接点击的路径。',
           links: [
             { href: '/wuwa/characters', label: '角色图鉴' },
-            { href: '/wuwa/guides/v3-4-version-guide', label: 'v3.4 版本' },
+            { href: '/wuwa/guides/steam-xbox-game-pass-starter', label: 'Steam/Xbox 入坑' },
           ],
         },
       ],
@@ -586,7 +586,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           description: 'Merge beginner routes, returner timing, and basics into a clickable path.',
           links: [
             { href: '/wuwa/characters', label: 'Character wiki' },
-            { href: '/wuwa/guides/v3-4-version-guide', label: 'v3.4 version' },
+            { href: '/wuwa/guides/steam-xbox-game-pass-starter', label: 'Steam/Xbox starter' },
           ],
         },
       ],
@@ -612,7 +612,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           description: '初心者ルートと復帰導線をひとつの流れにまとめます。',
           links: [
             { href: '/wuwa/characters', label: 'キャラ図鑑' },
-            { href: '/wuwa/guides/v3-4-version-guide', label: 'v3.4 版' },
+            { href: '/wuwa/guides/steam-xbox-game-pass-starter', label: 'Steam/Xbox入門' },
           ],
         },
       ],
@@ -764,13 +764,13 @@ interface GuideInfo { id: string; title: string; summary: string }
 const FEATURED_GUIDE_IDS: Record<string, string[]> = {
   genshin: ['snezhnaya-version-guide', 'lunar-reaction-guide', 'artifact-guide'],
   starrail: ['himeko-nova-fate-pull-plan', 'v4-4-preview-guide', 'fate-collab-guide'],
-  wuwa: ['v3-5-preview-guide', 'v3-4-version-guide', 'roya-frostlands-guide'],
-  nte: ['v1-2-999-nights-guide', 'gacha-strategy', 'download-install-guide'],
+  wuwa: ['steam-xbox-game-pass-starter', 'v3-5-preview-guide', 'roya-frostlands-guide'],
+  nte: ['shinku-iroi-pull-plan', 'v1-2-999-nights-guide', 'download-install-guide'],
   zzz: ['v3-1-anniversary-xbox-guide', 'steam-3-0-start-guide', 'meta-teams-v3-guide'],
   guihuan: ['beginner-guide', 'download-install-guide', 'spirit-build-guide'],
   ananta: ['beginner-guide', 'download-install-guide', 'combat-system-guide'],
   endfield: ['homecoming-update-guide', 'blueprint-aic-factory-guide', 'base-building-guide'],
-  sea: ['launch-day-guide', 'open-beta-version-center', 'download-install-guide'],
+  sea: ['steam-release-gacha-solo-faq', 'platform-download-guide', 'payment-model-guide'],
   skjh: ['server-mode-choice', 'anti-raid-base-layouts', 'download-crossplay-faq'],
 };
 

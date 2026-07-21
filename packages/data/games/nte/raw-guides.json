@@ -1775,5 +1775,51 @@
         "answerZh": "你的建筑和升级是永久的，不会降级。不登录唯一的损失是收益达到存储上限后停止累积。每天至少登录一次收取收益即可。"
       }
     ]
+  },
+  {
+    "id": "shinku-iroi-pull-plan",
+    "title": "异环 Shinku vs Iroi 抽取规划：1.2「999 Nights」资源、兑换码与保底路线",
+    "titleEn": "NTE Shinku vs Iroi Pull Plan: v1.2 999 Nights Resources, Codes, and Pity Route",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "summary": "把 1.2「999 Nights」里的 Shinku 当前池、Iroi 预热、兑换码、Steam/download 入坑与保底资源放在同一张决策表里。",
+    "summaryEn": "A v1.2 999 Nights decision guide comparing Shinku and Iroi with codes, Steam/download onboarding, and pity-resource planning.",
+    "content": "## 先看结论\n\n异环 1.2「999 Nights」期间，如果你在 Shinku 和 Iroi 之间犹豫，先不要只看角色热度。更稳的做法是先算保底资源，再看你当前队伍缺的是即时战力、下期预留，还是单纯收藏。\n\n### 30 秒决策表\n\n| 账号情况 | 更适合先看 | 原因 |\n|---|---|---|\n| 当前主队缺输出 | Shinku | 当前池能更快转化为版本体验 |\n| 已有可用主 C | Iroi 预留 | 资源可以给下一期留空间 |\n| 只够一次保底 | 二选一 | 不建议同时追 Shinku、Iroi 和专武 |\n| 刚下载入坑 | 下载 + 兑换码 + 新手路线 | 先把免费资源和基础系统吃满 |\n| 收藏党 | 自己喜欢的角色 | 不要被短期强度节奏带跑 |\n\n## Shinku 当前池怎么判断\n\nShinku 的优势是“现在就能服务 1.2 内容”。如果你想马上体验 999 Nights、活动战斗和当前版本队伍，Shinku 更容易形成即时反馈。\n\n抽之前先问三个问题：\n\n1. 你是否缺 Shinku 对应定位的角色？\n2. 你是否有能搭配她的弧盘、磁盘和队友？\n3. 抽 Shinku 后，是否还保得住 Iroi 或后续角色的保底？\n\n如果第 3 个问题答案是否定，建议先看资源缺口，不要被“当前池”三个字推着走。\n\n## Iroi 预热怎么规划\n\nIroi 更适合提前预留资源。很多玩家在 Shinku 当前池花掉保底后，等 Iroi 预热升温才发现活动和兑换码补不回来。\n\n比较稳的预留线是：\n\n- 先记录当前保底次数。\n- 再收完 1.2 活动、兑换码和日常资源。\n- 如果离下一轮保底还差很多，就不要同时追角色和武器。\n- 如果你更喜欢 Iroi，Shinku 可以先观望实测和复刻节奏。\n\n## 999 Nights 资源检查\n\n抽卡前先把这些入口补完：\n\n- /nte/version：确认 1.2「999 Nights」版本路线。\n- /nte/redeem-codes：检查有效兑换码和过期状态。\n- /nte/guides/download-install-guide：Steam/download、官网和设备问题先解决。\n- /nte/guides/gacha-strategy：保底、概率和资源消耗再复核。\n\n## 常见误区\n\n### 误区 1：当前池一定比下期更值得\n\n不一定。当前池的优势是马上能玩，但如果你的队伍已经完整，Iroi 或后续角色可能更适合长期规划。\n\n### 误区 2：兑换码可以补所有缺口\n\n兑换码适合补差额，但不应该被当成一轮保底的主要来源。先算硬资源，再决定是否追。\n\n### 误区 3：新玩家先抽再说\n\n新玩家应该先完成下载、入门、兑换码和基础活动，再决定是否投入当前池。否则容易把资源花在不适合自己队伍的位置。\n\n## 推荐路线\n\n资源紧张：Shinku 和 Iroi 只选一个。\n\n想马上体验 1.2：优先评估 Shinku。\n\n想长期留资源：提前为 Iroi 预留。\n\n刚入坑：先下载、领兑换码、看新手和抽卡机制。",
+    "contentEn": "## Quick answer\n\nDuring NTE v1.2 \"999 Nights,\" do not decide between Shinku and Iroi by hype alone. Calculate your pity resources first, then decide whether your account needs immediate power, next-banner savings, or collection value.\n\n### 30-second decision table\n\n| Account state | Check first | Why |\n|---|---|---|\n| Missing current DPS / carry slot | Shinku | Current-banner value converts into patch progress faster |\n| Already has a stable main team | Iroi savings | You can reserve resources for the next focus |\n| Only one guarantee available | Pick one target | Do not chase Shinku, Iroi, and weapons together |\n| Brand-new download | Download + codes + starter route | Claim free resources and unlock systems first |\n| Collector | Favorite character | Do not let short-term meta pressure decide for you |\n\n## How to judge Shinku\n\nShinku is the \"play now\" option for v1.2. If you want to experience 999 Nights, current events, and current-team upgrades immediately, Shinku creates faster feedback.\n\nAsk three questions before pulling:\n\n1. Are you missing the role Shinku fills?\n2. Do you already have disks, weapons, and teammates that support Shinku?\n3. Can you still keep enough pity for Iroi or the next target after pulling?\n\nIf the third answer is no, check your resource gap before committing.\n\n## How to prepare for Iroi\n\nIroi is better handled as a savings target. Many players spend pity on the current banner, then realize later that v1.2 events and codes cannot rebuild a full guarantee quickly enough.\n\nA safer route:\n\n- Record current pity.\n- Claim v1.2 events, codes, and daily resources.\n- If you are far from guarantee, avoid chasing both character and weapon.\n- If Iroi is your favorite, wait for Shinku testing and rerun context.\n\n## 999 Nights resource checklist\n\nBefore pulling, open:\n\n- /nte/version for the v1.2 999 Nights route.\n- /nte/redeem-codes for active and expired codes.\n- /nte/guides/download-install-guide for Steam/download, official site, and device setup.\n- /nte/guides/gacha-strategy for pity, rates, and resource cost.\n\n## Common mistakes\n\n### Mistake 1: Current banner is always better\n\nNot always. The current banner is playable now, but if your team is complete, Iroi or later targets may fit long-term planning better.\n\n### Mistake 2: Codes cover every gap\n\nCodes help with small gaps, but should not be treated as the main source for a full guarantee.\n\n### Mistake 3: New players should pull first\n\nNew players should finish download, onboarding, codes, and early events before spending heavily. Otherwise resources may go to a role their account does not need.\n\n## Recommended route\n\nLow resources: choose Shinku or Iroi, not both.\n\nWant v1.2 progress now: evaluate Shinku first.\n\nPlanning long-term: reserve for Iroi.\n\nNew player: download, claim codes, read beginner and gacha basics first.",
+    "tags": [
+      "Shinku",
+      "Iroi",
+      "999 Nights",
+      "v1.2",
+      "redeem codes",
+      "Steam",
+      "download",
+      "gacha strategy"
+    ],
+    "faq": [
+      {
+        "question": "Should I pull Shinku or save for Iroi?",
+        "questionZh": "Shinku 和 Iroi 应该抽谁？",
+        "answer": "Pull Shinku if you need immediate v1.2 power and have enough resources left. Save for Iroi if your team is already stable or you only have one guarantee.",
+        "answerZh": "如果你缺当前版本战力且资源够，可以优先 Shinku；如果队伍已稳定或只够一轮保底，优先给 Iroi 预留更稳。"
+      },
+      {
+        "question": "Should new players pull immediately in v1.2?",
+        "questionZh": "新玩家 1.2 要不要马上抽？",
+        "answer": "New players should claim codes, finish onboarding, and understand pity first. Pull after you know which role your first team actually needs.",
+        "answerZh": "新玩家先领兑换码、完成入门并理解保底，再根据第一队缺口决定是否抽当前池。"
+      },
+      {
+        "question": "Can redeem codes cover my pity gap?",
+        "questionZh": "兑换码能补保底缺口吗？",
+        "answer": "Codes help with small gaps, but they rarely replace event, daily, and exploration income. Calculate all resources before committing.",
+        "answerZh": "兑换码适合补小缺口，但通常不能替代活动、日常和探索资源；抽前要先算总资源。"
+      }
+    ],
+    "relatedCharacters": [
+      "shinku"
+    ],
+    "date": "2026-07-21"
   }
 ]

@@ -1926,5 +1926,48 @@
         "answer": "It is best for players who are already past the first-day basics and are now hitting real week-one problems, as well as new visitors who need to decide the next right page."
       }
     ]
+  },
+  {
+    "id": "steam-release-gacha-solo-faq",
+    "title": "Sea of Remnants Steam / Release Date / Gacha / Solo FAQ：遗忘之海是什么游戏、能不能单人玩",
+    "titleEn": "Sea of Remnants Steam / Release Date / Gacha / Solo FAQ: What It Is and Can You Play Alone?",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "面向英文搜索增强的 Steam、release date、gameplay、gacha、solo、MMO、PS5/Xbox 查询，整理遗忘之海平台、玩法类型和付费模式常见问题。",
+    "summaryEn": "An English-first FAQ for Sea of Remnants searches around Steam, release date, gameplay, gacha, solo play, MMO, PS5/Xbox, and monetization.",
+    "content": "## 先看结论\n\n如果你在搜 Sea of Remnants Steam、release date、gameplay、gacha 或 solo，最重要的是先把它的类型说清楚：遗忘之海不是传统 MMORPG，也不是单纯抽卡手游。它更像海洋冒险 RPG，混合角色养成、探索、回合制战斗、海战和长期运营。\n\n### 快速 FAQ\n\n| 问题 | 简短答案 |\n|---|---|\n| Steam 上能玩吗？ | 以 Steam 商店页和官方启动器状态为准。 |\n| release date 是什么时候？ | 不同平台节奏可能不同，最终以官网和商店页为准。 |\n| 是 gacha 吗？ | 有招募/角色获取系统，但不应只按传统抽卡手游理解。 |\n| 能 solo 吗？ | 单人体验是核心查询点之一，具体联机限制以官方版本为准。 |\n| 是 MMO 吗？ | 不建议直接写成 MMORPG，更适合解释为海洋冒险 RPG。 |\n| PS5 / Xbox 有吗？ | 主机平台节点要以官方公告和商店页为准。 |\n\n## Steam 和官方入口怎么判断\n\nSteam 用户最关心的是能不能下载、是否锁区、是否和官方账号互通、PC 配置是否够。内容页不要只放“去 Steam 搜索”，而是要把入口差异讲清楚：\n\n- Steam：适合 PC 玩家和英文搜索用户。\n- 官方启动器：适合跟进官网公告、活动和账号说明。\n- 移动端：适合轻量玩家，但配置、容量和互通要单独确认。\n- PS5 / Xbox：不要承诺日期，等官方平台页确认。\n\n## Gameplay：它到底是什么类型\n\n遗忘之海的关键词容易把用户带偏。有人搜 open world，有人搜 gacha，有人搜 MMO，也有人搜 solo。更稳的解释方式是：\n\n1. **海洋冒险 RPG**：海域探索和船员养成是核心。\n2. **回合制 / 策略战斗**：不是原神或鸣潮那种纯动作节奏。\n3. **长期运营内容**：有活动、角色、资源和版本更新。\n4. **单人与联机都要分开说**：不要把“能联机”直接写成 MMORPG。\n\n## Gacha / 付费模式怎么解释\n\n用户搜 gacha 时，不一定是在问“有没有抽卡”，更多是在问：\n\n- 角色怎么获得。\n- 是否必须氪金。\n- 资源应该给角色还是外观。\n- 首月福利是否足够轻度玩家体验。\n\n如果要继续深入，可以看 /sea/guides/payment-model-guide、/sea/guides/character-vs-outfit-pull-guide 和 /sea/guides/trade-market-guide。\n\n## Solo / MMO 怎么回答\n\n对搜索页来说，最好的回答不是一句“是/不是”，而是按体验拆开：\n\n| 体验 | 应该怎么判断 |\n|---|---|\n| 单人剧情与探索 | 看主线、海域探索和角色养成是否能独立推进 |\n| 轻量社交 | 看好友、协作、交易或异步内容是否存在 |\n| 大型 MMO | 不要默认存在大规模公会和多人副本结构 |\n| 长线运营 | 看活动、版本和角色更新节奏 |\n\n## 站内下一步\n\n- 官方时间线：/sea/guides/official-2026-test-timeline-guide\n- 平台下载：/sea/guides/platform-download-guide\n- 付费模式：/sea/guides/payment-model-guide\n- 是什么游戏：/sea/guides/what-is-forgotten-sea\n- 首月资源：/sea/guides/character-vs-outfit-pull-guide",
+    "contentEn": "## Quick answer\n\nIf you are searching for Sea of Remnants Steam, release date, gameplay, gacha, or solo play, start with the category: Sea of Remnants should not be treated as a traditional MMORPG or a simple gacha mobile game. It is better understood as an ocean adventure RPG with character progression, exploration, turn-based combat, naval systems, and live-service updates.\n\n### Fast FAQ\n\n| Question | Short answer |\n|---|---|\n| Is it on Steam? | Use the Steam store page and official launcher notices as the source of truth. |\n| What is the release date? | Platform timing can differ. Trust the official site and store pages first. |\n| Is it gacha? | It has recruitment / character acquisition, but should not be reduced to a standard gacha game. |\n| Can you play solo? | Solo experience is a major user question; confirm exact online limits from official version notes. |\n| Is it an MMO? | Do not describe it as a traditional MMORPG by default. Explain it as an ocean adventure RPG first. |\n| PS5 / Xbox? | Console timing should be based on official platform announcements. |\n\n## Steam and official entry\n\nSteam users care about download access, region status, account linking, and PC specs. A useful page should not simply say \"search on Steam.\" It should explain the entry points:\n\n- Steam: best for PC players and English search traffic.\n- Official launcher: best for official news, events, and account notes.\n- Mobile: useful for light sessions, but specs, storage, and cross-save need confirmation.\n- PS5 / Xbox: do not promise dates before official store confirmation.\n\n## Gameplay: what kind of game is it?\n\nSea of Remnants attracts mixed keywords: open world, gacha, MMO, solo, gameplay, and review. The safer explanation is:\n\n1. **Ocean adventure RPG**: sea exploration and crew progression are central.\n2. **Turn-based / strategy combat**: it is not a pure action RPG like Genshin or WuWa.\n3. **Live-service structure**: events, characters, resources, and version updates matter.\n4. **Solo and online need separate answers**: online features do not automatically make it an MMORPG.\n\n## Gacha and monetization\n\nWhen users search gacha, they usually want to know:\n\n- How characters are obtained.\n- Whether spending is required.\n- Whether resources should go to characters or outfits.\n- Whether first-month rewards are enough for casual players.\n\nFor deeper planning, use /sea/guides/payment-model-guide, /sea/guides/character-vs-outfit-pull-guide, and /sea/guides/trade-market-guide.\n\n## Solo vs MMO answer\n\nThe best answer is not just yes or no. Split the experience:\n\n| Experience | How to judge it |\n|---|---|\n| Solo story and exploration | Check whether main story, sea exploration, and crew progression work independently |\n| Light social systems | Check friends, co-op, trading, or asynchronous features |\n| Large-scale MMO | Do not assume guild raids or massive multiplayer dungeon structure |\n| Live service | Look at events, versions, and character-update cadence |\n\n## Next steps\n\n- Official timeline: /sea/guides/official-2026-test-timeline-guide\n- Platform download: /sea/guides/platform-download-guide\n- Monetization: /sea/guides/payment-model-guide\n- What kind of game: /sea/guides/what-is-forgotten-sea\n- Month-one resources: /sea/guides/character-vs-outfit-pull-guide",
+    "tags": [
+      "Steam",
+      "release date",
+      "gameplay",
+      "gacha",
+      "solo",
+      "MMO",
+      "PS5",
+      "Xbox",
+      "Sea of Remnants"
+    ],
+    "faq": [
+      {
+        "question": "Is Sea of Remnants on Steam?",
+        "questionZh": "遗忘之海上 Steam 吗？",
+        "answer": "Use the Steam store page and official launcher notices as the source of truth. Availability, region status, and platform timing can change by official announcement.",
+        "answerZh": "以 Steam 商店页和官方启动器公告为准；可用地区、平台节奏和下载状态都可能随官方公告变化。"
+      },
+      {
+        "question": "Is Sea of Remnants a gacha game?",
+        "questionZh": "遗忘之海是抽卡游戏吗？",
+        "answer": "It has character acquisition and live-service resource systems, but users should also understand its ocean adventure, turn-based combat, and trading/resource layers.",
+        "answerZh": "它有角色获取和长线资源系统，但不能只按传统抽卡手游理解，还要看海洋探索、回合制战斗和交易/资源层。"
+      },
+      {
+        "question": "Can Sea of Remnants be played solo?",
+        "questionZh": "遗忘之海可以单人玩吗？",
+        "answer": "Solo play is one of the main user questions. Check official version notes for exact online requirements, but do not assume it is a traditional MMORPG.",
+        "answerZh": "单人体验是核心问题之一，具体在线要求以官方版本说明为准；不要默认把它写成传统 MMORPG。"
+      }
+    ]
   }
 ]

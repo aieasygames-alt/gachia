@@ -250,7 +250,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['v3-4-version-guide', 'v3-5-preview-guide', 'roya-frostlands-guide'],
+    guideIds: ['steam-xbox-game-pass-starter', 'v3-5-preview-guide', 'roya-frostlands-guide'],
   },
   nte: {
     title: { zh: '1.2「999 Nights」Shinku / Iroi 专题', en: 'v1.2 999 Nights Shinku / Iroi Hub', ja: 'v1.2 999 Nights Shinku / Iroi 特集' },
@@ -296,7 +296,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['v1-2-999-nights-guide', 'gacha-strategy', 'download-install-guide'],
+    guideIds: ['shinku-iroi-pull-plan', 'v1-2-999-nights-guide', 'download-install-guide'],
   },
   zzz: {
     title: { zh: '3.1「The Long Goodbye」/ 2 周年专题', en: 'v3.1 The Long Goodbye / 2nd Anniversary Hub', ja: 'v3.1 The Long Goodbye / 2周年特集' },
@@ -526,7 +526,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['official-2026-test-timeline-guide', 'open-beta-version-center', 'launch-day-guide', 'trade-market-guide'],
+    guideIds: ['steam-release-gacha-solo-faq', 'official-2026-test-timeline-guide', 'platform-download-guide', 'payment-model-guide'],
   },
   skjh: {
     title: { zh: 'S1 登岛 / 服务器模式 / 防抄家专题', en: 'S1 Island Start / Server Modes / Anti-Raid Hub', ja: 'S1上陸 / サーバーモード / 防衛特集' },

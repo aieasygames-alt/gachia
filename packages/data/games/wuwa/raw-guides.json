@@ -931,5 +931,48 @@
         "answerZh": "先处理账号登录、画质和手柄设置，再解锁核心系统，最后决定是否把资源投入 3.5 卡池。"
       }
     ]
+  },
+  {
+    "id": "steam-xbox-game-pass-starter",
+    "title": "鸣潮 Steam / Xbox / Game Pass 入坑 FAQ：3.5 新玩家账号、手柄、活动和抽卡路线",
+    "titleEn": "Wuthering Waves Steam / Xbox / Game Pass Starter FAQ: Accounts, Controller, Events, and Pull Route for v3.5",
+    "category": "beginner",
+    "categoryZh": "新手入门",
+    "categoryEn": "Beginner",
+    "summary": "面向 3.5 后 Steam、Xbox、Game Pass 新玩家，整理账号登录、手柄设置、活动追赶、Yangyang: Xuanling/Suisui 抽卡和声骸入门路线。",
+    "summaryEn": "A v3.5 starter FAQ for Steam, Xbox, and Game Pass newcomers covering account login, controller setup, event catch-up, Yangyang: Xuanling/Suisui pulls, and Echo basics.",
+    "content": "## 先看结论\n\n鸣潮 3.5 后，Steam、Xbox 和 Game Pass 搜索的核心不是复杂配装，而是“我能不能顺利开始”。新平台玩家应该先解决账号、输入设备、画质和活动追赶，再考虑 Yangyang: Xuanling、Suisui 或武器池。\n\n### 新平台玩家 5 步路线\n\n1. **确认账号**：先决定用新号还是已有 Kuro 账号。\n2. **确认平台**：Steam、Xbox、Game Pass / Cloud 的入口和限制不要混淆。\n3. **调好设置**：手柄、画质、帧率和键位先稳定。\n4. **追活动**：看 3.5 活动是否还来得及拿关键奖励。\n5. **再抽卡**：先理解新手池、版本池和声骸养成，再投 Astrite。\n\n## Steam / Xbox / Game Pass 怎么选\n\n| 平台 | 适合谁 | 先检查 |\n|---|---|---|\n| Steam | PC 玩家、习惯 Steam 库的用户 | 账号登录、安装路径、手柄识别 |\n| Xbox | 主机玩家 | 账号绑定、画质模式、手柄键位 |\n| Game Pass / Cloud | 想轻量体验或设备不足的玩家 | 地区、订阅、网络延迟 |\n| 官方启动器 | 老玩家和官网活动用户 | 原账号、补丁和活动入口 |\n\n## 3.5 新玩家先抽谁\n\nYangyang: Xuanling 和 Suisui 是 3.5 的强搜索词，但新玩家不要只按热度抽。先看：\n\n- 你是否已经有可用主 C。\n- 角色是否需要较高声骸/武器投入。\n- 3.5 活动给的资源能否支撑一轮保底。\n- 你是否更需要通用辅助、开荒输出，还是收藏目标。\n\n如果你刚入坑，先完成主线和基础系统，等能稳定刷声骸后再做长期抽卡判断。\n\n## 手柄和画质设置\n\n新平台用户的流失常常不是强度问题，而是操作和性能问题。建议先处理：\n\n1. 手柄是否被识别。\n2. 镜头灵敏度是否适合闪避和弹反。\n3. 画质是否稳定 30/60 fps。\n4. 云游戏是否有明显延迟。\n5. 大世界探索时是否掉帧。\n\n## 声骸入门不要跳过\n\n鸣潮的养成核心离不开声骸。新玩家不用一开始追毕业词条，但要先理解：\n\n- COST 结构。\n- 主词条和副词条。\n- Sonata 套装效果。\n- 哪些声骸适合当前主力。\n- 什么时候开始高投入刷取。\n\n## 站内下一步\n\n- 3.5 版本专题：/wuwa/version\n- 3.5 角色与平台：/wuwa/guides/v3-5-preview-guide\n- 声骸与配装：/wuwa/build\n- 角色图鉴：/wuwa/characters\n- 兑换码：/wuwa/redeem-codes",
+    "contentEn": "## Quick answer\n\nAfter Wuthering Waves v3.5, Steam, Xbox, and Game Pass searches are mostly about starting smoothly, not advanced builds. New-platform players should solve account login, input, graphics, and event catch-up before spending Astrite on Yangyang: Xuanling, Suisui, or weapons.\n\n### Five-step route for new-platform players\n\n1. **Confirm account**: Decide whether you are using a new account or an existing Kuro account.\n2. **Confirm platform**: Steam, Xbox, Game Pass, and cloud access are not the same entry path.\n3. **Stabilize settings**: Controller, graphics, FPS, and keybinds come first.\n4. **Catch up on events**: Check whether v3.5 event rewards are still reachable.\n5. **Pull later**: Understand beginner banners, limited banners, and Echo progression before spending Astrite.\n\n## Steam / Xbox / Game Pass choice\n\n| Platform | Best for | Check first |\n|---|---|---|\n| Steam | PC players who prefer Steam library access | Account login, install path, controller detection |\n| Xbox | Console players | Account binding, graphics mode, controller layout |\n| Game Pass / Cloud | Players who want light access or weaker-device play | Region, subscription, latency |\n| Official launcher | Existing players and official-event users | Original account, patching, event entry |\n\n## Who should v3.5 newcomers pull?\n\nYangyang: Xuanling and Suisui are strong v3.5 search terms, but new players should not pull by hype alone. Check:\n\n- Do you already have a usable main DPS?\n- Does the character need heavy Echo or weapon investment?\n- Can v3.5 event rewards support a full pity route?\n- Do you need a general support, beginner DPS, or collection target more?\n\nIf you just started, finish story and core systems first. Make long-term pull decisions after you can farm Echoes consistently.\n\n## Controller and graphics setup\n\nNew-platform churn often comes from controls and performance, not meta strength. Set up:\n\n1. Controller recognition.\n2. Camera sensitivity for dodges and parries.\n3. Stable 30/60 fps target.\n4. Cloud latency if using streaming.\n5. Open-world frame stability.\n\n## Do not skip Echo basics\n\nWuthering Waves progression depends on Echoes. New players do not need perfect substats immediately, but should understand:\n\n- COST structure.\n- Main and substats.\n- Sonata set effects.\n- Which Echoes support the current carry.\n- When high-investment farming becomes worth it.\n\n## Next steps\n\n- v3.5 hub: /wuwa/version\n- v3.5 characters and platforms: /wuwa/guides/v3-5-preview-guide\n- Echoes and builds: /wuwa/build\n- Characters: /wuwa/characters\n- Codes: /wuwa/redeem-codes",
+    "tags": [
+      "Steam",
+      "Xbox",
+      "Game Pass",
+      "v3.5",
+      "Yangyang Xuanling",
+      "Suisui",
+      "controller",
+      "Echoes",
+      "codes"
+    ],
+    "faq": [
+      {
+        "question": "Should new Steam or Xbox players pull immediately?",
+        "questionZh": "Steam 或 Xbox 新玩家要马上抽卡吗？",
+        "answer": "Usually no. Confirm account login, finish onboarding, claim event rewards, and understand Echo progression before spending heavily.",
+        "answerZh": "通常不建议马上重投入。先确认账号、完成入门、领取活动奖励，并理解声骸养成后再抽。"
+      },
+      {
+        "question": "Is Game Pass the same as the PC launcher?",
+        "questionZh": "Game Pass 和 PC 启动器是同一个入口吗？",
+        "answer": "No. Treat Steam, Xbox, Game Pass/cloud, and the official launcher as separate entry paths with different setup checks.",
+        "answerZh": "不是。Steam、Xbox、Game Pass/云游戏和官方启动器要分开看，各自有不同设置检查。"
+      },
+      {
+        "question": "What should v3.5 newcomers do first?",
+        "questionZh": "3.5 新玩家第一步做什么？",
+        "answer": "Set up account and controls, check whether v3.5 events are still reachable, then decide whether Yangyang: Xuanling or Suisui fits your account.",
+        "answerZh": "先设置账号和操作，确认 3.5 活动是否还能追，再判断 Yangyang: Xuanling 或 Suisui 是否适合账号。"
+      }
+    ]
   }
 ]
