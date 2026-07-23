@@ -140,8 +140,8 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
   },
   sea: {
     zh: '遗忘之海是一款极具美术风格的海洋冒险RPG，采用回合制战斗、即时海战与 Roguelite 遗忘之旅多模式。PC端2026年7月9日公测，移动端2026年7月23日10:00首发。Gachia 会持续整理移动端入口、首周运营、兑换码、角色与 BOSS 档案、捏脸、配置要求、开荒 Build 和海区探索路线。',
-    en: 'Sea of Remnants is a stylized ocean adventure RPG with turn-based combat, real-time naval battles, and Roguelite Remnant Journey runs. PC open beta is scheduled for July 9, 2026, with mobile expected later in July. Gachia tracks the open beta center, codes, crews, bosses, builds, face sculpting, cloud sculpting, PC specs, and sea-region routes.',
-    ja: 'ターン制バトルとリアルタイム海戦を特徴とする海洋アドベンチャーRPG。PC版は2026年7月9日にオープンベータ開始、モバイル版は7月内予定。Gachiaでは公測特集、交換コード、キャラとボス、顔作成、クラウド作成、PC環境、開荒ビルド、海域ルートを整理します。',
+    en: 'Sea of Remnants is a stylized ocean adventure RPG with turn-based combat, real-time naval battles, and Roguelite Remnant Journey runs. PC open beta started on July 9, 2026, and mobile launched on July 23, 2026 at 10:00. Gachia tracks mobile entry, troubleshooting, cross-progress, codes, crews, bosses, builds, specs, and sea-region routes.',
+    ja: 'ターン制バトルとリアルタイム海戦を特徴とする海洋アドベンチャーRPG。PC版は2026年7月9日にオープンベータ開始、モバイル版は2026年7月23日10:00に開始。Gachiaではモバイル導線、トラブル対応、連携、交換コード、キャラとボス、ビルド、環境、海域ルートを整理します。',
   },
   skjh: {
     zh: '《失控进化》是一款开放世界硬核生存对抗游戏，玩家在荒岛中从徒手采集开始，逐步完成工具制作、武器锻造、庇护所搭建、科技树解锁和领地攻防。游戏强调搜打拆、基地运营、动态天气、饥饿口渴等代谢压力，以及不同服务器模式下的风险选择。Gachia 将优先整理新手 0-10 分钟开荒、基地选址、领地柜维护、资源优先级、基因流派搭配、武器图鉴和公测预约福利。',
@@ -385,7 +385,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           description: '先把 7 月 23 日移动端入口、账号、配置和首日排错接住。',
           links: [
             { href: '/sea/guides/mobile-launch-guide', label: '移动端 FAQ' },
-            { href: '/sea/guides/platform-download-guide', label: '平台入口' },
+            { href: '/sea/guides/pc-mobile-cross-progression-faq', label: '互通 FAQ' },
           ],
         },
         {
@@ -393,7 +393,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           description: '把热修、号角、大脸币、查漏和 gamescom demo 分流到正确页面。',
           links: [
             { href: '/sea/guides/week-one-live-ops-overview', label: '首周总览' },
-            { href: '/sea/guides/ps5-xbox-review-gameplay-faq', label: 'Demo / Review' },
+            { href: '/sea/guides/mobile-troubleshooting-guide', label: '首日排错' },
           ],
         },
         {
@@ -412,7 +412,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           description: 'Catch July 23 mobile entry, account, specs, and first-day troubleshooting.',
           links: [
             { href: '/sea/guides/mobile-launch-guide', label: 'Mobile FAQ' },
-            { href: '/sea/guides/platform-download-guide', label: 'Platform entry' },
+            { href: '/sea/guides/pc-mobile-cross-progression-faq', label: 'Cross-progress' },
           ],
         },
         {
@@ -420,7 +420,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           description: 'Route hotfixes, Horns, Face Coins, cleanup, and gamescom demo buzz.',
           links: [
             { href: '/sea/guides/week-one-live-ops-overview', label: 'Live-ops hub' },
-            { href: '/sea/guides/ps5-xbox-review-gameplay-faq', label: 'Demo / Review' },
+            { href: '/sea/guides/mobile-troubleshooting-guide', label: 'Troubleshooting' },
           ],
         },
         {
@@ -439,7 +439,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           description: '7月23日のモバイル導線、アカウント、環境、初日トラブルを受け止めます。',
           links: [
             { href: '/sea/guides/mobile-launch-guide', label: 'モバイルFAQ' },
-            { href: '/sea/guides/platform-download-guide', label: '入口' },
+            { href: '/sea/guides/pc-mobile-cross-progression-faq', label: '連携FAQ' },
           ],
         },
         {
@@ -447,7 +447,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           description: 'Hotfix、Horn、Face Coin、探索漏れ、gamescom demoを分流します。',
           links: [
             { href: '/sea/guides/week-one-live-ops-overview', label: '初週総覧' },
-            { href: '/sea/guides/ps5-xbox-review-gameplay-faq', label: 'Demo / Review' },
+            { href: '/sea/guides/mobile-troubleshooting-guide', label: '初日対応' },
           ],
         },
         {
@@ -770,7 +770,7 @@ const FEATURED_GUIDE_IDS: Record<string, string[]> = {
   guihuan: ['test-recruit-international-download-faq', 'official-release-company-faq', 'test-release-timeline-guide'],
   ananta: ['gameplay-city-no-gacha-comparison-faq', 'release-date-beta-pc-faq', 'preregistration-no-gacha-guide'],
   endfield: ['official-download-specs-homecoming-faq', 'homecoming-operators-map-route', 'blueprint-aic-factory-guide'],
-  sea: ['mobile-launch-guide', 'week-one-live-ops-overview', 'ps5-xbox-review-gameplay-faq'],
+  sea: ['mobile-troubleshooting-guide', 'pc-mobile-cross-progression-faq', 'mobile-launch-guide'],
   skjh: ['official-pc-download-faq', 'first-2-hours-starter-route', 'base-location-anti-raid-plan'],
 };
 

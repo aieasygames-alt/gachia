@@ -262,36 +262,44 @@
   },
   {
     "id": "download-install-guide",
-    "title": "《遗忘之海》下载安装与配置要求：7 月 6 日预下载、7 月 9 日公测",
-    "titleEn": "Sea of Remnants Download, Install & PC Specs: July 6 Preload, July 9 Open Beta",
+    "title": "《遗忘之海》移动端下载入口：官网、TapTap、iOS、Android、Steam 与官方启动器",
+    "titleEn": "Sea of Remnants Download Guide: Mobile, TapTap, iOS, Android, Steam, and Official Launcher",
     "category": "beginner",
     "categoryZh": "新手指南",
     "categoryEn": "Beginner",
-    "summary": "整理《遗忘之海》PC 预下载、预创角、安装检查、配置要求、官网下载入口和开服当天排错步骤。",
-    "summaryEn": "Sea of Remnants PC preload, pre-character creation, install checklist, official download entry, system requirements, and launch-day troubleshooting.",
-    "content": "## 公测安装时间线\n\n| 时间 | 内容 | 建议 |\n|---|---|---|\n| 7月6日 10:00 | PC 预下载、预创角、预捏脸 | 当天先完成下载和角色创建 |\n| 7月9日 | PC 公测开启 | 开服后先推主线，不要先刷低收益支线 |\n| 7月23日 | 移动端相关节奏继续跟进 | 等官方渠道确认后再迁移账号或设备 |\n\n## PC 安装前检查\n\n### 最低配置\n\n- 操作系统：Windows 10/11 64-bit\n- 处理器：Intel i7-9700 / AMD Ryzen 5 3600X\n- 内存：16GB RAM\n- 显卡：GTX 1060 6GB / RX 480 8GB\n- 存储空间：至少预留 60GB\n\n### 推荐配置\n\n- 操作系统：Windows 10/11 64-bit\n- 处理器：Intel i7-12700 / AMD Ryzen 7 7700X\n- 内存：32GB RAM\n- 显卡：RTX 3070 Ti / RX 6800 XT\n- 存储空间：建议预留 80GB\n\n## 预下载当天怎么做\n\n1. 使用官方 PC 客户端或官方合作渠道下载，避免安装非官方包。\n2. 下载完成后启动一次客户端，确认补丁校验通过。\n3. 进入预创角流程，提前完成昵称、外观和捏脸保存。\n4. 开服前关闭多余下载器，给首日补丁和登录留出网络空间。\n\n## 开服当天排错\n\n| 问题 | 处理方式 |\n|---|---|\n| 客户端无法更新 | 重新校验文件，确认磁盘剩余空间超过 20GB |\n| 登录排队或失败 | 避开整点高峰，优先确认公告是否有维护 |\n| 画面卡顿 | 先降低阴影、体积雾和后处理，再调整分辨率 |\n| 预创角没同步 | 确认登录账号、服务器和渠道一致 |\n\n## 下一步\n\n安装完成后先读 [公测前瞻日历](./launch-preview-calendar) 和 [新手入门指南](./beginner-guide)，把开服首日目标定为：解锁主线系统、领取预约奖励、完成号角次数、确定第一队。",
-    "contentEn": "## Launch Install Timeline\n\n| Time | Update | Recommendation |\n|---|---|---|\n| July 6, 10:00 | PC preload, character creation, face creation | Install and create your character early |\n| July 9 | PC open beta starts | Push story unlocks before low-value side farming |\n| July 23, 2026 | Mobile launch day arrives | Switch devices after the official rollout is confirmed |\n\n## PC Requirements\n\n### Minimum\n\n- OS: Windows 10/11 64-bit\n- CPU: Intel i7-9700 / AMD Ryzen 5 3600X\n- RAM: 16GB\n- GPU: GTX 1060 6GB / RX 480 8GB\n- Storage: 60GB free space\n\n### Recommended\n\n- OS: Windows 10/11 64-bit\n- CPU: Intel i7-12700 / AMD Ryzen 7 7700X\n- RAM: 32GB\n- GPU: RTX 3070 Ti / RX 6800 XT\n- Storage: 80GB free space recommended\n\n## Preload Checklist\n\n1. Download from the official PC client or verified official channel.\n2. Launch once after installation to complete file verification.\n3. Finish pre-character creation and save your appearance.\n4. Free up bandwidth before launch-day patches.\n\n## Launch-Day Troubleshooting\n\n| Issue | Fix |\n|---|---|\n| Client will not update | Verify files and keep more than 20GB free space |\n| Login queue or failure | Avoid peak minutes and check maintenance notices |\n| Low FPS | Lower shadows, volumetric fog, post-processing, then resolution |\n| Pre-created character missing | Confirm the same account, server, and channel |\n\nAfter installation, read the [Launch Preview Calendar](./launch-preview-calendar) and [Beginner Guide](./beginner-guide).",
+    "summary": "更新至 2026 年 7 月 23 日 10:00 移动端首发口径，整理 PC、Steam、官方启动器、iOS、Android、TapTap、预下载后更新、容量与安装排错。",
+    "summaryEn": "Updated for the July 23, 2026 10:00 mobile launch, covering PC, Steam, official launcher, iOS, Android, TapTap, post-preload updates, storage, and install troubleshooting.",
+    "content": "## 先给结论\n\n截至 **2026 年 7 月 23 日 10:00**，《遗忘之海》已经从 7 月 9 日 PC 公测进入移动端首发阶段。今天下载页最重要的不是继续写“等待上线”，而是把入口、账号、区服、容量、预下载后更新和排错路径讲清楚。\n\n## 下载入口怎么选\n\n| 入口 | 适合谁 | 首日检查 |\n|---|---|---|\n| 官方启动器 | 想跟官网公告、活动和账号体系走的 PC 玩家 | 确认启动器版本、补丁校验和账号绑定 |\n| Steam | 想用 Steam 库管理的 PC 玩家 | 先看商店地区、语言和账号说明 |\n| iOS | 手机首发新玩家 | 先确认 App Store / 官方渠道、空间、网络和画质预设 |\n| Android | 安卓与 TapTap 玩家 | 先确认官网 / TapTap / 应用商店渠道，不安装来路不明包 |\n| 云试玩 / PV | 只想先看美术和玩法氛围的用户 | 不把试玩入口当作正式账号进度 |\n\n## 7 月 21 日预下载后还要做什么\n\n如果你已经在 **7 月 21 日 10:00** 后预下载过移动端，今天仍然建议：\n\n1. 打开商店或官方渠道检查是否还有最终补丁。\n2. 确认手机剩余空间，不要只看安装包大小。\n3. 首次启动后先做资源校验，不要立刻切后台。\n4. 登录前确认账号、区服和预约渠道是否一致。\n5. 如果需要从 PC 切到手机，先看互通 FAQ，再领取关键奖励。\n\n## PC 配置快速表\n\n| 档位 | 建议 |\n|---|---|\n| 最低体验 | Windows 10/11 64-bit、16GB RAM、GTX 1060 6GB 级别显卡 |\n| 推荐体验 | 32GB RAM、RTX 3070 Ti / RX 6800 XT 级别显卡 |\n| 长时间探索 | 预留 80GB 左右空间，并优先保证散热和稳定网络 |\n\n具体配置和画质建议继续看 [配置要求指南](/zh/sea/guides/system-requirements-guide)。\n\n## 首日安装排错\n\n| 问题 | 优先处理 |\n|---|---|\n| 搜不到手机端 | 检查商店地区、官方公告、TapTap 页面和渠道服说明 |\n| 更新慢 / 卡校验 | 切换稳定网络，保留足够空间，重新进入资源校验 |\n| 黑屏 / 闪退 | 降低画质、关闭后台、重启设备，必要时等待热修公告 |\n| PC 老账号没看到进度 | 先确认账号体系、区服和渠道，别急着新开号 |\n| 礼包没到账 | 检查邮件、活动页、领取条件和官方公告 |\n\n## 下一步阅读\n\n- [移动端首发 FAQ](/zh/sea/guides/mobile-launch-guide)\n- [手游和端游互通 FAQ](/zh/sea/guides/pc-mobile-cross-progression-faq)\n- [移动端首日排错专题](/zh/sea/guides/mobile-troubleshooting-guide)\n- [首发福利与兑换码](/zh/sea/guides/launch-rewards-codes-guide)",
+    "contentEn": "## Quick Answer\n\nAs of **July 23, 2026 at 10:00**, Sea of Remnants has moved from the July 9 PC open beta into the mobile launch window. A useful download page should now focus on entry points, account/server checks, storage, post-preload updates, and troubleshooting.\n\n## Which Entry Should You Use?\n\n| Entry | Best for | Launch-day check |\n|---|---|---|\n| Official launcher | PC players following official events and account notices | Launcher version, patch verification, account binding |\n| Steam | PC players who prefer Steam library management | Store region, language, and account notes |\n| iOS | Phone-first players | App Store / official channel, storage, network, graphics preset |\n| Android | Android and TapTap players | Official site / TapTap / app-store channel; avoid unofficial packages |\n| Cloud trial / PV | Users only checking art and gameplay mood | Do not treat trial access as formal account progress |\n\n## After July 21 Pre-Download\n\nIf you pre-downloaded after **July 21 at 10:00**, still check for final store updates, storage headroom, resource verification, account/server consistency, and cross-progress rules before claiming important rewards.\n\n## First-Day Troubleshooting\n\n| Issue | First action |\n|---|---|\n| Cannot find mobile app | Check store region, official notices, TapTap, and channel notes |\n| Slow update / verification stuck | Use stable network, keep storage free, rerun resource check |\n| Black screen / crash | Lower graphics, close background apps, restart device, watch hotfix notices |\n| PC progress missing | Confirm account route, server, and channel before starting over |\n| Rewards missing | Check mail, event pages, claim conditions, and official notices |\n\n## Read Next\n\n- [Mobile launch FAQ](/en/sea/guides/mobile-launch-guide)\n- [PC/mobile cross-progress FAQ](/en/sea/guides/pc-mobile-cross-progression-faq)\n- [Mobile troubleshooting guide](/en/sea/guides/mobile-troubleshooting-guide)\n- [Launch rewards and codes](/en/sea/guides/launch-rewards-codes-guide)",
     "tags": [
-      "预下载",
-      "安装",
       "下载",
+      "移动端",
+      "TapTap",
+      "iOS",
+      "Android",
+      "Steam",
+      "官方启动器",
       "配置",
-      "Download",
-      "Preload",
-      "Install"
+      "Download"
     ],
     "faq": [
       {
-        "question": "When does Sea of Remnants preload start?",
-        "questionZh": "遗忘之海什么时候可以预下载？",
-        "answer": "PC preload and pre-character creation are scheduled for July 6, 2026 at 10:00, ahead of the July 9 PC open beta.",
-        "answerZh": "PC 预下载、预创角和预捏脸安排在 2026 年 7 月 6 日 10:00，PC 公测为 7 月 9 日。"
+        "questionZh": "遗忘之海移动端今天能下载吗？",
+        "question": "Can I download Sea of Remnants mobile today?",
+        "answerZh": "截至 2026 年 7 月 23 日 10:00，移动端已经进入首发日，入口以官方渠道、TapTap、App Store 或应用商店实际展示为准。",
+        "answer": "As of July 23, 2026 at 10:00, mobile is in its launch-day window. Use official channels, TapTap, App Store, or app-store listings as source of truth."
       },
       {
-        "question": "How much storage do I need on PC?",
-        "questionZh": "PC需要预留多少硬盘空间？",
-        "answer": "Reserve at least 60GB for installation and preferably around 80GB so launch-day patches have enough room.",
-        "answerZh": "至少预留 60GB，建议预留约 80GB，给首日补丁和文件校验留出空间。"
+        "questionZh": "预下载后还要更新吗？",
+        "question": "Do I still need an update after pre-download?",
+        "answerZh": "可能需要。7 月 21 日预下载只代表提前安装资源，首发当天仍建议检查商店更新和资源校验。",
+        "answer": "Possibly. A July 21 preload can still require final store updates or resource verification on launch day."
+      },
+      {
+        "questionZh": "Steam 和手机端应该选哪个？",
+        "question": "Should I use Steam or mobile?",
+        "answerZh": "长时间探索和高画质优先 PC/Steam，日常、收菜和碎片时间优先手机；关键是账号和区服不要混。",
+        "answer": "Use PC/Steam for long sessions and higher graphics, mobile for dailies and short sessions; keep account and server consistent."
       }
     ]
   },
@@ -1224,36 +1232,42 @@
   },
   {
     "id": "launch-preview-calendar",
-    "title": "《遗忘之海》公测前瞻日历 — 7月9日PC开服与首月更新",
-    "titleEn": "Sea of Remnants Launch Preview Calendar — July 9 PC Open Beta and Month 1 Updates",
+    "title": "《遗忘之海》7 月节点归档：PC 公测、移动端首发、首周运营与后续更新",
+    "titleEn": "Sea of Remnants July Timeline Archive: PC Open Beta, Mobile Launch, Week-One Live Ops, and Next Updates",
     "category": "version",
     "categoryZh": "版本资讯",
     "categoryEn": "Version",
-    "summary": "整理《遗忘之海》7月9日PC公测前的预下载、预创角、首周海域、隐藏海、首月活动和开荒准备清单。",
-    "summaryEn": "A launch preview calendar for Sea of Remnants covering preload, character creation, week-one seas, Hidden Sea, month-one events, and day-one preparation.",
-    "content": "## 公测前 4 天重点\n\n截至 2026 年 7 月 9 日，《遗忘之海》已经进入 PC 公测阶段。今天除了预下载、预创角、6选1黑券和首周海域外，官方还同步放出了 iOS「云·遗忘之海」试玩版与 PV《初航乐章》。\n\n| 日期 | 内容 | 动作 |\n|---|---|---|\n| 7月6日 10:00 | PC预下载、预创角、预捏脸 | 先安装并保存昵称/外观 |\n| 7月9日 | PC公测 | 先推主线解锁系统 |\n| 首周 | 白沙海、桥海 | 主线后清日常和号角4次 |\n| 后续版本待官方公布 | 隐藏海、隐藏结局、Boss内容 | 预留养成资源等实测 |\n| 第3周 | 联动活动窗口 | 抽卡资源不要首日清空 |\n\n## 版本变化\n\n- 首次记忆重逢改为黑券 6 选 1，按队伍缺口补位。\n- 号角每日 4 次，是开服前期稳定资源入口。\n- 养成与便携/全局功能优化后，更适合集中培养第一队。\n- 绯红公爵夫人、隐藏海和“荒凉结局”等内容先按实测补齐，别写死开放时间。\n\n## 今日准备清单\n\n1. 7月6日 10:00 后完成 PC 预下载。\n2. 预创角阶段确定昵称、外观和服务器。\n3. 先看 [招募系统指南](./gacha-recruitment-guide)，决定 6 选 1目标。\n4. 用 [船员节奏榜](./tier-list-guide) 规划 1 主攻 + 1 辅助 + 1 生存。\n5. 开服当天先解锁系统，再补探索、日常和号角次数。\n\n## 更新优先级\n\n| 优先级 | 内容 |\n|---|---|\n| P0 | 公测时间、下载、预创角、奖励 |\n| P1 | 船员强度、6选1、首周阵容 |\n| P2 | 过往之影、Boss、隐藏结局 |",
-    "contentEn": "## Four Days Before Launch\n\nAs of July 9, 2026, Sea of Remnants is already in PC open beta. Today’s official update also includes the iOS \"Cloud Sea of Remnants\" trial and the PV \"First Voyage Melody.\" Focus on preload, pre-character creation, the 6-choice Black Ticket selector, week-one regions, and month-one events.\n\n| Date | Update | Action |\n|---|---|---|\n| July 6, 10:00 | PC preload and character creation | Install early and save your name/appearance |\n| July 9 | PC open beta | Push story unlocks first |\n| Week 1 | White Sand Sea and Bridge Sea | Clear story, then daily Horn attempts |\n| Post-launch, pending official announcement | Hidden Sea, hidden ending, boss content | Save resources until testing settles |\n| Week 3 | Collaboration window | Do not spend every pull on day one |\n\n## Version Notes\n\n- First Memory Reunion becomes a 6-choice Black Ticket selector.\n- Horn attempts refresh 4 times daily.\n- Progression optimizations favor focused investment into one first team.\n- Scarlet Duchess, Hidden Sea, and hidden ending guides should stay open for live testing.\n\n## Checklist\n\n1. Preload after July 6, 10:00.\n2. Create your character and save appearance.\n3. Read the [Recruitment Guide](./gacha-recruitment-guide) before choosing a selector target.\n4. Plan one DPS, one support, and one survival slot with the [Tier List](./tier-list-guide).\n5. On launch day, unlock systems before deep exploration.",
+    "summary": "把原公测前瞻页归档为 7 月节点时间线，标注 7 月 9 日 PC 公测、7 月 21 日预下载、7 月 23 日移动端首发、首周运营与后续内容边界。",
+    "summaryEn": "Archives the old launch preview as a July timeline covering July 9 PC open beta, July 21 pre-download, July 23 mobile launch, week-one live ops, and future-update boundaries.",
+    "content": "## 这页现在是什么\n\n这页已经从“公测前瞻”归档为 **2026 年 7 月节点时间线**。如果你今天只想下载、排错或确认互通，请优先看移动端首发相关页面；本页主要用来理解 PC 公测、移动端首发和首周运营之间的关系。\n\n## 7 月关键节点\n\n| 日期 | 节点 | 当前状态 | 现在该看 |\n|---|---|---|---|\n| 2026-07-06 10:00 | PC 预下载 / 预创角 | 历史节点 | 仅作为 PC 开服记录 |\n| 2026-07-09 | PC 公测 | 已上线 | 开服路线、首周运营、资源效率 |\n| 2026-07-21 10:00 | 移动端预下载 | 历史节点 | 检查最终更新、容量和资源校验 |\n| 2026-07-23 10:00 | 移动端首发 | 今日核心节点 | 移动端入口、互通、排错、福利 |\n| gamescom 2026 | 海外 demo 曝光 | 外部关注增强 | demo / gameplay / review / platform FAQ |\n| 后续版本 | 隐秘海、Boss、联动等 | 以官方公告为准 | 不写死开放时间 |\n\n## 当前推荐路径\n\n1. 今天要进手机端：先看 [移动端首发 FAQ](/zh/sea/guides/mobile-launch-guide)。\n2. 下载或更新失败：看 [移动端下载入口](/zh/sea/guides/download-install-guide) 和 [排错专题](/zh/sea/guides/mobile-troubleshooting-guide)。\n3. PC 老玩家接手机：看 [手游和端游互通 FAQ](/zh/sea/guides/pc-mobile-cross-progression-faq)。\n4. 担心错过奖励：看 [首发福利与兑换码](/zh/sea/guides/launch-rewards-codes-guide)。\n5. 想跟海外讨论：看 [PS5 / Xbox / Review / Gameplay FAQ](/zh/sea/guides/ps5-xbox-review-gameplay-faq)。\n\n## 历史节点还值得保留吗\n\n值得。原因是很多用户仍会搜索“7月9日公测”“7月6日预下载”“公测删档吗”“预约入口”等历史问题。归档页可以减少误导，并把用户导向今天真正需要的移动端页面。\n\n## 内容边界\n\n- 移动端首发不是全平台重新开服。\n- 预下载不代表首发当天不需要最终更新。\n- 首发福利、礼包和补偿按游戏内公告确认。\n- gamescom demo 是试玩曝光，不是主机或海外上线日期确认。",
+    "contentEn": "## What This Page Is Now\n\nThis page is now an archive for the **July 2026 timeline**. If you are downloading, troubleshooting, or checking cross-progress today, use the mobile-launch pages first. This page explains how PC open beta, mobile launch, and week-one live ops connect.\n\n## July Timeline\n\n| Date | Milestone | Status | Read now |\n|---|---|---|---|\n| 2026-07-06 10:00 | PC preload / character creation | Historical | PC launch record only |\n| 2026-07-09 | PC open beta | Live | Launch route, live ops, economy |\n| 2026-07-21 10:00 | Mobile pre-download | Historical | Final updates, storage, resource verification |\n| 2026-07-23 10:00 | Mobile launch | Core current node | Mobile entry, cross-progress, troubleshooting, rewards |\n| gamescom 2026 | Global demo exposure | Rising attention | Demo / gameplay / review / platform FAQ |\n| Future versions | Hidden Sea, bosses, collabs | Official-notice dependent | Do not hard-code timing |\n\n## Current Reading Path\n\nStart with the mobile launch FAQ, download guide, mobile troubleshooting guide, PC/mobile cross-progress FAQ, launch rewards page, and PS5/Xbox/review/gameplay FAQ depending on intent.\n\n## Boundaries\n\nMobile launch is not a full platform reset. Pre-download can still require final updates. Rewards and compensation follow in-game notices. gamescom demo is exposure, not a confirmed console or overseas release date.",
     "tags": [
-      "公测",
-      "日历",
+      "时间线",
+      "归档",
+      "PC公测",
+      "移动端首发",
       "预下载",
-      "开服",
-      "Launch",
-      "Calendar",
-      "Open Beta"
+      "首周运营",
+      "Timeline"
     ],
     "faq": [
       {
-        "question": "When does Sea of Remnants PC open beta start?",
-        "questionZh": "遗忘之海PC公测什么时候开？",
-        "answer": "The current launch plan points to PC open beta on July 9, 2026, with preload and pre-character creation opening on July 6 at 10:00.",
-        "answerZh": "当前公测节奏为 2026 年 7 月 9 日 PC 公测，7 月 6 日 10:00 开放预下载、预创角和预捏脸。"
+        "questionZh": "这页还是公测前瞻页吗？",
+        "question": "Is this still a pre-launch preview page?",
+        "answerZh": "不是。它已经归档为 2026 年 7 月节点时间线，用来把 PC 公测、移动端首发和后续运营串起来。",
+        "answer": "No. It is now a July 2026 timeline archive connecting PC open beta, mobile launch, and later live ops."
       },
       {
-        "question": "What should I prepare before launch?",
-        "questionZh": "开服前最应该准备什么？",
-        "answer": "Preload the PC client, create your character, decide your first 6-choice Black Ticket target, and plan one DPS/support/survival core team.",
-        "answerZh": "优先完成 PC 预下载和预创角，然后确定 6 选 1 黑券目标，并规划 1 名主攻、1 名辅助、1 名生存的开荒核心。"
+        "questionZh": "7 月 23 日以后应该先看哪页？",
+        "question": "What should I read after July 23?",
+        "answerZh": "先看移动端首发 FAQ、下载入口、互通 FAQ、排错专题和福利兑换码页。",
+        "answer": "Start with the mobile launch FAQ, download guide, cross-progress FAQ, troubleshooting page, and rewards/codes page."
+      },
+      {
+        "questionZh": "gamescom demo 是上线日期吗？",
+        "question": "Is the gamescom demo a release date?",
+        "answerZh": "不是。它是试玩曝光信号，平台和海外正式上线时间仍看官方公告。",
+        "answer": "No. It is hands-on exposure; platform and overseas launch timing still need official notices."
       }
     ]
   },
@@ -1427,35 +1441,44 @@
   },
   {
     "id": "launch-rewards-codes-guide",
-    "title": "《遗忘之海》公测福利与兑换码汇总 — 100抽、新手黑券与ywzh2026",
-    "titleEn": "Sea of Remnants Launch Rewards and Codes — 100 Pulls, Beginner Black Ticket, and ywzh2026",
+    "title": "《遗忘之海》移动端首发福利与兑换码：SSR、自选、抽数、邮件奖励怎么确认",
+    "titleEn": "Sea of Remnants Mobile Launch Rewards and Codes: SSR, Selectors, Pulls, Mail, and Claim Checks",
     "category": "codes",
     "categoryZh": "兑换码",
     "categoryEn": "Codes",
-    "summary": "汇总公测福利、前瞻直播码、新手40抽必得黑券、预约礼包和平台专属码，并说明兑换码巡检与过期处理规则。",
-    "summaryEn": "Tracks launch rewards, preview livestream code, beginner 40-pull Black Ticket guarantee, reservation gifts, platform codes, and expiration checks.",
+    "summary": "更新至 7 月 23 日移动端首发口径，整理兑换码、预约礼、首发福利、SSR/自选、抽数、邮件补偿和平台礼包的确认顺序。",
+    "summaryEn": "Updated for the July 23 mobile launch, covering codes, reservation rewards, launch rewards, SSR/selectors, pulls, mail compensation, and platform gift checks.",
     "tags": [
       "兑换码",
       "福利",
-      "100抽",
-      "ywzh2026",
+      "SSR",
+      "自选",
+      "首发",
+      "邮件",
+      "移动端",
       "Codes",
       "Rewards"
     ],
-    "content": "## 当前已记录兑换码\n\n| 兑换码 | 来源 | 状态 | 备注 |\n|--------|------|------|------|\n| `ywzh2026` | 2026年6月26日公测前瞻直播 | 待公测验证 | 建议公测首日优先尝试 |\n\n## 公测福利重点\n\n- 公测福利：前瞻信息提到公测送100抽，具体领取路径以游戏内活动页为准。\n- 新手保底：新手40抽必得黑券船员，适合配合开局6选1规划阵容。\n- 平台礼包：TapTap、B站、微信、官网预约等平台可能存在专属礼包码。\n- 邮件补偿：公测首周如遇排队、维护或热修，通常需要检查系统邮件。\n\n## 每日巡检流程\n\n1. 公测首周每天检查官方公告、微博、公众号、TapTap、B站动态。\n2. 新码记录兑换码、奖励、有效期、适用服务器和来源链接。\n3. 过期码灰显，不删除，保留历史记录方便用户排查。\n4. 奖励未确认时标注以游戏内兑换结果为准，避免误导。\n\n## 兑换建议\n\n公测当天先兑换限时直播码，再领取预约礼包和平台礼包。若提示服务器繁忙，建议截图保留错误提示，稍后重试。\n\n## 领奖顺序建议\n\n公测首周建议先按 [首周每日清单](./week-one-daily-checklist) 完成号角、邮件、签到和活动页检查，再回头处理平台礼包和兑换码。",
-    "contentEn": "## Currently Tracked Codes\n\n| Code | Source | Status | Note |\n|--------|------|------|------|\n| `ywzh2026` | June 26, 2026 open beta preview livestream | Awaiting launch verification | Try on launch day first |\n\n## Launch Rewards\n\n- Launch rewards: preview info mentioned 100 pulls; claim path depends on in-game event pages.\n- Beginner guarantee: 40 pulls guarantee a Black Ticket crew, best planned with the opening 6-choice pick.\n- Platform gifts: TapTap, Bilibili, WeChat, and official reservations may have platform codes.\n- Mail compensation: check system mail during launch week for maintenance or hotfix rewards.\n\n## Daily Check Process\n\n1. During launch week, check official notices, Weibo, WeChat, TapTap, and Bilibili daily.\n2. Record code, reward, expiry, server scope, and source.\n3. Grey out expired codes but keep history.\n4. If rewards are unclear, mark them as dependent on in-game redemption results.\n\n## Redemption Advice\n\nOn launch day, redeem limited livestream codes first, then reservation and platform gifts. If servers are busy, keep the error screenshot and retry later.",
+    "content": "## 先给结论\n\n移动端 **2026 年 7 月 23 日 10:00** 首发后，福利页要从“公测前预估”切换到“今天怎么确认、怎么领取、没到账怎么办”。抽数、SSR、自选和平台礼包都容易被社区二次传播放大，站内统一用一个原则：**奖励数量和领取条件以游戏内活动页、邮件和官方公告为准**。\n\n## 当前已记录兑换码\n\n| 兑换码 | 来源 | 状态 | 备注 |\n|--------|------|------|------|\n| `ywzh2026` | 2026年6月26日公测前瞻直播 | 建议上线后实测 | 如果提示过期或不可用，以游戏内兑换结果为准 |\n\n## 今日领奖顺序\n\n1. 登录正确账号和区服。\n2. 先看系统邮件，确认预约礼、维护补偿或首发补偿。\n3. 再打开活动页，检查签到、七日任务、首发福利和平台入口任务。\n4. 最后尝试兑换码，记录成功/失败提示。\n5. 如果你从 PC 切到手机，先确认互通和渠道，不要在错误区服领取关键奖励。\n\n## SSR / 自选 / 抽数怎么判断\n\n| 讨论点 | 站内建议口径 |\n|---|---|\n| 免费抽数 | 可以写“首月资源/首发福利”，具体数量以活动页为准 |\n| SSR / 黑券自选 | 先确认是否是新手池、活动任务、预约礼或补偿，不混在一起写 |\n| 平台礼包 | TapTap、官网、B站、应用商店可能不同，按渠道分别确认 |\n| 充值返利 | 只按官方公告和账号绑定规则说明，不用传言数字 |\n| 邮件补偿 | 维护、排队和热修补偿通常走系统邮件，注意有效期 |\n\n## 没到账怎么办\n\n- 先确认账号、区服、渠道和角色是否正确。\n- 看活动页是否需要手动领取，而不是自动进邮件。\n- 检查兑换码大小写、有效期和适用服务器。\n- 不要在多个渠道重复绑定同一奖励。\n- 保留错误截图，再等官方公告或客服说明。\n\n## 站内下一步\n\n- [手游和端游互通 FAQ](/zh/sea/guides/pc-mobile-cross-progression-faq)\n- [移动端首日排错专题](/zh/sea/guides/mobile-troubleshooting-guide)\n- [抽角色还是抽服装](/zh/sea/guides/character-vs-outfit-pull-guide)\n- [好金砖速刷攻略](/zh/sea/guides/good-gold-bricks-farming-guide)",
+    "contentEn": "## Quick Answer\n\nAfter the **July 23, 2026 10:00** mobile launch, reward content should shift from pre-launch estimates to claim order, verification, and missing-reward troubleshooting. Pull counts, SSR/selectors, platform gifts, and compensation should be treated as official-notice dependent.\n\n## Recorded Code\n\n| Code | Source | Status | Note |\n|---|---|---|---|\n| `ywzh2026` | June 26 open-beta preview stream | Test after launch | If it is expired or unavailable, trust the in-game redemption result |\n\n## Claim Order Today\n\n1. Log into the correct account and server.\n2. Check system mail for reservation gifts or compensation.\n3. Check event pages for sign-in, seven-day tasks, launch rewards, and platform tasks.\n4. Try codes last and record success/failure messages.\n5. If moving from PC to mobile, confirm cross-progress and channel rules before claiming key rewards.\n\n## SSR / Selectors / Pulls\n\nUse careful wording: month-one resources and launch rewards are real search intent, but exact quantities and claim conditions should follow in-game event pages and official notices. Separate beginner selectors, event tasks, reservation gifts, platform gifts, and compensation instead of merging them into one number.\n\n## Missing Rewards\n\nConfirm account, server, channel, claim conditions, code validity, and mail expiration before assuming a bug. Keep screenshots for support or official follow-up.\n\n## Read Next\n\n- [PC/mobile cross-progress FAQ](/en/sea/guides/pc-mobile-cross-progression-faq)\n- [Mobile troubleshooting guide](/en/sea/guides/mobile-troubleshooting-guide)\n- [Character vs outfit pull guide](/en/sea/guides/character-vs-outfit-pull-guide)\n- [Good Gold Bricks guide](/en/sea/guides/good-gold-bricks-farming-guide)",
     "faq": [
       {
-        "question": "What is the latest Sea of Remnants code?",
-        "questionZh": "遗忘之海目前记录的兑换码是什么？",
-        "answer": "Gachia currently tracks ywzh2026 from the June 26, 2026 preview livestream. It should be verified again on launch day.",
-        "answerZh": "当前记录的是2026年6月26日前瞻直播码 ywzh2026，公测当天需要再次验证。"
+        "questionZh": "遗忘之海兑换码 ywzh2026 还能用吗？",
+        "question": "Does the Sea of Remnants code ywzh2026 still work?",
+        "answerZh": "建议上线后在游戏内兑换页实测；如果提示过期、不可用或服务器不适用，以游戏内结果为准。",
+        "answer": "Test it in the in-game redemption page after launch. If it says expired, unavailable, or server-ineligible, trust the in-game result."
       },
       {
-        "question": "Does Sea of Remnants give 100 pulls at launch?",
-        "questionZh": "遗忘之海公测送100抽吗？",
-        "answer": "Preview information mentioned 100 launch pulls, but the exact claim route and timing should be checked in the live event page.",
-        "answerZh": "前瞻信息提到公测100抽，但具体领取路径和时间以正式服活动页为准。"
+        "questionZh": "首发福利没到账怎么办？",
+        "question": "What if launch rewards are missing?",
+        "answerZh": "先查账号、区服、渠道、邮件、活动页和领取条件，再看官方公告是否有延迟或补偿说明。",
+        "answer": "Check account, server, channel, mail, event pages, and claim conditions first, then watch official notices for delays or compensation."
+      },
+      {
+        "questionZh": "SSR、自选和抽数能写死吗？",
+        "question": "Can SSR, selectors, and pull counts be stated as fixed?",
+        "answerZh": "不建议。站内可以承接这些搜索，但具体数量和领取条件必须以游戏内活动页与官方公告为准。",
+        "answer": "Not safely. The site can route the intent, but exact quantities and claim rules must follow in-game events and official notices."
       }
     ]
   },
@@ -2032,5 +2055,92 @@
       }
     ],
     "date": "2026-07-21"
+  },
+  {
+    "id": "mobile-troubleshooting-guide",
+    "title": "《遗忘之海》移动端进不去、黑屏、卡顿、更新慢怎么办：7 月 23 日首日排错清单",
+    "titleEn": "Sea of Remnants Mobile Troubleshooting: Login, Black Screen, Lag, Slow Updates, and First-Day Fixes",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "面向 7 月 23 日移动端首发首日的排错清单，覆盖进不去、黑屏闪退、更新慢、资源校验、发热掉帧、账号区服和奖励没到账。",
+    "summaryEn": "A July 23 mobile-launch troubleshooting checklist covering login failures, black screens, crashes, slow updates, resource verification, heat, lag, account/server checks, and missing rewards.",
+    "tags": [
+      "移动端",
+      "排错",
+      "黑屏",
+      "卡顿",
+      "更新慢",
+      "发热",
+      "登录",
+      "7月23日",
+      "Troubleshooting"
+    ],
+    "content": "## 先给结论\n\n如果你在 **2026 年 7 月 23 日移动端首发日**遇到进不去、黑屏、卡顿、更新慢、发热或奖励没到账，先不要急着重装或换号。移动端首日问题通常分成五类：入口渠道、最终补丁、设备性能、账号区服、服务器/公告。\n\n## 先按症状查\n\n| 症状 | 优先检查 | 不建议先做 |\n|---|---|---|\n| 搜不到客户端 | 商店地区、TapTap/官网入口、官方公告 | 随便安装非官方包 |\n| 更新慢 / 卡校验 | 网络、剩余空间、资源校验、后台下载限制 | 反复卸载重装 |\n| 黑屏 / 闪退 | 降画质、关后台、重启设备、等待热修公告 | 直接换区服或新建账号 |\n| 发热 / 掉帧 | 先锁中低画质、降低阴影/后处理、关闭高帧率 | 首次登录就拉满画质 |\n| 账号进度不对 | 登录方式、区服、渠道、PC 绑定关系 | 直接领取关键奖励 |\n| 福利没到账 | 邮件、活动页、领取条件、兑换码有效期 | 把所有平台礼包混在一起算 |\n\n## 7 月 21 日预下载玩家检查\n\n预下载不等于首发当天不用更新。今天建议按这个顺序走：\n\n1. 商店或官方入口检查最终版本。\n2. 进入游戏后等待资源校验完成。\n3. 保证手机剩余空间和网络稳定。\n4. 首次登录前确认账号和区服。\n5. 先把画质设为稳定档，过完新手后再上调。\n\n## 手机画质建议\n\n| 设备状态 | 建议 |\n|---|---|\n| 中端机 / 发热明显 | 中低画质、关闭高帧率、降低阴影和后处理 |\n| 高端机 / 追求画面 | 先稳定 10-15 分钟，再逐项调高 |\n| 长时间探索 | 优先稳定帧率和温度，不要只追最高画质 |\n| 只做日常 | 手机端适合收菜、活动和轻量任务，长时间探索可切 PC |\n\n## 什么时候该等官方公告\n\n- 多数玩家同时登录失败。\n- 同一流程点普遍卡死。\n- 兑换码或邮件奖励大面积异常。\n- 商店包体版本不一致。\n- 官方已经提示维护、热修或补偿。\n\n## 站内下一步\n\n- [移动端下载入口](/zh/sea/guides/download-install-guide)\n- [手游和端游互通 FAQ](/zh/sea/guides/pc-mobile-cross-progression-faq)\n- [已知问题与热修追踪](/zh/sea/guides/known-issues-hotfix-guide)\n- [首发福利与兑换码](/zh/sea/guides/launch-rewards-codes-guide)",
+    "contentEn": "## Quick Answer\n\nIf you hit login failures, black screens, crashes, slow updates, heat, lag, or missing rewards on the **July 23, 2026 mobile launch day**, do not immediately reinstall or create a new account. Most first-day issues fall into five buckets: entry channel, final patch, device performance, account/server, and official server notices.\n\n## Check by Symptom\n\n| Symptom | Check first | Avoid first |\n|---|---|---|\n| Cannot find the client | Store region, TapTap / official entry, official notices | Installing unofficial packages |\n| Slow update / stuck verification | Network, storage, resource check, background limits | Repeated reinstalling |\n| Black screen / crash | Lower graphics, close background apps, restart, watch hotfix notices | Switching server or account blindly |\n| Heat / lag | Medium-low graphics, lower shadows/post-processing, avoid high FPS | Maxing graphics on first login |\n| Wrong progress | Login route, server, channel, PC binding | Claiming key rewards immediately |\n| Missing rewards | Mail, event pages, claim conditions, code validity | Combining all platform gifts into one number |\n\n## July 21 Preload Checks\n\nPreload does not mean no final update. Check the store or official entry, let resource verification complete, keep storage and network stable, confirm account/server before first login, and start with stable graphics settings.\n\n## When to Wait for Official Notices\n\nWait if many players fail login at once, the same route step blocks broadly, code/mail rewards fail widely, package versions differ by store, or official channels mention maintenance, hotfixes, or compensation.\n\n## Read Next\n\n- [Download guide](/en/sea/guides/download-install-guide)\n- [PC/mobile cross-progress FAQ](/en/sea/guides/pc-mobile-cross-progression-faq)\n- [Known issues and hotfix tracker](/en/sea/guides/known-issues-hotfix-guide)\n- [Launch rewards and codes](/en/sea/guides/launch-rewards-codes-guide)",
+    "faq": [
+      {
+        "questionZh": "遗忘之海移动端黑屏怎么办？",
+        "question": "How do I fix Sea of Remnants mobile black screen?",
+        "answerZh": "先降低画质、关闭后台、重启设备并完成资源校验；如果大面积出现，等待官方热修或维护公告更稳。",
+        "answer": "Lower graphics, close background apps, restart, and finish resource verification first. If it is widespread, wait for official hotfix or maintenance notices."
+      },
+      {
+        "questionZh": "预下载后卡更新怎么办？",
+        "question": "What if update is stuck after pre-download?",
+        "answerZh": "检查最终商店更新、网络稳定性、剩余空间和资源校验，不建议一开始就反复重装。",
+        "answer": "Check final store updates, network stability, storage, and resource verification. Repeated reinstalling should not be the first step."
+      },
+      {
+        "questionZh": "手机端很烫或掉帧怎么办？",
+        "question": "What if mobile overheats or lags?",
+        "answerZh": "首日先用稳定档，降低阴影、后处理和高帧率；长时间探索更适合切到 PC。",
+        "answer": "Use stable graphics first, lower shadows/post-processing/high FPS, and consider PC for long exploration sessions."
+      }
+    ]
+  },
+  {
+    "id": "pc-mobile-cross-progression-faq",
+    "title": "遗忘之海手游和端游互通吗？PC、iOS、Android 账号区服与奖励 FAQ",
+    "titleEn": "Is Sea of Remnants Cross-Progression? PC, iOS, Android Account, Server, and Reward FAQ",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "承接“遗忘之海手游和端游互通吗”搜索，整理 PC、Steam、官方启动器、iOS、Android 的账号、区服、奖励、充值和首日切端注意事项。",
+    "summaryEn": "Answers Sea of Remnants PC/mobile cross-progress searches across PC, Steam, official launcher, iOS, Android, account, server, rewards, payments, and launch-day platform switching.",
+    "tags": [
+      "互通",
+      "手游",
+      "端游",
+      "PC",
+      "iOS",
+      "Android",
+      "Steam",
+      "账号",
+      "区服",
+      "Cross Progression"
+    ],
+    "content": "## 先给结论\n\n“遗忘之海手游和端游互通吗”是 7 月 23 日移动端首发后最强的决策问题之一。站内建议这样判断：**账号体系、区服、渠道和奖励规则要分开确认**。不要只看“能登录”就默认所有奖励、充值、平台礼包都完全一致。\n\n## 互通前先确认 4 件事\n\n| 检查项 | 为什么重要 |\n|---|---|\n| 登录账号 | PC、iOS、Android 要尽量使用同一官方账号或同一绑定路线 |\n| 区服 | 不同区服通常不会共享角色进度，首日别随手选新区 |\n| 渠道 | Steam、官方启动器、TapTap、App Store、安卓商店可能有不同活动入口 |\n| 奖励 | 预约礼、平台礼包、充值、补偿和兑换码要按公告分别确认 |\n\n## PC 老玩家今天切手机怎么做\n\n1. 在 PC 端记下当前账号、区服、角色名和 UID/识别信息。\n2. 手机端只从官方渠道安装。\n3. 登录时选择同一账号体系，不要用游客或临时账号。\n4. 进入前确认区服一致。\n5. 看到奖励弹窗前先确认是不是正确角色。\n6. 关键自选、首发福利和平台礼包不要在错误角色上领取。\n\n## Steam、官方启动器和手机有什么区别\n\n| 平台 | 更适合 | 注意点 |\n|---|---|---|\n| Steam | PC 长时间游玩、截图、手柄/库管理 | 商店地区和账号绑定看官方说明 |\n| 官方启动器 | 跟进官网活动和补丁公告 | 更适合看官方账号与活动入口 |\n| iOS | 碎片时间、日常、移动端首发用户 | 先确认 App Store / 官方渠道和区服 |\n| Android / TapTap | 安卓首发用户和 TapTap 社区用户 | 先确认渠道包、最终更新和平台礼包规则 |\n\n## 哪些不要默认互通\n\n- 平台专属礼包不一定跨平台领取。\n- 充值、返利或首充规则不应凭传言写死。\n- 主机平台如果没有官方商店页或公告，不要默认与 PC/手机互通。\n- gamescom demo 是海外试玩曝光，不等于新增平台互通确认。\n\n## 站内下一步\n\n- [移动端下载入口](/zh/sea/guides/download-install-guide)\n- [移动端首日排错专题](/zh/sea/guides/mobile-troubleshooting-guide)\n- [首发福利与兑换码](/zh/sea/guides/launch-rewards-codes-guide)\n- [平台入口速查](/zh/sea/guides/platform-download-guide)",
+    "contentEn": "## Quick Answer\n\n“Is Sea of Remnants PC/mobile cross-progression?” is one of the strongest decision queries after the July 23 mobile launch. Treat account system, server, channel, and reward rules separately. Do not assume that login access automatically means every reward, payment, or platform gift is shared.\n\n## Confirm These 4 Things First\n\n| Check | Why it matters |\n|---|---|\n| Login account | Use the same official account or binding route across PC, iOS, and Android |\n| Server | Different servers usually do not share character progress |\n| Channel | Steam, official launcher, TapTap, App Store, and Android stores can have different event entries |\n| Rewards | Reservation gifts, platform gifts, payments, compensation, and codes should follow notices separately |\n\n## PC Players Moving to Mobile\n\nRecord your PC account, server, character name, and UID-like identifier. Install mobile only through official channels. Use the same account route, confirm server before entering, and do not claim selectors, launch rewards, or platform gifts before verifying the correct character.\n\n## Platform Differences\n\nSteam fits long PC sessions and library management. The official launcher fits official events and patch notices. iOS fits mobile-first and daily play. Android/TapTap fits Android launch users and community activity, but channel package, final updates, and platform gifts need checking.\n\n## Do Not Assume These Are Shared\n\nPlatform-exclusive gifts, payment/return rules, first-purchase benefits, console status, and overseas platform timing should not be treated as shared unless official notices confirm them. gamescom demo exposure is not a cross-platform confirmation.\n\n## Read Next\n\n- [Download guide](/en/sea/guides/download-install-guide)\n- [Mobile troubleshooting guide](/en/sea/guides/mobile-troubleshooting-guide)\n- [Launch rewards and codes](/en/sea/guides/launch-rewards-codes-guide)\n- [Platform entry guide](/en/sea/guides/platform-download-guide)",
+    "faq": [
+      {
+        "questionZh": "遗忘之海手游和端游互通吗？",
+        "question": "Does Sea of Remnants support PC/mobile cross-progression?",
+        "answerZh": "需要按账号、区服和渠道分别确认。同一账号和同一区服是首要条件，平台礼包和奖励规则仍以官方公告为准。",
+        "answer": "Confirm account, server, and channel separately. Same account and server are the key checks, while platform gifts and reward rules still follow official notices."
+      },
+      {
+        "questionZh": "PC 老玩家手机端要重新开号吗？",
+        "question": "Do PC players need a new mobile account?",
+        "answerZh": "不建议一上来新开号。先用同一账号体系登录，并确认区服和角色信息。",
+        "answer": "Do not start a new account immediately. Use the same account route and confirm server and character information first."
+      },
+      {
+        "questionZh": "Steam、TapTap、App Store 礼包互通吗？",
+        "question": "Are Steam, TapTap, and App Store gifts shared?",
+        "answerZh": "不要默认互通。平台专属礼包、充值和补偿应按各渠道公告分别确认。",
+        "answer": "Do not assume sharing. Platform gifts, payments, and compensation should be checked by channel-specific notices."
+      }
+    ]
   }
 ]

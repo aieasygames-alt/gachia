@@ -103,8 +103,8 @@ const INTENT_LINKS: Partial<Record<GameId, IntentLink[]>> = {
   ],
   sea: [
     { href: '/sea/guides/mobile-launch-guide', label: { zh: '移动端首发', en: 'Mobile launch', ja: 'モバイル開始' }, description: { zh: '7 月 23 日入口、账号、区服、配置和首日排错。', en: 'July 23 entry, account, server, specs, and first-day troubleshooting.', ja: '7月23日の入口、アカウント、サーバー、環境、初日対応。' } },
-    { href: '/sea/guides/week-one-live-ops-overview', label: { zh: '首周运营', en: 'Week-one live ops', ja: '初週運営' }, description: { zh: '热修、号角、大脸币、查漏和 gamescom demo 分流。', en: 'Hotfixes, Horns, Face Coins, cleanup, and gamescom demo routing.', ja: 'Hotfix、Horn、Face Coin、探索漏れ、gamescom demo導線。' } },
-    { href: '/sea/guides/ps5-xbox-review-gameplay-faq', label: { zh: 'Demo / Review', en: 'Demo / Review', ja: 'Demo / Review' }, description: { zh: '承接 gamescom、gameplay、review、Steam、PS5/Xbox 搜索。', en: 'Capture gamescom, gameplay, review, Steam, and PS5/Xbox searches.', ja: 'gamescom、gameplay、review、Steam、PS5/Xbox検索を承接。' } },
+    { href: '/sea/guides/pc-mobile-cross-progression-faq', label: { zh: '互通 FAQ', en: 'Cross-progress', ja: '連携 FAQ' }, description: { zh: 'PC、Steam、iOS、Android 的账号、区服、渠道和奖励边界。', en: 'Account, server, channel, and reward boundaries across PC, Steam, iOS, and Android.', ja: 'PC、Steam、iOS、Androidのアカウント、サーバー、チャネル、報酬境界。' } },
+    { href: '/sea/guides/mobile-troubleshooting-guide', label: { zh: '首日排错', en: 'Troubleshooting', ja: '初日対応' }, description: { zh: '进不去、黑屏、卡顿、更新慢、发热和福利没到账。', en: 'Login issues, black screens, lag, slow updates, heat, and missing rewards.', ja: 'ログイン不可、黒画面、ラグ、更新遅延、発熱、報酬未着。' } },
   ],
   skjh: [
     { href: '/skjh/guides/official-pc-download-faq', label: { zh: '官网 / PC 下载', en: 'Official / PC Download', ja: '公式 / PC DL' }, description: { zh: 'PC、移动端、多端互通和安装问题。', en: 'PC, mobile, cross-play, and install questions.', ja: 'PC、モバイル、多端連携、インストール。' } },
@@ -485,20 +485,20 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
   sea: {
     title: { zh: '移动端首发 / 首周运营专题', en: 'Mobile Launch / Week-One Live Ops Hub', ja: 'モバイル開始 / 初週運営特集' },
     description: {
-      zh: '聚焦 7 月 23 日移动端首发、官网入口、gamescom demo、版本中心、下载安装、首周排错、交易系统与资源决策。',
-      en: 'Focus on the July 23 mobile launch, official entry, gamescom demo, version center, download/install, week-one troubleshooting, trade system, and resource decisions.',
-      ja: '7月23日モバイル開始、公式導線、gamescom demo、バージョン特集、DL、初週トラブル、交易、資源判断を整理します。',
+      zh: '聚焦 7 月 23 日移动端首发、官网入口、PC/手机互通、首日排错、首发福利、gamescom demo、交易系统与资源决策。',
+      en: 'Focus on the July 23 mobile launch, official entry, PC/mobile cross-progress, first-day troubleshooting, launch rewards, gamescom demo, trade systems, and resource decisions.',
+      ja: '7月23日モバイル開始、公式導線、PC/モバイル連携、初日対応、開始報酬、gamescom demo、交易、資源判断を整理します。',
     },
     highlights: {
-      zh: ['移动端首发', 'gamescom demo', '首周排错', '贸易场'],
-      en: ['Mobile launch', 'gamescom demo', 'Week-one fixes', 'Trade market'],
-      ja: ['モバイル開始', 'gamescom demo', '初週対応', '交易場'],
+      zh: ['移动端首发', 'PC/手机互通', '首日排错', '首发福利'],
+      en: ['Mobile launch', 'Cross-progress', 'Troubleshooting', 'Launch rewards'],
+      ja: ['モバイル開始', '連携', '初日対応', '開始報酬'],
     },
     kicker: { zh: '今日首发', en: 'Launch day', ja: '開始日' },
     freshness: {
-      zh: '已切换为 2026-07-23 移动端首发日口径，优先承接入口、账号、配置、首周运营和 demo/review 搜索。',
-      en: 'Now uses July 23, 2026 mobile-launch wording, prioritizing entry, account, specs, live ops, and demo/review searches.',
-      ja: '2026-07-23モバイル開始日の表現に更新し、入口、アカウント、環境、初週運営、demo/review検索を優先します。',
+      zh: '已切换为 2026-07-23 移动端首发日口径，优先承接下载入口、互通、黑屏卡顿、福利兑换和 demo/review 搜索。',
+      en: 'Now uses July 23, 2026 mobile-launch wording, prioritizing downloads, cross-progress, crashes/lag, rewards/codes, and demo/review searches.',
+      ja: '2026-07-23モバイル開始日の表現に更新し、DL、連携、黒画面/ラグ、報酬/コード、demo/review検索を優先します。',
     },
     faq: [
       {
@@ -508,9 +508,9 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
           ja: '7月23日以降、最初に何を見るべきですか？',
         },
         answer: {
-          zh: '先看移动端首发 FAQ 和平台入口，再按首周运营总览去排查热修、号角、大脸币和探索查漏。',
-          en: 'Start with the mobile launch FAQ and platform entry, then use the week-one hub for hotfixes, Horns, Face Coins, and exploration cleanup.',
-          ja: 'まずモバイルFAQと入口を確認し、その後初週総覧でHotfix、Horn、Face Coin、探索漏れを確認してください。',
+          zh: '先看移动端首发 FAQ，再按下载入口、互通 FAQ、首日排错、福利兑换码和首周运营总览依次走。',
+          en: 'Start with the mobile launch FAQ, then follow download entry, cross-progress FAQ, troubleshooting, rewards/codes, and the week-one hub.',
+          ja: 'まずモバイルFAQを確認し、DL入口、連携FAQ、初日対応、報酬/コード、初週総覧へ進んでください。',
         },
       },
       {
@@ -526,7 +526,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['mobile-launch-guide', 'week-one-live-ops-overview', 'official-2026-test-timeline-guide', 'ps5-xbox-review-gameplay-faq'],
+    guideIds: ['mobile-troubleshooting-guide', 'pc-mobile-cross-progression-faq', 'download-install-guide', 'launch-rewards-codes-guide'],
   },
   skjh: {
     title: { zh: 'S1 登岛 / 服务器模式 / 防抄家专题', en: 'S1 Island Start / Server Modes / Anti-Raid Hub', ja: 'S1上陸 / サーバーモード / 防衛特集' },
@@ -894,19 +894,19 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       {
         title: { zh: '移动端首发', en: 'Mobile launch', ja: 'モバイル開始' },
         description: { zh: '先把 7 月 23 日移动端入口、账号、区服和首日排错接住。', en: 'Catch July 23 mobile entry, account, server, and first-day troubleshooting first.', ja: '7月23日のモバイル入口、アカウント、サーバー、初日対応を先に押さえます。' },
-        links: [
-          { href: '/sea/guides/mobile-launch-guide', label: { zh: '移动端 FAQ', en: 'Mobile FAQ', ja: 'モバイルFAQ' } },
-          { href: '/sea/guides/platform-download-guide', label: { zh: '平台入口', en: 'Platform entry', ja: '入口' } },
-        ],
-      },
+          links: [
+            { href: '/sea/guides/mobile-launch-guide', label: { zh: '移动端 FAQ', en: 'Mobile FAQ', ja: 'モバイルFAQ' } },
+            { href: '/sea/guides/pc-mobile-cross-progression-faq', label: { zh: '互通 FAQ', en: 'Cross-progress', ja: '連携 FAQ' } },
+          ],
+        },
       {
         title: { zh: '首周运营', en: 'Week-one live ops', ja: '初週運営' },
         description: { zh: '把热修、号角、大脸币、查漏和 gamescom demo 分流到正确页面。', en: 'Route hotfixes, Horns, Face Coins, cleanup, and gamescom demo buzz.', ja: 'Hotfix、Horn、Face Coin、探索漏れ、gamescom demoを分流します。' },
-        links: [
-          { href: '/sea/guides/week-one-live-ops-overview', label: { zh: '首周总览', en: 'Live-ops hub', ja: '初週総覧' } },
-          { href: '/sea/guides/ps5-xbox-review-gameplay-faq', label: { zh: 'Demo / Review', en: 'Demo / Review', ja: 'Demo / Review' } },
-        ],
-      },
+          links: [
+          { href: '/sea/guides/mobile-troubleshooting-guide', label: { zh: '首日排错', en: 'Troubleshooting', ja: '初日対応' } },
+          { href: '/sea/guides/launch-rewards-codes-guide', label: { zh: '福利兑换码', en: 'Rewards / codes', ja: '報酬 / コード' } },
+          ],
+        },
       {
         title: { zh: '养成与配队', en: 'Builds & teams', ja: '育成・編成' },
         description: { zh: '把角色、队伍和节奏榜做成下一跳。', en: 'Turn character, team, and tier questions into the next click.', ja: 'キャラ、編成、Tierの質問を次の導線に変えます。' },
