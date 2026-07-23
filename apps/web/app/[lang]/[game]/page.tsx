@@ -139,7 +139,7 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
     ja: 'アークナイツ：エンドフィールドはハイパーグリフ開発のオープンワールドアクションRPG。アークナイツの世界観を背景に、プレイヤーはドクターとしてタロスII号星で拠点を建設し、オペレーターを指揮してリアルタイム戦闘と探索を行います。Gachiaではキャラ図鑑、武器データベース、ビルドおすすめ、攻略百科を提供。',
   },
   sea: {
-    zh: '遗忘之海是一款极具美术风格的海洋冒险RPG，采用回合制战斗、即时海战与 Roguelite 遗忘之旅多模式。PC端2026年7月9日公测，移动端预计7月内上线。Gachia 会持续整理公测中心、兑换码、角色与 BOSS 档案、捏脸、云捏脸、配置要求、开荒 Build 和海区探索路线。',
+    zh: '遗忘之海是一款极具美术风格的海洋冒险RPG，采用回合制战斗、即时海战与 Roguelite 遗忘之旅多模式。PC端2026年7月9日公测，移动端2026年7月23日10:00首发。Gachia 会持续整理移动端入口、首周运营、兑换码、角色与 BOSS 档案、捏脸、配置要求、开荒 Build 和海区探索路线。',
     en: 'Sea of Remnants is a stylized ocean adventure RPG with turn-based combat, real-time naval battles, and Roguelite Remnant Journey runs. PC open beta is scheduled for July 9, 2026, with mobile expected later in July. Gachia tracks the open beta center, codes, crews, bosses, builds, face sculpting, cloud sculpting, PC specs, and sea-region routes.',
     ja: 'ターン制バトルとリアルタイム海戦を特徴とする海洋アドベンチャーRPG。PC版は2026年7月9日にオープンベータ開始、モバイル版は7月内予定。Gachiaでは公測特集、交換コード、キャラとボス、顔作成、クラウド作成、PC環境、開荒ビルド、海域ルートを整理します。',
   },
@@ -365,35 +365,35 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     ],
   },
   sea: {
-    eyebrow: { zh: '7 月 9 日公测总专题', en: 'July 9 Open Beta Hub', ja: '7月9日CBT特集' },
-    title: { zh: '遗忘之海官网入口｜Wiki、开服攻略、捏脸', en: 'Sea of Remnants official hub | wiki, launch guide, face sculpt', ja: '遺忘之海 公式導線｜Wiki・開服攻略・顔作成' },
+    eyebrow: { zh: '7 月 23 日移动端首发', en: 'July 23 Mobile Launch', ja: '7月23日モバイル開始' },
+    title: { zh: '遗忘之海官网入口｜移动端首发、Wiki、开服攻略', en: 'Sea of Remnants official hub | mobile launch, wiki, launch guide', ja: '遺忘之海 公式導線｜モバイル開始・Wiki・開服攻略' },
     description: {
-      zh: '把遗忘之海官网入口、Wiki、公测版本中心、开服路线、下载安装、角色图鉴、队伍思路和首月福利集中放进首页，优先接住最强搜索词。',
-      en: 'Bring the Sea of Remnants official hub, wiki, open beta center, launch route, download/install help, character wiki, team ideas, and launch rewards to the front page.',
-      ja: '遺忘之海の公式導線、Wiki、CBT特集、開服ルート、DL、キャラ図鑑、編成案、初月報酬をトップに集約します。',
+      zh: '把 7 月 23 日移动端首发、官网入口、Wiki、首周运营、下载安装、角色图鉴和 gamescom demo 海外曝光信号集中放进首页。',
+      en: 'Bring the July 23 mobile launch, official hub, wiki, week-one live ops, download/install help, character wiki, and gamescom demo signal to the front page.',
+      ja: '7月23日モバイル開始、公式導線、Wiki、初週運営、DL、キャラ図鑑、gamescom demoの信号をトップに集約します。',
     },
     chips: {
-      zh: ['7/9 公测', '版本中心', '捏脸', '下载安装', '队伍思路', '节奏榜'],
-      en: ['July 9 launch', 'Version center', 'Face sculpting', 'Download/install', 'Team ideas', 'Tier list'],
-      ja: ['7/9CBT', 'バージョン特集', '顔作成', 'DL', '編成案', 'Tier'],
+      zh: ['7/23 首发', '移动端', '首周运营', 'gamescom demo', '下载安装', '节奏榜'],
+      en: ['July 23', 'Mobile', 'Live ops', 'gamescom demo', 'Download/install', 'Tier list'],
+      ja: ['7/23', 'モバイル', '初週運営', 'gamescom demo', 'DL', 'Tier'],
     },
-    cta: { zh: '去版本中心', en: 'Open version center', ja: 'バージョン特集へ' },
+    cta: { zh: '去移动端首发 FAQ', en: 'Open mobile launch FAQ', ja: 'モバイルFAQへ' },
     tracks: {
       zh: [
         {
-          title: '公测节点',
-          description: '先把 7 月 9 日公测和首月节奏接住。',
+          title: '移动端首发',
+          description: '先把 7 月 23 日移动端入口、账号、配置和首日排错接住。',
           links: [
-            { href: '/sea/guides/open-beta-version-center', label: '公测版本中心' },
-            { href: '/sea/guides/steam-release-gacha-solo-faq', label: 'Steam / FAQ' },
+            { href: '/sea/guides/mobile-launch-guide', label: '移动端 FAQ' },
+            { href: '/sea/guides/platform-download-guide', label: '平台入口' },
           ],
         },
         {
-          title: '安装与配置',
-          description: '把下载安装和设备配置问题继续分流到可执行页面。',
+          title: '首周运营',
+          description: '把热修、号角、大脸币、查漏和 gamescom demo 分流到正确页面。',
           links: [
-            { href: '/sea/guides/download-install-guide', label: '下载安装' },
-            { href: '/sea/guides/platform-download-guide', label: '平台下载' },
+            { href: '/sea/guides/week-one-live-ops-overview', label: '首周总览' },
+            { href: '/sea/guides/ps5-xbox-review-gameplay-faq', label: 'Demo / Review' },
           ],
         },
         {
@@ -408,19 +408,19 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
       ],
       en: [
         {
-          title: 'Open beta node',
-          description: 'Catch the July 9 open beta timing and first-month momentum.',
+          title: 'Mobile launch',
+          description: 'Catch July 23 mobile entry, account, specs, and first-day troubleshooting.',
           links: [
-            { href: '/sea/guides/open-beta-version-center', label: 'Open beta center' },
-            { href: '/sea/guides/steam-release-gacha-solo-faq', label: 'Steam / FAQ' },
+            { href: '/sea/guides/mobile-launch-guide', label: 'Mobile FAQ' },
+            { href: '/sea/guides/platform-download-guide', label: 'Platform entry' },
           ],
         },
         {
-          title: 'Install and specs',
-          description: 'Route download and device-setup questions into actionable pages.',
+          title: 'Week-one live ops',
+          description: 'Route hotfixes, Horns, Face Coins, cleanup, and gamescom demo buzz.',
           links: [
-            { href: '/sea/guides/download-install-guide', label: 'Download/install' },
-            { href: '/sea/guides/platform-download-guide', label: 'Platform download' },
+            { href: '/sea/guides/week-one-live-ops-overview', label: 'Live-ops hub' },
+            { href: '/sea/guides/ps5-xbox-review-gameplay-faq', label: 'Demo / Review' },
           ],
         },
         {
@@ -435,19 +435,19 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
       ],
       ja: [
         {
-          title: 'CBT導線',
-          description: '7月9日CBTと初月の流れを受け止めます。',
+          title: 'モバイル開始',
+          description: '7月23日のモバイル導線、アカウント、環境、初日トラブルを受け止めます。',
           links: [
-            { href: '/sea/guides/open-beta-version-center', label: 'CBT特集' },
-            { href: '/sea/guides/steam-release-gacha-solo-faq', label: 'Steam / FAQ' },
+            { href: '/sea/guides/mobile-launch-guide', label: 'モバイルFAQ' },
+            { href: '/sea/guides/platform-download-guide', label: '入口' },
           ],
         },
         {
-          title: 'DLと環境',
-          description: 'DLと端末環境の検索を実用ページへつなげます。',
+          title: '初週運営',
+          description: 'Hotfix、Horn、Face Coin、探索漏れ、gamescom demoを分流します。',
           links: [
-            { href: '/sea/guides/download-install-guide', label: 'DLとインストール' },
-            { href: '/sea/guides/platform-download-guide', label: 'プラットフォームDL' },
+            { href: '/sea/guides/week-one-live-ops-overview', label: '初週総覧' },
+            { href: '/sea/guides/ps5-xbox-review-gameplay-faq', label: 'Demo / Review' },
           ],
         },
         {
@@ -770,7 +770,7 @@ const FEATURED_GUIDE_IDS: Record<string, string[]> = {
   guihuan: ['test-recruit-international-download-faq', 'official-release-company-faq', 'test-release-timeline-guide'],
   ananta: ['gameplay-city-no-gacha-comparison-faq', 'release-date-beta-pc-faq', 'preregistration-no-gacha-guide'],
   endfield: ['official-download-specs-homecoming-faq', 'homecoming-operators-map-route', 'blueprint-aic-factory-guide'],
-  sea: ['ps5-xbox-review-gameplay-faq', 'steam-release-gacha-solo-faq', 'platform-download-guide'],
+  sea: ['mobile-launch-guide', 'week-one-live-ops-overview', 'ps5-xbox-review-gameplay-faq'],
   skjh: ['official-pc-download-faq', 'first-2-hours-starter-route', 'base-location-anti-raid-plan'],
 };
 

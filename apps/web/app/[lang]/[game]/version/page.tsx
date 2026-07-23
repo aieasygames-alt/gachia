@@ -102,9 +102,9 @@ const INTENT_LINKS: Partial<Record<GameId, IntentLink[]>> = {
     { href: '/endfield/guides/combat-system-guide', label: { zh: '玩法 / 配置', en: 'Gameplay / Specs', ja: '玩法 / 環境' }, description: { zh: '承接 wiki、角色、配置和玩法问题。', en: 'Capture wiki, character, specs, and gameplay questions.', ja: 'Wiki、キャラ、環境、玩法検索を承接。' } },
   ],
   sea: [
-    { href: '/sea/guides/official-2026-test-timeline-guide', label: { zh: '官网 / 测试', en: 'Official / Tests', ja: '公式 / テスト' }, description: { zh: '官网、Wanderer Test、预约和发行状态。', en: 'Official site, Wanderer Test, preregistration, and release status.', ja: '公式、Wanderer Test、事前登録、リリース状態。' } },
-    { href: '/sea/guides/download-install-guide', label: { zh: '下载 / 配置', en: 'Download / Specs', ja: 'DL / 環境' }, description: { zh: '下载入口、PC 配置和平台节奏。', en: 'Download entry, PC specs, and platform timing.', ja: 'DL入口、PC環境、プラットフォーム時期。' } },
-    { href: '/sea/guides/trade-market-guide', label: { zh: '贸易场', en: 'Trade market', ja: '交易場' }, description: { zh: '好金砖、交易和零氪首周路线。', en: 'Good Gold Bricks, trading, and F2P week-one route.', ja: '好金砖、交易、無課金初週ルート。' } },
+    { href: '/sea/guides/mobile-launch-guide', label: { zh: '移动端首发', en: 'Mobile launch', ja: 'モバイル開始' }, description: { zh: '7 月 23 日入口、账号、区服、配置和首日排错。', en: 'July 23 entry, account, server, specs, and first-day troubleshooting.', ja: '7月23日の入口、アカウント、サーバー、環境、初日対応。' } },
+    { href: '/sea/guides/week-one-live-ops-overview', label: { zh: '首周运营', en: 'Week-one live ops', ja: '初週運営' }, description: { zh: '热修、号角、大脸币、查漏和 gamescom demo 分流。', en: 'Hotfixes, Horns, Face Coins, cleanup, and gamescom demo routing.', ja: 'Hotfix、Horn、Face Coin、探索漏れ、gamescom demo導線。' } },
+    { href: '/sea/guides/ps5-xbox-review-gameplay-faq', label: { zh: 'Demo / Review', en: 'Demo / Review', ja: 'Demo / Review' }, description: { zh: '承接 gamescom、gameplay、review、Steam、PS5/Xbox 搜索。', en: 'Capture gamescom, gameplay, review, Steam, and PS5/Xbox searches.', ja: 'gamescom、gameplay、review、Steam、PS5/Xbox検索を承接。' } },
   ],
   skjh: [
     { href: '/skjh/guides/official-pc-download-faq', label: { zh: '官网 / PC 下载', en: 'Official / PC Download', ja: '公式 / PC DL' }, description: { zh: 'PC、移动端、多端互通和安装问题。', en: 'PC, mobile, cross-play, and install questions.', ja: 'PC、モバイル、多端連携、インストール。' } },
@@ -483,50 +483,50 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
     guideIds: ['official-download-specs-homecoming-faq', 'homecoming-operators-map-route', 'blueprint-aic-factory-guide'],
   },
   sea: {
-    title: { zh: '官网 / 测试 / 开服专题', en: 'Official / Test / Launch Hub', ja: '公式・テスト・ローンチ特集' },
+    title: { zh: '移动端首发 / 首周运营专题', en: 'Mobile Launch / Week-One Live Ops Hub', ja: 'モバイル開始 / 初週運営特集' },
     description: {
-      zh: '聚焦官网入口、2026 测试/预约动态、版本中心、下载安装、开服攻略、交易系统与资源决策。',
-      en: 'Focus on official entry, 2026 test/preregistration signals, version center, download/install, launch guide, trade system, and resource decisions.',
-      ja: '公式導線、2026テスト/事前登録、バージョン特集、DL、開服攻略、交易、資源判断を整理します。',
+      zh: '聚焦 7 月 23 日移动端首发、官网入口、gamescom demo、版本中心、下载安装、首周排错、交易系统与资源决策。',
+      en: 'Focus on the July 23 mobile launch, official entry, gamescom demo, version center, download/install, week-one troubleshooting, trade system, and resource decisions.',
+      ja: '7月23日モバイル開始、公式導線、gamescom demo、バージョン特集、DL、初週トラブル、交易、資源判断を整理します。',
     },
     highlights: {
-      zh: ['官网入口', '测试时间线', '开服攻略', '贸易场'],
-      en: ['Official entry', 'Test timeline', 'Launch guide', 'Trade market'],
-      ja: ['公式導線', 'テスト時期', '開服攻略', '交易場'],
+      zh: ['移动端首发', 'gamescom demo', '首周排错', '贸易场'],
+      en: ['Mobile launch', 'gamescom demo', 'Week-one fixes', 'Trade market'],
+      ja: ['モバイル開始', 'gamescom demo', '初週対応', '交易場'],
     },
-    kicker: { zh: '开服抢词', en: 'Launch capture', ja: '開服対策' },
+    kicker: { zh: '今日首发', en: 'Launch day', ja: '開始日' },
     freshness: {
-      zh: '围绕公测、版本中心、开服玩法和养成路线持续整理。',
-      en: 'Open beta, version center, launch-play, and build-route topics are refreshed here.',
-      ja: 'CBT、バージョン特集、開服コンテンツ、育成導線を継続整理しています。',
+      zh: '已切换为 2026-07-23 移动端首发日口径，优先承接入口、账号、配置、首周运营和 demo/review 搜索。',
+      en: 'Now uses July 23, 2026 mobile-launch wording, prioritizing entry, account, specs, live ops, and demo/review searches.',
+      ja: '2026-07-23モバイル開始日の表現に更新し、入口、アカウント、環境、初週運営、demo/review検索を優先します。',
     },
     faq: [
       {
         question: {
-          zh: '海之遗留现在最常搜的是什么？',
-          en: 'What are people searching for most about Sea right now?',
-          ja: 'Sea関連で今よく検索されるものは？',
+          zh: '7 月 23 日以后最该先看什么？',
+          en: 'What should I read first after July 23?',
+          ja: '7月23日以降、最初に何を見るべきですか？',
         },
         answer: {
-          zh: '公测时间、版本中心、下载安装、角色图鉴、队伍思路和首月开服玩法最常被搜索。',
-          en: 'The open beta date, version center, download/install, character wiki, team building, and launch basics are the biggest search topics.',
-          ja: 'CBT日程、バージョン特集、DL、キャラ図鑑、編成案、初月の遊び方が主な検索テーマです。',
+          zh: '先看移动端首发 FAQ 和平台入口，再按首周运营总览去排查热修、号角、大脸币和探索查漏。',
+          en: 'Start with the mobile launch FAQ and platform entry, then use the week-one hub for hotfixes, Horns, Face Coins, and exploration cleanup.',
+          ja: 'まずモバイルFAQと入口を確認し、その後初週総覧でHotfix、Horn、Face Coin、探索漏れを確認してください。',
         },
       },
       {
         question: {
-          zh: '想看联动和入坑路线去哪里？',
-          en: 'Where do I find collabs and starter routes?',
-          ja: 'コラボと入門ルートはどこで見られますか？',
+          zh: 'gamescom demo 应该怎么理解？',
+          en: 'How should I read the gamescom demo signal?',
+          ja: 'gamescom demoはどう理解すべきですか？',
         },
         answer: {
-          zh: '先看公测版本中心，再打开开服攻略、下载安装和队伍思路。',
-          en: 'Start with the open beta hub, then open the launch guide, download/install, and team-building pages.',
-          ja: 'まずCBT特集、次に開服攻略、DL、編成案を見てください。',
+          zh: '把它当作海外试玩和曝光信号，适合更新 demo、gameplay、review、Steam、PS5/Xbox 搜索页，但不要写成主机版日期确认。',
+          en: 'Treat it as global hands-on/exposure. It supports demo, gameplay, review, Steam, and PS5/Xbox pages, but not as a confirmed console-date signal.',
+          ja: '海外試遊・露出の信号として扱い、demo、gameplay、review、Steam、PS5/Xboxページに反映します。コンソール日程確定とは扱いません。',
         },
       },
     ],
-    guideIds: ['ps5-xbox-review-gameplay-faq', 'steam-release-gacha-solo-faq', 'official-2026-test-timeline-guide', 'platform-download-guide'],
+    guideIds: ['mobile-launch-guide', 'week-one-live-ops-overview', 'official-2026-test-timeline-guide', 'ps5-xbox-review-gameplay-faq'],
   },
   skjh: {
     title: { zh: 'S1 登岛 / 服务器模式 / 防抄家专题', en: 'S1 Island Start / Server Modes / Anti-Raid Hub', ja: 'S1上陸 / サーバーモード / 防衛特集' },
@@ -892,19 +892,19 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
   sea: {
     zh: [
       {
-        title: { zh: '公测节点', en: 'Open Beta', ja: 'CBT' },
-        description: { zh: '先把 7 月 9 日公测和首月节奏接住。', en: 'Catch the July 9 beta timing and month-one momentum first.', ja: '7月9日CBTと初月の流れを先に押さえます。' },
+        title: { zh: '移动端首发', en: 'Mobile launch', ja: 'モバイル開始' },
+        description: { zh: '先把 7 月 23 日移动端入口、账号、区服和首日排错接住。', en: 'Catch July 23 mobile entry, account, server, and first-day troubleshooting first.', ja: '7月23日のモバイル入口、アカウント、サーバー、初日対応を先に押さえます。' },
         links: [
-          { href: '/sea/guides/open-beta-version-center', label: { zh: '公测版本中心', en: 'Open Beta Center', ja: 'CBT特集' } },
-          { href: '/sea/guides/launch-day-guide', label: { zh: '开服攻略', en: 'Launch guide', ja: '開服攻略' } },
+          { href: '/sea/guides/mobile-launch-guide', label: { zh: '移动端 FAQ', en: 'Mobile FAQ', ja: 'モバイルFAQ' } },
+          { href: '/sea/guides/platform-download-guide', label: { zh: '平台入口', en: 'Platform entry', ja: '入口' } },
         ],
       },
       {
-        title: { zh: '安装与入门', en: 'Install & onboarding', ja: 'DL・入門' },
-        description: { zh: '下载安装、平台支持和开服准备一并整理。', en: 'Group download/install, platform support, and launch prep together.', ja: 'DL、対応プラットフォーム、開服準備をまとめます。' },
+        title: { zh: '首周运营', en: 'Week-one live ops', ja: '初週運営' },
+        description: { zh: '把热修、号角、大脸币、查漏和 gamescom demo 分流到正确页面。', en: 'Route hotfixes, Horns, Face Coins, cleanup, and gamescom demo buzz.', ja: 'Hotfix、Horn、Face Coin、探索漏れ、gamescom demoを分流します。' },
         links: [
-          { href: '/sea/guides/download-install-guide', label: { zh: '下载安装', en: 'Download/install', ja: 'DLとインストール' } },
-          { href: '/sea/guides/platform-download-guide', label: { zh: '平台下载', en: 'Platform download', ja: 'プラットフォームDL' } },
+          { href: '/sea/guides/week-one-live-ops-overview', label: { zh: '首周总览', en: 'Live-ops hub', ja: '初週総覧' } },
+          { href: '/sea/guides/ps5-xbox-review-gameplay-faq', label: { zh: 'Demo / Review', en: 'Demo / Review', ja: 'Demo / Review' } },
         ],
       },
       {
