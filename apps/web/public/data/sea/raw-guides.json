@@ -2272,5 +2272,380 @@
         "answer": "Do not promise timing early. Platform schedules can differ, so use the official site, Steam store, and platform announcements."
       }
     ]
+  },
+  {
+    "id": "identity-v-mobile-launch-event-guide",
+    "title": "《遗忘之海》第五人格联动移动端活动指南：纽扣眼、狂欢之椅、拍照动作和领取顺序",
+    "titleEn": "Sea of Remnants Identity V Mobile Launch Event Guide: Button Eyes, Rocket Chair, Pose, and Reward Checklist",
+    "category": "event",
+    "categoryZh": "活动攻略",
+    "categoryEn": "Event",
+    "summary": "面向 7 月 23 日移动端上线后的第五人格联动搜索，整理已公开奖励、领取前检查、账号区服、任务顺序和资源保留策略。",
+    "summaryEn": "A mobile-launch checklist for the Identity V collaboration, covering known rewards, account/server checks, task order, and resource planning.",
+    "tags": [
+      "第五人格联动",
+      "纽扣眼",
+      "狂欢之椅",
+      "拍照动作",
+      "移动端首发",
+      "活动奖励",
+      "Identity V"
+    ],
+    "content": "## 先给结论\n\n移动端 7 月 23 日上线后，第五人格联动是最值得优先确认的首月活动之一。它的核心搜索词不是“强度”，而是 **纽扣眼五官、狂欢之椅、拍照动作、不解、联动任务、奖励怎么领取**。\n\n站内建议先把账号、区服和移动端入口确认好，再做联动任务，避免奖励领到不常用的区服或渠道账号。\n\n公开来源可参考官方前瞻与 TapTap 官方动态：[6 月 26 日前瞻情报](https://sea.163.com/news/official/20260625/42726_1305601.html)、[TapTap 官方论坛](https://www.taptap.cn/app/755604/topic?type=official)。\n\n## 联动奖励速查\n\n| 奖励/内容 | 类型 | 玩家要确认什么 |\n|---|---|---|\n| 纽扣眼 | 旅人五官/捏脸组件 | 是否直接领取、是否需要完成任务 |\n| 狂欢之椅 | 家具/拍照道具 | 是否绑定活动、是否限时 |\n| 拍照动作“不解” | 表情/动作 | 是否和拍照玩法或任务进度绑定 |\n| 联动任务 | 活动入口 | 每日刷新、累计任务、截止时间 |\n| 平台福利 | 渠道奖励 | PC、iOS、Android、TapTap 是否互认 |\n\n## 移动端玩家领取顺序\n\n1. 先确认自己登录的是长期要玩的账号。\n2. 进入常用区服后再领取预约、邮件和平台福利。\n3. 打开活动页，确认第五人格联动是否有独立入口。\n4. 先做一次性任务，再补每日/累计任务。\n5. 领取外观、家具、动作后，去捏脸和拍照功能里检查是否到账。\n\n## 为什么不要急着换区\n\n首发期很多问题都和账号、渠道和区服有关：手机端能玩，不代表所有平台奖励都可以随便迁移。第五人格联动如果含限时外观或家具，建议先在主账号完成领取。\n\n如果你还没确定 PC 和手机端是否同一个账号路线，先看：[PC、iOS、Android 互通 FAQ](/zh/sea/guides/pc-mobile-cross-progression-faq)。\n\n## 和捏脸玩法怎么结合\n\n纽扣眼是这次联动最适合传播的视觉点。建议路线：\n\n- 先领取纽扣眼，再进入旅人外观/捏脸。\n- 如果之前用过云捏脸，先保存原方案再尝试联动五官。\n- 拍照动作和狂欢之椅适合做社交平台截图素材。\n\n站内可继续看：[云捏脸指南](/zh/sea/guides/cloud-face-sculpt-guide) 与 [移动端首发 FAQ](/zh/sea/guides/mobile-launch-guide)。\n\n## 资源规划提醒\n\n第五人格联动偏外观和活动奖励，不建议为了“可能有隐藏强度奖励”提前清空抽卡资源。更稳的做法是：\n\n| 玩家类型 | 建议 |\n|---|---|\n| 零氪/微氪 | 先拿免费联动奖励，抽卡资源留给主队补强 |\n| 外观党 | 优先确认纽扣眼、家具、动作是否限时 |\n| 强度党 | 联动奖励实装前，不把它当作必抽强度内容 |\n| 回流玩家 | 先做移动端登录、邮件、活动入口检查 |\n\n## 常见问题\n\n### 第五人格联动是移动端专属吗？\n\n目前更安全的说法是：它属于公测首月联动内容，具体入口、领取平台和区服规则以游戏内活动页为准。\n\n### 纽扣眼可以永久保留吗？\n\n如果游戏内标注为限时领取、永久持有，就按活动说明处理；在未确认前，建议活动开放后尽早领取。\n\n### 没玩过第五人格要做吗？\n\n值得做。奖励偏外观和拍照表达，即使不了解第五人格，也能作为旅人形象和社交截图素材。\n\n## 站内下一步\n\n- [联动矩阵总览](/zh/sea/guides/collaborations-guide)\n- [第五人格联动资源规划](/zh/sea/guides/identity-v-collaboration-guide)\n- [移动端首日排错](/zh/sea/guides/mobile-troubleshooting-guide)",
+    "contentEn": "## Quick Answer\n\nAfter the July 23 mobile launch, the Identity V collaboration is one of the highest-intent event topics for Sea of Remnants. The core questions are about button-eye customization, the Rocket Chair-style prop, the photo pose, event tasks, and whether rewards are time-limited.\n\nUse official notices and the in-game event page as the source of truth. Good public starting points are the official preview and the TapTap official forum: https://sea.163.com/news/official/20260625/42726_1305601.html and https://www.taptap.cn/app/755604/topic?type=official.\n\n## Reward Checklist\n\n| Item | Type | What to check |\n|---|---|---|\n| Button eyes | Traveler customization | Claim route and task requirement |\n| Chair prop | Furniture/photo prop | Time limit and ownership rule |\n| Photo pose | Emote/pose | Whether it unlocks through event tasks |\n| Event tasks | Activity route | Daily reset, cumulative tasks, end date |\n| Platform gifts | Channel rewards | PC, iOS, Android, and TapTap boundaries |\n\n## Mobile Claim Order\n\n1. Log into the account you plan to keep using.\n2. Enter the correct server before claiming mail or channel rewards.\n3. Open the event page and check the Identity V collaboration tab.\n4. Finish one-time tasks first, then daily or cumulative tasks.\n5. Verify claimed items in customization, furniture, and photo menus.\n\n## Resource Advice\n\nDo not spend all pull currency just because a collaboration is live. If rewards are mostly cosmetic or social, free-to-play players should collect event items first and keep character resources for the main team.\n\n## Next Reads\n\n- [Collaboration hub](/en/sea/guides/collaborations-guide)\n- [Cross-progression FAQ](/en/sea/guides/pc-mobile-cross-progression-faq)\n- [Mobile troubleshooting](/en/sea/guides/mobile-troubleshooting-guide)",
+    "faq": [
+      {
+        "questionZh": "第五人格联动移动端上线后先做什么？",
+        "question": "What should I do first for the Identity V collab on mobile?",
+        "answerZh": "先确认账号和区服，再进入活动页查看联动任务、截止时间和奖励是否限时。",
+        "answer": "Confirm account and server first, then check the event page for tasks, deadlines, and limited rewards."
+      },
+      {
+        "questionZh": "纽扣眼和狂欢之椅是强度奖励吗？",
+        "question": "Are button eyes and the chair combat rewards?",
+        "answerZh": "它们更偏外观、家具和拍照表达。是否还有其他奖励，以游戏内活动说明为准。",
+        "answer": "They are best treated as cosmetic, furniture, or photo-expression rewards. Any additional rewards should follow in-game notices."
+      },
+      {
+        "questionZh": "联动奖励可以跨平台领取吗？",
+        "question": "Can collab rewards be claimed across platforms?",
+        "answerZh": "不要默认互认。先看同账号、同区服和渠道限制，再领取关键奖励。",
+        "answer": "Do not assume full cross-platform sharing. Check account, server, and channel rules before claiming key rewards."
+      }
+    ]
+  },
+  {
+    "id": "spongebob-collab-summer-faq",
+    "title": "《遗忘之海》海绵宝宝联动暑期 FAQ：蟹堡王、比奇堡、活动奖励与上线时间怎么判断",
+    "titleEn": "Sea of Remnants SpongeBob Summer Collab FAQ: Krusty Krab, Bikini Bottom, Rewards, and Timing",
+    "category": "event",
+    "categoryZh": "活动攻略",
+    "categoryEn": "Event",
+    "summary": "整理海绵宝宝联动的暑期搜索需求：已公开信号、可能玩法、玩家该等哪些官方信息，以及和首月资源规划如何衔接。",
+    "summaryEn": "A summer-collab FAQ for SpongeBob search intent, covering confirmed signals, possible gameplay forms, what to wait for, and resource planning boundaries.",
+    "tags": [
+      "海绵宝宝联动",
+      "SpongeBob",
+      "蟹堡王",
+      "比奇堡",
+      "暑期活动",
+      "联动奖励",
+      "Sea of Remnants"
+    ],
+    "content": "## 先给结论\n\n海绵宝宝联动是《遗忘之海》首月后最适合做大众传播的暑期内容之一。玩家搜索通常会围绕 **海绵宝宝联动什么时候出、蟹堡王、比奇堡、联动皮肤、活动奖励、是不是限时** 展开。\n\n当前站内采用保守口径：前瞻已把海绵宝宝列入暑期联动矩阵，但具体活动规则、奖励清单和截止时间仍要等官方活动页或游戏内公告确认。\n\n公开来源：[6 月 26 日官方前瞻情报](https://sea.163.com/news/official/20260625/42726_1305601.html)、[TapTap 官方论坛](https://www.taptap.cn/app/755604/topic?type=official)。\n\n## 玩家最关心什么\n\n| 搜索问题 | 当前建议回答 |\n|---|---|\n| 海绵宝宝联动什么时候上线 | 关注暑期版本公告，不把前瞻窗口当作精确日期 |\n| 会不会有蟹堡王/比奇堡 | 等官方活动页确认场景、道具或家具形式 |\n| 有没有限定皮肤 | 不提前承诺，先看奖励是否外观、家具、动作或任务道具 |\n| 是否需要氪金 | 先确认免费任务、商店兑换和礼包边界 |\n| 错过还能补吗 | 活动开放后优先看是否限时、是否复刻 |\n\n## 活动上线前清单\n\n1. 关注游戏内公告和官方社区，不只看二手截图。\n2. 保留一部分通用资源，避免首周全部投入非联动内容。\n3. 如果联动偏外观，先判断自己是否外观党。\n4. 如果有活动商店，先换限时物，再换常驻材料。\n5. 记录每日任务刷新时间，避免最后一天补不完累计进度。\n\n## 可能的活动形态\n\n以下是基于同类联动的内容承接角度，不等于官方最终规则：\n\n| 形态 | 站内会重点记录 |\n|---|---|\n| 剧情/岛屿事件 | 任务路线、NPC、奖励节点 |\n| 家具/基地装饰 | 是否限时、获取方式、展示位置 |\n| 拍照动作/表情 | 解锁条件、社交截图玩法 |\n| 活动商店 | 优先兑换顺序、货币效率 |\n| 登录/签到 | 天数要求、漏签补救、截止时间 |\n\n## 和首月养成怎么衔接\n\n如果你是移动端 7 月 23 日之后入坑，优先级建议是：\n\n| 优先级 | 内容 |\n|---|---|\n| P0 | 主线、下载、互通、首日排错 |\n| P1 | 第五人格联动、开服福利、兑换码 |\n| P1 | 第一队成型和每周资源入口 |\n| P2 | 海绵宝宝联动预留资源与活动商店 |\n| P2 | 家具、拍照、外观收集 |\n\n## FAQ\n\n### 海绵宝宝联动确定了吗？\n\n已在官方前瞻联动矩阵中出现；具体上线日期、玩法和奖励请等官方后续公告。\n\n### 这类联动会影响强度吗？\n\n不建议提前判断。跨 IP 联动常见内容是外观、家具、剧情活动和社交道具，是否涉及角色或强度以游戏内说明为准。\n\n### 需要现在开始囤资源吗？\n\n可以保留一部分通用货币，但不建议因为未公布的奖励牺牲第一队养成。先把主线、周常和首月活动跑稳。\n\n## 站内下一步\n\n- [联动矩阵总览](/zh/sea/guides/collaborations-guide)\n- [移动端首发 FAQ](/zh/sea/guides/mobile-launch-guide)\n- [首周每日清单](/zh/sea/guides/launch-week-daily-checklist)\n- [N3、深渊与进阶路线](/zh/sea/guides/n3-abyss-week-one-route)",
+    "contentEn": "## Quick Answer\n\nThe SpongeBob collaboration is a strong summer search cluster for Sea of Remnants. Search intent usually centers on release timing, Bikini Bottom/Krusty Krab-style content, cosmetics, event rewards, and whether rewards are limited.\n\nUse a conservative framing: the collaboration appeared in the official preview matrix, but exact event rules, reward lists, and end dates should be confirmed through official notices or the in-game event page.\n\nSources: https://sea.163.com/news/official/20260625/42726_1305601.html and https://www.taptap.cn/app/755604/topic?type=official.\n\n## What to Watch\n\n| Question | Safe answer |\n|---|---|\n| When does it launch? | Wait for the summer event notice, not just preview-window wording |\n| Will it include themed locations? | Wait for the event page to confirm scenes, props, or furniture |\n| Are there limited skins? | Do not assume; check whether rewards are cosmetics, furniture, poses, or materials |\n| Is it paid? | Check free tasks, event shop, and bundle boundaries first |\n| Can missed rewards return? | Look for limited, rerun, or permanent labels in-game |\n\n## Pre-Event Checklist\n\n1. Follow official notices and the in-game event page.\n2. Keep some flexible currency, but do not starve your main team.\n3. Prioritize limited items first if an event shop opens.\n4. Track daily reset and cumulative task requirements.\n5. Separate confirmed rewards from community speculation.\n\n## Next Reads\n\n- [Collaboration hub](/en/sea/guides/collaborations-guide)\n- [Mobile launch FAQ](/en/sea/guides/mobile-launch-guide)\n- [Week-one progression route](/en/sea/guides/n3-abyss-week-one-route)",
+    "faq": [
+      {
+        "questionZh": "海绵宝宝联动什么时候上线？",
+        "question": "When does the SpongeBob collab launch?",
+        "answerZh": "目前应以暑期后续官方公告和游戏内活动页为准，不建议把前瞻窗口当成精确日期。",
+        "answer": "Use later official notices and the in-game event page as the source of truth; do not treat preview-window wording as an exact date."
+      },
+      {
+        "questionZh": "会有蟹堡王或比奇堡内容吗？",
+        "question": "Will there be Krusty Krab or Bikini Bottom content?",
+        "answerZh": "这类词适合承接玩家搜索，但具体场景、家具、道具或活动形式要等官方确认。",
+        "answer": "Those are useful search intents, but specific scenes, furniture, props, or event formats require official confirmation."
+      },
+      {
+        "questionZh": "为了海绵宝宝联动要囤抽卡资源吗？",
+        "question": "Should I save pull currency for the SpongeBob collab?",
+        "answerZh": "可以留一点弹性资源，但不要牺牲第一队养成。是否涉及抽取内容，以活动规则为准。",
+        "answer": "Keep some flexibility, but do not weaken your first team. Whether pulls are involved depends on the event rules."
+      }
+    ]
+  },
+  {
+    "id": "memory-tower-weekly-dredging-guide",
+    "title": "《遗忘之海》记忆之塔与每周打捞指南：往日之影、漂泊之家、探索者勋章怎么排优先级",
+    "titleEn": "Sea of Remnants Memory Tower Weekly Dredging Guide: Past Shadows, Drifting Home, and Explorer Medals",
+    "category": "progression",
+    "categoryZh": "养成攻略",
+    "categoryEn": "Progression",
+    "summary": "把移动端上线后的长期留存关键词整理成周常路线：记忆之塔、每周打捞、往日之影、漂泊之家、探索者勋章、船歌和镶嵌资源怎么安排。",
+    "summaryEn": "A weekly progression route for Memory Tower, dredging, Past Shadows, Drifting Home, Explorer Medals, ship songs, and socketing resources.",
+    "tags": [
+      "记忆之塔",
+      "每周打捞",
+      "往日之影",
+      "漂泊之家",
+      "探索者勋章",
+      "船歌",
+      "海螺碎片",
+      "养成路线"
+    ],
+    "content": "## 先给结论\n\n移动端上线后，玩家很快会从“怎么下载、怎么领福利”进入长期问题：**记忆之塔打不打、每周打捞先做什么、往日之影怎么养、漂泊之家要不要升级、探索者勋章换什么、船歌和镶嵌资源给谁**。\n\n最稳的顺序是：主线解锁系统 > 第一队稳定 > 每周打捞/记忆之塔 > 漂泊之家与探索者勋章 > 船歌、海螺碎片、装备镶嵌。\n\n## 周常优先级表\n\n| 优先级 | 系统 | 为什么先做 |\n|---|---|---|\n| P0 | 主线与系统解锁 | 没开系统就没有稳定周常循环 |\n| P0 | 第一队等级/技能/生存位 | 高压内容先看能否站住 |\n| P1 | 记忆之塔/每周打捞 | 周期奖励错过就少一轮长期收益 |\n| P1 | 往日之影 | 影响主队输出、生存和循环上限 |\n| P1 | 漂泊之家 | 关系到海上长期收益和探索者勋章积累 |\n| P2 | 船歌/海螺碎片 | 核心角色优先，不要平均分散 |\n| P2 | 装备镶嵌 | 先确认拆换/覆盖成本，再投入高价值资源 |\n\n## 每周路线建议\n\n### 周一或刷新后\n\n1. 检查记忆之塔、打捞和深渊类入口是否刷新。\n2. 先用主队打一轮能稳定通关的层数。\n3. 如果卡层，不要硬凹，先补等级、技能和往日之影。\n\n### 周中\n\n1. 清理漂泊之家和海上探索相关任务。\n2. 记录探索者勋章的获取量和兑换目标。\n3. 把活动任务、兑换码和邮件奖励补齐。\n\n### 周末\n\n1. 回头挑战还差一点的记忆之塔/深渊层。\n2. 统一分配船歌、海螺碎片和镶嵌材料。\n3. 检查下周是否有联动、热修或版本活动。\n\n## 往日之影怎么配资源\n\n| 队伍状态 | 资源投放 |\n|---|---|\n| 主 C 伤害不足 | 先强化输出向往日之影，别分给第二队 |\n| 经常暴毙 | 生存位和减伤/治疗相关词条优先 |\n| 技能循环卡手 | 看循环、能量、速度或队伍协同词条 |\n| 准备打高压层 | 主队三人先成型，再考虑替补 |\n\n如果你还不清楚往日之影是什么，先看：[过往之影指南](/zh/sea/guides/past-shadows-guide)。\n\n## 漂泊之家与探索者勋章\n\n漂泊之家更像长期收益入口，不一定带来立刻的战斗力提升，但会影响你后续的海上探索节奏。建议把它当成“每周都摸一下”的系统：\n\n- 有周期奖励的入口优先于一次性小收益。\n- 探索者勋章先看是否能换限时或稀缺资源。\n- 不清楚兑换性价比时，先不要把勋章清空。\n- 如果活动改规则，以游戏内兑换商店显示为准。\n\n## 船歌、海螺碎片和镶嵌\n\n这些资源最容易在首周被浪费。建议三条原则：\n\n1. 先给主 C 或核心循环角色。\n2. 不确定毕业方向时，低成本试错，高价值材料先留。\n3. 看到“覆盖、不可拆、不可返还”等提示时暂停。\n\n## 常见卡点\n\n### 记忆之塔打不过怎么办？\n\n先降目标层，保证每周稳定收益。补主队等级、技能和生存，再回头挑战。\n\n### 探索者勋章要不要马上换？\n\n如果商店里有明确限时、稀缺或能提升主队的资源，可以优先；不确定时先攒到下一轮公告。\n\n### 每周打捞和联动活动冲突怎么办？\n\n优先处理有截止时间的联动每日，再清周期收益。最后补可随时推进的探索和支线。\n\n## 站内下一步\n\n- [N3、深渊与首周进阶路线](/zh/sea/guides/n3-abyss-week-one-route)\n- [记忆重逢机制](/zh/sea/guides/memory-reunion-guide)\n- [过往之影指南](/zh/sea/guides/past-shadows-guide)\n- [号角、大脸币与返航收益](/zh/sea/guides/horn-farming-economy-guide)",
+    "contentEn": "## Quick Answer\n\nAfter mobile launch, players quickly move from download and rewards into long-term progression questions: Memory Tower, weekly dredging, Past Shadows, Drifting Home, Explorer Medals, ship songs, conch fragments, and socketing.\n\nThe safest order is: unlock systems through main story, stabilize the first team, clear weekly Memory Tower/dredging, maintain Drifting Home and Explorer Medal income, then spend ship-song and socketing resources carefully.\n\n## Weekly Priority Table\n\n| Priority | System | Why |\n|---|---|---|\n| P0 | Main story unlocks | Systems must be opened before weekly loops matter |\n| P0 | First-team levels and survival | Pressure content checks stability first |\n| P1 | Memory Tower / weekly dredging | Missed weekly rewards delay long-term growth |\n| P1 | Past Shadows | Affects damage, survival, and team cycling |\n| P1 | Drifting Home | Supports long-term sea exploration income |\n| P2 | Ship songs / conch fragments | Spend on core units, not every character |\n| P2 | Socketing | Confirm replacement cost before using rare materials |\n\n## Weekly Route\n\nEarly week: check refreshed weekly entries, clear the stable tier first, and stop pushing if your team is underbuilt.\n\nMid week: handle Drifting Home, sea exploration, event tasks, codes, and mail rewards.\n\nWeekend: revisit hard floors, then allocate ship songs, conch fragments, and socketing materials after the week's rewards are known.\n\n## Resource Rules\n\n1. Main DPS and core cycle pieces come first.\n2. Survival upgrades beat small damage upgrades if your team dies.\n3. Do not use rare socketing materials before checking whether they can be removed or only overwritten.\n\n## Next Reads\n\n- [Week-one advanced route](/en/sea/guides/n3-abyss-week-one-route)\n- [Memory Reunion guide](/en/sea/guides/memory-reunion-guide)\n- [Past Shadows guide](/en/sea/guides/past-shadows-guide)",
+    "faq": [
+      {
+        "questionZh": "记忆之塔和每周打捞哪个先做？",
+        "question": "Should I do Memory Tower or weekly dredging first?",
+        "answerZh": "先做本周会刷新的周期收益入口，能稳定通关的层数优先，不要为了高层漏掉基础奖励。",
+        "answer": "Prioritize weekly-reset rewards you can clear reliably. Do not miss baseline rewards just to push a higher floor."
+      },
+      {
+        "questionZh": "漂泊之家是不是必须每天推进？",
+        "question": "Do I need to push Drifting Home every day?",
+        "answerZh": "不一定每天重肝，但建议每周固定检查，因为它关系到探索者勋章和长期海上收益。",
+        "answer": "Not necessarily every day, but check it weekly because it affects Explorer Medals and long-term sea income."
+      },
+      {
+        "questionZh": "船歌和海螺碎片先给谁？",
+        "question": "Who should get ship songs and conch fragments first?",
+        "answerZh": "先给主 C 或核心循环角色。辅助和替补等主队方向稳定后再补。",
+        "answer": "Use them on the main DPS or core-cycle unit first. Supports and backups can wait until the main team direction is stable."
+      }
+    ]
+  },
+  {
+    "id": "haizang-combat-highlight-guide",
+    "title": "《遗忘之海》海葬实战高光指南：角色定位、蝴蝶意象、配队观察与移动端抽取判断",
+    "titleEn": "Sea of Remnants Haizang Combat Highlight Guide: Role Clues, Butterfly Motif, Team Fit, and Pull Decision",
+    "category": "character",
+    "categoryZh": "角色攻略",
+    "categoryEn": "Character",
+    "summary": "整理海葬角色 PV 与船员实战高光带来的搜索需求：她是什么定位、适合什么队伍、移动端玩家是否要急着投入资源。",
+    "summaryEn": "A practical Haizang guide based on recent official character and combat-highlight signals, covering role clues, team fit, and cautious pull planning.",
+    "tags": [
+      "海葬",
+      "船员实战高光",
+      "角色PV",
+      "蝴蝶",
+      "配队",
+      "抽取建议",
+      "移动端公测"
+    ],
+    "content": "## 先给结论\n\n海葬在移动端上线前后连续获得角色内容曝光，核心搜索词会集中在 **遗忘之海海葬、海葬实战高光、海葬技能、海葬配队、海葬值得抽吗**。\n\n当前更稳的写法是：海葬已经有官方角色氛围和实战高光内容，但详细数值、最终强度和完整循环仍要以游戏内技能说明、正式服实测和后续平衡为准。\n\n参考公开来源：[TapTap「请记住我：海葬」](https://www.taptap.cn/moment/828265345125978022)、[TapTap「船员实战高光」海葬](https://www.taptap.cn/moment/828634583799958783)。\n\n## 海葬是谁\n\n官方角色内容给海葬的氛围关键词很明确：聆听者、送行者、蓝色发光蝴蝶、归航、生命终点。它更适合承接“角色设定”和“战斗表现”双重搜索，而不是只写一页强度榜。\n\n| 维度 | 当前可写内容 | 暂不提前判断 |\n|---|---|---|\n| 角色印象 | 聆听者、送行者、蓝色蝴蝶意象 | 最终剧情走向 |\n| 实战关注 | 技能演示、攻击节奏、队伍位置 | 具体倍率和最优循环 |\n| 养成问题 | 是否适合第一队、是否抢资源 | 毕业装备和绝对强度 |\n| 移动端搜索 | 值不值得练、手机端操作压力 | 长期环境排名 |\n\n## 移动端玩家先看什么\n\n如果你是 7 月 23 日之后入坑，先别只问“海葬是不是 T0”。更实用的判断顺序是：\n\n1. 你是否已经有稳定主 C。\n2. 海葬在你的账号里是输出、辅助还是功能位。\n3. 她是否和现有队伍资源冲突。\n4. 技能是否适合手机端长时间操作。\n5. 往日之影、船歌和镶嵌资源是否够用。\n\n## 配队观察清单\n\n| 问题 | 为什么重要 |\n|---|---|\n| 海葬是否需要队友铺垫 | 决定她能否独立开荒 |\n| 是否依赖持续输出窗口 | 影响手机端操作和战斗节奏 |\n| 是否吃特定往日之影 | 影响首周资源投入成本 |\n| 是否适合深渊/N3 | 决定她是开荒还是高压内容角色 |\n| 和茉莉队是否冲突 | 移动端首发玩家常见资源焦虑点 |\n\n如果你已经在养茉莉队，可以先看：[茉莉首发阵容与培养路线](/zh/sea/guides/molly-starter-team-guide)。\n\n## 抽取与养成建议\n\n| 玩家类型 | 建议 |\n|---|---|\n| 新手 | 先确认第一队缺什么，不因为 PV 好看立刻清空资源 |\n| 外观/角色党 | 可以优先记录获取方式和活动时间 |\n| 强度党 | 等实测循环、深渊表现和主流配队再重投 |\n| 零氪/微氪 | 不要同时拉太多角色，主队三人先成型 |\n\n## 和长期系统怎么衔接\n\n海葬如果进入主队，需要一起检查三个长期系统：\n\n- [往日之影/遗物方向](/zh/sea/guides/past-shadows-guide)\n- [记忆之塔与每周打捞](/zh/sea/guides/memory-tower-weekly-dredging-guide)\n- [N3、深渊与首周进阶路线](/zh/sea/guides/n3-abyss-week-one-route)\n\n## FAQ\n\n### 海葬值得抽吗？\n\n如果你缺她对应定位，可以等正式技能、池子和实测后再决定。移动端首周不建议只因为短视频高光就清空资源。\n\n### 海葬适合手机端吗？\n\n要看正式技能循环和操作窗口。如果她需要频繁手动控制，手机端玩家要额外关注发热、帧率和长时间战斗舒适度。\n\n### 海葬和茉莉谁优先？\n\n看账号缺口。茉莉已有站内开荒路线，海葬更适合等实测后判断是否补强第一队或第二队。",
+    "contentEn": "## Quick Answer\n\nHaizang is a rising Sea of Remnants search topic after recent character and combat-highlight posts. The safest framing is that her atmosphere and combat showcase are visible, but final numbers, meta rank, and best rotations should wait for in-game data and live testing.\n\nPublic references: https://www.taptap.cn/moment/828265345125978022 and https://www.taptap.cn/moment/828634583799958783.\n\n## What to Evaluate\n\n| Question | Why it matters |\n|---|---|\n| Does Haizang need setup? | Determines whether she is beginner-friendly |\n| Is her damage window sustained or bursty? | Affects mobile comfort |\n| Does she need specific Past Shadows? | Changes week-one investment cost |\n| Does she fit N3/Abyss? | Separates story progression from pressure content |\n| Does she overlap with Molly teams? | Prevents early resource conflict |\n\n## Pull Advice\n\nNew players should not spend everything just because a highlight video looks strong. First confirm your main team role gaps, then wait for live skill descriptions and tested team rotations.\n\n## Next Reads\n\n- [Molly starter teams](/en/sea/guides/molly-starter-team-guide)\n- [Past Shadows guide](/en/sea/guides/past-shadows-guide)\n- [Memory Tower weekly route](/en/sea/guides/memory-tower-weekly-dredging-guide)",
+    "faq": [
+      {
+        "questionZh": "海葬值得抽吗？",
+        "question": "Is Haizang worth pulling?",
+        "answerZh": "先看正式技能、池子规则和实测配队。移动端首周不建议只凭高光视频清空资源。",
+        "answer": "Check live skills, banner rules, and tested teams first. Do not spend everything based only on highlight footage."
+      },
+      {
+        "questionZh": "海葬适合开荒吗？",
+        "question": "Is Haizang beginner-friendly?",
+        "answerZh": "要看她是否需要队友铺垫和特定养成资源。缺主 C 时可以关注，但不要忽略生存位。",
+        "answer": "It depends on whether she needs setup and specific resources. Watch her if you need a core unit, but do not ignore survival."
+      },
+      {
+        "questionZh": "海葬和茉莉怎么选？",
+        "question": "Haizang or Molly first?",
+        "answerZh": "看账号缺口。已有茉莉路线可以先稳定第一队，海葬等实测后决定是否补强。",
+        "answer": "Choose based on account gaps. Stabilize the first team first, then decide whether Haizang upgrades it after testing."
+      }
+    ]
+  },
+  {
+    "id": "bluewave-band-music-character-guide",
+    "title": "《遗忘之海》蓝波乐队指南：茉莉、黑格、角色曲、网易云活动与阵容关键词",
+    "titleEn": "Sea of Remnants Bluewave Band Guide: Molly, Heige, Character Songs, NetEase Cloud Music, and Team Keywords",
+    "category": "lore",
+    "categoryZh": "设定与音乐",
+    "categoryEn": "Lore & Music",
+    "summary": "承接蓝波乐队、茉莉角色曲 A Dream、黑格角色曲、网易云音乐福利和乐队船员配队搜索，区分设定、活动和强度判断。",
+    "summaryEn": "A Bluewave Band hub for Molly, Heige, character songs, NetEase Cloud Music events, lore, rewards, and team-search intent.",
+    "tags": [
+      "蓝波乐队",
+      "茉莉",
+      "黑格",
+      "A Dream",
+      "网易云音乐",
+      "角色曲",
+      "Alan Walker",
+      "张韶涵"
+    ],
+    "content": "## 先给结论\n\n蓝波乐队是《遗忘之海》目前最适合做“角色设定 + 音乐传播 + 阵容搜索”的内容线。玩家会搜 **蓝波乐队有哪些角色、茉莉角色曲、黑格角色曲、网易云活动、遗忘之海主题曲、蓝波乐队配队**。\n\n这页把音乐和玩法分开：角色曲能说明人设和传播热度，但不等于角色强度；配队和抽取仍要看正式技能、资源成本和实战循环。\n\n参考公开来源：[中国日报转载鲁网：茉莉角色曲 A Dream](https://cn.chinadaily.com.cn/a/202607/02/WS6a462abca310d709c2fbb96d.html)、[ZAKER：黑格角色曲与网易云活动](https://app.myzaker.com/article/6a505af81bc8e02c1a000001)、[233 乐园蓝波乐队小传](https://www.233leyuan.com/post-detail/2064642871545077760)。\n\n## 蓝波乐队内容速查\n\n| 关键词 | 可承接页面 | 玩家想知道什么 |\n|---|---|---|\n| 蓝波乐队 | 本页 | 成员、人设、音乐线和队伍关系 |\n| 茉莉 A Dream | 茉莉队指南/本页 | 角色曲、角色定位、是否值得养 |\n| 黑格角色曲 | 本页 | 黑格是谁、角色曲叫什么、是否上线 |\n| 网易云音乐福利 | 本页/福利页 | 皮肤、活动、头像框、道具是否可领 |\n| 主题曲 | 联动总览 | Alan Walker、张韶涵和主题传播 |\n\n## 已公开音乐线索\n\n| 内容 | 公开信息 | 站内处理方式 |\n|---|---|---|\n| 茉莉角色曲 | 《A Dream》在网易云音乐首发 | 接到茉莉开荒与角色设定 |\n| 黑格角色曲 | 《A Scalpel Made of Sound》随 PC 公测传播 | 接到蓝波乐队与角色档案 |\n| 主题曲 | 张韶涵与 Alan Walker 合作曲目被前瞻传播 | 接到联动/音乐专题 |\n| 网易云活动 | 公开报道提到播放器皮肤、挖宝、VIP、道具、头像框等 | 提醒以活动页库存和截止时间为准 |\n\n## 蓝波乐队和配队有什么关系\n\n“乐队成员”本身是设定标签，不等于必须组成固定强度队。但它适合玩家理解角色风格：\n\n- 茉莉：已经有移动端首发队伍讨论，适合作为开荒路线入口。\n- 黑格：适合继续观察技能循环、团队增益或特殊机制。\n- 其他成员：如果后续有角色曲、PV 或实战高光，站内再拆独立页面。\n\n如果你是为了实战来搜蓝波乐队，建议先看：[茉莉首发阵容与培养路线](/zh/sea/guides/molly-starter-team-guide) 和 [船队编组指南](/zh/sea/guides/team-building-guide)。\n\n## 网易云活动怎么检查\n\n1. 在网易云音乐搜索“遗忘之海”。\n2. 先看活动页是否仍在进行。\n3. 区分音乐平台福利和游戏内礼包。\n4. 如果有道具码、头像框、皮肤等奖励，记录截止时间和领取账号。\n5. 回游戏内检查邮件、兑换入口或活动说明。\n\n## 内容更新判断\n\n蓝波乐队后续最值得补的内容包括：\n\n| 更新信号 | 适合新增/刷新什么 |\n|---|---|\n| 新角色曲上线 | 音乐页、角色页、网易云福利说明 |\n| 黑格实战高光 | 黑格独立配队/抽取指南 |\n| 乐队活动任务 | 活动商店和奖励优先级 |\n| 新成员进入卡池 | 抽取规划和阵容承接 |\n\n## FAQ\n\n### 蓝波乐队有哪些角色？\n\n公开资料中蓝波乐队围绕茉莉、黑格等船员展开，具体成员、可玩状态和卡池安排以游戏内图鉴与官方公告为准。\n\n### 听角色曲能领游戏奖励吗？\n\n部分音乐平台活动曾公开提到福利，但是否仍可领取、奖励是否限量、是否需要绑定账号，要以活动页实时显示为准。\n\n### 蓝波乐队是不是一个固定强队？\n\n不要直接等同。乐队是设定和传播标签，实战队伍仍要看技能机制、资源投入和当前环境。",
+    "contentEn": "## Quick Answer\n\nBluewave Band is a strong lore, music, and character-search cluster for Sea of Remnants. It connects Molly, Heige, character songs, NetEase Cloud Music campaigns, and team-building curiosity.\n\nUse music as characterization and traffic context, not as proof of combat strength. Builds and pulls still depend on live skills, team rotations, and resource costs.\n\nSources: https://cn.chinadaily.com.cn/a/202607/02/WS6a462abca310d709c2fbb96d.html, https://app.myzaker.com/article/6a505af81bc8e02c1a000001, and https://www.233leyuan.com/post-detail/2064642871545077760.\n\n## Search Map\n\n| Query | Best route |\n|---|---|\n| Bluewave Band members | Lore and character context |\n| Molly A Dream | Molly build and music context |\n| Heige character song | Heige identity and future role watch |\n| NetEase Cloud Music rewards | Check campaign page and expiry |\n| Bluewave Band team | Treat as team-search intent, not confirmed meta |\n\n## Next Reads\n\n- [Molly starter teams](/en/sea/guides/molly-starter-team-guide)\n- [Team-building guide](/en/sea/guides/team-building-guide)\n- [Collaboration hub](/en/sea/guides/collaborations-guide)",
+    "faq": [
+      {
+        "questionZh": "蓝波乐队是不是固定强队？",
+        "question": "Is Bluewave Band a fixed meta team?",
+        "answerZh": "不要直接等同。它是设定和音乐传播标签，实战强度还要看技能机制和正式服配队。",
+        "answer": "Not directly. It is a lore and music label; combat strength still depends on live mechanics and tested teams."
+      },
+      {
+        "questionZh": "茉莉角色曲叫什么？",
+        "question": "What is Molly’s character song?",
+        "answerZh": "公开报道提到茉莉角色曲《A Dream》在网易云音乐首发。",
+        "answer": "Public reports mention Molly’s character song “A Dream” on NetEase Cloud Music."
+      },
+      {
+        "questionZh": "网易云福利还能领吗？",
+        "question": "Can I still claim NetEase Cloud Music rewards?",
+        "answerZh": "需要打开活动页确认库存、截止时间和账号规则，站内不保证过期活动仍可领取。",
+        "answer": "Open the campaign page to verify stock, deadline, and account rules. Expired rewards are not guaranteed."
+      }
+    ]
+  },
+  {
+    "id": "offline-seafood-stall-event-guide",
+    "title": "《遗忘之海》线下海岸线与海底捞大排档活动指南：象山、厦门站点、福利套餐和打卡清单",
+    "titleEn": "Sea of Remnants Offline Coastline and Hotpot Seafood Stall Event Guide: Xiangshan, Xiamen, Rewards, and Check-in Tips",
+    "category": "event",
+    "categoryZh": "活动攻略",
+    "categoryEn": "Event",
+    "summary": "承接遗忘之海线下活动、海岸线城市、象山厦门新站点、海底捞大排档福利套餐等搜索，整理参加前要确认的时间、地点、库存和兑换规则。",
+    "summaryEn": "A practical offline-event checklist for Sea of Remnants coastline city stops, Xiangshan/Xiamen signals, hotpot seafood-stall rewards, availability, and claim rules.",
+    "tags": [
+      "线下活动",
+      "海岸线",
+      "海底捞",
+      "大排档",
+      "象山",
+      "厦门",
+      "福利套餐",
+      "打卡"
+    ],
+    "content": "## 先给结论\n\n《遗忘之海》线下活动搜索正在从“有哪些联动”变成“我能不能去领福利”。重点词包括 **遗忘之海线下活动、海岸线城市、象山、厦门、海底捞大排档、福利套餐、打卡奖励**。\n\n站内建议把线下活动当成“时间、地点、库存、核销规则”四件事来确认，不要只看海报二传。\n\n参考公开来源：[官方前瞻联动矩阵](https://sea.163.com/news/official/20260625/42726_1305601.html)、[新浪聚合的官方微博动态摘要](https://www.sina.cn/media/9194233278)、[TapTap 官方论坛](https://www.taptap.cn/app/755604/topic?type=official)。\n\n## 参加前四件事\n\n| 要确认 | 为什么 |\n|---|---|\n| 活动日期 | 线下站点通常只开几天，错过无法补 |\n| 具体门店/地点 | 城市名不等于所有门店都参加 |\n| 福利库存 | 套餐、周边、兑换码可能限量 |\n| 核销方式 | 可能需要游戏账号、预约记录、平台活动页或现场扫码 |\n\n## 象山 / 厦门 / 海岸线怎么查\n\n官方前瞻曾提到海岸线多城线下活动，后续社交平台又出现象山、厦门新站点和大排档福利相关搜索。建议按这个顺序查：\n\n1. 先看游戏官方微博、TapTap 官方论坛和游戏内公告。\n2. 再看合作门店或活动页是否有同名信息。\n3. 只把带日期、地点、门店和领取规则的信息当作可行动信息。\n4. 如果只看到截图或转述，出发前再确认一次。\n\n## 海底捞大排档福利套餐要看什么\n\n| 项目 | 检查点 |\n|---|---|\n| 套餐名称 | 是否明确写有《遗忘之海》主题 |\n| 参与门店 | 是否仅限指定城市/指定店 |\n| 周边/福利 | 是否限量、是否先到先得 |\n| 游戏奖励 | 是否有兑换码、是否绑定区服 |\n| 活动时段 | 是否只在 7 月 24 日至 7 月 26 日这类短窗口开放 |\n\n## 打卡当天清单\n\n1. 带好手机和游戏账号，提前登录避免现场网络差。\n2. 截图保存官方活动页、门店地址和规则。\n3. 如果要领码，现场先确认码是否一次性、是否区服限制。\n4. 如果是周边，先问库存和领取条件。\n5. 拍照打卡时注意不要泄露账号、手机号或兑换码。\n\n## 适合站内继续更新的内容\n\n线下活动一旦官方放出更清晰信息，站内可以继续补：\n\n- 城市站点时间表\n- 门店名单和交通提示\n- 套餐/周边库存状态\n- 兑换码领取与过期状态\n- 玩家打卡 FAQ\n\n## FAQ\n\n### 只写城市名可以直接去吗？\n\n不建议。一定要确认具体门店、日期和活动规则，尤其是餐饮联动与海岸线活动。\n\n### 线下福利一定有游戏道具吗？\n\n不一定。可能是套餐、周边、拍照打卡、兑换码或平台活动奖励，具体以现场和官方活动页为准。\n\n### 可以代领吗？\n\n不要默认可以。涉及账号、验证码、现场核销或限量周边时，代领规则通常更严格。\n\n## 站内下一步\n\n- [联动矩阵总览](/zh/sea/guides/collaborations-guide)\n- [移动端首发福利与兑换码](/zh/sea/guides/launch-rewards-codes-guide)\n- [第五人格联动移动端活动指南](/zh/sea/guides/identity-v-mobile-launch-event-guide)\n- [海绵宝宝联动暑期 FAQ](/zh/sea/guides/spongebob-collab-summer-faq)",
+    "contentEn": "## Quick Answer\n\nSea of Remnants offline-event searches are shifting from “what collaborations exist” to “can I attend and claim rewards.” Useful queries include coastline city stops, Xiangshan, Xiamen, hotpot seafood-stall rewards, check-in gifts, and limited stock.\n\nTreat offline events as four checks: date, location, stock, and redemption rule. Do not rely only on reposted posters.\n\nSources: https://sea.163.com/news/official/20260625/42726_1305601.html, https://www.sina.cn/media/9194233278, and https://www.taptap.cn/app/755604/topic?type=official.\n\n## Before You Go\n\n| Check | Why |\n|---|---|\n| Date | Offline stops can be very short |\n| Exact store/location | A city name does not mean every store participates |\n| Reward stock | Meals, merch, and codes can be limited |\n| Redemption method | May require account login, reservation proof, app page, or QR scan |\n\n## On-Site Checklist\n\n1. Log into the game account before arriving.\n2. Save the official event page and store address.\n3. Ask whether codes are one-time and server-bound.\n4. Confirm merch stock before ordering.\n5. Do not expose account IDs, phone numbers, or redemption codes in photos.",
+    "faq": [
+      {
+        "questionZh": "遗忘之海线下活动只看到城市名能直接去吗？",
+        "question": "Can I go if I only know the event city?",
+        "answerZh": "不建议。先确认具体门店、日期、活动时段和领取规则。",
+        "answer": "Not recommended. Confirm the exact store, date, time window, and claim rules first."
+      },
+      {
+        "questionZh": "海底捞大排档福利一定有兑换码吗？",
+        "question": "Does the hotpot seafood-stall event always include codes?",
+        "answerZh": "不一定，可能是套餐、周边、拍照打卡或游戏道具。以活动页和现场规则为准。",
+        "answer": "Not always. It may involve meals, merch, check-ins, or in-game items. Follow the event page and on-site rules."
+      },
+      {
+        "questionZh": "线下奖励可以代领吗？",
+        "question": "Can offline rewards be claimed by proxy?",
+        "answerZh": "不要默认可以。涉及账号、现场核销或限量周边时，规则通常更严格。",
+        "answer": "Do not assume so. Account checks, on-site redemption, and limited merch often have stricter rules."
+      }
+    ]
+  },
+  {
+    "id": "channel-rewards-code-verification-guide",
+    "title": "《遗忘之海》渠道福利与兑换码核验指南：官网、TapTap、4399、好游快爆奖励怎么确认",
+    "titleEn": "Sea of Remnants Channel Rewards and Code Verification Guide: Official Site, TapTap, 4399, and Haoyou Kuaibao",
+    "category": "codes",
+    "categoryZh": "兑换码与福利",
+    "categoryEn": "Codes & Rewards",
+    "summary": "面向移动端首发后的福利搜索，整理官网、TapTap、4399、好游快爆等渠道活动、兑换码、助力金和平台奖励的核验顺序与避坑清单。",
+    "summaryEn": "A post-mobile-launch checklist for verifying official rewards, TapTap events, 4399 campaigns, Haoyou Kuaibao rewards, redeem codes, and channel boundaries.",
+    "tags": [
+      "渠道福利",
+      "兑换码",
+      "礼包码",
+      "TapTap",
+      "4399",
+      "好游快爆",
+      "助力金",
+      "移动端首发"
+    ],
+    "content": "## 先给结论\n\n移动端 7 月 23 日上线后，玩家搜“遗忘之海兑换码”“遗忘之海礼包码”“4399 福利”“TapTap 福利”“好游快爆助力金”会变多。最容易出问题的不是找不到福利，而是 **账号、区服、渠道、库存和截止时间没确认**。\n\n本站建议：先确认官方账号和常用区服，再领平台福利；任何第三方整理的礼包码都要回到游戏内兑换结果核验。\n\n参考来源：[TapTap 官方论坛](https://www.taptap.cn/app/755604/topic?type=official)、[4399 首发福利活动](https://www.4399.com/pcgame/topic/53417239.html)、[好游快爆商店遗忘之海奖励页](https://shop.3839.com/index.php?a=index&c=Classify&cid=167)。\n\n## 核验顺序\n\n| 顺序 | 做什么 | 为什么 |\n|---|---|---|\n| 1 | 登录长期要玩的账号 | 避免奖励领到临时号 |\n| 2 | 进入常用区服 | 区服不同可能导致邮件和福利不互通 |\n| 3 | 先看游戏内公告/福利页 | 游戏内入口是最终到账依据 |\n| 4 | 再看官网、TapTap、4399、好游快爆 | 平台活动可能有独立库存和规则 |\n| 5 | 领取后查邮件、背包、活动任务 | 兑换成功不等于立刻出现在同一入口 |\n\n## 各渠道重点看什么\n\n| 渠道 | 重点检查 | 风险点 |\n|---|---|---|\n| 官网/游戏内 | 公告、福利、兑换码入口、邮件 | 版本更新后入口可能变动 |\n| TapTap | 官方帖子、预约/下载活动、移动端公告 | 需要确认是否绑定 TapTap 渠道 |\n| 4399 | 现金红包、抽奖、专属道具、助力金活动 | 抽奖和游戏道具不是一回事 |\n| 好游快爆 | 爆米花商店、通行证/月卡助力金抽奖 | 库存和抽奖规则可能实时变化 |\n| 社交媒体 | 官方微博、视频号、B站动态 | 二传截图可能过期或不完整 |\n\n## 兑换码失败怎么排查\n\n1. 检查大小写和空格，复制时不要带标点。\n2. 确认角色是否已经创建，部分礼包需要进入游戏后才能兑换。\n3. 看是否已经领过，同一账号通常不能重复兑换。\n4. 检查是否过期、是否限渠道、是否限区服。\n5. 如果显示成功但没到账，先查邮件，再重登。\n\n## 平台福利和游戏内福利怎么区分\n\n| 类型 | 例子 | 处理方式 |\n|---|---|---|\n| 游戏内常规福利 | 邮件、签到、活动任务 | 以游戏内公告为准 |\n| 平台抽奖 | 现金红包、实物、助力金 | 看平台活动规则和中奖名单 |\n| 平台礼包 | 专属道具、兑换码 | 复制到游戏内兑换后确认到账 |\n| 预约奖励 | 预约里程碑、下载奖励 | 看账号绑定和领取截止时间 |\n\n## 不建议做什么\n\n- 不要把未核验礼包码批量发到主账号反复尝试。\n- 不要相信要求账号密码、验证码或私下交易的福利入口。\n- 不要默认 PC、iOS、Android、渠道服奖励完全互认。\n- 不要把抽奖“助力金”等同于直接发放游戏货币。\n\n## 站内下一步\n\n- [移动端首发福利与兑换码](/zh/sea/guides/launch-rewards-codes-guide)\n- [PC、iOS、Android 互通 FAQ](/zh/sea/guides/pc-mobile-cross-progression-faq)\n- [移动端首日排错](/zh/sea/guides/mobile-troubleshooting-guide)\n- [首周运营总览](/zh/sea/guides/week-one-live-ops-overview)",
+    "contentEn": "## Quick Answer\n\nAfter the July 23 mobile launch, reward searches often mix official rewards, TapTap posts, 4399 campaigns, Haoyou Kuaibao shop items, redeem codes, and prize draws. The key is to verify account, server, channel, stock, and deadline before claiming.\n\nSources: https://www.taptap.cn/app/755604/topic?type=official, https://www.4399.com/pcgame/topic/53417239.html, and https://shop.3839.com/index.php?a=index&c=Classify&cid=167.\n\n## Verification Order\n\n| Step | Check | Why |\n|---|---|---|\n| 1 | Long-term account | Avoid claiming rewards on a temporary account |\n| 2 | Main server | Mail and rewards may be server-bound |\n| 3 | In-game notices | The game is the final source for delivery |\n| 4 | Platform campaigns | TapTap, 4399, and Kuaibao can have separate rules |\n| 5 | Mail, inventory, event page | Successful claim may land in a different menu |\n\n## Do Not\n\n- Do not share account passwords or verification codes for rewards.\n- Do not assume PC, iOS, Android, and channel rewards are fully shared.\n- Do not treat prize-draw subsidies as direct in-game currency.",
+    "faq": [
+      {
+        "questionZh": "遗忘之海兑换码在哪里确认？",
+        "question": "Where should I verify Sea of Remnants codes?",
+        "answerZh": "优先在游戏内福利/兑换入口确认结果，平台整理页只当作线索。",
+        "answer": "Use the in-game reward or code page to verify results. Platform pages are only leads."
+      },
+      {
+        "questionZh": "4399 或好游快爆助力金是游戏货币吗？",
+        "question": "Are 4399 or Kuaibao subsidies in-game currency?",
+        "answerZh": "不一定。它们可能是抽奖、助力金或平台活动奖励，要看活动规则。",
+        "answer": "Not necessarily. They may be prize draws, subsidies, or platform campaign rewards. Check the campaign rules."
+      },
+      {
+        "questionZh": "礼包码成功但没到账怎么办？",
+        "question": "What if a code succeeds but rewards do not appear?",
+        "answerZh": "先查邮件、背包和活动页，再重登；仍没有就记录账号、区服、时间和截图反馈。",
+        "answer": "Check mail, inventory, and event menus, then relog. If still missing, record account, server, time, and screenshots for support."
+      }
+    ]
+  },
+  {
+    "id": "mobile-graphics-fps-heat-settings-guide",
+    "title": "《遗忘之海》手机画质、帧率、发热与卡顿设置指南：移动端首周怎么调最稳",
+    "titleEn": "Sea of Remnants Mobile Graphics, FPS, Heat, and Lag Settings Guide",
+    "category": "system",
+    "categoryZh": "系统设置",
+    "categoryEn": "System",
+    "summary": "针对移动端上线后的发热、掉帧、画质模糊、加载慢和长时间战斗不稳，整理画质、帧率、后台、网络、充电玩法和设备散热设置建议。",
+    "summaryEn": "A practical mobile settings guide for heat, FPS drops, blurry visuals, slow loading, background apps, network stability, charging, and long-session comfort.",
+    "tags": [
+      "手机画质",
+      "帧率",
+      "发热",
+      "卡顿",
+      "掉帧",
+      "移动端设置",
+      "黑屏",
+      "加载慢"
+    ],
+    "content": "## 先给结论\n\n移动端首发后，“遗忘之海手机卡顿”“遗忘之海发热”“遗忘之海画质设置”“遗忘之海掉帧”会成为持续长尾。最稳的思路不是一上来全开高画质，而是先保证 **稳定帧率、低发热、少闪退、长时间能做日常**。\n\n本文结合首发排错经验和手机厂商通用建议整理。设备差异很大，最终以你自己的机型、系统版本和游戏内设置为准。\n\n参考来源：[华为游戏卡顿建议](https://consumer.huawei.com/cn/support/content/zh-cn16030772/)、[realme 手机游戏卡顿建议](https://www.realme.com/cn/support/kw/doc/2020538)、[移动端排错清单](/zh/sea/guides/mobile-troubleshooting-guide)。\n\n## 三档设置建议\n\n| 设备状态 | 推荐设置 | 适合场景 |\n|---|---|---|\n| 中低端/发热明显 | 中低画质、30 FPS、关高负载特效 | 做日常、跑图、长时间挂机式任务 |\n| 主流机型 | 中画质、稳定 30/45 FPS、特效适中 | 首周开荒、剧情、活动 |\n| 旗舰/散热好 | 高画质、按需 60 FPS、观察温度 | 截图、短时间体验、角色展示 |\n\n## 优先调哪些选项\n\n1. **帧率**：先稳 30 或 45，再尝试 60。\n2. **阴影/反射**：通常最容易增加负载，先降。\n3. **后处理/景深/动态模糊**：不影响核心玩法，可以先关。\n4. **分辨率/渲染精度**：画面糊和发热之间要取平衡。\n5. **同屏特效**：海战、Boss、深渊类内容卡顿时优先降低。\n\n## 发热明显怎么办\n\n| 操作 | 作用 |\n|---|---|\n| 不边充边玩 | 减少充电热量叠加 |\n| 关闭后台应用 | 释放内存，降低切后台风险 |\n| 降帧率而不是只降画质 | 对温度和续航更直接 |\n| 使用稳定 Wi-Fi | 减少网络抖动导致的加载卡顿 |\n| 每 30-45 分钟休息 | 避免温控降频后越玩越卡 |\n\n## 不同玩法怎么设置\n\n| 玩法 | 建议 |\n|---|---|\n| 主线剧情 | 中画质优先，保证演出不卡死 |\n| 海战/ Boss | 降低特效和阴影，保证操作响应 |\n| N3/深渊 | 稳定帧率优先，不追求截图画质 |\n| 拍照/捏脸 | 可以临时开高画质，结束后调回 |\n| 长时间刷材料 | 低发热、低功耗、稳定网络优先 |\n\n## 什么时候该看热修公告\n\n如果同一机型大面积出现黑屏、卡死、流程卡点或更新失败，可能不是你设置的问题。先看：[已知问题与热修追踪](/zh/sea/guides/known-issues-hotfix-guide) 和 [热修反馈路线](/zh/sea/guides/hotfix-feedback-roadmap-guide)。\n\n## FAQ\n\n### 手机端一定要开 60 帧吗？\n\n不一定。首周做日常和推进主线时，稳定 30/45 帧通常比短时间 60 帧后发热降频更舒服。\n\n### 画质模糊应该先调什么？\n\n先看分辨率/渲染精度，再看动态模糊和后处理。不要一口气把所有特效拉满。\n\n### 为什么刚进游戏不卡，玩久了才卡？\n\n常见原因是设备发热后降频、后台占用、网络波动或资源加载累积。先降帧率、休息散热、清后台再测。",
+    "contentEn": "## Quick Answer\n\nFor mobile launch, stable FPS, lower heat, fewer crashes, and comfortable daily play matter more than max graphics. Start conservative, then raise settings only if your device stays cool.\n\nReferences: https://consumer.huawei.com/cn/support/content/zh-cn16030772/, https://www.realme.com/cn/support/kw/doc/2020538, and the site troubleshooting guide.\n\n## Recommended Presets\n\n| Device state | Suggested setup | Best for |\n|---|---|---|\n| Mid/low device or hot phone | Low-medium graphics, 30 FPS, lower effects | Dailies and long sessions |\n| Mainstream device | Medium graphics, stable 30/45 FPS | Story, launch week, events |\n| Flagship with good cooling | High graphics, optional 60 FPS | Screenshots and short sessions |\n\n## Adjust First\n\n1. FPS cap.\n2. Shadows and reflections.\n3. Post-processing, depth of field, and motion blur.\n4. Resolution or render scale.\n5. Combat effects for boss or abyss content.",
+    "faq": [
+      {
+        "questionZh": "遗忘之海手机端一定要开 60 帧吗？",
+        "question": "Do I need 60 FPS on mobile?",
+        "answerZh": "不一定。稳定 30/45 帧通常比短时间 60 帧后发热降频更适合首周日常。",
+        "answer": "Not always. Stable 30/45 FPS is often better for launch-week daily play than short 60 FPS sessions followed by thermal throttling."
+      },
+      {
+        "questionZh": "手机发热先降画质还是帧率？",
+        "question": "Should I lower graphics or FPS first for heat?",
+        "answerZh": "优先降帧率，再降阴影、反射和后处理。",
+        "answer": "Lower FPS first, then reduce shadows, reflections, and post-processing."
+      },
+      {
+        "questionZh": "长时间玩越来越卡怎么办？",
+        "question": "Why does performance get worse over time?",
+        "answerZh": "多半和发热降频、后台占用或网络波动有关。先休息散热、清后台、换稳定网络再测。",
+        "answer": "It is often thermal throttling, background apps, or network instability. Cool the device, clear background apps, and test on stable network."
+      }
+    ]
+  },
+  {
+    "id": "hotfix-feedback-roadmap-guide",
+    "title": "《遗忘之海》热修与反馈问卷追踪指南：卡死、DX11 材质优化、移动端适配怎么看",
+    "titleEn": "Sea of Remnants Hotfix and Feedback Roadmap Guide: Freezes, DX11 Texture Optimization, and Mobile Adaptation",
+    "category": "system",
+    "categoryZh": "系统追踪",
+    "categoryEn": "System",
+    "summary": "整理 PC 公测后项目组优化方向、7 月 17 日卡死修复、DX11 材质优化、系统提醒/剧情演出性能消耗和移动端适配反馈该怎么读。",
+    "summaryEn": "A hotfix-tracking guide covering post-PC-launch optimization notes, July 17 freeze fixes, DX11 texture optimization, performance roadmap, and mobile feedback handling.",
+    "tags": [
+      "热修",
+      "反馈问卷",
+      "DX11",
+      "材质优化",
+      "卡死",
+      "移动端适配",
+      "性能优化",
+      "公告追踪"
+    ],
+    "content": "## 先给结论\n\n《遗忘之海》PC 公测后，官方和媒体报道中已经出现多轮体验优化关键词：**卡死修复、DX11 材质优化、系统提醒、剧情演出性能消耗、移动端适配、专项反馈问卷**。\n\n玩家读热修公告时，不要只看“已优化”三个字，要看它解决的是哪类问题、影响哪些平台、是否需要重新下载，以及自己遇到的问题是否在范围内。\n\n参考来源：[17173 项目组优化报道](https://news.17173.com/content/07212026/104708131.shtml)、[TapTap 官方论坛](https://www.taptap.cn/app/755604/topic?type=official)、[已知问题与热修追踪](/zh/sea/guides/known-issues-hotfix-guide)。\n\n## 当前重点优化方向\n\n| 关键词 | 代表问题 | 玩家该做什么 |\n|---|---|---|\n| 卡死修复 | 特定战斗后流程无法继续 | 看是否提到具体 Boss、任务或日期 |\n| DX11 材质优化 | 大面积材质卡顿、加载慢 | 更新后重新测试同一区域 |\n| 系统提醒 | 弹窗、提示频率、界面干扰 | 看是否属于体验减负而非性能修复 |\n| 剧情演出性能 | 长剧情、过场、演出卡顿 | 观察是否需要客户端更新 |\n| 移动端适配 | 发热、掉帧、机型兼容 | 结合画质设置和官方反馈问卷 |\n\n## 怎么判断热修是否与你有关\n\n1. 看平台：PC、安卓、iOS 是否都覆盖。\n2. 看版本：是否需要更新客户端或只是服务器热更。\n3. 看场景：是否明确写到你卡住的任务、Boss、海域或系统。\n4. 看复现：更新后用同账号、同设备、同设置再测试。\n5. 看反馈：仍复现时，按官方问卷或客服格式提交。\n\n## 反馈问卷该怎么填\n\n| 信息 | 建议写法 |\n|---|---|\n| 设备 | 品牌、型号、系统版本、剩余存储 |\n| 平台 | PC / iOS / Android / 渠道包 |\n| 账号信息 | 区服、角色名或 UID，注意不要公开敏感信息 |\n| 问题场景 | 哪个任务、Boss、海域、活动入口 |\n| 复现步骤 | 先做什么、点哪里、什么时候卡住 |\n| 截图/录屏 | 保留报错、黑屏、卡死画面和时间 |\n\n## 热修后还是卡怎么办\n\n- 如果是手机发热/掉帧，先看：[手机画质、帧率与发热设置](/zh/sea/guides/mobile-graphics-fps-heat-settings-guide)。\n- 如果是账号/奖励没到账，先看：[渠道福利与兑换码核验](/zh/sea/guides/channel-rewards-code-verification-guide)。\n- 如果是任务流程卡住，记录复现步骤，不要反复重装导致排查信息丢失。\n\n## 公告读法模板\n\n每次更新公告出来，可以按这个表记：\n\n| 记录项 | 示例 |\n|---|---|\n| 日期 | 2026-07-xx |\n| 平台 | PC / Android / iOS / 全平台 |\n| 类型 | 热修 / 客户端更新 / 补偿 / 反馈问卷 |\n| 影响内容 | 卡死、材质、剧情演出、福利到账 |\n| 是否需要操作 | 重启、下载更新、重新进入活动页 |\n| 补偿 | 邮件、兑换码、活动延期或无补偿 |\n\n## FAQ\n\n### 热修是不是一定要重新下载？\n\n不一定。服务器热更可能只需要重启游戏，客户端更新才通常需要下载资源或安装包。\n\n### DX11 材质优化和手机端有关吗？\n\nDX11 更偏 PC 图形接口语境。手机端仍要关注独立的安卓/iOS 适配、发热和机型兼容公告。\n\n### 反馈问卷有用吗？\n\n对新游首发期很有用，尤其是机型兼容、流程卡点和高频崩溃问题。填写时越具体，越容易被定位。",
+    "contentEn": "## Quick Answer\n\nPost-launch hotfixes should be read by platform, version, scenario, and required action. Do not stop at vague wording like “optimized.” Check whether the issue matches your device, quest, boss, sea region, or activity menu.\n\nSources: https://news.17173.com/content/07212026/104708131.shtml, https://www.taptap.cn/app/755604/topic?type=official, and the site known-issues tracker.\n\n## Hotfix Reading Checklist\n\n| Check | Why |\n|---|---|\n| Platform | PC, Android, and iOS fixes can differ |\n| Version | Some fixes require a client update |\n| Scenario | The notice may only cover a specific boss or quest |\n| Reproduction | Retest with the same account, device, and settings |\n| Feedback route | Submit clear device, platform, scenario, and screenshots |",
+    "faq": [
+      {
+        "questionZh": "热修一定要重新下载吗？",
+        "question": "Do all hotfixes require a download?",
+        "answerZh": "不一定。服务器热更可能只要重启，客户端更新才通常需要下载。",
+        "answer": "Not always. Server-side hotfixes may only need a restart; client updates usually require a download."
+      },
+      {
+        "questionZh": "DX11 材质优化是手机端优化吗？",
+        "question": "Is DX11 texture optimization a mobile fix?",
+        "answerZh": "DX11 更偏 PC 图形接口；手机端要看安卓/iOS 适配公告。",
+        "answer": "DX11 is PC graphics-interface wording. Mobile players should watch Android/iOS adaptation notes."
+      },
+      {
+        "questionZh": "反馈问卷怎么写最有效？",
+        "question": "What makes feedback useful?",
+        "answerZh": "写清设备、系统、平台、区服、问题场景、复现步骤和截图/录屏。",
+        "answer": "Include device, OS, platform, server, scenario, reproduction steps, and screenshots or video."
+      }
+    ]
   }
 ]

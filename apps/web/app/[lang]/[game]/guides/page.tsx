@@ -39,7 +39,7 @@ const FEATURED_GUIDE_IDS: Record<GameId, string[]> = {
   guihuan: ['beginner-guide', 'download-install-guide', 'spirit-build-guide'],
   ananta: ['beginner-guide', 'download-install-guide', 'combat-system-guide'],
   endfield: ['download-install-guide', 'combat-system-guide', 'crisis-contract-guide'],
-  sea: ['week-one-live-ops-overview', 'mobile-launch-guide', 'good-gold-bricks-farming-guide'],
+  sea: ['channel-rewards-code-verification-guide', 'mobile-graphics-fps-heat-settings-guide', 'hotfix-feedback-roadmap-guide'],
   skjh: ['week-one-live-ops-overview', 'anti-cheat-reporting-guide', 'custom-mode-community-server-guide'],
 };
 

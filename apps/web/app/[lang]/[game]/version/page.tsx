@@ -102,9 +102,9 @@ const INTENT_LINKS: Partial<Record<GameId, IntentLink[]>> = {
     { href: '/endfield/guides/combat-system-guide', label: { zh: '玩法 / 配置', en: 'Gameplay / Specs', ja: '玩法 / 環境' }, description: { zh: '承接 wiki、角色、配置和玩法问题。', en: 'Capture wiki, character, specs, and gameplay questions.', ja: 'Wiki、キャラ、環境、玩法検索を承接。' } },
   ],
   sea: [
-    { href: '/sea/guides/mobile-launch-guide', label: { zh: '移动端首发', en: 'Mobile launch', ja: 'モバイル開始' }, description: { zh: '7 月 23 日入口、账号、区服、配置和首日排错。', en: 'July 23 entry, account, server, specs, and first-day troubleshooting.', ja: '7月23日の入口、アカウント、サーバー、環境、初日対応。' } },
-    { href: '/sea/guides/pc-mobile-cross-progression-faq', label: { zh: '互通 FAQ', en: 'Cross-progress', ja: '連携 FAQ' }, description: { zh: 'PC、Steam、iOS、Android 的账号、区服、渠道和奖励边界。', en: 'Account, server, channel, and reward boundaries across PC, Steam, iOS, and Android.', ja: 'PC、Steam、iOS、Androidのアカウント、サーバー、チャネル、報酬境界。' } },
-    { href: '/sea/guides/mobile-troubleshooting-guide', label: { zh: '首日排错', en: 'Troubleshooting', ja: '初日対応' }, description: { zh: '进不去、黑屏、卡顿、更新慢、发热和福利没到账。', en: 'Login issues, black screens, lag, slow updates, heat, and missing rewards.', ja: 'ログイン不可、黒画面、ラグ、更新遅延、発熱、報酬未着。' } },
+    { href: '/sea/guides/identity-v-mobile-launch-event-guide', label: { zh: '第五人格联动', en: 'Identity V collab', ja: 'Identity Vコラボ' }, description: { zh: '纽扣眼、狂欢之椅、拍照动作、活动任务和移动端领取顺序。', en: 'Button eyes, chair prop, photo pose, event tasks, and mobile claim order.', ja: 'ボタン目、椅子、写真ポーズ、イベント任務、モバイル受取順。' } },
+    { href: '/sea/guides/spongebob-collab-summer-faq', label: { zh: '海绵宝宝暑期', en: 'SpongeBob summer', ja: 'SpongeBob夏' }, description: { zh: '蟹堡王、比奇堡、活动奖励、限时规则和上线时间判断。', en: 'Krusty Krab/Bikini Bottom intent, rewards, limited rules, and timing.', ja: 'Krusty Krab/Bikini Bottom、報酬、期間限定、時期判断。' } },
+    { href: '/sea/guides/memory-tower-weekly-dredging-guide', label: { zh: '记忆之塔周常', en: 'Memory Tower weekly', ja: 'Memory Tower週課' }, description: { zh: '每周打捞、往日之影、漂泊之家、探索者勋章和镶嵌资源。', en: 'Weekly dredging, Past Shadows, Drifting Home, Explorer Medals, and socketing.', ja: '週課打捞、Past Shadows、Drifting Home、Explorer Medal、装着資源。' } },
   ],
   skjh: [
     { href: '/skjh/guides/official-pc-download-faq', label: { zh: '官网 / PC 下载', en: 'Official / PC Download', ja: '公式 / PC DL' }, description: { zh: 'PC、移动端、多端互通和安装问题。', en: 'PC, mobile, cross-play, and install questions.', ja: 'PC、モバイル、多端連携、インストール。' } },
@@ -526,7 +526,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['molly-starter-team-guide', 'n3-abyss-week-one-route', 'gamescom-demo-gameplay-review-faq', 'mobile-troubleshooting-guide'],
+    guideIds: ['channel-rewards-code-verification-guide', 'mobile-graphics-fps-heat-settings-guide', 'hotfix-feedback-roadmap-guide', 'haizang-combat-highlight-guide'],
   },
   skjh: {
     title: { zh: 'S1 登岛 / 服务器模式 / 防抄家专题', en: 'S1 Island Start / Server Modes / Anti-Raid Hub', ja: 'S1上陸 / サーバーモード / 防衛特集' },
