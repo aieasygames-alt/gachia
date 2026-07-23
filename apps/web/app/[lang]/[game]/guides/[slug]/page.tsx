@@ -520,12 +520,12 @@ const GUIDE_META_OVERRIDES: Record<string, LocaleMeta> = {
   },
   'sea/download-install-guide': {
     en: {
-      title: 'Sea of Remnants Download, Install & PC Specs: July 6 Preload, July 9 Open Beta',
-      description: 'Sea of Remnants PC preload, pre-character creation, install checklist, official download entry, system requirements, and launch-day troubleshooting.',
+      title: 'Sea of Remnants Mobile Download Guide: TapTap, iOS, Android, Steam, Official Launcher',
+      description: 'Sea of Remnants July 23 mobile launch download guide covering TapTap, iOS, Android, Steam, official launcher, post-preload updates, storage, account checks, and troubleshooting.',
     },
     zh: {
-      title: '《遗忘之海》下载安装与配置要求：7 月 6 日预下载、7 月 9 日公测',
-      description: '整理《遗忘之海》PC 预下载、预创角、安装检查、配置要求、官网下载入口和开服当天排错步骤。',
+      title: '《遗忘之海》移动端下载入口：官网、TapTap、iOS、Android、Steam 与官方启动器',
+      description: '更新至 2026 年 7 月 23 日移动端首发口径，整理官网、TapTap、iOS、Android、Steam、官方启动器、预下载后更新、容量、账号和首日排错。',
     },
   },
   'sea/mechanics-faq-guide': {
@@ -800,14 +800,14 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
     ],
     'download-install-guide': [
       {
-        href: '/sea/guides/system-requirements-guide',
-        label: { zh: '看配置要求', en: 'Read system requirements', ja: '必要環境へ' },
-        description: { zh: '先确认电脑是否能跑', en: 'Check whether your PC can run it', ja: 'PC要件を先に確認', },
+        href: '/sea/guides/pc-mobile-cross-progression-faq',
+        label: { zh: '看互通 FAQ', en: 'Read cross-progress FAQ', ja: '連携FAQへ' },
+        description: { zh: '先确认账号、区服、渠道和奖励边界', en: 'Check account, server, channel, and reward boundaries', ja: 'アカウント、サーバー、チャネル、報酬境界を確認', },
       },
       {
-        href: '/sea/guides/launch-day-guide',
-        label: { zh: '看开服攻略', en: 'Read launch guide', ja: '開服攻略へ' },
-        description: { zh: '安装后直接接首日路线', en: 'Move straight into day-one routing', ja: 'DL後に初日ルートへ', },
+        href: '/sea/guides/mobile-troubleshooting-guide',
+        label: { zh: '看首日排错', en: 'Read troubleshooting', ja: '初日対応へ' },
+        description: { zh: '黑屏、卡顿、更新慢和福利没到账先看这里', en: 'Use this for black screens, lag, slow updates, and missing rewards', ja: '黒画面、ラグ、更新遅延、報酬未着を確認', },
       },
     ],
     'payment-model-guide': [
@@ -2429,19 +2429,19 @@ const SEA_GUIDE_ENTITY_LINKS: Record<string, {
     characters: ['traveler', 'ais'],
     guides: [
       {
-        href: '/sea/guides/system-requirements-guide',
-        label: { zh: '看配置要求', en: 'System requirements', ja: '必要環境へ' },
-        description: { zh: '先确认电脑能不能跑。', en: 'Check whether your PC can run it.', ja: 'PC要件を先に確認。' },
+        href: '/sea/guides/pc-mobile-cross-progression-faq',
+        label: { zh: '看互通 FAQ', en: 'Cross-progress FAQ', ja: '連携FAQへ' },
+        description: { zh: '先确认账号、区服、渠道和奖励边界。', en: 'Check account, server, channel, and reward boundaries.', ja: 'アカウント、サーバー、チャネル、報酬境界を確認。' },
       },
       {
-        href: '/sea/guides/platform-download-guide',
-        label: { zh: '看平台入口', en: 'Platform entry', ja: 'プラットフォーム入口へ' },
-        description: { zh: '按平台确认下载路径。', en: 'Confirm the correct download path by platform.', ja: 'プラットフォーム別の導線を確認。' },
+        href: '/sea/guides/mobile-troubleshooting-guide',
+        label: { zh: '看首日排错', en: 'Troubleshooting', ja: '初日対応へ' },
+        description: { zh: '进不去、黑屏、卡顿、更新慢时先查。', en: 'Check this for login issues, black screens, lag, and slow updates.', ja: 'ログイン不可、黒画面、ラグ、更新遅延を確認。' },
       },
       {
-        href: '/sea/guides/launch-day-guide',
-        label: { zh: '看开服攻略', en: 'Launch guide', ja: '開服攻略へ' },
-        description: { zh: '安装后直接接首日路线。', en: 'Move straight into day-one routing.', ja: 'DL後に初日ルートへ。' },
+        href: '/sea/guides/launch-rewards-codes-guide',
+        label: { zh: '看福利兑换码', en: 'Rewards and codes', ja: '報酬とコードへ' },
+        description: { zh: '安装后别急着领奖，先确认账号和区服。', en: 'Before claiming rewards, confirm account and server.', ja: '報酬受取前にアカウントとサーバーを確認。' },
       },
     ],
   },
