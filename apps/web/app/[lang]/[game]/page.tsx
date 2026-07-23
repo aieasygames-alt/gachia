@@ -397,12 +397,12 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           ],
         },
         {
-          title: '角色与配队',
-          description: '把角色图鉴、节奏榜和队伍思路接到更具体的养成页。',
+          title: '茉莉与进阶',
+          description: '把茉莉开荒、N3/深渊和角色图鉴接到更具体的养成页。',
           links: [
+            { href: '/sea/guides/molly-starter-team-guide', label: '茉莉首发队' },
+            { href: '/sea/guides/n3-abyss-week-one-route', label: 'N3 / 深渊' },
             { href: '/sea/characters', label: '角色图鉴' },
-            { href: '/sea/guides/tier-list-guide', label: '节奏榜' },
-            { href: '/sea/guides/team-building-guide', label: '队伍思路' },
           ],
         },
       ],
@@ -424,12 +424,12 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           ],
         },
         {
-          title: 'Characters and teams',
-          description: 'Push character, tier, and team searches into deeper build pages.',
+          title: 'Molly and progression',
+          description: 'Route Molly starters, N3/abyss, and character searches into deeper build pages.',
           links: [
+            { href: '/sea/guides/molly-starter-team-guide', label: 'Molly teams' },
+            { href: '/sea/guides/n3-abyss-week-one-route', label: 'N3 / Abyss' },
             { href: '/sea/characters', label: 'Characters' },
-            { href: '/sea/guides/tier-list-guide', label: 'Tier list' },
-            { href: '/sea/guides/team-building-guide', label: 'Team building' },
           ],
         },
       ],
@@ -451,12 +451,12 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           ],
         },
         {
-          title: 'キャラと編成',
-          description: 'キャラ図鑑、Tier、編成案へつなげます。',
+          title: 'Mollyと進行',
+          description: 'Molly編成、N3/深淵、キャラ検索を深い育成ページへつなげます。',
           links: [
+            { href: '/sea/guides/molly-starter-team-guide', label: 'Molly編成' },
+            { href: '/sea/guides/n3-abyss-week-one-route', label: 'N3 / Abyss' },
             { href: '/sea/characters', label: 'キャラ図鑑' },
-            { href: '/sea/guides/tier-list-guide', label: 'Tier' },
-            { href: '/sea/guides/team-building-guide', label: '編成案' },
           ],
         },
       ],
@@ -770,7 +770,7 @@ const FEATURED_GUIDE_IDS: Record<string, string[]> = {
   guihuan: ['test-recruit-international-download-faq', 'official-release-company-faq', 'test-release-timeline-guide'],
   ananta: ['gameplay-city-no-gacha-comparison-faq', 'release-date-beta-pc-faq', 'preregistration-no-gacha-guide'],
   endfield: ['official-download-specs-homecoming-faq', 'homecoming-operators-map-route', 'blueprint-aic-factory-guide'],
-  sea: ['mobile-troubleshooting-guide', 'pc-mobile-cross-progression-faq', 'mobile-launch-guide'],
+  sea: ['molly-starter-team-guide', 'n3-abyss-week-one-route', 'gamescom-demo-gameplay-review-faq'],
   skjh: ['official-pc-download-faq', 'first-2-hours-starter-route', 'base-location-anti-raid-plan'],
 };
 

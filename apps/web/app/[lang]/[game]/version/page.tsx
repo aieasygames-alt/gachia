@@ -526,7 +526,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['mobile-troubleshooting-guide', 'pc-mobile-cross-progression-faq', 'download-install-guide', 'launch-rewards-codes-guide'],
+    guideIds: ['molly-starter-team-guide', 'n3-abyss-week-one-route', 'gamescom-demo-gameplay-review-faq', 'mobile-troubleshooting-guide'],
   },
   skjh: {
     title: { zh: 'S1 登岛 / 服务器模式 / 防抄家专题', en: 'S1 Island Start / Server Modes / Anti-Raid Hub', ja: 'S1上陸 / サーバーモード / 防衛特集' },
@@ -909,11 +909,11 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
         },
       {
         title: { zh: '养成与配队', en: 'Builds & teams', ja: '育成・編成' },
-        description: { zh: '把角色、队伍和节奏榜做成下一跳。', en: 'Turn character, team, and tier questions into the next click.', ja: 'キャラ、編成、Tierの質問を次の導線に変えます。' },
+        description: { zh: '把茉莉开荒、N3/深渊和角色图鉴做成下一跳。', en: 'Route Molly starters, N3/abyss, and character searches into the next click.', ja: 'Molly編成、N3/深淵、キャラ検索を次の導線に変えます。' },
         links: [
+          { href: '/sea/guides/molly-starter-team-guide', label: { zh: '茉莉首发队', en: 'Molly teams', ja: 'Molly編成' } },
+          { href: '/sea/guides/n3-abyss-week-one-route', label: { zh: 'N3 / 深渊', en: 'N3 / Abyss', ja: 'N3 / Abyss' } },
           { href: '/sea/characters', label: { zh: '角色图鉴', en: 'Character wiki', ja: 'キャラ図鑑' } },
-          { href: '/sea/guides/tier-list-guide', label: { zh: '节奏榜', en: 'Tier list', ja: 'Tier' } },
-          { href: '/sea/guides/team-building-guide', label: { zh: '队伍思路', en: 'Team building', ja: '編成案' } },
         ],
       },
       {
@@ -945,11 +945,11 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: 'Builds & teams', en: 'Builds & teams', ja: '育成・編成' },
-        description: { zh: '把角色、队伍和节奏榜做成下一跳。', en: 'Turn character, team, and tier questions into the next click.', ja: 'キャラ、編成、Tierの質問を次の導線に変えます。' },
+        description: { zh: '把茉莉开荒、N3/深渊和角色图鉴做成下一跳。', en: 'Route Molly starters, N3/abyss, and character searches into the next click.', ja: 'Molly編成、N3/深淵、キャラ検索を次の導線に変えます。' },
         links: [
+          { href: '/sea/guides/molly-starter-team-guide', label: { zh: '茉莉首发队', en: 'Molly teams', ja: 'Molly編成' } },
+          { href: '/sea/guides/n3-abyss-week-one-route', label: { zh: 'N3 / 深渊', en: 'N3 / Abyss', ja: 'N3 / Abyss' } },
           { href: '/sea/characters', label: { zh: '角色图鉴', en: 'Character wiki', ja: 'キャラ図鑑' } },
-          { href: '/sea/guides/tier-list-guide', label: { zh: '节奏榜', en: 'Tier list', ja: 'Tier' } },
-          { href: '/sea/guides/team-building-guide', label: { zh: '队伍思路', en: 'Team building', ja: '編成案' } },
         ],
       },
       {
@@ -981,11 +981,11 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '育成・編成', en: 'Builds & teams', ja: '育成・編成' },
-        description: { zh: '把角色、队伍和节奏榜做成下一跳。', en: 'Turn character, team, and tier questions into the next click.', ja: 'キャラ、編成、Tierの質問を次の導線に変えます。' },
+        description: { zh: '把茉莉开荒、N3/深渊和角色图鉴做成下一跳。', en: 'Route Molly starters, N3/abyss, and character searches into the next click.', ja: 'Molly編成、N3/深淵、キャラ検索を次の導線に変えます。' },
         links: [
+          { href: '/sea/guides/molly-starter-team-guide', label: { zh: '茉莉首发队', en: 'Molly teams', ja: 'Molly編成' } },
+          { href: '/sea/guides/n3-abyss-week-one-route', label: { zh: 'N3 / 深渊', en: 'N3 / Abyss', ja: 'N3 / Abyss' } },
           { href: '/sea/characters', label: { zh: '角色图鉴', en: 'Character wiki', ja: 'キャラ図鑑' } },
-          { href: '/sea/guides/tier-list-guide', label: { zh: '节奏榜', en: 'Tier list', ja: 'Tier' } },
-          { href: '/sea/guides/team-building-guide', label: { zh: '队伍思路', en: 'Team building', ja: '編成案' } },
         ],
       },
       {

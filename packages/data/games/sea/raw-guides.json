@@ -2142,5 +2142,135 @@
         "answer": "Do not assume sharing. Platform gifts, payments, and compensation should be checked by channel-specific notices."
       }
     ]
+  },
+  {
+    "id": "molly-starter-team-guide",
+    "title": "《遗忘之海》茉莉首发阵容与培养路线：移动端开服怎么配队、转职和配资源",
+    "titleEn": "Sea of Remnants Molly Starter Team Guide: Launch Teams, Class Path, and Resource Planning",
+    "category": "team",
+    "categoryZh": "队伍搭配",
+    "categoryEn": "Team Building",
+    "summary": "承接 7 月 23 日移动端首发后的茉莉攻略需求，整理茉莉定位、茉莉+饿猫开荒队、低配生存位、转职/属性方向和首周资源投入边界。",
+    "summaryEn": "A July 23 mobile-launch Molly guide covering her role, Molly + Stray Cat starter teams, budget sustain options, class/stat direction, and week-one resource boundaries.",
+    "tags": [
+      "茉莉",
+      "阵容",
+      "配队",
+      "0命",
+      "移动端",
+      "首发",
+      "饿猫",
+      "深潜噩梦",
+      "Molly",
+      "Team"
+    ],
+    "content": "## 先给结论\n\n移动端 **2026 年 7 月 23 日**首发后，茉莉从“卡池角色”变成了实际开荒搜索热点。社区讨论和攻略站已经开始围绕茉莉的队伍、转职、往日之影、深潜噩梦表现和低配替代展开，但站内建议保持一个边界：**茉莉强度和最终毕业搭配要以后续实测、版本补丁和你自己的账号资源为准**。\n\n如果你今天刚入坑，最稳的理解是：茉莉可以作为长线核心培养目标，但第一天不要因为单个角色就打乱账号、区服、福利领取和 6 选 1规划。\n\n## 茉莉当前适合解决什么问题\n\n| 问题 | 茉莉价值 |\n|---|---|\n| 单体 Boss 压力大 | 适合作为核心输出/体系核心观察 |\n| 队伍续航不稳 | 如果你的配置偏辅助/治疗路线，可补容错 |\n| 想打深潜噩梦 | 社区已开始讨论茉莉在高压内容中的表现，但要等更多实测 |\n| 手机端新玩家 | 可以先围绕她做一队，但不要首日强追高投入 |\n\n## 首发推荐队伍框架\n\n| 队伍 | 组成 | 适合谁 |\n|---|---|---|\n| 茉莉 + 饿猫 + 铁腕统领 | 茉莉作为核心，饿猫补追击/协同，铁腕提高容错 | 有茉莉和饿猫，想稳推主线和 Boss |\n| 茉莉 + 饿猫 + 懦夫 | 低配生存替代 | 没有黑券盾、但需要前排/容错 |\n| 茉莉 + 黑格 + 三辅助思路 | 偏乐队/长线循环 | 喜欢蓝色乐队体系，愿意等实测 |\n| 小斧头 + 饿猫 + 茉莉 | 追击开荒队 | 已选小斧头，想补稳定性和追击链 |\n\n## 转职和属性怎么先看\n\n社区攻略普遍把茉莉往暴击、爆伤、额外行动、攻击加成等方向讨论。站内建议这样处理：\n\n1. 首日先保证队伍能通主线和日常，不急着毕业。\n2. 如果你走输出路线，优先看攻击、暴击、暴伤和行动效率。\n3. 如果你走辅助/续航路线，先看技能循环和队伍缺口。\n4. 往日之影、强化骰和装备投入先小步试错，别把不可逆资源一次打满。\n\n## 手机端新玩家投入顺序\n\n1. 先确认账号、区服和下载入口。\n2. 领取福利前确认角色是否在正确区服。\n3. 6 选 1先补队伍缺口，不要把茉莉当作 6 选 1目标。\n4. 有茉莉后再决定是否围绕她补饿猫、铁腕或低配生存位。\n5. 首周先让一队成型，再考虑第二队或追求极限深渊。\n\n## 来源与边界\n\n- TapTap 社区 7 月 23 日前后讨论：茉莉、饿猫、铁腕、每周深渊、记忆之塔、漂泊之家等成为移动端开服后的热点。\n- 游民星空 / 3DM 等攻略站开始发布茉莉培养和阵容内容。\n- 本页把这些视为**社区与攻略讨论信号**，不是官方强度定论。",
+    "contentEn": "## Quick Answer\n\nAfter the **July 23, 2026** mobile launch, Molly became a real starter-team search topic rather than only a banner character. Community and guide-site discussion is now about her teams, class path, Past Shadows, high-pressure modes, and budget substitutions. Keep the boundary clear: Molly's final strength and best-in-slot setup should follow testing, patches, and your account resources.\n\n## What Molly Helps With\n\n| Problem | Molly value |\n|---|---|\n| Single-target boss pressure | Possible core DPS / team-core direction |\n| Low team stability | Can be routed as a sustain/support value depending on build |\n| Nightmare Deep Dive style content | Community discussion is rising, but more testing is needed |\n| Mobile launch starters | Build around her if you have her, but do not overinvest blindly on day one |\n\n## Launch Team Frames\n\n| Team | Setup | Best for |\n|---|---|---|\n| Molly + Stray Cat + Iron Commander | Core + follow-up/coordination + tanky sustain | Players with Molly and Stray Cat who want stable story/Boss progress |\n| Molly + Stray Cat + Coward | Budget sustain version | No premium tank yet |\n| Molly + Heige + support shell | Blue-band / long-cycle idea | Players who like the band theme and can wait for testing |\n| Little Axe + Stray Cat + Molly | Follow-up starter team | Players who selected Little Axe and need stability |\n\n## Class and Stat Direction\n\nCommunity guides discuss crit, crit damage, extra action, attack bonus, and signature Past Shadow style planning. Treat this as a direction, not a final answer. Start with a working story/daily team, then test whether your Molly is solving DPS, support, or sustain needs.\n\n## Mobile Player Priority\n\nConfirm account, server, and download entry first. Claim rewards only on the correct character. Do not treat Molly as a 6-choice beginner selector target. Once you have her, decide whether to add Stray Cat, Iron Commander, or a budget sustain slot.\n\n## Sources and Boundary\n\nTapTap community threads around July 23 discuss Molly, Stray Cat, Iron Commander, weekly abyss, Memory Tower, and base progression. Chinese guide sites have also started publishing Molly build/team content. This page treats those as community/guide signals, not official tier-list law.",
+    "faq": [
+      {
+        "questionZh": "茉莉适合移动端首发新手培养吗？",
+        "question": "Is Molly good for mobile launch starters?",
+        "answerZh": "如果你已经抽到茉莉，可以围绕她组队；但第一天更重要的是账号区服、福利领取和第一队成型，不建议无脑高投入。",
+        "answer": "If you already have Molly, you can build around her. But day one still prioritizes account/server checks, rewards, and one stable team over blind overinvestment."
+      },
+      {
+        "questionZh": "茉莉和谁组队更稳？",
+        "question": "Who works well with Molly?",
+        "answerZh": "当前更适合先看茉莉+饿猫+铁腕统领，低配可用懦夫补容错；具体最优队伍等更多实测。",
+        "answer": "Start with Molly + Stray Cat + Iron Commander, with Coward as a budget stability option. Final best teams need more testing."
+      },
+      {
+        "questionZh": "茉莉是 6 选 1自选角色吗？",
+        "question": "Is Molly in the 6-choice beginner selector?",
+        "answerZh": "不要默认。站内建议把茉莉当作首发 UP/体系核心讨论，6 选 1仍按实际名单和队伍缺口决定。",
+        "answer": "Do not assume so. Treat Molly as a launch banner/team-core topic, while the 6-choice selector should follow its actual roster and your team gap."
+      }
+    ]
+  },
+  {
+    "id": "n3-abyss-week-one-route",
+    "title": "《遗忘之海》N3、深渊与移动端首周进阶路线：茉莉队、记忆之塔、漂泊之家先做什么",
+    "titleEn": "Sea of Remnants N3, Abyss, and Week-One Progression: Molly Teams, Memory Tower, and Base Priorities",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "面向移动端首发后从新手转进阶的玩家，整理 N3/深渊、每周奖励、记忆之塔、漂泊之家、探索者勋章、船歌和装备镶嵌的首周优先级。",
+    "summaryEn": "A post-mobile-launch progression guide for N3/abyss intent, weekly rewards, Memory Tower, base upgrades, explorer medals, ship songs, and gear socketing priorities.",
+    "tags": [
+      "N3",
+      "深渊",
+      "首周",
+      "记忆之塔",
+      "漂泊之家",
+      "探索者勋章",
+      "船歌",
+      "移动端",
+      "Abyss"
+    ],
+    "content": "## 先给结论\n\n移动端首发后，很多玩家会从“下载/互通/福利”很快切到“我怎么追进度”。社区讨论里，N3、深渊、记忆之塔、漂泊之家、探索者勋章、海螺碎片和船歌已经开始成为进阶关键词。\n\n这页的目标不是写一份极限竞速路线，而是帮你判断首周资源顺序：**先让主线和第一队稳定，再补每周深渊/记忆之塔，最后处理长期基地和装备细节**。\n\n## 首周优先级总表\n\n| 优先级 | 内容 | 为什么 |\n|---|---|---|\n| P0 | 主线推进与系统解锁 | 不解锁系统，很多资源入口无法稳定循环 |\n| P0 | 第一队成型 | N3/深渊前先保证主攻、协攻、生存位完整 |\n| P1 | 每周深渊奖励 | 周期性奖励错过就少一轮资源 |\n| P1 | 记忆之塔打捞 | 关系到角色/往日之影等长期补强 |\n| P1 | 漂泊之家等级 | 影响探索者勋章积累和海上长期收益 |\n| P2 | 船歌和海螺碎片 | 优先给主 C 或核心循环，不要平均分散 |\n| P2 | 装备镶嵌 | 不确定能否自由拆换前，不要随手塞高价值资源 |\n\n## N3 / 深渊前检查\n\n进入更高压力内容前，先问 5 个问题：\n\n1. 第一队有没有稳定主攻？\n2. 队伍是否有生存、护盾、治疗或减伤方案？\n3. 茉莉/小斧头/海葬这类核心是否已经有基础装备？\n4. 每周奖励入口是否已经打开？\n5. 手机端画质和发热是否影响长时间战斗？\n\n## 茉莉队怎么接进阶内容\n\n如果你围绕茉莉开局，推荐先用“茉莉 + 饿猫 + 生存位”的思路观察：\n\n- 有铁腕统领：优先提高容错，适合刚进深渊压力层。\n- 没有铁腕：用懦夫或其他生存位过渡。\n- 已经有小斧头：可以转成追击/单体爆发路线。\n- 想走黑格体系：先等实测循环稳定，再投入第二队资源。\n\n## 漂泊之家和探索者勋章\n\n社区讨论里提到尽快推进海上内容并升级“漂泊之家”，原因是它会影响探索者勋章等长期积累。站内建议：\n\n1. 主线开系统后，不要完全忽略海上推进。\n2. 能稳定换取周期资源的入口优先级高于一次性小奖励。\n3. 如果 100 勋章换宝箱等规则变化，以游戏内实际显示为准。\n\n## 装备镶嵌别急\n\n如果装备或记忆气息存在覆盖/替换成本，首周不要把高价值材料随手塞进过渡装备。比较稳的做法：\n\n- 主 C 优先，辅助和过渡位后置。\n- 不确定毕业方向时用低成本资源试错。\n- 看到“不能拆，只能覆盖”这类机制时，先暂停高价值投入。\n\n## 站内下一步\n\n- [茉莉首发阵容与培养路线](/zh/sea/guides/molly-starter-team-guide)\n- [首周运营总览](/zh/sea/guides/week-one-live-ops-overview)\n- [号角、大脸币与返航收益](/zh/sea/guides/horn-farming-economy-guide)\n- [船队编组指南](/zh/sea/guides/team-building-guide)",
+    "contentEn": "## Quick Answer\n\nAfter mobile launch, many players move quickly from download/cross-progress/rewards into progression. Community discussion is now surfacing N3, abyss, Memory Tower, base progression, explorer medals, conch fragments, ship songs, and socketing.\n\nThis page is not a speedrun route. It is a week-one priority guide: stabilize story and your first team, then handle weekly abyss/Memory Tower, then long-term base and gear details.\n\n## Week-One Priority Table\n\n| Priority | Task | Why |\n|---|---|---|\n| P0 | Story and system unlocks | Many resource loops are locked behind systems |\n| P0 | First team formation | N3/abyss pressure needs core DPS, coordination, and sustain |\n| P1 | Weekly abyss rewards | Missing a weekly cycle loses resources |\n| P1 | Memory Tower dredging | Long-term character/Past Shadow value |\n| P1 | Base / Drifting Home level | Affects explorer-medal style long-term income |\n| P2 | Ship songs / conch fragments | Focus on main carry or core loop first |\n| P2 | Gear socketing | Avoid high-value resources if replacement cost is unclear |\n\n## Before N3 / Abyss\n\nCheck whether your first team has a main damage dealer, sustain, basic gear, weekly reward access, and stable mobile performance. Heat and frame drops can matter in longer fights.\n\n## Molly Teams for Progression\n\nIf starting around Molly, test Molly + Stray Cat + sustain. Iron Commander improves stability; Coward can be a budget substitute; Little Axe can shift the team toward follow-up / single-target burst; Heige shells should wait for more cycle testing.\n\n## Base and Explorer Medals\n\nCommunity discussion points to sea progression and base upgrades as long-term resource accelerators. Push sea content after system unlocks, prioritize repeatable resource access, and verify any medal/chest exchange rules in game.\n\n## Gear Socketing Caution\n\nIf socketing or memory essence replacement has costs, avoid placing high-value materials into temporary gear. Main carry first, support slots later, low-cost tests before commitment.\n\n## Read Next\n\n- [Molly starter team guide](/en/sea/guides/molly-starter-team-guide)\n- [Week-one live ops hub](/en/sea/guides/week-one-live-ops-overview)\n- [Horn and Face Coin guide](/en/sea/guides/horn-farming-economy-guide)\n- [Team-building guide](/en/sea/guides/team-building-guide)",
+    "faq": [
+      {
+        "questionZh": "移动端首周要先打深渊吗？",
+        "question": "Should mobile players rush abyss in week one?",
+        "answerZh": "不要只为深渊打乱主线。先解锁系统和第一队，再补每周深渊奖励更稳。",
+        "answer": "Do not disrupt story progression just for abyss. Unlock systems and stabilize your first team first, then handle weekly abyss rewards."
+      },
+      {
+        "questionZh": "记忆之塔首周重要吗？",
+        "question": "Is Memory Tower important in week one?",
+        "answerZh": "重要，因为它关系到角色和往日之影等长期补强；但前提是主线和队伍循环已经稳定。",
+        "answer": "Yes, because it connects to long-term character and Past Shadow value, but only after story and team basics are stable."
+      },
+      {
+        "questionZh": "装备镶嵌资源可以随便用吗？",
+        "question": "Can I freely spend socketing resources?",
+        "answerZh": "不建议。若替换成本不清楚，先把高价值资源留给主 C 或核心装备。",
+        "answer": "Not recommended. If replacement costs are unclear, save high-value materials for your main carry or core gear."
+      }
+    ]
+  },
+  {
+    "id": "gamescom-demo-gameplay-review-faq",
+    "title": "Sea of Remnants gamescom 2026 Demo FAQ：试玩、Gameplay、Review、Steam、PS5/Xbox 怎么看",
+    "titleEn": "Sea of Remnants gamescom 2026 Demo FAQ: Gameplay, Reviews, Steam, PS5/Xbox, and Release Date",
+    "category": "news",
+    "categoryZh": "版本资讯",
+    "categoryEn": "News",
+    "summary": "面向 gamescom 2026 demo、gameplay、review、Steam、PS5、Xbox、release date 等英文搜索，整理试玩曝光、媒体预览维度、平台边界和站内阅读路径。",
+    "summaryEn": "An English-first gamescom 2026 demo FAQ for Sea of Remnants covering gameplay, reviews, Steam, PS5, Xbox, release date boundaries, and hands-on preview angles.",
+    "tags": [
+      "gamescom",
+      "demo",
+      "gameplay",
+      "review",
+      "Steam",
+      "PS5",
+      "Xbox",
+      "release date",
+      "Sea of Remnants"
+    ],
+    "content": "## Quick Answer\n\nSea of Remnants now has a clear English search cluster around **gamescom 2026 demo**, gameplay, review, Steam, PS5, Xbox, and release date. The safe framing is: gamescom demo is a hands-on exposure signal, not a confirmed console release date or global launch date.\n\nIf you are researching the game after seeing demo coverage, judge it by five angles: art direction, sea exploration, turn-based crew combat, naval combat, and live-service progression.\n\n## What the Demo Signal Means\n\n| Query | Best answer |\n|---|---|\n| gamescom demo | Treat it as hands-on exposure and preview intent |\n| gameplay | Look for crew combat, naval combat, exploration, and progression systems |\n| review | Separate art, combat, exploration, economy, and solo experience |\n| Steam | Check Steam store and official launcher status separately |\n| PS5 / Xbox | Wait for official store pages or platform announcements |\n| release date | Platform timing can differ; use official site and stores first |\n\n## What Reviewers Should Check\n\n1. **Art direction**: wooden puppet characters, strange ocean fantasy, customization.\n2. **Naval combat**: whether ship battles feel tactical, readable, and meaningful.\n3. **Crew combat**: whether turn-based team choices create real synergy.\n4. **Sea exploration**: whether sailing, islands, bosses, and routes stay interesting.\n5. **Progression pressure**: how characters, Past Shadows, outfits, dailies, and rewards feel over time.\n\n## How to Read Existing Previews\n\nHands-on previews have highlighted the puppet-like art direction, sea travel, large bosses, and naval combat moments. Treat those as useful experience signals, but not as final balance or platform confirmation. Preview builds can differ from launch builds.\n\n## Platform Boundary\n\n- China mobile launch: already a July 23, 2026 intent node.\n- Steam / PC: use Steam and official launcher pages.\n- PS5 / Xbox: do not promise dates without official store confirmation.\n- Overseas mobile/global launch: keep wording tied to official site and stores.\n\n## Read Next\n\n- [PS5 / Xbox / Review / Gameplay FAQ](/en/sea/guides/ps5-xbox-review-gameplay-faq)\n- [Steam / Release Date / Gacha / Solo FAQ](/en/sea/guides/steam-release-gacha-solo-faq)\n- [Mobile launch FAQ](/en/sea/guides/mobile-launch-guide)\n- [What kind of game is Sea of Remnants?](/en/sea/guides/what-is-forgotten-sea)\n\n## Sources\n\n- Official Sea of Remnants site and store pages for platform status.\n- Reddit / gamescom discussion signal for demo search demand.\n- GamingTrend and RPGamer hands-on previews for preview-angle examples.\n- TapTap and China channel pages for July 23 mobile launch context.",
+    "contentEn": "## Quick Answer\n\nSea of Remnants now has a clear English search cluster around **gamescom 2026 demo**, gameplay, review, Steam, PS5, Xbox, and release date. The safe framing is: gamescom demo is a hands-on exposure signal, not a confirmed console release date or global launch date.\n\nIf you are researching the game after seeing demo coverage, judge it by five angles: art direction, sea exploration, turn-based crew combat, naval combat, and live-service progression.\n\n## What the Demo Signal Means\n\n| Query | Best answer |\n|---|---|\n| gamescom demo | Treat it as hands-on exposure and preview intent |\n| gameplay | Look for crew combat, naval combat, exploration, and progression systems |\n| review | Separate art, combat, exploration, economy, and solo experience |\n| Steam | Check Steam store and official launcher status separately |\n| PS5 / Xbox | Wait for official store pages or platform announcements |\n| release date | Platform timing can differ; use official site and stores first |\n\n## What Reviewers Should Check\n\n1. **Art direction**: wooden puppet characters, strange ocean fantasy, customization.\n2. **Naval combat**: whether ship battles feel tactical, readable, and meaningful.\n3. **Crew combat**: whether turn-based team choices create real synergy.\n4. **Sea exploration**: whether sailing, islands, bosses, and routes stay interesting.\n5. **Progression pressure**: how characters, Past Shadows, outfits, dailies, and rewards feel over time.\n\n## How to Read Existing Previews\n\nHands-on previews have highlighted the puppet-like art direction, sea travel, large bosses, and naval combat moments. Treat those as useful experience signals, but not as final balance or platform confirmation. Preview builds can differ from launch builds.\n\n## Platform Boundary\n\n- China mobile launch: already a July 23, 2026 intent node.\n- Steam / PC: use Steam and official launcher pages.\n- PS5 / Xbox: do not promise dates without official store confirmation.\n- Overseas mobile/global launch: keep wording tied to official site and stores.\n\n## Read Next\n\n- [PS5 / Xbox / Review / Gameplay FAQ](/en/sea/guides/ps5-xbox-review-gameplay-faq)\n- [Steam / Release Date / Gacha / Solo FAQ](/en/sea/guides/steam-release-gacha-solo-faq)\n- [Mobile launch FAQ](/en/sea/guides/mobile-launch-guide)\n- [What kind of game is Sea of Remnants?](/en/sea/guides/what-is-forgotten-sea)\n\n## Sources\n\n- Official Sea of Remnants site and store pages for platform status.\n- Reddit / gamescom discussion signal for demo search demand.\n- GamingTrend and RPGamer hands-on previews for preview-angle examples.\n- TapTap and China channel pages for July 23 mobile launch context.",
+    "faq": [
+      {
+        "questionZh": "gamescom demo 是主机版确认吗？",
+        "question": "Does the gamescom demo confirm PS5 or Xbox?",
+        "answerZh": "不是。它只能说明试玩曝光和海外关注增强，PS5/Xbox 日期仍以官方商店页或公告为准。",
+        "answer": "No. It only indicates hands-on exposure and rising global attention. PS5/Xbox timing still needs official store pages or announcements."
+      },
+      {
+        "questionZh": "看 Sea of Remnants review 应该关注什么？",
+        "question": "What should a Sea of Remnants review focus on?",
+        "answerZh": "重点看美术、海上探索、船员回合制战斗、海战、养成压力和单人体验。",
+        "answer": "Focus on art direction, sea exploration, turn-based crew combat, naval combat, progression pressure, and solo experience."
+      },
+      {
+        "questionZh": "Steam、PS5、Xbox 的上线时间能写死吗？",
+        "question": "Can Steam, PS5, and Xbox release timing be fixed here?",
+        "answerZh": "不能提前承诺。不同平台节奏可能不同，最终看官网、Steam 商店和官方平台公告。",
+        "answer": "Do not promise timing early. Platform schedules can differ, so use the official site, Steam store, and platform announcements."
+      }
+    ]
   }
 ]
