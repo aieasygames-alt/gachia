@@ -526,7 +526,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['channel-rewards-code-verification-guide', 'mobile-graphics-fps-heat-settings-guide', 'hotfix-feedback-roadmap-guide', 'haizang-combat-highlight-guide'],
+    guideIds: ['lost-sea-act-two-july-30-prep-guide', 'lost-sea-new-islands-ship-prep-guide', 'identity-v-signin-screenshot-rewards-guide', 'black-ticket-six-selector-guide'],
   },
   skjh: {
     title: { zh: 'S1 登岛 / 服务器模式 / 防抄家专题', en: 'S1 Island Start / Server Modes / Anti-Raid Hub', ja: 'S1上陸 / サーバーモード / 防衛特集' },

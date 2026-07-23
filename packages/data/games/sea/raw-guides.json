@@ -2647,5 +2647,425 @@
         "answer": "Include device, OS, platform, server, scenario, reproduction steps, and screenshots or video."
       }
     ]
+  },
+  {
+    "id": "black-ticket-six-selector-guide",
+    "title": "《遗忘之海》黑券 6 选 1 选谁：自选券、40 抽保底、重选风险与开局避坑",
+    "titleEn": "Sea of Remnants Black Ticket 6-Selector Guide: Who to Pick, 40-Pull Pity, Duplicate Risk, and Reroll Notes",
+    "category": "system",
+    "categoryZh": "系统攻略",
+    "categoryEn": "System",
+    "summary": "承接“遗忘之海 6 选 1 选谁”“黑券自选”“重选机制争议”等高意图搜索，整理开局自选券、40 抽保底、重复风险、角色定位和零氪选择顺序。",
+    "summaryEn": "A decision guide for the Black Ticket 6-selector, covering first-pick logic, 40-pull pity, duplicate risk, reroll concerns, and free-to-play priorities.",
+    "tags": [
+      "黑券6选1",
+      "6选1选谁",
+      "自选黑券",
+      "40抽保底",
+      "重选",
+      "开局角色",
+      "零氪"
+    ],
+    "content": "## 先给结论\n\n如果你在搜“遗忘之海黑券 6 选 1 选谁”，不要只看单个角色强度。更稳的顺序是：**先确认是否会被剧情强制消耗自选，再看 40 抽保底是否可能重复，最后按账号缺口选主 C、生存或辅助**。\n\n首发期社区已经围绕黑券自选、40 抽保底、重选风险产生讨论。本站建议用“角色定位 + 账号缺口 + 重复风险”来做决策，而不是照搬一张固定榜。\n\n参考公开来源：[TapTap 攻略话题](https://www.taptap.cn/hashtag/%E9%81%97%E5%BF%98%E4%B9%8B%E6%B5%B7%E6%94%BB%E7%95%A5)、[TapTap 官方论坛](https://www.taptap.cn/app/755604/topic)、[Bilibili 黑券 6 选 1 视频搜索结果](https://www.bilibili.com/video/BV1NtMe6hE1A/)。\n\n## 选择前先问 5 个问题\n\n| 问题 | 为什么重要 |\n|---|---|\n| 自选券能不能留到 40 抽后 | 决定是否能查漏补缺 |\n| 新手 40 抽保底是否可能重复 | 重复会浪费首周核心资源 |\n| 账号是否已有主 C | 缺输出时优先级完全不同 |\n| 生存位是否稳定 | N3/深渊卡关常常不是输出问题 |\n| 是否准备围绕茉莉/海葬/黑格开队 | 决定资源是否冲突 |\n\n## 黑券 6 选 1 决策表\n\n| 账号状态 | 推荐思路 | 不建议 |\n|---|---|---|\n| 没有稳定主 C | 优先输出核心或能带队推进的角色 | 只因为外观好看就选功能位 |\n| 已有茉莉或小斧头 | 补生存、辅助或循环位 | 重复堆同定位角色 |\n| 想走海葬/黑格方向 | 先等技能和队伍循环实测 | 提前把所有资源压到未验证体系 |\n| 零氪/微氪 | 保留资源，优先补队伍短板 | 为了重选反复折腾主账号 |\n| 外观党 | 可以按喜好选，但要知道强度成本 | 同时追多个培养线 |\n\n## 关于“自选券能不能留”\n\n社区讨论里有玩家反馈自选流程可能无法完全自由留到保底后再用。由于这类机制会随版本和活动说明变化，站内建议你在进入 6 选 1 前先观察：\n\n1. 自选是否有跳过按钮。\n2. 是否必须在主线当场选择。\n3. 是否能等 40 抽保底后再回头选。\n4. 选择后是否能重置或更换。\n5. 游戏内是否写明“不可撤回”。\n\n只要你看到“确认后不可更改”，就先暂停 30 秒再选。海上风大，手滑比海怪可怕。\n\n## 如果已经选错怎么办\n\n| 情况 | 处理建议 |\n|---|---|\n| 和 40 抽保底重复 | 看是否转为碎片/升阶收益，再评估是否继续玩 |\n| 选了不适合开荒的角色 | 用免费角色和低配生存位补队伍结构 |\n| 账号刚开不久 | 是否重开取决于你是否已领大量限时福利 |\n| 已投入很多活动/充值 | 不建议冲动重开，先用首周资源补短板 |\n\n## 站内推荐阅读顺序\n\n1. [记忆重逢机制](/zh/sea/guides/memory-reunion-guide)\n2. [招募系统与开服抽卡规划](/zh/sea/guides/gacha-recruitment-guide)\n3. [茉莉首发阵容与培养路线](/zh/sea/guides/molly-starter-team-guide)\n4. [海葬实战高光指南](/zh/sea/guides/haizang-combat-highlight-guide)\n5. [记忆之塔每周打捞](/zh/sea/guides/memory-tower-weekly-dredging-guide)\n\n## FAQ\n\n### 黑券 6 选 1 一定选主 C 吗？\n\n不一定。如果你前 40 抽已经出了可用主 C，补生存、辅助或循环位可能更稳。首周目标是组出能推主线和周常的第一队。\n\n### 自选券能留到保底后再用吗？\n\n不要默认可以。进入选择界面前先看游戏内说明和按钮，如果流程要求当场确认，就按不可留存处理。\n\n### 选错需要重开吗？\n\n只有账号很新、限时福利没领太多、并且重复严重时才考虑。大多数玩家先补队伍短板比重开更省时间。",
+    "contentEn": "## Quick Answer\n\nFor the Black Ticket 6-selector, do not choose only by tier-list hype. First check whether the selector can be saved until after the 40-pull pity, then evaluate duplicate risk and your account role gaps.\n\nSources: TapTap guide topics, official forum discussions, and Bilibili 6-selector coverage. Use in-game wording as the final source of truth.\n\n## Decision Table\n\n| Account state | Best logic | Avoid |\n|---|---|---|\n| No stable main DPS | Pick a carry or progression core | Picking only by looks |\n| Already has Molly or Little Axe | Add survival, support, or cycle value | Stacking one role too early |\n| Planning Haizang/Heige | Wait for tested rotations | All-in before live data |\n| F2P/low spender | Patch the biggest team hole | Risky rerolls after claiming rewards |\n\n## Next Reads\n\n- [Memory Reunion guide](/en/sea/guides/memory-reunion-guide)\n- [Gacha planning](/en/sea/guides/gacha-recruitment-guide)\n- [Molly starter teams](/en/sea/guides/molly-starter-team-guide)",
+    "faq": [
+      {
+        "questionZh": "黑券 6 选 1 一定选主 C 吗？",
+        "question": "Should the 6-selector always be a main DPS?",
+        "answerZh": "不一定。已有主 C 时，补生存、辅助或循环位可能更稳。",
+        "answer": "Not always. If you already have a carry, survival, support, or cycle value can be better."
+      },
+      {
+        "questionZh": "自选券能留到 40 抽后吗？",
+        "question": "Can I save the selector until after 40 pulls?",
+        "answerZh": "不要默认可以，进入选择流程前先看游戏内按钮和说明。",
+        "answer": "Do not assume so. Check the in-game selector flow and wording before confirming."
+      },
+      {
+        "questionZh": "黑券选错要重开吗？",
+        "question": "Should I reroll if I picked wrong?",
+        "answerZh": "只有账号很新且重复严重时才考虑。已领大量限时福利时，通常先补短板更划算。",
+        "answer": "Only consider rerolling if the account is very new and the duplicate is severe. Otherwise, patch team gaps first."
+      }
+    ]
+  },
+  {
+    "id": "heige-haizang-double-intellect-team-guide",
+    "title": "《遗忘之海》黑格与海葬双智力队观察：蓝波乐队、角色曲、阵容公式和资源投入顺序",
+    "titleEn": "Sea of Remnants Heige and Haizang Double-Intellect Team Watch: Bluewave Band, Songs, Team Formula, and Resource Order",
+    "category": "team",
+    "categoryZh": "配队攻略",
+    "categoryEn": "Team",
+    "summary": "承接“黑格怎么配队”“海葬黑格”“蓝波乐队阵容”等搜索，整理双智力输出/辅助观察、资源投入顺序和首周不要写死强度的判断方式。",
+    "summaryEn": "A cautious team-watch guide for Heige, Haizang, and Bluewave Band searches, covering double-intellect ideas, resource order, and live-testing boundaries.",
+    "tags": [
+      "黑格",
+      "海葬",
+      "双智力队",
+      "蓝波乐队",
+      "配队",
+      "角色曲",
+      "茉莉",
+      "资源投入"
+    ],
+    "content": "## 先给结论\n\n“黑格 + 海葬”现在更适合写成 **双智力队观察**，而不是直接写成毕业答案。社区已经出现“养黑格 + 三辅助”“海葬/黑格方向”等讨论，但正式强度仍要看技能倍率、循环、往日之影和高压环境表现。\n\n这页适合正在搜“遗忘之海黑格怎么配队”“海葬黑格能不能一起上”“蓝波乐队是不是强队”的玩家。\n\n参考来源：[TapTap 官方论坛攻略讨论](https://www.taptap.cn/app/755604/topic)、[蓝波乐队音乐与角色指南](/zh/sea/guides/bluewave-band-music-character-guide)、[海葬实战高光指南](/zh/sea/guides/haizang-combat-highlight-guide)。\n\n## 黑格目前为什么值得单独关注\n\n黑格的搜索价值来自三条线：\n\n| 线索 | 搜索意图 | 站内处理方式 |\n|---|---|---|\n| 蓝波乐队 | 黑格是谁、和茉莉什么关系 | 接设定和角色曲 |\n| 阵容讨论 | 黑格 + 三辅助、双智力队 | 用观察口径，不写死 T0 |\n| 资源投入 | 是否值得拉、是否抢主 C 资源 | 按账号缺口判断 |\n\n## 双智力队先看 4 件事\n\n1. 黑格和海葬是否都吃同一类输出资源。\n2. 队伍是否缺稳定生存位。\n3. 是否需要预兆之眼、铁腕统领、懦夫等功能位补循环或容错。\n4. 往日之影、船歌、镶嵌材料是否够支撑两个核心。\n\n## 阵容公式模板\n\n| 模板 | 适合情况 | 风险 |\n|---|---|---|\n| 黑格 + 三辅助 | 主 C 集中养成，资源压力较低 | 如果黑格循环不稳，队伍输出断档 |\n| 海葬 + 黑格 + 生存 + 辅助 | 双核心观察路线 | 资源消耗高，首周容易两边都没成型 |\n| 茉莉 + 饿猫 + 生存 + 功能位 | 移动端首发更稳路线 | 后期可能需要转队 |\n| 小斧头 + 追击/辅助轴 | 单体爆发和追击思路 | 对装备和队友要求可能更高 |\n\n如果你还没稳定第一队，优先看：[茉莉首发阵容](/zh/sea/guides/molly-starter-team-guide) 和 [船队编组指南](/zh/sea/guides/team-building-guide)。\n\n## 资源投入顺序\n\n| 阶段 | 建议 |\n|---|---|\n| 第 1 天 | 不同时拉满黑格和海葬，先确定谁是主输出 |\n| 第 1 周 | 主 C 等级、技能、往日之影优先 |\n| 周常开启后 | 用记忆之塔、深渊表现判断是否值得扩队 |\n| 活动更新后 | 再看新角色、新船员和联动奖励是否改变队伍结构 |\n\n## 什么时候说明双智力队成立\n\n需要同时满足这些条件：\n\n- 两个核心不严重抢同一套关键资源。\n- 有稳定生存位保障高压环境。\n- 技能循环能互相补足，而不是轮流空窗。\n- 在 N3/深渊/记忆之塔里比单核心队更稳定或更快。\n\n## FAQ\n\n### 黑格值得练吗？\n\n如果你缺输出核心或想走蓝波乐队方向，可以关注黑格；但首周建议等技能循环和队伍实测，不要和海葬同时重投。\n\n### 海葬和黑格能一起上吗？\n\n可以作为观察路线，但是否比单核心 + 多辅助更强，要看正式服伤害、循环和生存压力。\n\n### 双智力队适合零氪吗？\n\n零氪更适合先养一个核心。双核心队资源压力高，等第一队能稳定周常后再扩。",
+    "contentEn": "## Quick Answer\n\nHeige plus Haizang should be treated as a double-intellect team watch, not a finalized meta answer. Community discussion exists, but the team depends on live rotations, survival needs, Past Shadows, and resource pressure.\n\n## Team Templates\n\n| Template | Best for | Risk |\n|---|---|---|\n| Heige + three supports | Concentrated carry investment | Damage falls if Heige cycle is unstable |\n| Haizang + Heige + survival + support | Double-core testing | High resource cost in week one |\n| Molly + Stray Cat + survival + flex | Safer mobile launch route | May need later transition |\n\n## Next Reads\n\n- [Bluewave Band guide](/en/sea/guides/bluewave-band-music-character-guide)\n- [Haizang guide](/en/sea/guides/haizang-combat-highlight-guide)\n- [Team-building guide](/en/sea/guides/team-building-guide)",
+    "faq": [
+      {
+        "questionZh": "黑格值得练吗？",
+        "question": "Is Heige worth building?",
+        "answerZh": "可以关注，但首周建议等技能循环和队伍实测，避免和海葬同时重投。",
+        "answer": "He is worth watching, but wait for live rotations and team tests before heavy investment."
+      },
+      {
+        "questionZh": "海葬和黑格能一起上吗？",
+        "question": "Can Haizang and Heige be played together?",
+        "answerZh": "可以作为观察路线，但是否优于单核心队，要看循环、生存和资源压力。",
+        "answer": "It is a valid test route, but whether it beats single-core teams depends on rotations, survival, and resource cost."
+      },
+      {
+        "questionZh": "双智力队适合零氪吗？",
+        "question": "Is double-intellect good for F2P?",
+        "answerZh": "零氪先养一个核心更稳，等第一队周常稳定后再扩双核心。",
+        "answer": "F2P players should build one core first, then expand after weekly content is stable."
+      }
+    ]
+  },
+  {
+    "id": "today-live-events-calendar-guide",
+    "title": "《遗忘之海》今日活动日历：移动端首发、直播福袋、第五人格、线下与 7 月 30 日版本节点",
+    "titleEn": "Sea of Remnants Today Event Calendar: Mobile Launch, Livestream Gifts, Identity V, Offline Events, and July 30 Update",
+    "category": "event",
+    "categoryZh": "活动攻略",
+    "categoryEn": "Event",
+    "summary": "把移动端上线当天和首周活动聚合成日历：7 月 23 日首发、13:00-21:00 抖音直播、648 福袋、第五人格联动、线下活动、7 月 30 日新版本。",
+    "summaryEn": "A launch-week event calendar for July 23 mobile launch, 13:00-21:00 Douyin livestream gifts, Identity V collab, offline events, and the July 30 update.",
+    "tags": [
+      "今日活动",
+      "活动日历",
+      "直播福袋",
+      "彭昱畅",
+      "陈泽",
+      "第五人格",
+      "7月30日",
+      "失落海域第二幕"
+    ],
+    "content": "## 先给结论\n\n如果你今天才打开《遗忘之海》，优先按这个顺序查：**移动端登录奖励 > 直播福袋 > 第五人格联动 > 渠道福利 > 线下活动 > 每周打捞 > 7 月 30 日新版本预告**。\n\n这页不是静态新闻稿，而是首发周活动检查表。活动奖励、直播掉落和线下库存都可能变化，最终以游戏内公告、官方直播间和活动页为准。\n\n参考来源：[TapTap 移动端今日上线公告](https://www.taptap.cn/app/755604/topic)、[彭昱畅、陈泽直播航线公告](https://www.taptap.cn/moment/829024858900793303)、[17173 移动端预下载与 7 月 30 日版本报道](https://news.17173.com/content/07212026/183212410.shtml)。\n\n## 今日到首周活动表\n\n| 时间 | 内容 | 玩家要做什么 |\n|---|---|---|\n| 7 月 23 日 10:00 | 移动端正式上线 | 登录主账号，确认区服和互通 |\n| 7 月 23 日 13:00-21:00 | 抖音官方直播间伴航 | 关注福袋掉落和领取规则 |\n| 首发当天起 | 登录首日福利与预约奖励 | 查邮件、活动页、兑换入口 |\n| 首发期 | 第五人格联动 | 签到/任务领取联动道具 |\n| 首周 | 渠道福利活动 | 核验 TapTap、4399、好游快爆等平台规则 |\n| 首周 | 每周深渊/记忆之塔 | 不要漏周期奖励 |\n| 7 月 30 日 | 失落海域第二幕节点 | 关注新岛屿、新船员、新船只、新玩法 |\n\n## 今天先做什么\n\n1. 登录主账号，确认 PC、移动端、云游戏是否同一进度。\n2. 领取游戏内邮件、预约奖励和首日福利。\n3. 打开第五人格联动活动页，确认签到和任务。\n4. 看直播福利是否需要关注、预约、口令或抽奖资格。\n5. 晚上回头清日常、号角、记忆之塔和活动商店。\n\n## 直播福袋怎么避免错过\n\n| 检查点 | 说明 |\n|---|---|\n| 平台 | 抖音官方直播间，不要只看二传录屏 |\n| 时间 | 7 月 23 日 13:00-21:00 是公开预告窗口 |\n| 嘉宾 | 彭昱畅、陈泽等特邀船长参与传播 |\n| 奖励 | 福袋价值和发放方式以直播间规则为准 |\n| 账号 | 如果需要平台登录，提前准备，避免临时卡验证 |\n\n## 7 月 30 日为什么要提前记\n\n公开报道提到 7 月 30 日将接档新版本节点，包含“失落海域·第二幕·困在风暴里的故乡”、新岛屿、新玩法、盖尔和剑刻家等信息。对玩家来说，这意味着首周资源别全部花光：\n\n- 黑券选择要考虑 7 月 30 日新船员。\n- 活动商店先换限时物，再换常驻材料。\n- 记忆之塔、深渊和漂泊之家要尽量形成周常循环。\n\n## 站内下一步\n\n- [渠道福利与兑换码核验](/zh/sea/guides/channel-rewards-code-verification-guide)\n- [第五人格联动移动端指南](/zh/sea/guides/identity-v-mobile-launch-event-guide)\n- [线下海岸线与海底捞活动](/zh/sea/guides/offline-seafood-stall-event-guide)\n- [记忆之塔每周打捞](/zh/sea/guides/memory-tower-weekly-dredging-guide)\n\n## FAQ\n\n### 今天只玩 30 分钟先做什么？\n\n先登录主账号、领邮件和首日福利、确认第五人格联动入口，再补每日任务。直播和渠道福利可以按时间窗口回头查。\n\n### 直播福袋一定能拿到吗？\n\n不一定。福袋通常有抽奖、限量或平台规则，是否中奖和具体价值以直播间实时规则为准。\n\n### 7 月 30 日更新要提前囤资源吗？\n\n建议留一部分弹性资源，但不要牺牲第一队成型。新版本信息落地后，再决定是否转投新船员或新玩法。",
+    "contentEn": "## Quick Answer\n\nFor launch week, check in this order: mobile login rewards, livestream gifts, Identity V collaboration, channel rewards, offline events, weekly dredging, and the July 30 update.\n\nSources: TapTap official forum, TapTap livestream notice, and 17173 launch-week reporting. Use in-game notices and official livestream rules as the final source.\n\n## Launch-Week Calendar\n\n| Time | Event | What to do |\n|---|---|---|\n| July 23, 10:00 | Mobile launch | Log into the main account and server |\n| July 23, 13:00-21:00 | Douyin livestream | Watch gift-bag rules and drops |\n| Launch period | Identity V collab | Check sign-in and task rewards |\n| Week one | Channel campaigns | Verify TapTap, 4399, and Kuaibao rules |\n| July 30 | New update node | Watch new islands, crew, ship, and gameplay |",
+    "faq": [
+      {
+        "questionZh": "今天只玩 30 分钟先做什么？",
+        "question": "What should I do if I only have 30 minutes today?",
+        "answerZh": "登录主账号、领取邮件和首日福利、确认第五人格联动入口，再补每日任务。",
+        "answer": "Log into the main account, claim mail and launch rewards, check the Identity V event, then do dailies."
+      },
+      {
+        "questionZh": "直播福袋一定能拿到吗？",
+        "question": "Are livestream gift bags guaranteed?",
+        "answerZh": "不一定，通常受抽奖、限量和平台规则影响，以直播间实时说明为准。",
+        "answer": "Not guaranteed. They usually depend on draw, stock, and platform rules."
+      },
+      {
+        "questionZh": "7 月 30 日更新前要囤资源吗？",
+        "question": "Should I save resources before July 30?",
+        "answerZh": "建议留弹性资源，但第一队成型仍优先。",
+        "answer": "Keep some flexibility, but stabilizing your first team remains the priority."
+      }
+    ]
+  },
+  {
+    "id": "cloud-sea-download-crossplay-guide",
+    "title": "《云·遗忘之海》和普通客户端区别：云游戏入口、PC/移动端互通、低配手机与空间不足怎么办",
+    "titleEn": "Cloud Sea of Remnants vs Full Client: Cloud Gaming Entry, Cross-Progress, Low-End Phones, and Storage Issues",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "承接“云·遗忘之海”“云游戏端互通”“手机空间不够”“低配手机能玩吗”等搜索，说明云游戏与普通 iOS/Android/PC 客户端的差异和适用场景。",
+    "summaryEn": "A beginner FAQ explaining Cloud Sea of Remnants versus full iOS/Android/PC clients, cross-progress expectations, low-end phones, and storage-limited situations.",
+    "tags": [
+      "云·遗忘之海",
+      "云游戏",
+      "云端互通",
+      "低配手机",
+      "空间不足",
+      "下载入口",
+      "移动端",
+      "PC互通"
+    ],
+    "content": "## 先给结论\n\n如果你手机空间不够、机型偏老，或者只想临时做日常，可以关注“云·遗忘之海”或云游戏端；如果你追求画质、低延迟和长时间体验，普通客户端或 PC 端通常更稳。\n\n公开报道提到 PC 端、移动端、云游戏端数据互通，但具体登录方式、计费、排队、画质和时长限制，仍要以官方入口与云游戏平台说明为准。\n\n参考来源：[17173 移动端预下载报道](https://news.17173.com/content/07212026/183212410.shtml)、[TapTap 官方下载页](https://www.taptap.cn/app/755604)、[移动端下载入口指南](/zh/sea/guides/download-install-guide)。\n\n## 云游戏和普通客户端区别\n\n| 对比项 | 云·遗忘之海 / 云游戏 | 普通客户端 |\n|---|---|---|\n| 安装空间 | 通常更省本地空间 | 需要下载完整资源 |\n| 画质和延迟 | 取决于网络和云端服务 | 取决于本机性能 |\n| 长时间游玩 | 可能受时长、排队、计费影响 | 更适合长时间探索 |\n| 发热 | 本机负载较低 | 高画质时更容易发热 |\n| 离线/弱网 | 不适合弱网 | 仍需要联网，但对串流依赖低 |\n| 账号进度 | 需确认同账号体系 | PC/iOS/Android 按官方互通规则 |\n\n## 谁适合先用云游戏\n\n1. 手机剩余空间不足，无法下载完整资源。\n2. 设备容易发热，只想做每日和活动。\n3. 临时外出，想快速登录领福利。\n4. 还不确定长期在哪个平台玩。\n5. 想先体验画面和玩法，再决定是否装完整包。\n\n## 谁更适合普通客户端或 PC\n\n| 玩家类型 | 推荐 |\n|---|---|\n| 长时间跑图/探索 | PC 或普通客户端 |\n| 追求高画质截图 | PC / 高性能手机客户端 |\n| 打 N3、深渊、Boss | 稳定低延迟环境优先 |\n| 网络不稳定 | 普通客户端更稳 |\n| 需要精细操作 | PC 或高帧率移动端 |\n\n## 互通前检查清单\n\n1. 是否使用同一个网易/平台账号。\n2. 是否进入同一区服。\n3. 云游戏入口是否显示同一角色。\n4. 充值、礼包、平台奖励是否有渠道限制。\n5. 退出云端后，普通客户端是否能看到同样进度。\n\n如果你不确定账号边界，先看：[PC、iOS、Android 互通 FAQ](/zh/sea/guides/pc-mobile-cross-progression-faq)。\n\n## 空间不足怎么办\n\n- 清理旧安装包、录屏、缓存和不常用应用。\n- 预留比安装包更大的额外空间，避免解压失败。\n- 先用云游戏领取限时福利，再决定是否完整安装。\n- 如果频繁更新失败，切换稳定 Wi-Fi 并重启设备。\n\n## FAQ\n\n### 云·遗忘之海和普通遗忘之海是两个游戏吗？\n\n不是两个独立游戏。云游戏更像串流入口，普通客户端是在本机运行。账号、区服和进度仍要按官方互通规则确认。\n\n### 云游戏端能领移动端福利吗？\n\n不要默认完全一致。先看云游戏入口和活动页是否写明可参与，再回游戏内邮件和背包确认到账。\n\n### 低配手机应该下普通包还是玩云端？\n\n如果空间和发热压力大，可以先用云端体验；如果网络不稳定，普通客户端低画质可能更可靠。",
+    "contentEn": "## Quick Answer\n\nCloud Sea of Remnants is best for low storage, older phones, quick daily logins, and temporary access. The full client or PC is usually better for long sessions, lower latency, screenshots, and boss content.\n\nPublic reports mention PC, mobile, and cloud-game progress sharing, but account login, paid time, queue, graphics, and channel rules should follow official entry pages.\n\n## Comparison\n\n| Item | Cloud version | Full client |\n|---|---|---|\n| Storage | Lower local storage | Full resource download |\n| Latency | Network-dependent | Device-dependent |\n| Long sessions | May have queue/time limits | Better for exploration |\n| Heat | Lower local load | Higher with high graphics |\n| Weak network | Poor fit | Usually more stable |\n\n## Next Reads\n\n- [Download/install guide](/en/sea/guides/download-install-guide)\n- [Cross-progression FAQ](/en/sea/guides/pc-mobile-cross-progression-faq)\n- [Mobile graphics settings](/en/sea/guides/mobile-graphics-fps-heat-settings-guide)",
+    "faq": [
+      {
+        "questionZh": "云·遗忘之海和普通客户端是两个游戏吗？",
+        "question": "Is Cloud Sea of Remnants a separate game?",
+        "answerZh": "不是。云游戏是串流入口，普通客户端是在本机运行，进度按官方账号和区服规则确认。",
+        "answer": "No. The cloud version is a streaming entry; the full client runs locally. Progress depends on official account and server rules."
+      },
+      {
+        "questionZh": "云游戏端能领移动端福利吗？",
+        "question": "Can cloud players claim mobile rewards?",
+        "answerZh": "不要默认完全一致，先看活动页是否写明云端可参与。",
+        "answer": "Do not assume full parity. Check whether the event page says cloud users can participate."
+      },
+      {
+        "questionZh": "低配手机用云端更好吗？",
+        "question": "Is cloud better for low-end phones?",
+        "answerZh": "空间不足或发热严重时可以先用云端；网络差时普通客户端低画质可能更稳。",
+        "answer": "Cloud can help with storage or heat, but the full client on low settings may be better on unstable networks."
+      }
+    ]
+  },
+  {
+    "id": "guide-freshness-toxic-advice-checklist",
+    "title": "《遗忘之海》攻略会过期吗？毒攻略避坑清单：角色改动、天赋调整、首发期怎么看最新实测",
+    "titleEn": "Sea of Remnants Guide Freshness Checklist: Avoid Outdated Advice, Character Changes, and Launch-Week Meta Traps",
+    "category": "system",
+    "categoryZh": "系统追踪",
+    "categoryEn": "System",
+    "summary": "针对首发期“攻略超过 3 天可能报废”的社区讨论，整理如何判断角色攻略、配队、黑券选择、兑换码和热修信息是否过期。",
+    "summaryEn": "A launch-week checklist for avoiding outdated Sea of Remnants advice across builds, teams, Black Ticket picks, codes, and hotfix changes.",
+    "tags": [
+      "攻略过期",
+      "毒攻略",
+      "最新实测",
+      "角色改动",
+      "天赋调整",
+      "首发期",
+      "配队攻略",
+      "黑券选择"
+    ],
+    "content": "## 先给结论\n\n《遗忘之海》首发期攻略确实很容易过期。角色技能、天赋、活动奖励、热修和任务流程都可能快速调整，所以不要只看标题里的“最强”“必选”“毕业”。更稳的做法是先看 **发布时间、版本日期、是否有实测、是否写明适用场景**。\n\n社区已经出现“攻略过期/毒攻略”的提醒，尤其是角色、天赋、配队和黑券 6 选 1 这几类内容。本站后续也会尽量用“观察、路线、以游戏内为准”的口径，避免把首周结论写死。\n\n参考来源：[TapTap 遗忘之海官方论坛](https://www.taptap.cn/app/755604/topic)、[TapTap 遗忘之海话题页](https://www.taptap.cn/hashtag/%E9%81%97%E5%BF%98%E4%B9%8B%E6%B5%B7)、[热修与反馈问卷追踪](/zh/sea/guides/hotfix-feedback-roadmap-guide)。\n\n## 哪些攻略最容易过期\n\n| 类型 | 过期风险 | 判断方法 |\n|---|---|---|\n| 角色强度榜 | 高 | 看是否标注日期、实测层数和队伍配置 |\n| 黑券 6 选 1 | 高 | 看是否考虑 40 抽保底、强制选择和重复风险 |\n| 配队公式 | 高 | 看是否写明替代位、生存压力和资源成本 |\n| 兑换码/福利 | 高 | 看是否有截止时间和渠道限制 |\n| 热修问题 | 高 | 看是否匹配你的平台、版本和场景 |\n| 下载/配置 | 中 | 看是否区分 PC、iOS、Android、云游戏 |\n| 世界观/设定 | 低 | 通常不会快速失效，但新剧情会补充细节 |\n\n## 5 秒判断一篇攻略能不能信\n\n1. 有没有明确发布日期或更新时间。\n2. 有没有说明适用版本，例如 7 月 23 日移动端首发后。\n3. 有没有贴出实战场景，而不是只说“无脑强”。\n4. 有没有告诉你不适用的情况。\n5. 有没有把游戏内公告、官方论坛和实测区分开。\n\n## 看到这些词要小心\n\n| 表述 | 风险 | 更稳的读法 |\n|---|---|---|\n| 永久 T0 | 首发期环境未稳定 | 看具体版本和副本 |\n| 必选不解释 | 可能忽略账号差异 | 回到角色定位和资源缺口 |\n| 不抽就废 | 常见焦虑话术 | 看免费资源和替代路线 |\n| 独家隐藏机制 | 可能是未验证传言 | 等官方说明或多方实测 |\n| 全平台通用 | 渠道/区服/云端可能不同 | 查官方入口和游戏内规则 |\n\n## 哪些页面需要经常复查\n\n- [黑券 6 选 1 选择指南](/zh/sea/guides/black-ticket-six-selector-guide)\n- [黑格与海葬双智力队观察](/zh/sea/guides/heige-haizang-double-intellect-team-guide)\n- [手机画质、帧率与发热设置](/zh/sea/guides/mobile-graphics-fps-heat-settings-guide)\n- [热修与反馈问卷追踪](/zh/sea/guides/hotfix-feedback-roadmap-guide)\n- [今日活动日历](/zh/sea/guides/today-live-events-calendar-guide)\n\n## 玩家自己的记录模板\n\n| 记录项 | 示例 |\n|---|---|\n| 日期 | 2026-07-23 |\n| 版本 | 移动端首发 / PC 公测 / 7 月 30 日第二幕 |\n| 攻略来源 | 官方公告 / 社区实测 / 视频 / 个人体验 |\n| 队伍配置 | 主 C、生存、辅助、往日之影 |\n| 是否复现 | 自己打过 / 只看别人打过 |\n| 是否仍有效 | 有效 / 部分失效 / 等热修后重测 |\n\n## FAQ\n\n### 角色攻略超过 3 天就不能看吗？\n\n不是完全不能看，但首发期角色、天赋和资源环境变化快。超过 3 天的角色攻略最好只参考思路，不直接照抄配队和资源投入。\n\n### 官方攻略和玩家攻略哪个更可靠？\n\n官方公告适合确认规则、时间和奖励；玩家攻略适合看实战效率。两者最好一起看，遇到冲突时以游戏内说明为准。\n\n### 站内页面会不会也过期？\n\n会，所以本站会尽量标注“观察、预案、以游戏内为准”。高波动页面应该跟着热修、版本和实测继续刷新。",
+    "contentEn": "## Quick Answer\n\nSea of Remnants launch-week guides can become outdated quickly. Check publish date, version context, live testing, and whether the guide states where it does not apply before following build or pull advice.\n\nSources: TapTap official forum, TapTap topic discussions, and the site hotfix tracker.\n\n## Highest-Risk Guide Types\n\n| Type | Risk | What to check |\n|---|---|---|\n| Tier lists | High | Date, tested floors, team setup |\n| Black Ticket selector | High | 40-pull pity and duplicate risk |\n| Team formulas | High | Substitutes, survival, resource cost |\n| Codes/rewards | High | Expiry and channel limits |\n| Hotfix advice | High | Platform, version, scenario |",
+    "faq": [
+      {
+        "questionZh": "角色攻略超过 3 天就不能看吗？",
+        "question": "Are character guides older than three days useless?",
+        "answerZh": "不是完全不能看，但首发期只能参考思路，别直接照抄资源投入。",
+        "answer": "Not completely, but during launch week they should be treated as ideas, not direct investment instructions."
+      },
+      {
+        "questionZh": "怎么判断攻略是不是毒攻略？",
+        "question": "How do I spot bad or outdated advice?",
+        "answerZh": "看日期、版本、实测场景、适用条件和是否承认不确定性。",
+        "answer": "Check date, version, tested scenario, applicable conditions, and whether uncertainty is acknowledged."
+      },
+      {
+        "questionZh": "官方公告和玩家实测冲突怎么办？",
+        "question": "What if official notices and player tests conflict?",
+        "answerZh": "规则和奖励以游戏内说明为准，效率和配队可以参考多方实测。",
+        "answer": "Rules and rewards follow in-game wording; efficiency and teams should use multiple live tests."
+      }
+    ]
+  },
+  {
+    "id": "lost-sea-act-two-july-30-prep-guide",
+    "title": "《遗忘之海》7 月 30 日失落海域第二幕准备指南：五大新岛、记忆共鸣、盖尔、剑刻家与流浪烟花号",
+    "titleEn": "Sea of Remnants July 30 Lost Sea Act II Prep Guide: Five Islands, Memory Resonance, Gael, Sword Carver, and Wandering Fireworks",
+    "category": "version",
+    "categoryZh": "版本资讯",
+    "categoryEn": "Version",
+    "summary": "整理 7 月 30 日「失落海域·第二幕·困在风暴里的故乡」版本前准备：新岛屿、记忆共鸣、黑券船员盖尔、Ashley Wood 联动剑刻家、新船只和资源保留。",
+    "summaryEn": "A July 30 Act II prep guide covering new islands, Memory Resonance, Gael, Sword Carver, Wandering Fireworks, and launch-week resource planning.",
+    "tags": [
+      "7月30日",
+      "失落海域第二幕",
+      "困在风暴里的故乡",
+      "记忆共鸣",
+      "盖尔",
+      "剑刻家",
+      "流浪烟花号",
+      "新岛屿"
+    ],
+    "content": "## 先给结论\n\n7 月 30 日《遗忘之海》将进入「失落海域·第二幕·困在风暴里的故乡」节点。公开信息提到五大全新岛屿、全新玩法「记忆共鸣」、黑券新船员盖尔、Ashley Wood 联动紫券船员剑刻家，以及新船只「流浪烟花号」。\n\n对移动端首发玩家来说，7 月 23 日到 7 月 30 日这一周不要把所有资源花空。第一队要成型，但黑券、活动货币、船只材料和周常收益最好留出弹性。\n\n参考来源：[17173 7 月 30 日版本报道](https://news.17173.com/content/07172026/225217265.shtml)、[17173 移动端预下载报道](https://news.17173.com/content/07212026/183212410.shtml)、[Bilibili 第二幕版本 PV](https://www.bilibili.com/video/BV1oGKG65E6P/)。\n\n## 7 月 30 日更新速查\n\n| 内容 | 已公开关键词 | 玩家准备 |\n|---|---|---|\n| 新岛屿 | 石像岛、溪流岛、密林岛、佳酿溶洞、虫岛 | 清主线、补探索队伍 |\n| 新玩法 | 记忆共鸣 | 留养成材料，等规则落地 |\n| 新黑券船员 | 盖尔 | 黑券和抽取资源别完全清空 |\n| 联动紫券船员 | 剑刻家 / Ashley Wood | 关注活动入口和获取方式 |\n| 新船只 | 流浪烟花号 | 留船只强化与海战相关资源 |\n\n## 7 月 23 日到 7 月 30 日做什么\n\n1. 完成主线和系统解锁，不要卡在入口层。\n2. 第一队至少有主 C、生存位和辅助/功能位。\n3. 周常打捞、记忆之塔、深渊类周期收益尽量不要漏。\n4. 黑券 6 选 1 和 40 抽保底要考虑盖尔上线风险。\n5. 活动商店优先换限时物和高稀缺资源。\n6. 不确定新玩法消耗什么材料时，高价值资源先留。\n\n## 盖尔要不要提前等\n\n盖尔作为公开提到的黑券新船员，最适合影响“黑券选谁”和“抽卡资源要不要留”的判断。建议：\n\n| 玩家状态 | 建议 |\n|---|---|\n| 第一队未成型 | 先补能让你推进主线和周常的角色 |\n| 已有稳定主 C | 可以留资源等盖尔技能实测 |\n| 零氪/微氪 | 不追首日强度结论，等池子规则和定位 |\n| 角色党 | 关注盖尔 PV、技能、获取方式和活动时间 |\n\n更多黑券决策看：[黑券 6 选 1 指南](/zh/sea/guides/black-ticket-six-selector-guide)。\n\n## 剑刻家和 Ashley Wood 联动怎么看\n\n剑刻家属于 Ashley Wood 联动紫券船员相关内容，搜索价值会集中在“联动角色、是否限定、怎么获取、需不需要抽”。在规则落地前，不建议提前写成强度答案。\n\n如果获取方式偏活动或紫券体系，要重点确认：\n\n- 是否限时。\n- 是否能免费获取。\n- 是否进入常驻。\n- 是否需要活动货币或特定任务。\n- 和已有联动矩阵的关系。\n\n## FAQ\n\n### 7 月 30 日更新前要停抽吗？\n\n不一定。第一队没成型时可以适度补强；但已有可用队伍后，建议留一部分黑券和通用资源等盖尔、剑刻家规则落地。\n\n### 记忆共鸣是什么？\n\n公开信息只说明它是第二幕全新玩法。具体入口、奖励和养成消耗应以 7 月 30 日游戏内说明为准。\n\n### 新岛屿需要提前清主线吗？\n\n建议尽量推进主线和系统解锁。新岛屿通常会要求一定进度，提前解锁海上系统能减少更新当天卡点。",
+    "contentEn": "## Quick Answer\n\nThe July 30 Lost Sea Act II update is expected to add five islands, Memory Resonance, Gael, Sword Carver, and the Wandering Fireworks ship. Mobile launch players should stabilize the first team but keep flexible resources before the update lands.\n\nSources: 17173 July 30 coverage, 17173 mobile preload coverage, and the Bilibili Act II PV.\n\n## Update Checklist\n\n| Content | Public signal | Prep |\n|---|---|---|\n| Five islands | Stone Statue, Stream, Dense Forest, Wine Cave, Insect Island | Clear story and exploration gates |\n| Memory Resonance | New gameplay | Save rare resources |\n| Gael | New Black Ticket crew | Do not empty pull currency |\n| Sword Carver | Ashley Wood collab crew | Check acquisition and limited status |\n| Wandering Fireworks | New ship | Save ship resources |",
+    "faq": [
+      {
+        "questionZh": "7 月 30 日更新前要停抽吗？",
+        "question": "Should I stop pulling before July 30?",
+        "answerZh": "第一队没成型时可以补强；已有稳定队伍后，建议留弹性资源。",
+        "answer": "If your first team is weak, patch it. If stable, keep flexible resources."
+      },
+      {
+        "questionZh": "记忆共鸣是什么？",
+        "question": "What is Memory Resonance?",
+        "answerZh": "公开信息称它是第二幕新玩法，具体规则以 7 月 30 日游戏内说明为准。",
+        "answer": "It is publicly described as a new Act II system; final rules should follow the July 30 in-game notes."
+      },
+      {
+        "questionZh": "盖尔值得等吗？",
+        "question": "Is Gael worth waiting for?",
+        "answerZh": "作为新黑券船员值得关注，但定位、强度和抽取价值要等实装。",
+        "answer": "As a new Black Ticket crew member, Gael is worth watching, but pull value depends on live kit and role."
+      }
+    ]
+  },
+  {
+    "id": "app-store-official-download-verification-guide",
+    "title": "《遗忘之海》App Store 正版下载辨认指南：iOS 12、3.7GB、内购项目、同名错链怎么判断",
+    "titleEn": "Sea of Remnants App Store Official Download Verification Guide: iOS 12, 3.7GB Size, IAP, and Wrong-Link Checks",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "承接 iOS/App Store 下载搜索，整理如何辨认官方《遗忘之海》页面、设备需求、安装包大小、内购项目、同名错链和渠道下载风险。",
+    "summaryEn": "An iOS download verification guide for identifying the official Sea of Remnants App Store listing, device requirements, size, IAP, wrong links, and channel risks.",
+    "tags": [
+      "App Store",
+      "iOS下载",
+      "正版下载",
+      "同名错链",
+      "iOS 12",
+      "3.7GB",
+      "内购",
+      "官方入口"
+    ],
+    "content": "## 先给结论\n\n在 iPhone 或 iPad 上下载《遗忘之海》，优先使用 App Store 官方页面、官网或 TapTap 官方入口。不要只凭“遗忘之海”四个字点下载，因为搜索结果里可能出现同名、聚合页、旧预约页或不完整截图。\n\n当前 App Store 页面显示《遗忘之海》类别为冒险，大小约 3.7 GB，兼容性要求 iOS 12.0 或更高版本，并标注包含 App 内购买。具体大小、兼容性和内购项目可能随更新变化。\n\n参考来源：[App Store《遗忘之海》页面](https://apps.apple.com/cn/app/%E9%81%97%E5%BF%98%E4%B9%8B%E6%B5%B7/id6755943637)、[TapTap 官方页](https://www.taptap.cn/app/755604)、[下载入口指南](/zh/sea/guides/download-install-guide)。\n\n## 正版页面核验表\n\n| 检查项 | 当前公开信息 | 为什么要看 |\n|---|---|---|\n| 游戏名 | 遗忘之海 | 防止同名/近似名误点 |\n| 类别 | 冒险 | 与海洋冒险 RPG 定位相符 |\n| 大小 | 约 3.7 GB | 判断手机空间是否足够 |\n| 系统 | iOS 12.0 或更高 | 判断旧设备能否安装 |\n| 语言 | 简体中文和英语 | 判断是否为目标地区页面 |\n| 年龄分级 | 16+ | 与战斗、抽奖箱、UGC 等标注相关 |\n| App 内购买 | 是 | 判断是否为免费入门 + 内购模式 |\n\n## 下载前先做什么\n\n1. 从官网、App Store 或 TapTap 官方页进入，不点不明短链。\n2. 检查开发者、图标、截图和描述是否与网易 Joker Studio 的海洋冒险 RPG 对应。\n3. 预留大于页面显示大小的空间，避免安装或解压失败。\n4. 如果你只想临时体验，先看云游戏入口。\n5. 安装后先确认账号、区服和互通规则，再领取奖励。\n\n## 同名错链怎么判断\n\n| 可疑信号 | 处理方式 |\n|---|---|\n| 描述像武侠、仙侠、传奇或 MMO，但不是木偶航海 RPG | 暂停下载，回官网或 App Store 官方页核验 |\n| 要求绕过 App Store 安装未知描述文件 | 不建议安装 |\n| 宣称无限抽、破解、特殊福利 | 高风险，避免输入账号 |\n| 页面没有更新时间、开发者、隐私说明 | 换官方入口 |\n| 链接来自陌生群聊或广告 | 不登录、不充值、不填验证码 |\n\n## App Store 和云游戏怎么选\n\n如果你空间够、网络稳定、想长期玩，App Store 普通客户端更适合。如果你空间不足、手机发热明显，或者只想临时领福利，可以先看：[云·遗忘之海和普通客户端区别](/zh/sea/guides/cloud-sea-download-crossplay-guide)。\n\n## FAQ\n\n### iOS 12 能玩吗？\n\nApp Store 当前页面显示需要 iOS 12.0 或更高版本，但能安装不代表体验一定流畅。旧设备建议先调低画质或考虑云游戏。\n\n### App Store 显示 3.7GB，为什么还提示空间不足？\n\n安装和更新通常需要额外解压空间。建议预留明显大于页面显示大小的剩余存储。\n\n### 看到同名游戏下载页能直接装吗？\n\n不建议。先核验开发者、图标、描述、官网链接和平台来源，避免下载错链或风险包。",
+    "contentEn": "## Quick Answer\n\nFor iOS, use the official App Store listing, official site, or TapTap page. Do not download only because the title looks similar. Check name, category, size, iOS requirement, language, age rating, and IAP labels.\n\nSource: the App Store listing, TapTap official page, and the site download guide.\n\n## Verification Table\n\n| Item | Public listing signal | Why |\n|---|---|---|\n| Name | Sea of Remnants / 遗忘之海 | Avoid lookalikes |\n| Category | Adventure | Fits the ocean RPG positioning |\n| Size | About 3.7 GB | Storage planning |\n| System | iOS 12.0+ | Device compatibility |\n| IAP | Yes | Free entry plus paid items |",
+    "faq": [
+      {
+        "questionZh": "iOS 12 能玩遗忘之海吗？",
+        "question": "Can iOS 12 run Sea of Remnants?",
+        "answerZh": "App Store 当前显示需要 iOS 12.0 或更高，但旧设备仍可能需要低画质或云端方案。",
+        "answer": "The listing currently says iOS 12.0 or later, but older devices may still need low settings or cloud play."
+      },
+      {
+        "questionZh": "App Store 3.7GB 为什么空间还不够？",
+        "question": "Why is storage insufficient if the listing says 3.7 GB?",
+        "answerZh": "安装和更新需要额外解压空间，建议预留明显更多存储。",
+        "answer": "Installation and updates need extra unpacking space, so reserve more than the listed size."
+      },
+      {
+        "questionZh": "同名下载页可以直接装吗？",
+        "question": "Can I install from any same-name download page?",
+        "answerZh": "不建议。先核验官方来源、开发者、图标、描述和隐私说明。",
+        "answer": "Not recommended. Verify official source, developer, icon, description, and privacy labels first."
+      }
+    ]
+  },
+  {
+    "id": "sea-of-remnants-p2w-gacha-explained",
+    "title": "Sea of Remnants 氪金吗？P2W、角色抽卡、服装抽卡、交易市场与零氪体验 FAQ",
+    "titleEn": "Is Sea of Remnants Pay-to-Win? Gacha, Outfits, Trade Market, and F2P FAQ",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "面向海外玩家的 Sea of Remnants pay-to-win / gacha explained 搜索，解释角色抽卡、服装抽卡、交易市场、免费资源和零氪判断边界。",
+    "summaryEn": "An English-first FAQ for Sea of Remnants pay-to-win and gacha questions, covering character pulls, outfit gacha, trade market, free rewards, and F2P boundaries.",
+    "tags": [
+      "pay-to-win",
+      "P2W",
+      "gacha explained",
+      "F2P",
+      "outfit gacha",
+      "trade market",
+      "Sea of Remnants",
+      "monetization"
+    ],
+    "content": "## Quick Answer\n\nSea of Remnants has gacha-related monetization, but “pay-to-win” depends on what you mean by winning. The safer answer is: it appears to combine character acquisition, cosmetic/outfit monetization, free launch rewards, and a player trade economy. Do not assume it is purely cosmetic, and do not assume it is impossible to play free-to-play.\n\nFor English players, the useful question is not “Is it P2W?” in isolation. Ask: **Are characters locked behind pulls? Are cosmetics separate? Can F2P players clear story and weekly content? Does the trade market create pressure?**\n\nSources and discussion signals: [Reddit gacha discussion](https://www.reddit.com/r/gachagaming/comments/1qxbgoa/sea_of_remnants_upcoming_sea_adventure_turnbased/), [character gacha showcase discussion](https://www.reddit.com/r/SeaOfRemnants/comments/1tq1n43/sea_of_remnants_character_gacha_showcase/), and our [payment model guide](/en/sea/guides/payment-model-guide).\n\n## Monetization Map\n\n| System | What it means | P2W concern |\n|---|---|---|\n| Character pulls | Crews may be acquired through Black/Purple Ticket systems | High if power is locked behind rare characters |\n| Outfit/cosmetic gacha | Fashion, appearance, or social expression | Lower if cosmetic only |\n| Free launch rewards | Selectors, pulls, mail, events | Helps F2P start but may be time-limited |\n| Trade market | Good Gold Bricks and player economy | Depends on what can be traded and how pricing works |\n| Weekly dredging | Long-term free acquisition path | Reduces pressure if rewards are meaningful |\n\n## How to Judge P2W as a Player\n\n1. Can you clear story without limited characters?\n2. Can weekly modes be cleared with free or early selector units?\n3. Are the strongest upgrades only from paid pulls?\n4. Are cosmetics separated from combat power?\n5. Does the trade market let spenders dominate progression materials?\n6. Are free selectors and weekly dredging enough to build a stable first team?\n\n## F2P Route\n\nIf you want to play free-to-play, use this order:\n\n1. Claim launch rewards and codes first.\n2. Understand the Black Ticket 6-selector before choosing.\n3. Build one stable team, not every new character.\n4. Do weekly Memory Tower/dredging content.\n5. Treat outfits as optional unless they include gameplay value.\n6. Avoid trade-market speculation until prices stabilize.\n\n## Chinese Quick Notes\n\n如果你搜的是“遗忘之海氪金吗 / 遗忘之海 P2W 吗”，目前最稳的判断是：游戏存在抽取和外观消费，零氪能否舒服取决于免费黑券、周常打捞、交易市场限制和高压内容门槛。先看 [付费模式详解](/zh/sea/guides/payment-model-guide) 和 [黑券 6 选 1 指南](/zh/sea/guides/black-ticket-six-selector-guide)。\n\n## FAQ\n\n### Is Sea of Remnants pay-to-win?\n\nIt depends on the final live economy and endgame pressure. Treat it as a gacha game with potential power and cosmetic monetization, then judge by whether F2P teams can clear meaningful weekly content.\n\n### Does Sea of Remnants have character gacha?\n\nPublic discussions and launch coverage point to character acquisition through ticket-style systems. Exact rates, pity, and banner rules should be checked in-game.\n\n### Can F2P players enjoy Sea of Remnants?\n\nLikely yes for story, exploration, and casual progression if you plan resources carefully. Competitive or high-pressure content may depend more on team strength and long-term acquisition.",
+    "contentEn": "## Quick Answer\n\nSea of Remnants has gacha-related monetization, but “pay-to-win” depends on what you mean by winning. The safer answer is: it appears to combine character acquisition, cosmetic/outfit monetization, free launch rewards, and a player trade economy. Do not assume it is purely cosmetic, and do not assume it is impossible to play free-to-play.\n\nSources and discussion signals: Reddit gacha discussion, character gacha showcase discussion, and our payment model guide.\n\n## Monetization Map\n\n| System | What it means | P2W concern |\n|---|---|---|\n| Character pulls | Crews may be acquired through ticket systems | High if power is locked behind rare characters |\n| Outfit gacha | Fashion or social expression | Lower if cosmetic only |\n| Free rewards | Selectors, pulls, mail, events | Helps F2P start, but can expire |\n| Trade market | Good Gold Bricks and player economy | Depends on what can be traded |\n| Weekly dredging | Long-term free acquisition path | Reduces pressure if rewards are meaningful |\n\n## How to Judge It\n\n1. Can story be cleared without limited characters?\n2. Can weekly content be cleared with selector/free units?\n3. Are strongest upgrades only from paid pulls?\n4. Are cosmetics separated from combat power?\n5. Does the trade market create progression pressure?\n\n## F2P Route\n\nClaim launch rewards, understand the Black Ticket selector, build one stable team, clear weekly Memory Tower/dredging, treat outfits as optional, and avoid early market speculation.",
+    "faq": [
+      {
+        "questionZh": "Sea of Remnants 是 P2W 吗？",
+        "question": "Is Sea of Remnants pay-to-win?",
+        "answerZh": "取决于正式服经济和高压内容门槛。它有抽取与外观消费，需看零氪队伍能否稳定完成周常。",
+        "answer": "It depends on the live economy and endgame pressure. Judge it by whether F2P teams can clear meaningful weekly content."
+      },
+      {
+        "questionZh": "Sea of Remnants 有角色抽卡吗？",
+        "question": "Does Sea of Remnants have character gacha?",
+        "answerZh": "公开讨论显示存在票券式角色获取，具体概率、保底和池子规则以游戏内为准。",
+        "answer": "Public discussion points to ticket-style character acquisition. Check in-game rates, pity, and banner rules."
+      },
+      {
+        "questionZh": "零氪能玩吗？",
+        "question": "Can F2P players enjoy it?",
+        "answerZh": "剧情、探索和轻度养成大概率可以；高压内容要看资源规划和长期免费获取。",
+        "answer": "Likely for story, exploration, and casual progression; pressure content depends on planning and long-term free acquisition."
+      }
+    ]
+  },
+  {
+    "id": "lost-sea-new-islands-ship-prep-guide",
+    "title": "《遗忘之海》失落海域第二幕新岛与新船准备：石像岛、溪流岛、密林岛、佳酿溶洞、虫岛和流浪烟花号",
+    "titleEn": "Sea of Remnants Lost Sea Act II Islands and Ship Prep: Five Islands and Wandering Fireworks",
+    "category": "map",
+    "categoryZh": "地图攻略",
+    "categoryEn": "Map",
+    "summary": "细拆 7 月 30 日第二幕五大新岛和新船只流浪烟花号的准备路线，帮助玩家在更新前规划主线、探索队伍、船只材料和海战资源。",
+    "summaryEn": "A focused Act II prep guide for the five new islands and Wandering Fireworks ship, covering exploration readiness, story gates, crew roles, and ship resources.",
+    "tags": [
+      "失落海域第二幕",
+      "石像岛",
+      "溪流岛",
+      "密林岛",
+      "佳酿溶洞",
+      "虫岛",
+      "流浪烟花号",
+      "新船只",
+      "新岛屿"
+    ],
+    "content": "## 先给结论\n\n7 月 30 日第二幕如果你只看一个准备方向，就是：**主线推进到能进新海域，第一队能稳定探索，船只材料别花空，海战资源留给流浪烟花号和新岛机制**。\n\n公开信息提到第二幕包含石像岛、溪流岛、密林岛、佳酿溶洞、虫岛等五大新岛，以及新船只「流浪烟花号」。这页专门拆地图与船只准备，不重复角色抽取。\n\n参考来源：[7 月 30 日第二幕准备总览](/zh/sea/guides/lost-sea-act-two-july-30-prep-guide)、[17173 版本报道](https://news.17173.com/content/07172026/225217265.shtml)、[第二幕版本 PV](https://www.bilibili.com/video/BV1oGKG65E6P/)。\n\n## 五大新岛准备表\n\n| 岛屿 | 可能搜索意图 | 更新前准备 |\n|---|---|---|\n| 石像岛 | 机关、遗迹、石像谜题 | 留探索时间，准备解谜和战斗队伍 |\n| 溪流岛 | 水路、采集、隐藏路线 | 清背包和基础采集资源 |\n| 密林岛 | 跑图、怪物、视野遮挡 | 手机端先调稳画质和帧率 |\n| 佳酿溶洞 | 洞窟、材料、Boss | 准备生存位和火力爆发 |\n| 虫岛 | 特殊怪、异常机制 | 带容错队伍，先观察机制 |\n\n## 更新前 7 件事\n\n1. 主线推进到最新可完成节点。\n2. 每周打捞、记忆之塔和深渊收益先清。\n3. 船只强化材料不要全部用在旧船上。\n4. 手机端先稳定画质，避免新岛开荒掉帧。\n5. 背包、兑换商店和活动货币整理一遍。\n6. 队伍至少准备一个生存位和一个稳定输出。\n7. 不确定新岛机制前，不急着把高价值镶嵌材料用完。\n\n## 流浪烟花号怎么准备\n\n| 资源 | 建议 |\n|---|---|\n| 船体强化材料 | 留一部分等新船属性公布 |\n| 主炮/武器材料 | 不急着拉满过渡装备 |\n| 海战消耗品 | 更新前补库存 |\n| 好金砖 | 观察新船相关交易价格，不抢第一波高价 |\n| 船歌/海螺碎片 | 先给核心战斗角色，新船规则落地后再分配 |\n\n## 和现有路线怎么衔接\n\n- 如果卡探索，看 [渡桥海查漏清单](/zh/sea/guides/bridge-sea-campfire-checklist)。\n- 如果卡战斗，看 [N3、深渊与首周进阶路线](/zh/sea/guides/n3-abyss-week-one-route)。\n- 如果资源不够，看 [记忆之塔每周打捞](/zh/sea/guides/memory-tower-weekly-dredging-guide)。\n- 如果担心 7 月 30 日抽卡，看 [黑券 6 选 1 指南](/zh/sea/guides/black-ticket-six-selector-guide)。\n\n## FAQ\n\n### 五大新岛需要提前肝完主线吗？\n\n建议尽量推进主线和系统解锁。新海域通常会有进度门槛，提前清任务能减少更新当天卡点。\n\n### 流浪烟花号值得提前囤材料吗？\n\n值得留一部分船只材料，但不建议完全停止旧船强化。先保证现在的海战能打，再留弹性资源。\n\n### 新岛探索手机端会卡吗？\n\n新地图通常资源加载更重。移动端玩家建议提前调稳帧率、阴影和特效，避免开荒时发热降频。",
+    "contentEn": "## Quick Answer\n\nFor Act II, prepare story access, a stable exploration team, spare ship materials, and enough naval resources for the Wandering Fireworks ship and new island mechanics.\n\n## Island Prep Table\n\n| Island | Search intent | Prep |\n|---|---|---|\n| Stone Statue Island | Puzzles and ruins | Save exploration time |\n| Stream Island | Water routes and gathering | Clear inventory |\n| Dense Forest Island | Navigation and monsters | Stabilize mobile graphics |\n| Wine Cave | Cave materials and bosses | Bring survival and burst |\n| Insect Island | Special enemies | Use a safe team first |\n\n## Ship Prep\n\nKeep some hull, weapon, naval consumable, and Good Gold Brick flexibility until the new ship rules are live.",
+    "faq": [
+      {
+        "questionZh": "五大新岛需要提前肝完主线吗？",
+        "question": "Should I clear story before the five new islands?",
+        "answerZh": "建议尽量推进主线和系统解锁，减少更新当天入口卡点。",
+        "answer": "Yes, push story and system unlocks to reduce update-day access issues."
+      },
+      {
+        "questionZh": "流浪烟花号要囤材料吗？",
+        "question": "Should I save materials for Wandering Fireworks?",
+        "answerZh": "留一部分船只材料更稳，但不要让当前海战完全停摆。",
+        "answer": "Save some ship materials, but do not cripple your current naval progression."
+      },
+      {
+        "questionZh": "新岛手机端怎么准备？",
+        "question": "How should mobile players prepare?",
+        "answerZh": "提前调稳帧率、阴影和特效，避免新地图加载导致发热和掉帧。",
+        "answer": "Stabilize FPS, shadows, and effects before exploring heavier new maps."
+      }
+    ]
+  },
+  {
+    "id": "identity-v-signin-screenshot-rewards-guide",
+    "title": "《遗忘之海》第五人格联动签到与晒图活动：8 月 20 日领取、8 月 6 日周边抽奖、纽扣眼怎么用",
+    "titleEn": "Sea of Remnants Identity V Sign-In and Screenshot Event Guide: August 20 Rewards, August 6 Merch Draw, and Button Eyes",
+    "category": "event",
+    "categoryZh": "活动攻略",
+    "categoryEn": "Event",
+    "summary": "更新第五人格联动的明确活动窗口：7 月 23 日版本更新后至 8 月 20 日 3:59 累计签到 7 日领奖，晒联动道具内容到 8 月 6 日 18:00 抽 Joker 工作室周边。",
+    "summaryEn": "A concrete Identity V collab checklist covering the July 23-August 20 sign-in rewards and the screenshot/share merch draw ending August 6.",
+    "tags": [
+      "第五人格联动",
+      "签到7日",
+      "纽扣眼",
+      "狂欢之椅",
+      "不解动作",
+      "800蔷薇石",
+      "晒图活动",
+      "Joker工作室周边"
+    ],
+    "content": "## 先给结论\n\n第五人格 × 遗忘之海联动现在有两个明确动作：\n\n| 活动 | 时间 | 你要做什么 |\n|---|---|---|\n| 联动签到奖励 | 7 月 23 日版本更新后至 8 月 20 日 3:59 | 累计签到 7 日，领取纽扣眼、狂欢之椅、不解动作和 800 蔷薇石 |\n| 晒图抽周边 | 即日起至 8 月 6 日 18:00 | 关注官号，转发/晒出联动道具相关内容，抽 Joker 工作室周边 |\n\n这页是对之前第五人格联动预案的更新：现在可以把“可能奖励”改成更明确的签到和晒图任务。\n\n参考来源：[第五人格官博新浪聚合](https://sina.cn/news/detail/5323791766128213.html)、[TapTap 晒图抽周边公告](https://www.taptap.cn/moment/829376002743338384)、[第五人格联动移动端指南](/zh/sea/guides/identity-v-mobile-launch-event-guide)。\n\n## 签到奖励清单\n\n| 奖励 | 类型 | 用途 |\n|---|---|---|\n| 纽扣眼 | 旅人五官组件 | 捏脸、截图、联动氛围 |\n| 狂欢之椅 | 玩具/拍照道具 | 奥托皮亚和海域截图整活 |\n| 不解动作 | 拍照动作 | 社交平台晒图素材 |\n| 800 蔷薇石 | 游戏资源 | 以游戏内用途为准 |\n\n## 7 日签到别漏领\n\n1. 每天登录后先打开活动页，不只看邮件。\n2. 确认累计天数是否增加。\n3. 领取后去捏脸、玩具、动作或背包入口查到账。\n4. 如果当天进不去，先看排错页，不要拖到最后一周。\n5. 8 月 20 日 3:59 前完成累计 7 日更稳。\n\n## 晒图抽周边怎么玩\n\nTapTap 官方活动建议晒出和联动道具相关的内容，例如：\n\n- 戴上纽扣眼做捏脸截图。\n- 用狂欢之椅在不同地点放烟花。\n- 用不解动作逛奥托皮亚。\n- 把第五人格联动氛围和自己的旅人形象结合起来。\n\n抽奖奖励公开提到 Joker 工作室周边，包括第五人格夏日透扇、遗忘之海亚克力名牌、Q版扇子、吸管随行杯等。具体名额、发奖和名单以官方活动页为准。\n\n## 和其他页面怎么接\n\n- 想知道联动背景：[联动矩阵总览](/zh/sea/guides/collaborations-guide)\n- 想做捏脸：[云捏脸指南](/zh/sea/guides/cloud-face-sculpt-guide)\n- 进不去游戏：[移动端首日排错](/zh/sea/guides/mobile-troubleshooting-guide)\n- 奖励没到账：[渠道福利与兑换码核验](/zh/sea/guides/channel-rewards-code-verification-guide)\n\n## FAQ\n\n### 第五人格联动签到到什么时候？\n\n公开信息显示活动期间为 7 月 23 日版本更新后至 8 月 20 日 3:59，累计签到 7 日可领取联动奖励。\n\n### 晒图抽周边什么时候截止？\n\nTapTap 官方晒图活动显示截止到 8 月 6 日 18:00，开奖结果将在活动结束后 5 个工作日内公布。\n\n### 纽扣眼领了在哪里用？\n\n它属于旅人五官组件，优先去捏脸/外观相关入口检查；也可以配合拍照动作和狂欢之椅做晒图素材。",
+    "contentEn": "## Quick Answer\n\nThe Identity V collaboration now has two concrete actions: sign in for seven days before August 20, 03:59, and join the screenshot/share merch draw before August 6, 18:00.\n\n## Event Table\n\n| Event | Time | What to do |\n|---|---|---|\n| Sign-in rewards | July 23 update to August 20, 03:59 | Sign in seven days for button eyes, chair prop, pose, and 800 Rose Stones |\n| Screenshot merch draw | Until August 6, 18:00 | Share content using collab props for a Joker Studio merch draw |\n\n## Rewards\n\nButton eyes are for Traveler customization, the chair is a photo/toy prop, the pose is for screenshots, and Rose Stones should be checked in-game for usage.",
+    "faq": [
+      {
+        "questionZh": "第五人格联动签到到什么时候？",
+        "question": "When does the Identity V sign-in end?",
+        "answerZh": "公开信息显示到 8 月 20 日 3:59，累计签到 7 日领取奖励。",
+        "answer": "Public information lists the end as August 20, 03:59, with seven cumulative sign-ins required."
+      },
+      {
+        "questionZh": "晒图抽周边什么时候截止？",
+        "question": "When does the screenshot merch draw end?",
+        "answerZh": "TapTap 活动显示到 8 月 6 日 18:00，结束后 5 个工作日内公布结果。",
+        "answer": "The TapTap event lists August 6, 18:00, with results within five working days after it ends."
+      },
+      {
+        "questionZh": "纽扣眼在哪里用？",
+        "question": "Where do I use button eyes?",
+        "answerZh": "它是旅人五官组件，去捏脸或外观入口检查，也适合配合拍照晒图。",
+        "answer": "It is a Traveler face component. Check customization/appearance menus and use it for screenshots."
+      }
+    ]
   }
 ]

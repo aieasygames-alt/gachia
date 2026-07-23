@@ -39,7 +39,7 @@ const FEATURED_GUIDE_IDS: Record<GameId, string[]> = {
   guihuan: ['beginner-guide', 'download-install-guide', 'spirit-build-guide'],
   ananta: ['beginner-guide', 'download-install-guide', 'combat-system-guide'],
   endfield: ['download-install-guide', 'combat-system-guide', 'crisis-contract-guide'],
-  sea: ['channel-rewards-code-verification-guide', 'mobile-graphics-fps-heat-settings-guide', 'hotfix-feedback-roadmap-guide'],
+  sea: ['identity-v-signin-screenshot-rewards-guide', 'lost-sea-new-islands-ship-prep-guide', 'sea-of-remnants-p2w-gacha-explained'],
   skjh: ['week-one-live-ops-overview', 'anti-cheat-reporting-guide', 'custom-mode-community-server-guide'],
 };
 
