@@ -96,7 +96,7 @@ const WEAPON_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
     {
       href: '/genshin/guides',
       title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
-      description: { zh: '把武器页接到版本与养成专题', en: 'Connect the weapon page to version and build guides', ja: '武器ページを版本・育成へ接続' },
+      description: { zh: '继续查看版本与养成专题', en: 'Continue into version and build guides', ja: '版本・育成ガイドへ進む' },
     },
   ],
   starrail: [
@@ -130,7 +130,7 @@ const WEAPON_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
     {
       href: '/wuwa/guides',
       title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
-      description: { zh: '把武器页接到版本和声骸专题', en: 'Connect the weapon page to version and echo guides', ja: '版本・声骸攻略へ接続' },
+      description: { zh: '继续查看版本和声骸专题', en: 'Continue into version and echo guides', ja: '版本・声骸攻略へ進む' },
     },
   ],
   nte: [
@@ -147,7 +147,7 @@ const WEAPON_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
     {
       href: '/nte/guides',
       title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
-      description: { zh: '把武器页接到 Boss 和养成攻略', en: 'Connect the weapon page to boss and build guides', ja: 'ボス・育成攻略へ接続' },
+      description: { zh: '继续查看 Boss 和养成攻略', en: 'Continue into boss and build guides', ja: 'ボス・育成攻略へ進む' },
     },
   ],
   zzz: [

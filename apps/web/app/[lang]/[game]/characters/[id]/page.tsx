@@ -160,7 +160,7 @@ const CHARACTER_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
     {
       href: '/genshin/guides',
       title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
-      description: { zh: '把角色页接到版本、活动和抽卡内容', en: 'Connect characters with version, event, and pull planning', ja: 'キャラを版本・イベント・抽選へ接続' },
+      description: { zh: '查看这个角色相关的版本、活动和抽卡内容', en: 'Open version, event, and pull-planning links for this character', ja: 'このキャラに関連する版本・イベント・ガチャ情報を確認' },
     },
   ],
   starrail: [
@@ -262,7 +262,7 @@ const CHARACTER_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
     {
       href: '/ananta/guides',
       title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
-      description: { zh: '把角色页接到专题攻略', en: 'Connect the character page to broader guides', ja: 'キャラページを攻略特集へ接続' },
+      description: { zh: '查看这个角色相关的专题攻略', en: 'Open broader guides for this character', ja: 'このキャラに関連する攻略特集を確認' },
     },
   ],
   endfield: [

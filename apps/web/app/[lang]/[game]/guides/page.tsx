@@ -131,9 +131,9 @@ const SKJH_DECISION_LINKS: Array<{
     id: 'week-one',
     href: '/skjh/guides/week-one-live-ops-overview',
     label: {
-      zh: '先看首周分流',
+      zh: '先看首周重点',
       en: 'Start with week-one routing',
-      ja: 'まず首週の分流を見る',
+      ja: 'まず首週の重点を見る',
     },
     description: {
       zh: '把反作弊、换服、自定义模式和电力四个最真实的问题先分清。',
@@ -1393,7 +1393,7 @@ function SkjhGuides({ locale }: { locale: SupportedLocale }) {
         <div className="mb-4 flex items-center justify-between gap-4">
           <div>
             <h2 className="text-lg font-semibold text-game-text">
-              {locale === 'zh' ? '先按首周问题分流' : locale === 'ja' ? '首週課題のショートカット' : 'Start with week-one decision hubs'}
+              {locale === 'zh' ? '先看首周重点问题' : locale === 'ja' ? '首週課題の重点' : 'Start with week-one decision hubs'}
             </h2>
             <p className="mt-1 text-sm text-game-text-muted">
               {locale === 'zh'

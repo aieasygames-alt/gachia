@@ -187,9 +187,9 @@ type SpecialHubCopy = {
 const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
   genshin: {
     eyebrow: { zh: '6.x 版本专题入口', en: 'v6.x Version Hub', ja: 'v6.x バージョン特集' },
-    title: { zh: '原神版本热词承接', en: 'Genshin hot-topic landing hub', ja: '原神 注目トピック導線' },
+    title: { zh: '原神版本重点入口', en: 'Genshin hot-topic landing hub', ja: '原神 注目トピック導線' },
     description: {
-      zh: '把月之八、桑多涅、地区探索和圣遗物配装集中放进首页，先接住当前版本和养成搜索词。',
+      zh: '把月之八、桑多涅、地区探索和圣遗物配装集中放进首页，先覆盖当前版本和养成高频问题。',
       en: 'Surface Moon 8, Sandrone, region exploration, and artifact builds on the homepage first.',
       ja: '月之八、桑多涅、地域探索、聖遺物ビルドをトップで受け止めます。',
     },
@@ -203,7 +203,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
       zh: [
         {
           title: '版本节点',
-          description: '把版本前瞻和核心版本词先承接起来。',
+          description: '先整理版本前瞻和核心版本重点。',
           links: [
             { href: '/genshin/version', label: '版本专题' },
             { href: '/genshin/guides/snezhnaya-version-guide', label: '版本指南' },
@@ -211,7 +211,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
         },
         {
           title: '养成与配装',
-          description: '把角色、武器和圣遗物一起送到实际培养页。',
+          description: '一起查看角色、武器和圣遗物培养建议。',
           links: [
             { href: '/genshin/build', label: '配装推荐' },
             { href: '/genshin/artifacts', label: '圣遗物图鉴' },
@@ -219,7 +219,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
         },
         {
           title: '地图与机制',
-          description: '把地区探索和新机制类搜索词继续往下带。',
+          description: '继续查看地区探索和新机制攻略。',
           links: [
             { href: '/genshin/map', label: '交互地图' },
             { href: '/genshin/guides/lunar-reaction-guide', label: '机制攻略' },
@@ -237,7 +237,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
         },
         {
           title: 'Builds and artifacts',
-          description: 'Route character, weapon, and artifact queries to practical pages.',
+          description: 'Continue into practical character, weapon, and artifact pages.',
           links: [
             { href: '/genshin/build', label: 'Builds' },
             { href: '/genshin/artifacts', label: 'Artifacts' },
@@ -245,7 +245,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
         },
         {
           title: 'Map and mechanics',
-          description: 'Keep region exploration and system questions moving deeper.',
+          description: 'Continue into region exploration and system guides.',
           links: [
             { href: '/genshin/map', label: 'Interactive map' },
             { href: '/genshin/guides/lunar-reaction-guide', label: 'Mechanics guide' },
@@ -296,7 +296,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
   },
   starrail: {
     eyebrow: { zh: '4.4 已上线专题入口', en: 'v4.4 Live Hub', ja: 'v4.4 実装特集' },
-    title: { zh: '星穹铁道 4.4 / Fate 联动承接', en: 'Star Rail v4.4 / Fate collab hub', ja: 'スターレイル v4.4 / Fate導線' },
+    title: { zh: '星穹铁道 4.4 / Fate 联动重点入口', en: 'Star Rail v4.4 / Fate collab hub', ja: 'スターレイル v4.4 / Fate導線' },
     description: {
       zh: '把 Himeko Nova、Fate/stay night 联动、Rin/Gilgamesh、兑换码和星琼规划放到首页第一跳。',
       en: 'Surface Himeko Nova, Fate/stay night, Rin/Gilgamesh, codes, and Jade planning directly on the homepage.',
@@ -310,8 +310,8 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     cta: { zh: '去 4.4 专题', en: 'Open v4.4 hub', ja: 'v4.4特集へ' },
     tracks: {
       zh: [
-        { title: '4.4 节点', description: '把已上线版本、Himeko Nova 和联动热词先接住。', links: [{ href: '/starrail/version', label: '4.4 专题' }, { href: '/starrail/guides/himeko-nova-fate-pull-plan', label: 'Himeko Nova 规划' }] },
-        { title: 'Fate 联动', description: '继续承接 Saber、Archer、Rin/Gilgamesh 和奖励规划。', links: [{ href: '/starrail/guides/fate-collab-guide', label: 'Fate 联动 FAQ' }, { href: '/starrail/redeem-codes', label: '兑换码' }] },
+        { title: '4.4 节点', description: '先覆盖已上线版本、Himeko Nova 和联动重点问题。', links: [{ href: '/starrail/version', label: '4.4 专题' }, { href: '/starrail/guides/himeko-nova-fate-pull-plan', label: 'Himeko Nova 规划' }] },
+        { title: 'Fate 联动', description: '继续查看 Saber、Archer、Rin/Gilgamesh 和奖励规划。', links: [{ href: '/starrail/guides/fate-collab-guide', label: 'Fate 联动 FAQ' }, { href: '/starrail/redeem-codes', label: '兑换码' }] },
         { title: '抽卡资源', description: '把遗器、光锥、配队和星琼缺口串成下一步。', links: [{ href: '/starrail/build', label: '配装推荐' }, { href: '/starrail/guides/banner-schedule-guide', label: '卡池规划' }] },
       ],
       en: [
@@ -331,7 +331,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
   },
   nte: {
     eyebrow: { zh: '1.2「999 Nights」入口', en: 'v1.2 999 Nights Hub', ja: 'v1.2 999 Nights導線' },
-    title: { zh: '异环 1.2 / Shinku / Iroi 承接', en: 'NTE v1.2 / Shinku / Iroi hub', ja: 'NTE v1.2 / Shinku / Iroi導線' },
+    title: { zh: '异环 1.2 / Shinku / Iroi 重点入口', en: 'NTE v1.2 / Shinku / Iroi hub', ja: 'NTE v1.2 / Shinku / Iroi導線' },
     description: {
       zh: '把 999 Nights、Shinku 当前池、Iroi 预热、兑换码、Steam/download 和下载安装入口一起前置。',
       en: 'Put 999 Nights, Shinku, Iroi, codes, Steam/download intent, and install help up front.',
@@ -345,7 +345,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     cta: { zh: '去 1.2 专题', en: 'Open v1.2 hub', ja: 'v1.2特集へ' },
     tracks: {
       zh: [
-        { title: '版本与角色', description: '优先承接 999 Nights、Shinku 和 Iroi 搜索。', links: [{ href: '/nte/version', label: '1.2 专题' }, { href: '/nte/guides/shinku-iroi-pull-plan', label: 'Shinku vs Iroi' }] },
+        { title: '版本与角色', description: '优先整理 999 Nights、Shinku 和 Iroi 相关问题。', links: [{ href: '/nte/version', label: '1.2 专题' }, { href: '/nte/guides/shinku-iroi-pull-plan', label: 'Shinku vs Iroi' }] },
         { title: '抽卡与福利', description: '把兑换码和抽卡策略接到可执行页面。', links: [{ href: '/nte/redeem-codes', label: '兑换码' }, { href: '/nte/guides/gacha-strategy', label: '抽卡策略' }] },
         { title: '模式与入门', description: 'Steam/download 用户先确认官方入口，再看 999 Nights 每日路线。', links: [{ href: '/nte/guides/download-install-guide', label: '下载安装' }, { href: '/nte/guides/999-nights-mode-guide', label: '999 Nights' }] },
       ],
@@ -368,9 +368,9 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     eyebrow: { zh: '7 月 23 日移动端首发', en: 'July 23 Mobile Launch', ja: '7月23日モバイル開始' },
     title: { zh: '遗忘之海官网入口｜移动端首发、Wiki、开服攻略', en: 'Sea of Remnants official hub | mobile launch, wiki, launch guide', ja: '遺忘之海 公式導線｜モバイル開始・Wiki・開服攻略' },
     description: {
-      zh: '把 7 月 23 日移动端首发、官网入口、Wiki、首周运营、下载安装、角色图鉴和 gamescom demo 海外曝光信号集中放进首页。',
-      en: 'Bring the July 23 mobile launch, official hub, wiki, week-one live ops, download/install help, character wiki, and gamescom demo signal to the front page.',
-      ja: '7月23日モバイル開始、公式導線、Wiki、初週運営、DL、キャラ図鑑、gamescom demoの信号をトップに集約します。',
+      zh: '这里整理 7 月 23 日移动端首发后的官网入口、Wiki、首周任务、下载安装、角色图鉴和 gamescom demo 相关信息。',
+      en: 'Find the July 23 mobile launch, official hub, wiki, week-one tasks, download/install help, character wiki, and gamescom demo coverage in one place.',
+      ja: '7月23日のモバイル開始後に必要な公式入口、Wiki、初週タスク、DL、キャラ図鑑、gamescom demo情報をまとめています。',
     },
     chips: {
       zh: ['7/23 首发', '移动端', '首周运营', 'gamescom demo', '下载安装', '节奏榜'],
@@ -382,7 +382,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
       zh: [
         {
           title: '移动端首发',
-          description: '先把 7 月 23 日移动端入口、账号、配置和首日排错接住。',
+          description: '先确认移动端入口、账号互通、设备配置和首日常见问题。',
           links: [
             { href: '/sea/guides/mobile-launch-guide', label: '移动端 FAQ' },
             { href: '/sea/guides/pc-mobile-cross-progression-faq', label: '互通 FAQ' },
@@ -390,7 +390,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
         },
         {
           title: '首周运营',
-          description: '把热修、号角、大脸币、查漏和 gamescom demo 分流到正确页面。',
+          description: '查看热修、号角、大脸币、探索查漏和 gamescom demo 相关内容。',
           links: [
             { href: '/sea/guides/week-one-live-ops-overview', label: '首周总览' },
             { href: '/sea/guides/mobile-troubleshooting-guide', label: '首日排错' },
@@ -398,7 +398,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
         },
         {
           title: '茉莉与进阶',
-          description: '把茉莉开荒、N3/深渊和角色图鉴接到更具体的养成页。',
+          description: '查看茉莉开荒、N3/深渊进阶路线和角色图鉴。',
           links: [
             { href: '/sea/guides/molly-starter-team-guide', label: '茉莉首发队' },
             { href: '/sea/guides/n3-abyss-week-one-route', label: 'N3 / 深渊' },
@@ -409,7 +409,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
       en: [
         {
           title: 'Mobile launch',
-          description: 'Catch July 23 mobile entry, account, specs, and first-day troubleshooting.',
+          description: 'Check mobile entry, account setup, specs, and first-day troubleshooting.',
           links: [
             { href: '/sea/guides/mobile-launch-guide', label: 'Mobile FAQ' },
             { href: '/sea/guides/pc-mobile-cross-progression-faq', label: 'Cross-progress' },
@@ -417,7 +417,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
         },
         {
           title: 'Week-one live ops',
-          description: 'Route hotfixes, Horns, Face Coins, cleanup, and gamescom demo buzz.',
+          description: 'Review hotfixes, Horns, Face Coins, exploration cleanup, and gamescom demo coverage.',
           links: [
             { href: '/sea/guides/week-one-live-ops-overview', label: 'Live-ops hub' },
             { href: '/sea/guides/mobile-troubleshooting-guide', label: 'Troubleshooting' },
@@ -425,7 +425,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
         },
         {
           title: 'Molly and progression',
-          description: 'Route Molly starters, N3/abyss, and character searches into deeper build pages.',
+          description: 'Open Molly starter teams, N3/Abyss progression, and the character wiki.',
           links: [
             { href: '/sea/guides/molly-starter-team-guide', label: 'Molly teams' },
             { href: '/sea/guides/n3-abyss-week-one-route', label: 'N3 / Abyss' },
@@ -436,7 +436,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
       ja: [
         {
           title: 'モバイル開始',
-          description: '7月23日のモバイル導線、アカウント、環境、初日トラブルを受け止めます。',
+          description: 'モバイル入口、アカウント、環境、初日のよくある問題を確認できます。',
           links: [
             { href: '/sea/guides/mobile-launch-guide', label: 'モバイルFAQ' },
             { href: '/sea/guides/pc-mobile-cross-progression-faq', label: '連携FAQ' },
@@ -444,7 +444,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
         },
         {
           title: '初週運営',
-          description: 'Hotfix、Horn、Face Coin、探索漏れ、gamescom demoを分流します。',
+          description: 'Hotfix、Horn、Face Coin、探索漏れ、gamescom demo関連情報を確認できます。',
           links: [
             { href: '/sea/guides/week-one-live-ops-overview', label: '初週総覧' },
             { href: '/sea/guides/mobile-troubleshooting-guide', label: '初日対応' },
@@ -452,7 +452,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
         },
         {
           title: 'Mollyと進行',
-          description: 'Molly編成、N3/深淵、キャラ検索を深い育成ページへつなげます。',
+          description: 'Molly編成、N3/深淵、キャラ図鑑を確認できます。',
           links: [
             { href: '/sea/guides/molly-starter-team-guide', label: 'Molly編成' },
             { href: '/sea/guides/n3-abyss-week-one-route', label: 'N3 / Abyss' },
@@ -469,7 +469,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           ja: '遺忘之海で最初に見るべきものは？',
         },
         answer: {
-          zh: '先看公测版本中心，再看开服攻略、下载安装和队伍思路，能最快接住最新热词。',
+          zh: '先看公测版本中心，再看开服攻略、下载安装和队伍思路，能最快找到当前重点。',
           en: 'Start with the open beta version center, then launch guide, download/install, and team-building pages.',
           ja: 'まずCBT特集、次に開服攻略、DL、編成案を見るのが最短です。',
         },
@@ -490,7 +490,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
   },
   zzz: {
     eyebrow: { zh: '3.1 / 2 周年专题入口', en: 'v3.1 / 2nd Anniversary Hub', ja: 'v3.1 / 2周年導線' },
-    title: { zh: '绝区零 3.1、周年与 Xbox 入坑承接', en: 'ZZZ v3.1, anniversary, and Xbox onboarding hub', ja: 'ZZZ v3.1・周年・Xbox導線' },
+    title: { zh: '绝区零 3.1、周年与 Xbox 入坑重点入口', en: 'ZZZ v3.1, anniversary, and Xbox onboarding hub', ja: 'ZZZ v3.1・周年・Xbox導線' },
     description: {
       zh: '把 The Long Goodbye、7 月 29 日、2 周年、Remielle/Sigrid、Microsoft Store、Xbox Play Anywhere 和 Steam 入坑放在首页第一跳。',
       en: 'Surface The Long Goodbye, July 29, the 2nd anniversary, Remielle/Sigrid, Microsoft Store, Xbox Play Anywhere, and Steam onboarding.',
@@ -504,7 +504,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     cta: { zh: '去 3.1 专题', en: 'Open v3.1 hub', ja: 'v3.1特集へ' },
     tracks: {
       zh: [
-        { title: '3.1 节点', description: '先承接 The Long Goodbye、周年和新代理人搜索。', links: [{ href: '/zzz/version', label: '3.1 专题' }, { href: '/zzz/guides/anniversary-rewards-codes-plan', label: '周年奖励' }] },
+        { title: '3.1 节点', description: '先整理 The Long Goodbye、周年和新代理人相关问题。', links: [{ href: '/zzz/version', label: '3.1 专题' }, { href: '/zzz/guides/anniversary-rewards-codes-plan', label: '周年奖励' }] },
         { title: '平台入坑', description: 'Steam、Microsoft Store、Xbox 用户先看账号与下载。', links: [{ href: '/zzz/guides/v3-1-anniversary-xbox-guide', label: '3.1 / 周年 FAQ' }, { href: '/zzz/redeem-codes', label: '兑换码' }] },
         { title: '养成与配队', description: '把周年回流继续送到配队、驱动盘和养成页。', links: [{ href: '/zzz/guides/meta-teams-v3-guide', label: '主流配队' }, { href: '/zzz/drive-discs', label: '驱动盘' }] },
       ],
@@ -525,9 +525,9 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
   },
   wuwa: {
     eyebrow: { zh: '3.x 版本专题入口', en: 'v3.x Version Hub', ja: 'v3.x バージョン特集' },
-    title: { zh: '鸣潮版本与入坑承接', en: 'WuWa version and onboarding hub', ja: '鳴潮 バージョン・入門導線' },
+    title: { zh: '鸣潮版本与入坑重点入口', en: 'WuWa version and onboarding hub', ja: '鳴潮 バージョン・入門導線' },
     description: {
-      zh: '把 v3.4、v3.5、Roya Frostlands、声骸系统和新手入坑页放到首页，优先承接版本和养成词。',
+      zh: '把 v3.4、v3.5、Roya Frostlands、声骸系统和新手入坑页放到首页，优先整理版本和养成重点。',
       en: 'Bring v3.4, v3.5, Roya Frostlands, the Echo system, and beginner routes to the front page.',
       ja: 'v3.4、v3.5、Roya Frostlands、声骸、新手導線をトップにまとめます。',
     },
@@ -541,7 +541,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
       zh: [
         {
           title: '版本节点',
-          description: '把 v3.4 / v3.5 和 Roya Frostlands 放到最前面，先承接版本搜索。',
+          description: '把 v3.4 / v3.5 和 Roya Frostlands 放到最前面，先整理版本重点。',
           links: [
             { href: '/wuwa/version', label: '版本专题' },
             { href: '/wuwa/guides/yangyang-suisui-sp-pull-plan', label: 'Yangyang/Suisui' },
@@ -549,7 +549,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
         },
         {
           title: '声骸养成',
-          description: '围绕声骸、共鸣链和主流配装，继续向培养页分流。',
+          description: '围绕声骸、共鸣链和主流配装，继续查看培养页。',
           links: [
             { href: '/wuwa/build', label: '配装推荐' },
             { href: '/wuwa/guides/roya-frostlands-guide', label: 'Roya Frostlands' },
@@ -634,7 +634,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
   },
   endfield: {
     eyebrow: { zh: 'Homecoming / AIC 工厂入口', en: 'Homecoming / AIC Factory Hub', ja: 'Homecoming / AIC工場導線' },
-    title: { zh: '终末地 Homecoming 与蓝图工厂承接', en: 'Endfield Homecoming and blueprint factory hub', ja: 'Endfield Homecoming・ブループリント工場導線' },
+    title: { zh: '终末地 Homecoming 与蓝图工厂重点入口', en: 'Endfield Homecoming and blueprint factory hub', ja: 'Endfield Homecoming・ブループリント工場導線' },
     description: {
       zh: '把 Homecoming 已上线、新地图、Arcane/Liino、蓝图、AIC 工厂 QoL 和庆典奖励放到首页。',
       en: 'Bring live Homecoming coverage, new maps, Arcane/Liino, blueprints, AIC factory QoL, and celebration rewards to the homepage.',
@@ -648,7 +648,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     cta: { zh: '去 Homecoming 专题', en: 'Open Homecoming hub', ja: 'Homecoming特集へ' },
     tracks: {
       zh: [
-        { title: 'Homecoming', description: '先承接半周年、新地图、新干员和奖励。', links: [{ href: '/endfield/version', label: 'Homecoming 专题' }, { href: '/endfield/guides/homecoming-operators-map-route', label: '新地图 / 干员' }] },
+        { title: 'Homecoming', description: '先整理半周年、新地图、新干员和奖励。', links: [{ href: '/endfield/version', label: 'Homecoming 专题' }, { href: '/endfield/guides/homecoming-operators-map-route', label: '新地图 / 干员' }] },
         { title: '蓝图 / AIC', description: '把工厂效率、蓝图复用和建设节奏继续下沉。', links: [{ href: '/endfield/guides/blueprint-aic-factory-guide', label: '蓝图 / AIC' }, { href: '/endfield/build', label: '配装推荐' }] },
         { title: '入坑与角色', description: '新玩家和回流玩家继续看下载、战斗和干员。', links: [{ href: '/endfield/guides/download-install-guide', label: '下载与配置' }, { href: '/endfield/characters', label: '角色图鉴' }] },
       ],
@@ -685,7 +685,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
       zh: [
         { title: '下载与模式', description: '先解决官网 PC、下载电脑版和选服问题。', links: [{ href: '/skjh/guides/official-pc-download-faq', label: '官网 PC 下载' }, { href: '/skjh/guides/server-mode-choice', label: '服务器模式' }] },
         { title: '0-2 小时开荒', description: '把工具、领地柜、低风险资源线变成可执行路线。', links: [{ href: '/skjh/guides/first-2-hours-starter-route', label: '0-2 小时路线' }, { href: '/skjh/guides/launch-30min-checklist', label: '30 分钟清单' }] },
-        { title: '基地与防抄家', description: '继续承接基地选址、领地柜维护和反抄家布局。', links: [{ href: '/skjh/guides/base-location-anti-raid-plan', label: '选址防抄家' }, { href: '/skjh/guides/anti-raid-base-layouts', label: '房型防抄家' }] },
+        { title: '基地与防抄家', description: '继续查看基地选址、领地柜维护和反抄家布局。', links: [{ href: '/skjh/guides/base-location-anti-raid-plan', label: '选址防抄家' }, { href: '/skjh/guides/anti-raid-base-layouts', label: '房型防抄家' }] },
       ],
       en: [
         { title: 'Download and modes', description: 'Solve official PC entry, PC download, and server choice first.', links: [{ href: '/skjh/guides/official-pc-download-faq', label: 'Official PC FAQ' }, { href: '/skjh/guides/server-mode-choice', label: 'Server modes' }] },
@@ -952,7 +952,7 @@ export default async function GameHome({
                   {locale === 'zh' ? '专题展开' : locale === 'ja' ? '特集の展開' : 'Topic tracks'}
                 </h3>
                 <span className="text-xs text-game-text-muted">
-                  {locale === 'zh' ? '把搜索词继续往下承接' : locale === 'ja' ? '検索語をさらに下へつなぐ' : 'Carry search intent deeper'}
+                  {locale === 'zh' ? '继续查看相关内容' : locale === 'ja' ? '関連コンテンツへ進む' : 'Continue into related pages'}
                 </span>
               </div>
               <div className="grid gap-3 md:grid-cols-3">
@@ -982,7 +982,7 @@ export default async function GameHome({
           <div className="grid gap-4 px-6 py-5 lg:grid-cols-[1.3fr_0.7fr]">
             <div>
               <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-game-text-muted">
-                {locale === 'zh' ? '优先承接入口' : locale === 'ja' ? '優先導線' : 'Priority entry points'}
+                {locale === 'zh' ? '优先入口' : locale === 'ja' ? '優先導線' : 'Priority entry points'}
               </h3>
               <div className="flex flex-wrap gap-2">
                 <Link

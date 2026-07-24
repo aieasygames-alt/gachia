@@ -250,7 +250,7 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, GuideQuickAnswe
         ja: '要点：Sea of Remnants Wikiの入口',
       },
       points: {
-        zh: ['这页承接公测时间、官网入口、福利、角色和首月更新。', '如果你只想找 Wiki 信息，先从版本中心跳角色、节奏榜和开服攻略。', '后续 Sea 新词应该优先挂回这里。'],
+        zh: ['这页整理公测时间、官网入口、福利、角色和首月更新。', '如果你只想找 Wiki 信息，先从版本中心跳角色、节奏榜和开服攻略。', '后续 Sea 新内容会优先从这里继续查看。'],
         en: ['This hub connects release timing, official entry points, rewards, characters, and first-month updates.', 'If you searched for a Sea of Remnants wiki, start here, then jump to characters, tier list, launch guide, or download help.', 'New Sea launch topics should route back to this page first.'],
         ja: ['公開日、公式入口、報酬、キャラ、初月更新をまとめます。', 'Wiki情報を探す場合はここからキャラ、Tier表、開服攻略へ進みます。', '新しい話題はまずこのページへ戻します。'],
       },
@@ -714,7 +714,7 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
       {
         href: '/endfield/guides/crisis-contract-guide',
         label: { zh: '看高难攻略', en: 'Read crisis content', ja: '高難度攻略へ' },
-        description: { zh: '把战斗系统接到高难玩法', en: 'Connect combat to high-difficulty content', ja: '戦闘から高難度へ接続', },
+        description: { zh: '看战斗系统如何用于高难玩法', en: 'Connect combat to high-difficulty content', ja: '戦闘から高難度へ接続', },
       },
     ],
     'crisis-contract-guide': [
@@ -2511,7 +2511,7 @@ const SEA_GUIDE_ENTITY_LINKS: Record<string, {
       {
         href: '/sea/guides/launch-boss-map-guide',
         label: { zh: '看公测海域与 BOSS', en: 'Boss map guide', ja: '海域とBOSSへ' },
-        description: { zh: '把战斗机制接到实战对象。', en: 'Apply combat mechanics to actual bosses.', ja: '戦闘機構を実戦へ。' },
+        description: { zh: '把战斗机制用到实际 Boss 和海域。', en: 'Apply combat mechanics to actual bosses.', ja: '戦闘機構を実戦へ。' },
       },
       {
         href: '/sea/guides/team-building-guide',

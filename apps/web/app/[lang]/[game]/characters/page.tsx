@@ -70,7 +70,7 @@ const CHARACTER_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
     {
       href: '/endfield/items',
       title: { zh: '再看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
-      description: { zh: '把养成材料、职业和配装承接起来', en: 'Connect materials, roles, and build planning', ja: '素材、職分、ビルドをつなぐ', },
+      description: { zh: '把养成材料、职业和配装放在一起看', en: 'Review materials, roles, and build planning together', ja: '素材、職分、ビルドをつなぐ', },
     },
   ],
 };

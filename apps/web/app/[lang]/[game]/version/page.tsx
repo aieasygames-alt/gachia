@@ -62,29 +62,29 @@ const OFFICIAL_STATUS_NOTES: Partial<Record<GameId, Record<SupportedLocale, stri
 
 const INTENT_LINKS: Partial<Record<GameId, IntentLink[]>> = {
   genshin: [
-    { href: '/genshin/version', label: { zh: '官网 / 版本入口', en: 'Official / Version hub', ja: '公式 / バージョン' }, description: { zh: '承接官网、版本、活动和卡池查询。', en: 'Capture official, version, event, and banner queries.', ja: '公式、版本、イベント、バナー検索を承接します。' } },
+    { href: '/genshin/version', label: { zh: '官网 / 版本入口', en: 'Official / Version hub', ja: '公式 / バージョン' }, description: { zh: '集中整理官网、版本、活动和卡池信息。', en: 'Collect official, version, event, and banner information.', ja: '公式、版本、イベント、バナー情報を整理します。' } },
     { href: '/genshin/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '直播码、版本码和过期状态集中查看。', en: 'Check livestream, version, and expired code status.', ja: '配信コード、版本コード、期限切れを確認。' } },
     { href: '/genshin/guides/banner-schedule-guide', label: { zh: '卡池规划', en: 'Banner planning', ja: 'バナー計画' }, description: { zh: '把抽卡、原石和保底放到同一条路线里。', en: 'Plan pulls, Primogems, and pity in one path.', ja: 'ガチャ、原石、天井を一緒に計画。' } },
   ],
   starrail: [
-    { href: '/starrail/version', label: { zh: '官网 / 版本入口', en: 'Official / Version hub', ja: '公式 / バージョン' }, description: { zh: '承接 4.4、联动、角色和活动时间。', en: 'Capture v4.4, collab, character, and event timing.', ja: 'v4.4、コラボ、キャラ、イベントを承接。' } },
+    { href: '/starrail/version', label: { zh: '官网 / 版本入口', en: 'Official / Version hub', ja: '公式 / バージョン' }, description: { zh: '集中查看 4.4、联动、角色和活动时间。', en: 'Check v4.4, collab, character, and event timing.', ja: 'v4.4、コラボ、キャラ、イベントを確認。' } },
     { href: '/starrail/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '直播兑换码和版本补偿码入口。', en: 'Livestream and version compensation code entry.', ja: '配信コードと補償コード入口。' } },
     { href: '/starrail/guides/v4-4-preview-guide', label: { zh: '抽卡规划', en: 'Pull planning', ja: 'ガチャ計画' }, description: { zh: 'Himeko Nova、Fate 联动和星琼缺口。', en: 'Himeko Nova, Fate collab, and Stellar Jade gaps.', ja: 'Himeko Nova、Fate、星玉不足を確認。' } },
   ],
   wuwa: [
-    { href: '/wuwa/version', label: { zh: '官网 / 版本入口', en: 'Official / Version hub', ja: '公式 / バージョン' }, description: { zh: '承接 3.5、Xbox/Game Pass 和 SP 机制。', en: 'Capture v3.5, Xbox/Game Pass, and SP mechanics.', ja: 'v3.5、Xbox/Game Pass、SP機構を承接。' } },
+    { href: '/wuwa/version', label: { zh: '官网 / 版本入口', en: 'Official / Version hub', ja: '公式 / バージョン' }, description: { zh: '集中查看 3.5、Xbox/Game Pass 和 SP 机制。', en: 'Check v3.5, Xbox/Game Pass, and SP mechanics.', ja: 'v3.5、Xbox/Game Pass、SP機構を確認。' } },
     { href: '/wuwa/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '版本码、活动码和过期状态。', en: 'Version codes, event codes, and expiry status.', ja: '版本コード、イベントコード、期限確認。' } },
     { href: '/wuwa/guides/v3-5-preview-guide', label: { zh: 'Xbox 入坑', en: 'Xbox starter', ja: 'Xbox入門' }, description: { zh: '平台登录、手柄、首周资源和活动路线。', en: 'Platform login, controller, first-week resources, and events.', ja: 'ログイン、コントローラー、初週資源、イベント。' } },
   ],
   nte: [
-    { href: '/nte/guides/download-install-guide', label: { zh: '官网 / 下载', en: 'Official / Download', ja: '公式 / DL' }, description: { zh: '承接官网、下载、安装和设备问题。', en: 'Capture official, download, install, and device queries.', ja: '公式、DL、インストール、端末検索を承接。' } },
+    { href: '/nte/guides/download-install-guide', label: { zh: '官网 / 下载', en: 'Official / Download', ja: '公式 / DL' }, description: { zh: '集中查看官网、下载、安装和设备问题。', en: 'Check official, download, install, and device information.', ja: '公式、DL、インストール、端末情報を確認。' } },
     { href: '/nte/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '1.2 版本码和活动奖励入口。', en: 'v1.2 codes and event reward entry.', ja: 'v1.2コードとイベント報酬入口。' } },
     { href: '/nte/version', label: { zh: 'Shinku / Iroi', en: 'Shinku / Iroi', ja: 'Shinku / Iroi' }, description: { zh: '角色抽取、版本活动和抽卡机制。', en: 'Character pulls, version events, and gacha mechanics.', ja: 'キャラガチャ、版本イベント、ガチャ機構。' } },
   ],
   zzz: [
     { href: '/zzz/guides/steam-3-0-start-guide', label: { zh: 'Steam 入坑', en: 'Steam starter', ja: 'Steam入門' }, description: { zh: '下载、账号绑定、存档互通和新区路线。', en: 'Download, account linking, cross-save, and new-area route.', ja: 'DL、アカウント連携、クロスセーブ、新エリア。' } },
     { href: '/zzz/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '版本码、直播码和回流奖励。', en: 'Version codes, livestream codes, and returnee rewards.', ja: '版本コード、配信コード、復帰報酬。' } },
-    { href: '/zzz/drive-discs', label: { zh: '驱动盘', en: 'Drive discs', ja: 'ディスク' }, description: { zh: '把 3.0 角色直接接到配装页。', en: 'Route v3.0 agents directly into build pages.', ja: 'v3.0エージェントをビルドへ接続。' } },
+    { href: '/zzz/drive-discs', label: { zh: '驱动盘', en: 'Drive discs', ja: 'ディスク' }, description: { zh: '查看 3.0 角色对应的配装建议。', en: 'Open build guidance for v3.0 agents.', ja: 'v3.0エージェントのビルドを確認。' } },
   ],
   guihuan: [
     { href: '/guihuan/guides/test-release-timeline-guide', label: { zh: '官网 / 测试', en: 'Official / Tests', ja: '公式 / テスト' }, description: { zh: '公测时间、测试资格和官方状态。', en: 'Release timing, test access, and official status.', ja: 'リリース時期、テスト資格、公式状態。' } },
@@ -99,7 +99,7 @@ const INTENT_LINKS: Partial<Record<GameId, IntentLink[]>> = {
   endfield: [
     { href: '/endfield/guides/download-install-guide', label: { zh: '官网 / 下载', en: 'Official / Download', ja: '公式 / DL' }, description: { zh: '下载、配置、平台和测试状态入口。', en: 'Download, specs, platform, and test-status entry.', ja: 'DL、環境、プラットフォーム、テスト状態。' } },
     { href: '/endfield/guides/homecoming-update-guide', label: { zh: 'Homecoming', en: 'Homecoming', ja: 'Homecoming' }, description: { zh: '新地图、AIC 工厂和新干员。', en: 'New maps, AIC factory, and operators.', ja: '新マップ、AIC工場、新オペレーター。' } },
-    { href: '/endfield/guides/combat-system-guide', label: { zh: '玩法 / 配置', en: 'Gameplay / Specs', ja: '玩法 / 環境' }, description: { zh: '承接 wiki、角色、配置和玩法问题。', en: 'Capture wiki, character, specs, and gameplay questions.', ja: 'Wiki、キャラ、環境、玩法検索を承接。' } },
+    { href: '/endfield/guides/combat-system-guide', label: { zh: '玩法 / 配置', en: 'Gameplay / Specs', ja: '玩法 / 環境' }, description: { zh: '集中查看 Wiki、角色、配置和玩法问题。', en: 'Check wiki, character, specs, and gameplay questions.', ja: 'Wiki、キャラ、環境、玩法情報を確認。' } },
   ],
   sea: [
     { href: '/sea/guides/identity-v-mobile-launch-event-guide', label: { zh: '第五人格联动', en: 'Identity V collab', ja: 'Identity Vコラボ' }, description: { zh: '纽扣眼、狂欢之椅、拍照动作、活动任务和移动端领取顺序。', en: 'Button eyes, chair prop, photo pose, event tasks, and mobile claim order.', ja: 'ボタン目、椅子、写真ポーズ、イベント任務、モバイル受取順。' } },
@@ -174,7 +174,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
     },
     kicker: { zh: '联动卡池', en: 'Collab banner', ja: 'コラボバナー' },
     freshness: {
-      zh: '已切换为上线后口径，优先承接 Himeko Nova、Fate 联动奖励、兑换码和抽卡规划。',
+      zh: '已切换为上线后口径，优先整理 Himeko Nova、Fate 联动奖励、兑换码和抽卡规划。',
       en: 'Now framed as live coverage for Himeko Nova, Fate rewards, codes, and pull planning.',
       ja: '実装後の情報として、Himeko Nova、Fate報酬、コード、ガチャ計画を優先整理します。',
     },
@@ -218,7 +218,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
       en: ['v3.5 launch', 'Yangyang: Xuanling', 'Suisui', 'Xbox/Game Pass'],
       ja: ['v3.5開始', 'Yangyang: Xuanling', 'Suisui', 'Xbox/Game Pass'],
     },
-    kicker: { zh: '承接更新', en: 'Update anchor', ja: '更新軸' },
+    kicker: { zh: '版本更新', en: 'Update anchor', ja: '更新軸' },
     freshness: {
       zh: '3.5 角色、SP 机制、Xbox/Game Pass 新玩家入口和声骸路线会持续同步。',
       en: 'v3.5 characters, SP mechanics, Xbox/Game Pass onboarding, and Echo routes stay in sync here.',
@@ -255,7 +255,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
   nte: {
     title: { zh: '1.2「999 Nights」Shinku / Iroi 专题', en: 'v1.2 999 Nights Shinku / Iroi Hub', ja: 'v1.2 999 Nights Shinku / Iroi 特集' },
     description: {
-      zh: '围绕 1.2「999 Nights」已上线、Shinku 当前期、Iroi 后续期、兑换码、Steam/download 与抽卡机制承接当前搜索。',
+      zh: '整理 1.2「999 Nights」上线后、Shinku 当前期、Iroi 后续期、兑换码、Steam/download 与抽卡机制等重点问题。',
       en: 'Cover the live v1.2 999 Nights update, Shinku current banner, Iroi next focus, codes, Steam/download intent, and gacha planning.',
       ja: 'v1.2「999 Nights」実装、Shinku現行期、Iroi次期、コード、Steam/DL、ガチャ計画をまとめます。',
     },
@@ -347,7 +347,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
   guihuan: {
     title: { zh: '测试 / 公测时间线专题', en: 'Test & Release Timeline Hub', ja: 'テスト・リリース時期特集' },
     description: {
-      zh: '围绕归环官网、下载、公测时间、测试资格、42 天循环、使灵系统和玩法定位承接搜索。',
+      zh: '整理归环官网、下载、公测时间、测试资格、42 天循环、使灵系统和玩法定位等重点问题。',
       en: 'A hub for official site, download status, release timing, test access, the 42-day loop, Spirit system, and gameplay positioning.',
       ja: '公式サイト、DL、リリース時期、テスト資格、42日ループ、使霊、玩法定位をまとめます。',
     },
@@ -356,7 +356,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
       en: ['Test access', 'Release timing', '42-day loop', 'Spirit system'],
       ja: ['テスト資格', 'リリース時期', '42日ループ', '使霊'],
     },
-    kicker: { zh: '测试承接', en: 'Test anchor', ja: 'テスト軸' },
+    kicker: { zh: '测试信息', en: 'Test anchor', ja: 'テスト軸' },
     freshness: {
       zh: '围绕开服、使灵和配装思路持续补充。',
       en: 'Launch, spirit, and build-planning topics are kept fresh here.',
@@ -393,7 +393,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
   ananta: {
     title: { zh: '预注册 / 无抽卡 FAQ', en: 'Preregistration / No-Gacha FAQ', ja: '事前登録 / ガチャなしFAQ' },
     description: {
-      zh: '围绕官网、预注册、无抽卡、测试资格、公测时间、网易/塔菲和都市开放世界玩法承接搜索。',
+      zh: '整理官网、预注册、无抽卡、测试资格、公测时间、网易/塔菲和都市开放世界玩法等重点问题。',
       en: 'A hub for official site, preregistration, no-gacha model, test access, release timing, NetEase/Taffy, and urban open-world gameplay.',
       ja: '公式サイト、事前登録、ガチャなし、テスト資格、リリース時期、NetEase/Taffy、都市OWを整理します。',
     },
@@ -402,7 +402,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
       en: ['Preregistration', 'No gacha', 'Test access', 'Release timing'],
       ja: ['事前登録', 'ガチャなし', 'テスト資格', 'リリース時期'],
     },
-    kicker: { zh: '预约导流', en: 'Pre-reg funnel', ja: '事前登録導線' },
+    kicker: { zh: '预约入口', en: 'Pre-registration entry', ja: '事前登録入口' },
     freshness: {
       zh: '预约、下载和战斗系统相关内容持续更新。',
       en: 'Preregistration, download, and combat coverage is refreshed here.',
@@ -439,7 +439,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
   endfield: {
     title: { zh: 'Homecoming / AIC 蓝图工厂专题', en: 'Homecoming / AIC Blueprint Factory Hub', ja: 'Homecoming / AICブループリント工場特集' },
     description: {
-      zh: '围绕 Homecoming 已上线、半周年更新、新地图、Arcane/Liino、蓝图、AIC 工厂 QoL、庆典奖励与回流入坑承接。',
+      zh: '整理 Homecoming 上线后、半周年更新、新地图、Arcane/Liino、蓝图、AIC 工厂 QoL、庆典奖励与回流入坑信息。',
       en: 'Cover the live Homecoming half-year update, new maps, Arcane/Liino, blueprints, AIC factory QoL, celebration rewards, and returner onboarding.',
       ja: 'Homecoming半周年実装、新マップ、Arcane/Liino、ブループリント、AIC工場QoL、報酬、復帰導線を整理します。',
     },
@@ -496,7 +496,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
     },
     kicker: { zh: '今日首发', en: 'Launch day', ja: '開始日' },
     freshness: {
-      zh: '已切换为 2026-07-23 移动端首发日口径，优先承接下载入口、互通、黑屏卡顿、福利兑换和 demo/review 搜索。',
+      zh: '已切换为 2026-07-23 移动端首发日口径，优先整理下载入口、互通、黑屏卡顿、福利兑换和 demo/review 相关问题。',
       en: 'Now uses July 23, 2026 mobile-launch wording, prioritizing downloads, cross-progress, crashes/lag, rewards/codes, and demo/review searches.',
       ja: '2026-07-23モバイル開始日の表現に更新し、DL、連携、黒画面/ラグ、報酬/コード、demo/review検索を優先します。',
     },
@@ -589,7 +589,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '配装', en: 'Builds', ja: 'ビルド' },
-        description: { zh: '把驱动盘、音擎和养成优先级接到实际配装页。', en: 'Route drive discs, W-Engines, and upgrade priorities into builds.', ja: 'ディスク、Wエンジン、育成優先度へつなげます。' },
+        description: { zh: '查看驱动盘、音擎和养成优先级对应的配装建议。', en: 'Open build guidance for drive discs, W-Engines, and upgrade priorities.', ja: 'ディスク、Wエンジン、育成優先度へつなげます。' },
         links: [
           { href: '/zzz/build', label: { zh: '配装推荐', en: 'Builds', ja: 'ビルド' } },
           { href: '/zzz/weapons', label: { zh: '音擎图鉴', en: 'W-Engine wiki', ja: 'Wエンジン図鑑' } },
@@ -623,7 +623,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '配装', en: 'Builds', ja: 'ビルド' },
-        description: { zh: '把驱动盘、音擎和养成优先级接到实际配装页。', en: 'Route drive discs, W-Engines, and upgrade priorities into builds.', ja: 'ディスク、Wエンジン、育成優先度へつなげます。' },
+        description: { zh: '查看驱动盘、音擎和养成优先级对应的配装建议。', en: 'Open build guidance for drive discs, W-Engines, and upgrade priorities.', ja: 'ディスク、Wエンジン、育成優先度へつなげます。' },
         links: [
           { href: '/zzz/build', label: { zh: '配装推荐', en: 'Builds', ja: 'ビルド' } },
           { href: '/zzz/weapons', label: { zh: '音擎图鉴', en: 'W-Engine wiki', ja: 'Wエンジン図鑑' } },
@@ -657,7 +657,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '配装', en: 'Builds', ja: 'ビルド' },
-        description: { zh: '把驱动盘、音擎和养成优先级接到实际配装页。', en: 'Route drive discs, W-Engines, and upgrade priorities into builds.', ja: 'ディスク、Wエンジン、育成優先度へつなげます。' },
+        description: { zh: '查看驱动盘、音擎和养成优先级对应的配装建议。', en: 'Open build guidance for drive discs, W-Engines, and upgrade priorities.', ja: 'ディスク、Wエンジン、育成優先度へつなげます。' },
         links: [
           { href: '/zzz/build', label: { zh: '配装推荐', en: 'Builds', ja: 'ビルド' } },
           { href: '/zzz/weapons', label: { zh: '音擎图鉴', en: 'W-Engine wiki', ja: 'Wエンジン図鑑' } },
@@ -693,7 +693,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '配装', en: 'Builds', ja: 'ビルド' },
-        description: { zh: '把声骸、武器和词条优先级连接到具体培养页。', en: 'Connect echoes, weapons, and stat priorities to practical builds.', ja: '声骸、武器、ステ優先度を実用ページへつなげます。' },
+        description: { zh: '查看声骸、武器和词条优先级对应的培养建议。', en: 'Open practical build guidance for echoes, weapons, and stat priorities.', ja: '声骸、武器、ステ優先度を実用ページへつなげます。' },
         links: [
           { href: '/wuwa/build', label: { zh: '配装推荐', en: 'Builds', ja: 'ビルド' } },
           { href: '/wuwa/weapons', label: { zh: '武器图鉴', en: 'Weapon wiki', ja: '武器図鑑' } },
@@ -701,7 +701,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '工具', en: 'Tools', ja: 'ツール' },
-        description: { zh: '地图、对比和计算器适合承接更细的玩法与数值问题。', en: 'Map, compare, and calculator pages catch the finer gameplay and stat queries.', ja: 'マップ、比較、計算機で細かい数値や遊び方を受け止めます。' },
+        description: { zh: '地图、对比和计算器适合继续查看更细的玩法与数值问题。', en: 'Use map, compare, and calculator pages for finer gameplay and stat questions.', ja: 'マップ、比較、計算機で細かい数値や遊び方を受け止めます。' },
         links: [
           { href: '/wuwa/map', label: { zh: '地图', en: 'Map', ja: 'マップ' } },
           { href: '/wuwa/calculator', label: { zh: '计算器', en: 'Calculator', ja: '計算機' } },
@@ -727,7 +727,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '配装', en: 'Builds', ja: 'ビルド' },
-        description: { zh: '把声骸、武器和词条优先级连接到具体培养页。', en: 'Connect echoes, weapons, and stat priorities to practical builds.', ja: '声骸、武器、ステ優先度を実用ページへつなげます。' },
+        description: { zh: '查看声骸、武器和词条优先级对应的培养建议。', en: 'Open practical build guidance for echoes, weapons, and stat priorities.', ja: '声骸、武器、ステ優先度を実用ページへつなげます。' },
         links: [
           { href: '/wuwa/build', label: { zh: '配装推荐', en: 'Builds', ja: 'ビルド' } },
           { href: '/wuwa/weapons', label: { zh: '武器图鉴', en: 'Weapon wiki', ja: '武器図鑑' } },
@@ -735,7 +735,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '工具', en: 'Tools', ja: 'ツール' },
-        description: { zh: '地图、对比和计算器适合承接更细的玩法与数值问题。', en: 'Map, compare, and calculator pages catch the finer gameplay and stat queries.', ja: 'マップ、比較、計算機で細かい数値や遊び方を受け止めます。' },
+        description: { zh: '地图、对比和计算器适合继续查看更细的玩法与数值问题。', en: 'Use map, compare, and calculator pages for finer gameplay and stat questions.', ja: 'マップ、比較、計算機で細かい数値や遊び方を受け止めます。' },
         links: [
           { href: '/wuwa/map', label: { zh: '地图', en: 'Map', ja: 'マップ' } },
           { href: '/wuwa/calculator', label: { zh: '计算器', en: 'Calculator', ja: '計算機' } },
@@ -761,7 +761,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '配装', en: 'Builds', ja: 'ビルド' },
-        description: { zh: '把声骸、武器和词条优先级连接到具体培养页。', en: 'Connect echoes, weapons, and stat priorities to practical builds.', ja: '声骸、武器、ステ優先度を実用ページへつなげます。' },
+        description: { zh: '查看声骸、武器和词条优先级对应的培养建议。', en: 'Open practical build guidance for echoes, weapons, and stat priorities.', ja: '声骸、武器、ステ優先度を実用ページへつなげます。' },
         links: [
           { href: '/wuwa/build', label: { zh: '配装推荐', en: 'Builds', ja: 'ビルド' } },
           { href: '/wuwa/weapons', label: { zh: '武器图鉴', en: 'Weapon wiki', ja: '武器図鑑' } },
@@ -769,7 +769,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '工具', en: 'Tools', ja: 'ツール' },
-        description: { zh: '地图、对比和计算器适合承接更细的玩法与数值问题。', en: 'Map, compare, and calculator pages catch the finer gameplay and stat queries.', ja: 'マップ、比較、計算機で細かい数値や遊び方を受け止めます。' },
+        description: { zh: '地图、对比和计算器适合继续查看更细的玩法与数值问题。', en: 'Use map, compare, and calculator pages for finer gameplay and stat questions.', ja: 'マップ、比較、計算機で細かい数値や遊び方を受け止めます。' },
         links: [
           { href: '/wuwa/map', label: { zh: '地图', en: 'Map', ja: 'マップ' } },
           { href: '/wuwa/calculator', label: { zh: '计算器', en: 'Calculator', ja: '計算機' } },
@@ -789,7 +789,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
     zh: [
       {
         title: { zh: '角色', en: 'Characters', ja: 'キャラ' },
-        description: { zh: '把干员定位、主力构筑和队伍分工接到角色页。', en: 'Route operator roles, main carries, and team duties into character pages.', ja: 'オペレーターの役割、主力、分担をキャラページへ。' },
+        description: { zh: '查看干员定位、主力构筑和队伍分工。', en: 'Open operator roles, main carries, and team-duty guidance.', ja: 'オペレーターの役割、主力、分担をキャラページへ。' },
         links: [
           { href: '/endfield/characters', label: { zh: '角色图鉴', en: 'Character wiki', ja: 'キャラ図鑑' } },
           { href: '/endfield/teams', label: { zh: '配队推荐', en: 'Team comps', ja: '編成' } },
@@ -805,7 +805,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '工具', en: 'Tools', ja: 'ツール' },
-        description: { zh: '地图、对比和计算器承接更细的测试与养成需求。', en: 'Map, compare, and calculator pages catch test and progression needs.', ja: 'マップ、比較、計算機でテストや育成の需要を拾います。' },
+        description: { zh: '地图、对比和计算器适合继续查看测试与养成细节。', en: 'Use map, compare, and calculator pages for test and progression details.', ja: 'マップ、比較、計算機でテストや育成の需要を拾います。' },
         links: [
           { href: '/endfield/map', label: { zh: '地图', en: 'Map', ja: 'マップ' } },
           { href: '/endfield/calculator', label: { zh: '计算器', en: 'Calculator', ja: '計算機' } },
@@ -813,7 +813,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '机制', en: 'Mechanics', ja: '機構' },
-        description: { zh: '测试节点、基地建设和危机合约继续往下接。', en: 'Keep test timing, base building, and crisis contract content moving deeper.', ja: 'テスト時期、基地建設、危機契約へ進めます。' },
+        description: { zh: '继续查看测试节点、基地建设和危机合约相关攻略。', en: 'Keep test timing, base building, and crisis contract content moving deeper.', ja: 'テスト時期、基地建設、危機契約へ進めます。' },
         links: [
           { href: '/endfield/version', label: { zh: '版本专题', en: 'Version hub', ja: 'バージョン特集' } },
           { href: '/endfield/guides/crisis-contract-guide', label: { zh: '机制攻略', en: 'Mechanics guide', ja: '機構攻略' } },
@@ -823,7 +823,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
     en: [
       {
         title: { zh: '角色', en: 'Characters', ja: 'キャラ' },
-        description: { zh: '把干员定位、主力构筑和队伍分工接到角色页。', en: 'Route operator roles, main carries, and team duties into character pages.', ja: 'オペレーターの役割、主力、分担をキャラページへ。' },
+        description: { zh: '查看干员定位、主力构筑和队伍分工。', en: 'Open operator roles, main carries, and team-duty guidance.', ja: 'オペレーターの役割、主力、分担をキャラページへ。' },
         links: [
           { href: '/endfield/characters', label: { zh: '角色图鉴', en: 'Character wiki', ja: 'キャラ図鑑' } },
           { href: '/endfield/teams', label: { zh: '配队推荐', en: 'Team comps', ja: '編成' } },
@@ -839,7 +839,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '工具', en: 'Tools', ja: 'ツール' },
-        description: { zh: '地图、对比和计算器承接更细的测试与养成需求。', en: 'Map, compare, and calculator pages catch test and progression needs.', ja: 'マップ、比較、計算機でテストや育成の需要を拾います。' },
+        description: { zh: '地图、对比和计算器适合继续查看测试与养成细节。', en: 'Use map, compare, and calculator pages for test and progression details.', ja: 'マップ、比較、計算機でテストや育成の需要を拾います。' },
         links: [
           { href: '/endfield/map', label: { zh: '地图', en: 'Map', ja: 'マップ' } },
           { href: '/endfield/calculator', label: { zh: '计算器', en: 'Calculator', ja: '計算機' } },
@@ -847,7 +847,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '机制', en: 'Mechanics', ja: '機構' },
-        description: { zh: '测试节点、基地建设和危机合约继续往下接。', en: 'Keep test timing, base building, and crisis contract content moving deeper.', ja: 'テスト時期、基地建設、危機契約へ進めます。' },
+        description: { zh: '继续查看测试节点、基地建设和危机合约相关攻略。', en: 'Keep test timing, base building, and crisis contract content moving deeper.', ja: 'テスト時期、基地建設、危機契約へ進めます。' },
         links: [
           { href: '/endfield/version', label: { zh: '版本专题', en: 'Version hub', ja: 'バージョン特集' } },
           { href: '/endfield/guides/crisis-contract-guide', label: { zh: '机制攻略', en: 'Mechanics guide', ja: '機構攻略' } },
@@ -857,7 +857,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
     ja: [
       {
         title: { zh: '角色', en: 'Characters', ja: 'キャラ' },
-        description: { zh: '把干员定位、主力构筑和队伍分工接到角色页。', en: 'Route operator roles, main carries, and team duties into character pages.', ja: 'オペレーターの役割、主力、分担をキャラページへ。' },
+        description: { zh: '查看干员定位、主力构筑和队伍分工。', en: 'Open operator roles, main carries, and team-duty guidance.', ja: 'オペレーターの役割、主力、分担をキャラページへ。' },
         links: [
           { href: '/endfield/characters', label: { zh: '角色图鉴', en: 'Character wiki', ja: 'キャラ図鑑' } },
           { href: '/endfield/teams', label: { zh: '配队推荐', en: 'Team comps', ja: '編成' } },
@@ -873,7 +873,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '工具', en: 'Tools', ja: 'ツール' },
-        description: { zh: '地图、对比和计算器承接更细的测试与养成需求。', en: 'Map, compare, and calculator pages catch test and progression needs.', ja: 'マップ、比較、計算機でテストや育成の需要を拾います。' },
+        description: { zh: '地图、对比和计算器适合继续查看测试与养成细节。', en: 'Use map, compare, and calculator pages for test and progression details.', ja: 'マップ、比較、計算機でテストや育成の需要を拾います。' },
         links: [
           { href: '/endfield/map', label: { zh: '地图', en: 'Map', ja: 'マップ' } },
           { href: '/endfield/calculator', label: { zh: '计算器', en: 'Calculator', ja: '計算機' } },
@@ -881,7 +881,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '机制', en: 'Mechanics', ja: '機構' },
-        description: { zh: '测试节点、基地建设和危机合约继续往下接。', en: 'Keep test timing, base building, and crisis contract content moving deeper.', ja: 'テスト時期、基地建設、危機契約へ進めます。' },
+        description: { zh: '继续查看测试节点、基地建设和危机合约相关攻略。', en: 'Keep test timing, base building, and crisis contract content moving deeper.', ja: 'テスト時期、基地建設、危機契約へ進めます。' },
         links: [
           { href: '/endfield/version', label: { zh: '版本专题', en: 'Version hub', ja: 'バージョン特集' } },
           { href: '/endfield/guides/crisis-contract-guide', label: { zh: '机制攻略', en: 'Mechanics guide', ja: '機構攻略' } },
@@ -893,7 +893,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
     zh: [
       {
         title: { zh: '移动端首发', en: 'Mobile launch', ja: 'モバイル開始' },
-        description: { zh: '先把 7 月 23 日移动端入口、账号、区服和首日排错接住。', en: 'Catch July 23 mobile entry, account, server, and first-day troubleshooting first.', ja: '7月23日のモバイル入口、アカウント、サーバー、初日対応を先に押さえます。' },
+        description: { zh: '先确认移动端入口、账号区服和首日常见问题。', en: 'Check mobile entry, account, server, and first-day troubleshooting first.', ja: 'モバイル入口、アカウント、サーバー、初日の対応を先に確認できます。' },
           links: [
             { href: '/sea/guides/mobile-launch-guide', label: { zh: '移动端 FAQ', en: 'Mobile FAQ', ja: 'モバイルFAQ' } },
             { href: '/sea/guides/pc-mobile-cross-progression-faq', label: { zh: '互通 FAQ', en: 'Cross-progress', ja: '連携 FAQ' } },
@@ -901,7 +901,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
         },
       {
         title: { zh: '首周运营', en: 'Week-one live ops', ja: '初週運営' },
-        description: { zh: '把热修、号角、大脸币、查漏和 gamescom demo 分流到正确页面。', en: 'Route hotfixes, Horns, Face Coins, cleanup, and gamescom demo buzz.', ja: 'Hotfix、Horn、Face Coin、探索漏れ、gamescom demoを分流します。' },
+        description: { zh: '查看热修、号角、大脸币、探索查漏和 gamescom demo 相关内容。', en: 'Review hotfixes, Horns, Face Coins, exploration cleanup, and gamescom demo coverage.', ja: 'Hotfix、Horn、Face Coin、探索漏れ、gamescom demo関連情報を確認できます。' },
           links: [
           { href: '/sea/guides/mobile-troubleshooting-guide', label: { zh: '首日排错', en: 'Troubleshooting', ja: '初日対応' } },
           { href: '/sea/guides/launch-rewards-codes-guide', label: { zh: '福利兑换码', en: 'Rewards / codes', ja: '報酬 / コード' } },
@@ -909,7 +909,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
         },
       {
         title: { zh: '养成与配队', en: 'Builds & teams', ja: '育成・編成' },
-        description: { zh: '把茉莉开荒、N3/深渊和角色图鉴做成下一跳。', en: 'Route Molly starters, N3/abyss, and character searches into the next click.', ja: 'Molly編成、N3/深淵、キャラ検索を次の導線に変えます。' },
+        description: { zh: '查看茉莉开荒、N3/深渊进阶路线和角色图鉴。', en: 'Open Molly starter teams, N3/Abyss progression, and the character wiki.', ja: 'Molly編成、N3/深淵、キャラ図鑑を確認できます。' },
         links: [
           { href: '/sea/guides/molly-starter-team-guide', label: { zh: '茉莉首发队', en: 'Molly teams', ja: 'Molly編成' } },
           { href: '/sea/guides/n3-abyss-week-one-route', label: { zh: 'N3 / 深渊', en: 'N3 / Abyss', ja: 'N3 / Abyss' } },
@@ -918,7 +918,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '机制与抽卡', en: 'Combat & gacha', ja: '戦闘・ガチャ' },
-        description: { zh: '战斗系统、抽卡和 BOSS 路线继续下沉。', en: 'Push combat system, gacha, and boss-route questions deeper.', ja: '戦闘、ガチャ、ボス導線へつなげます。' },
+        description: { zh: '继续查看战斗系统、抽卡和 BOSS 路线。', en: 'Continue to combat, gacha, and boss-route guides.', ja: '戦闘、ガチャ、ボスルートの攻略を確認できます。' },
         links: [
           { href: '/sea/guides/combat-system-guide', label: { zh: '战斗系统', en: 'Combat system', ja: '戦闘システム' } },
           { href: '/sea/guides/gacha-recruitment-guide', label: { zh: '抽卡指南', en: 'Gacha guide', ja: 'ガチャ解説' } },
@@ -929,7 +929,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
     en: [
       {
         title: { zh: 'Open Beta', en: 'Open Beta', ja: 'CBT' },
-        description: { zh: '先把 7 月 9 日公测和首月节奏接住。', en: 'Catch the July 9 beta timing and month-one momentum first.', ja: '7月9日CBTと初月の流れを先に押さえます。' },
+        description: { zh: '先确认 7 月 9 日 PC 公测和首月版本节奏。', en: 'Check the July 9 PC open beta timing and month-one roadmap first.', ja: '7月9日のPCオープンβと初月の流れを先に確認できます。' },
         links: [
           { href: '/sea/guides/open-beta-version-center', label: { zh: '公测版本中心', en: 'Open Beta Center', ja: 'CBT特集' } },
           { href: '/sea/guides/launch-day-guide', label: { zh: '开服攻略', en: 'Launch guide', ja: '開服攻略' } },
@@ -945,7 +945,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: 'Builds & teams', en: 'Builds & teams', ja: '育成・編成' },
-        description: { zh: '把茉莉开荒、N3/深渊和角色图鉴做成下一跳。', en: 'Route Molly starters, N3/abyss, and character searches into the next click.', ja: 'Molly編成、N3/深淵、キャラ検索を次の導線に変えます。' },
+        description: { zh: '查看茉莉开荒、N3/深渊进阶路线和角色图鉴。', en: 'Open Molly starter teams, N3/Abyss progression, and the character wiki.', ja: 'Molly編成、N3/深淵、キャラ図鑑を確認できます。' },
         links: [
           { href: '/sea/guides/molly-starter-team-guide', label: { zh: '茉莉首发队', en: 'Molly teams', ja: 'Molly編成' } },
           { href: '/sea/guides/n3-abyss-week-one-route', label: { zh: 'N3 / 深渊', en: 'N3 / Abyss', ja: 'N3 / Abyss' } },
@@ -954,7 +954,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: 'Combat & gacha', en: 'Combat & gacha', ja: '戦闘・ガチャ' },
-        description: { zh: '战斗系统、抽卡和 BOSS 路线继续下沉。', en: 'Push combat system, gacha, and boss-route questions deeper.', ja: '戦闘、ガチャ、ボス導線へつなげます。' },
+        description: { zh: '继续查看战斗系统、抽卡和 BOSS 路线。', en: 'Continue to combat, gacha, and boss-route guides.', ja: '戦闘、ガチャ、ボスルートの攻略を確認できます。' },
         links: [
           { href: '/sea/guides/combat-system-guide', label: { zh: '战斗系统', en: 'Combat system', ja: '戦闘システム' } },
           { href: '/sea/guides/gacha-recruitment-guide', label: { zh: '抽卡指南', en: 'Gacha guide', ja: 'ガチャ解説' } },
@@ -965,7 +965,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
     ja: [
       {
         title: { zh: 'Open Beta', en: 'Open Beta', ja: 'CBT' },
-        description: { zh: '先把 7 月 9 日公测和首月节奏接住。', en: 'Catch the July 9 beta timing and month-one momentum first.', ja: '7月9日CBTと初月の流れを先に押さえます。' },
+        description: { zh: '先确认 7 月 9 日 PC 公测和首月版本节奏。', en: 'Check the July 9 PC open beta timing and month-one roadmap first.', ja: '7月9日のPCオープンβと初月の流れを先に確認できます。' },
         links: [
           { href: '/sea/guides/open-beta-version-center', label: { zh: '公测版本中心', en: 'Open Beta Center', ja: 'CBT特集' } },
           { href: '/sea/guides/launch-day-guide', label: { zh: '开服攻略', en: 'Launch guide', ja: '開服攻略' } },
@@ -981,7 +981,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '育成・編成', en: 'Builds & teams', ja: '育成・編成' },
-        description: { zh: '把茉莉开荒、N3/深渊和角色图鉴做成下一跳。', en: 'Route Molly starters, N3/abyss, and character searches into the next click.', ja: 'Molly編成、N3/深淵、キャラ検索を次の導線に変えます。' },
+        description: { zh: '查看茉莉开荒、N3/深渊进阶路线和角色图鉴。', en: 'Open Molly starter teams, N3/Abyss progression, and the character wiki.', ja: 'Molly編成、N3/深淵、キャラ図鑑を確認できます。' },
         links: [
           { href: '/sea/guides/molly-starter-team-guide', label: { zh: '茉莉首发队', en: 'Molly teams', ja: 'Molly編成' } },
           { href: '/sea/guides/n3-abyss-week-one-route', label: { zh: 'N3 / 深渊', en: 'N3 / Abyss', ja: 'N3 / Abyss' } },
@@ -990,7 +990,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '戦闘・ガチャ', en: 'Combat & gacha', ja: '戦闘・ガチャ' },
-        description: { zh: '戦闘、ガチャ、ボス導線へつなげます。', en: 'Push combat system, gacha, and boss-route questions deeper.', ja: '戦闘、ガチャ、ボス導線へつなげます。' },
+        description: { zh: '戦闘、ガチャ、ボスルートの攻略を確認できます。', en: 'Continue to combat, gacha, and boss-route guides.', ja: '戦闘、ガチャ、ボスルートの攻略を確認できます。' },
         links: [
           { href: '/sea/guides/combat-system-guide', label: { zh: '战斗系统', en: 'Combat system', ja: '戦闘システム' } },
           { href: '/sea/guides/gacha-recruitment-guide', label: { zh: '抽卡指南', en: 'Gacha guide', ja: 'ガチャ解説' } },
@@ -1019,7 +1019,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '工具', en: 'Tools', ja: 'ツール' },
-        description: { zh: '版本词也可以继续接到计算器和节奏榜。', en: 'Route patch searches into the calculator and tier list too.', ja: 'バージョン検索を計算機やティアへもつなげます。' },
+        description: { zh: '版本相关问题也可以继续看计算器和节奏榜。', en: 'Use the calculator and tier list for patch-related planning too.', ja: 'バージョン検索を計算機やティアへもつなげます。' },
         links: [
           { href: '/genshin/calculator', label: { zh: '计算器', en: 'Calculator', ja: '計算機' } },
           { href: '/genshin/tier-list', label: { zh: '节奏榜', en: 'Tier list', ja: 'ティアリスト' } },
@@ -1053,7 +1053,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '工具', en: 'Tools', ja: 'ツール' },
-        description: { zh: '版本词也可以继续接到计算器和节奏榜。', en: 'Route patch searches into the calculator and tier list too.', ja: 'バージョン検索を計算機やティアへもつなげます。' },
+        description: { zh: '版本相关问题也可以继续看计算器和节奏榜。', en: 'Use the calculator and tier list for patch-related planning too.', ja: 'バージョン検索を計算機やティアへもつなげます。' },
         links: [
           { href: '/genshin/calculator', label: { zh: '计算器', en: 'Calculator', ja: '計算機' } },
           { href: '/genshin/tier-list', label: { zh: '节奏榜', en: 'Tier list', ja: 'ティアリスト' } },
@@ -1087,7 +1087,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '工具', en: 'Tools', ja: 'ツール' },
-        description: { zh: '版本词也可以继续接到计算器和节奏榜。', en: 'Route patch searches into the calculator and tier list too.', ja: 'バージョン検索を計算機やティアへもつなげます。' },
+        description: { zh: '版本相关问题也可以继续看计算器和节奏榜。', en: 'Use the calculator and tier list for patch-related planning too.', ja: 'バージョン検索を計算機やティアへもつなげます。' },
         links: [
           { href: '/genshin/calculator', label: { zh: '计算器', en: 'Calculator', ja: '計算機' } },
           { href: '/genshin/tier-list', label: { zh: '节奏榜', en: 'Tier list', ja: 'ティアリスト' } },
@@ -1115,7 +1115,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '配装', en: 'Builds', ja: 'ビルド' },
-        description: { zh: '光锥、遗器和主词条优先级都接到这里。', en: 'Route light cones, relics, and stat priorities here.', ja: '光円錐、遺物、ステ優先度をここに集約します。' },
+        description: { zh: '光锥、遗器和主词条优先级都可以在这里继续看。', en: 'Use this path for light cones, relics, and stat priorities.', ja: '光円錐、遺物、ステ優先度をここに集約します。' },
         links: [
           { href: '/starrail/build', label: { zh: '配装推荐', en: 'Builds', ja: 'ビルド' } },
           { href: '/starrail/artifacts', label: { zh: '遗器图鉴', en: 'Relics', ja: '遺物' } },
@@ -1149,7 +1149,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '配装', en: 'Builds', ja: 'ビルド' },
-        description: { zh: '光锥、遗器和主词条优先级都接到这里。', en: 'Route light cones, relics, and stat priorities here.', ja: '光円錐、遺物、ステ優先度をここに集約します。' },
+        description: { zh: '光锥、遗器和主词条优先级都可以在这里继续看。', en: 'Use this path for light cones, relics, and stat priorities.', ja: '光円錐、遺物、ステ優先度をここに集約します。' },
         links: [
           { href: '/starrail/build', label: { zh: '配装推荐', en: 'Builds', ja: 'ビルド' } },
           { href: '/starrail/artifacts', label: { zh: '遗器图鉴', en: 'Relics', ja: '遺物' } },
@@ -1183,7 +1183,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '配装', en: 'Builds', ja: 'ビルド' },
-        description: { zh: '光锥、遗器和主词条优先级都接到这里。', en: 'Route light cones, relics, and stat priorities here.', ja: '光円錐、遺物、ステ優先度をここに集約します。' },
+        description: { zh: '光锥、遗器和主词条优先级都可以在这里继续看。', en: 'Use this path for light cones, relics, and stat priorities.', ja: '光円錐、遺物、ステ優先度をここに集約します。' },
         links: [
           { href: '/starrail/build', label: { zh: '配装推荐', en: 'Builds', ja: 'ビルド' } },
           { href: '/starrail/artifacts', label: { zh: '遗器图鉴', en: 'Relics', ja: '遺物' } },
@@ -1219,7 +1219,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '异能', en: 'Anomalies', ja: '異能' },
-        description: { zh: '用异常机制、异常培养和属性理解接住版本热词。', en: 'Catch patch intent with anomaly mechanics, progression, and affinity pages.', ja: '異常機構、育成、属性理解でバージョン需要を受け止めます。' },
+        description: { zh: '用异常机制、异常培养和属性理解来判断版本重点。', en: 'Use anomaly mechanics, progression, and affinity pages to understand patch priorities.', ja: '異常機構、育成、属性理解でバージョン需要を受け止めます。' },
         links: [
           { href: '/nte/anomalies', label: { zh: '异能体系', en: 'Anomalies', ja: '異能' } },
           { href: '/nte/disk-sets', label: { zh: '套装图鉴', en: 'Disk sets', ja: 'ディスクセット' } },
@@ -1235,7 +1235,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '机制', en: 'Mechanics', ja: '機構' },
-        description: { zh: '攻略专题继续承接玩法、下载和版本整理。', en: 'Continue into guides, downloads, and version roundups.', ja: '攻略、DL、バージョンまとめへ進めます。' },
+        description: { zh: '攻略专题会继续整理玩法、下载和版本信息。', en: 'Continue into guides, downloads, and version roundups.', ja: '攻略、DL、バージョンまとめへ進めます。' },
         links: [
           { href: '/nte/version', label: { zh: '版本专题', en: 'Version hub', ja: 'バージョン特集' } },
           { href: '/nte/guides', label: { zh: '攻略专题', en: 'Guides', ja: '攻略' } },
@@ -1253,7 +1253,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '异能', en: 'Anomalies', ja: '異能' },
-        description: { zh: '用异常机制、异常培养和属性理解接住版本热词。', en: 'Catch patch intent with anomaly mechanics, progression, and affinity pages.', ja: '異常機構、育成、属性理解でバージョン需要を受け止めます。' },
+        description: { zh: '用异常机制、异常培养和属性理解来判断版本重点。', en: 'Use anomaly mechanics, progression, and affinity pages to understand patch priorities.', ja: '異常機構、育成、属性理解でバージョン需要を受け止めます。' },
         links: [
           { href: '/nte/anomalies', label: { zh: '异能体系', en: 'Anomalies', ja: '異能' } },
           { href: '/nte/build', label: { zh: '配装推荐', en: 'Builds', ja: 'ビルド' } },
@@ -1269,7 +1269,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '机制', en: 'Mechanics', ja: '機構' },
-        description: { zh: '攻略专题继续承接玩法、下载和版本整理。', en: 'Continue into guides, downloads, and version roundups.', ja: '攻略、DL、バージョンまとめへ進めます。' },
+        description: { zh: '攻略专题会继续整理玩法、下载和版本信息。', en: 'Continue into guides, downloads, and version roundups.', ja: '攻略、DL、バージョンまとめへ進めます。' },
         links: [
           { href: '/nte/version', label: { zh: '版本专题', en: 'Version hub', ja: 'バージョン特集' } },
           { href: '/nte/guides', label: { zh: '攻略专题', en: 'Guides', ja: '攻略' } },
@@ -1287,7 +1287,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '异能', en: 'Anomalies', ja: '異能' },
-        description: { zh: '用异常机制、异常培养和属性理解接住版本热词。', en: 'Catch patch intent with anomaly mechanics, progression, and affinity pages.', ja: '異常機構、育成、属性理解でバージョン需要を受け止めます。' },
+        description: { zh: '用异常机制、异常培养和属性理解来判断版本重点。', en: 'Use anomaly mechanics, progression, and affinity pages to understand patch priorities.', ja: '異常機構、育成、属性理解でバージョン需要を受け止めます。' },
         links: [
           { href: '/nte/anomalies', label: { zh: '异能体系', en: 'Anomalies', ja: '異能' } },
           { href: '/nte/build', label: { zh: '配装推荐', en: 'Builds', ja: 'ビルド' } },
@@ -1303,7 +1303,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '机制', en: 'Mechanics', ja: '機構' },
-        description: { zh: '攻略专题继续承接玩法、下载和版本整理。', en: 'Continue into guides, downloads, and version roundups.', ja: '攻略、DL、バージョンまとめへ進めます。' },
+        description: { zh: '攻略专题会继续整理玩法、下载和版本信息。', en: 'Continue into guides, downloads, and version roundups.', ja: '攻略、DL、バージョンまとめへ進めます。' },
         links: [
           { href: '/nte/version', label: { zh: '版本专题', en: 'Version hub', ja: 'バージョン特集' } },
           { href: '/nte/guides', label: { zh: '攻略专题', en: 'Guides', ja: '攻略' } },
@@ -1331,7 +1331,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '工具', en: 'Tools', ja: 'ツール' },
-        description: { zh: '养成阶段可以继续接到节奏榜和对比页。', en: 'Use the tier list and compare pages for further planning.', ja: 'ティアと比較ページでさらに詰められます。' },
+        description: { zh: '养成阶段可以继续看节奏榜和对比页。', en: 'Use the tier list and compare pages for further planning.', ja: 'ティアと比較ページでさらに詰められます。' },
         links: [
           { href: '/guihuan/tier-list', label: { zh: '节奏榜', en: 'Tier list', ja: 'ティアリスト' } },
           { href: '/guihuan/compare', label: { zh: '对比', en: 'Compare', ja: '比較' } },
@@ -1365,7 +1365,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '工具', en: 'Tools', ja: 'ツール' },
-        description: { zh: '养成阶段可以继续接到节奏榜和对比页。', en: 'Use the tier list and compare pages for further planning.', ja: 'ティアと比較ページでさらに詰められます。' },
+        description: { zh: '养成阶段可以继续看节奏榜和对比页。', en: 'Use the tier list and compare pages for further planning.', ja: 'ティアと比較ページでさらに詰められます。' },
         links: [
           { href: '/guihuan/tier-list', label: { zh: '节奏榜', en: 'Tier list', ja: 'ティアリスト' } },
           { href: '/guihuan/compare', label: { zh: '对比', en: 'Compare', ja: '比較' } },
@@ -1399,7 +1399,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '工具', en: 'Tools', ja: 'ツール' },
-        description: { zh: '养成阶段可以继续接到节奏榜和对比页。', en: 'Use the tier list and compare pages for further planning.', ja: 'ティアと比較ページでさらに詰められます。' },
+        description: { zh: '养成阶段可以继续看节奏榜和对比页。', en: 'Use the tier list and compare pages for further planning.', ja: 'ティアと比較ページでさらに詰められます。' },
         links: [
           { href: '/guihuan/tier-list', label: { zh: '节奏榜', en: 'Tier list', ja: 'ティアリスト' } },
           { href: '/guihuan/compare', label: { zh: '对比', en: 'Compare', ja: '比較' } },
@@ -1435,7 +1435,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '工具', en: 'Tools', ja: 'ツール' },
-        description: { zh: '地图和对比页更适合承接探索和玩法需求。', en: 'Use map and compare pages for exploration and planning.', ja: 'マップと比較ページで探索や検討を進められます。' },
+        description: { zh: '地图和对比页更适合继续查看探索和玩法问题。', en: 'Use map and compare pages for exploration and planning.', ja: 'マップと比較ページで探索や検討を進められます。' },
         links: [
           { href: '/ananta/map', label: { zh: '地图', en: 'Map', ja: 'マップ' } },
           { href: '/ananta/compare', label: { zh: '对比', en: 'Compare', ja: '比較' } },
@@ -1469,7 +1469,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '工具', en: 'Tools', ja: 'ツール' },
-        description: { zh: '地图和对比页更适合承接探索和玩法需求。', en: 'Use map and compare pages for exploration and planning.', ja: 'マップと比較ページで探索や検討を進められます。' },
+        description: { zh: '地图和对比页更适合继续查看探索和玩法问题。', en: 'Use map and compare pages for exploration and planning.', ja: 'マップと比較ページで探索や検討を進められます。' },
         links: [
           { href: '/ananta/map', label: { zh: '地图', en: 'Map', ja: 'マップ' } },
           { href: '/ananta/compare', label: { zh: '对比', en: 'Compare', ja: '比較' } },
@@ -1503,7 +1503,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '工具', en: 'Tools', ja: 'ツール' },
-        description: { zh: '地图和对比页更适合承接探索和玩法需求。', en: 'Use map and compare pages for exploration and planning.', ja: 'マップと比較ページで探索や検討を進められます。' },
+        description: { zh: '地图和对比页更适合继续查看探索和玩法问题。', en: 'Use map and compare pages for exploration and planning.', ja: 'マップと比較ページで探索や検討を進められます。' },
         links: [
           { href: '/ananta/map', label: { zh: '地图', en: 'Map', ja: 'マップ' } },
           { href: '/ananta/compare', label: { zh: '对比', en: 'Compare', ja: '比較' } },
@@ -1523,7 +1523,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
     zh: [
       {
         title: { zh: '开服', en: 'Launch', ja: 'ローンチ' },
-        description: { zh: '先接住上线时间、预约和开荒问题。', en: 'Capture launch timing, preregistration, and starter questions first.', ja: 'ローンチ時期、事前登録、序盤の疑問を先に受け止めます。' },
+        description: { zh: '先确认上线时间、预约和开荒问题。', en: 'Check launch timing, preregistration, and starter questions first.', ja: 'ローンチ時期、事前登録、序盤の疑問を先に受け止めます。' },
         links: [
           { href: '/skjh/guides/season-1-launch', label: { zh: '上线总专题', en: 'Launch center', ja: 'ローンチ特集' } },
           { href: '/skjh/guides/launch-rewards-complete', label: { zh: '预约福利', en: 'Rewards', ja: '報酬' } },
@@ -1539,7 +1539,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '工具', en: 'Tools', ja: 'ツール' },
-        description: { zh: '继续往下可以接到计算器和武器页。', en: 'Continue into the calculator and weapons pages next.', ja: '次は計算機と武器ページへつなげます。' },
+        description: { zh: '继续往下可以看计算器和武器页。', en: 'Continue into the calculator and weapons pages next.', ja: '次は計算機と武器ページへつなげます。' },
         links: [
           { href: '/skjh/calculator', label: { zh: '计算器', en: 'Calculator', ja: '計算機' } },
           { href: '/skjh/weapons', label: { zh: '武器图鉴', en: 'Weapons', ja: '武器' } },
@@ -1547,7 +1547,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '机制', en: 'Mechanics', ja: '機構' },
-        description: { zh: '下载、互通和攻略专题继续承接。', en: 'Continue into download, cross-play, and guide topics.', ja: 'DL、互通、攻略へ進めます。' },
+        description: { zh: '下载、互通和攻略专题可以继续查看。', en: 'Continue into download, cross-play, and guide topics.', ja: 'DL、互通、攻略へ進めます。' },
         links: [
           { href: '/skjh/guides/official-pc-download-faq', label: { zh: '官网 PC 下载 FAQ', en: 'Official PC Download FAQ', ja: '公式PC DL FAQ' } },
           { href: '/skjh/guides', label: { zh: '攻略专题', en: 'Guides', ja: '攻略' } },
@@ -1557,7 +1557,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
     en: [
       {
         title: { zh: '开服', en: 'Launch', ja: 'ローンチ' },
-        description: { zh: '先接住上线时间、预约和开荒问题。', en: 'Capture launch timing, preregistration, and starter questions first.', ja: 'ローンチ時期、事前登録、序盤の疑問を先に受け止めます。' },
+        description: { zh: '先确认上线时间、预约和开荒问题。', en: 'Check launch timing, preregistration, and starter questions first.', ja: 'ローンチ時期、事前登録、序盤の疑問を先に受け止めます。' },
         links: [
           { href: '/skjh/guides/season-1-launch', label: { zh: '上线总专题', en: 'Launch center', ja: 'ローンチ特集' } },
           { href: '/skjh/guides/launch-rewards-complete', label: { zh: '预约福利', en: 'Rewards', ja: '報酬' } },
@@ -1573,7 +1573,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '工具', en: 'Tools', ja: 'ツール' },
-        description: { zh: '继续往下可以接到计算器和武器页。', en: 'Continue into the calculator and weapons pages next.', ja: '次は計算機と武器ページへつなげます。' },
+        description: { zh: '继续往下可以看计算器和武器页。', en: 'Continue into the calculator and weapons pages next.', ja: '次は計算機と武器ページへつなげます。' },
         links: [
           { href: '/skjh/calculator', label: { zh: '计算器', en: 'Calculator', ja: '計算機' } },
           { href: '/skjh/weapons', label: { zh: '武器图鉴', en: 'Weapons', ja: '武器' } },
@@ -1581,7 +1581,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '机制', en: 'Mechanics', ja: '機構' },
-        description: { zh: '下载、互通和攻略专题继续承接。', en: 'Continue into download, cross-play, and guide topics.', ja: 'DL、互通、攻略へ進めます。' },
+        description: { zh: '下载、互通和攻略专题可以继续查看。', en: 'Continue into download, cross-play, and guide topics.', ja: 'DL、互通、攻略へ進めます。' },
         links: [
           { href: '/skjh/guides/official-pc-download-faq', label: { zh: '官网 PC 下载 FAQ', en: 'Official PC Download FAQ', ja: '公式PC DL FAQ' } },
           { href: '/skjh/guides', label: { zh: '攻略专题', en: 'Guides', ja: '攻略' } },
@@ -1591,7 +1591,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
     ja: [
       {
         title: { zh: '开服', en: 'Launch', ja: 'ローンチ' },
-        description: { zh: '先接住上线时间、预约和开荒问题。', en: 'Capture launch timing, preregistration, and starter questions first.', ja: 'ローンチ時期、事前登録、序盤の疑問を先に受け止めます。' },
+        description: { zh: '先确认上线时间、预约和开荒问题。', en: 'Check launch timing, preregistration, and starter questions first.', ja: 'ローンチ時期、事前登録、序盤の疑問を先に受け止めます。' },
         links: [
           { href: '/skjh/guides/season-1-launch', label: { zh: '上线总专题', en: 'Launch center', ja: 'ローンチ特集' } },
           { href: '/skjh/guides/launch-rewards-complete', label: { zh: '预约福利', en: 'Rewards', ja: '報酬' } },
@@ -1607,7 +1607,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '工具', en: 'Tools', ja: 'ツール' },
-        description: { zh: '继续往下可以接到计算器和武器页。', en: 'Continue into the calculator and weapons pages next.', ja: '次は計算機と武器ページへつなげます。' },
+        description: { zh: '继续往下可以看计算器和武器页。', en: 'Continue into the calculator and weapons pages next.', ja: '次は計算機と武器ページへつなげます。' },
         links: [
           { href: '/skjh/calculator', label: { zh: '计算器', en: 'Calculator', ja: '計算機' } },
           { href: '/skjh/weapons', label: { zh: '武器图鉴', en: 'Weapons', ja: '武器' } },
@@ -1615,7 +1615,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '机制', en: 'Mechanics', ja: '機構' },
-        description: { zh: '下载、互通和攻略专题继续承接。', en: 'Continue into download, cross-play, and guide topics.', ja: 'DL、互通、攻略へ進めます。' },
+        description: { zh: '下载、互通和攻略专题可以继续查看。', en: 'Continue into download, cross-play, and guide topics.', ja: 'DL、互通、攻略へ進めます。' },
         links: [
           { href: '/skjh/guides/official-pc-download-faq', label: { zh: '官网 PC 下载 FAQ', en: 'Official PC Download FAQ', ja: '公式PC DL FAQ' } },
           { href: '/skjh/guides', label: { zh: '攻略专题', en: 'Guides', ja: '攻略' } },
@@ -1720,7 +1720,7 @@ function getVersionNextSteps(gameId: GameId): NextStepLink[] {
         href: '/starrail/characters',
         title: { zh: '角色图鉴', en: 'Character Wiki', ja: 'キャラ図鑑' },
         description: {
-          zh: '版本专题看完后，直接接到角色定位和卡池判断。',
+          zh: '看完版本专题后，继续判断角色定位和卡池优先级。',
           en: 'Move from the version hub into character roles and banner decisions.',
           ja: 'バージョン特集の次に、役割とガチャ判断へ進めます。',
         },
@@ -1758,7 +1758,7 @@ function getVersionNextSteps(gameId: GameId): NextStepLink[] {
         href: '/wuwa/build',
         title: { zh: '配装推荐', en: 'Builds', ja: 'ビルド' },
         description: {
-          zh: '继续看声骸、武器和养成方向，承接版本热词。',
+          zh: '继续看声骸、武器和养成方向，判断版本重点。',
           en: 'Continue into echo, weapon, and progression picks to capture patch intent.',
           ja: 'エコー、武器、育成方針へ進んでバージョン需要を拾います。',
         },
@@ -1778,7 +1778,7 @@ function getVersionNextSteps(gameId: GameId): NextStepLink[] {
         href: '/zzz/characters',
         title: { zh: '角色图鉴', en: 'Character Wiki', ja: 'キャラ図鑑' },
         description: {
-          zh: '看完版本专题后，继续接到角色和阵容思路。',
+          zh: '看完版本专题后，继续查看角色和阵容思路。',
           en: 'Move from the version hub into character roles and team ideas.',
           ja: 'バージョン特集からキャラと編成へつなげられます。',
         },
@@ -1865,7 +1865,7 @@ function getVersionNextSteps(gameId: GameId): NextStepLink[] {
         href: '/endfield/characters',
         title: { zh: '角色图鉴', en: 'Character Wiki', ja: 'キャラ図鑑' },
         description: {
-          zh: '看完测试专题后，继续接到角色和职业理解。',
+          zh: '看完测试专题后，继续查看角色和职业理解。',
           en: 'Move from the test hub into character roles and professions.',
           ja: 'テスト特集の次にキャラと職業理解へ進めます。',
         },
@@ -1894,8 +1894,8 @@ function getVersionNextSteps(gameId: GameId): NextStepLink[] {
         href: '/sea/guides/open-beta-version-center',
         title: { zh: '公测版本中心', en: 'Open Beta Center', ja: 'CBT特集' },
         description: {
-          zh: '先把 7 月 9 日公测、版本核心信息和首月路线接住。',
-          en: 'Catch the July 9 beta timing, version core topics, and month-one route first.',
+          zh: '先确认 7 月 9 日公测、版本核心信息和首月路线。',
+          en: 'Check the July 9 beta timing, version core topics, and month-one route first.',
           ja: '7月9日CBT、版本の要点、初月ルートを先に押さえます。',
         },
       },
@@ -1932,7 +1932,7 @@ function getVersionNextSteps(gameId: GameId): NextStepLink[] {
         href: '/skjh/guides/season-1-launch',
         title: { zh: '上线总专题', en: 'Launch Center', ja: 'ローンチ特集' },
         description: {
-          zh: '把 7 月 9 日上线、预约和开荒问题一次接住。',
+          zh: '一次确认 7 月 9 日上线、预约和开荒问题。',
           en: 'Capture the July 9 launch, preregistration, and starter questions.',
           ja: '7月9日ローンチ、事前登録、初心者導線をまとめます。',
         },
@@ -1950,7 +1950,7 @@ function getVersionNextSteps(gameId: GameId): NextStepLink[] {
         href: '/skjh/guides/official-pc-download-faq',
         title: { zh: '官网 PC 下载 FAQ', en: 'Official PC Download FAQ', ja: '公式PC DL FAQ' },
         description: {
-          zh: '下载、平台和互通问题放这里承接最合适。',
+          zh: '下载、平台和互通问题可以先看这里。',
           en: 'This is the right place for download, platform, and cross-play questions.',
           ja: 'DL、対応プラットフォーム、互通の質問はこちらです。',
         },
@@ -2102,14 +2102,14 @@ export default async function VersionHubPage({
               </h2>
               <p className="mt-1 text-sm text-game-text-muted">
                 {locale === 'zh'
-                  ? '统一承接官网、下载、云游戏、配置、兑换码和核心机制问题。'
+                  ? '集中整理官网、下载、云游戏、配置、兑换码和核心机制问题。'
                   : locale === 'ja'
                     ? '公式、DL、クラウド、環境、コード、主要機構の検索をまとめます。'
                     : 'Route official, download, cloud, specs, code, and core-mechanic queries into stable pages.'}
               </p>
             </div>
             <span className="text-xs text-game-text-muted">
-              {locale === 'zh' ? '模板化导流' : locale === 'ja' ? 'テンプレ導線' : 'Template funnel'}
+              {locale === 'zh' ? '快速入口' : locale === 'ja' ? 'テンプレ導線' : 'Quick shortcuts'}
             </span>
           </div>
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -2135,11 +2135,11 @@ export default async function VersionHubPage({
                 {locale === 'zh' ? '继续往下看' : locale === 'ja' ? '次に進む' : 'Continue deeper'}
               </h2>
               <p className="mt-1 text-sm text-game-text-muted">
-                {locale === 'zh' ? '把版本词继续导到角色、配装、工具和机制页。' : locale === 'ja' ? 'バージョン語をキャラ、ビルド、ツール、機構へつなぎます。' : 'Route version searches into characters, builds, tools, and mechanics.'}
+                {locale === 'zh' ? '按版本重点继续查看角色、配装、工具和机制页。' : locale === 'ja' ? 'バージョン語をキャラ、ビルド、ツール、機構へつなぎます。' : 'Continue from version topics into characters, builds, tools, and mechanics.'}
               </p>
             </div>
             <span className="text-xs text-game-text-muted">
-              {locale === 'zh' ? '更深一层承接' : locale === 'ja' ? 'さらに下へ' : 'Deeper funnel'}
+              {locale === 'zh' ? '继续深入' : locale === 'ja' ? 'さらに下へ' : 'Continue deeper'}
             </span>
           </div>
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
@@ -2168,7 +2168,7 @@ export default async function VersionHubPage({
         <section className="mb-8">
           <div className="mb-4 flex items-center justify-between gap-4">
             <h2 className="text-xl font-bold text-game-text">{locale === 'zh' ? '专题推荐' : locale === 'ja' ? '注目ガイド' : 'Featured Guides'}</h2>
-            <span className="text-xs text-game-text-muted">{locale === 'zh' ? '直接承接搜索词' : locale === 'ja' ? '検索語を直接承接' : 'Direct search intent'}</span>
+            <span className="text-xs text-game-text-muted">{locale === 'zh' ? '对应高频问题' : locale === 'ja' ? 'よくある検索に対応' : 'Matching common questions'}</span>
           </div>
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {featuredGuides.map((guide) => (
@@ -2192,7 +2192,7 @@ export default async function VersionHubPage({
       <section className="mb-8">
         <div className="mb-4 flex items-center justify-between gap-4">
           <h2 className="text-xl font-bold text-game-text">{locale === 'zh' ? '相关入口' : locale === 'ja' ? '関連ページ' : 'Related Pages'}</h2>
-          <span className="text-xs text-game-text-muted">{locale === 'zh' ? '站内跳转' : locale === 'ja' ? 'サイト内導線' : 'Internal navigation'}</span>
+          <span className="text-xs text-game-text-muted">{locale === 'zh' ? '站点跳转' : locale === 'ja' ? 'サイト内導線' : 'Internal navigation'}</span>
         </div>
         <div className="flex flex-wrap gap-2">
           {enabledRoutes.map((route) => (

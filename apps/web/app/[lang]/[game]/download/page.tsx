@@ -49,7 +49,7 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
       ja: '原神はPC、モバイル、コンソールで配信中です。HoYoverse公式入口と各ストアを基準にしてください。',
     },
     intro: {
-      zh: '这个页面承接“原神官网、下载、云游戏、配置要求、兑换码”搜索，先帮你确认安全入口，再把版本、地图和养成路线接上。',
+      zh: '这个页面先帮你确认原神官网、下载、云游戏、配置要求和兑换码入口，再继续查看版本、地图和养成路线。',
       en: 'This page captures official site, download, cloud gaming, specs, and code intent, then routes you into patches, maps, and build planning.',
       ja: '公式、DL、クラウド、推奨環境、コード検索を受け、版本、マップ、育成導線へつなぎます。',
     },
@@ -101,9 +101,9 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
       ja: '鳴潮は配信中です。v3.5以降のXbox/Game Pass関連は公式とストア告知を確認してください。',
     },
     intro: {
-      zh: '集中承接鸣潮下载、官网、国际服、Xbox、云游戏、配置和 3.5 新玩家入坑问题。',
+      zh: '集中查看鸣潮下载、官网、国际服、Xbox、云游戏、配置和 3.5 新玩家入坑问题。',
       en: 'A hub for Wuthering Waves download, official links, global server, Xbox, cloud gaming, specs, and v3.5 starters.',
-      ja: 'DL、公式、グローバル、Xbox、クラウド、環境、v3.5入門を承接します。',
+      ja: 'DL、公式、グローバル、Xbox、クラウド、環境、v3.5入門を整理します。',
     },
     officialNote: DEFAULT_STATUS,
     platforms: [
@@ -129,7 +129,7 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
       ja: '異環は正式配信段階です。DL、サーバー、PS5、モバイル入口は公式とストアで確認。',
     },
     intro: {
-      zh: '承接异环官网、下载、配置、云游戏、兑换码、Shinku/Iroi 和 1.2 版本入坑查询。',
+      zh: '集中查看异环官网、下载、配置、云游戏、兑换码、Shinku/Iroi 和 1.2 版本入坑问题。',
       en: 'Covers NTE official site, download, specs, cloud gaming, codes, Shinku/Iroi, and v1.2 onboarding.',
       ja: '公式、DL、環境、クラウド、コード、Shinku/Iroi、v1.2入門を整理。',
     },
@@ -157,7 +157,7 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
       ja: 'ゼンレスゾーンゼロは配信中です。Steam、公式ランチャー、モバイル、コンソールは同じHoYoverseアカウントを確認。',
     },
     intro: {
-      zh: '集中承接绝区零 Steam 下载、账号绑定、云游戏、兑换码、配置和 3.0 回流入坑问题。',
+      zh: '集中查看绝区零 Steam 下载、账号绑定、云游戏、兑换码、配置和 3.0 回流入坑问题。',
       en: 'Covers ZZZ Steam download, account linking, cloud gaming, codes, specs, and v3.0 starter questions.',
       ja: 'Steam DL、アカウント連携、クラウド、コード、環境、v3.0復帰/入門を整理。',
     },
@@ -181,9 +181,9 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
       ja: '帰環のDL可否は公式テスト、リリース、ストア告知に従ってください。未確認インストーラは避けましょう。',
     },
     intro: {
-      zh: '承接归环官网、下载、公测时间、测试资格、配置和时间循环玩法搜索。',
+      zh: '集中查看归环官网、下载、公测时间、测试资格、配置和时间循环玩法问题。',
       en: 'Covers Guihuan official site, downloads, release timing, test access, specs, and time-loop gameplay intent.',
-      ja: '公式、DL、リリース時期、テスト資格、環境、時間ループ検索を承接。',
+      ja: '公式、DL、リリース時期、テスト資格、環境、時間ループ情報を確認。',
     },
     officialNote: {
       zh: '如果官方未公布正式公测日期或开放下载，请以官网、TapTap、B站和官方社区公告为准。',
@@ -205,7 +205,7 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
       ja: 'Anantaは事前登録、テスト、ストアウィッシュリスト段階です。正式DLと配信時期は公式確認を待ってください。',
     },
     intro: {
-      zh: '承接无限大官网、下载、公测时间、预注册、无抽卡、网易和配置搜索。',
+      zh: '集中查看无限大官网、下载、公测时间、预注册、无抽卡、网易和配置问题。',
       en: 'Covers Ananta official site, download, release timing, preregistration, no-gacha model, NetEase, and specs.',
       ja: '公式、DL、リリース時期、事前登録、ガチャなし、NetEase、環境検索を整理。',
     },
@@ -229,7 +229,7 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
       ja: 'EndfieldのDL、テスト資格、Homecoming更新、プラットフォーム状態はHypergryph公式、ストア、テスト告知を基準にしてください。',
     },
     intro: {
-      zh: '承接终末地官网、下载、配置、云游戏、角色、AIC 工厂和 Homecoming 查询。',
+      zh: '集中查看终末地官网、下载、配置、云游戏、角色、AIC 工厂和 Homecoming 问题。',
       en: 'Covers Endfield official site, downloads, specs, cloud gaming, operators, AIC factory, and Homecoming intent.',
       ja: '公式、DL、環境、クラウド、オペレーター、AIC工場、Homecoming検索を整理。',
     },
@@ -253,7 +253,7 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
       ja: 'Sea of RemnantsのDLと配信時期は公式、Steam、モバイルストア、告知を確認。PCとモバイルは時期が異なる場合があります。',
     },
     intro: {
-      zh: '承接遗忘之海官网、下载、配置、云游戏、平台、PC 公测和开服第一天行动路线。',
+      zh: '集中查看遗忘之海官网、下载、配置、云游戏、平台、PC 公测和开服第一天行动路线。',
       en: 'Covers Sea of Remnants official site, download, specs, cloud gaming, platforms, PC open beta, and launch-day routing.',
       ja: '公式、DL、環境、クラウド、プラットフォーム、PC CBT、初日ルートを整理。',
     },
@@ -285,7 +285,7 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
       ja: '失控進化のDLは公式、WeGame、モバイルストア、公式チャンネルから。多端連携とサーバーモードを事前確認。',
     },
     intro: {
-      zh: '承接失控进化官网、下载、PC、手游、云游戏、多端互通、配置和新手 30 分钟路线。',
+      zh: '集中查看失控进化官网、下载、PC、手游、云游戏、多端互通、配置和新手 30 分钟路线。',
       en: 'Covers Ashfall Evolution official site, download, PC, mobile, cloud gaming, cross-play, specs, and first-30-minute route.',
       ja: '公式、DL、PC、モバイル、クラウド、多端連携、環境、最初の30分を整理。',
     },
