@@ -6,6 +6,8 @@
 import type { Metadata, ResolvingMetadata } from 'next';
 import type { SupportedLocale } from '@gachia/core';
 
+const BASE_URL = 'https://gachia.com';
+
 export interface TwitterCardConfig {
   card?: 'summary' | 'summary_large_image' | 'app' | 'player';
   site?: string;
@@ -67,6 +69,55 @@ const META_SUFFIX: Record<SupportedLocale, string> = {
 export function ensureMetaLength(value: string, locale: SupportedLocale, target = META_MIN_LENGTH) {
   if ([...value].length >= target) return value;
   return `${value}${META_SUFFIX[locale] ?? META_SUFFIX.zh}`;
+}
+
+export function toHreflang(locale: SupportedLocale) {
+  return locale === 'zh' ? 'zh-Hans' : locale;
+}
+
+export function buildLocalizedAlternates(
+  locale: SupportedLocale,
+  pathForLocale: (locale: SupportedLocale) => string,
+  locales: readonly SupportedLocale[],
+  options: {
+    includeLocale?: (locale: SupportedLocale) => boolean;
+    defaultLocale?: SupportedLocale;
+  } = {}
+) {
+  const defaultLocale = options.defaultLocale ?? 'zh';
+  const languages: Record<string, string> = {};
+
+  for (const lang of locales) {
+    if (options.includeLocale && !options.includeLocale(lang)) continue;
+    languages[toHreflang(lang)] = `${BASE_URL}${pathForLocale(lang)}`;
+  }
+
+  languages['x-default'] = `${BASE_URL}${pathForLocale(defaultLocale)}`;
+
+  return {
+    canonical: `${BASE_URL}${pathForLocale(locale)}`,
+    languages,
+  };
+}
+
+export function getEntryUpdatedAt(entry: unknown): string | undefined {
+  if (!entry || typeof entry !== 'object') return undefined;
+  const updatedAt = (entry as { updatedAt?: unknown }).updatedAt;
+  return typeof updatedAt === 'string' ? updatedAt : undefined;
+}
+
+export function getEntryCurrentVersion(entry: unknown): string | undefined {
+  if (!entry || typeof entry !== 'object') return undefined;
+  const currentVersion = (entry as { currentVersion?: unknown }).currentVersion;
+  return typeof currentVersion === 'string' ? currentVersion : undefined;
+}
+
+export function hasLocalizedContent(entry: unknown, locale: SupportedLocale, minimumLength = 80) {
+  if (locale !== 'ja') return true;
+  if (!entry || typeof entry !== 'object') return false;
+
+  const content = (entry as { contentJa?: unknown }).contentJa;
+  return typeof content === 'string' && content.trim().length >= minimumLength;
 }
 
 /**

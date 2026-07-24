@@ -13,7 +13,7 @@ import { seaGuides, getSeaGuideTitle, getSeaGuideSummary, getSeaGuideCategory, g
 import { skjhGuides, getSkjhGuideTitle, getSkjhGuideSummary, getSkjhGuideCategory, getSkjhGuideCategories, SKJH_GUIDE_CATEGORIES } from '@gachia/data/games/skjh/guides';
 import { starrailCharacters, getStarRailCharacterName, getStarRailCharacterImage } from '@gachia/data/games/starrail/characters';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
-import { ensureMetaLength } from '@/lib/seo-metadata';
+import { ensureMetaLength, getEntryCurrentVersion, getEntryUpdatedAt } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -341,6 +341,7 @@ function GenshinGuides({ locale }: { locale: SupportedLocale }) {
                 <p className="text-sm leading-relaxed text-game-text-muted">
                   {getGenshinGuideSummary(guide, locale)}
                 </p>
+                <GuideFreshnessMeta guide={guide} locale={locale} />
               </Link>
             ))}
           </div>
@@ -385,6 +386,7 @@ function GenshinGuides({ locale }: { locale: SupportedLocale }) {
                   <p className="mb-3 flex-1 text-sm leading-relaxed text-game-text-muted">
                     {getGenshinGuideSummary(guide, locale)}
                   </p>
+                  <GuideFreshnessMeta guide={guide} locale={locale} />
                   <div className="flex flex-wrap gap-1.5">
                     <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
                       {getGenshinGuideCategory(guide, locale)}
@@ -456,6 +458,7 @@ function StarRailGuides({ locale }: { locale: SupportedLocale }) {
                 <p className="text-sm leading-relaxed text-game-text-muted">
                   {getStarRailGuideSummary(guide, locale)}
                 </p>
+                <GuideFreshnessMeta guide={guide} locale={locale} />
               </Link>
             ))}
           </div>
@@ -500,6 +503,7 @@ function StarRailGuides({ locale }: { locale: SupportedLocale }) {
                   <p className="mb-3 flex-1 text-sm leading-relaxed text-game-text-muted">
                     {getStarRailGuideSummary(guide, locale)}
                   </p>
+                  <GuideFreshnessMeta guide={guide} locale={locale} />
                   <div className="flex flex-wrap gap-1.5">
                     <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
                       {getStarRailGuideCategory(guide, locale)}
@@ -688,6 +692,7 @@ function WuWaGuides({ locale }: { locale: SupportedLocale }) {
                 <p className="text-sm leading-relaxed text-game-text-muted">
                   {getWuWaGuideSummary(guide, locale)}
                 </p>
+                <GuideFreshnessMeta guide={guide} locale={locale} />
               </Link>
             ))}
           </div>
@@ -732,6 +737,7 @@ function WuWaGuides({ locale }: { locale: SupportedLocale }) {
                   <p className="mb-3 flex-1 text-sm leading-relaxed text-game-text-muted">
                     {getWuWaGuideSummary(guide, locale)}
                   </p>
+                  <GuideFreshnessMeta guide={guide} locale={locale} />
                   <div className="flex flex-wrap gap-1.5">
                     <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
                       {getWuWaGuideCategory(guide, locale)}
@@ -1303,6 +1309,7 @@ function SeaGuides({ locale }: { locale: SupportedLocale }) {
                 <p className="text-sm leading-relaxed text-game-text-muted">
                   {getSeaGuideSummary(guide, locale)}
                 </p>
+                <GuideFreshnessMeta guide={guide} locale={locale} />
               </Link>
             ))}
           </div>
@@ -1345,6 +1352,7 @@ function SeaGuides({ locale }: { locale: SupportedLocale }) {
                   <p className="mb-3 flex-1 text-sm leading-relaxed text-game-text-muted">
                     {getSeaGuideSummary(guide, locale)}
                   </p>
+                  <GuideFreshnessMeta guide={guide} locale={locale} />
                   <div className="flex flex-wrap gap-1.5">
                     <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
                       {getSeaGuideCategory(guide, locale)}
@@ -1454,6 +1462,7 @@ function SkjhGuides({ locale }: { locale: SupportedLocale }) {
                 <p className="text-sm leading-relaxed text-game-text-muted">
                   {getSkjhGuideSummary(guide, locale)}
                 </p>
+                <GuideFreshnessMeta guide={guide} locale={locale} />
               </Link>
             ))}
           </div>
@@ -1496,6 +1505,7 @@ function SkjhGuides({ locale }: { locale: SupportedLocale }) {
                   <p className="mb-3 flex-1 text-sm leading-relaxed text-game-text-muted">
                     {getSkjhGuideSummary(guide, locale)}
                   </p>
+                  <GuideFreshnessMeta guide={guide} locale={locale} />
                   <div className="flex flex-wrap gap-1.5">
                     <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
                       {getSkjhGuideCategory(guide, locale)}
@@ -1515,6 +1525,27 @@ function SkjhGuides({ locale }: { locale: SupportedLocale }) {
           </section>
         );
       })}
+    </div>
+  );
+}
+
+function GuideFreshnessMeta({ guide, locale }: { guide: unknown; locale: SupportedLocale }) {
+  const updatedAt = getEntryUpdatedAt(guide);
+  const currentVersion = getEntryCurrentVersion(guide);
+  if (!updatedAt && !currentVersion) return null;
+
+  return (
+    <div className="mt-3 flex flex-wrap gap-1.5 text-xs text-game-text-muted">
+      {updatedAt && (
+        <span className="rounded bg-game-surface-alt px-2 py-0.5">
+          {locale === 'zh' ? '更新' : locale === 'ja' ? '更新' : 'Updated'} {updatedAt}
+        </span>
+      )}
+      {currentVersion && (
+        <span className="rounded bg-game-surface-alt px-2 py-0.5 text-game-primary">
+          {locale === 'zh' ? '版本' : locale === 'ja' ? 'Ver.' : 'Version'} {currentVersion}
+        </span>
+      )}
     </div>
   );
 }

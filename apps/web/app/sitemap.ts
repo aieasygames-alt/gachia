@@ -53,6 +53,7 @@ import { echoSets as wuwaEchoSets } from '@gachia/data/games/wuwa/echoes';
 import { diskSets as nteDiskSets } from '@gachia/data/games/nte/extras';
 import { zzzDriveDiscs } from '@gachia/data/games/zzz/drive-discs';
 import type { MetadataRoute } from 'next';
+import { getEntryUpdatedAt, hasLocalizedContent } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -145,14 +146,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       if (GUIDE_GAMES.includes(gameId as typeof GUIDE_GAMES[number])) {
         const guides = getGuidesForGame(gameId);
         for (const guide of guides) {
-          if (locale === 'ja' && !hasJapaneseGuideContent(guide)) continue;
+          if (!hasLocalizedContent(guide, locale)) continue;
           const guideHints = getGuideSitemapHints(guide);
 
           entries.push({
             url: `${BASE_URL}/${locale}/${gameId}/guides/${guide.id}`,
             changeFrequency: guideHints.changeFrequency,
             priority: guideHints.priority,
-            lastModified: getUpdatedAt(guide),
+            lastModified: getEntryUpdatedAt(guide),
           });
         }
       }
@@ -225,18 +226,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   return entries;
-}
-
-function getUpdatedAt(entry: unknown): string | undefined {
-  if (!entry || typeof entry !== 'object') return undefined;
-  const updatedAt = (entry as { updatedAt?: unknown }).updatedAt;
-  return typeof updatedAt === 'string' ? updatedAt : undefined;
-}
-
-function hasJapaneseGuideContent(entry: unknown): boolean {
-  if (!entry || typeof entry !== 'object') return false;
-  const contentJa = (entry as { contentJa?: unknown }).contentJa;
-  return typeof contentJa === 'string' && contentJa.trim().length >= 80;
 }
 
 function getGuideSitemapHints(entry: unknown): Pick<MetadataRoute.Sitemap[number], 'changeFrequency' | 'priority'> {

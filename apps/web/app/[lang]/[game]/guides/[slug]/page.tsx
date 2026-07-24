@@ -122,7 +122,7 @@ import type { SkjhGuide, SkjhGuideFaq } from '@gachia/data/games/skjh/guides';
 import { Link } from '@/lib/i18n/navigation';
 import { ClientMarkdown } from '@/components/wiki/client-markdown';
 import { buildGuideJsonLd } from '@/lib/jsonld';
-import { ensureMetaLength } from '@/lib/seo-metadata';
+import { buildLocalizedAlternates, ensureMetaLength, getEntryUpdatedAt, hasLocalizedContent } from '@/lib/seo-metadata';
 
 type LocaleMeta = Partial<Record<SupportedLocale, { title: string; description: string }>>;
 
@@ -559,17 +559,11 @@ function getLocalizedSeoText(values: LocalizedText | undefined, locale: Supporte
 }
 
 function getGuideUpdatedAt(guide: unknown) {
-  return getGuideSeoFields(guide).updatedAt;
-}
-
-function hasJapaneseGuideContent(guide: unknown) {
-  if (!guide || typeof guide !== 'object') return false;
-  const contentJa = (guide as { contentJa?: unknown }).contentJa;
-  return typeof contentJa === 'string' && contentJa.trim().length >= 80;
+  return getEntryUpdatedAt(guide);
 }
 
 function withGuideIndexing(locale: SupportedLocale, guide: unknown, metadata: object) {
-  if (locale === 'ja' && !hasJapaneseGuideContent(guide)) {
+  if (!hasLocalizedContent(guide, locale)) {
     return { ...metadata, robots: { index: false, follow: true } };
   }
 
@@ -1039,22 +1033,12 @@ export async function generateMetadata({
     locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
   });
 
-  const buildGuideAlternates = (gameId: string, slug: string, guide: unknown) => {
-    const languages: Record<string, string> = {
-      'zh-Hans': `https://gachia.com/zh/${gameId}/guides/${slug}`,
-      en: `https://gachia.com/en/${gameId}/guides/${slug}`,
-      'x-default': `https://gachia.com/zh/${gameId}/guides/${slug}`,
-    };
-
-    if (hasJapaneseGuideContent(guide)) {
-      languages.ja = `https://gachia.com/ja/${gameId}/guides/${slug}`;
-    }
-
-    return {
-      canonical: `https://gachia.com/${locale}/${gameId}/guides/${slug}`,
-      languages,
-    };
-  };
+  const buildGuideAlternates = (gameId: string, slug: string, guide: unknown) => buildLocalizedAlternates(
+    locale,
+    (lang) => `/${lang}/${gameId}/guides/${slug}`,
+    LOCALES,
+    { includeLocale: (lang) => hasLocalizedContent(guide, lang) }
+  );
 
   // Build intent-rich title & description per locale for guides
   const buildGuideMeta = (guide: unknown, guideTitle: string, summary: string, gameName: string) => {
