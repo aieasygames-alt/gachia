@@ -34,6 +34,7 @@ import {
 import { getCharactersNeedingMaterial } from '@gachia/data/material-characters';
 import { Link } from '@/lib/i18n/navigation';
 import { buildItemJsonLd } from '@/lib/jsonld';
+import { buildLocalizedAlternates } from '@/lib/seo-metadata';
 
 const RARITY_COLORS = ['', '#9ca3af', '#4ade80', '#60a5fa', '#a855f7', '#eab308'];
 
@@ -251,6 +252,16 @@ const TYPE_LABELS: Record<string, Record<string, string>> = {
 type LocaleMeta = Partial<Record<SupportedLocale, { title: string; description: string }>>;
 
 const ITEM_META_OVERRIDES: Record<string, LocaleMeta> = {
+  'nte/tri-key': {
+    zh: {
+      title: '三把钥匙获取攻略：用途、来源与刷取路线',
+      description: '异环三把钥匙 Tri-Key 材料攻略，整理灭碑石加工、猎手交易所、活动奖励、用途说明和刷取优先级。',
+    },
+    en: {
+      title: 'Tri-Key NTE Guide: Uses, Sources & Farming Route',
+      description: 'Tri-Key guide for Neverness to Everness with sources, Hunter Exchange, event rewards, crafting routes, uses, and farming priorities.',
+    },
+  },
   'genshin/subdetection-unit': {
     zh: {
       title: '子探测单元获取攻略：用途、位置与刷取路线',
@@ -344,21 +355,14 @@ export async function generateMetadata({
   }
 
   const override = ITEM_META_OVERRIDES[`${gameId}/${id}`]?.[locale];
+  const alternates = buildLocalizedAlternates(locale, (l) => `/${l}/${gameId}/items/${id}`, LOCALES);
   if (override) {
     const title = override.title;
     const desc = override.description;
     return {
       title,
       description: desc,
-      alternates: {
-        canonical: `https://gachia.com/${locale}/${gameId}/items/${id}`,
-        languages: {
-          'zh-Hans': `https://gachia.com/zh/${gameId}/items/${id}`,
-          en: `https://gachia.com/en/${gameId}/items/${id}`,
-          ja: `https://gachia.com/ja/${gameId}/items/${id}`,
-          'x-default': `https://gachia.com/zh/${gameId}/items/${id}`,
-        },
-      },
+      alternates,
       openGraph: {
         title,
         description: desc,
@@ -385,15 +389,7 @@ export async function generateMetadata({
   return {
     title,
     description: desc.slice(0, 160),
-    alternates: {
-      canonical: `https://gachia.com/${locale}/${gameId}/items/${id}`,
-      languages: {
-        'zh-Hans': `https://gachia.com/zh/${gameId}/items/${id}`,
-        en: `https://gachia.com/en/${gameId}/items/${id}`,
-        ja: `https://gachia.com/ja/${gameId}/items/${id}`,
-        'x-default': `https://gachia.com/zh/${gameId}/items/${id}`,
-      },
-    },
+    alternates,
     openGraph: {
       title,
       description: desc.slice(0, 160),

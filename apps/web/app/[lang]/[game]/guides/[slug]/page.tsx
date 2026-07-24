@@ -148,6 +148,32 @@ type GuideQuickAnswer = {
 };
 
 const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, GuideQuickAnswer>>> = {
+  genshin: {
+    'cross-game-comparison-guide': {
+      heading: {
+        zh: '快速结论：按玩法而不是热度选游戏',
+        en: 'Quick answer: choose by playstyle, not hype',
+        ja: '要点：流行より遊び方で選ぶ',
+      },
+      points: {
+        zh: ['想探索大世界，优先原神或鸣潮。', '想省时间和自动战斗，优先崩铁。', '想要快节奏动作和都市风格，优先绝区零。'],
+        en: ['Pick Genshin or WuWa if open-world exploration matters most.', 'Pick HSR if you want turn-based strategy, auto-battle, and lower daily time.', 'Pick ZZZ if you want fast action combat and a compact urban style.'],
+        ja: ['探索重視なら原神か鳴潮が向きます。', '時短とオート戦闘ならスターレイルが安定です。', '高速アクションと都市感ならZZZが向きます。'],
+      },
+    },
+    'lunar-reaction-guide': {
+      heading: {
+        zh: '快速结论：先判断角色是否围绕月系反应吃加成',
+        en: 'Quick answer: check whether the character actually scales with Lunar reactions',
+        ja: '要点：月系反応で伸びるキャラか確認',
+      },
+      points: {
+        zh: ['不要只因为新元素就重刷全套装备。', '先看技能倍率、反应触发频率和队伍增益。', '如果角色不靠月系反应输出，常规暴击/攻击仍然更稳。'],
+        en: ['Do not rebuild every artifact set just because Lunar reactions are new.', 'Start with skill scaling, trigger frequency, and team buffs.', 'If a character is not Lunar-reaction driven, normal CRIT and ATK priorities may still win.'],
+        ja: ['新元素だけで全装備を作り直す必要はありません。', '倍率、発動頻度、編成バフを先に見ます。', '月系反応主体でなければ通常の会心/攻撃が安定です。'],
+      },
+    },
+  },
   zzz: {
     'v3-0-version-guide': {
       heading: {
@@ -159,6 +185,42 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, GuideQuickAnswe
         zh: ['先确认 3.0 版本节点、活动奖励和新专精机制。', '抽卡前把角色定位、音擎和驱动盘需求一起看。', '如果资源有限，优先补能改变队伍上限的核心角色。'],
         en: ['Use this page to check ZZZ v3.0 content, rewards, new systems, and priority routes first.', 'Before pulling, connect agent role, W-Engine value, and Drive Disc requirements.', 'If resources are tight, prioritize characters that change team ceiling instead of sidegrades.'],
         ja: ['3.0内容、報酬、新システムを先に確認します。', '引く前に役割、音擎、ドライブディスクをまとめて見ます。', '資源が少ない場合は編成上限を伸ばすキャラを優先します。'],
+      },
+    },
+    'drive-disc-guide': {
+      heading: {
+        zh: '快速结论：先主属性，再 4+2 套装，最后追副词条',
+        en: 'Quick answer: main stats first, 4+2 sets second, substats last',
+        ja: '要点：メイン、4+2セット、サブの順',
+      },
+      points: {
+        zh: ['4、5、6 号位主属性决定大部分成型速度。', '先凑 4 件核心套装 + 2 件补强套装。', '副词条优化放到主 C 和核心队伍稳定之后。'],
+        en: ['Slots 4, 5, and 6 decide most of a Drive Disc build.', 'Use a 4pc core set plus a 2pc stat set as the default route.', 'Chase substats only after the main DPS and core team are stable.'],
+        ja: ['4、5、6番のメインステータスが最重要です。', '基本は4セット+2セットで組みます。', 'サブ厳選は主力が安定してからで十分です。'],
+      },
+    },
+    'rupture-specialty-guide': {
+      heading: {
+        zh: '快速结论：突击队先看爆发窗口和击破配合',
+        en: 'Quick answer: Rupture teams depend on burst windows and Daze setup',
+        ja: '要点：ラプチャーはブレイク窓と連携を見る',
+      },
+      points: {
+        zh: ['突击不是简单替代强攻，要看敌人失衡窗口。', '先确认核心突击代理人、击破位和支援位是否完整。', '没有核心 S 级时，先用 A 级突击过渡，不要硬拆主队资源。'],
+        en: ['Rupture is not a simple Attack replacement; it needs Daze-window planning.', 'Check your Rupture DPS, Stun slot, and support slot together.', 'Without a premium core, use A-Rank options as a bridge instead of breaking your main team.'],
+        ja: ['ラプチャーは強攻の単純代替ではなくブレイク窓が重要です。', '主力、ブレイク、支援をまとめて確認します。', '限定主力がいなければA級で過渡します。'],
+      },
+    },
+    'team-building-guide': {
+      heading: {
+        zh: '快速结论：绝区零配队先保证击破、输出、支援',
+        en: 'Quick answer: start every ZZZ team with Stun, DPS, and Support',
+        ja: '要点：ブレイク、火力、支援から組む',
+      },
+      points: {
+        zh: ['最稳三人结构是击破 + 主输出 + 支援。', '异常队可以打破模板，但要先确认异常积蓄和紊乱节奏。', '资源有限时先练满一队，再开始第二队。'],
+        en: ['The safest 3-agent core is Stun + DPS + Support.', 'Anomaly teams can break the template, but only if buildup and Disorder timing are reliable.', 'If resources are tight, finish one team before starting a second.'],
+        ja: ['基本はブレイク+火力+支援です。', '異常編成は蓄積と混沌タイミングを確認します。', '資源が少ない時は一隊を先に完成させます。'],
       },
     },
   },
@@ -215,6 +277,18 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, GuideQuickAnswe
     },
   },
   nte: {
+    'photo-mode-guide': {
+      heading: {
+        zh: '快速结论：先开相机，再调焦段、时间和姿势',
+        en: 'Quick answer: open photo mode, then tune focal length, time, and pose',
+        ja: '要点：カメラ、焦点距離、時間、ポーズを調整',
+      },
+      points: {
+        zh: ['先确认 PC、手柄或移动端入口。', '截图质量主要看焦段、光线、景深和背景干净度。', '隐藏拍照点通常和成就、地标或特殊提示绑定。'],
+        en: ['First confirm the PC, controller, or mobile entry point.', 'Better screenshots usually come from focal length, lighting, depth of field, and clean backgrounds.', 'Hidden photo spots are usually tied to achievements, landmarks, or camera prompts.'],
+        ja: ['まずPC、コントローラー、モバイルの入口を確認します。', '画質は焦点距離、光、被写界深度、背景整理で変わります。', '隠し撮影地は実績やランドマークと関係します。'],
+      },
+    },
     'damage-formula': {
       heading: {
         zh: '快速结论：倍率、暴击和属性加成要一起算',
@@ -446,6 +520,66 @@ const GUIDE_META_OVERRIDES: Record<string, LocaleMeta> = {
     zh: {
       title: '绝区零 3.0 版本攻略：卡池、福利、新代理人与配队',
       description: '整理绝区零 3.0 版本卡池、活动福利、新代理人、队伍优先级、驱动盘、音擎和开版本先做什么。',
+    },
+  },
+  'zzz/drive-disc-guide': {
+    en: {
+      title: 'ZZZ Drive Disc Guide: Best Sets, Main Stats & Builds',
+      description: 'Choose the best ZZZ Drive Disc sets, main stats, slot 4-6 priorities, 4pc and 2pc combinations, and farming order for each agent role.',
+    },
+    zh: {
+      title: '绝区零驱动盘攻略：套装、主属性与刷取优先级',
+      description: '整理绝区零驱动盘套装、4/5/6号位主属性、4+2搭配、副词条和刷取优先级，适合快速完成代理人配装。',
+    },
+  },
+  'zzz/rupture-specialty-guide': {
+    en: {
+      title: 'ZZZ Rupture Guide: Specialty Mechanics, Agents & Teams',
+      description: 'Learn how ZZZ Rupture specialty works, which agents to build, how Daze windows affect burst damage, and which teams use Rupture best.',
+    },
+    zh: {
+      title: '绝区零突击专精攻略：机制、代理人与配队',
+      description: '讲清绝区零突击专精机制、核心代理人、失衡爆发窗口、驱动盘和配队思路，帮助你判断是否值得培养。',
+    },
+  },
+  'zzz/team-building-guide': {
+    en: {
+      title: 'ZZZ Team Building Guide: Best Team Cores, Roles & Synergy',
+      description: 'Build better Zenless Zone Zero teams with Stun, DPS, Support, Anomaly, and Defense roles, plus beginner cores and resource priorities.',
+    },
+    zh: {
+      title: '绝区零配队攻略：队伍核心、职业定位与协同',
+      description: '整理绝区零击破、输出、支援、异常和防护定位，讲清新手配队核心、属性协同、资源投入和二队规划。',
+    },
+  },
+  'genshin/cross-game-comparison-guide': {
+    en: {
+      title: 'Genshin vs HSR vs ZZZ vs WuWa: Best Gacha Game to Play',
+      description: 'Compare Genshin Impact, Honkai: Star Rail, Zenless Zone Zero, and Wuthering Waves by combat, grind, F2P value, story, and endgame.',
+    },
+    zh: {
+      title: '原神 vs 崩铁 vs 绝区零 vs 鸣潮：哪款二游适合你',
+      description: '从战斗、探索、肝度、抽卡、零氪体验、剧情和终局内容对比原神、崩铁、绝区零与鸣潮，帮你快速选择。',
+    },
+  },
+  'genshin/lunar-reaction-guide': {
+    en: {
+      title: 'Genshin Lunar Reaction Guide: Elements, Teams & Builds',
+      description: 'Understand Genshin Lunar reactions, element interactions, team-building priorities, artifact choices, and when Lunar scaling is worth building around.',
+    },
+    zh: {
+      title: '原神月系反应攻略：元素机制、配队与圣遗物',
+      description: '讲清原神月系反应机制、元素联动、配队优先级、圣遗物选择和角色是否值得围绕月系反应培养。',
+    },
+  },
+  'wuwa/cross-game-comparison-guide': {
+    en: {
+      title: 'WuWa vs Genshin vs ZZZ vs HSR: Which Anime Gacha Fits You?',
+      description: 'Compare Wuthering Waves with Genshin, ZZZ, and Honkai: Star Rail by action combat, exploration, grind, gacha, F2P value, and endgame.',
+    },
+    zh: {
+      title: '鸣潮 vs 原神 vs 绝区零 vs 崩铁：动作、探索与抽卡对比',
+      description: '对比鸣潮、原神、绝区零和崩铁的战斗手感、开放世界、肝度、抽卡、零氪体验和终局内容。',
     },
   },
   'starrail/cross-game-comparison-guide': {

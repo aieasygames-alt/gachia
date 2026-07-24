@@ -12,13 +12,27 @@ const PRIORITY_GUIDES = [
   ['wuwa', 'banner-schedule-guide'],
   ['wuwa', 'echo-advanced-guide'],
   ['wuwa', 'meta-teams-v3-guide'],
+  ['wuwa', 'cross-game-comparison-guide'],
   ['starrail', 'banner-schedule-guide'],
   ['genshin', 'banner-schedule-guide'],
+  ['genshin', 'cross-game-comparison-guide'],
+  ['genshin', 'lunar-reaction-guide'],
+  ['nte', 'photo-mode-guide'],
+  ['nte', 'damage-formula'],
+  ['zzz', 'v3-0-version-guide'],
+  ['zzz', 'drive-disc-guide'],
+  ['zzz', 'rupture-specialty-guide'],
+  ['zzz', 'team-building-guide'],
   ['sea', 'open-beta-version-center'],
   ['sea', 'launch-day-guide'],
   ['sea', 'download-install-guide'],
   ['sea', 'mechanics-faq-guide'],
   ['skjh', 'week-one-live-ops-overview'],
+];
+
+const PRIORITY_PATHS = [
+  '/en/genshin/weapons/sacrificial-jade',
+  '/en/nte/items/tri-key',
 ];
 
 function usage() {
@@ -50,6 +64,9 @@ function collectUrls(args) {
         for (const locale of LOCALES) {
           urls.add(`${BASE_URL}/${locale}/${gameId}/guides/${slug}`);
         }
+      }
+      for (const priorityPath of PRIORITY_PATHS) {
+        urls.add(normalizeUrl(priorityPath));
       }
       continue;
     }
