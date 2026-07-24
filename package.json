@@ -9,7 +9,8 @@
     "test": "turbo test",
     "clean": "turbo clean",
     "indexnow:new-pages": "node scripts/indexnow-submit-new-pages.mjs",
-    "indexnow:seo-updates": "node scripts/indexnow-submit-seo-updates.mjs"
+    "indexnow:seo-updates": "node scripts/indexnow-submit-seo-updates.mjs",
+    "gsc:report": "node scripts/analyze-gsc-export.mjs"
   },
   "devDependencies": {
     "turbo": "^2.5.0",
