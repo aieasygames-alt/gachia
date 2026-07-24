@@ -146,11 +146,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         const guides = getGuidesForGame(gameId);
         for (const guide of guides) {
           if (locale === 'ja' && !hasJapaneseGuideContent(guide)) continue;
+          const guideHints = getGuideSitemapHints(guide);
 
           entries.push({
             url: `${BASE_URL}/${locale}/${gameId}/guides/${guide.id}`,
-            changeFrequency: 'weekly',
-            priority: 0.7,
+            changeFrequency: guideHints.changeFrequency,
+            priority: guideHints.priority,
             lastModified: getUpdatedAt(guide),
           });
         }
@@ -236,6 +237,25 @@ function hasJapaneseGuideContent(entry: unknown): boolean {
   if (!entry || typeof entry !== 'object') return false;
   const contentJa = (entry as { contentJa?: unknown }).contentJa;
   return typeof contentJa === 'string' && contentJa.trim().length >= 80;
+}
+
+function getGuideSitemapHints(entry: unknown): Pick<MetadataRoute.Sitemap[number], 'changeFrequency' | 'priority'> {
+  if (!entry || typeof entry !== 'object') return { changeFrequency: 'weekly', priority: 0.7 };
+  const guide = entry as { id?: unknown; category?: unknown; updatedAt?: unknown };
+  const id = typeof guide.id === 'string' ? guide.id : '';
+  const category = typeof guide.category === 'string' ? guide.category : '';
+  const updatedAt = typeof guide.updatedAt === 'string' ? guide.updatedAt : '';
+  const isFreshIntent =
+    category === 'banner' ||
+    category === 'version' ||
+    id.includes('banner') ||
+    id.includes('version') ||
+    id.includes('download') ||
+    id.includes('launch') ||
+    id.includes('redeem-code');
+
+  if (isFreshIntent && updatedAt) return { changeFrequency: 'daily', priority: 0.8 };
+  return { changeFrequency: 'weekly', priority: 0.7 };
 }
 
 function getCharactersForGame(gameId: string) {
