@@ -26,6 +26,11 @@ export interface EndfieldGuide {
   contentEn: string;
   tags: string[];
   faq: EndfieldGuideFaq[];
+  updatedAt?: string;
+  currentVersion?: string;
+  serpTitle?: Partial<Record<SupportedLocale, string>>;
+  serpDescription?: Partial<Record<SupportedLocale, string>>;
+  quickFacts?: Partial<Record<SupportedLocale, string[]>>;
 }
 
 export const endfieldGuides: EndfieldGuide[] = rawGuides as unknown as EndfieldGuide[];

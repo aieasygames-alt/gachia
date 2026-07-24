@@ -24,6 +24,11 @@ export interface AnantaGuide {
   contentEn: string;
   tags: string[];
   faq: AnantaGuideFaq[];
+  updatedAt?: string;
+  currentVersion?: string;
+  serpTitle?: Partial<Record<SupportedLocale, string>>;
+  serpDescription?: Partial<Record<SupportedLocale, string>>;
+  quickFacts?: Partial<Record<SupportedLocale, string[]>>;
 }
 
 export const anantaGuides: AnantaGuide[] = rawGuides as unknown as AnantaGuide[];

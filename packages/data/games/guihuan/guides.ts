@@ -24,6 +24,11 @@ export interface GuihuanGuide {
   contentEn: string;
   tags: string[];
   faq: GuihuanGuideFaq[];
+  updatedAt?: string;
+  currentVersion?: string;
+  serpTitle?: Partial<Record<SupportedLocale, string>>;
+  serpDescription?: Partial<Record<SupportedLocale, string>>;
+  quickFacts?: Partial<Record<SupportedLocale, string[]>>;
 }
 
 export const guihuanGuides: GuihuanGuide[] = rawGuides as unknown as GuihuanGuide[];

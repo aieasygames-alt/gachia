@@ -118,7 +118,26 @@
         "answer": "Do not spend everything immediately. Keep enough resources for the first selector, the first event round, and the first week of testing before committing to a full build.",
         "answerZh": "不要一口气全花掉。先留足 6 选 1、首轮活动和第一周测试的资源，再决定完整养成方向。"
       }
-    ]
+    ],
+    "updatedAt": "2026-07-24",
+    "currentVersion": "July 2026 mobile launch window",
+    "quickFacts": {
+      "en": [
+        "PC open beta started on July 9, 2026.",
+        "Mobile launch entered its July 23, 2026 window.",
+        "Start with account, platform, rewards, and troubleshooting checks."
+      ],
+      "zh": [
+        "PC 端已于 2026 年 7 月 9 日公测。",
+        "移动端已进入 2026 年 7 月 23 日首发窗口。",
+        "优先确认账号、平台、福利和首日排错。"
+      ],
+      "ja": [
+        "PC は 2026年7月9日にオープンベータ開始。",
+        "モバイルは 2026年7月23日の開始窗口に入りました。",
+        "アカウント、平台、報酬、問題確認を優先。"
+      ]
+    }
   },
   {
     "id": "collaborations-guide",
@@ -217,7 +236,26 @@
         "answerZh": "移动端首发 FAQ、平台入口、首周运营、已知问题和 PS5/Xbox/Review/Gameplay FAQ 最优先。",
         "answer": "Prioritize mobile launch FAQ, platform entry, week-one live ops, known issues, and PS5/Xbox/Review/Gameplay FAQ."
       }
-    ]
+    ],
+    "updatedAt": "2026-07-24",
+    "currentVersion": "July 2026 launch center",
+    "quickFacts": {
+      "en": [
+        "Connects PC launch, mobile launch, gamescom demo, and platform intent.",
+        "Keeps console/demo wording separate from confirmed launch dates.",
+        "Routes users to mobile FAQ, download, live-ops, and review/gameplay pages."
+      ],
+      "zh": [
+        "串联 PC 公测、移动端首发、gamescom demo 和平台搜索。",
+        "把试玩曝光和主机上线日期明确分开。",
+        "导向移动端 FAQ、下载、首周运营和 review/gameplay 页面。"
+      ],
+      "ja": [
+        "PC、モバイル、gamescom demo、平台検索を接続。",
+        "デモ露出と正式平台日程を分けて整理。",
+        "FAQ、DL、運営、review/gameplay へ誘導。"
+      ]
+    }
   },
   {
     "id": "beginner-guide",
@@ -301,7 +339,26 @@
         "answerZh": "长时间探索和高画质优先 PC/Steam，日常、收菜和碎片时间优先手机；关键是账号和区服不要混。",
         "answer": "Use PC/Steam for long sessions and higher graphics, mobile for dailies and short sessions; keep account and server consistent."
       }
-    ]
+    ],
+    "updatedAt": "2026-07-24",
+    "currentVersion": "July 2026 mobile launch window",
+    "quickFacts": {
+      "en": [
+        "Covers iOS, Android, TapTap, Steam, and official launcher entry.",
+        "Checks post-preload updates, storage, account, and server issues.",
+        "Best for mobile download and install-intent searches."
+      ],
+      "zh": [
+        "覆盖 iOS、Android、TapTap、Steam 和官方启动器入口。",
+        "检查预下载后更新、容量、账号和区服问题。",
+        "重点匹配移动端下载与安装排错搜索。"
+      ],
+      "ja": [
+        "iOS、Android、TapTap、Steam、公式ランチャーを整理。",
+        "事前DL後の更新、容量、アカウント、サーバーを確認。",
+        "モバイルDLとインストール検索向け。"
+      ]
+    }
   },
   {
     "id": "tier-list-guide",

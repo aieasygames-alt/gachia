@@ -145,10 +145,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       if (GUIDE_GAMES.includes(gameId as typeof GUIDE_GAMES[number])) {
         const guides = getGuidesForGame(gameId);
         for (const guide of guides) {
+          if (locale === 'ja' && !hasJapaneseGuideContent(guide)) continue;
+
           entries.push({
             url: `${BASE_URL}/${locale}/${gameId}/guides/${guide.id}`,
             changeFrequency: 'weekly',
             priority: 0.7,
+            lastModified: getUpdatedAt(guide),
           });
         }
       }
@@ -221,6 +224,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   return entries;
+}
+
+function getUpdatedAt(entry: unknown): string | undefined {
+  if (!entry || typeof entry !== 'object') return undefined;
+  const updatedAt = (entry as { updatedAt?: unknown }).updatedAt;
+  return typeof updatedAt === 'string' ? updatedAt : undefined;
+}
+
+function hasJapaneseGuideContent(entry: unknown): boolean {
+  if (!entry || typeof entry !== 'object') return false;
+  const contentJa = (entry as { contentJa?: unknown }).contentJa;
+  return typeof contentJa === 'string' && contentJa.trim().length >= 80;
 }
 
 function getCharactersForGame(gameId: string) {

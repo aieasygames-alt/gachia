@@ -126,6 +126,16 @@ import { ensureMetaLength } from '@/lib/seo-metadata';
 
 type LocaleMeta = Partial<Record<SupportedLocale, { title: string; description: string }>>;
 
+type LocalizedText = Partial<Record<SupportedLocale, string>>;
+
+type GuideSeoFields = {
+  updatedAt?: string;
+  currentVersion?: string;
+  serpTitle?: LocalizedText;
+  serpDescription?: LocalizedText;
+  quickFacts?: Partial<Record<SupportedLocale, string[]>>;
+};
+
 type NextStepLink = {
   href: string;
   label: Record<SupportedLocale, string>;
@@ -539,6 +549,32 @@ const GUIDE_META_OVERRIDES: Record<string, LocaleMeta> = {
     },
   },
 };
+
+function getGuideSeoFields(guide: unknown): GuideSeoFields {
+  return guide && typeof guide === 'object' ? guide as GuideSeoFields : {};
+}
+
+function getLocalizedSeoText(values: LocalizedText | undefined, locale: SupportedLocale) {
+  return values?.[locale] ?? values?.en ?? values?.zh;
+}
+
+function getGuideUpdatedAt(guide: unknown) {
+  return getGuideSeoFields(guide).updatedAt;
+}
+
+function hasJapaneseGuideContent(guide: unknown) {
+  if (!guide || typeof guide !== 'object') return false;
+  const contentJa = (guide as { contentJa?: unknown }).contentJa;
+  return typeof contentJa === 'string' && contentJa.trim().length >= 80;
+}
+
+function withGuideIndexing(locale: SupportedLocale, guide: unknown, metadata: object) {
+  if (locale === 'ja' && !hasJapaneseGuideContent(guide)) {
+    return { ...metadata, robots: { index: false, follow: true } };
+  }
+
+  return metadata;
+}
 
 const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> = {
   zzz: {
@@ -1003,18 +1039,35 @@ export async function generateMetadata({
     locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
   });
 
-  const buildGuideAlternates = (gameId: string, slug: string) => ({
-    canonical: `https://gachia.com/${locale}/${gameId}/guides/${slug}`,
-    languages: {
+  const buildGuideAlternates = (gameId: string, slug: string, guide: unknown) => {
+    const languages: Record<string, string> = {
       'zh-Hans': `https://gachia.com/zh/${gameId}/guides/${slug}`,
       en: `https://gachia.com/en/${gameId}/guides/${slug}`,
-      ja: `https://gachia.com/ja/${gameId}/guides/${slug}`,
       'x-default': `https://gachia.com/zh/${gameId}/guides/${slug}`,
-    },
-  });
+    };
+
+    if (hasJapaneseGuideContent(guide)) {
+      languages.ja = `https://gachia.com/ja/${gameId}/guides/${slug}`;
+    }
+
+    return {
+      canonical: `https://gachia.com/${locale}/${gameId}/guides/${slug}`,
+      languages,
+    };
+  };
 
   // Build intent-rich title & description per locale for guides
-  const buildGuideMeta = (guideTitle: string, summary: string, gameName: string) => {
+  const buildGuideMeta = (guide: unknown, guideTitle: string, summary: string, gameName: string) => {
+    const seoFields = getGuideSeoFields(guide);
+    const serpTitle = getLocalizedSeoText(seoFields.serpTitle, locale);
+    const serpDescription = getLocalizedSeoText(seoFields.serpDescription, locale);
+    if (serpTitle && serpDescription) {
+      return {
+        title: serpTitle,
+        description: ensureMetaLength(serpDescription, locale),
+      };
+    }
+
     const override = GUIDE_META_OVERRIDES[`${gameId}/${slug}`]?.[locale];
     if (override) {
       return {
@@ -1047,80 +1100,80 @@ export async function generateMetadata({
     const guide = getGenshinGuideById(slug);
     if (!guide) return {};
     const gameName = GAMES.genshin.name[locale];
-    const meta = buildGuideMeta(getGenshinGuideTitle(guide, locale), getGenshinGuideSummary(guide, locale), gameName);
-    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) };
+    const meta = buildGuideMeta(guide, getGenshinGuideTitle(guide, locale), getGenshinGuideSummary(guide, locale), gameName);
+    return withGuideIndexing(locale, guide, { ...meta, alternates: buildGuideAlternates(gameId, slug, guide), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) });
   }
 
   if (gameId === 'nte') {
     const guide = getNteGuideById(slug);
     if (!guide) return {};
     const gameName = GAMES.nte.name[locale];
-    const meta = buildGuideMeta(getNteGuideTitle(guide, locale), getNteGuideSummary(guide, locale), gameName);
-    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) };
+    const meta = buildGuideMeta(guide, getNteGuideTitle(guide, locale), getNteGuideSummary(guide, locale), gameName);
+    return withGuideIndexing(locale, guide, { ...meta, alternates: buildGuideAlternates(gameId, slug, guide), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) });
   }
 
   if (gameId === 'wuwa') {
     const guide = getWuWaGuideById(slug);
     if (!guide) return {};
     const gameName = GAMES.wuwa.name[locale];
-    const meta = buildGuideMeta(getWuWaGuideTitle(guide, locale), getWuWaGuideSummary(guide, locale), gameName);
-    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) };
+    const meta = buildGuideMeta(guide, getWuWaGuideTitle(guide, locale), getWuWaGuideSummary(guide, locale), gameName);
+    return withGuideIndexing(locale, guide, { ...meta, alternates: buildGuideAlternates(gameId, slug, guide), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) });
   }
 
   if (gameId === 'starrail') {
     const guide = getStarRailGuideById(slug);
     if (!guide) return {};
     const gameName = GAMES.starrail.name[locale];
-    const meta = buildGuideMeta(getStarRailGuideTitle(guide, locale), getStarRailGuideSummary(guide, locale), gameName);
-    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) };
+    const meta = buildGuideMeta(guide, getStarRailGuideTitle(guide, locale), getStarRailGuideSummary(guide, locale), gameName);
+    return withGuideIndexing(locale, guide, { ...meta, alternates: buildGuideAlternates(gameId, slug, guide), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) });
   }
 
   if (gameId === 'zzz') {
     const guide = getZzzGuideById(slug);
     if (!guide) return {};
     const gameName = GAMES.zzz.name[locale];
-    const meta = buildGuideMeta(getZzzGuideTitle(guide, locale), getZzzGuideSummary(guide, locale), gameName);
-    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) };
+    const meta = buildGuideMeta(guide, getZzzGuideTitle(guide, locale), getZzzGuideSummary(guide, locale), gameName);
+    return withGuideIndexing(locale, guide, { ...meta, alternates: buildGuideAlternates(gameId, slug, guide), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) });
   }
 
   if (gameId === 'guihuan') {
     const guide = getGuihuanGuideById(slug);
     if (!guide) return {};
     const gameName = GAMES.guihuan.name[locale];
-    const meta = buildGuideMeta(getGuihuanGuideTitle(guide, locale), getGuihuanGuideSummary(guide, locale), gameName);
-    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) };
+    const meta = buildGuideMeta(guide, getGuihuanGuideTitle(guide, locale), getGuihuanGuideSummary(guide, locale), gameName);
+    return withGuideIndexing(locale, guide, { ...meta, alternates: buildGuideAlternates(gameId, slug, guide), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) });
   }
 
   if (gameId === 'ananta') {
     const guide = getAnantaGuideById(slug);
     if (!guide) return {};
     const gameName = GAMES.ananta.name[locale];
-    const meta = buildGuideMeta(getAnantaGuideTitle(guide, locale), getAnantaGuideSummary(guide, locale), gameName);
-    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) };
+    const meta = buildGuideMeta(guide, getAnantaGuideTitle(guide, locale), getAnantaGuideSummary(guide, locale), gameName);
+    return withGuideIndexing(locale, guide, { ...meta, alternates: buildGuideAlternates(gameId, slug, guide), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) });
   }
 
   if (gameId === 'endfield') {
     const guide = getEndfieldGuideById(slug);
     if (!guide) return {};
     const gameName = GAMES.endfield.name[locale];
-    const meta = buildGuideMeta(getEndfieldGuideTitle(guide, locale), getEndfieldGuideSummary(guide, locale), gameName);
-    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) };
+    const meta = buildGuideMeta(guide, getEndfieldGuideTitle(guide, locale), getEndfieldGuideSummary(guide, locale), gameName);
+    return withGuideIndexing(locale, guide, { ...meta, alternates: buildGuideAlternates(gameId, slug, guide), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) });
   }
 
   if (gameId === 'sea') {
     const guide = getSeaGuideById(slug);
     if (!guide) return {};
     const gameName = GAMES.sea.name[locale];
-    const meta = buildGuideMeta(getSeaGuideTitle(guide, locale), getSeaGuideSummary(guide, locale), gameName);
-    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) };
+    const meta = buildGuideMeta(guide, getSeaGuideTitle(guide, locale), getSeaGuideSummary(guide, locale), gameName);
+    return withGuideIndexing(locale, guide, { ...meta, alternates: buildGuideAlternates(gameId, slug, guide), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) });
   }
 
   if (gameId === 'skjh') {
     const guide = getSkjhGuideById(slug);
     if (!guide) return {};
     const gameName = GAMES.skjh.name[locale];
-    const meta = buildGuideMeta(getSkjhGuideTitle(guide, locale), getSkjhGuideSummary(guide, locale), gameName);
-    return { ...meta, alternates: buildGuideAlternates(gameId, slug), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) };
+    const meta = buildGuideMeta(guide, getSkjhGuideTitle(guide, locale), getSkjhGuideSummary(guide, locale), gameName);
+    return withGuideIndexing(locale, guide, { ...meta, alternates: buildGuideAlternates(gameId, slug, guide), openGraph: buildOg(meta.title, meta.description, gameId, slug, locale) });
   }
 
   return {};
@@ -1219,6 +1272,7 @@ function GenshinGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: s
         ))}
       </div>
 
+      <GuideFreshnessSection guide={guide} locale={locale} />
       <QuickAnswerSection gameId="genshin" slug={slug} locale={locale} />
 
       {/* Content */}
@@ -1265,6 +1319,7 @@ function GenshinGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: s
         slug,
         tags: guide.tags,
         categoryLabel: category,
+        updatedAt: getGuideUpdatedAt(guide),
         faq: guide.faq?.map((f) => ({ question: getGenshinGuideFaqQuestion(f, locale), answer: getGenshinGuideFaqAnswer(f, locale) })),
       }).map((schema, i) => (
         <script
@@ -1318,6 +1373,7 @@ function NteGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
         ))}
       </div>
 
+      <GuideFreshnessSection guide={guide} locale={locale} />
       <QuickAnswerSection gameId="nte" slug={slug} locale={locale} />
 
       {/* Content */}
@@ -1367,6 +1423,7 @@ function NteGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
         slug,
         tags: guide.tags,
         categoryLabel: category,
+        updatedAt: getGuideUpdatedAt(guide),
         faq: guide.faq?.map((f) => ({ question: getNteGuideFaqQuestion(f, locale), answer: getNteGuideFaqAnswer(f, locale) })),
       }).map((schema, i) => (
         <script
@@ -1424,6 +1481,7 @@ function WuWaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: stri
         ))}
       </div>
 
+      <GuideFreshnessSection guide={guide} locale={locale} />
       <QuickAnswerSection gameId="wuwa" slug={slug} locale={locale} />
 
       {/* Content */}
@@ -1471,6 +1529,7 @@ function WuWaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: stri
         slug,
         tags: guide.tags,
         categoryLabel: category,
+        updatedAt: getGuideUpdatedAt(guide),
         faq: guide.faq?.map((f) => ({ question: getWuWaGuideFaqQuestion(f, locale), answer: getWuWaGuideFaqAnswer(f, locale) })),
       }).map((schema, i) => (
         <script
@@ -1526,6 +1585,7 @@ function StarRailGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: 
         ))}
       </div>
 
+      <GuideFreshnessSection guide={guide} locale={locale} />
       <QuickAnswerSection gameId="starrail" slug={slug} locale={locale} />
 
       <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">
@@ -1569,6 +1629,7 @@ function StarRailGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: 
         slug,
         tags: guide.tags,
         categoryLabel: category,
+        updatedAt: getGuideUpdatedAt(guide),
         faq: guide.faq?.map((f) => ({ question: getStarRailGuideFaqQuestion(f, locale), answer: getStarRailGuideFaqAnswer(f, locale) })),
       }).map((schema, i) => (
         <script
@@ -1618,6 +1679,7 @@ function ZzzGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
         ))}
       </div>
 
+      <GuideFreshnessSection guide={guide} locale={locale} />
       <QuickAnswerSection gameId="zzz" slug={slug} locale={locale} />
 
       <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">
@@ -1662,6 +1724,7 @@ function ZzzGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
         slug,
         tags: guide.tags,
         categoryLabel: category,
+        updatedAt: getGuideUpdatedAt(guide),
         faq: guide.faq?.map((f) => ({ question: getZzzGuideFaqQuestion(f, locale), answer: getZzzGuideFaqAnswer(f, locale) })),
       }).map((schema, i) => (
         <script
@@ -1752,6 +1815,7 @@ function GuihuanGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: s
         slug,
         tags: guide.tags,
         categoryLabel: category,
+        updatedAt: getGuideUpdatedAt(guide),
         faq: guide.faq?.map((f) => ({ question: getGuihuanGuideFaqQuestion(f, locale), answer: getGuihuanGuideFaqAnswer(f, locale) })),
       }).map((schema, i) => (
         <script
@@ -1842,6 +1906,7 @@ function AnantaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: st
         slug,
         tags: guide.tags,
         categoryLabel: category,
+        updatedAt: getGuideUpdatedAt(guide),
         faq: guide.faq?.map((f) => ({ question: getAnantaGuideFaqQuestion(f, locale), answer: getAnantaGuideFaqAnswer(f, locale) })),
       }).map((schema, i) => (
         <script
@@ -1933,6 +1998,7 @@ function EndfieldGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: 
         slug,
         tags: guide.tags,
         categoryLabel: category,
+        updatedAt: getGuideUpdatedAt(guide),
         faq: guide.faq?.map((f) => ({ question: getEndfieldGuideFaqQuestion(f, locale), answer: getEndfieldGuideFaqAnswer(f, locale) })),
       }).map((schema, i) => (
         <script
@@ -1982,6 +2048,7 @@ function SeaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
         ))}
       </div>
 
+      <GuideFreshnessSection guide={guide} locale={locale} />
       <QuickAnswerSection gameId="sea" slug={slug} locale={locale} />
 
       <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">
@@ -2028,6 +2095,7 @@ function SeaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
         slug,
         tags: guide.tags,
         categoryLabel: category,
+        updatedAt: getGuideUpdatedAt(guide),
         faq: guide.faq?.map((f) => ({ question: getSeaGuideFaqQuestion(f, locale), answer: getSeaGuideFaqAnswer(f, locale) })),
       }).map((schema, i) => (
         <script
@@ -2117,6 +2185,7 @@ function SkjhGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: stri
         slug,
         tags: guide.tags,
         categoryLabel: category,
+        updatedAt: getGuideUpdatedAt(guide),
         faq: guide.faq?.map((f) => ({ question: getSkjhGuideFaqQuestion(f, locale), answer: getSkjhGuideFaqAnswer(f, locale) })),
       }).map((schema, i) => (
         <script
@@ -2217,6 +2286,42 @@ function QuickAnswerSection({ gameId, slug, locale }: { gameId: GameId; slug: st
           </li>
         ))}
       </ul>
+    </section>
+  );
+}
+
+function GuideFreshnessSection({ guide, locale }: { guide: unknown; locale: SupportedLocale }) {
+  const seoFields = getGuideSeoFields(guide);
+  const facts = seoFields.quickFacts?.[locale] ?? seoFields.quickFacts?.en ?? seoFields.quickFacts?.zh ?? [];
+  if (!seoFields.updatedAt && !seoFields.currentVersion && facts.length === 0) return null;
+
+  const updatedLabel = locale === 'zh' ? '更新于' : locale === 'ja' ? '更新日' : 'Updated';
+  const versionLabel = locale === 'zh' ? '当前版本' : locale === 'ja' ? '現在版本' : 'Current version';
+
+  return (
+    <section className="mb-6 rounded-lg border border-game-border bg-game-surface p-4">
+      <div className="mb-3 flex flex-wrap gap-2 text-xs text-game-text-muted">
+        {seoFields.updatedAt && (
+          <span className="rounded bg-game-surface-alt px-2 py-1">
+            {updatedLabel}: {seoFields.updatedAt}
+          </span>
+        )}
+        {seoFields.currentVersion && (
+          <span className="rounded bg-game-surface-alt px-2 py-1">
+            {versionLabel}: {seoFields.currentVersion}
+          </span>
+        )}
+      </div>
+      {facts.length > 0 && (
+        <ul className="grid gap-2 text-sm leading-relaxed text-game-text-muted sm:grid-cols-2">
+          {facts.map((fact) => (
+            <li key={fact} className="flex gap-2">
+              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-game-primary" />
+              <span>{fact}</span>
+            </li>
+          ))}
+        </ul>
+      )}
     </section>
   );
 }

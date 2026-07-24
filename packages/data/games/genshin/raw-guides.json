@@ -961,7 +961,36 @@
         "answer": "Weapon banners are generally lower priority than character banners for most players. Weapons provide incremental power boosts (typically 10-20% over 4-star alternatives), while new characters open entirely new team compositions. Only pull on weapon banners if: (1) you have surplus Primogems after securing target characters, (2) the banner has two weapons you want (reducing wasted pulls), or (3) you are optimizing an already-complete roster for endgame content.",
         "answerZh": "对大多数玩家来说，武器池优先级低于角色池。武器提供的是增量提升（通常比4星替代强10-20%），而新角色能开启全新阵容。只有在以下情况才建议抽武器池：（1）抽完目标角色后还有多余原石，（2）池子里两把5星武器都想要（降低歪的风险），（3）阵容已经成型，在为深境螺旋等终局内容优化。"
       }
-    ]
+    ],
+    "updatedAt": "2026-07-24",
+    "currentVersion": "Genshin v6.7 banner cycle",
+    "serpTitle": {
+      "en": "Genshin Banner Schedule 2026: Current Banner, Next Banner & Reruns",
+      "zh": "原神祈愿卡池排期 2026：当前卡池与下期预测",
+      "ja": "原神バナー予定 2026：現在、次回、復刻"
+    },
+    "serpDescription": {
+      "en": "Track current and upcoming Genshin Impact banners, reruns, pity rules, Primogem planning, and pull priorities for the 2026 banner cycle.",
+      "zh": "查看原神当前与下期祈愿卡池、复刻预测、保底规则、原石规划和抽卡优先级，帮助你决定该抽还是该存。",
+      "ja": "原神の現在バナー、次回、復刻予想、天井、原石計画、引く優先度を整理します。"
+    },
+    "quickFacts": {
+      "en": [
+        "Checks current banner, next banner, reruns, and pity rules.",
+        "Connects Primogem budget with account needs.",
+        "Useful for current banner, next banner, and rerun searches."
+      ],
+      "zh": [
+        "覆盖当前卡池、下期卡池、复刻和保底规则。",
+        "把原石预算和账号需求一起判断。",
+        "适合 current banner、next banner、rerun 等搜索意图。"
+      ],
+      "ja": [
+        "現在、次回、復刻、天井を確認。",
+        "原石予算とアカウント需要を一緒に判断。",
+        "current / next / rerun 検索に合わせたページです。"
+      ]
+    }
   },
   {
     "id": "farming-route-guide",

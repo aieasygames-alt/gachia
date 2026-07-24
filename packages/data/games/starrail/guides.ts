@@ -23,6 +23,11 @@ export interface StarRailGuide {
   contentEn: string;
   tags: string[];
   faq: StarRailGuideFaq[];
+  updatedAt?: string;
+  currentVersion?: string;
+  serpTitle?: Partial<Record<SupportedLocale, string>>;
+  serpDescription?: Partial<Record<SupportedLocale, string>>;
+  quickFacts?: Partial<Record<SupportedLocale, string[]>>;
 }
 
 export const starrailGuides: StarRailGuide[] = rawGuides as unknown as StarRailGuide[];

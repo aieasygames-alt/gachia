@@ -24,6 +24,11 @@ export interface SkjhGuide {
   contentJa?: string;
   tags: string[];
   faq: SkjhGuideFaq[];
+  updatedAt?: string;
+  currentVersion?: string;
+  serpTitle?: Partial<Record<SupportedLocale, string>>;
+  serpDescription?: Partial<Record<SupportedLocale, string>>;
+  quickFacts?: Partial<Record<SupportedLocale, string[]>>;
 }
 
 export interface SkjhMaterial {

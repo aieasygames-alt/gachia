@@ -24,6 +24,11 @@ export interface ZzzGuide {
   contentEn: string;
   tags: string[];
   faq: ZzzGuideFaq[];
+  updatedAt?: string;
+  currentVersion?: string;
+  serpTitle?: Partial<Record<SupportedLocale, string>>;
+  serpDescription?: Partial<Record<SupportedLocale, string>>;
+  quickFacts?: Partial<Record<SupportedLocale, string[]>>;
 }
 
 export const zzzGuides: ZzzGuide[] = rawGuides as unknown as ZzzGuide[];

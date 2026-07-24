@@ -24,6 +24,11 @@ export interface WuWaGuide {
   contentEn: string;
   tags: string[];
   faq: WuWaGuideFaq[];
+  updatedAt?: string;
+  currentVersion?: string;
+  serpTitle?: Partial<Record<SupportedLocale, string>>;
+  serpDescription?: Partial<Record<SupportedLocale, string>>;
+  quickFacts?: Partial<Record<SupportedLocale, string[]>>;
 }
 
 export const wuwaGuides: WuWaGuide[] = rawGuides as unknown as WuWaGuide[];

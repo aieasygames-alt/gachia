@@ -9,6 +9,7 @@ interface GuideJsonLdOptions {
   slug: string;
   tags?: string[];
   categoryLabel?: string;
+  updatedAt?: string;
   faq?: { question: string; answer: string }[];
 }
 
@@ -64,7 +65,7 @@ function buildWebPageSchema(options: EntityJsonLdOptions) {
  * Build combined JSON-LD for guide pages: BreadcrumbList + Article + FAQPage
  */
 export function buildGuideJsonLd(options: GuideJsonLdOptions) {
-  const { gameId, locale, title, summary, slug, tags, categoryLabel, faq } = options;
+  const { gameId, locale, title, summary, slug, tags, categoryLabel, updatedAt, faq } = options;
   const gameConfig = GAMES[gameId];
   const gameName = gameConfig?.name[locale] ?? gameId;
   const guidesLabel = CATEGORY_LABELS.guides?.[locale] ?? 'Guides';
@@ -92,6 +93,7 @@ export function buildGuideJsonLd(options: GuideJsonLdOptions) {
     headline: title,
     description: summary || title,
     url,
+    ...(updatedAt ? { dateModified: updatedAt } : {}),
     articleSection: categoryLabel ?? guidesLabel,
     keywords: keywords.length > 0 ? keywords.join(', ') : undefined,
     isPartOf: {

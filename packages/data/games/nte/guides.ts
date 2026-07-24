@@ -29,6 +29,11 @@ export interface NteGuide {
   relatedLocations?: string[];
   relatedLore?: string[];
   date?: string;
+  updatedAt?: string;
+  currentVersion?: string;
+  serpTitle?: Partial<Record<SupportedLocale, string>>;
+  serpDescription?: Partial<Record<SupportedLocale, string>>;
+  quickFacts?: Partial<Record<SupportedLocale, string[]>>;
 }
 
 // --- Data ---

@@ -24,6 +24,11 @@ export interface SeaGuide {
   contentEn: string;
   tags: string[];
   faq: SeaGuideFaq[];
+  updatedAt?: string;
+  currentVersion?: string;
+  serpTitle?: Partial<Record<SupportedLocale, string>>;
+  serpDescription?: Partial<Record<SupportedLocale, string>>;
+  quickFacts?: Partial<Record<SupportedLocale, string[]>>;
 }
 
 export const seaGuides: SeaGuide[] = rawGuides as unknown as SeaGuide[];
