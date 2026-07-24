@@ -12,7 +12,7 @@ import { seaMaterials, getSeaMaterialName } from '@gachia/data/games/sea/items';
 import { skjhMaterials, getSkjhMaterialName } from '@gachia/data/games/skjh/items';
 import { gearSets, getGearSetName, getGearSetEffect } from '@gachia/data/games/endfield/gear-sets';
 import { Link } from '@/lib/i18n/navigation';
-import { ensureMetaLength } from '@/lib/seo-metadata';
+import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -142,12 +142,7 @@ export async function generateMetadata({
   const gameId = game as GameId;
   const gameName = GAMES[gameId]?.name[locale];
   const categoryLabel = CATEGORY_LABELS.items?.[locale] ?? 'Items';
-  const languages: Record<string, string> = {};
-  for (const l of LOCALES) {
-    const hreflang = l === 'zh' ? 'zh-Hans' : l;
-    languages[hreflang] = `${BASE_URL}/${l}/${gameId}/items`;
-  }
-  languages['x-default'] = `${BASE_URL}/zh/${gameId}/items`;
+  const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/items`, LOCALES);
 
   const desc = ITEM_DESC[gameId]?.[locale] ?? `${gameName} ${categoryLabel} database with farming sources, upgrade materials, and drop locations`;
   const intro = ITEM_INTRO[gameId]?.[locale];
@@ -163,7 +158,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/items`, languages },
+    alternates,
     openGraph: {
       title,
       description,

@@ -10,7 +10,7 @@ import { guihuanWeapons, getGuihuanWeaponName, getGuihuanWeaponEffect } from '@g
 import { endfieldWeapons, getEndfieldWeaponName, getEndfieldWeaponEffect } from '@gachia/data/games/endfield/weapons';
 import { skjhWeapons, getSkjhWeaponName, getSkjhWeaponEffect, getSkjhWeaponSource } from '@gachia/data/games/skjh/weapons';
 import { Link } from '@/lib/i18n/navigation';
-import { ensureMetaLength } from '@/lib/seo-metadata';
+import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -113,12 +113,7 @@ export async function generateMetadata({
   const gameId = game as GameId;
   const gameName = GAMES[gameId]?.name[locale];
   const categoryLabel = CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons';
-  const languages: Record<string, string> = {};
-  for (const l of LOCALES) {
-    const hreflang = l === 'zh' ? 'zh-Hans' : l;
-    languages[hreflang] = `${BASE_URL}/${l}/${gameId}/weapons`;
-  }
-  languages['x-default'] = `${BASE_URL}/zh/${gameId}/weapons`;
+  const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/weapons`, LOCALES);
 
   const desc = WEAPON_DESC[gameId]?.[locale] ?? `${gameName} ${categoryLabel} database with stats, effects, recommended users, and acquisition methods`;
   const intro = WEAPON_INTRO[gameId]?.[locale];
@@ -134,7 +129,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/weapons`, languages },
+    alternates,
     openGraph: {
       title,
       description,

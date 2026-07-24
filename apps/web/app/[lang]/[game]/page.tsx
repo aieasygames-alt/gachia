@@ -25,6 +25,7 @@ import Image from 'next/image';
 import zhMessages from '@/messages/zh.json';
 import enMessages from '@/messages/en.json';
 import jaMessages from '@/messages/ja.json';
+import { buildLocalizedAlternates } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
 const META_MIN_LENGTH = 150;
@@ -837,12 +838,7 @@ export async function generateMetadata({
   const gameId = game as GameId;
   const gameName = GAMES[gameId]?.name[locale];
   const desc = ensureMetaLength(GAME_DESCRIPTIONS[gameId]?.[locale] ?? `${gameName} Wiki`, locale);
-  const languages: Record<string, string> = {};
-  for (const l of LOCALES) {
-    const hreflang = l === 'zh' ? 'zh-Hans' : l;
-    languages[hreflang] = `${BASE_URL}/${l}/${gameId}`;
-  }
-  languages['x-default'] = `${BASE_URL}/zh/${gameId}`;
+  const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}`, LOCALES);
 
   const title = locale === 'zh'
     ? `${gameName}攻略Wiki — 角色图鉴/武器/圣遗物/攻略`
@@ -853,7 +849,7 @@ export async function generateMetadata({
   return {
     title,
     description: desc,
-    alternates: { canonical: `${BASE_URL}/${locale}/${gameId}`, languages },
+    alternates,
     openGraph: {
       title,
       description: desc,

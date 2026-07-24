@@ -30,6 +30,7 @@ import {
 } from '@gachia/data/games/skjh/weapons';
 import { Link } from '@/lib/i18n/navigation';
 import { buildWeaponJsonLd } from '@/lib/jsonld';
+import { buildLocalizedAlternates } from '@/lib/seo-metadata';
 
 const RARITY_COLORS: Record<number, string> = { 1: '#9ca3af', 2: '#4ade80', 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };
 
@@ -298,14 +299,8 @@ const WEAPON_META_OVERRIDES: Record<string, LocaleMeta> = {
   },
 };
 
-function buildAlternates(locale: string, gameId: string, id: string) {
-  const languages: Record<string, string> = {};
-  for (const l of ['zh', 'en', 'ja'] as const) {
-    const hreflang = l === 'zh' ? 'zh-Hans' : l;
-    languages[hreflang] = `${BASE_URL}/${l}/${gameId}/weapons/${id}`;
-  }
-  languages['x-default'] = `${BASE_URL}/zh/${gameId}/weapons/${id}`;
-  return { canonical: `${BASE_URL}/${locale}/${gameId}/weapons/${id}`, languages };
+function buildAlternates(locale: SupportedLocale, gameId: string, id: string) {
+  return buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/weapons/${id}`, LOCALES);
 }
 
 function buildOg(title: string, description: string, gameId: string, id: string, locale: string) {

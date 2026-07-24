@@ -2,7 +2,7 @@ import { GAMES, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { notFound } from 'next/navigation';
 import { Link } from '@/lib/i18n/navigation';
-import { ensureMetaLength } from '@/lib/seo-metadata';
+import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -333,17 +333,12 @@ export async function generateMetadata({
       ? `${gameName} DL・公式入口・必要環境`
       : `${gameName} Download, Official Site & System Requirements`;
   const description = ensureMetaLength(copy.intro[locale], locale);
-  const languages: Record<string, string> = {};
-  for (const l of LOCALES) {
-    const hreflang = l === 'zh' ? 'zh-Hans' : l;
-    languages[hreflang] = `${BASE_URL}/${l}/${gameId}/download`;
-  }
-  languages['x-default'] = `${BASE_URL}/zh/${gameId}/download`;
+  const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/download`, LOCALES);
 
   return {
     title,
     description,
-    alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/download`, languages },
+    alternates,
     openGraph: {
       title,
       description,

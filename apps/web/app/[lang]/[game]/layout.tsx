@@ -5,8 +5,7 @@ import { GameNav } from '@/components/layout/game-nav';
 import { Breadcrumbs } from '@/components/layout/breadcrumbs';
 import { GameDataSetter } from '@/components/layout/game-data-setter';
 import { Link } from '@/lib/i18n/navigation';
-
-const BASE_URL = 'https://gachia.com';
+import { buildLocalizedAlternates } from '@/lib/seo-metadata';
 
 const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
   genshin: {
@@ -70,13 +69,7 @@ export async function generateMetadata({
   const gameName = gameConfig.name[locale];
   const description = GAME_DESCRIPTIONS[gameId]?.[locale] ?? `${gameName} Wiki — Gachia`;
 
-  // Build hreflang alternates
-  const languages: Record<string, string> = {};
-  for (const l of LOCALES) {
-    const hreflang = l === 'zh' ? 'zh-Hans' : l;
-    languages[hreflang] = `${BASE_URL}/${l}/${gameId}`;
-  }
-  languages['x-default'] = `${BASE_URL}/zh/${gameId}`;
+  const alternates = buildLocalizedAlternates(locale, (l) => `/${l}/${gameId}`, LOCALES);
 
   return {
     title: `${gameName} Wiki`,
@@ -87,10 +80,7 @@ export async function generateMetadata({
       images: [{ url: `/images/og/${gameId}.webp`, width: 1200, height: 630, alt: `${gameName} Wiki — Gachia` }],
       locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
     },
-    alternates: {
-      canonical: `${BASE_URL}/${locale}/${gameId}`,
-      languages,
-    },
+    alternates,
   };
 }
 

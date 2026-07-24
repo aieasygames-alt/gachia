@@ -14,6 +14,7 @@ import { anantaGuides, getAnantaGuideTitle, getAnantaGuideSummary } from '@gachi
 import { endfieldGuides, getEndfieldGuideTitle, getEndfieldGuideSummary } from '@gachia/data/games/endfield/guides';
 import { seaGuides, getSeaGuideTitle, getSeaGuideSummary } from '@gachia/data/games/sea/guides';
 import { skjhGuides, getSkjhGuideTitle, getSkjhGuideSummary } from '@gachia/data/games/skjh/guides';
+import { buildLocalizedAlternates } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -1973,17 +1974,12 @@ export async function generateMetadata({
   const hub = VERSION_COPY[gameId];
   const title = `${gameName} ${hub.title[locale]}`;
   const description = hub.description[locale];
-  const languages: Record<string, string> = {};
-  for (const l of LOCALES) {
-    const hreflang = l === 'zh' ? 'zh-Hans' : l;
-    languages[hreflang] = `${BASE_URL}/${l}/${gameId}/version`;
-  }
-  languages['x-default'] = `${BASE_URL}/zh/${gameId}/version`;
+  const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/version`, LOCALES);
 
   return {
     title,
     description,
-    alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/version`, languages },
+    alternates,
     openGraph: {
       title,
       description,

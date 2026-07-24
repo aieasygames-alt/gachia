@@ -13,7 +13,7 @@ import { seaGuides, getSeaGuideTitle, getSeaGuideSummary, getSeaGuideCategory, g
 import { skjhGuides, getSkjhGuideTitle, getSkjhGuideSummary, getSkjhGuideCategory, getSkjhGuideCategories, SKJH_GUIDE_CATEGORIES } from '@gachia/data/games/skjh/guides';
 import { starrailCharacters, getStarRailCharacterName, getStarRailCharacterImage } from '@gachia/data/games/starrail/characters';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
-import { ensureMetaLength, getEntryCurrentVersion, getEntryUpdatedAt } from '@/lib/seo-metadata';
+import { buildLocalizedAlternates, ensureMetaLength, getEntryCurrentVersion, getEntryUpdatedAt } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -195,12 +195,7 @@ export async function generateMetadata({
   const gameId = game as GameId;
   const gameName = GAMES[gameId]?.name[locale];
   const categoryLabel = CATEGORY_LABELS.guides?.[locale] ?? 'Guides';
-  const languages: Record<string, string> = {};
-  for (const l of LOCALES) {
-    const hreflang = l === 'zh' ? 'zh-Hans' : l;
-    languages[hreflang] = `${BASE_URL}/${l}/${gameId}/guides`;
-  }
-  languages['x-default'] = `${BASE_URL}/zh/${gameId}/guides`;
+  const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/guides`, LOCALES);
 
   const desc = GUIDE_DESC[gameId]?.[locale] ?? `${gameName} ${categoryLabel} with beginner tips, builds, teams, and practical walkthroughs`;
   const title = locale === 'zh'
@@ -214,7 +209,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/guides`, languages },
+    alternates,
     openGraph: {
       title,
       description,

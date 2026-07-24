@@ -4,6 +4,7 @@ import type { GameId, SupportedLocale } from '@gachia/core';
 import { getZzzDriveDiscById, getZzzDriveDiscName, getZzzDriveDiscDesc2pc, getZzzDriveDiscDesc4pc, zzzDriveDiscs } from '@gachia/data/games/zzz/drive-discs';
 import { getZzzCharacterName, getZzzCharacterById } from '@gachia/data/games/zzz/characters';
 import { notFound } from 'next/navigation';
+import { buildLocalizedAlternates } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -34,12 +35,7 @@ export async function generateMetadata({
   const name = getZzzDriveDiscName(disc, locale);
   const desc = getZzzDriveDiscDesc2pc(disc, locale);
   const gameName = GAMES.zzz.name[locale];
-  const languages: Record<string, string> = {};
-  for (const l of ['zh', 'en', 'ja'] as const) {
-    const hreflang = l === 'zh' ? 'zh-Hans' : l;
-    languages[hreflang] = `${BASE_URL}/${l}/zzz/drive-discs/${id}`;
-  }
-  languages['x-default'] = `${BASE_URL}/zh/zzz/drive-discs/${id}`;
+  const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/zzz/drive-discs/${id}`, LOCALES);
 
   const desc4pc = getZzzDriveDiscDesc4pc(disc, locale);
   const bestForNames = disc.bestFor.slice(0, 3).map(cid => {
@@ -52,7 +48,7 @@ export async function generateMetadata({
     description: locale === 'zh'
       ? `${name}驱动盘：2件套${desc}；4件套${desc4pc}。${bestForNames ? `推荐角色：${bestForNames}。` : ''}查看全部属性与搭配建议。`.slice(0, 160)
       : `${name} ZZZ drive disc: 2pc — ${desc}. 4pc — ${desc4pc}.${bestForNames ? ` Best for ${bestForNames}.` : ''} Full stats and build guide.`.slice(0, 160),
-    alternates: { canonical: `${BASE_URL}/${locale}/zzz/drive-discs/${id}`, languages },
+    alternates,
   };
 }
 

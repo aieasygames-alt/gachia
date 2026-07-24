@@ -10,7 +10,7 @@ import {
 } from '@gachia/data/games/nte/gacha';
 import { getNteCharacterName, getNteCharacterById } from '@gachia/data/games/nte/characters';
 import { Link } from '@/lib/i18n/navigation';
-import { ensureMetaLength } from '@/lib/seo-metadata';
+import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -33,18 +33,13 @@ export async function generateMetadata({
     : locale === 'ja'
       ? '異環ガチャシステムの詳細：ガチャ種類、確率、天井システムの解説。'
       : 'Complete NTE gacha guide: banner types, pull rates, pity system, and guaranteed mechanics.';
-  const languages: Record<string, string> = {};
-  for (const l of LOCALES) {
-    const hreflang = l === 'zh' ? 'zh-Hans' : l;
-    languages[hreflang] = `${BASE_URL}/${l}/nte/gacha`;
-  }
-  languages['x-default'] = `${BASE_URL}/zh/nte/gacha`;
+  const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/nte/gacha`, LOCALES);
   const description = ensureMetaLength(desc, locale);
 
   return {
     title,
     description,
-    alternates: { canonical: `${BASE_URL}/${locale}/nte/gacha`, languages },
+    alternates,
     openGraph: {
       title,
       description,

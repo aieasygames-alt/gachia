@@ -14,7 +14,7 @@ import { tierLists as seaTierLists } from '@gachia/data/games/sea';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 import dynamic from 'next/dynamic';
-import { ensureMetaLength } from '@/lib/seo-metadata';
+import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -68,12 +68,7 @@ export async function generateMetadata({
   const gameId = game as GameId;
   const gameName = GAMES[gameId]?.name[locale];
   const categoryLabel = CATEGORY_LABELS['tier-list']?.[locale] ?? 'Tier List';
-  const languages: Record<string, string> = {};
-  for (const l of LOCALES) {
-    const hreflang = l === 'zh' ? 'zh-Hans' : l;
-    languages[hreflang] = `${BASE_URL}/${l}/${gameId}/tier-list`;
-  }
-  languages['x-default'] = `${BASE_URL}/zh/${gameId}/tier-list`;
+  const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/tier-list`, LOCALES);
 
   const desc = TIER_DESC[gameId]?.[locale] ?? `${categoryLabel} - ${gameName} Wiki`;
   const title = locale === 'zh'
@@ -90,7 +85,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/tier-list`, languages },
+    alternates,
     openGraph: {
       title,
       description,

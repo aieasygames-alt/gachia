@@ -2,8 +2,7 @@ import type { Metadata } from 'next';
 import { LOCALES } from '@gachia/core';
 import type { SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
-
-const BASE_URL = 'https://gachia.com';
+import { buildLocalizedAlternates } from '@/lib/seo-metadata';
 
 const TITLE: Record<string, string> = { zh: '网站地图', en: 'Sitemap', ja: 'サイトマップ' };
 const DESCRIPTION: Record<string, string> = {
@@ -19,19 +18,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale = lang as SupportedLocale;
-  const languages: Record<string, string> = {};
-  for (const l of LOCALES) {
-    const hreflang = l === 'zh' ? 'zh-Hans' : l;
-    languages[hreflang] = `${BASE_URL}/${l}/sitemap`;
-  }
-  languages['x-default'] = `${BASE_URL}/zh/sitemap`;
+  const alternates = buildLocalizedAlternates(locale, (l) => `/${l}/sitemap`, LOCALES);
   return {
     title: TITLE[locale],
     description: DESCRIPTION[locale],
-    alternates: {
-      canonical: `${BASE_URL}/${locale}/sitemap`,
-      languages,
-    },
+    alternates,
   };
 }
 

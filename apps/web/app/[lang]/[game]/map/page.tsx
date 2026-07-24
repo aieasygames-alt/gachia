@@ -31,7 +31,7 @@ import type { StarRailRegion } from '@gachia/data/games/starrail/types';
 import type { NteRegion } from '@gachia/data/games/nte/types';
 import type { EndfieldRegion } from '@gachia/data/games/endfield/types';
 import { MapLoader } from './_components/MapLoader';
-import { ensureMetaLength } from '@/lib/seo-metadata';
+import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
 
 const REGION_ICONS: Record<string, string> = {
   mondstadt: '🌬️', liyue: '⛰️', inazuma: '⚡', sumeru: '🌿',
@@ -75,18 +75,13 @@ export async function generateMetadata({
     : locale === 'ja'
       ? `${gameName}マップ攻略：テレポート位置、宝箱分布、素材採集ポイント。`
       : `${gameName} interactive map guide: teleport waypoints, chest locations, material farming spots, and world quest markers.`;
-  const languages: Record<string, string> = {};
-  for (const l of LOCALES) {
-    const hreflang = l === 'zh' ? 'zh-Hans' : l;
-    languages[hreflang] = `${BASE_URL}/${l}/${gameId}/map`;
-  }
-  languages['x-default'] = `${BASE_URL}/zh/${gameId}/map`;
+  const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/map`, LOCALES);
   const description = ensureMetaLength(desc, locale);
 
   return {
     title,
     description,
-    alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/map`, languages },
+    alternates,
     openGraph: {
       title,
       description,

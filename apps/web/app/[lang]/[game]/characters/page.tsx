@@ -11,7 +11,7 @@ import { endfieldCharacters, getEndfieldCharacterName, getEndfieldCharacterImage
 import { seaCharacters, getSeaCharacterName, getSeaCharacterImage } from '@gachia/data/games/sea/characters';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
-import { ensureMetaLength } from '@/lib/seo-metadata';
+import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -204,12 +204,7 @@ export async function generateMetadata({
   const categoryLabel = CATEGORY_LABELS.characters?.[locale] ?? 'Characters';
   const desc = CHAR_DESC[gameId]?.[locale];
   const intro = CHARACTER_INTRO[gameId]?.[locale];
-  const languages: Record<string, string> = {};
-  for (const l of LOCALES) {
-    const hreflang = l === 'zh' ? 'zh-Hans' : l;
-    languages[hreflang] = `${BASE_URL}/${l}/${gameId}/characters`;
-  }
-  languages['x-default'] = `${BASE_URL}/zh/${gameId}/characters`;
+  const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/characters`, LOCALES);
 
   const title = locale === 'zh'
     ? `${gameName}角色图鉴 — 全角色Wiki、Build、技能与配队`
@@ -225,7 +220,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    alternates: { canonical: `${BASE_URL}/${locale}/${gameId}/characters`, languages },
+    alternates,
     openGraph: {
       title,
       description,
