@@ -66,7 +66,7 @@ const ECHO_GAMES = ['wuwa'] as const;
 const DISK_SET_GAMES = ['nte'] as const;
 const DRIVE_DISC_GAMES = ['zzz'] as const;
 const ITEM_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'] as const;
-const STATIC_SITE_PAGES = ['contact', 'privacy', 'terms', 'sitemap'] as const;
+const STATIC_SITE_PAGES = ['contact', 'privacy', 'terms', 'sitemap', 'tools/pull-planner'] as const;
 
 // Category routes that have real content per game
 const REAL_CONTENT_ROUTES: Record<string, string[]> = {

@@ -3,6 +3,7 @@ import type { GameId, SupportedLocale } from '@gachia/core';
 import { notFound } from 'next/navigation';
 import { Link } from '@/lib/i18n/navigation';
 import { NextStepStrip, type NextStepLink } from '@/components/wiki/next-step-strip';
+import { getVersionSnapshot, localizeVersionText } from '@/lib/version-snapshots';
 
 import { genshinGuides, getGuideTitle as getGenshinGuideTitle, getGuideSummary as getGenshinGuideSummary } from '@gachia/data/games/genshin/guides';
 import { starrailGuides, getGuideTitle as getStarRailGuideTitle, getGuideSummary as getStarRailGuideSummary } from '@gachia/data/games/starrail/guides';
@@ -2034,6 +2035,7 @@ export default async function VersionHubPage({
   const focusLanes = VERSION_FOCUS_LANES[gameId]?.[locale] ?? [];
   const officialStatusNote = OFFICIAL_STATUS_NOTES[gameId]?.[locale];
   const intentLinks = INTENT_LINKS[gameId] ?? [];
+  const versionSnapshot = getVersionSnapshot(gameId);
 
   return (
     <div>
@@ -2071,6 +2073,74 @@ export default async function VersionHubPage({
           </div>
         )}
       </section>
+
+      {versionSnapshot && (
+        <section className="mb-8 rounded-2xl border border-game-border bg-game-surface p-5">
+          <div className="mb-4 flex flex-wrap items-start justify-between gap-4">
+            <div>
+              <h2 className="text-xl font-bold text-game-text">
+                {locale === 'zh' ? '版本快照' : locale === 'ja' ? 'バージョンスナップショット' : 'Version Snapshot'}
+              </h2>
+              <p className="mt-1 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+                {localizeVersionText(versionSnapshot.summary, locale)}
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <span className="rounded-full border border-game-border px-3 py-1 text-xs text-game-text-muted">
+                {locale === 'zh' ? '当前版本' : locale === 'ja' ? '現在版本' : 'Current'}: {versionSnapshot.currentVersion}
+              </span>
+              <span className="rounded-full border border-game-border px-3 py-1 text-xs text-game-text-muted">
+                {locale === 'zh' ? '发布日期' : locale === 'ja' ? '公開日' : 'Release'}: {versionSnapshot.releaseDate}
+              </span>
+              <span className="rounded-full bg-game-primary/10 px-3 py-1 text-xs font-medium text-game-primary">
+                {versionSnapshot.status}
+              </span>
+            </div>
+          </div>
+
+          <div className="grid gap-4 lg:grid-cols-[1fr_1fr_0.85fr]">
+            <div className="rounded-xl border border-game-border bg-game-bg/80 p-4">
+              <h3 className="mb-3 text-sm font-semibold text-game-primary">
+                {locale === 'zh' ? 'What changed' : locale === 'ja' ? '変更点' : 'What Changed'}
+              </h3>
+              <ul className="space-y-2 text-sm leading-relaxed text-game-text-muted">
+                {versionSnapshot.whatChanged.map((item) => (
+                  <li key={localizeVersionText(item, locale)}>{localizeVersionText(item, locale)}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-xl border border-game-border bg-game-bg/80 p-4">
+              <h3 className="mb-3 text-sm font-semibold text-game-primary">
+                {locale === 'zh' ? '先做什么' : locale === 'ja' ? '最初にやること' : 'What To Do First'}
+              </h3>
+              <ul className="space-y-2 text-sm leading-relaxed text-game-text-muted">
+                {versionSnapshot.firstSteps.map((item) => (
+                  <li key={localizeVersionText(item, locale)}>{localizeVersionText(item, locale)}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-xl border border-game-border bg-game-bg/80 p-4">
+              <h3 className="mb-3 text-sm font-semibold text-game-primary">
+                {locale === 'zh' ? '相关行动' : locale === 'ja' ? '関連アクション' : 'Related Actions'}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {versionSnapshot.links.map((link) => (
+                  <Link
+                    key={`${link.type}-${link.href}`}
+                    href={link.href as '/'}
+                    className="rounded-full border border-game-border px-3 py-1.5 text-xs text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary"
+                  >
+                    {localizeVersionText(link.label, locale)}
+                  </Link>
+                ))}
+              </div>
+              <p className="mt-4 text-xs text-game-text-muted">
+                {locale === 'zh' ? '最后更新' : locale === 'ja' ? '最終更新' : 'Last updated'}: {versionSnapshot.lastUpdatedAt}
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="mb-8">
         <div className="mb-4 flex items-center justify-between gap-4">

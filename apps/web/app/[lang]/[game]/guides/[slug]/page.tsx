@@ -123,6 +123,7 @@ import { Link } from '@/lib/i18n/navigation';
 import { ClientMarkdown } from '@/components/wiki/client-markdown';
 import { buildGuideJsonLd } from '@/lib/jsonld';
 import { buildLocalizedAlternates, ensureMetaLength, getEntryUpdatedAt, hasLocalizedContent } from '@/lib/seo-metadata';
+import { BANNER_INTENT_PANELS } from '@/lib/banner-intent';
 
 type LocaleMeta = Partial<Record<SupportedLocale, { title: string; description: string }>>;
 
@@ -1391,6 +1392,7 @@ function GenshinGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: s
       </div>
 
       <GuideFreshnessSection guide={guide} locale={locale} />
+      <BannerIntentPanel gameId="genshin" slug={slug} locale={locale} />
       <QuickAnswerSection gameId="genshin" slug={slug} locale={locale} />
 
       {/* Content */}
@@ -1600,6 +1602,7 @@ function WuWaGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: stri
       </div>
 
       <GuideFreshnessSection guide={guide} locale={locale} />
+      <BannerIntentPanel gameId="wuwa" slug={slug} locale={locale} />
       <QuickAnswerSection gameId="wuwa" slug={slug} locale={locale} />
 
       {/* Content */}
@@ -1704,6 +1707,7 @@ function StarRailGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: 
       </div>
 
       <GuideFreshnessSection guide={guide} locale={locale} />
+      <BannerIntentPanel gameId="starrail" slug={slug} locale={locale} />
       <QuickAnswerSection gameId="starrail" slug={slug} locale={locale} />
 
       <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">
@@ -2404,6 +2408,64 @@ function QuickAnswerSection({ gameId, slug, locale }: { gameId: GameId; slug: st
           </li>
         ))}
       </ul>
+    </section>
+  );
+}
+
+function BannerIntentPanel({ gameId, slug, locale }: { gameId: GameId; slug: string; locale: SupportedLocale }) {
+  if (slug !== 'banner-schedule-guide') return null;
+
+  const panel = BANNER_INTENT_PANELS[gameId];
+  if (!panel) return null;
+
+  const checkLabel = locale === 'zh' ? '快速检查' : locale === 'ja' ? 'クイック確認' : 'Fast Checks';
+  const linkLabel = locale === 'zh' ? '相关入口' : locale === 'ja' ? '関連入口' : 'Related Actions';
+
+  return (
+    <section className="mb-6 overflow-hidden rounded-lg border border-game-border bg-game-surface">
+      <div className="border-b border-game-border p-4">
+        <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-game-primary">
+          {locale === 'zh' ? '卡池决策面板' : locale === 'ja' ? 'バナー判断パネル' : 'Banner Decision Panel'}
+        </p>
+        <h2 className="mb-2 text-lg font-semibold text-game-text">
+          {panel.title[locale]}
+        </h2>
+        <p className="text-sm leading-relaxed text-game-text-muted">
+          {panel.summary[locale]}
+        </p>
+      </div>
+      <div className="grid gap-px bg-game-border md:grid-cols-[1fr_0.9fr]">
+        <div className="bg-game-surface p-4">
+          <h3 className="mb-3 text-sm font-semibold text-game-text">{checkLabel}</h3>
+          <ul className="grid gap-2 text-sm leading-relaxed text-game-text-muted sm:grid-cols-2 md:grid-cols-1">
+            {panel.checks[locale].map((check) => (
+              <li key={check} className="flex gap-2">
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-game-primary" />
+                <span>{check}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="bg-game-surface p-4">
+          <h3 className="mb-3 text-sm font-semibold text-game-text">{linkLabel}</h3>
+          <div className="space-y-2">
+            {panel.links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href as '/'}
+                className="block rounded-md border border-game-border bg-game-surface-alt p-3 transition-colors hover:border-game-primary"
+              >
+                <span className="mb-1 block text-sm font-semibold text-game-text">
+                  {link.label[locale]}
+                </span>
+                <span className="line-clamp-2 text-xs leading-relaxed text-game-text-muted">
+                  {link.description[locale]}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
