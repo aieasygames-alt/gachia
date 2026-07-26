@@ -250,8 +250,9 @@
 执行节奏:
 
 - 发布后一周导出 GSC。
-- 运行现有 `gsc:report`。
+- 运行 `pnpm gsc:report -- /path/to/gsc-export --min-impressions 100 --out reports/gsc-prd-followup.md`。
 - 对比 page CTR opportunity 是否下降。
+- 重点查看报告中的 `PRD Focus Pages` 和 `PRD Action Queue`。
 
 关注指标:
 
@@ -259,6 +260,7 @@
 - banner schedule CTR
 - version 页面 impressions
 - redeem codes 页面 impressions
+- pull planner / cross-game calendar impressions
 - mobile CTR
 
 ### 4.2 内容迭代规则
@@ -269,6 +271,11 @@
 - 平均排名 5-10 且 CTR < 2%: 加 quick answer 和 FAQ。
 - 平均排名 10-20 且曝光持续增长: 增加内链和内容深度。
 - 时效页超过 7 天未更新: 标记为需要复查。
+
+已工具化:
+
+- `scripts/analyze-gsc-export.mjs` 会自动汇总 PRD 重点区域：首页、banner schedule、redeem codes、version hubs、pull planner、cross-game calendar。
+- 报告会按阈值输出下一步动作：重写 title/meta/首屏、增加 quick answer/FAQ、补内链和内容深度、或继续观察。
 
 ## Suggested Commit Breakdown
 
@@ -287,4 +294,3 @@
 - 多语言同步成本高，需要优先保证英文机会页，再同步中日文。
 - 当前部分动态 API 依赖 D1/R2，本计划中的工具首版应避免新增运行时绑定依赖。
 - 首页如果信息过多，会变成新的杂乱目录，需要保持模块数量克制。
-

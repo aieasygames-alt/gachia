@@ -3,6 +3,16 @@ import path from 'node:path';
 
 const DEFAULT_MIN_IMPRESSIONS = 100;
 const DEFAULT_OUTPUT_DIR = 'reports';
+const PRIMARY_CTR_TARGET = 0.03;
+const PAGE_CTR_TARGET = 0.02;
+const FOCUS_PAGE_PATTERNS = [
+  { key: 'homepage', label: 'Homepage', test: (page) => /^\/(?:zh|en|ja)$/.test(page) },
+  { key: 'banner', label: 'Banner schedules', test: (page) => page.includes('/guides/banner-schedule-guide') },
+  { key: 'redeem-codes', label: 'Redeem codes', test: (page) => page.includes('/redeem-codes') },
+  { key: 'version', label: 'Version hubs', test: (page) => page.includes('/version') },
+  { key: 'pull-planner', label: 'Pull planner', test: (page) => page.includes('/tools/pull-planner') },
+  { key: 'calendar', label: 'Cross-game calendar', test: (page) => page.includes('/calendar') },
+];
 
 function usage() {
   console.log(`Usage:
@@ -110,6 +120,10 @@ function formatNumber(value) {
   return Math.round(value).toLocaleString('en-US');
 }
 
+function normalizePageUrl(url) {
+  return String(url ?? '').replace(/^https:\/\/gachia\.com/, '') || '/';
+}
+
 function metricRow(row, dimensionName) {
   const impressions = numberValue(row.Impressions);
   const clicks = numberValue(row.Clicks);
@@ -130,6 +144,24 @@ function sortByOpportunity(a, b) {
   return b.potentialClicks - a.potentialClicks || b.impressions - a.impressions;
 }
 
+function actionRule(row) {
+  if (row.impressions > 1000 && row.ctr < 0.01) {
+    return 'Rewrite title/meta and first-screen answer';
+  }
+  if (row.position >= 5 && row.position <= 10 && row.ctr < 0.02) {
+    return 'Add quick answer and FAQ';
+  }
+  if (row.position > 10 && row.position <= 20 && row.impressions >= 100) {
+    return 'Add internal links and content depth';
+  }
+  return 'Monitor';
+}
+
+function classifyFocusPage(page) {
+  const normalized = normalizePageUrl(page);
+  return FOCUS_PAGE_PATTERNS.find((pattern) => pattern.test(normalized))?.label ?? '';
+}
+
 function markdownTable(headers, rows) {
   if (rows.length === 0) return '_No matching rows._';
   return [
@@ -148,6 +180,48 @@ function groupByGame(rows) {
     counts.set(game, (counts.get(game) ?? 0) + row.impressions);
   }
   return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8);
+}
+
+function focusPageSummary(rows) {
+  const grouped = new Map(
+    FOCUS_PAGE_PATTERNS.map((pattern) => [
+      pattern.label,
+      { clicks: 0, impressions: 0, positionWeight: 0, pages: 0 },
+    ])
+  );
+
+  for (const row of rows) {
+    const label = classifyFocusPage(row.name);
+    if (!label) continue;
+    const item = grouped.get(label);
+    if (!item) continue;
+    item.clicks += row.clicks;
+    item.impressions += row.impressions;
+    item.positionWeight += row.position * row.impressions;
+    item.pages += 1;
+  }
+
+  return [...grouped.entries()].map(([label, item]) => {
+    const ctr = item.impressions > 0 ? item.clicks / item.impressions : 0;
+    const position = item.impressions > 0 ? item.positionWeight / item.impressions : 0;
+    return { label, ...item, ctr, position };
+  });
+}
+
+function focusActionRows(rows) {
+  return rows
+    .map((row) => ({ ...row, page: normalizePageUrl(row.name), focus: classifyFocusPage(row.name) }))
+    .filter((row) => row.focus && row.impressions >= 50)
+    .sort(sortByOpportunity)
+    .slice(0, 12)
+    .map((row) => [
+      row.focus,
+      row.page,
+      formatNumber(row.impressions),
+      formatPercent(row.ctr),
+      row.position.toFixed(2),
+      actionRule(row),
+    ]);
 }
 
 function buildReport({ inputDir, minImpressions }) {
@@ -208,6 +282,16 @@ function buildReport({ inputDir, minImpressions }) {
     .map((row) => [row.name, formatNumber(row.clicks), formatNumber(row.impressions), formatPercent(row.ctr), row.position.toFixed(2)]);
 
   const gameRows = groupByGame(pages).map(([game, impressions]) => [game, formatNumber(impressions)]);
+  const focusRows = focusPageSummary(pages).map((row) => [
+    row.label,
+    formatNumber(row.pages),
+    formatNumber(row.clicks),
+    formatNumber(row.impressions),
+    formatPercent(row.ctr),
+    row.position > 0 ? row.position.toFixed(2) : '-',
+    row.ctr >= PRIMARY_CTR_TARGET ? 'On target' : row.impressions > 0 ? 'Needs work' : 'No data',
+  ]);
+  const focusActions = focusActionRows(pages);
 
   return `# GSC Performance Report
 
@@ -242,12 +326,21 @@ ${markdownTable(['Country', 'Clicks', 'Impressions', 'CTR', 'Position'], country
 
 ${markdownTable(['Game', 'Impressions'], gameRows)}
 
+## PRD Focus Pages
+
+${markdownTable(['Focus area', 'Pages', 'Clicks', 'Impressions', 'CTR', 'Position', 'Status'], focusRows)}
+
+## PRD Action Queue
+
+${markdownTable(['Focus area', 'Page', 'Impressions', 'CTR', 'Position', 'Next action'], focusActions)}
+
 ## Recommended Next Actions
 
 1. Rewrite titles/descriptions for the page CTR opportunities before creating new content.
 2. Add quick-answer sections for queries with high impressions, low CTR, and positions under 10.
 3. Prioritize internal links from game hubs and guide indexes to pages appearing in both page and query opportunity tables.
-4. Re-run this report after each GSC export and compare whether CTR upside is shrinking.
+4. Review the PRD action queue for homepage, banner, codes, version, pull planner, and calendar performance.
+5. Re-run this report after each GSC export and compare whether CTR upside is shrinking.
 `;
 }
 
