@@ -2,16 +2,19 @@ import { describe, expect, it } from 'vitest';
 import {
   HOMEPAGE_PRIORITY_GAMES,
   LIVE_BANNERS,
+  LIVE_CALENDAR_EVENTS,
   LIVE_CODE_SUMMARIES,
   LIVE_GUIDES,
   LIVE_VERSION_UPDATES,
   localizeText,
+  sortCalendarEvents,
   sortByPriority,
 } from '@/lib/live-content';
 
 const locales = ['zh', 'en', 'ja'] as const;
 const allLiveItems = [
   ...LIVE_BANNERS,
+  ...LIVE_CALENDAR_EVENTS,
   ...LIVE_CODE_SUMMARIES,
   ...LIVE_GUIDES,
   ...LIVE_VERSION_UPDATES,
@@ -37,5 +40,25 @@ describe('homepage live content', () => {
   it('sorts live modules by priority', () => {
     expect(sortByPriority([{ priority: 3 }, { priority: 1 }, { priority: 2 }]))
       .toEqual([{ priority: 1 }, { priority: 2 }, { priority: 3 }]);
+  });
+
+  it('has complete calendar events that sort by date', () => {
+    expect(LIVE_CALENDAR_EVENTS.length).toBeGreaterThan(0);
+
+    for (const event of LIVE_CALENDAR_EVENTS) {
+      expect(event.id.trim()).not.toBe('');
+      expect(event.href).toMatch(/^\//);
+      expect(event.timezone.trim()).not.toBe('');
+      expect(Date.parse(`${event.startsAt}T00:00:00Z`)).not.toBeNaN();
+      if (event.endsAt) {
+        expect(Date.parse(`${event.endsAt}T00:00:00Z`)).not.toBeNaN();
+      }
+    }
+
+    const sorted = sortCalendarEvents([
+      { ...LIVE_CALENDAR_EVENTS[0]!, startsAt: '2026-08-01', priority: 2 },
+      { ...LIVE_CALENDAR_EVENTS[1]!, startsAt: '2026-07-01', priority: 1 },
+    ]);
+    expect(sorted.map((event) => event.startsAt)).toEqual(['2026-07-01', '2026-08-01']);
   });
 });

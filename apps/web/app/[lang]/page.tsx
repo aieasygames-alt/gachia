@@ -115,6 +115,16 @@ const HOME_COPY = {
     en: 'Estimate pity gaps, days left, and risk',
     ja: '天井不足、残り日数、リスクを見積もる',
   },
+  calendar: {
+    zh: '查看跨游戏日历',
+    en: 'Open Calendar',
+    ja: 'カレンダーを見る',
+  },
+  calendarHint: {
+    zh: '版本、卡池、兑换码期限集中查看',
+    en: 'Versions, banners, and code deadlines',
+    ja: '版本、バナー、コード期限を確認',
+  },
   aboutTitle: {
     zh: '多游戏数据库，正在变成实时规划工具',
     en: 'A multi-game database becoming a live planning tool',
@@ -322,16 +332,28 @@ export default async function LocaleHome({
                 );
               })}
             </div>
-            <Link
-              href="/tools/pull-planner"
-              className="mt-5 inline-flex items-center gap-3 rounded-lg border border-game-primary/40 bg-game-primary/10 px-4 py-3 text-sm font-semibold text-game-primary transition-colors hover:bg-game-primary/15"
-            >
-              <Calculator className="h-4 w-4" aria-hidden="true" />
-              <span>{HOME_COPY.pullPlanner[locale]}</span>
-              <span className="hidden text-xs font-normal text-game-text-muted sm:inline">
-                {HOME_COPY.pullPlannerHint[locale]}
-              </span>
-            </Link>
+            <div className="mt-5 flex flex-wrap gap-2">
+              <Link
+                href="/tools/pull-planner"
+                className="inline-flex items-center gap-3 rounded-lg border border-game-primary/40 bg-game-primary/10 px-4 py-3 text-sm font-semibold text-game-primary transition-colors hover:bg-game-primary/15"
+              >
+                <Calculator className="h-4 w-4" aria-hidden="true" />
+                <span>{HOME_COPY.pullPlanner[locale]}</span>
+                <span className="hidden text-xs font-normal text-game-text-muted sm:inline">
+                  {HOME_COPY.pullPlannerHint[locale]}
+                </span>
+              </Link>
+              <Link
+                href="/calendar"
+                className="inline-flex items-center gap-3 rounded-lg border border-game-border px-4 py-3 text-sm font-semibold text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary"
+              >
+                <CalendarDays className="h-4 w-4" aria-hidden="true" />
+                <span>{HOME_COPY.calendar[locale]}</span>
+                <span className="hidden text-xs font-normal text-game-text-muted sm:inline">
+                  {HOME_COPY.calendarHint[locale]}
+                </span>
+              </Link>
+            </div>
           </div>
 
           <div className="grid gap-px bg-game-border md:grid-cols-2">

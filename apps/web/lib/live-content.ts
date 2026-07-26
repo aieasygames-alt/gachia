@@ -47,6 +47,29 @@ export interface LiveCodeSummary {
   priority: number;
 }
 
+export type LiveCalendarEventType =
+  | 'banner_start'
+  | 'banner_end'
+  | 'version_release'
+  | 'livestream'
+  | 'code_expiry'
+  | 'event_start'
+  | 'event_end';
+
+export interface LiveCalendarEvent {
+  id: string;
+  gameId: GameId;
+  type: LiveCalendarEventType;
+  title: LocalizedText;
+  summary: LocalizedText;
+  href: string;
+  startsAt: string;
+  endsAt?: string;
+  timezone: string;
+  updatedAt: string;
+  priority: number;
+}
+
 export const LIVE_UPDATED_AT = '2026-07-26';
 
 export const HOMEPAGE_PRIORITY_GAMES: GameId[] = [
@@ -270,10 +293,160 @@ export const LIVE_GUIDES: LiveGuideLink[] = [
   },
 ];
 
+export const LIVE_CALENDAR_EVENTS: LiveCalendarEvent[] = [
+  {
+    id: 'zzz-v3-1-release',
+    gameId: 'zzz',
+    type: 'version_release',
+    title: {
+      zh: '绝区零 3.1「The Long Goodbye」',
+      en: 'ZZZ v3.1 "The Long Goodbye"',
+      ja: 'ゼンゼロ v3.1「The Long Goodbye」',
+    },
+    summary: {
+      zh: '版本节点、2 周年、新代理人与平台入坑入口。',
+      en: 'Patch timing, 2nd anniversary, new agents, and platform starter routes.',
+      ja: '版本時期、2周年、新エージェント、プラットフォーム入門。',
+    },
+    href: '/zzz/version',
+    startsAt: '2026-07-29',
+    timezone: 'Asia/Shanghai',
+    updatedAt: LIVE_UPDATED_AT,
+    priority: 1,
+  },
+  {
+    id: 'wuwa-v3-5-release',
+    gameId: 'wuwa',
+    type: 'version_release',
+    title: {
+      zh: '鸣潮 3.5 版本',
+      en: 'WuWa v3.5 Version',
+      ja: '鳴潮 v3.5',
+    },
+    summary: {
+      zh: 'Yangyang: Xuanling、Suisui、SP 机制和 Xbox/Game Pass 入坑。',
+      en: 'Yangyang: Xuanling, Suisui, SP mechanics, and Xbox/Game Pass onboarding.',
+      ja: 'Yangyang: Xuanling、Suisui、SP機構、Xbox/Game Pass入門。',
+    },
+    href: '/wuwa/version',
+    startsAt: '2026-07-10',
+    timezone: 'Asia/Shanghai',
+    updatedAt: LIVE_UPDATED_AT,
+    priority: 2,
+  },
+  {
+    id: 'starrail-v4-4-release',
+    gameId: 'starrail',
+    type: 'version_release',
+    title: {
+      zh: '星穹铁道 4.4 / Fate 联动',
+      en: 'HSR v4.4 / Fate Collab',
+      ja: 'スターレイル v4.4 / Fate連動',
+    },
+    summary: {
+      zh: 'Himeko Nova、Fate/stay night、Rin/Gilgamesh 和星琼规划。',
+      en: 'Himeko Nova, Fate/stay night, Rin/Gilgamesh, and Jade planning.',
+      ja: 'Himeko Nova、Fate/stay night、Rin/Gilgamesh、星玉計画。',
+    },
+    href: '/starrail/version',
+    startsAt: '2026-07-02',
+    timezone: 'Asia/Shanghai',
+    updatedAt: LIVE_UPDATED_AT,
+    priority: 3,
+  },
+  {
+    id: 'genshin-luna-viii-release',
+    gameId: 'genshin',
+    type: 'version_release',
+    title: {
+      zh: '原神 Luna VIII 专题',
+      en: 'Genshin Luna VIII Hub',
+      ja: '原神 Luna VIII 特集',
+    },
+    summary: {
+      zh: 'Sandrone、Sunny Summer Fontinalia、活动日历和卡池规划。',
+      en: 'Sandrone, Sunny Summer Fontinalia, event routing, and banner planning.',
+      ja: 'Sandrone、Sunny Summer Fontinalia、イベント導線、バナー計画。',
+    },
+    href: '/genshin/version',
+    startsAt: '2026-07-15',
+    timezone: 'Asia/Shanghai',
+    updatedAt: LIVE_UPDATED_AT,
+    priority: 4,
+  },
+  {
+    id: 'starrail-livestream-codes-expire',
+    gameId: 'starrail',
+    type: 'code_expiry',
+    title: {
+      zh: '星穹铁道直播码复核',
+      en: 'HSR Livestream Codes Recheck',
+      ja: 'スターレイル配信コード再確認',
+    },
+    summary: {
+      zh: '直播码和版本码需要在抽卡前先核对有效状态。',
+      en: 'Recheck livestream and patch codes before planning pulls.',
+      ja: 'ガチャ計画前に配信コードと版本コードを再確認します。',
+    },
+    href: '/starrail/redeem-codes',
+    startsAt: '2026-07-26',
+    timezone: 'Asia/Shanghai',
+    updatedAt: LIVE_UPDATED_AT,
+    priority: 5,
+  },
+  {
+    id: 'wuwa-banner-planning',
+    gameId: 'wuwa',
+    type: 'banner_start',
+    title: {
+      zh: '鸣潮当前与下期卡池规划',
+      en: 'WuWa Current and Next Banner Planning',
+      ja: '鳴潮 現在と次回バナー計画',
+    },
+    summary: {
+      zh: '把角色池、武器池、兑换码和抽卡规划放到同一条路线。',
+      en: 'Connect character banners, weapon risk, codes, and pull planning.',
+      ja: 'キャラバナー、武器リスク、コード、ガチャ計画を接続します。',
+    },
+    href: '/wuwa/guides/banner-schedule-guide',
+    startsAt: '2026-07-26',
+    timezone: 'Asia/Shanghai',
+    updatedAt: LIVE_UPDATED_AT,
+    priority: 6,
+  },
+  {
+    id: 'nte-999-nights-event',
+    gameId: 'nte',
+    type: 'event_start',
+    title: {
+      zh: '异环 1.2「999 Nights」路线',
+      en: 'NTE v1.2 "999 Nights" Route',
+      ja: 'NTE v1.2「999 Nights」ルート',
+    },
+    summary: {
+      zh: 'Shinku、Iroi、活动资源、兑换码和新玩家下载入口。',
+      en: 'Shinku, Iroi, event resources, codes, and new-player download routes.',
+      ja: 'Shinku、Iroi、イベント資源、コード、新規DL導線。',
+    },
+    href: '/nte/version',
+    startsAt: '2026-07-26',
+    timezone: 'Asia/Shanghai',
+    updatedAt: LIVE_UPDATED_AT,
+    priority: 7,
+  },
+];
+
 export function localizeText(text: LocalizedText, locale: SupportedLocale): string {
   return text[locale] ?? text.zh;
 }
 
 export function sortByPriority<T extends { priority: number }>(items: T[]): T[] {
   return [...items].sort((a, b) => a.priority - b.priority);
+}
+
+export function sortCalendarEvents(events: LiveCalendarEvent[]): LiveCalendarEvent[] {
+  return [...events].sort((a, b) => {
+    const dateDiff = Date.parse(`${a.startsAt}T00:00:00Z`) - Date.parse(`${b.startsAt}T00:00:00Z`);
+    return dateDiff === 0 ? a.priority - b.priority : dateDiff;
+  });
 }
