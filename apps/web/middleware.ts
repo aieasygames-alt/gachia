@@ -65,6 +65,22 @@ export default function middleware(request: NextRequest) {
   const locale = asLocale(firstSegment);
   const game = asGame(locale ? secondSegment : firstSegment);
 
+  if (game && !locale) {
+    const cleanedSecondSegment = stripLabelSuffix(secondSegment);
+    const cleanedThirdSegment = stripLabelSuffix(thirdSegment);
+
+    if (secondSegment && !thirdSegment && cleanedSecondSegment) {
+      const indexableRoutes = INDEXABLE_GAME_ROUTES[game];
+      if (indexableRoutes.includes(cleanedSecondSegment)) {
+        return redirectTo(request, `/${DEFAULT_CANONICAL_LOCALE}/${game}/${cleanedSecondSegment}`);
+      }
+    }
+
+    if (secondSegment && thirdSegment && cleanedThirdSegment) {
+      return redirectTo(request, `/${DEFAULT_CANONICAL_LOCALE}/${game}/${secondSegment}/${cleanedThirdSegment}`);
+    }
+  }
+
   const normalizedSegments = segments.map((segment) =>
     decodeURIComponent(segment).trim().replace(/\s+/g, '-')
   );
@@ -123,19 +139,6 @@ export default function middleware(request: NextRequest) {
   // Redirect legacy lang-less game URLs to one stable canonical locale.
   if (game && !locale) {
     const targetLocale = DEFAULT_CANONICAL_LOCALE;
-    const cleanedSecondSegment = stripLabelSuffix(secondSegment);
-    const cleanedThirdSegment = stripLabelSuffix(thirdSegment);
-
-    if (secondSegment && !thirdSegment && cleanedSecondSegment) {
-      const indexableRoutes = INDEXABLE_GAME_ROUTES[game];
-      if (indexableRoutes.includes(cleanedSecondSegment)) {
-        return redirectTo(request, `/${targetLocale}/${game}/${cleanedSecondSegment}`);
-      }
-    }
-
-    if (secondSegment && thirdSegment && cleanedThirdSegment) {
-      return redirectTo(request, `/${targetLocale}/${game}/${secondSegment}/${cleanedThirdSegment}`);
-    }
 
     if (secondSegment && !thirdSegment) {
       const indexableRoutes = INDEXABLE_GAME_ROUTES[game];
