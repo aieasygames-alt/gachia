@@ -1203,9 +1203,21 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
   const hasBuild = !!(build && (build as unknown as Record<string, unknown>).bestLightConeEn);
   const buildLC = hasBuild ? starrailLightCones.find(lc => lc.nameEn.toLowerCase() === build.bestLightConeEn.toLowerCase() || lc.name === build.bestLightCone) : undefined;
   const buildRelic = hasBuild ? starrailRelicSets.find(rs => rs.nameEn.toLowerCase() === build.bestRelicSetEn.toLowerCase() || rs.name === build.bestRelicSet) : undefined;
+  const buildPlanarName = hasBuild ? localeStr(
+    (build as unknown as { bestPlanarOrnament?: unknown }).bestPlanarOrnament,
+    (build as unknown as { bestPlanarOrnamentEn?: unknown }).bestPlanarOrnamentEn,
+    locale
+  ) : '';
+  const buildSubStats = hasBuild
+    ? (locale === 'zh'
+      ? (build as unknown as { subStatPriority?: string[] }).subStatPriority
+      : (build as unknown as { subStatPriorityEn?: string[]; subStatPriority?: string[] }).subStatPriorityEn)
+      ?? (build as unknown as { subStatPriority?: string[] }).subStatPriority
+      ?? []
+    : [];
 
   // JSON-LD structured data
-  const faq = char.faq.length > 0
+  const faq = (char.faq?.length ?? 0) > 0
     ? char.faq.map((f) => ({
         question: locale === 'zh' ? f.questionZh : f.question,
         answer: locale === 'zh' ? f.answerZh : f.answer,
@@ -1360,21 +1372,23 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
               <Link href={buildRelic ? `/starrail/artifacts#${buildRelic.id}` : '/starrail/artifacts'} className="text-sm font-medium text-game-primary transition-colors hover:text-game-accent">
                 {localeStr(build.bestRelicSet, build.bestRelicSetEn, locale)}
               </Link>
-              <p className="mt-1 text-xs text-game-text-muted">
-                {locale === 'zh' ? '位面饰品' : 'Planar'}:{' '}
-                <Link href="/starrail/artifacts" className="text-game-primary hover:text-game-accent transition-colors">
-                  {localeStr(build.bestPlanarOrnament, build.bestPlanarOrnamentEn, locale)}
-                </Link>
-              </p>
+              {buildPlanarName && (
+                <p className="mt-1 text-xs text-game-text-muted">
+                  {locale === 'zh' ? '位面饰品' : 'Planar'}:{' '}
+                  <Link href="/starrail/artifacts" className="text-game-primary hover:text-game-accent transition-colors">
+                    {buildPlanarName}
+                  </Link>
+                </p>
+              )}
             </div>
           </div>
-          {(build.subStatPriority.length > 0 || build.subStatPriorityEn.length > 0) && (
+          {buildSubStats.length > 0 && (
             <div className="mt-3 rounded-lg border border-game-border bg-game-surface p-4">
               <h3 className="mb-2 font-semibold text-game-text">
                 {locale === 'zh' ? '副词条优先级' : 'Substat Priority'}
               </h3>
               <div className="flex flex-wrap gap-2">
-                {(locale === 'zh' ? build.subStatPriority : build.subStatPriorityEn).map((stat, i) => (
+                {buildSubStats.map((stat, i) => (
                   <span key={i} className="rounded bg-game-surface-alt px-2 py-1 text-xs text-game-text-muted">{stat}</span>
                 ))}
               </div>
@@ -1466,10 +1480,14 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
   );
 }
 
-function localeStr(zh: string, en: string, locale: SupportedLocale, ja?: string): string {
-  if (locale === 'en') return en;
-  if (locale === 'ja') return ja ?? zh;
-  return zh;
+function localeStr(zh: unknown, en: unknown, locale: SupportedLocale, ja?: unknown): string {
+  const zhText = typeof zh === 'string' ? zh : '';
+  const enText = typeof en === 'string' ? en : zhText;
+  const jaText = typeof ja === 'string' ? ja : zhText || enText;
+
+  if (locale === 'en') return enText || zhText || jaText;
+  if (locale === 'ja') return jaText || zhText || enText;
+  return zhText || enText || jaText;
 }
 
 function buildBreadcrumbJsonLd(gameId: GameId, charName: string, locale: SupportedLocale) {
@@ -1674,6 +1692,25 @@ function WuWaCharacterDetail({ char, locale }: { char: WuWaCharacter; locale: Su
   const elementName = WUWA_ELEMENT_NAMES[char.element]?.[locale] ?? char.element;
   const weaponLabel = WUWA_WEAPON_LABELS[char.weaponType]?.[locale] ?? char.weaponType;
   const charName = getWuWaCharacterName(char, locale);
+  const skills = char.skills as unknown as Record<string, {
+    name?: string;
+    nameEn?: string;
+    description?: string;
+    descriptionEn?: string;
+    cooldown?: string;
+  }> | undefined;
+  const skillItems = [
+    { key: 'basicAtk', label: locale === 'zh' ? '普攻' : 'Basic Attack', fallbackName: locale === 'zh' ? '普攻' : 'Basic Attack' },
+    { key: 'resonanceSkill', label: locale === 'zh' ? '共鸣技能' : 'Resonance Skill', fallbackName: locale === 'zh' ? '共鸣技能' : 'Resonance Skill' },
+    { key: 'resonanceLiberation', label: locale === 'zh' ? '共鸣解放' : 'Resonance Liberation', fallbackName: locale === 'zh' ? '共鸣解放' : 'Resonance Liberation' },
+    { key: 'forteCircuit', label: locale === 'zh' ? '固有技能' : 'Forte Circuit', fallbackName: locale === 'zh' ? '固有技能' : 'Forte Circuit' },
+    { key: 'introSkill', label: locale === 'zh' ? '变奏技能' : 'Intro Skill', fallbackName: locale === 'zh' ? '变奏技能' : 'Intro Skill' },
+    { key: 'outroSkill', label: locale === 'zh' ? '延奏技能' : 'Outro Skill', fallbackName: locale === 'zh' ? '延奏技能' : 'Outro Skill' },
+  ].map((item) => {
+    const skill = skills?.[item.key];
+    if (!skill?.description && !skill?.descriptionEn) return null;
+    return { ...item, skill };
+  }).filter((item): item is NonNullable<typeof item> => Boolean(item));
   const rawFaq = (char as WuWaCharacter & {
     faq?: { questionZh?: string; question?: string; answerZh?: string; answer?: string }[];
   }).faq;
@@ -1773,29 +1810,18 @@ function WuWaCharacterDetail({ char, locale }: { char: WuWaCharacter; locale: Su
       </Section>
 
       {/* Skills */}
-      {char.skills && (
+      {skillItems.length > 0 && (
         <Section title={locale === 'zh' ? '技能' : locale === 'ja' ? 'スキル' : 'Skills'}>
           <div className="space-y-3">
-            <SkillItem name={localeStr(char.skills.basicAtk.name, char.skills.basicAtk.nameEn, locale)}
-              desc={localeStr(char.skills.basicAtk.description, char.skills.basicAtk.descriptionEn, locale)}
-              label={locale === 'zh' ? '普攻' : 'Basic Attack'} />
-            <SkillItem name={localeStr(char.skills.resonanceSkill.name, char.skills.resonanceSkill.nameEn, locale)}
-              desc={localeStr(char.skills.resonanceSkill.description, char.skills.resonanceSkill.descriptionEn, locale)}
-              label={locale === 'zh' ? '共鸣技能' : 'Resonance Skill'}
-              extra={char.skills.resonanceSkill.cooldown} />
-            <SkillItem name={localeStr(char.skills.resonanceLiberation.name, char.skills.resonanceLiberation.nameEn, locale)}
-              desc={localeStr(char.skills.resonanceLiberation.description, char.skills.resonanceLiberation.descriptionEn, locale)}
-              label={locale === 'zh' ? '共鸣解放' : 'Resonance Liberation'}
-              extra={char.skills.resonanceLiberation.cooldown} />
-            <SkillItem name={localeStr(char.skills.forteCircuit.name, char.skills.forteCircuit.nameEn, locale)}
-              desc={localeStr(char.skills.forteCircuit.description, char.skills.forteCircuit.descriptionEn, locale)}
-              label={locale === 'zh' ? '固有技能' : 'Forte Circuit'} />
-            <SkillItem name={localeStr(char.skills.introSkill.name, char.skills.introSkill.nameEn, locale)}
-              desc={localeStr(char.skills.introSkill.description, char.skills.introSkill.descriptionEn, locale)}
-              label={locale === 'zh' ? '变奏技能' : 'Intro Skill'} />
-            <SkillItem name={localeStr(char.skills.outroSkill.name, char.skills.outroSkill.nameEn, locale)}
-              desc={localeStr(char.skills.outroSkill.description, char.skills.outroSkill.descriptionEn, locale)}
-              label={locale === 'zh' ? '延奏技能' : 'Outro Skill'} />
+            {skillItems.map(({ key, label, fallbackName, skill }) => (
+              <SkillItem
+                key={key}
+                name={localeStr(skill.name ?? fallbackName, skill.nameEn ?? fallbackName, locale)}
+                desc={localeStr(skill.description, skill.descriptionEn, locale)}
+                label={label}
+                extra={skill.cooldown}
+              />
+            ))}
           </div>
         </Section>
       )}

@@ -14,8 +14,11 @@ type LocaleId = (typeof LOCALE_IDS)[number];
 const LEGACY_CHARACTER_LIST_REDIRECTS: Partial<Record<GameId, readonly string[]>> = {
   endfield: ['angelina', 'saria', 'amiya', 'surtr', 'hound', 'fang', 'silverash', 'texas', 'orchid', 'exusiai'],
   nte: ['lacrimosa'],
+  sea: ['princess', 'gail', 'edward'],
   starrail: ['griseo'],
 };
+
+const LEGACY_STARRAIL_ITEM_SLUGS = ['ancient-spar', 'scorched-acorn', 'storm-eye', 'void-cast-iron'] as const;
 
 const INDEXABLE_GAME_ROUTES: Record<GameId, readonly string[]> = {
   genshin: ['characters', 'weapons', 'items', 'tier-list', 'calculator', 'map', 'guides', 'artifacts', 'build', 'version', 'download', 'compare', 'teams', 'redeem-codes'],
@@ -45,6 +48,16 @@ function redirectTo(request: NextRequest, pathname: string, clearSearch = false)
   return NextResponse.redirect(url, 301);
 }
 
+function stripLabelSuffix(segment?: string) {
+  if (!segment) return undefined;
+  const stripped = decodeURIComponent(segment)
+    .replace(/[：:].*$/, '')
+    .replace(/[-\s]*[^\x00-\x7F].*$/, '')
+    .trim()
+    .replace(/-+$/, '');
+  return stripped && stripped !== segment ? stripped : undefined;
+}
+
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const segments = pathname.split('/').filter(Boolean);
@@ -71,7 +84,7 @@ export default function middleware(request: NextRequest) {
   }
 
   // Repair historical URLs that dropped the game segment.
-  if (locale && secondSegment === 'items' && thirdSegment === 'stagnant-shadow-shape-of-abundance') {
+  if (locale && secondSegment === 'items' && thirdSegment && (thirdSegment === 'stagnant-shadow-shape-of-abundance' || LEGACY_STARRAIL_ITEM_SLUGS.includes(thirdSegment as typeof LEGACY_STARRAIL_ITEM_SLUGS[number]))) {
     return redirectTo(request, `/${locale}/starrail/items/${thirdSegment}`);
   }
 
@@ -82,6 +95,10 @@ export default function middleware(request: NextRequest) {
   // Old Star Rail slug without the canonical hyphen.
   if (locale && secondSegment === 'starrail' && thirdSegment === 'characters' && fourthSegment === 'jingyuan') {
     return redirectTo(request, `/${locale}/starrail/characters/jing-yuan`);
+  }
+
+  if (locale && secondSegment === 'starrail' && thirdSegment === 'characters' && fourthSegment === 'preservation-trailblazer') {
+    return redirectTo(request, `/${locale}/starrail/characters`);
   }
 
   // Wuthering Waves echo detail pages are live, but there is no standalone echo index.
@@ -106,6 +123,19 @@ export default function middleware(request: NextRequest) {
   // Redirect legacy lang-less game URLs to one stable canonical locale.
   if (game && !locale) {
     const targetLocale = DEFAULT_CANONICAL_LOCALE;
+    const cleanedSecondSegment = stripLabelSuffix(secondSegment);
+    const cleanedThirdSegment = stripLabelSuffix(thirdSegment);
+
+    if (secondSegment && !thirdSegment && cleanedSecondSegment) {
+      const indexableRoutes = INDEXABLE_GAME_ROUTES[game];
+      if (indexableRoutes.includes(cleanedSecondSegment)) {
+        return redirectTo(request, `/${targetLocale}/${game}/${cleanedSecondSegment}`);
+      }
+    }
+
+    if (secondSegment && thirdSegment && cleanedThirdSegment) {
+      return redirectTo(request, `/${targetLocale}/${game}/${secondSegment}/${cleanedThirdSegment}`);
+    }
 
     if (secondSegment && !thirdSegment) {
       const indexableRoutes = INDEXABLE_GAME_ROUTES[game];
