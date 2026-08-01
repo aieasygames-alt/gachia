@@ -1079,5 +1079,20 @@
       }
     ],
     "date": "2026-07-21"
+  },
+  {
+    "id": "xbox-game-pass-week-two-catchup",
+    "title": "鸣潮 Xbox / Game Pass 第二周追赶路线：3.5 活动、声骸、手柄设置和抽卡止损",
+    "titleEn": "Wuthering Waves Xbox / Game Pass Week-Two Catch-Up: v3.5 Events, Echoes, Controller Setup, and Pull Budget",
+    "titleJa": "鳴潮 Xbox / Game Pass 2週目追いつきルート：v3.5イベント、音骸、コントローラー、ガチャ予算",
+    "category": "beginner",
+    "categoryZh": "新手入门",
+    "categoryEn": "Beginner",
+    "categoryJa": "初心者",
+    "summary": "面向 Steam、Xbox、Game Pass 入坑第二周玩家，整理 3.5 活动追赶、声骸入门、手柄设置、Yangyang/Suisui 抽卡止损和每日优先级。",
+    "summaryEn": "A week-two catch-up route for Steam, Xbox, and Game Pass newcomers covering v3.5 events, Echo basics, controller tuning, Yangyang/Suisui pull budgeting, and daily priorities.",
+    "summaryJa": "Steam、Xbox、Game Pass新規の2週目向けに、v3.5イベント、音骸、操作設定、Yangyang/Suisui判断、毎日優先度を整理します。",
+    "content": "## 先看结论\n\n鸣潮 3.5 第二周，新平台玩家最该补的不是毕业声骸，而是活动进度、账号稳定、手柄手感和一个能持续推进的主队。Yangyang: Xuanling / Suisui 可以继续评估，但不要因为社媒剪辑就把 Astrite 全部花空。\n\n## 第二周优先级\n\n| 优先级 | 动作 | 为什么 |\n| --- | --- | --- |\n| 1 | 清主线和 3.5 限时活动 | 先拿资源和解锁内容 |\n| 2 | 调手柄、镜头和画质 | 操作稳定比纸面强度更影响体验 |\n| 3 | 建一套可用声骸 | 不追毕业，先能打 |\n| 4 | 领取兑换码和邮件 | 补 Astrite 缺口 |\n| 5 | 复盘抽卡预算 | 再判断 Yangyang / Suisui |\n\n## 声骸第二周怎么刷\n\n第二周不建议直接追满词条。先做三件事：确定主力角色、凑对 Sonata 套装、保证主词条方向不离谱。副词条毕业可以晚一点，前期更重要的是队伍能稳定推活动和周常。\n\n## 手柄和云游戏排错\n\nXbox / Game Pass 玩家如果感觉战斗不顺，先检查：\n\n- 镜头灵敏度是否过高或过低。\n- 闪避、锁定、切人是否顺手。\n- 云游戏是否有延迟导致弹反失败。\n- 性能模式是否比画质模式更稳定。\n- 是否误用不同账号导致进度不一致。\n\n## 抽卡止损线\n\n如果你只够一次保底，建议先决定一个目标。Yangyang: Xuanling、Suisui、武器和后续版本不能全都要。新玩家更适合先补主队可用性，再追高投入上限。\n\n## FAQ\n\n### 第二周还来得及追 3.5 活动吗？\n\n通常来得及补一部分，但要先看活动结束时间和前置任务。优先做限时奖励，再做可长期补的探索内容。\n\n### 声骸要现在刷毕业吗？\n\n不需要。第二周先凑可用套装和主词条，让队伍能稳定过内容，毕业副词条留到资源更宽裕时。\n\n### Game Pass 云游戏适合长期玩吗？\n\n适合轻量体验和低配设备，但如果你对闪避、弹反和高难挑战要求高，需要确认延迟是否稳定。",
+    "contentEn": "## Quick answer\n\nIn week two, new Steam/Xbox/Game Pass players should focus on event catch-up, controller comfort, a usable Echo set, codes, and pull-budget discipline. Do not spend all Astrite because of short social clips.\n\n## Priority table\n\n| Priority | Action |\n|---|---|\n| 1 | Clear story gates and v3.5 events |\n| 2 | Tune controller and camera |\n| 3 | Build usable Echo sets |\n| 4 | Claim codes and mail |\n| 5 | Recalculate Yangyang/Suisui budget |\n\n## FAQ\n\n### Should I farm perfect Echoes now?\n\nNo. Build usable sets first, then chase substat optimization later.\n\n### Is cloud play enough?\n\nIt can be, but test latency before relying on it for parry-heavy combat."
   }
 ]

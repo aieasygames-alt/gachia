@@ -1870,5 +1870,20 @@
       }
     ],
     "date": "2026-07-21"
+  },
+  {
+    "id": "iroi-phase-prep-guide",
+    "title": "异环 Iroi 预热期准备指南：999 Nights 后资源、Shinku 取舍、兑换码和每日清单",
+    "titleEn": "NTE Iroi Phase Prep Guide: Post-999 Nights Resources, Shinku Trade-Offs, Codes, and Daily Checklist",
+    "titleJa": "異環 Iroi準備ガイド：999 Nights後の資源、Shinku判断、コード、毎日チェック",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "categoryJa": "バージョン攻略",
+    "summary": "面向 Iroi 预热和 1.2 后半搜索，整理 Shinku 当前池后的资源止损、兑换码检查、活动每日路线和保底预留。",
+    "summaryEn": "A late-v1.2 Iroi preparation guide covering Shinku trade-offs, resource preservation, codes, daily tasks, and pity planning.",
+    "summaryJa": "Iroi準備とv1.2後半向けに、Shinkuとの取捨選択、資源維持、コード、毎日タスク、天井計画を整理します。",
+    "content": "## 先看结论\n\n如果你已经在 999 Nights 期间抽过 Shinku，Iroi 预热期最重要的是止损和盘点资源；如果你还没抽，最重要的是确认自己到底需要当前战力，还是更想留给 Iroi。\n\n这页不重复 999 Nights 模式玩法，重点解决“现在该不该停手、每天还要做什么、资源够不够下一期”。\n\n## Iroi 预热期资源表\n\n| 状态 | 建议 | 风险 |\n| --- | --- | --- |\n| 已抽到 Shinku | 先停手盘点资源 | 继续追武器可能影响 Iroi |\n| Shinku 歪了 | 算大保底价值 | 情绪补票最容易亏 |\n| 没抽但心动 | 等实测和后续公告 | 错过当前池即时体验 |\n| 只够一次保底 | 二选一 | 不建议双追 |\n| 新玩家 | 先补基础系统 | 抽到也可能养不起 |\n\n## 每日清单\n\n1. 先做 999 Nights 限时任务。\n2. 领取兑换码、邮件和活动奖励。\n3. 记录当天新增抽卡资源。\n4. 清体力，补主队材料。\n5. 不确定目标时，不碰武器池和外观消费。\n6. 等 Iroi 信息更明确后再更新抽卡计划。\n\n## Shinku 之后要不要追武器\n\n只有在三个条件都满足时才建议考虑：你已经确定 Shinku 是长期核心、主队材料跟得上、追武器后仍不影响 Iroi 或后续角色。否则武器池很容易把后半资源吃空。\n\n## FAQ\n\n### Iroi 预热期该囤什么？\n\n优先囤抽卡资源、通用养成材料和当前主队刚需材料。不要为未公布细节提前消耗高价值资源。\n\n### Shinku 没抽到还要继续吗？\n\n先算距离保底还差多少，再看是否真的缺她的定位。如果只是被当前热度影响，可以等 Iroi 信息和实测再决定。\n\n### 新玩家现在追 Iroi 来得及吗？\n\n来得及准备，但不要跳过下载、兑换码、基础系统和主队养成。资源规划比盲抽更重要。",
+    "contentEn": "## Quick answer\n\nDuring the Iroi warm-up phase, count resources before chasing more Shinku pulls or weapons. If you already pulled Shinku, stop and recalculate. If you have not, decide whether you need current power or prefer saving for Iroi.\n\n## Daily checklist\n\n| Step | Action |\n|---|---|\n| 1 | Finish limited 999 Nights tasks |\n| 2 | Claim codes and mail |\n| 3 | Track daily pull income |\n| 4 | Spend stamina on core-team materials |\n| 5 | Avoid weapon/skin spending if undecided |\n\n## FAQ\n\n### Should I chase Shinku's weapon?\n\nOnly if Shinku is a long-term core and you can still afford Iroi or later targets.\n\n### Can new players prepare for Iroi?\n\nYes, but finish onboarding, codes, events, and basic team building first."
   }
 ]

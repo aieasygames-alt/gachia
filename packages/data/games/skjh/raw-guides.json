@@ -1423,5 +1423,20 @@
       }
     ],
     "date": "2026-07-21"
+  },
+  {
+    "id": "s1-midseason-survival-checklist",
+    "title": "失控进化 S1 中期生存清单：反作弊、自定义服、换服、电力和独狼追赶路线",
+    "titleEn": "Ashfall Evolution S1 Midseason Survival Checklist: Anti-Cheat, Custom Servers, Wipes, Electricity, and Solo Catch-Up",
+    "titleJa": "失控進化 S1中盤サバイバルチェックリスト：チート対策、カスタムサーバー、ワイプ、電力、ソロ追いつき",
+    "category": "system",
+    "categoryZh": "系统机制",
+    "categoryEn": "Systems",
+    "categoryJa": "システム",
+    "summary": "面向 S1 中期和首周后回流玩家，整理反作弊举报、服务器周期、自定义模式、电力自动化和独狼/双人补发育路线。",
+    "summaryEn": "A midseason S1 survival checklist for returners and late starters, covering anti-cheat reports, wipes, custom servers, electricity, and solo/duo recovery routes.",
+    "summaryJa": "S1中盤の復帰・後発向けに、通報、ワイプ、カスタムサーバー、電力、ソロ/デュオ復帰ルートを整理します。",
+    "content": "## 先看结论\n\nS1 中期的重点不是重新学一遍开荒，而是判断自己在哪个问题上掉队：服务器环境、外挂/非法组队、基地被抄、电力不会接，还是独狼资源循环断了。先定位问题，再决定换服、补电力、改房型或去自定义服练习。\n\n公开报道提到，失控进化上线阶段围绕多模式、反作弊、多端互通和新手体验做了重点沟通。对玩家来说，真正有用的是把这些信息转成每天能执行的路线。\n\n参考来源：[游戏时光上线报道](https://www.vgtime.com/news/teUl9RBGzC94Lmc77DEnrA%3D%3D)、[腾讯游戏官方活动页](https://skjh.qq.com/cp/a20260119skjh/?e_code=552707)、站内反作弊与自定义模式指南。\n\n## 先判断你卡在哪里\n\n| 症状 | 优先处理 | 关联页面 |\n| --- | --- | --- |\n| 总被异常玩家击杀 | 举报证据与换线判断 | anti-cheat-reporting-guide |\n| 上线家就没了 | 选址、防抄家、维护 | base-location-anti-raid-plan |\n| 进服太晚追不上 | 换服周期和低风险路线 | server-wipe-cycle-guide |\n| 不会接自动化 | 太阳能、风电、储能 | electricity-guide |\n| 想练枪或练建筑 | 自定义模式 / 社区服 | custom-mode-community-server-guide |\n\n## S1 中期每日路线\n\n1. 登录后先确认基地维护和领地柜。\n2. 检查门、墙体和外部睡袋是否被试探。\n3. 低风险路线跑一圈，只带能承受损失的装备。\n4. 废料优先补科技树关键节点，不乱点炫技分支。\n5. 晚上或离线前补门、电力和储物分散。\n6. 遇到疑似外挂或非法组队，先录证据再举报，不要只在聊天频道争吵。\n\n## 独狼追赶路线\n\n独狼中期追赶不靠硬刚大队，靠低曝光和高频回收：\n\n- 家搬到低交通区域。\n- 睡袋铺在资源点和撤离路线上。\n- 只跑自己能稳定带回的据点。\n- 核心先石质，资源分散存。\n- 不主动制造长期仇恨。\n\n## 小队中期复盘\n\n小队最常见问题是扩建太快，维护和防守跟不上。建议每天复盘三件事：谁负责资源、谁负责侦查、谁负责电力和防御。没有分工的小队，在 S1 中期会比独狼更容易破产。\n\n## FAQ\n\n### S1 中期还适合入坑吗？\n\n适合，但不要进老服硬追大队。优先选择新周期、低压力服务器或自定义模式练习，再把开荒路线迁移到标准环境。\n\n### 遇到外挂先做什么？\n\n先保留录像、时间、服务器、玩家 ID 和战斗过程，再通过官方举报入口提交。证据越完整，处理越容易闭环。\n\n### 电力系统什么时候学？\n\n有稳定石质核心、维护和基础武器后就可以学。先从太阳能/风电、储能和自动灯/门禁开始，不要一上来做复杂陷阱。",
+    "contentEn": "## Quick answer\n\nMidseason S1 is about diagnosing your bottleneck: server pressure, suspicious players, base defense, electricity, or broken solo routes. Fix the bottleneck before chasing bigger raids.\n\n## Checklist\n\n| Problem | First fix |\n|---|---|\n| Suspicious deaths | Record and report evidence |\n| Base always raided | Rework location and cabinet protection |\n| Joined too late | Pick a better wipe cycle |\n| No automation | Learn basic power and storage |\n| Need practice | Use custom/community servers |\n\n## FAQ\n\n### Is midseason too late to start?\n\nNo, but choose lower-pressure servers or a fresh cycle instead of fighting entrenched groups immediately.\n\n### What should solo players do first?\n\nKeep a low-profile base, spread bags, run safe loops, and avoid creating expensive grudges."
   }
 ]

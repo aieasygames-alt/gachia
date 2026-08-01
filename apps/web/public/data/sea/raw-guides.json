@@ -3124,5 +3124,56 @@
         "answer": "It is a Traveler face component. Check customization/appearance menus and use it for screenshots."
       }
     ]
+  },
+  {
+    "id": "gamescom-demo-review-gameplay-faq",
+    "title": "《遗忘之海》gamescom Demo 体验 FAQ：试玩反馈、海战节奏、移动端和正式版该看什么",
+    "titleEn": "Sea of Remnants gamescom Demo FAQ: Gameplay Feedback, Naval Combat, Mobile, and Launch Expectations",
+    "category": "event",
+    "categoryZh": "活动攻略",
+    "categoryEn": "Event",
+    "summary": "围绕 gamescom 2026 试玩和社媒讨论，把 Demo 体验、海战节奏、岛屿探索、移动端表现和正式版预期整理成玩家可读的 FAQ。",
+    "summaryEn": "A player-facing FAQ for gamescom 2026 demo impressions, covering combat pacing, island exploration, mobile expectations, and what to verify before launch.",
+    "tags": [
+      "gamescom 2026",
+      "Demo",
+      "试玩反馈",
+      "海战",
+      "岛屿探索",
+      "移动端",
+      "正式版"
+    ],
+    "content": "## 先给结论\n\n《遗忘之海》参加 gamescom 2026 后，玩家最关心的不是“有没有 Demo”，而是 Demo 能不能说明正式版体验：海战是否爽快、岛屿探索是否重复、移动端是否稳、账号和进度是否会影响正式版。\n\n目前建议把 gamescom 试玩当成“玩法观感样本”，不要当成最终强度、抽卡或长期养成结论。公开信息可以确认的是官方参展和试玩窗口，具体内容、奖励、进度继承和上线节奏仍以官方后续公告为准。\n\n参考来源：[Sea of Remnants 官方 Facebook](https://www.facebook.com/seaofremnants/?locale=zh_CN)、[Steam 商店页](https://steamcommunity.com/app/3633680?l=tchinese)、[失落海域第二幕准备](/zh/sea/guides/lost-sea-act-two-july-30-prep-guide)。\n\n## Demo 后优先看什么\n\n| 关注点 | 应该看 | 暂时别下结论 |\n|---|---|---|\n| 海战 | 操作反馈、炮击节奏、镜头稳定 | 船只终局强度排行 |\n| 岛屿探索 | 解谜密度、跑图距离、采集循环 | 全地图资源最优路线 |\n| 角色体验 | 普攻、技能、队伍节奏 | 最终 T0/T1 强度 |\n| 移动端 | 帧率、发热、触控误触 | 全机型优化结论 |\n| 社交热度 | 试玩视频、截图、讨论关键词 | 未公布奖励和保底规则 |\n\n## 试玩反馈怎么判断可信度\n\n1. 优先看完整实机片段，不只看剪辑高光。\n2. 区分 PC/主机/移动端画面，不把平台差异混成同一结论。\n3. 看玩家是否说明设备、画质、网络和手柄/触屏输入。\n4. 不用单次 Demo 结果判断正式版经济系统。\n5. 遇到“必抽、必买、必囤”这类结论，先等版本内实测。\n\n## 移动端玩家要额外确认\n\n移动端搜索通常集中在下载、配置、发热和账号。Demo 讨论升温后，建议先看：\n\n- iOS / Android 是否已有明确入口。\n- 云游戏和普通客户端有什么区别。\n- 手机容量是否够更新包和后续资源。\n- 触控海战是否容易误操作。\n- 账号是否能和 PC/其他平台保持一致。\n\n如果你的手机配置边缘，更建议先看云端或低画质方案，不要第一天就把画质拉满。\n\n## 和 7 月 30 日内容怎么衔接\n\n7 月 30 日失落海域第二幕已经把搜索重点从“下载与首发”推到“新岛、新船、活动和联动”。gamescom Demo 页更适合回答海外曝光和试玩反馈带来的新问题，再引导玩家回到正式开荒内容。\n\n推荐阅读顺序：\n\n1. [7 月 30 日第二幕准备](/zh/sea/guides/lost-sea-act-two-july-30-prep-guide)\n2. [新岛与流浪烟花号准备](/zh/sea/guides/lost-sea-new-islands-ship-prep-guide)\n3. [第五人格联动签到](/zh/sea/guides/identity-v-signin-screenshot-rewards-guide)\n4. [云游戏与普通客户端区别](/zh/sea/guides/cloud-sea-download-crossplay-guide)\n\n## FAQ\n\n### gamescom Demo 的进度会继承吗？\n\n目前不建议默认继承。试玩 Demo 通常用于展示玩法和收集反馈，是否保留角色、资源、奖励或账号记录，要等官方明确公告。\n\n### Demo 体验能代表正式版强度吗？\n\n不能完全代表。Demo 更适合观察手感、画面、系统入口和内容方向，正式版的数值、资源、抽卡和活动节奏可能会继续调整。\n\n### 现在最值得补哪类页面？\n\n优先补 Demo 体验 FAQ、移动端排错、失落海域第二幕路线、新船准备和联动奖励清单。这些问题更接近玩家真实搜索。",
+    "contentEn": "## Quick answer\n\nTreat the gamescom 2026 demo as a gameplay sample, not as final balance proof. Use it to judge naval combat feel, island exploration density, mobile comfort, and account/download expectations, then wait for official notices before making gacha or progression decisions.\n\nSource references: Sea of Remnants official Facebook, Steam community page, and the Act II preparation guide.\n\n## What to check after the demo\n\n| Topic | Good signal | Do not overread |\n|---|---|---|\n| Naval combat | Controls, pacing, camera | Final ship tier lists |\n| Exploration | Puzzle density, route flow | Complete farming routes |\n| Characters | Skill feel and rotation | Final meta strength |\n| Mobile | Heat, FPS, touch input | All-device performance |\n| Social buzz | Full gameplay clips | Unconfirmed rewards |\n\n## FAQ\n\n### Will demo progress carry over?\n\nDo not assume so unless the official team confirms it. Demos often exist for gameplay feedback and marketing beats.\n\n### Can the demo decide the launch meta?\n\nNo. It can reveal feel and structure, but final numbers, rewards, banners, and progression can still change.\n\n### What should players read next?\n\nRead the Act II prep guide, new-island ship guide, Identity V event checklist, and cloud-client FAQ.",
+    "faq": [
+      {
+        "question": "gamescom Demo 能代表正式版吗？",
+        "answer": "只能代表阶段性玩法体验，不能直接代表正式版强度、经济系统或长期养成。"
+      },
+      {
+        "question": "移动端玩家 Demo 后先看什么？",
+        "answer": "先看帧率、发热、触控、空间和账号入口，再决定是否等云游戏或正式客户端。"
+      }
+    ]
+  },
+  {
+    "id": "lost-sea-act-two-live-route",
+    "title": "《遗忘之海》失落海域第二幕上线后路线：新岛、流浪烟花号、签到联动和每日清单",
+    "titleEn": "Sea of Remnants Act II Live Route: New Islands, Wandering Fireworks, Sign-In Collab, and Daily Checklist",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "summary": "把 7 月 30 日第二幕上线后的每日处理顺序拆成版本登录、五岛探索、新船资源、联动签到、活动奖励和排错路线。",
+    "summaryEn": "A live-route checklist for Act II after July 30, covering login checks, five islands, the new ship, collab sign-ins, rewards, and troubleshooting.",
+    "tags": [
+      "失落海域第二幕",
+      "7月30日",
+      "新岛",
+      "流浪烟花号",
+      "第五人格联动",
+      "每日清单"
+    ],
+    "content": "## 先给结论\n\n第二幕上线后，不要一登录就乱跑新岛。最稳路线是：更新与账号检查、领取邮件和活动、确认第五人格签到、推进第二幕主线、解锁新岛节点、再把船只和资源投给流浪烟花号。\n\n这页是上线后的执行清单，和更新前准备页分工不同：准备页解决“要提前囤什么”，本页解决“今天登录后先做什么”。\n\n## 上线后 30 分钟路线\n\n| 顺序 | 动作 | 目的 |\n|---|---|---|\n| 1 | 更新客户端并登录同一账号 | 避免账号、区服或包体问题 |\n| 2 | 领取邮件、补偿和活动页奖励 | 防止限时资源漏掉 |\n| 3 | 检查第五人格联动签到 | 7 日累计奖励优先级高 |\n| 4 | 看第二幕任务入口 | 判断是否卡主线或前置条件 |\n| 5 | 开始新岛探索 | 先开传送/锚点，再深挖解谜 |\n| 6 | 检查流浪烟花号材料 | 不急着把旧船资源花空 |\n\n## 五岛探索顺序建议\n\n| 岛屿 | 首次进入目标 | 适合玩家 |\n|---|---|---|\n| 石像岛 | 先标记机关和遗迹点 | 喜欢解谜、查漏 |\n| 溪流岛 | 先开路线和采集点 | 需要资源补给 |\n| 密林岛 | 先稳定视野和路线 | 移动端或低配玩家 |\n| 佳酿溶洞 | 先观察洞窟战斗压力 | 战斗练度较稳 |\n| 虫岛 | 先试机制，不硬冲 | 想做高容错探索 |\n\n## 新船资源别急着花\n\n流浪烟花号相关资源在第二幕前期很容易被情绪消费带跑。建议先确认：\n\n- 新船是否需要专属材料。\n- 旧船是否仍能完成当前海战。\n- 强化材料是否有周上限或兑换上限。\n- 好金砖交易价格是否处于第一波高点。\n- 是否还有后续活动要求船只资源。\n\n## 每日清单\n\n1. 登录后先领活动页和邮件。\n2. 联动签到确认累计天数。\n3. 新岛先开关键点，不一次性清空。\n4. 船只资源只做必要升级。\n5. 遇到卡顿先降画质、清缓存、检查云端方案。\n6. 晚上再回头做查漏、截图和社媒活动。\n\n## 常见卡点\n\n### 找不到第二幕入口\n\n先确认主线进度、版本是否更新完成、活动页是否有前置提示。如果仍然没有入口，再看公告或重登，不建议乱删客户端。\n\n### 新岛打不过怎么办\n\n先换成稳定队伍，带生存位和熟悉的输出循环。第二幕初期不要为了测试新角色而牺牲通关稳定性。\n\n### 联动签到漏了一天还有救吗\n\n活动窗口较长时，累计 7 日通常仍有补救空间。先看活动结束时间和已累计天数，确认是否还能完成，不要等最后一天再处理。",
+    "contentEn": "## Quick answer\n\nAfter Act II goes live, follow this order: update and log in, claim mail and event rewards, check the Identity V sign-in, open the Act II questline, unlock new-island nodes, then spend ship resources carefully on Wandering Fireworks.\n\n## First 30 minutes\n\n| Order | Action | Why |\n|---|---|---|\n| 1 | Update and log in | Avoid account or package mistakes |\n| 2 | Claim rewards | Capture limited resources |\n| 3 | Check collab sign-in | Seven-day rewards matter |\n| 4 | Open Act II quest | Find gates and prerequisites |\n| 5 | Explore new islands | Unlock routes before deep clearing |\n| 6 | Review ship materials | Avoid overspending old-ship resources |\n\n## FAQ\n\n### Where is Act II?\n\nCheck your main-story progress, client version, and event page prompts before reinstalling.\n\n### Should I max the new ship immediately?\n\nNo. Confirm material gates and early testing before spending limited resources."
   }
 ]
