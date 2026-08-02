@@ -37,6 +37,8 @@ const PRIORITY_GUIDES = [
 ];
 
 const PRIORITY_PATHS = [
+  '/zh/calendar',
+  '/en/calendar',
   '/zh/zzz',
   '/en/zzz',
   '/en/genshin/weapons/sacrificial-jade',

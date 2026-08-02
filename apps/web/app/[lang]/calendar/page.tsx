@@ -6,15 +6,15 @@ import { LIVE_CALENDAR_EVENTS, LIVE_UPDATED_AT, sortCalendarEvents } from '@/lib
 import { CalendarClient } from './calendar-client';
 
 const TITLE = {
-  zh: '跨游戏日历',
-  en: 'Cross-Game Calendar',
-  ja: 'クロスゲームカレンダー',
+  zh: '跨游戏卡池与版本日历',
+  en: 'Game Banner Calendar: Current Banners, Versions & Codes',
+  ja: 'ゲーム横断バナー・版本カレンダー',
 };
 
 const DESCRIPTION = {
-  zh: '查看 Gachia 重点游戏的版本更新、卡池、兑换码期限和活动节点，支持按游戏过滤并跳转到对应详情页。',
-  en: 'Track version updates, banners, code deadlines, and events across Gachia priority games with game filters and direct detail links.',
-  ja: 'Gachia の注目ゲームの版本更新、バナー、コード期限、イベントをゲーム別に確認できます。',
+  zh: '查看原神、崩铁、鸣潮、绝区零、异环等游戏的当前卡池、下期卡池、版本更新、兑换码期限和活动节点。',
+  en: 'Track current banners, next banners, version releases, redeem-code deadlines, and events across Genshin, HSR, WuWa, ZZZ, NTE, and other Gachia games.',
+  ja: '原神、スターレイル、鳴潮、ZZZ、NTE などの現在バナー、次回バナー、版本更新、コード期限、イベントを確認できます。',
 };
 
 export async function generateMetadata({

@@ -40,6 +40,70 @@ function getEventState(date: string) {
   return 'upcoming';
 }
 
+const SEARCH_ROUTES: Array<{
+  title: Record<SupportedLocale, string>;
+  description: Record<SupportedLocale, string>;
+  links: Array<{
+    href: string;
+    label: Record<SupportedLocale, string>;
+  }>;
+}> = [
+  {
+    title: {
+      zh: '当前与下期卡池',
+      en: 'Current and next banners',
+      ja: '現在と次回バナー',
+    },
+    description: {
+      zh: '优先查看曝光最高的卡池时间表，决定抽卡、保底和资源预留。',
+      en: 'Start with the highest-demand banner schedules before spending pulls or saving pity.',
+      ja: '需要の高いバナー予定から確認し、ガチャと天井を計画します。',
+    },
+    links: [
+      { href: '/wuwa/guides/banner-schedule-guide', label: { zh: '鸣潮卡池', en: 'WuWa banners', ja: '鳴潮バナー' } },
+      { href: '/starrail/guides/banner-schedule-guide', label: { zh: '崩铁卡池', en: 'HSR banners', ja: 'HSRバナー' } },
+      { href: '/genshin/guides/banner-schedule-guide', label: { zh: '原神卡池', en: 'Genshin banners', ja: '原神バナー' } },
+      { href: '/zzz/guides/banner-schedule-guide', label: { zh: '绝区零卡池', en: 'ZZZ banners', ja: 'ZZZバナー' } },
+    ],
+  },
+  {
+    title: {
+      zh: '版本更新节点',
+      en: 'Version release hubs',
+      ja: '版本更新ハブ',
+    },
+    description: {
+      zh: '把版本上线、新角色、平台入坑和活动路线放在同一个日历节奏里。',
+      en: 'Connect patch dates, new characters, platform starters, and event routes in one rhythm.',
+      ja: '版本日、新キャラ、平台入門、イベント導線をまとめます。',
+    },
+    links: [
+      { href: '/zzz/version', label: { zh: 'ZZZ 3.1', en: 'ZZZ v3.1', ja: 'ZZZ v3.1' } },
+      { href: '/wuwa/version', label: { zh: '鸣潮 3.5', en: 'WuWa v3.5', ja: '鳴潮 v3.5' } },
+      { href: '/starrail/version', label: { zh: '崩铁 4.4', en: 'HSR v4.4', ja: 'HSR v4.4' } },
+      { href: '/nte/version', label: { zh: '异环 1.2', en: 'NTE v1.2', ja: 'NTE v1.2' } },
+    ],
+  },
+  {
+    title: {
+      zh: '兑换码与限时奖励',
+      en: 'Codes and limited rewards',
+      ja: 'コードと限定報酬',
+    },
+    description: {
+      zh: '抽卡前先确认直播码、版本码、邮件补偿和限时奖励是否已经领取。',
+      en: 'Before planning pulls, check livestream codes, patch codes, mail compensation, and limited rewards.',
+      ja: 'ガチャ前に配信コード、版本コード、補償、限定報酬を確認します。',
+    },
+    links: [
+      { href: '/starrail/redeem-codes', label: { zh: '崩铁兑换码', en: 'HSR codes', ja: 'HSRコード' } },
+      { href: '/wuwa/redeem-codes', label: { zh: '鸣潮兑换码', en: 'WuWa codes', ja: '鳴潮コード' } },
+      { href: '/zzz/redeem-codes', label: { zh: 'ZZZ 兑换码', en: 'ZZZ codes', ja: 'ZZZコード' } },
+      { href: '/genshin/redeem-codes', label: { zh: '原神兑换码', en: 'Genshin codes', ja: '原神コード' } },
+    ],
+  },
+];
+
 export function CalendarClient({
   events,
   lastUpdatedAt,
@@ -79,11 +143,33 @@ export function CalendarClient({
         <p className="max-w-3xl text-sm leading-relaxed text-game-text-muted">
           {t(
             locale,
-            '把版本、卡池、兑换码期限和活动节点放到同一张清单里。选择游戏后，可以直接跳到对应版本页、卡池攻略或兑换码页。',
-            'Track version releases, banners, code deadlines, and events in one list. Filter by game, then jump into the related version hub, banner guide, or code page.',
-            '版本更新、バナー、コード期限、イベントを一つの一覧で確認できます。ゲームで絞り込み、関連ページへ移動できます。'
+            '把当前卡池、下期卡池、版本更新、兑换码期限和活动节点放到同一张清单里。选择游戏后，可以直接跳到对应版本页、卡池攻略或兑换码页。',
+            'Track current banners, next banners, version releases, code deadlines, and events in one list. Filter by game, then jump into the related version hub, banner guide, or code page.',
+            '現在バナー、次回バナー、版本更新、コード期限、イベントを一つの一覧で確認できます。ゲームで絞り込み、関連ページへ移動できます。'
           )}
         </p>
+      </section>
+
+      <section className="mb-6 grid gap-3 lg:grid-cols-3">
+        {SEARCH_ROUTES.map((route) => (
+          <article key={route.title.en} className="rounded-2xl border border-game-border bg-game-surface p-4">
+            <h2 className="text-base font-semibold text-game-text">{route.title[locale]}</h2>
+            <p className="mt-2 text-sm leading-relaxed text-game-text-muted">
+              {route.description[locale]}
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {route.links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href as '/'}
+                  className="rounded-full border border-game-border bg-game-surface-alt px-3 py-1.5 text-xs text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary"
+                >
+                  {link.label[locale]}
+                </Link>
+              ))}
+            </div>
+          </article>
+        ))}
       </section>
 
       <section className="mb-6 grid gap-3 sm:grid-cols-3">

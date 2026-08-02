@@ -10,6 +10,7 @@ It covers Genshin Impact, Honkai: Star Rail, Wuthering Waves, Neverness to Evern
 - Home: ${BASE_URL}/en
 - Sitemap: ${BASE_URL}/sitemap.xml
 - Public HTML sitemap: ${BASE_URL}/en/sitemap
+- Cross-game calendar: ${BASE_URL}/en/calendar
 - Wuthering Waves guides: ${BASE_URL}/en/wuwa/guides
 - Honkai: Star Rail guides: ${BASE_URL}/en/starrail/guides
 - Genshin Impact guides: ${BASE_URL}/en/genshin/guides
@@ -21,6 +22,7 @@ It covers Genshin Impact, Honkai: Star Rail, Wuthering Waves, Neverness to Evern
 - WuWa banner schedule: ${BASE_URL}/en/wuwa/guides/banner-schedule-guide
 - HSR banner schedule: ${BASE_URL}/en/starrail/guides/banner-schedule-guide
 - Genshin banner schedule: ${BASE_URL}/en/genshin/guides/banner-schedule-guide
+- Cross-game banner and version calendar: ${BASE_URL}/en/calendar
 - Sea of Remnants launch guide: ${BASE_URL}/en/sea/guides/launch-day-guide
 - Sea of Remnants download guide: ${BASE_URL}/en/sea/guides/download-install-guide
 
