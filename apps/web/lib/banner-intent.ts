@@ -114,4 +114,38 @@ export const BANNER_INTENT_PANELS: Partial<Record<GameId, BannerIntentPanelConfi
       },
     ],
   },
+  zzz: {
+    title: {
+      zh: '调频前先看代理人、音擎和菲林',
+      en: 'Before You Search: Agents, W-Engines, and Polychromes',
+      ja: '調律前に代理人、音擎、菲林を確認',
+    },
+    summary: {
+      zh: '这页优先承接 ZZZ banner schedule、current banner、next banner 和 rerun 搜索。先确认专属频道，再把音擎和菲林风险分开规划。',
+      en: 'This page targets ZZZ banner schedule, current banner, next banner, and rerun searches. Check the Exclusive Channel first, then plan W-Engine and Polychrome risk separately.',
+      ja: 'ZZZ banner schedule、現在、次回、復刻検索に対応します。先に専属チャンネルを確認し、音擎と菲林リスクを分けて計画します。',
+    },
+    checks: {
+      zh: ['当前代理人是否补击破、输出或异常队缺口', '下期/复刻是否更适合保底', '菲林是否覆盖专属频道和音擎频道风险', '抽前是否领完兑换码、周年和版本奖励'],
+      en: ['Does the current agent fix Stun, DPS, or Anomaly team gaps?', 'Is the next or rerun banner a better guarantee target?', 'Does your Polychrome budget cover agent and W-Engine risk separately?', 'Have you claimed codes, anniversary rewards, and patch rewards?'],
+      ja: ['現在代理人がブレイク、火力、異常編成不足を補うか', '次回や復刻が保証先として良いか', '菲林が代理人と音擎リスクを別々に覆えるか', 'コード、周年、版本報酬を回収したか'],
+    },
+    links: [
+      {
+        href: '/zzz/version',
+        label: { zh: '版本专题', en: 'Version hub', ja: 'バージョン特集' },
+        description: { zh: '确认当前版本、周年节点和新代理人。', en: 'Check current patch, anniversary timing, and new agents.', ja: '現在版本、周年時期、新代理人を確認。' },
+      },
+      {
+        href: '/zzz/redeem-codes',
+        label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' },
+        description: { zh: '抽卡前先补菲林和版本奖励。', en: 'Claim Polychromes and patch rewards before pulling.', ja: '引く前に菲林と版本報酬を回収。' },
+      },
+      {
+        href: '/zzz/build',
+        label: { zh: '配装推荐', en: 'Builds', ja: 'ビルド' },
+        description: { zh: '抽到后继续看驱动盘、音擎和队伍。', en: 'After pulling, continue into Drive Discs, W-Engines, and teams.', ja: '引いた後にドライブ、音擎、編成へ。' },
+      },
+    ],
+  },
 };

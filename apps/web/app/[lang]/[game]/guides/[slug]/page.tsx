@@ -1836,6 +1836,7 @@ function ZzzGuideDetail({ locale, slug }: { locale: SupportedLocale; slug: strin
       </div>
 
       <GuideFreshnessSection guide={guide} locale={locale} />
+      <BannerIntentPanel gameId="zzz" slug={slug} locale={locale} />
       <QuickAnswerSection gameId="zzz" slug={slug} locale={locale} />
 
       <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">

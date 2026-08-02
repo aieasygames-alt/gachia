@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { BANNER_INTENT_PANELS } from '@/lib/banner-intent';
 
 const locales = ['zh', 'en', 'ja'] as const;
-const targetGames = ['genshin', 'starrail', 'wuwa'] as const;
+const targetGames = ['genshin', 'starrail', 'wuwa', 'zzz'] as const;
 
 describe('banner intent panels', () => {
   it('covers the priority banner schedule games', () => {
