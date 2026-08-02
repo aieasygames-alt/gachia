@@ -32,7 +32,36 @@
         "answer": "Claim mail and codes, unlock new area requirements, then refresh builds and team priorities.",
         "answerZh": "先领邮件和兑换码，确认新区解锁条件，再更新配装和队伍优先级。"
       }
-    ]
+    ],
+    "updatedAt": "2026-08-02",
+    "currentVersion": "ZZZ Steam and v3.0 starter cycle",
+    "serpTitle": {
+      "en": "ZZZ Steam Starter Guide: Download, Account Linking & Codes",
+      "zh": "绝区零 Steam 入坑攻略：下载、账号绑定与兑换码",
+      "ja": "ZZZ Steam入門：ダウンロード、連携、コード"
+    },
+    "serpDescription": {
+      "en": "Start ZZZ on Steam with download steps, HoYoverse account linking, cross-save checks, v3.0 starter route, codes, and first-week priorities.",
+      "zh": "整理绝区零 Steam 下载、HoYoverse 账号绑定、跨端存档、3.0 入坑路线、兑换码和第一周优先级。",
+      "ja": "ZZZ Steam版のDL、HoYoverse連携、クロスセーブ、3.0入門、コード、初週優先度を整理します。"
+    },
+    "quickFacts": {
+      "en": [
+        "Confirm HoYoverse account linking before starting on Steam.",
+        "Claim codes and mail before planning Polychrome pulls.",
+        "Route new players into v3.0, teams, Drive Discs, and W-Engines."
+      ],
+      "zh": [
+        "Steam 入坑前先确认 HoYoverse 账号绑定。",
+        "抽卡规划前先领取兑换码和邮件奖励。",
+        "继续导向 3.0、配队、驱动盘和音擎。"
+      ],
+      "ja": [
+        "Steam開始前にHoYoverse連携を確認。",
+        "引く前にコードとメール報酬を回収。",
+        "3.0、編成、ドライブ、音擎へ案内。"
+      ]
+    }
   },
   {
     "id": "quick-start-guide",
@@ -182,7 +211,36 @@
         "answer": "Match the sub-stat to your agent's role: DPS wants CRIT, Stun wants Impact, Anomaly wants Anomaly Mastery, Support wants Energy Regen. Sub-stat match is more important than base ATK difference.",
         "answerZh": "根据角色定位选择副属性：输出要暴击，击破要冲击力，异常要异常精通，支援要能量回复。副属性匹配比基础攻击力差异更重要。"
       }
-    ]
+    ],
+    "updatedAt": "2026-08-02",
+    "currentVersion": "Current ZZZ build cycle",
+    "serpTitle": {
+      "en": "ZZZ W-Engine Guide: Best Weapons by Agent Role",
+      "zh": "绝区零音擎攻略：按代理人定位选最佳武器",
+      "ja": "ZZZ音擎攻略：役割別おすすめ武器"
+    },
+    "serpDescription": {
+      "en": "Pick the best ZZZ W-Engines by agent role, signature value, A-Rank alternatives, upgrade priority, and whether to pull weapons or save.",
+      "zh": "按代理人定位选择绝区零音擎，比较专属音擎、A级替代、升级优先级，以及该抽武器还是留菲林。",
+      "ja": "代理人役割別に音擎、専用価値、A級代替、強化優先度、引くか温存かを整理します。"
+    },
+    "quickFacts": {
+      "en": [
+        "Secure the agent before chasing signature W-Engines.",
+        "Match W-Engine specialty to the agent role first.",
+        "Use A-Rank options when Polychrome budget is tight."
+      ],
+      "zh": [
+        "资源有限时先保代理人，再考虑专属音擎。",
+        "先看音擎类型是否匹配代理人定位。",
+        "菲林紧张时优先用 A 级替代过渡。"
+      ],
+      "ja": [
+        "資源が少ない時は代理人を先に確保。",
+        "音擎タイプを代理人役割に合わせます。",
+        "菲林が少ない場合はA級代替で過渡。"
+      ]
+    }
   },
   {
     "id": "drive-disc-guide",
@@ -191,8 +249,8 @@
     "category": "equipment",
     "categoryZh": "装备攻略",
     "categoryEn": "Equipment",
-    "updatedAt": "2026-07-24",
-    "currentVersion": "3.0",
+    "updatedAt": "2026-08-02",
+    "currentVersion": "Current ZZZ build cycle",
     "summary": "学习驱动盘套装效果与主属性选择，为代理人搭配最优装备。",
     "summaryEn": "Learn Drive Disc set effects and main stat choices to optimize your agent's equipment.",
     "content": "## 驱动盘选择与搭配指南\n\n驱动盘是绝区零的装备系统，类似原神的圣遗物。理解主属性和套装效果是打造强力角色的关键。\n\n### 一、驱动盘基础\n\n每个代理人装备**6个驱动盘**：\n\n| 位置 | 主属性 | 说明 |\n|------|--------|------|\n| 1号位 | 固定生命值 | 所有角色相同 |\n| 2号位 | 固定攻击力 | 所有角色相同 |\n| 3号位 | 固定防御力 | 所有角色相同 |\n| 4号位 | 随机 | 暴击率/暴击伤害/异常精通/冲击力等 |\n| 5号位 | 随机 | 属性伤害加成/攻击力%等 |\n| 6号位 | 随机 | 能量回复/攻击力%等 |\n\n### 二、套装效果\n\n装备同套装驱动盘激活加成：\n- **2件套**：装备2件同套装即激活\n- **4件套**：装备4件同套装激活更强效果\n\n标准搭配：**4+2**（4件主套装 + 2件副套装）\n\n### 三、热门套装推荐\n\n| 套装名称 | 2件套效果 | 4件套效果 | 适用角色 |\n|----------|-----------|-----------|----------|\n| 硬核摇滚 | 暴击伤害+16% | 暴击时额外增伤 | 通用暴击输出 |\n| 自由布鲁斯 | 攻击力+12% | 触发异常后增伤 | 异常输出 |\n| 灵魂摇滚 | 冲击力+6% | 眩晕期间队友增伤 | 击破型角色 |\n| 和声摇滚 | 能量回复+20% | 释放技能后回能 | 支援型角色 |\n| 坚固防线 | 防御力+16% | 受到伤害降低 | 防护型角色 |\n| 猛攻 | 攻击力+12% | 连携攻击增伤 | 通用输出 |\n\n### 四、按角色类型搭配\n\n#### 暴击输出型\n- **主套装**：硬核摇滚（4件）\n- **副套装**：猛攻/自由布鲁斯（2件）\n- **4号位**：暴击率/暴击伤害\n- **5号位**：对应属性伤害加成\n- **6号位**：攻击力%\n\n#### 异常输出型\n- **主套装**：自由布鲁斯（4件）\n- **副套装**：属性伤害套装（2件）\n- **4号位**：异常精通\n- **5号位**：对应属性伤害加成\n- **6号位**：异常精通/攻击力%\n\n#### 击破辅助型\n- **主套装**：灵魂摇滚（4件）\n- **副套装**：和声摇滚（2件）\n- **4号位**：冲击力\n- **5号位**：对应属性伤害加成\n- **6号位**：能量回复\n\n#### 支援型\n- **主套装**：和声摇滚（4件）\n- **副套装**：自由布鲁斯（2件）\n- **4号位**：能量回复/异常精通\n- **5号位**：对应属性伤害加成\n- **6号位**：能量回复\n\n### 五、驱动盘获取与强化\n\n**获取途径**\n- **零号空洞**：主要来源，每周挑战获取高级驱动盘\n- **驱动盘副本**：集中刷取特定套装\n- **活动奖励**：偶尔提供高品质驱动盘\n\n**强化建议**\n1. 优先保证4、5号位主属性正确\n2. 先凑齐套装效果再追求副词条\n3. 主C的驱动盘优先强化到满级\n4. 辅助的驱动盘可以适当降低强化优先级",
@@ -224,7 +282,34 @@
         "answer": "Only enhance discs with 4 initial sub-stats. The best sub-stats are CRIT Rate, CRIT DMG, ATK%, and Anomaly Mastery. It's RNG-heavy, so be patient.",
         "answerZh": "只强化初始4副词条的驱动盘。最好的副词条是暴击率、暴击伤害、攻击力%和异常精通。这很看运气，需要耐心。"
       }
-    ]
+    ],
+    "serpTitle": {
+      "en": "ZZZ Drive Disc Guide: Best Sets, Main Stats & Builds",
+      "zh": "绝区零驱动盘攻略：最佳套装、主属性与配装",
+      "ja": "ZZZドライブ攻略：おすすめセット、メイン、ビルド"
+    },
+    "serpDescription": {
+      "en": "Choose ZZZ Drive Disc sets, slot 4-6 main stats, 4pc and 2pc combinations, substats, and farming priorities for each agent role.",
+      "zh": "整理绝区零驱动盘套装、4/5/6 号位主属性、4+2 搭配、副词条和不同代理人刷取优先级。",
+      "ja": "ZZZドライブのセット、4/5/6番メイン、4+2構成、サブ、役割別周回優先度を整理します。"
+    },
+    "quickFacts": {
+      "en": [
+        "Slots 4, 5, and 6 decide most builds.",
+        "Use 4pc core sets plus 2pc stat sets as the default route.",
+        "Links Drive Disc farming back to agents, teams, and W-Engines."
+      ],
+      "zh": [
+        "4、5、6 号位决定大部分配装方向。",
+        "默认按 4 件核心套 + 2 件补强套规划。",
+        "把驱动盘刷取和代理人、配队、音擎一起看。"
+      ],
+      "ja": [
+        "4/5/6番がビルドの軸です。",
+        "基本は4セット+2セットで組みます。",
+        "ドライブ周回を代理人、編成、音擎へ接続。"
+      ]
+    }
   },
   {
     "id": "resource-farming-guide",
@@ -474,8 +559,8 @@
     "category": "version",
     "categoryZh": "版本攻略",
     "categoryEn": "Version Guide",
-    "updatedAt": "2026-07-24",
-    "currentVersion": "3.0",
+    "updatedAt": "2026-08-02",
+    "currentVersion": "ZZZ v3.0 to v3.1 transition",
     "summary": "绝区零v3.0「新秩序」完整攻略：维林娜(新风属性)、普罗米亚(火C)、诺姆、千夏、蕾米埃尔、980底片+邀约礼盒福利、罗斯凯利法新区域、云岌岭探索。",
     "summaryEn": "ZZZ v3.0 release date, banner schedule, pull recommendations, and all new agents. Velina, Promeia, Starlight Billy, 980 Polychrome rewards, new region exploration tips.",
     "content": "## v3.0版本更新完全指南\n\n绝区零v3.0是一个里程碑式的大版本更新，带来全新区域、多位新代理人以及重要的系统革新。\n\n### 一、版本概要\n\n- **上线时间**：2026年6月17日\n- **版本主题**：「新秩序」\n- **核心内容**：新区域「云岌岭」扩展、突击专精深化、新属性体系完善\n\n### 二、全新代理人\n\n#### 限定S级代理人\n\n| 代理人 | 属性 | 专精 | 定位 | 抽卡建议 |\n|--------|------|------|------|----------|\n| 普罗米亚(Promeia) | 火 | 强攻 | 火属性主C | ★★★★★ 版本核心 |\n| 星光·比利·奇德(Starlight Billy) | 物理 | 突击 | 物理突击主C | ★★★★★ 比利觉醒体 |\n| 叶瞬光(Ye Shunguang) | 利刃 | 强攻 | 利刃专属输出 | ★★★★☆ |\n\n#### 新A级代理人\n\n| 代理人 | 属性 | 专精 | 定位 |\n|--------|------|------|------|\n| 柯拉(Cora) | 冰 | 支援 | 冰属性增益支援 |\n| 雷克(Reck) | 电 | 击破 | 电属性眩晕 |\n\n#### v3.0 追加代理人（6月19日起新增）\n\n| 代理人 | 属性 | 专精 | 定位 | 说明 |\n|--------|------|------|------|------|\n| 维林娜(Velina) | 风(Anemo) | 强攻 | 风属性主C | 新风弱BOSS对策角色，推荐抽取 |\n| 诺姆(Nome) | 物理 | 击破 | 物理眩晕 | A级，物理队击破位 |\n| 千夏(Chiaki) | 电 | 支援 | 电属性增益 | A级，电队支援位 |\n| 蕾米埃尔(Remiel) | 冰 | 异常 | 冰属性异常 | A级，冰异常对策 |\n\n#### v3.0 卡池更新（6月19日）\n\n- **维林娜(Velina)** — 新风属性限定S级，适配v3.0新风弱BOSS环境\n- 推荐抽取：当前版本最强风C，风弱BOSS对策首选\n\n### 三、版本福利（必领！）\n\n| 福利 | 内容 | 说明 |\n|------|------|------|\n| 3.0版本活动 | **980底片(菲林)** | 完成活动任务即可获得 |\n| 邀约礼盒 | 额外奖励 | 登录领取 |\n| 新手加速 | 养成资源 | 新代理人快速养成 |\n\n⚠️ **980底片等于约5抽以上，务必完成所有活动任务领取！**\n\n### 四、新风弱BOSS（6月19日危局）\n\nv3.0新增**风属性弱点BOSS**，搭配维林娜可高效击破：\n- BOSS弱点：风(Anemo)属性\n- 推荐队伍：维林娜 + 风属性支援 + 生存位\n- 危局难度极高，建议满配维林娜\n\n### 五、新区域与剧情\n\n- **云岌岭·深层区域**：解锁新剧情章节，探索墨韵的秘密\n- **旧城区·重构区域**：高难度探索区域，包含精英怪和隐藏宝箱\n- **新Hollow副本**：对应v3.0的新材料副本和驱动盘副本\n\n### 六、新玩法与系统\n\n1. **突击专精深化**：新增突击值共享机制，突击代理人之间可以传递突击值\n2. **驱动盘强化上限提升**：所有驱动盘强化上限从+15提升至+20\n3. **Hollow侵蚀系统改版**：侵蚀效果更加多样化，增加策略深度\n4. **新挑战模式**：周期性极限挑战，提供丰厚奖励\n\n### 七、Banner时间表\n\n| Phase | 代理人 | 属性 | 时间 |\n|-------|--------|------|------|\n| Phase 1 | 普罗米亚(Promeia) | 火 | 6/17 - 7/1 |\n| Phase 1B | 星光·比利·奇德 | 物理 | 6/17 - 7/1 |\n| Phase 1C | **维林娜(Velina)** | **风** | 6/19 - 7/3 |\n| Phase 2 | 叶瞬光(Ye Shunguang) | 利刃 | 7/1 - 7/15 |\n| Phase 2B | 蕾米埃尔(Remiel) | 冰 | 7/1 - 7/15 |\n| 复刻 | 艾莲(Ellen) | 冰 | 7/1 - 7/15 |\n\n### 八、抽卡建议\n\n1. **优先推荐**：普罗米亚(Promeia) — 当前最强火C，适配多种队伍\n2. **高性价比**：星光·比利 — 比利免费获取，星光形态是质变提升\n3. **强度党**：叶瞬光 — 利刃属性核心，如果你有利刃体系需求\n4. **维林娜**: 新风C，风弱BOSS必带，当前环境对策首选\n5. **XP党**：按喜好抽取，v3.0每个角色都有独特定位\n\n### 九、资源准备清单\n\n- 提前储备**丁尼**（新角色养成消耗大量金币）\n- 刷好**火属性突破材料**（普罗米亚需求量大）\n- 准备**菲林**（至少准备一个大保底的量）\n- 保留**驱动盘体力药**（新副本需要集中刷取）",
@@ -509,7 +594,34 @@
         "answer": "Save Polyfilm (at least 16,000 for one pity), Denny, battery refills, and don't spend on current banners unless you really want those agents. Pre-farm Fire materials if you plan to pull Promeia.",
         "answerZh": "预留菲林（至少16000保一个保底）、丁尼、体力药，如果不是特别想要当前卡池的角色就别抽。如果打算抽普罗米亚就提前刷火属性材料。"
       }
-    ]
+    ],
+    "serpTitle": {
+      "en": "ZZZ 3.0 Guide: Banners, Rewards, New Agents & Teams",
+      "zh": "绝区零 3.0 攻略：卡池、福利、新代理人与配队",
+      "ja": "ZZZ 3.0攻略：バナー、報酬、新代理人、編成"
+    },
+    "serpDescription": {
+      "en": "Start ZZZ v3.0 with banners, rewards, new agents, pull priorities, Drive Disc routes, W-Engine checks, and what to do before v3.1.",
+      "zh": "整理绝区零 3.0 卡池、福利、新代理人、抽取优先级、驱动盘路线、音擎检查和进入 3.1 前该做什么。",
+      "ja": "ZZZ 3.0のバナー、報酬、新代理人、優先度、ドライブ、音擎、3.1前の進め方を整理します。"
+    },
+    "quickFacts": {
+      "en": [
+        "Connects v3.0 banners, rewards, and new agents.",
+        "Routes users into Drive Discs, W-Engines, teams, and codes.",
+        "Useful for ZZZ 3.0 guide, banners, rewards, and new-agent searches."
+      ],
+      "zh": [
+        "把 3.0 卡池、福利和新代理人放在一页判断。",
+        "继续导向驱动盘、音擎、配队和兑换码。",
+        "重点匹配 ZZZ 3.0 guide、banners、rewards、新代理人等搜索。"
+      ],
+      "ja": [
+        "3.0バナー、報酬、新代理人を一緒に確認。",
+        "ドライブ、音擎、編成、コードへ導線を作ります。",
+        "ZZZ 3.0 guide / banners / rewards 検索に対応。"
+      ]
+    }
   },
   {
     "id": "endgame-modes-guide",

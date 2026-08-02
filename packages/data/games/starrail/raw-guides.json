@@ -577,7 +577,36 @@
         "answer": "They serve different roles. Saber is a Wind Destruction AoE DPS, great for Memory of Chaos and Pure Fiction. Archer is a Quantum Hunt single-target burst monster, excellent for Apocalyptic Shadow bosses. Both are strong — Saber costs pulls, Archer is free, so get Archer regardless.",
         "answerZh": "两者定位不同。Saber是风属性毁灭AOE输出，适合混沌回忆和虚构叙事。Archer是量子巡猎单体爆发，适合末日幻影Boss战。两个都很强——Saber需要抽，Archer免费拿，所以Archer无论如何都要获取。"
       }
-    ]
+    ],
+    "updatedAt": "2026-08-02",
+    "currentVersion": "HSR v4.4 Fate collab cycle",
+    "serpTitle": {
+      "en": "HSR Fate Collab Guide: Saber, Archer, Rewards & Pulls",
+      "zh": "崩铁 Fate 联动攻略：Saber、Archer、奖励与抽卡",
+      "ja": "HSR Fateコラボ攻略：Saber、Archer、報酬、ガチャ"
+    },
+    "serpDescription": {
+      "en": "Track the HSR Fate collab with Saber, Archer, Rin and Gilgamesh context, rewards, event timing, codes, Jade planning, and pull priorities.",
+      "zh": "整理崩铁 Fate 联动、Saber、Archer、Rin / Gilgamesh 相关信息、奖励、活动时间、兑换码、星琼规划和抽取优先级。",
+      "ja": "HSR Fateコラボ、Saber、Archer、Rin/Gilgamesh、報酬、時期、コード、星玉計画を整理します。"
+    },
+    "quickFacts": {
+      "en": [
+        "Separates confirmed Fate rewards from speculation.",
+        "Connects Saber, Archer, Rin, and Gilgamesh searches to pull planning.",
+        "Routes users to version, codes, and Himeko Nova planning."
+      ],
+      "zh": [
+        "区分已确认联动奖励和社区推测。",
+        "把 Saber、Archer、Rin、Gilgamesh 搜索接到抽卡规划。",
+        "继续导向版本专题、兑换码和 Himeko Nova 规划。"
+      ],
+      "ja": [
+        "確定報酬と推測を分けます。",
+        "Saber、Archer、Rin、Gilgamesh検索をガチャ計画へ接続。",
+        "版本、コード、Himeko Nova計画へ案内。"
+      ]
+    }
   },
   {
     "id": "endgame-cycle-guide",
@@ -1063,7 +1092,36 @@
         "answer": "For exploration and adventure, start with Genshin Impact — it has the most content and polish after years of updates. For a relaxed experience, try Honkai: Star Rail. For pure action, pick ZZZ. If you want something fresh with improving quality, try Wuthering Waves. All four have active communities and regular updates, so you can't go wrong.",
         "answerZh": "喜欢探索冒险就选原神——经过多年更新，内容量最大、完成度最高。想要轻松体验就选崩铁。追求动作手感就选绝区零。想体验不断进步的新作就选鸣潮。四款都有活跃社区和稳定更新，无论选哪款都不会失望。"
       }
-    ]
+    ],
+    "updatedAt": "2026-08-02",
+    "currentVersion": "2026 anime gacha comparison",
+    "serpTitle": {
+      "en": "Genshin vs HSR vs ZZZ vs WuWa: Which Gacha to Play",
+      "zh": "原神 vs 崩铁 vs 绝区零 vs 鸣潮：哪款二游适合你",
+      "ja": "原神 vs HSR vs ZZZ vs WuWa：どれを遊ぶべき？"
+    },
+    "serpDescription": {
+      "en": "Compare Genshin, Honkai: Star Rail, ZZZ, and Wuthering Waves by combat, exploration, grind, F2P value, story, endgame, and daily time.",
+      "zh": "从战斗、探索、肝度、零氪体验、剧情、终局和每日耗时对比原神、崩铁、绝区零与鸣潮。",
+      "ja": "原神、HSR、ZZZ、鳴潮を戦闘、探索、周回、無課金、物語、終盤、日課時間で比較。"
+    },
+    "quickFacts": {
+      "en": [
+        "Pick Genshin or WuWa for open-world exploration.",
+        "Pick HSR for turn-based strategy and lower daily time.",
+        "Pick ZZZ for fast action combat and compact sessions."
+      ],
+      "zh": [
+        "想探索大世界，优先原神或鸣潮。",
+        "想省时间和回合策略，优先崩铁。",
+        "想要快节奏动作和短局体验，优先绝区零。"
+      ],
+      "ja": [
+        "探索重視なら原神か鳴潮。",
+        "ターン制と時短ならHSR。",
+        "高速アクションならZZZ。"
+      ]
+    }
   },
   {
     "id": "himeko-nova-fate-pull-plan",

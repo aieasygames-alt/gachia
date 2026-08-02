@@ -224,6 +224,30 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, GuideQuickAnswe
         ja: ['4、5、6番のメインステータスが最重要です。', '基本は4セット+2セットで組みます。', 'サブ厳選は主力が安定してからで十分です。'],
       },
     },
+    'w-engine-guide': {
+      heading: {
+        zh: '快速结论：先保代理人，再考虑专属音擎',
+        en: 'Quick answer: secure the agent before chasing signature W-Engines',
+        ja: '要点：専用音擎より先に代理人を確保',
+      },
+      points: {
+        zh: ['音擎选择先看代理人专精和队伍定位。', '菲林紧张时，A 级音擎通常足够过渡主线和活动。', '只有代理人已经到手且资源有余，才优先考虑专属音擎。'],
+        en: ['Match the W-Engine specialty to the agent role before comparing raw stats.', 'If Polychromes are tight, A-Rank W-Engines are often enough for story and events.', 'Pull signature W-Engines only after the agent is secured and your next banner budget is safe.'],
+        ja: ['まず代理人の役割と音擎タイプを合わせます。', '菲林が少ない時はA級音擎で十分つなげます。', '代理人確保後に余裕があれば専用音擎を考えます。'],
+      },
+    },
+    'steam-3-0-start-guide': {
+      heading: {
+        zh: '快速结论：Steam 入坑先确认账号和奖励',
+        en: 'Quick answer: confirm account linking and rewards before starting on Steam',
+        ja: '要点：Steam開始前に連携と報酬を確認',
+      },
+      points: {
+        zh: ['先确认 HoYoverse 账号、区服和跨端存档，避免进度割裂。', '完成教程后先领邮件、兑换码和版本福利，再规划菲林。', '新玩家下一步优先看 3.0 路线、配队、驱动盘和音擎。'],
+        en: ['Confirm your HoYoverse account, region, and cross-save path before starting.', 'After the tutorial, claim mail, codes, and patch rewards before spending Polychromes.', 'New players should route into v3.0 priorities, teams, Drive Discs, and W-Engines next.'],
+        ja: ['開始前にHoYoverseアカウント、地域、クロスセーブを確認。', 'チュートリアル後にメール、コード、版本報酬を回収。', '次に3.0優先度、編成、ドライブ、音擎を確認します。'],
+      },
+    },
     'rupture-specialty-guide': {
       heading: {
         zh: '快速结论：突击队先看爆发窗口和击破配合',
@@ -250,6 +274,30 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, GuideQuickAnswe
     },
   },
   starrail: {
+    'fate-collab-guide': {
+      heading: {
+        zh: '快速结论：先区分确认奖励和联动推测',
+        en: 'Quick answer: separate confirmed Fate rewards from speculation',
+        ja: '要点：確定報酬と推測を分ける',
+      },
+      points: {
+        zh: ['Saber、Archer、Rin、Gilgamesh 搜索要先接到确认信息和资源规划。', '如果只是社区热度，不要当成确定卡池顺序。', '星琼有限时，先在 Himeko Nova、Fate 目标和复刻之间保一个目标。'],
+        en: ['Route Saber, Archer, Rin, and Gilgamesh searches into confirmed rewards and pull planning first.', 'Do not treat community heat as confirmed banner order.', 'If Jades are tight, reserve one guarantee across Himeko Nova, Fate targets, and reruns.'],
+        ja: ['Saber、Archer、Rin、Gilgamesh検索を報酬と計画へ接続します。', '話題性を確定バナー順として扱いません。', '星玉が少ない時は一つの保証先を決めます。'],
+      },
+    },
+    'cross-game-comparison-guide': {
+      heading: {
+        zh: '快速结论：崩铁适合想要策略和省时的玩家',
+        en: 'Quick answer: HSR fits players who want strategy and lower daily time',
+        ja: '要点：戦略と時短ならHSR',
+      },
+      points: {
+        zh: ['想要回合制、自动战斗和较低每日耗时，优先崩铁。', '想探索大世界，原神或鸣潮更合适。', '想短局动作体验，绝区零更直接。'],
+        en: ['Choose HSR if turn-based planning, auto-battle, and lower daily time matter most.', 'Choose Genshin or WuWa if open-world exploration matters more.', 'Choose ZZZ if you want compact action combat sessions.'],
+        ja: ['ターン制、オート、短い日課ならHSRが向きます。', '探索重視なら原神か鳴潮。', '短時間アクションならZZZが向きます。'],
+      },
+    },
     'banner-schedule-guide': {
       heading: {
         zh: '快速结论：先看当前跃迁、下期与复刻',
@@ -264,6 +312,18 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, GuideQuickAnswe
     },
   },
   wuwa: {
+    'farming-guide': {
+      heading: {
+        zh: '快速结论：体力先给当前升级瓶颈',
+        en: 'Quick answer: spend Waveplates on the bottleneck blocking your next upgrade',
+        ja: '要点：次の育成を止める素材にスタミナを使う',
+      },
+      points: {
+        zh: ['先确认主队缺角色等级、技能材料、武器材料还是声骸。', '材料路线围绕当前主 C 和关键辅助安排。', '主词条没稳定前，不要把大量体力耗在完美副词条上。'],
+        en: ['Check whether your main team is blocked by levels, skills, weapons, or Echoes first.', 'Route farming around your current main DPS and key support upgrades.', 'Do not spend heavy Waveplates chasing perfect Echo substats before main stats are stable.'],
+        ja: ['主力がレベル、スキル、武器、エコーのどれで止まるか確認。', '周回は主力DPSと重要支援を優先します。', 'メインステ安定前に完璧サブを追いすぎません。'],
+      },
+    },
     'banner-schedule-guide': {
       heading: {
         zh: '快速结论：先确认当前卡池和下期复刻',

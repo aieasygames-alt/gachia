@@ -183,7 +183,36 @@
         "answer": "16 bosses total across all nations. Huanglong has 6, The Black Shores has 2, Rinascita has 3, Lahai-Roi has 3. New Federation has no bosses yet. Each costs 60 Waveplate.",
         "answerZh": "共16个Boss分布在不同国度。瑝珑6个、黑海岸2个、黎那汐塔3个、拉海洛3个。新联邦暂无Boss。每次消耗60波片。"
       }
-    ]
+    ],
+    "updatedAt": "2026-08-02",
+    "currentVersion": "Current WuWa farming cycle",
+    "serpTitle": {
+      "en": "Wuthering Waves Farming Guide: Waveplates, Materials & Routes",
+      "zh": "鸣潮刷取攻略：体力、材料路线与资源规划",
+      "ja": "鳴潮周回攻略：スタミナ、素材、ルート"
+    },
+    "serpDescription": {
+      "en": "Plan Wuthering Waves farming with Waveplate usage, material routes, daily tasks, Echo priorities, character upgrades, and resource management.",
+      "zh": "规划鸣潮体力使用、材料刷取路线、日常任务、声骸优先级、角色养成和资源管理。",
+      "ja": "鳴潮のスタミナ、素材ルート、日課、エコー優先度、育成、資源管理を整理します。"
+    },
+    "quickFacts": {
+      "en": [
+        "Spend Waveplates on the bottleneck that blocks your next upgrade.",
+        "Route material farming around current team priorities.",
+        "Do not overfarm Echo substats before main builds are stable."
+      ],
+      "zh": [
+        "体力优先给卡住下一次提升的瓶颈材料。",
+        "材料路线要围绕当前主队优先级安排。",
+        "主队没稳定前，不要过早追完美声骸副词条。"
+      ],
+      "ja": [
+        "次の育成を止める素材にスタミナを使います。",
+        "素材周回は現在主力に合わせます。",
+        "主力安定前にエコー厳選しすぎない。"
+      ]
+    }
   },
   {
     "id": "beginner-tips",
