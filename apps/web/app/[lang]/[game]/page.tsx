@@ -66,9 +66,9 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     ja: '異環（NTE）のキャラ図鑑、武器データ、ディスクおすすめ、交換コード、ガチャシミュレーターを提供し、正式リリース済みです。19体のキャラ、DL、入門、ボス攻略、ダメージ計算、育成導線をまとめて確認でき、開服期の準備に役立ちます。版本特集や報酬導線もあります。',
   },
   zzz: {
-    zh: '绝区零代理人图鉴、音擎数据、驱动盘推荐与攻略百科，覆盖至 2.8 版本，整理 56+ 代理人、职业定位、属性、技能、驱动盘套装、最佳配队和伤害思路，适合版本更新后快速查看与继续规划养成，并配有版本专题和计算器入口。',
-    en: 'Zenless Zone Zero agent builds, W-Engines, drive discs, and guides up to v2.8. Browse 56+ agents, specialties, attributes, best team comps, and patch topics for efficient build planning.',
-    ja: 'ゼンレスゾーンゼロのエージェントビルド、Wエンジンデータ、ドライブディスクおすすめ、攻略百科を整理し、v2.8 まで対応。56+ エージェントの職業、属性、ディスク、編成、版本トピックをまとめて確認でき、効率よく育成できます。計算機や特集導線も整えています。',
+    zh: '绝区零 3.1 首页入口，整理 The Long Goodbye、2 周年、Remielle/Sigrid、Xbox / Microsoft Store、Steam 入坑、卡池时间表、音擎、驱动盘、代理人配队和兑换码，方便新玩家与回流玩家快速规划抽卡、养成和首周优先级。',
+    en: 'Zenless Zone Zero v3.1 hub for The Long Goodbye, 2nd anniversary rewards, Remielle/Sigrid, Xbox and Microsoft Store onboarding, Steam starter routes, banner schedule, W-Engines, Drive Discs, agents, teams, and codes.',
+    ja: 'ゼンレスゾーンゼロ v3.1 の入口として、The Long Goodbye、2周年、Remielle/Sigrid、Xbox / Microsoft Store、Steam入門、バナースケジュール、Wエンジン、ドライブディスク、エージェント編成、コードを整理します。',
   },
   guihuan: {
     zh: '归环角色图鉴、武器数据与攻略百科，整理全部可用角色的技能数据、定位说明、配装推荐和成长思路，帮助你更快了解游戏基础玩法、完成入门判断并找到适合当前版本的培养方向，同时持续补充图鉴与攻略专题。',
@@ -120,9 +120,9 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
     ja: '異環（Neverness to Everness）はHotta StudioのUE5製超自然オープンワールドゲーム、2026年4月正式リリース。Gachiaは最も充実したNTEデータベースを提供。19体のプレイアブルキャラ図鑑、武器データ、ディスクセットおすすめ、DL/入門、ボス攻略、ダメージ計算、交換コード、ガチャシミュレーターを網羅。',
   },
   zzz: {
-    zh: '绝区零（Zenless Zone Zero）是米哈游开发的都市动作游戏，当前版本2.8。Gachia 提供52+代理人图鉴、音擎（W-Engine）数据库、驱动盘推荐与配装方案。角色按6种职业（攻击、眩晕、异常、支援、防御、破裂）和5种属性分类，包含完整技能数据与最佳配队推荐。',
-    en: 'Zenless Zone Zero (ZZZ) is an urban action game by HoYoverse, currently in v2.8. Gachia provides a 52+ agent database, W-Engine encyclopedia, drive disc recommendations, and build guides. Characters are organized by 6 specialties (Attack, Stun, Anomaly, Support, Defense, Rupture) and 5 attributes with complete skill data and best team suggestions.',
-    ja: 'ゼンレスゾーンゼロ（ZZZ）はHoYoverseの都市アクションゲーム、現在v2.8。Gachiaでは52+エージェント図鑑、Wエンジンデータベース、ドライブディスクおすすめ、ビルドガイドを提供。キャラは6つのスペシャリティ（アタック、スタン、アノマリー、サポート、ディフェンス、ラプチャー）と5属性別に分類。',
+    zh: '绝区零（Zenless Zone Zero）是 HoYoverse 开发的都市动作游戏，当前首页重点覆盖 v3.1「The Long Goodbye」、2 周年、Remielle/Sigrid、Xbox / Microsoft Store 上线与 Steam 入坑路线。Gachia 将代理人图鉴、音擎（W-Engine）数据库、驱动盘推荐、卡池时间表、兑换码、版本专题和主流配队串成一页，帮助新玩家、回流玩家和抽卡规划用户更快找到下一步。',
+    en: 'Zenless Zone Zero (ZZZ) is HoYoverse\'s urban action game, now focused on v3.1 "The Long Goodbye", the 2nd anniversary, Remielle/Sigrid, Xbox and Microsoft Store onboarding, and Steam starter routes. Gachia connects the agent database, W-Engine guide, Drive Disc builds, banner schedule, codes, teams, and version hubs so new and returning players can plan Polychromes, builds, and first-week priorities.',
+    ja: 'ゼンレスゾーンゼロ（ZZZ）はHoYoverseの都市アクションゲームで、現在は v3.1「The Long Goodbye」、2周年、Remielle/Sigrid、Xbox / Microsoft Store、Steam入門を重点的に整理しています。Gachiaではエージェント図鑑、Wエンジン、ドライブディスク、バナースケジュール、コード、編成、バージョン特集をつなぎ、新規・復帰勢が抽卡、育成、初週優先度を決めやすい導線にしています。',
   },
   guihuan: {
     zh: '归环（Guihuan）是一款二次元开放世界冒险游戏。Gachia 提供归环角色图鉴、武器数据库、配装推荐与攻略百科，帮助玩家快速上手游戏并了解各角色的最优培养路线。',
@@ -148,6 +148,14 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
     zh: '《失控进化》是一款开放世界硬核生存对抗游戏，玩家在荒岛中从徒手采集开始，逐步完成工具制作、武器锻造、庇护所搭建、科技树解锁和领地攻防。游戏强调搜打拆、基地运营、动态天气、饥饿口渴等代谢压力，以及不同服务器模式下的风险选择。Gachia 将优先整理新手 0-10 分钟开荒、基地选址、领地柜维护、资源优先级、基因流派搭配、武器图鉴和公测预约福利。',
     en: 'Ashfall Evolution is a hardcore open-world survival PvP game where players start from bare-handed gathering, then craft tools, forge weapons, build shelters, unlock technology, and fight over territory. The game emphasizes looting, fighting, raiding, base upkeep, dynamic weather, hunger and thirst pressure, and risk choices across server modes. Gachia covers beginner routes, territory cabinets, resource priorities, gene builds, weapons, and launch rewards.',
     ja: '『失控進化』は、採集、道具作成、武器製作、拠点建築、技術解放、領地攻防を中心にしたハードコアなオープンワールドサバイバル対戦ゲームです。Gachiaでは初心者ルート、領地キャビネット、資源優先度、遺伝子ビルド、武器、リリース報酬を整理します。',
+  },
+};
+
+const GAME_META_TITLES: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
+  zzz: {
+    zh: '绝区零 3.1 Wiki — 代理人、卡池、音擎、驱动盘与兑换码',
+    en: 'ZZZ v3.1 Wiki — Agents, Banners, W-Engines, Drive Discs & Codes',
+    ja: 'ZZZ v3.1 Wiki — エージェント、バナー、Wエンジン、ディスク',
   },
 };
 
@@ -505,19 +513,19 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     cta: { zh: '去 3.1 专题', en: 'Open v3.1 hub', ja: 'v3.1特集へ' },
     tracks: {
       zh: [
-        { title: '3.1 节点', description: '先整理 The Long Goodbye、周年和新代理人相关问题。', links: [{ href: '/zzz/version', label: '3.1 专题' }, { href: '/zzz/guides/anniversary-rewards-codes-plan', label: '周年奖励' }] },
-        { title: '平台入坑', description: 'Steam、Microsoft Store、Xbox 用户先看账号与下载。', links: [{ href: '/zzz/guides/v3-1-anniversary-xbox-guide', label: '3.1 / 周年 FAQ' }, { href: '/zzz/redeem-codes', label: '兑换码' }] },
-        { title: '养成与配队', description: '把周年回流继续送到配队、驱动盘和养成页。', links: [{ href: '/zzz/guides/meta-teams-v3-guide', label: '主流配队' }, { href: '/zzz/drive-discs', label: '驱动盘' }] },
+        { title: '3.1 节点', description: '先整理 The Long Goodbye、周年、新代理人和卡池规划。', links: [{ href: '/zzz/version', label: '3.1 专题' }, { href: '/zzz/guides/banner-schedule-guide', label: '卡池时间表' }, { href: '/zzz/guides/anniversary-rewards-codes-plan', label: '周年奖励' }] },
+        { title: '平台入坑', description: 'Steam、Microsoft Store、Xbox 用户先看账号、下载和兑换码。', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Steam 入坑' }, { href: '/zzz/guides/v3-1-anniversary-xbox-guide', label: 'Xbox FAQ' }, { href: '/zzz/redeem-codes', label: '兑换码' }] },
+        { title: '养成与配队', description: '把周年回流继续送到配队、音擎、驱动盘和养成页。', links: [{ href: '/zzz/guides/meta-teams-v3-guide', label: '主流配队' }, { href: '/zzz/guides/w-engine-guide', label: '音擎指南' }, { href: '/zzz/guides/drive-disc-guide', label: '驱动盘指南' }] },
       ],
       en: [
-        { title: 'v3.1 node', description: 'Catch The Long Goodbye, anniversary, and new-agent searches.', links: [{ href: '/zzz/version', label: 'v3.1 hub' }, { href: '/zzz/guides/anniversary-rewards-codes-plan', label: 'Rewards plan' }] },
-        { title: 'Platform starters', description: 'Steam, Microsoft Store, and Xbox users need account and download help.', links: [{ href: '/zzz/guides/v3-1-anniversary-xbox-guide', label: 'v3.1 FAQ' }, { href: '/zzz/redeem-codes', label: 'Codes' }] },
-        { title: 'Builds and teams', description: 'Route anniversary returners into teams, discs, and progression.', links: [{ href: '/zzz/guides/meta-teams-v3-guide', label: 'Meta teams' }, { href: '/zzz/drive-discs', label: 'Drive discs' }] },
+        { title: 'v3.1 node', description: 'Catch The Long Goodbye, anniversary, new-agent, and banner-planning searches.', links: [{ href: '/zzz/version', label: 'v3.1 hub' }, { href: '/zzz/guides/banner-schedule-guide', label: 'Banner schedule' }, { href: '/zzz/guides/anniversary-rewards-codes-plan', label: 'Rewards plan' }] },
+        { title: 'Platform starters', description: 'Steam, Microsoft Store, and Xbox users need account, download, and code help.', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Steam starter' }, { href: '/zzz/guides/v3-1-anniversary-xbox-guide', label: 'Xbox FAQ' }, { href: '/zzz/redeem-codes', label: 'Codes' }] },
+        { title: 'Builds and teams', description: 'Route anniversary returners into teams, W-Engines, Drive Discs, and progression.', links: [{ href: '/zzz/guides/meta-teams-v3-guide', label: 'Meta teams' }, { href: '/zzz/guides/w-engine-guide', label: 'W-Engine guide' }, { href: '/zzz/guides/drive-disc-guide', label: 'Drive Disc guide' }] },
       ],
       ja: [
-        { title: 'v3.1導線', description: 'The Long Goodbye、周年、新エージェント検索を受け止めます。', links: [{ href: '/zzz/version', label: 'v3.1特集' }, { href: '/zzz/guides/anniversary-rewards-codes-plan', label: '周年報酬' }] },
-        { title: 'プラットフォーム入門', description: 'Steam、Microsoft Store、Xbox勢はアカウントとDLから。', links: [{ href: '/zzz/guides/v3-1-anniversary-xbox-guide', label: 'v3.1 FAQ' }, { href: '/zzz/redeem-codes', label: 'コード' }] },
-        { title: '育成と編成', description: '周年復帰勢を編成、ディスク、育成へつなげます。', links: [{ href: '/zzz/guides/meta-teams-v3-guide', label: '主要編成' }, { href: '/zzz/drive-discs', label: 'ディスク' }] },
+        { title: 'v3.1導線', description: 'The Long Goodbye、周年、新エージェント、バナー計画検索を受け止めます。', links: [{ href: '/zzz/version', label: 'v3.1特集' }, { href: '/zzz/guides/banner-schedule-guide', label: 'バナー予定' }, { href: '/zzz/guides/anniversary-rewards-codes-plan', label: '周年報酬' }] },
+        { title: 'プラットフォーム入門', description: 'Steam、Microsoft Store、Xbox勢はアカウント、DL、コードから。', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Steam入門' }, { href: '/zzz/guides/v3-1-anniversary-xbox-guide', label: 'Xbox FAQ' }, { href: '/zzz/redeem-codes', label: 'コード' }] },
+        { title: '育成と編成', description: '周年復帰勢を編成、Wエンジン、ディスク、育成へつなげます。', links: [{ href: '/zzz/guides/meta-teams-v3-guide', label: '主要編成' }, { href: '/zzz/guides/w-engine-guide', label: 'Wエンジン' }, { href: '/zzz/guides/drive-disc-guide', label: 'ディスク攻略' }] },
       ],
     },
     faq: [
@@ -840,11 +848,11 @@ export async function generateMetadata({
   const desc = ensureMetaLength(GAME_DESCRIPTIONS[gameId]?.[locale] ?? `${gameName} Wiki`, locale);
   const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}`, LOCALES);
 
-  const title = locale === 'zh'
+  const title = GAME_META_TITLES[gameId]?.[locale] ?? (locale === 'zh'
     ? `${gameName}攻略Wiki — 角色图鉴/武器/圣遗物/攻略`
     : locale === 'ja'
       ? `${gameName}攻略Wiki — キャラ/武器/ガイド`
-      : `${gameName} Wiki — Characters, Weapons, Builds & Guides`;
+      : `${gameName} Wiki — Characters, Weapons, Builds & Guides`);
 
   return {
     title,
@@ -1040,14 +1048,20 @@ export default async function GameHome({
                     <Link href={`/${gameId}/version` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
                       {locale === 'zh' ? '版本专题' : locale === 'ja' ? 'バージョン特集' : 'Version Hub'}
                     </Link>
-                    <Link href={`/${gameId}/guides/v3-0-version-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
-                      {locale === 'zh' ? 'v3.0 完整指南' : locale === 'ja' ? 'v3.0 完全ガイド' : 'v3.0 Guide'}
+                    <Link href={`/${gameId}/guides/banner-schedule-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '卡池时间表' : locale === 'ja' ? 'バナー予定' : 'Banner Schedule'}
                     </Link>
                     <Link href={`/${gameId}/guides/meta-teams-v3-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
                       {locale === 'zh' ? '3.0 主流配队' : locale === 'ja' ? 'v3.0 編成' : 'Meta Teams'}
                     </Link>
-                    <Link href={`/${gameId}/guides/rupture-specialty-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
-                      {locale === 'zh' ? '突击专精' : locale === 'ja' ? 'ラプチャー' : 'Rupture Guide'}
+                    <Link href={`/${gameId}/guides/w-engine-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '音擎指南' : locale === 'ja' ? 'Wエンジン' : 'W-Engine Guide'}
+                    </Link>
+                    <Link href={`/${gameId}/guides/drive-disc-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '驱动盘指南' : locale === 'ja' ? 'ディスク攻略' : 'Drive Disc Guide'}
+                    </Link>
+                    <Link href={`/${gameId}/guides/steam-3-0-start-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? 'Steam 入坑' : locale === 'ja' ? 'Steam入門' : 'Steam Starter'}
                     </Link>
                   </>
                 )}

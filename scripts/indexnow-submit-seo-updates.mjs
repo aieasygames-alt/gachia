@@ -37,6 +37,8 @@ const PRIORITY_GUIDES = [
 ];
 
 const PRIORITY_PATHS = [
+  '/zh/zzz',
+  '/en/zzz',
   '/en/genshin/weapons/sacrificial-jade',
   '/en/nte/items/tri-key',
 ];
