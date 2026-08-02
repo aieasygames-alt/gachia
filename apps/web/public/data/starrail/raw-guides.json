@@ -887,12 +887,12 @@
     "updatedAt": "2026-07-24",
     "currentVersion": "HSR v4.4 banner cycle",
     "serpTitle": {
-      "en": "HSR Banner Schedule 2026: Current Warp, Next Banner & Reruns",
+      "en": "HSR Banner Schedule: Current, Next & Rerun Warps",
       "zh": "崩坏星穹铁道卡池排期 2026：当前与下期跃迁",
       "ja": "HSR バナー予定 2026：現在、次回、復刻"
     },
     "serpDescription": {
-      "en": "Track Honkai: Star Rail current banners, next banners, rerun estimates, warp schedule, pity rules, Stellar Jade planning, and pull priorities.",
+      "en": "Track the current HSR banner, next banner, rerun warps, pity rules, Stellar Jade planning, and pull priorities.",
       "zh": "整理崩铁当前卡池、下期跃迁、复刻预测、保底机制、星琼规划和抽卡优先级，方便提前安排资源。",
       "ja": "崩壊スターレイルの現在バナー、次回、復刻予想、天井、星玉計画、優先度を確認できます。"
     },

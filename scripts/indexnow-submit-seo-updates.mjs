@@ -20,6 +20,7 @@ const PRIORITY_GUIDES = [
   ['nte', 'photo-mode-guide'],
   ['nte', 'damage-formula'],
   ['zzz', 'v3-0-version-guide'],
+  ['zzz', 'banner-schedule-guide'],
   ['zzz', 'drive-disc-guide'],
   ['zzz', 'rupture-specialty-guide'],
   ['zzz', 'team-building-guide'],

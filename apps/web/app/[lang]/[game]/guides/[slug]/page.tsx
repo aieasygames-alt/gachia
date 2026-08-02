@@ -150,6 +150,18 @@ type GuideQuickAnswer = {
 
 const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, GuideQuickAnswer>>> = {
   genshin: {
+    'banner-schedule-guide': {
+      heading: {
+        zh: '快速结论：先看当前祈愿、下期卡池和复刻',
+        en: 'Quick answer: check current banner, next banner, and reruns first',
+        ja: '要点：現在、次回、復刻バナーを先に確認',
+      },
+      points: {
+        zh: ['当前角色池、下期祈愿和复刻预测要一起看。', '抽卡前先确认保底、原石预算和后续版本目标。', '如果只能覆盖一次大保底，优先保证真正补队伍缺口的角色。'],
+        en: ['Use this page to compare the current Genshin banner, next banner, upcoming banners, and rerun timing in one place.', 'Before pulling, check pity, guarantee status, Primogem budget, and future version targets.', 'If you only have one full guarantee, prioritize the character that fixes a real team gap.'],
+        ja: ['現在、次回、復刻予想を同じ場所で確認します。', '引く前に天井、保証、原石、次版本目標を確認します。', '天井一回分なら編成不足を解決するキャラを優先します。'],
+      },
+    },
     'cross-game-comparison-guide': {
       heading: {
         zh: '快速结论：按玩法而不是热度选游戏',
@@ -176,6 +188,18 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, GuideQuickAnswe
     },
   },
   zzz: {
+    'banner-schedule-guide': {
+      heading: {
+        zh: '快速结论：先看当前调频、下期与复刻',
+        en: 'Quick answer: check current, next, and upcoming ZZZ banners first',
+        ja: '要点：現在、次回、復刻バナーを先に確認',
+      },
+      points: {
+        zh: ['当前代理人频道、下期卡池和复刻节点要放在同一条抽卡路线里。', '抽卡前先确认专属频道保底、音擎保底、菲林预算和队伍缺口。', '资源有限时先保代理人，再考虑专属音擎。'],
+        en: ['Compare the current ZZZ banner, next banner, upcoming banners, and likely reruns before spending Polychromes.', 'Check agent pity, W-Engine pity, guarantee status, and team needs together.', 'If resources are tight, secure the agent first and treat signature W-Engines as optional upgrades.'],
+        ja: ['現在、次回、復刻予想を同じ計画で確認します。', '代理人天井、音擎天井、菲林、編成不足をまとめて見ます。', '資源が少ない場合は代理人を先に確保します。'],
+      },
+    },
     'v3-0-version-guide': {
       heading: {
         zh: '快速结论：先看 3.0 新内容、福利和角色优先级',
@@ -465,8 +489,8 @@ const GUIDE_FALLBACK_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
 const GUIDE_META_OVERRIDES: Record<string, LocaleMeta> = {
   'genshin/banner-schedule-guide': {
     en: {
-      title: 'Genshin Banner Schedule 2026: Current & Next Banners',
-      description: 'Track current and upcoming Genshin Impact banners, reruns, pity rules, Primogem planning, and pull priorities for 2026.',
+      title: 'Genshin Banner Schedule: Current, Next & Rerun Banners',
+      description: 'Track the current Genshin banner, next banner, upcoming banners, reruns, pity rules, Primogem planning, and pull priorities.',
     },
     zh: {
       title: '原神祈愿卡池排期 2026：当前卡池与下期预测',
@@ -475,8 +499,8 @@ const GUIDE_META_OVERRIDES: Record<string, LocaleMeta> = {
   },
   'starrail/banner-schedule-guide': {
     en: {
-      title: 'HSR Banner Schedule 2026: Current, Next & Rerun Banners',
-      description: 'Track Honkai: Star Rail current banners, next banners, rerun estimates, warp schedule, pity rules, Stellar Jade planning, and pull priorities.',
+      title: 'HSR Banner Schedule: Current, Next & Rerun Warps',
+      description: 'Track the current HSR banner, next banner, rerun warps, pity rules, Stellar Jade planning, and pull priorities.',
     },
     zh: {
       title: '崩坏星穹铁道卡池排期 2026：当前与下期跃迁',
@@ -485,12 +509,22 @@ const GUIDE_META_OVERRIDES: Record<string, LocaleMeta> = {
   },
   'wuwa/banner-schedule-guide': {
     en: {
-      title: 'WuWa Banner Schedule 2026: Current, Next & Rerun Banners',
-      description: 'Follow Wuthering Waves banners, current banner, next banner, rerun timing, pity carry-over, Astrite planning, and pull priorities.',
+      title: 'WuWa Banners: Current, Next & Upcoming Banner Schedule',
+      description: 'Check WuWa banners, the current banner, next banner, upcoming banners, reruns, pity carry-over, Astrite planning, and pull priorities.',
     },
     zh: {
       title: '鸣潮卡池排期 2026：当前卡池、下期与复刻预测',
       description: '查看鸣潮当前卡池、下期角色、复刻节奏、保底继承、星声规划和抽取优先级，适合零氪与月卡玩家。',
+    },
+  },
+  'zzz/banner-schedule-guide': {
+    en: {
+      title: 'ZZZ Banner Schedule: Current, Next & Upcoming Banners',
+      description: 'Track the current ZZZ banner, next banner, upcoming banners, reruns, Signal Search pity, Polychrome planning, and pull priorities.',
+    },
+    zh: {
+      title: '绝区零卡池排期 2026：当前调频、下期与复刻',
+      description: '查看绝区零当前调频、下期卡池、复刻预测、保底机制、菲林规划和抽取优先级，抽卡前先确认队伍缺口。',
     },
   },
   'wuwa/echo-advanced-guide': {
