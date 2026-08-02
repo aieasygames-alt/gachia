@@ -61,9 +61,9 @@ const HOME_COPY = {
     ja: 'バナー、コード、版本要点を先に確認',
   },
   liveSubtitle: {
-    zh: 'Gachia 正在从多游戏 Wiki 升级为实时攻略入口，优先把高曝光搜索页和实用工具放到首页。',
-    en: 'Gachia is turning the game wiki into a live planning desk for high-intent guides and tools.',
-    ja: 'Gachia は多ゲーム Wiki から、実用的な攻略とツールの入口へ進化しています。',
+    zh: '集中查看原神、崩铁、鸣潮、绝区零、异环等游戏的当前卡池、下期卡池、版本更新、兑换码和热门攻略。',
+    en: 'Track current banners, next banners, version hubs, redeem codes, and popular guides for Genshin, HSR, WuWa, ZZZ, NTE, and more.',
+    ja: '原神、スターレイル、鳴潮、ZZZ、NTE などの現在バナー、次回バナー、版本更新、コード、人気攻略を確認できます。',
   },
   updated: {
     zh: '更新',
@@ -245,15 +245,15 @@ function getGameCtas(gameId: keyof typeof GAMES, locale: SupportedLocale) {
 }
 
 const DESCRIPTIONS: Record<string, string> = {
-  zh: '一站式二次元开放世界游戏数据库，覆盖原神、崩坏：星穹铁道、鸣潮、异环、绝区零、归环、无限大、明日方舟：终末地、遗忘之海和失控进化，提供角色图鉴、武器数据、配装推荐、版本攻略与热点入口。',
-  en: 'The anime open-world game database for Genshin Impact, Honkai: Star Rail, Wuthering Waves, NTE, ZZZ, Guihuan, Ananta, Endfield, Sea of Remnants, and Ashfall Evolution, with character guides, weapon data, build recommendations, tier lists, and version hubs.',
-  ja: '原神、崩壊：スターレイル、鳴潮、NTE、ゼンレスゾーンゼロ、帰環、無限大、アークナイツ：エンドフィールド、海の遺跡、失控進化までまとめた、キャラ・武器・素材・ビルド・攻略導線を備えるゲームDBです。',
+  zh: 'Gachia 是多游戏攻略 Wiki 与实时规划入口，覆盖原神、崩铁、鸣潮、绝区零、异环等游戏的当前卡池、下期卡池、版本专题、兑换码、角色图鉴、武器数据、配装和热门攻略。',
+  en: 'Gachia is a multi-game wiki and live planning hub for current banners, next banners, version updates, redeem codes, characters, weapons, builds, and guides across Genshin, HSR, WuWa, ZZZ, NTE, and more.',
+  ja: 'Gachia は多ゲーム攻略 Wiki とリアルタイム計画ハブです。原神、HSR、鳴潮、ZZZ、NTE などの現在バナー、次回バナー、版本更新、コード、キャラ、武器、ビルド、攻略を整理します。',
 };
 
 const TITLES: Record<string, string> = {
-  zh: 'Gachia — 一站式二次元开放世界游戏数据库',
-  en: 'Gachia — Your Ultimate Anime Open-World Game Database',
-  ja: 'Gachia — アニメ系オープンワールドゲームDB',
+  zh: 'Gachia 游戏攻略 Wiki：卡池、版本、兑换码与角色图鉴',
+  en: 'Gachia Game Wiki: Banners, Version Hubs, Codes & Character Guides',
+  ja: 'Gachia ゲーム攻略 Wiki：バナー、版本、コード、キャラ',
 };
 
 export const dynamic = 'force-dynamic';

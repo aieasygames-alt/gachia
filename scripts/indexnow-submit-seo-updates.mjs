@@ -37,6 +37,8 @@ const PRIORITY_GUIDES = [
 ];
 
 const PRIORITY_PATHS = [
+  '/zh',
+  '/en',
   '/zh/calendar',
   '/en/calendar',
   '/zh/zzz',

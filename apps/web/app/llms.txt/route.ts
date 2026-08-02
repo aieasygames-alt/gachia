@@ -7,7 +7,7 @@ It covers Genshin Impact, Honkai: Star Rail, Wuthering Waves, Neverness to Evern
 
 ## Primary Sections
 
-- Home: ${BASE_URL}/en
+- Home live planning hub: ${BASE_URL}/en
 - Sitemap: ${BASE_URL}/sitemap.xml
 - Public HTML sitemap: ${BASE_URL}/en/sitemap
 - Cross-game calendar: ${BASE_URL}/en/calendar
