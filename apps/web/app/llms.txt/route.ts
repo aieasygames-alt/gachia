@@ -23,6 +23,11 @@ It covers Genshin Impact, Honkai: Star Rail, Wuthering Waves, Neverness to Evern
 - HSR banner schedule: ${BASE_URL}/en/starrail/guides/banner-schedule-guide
 - Genshin banner schedule: ${BASE_URL}/en/genshin/guides/banner-schedule-guide
 - Cross-game banner and version calendar: ${BASE_URL}/en/calendar
+- ZZZ v3.1 version hub: ${BASE_URL}/en/zzz/version
+- WuWa v3.5 version hub: ${BASE_URL}/en/wuwa/version
+- HSR v4.4 version hub: ${BASE_URL}/en/starrail/version
+- Genshin Luna VIII version hub: ${BASE_URL}/en/genshin/version
+- NTE v1.2 version hub: ${BASE_URL}/en/nte/version
 - Sea of Remnants launch guide: ${BASE_URL}/en/sea/guides/launch-day-guide
 - Sea of Remnants download guide: ${BASE_URL}/en/sea/guides/download-install-guide
 
