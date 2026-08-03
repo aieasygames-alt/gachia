@@ -1235,6 +1235,16 @@
     "summary": "把 3.1「The Long Goodbye」上线后的 Remielle、Sigrid、二周年资源、新平台账号和回流队伍缺口放进同一张抽取决策表。",
     "summaryEn": "A v3.1 pull planner for Remielle, Sigrid, anniversary rewards, new Xbox/Microsoft Store players, and returner team gaps.",
     "summaryJa": "v3.1のRemielle、Sigrid、周年報酬、Xbox/Microsoft Store新規、復帰編成の判断を整理します。",
+    "tags": [
+      "v3.1",
+      "Remielle",
+      "Sigrid",
+      "2nd anniversary",
+      "Xbox",
+      "Microsoft Store",
+      "Steam",
+      "pull planning"
+    ],
     "content": "## 先看结论\n\n3.1「The Long Goodbye」上线后，Remielle / Sigrid 不应该只按热度二选一。先把二周年奖励、兑换码、已有队伍、驱动盘和音擎资源算清楚，再判断你缺的是新主力、补强组件，还是只是周年收藏。\n\n参考来源：[Gematsu 3.1 报道](https://www.gematsu.com/2026/07/zenless-zone-zero-version-3-1-update-the-long-goodbye-launches-july-29)、[Steam 3.1 更新公告](https://store.steampowered.com/news/app/4162040/view/706649847851123192)、站内二周年资源规划。\n\n## 30 秒决策表\n\n| 账号情况 | 更该优先 | 原因 |\n| --- | --- | --- |\n| Xbox / Microsoft Store 新玩家 | 账号绑定 + 奖励领取 | 先避免存档和区服问题 |\n| 回流但队伍过期 | 当前主流队伍复盘 | 旧配装可能不适合 3.1 |\n| 缺站场或核心输出 | Remielle / Sigrid 中补短板者 | 看定位，不看热搜 |\n| 资源只够一次保底 | 角色优先，武器谨慎 | 周年资源不是无限票仓 |\n| 收藏玩家 | 喜欢谁抽谁 | 但先确认后续版本预算 |\n\n## 新平台玩家先别急着抽\n\nXbox、Microsoft Store 和 Steam 玩家最容易犯的错，是教程刚结束就把资源砸进第一个池子。更稳路线是：\n\n1. 确认 HoYoverse 账号和平台账号。\n2. 领取邮件、周年奖励和兑换码。\n3. 检查商店区域、语言、手柄和画质。\n4. 看 3.1 活动能拿多少菲林。\n5. 再决定 Remielle / Sigrid 或复刻目标。\n\n## 回流玩家看队伍缺口\n\n回流玩家要先问：旧队伍还能不能过活动和周常？如果能过，抽卡目标可以更偏长期；如果不能过，优先补当前版本最缺的位置，而不是追社媒热度。\n\n## FAQ\n\n### Remielle 和 Sigrid 谁更值得？\n\n没有通用答案。优先看你缺的定位、已有队友、驱动盘库存和后续预算。只够一次保底时，不建议同时追角色和音擎。\n\n### 二周年奖励能保证抽到新角色吗？\n\n奖励能缓解资源压力，但不应被当成完整保底。先合并邮件、活动、兑换码和日常收入，再算缺口。\n\n### Xbox 新玩家可以直接沿用 PC 攻略吗？\n\n角色养成可以参考，但账号绑定、商店入口、手柄体验和云端规则要单独确认。",
     "contentEn": "## Quick answer\n\nFor v3.1, do not choose Remielle or Sigrid by hype alone. Check anniversary rewards, codes, current teams, Drive Discs, W-Engines, and your next-version budget first.\n\n## Decision table\n\n| Account state | Priority |\n|---|---|\n| Xbox/Microsoft Store newcomer | Account binding and rewards |\n| Returner with outdated teams | Meta-team review |\n| Missing a key role | Pull the role that fills the gap |\n| One pity only | Character first, weapon cautious |\n| Collector | Favorite first, budget checked |\n\n## FAQ\n\n### Who is better, Remielle or Sigrid?\n\nIt depends on your team gap, gear, and budget. Do not chase both plus weapons if you only have one pity.\n\n### Can anniversary rewards guarantee a character?\n\nNo. Add mail, events, codes, and dailies before counting your real pull budget."
   }
