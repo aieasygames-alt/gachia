@@ -623,30 +623,30 @@
       }
     ],
     "serpTitle": {
-      "en": "ZZZ 3.0 Guide: Banners, Rewards, New Agents & Teams",
-      "zh": "绝区零 3.0 攻略：卡池、福利、新代理人与配队",
-      "ja": "ZZZ 3.0攻略：バナー、報酬、新代理人、編成"
+      "en": "ZZZ v3.1 Live Hub: Banners, Anniversary Rewards & v3.0 Recap",
+      "zh": "绝区零 3.1 当前版本入口：卡池、周年福利与 3.0 回顾",
+      "ja": "ゼンゼロ 3.1 現在版本：バナー、周年報酬、3.0振り返り"
     },
     "serpDescription": {
-      "en": "Start ZZZ v3.0 with banners, rewards, new agents, pull priorities, Drive Disc routes, W-Engine checks, and what to do before v3.1.",
-      "zh": "整理绝区零 3.0 卡池、福利、新代理人、抽取优先级、驱动盘路线、音擎检查和进入 3.1 前该做什么。",
-      "ja": "ZZZ 3.0のバナー、報酬、新代理人、優先度、ドライブ、音擎、3.1前の進め方を整理します。"
+      "en": "Start with the live ZZZ v3.1 hub for banners, anniversary rewards, codes, and Xbox/Steam onboarding, then use the v3.0 recap.",
+      "zh": "先看绝区零 3.1 当前卡池、2 周年福利、兑换码与 Xbox/Steam 入坑，再回顾 3.0 新秩序、角色和养成内容。",
+      "ja": "ゼンゼロ 3.1の現在バナー、2周年報酬、コード、Xbox/Steam入門を確認し、3.0の内容を振り返ります。"
     },
     "quickFacts": {
       "en": [
-        "Connects v3.0 banners, rewards, and new agents.",
-        "Routes users into Drive Discs, W-Engines, teams, and codes.",
-        "Useful for ZZZ 3.0 guide, banners, rewards, and new-agent searches."
+        "Current version: v3.1 The Long Goodbye launched on July 29, 2026",
+        "Start with: the v3.1 hub, anniversary rewards, codes, and platform linking",
+        "Page scope: a full v3.0 New Order recap with live-version routing"
       ],
       "zh": [
-        "把 3.0 卡池、福利和新代理人放在一页判断。",
-        "继续导向驱动盘、音擎、配队和兑换码。",
-        "重点匹配 ZZZ 3.0 guide、banners、rewards、新代理人等搜索。"
+        "当前版本：3.1「The Long Goodbye」已于 2026 年 7 月 29 日上线",
+        "先看：3.1 版本专题、周年福利、兑换码与平台账号绑定",
+        "本页定位：3.0「新秩序」完整回顾与当前版本导流"
       ],
       "ja": [
-        "3.0バナー、報酬、新代理人を一緒に確認。",
-        "ドライブ、音擎、編成、コードへ導線を作ります。",
-        "ZZZ 3.0 guide / banners / rewards 検索に対応。"
+        "現在版本：3.1「The Long Goodbye」は2026年7月29日に配信開始",
+        "先に確認：3.1特集、周年報酬、コード、プラットフォーム連携",
+        "本ページ：3.0「新秩序」の振り返りと現在版本への導線"
       ]
     }
   },

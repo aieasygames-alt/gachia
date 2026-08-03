@@ -1,10 +1,13 @@
 import { describe, it, expect } from 'vitest';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { genshinCharacters, getGenshinCharacterById, getGenshinCharacterImage } from '../games/genshin/characters';
 import { starrailCharacters, getStarRailCharacterById, getStarRailCharacterImage } from '../games/starrail/characters';
 import { wuwaCharacters, getWuWaCharacterById, getWuWaCharacterImage } from '../games/wuwa/characters';
 import { nteCharacters, getNteCharacterById, getNteCharacterImage } from '../games/nte/characters';
 import { zzzCharacters, getZzzCharacterById, getZzzCharacterImage } from '../games/zzz/characters';
 import { guihuanCharacters, getGuihuanCharacterById, getGuihuanCharacterImage } from '../games/guihuan/characters';
+import { zzzGuides } from '../games/zzz/guides';
 
 describe('Genshin Impact', () => {
   it('all characters have required fields', () => {
@@ -32,6 +35,15 @@ describe('Genshin Impact', () => {
   it('no duplicate ids', () => {
     const ids = genshinCharacters.map((c) => c.id);
     expect(new Set(ids).size).toBe(ids.length);
+  });
+});
+
+describe('Cloudflare data assets', () => {
+  it('keeps the ZZZ guide asset synchronized with the source data', () => {
+    const assetPath = join(process.cwd(), '../../apps/web/public/data/zzz/raw-guides.json');
+    const publicGuides = JSON.parse(readFileSync(assetPath, 'utf8'));
+
+    expect(publicGuides).toEqual(zzzGuides);
   });
 });
 
