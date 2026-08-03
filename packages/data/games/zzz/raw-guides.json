@@ -1,15 +1,15 @@
 [
   {
     "id": "steam-3-0-start-guide",
-    "title": "绝区零 Steam / 3.0 入坑 FAQ：下载安装、账号绑定、新区域与兑换码",
-    "titleEn": "Zenless Zone Zero Steam / v3.0 Starter FAQ: Download, Account Linking, New Area, and Codes",
+    "title": "绝区零 Steam / v3.1 入坑入口：下载、账号绑定、兑换码与 v3.0 回顾",
+    "titleEn": "ZZZ Steam / v3.1 Starter Hub: Download, Account Linking, Codes & v3.0 Recap",
     "category": "beginner",
     "categoryZh": "新手指南",
     "categoryEn": "Beginner",
-    "summary": "面向 Steam 新玩家和 3.0 回流玩家，整理下载安装、HoYoverse 账号绑定、存档互通、3.0 新区、兑换码和首周路线。",
-    "summaryEn": "A starter FAQ for Steam newcomers and v3.0 returning players covering install, HoYoverse account linking, cross-save, new areas, codes, and first-week routing.",
-    "content": "## 绝区零 Steam / 3.0 入坑 FAQ\n\nZZZ 3.0 和 Steam 发行带来的新增搜索，不只是“版本更新”，更多是新玩家能不能顺利进游戏、账号怎么绑定、Steam 和原账号是否互通、3.0 新区先做什么。\n\n### 先解决 5 个问题\n\n1. **从哪下载**：Steam、官网启动器、移动端商店都要分清入口。\n2. **账号怎么绑定**：优先确认 HoYoverse 账号，避免 Steam 新账号和旧账号割裂。\n3. **存档是否互通**：登录同一账号是核心前提，平台入口只是启动方式。\n4. **3.0 先做什么**：先解锁新区域和版本活动，再补主线与周常。\n5. **兑换码怎么查**：直播码、版本码、常驻码和过期码要分开。\n\n### Steam 新玩家路线\n\n- 第一步：安装并确认区服/账号。\n- 第二步：绑定或登录已有 HoYoverse 账号。\n- 第三步：完成新手教程，解锁活动和材料本。\n- 第四步：查看 3.0 版本专题，确认当前代理人、音擎和驱动盘目标。\n- 第五步：不要一开始就把菲林全部投入常驻池，先看版本池和队伍需求。\n\n### 3.0 回流玩家路线\n\n回流玩家先别急着抽卡，建议先做：\n\n1. 检查邮件、回归活动和兑换码。\n2. 看 3.0 新区域和新系统是否需要主线解锁。\n3. 更新驱动盘/音擎搭配，避免沿用旧版本过期方案。\n4. 用式舆和零号空洞需求倒推队伍培养顺序。\n\n### 推荐阅读路线\n\n- Steam / 下载安装：本页 + 下载页。\n- 账号绑定：本页 FAQ。\n- 3.0 新区：版本专题。\n- 角色与队伍：角色页、配队页、驱动盘页。\n- 兑换码：兑换码页。",
-    "contentEn": "## ZZZ Steam / v3.0 Starter FAQ\n\nZZZ v3.0 and the Steam release create search demand beyond patch notes: new players need to know how to enter the game, link accounts, keep cross-save working, and decide what to do first in the v3.0 area.\n\n### Solve These 5 Questions First\n\n1. **Where to download**: Steam, official launcher, and mobile stores are different entry points.\n2. **How to link accounts**: confirm your HoYoverse account first to avoid splitting old and new progress.\n3. **Does cross-save work**: using the same account is the key; platform is just the launcher.\n4. **What to do in v3.0**: unlock the new area and version events, then catch up on story and weeklies.\n5. **Where to check codes**: separate livestream, version, permanent, and expired codes.\n\n### Steam New Player Route\n\n- Install and confirm region/account.\n- Link or log into your existing HoYoverse account.\n- Finish the tutorial and unlock events/material stages.\n- Open the v3.0 hub to confirm agent, W-Engine, and Drive Disc targets.\n- Do not spend all Polychrome on standard pulls before checking limited banners and team needs.\n\n### v3.0 Returning Player Route\n\n1. Claim mail, returnee rewards, and redeem codes.\n2. Check whether the new area or systems require story unlocks.\n3. Refresh Drive Disc and W-Engine builds.\n4. Use Shiyu Defense and Hollow Zero needs to decide team priority.\n\n### Internal Path\n\n- Steam/download: this page and download guide.\n- Account linking: FAQ on this page.\n- v3.0 area: version hub.\n- Agents and teams: character, team, and Drive Disc pages.\n- Codes: redeem-code page.",
+    "summary": "绝区零 Steam 新玩家和回流玩家入口：优先处理 v3.1 当前版本、下载、HoYoverse 账号绑定、跨端存档、兑换码、卡池和 v3.0 历史内容承接。",
+    "summaryEn": "A ZZZ Steam starter hub for v3.1 newcomers and returners covering download, HoYoverse account linking, cross-save, codes, current banners, and v3.0 recap context.",
+    "content": "## 2026-08-03 当前入坑路径\n\n这个 URL 仍保留 v3.0 slug，但现在应作为 **Steam / v3.1 live starter hub + v3.0 recap** 使用。新玩家先处理下载和账号绑定，回流玩家先确认 v3.1 当前卡池、兑换码、音擎、驱动盘和配队。\n\n## 绝区零 Steam / v3.1 入坑 FAQ（含 v3.0 回顾）\n\nZZZ Steam 入口现在要先按 v3.1 当前版本处理，同时保留 v3.0 作为回顾背景。新玩家最关心的是能不能顺利进游戏、账号怎么绑定、Steam 和原账号是否互通，以及当前版本先做什么。\n\n### 先解决 5 个问题\n\n1. **从哪下载**：Steam、官网启动器、移动端商店都要分清入口。\n2. **账号怎么绑定**：优先确认 HoYoverse 账号，避免 Steam 新账号和旧账号割裂。\n3. **存档是否互通**：登录同一账号是核心前提，平台入口只是启动方式。\n4. **当前版本先做什么**：先看 v3.1 专题、当前卡池和版本活动，再回补 v3.0 区域、主线与周常。\n5. **兑换码怎么查**：直播码、版本码、常驻码和过期码要分开。\n\n### Steam 新玩家路线\n\n- 第一步：安装并确认区服/账号。\n- 第二步：绑定或登录已有 HoYoverse 账号。\n- 第三步：完成新手教程，解锁活动和材料本。\n- 第四步：查看 v3.1 版本专题和当前卡池，确认代理人、音擎和驱动盘目标。\n- 第五步：不要一开始就把菲林全部投入常驻池，先看版本池和队伍需求。\n\n### v3.1 回流玩家路线（v3.0 内容作为回顾）\n\n回流玩家先别急着抽卡，建议先做：\n\n1. 检查邮件、回归活动和兑换码。\n2. 看 v3.1 当前活动和 v3.0 历史内容是否需要主线解锁。\n3. 更新驱动盘/音擎搭配，避免沿用旧版本过期方案。\n4. 用式舆和零号空洞需求倒推队伍培养顺序。\n\n### 推荐阅读路线\n\n- Steam / 下载安装：本页 + 下载页。\n- 账号绑定：本页 FAQ。\n- v3.1 当前版本：版本专题；v3.0 新区作为回顾背景。\n- 角色与队伍：角色页、配队页、驱动盘页。\n- 兑换码：兑换码页。",
+    "contentEn": "## Current Starter Path for August 3, 2026\n\nThis URL keeps the v3.0 slug, but it should now work as a **Steam / v3.1 live starter hub plus v3.0 recap**. New players should solve download and account linking first; returners should check v3.1 banners, codes, W-Engines, Drive Discs, and teams.\n\n## ZZZ Steam / v3.1 Starter FAQ with v3.0 Recap\n\nZZZ Steam demand should now route through v3.1 first, with v3.0 kept as recap context. New players need to know how to enter the game, link accounts, keep cross-save working, and decide what to do first in the current version.\n\n### Solve These 5 Questions First\n\n1. **Where to download**: Steam, official launcher, and mobile stores are different entry points.\n2. **How to link accounts**: confirm your HoYoverse account first to avoid splitting old and new progress.\n3. **Does cross-save work**: using the same account is the key; platform is just the launcher.\n4. **What to do in the current version**: open the v3.1 hub and current banners first, then catch up on v3.0 areas, story, and weeklies.\n5. **Where to check codes**: separate livestream, version, permanent, and expired codes.\n\n### Steam New Player Route\n\n- Install and confirm region/account.\n- Link or log into your existing HoYoverse account.\n- Finish the tutorial and unlock events/material stages.\n- Open the v3.1 hub and current banner guide to confirm agent, W-Engine, and Drive Disc targets.\n- Do not spend all Polychrome on standard pulls before checking limited banners and team needs.\n\n### v3.1 Returning Player Route with v3.0 Recap\n\n1. Claim mail, returnee rewards, and redeem codes.\n2. Check whether v3.1 events or v3.0 recap content require story unlocks.\n3. Refresh Drive Disc and W-Engine builds.\n4. Use Shiyu Defense and Hollow Zero needs to decide team priority.\n\n### Internal Path\n\n- Steam/download: this page and download guide.\n- Account linking: FAQ on this page.\n- v3.1 current version: version hub; v3.0 area as recap context.\n- Agents and teams: character, team, and Drive Disc pages.\n- Codes: redeem-code page.",
     "tags": [
       "Steam",
       "3.0",
@@ -33,33 +33,33 @@
         "answerZh": "先领邮件和兑换码，确认新区解锁条件，再更新配装和队伍优先级。"
       }
     ],
-    "updatedAt": "2026-08-02",
-    "currentVersion": "ZZZ Steam and v3.0 starter cycle",
+    "updatedAt": "2026-08-03",
+    "currentVersion": "ZZZ v3.1 Steam starter and v3.0 recap cycle",
     "serpTitle": {
-      "en": "ZZZ Steam Starter Guide: Download, Account Linking & Codes",
-      "zh": "绝区零 Steam 入坑攻略：下载、账号绑定与兑换码",
-      "ja": "ZZZ Steam入門：ダウンロード、連携、コード"
+      "en": "ZZZ Steam v3.1 Starter Guide: Download, Account Linking & Codes",
+      "zh": "绝区零 Steam v3.1 入坑攻略：下载、账号绑定与兑换码",
+      "ja": "ZZZ Steam v3.1入門：ダウンロード、連携、コード"
     },
     "serpDescription": {
-      "en": "Start ZZZ on Steam with download steps, HoYoverse account linking, cross-save checks, v3.0 starter route, codes, and first-week priorities.",
-      "zh": "整理绝区零 Steam 下载、HoYoverse 账号绑定、跨端存档、3.0 入坑路线、兑换码和第一周优先级。",
-      "ja": "ZZZ Steam版のDL、HoYoverse連携、クロスセーブ、3.0入門、コード、初週優先度を整理します。"
+      "en": "Start ZZZ on Steam in v3.1: download routes, HoYoverse account linking, cross-save, codes, current banners, rewards, W-Engines, Drive Discs, and v3.0 recap.",
+      "zh": "绝区零 Steam v3.1 入坑：下载入口、HoYoverse 账号绑定、跨端存档、兑换码、当前卡池、奖励、音擎、驱动盘和 v3.0 回顾。",
+      "ja": "ZZZ Steam v3.1入門：DL、HoYoverse連携、クロスセーブ、コード、現在バナー、報酬、音動機、ドライブ、v3.0回顧。"
     },
     "quickFacts": {
       "en": [
-        "Confirm HoYoverse account linking before starting on Steam.",
-        "Claim codes and mail before planning Polychrome pulls.",
-        "Route new players into v3.0, teams, Drive Discs, and W-Engines."
+        "Start with v3.1 live routing; keep v3.0 as recap context.",
+        "Confirm HoYoverse account linking before creating duplicate progress.",
+        "Claim codes, then check banners, W-Engines, Drive Discs, and teams."
       ],
       "zh": [
-        "Steam 入坑前先确认 HoYoverse 账号绑定。",
-        "抽卡规划前先领取兑换码和邮件奖励。",
-        "继续导向 3.0、配队、驱动盘和音擎。"
+        "先按 v3.1 当前入口走，v3.0 作为历史回顾承接。",
+        "创建进度前先确认 HoYoverse 账号绑定。",
+        "先领兑换码，再看卡池、音擎、驱动盘和配队。"
       ],
       "ja": [
-        "Steam開始前にHoYoverse連携を確認。",
-        "引く前にコードとメール報酬を回収。",
-        "3.0、編成、ドライブ、音擎へ案内。"
+        "v3.1現在導線を優先し、v3.0は回顧として扱う。",
+        "進行前にHoYoverse連携を確認。",
+        "コード後にバナー、音動機、ドライブ、編成へ。"
       ]
     }
   },
@@ -175,15 +175,15 @@
   },
   {
     "id": "w-engine-guide",
-    "title": "绝区零音擎（武器）选择指南",
-    "titleEn": "ZZZ W-Engine Selection Guide",
+    "title": "绝区零当前音擎选择攻略：按代理人定位、卡池预算和替代武器规划",
+    "titleEn": "ZZZ W-Engine Guide: Best Weapons by Agent Role, Banner Budget and Alternatives",
     "category": "equipment",
     "categoryZh": "装备攻略",
     "categoryEn": "Equipment",
-    "summary": "了解不同类型音擎的特点，为你的代理人选择最合适的武器。",
-    "summaryEn": "Understand different W-Engine types and choose the best weapon for your agents.",
-    "content": "## 音擎选择指南\n\n音擎是代理人的武器装备，正确选择能大幅提升角色输出。本指南帮你理解音擎系统并做出最优选择。\n\n### 一、音擎基础属性\n\n每把音擎提供三类属性：\n\n- **基础攻击力**：根据稀有度不同（S级 > A级 > B级）\n- **副属性**：固定加成（暴击率、暴击伤害、异常精通、冲击力等）\n- **被动效果**：特殊技能效果，通常对特定职业有额外加成\n\n### 二、按职业选择音擎\n\n#### 强攻型（Attack）— 主C输出\n| 推荐音擎 | 稀有度 | 副属性 | 获取方式 |\n|----------|--------|--------|----------|\n| 拘缚者的吻痕 | S级 | 暴击伤害 | 艾莲专属音擎池 |\n| 暴雨终焉 | S级 | 暴击率 | 朱鸢专属音擎池 |\n| 星光引擎 | A级 | 暴击伤害 | 模拟作战商店 |\n| 立体音擎·改 | A级 | 攻击力% | 活动免费 |\n\n#### 击破型（Stun）— 失衡积累\n| 推荐音擎 | 稀有度 | 副属性 | 获取方式 |\n|----------|--------|--------|----------|\n| 拘缚者（专用） | S级 | 冲击力 | 专属音擎池 |\n| 原装音擎 | A级 | 冲击力 | 模拟作战商店 |\n| 重型音擎 | A级 | 冲击力 | 通用掉落 |\n\n#### 异常型（Anomaly）— 异常伤害\n| 推荐音擎 | 稀有度 | 副属性 | 获取方式 |\n|----------|--------|--------|----------|\n| 融合编译器 | S级 | 异常精通 | 格莉丝专属 |\n| 磁暴音擎 | A级 | 异常精通 | 商店兑换 |\n\n#### 支援型（Support）— 团队增益\n| 推荐音擎 | 稀有度 | 副属性 | 获取方式 |\n|----------|--------|--------|----------|\n| 虚数怪谭 | S级 | 能量回复 | 专属音擎池 |\n| 和弦音擎 | A级 | 能量回复 | 商店兑换 |\n\n#### 防护型（Defense）— 生存保障\n| 推荐音擎 | 稀有度 | 副属性 | 获取方式 |\n|----------|--------|--------|----------|\n| 安息之所 | S级 | 防御力% | 专属音擎池 |\n| 坚壁音擎 | A级 | 防御力% | 通用掉落 |\n\n### 三、音擎强化建议\n\n1. **主C音擎优先拉满**：基础攻击力对伤害影响大\n2. **辅助音擎可以+15**：不需要完全拉满\n3. **选择原则**：副属性匹配角色需求 > 基础攻击力 > 被动效果\n4. **免费音擎也很强**：商店兑换的A级音擎性价比较高\n\n### 四、音擎获取方式\n\n| 来源 | 稀有度 | 说明 |\n|------|--------|------|\n| 信源检索 | S级 | 最强音擎，部分为角色专属 |\n| 模拟作战商店 | S/A级 | 用特定货币兑换，稳定获取 |\n| 活动奖励 | A/B级 | 免费获取，不要错过 |\n| 制作系统 | B级 | 用材料制作基础音擎 |",
-    "contentEn": "## W-Engine Selection Guide\n\nW-Engines are agent weapons. Choosing the right one significantly impacts your damage output. This guide helps you understand the system and make optimal choices.\n\n### 1. W-Engine Basics\n\nEvery W-Engine provides three types of stats:\n\n- **Base ATK**: Varies by rarity (S-Rank > A-Rank > B-Rank)\n- **Sub-stat**: Fixed bonus (CRIT Rate, CRIT DMG, Anomaly Mastery, Impact, etc.)\n- **Passive Effect**: Special skill effects, often with bonuses for specific specialties\n\n### 2. Choosing by Specialty\n\n#### Attack Specialty (Main DPS)\n| Recommended Engine | Rarity | Sub-stat | Source |\n|-------------------|--------|----------|--------|\n| Restrainer's Kiss | S-Rank | CRIT DMG | Ellen signature banner |\n| Torrential Rain | S-Rank | CRIT Rate | Zhu Yuan signature banner |\n| Starlight Engine | A-Rank | CRIT DMG | Simulation Shop |\n| Stereo Engine+ | A-Rank | ATK% | Event free |\n\n#### Stun Specialty (Daze Builder)\n| Recommended Engine | Rarity | Sub-stat | Source |\n|-------------------|--------|----------|--------|\n| Restrainer (Signature) | S-Rank | Impact | Signature banner |\n| Original Engine | A-Rank | Impact | Simulation Shop |\n| Heavy Engine | A-Rank | Impact | General drop |\n\n#### Anomaly Specialty (DoT Damage)\n| Recommended Engine | Rarity | Sub-stat | Source |\n|-------------------|--------|----------|--------|\n| Fusion Compiler | S-Rank | Anomaly Mastery | Grace signature |\n| Magnetic Storm Engine | A-Rank | Anomaly Mastery | Shop exchange |\n\n#### Support Specialty (Team Buff)\n| Recommended Engine | Rarity | Sub-stat | Source |\n|-------------------|--------|----------|--------|\n| Imaginary Tales | S-Rank | Energy Regen | Signature banner |\n| Chord Engine | A-Rank | Energy Regen | Shop exchange |\n\n#### Defense Specialty (Survival)\n| Recommended Engine | Rarity | Sub-stat | Source |\n|-------------------|--------|----------|--------|\n| Resting Place | S-Rank | DEF% | Signature banner |\n| Fortress Engine | A-Rank | DEF% | General drop |\n\n### 3. Enhancement Strategy\n\n1. **DPS engine to max first**: Base ATK has a major impact on damage\n2. **Support engines at +15**: Don't need full investment\n3. **Selection priority**: Matching sub-stat > Base ATK > Passive effect\n4. **Free engines are solid**: Shop-exchangeable A-Rank engines offer good value\n\n### 4. W-Engine Sources\n\n| Source | Rarity | Notes |\n|--------|--------|-------|\n| Signal Search | S-Rank | Strongest engines, some are character-exclusive |\n| Simulation Shop | S/A-Rank | Exchangeable with specific currency, reliable source |\n| Event Rewards | A/B-Rank | Free acquisition, don't miss them |\n| Crafting | B-Rank | Crafted with materials for basics |",
+    "summary": "绝区零当前版本音擎选择入口，按代理人定位、S/A 级替代、专属音擎风险、菲林预算和当前卡池优先级判断是否值得抽。",
+    "summaryEn": "Current ZZZ W-Engine guide for matching agent roles, S/A-Rank alternatives, signature-engine risk, Polychrome budget, and current-banner pull priority.",
+    "content": "## 2026-08-03 当前音擎判断\n\n音擎页现在要和 v3.1 当前卡池一起看：先确认代理人是否已经到手，再判断专属音擎、A 级替代和驱动盘是否能支撑当前配队。\n\n## 音擎选择指南\n\n音擎是代理人的武器装备，正确选择能大幅提升角色输出。本指南帮你理解音擎系统并做出最优选择。\n\n### 一、音擎基础属性\n\n每把音擎提供三类属性：\n\n- **基础攻击力**：根据稀有度不同（S级 > A级 > B级）\n- **副属性**：固定加成（暴击率、暴击伤害、异常精通、冲击力等）\n- **被动效果**：特殊技能效果，通常对特定职业有额外加成\n\n### 二、按职业选择音擎\n\n#### 强攻型（Attack）— 主C输出\n| 推荐音擎 | 稀有度 | 副属性 | 获取方式 |\n|----------|--------|--------|----------|\n| 拘缚者的吻痕 | S级 | 暴击伤害 | 艾莲专属音擎池 |\n| 暴雨终焉 | S级 | 暴击率 | 朱鸢专属音擎池 |\n| 星光引擎 | A级 | 暴击伤害 | 模拟作战商店 |\n| 立体音擎·改 | A级 | 攻击力% | 活动免费 |\n\n#### 击破型（Stun）— 失衡积累\n| 推荐音擎 | 稀有度 | 副属性 | 获取方式 |\n|----------|--------|--------|----------|\n| 拘缚者（专用） | S级 | 冲击力 | 专属音擎池 |\n| 原装音擎 | A级 | 冲击力 | 模拟作战商店 |\n| 重型音擎 | A级 | 冲击力 | 通用掉落 |\n\n#### 异常型（Anomaly）— 异常伤害\n| 推荐音擎 | 稀有度 | 副属性 | 获取方式 |\n|----------|--------|--------|----------|\n| 融合编译器 | S级 | 异常精通 | 格莉丝专属 |\n| 磁暴音擎 | A级 | 异常精通 | 商店兑换 |\n\n#### 支援型（Support）— 团队增益\n| 推荐音擎 | 稀有度 | 副属性 | 获取方式 |\n|----------|--------|--------|----------|\n| 虚数怪谭 | S级 | 能量回复 | 专属音擎池 |\n| 和弦音擎 | A级 | 能量回复 | 商店兑换 |\n\n#### 防护型（Defense）— 生存保障\n| 推荐音擎 | 稀有度 | 副属性 | 获取方式 |\n|----------|--------|--------|----------|\n| 安息之所 | S级 | 防御力% | 专属音擎池 |\n| 坚壁音擎 | A级 | 防御力% | 通用掉落 |\n\n### 三、音擎强化建议\n\n1. **主C音擎优先拉满**：基础攻击力对伤害影响大\n2. **辅助音擎可以+15**：不需要完全拉满\n3. **选择原则**：副属性匹配角色需求 > 基础攻击力 > 被动效果\n4. **免费音擎也很强**：商店兑换的A级音擎性价比较高\n\n### 四、音擎获取方式\n\n| 来源 | 稀有度 | 说明 |\n|------|--------|------|\n| 信源检索 | S级 | 最强音擎，部分为角色专属 |\n| 模拟作战商店 | S/A级 | 用特定货币兑换，稳定获取 |\n| 活动奖励 | A/B级 | 免费获取，不要错过 |\n| 制作系统 | B级 | 用材料制作基础音擎 |",
+    "contentEn": "## Current W-Engine Check for August 3, 2026\n\nRead W-Engines together with the v3.1 banner plan: secure the agent first, then compare signature W-Engines, A-Rank alternatives, Drive Discs, and team needs.\n\n## W-Engine Selection Guide\n\nW-Engines are agent weapons. Choosing the right one significantly impacts your damage output. This guide helps you understand the system and make optimal choices.\n\n### 1. W-Engine Basics\n\nEvery W-Engine provides three types of stats:\n\n- **Base ATK**: Varies by rarity (S-Rank > A-Rank > B-Rank)\n- **Sub-stat**: Fixed bonus (CRIT Rate, CRIT DMG, Anomaly Mastery, Impact, etc.)\n- **Passive Effect**: Special skill effects, often with bonuses for specific specialties\n\n### 2. Choosing by Specialty\n\n#### Attack Specialty (Main DPS)\n| Recommended Engine | Rarity | Sub-stat | Source |\n|-------------------|--------|----------|--------|\n| Restrainer's Kiss | S-Rank | CRIT DMG | Ellen signature banner |\n| Torrential Rain | S-Rank | CRIT Rate | Zhu Yuan signature banner |\n| Starlight Engine | A-Rank | CRIT DMG | Simulation Shop |\n| Stereo Engine+ | A-Rank | ATK% | Event free |\n\n#### Stun Specialty (Daze Builder)\n| Recommended Engine | Rarity | Sub-stat | Source |\n|-------------------|--------|----------|--------|\n| Restrainer (Signature) | S-Rank | Impact | Signature banner |\n| Original Engine | A-Rank | Impact | Simulation Shop |\n| Heavy Engine | A-Rank | Impact | General drop |\n\n#### Anomaly Specialty (DoT Damage)\n| Recommended Engine | Rarity | Sub-stat | Source |\n|-------------------|--------|----------|--------|\n| Fusion Compiler | S-Rank | Anomaly Mastery | Grace signature |\n| Magnetic Storm Engine | A-Rank | Anomaly Mastery | Shop exchange |\n\n#### Support Specialty (Team Buff)\n| Recommended Engine | Rarity | Sub-stat | Source |\n|-------------------|--------|----------|--------|\n| Imaginary Tales | S-Rank | Energy Regen | Signature banner |\n| Chord Engine | A-Rank | Energy Regen | Shop exchange |\n\n#### Defense Specialty (Survival)\n| Recommended Engine | Rarity | Sub-stat | Source |\n|-------------------|--------|----------|--------|\n| Resting Place | S-Rank | DEF% | Signature banner |\n| Fortress Engine | A-Rank | DEF% | General drop |\n\n### 3. Enhancement Strategy\n\n1. **DPS engine to max first**: Base ATK has a major impact on damage\n2. **Support engines at +15**: Don't need full investment\n3. **Selection priority**: Matching sub-stat > Base ATK > Passive effect\n4. **Free engines are solid**: Shop-exchangeable A-Rank engines offer good value\n\n### 4. W-Engine Sources\n\n| Source | Rarity | Notes |\n|--------|--------|-------|\n| Signal Search | S-Rank | Strongest engines, some are character-exclusive |\n| Simulation Shop | S/A-Rank | Exchangeable with specific currency, reliable source |\n| Event Rewards | A/B-Rank | Free acquisition, don't miss them |\n| Crafting | B-Rank | Crafted with materials for basics |",
     "tags": [
       "音擎",
       "武器",
@@ -212,49 +212,49 @@
         "answerZh": "根据角色定位选择副属性：输出要暴击，击破要冲击力，异常要异常精通，支援要能量回复。副属性匹配比基础攻击力差异更重要。"
       }
     ],
-    "updatedAt": "2026-08-02",
-    "currentVersion": "Current ZZZ build cycle",
+    "updatedAt": "2026-08-03",
+    "currentVersion": "ZZZ v3.1 build and W-Engine cycle",
     "serpTitle": {
-      "en": "ZZZ W-Engine Guide: Best Weapons by Agent Role",
-      "zh": "绝区零音擎攻略：按代理人定位选最佳武器",
-      "ja": "ZZZ音擎攻略：役割別おすすめ武器"
+      "en": "ZZZ W-Engine Guide: Best Weapons, Signatures and A-Rank Alternatives",
+      "zh": "绝区零音擎攻略：最佳武器、专属音擎与 A 级替代",
+      "ja": "ZZZ音動機攻略：おすすめ、餅武器、Aランク代替"
     },
     "serpDescription": {
-      "en": "Pick the best ZZZ W-Engines by agent role, signature value, A-Rank alternatives, upgrade priority, and whether to pull weapons or save.",
-      "zh": "按代理人定位选择绝区零音擎，比较专属音擎、A级替代、升级优先级，以及该抽武器还是留菲林。",
-      "ja": "代理人役割別に音擎、専用価値、A級代替、強化優先度、引くか温存かを整理します。"
+      "en": "Choose ZZZ W-Engines by agent role, current build needs, signature risk, A-Rank alternatives, W-Engine pity, Polychrome budget, and banner priority.",
+      "zh": "按代理人定位、当前配装、专属音擎风险、A 级替代、音擎保底、菲林预算和卡池优先级选择绝区零音擎。",
+      "ja": "役割、現在ビルド、餅武器リスク、Aランク代替、音動機天井、予算、バナー優先度で選択。"
     },
     "quickFacts": {
       "en": [
         "Secure the agent before chasing signature W-Engines.",
-        "Match W-Engine specialty to the agent role first.",
-        "Use A-Rank options when Polychrome budget is tight."
+        "Use A-Rank options when v3.1 Polychrome budget is tight.",
+        "Read this with current banners, Drive Discs, and teams."
       ],
       "zh": [
-        "资源有限时先保代理人，再考虑专属音擎。",
-        "先看音擎类型是否匹配代理人定位。",
-        "菲林紧张时优先用 A 级替代过渡。"
+        "先抽代理人，再考虑专属音擎。",
+        "v3.1 菲林紧张时优先使用 A 级替代。",
+        "和当前卡池、驱动盘、配队一起看。"
       ],
       "ja": [
-        "資源が少ない時は代理人を先に確保。",
-        "音擎タイプを代理人役割に合わせます。",
-        "菲林が少ない場合はA級代替で過渡。"
+        "先にエージェント、次に餅音動機。",
+        "v3.1予算が厳しい時はAランク代替。",
+        "現在バナー、ドライブ、編成と一緒に確認。"
       ]
     }
   },
   {
     "id": "drive-disc-guide",
-    "title": "绝区零驱动盘选择与搭配指南",
-    "titleEn": "ZZZ Drive Disc Selection Guide",
+    "title": "绝区零当前驱动盘攻略：最佳套装、主属性、配队和刷取优先级",
+    "titleEn": "ZZZ Drive Disc Guide: Best Sets, Main Stats, Teams and Farming Priority",
     "category": "equipment",
     "categoryZh": "装备攻略",
     "categoryEn": "Equipment",
-    "updatedAt": "2026-08-02",
-    "currentVersion": "Current ZZZ build cycle",
-    "summary": "学习驱动盘套装效果与主属性选择，为代理人搭配最优装备。",
-    "summaryEn": "Learn Drive Disc set effects and main stat choices to optimize your agent's equipment.",
-    "content": "## 驱动盘选择与搭配指南\n\n驱动盘是绝区零的装备系统，类似原神的圣遗物。理解主属性和套装效果是打造强力角色的关键。\n\n### 一、驱动盘基础\n\n每个代理人装备**6个驱动盘**：\n\n| 位置 | 主属性 | 说明 |\n|------|--------|------|\n| 1号位 | 固定生命值 | 所有角色相同 |\n| 2号位 | 固定攻击力 | 所有角色相同 |\n| 3号位 | 固定防御力 | 所有角色相同 |\n| 4号位 | 随机 | 暴击率/暴击伤害/异常精通/冲击力等 |\n| 5号位 | 随机 | 属性伤害加成/攻击力%等 |\n| 6号位 | 随机 | 能量回复/攻击力%等 |\n\n### 二、套装效果\n\n装备同套装驱动盘激活加成：\n- **2件套**：装备2件同套装即激活\n- **4件套**：装备4件同套装激活更强效果\n\n标准搭配：**4+2**（4件主套装 + 2件副套装）\n\n### 三、热门套装推荐\n\n| 套装名称 | 2件套效果 | 4件套效果 | 适用角色 |\n|----------|-----------|-----------|----------|\n| 硬核摇滚 | 暴击伤害+16% | 暴击时额外增伤 | 通用暴击输出 |\n| 自由布鲁斯 | 攻击力+12% | 触发异常后增伤 | 异常输出 |\n| 灵魂摇滚 | 冲击力+6% | 眩晕期间队友增伤 | 击破型角色 |\n| 和声摇滚 | 能量回复+20% | 释放技能后回能 | 支援型角色 |\n| 坚固防线 | 防御力+16% | 受到伤害降低 | 防护型角色 |\n| 猛攻 | 攻击力+12% | 连携攻击增伤 | 通用输出 |\n\n### 四、按角色类型搭配\n\n#### 暴击输出型\n- **主套装**：硬核摇滚（4件）\n- **副套装**：猛攻/自由布鲁斯（2件）\n- **4号位**：暴击率/暴击伤害\n- **5号位**：对应属性伤害加成\n- **6号位**：攻击力%\n\n#### 异常输出型\n- **主套装**：自由布鲁斯（4件）\n- **副套装**：属性伤害套装（2件）\n- **4号位**：异常精通\n- **5号位**：对应属性伤害加成\n- **6号位**：异常精通/攻击力%\n\n#### 击破辅助型\n- **主套装**：灵魂摇滚（4件）\n- **副套装**：和声摇滚（2件）\n- **4号位**：冲击力\n- **5号位**：对应属性伤害加成\n- **6号位**：能量回复\n\n#### 支援型\n- **主套装**：和声摇滚（4件）\n- **副套装**：自由布鲁斯（2件）\n- **4号位**：能量回复/异常精通\n- **5号位**：对应属性伤害加成\n- **6号位**：能量回复\n\n### 五、驱动盘获取与强化\n\n**获取途径**\n- **零号空洞**：主要来源，每周挑战获取高级驱动盘\n- **驱动盘副本**：集中刷取特定套装\n- **活动奖励**：偶尔提供高品质驱动盘\n\n**强化建议**\n1. 优先保证4、5号位主属性正确\n2. 先凑齐套装效果再追求副词条\n3. 主C的驱动盘优先强化到满级\n4. 辅助的驱动盘可以适当降低强化优先级",
-    "contentEn": "## Drive Disc Selection Guide\n\nDrive Discs are ZZZ's equipment system, similar to Genshin's Artifacts. Understanding main stats and set effects is key to building strong agents.\n\n### 1. Drive Disc Basics\n\nEach agent equips **6 Drive Discs**:\n\n| Slot | Main Stat | Notes |\n|------|-----------|-------|\n| Slot 1 | Fixed HP | Same for all agents |\n| Slot 2 | Fixed ATK | Same for all agents |\n| Slot 3 | Fixed DEF | Same for all agents |\n| Slot 4 | Random | CRIT Rate/CRIT DMG/Anomaly Mastery/Impact etc. |\n| Slot 5 | Random | Elemental DMG Bonus/ATK% etc. |\n| Slot 6 | Random | Energy Regen/ATK% etc. |\n\n### 2. Set Effects\n\nEquipping discs from the same set activates bonuses:\n- **2pc**: Activate with 2 pieces from the same set\n- **4pc**: Activate with 4 pieces for a stronger effect\n\nStandard setup: **4+2** (4 pieces main set + 2 pieces off-set)\n\n### 3. Popular Set Recommendations\n\n| Set Name | 2pc Effect | 4pc Effect | Best For |\n|----------|-----------|-----------|----------|\n| Hard Core Rock | CRIT DMG +16% | Extra DMG on crit | Universal CRIT DPS |\n| Freedom Blues | ATK +12% | DMG boost after Anomaly trigger | Anomaly DPS |\n| Soul Rock | Impact +6% | Team DMG boost during Stun | Stun agents |\n| Harmony Rock | Energy Regen +20% | Energy restore after skill | Support agents |\n| Fortress Defense | DEF +16% | Damage reduction | Defense agents |\n| Fanged Metal | ATK +12% | Chain Attack DMG boost | Universal DPS |\n\n### 4. Build Type Recommendations\n\n#### CRIT DPS Build\n- **Main set**: Hard Core Rock (4pc)\n- **Off-set**: Fanged Metal / Freedom Blues (2pc)\n- **Slot 4**: CRIT Rate or CRIT DMG\n- **Slot 5**: Matching Elemental DMG bonus\n- **Slot 6**: ATK%\n\n#### Anomaly DPS Build\n- **Main set**: Freedom Blues (4pc)\n- **Off-set**: Elemental DMG set (2pc)\n- **Slot 4**: Anomaly Mastery\n- **Slot 5**: Matching Elemental DMG bonus\n- **Slot 6**: Anomaly Mastery / ATK%\n\n#### Stun Support Build\n- **Main set**: Soul Rock (4pc)\n- **Off-set**: Harmony Rock (2pc)\n- **Slot 4**: Impact\n- **Slot 5**: Matching Elemental DMG bonus\n- **Slot 6**: Energy Regen\n\n#### Pure Support Build\n- **Main set**: Harmony Rock (4pc)\n- **Off-set**: Freedom Blues (2pc)\n- **Slot 4**: Energy Regen / Anomaly Mastery\n- **Slot 5**: Matching Elemental DMG bonus\n- **Slot 6**: Energy Regen\n\n### 5. Acquisition and Enhancement\n\n**Sources**\n- **Hollow Zero**: Primary source, weekly challenge for high-quality discs\n- **Drive Disc Dungeons**: Focused farming for specific sets\n- **Event Rewards**: Occasionally provide high-quality discs\n\n**Enhancement Tips**\n1. Prioritize correct main stats on slots 4 and 5 first\n2. Complete set bonuses before optimizing sub-stats\n3. Main DPS discs should be enhanced to max level first\n4. Support discs can have lower enhancement priority",
+    "updatedAt": "2026-08-03",
+    "currentVersion": "ZZZ v3.1 Drive Disc and build cycle",
+    "summary": "绝区零当前版本驱动盘选择入口，按代理人定位、4+2 套装、4/5/6 号位主属性、配队需求和刷取优先级规划资源。",
+    "summaryEn": "Current ZZZ Drive Disc guide for best sets, 4/5/6 main stats, 4pc + 2pc routing, team needs, farming priority, and current-banner build planning.",
+    "content": "## 2026-08-03 当前驱动盘路线\n\n驱动盘不要脱离当前卡池和代理人定位单独刷。先确定你在 v3.1 要培养谁，再按 4 件核心套、2 件属性套、4/5/6 号位主属性和队伍缺口安排体力。\n\n## 驱动盘选择与搭配指南\n\n驱动盘是绝区零的装备系统，类似原神的圣遗物。理解主属性和套装效果是打造强力角色的关键。\n\n### 一、驱动盘基础\n\n每个代理人装备**6个驱动盘**：\n\n| 位置 | 主属性 | 说明 |\n|------|--------|------|\n| 1号位 | 固定生命值 | 所有角色相同 |\n| 2号位 | 固定攻击力 | 所有角色相同 |\n| 3号位 | 固定防御力 | 所有角色相同 |\n| 4号位 | 随机 | 暴击率/暴击伤害/异常精通/冲击力等 |\n| 5号位 | 随机 | 属性伤害加成/攻击力%等 |\n| 6号位 | 随机 | 能量回复/攻击力%等 |\n\n### 二、套装效果\n\n装备同套装驱动盘激活加成：\n- **2件套**：装备2件同套装即激活\n- **4件套**：装备4件同套装激活更强效果\n\n标准搭配：**4+2**（4件主套装 + 2件副套装）\n\n### 三、热门套装推荐\n\n| 套装名称 | 2件套效果 | 4件套效果 | 适用角色 |\n|----------|-----------|-----------|----------|\n| 硬核摇滚 | 暴击伤害+16% | 暴击时额外增伤 | 通用暴击输出 |\n| 自由布鲁斯 | 攻击力+12% | 触发异常后增伤 | 异常输出 |\n| 灵魂摇滚 | 冲击力+6% | 眩晕期间队友增伤 | 击破型角色 |\n| 和声摇滚 | 能量回复+20% | 释放技能后回能 | 支援型角色 |\n| 坚固防线 | 防御力+16% | 受到伤害降低 | 防护型角色 |\n| 猛攻 | 攻击力+12% | 连携攻击增伤 | 通用输出 |\n\n### 四、按角色类型搭配\n\n#### 暴击输出型\n- **主套装**：硬核摇滚（4件）\n- **副套装**：猛攻/自由布鲁斯（2件）\n- **4号位**：暴击率/暴击伤害\n- **5号位**：对应属性伤害加成\n- **6号位**：攻击力%\n\n#### 异常输出型\n- **主套装**：自由布鲁斯（4件）\n- **副套装**：属性伤害套装（2件）\n- **4号位**：异常精通\n- **5号位**：对应属性伤害加成\n- **6号位**：异常精通/攻击力%\n\n#### 击破辅助型\n- **主套装**：灵魂摇滚（4件）\n- **副套装**：和声摇滚（2件）\n- **4号位**：冲击力\n- **5号位**：对应属性伤害加成\n- **6号位**：能量回复\n\n#### 支援型\n- **主套装**：和声摇滚（4件）\n- **副套装**：自由布鲁斯（2件）\n- **4号位**：能量回复/异常精通\n- **5号位**：对应属性伤害加成\n- **6号位**：能量回复\n\n### 五、驱动盘获取与强化\n\n**获取途径**\n- **零号空洞**：主要来源，每周挑战获取高级驱动盘\n- **驱动盘副本**：集中刷取特定套装\n- **活动奖励**：偶尔提供高品质驱动盘\n\n**强化建议**\n1. 优先保证4、5号位主属性正确\n2. 先凑齐套装效果再追求副词条\n3. 主C的驱动盘优先强化到满级\n4. 辅助的驱动盘可以适当降低强化优先级",
+    "contentEn": "## Current Drive Disc Route for August 3, 2026\n\nDo not farm Drive Discs away from banner and agent context. Decide who you are building in v3.1 first, then route 4pc core sets, 2pc stat sets, slot 4/5/6 main stats, and team gaps.\n\n## Drive Disc Selection Guide\n\nDrive Discs are ZZZ's equipment system, similar to Genshin's Artifacts. Understanding main stats and set effects is key to building strong agents.\n\n### 1. Drive Disc Basics\n\nEach agent equips **6 Drive Discs**:\n\n| Slot | Main Stat | Notes |\n|------|-----------|-------|\n| Slot 1 | Fixed HP | Same for all agents |\n| Slot 2 | Fixed ATK | Same for all agents |\n| Slot 3 | Fixed DEF | Same for all agents |\n| Slot 4 | Random | CRIT Rate/CRIT DMG/Anomaly Mastery/Impact etc. |\n| Slot 5 | Random | Elemental DMG Bonus/ATK% etc. |\n| Slot 6 | Random | Energy Regen/ATK% etc. |\n\n### 2. Set Effects\n\nEquipping discs from the same set activates bonuses:\n- **2pc**: Activate with 2 pieces from the same set\n- **4pc**: Activate with 4 pieces for a stronger effect\n\nStandard setup: **4+2** (4 pieces main set + 2 pieces off-set)\n\n### 3. Popular Set Recommendations\n\n| Set Name | 2pc Effect | 4pc Effect | Best For |\n|----------|-----------|-----------|----------|\n| Hard Core Rock | CRIT DMG +16% | Extra DMG on crit | Universal CRIT DPS |\n| Freedom Blues | ATK +12% | DMG boost after Anomaly trigger | Anomaly DPS |\n| Soul Rock | Impact +6% | Team DMG boost during Stun | Stun agents |\n| Harmony Rock | Energy Regen +20% | Energy restore after skill | Support agents |\n| Fortress Defense | DEF +16% | Damage reduction | Defense agents |\n| Fanged Metal | ATK +12% | Chain Attack DMG boost | Universal DPS |\n\n### 4. Build Type Recommendations\n\n#### CRIT DPS Build\n- **Main set**: Hard Core Rock (4pc)\n- **Off-set**: Fanged Metal / Freedom Blues (2pc)\n- **Slot 4**: CRIT Rate or CRIT DMG\n- **Slot 5**: Matching Elemental DMG bonus\n- **Slot 6**: ATK%\n\n#### Anomaly DPS Build\n- **Main set**: Freedom Blues (4pc)\n- **Off-set**: Elemental DMG set (2pc)\n- **Slot 4**: Anomaly Mastery\n- **Slot 5**: Matching Elemental DMG bonus\n- **Slot 6**: Anomaly Mastery / ATK%\n\n#### Stun Support Build\n- **Main set**: Soul Rock (4pc)\n- **Off-set**: Harmony Rock (2pc)\n- **Slot 4**: Impact\n- **Slot 5**: Matching Elemental DMG bonus\n- **Slot 6**: Energy Regen\n\n#### Pure Support Build\n- **Main set**: Harmony Rock (4pc)\n- **Off-set**: Freedom Blues (2pc)\n- **Slot 4**: Energy Regen / Anomaly Mastery\n- **Slot 5**: Matching Elemental DMG bonus\n- **Slot 6**: Energy Regen\n\n### 5. Acquisition and Enhancement\n\n**Sources**\n- **Hollow Zero**: Primary source, weekly challenge for high-quality discs\n- **Drive Disc Dungeons**: Focused farming for specific sets\n- **Event Rewards**: Occasionally provide high-quality discs\n\n**Enhancement Tips**\n1. Prioritize correct main stats on slots 4 and 5 first\n2. Complete set bonuses before optimizing sub-stats\n3. Main DPS discs should be enhanced to max level first\n4. Support discs can have lower enhancement priority",
     "tags": [
       "驱动盘",
       "装备",
@@ -284,30 +284,30 @@
       }
     ],
     "serpTitle": {
-      "en": "ZZZ Drive Disc Guide: Best Sets, Main Stats & Builds",
-      "zh": "绝区零驱动盘攻略：最佳套装、主属性与配装",
-      "ja": "ZZZドライブ攻略：おすすめセット、メイン、ビルド"
+      "en": "ZZZ Drive Disc Guide: Best Sets, Main Stats and Farming Priority",
+      "zh": "绝区零驱动盘攻略：最佳套装、主属性和刷取优先级",
+      "ja": "ZZZドライブ攻略：おすすめセット、メイン、厳選優先度"
     },
     "serpDescription": {
-      "en": "Choose ZZZ Drive Disc sets, slot 4-6 main stats, 4pc and 2pc combinations, substats, and farming priorities for each agent role.",
-      "zh": "整理绝区零驱动盘套装、4/5/6 号位主属性、4+2 搭配、副词条和不同代理人刷取优先级。",
-      "ja": "ZZZドライブのセット、4/5/6番メイン、4+2構成、サブ、役割別周回優先度を整理します。"
+      "en": "Build ZZZ agents with the best Drive Disc sets, slot 4/5/6 main stats, 4pc + 2pc choices, farming priority, teams, W-Engines, and current banners.",
+      "zh": "按最佳驱动盘套装、4/5/6 号位主属性、4+2 搭配、刷取优先级、配队、音擎和当前卡池规划绝区零代理人。",
+      "ja": "おすすめセット、4/5/6メイン、4+2、厳選優先度、編成、音動機、現在バナーでビルド。"
     },
     "quickFacts": {
       "en": [
-        "Slots 4, 5, and 6 decide most builds.",
+        "Slots 4, 5, and 6 decide most ZZZ builds.",
         "Use 4pc core sets plus 2pc stat sets as the default route.",
-        "Links Drive Disc farming back to agents, teams, and W-Engines."
+        "Connect Drive Disc farming back to current banners, agents, teams, and W-Engines."
       ],
       "zh": [
-        "4、5、6 号位决定大部分配装方向。",
-        "默认按 4 件核心套 + 2 件补强套规划。",
-        "把驱动盘刷取和代理人、配队、音擎一起看。"
+        "4/5/6 号位决定大多数绝区零配装。",
+        "默认用 4 件核心套 + 2 件属性套。",
+        "驱动盘刷取要回到当前卡池、代理人、配队和音擎判断。"
       ],
       "ja": [
-        "4/5/6番がビルドの軸です。",
-        "基本は4セット+2セットで組みます。",
-        "ドライブ周回を代理人、編成、音擎へ接続。"
+        "4/5/6番メインが多くのビルドを決める。",
+        "基本は4セット核心 + 2セット補助。",
+        "厳選は現在バナー、キャラ、編成、音動機へ戻して判断。"
       ]
     }
   },
@@ -564,25 +564,25 @@
     "summary": "绝区零v3.0「新秩序」完整攻略：维林娜(新风属性)、普罗米亚(火C)、诺姆、千夏、蕾米埃尔、980底片+邀约礼盒福利、罗斯凯利法新区域、云岌岭探索。",
     "summaryEn": "ZZZ v3.0 release date, banner schedule, pull recommendations, and all new agents. Velina, Promeia, Starlight Billy, 980 Polychrome rewards, new region exploration tips.",
     "serpTitle": {
-      "zh": "绝区零 3.1 当前版本入口：卡池、周年福利与 3.0 回顾",
       "en": "ZZZ v3.1 Live Hub: Banners, Anniversary Rewards & v3.0 Recap",
+      "zh": "绝区零 3.1 当前版本入口：卡池、周年福利与 3.0 回顾",
       "ja": "ゼンゼロ 3.1 現在版本：バナー、周年報酬、3.0振り返り"
     },
     "serpDescription": {
-      "zh": "先看绝区零 3.1 当前卡池、2 周年福利、兑换码与 Xbox/Steam 入坑，再回顾 3.0 新秩序、角色和养成内容。",
       "en": "Start with the live ZZZ v3.1 hub for banners, anniversary rewards, codes, and Xbox/Steam onboarding, then use the v3.0 recap.",
+      "zh": "先看绝区零 3.1 当前卡池、2 周年福利、兑换码与 Xbox/Steam 入坑，再回顾 3.0 新秩序、角色和养成内容。",
       "ja": "ゼンゼロ 3.1の現在バナー、2周年報酬、コード、Xbox/Steam入門を確認し、3.0の内容を振り返ります。"
     },
     "quickFacts": {
-      "zh": [
-        "当前版本：3.1「The Long Goodbye」已于 2026 年 7 月 29 日上线",
-        "先看：3.1 版本专题、周年福利、兑换码与平台账号绑定",
-        "本页定位：3.0「新秩序」完整回顾与当前版本导流"
-      ],
       "en": [
         "Current version: v3.1 The Long Goodbye launched on July 29, 2026",
         "Start with: the v3.1 hub, anniversary rewards, codes, and platform linking",
         "Page scope: a full v3.0 New Order recap with live-version routing"
+      ],
+      "zh": [
+        "当前版本：3.1「The Long Goodbye」已于 2026 年 7 月 29 日上线",
+        "先看：3.1 版本专题、周年福利、兑换码与平台账号绑定",
+        "本页定位：3.0「新秩序」完整回顾与当前版本导流"
       ],
       "ja": [
         "現在版本：3.1「The Long Goodbye」は2026年7月29日に配信開始",
@@ -621,34 +621,7 @@
         "answer": "Save Polyfilm (at least 16,000 for one pity), Denny, battery refills, and don't spend on current banners unless you really want those agents. Pre-farm Fire materials if you plan to pull Promeia.",
         "answerZh": "预留菲林（至少16000保一个保底）、丁尼、体力药，如果不是特别想要当前卡池的角色就别抽。如果打算抽普罗米亚就提前刷火属性材料。"
       }
-    ],
-    "serpTitle": {
-      "en": "ZZZ v3.1 Live Hub: Banners, Anniversary Rewards & v3.0 Recap",
-      "zh": "绝区零 3.1 当前版本入口：卡池、周年福利与 3.0 回顾",
-      "ja": "ゼンゼロ 3.1 現在版本：バナー、周年報酬、3.0振り返り"
-    },
-    "serpDescription": {
-      "en": "Start with the live ZZZ v3.1 hub for banners, anniversary rewards, codes, and Xbox/Steam onboarding, then use the v3.0 recap.",
-      "zh": "先看绝区零 3.1 当前卡池、2 周年福利、兑换码与 Xbox/Steam 入坑，再回顾 3.0 新秩序、角色和养成内容。",
-      "ja": "ゼンゼロ 3.1の現在バナー、2周年報酬、コード、Xbox/Steam入門を確認し、3.0の内容を振り返ります。"
-    },
-    "quickFacts": {
-      "en": [
-        "Current version: v3.1 The Long Goodbye launched on July 29, 2026",
-        "Start with: the v3.1 hub, anniversary rewards, codes, and platform linking",
-        "Page scope: a full v3.0 New Order recap with live-version routing"
-      ],
-      "zh": [
-        "当前版本：3.1「The Long Goodbye」已于 2026 年 7 月 29 日上线",
-        "先看：3.1 版本专题、周年福利、兑换码与平台账号绑定",
-        "本页定位：3.0「新秩序」完整回顾与当前版本导流"
-      ],
-      "ja": [
-        "現在版本：3.1「The Long Goodbye」は2026年7月29日に配信開始",
-        "先に確認：3.1特集、周年報酬、コード、プラットフォーム連携",
-        "本ページ：3.0「新秩序」の振り返りと現在版本への導線"
-      ]
-    }
+    ]
   },
   {
     "id": "endgame-modes-guide",
@@ -872,42 +845,42 @@
   },
   {
     "id": "banner-schedule-guide",
-    "title": "绝区零调频卡池排期与抽卡规划指南",
-    "titleEn": "ZZZ Banner Schedule: Current, Next & Upcoming Banners",
+    "title": "绝区零当前卡池、下期与复刻抽卡规划指南",
+    "titleEn": "ZZZ Current Banner, Next Banner & Rerun Schedule",
     "category": "banner",
     "categoryZh": "卡池攻略",
     "categoryEn": "Banner Guide",
-    "summary": "全面解析绝区零的调频系统（Signal Search），包括卡池类型、保底机制、排期规律和菲林收入规划，帮助玩家合理分配抽卡资源。",
-    "summaryEn": "Current ZZZ banner, next banner, upcoming banners, likely reruns, Signal Search pity, W-Engine pity, and F2P Polychrome pull planning.",
-    "content": "## 绝区零调频卡池排期与抽卡规划指南\n\n### 1. 调频系统概述\n\n绝区零的抽卡系统称为「调频」（Signal Search），玩家使用菲林（Polychrome）兑换调频凭证进行抽取。每个版本（约6周）通常会推出新的限定代理人及其专属音擎。\n\n### 2. 卡池类型详解\n\n| 卡池名称 | 货币 | 保底次数 | 产出内容 |\n|---------|------|---------|----------|\n| 专属频道（Exclusive Channel） | 加密调频凭证 | 90抽硬保底 | 限定S级代理人 |\n| 音擎频道（W-Engine Channel） | 加密调频凭证 | 80抽硬保底 | 限定S级音擎 |\n| 稳定频道（Stable Channel） | 调频凭证 | 无时间限制 | 常驻S级代理人及音擎 |\n| 邦布频道（Bangboo Channel） | 邦布调频凭证 | 独立保底 | 限定/常驻邦布 |\n\n#### 专属频道（Exclusive Channel）\n- 每期上架一位限定S级代理人\n- **50/50机制**：首次获得S级时有50%概率为当期限定角色\n- **大保底**：若首次S级歪了常驻角色，下次S级必定为当期限定\n- 保底继承至同类型卡池\n\n#### 音擎频道（W-Engine Channel）\n- 每期上架一把限定S级音擎（通常为同期限定代理人的专属音擎）\n- **75/25机制**：首次获得S级音擎时有75%概率为当期限定\n- 硬保底为80抽\n- 保底同样继承\n\n#### 稳定频道（Stable Channel）\n- 常驻池，包含所有常驻S级代理人及音擎\n- 新玩家前期可使用免费抽卡次数获取初始阵容\n- 不建议花费菲林在此卡池抽取\n\n#### 邦布频道（Bangboo Channel）\n- 使用独立的邦布调频凭证\n- 每期有限定邦布上架\n- 邦布对战斗有一定辅助作用但非核心\n\n### 3. 保底机制详解\n\n**代理人保底（专属频道）**：\n- 软保底从75抽开始，S级出率显著提升\n- 90抽硬保底，必定获得S级代理人\n- 如果上一次S级未获得限定角色，本次S级必定为限定角色（大保底）\n- 保底计数跨卡池继承\n\n**音擎保底（音擎频道）**：\n- 软保底从65抽开始\n- 80抽硬保底，必定获得S级音擎\n- 限定音擎概率为75%，失败后下次必定获得限定\n\n**保底继承规则**：\n- 专属频道的保底计数在所有专属频道之间继承\n- 音擎频道的保底计数在所有音擎频道之间继承\n- 代理人池和音擎池的保底互不影响\n\n### 4. 卡池排期规律\n\n绝区零通常每个版本（约42天）安排如下：\n\n- **上半期（约21天）**：新限定S级代理人 + 专属音擎\n- **下半期（约21天）**：复刻限定S级代理人或另一位新代理人 + 专属音擎\n- 版本更新时会有维护补偿和活动赠送\n\n**排期预估建议**：\n- 关注官方公告和前瞻直播获取确切排期\n- 通常每个大版本会有1-2位新S级代理人\n- 热门角色可能在3-4个版本后复刻\n\n### 5. 菲林收入规划\n\n每个版本（约42天）的菲林收入估算：\n\n| 来源 | 数量（约） |\n|------|------------|\n| 日常任务（42天） | 2520菲林 |\n| 版本活动 | 1600-2400菲林 |\n| 零号空洞 | 800-1200菲林 |\n| 模拟作战奖励 | 400-600菲林 |\n| 维护补偿 | 600菲林 |\n| 其他（兑换码、里程碑等） | 300-600菲林 |\n| **合计** | **约6200-8000菲林** |\n\n换算：160菲林 = 1抽，每版本约可获得**39-50抽**。\n\n### 6. 抽卡规划建议\n\n1. **明确目标角色**：提前确定想要的代理人，不要盲目抽取\n2. **留足大保底**：准备180抽（28800菲林）确保获得限定角色\n3. **音擎优先级**：专属音擎提升约15-25%，但建议先确保角色\n4. **关注复刻排期**：如果喜欢的角色即将复刻，提前储备资源\n5. **利用好50/50**：如果运气好赢下50/50，省下的资源可用于下个卡池",
-    "contentEn": "## ZZZ Banner Schedule & Pull Planning Guide\n\n### 1. Signal Search System Overview\n\nZZZ's gacha system is called \"Signal Search\" (调频). Players use Polychromes to exchange for Search Passes and pull on various banners. Each version (approximately 6 weeks) typically introduces a new limited S-Rank agent along with their signature W-Engine.\n\n### 2. Banner Types Explained\n\n| Banner Name | Currency | Pity Count | Contents |\n|-------------|----------|-----------|----------|\n| Exclusive Channel | Encrypted Master Tape | 90 hard pity | Limited S-Rank Agents |\n| W-Engine Channel | Encrypted Master Tape | 80 hard pity | Limited S-Rank W-Engines |\n| Stable Channel | Master Tape | No time limit | Standard S-Rank Agents & W-Engines |\n| Bangboo Channel | Bangboo Algorithm | Separate pity | Limited/Standard Bangboo |\n\n#### Exclusive Channel\n- Features one limited S-Rank agent per phase\n- **50/50 Mechanic**: First S-Rank has a 50% chance to be the featured limited agent\n- **Guarantee**: If you lose the 50/50, your next S-Rank is guaranteed to be the featured agent\n- Pity count carries over between Exclusive Channel banners\n\n#### W-Engine Channel\n- Features one limited S-Rank W-Engine per phase (usually the signature weapon of the concurrent limited agent)\n- **75/25 Mechanic**: First S-Rank W-Engine has a 75% chance to be the featured one\n- Hard pity at 80 pulls\n- Pity also carries over between W-Engine Channel banners\n\n#### Stable Channel\n- Permanent banner with all standard S-Rank agents and W-Engines\n- New players can use free pulls to build an initial roster\n- Not recommended to spend Polychromes on this banner\n\n#### Bangboo Channel\n- Uses separate Bangboo currencies\n- Features limited Bangboo each phase\n- Bangboo provides combat assistance but is not core to team building\n\n### 3. Pity System Details\n\n**Agent Pity (Exclusive Channel)**:\n- Soft pity begins at 75 pulls, S-Rank rate increases significantly\n- Hard pity at 90 pulls guarantees an S-Rank agent\n- If the previous S-Rank was not the limited agent, the next S-Rank is guaranteed to be the featured one\n- Pity count carries over across all Exclusive Channel banners\n\n**W-Engine Pity (W-Engine Channel)**:\n- Soft pity begins at 65 pulls\n- Hard pity at 80 pulls guarantees an S-Rank W-Engine\n- Limited W-Engine rate is 75%; if you miss, the next one is guaranteed\n\n**Pity Inheritance Rules**:\n- Exclusive Channel pity carries over between all Exclusive Channel banners\n- W-Engine Channel pity carries over between all W-Engine Channel banners\n- Agent pity and W-Engine pity are independent of each other\n\n### 4. Banner Schedule Patterns\n\nZZZ typically follows this schedule per version (approximately 42 days):\n\n- **Phase 1 (approximately 21 days)**: New limited S-Rank agent + signature W-Engine\n- **Phase 2 (approximately 21 days)**: Rerun limited S-Rank agent or another new agent + signature W-Engine\n- Maintenance compensation and event rewards are given at version updates\n\n**Schedule Forecasting Tips**:\n- Follow official announcements and preview livestreams for confirmed schedules\n- Each major version typically introduces 1-2 new S-Rank agents\n- Popular characters may receive reruns after 3-4 versions\n\n### 5. Polychrome Income Planning\n\nEstimated Polychrome income per version (approximately 42 days):\n\n| Source | Amount (approx.) |\n|--------|-------------------|\n| Daily Tasks (42 days) | 2,520 Polychromes |\n| Version Events | 1,600-2,400 Polychromes |\n| Hollow Zero | 800-1,200 Polychromes |\n| Simulation Battle Rewards | 400-600 Polychromes |\n| Maintenance Compensation | 600 Polychromes |\n| Other (codes, milestones, etc.) | 300-600 Polychromes |\n| **Total** | **Approximately 6,200-8,000 Polychromes** |\n\nConversion: 160 Polychromes = 1 pull, yielding approximately **39-50 pulls per version**.\n\n### 6. Pull Planning Tips\n\n1. **Set clear targets**: Decide which agents you want in advance and avoid impulse pulling\n2. **Save for guarantee**: Prepare 180 pulls (28,800 Polychromes) to ensure you get the limited agent\n3. **W-Engine priority**: Signature W-Engines provide a 15-25% boost, but secure the agent first\n4. **Watch for reruns**: If a desired character is due for a rerun, start saving in advance\n5. **Capitalize on 50/50 wins**: If you win the 50/50, the saved resources can go toward the next banner",
-    "updatedAt": "2026-08-02",
-    "currentVersion": "ZZZ 2026 banner cycle",
+    "summary": "绝区零 v3.1 当前卡池、下期卡池、复刻、专属频道保底、音擎风险和菲林规划入口，帮助你先决定抽代理人、抽音擎还是存资源。",
+    "summaryEn": "Live ZZZ v3.1 banner hub for current banners, next banners, reruns, Exclusive Channel pity, W-Engine risk, codes, and Polychrome planning.",
+    "content": "## 2026-08-03 当前卡池入口\n\n绝区零现在应优先按 **v3.1 live** 处理 current banner、next banner 和 rerun 搜索。先确认当前代理人是否补队伍，再看音擎、驱动盘、周年/版本奖励和兑换码能否覆盖菲林缺口。\n\n## 绝区零调频卡池排期与抽卡规划指南\n\n### 1. 调频系统概述\n\n绝区零的抽卡系统称为「调频」（Signal Search），玩家使用菲林（Polychrome）兑换调频凭证进行抽取。每个版本（约6周）通常会推出新的限定代理人及其专属音擎。\n\n### 2. 卡池类型详解\n\n| 卡池名称 | 货币 | 保底次数 | 产出内容 |\n|---------|------|---------|----------|\n| 专属频道（Exclusive Channel） | 加密调频凭证 | 90抽硬保底 | 限定S级代理人 |\n| 音擎频道（W-Engine Channel） | 加密调频凭证 | 80抽硬保底 | 限定S级音擎 |\n| 稳定频道（Stable Channel） | 调频凭证 | 无时间限制 | 常驻S级代理人及音擎 |\n| 邦布频道（Bangboo Channel） | 邦布调频凭证 | 独立保底 | 限定/常驻邦布 |\n\n#### 专属频道（Exclusive Channel）\n- 每期上架一位限定S级代理人\n- **50/50机制**：首次获得S级时有50%概率为当期限定角色\n- **大保底**：若首次S级歪了常驻角色，下次S级必定为当期限定\n- 保底继承至同类型卡池\n\n#### 音擎频道（W-Engine Channel）\n- 每期上架一把限定S级音擎（通常为同期限定代理人的专属音擎）\n- **75/25机制**：首次获得S级音擎时有75%概率为当期限定\n- 硬保底为80抽\n- 保底同样继承\n\n#### 稳定频道（Stable Channel）\n- 常驻池，包含所有常驻S级代理人及音擎\n- 新玩家前期可使用免费抽卡次数获取初始阵容\n- 不建议花费菲林在此卡池抽取\n\n#### 邦布频道（Bangboo Channel）\n- 使用独立的邦布调频凭证\n- 每期有限定邦布上架\n- 邦布对战斗有一定辅助作用但非核心\n\n### 3. 保底机制详解\n\n**代理人保底（专属频道）**：\n- 软保底从75抽开始，S级出率显著提升\n- 90抽硬保底，必定获得S级代理人\n- 如果上一次S级未获得限定角色，本次S级必定为限定角色（大保底）\n- 保底计数跨卡池继承\n\n**音擎保底（音擎频道）**：\n- 软保底从65抽开始\n- 80抽硬保底，必定获得S级音擎\n- 限定音擎概率为75%，失败后下次必定获得限定\n\n**保底继承规则**：\n- 专属频道的保底计数在所有专属频道之间继承\n- 音擎频道的保底计数在所有音擎频道之间继承\n- 代理人池和音擎池的保底互不影响\n\n### 4. 卡池排期规律\n\n绝区零通常每个版本（约42天）安排如下：\n\n- **上半期（约21天）**：新限定S级代理人 + 专属音擎\n- **下半期（约21天）**：复刻限定S级代理人或另一位新代理人 + 专属音擎\n- 版本更新时会有维护补偿和活动赠送\n\n**排期预估建议**：\n- 关注官方公告和前瞻直播获取确切排期\n- 通常每个大版本会有1-2位新S级代理人\n- 热门角色可能在3-4个版本后复刻\n\n### 5. 菲林收入规划\n\n每个版本（约42天）的菲林收入估算：\n\n| 来源 | 数量（约） |\n|------|------------|\n| 日常任务（42天） | 2520菲林 |\n| 版本活动 | 1600-2400菲林 |\n| 零号空洞 | 800-1200菲林 |\n| 模拟作战奖励 | 400-600菲林 |\n| 维护补偿 | 600菲林 |\n| 其他（兑换码、里程碑等） | 300-600菲林 |\n| **合计** | **约6200-8000菲林** |\n\n换算：160菲林 = 1抽，每版本约可获得**39-50抽**。\n\n### 6. 抽卡规划建议\n\n1. **明确目标角色**：提前确定想要的代理人，不要盲目抽取\n2. **留足大保底**：准备180抽（28800菲林）确保获得限定角色\n3. **音擎优先级**：专属音擎提升约15-25%，但建议先确保角色\n4. **关注复刻排期**：如果喜欢的角色即将复刻，提前储备资源\n5. **利用好50/50**：如果运气好赢下50/50，省下的资源可用于下个卡池",
+    "contentEn": "## Current Banner Hub for August 3, 2026\n\nZZZ banner searches should now route through the **v3.1 live** view: current banner, next banner, reruns, agent pity, W-Engine risk, rewards, codes, and Polychrome budget before pulling.\n\n## ZZZ Banner Schedule & Pull Planning Guide\n\n### 1. Signal Search System Overview\n\nZZZ's gacha system is called \"Signal Search\" (调频). Players use Polychromes to exchange for Search Passes and pull on various banners. Each version (approximately 6 weeks) typically introduces a new limited S-Rank agent along with their signature W-Engine.\n\n### 2. Banner Types Explained\n\n| Banner Name | Currency | Pity Count | Contents |\n|-------------|----------|-----------|----------|\n| Exclusive Channel | Encrypted Master Tape | 90 hard pity | Limited S-Rank Agents |\n| W-Engine Channel | Encrypted Master Tape | 80 hard pity | Limited S-Rank W-Engines |\n| Stable Channel | Master Tape | No time limit | Standard S-Rank Agents & W-Engines |\n| Bangboo Channel | Bangboo Algorithm | Separate pity | Limited/Standard Bangboo |\n\n#### Exclusive Channel\n- Features one limited S-Rank agent per phase\n- **50/50 Mechanic**: First S-Rank has a 50% chance to be the featured limited agent\n- **Guarantee**: If you lose the 50/50, your next S-Rank is guaranteed to be the featured agent\n- Pity count carries over between Exclusive Channel banners\n\n#### W-Engine Channel\n- Features one limited S-Rank W-Engine per phase (usually the signature weapon of the concurrent limited agent)\n- **75/25 Mechanic**: First S-Rank W-Engine has a 75% chance to be the featured one\n- Hard pity at 80 pulls\n- Pity also carries over between W-Engine Channel banners\n\n#### Stable Channel\n- Permanent banner with all standard S-Rank agents and W-Engines\n- New players can use free pulls to build an initial roster\n- Not recommended to spend Polychromes on this banner\n\n#### Bangboo Channel\n- Uses separate Bangboo currencies\n- Features limited Bangboo each phase\n- Bangboo provides combat assistance but is not core to team building\n\n### 3. Pity System Details\n\n**Agent Pity (Exclusive Channel)**:\n- Soft pity begins at 75 pulls, S-Rank rate increases significantly\n- Hard pity at 90 pulls guarantees an S-Rank agent\n- If the previous S-Rank was not the limited agent, the next S-Rank is guaranteed to be the featured one\n- Pity count carries over across all Exclusive Channel banners\n\n**W-Engine Pity (W-Engine Channel)**:\n- Soft pity begins at 65 pulls\n- Hard pity at 80 pulls guarantees an S-Rank W-Engine\n- Limited W-Engine rate is 75%; if you miss, the next one is guaranteed\n\n**Pity Inheritance Rules**:\n- Exclusive Channel pity carries over between all Exclusive Channel banners\n- W-Engine Channel pity carries over between all W-Engine Channel banners\n- Agent pity and W-Engine pity are independent of each other\n\n### 4. Banner Schedule Patterns\n\nZZZ typically follows this schedule per version (approximately 42 days):\n\n- **Phase 1 (approximately 21 days)**: New limited S-Rank agent + signature W-Engine\n- **Phase 2 (approximately 21 days)**: Rerun limited S-Rank agent or another new agent + signature W-Engine\n- Maintenance compensation and event rewards are given at version updates\n\n**Schedule Forecasting Tips**:\n- Follow official announcements and preview livestreams for confirmed schedules\n- Each major version typically introduces 1-2 new S-Rank agents\n- Popular characters may receive reruns after 3-4 versions\n\n### 5. Polychrome Income Planning\n\nEstimated Polychrome income per version (approximately 42 days):\n\n| Source | Amount (approx.) |\n|--------|-------------------|\n| Daily Tasks (42 days) | 2,520 Polychromes |\n| Version Events | 1,600-2,400 Polychromes |\n| Hollow Zero | 800-1,200 Polychromes |\n| Simulation Battle Rewards | 400-600 Polychromes |\n| Maintenance Compensation | 600 Polychromes |\n| Other (codes, milestones, etc.) | 300-600 Polychromes |\n| **Total** | **Approximately 6,200-8,000 Polychromes** |\n\nConversion: 160 Polychromes = 1 pull, yielding approximately **39-50 pulls per version**.\n\n### 6. Pull Planning Tips\n\n1. **Set clear targets**: Decide which agents you want in advance and avoid impulse pulling\n2. **Save for guarantee**: Prepare 180 pulls (28,800 Polychromes) to ensure you get the limited agent\n3. **W-Engine priority**: Signature W-Engines provide a 15-25% boost, but secure the agent first\n4. **Watch for reruns**: If a desired character is due for a rerun, start saving in advance\n5. **Capitalize on 50/50 wins**: If you win the 50/50, the saved resources can go toward the next banner",
+    "updatedAt": "2026-08-03",
+    "currentVersion": "ZZZ v3.1 live banner cycle",
     "serpTitle": {
-      "en": "ZZZ Banner Schedule: Current Banner, Next Banner & Reruns",
-      "zh": "绝区零卡池排期 2026：当前调频、下期与复刻",
-      "ja": "ZZZ バナー予定 2026：現在、次回、復刻"
+      "en": "ZZZ Current Banner & Next Banner: v3.1 Reruns, Pity and Pulls",
+      "zh": "绝区零当前卡池与下期卡池：v3.1 复刻、保底和菲林规划",
+      "ja": "ZZZ 現在・次回バナー：v3.1復刻、天井、ポリクローム計画"
     },
     "serpDescription": {
-      "en": "Track the current ZZZ banner, next banner, upcoming banners, reruns, Signal Search pity, Polychrome planning, and pull priorities.",
-      "zh": "查看绝区零当前调频、下期卡池、复刻预测、保底机制、菲林规划和抽取优先级，抽卡前先确认队伍缺口。",
-      "ja": "ZZZの現在バナー、次回、復刻予想、天井、菲林計画、引く優先度を確認できます。"
+      "en": "Track ZZZ current banners, next banners, v3.1 reruns, Exclusive Channel pity, W-Engine risk, Polychrome budget, codes, and pull priority.",
+      "zh": "查看绝区零当前卡池、下期卡池、v3.1 复刻、专属频道保底、音擎风险、菲林预算、兑换码和抽卡优先级。",
+      "ja": "ZZZの現在バナー、次回、v3.1復刻、専属チャンネル天井、音動機リスク、予算、コードを確認。"
     },
     "quickFacts": {
       "en": [
-        "Covers current banner, next banner, upcoming banners, and reruns.",
-        "Separates agent pity, W-Engine pity, and Polychrome planning.",
-        "Built for ZZZ banner schedule, ZZZ banners, and next banner searches."
+        "Use this as the v3.1 live banner hub before spending Polychrome.",
+        "Separate agent pity, W-Engine pity, rerun risk, and code income.",
+        "Best next pages: v3.1 hub, rewards/codes, W-Engines, Drive Discs, and teams."
       ],
       "zh": [
-        "覆盖当前调频、下期卡池、后续卡池和复刻规划。",
-        "把代理人保底、音擎保底和菲林预算分开判断。",
-        "重点匹配 ZZZ banner schedule、ZZZ banners、next banner 等搜索。"
+        "抽菲林前，先把这里当作 v3.1 当前卡池入口。",
+        "代理人保底、音擎保底、复刻风险和兑换码收入要分开算。",
+        "下一步看 v3.1 专题、奖励/兑换码、音擎、驱动盘和配队。"
       ],
       "ja": [
-        "現在、次回、今後、復刻バナーを確認。",
-        "代理人天井、音擎天井、菲林計画を分けて整理。",
-        "ZZZ banner schedule 系検索に合わせたページです。"
+        "ポリクローム前にv3.1現在バナー入口として確認。",
+        "エージェント天井、音動機天井、復刻リスク、コード収入を分けて計算。",
+        "次はv3.1特集、報酬/コード、音動機、ドライブ、編成へ。"
       ]
     },
     "tags": [

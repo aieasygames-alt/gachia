@@ -66,9 +66,9 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     ja: '異環（NTE）のキャラ図鑑、武器データ、ディスクおすすめ、交換コード、ガチャシミュレーターを提供し、正式リリース済みです。19体のキャラ、DL、入門、ボス攻略、ダメージ計算、育成導線をまとめて確認でき、開服期の準備に役立ちます。版本特集や報酬導線もあります。',
   },
   zzz: {
-    zh: '绝区零 3.1 首页入口，整理 The Long Goodbye、2 周年、Remielle/Sigrid、Xbox / Microsoft Store、Steam 入坑、卡池时间表、音擎、驱动盘、代理人配队和兑换码，方便新玩家与回流玩家快速规划抽卡、养成和首周优先级。',
-    en: 'Zenless Zone Zero v3.1 hub for The Long Goodbye, 2nd anniversary rewards, Remielle/Sigrid, Xbox and Microsoft Store onboarding, Steam starter routes, banner schedule, W-Engines, Drive Discs, agents, teams, and codes.',
-    ja: 'ゼンレスゾーンゼロ v3.1 の入口として、The Long Goodbye、2周年、Remielle/Sigrid、Xbox / Microsoft Store、Steam入門、バナースケジュール、Wエンジン、ドライブディスク、エージェント編成、コードを整理します。',
+    zh: '绝区零 3.1 当前版本入口，整理 The Long Goodbye、2 周年、Remielle/Sigrid、Xbox / Microsoft Store、Steam 入坑、当前卡池、音擎、驱动盘、代理人配队和兑换码，方便新玩家与回流玩家快速规划抽卡、养成和首周优先级。',
+    en: 'Zenless Zone Zero v3.1 live hub for The Long Goodbye, 2nd anniversary rewards, Remielle/Sigrid, Xbox and Microsoft Store onboarding, Steam starter routes, current banners, W-Engines, Drive Discs, teams, and codes.',
+    ja: 'ゼンレスゾーンゼロ v3.1 の現在入口として、The Long Goodbye、2周年、Remielle/Sigrid、Xbox / Microsoft Store、Steam入門、現在バナー、Wエンジン、ドライブディスク、編成、コードを整理します。',
   },
   guihuan: {
     zh: '归环角色图鉴、武器数据与攻略百科，整理全部可用角色的技能数据、定位说明、配装推荐和成长思路，帮助你更快了解游戏基础玩法、完成入门判断并找到适合当前版本的培养方向，同时持续补充图鉴与攻略专题。',
@@ -120,9 +120,9 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
     ja: '異環（Neverness to Everness）はHotta StudioのUE5製超自然オープンワールドゲーム、2026年4月正式リリース。Gachiaは最も充実したNTEデータベースを提供。19体のプレイアブルキャラ図鑑、武器データ、ディスクセットおすすめ、DL/入門、ボス攻略、ダメージ計算、交換コード、ガチャシミュレーターを網羅。',
   },
   zzz: {
-    zh: '绝区零（Zenless Zone Zero）是 HoYoverse 开发的都市动作游戏，当前首页重点覆盖 v3.1「The Long Goodbye」、2 周年、Remielle/Sigrid、Xbox / Microsoft Store 上线与 Steam 入坑路线。Gachia 将代理人图鉴、音擎（W-Engine）数据库、驱动盘推荐、卡池时间表、兑换码、版本专题和主流配队串成一页，帮助新玩家、回流玩家和抽卡规划用户更快找到下一步。',
-    en: 'Zenless Zone Zero (ZZZ) is HoYoverse\'s urban action game, now focused on v3.1 "The Long Goodbye", the 2nd anniversary, Remielle/Sigrid, Xbox and Microsoft Store onboarding, and Steam starter routes. Gachia connects the agent database, W-Engine guide, Drive Disc builds, banner schedule, codes, teams, and version hubs so new and returning players can plan Polychromes, builds, and first-week priorities.',
-    ja: 'ゼンレスゾーンゼロ（ZZZ）はHoYoverseの都市アクションゲームで、現在は v3.1「The Long Goodbye」、2周年、Remielle/Sigrid、Xbox / Microsoft Store、Steam入門を重点的に整理しています。Gachiaではエージェント図鑑、Wエンジン、ドライブディスク、バナースケジュール、コード、編成、バージョン特集をつなぎ、新規・復帰勢が抽卡、育成、初週優先度を決めやすい導線にしています。',
+    zh: '绝区零（Zenless Zone Zero）是 HoYoverse 开发的都市动作游戏，当前首页重点覆盖 v3.1「The Long Goodbye」、2 周年、Remielle/Sigrid、Xbox / Microsoft Store 上线与 Steam 入坑路线。Gachia 将代理人图鉴、音擎（W-Engine）数据库、驱动盘推荐、当前卡池、兑换码、版本专题和主流配队串成一页，帮助新玩家、回流玩家和抽卡规划用户更快找到下一步。',
+    en: 'Zenless Zone Zero (ZZZ) is HoYoverse\'s urban action game, now focused on v3.1 "The Long Goodbye", the 2nd anniversary, Remielle/Sigrid, Xbox and Microsoft Store onboarding, and Steam starter routes. Gachia connects the agent database, W-Engine guide, Drive Disc builds, current banners, codes, teams, and version hubs so new and returning players can plan Polychromes, builds, and first-week priorities.',
+    ja: 'ゼンレスゾーンゼロ（ZZZ）はHoYoverseの都市アクションゲームで、現在は v3.1「The Long Goodbye」、2周年、Remielle/Sigrid、Xbox / Microsoft Store、Steam入門を重点的に整理しています。Gachiaではエージェント図鑑、Wエンジン、ドライブディスク、現在バナー、コード、編成、バージョン特集をつなぎ、新規・復帰勢が抽卡、育成、初週優先度を決めやすい導線にしています。',
   },
   guihuan: {
     zh: '归环（Guihuan）是一款二次元开放世界冒险游戏。Gachia 提供归环角色图鉴、武器数据库、配装推荐与攻略百科，帮助玩家快速上手游戏并了解各角色的最优培养路线。',
@@ -153,8 +153,8 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
 
 const GAME_META_TITLES: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
   zzz: {
-    zh: '绝区零 3.1 Wiki — 代理人、卡池、音擎、驱动盘与兑换码',
-    en: 'ZZZ v3.1 Wiki — Agents, Banners, W-Engines, Drive Discs & Codes',
+    zh: '绝区零 3.1 Wiki — 当前卡池、周年、Xbox、音擎与兑换码',
+    en: 'ZZZ v3.1 Wiki — Current Banners, Anniversary, Xbox & Codes',
     ja: 'ZZZ v3.1 Wiki — エージェント、バナー、Wエンジン、ディスク',
   },
 };
@@ -313,7 +313,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     },
     chips: {
       zh: ['4.4 已上线', 'Himeko Nova', 'Fate 联动', 'Rin/Gilgamesh', '兑换码', '卡池规划'],
-      en: ['v4.4 live', 'Himeko Nova', 'Fate collab', 'Rin/Gilgamesh', 'Codes', 'Banner planning'],
+      en: ['v4.4 live', 'Himeko Nova', 'Fate collab', 'Rin/Gilgamesh', 'Codes', 'Current warps'],
       ja: ['v4.4実装', 'Himeko Nova', 'Fateコラボ', 'Rin/Gilgamesh', 'コード', 'バナー計画'],
     },
     cta: { zh: '去 4.4 专题', en: 'Open v4.4 hub', ja: 'v4.4特集へ' },
@@ -321,12 +321,12 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
       zh: [
         { title: '4.4 节点', description: '先覆盖已上线版本、Himeko Nova 和联动重点问题。', links: [{ href: '/starrail/version', label: '4.4 专题' }, { href: '/starrail/guides/himeko-nova-fate-pull-plan', label: 'Himeko Nova 规划' }] },
         { title: 'Fate 联动', description: '继续查看 Saber、Archer、Rin/Gilgamesh 和奖励规划。', links: [{ href: '/starrail/guides/fate-collab-guide', label: 'Fate 联动 FAQ' }, { href: '/starrail/redeem-codes', label: '兑换码' }] },
-        { title: '抽卡资源', description: '把遗器、光锥、配队和星琼缺口串成下一步。', links: [{ href: '/starrail/build', label: '配装推荐' }, { href: '/starrail/guides/banner-schedule-guide', label: '卡池规划' }] },
+        { title: '抽卡资源', description: '把遗器、光锥、配队和星琼缺口串成下一步。', links: [{ href: '/starrail/build', label: '配装推荐' }, { href: '/starrail/guides/banner-schedule-guide', label: '当前跃迁' }] },
       ],
       en: [
         { title: 'v4.4 node', description: 'Catch the live patch, Himeko Nova, and collab intent first.', links: [{ href: '/starrail/version', label: 'v4.4 hub' }, { href: '/starrail/guides/himeko-nova-fate-pull-plan', label: 'Himeko Nova plan' }] },
         { title: 'Fate collab', description: 'Route Saber, Archer, Rin/Gilgamesh, and reward planning.', links: [{ href: '/starrail/guides/fate-collab-guide', label: 'Fate FAQ' }, { href: '/starrail/redeem-codes', label: 'Codes' }] },
-        { title: 'Pull resources', description: 'Connect relics, light cones, teams, and Jade gaps.', links: [{ href: '/starrail/build', label: 'Builds' }, { href: '/starrail/guides/banner-schedule-guide', label: 'Banner planning' }] },
+        { title: 'Pull resources', description: 'Connect relics, light cones, teams, and Jade gaps.', links: [{ href: '/starrail/build', label: 'Builds' }, { href: '/starrail/guides/banner-schedule-guide', label: 'Current warps' }] },
       ],
       ja: [
         { title: 'v4.4導線', description: '実装版本、Himeko Nova、コラボ検索を先に受け止めます。', links: [{ href: '/starrail/version', label: 'v4.4特集' }, { href: '/starrail/guides/himeko-nova-fate-pull-plan', label: 'Himeko Nova計画' }] },
@@ -335,7 +335,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
       ],
     },
     faq: [
-      { question: { zh: '星铁首页现在先看什么？', en: 'What should I open first now?', ja: '今ホームで最初に見るべきものは？' }, answer: { zh: '先看 4.4 专题和 Fate 联动，再看兑换码、卡池规划和配装。', en: 'Start with the v4.4 hub and Fate collab, then codes, banner planning, and builds.', ja: 'まずv4.4特集とFateコラボ、その後コード、バナー計画、ビルドへ。' } },
+      { question: { zh: '星铁首页现在先看什么？', en: 'What should I open first now?', ja: '今ホームで最初に見るべきものは？' }, answer: { zh: '先看 4.4 专题和 Fate 联动，再看兑换码、当前跃迁和配装。', en: 'Start with the v4.4 hub and Fate collab, then codes, current warps, and builds.', ja: 'まずv4.4特集とFateコラボ、その後コード、現在跳躍、ビルドへ。' } },
     ],
   },
   nte: {
@@ -513,17 +513,17 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     cta: { zh: '去 3.1 专题', en: 'Open v3.1 hub', ja: 'v3.1特集へ' },
     tracks: {
       zh: [
-        { title: '3.1 节点', description: '先整理 The Long Goodbye、周年、新代理人和卡池规划。', links: [{ href: '/zzz/version', label: '3.1 专题' }, { href: '/zzz/guides/banner-schedule-guide', label: '卡池时间表' }, { href: '/zzz/guides/anniversary-rewards-codes-plan', label: '周年奖励' }] },
+        { title: '3.1 节点', description: '先整理 The Long Goodbye、周年、新代理人和当前卡池。', links: [{ href: '/zzz/version', label: '3.1 专题' }, { href: '/zzz/guides/banner-schedule-guide', label: '当前卡池' }, { href: '/zzz/guides/anniversary-rewards-codes-plan', label: '周年奖励' }] },
         { title: '平台入坑', description: 'Steam、Microsoft Store、Xbox 用户先看账号、下载和兑换码。', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Steam 入坑' }, { href: '/zzz/guides/v3-1-anniversary-xbox-guide', label: 'Xbox FAQ' }, { href: '/zzz/redeem-codes', label: '兑换码' }] },
         { title: '养成与配队', description: '把周年回流继续送到配队、音擎、驱动盘和养成页。', links: [{ href: '/zzz/guides/meta-teams-v3-guide', label: '主流配队' }, { href: '/zzz/guides/w-engine-guide', label: '音擎指南' }, { href: '/zzz/guides/drive-disc-guide', label: '驱动盘指南' }] },
       ],
       en: [
-        { title: 'v3.1 node', description: 'Catch The Long Goodbye, anniversary, new-agent, and banner-planning searches.', links: [{ href: '/zzz/version', label: 'v3.1 hub' }, { href: '/zzz/guides/banner-schedule-guide', label: 'Banner schedule' }, { href: '/zzz/guides/anniversary-rewards-codes-plan', label: 'Rewards plan' }] },
+        { title: 'v3.1 node', description: 'Catch The Long Goodbye, anniversary, new-agent, and current-banner searches.', links: [{ href: '/zzz/version', label: 'v3.1 hub' }, { href: '/zzz/guides/banner-schedule-guide', label: 'Current banners' }, { href: '/zzz/guides/anniversary-rewards-codes-plan', label: 'Rewards plan' }] },
         { title: 'Platform starters', description: 'Steam, Microsoft Store, and Xbox users need account, download, and code help.', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Steam starter' }, { href: '/zzz/guides/v3-1-anniversary-xbox-guide', label: 'Xbox FAQ' }, { href: '/zzz/redeem-codes', label: 'Codes' }] },
         { title: 'Builds and teams', description: 'Route anniversary returners into teams, W-Engines, Drive Discs, and progression.', links: [{ href: '/zzz/guides/meta-teams-v3-guide', label: 'Meta teams' }, { href: '/zzz/guides/w-engine-guide', label: 'W-Engine guide' }, { href: '/zzz/guides/drive-disc-guide', label: 'Drive Disc guide' }] },
       ],
       ja: [
-        { title: 'v3.1導線', description: 'The Long Goodbye、周年、新エージェント、バナー計画検索を受け止めます。', links: [{ href: '/zzz/version', label: 'v3.1特集' }, { href: '/zzz/guides/banner-schedule-guide', label: 'バナー予定' }, { href: '/zzz/guides/anniversary-rewards-codes-plan', label: '周年報酬' }] },
+        { title: 'v3.1導線', description: 'The Long Goodbye、周年、新エージェント、現在バナー検索を受け止めます。', links: [{ href: '/zzz/version', label: 'v3.1特集' }, { href: '/zzz/guides/banner-schedule-guide', label: '現在バナー' }, { href: '/zzz/guides/anniversary-rewards-codes-plan', label: '周年報酬' }] },
         { title: 'プラットフォーム入門', description: 'Steam、Microsoft Store、Xbox勢はアカウント、DL、コードから。', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Steam入門' }, { href: '/zzz/guides/v3-1-anniversary-xbox-guide', label: 'Xbox FAQ' }, { href: '/zzz/redeem-codes', label: 'コード' }] },
         { title: '育成と編成', description: '周年復帰勢を編成、Wエンジン、ディスク、育成へつなげます。', links: [{ href: '/zzz/guides/meta-teams-v3-guide', label: '主要編成' }, { href: '/zzz/guides/w-engine-guide', label: 'Wエンジン' }, { href: '/zzz/guides/drive-disc-guide', label: 'ディスク攻略' }] },
       ],
@@ -1049,7 +1049,7 @@ export default async function GameHome({
                       {locale === 'zh' ? '版本专题' : locale === 'ja' ? 'バージョン特集' : 'Version Hub'}
                     </Link>
                     <Link href={`/${gameId}/guides/banner-schedule-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
-                      {locale === 'zh' ? '卡池时间表' : locale === 'ja' ? 'バナー予定' : 'Banner Schedule'}
+                      {locale === 'zh' ? '当前卡池' : locale === 'ja' ? '現在バナー' : 'Current Banners'}
                     </Link>
                     <Link href={`/${gameId}/guides/meta-teams-v3-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
                       {locale === 'zh' ? '当前版本配队' : locale === 'ja' ? '現在版本の編成' : 'Current Meta Teams'}

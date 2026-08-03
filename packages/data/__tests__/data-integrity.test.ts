@@ -7,6 +7,10 @@ import { wuwaCharacters, getWuWaCharacterById, getWuWaCharacterImage } from '../
 import { nteCharacters, getNteCharacterById, getNteCharacterImage } from '../games/nte/characters';
 import { zzzCharacters, getZzzCharacterById, getZzzCharacterImage } from '../games/zzz/characters';
 import { guihuanCharacters, getGuihuanCharacterById, getGuihuanCharacterImage } from '../games/guihuan/characters';
+import { genshinGuides } from '../games/genshin/guides';
+import { starrailGuides } from '../games/starrail/guides';
+import { wuwaGuides } from '../games/wuwa/guides';
+import { guides as nteGuides } from '../games/nte/guides';
 import { zzzGuides } from '../games/zzz/guides';
 
 describe('Genshin Impact', () => {
@@ -39,11 +43,29 @@ describe('Genshin Impact', () => {
 });
 
 describe('Cloudflare data assets', () => {
-  it('keeps the ZZZ guide asset synchronized with the source data', () => {
-    const assetPath = join(process.cwd(), '../../apps/web/public/data/zzz/raw-guides.json');
+  const guideDatasets = [
+    { game: 'genshin', guides: genshinGuides },
+    { game: 'starrail', guides: starrailGuides },
+    { game: 'wuwa', guides: wuwaGuides },
+    { game: 'nte', guides: nteGuides },
+    { game: 'zzz', guides: zzzGuides },
+  ];
+
+  it.each(guideDatasets)('keeps the $game guide asset synchronized with the source data', ({ game, guides }) => {
+    const assetPath = join(process.cwd(), `../../apps/web/public/data/${game}/raw-guides.json`);
     const publicGuides = JSON.parse(readFileSync(assetPath, 'utf8'));
 
-    expect(publicGuides).toEqual(zzzGuides);
+    expect(publicGuides).toEqual(guides);
+  });
+
+  it.each(guideDatasets)('provides string tags for $game related-guide scoring', ({ guides }) => {
+    expect(guides.length).toBeGreaterThan(0);
+
+    for (const guide of guides) {
+      expect(Array.isArray(guide.tags), `${guide.id} tags should be an array`).toBe(true);
+      expect(guide.tags.length, `${guide.id} should have tags`).toBeGreaterThan(0);
+      expect(guide.tags.every((tag) => typeof tag === 'string'), `${guide.id} tags should be strings`).toBe(true);
+    }
   });
 });
 

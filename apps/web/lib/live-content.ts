@@ -101,9 +101,9 @@ export const LIVE_BANNERS: LiveBanner[] = [
   {
     gameId: 'starrail',
     title: {
-      zh: '星穹铁道 4.4 卡池规划',
-      en: 'HSR 4.4 Banner Schedule',
-      ja: 'スターレイル 4.4 バナー計画',
+      zh: '星穹铁道 4.4 当前跃迁',
+      en: 'HSR 4.4 Current Warps',
+      ja: 'スターレイル 4.4 現在跳躍',
     },
     summary: {
       zh: '整理 4.4 版本卡池、联动角色和星琼规划入口。',
@@ -246,9 +246,9 @@ export const LIVE_GUIDES: LiveGuideLink[] = [
   {
     gameId: 'wuwa',
     title: {
-      zh: '鸣潮卡池时间表',
-      en: 'Wuthering Waves Banner Schedule',
-      ja: '鳴潮 バナースケジュール',
+      zh: '鸣潮当前卡池',
+      en: 'Wuthering Waves Current Banners',
+      ja: '鳴潮 現在バナー',
     },
     summary: {
       zh: 'GSC 最高曝光机会页，优先强化首屏和 FAQ。',
@@ -262,9 +262,9 @@ export const LIVE_GUIDES: LiveGuideLink[] = [
   {
     gameId: 'starrail',
     title: {
-      zh: '星穹铁道卡池时间表',
-      en: 'Honkai: Star Rail Banner Schedule',
-      ja: 'スターレイル バナースケジュール',
+      zh: '星穹铁道当前跃迁',
+      en: 'Honkai: Star Rail Current Warps',
+      ja: 'スターレイル 現在跳躍',
     },
     summary: {
       zh: '承接 HSR banner schedule、current banner 和 upcoming banners。',
@@ -278,9 +278,9 @@ export const LIVE_GUIDES: LiveGuideLink[] = [
   {
     gameId: 'genshin',
     title: {
-      zh: '原神卡池时间表',
-      en: 'Genshin Impact Banner Schedule',
-      ja: '原神 バナースケジュール',
+      zh: '原神当前卡池',
+      en: 'Genshin Impact Current Banners',
+      ja: '原神 現在バナー',
     },
     summary: {
       zh: '补强 current banner、next banner 和武器池入口。',

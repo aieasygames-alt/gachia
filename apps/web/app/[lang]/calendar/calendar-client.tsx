@@ -55,15 +55,15 @@ const SEARCH_ROUTES: Array<{
       ja: '現在と次回バナー',
     },
     description: {
-      zh: '优先查看曝光最高的卡池时间表，决定抽卡、保底和资源预留。',
-      en: 'Start with the highest-demand banner schedules before spending pulls or saving pity.',
-      ja: '需要の高いバナー予定から確認し、ガチャと天井を計画します。',
+      zh: '优先查看当前卡池、下期卡池和保底节点，再决定抽卡或资源预留。',
+      en: 'Start with current banners, next banners, and pity timing before spending pulls or saving resources.',
+      ja: '現在バナー、次回バナー、天井タイミングを先に確認してからガチャや資源温存を決めます。',
     },
     links: [
-      { href: '/wuwa/guides/banner-schedule-guide', label: { zh: '鸣潮卡池', en: 'WuWa banners', ja: '鳴潮バナー' } },
-      { href: '/starrail/guides/banner-schedule-guide', label: { zh: '崩铁卡池', en: 'HSR banners', ja: 'HSRバナー' } },
-      { href: '/genshin/guides/banner-schedule-guide', label: { zh: '原神卡池', en: 'Genshin banners', ja: '原神バナー' } },
-      { href: '/zzz/guides/banner-schedule-guide', label: { zh: '绝区零卡池', en: 'ZZZ banners', ja: 'ZZZバナー' } },
+      { href: '/wuwa/guides/banner-schedule-guide', label: { zh: '鸣潮当前卡池', en: 'WuWa current banners', ja: '鳴潮現在バナー' } },
+      { href: '/starrail/guides/banner-schedule-guide', label: { zh: '崩铁当前跃迁', en: 'HSR current warps', ja: 'HSR現在跳躍' } },
+      { href: '/genshin/guides/banner-schedule-guide', label: { zh: '原神当前卡池', en: 'Genshin current banners', ja: '原神現在バナー' } },
+      { href: '/zzz/guides/banner-schedule-guide', label: { zh: '绝区零当前卡池', en: 'ZZZ current banners', ja: 'ZZZ現在バナー' } },
     ],
   },
   {

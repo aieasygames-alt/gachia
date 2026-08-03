@@ -142,12 +142,12 @@ const INTENT_LINKS: Partial<Record<GameId, IntentLink[]>> = {
   genshin: [
     { href: '/genshin/version', label: { zh: '官网 / 版本入口', en: 'Official / Version hub', ja: '公式 / バージョン' }, description: { zh: '集中整理官网、版本、活动和卡池信息。', en: 'Collect official, version, event, and banner information.', ja: '公式、版本、イベント、バナー情報を整理します。' } },
     { href: '/genshin/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '直播码、版本码和过期状态集中查看。', en: 'Check livestream, version, and expired code status.', ja: '配信コード、版本コード、期限切れを確認。' } },
-    { href: '/genshin/guides/banner-schedule-guide', label: { zh: '卡池规划', en: 'Banner planning', ja: 'バナー計画' }, description: { zh: '把抽卡、原石和保底放到同一条路线里。', en: 'Plan pulls, Primogems, and pity in one path.', ja: 'ガチャ、原石、天井を一緒に計画。' } },
+    { href: '/genshin/guides/banner-schedule-guide', label: { zh: '当前卡池', en: 'Current banners', ja: '現在バナー' }, description: { zh: '把当前卡池、下期角色、原石和保底放到同一条路线里。', en: 'Plan current banners, next characters, Primogems, and pity in one path.', ja: '現在バナー、次回キャラ、原石、天井を一緒に計画。' } },
   ],
   starrail: [
     { href: '/starrail/version', label: { zh: '官网 / 版本入口', en: 'Official / Version hub', ja: '公式 / バージョン' }, description: { zh: '集中查看 4.4、联动、角色和活动时间。', en: 'Check v4.4, collab, character, and event timing.', ja: 'v4.4、コラボ、キャラ、イベントを確認。' } },
     { href: '/starrail/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '直播兑换码和版本补偿码入口。', en: 'Livestream and version compensation code entry.', ja: '配信コードと補償コード入口。' } },
-    { href: '/starrail/guides/v4-4-preview-guide', label: { zh: '抽卡规划', en: 'Pull planning', ja: 'ガチャ計画' }, description: { zh: 'Himeko Nova、Fate 联动和星琼缺口。', en: 'Himeko Nova, Fate collab, and Stellar Jade gaps.', ja: 'Himeko Nova、Fate、星玉不足を確認。' } },
+    { href: '/starrail/guides/banner-schedule-guide', label: { zh: '当前跃迁', en: 'Current warps', ja: '現在跳躍' }, description: { zh: 'Himeko Nova、Fate 联动、当前卡池和星琼缺口。', en: 'Himeko Nova, Fate collab, current banners, and Stellar Jade gaps.', ja: 'Himeko Nova、Fate、現在バナー、星玉不足を確認。' } },
   ],
   wuwa: [
     { href: '/wuwa/version', label: { zh: '官网 / 版本入口', en: 'Official / Version hub', ja: '公式 / バージョン' }, description: { zh: '集中查看 3.5、Xbox/Game Pass 和 SP 机制。', en: 'Check v3.5, Xbox/Game Pass, and SP mechanics.', ja: 'v3.5、Xbox/Game Pass、SP機構を確認。' } },
@@ -162,7 +162,7 @@ const INTENT_LINKS: Partial<Record<GameId, IntentLink[]>> = {
   zzz: [
     { href: '/zzz/guides/steam-3-0-start-guide', label: { zh: 'Steam 入坑', en: 'Steam starter', ja: 'Steam入門' }, description: { zh: '下载、账号绑定、存档互通和新区路线。', en: 'Download, account linking, cross-save, and new-area route.', ja: 'DL、アカウント連携、クロスセーブ、新エリア。' } },
     { href: '/zzz/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '版本码、直播码和回流奖励。', en: 'Version codes, livestream codes, and returnee rewards.', ja: '版本コード、配信コード、復帰報酬。' } },
-    { href: '/zzz/drive-discs', label: { zh: '驱动盘', en: 'Drive discs', ja: 'ディスク' }, description: { zh: '查看 3.0 角色对应的配装建议。', en: 'Open build guidance for v3.0 agents.', ja: 'v3.0エージェントのビルドを確認。' } },
+    { href: '/zzz/drive-discs', label: { zh: '当前配装', en: 'Current builds', ja: '現在ビルド' }, description: { zh: '查看当前代理人的驱动盘、音擎和养成建议。', en: 'Open Drive Disc, W-Engine, and build guidance for current agents.', ja: '現在エージェントのディスク、Wエンジン、ビルドを確認。' } },
   ],
   guihuan: [
     { href: '/guihuan/guides/test-release-timeline-guide', label: { zh: '官网 / 测试', en: 'Official / Tests', ja: '公式 / テスト' }, description: { zh: '公测时间、测试资格和官方状态。', en: 'Release timing, test access, and official status.', ja: 'リリース時期、テスト資格、公式状態。' } },
@@ -391,8 +391,8 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
     kicker: { zh: '周年热词', en: 'Anniversary intent', ja: '周年検索' },
     freshness: {
       zh: '从 Steam/3.0 入坑扩展到 3.1、周年福利、Xbox/Microsoft Store 与新代理人搜索。',
-      en: 'Expanded from Steam/v3.0 onboarding into v3.1, anniversary rewards, Xbox/Microsoft Store, and new-agent searches.',
-      ja: 'Steam/v3.0入門からv3.1、周年報酬、Xbox/Microsoft Store、新エージェント検索へ拡張しています。',
+      en: 'Expanded into v3.1 live coverage for anniversary rewards, Xbox/Microsoft Store, Steam starters, and new-agent searches.',
+      ja: 'v3.1の現在情報として、周年報酬、Xbox/Microsoft Store、Steam入門、新エージェント検索へ拡張しています。',
     },
     faq: [
       {
@@ -1874,9 +1874,9 @@ function getVersionNextSteps(gameId: GameId): NextStepLink[] {
         href: '/zzz/guides',
         title: { zh: '攻略专题', en: 'Guides', ja: '攻略' },
         description: {
-          zh: '适合继续看 3.0 版本词、首席跟班和玩法解析。',
-          en: 'Best for v3.0 keywords, key updates, and gameplay breakdowns.',
-          ja: 'v3.0の注目語、主要更新、攻略解説へ進めます。',
+          zh: '适合继续看当前版本词、新代理人、周年福利和玩法解析。',
+          en: 'Best for current-version keywords, new agents, anniversary rewards, and gameplay breakdowns.',
+          ja: '現在版本の注目語、新エージェント、周年報酬、攻略解説へ進めます。',
         },
       },
     ],

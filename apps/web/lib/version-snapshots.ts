@@ -102,7 +102,7 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       },
     ],
     links: [
-      { type: 'banner', href: '/wuwa/guides/banner-schedule-guide', label: { zh: '卡池时间表', en: 'Banner schedule', ja: 'バナー予定' } },
+      { type: 'banner', href: '/wuwa/guides/banner-schedule-guide', label: { zh: '当前卡池', en: 'Current banners', ja: '現在バナー' } },
       { type: 'codes', href: '/wuwa/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
       { type: 'characters', href: '/wuwa/characters', label: { zh: '角色图鉴', en: 'Characters', ja: 'キャラ' } },
       { type: 'guides', href: '/wuwa/guides/v3-5-preview-guide', label: { zh: '3.5 专题', en: 'v3.5 guide', ja: 'v3.5特集' } },
@@ -144,7 +144,7 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       },
     ],
     links: [
-      { type: 'banner', href: '/starrail/guides/banner-schedule-guide', label: { zh: '卡池时间表', en: 'Banner schedule', ja: 'バナー予定' } },
+      { type: 'banner', href: '/starrail/guides/banner-schedule-guide', label: { zh: '当前跃迁', en: 'Current warps', ja: '現在跳躍' } },
       { type: 'codes', href: '/starrail/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
       { type: 'characters', href: '/starrail/characters', label: { zh: '角色图鉴', en: 'Characters', ja: 'キャラ' } },
       { type: 'guides', href: '/starrail/guides/himeko-nova-fate-pull-plan', label: { zh: '抽卡规划', en: 'Pull plan', ja: 'ガチャ計画' } },
@@ -186,7 +186,7 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       },
     ],
     links: [
-      { type: 'banner', href: '/genshin/guides/banner-schedule-guide', label: { zh: '卡池时间表', en: 'Banner schedule', ja: 'バナー予定' } },
+      { type: 'banner', href: '/genshin/guides/banner-schedule-guide', label: { zh: '当前卡池', en: 'Current banners', ja: '現在バナー' } },
       { type: 'codes', href: '/genshin/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
       { type: 'characters', href: '/genshin/characters', label: { zh: '角色图鉴', en: 'Characters', ja: 'キャラ' } },
       { type: 'guides', href: '/genshin/guides/luna-viii-sandrone-guide', label: { zh: '版本专题', en: 'Version guide', ja: '版本特集' } },
