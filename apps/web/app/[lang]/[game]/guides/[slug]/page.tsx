@@ -202,14 +202,14 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, GuideQuickAnswe
     },
     'v3-0-version-guide': {
       heading: {
-        zh: '快速结论：先看 3.0 新内容、福利和角色优先级',
-        en: 'Quick answer: start with v3.0 content, rewards, and pull priorities',
-        ja: '要点：3.0内容、報酬、優先度を確認',
+        zh: '快速结论：先看已上线的 3.1，再回顾 3.0 内容',
+        en: 'Quick answer: start with live v3.1, then use the v3.0 recap',
+        ja: '要点：配信中の3.1を先に見て、3.0を振り返る',
       },
       points: {
-        zh: ['先确认 3.0 版本节点、活动奖励和新专精机制。', '抽卡前把角色定位、音擎和驱动盘需求一起看。', '如果资源有限，优先补能改变队伍上限的核心角色。'],
-        en: ['Use this page to check ZZZ v3.0 content, rewards, new systems, and priority routes first.', 'Before pulling, connect agent role, W-Engine value, and Drive Disc requirements.', 'If resources are tight, prioritize characters that change team ceiling instead of sidegrades.'],
-        ja: ['3.0内容、報酬、新システムを先に確認します。', '引く前に役割、音擎、ドライブディスクをまとめて見ます。', '資源が少ない場合は編成上限を伸ばすキャラを優先します。'],
+        zh: ['先打开 3.1 版本专题，确认当前卡池、2 周年福利和 Remielle/Sigrid。', '再检查兑换码、账号绑定、Xbox/Steam 入坑和当前队伍缺口。', '需要了解旧区域、系统和养成背景时，再回看本页的 3.0 内容。'],
+        en: ['Open the v3.1 hub first for current banners, 2nd anniversary rewards, and Remielle/Sigrid.', 'Then check redeem codes, account linking, Xbox/Steam onboarding, and your current team gap.', 'Use the v3.0 sections below only when you need older region, system, or progression context.'],
+        ja: ['まず3.1特集で現在バナー、2周年報酬、Remielle/Sigridを確認します。', '次に交換コード、アカウント連携、Xbox/Steam入門、編成不足を確認します。', '旧エリアやシステム、育成背景が必要なら本ページの3.0部分を振り返ります。'],
       },
     },
     'drive-disc-guide': {
@@ -609,12 +609,12 @@ const GUIDE_META_OVERRIDES: Record<string, LocaleMeta> = {
   },
   'zzz/v3-0-version-guide': {
     en: {
-      title: 'ZZZ v3.0 Guide: Banners, Rewards, New Agents & Teams',
-      description: 'Zenless Zone Zero v3.0 guide covering banners, rewards, new agents, team priorities, Drive Discs, W-Engines, and what to do first.',
+      title: 'ZZZ v3.1 Live Hub: Banners, Anniversary Rewards & v3.0 Recap',
+      description: 'Track the live ZZZ v3.1 patch, anniversary rewards, Remielle/Sigrid, banners, codes, Xbox and Steam onboarding, plus a v3.0 recap.',
     },
     zh: {
-      title: '绝区零 3.0 版本攻略：卡池、福利、新代理人与配队',
-      description: '整理绝区零 3.0 版本卡池、活动福利、新代理人、队伍优先级、驱动盘、音擎和开版本先做什么。',
+      title: '绝区零 3.1 当前版本入口：卡池、周年福利与 3.0 回顾',
+      description: '查看绝区零 3.1 当前卡池、2 周年福利、Remielle/Sigrid、兑换码、Xbox/Steam 入坑，并回顾 3.0 系统与养成。',
     },
   },
   'zzz/drive-disc-guide': {
@@ -804,13 +804,13 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
     'v3-0-version-guide': [
       {
         href: '/zzz/version',
-        label: { zh: '去 3.0 版本专题', en: 'Open v3.0 hub', ja: 'v3.0特集へ' },
-        description: { zh: '版本总览、福利和热词入口', en: 'Version overview, rewards, and hot topics', ja: 'バージョン概要、報酬、注目トピック' },
+        label: { zh: '去 3.1 当前版本专题', en: 'Open the live v3.1 hub', ja: '配信中のv3.1特集へ' },
+        description: { zh: '当前卡池、周年福利和热词入口', en: 'Current banners, anniversary rewards, and hot topics', ja: '現在バナー、周年報酬、注目トピック' },
       },
       {
         href: '/zzz/guides/meta-teams-v3-guide',
-        label: { zh: '看 3.0 主流配队', en: 'Read meta teams', ja: '編成を見る' },
-        description: { zh: '继续看版本答案队伍思路', en: 'Continue with the best team ideas', ja: '定番編成の考え方へ' },
+        label: { zh: '看当前主流配队', en: 'Read current meta teams', ja: '現在の編成を見る' },
+        description: { zh: '结合当前角色与系统安排队伍', en: 'Build teams around the live roster and systems', ja: '現在のキャラとシステムで編成' },
       },
       {
         href: '/zzz/guides/rupture-specialty-guide',

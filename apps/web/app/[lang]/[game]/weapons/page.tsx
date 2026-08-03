@@ -727,8 +727,8 @@ const WUWA_WEAPON_NEXT_STEPS: NextStepLink[] = [
 const ZZZ_WEAPON_NEXT_STEPS: NextStepLink[] = [
   {
     href: '/zzz/version',
-    title: { zh: '先看 3.0 专题', en: 'Start with v3.0 hub', ja: 'まずv3.0特集へ' },
-    description: { zh: '版本重点、卡池和热词都在这里', en: 'Version focus, banners, and hot topics live here', ja: '版本重点、バナー、注目トピックを確認', },
+    title: { zh: '先看 3.1 当前版本', en: 'Start with the live v3.1 hub', ja: '配信中のv3.1特集へ' },
+    description: { zh: '当前版本、周年福利、卡池和热词都在这里', en: 'Live patch, anniversary rewards, banners, and hot topics live here', ja: '現在版本、周年報酬、バナー、注目トピックを確認', },
   },
   {
     href: '/zzz/characters',

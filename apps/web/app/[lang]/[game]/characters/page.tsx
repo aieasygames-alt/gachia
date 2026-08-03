@@ -42,8 +42,8 @@ const CHARACTER_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
   zzz: [
     {
       href: '/zzz/version',
-      title: { zh: '先看 3.0 专题', en: 'Start with v3.0 hub', ja: 'まずv3.0特集へ' },
-      description: { zh: '把版本重点、卡池和热词先看一遍', en: 'Review the version focus, banners, and hot topics first', ja: '版本重点、バナー、注目トピックを先に確認', },
+      title: { zh: '先看 3.1 当前版本', en: 'Start with the live v3.1 hub', ja: '配信中のv3.1特集へ' },
+      description: { zh: '把当前版本、周年福利、卡池和热词先看一遍', en: 'Review the live patch, anniversary rewards, banners, and hot topics first', ja: '現在版本、周年報酬、バナー、注目トピックを確認', },
     },
     {
       href: '/zzz/weapons',

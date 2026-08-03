@@ -1052,7 +1052,7 @@ export default async function GameHome({
                       {locale === 'zh' ? '卡池时间表' : locale === 'ja' ? 'バナー予定' : 'Banner Schedule'}
                     </Link>
                     <Link href={`/${gameId}/guides/meta-teams-v3-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
-                      {locale === 'zh' ? '3.0 主流配队' : locale === 'ja' ? 'v3.0 編成' : 'Meta Teams'}
+                      {locale === 'zh' ? '当前版本配队' : locale === 'ja' ? '現在版本の編成' : 'Current Meta Teams'}
                     </Link>
                     <Link href={`/${gameId}/guides/w-engine-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
                       {locale === 'zh' ? '音擎指南' : locale === 'ja' ? 'Wエンジン' : 'W-Engine Guide'}
