@@ -21,19 +21,19 @@ export interface VersionSnapshot {
   links: VersionSnapshotLink[];
 }
 
-export const VERSION_SNAPSHOT_UPDATED_AT = '2026-07-26';
+export const VERSION_SNAPSHOT_UPDATED_AT = '2026-08-03';
 
 export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   zzz: {
     gameId: 'zzz',
     currentVersion: '3.1',
     releaseDate: '2026-07-29',
-    status: 'upcoming',
+    status: 'live',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     summary: {
-      zh: '3.1「The Long Goodbye」临近上线，重点是 Remielle/Sigrid、2 周年福利、Xbox/Microsoft Store 与 Steam 入坑。',
-      en: 'v3.1 "The Long Goodbye" is approaching with Remielle/Sigrid, 2nd anniversary rewards, Xbox/Microsoft Store, and Steam starter intent.',
-      ja: 'v3.1「The Long Goodbye」はRemielle/Sigrid、2周年報酬、Xbox/Microsoft Store、Steam入門が中心です。',
+      zh: '3.1「The Long Goodbye」现已上线，重点是 Remielle/Sigrid、2 周年福利、Xbox/Microsoft Store 与 Steam 入坑。',
+      en: 'v3.1 "The Long Goodbye" is now live with Remielle/Sigrid, 2nd anniversary rewards, Xbox/Microsoft Store, and Steam starter routes.',
+      ja: 'v3.1「The Long Goodbye」は配信中です。Remielle/Sigrid、2周年報酬、Xbox/Microsoft Store、Steam入門を確認できます。',
     },
     whatChanged: [
       {

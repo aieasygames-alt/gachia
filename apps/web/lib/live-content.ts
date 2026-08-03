@@ -70,7 +70,7 @@ export interface LiveCalendarEvent {
   priority: number;
 }
 
-export const LIVE_UPDATED_AT = '2026-07-26';
+export const LIVE_UPDATED_AT = '2026-08-03';
 
 export const HOMEPAGE_PRIORITY_GAMES: GameId[] = [
   'wuwa',
@@ -138,17 +138,17 @@ export const LIVE_VERSION_UPDATES: LiveVersionUpdate[] = [
   {
     gameId: 'zzz',
     title: {
-      zh: '绝区零 3.1 版本前瞻',
-      en: 'ZZZ 3.1 Version Watch',
-      ja: 'ゼンレスゾーンゼロ 3.1 注目情報',
+      zh: '绝区零 3.1 版本现已上线',
+      en: 'ZZZ 3.1 Is Now Live',
+      ja: 'ゼンレスゾーンゼロ 3.1 配信中',
     },
     summary: {
-      zh: '3.1 即将上线，优先查看新角色、卡池和版本准备。',
-      en: 'Prepare for v3.1 with new characters, banners, and patch priorities.',
-      ja: 'v3.1 の新キャラ、バナー、準備項目を確認できます。',
+      zh: '查看新代理人、卡池、周年奖励和版本内的优先事项。',
+      en: 'Check new agents, banners, anniversary rewards, and in-version priorities.',
+      ja: '新エージェント、バナー、周年報酬、バージョン中の優先事項を確認できます。',
     },
     href: '/zzz/version',
-    status: 'upcoming',
+    status: 'live',
     updatedAt: LIVE_UPDATED_AT,
     priority: 1,
   },
@@ -304,9 +304,9 @@ export const LIVE_CALENDAR_EVENTS: LiveCalendarEvent[] = [
       ja: 'ゼンゼロ v3.1「The Long Goodbye」',
     },
     summary: {
-      zh: '版本节点、2 周年、新代理人与平台入坑入口。',
-      en: 'Patch timing, 2nd anniversary, new agents, and platform starter routes.',
-      ja: '版本時期、2周年、新エージェント、プラットフォーム入門。',
+      zh: '3.1 已上线：查看 2 周年、新代理人与平台入坑入口。',
+      en: 'v3.1 is live with 2nd anniversary, new-agent, and platform starter routes.',
+      ja: 'v3.1配信中。2周年、新エージェント、プラットフォーム入門を確認。',
     },
     href: '/zzz/version',
     startsAt: '2026-07-29',

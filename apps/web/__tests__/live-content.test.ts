@@ -6,6 +6,7 @@ import {
   LIVE_CODE_SUMMARIES,
   LIVE_GUIDES,
   LIVE_VERSION_UPDATES,
+  LIVE_UPDATED_AT,
   localizeText,
   sortCalendarEvents,
   sortByPriority,
@@ -35,6 +36,15 @@ describe('homepage live content', () => {
 
   it('keeps homepage priority games unique', () => {
     expect(new Set(HOMEPAGE_PRIORITY_GAMES).size).toBe(HOMEPAGE_PRIORITY_GAMES.length);
+  });
+
+  it('marks the released ZZZ v3.1 module as live', () => {
+    const zzzVersion = LIVE_VERSION_UPDATES.find((item) => item.gameId === 'zzz');
+
+    expect(zzzVersion).toMatchObject({
+      status: 'live',
+      updatedAt: LIVE_UPDATED_AT,
+    });
   });
 
   it('sorts live modules by priority', () => {

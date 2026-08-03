@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   VERSION_SNAPSHOTS,
+  VERSION_SNAPSHOT_UPDATED_AT,
   getVersionSnapshot,
   localizeVersionText,
 } from '@/lib/version-snapshots';
@@ -13,6 +14,14 @@ describe('version snapshots', () => {
     for (const gameId of priorityGames) {
       expect(getVersionSnapshot(gameId)).toBeDefined();
     }
+  });
+
+  it('marks the released ZZZ v3.1 snapshot as live', () => {
+    expect(getVersionSnapshot('zzz')).toMatchObject({
+      currentVersion: '3.1',
+      status: 'live',
+      lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    });
   });
 
   it('has localized copy, dates, and actionable links', () => {
