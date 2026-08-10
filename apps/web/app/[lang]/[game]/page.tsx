@@ -152,6 +152,11 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
 };
 
 const GAME_META_TITLES: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
+  sea: {
+    zh: '遗忘之海 Wiki — 角色图鉴、强度排行、下载与开荒攻略',
+    en: 'Sea of Remnants Wiki — Characters, Tier List, Download & Guides',
+    ja: 'Sea of Remnants Wiki — キャラ、Tier、DL、攻略',
+  },
   zzz: {
     zh: '绝区零 3.1 Wiki — 当前卡池、周年、Xbox、音擎与兑换码',
     en: 'ZZZ v3.1 Wiki — Current Banners, Anniversary, Xbox & Codes',

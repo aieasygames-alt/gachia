@@ -329,6 +329,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ la
   if (!guide) notFound();
 
   const title = runtime.getTitle(guide, locale);
+  const summary = runtime.getSummary(guide, locale);
   const content = runtime.getContent(guide, locale);
   const category = runtime.getCategory(guide, locale);
   const guideTags = Array.isArray(guide.tags) ? guide.tags : [];
@@ -352,6 +353,11 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ la
       <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES[gameId].theme.primary }}>
         {title}
       </h1>
+      {summary && (
+        <p className="mb-4 max-w-4xl text-sm leading-relaxed text-game-text-muted">
+          {summary}
+        </p>
+      )}
 
       <div className="mb-6 flex flex-wrap items-center gap-3 text-sm text-game-text-muted">
         <span className="rounded bg-game-surface-alt px-2 py-0.5 text-game-primary">{category}</span>

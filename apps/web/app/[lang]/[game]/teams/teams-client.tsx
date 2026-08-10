@@ -1196,9 +1196,50 @@ const ZZZ_TEAM_ELEMENT_COLORS: Record<string, string> = {
 
 function ZzzTeams({ locale }: { locale: SupportedLocale }) {
   const teamsWithComps = zzzCharacters.filter((c) => c.teamComps.length > 0);
+  const zzzIntentLinks = [
+    {
+      href: '/zzz/guides/team-building-guide',
+      title: t(locale, '配队基础指南', 'Team Building Guide', '編成基礎ガイド'),
+      description: t(locale, '先理解强攻、击破、异常、支援和防护位怎么组合。', 'Start with Attack, Stun, Anomaly, Support, and Defense role logic.', '強攻、撃破、異常、支援、防護の組み方を確認。'),
+    },
+    {
+      href: '/zzz/guides/meta-teams-v3-guide',
+      title: t(locale, '当前版本主流队伍', 'Current Meta Teams', '現在版本のメタ編成'),
+      description: t(locale, '查看 3.0-3.1 主流队伍、抽卡目标和版本环境。', 'Review v3.0-v3.1 meta teams, pull targets, and patch context.', 'v3.0-v3.1の主流編成、ガチャ目標、環境を確認。'),
+    },
+    {
+      href: '/zzz/guides/banner-schedule-guide',
+      title: t(locale, '按卡池决定养谁', 'Plan Around Banners', 'バナーから育成判断'),
+      description: t(locale, '抽代理人前先确认当前、下期、复刻和菲林预算。', 'Check current banners, next banners, reruns, and Polychrome budget first.', '現在、次回、復刻、菲林予算を先に確認。'),
+    },
+  ];
 
   return (
     <div>
+      <section className="mb-6 rounded-lg border border-game-border bg-game-surface p-4">
+        <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-game-primary">
+          {t(locale, 'ZZZ 配队入口', 'ZZZ Team Builder', 'ZZZ 編成入口')}
+        </p>
+        <h1 className="mb-2 text-2xl font-bold text-game-text">
+          {t(locale, '绝区零最佳队伍与代理人搭配', 'Best ZZZ Teams and Agent Comps', 'ZZZ おすすめチームとエージェント編成')}
+        </h1>
+        <p className="mb-4 text-sm leading-relaxed text-game-text-muted">
+          {t(
+            locale,
+            '用这个页面快速查看 ZZZ team builder、最佳队伍、代理人协同和当前版本配队。先确定主输出或异常核心，再补击破、支援、防护和邦布需求。',
+            'Use this ZZZ team builder hub to compare best teams, agent comps, synergy, and current-version lineups. Pick your main DPS or Anomaly core first, then add Stun, Support, Defense, and Bangboo needs.',
+            'このページでZZZのおすすめチーム、エージェント相性、現在版本の編成を確認。主力DPSまたは異常コアを決めてから撃破、支援、防護、ボンプを補います。'
+          )}
+        </p>
+        <div className="grid gap-2 md:grid-cols-3">
+          {zzzIntentLinks.map((link) => (
+            <a key={link.href} href={`/${locale}${link.href}`} className="rounded-md border border-game-border bg-game-surface-alt p-3 transition-colors hover:border-game-primary">
+              <span className="mb-1 block text-sm font-semibold text-game-text">{link.title}</span>
+              <span className="line-clamp-2 text-xs leading-relaxed text-game-text-muted">{link.description}</span>
+            </a>
+          ))}
+        </div>
+      </section>
       <p className="mb-6 text-sm text-game-text-muted">
         {t(locale, `共 ${teamsWithComps.length} 位代理人的推荐配队`, `${teamsWithComps.length} agents with recommended teams`, `${teamsWithComps.length}エージェントのおすすめ編成`)}
       </p>

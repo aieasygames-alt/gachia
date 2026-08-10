@@ -27,7 +27,7 @@ const TIER_DESC: Record<string, Record<string, string>> = {
   guihuan: { zh: '归环使灵强度排行，覆盖SS/S/A/B分级、场景表现、配队定位和培养优先级，帮助你更快决定先养谁。', en: 'Guihuan spirit tier list (2026) with SS to B rankings, performance notes, and priority guidance so you know which spirits to build first.', ja: '帰環スピリットTierリスト。SS/S/A/B評価、場面別性能、育成優先度をまとめています。' },
   ananta: { zh: '无限大异能者强度排行，覆盖SS/S/A/B分级、玩法表现和培养优先级，方便你在开服阶段快速选出主力角色。', en: 'Ananta esper tier list (2026) with SS to B rankings, gameplay notes, and investment priority to help you pick early-game mains.', ja: 'アナンタTierリスト。SS/S/A/B評価、性能メモ、育成優先度を整理しています。' },
   endfield: { zh: '明日方舟：终末地干员强度排行，覆盖SS/S/A/B分级、战斗表现、配队定位和培养优先级，方便你按版本节奏安排资源。', en: 'Arknights: Endfield operator tier list (2026) with SS to B rankings, combat notes, team roles, and build priority for smarter resource planning.', ja: 'エンドフィールド干員Tierリスト。SS/S/A/B評価、戦闘評価、編成参考、育成優先度を掲載。' },
-  sea: { zh: '遗忘之海角色强度排行，覆盖SS/S/A/B分级、场景表现和培养优先级，帮助你在开荒和中期资源分配时更快做决定。', en: 'Sea of Remnants character tier list (2026) with SS to B rankings, performance notes, and investment priority for early and mid-game planning.', ja: 'シー・オブ・レムナンツTierリスト。SS/S/A/B評価、場面別性能、育成優先度を整理しています。' },
+  sea: { zh: '遗忘之海角色强度排行 Wiki，覆盖 Traveler、Ais、Little Axe、Princess、Molly 等角色 SS/S/A/B 分级、开荒价值、配队定位和培养优先级。', en: 'Sea of Remnants character tier list wiki with SS to B rankings for Traveler, Ais, Little Axe, Princess, Molly, early-game value, team roles, and investment priority.', ja: 'Sea of RemnantsキャラTierリスト。Traveler、Ais、Little Axe、Princess、MollyのSS/S/A/B評価、序盤価値、育成優先度を整理。' },
 };
 
 // P1-2: Lazy load tier list client components to reduce initial bundle size
@@ -71,11 +71,17 @@ export async function generateMetadata({
   const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/tier-list`, LOCALES);
 
   const desc = TIER_DESC[gameId]?.[locale] ?? `${categoryLabel} - ${gameName} Wiki`;
-  const title = locale === 'zh'
-    ? `${gameName}角色强度排行 — SS/S/A/B分级 | 攻略`
-    : locale === 'ja'
-      ? `${gameName}キャラTierリスト 2026 — SS/S/A/B評価`
-      : `${gameName} Character Tier List 2026 — Best Characters SS/S/A/B Ranked`;
+  const title = gameId === 'sea'
+    ? locale === 'zh'
+      ? '遗忘之海角色强度排行 Wiki — 最佳角色、开荒推荐与培养优先级'
+      : locale === 'ja'
+        ? 'Sea of Remnants Tier List — おすすめキャラ、序盤、育成'
+        : 'Sea of Remnants Tier List — Best Characters, Early Picks & Team Roles'
+    : locale === 'zh'
+      ? `${gameName}角色强度排行 — SS/S/A/B分级 | 攻略`
+      : locale === 'ja'
+        ? `${gameName}キャラTierリスト 2026 — SS/S/A/B評価`
+        : `${gameName} Character Tier List 2026 — Best Characters SS/S/A/B Ranked`;
 
   const description = ensureMetaLength(
     desc,
@@ -535,15 +541,45 @@ function SeaTierListPage({ locale }: { locale: SupportedLocale }) {
   }
 
   const charMap = new Map(seaCharacters.map((c) => [c.id, c]));
+  const intro = locale === 'zh'
+    ? '遗忘之海角色强度排行按 SS/S/A/B 分级整理，适合先判断 Traveler、Ais、Little Axe、Princess、Molly 等角色的开荒价值、队伍分工和培养优先级。'
+    : locale === 'ja'
+      ? 'Sea of RemnantsのキャラTierをSS/S/A/Bで整理。Traveler、Ais、Little Axe、Princess、Mollyなどの序盤価値、役割、育成優先度を確認できます。'
+      : 'Sea of Remnants tier list ranks characters from SS to B so you can compare Traveler, Ais, Little Axe, Princess, Molly, early-game value, team roles, and investment priority.';
+  const links = [
+    {
+      href: '/sea/characters',
+      title: locale === 'zh' ? '查看全角色图鉴' : locale === 'ja' ? '全キャラ図鑑を見る' : 'Open Characters Wiki',
+      description: locale === 'zh' ? '看角色属性、定位、技能和相关角色。' : locale === 'ja' ? '属性、役割、スキル、関連キャラを確認。' : 'Review attributes, roles, skills, and related characters.',
+    },
+    {
+      href: '/sea/guides/molly-starter-team-guide',
+      title: locale === 'zh' ? '开荒队伍推荐' : locale === 'ja' ? '序盤チームおすすめ' : 'Starter Team Guide',
+      description: locale === 'zh' ? '把治疗、主攻和资源路线连起来。' : locale === 'ja' ? '回復、火力、資源ルートをつなぐ。' : 'Connect healing, DPS, and resource routing.',
+    },
+    {
+      href: '/sea/calculator',
+      title: locale === 'zh' ? '黑券与资源工具' : locale === 'ja' ? '黒券と資源ツール' : 'Selector and Resource Tools',
+      description: locale === 'zh' ? '用工具决定自选、好金砖和首周资源。' : locale === 'ja' ? '黒券、好金砖、初週資源を計算。' : 'Plan selectors, Good Gold Bricks, and week-one resources.',
+    },
+  ];
 
   return (
     <div>
       <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.sea.theme.primary }}>
-        {CATEGORY_LABELS['tier-list']?.[locale] ?? 'Tier List'}
+        {locale === 'zh' ? '遗忘之海角色强度排行 Wiki' : locale === 'ja' ? 'Sea of Remnants Tier List' : 'Sea of Remnants Tier List'}
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? '基于角色综合强度评级，仅供参考' : locale === 'ja' ? 'キャラクターの総合的な強さに基づく評価です' : 'Based on overall character strength, for reference only'}
+        {intro}
       </p>
+      <section className="mb-6 grid gap-2 md:grid-cols-3">
+        {links.map((link) => (
+          <Link key={link.href} href={link.href as '/'} className="rounded-md border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+            <span className="mb-1 block text-sm font-semibold text-game-text">{link.title}</span>
+            <span className="line-clamp-2 text-xs leading-relaxed text-game-text-muted">{link.description}</span>
+          </Link>
+        ))}
+      </section>
 
       {tierOrder.map((tier) => {
         const ids = tierGroups[tier];

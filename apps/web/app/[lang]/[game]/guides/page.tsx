@@ -31,11 +31,11 @@ const GUIDE_DESC: Record<string, Record<string, string>> = {
 };
 
 const FEATURED_GUIDE_IDS: Record<GameId, string[]> = {
-  genshin: ['snezhnaya-version-guide', 'lunar-reaction-guide', 'artifact-guide'],
-  starrail: ['v4-4-preview-guide', 'v4-3-version-guide', 'fate-collab-guide'],
-  wuwa: ['v3-5-preview-guide', 'v3-4-version-guide', 'roya-frostlands-guide'],
+  genshin: ['banner-schedule-guide', 'snezhnaya-version-guide', 'lunar-reaction-guide'],
+  starrail: ['banner-schedule-guide', 'v4-4-preview-guide', 'fate-collab-guide'],
+  wuwa: ['banner-schedule-guide', 'v3-5-preview-guide', 'v3-4-version-guide'],
   nte: ['photo-mode-guide', 'damage-formula', 'boss-guide'],
-  zzz: ['v3-0-version-guide', 'meta-teams-v3-guide', 'rupture-specialty-guide'],
+  zzz: ['banner-schedule-guide', 'v3-0-version-guide', 'meta-teams-v3-guide'],
   guihuan: ['beginner-guide', 'download-install-guide', 'spirit-build-guide'],
   ananta: ['beginner-guide', 'download-install-guide', 'combat-system-guide'],
   endfield: ['download-install-guide', 'combat-system-guide', 'crisis-contract-guide'],
@@ -198,11 +198,17 @@ export async function generateMetadata({
   const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/guides`, LOCALES);
 
   const desc = GUIDE_DESC[gameId]?.[locale] ?? `${gameName} ${categoryLabel} with beginner tips, builds, teams, and practical walkthroughs`;
-  const title = locale === 'zh'
-    ? `${gameName}攻略大全 — 新手指南/配队/角色攻略`
-    : locale === 'ja'
-      ? `${gameName}攻略百科 — ガイド一覧`
-      : `${gameName} Guides — Builds, Teams & Tips`;
+  const title = gameId === 'starrail'
+    ? locale === 'zh'
+      ? '崩坏：星穹铁道攻略大全 — 当前跃迁、Fate联动、配队与养成'
+      : locale === 'ja'
+        ? '崩壊：スターレイル攻略 — バナー、Fate、編成、育成'
+        : 'Honkai: Star Rail Guides — Banner Schedule, Fate Collab, Teams & Builds'
+    : locale === 'zh'
+      ? `${gameName}攻略大全 — 新手指南/配队/角色攻略`
+      : locale === 'ja'
+        ? `${gameName}攻略百科 — ガイド一覧`
+        : `${gameName} Guides — Builds, Teams & Tips`;
 
   const description = ensureMetaLength(desc, locale);
 
@@ -414,15 +420,39 @@ function StarRailGuides({ locale }: { locale: SupportedLocale }) {
   return (
     <div>
       <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {CATEGORY_LABELS.guides?.[locale] ?? 'Guides'}
+        {locale === 'zh' ? '崩坏：星穹铁道攻略大全' : locale === 'ja' ? '崩壊：スターレイル攻略' : 'Honkai: Star Rail Guides'}
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh'
-          ? `共 ${guides.length} 篇攻略`
+          ? `共 ${guides.length} 篇攻略，覆盖当前跃迁、Fate 联动、配队、遗器、光锥和养成路线。`
           : locale === 'ja'
-          ? `${guides.length} 件のガイド`
-          : `${guides.length} guides`}
+          ? `${guides.length} 件のガイド。現在跳躍、Fate連動、編成、遺物、光円錐、育成を整理。`
+          : `${guides.length} guides covering banner schedule, Fate collab, teams, relics, Light Cones, and progression.`}
       </p>
+      <section className="mb-6 grid gap-2 md:grid-cols-3">
+        {[
+          {
+            href: '/starrail/guides/banner-schedule-guide',
+            title: locale === 'zh' ? '当前跃迁与下期卡池' : locale === 'ja' ? '現在跳躍と次回バナー' : 'Current Warp and Next Banner',
+            description: locale === 'zh' ? '先看当前、下期、复刻和星琼预算。' : locale === 'ja' ? '現在、次回、復刻、星玉予算を確認。' : 'Check current banners, next banners, reruns, and Stellar Jade budget.',
+          },
+          {
+            href: '/starrail/guides/fate-collab-guide',
+            title: locale === 'zh' ? 'Fate 联动攻略' : locale === 'ja' ? 'Fate連動ガイド' : 'Fate Collab Guide',
+            description: locale === 'zh' ? '把联动角色、预算和复刻风险单独规划。' : locale === 'ja' ? '連動キャラ、予算、復刻リスクを整理。' : 'Plan collab characters, budget, and rerun risk separately.',
+          },
+          {
+            href: '/starrail/teams',
+            title: locale === 'zh' ? '配队模拟器' : locale === 'ja' ? '編成ツール' : 'Team Builder',
+            description: locale === 'zh' ? '按角色和队伍缺口继续搭队。' : locale === 'ja' ? 'キャラと不足枠から編成を作る。' : 'Build teams around characters and account gaps.',
+          },
+        ].map((link) => (
+          <Link key={link.href} href={link.href as '/'} className="rounded-md border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+            <span className="mb-1 block text-sm font-semibold text-game-text">{link.title}</span>
+            <span className="line-clamp-2 text-xs leading-relaxed text-game-text-muted">{link.description}</span>
+          </Link>
+        ))}
+      </section>
 
       {featuredGuides.length > 0 && (
         <section className="mb-8">

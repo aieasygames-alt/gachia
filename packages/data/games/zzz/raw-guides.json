@@ -134,16 +134,16 @@
   {
     "id": "team-building-guide",
     "title": "绝区零配队指南",
-    "titleEn": "ZZZ Team Building Guide",
+    "titleEn": "ZZZ Team Building Guide: Best Team Comps, Roles & Synergy",
     "category": "team",
     "categoryZh": "配队攻略",
     "categoryEn": "Teams",
-    "updatedAt": "2026-07-24",
+    "updatedAt": "2026-08-10",
     "currentVersion": "3.0",
     "summary": "学习如何构建高效的3人队伍，理解各职业定位与协同效果。",
-    "summaryEn": "Learn how to build effective 3-agent teams, understand role synergy and team compositions.",
-    "content": "## 配队指南\n\n绝区零的战斗核心是3人小队协作，理解各职业定位和元素协同是组建强力队伍的关键。\n\n### 一、队伍基础结构\n\n标准3人小队通常包含：\n\n| 位置 | 职责 | 代表角色 | 优先级 |\n|------|------|----------|--------|\n| 输出(DPS) | 核心伤害来源 | 艾莲、朱鸢、简 | ★★★★★ |\n| 击破(Stun) | 快速积累敌人失衡值 | 莱卡恩、珂蕾妲、安比 | ★★★★☆ |\n| 支援(Support) | 提供增益/减防 | 妮可、苍角、露西 | ★★★★☆ |\n| 防护(Defense) | 提供护盾/治疗 | 赛斯、本 | ★★★☆☆ |\n\n最稳定阵容：**击破 + 输出 + 支援**\n\n### 二、各元素经典配队\n\n#### 冰队\n- **主力阵容**：艾莲(输出) + 莱卡恩(击破) + 苍角(支援)\n- **核心思路**：莱卡恩快速积累失衡，艾莲在眩晕期间爆发输出\n- **替代方案**：没有艾莲可用可琳替代\n\n#### 电队\n- **主力阵容**：安比(击破) + 格莉丝(异常) + 妮可(支援)\n- **核心思路**：快速积累电异常，触发触电持续伤害\n- **高端变体**：简(异常) + 赛斯(防护) + 格莉丝\n\n#### 火队\n- **主力阵容**：柏妮思(输出) + 珂蕾妲(击破) + 露西(支援)\n- **核心思路**：珂蕾妲快速眩晕，柏妮思爆发输出+燃烧异常\n- **替代方案**：莱特可替换柏妮思\n\n#### 物理队\n- **主力阵容**：可琳(输出) + 莱卡恩(击破) + 妮可(支援)\n- **核心思路**：莱卡恩眩晕后可琳爆发，妮可减防增强伤害\n\n#### 以太队\n- **主力阵容**：朱鸢(输出) + 青衣(支援) + 妮可(支援)\n- **核心思路**：青衣提供大量增益，朱鸢在眩晕期间极限输出\n\n### 三、特殊配队思路\n\n**异常流（不依赖传统输出）**\n- 简 + 格莉丝 + 赛斯：快速积累多种异常持续伤害\n- 核心装备：异常精通驱动盘套装\n\n**双输出轮换流**\n- 两个输出角色交替上场，利用连携机制\n- 适合拥有多个强力S级输出的玩家\n\n### 四、配队原则\n\n1. **属性统一**：同属性角色更容易触发异常效果\n2. **职业搭配**：击破+输出+支援是最稳定的组合\n3. **角色协同**：某些角色的技能会互相增强（如妮可减防+物理输出）\n4. **灵活调整**：根据敌人属性弱点调整队伍构成\n5. **资源集中**：优先把一队练满再练第二队",
-    "contentEn": "## Team Building Guide\n\nZZZ's combat revolves around 3-agent team synergy. Understanding role assignments and elemental interactions is key to building strong teams.\n\n### 1. Basic Team Structure\n\n| Role | Responsibility | Key Agents | Priority |\n|------|---------------|------------|----------|\n| DPS | Primary damage dealer | Ellen, Zhu Yuan, Jane | ★★★★★ |\n| Stun | Quickly builds enemy Daze | Lycaon, Koleda, Anby | ★★★★☆ |\n| Support | Provides buffs/DEF shred | Nicole, Soukaku, Lucy | ★★★★☆ |\n| Defense | Provides shields/healing | Seth, Ben | ★★★☆☆ |\n\nMost stable lineup: **Stun + DPS + Support**\n\n### 2. Element-Specific Teams\n\n#### Ice Team\n- **Premium**: Ellen (DPS) + Lycaon (Stun) + Soukaku (Support)\n- **Core strategy**: Lycaon builds Daze fast, Ellen bursts during Stun window\n- **Budget**: Replace Ellen with Corin\n\n#### Electric Team\n- **Premium**: Anby (Stun) + Grace (Anomaly) + Nicole (Support)\n- **Core strategy**: Build Electric Anomaly quickly, trigger Shock DoT\n- **Variant**: Jane (Anomaly) + Seth (Defense) + Grace\n\n#### Fire Team\n- **Premium**: Burnice (DPS) + Koleda (Stun) + Lucy (Support)\n- **Core strategy**: Koleda stuns fast, Burnice bursts + Burn Anomaly\n- **Variant**: Replace Burnice with Lighter\n\n#### Physical Team\n- **Premium**: Corin (DPS) + Lycaon (Stun) + Nicole (Support)\n- **Core strategy**: Lycaon stuns, Corin bursts, Nicole shreds DEF\n\n#### Ether Team\n- **Premium**: Zhu Yuan (DPS) + Qingyi (Support) + Nicole (Support)\n- **Core strategy**: Qingyi provides massive buffs, Zhu Yuan deals extreme damage during Stun\n\n### 3. Special Team Strategies\n\n**Anomaly Focus (no traditional DPS)**\n- Jane + Grace + Seth: Rapid multi-element Anomaly DoT stacking\n- Core gear: Anomaly Mastery Drive Disc sets\n\n**Dual DPS Rotation**\n- Two DPS agents alternate using Chain mechanics\n- Best for players with multiple S-Rank DPS agents\n\n### 4. Team Building Principles\n\n1. **Elemental unity**: Same-element agents trigger Anomaly more easily\n2. **Role balance**: Stun + DPS + Support is the most stable combination\n3. **Character synergy**: Some agents enhance each other (e.g., Nicole DEF shred + Physical DPS)\n4. **Flexibility**: Adjust team based on enemy elemental weaknesses\n5. **Resource focus**: Max one team before starting a second",
+    "summaryEn": "ZZZ team building guide for best team comps, agent roles, Attack/Stun/Anomaly/Support synergy, F2P teams, and how to use the team builder before investing resources.",
+    "content": "## 配队指南\n\n### 快速路线\n\n如果你搜索的是“zzz team builder / zzz teams / 绝区零最佳配队”，先确定一个主输出或异常核心，再补击破或支援位，然后打开 [/zzz/teams](/zzz/teams) 对比推荐代理人搭配。围绕新抽限定代理人养队前，先看 [/zzz/guides/banner-schedule-guide](/zzz/guides/banner-schedule-guide)。\n\n绝区零的战斗核心是3人小队协作，理解各职业定位和元素协同是组建强力队伍的关键。\n\n### 一、队伍基础结构\n\n标准3人小队通常包含：\n\n| 位置 | 职责 | 代表角色 | 优先级 |\n|------|------|----------|--------|\n| 输出(DPS) | 核心伤害来源 | 艾莲、朱鸢、简 | ★★★★★ |\n| 击破(Stun) | 快速积累敌人失衡值 | 莱卡恩、珂蕾妲、安比 | ★★★★☆ |\n| 支援(Support) | 提供增益/减防 | 妮可、苍角、露西 | ★★★★☆ |\n| 防护(Defense) | 提供护盾/治疗 | 赛斯、本 | ★★★☆☆ |\n\n最稳定阵容：**击破 + 输出 + 支援**\n\n### 二、各元素经典配队\n\n#### 冰队\n- **主力阵容**：艾莲(输出) + 莱卡恩(击破) + 苍角(支援)\n- **核心思路**：莱卡恩快速积累失衡，艾莲在眩晕期间爆发输出\n- **替代方案**：没有艾莲可用可琳替代\n\n#### 电队\n- **主力阵容**：安比(击破) + 格莉丝(异常) + 妮可(支援)\n- **核心思路**：快速积累电异常，触发触电持续伤害\n- **高端变体**：简(异常) + 赛斯(防护) + 格莉丝\n\n#### 火队\n- **主力阵容**：柏妮思(输出) + 珂蕾妲(击破) + 露西(支援)\n- **核心思路**：珂蕾妲快速眩晕，柏妮思爆发输出+燃烧异常\n- **替代方案**：莱特可替换柏妮思\n\n#### 物理队\n- **主力阵容**：可琳(输出) + 莱卡恩(击破) + 妮可(支援)\n- **核心思路**：莱卡恩眩晕后可琳爆发，妮可减防增强伤害\n\n#### 以太队\n- **主力阵容**：朱鸢(输出) + 青衣(支援) + 妮可(支援)\n- **核心思路**：青衣提供大量增益，朱鸢在眩晕期间极限输出\n\n### 三、特殊配队思路\n\n**异常流（不依赖传统输出）**\n- 简 + 格莉丝 + 赛斯：快速积累多种异常持续伤害\n- 核心装备：异常精通驱动盘套装\n\n**双输出轮换流**\n- 两个输出角色交替上场，利用连携机制\n- 适合拥有多个强力S级输出的玩家\n\n### 四、配队原则\n\n1. **属性统一**：同属性角色更容易触发异常效果\n2. **职业搭配**：击破+输出+支援是最稳定的组合\n3. **角色协同**：某些角色的技能会互相增强（如妮可减防+物理输出）\n4. **灵活调整**：根据敌人属性弱点调整队伍构成\n5. **资源集中**：优先把一队练满再练第二队",
+    "contentEn": "## Team Building Guide\n\n### Fast route\n\nIf you searched for \"zzz team builder,\" \"zzz teams,\" or \"zzz best teams,\" start with one main DPS or Anomaly core, add a Stun or Support agent, then open [/zzz/teams](/zzz/teams) to compare recommended agent comps. Check [/zzz/guides/banner-schedule-guide](/zzz/guides/banner-schedule-guide) before building around a newly pulled limited agent.\n\nZZZ's combat revolves around 3-agent team synergy. Understanding role assignments and elemental interactions is key to building strong teams.\n\n### 1. Basic Team Structure\n\n| Role | Responsibility | Key Agents | Priority |\n|------|---------------|------------|----------|\n| DPS | Primary damage dealer | Ellen, Zhu Yuan, Jane | ★★★★★ |\n| Stun | Quickly builds enemy Daze | Lycaon, Koleda, Anby | ★★★★☆ |\n| Support | Provides buffs/DEF shred | Nicole, Soukaku, Lucy | ★★★★☆ |\n| Defense | Provides shields/healing | Seth, Ben | ★★★☆☆ |\n\nMost stable lineup: **Stun + DPS + Support**\n\n### 2. Element-Specific Teams\n\n#### Ice Team\n- **Premium**: Ellen (DPS) + Lycaon (Stun) + Soukaku (Support)\n- **Core strategy**: Lycaon builds Daze fast, Ellen bursts during Stun window\n- **Budget**: Replace Ellen with Corin\n\n#### Electric Team\n- **Premium**: Anby (Stun) + Grace (Anomaly) + Nicole (Support)\n- **Core strategy**: Build Electric Anomaly quickly, trigger Shock DoT\n- **Variant**: Jane (Anomaly) + Seth (Defense) + Grace\n\n#### Fire Team\n- **Premium**: Burnice (DPS) + Koleda (Stun) + Lucy (Support)\n- **Core strategy**: Koleda stuns fast, Burnice bursts + Burn Anomaly\n- **Variant**: Replace Burnice with Lighter\n\n#### Physical Team\n- **Premium**: Corin (DPS) + Lycaon (Stun) + Nicole (Support)\n- **Core strategy**: Lycaon stuns, Corin bursts, Nicole shreds DEF\n\n#### Ether Team\n- **Premium**: Zhu Yuan (DPS) + Qingyi (Support) + Nicole (Support)\n- **Core strategy**: Qingyi provides massive buffs, Zhu Yuan deals extreme damage during Stun\n\n### 3. Special Team Strategies\n\n**Anomaly Focus (no traditional DPS)**\n- Jane + Grace + Seth: Rapid multi-element Anomaly DoT stacking\n- Core gear: Anomaly Mastery Drive Disc sets\n\n**Dual DPS Rotation**\n- Two DPS agents alternate using Chain mechanics\n- Best for players with multiple S-Rank DPS agents\n\n### 4. Team Building Principles\n\n1. **Elemental unity**: Same-element agents trigger Anomaly more easily\n2. **Role balance**: Stun + DPS + Support is the most stable combination\n3. **Character synergy**: Some agents enhance each other (e.g., Nicole DEF shred + Physical DPS)\n4. **Flexibility**: Adjust team based on enemy elemental weaknesses\n5. **Resource focus**: Max one team before starting a second",
     "tags": [
       "配队",
       "队伍",
@@ -171,7 +171,34 @@
         "answer": "Anby + Nicole + any S-Rank DPS you pull. This core works with any element and both Anby and Nicole are free.",
         "answerZh": "安比+妮可+你抽到的任何S级输出。这个核心组合适配任何属性，而且安比和妮可都是免费获得的。"
       }
-    ]
+    ],
+    "serpTitle": {
+      "en": "ZZZ Team Building Guide: Best Team Comps, Roles & Synergy",
+      "zh": "绝区零配队指南：最佳队伍、代理人定位与协同",
+      "ja": "ZZZ編成ガイド：おすすめチーム、役割、相性"
+    },
+    "serpDescription": {
+      "en": "Build better ZZZ teams with agent roles, best team comps, Attack/Stun/Anomaly/Support synergy, F2P options, and team-builder routing.",
+      "zh": "绝区零配队指南，覆盖最佳队伍、代理人定位、强攻/击破/异常/支援协同、平民阵容和配队模拟器入口。",
+      "ja": "ZZZのおすすめ編成、役割、強攻/撃破/異常/支援の相性、無課金編成、編成ツール入口を確認。"
+    },
+    "quickFacts": {
+      "en": [
+        "Start with one damage or Anomaly core, then add Stun and Support around it.",
+        "Use the teams page to compare recommended agent comps before spending materials.",
+        "Check current banners before building around a newly pulled agent."
+      ],
+      "zh": [
+        "先确定一个输出或异常核心，再补击破和支援位。",
+        "投入材料前，先用配队页对比推荐代理人搭配。",
+        "围绕新抽代理人养队前，先看当前卡池和后续目标。"
+      ],
+      "ja": [
+        "まず火力または異常コアを決め、撃破と支援を足します。",
+        "素材投入前に編成ページでおすすめ構成を比較。",
+        "新代理人中心に育成する前に現在バナーを確認。"
+      ]
+    }
   },
   {
     "id": "w-engine-guide",
@@ -846,41 +873,41 @@
   {
     "id": "banner-schedule-guide",
     "title": "绝区零当前卡池、下期与复刻抽卡规划指南",
-    "titleEn": "ZZZ Current Banner, Next Banner & Rerun Schedule",
+    "titleEn": "ZZZ Banner Schedule: Current Banner, Next Banner & Upcoming Reruns",
     "category": "banner",
     "categoryZh": "卡池攻略",
     "categoryEn": "Banner Guide",
     "summary": "绝区零 v3.1 当前卡池、下期卡池、复刻、专属频道保底、音擎风险和菲林规划入口，帮助你先决定抽代理人、抽音擎还是存资源。",
-    "summaryEn": "Live ZZZ v3.1 banner hub for current banners, next banners, reruns, Exclusive Channel pity, W-Engine risk, codes, and Polychrome planning.",
-    "content": "## 2026-08-03 当前卡池入口\n\n绝区零现在应优先按 **v3.1 live** 处理 current banner、next banner 和 rerun 搜索。先确认当前代理人是否补队伍，再看音擎、驱动盘、周年/版本奖励和兑换码能否覆盖菲林缺口。\n\n## 绝区零调频卡池排期与抽卡规划指南\n\n### 1. 调频系统概述\n\n绝区零的抽卡系统称为「调频」（Signal Search），玩家使用菲林（Polychrome）兑换调频凭证进行抽取。每个版本（约6周）通常会推出新的限定代理人及其专属音擎。\n\n### 2. 卡池类型详解\n\n| 卡池名称 | 货币 | 保底次数 | 产出内容 |\n|---------|------|---------|----------|\n| 专属频道（Exclusive Channel） | 加密调频凭证 | 90抽硬保底 | 限定S级代理人 |\n| 音擎频道（W-Engine Channel） | 加密调频凭证 | 80抽硬保底 | 限定S级音擎 |\n| 稳定频道（Stable Channel） | 调频凭证 | 无时间限制 | 常驻S级代理人及音擎 |\n| 邦布频道（Bangboo Channel） | 邦布调频凭证 | 独立保底 | 限定/常驻邦布 |\n\n#### 专属频道（Exclusive Channel）\n- 每期上架一位限定S级代理人\n- **50/50机制**：首次获得S级时有50%概率为当期限定角色\n- **大保底**：若首次S级歪了常驻角色，下次S级必定为当期限定\n- 保底继承至同类型卡池\n\n#### 音擎频道（W-Engine Channel）\n- 每期上架一把限定S级音擎（通常为同期限定代理人的专属音擎）\n- **75/25机制**：首次获得S级音擎时有75%概率为当期限定\n- 硬保底为80抽\n- 保底同样继承\n\n#### 稳定频道（Stable Channel）\n- 常驻池，包含所有常驻S级代理人及音擎\n- 新玩家前期可使用免费抽卡次数获取初始阵容\n- 不建议花费菲林在此卡池抽取\n\n#### 邦布频道（Bangboo Channel）\n- 使用独立的邦布调频凭证\n- 每期有限定邦布上架\n- 邦布对战斗有一定辅助作用但非核心\n\n### 3. 保底机制详解\n\n**代理人保底（专属频道）**：\n- 软保底从75抽开始，S级出率显著提升\n- 90抽硬保底，必定获得S级代理人\n- 如果上一次S级未获得限定角色，本次S级必定为限定角色（大保底）\n- 保底计数跨卡池继承\n\n**音擎保底（音擎频道）**：\n- 软保底从65抽开始\n- 80抽硬保底，必定获得S级音擎\n- 限定音擎概率为75%，失败后下次必定获得限定\n\n**保底继承规则**：\n- 专属频道的保底计数在所有专属频道之间继承\n- 音擎频道的保底计数在所有音擎频道之间继承\n- 代理人池和音擎池的保底互不影响\n\n### 4. 卡池排期规律\n\n绝区零通常每个版本（约42天）安排如下：\n\n- **上半期（约21天）**：新限定S级代理人 + 专属音擎\n- **下半期（约21天）**：复刻限定S级代理人或另一位新代理人 + 专属音擎\n- 版本更新时会有维护补偿和活动赠送\n\n**排期预估建议**：\n- 关注官方公告和前瞻直播获取确切排期\n- 通常每个大版本会有1-2位新S级代理人\n- 热门角色可能在3-4个版本后复刻\n\n### 5. 菲林收入规划\n\n每个版本（约42天）的菲林收入估算：\n\n| 来源 | 数量（约） |\n|------|------------|\n| 日常任务（42天） | 2520菲林 |\n| 版本活动 | 1600-2400菲林 |\n| 零号空洞 | 800-1200菲林 |\n| 模拟作战奖励 | 400-600菲林 |\n| 维护补偿 | 600菲林 |\n| 其他（兑换码、里程碑等） | 300-600菲林 |\n| **合计** | **约6200-8000菲林** |\n\n换算：160菲林 = 1抽，每版本约可获得**39-50抽**。\n\n### 6. 抽卡规划建议\n\n1. **明确目标角色**：提前确定想要的代理人，不要盲目抽取\n2. **留足大保底**：准备180抽（28800菲林）确保获得限定角色\n3. **音擎优先级**：专属音擎提升约15-25%，但建议先确保角色\n4. **关注复刻排期**：如果喜欢的角色即将复刻，提前储备资源\n5. **利用好50/50**：如果运气好赢下50/50，省下的资源可用于下个卡池",
-    "contentEn": "## Current Banner Hub for August 3, 2026\n\nZZZ banner searches should now route through the **v3.1 live** view: current banner, next banner, reruns, agent pity, W-Engine risk, rewards, codes, and Polychrome budget before pulling.\n\n## ZZZ Banner Schedule & Pull Planning Guide\n\n### 1. Signal Search System Overview\n\nZZZ's gacha system is called \"Signal Search\" (调频). Players use Polychromes to exchange for Search Passes and pull on various banners. Each version (approximately 6 weeks) typically introduces a new limited S-Rank agent along with their signature W-Engine.\n\n### 2. Banner Types Explained\n\n| Banner Name | Currency | Pity Count | Contents |\n|-------------|----------|-----------|----------|\n| Exclusive Channel | Encrypted Master Tape | 90 hard pity | Limited S-Rank Agents |\n| W-Engine Channel | Encrypted Master Tape | 80 hard pity | Limited S-Rank W-Engines |\n| Stable Channel | Master Tape | No time limit | Standard S-Rank Agents & W-Engines |\n| Bangboo Channel | Bangboo Algorithm | Separate pity | Limited/Standard Bangboo |\n\n#### Exclusive Channel\n- Features one limited S-Rank agent per phase\n- **50/50 Mechanic**: First S-Rank has a 50% chance to be the featured limited agent\n- **Guarantee**: If you lose the 50/50, your next S-Rank is guaranteed to be the featured agent\n- Pity count carries over between Exclusive Channel banners\n\n#### W-Engine Channel\n- Features one limited S-Rank W-Engine per phase (usually the signature weapon of the concurrent limited agent)\n- **75/25 Mechanic**: First S-Rank W-Engine has a 75% chance to be the featured one\n- Hard pity at 80 pulls\n- Pity also carries over between W-Engine Channel banners\n\n#### Stable Channel\n- Permanent banner with all standard S-Rank agents and W-Engines\n- New players can use free pulls to build an initial roster\n- Not recommended to spend Polychromes on this banner\n\n#### Bangboo Channel\n- Uses separate Bangboo currencies\n- Features limited Bangboo each phase\n- Bangboo provides combat assistance but is not core to team building\n\n### 3. Pity System Details\n\n**Agent Pity (Exclusive Channel)**:\n- Soft pity begins at 75 pulls, S-Rank rate increases significantly\n- Hard pity at 90 pulls guarantees an S-Rank agent\n- If the previous S-Rank was not the limited agent, the next S-Rank is guaranteed to be the featured one\n- Pity count carries over across all Exclusive Channel banners\n\n**W-Engine Pity (W-Engine Channel)**:\n- Soft pity begins at 65 pulls\n- Hard pity at 80 pulls guarantees an S-Rank W-Engine\n- Limited W-Engine rate is 75%; if you miss, the next one is guaranteed\n\n**Pity Inheritance Rules**:\n- Exclusive Channel pity carries over between all Exclusive Channel banners\n- W-Engine Channel pity carries over between all W-Engine Channel banners\n- Agent pity and W-Engine pity are independent of each other\n\n### 4. Banner Schedule Patterns\n\nZZZ typically follows this schedule per version (approximately 42 days):\n\n- **Phase 1 (approximately 21 days)**: New limited S-Rank agent + signature W-Engine\n- **Phase 2 (approximately 21 days)**: Rerun limited S-Rank agent or another new agent + signature W-Engine\n- Maintenance compensation and event rewards are given at version updates\n\n**Schedule Forecasting Tips**:\n- Follow official announcements and preview livestreams for confirmed schedules\n- Each major version typically introduces 1-2 new S-Rank agents\n- Popular characters may receive reruns after 3-4 versions\n\n### 5. Polychrome Income Planning\n\nEstimated Polychrome income per version (approximately 42 days):\n\n| Source | Amount (approx.) |\n|--------|-------------------|\n| Daily Tasks (42 days) | 2,520 Polychromes |\n| Version Events | 1,600-2,400 Polychromes |\n| Hollow Zero | 800-1,200 Polychromes |\n| Simulation Battle Rewards | 400-600 Polychromes |\n| Maintenance Compensation | 600 Polychromes |\n| Other (codes, milestones, etc.) | 300-600 Polychromes |\n| **Total** | **Approximately 6,200-8,000 Polychromes** |\n\nConversion: 160 Polychromes = 1 pull, yielding approximately **39-50 pulls per version**.\n\n### 6. Pull Planning Tips\n\n1. **Set clear targets**: Decide which agents you want in advance and avoid impulse pulling\n2. **Save for guarantee**: Prepare 180 pulls (28,800 Polychromes) to ensure you get the limited agent\n3. **W-Engine priority**: Signature W-Engines provide a 15-25% boost, but secure the agent first\n4. **Watch for reruns**: If a desired character is due for a rerun, start saving in advance\n5. **Capitalize on 50/50 wins**: If you win the 50/50, the saved resources can go toward the next banner",
+    "summaryEn": "Updated Zenless Zone Zero banner schedule for current ZZZ banners, next banner, upcoming reruns, v3.1 agents, Exclusive Channel pity, W-Engine risk, codes, and Polychrome planning.",
+    "content": "## 2026-08-03 当前卡池入口\n\n绝区零现在应优先按 **v3.1 live** 处理 current banner、next banner 和 rerun 搜索。先确认当前代理人是否补队伍，再看音擎、驱动盘、周年/版本奖励和兑换码能否覆盖菲林缺口。\n\n1. 先确认当前限定代理人是否补队伍缺口。\n2. 再看下期/复刻目标是否更值得预留。\n3. 把代理人频道保底、音擎频道保底和菲林缺口分开算。\n4. 抽前先领兑换码、版本奖励，并确认队伍是否真的需要专属音擎。\n\n### 今天的阅读路径\n\n| 你的问题 | 先看哪里 | 为什么 |\n| --- | --- | --- |\n| 当前代理人值不值 | 代理人定位 + 队伍缺口 | 先判断强攻、击破、异常、支援或收藏价值 |\n| 下期是否更关键 | v3.1 专题 + 复刻节奏 | 防止把一次大保底拆给两个目标 |\n| 音擎要不要追 | 代理人是否已到手 + 替代音擎 | 资源有限时专属音擎通常排在代理人后面 |\n| 菲林不够 | 兑换码 + 活动 + 保底状态 | 先补资源，再决定是否下池 |\n\n推荐下一步：[/zzz/version](/zzz/version)、[/zzz/redeem-codes](/zzz/redeem-codes)、[/zzz/teams](/zzz/teams)、[/zzz/guides/w-engine-guide](/zzz/guides/w-engine-guide)。\n\n## 绝区零调频卡池排期与抽卡规划指南\n\n### 1. 调频系统概述\n\n绝区零的抽卡系统称为「调频」（Signal Search），玩家使用菲林（Polychrome）兑换调频凭证进行抽取。每个版本（约6周）通常会推出新的限定代理人及其专属音擎。\n\n### 2. 卡池类型详解\n\n| 卡池名称 | 货币 | 保底次数 | 产出内容 |\n|---------|------|---------|----------|\n| 专属频道（Exclusive Channel） | 加密调频凭证 | 90抽硬保底 | 限定S级代理人 |\n| 音擎频道（W-Engine Channel） | 加密调频凭证 | 80抽硬保底 | 限定S级音擎 |\n| 稳定频道（Stable Channel） | 调频凭证 | 无时间限制 | 常驻S级代理人及音擎 |\n| 邦布频道（Bangboo Channel） | 邦布调频凭证 | 独立保底 | 限定/常驻邦布 |\n\n#### 专属频道（Exclusive Channel）\n- 每期上架一位限定S级代理人\n- **50/50机制**：首次获得S级时有50%概率为当期限定角色\n- **大保底**：若首次S级歪了常驻角色，下次S级必定为当期限定\n- 保底继承至同类型卡池\n\n#### 音擎频道（W-Engine Channel）\n- 每期上架一把限定S级音擎（通常为同期限定代理人的专属音擎）\n- **75/25机制**：首次获得S级音擎时有75%概率为当期限定\n- 硬保底为80抽\n- 保底同样继承\n\n#### 稳定频道（Stable Channel）\n- 常驻池，包含所有常驻S级代理人及音擎\n- 新玩家前期可使用免费抽卡次数获取初始阵容\n- 不建议花费菲林在此卡池抽取\n\n#### 邦布频道（Bangboo Channel）\n- 使用独立的邦布调频凭证\n- 每期有限定邦布上架\n- 邦布对战斗有一定辅助作用但非核心\n\n### 3. 保底机制详解\n\n**代理人保底（专属频道）**：\n- 软保底从75抽开始，S级出率显著提升\n- 90抽硬保底，必定获得S级代理人\n- 如果上一次S级未获得限定角色，本次S级必定为限定角色（大保底）\n- 保底计数跨卡池继承\n\n**音擎保底（音擎频道）**：\n- 软保底从65抽开始\n- 80抽硬保底，必定获得S级音擎\n- 限定音擎概率为75%，失败后下次必定获得限定\n\n**保底继承规则**：\n- 专属频道的保底计数在所有专属频道之间继承\n- 音擎频道的保底计数在所有音擎频道之间继承\n- 代理人池和音擎池的保底互不影响\n\n### 4. 卡池排期规律\n\n绝区零通常每个版本（约42天）安排如下：\n\n- **上半期（约21天）**：新限定S级代理人 + 专属音擎\n- **下半期（约21天）**：复刻限定S级代理人或另一位新代理人 + 专属音擎\n- 版本更新时会有维护补偿和活动赠送\n\n**排期预估建议**：\n- 关注官方公告和前瞻直播获取确切排期\n- 通常每个大版本会有1-2位新S级代理人\n- 热门角色可能在3-4个版本后复刻\n\n### 5. 菲林收入规划\n\n每个版本（约42天）的菲林收入估算：\n\n| 来源 | 数量（约） |\n|------|------------|\n| 日常任务（42天） | 2520菲林 |\n| 版本活动 | 1600-2400菲林 |\n| 零号空洞 | 800-1200菲林 |\n| 模拟作战奖励 | 400-600菲林 |\n| 维护补偿 | 600菲林 |\n| 其他（兑换码、里程碑等） | 300-600菲林 |\n| **合计** | **约6200-8000菲林** |\n\n换算：160菲林 = 1抽，每版本约可获得**39-50抽**。\n\n### 6. 抽卡规划建议\n\n1. **明确目标角色**：提前确定想要的代理人，不要盲目抽取\n2. **留足大保底**：准备180抽（28800菲林）确保获得限定角色\n3. **音擎优先级**：专属音擎提升约15-25%，但建议先确保角色\n4. **关注复刻排期**：如果喜欢的角色即将复刻，提前储备资源\n5. **利用好50/50**：如果运气好赢下50/50，省下的资源可用于下个卡池",
+    "contentEn": "## Current Banner Hub for August 3, 2026\n\nZZZ banner searches should now route through the **v3.1 live** view: current banner, next banner, reruns, agent pity, W-Engine risk, rewards, codes, and Polychrome budget before pulling.\n\n1. Check whether the active limited agent fills a real team gap.\n2. Compare next-banner and rerun targets before spending Polychromes.\n3. Track agent pity, W-Engine pity, and Polychrome budget separately.\n4. Claim codes and version rewards before chasing a signature W-Engine.\n\n### Best Reading Path Today\n\n| Intent | Open first | Why |\n| --- | --- | --- |\n| Current banner value | Agent role + team gap | Separate Attack, Stun, Anomaly, Support, and favorite value |\n| Next banner savings | v3.1 hub + rerun context | Avoid splitting one guarantee across two targets |\n| W-Engine chase | Agent secured + substitutes | Most accounts should secure the agent before the signature |\n| Low Polychromes | Codes + events + pity state | Add resources first, then decide whether to pull |\n\nRecommended next steps: [/zzz/version](/zzz/version), [/zzz/redeem-codes](/zzz/redeem-codes), [/zzz/teams](/zzz/teams), and [/zzz/guides/w-engine-guide](/zzz/guides/w-engine-guide).\n\n## ZZZ Banner Schedule & Pull Planning Guide\n\n### 1. Signal Search System Overview\n\nZZZ's gacha system is called \"Signal Search\" (调频). Players use Polychromes to exchange for Search Passes and pull on various banners. Each version (approximately 6 weeks) typically introduces a new limited S-Rank agent along with their signature W-Engine.\n\n### 2. Banner Types Explained\n\n| Banner Name | Currency | Pity Count | Contents |\n|-------------|----------|-----------|----------|\n| Exclusive Channel | Encrypted Master Tape | 90 hard pity | Limited S-Rank Agents |\n| W-Engine Channel | Encrypted Master Tape | 80 hard pity | Limited S-Rank W-Engines |\n| Stable Channel | Master Tape | No time limit | Standard S-Rank Agents & W-Engines |\n| Bangboo Channel | Bangboo Algorithm | Separate pity | Limited/Standard Bangboo |\n\n#### Exclusive Channel\n- Features one limited S-Rank agent per phase\n- **50/50 Mechanic**: First S-Rank has a 50% chance to be the featured limited agent\n- **Guarantee**: If you lose the 50/50, your next S-Rank is guaranteed to be the featured agent\n- Pity count carries over between Exclusive Channel banners\n\n#### W-Engine Channel\n- Features one limited S-Rank W-Engine per phase (usually the signature weapon of the concurrent limited agent)\n- **75/25 Mechanic**: First S-Rank W-Engine has a 75% chance to be the featured one\n- Hard pity at 80 pulls\n- Pity also carries over between W-Engine Channel banners\n\n#### Stable Channel\n- Permanent banner with all standard S-Rank agents and W-Engines\n- New players can use free pulls to build an initial roster\n- Not recommended to spend Polychromes on this banner\n\n#### Bangboo Channel\n- Uses separate Bangboo currencies\n- Features limited Bangboo each phase\n- Bangboo provides combat assistance but is not core to team building\n\n### 3. Pity System Details\n\n**Agent Pity (Exclusive Channel)**:\n- Soft pity begins at 75 pulls, S-Rank rate increases significantly\n- Hard pity at 90 pulls guarantees an S-Rank agent\n- If the previous S-Rank was not the limited agent, the next S-Rank is guaranteed to be the featured one\n- Pity count carries over across all Exclusive Channel banners\n\n**W-Engine Pity (W-Engine Channel)**:\n- Soft pity begins at 65 pulls\n- Hard pity at 80 pulls guarantees an S-Rank W-Engine\n- Limited W-Engine rate is 75%; if you miss, the next one is guaranteed\n\n**Pity Inheritance Rules**:\n- Exclusive Channel pity carries over between all Exclusive Channel banners\n- W-Engine Channel pity carries over between all W-Engine Channel banners\n- Agent pity and W-Engine pity are independent of each other\n\n### 4. Banner Schedule Patterns\n\nZZZ typically follows this schedule per version (approximately 42 days):\n\n- **Phase 1 (approximately 21 days)**: New limited S-Rank agent + signature W-Engine\n- **Phase 2 (approximately 21 days)**: Rerun limited S-Rank agent or another new agent + signature W-Engine\n- Maintenance compensation and event rewards are given at version updates\n\n**Schedule Forecasting Tips**:\n- Follow official announcements and preview livestreams for confirmed schedules\n- Each major version typically introduces 1-2 new S-Rank agents\n- Popular characters may receive reruns after 3-4 versions\n\n### 5. Polychrome Income Planning\n\nEstimated Polychrome income per version (approximately 42 days):\n\n| Source | Amount (approx.) |\n|--------|-------------------|\n| Daily Tasks (42 days) | 2,520 Polychromes |\n| Version Events | 1,600-2,400 Polychromes |\n| Hollow Zero | 800-1,200 Polychromes |\n| Simulation Battle Rewards | 400-600 Polychromes |\n| Maintenance Compensation | 600 Polychromes |\n| Other (codes, milestones, etc.) | 300-600 Polychromes |\n| **Total** | **Approximately 6,200-8,000 Polychromes** |\n\nConversion: 160 Polychromes = 1 pull, yielding approximately **39-50 pulls per version**.\n\n### 6. Pull Planning Tips\n\n1. **Set clear targets**: Decide which agents you want in advance and avoid impulse pulling\n2. **Save for guarantee**: Prepare 180 pulls (28,800 Polychromes) to ensure you get the limited agent\n3. **W-Engine priority**: Signature W-Engines provide a 15-25% boost, but secure the agent first\n4. **Watch for reruns**: If a desired character is due for a rerun, start saving in advance\n5. **Capitalize on 50/50 wins**: If you win the 50/50, the saved resources can go toward the next banner",
     "updatedAt": "2026-08-03",
     "currentVersion": "ZZZ v3.1 live banner cycle",
     "serpTitle": {
-      "en": "ZZZ Current Banner & Next Banner: v3.1 Reruns, Pity and Pulls",
-      "zh": "绝区零当前卡池与下期卡池：v3.1 复刻、保底和菲林规划",
-      "ja": "ZZZ 現在・次回バナー：v3.1復刻、天井、ポリクローム計画"
+      "en": "ZZZ Banner Schedule: Current Banner, Next Banner & Upcoming Reruns",
+      "zh": "绝区零卡池排期：当前卡池、下期与复刻规划",
+      "ja": "ZZZバナー予定：現在・次回・復刻"
     },
     "serpDescription": {
-      "en": "Track ZZZ current banners, next banners, v3.1 reruns, Exclusive Channel pity, W-Engine risk, Polychrome budget, codes, and pull priority.",
-      "zh": "查看绝区零当前卡池、下期卡池、v3.1 复刻、专属频道保底、音擎风险、菲林预算、兑换码和抽卡优先级。",
-      "ja": "ZZZの現在バナー、次回、v3.1復刻、専属チャンネル天井、音動機リスク、予算、コードを確認。"
+      "en": "Updated ZZZ banner schedule with current banners, next banner, upcoming reruns, v3.1 agents, pity, Polychrome checks, codes, and W-Engine advice.",
+      "zh": "更新绝区零当前卡池、下期卡池、复刻预测、v3.1 代理人、保底、菲林、兑换码和音擎风险。",
+      "ja": "ZZZの現在バナー、次回、復刻予想、v3.1エージェント、天井、菲林、コード、音動機リスクを確認。"
     },
     "quickFacts": {
       "en": [
-        "Use this as the v3.1 live banner hub before spending Polychrome.",
-        "Separate agent pity, W-Engine pity, rerun risk, and code income.",
-        "Best next pages: v3.1 hub, rewards/codes, W-Engines, Drive Discs, and teams."
+        "Updated for the live v3.1 Zenless Zone Zero banner cycle.",
+        "Covers current ZZZ banner, next banner, upcoming reruns, agent pity, Polychromes, codes, and W-Engine risk.",
+        "Use it before pulling an agent or spending on signature W-Engines."
       ],
       "zh": [
-        "抽菲林前，先把这里当作 v3.1 当前卡池入口。",
-        "代理人保底、音擎保底、复刻风险和兑换码收入要分开算。",
-        "下一步看 v3.1 专题、奖励/兑换码、音擎、驱动盘和配队。"
+        "已按绝区零 v3.1 当前调频周期更新。",
+        "覆盖当前卡池、下期、复刻预测、代理人保底、菲林、兑换码和音擎风险。",
+        "用于判断先抽代理人、追音擎还是继续存资源。"
       ],
       "ja": [
-        "ポリクローム前にv3.1現在バナー入口として確認。",
-        "エージェント天井、音動機天井、復刻リスク、コード収入を分けて計算。",
-        "次はv3.1特集、報酬/コード、音動機、ドライブ、編成へ。"
+        "ZZZ v3.1 現在バナー周期に対応。",
+        "現在、次回、復刻、代理人天井、菲林、コード、音動機リスクを確認。",
+        "代理人や専用音動機を引く前の判断用。"
       ]
     },
     "tags": [
@@ -1075,14 +1102,14 @@
   {
     "id": "meta-teams-v3-guide",
     "title": "绝区零v3.0版本主流配队推荐 — 突击与风属性体系",
-    "titleEn": "ZZZ v3.0 Meta Team Guide — Assault & Anemo Systems",
+    "titleEn": "ZZZ Best Teams v3.0-v3.1: Meta Comps, F2P Teams & Pull Priorities",
     "category": "team",
     "categoryZh": "配队攻略",
     "categoryEn": "Teams",
     "summary": "绝区零v3.0版本T0配队推荐：仪玄突击队、维林娜风弱BOSS队、普罗米亚火队、星光比利物理突击队、3.0-3.1卡池抽取规划。",
-    "summaryEn": "ZZZ v3.0 meta teams: Yixuan Assault team, Velina Anemo boss counter, Promeia Fire team, Starlight Billy Physical Assault, v3.0-3.1 pull planning.",
+    "summaryEn": "Best ZZZ teams for v3.0-v3.1, including meta comps, F2P teams, Assault, Anomaly, Fire, Wind, current pull priorities, and links into the ZZZ team builder.",
     "content": "## 绝区零v3.0版本主流配队推荐\n\nv3.0「新秩序」带来了突击专精深化和全新风属性体系，配队格局发生重大变化。\n\n### 一、T0级配队（v3.0版本最强）\n\n#### 1. 仪玄突击队（版本答案）\n- **成员**: 仪玄(Yixuan) + 般岳(Banyue) + Lucia Elowen\n- **核心**: 仪玄墨韵突击爆发 + Lucia全队增伤 + 般岳火突击清杂\n- **评价**: ★★★★★ v3.0依然是突击版本，突击值共享机制加强了\n\n#### 2. 维林娜风弱BOSS队（新风体系）\n- **成员**: 维林娜(Velina) + 风属性支援 + 生存位(Sunna/支援)\n- **核心**: 维林娜风属性爆发 + v3.0新风弱BOSS环境\n- **评价**: ★★★★★ 当前危局最强对策队伍\n\n#### 3. 普罗米亚火队\n- **成员**: 普罗米亚(Promeia) + 柯拉(Cora/冰支援) + 生存位\n- **核心**: 普罗米亚火属性持续输出 + 元素反应\n- **评价**: ★★★★★ 版本核心火C\n\n### 二、T1级配队（强力稳定）\n\n#### 4. 星光比利物理突击队\n- **成员**: 星光·比利·奇德 + 诺姆(Nome/物理击破) + 支援位\n- **核心**: 星光比利觉醒形态突击 + 诺姆快速眩晕\n- **评价**: ★★★★☆ 比利免费，星光形态质变\n\n#### 5. 叶瞬光利刃队\n- **成员**: 叶瞬光 + 浮波柚叶 + Ukinami Yuzuha\n- **核心**: 叶瞬光利刃爆发 + Yuzuha物理支援\n- **评价**: ★★★★☆ 利刃属性稳定输出\n\n### 三、v3.0-3.1抽卡规划\n\n#### 优先级排序\n\n| 优先级 | 角色 | 理由 |\n|--------|------|------|\n| T0 | 维林娜 | 风弱BOSS必带，当前环境最强对策 |\n| T0 | 普罗米亚 | 火属性版本核心C |\n| T1 | 星光比利 | 比利免费升级，高性价比 |\n| T1 | 叶瞬光 | 利刃属性稳定，但非必须 |\n| T2 | 蕾米埃尔 | 冰属性异常对策 |\n\n#### 资源规划建议\n\n1. **980底片福利**务必全部领取\n2. v3.0-3.1大约可获 60-80抽（含活动福利）\n3. 建议至少保留一个大保底给维林娜或普罗米亚\n4. 新手优先抽普罗米亚（通用火C > 风C对策）\n\n### 四、配队通用原则\n\n1. **三角阵型**: 输出 + 击破/控制 + 支援/生存\n2. **属性对策**: 根据BOSS弱点选择对应属性主C\n3. **突击值管理**: v3.0突击值共享机制需注意节奏\n4. **连携循环**: 确保换人连携流畅不断档",
-    "contentEn": "## ZZZ v3.0 Meta Team Guide\n\nv3.0 \"New Order\" brings Assault specialization deepening and new Anemo system, significantly shifting the meta.\n\n### 1. T0 Teams (v3.0 Strongest)\n\n#### Yixuan Assault Team (Meta Answer)\n- Yixuan + Banyue + Lucia Elowen\n- Core: Yixuan Ink Assault burst + Lucia team buff + Banyue Fire Assault\n- Rating: 5/5 — Still Assault meta in v3.0\n\n#### Velina Anemo Boss Counter (NEW)\n- Velina + Anemo support + Sustain (Sunna)\n- Core: Velina Anemo burst + v3.0 new Wind-weak boss environment\n- Rating: 5/5 — Strongest current boss counter\n\n#### Promeia Fire Team\n- Promeia + Cora (Ice support) + Sustain\n- Core: Promeia sustained Fire DPS + elemental reactions\n- Rating: 5/5 — Core Fire DPS\n\n### 2. v3.0-3.1 Pull Planning\n\n| Priority | Character | Reason |\n|----------|-----------|--------|\n| T0 | Velina | Wind-weak boss required, best counter |\n| T0 | Promeia | Fire DPS core |\n| T1 | Starlight Billy | Free upgrade, high value |\n| T1 | Ye Shunguang | Stable Blade output |\n| T2 | Remiel | Ice anomaly counter |\n\n**Tips**: Collect all 980 Polychrome rewards. Save at least one pity for Velina or Promeia.",
+    "contentEn": "## ZZZ v3.0-v3.1 Best Teams Guide\n\n### Start here\n\nUse this page as the \"ZZZ best teams\" route, then move into [/zzz/teams](/zzz/teams) when you want character-specific team comps. If your Polychrome budget is tight, compare [/zzz/guides/banner-schedule-guide](/zzz/guides/banner-schedule-guide) before chasing another agent or W-Engine.\n\nv3.0 \"New Order\" brings Assault specialization deepening and new Anemo system, significantly shifting the meta.\n\n### 1. T0 Teams (v3.0 Strongest)\n\n#### Yixuan Assault Team (Meta Answer)\n- Yixuan + Banyue + Lucia Elowen\n- Core: Yixuan Ink Assault burst + Lucia team buff + Banyue Fire Assault\n- Rating: 5/5 — Still Assault meta in v3.0\n\n#### Velina Anemo Boss Counter (NEW)\n- Velina + Anemo support + Sustain (Sunna)\n- Core: Velina Anemo burst + v3.0 new Wind-weak boss environment\n- Rating: 5/5 — Strongest current boss counter\n\n#### Promeia Fire Team\n- Promeia + Cora (Ice support) + Sustain\n- Core: Promeia sustained Fire DPS + elemental reactions\n- Rating: 5/5 — Core Fire DPS\n\n### 2. v3.0-3.1 Pull Planning\n\n| Priority | Character | Reason |\n|----------|-----------|--------|\n| T0 | Velina | Wind-weak boss required, best counter |\n| T0 | Promeia | Fire DPS core |\n| T1 | Starlight Billy | Free upgrade, high value |\n| T1 | Ye Shunguang | Stable Blade output |\n| T2 | Remiel | Ice anomaly counter |\n\n**Tips**: Collect all 980 Polychrome rewards. Save at least one pity for Velina or Promeia.",
     "tags": [
       "v3.0",
       "配队",
@@ -1105,7 +1132,35 @@
         "answer": "Complete all v3.0 version event tasks to receive 980 Polychrome and the Invitation Gift. Make sure to finish all tasks during the event period to not miss out on free pull resources.",
         "answerZh": "完成v3.0版本活动任务即可获得980底片（菲林）和邀约礼盒。建议在活动期间完成所有任务，不要错过免费抽卡资源。"
       }
-    ]
+    ],
+    "updatedAt": "2026-08-10",
+    "serpTitle": {
+      "en": "ZZZ Best Teams v3.0-v3.1: Meta Comps, F2P Teams & Pull Priorities",
+      "zh": "绝区零最佳配队 v3.0-v3.1：主流阵容、平民队与抽卡优先级",
+      "ja": "ZZZおすすめ編成 v3.0-v3.1：メタ、無課金、ガチャ優先度"
+    },
+    "serpDescription": {
+      "en": "Compare ZZZ best teams for v3.0-v3.1 with meta comps, F2P options, Assault and Anomaly teams, pull priorities, and team-builder links.",
+      "zh": "对比绝区零 v3.0-v3.1 最佳队伍、主流阵容、平民搭配、突击/异常体系、抽卡优先级和配队模拟器入口。",
+      "ja": "ZZZ v3.0-v3.1のおすすめ編成、メタ、無課金、突撃/異常、ガチャ優先度、編成入口を確認。"
+    },
+    "quickFacts": {
+      "en": [
+        "Focus on one version-ready team before chasing every new agent.",
+        "Use meta comps as templates, then adapt around your owned agents and W-Engines.",
+        "Open the team builder after reading this guide to compare character-specific comps."
+      ],
+      "zh": [
+        "先养一队当前版本能用的完整队伍，不要追所有新代理人。",
+        "主流队伍当模板，再按已有代理人和音擎替换。",
+        "读完后进入配队模拟器，对比具体角色推荐队伍。"
+      ],
+      "ja": [
+        "全新代理人を追う前に、現在版本で使える一隊を完成。",
+        "メタ編成を土台に、所持代理人と音動機で調整。",
+        "読後に編成ページでキャラ別おすすめを比較。"
+      ]
+    }
   },
   {
     "id": "v3-1-anniversary-xbox-guide",

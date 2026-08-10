@@ -721,16 +721,16 @@
   {
     "id": "damage-formula",
     "title": "伤害计算公式详解",
-    "titleEn": "NTE Damage Formula Explained — How Damage Calculation Works",
+    "titleEn": "NTE Damage Formula Guide: Damage Calculation, Crit, DEF and Resistance",
     "category": "combat",
     "categoryZh": "战斗",
     "categoryEn": "Combat",
-    "updatedAt": "2026-07-24",
+    "updatedAt": "2026-08-10",
     "currentVersion": "1.0",
     "summary": "深入解析异环的伤害计算公式，了解各属性如何影响最终伤害，帮助你优化角色装备和配队。",
-    "summaryEn": "Complete NTE damage formula breakdown: how ATK, crit, elemental bonuses, defense, and resistance multipliers work. Optimize your builds with math-backed stat priorities.",
+    "summaryEn": "Neverness to Everness damage formula guide explaining damage calculation, ATK scaling, crit ratio, elemental bonuses, defense, resistance, multipliers, and stat priority for better builds.",
     "content": "理解伤害计算公式是优化角色输出的基础。本指南详细解析异环的伤害计算机制，帮助你理解每个属性的实际价值。\n\n## 基础伤害公式\n\n最终伤害 = 基础攻击力 × (1 + 攻击力百分比加成) × 技能倍率 × 增伤区 × 暴击区 × 反应区 × 防御区 × 抗性区\n\n这个公式看起来复杂，但拆解开来每个部分都很容易理解。关键在于理解每个乘区之间的乘法关系——这意味着均匀提升各乘区的收益高于集中提升单一乘区。\n\n## 各乘区详解\n\n### 攻击力区\n由角色基础攻击力和武器基础攻击力之和，加上百分比攻击力加成计算。攻击力百分比加成来源于装备、武器特效和队伍增益。注意基础攻击力是整个乘区的基础，武器等级直接影响这个数值。\n\n### 增伤区\n包含元素伤害加成、武器特效增伤、队伍增益等。这个乘区是提升伤害最有效的途径之一，元素伤害杯提供的46.6%加成就属于这个乘区。\n\n### 暴击区\n暴击时伤害 × (1 + 暴击伤害)，不暴击时为 ×1。期望暴击收益 = 1 + 暴击率 × 暴击伤害。当暴击率与暴击伤害比例为1:2时，期望收益最大化。\n\n### 反应区\n元素反应带来的伤害增幅。增幅反应（蒸发、融化）直接乘以基础伤害，倍率取决于触发顺序和元素精通。元素精通越高，反应增幅越大。\n\n### 防御区\n敌人的防御力会降低受到的伤害。超导等反应可以降低敌人物理防御。防御区的计算涉及角色等级和敌人等级的对比，等级差越大影响越明显。\n\n### 抗性区\n敌人的元素抗性会进一步降低伤害。通过减抗手段（如风元素扩散、特定角色技能）可以提升这个乘区。当敌人抗性被降低到0以下时，收益会减半但仍然有正面效果。\n\n## 属性优先级推导\n\n根据公式可以推导出各属性的优先级：在基础攻击力足够的前提下，增伤区和暴击区的提升通常收益最高。这就是为什么元素伤害杯和暴击头冠是大多数输出角色的标配。\n\n元素精通对依赖反应的角色非常重要。如果你的输出主要来自反应伤害，元素精通的价值可能超过攻击力百分比。\n\n## 实际应用\n\n理解公式后，你可以更科学地选择装备和配队。例如：如果你的增伤区已经很高（大量增伤buff），再增加增伤的收益会递减，这时提升暴击或攻击力可能更有效。\n\n常见误区：不要只追求单一属性的极致。均匀提升各乘区的属性配置，实际输出往往比偏科配置更高。\n\n## 元素精通的价值\n元素精通影响反应伤害的增幅比例。对于依赖增幅反应（蒸发、融化）输出的角色，元素精通是重要属性。但元素精通只影响反应伤害，不影响基础攻击伤害。\n\n如果你的角色主要通过普通攻击和技能造成伤害（不依赖反应），元素精通的价值很低。相反，如果你的输出循环中大量触发反应，元素精通可能是比攻击力更高效的属性。\n\n## 防御和抗性减伤\n敌人防御力减伤 = 防御力 / (防御力 + K × (1 - 忽略防御比例))。K是一个常数，通常为923（80级敌人）。这意味着角色等级越高，穿透敌人防御的效果越好。\n\n抗性减伤相对简单：当抗性大于0时，减伤比例等于抗性值；当抗性小于0时，减半计算。通过减抗手段将敌人抗性降低到负值仍然有收益，只是效率减半。\n\n## 暴击率与暴击伤害平衡\n理论最优的暴击率:暴击伤害比例为1:2。例如50%暴击率配合100%暴击伤害，或70%暴击率配合140%暴击伤害。实际操作中不需要精确达到这个比例，接近即可。\n\n注意暴击率的实际价值有一个软上限：超过80%后继续堆暴击率的收益递减（因为大部分攻击已经能暴击了）。在暴击率达到70-80%后，应该将资源转向暴击伤害或其他属性。理解伤害公式的最终目的是帮助你做出更明智的装备选择和配队决策。当你面对一个攻击力沙漏和一个元素精通沙漏犹豫不决时，公式告诉你应该根据角色是依赖直伤还是反应伤害来选择。这种基于数据的决策比盲目追求某个属性更科学。\n\n建议保存一份简化的公式速查表，方便在游戏中快速参考。",
-    "contentEn": "## Damage Calculation Formula Explained\n\nUnderstanding how damage is calculated in Neverness to Everness helps you optimize your builds and maximize DPS output. This guide breaks down every component of the damage formula.\n\n## Base Damage\n\nBase damage starts with your character's attack stat multiplied by the skill's scaling ratio. The formula is: Base Damage = ATK x Skill Multiplier. Both ATK and skill levels affect this base value, making them your primary scaling targets.\n\n## Critical Hits\n\nCritical hits multiply damage by your Crit Damage (CD) percentage. The chance to crit is determined by your Crit Rate (CR) stat. The optimal CR:CD ratio is generally 1:2, meaning if you have 50% Crit Rate, you want at least 100% Crit Damage. Consistency from balanced crit stats typically outperforms excessive investment in one stat.\n\n## Elemental Damage Bonus\n\nElemental damage bonuses from disks and weapon passives are additive with other damage bonuses but multiplicative with base damage. This makes elemental damage cups one of your highest priority equipment pieces. A 46.6% elemental damage bonus on your main stat disk provides a significant damage increase.\n\n## Defense and Resistance\n\nEnemy defense reduces incoming damage based on the level difference between your character and the enemy. Resistance further reduces damage by a percentage. Certain debuffs and superconduct reactions can lower enemy defense and resistance, dramatically increasing effective damage.\n\n## Reaction Damage\n\nElemental reactions have separate scaling that ignores normal attack modifiers but scales with character level and elemental mastery. Transformative reactions like overloaded deal fixed damage, while amplifying reactions like vaporize multiply the triggering hit's damage. Understanding which reactions your team triggers helps you build the right stats.\n\n## Final Damage Formula\n\nTotal Damage = (Base Damage x Skill Multiplier x Damage Bonuses) x (1 + CR x CD) x Enemy Defense Multiplier x Enemy Resistance Multiplier x Reaction Multiplier. Optimize each layer for compounding damage gains.",
+    "contentEn": "## Damage Calculation Formula Explained\n\n### Fast answer\n\nFor most NTE builds, damage starts with **ATK x skill multiplier**, then changes through crit, elemental bonuses, defense, resistance, and final multipliers. Use this guide with [/nte/build](/nte/build), [/nte/weapons](/nte/weapons), and [/nte/guides/boss-guide-comprehensive](/nte/guides/boss-guide-comprehensive) before locking a full build.\n\nUnderstanding how damage is calculated in Neverness to Everness helps you optimize your builds and maximize DPS output. This guide breaks down every component of the damage formula.\n\n## Base Damage\n\nBase damage starts with your character's attack stat multiplied by the skill's scaling ratio. The formula is: Base Damage = ATK x Skill Multiplier. Both ATK and skill levels affect this base value, making them your primary scaling targets.\n\n## Critical Hits\n\nCritical hits multiply damage by your Crit Damage (CD) percentage. The chance to crit is determined by your Crit Rate (CR) stat. The optimal CR:CD ratio is generally 1:2, meaning if you have 50% Crit Rate, you want at least 100% Crit Damage. Consistency from balanced crit stats typically outperforms excessive investment in one stat.\n\n## Elemental Damage Bonus\n\nElemental damage bonuses from disks and weapon passives are additive with other damage bonuses but multiplicative with base damage. This makes elemental damage cups one of your highest priority equipment pieces. A 46.6% elemental damage bonus on your main stat disk provides a significant damage increase.\n\n## Defense and Resistance\n\nEnemy defense reduces incoming damage based on the level difference between your character and the enemy. Resistance further reduces damage by a percentage. Certain debuffs and superconduct reactions can lower enemy defense and resistance, dramatically increasing effective damage.\n\n## Reaction Damage\n\nElemental reactions have separate scaling that ignores normal attack modifiers but scales with character level and elemental mastery. Transformative reactions like overloaded deal fixed damage, while amplifying reactions like vaporize multiply the triggering hit's damage. Understanding which reactions your team triggers helps you build the right stats.\n\n## Final Damage Formula\n\nTotal Damage = (Base Damage x Skill Multiplier x Damage Bonuses) x (1 + CR x CD) x Enemy Defense Multiplier x Enemy Resistance Multiplier x Reaction Multiplier. Optimize each layer for compounding damage gains.",
     "tags": [
       "伤害",
       "公式",
@@ -760,7 +760,34 @@
         "answer": "Enemy defense reduces damage based on the level difference between your character and the enemy. The formula involves a constant K (approximately 923 for level 80 enemies). Higher character levels reduce the defense penalty. Defense-shredding effects and certain reactions can further lower enemy effective defense.",
         "answerZh": "敌人防御力根据你的角色与敌人的等级差来减少伤害。公式中涉及一个常数K（80级敌人约为923）。角色等级越高，防御力惩罚越小。减防效果和特定反应可以进一步降低敌人的有效防御。"
       }
-    ]
+    ],
+    "serpTitle": {
+      "en": "NTE Damage Formula Guide: Damage Calculation, Crit, DEF and Resistance",
+      "zh": "异环伤害公式攻略：伤害计算、暴击、防御与抗性",
+      "ja": "NTEダメージ計算式：会心、防御、耐性、倍率"
+    },
+    "serpDescription": {
+      "en": "Learn the NTE damage formula with ATK scaling, skill multipliers, Crit Rate/Crit DMG, elemental bonuses, defense, resistance, and build stat priority.",
+      "zh": "解析异环伤害公式，覆盖攻击倍率、技能倍率、暴击率/暴击伤害、元素加成、防御、抗性和配装属性优先级。",
+      "ja": "NTEのダメージ計算式、攻撃倍率、会心率/会心ダメ、防御、耐性、属性優先度を確認。"
+    },
+    "quickFacts": {
+      "en": [
+        "Start with ATK x skill multiplier, then apply crit, elemental bonuses, defense, and resistance.",
+        "Balanced Crit Rate and Crit DMG usually beats stacking one crit stat only.",
+        "Use the formula with character builds, disks, weapons, and boss resistance checks."
+      ],
+      "zh": [
+        "先用攻击力 x 技能倍率算基础伤害，再叠加暴击、元素加成、防御和抗性。",
+        "暴击率和暴击伤害均衡通常比只堆单项更稳。",
+        "公式要和角色配装、弧盘、武器和 Boss 抗性一起看。"
+      ],
+      "ja": [
+        "攻撃力 x スキル倍率から始め、会心、元素、 防御、耐性を適用。",
+        "会心率と会心ダメのバランスが重要。",
+        "キャラ、弧盤、武器、ボス耐性と一緒に確認。"
+      ]
+    }
   },
   {
     "id": "beginner-mistakes",

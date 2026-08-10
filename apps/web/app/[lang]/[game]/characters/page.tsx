@@ -84,7 +84,7 @@ const CHAR_DESC: Record<string, Record<string, string>> = {
   ananta: { zh: '无限大全异能者图鉴，覆盖SSR、SR角色数据、异能和配装推荐，方便你在角色选择前快速掌握强度和定位。', en: 'Complete Ananta Esper roster with SSR and SR data, abilities, and build recommendations to help you compare power and role before investing.', ja: 'アナンタ全エスパー図鑑。SSR・SRのデータ、能力、ビルド案をまとめています。' },
   guihuan: { zh: '归环全使灵图鉴，覆盖SSR、SR角色数据、元素和配装推荐，方便你先看清定位，再决定培养顺序。', en: 'Complete Guihuan Spirit roster with SSR and SR data, elements, and build recommendations so you can prioritize the right spirits first.', ja: '帰環全精霊図鑑。SSR・SRのデータ、元素、ビルド案を整理しています。' },
   endfield: { zh: '明日方舟：终末地全干员图鉴，覆盖六星、五星、四星角色数据、元素属性和配装推荐，适合先看定位再进培养页。', en: 'Complete Arknights: Endfield operator roster with 6-Star, 5-Star, and 4-Star data, elements, and build recommendations for fast team planning.', ja: 'エンドフィールド全オペレーター図鑑。★6、★5、★4のデータ、属性、ビルド案を整理しています。' },
-  sea: { zh: '遗忘之海全角色图鉴，覆盖属性、配装推荐和培养方向，帮助你在开荒阶段快速找到更适合自己的角色。', en: 'Complete Sea of Remnants character roster with attributes and build recommendations so you can pick the right characters during early progression.', ja: 'シー・オブ・レムナンツ全キャラ図鑑。属性、ビルド案、育成方針を整理しています。' },
+  sea: { zh: '遗忘之海角色图鉴 Wiki，覆盖 Traveler、Ais、Little Axe、Princess、Molly 等角色属性、定位、强度、配队和开荒培养顺序。', en: 'Sea of Remnants characters wiki with Traveler, Ais, Little Axe, Princess, Molly, roles, attributes, tier notes, teams, and early progression picks.', ja: 'シー・オブ・レムナンツキャラWiki。Traveler、Ais、Little Axe、Princess、Molly、役割、属性、Tier、育成順を整理。' },
 };
 
 const NTE_ELEMENT_COLORS: Record<string, string> = {
@@ -182,9 +182,9 @@ const CHARACTER_INTRO: Record<string, Record<SupportedLocale, string>> = {
     ja: '属性、職分、レアリティでエンドフィールド干員図鑑を確認し、戦闘分担、編成相性、育成導線を把握できます。',
   },
   sea: {
-    zh: '按属性和定位快速浏览遗忘之海角色图鉴，适合先看开荒强度、队伍分工和培养路线。',
-    en: 'Browse the Sea of Remnants character wiki by attribute and role to review early-game value, team duties, and progression paths.',
-    ja: '属性と役割で遺忘之海キャラ図鑑を確認し、開拓強度、編成分担、育成導線を把握できます。',
+    zh: '按属性、定位和强度快速浏览遗忘之海角色图鉴 Wiki，适合先看开荒强度、队伍分工、节奏榜和培养路线。',
+    en: 'Browse the Sea of Remnants characters wiki by attribute, role, and tier value to review early-game picks, team duties, tier list context, and progression paths.',
+    ja: '属性、役割、Tier価値でSea of RemnantsキャラWikiを確認し、序盤候補、編成分担、育成導線を把握できます。',
   },
 };
 
@@ -206,11 +206,17 @@ export async function generateMetadata({
   const intro = CHARACTER_INTRO[gameId]?.[locale];
   const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/characters`, LOCALES);
 
-  const title = locale === 'zh'
-    ? `${gameName}角色图鉴 — 全角色Wiki、Build、技能与配队`
-    : locale === 'ja'
-      ? `${gameName}キャラ図鑑 — Wiki、ビルド、スキル、編成`
-      : `${gameName} Characters Wiki — Builds, Skills & Team Planning`;
+  const title = gameId === 'sea'
+    ? locale === 'zh'
+      ? '遗忘之海角色图鉴 Wiki — 全角色、强度排行与开荒推荐'
+      : locale === 'ja'
+        ? 'Sea of Remnants キャラWiki — 全キャラ、Tier、育成'
+        : 'Sea of Remnants Characters Wiki — All Characters, Tier List & Best Picks'
+    : locale === 'zh'
+      ? `${gameName}角色图鉴 — 全角色Wiki、Build、技能与配队`
+      : locale === 'ja'
+        ? `${gameName}キャラ図鑑 — Wiki、ビルド、スキル、編成`
+        : `${gameName} Characters Wiki — Builds, Skills & Team Planning`;
 
   const description = ensureMetaLength(
     intro ?? desc ?? `${gameName} ${categoryLabel} roster with stats, skills, roles, and build recommendations`,
@@ -1007,15 +1013,53 @@ function EndfieldCharacterCard({ char, locale, gameId }: { char: typeof endfield
 
 function SeaCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedLocale; gameId: GameId; gameConfig: typeof GAMES.sea }) {
   const chars = seaCharacters;
+  const seaLinks = [
+    {
+      href: '/sea',
+      title: locale === 'zh' ? '遗忘之海 Wiki 首页' : locale === 'ja' ? 'Sea of Remnants Wiki' : 'Sea of Remnants Wiki',
+      description: locale === 'zh' ? '先回到总览，看下载、攻略、福利和版本入口。' : locale === 'ja' ? 'DL、攻略、報酬、版本入口をまとめて確認。' : 'Start from the wiki hub for download, guides, rewards, and version routes.',
+    },
+    {
+      href: '/sea/tier-list',
+      title: locale === 'zh' ? '角色强度排行' : locale === 'ja' ? 'キャラTierリスト' : 'Character Tier List',
+      description: locale === 'zh' ? '对比 SS/S/A/B 分级，决定先养谁。' : locale === 'ja' ? 'SS/S/A/B評価で育成優先度を確認。' : 'Compare SS/S/A/B rankings before investing materials.',
+    },
+    {
+      href: '/sea/guides/molly-starter-team-guide',
+      title: locale === 'zh' ? '茉莉开荒队伍' : locale === 'ja' ? 'Molly序盤編成' : 'Molly Starter Team',
+      description: locale === 'zh' ? '用治疗和主攻路线快速搭开荒队。' : locale === 'ja' ? '回復と火力軸で序盤編成を組む。' : 'Build an early team around healing, DPS, and safe progression.',
+    },
+  ];
 
   return (
     <div>
       <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
+        {locale === 'zh' ? '遗忘之海角色图鉴 Wiki' : locale === 'ja' ? 'Sea of Remnants キャラWiki' : 'Sea of Remnants Characters Wiki'}
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
+        {locale === 'zh'
+          ? `共 ${chars.length} 名角色，覆盖属性、定位、强度排行和开荒培养顺序。`
+          : locale === 'ja'
+            ? `${chars.length} 名のキャラクター。属性、役割、Tier、育成順を整理。`
+            : `${chars.length} characters with attributes, roles, tier context, and early progression notes.`}
       </p>
+      <section className="mb-6 rounded-lg border border-game-border bg-game-surface p-4">
+        <p className="mb-3 text-sm leading-relaxed text-game-text-muted">
+          {locale === 'zh'
+            ? '如果你搜索的是“遗忘之海 wiki / Sea of Remnants characters”，先从 Traveler、Ais、Little Axe、Princess、Molly 这些高频角色看起，再进入节奏榜和开荒队伍。'
+            : locale === 'ja'
+              ? 'Sea of Remnants characters / wiki 検索なら、Traveler、Ais、Little Axe、Princess、Molly から確認し、Tierと序盤編成へ進みます。'
+              : 'If you searched for Sea of Remnants characters or wiki, start with Traveler, Ais, Little Axe, Princess, and Molly, then move into the tier list and starter-team guide.'}
+        </p>
+        <div className="grid gap-2 md:grid-cols-3">
+          {seaLinks.map((link) => (
+            <Link key={link.href} href={link.href as '/'} className="rounded-md border border-game-border bg-game-surface-alt p-3 transition-colors hover:border-game-primary">
+              <span className="mb-1 block text-sm font-semibold text-game-text">{link.title}</span>
+              <span className="line-clamp-2 text-xs leading-relaxed text-game-text-muted">{link.description}</span>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       {chars.length > 0 && (
         <section className="mb-8">

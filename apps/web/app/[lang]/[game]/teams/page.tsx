@@ -15,7 +15,9 @@ export async function generateMetadata({
   const gameId = game as GameId;
   const gameConfig = GAMES[gameId];
   const gameName = locale === 'zh' ? gameConfig.name.zh : locale === 'ja' ? (gameConfig.name.ja ?? gameConfig.name.en) : gameConfig.name.en;
-  const title = gameId === 'skjh'
+  const title = gameId === 'zzz'
+    ? locale === 'zh' ? '绝区零配队模拟器 — 最佳队伍、代理人搭配与 Team Builder' : locale === 'ja' ? 'ZZZ パーティ編成 — おすすめチームと Team Builder' : 'ZZZ Team Builder — Best Teams, Team Comps & Agent Synergy'
+    : gameId === 'skjh'
     ? locale === 'zh' ? `${gameName} 小队分工模拟器` : locale === 'ja' ? `${gameName} チーム役割シミュレーター` : `${gameName} Squad Role Simulator`
     : locale === 'zh' ? `${gameName} 配队模拟器` : locale === 'ja' ? `${gameName} パーティ編成` : `${gameName} Team Builder`;
   if (gameId === 'ananta' || gameId === 'sea') {
@@ -23,7 +25,13 @@ export async function generateMetadata({
   }
   return {
     title,
-    description: gameId === 'skjh'
+    description: gameId === 'zzz'
+      ? locale === 'zh'
+        ? '绝区零配队模拟器，整理 ZZZ 最佳队伍、代理人协同、强攻/击破/异常/支援搭配、当前版本主流配队和新手队伍。'
+        : locale === 'ja'
+          ? 'ZZZ パーティ編成。おすすめチーム、エージェント相性、強攻/撃破/異常/支援、現在版本の編成を確認。'
+          : 'ZZZ team builder for best teams, agent synergy, Attack/Stun/Anomaly/Support comps, current meta teams, F2P teams, and version-ready team planning.'
+      : gameId === 'skjh'
       ? locale === 'zh'
         ? `${gameName}小队分工模拟器，按独狼、双人队、三人队、四人以上队伍规划建筑位、资源位、侦查位、战斗位和后勤位。`
         : locale === 'ja'

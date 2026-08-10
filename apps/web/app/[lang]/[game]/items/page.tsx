@@ -21,7 +21,7 @@ const ITEM_DESC: Record<string, Record<string, string>> = {
   starrail: { zh: '崩坏：星穹铁道全材料图鉴，覆盖角色突破材料、行迹材料、Boss掉落和刷取来源，方便你按角色或用途快速查找所需素材。', en: 'Complete Honkai: Star Rail material list with ascension materials, trace materials, boss drops, and farming sources organized for quick character planning.', ja: 'スターレイル全素材図鑑。キャラ突破素材、軌跡素材、ボスドロップ、周回先を整理して確認できます。' },
   wuwa: { zh: '鸣潮全材料图鉴，整理技能材料、Boss材料、区域特产和养成来源，适合在培养角色前先看清每种素材该去哪里刷。', en: 'Complete Wuthering Waves material list with skill materials, boss materials, local specialties, and farming routes so you can prep upgrades efficiently.', ja: '鳴潮全素材図鑑。スキル素材、ボス素材、地域特産品、周回ルートを整理して案内します。' },
   nte: { zh: '异环全材料图鉴，覆盖突破材料、Boss掉落、技能手册和养成来源，方便你按角色、阶段或用途快速整理资源。', en: 'Complete Neverness to Everness material list with ascension materials, boss drops, skill manuals, and farming sources for efficient progression planning.', ja: '異環全素材図鑑。昇格素材、ボスドロップ、スキルマニュアル、周回先を整理しています。' },
-  zzz: { zh: '绝区零全材料图鉴，覆盖突破材料、技能材料、特殊材料和周回来源，方便按代理人培养阶段快速找到需要的资源。', en: 'Complete Zenless Zone Zero material list with ascension, skill, and special materials plus farming sources for faster agent upgrade planning.', ja: 'ゼンレスゾーンゼロ全素材図鑑。突破素材、スキル素材、特殊素材、周回先をまとめています。' },
+  zzz: { zh: '绝区零材料图鉴 Wiki，覆盖代理人突破材料、技能材料、特殊材料、抽卡道具、刷取来源、当前版本培养优先级和配队养成路线。', en: 'Zenless Zone Zero materials wiki with agent ascension materials, skill materials, special mats, gacha items, farming sources, current-version upgrade priority, and team-building routes.', ja: 'ゼンレスゾーンゼロ素材Wiki。突破素材、スキル素材、特殊素材、ガチャアイテム、周回先、育成優先度を整理。' },
   guihuan: { zh: '归环全材料图鉴，覆盖使灵突破、元素突破、Boss材料和对应来源，便于你在培养前快速确认每类素材的获取方式。', en: 'Complete Guihuan material list with spirit ascension, element ascension, boss materials, and acquisition sources for easy build planning.', ja: '帰環全素材図鑑。スピリット昇格、元素昇格、ボス素材、入手先をまとめています。' },
   ananta: { zh: '无限大全材料图鉴，覆盖突破材料、Boss材料、区域特产和刷取来源，帮助你在培养角色时快速整理所有所需资源。', en: 'Complete Ananta material list with ascension, boss materials, local specialties, and farming sources to keep your upgrade path organized.', ja: 'アナンタ全素材図鑑。昇格素材、ボス素材、地域特産品、周回先を整理して確認できます。' },
   endfield: { zh: '明日方舟：终末地全材料图鉴，覆盖突破材料、技能材料、货币材料和来源，方便你从培养计划一路查到具体掉落。', en: 'Complete Arknights: Endfield material list with ascension materials, skill materials, currency materials, and farming sources for full upgrade planning.', ja: 'アークナイツ：エンドフィールド全素材図鑑。昇格素材、スキル素材、通貨素材、入手先を確認できます。' },
@@ -97,9 +97,9 @@ const ITEM_INTRO: Record<string, Record<SupportedLocale, string>> = {
     ja: 'ガイド、アルクEXP、モジュールEXP、昇格素材で異環素材図鑑を確認し、段階別の需要と入手先を把握できます。',
   },
   zzz: {
-    zh: '按突破材料、技能材料、特殊材料和货币快速浏览绝区零材料图鉴，适合先看代理人养成和刷取来源。',
-    en: 'Browse the Zenless Zone Zero material wiki by ascension, skill, special, and currency items to review agent upgrades and farming sources.',
-    ja: '突破素材、スキル素材、特殊素材、通貨でゼンゼロ素材図鑑を確認し、エージェント育成と入手先を把握できます。',
+    zh: '按突破材料、技能材料、特殊材料、货币和抽卡道具快速浏览绝区零材料图鉴 Wiki，适合先看代理人养成、刷取来源和当前版本优先级。',
+    en: 'Browse the Zenless Zone Zero materials wiki by ascension, skill, special, currency, and gacha items to review agent upgrades, farming sources, and current-version priority.',
+    ja: '突破素材、スキル素材、特殊素材、通貨、ガチャアイテムでゼンゼロ素材Wikiを確認し、育成と周回先を把握できます。',
   },
   ananta: {
     zh: '按触发者指南、突破材料、Boss 材料和技能材料快速浏览无限大材料图鉴，适合先看资源需求和来源。',
@@ -147,11 +147,17 @@ export async function generateMetadata({
   const desc = ITEM_DESC[gameId]?.[locale] ?? `${gameName} ${categoryLabel} database with farming sources, upgrade materials, and drop locations`;
   const intro = ITEM_INTRO[gameId]?.[locale];
 
-  const title = locale === 'zh'
-    ? `${gameName}材料图鉴 — 全材料Wiki、掉落来源与刷取路线`
-    : locale === 'ja'
-      ? `${gameName}素材図鑑 — Wiki、ドロップ場所、周回ルート`
-      : `${gameName} Materials Wiki — Complete Drop Sources & Farming Guide`;
+  const title = gameId === 'zzz'
+    ? locale === 'zh'
+      ? '绝区零材料图鉴 Wiki — 代理人突破、技能材料与刷取来源'
+      : locale === 'ja'
+        ? 'ZZZ素材Wiki — エージェント突破、スキル素材、周回'
+        : 'ZZZ Materials Wiki — Agent Ascension, Skill Materials & Farming Sources'
+    : locale === 'zh'
+      ? `${gameName}材料图鉴 — 全材料Wiki、掉落来源与刷取路线`
+      : locale === 'ja'
+        ? `${gameName}素材図鑑 — Wiki、ドロップ場所、周回ルート`
+        : `${gameName} Materials Wiki — Complete Drop Sources & Farming Guide`;
 
   const description = ensureMetaLength(intro ?? desc, locale);
 
@@ -469,18 +475,47 @@ function ZzzItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: str
   const materials = zzzMaterials;
   const grouped = groupByType(materials);
   const typeOrder = ['突破材料', '技能材料', '特殊材料', '通用货币', '抽卡道具'];
+  const links = [
+    {
+      href: '/zzz/characters',
+      title: locale === 'zh' ? '按代理人反查材料' : locale === 'ja' ? 'エージェントから素材確認' : 'Browse Agents',
+      description: locale === 'zh' ? '先确定要养谁，再看突破和技能材料。' : locale === 'ja' ? '育成対象を決めてから素材を確認。' : 'Choose the agent first, then review ascension and skill mats.',
+    },
+    {
+      href: '/zzz/teams',
+      title: locale === 'zh' ? '配队后再分配资源' : locale === 'ja' ? '編成後に素材配分' : 'Plan Team Upgrades',
+      description: locale === 'zh' ? '把主 C、击破、异常和支援的材料优先级分开。' : locale === 'ja' ? '火力、撃破、異常、支援で優先度を分ける。' : 'Split material priority by DPS, Stun, Anomaly, and Support roles.',
+    },
+    {
+      href: '/zzz/guides/drive-disc-guide',
+      title: locale === 'zh' ? '同步看驱动盘' : locale === 'ja' ? 'ドライブも確認' : 'Check Drive Discs',
+      description: locale === 'zh' ? '角色等级、技能和驱动盘要一起规划。' : locale === 'ja' ? 'レベル、スキル、ドライブを一緒に計画。' : 'Plan levels, skills, and Drive Discs together.',
+    },
+  ];
 
   return (
     <div>
       <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.zzz.theme.primary }}>
-        {CATEGORY_LABELS.items?.[locale] ?? 'Items'}
+        {locale === 'zh' ? '绝区零材料图鉴 Wiki' : locale === 'ja' ? 'ZZZ素材Wiki' : 'ZZZ Materials Wiki'}
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${materials.length} 种材料` : locale === 'ja' ? `${materials.length} 種の素材` : `${materials.length} Materials`}
+        {locale === 'zh'
+          ? `共 ${materials.length} 种材料，覆盖代理人突破、技能升级、特殊材料、货币和抽卡道具。`
+          : locale === 'ja'
+            ? `${materials.length} 種の素材。突破、スキル、特殊素材、通貨、ガチャアイテムを整理。`
+            : `${materials.length} materials covering agent ascension, skills, special mats, currency, and gacha items.`}
       </p>
       <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
         {getItemIntro('zzz', locale)}
       </p>
+      <section className="mb-6 grid gap-2 md:grid-cols-3">
+        {links.map((link) => (
+          <Link key={link.href} href={link.href as '/'} className="rounded-md border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+            <span className="mb-1 block text-sm font-semibold text-game-text">{link.title}</span>
+            <span className="line-clamp-2 text-xs leading-relaxed text-game-text-muted">{link.description}</span>
+          </Link>
+        ))}
+      </section>
 
       {typeOrder.map((type) => {
         const list = grouped[type];
