@@ -1,18 +1,8 @@
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
-import { genshinGuides, getGuideTitle as getGenshinGuideTitle, getGuideSummary as getGenshinGuideSummary, getGuideCategory as getGenshinGuideCategory, getGuideCategories as getGenshinGuideCategories, GENSHIN_GUIDE_CATEGORIES } from '@gachia/data/games/genshin/guides';
-import { starrailGuides, getGuideTitle as getStarRailGuideTitle, getGuideSummary as getStarRailGuideSummary, getGuideCategory as getStarRailGuideCategory, getGuideCategories as getStarRailGuideCategories, STARRAIL_GUIDE_CATEGORIES } from '@gachia/data/games/starrail/guides';
-import { guides as nteGuides, getGuideTitle as getNteGuideTitle, getGuideSummary as getNteGuideSummary, getGuideCategory as getNteGuideCategory, getGuideCategories as getNteGuideCategories, NTE_GUIDE_CATEGORIES } from '@gachia/data/games/nte/guides';
-import { wuwaGuides, getGuideTitle as getWuWaGuideTitle, getGuideSummary as getWuWaGuideSummary, getGuideCategory as getWuWaGuideCategory, getGuideCategories as getWuWaGuideCategories, WUWA_GUIDE_CATEGORIES } from '@gachia/data/games/wuwa/guides';
-import { zzzGuides, getZzzGuideTitle, getZzzGuideSummary, getZzzGuideCategory, getZzzGuideCategories, ZZZ_GUIDE_CATEGORIES } from '@gachia/data/games/zzz/guides';
-import { anantaGuides, getAnantaGuideTitle, getAnantaGuideSummary, getAnantaGuideCategory, getAnantaGuideCategories, ANANTA_GUIDE_CATEGORIES } from '@gachia/data/games/ananta/guides';
-import { guihuanGuides, getGuihuanGuideTitle, getGuihuanGuideSummary, getGuihuanGuideCategory, getGuihuanGuideCategories, GUIHUAN_GUIDE_CATEGORIES } from '@gachia/data/games/guihuan/guides';
-import { endfieldGuides, getEndfieldGuideTitle, getEndfieldGuideSummary, getEndfieldGuideCategory, getEndfieldGuideCategories, ENDFIELD_GUIDE_CATEGORIES } from '@gachia/data/games/endfield/guides';
-import { seaGuides, getSeaGuideTitle, getSeaGuideSummary, getSeaGuideCategory, getSeaGuideCategories, SEA_GUIDE_CATEGORIES } from '@gachia/data/games/sea/guides';
-import { skjhGuides, getSkjhGuideTitle, getSkjhGuideSummary, getSkjhGuideCategory, getSkjhGuideCategories, SKJH_GUIDE_CATEGORIES } from '@gachia/data/games/skjh/guides';
-import { starrailCharacters, getStarRailCharacterName, getStarRailCharacterImage } from '@gachia/data/games/starrail/characters';
-import { CharacterAvatar } from '@/components/wiki/character-avatar';
+import type { GuideListEntry } from '@/lib/game-data/guides';
+import { getGuideListData } from '@/lib/game-data/guides';
 import { buildLocalizedAlternates, ensureMetaLength, getEntryCurrentVersion, getEntryUpdatedAt } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
@@ -240,31 +230,31 @@ export default async function GuidesPage({
   if (!gameConfig) return null;
 
   if (gameId === 'wuwa') {
-    return <WuWaGuides locale={locale} />;
+    return await WuWaGuides({ locale, gameId });
   }
 
   if (gameId === 'zzz') {
-    return <ZzzGuides locale={locale} />;
+    return await ZzzGuides({ locale, gameId });
   }
 
   if (gameId === 'guihuan') {
-    return <GuihuanGuides locale={locale} />;
+    return await GuihuanGuides({ locale, gameId });
   }
 
   if (gameId === 'ananta') {
-    return <AnantaGuides locale={locale} />;
+    return await AnantaGuides({ locale, gameId });
   }
 
   if (gameId === 'endfield') {
-    return <EndfieldGuides locale={locale} />;
+    return await EndfieldGuides({ locale, gameId });
   }
 
   if (gameId === 'sea') {
-    return <SeaGuides locale={locale} />;
+    return await SeaGuides({ locale, gameId });
   }
 
   if (gameId === 'skjh') {
-    return <SkjhGuides locale={locale} />;
+    return await SkjhGuides({ locale, gameId });
   }
 
   // Unsupported games
@@ -284,19 +274,18 @@ export default async function GuidesPage({
   }
 
   if (gameId === 'starrail') {
-    return <StarRailGuides locale={locale} />;
+    return await StarRailGuides({ locale, gameId });
   }
 
-  return gameId === 'genshin' ? (
-    <GenshinGuides locale={locale} />
-  ) : (
-    <NteGuides locale={locale} gameId={gameId} />
-  );
+  if (gameId === 'genshin') {
+    return await GenshinGuides({ locale, gameId });
+  }
+
+  return await NteGuides({ locale, gameId });
 }
 
-function GenshinGuides({ locale }: { locale: SupportedLocale }) {
-  const guides = genshinGuides;
-  const categories = getGenshinGuideCategories();
+async function GenshinGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
+  const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES.genshin;
   const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.genshin);
 
@@ -332,15 +321,15 @@ function GenshinGuides({ locale }: { locale: SupportedLocale }) {
               >
                 <div className="mb-3 flex items-center justify-between gap-3">
                   <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                    {getGenshinGuideCategory(guide, locale)}
+                    {guide.categoryLabel}
                   </span>
                   <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
                 </div>
                 <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                  {getGenshinGuideTitle(guide, locale)}
+                  {guide.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-game-text-muted">
-                  {getGenshinGuideSummary(guide, locale)}
+                  {guide.summary}
                 </p>
                 <GuideFreshnessMeta guide={guide} locale={locale} />
               </Link>
@@ -359,7 +348,7 @@ function GenshinGuides({ locale }: { locale: SupportedLocale }) {
               href={`#category-${cat}`}
               className="rounded-full border border-game-border bg-game-surface px-3 py-1 text-sm transition-colors hover:border-game-primary hover:text-game-primary"
             >
-              {GENSHIN_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              {categoryLabels[cat] ?? cat}
               <span className="ml-1 text-game-text-muted">({count})</span>
             </a>
           );
@@ -372,7 +361,7 @@ function GenshinGuides({ locale }: { locale: SupportedLocale }) {
         return (
           <section key={cat} id={`category-${cat}`} className="mb-8">
             <h2 className="mb-4 text-lg font-semibold text-game-text">
-              {GENSHIN_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              {categoryLabels[cat] ?? cat}
             </h2>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {categoryGuides.map((guide) => (
@@ -382,15 +371,15 @@ function GenshinGuides({ locale }: { locale: SupportedLocale }) {
                   className="group flex flex-col rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
                 >
                   <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                    {getGenshinGuideTitle(guide, locale)}
+                    {guide.title}
                   </h3>
                   <p className="mb-3 flex-1 text-sm leading-relaxed text-game-text-muted">
-                    {getGenshinGuideSummary(guide, locale)}
+                    {guide.summary}
                   </p>
                   <GuideFreshnessMeta guide={guide} locale={locale} />
                   <div className="flex flex-wrap gap-1.5">
                     <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                      {getGenshinGuideCategory(guide, locale)}
+                      {guide.categoryLabel}
                     </span>
                     {guide.tags.slice(0, 3).map((tag) => (
                       <span
@@ -411,9 +400,8 @@ function GenshinGuides({ locale }: { locale: SupportedLocale }) {
   );
 }
 
-function StarRailGuides({ locale }: { locale: SupportedLocale }) {
-  const guides = starrailGuides;
-  const categories = getStarRailGuideCategories();
+async function StarRailGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
+  const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES.starrail;
   const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.starrail);
 
@@ -473,15 +461,15 @@ function StarRailGuides({ locale }: { locale: SupportedLocale }) {
               >
                 <div className="mb-3 flex items-center justify-between gap-3">
                   <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                    {getStarRailGuideCategory(guide, locale)}
+                    {guide.categoryLabel}
                   </span>
                   <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
                 </div>
                 <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                  {getStarRailGuideTitle(guide, locale)}
+                  {guide.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-game-text-muted">
-                  {getStarRailGuideSummary(guide, locale)}
+                  {guide.summary}
                 </p>
                 <GuideFreshnessMeta guide={guide} locale={locale} />
               </Link>
@@ -500,7 +488,7 @@ function StarRailGuides({ locale }: { locale: SupportedLocale }) {
               href={`#category-${cat}`}
               className="rounded-full border border-game-border bg-game-surface px-3 py-1 text-sm transition-colors hover:border-game-primary hover:text-game-primary"
             >
-              {STARRAIL_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              {categoryLabels[cat] ?? cat}
               <span className="ml-1 text-game-text-muted">({count})</span>
             </a>
           );
@@ -513,7 +501,7 @@ function StarRailGuides({ locale }: { locale: SupportedLocale }) {
         return (
           <section key={cat} id={`category-${cat}`} className="mb-8">
             <h2 className="mb-4 text-lg font-semibold text-game-text">
-              {STARRAIL_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              {categoryLabels[cat] ?? cat}
             </h2>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {categoryGuides.map((guide) => (
@@ -523,15 +511,15 @@ function StarRailGuides({ locale }: { locale: SupportedLocale }) {
                   className="group flex flex-col rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
                 >
                   <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                    {getStarRailGuideTitle(guide, locale)}
+                    {guide.title}
                   </h3>
                   <p className="mb-3 flex-1 text-sm leading-relaxed text-game-text-muted">
-                    {getStarRailGuideSummary(guide, locale)}
+                    {guide.summary}
                   </p>
                   <GuideFreshnessMeta guide={guide} locale={locale} />
                   <div className="flex flex-wrap gap-1.5">
                     <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                      {getStarRailGuideCategory(guide, locale)}
+                      {guide.categoryLabel}
                     </span>
                     {guide.tags.slice(0, 3).map((tag) => (
                       <span
@@ -552,9 +540,8 @@ function StarRailGuides({ locale }: { locale: SupportedLocale }) {
   );
 }
 
-function NteGuides({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
-  const guides = nteGuides;
-  const categories = getNteGuideCategories();
+async function NteGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
+  const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES.nte;
   const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.nte);
 
@@ -590,15 +577,15 @@ function NteGuides({ locale, gameId }: { locale: SupportedLocale; gameId: string
               >
                 <div className="mb-3 flex items-center justify-between gap-3">
                   <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                    {getNteGuideCategory(guide, locale)}
+                    {guide.categoryLabel}
                   </span>
                   <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
                 </div>
                 <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                  {getNteGuideTitle(guide, locale)}
+                  {guide.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-game-text-muted">
-                  {getNteGuideSummary(guide, locale)}
+                  {guide.summary}
                 </p>
               </Link>
             ))}
@@ -616,7 +603,7 @@ function NteGuides({ locale, gameId }: { locale: SupportedLocale; gameId: string
               href={`#category-${cat}`}
               className="rounded-full border border-game-border bg-game-surface px-3 py-1 text-sm transition-colors hover:border-game-primary hover:text-game-primary"
             >
-              {NTE_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              {categoryLabels[cat] ?? cat}
               <span className="ml-1 text-game-text-muted">({count})</span>
             </a>
           );
@@ -629,7 +616,7 @@ function NteGuides({ locale, gameId }: { locale: SupportedLocale; gameId: string
         return (
           <section key={cat} id={`category-${cat}`} className="mb-8">
             <h2 className="mb-4 text-lg font-semibold text-game-text">
-              {NTE_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              {categoryLabels[cat] ?? cat}
             </h2>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {categoryGuides.map((guide) => (
@@ -639,14 +626,14 @@ function NteGuides({ locale, gameId }: { locale: SupportedLocale; gameId: string
                   className="group flex flex-col rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
                 >
                   <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                    {getNteGuideTitle(guide, locale)}
+                    {guide.title}
                   </h3>
                   <p className="mb-3 flex-1 text-sm leading-relaxed text-game-text-muted">
-                    {getNteGuideSummary(guide, locale)}
+                    {guide.summary}
                   </p>
                   <div className="flex flex-wrap gap-1.5">
                     <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                      {getNteGuideCategory(guide, locale)}
+                      {guide.categoryLabel}
                     </span>
                     {guide.tags.slice(0, 3).map((tag) => (
                       <span
@@ -669,9 +656,8 @@ function NteGuides({ locale, gameId }: { locale: SupportedLocale; gameId: string
 
 // --- Wuthering Waves Guides ---
 
-function WuWaGuides({ locale }: { locale: SupportedLocale }) {
-  const guides = wuwaGuides;
-  const categories = getWuWaGuideCategories();
+async function WuWaGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
+  const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES.wuwa;
   const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.wuwa);
 
@@ -707,15 +693,15 @@ function WuWaGuides({ locale }: { locale: SupportedLocale }) {
               >
                 <div className="mb-3 flex items-center justify-between gap-3">
                   <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                    {getWuWaGuideCategory(guide, locale)}
+                    {guide.categoryLabel}
                   </span>
                   <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
                 </div>
                 <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                  {getWuWaGuideTitle(guide, locale)}
+                  {guide.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-game-text-muted">
-                  {getWuWaGuideSummary(guide, locale)}
+                  {guide.summary}
                 </p>
                 <GuideFreshnessMeta guide={guide} locale={locale} />
               </Link>
@@ -734,7 +720,7 @@ function WuWaGuides({ locale }: { locale: SupportedLocale }) {
               href={`#category-${cat}`}
               className="rounded-full border border-game-border bg-game-surface px-3 py-1 text-sm transition-colors hover:border-game-primary hover:text-game-primary"
             >
-              {WUWA_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              {categoryLabels[cat] ?? cat}
               <span className="ml-1 text-game-text-muted">({count})</span>
             </a>
           );
@@ -747,7 +733,7 @@ function WuWaGuides({ locale }: { locale: SupportedLocale }) {
         return (
           <section key={cat} id={`category-${cat}`} className="mb-8">
             <h2 className="mb-4 text-lg font-semibold text-game-text">
-              {WUWA_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              {categoryLabels[cat] ?? cat}
             </h2>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {categoryGuides.map((guide) => (
@@ -757,15 +743,15 @@ function WuWaGuides({ locale }: { locale: SupportedLocale }) {
                   className="group flex flex-col rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
                 >
                   <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                    {getWuWaGuideTitle(guide, locale)}
+                    {guide.title}
                   </h3>
                   <p className="mb-3 flex-1 text-sm leading-relaxed text-game-text-muted">
-                    {getWuWaGuideSummary(guide, locale)}
+                    {guide.summary}
                   </p>
                   <GuideFreshnessMeta guide={guide} locale={locale} />
                   <div className="flex flex-wrap gap-1.5">
                     <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                      {getWuWaGuideCategory(guide, locale)}
+                      {guide.categoryLabel}
                     </span>
                     {guide.tags.slice(0, 3).map((tag) => (
                       <span
@@ -788,9 +774,8 @@ function WuWaGuides({ locale }: { locale: SupportedLocale }) {
 
 // --- ZZZ Guides ---
 
-function ZzzGuides({ locale }: { locale: SupportedLocale }) {
-  const guides = zzzGuides;
-  const categories = getZzzGuideCategories();
+async function ZzzGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
+  const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES.zzz;
   const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.zzz);
 
@@ -826,15 +811,15 @@ function ZzzGuides({ locale }: { locale: SupportedLocale }) {
               >
                 <div className="mb-3 flex items-center justify-between gap-3">
                   <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                    {getZzzGuideCategory(guide, locale)}
+                    {guide.categoryLabel}
                   </span>
                   <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
                 </div>
                 <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                  {getZzzGuideTitle(guide, locale)}
+                  {guide.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-game-text-muted">
-                  {getZzzGuideSummary(guide, locale)}
+                  {guide.summary}
                 </p>
               </Link>
             ))}
@@ -852,7 +837,7 @@ function ZzzGuides({ locale }: { locale: SupportedLocale }) {
               href={`#category-${cat}`}
               className="rounded-full border border-game-border bg-game-surface px-3 py-1 text-sm transition-colors hover:border-game-primary hover:text-game-primary"
             >
-              {ZZZ_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              {categoryLabels[cat] ?? cat}
               <span className="ml-1 text-game-text-muted">({count})</span>
             </a>
           );
@@ -865,7 +850,7 @@ function ZzzGuides({ locale }: { locale: SupportedLocale }) {
         return (
           <section key={cat} id={`category-${cat}`} className="mb-8">
             <h2 className="mb-4 text-lg font-semibold text-game-text">
-              {ZZZ_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              {categoryLabels[cat] ?? cat}
             </h2>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {categoryGuides.map((guide) => (
@@ -875,14 +860,14 @@ function ZzzGuides({ locale }: { locale: SupportedLocale }) {
                   className="group flex flex-col rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
                 >
                   <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                    {getZzzGuideTitle(guide, locale)}
+                    {guide.title}
                   </h3>
                   <p className="mb-3 flex-1 text-sm leading-relaxed text-game-text-muted">
-                    {getZzzGuideSummary(guide, locale)}
+                    {guide.summary}
                   </p>
                   <div className="flex flex-wrap gap-1.5">
                     <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                      {getZzzGuideCategory(guide, locale)}
+                      {guide.categoryLabel}
                     </span>
                     {guide.tags.slice(0, 3).map((tag) => (
                       <span
@@ -905,9 +890,8 @@ function ZzzGuides({ locale }: { locale: SupportedLocale }) {
 
 // --- Guihuan Guides ---
 
-function GuihuanGuides({ locale }: { locale: SupportedLocale }) {
-  const guides = guihuanGuides;
-  const categories = getGuihuanGuideCategories();
+async function GuihuanGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
+  const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES.guihuan;
   const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.guihuan);
 
@@ -943,15 +927,15 @@ function GuihuanGuides({ locale }: { locale: SupportedLocale }) {
               >
                 <div className="mb-3 flex items-center justify-between gap-3">
                   <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                    {getGuihuanGuideCategory(guide, locale)}
+                    {guide.categoryLabel}
                   </span>
                   <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
                 </div>
                 <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                  {getGuihuanGuideTitle(guide, locale)}
+                  {guide.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-game-text-muted">
-                  {getGuihuanGuideSummary(guide, locale)}
+                  {guide.summary}
                 </p>
               </Link>
             ))}
@@ -968,7 +952,7 @@ function GuihuanGuides({ locale }: { locale: SupportedLocale }) {
               href={`#category-${cat}`}
               className="rounded-full border border-game-border bg-game-surface px-3 py-1 text-sm transition-colors hover:border-game-primary hover:text-game-primary"
             >
-              {GUIHUAN_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              {categoryLabels[cat] ?? cat}
               <span className="ml-1 text-game-text-muted">({count})</span>
             </a>
           );
@@ -980,7 +964,7 @@ function GuihuanGuides({ locale }: { locale: SupportedLocale }) {
         return (
           <section key={cat} id={`category-${cat}`} className="mb-8">
             <h2 className="mb-4 text-lg font-semibold text-game-text">
-              {GUIHUAN_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              {categoryLabels[cat] ?? cat}
             </h2>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {categoryGuides.map((guide) => (
@@ -990,14 +974,14 @@ function GuihuanGuides({ locale }: { locale: SupportedLocale }) {
                   className="group flex flex-col rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
                 >
                   <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                    {getGuihuanGuideTitle(guide, locale)}
+                    {guide.title}
                   </h3>
                   <p className="mb-3 flex-1 text-sm leading-relaxed text-game-text-muted">
-                    {getGuihuanGuideSummary(guide, locale)}
+                    {guide.summary}
                   </p>
                   <div className="flex flex-wrap gap-1.5">
                     <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                      {getGuihuanGuideCategory(guide, locale)}
+                      {guide.categoryLabel}
                     </span>
                     {guide.tags.slice(0, 3).map((tag) => (
                       <span
@@ -1020,9 +1004,8 @@ function GuihuanGuides({ locale }: { locale: SupportedLocale }) {
 
 // --- Ananta Guides ---
 
-function AnantaGuides({ locale }: { locale: SupportedLocale }) {
-  const guides = anantaGuides;
-  const categories = getAnantaGuideCategories();
+async function AnantaGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
+  const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES.ananta;
   const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.ananta);
 
@@ -1058,15 +1041,15 @@ function AnantaGuides({ locale }: { locale: SupportedLocale }) {
               >
                 <div className="mb-3 flex items-center justify-between gap-3">
                   <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                    {getAnantaGuideCategory(guide, locale)}
+                    {guide.categoryLabel}
                   </span>
                   <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
                 </div>
                 <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                  {getAnantaGuideTitle(guide, locale)}
+                  {guide.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-game-text-muted">
-                  {getAnantaGuideSummary(guide, locale)}
+                  {guide.summary}
                 </p>
               </Link>
             ))}
@@ -1083,7 +1066,7 @@ function AnantaGuides({ locale }: { locale: SupportedLocale }) {
               href={`#category-${cat}`}
               className="rounded-full border border-game-border bg-game-surface px-3 py-1 text-sm transition-colors hover:border-game-primary hover:text-game-primary"
             >
-              {ANANTA_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              {categoryLabels[cat] ?? cat}
               <span className="ml-1 text-game-text-muted">({count})</span>
             </a>
           );
@@ -1095,7 +1078,7 @@ function AnantaGuides({ locale }: { locale: SupportedLocale }) {
         return (
           <section key={cat} id={`category-${cat}`} className="mb-8">
             <h2 className="mb-4 text-lg font-semibold text-game-text">
-              {ANANTA_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              {categoryLabels[cat] ?? cat}
             </h2>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {categoryGuides.map((guide) => (
@@ -1105,14 +1088,14 @@ function AnantaGuides({ locale }: { locale: SupportedLocale }) {
                   className="group flex flex-col rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
                 >
                   <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                    {getAnantaGuideTitle(guide, locale)}
+                    {guide.title}
                   </h3>
                   <p className="mb-3 flex-1 text-sm leading-relaxed text-game-text-muted">
-                    {getAnantaGuideSummary(guide, locale)}
+                    {guide.summary}
                   </p>
                   <div className="flex flex-wrap gap-1.5">
                     <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                      {getAnantaGuideCategory(guide, locale)}
+                      {guide.categoryLabel}
                     </span>
                     {guide.tags.slice(0, 3).map((tag) => (
                       <span
@@ -1135,9 +1118,8 @@ function AnantaGuides({ locale }: { locale: SupportedLocale }) {
 
 // --- Endfield Guides ---
 
-function EndfieldGuides({ locale }: { locale: SupportedLocale }) {
-  const guides = endfieldGuides;
-  const categories = getEndfieldGuideCategories();
+async function EndfieldGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
+  const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES.endfield;
   const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.endfield);
 
@@ -1173,15 +1155,15 @@ function EndfieldGuides({ locale }: { locale: SupportedLocale }) {
               >
                 <div className="mb-3 flex items-center justify-between gap-3">
                   <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                    {getEndfieldGuideCategory(guide, locale)}
+                    {guide.categoryLabel}
                   </span>
                   <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
                 </div>
                 <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                  {getEndfieldGuideTitle(guide, locale)}
+                  {guide.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-game-text-muted">
-                  {getEndfieldGuideSummary(guide, locale)}
+                  {guide.summary}
                 </p>
               </Link>
             ))}
@@ -1198,7 +1180,7 @@ function EndfieldGuides({ locale }: { locale: SupportedLocale }) {
               href={`#category-${cat}`}
               className="rounded-full border border-game-border bg-game-surface px-3 py-1 text-sm transition-colors hover:border-game-primary hover:text-game-primary"
             >
-              {ENDFIELD_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              {categoryLabels[cat] ?? cat}
               <span className="ml-1 text-game-text-muted">({count})</span>
             </a>
           );
@@ -1210,7 +1192,7 @@ function EndfieldGuides({ locale }: { locale: SupportedLocale }) {
         return (
           <section key={cat} id={`category-${cat}`} className="mb-8">
             <h2 className="mb-4 text-lg font-semibold text-game-text">
-              {ENDFIELD_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              {categoryLabels[cat] ?? cat}
             </h2>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {categoryGuides.map((guide) => (
@@ -1220,14 +1202,14 @@ function EndfieldGuides({ locale }: { locale: SupportedLocale }) {
                   className="group flex flex-col rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
                 >
                   <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                    {getEndfieldGuideTitle(guide, locale)}
+                    {guide.title}
                   </h3>
                   <p className="mb-3 flex-1 text-sm leading-relaxed text-game-text-muted">
-                    {getEndfieldGuideSummary(guide, locale)}
+                    {guide.summary}
                   </p>
                   <div className="flex flex-wrap gap-1.5">
                     <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                      {getEndfieldGuideCategory(guide, locale)}
+                      {guide.categoryLabel}
                     </span>
                     {guide.tags.slice(0, 3).map((tag) => (
                       <span
@@ -1250,9 +1232,8 @@ function EndfieldGuides({ locale }: { locale: SupportedLocale }) {
 
 // --- Sea of Remnants Guides ---
 
-function SeaGuides({ locale }: { locale: SupportedLocale }) {
-  const guides = seaGuides;
-  const categories = getSeaGuideCategories();
+async function SeaGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
+  const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES.sea;
   const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.sea);
 
@@ -1324,15 +1305,15 @@ function SeaGuides({ locale }: { locale: SupportedLocale }) {
               >
                 <div className="mb-3 flex items-center justify-between gap-3">
                   <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                    {getSeaGuideCategory(guide, locale)}
+                    {guide.categoryLabel}
                   </span>
                   <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
                 </div>
                 <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                  {getSeaGuideTitle(guide, locale)}
+                  {guide.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-game-text-muted">
-                  {getSeaGuideSummary(guide, locale)}
+                  {guide.summary}
                 </p>
                 <GuideFreshnessMeta guide={guide} locale={locale} />
               </Link>
@@ -1350,7 +1331,7 @@ function SeaGuides({ locale }: { locale: SupportedLocale }) {
               href={`#category-${cat}`}
               className="rounded-full border border-game-border bg-game-surface px-3 py-1 text-sm transition-colors hover:border-game-primary hover:text-game-primary"
             >
-              {SEA_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              {categoryLabels[cat] ?? cat}
               <span className="ml-1 text-game-text-muted">({count})</span>
             </a>
           );
@@ -1362,7 +1343,7 @@ function SeaGuides({ locale }: { locale: SupportedLocale }) {
         return (
           <section key={cat} id={`category-${cat}`} className="mb-8">
             <h2 className="mb-4 text-lg font-semibold text-game-text">
-              {SEA_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              {categoryLabels[cat] ?? cat}
             </h2>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {categoryGuides.map((guide) => (
@@ -1372,15 +1353,15 @@ function SeaGuides({ locale }: { locale: SupportedLocale }) {
                   className="group flex flex-col rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
                 >
                   <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                    {getSeaGuideTitle(guide, locale)}
+                    {guide.title}
                   </h3>
                   <p className="mb-3 flex-1 text-sm leading-relaxed text-game-text-muted">
-                    {getSeaGuideSummary(guide, locale)}
+                    {guide.summary}
                   </p>
                   <GuideFreshnessMeta guide={guide} locale={locale} />
                   <div className="flex flex-wrap gap-1.5">
                     <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                      {getSeaGuideCategory(guide, locale)}
+                      {guide.categoryLabel}
                     </span>
                     {guide.tags.slice(0, 3).map((tag) => (
                       <span
@@ -1403,9 +1384,8 @@ function SeaGuides({ locale }: { locale: SupportedLocale }) {
 
 // --- Ashfall Evolution Guides ---
 
-function SkjhGuides({ locale }: { locale: SupportedLocale }) {
-  const guides = skjhGuides;
-  const categories = getSkjhGuideCategories();
+async function SkjhGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
+  const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES.skjh;
   const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.skjh);
 
@@ -1477,15 +1457,15 @@ function SkjhGuides({ locale }: { locale: SupportedLocale }) {
               >
                 <div className="mb-3 flex items-center justify-between gap-3">
                   <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                    {getSkjhGuideCategory(guide, locale)}
+                    {guide.categoryLabel}
                   </span>
                   <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
                 </div>
                 <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                  {getSkjhGuideTitle(guide, locale)}
+                  {guide.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-game-text-muted">
-                  {getSkjhGuideSummary(guide, locale)}
+                  {guide.summary}
                 </p>
                 <GuideFreshnessMeta guide={guide} locale={locale} />
               </Link>
@@ -1503,7 +1483,7 @@ function SkjhGuides({ locale }: { locale: SupportedLocale }) {
               href={`#category-${cat}`}
               className="rounded-full border border-game-border bg-game-surface px-3 py-1 text-sm transition-colors hover:border-game-primary hover:text-game-primary"
             >
-              {SKJH_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              {categoryLabels[cat] ?? cat}
               <span className="ml-1 text-game-text-muted">({count})</span>
             </a>
           );
@@ -1515,7 +1495,7 @@ function SkjhGuides({ locale }: { locale: SupportedLocale }) {
         return (
           <section key={cat} id={`category-${cat}`} className="mb-8">
             <h2 className="mb-4 text-lg font-semibold text-game-text">
-              {SKJH_GUIDE_CATEGORIES[cat]?.[locale] ?? cat}
+              {categoryLabels[cat] ?? cat}
             </h2>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {categoryGuides.map((guide) => (
@@ -1525,15 +1505,15 @@ function SkjhGuides({ locale }: { locale: SupportedLocale }) {
                   className="group flex flex-col rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
                 >
                   <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                    {getSkjhGuideTitle(guide, locale)}
+                    {guide.title}
                   </h3>
                   <p className="mb-3 flex-1 text-sm leading-relaxed text-game-text-muted">
-                    {getSkjhGuideSummary(guide, locale)}
+                    {guide.summary}
                   </p>
                   <GuideFreshnessMeta guide={guide} locale={locale} />
                   <div className="flex flex-wrap gap-1.5">
                     <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                      {getSkjhGuideCategory(guide, locale)}
+                      {guide.categoryLabel}
                     </span>
                     {guide.tags.slice(0, 3).map((tag) => (
                       <span
