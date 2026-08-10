@@ -1,31 +1,13 @@
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { Link } from '@/lib/i18n/navigation';
-import { IMAGE_BASE } from '@gachia/data/image-base';
-import { genshinCharacters, getGenshinCharacterName, getGenshinCharacterImage } from '@gachia/data/games/genshin/characters';
-import { genshinGuides, getGuideTitle as getGenshinGuideTitle, getGuideSummary as getGenshinGuideSummary } from '@gachia/data/games/genshin/guides';
-import { starrailCharacters, getStarRailCharacterName, getStarRailCharacterImage } from '@gachia/data/games/starrail/characters';
-import { starrailGuides, getGuideTitle as getStarRailGuideTitle, getGuideSummary as getStarRailGuideSummary } from '@gachia/data/games/starrail/guides';
-import { wuwaCharacters, getWuWaCharacterName, getWuWaCharacterImage } from '@gachia/data/games/wuwa/characters';
-import { wuwaGuides, getGuideTitle as getWuWaGuideTitle, getGuideSummary as getWuWaGuideSummary } from '@gachia/data/games/wuwa/guides';
-import { nteCharacters, getNteCharacterName, getNteCharacterImage } from '@gachia/data/games/nte/characters';
-import { guides as nteGuides, getGuideTitle as getNteGuideTitle, getGuideSummary as getNteGuideSummary } from '@gachia/data/games/nte/guides';
-import { zzzCharacters, getZzzCharacterName, getZzzCharacterImage } from '@gachia/data/games/zzz/characters';
-import { zzzGuides, getZzzGuideTitle, getZzzGuideSummary } from '@gachia/data/games/zzz/guides';
-import { guihuanCharacters, getGuihuanCharacterName, getGuihuanCharacterImage } from '@gachia/data/games/guihuan/characters';
-import { guihuanGuides, getGuihuanGuideTitle, getGuihuanGuideSummary } from '@gachia/data/games/guihuan/guides';
-import { anantaCharacters, getAnantaCharacterName, getAnantaCharacterImage } from '@gachia/data/games/ananta/characters';
-import { anantaGuides, getAnantaGuideTitle, getAnantaGuideSummary } from '@gachia/data/games/ananta/guides';
-import { endfieldCharacters, getEndfieldCharacterName, getEndfieldCharacterImage } from '@gachia/data/games/endfield/characters';
-import { endfieldGuides, getEndfieldGuideTitle, getEndfieldGuideSummary } from '@gachia/data/games/endfield/guides';
-import { seaCharacters, getSeaCharacterName, getSeaCharacterImage } from '@gachia/data/games/sea/characters';
-import { seaGuides, getSeaGuideTitle, getSeaGuideSummary } from '@gachia/data/games/sea/guides';
-import { skjhGuides, getSkjhGuideTitle, getSkjhGuideSummary } from '@gachia/data/games/skjh/guides';
 import Image from 'next/image';
+import { Link } from '@/lib/i18n/navigation';
+import { getCharacterSummariesByIds } from '@/lib/game-data/characters';
+import { getGuideListData } from '@/lib/game-data/guides';
+import { buildLocalizedAlternates } from '@/lib/seo-metadata';
 import zhMessages from '@/messages/zh.json';
 import enMessages from '@/messages/en.json';
 import jaMessages from '@/messages/ja.json';
-import { buildLocalizedAlternates } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
 const META_MIN_LENGTH = 150;
@@ -731,45 +713,9 @@ const ROUTE_ICONS: Record<string, string> = {
 // --- Helper: resolve character data ---
 interface CharInfo { id: string; name: string; image: string }
 
-function toAbs(path: string) {
-  return path.startsWith('http') ? path : `${IMAGE_BASE}${path}`;
-}
-
-function getCharInfos(gameId: string, locale: SupportedLocale): CharInfo[] {
-  const ids = FEATURED_CHARS[gameId];
-  if (!ids?.length) return [];
-
-  const results: CharInfo[] = [];
-  switch (gameId) {
-    case 'genshin':
-      for (const id of ids) { const c = genshinCharacters.find(x => x.id === id); if (c) results.push({ id: c.id, name: getGenshinCharacterName(c, locale), image: toAbs(getGenshinCharacterImage(c)) }); }
-      break;
-    case 'starrail':
-      for (const id of ids) { const c = starrailCharacters.find(x => x.id === id); if (c) results.push({ id: c.id, name: getStarRailCharacterName(c, locale), image: toAbs(getStarRailCharacterImage(c)) }); }
-      break;
-    case 'wuwa':
-      for (const id of ids) { const c = wuwaCharacters.find(x => x.id === id); if (c) results.push({ id: c.id, name: getWuWaCharacterName(c, locale), image: toAbs(getWuWaCharacterImage(c)) }); }
-      break;
-    case 'nte':
-      for (const id of ids) { const c = nteCharacters.find(x => x.id === id); if (c) results.push({ id: c.id, name: getNteCharacterName(c, locale), image: toAbs(getNteCharacterImage(c)) }); }
-      break;
-    case 'zzz':
-      for (const id of ids) { const c = zzzCharacters.find(x => x.id === id); if (c) results.push({ id: c.id, name: getZzzCharacterName(c, locale), image: toAbs(getZzzCharacterImage(c)) }); }
-      break;
-    case 'guihuan':
-      for (const id of ids) { const c = guihuanCharacters.find(x => x.id === id); if (c) results.push({ id: c.id, name: getGuihuanCharacterName(c, locale), image: toAbs(getGuihuanCharacterImage(c)) }); }
-      break;
-    case 'ananta':
-      for (const id of ids) { const c = anantaCharacters.find(x => x.id === id); if (c) results.push({ id: c.id, name: getAnantaCharacterName(c, locale), image: toAbs(getAnantaCharacterImage(c)) }); }
-      break;
-    case 'endfield':
-      for (const id of ids) { const c = endfieldCharacters.find(x => x.id === id); if (c) results.push({ id: c.id, name: getEndfieldCharacterName(c, locale), image: toAbs(getEndfieldCharacterImage(c)) }); }
-      break;
-    case 'sea':
-      for (const id of ids) { const c = seaCharacters.find(x => x.id === id); if (c) results.push({ id: c.id, name: getSeaCharacterName(c, locale), image: toAbs(getSeaCharacterImage(c)) }); }
-      break;
-  }
-  return results;
+async function getCharInfos(gameId: GameId, locale: SupportedLocale): Promise<CharInfo[]> {
+  const ids = FEATURED_CHARS[gameId] ?? [];
+  return getCharacterSummariesByIds(gameId, ids, locale);
 }
 
 // --- Helper: get guides for a game ---
@@ -788,51 +734,13 @@ const FEATURED_GUIDE_IDS: Record<string, string[]> = {
   skjh: ['official-pc-download-faq', 'first-2-hours-starter-route', 'base-location-anti-raid-plan'],
 };
 
-function getGuideInfos(gameId: string, locale: SupportedLocale): GuideInfo[] {
-  const featuredIds = FEATURED_GUIDE_IDS[gameId];
-  switch (gameId) {
-    case 'genshin':
-      return pickFeaturedGuides(genshinGuides, featuredIds ?? [], locale, getGenshinGuideTitle, getGenshinGuideSummary);
-    case 'starrail':
-      return pickFeaturedGuides(starrailGuides, featuredIds ?? [], locale, getStarRailGuideTitle, getStarRailGuideSummary);
-    case 'wuwa':
-      return pickFeaturedGuides(wuwaGuides, featuredIds ?? [], locale, getWuWaGuideTitle, getWuWaGuideSummary);
-    case 'nte':
-      return pickFeaturedGuides(nteGuides, featuredIds ?? [], locale, getNteGuideTitle, getNteGuideSummary);
-    case 'zzz':
-      return pickFeaturedGuides(zzzGuides, featuredIds ?? [], locale, getZzzGuideTitle, getZzzGuideSummary);
-    case 'guihuan':
-      return pickFeaturedGuides(guihuanGuides, featuredIds ?? [], locale, getGuihuanGuideTitle, getGuihuanGuideSummary);
-    case 'ananta':
-      return pickFeaturedGuides(anantaGuides, featuredIds ?? [], locale, getAnantaGuideTitle, getAnantaGuideSummary);
-    case 'endfield':
-      return pickFeaturedGuides(endfieldGuides, featuredIds ?? [], locale, getEndfieldGuideTitle, getEndfieldGuideSummary);
-    case 'sea':
-      return pickFeaturedGuides(seaGuides, featuredIds ?? [], locale, getSeaGuideTitle, getSeaGuideSummary);
-    case 'skjh':
-      return pickFeaturedGuides(skjhGuides, featuredIds ?? [], locale, getSkjhGuideTitle, getSkjhGuideSummary);
-    default:
-      return [];
-  }
-}
-
-function pickFeaturedGuides<T extends { id: string }>(
-  guides: T[],
-  featuredIds: string[],
-  locale: SupportedLocale,
-  getTitle: (guide: T, locale: SupportedLocale) => string,
-  getSummary: (guide: T, locale: SupportedLocale) => string,
-): GuideInfo[] {
-  const guideMap = new Map(guides.map((guide) => [guide.id, guide]));
-  const featured = featuredIds
-    .map((id) => guideMap.get(id))
-    .filter((guide): guide is T => Boolean(guide));
+async function getGuideInfos(gameId: GameId, locale: SupportedLocale): Promise<GuideInfo[]> {
+  const featuredIds = FEATURED_GUIDE_IDS[gameId] ?? [];
+  const { guides } = await getGuideListData(gameId, locale);
+  const guideMap = new Map(guides.map((guide) => [guide.id, guide] as const));
+  const featured = featuredIds.map((id) => guideMap.get(id)).filter((guide): guide is typeof guides[number] => Boolean(guide));
   const fallback = guides.filter((guide) => !featuredIds.includes(guide.id));
-  return [...featured, ...fallback].slice(0, 3).map((guide) => ({
-    id: guide.id,
-    title: getTitle(guide, locale),
-    summary: getSummary(guide, locale),
-  }));
+  return [...featured, ...fallback].slice(0, 3).map((guide) => ({ id: guide.id, title: guide.title, summary: guide.summary }));
 }
 
 function ensureMetaLength(value: string, locale: SupportedLocale, target = META_MIN_LENGTH) {
@@ -896,8 +804,10 @@ export default async function GameHome({
   const t = HOME_MSG[locale] ?? HOME_MSG['zh']!;
   const specialCopy = SPECIAL_HOME_COPY[gameId];
 
-  const chars = getCharInfos(gameId, locale);
-  const guides = getGuideInfos(gameId, locale);
+  const [chars, guides] = await Promise.all([
+    getCharInfos(gameId, locale),
+    getGuideInfos(gameId, locale),
+  ]);
 
   return (
     <div>
