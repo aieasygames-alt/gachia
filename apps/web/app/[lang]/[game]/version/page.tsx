@@ -5,16 +5,7 @@ import { Link } from '@/lib/i18n/navigation';
 import { NextStepStrip, type NextStepLink } from '@/components/wiki/next-step-strip';
 import { getVersionSnapshot, localizeVersionText } from '@/lib/version-snapshots';
 
-import { genshinGuides, getGuideTitle as getGenshinGuideTitle, getGuideSummary as getGenshinGuideSummary } from '@gachia/data/games/genshin/guides';
-import { starrailGuides, getGuideTitle as getStarRailGuideTitle, getGuideSummary as getStarRailGuideSummary } from '@gachia/data/games/starrail/guides';
-import { wuwaGuides, getGuideTitle as getWuWaGuideTitle, getGuideSummary as getWuWaGuideSummary } from '@gachia/data/games/wuwa/guides';
-import { guides as nteGuides, getGuideTitle as getNteGuideTitle, getGuideSummary as getNteGuideSummary } from '@gachia/data/games/nte/guides';
-import { zzzGuides, getZzzGuideTitle, getZzzGuideSummary } from '@gachia/data/games/zzz/guides';
-import { guihuanGuides, getGuihuanGuideTitle, getGuihuanGuideSummary } from '@gachia/data/games/guihuan/guides';
-import { anantaGuides, getAnantaGuideTitle, getAnantaGuideSummary } from '@gachia/data/games/ananta/guides';
-import { endfieldGuides, getEndfieldGuideTitle, getEndfieldGuideSummary } from '@gachia/data/games/endfield/guides';
-import { seaGuides, getSeaGuideTitle, getSeaGuideSummary } from '@gachia/data/games/sea/guides';
-import { skjhGuides, getSkjhGuideTitle, getSkjhGuideSummary } from '@gachia/data/games/skjh/guides';
+import { getGuideListData } from '@/lib/game-data/guides';
 import { buildLocalizedAlternates } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
@@ -1737,29 +1728,9 @@ function pickFeaturedGuides<T extends { id: string }>(guides: T[], featuredIds: 
   return featuredIds.map((id) => guideMap.get(id)).filter((guide): guide is T => Boolean(guide));
 }
 
-function getGuidesForGame(gameId: GameId) {
-  switch (gameId) {
-    case 'genshin':
-      return { guides: genshinGuides, title: getGenshinGuideTitle, summary: getGenshinGuideSummary };
-    case 'starrail':
-      return { guides: starrailGuides, title: getStarRailGuideTitle, summary: getStarRailGuideSummary };
-    case 'wuwa':
-      return { guides: wuwaGuides, title: getWuWaGuideTitle, summary: getWuWaGuideSummary };
-    case 'nte':
-      return { guides: nteGuides, title: getNteGuideTitle, summary: getNteGuideSummary };
-    case 'zzz':
-      return { guides: zzzGuides, title: getZzzGuideTitle, summary: getZzzGuideSummary };
-    case 'guihuan':
-      return { guides: guihuanGuides, title: getGuihuanGuideTitle, summary: getGuihuanGuideSummary };
-    case 'ananta':
-      return { guides: anantaGuides, title: getAnantaGuideTitle, summary: getAnantaGuideSummary };
-    case 'endfield':
-      return { guides: endfieldGuides, title: getEndfieldGuideTitle, summary: getEndfieldGuideSummary };
-    case 'sea':
-      return { guides: seaGuides, title: getSeaGuideTitle, summary: getSeaGuideSummary };
-    case 'skjh':
-      return { guides: skjhGuides, title: getSkjhGuideTitle, summary: getSkjhGuideSummary };
-  }
+async function getGuidesForGame(gameId: GameId, locale: SupportedLocale) {
+  const { guides } = await getGuideListData(gameId, locale);
+  return guides;
 }
 
 function getVersionNextSteps(gameId: GameId): NextStepLink[] {
@@ -2082,12 +2053,8 @@ export default async function VersionHubPage({
     notFound();
   }
   const pageTitle = `${gameConfig.name[locale]} ${hub.title[locale]}`;
-  const data = getGuidesForGame(gameId) as unknown as {
-    guides: Array<{ id: string }>;
-    title: (guide: { id: string }, locale: SupportedLocale) => string;
-    summary: (guide: { id: string }, locale: SupportedLocale) => string;
-  };
-  const featuredGuides = pickFeaturedGuides(data.guides, hub.guideIds);
+  const guides = await getGuidesForGame(gameId, locale);
+  const featuredGuides = pickFeaturedGuides(guides, hub.guideIds);
   const routeOrder: Array<keyof typeof gameConfig.routes> = [
     'guides',
     'tier-list',
@@ -2320,10 +2287,10 @@ export default async function VersionHubPage({
                 className="group flex flex-col rounded-xl border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
               >
                 <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                  {data.title(guide, locale)}
+                  {guide.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-game-text-muted">
-                  {data.summary(guide, locale)}
+                  {guide.summary}
                 </p>
               </Link>
             ))}
