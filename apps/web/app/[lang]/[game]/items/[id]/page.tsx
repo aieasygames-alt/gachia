@@ -1,38 +1,8 @@
 import { GAMES, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { notFound } from 'next/navigation';
-import {
-  genshinMaterials, getGenshinMaterialById, getGenshinMaterialName,
-} from '@gachia/data/games/genshin/items';
-import {
-  starrailMaterials, getStarRailMaterialById, getStarRailMaterialName,
-} from '@gachia/data/games/starrail/items';
-import {
-  wuwaMaterials, getWuWaMaterialById, getWuWaMaterialName,
-} from '@gachia/data/games/wuwa/items';
-import {
-  nteMaterials, getNteMaterialById, getNteMaterialName,
-} from '@gachia/data/games/nte/items';
-import {
-  zzzMaterials, getZzzMaterialById, getZzzMaterialName,
-} from '@gachia/data/games/zzz/items';
-import {
-  guihuanMaterials, getGuihuanMaterialById, getGuihuanMaterialName,
-} from '@gachia/data/games/guihuan/items';
-import {
-  anantaMaterials, getAnantaMaterialById, getAnantaMaterialName,
-} from '@gachia/data/games/ananta/items';
-import {
-  endfieldMaterials, getEndfieldMaterialById, getEndfieldMaterialName,
-} from '@gachia/data/games/endfield/items';
-import {
-  seaMaterials, getSeaMaterialById, getSeaMaterialName,
-} from '@gachia/data/games/sea/items';
-import {
-  skjhMaterials, getSkjhMaterialById, getSkjhMaterialName,
-} from '@gachia/data/games/skjh/items';
-import { getCharactersNeedingMaterial } from '@gachia/data/material-characters';
 import { Link } from '@/lib/i18n/navigation';
+import { getCharactersNeedingMaterial, getItemData, getItemsForStaticParams } from '@/lib/game-data/items';
 import { buildItemJsonLd } from '@/lib/jsonld';
 import { buildLocalizedAlternates } from '@/lib/seo-metadata';
 
@@ -275,18 +245,12 @@ const ITEM_META_OVERRIDES: Record<string, LocaleMeta> = {
 };
 
 export async function generateStaticParams() {
-  return LOCALES.flatMap((lang) => [
-    ...genshinMaterials.map((m) => ({ lang, game: 'genshin', id: m.id })),
-    ...starrailMaterials.map((m) => ({ lang, game: 'starrail', id: m.id })),
-    ...wuwaMaterials.map((m) => ({ lang, game: 'wuwa', id: m.id })),
-    ...nteMaterials.map((m) => ({ lang, game: 'nte', id: m.id })),
-    ...zzzMaterials.map((m) => ({ lang, game: 'zzz', id: m.id })),
-    ...guihuanMaterials.map((m) => ({ lang, game: 'guihuan', id: m.id })),
-    ...anantaMaterials.map((m) => ({ lang, game: 'ananta', id: m.id })),
-    ...endfieldMaterials.map((m) => ({ lang, game: 'endfield', id: m.id })),
-    ...seaMaterials.map((m) => ({ lang, game: 'sea', id: m.id })),
-    ...skjhMaterials.map((m) => ({ lang, game: 'skjh', id: m.id })),
-  ]);
+  const gameIds = Object.keys(GAMES) as GameId[];
+  const params = await Promise.all(gameIds.map(async (gameId) => {
+    const items = await getItemsForStaticParams(gameId);
+    return LOCALES.flatMap((lang) => items.map((item) => ({ lang, game: gameId, id: item.id })));
+  }));
+  return params.flat();
 }
 
 export async function generateMetadata({
@@ -299,60 +263,10 @@ export async function generateMetadata({
   const gameId = game as GameId;
   const gameName = GAMES[gameId]?.name[locale] ?? '';
 
-  let name = '';
-  let description = '';
-
-  if (gameId === 'genshin') {
-    const m = getGenshinMaterialById(id);
-    if (!m) return {};
-    name = getGenshinMaterialName(m, locale);
-    description = (locale === 'en' ? m.sourceEn : m.source).slice(0, 160);
-  } else if (gameId === 'starrail') {
-    const m = getStarRailMaterialById(id);
-    if (!m) return {};
-    name = getStarRailMaterialName(m, locale);
-    description = (locale === 'en' ? m.sourceEn : m.source).slice(0, 160);
-  } else if (gameId === 'wuwa') {
-    const m = getWuWaMaterialById(id);
-    if (!m) return {};
-    name = getWuWaMaterialName(m, locale);
-    description = (locale === 'en' ? m.sourceEn : m.source).slice(0, 160);
-  } else if (gameId === 'nte') {
-    const m = getNteMaterialById(id);
-    if (!m) return {};
-    name = getNteMaterialName(m, locale);
-    description = m.source.slice(0, 160);
-  } else if (gameId === 'zzz') {
-    const m = getZzzMaterialById(id);
-    if (!m) return {};
-    name = getZzzMaterialName(m, locale);
-    description = m.source.slice(0, 160);
-  } else if (gameId === 'guihuan') {
-    const m = getGuihuanMaterialById(id);
-    if (!m) return {};
-    name = getGuihuanMaterialName(m, locale);
-    description = (locale === 'en' ? m.sourceEn : m.source).slice(0, 160);
-  } else if (gameId === 'ananta') {
-    const m = getAnantaMaterialById(id);
-    if (!m) return {};
-    name = getAnantaMaterialName(m, locale);
-    description = (locale === 'en' ? m.sourceEn : m.source).slice(0, 160);
-  } else if (gameId === 'endfield') {
-    const m = getEndfieldMaterialById(id);
-    if (!m) return {};
-    name = getEndfieldMaterialName(m, locale);
-    description = (locale === 'en' ? m.sourceEn : m.source).slice(0, 160);
-  } else if (gameId === 'sea') {
-    const m = getSeaMaterialById(id);
-    if (!m) return {};
-    name = getSeaMaterialName(m, locale);
-    description = (locale === 'en' ? m.sourceEn : m.source).slice(0, 160);
-  } else if (gameId === 'skjh') {
-    const m = getSkjhMaterialById(id);
-    if (!m) return {};
-    name = getSkjhMaterialName(m, locale);
-    description = (locale === 'en' ? m.sourceEn : locale === 'ja' ? (m.sourceJa ?? m.sourceEn) : m.source).slice(0, 160);
-  }
+  const data = await getItemData(gameId, id, locale);
+  if (!data) return {};
+  const name = data.name;
+  const description = data.source.slice(0, 160);
 
   const override = ITEM_META_OVERRIDES[`${gameId}/${id}`]?.[locale];
   const alternates = buildLocalizedAlternates(locale, (l) => `/${l}/${gameId}/items/${id}`, LOCALES);
@@ -399,74 +313,6 @@ export async function generateMetadata({
       locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
     },
   };
-}
-
-interface ItemData {
-  name: string;
-  nameAlt: string;
-  rarity: number;
-  type: string;
-  source: string;
-}
-
-function getItemData(gameId: GameId, id: string, locale: SupportedLocale): ItemData | null {
-  if (gameId === 'genshin') {
-    const m = getGenshinMaterialById(id);
-    if (!m) return null;
-    return { name: getGenshinMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name, rarity: m.rarity, type: m.type, source: locale === 'en' ? m.sourceEn : m.source };
-  }
-  if (gameId === 'starrail') {
-    const m = getStarRailMaterialById(id);
-    if (!m) return null;
-    return { name: getStarRailMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name, rarity: m.rarity, type: m.type, source: locale === 'en' ? m.sourceEn : m.source };
-  }
-  if (gameId === 'wuwa') {
-    const m = getWuWaMaterialById(id);
-    if (!m) return null;
-    return { name: getWuWaMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name, rarity: m.rarity, type: m.type, source: locale === 'en' ? m.sourceEn : m.source };
-  }
-  if (gameId === 'nte') {
-    const m = getNteMaterialById(id);
-    if (!m) return null;
-    return { name: getNteMaterialName(m, locale), nameAlt: locale === 'zh' ? (m.nameEn ?? '') : (m.name ?? ''), rarity: m.rarity, type: m.type, source: m.source };
-  }
-  if (gameId === 'zzz') {
-    const m = getZzzMaterialById(id);
-    if (!m) return null;
-    return { name: getZzzMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name, rarity: m.rarity, type: m.type, source: m.source };
-  }
-  if (gameId === 'guihuan') {
-    const m = getGuihuanMaterialById(id);
-    if (!m) return null;
-    return { name: getGuihuanMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name, rarity: m.rarity, type: m.type, source: locale === 'en' ? m.sourceEn : m.source };
-  }
-  if (gameId === 'ananta') {
-    const m = getAnantaMaterialById(id);
-    if (!m) return null;
-    return { name: getAnantaMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name, rarity: m.rarity, type: m.type, source: locale === 'en' ? m.sourceEn : m.source };
-  }
-  if (gameId === 'endfield') {
-    const m = getEndfieldMaterialById(id);
-    if (!m) return null;
-    return { name: getEndfieldMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name, rarity: m.rarity, type: m.type, source: locale === 'en' ? m.sourceEn : m.source };
-  }
-  if (gameId === 'sea') {
-    const m = getSeaMaterialById(id);
-    if (!m) return null;
-    return { name: getSeaMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name, rarity: m.rarity, type: m.type, source: locale === 'en' ? m.sourceEn : m.source };
-  }
-  if (gameId === 'skjh') {
-    const m = getSkjhMaterialById(id);
-    if (!m) return null;
-    return {
-      name: getSkjhMaterialName(m, locale),
-      nameAlt: locale === 'zh' ? m.nameEn : m.name,
-      rarity: m.rarity,
-      type: m.type,
-      source: locale === 'en' ? m.sourceEn : locale === 'ja' ? (m.sourceJa ?? m.sourceEn) : m.source,
-    };
-  }
-  return null;
 }
 
 function buildItemFaqs(name: string, gameName: string, typeLabel: string, source: string, charCount: number, locale: SupportedLocale) {
@@ -516,14 +362,24 @@ export default async function ItemDetailPage({
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
   const gameConfig = GAMES[gameId];
-  const skjhExtra = gameId === 'skjh' ? getSkjhMaterialById(id) : undefined;
 
-  const data = getItemData(gameId, id, locale);
+  const data = await getItemData(gameId, id, locale);
   if (!data) notFound();
+  const skjhExtra = gameId === 'skjh' ? data.raw as {
+    stackLimit?: number;
+    acquisition?: string[];
+    acquisitionEn?: string[];
+    uses?: string[];
+    usesEn?: string[];
+    conversions?: string[];
+    conversionsEn?: string[];
+    notes?: string;
+    notesEn?: string;
+  } : undefined;
 
   const typeLabel = TYPE_LABELS[data.type]?.[locale] ?? data.type;
   const gameName = gameConfig.name[locale];
-  const relatedChars = getCharactersNeedingMaterial(gameId, id);
+  const relatedChars = await getCharactersNeedingMaterial(gameId, id);
 
   // Generate descriptive text for SEO
   const descText = buildItemMetaDescription(data.name, gameName, typeLabel, data.source, relatedChars.length, locale);

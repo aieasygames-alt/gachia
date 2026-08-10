@@ -1,16 +1,7 @@
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { genshinMaterials, getGenshinMaterialName } from '@gachia/data/games/genshin/items';
-import { starrailMaterials, getStarRailMaterialName } from '@gachia/data/games/starrail/items';
-import { wuwaMaterials, getWuWaMaterialName } from '@gachia/data/games/wuwa/items';
-import { nteMaterials, getNteMaterialName } from '@gachia/data/games/nte/items';
-import { zzzMaterials, getZzzMaterialName } from '@gachia/data/games/zzz/items';
-import { anantaMaterials, getAnantaMaterialName } from '@gachia/data/games/ananta/items';
-import { guihuanMaterials, getGuihuanMaterialName } from '@gachia/data/games/guihuan/items';
-import { endfieldMaterials, getEndfieldMaterialName } from '@gachia/data/games/endfield/items';
-import { seaMaterials, getSeaMaterialName } from '@gachia/data/games/sea/items';
-import { skjhMaterials, getSkjhMaterialName } from '@gachia/data/games/skjh/items';
-import { gearSets, getGearSetName, getGearSetEffect } from '@gachia/data/games/endfield/gear-sets';
+import type { GearSetListEntry, ItemListEntry } from '@/lib/game-data/items';
+import { getEndfieldGearSetListData, getItemListData } from '@/lib/game-data/items';
 import { Link } from '@/lib/i18n/navigation';
 import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
 
@@ -197,43 +188,53 @@ export default async function ItemsPage({
   };
 
   if (gameId === 'genshin') {
-    return <><GenshinItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    const content = await GenshinItemsPage({ locale, gameId });
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'starrail') {
-    return <><StarRailItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    const content = await StarRailItemsPage({ locale, gameId });
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'nte') {
-    return <><NteItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    const content = await NteItemsPage({ locale, gameId });
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'wuwa') {
-    return <><WuWaItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    const content = await WuWaItemsPage({ locale, gameId });
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'zzz') {
-    return <><ZzzItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    const content = await ZzzItemsPage({ locale, gameId });
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'ananta') {
-    return <><AnantaItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    const content = await AnantaItemsPage({ locale, gameId });
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'guihuan') {
-    return <><GuihuanItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    const content = await GuihuanItemsPage({ locale, gameId });
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'endfield') {
-    return <><EndfieldItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    const content = await EndfieldItemsPage({ locale, gameId });
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'sea') {
-    return <><SeaItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    const content = await SeaItemsPage({ locale, gameId });
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   if (gameId === 'skjh') {
-    return <><SkjhItemsPage locale={locale} gameId={gameId} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    const content = await SkjhItemsPage({ locale, gameId });
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
   return (
@@ -250,8 +251,8 @@ export default async function ItemsPage({
 
 // --- Genshin Items ---
 
-function GenshinItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
-  const materials = genshinMaterials;
+async function GenshinItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
+  const materials = await getItemListData(gameId as GameId, locale);
   const grouped = groupByType(materials);
   const typeOrder = ['character-ascension', 'talent-book', 'boss-drop', 'weekly-boss', 'local-specialty', 'common-drop', 'exp-material', 'currency'];
 
@@ -278,13 +279,13 @@ function GenshinItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId:
               {list.map((mat) => (
                 <Link key={mat.id} href={`/${gameId}/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
-                    <h3 className="text-sm font-semibold text-game-text">{getGenshinMaterialName(mat, locale)}</h3>
+                    <h3 className="text-sm font-semibold text-game-text">{mat.name}</h3>
                   </div>
                   <div className="mb-1 flex items-center gap-2">
                     <span className="text-xs text-game-text-muted">{typeLabel}</span>
                     <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
                   </div>
-                  <p className="text-xs text-game-text-muted line-clamp-2">{locale === 'zh' ? mat.source : mat.sourceEn}</p>
+                  <p className="text-xs text-game-text-muted line-clamp-2">{mat.source}</p>
                 </Link>
               ))}
             </div>
@@ -306,8 +307,8 @@ const STARRAIL_TYPE_LABELS: Record<string, Record<string, string>> = {
   'exp-material': { zh: '经验材料', en: 'EXP Material', ja: '経験値素材' },
 };
 
-function StarRailItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
-  const materials = starrailMaterials;
+async function StarRailItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
+  const materials = await getItemListData(gameId as GameId, locale);
   const grouped = groupByType(materials);
   const typeOrder = ['character-ascension', 'trace', 'boss', 'common', 'exp-material', 'currency'];
 
@@ -334,13 +335,13 @@ function StarRailItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId
               {list.map((mat) => (
                 <Link key={mat.id} href={`/${gameId}/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
-                    <h3 className="text-sm font-semibold text-game-text">{getStarRailMaterialName(mat, locale)}</h3>
+                    <h3 className="text-sm font-semibold text-game-text">{mat.name}</h3>
                   </div>
                   <div className="mb-1 flex items-center gap-2">
                     <span className="text-xs text-game-text-muted">{typeLabel}</span>
                     <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
                   </div>
-                  <p className="text-xs text-game-text-muted line-clamp-2">{locale === 'zh' ? mat.source : mat.sourceEn}</p>
+                  <p className="text-xs text-game-text-muted line-clamp-2">{mat.source}</p>
                 </Link>
               ))}
             </div>
@@ -353,8 +354,8 @@ function StarRailItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId
 
 // --- NTE Items ---
 
-function NteItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
-  const materials = nteMaterials;
+async function NteItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
+  const materials = await getItemListData(gameId as GameId, locale);
   const grouped = groupByType(materials);
   const typeOrder = ['guide', 'arc-exp', 'module-exp', 'ascension', 'boss', 'manual', 'permit', 'currency'];
 
@@ -381,7 +382,7 @@ function NteItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: str
               {list.map((mat) => (
                 <Link key={mat.id} href={`/${gameId}/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
-                    <h3 className="text-sm font-semibold text-game-text">{getNteMaterialName(mat, locale)}</h3>
+                    <h3 className="text-sm font-semibold text-game-text">{mat.name}</h3>
                   </div>
                   <div className="mb-1 flex items-center gap-2">
                     <span className="text-xs text-game-text-muted">{typeLabel}</span>
@@ -409,8 +410,8 @@ const WUWA_TYPE_LABELS: Record<string, Record<string, string>> = {
   currency: { zh: '货币', en: 'Currency', ja: '通貨' },
 };
 
-function WuWaItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
-  const materials = wuwaMaterials;
+async function WuWaItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
+  const materials = await getItemListData(gameId as GameId, locale);
   const grouped = groupByType(materials);
   const typeOrder = ['common-drop', 'skill-material', 'boss-material', 'weekly-boss', 'local-specialty', 'currency'];
 
@@ -437,13 +438,13 @@ function WuWaItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: st
               {list.map((mat) => (
                 <Link key={mat.id} href={`/${gameId}/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
-                    <h3 className="text-sm font-semibold text-game-text">{getWuWaMaterialName(mat, locale)}</h3>
+                    <h3 className="text-sm font-semibold text-game-text">{mat.name}</h3>
                   </div>
                   <div className="mb-1 flex items-center gap-2">
                     <span className="text-xs text-game-text-muted">{typeLabel}</span>
                     <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
                   </div>
-                  <p className="text-xs text-game-text-muted line-clamp-2">{locale === 'zh' ? mat.source : mat.sourceEn}</p>
+                  <p className="text-xs text-game-text-muted line-clamp-2">{mat.source}</p>
                 </Link>
               ))}
             </div>
@@ -471,8 +472,8 @@ const ZZZ_TYPE_LABELS: Record<string, Record<string, string>> = {
   '抽卡道具': { zh: '抽卡道具', en: 'Gacha Item', ja: 'ガチャアイテム' },
 };
 
-function ZzzItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
-  const materials = zzzMaterials;
+async function ZzzItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
+  const materials = await getItemListData(gameId as GameId, locale);
   const grouped = groupByType(materials);
   const typeOrder = ['突破材料', '技能材料', '特殊材料', '通用货币', '抽卡道具'];
   const links = [
@@ -528,7 +529,7 @@ function ZzzItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: str
               {list.map((mat) => (
                 <Link key={mat.id} href={`/${gameId}/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
-                    <h3 className="text-sm font-semibold text-game-text">{getZzzMaterialName(mat, locale)}</h3>
+                    <h3 className="text-sm font-semibold text-game-text">{mat.name}</h3>
                   </div>
                   <div className="mb-1 flex items-center gap-2">
                     <span className="text-xs text-game-text-muted">{typeLabel}</span>
@@ -558,8 +559,8 @@ const ANANTA_TYPE_LABELS: Record<string, Record<string, string>> = {
   currency: { zh: '货币', en: 'Currency', ja: '通貨' },
 };
 
-function AnantaItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
-  const materials = anantaMaterials;
+async function AnantaItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
+  const materials = await getItemListData(gameId as GameId, locale);
   const grouped = groupByType(materials);
   const typeOrder = ['guide', 'chaos-exp', 'ascension', 'boss-material', 'skill-material', 'local-specialty', 'permit', 'currency'];
 
@@ -586,13 +587,13 @@ function AnantaItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: 
               {list.map((mat) => (
                 <Link key={mat.id} href={`/${gameId}/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
-                    <h3 className="text-sm font-semibold text-game-text">{getAnantaMaterialName(mat, locale)}</h3>
+                    <h3 className="text-sm font-semibold text-game-text">{mat.name}</h3>
                   </div>
                   <div className="mb-1 flex items-center gap-2">
                     <span className="text-xs text-game-text-muted">{typeLabel}</span>
                     <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
                   </div>
-                  <p className="text-xs text-game-text-muted line-clamp-2">{locale === 'zh' ? mat.source : mat.sourceEn}</p>
+                  <p className="text-xs text-game-text-muted line-clamp-2">{mat.source}</p>
                 </Link>
               ))}
             </div>
@@ -619,8 +620,8 @@ const GUIHUAN_TYPE_LABELS: Record<string, Record<string, string>> = {
   permit: { zh: '许可', en: 'Permit', ja: '許可証' },
 };
 
-function GuihuanItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
-  const materials = guihuanMaterials;
+async function GuihuanItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
+  const materials = await getItemListData(gameId as GameId, locale);
   const grouped = groupByType(materials);
   const typeOrder = ['guide', 'spirit-exp', 'weapon-exp', 'ascension', 'element-ascension', 'rare', 'boss', 'skill', 'local-specialty', 'currency', 'permit'];
 
@@ -647,13 +648,13 @@ function GuihuanItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId:
               {list.map((mat) => (
                 <Link key={mat.id} href={`/${gameId}/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
-                    <h3 className="text-sm font-semibold text-game-text">{getGuihuanMaterialName(mat, locale)}</h3>
+                    <h3 className="text-sm font-semibold text-game-text">{mat.name}</h3>
                   </div>
                   <div className="mb-1 flex items-center gap-2">
                     <span className="text-xs text-game-text-muted">{typeLabel}</span>
                     <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
                   </div>
-                  <p className="text-xs text-game-text-muted line-clamp-2">{locale === 'zh' ? mat.source : mat.sourceEn}</p>
+                  <p className="text-xs text-game-text-muted line-clamp-2">{mat.source}</p>
                 </Link>
               ))}
             </div>
@@ -675,8 +676,9 @@ const ENDFIELD_TYPE_LABELS: Record<string, Record<string, string>> = {
   gacha: { zh: '抽卡道具', en: 'Gacha Item', ja: 'ガチャアイテム' },
 };
 
-function EndfieldItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
-  const materials = endfieldMaterials;
+async function EndfieldItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
+  const materials = await getItemListData(gameId as GameId, locale);
+  const gearSets = await getEndfieldGearSetListData(locale);
   const grouped = groupByType(materials);
   const typeOrder = ['ascension', 'skill', 'weapon', 'exp', 'currency', 'gacha'];
 
@@ -705,13 +707,13 @@ function EndfieldItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId
               {list.map((mat) => (
                 <div key={mat.id} className="block rounded-lg border border-game-border bg-game-surface p-3">
                   <div className="mb-1 flex items-center gap-2">
-                    <h3 className="text-sm font-semibold text-game-text">{getEndfieldMaterialName(mat, locale)}</h3>
+                    <h3 className="text-sm font-semibold text-game-text">{mat.name}</h3>
                   </div>
                   <div className="mb-1 flex items-center gap-2">
                     <span className="text-xs text-game-text-muted">{typeLabel}</span>
                     <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
                   </div>
-                  <p className="text-xs text-game-text-muted line-clamp-2">{locale === 'zh' ? mat.source : mat.sourceEn}</p>
+                  <p className="text-xs text-game-text-muted line-clamp-2">{mat.source}</p>
                 </div>
               ))}
             </div>
@@ -728,14 +730,14 @@ function EndfieldItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId
           {gearSets.map((set) => (
             <div key={set.id} className="rounded-lg border border-game-border bg-game-surface p-4">
               <div className="mb-2 flex items-center justify-between">
-                <h3 className="text-sm font-bold text-game-text">{getGearSetName(set, locale)}</h3>
+                <h3 className="text-sm font-bold text-game-text">{set.name}</h3>
                 <span className="text-xs font-bold" style={{ color: TIER_COLORS[set.tierRank] || '#888' }}>{set.tierRank}</span>
               </div>
               <div className="mb-2 flex items-center gap-2">
                 <span className="rounded bg-game-surface-alt px-2 py-0.5 text-[11px] text-game-text-muted">{set.mainStat}</span>
                 <span className="text-xs" style={{ color: RARITY_COLORS[set.rarity] || '#888' }}>{'★'.repeat(set.rarity)}</span>
               </div>
-              <p className="text-xs leading-relaxed text-game-text-muted">{getGearSetEffect(set, locale)}</p>
+              <p className="text-xs leading-relaxed text-game-text-muted">{set.effect}</p>
               {set.recommendedFor.length > 0 && (
                 <div className="mt-2 flex flex-wrap gap-1">
                   {set.recommendedFor.map((cls) => (
@@ -776,8 +778,8 @@ const SKJH_TYPE_LABELS: Record<string, Record<string, string>> = {
   reward: { zh: '福利奖励', en: 'Reward', ja: '報酬' },
 };
 
-function SkjhItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
-  const materials = skjhMaterials;
+async function SkjhItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
+  const materials = await getItemListData(gameId as GameId, locale);
   const grouped = groupByType(materials);
   const typeOrder = ['resource', 'component', 'ammo', 'fuel', 'medical', 'base', 'equipment', 'gene', 'reward'];
 
@@ -804,13 +806,13 @@ function SkjhItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: st
               {list.map((mat) => (
                 <Link key={mat.id} href={`/${gameId}/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
-                    <h3 className="text-sm font-semibold text-game-text">{getSkjhMaterialName(mat, locale)}</h3>
+                    <h3 className="text-sm font-semibold text-game-text">{mat.name}</h3>
                   </div>
                   <div className="mb-1 flex items-center gap-2">
                     <span className="text-xs text-game-text-muted">{typeLabel}</span>
                     <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
                   </div>
-                  <p className="text-xs text-game-text-muted line-clamp-2">{locale === 'zh' ? mat.source : locale === 'ja' ? (mat.sourceJa ?? mat.sourceEn) : mat.sourceEn}</p>
+                  <p className="text-xs text-game-text-muted line-clamp-2">{mat.source}</p>
                 </Link>
               ))}
             </div>
@@ -821,8 +823,8 @@ function SkjhItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: st
   );
 }
 
-function SeaItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
-  const materials = seaMaterials;
+async function SeaItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
+  const materials = await getItemListData(gameId as GameId, locale);
   const grouped = groupByType(materials);
   const typeOrder = ['currency', 'character-ascension', 'ship-upgrade', 'craft', 'consumable', 'fragment'];
 
@@ -849,13 +851,13 @@ function SeaItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: str
               {list.map((mat) => (
                 <Link key={mat.id} href={`/${gameId}/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
-                    <h3 className="text-sm font-semibold text-game-text">{getSeaMaterialName(mat, locale)}</h3>
+                    <h3 className="text-sm font-semibold text-game-text">{mat.name}</h3>
                   </div>
                   <div className="mb-1 flex items-center gap-2">
                     <span className="text-xs text-game-text-muted">{typeLabel}</span>
                     <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
                   </div>
-                  <p className="text-xs text-game-text-muted line-clamp-2">{locale === 'zh' ? mat.source : mat.sourceEn}</p>
+                  <p className="text-xs text-game-text-muted line-clamp-2">{mat.source}</p>
                 </Link>
               ))}
             </div>

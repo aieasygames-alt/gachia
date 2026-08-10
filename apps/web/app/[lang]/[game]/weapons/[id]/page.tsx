@@ -29,6 +29,7 @@ import {
   skjhWeapons, getSkjhWeaponById, getSkjhWeaponName, getSkjhWeaponEffect, getSkjhWeaponSource,
 } from '@gachia/data/games/skjh/weapons';
 import { Link } from '@/lib/i18n/navigation';
+import { getWeaponMetaData, getWeaponsForStaticParams } from '@/lib/game-data/weapons';
 import { buildWeaponJsonLd } from '@/lib/jsonld';
 import { buildLocalizedAlternates } from '@/lib/seo-metadata';
 
@@ -239,17 +240,12 @@ const WEAPON_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
 };
 
 export async function generateStaticParams() {
-  return LOCALES.flatMap((lang) => [
-    ...genshinWeapons.map((w) => ({ lang, game: 'genshin', id: w.id })),
-    ...starrailLightCones.map((w) => ({ lang, game: 'starrail', id: w.id })),
-    ...wuwaWeapons.map((w) => ({ lang, game: 'wuwa', id: w.id })),
-    ...nteWeapons.map((w) => ({ lang, game: 'nte', id: w.id })),
-    ...zzzWeapons.map((w) => ({ lang, game: 'zzz', id: w.id })),
-    ...guihuanWeapons.map((w) => ({ lang, game: 'guihuan', id: w.id })),
-    ...anantaWeapons.map((w) => ({ lang, game: 'ananta', id: w.id })),
-    ...endfieldWeapons.map((w) => ({ lang, game: 'endfield', id: w.id })),
-    ...skjhWeapons.map((w) => ({ lang, game: 'skjh', id: w.id })),
-  ]);
+  const gameIds = Object.keys(GAMES) as GameId[];
+  const params = await Promise.all(gameIds.map(async (gameId) => {
+    const weapons = await getWeaponsForStaticParams(gameId);
+    return LOCALES.flatMap((lang) => weapons.map((weapon) => ({ lang, game: gameId, id: weapon.id })));
+  }));
+  return params.flat();
 }
 
 const BASE_URL = 'https://gachia.com';
