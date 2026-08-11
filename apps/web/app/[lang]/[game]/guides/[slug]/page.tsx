@@ -129,6 +129,32 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> 
       },
     },
   },
+  sea: {
+    'open-beta-version-center': {
+      heading: { zh: '快速结论：查官网、公测和移动端先从这里分流', en: 'Quick answer: route official, beta, and mobile searches here first', ja: '要点：公式、β、モバイル検索をここで分流' },
+      points: {
+        zh: ['想找下载入口，直接去下载主入口，不在版本页里绕。', '想确认 PC 公测、移动端、gamescom demo 和首月内容，用本页做总览。', '主机、海外和 demo 信息要和已确认上线日期分开看。'],
+        en: ['Use the download hub if your next action is installing the game.', 'Use this page for PC beta, mobile launch, gamescom demo, and month-one content context.', 'Keep console, overseas, and demo signals separate from confirmed launch dates.'],
+        ja: ['DLが目的ならDL入口へ進みます。', 'PC、モバイル、gamescom demo、初月内容はこのページで確認します。', 'コンソール、海外、demo情報は確定日程と分けて見ます。'],
+      },
+    },
+    'launch-day-guide': {
+      heading: { zh: '快速结论：能进服后先确认账号、福利和首日路线', en: 'Quick answer: after login, check account, rewards, and day-one route', ja: '要点：ログイン後はアカウント、報酬、初日ルート' },
+      points: {
+        zh: ['还没安装先去下载页；本页解决进服后的路线。', 'PC 老玩家切手机端时，先确认同账号、同区服和奖励规则。', '首日先看黑券自选、好金砖、兑换码和已知问题，再投入养成资源。'],
+        en: ['If you have not installed yet, start from the download page; this page is for post-login routing.', 'PC players moving to mobile should confirm account, server, and reward rules first.', 'Check selector, Good Gold Bricks, codes, and known issues before committing resources.'],
+        ja: ['未インストールならDLページから開始します。', 'PCからモバイルへ移る場合、同じアカウント、サーバー、報酬規則を先に確認します。', '黒券、好金砖、コード、既知問題を見てから育成資源を使います。'],
+      },
+    },
+    'download-install-guide': {
+      heading: { zh: '快速结论：先走官方入口，再排查容量、更新和账号', en: 'Quick answer: use official entry, then check storage, patching, and account', ja: '要点：公式入口、容量、更新、アカウント確認' },
+      points: {
+        zh: ['下载动作优先从官网、TapTap、App Store、Steam 或官方启动器进入。', '安装失败先查剩余空间、预下载后更新、资源校验和网络。', '进游戏前确认登录方式、区服和 PC/移动端互通，避免把奖励领到错误角色。'],
+        en: ['Use official site, TapTap, App Store, Steam, or the official launcher first.', 'For install failures, check storage, post-preload patches, resource verification, and network.', 'Before claiming rewards, confirm login route, server, and PC/mobile cross-progress.'],
+        ja: ['公式サイト、TapTap、App Store、Steam、公式ランチャーから入ります。', '失敗時は容量、事前DL後の更新、リソース検証、ネットワークを確認します。', '報酬受取前にログイン、サーバー、PC/モバイル連携を確認します。'],
+      },
+    },
+  },
 };
 
 const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> = {
@@ -184,6 +210,20 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
     'photo-mode-guide': [
       { href: '/nte/version', label: { zh: '版本专题', en: 'Version hub', ja: '版本特集' }, description: { zh: '回到 v1.2 当前内容。', en: 'Return to current v1.2 content.', ja: 'v1.2内容へ戻る。' } },
       { href: '/nte/map', label: { zh: '地图', en: 'Map', ja: 'マップ' }, description: { zh: '找城市区域和拍照点。', en: 'Find city zones and photo spots.', ja: '都市区域と撮影地へ。' } },
+    ],
+  },
+  sea: {
+    'open-beta-version-center': [
+      { href: '/sea/download', label: { zh: '下载主入口', en: 'Download hub', ja: 'DL入口' }, description: { zh: '把官网、PC、手机、云游戏入口统一到可执行下载页。', en: 'Move from status context into official PC, mobile, and cloud download routes.', ja: '公式、PC、モバイル、クラウドDLへ進みます。' } },
+      { href: '/sea/guides/launch-day-guide', label: { zh: '开服行动路线', en: 'Launch route', ja: '開始ルート' }, description: { zh: '能进服后再看账号、福利、黑券和首日优先级。', en: 'After login, check account, rewards, selector, and day-one priorities.', ja: 'ログイン後にアカウント、報酬、黒券、初日優先度を確認。' } },
+    ],
+    'launch-day-guide': [
+      { href: '/sea/download', label: { zh: '还没下载先点这里', en: 'Install first', ja: 'まずDL' }, description: { zh: '下载、安装、平台和设备问题回到主入口。', en: 'Use the main hub for download, install, platform, and device questions.', ja: 'DL、インストール、平台、端末問題へ。' } },
+      { href: '/sea/calculator', label: { zh: '黑券与资源工具', en: 'Selector and resources', ja: '黒券と資源' }, description: { zh: '先算 6 选 1、周常打捞、好金砖和外观预算。', en: 'Plan the selector, weekly dredging, Good Gold Bricks, and outfit budget.', ja: '6択、週課、好金砖、衣装予算を計算。' } },
+    ],
+    'download-install-guide': [
+      { href: '/sea/download', label: { zh: '下载主入口', en: 'Download hub', ja: 'DL入口' }, description: { zh: '先确认官网、TapTap、App Store、Steam 和启动器入口。', en: 'Confirm official site, TapTap, App Store, Steam, and launcher routes.', ja: '公式、TapTap、App Store、Steam、ランチャーを確認。' } },
+      { href: '/sea/guides/pc-mobile-cross-progression-faq', label: { zh: 'PC 手机互通', en: 'PC/mobile cross-progress', ja: 'PC/モバイル連携' }, description: { zh: '安装后先确认账号、区服、渠道和奖励领取边界。', en: 'After install, confirm account, server, channel, and reward boundaries.', ja: 'インストール後にアカウント、鯖、渠道、報酬を確認。' } },
     ],
   },
 };

@@ -16,6 +16,32 @@ const REGION_ICONS: Record<string, string> = {
 
 const BASE_URL = 'https://gachia.com';
 
+const MAP_META_TITLES: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
+  wuwa: {
+    zh: '鸣潮地图攻略｜区域路线、材料、Boss 与探索要点',
+    en: 'Wuthering Waves Map Guide — Regions, Materials, Bosses & Routes',
+    ja: '鳴潮マップ攻略｜エリア、素材、Boss、探索ルート',
+  },
+  starrail: {
+    zh: '崩坏：星穹铁道星球地图｜空间锚点、花萼与侵蚀隧洞',
+    en: 'Honkai: Star Rail World Map Guide — Anchors, Calyxes & Caverns',
+    ja: 'スターレイル星マップ｜アンカー、花萼、侵蝕トンネル',
+  },
+};
+
+const MAP_META_DESCRIPTIONS: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
+  wuwa: {
+    zh: '鸣潮地图攻略，整理 Huanglong、Black Shores、Rinascita、Roya Frostlands 等区域路线、材料特产、Boss、探索提示和版本入口，适合查 wuwa map、鸣潮地图和材料路线。',
+    en: 'Wuthering Waves map guide for Huanglong, Black Shores, Rinascita, Roya Frostlands, region routes, materials, bosses, exploration tips, and version links. Useful for WuWa map and farming-route searches.',
+    ja: '鳴潮マップ攻略。Huanglong、Black Shores、Rinascita、Roya Frostlands、素材、Boss、探索ヒント、版本導線を整理します。',
+  },
+  starrail: {
+    zh: '星穹铁道星球地图攻略，整理空间锚点、拟造花萼、历战余响、侵蚀隧洞、区域要点和材料路线，适合查 Star Rail map 与星球探索。',
+    en: 'Honkai: Star Rail world map guide for space anchors, calyxes, Echoes of War, caverns, region highlights, and farming routes.',
+    ja: 'スターレイル星マップ攻略。空間アンカー、花萼、歴戦余響、侵蝕トンネル、探索要点を整理します。',
+  },
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -29,7 +55,7 @@ export async function generateMetadata({
     return { title: 'Map', robots: { index: false, follow: false } };
   }
   const gameName = gameConfig.name[locale];
-  const title = gameId === 'skjh'
+  const title = MAP_META_TITLES[gameId]?.[locale] ?? (gameId === 'skjh'
     ? locale === 'zh'
       ? `${gameName}荒岛路线地图 — 据点、采集线、基地选址`
       : locale === 'ja'
@@ -39,8 +65,8 @@ export async function generateMetadata({
       ? `${gameName}互动地图 — 传送锚点、宝箱、收集品`
       : locale === 'ja'
         ? `${gameName}マップ — テレポート、宝箱、コレクション`
-        : `${gameName} Interactive Map — Teleports, Chests & Collectibles`;
-  const desc = gameId === 'skjh'
+        : `${gameName} Interactive Map — Teleports, Chests & Collectibles`);
+  const desc = MAP_META_DESCRIPTIONS[gameId]?.[locale] ?? (gameId === 'skjh'
     ? locale === 'zh'
       ? `${gameName}荒岛路线地图预留：4×4km荒岛、一级据点、废弃超市、加油站、高价值据点、安全区/危险区、新手采集线和基地选址建议。`
       : locale === 'ja'
@@ -50,7 +76,7 @@ export async function generateMetadata({
       ? `${gameName}互动地图攻略：传送锚点位置、宝箱分布、材料采集点、世界任务标记。`
       : locale === 'ja'
         ? `${gameName}マップ攻略：テレポート位置、宝箱分布、素材採集ポイント。`
-        : `${gameName} interactive map guide: teleport waypoints, chest locations, material farming spots, and world quest markers.`;
+        : `${gameName} interactive map guide: teleport waypoints, chest locations, material farming spots, and world quest markers.`);
   const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/map`, LOCALES);
   const description = ensureMetaLength(desc, locale);
 
@@ -151,12 +177,82 @@ function RegionMapPage({ data, locale }: { data: MapPageData; locale: SupportedL
       </div>
 
       {data.gameId === 'nte' && <NteLocationAnchors locale={locale} />}
+      {(data.gameId === 'wuwa' || data.gameId === 'starrail') && <MapIntentPanel gameId={data.gameId} locale={locale} />}
       <div className="space-y-6">
         {data.regions.map((region) => (
           <RegionCard key={region.id} region={region} gameId={data.gameId} locale={locale} />
         ))}
       </div>
     </div>
+  );
+}
+
+function MapIntentPanel({ gameId, locale }: { gameId: GameId; locale: SupportedLocale }) {
+  const links = gameId === 'wuwa'
+    ? [
+        {
+          href: '/wuwa/guides/roya-frostlands-guide',
+          label: { zh: 'Roya Frostlands 路线', en: 'Roya Frostlands route', ja: 'Roya Frostlands ルート' },
+          desc: { zh: '继续看当前区域探索与版本重点。', en: 'Continue into current-region exploration and version notes.', ja: '現在エリア探索と版本要点へ。' },
+        },
+        {
+          href: '/wuwa/items',
+          label: { zh: '材料图鉴', en: 'Material database', ja: '素材図鑑' },
+          desc: { zh: '按材料继续查养成与采集来源。', en: 'Open materials for farming and upgrade sources.', ja: '素材と育成来源を確認。' },
+        },
+        {
+          href: '/wuwa/build',
+          label: { zh: '角色养成路线', en: 'Build routes', ja: '育成ルート' },
+          desc: { zh: '把地图材料和角色培养接起来。', en: 'Connect map farming with character builds.', ja: 'マップ素材とキャラ育成を接続。' },
+        },
+      ]
+    : [
+        {
+          href: '/starrail/guides/farming-route-guide',
+          label: { zh: '体力与材料路线', en: 'Trailblaze Power route', ja: '開拓力ルート' },
+          desc: { zh: '按花萼、侵蚀隧洞和周本规划。', en: 'Plan around calyxes, caverns, and weeklies.', ja: '花萼、トンネル、週課で計画。' },
+        },
+        {
+          href: '/starrail/items',
+          label: { zh: '材料图鉴', en: 'Material database', ja: '素材図鑑' },
+          desc: { zh: '继续查角色突破与行迹材料。', en: 'Open ascension and trace material sources.', ja: '昇格と軌跡素材へ。' },
+        },
+        {
+          href: '/starrail/build',
+          label: { zh: '角色养成路线', en: 'Build routes', ja: '育成ルート' },
+          desc: { zh: '把星球探索和角色培养接起来。', en: 'Connect world routes with character builds.', ja: '星探索とキャラ育成を接続。' },
+        },
+      ];
+
+  return (
+    <section className="mb-8 rounded-lg border border-game-border bg-game-surface p-4">
+      <h2 className="mb-2 text-lg font-semibold text-game-text">
+        {gameId === 'wuwa'
+          ? locale === 'zh' ? '鸣潮地图怎么用' : locale === 'ja' ? '鳴潮マップの使い方' : 'How to use this WuWa map guide'
+          : locale === 'zh' ? '星球地图怎么用' : locale === 'ja' ? '星マップの使い方' : 'How to use this world map guide'}
+      </h2>
+      <p className="mb-4 text-sm leading-6 text-game-text-muted">
+        {gameId === 'wuwa'
+          ? locale === 'zh'
+            ? '这里是区域路线与材料攻略页，不是完整点位交互地图。先确认区域、Boss、特产和探索提示，再进入材料图鉴或当前版本路线。'
+            : locale === 'ja'
+              ? 'ここは完全なピン付きインタラクティブマップではなく、エリア、Boss、素材、探索ヒントを整理する攻略ページです。'
+              : 'This is a region and farming-route guide, not a full marker-by-marker interactive map. Use it to check regions, bosses, specialties, and exploration notes before opening material or build pages.'
+          : locale === 'zh'
+            ? '这里按星球整理空间锚点、花萼、周本和侵蚀隧洞，适合先判断去哪刷，再进入材料或养成页面。'
+            : locale === 'ja'
+              ? '星ごとにアンカー、花萼、週ボス、侵蝕トンネルを整理し、素材や育成ページへつなげます。'
+              : 'This page groups anchors, calyxes, weekly bosses, and caverns by world so you can decide where to farm before opening material or build pages.'}
+      </p>
+      <div className="grid gap-3 md:grid-cols-3">
+        {links.map((link) => (
+          <a key={link.href} href={`/${locale}${link.href}`} className="rounded-lg border border-game-border bg-game-surface-alt p-3 transition hover:border-game-primary">
+            <span className="block text-sm font-semibold text-game-text">{link.label[locale]}</span>
+            <span className="mt-1 block text-xs leading-5 text-game-text-muted">{link.desc[locale]}</span>
+          </a>
+        ))}
+      </div>
+    </section>
   );
 }
 

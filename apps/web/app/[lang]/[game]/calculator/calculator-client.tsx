@@ -695,11 +695,39 @@ function SkjhResourceCalculator({ locale }: { locale: SupportedLocale }) {
   return (
     <div>
       <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.skjh.theme.primary }}>
-        {t(locale, '资源计算器', 'Resource Calculator', '資源計算機')}
+        {t(locale, '失控进化资源计算器', 'Ashfall Evolution Resource Calculator', '失控進化 資源計算機')}
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
-        {t(locale, '估算领地柜维护、建筑升级、抄家爆破和自动化烧矿收益。数值用于开荒规划，后续可随实测数据微调。', 'Estimate territory upkeep, build costs, raid costs, and automated smelting returns. Values are planning references and can be tuned after live testing.', '領地維持、建築コスト、レイドコスト、自動精錬の目安を計算します。')}
+        {t(locale, '估算领地柜维护、石墙地基、金属门、抄家爆破、硫磺预算和自动化烧矿收益。适合开荒建家、换服判断、周末抄家前做资源规划；数值用于路线估算，后续可随实测数据微调。', 'Estimate territory upkeep, stone foundations, metal doors, raid costs, sulfur budget, and automated smelting returns for base planning, server decisions, and raid prep.', '領地維持、石壁、金属扉、レイド、硫黄、自動精錬を見積もり、拠点計画と鯖判断に使えます。')}
       </p>
+
+      <section className="mb-6 rounded-2xl border border-game-border bg-game-surface p-4">
+        <h2 className="mb-2 text-base font-semibold text-game-text">
+          {t(locale, '先算资源，再决定开荒路线', 'Calculate resources before choosing your route', '資源を計算してからルートを決める')}
+        </h2>
+        <p className="text-sm leading-6 text-game-text-muted">
+          {t(
+            locale,
+            '如果你搜索的是“失控进化计算器、领地柜维护、抄家成本、烧矿收益”，先用下面四个模块估算资源压力，再回到服务器模式、0-2 小时开荒和自定义模式页面继续决策。',
+            'If you searched for upkeep, raid cost, or smelting calculators, estimate pressure below, then continue into server mode, first 0-2 hours, and custom-mode pages.',
+            '維持費、レイドコスト、精錬計算を探している場合、下で資源圧を見積もり、サーバー、0-2時間ルート、カスタムモードへ進みます。'
+          )}
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-3">
+          <a href={`/${locale}/skjh/guides/server-mode-choice`} className="rounded-xl border border-game-border bg-game-surface-alt p-3 transition hover:border-game-primary">
+            <span className="block text-sm font-semibold text-game-text">{t(locale, '服务器模式', 'Server modes', 'サーバーモード')}</span>
+            <span className="mt-1 block text-xs leading-5 text-game-text-muted">{t(locale, '先确认安全区、标准和挑战服压力。', 'Check safe-zone, standard, and challenge pressure.', '安全区、標準、挑戦の圧を確認。')}</span>
+          </a>
+          <a href={`/${locale}/skjh/guides/first-2-hours-starter-route`} className="rounded-xl border border-game-border bg-game-surface-alt p-3 transition hover:border-game-primary">
+            <span className="block text-sm font-semibold text-game-text">{t(locale, '0-2 小时开荒', 'First 0-2 hours', '0-2時間ルート')}</span>
+            <span className="mt-1 block text-xs leading-5 text-game-text-muted">{t(locale, '把工具、领地柜和第一轮资源接上。', 'Connect tools, territory cabinet, and first resources.', '道具、領地柜、初動資源を接続。')}</span>
+          </a>
+          <a href={`/${locale}/skjh/guides/custom-mode-community-server-guide`} className="rounded-xl border border-game-border bg-game-surface-alt p-3 transition hover:border-game-primary">
+            <span className="block text-sm font-semibold text-game-text">{t(locale, '自定义模式', 'Custom mode', 'カスタムモード')}</span>
+            <span className="mt-1 block text-xs leading-5 text-game-text-muted">{t(locale, '关注社区服、教学服和活动服机会。', 'Track community, training, and event-server opportunities.', 'コミュニティ、練習、イベント鯖を確認。')}</span>
+          </a>
+        </div>
+      </section>
 
       <div className="grid gap-4 lg:grid-cols-2">
         <section className="rounded-lg border border-game-border bg-game-surface p-4">

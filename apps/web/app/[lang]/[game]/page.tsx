@@ -693,7 +693,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
       zh: [
         { title: '官网与下载', description: '先解决官网、WeGame、手游入口、下载电脑版和安装前检查。', links: [{ href: '/skjh/download', label: '下载入口' }, { href: '/skjh/guides/platform-download-guide', label: '平台下载指南' }] },
         { title: '服务器模式', description: '安全区、标准、挑战和好友同服会直接影响开局选择。', links: [{ href: '/skjh/guides/server-mode-choice', label: '服务器模式' }, { href: '/skjh/guides/season-1-launch', label: '上线专题' }] },
-        { title: '开荒与防抄家', description: '把工具、领地柜、低风险资源线和基地防御变成可执行路线。', links: [{ href: '/skjh/guides/first-2-hours-starter-route', label: '0-2 小时路线' }, { href: '/skjh/guides/base-location-anti-raid-plan', label: '选址防抄家' }] },
+        { title: '工具与防抄家', description: '先算领地柜维护、抄家爆破和烧矿收益，再看基地防御路线。', links: [{ href: '/skjh/calculator', label: '资源计算器' }, { href: '/skjh/guides/base-location-anti-raid-plan', label: '选址防抄家' }] },
       ],
       en: [
         { title: 'Download and modes', description: 'Solve official PC entry, PC download, and server choice first.', links: [{ href: '/skjh/guides/official-pc-download-faq', label: 'Official PC FAQ' }, { href: '/skjh/guides/server-mode-choice', label: 'Server modes' }] },
@@ -967,6 +967,9 @@ export default async function GameHome({
                     </Link>
                     <Link href={`/${gameId}/guides/official-pc-download-faq` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
                       {locale === 'zh' ? '官网 PC 下载' : locale === 'ja' ? '公式PC DL' : 'Official PC Download'}
+                    </Link>
+                    <Link href={`/${gameId}/calculator` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '资源计算器' : locale === 'ja' ? '資源計算機' : 'Resource Calculator'}
                     </Link>
                   </>
                 )}

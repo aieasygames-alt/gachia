@@ -64,6 +64,11 @@ const CHARACTER_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
       title: { zh: '再看驱动盘', en: 'Browse drive discs', ja: 'ドライブディスクへ' },
       description: { zh: '补齐主流驱动盘套装与毕业方向', en: 'Cover the main disc sets and endgame builds', ja: '主要ディスクセットと完成形を確認', },
     },
+    {
+      href: '/zzz/guides/banner-schedule-guide',
+      title: { zh: '当前卡池与复刻', en: 'Current banners and reruns', ja: '現在バナーと復刻' },
+      description: { zh: '先确认当前代理人、下期卡池和菲林预算。', en: 'Check current agents, next banners, and Polychrome budget first', ja: '現在代理人、次回バナー、ポリクローム予算を確認', },
+    },
   ],
   endfield: [
     {
@@ -89,7 +94,7 @@ const CHAR_DESC: Record<string, Record<string, string>> = {
   starrail: { zh: '崩坏：星穹铁道全角色图鉴，覆盖属性、命途、技能数据和培养方向，帮助你在配队前快速看懂角色定位。', en: 'Complete Honkai: Star Rail character roster with elements, paths, skills, and build directions so you can understand each unit before investing.', ja: 'スターレイル全キャラ図鑑。属性、運命、スキル、育成方針を整理しています。' },
   wuwa: { zh: '鸣潮全角色图鉴，覆盖属性、武器类型、技能数据和培养方向，适合在组队和资源分配前快速查角色定位。', en: 'Complete Wuthering Waves character roster with elements, weapon types, skills, and build directions to help with team and resource planning.', ja: '鳴潮全キャラ図鑑。属性、武器タイプ、スキル、育成方針をまとめています。' },
   nte: { zh: '异环全角色图鉴，覆盖S级、A级角色的数据、定位和培养方向，方便你在抽卡与配队时快速判断是否值得投入。', en: 'Complete Neverness to Everness character roster with S-Rank and A-Rank data, roles, and build directions for pull and team planning.', ja: '異環全キャラ図鑑。S級・A級のデータ、役割、育成方針を整理しています。' },
-  zzz: { zh: '绝区零全代理人图鉴，覆盖属性、专精、技能和培养方向，帮助你快速判断角色在当前版本中的用途。', en: "Complete Zenless Zone Zero agent roster with attributes, specialties, skills, and build directions so you can judge each agent's value quickly.", ja: 'ゼンレスゾーンゼロ全エージェント図鑑。属性、専門、スキル、育成方針を整理しています。' },
+  zzz: { zh: '绝区零角色图鉴 Wiki，覆盖全代理人属性、专精、阵营、技能、音擎、驱动盘、当前卡池和配队方向，帮助你快速判断当前版本该抽谁、养谁。', en: "Zenless Zone Zero characters wiki covering every agent's attribute, specialty, faction, skills, W-Engines, Drive Discs, current banners, and team direction.", ja: 'ゼンレスゾーンゼロキャラWiki。全エージェントの属性、専門、陣営、スキル、Wエンジン、ドライブ、現在バナーを整理。' },
   ananta: { zh: '无限大全异能者图鉴，覆盖SSR、SR角色数据、异能和配装推荐，方便你在角色选择前快速掌握强度和定位。', en: 'Complete Ananta Esper roster with SSR and SR data, abilities, and build recommendations to help you compare power and role before investing.', ja: 'アナンタ全エスパー図鑑。SSR・SRのデータ、能力、ビルド案をまとめています。' },
   guihuan: { zh: '归环全使灵图鉴，覆盖SSR、SR角色数据、元素和配装推荐，方便你先看清定位，再决定培养顺序。', en: 'Complete Guihuan Spirit roster with SSR and SR data, elements, and build recommendations so you can prioritize the right spirits first.', ja: '帰環全精霊図鑑。SSR・SRのデータ、元素、ビルド案を整理しています。' },
   endfield: { zh: '明日方舟：终末地全干员图鉴，覆盖六星、五星、四星角色数据、元素属性和配装推荐，适合先看定位再进培养页。', en: 'Complete Arknights: Endfield operator roster with 6-Star, 5-Star, and 4-Star data, elements, and build recommendations for fast team planning.', ja: 'エンドフィールド全オペレーター図鑑。★6、★5、★4のデータ、属性、ビルド案を整理しています。' },
@@ -118,9 +123,9 @@ const CHARACTER_INTRO: Record<string, Record<SupportedLocale, string>> = {
     ja: '属性、ランク、役割で異環キャラ図鑑を確認し、ガチャ価値、編成分担、育成優先度を把握できます。',
   },
   zzz: {
-    zh: '按属性、专精和星级快速浏览绝区零代理人图鉴，适合先看版本用途、站场逻辑和配队方向。',
-    en: 'Browse the Zenless Zone Zero agent wiki by attribute, specialty, and rarity to review patch value, field time, and team fit.',
-    ja: '属性、専門、レアリティでゼンゼロ代理人図鑑を確認し、版本用途、立ち回り、編成相性を把握できます。',
+    zh: '按属性、专精、星级和阵营快速浏览绝区零角色图鉴 Wiki，适合先看代理人定位、当前版本用途、音擎、驱动盘和配队方向。',
+    en: 'Browse the Zenless Zone Zero characters wiki by attribute, specialty, rarity, and faction to review agent roles, patch value, W-Engines, Drive Discs, and team fit.',
+    ja: '属性、専門、レアリティ、陣営でゼンゼロキャラWikiを確認し、代理人役割、版本価値、Wエンジン、ドライブ、編成相性を把握できます。',
   },
   ananta: {
     zh: '按元素、稀有度和职业快速浏览无限大角色图鉴，适合先看强度、定位和培养优先级。',
@@ -168,11 +173,17 @@ export async function generateMetadata({
       : locale === 'ja'
         ? 'Sea of Remnants キャラWiki — 全キャラ、Tier、育成'
         : 'Sea of Remnants Characters Wiki — All Characters, Tier List & Best Picks'
-    : locale === 'zh'
-      ? `${gameName}角色图鉴 — 全角色Wiki、Build、技能与配队`
-      : locale === 'ja'
-        ? `${gameName}キャラ図鑑 — Wiki、ビルド、スキル、編成`
-        : `${gameName} Characters Wiki — Builds, Skills & Team Planning`;
+    : gameId === 'zzz'
+      ? locale === 'zh'
+        ? '绝区零角色图鉴 Wiki｜全代理人、音擎、驱动盘与配队'
+        : locale === 'ja'
+          ? 'ゼンゼロキャラWiki｜全代理人、Wエンジン、ドライブ'
+          : 'Zenless Zone Zero Characters Wiki — Agents, W-Engines & Drive Discs'
+      : locale === 'zh'
+        ? `${gameName}角色图鉴 — 全角色Wiki、Build、技能与配队`
+        : locale === 'ja'
+          ? `${gameName}キャラ図鑑 — Wiki、ビルド、スキル、編成`
+          : `${gameName} Characters Wiki — Builds, Skills & Team Planning`;
 
   const description = ensureMetaLength(
     intro ?? desc ?? `${gameName} ${categoryLabel} roster with stats, skills, roles, and build recommendations`,
@@ -275,6 +286,7 @@ function rankHeading(rank: string, count: number, locale: SupportedLocale) {
 }
 
 function SearchIntentLinks({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
+  const zzzLinks = CHARACTER_NEXT_STEPS.zzz ?? [];
   const seaLinks: NextStepLink[] = [
     {
       href: '/sea',
@@ -293,7 +305,7 @@ function SearchIntentLinks({ locale, gameId }: { locale: SupportedLocale; gameId
     },
   ];
   const nteLinks = CHARACTER_NEXT_STEPS.nte ?? [];
-  const links = gameId === 'nte' ? nteLinks : seaLinks;
+  const links = gameId === 'nte' ? nteLinks : gameId === 'zzz' ? zzzLinks : seaLinks;
 
   return (
     <section className="mb-6 rounded-lg border border-game-border bg-game-surface p-4">
@@ -304,6 +316,12 @@ function SearchIntentLinks({ locale, gameId }: { locale: SupportedLocale; gameId
             : locale === 'ja'
               ? 'NTE characters / wiki 検索なら、Nanally、Sakiri、Fadia、Chiz、Aureliaから確認し、Tierとガチャ計画へ進みます。'
               : 'If you searched for NTE characters or wiki, start with Nanally, Sakiri, Fadia, Chiz, and Aurelia, then move into the tier list and pull plan.'
+          : gameId === 'zzz'
+            ? locale === 'zh'
+              ? '如果你搜索的是“绝区零角色 / 绝区零角色图鉴 / 绝区零 wiki”，先从当前版本代理人、阵营、属性和专精确认定位，再进入音擎、驱动盘、当前卡池和配队页面。'
+              : locale === 'ja'
+                ? 'ゼンゼロキャラ / Wiki 検索なら、現在版本の代理人、陣営、属性、専門を確認し、Wエンジン、ドライブ、バナー、編成へ進みます。'
+                : 'If you searched for ZZZ characters or Zenless Zone Zero wiki, start with live-patch agents, factions, attributes, and specialties, then continue into W-Engines, Drive Discs, banners, and teams.'
           : locale === 'zh'
             ? '如果你搜索的是“遗忘之海 wiki / Sea of Remnants characters”，先从 Traveler、Ais、Little Axe、Princess、Molly 这些高频角色看起，再进入节奏榜和开荒队伍。'
             : locale === 'ja'
@@ -328,20 +346,28 @@ function CharacterListPage({ chars, locale, gameId, gameConfig }: { chars: Chara
   return (
     <div>
       <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {gameId === 'sea' || gameId === 'nte'
+        {gameId === 'sea' || gameId === 'nte' || gameId === 'zzz'
           ? gameId === 'nte'
             ? locale === 'zh' ? '异环角色图鉴 Wiki' : locale === 'ja' ? 'NTE キャラWiki' : 'NTE Characters Wiki'
-            : locale === 'zh' ? '遗忘之海角色图鉴 Wiki' : locale === 'ja' ? 'Sea of Remnants キャラWiki' : 'Sea of Remnants Characters Wiki'
+            : gameId === 'zzz'
+              ? locale === 'zh' ? '绝区零角色图鉴 Wiki' : locale === 'ja' ? 'ゼンゼロキャラWiki' : 'Zenless Zone Zero Characters Wiki'
+              : locale === 'zh' ? '遗忘之海角色图鉴 Wiki' : locale === 'ja' ? 'Sea of Remnants キャラWiki' : 'Sea of Remnants Characters Wiki'
           : CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
-        {gameId === 'sea' || gameId === 'nte'
+        {gameId === 'sea' || gameId === 'nte' || gameId === 'zzz'
           ? gameId === 'nte'
             ? locale === 'zh'
               ? `共 ${chars.length} 名异环角色，覆盖属性、定位、强度排行、抽卡价值和培养优先级。`
               : locale === 'ja'
                 ? `${chars.length} 名のNTEキャラクター。属性、役割、Tier、ガチャ価値、育成順を整理。`
                 : `${chars.length} NTE characters with attributes, roles, tier context, pull value, and progression notes.`
+            : gameId === 'zzz'
+              ? locale === 'zh'
+                ? `共 ${chars.length} 名绝区零代理人，覆盖属性、专精、阵营、音擎、驱动盘、当前版本用途和配队方向。`
+                : locale === 'ja'
+                  ? `${chars.length} 名のゼンゼロ代理人。属性、専門、陣営、Wエンジン、ドライブ、版本価値を整理。`
+                  : `${chars.length} ZZZ agents with attributes, specialties, factions, W-Engines, Drive Discs, patch value, and team notes.`
             : locale === 'zh'
               ? `共 ${chars.length} 名角色，覆盖属性、定位、强度排行和开荒培养顺序。`
               : locale === 'ja'
@@ -349,13 +375,13 @@ function CharacterListPage({ chars, locale, gameId, gameConfig }: { chars: Chara
                 : `${chars.length} characters with attributes, roles, tier context, and early progression notes.`
           : locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
       </p>
-      {gameId !== 'sea' && gameId !== 'nte' && (
+      {gameId !== 'sea' && gameId !== 'nte' && gameId !== 'zzz' && (
         <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
           {getCharacterIntro(gameId, locale)}
         </p>
       )}
 
-      {gameId === 'sea' || gameId === 'nte' ? <SearchIntentLinks locale={locale} gameId={gameId} /> : <NextStepStrip locale={locale} links={CHARACTER_NEXT_STEPS[gameId]} />}
+      {gameId === 'sea' || gameId === 'nte' || gameId === 'zzz' ? <SearchIntentLinks locale={locale} gameId={gameId} /> : <NextStepStrip locale={locale} links={CHARACTER_NEXT_STEPS[gameId]} />}
 
       {sections.map(({ rank, entries }) => {
         const heading = rankHeading(rank, entries.length, locale);

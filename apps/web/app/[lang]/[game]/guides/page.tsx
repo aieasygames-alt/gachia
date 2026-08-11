@@ -29,7 +29,7 @@ const FEATURED_GUIDE_IDS: Record<GameId, string[]> = {
   guihuan: ['beginner-guide', 'download-install-guide', 'spirit-build-guide'],
   ananta: ['beginner-guide', 'download-install-guide', 'combat-system-guide'],
   endfield: ['download-install-guide', 'combat-system-guide', 'crisis-contract-guide'],
-  sea: ['identity-v-signin-screenshot-rewards-guide', 'lost-sea-new-islands-ship-prep-guide', 'sea-of-remnants-p2w-gacha-explained'],
+  sea: ['open-beta-version-center', 'launch-day-guide', 'download-install-guide'],
   skjh: ['week-one-live-ops-overview', 'anti-cheat-reporting-guide', 'custom-mode-community-server-guide'],
 };
 
@@ -157,6 +157,20 @@ const SKJH_DECISION_LINKS: Array<{
       zh: '很多人不是不会玩，而是进了已经滚穿的服，先做环境判断更值。',
       en: 'Many players are not underperforming; they are simply in a rolled server.',
       ja: '下手なのではなく、進みすぎた鯖に入っただけのケースが多いです。',
+    },
+  },
+  {
+    id: 'resource-calculator',
+    href: '/skjh/calculator',
+    label: {
+      zh: '先算领地和抄家成本',
+      en: 'Calculate upkeep and raid costs',
+      ja: '維持費とレイドを計算',
+    },
+    description: {
+      zh: '领地柜维护、石墙地基、金属门、硫磺和烧矿收益适合先用工具算清楚。',
+      en: 'Use the tool for territory upkeep, stone bases, metal doors, sulfur, and smelting returns.',
+      ja: '領地維持、石壁、金属扉、硫黄、精錬収益を先に計算できます。',
     },
   },
   {
