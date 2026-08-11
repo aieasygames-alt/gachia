@@ -1,0 +1,84 @@
+{
+	// Cloudflare's dashboard deploy command runs from the repository root.
+	// The OpenNext build still writes the Worker bundle under apps/web.
+	"name": "gachia",
+	"workers_dev": true,
+	"preview_urls": true,
+	"compatibility_date": "2026-07-08",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"main": "apps/web/.open-next/worker.js",
+	"assets": {
+		"directory": "apps/web/.open-next/assets",
+		"binding": "ASSETS"
+	},
+	"vars": {
+		"BETTER_AUTH_URL": "https://gachia.com",
+		"NEXT_PUBLIC_APP_URL": "https://gachia.com"
+	},
+	"services": [
+		{
+			"binding": "WORKER_SELF_REFERENCE",
+			"service": "gachia"
+		}
+	],
+	"r2_buckets": [
+		{
+			"bucket_name": "gachia-images",
+			"binding": "IMAGES"
+		}
+	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "gachia-db",
+			"database_id": "80421efb-73f7-471f-897a-c4929af3bf4d",
+			"migrations_dir": "packages/db/src/migrations"
+		}
+	],
+	"observability": {
+		"enabled": true,
+		"head_sampling_rate": 0.1,
+		"logs": {
+			"enabled": true,
+			"head_sampling_rate": 0.1,
+			"persist": true,
+			"invocation_logs": true
+		},
+		"traces": {
+			"enabled": true,
+			"persist": true,
+			"head_sampling_rate": 0.05
+		}
+	},
+	"env": {
+		"staging": {
+			"name": "gachia-staging",
+			"vars": {
+				"BETTER_AUTH_URL": "https://gachia-staging.aieasygames.workers.dev",
+				"NEXT_PUBLIC_APP_URL": "https://gachia-staging.aieasygames.workers.dev"
+			},
+			"services": [
+				{
+					"binding": "WORKER_SELF_REFERENCE",
+					"service": "gachia-staging"
+				}
+			],
+			"r2_buckets": [
+				{
+					"bucket_name": "gachia-images-staging",
+					"binding": "IMAGES"
+				}
+			],
+			"d1_databases": [
+				{
+					"binding": "DB",
+					"database_name": "gachia-db-staging",
+					"database_id": "009be406-936c-4df8-b422-8df735c83f83",
+					"migrations_dir": "packages/db/src/migrations"
+				}
+			]
+		}
+	}
+}
