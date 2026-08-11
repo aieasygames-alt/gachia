@@ -203,12 +203,12 @@
   {
     "id": "w-engine-guide",
     "title": "绝区零当前音擎选择攻略：按代理人定位、卡池预算和替代武器规划",
-    "titleEn": "ZZZ W-Engine Guide: Best Weapons by Agent Role, Banner Budget and Alternatives",
+    "titleEn": "ZZZ W-Engine Guide: Best Weapons, Signatures, A-Rank Alternatives & Banner Risk",
     "category": "equipment",
     "categoryZh": "装备攻略",
     "categoryEn": "Equipment",
     "summary": "绝区零当前版本音擎选择入口，按代理人定位、S/A 级替代、专属音擎风险、菲林预算和当前卡池优先级判断是否值得抽。",
-    "summaryEn": "Current ZZZ W-Engine guide for matching agent roles, S/A-Rank alternatives, signature-engine risk, Polychrome budget, and current-banner pull priority.",
+    "summaryEn": "Decision-first ZZZ W-Engine guide for best weapons, signature engines, A-Rank alternatives, W-Engine pity, Polychrome budget, current banners, and agent-role matching.",
     "content": "## 2026-08-03 当前音擎判断\n\n音擎页现在要和 v3.1 当前卡池一起看：先确认代理人是否已经到手，再判断专属音擎、A 级替代和驱动盘是否能支撑当前配队。\n\n## 音擎选择指南\n\n音擎是代理人的武器装备，正确选择能大幅提升角色输出。本指南帮你理解音擎系统并做出最优选择。\n\n### 一、音擎基础属性\n\n每把音擎提供三类属性：\n\n- **基础攻击力**：根据稀有度不同（S级 > A级 > B级）\n- **副属性**：固定加成（暴击率、暴击伤害、异常精通、冲击力等）\n- **被动效果**：特殊技能效果，通常对特定职业有额外加成\n\n### 二、按职业选择音擎\n\n#### 强攻型（Attack）— 主C输出\n| 推荐音擎 | 稀有度 | 副属性 | 获取方式 |\n|----------|--------|--------|----------|\n| 拘缚者的吻痕 | S级 | 暴击伤害 | 艾莲专属音擎池 |\n| 暴雨终焉 | S级 | 暴击率 | 朱鸢专属音擎池 |\n| 星光引擎 | A级 | 暴击伤害 | 模拟作战商店 |\n| 立体音擎·改 | A级 | 攻击力% | 活动免费 |\n\n#### 击破型（Stun）— 失衡积累\n| 推荐音擎 | 稀有度 | 副属性 | 获取方式 |\n|----------|--------|--------|----------|\n| 拘缚者（专用） | S级 | 冲击力 | 专属音擎池 |\n| 原装音擎 | A级 | 冲击力 | 模拟作战商店 |\n| 重型音擎 | A级 | 冲击力 | 通用掉落 |\n\n#### 异常型（Anomaly）— 异常伤害\n| 推荐音擎 | 稀有度 | 副属性 | 获取方式 |\n|----------|--------|--------|----------|\n| 融合编译器 | S级 | 异常精通 | 格莉丝专属 |\n| 磁暴音擎 | A级 | 异常精通 | 商店兑换 |\n\n#### 支援型（Support）— 团队增益\n| 推荐音擎 | 稀有度 | 副属性 | 获取方式 |\n|----------|--------|--------|----------|\n| 虚数怪谭 | S级 | 能量回复 | 专属音擎池 |\n| 和弦音擎 | A级 | 能量回复 | 商店兑换 |\n\n#### 防护型（Defense）— 生存保障\n| 推荐音擎 | 稀有度 | 副属性 | 获取方式 |\n|----------|--------|--------|----------|\n| 安息之所 | S级 | 防御力% | 专属音擎池 |\n| 坚壁音擎 | A级 | 防御力% | 通用掉落 |\n\n### 三、音擎强化建议\n\n1. **主C音擎优先拉满**：基础攻击力对伤害影响大\n2. **辅助音擎可以+15**：不需要完全拉满\n3. **选择原则**：副属性匹配角色需求 > 基础攻击力 > 被动效果\n4. **免费音擎也很强**：商店兑换的A级音擎性价比较高\n\n### 四、音擎获取方式\n\n| 来源 | 稀有度 | 说明 |\n|------|--------|------|\n| 信源检索 | S级 | 最强音擎，部分为角色专属 |\n| 模拟作战商店 | S/A级 | 用特定货币兑换，稳定获取 |\n| 活动奖励 | A/B级 | 免费获取，不要错过 |\n| 制作系统 | B级 | 用材料制作基础音擎 |",
     "contentEn": "## Current W-Engine Check for August 3, 2026\n\nRead W-Engines together with the v3.1 banner plan: secure the agent first, then compare signature W-Engines, A-Rank alternatives, Drive Discs, and team needs.\n\n## W-Engine Selection Guide\n\nW-Engines are agent weapons. Choosing the right one significantly impacts your damage output. This guide helps you understand the system and make optimal choices.\n\n### 1. W-Engine Basics\n\nEvery W-Engine provides three types of stats:\n\n- **Base ATK**: Varies by rarity (S-Rank > A-Rank > B-Rank)\n- **Sub-stat**: Fixed bonus (CRIT Rate, CRIT DMG, Anomaly Mastery, Impact, etc.)\n- **Passive Effect**: Special skill effects, often with bonuses for specific specialties\n\n### 2. Choosing by Specialty\n\n#### Attack Specialty (Main DPS)\n| Recommended Engine | Rarity | Sub-stat | Source |\n|-------------------|--------|----------|--------|\n| Restrainer's Kiss | S-Rank | CRIT DMG | Ellen signature banner |\n| Torrential Rain | S-Rank | CRIT Rate | Zhu Yuan signature banner |\n| Starlight Engine | A-Rank | CRIT DMG | Simulation Shop |\n| Stereo Engine+ | A-Rank | ATK% | Event free |\n\n#### Stun Specialty (Daze Builder)\n| Recommended Engine | Rarity | Sub-stat | Source |\n|-------------------|--------|----------|--------|\n| Restrainer (Signature) | S-Rank | Impact | Signature banner |\n| Original Engine | A-Rank | Impact | Simulation Shop |\n| Heavy Engine | A-Rank | Impact | General drop |\n\n#### Anomaly Specialty (DoT Damage)\n| Recommended Engine | Rarity | Sub-stat | Source |\n|-------------------|--------|----------|--------|\n| Fusion Compiler | S-Rank | Anomaly Mastery | Grace signature |\n| Magnetic Storm Engine | A-Rank | Anomaly Mastery | Shop exchange |\n\n#### Support Specialty (Team Buff)\n| Recommended Engine | Rarity | Sub-stat | Source |\n|-------------------|--------|----------|--------|\n| Imaginary Tales | S-Rank | Energy Regen | Signature banner |\n| Chord Engine | A-Rank | Energy Regen | Shop exchange |\n\n#### Defense Specialty (Survival)\n| Recommended Engine | Rarity | Sub-stat | Source |\n|-------------------|--------|----------|--------|\n| Resting Place | S-Rank | DEF% | Signature banner |\n| Fortress Engine | A-Rank | DEF% | General drop |\n\n### 3. Enhancement Strategy\n\n1. **DPS engine to max first**: Base ATK has a major impact on damage\n2. **Support engines at +15**: Don't need full investment\n3. **Selection priority**: Matching sub-stat > Base ATK > Passive effect\n4. **Free engines are solid**: Shop-exchangeable A-Rank engines offer good value\n\n### 4. W-Engine Sources\n\n| Source | Rarity | Notes |\n|--------|--------|-------|\n| Signal Search | S-Rank | Strongest engines, some are character-exclusive |\n| Simulation Shop | S/A-Rank | Exchangeable with specific currency, reliable source |\n| Event Rewards | A/B-Rank | Free acquisition, don't miss them |\n| Crafting | B-Rank | Crafted with materials for basics |",
     "tags": [
@@ -239,33 +239,33 @@
         "answerZh": "根据角色定位选择副属性：输出要暴击，击破要冲击力，异常要异常精通，支援要能量回复。副属性匹配比基础攻击力差异更重要。"
       }
     ],
-    "updatedAt": "2026-08-03",
-    "currentVersion": "ZZZ v3.1 build and W-Engine cycle",
+    "updatedAt": "2026-08-12",
+    "currentVersion": "ZZZ v3.1 W-Engine and banner-risk route",
     "serpTitle": {
-      "en": "ZZZ W-Engine Guide: Best Weapons, Signatures and A-Rank Alternatives",
-      "zh": "绝区零音擎攻略：最佳武器、专属音擎与 A 级替代",
-      "ja": "ZZZ音動機攻略：おすすめ、餅武器、Aランク代替"
+      "en": "ZZZ W-Engine Guide: Best Weapons, Signatures & A-Rank Alternatives",
+      "zh": "绝区零音擎攻略：最佳武器、专属音擎、A级替代与卡池风险",
+      "ja": "ZZZ音動機攻略：おすすめ、餅武器、Aランク代替、バナーリスク"
     },
     "serpDescription": {
-      "en": "Choose ZZZ W-Engines by agent role, current build needs, signature risk, A-Rank alternatives, W-Engine pity, Polychrome budget, and banner priority.",
-      "zh": "按代理人定位、当前配装、专属音擎风险、A 级替代、音擎保底、菲林预算和卡池优先级选择绝区零音擎。",
-      "ja": "役割、現在ビルド、餅武器リスク、Aランク代替、音動機天井、予算、バナー優先度で選択。"
+      "en": "Choose ZZZ W-Engines by agent role, current banners, signature risk, A-Rank alternatives, W-Engine pity, Polychrome budget, and Drive Disc needs.",
+      "zh": "按代理人定位、当前卡池、专属音擎风险、A级替代、音擎保底、菲林预算和驱动盘需求选择绝区零音擎。",
+      "ja": "代理人役割、現在バナー、餅武器リスク、Aランク代替、音動機天井、菲林、ドライブで選択。"
     },
     "quickFacts": {
       "en": [
-        "Secure the agent before chasing signature W-Engines.",
-        "Use A-Rank options when v3.1 Polychrome budget is tight.",
-        "Read this with current banners, Drive Discs, and teams."
+        "Use this for ZZZ W-Engine, best weapon, signature weapon, A-Rank alternative, and Polychrome budget searches.",
+        "Secure the agent first unless the account already has the core team and enough pulls for W-Engine pity.",
+        "Read with current banners, Jane Doe build, Drive Discs, and teams before spending on signatures."
       ],
       "zh": [
-        "先抽代理人，再考虑专属音擎。",
-        "v3.1 菲林紧张时优先使用 A 级替代。",
-        "和当前卡池、驱动盘、配队一起看。"
+        "用于承接音擎、最佳武器、专属音擎、A级替代和菲林预算搜索。",
+        "除非队伍完整且能覆盖音擎保底，否则先保代理人。",
+        "抽专属前建议和当前卡池、简·杜配装、驱动盘、配队一起看。"
       ],
       "ja": [
-        "先にエージェント、次に餅音動機。",
-        "v3.1予算が厳しい時はAランク代替。",
-        "現在バナー、ドライブ、編成と一緒に確認。"
+        "Wエンジン、おすすめ武器、餅武器、Aランク代替、菲林予算検索向け。",
+        "編成が完成し音動機天井を覆える場合以外は代理人優先。",
+        "餅武器前に現在バナー、Jane Doe、ドライブ、編成を確認。"
       ]
     }
   },
@@ -582,39 +582,39 @@
   {
     "id": "v3-0-version-guide",
     "title": "绝区零v3.0版本更新完全指南",
-    "titleEn": "ZZZ 3.0 Guide: Release Date, Banners, Pulls & New Agents",
+    "titleEn": "ZZZ v3.1 Live Hub: Banners, Anniversary Rewards, Codes & v3.0 Recap",
     "category": "version",
     "categoryZh": "版本攻略",
     "categoryEn": "Version Guide",
-    "updatedAt": "2026-08-02",
-    "currentVersion": "ZZZ v3.0 to v3.1 transition",
+    "updatedAt": "2026-08-12",
+    "currentVersion": "ZZZ v3.1 live routing and v3.0 recap",
     "summary": "绝区零v3.0「新秩序」完整攻略：维林娜(新风属性)、普罗米亚(火C)、诺姆、千夏、蕾米埃尔、980底片+邀约礼盒福利、罗斯凯利法新区域、云岌岭探索。",
-    "summaryEn": "ZZZ v3.0 release date, banner schedule, pull recommendations, and all new agents. Velina, Promeia, Starlight Billy, 980 Polychrome rewards, new region exploration tips.",
+    "summaryEn": "Live ZZZ v3.1 routing page for current banners, anniversary rewards, redeem codes, Xbox/Steam onboarding, and a v3.0 New Order recap for returning players.",
     "serpTitle": {
-      "en": "ZZZ v3.1 Live Hub: Banners, Anniversary Rewards & v3.0 Recap",
-      "zh": "绝区零 3.1 当前版本入口：卡池、周年福利与 3.0 回顾",
-      "ja": "ゼンゼロ 3.1 現在版本：バナー、周年報酬、3.0振り返り"
+      "en": "ZZZ v3.1 Live Hub: Banners, Codes, Rewards & v3.0 Recap",
+      "zh": "绝区零 3.1 当前版本入口：卡池、兑换码、周年福利与 3.0 回顾",
+      "ja": "ゼンゼロ v3.1 現在版本：バナー、コード、報酬、3.0振り返り"
     },
     "serpDescription": {
-      "en": "Start with the live ZZZ v3.1 hub for banners, anniversary rewards, codes, and Xbox/Steam onboarding, then use the v3.0 recap.",
-      "zh": "先看绝区零 3.1 当前卡池、2 周年福利、兑换码与 Xbox/Steam 入坑，再回顾 3.0 新秩序、角色和养成内容。",
-      "ja": "ゼンゼロ 3.1の現在バナー、2周年報酬、コード、Xbox/Steam入門を確認し、3.0の内容を振り返ります。"
+      "en": "Use the ZZZ v3.1 live hub for current banners, anniversary rewards, redeem codes, Xbox/Steam onboarding, new agents, and the v3.0 recap.",
+      "zh": "查看绝区零 3.1 当前卡池、周年福利、兑换码、Xbox/Steam 入坑、新代理人与 3.0 新秩序回顾。",
+      "ja": "ZZZ v3.1の現在バナー、周年報酬、コード、Xbox/Steam入門、新代理人、3.0振り返りを確認。"
     },
     "quickFacts": {
       "en": [
-        "Current version: v3.1 The Long Goodbye launched on July 29, 2026",
-        "Start with: the v3.1 hub, anniversary rewards, codes, and platform linking",
-        "Page scope: a full v3.0 New Order recap with live-version routing"
+        "Start here for ZZZ v3.1 current banners, codes, anniversary rewards, and platform onboarding.",
+        "Use the v3.0 recap only after checking live v3.1 agents and Polychrome income.",
+        "Continue into banner schedule, W-Engine guide, Drive Discs, and character wiki for build decisions."
       ],
       "zh": [
-        "当前版本：3.1「The Long Goodbye」已于 2026 年 7 月 29 日上线",
-        "先看：3.1 版本专题、周年福利、兑换码与平台账号绑定",
-        "本页定位：3.0「新秩序」完整回顾与当前版本导流"
+        "先看 3.1 当前卡池、兑换码、周年福利和平台入坑。",
+        "确认 3.1 代理人和菲林收入后，再回顾 3.0 内容。",
+        "继续进入卡池、音擎、驱动盘和角色图鉴做养成决策。"
       ],
       "ja": [
-        "現在版本：3.1「The Long Goodbye」は2026年7月29日に配信開始",
-        "先に確認：3.1特集、周年報酬、コード、プラットフォーム連携",
-        "本ページ：3.0「新秩序」の振り返りと現在版本への導線"
+        "まずv3.1現在バナー、コード、周年報酬、平台入門を確認。",
+        "v3.1代理人と菲林収入を確認してから3.0を振り返ります。",
+        "バナー、Wエンジン、ドライブ、キャラWikiへ進みます。"
       ]
     },
     "content": "## v3.0版本更新完全指南\n\n绝区零v3.0是一个里程碑式的大版本更新，带来全新区域、多位新代理人以及重要的系统革新。\n\n### 一、版本概要\n\n- **上线时间**：2026年6月17日\n- **版本主题**：「新秩序」\n- **核心内容**：新区域「云岌岭」扩展、突击专精深化、新属性体系完善\n\n### 二、全新代理人\n\n#### 限定S级代理人\n\n| 代理人 | 属性 | 专精 | 定位 | 抽卡建议 |\n|--------|------|------|------|----------|\n| 普罗米亚(Promeia) | 火 | 强攻 | 火属性主C | ★★★★★ 版本核心 |\n| 星光·比利·奇德(Starlight Billy) | 物理 | 突击 | 物理突击主C | ★★★★★ 比利觉醒体 |\n| 叶瞬光(Ye Shunguang) | 利刃 | 强攻 | 利刃专属输出 | ★★★★☆ |\n\n#### 新A级代理人\n\n| 代理人 | 属性 | 专精 | 定位 |\n|--------|------|------|------|\n| 柯拉(Cora) | 冰 | 支援 | 冰属性增益支援 |\n| 雷克(Reck) | 电 | 击破 | 电属性眩晕 |\n\n#### v3.0 追加代理人（6月19日起新增）\n\n| 代理人 | 属性 | 专精 | 定位 | 说明 |\n|--------|------|------|------|------|\n| 维林娜(Velina) | 风(Anemo) | 强攻 | 风属性主C | 新风弱BOSS对策角色，推荐抽取 |\n| 诺姆(Nome) | 物理 | 击破 | 物理眩晕 | A级，物理队击破位 |\n| 千夏(Chiaki) | 电 | 支援 | 电属性增益 | A级，电队支援位 |\n| 蕾米埃尔(Remiel) | 冰 | 异常 | 冰属性异常 | A级，冰异常对策 |\n\n#### v3.0 卡池更新（6月19日）\n\n- **维林娜(Velina)** — 新风属性限定S级，适配v3.0新风弱BOSS环境\n- 推荐抽取：当前版本最强风C，风弱BOSS对策首选\n\n### 三、版本福利（必领！）\n\n| 福利 | 内容 | 说明 |\n|------|------|------|\n| 3.0版本活动 | **980底片(菲林)** | 完成活动任务即可获得 |\n| 邀约礼盒 | 额外奖励 | 登录领取 |\n| 新手加速 | 养成资源 | 新代理人快速养成 |\n\n⚠️ **980底片等于约5抽以上，务必完成所有活动任务领取！**\n\n### 四、新风弱BOSS（6月19日危局）\n\nv3.0新增**风属性弱点BOSS**，搭配维林娜可高效击破：\n- BOSS弱点：风(Anemo)属性\n- 推荐队伍：维林娜 + 风属性支援 + 生存位\n- 危局难度极高，建议满配维林娜\n\n### 五、新区域与剧情\n\n- **云岌岭·深层区域**：解锁新剧情章节，探索墨韵的秘密\n- **旧城区·重构区域**：高难度探索区域，包含精英怪和隐藏宝箱\n- **新Hollow副本**：对应v3.0的新材料副本和驱动盘副本\n\n### 六、新玩法与系统\n\n1. **突击专精深化**：新增突击值共享机制，突击代理人之间可以传递突击值\n2. **驱动盘强化上限提升**：所有驱动盘强化上限从+15提升至+20\n3. **Hollow侵蚀系统改版**：侵蚀效果更加多样化，增加策略深度\n4. **新挑战模式**：周期性极限挑战，提供丰厚奖励\n\n### 七、Banner时间表\n\n| Phase | 代理人 | 属性 | 时间 |\n|-------|--------|------|------|\n| Phase 1 | 普罗米亚(Promeia) | 火 | 6/17 - 7/1 |\n| Phase 1B | 星光·比利·奇德 | 物理 | 6/17 - 7/1 |\n| Phase 1C | **维林娜(Velina)** | **风** | 6/19 - 7/3 |\n| Phase 2 | 叶瞬光(Ye Shunguang) | 利刃 | 7/1 - 7/15 |\n| Phase 2B | 蕾米埃尔(Remiel) | 冰 | 7/1 - 7/15 |\n| 复刻 | 艾莲(Ellen) | 冰 | 7/1 - 7/15 |\n\n### 八、抽卡建议\n\n1. **优先推荐**：普罗米亚(Promeia) — 当前最强火C，适配多种队伍\n2. **高性价比**：星光·比利 — 比利免费获取，星光形态是质变提升\n3. **强度党**：叶瞬光 — 利刃属性核心，如果你有利刃体系需求\n4. **维林娜**: 新风C，风弱BOSS必带，当前环境对策首选\n5. **XP党**：按喜好抽取，v3.0每个角色都有独特定位\n\n### 九、资源准备清单\n\n- 提前储备**丁尼**（新角色养成消耗大量金币）\n- 刷好**火属性突破材料**（普罗米亚需求量大）\n- 准备**菲林**（至少准备一个大保底的量）\n- 保留**驱动盘体力药**（新副本需要集中刷取）",
@@ -868,7 +868,36 @@
         "answer": "Jane does not have a dedicated signature W-Engine. Fusion Compiler (Grace's signature) is the best option and performs excellently on her. The A-Rank Magnetic Storm from the shop is a strong free alternative at roughly 85% effectiveness.",
         "answerZh": "简没有专属的音擎。融合编译器(格莉丝专属)是最佳选择且在简上表现优秀。商店兑换的A级磁暴音擎是强力的免费替代，效果约为专属的85%。"
       }
-    ]
+    ],
+    "serpTitle": {
+      "en": "Jane Doe Build Guide: Best W-Engines, Drive Discs & Teams",
+      "zh": "简·杜配装攻略：最佳音擎、驱动盘与配队",
+      "ja": "Jane Doe ビルド：おすすめWエンジン、ドライブ、編成"
+    },
+    "serpDescription": {
+      "en": "ZZZ Jane Doe build guide with best W-Engines, Drive Disc sets, Anomaly stat priority, skill order, teams, banner context, and F2P alternatives.",
+      "zh": "绝区零简·杜配装攻略，整理最佳音擎、驱动盘、异常属性词条、技能优先级、配队、卡池上下文和零氪替代。",
+      "ja": "Jane DoeのWエンジン、ドライブ、異常ステータス、スキル優先度、編成、バナー、無課金代替を整理。"
+    },
+    "quickFacts": {
+      "en": [
+        "Use this page for Jane Doe build, best W-Engine, Drive Disc, Anomaly stats, and team searches.",
+        "Secure the agent and core Drive Disc setup before spending extra Polychromes on signature upgrades.",
+        "Read with current ZZZ banners, W-Engine guide, and Drive Disc guide for pull and build decisions."
+      ],
+      "zh": [
+        "用于承接 Jane Doe build、简·杜配装、音擎、驱动盘和异常词条搜索。",
+        "先确认代理人和核心驱动盘，再考虑专属升级。",
+        "建议和当前卡池、音擎攻略、驱动盘攻略一起看。"
+      ],
+      "ja": [
+        "Jane Doe build、Wエンジン、ドライブ、異常ステータス検索向け。",
+        "代理人と核心ドライブを先に確保し、餅武器は後で検討。",
+        "現在バナー、Wエンジン、ドライブ攻略と一緒に確認。"
+      ]
+    },
+    "updatedAt": "2026-08-12",
+    "currentVersion": "ZZZ v3.1 Jane Doe build route"
   },
   {
     "id": "banner-schedule-guide",
@@ -1097,7 +1126,36 @@
         "answer": "For exploration and adventure, start with Genshin Impact — it has the most content and polish after years of updates. For a relaxed experience, try Honkai: Star Rail. For pure action, pick ZZZ. If you want something fresh with improving quality, try Wuthering Waves. All four have active communities and regular updates, so you can't go wrong.",
         "answerZh": "喜欢探索冒险就选原神——经过多年更新，内容量最大、完成度最高。想要轻松体验就选崩铁。追求动作手感就选绝区零。想体验不断进步的新作就选鸣潮。四款都有活跃社区和稳定更新，无论选哪款都不会失望。"
       }
-    ]
+    ],
+    "serpTitle": {
+      "en": "Best Anime Gacha Game to Play: Genshin vs HSR vs ZZZ vs WuWa",
+      "zh": "二次元抽卡游戏怎么选：原神、崩铁、绝区零、鸣潮对比",
+      "ja": "おすすめガチャゲーム比較：原神・HSR・ZZZ・鳴潮"
+    },
+    "serpDescription": {
+      "en": "Compare Genshin, Honkai: Star Rail, ZZZ, and WuWa by combat, exploration, daily grind, F2P value, story, banners, codes, and newcomer route.",
+      "zh": "从战斗、探索、日常肝度、零氪体验、剧情、当前卡池、兑换码和新手路线对比原神、崩铁、绝区零、鸣潮。",
+      "ja": "戦闘、探索、日課、無課金、物語、現在バナー、コード、初心者ルートで原神・HSR・ZZZ・鳴潮を比較。"
+    },
+    "quickFacts": {
+      "en": [
+        "Choose by gameplay loop and time cost first, not only current hype.",
+        "Genshin and WuWa fit open-world exploration; HSR fits turn-based and lower daily pressure; ZZZ fits fast urban action.",
+        "Before starting, check each game's current banner, codes, version hub, and beginner route."
+      ],
+      "zh": [
+        "先按玩法循环和时间成本选，不只看当前热度。",
+        "原神/鸣潮偏大世界探索，崩铁偏回合与省时间，绝区零偏快节奏都市动作。",
+        "入坑前先看各游戏当前卡池、兑换码、版本专题和新手路线。"
+      ],
+      "ja": [
+        "流行だけでなく、玩法ループと日課時間で選びます。",
+        "探索なら原神/鳴潮、時短ターン制ならHSR、都市アクションならZZZ。",
+        "始める前に現在バナー、コード、版本特集、初心者ルートを確認。"
+      ]
+    },
+    "updatedAt": "2026-08-12",
+    "currentVersion": "2026 anime gacha comparison route"
   },
   {
     "id": "meta-teams-v3-guide",

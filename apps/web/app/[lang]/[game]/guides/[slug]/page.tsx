@@ -60,7 +60,7 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> 
       heading: { zh: '快速结论：先看当前祈愿、下期卡池和复刻', en: 'Quick answer: check current banner, next banner, and reruns first', ja: '要点：現在、次回、復刻バナーを先に確認' },
       points: {
         zh: ['当前角色池、下期祈愿和复刻预测要一起看。', '抽卡前先确认保底、原石预算和后续版本目标。', '如果只能覆盖一次大保底，优先保证真正补队伍缺口的角色。'],
-        en: ['Use this page to compare the current Genshin banner, next banner, upcoming banners, and rerun timing in one place.', 'Before pulling, check pity, guarantee status, Primogem budget, and future version targets.', 'If you only have one full guarantee, prioritize the character that fixes a real team gap.'],
+        en: ['Use this as a Genshin current banner, next banner, rerun, and Primogem pull-plan page, not just a schedule list.', 'Before pulling, check pity, guarantee status, remaining Luna VIII income, redeem codes, and future version targets.', 'If you only have one full guarantee, prioritize the character that fixes a real team gap before chasing weapons.'],
         ja: ['現在、次回、復刻予想を同じ場所で確認します。', '引く前に天井、保証、原石、次版本目標を確認します。', '天井一回分なら編成不足を解決するキャラを優先します。'],
       },
     },
@@ -78,7 +78,7 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> 
       heading: { zh: '快速结论：先看当前跃迁、下期和复刻', en: 'Quick answer: check current warp, next banner, and reruns first', ja: '要点：現在、次回、復刻を先に確認' },
       points: {
         zh: ['当前跃迁、下期复刻和 Fate/联动目标要一起规划。', '抽卡前先算星琼、大小保底和光锥风险。', '资源有限时只保一个角色目标，光锥放后面。'],
-        en: ['Compare the current warp, next banner, reruns, and Fate/collab targets together.', 'Before pulling, calculate Stellar Jade, guarantee state, and Light Cone risk.', 'With limited resources, secure one character target first and delay Light Cones.'],
+        en: ['Use this as an HSR current banner, next warp, rerun, and Stellar Jade pull-plan page, not just a schedule list.', 'Before pulling, compare v4.4 live warps, Fate/collab targets, pity state, redeem codes, and Light Cone risk.', 'With limited resources, secure one character target first and delay Light Cones.'],
         ja: ['現在跳躍、次回、復刻、Fate/コラボ目標を一緒に計画します。', '星玉、保証、光円錐リスクを先に計算します。', '資源が少ない時はキャラ一人を優先します。'],
       },
     },
@@ -96,7 +96,7 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> 
       heading: { zh: '快速结论：先看当前卡池、下期和复刻', en: 'Quick answer: check current banner, next banner, and reruns first', ja: '要点：現在、次回、復刻を先に確認' },
       points: {
         zh: ['当前 UP、下期目标和复刻预测要一起看。', '角色池和武器池保底分开计算。', '星声紧张时先保角色，再追武器。'],
-        en: ['Compare current rate-ups, next targets, and rerun timing together.', 'Track character pity and weapon pity separately.', 'If Astrite is tight, secure the character before chasing weapons.'],
+        en: ['Use this as a WuWa current banner, next banner, rerun, and Astrite pull-plan page, not just a schedule list.', 'Compare v3.5 rate-ups, next targets, rerun timing, redeem codes, and version income together.', 'Track character pity and weapon pity separately; if Astrite is tight, secure the character before chasing weapons.'],
         ja: ['現在UP、次回目標、復刻予想を一緒に確認。', 'キャラ天井と武器天井は分けて計算。', '星声が少ない時はキャラ優先。'],
       },
     },
@@ -192,6 +192,18 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
     'banner-schedule-guide': [
       { href: '/zzz/version', label: { zh: 'v3.1 专题', en: 'v3.1 hub', ja: 'v3.1特集' }, description: { zh: '当前代理人、奖励和平台入口。', en: 'Current agents, rewards, and platform routes.', ja: '現在代理人、報酬、平台。' } },
       { href: '/zzz/guides/w-engine-guide', label: { zh: '音擎指南', en: 'W-Engine guide', ja: '音動機攻略' }, description: { zh: '抽到代理人后再看。', en: 'Open after securing the agent.', ja: '代理人確保後に確認。' } },
+    ],
+    'v3-0-version-guide': [
+      { href: '/zzz/guides/banner-schedule-guide', label: { zh: '当前卡池', en: 'Current banners', ja: '現在バナー' }, description: { zh: '先看 3.1 当前代理人、复刻和菲林规划。', en: 'Check live v3.1 agents, reruns, and Polychrome planning.', ja: 'v3.1代理人、復刻、菲林計画を確認。' } },
+      { href: '/zzz/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '回顾版本前先补当前可领资源。', en: 'Claim live rewards before using the version recap.', ja: '振り返り前に現在の報酬を回収。' } },
+    ],
+    'cross-game-comparison-guide': [
+      { href: '/zzz/guides/banner-schedule-guide', label: { zh: '绝区零当前卡池', en: 'ZZZ current banners', ja: 'ZZZ現在バナー' }, description: { zh: '决定入坑前先看当前代理人和菲林规划。', en: 'Before starting, check live agents and Polychrome planning.', ja: '開始前に現在代理人と菲林計画を確認。' } },
+      { href: '/genshin/guides/banner-schedule-guide', label: { zh: '原神当前祈愿', en: 'Genshin current banners', ja: '原神現在バナー' }, description: { zh: '大世界探索路线继续看原神卡池和原石。', en: 'For open-world exploration, compare Genshin banners and Primogems.', ja: '探索重視なら原神バナーと原石へ。' } },
+    ],
+    'build-jane-doe': [
+      { href: '/zzz/guides/banner-schedule-guide', label: { zh: '当前卡池', en: 'Current banners', ja: '現在バナー' }, description: { zh: '先确认简·杜相关卡池和菲林预算。', en: 'Check Jane Doe banner context and Polychrome budget first.', ja: 'Jane Doeバナーと菲林予算を確認。' } },
+      { href: '/zzz/guides/w-engine-guide', label: { zh: '音擎替代', en: 'W-Engine alternatives', ja: '音擎代替' }, description: { zh: '专属前先看 A 级替代和音擎保底。', en: 'Review A-Rank alternatives and W-Engine pity before signatures.', ja: '餅武器前にAランク代替と天井を確認。' } },
     ],
     'steam-3-0-start-guide': [
       { href: '/zzz/version', label: { zh: 'v3.1 当前专题', en: 'Live v3.1 hub', ja: 'v3.1特集' }, description: { zh: '先走当前版本入口。', en: 'Start from the current version route.', ja: '現在版本から開始。' } },
