@@ -207,6 +207,14 @@ const GUIDE_FALLBACK_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
   ],
 };
 
+const GUIDE_INTENT_GROUPS = [
+  ['banner', 'schedule', 'wish', 'pity', 'pull', 'gacha', '祈愿', '卡池', '保底', '抽卡'],
+  ['comparison', 'compare', 'vs', '对比', '横评'],
+  ['farming', 'route', 'material', '材料', '路线'],
+  ['team', 'meta', 'tier', 'build', '配队', '强度', '排行'],
+  ['echo', 'disc', 'engine', 'weapon', 'artifact', '声骸', '驱动盘', '音擎', '武器', '圣遗物'],
+] as const;
+
 async function getGuideRuntime(gameId: GameId): Promise<GuideRuntime> {
   switch (gameId) {
     case 'genshin': {
@@ -574,18 +582,7 @@ function NextStepSection({ gameId, currentSlug, locale }: { gameId: GameId; curr
 }
 
 function RelatedGuidesSection({ runtime, gameId, current, locale }: { runtime: GuideRuntime; gameId: GameId; current: GuideLike; locale: SupportedLocale }) {
-  const currentTags = current.tags ?? [];
-  const related = runtime.guides
-    .filter((guide) => guide.id !== current.id)
-    .map((guide) => {
-      const guideTags = guide.tags ?? [];
-      const sameCategory = guide.category === current.category ? 2 : 0;
-      const sharedTags = guideTags.filter((tag) => currentTags.includes(tag)).length;
-      return { guide, score: sameCategory + sharedTags + getGuideIntentScore(current, guide) };
-    })
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 4)
-    .map(({ guide }) => guide);
+  const related = selectRelatedGuides(runtime.guides, current);
 
   if (related.length === 0) return null;
 
@@ -606,23 +603,56 @@ function RelatedGuidesSection({ runtime, gameId, current, locale }: { runtime: G
   );
 }
 
-function getGuideIntentScore(current: GuideLike, candidate: GuideLike) {
-  const currentTerms = [current.id, current.category, ...(current.tags ?? [])].join(' ').toLowerCase();
-  const candidateTerms = [candidate.id, candidate.category, ...(candidate.tags ?? [])].join(' ').toLowerCase();
+function selectRelatedGuides(guides: GuideLike[], current: GuideLike) {
+  const currentTags = new Set(current.tags ?? []);
+  const currentIntentMask = getGuideIntentMask(current);
+  const top: Array<{ guide: GuideLike; score: number; index: number }> = [];
 
-  const intentGroups = [
-    ['banner', 'schedule', 'wish', 'pity', 'pull', 'gacha', '祈愿', '卡池', '保底', '抽卡'],
-    ['comparison', 'compare', 'vs', '对比', '横评'],
-    ['farming', 'route', 'material', '材料', '路线'],
-    ['team', 'meta', 'tier', 'build', '配队', '强度', '排行'],
-    ['echo', 'disc', 'engine', 'weapon', 'artifact', '声骸', '驱动盘', '音擎', '武器', '圣遗物'],
-  ];
+  guides.forEach((guide, index) => {
+    if (guide.id === current.id) return;
 
-  return intentGroups.reduce((score, group) => {
-    const currentMatches = group.some((term) => currentTerms.includes(term));
-    const candidateMatches = group.some((term) => candidateTerms.includes(term));
-    return score + (currentMatches && candidateMatches ? 3 : 0);
+    const score = getRelatedGuideScore(current, guide, currentTags, currentIntentMask);
+    const item = { guide, score, index };
+    const insertAt = top.findIndex((candidate) => score > candidate.score || (score === candidate.score && index < candidate.index));
+
+    if (insertAt === -1) {
+      if (top.length < 4) top.push(item);
+      return;
+    }
+
+    top.splice(insertAt, 0, item);
+    if (top.length > 4) top.length = 4;
+  });
+
+  return top.map(({ guide }) => guide);
+}
+
+function getRelatedGuideScore(current: GuideLike, candidate: GuideLike, currentTags: Set<string>, currentIntentMask: number) {
+  const sameCategory = candidate.category === current.category ? 2 : 0;
+  const sharedTags = (candidate.tags ?? []).reduce((count, tag) => count + (currentTags.has(tag) ? 1 : 0), 0);
+  const sharedIntent = countSharedIntentBits(currentIntentMask & getGuideIntentMask(candidate)) * 3;
+
+  return sameCategory + sharedTags + sharedIntent;
+}
+
+function getGuideIntentMask(guide: GuideLike) {
+  const terms = [guide.id, guide.category, ...(guide.tags ?? [])].join(' ').toLowerCase();
+
+  return GUIDE_INTENT_GROUPS.reduce((mask, group, index) => {
+    return group.some((term) => terms.includes(term)) ? mask | (1 << index) : mask;
   }, 0);
+}
+
+function countSharedIntentBits(mask: number) {
+  let count = 0;
+  let value = mask;
+
+  while (value > 0) {
+    count += value & 1;
+    value >>= 1;
+  }
+
+  return count;
 }
 
 function isGameId(gameId: string): gameId is GameId {

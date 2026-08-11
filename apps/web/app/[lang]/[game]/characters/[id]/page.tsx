@@ -16,6 +16,7 @@ import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 import { CHARACTER_META_OVERRIDES } from './character-detail-shared';
 
+export const dynamicParams = false;
 
 
 type Props = {
