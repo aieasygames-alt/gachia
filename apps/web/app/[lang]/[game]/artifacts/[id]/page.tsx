@@ -1,29 +1,9 @@
 import { GAMES, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { notFound } from 'next/navigation';
-import {
-  artifactSets as genshinArtifactSets,
-  getArtifactSetById,
-  getArtifactSetName,
-  getArtifactSetDesc2pc,
-  getArtifactSetDesc4pc,
-} from '@gachia/data/games/genshin/artifacts';
-import {
-  getGenshinCharacterById,
-  getGenshinCharacterName,
-} from '@gachia/data/games/genshin/characters';
-import {
-  relicSets,
-  getRelicSetById as getStarRailRelicSetById,
-  getRelicSetName as getStarRailRelicSetName,
-  getRelicSetDesc2pc as getStarRailRelicSetDesc2pc,
-  getRelicSetDesc4pc as getStarRailRelicSetDesc4pc,
-} from '@gachia/data/games/starrail/relics';
-import {
-  getStarRailCharacterById,
-  getStarRailCharacterName,
-} from '@gachia/data/games/starrail/characters';
 import { Link } from '@/lib/i18n/navigation';
+import { getArtifactDetailData, getArtifactsForStaticParams } from '@/lib/game-data/artifacts';
+import type { ArtifactDetailData } from '@/lib/game-data/artifacts';
 
 const RARITY_COLORS: Record<number, string> = { 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };
 
@@ -34,13 +14,12 @@ const ARTIFACT_PIECE_NAMES = {
 };
 
 export async function generateStaticParams() {
-  const genshinParams = LOCALES.flatMap((lang) =>
-    genshinArtifactSets.map((set) => ({ lang, game: 'genshin', id: set.id }))
-  );
-  const starrailParams = LOCALES.flatMap((lang) =>
-    relicSets.map((set) => ({ lang, game: 'starrail', id: set.id }))
-  );
-  return [...genshinParams, ...starrailParams];
+  const gameIds: GameId[] = ['genshin', 'starrail'];
+  const params = await Promise.all(gameIds.map(async (gameId) => {
+    const sets = await getArtifactsForStaticParams(gameId);
+    return LOCALES.flatMap((lang) => sets.map((set) => ({ lang, game: gameId, id: set.id })));
+  }));
+  return params.flat();
 }
 
 export async function generateMetadata({
@@ -52,36 +31,17 @@ export async function generateMetadata({
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
   const gameName = GAMES[gameId]?.name[locale] ?? '';
+  const data = await getArtifactDetailData(gameId, id, locale);
+  if (!data) return {};
 
-  if (gameId === 'genshin') {
-    const set = getArtifactSetById(id);
-    if (!set) return {};
-    const name = getArtifactSetName(set, locale);
-    return {
-      title: `${name} - ${gameName} Wiki`,
-      description: buildArtifactDescription(name, getArtifactSetDesc2pc(set, locale), set.bestFor.map(cid => { const c = getGenshinCharacterById(cid); return c ? getGenshinCharacterName(c, locale) : null; }).filter((x): x is string => x !== null), locale),
-      alternates: {
-        canonical: `https://gachia.com/${locale}/${gameId}/artifacts/${id}`,
-        languages: { 'zh-Hans': `https://gachia.com/zh/${gameId}/artifacts/${id}`, en: `https://gachia.com/en/${gameId}/artifacts/${id}`, ja: `https://gachia.com/ja/${gameId}/artifacts/${id}`, 'x-default': `https://gachia.com/zh/${gameId}/artifacts/${id}` },
-      },
-    };
-  }
-
-  if (gameId === 'starrail') {
-    const set = getStarRailRelicSetById(id);
-    if (!set) return {};
-    const name = getStarRailRelicSetName(set, locale);
-    return {
-      title: `${name} - ${gameName} Wiki`,
-      description: buildArtifactDescription(name, getStarRailRelicSetDesc2pc(set, locale), set.bestFor.map(cid => { const c = getStarRailCharacterById(cid); return c ? getStarRailCharacterName(c, locale) : null; }).filter((x): x is string => x !== null), locale),
-      alternates: {
-        canonical: `https://gachia.com/${locale}/${gameId}/artifacts/${id}`,
-        languages: { 'zh-Hans': `https://gachia.com/zh/${gameId}/artifacts/${id}`, en: `https://gachia.com/en/${gameId}/artifacts/${id}`, ja: `https://gachia.com/ja/${gameId}/artifacts/${id}`, 'x-default': `https://gachia.com/zh/${gameId}/artifacts/${id}` },
-      },
-    };
-  }
-
-  return {};
+  return {
+    title: `${data.name} - ${gameName} Wiki`,
+    description: buildArtifactDescription(data.name, data.bonus2pc, data.bestFor.map((char) => char.name), locale),
+    alternates: {
+      canonical: `https://gachia.com/${locale}/${gameId}/artifacts/${id}`,
+      languages: { 'zh-Hans': `https://gachia.com/zh/${gameId}/artifacts/${id}`, en: `https://gachia.com/en/${gameId}/artifacts/${id}`, ja: `https://gachia.com/ja/${gameId}/artifacts/${id}`, 'x-default': `https://gachia.com/zh/${gameId}/artifacts/${id}` },
+    },
+  };
 }
 
 export default async function ArtifactDetailPage({
@@ -92,63 +52,46 @@ export default async function ArtifactDetailPage({
   const { lang, game, id } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
-  const gameConfig = GAMES[gameId];
+  const data = await getArtifactDetailData(gameId, id, locale);
 
-  if (gameId === 'genshin') {
-    const set = getArtifactSetById(id);
-    if (!set) notFound();
-    return <GenshinArtifactDetail set={set} locale={locale} />;
-  }
+  if (!data) notFound();
 
-  if (gameId === 'starrail') {
-    const set = getStarRailRelicSetById(id);
-    if (!set) notFound();
-    return <StarRailRelicDetail set={set} locale={locale} />;
-  }
-
-  notFound();
+  return <ArtifactDetail data={data} locale={locale} />;
 }
 
-// --- Genshin Artifact Detail ---
-
-function GenshinArtifactDetail({
-  set,
-  locale,
-}: {
-  set: NonNullable<ReturnType<typeof getArtifactSetById>>;
-  locale: SupportedLocale;
-}) {
-  const gameName = GAMES.genshin.name[locale];
-  const name = getArtifactSetName(set, locale);
-  const pieces = locale in ARTIFACT_PIECE_NAMES ? ARTIFACT_PIECE_NAMES[locale as keyof typeof ARTIFACT_PIECE_NAMES] : ARTIFACT_PIECE_NAMES.en;
+function ArtifactDetail({ data, locale }: { data: ArtifactDetailData; locale: SupportedLocale }) {
+  const gameName = GAMES[data.gameId].name[locale];
+  const artifactLabel = data.gameId === 'genshin'
+    ? locale === 'zh' ? '圣遗物' : locale === 'ja' ? '聖遺物' : 'Artifacts'
+    : locale === 'zh' ? '遗器' : locale === 'ja' ? '遺物' : 'Relics';
 
   return (
     <div>
-      {/* Breadcrumb */}
       <nav className="mb-4 flex items-center gap-2 text-sm text-game-text-muted">
-        <Link href="/genshin" className="hover:text-game-primary">{gameName}</Link>
+        <Link href={`/${data.gameId}` as '/'} className="hover:text-game-primary">{gameName}</Link>
         <span>/</span>
-        <Link href="/genshin/artifacts" className="hover:text-game-primary">
-          {locale === 'zh' ? '圣遗物' : locale === 'ja' ? '聖遺物' : 'Artifacts'}
+        <Link href={`/${data.gameId}/artifacts` as '/'} className="hover:text-game-primary">
+          {artifactLabel}
         </Link>
         <span>/</span>
-        <span className="text-game-text">{name}</span>
+        <span className="text-game-text">{data.name}</span>
       </nav>
 
-      {/* Header */}
       <div className="mb-6 rounded-lg border border-game-border bg-game-surface p-6">
         <div className="flex items-center gap-3">
-          <h1 className="text-2xl font-bold text-game-text">{name}</h1>
-          <span className="text-sm font-bold" style={{ color: RARITY_COLORS[set.rarity] || '#888' }}>
-            {set.rarity}★
-          </span>
+          <h1 className="text-2xl font-bold text-game-text">{data.name}</h1>
+          {data.rarity && (
+            <span className="text-sm font-bold" style={{ color: RARITY_COLORS[data.rarity] || '#888' }}>
+              {data.rarity}★
+            </span>
+          )}
+          {data.type && <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{typeLabel(data.type, locale)}</span>}
         </div>
-        <p className="mt-1 text-sm text-game-text-muted">
-          {locale === 'zh' ? `${nameEnLabel(locale)}: ${set.nameEn}` : ''}
-        </p>
+        {data.nameAlt && locale === 'zh' && (
+          <p className="mt-1 text-sm text-game-text-muted">{nameEnLabel(locale)}: {data.nameAlt}</p>
+        )}
       </div>
 
-      {/* Set Bonuses */}
       <section className="mb-8">
         <h2 className="mb-3 text-lg font-semibold text-game-text">
           {locale === 'zh' ? '套装效果' : locale === 'ja' ? 'セット効果' : 'Set Bonuses'}
@@ -156,198 +99,111 @@ function GenshinArtifactDetail({
         <div className="space-y-3">
           <div className="rounded-lg border border-game-border bg-game-surface p-4">
             <div className="mb-1 text-sm font-medium text-game-primary">2{pcLabel(locale)}</div>
-            <p className="text-sm text-game-text-muted">{getArtifactSetDesc2pc(set, locale)}</p>
+            <p className="text-sm text-game-text-muted">{data.bonus2pc}</p>
           </div>
-          <div className="rounded-lg border border-game-border bg-game-surface p-4">
-            <div className="mb-1 text-sm font-medium text-game-primary">4{pcLabel(locale)}</div>
-            <p className="text-sm text-game-text-muted">{getArtifactSetDesc4pc(set, locale)}</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Artifact Pieces */}
-      <section className="mb-8">
-        <h2 className="mb-3 text-lg font-semibold text-game-text">
-          {locale === 'zh' ? '圣遗物部件' : locale === 'ja' ? '聖遺物パーツ' : 'Artifact Pieces'}
-        </h2>
-        <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-5">
-          {pieces.map((piece, i) => (
-            <div key={i} className="rounded-lg border border-game-border bg-game-surface p-3 text-center text-sm">
-              <div className="text-xs text-game-text-muted">{piece}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Best For */}
-      {set.bestFor.length > 0 && (
-        <section className="mb-8">
-          <h2 className="mb-3 text-lg font-semibold text-game-text">
-            {locale === 'zh' ? '最佳适配角色' : locale === 'ja' ? '最適キャラクター' : 'Best Characters'}
-          </h2>
-          <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {set.bestFor.map((charId) => {
-              const char = getGenshinCharacterById(charId);
-              if (!char) return null;
-              return (
-                <Link
-                  key={charId}
-                  href={`/genshin/characters/${charId}` as '/'}
-                  className="flex items-center gap-3 rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary/50"
-                >
-                  <span className="font-medium text-game-text">{getGenshinCharacterName(char, locale)}</span>
-                </Link>
-              );
-            })}
-          </div>
-        </section>
-      )}
-
-      {/* Other Characters */}
-      {set.characters.length > 0 && (
-        <section className="mb-8">
-          <h2 className="mb-3 text-lg font-semibold text-game-text">
-            {locale === 'zh' ? '可使用角色' : locale === 'ja' ? '使用可能キャラクター' : 'All Characters'}
-          </h2>
-          <div className="flex flex-wrap gap-2">
-            {set.characters.map((charId) => {
-              const char = getGenshinCharacterById(charId);
-              if (!char) return null;
-              const isBest = set.bestFor.includes(charId);
-              return (
-                <Link
-                  key={charId}
-                  href={`/genshin/characters/${charId}` as '/'}
-                  className={`rounded px-3 py-1.5 text-sm transition-colors ${
-                    isBest
-                      ? 'bg-game-primary/20 text-game-primary font-medium'
-                      : 'bg-game-surface-alt text-game-text-muted hover:text-game-text'
-                  }`}
-                >
-                  {getGenshinCharacterName(char, locale)}
-                </Link>
-              );
-            })}
-          </div>
-        </section>
-      )}
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: gameName, item: `https://gachia.com/${locale}/genshin` },
-              { '@type': 'ListItem', position: 2, name: locale === 'zh' ? '圣遗物' : locale === 'ja' ? '聖遺物' : 'Artifacts', item: `https://gachia.com/${locale}/genshin/artifacts` },
-              { '@type': 'ListItem', position: 3, name },
-            ],
-          }),
-        }}
-      />
-    </div>
-  );
-}
-
-// --- Star Rail Relic Detail ---
-
-function StarRailRelicDetail({
-  set,
-  locale,
-}: {
-  set: NonNullable<ReturnType<typeof getStarRailRelicSetById>>;
-  locale: SupportedLocale;
-}) {
-  const gameName = GAMES.starrail.name[locale];
-  const name = getStarRailRelicSetName(set, locale);
-  const typeLabel = set.type === 'cavern'
-    ? (locale === 'zh' ? '洞窟遗器' : locale === 'ja' ? '洞窟遺物' : 'Cavern Relic')
-    : (locale === 'zh' ? '位面饰品' : locale === 'ja' ? '次元装飾品' : 'Planar Ornament');
-
-  return (
-    <div>
-      {/* Breadcrumb */}
-      <nav className="mb-4 flex items-center gap-2 text-sm text-game-text-muted">
-        <Link href="/starrail" className="hover:text-game-primary">{gameName}</Link>
-        <span>/</span>
-        <Link href="/starrail/artifacts" className="hover:text-game-primary">
-          {locale === 'zh' ? '遗器' : locale === 'ja' ? '遺物' : 'Relics'}
-        </Link>
-        <span>/</span>
-        <span className="text-game-text">{name}</span>
-      </nav>
-
-      {/* Header */}
-      <div className="mb-6 rounded-lg border border-game-border bg-game-surface p-6">
-        <div className="flex items-center gap-3">
-          <h1 className="text-2xl font-bold text-game-text">{name}</h1>
-          <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{typeLabel}</span>
-        </div>
-      </div>
-
-      {/* Set Bonuses */}
-      <section className="mb-8">
-        <h2 className="mb-3 text-lg font-semibold text-game-text">
-          {locale === 'zh' ? '套装效果' : locale === 'ja' ? 'セット効果' : 'Set Bonuses'}
-        </h2>
-        <div className="space-y-3">
-          <div className="rounded-lg border border-game-border bg-game-surface p-4">
-            <div className="mb-1 text-sm font-medium text-game-primary">2{pcLabel(locale)}</div>
-            <p className="text-sm text-game-text-muted">{getStarRailRelicSetDesc2pc(set, locale)}</p>
-          </div>
-          {set.bonus4pc && (
+          {data.bonus4pc && (
             <div className="rounded-lg border border-game-border bg-game-surface p-4">
               <div className="mb-1 text-sm font-medium text-game-primary">4{pcLabel(locale)}</div>
-              <p className="text-sm text-game-text-muted">{getStarRailRelicSetDesc4pc(set, locale)}</p>
+              <p className="text-sm text-game-text-muted">{data.bonus4pc}</p>
             </div>
           )}
         </div>
       </section>
 
-      {/* Best For */}
-      {set.bestFor.length > 0 && (
-        <section className="mb-8">
-          <h2 className="mb-3 text-lg font-semibold text-game-text">
-            {locale === 'zh' ? '推荐角色' : locale === 'ja' ? 'おすすめキャラクター' : 'Recommended Characters'}
-          </h2>
-          <div className="flex flex-wrap gap-2">
-            {set.bestFor.map((charId) => {
-              const char = getStarRailCharacterById(charId);
-              const charName = char ? getStarRailCharacterName(char, locale) : charId;
-              return (
-                <Link
-                  key={charId}
-                  href={`/starrail/characters/${charId}` as '/'}
-                  className="rounded bg-game-primary/20 px-3 py-1.5 text-sm font-medium text-game-primary transition-colors hover:bg-game-primary/30"
-                >
-                  {charName}
-                </Link>
-              );
-            })}
-          </div>
-        </section>
-      )}
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: gameName, item: `https://gachia.com/${locale}/starrail` },
-              { '@type': 'ListItem', position: 2, name: locale === 'zh' ? '遗器' : locale === 'ja' ? '遺物' : 'Relics', item: `https://gachia.com/${locale}/starrail/artifacts` },
-              { '@type': 'ListItem', position: 3, name },
-            ],
-          }),
-        }}
-      />
+      {data.gameId === 'genshin' && <ArtifactPieces locale={locale} />}
+      {data.bestFor.length > 0 && <BestForSection data={data} locale={locale} />}
+      {data.gameId === 'genshin' && data.characters.length > 0 && <AllCharactersSection data={data} locale={locale} />}
+      <BreadcrumbJsonLd data={data} locale={locale} gameName={gameName} artifactLabel={artifactLabel} />
     </div>
   );
 }
 
-// --- Helpers ---
+function ArtifactPieces({ locale }: { locale: SupportedLocale }) {
+  const pieces = locale in ARTIFACT_PIECE_NAMES ? ARTIFACT_PIECE_NAMES[locale as keyof typeof ARTIFACT_PIECE_NAMES] : ARTIFACT_PIECE_NAMES.en;
+  return (
+    <section className="mb-8">
+      <h2 className="mb-3 text-lg font-semibold text-game-text">
+        {locale === 'zh' ? '圣遗物部件' : locale === 'ja' ? '聖遺物パーツ' : 'Artifact Pieces'}
+      </h2>
+      <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-5">
+        {pieces.map((piece) => (
+          <div key={piece} className="rounded-lg border border-game-border bg-game-surface p-3 text-center text-sm">
+            <div className="text-xs text-game-text-muted">{piece}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function BestForSection({ data, locale }: { data: ArtifactDetailData; locale: SupportedLocale }) {
+  return (
+    <section className="mb-8">
+      <h2 className="mb-3 text-lg font-semibold text-game-text">
+        {data.gameId === 'genshin'
+          ? locale === 'zh' ? '最佳适配角色' : locale === 'ja' ? '最適キャラクター' : 'Best Characters'
+          : locale === 'zh' ? '推荐角色' : locale === 'ja' ? 'おすすめキャラクター' : 'Recommended Characters'}
+      </h2>
+      <div className={data.gameId === 'genshin' ? 'grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4' : 'flex flex-wrap gap-2'}>
+        {data.bestFor.map((char) => (
+          <Link
+            key={char.id}
+            href={char.href as '/'}
+            className={data.gameId === 'genshin'
+              ? 'flex items-center gap-3 rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary/50'
+              : 'rounded bg-game-primary/20 px-3 py-1.5 text-sm font-medium text-game-primary transition-colors hover:bg-game-primary/30'}
+          >
+            <span className="font-medium text-game-text">{char.name}</span>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function AllCharactersSection({ data, locale }: { data: ArtifactDetailData; locale: SupportedLocale }) {
+  return (
+    <section className="mb-8">
+      <h2 className="mb-3 text-lg font-semibold text-game-text">
+        {locale === 'zh' ? '可使用角色' : locale === 'ja' ? '使用可能キャラクター' : 'All Characters'}
+      </h2>
+      <div className="flex flex-wrap gap-2">
+        {data.characters.map((char) => (
+          <Link
+            key={char.id}
+            href={char.href as '/'}
+            className={`rounded px-3 py-1.5 text-sm transition-colors ${
+              char.isBest
+                ? 'bg-game-primary/20 text-game-primary font-medium'
+                : 'bg-game-surface-alt text-game-text-muted hover:text-game-text'
+            }`}
+          >
+            {char.name}
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function BreadcrumbJsonLd({ data, locale, gameName, artifactLabel }: { data: ArtifactDetailData; locale: SupportedLocale; gameName: string; artifactLabel: string }) {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: gameName, item: `https://gachia.com/${locale}/${data.gameId}` },
+            { '@type': 'ListItem', position: 2, name: artifactLabel, item: `https://gachia.com/${locale}/${data.gameId}/artifacts` },
+            { '@type': 'ListItem', position: 3, name: data.name },
+          ],
+        }),
+      }}
+    />
+  );
+}
 
 function pcLabel(locale: SupportedLocale) {
   return locale === 'zh' ? '件套' : locale === 'ja' ? 'セット' : '-Piece Set';
@@ -355,6 +211,11 @@ function pcLabel(locale: SupportedLocale) {
 
 function nameEnLabel(locale: SupportedLocale) {
   return locale === 'zh' ? '英文名' : locale === 'ja' ? '英語名' : 'English Name';
+}
+
+function typeLabel(type: string, locale: SupportedLocale) {
+  if (type === 'cavern') return locale === 'zh' ? '洞窟遗器' : locale === 'ja' ? '洞窟遺物' : 'Cavern Relic';
+  return locale === 'zh' ? '位面饰品' : locale === 'ja' ? '次元装飾品' : 'Planar Ornament';
 }
 
 function buildArtifactDescription(name: string, bonus2pc: string, bestForNames: string[], locale: SupportedLocale) {

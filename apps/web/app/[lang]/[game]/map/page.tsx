@@ -1,41 +1,17 @@
-import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
+import { GAMES, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import type { Metadata } from 'next';
-import {
-  regions as genshinRegions,
-  getRegionName as getGenshinRegionName,
-  getRegionDescription as getGenshinRegionDescription,
-} from '@gachia/data/games/genshin/regions';
-import {
-  regions as wuwaRegions,
-  getRegionName as getWuWaRegionName,
-  getRegionDescription as getWuWaRegionDescription,
-} from '@gachia/data/games/wuwa/regions';
-import {
-  regions as starrailRegions,
-  getRegionName as getStarRailRegionName,
-  getRegionDescription as getStarRailRegionDescription,
-} from '@gachia/data/games/starrail/regions';
-import {
-  regions as nteRegions,
-  getRegionName as getNteRegionName,
-  getRegionDescription as getNteRegionDescription,
-} from '@gachia/data/games/nte/regions';
-import {
-  regions as endfieldRegions,
-  getRegionName as getEndfieldRegionName,
-  getRegionDescription as getEndfieldRegionDescription,
-} from '@gachia/data/games/endfield/regions';
-import { genshinMapData } from '@gachia/data/games/genshin/map-data';
-import type { StarRailRegion } from '@gachia/data/games/starrail/types';
-import type { NteRegion } from '@gachia/data/games/nte/types';
-import type { EndfieldRegion } from '@gachia/data/games/endfield/types';
 import { MapLoader } from './_components/MapLoader';
 import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
+import { getMapPageData } from '@/lib/game-data/maps';
+import type { MapPageData, MapRegionEntry } from '@/lib/game-data/maps';
 
 const REGION_ICONS: Record<string, string> = {
-  mondstadt: '🌬️', liyue: '⛰️', inazuma: '⚡', sumeru: '🌿',
-  fontaine: '💧', natlan: '🔥', chasm: '⛏️',
+  mondstadt: '🌬️', liyue: '⛰️', inazuma: '⚡', sumeru: '🌿', fontaine: '💧', natlan: '🔥', chasm: '⛏️',
+  huanglong: '🐲', 'black-shores': '🌑', rinascita: '🏛️', 'lahae-roi': '🌊', 'new-federation': '🌆',
+  'herta-space-station': '🛰️', 'jarilo-vi': '❄️', 'xianzhou-luofu': '⛵', penacony: '🌙', amphoreus: '🏛️',
+  'central-district': '🏙️', 'industrial-zone': '🏭', 'research-lab': '🔬', 'abyss-zone': '🕳️',
+  'talos-frontier': '🚀', 'originium-mines': '⛏️', 'protocol-city': '🏙️', 'barren-wastes': '🏜️', 'frozen-depths': '❄️',
 };
 
 const BASE_URL = 'https://gachia.com';
@@ -60,10 +36,10 @@ export async function generateMetadata({
         ? `${gameName}島ルートマップ — 拠点、採集、基地候補`
         : `${gameName} Island Route Map — POIs, Farming Routes & Base Spots`
     : locale === 'zh'
-    ? `${gameName}互动地图 — 传送锚点、宝箱、收集品`
-    : locale === 'ja'
-      ? `${gameName}マップ — テレポート、宝箱、コレクション`
-      : `${gameName} Interactive Map — Teleports, Chests & Collectibles`;
+      ? `${gameName}互动地图 — 传送锚点、宝箱、收集品`
+      : locale === 'ja'
+        ? `${gameName}マップ — テレポート、宝箱、コレクション`
+        : `${gameName} Interactive Map — Teleports, Chests & Collectibles`;
   const desc = gameId === 'skjh'
     ? locale === 'zh'
       ? `${gameName}荒岛路线地图预留：4×4km荒岛、一级据点、废弃超市、加油站、高价值据点、安全区/危险区、新手采集线和基地选址建议。`
@@ -71,10 +47,10 @@ export async function generateMetadata({
         ? `${gameName}島ルートマップ：4x4km島、低級拠点、廃スーパー、ガソリンスタンド、高価値拠点、安全区/危険区、採集ルート。`
         : `${gameName} island route map placeholder: 4x4km island, tier-one POIs, abandoned supermarket, gas station, high-value zones, safe and danger routes, and base-spot planning.`
     : locale === 'zh'
-    ? `${gameName}互动地图攻略：传送锚点位置、宝箱分布、材料采集点、世界任务标记。`
-    : locale === 'ja'
-      ? `${gameName}マップ攻略：テレポート位置、宝箱分布、素材採集ポイント。`
-      : `${gameName} interactive map guide: teleport waypoints, chest locations, material farming spots, and world quest markers.`;
+      ? `${gameName}互动地图攻略：传送锚点位置、宝箱分布、材料采集点、世界任务标记。`
+      : locale === 'ja'
+        ? `${gameName}マップ攻略：テレポート位置、宝箱分布、素材採集ポイント。`
+        : `${gameName} interactive map guide: teleport waypoints, chest locations, material farming spots, and world quest markers.`;
   const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/map`, LOCALES);
   const description = ensureMetaLength(desc, locale);
 
@@ -105,32 +81,15 @@ export default async function MapPage({
 
   if (!gameConfig) return null;
 
-  // Genshin gets the interactive map
-  if (gameId === 'genshin') {
-    return <GenshinMapPage locale={locale} />;
-  }
-
-  if (gameId === 'wuwa') {
-    return <WuWaMapPage locale={locale} />;
-  }
-
-  if (gameId === 'starrail') {
-    return <StarRailMapPage locale={locale} />;
-  }
-
-  if (gameId === 'nte') {
-    return <NteMapPage locale={locale} />;
-  }
-
-  if (gameId === 'endfield') {
-    return <EndfieldMapPage locale={locale} />;
-  }
-
   if (gameId === 'skjh') {
     return <SkjhMapPage locale={locale} />;
   }
 
-  // Unsupported games: Coming Soon
+  const data = await getMapPageData(gameId, locale);
+  if (data) {
+    return <RegionMapPage data={data} locale={locale} />;
+  }
+
   return (
     <div>
       <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
@@ -143,6 +102,225 @@ export default async function MapPage({
       </div>
     </div>
   );
+}
+
+function RegionMapPage({ data, locale }: { data: MapPageData; locale: SupportedLocale }) {
+  if (data.gameId === 'genshin' && data.mapData) {
+    const regionNames = Object.fromEntries(data.regions.map((region) => [region.id, { zh: region.name, en: region.name, ja: region.name }]));
+    return (
+      <div>
+        <div className="sr-only">
+          <h2>{locale === 'zh' ? '原神互动地图包含以下区域' : locale === 'ja' ? '原神マップのエリア一覧' : 'Genshin Impact map covers these regions'}</h2>
+          <ul>
+            {Object.entries(regionNames).map(([key, names]) => (
+              <li key={key}>{names[locale] || names.en}</li>
+            ))}
+          </ul>
+          <p>
+            {locale === 'zh'
+              ? '使用互动地图查看传送锚点、七天神像、宝箱、神瞳、材料采集点、世界任务位置。支持标记已收集物品和规划采集路线。'
+              : locale === 'ja'
+                ? 'インタラクティブマップでテレポート、七天神像、宝箱、神瞳、素材採集ポイント、世界任務の位置を確認できます。'
+                : 'Use the interactive map to find teleport waypoints, Statues of the Seven, chests, oculi, material farming spots, and world quest locations.'}
+          </p>
+        </div>
+        <MapLoader mapData={data.mapData} locale={locale} />
+      </div>
+    );
+  }
+
+  const gameConfig = GAMES[data.gameId];
+  const stats = getRegionStats(data.gameId, data.regions, locale);
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {getMapHeading(data.gameId, locale)}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {getRegionCountLabel(data.gameId, data.regions.length, locale)}
+      </p>
+
+      <div className="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+        {stats.map((stat) => (
+          <div key={stat.label} className="rounded-lg border border-game-border bg-game-surface p-3 text-center">
+            <div className="text-lg font-bold text-game-primary">{stat.value}</div>
+            <div className="text-xs text-game-text-muted">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+
+      {data.gameId === 'nte' && <NteLocationAnchors locale={locale} />}
+      <div className="space-y-6">
+        {data.regions.map((region) => (
+          <RegionCard key={region.id} region={region} gameId={data.gameId} locale={locale} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function RegionCard({ region, gameId, locale }: { region: MapRegionEntry; gameId: GameId; locale: SupportedLocale }) {
+  return (
+    <div id={gameId === 'wuwa' ? region.id : undefined} className="scroll-mt-24 overflow-hidden rounded-lg border border-game-border bg-game-surface">
+      <div className="border-b border-game-border bg-game-surface-alt px-6 py-4">
+        <div className="flex items-center gap-3">
+          <span className="text-2xl">{REGION_ICONS[region.id] || '🗺️'}</span>
+          <div>
+            <h2 className="text-lg font-bold text-game-text">{region.name}</h2>
+            <p className="text-sm text-game-text-muted">{region.description}</p>
+          </div>
+        </div>
+      </div>
+      <div className="p-6">
+        <div className="grid gap-6 lg:grid-cols-3">
+          <div>
+            <h3 className="mb-3 text-sm font-semibold text-game-primary">{highlightLabel(gameId, locale)}</h3>
+            <div className="space-y-2">
+              {region.highlights.slice(0, 8).map((highlight) => (
+                <div key={highlight} className="flex items-center gap-2 text-sm text-game-text">
+                  <span className="text-game-primary">•</span>{highlight}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 className="mb-3 text-sm font-semibold text-game-primary">{specialtyLabel(locale)}</h3>
+            <TagList values={region.specialties} />
+            {region.subRegions.length > 0 && (
+              <div className="mt-4">
+                <h3 className="mb-2 text-sm font-semibold text-game-primary">{subRegionLabel(locale)}</h3>
+                <TagList values={region.subRegions} />
+              </div>
+            )}
+          </div>
+          <div className="space-y-4">
+            {region.bosses.length > 0 && <InlineList title={bossLabel(gameId, locale)} icon="👹" values={region.bosses} />}
+            {region.domains.length > 0 && <InlineList title={domainLabel(gameId, locale)} icon="🏛️" values={region.domains} />}
+          </div>
+        </div>
+        {region.tips.length > 0 && (
+          <div className="mt-6 rounded-lg border border-game-border bg-game-surface-alt p-4">
+            <h3 className="mb-2 text-sm font-semibold text-game-primary">💡 {tipLabel(locale)}</h3>
+            <ul className="space-y-1.5">
+              {region.tips.map((tip) => (
+                <li key={tip} className="text-sm text-game-text-muted">• {tip}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function TagList({ values }: { values: string[] }) {
+  return (
+    <div className="flex flex-wrap gap-1.5">
+      {values.map((value) => (
+        <span key={value} className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{value}</span>
+      ))}
+    </div>
+  );
+}
+
+function InlineList({ title, icon, values }: { title: string; icon: string; values: string[] }) {
+  return (
+    <div>
+      <h3 className="mb-2 text-sm font-semibold text-game-primary">{title}</h3>
+      <div className="space-y-1">
+        {values.map((value) => (
+          <div key={value} className="text-sm text-game-text">{icon} {value}</div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+const NTE_LOCATION_SPOTS = [
+  { id: 'hethereau', zh: '海瑟劳', en: 'Hethereau', ja: 'ヘテロー' },
+  { id: 'sixth-street', zh: '六街', en: 'Sixth Street', ja: 'シックスストリート' },
+  { id: 'hollow-zero', zh: '空洞零号', en: 'Hollow Zero', ja: 'ホロウ・ゼロ' },
+  { id: 'lumina-square', zh: '光映广场', en: 'Lumina Square', ja: 'ルミナスクエア' },
+] as const;
+
+function NteLocationAnchors({ locale }: { locale: SupportedLocale }) {
+  return (
+    <section className="mb-8">
+      <h2 className="mb-3 text-lg font-semibold text-game-text">
+        {locale === 'zh' ? '常见地点锚点' : locale === 'ja' ? 'よく見る地点アンカー' : 'Common Location Anchors'}
+      </h2>
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        {NTE_LOCATION_SPOTS.map((spot) => (
+          <article key={spot.id} id={spot.id} className="scroll-mt-24 rounded-lg border border-game-border bg-game-surface p-4">
+            <div className="text-sm font-semibold text-game-primary">
+              {locale === 'zh' ? spot.zh : locale === 'ja' ? spot.ja : spot.en}
+            </div>
+            <div className="mt-1 text-xs text-game-text-muted">
+              {locale === 'zh' ? '地图锚点 / 路线入口' : locale === 'ja' ? 'マップアンカー / ルート入口' : 'Map anchor / route entry'}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function getRegionStats(gameId: GameId, regions: MapRegionEntry[], locale: SupportedLocale) {
+  if (gameId === 'starrail') {
+    return [
+      { value: regions.reduce((sum, region) => sum + (region.spaceAnchors ?? 0), 0), label: locale === 'zh' ? '空间锚点' : locale === 'ja' ? '空間アンカー' : 'Space Anchors' },
+      { value: regions.reduce((sum, region) => sum + (region.calyxes ?? 0), 0), label: locale === 'zh' ? '拟造花萼' : locale === 'ja' ? '花萼' : 'Calyxes' },
+      { value: regions.reduce((sum, region) => sum + (region.echoesOfWar ?? 0), 0), label: locale === 'zh' ? '历战余响' : locale === 'ja' ? '歴戦余響' : 'Echoes of War' },
+      { value: regions.reduce((sum, region) => sum + region.domains.length, 0), label: locale === 'zh' ? '侵蚀隧洞' : locale === 'ja' ? '侵蝕トンネル' : 'Caverns' },
+    ];
+  }
+
+  return [
+    { value: regions.reduce((sum, region) => sum + region.subRegions.length, 0), label: subRegionLabel(locale) },
+    { value: regions.reduce((sum, region) => sum + region.bosses.length, 0), label: locale === 'zh' ? 'Boss' : 'Bosses' },
+    { value: regions.reduce((sum, region) => sum + region.specialties.length, 0), label: specialtyLabel(locale) },
+    { value: regions.reduce((sum, region) => sum + region.domains.length, 0), label: domainLabel(gameId, locale) },
+  ];
+}
+
+function getMapHeading(gameId: GameId, locale: SupportedLocale) {
+  if (gameId === 'starrail') return locale === 'zh' ? '星球攻略' : locale === 'ja' ? '星攻略' : 'World Guide';
+  if (gameId === 'wuwa') return locale === 'zh' ? '地图攻略' : locale === 'ja' ? 'マップ攻略' : 'Map Guide';
+  return locale === 'zh' ? '区域攻略' : locale === 'ja' ? 'エリア攻略' : 'Region Guide';
+}
+
+function getRegionCountLabel(gameId: GameId, count: number, locale: SupportedLocale) {
+  if (gameId === 'starrail') return locale === 'zh' ? `共 ${count} 个星球` : locale === 'ja' ? `${count} 惑星` : `${count} worlds`;
+  return locale === 'zh' ? `共 ${count} 个区域` : locale === 'ja' ? `${count} エリア` : `${count} regions`;
+}
+
+function highlightLabel(gameId: GameId, locale: SupportedLocale) {
+  if (gameId === 'wuwa') return locale === 'zh' ? '探索要点' : locale === 'ja' ? '探索ポイント' : 'Exploration Highlights';
+  return locale === 'zh' ? '区域要点' : locale === 'ja' ? 'エリア情報' : 'Highlights';
+}
+
+function specialtyLabel(locale: SupportedLocale) {
+  return locale === 'zh' ? '区域特产' : locale === 'ja' ? '特産品' : 'Specialties';
+}
+
+function subRegionLabel(locale: SupportedLocale) {
+  return locale === 'zh' ? '子区域' : locale === 'ja' ? 'サブエリア' : 'Sub-Regions';
+}
+
+function bossLabel(gameId: GameId, locale: SupportedLocale) {
+  if (gameId === 'nte') return locale === 'zh' ? '异常Boss' : locale === 'ja' ? '異常Boss' : 'Anomaly Bosses';
+  return locale === 'zh' ? 'Boss' : 'Bosses';
+}
+
+function domainLabel(gameId: GameId, locale: SupportedLocale) {
+  if (gameId === 'starrail') return locale === 'zh' ? '侵蚀隧洞' : locale === 'ja' ? '侵蝕トンネル' : 'Caverns';
+  if (gameId === 'nte' || gameId === 'endfield') return locale === 'zh' ? '挑战关卡' : locale === 'ja' ? '挑戦ステージ' : 'Domains';
+  return locale === 'zh' ? '秘境' : locale === 'ja' ? '秘境' : 'Domains';
+}
+
+function tipLabel(locale: SupportedLocale) {
+  return locale === 'zh' ? '探索提示' : locale === 'ja' ? '探索ヒント' : 'Exploration Tips';
 }
 
 // --- Ashfall Evolution Map Placeholder ---
@@ -272,619 +450,6 @@ function SkjhMapPage({ locale }: { locale: SupportedLocale }) {
               </p>
             </div>
           </article>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-// --- Genshin Map with Interactive Map ---
-
-function GenshinMapPage({ locale }: { locale: SupportedLocale }) {
-  const regionNames: Record<string, Record<string, string>> = {
-    mondstadt: { zh: '蒙德', en: 'Mondstadt', ja: 'モンド' },
-    liyue: { zh: '璃月', en: 'Liyue', ja: '璃月' },
-    inazuma: { zh: '稻妻', en: 'Inazuma', ja: '稲妻' },
-    sumeru: { zh: '须弥', en: 'Sumeru', ja: 'スメール' },
-    fontaine: { zh: '枫丹', en: 'Fontaine', ja: 'フォンテーヌ' },
-    natlan: { zh: '纳塔', en: 'Natlan', ja: 'ナタラン' },
-    chasm: { zh: '层岩巨渊', en: 'The Chasm', ja: '層岩巨淵' },
-  };
-
-  return (
-    <div>
-      {/* SEO-visible content for crawlers */}
-      <div className="sr-only">
-        <h2>{locale === 'zh' ? '原神互动地图包含以下区域' : locale === 'ja' ? '原神マップのエリア一覧' : 'Genshin Impact map covers these regions'}</h2>
-        <ul>
-          {Object.entries(regionNames).map(([key, names]) => (
-            <li key={key}>{names[locale] || names.en}</li>
-          ))}
-        </ul>
-        <p>
-          {locale === 'zh'
-            ? '使用互动地图查看传送锚点、七天神像、宝箱、神瞳、材料采集点、世界任务位置。支持标记已收集物品和规划采集路线。'
-            : locale === 'ja'
-              ? 'インタラクティブマップでテレポート、七天神像、宝箱、神瞳、素材採集ポイント、世界任務の位置を確認できます。'
-              : 'Use the interactive map to find teleport waypoints, Statues of the Seven, chests, oculi, material farming spots, and world quest locations.'}
-        </p>
-      </div>
-      <MapLoader
-        mapData={genshinMapData}
-        locale={locale}
-      />
-    </div>
-  );
-}
-
-// --- Wuthering Waves Map ---
-
-const WUWA_REGION_ICONS: Record<string, string> = {
-  huanglong: '\u{1F432}',
-  'black-shores': '\u{1F311}',
-  rinascita: '\u{1F3DB}\u{FE0F}',
-  'lahae-roi': '\u{1F30A}',
-  'new-federation': '\u{1F306}',
-};
-
-function WuWaMapPage({ locale }: { locale: SupportedLocale }) {
-  const regions = wuwaRegions;
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.wuwa.theme.primary }}>
-        {locale === 'zh' ? '地图攻略' : locale === 'ja' ? 'マップ攻略' : 'Map Guide'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${regions.length} 个区域` : locale === 'ja' ? `${regions.length} エリア` : `${regions.length} regions`}
-      </p>
-
-      {/* Region stats */}
-      <div className="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <div className="rounded-lg border border-game-border bg-game-surface p-3 text-center">
-          <div className="text-lg font-bold text-game-primary">
-            {regions.reduce((s, r) => s + r.subRegions.length, 0)}
-          </div>
-          <div className="text-xs text-game-text-muted">
-            {locale === 'zh' ? '子区域' : locale === 'ja' ? 'サブエリア' : 'Sub-Regions'}
-          </div>
-        </div>
-        <div className="rounded-lg border border-game-border bg-game-surface p-3 text-center">
-          <div className="text-lg font-bold text-game-primary">
-            {regions.reduce((s, r) => s + r.bosses.length, 0)}
-          </div>
-          <div className="text-xs text-game-text-muted">
-            {locale === 'zh' ? 'Boss' : 'Bosses'}
-          </div>
-        </div>
-        <div className="rounded-lg border border-game-border bg-game-surface p-3 text-center">
-          <div className="text-lg font-bold text-game-primary">
-            {regions.reduce((s, r) => s + r.specialties.length, 0)}
-          </div>
-          <div className="text-xs text-game-text-muted">
-            {locale === 'zh' ? '区域特产' : locale === 'ja' ? '特産品' : 'Specialties'}
-          </div>
-        </div>
-        <div className="rounded-lg border border-game-border bg-game-surface p-3 text-center">
-          <div className="text-lg font-bold text-game-primary">
-            {regions.reduce((s, r) => s + r.domains.length, 0)}
-          </div>
-          <div className="text-xs text-game-text-muted">
-            {locale === 'zh' ? '秘境' : locale === 'ja' ? '秘境' : 'Domains'}
-          </div>
-        </div>
-      </div>
-
-      {/* Region cards */}
-      <div className="space-y-6">
-        {regions.map((region) => (
-          <div key={region.id} id={region.id} className="scroll-mt-24 rounded-lg border border-game-border bg-game-surface overflow-hidden">
-            <div className="border-b border-game-border bg-game-surface-alt px-6 py-4">
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">{WUWA_REGION_ICONS[region.id] || '🗺️'}</span>
-                <div>
-                  <h2 className="text-lg font-bold text-game-text">
-                    {getWuWaRegionName(region, locale)}
-                  </h2>
-                  <p className="text-sm text-game-text-muted">
-                    {getWuWaRegionDescription(region, locale)}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6">
-              <div className="grid gap-6 lg:grid-cols-3">
-                <div>
-                  <h3 className="mb-3 text-sm font-semibold text-game-primary">
-                    {locale === 'zh' ? '探索要点' : locale === 'ja' ? '探索ポイント' : 'Exploration Highlights'}
-                  </h3>
-                  <div className="space-y-2">
-                    {region.highlights.slice(0, 8).map((h, i) => (
-                      <div key={i} className="flex items-center gap-2 text-sm text-game-text">
-                        <span className="text-game-primary">•</span>
-                        {h}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="mb-3 text-sm font-semibold text-game-primary">
-                    {locale === 'zh' ? '区域特产' : locale === 'ja' ? '特産品' : 'Local Specialties'}
-                  </h3>
-                  <div className="flex flex-wrap gap-1.5">
-                    {region.specialties.map((s) => (
-                      <span key={s} className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">
-                        {s}
-                      </span>
-                    ))}
-                  </div>
-                  {region.subRegions.length > 0 && (
-                    <div className="mt-4">
-                      <h3 className="mb-2 text-sm font-semibold text-game-primary">
-                        {locale === 'zh' ? '子区域' : locale === 'ja' ? 'サブエリア' : 'Sub-Regions'}
-                      </h3>
-                      <div className="flex flex-wrap gap-1.5">
-                        {region.subRegions.map((sr) => (
-                          <span key={sr} className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">
-                            {sr}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-
-                <div className="space-y-4">
-                  {region.bosses.length > 0 && (
-                    <div>
-                      <h3 className="mb-2 text-sm font-semibold text-game-primary">
-                        {locale === 'zh' ? 'Boss' : 'Bosses'}
-                      </h3>
-                      <div className="space-y-1">
-                        {region.bosses.map((b, i) => (
-                          <div key={i} className="text-sm text-game-text">
-                            👹 {b}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                  {region.domains.length > 0 && (
-                    <div>
-                      <h3 className="mb-2 text-sm font-semibold text-game-primary">
-                        {locale === 'zh' ? '秘境' : locale === 'ja' ? '秘境' : 'Domains'}
-                      </h3>
-                      <div className="space-y-1">
-                        {region.domains.map((d, i) => (
-                          <div key={i} className="text-sm text-game-text">
-                            🏛️ {d}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              {region.tips.length > 0 && (
-                <div className="mt-6 rounded-lg border border-game-border bg-game-surface-alt p-4">
-                  <h3 className="mb-2 text-sm font-semibold text-game-primary">
-                    💡 {locale === 'zh' ? '探索提示' : locale === 'ja' ? '探索ヒント' : 'Exploration Tips'}
-                  </h3>
-                  <ul className="space-y-1.5">
-                    {region.tips.map((tip, i) => (
-                      <li key={i} className="text-sm text-game-text-muted">
-                        • {tip}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-// --- Star Rail Map ---
-
-const SR_REGION_ICONS: Record<string, string> = {
-  'herta-space-station': '🛰️',
-  'jarilo-vi': '❄️',
-  'xianzhou-luofu': '⛵',
-  'penacony': '🌙',
-  'amphoreus': '🏛️',
-};
-
-function StarRailMapPage({ locale }: { locale: SupportedLocale }) {
-  const regions: StarRailRegion[] = starrailRegions;
-  const gameConfig = GAMES.starrail;
-  const totalAnchors = regions.reduce((s: number, r) => s + r.spaceAnchors, 0);
-  const totalCalyxes = regions.reduce((s: number, r) => s + r.calyxes, 0);
-  const totalEchoes = regions.reduce((s: number, r) => s + r.echoesOfWar, 0);
-  const totalDomains = regions.reduce((s: number, r) => s + r.domains.length, 0);
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {locale === 'zh' ? '星球攻略' : locale === 'ja' ? '星攻略' : 'World Guide'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${regions.length} 个星球` : locale === 'ja' ? `${regions.length} 惑星` : `${regions.length} worlds`}
-      </p>
-
-      <div className="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <div className="rounded-lg border border-game-border bg-game-surface p-3 text-center">
-          <div className="text-lg font-bold text-game-primary">{totalAnchors}</div>
-          <div className="text-xs text-game-text-muted">{locale === 'zh' ? '空间锚点' : locale === 'ja' ? '空間アンカー' : 'Space Anchors'}</div>
-        </div>
-        <div className="rounded-lg border border-game-border bg-game-surface p-3 text-center">
-          <div className="text-lg font-bold text-game-primary">{totalCalyxes}</div>
-          <div className="text-xs text-game-text-muted">{locale === 'zh' ? '拟造花萼' : locale === 'ja' ? '花萼' : 'Calyxes'}</div>
-        </div>
-        <div className="rounded-lg border border-game-border bg-game-surface p-3 text-center">
-          <div className="text-lg font-bold text-game-primary">{totalEchoes}</div>
-          <div className="text-xs text-game-text-muted">{locale === 'zh' ? '历战余响' : locale === 'ja' ? '歴戦余響' : 'Echoes of War'}</div>
-        </div>
-        <div className="rounded-lg border border-game-border bg-game-surface p-3 text-center">
-          <div className="text-lg font-bold text-game-primary">{totalDomains}</div>
-          <div className="text-xs text-game-text-muted">{locale === 'zh' ? '侵蚀隧洞' : locale === 'ja' ? '侵蝕トンネル' : 'Caverns'}</div>
-        </div>
-      </div>
-
-      <div className="space-y-6">
-        {regions.map((region) => (
-          <div key={region.id} className="rounded-lg border border-game-border bg-game-surface overflow-hidden">
-            <div className="border-b border-game-border bg-game-surface-alt px-6 py-4">
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">{SR_REGION_ICONS[region.id] || '🌍'}</span>
-                <div>
-                  <h2 className="text-lg font-bold text-game-text">{getStarRailRegionName(region, locale)}</h2>
-                  <p className="text-sm text-game-text-muted">{getStarRailRegionDescription(region, locale)}</p>
-                </div>
-              </div>
-            </div>
-            <div className="p-6">
-              <div className="grid gap-6 lg:grid-cols-3">
-                <div>
-                  <h3 className="mb-3 text-sm font-semibold text-game-primary">{locale === 'zh' ? '区域要点' : locale === 'ja' ? 'エリア情報' : 'Highlights'}</h3>
-                  <div className="space-y-2">
-                    {region.highlights.map((h, i) => (
-                      <div key={i} className="flex items-center gap-2 text-sm text-game-text">
-                        <span className="text-game-primary">•</span>{h}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h3 className="mb-3 text-sm font-semibold text-game-primary">{locale === 'zh' ? '区域特产' : locale === 'ja' ? '特産品' : 'Local Specialties'}</h3>
-                  <div className="flex flex-wrap gap-1.5">
-                    {region.specialties.map((s) => (
-                      <span key={s} className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{s}</span>
-                    ))}
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  {region.bosses.length > 0 && (
-                    <div>
-                      <h3 className="mb-2 text-sm font-semibold text-game-primary">{locale === 'zh' ? 'Boss' : 'Bosses'}</h3>
-                      <div className="space-y-1">
-                        {region.bosses.map((b, i) => (
-                          <div key={i} className="text-sm text-game-text">👹 {b}</div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                  {region.domains.length > 0 && (
-                    <div>
-                      <h3 className="mb-2 text-sm font-semibold text-game-primary">{locale === 'zh' ? '侵蚀隧洞' : locale === 'ja' ? '侵蝕トンネル' : 'Caverns'}</h3>
-                      <div className="space-y-1">
-                        {region.domains.map((d, i) => (
-                          <div key={i} className="text-sm text-game-text">🏛️ {d}</div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-              {region.tips.length > 0 && (
-                <div className="mt-6 rounded-lg border border-game-border bg-game-surface-alt p-4">
-                  <h3 className="mb-2 text-sm font-semibold text-game-primary">💡 {locale === 'zh' ? '探索提示' : locale === 'ja' ? '探索ヒント' : 'Exploration Tips'}</h3>
-                  <ul className="space-y-1.5">
-                    {region.tips.map((tip, i) => (
-                      <li key={i} className="text-sm text-game-text-muted">• {tip}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-// --- NTE Map ---
-
-const NTE_REGION_ICONS: Record<string, string> = {
-  'central-district': '🏙️',
-  'industrial-zone': '🏭',
-  'research-lab': '🔬',
-  'abyss-zone': '🕳️',
-};
-
-const NTE_LOCATION_SPOTS = [
-  { id: 'hethereau', zh: '海瑟劳', en: 'Hethereau', ja: 'ヘテロー' },
-  { id: 'sixth-street', zh: '六街', en: 'Sixth Street', ja: 'シックスストリート' },
-  { id: 'hollow-zero', zh: '空洞零号', en: 'Hollow Zero', ja: 'ホロウ・ゼロ' },
-  { id: 'lumina-square', zh: '光映广场', en: 'Lumina Square', ja: 'ルミナスクエア' },
-] as const;
-
-function NteMapPage({ locale }: { locale: SupportedLocale }) {
-  const regions: NteRegion[] = nteRegions;
-  const gameConfig = GAMES.nte;
-  const totalSubRegions = regions.reduce((s: number, r) => s + r.subRegions.length, 0);
-  const totalBosses = regions.reduce((s: number, r) => s + r.bosses.length, 0);
-  const totalSpecialties = regions.reduce((s: number, r) => s + r.specialties.length, 0);
-  const totalDomains = regions.reduce((s: number, r) => s + r.domains.length, 0);
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {locale === 'zh' ? '区域攻略' : locale === 'ja' ? 'エリア攻略' : 'Region Guide'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${regions.length} 个区域` : locale === 'ja' ? `${regions.length} エリア` : `${regions.length} regions`}
-      </p>
-
-      <div className="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <div className="rounded-lg border border-game-border bg-game-surface p-3 text-center">
-          <div className="text-lg font-bold text-game-primary">{totalSubRegions}</div>
-          <div className="text-xs text-game-text-muted">{locale === 'zh' ? '子区域' : locale === 'ja' ? 'サブエリア' : 'Sub-Regions'}</div>
-        </div>
-        <div className="rounded-lg border border-game-border bg-game-surface p-3 text-center">
-          <div className="text-lg font-bold text-game-primary">{totalBosses}</div>
-          <div className="text-xs text-game-text-muted">{locale === 'zh' ? 'Boss' : 'Bosses'}</div>
-        </div>
-        <div className="rounded-lg border border-game-border bg-game-surface p-3 text-center">
-          <div className="text-lg font-bold text-game-primary">{totalSpecialties}</div>
-          <div className="text-xs text-game-text-muted">{locale === 'zh' ? '区域特产' : locale === 'ja' ? '特産品' : 'Specialties'}</div>
-        </div>
-        <div className="rounded-lg border border-game-border bg-game-surface p-3 text-center">
-          <div className="text-lg font-bold text-game-primary">{totalDomains}</div>
-          <div className="text-xs text-game-text-muted">{locale === 'zh' ? '挑战关卡' : locale === 'ja' ? '挑戦ステージ' : 'Domains'}</div>
-        </div>
-      </div>
-
-      <section className="mb-8">
-        <h2 className="mb-3 text-lg font-semibold text-game-text">
-          {locale === 'zh' ? '常见地点锚点' : locale === 'ja' ? 'よく見る地点アンカー' : 'Common Location Anchors'}
-        </h2>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {NTE_LOCATION_SPOTS.map((spot) => (
-            <article key={spot.id} id={spot.id} className="scroll-mt-24 rounded-lg border border-game-border bg-game-surface p-4">
-              <div className="text-sm font-semibold text-game-primary">
-                {locale === 'zh' ? spot.zh : locale === 'ja' ? spot.ja : spot.en}
-              </div>
-              <div className="mt-1 text-xs text-game-text-muted">
-                {locale === 'zh' ? '地图锚点 / 路线入口' : locale === 'ja' ? 'マップアンカー / ルート入口' : 'Map anchor / route entry'}
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <div className="space-y-6">
-        {regions.map((region) => (
-          <div key={region.id} className="rounded-lg border border-game-border bg-game-surface overflow-hidden">
-            <div className="border-b border-game-border bg-game-surface-alt px-6 py-4">
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">{NTE_REGION_ICONS[region.id] || '🗺️'}</span>
-                <div>
-                  <h2 className="text-lg font-bold text-game-text">{getNteRegionName(region, locale)}</h2>
-                  <p className="text-sm text-game-text-muted">{getNteRegionDescription(region, locale)}</p>
-                </div>
-              </div>
-            </div>
-            <div className="p-6">
-              <div className="grid gap-6 lg:grid-cols-3">
-                <div>
-                  <h3 className="mb-3 text-sm font-semibold text-game-primary">{locale === 'zh' ? '区域要点' : locale === 'ja' ? 'エリア情報' : 'Highlights'}</h3>
-                  <div className="space-y-2">
-                    {region.highlights.map((h, i) => (
-                      <div key={i} className="flex items-center gap-2 text-sm text-game-text">
-                        <span className="text-game-primary">•</span>{h}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h3 className="mb-3 text-sm font-semibold text-game-primary">{locale === 'zh' ? '区域特产' : locale === 'ja' ? '特産品' : 'Specialties'}</h3>
-                  <div className="flex flex-wrap gap-1.5">
-                    {region.specialties.map((s) => (
-                      <span key={s} className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{s}</span>
-                    ))}
-                  </div>
-                  {region.subRegions.length > 0 && (
-                    <div className="mt-4">
-                      <h3 className="mb-2 text-sm font-semibold text-game-primary">{locale === 'zh' ? '子区域' : locale === 'ja' ? 'サブエリア' : 'Sub-Regions'}</h3>
-                      <div className="flex flex-wrap gap-1.5">
-                        {region.subRegions.map((sr) => (
-                          <span key={sr} className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{sr}</span>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-                <div className="space-y-4">
-                  {region.bosses.length > 0 && (
-                    <div>
-                      <h3 className="mb-2 text-sm font-semibold text-game-primary">{locale === 'zh' ? '异常Boss' : locale === 'ja' ? '異常Boss' : 'Anomaly Bosses'}</h3>
-                      <div className="space-y-1">
-                        {region.bosses.map((b, i) => (
-                          <div key={i} className="text-sm text-game-text">👹 {b}</div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                  {region.domains.length > 0 && (
-                    <div>
-                      <h3 className="mb-2 text-sm font-semibold text-game-primary">{locale === 'zh' ? '挑战关卡' : locale === 'ja' ? '挑戦ステージ' : 'Domains'}</h3>
-                      <div className="space-y-1">
-                        {region.domains.map((d, i) => (
-                          <div key={i} className="text-sm text-game-text">🏛️ {d}</div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-              {region.tips.length > 0 && (
-                <div className="mt-6 rounded-lg border border-game-border bg-game-surface-alt p-4">
-                  <h3 className="mb-2 text-sm font-semibold text-game-primary">💡 {locale === 'zh' ? '探索提示' : locale === 'ja' ? '探索ヒント' : 'Exploration Tips'}</h3>
-                  <ul className="space-y-1.5">
-                    {region.tips.map((tip, i) => (
-                      <li key={i} className="text-sm text-game-text-muted">• {tip}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-// --- Endfield Map ---
-
-const ENDFIELD_REGION_ICONS: Record<string, string> = {
-  'talos-frontier': '\u{1F680}',
-  'originium-mines': '\u{26CF}\u{FE0F}',
-  'protocol-city': '\u{1F3D9}\u{FE0F}',
-  'barren-wastes': '\u{1F3DC}\u{FE0F}',
-  'frozen-depths': '\u{2744}\u{FE0F}',
-};
-
-function EndfieldMapPage({ locale }: { locale: SupportedLocale }) {
-  const regions: EndfieldRegion[] = endfieldRegions;
-  const gameConfig = GAMES.endfield;
-  const totalSubRegions = regions.reduce((s: number, r) => s + r.subRegions.length, 0);
-  const totalBosses = regions.reduce((s: number, r) => s + r.bosses.length, 0);
-  const totalSpecialties = regions.reduce((s: number, r) => s + r.specialties.length, 0);
-  const totalDomains = regions.reduce((s: number, r) => s + r.domains.length, 0);
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {locale === 'zh' ? '区域攻略' : locale === 'ja' ? 'エリア攻略' : 'Region Guide'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${regions.length} 个区域` : locale === 'ja' ? `${regions.length} エリア` : `${regions.length} regions`}
-      </p>
-
-      <div className="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <div className="rounded-lg border border-game-border bg-game-surface p-3 text-center">
-          <div className="text-lg font-bold text-game-primary">{totalSubRegions}</div>
-          <div className="text-xs text-game-text-muted">{locale === 'zh' ? '子区域' : locale === 'ja' ? 'サブエリア' : 'Sub-Regions'}</div>
-        </div>
-        <div className="rounded-lg border border-game-border bg-game-surface p-3 text-center">
-          <div className="text-lg font-bold text-game-primary">{totalBosses}</div>
-          <div className="text-xs text-game-text-muted">{locale === 'zh' ? 'Boss' : 'Bosses'}</div>
-        </div>
-        <div className="rounded-lg border border-game-border bg-game-surface p-3 text-center">
-          <div className="text-lg font-bold text-game-primary">{totalSpecialties}</div>
-          <div className="text-xs text-game-text-muted">{locale === 'zh' ? '区域特产' : locale === 'ja' ? '特産品' : 'Specialties'}</div>
-        </div>
-        <div className="rounded-lg border border-game-border bg-game-surface p-3 text-center">
-          <div className="text-lg font-bold text-game-primary">{totalDomains}</div>
-          <div className="text-xs text-game-text-muted">{locale === 'zh' ? '挑战关卡' : locale === 'ja' ? '挑戦ステージ' : 'Domains'}</div>
-        </div>
-      </div>
-
-      <div className="space-y-6">
-        {regions.map((region) => (
-          <div key={region.id} className="rounded-lg border border-game-border bg-game-surface overflow-hidden">
-            <div className="border-b border-game-border bg-game-surface-alt px-6 py-4">
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">{ENDFIELD_REGION_ICONS[region.id] || '🗺️'}</span>
-                <div>
-                  <h2 className="text-lg font-bold text-game-text">{getEndfieldRegionName(region, locale)}</h2>
-                  <p className="text-sm text-game-text-muted">{getEndfieldRegionDescription(region, locale)}</p>
-                </div>
-              </div>
-            </div>
-            <div className="p-6">
-              <div className="grid gap-6 lg:grid-cols-3">
-                <div>
-                  <h3 className="mb-3 text-sm font-semibold text-game-primary">{locale === 'zh' ? '区域要点' : locale === 'ja' ? 'エリア情報' : 'Highlights'}</h3>
-                  <div className="space-y-2">
-                    {region.highlights.map((h, i) => (
-                      <div key={i} className="flex items-center gap-2 text-sm text-game-text">
-                        <span className="text-game-primary">•</span>{h}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h3 className="mb-3 text-sm font-semibold text-game-primary">{locale === 'zh' ? '区域特产' : locale === 'ja' ? '特産品' : 'Specialties'}</h3>
-                  <div className="flex flex-wrap gap-1.5">
-                    {region.specialties.map((s) => (
-                      <span key={s} className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{s}</span>
-                    ))}
-                  </div>
-                  {region.subRegions.length > 0 && (
-                    <div className="mt-4">
-                      <h3 className="mb-2 text-sm font-semibold text-game-primary">{locale === 'zh' ? '子区域' : locale === 'ja' ? 'サブエリア' : 'Sub-Regions'}</h3>
-                      <div className="flex flex-wrap gap-1.5">
-                        {region.subRegions.map((sr) => (
-                          <span key={sr} className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{sr}</span>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-                <div className="space-y-4">
-                  {region.bosses.length > 0 && (
-                    <div>
-                      <h3 className="mb-2 text-sm font-semibold text-game-primary">{locale === 'zh' ? 'Boss' : 'Bosses'}</h3>
-                      <div className="space-y-1">
-                        {region.bosses.map((b, i) => (
-                          <div key={i} className="text-sm text-game-text">👹 {b}</div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                  {region.domains.length > 0 && (
-                    <div>
-                      <h3 className="mb-2 text-sm font-semibold text-game-primary">{locale === 'zh' ? '挑战关卡' : locale === 'ja' ? '挑戦ステージ' : 'Domains'}</h3>
-                      <div className="space-y-1">
-                        {region.domains.map((d, i) => (
-                          <div key={i} className="text-sm text-game-text">🏛️ {d}</div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-              {region.tips.length > 0 && (
-                <div className="mt-6 rounded-lg border border-game-border bg-game-surface-alt p-4">
-                  <h3 className="mb-2 text-sm font-semibold text-game-primary">💡 {locale === 'zh' ? '探索提示' : locale === 'ja' ? '探索ヒント' : 'Exploration Tips'}</h3>
-                  <ul className="space-y-1.5">
-                    {region.tips.map((tip, i) => (
-                      <li key={i} className="text-sm text-game-text-muted">• {tip}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </div>
-          </div>
         ))}
       </div>
     </div>

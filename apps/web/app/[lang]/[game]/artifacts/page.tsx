@@ -1,12 +1,8 @@
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { artifactSets as genshinArtifactSets, getArtifactSetName, getArtifactSetDesc2pc, getArtifactSetDesc4pc, getArtifactSetById } from '@gachia/data/games/genshin/artifacts';
-import { getGenshinCharacterById, getGenshinCharacterName } from '@gachia/data/games/genshin/characters';
-import { relicSets as starrailRelicSets, getRelicSetName as getStarRailRelicSetName, getRelicSetDesc2pc as getStarRailRelicSetDesc2pc, getRelicSetDesc4pc as getStarRailRelicSetDesc4pc, getCavernRelics, getPlanarOrnaments } from '@gachia/data/games/starrail/relics';
-import { getStarRailCharacterById, getStarRailCharacterName } from '@gachia/data/games/starrail/characters';
-import { echoSets as wuwaEchoSets, getEchoSetName as getWuWaEchoSetName, getEchoSetDesc2pc as getWuWaEchoSetDesc2pc, getEchoSetDesc5pc as getWuWaEchoSetDesc5pc } from '@gachia/data/games/wuwa/echoes';
-import { getWuWaCharacterById, getWuWaCharacterName } from '@gachia/data/games/wuwa/characters';
 import { Link } from '@/lib/i18n/navigation';
+import { getArtifactListData } from '@/lib/game-data/artifacts';
+import type { ArtifactSetSummary } from '@/lib/game-data/artifacts';
 
 const RARITY_COLORS: Record<number, string> = { 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };
 type NextStepLink = {
@@ -19,17 +15,17 @@ const WUWA_ECHO_NEXT_STEPS: NextStepLink[] = [
   {
     href: '/wuwa/version',
     label: { zh: '先看版本专题', en: 'Start with version hub', ja: 'まず版本特集へ' },
-    description: { zh: '版本重点、福利和热词入口都在这里', en: 'Version highlights, rewards, and hot topics', ja: '版本重点、報酬、注目トピックを確認', },
+    description: { zh: '版本重点、福利和热词入口都在这里', en: 'Version highlights, rewards, and hot topics', ja: '版本重点、報酬、注目トピックを確認' },
   },
   {
     href: '/wuwa/characters',
     label: { zh: '继续看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
-    description: { zh: '按角色反查声骸适配和毕业方向', en: 'Check which characters want which echo sets', ja: 'キャラ別の適性と完成形を見る', },
+    description: { zh: '按角色反查声骸适配和毕业方向', en: 'Check which characters want which echo sets', ja: 'キャラ別の適性と完成形を見る' },
   },
   {
     href: '/wuwa/weapons',
     label: { zh: '再看武器图鉴', en: 'Browse weapons', ja: '武器図鑑へ' },
-    description: { zh: '把武器和声骸一起配起来看', en: 'Pair weapons with echo set planning', ja: '武器とエコーの組み合わせを確認', },
+    description: { zh: '把武器和声骸一起配起来看', en: 'Pair weapons with echo set planning', ja: '武器とエコーの組み合わせを確認' },
   },
 ];
 
@@ -42,8 +38,9 @@ export async function generateMetadata({
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
   const gameName = GAMES[gameId]?.name[locale] ?? '';
+  const data = await getArtifactListData(gameId, locale);
 
-  if (gameId !== 'genshin' && gameId !== 'starrail' && gameId !== 'wuwa') {
+  if (!data) {
     return { title: `${CATEGORY_LABELS.artifacts?.[locale] ?? 'Artifacts'} - ${gameName}`, robots: { index: false, follow: false } };
   }
 
@@ -52,14 +49,11 @@ export async function generateMetadata({
     return {
       title: `${label} - ${gameName} Wiki`,
       description: locale === 'zh'
-        ? `崩坏：星穹铁道全遗器图鉴，包含洞窟遗器和位面饰品的2件套/4件套效果及推荐角色`
+        ? '崩坏：星穹铁道全遗器图鉴，包含洞窟遗器和位面饰品的2件套/4件套效果及推荐角色'
         : locale === 'ja'
-        ? `崩壊：スターレイル遺物図鑑、洞窟遺物と次元装飾の2セット/4セット効果とおすすめキャラ`
-        : `Complete Honkai: Star Rail Relic guide with 2pc/4pc set bonuses and recommended characters`,
-      alternates: {
-        canonical: `https://gachia.com/${locale}/${gameId}/artifacts`,
-        languages: { 'zh-Hans': `https://gachia.com/zh/${gameId}/artifacts`, en: `https://gachia.com/en/${gameId}/artifacts`, ja: `https://gachia.com/ja/${gameId}/artifacts`, 'x-default': `https://gachia.com/zh/${gameId}/artifacts` },
-      },
+          ? '崩壊：スターレイル遺物図鑑、洞窟遺物と次元装飾の2セット/4セット効果とおすすめキャラ'
+          : 'Complete Honkai: Star Rail Relic guide with 2pc/4pc set bonuses and recommended characters',
+      alternates: buildAlternates(locale, gameId),
     };
   }
 
@@ -68,14 +62,11 @@ export async function generateMetadata({
     return {
       title: `${label} - ${gameName} Wiki`,
       description: locale === 'zh'
-        ? `鸣潮全声骸图鉴，包含声骸套装的2件套/5件套效果及推荐角色`
+        ? '鸣潮全声骸图鉴，包含声骸套装的2件套/5件套效果及推荐角色'
         : locale === 'ja'
-        ? `鳴潮エコー図鑑、2セット/5セット効果とおすすめキャラ`
-        : `Complete Wuthering Waves Echo guide with 2pc/5pc set bonuses and recommended characters`,
-      alternates: {
-        canonical: `https://gachia.com/${locale}/${gameId}/artifacts`,
-        languages: { 'zh-Hans': `https://gachia.com/zh/${gameId}/artifacts`, en: `https://gachia.com/en/${gameId}/artifacts`, ja: `https://gachia.com/ja/${gameId}/artifacts`, 'x-default': `https://gachia.com/zh/${gameId}/artifacts` },
-      },
+          ? '鳴潮エコー図鑑、2セット/5セット効果とおすすめキャラ'
+          : 'Complete Wuthering Waves Echo guide with 2pc/5pc set bonuses and recommended characters',
+      alternates: buildAlternates(locale, gameId),
     };
   }
 
@@ -83,14 +74,11 @@ export async function generateMetadata({
   return {
     title: `${label} - ${gameName} Wiki`,
     description: locale === 'zh'
-      ? `原神圣遗物图鉴大全，包含${genshinArtifactSets.length}套圣遗物的2件套/4件套效果及推荐角色`
+      ? `原神圣遗物图鉴大全，包含${data.total}套圣遗物的2件套/4件套效果及推荐角色`
       : locale === 'ja'
-      ? `原神聖遺物図鑑、${genshinArtifactSets.length}セットの2セット/4セット効果とおすすめキャラ`
-      : `Complete Genshin Impact Artifact guide with ${genshinArtifactSets.length} sets, 2pc/4pc bonuses and recommended characters`,
-    alternates: {
-      canonical: `https://gachia.com/${locale}/${gameId}/artifacts`,
-      languages: { 'zh-Hans': `https://gachia.com/zh/${gameId}/artifacts`, en: `https://gachia.com/en/${gameId}/artifacts`, ja: `https://gachia.com/ja/${gameId}/artifacts`, 'x-default': `https://gachia.com/zh/${gameId}/artifacts` },
-    },
+        ? `原神聖遺物図鑑、${data.total}セットの2セット/4セット効果とおすすめキャラ`
+        : `Complete Genshin Impact Artifact guide with ${data.total} sets, 2pc/4pc bonuses and recommended characters`,
+    alternates: buildAlternates(locale, gameId),
   };
 }
 
@@ -103,16 +91,9 @@ export default async function ArtifactsPage({
   const gameId = game as GameId;
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];
+  const data = await getArtifactListData(gameId, locale);
 
-  if (gameId === 'starrail') {
-    return <StarRailRelicsPage locale={locale} />;
-  }
-
-  if (gameId === 'wuwa') {
-    return <WuWaEchoSetsPage locale={locale} />;
-  }
-
-  if (gameId !== 'genshin') {
+  if (!data) {
     return (
       <div>
         <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
@@ -125,195 +106,91 @@ export default async function ArtifactsPage({
     );
   }
 
-  const sets = genshinArtifactSets;
-  const fiveStar = sets.filter((s) => s.rarity === 5);
-  const fourStar = sets.filter((s) => s.rarity === 4);
-  const threeStar = sets.filter((s) => s.rarity === 3);
+  const label = getArtifactLabel(gameId, locale);
 
   return (
     <div>
       <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {CATEGORY_LABELS.artifacts?.[locale] ?? 'Artifacts'}
+        {label}
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${sets.length} 套圣遗物` : locale === 'ja' ? `${sets.length} セット` : `${sets.length} Artifact Sets`}
+        {getCountLabel(gameId, data.total, locale)}
       </p>
 
-      {[fiveStar, fourStar, threeStar].map((list) => {
-        if (list.length === 0) return null;
-        const rarity = list[0]!.rarity;
-        return (
-          <section key={rarity} className="mb-8">
-            <h2 className="mb-4 text-lg font-semibold text-game-text">
-              <span style={{ color: RARITY_COLORS[rarity] || '#888' }}>{rarity}★</span> ({list.length})
-            </h2>
-            <div className="grid gap-4 md:grid-cols-2">
-              {list.map((set) => (
-                <ArtifactSetCard key={set.id} set={set} locale={locale} gameId={gameId} />
-              ))}
-            </div>
-          </section>
-        );
-      })}
+      {data.sections.map((section) => (
+        <section key={section.id} className="mb-8">
+          <h2 className="mb-4 text-lg font-semibold text-game-text">
+            <span style={{ color: section.sets[0]?.rarity ? RARITY_COLORS[section.sets[0].rarity] || '#888' : undefined }}>{section.title}</span> ({section.sets.length})
+          </h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            {section.sets.map((set) => (
+              <ArtifactSetCard key={set.id} set={set} locale={locale} gameId={gameId} />
+            ))}
+          </div>
+        </section>
+      ))}
+
+      {gameId === 'wuwa' && <NextStepStrip locale={locale} links={WUWA_ECHO_NEXT_STEPS} />}
     </div>
   );
 }
 
-function ArtifactSetCard({ set, locale, gameId }: { set: typeof genshinArtifactSets[number]; locale: SupportedLocale; gameId: string }) {
-  return (
-    <Link href={`/${gameId}/artifacts/${set.id}` as '/'} className="block rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary/50">
+function ArtifactSetCard({ set, locale, gameId }: { set: ArtifactSetSummary; locale: SupportedLocale; gameId: string }) {
+  const href = gameId === 'wuwa' ? undefined : `/${gameId}/artifacts/${set.id}`;
+  const content = (
+    <>
       <div className="mb-2 flex items-center gap-2">
-        <h3 className="font-semibold text-game-text">{getArtifactSetName(set, locale)}</h3>
-        <span className="text-xs font-bold" style={{ color: RARITY_COLORS[set.rarity] || '#888' }}>{set.rarity}★</span>
+        <h3 className="font-semibold text-game-text">{set.name}</h3>
+        {set.rarity && <span className="text-xs font-bold" style={{ color: RARITY_COLORS[set.rarity] || '#888' }}>{set.rarity}★</span>}
       </div>
       <div className="space-y-1.5 text-sm">
-        <p><span className="text-game-primary font-medium">2pc:</span> <span className="text-game-text-muted">{getArtifactSetDesc2pc(set, locale)}</span></p>
-        <p><span className="text-game-primary font-medium">4pc:</span> <span className="text-game-text-muted">{getArtifactSetDesc4pc(set, locale)}</span></p>
+        <p><span className="text-game-primary font-medium">2pc:</span> <span className="text-game-text-muted">{set.bonus2pc}</span></p>
+        {set.bonus4pc && <p><span className="text-game-primary font-medium">4pc:</span> <span className="text-game-text-muted">{set.bonus4pc}</span></p>}
+        {set.bonus5pc && <p><span className="text-game-primary font-medium">5pc:</span> <span className="text-game-text-muted">{set.bonus5pc}</span></p>}
       </div>
-      {set.characters.length > 0 && (
+      {set.characterNames.length > 0 && (
         <div className="mt-3 flex flex-wrap gap-1.5">
-          {set.characters.slice(0, 8).map((charId) => {
-            const char = getGenshinCharacterById(charId);
-            return char ? (
-              <span key={charId} className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">
-                {getGenshinCharacterName(char, locale)}
-              </span>
-            ) : null;
-          })}
-          {set.characters.length > 8 && <span className="text-xs text-game-text-muted">+{set.characters.length - 8}</span>}
+          {set.characterNames.map((name) => (
+            <span key={name} className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{name}</span>
+          ))}
         </div>
       )}
+    </>
+  );
+
+  if (!href) {
+    return <div className="rounded-lg border border-game-border bg-game-surface p-4">{content}</div>;
+  }
+
+  return (
+    <Link href={href as '/'} className="block rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary/50">
+      {content}
     </Link>
   );
 }
 
-// --- Star Rail Relics ---
-
-function StarRailRelicsPage({ locale }: { locale: SupportedLocale }) {
-  const cavernRelics = getCavernRelics();
-  const planarOrnaments = getPlanarOrnaments();
-  const relicLabel = locale === 'zh' ? '遗器' : locale === 'ja' ? '遺物' : 'Relics';
-  const cavernLabel = locale === 'zh' ? '洞窟遗器' : locale === 'ja' ? '洞窟遺物' : 'Cavern Relics';
-  const planarLabel = locale === 'zh' ? '位面饰品' : locale === 'ja' ? '次元装飾品' : 'Planar Ornaments';
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.starrail.theme.primary }}>
-        {relicLabel}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${starrailRelicSets.length} 套遗器` : locale === 'ja' ? `${starrailRelicSets.length} セット` : `${starrailRelicSets.length} Relic Sets`}
-      </p>
-
-      {cavernRelics.length > 0 && (
-        <section className="mb-10">
-          <h2 className="mb-4 text-lg font-semibold text-game-text">{cavernLabel} ({cavernRelics.length})</h2>
-          <div className="grid gap-4 md:grid-cols-2">
-            {cavernRelics.map((set) => (
-              <Link key={set.id} href={`/starrail/artifacts/${set.id}` as '/'} className="group rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary/50">
-                <div className="mb-2">
-                  <h3 className="font-semibold text-game-text group-hover:text-game-primary">{getStarRailRelicSetName(set, locale)}</h3>
-                </div>
-                <div className="space-y-1.5 text-sm">
-                  <p><span className="text-game-primary font-medium">2pc:</span> <span className="text-game-text-muted">{getStarRailRelicSetDesc2pc(set, locale)}</span></p>
-                  <p><span className="text-game-primary font-medium">4pc:</span> <span className="text-game-text-muted">{getStarRailRelicSetDesc4pc(set, locale)}</span></p>
-                </div>
-                {set.bestFor.length > 0 && (
-                  <div className="mt-3 flex flex-wrap gap-1.5">
-                    {set.bestFor.slice(0, 8).map((charId) => {
-                      const char = getStarRailCharacterById(charId);
-                      return (
-                        <span key={charId} className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">
-                          {char ? getStarRailCharacterName(char, locale) : charId}
-                        </span>
-                      );
-                    })}
-                  </div>
-                )}
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {planarOrnaments.length > 0 && (
-        <section className="mb-10">
-          <h2 className="mb-4 text-lg font-semibold text-game-text">{planarLabel} ({planarOrnaments.length})</h2>
-          <div className="grid gap-4 md:grid-cols-2">
-            {planarOrnaments.map((set) => (
-              <Link key={set.id} href={`/starrail/artifacts/${set.id}` as '/'} className="group rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary/50">
-                <div className="mb-2">
-                  <h3 className="font-semibold text-game-text group-hover:text-game-primary">{getStarRailRelicSetName(set, locale)}</h3>
-                </div>
-                <div className="text-sm">
-                  <p><span className="text-game-primary font-medium">2pc:</span> <span className="text-game-text-muted">{getStarRailRelicSetDesc2pc(set, locale)}</span></p>
-                </div>
-                {set.bestFor.length > 0 && (
-                  <div className="mt-3 flex flex-wrap gap-1.5">
-                    {set.bestFor.slice(0, 8).map((charId) => {
-                      const char = getStarRailCharacterById(charId);
-                      return (
-                        <span key={charId} className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">
-                          {char ? getStarRailCharacterName(char, locale) : charId}
-                        </span>
-                      );
-                    })}
-                  </div>
-                )}
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
-    </div>
-  );
+function getArtifactLabel(gameId: GameId, locale: SupportedLocale) {
+  if (gameId === 'starrail') return locale === 'zh' ? '遗器' : locale === 'ja' ? '遺物' : 'Relics';
+  if (gameId === 'wuwa') return locale === 'zh' ? '声骸合鸣' : locale === 'ja' ? 'ソナタ効果' : 'Echo Sets (Sonata Effects)';
+  return CATEGORY_LABELS.artifacts?.[locale] ?? 'Artifacts';
 }
 
-// --- WuWa Echo Sets ---
+function getCountLabel(gameId: GameId, total: number, locale: SupportedLocale) {
+  if (gameId === 'starrail') return locale === 'zh' ? `共 ${total} 套遗器` : locale === 'ja' ? `${total} セット` : `${total} Relic Sets`;
+  if (gameId === 'wuwa') return locale === 'zh' ? `共 ${total} 套合鸣效果` : locale === 'ja' ? `${total} セット` : `${total} Echo Sets`;
+  return locale === 'zh' ? `共 ${total} 套圣遗物` : locale === 'ja' ? `${total} セット` : `${total} Artifact Sets`;
+}
 
-function WuWaEchoSetsPage({ locale }: { locale: SupportedLocale }) {
-  const echoLabel = locale === 'zh' ? '声骸合鸣' : locale === 'ja' ? 'ソナタ効果' : 'Echo Sets (Sonata Effects)';
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.wuwa.theme.primary }}>
-        {echoLabel}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${wuwaEchoSets.length} 套合鸣效果` : locale === 'ja' ? `${wuwaEchoSets.length} セット` : `${wuwaEchoSets.length} Echo Sets`}
-      </p>
-
-      <div className="grid gap-4 md:grid-cols-2">
-        {wuwaEchoSets.map((set) => (
-          <div key={set.id} className="rounded-lg border border-game-border bg-game-surface p-4">
-            <div className="mb-2">
-              <h3 className="font-semibold text-game-text">{getWuWaEchoSetName(set, locale)}</h3>
-            </div>
-            <div className="space-y-1.5 text-sm">
-              <p><span className="text-game-primary font-medium">2pc:</span> <span className="text-game-text-muted">{getWuWaEchoSetDesc2pc(set, locale)}</span></p>
-              {set.bonus5pc && (
-                <p><span className="text-game-primary font-medium">5pc:</span> <span className="text-game-text-muted">{getWuWaEchoSetDesc5pc(set, locale)}</span></p>
-              )}
-            </div>
-            {set.bestFor.length > 0 && (
-              <div className="mt-3 flex flex-wrap gap-1.5">
-                {set.bestFor.slice(0, 8).map((charId) => {
-                  const char = getWuWaCharacterById(charId);
-                  return (
-                    <span key={charId} className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">
-                      {char ? getWuWaCharacterName(char, locale) : charId}
-                    </span>
-                  );
-                })}
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-
-      <NextStepStrip locale={locale} links={WUWA_ECHO_NEXT_STEPS} />
-    </div>
-  );
+function buildAlternates(locale: SupportedLocale, gameId: GameId) {
+  return {
+    canonical: `https://gachia.com/${locale}/${gameId}/artifacts`,
+    languages: {
+      'zh-Hans': `https://gachia.com/zh/${gameId}/artifacts`,
+      en: `https://gachia.com/en/${gameId}/artifacts`,
+      ja: `https://gachia.com/ja/${gameId}/artifacts`,
+      'x-default': `https://gachia.com/zh/${gameId}/artifacts`,
+    },
+  };
 }
 
 function NextStepStrip({ locale, links }: { locale: SupportedLocale; links?: NextStepLink[] }) {
