@@ -14,6 +14,23 @@ type NextStepLink = {
 };
 
 const CHARACTER_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
+  nte: [
+    {
+      href: '/nte',
+      title: { zh: '异环 Wiki 首页', en: 'NTE wiki hub', ja: 'NTE Wikiホーム' },
+      description: { zh: '回到官网、下载、兑换码、版本和攻略入口', en: 'Return to official, download, codes, version, and guide routes', ja: '公式、DL、コード、版本、攻略へ戻る', },
+    },
+    {
+      href: '/nte/tier-list',
+      title: { zh: '角色强度排行', en: 'Character tier list', ja: 'キャラTier' },
+      description: { zh: '先看 S/A 分级、定位和培养优先级', en: 'Compare S/A ranks, roles, and upgrade priority', ja: 'S/A評価、役割、育成優先度を確認', },
+    },
+    {
+      href: '/nte/guides/shinku-iroi-pull-plan',
+      title: { zh: 'Shinku / Iroi 抽卡规划', en: 'Shinku / Iroi pull plan', ja: 'Shinku / Iroi ガチャ計画' },
+      description: { zh: '把当前角色热度和资源保底放在一起判断', en: 'Judge current character hype against pity and resources', ja: '現在キャラと保証資源を一緒に判断', },
+    },
+  ],
   wuwa: [
     {
       href: '/wuwa/version',
@@ -257,39 +274,47 @@ function rankHeading(rank: string, count: number, locale: SupportedLocale) {
   return `${rank} (${count})`;
 }
 
-function SeaIntroLinks({ locale }: { locale: SupportedLocale }) {
-  const seaLinks = [
+function SearchIntentLinks({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
+  const seaLinks: NextStepLink[] = [
     {
       href: '/sea',
-      title: locale === 'zh' ? '遗忘之海 Wiki 首页' : locale === 'ja' ? 'Sea of Remnants Wiki' : 'Sea of Remnants Wiki',
-      description: locale === 'zh' ? '先回到总览，看下载、攻略、福利和版本入口。' : locale === 'ja' ? 'DL、攻略、報酬、版本入口をまとめて確認。' : 'Start from the wiki hub for download, guides, rewards, and version routes.',
+      title: { zh: '遗忘之海 Wiki 首页', en: 'Sea of Remnants Wiki', ja: 'Sea of Remnants Wiki' },
+      description: { zh: '先回到总览，看下载、攻略、福利和版本入口。', en: 'Start from the wiki hub for download, guides, rewards, and version routes.', ja: 'DL、攻略、報酬、版本入口をまとめて確認。' },
     },
     {
       href: '/sea/tier-list',
-      title: locale === 'zh' ? '角色强度排行' : locale === 'ja' ? 'キャラTierリスト' : 'Character Tier List',
-      description: locale === 'zh' ? '对比 SS/S/A/B 分级，决定先养谁。' : locale === 'ja' ? 'SS/S/A/B評価で育成優先度を確認。' : 'Compare SS/S/A/B rankings before investing materials.',
+      title: { zh: '角色强度排行', en: 'Character Tier List', ja: 'キャラTierリスト' },
+      description: { zh: '对比 SS/S/A/B 分级，决定先养谁。', en: 'Compare SS/S/A/B rankings before investing materials.', ja: 'SS/S/A/B評価で育成優先度を確認。' },
     },
     {
       href: '/sea/guides/molly-starter-team-guide',
-      title: locale === 'zh' ? '茉莉开荒队伍' : locale === 'ja' ? 'Molly序盤編成' : 'Molly Starter Team',
-      description: locale === 'zh' ? '用治疗和主攻路线快速搭开荒队。' : locale === 'ja' ? '回復と火力軸で序盤編成を組む。' : 'Build an early team around healing, DPS, and safe progression.',
+      title: { zh: '茉莉开荒队伍', en: 'Molly Starter Team', ja: 'Molly序盤編成' },
+      description: { zh: '用治疗和主攻路线快速搭开荒队。', en: 'Build an early team around healing, DPS, and safe progression.', ja: '回復と火力軸で序盤編成を組む。' },
     },
   ];
+  const nteLinks = CHARACTER_NEXT_STEPS.nte ?? [];
+  const links = gameId === 'nte' ? nteLinks : seaLinks;
 
   return (
     <section className="mb-6 rounded-lg border border-game-border bg-game-surface p-4">
       <p className="mb-3 text-sm leading-relaxed text-game-text-muted">
-        {locale === 'zh'
-          ? '如果你搜索的是“遗忘之海 wiki / Sea of Remnants characters”，先从 Traveler、Ais、Little Axe、Princess、Molly 这些高频角色看起，再进入节奏榜和开荒队伍。'
-          : locale === 'ja'
-            ? 'Sea of Remnants characters / wiki 検索なら、Traveler、Ais、Little Axe、Princess、Molly から確認し、Tierと序盤編成へ進みます。'
-            : 'If you searched for Sea of Remnants characters or wiki, start with Traveler, Ais, Little Axe, Princess, and Molly, then move into the tier list and starter-team guide.'}
+        {gameId === 'nte'
+          ? locale === 'zh'
+            ? '如果你搜索的是“异环角色图鉴 / 异环 wiki / 异环角色”，先从 Nanally、Sakiri、Fadia、Chiz、Aurelia 这些高频角色看起，再进入强度排行、兑换码和抽卡规划。'
+            : locale === 'ja'
+              ? 'NTE characters / wiki 検索なら、Nanally、Sakiri、Fadia、Chiz、Aureliaから確認し、Tierとガチャ計画へ進みます。'
+              : 'If you searched for NTE characters or wiki, start with Nanally, Sakiri, Fadia, Chiz, and Aurelia, then move into the tier list and pull plan.'
+          : locale === 'zh'
+            ? '如果你搜索的是“遗忘之海 wiki / Sea of Remnants characters”，先从 Traveler、Ais、Little Axe、Princess、Molly 这些高频角色看起，再进入节奏榜和开荒队伍。'
+            : locale === 'ja'
+              ? 'Sea of Remnants characters / wiki 検索なら、Traveler、Ais、Little Axe、Princess、Molly から確認し、Tierと序盤編成へ進みます。'
+              : 'If you searched for Sea of Remnants characters or wiki, start with Traveler, Ais, Little Axe, Princess, and Molly, then move into the tier list and starter-team guide.'}
       </p>
       <div className="grid gap-2 md:grid-cols-3">
-        {seaLinks.map((link) => (
+        {links.map((link) => (
           <Link key={link.href} href={link.href as '/'} className="rounded-md border border-game-border bg-game-surface-alt p-3 transition-colors hover:border-game-primary">
-            <span className="mb-1 block text-sm font-semibold text-game-text">{link.title}</span>
-            <span className="line-clamp-2 text-xs leading-relaxed text-game-text-muted">{link.description}</span>
+            <span className="mb-1 block text-sm font-semibold text-game-text">{link.title[locale]}</span>
+            <span className="line-clamp-2 text-xs leading-relaxed text-game-text-muted">{link.description[locale]}</span>
           </Link>
         ))}
       </div>
@@ -303,26 +328,34 @@ function CharacterListPage({ chars, locale, gameId, gameConfig }: { chars: Chara
   return (
     <div>
       <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {gameId === 'sea'
-          ? locale === 'zh' ? '遗忘之海角色图鉴 Wiki' : locale === 'ja' ? 'Sea of Remnants キャラWiki' : 'Sea of Remnants Characters Wiki'
+        {gameId === 'sea' || gameId === 'nte'
+          ? gameId === 'nte'
+            ? locale === 'zh' ? '异环角色图鉴 Wiki' : locale === 'ja' ? 'NTE キャラWiki' : 'NTE Characters Wiki'
+            : locale === 'zh' ? '遗忘之海角色图鉴 Wiki' : locale === 'ja' ? 'Sea of Remnants キャラWiki' : 'Sea of Remnants Characters Wiki'
           : CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
-        {gameId === 'sea'
-          ? locale === 'zh'
-            ? `共 ${chars.length} 名角色，覆盖属性、定位、强度排行和开荒培养顺序。`
-            : locale === 'ja'
-              ? `${chars.length} 名のキャラクター。属性、役割、Tier、育成順を整理。`
-              : `${chars.length} characters with attributes, roles, tier context, and early progression notes.`
+        {gameId === 'sea' || gameId === 'nte'
+          ? gameId === 'nte'
+            ? locale === 'zh'
+              ? `共 ${chars.length} 名异环角色，覆盖属性、定位、强度排行、抽卡价值和培养优先级。`
+              : locale === 'ja'
+                ? `${chars.length} 名のNTEキャラクター。属性、役割、Tier、ガチャ価値、育成順を整理。`
+                : `${chars.length} NTE characters with attributes, roles, tier context, pull value, and progression notes.`
+            : locale === 'zh'
+              ? `共 ${chars.length} 名角色，覆盖属性、定位、强度排行和开荒培养顺序。`
+              : locale === 'ja'
+                ? `${chars.length} 名のキャラクター。属性、役割、Tier、育成順を整理。`
+                : `${chars.length} characters with attributes, roles, tier context, and early progression notes.`
           : locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
       </p>
-      {gameId !== 'sea' && (
+      {gameId !== 'sea' && gameId !== 'nte' && (
         <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
           {getCharacterIntro(gameId, locale)}
         </p>
       )}
 
-      {gameId === 'sea' ? <SeaIntroLinks locale={locale} /> : <NextStepStrip locale={locale} links={CHARACTER_NEXT_STEPS[gameId]} />}
+      {gameId === 'sea' || gameId === 'nte' ? <SearchIntentLinks locale={locale} gameId={gameId} /> : <NextStepStrip locale={locale} links={CHARACTER_NEXT_STEPS[gameId]} />}
 
       {sections.map(({ rank, entries }) => {
         const heading = rankHeading(rank, entries.length, locale);

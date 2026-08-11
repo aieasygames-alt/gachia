@@ -43,7 +43,7 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     ja: '鳴潮のキャラビルド、武器データベース、エコーおすすめ、攻略百科をまとめ、v3.x Roya Frostlands に対応。48+ キャラの共鳴チェーン、武器、エコーセット、Tune Break 戦闘、編成、版本トピックをすぐ確認でき、周回導線も分かります。前瞻や実用ページも探しやすいです。',
   },
   nte: {
-    zh: '异环（NTE）角色图鉴、武器数据、光盘推荐、兑换码和祈愿模拟，已正式发布。页面覆盖 19 个可玩角色、下载安装、新手入门、Boss 攻略、伤害公式和养成路线，适合开服期快速查资料、规划资源并确认当前热门玩法，同时附版本专题和福利入口。',
+    zh: '异环（NTE）Wiki 与官网入口，整理角色图鉴、兑换码、下载安装、官网资讯、武器数据、光盘推荐和祈愿模拟。页面覆盖完整角色库、新手入门、Boss 攻略、伤害公式和养成路线，适合搜索异环官网、异环下载、异环角色和异环攻略时快速进入。',
     en: 'Neverness to Everness character guides, weapon data, disk set recommendations, redeem codes, and gacha simulator. Now released with 19 playable characters, download help, beginner routes, boss guides, and damage formulas.',
     ja: '異環（NTE）のキャラ図鑑、武器データ、ディスクおすすめ、交換コード、ガチャシミュレーターを提供し、正式リリース済みです。19体のキャラ、DL、入門、ボス攻略、ダメージ計算、育成導線をまとめて確認でき、開服期の準備に役立ちます。版本特集や報酬導線もあります。',
   },
@@ -68,12 +68,12 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     ja: 'アークナイツ：エンドフィールドはハイパーグリフ開発のオープンワールドアクションRPG。ドクターによるタロスII号星での拠点建設、リアルタイム戦闘、探索、テスト時期、入門導線を整理しています。初心者が次に開くページも見つけやすく、実用導線も明確です。',
   },
   sea: {
-    zh: '遗忘之海是网易 Joker Studio 自研的海洋冒险开放世界 RPG，PC 端已于 2026 年 7 月 9 日公测。Gachia 整理角色、捏脸、云捏脸、PC 配置、下载安装、开服福利和开荒攻略，方便先看总览再深入了解角色与系统，并补看公测专题。',
+    zh: '遗忘之海 Wiki 与官网入口，整理网易 Joker Studio 海洋冒险 RPG 的角色图鉴、下载入口、官网资讯、云游戏、PC 配置、开服福利、移动端安装和开荒攻略。PC 端已于 2026 年 7 月 9 日公测，移动端入口与下载排错可继续进入下载专题。',
     en: 'Sea of Remnants is an ocean adventure RPG by NetEase Joker Studio. Gachia tracks crews, face sculpting, PC specs, download/install, rewards, and beginner routes.',
     ja: 'シー・オブ・レムナンツはNetEase Joker Studioの海洋アドベンチャー型オープンワールドRPG。PC版は2026年7月9日にCBT開始。Gachiaではキャラ、顔作成、クラウド作成、PC環境、DL、報酬、開荒ルートを整理します。先に全体像を把握したい人向けで、公測特集も見やすいです。',
   },
   skjh: {
-    zh: '失控进化是腾讯游戏发行、无端科技研发并获得 Rust 正版玩法授权的开放世界多人生存对抗游戏。Gachia 整理公测时间、开荒路线、基地建设、资源科技树、基因流派、武器和福利活动，便于玩家快速上手并找到后续攻略入口，同时补充公测专题。',
+    zh: '失控进化 Wiki 与官网入口，整理腾讯游戏发行、无端科技研发的开放世界多人生存对抗游戏资料。覆盖失控进化官网、下载、WeGame、手游入口、服务器模式、公测时间、开荒路线、基地建设、资源科技树、基因流派、武器和福利活动。',
     en: 'Ashfall Evolution is an open-world survival game published by Tencent Games and developed by Wuduan Technology. Gachia covers launch timing, beginner routes, base building, resources, weapons, and rewards.',
     ja: '失控進化はTencent Games配信、無端科技開発、Rust正式ライセンスの多人数サバイバル対戦型オープンワールドゲームです。Gachiaでは公測時期、開荒ルート、拠点建設、資源、遺伝子ビルド、武器、報酬を整理します。初心者が次に見るべきページも案内し、公測特集へもつなげます。',
   },
@@ -134,10 +134,20 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
 };
 
 const GAME_META_TITLES: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
+  nte: {
+    zh: '异环 Wiki｜官网入口、角色图鉴、兑换码与下载攻略',
+    en: 'NTE Wiki — Characters, Codes, Download & Guides',
+    ja: 'NTE Wiki — キャラ、コード、DL、攻略',
+  },
   sea: {
-    zh: '遗忘之海 Wiki — 角色图鉴、强度排行、下载与开荒攻略',
+    zh: '遗忘之海 Wiki｜官网入口、下载、角色图鉴与开荒攻略',
     en: 'Sea of Remnants Wiki — Characters, Tier List, Download & Guides',
     ja: 'Sea of Remnants Wiki — キャラ、Tier、DL、攻略',
+  },
+  skjh: {
+    zh: '失控进化 Wiki｜官网入口、下载、服务器模式与开荒攻略',
+    en: 'Ashfall Evolution Wiki — Download, Servers & Starter Guides',
+    ja: '失控進化 Wiki — DL、サーバー、開荒攻略',
   },
   zzz: {
     zh: '绝区零 3.1 Wiki — 当前卡池、周年、Xbox、音擎与兑换码',
@@ -326,24 +336,24 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     ],
   },
   nte: {
-    eyebrow: { zh: '1.2「999 Nights」入口', en: 'v1.2 999 Nights Hub', ja: 'v1.2 999 Nights導線' },
-    title: { zh: '异环 1.2 / Shinku / Iroi 重点入口', en: 'NTE v1.2 / Shinku / Iroi hub', ja: 'NTE v1.2 / Shinku / Iroi導線' },
+    eyebrow: { zh: '异环官网 / Wiki 入口', en: 'NTE Official / Wiki Hub', ja: 'NTE公式 / Wiki導線' },
+    title: { zh: '异环 Wiki、官网、角色、兑换码与下载入口', en: 'NTE wiki, official site, characters, codes, and download hub', ja: 'NTE Wiki、公式、キャラ、コード、DL導線' },
     description: {
-      zh: '把 999 Nights、Shinku 当前池、Iroi 预热、兑换码、Steam/download 和下载安装入口一起前置。',
+      zh: '把异环官网、角色图鉴、下载安装、兑换码、999 Nights、Shinku 当前池和 Iroi 预热一起前置，覆盖搜索里最常见的官网、wiki、下载和角色意图。',
       en: 'Put 999 Nights, Shinku, Iroi, codes, Steam/download intent, and install help up front.',
       ja: '999 Nights、Shinku、Iroi、コード、Steam/DL、インストール導線を前面に出します。',
     },
     chips: {
-      zh: ['1.2 已上线', '999 Nights', 'Shinku', 'Iroi', '兑换码', 'Steam/download'],
+      zh: ['异环官网', '异环 Wiki', '角色图鉴', '兑换码', '下载入口', '999 Nights'],
       en: ['v1.2 live', '999 Nights', 'Shinku', 'Iroi', 'Codes', 'Steam/download'],
       ja: ['v1.2実装', '999 Nights', 'Shinku', 'Iroi', 'コード', 'Steam/DL'],
     },
     cta: { zh: '去 1.2 专题', en: 'Open v1.2 hub', ja: 'v1.2特集へ' },
     tracks: {
       zh: [
-        { title: '版本与角色', description: '优先整理 999 Nights、Shinku 和 Iroi 相关问题。', links: [{ href: '/nte/version', label: '1.2 专题' }, { href: '/nte/guides/shinku-iroi-pull-plan', label: 'Shinku vs Iroi' }] },
-        { title: '抽卡与福利', description: '把兑换码和抽卡策略接到可执行页面。', links: [{ href: '/nte/redeem-codes', label: '兑换码' }, { href: '/nte/guides/gacha-strategy', label: '抽卡策略' }] },
-        { title: '模式与入门', description: 'Steam/download 用户先确认官方入口，再看 999 Nights 每日路线。', links: [{ href: '/nte/guides/download-install-guide', label: '下载安装' }, { href: '/nte/guides/999-nights-mode-guide', label: '999 Nights' }] },
+        { title: '官网与下载', description: '优先解决异环官网、下载、设备、区服和安装入口。', links: [{ href: '/nte/download', label: '下载入口' }, { href: '/nte/guides/download-install-guide', label: '下载安装指南' }] },
+        { title: '角色与 Wiki', description: '把角色图鉴、版本角色和新手培养路线接到可查页面。', links: [{ href: '/nte/characters', label: '角色图鉴' }, { href: '/nte/version', label: '1.2 专题' }] },
+        { title: '兑换码与抽卡', description: '搜索兑换码、Shinku、Iroi 的用户继续进入福利和抽卡规划。', links: [{ href: '/nte/redeem-codes', label: '兑换码' }, { href: '/nte/guides/shinku-iroi-pull-plan', label: 'Shinku vs Iroi' }] },
       ],
       en: [
         { title: 'Patch and characters', description: 'Catch 999 Nights, Shinku, and Iroi searches first.', links: [{ href: '/nte/version', label: 'v1.2 hub' }, { href: '/nte/guides/shinku-iroi-pull-plan', label: 'Shinku vs Iroi' }] },
@@ -357,19 +367,19 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
       ],
     },
     faq: [
-      { question: { zh: '异环首页现在先看哪？', en: 'What should I open first for NTE?', ja: 'NTEホームで最初に見るべきものは？' }, answer: { zh: '先看 1.2 / 999 Nights，再看 Shinku、Iroi、兑换码和下载安装。', en: 'Start with v1.2 / 999 Nights, then Shinku, Iroi, codes, and download/install.', ja: 'まずv1.2 / 999 Nights、その後Shinku、Iroi、コード、DLへ。' } },
+      { question: { zh: '异环官网、Wiki 和下载应该先点哪个？', en: 'What should I open first for NTE?', ja: 'NTEホームで最初に見るべきものは？' }, answer: { zh: '找安装包先点下载入口或下载安装指南；查角色和攻略先点角色图鉴、1.2 专题和兑换码。', en: 'Start with v1.2 / 999 Nights, then Shinku, Iroi, codes, and download/install.', ja: 'まずv1.2 / 999 Nights、その後Shinku、Iroi、コード、DLへ。' } },
     ],
   },
   sea: {
-    eyebrow: { zh: '7 月 23 日移动端首发', en: 'July 23 Mobile Launch', ja: '7月23日モバイル開始' },
-    title: { zh: '遗忘之海官网入口｜移动端首发、Wiki、开服攻略', en: 'Sea of Remnants official hub | mobile launch, wiki, launch guide', ja: '遺忘之海 公式導線｜モバイル開始・Wiki・開服攻略' },
+    eyebrow: { zh: '遗忘之海官网 / 下载入口', en: 'Sea Official / Download Hub', ja: '遺忘之海 公式 / DL導線' },
+    title: { zh: '遗忘之海 Wiki、官网、下载、云游戏与开服攻略', en: 'Sea of Remnants official hub | mobile launch, wiki, launch guide', ja: '遺忘之海 公式導線｜モバイル開始・Wiki・開服攻略' },
     description: {
-      zh: '这里整理 7 月 23 日移动端首发后的官网入口、Wiki、首周任务、下载安装、角色图鉴和 gamescom demo 相关信息。',
+      zh: '这里整理遗忘之海官网入口、官网下载、移动端安装、云游戏、Wiki、角色图鉴、首周任务和开服攻略，把下载与官网意图统一导向清晰页面。',
       en: 'Find the July 23 mobile launch, official hub, wiki, week-one tasks, download/install help, character wiki, and gamescom demo coverage in one place.',
       ja: '7月23日のモバイル開始後に必要な公式入口、Wiki、初週タスク、DL、キャラ図鑑、gamescom demo情報をまとめています。',
     },
     chips: {
-      zh: ['7/23 首发', '移动端', '首周运营', 'gamescom demo', '下载安装', '节奏榜'],
+      zh: ['遗忘之海官网', '官网下载', '云游戏', '移动端', '角色图鉴', '开服攻略'],
       en: ['July 23', 'Mobile', 'Live ops', 'gamescom demo', 'Download/install', 'Tier list'],
       ja: ['7/23', 'モバイル', '初週運営', 'gamescom demo', 'DL', 'Tier'],
     },
@@ -377,19 +387,21 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     tracks: {
       zh: [
         {
-          title: '移动端首发',
-          description: '先确认移动端入口、账号互通、设备配置和首日常见问题。',
+          title: '官网与下载',
+          description: '先确认官网入口、官网下载、移动端安装、云游戏和账号互通。',
           links: [
-            { href: '/sea/guides/mobile-launch-guide', label: '移动端 FAQ' },
+            { href: '/sea/download', label: '下载入口' },
+            { href: '/sea/guides/download-install-guide', label: '下载安装' },
             { href: '/sea/guides/pc-mobile-cross-progression-faq', label: '互通 FAQ' },
           ],
         },
         {
-          title: '首周运营',
-          description: '查看热修、号角、大脸币、探索查漏和 gamescom demo 相关内容。',
+          title: '公测与开服',
+          description: '查看公测版本中心、开服路线、首周运营和 gamescom demo 相关内容。',
           links: [
+            { href: '/sea/guides/open-beta-version-center', label: '版本中心' },
+            { href: '/sea/guides/launch-day-guide', label: '开服攻略' },
             { href: '/sea/guides/week-one-live-ops-overview', label: '首周总览' },
-            { href: '/sea/guides/mobile-troubleshooting-guide', label: '首日排错' },
           ],
         },
         {
@@ -465,7 +477,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
           ja: '遺忘之海で最初に見るべきものは？',
         },
         answer: {
-          zh: '先看公测版本中心，再看开服攻略、下载安装和队伍思路，能最快找到当前重点。',
+          zh: '找官网或下载先看下载入口；找攻略先看公测版本中心、开服攻略、角色图鉴和队伍思路。',
           en: 'Start with the open beta version center, then launch guide, download/install, and team-building pages.',
           ja: 'まずCBT特集、次に開服攻略、DL、編成案を見るのが最短です。',
         },
@@ -664,24 +676,24 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     ],
   },
   skjh: {
-    eyebrow: { zh: 'S1 上线后生存专题', en: 'Live S1 Survival Hub', ja: 'S1実装後サバイバル導線' },
-    title: { zh: '失控进化服务器模式、开荒与防抄家入口', en: 'Ashfall Evolution server modes, starters, and anti-raid hub', ja: '失控進化 サーバー・開荒・防衛導線' },
+    eyebrow: { zh: '失控进化官网 / 下载入口', en: 'Ashfall Official / Download Hub', ja: '失控進化 公式 / DL導線' },
+    title: { zh: '失控进化 Wiki、官网、下载、服务器模式与开荒入口', en: 'Ashfall Evolution server modes, starters, and anti-raid hub', ja: '失控進化 サーバー・開荒・防衛導線' },
     description: {
-      zh: '把下载电脑版、官网 PC、服务器模式、安全区 / 标准 / 挑战、0-2 小时开荒、基地选址和防抄家前置。',
+      zh: '把失控进化官网、下载、WeGame、手游入口、服务器模式、安全区 / 标准 / 挑战、0-2 小时开荒、基地选址和防抄家前置。',
       en: 'Surface PC download, official PC entry, server modes, safe-zone / standard / challenge, first 0-2 hours, base location, and anti-raid basics.',
       ja: 'PC版DL、公式PC入口、サーバーモード、安全区/標準/挑戦、0-2時間開荒、拠点選び、防衛を前面に出します。',
     },
     chips: {
-      zh: ['S1 赛季', '下载电脑版', '服务器模式', '安全区', '标准/挑战', '防抄家'],
+      zh: ['失控进化官网', '官网下载', 'WeGame', '服务器模式', '安全区', '防抄家'],
       en: ['S1 season', 'PC download', 'Server modes', 'Safe-zone', 'Standard/challenge', 'Anti-raid'],
       ja: ['S1シーズン', 'PC DL', 'サーバー', '安全区', '標準/挑戦', '防衛'],
     },
     cta: { zh: '看 S1 专题', en: 'Open S1 hub', ja: 'S1特集へ' },
     tracks: {
       zh: [
-        { title: '下载与模式', description: '先解决官网 PC、下载电脑版和选服问题。', links: [{ href: '/skjh/guides/official-pc-download-faq', label: '官网 PC 下载' }, { href: '/skjh/guides/server-mode-choice', label: '服务器模式' }] },
-        { title: '0-2 小时开荒', description: '把工具、领地柜、低风险资源线变成可执行路线。', links: [{ href: '/skjh/guides/first-2-hours-starter-route', label: '0-2 小时路线' }, { href: '/skjh/guides/launch-30min-checklist', label: '30 分钟清单' }] },
-        { title: '基地与防抄家', description: '继续查看基地选址、领地柜维护和反抄家布局。', links: [{ href: '/skjh/guides/base-location-anti-raid-plan', label: '选址防抄家' }, { href: '/skjh/guides/anti-raid-base-layouts', label: '房型防抄家' }] },
+        { title: '官网与下载', description: '先解决官网、WeGame、手游入口、下载电脑版和安装前检查。', links: [{ href: '/skjh/download', label: '下载入口' }, { href: '/skjh/guides/platform-download-guide', label: '平台下载指南' }] },
+        { title: '服务器模式', description: '安全区、标准、挑战和好友同服会直接影响开局选择。', links: [{ href: '/skjh/guides/server-mode-choice', label: '服务器模式' }, { href: '/skjh/guides/season-1-launch', label: '上线专题' }] },
+        { title: '开荒与防抄家', description: '把工具、领地柜、低风险资源线和基地防御变成可执行路线。', links: [{ href: '/skjh/guides/first-2-hours-starter-route', label: '0-2 小时路线' }, { href: '/skjh/guides/base-location-anti-raid-plan', label: '选址防抄家' }] },
       ],
       en: [
         { title: 'Download and modes', description: 'Solve official PC entry, PC download, and server choice first.', links: [{ href: '/skjh/guides/official-pc-download-faq', label: 'Official PC FAQ' }, { href: '/skjh/guides/server-mode-choice', label: 'Server modes' }] },
@@ -695,7 +707,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
       ],
     },
     faq: [
-      { question: { zh: '失控进化上线后首页先点哪？', en: 'What should I click first now that it is live?', ja: '実装後ホームで最初に押すべきものは？' }, answer: { zh: '先点服务器模式和下载互通 FAQ，再看 30 分钟清单、防抄家和基地建设。', en: 'Open server modes and download FAQ first, then the 30-minute checklist, anti-raid, and base building.', ja: 'まずサーバーモードとDL FAQ、その後30分チェック、防衛、基地建設へ。' } },
+      { question: { zh: '失控进化官网和下载入口应该先点哪？', en: 'What should I click first now that it is live?', ja: '実装後ホームで最初に押すべきものは？' }, answer: { zh: '找安装包先点下载入口或平台下载指南；准备开局再看服务器模式、30 分钟清单、防抄家和基地建设。', en: 'Open server modes and download FAQ first, then the 30-minute checklist, anti-raid, and base building.', ja: 'まずサーバーモードとDL FAQ、その後30分チェック、防衛、基地建設へ。' } },
     ],
   }
 };
@@ -1058,12 +1070,43 @@ export default async function GameHome({
       {/* Featured Characters */}
       {chars.length > 0 && (
         <section className="mb-10">
-          <h2
-            className="mb-4 text-xl font-bold"
-            style={{ color: gameConfig.theme.primary }}
-          >
-            {t.featuredTitle}
-          </h2>
+          <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h2
+                className="text-xl font-bold"
+                style={{ color: gameConfig.theme.primary }}
+              >
+                {gameId === 'nte'
+                  ? locale === 'zh' ? '异环角色图鉴入口' : locale === 'ja' ? 'NTE キャラWiki入口' : 'NTE character wiki entry'
+                  : gameId === 'sea'
+                    ? locale === 'zh' ? '遗忘之海角色图鉴入口' : locale === 'ja' ? 'Sea of Remnants キャラWiki入口' : 'Sea of Remnants character wiki entry'
+                    : t.featuredTitle}
+              </h2>
+              {(gameId === 'nte' || gameId === 'sea') && (
+                <p className="mt-1 max-w-2xl text-sm leading-relaxed text-game-text-muted">
+                  {gameId === 'nte'
+                    ? locale === 'zh'
+                      ? '先看高频角色、强度排行和抽卡价值，再进入完整角色图鉴。'
+                      : locale === 'ja'
+                        ? '主要キャラ、Tier、ガチャ価値を確認してから全キャラWikiへ。'
+                        : 'Start with high-frequency characters, tier value, and pull planning before opening the full roster.'
+                    : locale === 'zh'
+                      ? '先看高频船员、强度排行和开荒培养顺序，再进入完整角色图鉴。'
+                      : locale === 'ja'
+                        ? '主要キャラ、Tier、序盤育成順を確認してから全キャラWikiへ。'
+                        : 'Start with frequent crews, tier value, and early progression before opening the full roster.'}
+                </p>
+              )}
+            </div>
+            {(gameId === 'nte' || gameId === 'sea') && (
+              <Link
+                href={`/${gameId}/characters` as '/'}
+                className="inline-flex rounded-full border border-game-border px-4 py-2 text-sm font-semibold text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary"
+              >
+                {locale === 'zh' ? '查看全部角色' : locale === 'ja' ? '全キャラを見る' : 'View all characters'}
+              </Link>
+            )}
+          </div>
           <div className="flex flex-wrap gap-3">
             {chars.map((char) => (
               <Link

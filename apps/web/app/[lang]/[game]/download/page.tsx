@@ -18,6 +18,7 @@ type DownloadCopy = {
   officialUrl: string;
   status: LocaleText;
   intro: LocaleText;
+  primaryRole?: LocaleText;
   officialNote: LocaleText;
   platforms: PlatformInfo[];
   specs: LocaleText[];
@@ -253,9 +254,14 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
       ja: 'Sea of RemnantsのDLと配信時期は公式、Steam、モバイルストア、告知を確認。PCとモバイルは時期が異なる場合があります。',
     },
     intro: {
-      zh: '集中查看遗忘之海官网、下载、配置、云游戏、平台、PC 公测和开服第一天行动路线。',
+      zh: '集中查看遗忘之海官网入口、官网下载、移动端下载、Steam、TapTap、iOS、Android、配置、云游戏、平台互通和开服排错路线。',
       en: 'Covers Sea of Remnants official site, download, specs, cloud gaming, platforms, PC open beta, and launch-day routing.',
       ja: '公式、DL、環境、クラウド、プラットフォーム、PC CBT、初日ルートを整理。',
+    },
+    primaryRole: {
+      zh: '这是遗忘之海下载相关搜索的主入口：先在这里确认官网、Steam、TapTap、iOS、Android 和云游戏，再进入细分安装指南。',
+      en: 'This is the main Sea of Remnants download hub: verify official, Steam, mobile, and cloud routes here before opening detailed guides.',
+      ja: 'Sea of Remnantsの主DL入口です。公式、Steam、モバイル、クラウドを確認してから詳細ガイドへ進みます。',
     },
     officialNote: DEFAULT_STATUS,
     platforms: [
@@ -285,7 +291,7 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
       ja: '失控進化のDLは公式、WeGame、モバイルストア、公式チャンネルから。多端連携とサーバーモードを事前確認。',
     },
     intro: {
-      zh: '集中查看失控进化官网、下载、PC、手游、云游戏、多端互通、配置和新手 30 分钟路线。',
+      zh: '集中查看失控进化官网入口、官网下载、WeGame、PC 电脑版、手游入口、云游戏、多端互通、服务器模式、配置和新手 30 分钟路线。',
       en: 'Covers Ashfall Evolution official site, download, PC, mobile, cloud gaming, cross-play, specs, and first-30-minute route.',
       ja: '公式、DL、PC、モバイル、クラウド、多端連携、環境、最初の30分を整理。',
     },
@@ -302,7 +308,7 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
       en: 'Cross-play, server type, and friend-server rules affect early choices; read the platform FAQ before installing.',
       ja: '多端連携、サーバー種別、フレンド同服ルールが初動に影響するためFAQを確認。',
     },
-    nextLinks: commonLinks('skjh', 'download-crossplay-faq'),
+    nextLinks: commonLinks('skjh', 'platform-download-guide'),
     faq: liveFaq('失控进化', 'Ashfall Evolution', '失控進化'),
   },
 };
@@ -328,7 +334,7 @@ export async function generateMetadata({
 
   const gameName = gameConfig.name[locale];
   const title = locale === 'zh'
-    ? `${gameName}下载入口、官网与配置要求`
+    ? `${gameName}下载｜官网入口、官网下载与配置要求`
     : locale === 'ja'
       ? `${gameName} DL・公式入口・必要環境`
       : `${gameName} Download, Official Site & System Requirements`;
@@ -383,6 +389,11 @@ export default async function DownloadPage({
             <p className="mt-4 text-base leading-7 text-game-text-muted md:text-lg">
               {copy.intro[locale]}
             </p>
+            {copy.primaryRole && (
+              <p className="mt-4 rounded-2xl border border-game-border bg-game-surface-alt p-4 text-sm leading-6 text-game-text-muted">
+                {copy.primaryRole[locale]}
+              </p>
+            )}
           </div>
           <a
             href={copy.officialUrl}

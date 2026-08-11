@@ -76,7 +76,34 @@
         "answer": "No, NTE on PS5 is free to download and play without a PS+ subscription.",
         "answerZh": "不需要，PS5版异环免费下载游玩，无需PS+会员。"
       }
-    ]
+    ],
+    "serpTitle": {
+      "zh": "异环下载｜官网入口、PC/手机/PS5 安装与配置要求",
+      "en": "NTE Download — Official Site, PC, Mobile, PS5 & Specs",
+      "ja": "NTE DL｜公式、PC、モバイル、PS5、環境"
+    },
+    "serpDescription": {
+      "zh": "异环官网入口与下载安装指南，覆盖 PC、iOS、Android、PS5、区服、账号互通、配置要求、安装空间和下载排错，适合搜索异环下载、异环官网、异环手游入口。",
+      "en": "NTE official download guide for PC, iOS, Android, PS5, servers, account sync, specs, storage, and install troubleshooting.",
+      "ja": "NTEの公式DL、PC、モバイル、PS5、サーバー、アカウント、環境、容量、インストール問題を整理。"
+    },
+    "quickFacts": {
+      "zh": [
+        "覆盖异环官网、PC、iOS、Android、PS5 下载入口。",
+        "先确认区服、账号互通、安装空间和配置要求。",
+        "适合“异环下载”“异环官网”“异环手游”搜索。"
+      ],
+      "en": [
+        "Covers official site, PC, iOS, Android, and PS5 entry points.",
+        "Check server, account sync, storage, and specs before installing.",
+        "Best for NTE download and official-site intent."
+      ],
+      "ja": [
+        "公式、PC、iOS、Android、PS5の入口を整理。",
+        "DL前にサーバー、連携、容量、環境を確認。",
+        "NTE DL / 公式検索向け。"
+      ]
+    }
   },
   {
     "id": "beginner-guide",

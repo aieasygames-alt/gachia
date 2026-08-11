@@ -963,7 +963,34 @@
         "answer": "If you want the launch rewards and early progression window, start on PC now. Mobile is better as a follow-up device, not the only way to join today.",
         "answerZh": "如果你想拿开服福利和首日进度，今天先上 PC 更合适。移动端更适合作为后续补设备，而不是唯一入口。"
       }
-    ]
+    ],
+    "serpTitle": {
+      "zh": "失控进化下载｜官网、WeGame、手游入口与安装排错",
+      "en": "Ashfall Evolution Download — Official Site, WeGame & Mobile",
+      "ja": "失控進化DL｜公式、WeGame、モバイル"
+    },
+    "serpDescription": {
+      "zh": "失控进化官网与平台下载指南，整理 WeGame、PC 电脑版、移动端、服务器选择、账号绑定、安装空间和下载慢等常见问题。",
+      "en": "Ashfall Evolution platform download guide covering official site, WeGame, PC, mobile, server choice, account binding, storage, and install fixes.",
+      "ja": "公式、WeGame、PC、モバイル、サーバー、アカウント、容量、DL問題を整理。"
+    },
+    "quickFacts": {
+      "zh": [
+        "优先确认失控进化官网、WeGame 和移动端入口。",
+        "安装前检查账号绑定、服务器模式和剩余空间。",
+        "适合“失控进化下载”“失控进化官网”“官网下载”搜索。"
+      ],
+      "en": [
+        "Check official site, WeGame, and mobile entry first.",
+        "Confirm account, server mode, and storage before installing.",
+        "Best for download and official-site intent."
+      ],
+      "ja": [
+        "公式、WeGame、モバイル入口を先に確認。",
+        "DL前にアカウント、サーバー、容量を確認。",
+        "公式 / DL検索向け。"
+      ]
+    }
   },
   {
     "id": "launch-day-vs-sea",
