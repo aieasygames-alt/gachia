@@ -2,16 +2,11 @@ import { GAMES, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { getDb } from '@/lib/db';
 import { sharedBuilds, eq } from '@gachia/db';
-import { genshinCharacters, getGenshinCharacterName, getGenshinCharacterImage } from '@gachia/data/games/genshin/characters';
-import { starrailCharacters, getStarRailCharacterName, getStarRailCharacterImage } from '@gachia/data/games/starrail/characters';
-import { wuwaCharacters, getWuWaCharacterName, getWuWaCharacterImage } from '@gachia/data/games/wuwa/characters';
-import { nteCharacters, getNteCharacterName, getNteCharacterImage } from '@gachia/data/games/nte/characters';
-import { zzzCharacters, getZzzCharacterName, getZzzCharacterImage } from '@gachia/data/games/zzz/characters';
-import { guihuanCharacters, getGuihuanCharacterName, getGuihuanCharacterImage } from '@gachia/data/games/guihuan/characters';
-import { seaCharacters, getSeaCharacterName, getSeaCharacterImage } from '@gachia/data/games/sea/characters';
 import { notFound } from 'next/navigation';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
+import { getSharedBuildCharacters } from '@/lib/game-data/shared-builds';
+import type { SharedBuildCharacterEntry } from '@/lib/game-data/shared-builds';
 
 const GENSHIN_ELEMENT_COLORS: Record<string, string> = {
   pyro: '#ef4444', hydro: '#3b82f6', electro: '#8b5cf6',
@@ -86,144 +81,47 @@ export default async function SharedBuildPage({
   );
 }
 
-function SharedTeamView({ gameId, locale, characterIds }: { gameId: GameId; locale: SupportedLocale; characterIds: string[] }) {
-  const gameConfig = GAMES[gameId];
+async function SharedTeamView({ gameId, locale, characterIds }: { gameId: GameId; locale: SupportedLocale; characterIds: string[] }) {
+  const characters = await getSharedBuildCharacters(gameId, characterIds, locale);
 
-  if (gameId === 'genshin') {
+  if (characters.length === 0) {
     return (
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-        {characterIds.map((id) => {
-          const char = genshinCharacters.find((c) => c.id === id);
-          if (!char) return null;
-          return (
-            <div key={id} className="flex flex-col items-center rounded-xl border border-game-border bg-game-surface p-4">
-              <CharacterAvatar src={getGenshinCharacterImage(char)} alt={char.nameEn} element={char.element}
-                className="h-20 w-20 rounded-xl object-cover ring-2 ring-game-primary/30" />
-              <span className="mt-2 text-sm font-medium text-game-text">{getGenshinCharacterName(char, locale)}</span>
-              <div className="mt-1 flex items-center gap-1.5">
-                <span className="rounded-full px-1.5 py-0.5 text-[10px] font-medium text-white" style={{ backgroundColor: GENSHIN_ELEMENT_COLORS[char.element] || '#888' }}>
-                  {char.element}
-                </span>
-                <span className="text-[10px] text-yellow-500">{char.rarity}★</span>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    );
-  }
-
-  if (gameId === 'starrail') {
-    return (
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-        {characterIds.map((id) => {
-          const char = starrailCharacters.find((c) => c.id === id);
-          if (!char) return null;
-          return (
-            <div key={id} className="flex flex-col items-center rounded-xl border border-game-border bg-game-surface p-4">
-              <CharacterAvatar src={getStarRailCharacterImage(char)} alt={char.nameEn} element={char.element}
-                className="h-20 w-20 rounded-xl object-cover ring-2 ring-game-primary/30" />
-              <span className="mt-2 text-sm font-medium text-game-text">{getStarRailCharacterName(char, locale)}</span>
-            </div>
-          );
-        })}
-      </div>
-    );
-  }
-
-  if (gameId === 'wuwa') {
-    return (
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-        {characterIds.map((id) => {
-          const char = wuwaCharacters.find((c) => c.id === id);
-          if (!char) return null;
-          return (
-            <div key={id} className="flex flex-col items-center rounded-xl border border-game-border bg-game-surface p-4">
-              <CharacterAvatar src={getWuWaCharacterImage(char)} alt={char.nameEn} element={char.element}
-                className="h-20 w-20 rounded-xl object-cover ring-2 ring-game-primary/30" />
-              <span className="mt-2 text-sm font-medium text-game-text">{getWuWaCharacterName(char, locale)}</span>
-            </div>
-          );
-        })}
-      </div>
-    );
-  }
-
-  if (gameId === 'nte') {
-    return (
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-        {characterIds.map((id) => {
-          const char = nteCharacters.find((c) => c.id === id);
-          if (!char) return null;
-          return (
-            <div key={id} className="flex flex-col items-center rounded-xl border border-game-border bg-game-surface p-4">
-              <CharacterAvatar src={getNteCharacterImage(char)} alt={char.nameEn} element={char.attribute}
-                className="h-20 w-20 rounded-xl object-cover ring-2 ring-game-primary/30" />
-              <span className="mt-2 text-sm font-medium text-game-text">{getNteCharacterName(char, locale)}</span>
-            </div>
-          );
-        })}
-      </div>
-    );
-  }
-
-  if (gameId === 'zzz') {
-    return (
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-        {characterIds.map((id) => {
-          const char = zzzCharacters.find((c) => c.id === id);
-          if (!char) return null;
-          return (
-            <div key={id} className="flex flex-col items-center rounded-xl border border-game-border bg-game-surface p-4">
-              <CharacterAvatar src={getZzzCharacterImage(char)} alt={char.nameEn} element={char.attribute}
-                className="h-20 w-20 rounded-xl object-cover ring-2 ring-game-primary/30" />
-              <span className="mt-2 text-sm font-medium text-game-text">{getZzzCharacterName(char, locale)}</span>
-            </div>
-          );
-        })}
-      </div>
-    );
-  }
-
-  if (gameId === 'guihuan') {
-    return (
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-        {characterIds.map((id) => {
-          const char = guihuanCharacters.find((c) => c.id === id);
-          if (!char) return null;
-          return (
-            <div key={id} className="flex flex-col items-center rounded-xl border border-game-border bg-game-surface p-4">
-              <CharacterAvatar src={getGuihuanCharacterImage(char)} alt={char.nameEn} element={char.element}
-                className="h-20 w-20 rounded-xl object-cover ring-2 ring-game-primary/30" />
-              <span className="mt-2 text-sm font-medium text-game-text">{getGuihuanCharacterName(char, locale)}</span>
-            </div>
-          );
-        })}
-      </div>
-    );
-  }
-
-  if (gameId === 'sea') {
-    return (
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-        {characterIds.map((id) => {
-          const char = seaCharacters.find((c) => c.id === id);
-          if (!char) return null;
-          return (
-            <div key={id} className="flex flex-col items-center rounded-xl border border-game-border bg-game-surface p-4">
-              <CharacterAvatar src={getSeaCharacterImage(char)} alt={char.nameEn} element={char.attribute}
-                className="h-20 w-20 rounded-xl object-cover ring-2 ring-game-primary/30" />
-              <span className="mt-2 text-sm font-medium text-game-text">{getSeaCharacterName(char, locale)}</span>
-            </div>
-          );
-        })}
+      <div className="rounded-xl border border-game-border bg-game-surface p-6 text-center text-game-text-muted">
+        {locale === 'zh' ? '不支持的游戏类型或角色不存在' : 'Unsupported game type or characters not found'}
       </div>
     );
   }
 
   return (
-    <div className="rounded-xl border border-game-border bg-game-surface p-6 text-center text-game-text-muted">
-      {locale === 'zh' ? '不支持的游戏类型' : 'Unsupported game type'}
+    <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+      {characters.map((char) => (
+        <SharedCharacterCard key={char.id} character={char} />
+      ))}
+    </div>
+  );
+}
+
+function SharedCharacterCard({ character }: { character: SharedBuildCharacterEntry }) {
+  return (
+    <div className="flex flex-col items-center rounded-xl border border-game-border bg-game-surface p-4">
+      <CharacterAvatar
+        src={character.imageUrl}
+        alt={character.imageAlt}
+        element={character.element}
+        className="h-20 w-20 rounded-xl object-cover ring-2 ring-game-primary/30"
+      />
+      <span className="mt-2 text-sm font-medium text-game-text">{character.name}</span>
+      {character.rarity && (
+        <div className="mt-1 flex items-center gap-1.5">
+          <span
+            className="rounded-full px-1.5 py-0.5 text-[10px] font-medium text-white"
+            style={{ backgroundColor: GENSHIN_ELEMENT_COLORS[character.element] || '#888' }}
+          >
+            {character.element}
+          </span>
+          <span className="text-[10px] text-yellow-500">{character.rarity}★</span>
+        </div>
+      )}
     </div>
   );
 }
