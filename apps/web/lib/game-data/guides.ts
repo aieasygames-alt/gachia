@@ -26,12 +26,12 @@ type RawGuide = {
   currentVersion?: string;
 };
 
-function toGuideListEntry(
-  guide: RawGuide,
+function toGuideListEntry<T extends RawGuide>(
+  guide: T,
   locale: SupportedLocale,
-  getTitle: (guide: any, locale: SupportedLocale) => string,
-  getSummary: (guide: any, locale: SupportedLocale) => string,
-  getCategory: (guide: any, locale: SupportedLocale) => string,
+  getTitle: (guide: T, locale: SupportedLocale) => string,
+  getSummary: (guide: T, locale: SupportedLocale) => string,
+  getCategory: (guide: T, locale: SupportedLocale) => string,
 ): GuideListEntry {
   return {
     id: guide.id,
@@ -46,12 +46,12 @@ function toGuideListEntry(
   };
 }
 
-function buildGuideListData(
-  guides: RawGuide[],
+function buildGuideListData<T extends RawGuide>(
+  guides: T[],
   locale: SupportedLocale,
-  getTitle: (guide: any, locale: SupportedLocale) => string,
-  getSummary: (guide: any, locale: SupportedLocale) => string,
-  getCategory: (guide: any, locale: SupportedLocale) => string,
+  getTitle: (guide: T, locale: SupportedLocale) => string,
+  getSummary: (guide: T, locale: SupportedLocale) => string,
+  getCategory: (guide: T, locale: SupportedLocale) => string,
 ): GuideListData {
   const entries = guides.map((guide) => toGuideListEntry(guide, locale, getTitle, getSummary, getCategory));
   const categories = [...new Set(entries.map((guide) => guide.category))];

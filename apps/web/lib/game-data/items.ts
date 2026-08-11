@@ -58,10 +58,10 @@ function nameAltFor(material: MaterialEntry, locale: SupportedLocale) {
   return material.name ?? '';
 }
 
-function toItemData(
-  material: MaterialEntry,
+function toItemData<T extends MaterialEntry>(
+  material: T,
   locale: SupportedLocale,
-  getName: (material: any, locale: SupportedLocale) => string,
+  getName: (material: T, locale: SupportedLocale) => string,
 ): ItemData {
   return {
     id: material.id,
@@ -74,10 +74,10 @@ function toItemData(
   };
 }
 
-function toItemListEntry(
-  material: MaterialEntry,
+function toItemListEntry<T extends MaterialEntry>(
+  material: T,
   locale: SupportedLocale,
-  getName: (material: any, locale: SupportedLocale) => string,
+  getName: (material: T, locale: SupportedLocale) => string,
 ): ItemListEntry {
   return {
     id: material.id,
