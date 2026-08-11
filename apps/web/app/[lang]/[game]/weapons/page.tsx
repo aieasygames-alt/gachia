@@ -1,14 +1,6 @@
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { genshinWeapons, getGenshinWeaponName, getGenshinWeaponEffect } from '@gachia/data/games/genshin/weapons';
-import { starrailLightCones, getStarRailLightConeName, getStarRailLightConeEffect } from '@gachia/data/games/starrail/weapons';
-import { wuwaWeapons, getWuWaWeaponName, getWuWaWeaponEffect } from '@gachia/data/games/wuwa/weapons';
-import { nteWeapons, getNteWeaponName, getNteWeaponEffect } from '@gachia/data/games/nte/weapons';
-import { zzzWeapons, getZzzWeaponName, getZzzWeaponEffect } from '@gachia/data/games/zzz/weapons';
-import { anantaWeapons, getAnantaWeaponName, getAnantaWeaponEffect } from '@gachia/data/games/ananta/weapons';
-import { guihuanWeapons, getGuihuanWeaponName, getGuihuanWeaponEffect } from '@gachia/data/games/guihuan/weapons';
-import { endfieldWeapons, getEndfieldWeaponName, getEndfieldWeaponEffect } from '@gachia/data/games/endfield/weapons';
-import { skjhWeapons, getSkjhWeaponName, getSkjhWeaponEffect, getSkjhWeaponSource } from '@gachia/data/games/skjh/weapons';
+import { getWeaponListData, sortWeaponRanks } from '@/lib/game-data/weapons';
 import { Link } from '@/lib/i18n/navigation';
 import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
 
@@ -25,31 +17,6 @@ const WEAPON_DESC: Record<string, Record<string, string>> = {
   endfield: { zh: '明日方舟：终末地全武器图鉴，覆盖六星、五星、四星武器的属性、效果和适配方向，适合提前规划配装。', en: 'Complete Arknights: Endfield weapon list with 6-star, 5-star, and 4-star data, passive effects, and best-fit roles for build planning.', ja: 'アークナイツ：エンドフィールド全武器図鑑。6星・5星・4星の性能、効果、適性をまとめています。' },
   skjh: { zh: '失控进化武器与工具图鉴，覆盖石斧、石镐、木矛、猎弓和预约外观，方便你区分开荒工具、战斗武器和外观奖励。', en: 'Ashfall Evolution weapon and tool list with stone tools, spear, bow, and reservation cosmetics, covering early-game tools, combat gear, and rewards.', ja: '失控進化の武器・道具一覧。石斧、石つるはし、槍、弓、予約外観を整理しています。' },
 };
-
-const NTE_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
-  solid: { zh: '固体', en: 'Solid', ja: 'ソリッド' },
-  synthesis: { zh: '合成', en: 'Synthesis', ja: 'シンセシス' },
-  gas: { zh: '气体', en: 'Gas', ja: 'ガス' },
-};
-
-const NTE_RANK_COLORS: Record<string, string> = { S: '#eab308', A: '#a855f7', B: '#60a5fa' };
-
-const GENSHIN_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
-  sword: { zh: '单手剑', en: 'Sword', ja: '片手剣' },
-  claymore: { zh: '双手剑', en: 'Claymore', ja: '両手剣' },
-  polearm: { zh: '长柄武器', en: 'Polearm', ja: '長柄武器' },
-  bow: { zh: '弓', en: 'Bow', ja: '弓' },
-  catalyst: { zh: '法器', en: 'Catalyst', ja: '法器' },
-};
-
-const GENSHIN_RARITY_COLORS: Record<number, string> = { 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };
-const SKJH_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
-  tool: { zh: '采集工具', en: 'Tool', ja: '採集道具' },
-  melee: { zh: '近战武器', en: 'Melee', ja: '近接武器' },
-  ranged: { zh: '远程武器', en: 'Ranged', ja: '遠距離武器' },
-  skin: { zh: '外观奖励', en: 'Cosmetic', ja: '外観報酬' },
-};
-const SKJH_RARITY_COLORS: Record<number, string> = { 1: '#9ca3af', 2: '#4ade80', 3: '#60a5fa', 4: '#f97316' };
 
 const WEAPON_INTRO: Record<string, Record<SupportedLocale, string>> = {
   genshin: {
@@ -160,45 +127,11 @@ export default async function WeaponsPage({
       { '@type': 'ListItem', position: 2, name: CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons', item: `${BASE_URL}/${locale}/${gameId}/weapons` },
     ],
   };
-
-  if (gameId === 'genshin') {
-    return <><GenshinWeaponsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
-  }
-
-  if (gameId === 'starrail') {
-    return <><StarRailWeaponsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
-  }
-
-  if (gameId === 'nte') {
-    return <><NteWeaponsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
-  }
-
-  if (gameId === 'wuwa') {
-    return <><WuWaWeaponsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
-  }
-
-  if (gameId === 'zzz') {
-    return <><ZzzWeaponsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
-  }
-
-  if (gameId === 'ananta') {
-    return <><AnantaWeaponsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
-  }
-
-  if (gameId === 'guihuan') {
-    return <><GuihuanWeaponsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
-  }
-
-  if (gameId === 'endfield') {
-    return <><EndfieldWeaponsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
-  }
-
-  if (gameId === 'skjh') {
-    return <><SkjhWeaponsPage locale={locale} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
-  }
+  const ldScript = <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />;
 
   if (gameId === 'sea') {
     return (
+      <>
       <div>
         <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
           {CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons'}
@@ -207,8 +140,13 @@ export default async function WeaponsPage({
           {locale === 'zh' ? '该游戏没有武器系统' : locale === 'ja' ? 'このゲームには武器システムがありません' : 'This game does not have a weapon system'}
         </div>
       </div>
+      {ldScript}
+      </>
     );
   }
+
+  const weapons = await getWeaponListData(gameId, locale);
+  if (weapons.length > 0) return <><WeaponListPage gameId={gameId} locale={locale} weapons={weapons} />{ldScript}</>;
 
   return (
     <div>
@@ -222,69 +160,28 @@ export default async function WeaponsPage({
   );
 }
 
-// --- Genshin Weapons ---
+type WeaponCardEntry = Awaited<ReturnType<typeof getWeaponListData>>[number];
+type NextStepLink = {
+  href: string;
+  title: Record<SupportedLocale, string>;
+  description: Record<SupportedLocale, string>;
+};
 
-function GenshinWeaponsPage({ locale }: { locale: SupportedLocale }) {
-  const weapons = genshinWeapons;
-  const fiveStar = weapons.filter((w) => w.rarity === 5);
-  const fourStar = weapons.filter((w) => w.rarity === 4);
-  const threeStar = weapons.filter((w) => w.rarity === 3);
+const WEAPON_RANK_COLORS: Record<string, string> = {
+  S: '#eab308', A: '#a855f7', B: '#60a5fa',
+  '6★': '#ef4444', '5★': '#eab308', '4★': '#a855f7', '3★': '#60a5fa', '2★': '#4ade80', '1★': '#9ca3af',
+};
 
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.genshin.theme.primary }}>
-        {CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${weapons.length} 件武器` : locale === 'ja' ? `${weapons.length} 個の武器` : `${weapons.length} Weapons`}
-      </p>
-      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
-        {getWeaponIntro('genshin', locale)}
-      </p>
-
-      {[fiveStar, fourStar, threeStar].map((list) => {
-        if (list.length === 0) return null;
-        const rarity = list[0]!.rarity;
-        return (
-          <section key={rarity} className="mb-8">
-            <h2 className="mb-4 text-lg font-semibold text-game-text">
-              {rarity}★ ({list.length})
-            </h2>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {list.map((w) => {
-                const effect = getGenshinWeaponEffect(w, locale);
-                const typeLabel = GENSHIN_WEAPON_TYPE_LABELS[w.weaponType]?.[locale] ?? w.weaponType;
-                return (
-                  <div key={w.id} className="rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary">
-                    <div className="mb-2 flex items-center gap-2">
-                      <span className="text-base font-bold" style={{ color: GENSHIN_RARITY_COLORS[w.rarity] || '#888' }}>{w.rarity}★</span>
-                      <h3 className="font-semibold text-game-text">{getGenshinWeaponName(w, locale)}</h3>
-                      <span className="ml-auto rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{typeLabel}</span>
-                    </div>
-                    <div className="mb-2 flex gap-3 text-sm text-game-text-muted">
-                      <span>ATK {w.baseAtk}</span>
-                      <span>{w.subStatValue} {w.subStat}</span>
-                    </div>
-                    {effect.description && <p className="text-xs leading-relaxed text-game-text-muted line-clamp-2">{effect.description}</p>}
-                    {w.signatureCharacter && (
-                      <p className="mt-2 text-xs text-game-primary">
-                        {locale === 'zh' ? '专属' : 'Signature'}: {w.signatureCharacter}
-                      </p>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </section>
-        );
-      })}
-    </div>
-  );
-}
-
-// --- Star Rail Light Cones ---
-
-const STARRAIL_PATH_LABELS: Record<string, Record<string, string>> = {
+const TYPE_LABELS: Record<string, Record<string, string>> = {
+  sword: { zh: '单手剑', en: 'Sword', ja: '片手剣' },
+  claymore: { zh: '双手剑', en: 'Claymore', ja: '両手剣' },
+  polearm: { zh: '长柄武器', en: 'Polearm', ja: '長柄武器' },
+  bow: { zh: '弓', en: 'Bow', ja: '弓' },
+  catalyst: { zh: '法器', en: 'Catalyst', ja: '法器' },
+  broadblade: { zh: '大刃', en: 'Broadblade', ja: '大剣' },
+  pistols: { zh: '佩枪', en: 'Pistols', ja: '銃' },
+  gauntlets: { zh: '臂铠', en: 'Gauntlets', ja: '腕甲' },
+  rectifier: { zh: '音感仪', en: 'Rectifier', ja: '感応儀' },
   destruction: { zh: '毁灭', en: 'Destruction', ja: '壊滅' },
   hunt: { zh: '巡猎', en: 'Hunt', ja: '巡狩' },
   erudition: { zh: '智识', en: 'Erudition', ja: '知恵' },
@@ -294,578 +191,157 @@ const STARRAIL_PATH_LABELS: Record<string, Record<string, string>> = {
   abundance: { zh: '丰饶', en: 'Abundance', ja: '豊穣' },
   remembrance: { zh: '记忆', en: 'Remembrance', ja: '記憶' },
   elation: { zh: '欢愉', en: 'Elation', ja: '愉悦' },
-};
-
-function StarRailWeaponsPage({ locale }: { locale: SupportedLocale }) {
-  const weapons = starrailLightCones;
-  const fiveStar = weapons.filter((w) => w.rarity === 5);
-  const fourStar = weapons.filter((w) => w.rarity === 4);
-  const threeStar = weapons.filter((w) => w.rarity === 3);
-
-  const label = locale === 'zh' ? '光锥' : locale === 'ja' ? '光円錐' : 'Light Cones';
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.starrail.theme.primary }}>
-        {label}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${weapons.length} 件光锥` : locale === 'ja' ? `${weapons.length} 個の光円錐` : `${weapons.length} Light Cones`}
-      </p>
-      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
-        {getWeaponIntro('starrail', locale)}
-      </p>
-
-      {[fiveStar, fourStar, threeStar].map((list) => {
-        if (list.length === 0) return null;
-        const rarity = list[0]!.rarity;
-        return (
-          <section key={rarity} className="mb-8">
-            <h2 className="mb-4 text-lg font-semibold text-game-text">
-              {rarity}★ ({list.length})
-            </h2>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {list.map((w) => {
-                const effect = getStarRailLightConeEffect(w, locale);
-                const pathLabel = STARRAIL_PATH_LABELS[w.path]?.[locale] ?? w.path;
-                return (
-                  <div key={w.id} className="rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary">
-                    <div className="mb-2 flex items-center gap-2">
-                      <span className="text-base font-bold" style={{ color: rarity === 5 ? '#eab308' : rarity === 4 ? '#a855f7' : '#60a5fa' }}>{w.rarity}★</span>
-                      <h3 className="font-semibold text-game-text">{getStarRailLightConeName(w, locale)}</h3>
-                      <span className="ml-auto rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{pathLabel}</span>
-                    </div>
-                    <div className="mb-2 flex gap-3 text-sm text-game-text-muted">
-                      <span>HP {w.baseHp}</span>
-                      <span>ATK {w.baseAtk}</span>
-                      <span>DEF {w.baseDef}</span>
-                    </div>
-                    {effect.description && <p className="text-xs leading-relaxed text-game-text-muted line-clamp-2">{effect.description}</p>}
-                    {w.signatureCharacter && (
-                      <p className="mt-2 text-xs text-game-primary">
-                        {locale === 'zh' ? '专属' : 'Signature'}: {w.signatureCharacter}
-                      </p>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </section>
-        );
-      })}
-    </div>
-  );
-}
-
-// --- NTE Weapons ---
-
-function NteWeaponsPage({ locale }: { locale: SupportedLocale }) {
-  const weapons = nteWeapons;
-  const grouped = groupByRank(weapons);
-  const ranks = ['S', 'A', 'B'] as const;
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.nte.theme.primary }}>
-        {locale === 'zh' ? '弧盘' : locale === 'ja' ? 'アルク' : 'Arcs'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${weapons.length} 件弧盘` : locale === 'ja' ? `${weapons.length} 個のアルク` : `${weapons.length} Arcs`}
-      </p>
-      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
-        {getWeaponIntro('nte', locale)}
-      </p>
-
-      {ranks.map((rank) => {
-        const list = grouped[rank];
-        if (!list || list.length === 0) return null;
-        return (
-          <section key={rank} className="mb-8">
-            <h2 className="mb-4 text-lg font-semibold text-game-text">{rank}-Rank ({list.length})</h2>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {list.map((w) => {
-                const effect = getNteWeaponEffect(w, locale);
-                const typeLabel = NTE_WEAPON_TYPE_LABELS[w.type]?.[locale] ?? w.type;
-                return (
-                  <div key={w.id} className="rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary">
-                    <div className="mb-2 flex items-center gap-2">
-                      <span className="text-base font-bold" style={{ color: NTE_RANK_COLORS[w.rank] || '#888' }}>{w.rank}</span>
-                      <h3 className="font-semibold text-game-text">{getNteWeaponName(w, locale)}</h3>
-                      <span className="ml-auto rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{typeLabel}</span>
-                    </div>
-                    <div className="mb-2 flex gap-3 text-sm text-game-text-muted">
-                      <span>ATK {w.baseAtk}</span>
-                      <span>{w.substatValue} {w.substat}</span>
-                    </div>
-                    <p className="text-xs leading-relaxed text-game-text-muted line-clamp-2">{effect.description}</p>
-                    {w.signatureCharacter && (<p className="mt-2 text-xs text-game-primary">{locale === 'zh' ? '专属' : 'Signature'}: {w.signatureCharacter}</p>)}
-                  </div>
-                );
-              })}
-            </div>
-          </section>
-        );
-      })}
-    </div>
-  );
-}
-
-// --- Wuthering Waves Weapons ---
-
-const WUWA_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
-  broadblade: { zh: '大刃', en: 'Broadblade', ja: '大剣' },
-  sword: { zh: '长刃', en: 'Sword', ja: '長刃' },
-  pistols: { zh: '佩枪', en: 'Pistols', ja: '銃' },
-  gauntlets: { zh: '臂铠', en: 'Gauntlets', ja: '腕甲' },
-  rectifier: { zh: '音感仪', en: 'Rectifier', ja: '感応儀' },
-};
-
-const WUWA_RARITY_COLORS: Record<number, string> = { 1: '#9ca3af', 2: '#4ade80', 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };
-
-function WuWaWeaponsPage({ locale }: { locale: SupportedLocale }) {
-  const weapons = wuwaWeapons;
-  const fiveStar = weapons.filter((w) => w.rarity === 5);
-  const fourStar = weapons.filter((w) => w.rarity === 4);
-  const threeStar = weapons.filter((w) => w.rarity === 3);
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.wuwa.theme.primary }}>
-        {CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${weapons.length} 件武器` : locale === 'ja' ? `${weapons.length} 個の武器` : `${weapons.length} Weapons`}
-      </p>
-      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
-        {getWeaponIntro('wuwa', locale)}
-      </p>
-
-      {[fiveStar, fourStar, threeStar].map((list) => {
-        if (list.length === 0) return null;
-        const rarity = list[0]!.rarity;
-        return (
-          <section key={rarity} className="mb-8">
-            <h2 className="mb-4 text-lg font-semibold text-game-text">
-              {rarity}★ ({list.length})
-            </h2>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {list.map((w) => {
-                const effect = getWuWaWeaponEffect(w, locale);
-                const typeLabel = WUWA_WEAPON_TYPE_LABELS[w.weaponType]?.[locale] ?? w.weaponType;
-                return (
-                  <div key={w.id} className="rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary">
-                    <div className="mb-2 flex items-center gap-2">
-                      <span className="text-base font-bold" style={{ color: WUWA_RARITY_COLORS[w.rarity] || '#888' }}>{w.rarity}★</span>
-                      <h3 className="font-semibold text-game-text">{getWuWaWeaponName(w, locale)}</h3>
-                      <span className="ml-auto rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{typeLabel}</span>
-                    </div>
-                    <div className="mb-2 flex gap-3 text-sm text-game-text-muted">
-                      <span>ATK {w.baseAtk}</span>
-                      {w.subStat && <span>{w.subStat.value} {w.subStat.name}</span>}
-                    </div>
-                    {effect.description && <p className="text-xs leading-relaxed text-game-text-muted line-clamp-2">{effect.description}</p>}
-                    {w.signatureCharacter && (
-                      <p className="mt-2 text-xs text-game-primary">
-                        {locale === 'zh' ? '专属' : 'Signature'}: {w.signatureCharacter}
-                      </p>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </section>
-        );
-      })}
-
-      <NextStepStrip locale={locale} links={WUWA_WEAPON_NEXT_STEPS} />
-    </div>
-  );
-}
-
-function groupByRank<T extends { rank: string }>(arr: T[]): Record<string, T[]> {
-  return arr.reduce((acc, item) => {
-    (acc[item.rank] ??= []).push(item);
-    return acc;
-  }, {} as Record<string, T[]>);
-}
-
-// --- ZZZ W-Engines ---
-
-const ZZZ_RANK_COLORS: Record<string, string> = { S: '#eab308', A: '#a855f7', B: '#60a5fa' };
-
-const ZZZ_SPECIALTY_LABELS: Record<string, Record<string, string>> = {
+  solid: { zh: '固体', en: 'Solid', ja: 'ソリッド' },
+  synthesis: { zh: '合成', en: 'Synthesis', ja: 'シンセシス' },
+  gas: { zh: '气体', en: 'Gas', ja: 'ガス' },
   Attack: { zh: '强攻', en: 'Attack', ja: '強攻' },
   Stun: { zh: '击破', en: 'Stun', ja: '撃破' },
   Anomaly: { zh: '异常', en: 'Anomaly', ja: '異常' },
   Support: { zh: '支援', en: 'Support', ja: '支援' },
   Defense: { zh: '防护', en: 'Defense', ja: '防護' },
   Rupture: { zh: '突击', en: 'Rupture', ja: '突撃' },
-};
-
-function ZzzWeaponsPage({ locale }: { locale: SupportedLocale }) {
-  const weapons = zzzWeapons;
-  const grouped = groupByRank(weapons);
-  const ranks = ['S', 'A', 'B'] as const;
-
-  const label = locale === 'zh' ? '音擎' : locale === 'ja' ? 'W-エンジン' : 'W-Engines';
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.zzz.theme.primary }}>
-        {label}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${weapons.length} 件音擎` : locale === 'ja' ? `${weapons.length} 個のW-エンジン` : `${weapons.length} W-Engines`}
-      </p>
-      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
-        {getWeaponIntro('zzz', locale)}
-      </p>
-
-      {ranks.map((rank) => {
-        const list = grouped[rank];
-        if (!list || list.length === 0) return null;
-        return (
-          <section key={rank} className="mb-8">
-            <h2 className="mb-4 text-lg font-semibold text-game-text">{rank}-Rank ({list.length})</h2>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {list.map((w) => {
-                const effect = getZzzWeaponEffect(w, locale);
-                const specialtyLabel = ZZZ_SPECIALTY_LABELS[w.specialtyEn]?.[locale] ?? w.specialtyEn;
-                return (
-                  <div key={w.id} className="rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary">
-                    <div className="mb-2 flex items-center gap-2">
-                      <span className="text-base font-bold" style={{ color: ZZZ_RANK_COLORS[w.rank] || '#888' }}>{w.rank}</span>
-                      <h3 className="font-semibold text-game-text">{getZzzWeaponName(w, locale)}</h3>
-                      <span className="ml-auto rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{specialtyLabel}</span>
-                    </div>
-                    <div className="mb-2 flex gap-3 text-sm text-game-text-muted">
-                      <span>ATK {w.baseAtk}</span>
-                      <span>{w.substatValue} {w.substat}</span>
-                    </div>
-                    {effect.description && <p className="text-xs leading-relaxed text-game-text-muted line-clamp-2">{effect.description}</p>}
-                    {w.signatureCharacter && (<p className="mt-2 text-xs text-game-primary">{locale === 'zh' ? '专属' : 'Signature'}: {w.signatureCharacter}</p>)}
-                  </div>
-                );
-              })}
-            </div>
-          </section>
-        );
-      })}
-
-      <NextStepStrip locale={locale} links={ZZZ_WEAPON_NEXT_STEPS} />
-    </div>
-  );
-}
-
-// --- Ananta Weapons ---
-
-const ANANTA_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
   gauntlet: { zh: '拳套', en: 'Gauntlet', ja: 'ガントレット' },
+  Gauntlet: { zh: '拳套', en: 'Gauntlet', ja: 'ガントレット' },
   hammer: { zh: '重锤', en: 'Hammer', ja: 'ハンマー' },
+  Hammer: { zh: '重锤', en: 'Hammer', ja: 'ハンマー' },
   'yo-yo': { zh: '溜溜球', en: 'Yo-yo', ja: 'ヨーヨー' },
   blade: { zh: '刃', en: 'Blade', ja: 'ブレード' },
-  catalyst: { zh: '法器', en: 'Catalyst', ja: '触媒' },
-  bow: { zh: '弓', en: 'Bow', ja: '弓' },
-  spear: { zh: '长枪', en: 'Spear', ja: '槍' },
-};
-
-const ANANTA_RARITY_COLORS: Record<number, string> = { 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };
-
-function AnantaWeaponsPage({ locale }: { locale: SupportedLocale }) {
-  const weapons = anantaWeapons;
-  const fiveStar = weapons.filter((w) => w.rarity === 5);
-  const fourStar = weapons.filter((w) => w.rarity === 4);
-  const threeStar = weapons.filter((w) => w.rarity === 3);
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.ananta.theme.primary }}>
-        {CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${weapons.length} 件武器` : locale === 'ja' ? `${weapons.length} 個の武器` : `${weapons.length} Weapons`}
-      </p>
-      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
-        {getWeaponIntro('ananta', locale)}
-      </p>
-
-      {[fiveStar, fourStar, threeStar].map((list) => {
-        if (list.length === 0) return null;
-        const rarity = list[0]!.rarity;
-        return (
-          <section key={rarity} className="mb-8">
-            <h2 className="mb-4 text-lg font-semibold text-game-text">
-              {rarity}★ ({list.length})
-            </h2>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {list.map((w) => {
-                const effect = getAnantaWeaponEffect(w, locale);
-                const typeLabel = ANANTA_WEAPON_TYPE_LABELS[w.weaponTypeEn]?.[locale] ?? w.weaponTypeEn;
-                return (
-                  <div key={w.id} className="rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary">
-                    <div className="mb-2 flex items-center gap-2">
-                      <span className="text-base font-bold" style={{ color: ANANTA_RARITY_COLORS[w.rarity] || '#888' }}>{w.rarity}★</span>
-                      <h3 className="font-semibold text-game-text">{getAnantaWeaponName(w, locale)}</h3>
-                      <span className="ml-auto rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{typeLabel}</span>
-                    </div>
-                    <div className="mb-2 flex gap-3 text-sm text-game-text-muted">
-                      <span>ATK {w.baseAtk}</span>
-                      <span>{w.substatValue} {w.substat}</span>
-                    </div>
-                    {effect.description && <p className="text-xs leading-relaxed text-game-text-muted line-clamp-2">{effect.description}</p>}
-                  </div>
-                );
-              })}
-            </div>
-          </section>
-        );
-      })}
-    </div>
-  );
-}
-
-// --- Guihuan Weapons ---
-
-const GUIHUAN_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
-  Sword: { zh: '剑', en: 'Sword', ja: '剣' },
-  Gauntlet: { zh: '拳套', en: 'Gauntlet', ja: 'ガントレット' },
   Blade: { zh: '刃', en: 'Blade', ja: 'ブレード' },
-  Catalyst: { zh: '法器', en: 'Catalyst', ja: '触媒' },
   Instrument: { zh: '乐器', en: 'Instrument', ja: '楽器' },
-  Hammer: { zh: '重锤', en: 'Hammer', ja: 'ハンマー' },
-  Bow: { zh: '弓', en: 'Bow', ja: '弓' },
   Spear: { zh: '长枪', en: 'Spear', ja: '槍' },
-};
-
-function GuihuanWeaponsPage({ locale }: { locale: SupportedLocale }) {
-  const weapons = guihuanWeapons;
-  const fiveStar = weapons.filter((w) => w.rarity === 5);
-  const fourStar = weapons.filter((w) => w.rarity === 4);
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.guihuan.theme.primary }}>
-        {CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${weapons.length} 件武器` : locale === 'ja' ? `${weapons.length} 個の武器` : `${weapons.length} Weapons`}
-      </p>
-      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
-        {getWeaponIntro('guihuan', locale)}
-      </p>
-
-      {[fiveStar, fourStar].map((list) => {
-        if (list.length === 0) return null;
-        const rarity = list[0]!.rarity;
-        return (
-          <section key={rarity} className="mb-8">
-            <h2 className="mb-4 text-lg font-semibold text-game-text">
-              {rarity}★ ({list.length})
-            </h2>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {list.map((w) => {
-                const effect = getGuihuanWeaponEffect(w, locale);
-                const typeLabel = GUIHUAN_WEAPON_TYPE_LABELS[w.weaponTypeEn]?.[locale] ?? w.weaponTypeEn;
-                return (
-                  <div key={w.id} className="rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary">
-                    <div className="mb-2 flex items-center gap-2">
-                      <span className="text-base font-bold" style={{ color: rarity === 5 ? '#eab308' : '#a855f7' }}>{w.rarity}★</span>
-                      <h3 className="font-semibold text-game-text">{getGuihuanWeaponName(w, locale)}</h3>
-                      <span className="ml-auto rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{typeLabel}</span>
-                    </div>
-                    <div className="mb-2 flex gap-3 text-sm text-game-text-muted">
-                      <span>ATK {w.baseAtk}</span>
-                      <span>{w.substatValue} {w.substatEn}</span>
-                    </div>
-                    {effect.description && <p className="text-xs leading-relaxed text-game-text-muted line-clamp-2">{effect.description}</p>}
-                  </div>
-                );
-              })}
-            </div>
-          </section>
-        );
-      })}
-    </div>
-  );
-}
-
-// --- Endfield Weapons ---
-
-const ENDFIELD_WEAPON_TYPE_LABELS: Record<string, Record<string, string>> = {
-  Sword: { zh: '剑', en: 'Sword', ja: '剣' },
   Greatsword: { zh: '大剑', en: 'Greatsword', ja: '大剣' },
-  Spear: { zh: '长枪', en: 'Spear', ja: '槍' },
   Shield: { zh: '盾', en: 'Shield', ja: '盾' },
   Staff: { zh: '法杖', en: 'Staff', ja: '杖' },
-};
-
-const ENDFIELD_RARITY_COLORS: Record<number, string> = { 4: '#a855f7', 5: '#eab308', 6: '#ef4444' };
-type NextStepLink = {
-  href: string;
-  title: Record<SupportedLocale, string>;
-  description: Record<SupportedLocale, string>;
+  tool: { zh: '采集工具', en: 'Tool', ja: '採集道具' },
+  melee: { zh: '近战武器', en: 'Melee', ja: '近接武器' },
+  ranged: { zh: '远程武器', en: 'Ranged', ja: '遠距離武器' },
+  skin: { zh: '外观奖励', en: 'Cosmetic', ja: '外観報酬' },
 };
 
 const WUWA_WEAPON_NEXT_STEPS: NextStepLink[] = [
-  {
-    href: '/wuwa/version',
-    title: { zh: '先看版本专题', en: 'Start with version hub', ja: 'まず版本特集へ' },
-    description: { zh: '把当前版本、福利和热词先看一遍', en: 'Review the current version, rewards, and hot topics', ja: '版本、報酬、注目トピックを確認', },
-  },
-  {
-    href: '/wuwa/characters',
-    title: { zh: '继续看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
-    description: { zh: '按角色反查武器适配和毕业方向', en: 'Check which characters want which weapons', ja: 'キャラ別の適性と完成形を見る', },
-  },
-  {
-    href: '/wuwa/guides/roya-frostlands-guide',
-    title: { zh: '看新区域攻略', en: 'Read region guide', ja: '新エリア攻略へ' },
-    description: { zh: '把刷图、材料和养成路径接起来', en: 'Connect farming, materials, and progression', ja: '周回、素材、育成導線を接続', },
-  },
+  { href: '/wuwa/version', title: { zh: '先看版本专题', en: 'Start with version hub', ja: 'まず版本特集へ' }, description: { zh: '把当前版本、福利和热词先看一遍', en: 'Review the current version, rewards, and hot topics', ja: '版本、報酬、注目トピックを確認' } },
+  { href: '/wuwa/characters', title: { zh: '继续看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' }, description: { zh: '按角色反查武器适配和毕业方向', en: 'Check which characters want which weapons', ja: 'キャラ別の適性と完成形を見る' } },
+  { href: '/wuwa/guides/roya-frostlands-guide', title: { zh: '看新区域攻略', en: 'Read region guide', ja: '新エリア攻略へ' }, description: { zh: '把刷图、材料和养成路径接起来', en: 'Connect farming, materials, and progression', ja: '周回、素材、育成導線を接続' } },
 ];
 
 const ZZZ_WEAPON_NEXT_STEPS: NextStepLink[] = [
-  {
-    href: '/zzz/version',
-    title: { zh: '先看 3.1 当前版本', en: 'Start with the live v3.1 hub', ja: '配信中のv3.1特集へ' },
-    description: { zh: '当前版本、周年福利、卡池和热词都在这里', en: 'Live patch, anniversary rewards, banners, and hot topics live here', ja: '現在版本、周年報酬、バナー、注目トピックを確認', },
-  },
-  {
-    href: '/zzz/characters',
-    title: { zh: '继续看代理人图鉴', en: 'Browse agents', ja: '代理人図鑑へ' },
-    description: { zh: '按代理人反查音擎适配和毕业配置', en: 'Match W-Engines to the right agents', ja: '代理人ごとの適性を確認', },
-  },
-  {
-    href: '/zzz/drive-discs',
-    title: { zh: '看驱动盘图鉴', en: 'Browse drive discs', ja: 'ドライブディスクへ' },
-    description: { zh: '把驱动盘套装和成型思路补齐', en: 'Complete disc sets and build paths', ja: 'セット効果と完成形を整理', },
-  },
+  { href: '/zzz/version', title: { zh: '先看 3.1 当前版本', en: 'Start with the live v3.1 hub', ja: '配信中のv3.1特集へ' }, description: { zh: '当前版本、周年福利、卡池和热词都在这里', en: 'Live patch, anniversary rewards, banners, and hot topics live here', ja: '現在版本、周年報酬、バナー、注目トピックを確認' } },
+  { href: '/zzz/characters', title: { zh: '继续看代理人图鉴', en: 'Browse agents', ja: '代理人図鑑へ' }, description: { zh: '按代理人反查音擎适配和毕业配置', en: 'Match W-Engines to the right agents', ja: '代理人ごとの適性を確認' } },
+  { href: '/zzz/drive-discs', title: { zh: '看驱动盘图鉴', en: 'Browse drive discs', ja: 'ドライブディスクへ' }, description: { zh: '把驱动盘套装和成型思路补齐', en: 'Complete disc sets and build paths', ja: 'セット効果と完成形を整理' } },
 ];
 
 const ENDFIELD_WEAPON_NEXT_STEPS: NextStepLink[] = [
-  {
-    href: '/endfield/version',
-    title: { zh: '先看测试专题', en: 'Start with test hub', ja: 'まずテスト特集へ' },
-    description: { zh: '先确认测试节奏、入口和当前节点', en: 'Check the test cadence, entry, and current status', ja: 'テスト時期、入口、進行状況を確認', },
-  },
-  {
-    href: '/endfield/characters',
-    title: { zh: '继续看干员图鉴', en: 'Browse characters', ja: '干員図鑑へ' },
-    description: { zh: '按干员回看武器适配和队伍分工', en: 'Revisit weapon fit and team roles by operator', ja: '干員ごとの武器適性と役割を確認', },
-  },
-  {
-    href: '/endfield/guides/combat-system-guide',
-    title: { zh: '看战斗系统', en: 'Read combat guide', ja: '戦闘ガイドへ' },
-    description: { zh: '把武器、职业和战斗逻辑串起来', en: 'Connect weapons, roles, and combat flow', ja: '武器、職分、戦闘理解を接続', },
-  },
+  { href: '/endfield/version', title: { zh: '先看测试专题', en: 'Start with test hub', ja: 'まずテスト特集へ' }, description: { zh: '先确认测试节奏、入口和当前节点', en: 'Check the test cadence, entry, and current status', ja: 'テスト時期、入口、進行状況を確認' } },
+  { href: '/endfield/characters', title: { zh: '继续看干员图鉴', en: 'Browse characters', ja: '干員図鑑へ' }, description: { zh: '按干员回看武器适配和队伍分工', en: 'Revisit weapon fit and team roles by operator', ja: '干員ごとの武器適性と役割を確認' } },
+  { href: '/endfield/guides/combat-system-guide', title: { zh: '看战斗系统', en: 'Read combat guide', ja: '戦闘ガイドへ' }, description: { zh: '把武器、职业和战斗逻辑串起来', en: 'Connect weapons, roles, and combat flow', ja: '武器、職分、戦闘理解を接続' } },
 ];
 
-function EndfieldWeaponsPage({ locale }: { locale: SupportedLocale }) {
-  const weapons = endfieldWeapons;
-  const sixStar = weapons.filter((w) => w.rarity === 6);
-  const fiveStar = weapons.filter((w) => w.rarity === 5);
-  const fourStar = weapons.filter((w) => w.rarity === 4);
+function weaponDisplayName(gameId: GameId, locale: SupportedLocale) {
+  if (gameId === 'starrail') return locale === 'zh' ? '光锥' : locale === 'ja' ? '光円錐' : 'Light Cones';
+  if (gameId === 'nte') return locale === 'zh' ? '弧盘' : locale === 'ja' ? 'アルク' : 'Arcs';
+  if (gameId === 'zzz') return locale === 'zh' ? '音擎' : locale === 'ja' ? 'W-エンジン' : 'W-Engines';
+  return CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons';
+}
+
+function weaponCountLabel(gameId: GameId, count: number, locale: SupportedLocale) {
+  if (gameId === 'starrail') return locale === 'zh' ? `共 ${count} 件光锥` : locale === 'ja' ? `${count} 個の光円錐` : `${count} Light Cones`;
+  if (gameId === 'nte') return locale === 'zh' ? `共 ${count} 件弧盘` : locale === 'ja' ? `${count} 個のアルク` : `${count} Arcs`;
+  if (gameId === 'zzz') return locale === 'zh' ? `共 ${count} 件音擎` : locale === 'ja' ? `${count} 個のW-エンジン` : `${count} W-Engines`;
+  if (gameId === 'skjh') return locale === 'zh' ? `共 ${count} 件武器与工具` : locale === 'ja' ? `${count} 個の武器・道具` : `${count} weapons and tools`;
+  return locale === 'zh' ? `共 ${count} 件武器` : locale === 'ja' ? `${count} 個の武器` : `${count} Weapons`;
+}
+
+function localTypeLabel(type: string, locale: SupportedLocale) {
+  return TYPE_LABELS[type]?.[locale] ?? type;
+}
+
+function getWeaponSections(gameId: GameId, weapons: WeaponCardEntry[]) {
+  const groups = new Map<string, WeaponCardEntry[]>();
+  for (const weapon of weapons) {
+    const key = gameId === 'skjh' ? weapon.typeGroup : weapon.rankGroup;
+    groups.set(key, [...(groups.get(key) ?? []), weapon]);
+  }
+  return [...groups.entries()]
+    .map(([key, entries]) => ({ key, entries }))
+    .sort((a, b) => gameId === 'skjh' ? 0 : sortWeaponRanks(a.key, b.key));
+}
+
+function getWeaponNextSteps(gameId: GameId) {
+  if (gameId === 'wuwa') return WUWA_WEAPON_NEXT_STEPS;
+  if (gameId === 'zzz') return ZZZ_WEAPON_NEXT_STEPS;
+  if (gameId === 'endfield') return ENDFIELD_WEAPON_NEXT_STEPS;
+  return undefined;
+}
+
+function WeaponListPage({ gameId, locale, weapons }: { gameId: GameId; locale: SupportedLocale; weapons: WeaponCardEntry[] }) {
+  const gameConfig = GAMES[gameId];
+  const sections = getWeaponSections(gameId, weapons);
 
   return (
     <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.endfield.theme.primary }}>
-        {CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons'}
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {weaponDisplayName(gameId, locale)}
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${weapons.length} 件武器` : locale === 'ja' ? `${weapons.length} 個の武器` : `${weapons.length} Weapons`}
+        {weaponCountLabel(gameId, weapons.length, locale)}
       </p>
       <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
-        {getWeaponIntro('endfield', locale)}
+        {getWeaponIntro(gameId, locale)}
       </p>
 
-      {[sixStar, fiveStar, fourStar].map((list) => {
-        if (list.length === 0) return null;
-        const rarity = list[0]!.rarity;
+      {sections.map(({ key, entries }) => {
+        const title = gameId === 'skjh' ? localTypeLabel(key, locale) : key;
         return (
-          <section key={rarity} className="mb-8">
+          <section key={key} className="mb-8">
             <h2 className="mb-4 text-lg font-semibold text-game-text">
-              {rarity}★ ({list.length})
+              {title}{gameId !== 'skjh' && !title.endsWith('Rank') ? '' : ''} ({entries.length})
             </h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {list.map((w) => {
-                const effect = getEndfieldWeaponEffect(w, locale);
-                const typeLabel = ENDFIELD_WEAPON_TYPE_LABELS[w.weaponTypeEn]?.[locale] ?? w.weaponTypeEn;
-                return (
-                  <div key={w.id} className="rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary">
-                    <div className="mb-2 flex items-center gap-2">
-                      <span className="text-base font-bold" style={{ color: ENDFIELD_RARITY_COLORS[w.rarity] || '#888' }}>{w.rarity}★</span>
-                      <h3 className="font-semibold text-game-text">{getEndfieldWeaponName(w, locale)}</h3>
-                      <span className="ml-auto rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{typeLabel}</span>
-                    </div>
-                    <div className="mb-2 flex gap-3 text-sm text-game-text-muted">
-                      <span>ATK {w.baseAtk}</span>
-                      <span>{w.substatValue} {w.substatEn}</span>
-                    </div>
-                    {effect.description && <p className="text-xs leading-relaxed text-game-text-muted line-clamp-2">{effect.description}</p>}
-                  </div>
-                );
-              })}
+              {entries.map((weapon) => (
+                <WeaponCard key={weapon.id} weapon={weapon} locale={locale} />
+              ))}
             </div>
           </section>
         );
       })}
 
-      <NextStepStrip locale={locale} links={ENDFIELD_WEAPON_NEXT_STEPS} />
+      <NextStepStrip locale={locale} links={getWeaponNextSteps(gameId)} />
     </div>
   );
 }
 
-// --- Ashfall Evolution Weapons ---
-
-function SkjhWeaponsPage({ locale }: { locale: SupportedLocale }) {
-  const weapons = skjhWeapons;
-  const typeOrder = ['tool', 'melee', 'ranged', 'skin'];
+function WeaponCard({ weapon, locale }: { weapon: WeaponCardEntry; locale: SupportedLocale }) {
+  const typeLabel = localTypeLabel(weapon.typeLabel, locale);
+  const rankColor = WEAPON_RANK_COLORS[weapon.rankLabel] || WEAPON_RANK_COLORS[weapon.rankGroup] || '#888';
 
   return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.skjh.theme.primary }}>
-        {CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${weapons.length} 件武器与工具` : locale === 'ja' ? `${weapons.length} 個の武器・道具` : `${weapons.length} weapons and tools`}
-      </p>
-      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
-        {getWeaponIntro('skjh', locale)}
-      </p>
-
-      {typeOrder.map((type) => {
-        const list = weapons.filter((w) => w.weaponType === type);
-        if (list.length === 0) return null;
-        const typeLabel = SKJH_WEAPON_TYPE_LABELS[type]?.[locale] ?? type;
-        return (
-          <section key={type} className="mb-8">
-            <h2 className="mb-4 text-lg font-semibold text-game-text">
-              {typeLabel} ({list.length})
-            </h2>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {list.map((w) => {
-                const effect = getSkjhWeaponEffect(w, locale);
-                return (
-                  <div key={w.id} className="rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary">
-                    <div className="mb-2 flex items-center gap-2">
-                      <span className="text-base font-bold" style={{ color: SKJH_RARITY_COLORS[w.rarity] || '#888' }}>{w.rarity}★</span>
-                      <h3 className="font-semibold text-game-text">{getSkjhWeaponName(w, locale)}</h3>
-                      <span className="ml-auto rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{typeLabel}</span>
-                    </div>
-                    <p className="mb-2 text-xs leading-relaxed text-game-text-muted">{getSkjhWeaponSource(w, locale)}</p>
-                    {effect.description && (
-                      <div className="rounded bg-game-surface-alt p-3">
-                        <div className="mb-1 text-xs font-semibold text-game-primary">{effect.name}</div>
-                        <p className="text-xs leading-relaxed text-game-text-muted">{effect.description}</p>
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </section>
-        );
-      })}
+    <div className="rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary">
+      <div className="mb-2 flex items-center gap-2">
+        <span className="text-base font-bold" style={{ color: rankColor }}>{weapon.rankLabel}</span>
+        <h3 className="font-semibold text-game-text">{weapon.name}</h3>
+        <span className="ml-auto rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{typeLabel}</span>
+      </div>
+      {weapon.stats.length > 0 && (
+        <div className="mb-2 flex flex-wrap gap-3 text-sm text-game-text-muted">
+          {weapon.stats.map((stat) => <span key={stat}>{stat}</span>)}
+        </div>
+      )}
+      {weapon.source && <p className="mb-2 text-xs leading-relaxed text-game-text-muted">{weapon.source}</p>}
+      {weapon.effectDescription && (
+        weapon.effectName ? (
+          <div className="rounded bg-game-surface-alt p-3">
+            <div className="mb-1 text-xs font-semibold text-game-primary">{weapon.effectName}</div>
+            <p className="text-xs leading-relaxed text-game-text-muted">{weapon.effectDescription}</p>
+          </div>
+        ) : (
+          <p className="line-clamp-2 text-xs leading-relaxed text-game-text-muted">{weapon.effectDescription}</p>
+        )
+      )}
+      {weapon.signatureCharacter && (
+        <p className="mt-2 text-xs text-game-primary">
+          {locale === 'zh' ? '专属' : locale === 'ja' ? '専用' : 'Signature'}: {weapon.signatureCharacter}
+        </p>
+      )}
     </div>
   );
 }
