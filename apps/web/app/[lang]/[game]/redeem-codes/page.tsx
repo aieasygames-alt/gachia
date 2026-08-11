@@ -1,26 +1,8 @@
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { redeemCodes as genshinRedeemCodes, getRedeemCodeReward as getGenshinRedeemCodeReward } from '@gachia/data/games/genshin/redeem-codes';
-import { redeemCodes as starrailRedeemCodes, getRedeemCodeReward as getStarRailRedeemCodeReward } from '@gachia/data/games/starrail/redeem-codes';
-import { redeemCodes as wuwaRedeemCodes, getRedeemCodeReward as getWuWaRedeemCodeReward } from '@gachia/data/games/wuwa/redeem-codes';
-import { redeemCodes as zzzRedeemCodes, getRedeemCodeReward as getZzzRedeemCodeReward } from '@gachia/data/games/zzz/redeem-codes';
-import { redeemCodes as nteRedeemCodes, getRedeemCodeReward as getNteRedeemCodeReward } from '@gachia/data/games/nte/redeem-codes';
-import { redeemCodes as seaRedeemCodes, getRedeemCodeReward as getSeaRedeemCodeReward } from '@gachia/data/games/sea/redeem-codes';
-import { redeemCodes as skjhRedeemCodes, getRedeemCodeReward as getSkjhRedeemCodeReward } from '@gachia/data/games/skjh/redeem-codes';
+import { getRedeemCodeReward, getRedeemCodesForGame, GAMES_WITH_REDEEM_CODES } from '@/lib/game-data/redeem-codes';
+import type { RedeemCodeEntry } from '@/lib/game-data/redeem-codes';
 import { isRedeemCodeActive } from '@/lib/redeem-codes';
-
-interface CodeItem {
-  code: string;
-  reward: string;
-  rewardEn: string;
-  status: string;
-  expiresAt: string;
-  source: string;
-  region: string;
-  revealedAt: string;
-}
-
-const GAMES_WITH_CODES: GameId[] = ['genshin', 'starrail', 'wuwa', 'zzz', 'nte', 'sea', 'skjh'];
 
 const REDEEM_DESC: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
   genshin: {
@@ -60,20 +42,7 @@ const REDEEM_DESC: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
   },
 };
 
-function getCodesForGame(gameId: GameId): CodeItem[] {
-  switch (gameId) {
-    case 'genshin': return genshinRedeemCodes as unknown as CodeItem[];
-    case 'starrail': return starrailRedeemCodes as unknown as CodeItem[];
-    case 'wuwa': return wuwaRedeemCodes as unknown as CodeItem[];
-    case 'zzz': return zzzRedeemCodes as unknown as CodeItem[];
-    case 'nte': return nteRedeemCodes as unknown as CodeItem[];
-    case 'sea': return seaRedeemCodes as unknown as CodeItem[];
-    case 'skjh': return skjhRedeemCodes as unknown as CodeItem[];
-    default: return [];
-  }
-}
-
-function getLastCheckedAt(codes: CodeItem[]): string {
+function getLastCheckedAt(codes: RedeemCodeEntry[]): string {
   const latestReveal = codes
     .map((code) => code.revealedAt)
     .filter(Boolean)
@@ -93,19 +62,6 @@ function formatDateLabel(date: string, locale: SupportedLocale): string {
   }).format(new Date(`${date}T00:00:00Z`));
 }
 
-function getRewardText(gameId: GameId, code: CodeItem, locale: SupportedLocale): string {
-  switch (gameId) {
-    case 'genshin': return getGenshinRedeemCodeReward(code as never, locale);
-    case 'starrail': return getStarRailRedeemCodeReward(code as never, locale);
-    case 'wuwa': return getWuWaRedeemCodeReward(code as never, locale);
-    case 'zzz': return getZzzRedeemCodeReward(code as never, locale);
-    case 'nte': return getNteRedeemCodeReward(code as never, locale);
-    case 'sea': return getSeaRedeemCodeReward(code as never, locale);
-    case 'skjh': return getSkjhRedeemCodeReward(code as never, locale);
-    default: return code.rewardEn;
-  }
-}
-
 export async function generateMetadata({
   params,
 }: {
@@ -114,7 +70,7 @@ export async function generateMetadata({
   const { lang, game } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
-  if (!GAMES_WITH_CODES.includes(gameId)) return { robots: { index: false, follow: false } };
+  if (!GAMES_WITH_REDEEM_CODES.includes(gameId)) return { robots: { index: false, follow: false } };
   const title = locale === 'zh'
     ? `${GAMES[gameId].name.zh}兑换码大全｜最新礼包码与领取方法`
     : locale === 'ja'
@@ -138,7 +94,7 @@ export default async function RedeemCodesPage({
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];
 
-  if (!GAMES_WITH_CODES.includes(gameId)) {
+  if (!GAMES_WITH_REDEEM_CODES.includes(gameId)) {
     return (
       <div>
         <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
@@ -151,7 +107,7 @@ export default async function RedeemCodesPage({
     );
   }
 
-  const codes = getCodesForGame(gameId);
+  const codes = await getRedeemCodesForGame(gameId);
   const activeCodes = codes.filter((code) => isRedeemCodeActive(code));
   const expiredCodes = codes.filter((code) => !isRedeemCodeActive(code));
   const lastCheckedAt = getLastCheckedAt(codes);
@@ -395,7 +351,7 @@ function CodeSection({
 }: {
   title: string;
   emptyText: string;
-  codes: CodeItem[];
+  codes: RedeemCodeEntry[];
   gameId: GameId;
   locale: SupportedLocale;
   sourceLabels: Record<string, Record<string, string>>;
@@ -420,7 +376,7 @@ function CodeSection({
   );
 }
 
-function CodeCard({ gameId, code, locale, sourceLabels }: { gameId: GameId; code: CodeItem; locale: SupportedLocale; sourceLabels: Record<string, Record<string, string>> }) {
+async function CodeCard({ gameId, code, locale, sourceLabels }: { gameId: GameId; code: RedeemCodeEntry; locale: SupportedLocale; sourceLabels: Record<string, Record<string, string>> }) {
   const active = isRedeemCodeActive(code);
   const sourceLabel = sourceLabels[code.source]?.[locale] ?? code.source;
   const regionLabel = code.region === 'cn'
@@ -443,7 +399,7 @@ function CodeCard({ gameId, code, locale, sourceLabels }: { gameId: GameId; code
         <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{sourceLabel}</span>
         <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{regionLabel}</span>
       </div>
-      <p className="text-sm text-game-text-muted">{getRewardText(gameId, code, locale)}</p>
+      <p className="text-sm text-game-text-muted">{await getRedeemCodeReward(gameId, code, locale)}</p>
       {code.expiresAt && (
         <p className="mt-1 text-xs text-game-text-muted">
           {locale === 'zh' ? `有效期: ${formatDateLabel(code.expiresAt, locale)}` : locale === 'ja' ? `期限: ${formatDateLabel(code.expiresAt, locale)}` : `Expires: ${formatDateLabel(code.expiresAt, locale)}`}

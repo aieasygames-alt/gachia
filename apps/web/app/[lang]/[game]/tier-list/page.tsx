@@ -1,20 +1,11 @@
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { nteCharacters, getNteCharacterName, getNteCharacterImage } from '@gachia/data/games/nte/characters';
-import { zzzCharacters, getZzzCharacterName, getZzzCharacterImage } from '@gachia/data/games/zzz/characters';
-import { anantaCharacters, getAnantaCharacterName, getAnantaCharacterImage } from '@gachia/data/games/ananta/characters';
-import { guihuanCharacters, getGuihuanCharacterName, getGuihuanCharacterImage } from '@gachia/data/games/guihuan/characters';
-import { endfieldCharacters, getEndfieldCharacterName, getEndfieldCharacterImage } from '@gachia/data/games/endfield/characters';
-import { seaCharacters, getSeaCharacterName, getSeaCharacterImage } from '@gachia/data/games/sea/characters';
-import { tierLists as zzzTierLists } from '@gachia/data/games/zzz';
-import { tierLists as anantaTierLists } from '@gachia/data/games/ananta';
-import { tierLists as guihuanTierLists } from '@gachia/data/games/guihuan';
-import { tierLists as endfieldTierLists } from '@gachia/data/games/endfield';
-import { tierLists as seaTierLists } from '@gachia/data/games/sea';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 import dynamic from 'next/dynamic';
 import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
+import { getTierListGroups } from '@/lib/game-data/tier-lists';
+import type { TierListGroup } from '@/lib/game-data/tier-lists';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -42,11 +33,6 @@ const StarRailTierListClient = dynamic(() => import('./starrail-tier-client').th
 const WuWaTierListClient = dynamic(() => import('./wuwa-tier-client').then(mod => ({ default: mod.WuWaTierListClient })), {
   loading: () => <div className="p-8 text-center">Loading tier list...</div>
 });
-
-const NTE_ELEMENT_COLORS: Record<string, string> = {
-  anima: '#4ade80', chaos: '#8b5cf6', cosmos: '#3b82f6',
-  incantation: '#f59e0b', lakshana: '#ec4899', psyche: '#06b6d4',
-};
 
 const TIER_STYLES: Record<string, { bg: string; text: string; border: string }> = {
   SS: { bg: 'bg-red-900/30', text: 'text-red-400', border: 'border-red-500/30' },
@@ -122,7 +108,7 @@ export default async function TierListPage({
   }
 
   if (gameId === 'nte') {
-    return <NteTierListPage locale={locale} />;
+    return <GenericTierListPage gameId="nte" locale={locale} />;
   }
 
   if (gameId === 'wuwa') {
@@ -130,23 +116,23 @@ export default async function TierListPage({
   }
 
   if (gameId === 'zzz') {
-    return <ZzzTierListPage locale={locale} />;
+    return <GenericTierListPage gameId="zzz" locale={locale} />;
   }
 
   if (gameId === 'ananta') {
-    return <AnantaTierListPage locale={locale} />;
+    return <GenericTierListPage gameId="ananta" locale={locale} />;
   }
 
   if (gameId === 'guihuan') {
-    return <GuihuanTierListPage locale={locale} />;
+    return <GenericTierListPage gameId="guihuan" locale={locale} />;
   }
 
   if (gameId === 'endfield') {
-    return <EndfieldTierListPage locale={locale} />;
+    return <GenericTierListPage gameId="endfield" locale={locale} />;
   }
 
   if (gameId === 'sea') {
-    return <SeaTierListPage locale={locale} />;
+    return <GenericTierListPage gameId="sea" locale={locale} />;
   }
 
   return (
@@ -159,393 +145,56 @@ export default async function TierListPage({
   );
 }
 
-// --- NTE Tier List ---
-
-function NteTierListPage({ locale }: { locale: SupportedLocale }) {
-  const tierGroups: Record<string, typeof nteCharacters> = {};
-  const tierOrder = ['SS', 'S+', 'A+', 'A', 'B'];
-
-  for (const char of nteCharacters) {
-    const tier = char.tierRank || 'B';
-    if (!tierGroups[tier]) tierGroups[tier] = [];
-    tierGroups[tier].push(char);
-  }
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.nte.theme.primary }}>
-        {CATEGORY_LABELS['tier-list']?.[locale] ?? 'Tier List'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? '基于角色综合强度评级，仅供参考' : locale === 'ja' ? 'キャラクターの総合的な強さに基づく評価です' : 'Based on overall character strength, for reference only'}
-      </p>
-
-      {tierOrder.map((tier) => {
-        const chars = tierGroups[tier];
-        if (!chars || chars.length === 0) return null;
-        const style = TIER_STYLES[tier] ?? TIER_STYLES.B ?? { bg: '', text: '', border: '' };
-
-        return (
-          <section key={tier} className={`mb-4 rounded-lg border ${style.border} ${style.bg} p-4`}>
-            <div className="mb-3 flex items-center gap-3">
-              <span className={`text-xl font-bold ${style.text}`}>{tier}</span>
-              <span className="text-sm text-game-text-muted">({chars.length})</span>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              {chars.map((char) => {
-                const imageUrl = getNteCharacterImage(char);
-                return (
-                  <Link key={char.id} href={`/nte/characters/${char.id}` as '/'}
-                    className="group flex items-center gap-2 rounded-lg border border-game-border bg-game-surface px-3 py-2 transition-colors hover:border-game-primary">
-                    <div className="h-8 w-8 shrink-0 overflow-hidden rounded-full bg-game-surface-alt">
-                      <CharacterAvatar src={imageUrl} alt="" element={char.attribute} className="h-full w-full object-cover object-top" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-game-text group-hover:text-game-primary">{getNteCharacterName(char, locale)}</p>
-                      <div className="flex items-center gap-1.5 text-xs text-game-text-muted">
-                        <span className="inline-block h-2 w-2 rounded-full" style={{ backgroundColor: NTE_ELEMENT_COLORS[char.attribute] || '#888' }} />
-                        <span>{char.roleEn}</span>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </section>
-        );
-      })}
-    </div>
-  );
-}
-
-// --- ZZZ Tier List ---
-
-const ZZZ_ELEMENT_COLORS: Record<string, string> = {
+const ELEMENT_COLORS: Record<string, string> = {
+  anima: '#4ade80', chaos: '#8b5cf6', cosmos: '#3b82f6',
+  incantation: '#f59e0b', lakshana: '#ec4899', psyche: '#06b6d4',
   physical: '#9ca3af', fire: '#ef4444', ice: '#67e8f9', electric: '#8b5cf6', ether: '#ec4899',
   'auric-ink': '#d4a017', 'honed-edge': '#c0c0c0', wind: '#6ee7b7',
+  spark: '#f59e0b', surge: '#3b82f6', bloom: '#4ade80', void: '#ec4899',
+  radiance: '#fbbf24', frost: '#67e8f9', flame: '#ef4444', gale: '#6ee7b7', thunder: '#8b5cf6',
+  heat: '#ef4444', cryo: '#67e8f9', nature: '#4ade80',
+  str: '#ef4444', agi: '#22c55e', con: '#f97316', int: '#8b5cf6', per: '#3b82f6', cha: '#ec4899',
 };
 
-const ANANTA_ELEMENT_COLORS: Record<string, string> = {
-  chaos: '#8b5cf6', psyche: '#06b6d4', spark: '#f59e0b', surge: '#3b82f6', bloom: '#4ade80', void: '#ec4899',
-};
-
-function ZzzTierListPage({ locale }: { locale: SupportedLocale }) {
-  const tierData = zzzTierLists.find(
-    (tl) => tl.gameId === 'zzz' && tl.category === 'overall' && tl.locale === locale,
-  ) ?? zzzTierLists.find(
-    (tl) => tl.gameId === 'zzz' && tl.category === 'overall',
-  );
-
-  const tierGroups: Record<string, string[]> = {};
-  const tierOrder = ['SS', 'S', 'A', 'B'];
-
-  if (tierData) {
-    for (const entry of tierData.entries) {
-      if (!tierGroups[entry.tier]) tierGroups[entry.tier] = [];
-      tierGroups[entry.tier]!.push(entry.characterId);
-    }
-  }
-
-  const charMap = new Map(zzzCharacters.map((c) => [c.id, c]));
+async function GenericTierListPage({ gameId, locale }: { gameId: GameId; locale: SupportedLocale }) {
+  const groups = await getTierListGroups(gameId, locale);
+  const intro = getTierIntro(gameId, locale);
 
   return (
     <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.zzz.theme.primary }}>
-        {CATEGORY_LABELS['tier-list']?.[locale] ?? 'Tier List'}
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES[gameId].theme.primary }}>
+        {getTierTitle(gameId, locale)}
       </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? '基于角色综合强度评级，仅供参考' : locale === 'ja' ? 'キャラクターの総合的な強さに基づく評価です' : 'Based on overall character strength, for reference only'}
-      </p>
-
-      {tierOrder.map((tier) => {
-        const ids = tierGroups[tier];
-        if (!ids || ids.length === 0) return null;
-        const style = TIER_STYLES[tier] ?? TIER_STYLES.B ?? { bg: '', text: '', border: '' };
-
-        return (
-          <section key={tier} className={`mb-4 rounded-lg border ${style.border} ${style.bg} p-4`}>
-            <div className="mb-3 flex items-center gap-3">
-              <span className={`text-xl font-bold ${style.text}`}>{tier}</span>
-              <span className="text-sm text-game-text-muted">({ids.length})</span>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              {ids.map((id) => {
-                const char = charMap.get(id);
-                if (!char) return null;
-                const imageUrl = getZzzCharacterImage(char);
-                return (
-                  <Link key={char.id} href={`/zzz/characters/${char.id}` as '/'}
-                    className="group flex items-center gap-2 rounded-lg border border-game-border bg-game-surface px-3 py-2 transition-colors hover:border-game-primary">
-                    <div className="h-8 w-8 shrink-0 overflow-hidden rounded-full bg-game-surface-alt">
-                      <CharacterAvatar src={imageUrl} alt="" element={char.attribute} className="h-full w-full object-cover object-top" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-game-text group-hover:text-game-primary">{getZzzCharacterName(char, locale)}</p>
-                      <div className="flex items-center gap-1.5 text-xs text-game-text-muted">
-                        <span className="inline-block h-2 w-2 rounded-full" style={{ backgroundColor: ZZZ_ELEMENT_COLORS[char.attribute] || '#888' }} />
-                        <span>{char.specialtyEn}</span>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </section>
-        );
-      })}
+      <p className="mb-6 text-sm text-game-text-muted">{intro}</p>
+      {gameId === 'sea' && <SeaQuickLinks locale={locale} />}
+      <TierGroups groups={groups} />
     </div>
   );
 }
 
-// --- Ananta Tier List ---
-
-function AnantaTierListPage({ locale }: { locale: SupportedLocale }) {
-  const tierData = anantaTierLists.find(
-    (tl) => tl.gameId === 'ananta' && tl.category === 'overall' && tl.locale === locale,
-  ) ?? anantaTierLists.find(
-    (tl) => tl.gameId === 'ananta' && tl.category === 'overall',
-  );
-
-  const tierGroups: Record<string, string[]> = {};
-  const tierOrder = ['SS', 'S', 'A', 'B'];
-
-  if (tierData) {
-    for (const entry of tierData.entries) {
-      if (!tierGroups[entry.tier]) tierGroups[entry.tier] = [];
-      tierGroups[entry.tier]!.push(entry.characterId);
-    }
+function getTierTitle(gameId: GameId, locale: SupportedLocale) {
+  if (gameId === 'sea') {
+    return locale === 'zh' ? '遗忘之海角色强度排行 Wiki' : 'Sea of Remnants Tier List';
   }
-
-  const charMap = new Map(anantaCharacters.map((c) => [c.id, c]));
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.ananta.theme.primary }}>
-        {CATEGORY_LABELS['tier-list']?.[locale] ?? 'Tier List'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? '基于角色综合强度评级，仅供参考' : locale === 'ja' ? 'キャラクターの総合的な強さに基づく評価です' : 'Based on overall character strength, for reference only'}
-      </p>
-
-      {tierOrder.map((tier) => {
-        const ids = tierGroups[tier];
-        if (!ids || ids.length === 0) return null;
-        const style = TIER_STYLES[tier] ?? TIER_STYLES.B ?? { bg: '', text: '', border: '' };
-
-        return (
-          <section key={tier} className={`mb-4 rounded-lg border ${style.border} ${style.bg} p-4`}>
-            <div className="mb-3 flex items-center gap-3">
-              <span className={`text-xl font-bold ${style.text}`}>{tier}</span>
-              <span className="text-sm text-game-text-muted">({ids.length})</span>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              {ids.map((id) => {
-                const char = charMap.get(id);
-                if (!char) return null;
-                const imageUrl = getAnantaCharacterImage(char);
-                return (
-                  <Link key={char.id} href={`/ananta/characters/${char.id}` as '/'}
-                    className="group flex items-center gap-2 rounded-lg border border-game-border bg-game-surface px-3 py-2 transition-colors hover:border-game-primary">
-                    <div className="h-8 w-8 shrink-0 overflow-hidden rounded-full bg-game-surface-alt">
-                      <CharacterAvatar src={imageUrl} alt="" element={char.element} className="h-full w-full object-cover object-top" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-game-text group-hover:text-game-primary">{getAnantaCharacterName(char, locale)}</p>
-                      <div className="flex items-center gap-1.5 text-xs text-game-text-muted">
-                        <span className="inline-block h-2 w-2 rounded-full" style={{ backgroundColor: ANANTA_ELEMENT_COLORS[char.element] || '#888' }} />
-                        <span>{char.roleEn}</span>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </section>
-        );
-      })}
-    </div>
-  );
+  return CATEGORY_LABELS['tier-list']?.[locale] ?? 'Tier List';
 }
 
-// --- Guihuan Tier List ---
-
-const GUIHUAN_ELEMENT_COLORS: Record<string, string> = {
-  radiance: '#fbbf24', frost: '#67e8f9', flame: '#ef4444',
-  void: '#a855f7', gale: '#6ee7b7', thunder: '#8b5cf6',
-};
-
-function GuihuanTierListPage({ locale }: { locale: SupportedLocale }) {
-  const tierData = guihuanTierLists.find(
-    (tl) => tl.gameId === 'guihuan' && tl.category === 'overall' && tl.locale === locale,
-  ) ?? guihuanTierLists.find(
-    (tl) => tl.gameId === 'guihuan' && tl.category === 'overall',
-  );
-
-  const tierGroups: Record<string, string[]> = {};
-  const tierOrder = ['SS', 'S', 'A', 'B'];
-
-  if (tierData) {
-    for (const entry of tierData.entries) {
-      if (!tierGroups[entry.tier]) tierGroups[entry.tier] = [];
-      tierGroups[entry.tier]!.push(entry.characterId);
-    }
+function getTierIntro(gameId: GameId, locale: SupportedLocale) {
+  if (gameId === 'sea') {
+    return locale === 'zh'
+      ? '遗忘之海角色强度排行按 SS/S/A/B 分级整理，适合先判断 Traveler、Ais、Little Axe、Princess、Molly 等角色的开荒价值、队伍分工和培养优先级。'
+      : locale === 'ja'
+        ? 'Sea of RemnantsのキャラTierをSS/S/A/Bで整理。Traveler、Ais、Little Axe、Princess、Mollyなどの序盤価値、役割、育成優先度を確認できます。'
+        : 'Sea of Remnants tier list ranks characters from SS to B so you can compare Traveler, Ais, Little Axe, Princess, Molly, early-game value, team roles, and investment priority.';
   }
-
-  const charMap = new Map(guihuanCharacters.map((c) => [c.id, c]));
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.guihuan.theme.primary }}>
-        {CATEGORY_LABELS['tier-list']?.[locale] ?? 'Tier List'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? '基于角色综合强度评级，仅供参考' : locale === 'ja' ? 'キャラクターの総合的な強さに基づく評価です' : 'Based on overall character strength, for reference only'}
-      </p>
-
-      {tierOrder.map((tier) => {
-        const ids = tierGroups[tier];
-        if (!ids || ids.length === 0) return null;
-        const style = TIER_STYLES[tier] ?? TIER_STYLES.B ?? { bg: '', text: '', border: '' };
-
-        return (
-          <section key={tier} className={`mb-4 rounded-lg border ${style.border} ${style.bg} p-4`}>
-            <div className="mb-3 flex items-center gap-3">
-              <span className={`text-xl font-bold ${style.text}`}>{tier}</span>
-              <span className="text-sm text-game-text-muted">({ids.length})</span>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              {ids.map((id) => {
-                const char = charMap.get(id);
-                if (!char) return null;
-                const imageUrl = getGuihuanCharacterImage(char);
-                return (
-                  <Link key={char.id} href={`/guihuan/characters/${char.id}` as '/'}
-                    className="group flex items-center gap-2 rounded-lg border border-game-border bg-game-surface px-3 py-2 transition-colors hover:border-game-primary">
-                    <div className="h-8 w-8 shrink-0 overflow-hidden rounded-full bg-game-surface-alt">
-                      <CharacterAvatar src={imageUrl} alt="" element={char.element} className="h-full w-full object-cover object-top" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-game-text group-hover:text-game-primary">{getGuihuanCharacterName(char, locale)}</p>
-                      <div className="flex items-center gap-1.5 text-xs text-game-text-muted">
-                        <span className="inline-block h-2 w-2 rounded-full" style={{ backgroundColor: GUIHUAN_ELEMENT_COLORS[char.element] || '#888' }} />
-                        <span>{char.roleEn}</span>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </section>
-        );
-      })}
-    </div>
-  );
-}
-
-// --- Endfield Tier List ---
-
-const ENDFIELD_ELEMENT_COLORS: Record<string, string> = {
-  physical: '#9ca3af', heat: '#ef4444', cryo: '#67e8f9', nature: '#4ade80', electric: '#facc15',
-};
-
-function EndfieldTierListPage({ locale }: { locale: SupportedLocale }) {
-  const tierData = endfieldTierLists.find(
-    (tl) => tl.gameId === 'endfield' && tl.category === 'overall' && tl.locale === locale,
-  ) ?? endfieldTierLists.find(
-    (tl) => tl.gameId === 'endfield' && tl.category === 'overall',
-  );
-
-  const tierGroups: Record<string, string[]> = {};
-  const tierOrder = ['SS', 'S', 'A', 'B'];
-
-  if (tierData) {
-    for (const entry of tierData.entries) {
-      if (!tierGroups[entry.tier]) tierGroups[entry.tier] = [];
-      tierGroups[entry.tier]!.push(entry.characterId);
-    }
-  }
-
-  const charMap = new Map(endfieldCharacters.map((c) => [c.id, c]));
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.endfield.theme.primary }}>
-        {CATEGORY_LABELS['tier-list']?.[locale] ?? 'Tier List'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? '基于角色综合强度评级，仅供参考' : locale === 'ja' ? 'キャラクターの総合的な強さに基づく評価です' : 'Based on overall character strength, for reference only'}
-      </p>
-
-      {tierOrder.map((tier) => {
-        const ids = tierGroups[tier];
-        if (!ids || ids.length === 0) return null;
-        const style = TIER_STYLES[tier] ?? TIER_STYLES.B ?? { bg: '', text: '', border: '' };
-
-        return (
-          <section key={tier} className={`mb-4 rounded-lg border ${style.border} ${style.bg} p-4`}>
-            <div className="mb-3 flex items-center gap-3">
-              <span className={`text-xl font-bold ${style.text}`}>{tier}</span>
-              <span className="text-sm text-game-text-muted">({ids.length})</span>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              {ids.map((id) => {
-                const char = charMap.get(id);
-                if (!char) return null;
-                const imageUrl = getEndfieldCharacterImage(char);
-                return (
-                  <Link key={char.id} href={`/endfield/characters/${char.id}` as '/'}
-                    className="group flex items-center gap-2 rounded-lg border border-game-border bg-game-surface px-3 py-2 transition-colors hover:border-game-primary">
-                    <div className="h-8 w-8 shrink-0 overflow-hidden rounded-full bg-game-surface-alt">
-                      <CharacterAvatar src={imageUrl} alt="" element={char.element} className="h-full w-full object-cover object-top" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-game-text group-hover:text-game-primary">{getEndfieldCharacterName(char, locale)}</p>
-                      <div className="flex items-center gap-1.5 text-xs text-game-text-muted">
-                        <span className="inline-block h-2 w-2 rounded-full" style={{ backgroundColor: ENDFIELD_ELEMENT_COLORS[char.element] || '#888' }} />
-                        <span>{char.professionEn}</span>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </section>
-        );
-      })}
-    </div>
-  );
-}
-
-// --- Sea of Remnants Tier List ---
-
-const SEA_ELEMENT_COLORS: Record<string, string> = {
-  str: '#ef4444', agi: '#22c55e', con: '#f97316',
-  int: '#8b5cf6', per: '#3b82f6', cha: '#ec4899',
-};
-
-function SeaTierListPage({ locale }: { locale: SupportedLocale }) {
-  const tierData = seaTierLists.find(
-    (tl) => tl.gameId === 'sea' && tl.category === 'overall' && tl.locale === locale,
-  ) ?? seaTierLists.find(
-    (tl) => tl.gameId === 'sea' && tl.category === 'overall',
-  );
-
-  const tierGroups: Record<string, string[]> = {};
-  const tierOrder = ['SS', 'S', 'A', 'B'];
-
-  if (tierData) {
-    for (const entry of tierData.entries) {
-      if (!tierGroups[entry.tier]) tierGroups[entry.tier] = [];
-      tierGroups[entry.tier]!.push(entry.characterId);
-    }
-  }
-
-  const charMap = new Map(seaCharacters.map((c) => [c.id, c]));
-  const intro = locale === 'zh'
-    ? '遗忘之海角色强度排行按 SS/S/A/B 分级整理，适合先判断 Traveler、Ais、Little Axe、Princess、Molly 等角色的开荒价值、队伍分工和培养优先级。'
+  return locale === 'zh'
+    ? '基于角色综合强度评级，仅供参考'
     : locale === 'ja'
-      ? 'Sea of RemnantsのキャラTierをSS/S/A/Bで整理。Traveler、Ais、Little Axe、Princess、Mollyなどの序盤価値、役割、育成優先度を確認できます。'
-      : 'Sea of Remnants tier list ranks characters from SS to B so you can compare Traveler, Ais, Little Axe, Princess, Molly, early-game value, team roles, and investment priority.';
+      ? 'キャラクターの総合的な強さに基づく評価です'
+      : 'Based on overall character strength, for reference only';
+}
+
+function SeaQuickLinks({ locale }: { locale: SupportedLocale }) {
   const links = [
     {
       href: '/sea/characters',
@@ -565,58 +214,49 @@ function SeaTierListPage({ locale }: { locale: SupportedLocale }) {
   ];
 
   return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.sea.theme.primary }}>
-        {locale === 'zh' ? '遗忘之海角色强度排行 Wiki' : locale === 'ja' ? 'Sea of Remnants Tier List' : 'Sea of Remnants Tier List'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {intro}
-      </p>
-      <section className="mb-6 grid gap-2 md:grid-cols-3">
-        {links.map((link) => (
-          <Link key={link.href} href={link.href as '/'} className="rounded-md border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
-            <span className="mb-1 block text-sm font-semibold text-game-text">{link.title}</span>
-            <span className="line-clamp-2 text-xs leading-relaxed text-game-text-muted">{link.description}</span>
-          </Link>
-        ))}
-      </section>
+    <section className="mb-6 grid gap-2 md:grid-cols-3">
+      {links.map((link) => (
+        <Link key={link.href} href={link.href as '/'} className="rounded-md border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+          <span className="mb-1 block text-sm font-semibold text-game-text">{link.title}</span>
+          <span className="line-clamp-2 text-xs leading-relaxed text-game-text-muted">{link.description}</span>
+        </Link>
+      ))}
+    </section>
+  );
+}
 
-      {tierOrder.map((tier) => {
-        const ids = tierGroups[tier];
-        if (!ids || ids.length === 0) return null;
-        const style = TIER_STYLES[tier] ?? TIER_STYLES.B ?? { bg: '', text: '', border: '' };
+function TierGroups({ groups }: { groups: TierListGroup[] }) {
+  return (
+    <>
+      {groups.map((group) => {
+        const style = TIER_STYLES[group.tier] ?? TIER_STYLES.B ?? { bg: '', text: '', border: '' };
 
         return (
-          <section key={tier} className={`mb-4 rounded-lg border ${style.border} ${style.bg} p-4`}>
+          <section key={group.tier} className={`mb-4 rounded-lg border ${style.border} ${style.bg} p-4`}>
             <div className="mb-3 flex items-center gap-3">
-              <span className={`text-xl font-bold ${style.text}`}>{tier}</span>
-              <span className="text-sm text-game-text-muted">({ids.length})</span>
+              <span className={`text-xl font-bold ${style.text}`}>{group.tier}</span>
+              <span className="text-sm text-game-text-muted">({group.characters.length})</span>
             </div>
             <div className="flex flex-wrap gap-3">
-              {ids.map((id) => {
-                const char = charMap.get(id);
-                if (!char) return null;
-                const imageUrl = getSeaCharacterImage(char);
-                return (
-                  <Link key={char.id} href={`/sea/characters/${char.id}` as '/'}
-                    className="group flex items-center gap-2 rounded-lg border border-game-border bg-game-surface px-3 py-2 transition-colors hover:border-game-primary">
-                    <div className="h-8 w-8 shrink-0 overflow-hidden rounded-full bg-game-surface-alt">
-                      <CharacterAvatar src={imageUrl} alt="" element={char.attribute} className="h-full w-full object-cover object-top" />
+              {group.characters.map((char) => (
+                <Link key={char.id} href={char.href as '/'}
+                  className="group flex items-center gap-2 rounded-lg border border-game-border bg-game-surface px-3 py-2 transition-colors hover:border-game-primary">
+                  <div className="h-8 w-8 shrink-0 overflow-hidden rounded-full bg-game-surface-alt">
+                    <CharacterAvatar src={char.imageUrl} alt="" element={char.element} className="h-full w-full object-cover object-top" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-game-text group-hover:text-game-primary">{char.name}</p>
+                    <div className="flex items-center gap-1.5 text-xs text-game-text-muted">
+                      <span className="inline-block h-2 w-2 rounded-full" style={{ backgroundColor: ELEMENT_COLORS[char.element] || '#888' }} />
+                      <span>{char.role}</span>
                     </div>
-                    <div>
-                      <p className="text-sm font-medium text-game-text group-hover:text-game-primary">{getSeaCharacterName(char, locale)}</p>
-                      <div className="flex items-center gap-1.5 text-xs text-game-text-muted">
-                        <span className="inline-block h-2 w-2 rounded-full" style={{ backgroundColor: SEA_ELEMENT_COLORS[char.attribute] || '#888' }} />
-                        <span>{char.roleEn}</span>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
+                  </div>
+                </Link>
+              ))}
             </div>
           </section>
         );
       })}
-    </div>
+    </>
   );
 }
