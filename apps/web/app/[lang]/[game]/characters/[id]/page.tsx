@@ -3,6 +3,7 @@ import { ChevronRight } from 'lucide-react';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { notFound } from 'next/navigation';
 import { buildCharacterJsonLd } from '@/lib/jsonld';
+import { getCharacterMetaData, getCharactersForStaticParams } from '@/lib/game-data/characters';
 import {
   nteCharacters,
   getNteCharacterById,
@@ -495,29 +496,18 @@ const CHARACTER_META_OVERRIDES: Record<string, LocaleMeta> = {
   },
 };
 
-// CRITICAL FIX: Optimize generateStaticParams to avoid loading all game data at once
 export async function generateStaticParams() {
-  // Use a simple array approach instead of separate variables
-  const games = [
-    { id: 'nte', characters: nteCharacters },
-    { id: 'genshin', characters: genshinCharacters },
-    { id: 'starrail', characters: starrailCharacters },
-    { id: 'wuwa', characters: wuwaCharacters },
-    { id: 'zzz', characters: zzzCharacters },
-    { id: 'guihuan', characters: guihuanCharacters },
-    { id: 'ananta', characters: anantaCharacters },
-    { id: 'endfield', characters: endfieldCharacters },
-    { id: 'sea', characters: seaCharacters },
-  ];
-
-  // Generate params for all games and locales
-  const params = games.flatMap(({ id, characters }) =>
-    LOCALES.flatMap((lang) =>
-      characters.map((char) => ({ lang, game: id, id: char.id }))
-    )
+  const gameIds = ['nte', 'genshin', 'starrail', 'wuwa', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea'] as const;
+  const entries = await Promise.all(
+    gameIds.map(async (gameId) => ({
+      gameId,
+      characters: await getCharactersForStaticParams(gameId),
+    })),
   );
 
-  return params;
+  return entries.flatMap(({ gameId, characters }) =>
+    LOCALES.flatMap((lang) => characters.map((char) => ({ lang, game: gameId, id: char.id }))),
+  );
 }
 
 function CharacterJsonLd({
@@ -558,195 +548,44 @@ export async function generateMetadata({
   const { lang, game, id } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+  const meta = await getCharacterMetaData(gameId, id, locale);
+  if (!meta) return {};
 
-  const buildAlternates = (charId: string) => ({
-    canonical: `https://gachia.com/${locale}/${gameId}/characters/${charId}`,
+  const gameName = GAMES[gameId]?.name[locale] ?? gameId;
+  const override = CHARACTER_META_OVERRIDES[`${gameId}/${id}`]?.[locale];
+  const alternates = {
+    canonical: `https://gachia.com/${locale}/${gameId}/characters/${id}`,
     languages: {
-      'zh-Hans': `https://gachia.com/zh/${gameId}/characters/${charId}`,
-      en: `https://gachia.com/en/${gameId}/characters/${charId}`,
-      ja: `https://gachia.com/ja/${gameId}/characters/${charId}`,
-      'x-default': `https://gachia.com/zh/${gameId}/characters/${charId}`,
+      'zh-Hans': `https://gachia.com/zh/${gameId}/characters/${id}`,
+      en: `https://gachia.com/en/${gameId}/characters/${id}`,
+      ja: `https://gachia.com/ja/${gameId}/characters/${id}`,
+      'x-default': `https://gachia.com/zh/${gameId}/characters/${id}`,
     },
-  });
-
-  const buildOg = (charName: string) => ({
-    title: charName,
-    images: [{ url: `/images/og/${gameId}.webp`, width: 1200, height: 630, alt: charName }],
+  };
+  const openGraph = {
+    title: meta.name,
+    images: [{ url: `/images/og/${gameId}.webp`, width: 1200, height: 630, alt: meta.name }],
     locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
-  });
-
-  const buildCharacterMetaDescription = (base: string, name: string, gameName: string) => {
-    const addition = locale === 'zh'
-      ? `适合想了解${name}的定位、配装、配队和培养优先级的玩家。`
-      : locale === 'ja'
-        ? `${name}の役割、ビルド、編成、育成優先度を知りたい人向けの詳細ガイドです。`
-        : `Useful for players who want to understand ${name}'s role, build options, team fit, and investment priority in ${gameName}.`;
-    const text = base.trim().length >= 120 ? base.trim() : `${base.trim()} ${addition}`;
-    return text.slice(0, 160);
   };
 
-  if (gameId === 'genshin') {
-    const char = getGenshinCharacterById(id);
-    if (!char) return {};
-    const gameName = GAMES.genshin.name[locale];
-    const name = getGenshinCharacterName(char, locale);
-    const override = CHARACTER_META_OVERRIDES[`${gameId}/${id}`]?.[locale];
-    if (override) {
-      return { ...override, openGraph: buildOg(name), alternates: buildAlternates(id) };
-    }
-    const elName = GENSHIN_ELEMENT_NAMES[char.element]?.[locale] ?? char.element;
-    const wName = GENSHIN_WEAPON_LABELS[char.weaponType]?.[locale] ?? char.weaponType;
-    const title = locale === 'zh'
-      ? `${name}最佳配装攻略 — 武器、圣遗物、配队推荐（${char.tierRank}级）`
-      : locale === 'ja'
-        ? `${name}最強ビルド — 武器、聖遺物、編成（Tier ${char.tierRank}）`
-        : `${name} Build Guide — Best Weapons, Artifacts & Teams (${char.tierRank})`;
-    const desc = locale === 'zh'
-      ? `${name}（${elName}${wName}）配装攻略：推荐武器、圣遗物套装、主副词条、配队组合。${char.tierRank}级角色全面解析。`
-      : `${name} ${elName} ${wName} build guide: best weapons, artifact sets, main stats, team comps, and F2P options. ${char.tierRank} tier.`;
-    return { title, description: buildCharacterMetaDescription(desc, name, gameName), openGraph: buildOg(name), alternates: buildAlternates(id) };
-  }
+  if (override) return { ...override, openGraph, alternates };
 
-  if (gameId === 'starrail') {
-    const char = getStarRailCharacterById(id);
-    if (!char) return {};
-    const gameName = GAMES.starrail.name[locale];
-    const name = getStarRailCharacterName(char, locale);
-    const override = CHARACTER_META_OVERRIDES[`${gameId}/${id}`]?.[locale];
-    if (override) {
-      return { ...override, openGraph: buildOg(name), alternates: buildAlternates(id) };
-    }
-    const elName = STARRAIL_ELEMENT_NAMES[char.element]?.[locale] ?? char.element;
-    const pathName = STARRAIL_PATH_LABELS[char.path]?.[locale] ?? char.path;
-    const title = locale === 'zh'
-      ? `${name}配装攻略 — ${elName}${pathName}最佳光锥、遗器、配队`
-      : `${name} Build Guide — ${elName} ${pathName} Best Light Cones, Relics & Teams`;
-    const desc = locale === 'zh'
-      ? `${name}配装攻略：推荐光锥、遗器套装、主词条、配队组合，${char.tierRank} Tier`
-      : `${name} build guide for Honkai: Star Rail: best light cones, relic sets, main stats, team comps. ${char.tierRank} tier.`;
-    return { title, description: buildCharacterMetaDescription(desc, name, gameName), openGraph: buildOg(name), alternates: buildAlternates(id) };
-  }
+  const roleParts = [meta.elementLabel, meta.weaponLabel, meta.pathLabel, meta.specialtyLabel].filter(Boolean).join(' ');
+  const title = locale === 'zh'
+    ? `${meta.name}配装攻略 — ${gameName}角色、武器与配队推荐`
+    : locale === 'ja'
+      ? `${meta.name}ビルド攻略 — ${gameName}キャラ・武器・編成`
+      : `${meta.name} Build Guide — ${gameName} Character, Weapons & Teams`;
+  const baseDescription = locale === 'zh'
+    ? `${meta.name}${roleParts ? `（${roleParts}）` : ''}配装攻略：角色定位、推荐武器、套装、材料、技能、配队和培养优先级。${meta.tierRank ? `${meta.tierRank} Tier。` : ''}`
+    : locale === 'ja'
+      ? `${meta.name}${roleParts ? ` (${roleParts})` : ''} のビルド攻略。役割、武器、セット、素材、スキル、編成、育成優先度を整理。${meta.tierRank ? `${meta.tierRank} Tier.` : ''}`
+      : `${meta.name}${roleParts ? ` (${roleParts})` : ''} build guide for ${gameName}: role, best weapons, sets, materials, skills, teams, and investment priority. ${meta.tierRank ? `${meta.tierRank} tier.` : ''}`;
+  const description = baseDescription.length >= 120
+    ? baseDescription.slice(0, 160)
+    : `${baseDescription} ${meta.description}`.slice(0, 160);
 
-  if (gameId === 'nte') {
-    const char = getNteCharacterById(id);
-    if (!char) return {};
-    const gameName = GAMES.nte.name[locale];
-    const name = getNteCharacterName(char, locale);
-    const override = CHARACTER_META_OVERRIDES[`${gameId}/${id}`]?.[locale];
-    if (override) {
-      return { ...override, openGraph: buildOg(name), alternates: buildAlternates(id) };
-    }
-    const elName = NTE_ELEMENT_NAMES[char.attribute]?.[locale] ?? char.attribute;
-    const title = locale === 'zh'
-      ? `${name}配装攻略 — ${elName}属性最佳弧盘、弧盘套装、配队`
-      : `${name} — ${elName} Build: Best Arcs, Disk Sets & Teams | NTE`;
-    const desc = locale === 'zh'
-      ? `${name}配装攻略：推荐弧盘、弧盘套装、配队组合，${char.tierRank} Tier`
-      : `Complete ${name} build guide for Neverness to Everness: best arcs, disk sets, team comps. ${char.tierRank} tier.`;
-    return { title, description: buildCharacterMetaDescription(desc, name, gameName), openGraph: buildOg(name), alternates: buildAlternates(id) };
-  }
-
-  if (gameId === 'wuwa') {
-    const char = getWuWaCharacterById(id);
-    if (!char) return {};
-    const gameName = GAMES.wuwa.name[locale];
-    const name = getWuWaCharacterName(char, locale);
-    const override = CHARACTER_META_OVERRIDES[`${gameId}/${id}`]?.[locale];
-    if (override) {
-      return { ...override, openGraph: buildOg(name), alternates: buildAlternates(id) };
-    }
-    const elName = WUWA_ELEMENT_NAMES[char.element]?.[locale] ?? char.element;
-    const wName = WUWA_WEAPON_LABELS[char.weaponType]?.[locale] ?? char.weaponType;
-    const title = locale === 'zh'
-      ? `${name}配装攻略 — ${elName}${wName}最佳武器、声骸、配队`
-      : `${name} Build Guide — ${elName} ${wName} Best Weapons, Echoes & Teams`;
-    const desc = locale === 'zh'
-      ? `${name}配装攻略：推荐武器、声骸套装、配队组合，${char.tierRank ?? ''} Tier`
-      : `${name} build guide for Wuthering Waves: best weapons, echo sets, team comps. ${char.tierRank ?? ''} tier.`;
-    return { title, description: buildCharacterMetaDescription(desc, name, gameName), openGraph: buildOg(name), alternates: buildAlternates(id) };
-  }
-
-  if (gameId === 'zzz') {
-    const char = getZzzCharacterById(id);
-    if (!char) return {};
-    const gameName = GAMES.zzz.name[locale];
-    const name = getZzzCharacterName(char, locale);
-    const override = CHARACTER_META_OVERRIDES[`${gameId}/${id}`]?.[locale];
-    if (override) {
-      return { ...override, openGraph: buildOg(name), alternates: buildAlternates(id) };
-    }
-    const elName = ZZZ_ELEMENT_NAMES[char.attribute]?.[locale] ?? char.attribute;
-    const specName = ZZZ_SPECIALTY_LABELS[char.specialtyEn]?.[locale] ?? char.specialtyEn;
-    const title = locale === 'zh'
-      ? `${name}最佳配装 — 音擎、驱动盘、配队推荐（${char.tierRank}级）`
-      : `${name} Best Build — W-Engines, Drive Discs & Teams (${char.tierRank} Tier)`;
-    const desc = locale === 'zh'
-      ? `${name}（${elName}${specName}）配装攻略：推荐音擎、驱动盘套装、主副词条、配队组合。${char.tierRank}级角色全面解析。`
-      : `${name} ${elName} ${specName} best build: recommended W-Engines, drive disc sets, main stats, and team comps. ${char.tierRank} tier ZZZ agent.`;
-    return { title, description: buildCharacterMetaDescription(desc, name, gameName), openGraph: buildOg(name), alternates: buildAlternates(id) };
-  }
-
-  if (gameId === 'guihuan') {
-    const char = getGuihuanCharacterById(id);
-    if (!char) return {};
-    const gameName = GAMES.guihuan.name[locale];
-    const name = getGuihuanCharacterName(char, locale);
-    const elName = GUIHUAN_ELEMENT_NAMES[char.element]?.[locale] ?? char.element;
-    const title = locale === 'zh'
-      ? `${name}配装攻略 — ${elName}属性最佳武器、配队`
-      : `${name} — ${elName} Build: Best Weapons & Teams | Guihuan`;
-    const desc = locale === 'zh'
-      ? `${name}配装攻略：推荐武器、配队组合，${char.tierRank} Tier`
-      : `Complete ${name} build guide for Guihuan: best weapons, team comps. ${char.tierRank} tier.`;
-    return { title, description: buildCharacterMetaDescription(desc, name, gameName), openGraph: buildOg(name), alternates: buildAlternates(id) };
-  }
-
-  if (gameId === 'ananta') {
-    const char = getAnantaCharacterById(id);
-    if (!char) return {};
-    const gameName = GAMES.ananta.name[locale];
-    const name = getAnantaCharacterName(char, locale);
-    const elName = ANANTA_ELEMENT_NAMES[char.element]?.[locale] ?? char.elementEn;
-    const title = locale === 'zh'
-      ? `${name}配装攻略 — ${elName}属性最佳武器、配队`
-      : `${name} — ${elName} Build: Best Weapons & Teams | Ananta`;
-    const desc = locale === 'zh'
-      ? `${name}配装攻略：推荐武器、配队组合，${char.tierRank} Tier`
-      : `Complete ${name} build guide for Ananta: best weapons, team comps. ${char.tierRank} tier.`;
-    return { title, description: buildCharacterMetaDescription(desc, name, gameName), openGraph: buildOg(name), alternates: buildAlternates(id) };
-  }
-
-  if (gameId === 'endfield') {
-    const char = getEndfieldCharacterById(id);
-    if (!char) return {};
-    const gameName = GAMES.endfield.name[locale];
-    const name = getEndfieldCharacterName(char, locale);
-    const elName = ENDFIELD_ELEMENT_NAMES[char.element]?.[locale] ?? char.elementEn;
-    const title = locale === 'zh'
-      ? `${name}配装攻略 — ${elName}属性最佳武器、配队`
-      : `${name} — ${elName} Build: Best Weapons & Teams | Endfield`;
-    const desc = locale === 'zh'
-      ? `${name}配装攻略：推荐武器、配队组合，${char.tierRank} Tier`
-      : `Complete ${name} build guide for Arknights: Endfield: best weapons, team comps. ${char.tierRank} tier.`;
-    return { title, description: buildCharacterMetaDescription(desc, name, gameName), openGraph: buildOg(name), alternates: buildAlternates(id) };
-  }
-
-  if (gameId === 'sea') {
-    const char = getSeaCharacterById(id);
-    if (!char) return {};
-    const gameName = GAMES.sea.name[locale];
-    const name = getSeaCharacterName(char, locale);
-    const elName = SEA_ELEMENT_NAMES[char.attribute]?.[locale] ?? char.attributeEn;
-    const title = locale === 'zh'
-      ? `${name}配装攻略 — ${elName}属性最佳配队`
-      : `${name} — ${elName} Build: Best Teams | Sea of Remnants`;
-    const desc = locale === 'zh'
-      ? `${name}配装攻略：推荐配队组合`
-      : `Complete ${name} build guide for Sea of Remnants: best team comps.`;
-    return { title, description: buildCharacterMetaDescription(desc, name, gameName), openGraph: buildOg(name), alternates: buildAlternates(id) };
-  }
-
-  return {};
+  return { title, description, openGraph, alternates };
 }
 
 export default async function CharacterDetailPage({
