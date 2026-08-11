@@ -1,14 +1,6 @@
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { genshinCharacters, getGenshinCharacterName, getGenshinCharacterImage } from '@gachia/data/games/genshin/characters';
-import { starrailCharacters, getStarRailCharacterName, getStarRailCharacterImage } from '@gachia/data/games/starrail/characters';
-import { wuwaCharacters, getWuWaCharacterName, getWuWaCharacterImage } from '@gachia/data/games/wuwa/characters';
-import { nteCharacters, getNteCharacterName, getNteCharacterImage } from '@gachia/data/games/nte/characters';
-import { zzzCharacters, getZzzCharacterName, getZzzCharacterImage } from '@gachia/data/games/zzz/characters';
-import { anantaCharacters, getAnantaCharacterName, getAnantaCharacterImage } from '@gachia/data/games/ananta/characters';
-import { guihuanCharacters, getGuihuanCharacterName, getGuihuanCharacterImage } from '@gachia/data/games/guihuan/characters';
-import { endfieldCharacters, getEndfieldCharacterName, getEndfieldCharacterImage } from '@gachia/data/games/endfield/characters';
-import { seaCharacters, getSeaCharacterName, getSeaCharacterImage } from '@gachia/data/games/sea/characters';
+import { getCharacterListData } from '@/lib/game-data/characters';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
@@ -85,59 +77,6 @@ const CHAR_DESC: Record<string, Record<string, string>> = {
   guihuan: { zh: '归环全使灵图鉴，覆盖SSR、SR角色数据、元素和配装推荐，方便你先看清定位，再决定培养顺序。', en: 'Complete Guihuan Spirit roster with SSR and SR data, elements, and build recommendations so you can prioritize the right spirits first.', ja: '帰環全精霊図鑑。SSR・SRのデータ、元素、ビルド案を整理しています。' },
   endfield: { zh: '明日方舟：终末地全干员图鉴，覆盖六星、五星、四星角色数据、元素属性和配装推荐，适合先看定位再进培养页。', en: 'Complete Arknights: Endfield operator roster with 6-Star, 5-Star, and 4-Star data, elements, and build recommendations for fast team planning.', ja: 'エンドフィールド全オペレーター図鑑。★6、★5、★4のデータ、属性、ビルド案を整理しています。' },
   sea: { zh: '遗忘之海角色图鉴 Wiki，覆盖 Traveler、Ais、Little Axe、Princess、Molly 等角色属性、定位、强度、配队和开荒培养顺序。', en: 'Sea of Remnants characters wiki with Traveler, Ais, Little Axe, Princess, Molly, roles, attributes, tier notes, teams, and early progression picks.', ja: 'シー・オブ・レムナンツキャラWiki。Traveler、Ais、Little Axe、Princess、Molly、役割、属性、Tier、育成順を整理。' },
-};
-
-const NTE_ELEMENT_COLORS: Record<string, string> = {
-  anima: '#4ade80', chaos: '#8b5cf6', cosmos: '#3b82f6',
-  incantation: '#f59e0b', lakshana: '#ec4899', psyche: '#06b6d4',
-};
-
-const ZZZ_ELEMENT_COLORS: Record<string, string> = {
-  physical: '#9ca3af', fire: '#ef4444', ice: '#67e8f9', electric: '#8b5cf6', ether: '#ec4899',
-  'auric-ink': '#d4a017', 'honed-edge': '#c0c0c0', wind: '#6ee7b7',
-};
-
-const ZZZ_SPECIALTY_LABELS: Record<string, Record<string, string>> = {
-  Attack: { zh: '强攻', en: 'Attack', ja: '強攻' },
-  Stun: { zh: '击破', en: 'Stun', ja: '撃破' },
-  Anomaly: { zh: '异常', en: 'Anomaly', ja: '異常' },
-  Support: { zh: '支援', en: 'Support', ja: '支援' },
-  Defense: { zh: '防护', en: 'Defense', ja: '防護' },
-  Rupture: { zh: '突击', en: 'Rupture', ja: '突撃' },
-};
-
-const GENSHIN_ELEMENT_COLORS: Record<string, string> = {
-  pyro: '#ef4444', hydro: '#3b82f6', electro: '#8b5cf6',
-  cryo: '#67e8f9', dendro: '#4ade80', anemo: '#6ee7b7', geo: '#fbbf24',
-};
-
-const STARRAIL_ELEMENT_COLORS: Record<string, string> = {
-  fire: '#ef4444', ice: '#67e8f9', lightning: '#8b5cf6',
-  wind: '#6ee7b7', physical: '#9ca3af', quantum: '#6366f1', imaginary: '#fbbf24',
-};
-
-const STARRAIL_PATH_LABELS: Record<string, Record<string, string>> = {
-  destruction: { zh: '毁灭', en: 'Destruction', ja: '壊滅' },
-  hunt: { zh: '巡猎', en: 'Hunt', ja: '巡狩' },
-  erudition: { zh: '智识', en: 'Erudition', ja: '知恵' },
-  harmony: { zh: '同谐', en: 'Harmony', ja: '調和' },
-  nihility: { zh: '虚无', en: 'Nihility', ja: '虚無' },
-  preservation: { zh: '存护', en: 'Preservation', ja: '存護' },
-  abundance: { zh: '丰饶', en: 'Abundance', ja: '豊穣' },
-  remembrance: { zh: '记忆', en: 'Remembrance', ja: '記憶' },
-  elation: { zh: '欢愉', en: 'Elation', ja: '愉悦' },
-};
-
-const GENSHIN_WEAPON_LABELS: Record<string, Record<string, string>> = {
-  sword: { zh: '单手剑', en: 'Sword', ja: '片手剣' },
-  claymore: { zh: '双手剑', en: 'Claymore', ja: '両手剣' },
-  polearm: { zh: '长柄武器', en: 'Polearm', ja: '長柄武器' },
-  bow: { zh: '弓', en: 'Bow', ja: '弓' },
-  catalyst: { zh: '法器', en: 'Catalyst', ja: '法器' },
-};
-
-const ANANTA_ELEMENT_COLORS: Record<string, string> = {
-  chaos: '#8b5cf6', psyche: '#06b6d4', spark: '#f59e0b', surge: '#3b82f6', bloom: '#4ade80', void: '#ec4899',
 };
 
 const CHARACTER_INTRO: Record<string, Record<SupportedLocale, string>> = {
@@ -258,41 +197,10 @@ export default async function CharactersPage({
     ],
   };
   const ldScript = <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />;
+  const chars = await getCharacterListData(gameId, locale);
 
-  if (gameId === 'genshin') {
-    return <><GenshinCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
-  }
-
-  if (gameId === 'starrail') {
-    return <><StarRailCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
-  }
-
-  if (gameId === 'nte') {
-    return <><NteCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
-  }
-
-  if (gameId === 'wuwa') {
-    return <><WuWaCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
-  }
-
-  if (gameId === 'zzz') {
-    return <><ZzzCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
-  }
-
-  if (gameId === 'ananta') {
-    return <><AnantaCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
-  }
-
-  if (gameId === 'guihuan') {
-    return <><GuihuanCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
-  }
-
-  if (gameId === 'endfield') {
-    return <><EndfieldCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
-  }
-
-  if (gameId === 'sea') {
-    return <><SeaCharactersPage locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
+  if (chars.length > 0) {
+    return <><CharacterListPage chars={chars} locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
   }
 
   return (
@@ -309,710 +217,47 @@ export default async function CharactersPage({
   );
 }
 
-// --- Genshin Characters ---
-
-function GenshinCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedLocale; gameId: GameId; gameConfig: typeof GAMES.genshin }) {
-  const chars = genshinCharacters;
-  const fiveStar = chars.filter((c) => c.rarity === 5);
-  const fourStar = chars.filter((c) => c.rarity === 4);
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
-      </p>
-      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
-        {getCharacterIntro(gameId, locale)}
-      </p>
-
-      {fiveStar.length > 0 && (
-        <section className="mb-8">
-          <h2 className="mb-4 text-lg font-semibold text-game-text">
-            5★ ({fiveStar.length})
-          </h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {fiveStar.map((char) => (
-              <GenshinCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {fourStar.length > 0 && (
-        <section className="mb-8">
-          <h2 className="mb-4 text-lg font-semibold text-game-text">
-            4★ ({fourStar.length})
-          </h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {fourStar.map((char) => (
-              <GenshinCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
-            ))}
-          </div>
-        </section>
-      )}
-    </div>
-  );
-}
-
-function GenshinCharacterCard({ char, locale, gameId }: { char: typeof genshinCharacters[number]; locale: SupportedLocale; gameId: GameId }) {
-  const elementColor = GENSHIN_ELEMENT_COLORS[char.element] || '#888';
-  const imageUrl = getGenshinCharacterImage(char);
-  const weaponLabel = GENSHIN_WEAPON_LABELS[char.weaponType]?.[locale] ?? char.weaponType;
-
-  return (
-    <Link
-      href={`/${gameId}/characters/${char.id}` as '/'}
-      className="group flex flex-col overflow-hidden rounded-lg border border-game-border bg-game-surface transition-all hover:border-game-primary hover:shadow-lg"
-    >
-      <div className="relative aspect-square overflow-hidden bg-game-surface-alt">
-        <CharacterAvatar
-          src={imageUrl}
-          alt={getGenshinCharacterName(char, locale)}
-          element={char.element}
-          className="h-full w-full object-cover object-top transition-transform group-hover:scale-105"
-        />
-        <span className="absolute bottom-1.5 left-1.5 rounded px-1.5 py-0.5 text-xs font-medium text-white" style={{ backgroundColor: elementColor }}>
-          {char.element.charAt(0).toUpperCase() + char.element.slice(1)}
-        </span>
-        <span className="absolute top-1.5 right-1.5 rounded bg-game-bg/80 px-1.5 py-0.5 text-xs font-bold" style={{ color: '#eab308' }}>
-          {char.rarity}★
-        </span>
-      </div>
-      <div className="p-2.5">
-        <h3 className="text-sm font-semibold text-game-text group-hover:text-game-primary truncate">
-          {getGenshinCharacterName(char, locale)}
-        </h3>
-        <p className="text-xs text-game-text-muted truncate">{weaponLabel}</p>
-      </div>
-    </Link>
-  );
-}
-
-// --- Star Rail Characters ---
-
-function StarRailCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedLocale; gameId: GameId; gameConfig: typeof GAMES.starrail }) {
-  const chars = starrailCharacters;
-  const fiveStar = chars.filter((c) => c.rarity === 5);
-  const fourStar = chars.filter((c) => c.rarity === 4);
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
-      </p>
-      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
-        {getCharacterIntro(gameId, locale)}
-      </p>
-
-      {fiveStar.length > 0 && (
-        <section className="mb-8">
-          <h2 className="mb-4 text-lg font-semibold text-game-text">
-            5★ ({fiveStar.length})
-          </h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {fiveStar.map((char) => (
-              <StarRailCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {fourStar.length > 0 && (
-        <section className="mb-8">
-          <h2 className="mb-4 text-lg font-semibold text-game-text">
-            4★ ({fourStar.length})
-          </h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {fourStar.map((char) => (
-              <StarRailCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
-            ))}
-          </div>
-        </section>
-      )}
-    </div>
-  );
-}
-
-function StarRailCharacterCard({ char, locale, gameId }: { char: typeof starrailCharacters[number]; locale: SupportedLocale; gameId: GameId }) {
-  const elementColor = STARRAIL_ELEMENT_COLORS[char.element] || '#888';
-  const imageUrl = getStarRailCharacterImage(char);
-  const pathLabel = STARRAIL_PATH_LABELS[char.path]?.[locale] ?? char.path;
-
-  return (
-    <Link
-      href={`/${gameId}/characters/${char.id}` as '/'}
-      className="group flex flex-col overflow-hidden rounded-lg border border-game-border bg-game-surface transition-all hover:border-game-primary hover:shadow-lg"
-    >
-      <div className="relative aspect-square overflow-hidden bg-game-surface-alt">
-        <CharacterAvatar
-          src={imageUrl}
-          alt={getStarRailCharacterName(char, locale)}
-          element={char.element}
-          className="h-full w-full object-cover object-top transition-transform group-hover:scale-105"
-        />
-        <span className="absolute bottom-1.5 left-1.5 rounded px-1.5 py-0.5 text-xs font-medium text-white" style={{ backgroundColor: elementColor }}>
-          {char.element.charAt(0).toUpperCase() + char.element.slice(1)}
-        </span>
-        <span className="absolute top-1.5 right-1.5 rounded bg-game-bg/80 px-1.5 py-0.5 text-xs font-bold" style={{ color: '#eab308' }}>
-          {char.rarity}★
-        </span>
-      </div>
-      <div className="p-2.5">
-        <h3 className="text-sm font-semibold text-game-text group-hover:text-game-primary truncate">
-          {getStarRailCharacterName(char, locale)}
-        </h3>
-        <p className="text-xs text-game-text-muted truncate">{pathLabel}</p>
-      </div>
-    </Link>
-  );
-}
-
-// --- NTE Characters ---
-
-function NteCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedLocale; gameId: GameId; gameConfig: typeof GAMES.nte }) {
-  const chars = nteCharacters;
-  const sRank = chars.filter((c) => c.rank === 'S');
-  const aRank = chars.filter((c) => c.rank === 'A');
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
-      </p>
-      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
-        {getCharacterIntro(gameId, locale)}
-      </p>
-
-      {sRank.length > 0 && (
-        <section className="mb-8">
-          <h2 className="mb-4 text-lg font-semibold text-game-text">
-            S {locale === 'zh' ? '级' : locale === 'ja' ? '級' : '-Rank'} ({sRank.length})
-          </h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {sRank.map((char) => (
-              <NteCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {aRank.length > 0 && (
-        <section className="mb-8">
-          <h2 className="mb-4 text-lg font-semibold text-game-text">
-            A {locale === 'zh' ? '级' : locale === 'ja' ? '級' : '-Rank'} ({aRank.length})
-          </h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {aRank.map((char) => (
-              <NteCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
-            ))}
-          </div>
-        </section>
-      )}
-    </div>
-  );
-}
-
-function NteCharacterCard({ char, locale, gameId }: { char: typeof nteCharacters[number]; locale: SupportedLocale; gameId: GameId }) {
-  const elementColor = NTE_ELEMENT_COLORS[char.attribute] || '#888';
-  const imageUrl = getNteCharacterImage(char);
-
-  return (
-    <Link
-      href={`/${gameId}/characters/${char.id}` as '/'}
-      className="group flex flex-col overflow-hidden rounded-lg border border-game-border bg-game-surface transition-all hover:border-game-primary hover:shadow-lg"
-    >
-      <div className="relative aspect-square overflow-hidden bg-game-surface-alt">
-        <CharacterAvatar
-          src={imageUrl}
-          alt={getNteCharacterName(char, locale)}
-          element={char.attribute}
-          className="h-full w-full object-cover object-top transition-transform group-hover:scale-105"
-        />
-        <span className="absolute bottom-1.5 left-1.5 rounded px-1.5 py-0.5 text-xs font-medium text-white" style={{ backgroundColor: elementColor }}>
-          {char.attribute.charAt(0).toUpperCase() + char.attribute.slice(1)}
-        </span>
-        <span className="absolute top-1.5 right-1.5 rounded bg-game-bg/80 px-1.5 py-0.5 text-xs font-bold" style={{ color: '#eab308' }}>
-          {char.rank}
-        </span>
-      </div>
-      <div className="p-2.5">
-        <h3 className="text-sm font-semibold text-game-text group-hover:text-game-primary truncate">
-          {getNteCharacterName(char, locale)}
-        </h3>
-        <p className="text-xs text-game-text-muted truncate">{char.roleEn}</p>
-      </div>
-    </Link>
-  );
-}
-
-// --- Wuthering Waves Characters ---
-
-const WUWA_ELEMENT_COLORS: Record<string, string> = {
-  glacio: '#67e8f9', fusion: '#ef4444', electro: '#8b5cf6',
-  aero: '#6ee7b7', spectro: '#fbbf24', havoc: '#a855f7',
+const ELEMENT_COLORS: Record<string, string> = {
+  pyro: '#ef4444', hydro: '#3b82f6', electro: '#8b5cf6', cryo: '#67e8f9', dendro: '#4ade80', anemo: '#6ee7b7', geo: '#fbbf24',
+  fire: '#ef4444', ice: '#67e8f9', lightning: '#8b5cf6', wind: '#6ee7b7', physical: '#9ca3af', quantum: '#6366f1', imaginary: '#fbbf24',
+  glacio: '#67e8f9', fusion: '#ef4444', aero: '#6ee7b7', spectro: '#fbbf24', havoc: '#a855f7',
+  anima: '#4ade80', chaos: '#8b5cf6', cosmos: '#3b82f6', incantation: '#f59e0b', lakshana: '#ec4899', psyche: '#06b6d4',
+  ether: '#ec4899', electric: '#8b5cf6', 'auric-ink': '#d4a017', 'honed-edge': '#c0c0c0',
+  spark: '#f59e0b', surge: '#3b82f6', bloom: '#4ade80', void: '#ec4899',
+  radiance: '#fbbf24', frost: '#67e8f9', flame: '#ef4444', gale: '#6ee7b7', thunder: '#8b5cf6',
+  heat: '#ef4444', nature: '#4ade80',
+  str: '#ef4444', agi: '#22c55e', con: '#f97316', int: '#8b5cf6', per: '#3b82f6', cha: '#ec4899',
 };
 
-const WUWA_WEAPON_LABELS: Record<string, Record<string, string>> = {
-  broadblade: { zh: ' broadblade', en: 'Broadblade', ja: '大剣' },
-  sword: { zh: '长刃', en: 'Sword', ja: '長刃' },
-  pistols: { zh: '佩枪', en: 'Pistols', ja: '銃' },
-  gauntlets: { zh: '臂铠', en: 'Gauntlets', ja: '腕甲' },
-  rectifier: { zh: '音感仪', en: 'Rectifier', ja: '感応儀' },
-};
+type CharacterCardEntry = Awaited<ReturnType<typeof getCharacterListData>>[number];
 
-function WuWaCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedLocale; gameId: GameId; gameConfig: typeof GAMES.wuwa }) {
-  const chars = wuwaCharacters;
-  const fiveStar = chars.filter((c) => c.rarity === 5);
-  const fourStar = chars.filter((c) => c.rarity === 4);
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
-      </p>
-      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
-        {getCharacterIntro(gameId, locale)}
-      </p>
-
-      <NextStepStrip locale={locale} links={CHARACTER_NEXT_STEPS.wuwa} />
-
-      {fiveStar.length > 0 && (
-        <section className="mb-8">
-          <h2 className="mb-4 text-lg font-semibold text-game-text">
-            5★ ({fiveStar.length})
-          </h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {fiveStar.map((char) => (
-              <WuWaCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {fourStar.length > 0 && (
-        <section className="mb-8">
-          <h2 className="mb-4 text-lg font-semibold text-game-text">
-            4★ ({fourStar.length})
-          </h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {fourStar.map((char) => (
-              <WuWaCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
-            ))}
-          </div>
-        </section>
-      )}
-    </div>
-  );
+function rankSortValue(rank: string) {
+  if (rank === 'SSR' || rank === 'S' || rank === '6★') return 6;
+  if (rank === 'SR' || rank === 'A' || rank === '5★') return 5;
+  if (rank === '4★') return 4;
+  return 0;
 }
 
-function WuWaCharacterCard({ char, locale, gameId }: { char: typeof wuwaCharacters[number]; locale: SupportedLocale; gameId: GameId }) {
-  const elementColor = WUWA_ELEMENT_COLORS[char.element] || '#888';
-  const imageUrl = getWuWaCharacterImage(char);
-  const weaponLabel = WUWA_WEAPON_LABELS[char.weaponType]?.[locale] ?? char.weaponType;
-
-  return (
-    <Link
-      href={`/${gameId}/characters/${char.id}` as '/'}
-      className="group flex flex-col overflow-hidden rounded-lg border border-game-border bg-game-surface transition-all hover:border-game-primary hover:shadow-lg"
-    >
-      <div className="relative aspect-square overflow-hidden bg-game-surface-alt">
-        <CharacterAvatar
-          src={imageUrl}
-          alt={getWuWaCharacterName(char, locale)}
-          element={char.element}
-          className="h-full w-full object-cover object-top transition-transform group-hover:scale-105"
-        />
-        <span className="absolute bottom-1.5 left-1.5 rounded px-1.5 py-0.5 text-xs font-medium text-white" style={{ backgroundColor: elementColor }}>
-          {char.element.charAt(0).toUpperCase() + char.element.slice(1)}
-        </span>
-        <span className="absolute top-1.5 right-1.5 rounded bg-game-bg/80 px-1.5 py-0.5 text-xs font-bold" style={{ color: '#eab308' }}>
-          {char.rarity}★
-        </span>
-      </div>
-      <div className="p-2.5">
-        <h3 className="text-sm font-semibold text-game-text group-hover:text-game-primary truncate">
-          {getWuWaCharacterName(char, locale)}
-        </h3>
-        <p className="text-xs text-game-text-muted truncate">{weaponLabel}</p>
-      </div>
-    </Link>
-  );
+function getCharacterSections(chars: CharacterCardEntry[]) {
+  const groups = new Map<string, CharacterCardEntry[]>();
+  for (const char of chars) {
+    const key = char.rankGroup;
+    groups.set(key, [...(groups.get(key) ?? []), char]);
+  }
+  return [...groups.entries()]
+    .map(([rank, entries]) => ({ rank, entries }))
+    .sort((a, b) => rankSortValue(b.rank) - rankSortValue(a.rank));
 }
 
-// --- ZZZ Characters ---
-
-function ZzzCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedLocale; gameId: GameId; gameConfig: typeof GAMES.zzz }) {
-  const chars = zzzCharacters;
-  const sRank = chars.filter((c) => c.rank === 'S');
-  const aRank = chars.filter((c) => c.rank === 'A');
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
-      </p>
-      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
-        {getCharacterIntro(gameId, locale)}
-      </p>
-
-      <NextStepStrip locale={locale} links={CHARACTER_NEXT_STEPS.zzz} />
-
-      {sRank.length > 0 && (
-        <section className="mb-8">
-          <h2 className="mb-4 text-lg font-semibold text-game-text">
-            S {locale === 'zh' ? '级' : locale === 'ja' ? '級' : '-Rank'} ({sRank.length})
-          </h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {sRank.map((char) => (
-              <ZzzCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {aRank.length > 0 && (
-        <section className="mb-8">
-          <h2 className="mb-4 text-lg font-semibold text-game-text">
-            A {locale === 'zh' ? '级' : locale === 'ja' ? '級' : '-Rank'} ({aRank.length})
-          </h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {aRank.map((char) => (
-              <ZzzCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
-            ))}
-          </div>
-        </section>
-      )}
-    </div>
-  );
+function rankHeading(rank: string, count: number, locale: SupportedLocale) {
+  if (rank === 'all') return null;
+  if (rank === 'S' || rank === 'A') {
+    return `${rank} ${locale === 'zh' ? '级' : locale === 'ja' ? '級' : '-Rank'} (${count})`;
+  }
+  return `${rank} (${count})`;
 }
 
-function ZzzCharacterCard({ char, locale, gameId }: { char: typeof zzzCharacters[number]; locale: SupportedLocale; gameId: GameId }) {
-  const elementColor = ZZZ_ELEMENT_COLORS[char.attribute] || '#888';
-  const imageUrl = getZzzCharacterImage(char);
-  const specialtyLabel = ZZZ_SPECIALTY_LABELS[char.specialtyEn]?.[locale] ?? char.specialtyEn;
-
-  return (
-    <Link
-      href={`/${gameId}/characters/${char.id}` as '/'}
-      className="group flex flex-col overflow-hidden rounded-lg border border-game-border bg-game-surface transition-all hover:border-game-primary hover:shadow-lg"
-    >
-      <div className="relative aspect-square overflow-hidden bg-game-surface-alt">
-        <CharacterAvatar
-          src={imageUrl}
-          alt={getZzzCharacterName(char, locale)}
-          element={char.attribute}
-          className="h-full w-full object-cover object-top transition-transform group-hover:scale-105"
-        />
-        <span className="absolute bottom-1.5 left-1.5 rounded px-1.5 py-0.5 text-xs font-medium text-white" style={{ backgroundColor: elementColor }}>
-          {char.attribute.charAt(0).toUpperCase() + char.attribute.slice(1)}
-        </span>
-        <span className="absolute top-1.5 right-1.5 rounded bg-game-bg/80 px-1.5 py-0.5 text-xs font-bold" style={{ color: '#eab308' }}>
-          {char.rank}
-        </span>
-      </div>
-      <div className="p-2.5">
-        <h3 className="text-sm font-semibold text-game-text group-hover:text-game-primary truncate">
-          {getZzzCharacterName(char, locale)}
-        </h3>
-        <p className="text-xs text-game-text-muted truncate">{specialtyLabel}</p>
-      </div>
-    </Link>
-  );
-}
-
-// --- Ananta Characters ---
-
-function AnantaCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedLocale; gameId: GameId; gameConfig: typeof GAMES.ananta }) {
-  const chars = anantaCharacters;
-  const ssr = chars.filter((c) => c.rarity === 5);
-  const sr = chars.filter((c) => c.rarity === 4);
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
-      </p>
-      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
-        {getCharacterIntro(gameId, locale)}
-      </p>
-
-      {ssr.length > 0 && (
-        <section className="mb-8">
-          <h2 className="mb-4 text-lg font-semibold text-game-text">
-            SSR ({ssr.length})
-          </h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {ssr.map((char) => (
-              <AnantaCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {sr.length > 0 && (
-        <section className="mb-8">
-          <h2 className="mb-4 text-lg font-semibold text-game-text">
-            SR ({sr.length})
-          </h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {sr.map((char) => (
-              <AnantaCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
-            ))}
-          </div>
-        </section>
-      )}
-    </div>
-  );
-}
-
-function AnantaCharacterCard({ char, locale, gameId }: { char: typeof anantaCharacters[number]; locale: SupportedLocale; gameId: GameId }) {
-  const elementColor = ANANTA_ELEMENT_COLORS[char.element] || '#888';
-  const imageUrl = getAnantaCharacterImage(char);
-
-  return (
-    <Link
-      href={`/${gameId}/characters/${char.id}` as '/'}
-      className="group flex flex-col overflow-hidden rounded-lg border border-game-border bg-game-surface transition-all hover:border-game-primary hover:shadow-lg"
-    >
-      <div className="relative aspect-square overflow-hidden bg-game-surface-alt">
-        <CharacterAvatar
-          src={imageUrl}
-          alt={getAnantaCharacterName(char, locale)}
-          element={char.element}
-          className="h-full w-full object-cover object-top transition-transform group-hover:scale-105"
-        />
-        <span className="absolute bottom-1.5 left-1.5 rounded px-1.5 py-0.5 text-xs font-medium text-white" style={{ backgroundColor: elementColor }}>
-          {char.element.charAt(0).toUpperCase() + char.element.slice(1)}
-        </span>
-        <span className="absolute top-1.5 right-1.5 rounded bg-game-bg/80 px-1.5 py-0.5 text-xs font-bold" style={{ color: '#eab308' }}>
-          {char.rarity === 5 ? 'SSR' : char.rarity === 4 ? 'SR' : `${char.rarity}★`}
-        </span>
-      </div>
-      <div className="p-2.5">
-        <h3 className="text-sm font-semibold text-game-text group-hover:text-game-primary truncate">
-          {getAnantaCharacterName(char, locale)}
-        </h3>
-        <p className="text-xs text-game-text-muted truncate">{char.roleEn}</p>
-      </div>
-    </Link>
-  );
-}
-
-// --- Guihuan Characters ---
-
-const GUIHUAN_ELEMENT_COLORS: Record<string, string> = {
-  radiance: '#fbbf24', frost: '#67e8f9', flame: '#ef4444',
-  void: '#a855f7', gale: '#6ee7b7', thunder: '#8b5cf6',
-};
-
-function GuihuanCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedLocale; gameId: GameId; gameConfig: typeof GAMES.guihuan }) {
-  const chars = guihuanCharacters;
-  const fiveStar = chars.filter((c) => c.rarity === 5);
-  const fourStar = chars.filter((c) => c.rarity === 4);
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
-      </p>
-      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
-        {getCharacterIntro(gameId, locale)}
-      </p>
-
-      {fiveStar.length > 0 && (
-        <section className="mb-8">
-          <h2 className="mb-4 text-lg font-semibold text-game-text">
-            5★ ({fiveStar.length})
-          </h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {fiveStar.map((char) => (
-              <GuihuanCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {fourStar.length > 0 && (
-        <section className="mb-8">
-          <h2 className="mb-4 text-lg font-semibold text-game-text">
-            4★ ({fourStar.length})
-          </h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {fourStar.map((char) => (
-              <GuihuanCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
-            ))}
-          </div>
-        </section>
-      )}
-    </div>
-  );
-}
-
-function GuihuanCharacterCard({ char, locale, gameId }: { char: typeof guihuanCharacters[number]; locale: SupportedLocale; gameId: GameId }) {
-  const elementColor = GUIHUAN_ELEMENT_COLORS[char.element] || '#888';
-  const imageUrl = getGuihuanCharacterImage(char);
-
-  return (
-    <Link
-      href={`/${gameId}/characters/${char.id}` as '/'}
-      className="group flex flex-col overflow-hidden rounded-lg border border-game-border bg-game-surface transition-all hover:border-game-primary hover:shadow-lg"
-    >
-      <div className="relative aspect-square overflow-hidden bg-game-surface-alt">
-        <CharacterAvatar
-          src={imageUrl}
-          alt={getGuihuanCharacterName(char, locale)}
-          element={char.element}
-          className="h-full w-full object-cover object-top transition-transform group-hover:scale-105"
-        />
-        <span className="absolute bottom-1.5 left-1.5 rounded px-1.5 py-0.5 text-xs font-medium text-white" style={{ backgroundColor: elementColor }}>
-          {char.elementEn}
-        </span>
-        <span className="absolute top-1.5 right-1.5 rounded bg-game-bg/80 px-1.5 py-0.5 text-xs font-bold" style={{ color: '#eab308' }}>
-          {char.rarity}★
-        </span>
-      </div>
-      <div className="p-2.5">
-        <h3 className="text-sm font-semibold text-game-text group-hover:text-game-primary truncate">
-          {getGuihuanCharacterName(char, locale)}
-        </h3>
-        <p className="text-xs text-game-text-muted truncate">{char.roleEn}</p>
-      </div>
-    </Link>
-  );
-}
-
-// --- Endfield Characters ---
-
-const ENDFIELD_ELEMENT_COLORS: Record<string, string> = {
-  physical: '#9ca3af', heat: '#ef4444', cryo: '#67e8f9', nature: '#4ade80', electric: '#facc15',
-};
-
-const SEA_ELEMENT_COLORS: Record<string, string> = {
-  str: '#ef4444',
-  agi: '#22c55e',
-  con: '#f97316',
-  int: '#8b5cf6',
-  per: '#3b82f6',
-  cha: '#ec4899',
-};
-
-function EndfieldCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedLocale; gameId: GameId; gameConfig: typeof GAMES.endfield }) {
-  const chars = endfieldCharacters;
-  const sixStar = chars.filter((c) => c.rarity === 6);
-  const fiveStar = chars.filter((c) => c.rarity === 5);
-  const fourStar = chars.filter((c) => c.rarity === 4);
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
-      </p>
-
-      <NextStepStrip locale={locale} links={CHARACTER_NEXT_STEPS.endfield} />
-
-      {sixStar.length > 0 && (
-        <section className="mb-8">
-          <h2 className="mb-4 text-lg font-semibold text-game-text">
-            6★ ({sixStar.length})
-          </h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {sixStar.map((char) => (
-              <EndfieldCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {fiveStar.length > 0 && (
-        <section className="mb-8">
-          <h2 className="mb-4 text-lg font-semibold text-game-text">
-            5★ ({fiveStar.length})
-          </h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {fiveStar.map((char) => (
-              <EndfieldCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {fourStar.length > 0 && (
-        <section className="mb-8">
-          <h2 className="mb-4 text-lg font-semibold text-game-text">
-            4★ ({fourStar.length})
-          </h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {fourStar.map((char) => (
-              <EndfieldCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
-            ))}
-          </div>
-        </section>
-      )}
-    </div>
-  );
-}
-
-function EndfieldCharacterCard({ char, locale, gameId }: { char: typeof endfieldCharacters[number]; locale: SupportedLocale; gameId: GameId }) {
-  const elementColor = ENDFIELD_ELEMENT_COLORS[char.element] || '#888';
-  const imageUrl = getEndfieldCharacterImage(char);
-
-  return (
-    <Link
-      href={`/${gameId}/characters/${char.id}` as '/'}
-      className="group flex flex-col overflow-hidden rounded-lg border border-game-border bg-game-surface transition-all hover:border-game-primary hover:shadow-lg"
-    >
-      <div className="relative aspect-square overflow-hidden bg-game-surface-alt">
-        <CharacterAvatar
-          src={imageUrl}
-          alt={getEndfieldCharacterName(char, locale)}
-          element={char.element}
-          className="h-full w-full object-cover object-top transition-transform group-hover:scale-105"
-        />
-        <span className="absolute bottom-1.5 left-1.5 rounded px-1.5 py-0.5 text-xs font-medium text-white" style={{ backgroundColor: elementColor }}>
-          {char.element.charAt(0).toUpperCase() + char.element.slice(1)}
-        </span>
-        <span className="absolute top-1.5 right-1.5 rounded bg-game-bg/80 px-1.5 py-0.5 text-xs font-bold" style={{ color: '#eab308' }}>
-          {char.rarity}★
-        </span>
-      </div>
-      <div className="p-2.5">
-        <h3 className="text-sm font-semibold text-game-text group-hover:text-game-primary truncate">
-          {getEndfieldCharacterName(char, locale)}
-        </h3>
-        <p className="text-xs text-game-text-muted truncate">{char.professionEn}</p>
-      </div>
-    </Link>
-  );
-}
-
-// --- Sea Characters ---
-
-function SeaCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedLocale; gameId: GameId; gameConfig: typeof GAMES.sea }) {
-  const chars = seaCharacters;
+function SeaIntroLinks({ locale }: { locale: SupportedLocale }) {
   const seaLinks = [
     {
       href: '/sea',
@@ -1032,51 +277,72 @@ function SeaCharactersPage({ locale, gameId, gameConfig }: { locale: SupportedLo
   ];
 
   return (
+    <section className="mb-6 rounded-lg border border-game-border bg-game-surface p-4">
+      <p className="mb-3 text-sm leading-relaxed text-game-text-muted">
+        {locale === 'zh'
+          ? '如果你搜索的是“遗忘之海 wiki / Sea of Remnants characters”，先从 Traveler、Ais、Little Axe、Princess、Molly 这些高频角色看起，再进入节奏榜和开荒队伍。'
+          : locale === 'ja'
+            ? 'Sea of Remnants characters / wiki 検索なら、Traveler、Ais、Little Axe、Princess、Molly から確認し、Tierと序盤編成へ進みます。'
+            : 'If you searched for Sea of Remnants characters or wiki, start with Traveler, Ais, Little Axe, Princess, and Molly, then move into the tier list and starter-team guide.'}
+      </p>
+      <div className="grid gap-2 md:grid-cols-3">
+        {seaLinks.map((link) => (
+          <Link key={link.href} href={link.href as '/'} className="rounded-md border border-game-border bg-game-surface-alt p-3 transition-colors hover:border-game-primary">
+            <span className="mb-1 block text-sm font-semibold text-game-text">{link.title}</span>
+            <span className="line-clamp-2 text-xs leading-relaxed text-game-text-muted">{link.description}</span>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function CharacterListPage({ chars, locale, gameId, gameConfig }: { chars: CharacterCardEntry[]; locale: SupportedLocale; gameId: GameId; gameConfig: typeof GAMES[GameId] }) {
+  const sections = getCharacterSections(chars);
+
+  return (
     <div>
       <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {locale === 'zh' ? '遗忘之海角色图鉴 Wiki' : locale === 'ja' ? 'Sea of Remnants キャラWiki' : 'Sea of Remnants Characters Wiki'}
+        {gameId === 'sea'
+          ? locale === 'zh' ? '遗忘之海角色图鉴 Wiki' : locale === 'ja' ? 'Sea of Remnants キャラWiki' : 'Sea of Remnants Characters Wiki'
+          : CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh'
-          ? `共 ${chars.length} 名角色，覆盖属性、定位、强度排行和开荒培养顺序。`
-          : locale === 'ja'
-            ? `${chars.length} 名のキャラクター。属性、役割、Tier、育成順を整理。`
-            : `${chars.length} characters with attributes, roles, tier context, and early progression notes.`}
-      </p>
-      <section className="mb-6 rounded-lg border border-game-border bg-game-surface p-4">
-        <p className="mb-3 text-sm leading-relaxed text-game-text-muted">
-          {locale === 'zh'
-            ? '如果你搜索的是“遗忘之海 wiki / Sea of Remnants characters”，先从 Traveler、Ais、Little Axe、Princess、Molly 这些高频角色看起，再进入节奏榜和开荒队伍。'
+        {gameId === 'sea'
+          ? locale === 'zh'
+            ? `共 ${chars.length} 名角色，覆盖属性、定位、强度排行和开荒培养顺序。`
             : locale === 'ja'
-              ? 'Sea of Remnants characters / wiki 検索なら、Traveler、Ais、Little Axe、Princess、Molly から確認し、Tierと序盤編成へ進みます。'
-              : 'If you searched for Sea of Remnants characters or wiki, start with Traveler, Ais, Little Axe, Princess, and Molly, then move into the tier list and starter-team guide.'}
+              ? `${chars.length} 名のキャラクター。属性、役割、Tier、育成順を整理。`
+              : `${chars.length} characters with attributes, roles, tier context, and early progression notes.`
+          : locale === 'zh' ? `共 ${chars.length} 名角色` : locale === 'ja' ? `${chars.length} 名のキャラクター` : `${chars.length} Characters`}
+      </p>
+      {gameId !== 'sea' && (
+        <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+          {getCharacterIntro(gameId, locale)}
         </p>
-        <div className="grid gap-2 md:grid-cols-3">
-          {seaLinks.map((link) => (
-            <Link key={link.href} href={link.href as '/'} className="rounded-md border border-game-border bg-game-surface-alt p-3 transition-colors hover:border-game-primary">
-              <span className="mb-1 block text-sm font-semibold text-game-text">{link.title}</span>
-              <span className="line-clamp-2 text-xs leading-relaxed text-game-text-muted">{link.description}</span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {chars.length > 0 && (
-        <section className="mb-8">
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {chars.map((char) => (
-              <SeaCharacterCard key={char.id} char={char} locale={locale} gameId={gameId} />
-            ))}
-          </div>
-        </section>
       )}
+
+      {gameId === 'sea' ? <SeaIntroLinks locale={locale} /> : <NextStepStrip locale={locale} links={CHARACTER_NEXT_STEPS[gameId]} />}
+
+      {sections.map(({ rank, entries }) => {
+        const heading = rankHeading(rank, entries.length, locale);
+        return (
+          <section key={rank} className="mb-8">
+            {heading && <h2 className="mb-4 text-lg font-semibold text-game-text">{heading}</h2>}
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+              {entries.map((char) => (
+                <CharacterCard key={char.id} char={char} gameId={gameId} />
+              ))}
+            </div>
+          </section>
+        );
+      })}
     </div>
   );
 }
 
-function SeaCharacterCard({ char, locale, gameId }: { char: typeof seaCharacters[number]; locale: SupportedLocale; gameId: GameId }) {
-  const elementColor = SEA_ELEMENT_COLORS[char.attribute] || '#888';
-  const imageUrl = getSeaCharacterImage(char);
+function CharacterCard({ char, gameId }: { char: CharacterCardEntry; gameId: GameId }) {
+  const elementColor = ELEMENT_COLORS[char.element] || '#888';
 
   return (
     <Link
@@ -1085,20 +351,25 @@ function SeaCharacterCard({ char, locale, gameId }: { char: typeof seaCharacters
     >
       <div className="relative aspect-square overflow-hidden bg-game-surface-alt">
         <CharacterAvatar
-          src={imageUrl}
-          alt={getSeaCharacterName(char, locale)}
-          element={char.attribute}
+          src={char.image}
+          alt={char.name}
+          element={char.element}
           className="h-full w-full object-cover object-top transition-transform group-hover:scale-105"
         />
         <span className="absolute bottom-1.5 left-1.5 rounded px-1.5 py-0.5 text-xs font-medium text-white" style={{ backgroundColor: elementColor }}>
-          {char.attribute.charAt(0).toUpperCase() + char.attribute.slice(1)}
+          {char.elementLabel}
         </span>
+        {char.rarityLabel && (
+          <span className="absolute top-1.5 right-1.5 rounded bg-game-bg/80 px-1.5 py-0.5 text-xs font-bold" style={{ color: '#eab308' }}>
+            {char.rarityLabel}
+          </span>
+        )}
       </div>
       <div className="p-2.5">
-        <h3 className="text-sm font-semibold text-game-text group-hover:text-game-primary truncate">
-          {getSeaCharacterName(char, locale)}
+        <h3 className="truncate text-sm font-semibold text-game-text group-hover:text-game-primary">
+          {char.name}
         </h3>
-        <p className="text-xs text-game-text-muted truncate">{char.roleEn}</p>
+        <p className="truncate text-xs text-game-text-muted">{char.subtitle}</p>
       </div>
     </Link>
   );
