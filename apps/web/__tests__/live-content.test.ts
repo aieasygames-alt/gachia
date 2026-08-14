@@ -25,6 +25,7 @@ describe('homepage live content', () => {
   it('has complete localized text and valid dates', () => {
     for (const item of allLiveItems) {
       expect(item.href).toMatch(/^\//);
+      expect(item.href).toMatch(new RegExp(`^/${item.gameId}(/|$)`));
       expect(Date.parse(`${item.updatedAt}T00:00:00Z`)).not.toBeNaN();
 
       for (const locale of locales) {

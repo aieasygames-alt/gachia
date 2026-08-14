@@ -1,7 +1,7 @@
 import type { GameId, SupportedLocale } from '@gachia/core';
 import type { LocalizedText, LiveStatus } from './live-content';
 
-export type VersionSnapshotLinkType = 'banner' | 'codes' | 'characters' | 'guides' | 'builds';
+export type VersionSnapshotLinkType = 'banner' | 'codes' | 'characters' | 'guides' | 'builds' | 'download' | 'map';
 
 export interface VersionSnapshotLink {
   type: VersionSnapshotLinkType;
@@ -21,7 +21,7 @@ export interface VersionSnapshot {
   links: VersionSnapshotLink[];
 }
 
-export const VERSION_SNAPSHOT_UPDATED_AT = '2026-08-03';
+export const VERSION_SNAPSHOT_UPDATED_AT = '2026-08-14';
 
 export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   zzz: {
@@ -37,9 +37,9 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
     },
     whatChanged: [
       {
-        zh: '版本页从 3.0 入坑词扩展到 3.1、周年福利和新平台搜索。',
-        en: 'The hub expands from v3.0 onboarding into v3.1, anniversary rewards, and new-platform searches.',
-        ja: 'v3.0入門からv3.1、周年報酬、新プラットフォーム検索へ広げています。',
+        zh: '3.1 后半继续承接已知问题补偿、新代理人、兑换码和多平台入坑。',
+        en: 'Phase two continues routing known-issue compensation, new agents, codes, and multi-platform onboarding.',
+        ja: 'v3.1後半は既知問題補償、新エージェント、コード、多平台入門を案内します。',
       },
       {
         zh: '兑换码、平台绑定、回流奖励和新代理人规划被放到同一条路线。',
@@ -63,25 +63,26 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       { type: 'codes', href: '/zzz/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
       { type: 'characters', href: '/zzz/characters', label: { zh: '角色图鉴', en: 'Characters', ja: 'キャラ' } },
       { type: 'guides', href: '/zzz/guides/v3-1-anniversary-xbox-guide', label: { zh: '3.1 / 周年 FAQ', en: 'v3.1 / Anniversary FAQ', ja: 'v3.1 / 周年FAQ' } },
+      { type: 'download', href: '/zzz/download', label: { zh: '平台下载', en: 'Platform download', ja: 'プラットフォームDL' } },
       { type: 'builds', href: '/zzz/build', label: { zh: '配装推荐', en: 'Builds', ja: 'ビルド' } },
     ],
   },
   wuwa: {
     gameId: 'wuwa',
-    currentVersion: '3.5',
-    releaseDate: '2026-07-10',
-    status: 'live',
+    currentVersion: '3.6 watch',
+    releaseDate: '2026-08-14',
+    status: 'fresh',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     summary: {
-      zh: '3.5 重点围绕 Yangyang: Xuanling、Suisui、SP 机制、Xbox/Game Pass 和新玩家入坑路线。',
-      en: 'v3.5 centers on Yangyang: Xuanling, Suisui, SP mechanics, Xbox/Game Pass, and starter routes.',
-      ja: 'v3.5はYangyang: Xuanling、Suisui、SP機構、Xbox/Game Pass、初心者導線が中心です。',
+      zh: '3.6 重点转向维护后卡池、兑换码、角色、地图和 Xbox/Steam 新玩家入口。',
+      en: 'v3.6 watch shifts toward post-maintenance banners, codes, characters, maps, and Xbox/Steam starter routes.',
+      ja: 'v3.6はメンテ後バナー、コード、キャラ、マップ、Xbox/Steam入門が中心です。',
     },
     whatChanged: [
       {
-        zh: '版本页首屏强化 3.5 上线、角色、平台入口和声骸/养成导流。',
-        en: 'The hub now foregrounds the v3.5 launch, characters, platform entry points, and Echo/build routing.',
-        ja: 'v3.5開始、キャラ、プラットフォーム入口、エコー/育成導線を強化しています。',
+        zh: '版本页首屏从 3.5 上线口径刷新到 3.6 维护、卡池和平台入口。',
+        en: 'The hub moves from v3.5 launch copy into v3.6 maintenance, banners, and platform routes.',
+        ja: '版本ページをv3.5開始からv3.6メンテ、バナー、平台導線へ更新します。',
       },
       {
         zh: 'Banner、兑换码和 Xbox 入坑内容被串成可执行检查顺序。',
@@ -105,25 +106,27 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       { type: 'banner', href: '/wuwa/guides/banner-schedule-guide', label: { zh: '当前卡池', en: 'Current banners', ja: '現在バナー' } },
       { type: 'codes', href: '/wuwa/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
       { type: 'characters', href: '/wuwa/characters', label: { zh: '角色图鉴', en: 'Characters', ja: 'キャラ' } },
+      { type: 'download', href: '/wuwa/download', label: { zh: '平台下载', en: 'Platform download', ja: 'プラットフォームDL' } },
+      { type: 'map', href: '/wuwa/map', label: { zh: '地图', en: 'Map', ja: 'マップ' } },
       { type: 'guides', href: '/wuwa/guides/v3-5-preview-guide', label: { zh: '3.5 专题', en: 'v3.5 guide', ja: 'v3.5特集' } },
     ],
   },
   starrail: {
     gameId: 'starrail',
-    currentVersion: '4.4',
-    releaseDate: '2026-07-02',
-    status: 'live',
+    currentVersion: '4.x watch',
+    releaseDate: '2026-08-14',
+    status: 'fresh',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     summary: {
-      zh: '4.4 重点是 Himeko Nova、Fate/stay night 联动、Rin/Gilgamesh 搜索、兑换码和星琼缺口。',
-      en: 'v4.4 focuses on Himeko Nova, Fate/stay night collab intent, Rin/Gilgamesh searches, codes, and Jade gaps.',
-      ja: 'v4.4はHimeko Nova、Fate/stay nightコラボ、Rin/Gilgamesh検索、コード、星玉不足が中心です。',
+      zh: '4.x 继续承接 Fate 联动、Gilgamesh、Kafka、Cyrene、当前跃迁、兑换码和队伍构建搜索。',
+      en: 'The 4.x watch continues routing Fate collab, Gilgamesh, Kafka, Cyrene, current warps, codes, and team-builder searches.',
+      ja: '4.xはFateコラボ、Gilgamesh、Kafka、Cyrene、現在跳躍、コード、編成検索を案内します。',
     },
     whatChanged: [
       {
-        zh: '专题从前瞻口径切到上线后口径，优先承接联动奖励和抽卡规划。',
-        en: 'Coverage moved from preview wording to live-version routing for collab rewards and pull planning.',
-        ja: '前瞻表現から実装後の導線へ移し、コラボ報酬とガチャ計画を優先します。',
+        zh: '页面继续从单版本专题扩展到 4.x 联动、复刻和队伍构建的常青入口。',
+        en: 'The page expands from a single-version hub into an evergreen 4.x collab, rerun, and team-building route.',
+        ja: '単一版本特集から4.xコラボ、復刻、編成の常設導線へ広げます。',
       },
       {
         zh: 'Banner、Fate FAQ 和兑换码页互相打通，减少用户重复跳转。',
@@ -150,22 +153,59 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       { type: 'guides', href: '/starrail/guides/himeko-nova-fate-pull-plan', label: { zh: '抽卡规划', en: 'Pull plan', ja: 'ガチャ計画' } },
     ],
   },
-  genshin: {
-    gameId: 'genshin',
-    currentVersion: 'Luna VIII',
-    releaseDate: '2026-07-15',
-    status: 'fresh',
+  nte: {
+    gameId: 'nte',
+    currentVersion: '1.2 phase two',
+    releaseDate: '2026-08-14',
+    status: 'live',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     summary: {
-      zh: '当前版本专题集中处理 Luna VIII、Sandrone、Sunny Summer Fontinalia、卡池规划、兑换码和活动日历。',
-      en: 'The current hub covers Luna VIII, Sandrone, Sunny Summer Fontinalia, banner planning, redeem codes, and event routing.',
-      ja: '現在の特集はLuna VIII、Sandrone、Sunny Summer Fontinalia、バナー計画、コード、イベント導線を扱います。',
+      zh: '1.2 后半重点是 Iroi、Shinku、999 Nights、兑换码、下载和 Steam 入口；1.3 只保持监控口径。',
+      en: 'v1.2 phase two centers on Iroi, Shinku, 999 Nights, codes, download, and Steam routes; v1.3 stays in watch wording.',
+      ja: 'v1.2後半はIroi、Shinku、999 Nights、コード、DL、Steamが中心です。v1.3は注目表現に留めます。',
     },
     whatChanged: [
       {
-        zh: '版本页增加 current/next banner、兑换码和活动入口，方便承接高频搜索。',
-        en: 'The hub now routes current/next banner, codes, and event searches from one page.',
-        ja: '現在/次回バナー、コード、イベント検索を一つのページから案内します。',
+        zh: 'NTE 从 Shinku 当前池扩展到 Iroi 后半预热和 999 Nights 模式承接。',
+        en: 'NTE expands from the Shinku banner into Iroi phase-two prep and 999 Nights routing.',
+        ja: 'NTEはShinkuバナーからIroi後半準備と999 Nights導線へ広がります。',
+      },
+    ],
+    firstSteps: [
+      {
+        zh: '先复核兑换码和活动资源，再判断 Iroi 是否值得抽。',
+        en: 'Recheck codes and event resources first, then decide whether Iroi is worth pulling.',
+        ja: 'まずコードとイベント資源を確認し、Iroiを引くか判断します。',
+      },
+      {
+        zh: '下载与 Steam 问题按官方渠道核验，不承接非官方包。',
+        en: 'Verify download and Steam questions through official channels, not unofficial packages.',
+        ja: 'DLとSteamは公式チャネルで確認し、非公式パッケージは扱いません。',
+      },
+    ],
+    links: [
+      { type: 'download', href: '/nte/download', label: { zh: '下载', en: 'Download', ja: 'DL' } },
+      { type: 'codes', href: '/nte/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
+      { type: 'characters', href: '/nte/characters', label: { zh: '角色', en: 'Characters', ja: 'キャラ' } },
+      { type: 'guides', href: '/nte/guides/download-install-guide', label: { zh: '下载 FAQ', en: 'Download FAQ', ja: 'DL FAQ' } },
+    ],
+  },
+  genshin: {
+    gameId: 'genshin',
+    currentVersion: '7.0 watch',
+    releaseDate: '2026-08-14',
+    status: 'watch',
+    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    summary: {
+      zh: '当前版本中心转入 7.0 / 至冬预热，优先承接 Sandrone、Columbina、下期卡池、地图、兑换码和原石规划。',
+      en: 'The hub now watches v7.0 / Snezhnaya intent, prioritizing Sandrone, Columbina, next banners, maps, codes, and Primogem planning.',
+      ja: '現在の中心はv7.0 / スネージナヤ注目です。Sandrone、Columbina、次回バナー、マップ、コード、原石計画を優先します。',
+    },
+    whatChanged: [
+      {
+        zh: '版本页从 Luna VIII 口径过渡到 7.0 / 至冬 watch 口径，未确认内容只做预热和监控。',
+        en: 'The hub transitions from Luna VIII copy into v7.0 / Snezhnaya watch copy, keeping unconfirmed items in monitor wording.',
+        ja: 'Luna VIIIからv7.0 / スネージナヤ注目へ移行し、未確認情報は監視表現に留めます。',
       },
       {
         zh: '角色、武器、圣遗物和配队入口保持在版本页可见位置。',
@@ -189,7 +229,193 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       { type: 'banner', href: '/genshin/guides/banner-schedule-guide', label: { zh: '当前卡池', en: 'Current banners', ja: '現在バナー' } },
       { type: 'codes', href: '/genshin/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
       { type: 'characters', href: '/genshin/characters', label: { zh: '角色图鉴', en: 'Characters', ja: 'キャラ' } },
+      { type: 'map', href: '/genshin/map', label: { zh: '地图', en: 'Map', ja: 'マップ' } },
       { type: 'guides', href: '/genshin/guides/luna-viii-sandrone-guide', label: { zh: '版本专题', en: 'Version guide', ja: '版本特集' } },
+    ],
+  },
+  skjh: {
+    gameId: 'skjh',
+    currentVersion: 'August collab',
+    releaseDate: '2026-08-14',
+    status: 'live',
+    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    summary: {
+      zh: '8 月 14 日重点是联动活动、官方下载、服务器模式、新手 0-2 小时路线和防抄家内容。',
+      en: 'The August 14 focus is collab content, official download, server modes, first 0-2 hours, and base-defense guidance.',
+      ja: '8月14日の重点はコラボ、公式DL、サーバーモード、最初の0-2時間、拠点防衛です。',
+    },
+    whatChanged: [
+      {
+        zh: '内容从上线前问答转向上线后实操：怎么下载、选什么服务器、前两小时怎么开荒。',
+        en: 'Coverage moves from pre-launch FAQs to practical post-launch tasks: download, server choice, and first-session routing.',
+        ja: 'リリース前FAQから、DL、サーバー選択、初回プレイ導線へ移行します。',
+      },
+    ],
+    firstSteps: [
+      {
+        zh: '先走官方下载和账号入口，再选择服务器模式。',
+        en: 'Start with official download/account entry, then choose a server mode.',
+        ja: 'まず公式DLとアカウント入口を確認し、サーバーモードを選びます。',
+      },
+      {
+        zh: '进入游戏后按 0-2 小时路线稳定资源和基地。',
+        en: 'After entering the game, follow the 0-2 hour route to stabilize resources and base setup.',
+        ja: 'ゲーム開始後は0-2時間ルートで資源と拠点を安定させます。',
+      },
+    ],
+    links: [
+      { type: 'download', href: '/skjh/download', label: { zh: '官方下载', en: 'Official download', ja: '公式DL' } },
+      { type: 'codes', href: '/skjh/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
+      { type: 'characters', href: '/skjh/weapons', label: { zh: '武器资料', en: 'Weapons', ja: '武器' } },
+      { type: 'guides', href: '/skjh/guides/first-2-hours-starter-route', label: { zh: '新手路线', en: 'Starter route', ja: '序盤ルート' } },
+    ],
+  },
+  endfield: {
+    gameId: 'endfield',
+    currentVersion: 'August test watch',
+    releaseDate: '2026-08-14',
+    status: 'watch',
+    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    summary: {
+      zh: '8 月重点是全面测试资格、下载平台、角色、蓝图和 AIC 工厂系统。',
+      en: 'The August watch focuses on test access, download platforms, characters, blueprints, and the AIC factory system.',
+      ja: '8月はテスト資格、DL平台、キャラ、設計図、AIC工場システムが中心です。',
+    },
+    whatChanged: [
+      {
+        zh: '测试期页面需要把资格、下载、角色和工厂系统放在同一条入口。',
+        en: 'Test-era pages should connect access, downloads, characters, and factory systems in one route.',
+        ja: 'テスト期ページでは資格、DL、キャラ、工場システムを一つの導線にまとめます。',
+      },
+    ],
+    firstSteps: [
+      {
+        zh: '先确认测试资格和平台状态，再看蓝图/AIC 工厂入门。',
+        en: 'Confirm test access and platform status first, then read the blueprint/AIC factory intro.',
+        ja: 'まずテスト資格と平台状態を確認し、設計図/AIC工場入門へ進みます。',
+      },
+      {
+        zh: '未确认上线日期保持 watch 口径，不写成正式定档。',
+        en: 'Keep unconfirmed release timing in watch wording instead of treating it as a final date.',
+        ja: '未確認リリース時期は正式日程ではなく注目表現に留めます。',
+      },
+    ],
+    links: [
+      { type: 'download', href: '/endfield/download', label: { zh: '下载 / 测试', en: 'Download / Tests', ja: 'DL / テスト' } },
+      { type: 'codes', href: '/endfield/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
+      { type: 'characters', href: '/endfield/characters', label: { zh: '角色', en: 'Characters', ja: 'キャラ' } },
+      { type: 'guides', href: '/endfield/guides/homecoming-update-guide', label: { zh: '蓝图 / AIC', en: 'Blueprint / AIC', ja: '設計図 / AIC' } },
+    ],
+  },
+  sea: {
+    gameId: 'sea',
+    currentVersion: 'mobile launch follow-up',
+    releaseDate: '2026-08-14',
+    status: 'fresh',
+    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    summary: {
+      zh: '移动端首发后重点承接 Steam、release date、gameplay、gacha、solo、PS5/Xbox 与平台边界问题。',
+      en: 'After mobile launch, the hub routes Steam, release date, gameplay, gacha, solo, PS5/Xbox, and platform-boundary questions.',
+      ja: 'モバイル開始後はSteam、release date、gameplay、ガチャ、ソロ、PS5/Xbox、平台境界を案内します。',
+    },
+    whatChanged: [
+      {
+        zh: '遗忘之海从首发时间线转入平台、玩法类型和付费机制 FAQ 承接。',
+        en: 'Sea of Remnants moves from launch timeline into platform, gameplay-type, and monetization FAQ routing.',
+        ja: 'Sea of Remnantsは開始年表から平台、玩法タイプ、課金FAQへ移ります。',
+      },
+    ],
+    firstSteps: [
+      {
+        zh: '先确认 Steam / 官方 / 移动端入口，再判断 gacha、solo 和 MMO 边界。',
+        en: 'Confirm Steam, official, and mobile entry first, then evaluate gacha, solo, and MMO boundaries.',
+        ja: 'まずSteam、公式、モバイル入口を確認し、ガチャ、ソロ、MMO境界を判断します。',
+      },
+      {
+        zh: 'PS5/Xbox 不写成确认日期，除非官方商店或公告明确。',
+        en: 'Do not publish PS5/Xbox dates unless official stores or notices confirm them.',
+        ja: 'PS5/Xboxの日付は公式ストアか告知が確認するまで書きません。',
+      },
+    ],
+    links: [
+      { type: 'download', href: '/sea/download', label: { zh: '平台下载', en: 'Platform download', ja: '平台DL' } },
+      { type: 'codes', href: '/sea/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
+      { type: 'characters', href: '/sea/characters', label: { zh: '船员', en: 'Characters', ja: 'キャラ' } },
+      { type: 'guides', href: '/sea/guides/platform-download-guide', label: { zh: 'Steam / 平台 FAQ', en: 'Steam / Platform FAQ', ja: 'Steam / 平台FAQ' } },
+    ],
+  },
+  ananta: {
+    gameId: 'ananta',
+    currentVersion: 'preregistration watch',
+    releaseDate: '2026-08-14',
+    status: 'watch',
+    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    summary: {
+      zh: '无限大继续以预注册、beta、gameplay、PC、Steam、Xbox 和官方未定档口径承接。',
+      en: 'Ananta stays in preregistration watch mode, routing beta, gameplay, PC, Steam, Xbox, and official-status searches.',
+      ja: 'Anantaは事前登録注目として、beta、gameplay、PC、Steam、Xbox、公式状態を案内します。',
+    },
+    whatChanged: [
+      {
+        zh: '页面不承诺日期，优先分清官方已知信息和社区推测。',
+        en: 'The page should not promise a date; it separates official facts from community speculation.',
+        ja: '日付は約束せず、公式情報とコミュニティ推測を分けます。',
+      },
+    ],
+    firstSteps: [
+      {
+        zh: '先看官方预注册与新闻，再看 beta / gameplay 汇总。',
+        en: 'Check official preregistration and news first, then beta/gameplay summaries.',
+        ja: 'まず公式事前登録とニュースを確認し、beta/gameplay要約へ進みます。',
+      },
+      {
+        zh: '搜索词里的“无限大符号”是歧义词，不承接到游戏内容。',
+        en: 'The math-symbol query is off-topic and should not route into game content.',
+        ja: '数学記号の検索意図はゲーム内容に接続しません。',
+      },
+    ],
+    links: [
+      { type: 'download', href: '/ananta/download', label: { zh: '下载 / 预注册', en: 'Download / Prereg', ja: 'DL / 事前登録' } },
+      { type: 'codes', href: '/ananta/items', label: { zh: '资料入口', en: 'Data hub', ja: 'データ' } },
+      { type: 'characters', href: '/ananta/characters', label: { zh: '角色', en: 'Characters', ja: 'キャラ' } },
+      { type: 'guides', href: '/ananta/guides/preregistration-no-gacha-guide', label: { zh: '官方已知信息', en: 'Known info', ja: '既知情報' } },
+    ],
+  },
+  guihuan: {
+    gameId: 'guihuan',
+    currentVersion: 'test timeline watch',
+    releaseDate: '2026-08-14',
+    status: 'watch',
+    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    summary: {
+      zh: '归环继续以测试时间线、开发商、国际服、官网、公测和测试招募事实核查承接。',
+      en: 'Guihuan stays in test-timeline watch mode for developer, global-server, official site, public beta, and recruitment checks.',
+      ja: '帰環はテスト年表、開発元、国際版、公式、公測、テスト募集を確認します。',
+    },
+    whatChanged: [
+      {
+        zh: '页面需要把开发商和上线时间事实核查放在首屏，避免误写未确认公测日期。',
+        en: 'The page should foreground developer and release-date fact checks to avoid unconfirmed public-beta claims.',
+        ja: '開発元とリリース時期の事実確認を先に出し、未確認公測日を避けます。',
+      },
+    ],
+    firstSteps: [
+      {
+        zh: '先确认官网与测试招募状态，再解释国际服和开发商问题。',
+        en: 'Confirm official site and test recruitment first, then explain global-server and developer questions.',
+        ja: 'まず公式サイトとテスト募集を確認し、国際版と開発元を説明します。',
+      },
+      {
+        zh: '“库洛”等联想词需要核验，不直接写成开发商结论。',
+        en: 'Terms like Kuro need verification and should not be published as developer conclusions.',
+        ja: 'Kuroなどの語は検証が必要で、開発元結論として書きません。',
+      },
+    ],
+    links: [
+      { type: 'download', href: '/guihuan/download', label: { zh: '下载 / 测试', en: 'Download / Tests', ja: 'DL / テスト' } },
+      { type: 'codes', href: '/guihuan/items', label: { zh: '资料入口', en: 'Data hub', ja: 'データ' } },
+      { type: 'characters', href: '/guihuan/characters', label: { zh: '角色', en: 'Characters', ja: 'キャラ' } },
+      { type: 'guides', href: '/guihuan/guides/test-release-timeline-guide', label: { zh: '测试时间线', en: 'Test timeline', ja: 'テスト年表' } },
     ],
   },
 };

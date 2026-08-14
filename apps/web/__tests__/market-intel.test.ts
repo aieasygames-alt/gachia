@@ -23,8 +23,9 @@ describe('market intelligence backlog', () => {
     }
   });
 
-  it('keeps P0 opportunities actionable', () => {
+  it('keeps P0 and P1 opportunities actionable after execution', () => {
     const p0 = getMarketIntelByPriority('P0');
+    const p1 = getMarketIntelByPriority('P1');
 
     expect(p0.map((opportunity) => opportunity.gameId)).toEqual([
       'genshin',
@@ -33,11 +34,31 @@ describe('market intelligence backlog', () => {
       'skjh',
       'endfield',
     ]);
+    expect(p1.map((opportunity) => opportunity.gameId)).toEqual([
+      'nte',
+      'starrail',
+      'sea',
+      'ananta',
+      'guihuan',
+    ]);
 
     for (const opportunity of p0) {
+      expect(opportunity.status).toBe('done');
       expect(opportunity.targetPages.length).toBeGreaterThan(0);
       expect(opportunity.actions).toContain('update_existing_page');
       expect(opportunity.actions.some((action) => action === 'update_live_module' || action === 'update_download_route' || action === 'create_topic_page')).toBe(true);
+    }
+    for (const opportunity of p1) {
+      expect(opportunity.status).toBe('done');
+      expect(opportunity.targetPages.length).toBeGreaterThan(0);
+      expect(opportunity.actions).toContain('update_existing_page');
+      expect(opportunity.actions.some((action) =>
+        action === 'add_faq' ||
+        action === 'add_internal_links' ||
+        action === 'update_code_route' ||
+        action === 'update_download_route' ||
+        action === 'monitor_only'
+      )).toBe(true);
     }
   });
 
