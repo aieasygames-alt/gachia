@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo, useRef } from 'react';
 import type { SupportedLocale, GameId } from '@gachia/core';
+import { isBlockedNoiseQuery } from '@/lib/keyword-governance';
 // Characters
 import { genshinCharacters, getGenshinCharacterName } from '@gachia/data/games/genshin/characters';
 import { starrailCharacters, getStarRailCharacterName } from '@gachia/data/games/starrail/characters';
@@ -339,18 +340,6 @@ const TYPE_ORDER: Record<SearchType, number> = {
   artifact: 2,
   item: 3,
 };
-
-const SEARCH_NOISE_TERMS = [
-  '18+', '18禁', 'r18', 'nsfw', 'adult', 'porn', 'hentai', 'nude',
-  '成人', '同人', '本子', '裸', '涩图', '色图',
-  '内鬼', '爆料', 'leak', 'leaks', 'datamine', 'mod',
-];
-
-function isBlockedNoiseQuery(query: string) {
-  const normalized = query.trim().toLowerCase();
-  if (!normalized) return false;
-  return SEARCH_NOISE_TERMS.some((term) => normalized.includes(term.toLowerCase()));
-}
 
 export function SearchDialog({ locale, open, onClose }: {
   locale: SupportedLocale;
