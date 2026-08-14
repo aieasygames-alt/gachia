@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import Script from 'next/script';
 import { NextIntlClientProvider } from 'next-intl';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Poppins } from 'next/font/google';
@@ -48,6 +49,12 @@ export default async function LocaleLayout({
     <html lang={locale === 'zh' ? 'zh-Hans' : locale} className={poppins.variable}>
       <head>
         <GoogleAnalytics gaId="G-4L1VKXGY2Y" />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8569630257520732"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </head>
       <body className="min-h-screen bg-game-bg text-game-text antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
