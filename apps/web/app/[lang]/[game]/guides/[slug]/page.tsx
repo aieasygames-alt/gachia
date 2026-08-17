@@ -54,6 +54,28 @@ type QuickAnswer = {
   points: Record<SupportedLocale, string[]>;
 };
 
+type GuideArticleImage = {
+  src: string;
+  alt: string;
+  caption: string;
+};
+
+const ARTICLE_IMAGE_COUNTS: Partial<Record<GameId, number>> = {
+  genshin: 10,
+  starrail: 10,
+  wuwa: 10,
+  nte: 17,
+  guihuan: 1,
+};
+
+const ARTICLE_IMAGE_LABELS: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
+  genshin: { zh: '原神攻略参考图', en: 'Genshin Impact guide reference image', ja: '原神ガイド参考画像' },
+  starrail: { zh: '崩坏：星穹铁道攻略参考图', en: 'Honkai: Star Rail guide reference image', ja: '崩壊：スターレイルガイド参考画像' },
+  wuwa: { zh: '鸣潮攻略参考图', en: 'Wuthering Waves guide reference image', ja: '鳴潮ガイド参考画像' },
+  nte: { zh: '异环攻略参考图', en: 'Neverness to Everness guide reference image', ja: 'Neverness to Evernessガイド参考画像' },
+  guihuan: { zh: '归环攻略参考图', en: 'Guihuan guide reference image', ja: 'Guihuanガイド参考画像' },
+};
+
 const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> = {
   genshin: {
     'banner-schedule-guide': {
@@ -393,6 +415,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ la
   const content = runtime.getContent(guide, locale);
   const category = runtime.getCategory(guide, locale);
   const guideTags = Array.isArray(guide.tags) ? guide.tags : [];
+  const articleImages = getGuideArticleImages(gameId, guide.id, title, locale);
 
   return (
     <div>
@@ -431,7 +454,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ la
       <QuickAnswerSection gameId={gameId} slug={slug} locale={locale} />
 
       <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">
-        <ClientMarkdown content={content} />
+        <GuideArticleBody content={content} images={articleImages} />
       </div>
 
       {guide.faq && guide.faq.length > 0 && (
@@ -610,6 +633,81 @@ function QuickAnswerSection({ gameId, slug, locale }: { gameId: GameId; slug: st
       </ul>
     </section>
   );
+}
+
+function GuideArticleBody({ content, images }: { content: string; images: GuideArticleImage[] }) {
+  const [leadImage, inlineImage] = images;
+  const [firstPart, secondPart] = inlineImage ? splitGuideContentForImage(content) : [content, ''];
+
+  return (
+    <>
+      {leadImage && <GuideArticleImageBlock image={leadImage} priority />}
+      <ClientMarkdown content={firstPart} />
+      {inlineImage && <GuideArticleImageBlock image={inlineImage} />}
+      {secondPart && <ClientMarkdown content={secondPart} />}
+    </>
+  );
+}
+
+function GuideArticleImageBlock({ image, priority = false }: { image: GuideArticleImage; priority?: boolean }) {
+  return (
+    <figure className="mb-6 overflow-hidden rounded-lg border border-game-border bg-game-surface-alt">
+      <img
+        src={image.src}
+        alt={image.alt}
+        className="aspect-video w-full object-cover"
+        loading={priority ? 'eager' : 'lazy'}
+      />
+      <figcaption className="border-t border-game-border px-4 py-2 text-xs leading-relaxed text-game-text-muted">
+        {image.caption}
+      </figcaption>
+    </figure>
+  );
+}
+
+function getGuideArticleImages(gameId: GameId, slug: string, title: string, locale: SupportedLocale): GuideArticleImage[] {
+  const count = ARTICLE_IMAGE_COUNTS[gameId] ?? 0;
+  if (count === 0) return [];
+
+  const imageTotal = shouldShowSecondaryArticleImage(slug) && count > 1 ? 2 : 1;
+  const start = stableImageIndex(`${gameId}:${slug}`, count);
+  const label = ARTICLE_IMAGE_LABELS[gameId]?.[locale] ?? ARTICLE_IMAGE_LABELS[gameId]?.en ?? title;
+  const gameName = GAMES[gameId].name[locale] ?? GAMES[gameId].name.en;
+
+  return Array.from({ length: imageTotal }, (_, offset) => {
+    const index = (start + offset * 3) % count;
+    const src = gameId === 'guihuan'
+      ? '/images/og/guihuan.webp'
+      : `/images/articles/${gameId}/${index}.webp`;
+
+    return {
+      src,
+      alt: `${title} - ${gameName}`,
+      caption: imageTotal > 1 ? `${label} ${offset + 1}` : label,
+    };
+  });
+}
+
+function shouldShowSecondaryArticleImage(slug: string) {
+  return GUIDE_INTENT_GROUPS.some((group) => group.some((term) => slug.toLowerCase().includes(term)));
+}
+
+function stableImageIndex(value: string, modulo: number) {
+  let hash = 0;
+
+  for (let i = 0; i < value.length; i += 1) {
+    hash = (hash * 31 + value.charCodeAt(i)) >>> 0;
+  }
+
+  return hash % modulo;
+}
+
+function splitGuideContentForImage(content: string): [string, string] {
+  const headings = [...content.matchAll(/^##\s+/gm)];
+  const splitAt = headings[1]?.index ?? headings[0]?.index;
+  if (!splitAt || splitAt < 400) return [content, ''];
+
+  return [content.slice(0, splitAt).trim(), content.slice(splitAt).trim()];
 }
 
 function NextStepSection({ gameId, currentSlug, locale }: { gameId: GameId; currentSlug: string; locale: SupportedLocale }) {
