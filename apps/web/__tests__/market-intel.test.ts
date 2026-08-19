@@ -12,12 +12,12 @@ import { getKeywordRisk } from '@/lib/keyword-governance';
 
 describe('market intelligence backlog', () => {
   it('stores the current sampling batch as structured opportunities', () => {
-    expect(MARKET_INTEL_BATCH_ID).toBe('market-intel-2026-08-14');
+    expect(MARKET_INTEL_BATCH_ID).toBe('market-intel-2026-08-19');
     expect(MARKET_INTEL_OPPORTUNITIES.length).toBeGreaterThanOrEqual(GAME_IDS.length);
     expect(getMarketIntelValidationIssues()).toEqual([]);
   });
 
-  it('covers every supported game in the 2026-08-14 batch', () => {
+  it('covers every supported game in the 2026-08-19 batch', () => {
     for (const gameId of GAME_IDS) {
       expect(getMarketIntelForGame(gameId).length).toBeGreaterThan(0);
     }

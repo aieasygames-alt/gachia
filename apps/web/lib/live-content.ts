@@ -70,7 +70,7 @@ export interface LiveCalendarEvent {
   priority: number;
 }
 
-export const LIVE_UPDATED_AT = '2026-08-14';
+export const LIVE_UPDATED_AT = '2026-08-19';
 
 export const HOMEPAGE_PRIORITY_GAMES: GameId[] = [
   'genshin',
@@ -87,6 +87,23 @@ export const HOMEPAGE_PRIORITY_GAMES: GameId[] = [
 
 export const LIVE_BANNERS: LiveBanner[] = [
   {
+    gameId: 'genshin',
+    title: {
+      zh: '原神 7.0 / 至冬卡池预热',
+      en: 'Genshin v7.0 / Snezhnaya Banner Watch',
+      ja: '原神 v7.0 / スネージナヤ バナー注目',
+    },
+    summary: {
+      zh: '优先承接至冬、Sandrone、Columbina、当前/下期卡池、地图与兑换码。',
+      en: 'Route Snezhnaya, Sandrone, Columbina, current/next banners, maps, and codes.',
+      ja: 'スネージナヤ、Sandrone、Columbina、現在/次回バナー、マップ、コードへ案内します。',
+    },
+    href: '/genshin/guides/banner-schedule-guide',
+    status: 'watch',
+    updatedAt: LIVE_UPDATED_AT,
+    priority: 1,
+  },
+  {
     gameId: 'wuwa',
     title: {
       zh: '鸣潮 3.6 当前与下期卡池',
@@ -100,23 +117,6 @@ export const LIVE_BANNERS: LiveBanner[] = [
     },
     href: '/wuwa/guides/banner-schedule-guide',
     status: 'fresh',
-    updatedAt: LIVE_UPDATED_AT,
-    priority: 1,
-  },
-  {
-    gameId: 'genshin',
-    title: {
-      zh: '原神 7.0 / 至冬卡池预热',
-      en: 'Genshin v7.0 / Snezhnaya Banner Watch',
-      ja: '原神 v7.0 / スネージナヤ バナー注目',
-    },
-    summary: {
-      zh: '承接至冬、Sandrone、Columbina、当前/下期卡池、地图与兑换码。',
-      en: 'Route Snezhnaya, Sandrone, Columbina, current/next banners, maps, and codes.',
-      ja: 'スネージナヤ、Sandrone、Columbina、現在/次回バナー、マップ、コードへ案内します。',
-    },
-    href: '/genshin/guides/banner-schedule-guide',
-    status: 'watch',
     updatedAt: LIVE_UPDATED_AT,
     priority: 2,
   },
@@ -148,9 +148,9 @@ export const LIVE_VERSION_UPDATES: LiveVersionUpdate[] = [
       ja: '原神 v7.0 / スネージナヤ注目',
     },
     summary: {
-      zh: '版本中心转向至冬、Sandrone、Columbina、地图、卡池和兑换码。',
-      en: 'The version hub now watches Snezhnaya, Sandrone, Columbina, maps, banners, and codes.',
-      ja: 'バージョン中心はスネージナヤ、Sandrone、Columbina、マップ、バナー、コードへ移ります。',
+      zh: '版本中心继续转向至冬、Sandrone、Columbina、地图、卡池和兑换码。',
+      en: 'The version hub keeps watching Snezhnaya, Sandrone, Columbina, maps, banners, and codes.',
+      ja: 'バージョン中心はスネージナヤ、Sandrone、Columbina、マップ、バナー、コードを継続して注目します。',
     },
     href: '/genshin/version',
     status: 'watch',

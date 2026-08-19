@@ -33,8 +33,8 @@ export interface MarketIntelOpportunity {
   notes: string;
 }
 
-export const MARKET_INTEL_BATCH_ID = 'market-intel-2026-08-14';
-export const MARKET_INTEL_SOURCE_REPORT = '/plans/market-intel-2026-08-14.md';
+export const MARKET_INTEL_BATCH_ID = 'market-intel-2026-08-19';
+export const MARKET_INTEL_SOURCE_REPORT = '/plans/market-intel-2026-08-19.md';
 
 export const MARKET_INTEL_OPPORTUNITIES: MarketIntelOpportunity[] = [
   {
@@ -47,9 +47,9 @@ export const MARKET_INTEL_OPPORTUNITIES: MarketIntelOpportunity[] = [
     targetPages: ['/genshin/version', '/genshin/redeem-codes', '/genshin/guides/banner-schedule-guide'],
     actions: ['update_existing_page', 'update_live_module', 'add_internal_links', 'refresh_metadata'],
     status: 'done',
-    sourceDate: '2026-08-14',
+    sourceDate: '2026-08-19',
     sourceUrls: ['https://www.hoyolab.com/'],
-    notes: '版本页需要从 Luna VIII 过渡到 7.0 / 至冬预热，但未确认信息只写 watch 口径。',
+    notes: '版本页继续承接 7.0 / 至冬预热，重点是卡池、地图、兑换码和角色入口。',
   },
   {
     id: 'wuwa-3-6-platform-hub',
@@ -61,9 +61,9 @@ export const MARKET_INTEL_OPPORTUNITIES: MarketIntelOpportunity[] = [
     targetPages: ['/wuwa/version', '/wuwa/redeem-codes', '/wuwa/guides/banner-schedule-guide'],
     actions: ['update_existing_page', 'update_live_module', 'update_download_route', 'add_internal_links'],
     status: 'done',
-    sourceDate: '2026-08-14',
+    sourceDate: '2026-08-19',
     sourceUrls: ['https://wutheringwaves.kurogames.com/en/main/news'],
-    notes: '新平台用户和老玩家都能承接，优先做版本页和平台 FAQ 双线。',
+    notes: '平台 FAQ 和版本页双线继续承接 Steam/Xbox/Game Pass 相关搜索。',
   },
   {
     id: 'zzz-3-1-platform-compensation',
@@ -75,9 +75,9 @@ export const MARKET_INTEL_OPPORTUNITIES: MarketIntelOpportunity[] = [
     targetPages: ['/zzz/version', '/zzz/redeem-codes', '/zzz/guides/steam-3-0-start-guide'],
     actions: ['update_existing_page', 'update_live_module', 'update_download_route', 'update_code_route'],
     status: 'done',
-    sourceDate: '2026-08-14',
+    sourceDate: '2026-08-19',
     sourceUrls: ['https://www.hoyolab.com/article/46062784', 'https://www.hoyolab.com/article/46038142'],
-    notes: '维护/补偿页短平快，平台页长期承接下载和账号绑定。',
+    notes: '3.1 后半与周年页继续承接平台下载、账号绑定和兑换码。',
   },
   {
     id: 'skjh-august-collab-beginner',
@@ -89,9 +89,9 @@ export const MARKET_INTEL_OPPORTUNITIES: MarketIntelOpportunity[] = [
     targetPages: ['/skjh/version', '/skjh/guides/official-pc-download-faq', '/skjh/guides/first-2-hours-starter-route', '/skjh/guides/server-mode-choice'],
     actions: ['update_existing_page', 'create_topic_page', 'update_download_route', 'add_internal_links'],
     status: 'done',
-    sourceDate: '2026-08-14',
+    sourceDate: '2026-08-19',
     sourceUrls: ['https://skjh.qq.com/', 'https://www.taptap.cn/app/733908'],
-    notes: '上线后玩家进入实操问题，工具型攻略优先级高于新闻搬运。',
+    notes: '工具型攻略优先级高于新闻搬运，继续围绕下载、服务器模式和防抄家。',
   },
   {
     id: 'endfield-august-beta-aic',
@@ -103,9 +103,9 @@ export const MARKET_INTEL_OPPORTUNITIES: MarketIntelOpportunity[] = [
     targetPages: ['/endfield/version', '/endfield/guides/download-install-guide', '/endfield/guides/homecoming-update-guide'],
     actions: ['update_existing_page', 'create_topic_page', 'update_download_route', 'add_internal_links'],
     status: 'done',
-    sourceDate: '2026-08-14',
+    sourceDate: '2026-08-19',
     sourceUrls: ['https://endfield.hypergryph.com/news/3824', 'https://play.google.com/store/apps/details?id=com.gryphline.endfield.gp'],
-    notes: '蓝图/AIC 是差异化内容资产，应独立成教程和工具页。',
+    notes: 'Homecoming 与蓝图/AIC 工厂仍是差异化内容资产。',
   },
   {
     id: 'nte-1-2-iroi-999-nights',
@@ -117,9 +117,9 @@ export const MARKET_INTEL_OPPORTUNITIES: MarketIntelOpportunity[] = [
     targetPages: ['/nte/version', '/nte/redeem-codes', '/nte/guides/download-install-guide'],
     actions: ['update_existing_page', 'update_code_route', 'add_faq', 'add_internal_links'],
     status: 'done',
-    sourceDate: '2026-08-14',
+    sourceDate: '2026-08-19',
     sourceUrls: ['https://nte.perfectworld.com/en/article/news/gamenews/20260706/263029.html', 'https://nte.perfectworld.com/en/article/news/gamenews/20260728/263296.html'],
-    notes: '避免把 1.3 推测写成官方日期。',
+    notes: '继续保持 1.2 后半口径，不把 1.3 推测写成官方日期。',
   },
   {
     id: 'starrail-4x-fate-planning',
@@ -131,9 +131,9 @@ export const MARKET_INTEL_OPPORTUNITIES: MarketIntelOpportunity[] = [
     targetPages: ['/starrail/version', '/starrail/redeem-codes', '/starrail/guides/banner-schedule-guide'],
     actions: ['update_existing_page', 'update_code_route', 'add_internal_links'],
     status: 'done',
-    sourceDate: '2026-08-14',
+    sourceDate: '2026-08-19',
     sourceUrls: ['https://www.hoyolab.com/topicDetail/298842'],
-    notes: '适合先抽谁、Fate 联动怎么规划、队伍怎么配一组内容。',
+    notes: 'Fate、Gilgamesh、Kafka、Cyrene 继续适合做抽取与配队内容。',
   },
   {
     id: 'sea-steam-gacha-solo-faq',
@@ -145,9 +145,9 @@ export const MARKET_INTEL_OPPORTUNITIES: MarketIntelOpportunity[] = [
     targetPages: ['/sea/version', '/sea/guides/platform-download-guide', '/sea/guides/what-is-forgotten-sea'],
     actions: ['update_existing_page', 'add_faq', 'update_download_route', 'add_internal_links'],
     status: 'done',
-    sourceDate: '2026-08-14',
+    sourceDate: '2026-08-19',
     sourceUrls: ['https://sea.163.com/news/update/', 'https://store.steampowered.com/app/3633680/Sea_of_Remnants/'],
-    notes: '英文 FAQ 价值高，重点解释 release date、gacha、solo、Steam、PS5/Xbox。',
+    notes: '英文 FAQ 仍最稳，重点解释 release date、gacha、solo、Steam、PS5/Xbox。',
   },
   {
     id: 'ananta-prereg-beta-watch',
@@ -159,7 +159,7 @@ export const MARKET_INTEL_OPPORTUNITIES: MarketIntelOpportunity[] = [
     targetPages: ['/ananta/version', '/ananta/guides/preregistration-no-gacha-guide', '/ananta/guides/download-install-guide'],
     actions: ['update_existing_page', 'add_faq', 'monitor_only'],
     status: 'done',
-    sourceDate: '2026-08-14',
+    sourceDate: '2026-08-19',
     sourceUrls: ['https://www.anantagame.com/m', 'https://www.anantagame.com/news/official/'],
     notes: '保持官方未定档口径，承接预注册、玩法、PC/Steam/Xbox。',
   },
@@ -173,9 +173,9 @@ export const MARKET_INTEL_OPPORTUNITIES: MarketIntelOpportunity[] = [
     targetPages: ['/guihuan/version', '/guihuan/guides/test-release-timeline-guide', '/guihuan/guides/download-install-guide'],
     actions: ['update_existing_page', 'add_faq', 'monitor_only'],
     status: 'done',
-    sourceDate: '2026-08-14',
+    sourceDate: '2026-08-19',
     sourceUrls: ['https://gh.sarosgame.com/'],
-    notes: '事实核查型 FAQ，统一声明官方未公布正式公测日期。',
+    notes: '事实核查型 FAQ 继续有效，统一声明官方未公布正式公测日期。',
   },
 ];
 
