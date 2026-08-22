@@ -82,7 +82,7 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> 
       heading: { zh: '快速结论：先看当前祈愿、下期卡池和复刻', en: 'Quick answer: check current banner, next banner, and reruns first', ja: '要点：現在、次回、復刻バナーを先に確認' },
       points: {
         zh: ['当前角色池、下期祈愿和复刻预测要一起看。', '抽卡前先确认保底、原石预算和后续版本目标。', '如果只能覆盖一次大保底，优先保证真正补队伍缺口的角色。'],
-        en: ['Use this as a Genshin current banner, next banner, rerun, and Primogem pull-plan page, not just a schedule list.', 'Before pulling, check pity, guarantee status, remaining Luna VIII income, redeem codes, and future version targets.', 'If you only have one full guarantee, prioritize the character that fixes a real team gap before chasing weapons.'],
+        en: ['Use this as a Genshin current banner, next banner, upcoming banners, rerun, and Primogem pull-plan page.', 'Before pulling, check pity, guarantee status, remaining Luna VIII income, redeem codes, and future version targets.', 'If you only have one full guarantee, prioritize the character that fixes a real team gap before chasing weapons.'],
         ja: ['現在、次回、復刻予想を同じ場所で確認します。', '引く前に天井、保証、原石、次版本目標を確認します。', '天井一回分なら編成不足を解決するキャラを優先します。'],
       },
     },
@@ -94,13 +94,21 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> 
         ja: ['探索重視なら原神か鳴潮が向きます。', '時短とターン制ならスターレイルが安定です。', '高速アクションと都市感ならZZZが向きます。'],
       },
     },
+    'lunar-reaction-guide': {
+      heading: { zh: '快速结论：先确认月反应定位和队伍缺口', en: 'Quick answer: check Lunar reaction role, teams, and banner fit first', ja: '要点：月反応の役割、編成、バナー適性を先に確認' },
+      points: {
+        zh: ['先确认月元素和月反应是否能补当前队伍短板。', '再看 Sandrone、Nod-Krai 角色、圣遗物和伤害倍率。', '抽卡前把月反应收益和当前祈愿目标放在一起比较。'],
+        en: ['Use this as a Genshin Lunar reaction guide for Lunar element basics, reaction types, teams, and damage scaling.', 'Compare Sandrone and Nod-Krai characters with artifact needs before farming.', 'Before pulling, match Lunar reaction value against current banners and your existing roster gaps.'],
+        ja: ['月元素と月反応が現在編成の不足を補えるか確認。', 'Sandrone、Nod-Kraiキャラ、聖遺物、倍率を比較。', '引く前に月反応価値と現在バナーを並べて判断。'],
+      },
+    },
   },
   starrail: {
     'banner-schedule-guide': {
       heading: { zh: '快速结论：先看当前跃迁、下期和复刻', en: 'Quick answer: check current warp, next banner, and reruns first', ja: '要点：現在、次回、復刻を先に確認' },
       points: {
         zh: ['当前跃迁、下期复刻和 Fate/联动目标要一起规划。', '抽卡前先算星琼、大小保底和光锥风险。', '资源有限时只保一个角色目标，光锥放后面。'],
-        en: ['Use this as an HSR current banner, next warp, rerun, and Stellar Jade pull-plan page, not just a schedule list.', 'Before pulling, compare v4.4 live warps, Fate/collab targets, pity state, redeem codes, and Light Cone risk.', 'With limited resources, secure one character target first and delay Light Cones.'],
+        en: ['Use this as an HSR banner schedule, current banner, next banner, rerun, and Stellar Jade pull-plan page.', 'Before pulling, compare v4.4 live warps, Fate/collab targets, pity state, redeem codes, and Light Cone risk.', 'With limited resources, secure one character target first and delay Light Cones.'],
         ja: ['現在跳躍、次回、復刻、Fate/コラボ目標を一緒に計画します。', '星玉、保証、光円錐リスクを先に計算します。', '資源が少ない時はキャラ一人を優先します。'],
       },
     },
@@ -118,7 +126,7 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> 
       heading: { zh: '快速结论：先看当前卡池、下期和复刻', en: 'Quick answer: check current banner, next banner, and reruns first', ja: '要点：現在、次回、復刻を先に確認' },
       points: {
         zh: ['当前 UP、下期目标和复刻预测要一起看。', '角色池和武器池保底分开计算。', '星声紧张时先保角色，再追武器。'],
-        en: ['Use this as a WuWa current banner, next banner, rerun, and Astrite pull-plan page, not just a schedule list.', 'Compare v3.5 rate-ups, next targets, rerun timing, redeem codes, and version income together.', 'Track character pity and weapon pity separately; if Astrite is tight, secure the character before chasing weapons.'],
+        en: ['Use this as a WuWa next banner, current banner, upcoming banners, rerun, and Astrite pull-plan page.', 'Compare v3.5 rate-ups, next targets, rerun timing, redeem codes, and version income together.', 'Track character pity and weapon pity separately; if Astrite is tight, secure the character before chasing weapons.'],
         ja: ['現在UP、次回目標、復刻予想を一緒に確認。', 'キャラ天井と武器天井は分けて計算。', '星声が少ない時はキャラ優先。'],
       },
     },
@@ -185,6 +193,18 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
       { href: '/genshin/guides/luna-viii-sandrone-guide', label: { zh: 'Luna VIII 专题', en: 'Luna VIII guide', ja: 'Luna VIII特集' }, description: { zh: '继续看版本、角色和活动路线。', en: 'Continue into version, character, and event routing.', ja: '版本、キャラ、イベントへ。' } },
       { href: '/genshin/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '抽卡前先补资源。', en: 'Claim resources before pulling.', ja: 'ガチャ前に資源を回収。' } },
     ],
+    'snezhnaya-version-guide': [
+      { href: '/genshin/guides/lunar-reaction-guide', label: { zh: '月反应指南', en: 'Lunar reaction guide', ja: '月反応ガイド' }, description: { zh: '把 Nod-Krai 角色、月元素和队伍机制接起来。', en: 'Connect Nod-Krai characters, Lunar element rules, and team value.', ja: 'Nod-Kraiキャラ、月元素、編成価値を接続。' } },
+      { href: '/genshin/guides/banner-schedule-guide', label: { zh: '当前祈愿', en: 'Current banners', ja: '現在バナー' }, description: { zh: '继续看 Sandrone、复刻和原石规划。', en: 'Check Sandrone, reruns, and Primogem planning next.', ja: 'Sandrone、復刻、原石計画を確認。' } },
+    ],
+    'lunar-reaction-guide': [
+      { href: '/genshin/guides/snezhnaya-version-guide', label: { zh: 'Nod-Krai 版本', en: 'Nod-Krai version', ja: 'Nod-Krai版本' }, description: { zh: '回到版本路线看角色、地图和活动。', en: 'Return to the version route for characters, map, and events.', ja: 'キャラ、地図、イベントへ戻る。' } },
+      { href: '/genshin/build', label: { zh: '角色配装', en: 'Build routes', ja: 'ビルド' }, description: { zh: '按月反应收益继续看武器、圣遗物和词条。', en: 'Turn Lunar reaction value into weapon, artifact, and stat choices.', ja: '月反応価値を武器、聖遺物、ステータスへ。' } },
+    ],
+    'boss-strategy-guide': [
+      { href: '/genshin/items', label: { zh: '材料图鉴', en: 'Material database', ja: '素材図鑑' }, description: { zh: '按周本和世界 Boss 继续查突破材料。', en: 'Use boss drops to plan ascension and talent materials.', ja: 'ボス素材で突破と天賦を計画。' } },
+      { href: '/genshin/build', label: { zh: '角色配装', en: 'Build routes', ja: 'ビルド' }, description: { zh: '按 Boss 弱点选择主 C、护盾、治疗和元素反应。', en: 'Match DPS, shields, healing, and reactions to boss weaknesses.', ja: '弱点に合わせてDPS、盾、回復、反応を選択。' } },
+    ],
   },
   starrail: {
     'banner-schedule-guide': [
@@ -194,6 +214,14 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
     'fate-collab-guide': [
       { href: '/starrail/guides/banner-schedule-guide', label: { zh: '当前跃迁', en: 'Current warps', ja: '現在跳躍' }, description: { zh: '回到 v4.4 当前卡池算预算。', en: 'Return to v4.4 banners for budget checks.', ja: 'v4.4バナーで予算確認。' } },
       { href: '/starrail/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '补齐联动前资源。', en: 'Top up resources before collab pulls.', ja: 'コラボ前に資源補充。' } },
+    ],
+    'cross-game-comparison-guide': [
+      { href: '/starrail/guides/banner-schedule-guide', label: { zh: '崩铁当前跃迁', en: 'HSR current banners', ja: 'HSR現在跳躍' }, description: { zh: '如果你偏回合和低日常压力，继续看星琼预算。', en: 'If HSR fits your time budget, check live warps and Jade planning.', ja: 'HSRが合うなら現在跳躍と星玉計画へ。' } },
+      { href: '/zzz/teams', label: { zh: 'ZZZ 配队工具', en: 'ZZZ team builder', ja: 'ZZZ編成ツール' }, description: { zh: '如果你偏快节奏动作，先看队伍和代理人协同。', en: 'If ZZZ fits your action preference, compare teams and agent synergy.', ja: 'ZZZなら編成と代理人相性を確認。' } },
+    ],
+    'farming-route-guide': [
+      { href: '/starrail/guides/banner-schedule-guide', label: { zh: '当前跃迁', en: 'Current banners', ja: '現在跳躍' }, description: { zh: '按当前目标决定体力给谁。', en: 'Use live targets to decide who gets Trailblaze Power.', ja: '現在目標で開拓力配分を判断。' } },
+      { href: '/starrail/guides/relic-guide', label: { zh: '遗器攻略', en: 'Relic guide', ja: '遺物攻略' }, description: { zh: '材料瓶颈解决后再刷遗器。', en: 'Farm relics after core material bottlenecks are clear.', ja: '素材後に遺物へ。' } },
     ],
   },
   wuwa: {
@@ -213,7 +241,7 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
   zzz: {
     'banner-schedule-guide': [
       { href: '/zzz/version', label: { zh: 'v3.1 专题', en: 'v3.1 hub', ja: 'v3.1特集' }, description: { zh: '当前代理人、奖励和平台入口。', en: 'Current agents, rewards, and platform routes.', ja: '現在代理人、報酬、平台。' } },
-      { href: '/zzz/guides/w-engine-guide', label: { zh: '音擎指南', en: 'W-Engine guide', ja: '音動機攻略' }, description: { zh: '抽到代理人后再看。', en: 'Open after securing the agent.', ja: '代理人確保後に確認。' } },
+      { href: '/zzz/teams', label: { zh: '配队模拟器', en: 'ZZZ team builder', ja: 'ZZZ編成ツール' }, description: { zh: '抽前先看当前代理人能进哪些队伍。', en: 'Check best teams and agent synergy before pulling.', ja: '引く前に編成相性を確認。' } },
     ],
     'v3-0-version-guide': [
       { href: '/zzz/guides/banner-schedule-guide', label: { zh: '当前卡池', en: 'Current banners', ja: '現在バナー' }, description: { zh: '先看 3.1 当前代理人、复刻和菲林规划。', en: 'Check live v3.1 agents, reruns, and Polychrome planning.', ja: 'v3.1代理人、復刻、菲林計画を確認。' } },
@@ -225,7 +253,7 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
     ],
     'build-jane-doe': [
       { href: '/zzz/guides/banner-schedule-guide', label: { zh: '当前卡池', en: 'Current banners', ja: '現在バナー' }, description: { zh: '先确认简·杜相关卡池和菲林预算。', en: 'Check Jane Doe banner context and Polychrome budget first.', ja: 'Jane Doeバナーと菲林予算を確認。' } },
-      { href: '/zzz/guides/w-engine-guide', label: { zh: '音擎替代', en: 'W-Engine alternatives', ja: '音擎代替' }, description: { zh: '专属前先看 A 级替代和音擎保底。', en: 'Review A-Rank alternatives and W-Engine pity before signatures.', ja: '餅武器前にAランク代替と天井を確認。' } },
+      { href: '/zzz/teams', label: { zh: '简·杜配队', en: 'Jane Doe teams', ja: 'Jane Doe編成' }, description: { zh: '配装前先确认异常队和当前队伍缺口。', en: 'Check Anomaly teams and roster gaps before finishing the build.', ja: '異常編成と不足枠を確認。' } },
     ],
     'steam-3-0-start-guide': [
       { href: '/zzz/version', label: { zh: 'v3.1 当前专题', en: 'Live v3.1 hub', ja: 'v3.1特集' }, description: { zh: '先走当前版本入口。', en: 'Start from the current version route.', ja: '現在版本から開始。' } },
@@ -233,17 +261,29 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
     ],
     'w-engine-guide': [
       { href: '/zzz/guides/banner-schedule-guide', label: { zh: '当前卡池', en: 'Current banners', ja: '現在バナー' }, description: { zh: '先确认代理人是否到手。', en: 'Check whether the agent is secured.', ja: '代理人確保を確認。' } },
-      { href: '/zzz/guides/drive-disc-guide', label: { zh: '驱动盘', en: 'Drive Discs', ja: 'ドライブ' }, description: { zh: '武器和装备一起看。', en: 'Read weapons with gear.', ja: '武器と装備を一緒に。' } },
+      { href: '/zzz/teams', label: { zh: '配队模拟器', en: 'Team builder', ja: '編成ツール' }, description: { zh: '按队伍定位决定是否追专属音擎。', en: 'Use team role and synergy before chasing signatures.', ja: '編成役割で餅武器優先度を判断。' } },
     ],
     'drive-disc-guide': [
       { href: '/zzz/guides/w-engine-guide', label: { zh: '音擎指南', en: 'W-Engine guide', ja: '音動機攻略' }, description: { zh: '配装和武器一起看。', en: 'Read gear and weapons together.', ja: '装備と武器を一緒に。' } },
       { href: '/zzz/guides/banner-schedule-guide', label: { zh: '当前卡池', en: 'Current banners', ja: '現在バナー' }, description: { zh: '按当前代理人决定刷取。', en: 'Farm around current agents.', ja: '現在代理人で厳選判断。' } },
+    ],
+    'farming-route-guide': [
+      { href: '/zzz/teams', label: { zh: '配队模拟器', en: 'ZZZ team builder', ja: 'ZZZ編成ツール' }, description: { zh: '按队伍缺口决定体力优先级。', en: 'Use team gaps to decide Battery Charge priority.', ja: '編成不足でスタミナ優先度を判断。' } },
+      { href: '/zzz/guides/drive-disc-guide', label: { zh: '驱动盘刷取', en: 'Drive Disc farming', ja: 'ドライブ厳選' }, description: { zh: '材料刷完后再进入驱动盘路线。', en: 'Move into Drive Discs after core materials.', ja: '素材後にドライブへ。' } },
     ],
   },
   nte: {
     'photo-mode-guide': [
       { href: '/nte/version', label: { zh: '版本专题', en: 'Version hub', ja: '版本特集' }, description: { zh: '回到 v1.2 当前内容。', en: 'Return to current v1.2 content.', ja: 'v1.2内容へ戻る。' } },
       { href: '/nte/map', label: { zh: '地图', en: 'Map', ja: 'マップ' }, description: { zh: '找城市区域和拍照点。', en: 'Find city zones and photo spots.', ja: '都市区域と撮影地へ。' } },
+    ],
+    'damage-formula': [
+      { href: '/nte/guides/talent-priority', label: { zh: '技能升级顺序', en: 'Talent priority', ja: 'スキル優先度' }, description: { zh: '算完伤害后决定先升哪些技能。', en: 'After checking damage, decide which skills to level first.', ja: 'ダメージ確認後にスキル優先度へ。' } },
+      { href: '/nte/build', label: { zh: '角色配装', en: 'Build routes', ja: 'ビルド' }, description: { zh: '把公式、弧盘、武器和属性词条接起来。', en: 'Connect formula, disks, weapons, and stat priorities.', ja: '式、弧盤、武器、ステータスを接続。' } },
+    ],
+    'talent-priority': [
+      { href: '/nte/guides/damage-formula', label: { zh: '伤害公式', en: 'Damage formula', ja: 'ダメージ式' }, description: { zh: '先看倍率、暴击、防御和抗性怎么影响收益。', en: 'Check multipliers, crit, defense, and resistance impact.', ja: '倍率、会心、防御、耐性を確認。' } },
+      { href: '/nte/items', label: { zh: '材料图鉴', en: 'Material database', ja: '素材図鑑' }, description: { zh: '按技能优先级继续查材料来源。', en: 'Use the upgrade order to plan material farming.', ja: '優先度に合わせて素材を確認。' } },
     ],
   },
   sea: {

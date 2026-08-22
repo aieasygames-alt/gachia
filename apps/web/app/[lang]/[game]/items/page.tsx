@@ -8,7 +8,7 @@ import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
 const BASE_URL = 'https://gachia.com';
 
 const ITEM_DESC: Record<string, Record<string, string>> = {
-  genshin: { zh: '原神全材料图鉴，覆盖角色突破材料、天赋书、Boss掉落、区域特产和日常刷取路线，帮助你快速定位每个角色的培养来源。', en: 'Complete Genshin Impact material list with ascension materials, talent books, boss drops, local specialties, and farming sources to help you plan character upgrades.', ja: '原神全素材図鑑。キャラ突破素材、天賦本、ボスドロップ、地域特産品、周回場所をまとめて確認できます。' },
+  genshin: { zh: '原神全材料图鉴，覆盖角色突破材料、天赋书、Boss掉落、区域特产和日常刷取路线，帮助你快速定位每个角色的培养来源。', en: 'Genshin Impact materials wiki with ascension materials, talent books, weekly boss drops, local specialties, enemy drops, locations, and farming routes for character upgrades.', ja: '原神全素材図鑑。キャラ突破素材、天賦本、ボスドロップ、地域特産品、周回場所をまとめて確認できます。' },
   starrail: { zh: '崩坏：星穹铁道全材料图鉴，覆盖角色突破材料、行迹材料、Boss掉落和刷取来源，方便你按角色或用途快速查找所需素材。', en: 'Complete Honkai: Star Rail material list with ascension materials, trace materials, boss drops, and farming sources organized for quick character planning.', ja: 'スターレイル全素材図鑑。キャラ突破素材、軌跡素材、ボスドロップ、周回先を整理して確認できます。' },
   wuwa: { zh: '鸣潮全材料图鉴，整理技能材料、Boss材料、区域特产和养成来源，适合在培养角色前先看清每种素材该去哪里刷。', en: 'Complete Wuthering Waves material list with skill materials, boss materials, local specialties, and farming routes so you can prep upgrades efficiently.', ja: '鳴潮全素材図鑑。スキル素材、ボス素材、地域特産品、周回ルートを整理して案内します。' },
   nte: { zh: '异环全材料图鉴，覆盖突破材料、Boss掉落、技能手册和养成来源，方便你按角色、阶段或用途快速整理资源。', en: 'Complete Neverness to Everness material list with ascension materials, boss drops, skill manuals, and farming sources for efficient progression planning.', ja: '異環全素材図鑑。昇格素材、ボスドロップ、スキルマニュアル、周回先を整理しています。' },
@@ -69,7 +69,7 @@ const ENDFIELD_ITEM_NEXT_STEPS: NextStepLink[] = [
 const ITEM_INTRO: Record<string, Record<SupportedLocale, string>> = {
   genshin: {
     zh: '按突破材料、天赋书、Boss 掉落和区域特产快速浏览原神材料图鉴，适合在养角色前先看来源与刷取路线。',
-    en: 'Browse the Genshin Impact material wiki by ascension items, talent books, boss drops, and specialties to review sources and farming routes before upgrading.',
+    en: 'Browse the Genshin Impact materials wiki by ascension items, talent books, weekly boss drops, local specialties, enemy drops, locations, and farming routes before upgrading characters.',
     ja: '突破素材、天賦本、ボスドロップ、地域特産品で原神素材図鑑を確認し、入手先と周回ルートを把握できます。',
   },
   starrail: {
@@ -138,7 +138,13 @@ export async function generateMetadata({
   const desc = ITEM_DESC[gameId]?.[locale] ?? `${gameName} ${categoryLabel} database with farming sources, upgrade materials, and drop locations`;
   const intro = ITEM_INTRO[gameId]?.[locale];
 
-  const title = gameId === 'zzz'
+  const title = gameId === 'genshin'
+    ? locale === 'zh'
+      ? '原神材料图鉴 — 突破材料、天赋书、Boss掉落与刷取路线'
+      : locale === 'ja'
+        ? '原神素材図鑑 — 突破素材、天賦本、ボス素材、周回'
+        : 'Genshin Materials Wiki — Talent Books, Boss Drops & Farming Routes'
+    : gameId === 'zzz'
     ? locale === 'zh'
       ? '绝区零材料图鉴 Wiki — 代理人突破、技能材料与刷取来源'
       : locale === 'ja'

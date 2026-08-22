@@ -752,10 +752,10 @@
     "category": "combat",
     "categoryZh": "战斗",
     "categoryEn": "Combat",
-    "updatedAt": "2026-08-10",
-    "currentVersion": "1.0",
+    "updatedAt": "2026-08-22",
+    "currentVersion": "NTE v1.2 damage formula and build-stat route",
     "summary": "深入解析异环的伤害计算公式，了解各属性如何影响最终伤害，帮助你优化角色装备和配队。",
-    "summaryEn": "Neverness to Everness damage formula guide explaining damage calculation, ATK scaling, crit ratio, elemental bonuses, defense, resistance, multipliers, and stat priority for better builds.",
+    "summaryEn": "Neverness to Everness damage formula and calculator-style guide explaining ATK scaling, skill multipliers, crit ratio, elemental bonuses, defense, resistance, stat priority, and build decisions.",
     "content": "理解伤害计算公式是优化角色输出的基础。本指南详细解析异环的伤害计算机制，帮助你理解每个属性的实际价值。\n\n## 基础伤害公式\n\n最终伤害 = 基础攻击力 × (1 + 攻击力百分比加成) × 技能倍率 × 增伤区 × 暴击区 × 反应区 × 防御区 × 抗性区\n\n这个公式看起来复杂，但拆解开来每个部分都很容易理解。关键在于理解每个乘区之间的乘法关系——这意味着均匀提升各乘区的收益高于集中提升单一乘区。\n\n## 各乘区详解\n\n### 攻击力区\n由角色基础攻击力和武器基础攻击力之和，加上百分比攻击力加成计算。攻击力百分比加成来源于装备、武器特效和队伍增益。注意基础攻击力是整个乘区的基础，武器等级直接影响这个数值。\n\n### 增伤区\n包含元素伤害加成、武器特效增伤、队伍增益等。这个乘区是提升伤害最有效的途径之一，元素伤害杯提供的46.6%加成就属于这个乘区。\n\n### 暴击区\n暴击时伤害 × (1 + 暴击伤害)，不暴击时为 ×1。期望暴击收益 = 1 + 暴击率 × 暴击伤害。当暴击率与暴击伤害比例为1:2时，期望收益最大化。\n\n### 反应区\n元素反应带来的伤害增幅。增幅反应（蒸发、融化）直接乘以基础伤害，倍率取决于触发顺序和元素精通。元素精通越高，反应增幅越大。\n\n### 防御区\n敌人的防御力会降低受到的伤害。超导等反应可以降低敌人物理防御。防御区的计算涉及角色等级和敌人等级的对比，等级差越大影响越明显。\n\n### 抗性区\n敌人的元素抗性会进一步降低伤害。通过减抗手段（如风元素扩散、特定角色技能）可以提升这个乘区。当敌人抗性被降低到0以下时，收益会减半但仍然有正面效果。\n\n## 属性优先级推导\n\n根据公式可以推导出各属性的优先级：在基础攻击力足够的前提下，增伤区和暴击区的提升通常收益最高。这就是为什么元素伤害杯和暴击头冠是大多数输出角色的标配。\n\n元素精通对依赖反应的角色非常重要。如果你的输出主要来自反应伤害，元素精通的价值可能超过攻击力百分比。\n\n## 实际应用\n\n理解公式后，你可以更科学地选择装备和配队。例如：如果你的增伤区已经很高（大量增伤buff），再增加增伤的收益会递减，这时提升暴击或攻击力可能更有效。\n\n常见误区：不要只追求单一属性的极致。均匀提升各乘区的属性配置，实际输出往往比偏科配置更高。\n\n## 元素精通的价值\n元素精通影响反应伤害的增幅比例。对于依赖增幅反应（蒸发、融化）输出的角色，元素精通是重要属性。但元素精通只影响反应伤害，不影响基础攻击伤害。\n\n如果你的角色主要通过普通攻击和技能造成伤害（不依赖反应），元素精通的价值很低。相反，如果你的输出循环中大量触发反应，元素精通可能是比攻击力更高效的属性。\n\n## 防御和抗性减伤\n敌人防御力减伤 = 防御力 / (防御力 + K × (1 - 忽略防御比例))。K是一个常数，通常为923（80级敌人）。这意味着角色等级越高，穿透敌人防御的效果越好。\n\n抗性减伤相对简单：当抗性大于0时，减伤比例等于抗性值；当抗性小于0时，减半计算。通过减抗手段将敌人抗性降低到负值仍然有收益，只是效率减半。\n\n## 暴击率与暴击伤害平衡\n理论最优的暴击率:暴击伤害比例为1:2。例如50%暴击率配合100%暴击伤害，或70%暴击率配合140%暴击伤害。实际操作中不需要精确达到这个比例，接近即可。\n\n注意暴击率的实际价值有一个软上限：超过80%后继续堆暴击率的收益递减（因为大部分攻击已经能暴击了）。在暴击率达到70-80%后，应该将资源转向暴击伤害或其他属性。理解伤害公式的最终目的是帮助你做出更明智的装备选择和配队决策。当你面对一个攻击力沙漏和一个元素精通沙漏犹豫不决时，公式告诉你应该根据角色是依赖直伤还是反应伤害来选择。这种基于数据的决策比盲目追求某个属性更科学。\n\n建议保存一份简化的公式速查表，方便在游戏中快速参考。",
     "contentEn": "## Damage Calculation Formula Explained\n\n### Fast answer\n\nFor most NTE builds, damage starts with **ATK x skill multiplier**, then changes through crit, elemental bonuses, defense, resistance, and final multipliers. Use this guide with [/nte/build](/nte/build), [/nte/weapons](/nte/weapons), and [/nte/guides/boss-guide-comprehensive](/nte/guides/boss-guide-comprehensive) before locking a full build.\n\nUnderstanding how damage is calculated in Neverness to Everness helps you optimize your builds and maximize DPS output. This guide breaks down every component of the damage formula.\n\n## Base Damage\n\nBase damage starts with your character's attack stat multiplied by the skill's scaling ratio. The formula is: Base Damage = ATK x Skill Multiplier. Both ATK and skill levels affect this base value, making them your primary scaling targets.\n\n## Critical Hits\n\nCritical hits multiply damage by your Crit Damage (CD) percentage. The chance to crit is determined by your Crit Rate (CR) stat. The optimal CR:CD ratio is generally 1:2, meaning if you have 50% Crit Rate, you want at least 100% Crit Damage. Consistency from balanced crit stats typically outperforms excessive investment in one stat.\n\n## Elemental Damage Bonus\n\nElemental damage bonuses from disks and weapon passives are additive with other damage bonuses but multiplicative with base damage. This makes elemental damage cups one of your highest priority equipment pieces. A 46.6% elemental damage bonus on your main stat disk provides a significant damage increase.\n\n## Defense and Resistance\n\nEnemy defense reduces incoming damage based on the level difference between your character and the enemy. Resistance further reduces damage by a percentage. Certain debuffs and superconduct reactions can lower enemy defense and resistance, dramatically increasing effective damage.\n\n## Reaction Damage\n\nElemental reactions have separate scaling that ignores normal attack modifiers but scales with character level and elemental mastery. Transformative reactions like overloaded deal fixed damage, while amplifying reactions like vaporize multiply the triggering hit's damage. Understanding which reactions your team triggers helps you build the right stats.\n\n## Final Damage Formula\n\nTotal Damage = (Base Damage x Skill Multiplier x Damage Bonuses) x (1 + CR x CD) x Enemy Defense Multiplier x Enemy Resistance Multiplier x Reaction Multiplier. Optimize each layer for compounding damage gains.",
     "tags": [
@@ -794,15 +794,15 @@
       "ja": "NTEダメージ計算式：会心、防御、耐性、倍率"
     },
     "serpDescription": {
-      "en": "Learn the NTE damage formula with ATK scaling, skill multipliers, Crit Rate/Crit DMG, elemental bonuses, defense, resistance, and build stat priority.",
+      "en": "Use the NTE damage formula with ATK scaling, skill multipliers, Crit Rate/Crit DMG, elemental bonuses, defense, resistance, stat priority, and build checks.",
       "zh": "解析异环伤害公式，覆盖攻击倍率、技能倍率、暴击率/暴击伤害、元素加成、防御、抗性和配装属性优先级。",
       "ja": "NTEのダメージ計算式、攻撃倍率、会心率/会心ダメ、防御、耐性、属性優先度を確認。"
     },
     "quickFacts": {
       "en": [
+        "Built for NTE damage formula, damage calculation, crit ratio, DEF, resistance, and build-stat searches.",
         "Start with ATK x skill multiplier, then apply crit, elemental bonuses, defense, and resistance.",
-        "Balanced Crit Rate and Crit DMG usually beats stacking one crit stat only.",
-        "Use the formula with character builds, disks, weapons, and boss resistance checks."
+        "Use the formula with talent priority, character builds, disks, weapons, and boss resistance checks."
       ],
       "zh": [
         "先用攻击力 x 技能倍率算基础伤害，再叠加暴击、元素加成、防御和抗性。",
@@ -952,12 +952,12 @@
   {
     "id": "talent-priority",
     "title": "全角色天赋优先级",
-    "titleEn": "NTE Talent Priority — Which Skills to Level First",
+    "titleEn": "NTE Talent Priority Guide: Best Skills to Level First for Every Role",
     "category": "advanced",
     "categoryZh": "进阶",
     "categoryEn": "Advanced",
     "summary": "异环全角色天赋升级优先级指南，帮你合理分配技能材料，最大化角色强度提升。",
-    "summaryEn": "Complete talent upgrade priority guide for all characters in Neverness to Everness, with material planning and cost-efficient leveling strategies.",
+    "summaryEn": "Neverness to Everness talent priority guide for which skills to level first, role-based upgrade order, material planning, cost-efficient breakpoints, and build routing for DPS, support, and survival characters.",
     "content": "天赋（技能）升级是角色培养的重要组成部分。不同角色的天赋优先级不同，合理的升级顺序可以最大化资源利用效率。\n\n## 天赋系统基础\n\n每个角色通常有三个核心天赋可以升级：普攻/重击、元素战技、元素爆发。天赋等级从1级到10级（部分角色通过命座可以突破到13级或15级）。\n\n天赋升级消耗的技能书和金币随等级递增。从6级开始消耗的高级材料获取难度较大，因此合理规划升级顺序很重要。\n\n## 通用优先级规则\n\n### 输出角色\n主力输出角色的天赋升级优先级通常为：元素爆发（大招） > 元素战技（E技能） > 普攻。这是因为大部分输出角色的主要伤害来源是技能和大招。但部分以普攻为主要输出手段的角色例外。\n\n### 辅助角色\n辅助角色的天赋升级侧重于提供增益效果的技能。优先升级增益数值受技能等级影响的技能。如果辅助角色的技能等级不影响增益效果，可以将资源节省下来。\n\n### 治疗角色\n治疗角色的治疗量通常与技能等级挂钩。优先升级主要治疗技能确保治疗量足够。其他天赋可以延后升级。\n\n## 特殊情况\n\n### 命座影响天赋优先级\n部分角色在特定命座解锁后，某个天赋的重要性会大幅提升。例如某角色2命解锁了关键效果，那么这个技能的升级优先级应该提高。\n\n### 双形态角色\n拥有多种战斗形态的角色，需要根据主要使用的形态来决定天赋优先级。集中升级主形态的技能比平均升级所有技能更有效。\n\n## 升级材料规划\n\n### 前期（1-6级）\n材料消耗较少，建议将主力角色的核心天赋升到6级。这个阶段的升级性价比最高。\n\n### 中期（6-8级）\n材料消耗增加，建议只升级主力角色的核心天赋到8级。辅助角色的关键技能可以升到6级。\n\n### 后期（8-10级）\n材料获取难度大，建议只为绝对核心的天赋投入。一个10级天赋的提升可能不如用同样的材料将多个角色升到6级。\n\n## 材料获取效率\n\n天赋材料副本有日期限制，不同日期掉落不同类型的技能书。建议在对应日期集中刷取需要的材料。利用双倍掉落活动可以大幅提升材料获取效率。\n\n提前规划好要培养角色的天赋材料需求，在副本开放日集中刷取。避免出现需要升级天赋时发现材料不够、副本又不开放的情况。\n\n## 常见误区\n\n新手常犯的错误是平均升级所有天赋。一个角色的三个天赋全升到4级，不如核心天赋升到8级效果明显。集中资源升级关键天赋是更明智的选择。\n\n另一个误区是忽视普攻升级。虽然大部分输出角色的主要伤害来自技能，但部分角色的普攻在输出循环中占很大比例，忽视普攻升级会损失不少伤害。\n\n## 各元素角色天赋特点\n不同元素角色的天赋设计有各自特点。火元素角色通常侧重伤害输出，大招和战技的升级优先级高；水元素角色可能在辅助和输出间切换，需要根据定位调整优先级；冰元素角色的控制效果是否受技能等级影响是关键判断依据。\n\n## 天赋书类型与副本对应\n天赋升级需要的技能书分为多种类型，每种类型对应不同的副本。建议提前查看角色培养界面确认需要的技能书类型，在副本开放日集中刷取。不同国家/区域的角色通常需要不同类型的技能书。\n\n## 资源回收与重新分配\n如果你发现某个角色的天赋升级方向不对（例如把辅助角色当输出培养了），不用太过担心。天赋升级消耗的材料无法回收，但后续调整培养方向并不困难。关键是及时发现问题并调整策略，避免继续在错误的方向上浪费资源。\n\n## 升级时机建议\n天赋升级的时机也很重要。建议在角色等级达到当前突破上限后再开始投入天赋升级材料。低等级角色的天赋升级收益不如等级提升明显，等到角色基础属性达标后再升级天赋可以获得更好的整体效果。\n\n## 天赋等级对战斗的影响\n天赋等级每提升一级，技能的伤害倍率或增益数值大约提升5-8%。虽然单级提升不大，但累计10级的提升非常可观。核心天赋从1级升到10级大约可以提升50-80%的效果，这是不容忽视的战力提升。\n\n## 培养完成标准\n一个角色的天赋培养到什么程度算完成？一般标准是：核心天赋8级，次要天赋6级。如果你想追求极致，核心天赋可以升到10级甚至更高，但8级之后每级的材料消耗急剧增加，性价比下降。",
     "contentEn": "## Complete Talent Priority Guide\n\nLeveling talents in the correct order maximizes your character's effectiveness while conserving valuable materials. This guide covers the recommended talent upgrade priority for every character in Neverness to Everness.\n\n## Understanding Talent Materials\n\nEach talent requires specific materials from skill domains that rotate daily. Plan your farming schedule around which domains are available each day. Higher talent levels require significantly more materials, making priority decisions important for resource efficiency. Crown-level upgrades (level 10) require rare weekly boss materials and should only be used on your most important talents.\n\n## DPS Character Priority\n\nFor main DPS characters, follow this general priority: Normal Attack (or primary damage skill) first, then Elemental Skill, then Elemental Burst. The specific order may vary based on which skill contributes the highest percentage of total damage output. Check each character's damage breakdown to determine their optimal priority.\n\n## Support Character Priority\n\nSupports should prioritize their utility skills first. For healers, level the healing skill before anything else. For damage buffers, level the buffing skill that provides the largest team-wide increase. Support normal attacks are typically the lowest priority since these characters spend most of their time off-field.\n\n## Sub-DPS Priority\n\nSub-DPS characters should focus on their off-field damage skills first. If their elemental burst lingers after switching characters, prioritize that. The goal is to maximize damage dealt while the sub-DPS is not your active character.\n\n## General Rules\n\n- Always level a talent to at least level 6 before moving to the next one\n- Level 8 is the sweet spot for cost-effectiveness on most talents\n- Save crowns for your main DPS's primary damage talent\n- Don't neglect elemental burst on supports — many provide team buffs tied to burst level\n- Check talent multipliers at each level to find the biggest damage jump points\n\n## Material Planning\n\nTrack your talent material needs across all characters you are building. Use the domain schedule to plan efficient farming routes that cover multiple characters' materials on the same day. This prevents wasted stamina from last-minute farming when you need materials urgently.",
     "tags": [
@@ -988,7 +988,22 @@
         "answer": "Focus on one core talent at a time. Leveling one talent to 8 provides more value than leveling three talents to 4. Get your core damage skill to 6 first, then push it to 8 before investing in secondary talents.",
         "answerZh": "建议集中升级一个核心天赋。一个天赋升到8级的效果比三个天赋都升到4级要好得多。先把核心输出技能升到6级，然后推到8级，再考虑次要天赋。"
       }
-    ]
+    ],
+    "serpTitle": {
+      "en": "NTE Talent Priority Guide: Best Skills to Level First"
+    },
+    "serpDescription": {
+      "en": "Plan NTE talent priority by role, DPS/support needs, skill upgrade order, material cost, breakpoints, builds, disks, weapons, and current character goals."
+    },
+    "quickFacts": {
+      "en": [
+        "Built for NTE talent priority, skill priority, skill leveling, and material planning searches.",
+        "Level core damage or support-scaling skills first; delay low-impact utility upgrades until materials are safe.",
+        "Read with character builds, damage formula, disks, weapons, and farming routes before spending rare materials."
+      ]
+    },
+    "updatedAt": "2026-08-22",
+    "currentVersion": "NTE v1.2 talent and material planning route"
   },
   {
     "id": "anomaly-dungeon",

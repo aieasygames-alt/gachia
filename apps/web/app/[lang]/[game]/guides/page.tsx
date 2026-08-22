@@ -8,9 +8,9 @@ import { buildLocalizedAlternates, ensureMetaLength, getEntryCurrentVersion, get
 const BASE_URL = 'https://gachia.com';
 
 const GUIDE_DESC: Record<string, Record<string, string>> = {
-  genshin: { zh: '原神攻略百科，覆盖新手开荒、角色培养、配队推荐、深渊挑战、版本专题与热点攻略，帮助你快速找到当前版本最实用的下一步。', en: 'Genshin Impact guides covering beginner tips, character builds, team comps, Abyss strategies, version hubs, and practical walkthroughs so you can jump to the right next page faster.', ja: '原神攻略百科。初心者向け、キャラ育成、編成、深境螺旋、版本特集までまとめて、今知りたい攻略へすぐ進めます。' },
+  genshin: { zh: '原神攻略百科，覆盖新手开荒、角色培养、配队推荐、深渊挑战、版本专题与热点攻略，帮助你快速找到当前版本最实用的下一步。', en: 'Genshin Impact guides for current banners, Luna VIII/Nod-Krai, Lunar reactions, character builds, teams, materials, boss strategies, codes, and Primogem planning.', ja: '原神攻略百科。初心者向け、キャラ育成、編成、深境螺旋、版本特集までまとめて、今知りたい攻略へすぐ進めます。' },
   starrail: { zh: '崩坏：星穹铁道攻略百科，涵盖新手指南、角色培养、配队思路、忘却之庭、虚构叙事和版本热点，让你更快进入可执行的攻略页面。', en: 'Honkai: Star Rail guides covering beginner tips, character builds, team recommendations, endgame modes, version hubs, and practical next steps for fast progress.', ja: 'スターレイル攻略百科。初心者ガイド、キャラ育成、編成、忘却の庭、虚構叙事、版本トピックをまとめて案内します。' },
-  wuwa: { zh: '鸣潮攻略百科，收录新手开荒、角色培养、声骸搭配、版本专题和实战攻略，方便你从首页直接进入最需要的养成或战斗内容。', en: 'Wuthering Waves guides covering beginner routes, character builds, echo setups, version hubs, and combat breakdowns so you can move from overview to action.', ja: '鳴潮攻略百科。初心者ルート、キャラ育成、エコー構成、版本特集、実戦攻略をまとめて、必要な導線へつなぎます。' },
+  wuwa: { zh: '鸣潮攻略百科，收录新手开荒、角色培养、声骸搭配、版本专题和实战攻略，方便你从首页直接进入最需要的养成或战斗内容。', en: 'Wuthering Waves guides for next banner, current banner, v3.5 pulls, character builds, Echo sets, Waveplate farming, materials, codes, and combat routes.', ja: '鳴潮攻略百科。初心者ルート、キャラ育成、エコー構成、版本特集、実戦攻略をまとめて、必要な導線へつなぎます。' },
   nte: { zh: '异环攻略百科，包含下载安装、新手指南、角色培养、Boss 攻略、伤害公式、弧盘推荐和版本专题，帮助你快速了解当前版本最值得关注的内容。', en: 'Neverness to Everness guides with download/install help, beginner tips, character builds, boss guides, damage formulas, arc recommendations, and version hubs focused on the current patch.', ja: '異環攻略百科。DL/インストール、初心者ガイド、キャラ育成、ボス攻略、ダメージ計算、弧盤、版本特集を整理して案内します。' },
   zzz: { zh: '绝区零攻略百科，覆盖新手指引、代理人培养、音擎搭配、驱动盘思路、版本专题与高阶攻略，适合先看总览再进入细分页面。', en: 'Zenless Zone Zero guides covering beginner tips, agent builds, W-Engine choices, drive disc setups, version hubs, and endgame advice in one place.', ja: 'ゼンレスゾーンゼロ攻略百科。初心者ガイド、エージェント育成、Wエンジン、ディスク、版本特集、高難度攻略をまとめています。' },
   guihuan: { zh: '归环攻略百科，整理新手开荒、使灵培养、武器推荐、版本专题与实战思路，方便你按内容类型快速找到下一步该看什么。', en: 'Guihuan guides with beginner routes, spirit builds, weapon recommendations, version hubs, and practical combat notes that help you choose the best next page.', ja: '帰環攻略百科。初心者ルート、使霊育成、武器、版本特集、実戦メモをまとめて、次に読むべきページへ導きます。' },
@@ -25,7 +25,7 @@ const FEATURED_GUIDE_IDS: Record<GameId, string[]> = {
   starrail: ['banner-schedule-guide', 'v4-4-preview-guide', 'fate-collab-guide'],
   wuwa: ['banner-schedule-guide', 'v3-5-preview-guide', 'v3-4-version-guide'],
   nte: ['photo-mode-guide', 'damage-formula', 'boss-guide'],
-  zzz: ['banner-schedule-guide', 'v3-0-version-guide', 'meta-teams-v3-guide'],
+  zzz: ['banner-schedule-guide', 'team-building-guide', 'meta-teams-v3-guide'],
   guihuan: ['beginner-guide', 'download-install-guide', 'spirit-build-guide'],
   ananta: ['beginner-guide', 'download-install-guide', 'combat-system-guide'],
   endfield: ['download-install-guide', 'combat-system-guide', 'crisis-contract-guide'],
@@ -202,7 +202,19 @@ export async function generateMetadata({
   const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/guides`, LOCALES);
 
   const desc = GUIDE_DESC[gameId]?.[locale] ?? `${gameName} ${categoryLabel} with beginner tips, builds, teams, and practical walkthroughs`;
-  const title = gameId === 'starrail'
+  const title = gameId === 'genshin'
+    ? locale === 'zh'
+      ? '原神攻略大全 — 当前祈愿、Nod-Krai、月反应、配队与材料'
+      : locale === 'ja'
+        ? '原神攻略 — バナー、Nod-Krai、月反応、編成、素材'
+        : 'Genshin Guides — Current Banner, Nod-Krai, Lunar Reactions & Builds'
+    : gameId === 'wuwa'
+      ? locale === 'zh'
+        ? '鸣潮攻略大全 — 当前卡池、声骸、体力、配队与材料'
+        : locale === 'ja'
+          ? '鳴潮攻略 — バナー、エコー、スタミナ、編成、素材'
+          : 'WuWa Guides — Next Banner, Echo Builds, Farming & Materials'
+      : gameId === 'starrail'
     ? locale === 'zh'
       ? '崩坏：星穹铁道攻略大全 — 当前跃迁、Fate联动、配队与养成'
       : locale === 'ja'
