@@ -65,6 +65,10 @@ const ARTICLE_IMAGE_COUNTS: Partial<Record<GameId, number>> = {
   starrail: 10,
   wuwa: 10,
   nte: 17,
+  zzz: 10,
+  sea: 10,
+  skjh: 9,
+  endfield: 9,
   guihuan: 1,
 };
 
@@ -73,6 +77,10 @@ const ARTICLE_IMAGE_LABELS: Partial<Record<GameId, Record<SupportedLocale, strin
   starrail: { zh: '崩坏：星穹铁道攻略参考图', en: 'Honkai: Star Rail guide reference image', ja: '崩壊：スターレイルガイド参考画像' },
   wuwa: { zh: '鸣潮攻略参考图', en: 'Wuthering Waves guide reference image', ja: '鳴潮ガイド参考画像' },
   nte: { zh: '异环攻略参考图', en: 'Neverness to Everness guide reference image', ja: 'Neverness to Evernessガイド参考画像' },
+  zzz: { zh: '绝区零攻略参考图', en: 'Zenless Zone Zero guide reference image', ja: 'ゼンレスゾーンゼロガイド参考画像' },
+  sea: { zh: '遗忘之海攻略参考图', en: 'Sea of Remnants guide reference image', ja: 'Sea of Remnantsガイド参考画像' },
+  skjh: { zh: '失控进化攻略参考图', en: 'Ashfall Evolution guide reference image', ja: 'Ashfall Evolutionガイド参考画像' },
+  endfield: { zh: '终末地攻略参考图', en: 'Arknights: Endfield guide reference image', ja: 'エンドフィールドガイド参考画像' },
   guihuan: { zh: '归环攻略参考图', en: 'Guihuan guide reference image', ja: 'Guihuanガイド参考画像' },
 };
 
