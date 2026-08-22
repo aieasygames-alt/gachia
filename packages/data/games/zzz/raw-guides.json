@@ -134,14 +134,14 @@
   {
     "id": "team-building-guide",
     "title": "绝区零配队指南",
-    "titleEn": "ZZZ Team Building Guide: Best Team Comps, Roles & Synergy",
+    "titleEn": "ZZZ Team Building Guide: Best Teams, Roles, Synergy & Pull Priority",
     "category": "team",
     "categoryZh": "配队攻略",
     "categoryEn": "Teams",
-    "updatedAt": "2026-08-10",
-    "currentVersion": "3.0",
+    "updatedAt": "2026-08-22",
+    "currentVersion": "ZZZ v3.1 team builder and meta-team route",
     "summary": "学习如何构建高效的3人队伍，理解各职业定位与协同效果。",
-    "summaryEn": "ZZZ team building guide for best team comps, agent roles, Attack/Stun/Anomaly/Support synergy, F2P teams, and how to use the team builder before investing resources.",
+    "summaryEn": "Updated ZZZ team building guide for best team comps, Attack/Stun/Anomaly/Support roles, agent synergy, current-banner pulls, Drive Discs, W-Engines, and F2P teams.",
     "content": "## 配队指南\n\n### 快速路线\n\n如果你搜索的是“zzz team builder / zzz teams / 绝区零最佳配队”，先确定一个主输出或异常核心，再补击破或支援位，然后打开 [/zzz/teams](/zzz/teams) 对比推荐代理人搭配。围绕新抽限定代理人养队前，先看 [/zzz/guides/banner-schedule-guide](/zzz/guides/banner-schedule-guide)。\n\n绝区零的战斗核心是3人小队协作，理解各职业定位和元素协同是组建强力队伍的关键。\n\n### 一、队伍基础结构\n\n标准3人小队通常包含：\n\n| 位置 | 职责 | 代表角色 | 优先级 |\n|------|------|----------|--------|\n| 输出(DPS) | 核心伤害来源 | 艾莲、朱鸢、简 | ★★★★★ |\n| 击破(Stun) | 快速积累敌人失衡值 | 莱卡恩、珂蕾妲、安比 | ★★★★☆ |\n| 支援(Support) | 提供增益/减防 | 妮可、苍角、露西 | ★★★★☆ |\n| 防护(Defense) | 提供护盾/治疗 | 赛斯、本 | ★★★☆☆ |\n\n最稳定阵容：**击破 + 输出 + 支援**\n\n### 二、各元素经典配队\n\n#### 冰队\n- **主力阵容**：艾莲(输出) + 莱卡恩(击破) + 苍角(支援)\n- **核心思路**：莱卡恩快速积累失衡，艾莲在眩晕期间爆发输出\n- **替代方案**：没有艾莲可用可琳替代\n\n#### 电队\n- **主力阵容**：安比(击破) + 格莉丝(异常) + 妮可(支援)\n- **核心思路**：快速积累电异常，触发触电持续伤害\n- **高端变体**：简(异常) + 赛斯(防护) + 格莉丝\n\n#### 火队\n- **主力阵容**：柏妮思(输出) + 珂蕾妲(击破) + 露西(支援)\n- **核心思路**：珂蕾妲快速眩晕，柏妮思爆发输出+燃烧异常\n- **替代方案**：莱特可替换柏妮思\n\n#### 物理队\n- **主力阵容**：可琳(输出) + 莱卡恩(击破) + 妮可(支援)\n- **核心思路**：莱卡恩眩晕后可琳爆发，妮可减防增强伤害\n\n#### 以太队\n- **主力阵容**：朱鸢(输出) + 青衣(支援) + 妮可(支援)\n- **核心思路**：青衣提供大量增益，朱鸢在眩晕期间极限输出\n\n### 三、特殊配队思路\n\n**异常流（不依赖传统输出）**\n- 简 + 格莉丝 + 赛斯：快速积累多种异常持续伤害\n- 核心装备：异常精通驱动盘套装\n\n**双输出轮换流**\n- 两个输出角色交替上场，利用连携机制\n- 适合拥有多个强力S级输出的玩家\n\n### 四、配队原则\n\n1. **属性统一**：同属性角色更容易触发异常效果\n2. **职业搭配**：击破+输出+支援是最稳定的组合\n3. **角色协同**：某些角色的技能会互相增强（如妮可减防+物理输出）\n4. **灵活调整**：根据敌人属性弱点调整队伍构成\n5. **资源集中**：优先把一队练满再练第二队",
     "contentEn": "## Team Building Guide\n\n### Fast route\n\nIf you searched for \"zzz team builder,\" \"zzz teams,\" or \"zzz best teams,\" start with one main DPS or Anomaly core, add a Stun or Support agent, then open [/zzz/teams](/zzz/teams) to compare recommended agent comps. Check [/zzz/guides/banner-schedule-guide](/zzz/guides/banner-schedule-guide) before building around a newly pulled limited agent.\n\nZZZ's combat revolves around 3-agent team synergy. Understanding role assignments and elemental interactions is key to building strong teams.\n\n### 1. Basic Team Structure\n\n| Role | Responsibility | Key Agents | Priority |\n|------|---------------|------------|----------|\n| DPS | Primary damage dealer | Ellen, Zhu Yuan, Jane | ★★★★★ |\n| Stun | Quickly builds enemy Daze | Lycaon, Koleda, Anby | ★★★★☆ |\n| Support | Provides buffs/DEF shred | Nicole, Soukaku, Lucy | ★★★★☆ |\n| Defense | Provides shields/healing | Seth, Ben | ★★★☆☆ |\n\nMost stable lineup: **Stun + DPS + Support**\n\n### 2. Element-Specific Teams\n\n#### Ice Team\n- **Premium**: Ellen (DPS) + Lycaon (Stun) + Soukaku (Support)\n- **Core strategy**: Lycaon builds Daze fast, Ellen bursts during Stun window\n- **Budget**: Replace Ellen with Corin\n\n#### Electric Team\n- **Premium**: Anby (Stun) + Grace (Anomaly) + Nicole (Support)\n- **Core strategy**: Build Electric Anomaly quickly, trigger Shock DoT\n- **Variant**: Jane (Anomaly) + Seth (Defense) + Grace\n\n#### Fire Team\n- **Premium**: Burnice (DPS) + Koleda (Stun) + Lucy (Support)\n- **Core strategy**: Koleda stuns fast, Burnice bursts + Burn Anomaly\n- **Variant**: Replace Burnice with Lighter\n\n#### Physical Team\n- **Premium**: Corin (DPS) + Lycaon (Stun) + Nicole (Support)\n- **Core strategy**: Lycaon stuns, Corin bursts, Nicole shreds DEF\n\n#### Ether Team\n- **Premium**: Zhu Yuan (DPS) + Qingyi (Support) + Nicole (Support)\n- **Core strategy**: Qingyi provides massive buffs, Zhu Yuan deals extreme damage during Stun\n\n### 3. Special Team Strategies\n\n**Anomaly Focus (no traditional DPS)**\n- Jane + Grace + Seth: Rapid multi-element Anomaly DoT stacking\n- Core gear: Anomaly Mastery Drive Disc sets\n\n**Dual DPS Rotation**\n- Two DPS agents alternate using Chain mechanics\n- Best for players with multiple S-Rank DPS agents\n\n### 4. Team Building Principles\n\n1. **Elemental unity**: Same-element agents trigger Anomaly more easily\n2. **Role balance**: Stun + DPS + Support is the most stable combination\n3. **Character synergy**: Some agents enhance each other (e.g., Nicole DEF shred + Physical DPS)\n4. **Flexibility**: Adjust team based on enemy elemental weaknesses\n5. **Resource focus**: Max one team before starting a second",
     "tags": [
@@ -173,20 +173,20 @@
       }
     ],
     "serpTitle": {
-      "en": "ZZZ Team Building Guide: Best Team Comps, Roles & Synergy",
+      "en": "ZZZ Team Building Guide: Best Teams, Roles & Synergy",
       "zh": "绝区零配队指南：最佳队伍、代理人定位与协同",
       "ja": "ZZZ編成ガイド：おすすめチーム、役割、相性"
     },
     "serpDescription": {
-      "en": "Build better ZZZ teams with agent roles, best team comps, Attack/Stun/Anomaly/Support synergy, F2P options, and team-builder routing.",
+      "en": "Build ZZZ teams with best comps, Attack/Stun/Anomaly/Support roles, agent synergy, current banners, Drive Discs, W-Engines, and F2P routes.",
       "zh": "绝区零配队指南，覆盖最佳队伍、代理人定位、强攻/击破/异常/支援协同、平民阵容和配队模拟器入口。",
       "ja": "ZZZのおすすめ編成、役割、強攻/撃破/異常/支援の相性、無課金編成、編成ツール入口を確認。"
     },
     "quickFacts": {
       "en": [
-        "Start with one damage or Anomaly core, then add Stun and Support around it.",
-        "Use the teams page to compare recommended agent comps before spending materials.",
-        "Check current banners before building around a newly pulled agent."
+        "Use this as a ZZZ team building guide for best teams, roles, synergy, and current-banner decisions.",
+        "Start with Attack, Stun, Anomaly, and Support coverage before chasing signature W-Engines.",
+        "Check Drive Discs and farming priority after the team role is clear."
       ],
       "zh": [
         "先确定一个输出或异常核心，再补击破和支援位。",
@@ -208,7 +208,7 @@
     "categoryZh": "装备攻略",
     "categoryEn": "Equipment",
     "summary": "绝区零当前版本音擎选择入口，按代理人定位、S/A 级替代、专属音擎风险、菲林预算和当前卡池优先级判断是否值得抽。",
-    "summaryEn": "Decision-first ZZZ W-Engine guide for best weapons, signature engines, A-Rank alternatives, W-Engine pity, Polychrome budget, current banners, and agent-role matching.",
+    "summaryEn": "Updated ZZZ W-Engine guide for best weapons, signature W-Engines, A-Rank alternatives, banner risk, pity planning, Drive Disc synergy, and team role fit.",
     "content": "## 2026-08-03 当前音擎判断\n\n音擎页现在要和 v3.1 当前卡池一起看：先确认代理人是否已经到手，再判断专属音擎、A 级替代和驱动盘是否能支撑当前配队。\n\n## 音擎选择指南\n\n音擎是代理人的武器装备，正确选择能大幅提升角色输出。本指南帮你理解音擎系统并做出最优选择。\n\n### 一、音擎基础属性\n\n每把音擎提供三类属性：\n\n- **基础攻击力**：根据稀有度不同（S级 > A级 > B级）\n- **副属性**：固定加成（暴击率、暴击伤害、异常精通、冲击力等）\n- **被动效果**：特殊技能效果，通常对特定职业有额外加成\n\n### 二、按职业选择音擎\n\n#### 强攻型（Attack）— 主C输出\n| 推荐音擎 | 稀有度 | 副属性 | 获取方式 |\n|----------|--------|--------|----------|\n| 拘缚者的吻痕 | S级 | 暴击伤害 | 艾莲专属音擎池 |\n| 暴雨终焉 | S级 | 暴击率 | 朱鸢专属音擎池 |\n| 星光引擎 | A级 | 暴击伤害 | 模拟作战商店 |\n| 立体音擎·改 | A级 | 攻击力% | 活动免费 |\n\n#### 击破型（Stun）— 失衡积累\n| 推荐音擎 | 稀有度 | 副属性 | 获取方式 |\n|----------|--------|--------|----------|\n| 拘缚者（专用） | S级 | 冲击力 | 专属音擎池 |\n| 原装音擎 | A级 | 冲击力 | 模拟作战商店 |\n| 重型音擎 | A级 | 冲击力 | 通用掉落 |\n\n#### 异常型（Anomaly）— 异常伤害\n| 推荐音擎 | 稀有度 | 副属性 | 获取方式 |\n|----------|--------|--------|----------|\n| 融合编译器 | S级 | 异常精通 | 格莉丝专属 |\n| 磁暴音擎 | A级 | 异常精通 | 商店兑换 |\n\n#### 支援型（Support）— 团队增益\n| 推荐音擎 | 稀有度 | 副属性 | 获取方式 |\n|----------|--------|--------|----------|\n| 虚数怪谭 | S级 | 能量回复 | 专属音擎池 |\n| 和弦音擎 | A级 | 能量回复 | 商店兑换 |\n\n#### 防护型（Defense）— 生存保障\n| 推荐音擎 | 稀有度 | 副属性 | 获取方式 |\n|----------|--------|--------|----------|\n| 安息之所 | S级 | 防御力% | 专属音擎池 |\n| 坚壁音擎 | A级 | 防御力% | 通用掉落 |\n\n### 三、音擎强化建议\n\n1. **主C音擎优先拉满**：基础攻击力对伤害影响大\n2. **辅助音擎可以+15**：不需要完全拉满\n3. **选择原则**：副属性匹配角色需求 > 基础攻击力 > 被动效果\n4. **免费音擎也很强**：商店兑换的A级音擎性价比较高\n\n### 四、音擎获取方式\n\n| 来源 | 稀有度 | 说明 |\n|------|--------|------|\n| 信源检索 | S级 | 最强音擎，部分为角色专属 |\n| 模拟作战商店 | S/A级 | 用特定货币兑换，稳定获取 |\n| 活动奖励 | A/B级 | 免费获取，不要错过 |\n| 制作系统 | B级 | 用材料制作基础音擎 |",
     "contentEn": "## Current W-Engine Check for August 3, 2026\n\nRead W-Engines together with the v3.1 banner plan: secure the agent first, then compare signature W-Engines, A-Rank alternatives, Drive Discs, and team needs.\n\n## W-Engine Selection Guide\n\nW-Engines are agent weapons. Choosing the right one significantly impacts your damage output. This guide helps you understand the system and make optimal choices.\n\n### 1. W-Engine Basics\n\nEvery W-Engine provides three types of stats:\n\n- **Base ATK**: Varies by rarity (S-Rank > A-Rank > B-Rank)\n- **Sub-stat**: Fixed bonus (CRIT Rate, CRIT DMG, Anomaly Mastery, Impact, etc.)\n- **Passive Effect**: Special skill effects, often with bonuses for specific specialties\n\n### 2. Choosing by Specialty\n\n#### Attack Specialty (Main DPS)\n| Recommended Engine | Rarity | Sub-stat | Source |\n|-------------------|--------|----------|--------|\n| Restrainer's Kiss | S-Rank | CRIT DMG | Ellen signature banner |\n| Torrential Rain | S-Rank | CRIT Rate | Zhu Yuan signature banner |\n| Starlight Engine | A-Rank | CRIT DMG | Simulation Shop |\n| Stereo Engine+ | A-Rank | ATK% | Event free |\n\n#### Stun Specialty (Daze Builder)\n| Recommended Engine | Rarity | Sub-stat | Source |\n|-------------------|--------|----------|--------|\n| Restrainer (Signature) | S-Rank | Impact | Signature banner |\n| Original Engine | A-Rank | Impact | Simulation Shop |\n| Heavy Engine | A-Rank | Impact | General drop |\n\n#### Anomaly Specialty (DoT Damage)\n| Recommended Engine | Rarity | Sub-stat | Source |\n|-------------------|--------|----------|--------|\n| Fusion Compiler | S-Rank | Anomaly Mastery | Grace signature |\n| Magnetic Storm Engine | A-Rank | Anomaly Mastery | Shop exchange |\n\n#### Support Specialty (Team Buff)\n| Recommended Engine | Rarity | Sub-stat | Source |\n|-------------------|--------|----------|--------|\n| Imaginary Tales | S-Rank | Energy Regen | Signature banner |\n| Chord Engine | A-Rank | Energy Regen | Shop exchange |\n\n#### Defense Specialty (Survival)\n| Recommended Engine | Rarity | Sub-stat | Source |\n|-------------------|--------|----------|--------|\n| Resting Place | S-Rank | DEF% | Signature banner |\n| Fortress Engine | A-Rank | DEF% | General drop |\n\n### 3. Enhancement Strategy\n\n1. **DPS engine to max first**: Base ATK has a major impact on damage\n2. **Support engines at +15**: Don't need full investment\n3. **Selection priority**: Matching sub-stat > Base ATK > Passive effect\n4. **Free engines are solid**: Shop-exchangeable A-Rank engines offer good value\n\n### 4. W-Engine Sources\n\n| Source | Rarity | Notes |\n|--------|--------|-------|\n| Signal Search | S-Rank | Strongest engines, some are character-exclusive |\n| Simulation Shop | S/A-Rank | Exchangeable with specific currency, reliable source |\n| Event Rewards | A/B-Rank | Free acquisition, don't miss them |\n| Crafting | B-Rank | Crafted with materials for basics |",
     "tags": [
@@ -239,23 +239,23 @@
         "answerZh": "根据角色定位选择副属性：输出要暴击，击破要冲击力，异常要异常精通，支援要能量回复。副属性匹配比基础攻击力差异更重要。"
       }
     ],
-    "updatedAt": "2026-08-12",
-    "currentVersion": "ZZZ v3.1 W-Engine and banner-risk route",
+    "updatedAt": "2026-08-22",
+    "currentVersion": "ZZZ v3.1 W-Engine and banner-risk cycle",
     "serpTitle": {
       "en": "ZZZ W-Engine Guide: Best Weapons, Signatures & A-Rank Alternatives",
       "zh": "绝区零音擎攻略：最佳武器、专属音擎、A级替代与卡池风险",
       "ja": "ZZZ音動機攻略：おすすめ、餅武器、Aランク代替、バナーリスク"
     },
     "serpDescription": {
-      "en": "Choose ZZZ W-Engines by agent role, current banners, signature risk, A-Rank alternatives, W-Engine pity, Polychrome budget, and Drive Disc needs.",
+      "en": "Compare ZZZ W-Engines, signature weapons, A-Rank alternatives, banner risk, pity, Drive Disc synergy, team roles, and current-banner pull value.",
       "zh": "按代理人定位、当前卡池、专属音擎风险、A级替代、音擎保底、菲林预算和驱动盘需求选择绝区零音擎。",
       "ja": "代理人役割、現在バナー、餅武器リスク、Aランク代替、音動機天井、菲林、ドライブで選択。"
     },
     "quickFacts": {
       "en": [
-        "Use this for ZZZ W-Engine, best weapon, signature weapon, A-Rank alternative, and Polychrome budget searches.",
-        "Secure the agent first unless the account already has the core team and enough pulls for W-Engine pity.",
-        "Read with current banners, Jane Doe build, Drive Discs, and teams before spending on signatures."
+        "Use this as a ZZZ W-Engine guide for best weapons, signatures, A-Rank alternatives, and banner risk.",
+        "Secure the agent before chasing a signature unless W-Engine pity and team value are both favorable.",
+        "Compare weapon value with Drive Disc stats and team role before spending Polychromes."
       ],
       "zh": [
         "用于承接音擎、最佳武器、专属音擎、A级替代和菲林预算搜索。",
@@ -582,29 +582,29 @@
   {
     "id": "v3-0-version-guide",
     "title": "绝区零v3.0版本更新完全指南",
-    "titleEn": "ZZZ v3.1 Live Hub: Banners, Anniversary Rewards, Codes & v3.0 Recap",
+    "titleEn": "ZZZ v3.1 Live Hub: Current Banners, Rewards, Codes & v3.0 Recap",
     "category": "version",
     "categoryZh": "版本攻略",
     "categoryEn": "Version Guide",
-    "updatedAt": "2026-08-12",
-    "currentVersion": "ZZZ v3.1 live routing and v3.0 recap",
+    "updatedAt": "2026-08-22",
+    "currentVersion": "ZZZ v3.1 live hub, banner, code, and reward route",
     "summary": "绝区零v3.0「新秩序」完整攻略：维林娜(新风属性)、普罗米亚(火C)、诺姆、千夏、蕾米埃尔、980底片+邀约礼盒福利、罗斯凯利法新区域、云岌岭探索。",
-    "summaryEn": "Live ZZZ v3.1 routing page for current banners, anniversary rewards, redeem codes, Xbox/Steam onboarding, and a v3.0 New Order recap for returning players.",
+    "summaryEn": "Updated ZZZ v3.1 live hub for current banners, next banner context, rewards, redeem codes, Steam/start routes, v3.0 recap, teams, W-Engines, and Drive Discs.",
     "serpTitle": {
-      "en": "ZZZ v3.1 Live Hub: Banners, Codes, Rewards & v3.0 Recap",
+      "en": "ZZZ v3.1 Live Hub: Current Banners, Codes, Rewards & Teams",
       "zh": "绝区零 3.1 当前版本入口：卡池、兑换码、周年福利与 3.0 回顾",
       "ja": "ゼンゼロ v3.1 現在版本：バナー、コード、報酬、3.0振り返り"
     },
     "serpDescription": {
-      "en": "Use the ZZZ v3.1 live hub for current banners, anniversary rewards, redeem codes, Xbox/Steam onboarding, new agents, and the v3.0 recap.",
+      "en": "Track ZZZ v3.1 current banners, next-banner context, rewards, codes, Steam/start routes, v3.0 recap, teams, W-Engines, and Drive Discs.",
       "zh": "查看绝区零 3.1 当前卡池、周年福利、兑换码、Xbox/Steam 入坑、新代理人与 3.0 新秩序回顾。",
       "ja": "ZZZ v3.1の現在バナー、周年報酬、コード、Xbox/Steam入門、新代理人、3.0振り返りを確認。"
     },
     "quickFacts": {
       "en": [
-        "Start here for ZZZ v3.1 current banners, codes, anniversary rewards, and platform onboarding.",
-        "Use the v3.0 recap only after checking live v3.1 agents and Polychrome income.",
-        "Continue into banner schedule, W-Engine guide, Drive Discs, and character wiki for build decisions."
+        "Use this as the ZZZ v3.1 live hub for banners, rewards, codes, Steam/start routes, and v3.0 recap searches.",
+        "Start with current banners and redeem codes, then move into teams, W-Engines, and Drive Discs.",
+        "Returning players should check v3.0 recap before spending Polychromes or Battery Charge."
       ],
       "zh": [
         "先看 3.1 当前卡池、兑换码、周年福利和平台入坑。",
@@ -826,12 +826,12 @@
   {
     "id": "build-jane-doe",
     "title": "简·杜配装与养成攻略",
-    "titleEn": "Jane Doe Build Guide",
+    "titleEn": "Jane Doe Build Guide: Best W-Engines, Drive Discs, Teams & Rotation",
     "category": "build",
     "categoryZh": "配装攻略",
     "categoryEn": "Build Guide",
     "summary": "物理属性S级异常代理人简·杜的完整配装攻略，涵盖最佳音擎、驱动盘搭配、技能优先级与配队推荐。",
-    "summaryEn": "Complete build guide for Jane Doe, the S-Rank Physical Anomaly agent. Covers best W-Engines, Drive Disc sets, skill priority, and team compositions.",
+    "summaryEn": "Updated Jane Doe build guide for best W-Engines, Drive Disc sets, Anomaly teams, rotation notes, current banners, farming priority, and Polychrome risk.",
     "content": "## 简·杜配装与养成攻略\n\n简·杜(Jane Doe)是物理属性S级异常代理人，通过极快的攻击速度持续积累物理异常值，触发「突击(Assault)」造成高额物理爆发伤害。她的核心机制是变身后的强化攻击模式，大幅提升异常积累速度和自身输出，是异常流玩法的核心代理人。\n\n### 一、最佳音擎(W-Engine)推荐\n\n| 音擎 | 稀有度 | 副属性 | 推荐理由 |\n|------|--------|--------|----------|\n| 融合编译器(Fusion Compiler) | S级 | 异常精通 | 格莉丝专属音擎但完美适配简，提供异常精通和异常伤害加成 |\n| 猩红之针(Crimson Needle) | S级 | 异常精通 | 通用异常音擎，提供物理异常伤害提升 |\n| 磁暴音擎(Magnetic Storm) | A级 | 异常精通 | 商店兑换，免费的最佳异常音擎替代 |\n| 雨中旋律(Rainbow Rhapsody) | A级 | 异常精通 | 活动获取，提供稳定的异常精通加成 |\n\n**音擎选择优先级**：融合编译器/猩红之针 > 磁暴音擎(A级) > 雨中旋律\n\n### 二、最佳驱动盘(Drive Disc)搭配\n\n**毕业套装：自由布鲁斯4件 + 猛毒金属2件**\n\n- 自由布鲁斯(Freedom Blues) 4件套：异常精通提升，触发异常后额外增伤\n- 猛毒金属(Fanged Metal) 2件套：物理伤害加成+10%\n\n**替代方案：自由布鲁斯4件 + 混沌金属2件**\n- 混沌金属2件套提供额外异常精通\n\n**主属性选择**\n\n| 位置 | 推荐主属性 | 优先级 |\n|------|-----------|--------|\n| 4号位 | 异常精通 | 最高 |\n| 5号位 | 物理伤害加成 | 最高 |\n| 6号位 | 攻击力% / 异常精通 | 高 |\n\n**副词条优先级**：异常精通 > 攻击力% > 穿透值 > 暴击率\n\n### 三、技能升级优先级\n\n1. **核心被动(Additional Ability)**：最优先，提升变身后的异常积累速度和伤害\n2. **特殊技(Special Skill)**：变身技能，是简的核心机制\n3. **普攻(Basic Attack)**：变身后的强化普攻是主要异常积累手段\n4. **终结技(Ultimate)**：高伤害爆发，提供异常值\n5. **闪避(Dodge)**：最后提升\n\n### 四、推荐队伍搭配\n\n**最优异常队（推荐）**\n- 简(异常输出) + 赛斯(防护) + 格莉丝(异常)\n- 赛斯提供护盾和异常精通增益，格莉丝补充电异常触发紊乱效果\n\n**纯物理异常队**\n- 简(异常输出) + 妮可(支援) + 莱卡恩(击破)\n- 妮可减防增伤，莱卡恩提供眩晕窗口让简安全输出\n\n**紊乱混合队**\n- 简(异常输出) + 格莉丝(异常) + 露西(支援)\n- 简负责物理异常，格莉丝负责电异常，双重紊乱造成大量伤害\n\n### 五、影画(Mindscape Cinema)关键节点\n\n- **M0**：完整机制，变身和异常积累效果齐全\n- **M1**：变身时间延长，异常积累速度进一步提升\n- **M2**：物理异常「突击」伤害大幅提升\n- **M4**：变身期间获得额外攻击力加成\n- **M6**：质变节点，变身后的攻击附带额外物理异常值，触发突击频率翻倍\n\n### 六、突破材料概览\n\n| 等级阶段 | 需要材料 |\n|----------|----------|\n| 10-30级 | 基础物理芯片、丁尼 |\n| 30-40级 | 进阶物理芯片、特定敌人掉落物 |\n| 40-50级 | 高级物理芯片、周本材料 |\n| 50-60级 | 顶级物理芯片、高级周本材料 |\n\n简的输出高度依赖异常精通属性，确保驱动盘4号位和6号位的异常精通足够高。",
     "contentEn": "## Jane Doe Build Guide\n\nJane Doe is an S-Rank Physical Anomaly agent who rapidly builds Physical Anomaly through extremely fast attack speed, triggering Assault for massive Physical burst damage. Her core mechanic is a transformed enhanced attack mode that dramatically increases Anomaly buildup speed and personal damage output, making her the centerpiece of Anomaly-focused playstyles.\n\n### 1. Best W-Engines\n\n| W-Engine | Rarity | Sub-stat | Reason |\n|----------|--------|----------|--------|\n| Fusion Compiler | S-Rank | Anomaly Mastery | Grace's signature but perfectly suits Jane, providing Anomaly Mastery and Anomaly DMG bonus |\n| Crimson Needle | S-Rank | Anomaly Mastery | Universal Anomaly engine, provides Physical Anomaly DMG boost |\n| Magnetic Storm | A-Rank | Anomaly Mastery | Shop exchange, best free Anomaly engine alternative |\n| Rainbow Rhapsody | A-Rank | Anomaly Mastery | Event reward, provides stable Anomaly Mastery boost |\n\n**Priority**: Fusion Compiler / Crimson Needle > Magnetic Storm (A-Rank) > Rainbow Rhapsody\n\n### 2. Best Drive Disc Sets\n\n**Best-in-Slot: Freedom Blues 4pc + Fanged Metal 2pc**\n\n- Freedom Blues 4pc: Anomaly Mastery boost, additional DMG bonus after triggering Anomaly\n- Fanged Metal 2pc: Physical DMG +10%\n\n**Alternative: Freedom Blues 4pc + Chaos Metal 2pc**\n- Chaos Metal 2pc provides additional Anomaly Mastery\n\n**Main Stat Priority**\n\n| Slot | Recommended Main Stat | Priority |\n|------|----------------------|----------|\n| Slot 4 | Anomaly Mastery | Highest |\n| Slot 5 | Physical DMG Bonus | Highest |\n| Slot 6 | ATK% / Anomaly Mastery | High |\n\n**Sub-stat Priority**: Anomaly Mastery > ATK% > Pen Value > CRIT Rate\n\n### 3. Skill Upgrade Priority\n\n1. **Core Passive (Additional Ability)**: Highest priority, boosts post-transformation Anomaly buildup speed and damage\n2. **Special Skill**: Transformation skill, Jane's core mechanic\n3. **Basic Attack**: Enhanced post-transformation Basic Attacks are the primary Anomaly buildup tool\n4. **Ultimate**: High burst damage, provides Anomaly value\n5. **Dodge**: Upgrade last\n\n### 4. Recommended Team Compositions\n\n**Optimal Anomaly Team (Recommended)**\n- Jane (Anomaly DPS) + Seth (Defense) + Grace (Anomaly)\n- Seth provides shields and Anomaly Mastery buffs, Grace supplements Electric Anomaly for Disorder triggers\n\n**Pure Physical Anomaly Team**\n- Jane (Anomaly DPS) + Nicole (Support) + Lycaon (Stun)\n- Nicole shreds DEF for damage amplification, Lycaon provides Stun windows for safe Jane output\n\n**Disorder Hybrid Team**\n- Jane (Anomaly DPS) + Grace (Anomaly) + Lucy (Support)\n- Jane handles Physical Anomaly, Grace handles Electric Anomaly, double Disorder triggers deal massive damage\n\n### 5. Mindscape Cinema Key Milestones\n\n- **M0**: Complete kit — transformation and Anomaly buildup effects fully functional\n- **M1**: Extended transformation duration, further increased Anomaly buildup speed\n- **M2**: Physical Anomaly Assault DMG significantly increased\n- **M4**: Additional ATK bonus during transformation\n- **M6**: Transformative — post-transformation attacks carry additional Physical Anomaly value, doubling Assault trigger frequency\n\n### 6. Ascension Materials Overview\n\n| Level Range | Materials Needed |\n|-------------|-----------------|\n| Lv.10-30 | Basic Physical Chips, Denny |\n| Lv.30-40 | Advanced Physical Chips, specific enemy drops |\n| Lv.40-50 | Premium Physical Chips, weekly boss materials |\n| Lv.50-60 | Top-tier Physical Chips, advanced weekly boss materials |\n\nJane's damage heavily depends on Anomaly Mastery — ensure Drive Disc slots 4 and 6 have sufficient Anomaly Mastery values.",
     "tags": [
@@ -875,15 +875,15 @@
       "ja": "Jane Doe ビルド：おすすめWエンジン、ドライブ、編成"
     },
     "serpDescription": {
-      "en": "ZZZ Jane Doe build guide with best W-Engines, Drive Disc sets, Anomaly stat priority, skill order, teams, banner context, and F2P alternatives.",
+      "en": "Build Jane Doe with best W-Engines, Drive Discs, Anomaly teams, rotations, current banners, farming priority, and Polychrome pull risk.",
       "zh": "绝区零简·杜配装攻略，整理最佳音擎、驱动盘、异常属性词条、技能优先级、配队、卡池上下文和零氪替代。",
       "ja": "Jane DoeのWエンジン、ドライブ、異常ステータス、スキル優先度、編成、バナー、無課金代替を整理。"
     },
     "quickFacts": {
       "en": [
-        "Use this page for Jane Doe build, best W-Engine, Drive Disc, Anomaly stats, and team searches.",
-        "Secure the agent and core Drive Disc setup before spending extra Polychromes on signature upgrades.",
-        "Read with current ZZZ banners, W-Engine guide, and Drive Disc guide for pull and build decisions."
+        "Use this as a Jane Doe build guide for W-Engines, Drive Discs, teams, and rotations.",
+        "Confirm Anomaly team partners before locking Drive Disc main stats or signature W-Engine value.",
+        "Check current banners and farming routes before spending Polychromes or Battery Charge."
       ],
       "zh": [
         "用于承接 Jane Doe build、简·杜配装、音擎、驱动盘和异常词条搜索。",
@@ -896,8 +896,8 @@
         "現在バナー、Wエンジン、ドライブ攻略と一緒に確認。"
       ]
     },
-    "updatedAt": "2026-08-12",
-    "currentVersion": "ZZZ v3.1 Jane Doe build route"
+    "updatedAt": "2026-08-22",
+    "currentVersion": "ZZZ v3.1 Jane Doe build, teams, and banner route"
   },
   {
     "id": "banner-schedule-guide",
@@ -1175,12 +1175,12 @@
   {
     "id": "meta-teams-v3-guide",
     "title": "绝区零v3.0版本主流配队推荐 — 突击与风属性体系",
-    "titleEn": "ZZZ Best Teams v3.0-v3.1: Meta Comps, F2P Teams & Pull Priorities",
+    "titleEn": "ZZZ Best Teams v3.1: Meta Comps, F2P Teams & Pull Priorities",
     "category": "team",
     "categoryZh": "配队攻略",
     "categoryEn": "Teams",
     "summary": "绝区零v3.0版本T0配队推荐：仪玄突击队、维林娜风弱BOSS队、普罗米亚火队、星光比利物理突击队、3.0-3.1卡池抽取规划。",
-    "summaryEn": "Best ZZZ teams for v3.0-v3.1, including meta comps, F2P teams, Assault, Anomaly, Fire, Wind, current pull priorities, and links into the ZZZ team builder.",
+    "summaryEn": "Updated ZZZ best teams guide for v3.1 meta comps, F2P teams, Attack/Stun/Anomaly/Support roles, current-banner pulls, Drive Discs, W-Engines, and roster gaps.",
     "content": "## 绝区零v3.0版本主流配队推荐\n\nv3.0「新秩序」带来了突击专精深化和全新风属性体系，配队格局发生重大变化。\n\n### 一、T0级配队（v3.0版本最强）\n\n#### 1. 仪玄突击队（版本答案）\n- **成员**: 仪玄(Yixuan) + 般岳(Banyue) + Lucia Elowen\n- **核心**: 仪玄墨韵突击爆发 + Lucia全队增伤 + 般岳火突击清杂\n- **评价**: ★★★★★ v3.0依然是突击版本，突击值共享机制加强了\n\n#### 2. 维林娜风弱BOSS队（新风体系）\n- **成员**: 维林娜(Velina) + 风属性支援 + 生存位(Sunna/支援)\n- **核心**: 维林娜风属性爆发 + v3.0新风弱BOSS环境\n- **评价**: ★★★★★ 当前危局最强对策队伍\n\n#### 3. 普罗米亚火队\n- **成员**: 普罗米亚(Promeia) + 柯拉(Cora/冰支援) + 生存位\n- **核心**: 普罗米亚火属性持续输出 + 元素反应\n- **评价**: ★★★★★ 版本核心火C\n\n### 二、T1级配队（强力稳定）\n\n#### 4. 星光比利物理突击队\n- **成员**: 星光·比利·奇德 + 诺姆(Nome/物理击破) + 支援位\n- **核心**: 星光比利觉醒形态突击 + 诺姆快速眩晕\n- **评价**: ★★★★☆ 比利免费，星光形态质变\n\n#### 5. 叶瞬光利刃队\n- **成员**: 叶瞬光 + 浮波柚叶 + Ukinami Yuzuha\n- **核心**: 叶瞬光利刃爆发 + Yuzuha物理支援\n- **评价**: ★★★★☆ 利刃属性稳定输出\n\n### 三、v3.0-3.1抽卡规划\n\n#### 优先级排序\n\n| 优先级 | 角色 | 理由 |\n|--------|------|------|\n| T0 | 维林娜 | 风弱BOSS必带，当前环境最强对策 |\n| T0 | 普罗米亚 | 火属性版本核心C |\n| T1 | 星光比利 | 比利免费升级，高性价比 |\n| T1 | 叶瞬光 | 利刃属性稳定，但非必须 |\n| T2 | 蕾米埃尔 | 冰属性异常对策 |\n\n#### 资源规划建议\n\n1. **980底片福利**务必全部领取\n2. v3.0-3.1大约可获 60-80抽（含活动福利）\n3. 建议至少保留一个大保底给维林娜或普罗米亚\n4. 新手优先抽普罗米亚（通用火C > 风C对策）\n\n### 四、配队通用原则\n\n1. **三角阵型**: 输出 + 击破/控制 + 支援/生存\n2. **属性对策**: 根据BOSS弱点选择对应属性主C\n3. **突击值管理**: v3.0突击值共享机制需注意节奏\n4. **连携循环**: 确保换人连携流畅不断档",
     "contentEn": "## ZZZ v3.0-v3.1 Best Teams Guide\n\n### Start here\n\nUse this page as the \"ZZZ best teams\" route, then move into [/zzz/teams](/zzz/teams) when you want character-specific team comps. If your Polychrome budget is tight, compare [/zzz/guides/banner-schedule-guide](/zzz/guides/banner-schedule-guide) before chasing another agent or W-Engine.\n\nv3.0 \"New Order\" brings Assault specialization deepening and new Anemo system, significantly shifting the meta.\n\n### 1. T0 Teams (v3.0 Strongest)\n\n#### Yixuan Assault Team (Meta Answer)\n- Yixuan + Banyue + Lucia Elowen\n- Core: Yixuan Ink Assault burst + Lucia team buff + Banyue Fire Assault\n- Rating: 5/5 — Still Assault meta in v3.0\n\n#### Velina Anemo Boss Counter (NEW)\n- Velina + Anemo support + Sustain (Sunna)\n- Core: Velina Anemo burst + v3.0 new Wind-weak boss environment\n- Rating: 5/5 — Strongest current boss counter\n\n#### Promeia Fire Team\n- Promeia + Cora (Ice support) + Sustain\n- Core: Promeia sustained Fire DPS + elemental reactions\n- Rating: 5/5 — Core Fire DPS\n\n### 2. v3.0-3.1 Pull Planning\n\n| Priority | Character | Reason |\n|----------|-----------|--------|\n| T0 | Velina | Wind-weak boss required, best counter |\n| T0 | Promeia | Fire DPS core |\n| T1 | Starlight Billy | Free upgrade, high value |\n| T1 | Ye Shunguang | Stable Blade output |\n| T2 | Remiel | Ice anomaly counter |\n\n**Tips**: Collect all 980 Polychrome rewards. Save at least one pity for Velina or Promeia.",
     "tags": [
@@ -1206,22 +1206,22 @@
         "answerZh": "完成v3.0版本活动任务即可获得980底片（菲林）和邀约礼盒。建议在活动期间完成所有任务，不要错过免费抽卡资源。"
       }
     ],
-    "updatedAt": "2026-08-10",
+    "updatedAt": "2026-08-22",
     "serpTitle": {
-      "en": "ZZZ Best Teams v3.0-v3.1: Meta Comps, F2P Teams & Pull Priorities",
+      "en": "ZZZ Best Teams v3.1: Meta Comps, F2P Teams & Pull Priorities",
       "zh": "绝区零最佳配队 v3.0-v3.1：主流阵容、平民队与抽卡优先级",
       "ja": "ZZZおすすめ編成 v3.0-v3.1：メタ、無課金、ガチャ優先度"
     },
     "serpDescription": {
-      "en": "Compare ZZZ best teams for v3.0-v3.1 with meta comps, F2P options, Assault and Anomaly teams, pull priorities, and team-builder links.",
+      "en": "Compare ZZZ best teams for v3.1 with meta comps, F2P teams, role coverage, current-banner pulls, Drive Discs, W-Engines, and roster gaps.",
       "zh": "对比绝区零 v3.0-v3.1 最佳队伍、主流阵容、平民搭配、突击/异常体系、抽卡优先级和配队模拟器入口。",
       "ja": "ZZZ v3.0-v3.1のおすすめ編成、メタ、無課金、突撃/異常、ガチャ優先度、編成入口を確認。"
     },
     "quickFacts": {
       "en": [
-        "Focus on one version-ready team before chasing every new agent.",
-        "Use meta comps as templates, then adapt around your owned agents and W-Engines.",
-        "Open the team builder after reading this guide to compare character-specific comps."
+        "Use this as a ZZZ best teams v3.1 guide for meta comps, F2P teams, and pull priorities.",
+        "Build role coverage first: Attack, Stun, Anomaly, Support, and survival where needed.",
+        "Use current banners, Drive Disc farming, and W-Engine value to decide the next upgrade."
       ],
       "zh": [
         "先养一队当前版本能用的完整队伍，不要追所有新代理人。",
@@ -1233,7 +1233,8 @@
         "メタ編成を土台に、所持代理人と音動機で調整。",
         "読後に編成ページでキャラ別おすすめを比較。"
       ]
-    }
+    },
+    "currentVersion": "ZZZ v3.1 meta teams, F2P comps, and pull priority route"
   },
   {
     "id": "v3-1-anniversary-xbox-guide",

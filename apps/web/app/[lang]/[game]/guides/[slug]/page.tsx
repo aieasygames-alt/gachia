@@ -148,6 +148,30 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> 
         ja: ['現在、次回、復刻予想を同じ計画で確認します。', '代理人天井、音擎天井、菲林、編成不足をまとめて見ます。', '資源が少ない場合は代理人を先に確保します。'],
       },
     },
+    'team-building-guide': {
+      heading: { zh: '快速结论：先补队伍角色，而不是先追单体强度', en: 'Quick answer: fix team roles before chasing raw tier', ja: '要点：単体評価より編成役割を先に埋める' },
+      points: {
+        zh: ['先确认强攻、击破、异常、支援和生存位是否完整。', '当前卡池角色只有能补队伍缺口时才值得优先抽。', '配队确定后再看音擎、驱动盘和体力刷取顺序。'],
+        en: ['Start with Attack, Stun, Anomaly, Support, and survival coverage before judging a single agent.', 'A current-banner agent is worth prioritizing when they fix a real roster gap.', 'After the team is clear, route W-Engines, Drive Discs, and Battery Charge farming.'],
+        ja: ['強攻、撃破、異常、支援、生存枠を先に確認。', '現在バナーは編成不足を埋める時に優先。', '編成後に音動機、ドライブ、スタミナを決めます。'],
+      },
+    },
+    'w-engine-guide': {
+      heading: { zh: '快速结论：代理人未到手前，不要先追专属音擎', en: 'Quick answer: secure the agent before chasing signatures', ja: '要点：餅武器より代理人確保が先' },
+      points: {
+        zh: ['音擎价值要和角色保底、队伍定位和替代 A 级音擎一起算。', '资源紧张时，先保代理人，再看专属音擎。', '最终决定要回到配队、驱动盘主属性和当前菲林预算。'],
+        en: ['Judge W-Engine value with agent pity, team role, and A-Rank alternatives together.', 'If Polychromes are tight, secure the agent first and delay the signature.', 'Use team fit, Drive Disc main stats, and current-banner budget before pulling weapons.'],
+        ja: ['音動機価値は代理人天井、編成役割、A級代替と一緒に判断。', '資源が少ない時は代理人を先に確保。', '編成、ドライブ、菲林予算で最終判断。'],
+      },
+    },
+    'meta-teams-v3-guide': {
+      heading: { zh: '快速结论：v3.1 配队先看队伍缺口和抽卡优先级', en: 'Quick answer: rank v3.1 teams by roster gaps and pull priority', ja: '要点：v3.1編成は不足枠とガチャ優先度で判断' },
+      points: {
+        zh: ['先把可用代理人按强攻、击破、异常和支援分组。', 'F2P 队伍优先保证循环稳定，再追更高上限。', '当前卡池、音擎和驱动盘刷取要服务于同一个队伍目标。'],
+        en: ['Group your agents by Attack, Stun, Anomaly, and Support before picking a meta comp.', 'F2P teams should secure stable rotations before chasing higher ceilings.', 'Current banners, W-Engines, and Drive Disc farming should support one team goal.'],
+        ja: ['代理人を強攻、撃破、異常、支援で整理。', 'F2P編成は上限より安定循環を先に確保。', 'バナー、音動機、ドライブは同じ編成目標へ。'],
+      },
+    },
   },
   nte: {
     'photo-mode-guide': {
@@ -243,6 +267,10 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
       { href: '/zzz/version', label: { zh: 'v3.1 专题', en: 'v3.1 hub', ja: 'v3.1特集' }, description: { zh: '当前代理人、奖励和平台入口。', en: 'Current agents, rewards, and platform routes.', ja: '現在代理人、報酬、平台。' } },
       { href: '/zzz/teams', label: { zh: '配队模拟器', en: 'ZZZ team builder', ja: 'ZZZ編成ツール' }, description: { zh: '抽前先看当前代理人能进哪些队伍。', en: 'Check best teams and agent synergy before pulling.', ja: '引く前に編成相性を確認。' } },
     ],
+    'team-building-guide': [
+      { href: '/zzz/guides/meta-teams-v3-guide', label: { zh: 'v3.1 最强队伍', en: 'Best v3.1 teams', ja: 'v3.1最強編成' }, description: { zh: '从通用配队继续看当前版本队伍优先级。', en: 'Move from team basics into current meta priorities.', ja: '基本編成から現在メタへ。' } },
+      { href: '/zzz/guides/w-engine-guide', label: { zh: '音擎优先级', en: 'W-Engine priority', ja: '音動機優先度' }, description: { zh: '队伍确定后再判断是否追专属音擎。', en: 'After team roles are set, decide whether signatures are worth chasing.', ja: '編成後に餅武器価値を判断。' } },
+    ],
     'v3-0-version-guide': [
       { href: '/zzz/guides/banner-schedule-guide', label: { zh: '当前卡池', en: 'Current banners', ja: '現在バナー' }, description: { zh: '先看 3.1 当前代理人、复刻和菲林规划。', en: 'Check live v3.1 agents, reruns, and Polychrome planning.', ja: 'v3.1代理人、復刻、菲林計画を確認。' } },
       { href: '/zzz/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '回顾版本前先补当前可领资源。', en: 'Claim live rewards before using the version recap.', ja: '振り返り前に現在の報酬を回収。' } },
@@ -262,6 +290,10 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
     'w-engine-guide': [
       { href: '/zzz/guides/banner-schedule-guide', label: { zh: '当前卡池', en: 'Current banners', ja: '現在バナー' }, description: { zh: '先确认代理人是否到手。', en: 'Check whether the agent is secured.', ja: '代理人確保を確認。' } },
       { href: '/zzz/teams', label: { zh: '配队模拟器', en: 'Team builder', ja: '編成ツール' }, description: { zh: '按队伍定位决定是否追专属音擎。', en: 'Use team role and synergy before chasing signatures.', ja: '編成役割で餅武器優先度を判断。' } },
+    ],
+    'meta-teams-v3-guide': [
+      { href: '/zzz/teams', label: { zh: '配队模拟器', en: 'ZZZ team builder', ja: 'ZZZ編成ツール' }, description: { zh: '把推荐队伍落到你的角色池。', en: 'Map meta teams onto your own roster.', ja: '推奨編成を手持ちに合わせる。' } },
+      { href: '/zzz/guides/banner-schedule-guide', label: { zh: '当前卡池', en: 'Current banners', ja: '現在バナー' }, description: { zh: '按队伍缺口决定抽卡优先级。', en: 'Use team gaps to set pull priority.', ja: '編成不足でガチャ優先度を決める。' } },
     ],
     'drive-disc-guide': [
       { href: '/zzz/guides/w-engine-guide', label: { zh: '音擎指南', en: 'W-Engine guide', ja: '音動機攻略' }, description: { zh: '配装和武器一起看。', en: 'Read gear and weapons together.', ja: '装備と武器を一緒に。' } },
