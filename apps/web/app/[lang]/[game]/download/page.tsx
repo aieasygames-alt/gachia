@@ -201,26 +201,43 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
   ananta: {
     officialUrl: 'https://www.anantagame.com/',
     status: {
-      zh: '无限大仍以官网预注册、测试与平台愿望单为核心；正式下载和上线时间请等待官方确认。',
-      en: 'Ananta remains centered on preregistration, tests, and store wishlists; wait for official confirmation on downloads and launch timing.',
-      ja: 'Anantaは事前登録、テスト、ストアウィッシュリスト段階です。正式DLと配信時期は公式確認を待ってください。',
+      zh: '无限大官网已更新为 2027年1月15日全球上线，平台为 PS5、PC、Android 和 iOS；预下载、包体和区服仍以官方入口为准。',
+      en: 'Ananta is listed for global release on January 15, 2027, on PS5, PC, Android, and iOS; preload, package size, and servers still follow official entries.',
+      ja: 'Anantaは2027年1月15日グローバル配信予定で、対応はPS5、PC、Android、iOSです。事前DL、容量、サーバーは公式入口を確認してください。',
     },
     intro: {
-      zh: '集中查看无限大官网、下载、公测时间、预注册、无抽卡、网易和配置问题。',
-      en: 'Covers Ananta official site, download, release timing, preregistration, no-gacha model, NetEase, and specs.',
-      ja: '公式、DL、リリース時期、事前登録、ガチャなし、NetEase、環境検索を整理。',
+      zh: '集中查看无限大官网、2027年1月15日上线、PS5、PC、Android、iOS、预下载、无抽卡、网易和配置问题。',
+      en: 'Covers Ananta official site, January 15 2027 launch, PS5, PC, Android, iOS, preload, no-gacha model, NetEase, and specs.',
+      ja: '公式、2027年1月15日配信、PS5、PC、Android、iOS、事前DL、ガチャなし、NetEase、環境検索を整理。',
     },
     officialNote: {
-      zh: '如正式公测日期、平台下载和商业模式细节未最终公布，请以官网、预注册页和官方公告为准。',
-      en: 'If release date, platform downloads, or monetization details are not finalized, follow the official site, preregistration page, and notices.',
-      ja: '正式リリース日、DL、収益モデル詳細が未確定の場合、公式サイトと事前登録告知を基準にしてください。',
+      zh: '发布日期和平台已可按官方最新信息处理；具体开服时间、预下载开启、PC 配置、账号互通和商业模式细节仍等待官方后续公告。',
+      en: 'The release date and platforms can now follow the latest official wording; exact server time, preload, PC specs, cross-save, and monetization details still need later notices.',
+      ja: '配信日と対応機種は最新公式情報に従えますが、正確な開始時刻、事前DL、PC環境、クロスセーブ、収益モデル詳細は続報待ちです。',
     },
-    platforms: unreleasedPlatforms(),
-    specs: specs('先按开放世界动作游戏准备 PC / 移动端空间，最终配置以官方下载页为准。', 'Prepare PC/mobile storage for an open-world action game; final specs should follow the official download page.', 'オープンワールドアクション向けに容量を準備し、最終環境は公式DLページを確認。'),
+    platforms: [
+      platform('PlayStation 5', '已确认平台', 'Confirmed platform', '対応予定', '关注 PlayStation Store 页面、预载、账号区域和主机版本说明。', 'Watch the PlayStation Store page, preload, account region, and console-version notes.', 'PS Store、事前DL、アカウント地域、コンソール版情報を確認。'),
+      platform('PC', '已确认平台', 'Confirmed platform', '対応予定', '关注官网启动器、配置要求、预下载包体和登录方式。', 'Check the official launcher, specs, preload package, and login method.', '公式ランチャー、必要環境、事前DL容量、ログイン方式を確認。'),
+      platform('iOS / Android', '已确认平台', 'Confirmed platform', '対応予定', '移动端下载前确认商店预约、设备要求、资源包大小和地区开放。', 'Before mobile download, confirm store reservation, device requirements, asset size, and regional access.', 'モバイルDL前にストア予約、端末要件、追加データ容量、地域対応を確認。'),
+    ],
+    specs: specs('先按开放世界动作游戏准备 PC / 移动端空间；PS5、PC、Android、iOS 的最终配置和容量以官方下载页为准。', 'Prepare storage for an open-world action game; final PS5, PC, Android, and iOS specs and size should follow the official download page.', 'オープンワールドアクション向けに容量を準備し、PS5/PC/Android/iOSの最終環境と容量は公式DLページを確認。'),
     cloud: cloudUnreleased(),
     crossPlay: unreleasedCrossPlay(),
-    nextLinks: commonLinks('ananta', 'preregistration-no-gacha-guide'),
-    faq: unreleasedFaq('无限大', 'Ananta', 'Ananta'),
+    nextLinks: commonLinks('ananta', 'release-date-beta-pc-faq'),
+    faq: [
+      {
+        question: { zh: '无限大什么时候上线？', en: 'When does Ananta release?', ja: 'Anantaの配信日はいつですか？' },
+        answer: { zh: '当前官网信息显示全球上线日期为 2027年1月15日。', en: 'The current official-site wording lists global release on January 15, 2027.', ja: '現在の公式情報ではグローバル配信日は2027年1月15日です。' },
+      },
+      {
+        question: { zh: '无限大有哪些平台？', en: 'Which Ananta platforms are confirmed?', ja: 'Anantaの対応プラットフォームは？' },
+        answer: { zh: 'PS5、PC、Android 和 iOS 是当前确认平台；其他平台等待官方后续说明。', en: 'PS5, PC, Android, and iOS are currently confirmed; wait for official updates on any other platforms.', ja: '現時点ではPS5、PC、Android、iOSが確認済みです。その他は続報待ちです。' },
+      },
+      {
+        question: { zh: '现在能下载无限大吗？', en: 'Can I download Ananta now?', ja: 'Anantaは今DLできますか？' },
+        answer: { zh: '上线前请只使用官网、官方商店或官方测试资格入口，避免第三方安装包。', en: 'Before launch, use only the official site, official stores, or official test access, and avoid third-party installers.', ja: '配信前は公式サイト、公式ストア、公式テスト入口のみ利用し、非公式インストーラは避けてください。' },
+      },
+    ],
   },
   endfield: {
     officialUrl: 'https://endfield.hypergryph.com/',

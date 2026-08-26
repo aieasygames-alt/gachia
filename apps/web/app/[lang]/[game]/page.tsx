@@ -58,9 +58,9 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     ja: '帰環のキャラビルド、武器データ、攻略百科をまとめ、全キャラのスキルデータ、役割、ビルド、おすすめ育成を整理。ゲームの基礎理解と現在の育成方針を素早くつかめるので、迷わず次のページへ進めます。図鑑と攻略特集も継続更新中です。',
   },
   ananta: {
-    zh: '无限大角色图鉴、武器数据与攻略百科，介绍网易开发的无抽卡开放世界玩法、角色获取方式、基础战斗理解和养成路线，方便玩家在了解游戏设定后快速进入角色与武器页面并继续查看攻略入口，还能补看版本专题。',
-    en: 'Ananta character builds, weapon database, and guides. This NetEase open-world game uses a no-gacha model, with unlock paths, progression notes, weapons, and build planning essentials.',
-    ja: '無限大のキャラビルド、武器データ、攻略百科を整理し、NetEase のガチャなしオープンワールド設計、キャラ解放方法、基礎戦闘、育成導線をわかりやすく案内します。入門後の次のページも探しやすい構成で、版本特集も見つけやすいです。',
+    zh: '无限大（Ananta）角色图鉴、下载入口与攻略百科，更新 2027年1月15日全球上线、PS5、PC、Android、iOS、重霄城市开放世界、no-gacha 角色获取和上线前准备信息。',
+    en: 'Ananta character database, download hub, and guides updated for the January 15, 2027 global launch, PS5, PC, Android, iOS, Chongxiao city gameplay, no-gacha character acquisition, and pre-launch planning.',
+    ja: 'Anantaのキャラ図鑑、DL入口、攻略百科を、2027年1月15日グローバル配信、PS5、PC、Android、iOS、Chongxiao都市OW、ガチャなし、配信前準備に合わせて更新。',
   },
   endfield: {
     zh: '《明日方舟：终末地》是鹰角网络开发的开放世界动作 RPG，背景来自明日方舟 IP。页面介绍博士在塔洛斯 II 号星建立据点、指挥干员实时战斗、探索地图与版本节点，方便测试期和入坑期快速查阅并继续进入攻略页，同时保留测试专题入口。',
@@ -112,9 +112,9 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
     ja: '帰環（Guihuan）は二次元オープンワールドアドベンチャーゲームです。Gachiaではキャラ図鑑、武器データベース、ビルドおすすめ、攻略百科を提供し、プレイヤーの迅速なスタートとキャラ育成をサポートします。',
   },
   ananta: {
-    zh: '无限大（Ananta）是网易旗下 Naked Rain 工作室开发的开放世界动作游戏（前称 Project Mugen），采用无抽卡模式——所有角色通过游戏进程免费获取。Gachia 提供角色图鉴、武器数据库、配装推荐与攻略百科，覆盖全部已公布角色。',
-    en: 'Ananta (formerly Project Mugen) is an open-world action game by Naked Rain / NetEase with a no-gacha model — all characters are unlocked through gameplay for free. Gachia offers a character database, weapon encyclopedia, build recommendations, and strategy guides for all announced characters.',
-    ja: '無限大（Ananta、旧称Project Mugen）はNaked Rain / NetEaseのオープンワールドアクションゲーム。ガチャなしモデルで全キャラがゲーム進行で無料解放されます。Gachiaではキャラ図鑑、武器データベース、ビルドおすすめ、攻略百科を提供。',
+    zh: '无限大（Ananta，前称 Project Mugen）是网易 Naked Rain 工作室开发的都市开放世界动作游戏。官网与 gamescom 2026 信息显示，游戏计划于 2027年1月15日全球上线，平台为 PS5、PC、Android 和 iOS。Gachia 会持续整理重霄城市玩法、no-gacha 角色获取、下载配置、角色图鉴和上线前准备。',
+    en: 'Ananta (formerly Project Mugen) is an urban open-world action game by Naked Rain / NetEase. The official site and gamescom 2026 update list a January 15, 2027 global launch on PS5, PC, Android, and iOS. Gachia tracks Chongxiao city gameplay, no-gacha character acquisition, downloads, specs, characters, and pre-launch planning.',
+    ja: 'Ananta（旧Project Mugen）はNaked Rain / NetEaseの都市オープンワールドアクションゲームです。公式サイトとgamescom 2026更新では、2027年1月15日にPS5、PC、Android、iOS向けグローバル配信予定。GachiaではChongxiao都市玩法、ガチャなし、DL、環境、キャラ、配信前準備を整理します。',
   },
   endfield: {
     zh: '《明日方舟：终末地》（Arknights: Endfield）是鹰角网络（Hypergryph）开发的开放世界动作 RPG，以明日方舟 IP 为背景，玩家扮演博士在塔拉二号星球上建立据点、指挥干员进行即时战斗和探索。Gachia 提供角色图鉴、武器数据库、配装推荐与攻略百科，覆盖全部可玩角色。',
@@ -740,7 +740,7 @@ const FEATURED_GUIDE_IDS: Record<string, string[]> = {
   nte: ['999-nights-mode-guide', 'shinku-iroi-pull-plan', 'v1-2-999-nights-guide'],
   zzz: ['banner-schedule-guide', 'anniversary-rewards-codes-plan', 'v3-1-anniversary-xbox-guide'],
   guihuan: ['test-recruit-international-download-faq', 'official-release-company-faq', 'test-release-timeline-guide'],
-  ananta: ['gameplay-city-no-gacha-comparison-faq', 'release-date-beta-pc-faq', 'preregistration-no-gacha-guide'],
+  ananta: ['release-date-beta-pc-faq', 'download-install-guide', 'gameplay-city-no-gacha-comparison-faq'],
   endfield: ['official-download-specs-homecoming-faq', 'homecoming-operators-map-route', 'blueprint-aic-factory-guide'],
   sea: ['identity-v-signin-screenshot-rewards-guide', 'lost-sea-new-islands-ship-prep-guide', 'sea-of-remnants-p2w-gacha-explained'],
   skjh: ['official-pc-download-faq', 'first-2-hours-starter-route', 'base-location-anti-raid-plan'],

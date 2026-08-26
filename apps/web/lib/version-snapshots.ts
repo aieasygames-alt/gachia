@@ -346,27 +346,32 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   ananta: {
     gameId: 'ananta',
-    currentVersion: 'preregistration watch',
-    releaseDate: '2026-08-14',
+    currentVersion: 'global launch prep',
+    releaseDate: '2027-01-15',
     status: 'watch',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     summary: {
-      zh: '无限大继续以预注册、beta、gameplay、PC、Steam、Xbox 和官方未定档口径承接。',
-      en: 'Ananta stays in preregistration watch mode, routing beta, gameplay, PC, Steam, Xbox, and official-status searches.',
-      ja: 'Anantaは事前登録注目として、beta、gameplay、PC、Steam、Xbox、公式状態を案内します。',
+      zh: '无限大已进入 2027年1月15日全球上线准备，承接 release date、download、PS5、PC、Android、iOS、gameplay 和 no-gacha 搜索。',
+      en: 'Ananta is now in January 15, 2027 global launch prep, routing release date, download, PS5, PC, Android, iOS, gameplay, and no-gacha searches.',
+      ja: 'Anantaは2027年1月15日のグローバル配信準備段階として、release date、DL、PS5、PC、Android、iOS、gameplay、ガチャなし検索を案内します。',
     },
     whatChanged: [
       {
-        zh: '页面不承诺日期，优先分清官方已知信息和社区推测。',
-        en: 'The page should not promise a date; it separates official facts from community speculation.',
-        ja: '日付は約束せず、公式情報とコミュニティ推測を分けます。',
+        zh: '官网与 gamescom 2026 信息更新后，全球上线日期按 2027年1月15日处理。',
+        en: 'After the official site and gamescom 2026 update, the global launch date is handled as January 15, 2027.',
+        ja: '公式サイトとgamescom 2026更新後、グローバル配信日は2027年1月15日として扱います。',
+      },
+      {
+        zh: '平台口径更新为 PS5、PC、Android 和 iOS；Steam/Xbox 不再作为确认平台承接。',
+        en: 'Platform wording now uses PS5, PC, Android, and iOS; Steam/Xbox are no longer treated as confirmed platforms.',
+        ja: 'プラットフォーム表記はPS5、PC、Android、iOSへ更新し、Steam/Xboxは確定扱いにしません。',
       },
     ],
     firstSteps: [
       {
-        zh: '先看官方预注册与新闻，再看 beta / gameplay 汇总。',
-        en: 'Check official preregistration and news first, then beta/gameplay summaries.',
-        ja: 'まず公式事前登録とニュースを確認し、beta/gameplay要約へ進みます。',
+        zh: '先确认 PS5、PC、Android、iOS 的官方商店/官网入口，再看预下载和 beta 资格。',
+        en: 'Confirm PS5, PC, Android, and iOS official/store entries first, then preload and beta eligibility.',
+        ja: 'まずPS5、PC、Android、iOSの公式/ストア入口を確認し、事前DLとbeta資格を確認します。',
       },
       {
         zh: '搜索词里的“无限大符号”是歧义词，不承接到游戏内容。',
@@ -375,10 +380,10 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       },
     ],
     links: [
-      { type: 'download', href: '/ananta/download', label: { zh: '下载 / 预注册', en: 'Download / Prereg', ja: 'DL / 事前登録' } },
+      { type: 'download', href: '/ananta/download', label: { zh: 'PS5 / PC / 移动端', en: 'PS5 / PC / Mobile', ja: 'PS5 / PC / モバイル' } },
       { type: 'codes', href: '/ananta/items', label: { zh: '资料入口', en: 'Data hub', ja: 'データ' } },
       { type: 'characters', href: '/ananta/characters', label: { zh: '角色', en: 'Characters', ja: 'キャラ' } },
-      { type: 'guides', href: '/ananta/guides/preregistration-no-gacha-guide', label: { zh: '官方已知信息', en: 'Known info', ja: '既知情報' } },
+      { type: 'guides', href: '/ananta/guides/release-date-beta-pc-faq', label: { zh: '上线日期 FAQ', en: 'Release FAQ', ja: '配信日FAQ' } },
     ],
   },
   guihuan: {
