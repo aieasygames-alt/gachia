@@ -286,6 +286,38 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> 
         ja: ['国際版の事前登録は公式サイトで受付中、CBT資格と連動。', '報酬詳細、データ削除規則、課金は未発表のため随時更新。', 'CBTデータは正式版に引き継がれないことが多いため育成投資は控えめに。'],
       },
     },
+    'is-roco-kingdom-free-to-play': {
+      heading: { zh: '快速结论：免费游玩，官方确认无 Pay-to-Win', en: 'Quick answer: free to play, with developer-confirmed no pay-to-win', ja: '要点：基本無料、課金優遇なし（公式）' },
+      points: {
+        zh: ['国际服全平台免费下载游玩（F2P）。', '官方明确 PvP 无 Pay-to-Win，400+ 精灵全部游戏内可获得。', '10/27 首测为删档测试，不含内购。'],
+        en: ['The global version is free to play on every platform.', 'PvP is developer-confirmed no pay-to-win, and all 400+ Jinies are earnable in-game.', 'The October 27 CBT is wipe-based with no purchases.'],
+        ja: ['国際版は全プラットフォームで基本無料。', 'PvPは課金優遇なし（公式）、400種以上は全てゲーム内で獲得可能。', '10/27 CBTはデータ消去型で課金なし。'],
+      },
+    },
+    'roco-kingdom-release-date-guide': {
+      heading: { zh: '快速结论：正式版日期未公布，10/27 首测先行', en: 'Quick answer: no launch date yet; the October 27 CBT comes first', ja: '要点：正式版日は未発表、まず10/27 CBT' },
+      points: {
+        zh: ['正式版发售日尚未公布，官方已确认长期路线图（新赛季/地图/剧情）。', '已确认节点：8/26–10/20 报名、10/23 查资格、10/27 首测。', '正式版登陆 PC/PS5/Xbox/iOS/Android，上线即支持跨平台联机。'],
+        en: ['No specific launch date is announced; a long-term roadmap (seasons, maps, story) is confirmed.', 'Confirmed milestones: sign-ups Aug 26–Oct 20, eligibility check Oct 23, CBT Oct 27.', 'The full release targets PC/PS5/Xbox/iOS/Android with day-one cross-play.'],
+        ja: ['正式版リリース日は未発表。シーズン・マップ・ストーリーの長期ロードマップは確定。', '申込8/26–10/20、資格確認10/23、CBT10/27。', '正式版はPC/PS5/Xbox/iOS/Android、クロスプレイ対応。'],
+      },
+    },
+    'roco-kingdom-vs-pokemon': {
+      heading: { zh: '快速结论：想共享世界选 Roco，想单机叙事选宝可梦', en: 'Quick answer: pick Roco for a shared world, Pokemon for solo narrative', ja: '要点：共有世界ならロコ、シングルならポケモン' },
+      points: {
+        zh: ['核心循环相似（回合制收集养成），世界结构完全不同。', 'Roco Kingdom 免费跨平台、社交深度高；宝可梦买断制单机叙事强。', 'Roco 有 16 年中国 IP 底蕴（3.5 亿注册玩家），非简单模仿。'],
+        en: ['Similar core loop (turn-based collecting), very different world structure.', 'Roco Kingdom is free, cross-platform, and socially deep; Pokemon is premium and narrative-strong.', 'Roco has a 16-year Chinese IP pedigree (350M+ registered players), not a simple clone.'],
+        ja: ['基本ループは類似、世界設計は大きく異なる。', 'ロコは無料・クロスプラットフォーム・ソーシャル重視。ポケモンは買い切り・ストーリー重視。', 'ロコは16年の中国IP（登録3.5億人以上）。'],
+      },
+    },
+    'roco-kingdom-crossplay-guide': {
+      heading: { zh: '快速结论：正式版 day-one 全平台联机，CBT 仅三端', en: 'Quick answer: day-one crossplay at launch; CBT covers three platforms', ja: '要点：正式版は全機種クロスプレイ、CBTは3平台' },
+      points: {
+        zh: ['正式版 PC/PS5/Xbox/移动端上线即支持跨平台联机与进度互通。', '10/27 首测仅 PC、iOS、Android 可玩，主机不参与。', '联机玩法含组队冒险、共骑、家园与友好决斗。'],
+        en: ['Day-one crossplay and cross-platform progression across PC/PS5/Xbox/mobile at launch.', 'The October 27 CBT is PC, iOS, and Android only — no consoles.', 'Co-op covers party exploration, co-riding, homes, and friendly duels.'],
+        ja: ['正式版はPC/PS5/Xbox/モバイルでクロスプレイと進行共有対応。', '10/27 CBTはPC・iOS・Androidのみ。', '協力はパーティ探索、共乗り、ホーム、友好決闘。'],
+      },
+    },
   },
 };
 
@@ -442,6 +474,22 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
     'pre-registration-rewards-faq': [
       { href: '/roco/guides/cbt-registration-guide', label: { zh: 'CBT 报名指南', en: 'CBT registration', ja: 'CBT登録ガイド' }, description: { zh: '福利之外，报名入口和必填问卷在这里。', en: 'Beyond rewards, find the signup page and questionnaire here.', ja: '報酬以外に申込入口と必須アンケートはこちら。' } },
       { href: '/roco/guides/platforms-and-download-guide', label: { zh: '平台与下载', en: 'Platforms & download', ja: '平台とDL' }, description: { zh: '确认可玩平台后规划设备。', en: 'Plan your device after checking supported platforms.', ja: '対応平台確認後に端末を準備。' } },
+    ],
+    'is-roco-kingdom-free-to-play': [
+      { href: '/roco/guides/cbt-registration-guide', label: { zh: 'CBT 报名指南', en: 'CBT registration', ja: 'CBT登録ガイド' }, description: { zh: '免费入坑，先报名 10/27 首测。', en: 'Free to start — sign up for the October 27 CBT.', ja: '無料で開始。まず10/27 CBTに申込。' } },
+      { href: '/roco/guides/roco-kingdom-vs-pokemon', label: { zh: '对比宝可梦', en: 'vs Pokemon', ja: 'ポケモン比較' }, description: { zh: '和买断制精灵收集游戏怎么选。', en: 'How it compares to premium creature collectors.', ja: '買い切り収集ゲームとの違い。' } },
+    ],
+    'roco-kingdom-release-date-guide': [
+      { href: '/roco/guides/cbt-registration-guide', label: { zh: 'CBT 报名指南', en: 'CBT registration', ja: 'CBT登録ガイド' }, description: { zh: '等正式版之前，先参加 10/27 首测。', en: 'While waiting for launch, join the October 27 CBT.', ja: '正式版待ちの間に10/27 CBTへ。' } },
+      { href: '/roco/guides/platforms-and-download-guide', label: { zh: '平台与下载', en: 'Platforms & download', ja: '平台とDL' }, description: { zh: '确认各阶段可玩平台。', en: 'Check platforms per release phase.', ja: '各段階の対応平台を確認。' } },
+    ],
+    'roco-kingdom-vs-pokemon': [
+      { href: '/roco/guides/is-roco-kingdom-free-to-play', label: { zh: '免费模式详解', en: 'F2P model', ja: 'F2Pモデル' }, description: { zh: '商业模式差异的具体说明。', en: 'Details on the monetization difference.', ja: '課金モデルの違いを詳しく。' } },
+      { href: '/roco/guides/co-op-and-social-guide', label: { zh: '联机与社交', en: 'Co-op & social', ja: '協力・ソーシャル' }, description: { zh: '共享世界的社交玩法一览。', en: 'See the shared-world social features.', ja: '共有世界のソーシャル機能。' } },
+    ],
+    'roco-kingdom-crossplay-guide': [
+      { href: '/roco/guides/co-op-and-social-guide', label: { zh: '联机与社交指南', en: 'Co-op guide', ja: '協力ガイド' }, description: { zh: '跨平台组队能玩什么。', en: 'What cross-platform parties can do together.', ja: 'クロスプレイでできること。' } },
+      { href: '/roco/guides/platforms-and-download-guide', label: { zh: '平台与下载', en: 'Platforms & download', ja: '平台とDL' }, description: { zh: '各平台下载入口。', en: 'Download entry points per platform.', ja: '各平台のDL入口。' } },
     ],
   },
 };
