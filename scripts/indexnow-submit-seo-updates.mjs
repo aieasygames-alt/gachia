@@ -44,6 +44,9 @@ const PRIORITY_GUIDES = [
   ['roco', 'battle-system-guide'],
   ['roco', 'co-op-and-social-guide'],
   ['roco', 'pre-registration-rewards-faq'],
+  ['roco-cn', 'redeem-codes-cn'],
+  ['roco-cn', 'starter-guide-cn'],
+  ['roco-cn', 's2-season-guide'],
 ];
 
 const PRIORITY_PATHS = [
@@ -101,6 +104,30 @@ const PRIORITY_PATHS = [
   '/en/roco/characters/catapawn',
   '/zh/roco/characters/dustler',
   '/en/roco/characters/dustler',
+  '/zh/roco-cn',
+  '/en/roco-cn',
+  '/zh/roco-cn/guides',
+  '/en/roco-cn/guides',
+  '/zh/roco-cn/characters',
+  '/en/roco-cn/characters',
+  '/zh/roco-cn/redeem-codes',
+  '/en/roco-cn/redeem-codes',
+  '/zh/roco-cn/characters/dimo',
+  '/en/roco-cn/characters/dimo',
+  '/zh/roco-cn/characters/huohua',
+  '/en/roco-cn/characters/huohua',
+  '/zh/roco-cn/characters/shuilanlan',
+  '/en/roco-cn/characters/shuilanlan',
+  '/zh/roco-cn/characters/miaomiao',
+  '/en/roco-cn/characters/miaomiao',
+  '/zh/roco-cn/characters/huangjia-shijiu',
+  '/en/roco-cn/characters/huangjia-shijiu',
+  '/zh/roco-cn/characters/luoyin',
+  '/en/roco-cn/characters/luoyin',
+  '/zh/roco-cn/characters/xuewawa',
+  '/en/roco-cn/characters/xuewawa',
+  '/zh/roco-cn/characters/youguang-rongrong',
+  '/en/roco-cn/characters/youguang-rongrong',
 ];
 
 function usage() {
