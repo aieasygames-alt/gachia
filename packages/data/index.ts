@@ -734,6 +734,84 @@ export {
   getRedeemCodeReward as getSkjhRedeemCodeReward,
 } from './games/skjh/redeem-codes';
 
+// ============================================================
+// 洛克王国：世界 — 国际服 (Roco Kingdom) 与 国服 (roco-cn)
+// ============================================================
+
+// Roco Kingdom (global) exports
+export {
+  rocoGuides,
+  getRocoGuideTitle,
+  getRocoGuideContent,
+  getRocoGuideSummary,
+  getRocoGuideCategory,
+  getRocoGuideCategories,
+  getRocoGuidesByCategory,
+  getRocoGuideById,
+  getRocoGuideSlugs,
+  getRocoGuideFaqQuestion,
+  getRocoGuideFaqAnswer,
+  ROCO_GUIDE_CATEGORIES,
+} from './games/roco/guides';
+export type { RocoGuide, RocoGuideFaq } from './games/roco/guides';
+export {
+  rocoCharacters,
+  getRocoCharacterById,
+  getRocoCharacterName,
+  getRocoCharacterDescription,
+  getRocoCharacterImage,
+} from './games/roco/characters';
+export {
+  rocoMaterials,
+  getRocoMaterialName,
+  getRocoMaterialById,
+} from './games/roco/items';
+export {
+  rocoWeapons,
+  getRocoWeaponName,
+  getRocoWeaponById,
+  getRocoWeaponEffect,
+  getRocoWeaponSource,
+} from './games/roco/weapons';
+export type { RocoJinie, RocoMaterial } from './games/roco/types';
+
+// Roco Kingdom CN exports
+export {
+  rocoCnGuides,
+  getRocoCnGuideTitle,
+  getRocoCnGuideContent,
+  getRocoCnGuideSummary,
+  getRocoCnGuideCategory,
+  getRocoCnGuideCategories,
+  getRocoCnGuidesByCategory,
+  getRocoCnGuideById,
+  getRocoCnGuideSlugs,
+  getRocoCnGuideFaqQuestion,
+  getRocoCnGuideFaqAnswer,
+  ROCO_CN_GUIDE_CATEGORIES,
+} from './games/roco-cn/guides';
+export type { RocoCnGuide, RocoCnGuideFaq } from './games/roco-cn/guides';
+export {
+  rocoCnCharacters,
+  getRocoCnCharacterById,
+  getRocoCnCharacterName,
+  getRocoCnCharacterDescription,
+  getRocoCnCharacterImage,
+} from './games/roco-cn/characters';
+export {
+  rocoCnMaterials,
+  getRocoCnMaterialName,
+  getRocoCnMaterialById,
+} from './games/roco-cn/items';
+export {
+  rocoCnWeapons,
+  getRocoCnWeaponName,
+  getRocoCnWeaponById,
+  getRocoCnWeaponEffect,
+  getRocoCnWeaponSource,
+} from './games/roco-cn/weapons';
+export type { RocoCnJinie, RocoCnMaterial } from './games/roco-cn/types';
+
 // --- Material-Character Reverse Lookup ---
 export { getCharactersNeedingMaterial, type MaterialCharacter } from './material-characters';
 
@@ -789,6 +867,14 @@ export async function getGameData(gameId: GameId): Promise<GameData> {
     }
     case 'skjh': {
       const { characters, weapons, items, tierLists } = await import('./games/skjh');
+      return { characters, weapons, items, tierLists };
+    }
+    case 'roco': {
+      const { characters, weapons, items, tierLists } = await import('./games/roco');
+      return { characters, weapons, items, tierLists };
+    }
+    case 'roco-cn': {
+      const { characters, weapons, items, tierLists } = await import('./games/roco-cn');
       return { characters, weapons, items, tierLists };
     }
   }

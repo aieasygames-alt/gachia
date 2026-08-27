@@ -70,12 +70,13 @@ export interface LiveCalendarEvent {
   priority: number;
 }
 
-export const LIVE_UPDATED_AT = '2026-08-19';
+export const LIVE_UPDATED_AT = '2026-08-27';
 
 export const HOMEPAGE_PRIORITY_GAMES: GameId[] = [
   'genshin',
   'wuwa',
   'zzz',
+  'roco',
   'skjh',
   'endfield',
   'nte',
@@ -83,6 +84,7 @@ export const HOMEPAGE_PRIORITY_GAMES: GameId[] = [
   'sea',
   'ananta',
   'guihuan',
+  'roco-cn',
 ];
 
 export const LIVE_BANNERS: LiveBanner[] = [
@@ -140,6 +142,23 @@ export const LIVE_BANNERS: LiveBanner[] = [
 ];
 
 export const LIVE_VERSION_UPDATES: LiveVersionUpdate[] = [
+  {
+    gameId: 'roco',
+    title: {
+      zh: 'Roco Kingdom「等等鸭测试」CBT 报名与开测',
+      en: 'Roco Kingdom "Quack Quack Test" CBT Sign-up and Launch',
+      ja: 'Roco Kingdom「Quack Quack Test」CBT応募と開始',
+    },
+    summary: {
+      zh: '国际服 CBT「等等鸭测试（Quack Quack Test）」10/27 开测，报名 8/26–10/20 进行中，需官网问卷；CBT 仅 PC/iOS/Android。',
+      en: 'Global CBT "Quack Quack Test" starts Oct 27; sign-ups run Aug 26–Oct 20 via the official questionnaire. The CBT covers PC, iOS, and Android only.',
+      ja: '国際CBT「Quack Quack Test」は10/27開始。応募は8/26〜10/20で公式アンケートが必要です。CBT対応はPC/iOS/Androidのみ。',
+    },
+    href: '/roco/guides/cbt-registration-guide',
+    status: 'upcoming',
+    updatedAt: LIVE_UPDATED_AT,
+    priority: 1,
+  },
   {
     gameId: 'genshin',
     title: {
@@ -351,6 +370,22 @@ export const LIVE_CODE_SUMMARIES: LiveCodeSummary[] = [
 
 export const LIVE_GUIDES: LiveGuideLink[] = [
   {
+    gameId: 'roco',
+    title: {
+      zh: 'Roco Kingdom「等等鸭测试」注册指南',
+      en: 'Roco Kingdom "Quack Quack Test" Sign-up Guide',
+      ja: 'Roco Kingdom「Quack Quack Test」登録ガイド',
+    },
+    summary: {
+      zh: '国际服 CBT（10/27 开测）报名 8/26–10/20：官网问卷、邀请推荐、PC/iOS/Android 平台与语言说明。',
+      en: 'Global CBT (Oct 27) sign-ups run Aug 26–Oct 20: official questionnaire, referral invites, PC/iOS/Android platforms, and language notes.',
+      ja: '国際CBT（10/27開始）応募は8/26〜10/20：公式アンケート、紹介リンク、対応プラットフォームと言語。',
+    },
+    href: '/roco/guides/cbt-registration-guide',
+    updatedAt: LIVE_UPDATED_AT,
+    priority: 1,
+  },
+  {
     gameId: 'sea',
     title: {
       zh: '遗忘之海 Steam / gacha / solo FAQ',
@@ -449,6 +484,46 @@ export const LIVE_GUIDES: LiveGuideLink[] = [
 ];
 
 export const LIVE_CALENDAR_EVENTS: LiveCalendarEvent[] = [
+  {
+    id: 'roco-cbt-signup-closes',
+    gameId: 'roco',
+    type: 'event_end',
+    title: {
+      zh: 'Roco Kingdom CBT 报名截止',
+      en: 'Roco Kingdom CBT Sign-up Deadline',
+      ja: 'Roco Kingdom CBT応募締切',
+    },
+    summary: {
+      zh: '「等等鸭测试（Quack Quack Test）」报名于 10/20 截止，须在官网完成问卷；10/23 起可查询资格。',
+      en: 'Quack Quack Test sign-ups close Oct 20; complete the official questionnaire. Eligibility check opens Oct 23.',
+      ja: '「Quack Quack Test」応募は10/20締切。公式アンケートの完了が必要です。資格確認は10/23から。',
+    },
+    href: '/roco/guides/cbt-registration-guide',
+    startsAt: '2026-10-20',
+    timezone: 'UTC',
+    updatedAt: LIVE_UPDATED_AT,
+    priority: 1,
+  },
+  {
+    id: 'roco-cbt-2026',
+    gameId: 'roco',
+    type: 'event_start',
+    title: {
+      zh: 'Roco Kingdom「等等鸭测试」CBT 开服',
+      en: 'Roco Kingdom "Quack Quack Test" CBT Launch',
+      ja: 'Roco Kingdom「Quack Quack Test」CBT開始',
+    },
+    summary: {
+      zh: '全球首测开服（PC/iOS/Android）：下载、预约奖励、兑换码、御三家与 Jinies 图鉴；测试删档且无内购。',
+      en: 'Global CBT launch on PC/iOS/Android: downloads, pre-reg rewards, codes, starters, and the Jinies codex. Progress wipes; no IAP.',
+      ja: 'グローバルCBT開始（PC/iOS/Android）：DL、予約報酬、コード、御三家、Jinies図鑑。データ削除あり、課金なし。',
+    },
+    href: '/roco/version',
+    startsAt: '2026-10-27',
+    timezone: 'UTC',
+    updatedAt: LIVE_UPDATED_AT,
+    priority: 1,
+  },
   {
     id: 'genshin-v7-0-watch',
     gameId: 'genshin',

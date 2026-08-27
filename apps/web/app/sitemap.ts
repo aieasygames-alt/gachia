@@ -9,6 +9,8 @@ import { guihuanCharacters } from '@gachia/data/games/guihuan/characters';
 import { anantaCharacters } from '@gachia/data/games/ananta/characters';
 import { endfieldCharacters } from '@gachia/data/games/endfield/characters';
 import { seaCharacters } from '@gachia/data/games/sea/characters';
+import { rocoCharacters } from '@gachia/data/games/roco/characters';
+import { rocoCnCharacters } from '@gachia/data/games/roco-cn/characters';
 
 // Weapons
 import { genshinWeapons } from '@gachia/data/games/genshin/weapons';
@@ -33,6 +35,8 @@ import { anantaGuides } from '@gachia/data/games/ananta/guides';
 import { endfieldGuides } from '@gachia/data/games/endfield/guides';
 import { seaGuides } from '@gachia/data/games/sea/guides';
 import { skjhGuides } from '@gachia/data/games/skjh/guides';
+import { rocoGuides } from '@gachia/data/games/roco/guides';
+import { rocoCnGuides } from '@gachia/data/games/roco-cn/guides';
 
 // Materials / Items
 import { genshinMaterials } from '@gachia/data/games/genshin/items';
@@ -45,6 +49,8 @@ import { anantaMaterials } from '@gachia/data/games/ananta/items';
 import { endfieldMaterials } from '@gachia/data/games/endfield/items';
 import { seaMaterials } from '@gachia/data/games/sea/items';
 import { skjhMaterials } from '@gachia/data/games/skjh/items';
+import { rocoMaterials } from '@gachia/data/games/roco/items';
+import { rocoCnMaterials } from '@gachia/data/games/roco-cn/items';
 
 // Game-specific gear
 import { artifactSets as genshinArtifactSets } from '@gachia/data/games/genshin/artifacts';
@@ -58,14 +64,14 @@ import { getEntryUpdatedAt, hasLocalizedContent } from '@/lib/seo-metadata';
 const BASE_URL = 'https://gachia.com';
 
 // Games with real content for each category
-const CHAR_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea'] as const;
+const CHAR_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'roco'] as const;
 const WEAPON_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'] as const;
-const GUIDE_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'] as const;
+const GUIDE_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco', 'roco-cn'] as const;
 const ARTIFACT_GAMES = ['genshin', 'starrail'] as const;
 const ECHO_GAMES = ['wuwa'] as const;
 const DISK_SET_GAMES = ['nte'] as const;
 const DRIVE_DISC_GAMES = ['zzz'] as const;
-const ITEM_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'] as const;
+const ITEM_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco', 'roco-cn'] as const;
 const STATIC_SITE_PAGES = ['contact', 'privacy', 'terms', 'sitemap', 'calendar', 'tools/pull-planner'] as const;
 
 // Category routes that have real content per game
@@ -80,6 +86,8 @@ const REAL_CONTENT_ROUTES: Record<string, string[]> = {
   endfield: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'guides', 'build', 'compare', 'teams', 'map'],
   sea: ['characters', 'guides', 'items', 'tier-list', 'version', 'download', 'calculator', 'redeem-codes'],
   skjh: ['weapons', 'guides', 'items', 'redeem-codes', 'version', 'download', 'calculator', 'teams', 'map'],
+  roco: ['characters', 'guides', 'items', 'version', 'download', 'redeem-codes'],
+  'roco-cn': ['characters', 'guides', 'items', 'version', 'download', 'redeem-codes'],
 };
 
 // Revalidate every 24 hours
@@ -258,6 +266,7 @@ function getCharactersForGame(gameId: string) {
     case 'ananta': return anantaCharacters;
     case 'endfield': return endfieldCharacters;
     case 'sea': return seaCharacters;
+    case 'roco': return rocoCharacters;
     default: return [];
   }
 }
@@ -290,6 +299,8 @@ function getGuidesForGame(gameId: string) {
     case 'endfield': return endfieldGuides;
     case 'sea': return seaGuides;
     case 'skjh': return skjhGuides;
+    case 'roco': return rocoGuides;
+    case 'roco-cn': return rocoCnGuides;
     default: return [];
   }
 }
@@ -314,6 +325,8 @@ function getItemsForGame(gameId: string) {
     case 'endfield': return endfieldMaterials;
     case 'sea': return seaMaterials;
     case 'skjh': return skjhMaterials;
+    case 'roco': return rocoMaterials;
+    case 'roco-cn': return rocoCnMaterials;
     default: return [];
   }
 }

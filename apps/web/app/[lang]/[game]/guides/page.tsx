@@ -18,6 +18,8 @@ const GUIDE_DESC: Record<string, Record<string, string>> = {
   endfield: { zh: '明日方舟：终末地攻略百科，覆盖新手教程、干员培养、武器推荐、测试专题、危机合约与版本热点，方便你快速跳转到对应攻略。', en: 'Arknights: Endfield guides covering beginner tips, operator builds, weapon recommendations, test hubs, crisis content, and version-focused walkthroughs.', ja: 'アークナイツ：エンドフィールド攻略百科。初心者、オペレーター育成、武器、テスト特集、危機コンテンツ、版本トピックを整理。' },
   sea: { zh: '遗忘之海攻略百科，提供公测中心、下载安装、新手开荒、捏脸、云捏脸、配置要求和版本专题，帮助你先抓住最重要的信息，再继续深入浏览。', en: 'Sea of Remnants guides with an open beta center, download/install help, beginner routes, face sculpting, cloud sculpting, PC requirements, version hubs, and follow-up pages that help you catch the important basics before going deeper.', ja: 'シー・オブ・レムナンツ攻略百科。CBT特集、DL/インストール、初心者ルート、顔作成、クラウド作成、PC環境、版本特集をまとめています。' },
   skjh: { zh: '失控进化攻略百科，整理新手开荒、基地建设、资源科技树、基因流派、武器和公测福利，适合从版本总览一路看到账户养成。', en: 'Ashfall Evolution guides covering beginner routes, base building, resource tech, gene builds, weapons, and launch rewards so players can plan progression end to end.', ja: '失控進化攻略百科。初心者ルート、拠点建築、資源テック、遺伝子ビルド、武器、公測報酬をまとめて案内します。' },
+  roco: { zh: '《洛克王国:世界》国际服攻略百科，聚焦 CBT 报名注册、版本时间线、下载安装、精灵图鉴和兑换码，帮助你在 10 月首测前做好准备。', en: 'Roco Kingdom (Global) guides focused on CBT sign-up, version timeline, download & install, Jinie database, and redeem codes to get you ready before the October playtest.', ja: 'ロコキングダム（国際版）攻略百科。CBT登録、版本タイムライン、DL/インストール、ジニー図鑑、交換コードをまとめ、10月のテストに備えます。' },
+  'roco-cn': { zh: '《洛克王国:世界》国服攻略百科，覆盖版本专题、赛季活动、精灵图鉴、养成攻略与兑换码，内容陆续补充中。', en: 'Roco Kingdom (CN) guides covering version hubs, seasons, the Jinie database, build guides, and redeem codes — content is being added.', ja: 'ロコキングダム（中国版）攻略百科。版本特集、シーズン、ジニー図鑑、育成、交換コードをカバーし、順次追加中。' },
 };
 
 const FEATURED_GUIDE_IDS: Record<GameId, string[]> = {
@@ -31,6 +33,8 @@ const FEATURED_GUIDE_IDS: Record<GameId, string[]> = {
   endfield: ['download-install-guide', 'combat-system-guide', 'crisis-contract-guide'],
   sea: ['open-beta-version-center', 'launch-day-guide', 'download-install-guide'],
   skjh: ['week-one-live-ops-overview', 'anti-cheat-reporting-guide', 'custom-mode-community-server-guide'],
+  roco: ['cbt-registration-guide', 'starter-guide', 'what-is-roco-kingdom', 'platforms-and-download-guide'],
+  'roco-cn': [],
 };
 
 const SEA_DECISION_LINKS: Array<{
@@ -281,6 +285,10 @@ export default async function GuidesPage({
 
   if (gameId === 'skjh') {
     return await SkjhGuides({ locale, gameId });
+  }
+
+  if (gameId === 'roco') {
+    return await RocoGuides({ locale, gameId });
   }
 
   // Unsupported games
@@ -1528,6 +1536,122 @@ async function SkjhGuides({ locale, gameId }: { locale: SupportedLocale; gameId:
                 <Link
                   key={guide.id}
                   href={`/skjh/guides/${guide.id}`}
+                  className="group flex flex-col rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
+                >
+                  <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
+                    {guide.title}
+                  </h3>
+                  <p className="mb-3 flex-1 text-sm leading-relaxed text-game-text-muted">
+                    {guide.summary}
+                  </p>
+                  <GuideFreshnessMeta guide={guide} locale={locale} />
+                  <div className="flex flex-wrap gap-1.5">
+                    <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
+                      {guide.categoryLabel}
+                    </span>
+                    {guide.tags.slice(0, 3).map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
+// --- Roco Kingdom (Global) Guides ---
+
+async function RocoGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
+  const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
+  const gameConfig = GAMES.roco;
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.roco);
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+        {CATEGORY_LABELS.guides?.[locale] ?? 'Guides'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh'
+          ? `共 ${guides.length} 篇攻略`
+          : locale === 'ja'
+          ? `${guides.length} 件のガイド`
+          : `${guides.length} guides`}
+      </p>
+
+      {featuredGuides.length > 0 && (
+        <section className="mb-8">
+          <div className="mb-4 flex items-center justify-between gap-4">
+            <h2 className="text-lg font-semibold text-game-text">
+              {locale === 'zh' ? '热门攻略' : locale === 'ja' ? '注目ガイド' : 'Featured Guides'}
+            </h2>
+            <span className="text-xs text-game-text-muted">
+              {locale === 'zh' ? '先看 CBT 报名与入门路线' : locale === 'ja' ? 'CBT登録と入門ルートを優先' : 'Start with CBT signup and beginner routes'}
+            </span>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {featuredGuides.map((guide) => (
+              <Link
+                key={guide.id}
+                href={`/roco/guides/${guide.id}`}
+                className="group flex flex-col rounded-xl border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
+              >
+                <div className="mb-3 flex items-center justify-between gap-3">
+                  <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
+                    {guide.categoryLabel}
+                  </span>
+                  <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
+                </div>
+                <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-game-text-muted">
+                  {guide.summary}
+                </p>
+                <GuideFreshnessMeta guide={guide} locale={locale} />
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <div className="mb-6 flex flex-wrap gap-2">
+        {categories.map((cat) => {
+          const count = guides.filter((g) => g.category === cat).length;
+          return (
+            <a
+              key={cat}
+              href={`#category-${cat}`}
+              className="rounded-full border border-game-border bg-game-surface px-3 py-1 text-sm transition-colors hover:border-game-primary hover:text-game-primary"
+            >
+              {categoryLabels[cat] ?? cat}
+              <span className="ml-1 text-game-text-muted">({count})</span>
+            </a>
+          );
+        })}
+      </div>
+
+      {categories.map((cat) => {
+        const categoryGuides = guides.filter((g) => g.category === cat);
+        return (
+          <section key={cat} id={`category-${cat}`} className="mb-8">
+            <h2 className="mb-4 text-lg font-semibold text-game-text">
+              {categoryLabels[cat] ?? cat}
+            </h2>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {categoryGuides.map((guide) => (
+                <Link
+                  key={guide.id}
+                  href={`/roco/guides/${guide.id}`}
                   className="group flex flex-col rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
                 >
                   <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">

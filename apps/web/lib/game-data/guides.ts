@@ -109,6 +109,14 @@ export async function getGuideListData(
       const mod = await import('@gachia/data/games/skjh/guides');
       return buildGuideListData(mod.skjhGuides, locale, mod.getSkjhGuideTitle, mod.getSkjhGuideSummary, mod.getSkjhGuideCategory);
     }
+    case 'roco': {
+      const mod = await import('@gachia/data/games/roco/guides');
+      return buildGuideListData(mod.rocoGuides, locale, mod.getRocoGuideTitle, mod.getRocoGuideSummary, mod.getRocoGuideCategory);
+    }
+    case 'roco-cn': {
+      const mod = await import('@gachia/data/games/roco-cn/guides');
+      return buildGuideListData(mod.rocoCnGuides, locale, mod.getRocoCnGuideTitle, mod.getRocoCnGuideSummary, mod.getRocoCnGuideCategory);
+    }
     default:
       return { guides: [], categories: [], categoryLabels: {} };
   }

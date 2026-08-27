@@ -34,7 +34,7 @@ function validateLocale(lang: string): SupportedLocale {
 }
 
 export async function generateStaticParams() {
-  const gameIds = ['nte', 'genshin', 'starrail', 'wuwa', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea'] as const;
+  const gameIds = ['nte', 'genshin', 'starrail', 'wuwa', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'roco', 'roco-cn'] as const;
   const entries = await Promise.all(
     gameIds.map(async (gameId) => ({
       gameId,
@@ -135,6 +135,13 @@ export default async function CharacterDetailPage({ params }: Props) {
     case 'sea': {
       const mod = await import('./sea-character-detail');
       return <mod.SeaCharacterDetailPage id={id} locale={locale} />;
+    }
+    case 'roco':
+    case 'roco-cn': {
+      const mod = await import('./roco-character-detail');
+      return gameId === 'roco'
+        ? <mod.RocoCharacterDetailPage id={id} locale={locale} />
+        : <mod.RocoCnCharacterDetailPage id={id} locale={locale} />;
     }
     default:
       notFound();

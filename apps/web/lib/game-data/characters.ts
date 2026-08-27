@@ -104,6 +104,20 @@ export async function getCharacterSummariesByIds(
         return character ? [{ id: character.id, name: mod.getSeaCharacterName(character, locale), image: toAbs(mod.getSeaCharacterImage(character)) }] : [];
       });
     }
+    case 'roco': {
+      const mod = await import('@gachia/data/games/roco/characters');
+      return ids.flatMap((id) => {
+        const character = mod.rocoCharacters.find((entry) => entry.id === id);
+        return character ? [{ id: character.id, name: mod.getRocoCharacterName(character, locale), image: toAbs(mod.getRocoCharacterImage(character)) }] : [];
+      });
+    }
+    case 'roco-cn': {
+      const mod = await import('@gachia/data/games/roco-cn/characters');
+      return ids.flatMap((id) => {
+        const character = mod.rocoCnCharacters.find((entry) => entry.id === id);
+        return character ? [{ id: character.id, name: mod.getRocoCnCharacterName(character, locale), image: toAbs(mod.getRocoCnCharacterImage(character)) }] : [];
+      });
+    }
     default:
       return [];
   }
@@ -146,6 +160,14 @@ export async function getCharactersForStaticParams(gameId: GameId): Promise<Arra
     case 'sea': {
       const mod = await import('@gachia/data/games/sea/characters');
       return mod.seaCharacters.map((character) => ({ id: character.id }));
+    }
+    case 'roco': {
+      const mod = await import('@gachia/data/games/roco/characters');
+      return mod.rocoCharacters.map((character) => ({ id: character.id }));
+    }
+    case 'roco-cn': {
+      const mod = await import('@gachia/data/games/roco-cn/characters');
+      return mod.rocoCnCharacters.map((character) => ({ id: character.id }));
     }
     default:
       return [];
@@ -289,6 +311,32 @@ export async function getCharacterMetaData(
         tierRank: character.tierRank,
       };
     }
+    case 'roco': {
+      const mod = await import('@gachia/data/games/roco/characters');
+      const character = mod.getRocoCharacterById(id);
+      if (!character) return null;
+      return {
+        id: character.id,
+        name: mod.getRocoCharacterName(character, locale),
+        description: mod.getRocoCharacterDescription(character, locale),
+        image: toAbs(mod.getRocoCharacterImage(character)),
+        element: character.attribute,
+        elementLabel: character.attributeEn,
+      };
+    }
+    case 'roco-cn': {
+      const mod = await import('@gachia/data/games/roco-cn/characters');
+      const character = mod.getRocoCnCharacterById(id);
+      if (!character) return null;
+      return {
+        id: character.id,
+        name: mod.getRocoCnCharacterName(character, locale),
+        description: mod.getRocoCnCharacterDescription(character, locale),
+        image: toAbs(mod.getRocoCnCharacterImage(character)),
+        element: character.attribute,
+        elementLabel: character.attributeEn,
+      };
+    }
     default:
       return null;
   }
@@ -413,6 +461,32 @@ export async function getCharacterListData(
         elementLabel: labelFromId(character.attribute),
         rankGroup: 'all',
         subtitle: character.roleEn,
+      }));
+    }
+    case 'roco': {
+      const mod = await import('@gachia/data/games/roco/characters');
+      return mod.rocoCharacters.map((character) => ({
+        id: character.id,
+        name: mod.getRocoCharacterName(character, locale),
+        image: toAbs(mod.getRocoCharacterImage(character)),
+        element: character.attribute,
+        elementLabel: labelFromId(character.attributeEn),
+        rarityLabel: `${character.rarity}★`,
+        rankGroup: `${character.rarity}★`,
+        subtitle: character.attributeEn,
+      }));
+    }
+    case 'roco-cn': {
+      const mod = await import('@gachia/data/games/roco-cn/characters');
+      return mod.rocoCnCharacters.map((character) => ({
+        id: character.id,
+        name: mod.getRocoCnCharacterName(character, locale),
+        image: toAbs(mod.getRocoCnCharacterImage(character)),
+        element: character.attribute,
+        elementLabel: labelFromId(character.attributeEn),
+        rarityLabel: `${character.rarity}★`,
+        rankGroup: `${character.rarity}★`,
+        subtitle: character.attributeEn,
       }));
     }
     default:

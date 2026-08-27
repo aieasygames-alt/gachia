@@ -99,6 +99,8 @@ const CHAR_DESC: Record<string, Record<string, string>> = {
   guihuan: { zh: '归环全使灵图鉴，覆盖SSR、SR角色数据、元素和配装推荐，方便你先看清定位，再决定培养顺序。', en: 'Complete Guihuan Spirit roster with SSR and SR data, elements, and build recommendations so you can prioritize the right spirits first.', ja: '帰環全精霊図鑑。SSR・SRのデータ、元素、ビルド案を整理しています。' },
   endfield: { zh: '明日方舟：终末地全干员图鉴，覆盖六星、五星、四星角色数据、元素属性和配装推荐，适合先看定位再进培养页。', en: 'Complete Arknights: Endfield operator roster with 6-Star, 5-Star, and 4-Star data, elements, and build recommendations for fast team planning.', ja: 'エンドフィールド全オペレーター図鑑。★6、★5、★4のデータ、属性、ビルド案を整理しています。' },
   sea: { zh: '遗忘之海角色图鉴 Wiki，覆盖 Traveler、Ais、Little Axe、Princess、Molly 等角色属性、定位、强度、配队和开荒培养顺序。', en: 'Sea of Remnants characters wiki with Traveler, Ais, Little Axe, Princess, Molly, roles, attributes, tier notes, teams, and early progression picks.', ja: 'シー・オブ・レムナンツキャラWiki。Traveler、Ais、Little Axe、Princess、Molly、役割、属性、Tier、育成順を整理。' },
+  roco: { zh: '《洛克王国：世界》国际服精灵图鉴，覆盖官方已曝光精灵的属性、稀有度、栖息地、进化链与获取说明，CBT 开测后持续补全。', en: 'Roco Kingdom international character encyclopedia, covering officially revealed Jinies\' attributes, rarity, habitats, evolution chains, and acquisition notes. Will expand after CBT launch.', ja: 'ロコキングダム国際版のジニー図鑑。公式公開済みジニーの属性、レアリティ、生息地、進化、入手方法をまとめ、CBT 後に随時追加。' },
+  'roco-cn': { zh: '《洛克王国：世界》国服精灵图鉴，覆盖 S1 赛季已登场精灵的属性、技能、进化链和培养方向，适合先查图鉴再决定捕捉与培养顺序。', en: 'Roco Kingdom CN character encyclopedia, covering S1 season Jinies\' attributes, skills, evolution chains, and build directions for capture and progression planning.', ja: 'ロコキングダム中国版のジニー図鑑。S1 シーズンのジニー属性、スキル、進化、育成方針を整理。' },
 };
 
 const CHARACTER_INTRO: Record<string, Record<SupportedLocale, string>> = {
@@ -146,6 +148,16 @@ const CHARACTER_INTRO: Record<string, Record<SupportedLocale, string>> = {
     zh: '按属性、定位和强度快速浏览遗忘之海角色图鉴 Wiki，适合先看开荒强度、队伍分工、节奏榜和培养路线。',
     en: 'Browse the Sea of Remnants characters wiki by attribute, role, and tier value to review early-game picks, team duties, tier list context, and progression paths.',
     ja: '属性、役割、Tier価値でSea of RemnantsキャラWikiを確認し、序盤候補、編成分担、育成導線を把握できます。',
+  },
+  roco: {
+    zh: '按属性、稀有度快速浏览《洛克王国：世界》国际服精灵图鉴，CBT 期间优先看御三家与官方已曝光精灵的栖息地、进化链和基础定位。',
+    en: 'Browse the Roco Kingdom character wiki by element and rarity during CBT. Focus on starters and officially revealed Jinies\' habitats, evolution chains, and basic roles.',
+    ja: '属性・レアリティでロコキングダム国際版のジニー図鑑を確認。CBT 期間は御三家と公式公開ジニーの生息地、進化、役割を優先。',
+  },
+  'roco-cn': {
+    zh: '按属性、稀有度浏览《洛克王国：世界》国服精灵图鉴，S1 赛季优先看已登场精灵的捕捉位置、进化链和培养路线。',
+    en: 'Browse the Roco Kingdom CN character wiki by element and rarity. Focus on S1 live Jinies\' capture spots, evolution chains, and progression routes.',
+    ja: '属性・レアリティでロコキングダム中国版のジニー図鑑を確認。S1 シーズンの登場ジニー、捕獲場所、進化、育成導線を優先。',
   },
 };
 
@@ -255,6 +267,12 @@ const ELEMENT_COLORS: Record<string, string> = {
   radiance: '#fbbf24', frost: '#67e8f9', flame: '#ef4444', gale: '#6ee7b7', thunder: '#8b5cf6',
   heat: '#ef4444', nature: '#4ade80',
   str: '#ef4444', agi: '#22c55e', con: '#f97316', int: '#8b5cf6', per: '#3b82f6', cha: '#ec4899',
+};
+
+const ROCO_ELEMENT_COLORS: Record<string, string> = {
+  grass: '#4ade80', fire: '#f97316', water: '#38bdf8', electric: '#facc15', normal: '#a3a3a3',
+  ice: '#7dd3fc', poison: '#a78bfa', ground: '#d97706', flying: '#93c5fd', bug: '#84cc16',
+  light: '#fde047', dark: '#64748b',
 };
 
 type CharacterCardEntry = Awaited<ReturnType<typeof getCharacterListData>>[number];
@@ -401,7 +419,8 @@ function CharacterListPage({ chars, locale, gameId, gameConfig }: { chars: Chara
 }
 
 function CharacterCard({ char, gameId }: { char: CharacterCardEntry; gameId: GameId }) {
-  const elementColor = ELEMENT_COLORS[char.element] || '#888';
+  const colorMap = gameId === 'roco' || gameId === 'roco-cn' ? ROCO_ELEMENT_COLORS : ELEMENT_COLORS;
+  const elementColor = colorMap[char.element] || '#888';
 
   return (
     <Link

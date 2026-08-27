@@ -1,4 +1,6 @@
 import { z } from 'zod';
+import { GAME_IDS } from '../constants';
+import type { GameId } from '../types';
 
 // ============================================================
 // Gachia Core Zod Schemas
@@ -10,7 +12,7 @@ export const SupportedLocaleSchema = z.enum(['zh', 'en', 'ja']);
 
 // --- Game ---
 
-export const GameIdSchema = z.enum(['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh']);
+export const GameIdSchema = z.enum(GAME_IDS as [GameId, ...GameId[]]);
 
 export const GameThemeSchema = z.object({
   primary: z.string().regex(/^#[0-9a-fA-F]{6}$/, 'Must be a valid hex color'),

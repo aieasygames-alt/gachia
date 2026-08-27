@@ -328,6 +328,80 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
     nextLinks: commonLinks('skjh', 'platform-download-guide'),
     faq: liveFaq('失控进化', 'Ashfall Evolution', '失控進化'),
   },
+  roco: {
+    officialUrl: 'https://www.rocokingdom.com/',
+    status: {
+      zh: '国际服首轮全球封闭测试（CBT）定于 2026-10-27 开启，报名通道已在官网开放；CBT 可玩平台为 PC、iOS、Android，正式版将扩展至 PS5、Xbox、Steam、Epic 与 Microsoft Store。',
+      en: 'The first global Closed Beta Test (CBT) starts on October 27, 2026, with pre-registration open now on the official site; the CBT is playable on PC, iOS, and Android, with PS5, Xbox, Steam, Epic, and Microsoft Store arriving at full release.',
+      ja: '初回グローバルCBTは2026年10月27日開始予定で、公式サイトで事前登録受付中。CBTはPC、iOS、Androidでプレイ可能。PS5、Xbox、Steam、Epic、MS Storeは正式版で対応予定。',
+    },
+    intro: {
+      zh: '集中查看《洛克王国:世界》国际服官网入口、CBT 报名与下载、CBT 可玩平台（PC/iOS/Android）、正式版平台（PS5/Xbox/Steam/Epic/MS Store）、配置要求和预约福利，再继续看 CBT 注册指南、版本时间线和兑换码。',
+      en: 'A hub for Roco Kingdom official site, CBT pre-registration and download, CBT platforms (PC/iOS/Android), full-release platforms (PS5/Xbox/Steam/Epic/MS Store), specs, and pre-registration rewards, then routing into the CBT guide, version timeline, and redeem codes.',
+      ja: 'ロコキングダム公式サイト、CBT事前登録とDL、CBT対応平台（PC/iOS/Android）、正式版平台（PS5/Xbox/Steam/Epic/MS Store）、推奨環境、予約特典をまとめ、CBTガイド、版本、交換コードへ案内します。',
+    },
+    officialNote: DEFAULT_STATUS,
+    platforms: [
+      platform('Official site', '优先入口', 'Primary entry', '優先入口', 'CBT 报名、资格查询和下载状态的第一入口。', 'The first stop for CBT signup, eligibility, and download status.', 'CBT応募、資格確認、DL状態の第一入口。'),
+      platform('PC (Windows)', 'CBT 可玩', 'Playable in CBT', 'CBT対応', '10/27 首测可玩平台之一，客户端入口以官网为准。', 'One of the playable CBT platforms starting October 27; client entry follows the official site.', '10/27のCBTでプレイ可能な平台の一つ。クライアントは公式サイト基準。'),
+      platform('iOS', 'CBT 可玩', 'Playable in CBT', 'CBT対応', '10/27 首测可玩平台之一，下载以上架后的 App Store 为准。', 'One of the playable CBT platforms starting October 27; download follows App Store availability.', '10/27のCBT対応平台。DLはApp Store配信基準。'),
+      platform('Android', 'CBT 可玩', 'Playable in CBT', 'CBT対応', '10/27 首测可玩平台之一，下载以 Google Play 等商店上架为准。', 'One of the playable CBT platforms starting October 27; download follows Google Play availability.', '10/27のCBT対応平台。DLはGoogle Play等の配信基準。'),
+      platform('PS5 / Xbox / Steam / Epic / MS Store', '正式版平台', 'Full-release platforms', '正式版平台', '属于正式版而非 CBT；Steam 商店页已上线但锁国区，国际服下载以官网为准。', 'These are full-release platforms, not CBT; the Steam page is live but region-locked for CN — use the official site for the international version.', '正式版のみの対応。Steamページは公開済みだが中国リージョンはロック中。国際版は公式サイト基準。'),
+    ],
+    specs: specs('开放世界精灵收集游戏对存储和网络稳定性有要求，CBT 具体配置与包体大小以官方公告为准。', 'An open-world creature-collector needs storage and stable network; exact CBT specs and package size follow official notices.', 'オープンワールド捕獲ゲームは容量と安定回線が必要です。CBTの推奨環境と容量は公式告知を確認。'),
+    cloud: cloudUnreleased(),
+    crossPlay: unreleasedCrossPlay(),
+    nextLinks: commonLinks('roco', 'cbt-registration-guide'),
+    faq: [
+      {
+        question: { zh: '国际服 CBT 怎么报名？', en: 'How do I sign up for the international CBT?', ja: '国際CBTにはどう申し込む？' },
+        answer: { zh: '前往官网 www.rocokingdom.com 报名并完成预注册，测试资格、设备要求和后续下载说明都以官方邮件与官网公告为准。', en: 'Pre-register on the official site at www.rocokingdom.com; eligibility, device requirements, and download instructions follow official emails and site notices.', ja: '公式サイト（www.rocokingdom.com）で事前登録を完了してください。資格、端末要件、DL手順は公式メールと告知基準です。' },
+      },
+      {
+        question: { zh: '国际服和国服数据互通吗？', en: 'Do the international and CN versions share data?', ja: '国際版と中国版のデータは共有されますか？' },
+        answer: { zh: '不互通。官方明确国际服与国服数据相互独立，国际服正式版支持繁中、英文、日文等多语言。', en: 'No. Tencent confirmed the international and CN versions have independent data; the global release supports Traditional Chinese, English, Japanese, and more.', ja: 'いいえ。国際版と中国版のデータは独立しています。国際版は繁体中文、英語、日本語などに対応予定です。' },
+      },
+    ],
+  },
+  'roco-cn': {
+    officialUrl: 'https://rocom.qq.com/',
+    status: {
+      zh: '国服已全平台上线，PC、安卓、iOS、鸿蒙多端数据互通；下载入口以官网 rocom.qq.com、WeGame 与平台商店为准。',
+      en: 'The CN version is live across PC, Android, iOS, and HarmonyOS with cross-device progress; download from rocom.qq.com, WeGame, and platform stores.',
+      ja: '中国版は全プラットフォームで配信中。PC、Android、iOS、HarmonyOSでデータ共有。DLはrocom.qq.com、WeGame、ストア基準。',
+    },
+    intro: {
+      zh: '集中查看《洛克王国:世界》国服官网、官网下载、WeGame、移动端、配置要求和账号互通规则。',
+      en: 'A hub for the CN version official site, download, WeGame, mobile, specs, and account linking rules.',
+      ja: '中国版の公式サイト、DL、WeGame、モバイル、環境、アカウント連携をまとめます。',
+    },
+    officialNote: DEFAULT_STATUS,
+    platforms: [
+      platform('PC / WeGame', '优先入口', 'Primary entry', '優先入口', '官网下载或 WeGame 商店搜索「洛克王国:世界」即可获取客户端。', 'Download from the official site or search "洛克王国:世界" on WeGame.', '公式サイトまたはWeGameで入手できます。'),
+      platform('iOS / Android / HarmonyOS', '可玩', 'Live', '配信中', '多端互通，同一 QQ/微信账号可在任意设备登录并同步进度。', 'Cross-device progress; log in with the same QQ/WeChat account on any device.', '複数端末で進行共有。同じQQ/WeChatアカウントでログイン。'),
+      platform('Mobile / PC 互通', '数据互通', 'Cross-device', 'データ共有', 'QQ 与微信账号数据独立，可添加游戏内学号一起游玩。', 'QQ and WeChat data are separate; link via in-game UID.', 'QQとWeChatのデータは別管理。ゲーム内UIDで共有可能。'),
+    ],
+    specs: specs('移动端建议预留 30GB 以上、PC 端 45GB 以上空间，推荐使用固态硬盘。', 'Reserve 30GB+ on mobile and 45GB+ on PC; an SSD is recommended.', 'モバイルは30GB以上、PCは45GB以上を確保し、SSDを推奨。'),
+    cloud: cloudOfficial(),
+    crossPlay: {
+      zh: 'PC、安卓、iOS、鸿蒙多端账号与数据互通；QQ 和微信账号数据独立，绑定前先确认登录方式。',
+      en: 'PC, Android, iOS, and HarmonyOS share account progress; QQ and WeChat data are separate, so confirm login before linking.',
+      ja: 'PC、Android、iOS、HarmonyOSでデータ共有。QQとWeChatは別データのため連携前にログイン方式を確認。',
+    },
+    nextLinks: [
+      {
+        href: '/roco-cn/version',
+        label: { zh: '版本专题', en: 'Version hub', ja: 'バージョン特集' },
+        description: { zh: '确认当前版本、赛季、活动和时间节点。', en: 'Check the current patch, season, events, and timing.', ja: '現在の版本、シーズン、イベント、時期を確認。' },
+      },
+      {
+        href: '/roco-cn/redeem-codes',
+        label: { zh: '兑换码与福利', en: 'Codes & rewards', ja: 'コードと報酬' },
+        description: { zh: '查看礼包码、预约奖励和版本福利。', en: 'Check gift codes, reservation rewards, and patch bonuses.', ja: 'コード、予約報酬、版本報酬を確認。' },
+      },
+    ],
+    faq: liveFaq('洛克王国:世界', 'Roco Kingdom (CN)', 'ロコキングダム（中国版）'),
+  },
 };
 
 export function generateStaticParams() {

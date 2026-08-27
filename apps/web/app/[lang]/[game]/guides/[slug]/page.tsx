@@ -70,6 +70,7 @@ const ARTICLE_IMAGE_COUNTS: Partial<Record<GameId, number>> = {
   skjh: 9,
   endfield: 9,
   guihuan: 1,
+  roco: 1,
 };
 
 const ARTICLE_IMAGE_LABELS: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
@@ -82,6 +83,7 @@ const ARTICLE_IMAGE_LABELS: Partial<Record<GameId, Record<SupportedLocale, strin
   skjh: { zh: '失控进化攻略参考图', en: 'Ashfall Evolution guide reference image', ja: 'Ashfall Evolutionガイド参考画像' },
   endfield: { zh: '终末地攻略参考图', en: 'Arknights: Endfield guide reference image', ja: 'エンドフィールドガイド参考画像' },
   guihuan: { zh: '归环攻略参考图', en: 'Guihuan guide reference image', ja: 'Guihuanガイド参考画像' },
+  roco: { zh: '洛克王国:世界攻略参考图', en: 'Roco Kingdom guide reference image', ja: 'ロコキングダムガイド参考画像' },
 };
 
 const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> = {
@@ -217,6 +219,72 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> 
       },
     },
   },
+  roco: {
+    'cbt-registration-guide': {
+      heading: { zh: '快速结论：10/27 首测，先完成官网报名与问卷', en: 'Quick answer: sign up on the official site before the October 27 CBT', ja: '要点：10/27テスト前に公式サイトで申し込み' },
+      points: {
+        zh: ['国际服 CBT 于 2026-10-27 开启，报名窗口为 8/26–10/20。', '前往 www.rocokingdom.com 预注册并完成必填问卷，测试资格以官方邮件与公告为准。', 'CBT 仅 PC、iOS、Android 可玩，PS5/Xbox/Steam/Epic/MS Store 属正式版平台。'],
+        en: ['The global CBT starts October 27, 2026; sign-ups run from August 26 to October 20.', 'Pre-register on www.rocokingdom.com and complete the mandatory questionnaire; eligibility follows official emails and notices.', 'The CBT is playable on PC, iOS, and Android only; PS5, Xbox, Steam, Epic, and MS Store are full-release platforms.'],
+        ja: ['グローバルCBTは2026年10月27日開始、申込は8/26–10/20。', '公式サイトで事前登録と必須アンケートを完了。資格は公式メールと告知基準。', 'CBTはPC、iOS、Androidのみ。PS5/Xbox/Steam/Epic/MS Storeは正式版プラットフォーム。'],
+      },
+    },
+    'starter-guide': {
+      heading: { zh: '快速结论：按开荒节奏选，Meewee 稳妥、Sparka 快攻、Cerulla 抗压', en: 'Quick answer: pick by early pacing — Meewee balances, Sparka speeds up, Cerulla survives', ja: '要点：序盤のペースで選ぶ — Meewee安定、Sparka速攻、Cerulla耐久' },
+      points: {
+        zh: ['国际服御三家为草系 Meewee、火系 Sparka、水系 Cerulla。', '追求稳妥万能先 Meewee；想打快先 Sparka；怕翻车先 Cerulla。', '三只都能在野外补抓，御三家选择不锁定长期进度。'],
+        en: ['The international starters are Grass-type Meewee, Fire-type Sparka, and Water-type Cerulla.', 'Pick Meewee for a balanced route, Sparka for aggressive early pacing, or Cerulla for survivability.', 'All three can be caught in the wild later, so the starter pick does not lock your long-term progress.'],
+        ja: ['国際版スターターは草Meewee、炎Sparka、水Cerulla。', '万能ならMeewee、速攻ならSparka、耐久ならCerulla。', '3匹とも野生で捕まえられるため、スターターで長期進行は固定されません。'],
+      },
+    },
+    'what-is-roco-kingdom': {
+      heading: { zh: '快速结论：免费开放世界精灵收集，主打抓宠、回合战斗与社交', en: 'Quick answer: a free open-world creature-collector focused on catching, turn-based battle, and social play', ja: '要点：無料オープンワールドの捕獲ゲーム' },
+      points: {
+        zh: ['开发方为腾讯魔方工作室，玩家扮演魔法学院学生 Roco 在 Carosia 大陆冒险。', '可捕捉 400+ 只名为 Jinies 的精灵，战斗为回合制。', '国际服与国服数据相互独立，正式版支持繁中、英文、日文等多语言。'],
+        en: ['Developed by Tencent Morefun Studios; you play as a magic-academy student called a Roco exploring Carosia.', 'Catch 400+ creatures named Jinies and battle in turn-based combat.', 'The international and CN versions keep separate data; the global release supports Traditional Chinese, English, Japanese, and more.'],
+        ja: ['開発はテンセント魔方工作室。魔法学院生「Roco」となりCarosia大陸を冒険。', '400体以上の「Jinies」を捕獲し、ターン制バトル。', '国際版と中国版のデータは独立。正式版は繁体中文、英語、日本語などに対応予定。'],
+      },
+    },
+    'platforms-and-download-guide': {
+      heading: { zh: '快速结论：CBT 只上 PC/iOS/Android，正式版才扩到主机', en: 'Quick answer: the CBT is PC/iOS/Android; console platforms arrive at full release', ja: '要点：CBTはPC/iOS/Androidのみ' },
+      points: {
+        zh: ['CBT（10/27）可玩平台为 PC、iOS、Android。', '正式版目标平台为 PC、PS5、Xbox、iOS、Android，PC 端含 Steam、Epic、MS Store。', 'Steam 商店页已上线但锁国区；国际服下载以官网为准。'],
+        en: ['The October 27 CBT supports PC, iOS, and Android.', 'The full release targets PC, PS5, Xbox, iOS, and Android, with the PC version on Steam, Epic, and Microsoft Store.', 'The Steam page is live but region-locked for CN; use the official site for downloads.'],
+        ja: ['CBTはPC、iOS、Androidに対応。', '正式版はPC、PS5、Xbox、iOS、Androidを予定。PC版はSteam、Epic、MS Store。', 'Steamページは中国リージョンロック中。DLは公式サイト基準。'],
+      },
+    },
+    'jinies-guide': {
+      heading: { zh: '快速结论：先懂 18 元素、血统与捕捉方式再谈培养', en: 'Quick answer: learn the 18 elements, Bloodline, and catching before building', ja: '要点：18元素、血統、捕獲方法を先に把握' },
+      points: {
+        zh: ['官方已确认 400+ 只 Jinies，分为 18 种元素。', '血统（Bloodline）系统、Alpha/Exotic 特殊形态与 Buddy Pods 捕捉是本作特色。', 'Alpha 血统化可在特定精灵上获得，Blazion 为 Sparka 血统的 boss 级形态。'],
+        en: ['400+ Jinies are confirmed, split across 18 elements.', 'The Bloodline system, Alpha/Exotic special forms, and Buddy Pods catching define progression.', 'Alpha conversion applies to select creatures; Blazion is the boss-tier Bloodline form of Sparka.'],
+        ja: ['公式確認済みは400体超、18属性。', '血統（Bloodline）、Alpha/Exotic形態、Buddy Pods捕獲が特徴。', 'Alpha化は特定のジニーに適用され、BlazionはSparka血統のボス級形態。'],
+      },
+    },
+    'battle-system-guide': {
+      heading: { zh: '快速结论：回合制核心是体力条、换人与克制预判', en: 'Quick answer: master the stamina bar, switching, and type hints in turn-based combat', ja: '要点：スタミナ管理、交代、相性読みが鍵' },
+      points: {
+        zh: ['每只精灵 4 个技能、星级体力条，克制关系在界面上可见。', '体力（Stamina）是资源，换人预判决定回合主动权。', '血统技能可覆盖普通技能，PvP 采用等级标准化机制。'],
+        en: ['Each Jinie has four skills and a star-based stamina bar, with matchup hints shown in the UI.', 'Stamina is the core resource; anticipating switches decides tempo.', 'Bloodline skills can overwrite normal skills, and PvP uses level-standardized rules.'],
+        ja: ['各ジニーは4スキルと星スタミナバー、相性ヒントはUI表示。', 'スタミナが核心リソースで、交代読みが主導権を握る。', '血統スキルは通常スキルを上書き可能。PvPはレベル標準化。'],
+      },
+    },
+    'co-op-and-social-guide': {
+      heading: { zh: '快速结论：联机主打组队探索、共骑、家园与友好决斗', en: 'Quick answer: co-op covers party exploration, co-riding, homes, and friendly duels', ja: '要点：パーティ探索、共乗り、ホーム、友好決闘が中心' },
+      points: {
+        zh: ['支持跨平台组队冒险与共同骑行精灵。', '可以拜访、装饰家园，一起种田。', '友好决斗与跨服好友是社交玩法的主要入口。'],
+        en: ['Cross-platform party play and co-riding Jinies are core co-op features.', 'Visit and decorate homes, and farm together with friends.', 'Friendly duels and cross-server friends are the main social loops.'],
+        ja: ['クロスプラットフォームのパーティ探索とジニー共乗りが核。', 'ホーム訪問・装飾と共同農作業が可能。', '友好決闘とクロスサーバーフレンドが主なソーシャル導線。'],
+      },
+    },
+    'pre-registration-rewards-faq': {
+      heading: { zh: '快速结论：官网预注册开放中，具体奖励待官方公布', en: 'Quick answer: pre-registration is open; specific rewards are still pending official reveal', ja: '要点：事前登録受付中、報酬詳細は公式発表待ち' },
+      points: {
+        zh: ['国际服预注册已在官网开放，CBT 资格与预约报名联动。', '具体预约奖励、删档规则与付费细节暂未公布，将持续更新。', 'CBT 数据通常不继承到正式版，避免投入过多养成资源。'],
+        en: ['International pre-registration is live on the official site and linked to CBT eligibility.', 'Specific rewards, wipe rules, and monetization details are unannounced and will be updated here.', 'CBT progress typically does not carry to launch, so avoid heavy investment.'],
+        ja: ['国際版の事前登録は公式サイトで受付中、CBT資格と連動。', '報酬詳細、データ削除規則、課金は未発表のため随時更新。', 'CBTデータは正式版に引き継がれないことが多いため育成投資は控えめに。'],
+      },
+    },
+  },
 };
 
 const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> = {
@@ -340,6 +408,40 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
       { href: '/sea/guides/pc-mobile-cross-progression-faq', label: { zh: 'PC 手机互通', en: 'PC/mobile cross-progress', ja: 'PC/モバイル連携' }, description: { zh: '安装后先确认账号、区服、渠道和奖励领取边界。', en: 'After install, confirm account, server, channel, and reward boundaries.', ja: 'インストール後にアカウント、鯖、渠道、報酬を確認。' } },
     ],
   },
+  roco: {
+    'cbt-registration-guide': [
+      { href: '/roco/version', label: { zh: '版本时间线', en: 'Version timeline', ja: '版本タイムライン' }, description: { zh: '报名后接着看 CBT 到正式版的节点和已确认内容。', en: 'After signing up, continue into the CBT-to-launch timeline and confirmed content.', ja: '申込後はCBTから正式版までの予定と確定情報へ。' } },
+      { href: '/roco/guides/platforms-and-download-guide', label: { zh: '平台与下载', en: 'Platforms & download', ja: '平台とDL' }, description: { zh: '确认 CBT 可玩平台与设备要求。', en: 'Confirm CBT platforms and device requirements.', ja: 'CBTの対応平台と端末要件を確認。' } },
+    ],
+    'starter-guide': [
+      { href: '/roco/guides/jinies-guide', label: { zh: '精灵图鉴', en: 'Jinies guide', ja: 'ジニー図鑑' }, description: { zh: '御三家之外，看 18 元素、血统和特殊形态。', en: 'Beyond starters, learn the 18 elements, Bloodline, and special forms.', ja: 'スターター以外に18属性、血統、特殊形態を確認。' } },
+      { href: '/roco/guides/battle-system-guide', label: { zh: '战斗系统', en: 'Battle system', ja: '戦闘システム' }, description: { zh: '先懂回合制、体力条和克制再定养成方向。', en: 'Understand turn-based combat, stamina, and type hints before building.', ja: 'ターン制、スタミナ、相性を見てから育成方針を決める。' } },
+    ],
+    'what-is-roco-kingdom': [
+      { href: '/roco/guides/cbt-registration-guide', label: { zh: 'CBT 报名指南', en: 'CBT registration', ja: 'CBT登録ガイド' }, description: { zh: '了解游戏后，先完成 10/27 首测报名。', en: 'Now that you know the game, sign up for the October 27 CBT.', ja: 'ゲーム理解後は10/27のCBTに申し込み。' } },
+      { href: '/roco/guides/pre-registration-rewards-faq', label: { zh: '预约奖励 FAQ', en: 'Pre-registration FAQ', ja: '事前登録FAQ' }, description: { zh: '预约福利、资格和语言支持疑问看这里。', en: 'Check rewards, eligibility, and language support here.', ja: '報酬、資格、言語サポートをここで確認。' } },
+    ],
+    'platforms-and-download-guide': [
+      { href: '/roco/download', label: { zh: '下载主入口', en: 'Download hub', ja: 'DL入口' }, description: { zh: '把官网、商店和平台状态集中到可执行下载页。', en: 'Move into the executable download page with store status.', ja: 'ストア状況を含むDLページへ進みます。' } },
+      { href: '/roco/guides/cbt-registration-guide', label: { zh: 'CBT 报名', en: 'CBT registration', ja: 'CBT登録' }, description: { zh: 'CBT 资格与报名绑定，先完成预注册。', en: 'CBT eligibility ties to pre-registration, so sign up first.', ja: 'CBT資格は事前登録と連動するため先に申し込み。' } },
+    ],
+    'jinies-guide': [
+      { href: '/roco/characters', label: { zh: '精灵图鉴数据库', en: 'Jinie database', ja: 'ジニーデータベース' }, description: { zh: '按属性、稀有度和栖息地继续查具体精灵。', en: 'Browse specific Jinies by element, rarity, and habitat.', ja: '属性、レア度、生息地で具体的なジニーを確認。' } },
+      { href: '/roco/guides/battle-system-guide', label: { zh: '战斗系统', en: 'Battle system', ja: '戦闘システム' }, description: { zh: '把元素克制和血统技能接进实战。', en: 'Connect elements and Bloodline skills to real combat.', ja: '元素相性と血統スキルを実戦に活かす。' } },
+    ],
+    'battle-system-guide': [
+      { href: '/roco/guides/jinies-guide', label: { zh: '精灵图鉴', en: 'Jinies guide', ja: 'ジニー図鑑' }, description: { zh: '先确认元素、血统和捕捉方式再组队。', en: 'Check elements, Bloodline, and catching before teambuilding.', ja: '編成前に属性、血統、捕獲方法を確認。' } },
+      { href: '/roco/guides/starter-guide', label: { zh: '御三家选择', en: 'Starter guide', ja: 'スターター選択' }, description: { zh: '回到开局，按节奏和生存需求选御三家。', en: 'Return to the opener and pick a starter by pace and survival.', ja: '序盤のペースと耐久でスターターを選ぶ。' } },
+    ],
+    'co-op-and-social-guide': [
+      { href: '/roco/guides/cbt-registration-guide', label: { zh: 'CBT 报名', en: 'CBT registration', ja: 'CBT登録' }, description: { zh: '找队友前先确认自己是否拿到测试资格。', en: 'Confirm your own CBT eligibility before forming groups.', ja: '仲間集めの前に自分のCBT資格を確認。' } },
+      { href: '/roco/guides/what-is-roco-kingdom', label: { zh: '游戏是什么', en: 'What is Roco Kingdom?', ja: 'ゲーム概要' }, description: { zh: '了解世界设定和社交定位。', en: 'Review the setting and social positioning.', ja: '世界観とソーシャル定位を振り返る。' } },
+    ],
+    'pre-registration-rewards-faq': [
+      { href: '/roco/guides/cbt-registration-guide', label: { zh: 'CBT 报名指南', en: 'CBT registration', ja: 'CBT登録ガイド' }, description: { zh: '福利之外，报名入口和必填问卷在这里。', en: 'Beyond rewards, find the signup page and questionnaire here.', ja: '報酬以外に申込入口と必須アンケートはこちら。' } },
+      { href: '/roco/guides/platforms-and-download-guide', label: { zh: '平台与下载', en: 'Platforms & download', ja: '平台とDL' }, description: { zh: '确认可玩平台后规划设备。', en: 'Plan your device after checking supported platforms.', ja: '対応平台確認後に端末を準備。' } },
+    ],
+  },
 };
 
 const GUIDE_FALLBACK_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
@@ -358,6 +460,10 @@ const GUIDE_FALLBACK_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
   zzz: [
     { href: '/zzz/guides/banner-schedule-guide', label: { zh: '当前卡池', en: 'Current banners', ja: '現在バナー' }, description: { zh: '继续看菲林规划。', en: 'Continue with Polychrome planning.', ja: 'ポリクローム計画へ。' } },
     { href: '/zzz/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '先领码再抽。', en: 'Claim codes before pulling.', ja: 'コード後にガチャ。' } },
+  ],
+  roco: [
+    { href: '/roco/guides/cbt-registration-guide', label: { zh: 'CBT 报名指南', en: 'CBT registration', ja: 'CBT登録ガイド' }, description: { zh: '首测前先确认报名与资格。', en: 'Secure signup and eligibility before the first test.', ja: '初回テスト前に申込と資格を確認。' } },
+    { href: '/roco/guides/starter-guide', label: { zh: '御三家选择', en: 'Starter guide', ja: 'スターター選択' }, description: { zh: '开局路线与捕捉建议。', en: 'Early pacing and catching advice.', ja: '序盤ルートと捕獲のコツ。' } },
   ],
 };
 
@@ -410,6 +516,14 @@ async function getGuideRuntime(gameId: GameId): Promise<GuideRuntime> {
     case 'skjh': {
       const mod = await import('@gachia/data/games/skjh/guides');
       return makeRuntime(mod.skjhGuides, mod.SKJH_GUIDE_CATEGORIES, mod.getSkjhGuideById, mod.getSkjhGuideTitle, mod.getSkjhGuideSummary, mod.getSkjhGuideContent, mod.getSkjhGuideCategory, mod.getSkjhGuideFaqQuestion, mod.getSkjhGuideFaqAnswer);
+    }
+    case 'roco': {
+      const mod = await import('@gachia/data/games/roco/guides');
+      return makeRuntime(mod.rocoGuides, mod.ROCO_GUIDE_CATEGORIES, mod.getRocoGuideById, mod.getRocoGuideTitle, mod.getRocoGuideSummary, mod.getRocoGuideContent, mod.getRocoGuideCategory, mod.getRocoGuideFaqQuestion, mod.getRocoGuideFaqAnswer);
+    }
+    case 'roco-cn': {
+      const mod = await import('@gachia/data/games/roco-cn/guides');
+      return makeRuntime(mod.rocoCnGuides, mod.ROCO_CN_GUIDE_CATEGORIES, mod.getRocoCnGuideById, mod.getRocoCnGuideTitle, mod.getRocoCnGuideSummary, mod.getRocoCnGuideContent, mod.getRocoCnGuideCategory, mod.getRocoCnGuideFaqQuestion, mod.getRocoCnGuideFaqAnswer);
     }
     default:
       notFound();
@@ -756,8 +870,8 @@ function getGuideArticleImages(gameId: GameId, slug: string, title: string, loca
 
   return Array.from({ length: imageTotal }, (_, offset) => {
     const index = (start + offset * 3) % count;
-    const src = gameId === 'guihuan'
-      ? '/images/og/guihuan.webp'
+    const src = gameId === 'guihuan' || gameId === 'roco'
+      ? `/images/og/${gameId}.webp`
       : `/images/articles/${gameId}/${index}.webp`;
 
     return {

@@ -369,6 +369,90 @@ export const CHARACTER_META_OVERRIDES: Record<string, LocaleMeta> = {
       description: 'Genshin Impact Beidou build guide covering weapons, artifact sets, teams, and counter/parry play patterns.',
     },
   },
+  'roco/meewee': {
+    zh: {
+      title: '喵喵（Meewee）图鉴：草系御三家、栖息地与进化链',
+      description: '洛克王国:世界国际服精灵图鉴：草系御三家喵喵（Meewee），整理栖息地、进化链与捕捉信息。',
+    },
+    en: {
+      title: 'Meewee — Grass Starter Habitat, Evolution & Catching | Roco Kingdom',
+      description: 'Roco Kingdom global Jinie database entry: Meewee, the Grass-type starter — habitat, evolution, and catching notes.',
+    },
+    ja: {
+      title: 'Meewee — 草スターターの生息地・進化 | ロコキングダム',
+      description: 'ロコキングダム（国際版）のジニー図鑑：草スターターMeeweeの生息地、進化、捕獲情報。',
+    },
+  },
+  'roco/sparka': {
+    zh: {
+      title: '火花（Sparka）图鉴：火系御三家、进化链与 Alpha 血统',
+      description: '洛克王国:世界国际服精灵图鉴：火系御三家火花（Sparka），整理进化链、Pyreon 最终形态与 Alpha 血统说明。',
+    },
+    en: {
+      title: 'Sparka — Fire Starter, Evolution & Alpha Bloodline | Roco Kingdom',
+      description: 'Roco Kingdom global Jinie database entry: Sparka, the Fire-type starter — evolution line, Pyreon, and Alpha Bloodline notes.',
+    },
+    ja: {
+      title: 'Sparka — 炎スターターの進化とAlpha血統 | ロコキングダム',
+      description: 'ロコキングダム（国際版）のジニー図鑑：炎スターターSparkaの進化ライン、Pyreon、Alpha血統情報。',
+    },
+  },
+  'roco/cerulla': {
+    zh: {
+      title: '水蓝蓝（Cerulla）图鉴：水系御三家与栖息地',
+      description: '洛克王国:世界国际服精灵图鉴：水系御三家水蓝蓝（Cerulla），整理官方命名来源、栖息地与捕捉信息。',
+    },
+    en: {
+      title: 'Cerulla — Water Starter Habitat & Catching | Roco Kingdom',
+      description: 'Roco Kingdom global Jinie database entry: Cerulla, the Water-type starter — official naming origin, habitat, and catching notes.',
+    },
+    ja: {
+      title: 'Cerulla — 水スターターの生息地と捕獲 | ロコキングダム',
+      description: 'ロコキングダム（国際版）のジニー図鑑：水スターターCerullaの命名由来、生息地、捕獲情報。',
+    },
+  },
+  'roco/blazehound': {
+    zh: {
+      title: '焰犬（Blazehound）图鉴：火系野外精灵与领地行为',
+      description: '洛克王国:世界国际服精灵图鉴：火系野外精灵焰犬（Blazehound，非御三家），整理栖息地与领地咆哮行为。',
+    },
+    en: {
+      title: 'Blazehound — Fire Wild Jinie, Habitat & Behavior | Roco Kingdom',
+      description: 'Roco Kingdom global Jinie database entry: Blazehound, the territorial Fire-type wild Jinie (not a starter) — habitat and behavior.',
+    },
+    ja: {
+      title: 'Blazehound — 炎属性野生ジニーと縄張り行動 | ロコキングダム',
+      description: 'ロコキングダム（国際版）のジニー図鑑：縄張り意識の強い炎属性野生ジニーBlazehoundの生息地と行動。',
+    },
+  },
+  'roco/catapawn': {
+    zh: {
+      title: '水爪（Catapawn）图鉴：水系野外精灵与缩壳行为',
+      description: '洛克王国:世界国际服精灵图鉴：水系野外精灵水爪（Catapawn，非御三家），整理湖畔栖息地与受惊缩壳行为。',
+    },
+    en: {
+      title: 'Catapawn — Water Wild Jinie, Habitat & Behavior | Roco Kingdom',
+      description: 'Roco Kingdom global Jinie database entry: Catapawn, the Water-type wild Jinie (not a starter) — lakeside habitat and shell-up behavior.',
+    },
+    ja: {
+      title: 'Catapawn — 水属性野生ジニーと縮殻行動 | ロコキングダム',
+      description: 'ロコキングダム（国際版）のジニー図鑑：湖畔に生息し驚くと縮こまる水属性野生ジニーCatapawnの情報。',
+    },
+  },
+  'roco/dustler': {
+    zh: {
+      title: '尘帚（Dustler）图鉴：普通系扫帚精灵与城镇栖息',
+      description: '洛克王国:世界国际服精灵图鉴：普通系扫帚精灵尘帚（Dustler），整理城镇栖息地与帮忙清理帽子的行为。',
+    },
+    en: {
+      title: 'Dustler — Normal Broom Jinie, Habitat & Behavior | Roco Kingdom',
+      description: 'Roco Kingdom global Jinie database entry: Dustler, the broom-shaped Normal-type Jinie — town habitat and hat-cleaning behavior.',
+    },
+    ja: {
+      title: 'Dustler — ノーマル箒ジニーの生息地と行動 | ロコキングダム',
+      description: 'ロコキングダム（国際版）のジニー図鑑：ほうき型ノーマルジニーDustlerの街での生息地と帽子掃除の行動。',
+    },
+  },
 };
 
 export function CharacterJsonLd({

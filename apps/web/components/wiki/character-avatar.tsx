@@ -7,6 +7,8 @@ const ELEMENT_COLORS: Record<string, string> = {
   cryo: '#67e8f9', dendro: '#4ade80', anemo: '#6ee7b7', geo: '#fbbf24',
   anima: '#4ade80', chaos: '#8b5cf6', cosmos: '#3b82f6',
   incantation: '#f59e0b', lakshana: '#ec4899', psyche: '#06b6d4',
+  // Roco Kingdom elements
+  grass: '#4ade80', fire: '#ef4444', water: '#3b82f6', normal: '#9ca3af',
   // ZZZ elements
   Physical: '#9ca3af', Fire: '#ef4444', Ice: '#67e8f9',
   Electric: '#8b5cf6', Ether: '#ec4899',

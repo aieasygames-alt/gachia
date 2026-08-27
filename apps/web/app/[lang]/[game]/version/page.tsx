@@ -642,6 +642,110 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
       },
     ],
     guideIds: ['official-pc-download-faq', 'first-2-hours-starter-route', 'base-location-anti-raid-plan'],
+  },
+  roco: {
+    title: { zh: '国际服 CBT「等等鸭测试」/ 预注册专题', en: 'Global CBT "Quack Quack Test" / Pre-Registration Hub', ja: '国際CBT「Quack Quack Test」/ 事前登録特集' },
+    description: {
+      zh: '聚焦《洛克王国:世界》国际服 CBT「等等鸭测试（Quack Quack Test）」10/27 开测、报名窗口 8/26–10/20、CBT 平台（PC/iOS/Android）、精灵阵容与版本时间线。',
+      en: 'Focus on the Roco Kingdom global CBT "Quack Quack Test" starting October 27, the Aug 26–Oct 20 sign-up window, CBT platforms (PC/iOS/Android), the Jinie roster, and the version timeline.',
+      ja: 'ロコキングダム国際版のCBT「Quack Quack Test」（10/27開始）、応募窓口（8/26〜10/20）、CBT対応プラットフォーム（PC/iOS/Android）、ジニー、版本タイムラインを整理します。',
+    },
+    highlights: {
+      zh: ['10/27 开测', '报名至 10/20', 'CBT: PC/iOS/Android', '400+ 精灵'],
+      en: ['CBT Oct 27', 'Sign-up until Oct 20', 'CBT: PC/iOS/Android', '400+ Jinies'],
+      ja: ['CBT 10/27', '応募は10/20まで', 'CBT: PC/iOS/Android', '400+ ジニー'],
+    },
+    kicker: { zh: '首测倒计时', en: 'CBT countdown', ja: 'CBTカウントダウン' },
+    freshness: {
+      zh: '以 2026-10-27 开测、报名 8/26–10/20 为口径，优先整理报名、CBT 平台、预注册福利、精灵和版本节点；正式版日期以官方为准。',
+      en: 'Centered on the October 27 CBT with sign-ups from Aug 26 to Oct 20: registration, CBT platforms, pre-registration rewards, Jinies, and version milestones; the full-release date follows official notices.',
+      ja: '2026年10月27日開始、応募8/26〜10/20を軸に、申込み、CBT対応平台、予約特典、ジニー、版本を整理。正式版は公式告知基準。',
+    },
+    faq: [
+      {
+        question: {
+          zh: '国际服 CBT 什么时候开、怎么报名、什么时候截止？',
+          en: 'When is the global CBT, how do I sign up, and when does it close?',
+          ja: '国際CBTはいつ始まり、どう申し込む？応募はいつまで？',
+        },
+        answer: {
+          zh: '国际服 CBT「等等鸭测试（Quack Quack Test）」定于 2026-10-27 开启，本轮仅支持 PC、iOS 与 Android；PS5、Xbox、Steam、Epic 与 Microsoft Store 属正式版平台。官网 www.rocokingdom.com 报名开放中，须在 10/20 前完成问卷。',
+          en: 'The global CBT "Quack Quack Test" starts October 27, 2026 and covers PC, iOS, and Android only; PS5, Xbox, Steam, Epic, and Microsoft Store belong to the full release. Sign up at www.rocokingdom.com and complete the questionnaire before Oct 20.',
+          ja: '国際CBT「Quack Quack Test」は2026年10月27日開始で、対応はPC、iOS、Androidのみ。PS5、Xbox、Steam、Epic、Microsoft Storeは正式版向けです。公式サイト（www.rocokingdom.com）で10/20までにアンケートを完了してください。',
+        },
+      },
+      {
+        question: {
+          zh: '「等等鸭测试（Quack Quack Test）」是什么？',
+          en: 'What is the "Quack Quack Test"?',
+          ja: '「Quack Quack Test」とは？',
+        },
+        answer: {
+          zh: '「等等鸭测试」是官方为国际服首轮封闭测试起的名称：10/27 在 PC/iOS/Android 开测，报名须在官网完成问卷，10/23 起可查询资格；测试结束后角色与进度会删除，测试期间无内购。',
+          en: 'The "Quack Quack Test" is the official name for the first global closed beta: it starts Oct 27 on PC/iOS/Android, sign-up requires the official questionnaire, eligibility checks open Oct 23, and all progress is wiped after the test with no in-game purchases.',
+          ja: '「Quack Quack Test」は公式が名付けた初回グローバルCBTの名称です。10/27にPC/iOS/Androidで開始。応募には公式アンケートが必要で、資格確認は10/23から。テスト後はデータが削除され、期間中の課金はありません。',
+        },
+      },
+      {
+        question: {
+          zh: '首测前最值得准备什么？',
+          en: 'What should I prepare before the CBT?',
+          ja: 'CBT前に何を準備すべき？',
+        },
+        answer: {
+          zh: '先完成官网预注册并确认测试资格规则，再看 CBT 注册指南确认平台选择、语言支持和预约福利，最后收藏版本页跟踪时间节点。',
+          en: 'Complete pre-registration and check eligibility rules, then use the CBT guide for platform choice, language support, and rewards, and bookmark this hub for milestones.',
+          ja: 'まず事前登録と資格ルールを確認し、CBTガイドでプラットフォーム、言語、予約特典を把握。最後にこの特集をブックマークして時期を追いましょう。',
+        },
+      },
+    ],
+    guideIds: ['cbt-registration-guide'],
+  },
+  'roco-cn': {
+    title: { zh: '已上线 / S1 赛季专题', en: 'Live / S1 Season Hub', ja: '配信中 / S1シーズン特集' },
+    description: {
+      zh: '《洛克王国:世界》国服已全平台上线，聚焦 S1「暗夜拾光」赛季、精灵图鉴、多端互通、活动和后续养成内容（持续补充中）。',
+      en: 'The CN version is live across platforms. This hub tracks the S1 "Shadowlight" season, Jinie database, cross-device progress, events, and build content (expanding).',
+      ja: '中国版は全プラットフォームで配信中。S1「暗夜拾光」シーズン、ジニー図鑑、多端連携、イベント、育成情報を追跡します（順次拡充）。',
+    },
+    highlights: {
+      zh: ['已全平台上线', 'S1 暗夜拾光', '347 只精灵', '多端互通'],
+      en: ['Live on all platforms', 'S1 Shadowlight', '347 Jinies', 'Cross-device'],
+      ja: ['全平台配信中', 'S1 暗夜拾光', '347 ジニー', '多端連携'],
+    },
+    kicker: { zh: '运营中', en: 'Live status', ja: '配信状態' },
+    freshness: {
+      zh: '以国服已上线状态为口径，优先整理版本、赛季、精灵图鉴和账号互通；详细攻略内容将在后续版本补充。',
+      en: 'Based on the live CN status, prioritizing version, season, Jinie database, and account linking; detailed guides will be added in upcoming updates.',
+      ja: '中国版配信中を基準に、版本、シーズン、ジニー図鑑、アカウント連携を優先し、詳細攻略は今後の更新で追加します。',
+    },
+    faq: [
+      {
+        question: {
+          zh: '国服和国际服能一起玩吗？',
+          en: 'Do the CN and international versions share servers?',
+          ja: '中国版と国際版は一緒に遊べますか？',
+        },
+        answer: {
+          zh: '不能。官方明确国际服与国服数据相互独立；国际服正式版支持繁中、英文、日文等多语言。',
+          en: 'No. Tencent confirmed independent data between the international and CN versions; the global release supports Traditional Chinese, English, Japanese, and more.',
+          ja: 'いいえ。国際版と中国版のデータは独立しています。国際版は繁体中文、英語、日本語などに対応予定です。',
+        },
+      },
+      {
+        question: {
+          zh: '国服多端数据互通吗？',
+          en: 'Is CN progress shared across devices?',
+          ja: '中国版は端末間でデータ共有されますか？',
+        },
+        answer: {
+          zh: 'PC、安卓、iOS、鸿蒙多端账号与数据互通，同一 QQ/微信账号可在任意设备登录；QQ 与微信账号数据独立。',
+          en: 'PC, Android, iOS, and HarmonyOS share account progress; log in with the same QQ/WeChat account on any device, but QQ and WeChat data are separate.',
+          ja: 'PC、Android、iOS、HarmonyOSでデータ共有。同じQQ/WeChatアカウントでログインできますが、QQとWeChatのデータは別管理です。',
+        },
+      },
+    ],
+    guideIds: [],
   }
 };
 

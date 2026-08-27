@@ -13,6 +13,7 @@ import { guihuanCharacters, getGuihuanCharacterName, getGuihuanCharacterImage } 
 import { anantaCharacters, getAnantaCharacterName, getAnantaCharacterImage } from '@gachia/data/games/ananta/characters';
 import { endfieldCharacters, getEndfieldCharacterName, getEndfieldCharacterImage } from '@gachia/data/games/endfield/characters';
 import { seaCharacters, getSeaCharacterName, getSeaCharacterImage } from '@gachia/data/games/sea/characters';
+import { rocoCharacters, getRocoCharacterName, getRocoCharacterImage } from '@gachia/data/games/roco/characters';
 import zhMessages from '@/messages/zh.json';
 import enMessages from '@/messages/en.json';
 import jaMessages from '@/messages/ja.json';
@@ -47,6 +48,8 @@ const FEATURED: Record<string, string[]> = {
   endfield: ['laevatain', 'ardelia', 'tangtang', 'endministrator', 'lifeng'],
   sea: ['traveler', 'ais', 'little-axe'],
   skjh: [],
+  roco: ['meewee', 'sparka', 'cerulla'],
+  'roco-cn': [], // CN Jinies filled in M3
 };
 
 const HOME_COPY = {
@@ -218,6 +221,12 @@ function getFeaturedChars(gameId: string, locale: SupportedLocale): CharAccessor
       for (const id of ids) {
         const c = seaCharacters.find((ch) => ch.id === id);
         if (c) chars.push({ id: c.id, getName: (l) => getSeaCharacterName(c, l), getImage: () => toAbsoluteUrl(getSeaCharacterImage(c)) });
+      }
+      break;
+    case 'roco':
+      for (const id of ids) {
+        const c = rocoCharacters.find((ch) => ch.id === id);
+        if (c) chars.push({ id: c.id, getName: (l) => getRocoCharacterName(c, l), getImage: () => toAbsoluteUrl(getRocoCharacterImage(c)) });
       }
       break;
   }

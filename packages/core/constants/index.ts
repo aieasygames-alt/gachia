@@ -18,7 +18,7 @@ export const LOCALE_NAMES: Record<SupportedLocale, string> = {
 // Games Registry
 // ============================================================
 
-export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'];
+export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco', 'roco-cn'];
 
 export const GAMES: Record<GameId, GameModule> = {
   genshin: {
@@ -447,6 +447,104 @@ export const GAMES: Record<GameId, GameModule> = {
       build: false,
       compare: false,
       teams: true,
+      'redeem-codes': true,
+    },
+  },
+  roco: {
+    id: 'roco',
+    name: { zh: '洛克王国：世界（国际服）', en: 'Roco Kingdom', ja: 'ロコキングダム' },
+    theme: {
+      primary: '#4ade80',
+      accent: '#f59e0b',
+      background: '#0d1410',
+      surface: '#16211a',
+    },
+    elements: [
+      { id: 'grass', name: { zh: '草', en: 'Grass', ja: 'くさ' }, color: '#4ade80' },
+      { id: 'fire', name: { zh: '火', en: 'Fire', ja: 'ほのお' }, color: '#ef4444' },
+      { id: 'water', name: { zh: '水', en: 'Water', ja: 'みず' }, color: '#3b82f6' },
+      { id: 'electric', name: { zh: '电', en: 'Electric', ja: 'でんき' }, color: '#facc15' },
+      { id: 'normal', name: { zh: '普通', en: 'Normal', ja: 'ノーマル' }, color: '#9ca3af' },
+      { id: 'ice', name: { zh: '冰', en: 'Ice', ja: 'こおり' }, color: '#67e8f9' },
+      { id: 'poison', name: { zh: '毒', en: 'Poison', ja: 'どく' }, color: '#a855f7' },
+      { id: 'ground', name: { zh: '土', en: 'Ground', ja: 'じめん' }, color: '#f59e0b' },
+      { id: 'flying', name: { zh: '翼', en: 'Flying', ja: 'ひこう' }, color: '#6ee7b7' },
+      { id: 'bug', name: { zh: '虫', en: 'Bug', ja: 'むし' }, color: '#84cc16' },
+      { id: 'light', name: { zh: '光', en: 'Light', ja: 'ひかり' }, color: '#fbbf24' },
+      { id: 'dark', name: { zh: '暗', en: 'Dark', ja: 'あく' }, color: '#6b7280' },
+    ],
+    rarities: [
+      { stars: 3, color: '#60a5fa', label: { zh: '普通', en: 'Common', ja: 'コモン' } },
+      { stars: 4, color: '#a855f7', label: { zh: '稀有', en: 'Rare', ja: 'レア' } },
+      { stars: 5, color: '#f59e0b', label: { zh: '史诗', en: 'Epic', ja: 'エピック' } },
+    ],
+    stats: {
+      baseStats: ['hp', 'atk', 'def', 'spAtk', 'spDef', 'spd'],
+      subStats: [],
+      specialStats: [],
+    },
+    routes: {
+      characters: true,
+      weapons: false,
+      items: true,
+      'tier-list': false,
+      calculator: false,
+      map: false,
+      version: true,
+      download: true,
+      guides: true,
+      build: false,
+      compare: false,
+      teams: false,
+      'redeem-codes': true,
+    },
+  },
+  'roco-cn': {
+    id: 'roco-cn',
+    name: { zh: '洛克王国：世界', en: 'Roco Kingdom (CN)', ja: 'ロコキングダム（中国版）' },
+    theme: {
+      primary: '#4ade80',
+      accent: '#f59e0b',
+      background: '#0d1410',
+      surface: '#16211a',
+    },
+    elements: [
+      { id: 'grass', name: { zh: '草', en: 'Grass', ja: 'くさ' }, color: '#4ade80' },
+      { id: 'fire', name: { zh: '火', en: 'Fire', ja: 'ほのお' }, color: '#ef4444' },
+      { id: 'water', name: { zh: '水', en: 'Water', ja: 'みず' }, color: '#3b82f6' },
+      { id: 'electric', name: { zh: '电', en: 'Electric', ja: 'でんき' }, color: '#facc15' },
+      { id: 'normal', name: { zh: '普通', en: 'Normal', ja: 'ノーマル' }, color: '#9ca3af' },
+      { id: 'ice', name: { zh: '冰', en: 'Ice', ja: 'こおり' }, color: '#67e8f9' },
+      { id: 'poison', name: { zh: '毒', en: 'Poison', ja: 'どく' }, color: '#a855f7' },
+      { id: 'ground', name: { zh: '土', en: 'Ground', ja: 'じめん' }, color: '#f59e0b' },
+      { id: 'flying', name: { zh: '翼', en: 'Flying', ja: 'ひこう' }, color: '#6ee7b7' },
+      { id: 'bug', name: { zh: '虫', en: 'Bug', ja: 'むし' }, color: '#84cc16' },
+      { id: 'light', name: { zh: '光', en: 'Light', ja: 'ひかり' }, color: '#fbbf24' },
+      { id: 'dark', name: { zh: '暗', en: 'Dark', ja: 'あく' }, color: '#6b7280' },
+    ],
+    rarities: [
+      { stars: 3, color: '#60a5fa', label: { zh: '普通', en: 'Common', ja: 'コモン' } },
+      { stars: 4, color: '#a855f7', label: { zh: '稀有', en: 'Rare', ja: 'レア' } },
+      { stars: 5, color: '#f59e0b', label: { zh: '史诗', en: 'Epic', ja: 'エピック' } },
+    ],
+    stats: {
+      baseStats: ['hp', 'atk', 'def', 'spAtk', 'spDef', 'spd'],
+      subStats: [],
+      specialStats: [],
+    },
+    routes: {
+      characters: true,
+      weapons: false,
+      items: true,
+      'tier-list': false,
+      calculator: false,
+      map: false,
+      version: true,
+      download: true,
+      guides: true,
+      build: false,
+      compare: false,
+      teams: false,
       'redeem-codes': true,
     },
   },
