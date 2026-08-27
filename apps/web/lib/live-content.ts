@@ -160,6 +160,23 @@ export const LIVE_VERSION_UPDATES: LiveVersionUpdate[] = [
     priority: 1,
   },
   {
+    gameId: 'roco-cn',
+    title: {
+      zh: '国服 S2 赛季「狂欢怪谈」进行中',
+      en: 'CN S2 "Carnival Tales" Season Live',
+      ja: '中国版S2「カーニバル談」シーズン進行中',
+    },
+    summary: {
+      zh: '国服 S2 赛季（马戏团主题）持续至 9 月中下旬：兑换码常更新、迪莫四形态超进化、马戏团小丑免费领。',
+      en: 'CN Season 2 (circus theme) runs to mid/late September: frequent redeem-code updates, Dimo\'s four Ultra Evolutions, and the free Circus Clown.',
+      ja: '中国版S2（サーカステーマ）は9月中旬頃まで：交換コード更新、Dimoの4形態超進化、無料のサーカス・クラウン。',
+    },
+    href: '/roco-cn/guides/s2-season-guide',
+    status: 'fresh',
+    updatedAt: LIVE_UPDATED_AT,
+    priority: 1,
+  },
+  {
     gameId: 'genshin',
     title: {
       zh: '原神 7.0 / 至冬预热',
@@ -386,6 +403,22 @@ export const LIVE_GUIDES: LiveGuideLink[] = [
     priority: 1,
   },
   {
+    gameId: 'roco-cn',
+    title: {
+      zh: '国服兑换码大全（2026-08 更新）',
+      en: 'CN Redeem Codes (August 2026)',
+      ja: '中国版交換コード一覧（2026年8月更新）',
+    },
+    summary: {
+      zh: '公测长期码、S2 赛季码、主播码与 8 月限时口令，附兑换入口与注意事项。',
+      en: 'Launch codes, S2 season codes, creator codes, and the August limited-time password, with redemption steps and tips.',
+      ja: '公測恒常コード、S2シーズンコード、クリエイターコード、8月期間限定パスワードと入力方法をまとめています。',
+    },
+    href: '/roco-cn/guides/redeem-codes-cn',
+    updatedAt: LIVE_UPDATED_AT,
+    priority: 1,
+  },
+  {
     gameId: 'sea',
     title: {
       zh: '遗忘之海 Steam / gacha / solo FAQ',
@@ -520,6 +553,26 @@ export const LIVE_CALENDAR_EVENTS: LiveCalendarEvent[] = [
     },
     href: '/roco/version',
     startsAt: '2026-10-27',
+    timezone: 'UTC',
+    updatedAt: LIVE_UPDATED_AT,
+    priority: 1,
+  },
+  {
+    id: 'roco-cn-s2-season-ends',
+    gameId: 'roco-cn',
+    type: 'event_end',
+    title: {
+      zh: '国服 S2 赛季「狂欢怪谈」结束',
+      en: 'CN S2 "Carnival Tales" Season Ends',
+      ja: '中国版S2「カーニバル談」シーズン終了',
+    },
+    summary: {
+      zh: 'S2 赛季作业约 9 月中截止，马戏团主题赛季进入尾声；建议及时兑换赛季码、领取赛季奖励并关注 S3 预告。',
+      en: 'S2 season homework wraps up around mid-September. Redeem season codes and claim rewards before the season ends; watch for S3 news.',
+      ja: 'S2シーズン課題は9月中旬頃まで。シーズンコード交換と報酬受取をお早めに。S3情報も注目です。',
+    },
+    href: '/roco-cn/guides/s2-season-guide',
+    startsAt: '2026-09-16',
     timezone: 'UTC',
     updatedAt: LIVE_UPDATED_AT,
     priority: 1,

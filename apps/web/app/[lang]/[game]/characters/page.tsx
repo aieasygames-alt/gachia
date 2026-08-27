@@ -100,7 +100,7 @@ const CHAR_DESC: Record<string, Record<string, string>> = {
   endfield: { zh: '明日方舟：终末地全干员图鉴，覆盖六星、五星、四星角色数据、元素属性和配装推荐，适合先看定位再进培养页。', en: 'Complete Arknights: Endfield operator roster with 6-Star, 5-Star, and 4-Star data, elements, and build recommendations for fast team planning.', ja: 'エンドフィールド全オペレーター図鑑。★6、★5、★4のデータ、属性、ビルド案を整理しています。' },
   sea: { zh: '遗忘之海角色图鉴 Wiki，覆盖 Traveler、Ais、Little Axe、Princess、Molly 等角色属性、定位、强度、配队和开荒培养顺序。', en: 'Sea of Remnants characters wiki with Traveler, Ais, Little Axe, Princess, Molly, roles, attributes, tier notes, teams, and early progression picks.', ja: 'シー・オブ・レムナンツキャラWiki。Traveler、Ais、Little Axe、Princess、Molly、役割、属性、Tier、育成順を整理。' },
   roco: { zh: '《洛克王国：世界》国际服精灵图鉴，覆盖官方已曝光精灵的属性、稀有度、栖息地、进化链与获取说明，CBT 开测后持续补全。', en: 'Roco Kingdom international character encyclopedia, covering officially revealed Jinies\' attributes, rarity, habitats, evolution chains, and acquisition notes. Will expand after CBT launch.', ja: 'ロコキングダム国際版のジニー図鑑。公式公開済みジニーの属性、レアリティ、生息地、進化、入手方法をまとめ、CBT 後に随時追加。' },
-  'roco-cn': { zh: '《洛克王国：世界》国服精灵图鉴，覆盖 S1 赛季已登场精灵的属性、技能、进化链和培养方向，适合先查图鉴再决定捕捉与培养顺序。', en: 'Roco Kingdom CN character encyclopedia, covering S1 season Jinies\' attributes, skills, evolution chains, and build directions for capture and progression planning.', ja: 'ロコキングダム中国版のジニー図鑑。S1 シーズンのジニー属性、スキル、進化、育成方針を整理。' },
+  'roco-cn': { zh: '《洛克王国：世界》国服精灵图鉴，覆盖 S2 赛季已登场精灵的属性、技能、进化链和培养方向，适合先查图鉴再决定捕捉与培养顺序。', en: 'Roco Kingdom CN character encyclopedia, covering S2 season Jinies\' attributes, skills, evolution chains, and build directions for capture and progression planning.', ja: 'ロコキングダム中国版のジニー図鑑。S2 シーズンのジニー属性、スキル、進化、育成方針を整理。' },
 };
 
 const CHARACTER_INTRO: Record<string, Record<SupportedLocale, string>> = {
@@ -155,9 +155,9 @@ const CHARACTER_INTRO: Record<string, Record<SupportedLocale, string>> = {
     ja: '属性・レアリティでロコキングダム国際版のジニー図鑑を確認。CBT 期間は御三家と公式公開ジニーの生息地、進化、役割を優先。',
   },
   'roco-cn': {
-    zh: '按属性、稀有度浏览《洛克王国：世界》国服精灵图鉴，S1 赛季优先看已登场精灵的捕捉位置、进化链和培养路线。',
-    en: 'Browse the Roco Kingdom CN character wiki by element and rarity. Focus on S1 live Jinies\' capture spots, evolution chains, and progression routes.',
-    ja: '属性・レアリティでロコキングダム中国版のジニー図鑑を確認。S1 シーズンの登場ジニー、捕獲場所、進化、育成導線を優先。',
+    zh: '按属性、稀有度浏览《洛克王国：世界》国服精灵图鉴，S2 赛季优先看已登场精灵的捕捉位置、进化链和培养路线。',
+    en: 'Browse the Roco Kingdom CN character wiki by element and rarity. Focus on S2 live Jinies\' capture spots, evolution chains, and progression routes.',
+    ja: '属性・レアリティでロコキングダム中国版のジニー図鑑を確認。S2 シーズンの登場ジニー、捕獲場所、進化、育成導線を優先。',
   },
 };
 

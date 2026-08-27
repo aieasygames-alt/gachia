@@ -71,6 +71,7 @@ const ARTICLE_IMAGE_COUNTS: Partial<Record<GameId, number>> = {
   endfield: 9,
   guihuan: 1,
   roco: 1,
+  'roco-cn': 1,
 };
 
 const ARTICLE_IMAGE_LABELS: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
@@ -84,6 +85,7 @@ const ARTICLE_IMAGE_LABELS: Partial<Record<GameId, Record<SupportedLocale, strin
   endfield: { zh: '终末地攻略参考图', en: 'Arknights: Endfield guide reference image', ja: 'エンドフィールドガイド参考画像' },
   guihuan: { zh: '归环攻略参考图', en: 'Guihuan guide reference image', ja: 'Guihuanガイド参考画像' },
   roco: { zh: '洛克王国:世界攻略参考图', en: 'Roco Kingdom guide reference image', ja: 'ロコキングダムガイド参考画像' },
+  'roco-cn': { zh: '洛克王国:世界（国服）攻略参考图', en: 'Roco Kingdom (CN) guide reference image', ja: 'ロコキングダム（中国版）ガイド参考画像' },
 };
 
 const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> = {
@@ -464,6 +466,12 @@ const GUIDE_FALLBACK_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
   roco: [
     { href: '/roco/guides/cbt-registration-guide', label: { zh: 'CBT 报名指南', en: 'CBT registration', ja: 'CBT登録ガイド' }, description: { zh: '首测前先确认报名与资格。', en: 'Secure signup and eligibility before the first test.', ja: '初回テスト前に申込と資格を確認。' } },
     { href: '/roco/guides/starter-guide', label: { zh: '御三家选择', en: 'Starter guide', ja: 'スターター選択' }, description: { zh: '开局路线与捕捉建议。', en: 'Early pacing and catching advice.', ja: '序盤ルートと捕獲のコツ。' } },
+  ],
+  'roco-cn': [
+    { href: '/roco-cn/guides/redeem-codes-cn', label: { zh: '兑换码大全', en: 'Redeem codes', ja: '交換コード一覧' }, description: { zh: '先领当前可用的洛克钻与资源。', en: 'Claim Luoke Diamonds and resources first.', ja: '先にロックダイヤと資源を回収。' } },
+    { href: '/roco-cn/guides/starter-guide-cn', label: { zh: '新手开荒', en: 'Starter guide', ja: '初心者ガイド' }, description: { zh: '御三家选择与开局路线。', en: 'Starter picks and day-one route.', ja: '御三家選びと初日ルート。' } },
+    { href: '/roco-cn/guides/s2-season-guide', label: { zh: 'S2 赛季指南', en: 'S2 season guide', ja: 'S2シーズンガイド' }, description: { zh: '赛季内容与迪莫超进化。', en: 'Season content and Dimo Ultra Evolution.', ja: 'シーズン内容とDimo超進化。' } },
+    { href: '/roco-cn/characters', label: { zh: '精灵图鉴', en: 'Jinie database', ja: 'ジニー図鑑' }, description: { zh: '查热门精灵捕捉与进化。', en: 'Check popular Jinies and evolutions.', ja: '人気ジニーの捕獲と進化を確認。' } },
   ],
 };
 
@@ -870,7 +878,7 @@ function getGuideArticleImages(gameId: GameId, slug: string, title: string, loca
 
   return Array.from({ length: imageTotal }, (_, offset) => {
     const index = (start + offset * 3) % count;
-    const src = gameId === 'guihuan' || gameId === 'roco'
+    const src = gameId === 'guihuan' || gameId === 'roco' || gameId === 'roco-cn'
       ? `/images/og/${gameId}.webp`
       : `/images/articles/${gameId}/${index}.webp`;
 

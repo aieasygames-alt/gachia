@@ -40,6 +40,11 @@ const REDEEM_DESC: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
     en: 'Ashfall Evolution redeem code tracker covering official site, WeGame, Bilibili, WeChat, TapTap, launch gifts, reservation rewards, and event codes.',
     ja: '失控進化の交換コード一覧。公式サイト、WeGame、Bilibili、WeChat、TapTap、リリース特典を整理しています。',
   },
+  'roco-cn': {
+    zh: '《洛克王国：世界》国服兑换码大全，整理公测长期码、S2 赛季码、主播码、渠道码与限时口令，帮助小洛克及时领取洛克钻、咕噜球与经验果。',
+    en: 'Roco Kingdom (CN) redeem code tracker covering launch codes, S2 season codes, creator codes, channel codes, and limited-time passwords so you can claim Luoke Diamonds and resources fast.',
+    ja: 'ロコキングダム（中国版）の交換コード一覧。公測の恒常コード、S2シーズンコード、クリエイターコード、期間限定パスワードを整理しています。',
+  },
 };
 
 function getLastCheckedAt(codes: RedeemCodeEntry[]): string {
@@ -117,6 +122,15 @@ export default async function RedeemCodesPage({
     launch: { zh: '公测福利', en: 'Launch Bonus', ja: 'リリース特典' },
     event: { zh: '活动', en: 'Event', ja: 'イベント' },
     permanent: { zh: '永久', en: 'Permanent', ja: '恒常' },
+    '公测长期码': { zh: '公测长期码', en: 'Launch (permanent)', ja: '公測・恒常' },
+    '公测纪念码': { zh: '公测纪念码', en: 'Launch Commemorative', ja: '公測記念' },
+    '公测纪念口令': { zh: '公测纪念口令', en: 'Launch Password', ja: '公測記念パスワード' },
+    '通用礼包码': { zh: '通用礼包码', en: 'General Gift Code', ja: '汎用ギフトコード' },
+    'S2 赛季码': { zh: 'S2 赛季码', en: 'S2 Season', ja: 'S2シーズン' },
+    '主播长期码': { zh: '主播长期码', en: 'Creator (permanent)', ja: 'クリエイター・恒常' },
+    'VIVO 渠道码': { zh: 'VIVO 渠道码', en: 'VIVO Channel', ja: 'VIVOチャンネル' },
+    '8 月限时码': { zh: '8 月限时码', en: 'August Limited', ja: '8月期間限定' },
+    '赛事预热码': { zh: '赛事预热码', en: 'Tournament Promo', ja: '大会プロモ' },
   };
 
   const redeemInstructions: Record<string, Record<string, string>> = {
@@ -154,6 +168,11 @@ export default async function RedeemCodesPage({
       zh: '《失控进化》公测兑换码暂未公开。上线前后请关注官网、WeGame、B站、微信公众号、TapTap 与本页更新；已确认的预约和绑定奖励会通过游戏邮箱或活动规则发放。',
       en: 'Ashfall Evolution launch redeem codes are not public yet. Watch the official site, WeGame, Bilibili, WeChat, TapTap, and this page. Confirmed reservation and binding rewards should follow official event rules.',
       ja: '『失控進化』のリリース交換コードはまだ公開されていません。公式サイト、WeGame、Bilibili、WeChat、TapTap、本ページを確認してください。',
+    },
+    'roco-cn': {
+      zh: '进入游戏主界面点击左下角齿轮（设置）→ 用户 → 兑换码，完整输入口令后提交，奖励发放至游戏邮箱。所有码单账号限兑一次、区分大小写，限时码会过期，请及时兑换。',
+      en: 'In the main menu, open the gear (Settings) in the bottom-left corner → User tab → Redeem Code, paste the code exactly, and submit. Rewards arrive in the mailbox. Each code works once per account and is case-sensitive; time-limited codes expire.',
+      ja: 'ゲームのメインメニュー左下の歯車（設定）→ ユーザー → 交換コードからコードを正確に入力して送信。報酬はメールボックスに届きます。各コードはアカウントごとに1回のみ、大文字小文字は区別されます。期間限定コードは期限切れに注意。',
     },
   };
 

@@ -34,7 +34,7 @@ const FEATURED_GUIDE_IDS: Record<GameId, string[]> = {
   sea: ['open-beta-version-center', 'launch-day-guide', 'download-install-guide'],
   skjh: ['week-one-live-ops-overview', 'anti-cheat-reporting-guide', 'custom-mode-community-server-guide'],
   roco: ['cbt-registration-guide', 'starter-guide', 'what-is-roco-kingdom', 'platforms-and-download-guide'],
-  'roco-cn': [],
+  'roco-cn': ['redeem-codes-cn', 'starter-guide-cn', 's2-season-guide'],
 };
 
 const SEA_DECISION_LINKS: Array<{
@@ -287,7 +287,7 @@ export default async function GuidesPage({
     return await SkjhGuides({ locale, gameId });
   }
 
-  if (gameId === 'roco') {
+  if (gameId === 'roco' || gameId === 'roco-cn') {
     return await RocoGuides({ locale, gameId });
   }
 
@@ -1572,8 +1572,8 @@ async function SkjhGuides({ locale, gameId }: { locale: SupportedLocale; gameId:
 
 async function RocoGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
   const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
-  const gameConfig = GAMES.roco;
-  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.roco);
+  const gameConfig = GAMES[gameId];
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS[gameId]);
 
   return (
     <div>
@@ -1595,14 +1595,14 @@ async function RocoGuides({ locale, gameId }: { locale: SupportedLocale; gameId:
               {locale === 'zh' ? '热门攻略' : locale === 'ja' ? '注目ガイド' : 'Featured Guides'}
             </h2>
             <span className="text-xs text-game-text-muted">
-              {locale === 'zh' ? '先看 CBT 报名与入门路线' : locale === 'ja' ? 'CBT登録と入門ルートを優先' : 'Start with CBT signup and beginner routes'}
+              {locale === 'zh' ? '先看热门攻略' : locale === 'ja' ? '注目ガイドを優先' : 'Start with featured guides'}
             </span>
           </div>
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {featuredGuides.map((guide) => (
               <Link
                 key={guide.id}
-                href={`/roco/guides/${guide.id}`}
+                href={`/${gameId}/guides/${guide.id}`}
                 className="group flex flex-col rounded-xl border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
               >
                 <div className="mb-3 flex items-center justify-between gap-3">
@@ -1651,7 +1651,7 @@ async function RocoGuides({ locale, gameId }: { locale: SupportedLocale; gameId:
               {categoryGuides.map((guide) => (
                 <Link
                   key={guide.id}
-                  href={`/roco/guides/${guide.id}`}
+                  href={`/${gameId}/guides/${guide.id}`}
                   className="group flex flex-col rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
                 >
                   <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">

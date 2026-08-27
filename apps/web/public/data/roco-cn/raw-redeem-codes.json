@@ -1,1 +1,27 @@
-[]
+[
+  { "code": "LKWG0000", "reward": "洛克贝、初级咕噜球、初级经验果", "rewardEn": "Luoke Coins, basic Gulu Balls, basic XP fruits", "status": "active", "expiresAt": "", "source": "公测长期码", "region": "cn", "revealedAt": "2026-03-26" },
+  { "code": "LKWG1111", "reward": "洛克钻 111、高级咕噜球、体力", "rewardEn": "111 Luoke Diamonds, premium Gulu Balls, stamina", "status": "active", "expiresAt": "", "source": "公测长期码", "region": "cn", "revealedAt": "2026-03-26" },
+  { "code": "LKWG2222", "reward": "洛克钻 222、特级经验果、国王球", "rewardEn": "222 Luoke Diamonds, XP fruits, King Balls", "status": "active", "expiresAt": "", "source": "公测长期码", "region": "cn", "revealedAt": "2026-03-26" },
+  { "code": "LKWG666", "reward": "洛克钻 66、限定头像框、经验果", "rewardEn": "66 Luoke Diamonds, avatar frame, XP fruits", "status": "active", "expiresAt": "", "source": "公测长期码", "region": "cn", "revealedAt": "2026-03-26" },
+  { "code": "LKWG777", "reward": "洛克钻 188、高级咕噜球、经验果", "rewardEn": "188 Luoke Diamonds, premium Gulu Balls, XP fruits", "status": "active", "expiresAt": "", "source": "公测长期码", "region": "cn", "revealedAt": "2026-03-26" },
+  { "code": "LKWG888", "reward": "洛克钻 288、稀有装备箱、魔法石", "rewardEn": "288 Luoke Diamonds, equipment box, magic stones", "status": "active", "expiresAt": "", "source": "公测长期码", "region": "cn", "revealedAt": "2026-03-26" },
+  { "code": "LKWG6666", "reward": "洛克贝、高级咕噜球、经验果", "rewardEn": "Luoke Coins, premium Gulu Balls, XP fruits", "status": "active", "expiresAt": "", "source": "通用礼包码", "region": "cn", "revealedAt": "2026-05-21" },
+  { "code": "LKWG7777", "reward": "洛克贝、高级咕噜球、经验果", "rewardEn": "Luoke Coins, premium Gulu Balls, XP fruits", "status": "active", "expiresAt": "", "source": "通用礼包码", "region": "cn", "revealedAt": "2026-05-21" },
+  { "code": "LKWG8888", "reward": "洛克贝、高级咕噜球、经验果", "rewardEn": "Luoke Coins, premium Gulu Balls, XP fruits", "status": "active", "expiresAt": "", "source": "通用礼包码", "region": "cn", "revealedAt": "2026-05-21" },
+  { "code": "LKWG2026", "reward": "公测纪念头像框、咕噜球、洛克贝", "rewardEn": "Launch avatar frame, Gulu Balls, Luoke Coins", "status": "active", "expiresAt": "", "source": "公测纪念码", "region": "cn", "revealedAt": "2026-03-26" },
+  { "code": "LKWORLD666", "reward": "洛克贝、魔法石、培养材料", "rewardEn": "Luoke Coins, magic stones, materials", "status": "active", "expiresAt": "", "source": "通用礼包码", "region": "cn", "revealedAt": "2026-03-26" },
+  { "code": "ROCO2026", "reward": "洛克钻 266、稀有培养材料、捕捉球", "rewardEn": "266 Luoke Diamonds, rare materials, capture balls", "status": "active", "expiresAt": "", "source": "公测长期码", "region": "cn", "revealedAt": "2026-03-26" },
+  { "code": "LOCKES2026", "reward": "洛克钻、经验果、魔法石", "rewardEn": "Luoke Diamonds, XP fruits, magic stones", "status": "active", "expiresAt": "", "source": "公测长期码", "region": "cn", "revealedAt": "2026-03-26" },
+  { "code": "WELCOME", "reward": "洛克贝、精灵蛋、基础资源", "rewardEn": "Luoke Coins, Jinie egg, basic resources", "status": "active", "expiresAt": "", "source": "通用礼包码", "region": "cn", "revealedAt": "2026-03-26" },
+  { "code": "LKWG2026S2", "reward": "S2 赛季专属礼包、洛克贝、咕噜球", "rewardEn": "S2 season pack, Luoke Coins, Gulu Balls", "status": "active", "expiresAt": "2026-09-16", "source": "S2 赛季码", "region": "cn", "revealedAt": "2026-05-21" },
+  { "code": "S2LUCKY88", "reward": "幸运礼包、异色精灵蛋、强化药剂", "rewardEn": "Lucky pack, shiny Jinie egg, boosters", "status": "active", "expiresAt": "2026-09-16", "source": "S2 赛季码", "region": "cn", "revealedAt": "2026-05-21" },
+  { "code": "S2LUCKY666", "reward": "天赋刷新卡、洛克贝、中级魔力药剂", "rewardEn": "Talent-reset cards, Luoke Coins, potions", "status": "active", "expiresAt": "2026-09-16", "source": "S2 赛季码", "region": "cn", "revealedAt": "2026-05-21" },
+  { "code": "还得是远哥", "reward": "炫彩精灵蛋（概率出异色）", "rewardEn": "Shimmering Jinie egg (may hatch shiny)", "status": "active", "expiresAt": "", "source": "主播长期码", "region": "cn", "revealedAt": "2026-08-01" },
+  { "code": "远哥的心意", "reward": "祝福项链（提升精灵对战经验）", "rewardEn": "Blessing necklace (more battle EXP)", "status": "active", "expiresAt": "", "source": "主播长期码", "region": "cn", "revealedAt": "2026-08-01" },
+  { "code": "远哥严选", "reward": "棱镜球（高捕捉概率）", "rewardEn": "Prism Balls (higher catch rate)", "status": "active", "expiresAt": "", "source": "主播长期码", "region": "cn", "revealedAt": "2026-08-01" },
+  { "code": "一起玩更快洛", "reward": "渠道限定补给礼包", "rewardEn": "Channel supply pack", "status": "active", "expiresAt": "", "source": "VIVO 渠道码", "region": "cn", "revealedAt": "2026-08-01" },
+  { "code": "不要小瞧我和精灵的羁绊啊", "reward": "慈悲为怀精灵蛋（捕捉保 1 点血）", "rewardEn": "Merciful-Heart egg (keeps 1 HP when catching)", "status": "active", "expiresAt": "2026-08-31", "source": "8 月限时码", "region": "cn", "revealedAt": "2026-08-01" },
+  { "code": "8 月 25 日洛神杯第二届开赛", "reward": "赛事专属道具", "rewardEn": "Tournament exclusive items", "status": "active", "expiresAt": "2026-09-16", "source": "赛事预热码", "region": "cn", "revealedAt": "2026-08-25" },
+  { "code": "326做回小洛克", "reward": "洛克贝、高级咕噜球、可可果", "rewardEn": "Luoke Coins, premium Gulu Balls, cacao fruits", "status": "active", "expiresAt": "", "source": "公测纪念口令", "region": "cn", "revealedAt": "2026-03-26" },
+  { "code": "327做回小洛克", "reward": "洛克贝、高级咕噜球、棱镜球", "rewardEn": "Luoke Coins, premium Gulu Balls, Prism Balls", "status": "active", "expiresAt": "", "source": "公测纪念口令", "region": "cn", "revealedAt": "2026-03-27" }
+]
