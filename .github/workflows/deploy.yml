@@ -153,6 +153,18 @@ jobs:
       - name: Smoke test production
         run: |
           set -euo pipefail
-          for url in https://gachia.com/zh https://gachia.com/en https://gachia.com/ja https://gachia.com/sitemap.xml; do
-            curl --fail --silent --show-error --retry 5 --retry-all-errors --max-time 30 "$url" > /dev/null
+          urls=(
+            https://gachia.com/zh
+            https://gachia.com/en
+            https://gachia.com/ja
+            https://gachia.com/zh/genshin
+            https://gachia.com/zh/privacy
+            https://gachia.com/zh/contact
+            https://gachia.com/sitemap.xml
+            https://gachia.com/ads.txt
+          )
+          for url in "${urls[@]}"; do
+            for attempt in 1 2 3; do
+              curl --fail --silent --show-error --max-time 30 "$url" > /dev/null
+            done
           done

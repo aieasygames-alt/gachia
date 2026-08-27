@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import { Poppins } from 'next/font/google';
 import { LOCALES, DEFAULT_LOCALE } from '@gachia/core';
 import type { SupportedLocale } from '@gachia/core';
 import { SiteHeader } from '@/components/layout/site-header';
@@ -10,13 +9,6 @@ import { SiteFooter } from '@/components/layout/site-footer';
 import zhMessages from '@/messages/zh.json';
 import enMessages from '@/messages/en.json';
 import jaMessages from '@/messages/ja.json';
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  display: 'swap',
-  variable: '--font-poppins',
-});
 
 const allMessages: Record<string, Record<string, unknown>> = {
   zh: zhMessages,
@@ -45,7 +37,7 @@ export default async function LocaleLayout({
   const messages = allMessages[locale] ?? allMessages[DEFAULT_LOCALE];
 
   return (
-    <html lang={locale === 'zh' ? 'zh-Hans' : locale} className={poppins.variable}>
+    <html lang={locale === 'zh' ? 'zh-Hans' : locale}>
       <head>
         <GoogleAnalytics gaId="G-4L1VKXGY2Y" />
         <script

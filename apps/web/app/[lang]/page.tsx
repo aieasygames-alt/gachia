@@ -256,8 +256,6 @@ const TITLES: Record<string, string> = {
   ja: 'Gachia ゲーム攻略 Wiki：バナー、版本、コード、キャラ',
 };
 
-export const dynamic = 'force-dynamic';
-
 export async function generateMetadata({
   params,
 }: {
