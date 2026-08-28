@@ -17,6 +17,7 @@ const ITEM_DESC: Record<string, Record<string, string>> = {
   ananta: { zh: '无限大全材料图鉴，覆盖突破材料、Boss材料、区域特产和刷取来源，帮助你在培养角色时快速整理所有所需资源。', en: 'Complete Ananta material list with ascension, boss materials, local specialties, and farming sources to keep your upgrade path organized.', ja: 'アナンタ全素材図鑑。昇格素材、ボス素材、地域特産品、周回先を整理して確認できます。' },
   endfield: { zh: '明日方舟：终末地全材料图鉴，覆盖突破材料、技能材料、货币材料和来源，方便你从培养计划一路查到具体掉落。', en: 'Complete Arknights: Endfield material list with ascension materials, skill materials, currency materials, and farming sources for full upgrade planning.', ja: 'アークナイツ：エンドフィールド全素材図鑑。昇格素材、スキル素材、通貨素材、入手先を確認できます。' },
   skjh: { zh: '失控进化资源道具图鉴，覆盖废料、布料、木石金属、领地柜、睡袋和公测奖励，方便你规划开荒阶段的资源收集路线。', en: 'Ashfall Evolution resource and item list with scrap, cloth, wood, stone, metal, territory cabinet, sleeping bag, and launch rewards for early-game planning.', ja: '失控進化の資源・アイテム一覧。スクラップ、布、木石金属、領地キャビネット、寝袋、報酬を整理しています。' },
+  'roco-cn': { zh: '洛克王国材料图鉴，覆盖咕噜球、经验果、进化材料、矿石与货币代币的获取来源，方便你规划捕捉与培养路线。', en: 'Roco Kingdom (CN) materials list with Gulu Balls, EXP fruits, evolution materials, ores, and currency tokens with acquisition sources for capture and training planning.', ja: '洛克王国素材一覧。グルーボール、経験値フルーツ、進化素材、鉱石、通貨の入手先を整理しています。' },
 };
 
 const NTE_TYPE_LABELS: Record<string, Record<string, string>> = {
@@ -116,6 +117,11 @@ const ITEM_INTRO: Record<string, Record<SupportedLocale, string>> = {
     zh: '按生存资源、组件、弹药、燃料和医疗补给快速浏览失控进化资源图鉴，适合先看开荒消耗和收集路线。',
     en: 'Browse the Ashfall Evolution resource wiki by survival items, components, ammo, fuel, and medical supplies to review early-game costs and collection routes.',
     ja: '生存資源、部品、弾薬、燃料、医療補給で失控進化資源図鑑を確認し、序盤消費と収集ルートを把握できます。',
+  },
+  'roco-cn': {
+    zh: '按咕噜球、经验果、进化材料和货币代币快速浏览洛克王国材料图鉴，适合先看捕捉与培养的消耗和获取路线。',
+    en: 'Browse the Roco Kingdom (CN) material wiki by Gulu Balls, EXP fruits, evolution materials, and currency tokens to review capture and training costs.',
+    ja: 'グルーボール、経験値フルーツ、進化素材、通貨で洛克王国素材図鑑を確認し、捕獲と育成の消費を把握できます。',
   },
 };
 
@@ -240,6 +246,11 @@ export default async function ItemsPage({
 
   if (gameId === 'skjh') {
     const content = await SkjhItemsPage({ locale, gameId });
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+  }
+
+  if (gameId === 'roco-cn') {
+    const content = await RocoCnItemsPage({ locale, gameId });
     return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
   }
 
@@ -850,6 +861,60 @@ async function SeaItemsPage({ locale, gameId }: { locale: SupportedLocale; gameI
         const list = grouped[type];
         if (!list || list.length === 0) return null;
         const typeLabel = SEA_TYPE_LABELS[type]?.[locale] ?? type;
+        return (
+          <section key={type} className="mb-8">
+            <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
+            <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              {list.map((mat) => (
+                <Link key={mat.id} href={`/${gameId}/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+                  <div className="mb-1 flex items-center gap-2">
+                    <h3 className="text-sm font-semibold text-game-text">{mat.name}</h3>
+                  </div>
+                  <div className="mb-1 flex items-center gap-2">
+                    <span className="text-xs text-game-text-muted">{typeLabel}</span>
+                    <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
+                  </div>
+                  <p className="text-xs text-game-text-muted line-clamp-2">{mat.source}</p>
+                </Link>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
+// --- Roco Kingdom (CN) Items ---
+
+const ROCO_CN_TYPE_LABELS: Record<string, Record<string, string>> = {
+  capture: { zh: '咕噜球', en: 'Gulu Ball', ja: 'グルーボール' },
+  exp: { zh: '经验果', en: 'EXP Fruit', ja: '経験値フルーツ' },
+  evolution: { zh: '进化材料', en: 'Evolution Material', ja: '進化素材' },
+  currency: { zh: '货币 / 代币', en: 'Currency / Token', ja: '通貨・トークン' },
+};
+
+async function RocoCnItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
+  const materials = await getItemListData(gameId as GameId, locale);
+  const grouped = groupByType(materials);
+  const typeOrder = ['capture', 'exp', 'evolution', 'currency'];
+
+  return (
+    <div>
+      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES['roco-cn'].theme.primary }}>
+        {locale === 'zh' ? '洛克王国材料图鉴' : locale === 'ja' ? '洛克王国素材図鑑' : 'Roco Kingdom Materials'}
+      </h1>
+      <p className="mb-6 text-sm text-game-text-muted">
+        {locale === 'zh' ? `共 ${materials.length} 种材料道具` : locale === 'ja' ? `${materials.length} 種の素材・アイテム` : `${materials.length} materials and items`}
+      </p>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+        {getItemIntro('roco-cn', locale)}
+      </p>
+
+      {typeOrder.map((type) => {
+        const list = grouped[type];
+        if (!list || list.length === 0) return null;
+        const typeLabel = ROCO_CN_TYPE_LABELS[type]?.[locale] ?? type;
         return (
           <section key={type} className="mb-8">
             <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>

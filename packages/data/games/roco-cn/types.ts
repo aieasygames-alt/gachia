@@ -2,6 +2,27 @@ import type { SupportedLocale } from '@gachia/core';
 
 // --- Jinie (Creature) Types ---
 
+export interface RocoCnSkill {
+  level?: number;
+  name: string;
+  nameEn: string;
+  element: string;
+  category: 'physical' | 'magic' | 'status' | 'defense';
+  power?: number;
+  description: string;
+  descriptionEn: string;
+}
+
+export interface RocoCnStats {
+  total: number;
+  hp?: number;
+  atk?: number;
+  matk?: number;
+  def?: number;
+  mdef?: number;
+  spd?: number;
+}
+
 export interface RocoCnJinie {
   id: string;
   number: string;
@@ -18,6 +39,9 @@ export interface RocoCnJinie {
   description: string;
   descriptionEn: string;
   status: string;
+  skills?: RocoCnSkill[];
+  stats?: RocoCnStats;
+  releaseVersion?: string;
 }
 
 // --- Guide Types ---

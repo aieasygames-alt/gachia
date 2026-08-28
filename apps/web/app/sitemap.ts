@@ -71,7 +71,7 @@ const ARTIFACT_GAMES = ['genshin', 'starrail'] as const;
 const ECHO_GAMES = ['wuwa'] as const;
 const DISK_SET_GAMES = ['nte'] as const;
 const DRIVE_DISC_GAMES = ['zzz'] as const;
-const ITEM_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco', 'roco-cn'] as const;
+const ITEM_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco-cn'] as const;
 const STATIC_SITE_PAGES = ['contact', 'privacy', 'terms', 'sitemap', 'calendar', 'tools/pull-planner'] as const;
 
 // Category routes that have real content per game
@@ -86,7 +86,7 @@ const REAL_CONTENT_ROUTES: Record<string, string[]> = {
   endfield: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'guides', 'build', 'compare', 'teams', 'map'],
   sea: ['characters', 'guides', 'items', 'tier-list', 'version', 'download', 'calculator', 'redeem-codes'],
   skjh: ['weapons', 'guides', 'items', 'redeem-codes', 'version', 'download', 'calculator', 'teams', 'map'],
-  roco: ['characters', 'guides', 'items', 'version', 'download', 'redeem-codes'],
+  roco: ['characters', 'guides', 'version', 'download', 'redeem-codes'],
   'roco-cn': ['characters', 'guides', 'items', 'version', 'download', 'redeem-codes'],
 };
 

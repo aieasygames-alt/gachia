@@ -131,6 +131,10 @@ export async function getItemsForStaticParams(gameId: GameId): Promise<Array<{ i
       const mod = await import('@gachia/data/games/skjh/items');
       return mod.skjhMaterials.map((m) => ({ id: m.id }));
     }
+    case 'roco-cn': {
+      const mod = await import('@gachia/data/games/roco-cn/items');
+      return mod.rocoCnMaterials.map((m) => ({ id: m.id }));
+    }
     default:
       return [];
   }
@@ -192,6 +196,11 @@ export async function getItemData(
       const material = mod.getSkjhMaterialById(id);
       return material ? toItemData(material, locale, mod.getSkjhMaterialName) : null;
     }
+    case 'roco-cn': {
+      const mod = await import('@gachia/data/games/roco-cn/items');
+      const material = mod.getRocoCnMaterialById(id);
+      return material ? toItemData(material, locale, mod.getRocoCnMaterialName) : null;
+    }
     default:
       return null;
   }
@@ -241,6 +250,10 @@ export async function getItemListData(
     case 'skjh': {
       const mod = await import('@gachia/data/games/skjh/items');
       return mod.skjhMaterials.map((material) => toItemListEntry(material, locale, mod.getSkjhMaterialName));
+    }
+    case 'roco-cn': {
+      const mod = await import('@gachia/data/games/roco-cn/items');
+      return mod.rocoCnMaterials.map((material) => toItemListEntry(material, locale, mod.getRocoCnMaterialName));
     }
     default:
       return [];

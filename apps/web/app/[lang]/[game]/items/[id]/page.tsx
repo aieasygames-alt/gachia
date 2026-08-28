@@ -185,6 +185,23 @@ const ITEM_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
       description: { zh: '继续看专题攻略', en: 'Continue with guide content', ja: '攻略コンテンツへ進む' },
     },
   ],
+  'roco-cn': [
+    {
+      href: '/roco-cn/characters',
+      title: { zh: '看精灵图鉴', en: 'Browse Jinies', ja: 'ジニー図鑑へ' },
+      description: { zh: '先看精灵技能与种族值，再规划培养', en: 'Review Jinie skills and base stats before training', ja: 'ジニーのスキルと種族値を確認' },
+    },
+    {
+      href: '/roco-cn/guides',
+      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
+      description: { zh: '继续看新手、捕捉和养成专题', en: 'Continue with beginner, capture, and training guides', ja: '初心者・捕獲・育成ガイドへ' },
+    },
+    {
+      href: '/roco-cn/redeem-codes',
+      title: { zh: '看兑换码', en: 'Redeem codes', ja: '引き換えコード' },
+      description: { zh: '领完兑换码再补材料缺口', en: 'Claim redeem codes to cover material gaps', ja: 'コードで素材を補充' },
+    },
+  ],
 };
 
 const TYPE_LABELS: Record<string, Record<string, string>> = {
@@ -217,6 +234,9 @@ const TYPE_LABELS: Record<string, Record<string, string>> = {
   resource: { zh: '生存资源', en: 'Survival Resource', ja: '生存資源' },
   base: { zh: '基地设施', en: 'Base Facility', ja: '拠点設備' },
   reward: { zh: '福利奖励', en: 'Reward', ja: '報酬' },
+  capture: { zh: '咕噜球', en: 'Gulu Ball', ja: 'グルーボール' },
+  exp: { zh: '经验果', en: 'EXP Fruit', ja: '経験値フルーツ' },
+  evolution: { zh: '进化材料', en: 'Evolution Material', ja: '進化素材' },
 };
 
 type LocaleMeta = Partial<Record<SupportedLocale, { title: string; description: string }>>;

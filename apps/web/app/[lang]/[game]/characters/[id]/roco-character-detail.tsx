@@ -25,6 +25,8 @@ import {
   getRocoCnCharacterImage,
 } from '@gachia/data/games/roco-cn/characters';
 
+import type { RocoCnSkill, RocoCnStats } from '@gachia/data/games/roco-cn/types';
+
 // ============================================================
 // Roco Kingdom Jinie Detail
 // ============================================================
@@ -42,6 +44,8 @@ const ROCO_ELEMENT_COLORS: Record<string, string> = {
   bug: '#84cc16',
   light: '#fde047',
   dark: '#64748b',
+  psychic: '#f472b6',
+  fairy: '#f9a8d4',
 };
 
 const ROCO_ELEMENT_NAMES: Record<string, Record<SupportedLocale, string>> = {
@@ -57,7 +61,24 @@ const ROCO_ELEMENT_NAMES: Record<string, Record<SupportedLocale, string>> = {
   bug: { zh: '虫', en: 'Bug', ja: 'むし' },
   light: { zh: '光', en: 'Light', ja: 'ひかり' },
   dark: { zh: '暗', en: 'Dark', ja: 'あく' },
+  psychic: { zh: '幻', en: 'Psychic', ja: 'エスパー' },
+  fairy: { zh: '仙', en: 'Fairy', ja: 'フェアリー' },
 };
+
+const ROCO_SKILL_CATEGORY_LABELS: Record<string, Record<SupportedLocale, string>> = {
+  physical: { zh: '物理', en: 'Physical', ja: '物理' },
+  magic: { zh: '魔法', en: 'Magic', ja: '魔法' },
+  status: { zh: '属性', en: 'Status', ja: '変化' },
+  defense: { zh: '防御', en: 'Defense', ja: '防衛' },
+};
+
+const ROCO_STAT_LABELS: Record<SupportedLocale, Record<string, string>> = {
+  zh: { total: '总和', hp: '精力', atk: '攻击', matk: '魔攻', def: '防御', mdef: '魔抗', spd: '速度' },
+  en: { total: 'Total', hp: 'HP', atk: 'Attack', matk: 'M.Atk', def: 'Defense', mdef: 'M.Def', spd: 'Speed' },
+  ja: { total: '合計', hp: 'HP', atk: '攻撃', matk: '魔攻', def: '防御', mdef: '魔防', spd: 'すばやさ' },
+};
+
+const ROCO_STAT_MAX = 200;
 
 interface JinieLike {
   id: string;
@@ -75,6 +96,9 @@ interface JinieLike {
   description: string;
   descriptionEn: string;
   status: string;
+  skills?: RocoCnSkill[];
+  stats?: RocoCnStats;
+  releaseVersion?: string;
 }
 
 function localeStr(zh: string, en: string, locale: SupportedLocale, ja?: string): string {
@@ -148,6 +172,11 @@ function JinieDetail({
                 #{char.number}
               </span>
             )}
+            {char.releaseVersion && (
+              <span className="rounded bg-game-surface-alt px-2 py-0.5 text-sm text-game-text-muted">
+                {char.releaseVersion}
+              </span>
+            )}
           </div>
           <p className="mb-3 text-sm leading-relaxed text-game-text-muted">
             {localeStr(char.description, char.descriptionEn, locale)}
@@ -176,6 +205,97 @@ function JinieDetail({
           </div>
         </div>
       </Section>
+
+      {/* Stats (base stats / racial values) */}
+      {char.stats && (
+        <Section title={locale === 'zh' ? '种族值' : locale === 'ja' ? '種族値' : 'Base Stats'}>
+          <div className="rounded-lg border border-game-border bg-game-surface p-4">
+            <div className="mb-4 flex items-baseline justify-between">
+              <span className="text-xs text-game-text-muted">
+                {ROCO_STAT_LABELS[locale].total}
+              </span>
+              <span className="text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
+                {char.stats.total}
+              </span>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {(['hp', 'atk', 'matk', 'def', 'mdef', 'spd'] as const).map((key) => {
+                const value = char.stats?.[key];
+                if (value === undefined) return null;
+                return (
+                  <div key={key} className="flex items-center gap-3">
+                    <span className="w-14 shrink-0 text-xs text-game-text-muted">
+                      {ROCO_STAT_LABELS[locale][key]}
+                    </span>
+                    <span className="w-10 shrink-0 text-right text-sm font-semibold text-game-text">
+                      {value}
+                    </span>
+                    <div className="h-2 flex-1 overflow-hidden rounded-full bg-game-surface-alt">
+                      <div
+                        className="h-full rounded-full"
+                        style={{
+                          width: `${Math.min(100, (value / ROCO_STAT_MAX) * 100)}%`,
+                          backgroundColor: ROCO_ELEMENT_COLORS[char.attribute] ?? '#888',
+                        }}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </Section>
+      )}
+
+      {/* Skills */}
+      {char.skills && char.skills.length > 0 && (
+        <Section title={locale === 'zh' ? '技能表' : locale === 'ja' ? 'スキル一覧' : 'Skills'}>
+          <div className="overflow-x-auto rounded-lg border border-game-border bg-game-surface">
+            <table className="w-full min-w-[480px] text-sm">
+              <thead>
+                <tr className="border-b border-game-border text-left text-xs text-game-text-muted">
+                  <th className="px-3 py-2">{locale === 'zh' ? '等级' : locale === 'ja' ? 'Lv' : 'Lv'}</th>
+                  <th className="px-3 py-2">{locale === 'zh' ? '技能' : locale === 'ja' ? 'スキル' : 'Skill'}</th>
+                  <th className="px-3 py-2">{locale === 'zh' ? '系别' : locale === 'ja' ? 'タイプ' : 'Type'}</th>
+                  <th className="px-3 py-2">{locale === 'zh' ? '分类' : locale === 'ja' ? '分類' : 'Category'}</th>
+                  <th className="px-3 py-2">{locale === 'zh' ? '威力' : locale === 'ja' ? '威力' : 'Power'}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {char.skills.map((skill, idx) => (
+                  <tr key={`${skill.nameEn}-${idx}`} className="border-b border-game-border/50 last:border-b-0">
+                    <td className="whitespace-nowrap px-3 py-2 text-game-text-muted">
+                      {skill.level !== undefined ? `Lv.${skill.level}` : '—'}
+                    </td>
+                    <td className="px-3 py-2">
+                      <div className="font-medium text-game-text">
+                        {localeStr(skill.name, skill.nameEn, locale)}
+                      </div>
+                      <div className="mt-0.5 text-xs text-game-text-muted">
+                        {localeStr(skill.description, skill.descriptionEn, locale)}
+                      </div>
+                    </td>
+                    <td className="whitespace-nowrap px-3 py-2">
+                      <span
+                        className="rounded px-1.5 py-0.5 text-xs font-medium text-white"
+                        style={{ backgroundColor: ROCO_ELEMENT_COLORS[skill.element] ?? '#888' }}
+                      >
+                        {ROCO_ELEMENT_NAMES[skill.element]?.[locale] ?? skill.element}
+                      </span>
+                    </td>
+                    <td className="whitespace-nowrap px-3 py-2 text-game-text-muted">
+                      {ROCO_SKILL_CATEGORY_LABELS[skill.category]?.[locale] ?? skill.category}
+                    </td>
+                    <td className="whitespace-nowrap px-3 py-2 text-game-text-muted">
+                      {skill.power !== undefined ? skill.power : '—'}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Section>
+      )}
 
       <NextStepSection locale={locale} gameId={gameId} />
 

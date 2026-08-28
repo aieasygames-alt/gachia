@@ -1,1 +1,209 @@
-[]
+[
+  {
+    "id": "normal-gulu-ball",
+    "name": "普通咕噜球",
+    "nameEn": "Normal Gulu Ball",
+    "type": "capture",
+    "rarity": 1,
+    "source": "商店购买（洛克贝）、野外宝箱",
+    "sourceEn": "Shop (Luoke Coins), field treasure chests"
+  },
+  {
+    "id": "mid-gulu-ball",
+    "name": "中级咕噜球",
+    "nameEn": "Intermediate Gulu Ball",
+    "type": "capture",
+    "rarity": 2,
+    "source": "商店购买（洛克贝）、任务奖励",
+    "sourceEn": "Shop (Luoke Coins), quest rewards"
+  },
+  {
+    "id": "high-gulu-ball",
+    "name": "高级咕噜球",
+    "nameEn": "Advanced Gulu Ball",
+    "type": "capture",
+    "rarity": 3,
+    "source": "商店购买（洛克贝）、王国徽记兑换",
+    "sourceEn": "Shop (Luoke Coins), Kingdom Emblem exchange"
+  },
+  {
+    "id": "attribute-gulu-ball",
+    "name": "属性咕噜球",
+    "nameEn": "Attribute Gulu Ball",
+    "type": "capture",
+    "rarity": 3,
+    "source": "商店购买（洛克贝）、活动奖励",
+    "sourceEn": "Shop (Luoke Coins), event rewards"
+  },
+  {
+    "id": "king-gulu-ball",
+    "name": "国王咕噜球",
+    "nameEn": "King Gulu Ball",
+    "type": "capture",
+    "rarity": 4,
+    "source": "王国徽记兑换、首领挑战奖励",
+    "sourceEn": "Kingdom Emblem exchange, boss challenge rewards"
+  },
+  {
+    "id": "light-capture-gulu-ball",
+    "name": "捕光咕噜球",
+    "nameEn": "Light-Catching Gulu Ball",
+    "type": "capture",
+    "rarity": 4,
+    "source": "限时活动兑换、王国徽记商店",
+    "sourceEn": "Limited event exchange, Kingdom Emblem shop"
+  },
+  {
+    "id": "cocoa-fruit",
+    "name": "可可果",
+    "nameEn": "Cocoa Fruit",
+    "type": "exp",
+    "rarity": 1,
+    "source": "野外采集、农场种植、商店购买",
+    "sourceEn": "Field gathering, farm planting, shop"
+  },
+  {
+    "id": "small-growth-fruit",
+    "name": "小成长果",
+    "nameEn": "Small Growth Fruit",
+    "type": "exp",
+    "rarity": 2,
+    "source": "农场种植、每日任务奖励",
+    "sourceEn": "Farm planting, daily quest rewards"
+  },
+  {
+    "id": "magic-fruit",
+    "name": "魔力果",
+    "nameEn": "Magic Fruit",
+    "type": "exp",
+    "rarity": 3,
+    "source": "农场种植、王国徽记兑换",
+    "sourceEn": "Farm planting, Kingdom Emblem exchange"
+  },
+  {
+    "id": "fire-dragon-fruit",
+    "name": "火龙果",
+    "nameEn": "Fire Dragon Fruit",
+    "type": "exp",
+    "rarity": 4,
+    "source": "高级农场种植、活动奖励",
+    "sourceEn": "Advanced farm planting, event rewards"
+  },
+  {
+    "id": "iron-ore",
+    "name": "铁矿石",
+    "nameEn": "Iron Ore",
+    "type": "evolution",
+    "rarity": 1,
+    "source": "天空城、风铃岛矿点采集",
+    "sourceEn": "Mining nodes in Sky City and Wind Chime Island"
+  },
+  {
+    "id": "gold-ore",
+    "name": "金矿石",
+    "nameEn": "Gold Ore",
+    "type": "evolution",
+    "rarity": 2,
+    "source": "矿点采集、精灵掉落",
+    "sourceEn": "Mining nodes, Jinie drops"
+  },
+  {
+    "id": "crystal",
+    "name": "水晶",
+    "nameEn": "Crystal",
+    "type": "evolution",
+    "rarity": 3,
+    "source": "高级矿点采集、活动兑换",
+    "sourceEn": "Advanced mining nodes, event exchange"
+  },
+  {
+    "id": "magic-dust",
+    "name": "魔法粉尘",
+    "nameEn": "Magic Dust",
+    "type": "evolution",
+    "rarity": 2,
+    "source": "击败野外精灵掉落、分解材料",
+    "sourceEn": "Drops from wild Jinies, material salvage"
+  },
+  {
+    "id": "chief-bloodline-elixir",
+    "name": "首领血脉秘药",
+    "nameEn": "Chief Bloodline Elixir",
+    "type": "evolution",
+    "rarity": 5,
+    "source": "首领挑战高难度奖励、王国徽记兑换",
+    "sourceEn": "High-difficulty boss challenge rewards, Kingdom Emblem exchange"
+  },
+  {
+    "id": "flame-glass",
+    "name": "火焰玻璃",
+    "nameEn": "Flame Glass",
+    "type": "evolution",
+    "rarity": 4,
+    "source": "火系精灵栖息地采集、活动奖励",
+    "sourceEn": "Gathering at fire Jinie habitats, event rewards"
+  },
+  {
+    "id": "fuel-rod",
+    "name": "燃料棒",
+    "nameEn": "Fuel Rod",
+    "type": "evolution",
+    "rarity": 3,
+    "source": "机械系区域采集、任务奖励",
+    "sourceEn": "Gathering in mechanical zones, quest rewards"
+  },
+  {
+    "id": "blue-key",
+    "name": "蓝色钥匙",
+    "nameEn": "Blue Key",
+    "type": "evolution",
+    "rarity": 3,
+    "source": "每日签到、水系区域探索",
+    "sourceEn": "Daily sign-in, water zone exploration"
+  },
+  {
+    "id": "ocean-heart",
+    "name": "海洋之心",
+    "nameEn": "Ocean Heart",
+    "type": "evolution",
+    "rarity": 5,
+    "source": "深海区域限时探索、高级活动兑换",
+    "sourceEn": "Limited deep-sea exploration, advanced event exchange"
+  },
+  {
+    "id": "luoke-coin",
+    "name": "洛克贝",
+    "nameEn": "Luoke Coin",
+    "type": "currency",
+    "rarity": 3,
+    "source": "任务、成就、出售材料",
+    "sourceEn": "Quests, achievements, selling materials"
+  },
+  {
+    "id": "grade-point",
+    "name": "绩点",
+    "nameEn": "Grade Point",
+    "type": "currency",
+    "rarity": 3,
+    "source": "学院玩法、PVP 竞技奖励",
+    "sourceEn": "Academy gameplay, PVP rewards"
+  },
+  {
+    "id": "kingdom-emblem",
+    "name": "王国徽记",
+    "nameEn": "Kingdom Emblem",
+    "type": "currency",
+    "rarity": 4,
+    "source": "每日任务、周常挑战、王国活动",
+    "sourceEn": "Daily quests, weekly challenges, kingdom events"
+  },
+  {
+    "id": "unicorn-leaf-fairy",
+    "name": "独角兽叶仙",
+    "nameEn": "Unicorn Leaf Fairy",
+    "type": "currency",
+    "rarity": 5,
+    "source": "限时活动兑换、高级成就奖励",
+    "sourceEn": "Limited event exchange, advanced achievement rewards"
+  }
+]
