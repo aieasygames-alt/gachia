@@ -64,7 +64,7 @@ import { getEntryUpdatedAt, hasLocalizedContent } from '@/lib/seo-metadata';
 const BASE_URL = 'https://gachia.com';
 
 // Games with real content for each category
-const CHAR_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'roco'] as const;
+const CHAR_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'roco', 'roco-cn'] as const;
 const WEAPON_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'] as const;
 const GUIDE_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco', 'roco-cn'] as const;
 const ARTIFACT_GAMES = ['genshin', 'starrail'] as const;
@@ -267,6 +267,7 @@ function getCharactersForGame(gameId: string) {
     case 'endfield': return endfieldCharacters;
     case 'sea': return seaCharacters;
     case 'roco': return rocoCharacters;
+    case 'roco-cn': return rocoCnCharacters;
     default: return [];
   }
 }
