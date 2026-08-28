@@ -46,6 +46,8 @@ const ROCO_ELEMENT_COLORS: Record<string, string> = {
   dark: '#64748b',
   psychic: '#f472b6',
   fairy: '#f9a8d4',
+  dragon: '#7c3aed',
+  steel: '#94a3b8',
 };
 
 const ROCO_ELEMENT_NAMES: Record<string, Record<SupportedLocale, string>> = {
@@ -63,6 +65,8 @@ const ROCO_ELEMENT_NAMES: Record<string, Record<SupportedLocale, string>> = {
   dark: { zh: '暗', en: 'Dark', ja: 'あく' },
   psychic: { zh: '幻', en: 'Psychic', ja: 'エスパー' },
   fairy: { zh: '仙', en: 'Fairy', ja: 'フェアリー' },
+  dragon: { zh: '龙', en: 'Dragon', ja: 'ドラゴン' },
+  steel: { zh: '机械', en: 'Steel', ja: 'はがね' },
 };
 
 const ROCO_SKILL_CATEGORY_LABELS: Record<string, Record<SupportedLocale, string>> = {

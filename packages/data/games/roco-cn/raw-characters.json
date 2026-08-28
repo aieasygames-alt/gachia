@@ -15,27 +15,201 @@
     "descriptionEn": "The most popular CN core Jinie and a Light-type all-rounder, earned free on Day 7 of login. Its passive \"Best Buddy\" boosts ATK/DEF/SPD and restores energy after super-effective hits, making it a PVE workhorse and a stable PVP booster. S2 added four Ultra Evolutions (Sacred Fire / Water / Light / Grass) requiring Alpha Blood and Ultra Evolution Stones.",
     "status": "revealed",
     "releaseVersion": "国服公测",
-    "stats": { "total": 582, "hp": 120, "atk": 80, "matk": 80, "def": 105, "mdef": 105, "spd": 92 },
+    "stats": {
+      "total": 582,
+      "hp": 120,
+      "atk": 80,
+      "matk": 80,
+      "def": 105,
+      "mdef": 105,
+      "spd": 92
+    },
     "skills": [
-      { "level": 1, "name": "猛烈撞击", "nameEn": "Powerful Slam", "element": "normal", "category": "physical", "power": 65, "description": "对敌方精灵造成物理伤害。", "descriptionEn": "Deals physical damage to the enemy." },
-      { "level": 1, "name": "防御", "nameEn": "Defend", "element": "normal", "category": "defense", "description": "减伤 70%，应对攻击。", "descriptionEn": "Reduces damage by 70%; counters attacks." },
-      { "level": 1, "name": "闪光", "nameEn": "Flash", "element": "light", "category": "magic", "power": 60, "description": "对敌方精灵造成魔法伤害。", "descriptionEn": "Deals magic damage to the enemy." },
-      { "level": 7, "name": "魔法增效", "nameEn": "Magic Boost", "element": "normal", "category": "status", "description": "自身魔攻 +70%。", "descriptionEn": "Raises own M.ATK by 70%." },
-      { "level": 9, "name": "光球", "nameEn": "Light Orb", "element": "light", "category": "magic", "power": 80, "description": "对敌方精灵造成魔法伤害。", "descriptionEn": "Deals magic damage to the enemy." },
-      { "level": 11, "name": "火焰箭", "nameEn": "Fire Arrow", "element": "fire", "category": "physical", "power": 80, "description": "对敌方精灵造成物理伤害。", "descriptionEn": "Deals physical damage to the enemy." },
-      { "level": 13, "name": "力量增效", "nameEn": "Power Boost", "element": "normal", "category": "status", "description": "自身物攻 +100%。", "descriptionEn": "Raises own ATK by 100%." },
-      { "level": 16, "name": "棘突", "nameEn": "Thorn Burst", "element": "grass", "category": "magic", "power": 100, "description": "对敌方精灵造成魔法伤害。", "descriptionEn": "Deals magic damage to the enemy." },
-      { "level": 19, "name": "潮涌", "nameEn": "Tide Surge", "element": "water", "category": "physical", "power": 80, "description": "对敌方精灵造成物理伤害。", "descriptionEn": "Deals physical damage to the enemy." },
-      { "level": 22, "name": "超导", "nameEn": "Superconduct", "element": "electric", "category": "magic", "power": 95, "description": "造成魔伤，迸发：本技能能耗 -1。", "descriptionEn": "Magic damage; on burst, this skill's cost drops by 1." },
-      { "level": 27, "name": "闪光冲击", "nameEn": "Flash Impact", "element": "light", "category": "physical", "power": 100, "description": "对敌方精灵造成物理伤害。", "descriptionEn": "Deals physical damage to the enemy." },
-      { "level": 30, "name": "漫反射", "nameEn": "Diffuse Reflection", "element": "light", "category": "status", "description": "每种系别中的至多 1 个技能威力 +35。", "descriptionEn": "Up to one skill per element gains +35 power." },
-      { "level": 32, "name": "冰爪", "nameEn": "Ice Claw", "element": "ice", "category": "physical", "power": 80, "description": "对敌方精灵造成物理伤害。", "descriptionEn": "Deals physical damage to the enemy." },
-      { "level": 34, "name": "热砂", "nameEn": "Hot Sand", "element": "ground", "category": "magic", "power": 80, "description": "对敌方精灵造成魔法伤害。", "descriptionEn": "Deals magic damage to the enemy." },
-      { "level": 36, "name": "念力膨胀", "nameEn": "Mind Swell", "element": "psychic", "category": "physical", "power": 80, "description": "对敌方精灵造成物理伤害。", "descriptionEn": "Deals physical damage to the enemy." },
-      { "level": 40, "name": "放晴", "nameEn": "Clear Sky", "element": "light", "category": "status", "description": "光系技能威力永久 +50%，应对防御时改为 +100%。", "descriptionEn": "Light skills permanently gain +50% power (+100% when countering Defense)." },
-      { "level": 42, "name": "过曝", "nameEn": "Overexposure", "element": "light", "category": "magic", "power": 60, "description": "造成魔伤，每使用过 1 个其他系别技能，本技能威力永久 +30。", "descriptionEn": "Magic damage; each other-element skill used permanently adds +30 power." },
-      { "level": 47, "name": "光刃", "nameEn": "Light Blade", "element": "light", "category": "physical", "power": 120, "description": "对敌方精灵造成物理伤害。", "descriptionEn": "Deals physical damage to the enemy." },
-      { "level": 48, "name": "折射", "nameEn": "Refraction", "element": "light", "category": "magic", "power": 50, "description": "造成魔伤，携带其他系别技能会给本技能带来不同效果。", "descriptionEn": "Magic damage; other-element skills grant varied bonus effects." }
+      {
+        "level": 1,
+        "name": "猛烈撞击",
+        "nameEn": "Powerful Slam",
+        "element": "normal",
+        "category": "physical",
+        "power": 65,
+        "description": "对敌方精灵造成物理伤害。",
+        "descriptionEn": "Deals physical damage to the enemy."
+      },
+      {
+        "level": 1,
+        "name": "防御",
+        "nameEn": "Defend",
+        "element": "normal",
+        "category": "defense",
+        "description": "减伤 70%，应对攻击。",
+        "descriptionEn": "Reduces damage by 70%; counters attacks."
+      },
+      {
+        "level": 1,
+        "name": "闪光",
+        "nameEn": "Flash",
+        "element": "light",
+        "category": "magic",
+        "power": 60,
+        "description": "对敌方精灵造成魔法伤害。",
+        "descriptionEn": "Deals magic damage to the enemy."
+      },
+      {
+        "level": 7,
+        "name": "魔法增效",
+        "nameEn": "Magic Boost",
+        "element": "normal",
+        "category": "status",
+        "description": "自身魔攻 +70%。",
+        "descriptionEn": "Raises own M.ATK by 70%."
+      },
+      {
+        "level": 9,
+        "name": "光球",
+        "nameEn": "Light Orb",
+        "element": "light",
+        "category": "magic",
+        "power": 80,
+        "description": "对敌方精灵造成魔法伤害。",
+        "descriptionEn": "Deals magic damage to the enemy."
+      },
+      {
+        "level": 11,
+        "name": "火焰箭",
+        "nameEn": "Fire Arrow",
+        "element": "fire",
+        "category": "physical",
+        "power": 80,
+        "description": "对敌方精灵造成物理伤害。",
+        "descriptionEn": "Deals physical damage to the enemy."
+      },
+      {
+        "level": 13,
+        "name": "力量增效",
+        "nameEn": "Power Boost",
+        "element": "normal",
+        "category": "status",
+        "description": "自身物攻 +100%。",
+        "descriptionEn": "Raises own ATK by 100%."
+      },
+      {
+        "level": 16,
+        "name": "棘突",
+        "nameEn": "Thorn Burst",
+        "element": "grass",
+        "category": "magic",
+        "power": 100,
+        "description": "对敌方精灵造成魔法伤害。",
+        "descriptionEn": "Deals magic damage to the enemy."
+      },
+      {
+        "level": 19,
+        "name": "潮涌",
+        "nameEn": "Tide Surge",
+        "element": "water",
+        "category": "physical",
+        "power": 80,
+        "description": "对敌方精灵造成物理伤害。",
+        "descriptionEn": "Deals physical damage to the enemy."
+      },
+      {
+        "level": 22,
+        "name": "超导",
+        "nameEn": "Superconduct",
+        "element": "electric",
+        "category": "magic",
+        "power": 95,
+        "description": "造成魔伤，迸发：本技能能耗 -1。",
+        "descriptionEn": "Magic damage; on burst, this skill's cost drops by 1."
+      },
+      {
+        "level": 27,
+        "name": "闪光冲击",
+        "nameEn": "Flash Impact",
+        "element": "light",
+        "category": "physical",
+        "power": 100,
+        "description": "对敌方精灵造成物理伤害。",
+        "descriptionEn": "Deals physical damage to the enemy."
+      },
+      {
+        "level": 30,
+        "name": "漫反射",
+        "nameEn": "Diffuse Reflection",
+        "element": "light",
+        "category": "status",
+        "description": "每种系别中的至多 1 个技能威力 +35。",
+        "descriptionEn": "Up to one skill per element gains +35 power."
+      },
+      {
+        "level": 32,
+        "name": "冰爪",
+        "nameEn": "Ice Claw",
+        "element": "ice",
+        "category": "physical",
+        "power": 80,
+        "description": "对敌方精灵造成物理伤害。",
+        "descriptionEn": "Deals physical damage to the enemy."
+      },
+      {
+        "level": 34,
+        "name": "热砂",
+        "nameEn": "Hot Sand",
+        "element": "ground",
+        "category": "magic",
+        "power": 80,
+        "description": "对敌方精灵造成魔法伤害。",
+        "descriptionEn": "Deals magic damage to the enemy."
+      },
+      {
+        "level": 36,
+        "name": "念力膨胀",
+        "nameEn": "Mind Swell",
+        "element": "psychic",
+        "category": "physical",
+        "power": 80,
+        "description": "对敌方精灵造成物理伤害。",
+        "descriptionEn": "Deals physical damage to the enemy."
+      },
+      {
+        "level": 40,
+        "name": "放晴",
+        "nameEn": "Clear Sky",
+        "element": "light",
+        "category": "status",
+        "description": "光系技能威力永久 +50%，应对防御时改为 +100%。",
+        "descriptionEn": "Light skills permanently gain +50% power (+100% when countering Defense)."
+      },
+      {
+        "level": 42,
+        "name": "过曝",
+        "nameEn": "Overexposure",
+        "element": "light",
+        "category": "magic",
+        "power": 60,
+        "description": "造成魔伤，每使用过 1 个其他系别技能，本技能威力永久 +30。",
+        "descriptionEn": "Magic damage; each other-element skill used permanently adds +30 power."
+      },
+      {
+        "level": 47,
+        "name": "光刃",
+        "nameEn": "Light Blade",
+        "element": "light",
+        "category": "physical",
+        "power": 120,
+        "description": "对敌方精灵造成物理伤害。",
+        "descriptionEn": "Deals physical damage to the enemy."
+      },
+      {
+        "level": 48,
+        "name": "折射",
+        "nameEn": "Refraction",
+        "element": "light",
+        "category": "magic",
+        "power": 50,
+        "description": "造成魔伤，携带其他系别技能会给本技能带来不同效果。",
+        "descriptionEn": "Magic damage; other-element skills grant varied bonus effects."
+      }
     ]
   },
   {
@@ -54,13 +228,62 @@
     "descriptionEn": "The Fire-type starter with the highest ATK and SPD of the three. Its \"Combustion\" passive adds +20% ATK after each Fire move (stackable), ramping up the longer a fight goes. Fastest early-game and story progression; the other starters can be caught in friends' worlds after level 10.",
     "status": "revealed",
     "releaseVersion": "国服公测",
-    "stats": { "total": 368, "hp": 70, "atk": 84, "matk": 37, "def": 56, "mdef": 43, "spd": 78 },
+    "stats": {
+      "total": 368,
+      "hp": 70,
+      "atk": 84,
+      "matk": 37,
+      "def": 56,
+      "mdef": 43,
+      "spd": 78
+    },
     "skills": [
-      { "level": 1, "name": "猛烈撞击", "nameEn": "Powerful Slam", "element": "normal", "category": "physical", "power": 65, "description": "对敌方精灵造成物理伤害。", "descriptionEn": "Deals physical damage to the enemy." },
-      { "level": 1, "name": "火苗", "nameEn": "Ember", "element": "fire", "category": "magic", "power": 40, "description": "对敌方精灵造成火属性魔法伤害。", "descriptionEn": "Deals Fire magic damage to the enemy." },
-      { "level": 1, "name": "防御", "nameEn": "Defend", "element": "normal", "category": "defense", "description": "减伤 70%，应对攻击。", "descriptionEn": "Reduces damage by 70%; counters attacks." },
-      { "name": "火焰切割", "nameEn": "Flame Cutter", "element": "fire", "category": "physical", "description": "火系物理攻击，命中可触发「助燃」叠层。", "descriptionEn": "Fire physical attack that triggers the Combustion stack." },
-      { "name": "打鼾", "nameEn": "Snore", "element": "normal", "category": "magic", "power": 150, "description": "对敌方精灵造成高额魔法伤害。", "descriptionEn": "Deals heavy magic damage to the enemy." }
+      {
+        "level": 1,
+        "name": "猛烈撞击",
+        "nameEn": "Powerful Slam",
+        "element": "normal",
+        "category": "physical",
+        "power": 65,
+        "description": "对敌方精灵造成物理伤害。",
+        "descriptionEn": "Deals physical damage to the enemy."
+      },
+      {
+        "level": 1,
+        "name": "火苗",
+        "nameEn": "Ember",
+        "element": "fire",
+        "category": "magic",
+        "power": 40,
+        "description": "对敌方精灵造成火属性魔法伤害。",
+        "descriptionEn": "Deals Fire magic damage to the enemy."
+      },
+      {
+        "level": 1,
+        "name": "防御",
+        "nameEn": "Defend",
+        "element": "normal",
+        "category": "defense",
+        "description": "减伤 70%，应对攻击。",
+        "descriptionEn": "Reduces damage by 70%; counters attacks."
+      },
+      {
+        "name": "火焰切割",
+        "nameEn": "Flame Cutter",
+        "element": "fire",
+        "category": "physical",
+        "description": "火系物理攻击，命中可触发「助燃」叠层。",
+        "descriptionEn": "Fire physical attack that triggers the Combustion stack."
+      },
+      {
+        "name": "打鼾",
+        "nameEn": "Snore",
+        "element": "normal",
+        "category": "magic",
+        "power": 150,
+        "description": "对敌方精灵造成高额魔法伤害。",
+        "descriptionEn": "Deals heavy magic damage to the enemy."
+      }
     ]
   },
   {
@@ -79,13 +302,54 @@
     "descriptionEn": "The Water-type starter with the \"Permeation\" trait: Water skills cost 1 less energy, enabling near-zero-cost output. Balanced defenses and HP plus solid control skills; after evolving into Shuilin it becomes a PVP and long-game cornerstone.",
     "status": "revealed",
     "releaseVersion": "国服公测",
-    "stats": { "total": 372 },
+    "stats": {
+      "total": 372
+    },
     "skills": [
-      { "level": 1, "name": "甩水", "nameEn": "Water Flick", "element": "water", "category": "magic", "power": 40, "description": "对敌方精灵造成水属性魔法伤害并获得能量。", "descriptionEn": "Deals Water magic damage and restores energy." },
-      { "level": 1, "name": "水弹枪", "nameEn": "Water Dart", "element": "water", "category": "physical", "description": "对敌方精灵造成水属性伤害。", "descriptionEn": "Deals Water damage to the enemy." },
-      { "level": 1, "name": "防御", "nameEn": "Defend", "element": "normal", "category": "defense", "description": "减伤 70%，应对攻击。", "descriptionEn": "Reduces damage by 70%; counters attacks." },
-      { "name": "气泡", "nameEn": "Bubble", "element": "water", "category": "magic", "description": "对敌方精灵造成水属性魔法伤害。", "descriptionEn": "Deals Water magic damage to the enemy." },
-      { "name": "潮汐", "nameEn": "Tide", "element": "water", "category": "magic", "description": "高伤魔攻，配合「浸润」特性几乎无消耗。", "descriptionEn": "High-power magic attack, nearly free with the Permeation trait." }
+      {
+        "level": 1,
+        "name": "甩水",
+        "nameEn": "Water Flick",
+        "element": "water",
+        "category": "magic",
+        "power": 40,
+        "description": "对敌方精灵造成水属性魔法伤害并获得能量。",
+        "descriptionEn": "Deals Water magic damage and restores energy."
+      },
+      {
+        "level": 1,
+        "name": "水弹枪",
+        "nameEn": "Water Dart",
+        "element": "water",
+        "category": "physical",
+        "description": "对敌方精灵造成水属性伤害。",
+        "descriptionEn": "Deals Water damage to the enemy."
+      },
+      {
+        "level": 1,
+        "name": "防御",
+        "nameEn": "Defend",
+        "element": "normal",
+        "category": "defense",
+        "description": "减伤 70%，应对攻击。",
+        "descriptionEn": "Reduces damage by 70%; counters attacks."
+      },
+      {
+        "name": "气泡",
+        "nameEn": "Bubble",
+        "element": "water",
+        "category": "magic",
+        "description": "对敌方精灵造成水属性魔法伤害。",
+        "descriptionEn": "Deals Water magic damage to the enemy."
+      },
+      {
+        "name": "潮汐",
+        "nameEn": "Tide",
+        "element": "water",
+        "category": "magic",
+        "description": "高伤魔攻，配合「浸润」特性几乎无消耗。",
+        "descriptionEn": "High-power magic attack, nearly free with the Permeation trait."
+      }
     ]
   },
   {
@@ -104,12 +368,47 @@
     "descriptionEn": "The Grass-type starter with the \"Oxygen Cycle\" trait: Grass skills heal 10% of max HP (20% in Alpha form) — the tankiest and most self-sustaining of the three. Evolving through Miaowu into Molicat makes it a team fortress, with the Alpha form adding sustain and buffs.",
     "status": "revealed",
     "releaseVersion": "国服公测",
-    "stats": { "total": 325 },
+    "stats": {
+      "total": 325
+    },
     "skills": [
-      { "level": 1, "name": "抓挠", "nameEn": "Scratch", "element": "normal", "category": "physical", "power": 40, "description": "对敌方精灵造成物理伤害并恢复能量。", "descriptionEn": "Deals physical damage and restores energy." },
-      { "level": 1, "name": "种子弹", "nameEn": "Seed Shot", "element": "grass", "category": "physical", "power": 40, "description": "对敌方精灵造成草属性物理伤害并获得能量。", "descriptionEn": "Deals Grass physical damage and restores energy." },
-      { "name": "藤绞", "nameEn": "Vine Grapple", "element": "grass", "category": "physical", "power": 50, "description": "对敌方精灵造成物理伤害，获得 5 点能量。", "descriptionEn": "Deals physical damage and grants 5 energy." },
-      { "name": "荆棘爪", "nameEn": "Thorn Claw", "element": "grass", "category": "physical", "description": "融合荆棘之力释放强力爪击，对敌方精灵造成草属性物理伤害。", "descriptionEn": "A thorn-fused claw strike dealing Grass physical damage." }
+      {
+        "level": 1,
+        "name": "抓挠",
+        "nameEn": "Scratch",
+        "element": "normal",
+        "category": "physical",
+        "power": 40,
+        "description": "对敌方精灵造成物理伤害并恢复能量。",
+        "descriptionEn": "Deals physical damage and restores energy."
+      },
+      {
+        "level": 1,
+        "name": "种子弹",
+        "nameEn": "Seed Shot",
+        "element": "grass",
+        "category": "physical",
+        "power": 40,
+        "description": "对敌方精灵造成草属性物理伤害并获得能量。",
+        "descriptionEn": "Deals Grass physical damage and restores energy."
+      },
+      {
+        "name": "藤绞",
+        "nameEn": "Vine Grapple",
+        "element": "grass",
+        "category": "physical",
+        "power": 50,
+        "description": "对敌方精灵造成物理伤害，获得 5 点能量。",
+        "descriptionEn": "Deals physical damage and grants 5 energy."
+      },
+      {
+        "name": "荆棘爪",
+        "nameEn": "Thorn Claw",
+        "element": "grass",
+        "category": "physical",
+        "description": "融合荆棘之力释放强力爪击，对敌方精灵造成草属性物理伤害。",
+        "descriptionEn": "A thorn-fused claw strike dealing Grass physical damage."
+      }
     ]
   },
   {
@@ -128,13 +427,56 @@
     "descriptionEn": "A popular Flying-type Jinie with strong ATK and SPD. Its \"Wind Combo\" passive grants +1 combo after each Flying skill, and Wing Dash secures the first move — solid in both PVE finishing and PVP rush teams. The page-game era's iconic mount king remains a fast physical attacker.",
     "status": "revealed",
     "releaseVersion": "国服公测",
-    "stats": { "total": 564, "hp": 102, "atk": 115, "matk": 64, "def": 107, "mdef": 55, "spd": 120 },
+    "stats": {
+      "total": 564,
+      "hp": 102,
+      "atk": 115,
+      "matk": 64,
+      "def": 107,
+      "mdef": 55,
+      "spd": 120
+    },
     "skills": [
-      { "name": "啄击", "nameEn": "Peck", "element": "flying", "category": "physical", "description": "对敌方精灵造成物理伤害。", "descriptionEn": "Deals physical damage to the enemy." },
-      { "name": "羽化加速", "nameEn": "Wing Dash", "element": "flying", "category": "status", "description": "提升自身速度，抢占先手。", "descriptionEn": "Raises SPD to seize the initiative." },
-      { "name": "乘风连击", "nameEn": "Wind Combo", "element": "flying", "category": "status", "description": "核心被动：使用翼系技能后获得连击数 +1。", "descriptionEn": "Core passive: +1 combo after each Flying skill." },
-      { "name": "风之打击", "nameEn": "Wing Strike", "element": "flying", "category": "physical", "description": "对翼系目标造成加倍伤害。", "descriptionEn": "Deals double damage to Flying targets." },
-      { "name": "光之矛", "nameEn": "Spear of Light", "element": "light", "category": "magic", "description": "凝聚光之力对敌方精灵造成魔法伤害。", "descriptionEn": "Condensed light deals magic damage to the enemy." }
+      {
+        "name": "啄击",
+        "nameEn": "Peck",
+        "element": "flying",
+        "category": "physical",
+        "description": "对敌方精灵造成物理伤害。",
+        "descriptionEn": "Deals physical damage to the enemy."
+      },
+      {
+        "name": "羽化加速",
+        "nameEn": "Wing Dash",
+        "element": "flying",
+        "category": "status",
+        "description": "提升自身速度，抢占先手。",
+        "descriptionEn": "Raises SPD to seize the initiative."
+      },
+      {
+        "name": "乘风连击",
+        "nameEn": "Wind Combo",
+        "element": "flying",
+        "category": "status",
+        "description": "核心被动：使用翼系技能后获得连击数 +1。",
+        "descriptionEn": "Core passive: +1 combo after each Flying skill."
+      },
+      {
+        "name": "风之打击",
+        "nameEn": "Wing Strike",
+        "element": "flying",
+        "category": "physical",
+        "description": "对翼系目标造成加倍伤害。",
+        "descriptionEn": "Deals double damage to Flying targets."
+      },
+      {
+        "name": "光之矛",
+        "nameEn": "Spear of Light",
+        "element": "light",
+        "category": "magic",
+        "description": "凝聚光之力对敌方精灵造成魔法伤害。",
+        "descriptionEn": "Condensed light deals magic damage to the enemy."
+      }
     ]
   },
   {
@@ -153,20 +495,131 @@
     "descriptionEn": "A Ground/Dark physical juggernaut with top-tier ATK stats. Its \"Stone Feast\" trait spends 5% HP in place of 1 energy when short, and with Greed's 100% lifesteal it forms an infinite drain loop — a PVE all-rounder and boss-fight staple.",
     "status": "revealed",
     "releaseVersion": "国服公测",
-    "stats": { "total": 601, "hp": 107, "atk": 159, "matk": 78, "def": 112, "mdef": 70, "spd": 75 },
+    "stats": {
+      "total": 601,
+      "hp": 107,
+      "atk": 159,
+      "matk": 78,
+      "def": 112,
+      "mdef": 70,
+      "spd": 75
+    },
     "skills": [
-      { "level": 1, "name": "贪婪", "nameEn": "Greed", "element": "dark", "category": "status", "description": "自身获得 100% 吸血。", "descriptionEn": "Grants self 100% lifesteal." },
-      { "level": 1, "name": "蝙蝠", "nameEn": "Bat Strike", "element": "dark", "category": "physical", "power": 65, "description": "造成物伤并 100% 吸血。", "descriptionEn": "Deals physical damage with 100% lifesteal." },
-      { "level": 1, "name": "魔爪", "nameEn": "Magic Claw", "element": "dark", "category": "physical", "power": 30, "description": "造成物伤，自身回复 1 点能量。", "descriptionEn": "Deals physical damage and restores 1 energy." },
-      { "level": 5, "name": "力量增效", "nameEn": "Power Boost", "element": "normal", "category": "status", "description": "自身物攻 +100%。", "descriptionEn": "Raises own ATK by 100%." },
-      { "level": 6, "name": "先发制人", "nameEn": "First Strike", "element": "normal", "category": "physical", "power": 55, "description": "造成物理伤害，先手 +1。", "descriptionEn": "Deals physical damage with priority +1." },
-      { "level": 13, "name": "钧势", "nameEn": "Weighted Stance", "element": "ground", "category": "status", "description": "自身物防 +140%、速度 -30。", "descriptionEn": "Raises own DEF by 140%, lowers SPD by 30." },
-      { "level": 16, "name": "鸣沙陷阱", "nameEn": "Singing Sand Trap", "element": "ground", "category": "physical", "power": 60, "description": "造成物伤，自身物防比敌方越高威力越高。", "descriptionEn": "Physical damage that scales with your DEF advantage." },
-      { "level": 21, "name": "力量吞噬", "nameEn": "Power Devour", "element": "dark", "category": "status", "description": "敌方全技能威力 -20，自身全技能威力 +20。", "descriptionEn": "Enemy skills lose 20 power; own skills gain 20." },
-      { "level": 29, "name": "岩土暴击", "nameEn": "Rock Crash", "element": "ground", "category": "physical", "power": 140, "description": "造成物伤，每被攻击 1 次本技能能耗永久 -1。", "descriptionEn": "Physical damage; each hit taken permanently reduces this skill's cost." },
-      { "level": 31, "name": "砂石冲撞", "nameEn": "Sand Rush", "element": "ground", "category": "physical", "power": 80, "description": "造成物伤，若敌方本回合更换精灵则自身物防 +100%。", "descriptionEn": "Physical damage; gains +100% DEF if the enemy swaps this turn." },
-      { "level": 33, "name": "泥浆铠甲", "nameEn": "Mud Armor", "element": "ground", "category": "status", "description": "自身物攻和物防 +60%，应对防御时增益翻倍。", "descriptionEn": "Raises ATK and DEF by 60%; doubles when countering Defense." },
-      { "level": 35, "name": "暗突袭", "nameEn": "Dark Ambush", "element": "dark", "category": "physical", "power": 70, "description": "造成物伤并吸血 50%，应对状态时威力翻倍。", "descriptionEn": "Physical damage with 50% lifesteal; doubles vs status." }
+      {
+        "level": 1,
+        "name": "贪婪",
+        "nameEn": "Greed",
+        "element": "dark",
+        "category": "status",
+        "description": "自身获得 100% 吸血。",
+        "descriptionEn": "Grants self 100% lifesteal."
+      },
+      {
+        "level": 1,
+        "name": "蝙蝠",
+        "nameEn": "Bat Strike",
+        "element": "dark",
+        "category": "physical",
+        "power": 65,
+        "description": "造成物伤并 100% 吸血。",
+        "descriptionEn": "Deals physical damage with 100% lifesteal."
+      },
+      {
+        "level": 1,
+        "name": "魔爪",
+        "nameEn": "Magic Claw",
+        "element": "dark",
+        "category": "physical",
+        "power": 30,
+        "description": "造成物伤，自身回复 1 点能量。",
+        "descriptionEn": "Deals physical damage and restores 1 energy."
+      },
+      {
+        "level": 5,
+        "name": "力量增效",
+        "nameEn": "Power Boost",
+        "element": "normal",
+        "category": "status",
+        "description": "自身物攻 +100%。",
+        "descriptionEn": "Raises own ATK by 100%."
+      },
+      {
+        "level": 6,
+        "name": "先发制人",
+        "nameEn": "First Strike",
+        "element": "normal",
+        "category": "physical",
+        "power": 55,
+        "description": "造成物理伤害，先手 +1。",
+        "descriptionEn": "Deals physical damage with priority +1."
+      },
+      {
+        "level": 13,
+        "name": "钧势",
+        "nameEn": "Weighted Stance",
+        "element": "ground",
+        "category": "status",
+        "description": "自身物防 +140%、速度 -30。",
+        "descriptionEn": "Raises own DEF by 140%, lowers SPD by 30."
+      },
+      {
+        "level": 16,
+        "name": "鸣沙陷阱",
+        "nameEn": "Singing Sand Trap",
+        "element": "ground",
+        "category": "physical",
+        "power": 60,
+        "description": "造成物伤，自身物防比敌方越高威力越高。",
+        "descriptionEn": "Physical damage that scales with your DEF advantage."
+      },
+      {
+        "level": 21,
+        "name": "力量吞噬",
+        "nameEn": "Power Devour",
+        "element": "dark",
+        "category": "status",
+        "description": "敌方全技能威力 -20，自身全技能威力 +20。",
+        "descriptionEn": "Enemy skills lose 20 power; own skills gain 20."
+      },
+      {
+        "level": 29,
+        "name": "岩土暴击",
+        "nameEn": "Rock Crash",
+        "element": "ground",
+        "category": "physical",
+        "power": 140,
+        "description": "造成物伤，每被攻击 1 次本技能能耗永久 -1。",
+        "descriptionEn": "Physical damage; each hit taken permanently reduces this skill's cost."
+      },
+      {
+        "level": 31,
+        "name": "砂石冲撞",
+        "nameEn": "Sand Rush",
+        "element": "ground",
+        "category": "physical",
+        "power": 80,
+        "description": "造成物伤，若敌方本回合更换精灵则自身物防 +100%。",
+        "descriptionEn": "Physical damage; gains +100% DEF if the enemy swaps this turn."
+      },
+      {
+        "level": 33,
+        "name": "泥浆铠甲",
+        "nameEn": "Mud Armor",
+        "element": "ground",
+        "category": "status",
+        "description": "自身物攻和物防 +60%，应对防御时增益翻倍。",
+        "descriptionEn": "Raises ATK and DEF by 60%; doubles when countering Defense."
+      },
+      {
+        "level": 35,
+        "name": "暗突袭",
+        "nameEn": "Dark Ambush",
+        "element": "dark",
+        "category": "physical",
+        "power": 70,
+        "description": "造成物伤并吸血 50%，应对状态时威力翻倍。",
+        "descriptionEn": "Physical damage with 50% lifesteal; doubles vs status."
+      }
     ]
   },
   {
@@ -185,14 +638,67 @@
     "descriptionEn": "An Ice-type control Jinie. Evolving into Ice Wraith adds the \"Frozen Seal\" trait (all enemy skills cost +1 energy), and combined with energy-pressure skills can lock bosses out of acting — a PVE boss specialist and PVP control pick. Beats Grass, Ground, Dragon, and Flying, though its frail frame needs protection.",
     "status": "revealed",
     "releaseVersion": "国服公测",
-    "stats": { "total": 385 },
+    "stats": {
+      "total": 385
+    },
     "skills": [
-      { "level": 1, "name": "防御", "nameEn": "Defend", "element": "normal", "category": "defense", "description": "减伤 70%，应对攻击。", "descriptionEn": "Reduces damage by 70%; counters attacks." },
-      { "level": 1, "name": "冰锥", "nameEn": "Ice Dart", "element": "ice", "category": "physical", "power": 40, "description": "对敌方精灵造成物理伤害。", "descriptionEn": "Deals physical damage to the enemy." },
-      { "level": 1, "name": "雪球", "nameEn": "Snowball", "element": "ice", "category": "status", "description": "敌方速度 -90。", "descriptionEn": "Reduces enemy SPD by 90." },
-      { "level": 4, "name": "旋转突击", "nameEn": "Spin Rush", "element": "normal", "category": "physical", "power": 35, "description": "造成物伤，3 连击。", "descriptionEn": "Deals physical damage in 3 hits." },
-      { "level": 9, "name": "激怒", "nameEn": "Provoke", "element": "normal", "category": "status", "description": "敌方除本回合技能外其他技能能耗 +3，持续 3 回合。", "descriptionEn": "Enemy skills other than this turn's cost +3 energy for 3 turns." },
-      { "level": 12, "name": "丢冰块", "nameEn": "Ice Throw", "element": "ice", "category": "physical", "power": 90, "description": "造成物伤，敌方速度 -30。", "descriptionEn": "Deals physical damage and lowers enemy SPD by 30." }
+      {
+        "level": 1,
+        "name": "防御",
+        "nameEn": "Defend",
+        "element": "normal",
+        "category": "defense",
+        "description": "减伤 70%，应对攻击。",
+        "descriptionEn": "Reduces damage by 70%; counters attacks."
+      },
+      {
+        "level": 1,
+        "name": "冰锥",
+        "nameEn": "Ice Dart",
+        "element": "ice",
+        "category": "physical",
+        "power": 40,
+        "description": "对敌方精灵造成物理伤害。",
+        "descriptionEn": "Deals physical damage to the enemy."
+      },
+      {
+        "level": 1,
+        "name": "雪球",
+        "nameEn": "Snowball",
+        "element": "ice",
+        "category": "status",
+        "description": "敌方速度 -90。",
+        "descriptionEn": "Reduces enemy SPD by 90."
+      },
+      {
+        "level": 4,
+        "name": "旋转突击",
+        "nameEn": "Spin Rush",
+        "element": "normal",
+        "category": "physical",
+        "power": 35,
+        "description": "造成物伤，3 连击。",
+        "descriptionEn": "Deals physical damage in 3 hits."
+      },
+      {
+        "level": 9,
+        "name": "激怒",
+        "nameEn": "Provoke",
+        "element": "normal",
+        "category": "status",
+        "description": "敌方除本回合技能外其他技能能耗 +3，持续 3 回合。",
+        "descriptionEn": "Enemy skills other than this turn's cost +3 energy for 3 turns."
+      },
+      {
+        "level": 12,
+        "name": "丢冰块",
+        "nameEn": "Ice Throw",
+        "element": "ice",
+        "category": "physical",
+        "power": 90,
+        "description": "造成物伤，敌方速度 -30。",
+        "descriptionEn": "Deals physical damage and lowers enemy SPD by 30."
+      }
     ]
   },
   {
@@ -211,22 +717,1636 @@
     "descriptionEn": "A Ground-type T0 Jinie (officially \"Rongguang Youyou\") blending Light and Ground skills. Its \"Sentinel\" trait grants +50 SPD and a post-action pivot when an enemy move would KO it at turn start — enabling tempo-controlling switch-ins. With Quicksand / Lullaby control plus Harden and Clear Sky boosts, it covers control, buffing, and damage in one.",
     "status": "revealed",
     "releaseVersion": "国服公测",
-    "stats": { "total": 605, "hp": 101, "atk": 43, "matk": 111, "def": 105, "mdef": 130, "spd": 115 },
+    "stats": {
+      "total": 605,
+      "hp": 101,
+      "atk": 43,
+      "matk": 111,
+      "def": 105,
+      "mdef": 130,
+      "spd": 115
+    },
     "skills": [
-      { "level": 1, "name": "闪光", "nameEn": "Flash", "element": "light", "category": "magic", "power": 60, "description": "对敌方精灵造成魔法伤害。", "descriptionEn": "Deals magic damage to the enemy." },
-      { "level": 1, "name": "泥浆", "nameEn": "Mud Shot", "element": "ground", "category": "magic", "power": 40, "description": "对敌方精灵造成魔法伤害。", "descriptionEn": "Deals magic damage to the enemy." },
-      { "level": 1, "name": "石肤术", "nameEn": "Stone Skin", "element": "ground", "category": "status", "description": "自身物防 +160%、魔防 -60%。", "descriptionEn": "Raises own DEF by 160%, lowers M.DEF by 60%." },
-      { "level": 2, "name": "泥巴喷射", "nameEn": "Mud Spray", "element": "ground", "category": "magic", "power": 60, "description": "对敌方精灵造成魔法伤害。", "descriptionEn": "Deals magic damage to the enemy." },
-      { "level": 8, "name": "防御", "nameEn": "Defend", "element": "normal", "category": "defense", "description": "减伤 70%，应对攻击。", "descriptionEn": "Reduces damage by 70%; counters attacks." },
-      { "level": 12, "name": "热砂", "nameEn": "Hot Sand", "element": "ground", "category": "magic", "power": 80, "description": "对敌方精灵造成魔法伤害。", "descriptionEn": "Deals magic damage to the enemy." },
-      { "level": 26, "name": "钧势", "nameEn": "Weighted Stance", "element": "ground", "category": "status", "description": "自身物防 +140%、速度 -30。", "descriptionEn": "Raises own DEF by 140%, lowers SPD by 30." },
-      { "level": 33, "name": "硬化", "nameEn": "Harden", "element": "ground", "category": "defense", "description": "减伤 90%，若上次使用攻击技则本技能能耗 -2。", "descriptionEn": "Reduces damage by 90%; costs 2 less after an attack skill." },
-      { "level": 34, "name": "放晴", "nameEn": "Clear Sky", "element": "light", "category": "status", "description": "光系技能威力永久 +50%，应对防御时改为 +100%。", "descriptionEn": "Light skills permanently gain +50% power (+100% when countering Defense)." },
-      { "level": 36, "name": "漫反射", "nameEn": "Diffuse Reflection", "element": "light", "category": "status", "description": "每种系别中的至多 1 个技能威力 +35。", "descriptionEn": "Up to one skill per element gains +35 power." },
-      { "level": 40, "name": "天光", "nameEn": "Sky Light", "element": "light", "category": "magic", "power": 95, "description": "造成魔伤，本技能系别始终和天气系别相同。", "descriptionEn": "Magic damage; this skill's element always matches the weather." },
-      { "level": 45, "name": "蓄势待发", "nameEn": "Ready Stance", "element": "ground", "category": "status", "description": "自身获得 1 层蓄势印记。", "descriptionEn": "Gains 1 Momentum mark." },
-      { "level": 49, "name": "流沙", "nameEn": "Quicksand", "element": "ground", "category": "status", "description": "敌方获得 3 回合禁足，应对防御时敌方双防 -60%。", "descriptionEn": "Enemies are rooted for 3 turns; -60% both DEF when countering." },
-      { "name": "摇篮曲", "nameEn": "Lullaby", "element": "normal", "category": "status", "description": "控场技能，配合折返机制持续压制敌方行动。", "descriptionEn": "A control skill that pairs with pivot plays to keep enemies suppressed." }
+      {
+        "level": 1,
+        "name": "闪光",
+        "nameEn": "Flash",
+        "element": "light",
+        "category": "magic",
+        "power": 60,
+        "description": "对敌方精灵造成魔法伤害。",
+        "descriptionEn": "Deals magic damage to the enemy."
+      },
+      {
+        "level": 1,
+        "name": "泥浆",
+        "nameEn": "Mud Shot",
+        "element": "ground",
+        "category": "magic",
+        "power": 40,
+        "description": "对敌方精灵造成魔法伤害。",
+        "descriptionEn": "Deals magic damage to the enemy."
+      },
+      {
+        "level": 1,
+        "name": "石肤术",
+        "nameEn": "Stone Skin",
+        "element": "ground",
+        "category": "status",
+        "description": "自身物防 +160%、魔防 -60%。",
+        "descriptionEn": "Raises own DEF by 160%, lowers M.DEF by 60%."
+      },
+      {
+        "level": 2,
+        "name": "泥巴喷射",
+        "nameEn": "Mud Spray",
+        "element": "ground",
+        "category": "magic",
+        "power": 60,
+        "description": "对敌方精灵造成魔法伤害。",
+        "descriptionEn": "Deals magic damage to the enemy."
+      },
+      {
+        "level": 8,
+        "name": "防御",
+        "nameEn": "Defend",
+        "element": "normal",
+        "category": "defense",
+        "description": "减伤 70%，应对攻击。",
+        "descriptionEn": "Reduces damage by 70%; counters attacks."
+      },
+      {
+        "level": 12,
+        "name": "热砂",
+        "nameEn": "Hot Sand",
+        "element": "ground",
+        "category": "magic",
+        "power": 80,
+        "description": "对敌方精灵造成魔法伤害。",
+        "descriptionEn": "Deals magic damage to the enemy."
+      },
+      {
+        "level": 26,
+        "name": "钧势",
+        "nameEn": "Weighted Stance",
+        "element": "ground",
+        "category": "status",
+        "description": "自身物防 +140%、速度 -30。",
+        "descriptionEn": "Raises own DEF by 140%, lowers SPD by 30."
+      },
+      {
+        "level": 33,
+        "name": "硬化",
+        "nameEn": "Harden",
+        "element": "ground",
+        "category": "defense",
+        "description": "减伤 90%，若上次使用攻击技则本技能能耗 -2。",
+        "descriptionEn": "Reduces damage by 90%; costs 2 less after an attack skill."
+      },
+      {
+        "level": 34,
+        "name": "放晴",
+        "nameEn": "Clear Sky",
+        "element": "light",
+        "category": "status",
+        "description": "光系技能威力永久 +50%，应对防御时改为 +100%。",
+        "descriptionEn": "Light skills permanently gain +50% power (+100% when countering Defense)."
+      },
+      {
+        "level": 36,
+        "name": "漫反射",
+        "nameEn": "Diffuse Reflection",
+        "element": "light",
+        "category": "status",
+        "description": "每种系别中的至多 1 个技能威力 +35。",
+        "descriptionEn": "Up to one skill per element gains +35 power."
+      },
+      {
+        "level": 40,
+        "name": "天光",
+        "nameEn": "Sky Light",
+        "element": "light",
+        "category": "magic",
+        "power": 95,
+        "description": "造成魔伤，本技能系别始终和天气系别相同。",
+        "descriptionEn": "Magic damage; this skill's element always matches the weather."
+      },
+      {
+        "level": 45,
+        "name": "蓄势待发",
+        "nameEn": "Ready Stance",
+        "element": "ground",
+        "category": "status",
+        "description": "自身获得 1 层蓄势印记。",
+        "descriptionEn": "Gains 1 Momentum mark."
+      },
+      {
+        "level": 49,
+        "name": "流沙",
+        "nameEn": "Quicksand",
+        "element": "ground",
+        "category": "status",
+        "description": "敌方获得 3 回合禁足，应对防御时敌方双防 -60%。",
+        "descriptionEn": "Enemies are rooted for 3 turns; -60% both DEF when countering."
+      },
+      {
+        "name": "摇篮曲",
+        "nameEn": "Lullaby",
+        "element": "normal",
+        "category": "status",
+        "description": "控场技能，配合折返机制持续压制敌方行动。",
+        "descriptionEn": "A control skill that pairs with pivot plays to keep enemies suppressed."
+      }
+    ]
+  },
+  {
+    "id": "huoshen",
+    "number": "007",
+    "name": "火神",
+    "nameEn": "Huoshen",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 5,
+    "habitat": "行踪神秘（御三家·火花进化）",
+    "habitatEn": "Unknown / Starter (Huohua)",
+    "evolution": "火花 → 焰火（Lv16）→ 火神（Lv36）→ 烈火战神（超进化）",
+    "evolutionEn": "Huohua (Lv16) → Yanhuo (Lv36) → Huoshen → Liehuo Zhanshen (Overlord Evolution)",
+    "description": "火系御三家最终形态（火焰之灵），由火花Lv16进化为焰火、焰火Lv36进化为火神。特性“助燃”：使用火系技能后自身双攻+20%（可叠加）。种族值613，物攻139、速度130突出，定位高速物攻输出，克制草/冰/虫/机械系，被水/地面/龙系克制。可首领化为烈火战神。",
+    "descriptionEn": "Final Fire-type starter (Flame Spirit), evolved from Huohua at Lv16 then Yanhuo at Lv36. Trait 'Kindling': after using a Fire move, own ATK+20% (stackable). Base stats 613; high ATK 139 and SPD 130 make it a fast physical attacker. Super-evolves into Liehuo Zhanshen.",
+    "status": "released",
+    "releaseVersion": "国服公测",
+    "stats": {
+      "total": 613,
+      "hp": 117,
+      "atk": 139,
+      "matk": 61,
+      "def": 94,
+      "mdef": 72,
+      "spd": 130
+    },
+    "skills": [
+      {
+        "name": "火苗",
+        "nameEn": "Fire Spark",
+        "element": "fire",
+        "category": "physical",
+        "description": "造成物伤，自己回复1能量。",
+        "descriptionEn": "Deals physical damage; restores 1 energy.",
+        "power": 30,
+        "level": 1
+      },
+      {
+        "name": "力量增效",
+        "nameEn": "Power Boost",
+        "element": "normal",
+        "category": "status",
+        "description": "自己获得物攻+100%。",
+        "descriptionEn": "Gains +100% ATK.",
+        "level": 6
+      },
+      {
+        "name": "火焰切割",
+        "nameEn": "Flame Cut",
+        "element": "fire",
+        "category": "physical",
+        "description": "对敌方精灵造成物理伤害。",
+        "descriptionEn": "Deals physical damage.",
+        "power": 100,
+        "level": 8
+      },
+      {
+        "name": "吹火",
+        "nameEn": "Blowfire",
+        "element": "fire",
+        "category": "physical",
+        "description": "造成物伤，每次使用后本技能威力永久+20。",
+        "descriptionEn": "Deals physical damage; this move's power permanently +20 per use.",
+        "power": 50,
+        "level": 12
+      },
+      {
+        "name": "怒火",
+        "nameEn": "Fury",
+        "element": "fire",
+        "category": "status",
+        "description": "自己获得双攻+120%和双防-40%。",
+        "descriptionEn": "Gains +120% ATK/M.ATK and -40% DEF/M.DEF.",
+        "level": 21
+      },
+      {
+        "name": "火云车",
+        "nameEn": "Fire Cloud Car",
+        "element": "fire",
+        "category": "physical",
+        "description": "对敌方精灵造成物理伤害。",
+        "descriptionEn": "Deals physical damage.",
+        "power": 140,
+        "level": 30
+      }
+    ]
+  },
+  {
+    "id": "liehuozhanshen",
+    "number": "007",
+    "name": "烈火战神",
+    "nameEn": "Liehuo Zhanshen",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 5,
+    "habitat": "火神首领化形态（战斗中触发）",
+    "habitatEn": "Overlord form of Huoshen (in-battle)",
+    "evolution": "火花 → 焰火（Lv16）→ 火神（Lv36）→ 烈火战神（超进化）",
+    "evolutionEn": "Huohua (Lv16) → Yanhuo (Lv36) → Huoshen → Liehuo Zhanshen (Overlord Evolution)",
+    "description": "火神的首领化（超进化）形态，火焰之灵。特性“爆燃”：使用火系技能后双攻永久+30%，越战越强。种族值714为御三家最高，物攻193、速度130，是高速高爆发物理主C，开荒效率极高，克制草/冰/虫/机械系。",
+    "descriptionEn": "Overlord (super) evolution of Huoshen. Trait 'Blast Burn': after a Fire move, permanent +30% ATK/M.ATK. Base stats 714 (highest among starters); ATK 193, SPD 130 — a top-tier fast physical attacker.",
+    "status": "released",
+    "releaseVersion": "国服公测",
+    "stats": {
+      "total": 714,
+      "hp": 124,
+      "atk": 193,
+      "matk": 90,
+      "def": 100,
+      "mdef": 77,
+      "spd": 130
+    },
+    "skills": [
+      {
+        "name": "火焰切割",
+        "nameEn": "Flame Cut",
+        "element": "fire",
+        "category": "physical",
+        "description": "对敌方精灵造成物理伤害。",
+        "descriptionEn": "Deals physical damage.",
+        "power": 100
+      },
+      {
+        "name": "吹火",
+        "nameEn": "Blowfire",
+        "element": "fire",
+        "category": "physical",
+        "description": "造成物伤，每次使用后本技能威力永久+20。",
+        "descriptionEn": "Deals physical damage; power permanently +20 per use.",
+        "power": 50
+      },
+      {
+        "name": "怒火",
+        "nameEn": "Fury",
+        "element": "fire",
+        "category": "status",
+        "description": "自己获得双攻+120%和双防-40%。",
+        "descriptionEn": "Gains +120% ATK/M.ATK, -40% DEF/M.DEF."
+      },
+      {
+        "name": "持续高温",
+        "nameEn": "High Temperature",
+        "element": "fire",
+        "category": "magic",
+        "description": "造成魔伤，应对状态：下次攻击技能威力翻倍。",
+        "descriptionEn": "Magic damage; if reacted, next attack move doubles power.",
+        "power": 70
+      },
+      {
+        "name": "火云车",
+        "nameEn": "Fire Cloud Car",
+        "element": "fire",
+        "category": "physical",
+        "description": "对敌方精灵造成物理伤害。",
+        "descriptionEn": "Deals physical damage.",
+        "power": 140
+      },
+      {
+        "name": "山火",
+        "nameEn": "Wildfire",
+        "element": "fire",
+        "category": "physical",
+        "description": "造成物伤，每使用1次其他火系技能，本技能威力永久翻倍。",
+        "descriptionEn": "Deals physical damage; power permanently doubles per other Fire move used.",
+        "power": 15
+      }
+    ]
+  },
+  {
+    "id": "shuiling",
+    "number": "010",
+    "name": "水灵",
+    "nameEn": "Shuiling",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 5,
+    "habitat": "御三家·水蓝蓝（轻风山/宠物园）",
+    "habitatEn": "Starter (Shuilanlan)",
+    "evolution": "水蓝蓝 → 波波拉（Lv16）→ 水灵（Lv36）→ 圣水守护（超进化）",
+    "evolutionEn": "Shuilanlan (Lv16) → Bobola (Lv36) → Shuiling → Shengshui Shouhu (Overlord Evolution)",
+    "description": "水系御三家最终形态，由水蓝蓝Lv16进化波波拉、波波拉Lv36进化而来。特性“浸润”：使用水系技能后全技能能耗-1，提升出手频率。种族值621，魔攻127、魔防132突出，定位魔法输出兼法坦，克制火/地/机械系，被草/电系克制。可首领化为圣水守护。",
+    "descriptionEn": "Final Water-type starter. Trait 'Saturation': after a Water move, all move costs -1. Base stats 621; high M.ATK 127 and M.DEF 132 — a magic attacker / special tank. Super-evolves into Shengshui Shouhu.",
+    "status": "released",
+    "releaseVersion": "国服公测",
+    "stats": {
+      "total": 621,
+      "hp": 125,
+      "atk": 58,
+      "matk": 127,
+      "def": 94,
+      "mdef": 132,
+      "spd": 85
+    },
+    "skills": [
+      {
+        "name": "甩水",
+        "nameEn": "Splash",
+        "element": "water",
+        "category": "magic",
+        "description": "造成魔伤，自己回复1能量。",
+        "descriptionEn": "Magic damage; restores 1 energy.",
+        "power": 30
+      },
+      {
+        "name": "气泡",
+        "nameEn": "Bubble",
+        "element": "water",
+        "category": "magic",
+        "description": "对敌方造成魔法伤害。",
+        "descriptionEn": "Deals magic damage.",
+        "power": 100
+      },
+      {
+        "name": "魔法增效",
+        "nameEn": "Magic Boost",
+        "element": "normal",
+        "category": "status",
+        "description": "自己获得魔攻+70%。",
+        "descriptionEn": "Gains +70% M.ATK."
+      },
+      {
+        "name": "水泡盾",
+        "nameEn": "Bubble Shield",
+        "element": "water",
+        "category": "defense",
+        "description": "减伤80%，应对攻击：自己获得魔攻+70%。",
+        "descriptionEn": "Reduces damage 80%; on react, gains +70% M.ATK."
+      },
+      {
+        "name": "水炮",
+        "nameEn": "Water Cannon",
+        "element": "water",
+        "category": "magic",
+        "description": "造成魔伤，每次使用后本技能能耗永久-1。",
+        "descriptionEn": "Magic damage; cost permanently -1 per use.",
+        "power": 110
+      },
+      {
+        "name": "涌泉",
+        "nameEn": "Spring",
+        "element": "water",
+        "category": "magic",
+        "description": "造成魔伤，本技能能耗每-1，威力+10。",
+        "descriptionEn": "Magic damage; +10 power per -1 cost.",
+        "power": 90
+      }
+    ]
+  },
+  {
+    "id": "shengshuishouhu",
+    "number": "010",
+    "name": "圣水守护",
+    "nameEn": "Shengshui Shouhu",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 5,
+    "habitat": "水灵首领化形态（战斗中触发）",
+    "habitatEn": "Overlord form of Shuiling (in-battle)",
+    "evolution": "水蓝蓝 → 波波拉（Lv16）→ 水灵（Lv36）→ 圣水守护（超进化）",
+    "evolutionEn": "Shuilanlan (Lv16) → Bobola (Lv36) → Shuiling → Shengshui Shouhu (Overlord Evolution)",
+    "description": "水灵的首领化（超进化）形态。特性“浪潮”：使用水系技能后全技能能耗-2，技能循环极快、控制频繁。种族值672，魔攻147、魔防139突出，定位策略控制型，PVP与持久战优势明显，可制造雨天增益。",
+    "descriptionEn": "Overlord (super) evolution of Shuiling. Trait 'Tide': after a Water move, all move costs -2. Base stats 672; M.ATK 147, M.DEF 139 — a control-oriented strategist with Rain weather support.",
+    "status": "released",
+    "releaseVersion": "国服公测",
+    "stats": {
+      "total": 672,
+      "hp": 138,
+      "atk": 64,
+      "matk": 147,
+      "def": 99,
+      "mdef": 139,
+      "spd": 85
+    },
+    "skills": [
+      {
+        "name": "气泡",
+        "nameEn": "Bubble",
+        "element": "water",
+        "category": "magic",
+        "description": "对敌方造成魔法伤害。",
+        "descriptionEn": "Deals magic damage.",
+        "power": 100
+      },
+      {
+        "name": "魔法增效",
+        "nameEn": "Magic Boost",
+        "element": "normal",
+        "category": "status",
+        "description": "自己获得魔攻+70%。",
+        "descriptionEn": "Gains +70% M.ATK."
+      },
+      {
+        "name": "水泡盾",
+        "nameEn": "Bubble Shield",
+        "element": "water",
+        "category": "defense",
+        "description": "减伤80%，应对攻击：自己获得魔攻+70%。",
+        "descriptionEn": "Reduces damage 80%; on react, +70% M.ATK."
+      },
+      {
+        "name": "水炮",
+        "nameEn": "Water Cannon",
+        "element": "water",
+        "category": "magic",
+        "description": "造成魔伤，每次使用后本技能能耗永久-1。",
+        "descriptionEn": "Magic damage; cost permanently -1 per use.",
+        "power": 110
+      },
+      {
+        "name": "涌泉",
+        "nameEn": "Spring",
+        "element": "water",
+        "category": "magic",
+        "description": "造成魔伤，本技能能耗每-1，威力+10。",
+        "descriptionEn": "Magic damage; +10 power per -1 cost.",
+        "power": 90
+      },
+      {
+        "name": "天洪",
+        "nameEn": "Sky Flood",
+        "element": "water",
+        "category": "magic",
+        "description": "造成魔伤，应对状态：本技能能耗永久-6。",
+        "descriptionEn": "Magic damage; on react, cost permanently -6.",
+        "power": 140
+      }
+    ]
+  },
+  {
+    "id": "molimao",
+    "number": "004",
+    "name": "魔力猫",
+    "nameEn": "Molimao",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 5,
+    "habitat": "恶水沼泽（御三家·喵喵进化）",
+    "habitatEn": "Evil Swamp / Starter (Miaomiao)",
+    "evolution": "喵喵 → 喵呜（Lv16）→ 魔力猫（Lv36）→ 叶冕魔力猫（首领进化）",
+    "evolutionEn": "Miaomiao (Lv16) → Miaowu (Lv32) → Molimao → Yemian Molimao (Overlord Evolution)",
+    "description": "草系御三家最终形态，由喵喵Lv16进化喵呜、喵呜Lv32进化而来。特性“氧循环”：使用草系技能后回复生命值（约10%~15%）。种族值613，魔防151极高、速度55偏慢，定位续航法坦/消耗，克制水/土系，被火系克制。可首领化为叶冕魔力猫。",
+    "descriptionEn": "Final Grass-type starter. Trait 'Oxygen Cycle': after a Grass move, heals HP (~10-15%). Base stats 613; M.DEF 151 very high, SPD 55 low — a sustain tank. Super-evolves into Yemian Molimao.",
+    "status": "released",
+    "releaseVersion": "国服公测",
+    "stats": {
+      "total": 613,
+      "hp": 108,
+      "atk": 109,
+      "matk": 109,
+      "def": 81,
+      "mdef": 151,
+      "spd": 55
+    },
+    "skills": [
+      {
+        "name": "棘突",
+        "nameEn": "Thorn Spike",
+        "element": "grass",
+        "category": "magic",
+        "description": "对敌方精灵造成魔法伤害。",
+        "descriptionEn": "Deals magic damage.",
+        "power": 100
+      },
+      {
+        "name": "叶绿光束",
+        "nameEn": "Leaf Beam",
+        "element": "grass",
+        "category": "magic",
+        "description": "对敌方精灵造成魔法伤害。",
+        "descriptionEn": "Deals magic damage.",
+        "power": 120
+      },
+      {
+        "name": "筛管奔流",
+        "nameEn": "Phloem Flow",
+        "element": "grass",
+        "category": "physical",
+        "description": "造成物伤，自己生命大于80%时本次威力+75。",
+        "descriptionEn": "Physical damage; +75 power when HP above 80%.",
+        "power": 80
+      },
+      {
+        "name": "孢子",
+        "nameEn": "Spore",
+        "element": "grass",
+        "category": "status",
+        "description": "敌方获得1层寄生。",
+        "descriptionEn": "Afflicts target with 1 Parasite stack."
+      },
+      {
+        "name": "光合作用",
+        "nameEn": "Photosynthesis",
+        "element": "grass",
+        "category": "status",
+        "description": "自己获得1层光合印记。",
+        "descriptionEn": "Gains 1 Photosynthesis mark."
+      },
+      {
+        "name": "光能聚集",
+        "nameEn": "Light Gather",
+        "element": "grass",
+        "category": "magic",
+        "description": "造成魔伤，每次使用其他草系技能后本技能威力永久+60。",
+        "descriptionEn": "Magic damage; power permanently +60 per other Grass move used.",
+        "power": 100
+      }
+    ]
+  },
+  {
+    "id": "yinsuquan",
+    "number": "032",
+    "name": "音速犬",
+    "nameEn": "Yinsuquan",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 4,
+    "habitat": "野外（护主犬进化）",
+    "habitatEn": "Wild (evolved from Huzhuquan)",
+    "evolution": "护主犬（Lv26）→ 音速犬 → 风暴战犬（超进化）",
+    "evolutionEn": "Huzhuquan (Lv26) → Yinsuquan → Storm Battle Hound (Super Evolution)",
+    "description": "火系高人气守护精灵，由护主犬Lv26进化而来，可超进化为风暴战犬。特性“专注力”：入场首回合物攻+100%。种族值562，物攻128、速度120突出，定位高速物理输出，兼顾爆发与收割，前期开荒主力，被水/地面系克制。",
+    "descriptionEn": "Popular Fire-type guardian; evolves from Huzhuquan at Lv26, super-evolves into Storm Battle Hound. Trait 'Focus': +100% ATK on first turn. Base stats 562; ATK 128, SPD 120 — a fast physical attacker and early-game carry.",
+    "status": "released",
+    "releaseVersion": "国服公测",
+    "stats": {
+      "total": 562,
+      "hp": 85,
+      "atk": 128,
+      "matk": 46,
+      "def": 101,
+      "mdef": 82,
+      "spd": 120
+    },
+    "skills": [
+      {
+        "name": "火苗",
+        "nameEn": "Fire Spark",
+        "element": "fire",
+        "category": "physical",
+        "description": "造成物伤，自己回复1能量。",
+        "descriptionEn": "Physical damage; restores 1 energy.",
+        "power": 30
+      },
+      {
+        "name": "引燃",
+        "nameEn": "Ignite",
+        "element": "fire",
+        "category": "status",
+        "description": "敌方获得10层灼烧。",
+        "descriptionEn": "Afflicts target with 10 Burn stacks."
+      },
+      {
+        "name": "流星火雨",
+        "nameEn": "Meteor Fire Rain",
+        "element": "fire",
+        "category": "physical",
+        "description": "造成物伤，每次击败敌方本技能威力永久+75。",
+        "descriptionEn": "Physical damage; power permanently +75 per KO.",
+        "power": 75
+      },
+      {
+        "name": "力量增效",
+        "nameEn": "Power Boost",
+        "element": "normal",
+        "category": "status",
+        "description": "自己获得物攻+100%。",
+        "descriptionEn": "Gains +100% ATK."
+      },
+      {
+        "name": "火云车",
+        "nameEn": "Fire Cloud Car",
+        "element": "fire",
+        "category": "physical",
+        "description": "对敌方精灵造成物理伤害。",
+        "descriptionEn": "Deals physical damage.",
+        "power": 140
+      },
+      {
+        "name": "灼烧",
+        "nameEn": "Scorch",
+        "element": "fire",
+        "category": "physical",
+        "description": "对敌方精灵造成物理伤害。",
+        "descriptionEn": "Deals physical damage.",
+        "power": 120
+      }
+    ]
+  },
+  {
+    "id": "abu",
+    "number": "453",
+    "name": "阿布",
+    "nameEn": "Abu",
+    "attribute": "dragon",
+    "attributeEn": "Dragon",
+    "rarity": 4,
+    "habitat": "洛克王国世界：官方活动赠送阿布蛋，孵化获得",
+    "habitatEn": "Roco Kingdom: World — obtained by hatching an event-gifted Abu egg",
+    "evolution": "阿布（普通系）→ 超能阿布（龙系，Lv.40）→ 圣龙阿布 → 惊雷阿布",
+    "evolutionEn": "Abu (Normal) → Chaosheng Abu (Dragon, Lv.40) → Shenglong Abu → Jinglei Abu",
+    "description": "洛克王国世界中的经典精灵，初始为普通系，可更换龙系血脉并于40级进化为超能阿布（龙系）。性格胆小却潜力惊人，是龙星的主宠。",
+    "descriptionEn": "Classic spirit in Roco Kingdom: World. Starts as Normal type; switch to Dragon bloodline and reach Lv.40 to evolve into Chaosheng Abu (Dragon). Timid yet full of potential, Long Xing's partner.",
+    "status": "released",
+    "releaseVersion": "国服公测",
+    "stats": {
+      "total": 520
+    },
+    "skills": [
+      {
+        "name": "魔法增效",
+        "nameEn": "Magic Boost",
+        "element": "normal",
+        "category": "status",
+        "description": "自己获得魔攻+70%。",
+        "descriptionEn": "Gains +70% Sp.Atk.",
+        "level": 1
+      },
+      {
+        "name": "防御",
+        "nameEn": "Defend",
+        "element": "normal",
+        "category": "defense",
+        "description": "减伤70%，应对攻击。",
+        "descriptionEn": "Reduces damage 70%; counters attacks.",
+        "level": 1
+      },
+      {
+        "name": "先发制人",
+        "nameEn": "First Strike",
+        "element": "normal",
+        "category": "physical",
+        "description": "造成物理伤害，先手+1。",
+        "descriptionEn": "Physical damage; +1 priority.",
+        "power": 55
+      },
+      {
+        "name": "绵里藏针",
+        "nameEn": "Hidden Needle",
+        "element": "dragon",
+        "category": "magic",
+        "description": "造成魔伤，若自己上回合未攻击敌方并造成伤害，本技能威力永久+20。",
+        "descriptionEn": "Magic damage; if it didn't hit last turn, power permanently +20.",
+        "power": 60
+      },
+      {
+        "name": "龙炮",
+        "nameEn": "Dragon Cannon",
+        "element": "dragon",
+        "category": "physical",
+        "description": "对敌方精灵造成物理伤害。",
+        "descriptionEn": "Physical damage.",
+        "power": 100
+      },
+      {
+        "name": "力量增效",
+        "nameEn": "Power Boost",
+        "element": "normal",
+        "category": "status",
+        "description": "自己获得物攻+100%。",
+        "descriptionEn": "Gains +100% Attack."
+      }
+    ]
+  },
+  {
+    "id": "kula",
+    "number": "206",
+    "name": "酷拉",
+    "nameEn": "Kula",
+    "attribute": "electric",
+    "attributeEn": "Electric",
+    "rarity": 4,
+    "habitat": "洛克王国世界：常见于山林；由拉特进化",
+    "habitatEn": "Roco Kingdom: World — common in forests; evolves from Latt",
+    "evolution": "拉特 → 酷拉（Lv.40）→ 风暴酷拉",
+    "evolutionEn": "Latt → Kula (Lv.40) → Storm Kula",
+    "description": "酷拉是洛克王国世界中的电系精灵，由拉特40级进化而来，可再进化为风暴酷拉。特性'噼啪！'使入场首次行动所选技能使用次数+1，双攻均衡、速度突出。",
+    "descriptionEn": "An Electric-type spirit in Roco Kingdom: World, evolved from Latt at Lv.40 and further into Storm Kula. Trait 'Crackle!' grants +1 use to the first move on entry; balanced offenses and high Speed.",
+    "status": "released",
+    "releaseVersion": "国服公测",
+    "stats": {
+      "total": 583,
+      "hp": 83,
+      "atk": 100,
+      "matk": 100,
+      "def": 78,
+      "mdef": 97,
+      "spd": 125
+    },
+    "skills": [
+      {
+        "name": "球状闪电",
+        "nameEn": "Ball Lightning",
+        "element": "electric",
+        "category": "physical",
+        "description": "对敌方精灵造成物理伤害。",
+        "descriptionEn": "Physical damage.",
+        "power": 60,
+        "level": 1
+      },
+      {
+        "name": "魔法增效",
+        "nameEn": "Magic Boost",
+        "element": "normal",
+        "category": "status",
+        "description": "自己获得魔攻+70%。",
+        "descriptionEn": "Gains +70% Sp.Atk.",
+        "level": 3
+      },
+      {
+        "name": "超导加速",
+        "nameEn": "Superconduct Accelerate",
+        "element": "electric",
+        "category": "magic",
+        "description": "造成魔伤，自己获得速度+30。",
+        "descriptionEn": "Magic damage; gains +30 Speed.",
+        "power": 60,
+        "level": 10
+      },
+      {
+        "name": "过载回路",
+        "nameEn": "Overload Circuit",
+        "element": "electric",
+        "category": "status",
+        "description": "回合结束自己返场，下回合所选技能使用次数+1。",
+        "descriptionEn": "Withdraw at turn end; +1 use next turn.",
+        "level": 12
+      },
+      {
+        "name": "超导",
+        "nameEn": "Superconduct",
+        "element": "electric",
+        "category": "magic",
+        "description": "造成魔伤，迸发：本技能能耗-1。",
+        "descriptionEn": "Magic damage; Burst: energy cost -1.",
+        "power": 95,
+        "level": 22
+      },
+      {
+        "name": "电弧",
+        "nameEn": "Electric Arc",
+        "element": "electric",
+        "category": "physical",
+        "description": "造成物伤，迸发：本次技能威力+40。",
+        "descriptionEn": "Physical damage; Burst: power +40.",
+        "power": 80,
+        "level": 28
+      },
+      {
+        "name": "麻痹",
+        "nameEn": "Paralyze",
+        "element": "electric",
+        "category": "status",
+        "description": "敌方先手-1，应对防御：额外使敌方双攻-70%。",
+        "descriptionEn": "Foe priority -1; vs Defense: also -70% foe Attack & Sp.Atk.",
+        "level": 33
+      },
+      {
+        "name": "雷暴",
+        "nameEn": "Thunderstorm",
+        "element": "electric",
+        "category": "magic",
+        "description": "造成魔伤，迸发：本技能获得所有生效过的迸发效果。",
+        "descriptionEn": "Magic damage; Burst: gains all prior Burst effects.",
+        "power": 55,
+        "level": 41
+      }
+    ]
+  },
+  {
+    "id": "lanniao",
+    "number": "020",
+    "name": "岚鸟",
+    "nameEn": "Lanniao",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 3,
+    "habitat": "洛克王国世界：野外捕捉（天空组）；雪绒鸟进化链",
+    "habitatEn": "Roco Kingdom: World — wild capture (Sky group); evolves from Xuerongniao",
+    "evolution": "雪绒鸟 → 冬羽雀（Lv.5）→ 岚鸟（Lv.30）→ 霜翼领主",
+    "evolutionEn": "Xuerongniao → Dongyuque (Lv.5) → Lanniao (Lv.30) → Frostwing Lord",
+    "description": "岚鸟是洛克王国世界中的翼系精灵，由雪绒鸟经冬羽雀30级进化而来，可再进化为霜翼领主。特性'顺风'先手攻击时技能威力+50%，高速物理输出，绅士气质颇有人气。",
+    "descriptionEn": "A Flying-type spirit in Roco Kingdom: World, evolved from Xuerongniao via Dongyuque at Lv.30, further into Frostwing Lord. Trait 'Tailwind' gives +50% power when attacking first; high-Speed physical attacker.",
+    "status": "released",
+    "releaseVersion": "国服公测",
+    "stats": {
+      "total": 570,
+      "hp": 90,
+      "atk": 128,
+      "matk": 55,
+      "def": 108,
+      "mdef": 74,
+      "spd": 115
+    },
+    "skills": [
+      {
+        "name": "啄击",
+        "nameEn": "Peck",
+        "element": "flying",
+        "category": "physical",
+        "description": "造成物伤，2连击。",
+        "descriptionEn": "Physical damage, 2 hits.",
+        "power": 15,
+        "level": 1
+      },
+      {
+        "name": "力量增效",
+        "nameEn": "Power Boost",
+        "element": "normal",
+        "category": "status",
+        "description": "自己获得物攻+100%。",
+        "descriptionEn": "Gains +100% Attack.",
+        "level": 1
+      },
+      {
+        "name": "先发制人",
+        "nameEn": "First Strike",
+        "element": "normal",
+        "category": "physical",
+        "description": "造成物理伤害，先手+1。",
+        "descriptionEn": "Physical damage; +1 priority.",
+        "power": 55,
+        "level": 6
+      },
+      {
+        "name": "乘风",
+        "nameEn": "Catch the Wind",
+        "element": "flying",
+        "category": "status",
+        "description": "自己获得速度+120。",
+        "descriptionEn": "Gains +120 Speed.",
+        "level": 8
+      },
+      {
+        "name": "扇风",
+        "nameEn": "Gust",
+        "element": "flying",
+        "category": "physical",
+        "description": "造成物伤，若先于敌方攻击，本次技能威力+50%。",
+        "descriptionEn": "Physical damage; +50% power if attacking first.",
+        "power": 70,
+        "level": 13
+      },
+      {
+        "name": "闪击",
+        "nameEn": "Quick Strike",
+        "element": "flying",
+        "category": "physical",
+        "description": "造成物伤，速度比敌方越高，本次技能威力越高。",
+        "descriptionEn": "Physical damage; more Speed advantage = more power.",
+        "power": 60,
+        "level": 21
+      },
+      {
+        "name": "俯冲猛击",
+        "nameEn": "Dive Bomb",
+        "element": "flying",
+        "category": "physical",
+        "description": "对敌方精灵造成物理伤害。",
+        "descriptionEn": "Physical damage.",
+        "power": 140,
+        "level": 30
+      },
+      {
+        "name": "龙卷风",
+        "nameEn": "Twister",
+        "element": "flying",
+        "category": "physical",
+        "description": "造成物伤，迅捷，应对状态：本次技能威力变为1.5倍。",
+        "descriptionEn": "Physical damage; Swift; vs status: power x1.5.",
+        "power": 60,
+        "level": 40
+      }
+    ]
+  },
+  {
+    "id": "baijindujiaoshou",
+    "number": "117",
+    "name": "白金独角兽",
+    "nameEn": "Baijindujiaoshou",
+    "attribute": "light",
+    "attributeEn": "Light",
+    "rarity": 5,
+    "habitat": "洛克王国世界：常见于草地、山林；由小独角兽进化",
+    "habitatEn": "Roco Kingdom: World — common in grasslands/forests; evolves from Xiaodujiaoshou",
+    "evolution": "小独角兽 → 白金独角兽（Lv.40）→ 彩虹独角兽",
+    "evolutionEn": "Xiaodujiaoshou → Baijindujiaoshou (Lv.40) → Rainbow Unicorn",
+    "description": "白金独角兽是洛克王国世界中的光系精灵，由小独角兽40级进化而来，可进化为彩虹独角兽。特性'目空'提升非光系技能威力25%，高魔攻高速的魔法核心，可作飞行坐骑。",
+    "descriptionEn": "A Light-type spirit in Roco Kingdom: World, evolved from Xiaodujiaoshou at Lv.40, further into Rainbow Unicorn. Trait 'Aloof' boosts non-Light moves by 25%; high Sp.Atk, high-Speed magic core and a flight mount.",
+    "status": "released",
+    "releaseVersion": "国服公测",
+    "stats": {
+      "total": 595,
+      "hp": 99,
+      "atk": 61,
+      "matk": 161,
+      "def": 77,
+      "mdef": 92,
+      "spd": 105
+    },
+    "skills": [
+      {
+        "name": "魔法增效",
+        "nameEn": "Magic Boost",
+        "element": "normal",
+        "category": "status",
+        "description": "自己获得魔攻+70%。",
+        "descriptionEn": "Gains +70% Sp.Atk.",
+        "level": 1
+      },
+      {
+        "name": "许愿星",
+        "nameEn": "Wishing Star",
+        "element": "normal",
+        "category": "magic",
+        "description": "对敌方精灵造成魔法伤害。",
+        "descriptionEn": "Magic damage.",
+        "power": 100,
+        "level": 1
+      },
+      {
+        "name": "虹光冲击",
+        "nameEn": "Prism Shock",
+        "element": "light",
+        "category": "magic",
+        "description": "对敌方精灵造成魔法伤害。",
+        "descriptionEn": "Magic damage.",
+        "power": 100,
+        "level": 9
+      },
+      {
+        "name": "晒太阳",
+        "nameEn": "Sunbathe",
+        "element": "normal",
+        "category": "status",
+        "description": "驱散敌方所有增益。",
+        "descriptionEn": "Removes all foe buffs.",
+        "level": 18
+      },
+      {
+        "name": "天光",
+        "nameEn": "Sky Light",
+        "element": "light",
+        "category": "magic",
+        "description": "造成魔伤，本技能系别始终和天气系别相同。",
+        "descriptionEn": "Magic damage; its type always matches the weather type.",
+        "power": 95,
+        "level": 27
+      },
+      {
+        "name": "过曝",
+        "nameEn": "Overexposure",
+        "element": "light",
+        "category": "magic",
+        "description": "造成魔伤，每使用过1个其他系别技能，本技能威力永久+30。",
+        "descriptionEn": "Magic damage; each other-type move used permanently +30 power.",
+        "power": 60,
+        "level": 30
+      }
+    ]
+  },
+  {
+    "id": "xueling",
+    "number": "213",
+    "name": "雪灵",
+    "nameEn": "Xueling",
+    "attribute": "ice",
+    "attributeEn": "Ice",
+    "rarity": 4,
+    "habitat": "雪山（岚语峰·星霜崖地）",
+    "habitatEn": "Snowy Mountains (Lanyu Peak / Starfrost Cliff)",
+    "evolution": "雪娃娃 → 冰封怨灵（Lv26）→ 雪灵（Lv42）",
+    "evolutionEn": "Xuewawa → Bingfengyuanling (Lv26) → Xueling (Lv42)",
+    "description": "由雪娃娃经冰封怨灵最终进化而来的冰系精灵。特性'冰封'使在场时敌方全技能能耗+1。传说只在契约者离世后才会寻找下一位契约者，若被迫更换契约者甚至可能自我了断。",
+    "descriptionEn": "Final Ice-form evolved from Xuewawa via Bingfengyuanling. Trait 'Ice Seal' raises all enemy skill costs by 1 while active. Legend says it only seeks a new contractor after its previous one dies.",
+    "status": "released",
+    "releaseVersion": "国服公测",
+    "stats": {
+      "total": 643,
+      "hp": 94,
+      "atk": 112,
+      "matk": 112,
+      "def": 105,
+      "mdef": 105,
+      "spd": 115
+    },
+    "skills": [
+      {
+        "name": "冰锥",
+        "nameEn": "Ice Shard",
+        "element": "ice",
+        "category": "physical",
+        "description": "对敌方造成物理伤害。",
+        "descriptionEn": "Deals physical damage.",
+        "power": 40,
+        "level": 1
+      },
+      {
+        "name": "雪球",
+        "nameEn": "Snowball",
+        "element": "ice",
+        "category": "status",
+        "description": "敌方获得速度-90。",
+        "descriptionEn": "Enemy Speed -90.",
+        "level": 1
+      },
+      {
+        "name": "旋转突击",
+        "nameEn": "Spin Assault",
+        "element": "normal",
+        "category": "physical",
+        "description": "造成物伤，3连击。",
+        "descriptionEn": "Physical damage, 3 hits.",
+        "power": 35,
+        "level": 4
+      },
+      {
+        "name": "丢冰块",
+        "nameEn": "Throw Ice",
+        "element": "ice",
+        "category": "physical",
+        "description": "造成物伤，敌方速度-30。",
+        "descriptionEn": "Physical damage; enemy Speed -30.",
+        "power": 90,
+        "level": 12
+      },
+      {
+        "name": "雾气环绕",
+        "nameEn": "Mist Veil",
+        "element": "ice",
+        "category": "status",
+        "description": "回复能量，值等于敌方技能总能耗一半。",
+        "descriptionEn": "Restore energy = half of enemy total skill cost.",
+        "level": 26
+      },
+      {
+        "name": "冰锋横扫",
+        "nameEn": "Ice Sweep",
+        "element": "ice",
+        "category": "magic",
+        "description": "造成魔伤，威力=敌方技能总能耗×10。",
+        "descriptionEn": "Magic damage; power = 10x enemy total skill cost.",
+        "level": 42
+      },
+      {
+        "name": "冰冻光线",
+        "nameEn": "Freezing Beam",
+        "element": "ice",
+        "category": "magic",
+        "description": "造成魔伤，敌方全技能能耗+2。",
+        "descriptionEn": "Magic damage; all enemy skills cost +2.",
+        "power": 90,
+        "level": 48
+      }
+    ]
+  },
+  {
+    "id": "amiying",
+    "number": "59",
+    "name": "阿米樱",
+    "nameEn": "Amiying",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 3,
+    "habitat": "拉布朗水晶矿场 / 幻灵岛海岸 / 潘多诺格峡谷",
+    "habitatEn": "Lablang Crystal Mine / Phantom Island Coast / Panduoge Canyon",
+    "evolution": "阿米亚特 → 阿米樱（Lv30）→ 罗隐（Lv50）→ 深渊罗隐",
+    "evolutionEn": "Amiyat → Amiying (Lv30) → Luoyin (Lv50) → Abyss Luo Yin",
+    "description": "阿米亚特30级进化的地系二阶精灵，石头组成的粗壮上身与双臂，腿部短小常腿痛。特性'石头大餐'能量不足时以5%生命换1能量，可继续进化为罗隐。",
+    "descriptionEn": "Ground-type stage-2 evolved from Amiyat at Lv30. Rocky bulky arms, short legs. Trait 'Stone Feast' trades 5% HP for 1 energy when energy is low. Evolves into Luoyin.",
+    "status": "released",
+    "releaseVersion": "国服公测",
+    "stats": {
+      "total": 480,
+      "hp": 86,
+      "atk": 127,
+      "matk": 62,
+      "def": 89,
+      "mdef": 56,
+      "spd": 60
+    },
+    "skills": [
+      {
+        "name": "贪婪",
+        "nameEn": "Greed",
+        "element": "dark",
+        "category": "status",
+        "description": "自己获得100%吸血。",
+        "descriptionEn": "Gain 100% lifesteal.",
+        "level": 1
+      },
+      {
+        "name": "蝙蝠",
+        "nameEn": "Bat",
+        "element": "dark",
+        "category": "physical",
+        "description": "造成物伤并吸血100%。",
+        "descriptionEn": "Physical damage, drain 100%.",
+        "power": 65,
+        "level": 1
+      },
+      {
+        "name": "力量增效",
+        "nameEn": "Power Boost",
+        "element": "normal",
+        "category": "status",
+        "description": "自己物攻+100%。",
+        "descriptionEn": "Self Physical Attack +100%.",
+        "level": 5
+      },
+      {
+        "name": "先发制人",
+        "nameEn": "First Strike",
+        "element": "normal",
+        "category": "physical",
+        "description": "造成物伤，先手+1。",
+        "descriptionEn": "Physical damage, priority +1.",
+        "power": 55,
+        "level": 6
+      },
+      {
+        "name": "鸣沙陷阱",
+        "nameEn": "Singing Sand Trap",
+        "element": "ground",
+        "category": "physical",
+        "description": "造成物伤，物防越高威力越高。",
+        "descriptionEn": "Physical damage; scales with own DEF.",
+        "power": 60,
+        "level": 16
+      },
+      {
+        "name": "岩土暴击",
+        "nameEn": "Earthshatter Strike",
+        "element": "ground",
+        "category": "physical",
+        "description": "造成物伤，每被攻击能耗永久-1。",
+        "descriptionEn": "Physical damage; cost -1 per hit taken.",
+        "power": 140,
+        "level": 29
+      },
+      {
+        "name": "暗突袭",
+        "nameEn": "Dark Ambush",
+        "element": "dark",
+        "category": "physical",
+        "description": "造成物伤，吸血50%，应对时威力翻倍。",
+        "descriptionEn": "Physical damage, drain 50%; doubled on counter.",
+        "power": 70,
+        "level": 35
+      }
+    ]
+  },
+  {
+    "id": "bingfengyuanling",
+    "number": "212",
+    "name": "冰封怨灵",
+    "nameEn": "Bingfengyuanling",
+    "attribute": "ice",
+    "attributeEn": "Ice",
+    "rarity": 3,
+    "habitat": "雪山（岚语峰山顶）",
+    "habitatEn": "Snowy Mountains (Lanyu Peak summit)",
+    "evolution": "雪娃娃 → 冰封怨灵（Lv26）→ 雪灵（Lv42）",
+    "evolutionEn": "Xuewawa → Bingfengyuanling (Lv26) → Xueling (Lv42)",
+    "description": "雪娃娃26级进化的冰系二阶精灵，由冰元素与不明精神物质构成，契约稳定难被外力改变。特性'冰封'令敌方全技能能耗+1，可进化为雪灵。",
+    "descriptionEn": "Ice-type stage-2 evolved from Xuewawa at Lv26, formed of ice and unknown mental matter. Trait 'Ice Seal' raises all enemy skill costs by 1. Evolves into Xueling.",
+    "status": "released",
+    "releaseVersion": "国服公测",
+    "stats": {
+      "total": 515,
+      "hp": 75,
+      "atk": 90,
+      "matk": 90,
+      "def": 84,
+      "mdef": 84,
+      "spd": 92
+    },
+    "skills": [
+      {
+        "name": "冰锥",
+        "nameEn": "Ice Shard",
+        "element": "ice",
+        "category": "physical",
+        "description": "对敌方造成物理伤害。",
+        "descriptionEn": "Deals physical damage.",
+        "power": 40,
+        "level": 1
+      },
+      {
+        "name": "雪球",
+        "nameEn": "Snowball",
+        "element": "ice",
+        "category": "status",
+        "description": "敌方获得速度-90。",
+        "descriptionEn": "Enemy Speed -90.",
+        "level": 1
+      },
+      {
+        "name": "丢冰块",
+        "nameEn": "Throw Ice",
+        "element": "ice",
+        "category": "physical",
+        "description": "造成物伤，敌方速度-30。",
+        "descriptionEn": "Physical damage; enemy Speed -30.",
+        "power": 90,
+        "level": 12
+      },
+      {
+        "name": "雾气环绕",
+        "nameEn": "Mist Veil",
+        "element": "ice",
+        "category": "status",
+        "description": "回复能量，值等于敌方技能总能耗一半。",
+        "descriptionEn": "Restore energy = half enemy total skill cost.",
+        "level": 26
+      },
+      {
+        "name": "雪替身",
+        "nameEn": "Snow Decoy",
+        "element": "ice",
+        "category": "defense",
+        "description": "减伤70%，应对攻击回复能量。",
+        "descriptionEn": "70% damage cut; restore energy on defense.",
+        "level": 33
+      }
+    ]
+  },
+  {
+    "id": "emolang",
+    "number": "131",
+    "name": "恶魔狼",
+    "nameEn": "Emolang",
+    "attribute": "dark",
+    "attributeEn": "Dark",
+    "rarity": 3,
+    "habitat": "岚语峰翼王东侧 / 风息山口（夜间）",
+    "habitatEn": "Lanyu Peak (east of Wing King) / Windpass (night)",
+    "evolution": "恶魔狼（单一形态，无进化，据BiliWiki）",
+    "evolutionEn": "Emolang (single form, no evolution per BiliWiki)",
+    "description": "恶系高速物理输出精灵，胸前粗糙绒毛可护体，战场机动迅猛。特性'悲悯'：队伍每有一只被击败精灵，入场攻击+20%。据BiliWiki为单一形态。",
+    "descriptionEn": "Dark-type fast physical attacker; rough chest fur protects it. Trait 'Mercy': +20% Attack on entry per fainted ally. Single form per BiliWiki.",
+    "status": "released",
+    "releaseVersion": "国服公测",
+    "stats": {
+      "total": 548,
+      "hp": 115,
+      "atk": 114,
+      "matk": 45,
+      "def": 91,
+      "mdef": 63,
+      "spd": 120
+    },
+    "skills": [
+      {
+        "name": "猛烈撞击",
+        "nameEn": "Tackle",
+        "element": "normal",
+        "category": "physical",
+        "description": "对敌方造成物理伤害。",
+        "descriptionEn": "Deals physical damage.",
+        "power": 60,
+        "level": 1
+      },
+      {
+        "name": "魔爪",
+        "nameEn": "Demon Claw",
+        "element": "dark",
+        "category": "physical",
+        "description": "造成物伤，自己回复1能量。",
+        "descriptionEn": "Physical damage; restore 1 energy.",
+        "power": 30,
+        "level": 4
+      },
+      {
+        "name": "贪婪",
+        "nameEn": "Greed",
+        "element": "dark",
+        "category": "status",
+        "description": "自己获得100%吸血。",
+        "descriptionEn": "Gain 100% lifesteal.",
+        "level": 12
+      },
+      {
+        "name": "撕裂",
+        "nameEn": "Rip",
+        "element": "dark",
+        "category": "physical",
+        "description": "造成物伤，应对时吸血100%。",
+        "descriptionEn": "Physical damage; lifesteal on counter.",
+        "power": 55,
+        "level": 17
+      },
+      {
+        "name": "恶能量",
+        "nameEn": "Evil Energy",
+        "element": "dark",
+        "category": "physical",
+        "description": "对敌方造成物理伤害。",
+        "descriptionEn": "Deals physical damage.",
+        "power": 60,
+        "level": 26
+      },
+      {
+        "name": "暗突袭",
+        "nameEn": "Dark Ambush",
+        "element": "dark",
+        "category": "physical",
+        "description": "造成物伤，吸血100%，应对时威力翻倍。",
+        "descriptionEn": "Physical damage, drain 100%; doubled on counter.",
+        "power": 70,
+        "level": 45
+      },
+      {
+        "name": "吞噬",
+        "nameEn": "Devour",
+        "element": "normal",
+        "category": "physical",
+        "description": "造成物伤，击败敌方获得6能量。",
+        "descriptionEn": "Physical damage; gain 6 energy on KO.",
+        "power": 135,
+        "level": 57
+      }
+    ]
+  },
+  {
+    "id": "boduoxi",
+    "number": "166",
+    "name": "波多西",
+    "nameEn": "Boduoxi",
+    "attribute": "steel",
+    "attributeEn": "Steel",
+    "rarity": 4,
+    "habitat": "机械空间 / 地下矿场（分布存疑）",
+    "habitatEn": "Machine Dimension / underground mines (distribution uncertain)",
+    "evolution": "多西 → 库多西（Lv32）→ 波多西（Lv48）（机械/地 双属性）",
+    "evolutionEn": "Duoxi → Kuduoxi (Lv32) → Boduoxi (Lv48) (Steel/Ground dual-type)",
+    "description": "机械（钢）/地双属性最终形态，多西48级进化而来。能将钢铁之力蓄于双爪重击，以地底粗矿为食，出没处铁锅常失窃。特性'定向精炼'强化机械/地技能。",
+    "descriptionEn": "Steel/Ground final form evolved from Duoxi at Lv48. Stores steel power in claws for heavy strikes; eats underground ore. Trait 'Directional Refinement' boosts Steel/Ground skills.",
+    "status": "released",
+    "releaseVersion": "国服公测",
+    "stats": {
+      "total": 573,
+      "hp": 106,
+      "atk": 122,
+      "matk": 43,
+      "def": 136,
+      "mdef": 116,
+      "spd": 50
+    },
+    "skills": [
+      {
+        "name": "先发制人",
+        "nameEn": "First Strike",
+        "element": "normal",
+        "category": "physical",
+        "description": "造成物伤，先手+1。",
+        "descriptionEn": "Physical damage, priority +1.",
+        "power": 55,
+        "level": 1
+      },
+      {
+        "name": "啮合传递",
+        "nameEn": "Mesh Transmission",
+        "element": "steel",
+        "category": "status",
+        "description": "自己速度+30，1/3号位时物攻+80%。",
+        "descriptionEn": "Speed +30; ATK +80% in slot 1/3.",
+        "level": 1
+      },
+      {
+        "name": "能量守恒",
+        "nameEn": "Energy Conservation",
+        "element": "steel",
+        "category": "defense",
+        "description": "减伤80%，应对攻击两侧技能能耗永久-1。",
+        "descriptionEn": "80% damage cut; reduce adjacent skill cost.",
+        "level": 6
+      },
+      {
+        "name": "齿轮扭矩",
+        "nameEn": "Gear Torque",
+        "element": "steel",
+        "category": "physical",
+        "description": "造成物伤，每变化位置威力永久+15。",
+        "descriptionEn": "Physical damage; power +15 per position change.",
+        "power": 70,
+        "level": 8
+      },
+      {
+        "name": "鸣沙陷阱",
+        "nameEn": "Singing Sand Trap",
+        "element": "ground",
+        "category": "physical",
+        "description": "造成物伤，物防越高威力越高。",
+        "descriptionEn": "Physical damage; scales with DEF.",
+        "power": 60,
+        "level": 17
+      },
+      {
+        "name": "齿轮切开",
+        "nameEn": "Gear Slice",
+        "element": "steel",
+        "category": "physical",
+        "description": "造成物伤，1/3号位能耗-2。",
+        "descriptionEn": "Physical damage; cost -2 in slot 1/3.",
+        "power": 130,
+        "level": 33
+      },
+      {
+        "name": "岩土暴击",
+        "nameEn": "Earthshatter Strike",
+        "element": "ground",
+        "category": "physical",
+        "description": "造成物伤，每被攻击能耗永久-1。",
+        "descriptionEn": "Physical damage; cost -1 per hit taken.",
+        "power": 140,
+        "level": 35
+      }
+    ]
+  },
+  {
+    "id": "gongpingge",
+    "number": "986",
+    "name": "公平鸽",
+    "nameEn": "Gongpingge",
+    "attribute": "normal",
+    "attributeEn": "Normal",
+    "rarity": 3,
+    "habitat": "活动获取",
+    "habitatEn": "Event reward",
+    "evolution": "公平鸽（单一形态，无进化）",
+    "evolutionEn": "Gongpingge (single form, no evolution)",
+    "description": "普通系精灵，恪守'公平裁判'守则。特性'衡量'：入场复制敌方增益，在场时敌方获得增益自己也会获得。由活动获取，为普通系辅助/干扰型。",
+    "descriptionEn": "Normal-type spirit bound by its 'fair referee' code. Trait 'Measure' copies enemy buffs on entry and mirrors them while active. Obtained via events; support/disruptor role.",
+    "status": "released",
+    "releaseVersion": "国服公测",
+    "stats": {
+      "total": 649,
+      "hp": 113,
+      "atk": 93,
+      "matk": 93,
+      "def": 125,
+      "mdef": 125,
+      "spd": 100
+    },
+    "skills": [
+      {
+        "name": "拍击",
+        "nameEn": "Pat",
+        "element": "normal",
+        "category": "magic",
+        "description": "对敌方造成魔法伤害。",
+        "descriptionEn": "Deals magic damage.",
+        "power": 65,
+        "level": 1
+      },
+      {
+        "name": "防御",
+        "nameEn": "Defense",
+        "element": "normal",
+        "category": "defense",
+        "description": "减伤70%，应对攻击。",
+        "descriptionEn": "70% damage cut on defense.",
+        "level": 1
+      },
+      {
+        "name": "先发制人",
+        "nameEn": "First Strike",
+        "element": "normal",
+        "category": "physical",
+        "description": "造成物伤，先手+1。",
+        "descriptionEn": "Physical damage, priority +1.",
+        "power": 55,
+        "level": 5
+      },
+      {
+        "name": "魔法增效",
+        "nameEn": "Magic Boost",
+        "element": "normal",
+        "category": "status",
+        "description": "自己魔攻+70%。",
+        "descriptionEn": "Self Magic Attack +70%.",
+        "level": 9
+      },
+      {
+        "name": "吞噬",
+        "nameEn": "Devour",
+        "element": "normal",
+        "category": "physical",
+        "description": "造成物伤，击败敌方回复6能量。",
+        "descriptionEn": "Physical damage; gain 6 energy on KO.",
+        "power": 150,
+        "level": 34
+      },
+      {
+        "name": "蓄能轰击",
+        "nameEn": "Charged Blast",
+        "element": "normal",
+        "category": "magic",
+        "description": "造成魔伤，每用1次普系技能能耗永久-2。",
+        "descriptionEn": "Magic damage; cost -2 per normal skill used.",
+        "power": 130,
+        "level": 40
+      }
+    ]
+  },
+  {
+    "id": "bushishi",
+    "number": "94",
+    "name": "布是石",
+    "nameEn": "Bushishi",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 2,
+    "habitat": "野外（山坡 / 斜坡）",
+    "habitatEn": "Wild (slopes / hillsides)",
+    "evolution": "布是石 → 布是岩（Lv16）→ 布克棱岩（Lv32）→ 米章布来克",
+    "evolutionEn": "Bushishi → Bushiyan (Lv16) → Bukelengyan (Lv32) → Mizhangbulaike",
+    "description": "地系初始精灵，身体坚硬、成群从斜坡滚下。特性'地脉'：入场前己方每放1次地系技能回3能量。可依次进化为布是岩、布克棱岩与米章布来克。",
+    "descriptionEn": "Ground-type base spirit; hard body, rolls down slopes in groups. Trait 'Earth Vein': restore 3 energy per allied Ground skill used. Evolves through Bushiyan, Bukelengyan, Mizhangbulaike.",
+    "status": "released",
+    "releaseVersion": "国服公测",
+    "stats": {
+      "total": 409,
+      "hp": 72,
+      "atk": 81,
+      "matk": 29,
+      "def": 95,
+      "mdef": 90,
+      "spd": 42
+    },
+    "skills": [
+      {
+        "name": "跺地",
+        "nameEn": "Stomp",
+        "element": "ground",
+        "category": "physical",
+        "description": "对敌方造成物理伤害。",
+        "descriptionEn": "Deals physical damage.",
+        "power": 80,
+        "level": 1
+      },
+      {
+        "name": "防御",
+        "nameEn": "Defense",
+        "element": "normal",
+        "category": "defense",
+        "description": "减伤70%，应对攻击。",
+        "descriptionEn": "70% damage cut on defense.",
+        "level": 1
+      },
+      {
+        "name": "岩脉崩毁",
+        "nameEn": "Rock Vein Crush",
+        "element": "ground",
+        "category": "physical",
+        "description": "造成物伤，本技能能耗固定为4。",
+        "descriptionEn": "Physical damage; fixed cost 4.",
+        "power": 120,
+        "level": 8
+      },
+      {
+        "name": "硬化",
+        "nameEn": "Harden",
+        "element": "ground",
+        "category": "defense",
+        "description": "减伤90%，若上次用攻击技能耗-2。",
+        "descriptionEn": "90% damage cut; cost -2 if last move was attack.",
+        "level": 11
+      },
+      {
+        "name": "石锁",
+        "nameEn": "Stone Lock",
+        "element": "ground",
+        "category": "physical",
+        "description": "造成物伤，敌方3回合禁足。",
+        "descriptionEn": "Physical damage; enemy trapped 3 turns.",
+        "power": 50,
+        "level": 23
+      },
+      {
+        "name": "吨位压制",
+        "nameEn": "Tonnage Press",
+        "element": "normal",
+        "category": "physical",
+        "description": "造成物伤，敌方体重越低威力越高。",
+        "descriptionEn": "Physical damage; scales inversely with enemy weight.",
+        "power": 160,
+        "level": 32
+      }
     ]
   }
 ]
