@@ -70,6 +70,14 @@ export async function getWeaponsForStaticParams(gameId: GameId): Promise<Array<{
       const mod = await import('@gachia/data/games/skjh/weapons');
       return mod.skjhWeapons.map((weapon) => ({ id: weapon.id }));
     }
+    case 'roco-cn': {
+      const mod = await import('@gachia/data/games/roco-cn/weapons');
+      return mod.rocoCnWeapons.map((weapon) => ({ id: weapon.id }));
+    }
+    case 'roco': {
+      const mod = await import('@gachia/data/games/roco/weapons');
+      return mod.rocoWeapons.map((weapon) => ({ id: weapon.id }));
+    }
     default:
       return [];
   }
@@ -237,6 +245,44 @@ export async function getWeaponListData(
         };
       });
     }
+    case 'roco-cn': {
+      const mod = await import('@gachia/data/games/roco-cn/weapons');
+      return mod.rocoCnWeapons.map((weapon) => {
+        const effect = mod.getRocoCnWeaponEffect(weapon, locale);
+        const rank = rankFromRarity(weapon.rarity);
+        return {
+          id: weapon.id,
+          name: mod.getRocoCnWeaponName(weapon, locale),
+          rankGroup: rank,
+          rankLabel: rank,
+          typeGroup: weapon.weaponType,
+          typeLabel: weapon.weaponType,
+          stats: [],
+          effectName: effect.name,
+          effectDescription: effect.description,
+          source: mod.getRocoCnWeaponSource(weapon, locale),
+        };
+      });
+    }
+    case 'roco': {
+      const mod = await import('@gachia/data/games/roco/weapons');
+      return mod.rocoWeapons.map((weapon) => {
+        const effect = mod.getRocoWeaponEffect(weapon, locale);
+        const rank = rankFromRarity(weapon.rarity);
+        return {
+          id: weapon.id,
+          name: mod.getRocoWeaponName(weapon, locale),
+          rankGroup: rank,
+          rankLabel: rank,
+          typeGroup: weapon.weaponType,
+          typeLabel: weapon.weaponType,
+          stats: [],
+          effectName: effect.name,
+          effectDescription: effect.description,
+          source: mod.getRocoWeaponSource(weapon, locale),
+        };
+      });
+    }
     default:
       return [];
   }
@@ -307,6 +353,20 @@ export async function getWeaponMetaData(gameId: GameId, id: string, locale: Supp
       const effect = mod.getSkjhWeaponEffect(weapon, locale);
       return { weapon, name: mod.getSkjhWeaponName(weapon, locale), effect };
     }
+    case 'roco-cn': {
+      const mod = await import('@gachia/data/games/roco-cn/weapons');
+      const weapon = mod.getRocoCnWeaponById(id);
+      if (!weapon) return null;
+      const effect = mod.getRocoCnWeaponEffect(weapon, locale);
+      return { weapon, name: mod.getRocoCnWeaponName(weapon, locale), effect };
+    }
+    case 'roco': {
+      const mod = await import('@gachia/data/games/roco/weapons');
+      const weapon = mod.getRocoWeaponById(id);
+      if (!weapon) return null;
+      const effect = mod.getRocoWeaponEffect(weapon, locale);
+      return { weapon, name: mod.getRocoWeaponName(weapon, locale), effect };
+    }
     default:
       return null;
   }
@@ -316,6 +376,10 @@ export interface WeaponInfoCard {
   label: string;
   value: string;
 }
+
+const ROCO_WEAPON_TYPE_LABELS: Record<string, Record<SupportedLocale, string>> = {
+  staff: { zh: '法杖', en: 'Staff', ja: '杖' },
+};
 
 export interface WeaponDetailData {
   gameId: Exclude<GameId, 'sea'>;
@@ -558,6 +622,44 @@ export async function getWeaponDetailData(
       const source = mod.getSkjhWeaponSource(weapon, locale);
       const name = mod.getSkjhWeaponName(weapon, locale);
       const type = SKJH_WEAPON_TYPE[weapon.weaponType]?.[locale] ?? weapon.weaponType;
+      const statsLine = locale === 'zh' ? `${weapon.rarity}★, ${type}` : `★${weapon.rarity}, ${type}`;
+      return {
+        gameId, id: weapon.id, name, nameAlt: locale === 'zh' ? weapon.nameEn : weapon.name, rarity: weapon.rarity, titleStat: type,
+        infoCards: [
+          { label: statLabel(locale, '类型', 'タイプ', 'Type'), value: type },
+          { label: statLabel(locale, '定位', '役割', 'Role'), value: effect.name },
+          { label: statLabel(locale, '稀有度', 'レア度', 'Rarity'), value: `${weapon.rarity}★` },
+        ],
+        effectTitle: getWeaponEffectTitle(gameId, locale), effectName: effect.name, effectDescription: effect.description, source, statsLine, hasPassive: true,
+      };
+    }
+    case 'roco-cn': {
+      const mod = await import('@gachia/data/games/roco-cn/weapons');
+      const weapon = mod.getRocoCnWeaponById(id);
+      if (!weapon) return null;
+      const effect = mod.getRocoCnWeaponEffect(weapon, locale);
+      const source = mod.getRocoCnWeaponSource(weapon, locale);
+      const name = mod.getRocoCnWeaponName(weapon, locale);
+      const type = ROCO_WEAPON_TYPE_LABELS[weapon.weaponType]?.[locale] ?? weapon.weaponType;
+      const statsLine = locale === 'zh' ? `${weapon.rarity}★, ${type}` : `★${weapon.rarity}, ${type}`;
+      return {
+        gameId, id: weapon.id, name, nameAlt: locale === 'zh' ? weapon.nameEn : weapon.name, rarity: weapon.rarity, titleStat: type,
+        infoCards: [
+          { label: statLabel(locale, '类型', 'タイプ', 'Type'), value: type },
+          { label: statLabel(locale, '定位', '役割', 'Role'), value: effect.name },
+          { label: statLabel(locale, '稀有度', 'レア度', 'Rarity'), value: `${weapon.rarity}★` },
+        ],
+        effectTitle: getWeaponEffectTitle(gameId, locale), effectName: effect.name, effectDescription: effect.description, source, statsLine, hasPassive: true,
+      };
+    }
+    case 'roco': {
+      const mod = await import('@gachia/data/games/roco/weapons');
+      const weapon = mod.getRocoWeaponById(id);
+      if (!weapon) return null;
+      const effect = mod.getRocoWeaponEffect(weapon, locale);
+      const source = mod.getRocoWeaponSource(weapon, locale);
+      const name = mod.getRocoWeaponName(weapon, locale);
+      const type = ROCO_WEAPON_TYPE_LABELS[weapon.weaponType]?.[locale] ?? weapon.weaponType;
       const statsLine = locale === 'zh' ? `${weapon.rarity}★, ${type}` : `★${weapon.rarity}, ${type}`;
       return {
         gameId, id: weapon.id, name, nameAlt: locale === 'zh' ? weapon.nameEn : weapon.name, rarity: weapon.rarity, titleStat: type,

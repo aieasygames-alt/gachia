@@ -646,14 +646,14 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
   roco: {
     title: { zh: '国际服 CBT「等等鸭测试」/ 预注册专题', en: 'Global CBT "Quack Quack Test" / Pre-Registration Hub', ja: '国際CBT「Quack Quack Test」/ 事前登録特集' },
     description: {
-      zh: '聚焦《洛克王国:世界》国际服 CBT「等等鸭测试（Quack Quack Test）」10/27 开测、报名窗口 8/26–10/20、CBT 平台（PC/iOS/Android）、精灵阵容与版本时间线。',
-      en: 'Focus on the Roco Kingdom global CBT "Quack Quack Test" starting October 27, the Aug 26–Oct 20 sign-up window, CBT platforms (PC/iOS/Android), the Jinie roster, and the version timeline.',
-      ja: 'ロコキングダム国際版のCBT「Quack Quack Test」（10/27開始）、応募窓口（8/26〜10/20）、CBT対応プラットフォーム（PC/iOS/Android）、ジニー、版本タイムラインを整理します。',
+      zh: '聚焦《洛克王国:世界》国际服 CBT「等等鸭测试（Quack Quack Test）」10/27 开测、报名窗口 8/26–10/20、CBT 平台（PC/iOS/Android）、精灵阵容、法杖（外观特效武器）、早测节奏榜与版本时间线。',
+      en: 'Focus on the Roco Kingdom global CBT "Quack Quack Test" starting October 27, the Aug 26–Oct 20 sign-up window, CBT platforms (PC/iOS/Android), the Jinie roster, staves (cosmetic effect weapons), provisional tier list, and the version timeline.',
+      ja: 'ロコキングダム国際版のCBT「Quack Quack Test」（10/27開始）、応募窓口（8/26〜10/20）、CBT対応プラットフォーム（PC/iOS/Android）、ジニー、杖（外観武器）、暫定Tier、版本タイムラインを整理します。',
     },
     highlights: {
-      zh: ['10/27 开测', '报名至 10/20', 'CBT: PC/iOS/Android', '400+ 精灵'],
-      en: ['CBT Oct 27', 'Sign-up until Oct 20', 'CBT: PC/iOS/Android', '400+ Jinies'],
-      ja: ['CBT 10/27', '応募は10/20まで', 'CBT: PC/iOS/Android', '400+ ジニー'],
+      zh: ['10/27 开测', '报名至 10/20', 'CBT: PC/iOS/Android', '法杖', '早测节奏榜'],
+      en: ['CBT Oct 27', 'Sign-up until Oct 20', 'CBT: PC/iOS/Android', 'Staves', 'Provisional tier'],
+      ja: ['CBT 10/27', '応募は10/20まで', 'CBT: PC/iOS/Android', '杖', '暫定Tier'],
     },
     kicker: { zh: '首测倒计时', en: 'CBT countdown', ja: 'CBTカウントダウン' },
     freshness: {
@@ -704,14 +704,14 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
   'roco-cn': {
     title: { zh: '已上线 / S1 赛季专题', en: 'Live / S1 Season Hub', ja: '配信中 / S1シーズン特集' },
     description: {
-      zh: '《洛克王国:世界》国服已全平台上线，聚焦 S1「暗夜拾光」赛季、精灵图鉴、多端互通、活动和后续养成内容（持续补充中）。',
-      en: 'The CN version is live across platforms. This hub tracks the S1 "Shadowlight" season, Jinie database, cross-device progress, events, and build content (expanding).',
-      ja: '中国版は全プラットフォームで配信中。S1「暗夜拾光」シーズン、ジニー図鑑、多端連携、イベント、育成情報を追跡します（順次拡充）。',
+      zh: '《洛克王国:世界》国服已全平台上线，聚焦 S1「暗夜拾光」赛季、精灵图鉴、法杖（外观特效武器）、社区节奏榜、多端互通、活动和后续养成内容（持续补充中）。',
+      en: 'The CN version is live across platforms. This hub tracks the S1 "Shadowlight" season, Jinie database, staves (cosmetic effect weapons), community tier list, cross-device progress, events, and build content (expanding).',
+      ja: '中国版は全プラットフォームで配信中。S1「暗夜拾光」シーズン、ジニー図鑑、杖（外観武器）、コミュニティTier、多端連携、イベント、育成情報を追跡します（順次拡充）。',
     },
     highlights: {
-      zh: ['已全平台上线', 'S1 暗夜拾光', '347 只精灵', '多端互通'],
-      en: ['Live on all platforms', 'S1 Shadowlight', '347 Jinies', 'Cross-device'],
-      ja: ['全平台配信中', 'S1 暗夜拾光', '347 ジニー', '多端連携'],
+      zh: ['已全平台上线', 'S1 暗夜拾光', '347 只精灵', '法杖', '节奏榜', '多端互通'],
+      en: ['Live on all platforms', 'S1 Shadowlight', '347 Jinies', 'Staves', 'Tier list', 'Cross-device'],
+      ja: ['全平台配信中', 'S1 暗夜拾光', '347 ジニー', '杖', 'Tier', '多端連携'],
     },
     kicker: { zh: '运营中', en: 'Live status', ja: '配信状態' },
     freshness: {

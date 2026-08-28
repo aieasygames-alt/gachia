@@ -77,6 +77,16 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     en: 'Ashfall Evolution is an open-world survival game published by Tencent Games and developed by Wuduan Technology. Gachia covers launch timing, beginner routes, base building, resources, weapons, and rewards.',
     ja: '失控進化はTencent Games配信、無端科技開発、Rust正式ライセンスの多人数サバイバル対戦型オープンワールドゲームです。Gachiaでは公測時期、開荒ルート、拠点建設、資源、遺伝子ビルド、武器、報酬を整理します。初心者が次に見るべきページも案内し、公測特集へもつなげます。',
   },
+  'roco-cn': {
+    zh: '《洛克王国：世界》国服精灵图鉴、法杖数据库、节奏榜与攻略百科，聚焦 S1「暗夜拾光」赛季，覆盖 347 只精灵的属性、技能、进化链、培养方向与配队思路。法杖为外观特效武器，无数值攻击力，按赛季战令与活动获取；节奏榜帮助你在养成前先看清当前版本强势精灵。同时收录版本专题、图鉴页、攻略页和实用工具入口，方便继续深入浏览与查找。',
+    en: 'Roco Kingdom (CN) Jinie database, staff catalog, tier list, and guides for the S1 "Shadowlight" season. Covers 347 Jinies\' attributes, skills, evolution chains, build directions, and team ideas. Staves are cosmetic effect weapons with no attack stats, obtained from season battle passes and events; the tier list helps you spot the current meta before investing. Also links to version hubs, character pages, guides, and tools.',
+    ja: 'ロコキングダム中国版のジニー図鑑、杖（武器）データベース、Tier、攻略百科をS1「暗夜拾光」シーズン向けに整理。347体の属性、スキル、進化、育成方針、編成を網羅。杖は攻撃数値を持たない外観・エフェクト武器で、シーズンバトルパスとイベントで入手。Tierで現環境を把握。版本特集、図鑑、攻略、ツールも導線あり。',
+  },
+  roco: {
+    zh: '《洛克王国：世界》国际服精灵图鉴、法杖数据库、节奏榜与攻略百科，覆盖 CBT「等等鸭测试」已曝光精灵的属性、稀有度、进化链与定位。法杖为外观特效武器，无数值攻击力；节奏榜基于早测暂定分级，正式版以官方为准。同时收录 CBT 报名、版本节点与实用入口，方便继续深入浏览。',
+    en: 'Roco Kingdom global Jinie database, staff catalog, tier list, and guides for the "Quack Quack Test" CBT. Covers officially revealed Jinies\' attributes, rarity, evolution chains, and roles. Staves are cosmetic effect weapons with no attack stats; the tier list uses provisional CBT ratings pending official release. Also links to CBT sign-up, version milestones, and tools.',
+    ja: 'ロコキングダム国際版のジニー図鑑、杖データベース、Tier、攻略百科を「Quack Quack Test」CBT向けに整理。公式公開ジニーの属性、レアリティ、進化、役割を網羅。杖は攻撃数値なしの外観武器。TierはCBT暫定。応募、版本、ツールも導線あり。',
+  },
 };
 
 // SEO-rich about paragraphs per game per locale
@@ -130,6 +140,16 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
     zh: '《失控进化》是一款开放世界硬核生存对抗游戏，玩家在荒岛中从徒手采集开始，逐步完成工具制作、武器锻造、庇护所搭建、科技树解锁和领地攻防。游戏强调搜打拆、基地运营、动态天气、饥饿口渴等代谢压力，以及不同服务器模式下的风险选择。Gachia 将优先整理新手 0-10 分钟开荒、基地选址、领地柜维护、资源优先级、基因流派搭配、武器图鉴和公测预约福利。',
     en: 'Ashfall Evolution is a hardcore open-world survival PvP game where players start from bare-handed gathering, then craft tools, forge weapons, build shelters, unlock technology, and fight over territory. The game emphasizes looting, fighting, raiding, base upkeep, dynamic weather, hunger and thirst pressure, and risk choices across server modes. Gachia covers beginner routes, territory cabinets, resource priorities, gene builds, weapons, and launch rewards.',
     ja: '『失控進化』は、採集、道具作成、武器製作、拠点建築、技術解放、領地攻防を中心にしたハードコアなオープンワールドサバイバル対戦ゲームです。Gachiaでは初心者ルート、領地キャビネット、資源優先度、遺伝子ビルド、武器、リリース報酬を整理します。',
+  },
+  'roco-cn': {
+    zh: '《洛克王国：世界》是腾讯研发的开放世界精灵收集 RPG，国服已全平台上线，当前为 S1「暗夜拾光」赛季。Gachia 提供完整国服精灵图鉴，覆盖 347 只精灵的属性、技能、进化链与培养方向。法杖系统为外观特效武器，无数值攻击力，通过赛季战令、活动与商城获取，主要影响战斗特效与外观表现。节奏榜汇总社区 PVP 强度分级（SS/S/A/B），帮助你在捕捉与培养前先判断强势精灵。精灵按草、水、火、光、暗、龙、钢、毒、地面、飞行、虫、超能、妖精、普通等属性相互克制，配队时需要考虑属性搭配与元素反应。',
+    en: 'Roco Kingdom: World is an open-world creature-collection RPG by Tencent, now live in CN on all platforms in the S1 "Shadowlight" season. Gachia provides a full CN Jinie database covering 347 creatures\' attributes, skills, evolution chains, and build directions. The staff system is a cosmetic effect weapon with no attack stats, obtained from season battle passes, events, and the shop, affecting mainly combat effects and appearance. Our tier list summarizes community PVP ratings (SS/S/A/B) so you can spot strong Jinies before capture and training. Jinies use elements such as grass, water, fire, light, dark, dragon, steel, poison, ground, flying, bug, psychic, fairy, and normal with mutual type advantage; team building should weigh element matchups and reactions.',
+    ja: 'ロコキングダム：ワールドはTencent開発のオープンワールド収集RPG。中国版は全平台配信中、S1「暗夜拾光」シーズン。Gachiaは347体の属性、スキル、進化、育成方針を網羅。杖システムは攻撃数値なしの外観・エフェクト武器で、シーズンバトルパス・イベント・ショップから入手し、主に戦闘エフェクトと外観に影響。TierはコミュニティPVP評価（SS/S/A/B）を集約。草・水・火・光・闇・龍・鋼・毒・地面・飛行・虫・超・妖精・通常の属性相性と反応を編成で考慮。',
+  },
+  roco: {
+    zh: '《洛克王国：世界》国际服是腾讯面向全球发行的开放世界精灵收集 RPG，首轮 CBT「等等鸭测试」于 2026-10-27 开启。Gachia 整理官方已曝光精灵的属性、稀有度、进化链与基础定位，CBT 结束后持续补全。法杖系统为外观特效武器，无数值攻击力，通过战令与活动获取。节奏榜基于早测暂定分级，正式版以官方数据为准。国际服与国服数据相互独立，正式版支持繁中、英文、日文等多语言。',
+    en: 'The Roco Kingdom global version is Tencent\'s worldwide open-world creature-collection RPG. The first CBT "Quack Quack Test" opens October 27, 2026. Gachia tracks officially revealed Jinies\' attributes, rarity, evolution chains, and basic roles, expanding after CBT. The staff system is a cosmetic effect weapon with no attack stats, obtained from battle passes and events. Our tier list uses provisional CBT ratings pending the official release. The global and CN versions keep independent data; the global release supports Traditional Chinese, English, Japanese, and more.',
+    ja: 'ロコキングダム国際版はTencentのグローバル向けオープンワールド収集RPG。初回CBT「Quack Quack Test」は2026年10月27日開始。Gachiaは公式公開ジニーの属性、レアリティ、進化、役割を整理し、CBT後に拡充。杖は攻撃数値なしの外観武器で、バトルパスとイベントから入手。TierはCBT暫定。国際版と中国版は独立、多言語対応。',
   },
 };
 
@@ -709,7 +729,91 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     faq: [
       { question: { zh: '失控进化官网和下载入口应该先点哪？', en: 'What should I click first now that it is live?', ja: '実装後ホームで最初に押すべきものは？' }, answer: { zh: '找安装包先点下载入口或平台下载指南；准备开局再看服务器模式、30 分钟清单、防抄家和基地建设。', en: 'Open server modes and download FAQ first, then the 30-minute checklist, anti-raid, and base building.', ja: 'まずサーバーモードとDL FAQ、その後30分チェック、防衛、基地建設へ。' } },
     ],
-  }
+  },
+  'roco-cn': {
+    eyebrow: { zh: 'S1 暗夜拾光 / 玩法入口', en: 'S1 Shadowlight / Gameplay Hub', ja: 'S1 暗夜拾光 / 玩法導線' },
+    title: { zh: '国服精灵图鉴、法杖与节奏榜入口', en: 'CN Jinie wiki, staves, and tier list', ja: '中国版ジニー図鑑・杖・Tier' },
+    description: {
+      zh: '把精灵图鉴、法杖（外观特效武器）和节奏榜合到首页，先看清属性克制、强势精灵和培养顺序。',
+      en: 'Bring the Jinie wiki, staves (cosmetic effect weapons), and tier list to the front page so you can read type matchups, strong Jinies, and progression order first.',
+      ja: 'ジニー図鑑、杖（外観武器）、Tierをトップにまとめ、属性相性・強ジニー・育成順を先に確認。',
+    },
+    chips: {
+      zh: ['347 只精灵', '法杖', '节奏榜', 'S1 暗夜拾光', '属性克制', '配队'],
+      en: ['347 Jinies', 'Staves', 'Tier list', 'S1 Shadowlight', 'Type matchups', 'Teams'],
+      ja: ['347 ジニー', '杖', 'Tier', 'S1 暗夜拾光', '属性相性', '編成'],
+    },
+    cta: { zh: '去 S1 赛季专题', en: 'Open S1 hub', ja: 'S1特集へ' },
+    tracks: {
+      zh: [
+        { title: '精灵图鉴与节奏榜', description: '先看图鉴和强度分级，判断先养谁、先捕谁。', links: [{ href: '/roco-cn/characters', label: '精灵图鉴' }, { href: '/roco-cn/tier-list', label: '节奏榜' }] },
+        { title: '法杖系统', description: '法杖是外观特效武器，无数值攻击力，按赛季战令与活动获取。', links: [{ href: '/roco-cn/weapons', label: '法杖图鉴' }, { href: '/roco-cn/version', label: '赛季专题' }] },
+        { title: '版本与养成', description: '继续看 S1 赛季节点、活动与培养路线。', links: [{ href: '/roco-cn/version', label: '赛季专题' }, { href: '/roco-cn/characters', label: '精灵图鉴' }] },
+      ],
+      en: [
+        { title: 'Jinie wiki & tier list', description: 'Check the roster and strength tiers to decide who to raise and capture first.', links: [{ href: '/roco-cn/characters', label: 'Jinie wiki' }, { href: '/roco-cn/tier-list', label: 'Tier list' }] },
+        { title: 'Staff system', description: 'Staves are cosmetic effect weapons with no attack stats, from season passes and events.', links: [{ href: '/roco-cn/weapons', label: 'Staff catalog' }, { href: '/roco-cn/version', label: 'Season hub' }] },
+        { title: 'Version & progression', description: 'Continue into S1 milestones, events, and progression routes.', links: [{ href: '/roco-cn/version', label: 'Season hub' }, { href: '/roco-cn/characters', label: 'Jinie wiki' }] },
+      ],
+      ja: [
+        { title: 'ジニー図鑑とTier', description: '図鑑と強さTierを確認し、育成・捕獲の優先順を決めます。', links: [{ href: '/roco-cn/characters', label: 'ジニー図鑑' }, { href: '/roco-cn/tier-list', label: 'Tier' }] },
+        { title: '杖システム', description: '杖は攻撃数値なしの外観・エフェクト武器で、シーズンパスとイベントで入手。', links: [{ href: '/roco-cn/weapons', label: '杖図鑑' }, { href: '/roco-cn/version', label: 'シーズン特集' }] },
+        { title: '版本と育成', description: 'S1の節目、イベント、育成導線を続けて確認。', links: [{ href: '/roco-cn/version', label: 'シーズン特集' }, { href: '/roco-cn/characters', label: 'ジニー図鑑' }] },
+      ],
+    },
+    faq: [
+      {
+        question: { zh: '洛克王国的法杖有攻击力吗？', en: 'Do Roco Kingdom staves have attack stats?', ja: 'ロコキングダムの杖に攻撃力はありますか？' },
+        answer: { zh: '没有。法杖是外观特效武器，无数值攻击力，主要影响战斗特效与外观表现，不影响精灵基础属性。', en: 'No. Staves are cosmetic effect weapons with no attack stats; they affect combat visuals and appearance, not a Jinie\'s base stats.', ja: 'いいえ。杖は攻撃数値を持たない外観・エフェクト武器で、戦闘エフェクトと外観に影響し、ジニーの基礎ステータスには影響しません。' },
+      },
+      {
+        question: { zh: '节奏榜怎么看最实用？', en: 'How should I use the tier list?', ja: 'Tierはどう使うのが実用的？' },
+        answer: { zh: '按社区 PVP 强度分 SS/S/A/B，捕捉与培养前先看强势精灵，再结合自身属性克制与配队需求做决定。', en: 'The tier list ranks community PVP strength as SS/S/A/B. Check strong Jinies before capture and training, then weigh your own type matchups and team needs.', ja: 'TierはコミュニティPVP評価をSS/S/A/Bで表示。捕獲・育成前に強ジニーを確認し、自身の属性相性と編成で判断しましょう。' },
+      },
+    ],
+  },
+  roco: {
+    eyebrow: { zh: 'CBT「等等鸭测试」/ 玩法入口', en: 'CBT Quack Quack Test / Gameplay', ja: 'CBT「Quack Quack Test」/ 玩法導線' },
+    title: { zh: '国际服精灵图鉴、法杖与节奏榜入口', en: 'Global Jinie wiki, staves, and tier list', ja: '国際版ジニー図鑑・杖・Tier' },
+    description: {
+      zh: '把 CBT 已曝光精灵图鉴、法杖和早测节奏榜合到首页，先看御三家与属性克制。',
+      en: 'Bring the CBT-revealed Jinie wiki, staves, and provisional tier list to the front page; start with starters and type matchups.',
+      ja: 'CBT公開ジニー図鑑、杖、暫定Tierをトップにまとめ、御三家と属性相性から。',
+    },
+    chips: {
+      zh: ['CBT 10/27', '御三家', '法杖', '早测节奏榜', '属性克制'],
+      en: ['CBT Oct 27', 'Starters', 'Staves', 'Provisional tier', 'Type matchups'],
+      ja: ['CBT 10/27', '御三家', '杖', '暫定Tier', '属性相性'],
+    },
+    cta: { zh: '去 CBT 专题', en: 'Open CBT hub', ja: 'CBT特集へ' },
+    tracks: {
+      zh: [
+        { title: '精灵图鉴与节奏榜', description: '先看 CBT 已曝光精灵图鉴和早测强度分级。', links: [{ href: '/roco/characters', label: '精灵图鉴' }, { href: '/roco/tier-list', label: '早测节奏榜' }] },
+        { title: '法杖系统', description: '法杖是外观特效武器，无数值攻击力，通过战令与活动获取。', links: [{ href: '/roco/weapons', label: '法杖图鉴' }, { href: '/roco/version', label: 'CBT 专题' }] },
+        { title: 'CBT 与报名', description: '继续看 CBT 时间线、报名窗口与平台选择。', links: [{ href: '/roco/version', label: 'CBT 专题' }, { href: '/roco/characters', label: '精灵图鉴' }] },
+      ],
+      en: [
+        { title: 'Jinie wiki & tier list', description: 'Check the CBT-revealed roster and provisional strength tiers.', links: [{ href: '/roco/characters', label: 'Jinie wiki' }, { href: '/roco/tier-list', label: 'Provisional tier' }] },
+        { title: 'Staff system', description: 'Staves are cosmetic effect weapons with no attack stats, from passes and events.', links: [{ href: '/roco/weapons', label: 'Staff catalog' }, { href: '/roco/version', label: 'CBT hub' }] },
+        { title: 'CBT & sign-up', description: 'Continue into the CBT timeline, sign-up window, and platforms.', links: [{ href: '/roco/version', label: 'CBT hub' }, { href: '/roco/characters', label: 'Jinie wiki' }] },
+      ],
+      ja: [
+        { title: 'ジニー図鑑とTier', description: 'CBT公開ジニー図鑑と暫定Tierを確認。', links: [{ href: '/roco/characters', label: 'ジニー図鑑' }, { href: '/roco/tier-list', label: '暫定Tier' }] },
+        { title: '杖システム', description: '杖は攻撃数値なしの外観武器で、パスとイベントから入手。', links: [{ href: '/roco/weapons', label: '杖図鑑' }, { href: '/roco/version', label: 'CBT特集' }] },
+        { title: 'CBTと応募', description: 'CBTタイムライン、応募窓口、プラットフォームを続けて確認。', links: [{ href: '/roco/version', label: 'CBT特集' }, { href: '/roco/characters', label: 'ジニー図鑑' }] },
+      ],
+    },
+    faq: [
+      {
+        question: { zh: '国际服法杖有攻击力吗？', en: 'Do global staves have attack stats?', ja: '国際版の杖に攻撃力はありますか？' },
+        answer: { zh: '没有。法杖是外观特效武器，无数值攻击力，主要影响战斗特效与外观，不影响精灵基础属性。', en: 'No. Staves are cosmetic effect weapons with no attack stats; they affect combat visuals and appearance, not a Jinie\'s base stats.', ja: 'いいえ。杖は攻撃数値を持たない外観・エフェクト武器で、戦闘エフェクトと外観に影響し、ジニーの基礎ステータスには影響しません。' },
+      },
+      {
+        question: { zh: '早测节奏榜准吗？', en: 'Is the provisional tier list reliable?', ja: '暫定Tierは信頼できますか？' },
+        answer: { zh: '早测节奏榜基于 CBT 暂定分级，仅作参考；正式版精灵与数值以官方发布为准，开测后会持续校准。', en: 'The provisional tier list uses CBT ratings for reference only; the official release stats and roster take precedence and will be recalibrated after launch.', ja: '暫定TierはCBTベースの参考値です。正式版の数値とラインナップは公式基準で、開測後に調整します。' },
+      },
+    ],
+  },
 };
 
 // --- Route icons ---
@@ -1024,6 +1128,38 @@ export default async function GameHome({
                     </Link>
                     <Link href={`/${gameId}/guides/base-building-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
                       {locale === 'zh' ? '基地建设' : locale === 'ja' ? '基地建設' : 'Base Building'}
+                    </Link>
+                  </>
+                )}
+                {gameId === 'roco-cn' && (
+                  <>
+                    <Link href={`/${gameId}/characters` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '精灵图鉴' : locale === 'ja' ? 'ジニー図鑑' : 'Jinie wiki'}
+                    </Link>
+                    <Link href={`/${gameId}/weapons` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '法杖图鉴' : locale === 'ja' ? '杖図鑑' : 'Staff catalog'}
+                    </Link>
+                    <Link href={`/${gameId}/tier-list` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '节奏榜' : locale === 'ja' ? 'Tier' : 'Tier list'}
+                    </Link>
+                    <Link href={`/${gameId}/version` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? 'S1 赛季专题' : locale === 'ja' ? 'S1特集' : 'S1 hub'}
+                    </Link>
+                  </>
+                )}
+                {gameId === 'roco' && (
+                  <>
+                    <Link href={`/${gameId}/characters` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '精灵图鉴' : locale === 'ja' ? 'ジニー図鑑' : 'Jinie wiki'}
+                    </Link>
+                    <Link href={`/${gameId}/weapons` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '法杖图鉴' : locale === 'ja' ? '杖図鑑' : 'Staff catalog'}
+                    </Link>
+                    <Link href={`/${gameId}/tier-list` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '早测节奏榜' : locale === 'ja' ? '暫定Tier' : 'Provisional tier'}
+                    </Link>
+                    <Link href={`/${gameId}/version` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? 'CBT 专题' : locale === 'ja' ? 'CBT特集' : 'CBT hub'}
                     </Link>
                   </>
                 )}

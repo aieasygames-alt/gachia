@@ -19,6 +19,8 @@ const TIER_DESC: Record<string, Record<string, string>> = {
   ananta: { zh: '无限大异能者强度排行，覆盖SS/S/A/B分级、玩法表现和培养优先级，方便你在开服阶段快速选出主力角色。', en: 'Ananta esper tier list (2026) with SS to B rankings, gameplay notes, and investment priority to help you pick early-game mains.', ja: 'アナンタTierリスト。SS/S/A/B評価、性能メモ、育成優先度を整理しています。' },
   endfield: { zh: '明日方舟：终末地干员强度排行，覆盖SS/S/A/B分级、战斗表现、配队定位和培养优先级，方便你按版本节奏安排资源。', en: 'Arknights: Endfield operator tier list (2026) with SS to B rankings, combat notes, team roles, and build priority for smarter resource planning.', ja: 'エンドフィールド干員Tierリスト。SS/S/A/B評価、戦闘評価、編成参考、育成優先度を掲載。' },
   sea: { zh: '遗忘之海角色强度排行 Wiki，覆盖 Traveler、Ais、Little Axe、Princess、Molly 等角色 SS/S/A/B 分级、开荒价值、配队定位和培养优先级。', en: 'Sea of Remnants character tier list wiki with SS to B rankings for Traveler, Ais, Little Axe, Princess, Molly, early-game value, team roles, and investment priority.', ja: 'Sea of RemnantsキャラTierリスト。Traveler、Ais、Little Axe、Princess、MollyのSS/S/A/B評価、序盤価値、育成優先度を整理。' },
+  'roco-cn': { zh: '洛克王国：世界国服精灵强度节奏榜，基于社区 PVP 天梯与 PVE 综合表现整理 SS/S/A/B 分级，覆盖迪莫、罗隐、优光绒绒、圣水守护等主流精灵，帮助你把资源投到最值得培养的主力上。', en: 'Roco Kingdom: World CN sprite tier list with SS to B rankings from community PVP ladders and PVE performance, covering Dimo, Luoyin, Youguang Rongrong, Shengshui Shouhu and other top sprites for smarter build priority.', ja: 'ロコ・キングダム：ワールド中国版スプライトTierリスト。社区PVPラダーとPVE性能からSS/S/A/B評価、ディモ、ロウイン、ユウコウロンロン、シェンシュイショウゴなど主力スプライトを掲載。' },
+  'roco': { zh: '洛克王国：世界国际服精灵强度节奏榜（早测阵容）。国际服目前仅开放 6 只精灵，御三家沿用 A 级，其余野外宠暂定 B 级，待社区天梯数据补充后更新。', en: 'Roco Kingdom: World global sprite tier list (early-access roster). Only 6 sprites are available globally so far; starters sit at A and wild sprites are provisionally B, pending community ladder data.', ja: 'ロコ・キングダム：ワールド国際版スプライトTierリスト（早テスト阵容）。国際版は現在6体のみ公開、御三家はA、野生は仮B、社区ラダーデータで更新予定。' },
 };
 
 // P1-2: Lazy load tier list client components to reduce initial bundle size
@@ -135,6 +137,14 @@ export default async function TierListPage({
     return <GenericTierListPage gameId="sea" locale={locale} />;
   }
 
+  if (gameId === 'roco-cn') {
+    return <GenericTierListPage gameId="roco-cn" locale={locale} />;
+  }
+
+  if (gameId === 'roco') {
+    return <GenericTierListPage gameId="roco" locale={locale} />;
+  }
+
   return (
     <div>
       <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
@@ -154,6 +164,9 @@ const ELEMENT_COLORS: Record<string, string> = {
   radiance: '#fbbf24', frost: '#67e8f9', flame: '#ef4444', gale: '#6ee7b7', thunder: '#8b5cf6',
   heat: '#ef4444', cryo: '#67e8f9', nature: '#4ade80',
   str: '#ef4444', agi: '#22c55e', con: '#f97316', int: '#8b5cf6', per: '#3b82f6', cha: '#ec4899',
+  grass: '#4ade80', water: '#38bdf8', normal: '#a3a3a3',
+  poison: '#a78bfa', ground: '#d97706', flying: '#93c5fd', bug: '#84cc16', light: '#fde047', dark: '#64748b',
+  dragon: '#7c3aed', steel: '#94a3b8', psychic: '#f472b6', fairy: '#f9a8d4',
 };
 
 async function GenericTierListPage({ gameId, locale }: { gameId: GameId; locale: SupportedLocale }) {
@@ -186,6 +199,20 @@ function getTierIntro(gameId: GameId, locale: SupportedLocale) {
       : locale === 'ja'
         ? 'Sea of RemnantsのキャラTierをSS/S/A/Bで整理。Traveler、Ais、Little Axe、Princess、Mollyなどの序盤価値、役割、育成優先度を確認できます。'
         : 'Sea of Remnants tier list ranks characters from SS to B so you can compare Traveler, Ais, Little Axe, Princess, Molly, early-game value, team roles, and investment priority.';
+  }
+  if (gameId === 'roco-cn') {
+    return locale === 'zh'
+      ? '国服精灵节奏榜按 SS/S/A/B 分级整理，综合社区 PVP 天梯与 PVE 表现。先锁定迪莫、罗隐、优光绒绒、圣水守护等 T0/T1 主力，再决定进化与资源投入方向。'
+      : locale === 'ja'
+        ? '中国版スプライトTierをSS/S/A/Bで整理。社区PVPラダーとPVE性能を総合。ディモ、ロウイン、ユウコウロンロン、シェンシュイショウゴなどのT0/T1主力を先に確保し、進化と育成方針を決めましょう。'
+        : 'Roco Kingdom: World CN tier list ranks sprites from SS to B using community PVP ladders and PVE performance. Lock in T0/T1 mains like Dimo, Luoyin, Youguang Rongrong, and Shengshui Shouhu first, then plan evolutions and resource investment.';
+  }
+  if (gameId === 'roco') {
+    return locale === 'zh'
+      ? '国际服早测阵容仅 6 只精灵，本榜为初步分级（御三家 A、其余暂定 B），供开荒节奏参考；国际服技能与种族值官方仍 TBA，待社区数据后校准。'
+      : locale === 'ja'
+        ? '国際版は早テストで6体のみのため暫定評価（御三家A、その他仮B）。開荒目安としてご利用ください。国際版のスキル・種族値は公式TBAのため、社区データで更新します。'
+        : 'The global roster is early-access with only 6 sprites, so this is a provisional ranking (starters A, others tentative B) for pacing reference. Global skills and base stats are still TBA officially and will be recalibrated with community data.';
   }
   return locale === 'zh'
     ? '基于角色综合强度评级，仅供参考'

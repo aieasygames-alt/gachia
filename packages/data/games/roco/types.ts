@@ -18,6 +18,30 @@ export interface RocoJinie {
   description: string;
   descriptionEn: string;
   status: string;
+  skills?: RocoSkill[];
+  stats?: RocoStats;
+  releaseVersion?: string;
+}
+
+export interface RocoSkill {
+  level?: number;
+  name: string;
+  nameEn: string;
+  element: string;
+  category: 'physical' | 'magic' | 'status' | 'defense';
+  power?: number;
+  description: string;
+  descriptionEn: string;
+}
+
+export interface RocoStats {
+  total: number;
+  hp?: number;
+  atk?: number;
+  matk?: number;
+  def?: number;
+  mdef?: number;
+  spd?: number;
 }
 
 // --- Guide Types ---

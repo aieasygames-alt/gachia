@@ -86,8 +86,8 @@ const REAL_CONTENT_ROUTES: Record<string, string[]> = {
   endfield: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'guides', 'build', 'compare', 'teams', 'map'],
   sea: ['characters', 'guides', 'items', 'tier-list', 'version', 'download', 'calculator', 'redeem-codes'],
   skjh: ['weapons', 'guides', 'items', 'redeem-codes', 'version', 'download', 'calculator', 'teams', 'map'],
-  roco: ['characters', 'guides', 'version', 'download', 'redeem-codes'],
-  'roco-cn': ['characters', 'guides', 'items', 'version', 'download', 'redeem-codes'],
+  roco: ['characters', 'guides', 'weapons', 'tier-list', 'version', 'download', 'redeem-codes'],
+  'roco-cn': ['characters', 'guides', 'items', 'weapons', 'tier-list', 'version', 'download', 'redeem-codes'],
 };
 
 // Revalidate every 24 hours

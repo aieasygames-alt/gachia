@@ -11,9 +11,52 @@
     "habitatEn": "Carosia Magic Academy",
     "evolution": "喵喵 → 待公开",
     "evolutionEn": "Meewee → TBA",
-    "description": "官方确认的国际服草系御三家（叶猫），性格亲和，战斗中每回合回复能量、续航出色。未被选中的御三家可在好友的世界中捕捉。国际服完整技能与进化链待 CBT 官方图鉴公布。",
-    "descriptionEn": "Officially confirmed Grass-type global starter (a leaf cat) with a friendly demeanor; recovers energy each turn for strong sustain. Unpicked starters can be caught in friends' worlds. Full skills and evolution line TBA via the official CBT codex.",
-    "status": "revealed"
+    "description": "官方确认的国际服草系御三家（叶猫），性格亲和，战斗中每回合回复能量、续航出色。技能与种族值已收录（与叶猫共享数据）；国际服进化链待官方图鉴公布。未被选中的御三家可在好友的世界中捕捉。",
+    "descriptionEn": "Officially confirmed Grass-type global starter (a leaf cat) with a friendly demeanor; recovers energy each turn for strong sustain. Skills and base stats are documented (shared with the leaf cat); the global evolution line is TBA via the official codex. Unpicked starters can be caught in friends' worlds.",
+    "status": "revealed",
+    "skills": [
+      {
+        "level": 1,
+        "name": "抓挠",
+        "nameEn": "Scratch",
+        "element": "normal",
+        "category": "physical",
+        "power": 40,
+        "description": "对敌方精灵造成物理伤害并恢复能量。",
+        "descriptionEn": "Deals physical damage and restores energy."
+      },
+      {
+        "level": 1,
+        "name": "种子弹",
+        "nameEn": "Seed Shot",
+        "element": "grass",
+        "category": "physical",
+        "power": 40,
+        "description": "对敌方精灵造成草属性物理伤害并获得能量。",
+        "descriptionEn": "Deals Grass physical damage and restores energy."
+      },
+      {
+        "name": "藤绞",
+        "nameEn": "Vine Grapple",
+        "element": "grass",
+        "category": "physical",
+        "power": 50,
+        "description": "对敌方精灵造成物理伤害，获得 5 点能量。",
+        "descriptionEn": "Deals physical damage and grants 5 energy."
+      },
+      {
+        "name": "荆棘爪",
+        "nameEn": "Thorn Claw",
+        "element": "grass",
+        "category": "physical",
+        "description": "融合荆棘之力释放强力爪击，对敌方精灵造成草属性物理伤害。",
+        "descriptionEn": "A thorn-fused claw strike dealing Grass physical damage."
+      }
+    ],
+    "stats": {
+      "total": 325
+    },
+    "releaseVersion": "国际服"
   },
   {
     "id": "sparka",
@@ -29,7 +72,65 @@
     "evolutionEn": "Sparka → … → Pyreon (Alpha form: Blazion)",
     "description": "官方确认的国际服火系御三家（火牛），高爆发输出，前期开荒与推剧情效率最高。最终进化为 Pyreon，可通过 Alpha 血统临时变身为 boss 级形态 Blazion。中间进化形态待 CBT 官方图鉴确认。",
     "descriptionEn": "Officially confirmed Fire-type global starter (a fire ox) with high burst damage and the fastest early-game pacing. Its final evolution is Pyreon, which can temporarily Alpha-transform into the boss-level Blazion. The intermediate stage TBA via the official CBT codex.",
-    "status": "revealed"
+    "status": "revealed",
+    "skills": [
+      {
+        "level": 1,
+        "name": "猛烈撞击",
+        "nameEn": "Powerful Slam",
+        "element": "normal",
+        "category": "physical",
+        "power": 65,
+        "description": "对敌方精灵造成物理伤害。",
+        "descriptionEn": "Deals physical damage to the enemy."
+      },
+      {
+        "level": 1,
+        "name": "火苗",
+        "nameEn": "Ember",
+        "element": "fire",
+        "category": "magic",
+        "power": 40,
+        "description": "对敌方精灵造成火属性魔法伤害。",
+        "descriptionEn": "Deals Fire magic damage to the enemy."
+      },
+      {
+        "level": 1,
+        "name": "防御",
+        "nameEn": "Defend",
+        "element": "normal",
+        "category": "defense",
+        "description": "减伤 70%，应对攻击。",
+        "descriptionEn": "Reduces damage by 70%; counters attacks."
+      },
+      {
+        "name": "火焰切割",
+        "nameEn": "Flame Cutter",
+        "element": "fire",
+        "category": "physical",
+        "description": "火系物理攻击，命中可触发「助燃」叠层。",
+        "descriptionEn": "Fire physical attack that triggers the Combustion stack."
+      },
+      {
+        "name": "打鼾",
+        "nameEn": "Snore",
+        "element": "normal",
+        "category": "magic",
+        "power": 150,
+        "description": "对敌方精灵造成高额魔法伤害。",
+        "descriptionEn": "Deals heavy magic damage to the enemy."
+      }
+    ],
+    "stats": {
+      "total": 368,
+      "hp": 70,
+      "atk": 84,
+      "matk": 37,
+      "def": 56,
+      "mdef": 43,
+      "spd": 78
+    },
+    "releaseVersion": "国际服"
   },
   {
     "id": "cerulla",
@@ -43,9 +144,59 @@
     "habitatEn": "Carosia Magic Academy",
     "evolution": "水蓝蓝 → 待公开",
     "evolutionEn": "Cerulla → TBA",
-    "description": "官方确认的国际服水系御三家（水泡），坦度优秀，水泡盾 + 水炮循环生存能力出色。英文名取自 cerulean（蔚蓝）加可爱后缀 -la。完整技能与进化链待 CBT 官方图鉴公布。",
-    "descriptionEn": "Officially confirmed Water-type global starter (a water blob) with excellent bulk and a bubble-shield / water-cannon survival loop. Its English name derives from 'cerulean' with a cute '-la' suffix. Full skills and evolution line TBA via the official CBT codex.",
-    "status": "revealed"
+    "description": "官方确认的国际服水系御三家（水泡），坦度优秀，水泡盾 + 水炮循环生存能力出色。技能与种族值已收录（与水泡共享数据）；国际服进化链待官方图鉴公布。英文名取自 cerulean（蔚蓝）加可爱后缀 -la。",
+    "descriptionEn": "Officially confirmed Water-type global starter (a water blob) with excellent bulk and a bubble-shield / water-cannon survival loop. Skills and base stats are documented (shared with the water blob); the global evolution line is TBA via the official codex. Its English name derives from 'cerulean' with a cute '-la' suffix.",
+    "status": "revealed",
+    "skills": [
+      {
+        "level": 1,
+        "name": "甩水",
+        "nameEn": "Water Flick",
+        "element": "water",
+        "category": "magic",
+        "power": 40,
+        "description": "对敌方精灵造成水属性魔法伤害并获得能量。",
+        "descriptionEn": "Deals Water magic damage and restores energy."
+      },
+      {
+        "level": 1,
+        "name": "水弹枪",
+        "nameEn": "Water Dart",
+        "element": "water",
+        "category": "physical",
+        "description": "对敌方精灵造成水属性伤害。",
+        "descriptionEn": "Deals Water damage to the enemy."
+      },
+      {
+        "level": 1,
+        "name": "防御",
+        "nameEn": "Defend",
+        "element": "normal",
+        "category": "defense",
+        "description": "减伤 70%，应对攻击。",
+        "descriptionEn": "Reduces damage by 70%; counters attacks."
+      },
+      {
+        "name": "气泡",
+        "nameEn": "Bubble",
+        "element": "water",
+        "category": "magic",
+        "description": "对敌方精灵造成水属性魔法伤害。",
+        "descriptionEn": "Deals Water magic damage to the enemy."
+      },
+      {
+        "name": "潮汐",
+        "nameEn": "Tide",
+        "element": "water",
+        "category": "magic",
+        "description": "高伤魔攻，配合「浸润」特性几乎无消耗。",
+        "descriptionEn": "High-power magic attack, nearly free with the Permeation trait."
+      }
+    ],
+    "stats": {
+      "total": 372
+    },
+    "releaseVersion": "国际服"
   },
   {
     "id": "blazehound",
