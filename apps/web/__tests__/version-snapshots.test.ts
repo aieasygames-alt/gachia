@@ -16,10 +16,10 @@ describe('version snapshots', () => {
     }
   });
 
-  it('marks the released ZZZ v3.1 snapshot as live', () => {
+  it('marks the current ZZZ snapshot as a v3.2 livestream watch', () => {
     expect(getVersionSnapshot('zzz')).toMatchObject({
-      currentVersion: '3.1',
-      status: 'live',
+      currentVersion: '3.2 livestream watch',
+      status: 'watch',
       lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     });
   });

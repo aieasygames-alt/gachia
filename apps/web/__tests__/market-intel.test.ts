@@ -12,12 +12,12 @@ import { getKeywordRisk } from '@/lib/keyword-governance';
 
 describe('market intelligence backlog', () => {
   it('stores the current sampling batch as structured opportunities', () => {
-    expect(MARKET_INTEL_BATCH_ID).toBe('market-intel-2026-08-19');
+    expect(MARKET_INTEL_BATCH_ID).toBe('market-intel-2026-08-28');
     expect(MARKET_INTEL_OPPORTUNITIES.length).toBeGreaterThanOrEqual(GAME_IDS.length);
     expect(getMarketIntelValidationIssues()).toEqual([]);
   });
 
-  it('covers every supported game in the 2026-08-19 batch', () => {
+  it('covers every supported game in the 2026-08-28 batch', () => {
     for (const gameId of GAME_IDS) {
       expect(getMarketIntelForGame(gameId).length).toBeGreaterThan(0);
     }
@@ -31,14 +31,14 @@ describe('market intelligence backlog', () => {
       'genshin',
       'wuwa',
       'zzz',
-      'skjh',
       'endfield',
+      'ananta',
     ]);
     expect(p1.map((opportunity) => opportunity.gameId)).toEqual([
+      'skjh',
       'nte',
       'starrail',
       'sea',
-      'ananta',
       'guihuan',
     ]);
 

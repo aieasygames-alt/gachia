@@ -70,7 +70,7 @@ export interface LiveCalendarEvent {
   priority: number;
 }
 
-export const LIVE_UPDATED_AT = '2026-08-27';
+export const LIVE_UPDATED_AT = '2026-08-28';
 
 export const HOMEPAGE_PRIORITY_GAMES: GameId[] = [
   'genshin',
@@ -91,17 +91,17 @@ export const LIVE_BANNERS: LiveBanner[] = [
   {
     gameId: 'genshin',
     title: {
-      zh: '原神 7.0 / 至冬卡池预热',
-      en: 'Genshin v7.0 / Snezhnaya Banner Watch',
-      ja: '原神 v7.0 / スネージナヤ バナー注目',
+      zh: '原神 7.0 / 至冬上线路线',
+      en: 'Genshin v7.0 / Snezhnaya Launch Route',
+      ja: '原神 v7.0 / スネージナヤ開始ルート',
     },
     summary: {
-      zh: '优先承接至冬、Sandrone、Columbina、当前/下期卡池、地图与兑换码。',
-      en: 'Route Snezhnaya, Sandrone, Columbina, current/next banners, maps, and codes.',
-      ja: 'スネージナヤ、Sandrone、Columbina、現在/次回バナー、マップ、コードへ案内します。',
+      zh: '从预热转为上线后 first steps、Nod-Krai 地图、当前/下期卡池与兑换码。',
+      en: 'Move from watch wording into first steps, Nod-Krai map, current/next banners, and codes.',
+      ja: '注目表現から、初動、Nod-Kraiマップ、現在/次回バナー、コードへ移ります。',
     },
     href: '/genshin/guides/banner-schedule-guide',
-    status: 'watch',
+    status: 'live',
     updatedAt: LIVE_UPDATED_AT,
     priority: 1,
   },
@@ -125,17 +125,17 @@ export const LIVE_BANNERS: LiveBanner[] = [
   {
     gameId: 'zzz',
     title: {
-      zh: '绝区零 3.1 后半代理人与兑换码',
-      en: 'ZZZ v3.1 Phase Two Agents and Codes',
-      ja: 'ゼンゼロ v3.1後半 エージェントとコード',
+      zh: '绝区零 3.2 特别节目与直播码',
+      en: 'ZZZ v3.2 Livestream and Codes',
+      ja: 'ゼンゼロ v3.2 特番とコード',
     },
     summary: {
-      zh: '3.1 后半优先查看新代理人、补偿、兑换码和 Steam/Xbox 平台入口。',
-      en: 'Check v3.1 phase-two agents, compensation, codes, and Steam/Xbox routes.',
-      ja: 'v3.1後半のエージェント、補償、コード、Steam/Xbox導線を確認できます。',
+      zh: '新增 3.2 livestream watch，继续串联 3.1 后半、兑换码和 Steam/Xbox 平台入口。',
+      en: 'Add v3.2 livestream watch while keeping v3.1 phase two, codes, and Steam/Xbox routes connected.',
+      ja: 'v3.2特番注目を追加し、v3.1後半、コード、Steam/Xbox導線を維持します。',
     },
     href: '/zzz/version',
-    status: 'live',
+    status: 'watch',
     updatedAt: LIVE_UPDATED_AT,
     priority: 3,
   },

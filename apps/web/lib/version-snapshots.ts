@@ -21,42 +21,42 @@ export interface VersionSnapshot {
   links: VersionSnapshotLink[];
 }
 
-export const VERSION_SNAPSHOT_UPDATED_AT = '2026-08-14';
+export const VERSION_SNAPSHOT_UPDATED_AT = '2026-08-28';
 
 export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   zzz: {
     gameId: 'zzz',
-    currentVersion: '3.1',
-    releaseDate: '2026-07-29',
-    status: 'live',
+    currentVersion: '3.2 livestream watch',
+    releaseDate: '2026-08-28',
+    status: 'watch',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     summary: {
-      zh: '3.1「The Long Goodbye」现已上线，重点是 Remielle/Sigrid、2 周年福利、Xbox/Microsoft Store 与 Steam 入坑。',
-      en: 'v3.1 "The Long Goodbye" is now live with Remielle/Sigrid, 2nd anniversary rewards, Xbox/Microsoft Store, and Steam starter routes.',
-      ja: 'v3.1「The Long Goodbye」は配信中です。Remielle/Sigrid、2周年報酬、Xbox/Microsoft Store、Steam入門を確認できます。',
+      zh: '3.2 特别节目进入预热窗口，重点承接 livestream codes、新代理人、3.1 后半尾流和 Xbox/Microsoft Store/Steam 入坑。',
+      en: 'v3.2 livestream watch is now active, routing livestream codes, new agents, v3.1 phase-two tail traffic, and Xbox/Microsoft Store/Steam onboarding.',
+      ja: 'v3.2特番の注目期間です。配信コード、新エージェント、v3.1後半の流入、Xbox/Microsoft Store/Steam入門を案内します。',
     },
     whatChanged: [
       {
-        zh: '3.1 后半继续承接已知问题补偿、新代理人、兑换码和多平台入坑。',
-        en: 'Phase two continues routing known-issue compensation, new agents, codes, and multi-platform onboarding.',
-        ja: 'v3.1後半は既知問題補償、新エージェント、コード、多平台入門を案内します。',
+        zh: '版本页新增 3.2 livestream watch，不删除 3.1 后半和平台入口。',
+        en: 'The version hub adds v3.2 livestream watch without removing v3.1 phase-two and platform routes.',
+        ja: '版本ページにv3.2特番注目を追加し、v3.1後半と平台導線を残します。',
       },
       {
-        zh: '兑换码、平台绑定、回流奖励和新代理人规划被放到同一条路线。',
-        en: 'Codes, account linking, returnee rewards, and new-agent planning now share one route.',
-        ja: 'コード、アカウント連携、復帰報酬、新エージェント計画を一つの導線にまとめています。',
+        zh: '直播码、兑换码、平台绑定和新代理人规划被放到同一条路线。',
+        en: 'Livestream codes, redeem codes, account linking, and new-agent planning share one route.',
+        ja: '配信コード、交換コード、アカウント連携、新エージェント計画を一つの導線にまとめます。',
       },
     ],
     firstSteps: [
       {
-        zh: '先确认账号与平台绑定，再领取兑换码、邮件和周年奖励。',
-        en: 'Confirm account/platform linking first, then claim codes, mail, and anniversary rewards.',
-        ja: '先にアカウントとプラットフォーム連携を確認し、コード、メール、周年報酬を受け取ります。',
+        zh: '先确认直播码和版本码窗口，再检查平台绑定、邮件和回流奖励。',
+        en: 'Check livestream and patch-code windows first, then platform linking, mail, and returnee rewards.',
+        ja: 'まず配信コードと版本コード期間を確認し、その後平台連携、メール、復帰報酬を確認します。',
       },
       {
-        zh: '再看 Remielle/Sigrid 是否补当前队伍短板。',
-        en: 'Then check whether Remielle/Sigrid fills a real team gap.',
-        ja: '次にRemielle/Sigridが現在の編成不足を補うか確認します。',
+        zh: '再看 3.2 新代理人是否需要提前留抽。',
+        en: 'Then decide whether to reserve pulls for v3.2 new agents.',
+        ja: '次にv3.2新エージェントへガチャ資源を残すか判断します。',
       },
     ],
     links: [
@@ -69,20 +69,20 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   wuwa: {
     gameId: 'wuwa',
-    currentVersion: '3.6 watch',
-    releaseDate: '2026-08-14',
-    status: 'fresh',
+    currentVersion: '3.6 live',
+    releaseDate: '2026-08-28',
+    status: 'live',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     summary: {
-      zh: '3.6 重点转向维护后卡池、兑换码、角色、地图和 Xbox/Steam 新玩家入口。',
-      en: 'v3.6 watch shifts toward post-maintenance banners, codes, characters, maps, and Xbox/Steam starter routes.',
-      ja: 'v3.6はメンテ後バナー、コード、キャラ、マップ、Xbox/Steam入門が中心です。',
+      zh: '3.6 已进入上线后承接，重点是卡池、兑换码、角色、地图和 Xbox/Steam 新玩家入口。',
+      en: 'v3.6 is now in post-launch routing, focusing on banners, codes, characters, maps, and Xbox/Steam starter routes.',
+      ja: 'v3.6は実装後の導線へ移り、バナー、コード、キャラ、マップ、Xbox/Steam入門が中心です。',
     },
     whatChanged: [
       {
-        zh: '版本页首屏从 3.5 上线口径刷新到 3.6 维护、卡池和平台入口。',
-        en: 'The hub moves from v3.5 launch copy into v3.6 maintenance, banners, and platform routes.',
-        ja: '版本ページをv3.5開始からv3.6メンテ、バナー、平台導線へ更新します。',
+        zh: '版本页首屏从 3.6 维护口径切到上线后卡池、地图和平台入口。',
+        en: 'The hub moves from v3.6 maintenance wording into post-launch banners, maps, and platform routes.',
+        ja: '版本ページをv3.6メンテ表現から実装後バナー、マップ、平台導線へ更新します。',
       },
       {
         zh: 'Banner、兑换码和 Xbox 入坑内容被串成可执行检查顺序。',
@@ -192,20 +192,20 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   genshin: {
     gameId: 'genshin',
-    currentVersion: '7.0 watch',
-    releaseDate: '2026-08-14',
-    status: 'watch',
+    currentVersion: '7.0 live',
+    releaseDate: '2026-08-28',
+    status: 'live',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     summary: {
-      zh: '当前版本中心转入 7.0 / 至冬预热，优先承接 Sandrone、Columbina、下期卡池、地图、兑换码和原石规划。',
-      en: 'The hub now watches v7.0 / Snezhnaya intent, prioritizing Sandrone, Columbina, next banners, maps, codes, and Primogem planning.',
-      ja: '現在の中心はv7.0 / スネージナヤ注目です。Sandrone、Columbina、次回バナー、マップ、コード、原石計画を優先します。',
+      zh: '当前版本中心转为 7.0 / 至冬上线后路线，优先承接 Nod-Krai、地图、当前/下期卡池、兑换码和角色入口。',
+      en: 'The hub now routes v7.0 / Snezhnaya post-launch intent, prioritizing Nod-Krai, maps, current/next banners, codes, and character entries.',
+      ja: '現在の中心はv7.0 / スネージナヤ実装後導線です。Nod-Krai、マップ、現在/次回バナー、コード、キャラ入口を優先します。',
     },
     whatChanged: [
       {
-        zh: '版本页从 Luna VIII 口径过渡到 7.0 / 至冬 watch 口径，未确认内容只做预热和监控。',
-        en: 'The hub transitions from Luna VIII copy into v7.0 / Snezhnaya watch copy, keeping unconfirmed items in monitor wording.',
-        ja: 'Luna VIIIからv7.0 / スネージナヤ注目へ移行し、未確認情報は監視表現に留めます。',
+        zh: '版本页从 7.0 / 至冬 watch 口径切到上线后 first steps。',
+        en: 'The hub moves from v7.0 / Snezhnaya watch wording into post-launch first steps.',
+        ja: '版本ページをv7.0 / スネージナヤ注目から実装後の初動へ切り替えます。',
       },
       {
         zh: '角色、武器、圣遗物和配队入口保持在版本页可见位置。',
@@ -309,14 +309,14 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   sea: {
     gameId: 'sea',
-    currentVersion: 'mobile launch follow-up',
-    releaseDate: '2026-08-14',
-    status: 'fresh',
+    currentVersion: '2027 platform watch',
+    releaseDate: '2026-08-28',
+    status: 'watch',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     summary: {
-      zh: '移动端首发后重点承接 Steam、release date、gameplay、gacha、solo、PS5/Xbox 与平台边界问题。',
-      en: 'After mobile launch, the hub routes Steam, release date, gameplay, gacha, solo, PS5/Xbox, and platform-boundary questions.',
-      ja: 'モバイル開始後はSteam、release date、gameplay、ガチャ、ソロ、PS5/Xbox、平台境界を案内します。',
+      zh: 'Steam / release date / gameplay / gacha / solo 搜索持续，但时间口径需要从泛 2026 改为更谨慎的 2027 watch。',
+      en: 'Steam, release date, gameplay, gacha, and solo searches continue, but timing copy should move from broad 2026 wording into a cautious 2027 watch.',
+      ja: 'Steam、release date、gameplay、ガチャ、ソロ検索は継続しますが、時期表現は広い2026から慎重な2027注目へ移します。',
     },
     whatChanged: [
       {
