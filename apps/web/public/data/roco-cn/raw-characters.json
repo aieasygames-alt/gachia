@@ -428,7 +428,7 @@
     "status": "revealed",
     "releaseVersion": "国服公测",
     "stats": {
-      "total": 564,
+      "total": 563,
       "hp": 102,
       "atk": 115,
       "matk": 64,
@@ -17729,7 +17729,7 @@
     "evolution": "石石 → 巨灵石 Lv.40",
     "evolutionEn": "Shishi → Julingshi Lv.40",
     "description": "古老的种族，似乎和现在的精灵们很少交流，但对洛克族十分友好。地系部族掌握建造之术后的创造的第一个物种。在古代也被用作计量单位，一个石石约等于三十千克。",
-    "descriptionEn": "",
+    "descriptionEn": "A Rock-type Jinie from the 111-112 line. Compact and sturdy, it is suited to early frontline duties while its full route details remain tied to the CN codex.",
     "status": "revealed",
     "skills": [
       {
@@ -17884,7 +17884,7 @@
     "evolution": "石石 → 巨灵石 Lv.40",
     "evolutionEn": "Shishi → Julingshi Lv.40",
     "description": "从大地获取强大的能量，可以使用地系魔法操纵土壤石头。常常收集一些土壤、石块作为零食，喜欢边讲故事边嚼石头，洛克族的孩子们偶尔会躲在旁边偷偷听它们讲故事。",
-    "descriptionEn": "",
+    "descriptionEn": "The evolved form of Shishi, trading speed for stronger Rock-type bulk and heavier hits. Useful as a durable PVE pick in the CN roster.",
     "status": "revealed",
     "skills": [
       {
@@ -18039,7 +18039,7 @@
     "evolution": "仪使者 → 仪式之星 Lv.35 → 仪式巨像 Lv.45 → 祭礼巨像",
     "evolutionEn": "Yishizhe → Yishizhixing Lv.35 → Yishijuxiang Lv.45 → Jilijuxiang",
     "description": "在很久很久前被洛克族在遗迹的深处发现，可能已经有上千年的历史了。它的身体由宝石和贵重的金属组成，是被追求财富的人争抢的对象。",
-    "descriptionEn": "",
+    "descriptionEn": "A ritual-themed Jinie in the 113-115 line. It focuses on steady utility and progression into the stronger Star and Giant forms.",
     "status": "revealed",
     "skills": [
       {
@@ -18201,7 +18201,7 @@
     "evolution": "仪使者 → 仪式之星 Lv.35 → 仪式巨像 Lv.45 → 祭礼巨像",
     "evolutionEn": "Yishizhe → Yishizhixing Lv.35 → Yishijuxiang Lv.45 → Jilijuxiang",
     "description": "曾被误认为是雕像，但却有意识和情绪。传说它的身体上镶嵌的宝石象征三种元素。被认为是完美平衡的象征，有研究证明它能够感知或预测时间的流动。",
-    "descriptionEn": "",
+    "descriptionEn": "The middle form of the Ritual line, with improved presence and more reliable combat stats before evolving into Yishi Juxiang.",
     "status": "revealed",
     "skills": [
       {
@@ -18363,7 +18363,7 @@
     "evolution": "仪使者 → 仪式之星 Lv.35 → 仪式巨像 Lv.45 → 祭礼巨像",
     "evolutionEn": "Yishizhe → Yishizhixing Lv.35 → Yishijuxiang Lv.45 → Jilijuxiang",
     "description": "经过时间的洗礼，有些残缺的痕迹，是谜一般的存在，与其相关的研究记录十分少。但相反，这个种族似乎对洛克族十分了解和亲近。“也许生命会消失，从人们的记忆中淡忘，但文明的传承不会断绝。”",
-    "descriptionEn": "",
+    "descriptionEn": "The final form of the Ritual line, a bulky combat pick with giant-themed power and stronger late-line stat growth.",
     "status": "revealed",
     "skills": [
       {
@@ -18525,7 +18525,7 @@
     "evolution": "小独角兽 → 白金独角兽 Lv.40 → 彩虹独角兽",
     "evolutionEn": "Xiaodujiaoshou → Baijindujiaoshou Lv.40 → Caihongdujiaoshou",
     "description": "漂亮柔软的绿色鬃毛，让谁看了都想抚摸一下。不知是不是它散发出的魔力的缘故，在它的身边会感觉心灵也变得纯净了。",
-    "descriptionEn": "",
+    "descriptionEn": "A small unicorn Jinie from the CN codex. It is an early form with room to grow as more evolution and build details are collected.",
     "status": "revealed",
     "skills": [
       {
@@ -18664,7 +18664,7 @@
     "evolution": "旋叶虫 → 蓬叶虫 Lv.25 → 风滚暮虫 Lv.45 → 暮风隐者",
     "evolutionEn": "Xuanyechong → Pengyechong Lv.25 → Fenggunmuchong Lv.45 → Mufengyinzhe",
     "description": "主要栖息于恶水泛滥的湿地环境，因长期被恶水侵蚀，其体表发生了不可逆的变化——受到杂质的侵蚀，体表褪去明黄，变得像一片干枯的树叶，再也无法恢复如初。",
-    "descriptionEn": "",
+    "descriptionEn": "The withered-leaf form of Xuanye Chong, a Grass-themed insect Jinie with camouflage-flavored flavor and progression into Pengye Chong.",
     "status": "revealed",
     "skills": [
       {
@@ -18796,7 +18796,7 @@
     "evolution": "旋叶虫 → 蓬叶虫 Lv.25 → 风滚暮虫 Lv.45 → 暮风隐者",
     "evolutionEn": "Xuanyechong → Pengyechong Lv.25 → Fenggunmuchong Lv.45 → Mufengyinzhe",
     "description": "身体结构发生进一步退化，储水能力几乎退化到没有，皮肤质感像纸一样薄，像晒缩的果干一样皱。杂质污染让其他精灵不敢再靠近，这似乎意外地保护了它们的安全。",
-    "descriptionEn": "",
+    "descriptionEn": "The evolved withered-leaf insect form, building on Xuanye Chong with stronger stats and a nature-themed combat profile.",
     "status": "revealed",
     "skills": [
       {
@@ -18928,7 +18928,7 @@
     "evolution": "旋叶虫 → 蓬叶虫 Lv.25 → 风滚暮虫 Lv.45 → 暮风隐者",
     "evolutionEn": "Xuanyechong → Pengyechong Lv.25 → Fenggunmuchong Lv.45 → Mufengyinzhe",
     "description": "在恶劣的环境中，它们形成了低能耗、高防御的行为逻辑，整天处于倦怠状态，其躯体收缩与舒展时，会有细微的气流振动，听起来就像低低的叹息声。",
-    "descriptionEn": "",
+    "descriptionEn": "The final withered-leaf insect form, a wind-rolling Grass-line Jinie with improved durability and late-line utility.",
     "status": "revealed",
     "skills": [
       {
