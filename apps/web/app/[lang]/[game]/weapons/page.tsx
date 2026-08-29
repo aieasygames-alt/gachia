@@ -94,14 +94,14 @@ export async function generateMetadata({
   const categoryLabel = CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons';
   const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/weapons`, LOCALES);
 
-  const desc = WEAPON_DESC[gameId]?.[locale] ?? `${gameName} ${categoryLabel} database with stats, effects, recommended users, and acquisition methods`;
+  const desc = WEAPON_DESC[gameId]?.[locale] ?? `${gameName} ${categoryLabel} database with cosmetic effects, visual transformations, and acquisition methods`;
   const intro = WEAPON_INTRO[gameId]?.[locale];
 
   const title = locale === 'zh'
-    ? `${gameName}武器图鉴 — 全武器Wiki、数据与技能效果`
+    ? `${gameName}武器图鉴 — 外观法杖Wiki、特效与获取方式`
     : locale === 'ja'
-      ? `${gameName}武器図鑑 — Wiki、ステータス、スキル効果`
-      : `${gameName} Weapons Wiki — Complete Stats, Skills & Best Picks`;
+      ? `${gameName}武器図鑑 — 杖Wiki、演出効果、入手方法`
+      : `${gameName} Weapons Wiki — Cosmetic Staffs, Effects & Sources`;
 
   const description = ensureMetaLength(intro ?? desc, locale);
 

@@ -734,7 +734,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     eyebrow: { zh: 'S1 暗夜拾光 / 玩法入口', en: 'S1 Shadowlight / Gameplay Hub', ja: 'S1 暗夜拾光 / 玩法導線' },
     title: { zh: '国服精灵图鉴、法杖与节奏榜入口', en: 'CN Jinie wiki, staves, and tier list', ja: '中国版ジニー図鑑・杖・Tier' },
     description: {
-      zh: '把精灵图鉴、法杖（外观特效武器）和节奏榜合到首页，先看清属性克制、强势精灵和培养顺序。',
+      zh: '把精灵图鉴、法杖（纯外观特效武器）和节奏榜合到首页，先看清属性克制、强势精灵和培养顺序。',
       en: 'Bring the Jinie wiki, staves (cosmetic effect weapons), and tier list to the front page so you can read type matchups, strong Jinies, and progression order first.',
       ja: 'ジニー図鑑、杖（外観武器）、Tierをトップにまとめ、属性相性・強ジニー・育成順を先に確認。',
     },
@@ -747,7 +747,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     tracks: {
       zh: [
         { title: '精灵图鉴与节奏榜', description: '先看图鉴和强度分级，判断先养谁、先捕谁。', links: [{ href: '/roco-cn/characters', label: '精灵图鉴' }, { href: '/roco-cn/tier-list', label: '节奏榜' }] },
-        { title: '法杖系统', description: '法杖是外观特效武器，无数值攻击力，按赛季战令与活动获取。', links: [{ href: '/roco-cn/weapons', label: '法杖图鉴' }, { href: '/roco-cn/version', label: '赛季专题' }] },
+        { title: '法杖系统', description: '法杖是纯外观特效武器，无数值攻击力，按赛季战令与活动获取。', links: [{ href: '/roco-cn/weapons', label: '法杖图鉴' }, { href: '/roco-cn/version', label: '赛季专题' }] },
         { title: '版本与养成', description: '继续看 S1 赛季节点、活动与培养路线。', links: [{ href: '/roco-cn/version', label: '赛季专题' }, { href: '/roco-cn/characters', label: '精灵图鉴' }] },
       ],
       en: [
@@ -757,7 +757,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
       ],
       ja: [
         { title: 'ジニー図鑑とTier', description: '図鑑と強さTierを確認し、育成・捕獲の優先順を決めます。', links: [{ href: '/roco-cn/characters', label: 'ジニー図鑑' }, { href: '/roco-cn/tier-list', label: 'Tier' }] },
-        { title: '杖システム', description: '杖は攻撃数値なしの外観・エフェクト武器で、シーズンパスとイベントで入手。', links: [{ href: '/roco-cn/weapons', label: '杖図鑑' }, { href: '/roco-cn/version', label: 'シーズン特集' }] },
+      { title: '杖システム', description: '杖は攻撃数値なしの純粋な外観・エフェクト武器で、シーズンパスとイベントで入手。', links: [{ href: '/roco-cn/weapons', label: '杖図鑑' }, { href: '/roco-cn/version', label: 'シーズン特集' }] },
         { title: '版本と育成', description: 'S1の節目、イベント、育成導線を続けて確認。', links: [{ href: '/roco-cn/version', label: 'シーズン特集' }, { href: '/roco-cn/characters', label: 'ジニー図鑑' }] },
       ],
     },
@@ -789,7 +789,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     tracks: {
       zh: [
         { title: '精灵图鉴与节奏榜', description: '先看 CBT 已曝光精灵图鉴和早测强度分级。', links: [{ href: '/roco/characters', label: '精灵图鉴' }, { href: '/roco/tier-list', label: '早测节奏榜' }] },
-        { title: '法杖系统', description: '法杖是外观特效武器，无数值攻击力，通过战令与活动获取。', links: [{ href: '/roco/weapons', label: '法杖图鉴' }, { href: '/roco/version', label: 'CBT 专题' }] },
+      { title: '法杖系统', description: '法杖是纯外观特效武器，无数值攻击力，通过战令与活动获取。', links: [{ href: '/roco/weapons', label: '法杖图鉴' }, { href: '/roco/version', label: 'CBT 专题' }] },
         { title: 'CBT 与报名', description: '继续看 CBT 时间线、报名窗口与平台选择。', links: [{ href: '/roco/version', label: 'CBT 专题' }, { href: '/roco/characters', label: '精灵图鉴' }] },
       ],
       en: [
@@ -799,7 +799,7 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
       ],
       ja: [
         { title: 'ジニー図鑑とTier', description: 'CBT公開ジニー図鑑と暫定Tierを確認。', links: [{ href: '/roco/characters', label: 'ジニー図鑑' }, { href: '/roco/tier-list', label: '暫定Tier' }] },
-        { title: '杖システム', description: '杖は攻撃数値なしの外観武器で、パスとイベントから入手。', links: [{ href: '/roco/weapons', label: '杖図鑑' }, { href: '/roco/version', label: 'CBT特集' }] },
+      { title: '杖システム', description: '杖は攻撃数値なしの純粋な外観武器で、パスとイベントから入手。', links: [{ href: '/roco/weapons', label: '杖図鑑' }, { href: '/roco/version', label: 'CBT特集' }] },
         { title: 'CBTと応募', description: 'CBTタイムライン、応募窓口、プラットフォームを続けて確認。', links: [{ href: '/roco/version', label: 'CBT特集' }, { href: '/roco/characters', label: 'ジニー図鑑' }] },
       ],
     },

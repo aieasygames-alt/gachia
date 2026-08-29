@@ -1,6 +1,6 @@
 import { IMAGE_BASE } from '../../image-base';
 import type { SupportedLocale, Character } from '@gachia/core';
-import type { RocoCnJinie } from './types';
+import type { RocoCnJinie, RocoCnSkill, RocoCnStats } from './types';
 import rawCharacters from './raw-characters.json';
 import { localeStr } from './types';
 
@@ -39,8 +39,29 @@ export const characters: Character[] = rocoCnCharacters.map((char) => ({
     card: `/images/roco-cn/characters/${char.id}.webp`,
     gachaSplash: `/images/roco-cn/characters/${char.id}.webp`,
   },
-  stats: { baseHp: [], baseAtk: [], baseDef: [] },
+  stats: mapStats(char.stats),
   materials: [],
-  skills: [],
-  releaseVersion: '',
+  skills: mapSkills(char.skills),
+  releaseVersion: char.releaseVersion ?? '国服公测',
 }));
+
+function mapStats(stats?: RocoCnStats): Character['stats'] {
+  if (!stats) {
+    return { baseHp: [], baseAtk: [], baseDef: [] };
+  }
+  return {
+    baseHp: [stats.hp ?? stats.total],
+    baseAtk: [stats.atk ?? stats.matk ?? 0],
+    baseDef: [stats.def ?? stats.mdef ?? 0],
+  };
+}
+
+function mapSkills(skills?: RocoCnSkill[]): Character['skills'] {
+  if (!skills) return [];
+  return skills.map((skill, index) => ({
+    id: `${index + 1}`,
+    name: { zh: skill.name, en: skill.nameEn, ja: skill.nameEn },
+    description: { zh: skill.description, en: skill.descriptionEn, ja: skill.descriptionEn },
+    type: skill.category === 'physical' ? 'normal' : skill.category === 'magic' ? 'elemental' : skill.category === 'status' ? 'passive' : 'passive',
+  }));
+}
