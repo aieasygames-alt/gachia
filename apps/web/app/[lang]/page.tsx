@@ -4,20 +4,10 @@ import { GAMES, GAME_IDS, CATEGORY_LABELS } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
 import { buildHomepageJsonLd } from '@/lib/jsonld';
 import { IMAGE_BASE } from '@gachia/data/image-base';
-import { genshinCharacters, getGenshinCharacterName, getGenshinCharacterImage } from '@gachia/data/games/genshin/characters';
-import { starrailCharacters, getStarRailCharacterName, getStarRailCharacterImage } from '@gachia/data/games/starrail/characters';
-import { wuwaCharacters, getWuWaCharacterName, getWuWaCharacterImage } from '@gachia/data/games/wuwa/characters';
-import { nteCharacters, getNteCharacterName, getNteCharacterImage } from '@gachia/data/games/nte/characters';
-import { zzzCharacters, getZzzCharacterName, getZzzCharacterImage } from '@gachia/data/games/zzz/characters';
-import { guihuanCharacters, getGuihuanCharacterName, getGuihuanCharacterImage } from '@gachia/data/games/guihuan/characters';
-import { anantaCharacters, getAnantaCharacterName, getAnantaCharacterImage } from '@gachia/data/games/ananta/characters';
-import { endfieldCharacters, getEndfieldCharacterName, getEndfieldCharacterImage } from '@gachia/data/games/endfield/characters';
-import { seaCharacters, getSeaCharacterName, getSeaCharacterImage } from '@gachia/data/games/sea/characters';
-import { rocoCharacters, getRocoCharacterName, getRocoCharacterImage } from '@gachia/data/games/roco/characters';
+import Image from 'next/image';
 import zhMessages from '@/messages/zh.json';
 import enMessages from '@/messages/en.json';
 import jaMessages from '@/messages/ja.json';
-import Image from 'next/image';
 import { Calculator, CalendarDays, Gift, Radio, Sparkles, TrendingUp } from 'lucide-react';
 import {
   HOMEPAGE_PRIORITY_GAMES,
@@ -164,74 +154,7 @@ function toAbsoluteUrl(path: string): string {
 
 function getFeaturedChars(gameId: string, locale: SupportedLocale): CharAccessor[] {
   const ids = FEATURED[gameId] ?? [];
-  if (ids.length === 0) return [];
-
-  const chars: CharAccessor[] = [];
-
-  switch (gameId) {
-    case 'genshin':
-      for (const id of ids) {
-        const c = genshinCharacters.find((ch) => ch.id === id);
-        if (c) chars.push({ id: c.id, getName: (l) => getGenshinCharacterName(c, l), getImage: () => toAbsoluteUrl(getGenshinCharacterImage(c)) });
-      }
-      break;
-    case 'starrail':
-      for (const id of ids) {
-        const c = starrailCharacters.find((ch) => ch.id === id);
-        if (c) chars.push({ id: c.id, getName: (l) => getStarRailCharacterName(c, l), getImage: () => toAbsoluteUrl(getStarRailCharacterImage(c)) });
-      }
-      break;
-    case 'wuwa':
-      for (const id of ids) {
-        const c = wuwaCharacters.find((ch) => ch.id === id);
-        if (c) chars.push({ id: c.id, getName: (l) => getWuWaCharacterName(c, l), getImage: () => toAbsoluteUrl(getWuWaCharacterImage(c)) });
-      }
-      break;
-    case 'nte':
-      for (const id of ids) {
-        const c = nteCharacters.find((ch) => ch.id === id);
-        if (c) chars.push({ id: c.id, getName: (l) => getNteCharacterName(c, l), getImage: () => toAbsoluteUrl(getNteCharacterImage(c)) });
-      }
-      break;
-    case 'zzz':
-      for (const id of ids) {
-        const c = zzzCharacters.find((ch) => ch.id === id);
-        if (c) chars.push({ id: c.id, getName: (l) => getZzzCharacterName(c, l), getImage: () => toAbsoluteUrl(getZzzCharacterImage(c)) });
-      }
-      break;
-    case 'guihuan':
-      for (const id of ids) {
-        const c = guihuanCharacters.find((ch) => ch.id === id);
-        if (c) chars.push({ id: c.id, getName: (l) => getGuihuanCharacterName(c, l), getImage: () => toAbsoluteUrl(getGuihuanCharacterImage(c)) });
-      }
-      break;
-    case 'ananta':
-      for (const id of ids) {
-        const c = anantaCharacters.find((ch) => ch.id === id);
-        if (c) chars.push({ id: c.id, getName: (l) => getAnantaCharacterName(c, l), getImage: () => toAbsoluteUrl(getAnantaCharacterImage(c)) });
-      }
-      break;
-    case 'endfield':
-      for (const id of ids) {
-        const c = endfieldCharacters.find((ch) => ch.id === id);
-        if (c) chars.push({ id: c.id, getName: (l) => getEndfieldCharacterName(c, l), getImage: () => toAbsoluteUrl(getEndfieldCharacterImage(c)) });
-      }
-      break;
-    case 'sea':
-      for (const id of ids) {
-        const c = seaCharacters.find((ch) => ch.id === id);
-        if (c) chars.push({ id: c.id, getName: (l) => getSeaCharacterName(c, l), getImage: () => toAbsoluteUrl(getSeaCharacterImage(c)) });
-      }
-      break;
-    case 'roco':
-      for (const id of ids) {
-        const c = rocoCharacters.find((ch) => ch.id === id);
-        if (c) chars.push({ id: c.id, getName: (l) => getRocoCharacterName(c, l), getImage: () => toAbsoluteUrl(getRocoCharacterImage(c)) });
-      }
-      break;
-  }
-
-  return chars;
+  return ids.map((id) => ({ id, getName: () => id, getImage: () => toAbsoluteUrl(`/images/og/${gameId}.webp`) }));
 }
 
 function formatDate(date: string, locale: SupportedLocale): string {
@@ -297,7 +220,7 @@ export default async function LocaleHome({
 }) {
   const { lang } = await params;
   const locale = lang as SupportedLocale;
-  const t = MESSAGES[locale] ?? MESSAGES['zh']!;
+  const t = (MESSAGES[locale] ?? MESSAGES.zh) as Record<string, string>;
   const liveBanners = sortByPriority(LIVE_BANNERS).slice(0, 3);
   const liveVersions = sortByPriority(LIVE_VERSION_UPDATES).slice(0, 3);
   const liveCodes = sortByPriority(LIVE_CODE_SUMMARIES).slice(0, 3);
