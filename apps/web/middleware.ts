@@ -1,15 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 import createMiddleware from 'next-intl/middleware';
 import { routing } from './lib/i18n/routing';
+import { GAME_IDS, LOCALES } from '@gachia/core';
+import type { GameId, SupportedLocale } from '@gachia/core';
 
 const intlMiddleware = createMiddleware(routing);
 
-const GAME_IDS = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'] as const;
-const LOCALE_IDS = ['zh', 'en', 'ja'] as const;
 const DEFAULT_CANONICAL_LOCALE: LocaleId = 'zh';
 
-type GameId = (typeof GAME_IDS)[number];
-type LocaleId = (typeof LOCALE_IDS)[number];
+type LocaleId = SupportedLocale;
 
 const LEGACY_CHARACTER_LIST_REDIRECTS: Partial<Record<GameId, readonly string[]>> = {
   endfield: ['angelina', 'saria', 'amiya', 'surtr', 'hound', 'fang', 'silverash', 'texas', 'orchid', 'exusiai'],
@@ -31,10 +30,12 @@ const INDEXABLE_GAME_ROUTES: Record<GameId, readonly string[]> = {
   endfield: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'version', 'download', 'compare', 'teams', 'map'],
   sea: ['characters', 'guides', 'items', 'tier-list', 'redeem-codes', 'build', 'version', 'download', 'calculator'],
   skjh: ['weapons', 'guides', 'items', 'redeem-codes', 'calculator', 'teams', 'map', 'build', 'version', 'download'],
+  roco: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'version', 'download', 'redeem-codes'],
+  'roco-cn': ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'version', 'download', 'redeem-codes'],
 };
 
 function asLocale(segment?: string): LocaleId | undefined {
-  return LOCALE_IDS.includes(segment as LocaleId) ? (segment as LocaleId) : undefined;
+  return LOCALES.includes(segment as LocaleId) ? (segment as LocaleId) : undefined;
 }
 
 function asGame(segment?: string): GameId | undefined {
@@ -195,6 +196,6 @@ export const config = {
     '/',
     '/(zh|en|ja)/:path*',
     '/(sitemap|api|privacy|terms|contact)',
-    '/(genshin|starrail|wuwa|nte|zzz|guihuan|ananta|endfield|sea|skjh)/:path*',
+    '/(genshin|starrail|wuwa|nte|zzz|guihuan|ananta|endfield|sea|skjh|roco|roco-cn)/:path*',
   ],
 };

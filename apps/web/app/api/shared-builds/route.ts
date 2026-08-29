@@ -5,10 +5,11 @@ import { createAuth } from '@/lib/auth';
 import { checkRateLimit } from '@/lib/rate-limit';
 import { z } from 'zod';
 import { randomUUID } from 'crypto';
+import { GAME_IDS } from '@gachia/core';
 
 // Validation schema with Zod
 const CreateBuildSchema = z.object({
-  gameId: z.enum(['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'], {
+  gameId: z.enum(GAME_IDS as [string, ...string[]], {
     errorMap: () => ({ message: 'Invalid game ID' })
   }),
   characterId: z.string().min(1).max(50),

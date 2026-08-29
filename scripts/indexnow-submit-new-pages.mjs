@@ -1,11 +1,12 @@
 import { execFileSync } from 'node:child_process';
 import path from 'node:path';
+import { GAME_IDS } from '@gachia/core';
 
 const BASE_URL = 'https://gachia.com';
 const INDEXNOW_KEY = 'gachia2026indexnowkey';
 const ENDPOINTS = ['https://api.indexnow.org/indexnow', 'https://www.bing.com/indexnow'];
 const LOCALES = ['zh', 'en', 'ja'];
-const GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'];
+const GAMES = GAME_IDS;
 
 function gitAddedFiles() {
   const output = execFileSync('git', ['-C', process.cwd(), 'status', '--porcelain=v1', '--untracked-files=all'], {

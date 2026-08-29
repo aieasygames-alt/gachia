@@ -4,6 +4,7 @@ import { userCharacters, eq, and } from '@gachia/db';
 import { createAuth } from '@/lib/auth';
 import { checkRateLimit } from '@/lib/rate-limit';
 import { z } from 'zod';
+import { GAME_IDS } from '@gachia/core';
 
 const RL = { limit: 100, windowSeconds: 60, prefix: '/api/user-characters' };
 
@@ -13,7 +14,7 @@ async function getSession(request: NextRequest) {
 }
 
 const CharacterKeySchema = z.object({
-  gameId: z.enum(['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh']),
+  gameId: z.enum(GAME_IDS as [string, ...string[]]),
   characterId: z.string().trim().min(1).max(100).regex(/^[a-zA-Z0-9_-]+$/),
 });
 const CharacterBodySchema = CharacterKeySchema.extend({
