@@ -102,8 +102,8 @@ jobs:
           done
 
   deploy:
-    needs: [build, deploy-staging]
-    if: always() && needs.build.result == 'success' && (needs.deploy-staging.result == 'success' || needs.deploy-staging.result == 'skipped') && github.ref == 'refs/heads/main' && github.event_name == 'push' && vars.CLOUDFLARE_DEPLOY_FROM_GITHUB == 'true'
+    needs: build
+    if: needs.build.result == 'success' && github.ref == 'refs/heads/main' && github.event_name == 'push' && vars.CLOUDFLARE_DEPLOY_FROM_GITHUB == 'true'
     runs-on: ubuntu-latest
     environment: production
     permissions:
