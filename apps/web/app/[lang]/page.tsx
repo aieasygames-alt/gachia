@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
-import type { Character, SupportedLocale } from '@gachia/core';
+import type { SupportedLocale } from '@gachia/core';
 import { GAMES, GAME_IDS, CATEGORY_LABELS } from '@gachia/core';
-import { getGameData } from '@gachia/data';
 import { Link } from '@/lib/i18n/navigation';
 import { buildHomepageJsonLd } from '@/lib/jsonld';
 import Image from 'next/image';
@@ -28,20 +27,57 @@ const MESSAGES: Record<string, Record<string, string>> = {
   ja: jaMessages.homepage!,
 };
 
-// --- Featured character IDs per game (popular/high-visibility picks) ---
-const FEATURED: Record<string, string[]> = {
-  genshin: ['hu-tao', 'raiden-shogun', 'furina', 'nahida', 'kazuha'],
-  starrail: ['kafka', 'jingliu', 'acheron', 'firefly', 'robin'],
-  wuwa: ['jiyan', 'yinlin', 'jinhsi', 'changli', 'zhezhi'],
-  nte: ['chiz', 'aurelia', 'skia', 'haniel', 'sakiri'],
-  zzz: ['ellen', 'zhu-yuan', 'miyabi', 'burnice', 'caesar'],
-  guihuan: [], // too few characters, skip
-  ananta: [], // too few characters, skip
-  endfield: ['laevatain', 'ardelia', 'tangtang', 'endministrator', 'lifeng'],
-  sea: ['traveler', 'ais', 'little-axe'],
-  skjh: [],
-  roco: ['meewee', 'sparka', 'cerulla'],
-  'roco-cn': [], // CN Jinies filled in M3
+type FeaturedCharacter = {
+  id: string;
+  name: Record<SupportedLocale, string>;
+};
+
+const FEATURED: Partial<Record<keyof typeof GAMES, FeaturedCharacter[]>> = {
+  genshin: [
+    { id: 'hu-tao', name: { zh: '胡桃', en: 'Hu Tao', ja: '胡桃' } },
+    { id: 'raiden-shogun', name: { zh: '雷电将军', en: 'Raiden Shogun', ja: '雷電将軍' } },
+    { id: 'furina', name: { zh: '芙宁娜', en: 'Furina', ja: 'フリーナ' } },
+    { id: 'nahida', name: { zh: '纳西妲', en: 'Nahida', ja: 'ナヒーダ' } },
+    { id: 'kazuha', name: { zh: '枫原万叶', en: 'Kaedehara Kazuha', ja: '楓原万葉' } },
+  ],
+  starrail: [
+    { id: 'kafka', name: { zh: '卡芙卡', en: 'Kafka', ja: 'カフカ' } },
+    { id: 'jingliu', name: { zh: '镜流', en: 'Jingliu', ja: '鏡流' } },
+    { id: 'acheron', name: { zh: '黄泉', en: 'Acheron', ja: '黄泉' } },
+    { id: 'firefly', name: { zh: '流萤', en: 'Firefly', ja: 'ホタル' } },
+    { id: 'robin', name: { zh: '知更鸟', en: 'Robin', ja: 'ロビン' } },
+  ],
+  wuwa: [
+    { id: 'jiyan', name: { zh: '忌炎', en: 'Jiyan', ja: '忌炎' } },
+    { id: 'yinlin', name: { zh: '吟霖', en: 'Yinlin', ja: '吟霖' } },
+    { id: 'jinhsi', name: { zh: '今汐', en: 'Jinhsi', ja: '今汐' } },
+    { id: 'changli', name: { zh: '长离', en: 'Changli', ja: '長離' } },
+    { id: 'zhezhi', name: { zh: '折枝', en: 'Zhezhi', ja: '折枝' } },
+  ],
+  zzz: [
+    { id: 'ellen', name: { zh: '艾莲', en: 'Ellen', ja: 'エレン' } },
+    { id: 'zhu-yuan', name: { zh: '朱鸢', en: 'Zhu Yuan', ja: '朱鳶' } },
+    { id: 'miyabi', name: { zh: '星见雅', en: 'Hoshimi Miyabi', ja: '星見雅' } },
+    { id: 'burnice', name: { zh: '柏妮思', en: 'Burnice', ja: 'バーニス' } },
+    { id: 'caesar', name: { zh: '凯撒', en: 'Caesar', ja: 'シーザー' } },
+  ],
+  endfield: [
+    { id: 'laevatain', name: { zh: '莱瓦汀', en: 'Laevatain', ja: 'レーヴァテイン' } },
+    { id: 'ardelia', name: { zh: '阿黛莉亚', en: 'Ardelia', ja: 'アルデリア' } },
+    { id: 'tangtang', name: { zh: '棠棠', en: 'Tangtang', ja: 'タンタン' } },
+    { id: 'endministrator', name: { zh: '管理员', en: 'Endministrator', ja: 'エンドミニストレーター' } },
+    { id: 'lifeng', name: { zh: '立风', en: 'Lifeng', ja: 'リーフェン' } },
+  ],
+  sea: [
+    { id: 'traveler', name: { zh: '旅人', en: 'Traveler', ja: '旅人' } },
+    { id: 'ais', name: { zh: '艾丝', en: 'Ais', ja: 'アイス' } },
+    { id: 'little-axe', name: { zh: '小斧', en: 'Little Axe', ja: 'リトルアックス' } },
+  ],
+  roco: [
+    { id: 'meewee', name: { zh: '米维', en: 'Meewee', ja: 'ミーウィー' } },
+    { id: 'sparka', name: { zh: '斯帕卡', en: 'Sparka', ja: 'スパーカ' } },
+    { id: 'cerulla', name: { zh: '瑟露拉', en: 'Cerulla', ja: 'セルラ' } },
+  ],
 };
 
 const HOME_COPY = {
@@ -198,24 +234,6 @@ function getStatusForGame(gameId: keyof typeof GAMES) {
   return liveItem?.status;
 }
 
-async function getHomepageFeaturedCharacters() {
-  const entries = await Promise.all(
-    GAME_IDS.map(async (gameId) => {
-      const featuredIds = FEATURED[gameId] ?? [];
-      if (featuredIds.length === 0) return [gameId, []] as const;
-
-      const { characters } = await getGameData(gameId);
-      const featured = featuredIds
-        .map((id) => characters.find((character) => character.id === id))
-        .filter((character): character is Character => Boolean(character));
-
-      return [gameId, featured] as const;
-    }),
-  );
-
-  return Object.fromEntries(entries) as Partial<Record<keyof typeof GAMES, Character[]>>;
-}
-
 const DESCRIPTIONS: Record<string, string> = {
   zh: 'Gachia 是多游戏攻略 Wiki 与实时规划入口，覆盖原神、崩铁、鸣潮、绝区零、异环等游戏的当前卡池、下期卡池、版本专题、兑换码、角色图鉴、武器数据、配装和热门攻略。',
   en: 'Gachia is a multi-game wiki and live planning hub for current banners, next banners, version updates, redeem codes, characters, weapons, builds, and guides across Genshin, HSR, WuWa, ZZZ, NTE, and more.',
@@ -270,7 +288,6 @@ export default async function LocaleHome({
   const orderedGames = [...priorityGames, ...GAME_IDS.filter((gameId) => !priorityGames.includes(gameId))];
   const spotlightGames = orderedGames.slice(0, 5);
   const updateFeed: HomeFeedItem[] = sortByPriority([...LIVE_BANNERS, ...LIVE_VERSION_UPDATES, ...LIVE_CODE_SUMMARIES, ...LIVE_GUIDES]).slice(0, 8);
-  const featuredCharacters = await getHomepageFeaturedCharacters();
 
   return (
     <div className="container mx-auto px-4 py-6 md:py-8">
@@ -504,9 +521,9 @@ export default async function LocaleHome({
       </section>
 
       {/* Featured Characters per Game */}
-      {GAME_IDS.filter((id) => (featuredCharacters[id]?.length ?? 0) > 0).map((gameId) => {
+      {GAME_IDS.filter((id) => (FEATURED[id]?.length ?? 0) > 0).map((gameId) => {
         const game = GAMES[gameId];
-        const chars = featuredCharacters[gameId] ?? [];
+        const chars = FEATURED[gameId] ?? [];
         if (chars.length < 3) return null;
 
         return (
@@ -526,7 +543,7 @@ export default async function LocaleHome({
                 >
                   <div className="relative h-12 w-12 overflow-hidden rounded-full">
                       <Image
-                      src={char.images.icon || `/images/og/${gameId}.webp`}
+                      src={`/images/${gameId}/characters/${char.id}.webp`}
                       alt={char.name[locale]}
                       width={48}
                       height={48}
