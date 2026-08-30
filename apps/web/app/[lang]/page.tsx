@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import type { SupportedLocale } from '@gachia/core';
+import type { Character, SupportedLocale } from '@gachia/core';
 import { GAMES, GAME_IDS, CATEGORY_LABELS } from '@gachia/core';
+import { getGameData } from '@gachia/data';
 import { Link } from '@/lib/i18n/navigation';
 import { buildHomepageJsonLd } from '@/lib/jsonld';
-import { IMAGE_BASE } from '@gachia/data/image-base';
 import Image from 'next/image';
 import zhMessages from '@/messages/zh.json';
 import enMessages from '@/messages/en.json';
@@ -158,13 +158,6 @@ const TRACK_LABELS = {
   updated: { zh: '最近更新', en: 'Recent', ja: '最近更新' },
 } satisfies Record<string, Record<SupportedLocale, string>>;
 
-// --- Image URL helpers per game ---
-type CharAccessor = {
-  getName: (locale: SupportedLocale) => string;
-  getImage: () => string;
-  id: string;
-};
-
 type HomeFeedItem = {
   gameId: keyof typeof GAMES;
   title: LocalizedText;
@@ -174,16 +167,6 @@ type HomeFeedItem = {
   updatedAt: string;
   priority: number;
 };
-
-function toAbsoluteUrl(path: string): string {
-  if (path.startsWith('http')) return path;
-  return `${IMAGE_BASE}${path}`;
-}
-
-function getFeaturedChars(gameId: string, locale: SupportedLocale): CharAccessor[] {
-  const ids = FEATURED[gameId] ?? [];
-  return ids.map((id) => ({ id, getName: () => id, getImage: () => toAbsoluteUrl(`/images/og/${gameId}.webp`) }));
-}
 
 function formatDate(date: string, locale: SupportedLocale): string {
   return new Intl.DateTimeFormat(locale === 'zh' ? 'zh-CN' : locale, {
@@ -213,6 +196,24 @@ function getStatusForGame(gameId: keyof typeof GAMES) {
     .filter((item) => item.gameId === gameId)
     .sort((a, b) => a.priority - b.priority)[0];
   return liveItem?.status;
+}
+
+async function getHomepageFeaturedCharacters() {
+  const entries = await Promise.all(
+    GAME_IDS.map(async (gameId) => {
+      const featuredIds = FEATURED[gameId] ?? [];
+      if (featuredIds.length === 0) return [gameId, []] as const;
+
+      const { characters } = await getGameData(gameId);
+      const featured = featuredIds
+        .map((id) => characters.find((character) => character.id === id))
+        .filter((character): character is Character => Boolean(character));
+
+      return [gameId, featured] as const;
+    }),
+  );
+
+  return Object.fromEntries(entries) as Partial<Record<keyof typeof GAMES, Character[]>>;
 }
 
 const DESCRIPTIONS: Record<string, string> = {
@@ -269,6 +270,7 @@ export default async function LocaleHome({
   const orderedGames = [...priorityGames, ...GAME_IDS.filter((gameId) => !priorityGames.includes(gameId))];
   const spotlightGames = orderedGames.slice(0, 5);
   const updateFeed: HomeFeedItem[] = sortByPriority([...LIVE_BANNERS, ...LIVE_VERSION_UPDATES, ...LIVE_CODE_SUMMARIES, ...LIVE_GUIDES]).slice(0, 8);
+  const featuredCharacters = await getHomepageFeaturedCharacters();
 
   return (
     <div className="container mx-auto px-4 py-6 md:py-8">
@@ -502,9 +504,9 @@ export default async function LocaleHome({
       </section>
 
       {/* Featured Characters per Game */}
-      {GAME_IDS.filter((id) => (FEATURED[id]?.length ?? 0) > 0).map((gameId) => {
+      {GAME_IDS.filter((id) => (featuredCharacters[id]?.length ?? 0) > 0).map((gameId) => {
         const game = GAMES[gameId];
-        const chars = getFeaturedChars(gameId, locale);
+        const chars = featuredCharacters[gameId] ?? [];
         if (chars.length < 3) return null;
 
         return (
@@ -523,9 +525,9 @@ export default async function LocaleHome({
                   className="group flex items-center gap-3 rounded-lg border border-game-border bg-game-surface px-4 py-3 transition-colors hover:border-game-primary"
                 >
                   <div className="relative h-12 w-12 overflow-hidden rounded-full">
-                    <Image
-                      src={char.getImage()}
-                      alt={char.getName(locale)}
+                      <Image
+                      src={char.images.icon || `/images/og/${gameId}.webp`}
+                      alt={char.name[locale]}
                       width={48}
                       height={48}
                       className="h-full w-full object-cover"
@@ -533,7 +535,7 @@ export default async function LocaleHome({
                     />
                   </div>
                   <span className="font-medium text-game-text group-hover:text-game-primary">
-                    {char.getName(locale)}
+                    {char.name[locale]}
                   </span>
                 </Link>
               ))}
