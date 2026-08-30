@@ -8,7 +8,7 @@ import Image from 'next/image';
 import zhMessages from '@/messages/zh.json';
 import enMessages from '@/messages/en.json';
 import jaMessages from '@/messages/ja.json';
-import { Calculator, CalendarDays, Gift, Radio, Sparkles, TrendingUp } from 'lucide-react';
+import { ArrowRight, Calculator, CalendarDays, Gamepad2, Gift, Radio, Sparkles, TrendingUp } from 'lucide-react';
 import {
   HOMEPAGE_PRIORITY_GAMES,
   LIVE_BANNERS,
@@ -16,6 +16,8 @@ import {
   LIVE_GUIDES,
   LIVE_UPDATED_AT,
   LIVE_VERSION_UPDATES,
+  type LiveStatus,
+  type LocalizedText,
   localizeText,
   sortByPriority,
 } from '@/lib/live-content';
@@ -54,9 +56,9 @@ const HOME_COPY = {
     ja: 'バナー、コード、版本要点を先に確認',
   },
   liveSubtitle: {
-    zh: '集中查看原神、崩铁、鸣潮、绝区零、异环等游戏的当前卡池、下期卡池、版本更新、兑换码和热门攻略。',
-    en: 'Track current banners, next banners, version hubs, redeem codes, and popular guides for Genshin, HSR, WuWa, ZZZ, NTE, and more.',
-    ja: '原神、スターレイル、鳴潮、ZZZ、NTE などの現在バナー、次回バナー、版本更新、コード、人気攻略を確認できます。',
+    zh: '新增游戏越来越多，首页改成情报台：先看正在更新的游戏、今日版本重点，再进入角色、下载、兑换码和攻略。',
+    en: 'As the library grows, the homepage now works like an intel board: active games first, then version priorities, characters, downloads, codes, and guides.',
+    ja: '対応ゲームが増えたため、ホームを情報ボード化。更新中ゲーム、版本要点、キャラ、DL、コード、攻略へ素早く進めます。',
   },
   updated: {
     zh: '更新',
@@ -89,9 +91,9 @@ const HOME_COPY = {
     ja: '開く',
   },
   priorityGames: {
-    zh: '优先更新游戏',
-    en: 'Priority Games',
-    ja: '優先更新ゲーム',
+    zh: '游戏轨道',
+    en: 'Game Tracks',
+    ja: 'ゲームトラック',
   },
   exploreGame: {
     zh: '进入游戏',
@@ -123,6 +125,16 @@ const HOME_COPY = {
     en: 'A multi-game database becoming a live planning tool',
     ja: '多ゲームDBからリアルタイム計画ツールへ',
   },
+  allGames: {
+    zh: '全部游戏入口',
+    en: 'All Game Entries',
+    ja: '全ゲーム入口',
+  },
+  liveFeed: {
+    zh: '更新流',
+    en: 'Update Feed',
+    ja: '更新フィード',
+  },
 } satisfies Record<string, Record<SupportedLocale, string>>;
 
 const STATUS_LABELS = {
@@ -140,11 +152,27 @@ const GAME_CTA_PRIORITY = [
   'weapons',
 ] as const;
 
+const TRACK_LABELS = {
+  routes: { zh: '可用模块', en: 'Modules', ja: 'モジュール' },
+  chars: { zh: '热门角色', en: 'Featured', ja: '注目' },
+  updated: { zh: '最近更新', en: 'Recent', ja: '最近更新' },
+} satisfies Record<string, Record<SupportedLocale, string>>;
+
 // --- Image URL helpers per game ---
 type CharAccessor = {
   getName: (locale: SupportedLocale) => string;
   getImage: () => string;
   id: string;
+};
+
+type HomeFeedItem = {
+  gameId: keyof typeof GAMES;
+  title: LocalizedText;
+  summary: LocalizedText;
+  href: string;
+  status?: LiveStatus;
+  updatedAt: string;
+  priority: number;
 };
 
 function toAbsoluteUrl(path: string): string {
@@ -174,6 +202,17 @@ function getGameCtas(gameId: keyof typeof GAMES, locale: SupportedLocale) {
       label: CATEGORY_LABELS[route]?.[locale] ?? route,
     }))
     .slice(0, 4);
+}
+
+function getRouteCount(gameId: keyof typeof GAMES) {
+  return Object.values(GAMES[gameId].routes).filter(Boolean).length;
+}
+
+function getStatusForGame(gameId: keyof typeof GAMES) {
+  const liveItem: HomeFeedItem | undefined = [...LIVE_BANNERS, ...LIVE_VERSION_UPDATES, ...LIVE_CODE_SUMMARIES, ...LIVE_GUIDES]
+    .filter((item) => item.gameId === gameId)
+    .sort((a, b) => a.priority - b.priority)[0];
+  return liveItem?.status;
 }
 
 const DESCRIPTIONS: Record<string, string> = {
@@ -227,18 +266,24 @@ export default async function LocaleHome({
   const liveGuides = sortByPriority(LIVE_GUIDES).slice(0, 3);
   const priorityGames = HOMEPAGE_PRIORITY_GAMES.filter((gameId) => GAMES[gameId]);
 
+  const orderedGames = [...priorityGames, ...GAME_IDS.filter((gameId) => !priorityGames.includes(gameId))];
+  const spotlightGames = orderedGames.slice(0, 5);
+  const updateFeed: HomeFeedItem[] = sortByPriority([...LIVE_BANNERS, ...LIVE_VERSION_UPDATES, ...LIVE_CODE_SUMMARIES, ...LIVE_GUIDES]).slice(0, 8);
+
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-6 md:py-8">
       {/* Live Hub */}
-      <section className="mb-10 overflow-hidden rounded-lg border border-game-border bg-game-surface">
-        <div className="grid gap-0 lg:grid-cols-[1.08fr_1fr]">
-          <div className="border-b border-game-border p-6 md:p-8 lg:border-b-0 lg:border-r">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-game-primary/40 bg-game-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-game-primary">
+      <section className="mb-8 overflow-hidden rounded-lg border border-game-border bg-game-surface">
+        <div className="grid gap-0 xl:grid-cols-[minmax(0,1.05fr)_minmax(380px,0.95fr)]">
+          <div className="relative border-b border-game-border p-5 md:p-8 xl:border-b-0 xl:border-r">
+            <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(135deg,rgba(255,255,255,.08)_1px,transparent_1px)] [background-size:22px_22px]" aria-hidden="true" />
+            <div className="relative">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-game-primary/40 bg-game-primary/10 px-3 py-1 text-xs font-semibold uppercase text-game-primary">
               <Radio className="h-3.5 w-3.5" aria-hidden="true" />
               {HOME_COPY.liveEyebrow[locale]}
             </div>
-            <h1 className="mb-4 max-w-3xl text-3xl font-bold leading-tight text-game-text md:text-5xl">
-              Gachia
+            <h1 className="mb-4 max-w-3xl text-4xl font-black leading-tight text-game-text md:text-6xl">
+              Gachia <span className="text-game-primary">Atlas</span>
             </h1>
             <p className="mb-3 max-w-3xl text-xl font-semibold text-game-text md:text-2xl">
               {HOME_COPY.liveTitle[locale]}
@@ -247,17 +292,37 @@ export default async function LocaleHome({
               {HOME_COPY.liveSubtitle[locale]}
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-2">
-              {priorityGames.map((gameId) => {
+            <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5">
+              {spotlightGames.map((gameId) => {
                 const game = GAMES[gameId];
+                const status = getStatusForGame(gameId);
                 return (
                   <Link
                     key={gameId}
                     href={`/${gameId}` as '/'}
-                    className="rounded-full border px-3 py-1.5 text-sm font-medium text-game-text transition-colors hover:bg-game-surface-alt"
+                    className="group overflow-hidden rounded-lg border bg-game-bg/50 transition-colors hover:bg-game-surface-alt"
                     style={{ borderColor: game.theme.primary + '66' }}
                   >
-                    {game.name[locale]}
+                    <div className="relative aspect-[16/9]">
+                      <Image
+                        src={`/images/og/${gameId}.webp`}
+                        alt={game.name[locale]}
+                        fill
+                        sizes="(min-width: 1280px) 170px, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover transition-transform group-hover:scale-105"
+                        priority={gameId === spotlightGames[0]}
+                      />
+                    </div>
+                    <div className="flex items-center justify-between gap-2 p-3">
+                      <span className="min-w-0 truncate text-sm font-bold text-game-text" title={game.name[locale]}>
+                        {game.name[locale]}
+                      </span>
+                      {status ? (
+                        <span className="shrink-0 rounded-full bg-game-surface px-2 py-0.5 text-[10px] font-semibold text-game-text-muted">
+                          {STATUS_LABELS[status][locale]}
+                        </span>
+                      ) : null}
+                    </div>
                   </Link>
                 );
               })}
@@ -283,6 +348,7 @@ export default async function LocaleHome({
                   {HOME_COPY.calendarHint[locale]}
                 </span>
               </Link>
+            </div>
             </div>
           </div>
 
@@ -316,7 +382,7 @@ export default async function LocaleHome({
       </section>
 
       {/* Stats Section */}
-      <section className="mb-10 grid grid-cols-2 gap-4 md:grid-cols-4">
+      <section className="mb-8 grid grid-cols-2 gap-3 md:grid-cols-4">
         {[
           { value: t.statsCharacters },
           { value: t.statsWeapons },
@@ -325,7 +391,7 @@ export default async function LocaleHome({
         ].map((stat) => (
           <div
             key={stat.value}
-            className="rounded-lg border border-game-border bg-game-surface p-4 text-center"
+            className="rounded-lg border border-game-border bg-game-surface-alt/70 p-4 text-center"
           >
             <div className="text-lg font-bold text-game-text">{stat.value}</div>
           </div>
@@ -342,41 +408,55 @@ export default async function LocaleHome({
       </div>
 
       {/* Game Cards */}
-      <section className="mb-12 grid gap-6 md:grid-cols-3 lg:grid-cols-4">
-        {[...priorityGames, ...GAME_IDS.filter((gameId) => !priorityGames.includes(gameId))].map((gameId) => {
+      <section className="mb-10 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+        {orderedGames.map((gameId, index) => {
           const game = GAMES[gameId];
           const ctas = getGameCtas(gameId, locale);
+          const status = getStatusForGame(gameId);
           return (
             <article
               key={gameId}
-              className="group overflow-hidden rounded-lg border bg-game-surface transition-colors hover:border-game-primary"
+              className="group grid overflow-hidden rounded-lg border bg-game-surface transition-colors hover:border-game-primary sm:grid-cols-[150px_minmax(0,1fr)]"
               style={{ borderColor: game.theme.primary + '40' }}
             >
               <Link href={`/${gameId}` as '/'} className="block">
-                <div className="relative h-32 w-full overflow-hidden">
+                <div className="relative h-36 w-full overflow-hidden sm:h-full">
                   <Image
                     src={`/images/og/${gameId}.webp`}
                     alt={`${game.name[locale]} - ${locale === 'zh' ? '游戏攻略Wiki' : locale === 'ja' ? 'ゲーム攻略Wiki' : 'Game Wiki'}`}
-                    width={400}
-                    height={210}
+                    fill
+                    sizes="(min-width: 1280px) 150px, (min-width: 768px) 150px, 100vw"
                     className="h-full w-full object-cover transition-transform group-hover:scale-105"
                     loading="lazy"
                   />
+                  <div className="absolute left-2 top-2 rounded-full bg-black/55 px-2 py-0.5 text-[10px] font-bold text-white">
+                    #{index + 1}
+                  </div>
                 </div>
               </Link>
-              <div className="p-5">
-                <div className="mb-4 flex items-start justify-between gap-3">
-                  <h2
-                    className="text-xl font-bold"
-                    style={{ color: game.theme.primary }}
-                  >
-                    {game.name[locale]}
-                  </h2>
+              <div className="min-w-0 p-4">
+                <div className="mb-3 flex items-start justify-between gap-3">
+                  <div className="min-w-0">
+                    <h2
+                      className="truncate text-lg font-black"
+                      style={{ color: game.theme.primary }}
+                    >
+                      {game.name[locale]}
+                    </h2>
+                    <div className="mt-1 flex flex-wrap gap-2 text-[11px] text-game-text-muted">
+                      <span>{getRouteCount(gameId)} {TRACK_LABELS.routes[locale]}</span>
+                      {FEATURED[gameId]?.length ? (
+                        <span>{FEATURED[gameId]?.length ?? 0} {TRACK_LABELS.chars[locale]}</span>
+                      ) : null}
+                      {status ? <span>{STATUS_LABELS[status][locale]}</span> : null}
+                    </div>
+                  </div>
                   <Link
                     href={`/${gameId}` as '/'}
-                    className="shrink-0 rounded-md border border-game-border px-2.5 py-1 text-xs font-medium text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary"
+                    className="inline-flex shrink-0 items-center gap-1 rounded-md border border-game-border px-2.5 py-1 text-xs font-medium text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary"
                   >
                     {HOME_COPY.exploreGame[locale]}
+                    <ArrowRight className="h-3 w-3" aria-hidden="true" />
                   </Link>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
@@ -384,7 +464,7 @@ export default async function LocaleHome({
                     <Link
                       key={cta.href}
                       href={cta.href as '/'}
-                      className="rounded-md bg-game-surface-alt px-2.5 py-2 text-center text-xs font-medium text-game-text-muted transition-colors hover:text-game-primary"
+                      className="rounded-md bg-game-surface-alt px-2.5 py-2 text-center text-xs font-semibold text-game-text-muted transition-colors hover:text-game-primary"
                     >
                       {cta.label}
                     </Link>
@@ -394,6 +474,31 @@ export default async function LocaleHome({
             </article>
           );
         })}
+      </section>
+
+      <section className="mb-10 rounded-lg border border-game-border bg-game-surface p-4 md:p-5">
+        <div className="mb-4 flex items-center gap-2 text-xl font-bold text-game-text">
+          <Gamepad2 className="h-5 w-5 text-game-primary" aria-hidden="true" />
+          {HOME_COPY.liveFeed[locale]}
+        </div>
+        <div className="grid gap-2 md:grid-cols-2">
+          {updateFeed.map((item) => {
+            const game = GAMES[item.gameId];
+            return (
+              <Link
+                key={`${item.gameId}-${item.href}-${localizeText(item.title, locale)}`}
+                href={item.href as '/'}
+                className="flex items-center gap-3 rounded-md border border-game-border bg-game-surface-alt/60 p-3 transition-colors hover:border-game-primary"
+              >
+                <span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ backgroundColor: game.theme.primary }} />
+                <span className="min-w-0 flex-1 truncate text-sm font-semibold text-game-text">
+                  {localizeText(item.title, locale)}
+                </span>
+                <span className="shrink-0 text-xs text-game-text-muted">{game.name[locale]}</span>
+              </Link>
+            );
+          })}
+        </div>
       </section>
 
       {/* Featured Characters per Game */}
@@ -468,10 +573,10 @@ function LivePanel({
   icon: React.ReactNode;
   items: Array<{
     gameId: keyof typeof GAMES;
-    title: Parameters<typeof localizeText>[0];
-    summary: Parameters<typeof localizeText>[0];
+    title: LocalizedText;
+    summary: LocalizedText;
     href: string;
-    status?: keyof typeof STATUS_LABELS;
+    status?: LiveStatus;
     updatedAt: string;
   }>;
   locale: SupportedLocale;
