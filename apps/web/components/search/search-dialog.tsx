@@ -30,7 +30,7 @@ const GAME_NAMES: Record<string, Record<string, string>> = {
   endfield: { zh: '终末地', en: 'Endfield', ja: 'エンドフィールド' },
   sea: { zh: '遗忘之海', en: 'Sea of Remnants', ja: 'シー・オブ・レムナンツ' },
   skjh: { zh: '失控进化', en: 'Ashfall Evolution', ja: '失控進化' },
-  aniimo: { zh: 'Aniimo', en: 'Aniimo', ja: 'Aniimo' },
+  aniimo: { zh: '伊莫', en: 'Aniimo', ja: 'アニモ' },
 };
 
 const TYPE_LABELS: Record<string, Record<string, string>> = {

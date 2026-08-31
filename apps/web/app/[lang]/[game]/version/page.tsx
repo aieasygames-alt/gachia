@@ -750,14 +750,14 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
   aniimo: {
     title: { zh: '全球上线前专题', en: 'Global Launch Hub', ja: 'グローバルリリース特集' },
     description: {
-      zh: 'Aniimo 官方上线节奏为 PC/主机 2026-09-16、移动端 2026-09-23。本专题追踪下载入口、预注册奖励、Aniimo 图鉴、地图区域、兑换码状态和上线后验证清单。',
+      zh: '伊莫（Aniimo）官方上线节奏为 PC/主机 2026-09-16、移动端 2026-09-23。本专题追踪下载入口、预注册奖励、Aniimo 图鉴、地图区域、兑换码状态和上线后验证清单。',
       en: 'Aniimo launches on PC/console on 2026-09-16 and mobile on 2026-09-23. This hub tracks downloads, rewards, the Aniimo database, regions, code status, and launch verification.',
-      ja: 'AniimoはPC/コンソールが2026-09-16、モバイルが2026-09-23予定。DL、報酬、図鑑、地域、コード、確認項目を追跡します。',
+      ja: 'アニモ（Aniimo）はPC/コンソールが2026-09-16、モバイルが2026-09-23予定。DL、報酬、図鑑、地域、コード、確認項目を追跡します。',
     },
     highlights: {
       zh: ['2026-09-16 PC/主机', '2026-09-23 移动端', '89 个 Aniimo', '6 个区域', '暂无官方兑换码'],
       en: ['2026-09-16 PC/console', '2026-09-23 mobile', '89 Aniimo', '6 regions', 'No official codes yet'],
-      ja: ['2026-09-16 PC/コンソール', '2026-09-23 モバイル', '89 Aniimo', '6地域', '公式コード未確認'],
+      ja: ['2026-09-16 PC/コンソール', '2026-09-23 モバイル', '89体のAniimo', '6地域', '公式コード未確認'],
     },
     kicker: { zh: '上线前追踪', en: 'Launch tracking', ja: 'リリース追跡' },
     freshness: {
@@ -767,11 +767,11 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
     },
     faq: [
       {
-        question: { zh: 'Aniimo 什么时候上线？', en: 'When does Aniimo launch?', ja: 'Aniimoはいつ配信されますか？' },
+        question: { zh: '伊莫什么时候上线？', en: 'When does Aniimo launch?', ja: 'アニモはいつ配信されますか？' },
         answer: { zh: '官方日期为 PC/主机 2026-09-16，移动端 2026-09-23。具体小时可能按平台和地区变化。', en: 'The official dates are 2026-09-16 for PC/console and 2026-09-23 for mobile. Exact unlock hours may vary by platform and region.', ja: '公式日程はPC/コンソールが2026-09-16、モバイルが2026-09-23です。時間は地域とストアで変わる場合があります。' },
       },
       {
-        question: { zh: '现在有 Aniimo 兑换码吗？', en: 'Are there Aniimo codes now?', ja: 'Aniimoのコードはありますか？' },
+        question: { zh: '现在有伊莫兑换码吗？', en: 'Are there Aniimo codes now?', ja: 'アニモのコードはありますか？' },
         answer: { zh: '目前没有确认的公开兑换码。预注册奖励和里程碑奖励是真实奖励，但需要和可输入兑换码分开标注。', en: 'No public redeem code is confirmed yet. Pre-registration and milestone rewards are real, but they are separate from redeemable code strings.', ja: '公開交換コードは未確認です。事前登録報酬とマイルストーン報酬はありますが、入力式コードとは分けて扱います。' },
       },
     ],

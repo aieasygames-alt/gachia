@@ -35,7 +35,7 @@ export function AniimoCharacterDetailPage({ id, locale }: { id: string; locale: 
   return (
     <article className="space-y-8">
       <nav className="flex items-center gap-2 text-sm text-game-text-muted">
-        <Link href="/aniimo" className="hover:text-game-primary">Aniimo</Link>
+        <Link href="/aniimo" className="hover:text-game-primary">{game.name[locale]}</Link>
         <span>/</span>
         <Link href="/aniimo/characters" className="hover:text-game-primary">
           {CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
@@ -58,7 +58,7 @@ export function AniimoCharacterDetailPage({ id, locale }: { id: string; locale: 
 
         <div>
           <p className="mb-2 text-sm font-medium" style={{ color: game.theme.primary }}>
-            Aniimo Wiki
+            {game.name[locale]} Wiki
           </p>
           <h1 className="mb-3 text-3xl font-bold text-game-text">{charName}</h1>
           <p className="mb-5 max-w-3xl text-sm leading-relaxed text-game-text-muted">

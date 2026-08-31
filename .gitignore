@@ -12,3 +12,5 @@ coverage/
 .vercel/
 .wrangler/
 .open-next/
+.open-next-old-*/
+.workbuddy/

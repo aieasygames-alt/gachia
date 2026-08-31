@@ -1,14 +1,14 @@
 [
   {
     "id": "download",
-    "title": "Aniimo 下载、上线时间与平台指南",
+    "title": "伊莫下载、上线时间与平台指南",
     "titleEn": "Aniimo Download, Release Date & Platforms",
     "category": "download",
     "categoryZh": "下载配置",
     "categoryEn": "Download",
-    "summary": "下载 Aniimo 时，最稳妥的入口是官方网站和各平台官方商店。PC 与主机版本按 2026 年 9 月 16 日追踪，移动端按 2026 年 9 月 23 日追踪。上线前不同商店可能显示愿望单、预约或预注册，含义略有差异，但都应以官方页面为准。不要使用 APK 镜像、转载安装包或来源不明的下载按钮。",
+    "summary": "下载伊莫时，最稳妥的入口是官方网站和各平台官方商店。PC 与主机版本按 2026 年 9 月 16 日追踪，移动端按 2026 年 9 月 23 日追踪。上线前不同商店可能显示愿望单、预约或预注册，含义略有差异，但都应以官方页面为准。不要使用 APK 镜像、转载安装包或来源不明的下载按钮。",
     "summaryEn": "The safest way to download Aniimo is to start from an official storefront or the official Aniimo website. Aniimo is listed as a free-to-play creature-catching open-world RPG, and each platform page can use a slightly different call to action before launch. Steam and Epic Games Store use wishlist flows for PC discovery, console pages use platform store wishlists, and mobile pages can show pre-order or pre-registration depending on region. Avoid APK mirrors, reposted installers, and unofficial download buttons, especially before the global launch windows are active.",
-    "content": "## 如何安全下载 Aniimo\n\n下载 Aniimo 时，优先从 Aniimo 官方网站、Steam、Epic Games Store、Xbox、PlayStation、Google Play 或 App Store 等官方入口进入。Aniimo 是免费开放世界生物收集 RPG，上线前不同平台会出现不同按钮：PC 商店常见愿望单，主机商店常见关注或预约，移动商店则可能显示预约、预注册或暂未开放。\n\n不要点击 APK 镜像、转载安装包、网盘安装器或来源不明的“高速下载”按钮。上线窗口尚未开启前，非官方安装包尤其容易带来账号、设备和安全风险。\n\n## 该选哪个平台？\n\nPC 和主机玩家应关注 2026 年 9 月 16 日的首批上线窗口，覆盖 Steam、Epic Games Store、Xbox、PlayStation 与官方网站。移动玩家应关注 2026 年 9 月 23 日的移动端窗口，主要看 Google Play 与 App Store。\n\n如果你的地区暂时看不到商店页面，不代表平台取消。更稳妥的做法是先收藏官方网站，并在临近上线时再次检查，因为区域商店可见性可能会随审核、分区和预注册节奏调整。\n\n## 安装前检查\n\n安装前先确认发布商与开发团队信息是否和官方页面一致，使用你准备长期游玩的账号体系，并把预注册奖励、愿望单奖励和兑换码分开看。预注册奖励通常通过官方活动或账号系统发放，兑换码则需要游戏内或网页兑换入口。\n\n- 官方入口：从官网或平台商店进入，不从镜像站下载。\n- 平台日期：PC/主机按 2026 年 9 月 16 日追踪，移动端按 2026 年 9 月 23 日追踪。\n- 奖励区分：愿望单、预约、预注册和兑换码不是同一种领取方式。",
+    "content": "## 如何安全下载伊莫\n\n下载伊莫时，优先从 Aniimo 官方网站、Steam、Epic Games Store、Xbox、PlayStation、Google Play 或 App Store 等官方入口进入。伊莫（Aniimo）是免费开放世界生物收集 RPG，上线前不同平台会出现不同按钮：PC 商店常见愿望单，主机商店常见关注或预约，移动商店则可能显示预约、预注册或暂未开放。\n\n不要点击 APK 镜像、转载安装包、网盘安装器或来源不明的“高速下载”按钮。上线窗口尚未开启前，非官方安装包尤其容易带来账号、设备和安全风险。\n\n## 该选哪个平台？\n\nPC 和主机玩家应关注 2026 年 9 月 16 日的首批上线窗口，覆盖 Steam、Epic Games Store、Xbox、PlayStation 与官方网站。移动玩家应关注 2026 年 9 月 23 日的移动端窗口，主要看 Google Play 与 App Store。\n\n如果你的地区暂时看不到商店页面，不代表平台取消。更稳妥的做法是先收藏官方网站，并在临近上线时再次检查，因为区域商店可见性可能会随审核、分区和预注册节奏调整。\n\n## 安装前检查\n\n安装前先确认发布商与开发团队信息是否和官方页面一致，使用你准备长期游玩的账号体系，并把预注册奖励、愿望单奖励和兑换码分开看。预注册奖励通常通过官方活动或账号系统发放，兑换码则需要游戏内或网页兑换入口。\n\n- 官方入口：从官网或平台商店进入，不从镜像站下载。\n- 平台日期：PC/主机按 2026 年 9 月 16 日追踪，移动端按 2026 年 9 月 23 日追踪。\n- 奖励区分：愿望单、预约、预注册和兑换码不是同一种领取方式。",
     "contentEn": "## How to download Aniimo safely\n\nThe safest way to download Aniimo is to start from an official storefront or the official Aniimo website. Aniimo is listed as a free-to-play creature-catching open-world RPG, and each platform page can use a slightly different call to action before launch. Steam and Epic Games Store use wishlist flows for PC discovery, console pages use platform store wishlists, and mobile pages can show pre-order or pre-registration depending on region. Avoid APK mirrors, reposted installers, and unofficial download buttons, especially before the global launch windows are active.\n\n## Which Aniimo platform should you choose?\n\nPC and console players should track the September 16, 2026 launch window through Steam, Epic Games Store, Xbox, PlayStation and the official website. Mobile players should track the September 23, 2026 launch window through Google Play and the App Store. If a store page is not visible in your country yet, use the official website as the source of truth and check again closer to launch because regional storefront visibility can change without a separate news post.\n\n## Before installing\n\nUse the same account ecosystem you plan to play on at launch, confirm that the publisher and developer match the official listing, and keep launch rewards separate from redeem codes. Pre-registration and wishlist rewards are usually delivered through official systems, while redeem codes require a separate code field or redemption page. This site tracks both, but it does not link to unofficial installers.\n\n- Use official storefronts: Start from the official website or platform store page for your device. Avoid APK mirrors or unofficial installers until Pawprint Studio publishes direct files.\n- Check platform dates: PC and console availability is tracked for September 16, 2026, while mobile availability is tracked for September 23, 2026.\n- Wishlist or pre-register: Store pages can use different labels, but wishlist, pre-order and pre-register actions all help you follow launch availability.",
     "tags": [
       "download",
@@ -18,11 +18,11 @@
     "faq": [
       {
         "question": "Where can I pre-register for Aniimo?",
-        "questionZh": "在哪里预约 Aniimo？",
+        "questionZh": "在哪里预约伊莫？",
         "answer": "Use the official Aniimo website and official store pages such as Google Play when available in your region.",
         "answerZh": "优先使用 Aniimo 官方网站和所在地区可见的官方商店页面，例如 Google Play、App Store、Steam 或主机商店。",
-        "questionJa": "Aniimo はどこで事前登録できますか？",
-        "answerJa": "Aniimo 公式サイトと、地域で表示されている Google Play、App Store、Steam、各コンソールストアなどの公式ページを使ってください。"
+        "questionJa": "アニモはどこで事前登録できますか？",
+        "answerJa": "アニモ（Aniimo）公式サイトと、地域で表示されている Google Play、App Store、Steam、各コンソールストアなどの公式ページを使ってください。"
       },
       {
         "question": "What platforms is Aniimo launching on?",
@@ -34,20 +34,20 @@
       }
     ],
     "updatedAt": "2026-08-30",
-    "titleJa": "Aniimo ダウンロード・配信日・対応プラットフォーム",
-    "summaryJa": "Aniimo をダウンロードする場合は、公式サイトまたは各プラットフォームの公式ストアから確認するのが安全です。PC・コンソール版は 2026 年 9 月 16 日、モバイル版は 2026 年 9 月 23 日として追跡します。配信前はストアごとにウィッシュリスト、予約、事前登録など表示が異なるため、必ず公式ページを基準にしてください。非公式 APK や転載インストーラーは避けましょう。",
-    "contentJa": "## Aniimo を安全にダウンロードする方法\n\nAniimo を入手する場合は、公式サイト、Steam、Epic Games Store、Xbox、PlayStation、Google Play、App Store などの公式導線を使ってください。Aniimo は基本プレイ無料のオープンワールド生物収集 RPG で、配信前はプラットフォームごとに表示が異なります。PC ストアではウィッシュリスト、コンソールではフォローや予約、モバイルでは予約注文や事前登録が表示されることがあります。\n\n非公式 APK、転載インストーラー、クラウドドライブ配布、出所不明の高速ダウンロードボタンは避けてください。正式配信前は特に、アカウントや端末のリスクが高くなります。\n\n## どのプラットフォームを選ぶべき？\n\nPC・コンソールで遊ぶ場合は、2026 年 9 月 16 日の配信枠を Steam、Epic Games Store、Xbox、PlayStation、公式サイトで確認します。モバイルで遊ぶ場合は、2026 年 9 月 23 日の配信枠を Google Play と App Store で確認します。\n\n自分の地域でストアページが見えない場合でも、すぐに対応中止とは限りません。地域ごとの審査やストア表示は変わることがあるため、公式サイトを基準にして配信直前に再確認しましょう。\n\n## インストール前の確認\n\n配信元と開発元が公式情報と一致しているか、長期的に使う予定のアカウントで登録しているかを確認します。また、事前登録報酬、ウィッシュリスト報酬、交換コードは別の仕組みとして扱ってください。\n\n- 公式導線：公式サイトまたは各ストアから確認する。\n- 配信日：PC・コンソールは 2026 年 9 月 16 日、モバイルは 2026 年 9 月 23 日。\n- 報酬区分：ウィッシュリスト、予約、事前登録、交換コードは受け取り方法が異なる。"
+    "titleJa": "アニモ ダウンロード・配信日・対応プラットフォーム",
+    "summaryJa": "アニモ（Aniimo）をダウンロードする場合は、公式サイトまたは各プラットフォームの公式ストアから確認するのが安全です。PC・コンソール版は 2026 年 9 月 16 日、モバイル版は 2026 年 9 月 23 日として追跡します。配信前はストアごとにウィッシュリスト、予約、事前登録など表示が異なるため、必ず公式ページを基準にしてください。非公式 APK や転載インストーラーは避けましょう。",
+    "contentJa": "## アニモを安全にダウンロードする方法\n\nアニモ（Aniimo）を入手する場合は、公式サイト、Steam、Epic Games Store、Xbox、PlayStation、Google Play、App Store などの公式導線を使ってください。アニモ（Aniimo）は基本プレイ無料のオープンワールド生物収集 RPG で、配信前はプラットフォームごとに表示が異なります。PC ストアではウィッシュリスト、コンソールではフォローや予約、モバイルでは予約注文や事前登録が表示されることがあります。\n\n非公式 APK、転載インストーラー、クラウドドライブ配布、出所不明の高速ダウンロードボタンは避けてください。正式配信前は特に、アカウントや端末のリスクが高くなります。\n\n## どのプラットフォームを選ぶべき？\n\nPC・コンソールで遊ぶ場合は、2026 年 9 月 16 日の配信枠を Steam、Epic Games Store、Xbox、PlayStation、公式サイトで確認します。モバイルで遊ぶ場合は、2026 年 9 月 23 日の配信枠を Google Play と App Store で確認します。\n\n自分の地域でストアページが見えない場合でも、すぐに対応中止とは限りません。地域ごとの審査やストア表示は変わることがあるため、公式サイトを基準にして配信直前に再確認しましょう。\n\n## インストール前の確認\n\n配信元と開発元が公式情報と一致しているか、長期的に使う予定のアカウントで登録しているかを確認します。また、事前登録報酬、ウィッシュリスト報酬、交換コードは別の仕組みとして扱ってください。\n\n- 公式導線：公式サイトまたは各ストアから確認する。\n- 配信日：PC・コンソールは 2026 年 9 月 16 日、モバイルは 2026 年 9 月 23 日。\n- 報酬区分：ウィッシュリスト、予約、事前登録、交換コードは受け取り方法が異なる。"
   },
   {
     "id": "release-date",
-    "title": "Aniimo 上线时间与全球发售日",
+    "title": "伊莫上线时间与全球发售日",
     "titleEn": "Aniimo Release Date",
     "category": "release",
     "categoryZh": "发售日期",
     "categoryEn": "Release",
-    "summary": "Aniimo 官方上线安排分为两个节点：PC 与主机版本为 2026 年 9 月 16 日，移动端为 2026 年 9 月 23 日。也就是说，Steam、Epic Games Store、Xbox、PlayStation 等平台会先形成一波搜索和下载需求，iOS 与 Android 会在一周后迎来移动端入口。具体开服小时仍需等官方或商店倒计时确认。",
+    "summary": "伊莫（Aniimo）官方上线安排分为两个节点：PC 与主机版本为 2026 年 9 月 16 日，移动端为 2026 年 9 月 23 日。也就是说，Steam、Epic Games Store、Xbox、PlayStation 等平台会先形成一波搜索和下载需求，iOS 与 Android 会在一周后迎来移动端入口。具体开服小时仍需等官方或商店倒计时确认。",
     "summaryEn": "The official launch announcement lists Aniimo for PC and consoles on September 16, 2026, followed by mobile on September 23, 2026. That gives the game two visible launch moments: one for Steam, Epic Games Store, Xbox and PlayStation discovery, and one for iOS and Android store availability. The dates should be treated as official calendar dates, while exact hourly unlock timing can still vary by platform, country and storefront update schedule.",
-    "content": "## Aniimo 全球上线时间摘要\n\nAniimo 官方上线安排分为两个节点：PC 与主机版本为 2026 年 9 月 16 日，移动端为 2026 年 9 月 23 日。前一个节点主要对应 Steam、Epic Games Store、Xbox、PlayStation 与官网入口，后一个节点主要对应 iOS 与 Android 商店。\n\n这两个日期可以作为日历级别的官方上线窗口，但具体几点开服、不同地区是否同步解锁、商店页面是否提前开放下载，仍要以临近上线的官方公告和平台倒计时为准。\n\n## 上线前已经确认了什么？\n\n目前可确认的信息包括：Pawprint Studio 开发、免费开放世界 RPG 定位、生物捕捉、Aniipod、Twine、Homeland、实时挑战、区域探索等核心系统。完整刷新点、数值平衡、服务器开放小时、首期活动节奏仍应标为待验证信息。\n\n## 如何维护这个时间页面\n\n发售日期页面优先引用官方公开信息，其次参考官方商店、官网新闻和官方 Wiki。旧测试日期、封闭测试时间和预注册里程碑需要明确标成历史节点，避免玩家把它们误认为正式公测日期。\n\n- PC/主机优先：2026 年 9 月 16 日是第一波下载与愿望单转换节点。\n- 移动端后一周：2026 年 9 月 23 日是移动商店关注重点。\n- 小时级解锁：暂不写死，等官方倒计时或商店页面确认。",
+    "content": "## 伊莫全球上线时间摘要\n\n伊莫（Aniimo）官方上线安排分为两个节点：PC 与主机版本为 2026 年 9 月 16 日，移动端为 2026 年 9 月 23 日。前一个节点主要对应 Steam、Epic Games Store、Xbox、PlayStation 与官网入口，后一个节点主要对应 iOS 与 Android 商店。\n\n这两个日期可以作为日历级别的官方上线窗口，但具体几点开服、不同地区是否同步解锁、商店页面是否提前开放下载，仍要以临近上线的官方公告和平台倒计时为准。\n\n## 上线前已经确认了什么？\n\n目前可确认的信息包括：Pawprint Studio 开发、免费开放世界 RPG 定位、生物捕捉、Aniipod、Twine、Homeland、实时挑战、区域探索等核心系统。完整刷新点、数值平衡、服务器开放小时、首期活动节奏仍应标为待验证信息。\n\n## 如何维护这个时间页面\n\n发售日期页面优先引用官方公开信息，其次参考官方商店、官网新闻和官方 Wiki。旧测试日期、封闭测试时间和预注册里程碑需要明确标成历史节点，避免玩家把它们误认为正式公测日期。\n\n- PC/主机优先：2026 年 9 月 16 日是第一波下载与愿望单转换节点。\n- 移动端后一周：2026 年 9 月 23 日是移动商店关注重点。\n- 小时级解锁：暂不写死，等官方倒计时或商店页面确认。",
     "contentEn": "## Aniimo global release date summary\n\nThe official launch announcement lists Aniimo for PC and consoles on September 16, 2026, followed by mobile on September 23, 2026. That gives the game two visible launch moments: one for Steam, Epic Games Store, Xbox and PlayStation discovery, and one for iOS and Android store availability. The dates should be treated as official calendar dates, while exact hourly unlock timing can still vary by platform, country and storefront update schedule.\n\n## What is confirmed before launch?\n\nConfirmed public information includes the developer and publisher, platform availability, the free-to-play open-world RPG positioning, core systems such as catching with Aniipods, Twine, Homeland, real-time challenges and region-based exploration. Exact launch-day server opening time, complete spawn tables, balance values and final event cadence should remain marked as watchlist data until official sources or in-game verification confirm them.\n\n## How this release tracker is maintained\n\nRelease pages are updated from official public sources first. Storefront text, official news posts and the official Aniimo Wiki are preferred over reposted summaries. If an older beta date or closed test detail appears beside launch information, it is labeled as a past milestone so readers do not confuse it with the global release window.\n\n- PC and console first: The official launch announcement lists PC and console launch before mobile.\n- Mobile follows one week later: The mobile launch window is September 23, 2026, giving store pages time to roll out by region.\n- Exact unlock times: Exact hourly unlock timing is not listed here yet; use store pages and official news for the final countdown.",
     "tags": [
       "release",
@@ -57,18 +57,18 @@
     "faq": [
       {
         "question": "What is Aniimo?",
-        "questionZh": "Aniimo 是什么游戏？",
+        "questionZh": "伊莫是什么游戏？",
         "answer": "Aniimo is a free-to-play creature-catching open-world RPG set on Idyll, developed by Pawprint Studio.",
-        "answerZh": "Aniimo 是 Pawprint Studio 开发的免费开放世界生物收集 RPG，舞台是 Idyll。",
-        "questionJa": "Aniimo はどんなゲームですか？",
-        "answerJa": "Aniimo は Pawprint Studio が開発する基本プレイ無料のオープンワールド生物収集 RPG で、舞台は Idyll です。"
+        "answerZh": "伊莫（Aniimo）是 Pawprint Studio 开发的免费开放世界生物收集 RPG，舞台是 Idyll。",
+        "questionJa": "アニモはどんなゲームですか？",
+        "answerJa": "アニモ（Aniimo）は Pawprint Studio が開発する基本プレイ無料のオープンワールド生物収集 RPG で、舞台は Idyll です。"
       },
       {
         "question": "When does Aniimo launch?",
-        "questionZh": "Aniimo 什么时候上线？",
+        "questionZh": "伊莫什么时候上线？",
         "answer": "Official site news lists PC and console launch for September 16, 2026, with mobile launch on September 23, 2026.",
         "answerZh": "官方信息显示 PC 与主机版本为 2026 年 9 月 16 日，移动端为 2026 年 9 月 23 日。",
-        "questionJa": "Aniimo はいつ配信されますか？",
+        "questionJa": "アニモはいつ配信されますか？",
         "answerJa": "公式情報では PC・コンソール版が 2026 年 9 月 16 日、モバイル版が 2026 年 9 月 23 日に予定されています。"
       },
       {
@@ -81,20 +81,20 @@
       }
     ],
     "updatedAt": "2026-08-30",
-    "titleJa": "Aniimo 配信日・グローバルリリース情報",
-    "summaryJa": "Aniimo の公式リリース予定は 2 段階です。PC・コンソール版は 2026 年 9 月 16 日、モバイル版は 2026 年 9 月 23 日に予定されています。Steam、Epic Games Store、Xbox、PlayStation が先行し、その 1 週間後に iOS と Android の導線が強くなります。正確な開放時刻は、公式告知または各ストアのカウントダウンで確認してください。",
-    "contentJa": "## Aniimo のグローバル配信日まとめ\n\nAniimo の公式リリース予定は 2 つの段階に分かれています。PC・コンソール版は 2026 年 9 月 16 日、モバイル版は 2026 年 9 月 23 日です。前者は Steam、Epic Games Store、Xbox、PlayStation、公式サイトの導線、後者は iOS と Android のストア導線が中心になります。\n\nこの 2 つの日付は公式のカレンダー日として扱えますが、正確な開放時刻、地域ごとの同時解放、事前ダウンロードの有無は、直前の公式告知やストアのカウントダウンで確認してください。\n\n## 配信前に確認されている情報\n\n現時点で確認できるのは、Pawprint Studio 開発、基本プレイ無料のオープンワールド RPG、生物捕獲、Aniipod、Twine、Homeland、リアルタイムチャレンジ、地域探索などの中核システムです。スポーン地点、数値バランス、サーバー開放時刻、初期イベント周期は、正式配信後の検証対象として扱います。\n\n## このページの更新方針\n\nリリース日ページは公式公開情報を最優先し、公式ストア、ニュース、公式 Wiki を補助情報として扱います。過去のテスト日程やクローズドベータ情報は、正式配信日と混同しないよう過去の節目として整理します。\n\n- PC・コンソール先行：2026 年 9 月 16 日が最初の配信導線。\n- モバイルは 1 週間後：2026 年 9 月 23 日がストア確認の重点。\n- 時刻単位の解放：現時点では固定せず、公式カウントダウンを待つ。"
+    "titleJa": "アニモ 配信日・グローバルリリース情報",
+    "summaryJa": "アニモ（Aniimo）の公式リリース予定は 2 段階です。PC・コンソール版は 2026 年 9 月 16 日、モバイル版は 2026 年 9 月 23 日に予定されています。Steam、Epic Games Store、Xbox、PlayStation が先行し、その 1 週間後に iOS と Android の導線が強くなります。正確な開放時刻は、公式告知または各ストアのカウントダウンで確認してください。",
+    "contentJa": "## Aniimo のグローバル配信日まとめ\n\nアニモ（Aniimo）の公式リリース予定は 2 つの段階に分かれています。PC・コンソール版は 2026 年 9 月 16 日、モバイル版は 2026 年 9 月 23 日です。前者は Steam、Epic Games Store、Xbox、PlayStation、公式サイトの導線、後者は iOS と Android のストア導線が中心になります。\n\nこの 2 つの日付は公式のカレンダー日として扱えますが、正確な開放時刻、地域ごとの同時解放、事前ダウンロードの有無は、直前の公式告知やストアのカウントダウンで確認してください。\n\n## 配信前に確認されている情報\n\n現時点で確認できるのは、Pawprint Studio 開発、基本プレイ無料のオープンワールド RPG、生物捕獲、Aniipod、Twine、Homeland、リアルタイムチャレンジ、地域探索などの中核システムです。スポーン地点、数値バランス、サーバー開放時刻、初期イベント周期は、正式配信後の検証対象として扱います。\n\n## このページの更新方針\n\nリリース日ページは公式公開情報を最優先し、公式ストア、ニュース、公式 Wiki を補助情報として扱います。過去のテスト日程やクローズドベータ情報は、正式配信日と混同しないよう過去の節目として整理します。\n\n- PC・コンソール先行：2026 年 9 月 16 日が最初の配信導線。\n- モバイルは 1 週間後：2026 年 9 月 23 日がストア確認の重点。\n- 時刻単位の解放：現時点では固定せず、公式カウントダウンを待つ。"
   },
   {
     "id": "codes-rewards",
-    "title": "Aniimo 兑换码与上线奖励追踪",
+    "title": "伊莫兑换码与上线奖励追踪",
     "titleEn": "Aniimo Codes & Launch Rewards",
     "category": "codes",
     "categoryZh": "兑换码与奖励",
     "categoryEn": "Codes",
-    "summary": "目前本站尚未确认任何公开可兑换的 Aniimo 兑换码。需要区分的是：预注册奖励、里程碑奖励和上线活动奖励是真实奖励，但它们不一定通过兑换码输入框领取。除非官方渠道发布可兑换字符串，或游戏客户端开放兑换入口，否则代码类信息应保持观察状态。",
+    "summary": "目前本站尚未确认任何公开可兑换的 伊莫兑换码。需要区分的是：预注册奖励、里程碑奖励和上线活动奖励是真实奖励，但它们不一定通过兑换码输入框领取。除非官方渠道发布可兑换字符串，或游戏客户端开放兑换入口，否则代码类信息应保持观察状态。",
     "summaryEn": "No public Aniimo redeem code is confirmed on this site yet. That distinction matters for search users because pre-registration rewards, milestone rewards and launch event gifts are real rewards, but they are not necessarily typed into a code redemption box. Until an official channel publishes a redeemable string or the game client exposes a redemption flow, code claims should stay in watchlist status.",
-    "content": "## 现在有 Aniimo 兑换码吗？\n\n目前本站尚未确认任何公开可兑换的 Aniimo 兑换码。玩家搜索“codes”时，最容易混淆预注册奖励、里程碑奖励、上线活动奖励和真正的兑换码。前几类奖励可能自动发放或通过活动页面领取，不一定需要输入字符串。\n\n在官方渠道发布兑换码、游戏内出现兑换入口，或官网提供兑换页面之前，不应把截图转载、社区传言或未知来源列表标成有效代码。\n\n## 如何验证 Aniimo 兑换码\n\n有效兑换码应能追溯到官方新闻、官方社媒、平台活动、直播活动或游戏内兑换界面。上线后，理想的兑换码页面应包含代码、奖励内容、地区限制、平台限制、过期时间、兑换步骤和最后测试时间。\n\n## 已确认的奖励\n\n目前可追踪的奖励包括 Glimmer、Aniipod Ultra、Companion Promise 头像框、Sunlit Meadow 外观、Prismana Aniimo 自选以及神秘 Susuta 蛋。这些适合放在奖励追踪里，但在没有兑换字符串前，不应写成“可用兑换码”。\n\n- 兑换码：暂无本站确认的公开兑换码。\n- 预约奖励：与兑换码分开展示，避免误导玩家。\n- 验证规则：只有官方发布或游戏内可兑换后才标为有效。",
+    "content": "## 现在有伊莫兑换码吗？\n\n目前本站尚未确认任何公开可兑换的伊莫兑换码。玩家搜索“codes”时，最容易混淆预注册奖励、里程碑奖励、上线活动奖励和真正的兑换码。前几类奖励可能自动发放或通过活动页面领取，不一定需要输入字符串。\n\n在官方渠道发布兑换码、游戏内出现兑换入口，或官网提供兑换页面之前，不应把截图转载、社区传言或未知来源列表标成有效代码。\n\n## 如何验证伊莫兑换码\n\n有效兑换码应能追溯到官方新闻、官方社媒、平台活动、直播活动或游戏内兑换界面。上线后，理想的兑换码页面应包含代码、奖励内容、地区限制、平台限制、过期时间、兑换步骤和最后测试时间。\n\n## 已确认的奖励\n\n目前可追踪的奖励包括 Glimmer、Aniipod Ultra、Companion Promise 头像框、Sunlit Meadow 外观、Prismana Aniimo 自选以及神秘 Susuta 蛋。这些适合放在奖励追踪里，但在没有兑换字符串前，不应写成“可用兑换码”。\n\n- 兑换码：暂无本站确认的公开兑换码。\n- 预约奖励：与兑换码分开展示，避免误导玩家。\n- 验证规则：只有官方发布或游戏内可兑换后才标为有效。",
     "contentEn": "## Are there Aniimo codes right now?\n\nNo public Aniimo redeem code is confirmed on this site yet. That distinction matters for search users because pre-registration rewards, milestone rewards and launch event gifts are real rewards, but they are not necessarily typed into a code redemption box. Until an official channel publishes a redeemable string or the game client exposes a redemption flow, code claims should stay in watchlist status.\n\n## How to verify an Aniimo code\n\nA code should be checked against official news, verified social posts, platform campaigns, launch livestreams or the in-game redemption screen. If a code is shared only through reposted screenshots or unsourced lists, it should not be marked active. Once launch begins, the best code page experience will include the code, reward, region, platform restrictions, expiration date, redemption steps and a last-tested timestamp.\n\n## Rewards that are confirmed\n\nConfirmed rewards currently include pre-registration and milestone items such as Glimmer, Aniipod Ultra, the Companion Promise avatar frame, the Sunlit Meadow outfit, a Prismana Aniimo choice and a mysterious Susuta egg. These belong on the rewards tracker even when there is no active redeem code.\n\n- Redeem codes: No public redeem code is confirmed here yet. Keep code claims separate from official pre-registration rewards.\n- Reward milestones: Milestone rewards are confirmed through official launch and pre-registration pages, even when they are not typed as redeem codes.\n- Verification rule: A code should only be marked active after it appears on an official channel or can be redeemed in-game.",
     "tags": [
       "codes",
@@ -106,13 +106,13 @@
         "question": "Are there official Aniimo codes?",
         "questionZh": "Aniimo 有官方兑换码吗？",
         "answer": "No public redeem code is confirmed here yet. This page separates redeem codes from official milestone rewards.",
-        "answerZh": "目前本站尚未确认公开可兑换的 Aniimo 兑换码。本页会把兑换码和官方里程碑奖励分开记录。",
+        "answerZh": "目前本站尚未确认公开可兑换的 伊莫兑换码。本页会把兑换码和官方里程碑奖励分开记录。",
         "questionJa": "Aniimo に公式交換コードはありますか？",
         "answerJa": "現時点で、このサイトでは公開済みの交換コードを確認していません。交換コードと公式マイルストーン報酬は分けて掲載します。"
       },
       {
         "question": "What are the official pre-registration rewards?",
-        "questionZh": "Aniimo 官方预注册奖励有哪些？",
+        "questionZh": "伊莫官方预注册奖励有哪些？",
         "answer": "Official rewards include Glimmer, Aniipod Ultra, Companion Promise avatar frame, Sunlit Meadow outfit, a Prismana Aniimo choice and a Susuta egg.",
         "answerZh": "已公开奖励包括 Glimmer、Aniipod Ultra、Companion Promise 头像框、Sunlit Meadow 外观、Prismana Aniimo 自选和 Susuta 蛋。",
         "questionJa": "Aniimo の事前登録報酬は何ですか？",

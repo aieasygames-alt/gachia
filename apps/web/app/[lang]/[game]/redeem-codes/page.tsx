@@ -46,9 +46,9 @@ const REDEEM_DESC: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
     ja: 'ロコキングダム（中国版）の交換コード一覧。公測の恒常コード、S2シーズンコード、クリエイターコード、期間限定パスワードを整理しています。',
   },
   aniimo: {
-    zh: 'Aniimo 兑换码与奖励追踪，区分暂无官方兑换码、预注册奖励、里程碑奖励和上线后需要核验的兑换入口。',
+    zh: '伊莫兑换码与奖励追踪，区分暂无官方兑换码、预注册奖励、里程碑奖励和上线后需要核验的兑换入口。',
     en: 'Aniimo code and reward tracker separating no confirmed public codes from pre-registration rewards, milestone rewards, and launch verification.',
-    ja: 'Aniimoのコードと報酬を追跡。公式コード未確認、事前登録報酬、マイルストーン報酬、リリース後確認を分けて整理します。',
+    ja: 'アニモのコードと報酬を追跡。公式コード未確認、事前登録報酬、マイルストーン報酬、リリース後確認を分けて整理します。',
   },
 };
 
@@ -181,9 +181,9 @@ export default async function RedeemCodesPage({
       ja: 'ゲームのメインメニュー左下の歯車（設定）→ ユーザー → 交換コードからコードを正確に入力して送信。報酬はメールボックスに届きます。各コードはアカウントごとに1回のみ、大文字小文字は区別されます。期間限定コードは期限切れに注意。',
     },
     aniimo: {
-      zh: 'Aniimo 目前没有确认的公开兑换码。预注册奖励、里程碑奖励和上线活动奖励会单独追踪；正式兑换入口以上线后游戏内或官方公告为准。',
+      zh: '伊莫目前没有确认的公开兑换码。预注册奖励、里程碑奖励和上线活动奖励会单独追踪；正式兑换入口以上线后游戏内或官方公告为准。',
       en: 'Aniimo has no confirmed public redeem code yet. Pre-registration, milestone, and launch event rewards are tracked separately; final redemption steps depend on the live client or official notices.',
-      ja: 'Aniimoの公開交換コードはまだ確認されていません。事前登録、マイルストーン、リリースイベント報酬は別で追跡します。',
+      ja: 'アニモの公開交換コードはまだ確認されていません。事前登録、マイルストーン、リリースイベント報酬は別で追跡します。',
     },
   };
 
@@ -297,11 +297,11 @@ function AniimoRedeemHub({ locale }: { locale: SupportedLocale }) {
     <div className="mb-8 space-y-6">
       <section className="rounded-lg border border-game-border bg-game-surface p-6">
         <h2 className="mb-3 text-lg font-semibold text-game-text">
-          {t('Aniimo 兑换码状态', 'Aniimo Code Status', 'Aniimoコード状況')}
+          {t('伊莫兑换码状态', 'Aniimo Code Status', 'アニモコード状況')}
         </h2>
         <p className="mb-4 text-sm leading-relaxed text-game-text-muted">
           {t(
-            '截至 2026-08-27，暂无已确认的公开 Aniimo 兑换码。PC/主机上线日期为 2026-09-16，移动端上线日期为 2026-09-23；上线后将优先核验游戏内兑换入口、官网新闻、平台商店活动和官方社区。',
+            '截至 2026-08-27，暂无已确认的公开伊莫兑换码。PC/主机上线日期为 2026-09-16，移动端上线日期为 2026-09-23；上线后将优先核验游戏内兑换入口、官网新闻、平台商店活动和官方社区。',
             'As of 2026-08-27, no public Aniimo redeem code is confirmed. PC/console launches on 2026-09-16 and mobile launches on 2026-09-23; after launch, this page will verify the in-game redemption flow, official news, store campaigns, and community posts.',
             '2026-08-27時点で、公開交換コードは未確認です。PC/コンソールは2026-09-16、モバイルは2026-09-23予定。リリース後に交換入口と公式情報を確認します。'
           )}

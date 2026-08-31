@@ -151,9 +151,9 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
     ja: 'ロコキングダム国際版はTencentのグローバル向けオープンワールド収集RPG。初回CBT「Quack Quack Test」は2026年10月27日開始。Gachiaは公式公開ジニーの属性、レアリティ、進化、役割を整理し、CBT後に拡充。杖は攻撃数値なしの外観武器で、バトルパスとイベントから入手。TierはCBT暫定。国際版と中国版は独立、多言語対応。',
   },
   aniimo: {
-    zh: 'Aniimo 是 Pawprint Studio 开发的免费开放世界生物收集 RPG，世界名为 Idyll。官方日期为 PC/主机 2026-09-16、移动端 2026-09-23。Gachia 目前整理 89 个公开 Aniimo 条目、6 个区域、下载入口、预注册奖励、兑换码状态和上线后路线验证清单。',
+    zh: '伊莫（Aniimo）是 Pawprint Studio 开发的免费开放世界生物收集 RPG，世界名为 Idyll。官方日期为 PC/主机 2026-09-16、移动端 2026-09-23。Gachia 目前整理 89 个公开 Aniimo 条目、6 个区域、下载入口、预注册奖励、兑换码状态和上线后路线验证清单。',
     en: 'Aniimo is a free-to-play creature-catching open-world RPG from Pawprint Studio set on Idyll. The official dates are 2026-09-16 for PC/console and 2026-09-23 for mobile. Gachia tracks 89 public Aniimo entries, 6 regions, downloads, pre-registration rewards, code status, and launch-route verification.',
-    ja: 'AniimoはPawprint Studio開発の無料オープンワールド収集RPG。公式日程はPC/コンソールが2026-09-16、モバイルが2026-09-23。Gachiaは89体、6地域、DL、報酬、コード状態を追跡します。',
+    ja: 'アニモ（Aniimo）はPawprint Studio開発の無料オープンワールド収集RPG。公式日程はPC/コンソールが2026-09-16、モバイルが2026-09-23。Gachiaは89体、6地域、DL、報酬、コード状態を追跡します。',
   },
 };
 
@@ -179,9 +179,9 @@ const GAME_META_TITLES: Partial<Record<GameId, Record<SupportedLocale, string>>>
     ja: 'ZZZ v3.1 Wiki — エージェント、バナー、Wエンジン、ディスク',
   },
   aniimo: {
-    zh: 'Aniimo Wiki｜发售日期、下载、图鉴、地图与兑换码追踪',
+    zh: '伊莫 Aniimo Wiki｜发售日期、下载、图鉴、地图与兑换码追踪',
     en: 'Aniimo Wiki — Release Date, Download, Database, Map & Codes',
-    ja: 'Aniimo Wiki — 発売日、DL、図鑑、マップ、コード',
+    ja: 'アニモ Aniimo Wiki — 発売日、DL、図鑑、マップ、コード',
   },
 };
 

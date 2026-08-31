@@ -405,12 +405,12 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
   aniimo: {
     officialUrl: 'https://www.aniimo.com/',
     status: {
-      zh: 'Aniimo 官方日期为 PC/主机 2026-09-16，上线移动端 2026-09-23；下载入口以官网、Steam、Epic、Xbox、PlayStation、App Store 与 Google Play 为准。',
+      zh: '伊莫（Aniimo）官方日期为 PC/主机 2026-09-16，移动端 2026-09-23；下载入口以官网、Steam、Epic、Xbox、PlayStation、App Store 与 Google Play 为准。',
       en: 'Aniimo is officially dated for PC/console on 2026-09-16 and mobile on 2026-09-23; use the official site and platform stores.',
-      ja: 'AniimoはPC/コンソールが2026-09-16、モバイルが2026-09-23予定。公式サイトと各ストアを確認してください。',
+      ja: 'アニモ（Aniimo）はPC/コンソールが2026-09-16、モバイルが2026-09-23予定。公式サイトと各ストアを確認してください。',
     },
     intro: {
-      zh: '这里集中查看 Aniimo 官网、发售日期、平台入口、预注册奖励、兑换码状态和上线前下载注意事项。',
+      zh: '这里集中查看伊莫官网、发售日期、平台入口、预注册奖励、兑换码状态和上线前下载注意事项。',
       en: 'Use this hub for Aniimo official links, release dates, platform stores, pre-registration rewards, code status, and safe download notes.',
       ja: '公式リンク、発売日、ストア、事前登録報酬、コード状態、安全なDL情報をまとめます。',
     },
@@ -443,7 +443,7 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
         description: { zh: '区分暂无兑换码和已确认预注册奖励。', en: 'Separate code status from confirmed launch rewards.', ja: 'コード状態と事前登録報酬を分けて確認。' },
       },
     ],
-    faq: liveFaq('Aniimo', 'Aniimo', 'Aniimo'),
+    faq: liveFaq('伊莫', 'Aniimo', 'アニモ'),
   },
 };
 

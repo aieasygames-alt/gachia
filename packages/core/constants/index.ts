@@ -550,7 +550,7 @@ export const GAMES: Record<GameId, GameModule> = {
   },
   aniimo: {
     id: 'aniimo',
-    name: { zh: 'Aniimo', en: 'Aniimo', ja: 'Aniimo' },
+    name: { zh: '伊莫', en: 'Aniimo', ja: 'アニモ' },
     theme: {
       primary: '#22c55e',
       accent: '#38bdf8',
