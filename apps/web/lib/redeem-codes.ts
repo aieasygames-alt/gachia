@@ -4,5 +4,9 @@ export function isRedeemCodeActive(
 ): boolean {
   if (code.status !== 'active') return false;
   if (!code.expiresAt || code.expiresAt === 'permanent') return true;
-  return new Date(`${code.expiresAt}T23:59:59Z`) >= now;
+  const expiresAt = code.expiresAt.includes('T')
+    ? new Date(code.expiresAt)
+    : new Date(`${code.expiresAt}T23:59:59Z`);
+
+  return expiresAt >= now;
 }

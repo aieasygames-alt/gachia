@@ -12,15 +12,31 @@ import { getKeywordRisk } from '@/lib/keyword-governance';
 
 describe('market intelligence backlog', () => {
   it('stores the current sampling batch as structured opportunities', () => {
-    expect(MARKET_INTEL_BATCH_ID).toBe('market-intel-2026-08-28');
-    expect(MARKET_INTEL_OPPORTUNITIES.length).toBeGreaterThanOrEqual(GAME_IDS.length);
+    expect(MARKET_INTEL_BATCH_ID).toBe('market-intel-2026-08-31');
+    expect(MARKET_INTEL_OPPORTUNITIES.length).toBe(10);
     expect(getMarketIntelValidationIssues()).toEqual([]);
   });
 
-  it('covers every supported game in the 2026-08-28 batch', () => {
-    for (const gameId of GAME_IDS) {
+  it('covers the current-site games in the 2026-08-31 batch', () => {
+    const currentSiteGames = [
+      'genshin',
+      'starrail',
+      'wuwa',
+      'nte',
+      'zzz',
+      'guihuan',
+      'ananta',
+      'endfield',
+      'sea',
+      'skjh',
+    ];
+
+    for (const gameId of currentSiteGames) {
       expect(getMarketIntelForGame(gameId).length).toBeGreaterThan(0);
     }
+    expect(MARKET_INTEL_OPPORTUNITIES.map((opportunity) => opportunity.gameId)).not.toContain('roco');
+    expect(MARKET_INTEL_OPPORTUNITIES.map((opportunity) => opportunity.gameId)).not.toContain('roco-cn');
+    expect(currentSiteGames.every((gameId) => GAME_IDS.includes(gameId))).toBe(true);
   });
 
   it('keeps P0 and P1 opportunities actionable after execution', () => {
@@ -29,16 +45,16 @@ describe('market intelligence backlog', () => {
 
     expect(p0.map((opportunity) => opportunity.gameId)).toEqual([
       'genshin',
-      'wuwa',
       'zzz',
       'endfield',
+      'sea',
       'ananta',
     ]);
     expect(p1.map((opportunity) => opportunity.gameId)).toEqual([
-      'skjh',
+      'wuwa',
       'nte',
+      'skjh',
       'starrail',
-      'sea',
       'guihuan',
     ]);
 

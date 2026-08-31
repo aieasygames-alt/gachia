@@ -1465,5 +1465,35 @@
     "summaryJa": "S1中盤の復帰・後発向けに、通報、ワイプ、カスタムサーバー、電力、ソロ/デュオ復帰ルートを整理します。",
     "content": "## 先看结论\n\nS1 中期的重点不是重新学一遍开荒，而是判断自己在哪个问题上掉队：服务器环境、外挂/非法组队、基地被抄、电力不会接，还是独狼资源循环断了。先定位问题，再决定换服、补电力、改房型或去自定义服练习。\n\n公开报道提到，失控进化上线阶段围绕多模式、反作弊、多端互通和新手体验做了重点沟通。对玩家来说，真正有用的是把这些信息转成每天能执行的路线。\n\n参考来源：[游戏时光上线报道](https://www.vgtime.com/news/teUl9RBGzC94Lmc77DEnrA%3D%3D)、[腾讯游戏官方活动页](https://skjh.qq.com/cp/a20260119skjh/?e_code=552707)、站内反作弊与自定义模式指南。\n\n## 先判断你卡在哪里\n\n| 症状 | 优先处理 | 关联页面 |\n| --- | --- | --- |\n| 总被异常玩家击杀 | 举报证据与换线判断 | anti-cheat-reporting-guide |\n| 上线家就没了 | 选址、防抄家、维护 | base-location-anti-raid-plan |\n| 进服太晚追不上 | 换服周期和低风险路线 | server-wipe-cycle-guide |\n| 不会接自动化 | 太阳能、风电、储能 | electricity-guide |\n| 想练枪或练建筑 | 自定义模式 / 社区服 | custom-mode-community-server-guide |\n\n## S1 中期每日路线\n\n1. 登录后先确认基地维护和领地柜。\n2. 检查门、墙体和外部睡袋是否被试探。\n3. 低风险路线跑一圈，只带能承受损失的装备。\n4. 废料优先补科技树关键节点，不乱点炫技分支。\n5. 晚上或离线前补门、电力和储物分散。\n6. 遇到疑似外挂或非法组队，先录证据再举报，不要只在聊天频道争吵。\n\n## 独狼追赶路线\n\n独狼中期追赶不靠硬刚大队，靠低曝光和高频回收：\n\n- 家搬到低交通区域。\n- 睡袋铺在资源点和撤离路线上。\n- 只跑自己能稳定带回的据点。\n- 核心先石质，资源分散存。\n- 不主动制造长期仇恨。\n\n## 小队中期复盘\n\n小队最常见问题是扩建太快，维护和防守跟不上。建议每天复盘三件事：谁负责资源、谁负责侦查、谁负责电力和防御。没有分工的小队，在 S1 中期会比独狼更容易破产。\n\n## FAQ\n\n### S1 中期还适合入坑吗？\n\n适合，但不要进老服硬追大队。优先选择新周期、低压力服务器或自定义模式练习，再把开荒路线迁移到标准环境。\n\n### 遇到外挂先做什么？\n\n先保留录像、时间、服务器、玩家 ID 和战斗过程，再通过官方举报入口提交。证据越完整，处理越容易闭环。\n\n### 电力系统什么时候学？\n\n有稳定石质核心、维护和基础武器后就可以学。先从太阳能/风电、储能和自动灯/门禁开始，不要一上来做复杂陷阱。",
     "contentEn": "## Quick answer\n\nMidseason S1 is about diagnosing your bottleneck: server pressure, suspicious players, base defense, electricity, or broken solo routes. Fix the bottleneck before chasing bigger raids.\n\n## Checklist\n\n| Problem | First fix |\n|---|---|\n| Suspicious deaths | Record and report evidence |\n| Base always raided | Rework location and cabinet protection |\n| Joined too late | Pick a better wipe cycle |\n| No automation | Learn basic power and storage |\n| Need practice | Use custom/community servers |\n\n## FAQ\n\n### Is midseason too late to start?\n\nNo, but choose lower-pressure servers or a fresh cycle instead of fighting entrenched groups immediately.\n\n### What should solo players do first?\n\nKeep a low-profile base, spread bags, run safe loops, and avoid creating expensive grudges."
+  },
+  {
+    "id": "aug31-event-ended-beginner-catchup",
+    "title": "失控进化 8/31 活动结束后补课路线：WeGame 下载、礼包、S1、服务器模式和防抄家",
+    "titleEn": "Ashfall Evolution Aug 31 Post-Event Catch-Up: WeGame Download, Rewards, S1, Server Modes, and Base Defense",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "summary": "把 8/31 活动收尾后的玩家问题整理成补课路线：错过礼包后怎么办、怎么下载、S1 怎么开荒、服务器怎么选。",
+    "summaryEn": "A post-August-31 catch-up route for rewards, official download, S1 starts, server modes, and base defense.",
+    "tags": [
+      "8/31",
+      "WeGame",
+      "礼包",
+      "S1",
+      "服务器模式",
+      "防抄家",
+      "新手攻略"
+    ],
+    "content": "## 先看结论\n\n8/31 活动结束或进入收尾后，失控进化页面不要继续写成“马上去领全部奖励”。更稳的承接是：确认活动是否仍可领取、用 WeGame / 官方入口下载、选择服务器模式、按 S1 新手路线补资源，再看防抄家基地。\n\n## 补课路线\n\n| 顺序 | 动作 | 为什么 |\n|---|---|---|\n| 1 | 查活动页和邮件 | 判断礼包是否还能领 |\n| 2 | 走官网 / WeGame 下载 | 避免非官方包 |\n| 3 | 选安全区/标准/挑战/速战 | 服务器决定压力 |\n| 4 | 跑 0-2 小时路线 | 先稳资源和基地 |\n| 5 | 学防抄家和选址 | 减少上线后损失 |\n\n## 错过活动怎么办\n\n先确认是否有补领、邮件、平台礼包或回流任务。没有明确公告时，不要承诺还能拿旧奖励；把用户导向当前 S1 资源、日常、服务器选择和基地防御更靠谱。\n\n## 风险提醒\n\n公益服、私服、破解版、非官方包和陌生下载链接不建议承接，下载页只写官网、WeGame、TapTap 或其他可核验入口。",
+    "contentEn": "## Quick answer\n\nAfter the August 31 event window, do not keep promising all rewards as claimable. Route players to event-status checks, official/WeGame download, server-mode choice, S1 starter progress, and base defense.\n\n## Catch-up route\n\nCheck event pages and mail, use official or WeGame download, choose server mode, follow the first 0-2 hour route, then learn base defense and location basics.\n\n## Risk note\n\nDo not route private servers, cracked packages, or unofficial installers into content pages.",
+    "faq": [
+      {
+        "question": "What should I do if I missed the August event?",
+        "questionZh": "错过 8 月活动怎么办？",
+        "answer": "Check event pages and mail first. If no official make-up is listed, focus on current S1 resources, server mode, and starter progression.",
+        "answerZh": "先查活动页和邮件；如果没有官方补领说明，就转向当前 S1 资源、服务器模式和新手路线。"
+      }
+    ],
+    "date": "2026-08-31"
   }
 ]

@@ -601,5 +601,37 @@
       }
     ],
     "date": "2026-07-21"
+  },
+  {
+    "id": "steam-pioneer-test-registration-faq",
+    "title": "终末地 Steam Pioneer Test 招募 FAQ：测试资格、下载入口、Homecoming 与 AIC 蓝图先看什么",
+    "titleEn": "Arknights: Endfield Steam Pioneer Test FAQ: Recruitment, Download, Homecoming, and AIC Blueprints",
+    "titleJa": "エンドフィールド Steam Pioneer Test FAQ：募集、DL、Homecoming、AIC設計図",
+    "category": "beginner",
+    "categoryZh": "新手指南",
+    "categoryEn": "Beginner",
+    "categoryJa": "初心者ガイド",
+    "summary": "整理 Steam Pioneer Test 招募、测试资格、下载入口、官方来源、Homecoming 和 AIC/blueprint 入坑路线。",
+    "summaryEn": "A Steam Pioneer Test starter FAQ for recruitment, eligibility, download entry, official sources, Homecoming, and AIC/blueprints.",
+    "summaryJa": "Steam Pioneer Test募集、資格、DL入口、公式情報、Homecoming、AIC/blueprint導線を整理します。",
+    "tags": [
+      "Steam Pioneer Test",
+      "test recruitment",
+      "download",
+      "Homecoming",
+      "AIC",
+      "blueprint"
+    ],
+    "content": "## 先看结论\n\nSteam Pioneer Test 招募出现后，终末地页面要先回答三个问题：能不能申请、从哪里下载、进测试后先看 Homecoming 还是 AIC/blueprint。测试资格、客户端下载和开放时间都以官网、Steam 页面和官方社区公告为准。\n\n## 资格检查表\n\n| 检查项 | 为什么重要 |\n|---|---|\n| 招募时间 | 判断现在还能不能申请 |\n| 平台 | Steam 测试不等于所有平台同步开放 |\n| 地区与账号 | 影响资格邮件、客户端下载和登录 |\n| NDA / 直播规则 | 决定能否公开分享内容 |\n| 数据继承 | 不要默认测试数据保留 |\n\n## 下载前不要跳过\n\n只使用官方站、Steam 商店页、官方邮件或官方社区给出的入口。不要把第三方安装包、转存客户端或来路不明的测试包写成下载来源。\n\n## 进入测试后先看什么\n\n1. 新玩家先看下载、战斗和 Talos II 探索。\n2. 回流玩家先看 Homecoming 改动和奖励。\n3. 建设玩家直接进入 AIC factory 和 blueprint 入门。\n4. 角色玩家再看干员定位和材料路线。",
+    "contentEn": "## Quick answer\n\nAfter Steam Pioneer Test recruitment appears, Endfield pages should answer eligibility, download entry, and what to read after access. Test access, client availability, and timing should follow the official site, Steam, official email, and official community notices.\n\n## Eligibility checklist\n\n| Check | Why it matters |\n|---|---|\n| Recruitment window | Whether applications are still open |\n| Platform | Steam testing does not mean every platform is open |\n| Region and account | Affects email, client access, and login |\n| NDA / streaming rules | Determines what can be shared publicly |\n| Data carryover | Do not assume test data will remain |\n\n## After access\n\nNew players should start with download/combat/Talos II basics. Returners should read Homecoming. Builders should move into AIC factory and blueprint starters.",
+    "faq": [
+      {
+        "question": "Does Steam Pioneer Test mean full launch?",
+        "questionZh": "Steam Pioneer Test 是正式上线吗？",
+        "answer": "No. Treat it as test recruitment unless official notices say otherwise.",
+        "answerZh": "不是。除非官方公告明确，否则按测试招募处理。"
+      }
+    ],
+    "date": "2026-08-31"
   }
 ]

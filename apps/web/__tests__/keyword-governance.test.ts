@@ -10,6 +10,11 @@ describe('keyword governance', () => {
       '终末地 解包',
       '异环 aes key',
       '失控进化 公益服',
+      'ZZZ vicineko',
+      '原神 akt',
+      '失控进化 私服',
+      '失控进化 破解版',
+      'Ananta 无限大符号',
     ]) {
       expect(isBlockedNoiseQuery(query)).toBe(true);
       expect(getKeywordRisk(query)).toBeDefined();

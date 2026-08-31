@@ -7,7 +7,7 @@ import {
 } from '@/lib/version-snapshots';
 
 const locales = ['zh', 'en', 'ja'] as const;
-const priorityGames = ['zzz', 'wuwa', 'starrail', 'genshin'] as const;
+const priorityGames = ['zzz', 'wuwa', 'starrail', 'genshin', 'endfield', 'sea', 'ananta', 'skjh'] as const;
 
 describe('version snapshots', () => {
   it('covers priority version hubs', () => {
@@ -16,12 +16,19 @@ describe('version snapshots', () => {
     }
   });
 
-  it('marks the current ZZZ snapshot as a v3.2 livestream watch', () => {
+  it('marks the current ZZZ snapshot as a v3.2 post-livestream watch', () => {
     expect(getVersionSnapshot('zzz')).toMatchObject({
-      currentVersion: '3.2 livestream watch',
+      currentVersion: '3.2 post-livestream',
       status: 'watch',
       lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     });
+  });
+
+  it('uses the 2026-08-31 snapshot batch', () => {
+    expect(VERSION_SNAPSHOT_UPDATED_AT).toBe('2026-08-31');
+    expect(getVersionSnapshot('genshin')?.currentVersion).toBe('7.0 Phase II');
+    expect(getVersionSnapshot('endfield')?.currentVersion).toBe('Steam Pioneer Test watch');
+    expect(getVersionSnapshot('sea')?.currentVersion).toBe('early 2027 / December beta watch');
   });
 
   it('has localized copy, dates, and actionable links', () => {
