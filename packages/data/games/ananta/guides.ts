@@ -7,21 +7,27 @@ const rawGuides = await loadJson<unknown>(join(process.cwd(), '../../packages/da
 export interface AnantaGuideFaq {
   question: string;
   questionZh: string;
+  questionJa?: string;
   answer: string;
   answerZh: string;
+  answerJa?: string;
 }
 
 export interface AnantaGuide {
   id: string;
   title: string;
   titleEn: string;
+  titleJa?: string;
   category: string;
   categoryZh: string;
   categoryEn: string;
+  categoryJa?: string;
   summary: string;
   summaryEn: string;
+  summaryJa?: string;
   content: string;
   contentEn: string;
+  contentJa?: string;
   tags: string[];
   faq: AnantaGuideFaq[];
   updatedAt?: string;
@@ -34,15 +40,15 @@ export interface AnantaGuide {
 export const anantaGuides: AnantaGuide[] = rawGuides as unknown as AnantaGuide[];
 
 export function getAnantaGuideTitle(guide: AnantaGuide, locale: SupportedLocale): string {
-  return localeStr(guide.title, guide.titleEn, locale);
+  return localeStr(guide.title, guide.titleEn, locale, guide.titleJa);
 }
 
 export function getAnantaGuideContent(guide: AnantaGuide, locale: SupportedLocale): string {
-  return localeStr(guide.content, guide.contentEn, locale);
+  return localeStr(guide.content, guide.contentEn, locale, guide.contentJa);
 }
 
 export function getAnantaGuideSummary(guide: AnantaGuide, locale: SupportedLocale): string {
-  return localeStr(guide.summary, guide.summaryEn, locale);
+  return localeStr(guide.summary, guide.summaryEn, locale, guide.summaryJa);
 }
 
 export function getAnantaGuideCategory(guide: AnantaGuide, locale: SupportedLocale): string {
@@ -66,11 +72,11 @@ export function getAnantaGuideSlugs(): string[] {
 }
 
 export function getAnantaGuideFaqQuestion(faq: AnantaGuideFaq, locale: SupportedLocale): string {
-  return localeStr(faq.questionZh, faq.question, locale);
+  return localeStr(faq.questionZh, faq.question, locale, faq.questionJa);
 }
 
 export function getAnantaGuideFaqAnswer(faq: AnantaGuideFaq, locale: SupportedLocale): string {
-  return localeStr(faq.answerZh, faq.answer, locale);
+  return localeStr(faq.answerZh, faq.answer, locale, faq.answerJa);
 }
 
 export const ANANTA_GUIDE_CATEGORIES: Record<string, Record<SupportedLocale, string>> = {};

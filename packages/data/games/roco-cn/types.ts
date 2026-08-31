@@ -49,21 +49,27 @@ export interface RocoCnJinie {
 export interface RocoCnGuideFaq {
   question: string;
   questionZh: string;
+  questionJa?: string;
   answer: string;
   answerZh: string;
+  answerJa?: string;
 }
 
 export interface RocoCnGuide {
   id: string;
   title: string;
   titleEn: string;
+  titleJa?: string;
   category: string;
   categoryZh: string;
   categoryEn: string;
+  categoryJa?: string;
   summary: string;
   summaryEn: string;
+  summaryJa?: string;
   content: string;
   contentEn: string;
+  contentJa?: string;
   tags: string[];
   faq: RocoCnGuideFaq[];
   updatedAt?: string;

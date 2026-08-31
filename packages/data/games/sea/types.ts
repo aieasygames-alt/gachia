@@ -83,21 +83,27 @@ export interface SeaCharacter {
 export interface SeaGuideFaq {
   question: string;
   questionZh: string;
+  questionJa?: string;
   answer: string;
   answerZh: string;
+  answerJa?: string;
 }
 
 export interface SeaGuide {
   id: string;
   title: string;
   titleEn: string;
+  titleJa?: string;
   category: string;
   categoryZh: string;
   categoryEn: string;
+  categoryJa?: string;
   summary: string;
   summaryEn: string;
+  summaryJa?: string;
   content: string;
   contentEn: string;
+  contentJa?: string;
   tags: string[];
   faq: SeaGuideFaq[];
 }

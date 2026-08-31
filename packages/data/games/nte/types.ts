@@ -180,8 +180,10 @@ export interface NteRegion {
   id: string;
   name: string;
   nameEn: string;
+  nameJa?: string;
   description: string;
   descriptionEn: string;
+  descriptionJa?: string;
   highlights: string[];
   specialties: string[];
   bosses: string[];
@@ -193,8 +195,8 @@ export interface NteRegion {
 
 // --- Accessor Helpers ---
 
-export function localeStr(zh: string, en: string, locale: SupportedLocale): string {
+export function localeStr(zh: string, en: string, locale: SupportedLocale, ja?: string): string {
   if (locale === 'en') return en;
-  if (locale === 'ja') return en; // ja falls back to en
+  if (locale === 'ja') return ja ?? en;
   return zh;
 }

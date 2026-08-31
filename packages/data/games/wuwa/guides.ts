@@ -7,21 +7,27 @@ const rawGuides = await loadJson<unknown>(join(process.cwd(), '../../packages/da
 export interface WuWaGuideFaq {
   question: string;
   questionZh: string;
+  questionJa?: string;
   answer: string;
   answerZh: string;
+  answerJa?: string;
 }
 
 export interface WuWaGuide {
   id: string;
   title: string;
   titleEn: string;
+  titleJa?: string;
   category: string;
   categoryZh: string;
   categoryEn: string;
+  categoryJa?: string;
   summary: string;
   summaryEn: string;
+  summaryJa?: string;
   content: string;
   contentEn: string;
+  contentJa?: string;
   tags: string[];
   faq: WuWaGuideFaq[];
   updatedAt?: string;
@@ -34,15 +40,15 @@ export interface WuWaGuide {
 export const wuwaGuides: WuWaGuide[] = rawGuides as unknown as WuWaGuide[];
 
 export function getGuideTitle(guide: WuWaGuide, locale: SupportedLocale): string {
-  return localeStr(guide.title, guide.titleEn, locale);
+  return localeStr(guide.title, guide.titleEn, locale, guide.titleJa);
 }
 
 export function getGuideContent(guide: WuWaGuide, locale: SupportedLocale): string {
-  return localeStr(guide.content, guide.contentEn, locale);
+  return localeStr(guide.content, guide.contentEn, locale, guide.contentJa);
 }
 
 export function getGuideSummary(guide: WuWaGuide, locale: SupportedLocale): string {
-  return localeStr(guide.summary, guide.summaryEn, locale);
+  return localeStr(guide.summary, guide.summaryEn, locale, guide.summaryJa);
 }
 
 export function getGuideCategory(guide: WuWaGuide, locale: SupportedLocale): string {
@@ -66,11 +72,11 @@ export function getGuideSlugs(): string[] {
 }
 
 export function getGuideFaqQuestion(faq: WuWaGuideFaq, locale: SupportedLocale): string {
-  return localeStr(faq.questionZh, faq.question, locale);
+  return localeStr(faq.questionZh, faq.question, locale, faq.questionJa);
 }
 
 export function getGuideFaqAnswer(faq: WuWaGuideFaq, locale: SupportedLocale): string {
-  return localeStr(faq.answerZh, faq.answer, locale);
+  return localeStr(faq.answerZh, faq.answer, locale, faq.answerJa);
 }
 
 export const WUWA_GUIDE_CATEGORIES: Record<string, Record<SupportedLocale, string>> = {};

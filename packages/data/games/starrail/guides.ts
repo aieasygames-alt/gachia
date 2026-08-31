@@ -1,26 +1,33 @@
 import type { SupportedLocale } from '@gachia/core';
 import { join } from 'node:path';
 import { loadJson } from '../../load-json';
+import { localeStr } from './types';
 const rawGuides = await loadJson<unknown>(join(process.cwd(), '../../packages/data/games/starrail/raw-guides.json'), '/data/starrail/raw-guides.json');
 
 export interface StarRailGuideFaq {
   question: string;
   questionZh: string;
+  questionJa?: string;
   answer: string;
   answerZh: string;
+  answerJa?: string;
 }
 
 export interface StarRailGuide {
   id: string;
   title: string;
   titleEn: string;
+  titleJa?: string;
   category: string;
   categoryZh: string;
   categoryEn: string;
+  categoryJa?: string;
   summary: string;
   summaryEn: string;
+  summaryJa?: string;
   content: string;
   contentEn: string;
+  contentJa?: string;
   tags: string[];
   faq: StarRailGuideFaq[];
   updatedAt?: string;
@@ -33,23 +40,22 @@ export interface StarRailGuide {
 export const starrailGuides: StarRailGuide[] = rawGuides as unknown as StarRailGuide[];
 
 export function getGuideTitle(guide: StarRailGuide, locale: SupportedLocale): string {
-  return locale === 'en' ? guide.titleEn : guide.title;
+  return localeStr(guide.title, guide.titleEn, locale, guide.titleJa);
 }
 export function getGuideContent(guide: StarRailGuide, locale: SupportedLocale): string {
-  return locale === 'en' ? guide.contentEn : guide.content;
+  return localeStr(guide.content, guide.contentEn, locale, guide.contentJa);
 }
 export function getGuideSummary(guide: StarRailGuide, locale: SupportedLocale): string {
-  return locale === 'en' ? guide.summaryEn : guide.summary;
+  return localeStr(guide.summary, guide.summaryEn, locale, guide.summaryJa);
 }
 export function getGuideCategory(guide: StarRailGuide, locale: SupportedLocale): string {
-  if (locale === 'en') return guide.categoryEn;
-  return guide.categoryZh;
+  return localeStr(guide.categoryZh, guide.categoryEn, locale, guide.categoryJa);
 }
 export function getGuideFaqQuestion(faq: StarRailGuideFaq, locale: SupportedLocale): string {
-  return locale === 'en' ? faq.question : faq.questionZh;
+  return localeStr(faq.questionZh, faq.question, locale, faq.questionJa);
 }
 export function getGuideFaqAnswer(faq: StarRailGuideFaq, locale: SupportedLocale): string {
-  return locale === 'en' ? faq.answer : faq.answerZh;
+  return localeStr(faq.answerZh, faq.answer, locale, faq.answerJa);
 }
 export function getGuideCategories(): string[] {
   return [...new Set(starrailGuides.map((g) => g.category))];

@@ -1,6 +1,7 @@
 import type { SupportedLocale } from '@gachia/core';
 import { join } from 'node:path';
 import { loadJson } from '../../load-json';
+import { localeStr } from './types';
 const rawData = await loadJson<unknown>(join(process.cwd(), '../../packages/data/games/nte/raw-guides.json'), '/data/nte/raw-guides.json');
 
 // --- NTE Guide Types ---
@@ -8,21 +9,27 @@ const rawData = await loadJson<unknown>(join(process.cwd(), '../../packages/data
 export interface NteGuideFaq {
   question: string;
   questionZh: string;
+  questionJa?: string;
   answer: string;
   answerZh: string;
+  answerJa?: string;
 }
 
 export interface NteGuide {
   id: string;
   title: string;
   titleEn: string;
+  titleJa?: string;
   category: string;
   categoryZh: string;
   categoryEn: string;
+  categoryJa?: string;
   summary: string;
   summaryEn: string;
+  summaryJa?: string;
   content: string;
   contentEn: string;
+  contentJa?: string;
   tags: string[];
   faq: NteGuideFaq[];
   relatedCharacters?: string[];
@@ -43,39 +50,27 @@ export const guides: NteGuide[] = rawData as NteGuide[];
 // --- Localization Helpers ---
 
 export function getGuideTitle(guide: NteGuide, locale: SupportedLocale): string {
-  if (locale === 'en') return guide.titleEn;
-  if (locale === 'ja') return guide.titleEn; // ja fallback to en
-  return guide.title;
+  return localeStr(guide.title, guide.titleEn, locale, guide.titleJa);
 }
 
 export function getGuideContent(guide: NteGuide, locale: SupportedLocale): string {
-  if (locale === 'en') return guide.contentEn;
-  if (locale === 'ja') return guide.contentEn;
-  return guide.content;
+  return localeStr(guide.content, guide.contentEn, locale, guide.contentJa);
 }
 
 export function getGuideSummary(guide: NteGuide, locale: SupportedLocale): string {
-  if (locale === 'en') return guide.summaryEn;
-  if (locale === 'ja') return guide.summaryEn;
-  return guide.summary;
+  return localeStr(guide.summary, guide.summaryEn, locale, guide.summaryJa);
 }
 
 export function getGuideCategory(guide: NteGuide, locale: SupportedLocale): string {
-  if (locale === 'en') return guide.categoryEn;
-  if (locale === 'ja') return guide.categoryEn;
-  return guide.categoryZh;
+  return localeStr(guide.categoryZh, guide.categoryEn, locale, guide.categoryJa);
 }
 
 export function getGuideFaqQuestion(faq: NteGuideFaq, locale: SupportedLocale): string {
-  if (locale === 'en') return faq.question;
-  if (locale === 'ja') return faq.question;
-  return faq.questionZh;
+  return localeStr(faq.questionZh, faq.question, locale, faq.questionJa);
 }
 
 export function getGuideFaqAnswer(faq: NteGuideFaq, locale: SupportedLocale): string {
-  if (locale === 'en') return faq.answer;
-  if (locale === 'ja') return faq.answer;
-  return faq.answerZh;
+  return localeStr(faq.answerZh, faq.answer, locale, faq.answerJa);
 }
 
 // --- Category Labels ---

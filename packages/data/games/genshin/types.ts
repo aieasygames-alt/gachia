@@ -164,8 +164,8 @@ export interface GenshinCharacterMaterials {
 
 // --- Locale Helper ---
 
-export function localeStr(zh: string, en: string, locale: SupportedLocale): string {
+export function localeStr(zh: string, en: string, locale: SupportedLocale, ja?: string): string {
   if (locale === 'en') return en;
-  if (locale === 'ja') return en; // ja falls back to en
+  if (locale === 'ja') return ja ?? en;
   return zh;
 }

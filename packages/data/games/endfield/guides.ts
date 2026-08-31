@@ -7,8 +7,10 @@ const rawGuides = await loadJson<unknown>(join(process.cwd(), '../../packages/da
 export interface EndfieldGuideFaq {
   question: string;
   questionZh: string;
+  questionJa?: string;
   answer: string;
   answerZh: string;
+  answerJa?: string;
 }
 
 export interface EndfieldGuide {
@@ -19,11 +21,13 @@ export interface EndfieldGuide {
   category: string;
   categoryZh: string;
   categoryEn: string;
+  categoryJa?: string;
   summary: string;
   summaryEn: string;
   summaryJa?: string;
   content: string;
   contentEn: string;
+  contentJa?: string;
   tags: string[];
   faq: EndfieldGuideFaq[];
   updatedAt?: string;
@@ -40,7 +44,7 @@ export function getEndfieldGuideTitle(guide: EndfieldGuide, locale: SupportedLoc
 }
 
 export function getEndfieldGuideContent(guide: EndfieldGuide, locale: SupportedLocale): string {
-  return localeStr(guide.content, guide.contentEn, locale);
+  return localeStr(guide.content, guide.contentEn, locale, guide.contentJa);
 }
 
 export function getEndfieldGuideSummary(guide: EndfieldGuide, locale: SupportedLocale): string {
@@ -48,7 +52,7 @@ export function getEndfieldGuideSummary(guide: EndfieldGuide, locale: SupportedL
 }
 
 export function getEndfieldGuideCategory(guide: EndfieldGuide, locale: SupportedLocale): string {
-  return localeStr(guide.categoryZh, guide.categoryEn, locale);
+  return localeStr(guide.categoryZh, guide.categoryEn, locale, guide.categoryJa);
 }
 
 export function getEndfieldGuideCategories(): string[] {
@@ -68,11 +72,11 @@ export function getEndfieldGuideSlugs(): string[] {
 }
 
 export function getEndfieldGuideFaqQuestion(faq: EndfieldGuideFaq, locale: SupportedLocale): string {
-  return localeStr(faq.questionZh, faq.question, locale);
+  return localeStr(faq.questionZh, faq.question, locale, faq.questionJa);
 }
 
 export function getEndfieldGuideFaqAnswer(faq: EndfieldGuideFaq, locale: SupportedLocale): string {
-  return localeStr(faq.answerZh, faq.answer, locale);
+  return localeStr(faq.answerZh, faq.answer, locale, faq.answerJa);
 }
 
 export const ENDFIELD_GUIDE_CATEGORIES: Record<string, Record<SupportedLocale, string>> = {};

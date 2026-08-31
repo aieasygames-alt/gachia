@@ -7,21 +7,27 @@ const rawGuides = await loadJson<unknown>(join(process.cwd(), '../../packages/da
 export interface ZzzGuideFaq {
   question: string;
   questionZh: string;
+  questionJa?: string;
   answer: string;
   answerZh: string;
+  answerJa?: string;
 }
 
 export interface ZzzGuide {
   id: string;
   title: string;
   titleEn: string;
+  titleJa?: string;
   category: string;
   categoryZh: string;
   categoryEn: string;
+  categoryJa?: string;
   summary: string;
   summaryEn: string;
+  summaryJa?: string;
   content: string;
   contentEn: string;
+  contentJa?: string;
   tags: string[];
   faq: ZzzGuideFaq[];
   updatedAt?: string;
@@ -34,15 +40,15 @@ export interface ZzzGuide {
 export const zzzGuides: ZzzGuide[] = rawGuides as unknown as ZzzGuide[];
 
 export function getZzzGuideTitle(guide: ZzzGuide, locale: SupportedLocale): string {
-  return localeStr(guide.title, guide.titleEn, locale);
+  return localeStr(guide.title, guide.titleEn, locale, guide.titleJa);
 }
 
 export function getZzzGuideContent(guide: ZzzGuide, locale: SupportedLocale): string {
-  return localeStr(guide.content, guide.contentEn, locale);
+  return localeStr(guide.content, guide.contentEn, locale, guide.contentJa);
 }
 
 export function getZzzGuideSummary(guide: ZzzGuide, locale: SupportedLocale): string {
-  return localeStr(guide.summary, guide.summaryEn, locale);
+  return localeStr(guide.summary, guide.summaryEn, locale, guide.summaryJa);
 }
 
 export function getZzzGuideCategory(guide: ZzzGuide, locale: SupportedLocale): string {
@@ -66,11 +72,11 @@ export function getZzzGuideSlugs(): string[] {
 }
 
 export function getZzzGuideFaqQuestion(faq: ZzzGuideFaq, locale: SupportedLocale): string {
-  return localeStr(faq.questionZh, faq.question, locale);
+  return localeStr(faq.questionZh, faq.question, locale, faq.questionJa);
 }
 
 export function getZzzGuideFaqAnswer(faq: ZzzGuideFaq, locale: SupportedLocale): string {
-  return localeStr(faq.answerZh, faq.answer, locale);
+  return localeStr(faq.answerZh, faq.answer, locale, faq.answerJa);
 }
 
 export const ZZZ_GUIDE_CATEGORIES: Record<string, Record<SupportedLocale, string>> = {};

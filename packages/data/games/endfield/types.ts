@@ -155,8 +155,10 @@ export interface EndfieldRegion {
   id: string;
   name: string;
   nameEn: string;
+  nameJa?: string;
   description: string;
   descriptionEn: string;
+  descriptionJa?: string;
   highlights: string[];
   specialties: string[];
   bosses: string[];

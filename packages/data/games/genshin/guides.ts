@@ -7,21 +7,27 @@ const rawGuides = await loadJson<unknown>(join(process.cwd(), '../../packages/da
 export interface GenshinGuideFaq {
   question: string;
   questionZh: string;
+  questionJa?: string;
   answer: string;
   answerZh: string;
+  answerJa?: string;
 }
 
 export interface GenshinGuide {
   id: string;
   title: string;
   titleEn: string;
+  titleJa?: string;
   category: string;
   categoryZh: string;
   categoryEn: string;
+  categoryJa?: string;
   summary: string;
   summaryEn: string;
+  summaryJa?: string;
   content: string;
   contentEn: string;
+  contentJa?: string;
   tags: string[];
   faq: GenshinGuideFaq[];
   updatedAt?: string;
@@ -34,15 +40,15 @@ export interface GenshinGuide {
 export const genshinGuides: GenshinGuide[] = rawGuides as unknown as GenshinGuide[];
 
 export function getGuideTitle(guide: GenshinGuide, locale: SupportedLocale): string {
-  return localeStr(guide.title, guide.titleEn, locale);
+  return localeStr(guide.title, guide.titleEn, locale, guide.titleJa);
 }
 
 export function getGuideContent(guide: GenshinGuide, locale: SupportedLocale): string {
-  return localeStr(guide.content, guide.contentEn, locale);
+  return localeStr(guide.content, guide.contentEn, locale, guide.contentJa);
 }
 
 export function getGuideSummary(guide: GenshinGuide, locale: SupportedLocale): string {
-  return localeStr(guide.summary, guide.summaryEn, locale);
+  return localeStr(guide.summary, guide.summaryEn, locale, guide.summaryJa);
 }
 
 export function getGuideCategory(guide: GenshinGuide, locale: SupportedLocale): string {
@@ -66,11 +72,11 @@ export function getGuideSlugs(): string[] {
 }
 
 export function getGuideFaqQuestion(faq: GenshinGuideFaq, locale: SupportedLocale): string {
-  return localeStr(faq.questionZh, faq.question, locale);
+  return localeStr(faq.questionZh, faq.question, locale, faq.questionJa);
 }
 
 export function getGuideFaqAnswer(faq: GenshinGuideFaq, locale: SupportedLocale): string {
-  return localeStr(faq.answerZh, faq.answer, locale);
+  return localeStr(faq.answerZh, faq.answer, locale, faq.answerJa);
 }
 
 export const GENSHIN_GUIDE_CATEGORIES: Record<string, Record<SupportedLocale, string>> = {};
