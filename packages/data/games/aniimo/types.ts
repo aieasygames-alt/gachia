@@ -18,8 +18,11 @@ export interface AniimoCharacter {
   rarity: number;
   region: string;
   ability: string;
+  abilityZh?: string;
+  abilityJa?: string;
   description: string;
   descriptionEn: string;
+  descriptionJa?: string;
   image: string;
   evolution: string[];
   locationNote: string;
@@ -32,6 +35,7 @@ export interface AniimoCharacter {
   tierRank: string;
   tierReason: string;
   tierReasonZh: string;
+  tierReasonJa?: string;
 }
 
 export interface AniimoGuideFaq {

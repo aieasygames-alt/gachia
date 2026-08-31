@@ -17,7 +17,7 @@
     "rarity": 3,
     "region": "Mistwoods",
     "ability": "The lively creatures like to follow Flameruffs around. Once the smoldering fur starts to burn, they thrive.",
-    "description": "The lively creatures like to follow Flameruffs around. Once the smoldering fur starts to burn, they thrive.",
+    "description": "活泼的 Emberpup 喜欢跟在 Flameruff 身边。只要冒烟的毛发开始燃起，它们就会变得格外有精神。",
     "descriptionEn": "The lively creatures like to follow Flameruffs around. Once the smoldering fur starts to burn, they thrive.",
     "image": "/images/aniimo/characters/emberpup.webp",
     "evolution": "Emberpup is part of the Emberpup -> Flameruff -> Scorchhowl -> Inferlupa line.",
@@ -30,7 +30,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "DPS role entry with official source tracking before launch.",
-    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "活発な Emberpup は Flameruff の後をついて回るのが好きです。くすぶる毛が燃え始めると、いっそう元気になります。",
+    "abilityZh": "活泼的 Emberpup 喜欢跟在 Flameruff 身边。只要冒烟的毛发开始燃起，它们就会变得格外有精神。",
+    "abilityJa": "活発な Emberpup は Flameruff の後をついて回るのが好きです。くすぶる毛が燃え始めると、いっそう元気になります。",
+    "tierReasonJa": "DPSロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "flameruff",
@@ -50,7 +54,7 @@
     "rarity": 4,
     "region": "Mistwoods",
     "ability": "Pack creatures that prize loyalty and unity, these hunters maintain focused, calm eyes that mask their fiery hearts.",
-    "description": "Pack creatures that prize loyalty and unity, these hunters maintain focused, calm eyes that mask their fiery hearts.",
+    "description": "重视忠诚与团结的群居 Aniimo。它们眼神专注而冷静，却藏不住内心炽热的斗志。",
     "descriptionEn": "Pack creatures that prize loyalty and unity, these hunters maintain focused, calm eyes that mask their fiery hearts.",
     "image": "/images/aniimo/characters/flameruff.webp",
     "evolution": "Flameruff is part of the Emberpup -> Flameruff -> Scorchhowl -> Inferlupa line.",
@@ -63,7 +67,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "DPS role entry with official source tracking before launch.",
-    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "忠誠と結束を重んじる群れの Aniimo。集中した静かな目の奥に、燃えるような闘志を秘めています。",
+    "abilityZh": "重视忠诚与团结的群居 Aniimo。它们眼神专注而冷静，却藏不住内心炽热的斗志。",
+    "abilityJa": "忠誠と結束を重んじる群れの Aniimo。集中した静かな目の奥に、燃えるような闘志を秘めています。",
+    "tierReasonJa": "DPSロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "scorchhowl",
@@ -83,7 +91,7 @@
     "rarity": 5,
     "region": "Mistwoods",
     "ability": "They enjoy the thrill of the fight since flame and burning mark their growth.",
-    "description": "They enjoy the thrill of the fight since flame and burning mark their growth.",
+    "description": "Scorchhowl 享受战斗带来的刺激，火焰与灼烧痕迹也记录着它们的成长。",
     "descriptionEn": "They enjoy the thrill of the fight since flame and burning mark their growth.",
     "image": "/images/aniimo/characters/scorchhowl.webp",
     "evolution": "Scorchhowl is part of the Emberpup -> Flameruff -> Scorchhowl -> Inferlupa line.",
@@ -96,7 +104,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "DPS role entry with official source tracking before launch.",
-    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Scorchhowl は戦いの高揚を好み、炎と焦げ跡がその成長を物語ります。",
+    "abilityZh": "Scorchhowl 享受战斗带来的刺激，火焰与灼烧痕迹也记录着它们的成长。",
+    "abilityJa": "Scorchhowl は戦いの高揚を好み、炎と焦げ跡がその成長を物語ります。",
+    "tierReasonJa": "DPSロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "inferlupa",
@@ -116,7 +128,7 @@
     "rarity": 5,
     "region": "Mistwoods",
     "ability": "A Flameruff who challenged the strong and lost, absorbing the souls of companions who fell with equal bitterness. It is driven by the desire for revenge.",
-    "description": "A Flameruff who challenged the strong and lost, absorbing the souls of companions who fell with equal bitterness. It is driven by the desire for revenge.",
+    "description": "曾挑战强者却败北的 Flameruff，吸收了同伴带着苦涩倒下的灵魂。如今它被复仇的执念驱动。",
     "descriptionEn": "A Flameruff who challenged the strong and lost, absorbing the souls of companions who fell with equal bitterness. It is driven by the desire for revenge.",
     "image": "/images/aniimo/characters/inferlupa.webp",
     "evolution": "Inferlupa is part of the Emberpup -> Flameruff -> Scorchhowl -> Inferlupa line.",
@@ -129,7 +141,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "DPS role entry with official source tracking before launch.",
-    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "強者に挑み敗れた Flameruff。苦い思いを抱いて倒れた仲間の魂を取り込み、復讐心に突き動かされています。",
+    "abilityZh": "曾挑战强者却败北的 Flameruff，吸收了同伴带着苦涩倒下的灵魂。如今它被复仇的执念驱动。",
+    "abilityJa": "強者に挑み敗れた Flameruff。苦い思いを抱いて倒れた仲間の魂を取り込み、復讐心に突き動かされています。",
+    "tierReasonJa": "DPSロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "celestis",
@@ -149,7 +165,7 @@
     "rarity": 3,
     "region": "Forest of Falling Stars",
     "ability": "They love food! When they search the forest for food, the glowing stars on their heads are often mistaken for comets. They like hoarding food, adorning their nest with it.",
-    "description": "They love food! When they search the forest for food, the glowing stars on their heads are often mistaken for comets. They like hoarding food, adorning their nest with it.",
+    "description": "Celestis 非常爱吃。它们在森林觅食时，头顶发光的星星常被误认成彗星，也喜欢把食物收进巢里当装饰。",
     "descriptionEn": "They love food! When they search the forest for food, the glowing stars on their heads are often mistaken for comets. They like hoarding food, adorning their nest with it.",
     "image": "/images/aniimo/characters/celestis.webp",
     "evolution": "Celestis is part of the Celestis -> Stellarys line.",
@@ -162,7 +178,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Celestis は食べ物が大好きです。森で食べ物を探す時、頭上の光る星が彗星に見間違えられることがあり、巣を食べ物で飾るのも好みます。",
+    "abilityZh": "Celestis 非常爱吃。它们在森林觅食时，头顶发光的星星常被误认成彗星，也喜欢把食物收进巢里当装饰。",
+    "abilityJa": "Celestis は食べ物が大好きです。森で食べ物を探す時、頭上の光る星が彗星に見間違えられることがあり、巣を食べ物で飾るのも好みます。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "stellarys",
@@ -182,7 +202,7 @@
     "rarity": 4,
     "region": "Forest of Falling Stars",
     "ability": "They prefer solitude and often move through the night. With their starry, cloak-like forms, they resemble mysterious mages and can teleport using psychic energy.",
-    "description": "They prefer solitude and often move through the night. With their starry, cloak-like forms, they resemble mysterious mages and can teleport using psychic energy.",
+    "description": "Stellarys 偏爱独处，常在夜间行动。披着星光斗篷般的身影让它们像神秘法师，并能用精神能量瞬移。",
     "descriptionEn": "They prefer solitude and often move through the night. With their starry, cloak-like forms, they resemble mysterious mages and can teleport using psychic energy.",
     "image": "/images/aniimo/characters/stellarys.webp",
     "evolution": "Stellarys is part of the Celestis -> Stellarys line.",
@@ -195,7 +215,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Stellarys は孤独を好み、夜に行動することが多いです。星空のマントのような姿は謎めいた魔法使いに似ており、精神エネルギーで瞬間移動できます。",
+    "abilityZh": "Stellarys 偏爱独处，常在夜间行动。披着星光斗篷般的身影让它们像神秘法师，并能用精神能量瞬移。",
+    "abilityJa": "Stellarys は孤独を好み、夜に行動することが多いです。星空のマントのような姿は謎めいた魔法使いに似ており、精神エネルギーで瞬間移動できます。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "chirpi",
@@ -215,7 +239,7 @@
     "rarity": 3,
     "region": "Echoback Landing",
     "ability": "They often hover at low altitudes, paying attention to every movement on the beach so they won't miss any opportunity.",
-    "description": "They often hover at low altitudes, paying attention to every movement on the beach so they won't miss any opportunity.",
+    "description": "Chirpi 常在低空盘旋，留意海滩上的每一个动静，不愿错过任何机会。",
     "descriptionEn": "They often hover at low altitudes, paying attention to every movement on the beach so they won't miss any opportunity.",
     "image": "/images/aniimo/characters/chirpi.webp",
     "evolution": "Chirpi is part of the Chirpi -> Tromber -> Cornet -> Tubster line.",
@@ -228,7 +252,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Chirpi は低空をよく飛び、海辺のあらゆる動きに目を配ってチャンスを逃しません。",
+    "abilityZh": "Chirpi 常在低空盘旋，留意海滩上的每一个动静，不愿错过任何机会。",
+    "abilityJa": "Chirpi は低空をよく飛び、海辺のあらゆる動きに目を配ってチャンスを逃しません。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "tromber",
@@ -248,7 +276,7 @@
     "rarity": 4,
     "region": "Echoback Landing",
     "ability": "They like having fun and producing rhythmic music, so don't be surprised to see a grand symphony.",
-    "description": "They like having fun and producing rhythmic music, so don't be surprised to see a grand symphony.",
+    "description": "Tromber 喜欢玩闹，也喜欢制造有节奏的音乐。看到它们开起盛大的交响会并不奇怪。",
     "descriptionEn": "They like having fun and producing rhythmic music, so don't be surprised to see a grand symphony.",
     "image": "/images/aniimo/characters/tromber.webp",
     "evolution": "Tromber is part of the Chirpi -> Tromber -> Cornet -> Tubster line.",
@@ -261,7 +289,11 @@
     "aliases": [],
     "tierRank": "B",
     "tierReason": "BREAK role entry with official source tracking before launch.",
-    "tierReasonZh": "破韧定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "破韧定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Tromber は遊びとリズムのある音楽が大好きです。盛大な交響曲のような光景を見ても驚くことはありません。",
+    "abilityZh": "Tromber 喜欢玩闹，也喜欢制造有节奏的音乐。看到它们开起盛大的交响会并不奇怪。",
+    "abilityJa": "Tromber は遊びとリズムのある音楽が大好きです。盛大な交響曲のような光景を見ても驚くことはありません。",
+    "tierReasonJa": "ブレイクロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "cornet",
@@ -281,7 +313,7 @@
     "rarity": 4,
     "region": "Echoback Landing",
     "ability": "They can produce loud, piercing noises that resonate throughout the entire beach just to draw attention.",
-    "description": "They can produce loud, piercing noises that resonate throughout the entire beach just to draw attention.",
+    "description": "Cornet 能发出响亮刺耳的声音，让整片海滩都产生回音，只为吸引注意。",
     "descriptionEn": "They can produce loud, piercing noises that resonate throughout the entire beach just to draw attention.",
     "image": "/images/aniimo/characters/cornet.webp",
     "evolution": "Cornet is part of the Chirpi -> Tromber -> Cornet -> Tubster line.",
@@ -294,7 +326,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Cornet は浜辺全体に響き渡るほど大きく鋭い音を出し、注目を集めようとします。",
+    "abilityZh": "Cornet 能发出响亮刺耳的声音，让整片海滩都产生回音，只为吸引注意。",
+    "abilityJa": "Cornet は浜辺全体に響き渡るほど大きく鋭い音を出し、注目を集めようとします。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "tubster",
@@ -314,7 +350,7 @@
     "rarity": 3,
     "region": "Echoback Landing",
     "ability": "Creates deep, tuba-like sounds that match its steady, friendly character.",
-    "description": "Creates deep, tuba-like sounds that match its steady, friendly character.",
+    "description": "Tubster 会发出低沉如大号的声音，和它沉稳友善的性格很相称。",
     "descriptionEn": "Creates deep, tuba-like sounds that match its steady, friendly character.",
     "image": "/images/aniimo/characters/tubster.webp",
     "evolution": "Tubster is part of the Chirpi -> Tromber -> Cornet -> Tubster line.",
@@ -327,7 +363,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Tubster はチューバのような低い音を出し、その落ち着いた友好的な性格によく合っています。",
+    "abilityZh": "Tubster 会发出低沉如大号的声音，和它沉稳友善的性格很相称。",
+    "abilityJa": "Tubster はチューバのような低い音を出し、その落ち着いた友好的な性格によく合っています。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "iris",
@@ -347,7 +387,7 @@
     "rarity": 3,
     "region": "Sea of Flowers",
     "ability": "Iris possesses an extremely lightweight body, often lifted by the wind. It then either slowly spirals downward using the resistance from its petal skirt, or simply allows itself to be carried away by the wind.",
-    "description": "Iris possesses an extremely lightweight body, often lifted by the wind. It then either slowly spirals downward using the resistance from its petal skirt, or simply allows itself to be carried away by the wind.",
+    "description": "Iris 的身体极其轻盈，经常被风托起。它会借助花瓣裙的阻力缓缓旋落，也会干脆任由风带着自己远行。",
     "descriptionEn": "Iris possesses an extremely lightweight body, often lifted by the wind. It then either slowly spirals downward using the resistance from its petal skirt, or simply allows itself to be carried away by the wind.",
     "image": "/images/aniimo/characters/iris.webp",
     "evolution": "Iris is part of the Iris -> Irisal line.",
@@ -360,7 +400,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Heal role entry with official source tracking before launch.",
-    "tierReasonZh": "治疗定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "治疗定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Iris はとても軽い体を持ち、風に持ち上げられることがよくあります。花びらのスカートでゆっくり舞い降りたり、そのまま風に運ばれたりします。",
+    "abilityZh": "Iris 的身体极其轻盈，经常被风托起。它会借助花瓣裙的阻力缓缓旋落，也会干脆任由风带着自己远行。",
+    "abilityJa": "Iris はとても軽い体を持ち、風に持ち上げられることがよくあります。花びらのスカートでゆっくり舞い降りたり、そのまま風に運ばれたりします。",
+    "tierReasonJa": "ヒールロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "irisal",
@@ -380,7 +424,7 @@
     "rarity": 4,
     "region": "Sea of Flowers",
     "ability": "Devoted to the art of dance, they constantly hone their craft, hoping to share the pure joy and energy of movement.",
-    "description": "Devoted to the art of dance, they constantly hone their craft, hoping to share the pure joy and energy of movement.",
+    "description": "Irisal 热爱舞蹈并不断磨炼技艺，希望把舞动带来的纯粹快乐和活力分享出去。",
     "descriptionEn": "Devoted to the art of dance, they constantly hone their craft, hoping to share the pure joy and energy of movement.",
     "image": "/images/aniimo/characters/irisal.webp",
     "evolution": "Irisal is part of the Iris -> Irisal line.",
@@ -393,7 +437,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Heal role entry with official source tracking before launch.",
-    "tierReasonZh": "治疗定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "治疗定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Irisal は舞踊を愛し、技を磨き続けています。踊る喜びと活力を周囲に届けたいと願っています。",
+    "abilityZh": "Irisal 热爱舞蹈并不断磨炼技艺，希望把舞动带来的纯粹快乐和活力分享出去。",
+    "abilityJa": "Irisal は舞踊を愛し、技を磨き続けています。踊る喜びと活力を周囲に届けたいと願っています。",
+    "tierReasonJa": "ヒールロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "skippy",
@@ -413,7 +461,7 @@
     "rarity": 3,
     "region": "Sea of Flowers",
     "ability": "They like to hide underwater and observe their surroundings using a lotus leaf as a strikingly ineffective disguise.",
-    "description": "They like to hide underwater and observe their surroundings using a lotus leaf as a strikingly ineffective disguise.",
+    "description": "Skippy 喜欢躲在水下，用荷叶伪装观察四周，虽然这个伪装显眼得有些失败。",
     "descriptionEn": "They like to hide underwater and observe their surroundings using a lotus leaf as a strikingly ineffective disguise.",
     "image": "/images/aniimo/characters/skippy.webp",
     "evolution": "Skippy is part of the Skippy -> Pranky -> Glacy -> Leafy line.",
@@ -426,7 +474,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Skippy は水中に隠れ、蓮の葉で変装して周囲を観察するのが好きです。ただし、その変装はかなり目立ちます。",
+    "abilityZh": "Skippy 喜欢躲在水下，用荷叶伪装观察四周，虽然这个伪装显眼得有些失败。",
+    "abilityJa": "Skippy は水中に隠れ、蓮の葉で変装して周囲を観察するのが好きです。ただし、その変装はかなり目立ちます。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "pranky",
@@ -446,7 +498,7 @@
     "rarity": 3,
     "region": "Sea of Flowers",
     "ability": "They like to stay cool and moist. That's what the layer of film over their bodies is for.",
-    "description": "They like to stay cool and moist. That's what the layer of film over their bodies is for.",
+    "description": "Pranky 喜欢保持凉爽湿润。覆盖身体的薄膜正是为了维持这种状态。",
     "descriptionEn": "They like to stay cool and moist. That's what the layer of film over their bodies is for.",
     "image": "/images/aniimo/characters/pranky.webp",
     "evolution": "Pranky is part of the Skippy -> Pranky -> Glacy -> Leafy line.",
@@ -459,7 +511,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Pranky は涼しく湿った状態を好みます。体を覆う薄い膜はそのためのものです。",
+    "abilityZh": "Pranky 喜欢保持凉爽湿润。覆盖身体的薄膜正是为了维持这种状态。",
+    "abilityJa": "Pranky は涼しく湿った状態を好みます。体を覆う薄い膜はそのためのものです。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "glacy",
@@ -479,7 +535,7 @@
     "rarity": 3,
     "region": "Nimbus Fields",
     "ability": "They are elegant and kind aniimo that always take care of weaker ones, and freeze anyone who crosses them in ice.",
-    "description": "They are elegant and kind aniimo that always take care of weaker ones, and freeze anyone who crosses them in ice.",
+    "description": "Glacy 优雅又善良，总会照顾弱小的 Aniimo；但若有人招惹它们，也会被冰封起来。",
     "descriptionEn": "They are elegant and kind aniimo that always take care of weaker ones, and freeze anyone who crosses them in ice.",
     "image": "/images/aniimo/characters/glacy.webp",
     "evolution": "Glacy is part of the Skippy -> Pranky -> Glacy -> Leafy line.",
@@ -492,7 +548,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "DPS role entry with official source tracking before launch.",
-    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Glacy は優雅で優しく、弱い Aniimo の世話をします。ただし敵対する相手は氷漬けにしてしまいます。",
+    "abilityZh": "Glacy 优雅又善良，总会照顾弱小的 Aniimo；但若有人招惹它们，也会被冰封起来。",
+    "abilityJa": "Glacy は優雅で優しく、弱い Aniimo の世話をします。ただし敵対する相手は氷漬けにしてしまいます。",
+    "tierReasonJa": "DPSロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "leafy",
@@ -512,7 +572,7 @@
     "rarity": 3,
     "region": "Sea of Flowers",
     "ability": "They live among lotus flowers and use their lotus leaf tails to conceal their face and show off their elegant nature.",
-    "description": "They live among lotus flowers and use their lotus leaf tails to conceal their face and show off their elegant nature.",
+    "description": "Leafy 栖息在莲花之间，用莲叶般的尾巴遮住脸，也借此展示自己的优雅气质。",
     "descriptionEn": "They live among lotus flowers and use their lotus leaf tails to conceal their face and show off their elegant nature.",
     "image": "/images/aniimo/characters/leafy.webp",
     "evolution": "Leafy is part of the Skippy -> Pranky -> Glacy -> Leafy line.",
@@ -525,7 +585,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Leafy は蓮の花の間で暮らし、蓮の葉のような尻尾で顔を隠しながら優雅さを見せます。",
+    "abilityZh": "Leafy 栖息在莲花之间，用莲叶般的尾巴遮住脸，也借此展示自己的优雅气质。",
+    "abilityJa": "Leafy は蓮の花の間で暮らし、蓮の葉のような尻尾で顔を隠しながら優雅さを見せます。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "bolty",
@@ -545,7 +609,7 @@
     "rarity": 3,
     "region": "Blitzwood",
     "ability": "They live among the trees. When they attack, golden sparks flash from their tails with crackling electric sounds.",
-    "description": "They live among the trees. When they attack, golden sparks flash from their tails with crackling electric sounds.",
+    "description": "Bolty 生活在树木之间。攻击时，尾巴会迸出金色电火花并发出噼啪声。",
     "descriptionEn": "They live among the trees. When they attack, golden sparks flash from their tails with crackling electric sounds.",
     "image": "/images/aniimo/characters/nimbi.webp",
     "evolution": "Bolty is part of the Bolty -> Blazen line.",
@@ -560,7 +624,11 @@
     ],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Bolty は木々の間で暮らしています。攻撃時には尻尾から金色の火花が弾け、ぱちぱちと音を立てます。",
+    "abilityZh": "Bolty 生活在树木之间。攻击时，尾巴会迸出金色电火花并发出噼啪声。",
+    "abilityJa": "Bolty は木々の間で暮らしています。攻撃時には尻尾から金色の火花が弾け、ぱちぱちと音を立てます。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "blazen",
@@ -580,7 +648,7 @@
     "rarity": 4,
     "region": "Blitzwood",
     "ability": "They use their special fur to capture charged particles in the air to produce and store electricity.",
-    "description": "They use their special fur to capture charged particles in the air to produce and store electricity.",
+    "description": "Blazen 会利用特殊毛发捕捉空气中的带电粒子，并将电能制造、储存起来。",
     "descriptionEn": "They use their special fur to capture charged particles in the air to produce and store electricity.",
     "image": "/images/aniimo/characters/turbo.webp",
     "evolution": "Blazen is part of the Bolty -> Blazen line.",
@@ -595,7 +663,11 @@
     ],
     "tierRank": "A",
     "tierReason": "DPS role entry with official source tracking before launch.",
-    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Blazen は特殊な毛で空気中の帯電粒子を捕らえ、電気を生み出して蓄えます。",
+    "abilityZh": "Blazen 会利用特殊毛发捕捉空气中的带电粒子，并将电能制造、储存起来。",
+    "abilityJa": "Blazen は特殊な毛で空気中の帯電粒子を捕らえ、電気を生み出して蓄えます。",
+    "tierReasonJa": "DPSロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "fentuft",
@@ -615,7 +687,7 @@
     "rarity": 3,
     "region": "Nimbus Fields",
     "ability": "They always wear a signature smile and invite other aniimo to play. Though they sometimes cause trouble due to mischief, they do not mean harm.",
-    "description": "They always wear a signature smile and invite other aniimo to play. Though they sometimes cause trouble due to mischief, they do not mean harm.",
+    "description": "Fentuft 总带着标志性的笑容，邀请其他 Aniimo 一起玩。虽然恶作剧有时会惹麻烦，但它们并无恶意。",
     "descriptionEn": "They always wear a signature smile and invite other aniimo to play. Though they sometimes cause trouble due to mischief, they do not mean harm.",
     "image": "/images/aniimo/characters/dreaple.webp",
     "evolution": "Lumin Stage form listed in the official Aniimo Wiki index.",
@@ -630,7 +702,11 @@
     ],
     "tierRank": "A",
     "tierReason": "DPS role entry with official source tracking before launch.",
-    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Fentuft はいつも特徴的な笑顔で、他の Aniimo を遊びに誘います。いたずらで騒ぎを起こすこともありますが、悪気はありません。",
+    "abilityZh": "Fentuft 总带着标志性的笑容，邀请其他 Aniimo 一起玩。虽然恶作剧有时会惹麻烦，但它们并无恶意。",
+    "abilityJa": "Fentuft はいつも特徴的な笑顔で、他の Aniimo を遊びに誘います。いたずらで騒ぎを起こすこともありますが、悪気はありません。",
+    "tierReasonJa": "DPSロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "hummin",
@@ -650,7 +726,7 @@
     "rarity": 3,
     "region": "Mistwoods",
     "ability": "They live on the grassland in groups, they like burrowing for nutrients, and they love singing off-key together!",
-    "description": "They live on the grassland in groups, they like burrowing for nutrients, and they love singing off-key together!",
+    "description": "Hummin 群居在草地上，喜欢钻地寻找养分，也热爱一起唱走调的歌。",
     "descriptionEn": "They live on the grassland in groups, they like burrowing for nutrients, and they love singing off-key together!",
     "image": "/images/aniimo/characters/hummin.webp",
     "evolution": "Hummin is part of the Hummin -> Witchin -> Tuckin line.",
@@ -663,7 +739,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Hummin は草原で群れを作り、地面を掘って栄養を探します。みんなで音程の外れた歌を歌うのも大好きです。",
+    "abilityZh": "Hummin 群居在草地上，喜欢钻地寻找养分，也热爱一起唱走调的歌。",
+    "abilityJa": "Hummin は草原で群れを作り、地面を掘って栄養を探します。みんなで音程の外れた歌を歌うのも大好きです。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "witchin",
@@ -683,7 +763,7 @@
     "rarity": 4,
     "region": "Mistwoods",
     "ability": "They make bizarre noises to drive intruders to madness, lower their defenses and even cause them to pass out.",
-    "description": "They make bizarre noises to drive intruders to madness, lower their defenses and even cause them to pass out.",
+    "description": "Witchin 会发出怪异声响，让入侵者陷入疯狂、降低防备，甚至昏厥过去。",
     "descriptionEn": "They make bizarre noises to drive intruders to madness, lower their defenses and even cause them to pass out.",
     "image": "/images/aniimo/characters/witchin.webp",
     "evolution": "Witchin is part of the Hummin -> Witchin -> Tuckin line.",
@@ -696,7 +776,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Witchin は奇妙な音を出して侵入者を混乱させ、防御を崩し、時には気絶させます。",
+    "abilityZh": "Witchin 会发出怪异声响，让入侵者陷入疯狂、降低防备，甚至昏厥过去。",
+    "abilityJa": "Witchin は奇妙な音を出して侵入者を混乱させ、防御を崩し、時には気絶させます。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "tuckin",
@@ -716,7 +800,7 @@
     "rarity": 3,
     "region": "Mistwoods",
     "ability": "They need to absorb nutrients from the soil through their roots to maintain vitality and hate leaving the ground.",
-    "description": "They need to absorb nutrients from the soil through their roots to maintain vitality and hate leaving the ground.",
+    "description": "Tuckin 需要通过根部从土壤中吸收养分来维持活力，因此非常讨厌离开地面。",
     "descriptionEn": "They need to absorb nutrients from the soil through their roots to maintain vitality and hate leaving the ground.",
     "image": "/images/aniimo/characters/tuckin.webp",
     "evolution": "Tuckin is part of the Hummin -> Witchin -> Tuckin line.",
@@ -729,7 +813,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Heal role entry with official source tracking before launch.",
-    "tierReasonZh": "治疗定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "治疗定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Tuckin は根から土の栄養を吸収して元気を保つため、地面から離れることをとても嫌います。",
+    "abilityZh": "Tuckin 需要通过根部从土壤中吸收养分来维持活力，因此非常讨厌离开地面。",
+    "abilityJa": "Tuckin は根から土の栄養を吸収して元気を保つため、地面から離れることをとても嫌います。",
+    "tierReasonJa": "ヒールロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "budclaw",
@@ -749,7 +837,7 @@
     "rarity": 3,
     "region": "Sea of Flowers",
     "ability": "The first form in the Budclaw line. Track its official entry for updated habitat, encounter and skill details.",
-    "description": "The first form in the Budclaw line. Track its official entry for updated habitat, encounter and skill details.",
+    "description": "Budclaw 进化线的初始形态。可持续关注官方条目，以获取栖息地、遭遇方式和技能细节更新。",
     "descriptionEn": "The first form in the Budclaw line. Track its official entry for updated habitat, encounter and skill details.",
     "image": "/images/aniimo/characters/budclaw.webp",
     "evolution": "Budclaw is part of the Budclaw -> Shrubclaw -> Geoclaw line.",
@@ -762,7 +850,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "DPS role entry with official source tracking before launch.",
-    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Budclaw 系統の最初の姿です。生息地、遭遇条件、スキル詳細は公式情報の更新を追跡してください。",
+    "abilityZh": "Budclaw 进化线的初始形态。可持续关注官方条目，以获取栖息地、遭遇方式和技能细节更新。",
+    "abilityJa": "Budclaw 系統の最初の姿です。生息地、遭遇条件、スキル詳細は公式情報の更新を追跡してください。",
+    "tierReasonJa": "DPSロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "shrubclaw",
@@ -782,7 +874,7 @@
     "rarity": 4,
     "region": "Sea of Flowers",
     "ability": "The lush plants that cover their shells convert sunlight into nutrients, so they don't even need to eat on sunny days.",
-    "description": "The lush plants that cover their shells convert sunlight into nutrients, so they don't even need to eat on sunny days.",
+    "description": "覆盖壳体的茂盛植物会把阳光转化为养分，所以晴天时 Shrubclaw 甚至不需要进食。",
     "descriptionEn": "The lush plants that cover their shells convert sunlight into nutrients, so they don't even need to eat on sunny days.",
     "image": "/images/aniimo/characters/shrubclaw.webp",
     "evolution": "Shrubclaw is part of the Budclaw -> Shrubclaw -> Geoclaw line.",
@@ -795,7 +887,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "DPS role entry with official source tracking before launch.",
-    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "殻を覆う豊かな植物が日光を栄養に変えるため、晴れた日には Shrubclaw は食事すら必要としません。",
+    "abilityZh": "覆盖壳体的茂盛植物会把阳光转化为养分，所以晴天时 Shrubclaw 甚至不需要进食。",
+    "abilityJa": "殻を覆う豊かな植物が日光を栄養に変えるため、晴れた日には Shrubclaw は食事すら必要としません。",
+    "tierReasonJa": "DPSロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "geoclaw",
@@ -815,7 +911,7 @@
     "rarity": 5,
     "region": "Mistwoods",
     "ability": "They live in caves, feed on minerals, and use their beautifully crystallized shells to lure prey.",
-    "description": "They live in caves, feed on minerals, and use their beautifully crystallized shells to lure prey.",
+    "description": "Geoclaw 栖息在洞穴中，以矿物为食，并用美丽结晶化的壳引诱猎物。",
     "descriptionEn": "They live in caves, feed on minerals, and use their beautifully crystallized shells to lure prey.",
     "image": "/images/aniimo/characters/geoclaw.webp",
     "evolution": "Geoclaw is part of the Budclaw -> Shrubclaw -> Geoclaw line.",
@@ -828,7 +924,11 @@
     "aliases": [],
     "tierRank": "B",
     "tierReason": "BREAK role entry with official source tracking before launch.",
-    "tierReasonZh": "破韧定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "破韧定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Geoclaw は洞窟に住み、鉱物を食べ、美しく結晶化した殻で獲物を誘います。",
+    "abilityZh": "Geoclaw 栖息在洞穴中，以矿物为食，并用美丽结晶化的壳引诱猎物。",
+    "abilityJa": "Geoclaw は洞窟に住み、鉱物を食べ、美しく結晶化した殻で獲物を誘います。",
+    "tierReasonJa": "ブレイクロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "sparki",
@@ -848,7 +948,7 @@
     "rarity": 3,
     "region": "Blitzwood",
     "ability": "Though they look like fire, those flames are only flowing energy. They give off no heat at all. In fact, they absorb heat from their surroundings.",
-    "description": "Though they look like fire, those flames are only flowing energy. They give off no heat at all. In fact, they absorb heat from their surroundings.",
+    "description": "Sparki 看起来像火焰，但那只是流动的能量，完全不会发热。相反，它们会吸收周围的热量。",
     "descriptionEn": "Though they look like fire, those flames are only flowing energy. They give off no heat at all. In fact, they absorb heat from their surroundings.",
     "image": "/images/aniimo/characters/sparki.webp",
     "evolution": "Sparki is part of the Sparki -> Flamerion line.",
@@ -861,7 +961,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "DPS role entry with official source tracking before launch.",
-    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Sparki は炎のように見えますが、それは流れるエネルギーで熱を持ちません。むしろ周囲の熱を吸収します。",
+    "abilityZh": "Sparki 看起来像火焰，但那只是流动的能量，完全不会发热。相反，它们会吸收周围的热量。",
+    "abilityJa": "Sparki は炎のように見えますが、それは流れるエネルギーで熱を持ちません。むしろ周囲の熱を吸収します。",
+    "tierReasonJa": "DPSロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "flamerion",
@@ -881,7 +985,7 @@
     "rarity": 4,
     "region": "Blitzwood",
     "ability": "They only come out at night and their bodies are made of gaseous energy and can split as they want!",
-    "description": "They only come out at night and their bodies are made of gaseous energy and can split as they want!",
+    "description": "Flamerion 只在夜晚出现，身体由气态能量构成，可以随心所欲地分裂。",
     "descriptionEn": "They only come out at night and their bodies are made of gaseous energy and can split as they want!",
     "image": "/images/aniimo/characters/flamerion.webp",
     "evolution": "Flamerion is part of the Sparki -> Flamerion line.",
@@ -894,7 +998,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "DPS role entry with official source tracking before launch.",
-    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Flamerion は夜にだけ現れます。体は気体状のエネルギーでできており、自由に分裂できます。",
+    "abilityZh": "Flamerion 只在夜晚出现，身体由气态能量构成，可以随心所欲地分裂。",
+    "abilityJa": "Flamerion は夜にだけ現れます。体は気体状のエネルギーでできており、自由に分裂できます。",
+    "tierReasonJa": "DPSロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "flutternym",
@@ -914,7 +1022,7 @@
     "rarity": 3,
     "region": "Sea of Flowers",
     "ability": "They are timid and hide whenever they sense danger, but the fluorescent scales they shake off always give them away.",
-    "description": "They are timid and hide whenever they sense danger, but the fluorescent scales they shake off always give them away.",
+    "description": "Flutternym 胆小怕事，一感到危险就会躲起来，但抖落的荧光鳞粉总会暴露它的位置。",
     "descriptionEn": "They are timid and hide whenever they sense danger, but the fluorescent scales they shake off always give them away.",
     "image": "/images/aniimo/characters/flutternym.webp",
     "evolution": "Flutternym is part of the Flutternym -> Gracewing -> Somniwing line.",
@@ -927,7 +1035,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Heal role entry with official source tracking before launch.",
-    "tierReasonZh": "治疗定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "治疗定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Flutternym は臆病で危険を感じると隠れますが、落とした蛍光の鱗粉が居場所を知らせてしまいます。",
+    "abilityZh": "Flutternym 胆小怕事，一感到危险就会躲起来，但抖落的荧光鳞粉总会暴露它的位置。",
+    "abilityJa": "Flutternym は臆病で危険を感じると隠れますが、落とした蛍光の鱗粉が居場所を知らせてしまいます。",
+    "tierReasonJa": "ヒールロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "gracewing",
@@ -947,7 +1059,7 @@
     "rarity": 4,
     "region": "Sea of Flowers",
     "ability": "Lone wanderers. They create illusions by shedding scales from their wings when threats approach.",
-    "description": "Lone wanderers. They create illusions by shedding scales from their wings when threats approach.",
+    "description": "Gracewing 是独自漂泊的旅者。遇到威胁时，会从翅膀洒下鳞粉制造幻象。",
     "descriptionEn": "Lone wanderers. They create illusions by shedding scales from their wings when threats approach.",
     "image": "/images/aniimo/characters/gracewing.webp",
     "evolution": "Gracewing is part of the Flutternym -> Gracewing -> Somniwing line.",
@@ -960,7 +1072,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Heal role entry with official source tracking before launch.",
-    "tierReasonZh": "治疗定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "治疗定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Gracewing は孤独な旅人です。脅威が近づくと翼から鱗粉を散らし、幻を作り出します。",
+    "abilityZh": "Gracewing 是独自漂泊的旅者。遇到威胁时，会从翅膀洒下鳞粉制造幻象。",
+    "abilityJa": "Gracewing は孤独な旅人です。脅威が近づくと翼から鱗粉を散らし、幻を作り出します。",
+    "tierReasonJa": "ヒールロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "somniwing",
@@ -980,7 +1096,7 @@
     "rarity": 5,
     "region": "Forest of Falling Stars",
     "ability": "Their magnificent wings spread scales to help flowers grow and spread vitality wherever they fly.",
-    "description": "Their magnificent wings spread scales to help flowers grow and spread vitality wherever they fly.",
+    "description": "Somniwing 华丽的翅膀会播撒鳞粉，帮助花朵生长，并把生命力带到飞过的地方。",
     "descriptionEn": "Their magnificent wings spread scales to help flowers grow and spread vitality wherever they fly.",
     "image": "/images/aniimo/characters/somniwing.webp",
     "evolution": "Somniwing is part of the Flutternym -> Gracewing -> Somniwing line.",
@@ -993,7 +1109,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Somniwing の華やかな翼は鱗粉を広げ、花の成長を助け、飛ぶ先々に生命力をもたらします。",
+    "abilityZh": "Somniwing 华丽的翅膀会播撒鳞粉，帮助花朵生长，并把生命力带到飞过的地方。",
+    "abilityJa": "Somniwing の華やかな翼は鱗粉を広げ、花の成長を助け、飛ぶ先々に生命力をもたらします。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "eko",

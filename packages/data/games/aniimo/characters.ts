@@ -10,7 +10,7 @@ export function getAniimoCharacterName(char: AniimoCharacter, locale: SupportedL
 }
 
 export function getAniimoCharacterDescription(char: AniimoCharacter, locale: SupportedLocale): string {
-  return localeStr(char.description, char.descriptionEn, locale);
+  return localeStr(char.description, char.descriptionEn, locale, char.descriptionJa);
 }
 
 export function getAniimoCharacterImage(char: AniimoCharacter): string {
@@ -22,7 +22,7 @@ export function getAniimoCharacterById(id: string): AniimoCharacter | undefined 
 }
 
 export function getAniimoCharacterTierReason(char: AniimoCharacter, locale: SupportedLocale): string {
-  return localeStr(char.tierReasonZh, char.tierReason, locale);
+  return localeStr(char.tierReasonZh, char.tierReason, locale, char.tierReasonJa);
 }
 
 export const characters: Character[] = aniimoCharacters.map((char) => ({
@@ -32,7 +32,7 @@ export const characters: Character[] = aniimoCharacters.map((char) => ({
   rarity: char.rarity,
   element: char.element,
   weaponType: char.role,
-  description: { zh: char.description, en: char.descriptionEn, ja: char.descriptionEn },
+  description: { zh: char.description, en: char.descriptionEn, ja: char.descriptionJa ?? char.descriptionEn },
   images: {
     icon: char.image,
     card: char.image,
@@ -43,8 +43,8 @@ export const characters: Character[] = aniimoCharacters.map((char) => ({
   skills: [
     {
       id: 'ability',
-      name: { zh: '能力', en: 'Ability', ja: 'Ability' },
-      description: { zh: char.ability, en: char.ability, ja: char.ability },
+      name: { zh: '能力', en: 'Ability', ja: '能力' },
+      description: { zh: char.abilityZh ?? char.ability, en: char.ability, ja: char.abilityJa ?? char.ability },
       type: 'passive',
     },
   ],
