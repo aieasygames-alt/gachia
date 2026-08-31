@@ -3,7 +3,6 @@ import { getDb, getD1 } from '@/lib/db';
 import { mapProgress, eq, and } from '@gachia/db';
 import { createAuth } from '@/lib/auth';
 import { checkRateLimit } from '@/lib/rate-limit';
-import { z } from 'zod';
 import { BatchSchema, MapIdSchema, MarkerIdSchema } from '@/lib/map-validation';
 
 const RL = { limit: 60, windowSeconds: 60, prefix: '/api/map/progress' };
@@ -52,12 +51,12 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const parsedBody = z.object({ mapId: MapIdSchema, markerId: MarkerIdSchema }).safeParse(await request.json());
-  if (!parsedBody.success) {
+  const parsedBody = parseMarkerToggle(await request.json());
+  if (!parsedBody) {
     return NextResponse.json({ error: 'mapId and markerId are required' }, { status: 400 });
   }
 
-  const { mapId, markerId } = parsedBody.data;
+  const { mapId, markerId } = parsedBody;
   const db = getDb();
   const d1 = getD1();
 
@@ -118,4 +117,19 @@ export async function PUT(request: NextRequest) {
   }
 
   return NextResponse.json({ success: true, added: collected.length, removed: removed.length });
+}
+
+function parseMarkerToggle(value: unknown): { mapId: string; markerId: string } | null {
+  if (!value || typeof value !== 'object') return null;
+
+  const payload = value as { mapId?: unknown; markerId?: unknown };
+  const parsedMapId = MapIdSchema.safeParse(payload.mapId);
+  const parsedMarkerId = MarkerIdSchema.safeParse(payload.markerId);
+
+  if (!parsedMapId.success || !parsedMarkerId.success) return null;
+
+  return {
+    mapId: parsedMapId.data,
+    markerId: parsedMarkerId.data,
+  };
 }

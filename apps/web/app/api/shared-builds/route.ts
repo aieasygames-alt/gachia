@@ -3,18 +3,10 @@ import { getDb } from '@/lib/db';
 import { sharedBuilds, eq } from '@gachia/db';
 import { createAuth } from '@/lib/auth';
 import { checkRateLimit } from '@/lib/rate-limit';
-import { z } from 'zod';
 import { randomUUID } from 'crypto';
 import { GAME_IDS } from '@gachia/core';
 
-// Validation schema with Zod
-const CreateBuildSchema = z.object({
-  gameId: z.enum(GAME_IDS as [string, ...string[]], {
-    errorMap: () => ({ message: 'Invalid game ID' })
-  }),
-  characterId: z.string().min(1).max(50),
-  buildData: z.string().max(10000), // Limit to 10KB to prevent DoS
-});
+const gameIds = new Set<string>(GAME_IDS);
 
 export async function POST(request: NextRequest) {
   const limited = await checkRateLimit(request, { limit: 10, windowSeconds: 60, prefix: '/api/shared-builds' });
@@ -30,20 +22,19 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Authentication required' }, { status: 401 });
   }
 
-  const body: { gameId?: string; characterId?: string; buildData?: string; userId?: string } = await request.json();
+  const body = await request.json();
 
   // CRITICAL FIX: Ignore user-provided userId, use session userId instead
   const userId = session.user.id;
 
-  // CRITICAL FIX: Validate input with Zod schema
-  const validationResult = CreateBuildSchema.safeParse(body);
-  if (!validationResult.success) {
+  const parsedBody = parseCreateBuild(body);
+  if (!parsedBody) {
     return NextResponse.json({
       error: 'Invalid input',
-      details: validationResult.error.flatten()
+      details: { formErrors: ['Invalid gameId, characterId, or buildData'] },
     }, { status: 400 });
   }
-  const { gameId, characterId, buildData } = validationResult.data;
+  const { gameId, characterId, buildData } = parsedBody;
 
   // Generate a short ID (8 chars, URL-friendly)
   const id = generateId();
@@ -87,4 +78,21 @@ export async function GET(request: NextRequest) {
 function generateId(): string {
   // CRITICAL FIX: Use crypto.randomUUID() instead of Math.random()
   return randomUUID().replaceAll('-', '').substring(0, 16);
+}
+
+function parseCreateBuild(value: unknown): { gameId: string; characterId: string; buildData: string } | null {
+  if (!value || typeof value !== 'object') return null;
+
+  const payload = value as { gameId?: unknown; characterId?: unknown; buildData?: unknown };
+  if (typeof payload.gameId !== 'string' || !gameIds.has(payload.gameId)) return null;
+  if (typeof payload.characterId !== 'string' || payload.characterId.length < 1 || payload.characterId.length > 50) {
+    return null;
+  }
+  if (typeof payload.buildData !== 'string' || payload.buildData.length > 10000) return null;
+
+  return {
+    gameId: payload.gameId,
+    characterId: payload.characterId,
+    buildData: payload.buildData,
+  };
 }

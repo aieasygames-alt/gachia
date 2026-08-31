@@ -1,65 +1,4 @@
 import { GAMES, LOCALES } from '@gachia/core';
-// Characters
-import { genshinCharacters } from '@gachia/data/games/genshin/characters';
-import { starrailCharacters } from '@gachia/data/games/starrail/characters';
-import { wuwaCharacters } from '@gachia/data/games/wuwa/characters';
-import { nteCharacters } from '@gachia/data/games/nte/characters';
-import { zzzCharacters } from '@gachia/data/games/zzz/characters';
-import { guihuanCharacters } from '@gachia/data/games/guihuan/characters';
-import { anantaCharacters } from '@gachia/data/games/ananta/characters';
-import { endfieldCharacters } from '@gachia/data/games/endfield/characters';
-import { seaCharacters } from '@gachia/data/games/sea/characters';
-import { rocoCharacters } from '@gachia/data/games/roco/characters';
-import { rocoCnCharacters } from '@gachia/data/games/roco-cn/characters';
-import { aniimoCharacters } from '@gachia/data/games/aniimo/characters';
-
-// Weapons
-import { genshinWeapons } from '@gachia/data/games/genshin/weapons';
-import { starrailLightCones } from '@gachia/data/games/starrail/weapons';
-import { wuwaWeapons } from '@gachia/data/games/wuwa/weapons';
-import { nteWeapons } from '@gachia/data/games/nte/weapons';
-import { zzzWeapons } from '@gachia/data/games/zzz/weapons';
-import { guihuanWeapons } from '@gachia/data/games/guihuan/weapons';
-import { anantaWeapons } from '@gachia/data/games/ananta/weapons';
-import { endfieldWeapons } from '@gachia/data/games/endfield/weapons';
-import { seaWeapons } from '@gachia/data/games/sea/weapons';
-import { skjhWeapons } from '@gachia/data/games/skjh/weapons';
-
-// Guides
-import { genshinGuides } from '@gachia/data/games/genshin/guides';
-import { starrailGuides } from '@gachia/data/games/starrail/guides';
-import { wuwaGuides } from '@gachia/data/games/wuwa/guides';
-import { guides as nteGuides } from '@gachia/data/games/nte/guides';
-import { zzzGuides } from '@gachia/data/games/zzz/guides';
-import { guihuanGuides } from '@gachia/data/games/guihuan/guides';
-import { anantaGuides } from '@gachia/data/games/ananta/guides';
-import { endfieldGuides } from '@gachia/data/games/endfield/guides';
-import { seaGuides } from '@gachia/data/games/sea/guides';
-import { skjhGuides } from '@gachia/data/games/skjh/guides';
-import { rocoGuides } from '@gachia/data/games/roco/guides';
-import { rocoCnGuides } from '@gachia/data/games/roco-cn/guides';
-import { aniimoGuides } from '@gachia/data/games/aniimo/guides';
-
-// Materials / Items
-import { genshinMaterials } from '@gachia/data/games/genshin/items';
-import { starrailMaterials } from '@gachia/data/games/starrail/items';
-import { wuwaMaterials } from '@gachia/data/games/wuwa/items';
-import { nteMaterials } from '@gachia/data/games/nte/items';
-import { zzzMaterials } from '@gachia/data/games/zzz/items';
-import { guihuanMaterials } from '@gachia/data/games/guihuan/items';
-import { anantaMaterials } from '@gachia/data/games/ananta/items';
-import { endfieldMaterials } from '@gachia/data/games/endfield/items';
-import { seaMaterials } from '@gachia/data/games/sea/items';
-import { skjhMaterials } from '@gachia/data/games/skjh/items';
-import { rocoMaterials } from '@gachia/data/games/roco/items';
-import { rocoCnMaterials } from '@gachia/data/games/roco-cn/items';
-
-// Game-specific gear
-import { artifactSets as genshinArtifactSets } from '@gachia/data/games/genshin/artifacts';
-import { relicSets as starrailRelicSets } from '@gachia/data/games/starrail/relics';
-import { echoSets as wuwaEchoSets } from '@gachia/data/games/wuwa/echoes';
-import { diskSets as nteDiskSets } from '@gachia/data/games/nte/extras';
-import { zzzDriveDiscs } from '@gachia/data/games/zzz/drive-discs';
 import type { MetadataRoute } from 'next';
 import { getEntryUpdatedAt, hasLocalizedContent } from '@/lib/seo-metadata';
 
@@ -93,7 +32,9 @@ const REAL_CONTENT_ROUTES: Record<string, string[]> = {
   aniimo: ['characters', 'guides', 'map', 'version', 'download', 'redeem-codes'],
 };
 
-export default function sitemap(): MetadataRoute.Sitemap {
+type SitemapItem = { id: string };
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [];
 
   for (const locale of LOCALES) {
@@ -128,7 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       // Character detail pages
       if (CHAR_GAMES.includes(gameId as typeof CHAR_GAMES[number])) {
-        const chars = getCharactersForGame(gameId);
+        const chars = await getCharactersForGame(gameId);
         for (const char of chars) {
           entries.push({
             url: `${BASE_URL}/${locale}/${gameId}/characters/${char.id}`,
@@ -140,7 +81,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       // Weapon detail pages
       if (WEAPON_GAMES.includes(gameId as typeof WEAPON_GAMES[number])) {
-        const weapons = getWeaponsForGame(gameId);
+        const weapons = await getWeaponsForGame(gameId);
         for (const weapon of weapons) {
           entries.push({
             url: `${BASE_URL}/${locale}/${gameId}/weapons/${weapon.id}`,
@@ -152,7 +93,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       // Guide detail pages
       if (GUIDE_GAMES.includes(gameId as typeof GUIDE_GAMES[number])) {
-        const guides = getGuidesForGame(gameId);
+        const guides = await getGuidesForGame(gameId);
         for (const guide of guides) {
           if (!hasLocalizedContent(guide, locale)) continue;
           const guideHints = getGuideSitemapHints(guide);
@@ -168,7 +109,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       // Artifact detail pages
       if (ARTIFACT_GAMES.includes(gameId as typeof ARTIFACT_GAMES[number])) {
-        const sets = getArtifactsForGame(gameId);
+        const sets = await getArtifactsForGame(gameId);
         for (const set of sets) {
           entries.push({
             url: `${BASE_URL}/${locale}/${gameId}/artifacts/${set.id}`,
@@ -180,6 +121,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       // Echo detail pages
       if (ECHO_GAMES.includes(gameId as typeof ECHO_GAMES[number])) {
+        const wuwaEchoSets = await getEchoesForGame(gameId);
         for (const echo of wuwaEchoSets) {
           entries.push({
             url: `${BASE_URL}/${locale}/wuwa/echoes/${echo.id}`,
@@ -191,6 +133,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       // Disk set detail pages
       if (DISK_SET_GAMES.includes(gameId as typeof DISK_SET_GAMES[number])) {
+        const nteDiskSets = await getDiskSetsForGame(gameId);
         for (const ds of nteDiskSets) {
           entries.push({
             url: `${BASE_URL}/${locale}/nte/disk-sets/${ds.id}`,
@@ -202,6 +145,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       // Drive disc detail pages
       if (DRIVE_DISC_GAMES.includes(gameId as typeof DRIVE_DISC_GAMES[number])) {
+        const zzzDriveDiscs = await getDriveDiscsForGame(gameId);
         for (const dd of zzzDriveDiscs) {
           entries.push({
             url: `${BASE_URL}/${locale}/zzz/drive-discs/${dd.id}`,
@@ -213,7 +157,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       // Item / Material detail pages
       if (ITEM_GAMES.includes(gameId as typeof ITEM_GAMES[number])) {
-        const items = getItemsForGame(gameId);
+        const items = await getItemsForGame(gameId);
         for (const item of items) {
           entries.push({
             url: `${BASE_URL}/${locale}/${gameId}/items/${item.id}`,
@@ -255,81 +199,102 @@ function getGuideSitemapHints(entry: unknown): Pick<MetadataRoute.Sitemap[number
   return { changeFrequency: 'weekly', priority: 0.7 };
 }
 
-function getCharactersForGame(gameId: string) {
+async function getCharactersForGame(gameId: string): Promise<SitemapItem[]> {
   switch (gameId) {
-    case 'genshin': return genshinCharacters;
-    case 'starrail': return starrailCharacters;
-    case 'wuwa': return wuwaCharacters;
-    case 'nte': return nteCharacters;
-    case 'zzz': return zzzCharacters;
-    case 'guihuan': return guihuanCharacters;
-    case 'ananta': return anantaCharacters;
-    case 'endfield': return endfieldCharacters;
-    case 'sea': return seaCharacters;
-    case 'roco': return rocoCharacters;
-    case 'roco-cn': return rocoCnCharacters;
-    case 'aniimo': return aniimoCharacters;
+    case 'genshin': return (await import('@gachia/data/games/genshin/characters')).genshinCharacters;
+    case 'starrail': return (await import('@gachia/data/games/starrail/characters')).starrailCharacters;
+    case 'wuwa': return (await import('@gachia/data/games/wuwa/characters')).wuwaCharacters;
+    case 'nte': return (await import('@gachia/data/games/nte/characters')).nteCharacters;
+    case 'zzz': return (await import('@gachia/data/games/zzz/characters')).zzzCharacters;
+    case 'guihuan': return (await import('@gachia/data/games/guihuan/characters')).guihuanCharacters;
+    case 'ananta': return (await import('@gachia/data/games/ananta/characters')).anantaCharacters;
+    case 'endfield': return (await import('@gachia/data/games/endfield/characters')).endfieldCharacters;
+    case 'sea': return (await import('@gachia/data/games/sea/characters')).seaCharacters;
+    case 'roco': return (await import('@gachia/data/games/roco/characters')).rocoCharacters;
+    case 'roco-cn': return (await import('@gachia/data/games/roco-cn/characters')).rocoCnCharacters;
+    case 'aniimo': return (await import('@gachia/data/games/aniimo/characters')).aniimoCharacters;
     default: return [];
   }
 }
 
-function getWeaponsForGame(gameId: string) {
+async function getWeaponsForGame(gameId: string): Promise<SitemapItem[]> {
   switch (gameId) {
-    case 'genshin': return genshinWeapons;
-    case 'starrail': return starrailLightCones;
-    case 'wuwa': return wuwaWeapons;
-    case 'nte': return nteWeapons;
-    case 'zzz': return zzzWeapons;
-    case 'guihuan': return guihuanWeapons;
-    case 'ananta': return anantaWeapons;
-    case 'endfield': return endfieldWeapons;
-    case 'sea': return seaWeapons;
-    case 'skjh': return skjhWeapons;
+    case 'genshin': return (await import('@gachia/data/games/genshin/weapons')).genshinWeapons;
+    case 'starrail': return (await import('@gachia/data/games/starrail/weapons')).starrailLightCones;
+    case 'wuwa': return (await import('@gachia/data/games/wuwa/weapons')).wuwaWeapons;
+    case 'nte': return (await import('@gachia/data/games/nte/weapons')).nteWeapons;
+    case 'zzz': return (await import('@gachia/data/games/zzz/weapons')).zzzWeapons;
+    case 'guihuan': return (await import('@gachia/data/games/guihuan/weapons')).guihuanWeapons;
+    case 'ananta': return (await import('@gachia/data/games/ananta/weapons')).anantaWeapons;
+    case 'endfield': return (await import('@gachia/data/games/endfield/weapons')).endfieldWeapons;
+    case 'sea': return (await import('@gachia/data/games/sea/weapons')).seaWeapons;
+    case 'skjh': return (await import('@gachia/data/games/skjh/weapons')).skjhWeapons;
     default: return [];
   }
 }
 
-function getGuidesForGame(gameId: string) {
+async function getGuidesForGame(gameId: string): Promise<SitemapItem[]> {
   switch (gameId) {
-    case 'genshin': return genshinGuides;
-    case 'starrail': return starrailGuides;
-    case 'wuwa': return wuwaGuides;
-    case 'nte': return nteGuides;
-    case 'zzz': return zzzGuides;
-    case 'guihuan': return guihuanGuides;
-    case 'ananta': return anantaGuides;
-    case 'endfield': return endfieldGuides;
-    case 'sea': return seaGuides;
-    case 'skjh': return skjhGuides;
-    case 'roco': return rocoGuides;
-    case 'roco-cn': return rocoCnGuides;
-    case 'aniimo': return aniimoGuides;
+    case 'genshin': return (await import('@gachia/data/games/genshin/guides')).genshinGuides;
+    case 'starrail': return (await import('@gachia/data/games/starrail/guides')).starrailGuides;
+    case 'wuwa': return (await import('@gachia/data/games/wuwa/guides')).wuwaGuides;
+    case 'nte': return (await import('@gachia/data/games/nte/guides')).guides;
+    case 'zzz': return (await import('@gachia/data/games/zzz/guides')).zzzGuides;
+    case 'guihuan': return (await import('@gachia/data/games/guihuan/guides')).guihuanGuides;
+    case 'ananta': return (await import('@gachia/data/games/ananta/guides')).anantaGuides;
+    case 'endfield': return (await import('@gachia/data/games/endfield/guides')).endfieldGuides;
+    case 'sea': return (await import('@gachia/data/games/sea/guides')).seaGuides;
+    case 'skjh': return (await import('@gachia/data/games/skjh/guides')).skjhGuides;
+    case 'roco': return (await import('@gachia/data/games/roco/guides')).rocoGuides;
+    case 'roco-cn': return (await import('@gachia/data/games/roco-cn/guides')).rocoCnGuides;
+    case 'aniimo': return (await import('@gachia/data/games/aniimo/guides')).aniimoGuides;
     default: return [];
   }
 }
 
-function getArtifactsForGame(gameId: string) {
+async function getArtifactsForGame(gameId: string): Promise<SitemapItem[]> {
   switch (gameId) {
-    case 'genshin': return genshinArtifactSets;
-    case 'starrail': return starrailRelicSets;
+    case 'genshin': return (await import('@gachia/data/games/genshin/artifacts')).artifactSets;
+    case 'starrail': return (await import('@gachia/data/games/starrail/relics')).relicSets;
     default: return [];
   }
 }
 
-function getItemsForGame(gameId: string) {
+async function getEchoesForGame(gameId: string): Promise<SitemapItem[]> {
   switch (gameId) {
-    case 'genshin': return genshinMaterials;
-    case 'starrail': return starrailMaterials;
-    case 'wuwa': return wuwaMaterials;
-    case 'nte': return nteMaterials;
-    case 'zzz': return zzzMaterials;
-    case 'guihuan': return guihuanMaterials;
-    case 'ananta': return anantaMaterials;
-    case 'endfield': return endfieldMaterials;
-    case 'sea': return seaMaterials;
-    case 'skjh': return skjhMaterials;
-    case 'roco': return rocoMaterials;
-    case 'roco-cn': return rocoCnMaterials;
+    case 'wuwa': return (await import('@gachia/data/games/wuwa/echoes')).echoSets;
+    default: return [];
+  }
+}
+
+async function getDiskSetsForGame(gameId: string): Promise<SitemapItem[]> {
+  switch (gameId) {
+    case 'nte': return (await import('@gachia/data/games/nte/extras')).diskSets;
+    default: return [];
+  }
+}
+
+async function getDriveDiscsForGame(gameId: string): Promise<SitemapItem[]> {
+  switch (gameId) {
+    case 'zzz': return (await import('@gachia/data/games/zzz/drive-discs')).zzzDriveDiscs;
+    default: return [];
+  }
+}
+
+async function getItemsForGame(gameId: string): Promise<SitemapItem[]> {
+  switch (gameId) {
+    case 'genshin': return (await import('@gachia/data/games/genshin/items')).genshinMaterials;
+    case 'starrail': return (await import('@gachia/data/games/starrail/items')).starrailMaterials;
+    case 'wuwa': return (await import('@gachia/data/games/wuwa/items')).wuwaMaterials;
+    case 'nte': return (await import('@gachia/data/games/nte/items')).nteMaterials;
+    case 'zzz': return (await import('@gachia/data/games/zzz/items')).zzzMaterials;
+    case 'guihuan': return (await import('@gachia/data/games/guihuan/items')).guihuanMaterials;
+    case 'ananta': return (await import('@gachia/data/games/ananta/items')).anantaMaterials;
+    case 'endfield': return (await import('@gachia/data/games/endfield/items')).endfieldMaterials;
+    case 'sea': return (await import('@gachia/data/games/sea/items')).seaMaterials;
+    case 'skjh': return (await import('@gachia/data/games/skjh/items')).skjhMaterials;
+    case 'roco': return (await import('@gachia/data/games/roco/items')).rocoMaterials;
+    case 'roco-cn': return (await import('@gachia/data/games/roco-cn/items')).rocoCnMaterials;
     default: return [];
   }
 }

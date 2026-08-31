@@ -3,25 +3,16 @@ import { getDb } from '@/lib/db';
 import { userCharacters, eq, and } from '@gachia/db';
 import { createAuth } from '@/lib/auth';
 import { checkRateLimit } from '@/lib/rate-limit';
-import { z } from 'zod';
 import { GAME_IDS } from '@gachia/core';
 
 const RL = { limit: 100, windowSeconds: 60, prefix: '/api/user-characters' };
+const gameIds = new Set<string>(GAME_IDS);
+const characterIdPattern = /^[a-zA-Z0-9_-]+$/;
 
 async function getSession(request: NextRequest) {
   const auth = createAuth();
   return auth.api.getSession({ headers: request.headers });
 }
-
-const CharacterKeySchema = z.object({
-  gameId: z.enum(GAME_IDS as [string, ...string[]]),
-  characterId: z.string().trim().min(1).max(100).regex(/^[a-zA-Z0-9_-]+$/),
-});
-const CharacterBodySchema = CharacterKeySchema.extend({
-  level: z.number().int().min(1).max(100).optional(),
-  constellation: z.number().int().min(0).max(6).optional(),
-  notes: z.string().trim().max(1000).optional(),
-});
 
 export async function GET(request: NextRequest) {
   const limited = await checkRateLimit(request, RL);
@@ -58,11 +49,11 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const parsedBody = CharacterBodySchema.safeParse(await request.json());
-  if (!parsedBody.success) {
+  const parsedBody = parseCharacterBody(await request.json());
+  if (!parsedBody) {
     return NextResponse.json({ error: 'Invalid character data' }, { status: 400 });
   }
-  const { gameId, characterId, level, constellation, notes } = parsedBody.data;
+  const { gameId, characterId, level, constellation, notes } = parsedBody;
 
   const db = getDb();
 
@@ -105,11 +96,11 @@ export async function DELETE(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const parsedBody = CharacterKeySchema.safeParse(await request.json());
-  if (!parsedBody.success) {
+  const parsedBody = parseCharacterKey(await request.json());
+  if (!parsedBody) {
     return NextResponse.json({ error: 'Invalid character data' }, { status: 400 });
   }
-  const { gameId, characterId } = parsedBody.data;
+  const { gameId, characterId } = parsedBody;
 
   const db = getDb();
   await db
@@ -123,4 +114,59 @@ export async function DELETE(request: NextRequest) {
     );
 
   return NextResponse.json({ success: true });
+}
+
+function parseCharacterBody(value: unknown): {
+  gameId: string;
+  characterId: string;
+  level?: number;
+  constellation?: number;
+  notes?: string;
+} | null {
+  const key = parseCharacterKey(value);
+  if (!key || !value || typeof value !== 'object') return null;
+
+  const payload = value as { level?: unknown; constellation?: unknown; notes?: unknown };
+  const level = parseOptionalInteger(payload.level, 1, 100);
+  const constellation = parseOptionalInteger(payload.constellation, 0, 6);
+  const notes = parseOptionalString(payload.notes, 1000);
+
+  if (level === null || constellation === null || notes === null) return null;
+
+  return {
+    ...key,
+    ...(level === undefined ? {} : { level }),
+    ...(constellation === undefined ? {} : { constellation }),
+    ...(notes === undefined ? {} : { notes }),
+  };
+}
+
+function parseCharacterKey(value: unknown): { gameId: string; characterId: string } | null {
+  if (!value || typeof value !== 'object') return null;
+
+  const payload = value as { gameId?: unknown; characterId?: unknown };
+  if (typeof payload.gameId !== 'string' || !gameIds.has(payload.gameId)) return null;
+  if (typeof payload.characterId !== 'string') return null;
+
+  const characterId = payload.characterId.trim();
+  if (characterId.length < 1 || characterId.length > 100 || !characterIdPattern.test(characterId)) return null;
+
+  return {
+    gameId: payload.gameId,
+    characterId,
+  };
+}
+
+function parseOptionalInteger(value: unknown, min: number, max: number): number | undefined | null {
+  if (value === undefined) return undefined;
+  if (typeof value !== 'number' || !Number.isInteger(value) || value < min || value > max) return null;
+  return value;
+}
+
+function parseOptionalString(value: unknown, maxLength: number): string | undefined | null {
+  if (value === undefined) return undefined;
+  if (typeof value !== 'string') return null;
+
+  const trimmed = value.trim();
+  return trimmed.length <= maxLength ? trimmed : null;
 }

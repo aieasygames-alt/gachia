@@ -3,14 +3,11 @@ import { getDb } from '@/lib/db';
 import { userFavorites, eq, and } from '@gachia/db';
 import { createAuth } from '@/lib/auth';
 import { checkRateLimit } from '@/lib/rate-limit';
-import { z } from 'zod';
 import { GAME_IDS } from '@gachia/core';
 
 const RL = { limit: 100, windowSeconds: 60, prefix: '/api/favorites' };
-const FavoriteSchema = z.object({
-  gameId: z.enum(GAME_IDS as [string, ...string[]]),
-  characterId: z.string().trim().min(1).max(100).regex(/^[a-zA-Z0-9_-]+$/),
-});
+const gameIds = new Set<string>(GAME_IDS);
+const characterIdPattern = /^[a-zA-Z0-9_-]+$/;
 
 async function getSession(request: NextRequest) {
   const auth = createAuth();
@@ -52,11 +49,11 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const parsedBody = FavoriteSchema.safeParse(await request.json());
-  if (!parsedBody.success) {
+  const parsedBody = parseFavorite(await request.json());
+  if (!parsedBody) {
     return NextResponse.json({ error: 'Invalid favorite' }, { status: 400 });
   }
-  const { gameId, characterId } = parsedBody.data;
+  const { gameId, characterId } = parsedBody;
 
   const db = getDb();
 
@@ -82,11 +79,11 @@ export async function DELETE(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const parsedBody = FavoriteSchema.safeParse(await request.json());
-  if (!parsedBody.success) {
+  const parsedBody = parseFavorite(await request.json());
+  if (!parsedBody) {
     return NextResponse.json({ error: 'Invalid favorite' }, { status: 400 });
   }
-  const { gameId, characterId } = parsedBody.data;
+  const { gameId, characterId } = parsedBody;
 
   const db = getDb();
   await db
@@ -100,4 +97,20 @@ export async function DELETE(request: NextRequest) {
     );
 
   return NextResponse.json({ success: true });
+}
+
+function parseFavorite(value: unknown): { gameId: string; characterId: string } | null {
+  if (!value || typeof value !== 'object') return null;
+
+  const payload = value as { gameId?: unknown; characterId?: unknown };
+  if (typeof payload.gameId !== 'string' || !gameIds.has(payload.gameId)) return null;
+  if (typeof payload.characterId !== 'string') return null;
+
+  const characterId = payload.characterId.trim();
+  if (characterId.length < 1 || characterId.length > 100 || !characterIdPattern.test(characterId)) return null;
+
+  return {
+    gameId: payload.gameId,
+    characterId,
+  };
 }
