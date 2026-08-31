@@ -151,6 +151,11 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
     en: 'The Roco Kingdom global version is Tencent\'s worldwide open-world creature-collection RPG. The first CBT "Quack Quack Test" opens October 27, 2026. Gachia tracks officially revealed Jinies\' attributes, rarity, evolution chains, and basic roles, expanding after CBT. The staff system is a cosmetic effect weapon with no attack stats, obtained from battle passes and events. Our tier list uses provisional CBT ratings pending the official release. The global and CN versions keep independent data; the global release supports Traditional Chinese, English, Japanese, and more.',
     ja: 'ロコキングダム国際版はTencentのグローバル向けオープンワールド収集RPG。初回CBT「Quack Quack Test」は2026年10月27日開始。Gachiaは公式公開ジニーの属性、レアリティ、進化、役割を整理し、CBT後に拡充。杖は攻撃数値なしの外観武器で、バトルパスとイベントから入手。TierはCBT暫定。国際版と中国版は独立、多言語対応。',
   },
+  aniimo: {
+    zh: 'Aniimo 是 Pawprint Studio 开发的免费开放世界生物收集 RPG，世界名为 Idyll。官方日期为 PC/主机 2026-09-16、移动端 2026-09-23。Gachia 目前整理 89 个公开 Aniimo 条目、6 个区域、下载入口、预注册奖励、兑换码状态和上线后路线验证清单。',
+    en: 'Aniimo is a free-to-play creature-catching open-world RPG from Pawprint Studio set on Idyll. The official dates are 2026-09-16 for PC/console and 2026-09-23 for mobile. Gachia tracks 89 public Aniimo entries, 6 regions, downloads, pre-registration rewards, code status, and launch-route verification.',
+    ja: 'AniimoはPawprint Studio開発の無料オープンワールド収集RPG。公式日程はPC/コンソールが2026-09-16、モバイルが2026-09-23。Gachiaは89体、6地域、DL、報酬、コード状態を追跡します。',
+  },
 };
 
 const GAME_META_TITLES: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
@@ -174,6 +179,11 @@ const GAME_META_TITLES: Partial<Record<GameId, Record<SupportedLocale, string>>>
     en: 'ZZZ v3.1 Wiki — Current Banners, Anniversary, Xbox & Codes',
     ja: 'ZZZ v3.1 Wiki — エージェント、バナー、Wエンジン、ディスク',
   },
+  aniimo: {
+    zh: 'Aniimo Wiki｜发售日期、下载、图鉴、地图与兑换码追踪',
+    en: 'Aniimo Wiki — Release Date, Download, Database, Map & Codes',
+    ja: 'Aniimo Wiki — 発売日、DL、図鑑、マップ、コード',
+  },
 };
 
 // --- Featured character IDs per game ---
@@ -188,6 +198,7 @@ const FEATURED_CHARS: Record<string, string[]> = {
   endfield: ['laevatain', 'ardelia', 'tangtang', 'endministrator', 'lifeng'],
   sea: ['traveler', 'ais', 'little-axe'],
   skjh: [],
+  aniimo: ['susuta', 'emberpup', 'celestis', 'tuckin', 'panpanta', 'sheldon'],
 };
 
 type SpecialHubCopy = {
@@ -848,6 +859,7 @@ const FEATURED_GUIDE_IDS: Record<string, string[]> = {
   endfield: ['official-download-specs-homecoming-faq', 'homecoming-operators-map-route', 'blueprint-aic-factory-guide'],
   sea: ['identity-v-signin-screenshot-rewards-guide', 'lost-sea-new-islands-ship-prep-guide', 'sea-of-remnants-p2w-gacha-explained'],
   skjh: ['official-pc-download-faq', 'first-2-hours-starter-route', 'base-location-anti-raid-plan'],
+  aniimo: ['release-date', 'download', 'codes-rewards'],
 };
 
 async function getGuideInfos(gameId: GameId, locale: SupportedLocale): Promise<GuideInfo[]> {

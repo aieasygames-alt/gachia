@@ -4,6 +4,7 @@ export interface RedeemCodeEntry {
   code: string;
   reward: string;
   rewardEn: string;
+  rewardZh?: string;
   status: string;
   expiresAt: string;
   source: string;
@@ -11,7 +12,7 @@ export interface RedeemCodeEntry {
   revealedAt: string;
 }
 
-export const GAMES_WITH_REDEEM_CODES: GameId[] = ['genshin', 'starrail', 'wuwa', 'zzz', 'nte', 'sea', 'skjh', 'roco-cn'];
+export const GAMES_WITH_REDEEM_CODES: GameId[] = ['genshin', 'starrail', 'wuwa', 'zzz', 'nte', 'sea', 'skjh', 'roco-cn', 'aniimo'];
 
 export async function getRedeemCodesForGame(gameId: GameId): Promise<RedeemCodeEntry[]> {
   switch (gameId) {
@@ -46,6 +47,20 @@ export async function getRedeemCodesForGame(gameId: GameId): Promise<RedeemCodeE
     case 'roco-cn': {
       const mod = await import('@gachia/data/games/roco-cn/redeem-codes');
       return mod.getActiveRedeemCodes() as unknown as RedeemCodeEntry[];
+    }
+    case 'aniimo': {
+      const mod = await import('@gachia/data/games/aniimo/redeem-codes');
+      return mod.redeemCodes.map((code) => ({
+        code: code.code,
+        reward: code.reward,
+        rewardEn: code.rewardEn,
+        rewardZh: code.rewardZh,
+        status: code.status,
+        expiresAt: 'watchlist',
+        source: 'official-watchlist',
+        region: 'Global',
+        revealedAt: code.updated,
+      }));
     }
     default:
       return [];
@@ -84,6 +99,10 @@ export async function getRedeemCodeReward(gameId: GameId, code: RedeemCodeEntry,
     }
     case 'roco-cn': {
       const mod = await import('@gachia/data/games/roco-cn/redeem-codes');
+      return mod.getRedeemCodeReward(code as never, locale);
+    }
+    case 'aniimo': {
+      const mod = await import('@gachia/data/games/aniimo/redeem-codes');
       return mod.getRedeemCodeReward(code as never, locale);
     }
     default:

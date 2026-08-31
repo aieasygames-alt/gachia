@@ -17,7 +17,7 @@ export interface MapRegionEntry {
 }
 
 export interface MapPageData {
-  gameId: Extract<GameId, 'genshin' | 'starrail' | 'wuwa' | 'nte' | 'endfield'>;
+  gameId: Extract<GameId, 'genshin' | 'starrail' | 'wuwa' | 'nte' | 'endfield' | 'aniimo'>;
   regions: MapRegionEntry[];
   mapData?: GameMapData;
 }
@@ -113,6 +113,23 @@ export async function getMapPageData(gameId: GameId, locale: SupportedLocale): P
           domains: region.domains,
           highlights: region.highlights,
           tips: region.tips,
+        })),
+      };
+    }
+    case 'aniimo': {
+      const mod = await import('@gachia/data/games/aniimo/regions');
+      return {
+        gameId,
+        regions: mod.aniimoRegions.map((region) => ({
+          id: region.id,
+          name: mod.getAniimoRegionName(region, locale),
+          description: mod.getAniimoRegionDescription(region, locale),
+          subRegions: [],
+          bosses: [],
+          specialties: region.aniimo,
+          domains: [],
+          highlights: region.mechanics,
+          tips: [...region.checklist, region.guideNote],
         })),
       };
     }

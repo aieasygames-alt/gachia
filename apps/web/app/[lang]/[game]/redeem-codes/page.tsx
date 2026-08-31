@@ -45,6 +45,11 @@ const REDEEM_DESC: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
     en: 'Roco Kingdom (CN) redeem code tracker covering launch codes, S2 season codes, creator codes, channel codes, and limited-time passwords so you can claim Luoke Diamonds and resources fast.',
     ja: 'ロコキングダム（中国版）の交換コード一覧。公測の恒常コード、S2シーズンコード、クリエイターコード、期間限定パスワードを整理しています。',
   },
+  aniimo: {
+    zh: 'Aniimo 兑换码与奖励追踪，区分暂无官方兑换码、预注册奖励、里程碑奖励和上线后需要核验的兑换入口。',
+    en: 'Aniimo code and reward tracker separating no confirmed public codes from pre-registration rewards, milestone rewards, and launch verification.',
+    ja: 'Aniimoのコードと報酬を追跡。公式コード未確認、事前登録報酬、マイルストーン報酬、リリース後確認を分けて整理します。',
+  },
 };
 
 function getLastCheckedAt(codes: RedeemCodeEntry[]): string {
@@ -131,6 +136,7 @@ export default async function RedeemCodesPage({
     'VIVO 渠道码': { zh: 'VIVO 渠道码', en: 'VIVO Channel', ja: 'VIVOチャンネル' },
     '8 月限时码': { zh: '8 月限时码', en: 'August Limited', ja: '8月期間限定' },
     '赛事预热码': { zh: '赛事预热码', en: 'Tournament Promo', ja: '大会プロモ' },
+    'official-watchlist': { zh: '官方观察', en: 'Official watchlist', ja: '公式確認待ち' },
   };
 
   const redeemInstructions: Record<string, Record<string, string>> = {
@@ -173,6 +179,11 @@ export default async function RedeemCodesPage({
       zh: '进入游戏主界面点击左下角齿轮（设置）→ 用户 → 兑换码，完整输入口令后提交，奖励发放至游戏邮箱。所有码单账号限兑一次、区分大小写，限时码会过期，请及时兑换。',
       en: 'In the main menu, open the gear (Settings) in the bottom-left corner → User tab → Redeem Code, paste the code exactly, and submit. Rewards arrive in the mailbox. Each code works once per account and is case-sensitive; time-limited codes expire.',
       ja: 'ゲームのメインメニュー左下の歯車（設定）→ ユーザー → 交換コードからコードを正確に入力して送信。報酬はメールボックスに届きます。各コードはアカウントごとに1回のみ、大文字小文字は区別されます。期間限定コードは期限切れに注意。',
+    },
+    aniimo: {
+      zh: 'Aniimo 目前没有确认的公开兑换码。预注册奖励、里程碑奖励和上线活动奖励会单独追踪；正式兑换入口以上线后游戏内或官方公告为准。',
+      en: 'Aniimo has no confirmed public redeem code yet. Pre-registration, milestone, and launch event rewards are tracked separately; final redemption steps depend on the live client or official notices.',
+      ja: 'Aniimoの公開交換コードはまだ確認されていません。事前登録、マイルストーン、リリースイベント報酬は別で追跡します。',
     },
   };
 

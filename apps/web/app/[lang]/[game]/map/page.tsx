@@ -12,6 +12,7 @@ const REGION_ICONS: Record<string, string> = {
   'herta-space-station': '🛰️', 'jarilo-vi': '❄️', 'xianzhou-luofu': '⛵', penacony: '🌙', amphoreus: '🏛️',
   'central-district': '🏙️', 'industrial-zone': '🏭', 'research-lab': '🔬', 'abyss-zone': '🕳️',
   'talos-frontier': '🚀', 'originium-mines': '⛏️', 'protocol-city': '🏙️', 'barren-wastes': '🏜️', 'frozen-depths': '❄️',
+  mistwoods: '🌫️', 'echoback-landing': '🎵', 'sea-of-flowers': '🌸', blitzwood: '⚡', 'nimbus-fields': '☁️', 'forest-of-falling-stars': '✨',
 };
 
 const BASE_URL = 'https://gachia.com';
@@ -51,7 +52,7 @@ export async function generateMetadata({
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
   const gameConfig = GAMES[gameId];
-  if (!gameConfig || (gameId !== 'genshin' && gameId !== 'starrail' && gameId !== 'wuwa' && gameId !== 'nte' && gameId !== 'endfield' && gameId !== 'skjh')) {
+  if (!gameConfig || (gameId !== 'genshin' && gameId !== 'starrail' && gameId !== 'wuwa' && gameId !== 'nte' && gameId !== 'endfield' && gameId !== 'skjh' && gameId !== 'aniimo')) {
     return { title: 'Map', robots: { index: false, follow: false } };
   }
   const gameName = gameConfig.name[locale];
