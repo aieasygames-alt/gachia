@@ -25,371 +25,417 @@
   },
   {
     "id": "light-dye",
-    "name": "Light Dye",
+    "name": "浅色染料",
     "nameEn": "Light Dye",
     "type": "arc-exp",
     "rarity": 1,
-    "source": "Houdinii的魔术舞台、猎手交易所、世界探索"
+    "source": "Houdinii的魔术舞台、猎手交易所、世界探索",
+    "typeZh": "原弧经验"
   },
   {
     "id": "colorless-dye",
-    "name": "Colorless Dye",
+    "name": "无色染料",
     "nameEn": "Colorless Dye",
     "type": "arc-exp",
     "rarity": 2,
-    "source": "Houdinii的魔术舞台、猎手交易所、世界探索"
+    "source": "Houdinii的魔术舞台、猎手交易所、世界探索",
+    "typeZh": "原弧经验"
   },
   {
     "id": "chaotic-dye",
-    "name": "Chaotic Dye",
+    "name": "混沌染料",
     "nameEn": "Chaotic Dye",
     "type": "arc-exp",
     "rarity": 3,
-    "source": "材料选择箱、Houdinii的魔术舞台、猎手交易所、世界探索"
+    "source": "材料选择箱、Houdinii的魔术舞台、猎手交易所、世界探索",
+    "typeZh": "原弧经验"
   },
   {
     "id": "manhole-thug",
-    "name": "Manhole Thug",
+    "name": "井盖打手",
     "nameEn": "Manhole Thug",
     "type": "module-exp",
     "rarity": 1,
-    "source": "兔子洞"
+    "source": "兔子洞",
+    "typeZh": "模组经验"
   },
   {
     "id": "manhole-crook",
-    "name": "Manhole Crook",
+    "name": "井盖混混",
     "nameEn": "Manhole Crook",
     "type": "module-exp",
     "rarity": 2,
-    "source": "材料选择箱、兔子洞"
+    "source": "材料选择箱、兔子洞",
+    "typeZh": "模组经验"
   },
   {
     "id": "manhole-boss",
-    "name": "Manhole Boss",
+    "name": "井盖头目",
     "nameEn": "Manhole Boss",
     "type": "module-exp",
     "rarity": 3,
-    "source": "材料选择箱、兔子洞"
+    "source": "材料选择箱、兔子洞",
+    "typeZh": "模组经验"
   },
   {
     "id": "lost-whispers",
-    "name": "Lost Whispers",
+    "name": "遗失低语",
     "nameEn": "Lost Whispers",
     "type": "ascension",
     "rarity": 1,
-    "source": "材料选择箱、异常体掉落、猎手交易所、遗失交易所"
+    "source": "材料选择箱、异常体掉落、猎手交易所、遗失交易所",
+    "typeZh": "突破材料"
   },
   {
     "id": "obscure-whispers",
-    "name": "Obscure Whispers",
+    "name": "晦暗低语",
     "nameEn": "Obscure Whispers",
     "type": "ascension",
     "rarity": 2,
-    "source": "异常体掉落、合成、猎手交易所、遗失交易所"
+    "source": "异常体掉落、合成、猎手交易所、遗失交易所",
+    "typeZh": "突破材料"
   },
   {
     "id": "paradoxical-whispers",
-    "name": "Paradoxical Whispers",
+    "name": "悖论低语",
     "nameEn": "Paradoxical Whispers",
     "type": "ascension",
     "rarity": 3,
-    "source": "异常体掉落、合成、猎手交易所"
+    "source": "异常体掉落、合成、猎手交易所",
+    "typeZh": "突破材料"
   },
   {
     "id": "fading-silhouette",
-    "name": "Fading Silhouette",
+    "name": "褪色剪影",
     "nameEn": "Fading Silhouette",
     "type": "ascension",
     "rarity": 1,
-    "source": "材料选择箱、异常体掉落、猎手交易所、遗失交易所"
+    "source": "材料选择箱、异常体掉落、猎手交易所、遗失交易所",
+    "typeZh": "突破材料"
   },
   {
     "id": "blurred-silhouette",
-    "name": "Blurred Silhouette",
+    "name": "模糊剪影",
     "nameEn": "Blurred Silhouette",
     "type": "ascension",
     "rarity": 2,
-    "source": "异常体掉落、合成、猎手交易所、遗失交易所"
+    "source": "异常体掉落、合成、猎手交易所、遗失交易所",
+    "typeZh": "突破材料"
   },
   {
     "id": "chaos-silhouette",
-    "name": "Chaos Silhouette",
+    "name": "混沌剪影",
     "nameEn": "Chaos Silhouette",
     "type": "ascension",
     "rarity": 3,
-    "source": "异常体掉落、合成、猎手交易所"
+    "source": "异常体掉落、合成、猎手交易所",
+    "typeZh": "突破材料"
   },
   {
     "id": "blurred-numeral",
-    "name": "Blurred Numeral",
+    "name": "模糊数字",
     "nameEn": "Blurred Numeral",
     "type": "ascension",
     "rarity": 1,
-    "source": "材料选择箱、异常体掉落、猎手交易所、遗失交易所"
+    "source": "材料选择箱、异常体掉落、猎手交易所、遗失交易所",
+    "typeZh": "突破材料"
   },
   {
     "id": "unsolved-numeral",
-    "name": "Unsolved Numeral",
+    "name": "未解数字",
     "nameEn": "Unsolved Numeral",
     "type": "ascension",
     "rarity": 2,
-    "source": "异常体掉落、合成、猎手交易所、遗失交易所"
+    "source": "异常体掉落、合成、猎手交易所、遗失交易所",
+    "typeZh": "突破材料"
   },
   {
     "id": "distorted-numeral",
-    "name": "Distorted Numeral",
+    "name": "扭曲数字",
     "nameEn": "Distorted Numeral",
     "type": "ascension",
     "rarity": 3,
-    "source": "异常体掉落、合成、猎手交易所"
+    "source": "异常体掉落、合成、猎手交易所",
+    "typeZh": "突破材料"
   },
   {
     "id": "suspended-delusions",
-    "name": "Suspended Delusions",
+    "name": "悬置妄想",
     "nameEn": "Suspended Delusions",
     "type": "ascension",
     "rarity": 1,
-    "source": "材料选择箱、异常体掉落、猎手交易所、遗失交易所"
+    "source": "材料选择箱、异常体掉落、猎手交易所、遗失交易所",
+    "typeZh": "突破材料"
   },
   {
     "id": "yearning-delusions",
-    "name": "Yearning Delusions",
+    "name": "渴望妄想",
     "nameEn": "Yearning Delusions",
     "type": "ascension",
     "rarity": 2,
-    "source": "异常体掉落、合成、猎手交易所、遗失交易所"
+    "source": "异常体掉落、合成、猎手交易所、遗失交易所",
+    "typeZh": "突破材料"
   },
   {
     "id": "transcendent-delusions",
-    "name": "Transcendent Delusions",
+    "name": "超越妄想",
     "nameEn": "Transcendent Delusions",
     "type": "ascension",
     "rarity": 3,
-    "source": "异常体掉落、合成、猎手交易所"
+    "source": "异常体掉落、合成、猎手交易所",
+    "typeZh": "突破材料"
   },
   {
     "id": "confessional-flower-seed",
-    "name": "Confessional Flower Seed",
+    "name": "告解花种",
     "nameEn": "Confessional Flower Seed",
     "type": "boss",
     "rarity": 4,
-    "source": "材料选择箱、异常体讨伐「Serenetti」"
+    "source": "材料选择箱、异常体讨伐「Serenetti」",
+    "typeZh": "首领材料"
   },
   {
     "id": "charging-knight-spark-plug",
-    "name": "Charging Knight Spark Plug",
+    "name": "冲锋骑士火花塞",
     "nameEn": "Charging Knight Spark Plug",
     "type": "boss",
     "rarity": 4,
-    "source": "材料选择箱、异常体讨伐「Headless Rider」"
+    "source": "材料选择箱、异常体讨伐「Headless Rider」",
+    "typeZh": "首领材料"
   },
   {
     "id": "page-from-delusions-shore",
-    "name": "A Page from Delusion's Shore",
+    "name": "妄想之岸残页",
     "nameEn": "A Page from Delusion's Shore",
     "type": "boss",
     "rarity": 4,
-    "source": "材料选择箱、异常体讨伐「Black Tome」"
+    "source": "材料选择箱、异常体讨伐「Black Tome」",
+    "typeZh": "首领材料"
   },
   {
     "id": "water-moon-pick",
-    "name": "Water Moon Pick",
+    "name": "水月拨片",
     "nameEn": "Water Moon Pick",
     "type": "boss",
     "rarity": 4,
-    "source": "材料选择箱、异常体讨伐「Beat King」"
+    "source": "材料选择箱、异常体讨伐「Beat King」",
+    "typeZh": "首领材料"
   },
   {
     "id": "nest-guard-fragment",
-    "name": "Nest Guard Fragment",
+    "name": "巢卫碎片",
     "nameEn": "Nest Guard Fragment",
     "type": "boss",
     "rarity": 4,
-    "source": "材料选择箱、异常体讨伐「Nestbound Bird」"
+    "source": "材料选择箱、异常体讨伐「Nestbound Bird」",
+    "typeZh": "首领材料"
   },
   {
     "id": "colorful-ticket-stub",
-    "name": "Colorful Ticket Stub",
+    "name": "彩色票根",
     "nameEn": "Colorful Ticket Stub",
     "type": "boss",
     "rarity": 4,
-    "source": "材料选择箱、异常体讨伐「Swallowtail」"
+    "source": "材料选择箱、异常体讨伐「Swallowtail」",
+    "typeZh": "首领材料"
   },
   {
     "id": "tear-of-the-sea",
-    "name": "Tear of the Sea",
+    "name": "海之泪",
     "nameEn": "Tear of the Sea",
     "type": "boss",
     "rarity": 4,
-    "source": "材料选择箱、异常体讨伐「Sea Prisoner」"
+    "source": "材料选择箱、异常体讨伐「Sea Prisoner」",
+    "typeZh": "首领材料"
   },
   {
     "id": "good-boy-stamp",
-    "name": "Good Boy Stamp",
+    "name": "好孩子印章",
     "nameEn": "Good Boy Stamp",
     "type": "esper",
     "rarity": 3,
-    "source": "异常体朝圣「Morphix」"
+    "source": "异常体朝圣「Morphix」",
+    "typeZh": "异能材料"
   },
   {
     "id": "the-good-boy",
-    "name": "The Good Boy's Fluff",
+    "name": "好孩子绒毛",
     "nameEn": "The Good Boy's Fluff",
     "type": "esper",
     "rarity": 4,
-    "source": "异常体朝圣「Morphix」"
+    "source": "异常体朝圣「Morphix」",
+    "typeZh": "异能材料"
   },
   {
     "id": "dandelion",
-    "name": "Dandelion's Pass",
+    "name": "蒲公英通行证",
     "nameEn": "Dandelion's Pass",
     "type": "esper",
     "rarity": 5,
-    "source": "异常体朝圣「Morphix」"
+    "source": "异常体朝圣「Morphix」",
+    "typeZh": "异能材料"
   },
   {
     "id": "dress-sleeves-of-vanity",
-    "name": "Dress Sleeves of Vanity",
+    "name": "虚荣礼服袖",
     "nameEn": "Dress Sleeves of Vanity",
     "type": "esper",
     "rarity": 3,
-    "source": "异常体朝圣「The Never-ending Arachne」"
+    "source": "异常体朝圣「The Never-ending Arachne」",
+    "typeZh": "异能材料"
   },
   {
     "id": "crown-called-nobility",
-    "name": "Crown Called Nobility",
+    "name": "名为贵胄的冠冕",
     "nameEn": "Crown Called Nobility",
     "type": "esper",
     "rarity": 4,
-    "source": "异常体朝圣「The Never-ending Arachne」"
+    "source": "异常体朝圣「The Never-ending Arachne」",
+    "typeZh": "异能材料"
   },
   {
     "id": "scepter-called-prestige",
-    "name": "Scepter Called Prestige",
+    "name": "名为声望的权杖",
     "nameEn": "Scepter Called Prestige",
     "type": "esper",
     "rarity": 5,
-    "source": "异常体朝圣「The Never-ending Arachne」"
+    "source": "异常体朝圣「The Never-ending Arachne」",
+    "typeZh": "异能材料"
   },
   {
     "id": "iron-appleseed",
-    "name": "Iron Appleseed",
+    "name": "铁质苹果种",
     "nameEn": "Iron Appleseed",
     "type": "arc",
     "rarity": 1,
-    "source": "材料选择箱、气泡罐工厂、猎手交易所"
+    "source": "材料选择箱、气泡罐工厂、猎手交易所",
+    "typeZh": "原弧材料"
   },
   {
     "id": "silver-appleseed",
-    "name": "Silver Appleseed",
+    "name": "银质苹果种",
     "nameEn": "Silver Appleseed",
     "type": "arc",
     "rarity": 2,
-    "source": "材料选择箱、气泡罐工厂、猎手交易所、合成"
+    "source": "材料选择箱、气泡罐工厂、猎手交易所、合成",
+    "typeZh": "原弧材料"
   },
   {
     "id": "golden-appleseed",
-    "name": "Golden Appleseed",
+    "name": "金质苹果种",
     "nameEn": "Golden Appleseed",
     "type": "arc",
     "rarity": 3,
-    "source": "气泡罐工厂、猎手交易所、合成"
+    "source": "气泡罐工厂、猎手交易所、合成",
+    "typeZh": "原弧材料"
   },
   {
     "id": "beaty",
-    "name": "Beaty",
+    "name": "节拍",
     "nameEn": "Beaty",
     "type": "arc",
     "rarity": 1,
-    "source": "材料选择箱、气泡罐工厂、猎手交易所"
+    "source": "材料选择箱、气泡罐工厂、猎手交易所",
+    "typeZh": "原弧材料"
   },
   {
     "id": "versey",
-    "name": "Versey",
+    "name": "诗节",
     "nameEn": "Versey",
     "type": "arc",
     "rarity": 2,
-    "source": "材料选择箱、气泡罐工厂、猎手交易所、合成"
+    "source": "材料选择箱、气泡罐工厂、猎手交易所、合成",
+    "typeZh": "原弧材料"
   },
   {
     "id": "harmony",
-    "name": "Harmony",
+    "name": "和声",
     "nameEn": "Harmony",
     "type": "arc",
     "rarity": 3,
-    "source": "气泡罐工厂、猎手交易所、合成"
+    "source": "气泡罐工厂、猎手交易所、合成",
+    "typeZh": "原弧材料"
   },
   {
     "id": "liquid-dream-trial-kit",
-    "name": "Liquid Dream Trial Kit",
+    "name": "液态梦试用套件",
     "nameEn": "Liquid Dream Trial Kit",
     "type": "arc",
     "rarity": 1,
-    "source": "材料选择箱、气泡罐工厂、猎手交易所"
+    "source": "材料选择箱、气泡罐工厂、猎手交易所",
+    "typeZh": "原弧材料"
   },
   {
     "id": "liquid-dream-travel-kit",
-    "name": "Liquid Dream Travel Kit",
+    "name": "液态梦旅行套件",
     "nameEn": "Liquid Dream Travel Kit",
     "type": "arc",
     "rarity": 2,
-    "source": "材料选择箱、气泡罐工厂、猎手交易所、合成"
+    "source": "材料选择箱、气泡罐工厂、猎手交易所、合成",
+    "typeZh": "原弧材料"
   },
   {
     "id": "liquid-dream-can",
-    "name": "Liquid Dream Can",
+    "name": "液态梦罐",
     "nameEn": "Liquid Dream Can",
     "type": "arc",
     "rarity": 3,
-    "source": "气泡罐工厂、猎手交易所、合成"
+    "source": "气泡罐工厂、猎手交易所、合成",
+    "typeZh": "原弧材料"
   },
   {
     "id": "flavorless-cold-dessert",
-    "name": "Flavorless Cold Dessert",
+    "name": "无味冷甜品",
     "nameEn": "Flavorless Cold Dessert",
     "type": "arc",
     "rarity": 1,
-    "source": "材料选择箱、气泡罐工厂、猎手交易所"
+    "source": "材料选择箱、气泡罐工厂、猎手交易所",
+    "typeZh": "原弧材料"
   },
   {
     "id": "plain-cold-dessert",
-    "name": "Plain Cold Dessert",
+    "name": "普通冷甜品",
     "nameEn": "Plain Cold Dessert",
     "type": "arc",
     "rarity": 2,
-    "source": "材料选择箱、气泡罐工厂、猎手交易所、合成"
+    "source": "材料选择箱、气泡罐工厂、猎手交易所、合成",
+    "typeZh": "原弧材料"
   },
   {
     "id": "special-cold-dessert",
-    "name": "Special Cold Dessert",
+    "name": "特制冷甜品",
     "nameEn": "Special Cold Dessert",
     "type": "arc",
     "rarity": 3,
-    "source": "气泡罐工厂、猎手交易所、合成"
+    "source": "气泡罐工厂、猎手交易所、合成",
+    "typeZh": "原弧材料"
   },
   {
     "id": "beginner-drama-core",
-    "name": "Beginner Drama Core",
+    "name": "初级剧作核心",
     "nameEn": "Beginner Drama Core",
     "type": "arc",
     "rarity": 1,
-    "source": "材料选择箱、气泡罐工厂、猎手交易所"
+    "source": "材料选择箱、气泡罐工厂、猎手交易所",
+    "typeZh": "原弧材料"
   },
   {
     "id": "master-drama-core",
-    "name": "Master Drama Core",
+    "name": "大师剧作核心",
     "nameEn": "Master Drama Core",
     "type": "arc",
     "rarity": 2,
-    "source": "材料选择箱、气泡罐工厂、猎手交易所、合成"
+    "source": "材料选择箱、气泡罐工厂、猎手交易所、合成",
+    "typeZh": "原弧材料"
   },
   {
     "id": "collectors-drama-core",
-    "name": "Collector's Drama Core",
+    "name": "收藏家剧作核心",
     "nameEn": "Collector's Drama Core",
     "type": "arc",
     "rarity": 3,
-    "source": "气泡罐工厂、猎手交易所、合成"
+    "source": "气泡罐工厂、猎手交易所、合成",
+    "typeZh": "原弧材料"
   },
   {
     "id": "fabricated-dice",
@@ -397,7 +443,8 @@
     "nameEn": "Fabricated Dice",
     "type": "currency",
     "rarity": 2,
-    "source": "跃迁交易所、灭碑石加工、活动奖励"
+    "source": "跃迁交易所、灭碑石加工、活动奖励",
+    "typeZh": "货币"
   },
   {
     "id": "solid-dice",
@@ -405,7 +452,8 @@
     "nameEn": "Solid Dice",
     "type": "currency",
     "rarity": 3,
-    "source": "跃迁交易所、灭碑石加工、活动奖励"
+    "source": "跃迁交易所、灭碑石加工、活动奖励",
+    "typeZh": "货币"
   },
   {
     "id": "warp-piece",
@@ -413,15 +461,17 @@
     "nameEn": "Warp Piece",
     "type": "currency",
     "rarity": 3,
-    "source": "Scarborough Fair活动"
+    "source": "Scarborough Fair活动",
+    "typeZh": "货币"
   },
   {
     "id": "lost-piece",
-    "name": "Lost Piece",
+    "name": "遗失碎片",
     "nameEn": "Lost Piece",
     "type": "currency",
     "rarity": 3,
-    "source": "Scarborough Fair活动"
+    "source": "Scarborough Fair活动",
+    "typeZh": "货币"
   },
   {
     "id": "tri-key",
@@ -429,7 +479,8 @@
     "nameEn": "Tri-Key",
     "type": "currency",
     "rarity": 4,
-    "source": "灭碑石加工、猎手交易所、活动奖励"
+    "source": "灭碑石加工、猎手交易所、活动奖励",
+    "typeZh": "货币"
   },
   {
     "id": "fons",
@@ -437,7 +488,8 @@
     "nameEn": "Fons",
     "type": "currency",
     "rarity": 2,
-    "source": "Hethereau城通用货币"
+    "source": "Hethereau城通用货币",
+    "typeZh": "货币"
   },
   {
     "id": "beetle-coin",
@@ -445,7 +497,8 @@
     "nameEn": "Beetle Coin",
     "type": "currency",
     "rarity": 1,
-    "source": "材料选择箱、Houdinii的魔术舞台、猎手交易所、世界探索"
+    "source": "材料选择箱、Houdinii的魔术舞台、猎手交易所、世界探索",
+    "typeZh": "货币"
   },
   {
     "id": "annulith",
@@ -453,6 +506,7 @@
     "nameEn": "Annulith",
     "type": "currency",
     "rarity": 5,
-    "source": "充值、任务奖励"
+    "source": "充值、任务奖励",
+    "typeZh": "货币"
   }
 ]

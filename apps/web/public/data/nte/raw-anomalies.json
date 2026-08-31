@@ -4,7 +4,7 @@
     "name": "无首铁驭",
     "nameEn": "Headless Iron Rider",
     "type": "boss",
-    "typeZh": "Boss",
+    "typeZh": "首领",
     "category": "biological",
     "categoryZh": "生物类",
     "attribute": "火",
@@ -17,8 +17,16 @@
     "location": "未闻浦Z42环海公路（夜间触发追逐战）",
     "locationEn": "Z42 Coastal Highway, Weimenpu (night chase event)",
     "appearance": "身穿黑色机车服，骑乘燃烧火焰的摩托车，附带黑焰轨迹",
-    "drops": ["金色属性弧盘", "狐盘武器", "基础养成材料"],
-    "dropsEn": ["Golden Attribute Arc Disc", "Fox Disc Weapon", "Basic Upgrade Materials"],
+    "drops": [
+      "金色属性弧盘",
+      "狐盘武器",
+      "基础养成材料"
+    ],
+    "dropsEn": [
+      "Golden Attribute Arc Disc",
+      "Fox Disc Weapon",
+      "Basic Upgrade Materials"
+    ],
     "strategy": "护盾击破后3秒不可行动期间全力输出，注意闪避正面撞击",
     "strategyEn": "Full DPS during 3s stun after shield break, dodge frontal collisions"
   },
@@ -27,7 +35,7 @@
     "name": "黑之书",
     "nameEn": "Black Book",
     "type": "boss",
-    "typeZh": "Boss",
+    "typeZh": "首领",
     "category": "object",
     "categoryZh": "物体类",
     "attribute": "光束",
@@ -40,8 +48,12 @@
     "location": "待确认",
     "locationEn": "TBC",
     "appearance": "悬浮古籍形态，主攻击为持续激光束",
-    "drops": ["高级养成材料"],
-    "dropsEn": ["Advanced Upgrade Materials"],
+    "drops": [
+      "高级养成材料"
+    ],
+    "dropsEn": [
+      "Advanced Upgrade Materials"
+    ],
     "strategy": "绕背走位压缩激光瞄准时间，高频位移削减生命值",
     "strategyEn": "Circle behind to reduce laser tracking time, use high mobility to chip HP"
   },
@@ -50,7 +62,7 @@
     "name": "墨菲克斯",
     "nameEn": "Morpheus",
     "type": "boss",
-    "typeZh": "Boss",
+    "typeZh": "首领",
     "category": "biological",
     "categoryZh": "生物类",
     "attribute": "未知",
@@ -63,8 +75,12 @@
     "location": "待确认",
     "locationEn": "TBC",
     "appearance": "双形态转换型Boss",
-    "drops": ["高级养成材料"],
-    "dropsEn": ["Advanced Upgrade Materials"],
+    "drops": [
+      "高级养成材料"
+    ],
+    "dropsEn": [
+      "Advanced Upgrade Materials"
+    ],
     "strategy": "第一阶段保持距离输出，第二阶段切换远程角色维持中远距离DPS",
     "strategyEn": "Phase 1: keep distance and DPS; Phase 2: switch to ranged characters for mid-long range DPS"
   },
@@ -73,7 +89,7 @@
     "name": "海囚",
     "nameEn": "Sea Prisoner",
     "type": "boss",
-    "typeZh": "Boss",
+    "typeZh": "首领",
     "category": "biological",
     "categoryZh": "生物类",
     "attribute": "多形态",
@@ -86,8 +102,16 @@
     "location": "隐藏Boss",
     "locationEn": "Hidden Boss",
     "appearance": "巨型多态Boss",
-    "drops": ["稀有武器蓝图", "专属装备", "角色觉醒核心材料"],
-    "dropsEn": ["Rare Weapon Blueprints", "Exclusive Equipment", "Awakening Core Materials"],
+    "drops": [
+      "稀有武器蓝图",
+      "专属装备",
+      "角色觉醒核心材料"
+    ],
+    "dropsEn": [
+      "Rare Weapon Blueprints",
+      "Exclusive Equipment",
+      "Awakening Core Materials"
+    ],
     "strategy": "中后期核心资源来源，需高熟练度和资源管理",
     "strategyEn": "Core endgame resource source, requires high skill and resource management"
   },
@@ -96,7 +120,7 @@
     "name": "斑蝶",
     "nameEn": "Spotted Butterfly",
     "type": "boss",
-    "typeZh": "Boss",
+    "typeZh": "首领",
     "category": "biological",
     "categoryZh": "生物类",
     "attribute": "未知",
@@ -109,8 +133,12 @@
     "location": "异象收容Boss",
     "locationEn": "Anomaly Containment Boss",
     "appearance": "高空俯冲与水面潜行伏击型Boss",
-    "drops": ["异象收容奖励"],
-    "dropsEn": ["Anomaly Containment Rewards"],
+    "drops": [
+      "异象收容奖励"
+    ],
+    "dropsEn": [
+      "Anomaly Containment Rewards"
+    ],
     "strategy": "阶段节奏把控+异象系统打断+规避水面突袭",
     "strategyEn": "Phase rhythm control + anomaly system interrupts + dodge water ambushes"
   },
@@ -132,8 +160,12 @@
     "location": "雨夜触发",
     "locationEn": "Triggered during rain nights",
     "appearance": "伪装成悬浮雨伞的异象",
-    "drops": ["中级养成材料"],
-    "dropsEn": ["Mid-tier Upgrade Materials"],
+    "drops": [
+      "中级养成材料"
+    ],
+    "dropsEn": [
+      "Mid-tier Upgrade Materials"
+    ],
     "strategy": "速射伞骨连接点，显形后大招直击核心可跳过二阶段",
     "strategyEn": "Rapid-fire umbrella joints; after exposure, ultimate to core skips phase 2"
   },
@@ -154,8 +186,12 @@
     "location": "21:00-24:00出现",
     "locationEn": "Appears 21:00-24:00",
     "appearance": "涂鸦异象，藏于墙面中",
-    "drops": ["中级养成材料"],
-    "dropsEn": ["Mid-tier Upgrade Materials"],
+    "drops": [
+      "中级养成材料"
+    ],
+    "dropsEn": [
+      "Mid-tier Upgrade Materials"
+    ],
     "strategy": "火系角色点燃涂鸦逼出，预判路径放置重击造成硬直",
     "strategyEn": "Fire characters ignite graffiti to flush out; predict path for stagger"
   },
@@ -176,8 +212,12 @@
     "location": "擂台区域",
     "locationEn": "Arena area",
     "appearance": "巨大拳套形态异象",
-    "drops": ["中级养成材料"],
-    "dropsEn": ["Mid-tier Upgrade Materials"],
+    "drops": [
+      "中级养成材料"
+    ],
+    "dropsEn": [
+      "Mid-tier Upgrade Materials"
+    ],
     "strategy": "前两场保留闪避值，第三场蓄力红光时侧闪后三段破防+异能环合增伤",
     "strategyEn": "Save dodge in rounds 1-2; round 3 side-step red charge, then 3-hit break + ring fusion boost"
   },
@@ -198,8 +238,12 @@
     "location": "DSD潮玩店阁楼等区域",
     "locationEn": "DSD Toy Store attic and other areas",
     "appearance": "蚊虫状寄生体",
-    "drops": ["中级养成材料"],
-    "dropsEn": ["Mid-tier Upgrade Materials"],
+    "drops": [
+      "中级养成材料"
+    ],
+    "dropsEn": [
+      "Mid-tier Upgrade Materials"
+    ],
     "strategy": "灵视扫描追踪能量轨迹，破坏五个容器后速杀防二次传送",
     "strategyEn": "Spirit vision scan to track energy trails, destroy 5 containers, fast kill to prevent teleport"
   },
@@ -220,8 +264,16 @@
     "location": "废弃医院（噩梦缠身委托）",
     "locationEn": "Abandoned Hospital (Nightmare Entrapment quest)",
     "appearance": "缠满绷带的人形异象",
-    "drops": ["经验值", "稀有材料", "猎人声望奖励"],
-    "dropsEn": ["EXP", "Rare Materials", "Hunter Reputation Rewards"],
+    "drops": [
+      "经验值",
+      "稀有材料",
+      "猎人声望奖励"
+    ],
+    "dropsEn": [
+      "EXP",
+      "Rare Materials",
+      "Hunter Reputation Rewards"
+    ],
     "strategy": "通电后闪身至配电箱后方规避，利用环境交互",
     "strategyEn": "Hide behind electrical box after power-on, use environmental interactions"
   },
@@ -239,8 +291,12 @@
     "locationEn": "Z20 Coastal Highway mid-section, near abandoned gas station curve",
     "mechanics": "进入区域自动触发，标志性随机异象玩法",
     "mechanicsEn": "Auto-triggered on entering area, iconic random anomaly encounter",
-    "drops": ["基础资源"],
-    "dropsEn": ["Basic Resources"]
+    "drops": [
+      "基础资源"
+    ],
+    "dropsEn": [
+      "Basic Resources"
+    ]
   },
   {
     "id": "fluffy",
@@ -256,8 +312,14 @@
     "locationEn": "Behind convenience store trash pile (quest triggered)",
     "mechanics": "NPC埃里克对话接取魔法传送装置任务后出现",
     "mechanicsEn": "Appears after accepting Magic Teleporter quest from NPC Eric",
-    "drops": ["基础资源", "任务奖励"],
-    "dropsEn": ["Basic Resources", "Quest Rewards"]
+    "drops": [
+      "基础资源",
+      "任务奖励"
+    ],
+    "dropsEn": [
+      "Basic Resources",
+      "Quest Rewards"
+    ]
   },
   {
     "id": "multiplying-c",
@@ -313,7 +375,11 @@
     "categoryZh": "物体类",
     "attribute": "待确认",
     "attributeEn": "TBC",
-    "drops": ["C级弧盘"],
-    "dropsEn": ["C-rank Arc Disc"]
+    "drops": [
+      "C级弧盘"
+    ],
+    "dropsEn": [
+      "C-rank Arc Disc"
+    ]
   }
 ]

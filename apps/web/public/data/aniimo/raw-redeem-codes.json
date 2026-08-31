@@ -10,7 +10,22 @@
       "Platform storefront campaigns",
       "Launch livestream or event posts"
     ],
-    "rewardZh": "Track this page for launch codes and global campaign rewards.",
-    "rewardEn": "Track this page for launch codes and global campaign rewards."
+    "rewardZh": "关注本页获取上线兑换码和全球活动奖励更新。",
+    "rewardEn": "Track this page for launch codes and global campaign rewards.",
+    "rewardJa": "リリース時の交換コードとグローバルキャンペーン報酬をこのページで追跡します。",
+    "statusZh": "观察中",
+    "statusJa": "確認待ち",
+    "checklistZh": [
+      "官网新闻",
+      "官方 Discord/社媒公告",
+      "平台商店活动",
+      "上线直播或活动帖子"
+    ],
+    "checklistJa": [
+      "公式サイトのニュース",
+      "公式Discord/SNS投稿",
+      "プラットフォームストアのキャンペーン",
+      "リリース配信またはイベント投稿"
+    ]
   }
 ]

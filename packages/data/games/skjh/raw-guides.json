@@ -927,7 +927,8 @@
         "answer": "Yes. Safe-zone mode is the cleanest way to learn gathering, building, and the basic raid loop before you choose a harder server.",
         "answerZh": "够。安全区模式最适合先学采集、建家和基础攻防，再决定是否上更硬核的服务器。"
       }
-    ]
+    ],
+    "contentJa": "## 最初の30分でやること\n\n失控進化を始めたら、まずメール、イベント、予約報酬を確認し、序盤の素材と補給を取り逃さないようにします。次にサーバーとモードを選び、ソロなら人口が少なめで移動しやすい地点、小隊なら資源と退避路のある地点を優先します。\n\n最初の道具を作ったら、木、石、食料、布を集め、簡単な寝袋と領地キャビネットを置きます。安全な小屋を作った後で低レベル拠点を回り、石質コアや基礎パーツを集めると、初日の事故を大きく減らせます。\n\nPvPが不安な場合は、戦闘よりも帰還ルートと保管を優先してください。30分ごとに荷物を戻し、入口を複数用意しておくと、序盤の立て直しがかなり楽になります。"
   },
   {
     "id": "platform-download-guide",
@@ -990,7 +991,8 @@
         "DL前にアカウント、サーバー、容量を確認。",
         "公式 / DL検索向け。"
       ]
-    }
+    },
+    "contentJa": "## ダウンロード入口の選び方\n\nPCで遊ぶ場合は、まず公式サイトとWeGameのどちらで配信されているかを確認します。アカウント連携、更新速度、支払い方法、友人が使うプラットフォームを基準に選ぶと迷いにくいです。\n\nモバイル版を使う場合は、ストアページの対応端末、容量、ログイン方式を先に確認してください。PC版とモバイル版の進行共有は公式告知が優先で、未確認の情報は断定しないのが安全です。\n\nダウンロードに失敗する場合は、空き容量、管理者権限、ネットワーク制限、セキュリティソフト、ランチャーの再起動を順番に確認します。大型アップデート直後は混雑で遅くなることがあります。"
   },
   {
     "id": "launch-day-vs-sea",
@@ -1026,7 +1028,8 @@
         "answer": "Ashfall Evolution is the stronger first pick for hardcore survival fans because its launch-day loop is built around base defense, loot runs, and territory conflict.",
         "answerZh": "硬核生存玩家优先选《失控进化》，因为它的首日循环就是建家、防守、搜资源和领地冲突。"
       }
-    ]
+    ],
+    "contentJa": "## どちらを先に遊ぶべきか\n\n失控進化はサバイバル、拠点建築、資源争奪、サーバー選びを楽しみたい人向けです。短時間でも緊張感のある探索や、仲間と役割分担するプレイに向いています。\n\n遺忘之海はキャラクター収集、航海、育成、物語寄りの進行を重視したい人に合います。落ち着いて日課を進めたい場合はこちらを先に触る選択もあります。\n\n初日に両方触るなら、まず失控進化でサーバー確保と序盤拠点だけ進め、その後で遺忘之海のチュートリアルと報酬回収を行う流れが無難です。"
   },
   {
     "id": "launch-week-daily-checklist",
@@ -1062,7 +1065,8 @@
         "answer": "Only after you can reliably craft, defend, and recover from a loss. Safe-zone mode is the better learning ground first.",
         "answerZh": "只有在你已经能稳定制作、防守和止损后再转。先在安全区模式把基础学稳更重要。"
       }
-    ]
+    ],
+    "contentJa": "## 初週の進め方\n\n1日目はサーバー選び、報酬受け取り、初期拠点、基本道具を優先します。2日目から3日目は低リスク拠点を周回し、石質コア、素材、武器の更新を進めます。\n\n4日目から5日目は拠点の防御線を整え、物資保管を分散します。小隊なら役割分担を決め、ソロなら見つかりにくい導線と逃げ道を重視します。\n\n6日目から7日目は電力、自動化、より高難度の探索へ進みます。毎日ログアウト前に領地キャビネット、扉、保管箱、復帰地点を確認しておくと、翌日の再開が安定します。"
   },
   {
     "id": "launch-week-overview",
@@ -1098,7 +1102,8 @@
         "answer": "Yes. This overview links the most important launch pages, so you can move from access to rewards to the weekly plan without hunting around.",
         "answerZh": "够。这一页把最重要的开服页面串起来了，你可以从入口、福利一路看到账期推进，不用来回找。"
       }
-    ]
+    ],
+    "contentJa": "## 初週に見るべき情報\n\nこのページは、失控進化の初週に必要な入口情報をまとめたものです。まず公式サイト、WeGame、モバイル版の配信状況を確認し、アカウントとサーバーを決めます。\n\n次に初日の30分チェックリストで報酬、道具、領地キャビネット、低レベル拠点の流れを押さえます。首週は情報が変わりやすいため、イベント報酬、サーバー周期、メンテナンス告知を毎日確認してください。\n\n迷った場合は、サーバー確保、最低限の拠点、安全な素材ルート、この3つを先に済ませるのが安定です。"
   },
   {
     "id": "anti-cheat-reporting-guide",
@@ -1361,7 +1366,8 @@
         "answerZh": "优先降低阴影、后处理和特效，同时保证视野、帧率和声音方向稳定。"
       }
     ],
-    "date": "2026-07-21"
+    "date": "2026-07-21",
+    "contentJa": "## PC版ダウンロードFAQ\n\nPC版は公式サイトまたはWeGameの案内を優先して確認します。非公式ミラーや不明なインストーラーは避け、アカウント連携やアップデート方法が明記された入口を使ってください。\n\nインストール前に空き容量、OS、GPUドライバー、ネットワーク環境を確認します。起動しない場合はランチャーの修復、管理者権限、再インストール、セキュリティソフトの例外設定を順に試します。\n\nモバイル版との連携やデータ共有は公式告知が基準です。未確認の互通情報は後から変わる可能性があるため、重要な課金やサーバー選択の前に最新告知を見直してください。"
   },
   {
     "id": "first-2-hours-starter-route",
@@ -1405,7 +1411,8 @@
         "answerZh": "基地做小，多放睡袋，避开主路，优先生存而不是冲高风险收益。"
       }
     ],
-    "date": "2026-07-21"
+    "date": "2026-07-21",
+    "contentJa": "## 0-2時間の開拓ルート\n\n開始直後は周囲の木、石、布、食料を集め、最初の道具と寝袋を作ります。無理に戦闘へ行かず、まず復帰地点と簡単な保管場所を確保してください。\n\n次に領地キャビネットと小さな拠点を設置します。入口を一つにしすぎず、移動しやすく見つかりにくい位置を選ぶとソロでも安定します。\n\n装備が整ったら低リスク拠点を回り、石質コア、基礎素材、消耗品を集めます。荷物が増えたらすぐ戻ること。序盤は勝つことより、失っても立て直せる流れを作ることが大事です。"
   },
   {
     "id": "base-location-anti-raid-plan",
@@ -1449,7 +1456,8 @@
         "answerZh": "通常不建议。先升级核心并保持低存在感，再考虑扩建。"
       }
     ],
-    "date": "2026-07-21"
+    "date": "2026-07-21",
+    "contentJa": "## 拠点選びと防衛\n\nソロは目立たない場所、短い帰還ルート、複数の逃げ道を重視します。小隊は資源、交通、戦闘復帰のしやすさを優先し、役割ごとに保管を分けると安定します。\n\n最初の拠点は大きくしすぎないでください。領地キャビネット、内扉、寝袋、予備箱を守れる最低限の形にして、資源が増えてから外壁や迷路構造を追加します。\n\n防抄家では、外から価値が分かりにくい見た目、分散保管、定期的な補修が重要です。ログアウト前は扉、権限、燃料、修理素材を確認しましょう。"
   },
   {
     "id": "s1-midseason-survival-checklist",
@@ -1464,7 +1472,8 @@
     "summaryEn": "A midseason S1 survival checklist for returners and late starters, covering anti-cheat reports, wipes, custom servers, electricity, and solo/duo recovery routes.",
     "summaryJa": "S1中盤の復帰・後発向けに、通報、ワイプ、カスタムサーバー、電力、ソロ/デュオ復帰ルートを整理します。",
     "content": "## 先看结论\n\nS1 中期的重点不是重新学一遍开荒，而是判断自己在哪个问题上掉队：服务器环境、外挂/非法组队、基地被抄、电力不会接，还是独狼资源循环断了。先定位问题，再决定换服、补电力、改房型或去自定义服练习。\n\n公开报道提到，失控进化上线阶段围绕多模式、反作弊、多端互通和新手体验做了重点沟通。对玩家来说，真正有用的是把这些信息转成每天能执行的路线。\n\n参考来源：[游戏时光上线报道](https://www.vgtime.com/news/teUl9RBGzC94Lmc77DEnrA%3D%3D)、[腾讯游戏官方活动页](https://skjh.qq.com/cp/a20260119skjh/?e_code=552707)、站内反作弊与自定义模式指南。\n\n## 先判断你卡在哪里\n\n| 症状 | 优先处理 | 关联页面 |\n| --- | --- | --- |\n| 总被异常玩家击杀 | 举报证据与换线判断 | anti-cheat-reporting-guide |\n| 上线家就没了 | 选址、防抄家、维护 | base-location-anti-raid-plan |\n| 进服太晚追不上 | 换服周期和低风险路线 | server-wipe-cycle-guide |\n| 不会接自动化 | 太阳能、风电、储能 | electricity-guide |\n| 想练枪或练建筑 | 自定义模式 / 社区服 | custom-mode-community-server-guide |\n\n## S1 中期每日路线\n\n1. 登录后先确认基地维护和领地柜。\n2. 检查门、墙体和外部睡袋是否被试探。\n3. 低风险路线跑一圈，只带能承受损失的装备。\n4. 废料优先补科技树关键节点，不乱点炫技分支。\n5. 晚上或离线前补门、电力和储物分散。\n6. 遇到疑似外挂或非法组队，先录证据再举报，不要只在聊天频道争吵。\n\n## 独狼追赶路线\n\n独狼中期追赶不靠硬刚大队，靠低曝光和高频回收：\n\n- 家搬到低交通区域。\n- 睡袋铺在资源点和撤离路线上。\n- 只跑自己能稳定带回的据点。\n- 核心先石质，资源分散存。\n- 不主动制造长期仇恨。\n\n## 小队中期复盘\n\n小队最常见问题是扩建太快，维护和防守跟不上。建议每天复盘三件事：谁负责资源、谁负责侦查、谁负责电力和防御。没有分工的小队，在 S1 中期会比独狼更容易破产。\n\n## FAQ\n\n### S1 中期还适合入坑吗？\n\n适合，但不要进老服硬追大队。优先选择新周期、低压力服务器或自定义模式练习，再把开荒路线迁移到标准环境。\n\n### 遇到外挂先做什么？\n\n先保留录像、时间、服务器、玩家 ID 和战斗过程，再通过官方举报入口提交。证据越完整，处理越容易闭环。\n\n### 电力系统什么时候学？\n\n有稳定石质核心、维护和基础武器后就可以学。先从太阳能/风电、储能和自动灯/门禁开始，不要一上来做复杂陷阱。",
-    "contentEn": "## Quick answer\n\nMidseason S1 is about diagnosing your bottleneck: server pressure, suspicious players, base defense, electricity, or broken solo routes. Fix the bottleneck before chasing bigger raids.\n\n## Checklist\n\n| Problem | First fix |\n|---|---|\n| Suspicious deaths | Record and report evidence |\n| Base always raided | Rework location and cabinet protection |\n| Joined too late | Pick a better wipe cycle |\n| No automation | Learn basic power and storage |\n| Need practice | Use custom/community servers |\n\n## FAQ\n\n### Is midseason too late to start?\n\nNo, but choose lower-pressure servers or a fresh cycle instead of fighting entrenched groups immediately.\n\n### What should solo players do first?\n\nKeep a low-profile base, spread bags, run safe loops, and avoid creating expensive grudges."
+    "contentEn": "## Quick answer\n\nMidseason S1 is about diagnosing your bottleneck: server pressure, suspicious players, base defense, electricity, or broken solo routes. Fix the bottleneck before chasing bigger raids.\n\n## Checklist\n\n| Problem | First fix |\n|---|---|\n| Suspicious deaths | Record and report evidence |\n| Base always raided | Rework location and cabinet protection |\n| Joined too late | Pick a better wipe cycle |\n| No automation | Learn basic power and storage |\n| Need practice | Use custom/community servers |\n\n## FAQ\n\n### Is midseason too late to start?\n\nNo, but choose lower-pressure servers or a fresh cycle instead of fighting entrenched groups immediately.\n\n### What should solo players do first?\n\nKeep a low-profile base, spread bags, run safe loops, and avoid creating expensive grudges.",
+    "contentJa": "## S1中盤の復帰チェック\n\n中盤から始める場合は、人口の多い激戦区を避け、低リスク資源ルートで装備と素材を集めます。ソロやデュオは小さな拠点から始め、必要なものだけを持って探索するのが安全です。\n\n反作弊や通報はゲーム内の正式機能を使い、証拠になる時間、サーバー、相手名、動画を残します。カスタムサーバーやワイプ周期はサーバーごとに違うため、参加前にルールを確認してください。\n\n電力や自動化に進む時は、まず維持コストと防衛線を見直します。設備だけ増やすと目立ちやすくなるため、価値のある部屋ほど奥に置くのが無難です。"
   },
   {
     "id": "aug31-event-ended-beginner-catchup",
@@ -1494,6 +1503,10 @@
         "answerZh": "先查活动页和邮件；如果没有官方补领说明，就转向当前 S1 资源、服务器模式和新手路线。"
       }
     ],
-    "date": "2026-08-31"
+    "date": "2026-08-31",
+    "titleJa": "失控進化 8/31イベント終了後の追いつきルート：WeGame、報酬、S1、サーバー、防衛",
+    "categoryJa": "初心者",
+    "summaryJa": "8/31イベント後に始めるプレイヤー向けに、報酬、ダウンロード、S1開拓、サーバー選択を整理します。",
+    "contentJa": "## イベント後から始める場合\n\n8月31日のイベント終了後に始める場合でも、まず公式サイトとWeGameの入口、現在受け取れる報酬、S1のサーバー状況を確認すれば追いつけます。終了済みの礼包は復刻や補填があるかだけ確認し、受け取れないものに時間を使いすぎないようにします。\n\n序盤は低リスクサーバーまたは初心者が動きやすい時間帯を選び、道具、寝袋、領地キャビネット、小型拠点を先に作ります。報酬で得た素材はすぐ使い切らず、防衛と復帰用に一部残してください。\n\n初週後発組は、派手な拠点よりも隠れた導線と分散保管が大切です。防抄家を意識しながら低级据点を周回し、石质核心、基础武器、修理素材を集める流れが安定します。"
   }
 ]
