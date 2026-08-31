@@ -93,9 +93,6 @@ const REAL_CONTENT_ROUTES: Record<string, string[]> = {
   aniimo: ['characters', 'guides', 'map', 'version', 'download', 'redeem-codes'],
 };
 
-// Revalidate every 24 hours
-export const revalidate = 86400;
-
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 

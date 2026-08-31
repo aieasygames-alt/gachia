@@ -5,155 +5,111 @@
  */
 
 import type { GameId } from '@gachia/core';
-import {
-  characters as genshinCharacters,
-  weapons as genshinWeapons,
-  items as genshinItems,
-  tierLists as genshinTierLists,
-} from '../games/genshin';
-import {
-  characters as starrailCharacters,
-  weapons as starrailWeapons,
-  items as starrailItems,
-  tierLists as starrailTierLists,
-} from '../games/starrail';
-import {
-  characters as wuwaCharacters,
-  weapons as wuwaWeapons,
-  items as wuwaItems,
-  tierLists as wuwaTierLists,
-} from '../games/wuwa';
-import {
-  characters as nteCharacters,
-  weapons as nteWeapons,
-  items as nteItems,
-  tierLists as nteTierLists,
-} from '../games/nte';
-import {
-  characters as zzzCharacters,
-  weapons as zzzWeapons,
-  items as zzzItems,
-  tierLists as zzzTierLists,
-} from '../games/zzz';
-import {
-  characters as guihuanCharacters,
-  weapons as guihuanWeapons,
-  items as guihuanItems,
-  tierLists as guihuanTierLists,
-} from '../games/guihuan';
-import {
-  characters as anantaCharacters,
-  weapons as anantaWeapons,
-  items as anantaItems,
-  tierLists as anantaTierLists,
-} from '../games/ananta';
-import {
-  characters as endfieldCharacters,
-  weapons as endfieldWeapons,
-  items as endfieldItems,
-  tierLists as endfieldTierLists,
-} from '../games/endfield';
-import {
-  characters as seaCharacters,
-  weapons as seaWeapons,
-  items as seaItems,
-  tierLists as seaTierLists,
-} from '../games/sea';
-import {
-  characters as skjhCharacters,
-  weapons as skjhWeapons,
-  items as skjhItems,
-  tierLists as skjhTierLists,
-} from '../games/skjh';
-import {
-  characters as aniimoCharacters,
-  weapons as aniimoWeapons,
-  items as aniimoItems,
-  tierLists as aniimoTierLists,
-} from '../games/aniimo';
 
 /**
  * Get game data by game ID
  */
 export async function getGameData(gameId: GameId) {
   switch (gameId) {
-    case 'genshin':
+    case 'genshin': {
+      const { characters, weapons, items, tierLists } = await import('../games/genshin');
       return {
-        characters: genshinCharacters,
-        weapons: genshinWeapons,
-        items: genshinItems,
-        tierLists: genshinTierLists,
+        characters,
+        weapons,
+        items,
+        tierLists,
       };
-    case 'starrail':
+    }
+    case 'starrail': {
+      const { characters, weapons, items, tierLists } = await import('../games/starrail');
       return {
-        characters: starrailCharacters,
-        weapons: starrailWeapons,
-        items: starrailItems,
-        tierLists: starrailTierLists,
+        characters,
+        weapons,
+        items,
+        tierLists,
       };
-    case 'wuwa':
+    }
+    case 'wuwa': {
+      const { characters, weapons, items, tierLists } = await import('../games/wuwa');
       return {
-        characters: wuwaCharacters,
-        weapons: wuwaWeapons,
-        items: wuwaItems,
-        tierLists: wuwaTierLists,
+        characters,
+        weapons,
+        items,
+        tierLists,
       };
-    case 'nte':
+    }
+    case 'nte': {
+      const { characters, weapons, items, tierLists } = await import('../games/nte');
       return {
-        characters: nteCharacters,
-        weapons: nteWeapons,
-        items: nteItems,
-        tierLists: nteTierLists,
+        characters,
+        weapons,
+        items,
+        tierLists,
       };
-    case 'zzz':
+    }
+    case 'zzz': {
+      const { characters, weapons, items, tierLists } = await import('../games/zzz');
       return {
-        characters: zzzCharacters,
-        weapons: zzzWeapons,
-        items: zzzItems,
-        tierLists: zzzTierLists,
+        characters,
+        weapons,
+        items,
+        tierLists,
       };
-    case 'guihuan':
+    }
+    case 'guihuan': {
+      const { characters, weapons, items, tierLists } = await import('../games/guihuan');
       return {
-        characters: guihuanCharacters,
-        weapons: guihuanWeapons,
-        items: guihuanItems,
-        tierLists: guihuanTierLists,
+        characters,
+        weapons,
+        items,
+        tierLists,
       };
-    case 'ananta':
+    }
+    case 'ananta': {
+      const { characters, weapons, items, tierLists } = await import('../games/ananta');
       return {
-        characters: anantaCharacters,
-        weapons: anantaWeapons,
-        items: anantaItems,
-        tierLists: anantaTierLists,
+        characters,
+        weapons,
+        items,
+        tierLists,
       };
-    case 'endfield':
+    }
+    case 'endfield': {
+      const { characters, weapons, items, tierLists } = await import('../games/endfield');
       return {
-        characters: endfieldCharacters,
-        weapons: endfieldWeapons,
-        items: endfieldItems,
-        tierLists: endfieldTierLists,
+        characters,
+        weapons,
+        items,
+        tierLists,
       };
-    case 'sea':
+    }
+    case 'sea': {
+      const { characters, weapons, items, tierLists } = await import('../games/sea');
       return {
-        characters: seaCharacters,
-        weapons: seaWeapons,
-        items: seaItems,
-        tierLists: seaTierLists,
+        characters,
+        weapons,
+        items,
+        tierLists,
       };
-    case 'skjh':
+    }
+    case 'skjh': {
+      const { characters, weapons, items, tierLists } = await import('../games/skjh');
       return {
-        characters: skjhCharacters,
-        weapons: skjhWeapons,
-        items: skjhItems,
-        tierLists: skjhTierLists,
+        characters,
+        weapons,
+        items,
+        tierLists,
       };
-    case 'aniimo':
+    }
+    case 'aniimo': {
+      const { characters, weapons, items, tierLists } = await import('../games/aniimo');
       return {
-        characters: aniimoCharacters,
-        weapons: aniimoWeapons,
-        items: aniimoItems,
-        tierLists: aniimoTierLists,
+        characters,
+        weapons,
+        items,
+        tierLists,
       };
+    }
     default:
       throw new Error(`Unknown game ID: ${gameId}`);
   }
