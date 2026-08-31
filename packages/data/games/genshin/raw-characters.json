@@ -152,7 +152,7 @@
     ],
     "tierRank": "SS",
     "tierReason": "最强火系主C之一，生命值机制独特",
-    "tierReasonZh": "One of the strongest Pyro DPS, unique HP mechanic"
+    "tierReasonZh": "顶级火系主C之一，拥有独特的生命值机制"
   },
   {
     "id": "diluc",
@@ -341,7 +341,7 @@
     ],
     "tierRank": "A",
     "tierReason": "经典火系主C，稳定输出",
-    "tierReasonZh": "Classic Pyro DPS, consistent output"
+    "tierReasonZh": "经典火系主C，输出稳定"
   },
   {
     "id": "klee",
@@ -496,7 +496,7 @@
     ],
     "tierRank": "S",
     "tierReason": "强力的火系范围伤害",
-    "tierReasonZh": "Strong Pyro AoE DPS"
+    "tierReasonZh": "强力火系范围输出角色"
   },
   {
     "id": "yanfei",
@@ -651,7 +651,7 @@
     ],
     "tierRank": "B",
     "tierReason": "火系四星远程输出",
-    "tierReasonZh": "4-star Pyro ranged DPS"
+    "tierReasonZh": "四星火系远程输出角色"
   },
   {
     "id": "yoimiya",
@@ -806,7 +806,7 @@
     ],
     "tierRank": "S",
     "tierReason": "顶级火系弓箭主C",
-    "tierReasonZh": "Top-tier Pyro Bow DPS"
+    "tierReasonZh": "顶级火系弓箭主C"
   },
   {
     "id": "xiangling",
@@ -961,7 +961,7 @@
     ],
     "tierRank": "SS",
     "tierReason": "最强四星副C之一，锅巴脱手",
-    "tierReasonZh": "One of the best 4-star off-field DPS"
+    "tierReasonZh": "最强四星后台输出之一"
   },
   {
     "id": "bennett",
@@ -1150,7 +1150,7 @@
     ],
     "tierRank": "SS",
     "tierReason": "最强辅助之一，增攻+治疗",
-    "tierReasonZh": "Top support, ATK buff + healing"
+    "tierReasonZh": "顶级辅助，兼具攻击力增益与治疗"
   },
   {
     "id": "thoma",
@@ -1305,7 +1305,7 @@
     ],
     "tierRank": "B",
     "tierReason": "火系护盾辅助",
-    "tierReasonZh": "Pyro shield support"
+    "tierReasonZh": "火系护盾辅助"
   },
   {
     "id": "amber",
@@ -1460,7 +1460,7 @@
     ],
     "tierRank": "C",
     "tierReason": "免费火系弓箭",
-    "tierReasonZh": "Free Pyro bow character"
+    "tierReasonZh": "免费火系弓箭角色"
   },
   {
     "id": "xinyan",
@@ -1615,7 +1615,7 @@
     ],
     "tierRank": "C",
     "tierReason": "火系物理辅助",
-    "tierReasonZh": "Pyro physical support"
+    "tierReasonZh": "火系物理辅助"
   },
   {
     "id": "dehya",
@@ -1770,7 +1770,7 @@
     ],
     "tierRank": "B",
     "tierReason": "火系坦克角色",
-    "tierReasonZh": "Pyro tank character"
+    "tierReasonZh": "火系承伤型角色"
   },
   {
     "id": "lyney",
@@ -1925,7 +1925,7 @@
     ],
     "tierRank": "A",
     "tierReason": "火系蓄力弓输出",
-    "tierReasonZh": "Pyro Charged Attack Bow DPS"
+    "tierReasonZh": "火系重击弓箭输出角色"
   },
   {
     "id": "arlecchino",
@@ -2126,7 +2126,7 @@
     ],
     "tierRank": "SS",
     "tierReason": "强力火系主C，生命之契机制",
-    "tierReasonZh": "Strong Pyro DPS with Bond of Life mechanic"
+    "tierReasonZh": "依托生命之契机制的强力火系主C"
   },
   {
     "id": "gaming",
@@ -2281,7 +2281,7 @@
     ],
     "tierRank": "B",
     "tierReason": "火系下落攻击",
-    "tierReasonZh": "Pyro Plunging Attack DPS"
+    "tierReasonZh": "火系下落攻击输出角色"
   },
   {
     "id": "chevreuse",
@@ -2436,7 +2436,7 @@
     ],
     "tierRank": "B",
     "tierReason": "火雷体系辅助",
-    "tierReasonZh": "Pyro-Electro team support"
+    "tierReasonZh": "火雷队伍辅助"
   },
   {
     "id": "tartaglia",
@@ -2591,7 +2591,7 @@
     ],
     "tierRank": "S",
     "tierReason": "独特近战/远程切换机制",
-    "tierReasonZh": "Unique melee/ranged stance switch"
+    "tierReasonZh": "拥有独特近战/远程形态切换机制"
   },
   {
     "id": "mona",
@@ -2746,7 +2746,7 @@
     ],
     "tierRank": "A",
     "tierReason": "水系副C，增伤辅助",
-    "tierReasonZh": "Hydro sub-DPS, DMG bonus support"
+    "tierReasonZh": "水系副C，提供伤害增益"
   },
   {
     "id": "kokomi",
@@ -2901,7 +2901,7 @@
     ],
     "tierRank": "A",
     "tierReason": "顶级治疗+水系范围挂水",
-    "tierReasonZh": "Top healer + Hydro application"
+    "tierReasonZh": "顶级治疗兼水元素附着"
   },
   {
     "id": "ayato",
@@ -3090,7 +3090,7 @@
     ],
     "tierRank": "A",
     "tierReason": "水系速切主C",
-    "tierReasonZh": "Hydro quick-swap DPS"
+    "tierReasonZh": "水系速切输出角色"
   },
   {
     "id": "yelan",
@@ -3245,7 +3245,7 @@
     ],
     "tierRank": "SS",
     "tierReason": "顶级水系副C和增伤",
-    "tierReasonZh": "Top Hydro sub-DPS and DMG buffer"
+    "tierReasonZh": "顶级水系后台输出与增伤角色"
   },
   {
     "id": "nilou",
@@ -3400,7 +3400,7 @@
     ],
     "tierRank": "S",
     "tierReason": "水草绽放特化角色",
-    "tierReasonZh": "Specialized Bloom character"
+    "tierReasonZh": "专精绽放反应角色"
   },
   {
     "id": "candace",
@@ -3555,7 +3555,7 @@
     ],
     "tierRank": "B",
     "tierReason": "水系盾辅",
-    "tierReasonZh": "Hydro shield support"
+    "tierReasonZh": "水系护盾辅助"
   },
   {
     "id": "barbara",
@@ -3710,7 +3710,7 @@
     ],
     "tierRank": "B",
     "tierReason": "免费治疗角色",
-    "tierReasonZh": "Free healer character"
+    "tierReasonZh": "免费治疗角色"
   },
   {
     "id": "xingqiu",
@@ -3899,7 +3899,7 @@
     ],
     "tierRank": "SS",
     "tierReason": "最强四星水系副C",
-    "tierReasonZh": "Best 4-star Hydro off-field DPS"
+    "tierReasonZh": "最佳四星水系后台输出"
   },
   {
     "id": "neuvillette",
@@ -4088,7 +4088,7 @@
     ],
     "tierRank": "SS",
     "tierReason": "最强水系主C之一，重击范围极大",
-    "tierReasonZh": "One of the strongest Hydro DPS, huge Charged Attack AoE"
+    "tierReasonZh": "顶级水系主C之一，重击范围伤害出色"
   },
   {
     "id": "furina",
@@ -4289,7 +4289,7 @@
     ],
     "tierRank": "SS",
     "tierReason": "最强增伤辅助之一，全队伤害提升",
-    "tierReasonZh": "One of the strongest DMG buffers, boosts entire team"
+    "tierReasonZh": "最强增伤辅助之一，可提升全队伤害"
   },
   {
     "id": "sigewinne",
@@ -4478,7 +4478,7 @@
     ],
     "tierRank": "A",
     "tierReason": "水系治疗+副C",
-    "tierReasonZh": "Hydro healer + sub-DPS"
+    "tierReasonZh": "水系治疗兼副C"
   },
   {
     "id": "keqing",
@@ -4633,7 +4633,7 @@
     ],
     "tierRank": "A",
     "tierReason": "雷系剑主C，机动性强",
-    "tierReasonZh": "Electro Sword DPS, highly mobile"
+    "tierReasonZh": "高机动雷系单手剑输出"
   },
   {
     "id": "lisa",
@@ -4788,7 +4788,7 @@
     ],
     "tierRank": "C",
     "tierReason": "免费雷系法师",
-    "tierReasonZh": "Free Electro catalyst character"
+    "tierReasonZh": "免费雷系法器角色"
   },
   {
     "id": "razor",
@@ -4943,7 +4943,7 @@
     ],
     "tierRank": "B",
     "tierReason": "雷系物理输出",
-    "tierReasonZh": "Electro physical DPS"
+    "tierReasonZh": "雷系物理输出角色"
   },
   {
     "id": "fischl",
@@ -5098,7 +5098,7 @@
     ],
     "tierRank": "S",
     "tierReason": "最强四星雷系副C之一",
-    "tierReasonZh": "Top 4-star Electro off-field DPS"
+    "tierReasonZh": "顶级四星雷系后台输出"
   },
   {
     "id": "beidou",
@@ -5287,7 +5287,7 @@
     ],
     "tierRank": "A",
     "tierReason": "雷系反弹伤害副C",
-    "tierReasonZh": "Electro counter-attack sub-DPS"
+    "tierReasonZh": "雷系反击型副C"
   },
   {
     "id": "raiden-shogun",
@@ -5442,7 +5442,7 @@
     ],
     "tierRank": "SS",
     "tierReason": "最强雷系主C/辅助/充能",
-    "tierReasonZh": "Top Electro DPS/Support/Energy battery"
+    "tierReasonZh": "顶级雷系输出/辅助/充能角色"
   },
   {
     "id": "yae-miko",
@@ -5597,7 +5597,7 @@
     ],
     "tierRank": "S",
     "tierReason": "雷系脱手副C",
-    "tierReasonZh": "Electro off-field sub-DPS"
+    "tierReasonZh": "雷系后台副C"
   },
   {
     "id": "kujou-sara",
@@ -5752,7 +5752,7 @@
     ],
     "tierRank": "B",
     "tierReason": "雷系增攻辅助",
-    "tierReasonZh": "Electro ATK buffer"
+    "tierReasonZh": "雷系攻击力增益辅助"
   },
   {
     "id": "kuki-shinobu",
@@ -5907,7 +5907,7 @@
     ],
     "tierRank": "S",
     "tierReason": "最强雷系治疗+超绽放",
-    "tierReasonZh": "Top Electro healer + Hyperbloom trigger"
+    "tierReasonZh": "顶级雷系治疗兼超绽放触发位"
   },
   {
     "id": "heizou",
@@ -6062,7 +6062,7 @@
     ],
     "tierRank": "B",
     "tierReason": "雷系近战法师",
-    "tierReasonZh": "Electro melee catalyst"
+    "tierReasonZh": "雷系近战法器角色"
   },
   {
     "id": "dori",
@@ -6217,7 +6217,7 @@
     ],
     "tierRank": "C",
     "tierReason": "雷系治疗+充能辅助",
-    "tierReasonZh": "Electro healer + Energy battery"
+    "tierReasonZh": "雷系治疗兼充能辅助"
   },
   {
     "id": "sethos",
@@ -6372,7 +6372,7 @@
     ],
     "tierRank": "B",
     "tierReason": "雷系弓箭输出",
-    "tierReasonZh": "Electro bow DPS"
+    "tierReasonZh": "雷系弓箭输出角色"
   },
   {
     "id": "clorinde",
@@ -6527,7 +6527,7 @@
     ],
     "tierRank": "A",
     "tierReason": "雷系剑输出，生命之契",
-    "tierReasonZh": "Electro Sword DPS with Bond of Life"
+    "tierReasonZh": "带生命之契机制的雷系单手剑输出"
   },
   {
     "id": "ayaka",
@@ -6682,7 +6682,7 @@
     ],
     "tierRank": "SS",
     "tierReason": "最强冰系主C之一",
-    "tierReasonZh": "One of the strongest Cryo DPS"
+    "tierReasonZh": "最强冰系主C之一"
   },
   {
     "id": "ganyu",
@@ -6837,7 +6837,7 @@
     ],
     "tierRank": "S",
     "tierReason": "强力冰系远程输出",
-    "tierReasonZh": "Strong Cryo ranged DPS"
+    "tierReasonZh": "强力冰系远程输出"
   },
   {
     "id": "qiqi",
@@ -6992,7 +6992,7 @@
     ],
     "tierRank": "B",
     "tierReason": "冰系治疗角色",
-    "tierReasonZh": "Cryo healer"
+    "tierReasonZh": "冰系治疗角色"
   },
   {
     "id": "chongyun",
@@ -7147,7 +7147,7 @@
     ],
     "tierRank": "B",
     "tierReason": "冰系双手剑输出",
-    "tierReasonZh": "Cryo claymore DPS"
+    "tierReasonZh": "冰系双手剑输出"
   },
   {
     "id": "rosaria",
@@ -7302,7 +7302,7 @@
     ],
     "tierRank": "B",
     "tierReason": "冰系长枪副C",
-    "tierReasonZh": "Cryo polearm sub-DPS"
+    "tierReasonZh": "冰系长柄武器副C"
   },
   {
     "id": "eula",
@@ -7457,7 +7457,7 @@
     ],
     "tierRank": "A",
     "tierReason": "物理输出天花板",
-    "tierReasonZh": "Top physical DPS"
+    "tierReasonZh": "顶级物理输出"
   },
   {
     "id": "shenhe",
@@ -7612,7 +7612,7 @@
     ],
     "tierRank": "A",
     "tierReason": "冰系增伤辅助",
-    "tierReasonZh": "Cryo DMG buffer"
+    "tierReasonZh": "冰系伤害增益辅助"
   },
   {
     "id": "diona",
@@ -7767,7 +7767,7 @@
     ],
     "tierRank": "B",
     "tierReason": "冰系治疗+护盾",
-    "tierReasonZh": "Cryo healer + shield"
+    "tierReasonZh": "冰系治疗兼护盾"
   },
   {
     "id": "kaeya",
@@ -7956,7 +7956,7 @@
     ],
     "tierRank": "A",
     "tierReason": "免费冰系副C",
-    "tierReasonZh": "Free Cryo sub-DPS"
+    "tierReasonZh": "免费冰系副C"
   },
   {
     "id": "layla",
@@ -8111,7 +8111,7 @@
     ],
     "tierRank": "B",
     "tierReason": "冰系护盾辅助",
-    "tierReasonZh": "Cryo shield support"
+    "tierReasonZh": "冰系护盾辅助"
   },
   {
     "id": "wriothesley",
@@ -8266,7 +8266,7 @@
     ],
     "tierRank": "A",
     "tierReason": "冰系近战法师",
-    "tierReasonZh": "Cryo melee catalyst DPS"
+    "tierReasonZh": "冰系近战法器输出"
   },
   {
     "id": "charlotte",
@@ -8421,7 +8421,7 @@
     ],
     "tierRank": "B",
     "tierReason": "冰系治疗+副C",
-    "tierReasonZh": "Cryo healer + sub-DPS"
+    "tierReasonZh": "冰系治疗兼副C"
   },
   {
     "id": "freminet",
@@ -8576,7 +8576,7 @@
     ],
     "tierRank": "B",
     "tierReason": "冰系物理/冰输出",
-    "tierReasonZh": "Cryo/Physical DPS"
+    "tierReasonZh": "冰系/物理输出"
   },
   {
     "id": "tighnari",
@@ -8731,7 +8731,7 @@
     ],
     "tierRank": "A",
     "tierReason": "草系蓄力弓输出",
-    "tierReasonZh": "Dendro Charged Attack Bow DPS"
+    "tierReasonZh": "草系重击弓箭输出"
   },
   {
     "id": "nahida",
@@ -8886,7 +8886,7 @@
     ],
     "tierRank": "SS",
     "tierReason": "最强草系辅助/副C",
-    "tierReasonZh": "Top Dendro support/sub-DPS"
+    "tierReasonZh": "顶级草系辅助/副C"
   },
   {
     "id": "alhaitham",
@@ -9041,7 +9041,7 @@
     ],
     "tierRank": "S",
     "tierReason": "强力草系主C",
-    "tierReasonZh": "Strong Dendro DPS"
+    "tierReasonZh": "强力草系输出"
   },
   {
     "id": "collei",
@@ -9196,7 +9196,7 @@
     ],
     "tierRank": "B",
     "tierReason": "免费草系弓箭",
-    "tierReasonZh": "Free Dendro bow character"
+    "tierReasonZh": "免费草系弓箭角色"
   },
   {
     "id": "yaoyao",
@@ -9351,7 +9351,7 @@
     ],
     "tierRank": "B",
     "tierReason": "草系治疗辅助",
-    "tierReasonZh": "Dendro healer support"
+    "tierReasonZh": "草系治疗辅助"
   },
   {
     "id": "kaveh",
@@ -9506,7 +9506,7 @@
     ],
     "tierRank": "C",
     "tierReason": "草系双手剑输出",
-    "tierReasonZh": "Dendro claymore DPS"
+    "tierReasonZh": "草系双手剑输出角色"
   },
   {
     "id": "baizhu",
@@ -9661,7 +9661,7 @@
     ],
     "tierRank": "A",
     "tierReason": "草系治疗+盾辅",
-    "tierReasonZh": "Dendro healer + shield support"
+    "tierReasonZh": "草系治疗兼护盾辅助"
   },
   {
     "id": "emilie",
@@ -9816,7 +9816,7 @@
     ],
     "tierRank": "A",
     "tierReason": "草系副C，燃烧体系",
-    "tierReasonZh": "Dendro sub-DPS, Burning team"
+    "tierReasonZh": "草系副C，适合燃烧队"
   },
   {
     "id": "kirara",
@@ -9971,7 +9971,7 @@
     ],
     "tierRank": "B",
     "tierReason": "草系护盾辅助",
-    "tierReasonZh": "Dendro shield support"
+    "tierReasonZh": "草系护盾辅助"
   },
   {
     "id": "kinich",
@@ -10126,7 +10126,7 @@
     ],
     "tierRank": "A",
     "tierReason": "草系大剑输出",
-    "tierReasonZh": "Dendro claymore DPS"
+    "tierReasonZh": "草系双手剑输出角色"
   },
   {
     "id": "venti",
@@ -10281,7 +10281,7 @@
     ],
     "tierRank": "S",
     "tierReason": "最强聚怪辅助",
-    "tierReasonZh": "Best crowd control support"
+    "tierReasonZh": "最佳聚怪辅助"
   },
   {
     "id": "xiao",
@@ -10436,7 +10436,7 @@
     ],
     "tierRank": "A",
     "tierReason": "风系下落攻击主C",
-    "tierReasonZh": "Anemo Plunging Attack DPS"
+    "tierReasonZh": "风系下落攻击输出"
   },
   {
     "id": "kazuha",
@@ -10591,7 +10591,7 @@
     ],
     "tierRank": "SS",
     "tierReason": "最强增伤+聚怪辅助",
-    "tierReasonZh": "Top DMG buffer + CC support"
+    "tierReasonZh": "顶级增伤兼聚怪辅助"
   },
   {
     "id": "sucrose",
@@ -10746,7 +10746,7 @@
     ],
     "tierRank": "A",
     "tierReason": "四星风系聚怪+精通辅助",
-    "tierReasonZh": "4-star Anemo CC + EM support"
+    "tierReasonZh": "四星风系聚怪兼精通辅助"
   },
   {
     "id": "jean",
@@ -10901,7 +10901,7 @@
     ],
     "tierRank": "A",
     "tierReason": "风系治疗+输出",
-    "tierReasonZh": "Anemo healer + DPS"
+    "tierReasonZh": "风系治疗兼输出"
   },
   {
     "id": "sayu",
@@ -11056,7 +11056,7 @@
     ],
     "tierRank": "B",
     "tierReason": "风系治疗辅助",
-    "tierReasonZh": "Anemo healer support"
+    "tierReasonZh": "风系治疗辅助"
   },
   {
     "id": "wanderer",
@@ -11211,7 +11211,7 @@
     ],
     "tierRank": "A",
     "tierReason": "风系飞行远程输出",
-    "tierReasonZh": "Anemo flying ranged DPS"
+    "tierReasonZh": "风系飞行远程输出"
   },
   {
     "id": "faruzan",
@@ -11366,7 +11366,7 @@
     ],
     "tierRank": "B",
     "tierReason": "风系增伤辅助",
-    "tierReasonZh": "Anemo DMG buffer"
+    "tierReasonZh": "风系伤害增益辅助"
   },
   {
     "id": "lan-yan",
@@ -11521,7 +11521,7 @@
     ],
     "tierRank": "B",
     "tierReason": "风系法师辅助",
-    "tierReasonZh": "Anemo catalyst support"
+    "tierReasonZh": "风系法器辅助"
   },
   {
     "id": "zhongli",
@@ -11676,7 +11676,7 @@
     ],
     "tierRank": "S",
     "tierReason": "最强护盾角色",
-    "tierReasonZh": "Best shield character"
+    "tierReasonZh": "最强护盾角色"
   },
   {
     "id": "albedo",
@@ -11831,7 +11831,7 @@
     ],
     "tierRank": "A",
     "tierReason": "岩系脱手副C",
-    "tierReasonZh": "Geo off-field sub-DPS"
+    "tierReasonZh": "岩系后台副C"
   },
   {
     "id": "ningguang",
@@ -11986,7 +11986,7 @@
     ],
     "tierRank": "A",
     "tierReason": "四星岩系法师输出",
-    "tierReasonZh": "4-star Geo catalyst DPS"
+    "tierReasonZh": "四星岩系法器输出"
   },
   {
     "id": "noelle",
@@ -12141,7 +12141,7 @@
     ],
     "tierRank": "B",
     "tierReason": "岩系治疗+输出",
-    "tierReasonZh": "Geo healer + DPS"
+    "tierReasonZh": "岩系治疗兼输出"
   },
   {
     "id": "itto",
@@ -12296,7 +12296,7 @@
     ],
     "tierRank": "A",
     "tierReason": "岩系主C",
-    "tierReasonZh": "Geo DPS"
+    "tierReasonZh": "岩系输出角色"
   },
   {
     "id": "gorou",
@@ -12451,7 +12451,7 @@
     ],
     "tierRank": "B",
     "tierReason": "岩系增防辅助",
-    "tierReasonZh": "Geo DEF buffer"
+    "tierReasonZh": "岩系防御力增益辅助"
   },
   {
     "id": "yun-jin",
@@ -12606,7 +12606,7 @@
     ],
     "tierRank": "B",
     "tierReason": "普攻增伤辅助",
-    "tierReasonZh": "Normal ATK DMG buffer"
+    "tierReasonZh": "普通攻击增伤辅助"
   },
   {
     "id": "navia",
@@ -12761,7 +12761,7 @@
     ],
     "tierRank": "A",
     "tierReason": "岩系双手剑主C",
-    "tierReasonZh": "Geo claymore DPS"
+    "tierReasonZh": "岩系双手剑输出角色"
   },
   {
     "id": "chiori",
@@ -12916,7 +12916,7 @@
     ],
     "tierRank": "A",
     "tierReason": "岩系脱手副C",
-    "tierReasonZh": "Geo off-field sub-DPS"
+    "tierReasonZh": "岩系后台副C"
   },
   {
     "id": "xilonen",
@@ -13071,7 +13071,7 @@
     ],
     "tierRank": "S",
     "tierReason": "岩系全能辅助",
-    "tierReasonZh": "Geo all-round support"
+    "tierReasonZh": "岩系全能辅助"
   },
   {
     "id": "yumemizuki-mizuki",
@@ -13088,7 +13088,7 @@
     "acquisitionMethod": "limited-banner",
     "tierRank": "A",
     "tierReason": "风系治疗辅助，提供持续治疗和增益",
-    "tierReasonZh": "Anemo healer support with sustained healing and buffs",
+    "tierReasonZh": "风系治疗辅助，提供持续治疗与增益",
     "skills": {
       "normalAttack": {
         "name": "普通攻击",
@@ -13145,7 +13145,7 @@
     "acquisitionMethod": "limited-banner",
     "tierRank": "A",
     "tierReason": "雷系驻场主C，高爆发输出",
-    "tierReasonZh": "Electro on-field DPS with high burst damage",
+    "tierReasonZh": "雷系站场输出，爆发伤害很高",
     "skills": {
       "normalAttack": {
         "name": "普通攻击",
@@ -13202,7 +13202,7 @@
     "acquisitionMethod": "limited-banner",
     "tierRank": "B",
     "tierReason": "雷系四星输出，具备一定辅助能力",
-    "tierReasonZh": "4-star Electro DPS with some support utility",
+    "tierReasonZh": "四星雷系输出，兼具一定辅助能力",
     "skills": {
       "normalAttack": {
         "name": "普通攻击",
@@ -13259,7 +13259,7 @@
     "acquisitionMethod": "limited-banner",
     "tierRank": "S",
     "tierReason": "冰系减抗辅助，提供强力团队增益",
-    "tierReasonZh": "Cryo resistance shred support with strong team buffs",
+    "tierReasonZh": "冰抗削减辅助，团队增益强",
     "skills": {
       "normalAttack": {
         "name": "普通攻击",
@@ -13316,7 +13316,7 @@
     "acquisitionMethod": "limited-banner",
     "tierRank": "B",
     "tierReason": "风系四星治疗辅助",
-    "tierReasonZh": "4-star Anemo healer support",
+    "tierReasonZh": "四星风系治疗辅助",
     "skills": {
       "normalAttack": {
         "name": "普通攻击",
@@ -13373,7 +13373,7 @@
     "acquisitionMethod": "limited-banner",
     "tierRank": "S",
     "tierReason": "冰系强力主C，独特机制高伤害",
-    "tierReasonZh": "Cryo DPS with unique mechanics and high damage output",
+    "tierReasonZh": "机制独特且伤害较高的冰系输出",
     "skills": {
       "normalAttack": {
         "name": "普通攻击",
@@ -13430,7 +13430,7 @@
     "acquisitionMethod": "limited-banner",
     "tierRank": "B",
     "tierReason": "水系四星辅助，提供攻速和治疗增益",
-    "tierReasonZh": "4-star Hydro support providing ATK SPD and healing buffs",
+    "tierReasonZh": "四星水系辅助，提供攻速和治疗增益",
     "skills": {
       "normalAttack": {
         "name": "普通攻击",
@@ -13487,7 +13487,7 @@
     "acquisitionMethod": "limited-banner",
     "tierRank": "S",
     "tierReason": "雷系月印辅助，月充能反应核心角色",
-    "tierReasonZh": "Electro Moonsign support, core enabler for Lunar-Charged reactions",
+    "tierReasonZh": "雷系月兆辅助，月感电反应核心启动位",
     "skills": {
       "normalAttack": {
         "name": "普通攻击",
@@ -13544,7 +13544,7 @@
     "acquisitionMethod": "limited-banner",
     "tierRank": "S",
     "tierReason": "草系脱手辅助，月绽放反应核心",
-    "tierReasonZh": "Dendro off-field support, core for Lunar-Bloom reactions",
+    "tierReasonZh": "草系后台辅助，月绽放反应核心角色",
     "skills": {
       "normalAttack": {
         "name": "普通攻击",
@@ -13601,7 +13601,7 @@
     "acquisitionMethod": "limited-banner",
     "tierRank": "A",
     "tierReason": "雷系驻场主C，月充能反应输出",
-    "tierReasonZh": "Electro on-field DPS focused on Lunar-Charged reactions",
+    "tierReasonZh": "专注月感电反应的雷系站场输出",
     "skills": {
       "normalAttack": {
         "name": "普通攻击",
@@ -13658,7 +13658,7 @@
     "acquisitionMethod": "free",
     "tierRank": "B",
     "tierReason": "水系四星脱手辅助，免费角色",
-    "tierReasonZh": "4-star Hydro off-field support, free character",
+    "tierReasonZh": "四星水系后台辅助，免费角色",
     "skills": {
       "normalAttack": {
         "name": "普通攻击",
@@ -13715,7 +13715,7 @@
     "acquisitionMethod": "limited-banner",
     "tierRank": "A",
     "tierReason": "草系驻场主C，月绽放反应输出",
-    "tierReasonZh": "Dendro on-field DPS focused on Lunar-Bloom reactions",
+    "tierReasonZh": "专注月绽放反应的草系站场输出",
     "skills": {
       "normalAttack": {
         "name": "普通攻击",
@@ -13772,7 +13772,7 @@
     "acquisitionMethod": "gameplay-mode",
     "tierRank": "B",
     "tierReason": "特殊玩法角色，元素随旅行者变化",
-    "tierReasonZh": "Special gameplay character, element follows the Traveler",
+    "tierReasonZh": "特殊玩法角色，元素随旅行者切换",
     "skills": {
       "normalAttack": {
         "name": "普通攻击",
@@ -13829,7 +13829,7 @@
     "acquisitionMethod": "limited-banner",
     "tierRank": "S",
     "tierReason": "火系赫克塞雷角色，强力驻场输出",
-    "tierReasonZh": "Pyro Hexerei character, powerful on-field DPS",
+    "tierReasonZh": "火系魔女会角色，强力站场输出",
     "skills": {
       "normalAttack": {
         "name": "普通攻击",
@@ -13886,7 +13886,7 @@
     "acquisitionMethod": "limited-banner",
     "tierRank": "B",
     "tierReason": "风系四星弓箭输出",
-    "tierReasonZh": "4-star Anemo Bow DPS",
+    "tierReasonZh": "四星风系弓箭输出",
     "skills": {
       "normalAttack": {
         "name": "普通攻击",
@@ -13943,7 +13943,7 @@
     "acquisitionMethod": "limited-banner",
     "tierRank": "S",
     "tierReason": "岩系剑士主C，强力驻场输出",
-    "tierReasonZh": "Geo Sword DPS, powerful on-field damage dealer",
+    "tierReasonZh": "岩系单手剑输出，站场伤害强",
     "skills": {
       "normalAttack": {
         "name": "普通攻击",
@@ -14000,7 +14000,7 @@
     "acquisitionMethod": "limited-banner",
     "tierRank": "S",
     "tierReason": "水系月印全能辅助，可触发多种月印反应",
-    "tierReasonZh": "Hydro Moonsign all-round support enabling multiple Lunar reactions",
+    "tierReasonZh": "水系月兆全能辅助，可启动多种月反应",
     "skills": {
       "normalAttack": {
         "name": "普通攻击",
@@ -14057,7 +14057,7 @@
     "acquisitionMethod": "limited-banner",
     "tierRank": "B",
     "tierReason": "岩系四星长枪辅助",
-    "tierReasonZh": "4-star Geo Polearm support",
+    "tierReasonZh": "四星岩系长柄武器辅助",
     "skills": {
       "normalAttack": {
         "name": "普通攻击",
@@ -14114,7 +14114,7 @@
     "acquisitionMethod": "limited-banner",
     "tierRank": "S",
     "tierReason": "风系赫克塞雷角色，强力双手剑主C",
-    "tierReasonZh": "Anemo Hexerei character, powerful Claymore DPS",
+    "tierReasonZh": "风系魔女会角色，强力双手剑输出",
     "skills": {
       "normalAttack": {
         "name": "普通攻击",
@@ -14171,7 +14171,7 @@
     "acquisitionMethod": "limited-banner",
     "tierRank": "S",
     "tierReason": "岩系脱手辅助，月结晶反应核心",
-    "tierReasonZh": "Geo off-field support, core for Lunar-Crystallize reactions",
+    "tierReasonZh": "岩系后台辅助，月结晶反应核心角色",
     "skills": {
       "normalAttack": {
         "name": "普通攻击",
@@ -14228,7 +14228,7 @@
     "acquisitionMethod": "limited-banner",
     "tierRank": "S",
     "tierReason": "火系赫克塞雷脱手辅助，强力团队增益",
-    "tierReasonZh": "Pyro Hexerei off-field support with strong team buffs",
+    "tierReasonZh": "火系魔女会后台辅助，团队增益强",
     "skills": {
       "elementalSkill": {
         "description": "释放火元素花粉，对周围敌人造成火元素伤害并施加燃烧效果。",

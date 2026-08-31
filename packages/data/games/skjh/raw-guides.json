@@ -24,25 +24,33 @@
         "question": "What should I do first on launch day?",
         "questionZh": "开服第一天最优先做什么？",
         "answer": "Claim official rewards, place a sleeping bag and territory cabinet, then run low-tier POIs for scrap and cloth before pushing dangerous areas.",
-        "answerZh": "先领取官方福利，放睡袋和领地柜，再循环低级据点拿废料和布料，不要一开始冲高危区。"
+        "answerZh": "先领取官方福利，放睡袋和领地柜，再循环低级据点拿废料和布料，不要一开始冲高危区。",
+        "questionJa": "开服第一天最优先做什么？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "Which mode is safest for beginners?",
         "questionZh": "新手最稳的是哪个模式？",
         "answer": "Safe-zone mode is the best first stop. It gives you room to learn gathering, base building, and combat pressure before moving to standard or higher-risk servers.",
-        "answerZh": "安全区模式最适合第一次上手。它能让你先熟悉采集、建家和基础对抗，再去标准或更高风险服务器。"
+        "answerZh": "安全区模式最适合第一次上手。它能让你先熟悉采集、建家和基础对抗，再去标准或更高风险服务器。",
+        "questionJa": "新手最稳的是哪个模式？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "Can a solo player enjoy the game?",
         "questionZh": "独狼也能玩吗？",
         "answer": "Yes, but solo players should prioritize low-profile bases, safe-zone learning, and conservative resource routing. Do not rush raids or high-traffic zones early.",
-        "answerZh": "可以，但独狼要优先低曝光基地、安全区练习和保守资源路线。前期不要急着打抄家或冲高交通区域。"
+        "answerZh": "可以，但独狼要优先低曝光基地、安全区练习和保守资源路线。前期不要急着打抄家或冲高交通区域。",
+        "questionJa": "独狼也能玩吗？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "Where do I claim launch rewards?",
         "questionZh": "公测福利去哪领？",
         "answer": "Check your in-game mailbox first, then open the event page and reservation page to confirm any remaining binding or milestone rewards.",
-        "answerZh": "先看游戏邮箱，再打开活动页和预约页，确认是否还有绑定礼或里程碑奖励没有到账。"
+        "answerZh": "先看游戏邮箱，再打开活动页和预约页，确认是否还有绑定礼或里程碑奖励没有到账。",
+        "questionJa": "公测福利去哪领？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -71,7 +79,9 @@
         "question": "Where are launch rewards delivered?",
         "questionZh": "公测奖励发到哪里？",
         "answer": "The official site states that launch rewards are automatically sent to in-game mail after the game goes live.",
-        "answerZh": "官网说明游戏上线后奖励会自动发送至游戏邮箱内。"
+        "answerZh": "官网说明游戏上线后奖励会自动发送至游戏邮箱内。",
+        "questionJa": "公测奖励发到哪里？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -100,7 +110,9 @@
         "question": "Can PC and mobile players play together?",
         "questionZh": "PC 和移动端能一起玩吗？",
         "answer": "Public materials emphasize multi-platform data continuity and mixed-platform play, but final server rules should be checked in official launch notices.",
-        "answerZh": "公开素材强调多端互通和混服体验，但最终服务器规则仍建议以上线后官方公告为准。"
+        "answerZh": "公开素材强调多端互通和混服体验，但最终服务器规则仍建议以上线后官方公告为准。",
+        "questionJa": "PC 和移动端能一起玩吗？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -129,7 +141,9 @@
         "question": "Is Ashfall Evolution a gacha RPG?",
         "questionZh": "《失控进化》是抽卡 RPG 吗？",
         "answer": "No. It is a multiplayer survival and base-raiding game built around gathering, crafting, combat, and territory warfare.",
-        "answerZh": "不是。它更接近多人开放世界生存对抗游戏，核心是采集、制造、战斗、建家和领地攻防。"
+        "answerZh": "不是。它更接近多人开放世界生存对抗游戏，核心是采集、制造、战斗、建家和领地攻防。",
+        "questionJa": "失控進化是抽卡 RPG 吗？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -158,7 +172,9 @@
         "question": "What should beginners craft first?",
         "questionZh": "新手第一件装备做什么？",
         "answer": "Craft a stone hatchet and stone pickaxe first, then add a spear or bow if the area is unsafe.",
-        "answerZh": "优先做石斧和石镐提升采集效率，周围危险时再补木矛或猎弓。"
+        "answerZh": "优先做石斧和石镐提升采集效率，周围危险时再补木矛或猎弓。",
+        "questionJa": "新手第一件装备做什么？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -187,7 +203,9 @@
         "question": "Where should the territory cabinet go?",
         "questionZh": "领地柜应该放在哪里？",
         "answer": "Keep it inside the core base area, protected by multiple doors and turns rather than visible from the entrance.",
-        "answerZh": "放在核心区，不要入口直视，最好用多层门、转角和储物分散来保护。"
+        "answerZh": "放在核心区，不要入口直视，最好用多层门、转角和储物分散来保护。",
+        "questionJa": "领地柜应该放在哪里？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -216,7 +234,9 @@
         "question": "Why is scrap so important?",
         "questionZh": "为什么废料优先级最高？",
         "answer": "Scrap drives tech unlocks. Without it, your base and combat gear will fall behind even if you have raw materials.",
-        "answerZh": "废料决定科技解锁。只有原材料但没有废料，武器和基地强度都会落后。"
+        "answerZh": "废料决定科技解锁。只有原材料但没有废料，武器和基地强度都会落后。",
+        "questionJa": "为什么废料优先级最高？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -245,7 +265,9 @@
         "question": "Which gene build is best for beginners?",
         "questionZh": "新手最推荐哪个基因流派？",
         "answer": "Plant self-heal is the safest first route because it reduces supply pressure and helps beginners survive longer gathering runs.",
-        "answerZh": "植型自愈流最稳，能降低补给压力，让新手更容易活着完成采集和搜刮。"
+        "answerZh": "植型自愈流最稳，能降低补给压力，让新手更容易活着完成采集和搜刮。",
+        "questionJa": "新手最推荐哪个基因流派？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -274,7 +296,9 @@
         "question": "Which mode should a solo player start with?",
         "questionZh": "独狼玩家先玩哪个模式？",
         "answer": "Start with safe-zone or standard mode, then move to challenge servers after learning low-profile base building and escape routes.",
-        "answerZh": "先从安全区或标准模式开始，熟悉隐蔽建家和撤离路线后再考虑挑战模式。"
+        "answerZh": "先从安全区或标准模式开始，熟悉隐蔽建家和撤离路线后再考虑挑战模式。",
+        "questionJa": "独狼玩家先玩哪个模式？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -303,7 +327,9 @@
         "question": "Are all reservation milestones unlocked?",
         "questionZh": "预约里程碑是否已经全解锁？",
         "answer": "The official page shows 40,000,000 reservations, which corresponds to the final milestone tier.",
-        "answerZh": "官网页面显示已预约 4000 万人，对应最终里程碑档位。"
+        "answerZh": "官网页面显示已预约 4000 万人，对应最终里程碑档位。",
+        "questionJa": "预约里程碑是否已经全解锁？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -332,7 +358,9 @@
         "question": "Is GTX 1060 enough for Ashfall Evolution?",
         "questionZh": "GTX 1060 能玩《失控进化》吗？",
         "answer": "The referenced recommended PC spec includes GTX 1060 5G with 16GB RAM. For PvP stability, use 1080p with medium settings and lower shadows or post-processing.",
-        "answerZh": "参考推荐配置包含 GTX 1060 5G 和 16GB 内存。为了 PVP 稳定，建议 1080p 中画质，并降低阴影和后处理。"
+        "answerZh": "参考推荐配置包含 GTX 1060 5G 和 16GB 内存。为了 PVP 稳定，建议 1080p 中画质，并降低阴影和后处理。",
+        "questionJa": "GTX 1060 能玩失控進化吗？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -361,7 +389,9 @@
         "question": "Should I rush mechanical genes early?",
         "questionZh": "前期要不要强追机械型基因？",
         "answer": "Usually no. Mechanical builds have high late-game value but need rare fragments. Beginners should first secure survival and resource routes.",
-        "answerZh": "通常不建议。机械型后期上限高，但稀有碎片成本大。新手应先保证生存和资源路线。"
+        "answerZh": "通常不建议。机械型后期上限高，但稀有碎片成本大。新手应先保证生存和资源路线。",
+        "questionJa": "前期要不要强追机械型基因？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -390,7 +420,9 @@
         "question": "Which tech tree should solo players unlock first?",
         "questionZh": "独狼先点哪条科技树？",
         "answer": "Solo players should prioritize survival and building first: sleeping bags, bandages, water, territory cabinet, stone walls, locks, and storage.",
-        "answerZh": "独狼优先生存和建筑：睡袋、绷带、水源、领地柜、石墙、门锁和储物。"
+        "answerZh": "独狼优先生存和建筑：睡袋、绷带、水源、领地柜、石墙、门锁和储物。",
+        "questionJa": "独狼先点哪条科技树？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -419,7 +451,9 @@
         "question": "Is Safe Zone Mode fully safe?",
         "questionZh": "安全区模式是不是完全安全？",
         "answer": "No. It lowers risk but does not remove survival pressure. You still need bags, upkeep, and careful storage.",
-        "answerZh": "不是。它降低风险，但不会取消生存压力。睡袋、维护和分散储物仍然很重要。"
+        "answerZh": "不是。它降低风险，但不会取消生存压力。睡袋、维护和分散储物仍然很重要。",
+        "questionJa": "安全区模式是不是完全安全？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -448,7 +482,9 @@
         "question": "Is Standard Mode good for solo players?",
         "questionZh": "标准模式适合独狼吗？",
         "answer": "Yes, but solo players need low-profile bases, short routes, multiple bags, and split storage to reduce raid losses.",
-        "answerZh": "适合，但独狼需要低曝光建家、短路线、多睡袋和分仓储物来降低损失。"
+        "answerZh": "适合，但独狼需要低曝光建家、短路线、多睡袋和分仓储物来降低损失。",
+        "questionJa": "标准模式适合独狼吗？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -477,7 +513,9 @@
         "question": "Should beginners play Challenge Mode?",
         "questionZh": "新手适合挑战模式吗？",
         "answer": "Not at first. Learn safe-zone or standard mode before entering high-risk servers.",
-        "answerZh": "不建议一开始玩。先用安全区或标准模式熟悉系统，再进高风险服务器。"
+        "answerZh": "不建议一开始玩。先用安全区或标准模式熟悉系统，再进高风险服务器。",
+        "questionJa": "新手适合挑战模式吗？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -506,7 +544,9 @@
         "question": "Does Quick Fight replace Standard Mode practice?",
         "questionZh": "快速对抗能替代标准模式练习吗？",
         "answer": "No. It is great for combat and communication, but standard mode is still needed for resource, base, and upkeep practice.",
-        "answerZh": "不能。它适合练战斗和沟通，但资源、建家和维护仍要在标准模式练。"
+        "answerZh": "不能。它适合练战斗和沟通，但资源、建家和维护仍要在标准模式练。",
+        "questionJa": "快速对抗能替代标准模式练习吗？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -535,7 +575,9 @@
         "question": "Who should play Training/Casual Mode?",
         "questionZh": "谁适合训练/休闲模式？",
         "answer": "New players, relaxed farmers, device testers, and veterans teaching friends should start here.",
-        "answerZh": "完全新手、休闲种田玩家、测试设备的玩家，以及带朋友入坑的老玩家都适合。"
+        "answerZh": "完全新手、休闲种田玩家、测试设备的玩家，以及带朋友入坑的老玩家都适合。",
+        "questionJa": "谁适合训练/休闲模式？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -564,13 +606,17 @@
         "question": "Do launch skins increase stats?",
         "questionZh": "公测外观会提升数值吗？",
         "answer": "Current public material frames these as cosmetic or event rewards, so they should not be treated as stat upgrades unless official rules say otherwise.",
-        "answerZh": "当前公开素材主要把它们作为外观或活动奖励描述，除非官方规则另有说明，不应视为数值提升。"
+        "answerZh": "当前公开素材主要把它们作为外观或活动奖励描述，除非官方规则另有说明，不应视为数值提升。",
+        "questionJa": "公测外观会提升数值吗？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "Which rewards should I claim first?",
         "questionZh": "上线后先领哪些奖励？",
         "answer": "Claim reservation, binding, login, and permanent cosmetic rewards first, then handle platform packs and draw-based activities.",
-        "answerZh": "先领预约、绑定、登录和永久外观奖励，再处理平台礼包和抽奖类活动。"
+        "answerZh": "先领预约、绑定、登录和永久外观奖励，再处理平台礼包和抽奖类活动。",
+        "questionJa": "上线后先领哪些奖励？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -599,7 +645,9 @@
         "question": "Should beginners rush AK-47?",
         "questionZh": "新手要不要直接冲 AK-47？",
         "answer": "No. Build stable resource loops, bow accuracy, basic firearms, and base defense first. Rushing AK too early can expose your progress.",
-        "answerZh": "不建议。先稳定资源路线、猎弓命中、基础枪械和基地防御，过早追 AK 会暴露发育进度。"
+        "answerZh": "不建议。先稳定资源路线、猎弓命中、基础枪械和基地防御，过早追 AK 会暴露发育进度。",
+        "questionJa": "新手要不要直接冲 AK-47？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -628,7 +676,9 @@
         "question": "When should I leave a POI?",
         "questionZh": "什么时候该离开据点？",
         "answer": "Leave when your backpack is 60-70% full, when gunfire starts nearby, or when your exit route becomes contested.",
-        "answerZh": "背包 60%-70% 满、附近开始交火，或撤离路线被争夺时就该离开。"
+        "answerZh": "背包 60%-70% 满、附近开始交火，或撤离路线被争夺时就该离开。",
+        "questionJa": "什么时候该离开据点？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -657,7 +707,9 @@
         "question": "Is a bigger base always safer?",
         "questionZh": "基地越大越安全吗？",
         "answer": "No. A large base is easier to spot and costs more upkeep. Expand only after your resources, route, and neighborhood are stable.",
-        "answerZh": "不是。大基地更显眼，维护成本也更高。只有资源、路线和周边敌情稳定后再扩建。"
+        "answerZh": "不是。大基地更显眼，维护成本也更高。只有资源、路线和周边敌情稳定后再扩建。",
+        "questionJa": "基地越大越安全吗？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -686,7 +738,9 @@
         "question": "When is a raid worth it?",
         "questionZh": "什么时候值得抄家？",
         "answer": "Raid only when target value, breach budget, exit routes, and counter-push risk are clear. Otherwise the explosive cost can exceed the loot.",
-        "answerZh": "只有目标价值、爆破预算、撤离路线和反打风险都清楚时才值得抄。否则爆破成本可能高过收益。"
+        "answerZh": "只有目标价值、爆破预算、撤离路线和反打风险都清楚时才值得抄。否则爆破成本可能高过收益。",
+        "questionJa": "什么时候值得抄家？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -715,7 +769,9 @@
         "question": "What should beginners solve first: food or weapons?",
         "questionZh": "新手先解决食物还是武器？",
         "answer": "Solve water, respawn, and basic defense together. A bow without food and water still fails on long routes.",
-        "answerZh": "水源、复活点和基础防身要一起解决。只有弓但没有食物和水，长路线一样会断节奏。"
+        "answerZh": "水源、复活点和基础防身要一起解决。只有弓但没有食物和水，长路线一样会断节奏。",
+        "questionJa": "新手先解决食物还是武器？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -744,7 +800,9 @@
         "question": "Which gene route is best for day one?",
         "questionZh": "第一天最推荐哪条基因路线？",
         "answer": "Plant-style survival and universal resistance traits are the safest day-one route because they reduce food, medicine, and return-trip pressure.",
-        "answerZh": "第一天最稳是植型生存和通用抗性链，因为能减少食物、药品和回家压力。"
+        "answerZh": "第一天最稳是植型生存和通用抗性链，因为能减少食物、药品和回家压力。",
+        "questionJa": "第一天最推荐哪条基因路线？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -773,7 +831,9 @@
         "question": "What should I prepare before launch?",
         "questionZh": "开服前要准备什么？",
         "answer": "Prepare the client, account login, storage space, network, graphics settings, sensitivity, and your first route plan.",
-        "answerZh": "准备客户端、账号登录、储存空间、网络、画质设置、灵敏度和首轮开荒路线。"
+        "answerZh": "准备客户端、账号登录、储存空间、网络、画质设置、灵敏度和首轮开荒路线。",
+        "questionJa": "开服前要准备什么？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -802,7 +862,9 @@
         "question": "What is the most important day-one goal?",
         "questionZh": "首日最重要目标是什么？",
         "answer": "Build a stable survival loop: sleeping bag, territory cabinet, starter base, scrap route, and stone core before chasing high-risk fights.",
-        "answerZh": "先建立稳定循环：睡袋、领地柜、小家、废料路线和石质核心，再考虑高风险战斗。"
+        "answerZh": "先建立稳定循环：睡袋、领地柜、小家、废料路线和石质核心，再考虑高风险战斗。",
+        "questionJa": "首日最重要目标是什么？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -831,7 +893,9 @@
         "question": "Which mode should solo players choose?",
         "questionZh": "独狼适合哪个模式？",
         "answer": "Start with Safe Zone or Standard. Avoid Challenge until you have stable routes, bags, and anti-raid habits.",
-        "answerZh": "先选安全区或标准。等路线、睡袋和防抄家习惯稳定后，再考虑挑战。"
+        "answerZh": "先选安全区或标准。等路线、睡袋和防抄家习惯稳定后，再考虑挑战。",
+        "questionJa": "独狼适合哪个模式？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -860,7 +924,9 @@
         "question": "Should I spend scrap on vehicles early?",
         "questionZh": "前期要不要用废料换载具？",
         "answer": "Only if the vehicle lets you safely complete more resource trips. Otherwise prioritize workbench, research, base defense, and weapons.",
-        "answerZh": "只有载具能帮你更安全地跑更多资源时才值得。否则优先工作台、研究、防御和武器。"
+        "answerZh": "只有载具能帮你更安全地跑更多资源时才值得。否则优先工作台、研究、防御和武器。",
+        "questionJa": "前期要不要用废料换载具？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -889,7 +955,9 @@
         "question": "What is the best three-player gene comp?",
         "questionZh": "三人队最推荐什么基因搭配？",
         "answer": "A stable trio uses one tank route, one sniper/scout route, and one plant sustain/logistics route.",
-        "answerZh": "稳定三人队推荐一名重装承伤、一名狙击侦查、一名植型后勤续航。"
+        "answerZh": "稳定三人队推荐一名重装承伤、一名狙击侦查、一名植型后勤续航。",
+        "questionJa": "三人队最推荐什么基因搭配？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -919,13 +987,17 @@
         "question": "What is the first thing to do after logging in?",
         "questionZh": "登录后第一件事是什么？",
         "answer": "Claim rewards, check your mode, and craft your first tools before going into any risky area.",
-        "answerZh": "先领奖励、确认模式、做第一批工具，再去碰高风险区域。"
+        "answerZh": "先领奖励、确认模式、做第一批工具，再去碰高风险区域。",
+        "questionJa": "登录后第一件事是什么？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "Is safe-zone mode enough for a brand new player?",
         "questionZh": "完全新手只玩安全区模式够吗？",
         "answer": "Yes. Safe-zone mode is the cleanest way to learn gathering, building, and the basic raid loop before you choose a harder server.",
-        "answerZh": "够。安全区模式最适合先学采集、建家和基础攻防，再决定是否上更硬核的服务器。"
+        "answerZh": "够。安全区模式最适合先学采集、建家和基础攻防，再决定是否上更硬核的服务器。",
+        "questionJa": "完全新手只玩安全区模式够吗？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ],
     "contentJa": "## 最初の30分でやること\n\n失控進化を始めたら、まずメール、イベント、予約報酬を確認し、序盤の素材と補給を取り逃さないようにします。次にサーバーとモードを選び、ソロなら人口が少なめで移動しやすい地点、小隊なら資源と退避路のある地点を優先します。\n\n最初の道具を作ったら、木、石、食料、布を集め、簡単な寝袋と領地キャビネットを置きます。安全な小屋を作った後で低レベル拠点を回り、石質コアや基礎パーツを集めると、初日の事故を大きく減らせます。\n\nPvPが不安な場合は、戦闘よりも帰還ルートと保管を優先してください。30分ごとに荷物を戻し、入口を複数用意しておくと、序盤の立て直しがかなり楽になります。"
@@ -956,13 +1028,17 @@
         "question": "Where should I download Ashfall Evolution first?",
         "questionZh": "失控进化先从哪里下载？",
         "answer": "Use the official launcher or WeGame on PC today. Those are the cleanest launch-day paths.",
-        "answerZh": "今天先用官网启动器或 WeGame 下 PC 版，这两个是最稳的开服入口。"
+        "answerZh": "今天先用官网启动器或 WeGame 下 PC 版，这两个是最稳的开服入口。",
+        "questionJa": "失控進化先从哪里下载？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "Should I wait for mobile instead of starting on PC?",
         "questionZh": "要不要等移动端再开始？",
         "answer": "If you want the launch rewards and early progression window, start on PC now. Mobile is better as a follow-up device, not the only way to join today.",
-        "answerZh": "如果你想拿开服福利和首日进度，今天先上 PC 更合适。移动端更适合作为后续补设备，而不是唯一入口。"
+        "answerZh": "如果你想拿开服福利和首日进度，今天先上 PC 更合适。移动端更适合作为后续补设备，而不是唯一入口。",
+        "questionJa": "要不要等移动端再开始？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ],
     "serpTitle": {
@@ -1020,13 +1096,17 @@
         "question": "Which game is easier for a casual player today?",
         "questionZh": "今天哪个更适合轻度玩家？",
         "answer": "Sea of Remnants is usually the easier starting point because it is less about immediate PvP pressure and more about systems, style, and progression.",
-        "answerZh": "通常《遗忘之海》更适合轻度玩家，因为它更偏系统、风格和推进，不会一上来就给你很强的对抗压力。"
+        "answerZh": "通常《遗忘之海》更适合轻度玩家，因为它更偏系统、风格和推进，不会一上来就给你很强的对抗压力。",
+        "questionJa": "今天哪个更适合轻度玩家？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "Which game should hardcore survival fans pick first?",
         "questionZh": "硬核生存玩家应该先玩哪个？",
         "answer": "Ashfall Evolution is the stronger first pick for hardcore survival fans because its launch-day loop is built around base defense, loot runs, and territory conflict.",
-        "answerZh": "硬核生存玩家优先选《失控进化》，因为它的首日循环就是建家、防守、搜资源和领地冲突。"
+        "answerZh": "硬核生存玩家优先选《失控进化》，因为它的首日循环就是建家、防守、搜资源和领地冲突。",
+        "questionJa": "硬核生存玩家应该先玩哪个？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ],
     "contentJa": "## どちらを先に遊ぶべきか\n\n失控進化はサバイバル、拠点建築、資源争奪、サーバー選びを楽しみたい人向けです。短時間でも緊張感のある探索や、仲間と役割分担するプレイに向いています。\n\n遺忘之海はキャラクター収集、航海、育成、物語寄りの進行を重視したい人に合います。落ち着いて日課を進めたい場合はこちらを先に触る選択もあります。\n\n初日に両方触るなら、まず失控進化でサーバー確保と序盤拠点だけ進め、その後で遺忘之海のチュートリアルと報酬回収を行う流れが無難です。"
@@ -1057,13 +1137,17 @@
         "question": "What should I focus on during the first week?",
         "questionZh": "首周最该专注什么？",
         "answer": "Focus on rewards, a stable base, and one safe resource loop before you try to fight stronger players.",
-        "answerZh": "首周重点是福利、稳定基地和一条安全资源路线，不要太早挑战更强的玩家。"
+        "answerZh": "首周重点是福利、稳定基地和一条安全资源路线，不要太早挑战更强的玩家。",
+        "questionJa": "首周最该专注什么？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "Should I move to standard mode right away?",
         "questionZh": "要不要第一周就转标准模式？",
         "answer": "Only after you can reliably craft, defend, and recover from a loss. Safe-zone mode is the better learning ground first.",
-        "answerZh": "只有在你已经能稳定制作、防守和止损后再转。先在安全区模式把基础学稳更重要。"
+        "answerZh": "只有在你已经能稳定制作、防守和止损后再转。先在安全区模式把基础学稳更重要。",
+        "questionJa": "要不要第一周就转标准模式？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ],
     "contentJa": "## 初週の進め方\n\n1日目はサーバー選び、報酬受け取り、初期拠点、基本道具を優先します。2日目から3日目は低リスク拠点を周回し、石質コア、素材、武器の更新を進めます。\n\n4日目から5日目は拠点の防御線を整え、物資保管を分散します。小隊なら役割分担を決め、ソロなら見つかりにくい導線と逃げ道を重視します。\n\n6日目から7日目は電力、自動化、より高難度の探索へ進みます。毎日ログアウト前に領地キャビネット、扉、保管箱、復帰地点を確認しておくと、翌日の再開が安定します。"
@@ -1094,13 +1178,17 @@
         "question": "What should I open first today?",
         "questionZh": "今天最先打开哪一页？",
         "answer": "Open the platform guide first if you still need to download. If you already have the client, open the first 30 minutes checklist.",
-        "answerZh": "如果你还要下载，先看平台入口页；如果客户端已经有了，就先看开服 30 分钟清单。"
+        "answerZh": "如果你还要下载，先看平台入口页；如果客户端已经有了，就先看开服 30 分钟清单。",
+        "questionJa": "今天最先打开哪一页？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "Is this page enough to start playing?",
         "questionZh": "只看这页够不够开玩？",
         "answer": "Yes. This overview links the most important launch pages, so you can move from access to rewards to the weekly plan without hunting around.",
-        "answerZh": "够。这一页把最重要的开服页面串起来了，你可以从入口、福利一路看到账期推进，不用来回找。"
+        "answerZh": "够。这一页把最重要的开服页面串起来了，你可以从入口、福利一路看到账期推进，不用来回找。",
+        "questionJa": "只看这页够不够开玩？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ],
     "contentJa": "## 初週に見るべき情報\n\nこのページは、失控進化の初週に必要な入口情報をまとめたものです。まず公式サイト、WeGame、モバイル版の配信状況を確認し、アカウントとサーバーを決めます。\n\n次に初日の30分チェックリストで報酬、道具、領地キャビネット、低レベル拠点の流れを押さえます。首週は情報が変わりやすいため、イベント報酬、サーバー周期、メンテナンス告知を毎日確認してください。\n\n迷った場合は、サーバー確保、最低限の拠点、安全な素材ルート、この3つを先に済ませるのが安定です。"
@@ -1133,19 +1221,25 @@
         "question": "What did the July 14 safety notice reveal?",
         "questionZh": "7 月 14 日安全处罚公告说了什么？",
         "answer": "It publicly listed 9,651 cheating accounts and 17,764 illegal teaming accounts from launch week, showing that anti-cheat and teaming enforcement are already major live-ops priorities.",
-        "answerZh": "公告公开披露了开服首周 9651 例外挂作弊账号和 17764 例非法组队账号，说明反作弊和组队边界已经是首周核心运营重点。"
+        "answerZh": "公告公开披露了开服首周 9651 例外挂作弊账号和 17764 例非法组队账号，说明反作弊和组队边界已经是首周核心运营重点。",
+        "questionJa": "7 月 14 日安全处罚公告说了什么？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "What is the safest way to report suspicious players?",
         "questionZh": "举报可疑玩家最稳的方式是什么？",
         "answer": "Save the time, server, location, screenshots or video, and then use the official security page or the in-game report system first.",
-        "answerZh": "先保存时间、服务器、地点、截图或录像，再优先走官方安全站或游戏内举报入口。"
+        "answerZh": "先保存时间、服务器、地点、截图或录像，再优先走官方安全站或游戏内举报入口。",
+        "questionJa": "举报可疑玩家最稳的方式是什么？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "Can ordinary players be at risk of illegal teaming penalties?",
         "questionZh": "普通玩家会不会误踩非法组队？",
         "answer": "Yes, if repeated off-team coordination effectively becomes a hidden stable alliance that bypasses the intended rules of the mode.",
-        "answerZh": "会。如果规则外协同已经变成长期、稳定、重复的隐藏联盟，就可能触发非法组队风险。"
+        "answerZh": "会。如果规则外协同已经变成长期、稳定、重复的隐藏联盟，就可能触发非法组队风险。",
+        "questionJa": "普通玩家会不会误踩非法组队？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -1176,19 +1270,25 @@
         "question": "What is Ashfall Evolution custom mode supposed to do?",
         "questionZh": "失控进化自定义模式主要是拿来干什么的？",
         "answer": "Its most likely role is to provide controlled spaces for teaching, community events, viewer rooms, and competition-style sessions that standard servers cannot manage cleanly.",
-        "answerZh": "它最可能的核心作用，是整理教学、社群活动、观众局和赛事化对抗这类标准服务器不容易覆盖的需求。"
+        "answerZh": "它最可能的核心作用，是整理教学、社群活动、观众局和赛事化对抗这类标准服务器不容易覆盖的需求。",
+        "questionJa": "失控進化自定义模式主要是拿来干什么的？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "Should ordinary players care about community servers now?",
         "questionZh": "普通玩家现在要不要关注社区服？",
         "answer": "Yes, especially if you feel standard mode pressure is too high or if you mainly play with friends and organized groups.",
-        "answerZh": "要，尤其是你觉得标准模式压力太大，或者你本来就更偏朋友局、小社群和有组织的活动服。"
+        "answerZh": "要，尤其是你觉得标准模式压力太大，或者你本来就更偏朋友局、小社群和有组织的活动服。",
+        "questionJa": "普通玩家现在要不要关注社区服？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "Does custom mode replace standard mode?",
         "questionZh": "自定义模式会替代标准模式吗？",
         "answer": "No. Standard mode remains the core survival loop, while custom mode is more about control, teaching, events, and special community use cases.",
-        "answerZh": "不会。标准模式还是核心生存循环，自定义模式更偏规则可控、教学、活动和特殊社群场景。"
+        "answerZh": "不会。标准模式还是核心生存循环，自定义模式更偏规则可控、教学、活动和特殊社群场景。",
+        "questionJa": "自定义模式会替代标准模式吗？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -1219,19 +1319,25 @@
         "question": "Is it already too late to join a server on July 18, 2026?",
         "questionZh": "2026 年 7 月 18 日再进服，是不是已经太晚了？",
         "answer": "No. It is not too late for the season. The real question is whether the specific server ecosystem still fits your playtime, mode preference, and team size.",
-        "answerZh": "不是。对整个赛季来说并不晚，真正要判断的是这个具体服务器生态，是否还适合你的在线时长、模式偏好和队伍规模。"
+        "answerZh": "不是。对整个赛季来说并不晚，真正要判断的是这个具体服务器生态，是否还适合你的在线时长、模式偏好和队伍规模。",
+        "questionJa": "2026 年 7 月 18 日再进服，是不是已经太晚了？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "When should a solo player consider switching servers?",
         "questionZh": "独狼什么时候该考虑换服？",
         "answer": "When basic routes are permanently suppressed, you cannot reliably bring resources home, and maintenance pressure is eating your whole session.",
-        "answerZh": "当低级资源线长期被压、你已经很难稳定把物资带回家，而且维护成本开始吃掉你整场在线时间时，就该认真考虑换服。"
+        "answerZh": "当低级资源线长期被压、你已经很难稳定把物资带回家，而且维护成本开始吃掉你整场在线时间时，就该认真考虑换服。",
+        "questionJa": "独狼什么时候该考虑换服？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "Does the season timer mean I should stay on one server until the end?",
         "questionZh": "赛季时间拉到 9 月，是不是就该一直待在同一个服？",
         "answer": "No. Season duration is a global framework. Server ecosystem fit is a separate decision, and moving earlier can be the healthier choice.",
-        "answerZh": "不是。赛季时长只是大框架，服务器是否适配是另一层判断，早点换到适合自己的服，很多时候反而更健康。"
+        "answerZh": "不是。赛季时长只是大框架，服务器是否适配是另一层判断，早点换到适合自己的服，很多时候反而更健康。",
+        "questionJa": "赛季时间拉到 9 月，是不是就该一直待在同一个服？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -1263,19 +1369,25 @@
         "question": "When should I start building electricity in Ashfall Evolution?",
         "questionZh": "失控进化什么时候该认真做电力？",
         "answer": "After your base point is relatively stable and scrap, metal, and components are no longer critically short.",
-        "answerZh": "当你的家点已经相对稳定，而且废料、金属和组件不再一直见底时，就该认真接电力了。"
+        "answerZh": "当你的家点已经相对稳定，而且废料、金属和组件不再一直见底时，就该认真接电力了。",
+        "questionJa": "失控進化什么时候该认真做电力？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "What should I power first?",
         "questionZh": "电力接上以后最该先通什么？",
         "answer": "Lighting first, then key gate or entry zones, then automated smelting or basic production loops.",
-        "answerZh": "优先照明，其次是关键门区 / 出入口，再往后是自动化烧矿和基础生产链。"
+        "answerZh": "优先照明，其次是关键门区 / 出入口，再往后是自动化烧矿和基础生产链。",
+        "questionJa": "电力接上以后最该先通什么？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "Why is storage so important in power setups?",
         "questionZh": "为什么储能在电力系统里这么重要？",
         "answer": "Because storage is what turns occasional power into stable usable power. Without it, even a decent generator setup can feel unreliable.",
-        "answerZh": "因为储能能把“偶尔有电”变成“稳定可用的电”。没有它，再好的发电也很容易让基地体感不稳。"
+        "answerZh": "因为储能能把“偶尔有电”变成“稳定可用的电”。没有它，再好的发电也很容易让基地体感不稳。",
+        "questionJa": "为什么储能在电力系统里这么重要？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -1307,19 +1419,25 @@
         "question": "What changes after the first launch week in Ashfall Evolution?",
         "questionZh": "《失控进化》开服第一周过去后，最重要的问题会变什么？",
         "answer": "Players stop asking only about opening routes and start asking about environment quality, cheating, server fit, midgame systems, and long-term base efficiency.",
-        "answerZh": "玩家会从“怎么开局”转向“环境怎么样、挂多不多、服务器适不适合我、中期系统怎么接、基地怎么长期运转”。"
+        "answerZh": "玩家会从“怎么开局”转向“环境怎么样、挂多不多、服务器适不适合我、中期系统怎么接、基地怎么长期运转”。",
+        "questionJa": "失控進化开服第一周过去后，最重要的问题会变什么？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "If I only read one live-ops page, should it be this one?",
         "questionZh": "如果我只看一篇首周运营页，这篇值不值得先看？",
         "answer": "Yes. This page is designed as a routing hub so you can quickly decide whether your next stop should be anti-cheat, server switching, custom mode, or electricity.",
-        "answerZh": "值。这页是路线选择页，能帮你快速判断下一步该去看反作弊、换服、自定义模式，还是电力系统。"
+        "answerZh": "值。这页是路线选择页，能帮你快速判断下一步该去看反作弊、换服、自定义模式，还是电力系统。",
+        "questionJa": "如果我只看一篇首周运营页，这篇值不值得先看？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "Is this page better for new players or returning players?",
         "questionZh": "这页更适合新手还是回流玩家？",
         "answer": "Both, but especially players who are already past the first-day basics and are now trying to understand the live environment.",
-        "answerZh": "都适合，但尤其适合已经过了首日基础层、现在想理解当前真实运营环境的玩家。"
+        "answerZh": "都适合，但尤其适合已经过了首日基础层、现在想理解当前真实运营环境的玩家。",
+        "questionJa": "这页更适合新手还是回流玩家？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ]
   },
@@ -1351,19 +1469,25 @@
         "question": "Where should I download Ashfall Evolution?",
         "questionZh": "失控进化应该从哪里下载？",
         "answer": "Use the official site, WeGame, and official app store entries first. Avoid unofficial installers or unknown APK packages.",
-        "answerZh": "优先使用官网、WeGame 和官方应用商店入口，不建议使用来路不明的安装包或 APK。"
+        "answerZh": "优先使用官网、WeGame 和官方应用商店入口，不建议使用来路不明的安装包或 APK。",
+        "questionJa": "失控進化应该从哪里下载？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "Can PC and mobile share progress?",
         "questionZh": "PC 和移动端进度互通吗？",
         "answer": "Public materials emphasize multi-platform access, but final account, server, and reward-sharing details should follow official notices.",
-        "answerZh": "公开信息强调多端入口，但账号、服务器和奖励互认细则仍应以上线后官方公告为准。"
+        "answerZh": "公开信息强调多端入口，但账号、服务器和奖励互认细则仍应以上线后官方公告为准。",
+        "questionJa": "PC 和移动端进度互通吗？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "What should low-end PC players lower first?",
         "questionZh": "低配 PC 优先降低什么？",
         "answer": "Lower shadows, post-processing, and effects first while keeping visibility, FPS, and audio clarity stable.",
-        "answerZh": "优先降低阴影、后处理和特效，同时保证视野、帧率和声音方向稳定。"
+        "answerZh": "优先降低阴影、后处理和特效，同时保证视野、帧率和声音方向稳定。",
+        "questionJa": "低配 PC 优先降低什么？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ],
     "date": "2026-07-21",
@@ -1396,19 +1520,25 @@
         "question": "What is the first two-hour goal?",
         "questionZh": "前 2 小时目标是什么？",
         "answer": "Survive, place a sleeping bag and territory cabinet, build a small stone core, and establish a low-risk scrap loop.",
-        "answerZh": "活下来，放睡袋和领地柜，做小型石质核心，并形成低风险废料循环。"
+        "answerZh": "活下来，放睡袋和领地柜，做小型石质核心，并形成低风险废料循环。",
+        "questionJa": "前 2 小时目标是什么？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "Should beginners fight early?",
         "questionZh": "新手前期要不要主动打架？",
         "answer": "Usually no. Fight only to escape or defend key resources until you have a bag, tools, and a secure core.",
-        "answerZh": "通常不建议。没有睡袋、工具和安全核心前，只在撤离或保护关键资源时打。"
+        "answerZh": "通常不建议。没有睡袋、工具和安全核心前，只在撤离或保护关键资源时打。",
+        "questionJa": "新手前期要不要主动打架？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "What should solo players do differently?",
         "questionZh": "独狼路线有什么不同？",
         "answer": "Keep the base small, use multiple bags, avoid main roads, and prioritize survival over high-risk loot.",
-        "answerZh": "基地做小，多放睡袋，避开主路，优先生存而不是冲高风险收益。"
+        "answerZh": "基地做小，多放睡袋，避开主路，优先生存而不是冲高风险收益。",
+        "questionJa": "独狼路线有什么不同？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ],
     "date": "2026-07-21",
@@ -1441,19 +1571,25 @@
         "question": "Where should beginners build?",
         "questionZh": "新手基地建在哪里最稳？",
         "answer": "Use low-traffic forest edges, rock gaps, hill backsides, or side routes instead of main roads and high-tier POI entrances.",
-        "answerZh": "优先森林边缘、岩缝、山坡背面和低交通支线，不要建在主路或高级据点门口。"
+        "answerZh": "优先森林边缘、岩缝、山坡背面和低交通支线，不要建在主路或高级据点门口。",
+        "questionJa": "新手基地建在哪里最稳？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "Where should the territory cabinet go?",
         "questionZh": "领地柜应该放哪里？",
         "answer": "Place it inside the core behind turns and doors, not visible from the entrance or against an outer wall.",
-        "answerZh": "放在核心区转角和多层门后，不要入口直视，也不要贴外墙。"
+        "answerZh": "放在核心区转角和多层门后，不要入口直视，也不要贴外墙。",
+        "questionJa": "领地柜应该放哪里？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       },
       {
         "question": "Should solo players build big walls early?",
         "questionZh": "独狼前期要不要先围大墙？",
         "answer": "Usually no. Upgrade the core first and keep a low profile before expanding.",
-        "answerZh": "通常不建议。先升级核心并保持低存在感，再考虑扩建。"
+        "answerZh": "通常不建议。先升级核心并保持低存在感，再考虑扩建。",
+        "questionJa": "独狼前期要不要先围大墙？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ],
     "date": "2026-07-21",
@@ -1500,7 +1636,9 @@
         "question": "What should I do if I missed the August event?",
         "questionZh": "错过 8 月活动怎么办？",
         "answer": "Check event pages and mail first. If no official make-up is listed, focus on current S1 resources, server mode, and starter progression.",
-        "answerZh": "先查活动页和邮件；如果没有官方补领说明，就转向当前 S1 资源、服务器模式和新手路线。"
+        "answerZh": "先查活动页和邮件；如果没有官方补领说明，就转向当前 S1 资源、服务器模式和新手路线。",
+        "questionJa": "错过 8 月活动怎么办？",
+        "answerJa": "詳細は公式告知とゲーム内表示を優先してください。この記事では序盤に確認すべきポイントと安全な進め方を整理しています。"
       }
     ],
     "date": "2026-08-31",

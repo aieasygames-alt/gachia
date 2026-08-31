@@ -150,7 +150,8 @@
     "effectNameJa": "主力火力",
     "effectDescription": "强度高但会暴露队伍发育进度，需要稳定弹药、维修和撤离路线支撑。",
     "effectDescriptionEn": "Powerful but exposes progression. Requires stable ammo, repair resources, and fallback routes.",
-    "effectDescriptionJa": "強力だが発展度が目立つ。弾薬、修理資源、撤退ルートが必要。"
+    "effectDescriptionJa": "強力だが発展度が目立つ。弾薬、修理資源、撤退ルートが必要。",
+    "nameZh": "AK-47"
   },
   {
     "id": "rocket",

@@ -134,7 +134,9 @@
       "Supporter"
     ],
     "rarity": 5,
-    "tierRank": "S"
+    "tierRank": "S",
+    "nameZh": "LYNX",
+    "nameJa": "LYNX"
   },
   {
     "id": "aethertech",

@@ -390,7 +390,9 @@
         "name": "fille de la bourgeoisie",
         "nameEn": "fille de la bourgeoisie",
         "description": "星魂第2层效果",
-        "descriptionEn": "Eidolon 2 effect"
+        "descriptionEn": "Eidolon 2 effect",
+        "nameZh": "资产阶级少女",
+        "nameJa": "ブルジョワジーの少女"
       },
       {
         "level": 3,
@@ -9226,7 +9228,9 @@
     "tierReason": "Limited collaboration Quantum Hunt DPS with devastating Noble Phantasm Ultimate. Hard to obtain but excellent performance",
     "tierReasonZh": "联动限定量子巡猎输出，宝具终结技伤害极高，作为联动角色获得难度较大但性能优秀",
     "cvZh": "",
-    "cvJp": ""
+    "cvJp": "",
+    "nameZh": "Archer",
+    "nameJa": "アーチャー"
   },
   {
     "id": "saber",
@@ -9288,7 +9292,9 @@
     "tierReason": "Limited collaboration Wind Destruction DPS with strong Excalibur Ultimate. Limited availability but solid performance",
     "tierReasonZh": "联动限定风属性毁灭输出，誓约胜利之剑终结技伤害优秀，联动角色获取有限但实力不俗",
     "cvZh": "",
-    "cvJp": ""
+    "cvJp": "",
+    "nameZh": "Saber",
+    "nameJa": "セイバー"
   },
   {
     "id": "cerydra",
