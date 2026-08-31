@@ -2243,7 +2243,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "They're picky about odors, so they harvest and store various nectar within them to craft unique perfume ingredients.",
-    "description": "They're picky about odors, so they harvest and store various nectar within them to craft unique perfume ingredients.",
+    "description": "Fragrancier 对气味非常挑剔，因此会采集并在体内储存各种花蜜，用来调制独特的香水原料。",
     "descriptionEn": "They're picky about odors, so they harvest and store various nectar within them to craft unique perfume ingredients.",
     "image": "/images/aniimo/characters/fragrancier.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2256,7 +2256,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Fragrancier は香りにとてもこだわるため、さまざまな蜜を集めて体内に蓄え、独自の香水材料を作ります。",
+    "abilityZh": "Fragrancier 对气味非常挑剔，因此会采集并在体内储存各种花蜜，用来调制独特的香水原料。",
+    "abilityJa": "Fragrancier は香りにとてもこだわるため、さまざまな蜜を集めて体内に蓄え、独自の香水材料を作ります。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "wisptis",
@@ -2276,7 +2280,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "If the only way to evolve is to defeat other Wisptises, then there is no other choice but to keep their claws sharp.",
-    "description": "If the only way to evolve is to defeat other Wisptises, then there is no other choice but to keep their claws sharp.",
+    "description": "如果进化的唯一方式是击败其他 Wisptis，它们就别无选择，只能让利爪一直保持锋利。",
     "descriptionEn": "If the only way to evolve is to defeat other Wisptises, then there is no other choice but to keep their claws sharp.",
     "image": "/images/aniimo/characters/wisptis.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2289,7 +2293,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "進化する唯一の方法が他の Wisptis を倒すことなら、爪を鋭く保ち続けるしかありません。",
+    "abilityZh": "如果进化的唯一方式是击败其他 Wisptis，它们就别无选择，只能让利爪一直保持锋利。",
+    "abilityJa": "進化する唯一の方法が他の Wisptis を倒すことなら、爪を鋭く保ち続けるしかありません。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "ignitis",
@@ -2309,7 +2317,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "They sharpen their blades and wait for the perfect moment, hiding in the shadows as they toy with their prey. As cold-blooded assassins, they seek to end every fight in a single strike.",
-    "description": "They sharpen their blades and wait for the perfect moment, hiding in the shadows as they toy with their prey. As cold-blooded assassins, they seek to end every fight in a single strike.",
+    "description": "Ignitis 磨利刀刃，潜伏在阴影中等待最佳时机，一边戏弄猎物。作为冷血刺客，它们追求一击结束战斗。",
     "descriptionEn": "They sharpen their blades and wait for the perfect moment, hiding in the shadows as they toy with their prey. As cold-blooded assassins, they seek to end every fight in a single strike.",
     "image": "/images/aniimo/characters/ignitis.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2322,7 +2330,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Ignitis は刃を研ぎ、影に潜んで最高の機会を待ちながら獲物を翻弄します。冷血な暗殺者として、一撃で戦いを終わらせようとします。",
+    "abilityZh": "Ignitis 磨利刀刃，潜伏在阴影中等待最佳时机，一边戏弄猎物。作为冷血刺客，它们追求一击结束战斗。",
+    "abilityJa": "Ignitis は刃を研ぎ、影に潜んで最高の機会を待ちながら獲物を翻弄します。冷血な暗殺者として、一撃で戦いを終わらせようとします。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "fulmintis",
@@ -2342,7 +2354,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "Evolved from a Wisptis with broken forelimbs absorbing the power of lightning. The reshaped reverse blades are incredibly sharp and flash with dazzling electric light.",
-    "description": "Evolved from a Wisptis with broken forelimbs absorbing the power of lightning. The reshaped reverse blades are incredibly sharp and flash with dazzling electric light.",
+    "description": "由前肢受损的 Wisptis 吸收雷电之力进化而来。重塑后的反刃锋利无比，并闪耀着夺目的电光。",
     "descriptionEn": "Evolved from a Wisptis with broken forelimbs absorbing the power of lightning. The reshaped reverse blades are incredibly sharp and flash with dazzling electric light.",
     "image": "/images/aniimo/characters/fulmintis.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2355,7 +2367,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "前肢を失った Wisptis が雷の力を取り込んで進化した姿です。作り替えられた逆刃は非常に鋭く、まばゆい電光を放ちます。",
+    "abilityZh": "由前肢受损的 Wisptis 吸收雷电之力进化而来。重塑后的反刃锋利无比，并闪耀着夺目的电光。",
+    "abilityJa": "前肢を失った Wisptis が雷の力を取り込んで進化した姿です。作り替えられた逆刃は非常に鋭く、まばゆい電光を放ちます。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "bonesky",
@@ -2375,7 +2391,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "An energetic pup with a pair of big ears. The ice-bone bow tie on its chest is its favorite toy. It hates Emberpups that don’t respect personal space.",
-    "description": "An energetic pup with a pair of big ears. The ice-bone bow tie on its chest is its favorite toy. It hates Emberpups that don’t respect personal space.",
+    "description": "Bonesky 是精力充沛的小犬，长着一对大耳朵。胸前的冰骨领结是它最喜欢的玩具，它讨厌不懂保持距离的 Emberpup。",
     "descriptionEn": "An energetic pup with a pair of big ears. The ice-bone bow tie on its chest is its favorite toy. It hates Emberpups that don’t respect personal space.",
     "image": "/images/aniimo/characters/bonesky.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2388,7 +2404,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Bonesky は大きな耳を持つ元気な子犬です。胸元の氷骨の蝶ネクタイがお気に入りのおもちゃで、距離感を守らない Emberpup を嫌います。",
+    "abilityZh": "Bonesky 是精力充沛的小犬，长着一对大耳朵。胸前的冰骨领结是它最喜欢的玩具，它讨厌不懂保持距离的 Emberpup。",
+    "abilityJa": "Bonesky は大きな耳を持つ元気な子犬です。胸元の氷骨の蝶ネクタイがお気に入りのおもちゃで、距離感を守らない Emberpup を嫌います。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "fenrier",
@@ -2408,7 +2428,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "Resisting gentle pets that might soften its resolve, it leads pack hunts with its ice blade.",
-    "description": "Resisting gentle pets that might soften its resolve, it leads pack hunts with its ice blade.",
+    "description": "Fenrier 抗拒会软化决心的温柔抚摸，挥舞冰刃带领族群狩猎。",
     "descriptionEn": "Resisting gentle pets that might soften its resolve, it leads pack hunts with its ice blade.",
     "image": "/images/aniimo/characters/fenrier.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2421,7 +2441,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Fenrier は決意を鈍らせる優しい撫で方を拒み、氷の刃で群れの狩りを導きます。",
+    "abilityZh": "Fenrier 抗拒会软化决心的温柔抚摸，挥舞冰刃带领族群狩猎。",
+    "abilityJa": "Fenrier は決意を鈍らせる優しい撫で方を拒み、氷の刃で群れの狩りを導きます。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "glynsera",
@@ -2441,7 +2465,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "Proud and confident warriors, the chilling blades in its mouth send shivers down its enemies' spines.",
-    "description": "Proud and confident warriors, the chilling blades in its mouth send shivers down its enemies' spines.",
+    "description": "Glynsera 是骄傲而自信的战士，口中的寒冷刀刃足以让敌人脊背发凉。",
     "descriptionEn": "Proud and confident warriors, the chilling blades in its mouth send shivers down its enemies' spines.",
     "image": "/images/aniimo/characters/glynsera.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2454,7 +2478,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Glynsera は誇り高く自信に満ちた戦士で、口にくわえた冷たい刃は敵の背筋を凍らせます。",
+    "abilityZh": "Glynsera 是骄傲而自信的战士，口中的寒冷刀刃足以让敌人脊背发凉。",
+    "abilityJa": "Glynsera は誇り高く自信に満ちた戦士で、口にくわえた冷たい刃は敵の背筋を凍らせます。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "fenmane",
@@ -2474,7 +2502,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "Using the excellent conductivity of their fur, they condense the power of lightning to extend their wings, dashing to dispel the haze and brighten their mood.",
-    "description": "Using the excellent conductivity of their fur, they condense the power of lightning to extend their wings, dashing to dispel the haze and brighten their mood.",
+    "description": "Fenmane 利用毛发出色的导电性凝聚雷电之力，延展翅膀，冲刺驱散阴霾，让心情明亮起来。",
     "descriptionEn": "Using the excellent conductivity of their fur, they condense the power of lightning to extend their wings, dashing to dispel the haze and brighten their mood.",
     "image": "/images/aniimo/characters/fenmane.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2487,7 +2515,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Fenmane は毛の優れた導電性で雷の力を凝縮し、翼を伸ばして駆け抜け、もやを払い気分を晴らします。",
+    "abilityZh": "Fenmane 利用毛发出色的导电性凝聚雷电之力，延展翅膀，冲刺驱散阴霾，让心情明亮起来。",
+    "abilityJa": "Fenmane は毛の優れた導電性で雷の力を凝縮し、翼を伸ばして駆け抜け、もやを払い気分を晴らします。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "helmut",
@@ -2507,7 +2539,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "That tough helmet keeps its squishy body safe, while those extendable mouth-claws help it hunt.",
-    "description": "That tough helmet keeps its squishy body safe, while those extendable mouth-claws help it hunt.",
+    "description": "Helmut 坚硬的头盔保护着柔软身体，而可伸缩的口爪能帮助它捕猎。",
     "descriptionEn": "That tough helmet keeps its squishy body safe, while those extendable mouth-claws help it hunt.",
     "image": "/images/aniimo/characters/helmut.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2520,7 +2552,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Helmut の硬いヘルメットは柔らかな体を守り、伸縮する口の爪は狩りを助けます。",
+    "abilityZh": "Helmut 坚硬的头盔保护着柔软身体，而可伸缩的口爪能帮助它捕猎。",
+    "abilityJa": "Helmut の硬いヘルメットは柔らかな体を守り、伸縮する口の爪は狩りを助けます。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "pawney",
@@ -2540,7 +2576,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "Armed with a broken sword and armor, blessed with courage and might, it defends its friends and challenges its foes.",
-    "description": "Armed with a broken sword and armor, blessed with courage and might, it defends its friends and challenges its foes.",
+    "description": "Pawney 手持断剑、身披铠甲，并拥有勇气与力量的祝福。它会守护朋友，也会挑战敌人。",
     "descriptionEn": "Armed with a broken sword and armor, blessed with courage and might, it defends its friends and challenges its foes.",
     "image": "/images/aniimo/characters/pawney.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2553,7 +2589,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Pawney は折れた剣と鎧をまとい、勇気と力に恵まれています。友を守り、敵へ挑みます。",
+    "abilityZh": "Pawney 手持断剑、身披铠甲，并拥有勇气与力量的祝福。它会守护朋友，也会挑战敌人。",
+    "abilityJa": "Pawney は折れた剣と鎧をまとい、勇気と力に恵まれています。友を守り、敵へ挑みます。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "rookey",
@@ -2573,7 +2613,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "Despite its imposing size, it is timid and avoids conflict. It finds its courage when friends need protection.",
-    "description": "Despite its imposing size, it is timid and avoids conflict. It finds its courage when friends need protection.",
+    "description": "Rookey 虽然体型威严，却胆小且避免冲突。只有当朋友需要保护时，它才会鼓起勇气。",
     "descriptionEn": "Despite its imposing size, it is timid and avoids conflict. It finds its courage when friends need protection.",
     "image": "/images/aniimo/characters/rookey.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2586,7 +2626,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Rookey は堂々とした体格に反して臆病で争いを避けます。仲間を守る必要がある時だけ勇気を見つけます。",
+    "abilityZh": "Rookey 虽然体型威严，却胆小且避免冲突。只有当朋友需要保护时，它才会鼓起勇气。",
+    "abilityJa": "Rookey は堂々とした体格に反して臆病で争いを避けます。仲間を守る必要がある時だけ勇気を見つけます。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "jawling",
@@ -2606,7 +2650,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "Loves to bite everything it sees. Its flexible jaw can open extremely wide. It shows affection through gentle nibbles.",
-    "description": "Loves to bite everything it sees. Its flexible jaw can open extremely wide. It shows affection through gentle nibbles.",
+    "description": "Jawling 喜欢咬住眼前的一切。灵活的下颚能张得极大，也会用轻咬表达亲近。",
     "descriptionEn": "Loves to bite everything it sees. Its flexible jaw can open extremely wide. It shows affection through gentle nibbles.",
     "image": "/images/aniimo/characters/jawling.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2619,7 +2663,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Jawling は目に入るものを何でも噛むのが好きです。柔軟なあごは大きく開き、優しく噛むことで好意を示します。",
+    "abilityZh": "Jawling 喜欢咬住眼前的一切。灵活的下颚能张得极大，也会用轻咬表达亲近。",
+    "abilityJa": "Jawling は目に入るものを何でも噛むのが好きです。柔軟なあごは大きく開き、優しく噛むことで好意を示します。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "helmwhelp",
@@ -2639,7 +2687,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "A fledgling concealing weakness under its helmet, dreaming of becoming strong enough to soar freely.",
-    "description": "A fledgling concealing weakness under its helmet, dreaming of becoming strong enough to soar freely.",
+    "description": "Helmwhelp 是把弱小藏在头盔下的幼龙，梦想有一天变得足够强大，能够自由飞翔。",
     "descriptionEn": "A fledgling concealing weakness under its helmet, dreaming of becoming strong enough to soar freely.",
     "image": "/images/aniimo/characters/helmwhelp.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2652,7 +2700,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Helmwhelp は弱さをヘルメットの下に隠す幼い竜で、自由に空を飛べるほど強くなる日を夢見ています。",
+    "abilityZh": "Helmwhelp 是把弱小藏在头盔下的幼龙，梦想有一天变得足够强大，能够自由飞翔。",
+    "abilityJa": "Helmwhelp は弱さをヘルメットの下に隠す幼い竜で、自由に空を飛べるほど強くなる日を夢見ています。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "helgon",
@@ -2672,7 +2724,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "Covered in hard armor, they look like tall statues when they stand still, as if standing guard over ancient treasures.",
-    "description": "Covered in hard armor, they look like tall statues when they stand still, as if standing guard over ancient treasures.",
+    "description": "Helgon 覆盖着坚硬铠甲，静止时像高大的雕像，仿佛在守护古老宝藏。",
     "descriptionEn": "Covered in hard armor, they look like tall statues when they stand still, as if standing guard over ancient treasures.",
     "image": "/images/aniimo/characters/helgon.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2685,7 +2737,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Helgon は硬い鎧に覆われ、静止していると背の高い像のように見えます。まるで古代の宝を守っているかのようです。",
+    "abilityZh": "Helgon 覆盖着坚硬铠甲，静止时像高大的雕像，仿佛在守护古老宝藏。",
+    "abilityJa": "Helgon は硬い鎧に覆われ、静止していると背の高い像のように見えます。まるで古代の宝を守っているかのようです。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "infergon",
@@ -2705,7 +2761,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "Covered in armor forged by flames, the fire they breathe in fury can melt almost everything.",
-    "description": "Covered in armor forged by flames, the fire they breathe in fury can melt almost everything.",
+    "description": "Infergon 覆盖着火焰锻造的铠甲。愤怒时喷出的烈火，几乎能融化一切。",
     "descriptionEn": "Covered in armor forged by flames, the fire they breathe in fury can melt almost everything.",
     "image": "/images/aniimo/characters/infergon.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2718,7 +2774,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Infergon は炎で鍛えられた鎧に包まれています。怒りに任せて吐く火は、ほとんどすべてを溶かします。",
+    "abilityZh": "Infergon 覆盖着火焰锻造的铠甲。愤怒时喷出的烈火，几乎能融化一切。",
+    "abilityJa": "Infergon は炎で鍛えられた鎧に包まれています。怒りに任せて吐く火は、ほとんどすべてを溶かします。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "geodeback",
@@ -2738,7 +2798,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "The minerals they eat will grow back on them with refined energy stored inside.",
-    "description": "The minerals they eat will grow back on them with refined energy stored inside.",
+    "description": "Geodeback 吃下的矿物会在身上重新生长，并在其中储存精炼后的能量。",
     "descriptionEn": "The minerals they eat will grow back on them with refined energy stored inside.",
     "image": "/images/aniimo/characters/geodeback.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2751,7 +2811,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Geodeback が食べた鉱物は体の上に再び育ち、精製されたエネルギーをその中に蓄えます。",
+    "abilityZh": "Geodeback 吃下的矿物会在身上重新生长，并在其中储存精炼后的能量。",
+    "abilityJa": "Geodeback が食べた鉱物は体の上に再び育ち、精製されたエネルギーをその中に蓄えます。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "minespine",
@@ -2771,7 +2835,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "Wherever crystal minerals are found, so are they. Their hard spines serve both as protection and as storage for energy.",
-    "description": "Wherever crystal minerals are found, so are they. Their hard spines serve both as protection and as storage for energy.",
+    "description": "只要有水晶矿物的地方，就能发现 Minespine。坚硬背刺既能保护自己，也能储存能量。",
     "descriptionEn": "Wherever crystal minerals are found, so are they. Their hard spines serve both as protection and as storage for energy.",
     "image": "/images/aniimo/characters/minespine.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2784,7 +2848,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "結晶鉱物がある場所には Minespine もいます。硬い背中の棘は身を守るだけでなく、エネルギーの貯蔵にも使われます。",
+    "abilityZh": "只要有水晶矿物的地方，就能发现 Minespine。坚硬背刺既能保护自己，也能储存能量。",
+    "abilityJa": "結晶鉱物がある場所には Minespine もいます。硬い背中の棘は身を守るだけでなく、エネルギーの貯蔵にも使われます。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "cozite",
@@ -2804,7 +2872,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "Cozites build their shells bit by bit with mud. When in danger, they spray smoke from the top hole to cover the surroundings and hide themselves.",
-    "description": "Cozites build their shells bit by bit with mud. When in danger, they spray smoke from the top hole to cover the surroundings and hide themselves.",
+    "description": "Cozite 会一点点用泥土筑起外壳。遇到危险时，它会从顶部孔洞喷出烟雾，遮蔽四周并隐藏自己。",
     "descriptionEn": "Cozites build their shells bit by bit with mud. When in danger, they spray smoke from the top hole to cover the surroundings and hide themselves.",
     "image": "/images/aniimo/characters/cozite.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2817,7 +2885,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Cozite は泥で少しずつ殻を作ります。危険を感じると上部の穴から煙を噴き出し、周囲を覆って身を隠します。",
+    "abilityZh": "Cozite 会一点点用泥土筑起外壳。遇到危险时，它会从顶部孔洞喷出烟雾，遮蔽四周并隐藏自己。",
+    "abilityJa": "Cozite は泥で少しずつ殻を作ります。危険を感じると上部の穴から煙を噴き出し、周囲を覆って身を隠します。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "bailite",
@@ -2837,7 +2909,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "Bailites' anatomy allows independent rotation of their upper and lower bodies. This means they can observe surroundings flexibly, ready to transform into turrets to repel opponents.",
-    "description": "Bailites' anatomy allows independent rotation of their upper and lower bodies. This means they can observe surroundings flexibly, ready to transform into turrets to repel opponents.",
+    "description": "Bailite 的身体结构允许上半身和下半身独立旋转，因此能灵活观察四周，并随时变形成炮台击退对手。",
     "descriptionEn": "Bailites' anatomy allows independent rotation of their upper and lower bodies. This means they can observe surroundings flexibly, ready to transform into turrets to repel opponents.",
     "image": "/images/aniimo/characters/bailite.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2850,7 +2922,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Bailite の体は上半身と下半身を別々に回転できます。そのため周囲を柔軟に観察し、いつでも砲台に変形して相手を撃退できます。",
+    "abilityZh": "Bailite 的身体结构允许上半身和下半身独立旋转，因此能灵活观察四周，并随时变形成炮台击退对手。",
+    "abilityJa": "Bailite の体は上半身と下半身を別々に回転できます。そのため周囲を柔軟に観察し、いつでも砲台に変形して相手を撃退できます。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "bulbly",
@@ -2870,7 +2946,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "Their first reaction to everything is to escape, and their bulb-like organs indicate whether they are healthy.",
-    "description": "Their first reaction to everything is to escape, and their bulb-like organs indicate whether they are healthy.",
+    "description": "Bulbly 面对任何事的第一反应都是逃跑。它们灯泡般的器官会显示自身是否健康。",
     "descriptionEn": "Their first reaction to everything is to escape, and their bulb-like organs indicate whether they are healthy.",
     "image": "/images/aniimo/characters/bulbly.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2883,7 +2959,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Bulbly は何に対してもまず逃げようとします。球根のような器官は健康状態を示します。",
+    "abilityZh": "Bulbly 面对任何事的第一反应都是逃跑。它们灯泡般的器官会显示自身是否健康。",
+    "abilityJa": "Bulbly は何に対してもまず逃げようとします。球根のような器官は健康状態を示します。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "veilfloat",
@@ -2903,7 +2983,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "A light-dependent creature that glows when night falls, keeping its light on even while sleeping.",
-    "description": "A light-dependent creature that glows when night falls, keeping its light on even while sleeping.",
+    "description": "Veilfloat 是依赖光线的生物，夜幕降临时会发光，即使睡着也会让光持续亮着。",
     "descriptionEn": "A light-dependent creature that glows when night falls, keeping its light on even while sleeping.",
     "image": "/images/aniimo/characters/veilfloat.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2916,7 +2996,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Veilfloat は光に依存する生き物で、夜になると発光します。眠っている間も光を消しません。",
+    "abilityZh": "Veilfloat 是依赖光线的生物，夜幕降临时会发光，即使睡着也会让光持续亮着。",
+    "abilityJa": "Veilfloat は光に依存する生き物で、夜になると発光します。眠っている間も光を消しません。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "luminelle",
@@ -2936,7 +3020,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "Changes its glow to match its mood while its tentacles create mesmerizing patterns and deliver shocking attacks.",
-    "description": "Changes its glow to match its mood while its tentacles create mesmerizing patterns and deliver shocking attacks.",
+    "description": "Luminelle 会随着心情改变光芒，触手能织出令人着迷的图案，也能释放电击攻击。",
     "descriptionEn": "Changes its glow to match its mood while its tentacles create mesmerizing patterns and deliver shocking attacks.",
     "image": "/images/aniimo/characters/luminelle.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2949,7 +3033,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Luminelle は気分に合わせて光を変えます。触手は見とれるような模様を描き、電撃攻撃も放ちます。",
+    "abilityZh": "Luminelle 会随着心情改变光芒，触手能织出令人着迷的图案，也能释放电击攻击。",
+    "abilityJa": "Luminelle は気分に合わせて光を変えます。触手は見とれるような模様を描き、電撃攻撃も放ちます。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "fahloo",
@@ -2969,7 +3057,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "They rub the oil on their bodies to create a thick foam. This foam cleans and protects them, though they sometimes slip on it by accident.",
-    "description": "They rub the oil on their bodies to create a thick foam. This foam cleans and protects them, though they sometimes slip on it by accident.",
+    "description": "Fahloo 会揉搓身体上的油脂制造浓密泡沫。这些泡沫能清洁并保护它们，虽然有时也会让它们不小心滑倒。",
     "descriptionEn": "They rub the oil on their bodies to create a thick foam. This foam cleans and protects them, though they sometimes slip on it by accident.",
     "image": "/images/aniimo/characters/fahloo.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2982,7 +3070,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Fahloo は体の油をこすって濃い泡を作ります。その泡は体を清潔に保ち守りますが、時々自分で滑ってしまいます。",
+    "abilityZh": "Fahloo 会揉搓身体上的油脂制造浓密泡沫。这些泡沫能清洁并保护它们，虽然有时也会让它们不小心滑倒。",
+    "abilityJa": "Fahloo は体の油をこすって濃い泡を作ります。その泡は体を清潔に保ち守りますが、時々自分で滑ってしまいます。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "erlath",
@@ -3002,7 +3094,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "Their feathers constantly secrete oil, creating various bubbles with just a little friction. They naturally use the softest, densest foam to protect the Fahloos on their backs.",
-    "description": "Their feathers constantly secrete oil, creating various bubbles with just a little friction. They naturally use the softest, densest foam to protect the Fahloos on their backs.",
+    "description": "Erlath 的羽毛会不断分泌油脂，只需轻微摩擦就能制造各种泡泡。它们会自然地用最柔软浓密的泡沫保护背上的 Fahloo。",
     "descriptionEn": "Their feathers constantly secrete oil, creating various bubbles with just a little friction. They naturally use the softest, densest foam to protect the Fahloos on their backs.",
     "image": "/images/aniimo/characters/erlath.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -3015,7 +3107,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Erlath の羽は常に油を分泌し、少しこするだけでさまざまな泡を作れます。背中の Fahloo を守るため、自然に最も柔らかく濃い泡を使います。",
+    "abilityZh": "Erlath 的羽毛会不断分泌油脂，只需轻微摩擦就能制造各种泡泡。它们会自然地用最柔软浓密的泡沫保护背上的 Fahloo。",
+    "abilityJa": "Erlath の羽は常に油を分泌し、少しこするだけでさまざまな泡を作れます。背中の Fahloo を守るため、自然に最も柔らかく濃い泡を使います。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "besauce",
@@ -3035,7 +3131,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "Always trying to find beats to drown out its persistent heartbeat, Besauce loves to groove to the music.",
-    "description": "Always trying to find beats to drown out its persistent heartbeat, Besauce loves to groove to the music.",
+    "description": "Besauce 总想找到节拍来盖过持续不断的心跳声，因此特别喜欢随着音乐律动。",
     "descriptionEn": "Always trying to find beats to drown out its persistent heartbeat, Besauce loves to groove to the music.",
     "image": "/images/aniimo/characters/besauce.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -3048,7 +3144,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Besauce は鳴り続ける鼓動をかき消すためにビートを探し続け、音楽に合わせて体を揺らすのが大好きです。",
+    "abilityZh": "Besauce 总想找到节拍来盖过持续不断的心跳声，因此特别喜欢随着音乐律动。",
+    "abilityJa": "Besauce は鳴り続ける鼓動をかき消すためにビートを探し続け、音楽に合わせて体を揺らすのが大好きです。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "popapus",
@@ -3068,7 +3168,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "It loves collecting colorful bubbles. They bob and sway inside its air sac as it moves, and when inspiration strikes, it uses them to doodle strange little wonders in the air.",
-    "description": "It loves collecting colorful bubbles. They bob and sway inside its air sac as it moves, and when inspiration strikes, it uses them to doodle strange little wonders in the air.",
+    "description": "Popapus 喜欢收集彩色泡泡。移动时，泡泡会在气囊中上下摇晃；灵感来临时，它会用泡泡在空中涂画奇妙的小景象。",
     "descriptionEn": "It loves collecting colorful bubbles. They bob and sway inside its air sac as it moves, and when inspiration strikes, it uses them to doodle strange little wonders in the air.",
     "image": "/images/aniimo/characters/popapus.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -3081,7 +3181,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Popapus は色とりどりの泡を集めるのが好きです。動くたびに泡が気嚢の中で揺れ、ひらめくと空中に不思議な落書きを描きます。",
+    "abilityZh": "Popapus 喜欢收集彩色泡泡。移动时，泡泡会在气囊中上下摇晃；灵感来临时，它会用泡泡在空中涂画奇妙的小景象。",
+    "abilityJa": "Popapus は色とりどりの泡を集めるのが好きです。動くたびに泡が気嚢の中で揺れ、ひらめくと空中に不思議な落書きを描きます。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "gachapus",
@@ -3101,7 +3205,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "With a quick tap from its nimble tentacles, it can launch all kinds of capsule bubbles from its head. No one knows what will pop out next—a delightful surprise, or a complete accident.",
-    "description": "With a quick tap from its nimble tentacles, it can launch all kinds of capsule bubbles from its head. No one knows what will pop out next—a delightful surprise, or a complete accident.",
+    "description": "Gachapus 灵活的触手轻轻一敲，就能从头顶发射各种胶囊泡泡。没人知道下一个会冒出惊喜，还是彻底的意外。",
     "descriptionEn": "With a quick tap from its nimble tentacles, it can launch all kinds of capsule bubbles from its head. No one knows what will pop out next—a delightful surprise, or a complete accident.",
     "image": "/images/aniimo/characters/gachapus.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -3114,7 +3218,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Gachapus は器用な触手で軽く叩くだけで、頭からさまざまなカプセル泡を飛ばせます。次に出るのが楽しい驚きか、大事故かは誰にも分かりません。",
+    "abilityZh": "Gachapus 灵活的触手轻轻一敲，就能从头顶发射各种胶囊泡泡。没人知道下一个会冒出惊喜，还是彻底的意外。",
+    "abilityJa": "Gachapus は器用な触手で軽く叩くだけで、頭からさまざまなカプセル泡を飛ばせます。次に出るのが楽しい驚きか、大事故かは誰にも分かりません。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "malangel",
@@ -3134,7 +3242,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "They disguise themselves with a cheerful smile to sneak up on targets. Once in combat, they reveal their true colors and bare their fangs poised to strike.",
-    "description": "They disguise themselves with a cheerful smile to sneak up on targets. Once in combat, they reveal their true colors and bare their fangs poised to strike.",
+    "description": "Malangel 会用开朗笑容伪装自己，悄悄接近目标。一旦进入战斗，就会露出真面目，张开獠牙准备攻击。",
     "descriptionEn": "They disguise themselves with a cheerful smile to sneak up on targets. Once in combat, they reveal their true colors and bare their fangs poised to strike.",
     "image": "/images/aniimo/characters/malangel.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -3147,7 +3255,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Malangel は明るい笑顔で自分を偽り、標的に忍び寄ります。戦闘になると本性を現し、牙をむいて攻撃態勢に入ります。",
+    "abilityZh": "Malangel 会用开朗笑容伪装自己，悄悄接近目标。一旦进入战斗，就会露出真面目，张开獠牙准备攻击。",
+    "abilityJa": "Malangel は明るい笑顔で自分を偽り、標的に忍び寄ります。戦闘になると本性を現し、牙をむいて攻撃態勢に入ります。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "malevsera",
@@ -3167,7 +3279,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "They hide their fangs and claws in their soft body. Expert at using their gentle, harmless look to lower other creatures' guard before casually freezing them into ice sculptures.",
-    "description": "They hide their fangs and claws in their soft body. Expert at using their gentle, harmless look to lower other creatures' guard before casually freezing them into ice sculptures.",
+    "description": "Malevsera 把獠牙和利爪藏在柔软身体里。它擅长用温和无害的外表降低其他生物戒心，再随手把对方冻成冰雕。",
     "descriptionEn": "They hide their fangs and claws in their soft body. Expert at using their gentle, harmless look to lower other creatures' guard before casually freezing them into ice sculptures.",
     "image": "/images/aniimo/characters/malevsera.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -3180,6 +3292,10 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Malevsera は牙と爪を柔らかな体に隠しています。穏やかで無害そうな姿で相手の警戒を解き、何気なく氷の彫像にしてしまいます。",
+    "abilityZh": "Malevsera 把獠牙和利爪藏在柔软身体里。它擅长用温和无害的外表降低其他生物戒心，再随手把对方冻成冰雕。",
+    "abilityJa": "Malevsera は牙と爪を柔らかな体に隠しています。穏やかで無害そうな姿で相手の警戒を解き、何気なく氷の彫像にしてしまいます。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   }
 ]
