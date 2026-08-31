@@ -12,15 +12,15 @@ const rawGuides = await loadJson<unknown>(
 export const aniimoGuides: AniimoGuide[] = rawGuides as AniimoGuide[];
 
 export function getAniimoGuideTitle(guide: AniimoGuide, locale: SupportedLocale): string {
-  return localeStr(guide.title, guide.titleEn, locale);
+  return localeStr(guide.title, guide.titleEn, locale, guide.titleJa);
 }
 
 export function getAniimoGuideContent(guide: AniimoGuide, locale: SupportedLocale): string {
-  return localeStr(guide.content, guide.contentEn, locale);
+  return localeStr(guide.content, guide.contentEn, locale, guide.contentJa);
 }
 
 export function getAniimoGuideSummary(guide: AniimoGuide, locale: SupportedLocale): string {
-  return localeStr(guide.summary, guide.summaryEn, locale);
+  return localeStr(guide.summary, guide.summaryEn, locale, guide.summaryJa);
 }
 
 export function getAniimoGuideCategory(guide: AniimoGuide, locale: SupportedLocale): string {
@@ -44,11 +44,11 @@ export function getAniimoGuideSlugs(): string[] {
 }
 
 export function getAniimoGuideFaqQuestion(faq: AniimoGuideFaq, locale: SupportedLocale): string {
-  return localeStr(faq.questionZh, faq.question, locale);
+  return localeStr(faq.questionZh, faq.question, locale, faq.questionJa);
 }
 
 export function getAniimoGuideFaqAnswer(faq: AniimoGuideFaq, locale: SupportedLocale): string {
-  return localeStr(faq.answerZh, faq.answer, locale);
+  return localeStr(faq.answerZh, faq.answer, locale, faq.answerJa);
 }
 
 export const ANIIMO_GUIDE_CATEGORIES: Record<string, Record<SupportedLocale, string>> = {};

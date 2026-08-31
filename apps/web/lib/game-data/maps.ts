@@ -128,8 +128,8 @@ export async function getMapPageData(gameId: GameId, locale: SupportedLocale): P
           bosses: [],
           specialties: region.aniimo,
           domains: [],
-          highlights: region.mechanics,
-          tips: [...region.checklist, region.guideNote],
+          highlights: mod.getAniimoRegionMechanics(region, locale),
+          tips: mod.getAniimoRegionTips(region, locale),
         })),
       };
     }

@@ -21,7 +21,35 @@
     "guideNote": "Mistwoods should act as a hub page for map searches, creature searches and launch verification. Keep preview-based scenery separate from exact coordinates until in-game checks are available.",
     "status": "Confirmed",
     "source": "https://www.aniimo.com/main",
-    "image": "/images/aniimo/regions/mistwoods.webp"
+    "image": "/images/aniimo/regions/mistwoods.webp",
+    "nameZh": "迷雾森林",
+    "nameJa": "ミストウッズ",
+    "themeZh": "枯枝间回荡着走调歌声，沼泽雾气与微光果实为迷路的旅行者指路。",
+    "themeJa": "枯れ枝の間に外れた歌声が響き、湿地の霧とほのかな果実が迷った旅人を導きます。",
+    "mechanicsZh": [
+      "探索",
+      "天气遭遇",
+      "昼夜发现"
+    ],
+    "mechanicsJa": [
+      "探索",
+      "天候遭遇",
+      "時間帯による発見"
+    ],
+    "checklistZh": [
+      "上线后确认 Mistwoods 的准确路线边界。",
+      "补充 Emberpup、Iris、Leafy 的刷新截图和路线备注。",
+      "检查天气或时间变化是否影响遭遇。"
+    ],
+    "checklistJa": [
+      "リリース後に Mistwoods の正確なルート境界を確認する。",
+      "Emberpup、Iris、Leafy の出現画像とルートメモを追加する。",
+      "天候や時間帯が遭遇に影響するか検証する。"
+    ],
+    "guideNoteZh": "作为早期森林生态区，适合用来记录初始捕捉路线、素材点和天气触发条件。",
+    "guideNoteJa": "序盤の森林エリアとして、初期捕獲ルート、素材ポイント、天候条件の記録に向いています。",
+    "statusZh": "Confirmed",
+    "statusJa": "Confirmed"
   },
   {
     "id": "echoback-landing",
@@ -45,7 +73,35 @@
     "guideNote": "Echoback Landing should act as a hub page for map searches, creature searches and launch verification. Keep preview-based scenery separate from exact coordinates until in-game checks are available.",
     "status": "Confirmed",
     "source": "https://www.aniimo.com/main",
-    "image": "/images/aniimo/regions/echoback-landing.webp"
+    "image": "/images/aniimo/regions/echoback-landing.webp",
+    "nameZh": "回音登陆点",
+    "nameJa": "エコーバック・ランディング",
+    "themeZh": "海浪拍打布满符文的石岸，岩洞会把陌生脚步声一层层送回耳边。",
+    "themeJa": "波がルーンの刻まれた岩場を打ち、洞窟が見知らぬ足音を何度も響かせます。",
+    "mechanicsZh": [
+      "海岸探索",
+      "音波谜题",
+      "洞穴路线"
+    ],
+    "mechanicsJa": [
+      "海岸探索",
+      "音響パズル",
+      "洞窟ルート"
+    ],
+    "checklistZh": [
+      "记录从登陆点进入内陆的主线方向。",
+      "验证水边与洞穴内的 Aniimo 分布差异。",
+      "整理音波机关和捷径解法。"
+    ],
+    "checklistJa": [
+      "上陸地点から内陸へ進むメインルートを記録する。",
+      "水辺と洞窟内で Aniimo の分布が変わるか確認する。",
+      "音響ギミックとショートカットの解き方を整理する。"
+    ],
+    "guideNoteZh": "适合承接下载与新手指南，说明玩家首次登陆后该优先检查哪些点位。",
+    "guideNoteJa": "ダウンロードガイドや初心者ガイドからつなげ、初上陸後に優先確認すべき地点を案内します。",
+    "statusZh": "Confirmed",
+    "statusJa": "Confirmed"
   },
   {
     "id": "sea-of-flowers",
@@ -69,7 +125,35 @@
     "guideNote": "Sea of Flowers should act as a hub page for map searches, creature searches and launch verification. Keep preview-based scenery separate from exact coordinates until in-game checks are available.",
     "status": "Confirmed",
     "source": "https://www.aniimo.com/main",
-    "image": "/images/aniimo/regions/sea-of-flowers.webp"
+    "image": "/images/aniimo/regions/sea-of-flowers.webp",
+    "nameZh": "花海",
+    "nameJa": "花の海",
+    "themeZh": "成片花浪随风翻动，花粉、香气和颜色会影响不同 Aniimo 的出现节奏。",
+    "themeJa": "一面の花畑が風に揺れ、花粉や香り、色彩が Aniimo の出現リズムに影響します。",
+    "mechanicsZh": [
+      "花粉环境",
+      "采集路线",
+      "稀有刷新"
+    ],
+    "mechanicsJa": [
+      "花粉環境",
+      "採集ルート",
+      "レア出現"
+    ],
+    "checklistZh": [
+      "追踪花色或花粉浓度是否影响遭遇池。",
+      "标记适合重复采集的环形路线。",
+      "补充 Bambling、Chirpounce、Deerlight 的出现条件。"
+    ],
+    "checklistJa": [
+      "花の色や花粉濃度が遭遇テーブルに影響するか追跡する。",
+      "周回採集に向いたルートをマークする。",
+      "Bambling、Chirpounce、Deerlight の出現条件を追加する。"
+    ],
+    "guideNoteZh": "上线后这里可扩展为素材 farming 与稀有捕捉的重点攻略区。",
+    "guideNoteJa": "リリース後は素材集めとレア捕獲の主要攻略エリアとして拡張できます。",
+    "statusZh": "Confirmed",
+    "statusJa": "Confirmed"
   },
   {
     "id": "blitzwood",
@@ -95,7 +179,35 @@
     "guideNote": "Blitzwood should act as a hub page for map searches, creature searches and launch verification. Keep preview-based scenery separate from exact coordinates until in-game checks are available.",
     "status": "Confirmed",
     "source": "https://www.aniimo.com/main",
-    "image": "/images/aniimo/regions/blitzwood.webp"
+    "image": "/images/aniimo/regions/blitzwood.webp",
+    "nameZh": "雷鸣林",
+    "nameJa": "ブリッツウッド",
+    "themeZh": "闪电沿树冠奔走，带电树液与短暂风暴让路线规划变得更刺激。",
+    "themeJa": "稲妻が樹冠を走り、帯電した樹液と短い嵐がルート取りを刺激的にします。",
+    "mechanicsZh": [
+      "电气机关",
+      "风暴窗口",
+      "高风险捕捉"
+    ],
+    "mechanicsJa": [
+      "電気ギミック",
+      "嵐の時間帯",
+      "高リスク捕獲"
+    ],
+    "checklistZh": [
+      "确认风暴天气是否解锁特殊遭遇。",
+      "标注安全点、捷径和高风险刷新区。",
+      "整理 Voltwing、Fluffin、Glacion 的捕捉建议。"
+    ],
+    "checklistJa": [
+      "嵐の天候が特殊遭遇を解放するか確認する。",
+      "安全地点、近道、高リスク出現エリアを記録する。",
+      "Voltwing、Fluffin、Glacion の捕獲メモを整理する。"
+    ],
+    "guideNoteZh": "这一区域适合制作进阶路线攻略，帮助玩家在风险与收益之间做选择。",
+    "guideNoteJa": "リスクと報酬を選べるように、上級者向けルートガイドへ発展させやすいエリアです。",
+    "statusZh": "Confirmed",
+    "statusJa": "Confirmed"
   },
   {
     "id": "nimbus-fields",
@@ -119,7 +231,35 @@
     "guideNote": "Nimbus Fields should act as a hub page for map searches, creature searches and launch verification. Keep preview-based scenery separate from exact coordinates until in-game checks are available.",
     "status": "Confirmed",
     "source": "https://www.aniimo.com/main",
-    "image": "/images/aniimo/regions/nimbus-fields.webp"
+    "image": "/images/aniimo/regions/nimbus-fields.webp",
+    "nameZh": "云影原野",
+    "nameJa": "ニンバス・フィールズ",
+    "themeZh": "开阔草地被低云覆盖，风向与海拔差会改变视野和遭遇节奏。",
+    "themeJa": "低い雲に覆われた広い草原で、風向きと高低差が視界と遭遇リズムを変えます。",
+    "mechanicsZh": [
+      "开放探索",
+      "风向路径",
+      "高地观察"
+    ],
+    "mechanicsJa": [
+      "オープン探索",
+      "風向きルート",
+      "高台観察"
+    ],
+    "checklistZh": [
+      "记录适合新手练习捕捉的开阔路线。",
+      "确认风向或高度是否影响可见 Aniimo。",
+      "补充 Gourami、Faeglade、Grovelet 的刷新备注。"
+    ],
+    "checklistJa": [
+      "初心者が捕獲練習しやすい開けたルートを記録する。",
+      "風向きや高度が見える Aniimo に影響するか確認する。",
+      "Gourami、Faeglade、Grovelet の出現メモを追加する。"
+    ],
+    "guideNoteZh": "适合作为新玩家熟悉移动、观察和捕捉节奏的地图章节。",
+    "guideNoteJa": "移動、観察、捕獲テンポに慣れるための初心者向けマップ章に向いています。",
+    "statusZh": "Confirmed",
+    "statusJa": "Confirmed"
   },
   {
     "id": "forest-of-falling-stars",
@@ -143,6 +283,34 @@
     "guideNote": "Forest of Falling Stars should act as a hub page for map searches, creature searches and launch verification. Keep preview-based scenery separate from exact coordinates until in-game checks are available.",
     "status": "Confirmed",
     "source": "https://www.aniimo.com/main",
-    "image": "/images/aniimo/regions/forest-of-falling-stars.webp"
+    "image": "/images/aniimo/regions/forest-of-falling-stars.webp",
+    "nameZh": "落星森林",
+    "nameJa": "流星の森",
+    "themeZh": "夜晚会有星屑坠入树冠，发光孢子与静谧遗迹暗示更稀有的生态链。",
+    "themeJa": "夜になると星くずが樹冠へ降り、光る胞子と静かな遺跡が希少な生態を示します。",
+    "mechanicsZh": [
+      "夜间探索",
+      "星屑事件",
+      "稀有生态"
+    ],
+    "mechanicsJa": [
+      "夜間探索",
+      "星くずイベント",
+      "希少生態"
+    ],
+    "checklistZh": [
+      "上线后验证夜间与星屑事件的刷新变化。",
+      "标注发光孢子、遗迹入口和稀有遭遇点。",
+      "整理 Purragon、Squirmish、Axolumi 的追踪路线。"
+    ],
+    "checklistJa": [
+      "リリース後に夜間と星くずイベントの出現変化を検証する。",
+      "光る胞子、遺跡入口、レア遭遇地点をマークする。",
+      "Purragon、Squirmish、Axolumi の追跡ルートを整理する。"
+    ],
+    "guideNoteZh": "可作为后续稀有 Aniimo、夜间事件和收藏目标的重点内容入口。",
+    "guideNoteJa": "今後のレア Aniimo、夜間イベント、収集目標の中心記事として伸ばせます。",
+    "statusZh": "Confirmed",
+    "statusJa": "Confirmed"
   }
 ]

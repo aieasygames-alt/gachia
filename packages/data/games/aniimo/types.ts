@@ -37,21 +37,26 @@ export interface AniimoCharacter {
 export interface AniimoGuideFaq {
   question: string;
   questionZh: string;
+  questionJa?: string;
   answer: string;
   answerZh: string;
+  answerJa?: string;
 }
 
 export interface AniimoGuide {
   id: string;
   title: string;
   titleEn: string;
+  titleJa?: string;
   category: string;
   categoryZh: string;
   categoryEn: string;
   summary: string;
   summaryEn: string;
+  summaryJa?: string;
   content: string;
   contentEn: string;
+  contentJa?: string;
   tags: string[];
   faq: AniimoGuideFaq[];
   updatedAt?: string;
@@ -60,12 +65,24 @@ export interface AniimoGuide {
 export interface AniimoRegion {
   id: string;
   name: string;
+  nameZh?: string;
+  nameJa?: string;
   theme: string;
+  themeZh?: string;
+  themeJa?: string;
   aniimo: string[];
   mechanics: string[];
+  mechanicsZh?: string[];
+  mechanicsJa?: string[];
   checklist: string[];
+  checklistZh?: string[];
+  checklistJa?: string[];
   guideNote: string;
+  guideNoteZh?: string;
+  guideNoteJa?: string;
   status: string;
+  statusZh?: string;
+  statusJa?: string;
   source: string;
   image: string;
 }
