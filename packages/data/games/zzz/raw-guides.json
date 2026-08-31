@@ -1349,5 +1349,38 @@
     ],
     "content": "## 先看结论\n\n3.1「The Long Goodbye」上线后，Remielle / Sigrid 不应该只按热度二选一。先把二周年奖励、兑换码、已有队伍、驱动盘和音擎资源算清楚，再判断你缺的是新主力、补强组件，还是只是周年收藏。\n\n参考来源：[Gematsu 3.1 报道](https://www.gematsu.com/2026/07/zenless-zone-zero-version-3-1-update-the-long-goodbye-launches-july-29)、[Steam 3.1 更新公告](https://store.steampowered.com/news/app/4162040/view/706649847851123192)、站内二周年资源规划。\n\n## 30 秒决策表\n\n| 账号情况 | 更该优先 | 原因 |\n| --- | --- | --- |\n| Xbox / Microsoft Store 新玩家 | 账号绑定 + 奖励领取 | 先避免存档和区服问题 |\n| 回流但队伍过期 | 当前主流队伍复盘 | 旧配装可能不适合 3.1 |\n| 缺站场或核心输出 | Remielle / Sigrid 中补短板者 | 看定位，不看热搜 |\n| 资源只够一次保底 | 角色优先，武器谨慎 | 周年资源不是无限票仓 |\n| 收藏玩家 | 喜欢谁抽谁 | 但先确认后续版本预算 |\n\n## 新平台玩家先别急着抽\n\nXbox、Microsoft Store 和 Steam 玩家最容易犯的错，是教程刚结束就把资源砸进第一个池子。更稳路线是：\n\n1. 确认 HoYoverse 账号和平台账号。\n2. 领取邮件、周年奖励和兑换码。\n3. 检查商店区域、语言、手柄和画质。\n4. 看 3.1 活动能拿多少菲林。\n5. 再决定 Remielle / Sigrid 或复刻目标。\n\n## 回流玩家看队伍缺口\n\n回流玩家要先问：旧队伍还能不能过活动和周常？如果能过，抽卡目标可以更偏长期；如果不能过，优先补当前版本最缺的位置，而不是追社媒热度。\n\n## FAQ\n\n### Remielle 和 Sigrid 谁更值得？\n\n没有通用答案。优先看你缺的定位、已有队友、驱动盘库存和后续预算。只够一次保底时，不建议同时追角色和音擎。\n\n### 二周年奖励能保证抽到新角色吗？\n\n奖励能缓解资源压力，但不应被当成完整保底。先合并邮件、活动、兑换码和日常收入，再算缺口。\n\n### Xbox 新玩家可以直接沿用 PC 攻略吗？\n\n角色养成可以参考，但账号绑定、商店入口、手柄体验和云端规则要单独确认。",
     "contentEn": "## Quick answer\n\nFor v3.1, do not choose Remielle or Sigrid by hype alone. Check anniversary rewards, codes, current teams, Drive Discs, W-Engines, and your next-version budget first.\n\n## Decision table\n\n| Account state | Priority |\n|---|---|\n| Xbox/Microsoft Store newcomer | Account binding and rewards |\n| Returner with outdated teams | Meta-team review |\n| Missing a key role | Pull the role that fills the gap |\n| One pity only | Character first, weapon cautious |\n| Collector | Favorite first, budget checked |\n\n## FAQ\n\n### Who is better, Remielle or Sigrid?\n\nIt depends on your team gap, gear, and budget. Do not chase both plus weapons if you only have one pity.\n\n### Can anniversary rewards guarantee a character?\n\nNo. Add mail, events, codes, and dailies before counting your real pull budget."
+  },
+  {
+    "id": "v3-2-livestream-recap-expired-codes",
+    "title": "绝区零 3.2 直播后 FAQ：直播码已过期、新代理人、版本时间和下期兑换码提醒",
+    "titleEn": "ZZZ v3.2 Post-Livestream FAQ: Expired Codes, New Agents, Timing, and Next Code Reminders",
+    "titleJa": "ZZZ v3.2 配信後FAQ：期限切れコード、新エージェント、版本時期、次回コード",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "categoryJa": "バージョン攻略",
+    "summary": "3.2 Special Program 已播，直播码窗口已过期；本页整理还能做什么、新代理人怎么看、下期兑换码如何跟进。",
+    "summaryEn": "The v3.2 special program has aired and livestream codes have expired. Use this FAQ for agents, timing, and next-code follow-up.",
+    "summaryJa": "v3.2特番は配信済みでコード期間は終了済みです。新エージェント、時期、次回コードを整理します。",
+    "tags": [
+      "v3.2",
+      "livestream codes",
+      "expired codes",
+      "FLINTWORKS",
+      "new agents",
+      "Steam",
+      "Xbox"
+    ],
+    "content": "## 先看结论\n\n绝区零 3.2 Special Program 已经播出，本轮直播码窗口已经过期。页面重点应该从“现在去领直播码”改成“哪些码已过期、还有哪些版本码可查、3.2 新代理人和平台玩家接下来做什么”。\n\n## 快速判断\n\n| 问题 | 当前处理 |\n|---|---|\n| FLINTWORKS 还能领吗 | 按已过期处理 |\n| 直播码放在哪里 | 放在 expired code 说明，不放可领取模块 |\n| 现在看什么 | 新代理人、版本时间、平台绑定和下期兑换码提醒 |\n| Steam/Xbox 玩家 | 先确认账号、地区、存档和下载入口 |\n\n## 直播后路线\n\n1. 打开 /zzz/redeem-codes，区分 active 和 expired。\n2. 回到 /zzz/version 看 3.2 版本时间和新代理人入口。\n3. 新平台玩家先看 Steam / Xbox / Microsoft Store 下载和账号绑定。\n4. 回流玩家再检查邮件、活动和当前队伍缺口。\n\n## FAQ\n\n### 为什么还要写过期码？\n\n因为用户会继续搜索直播码。标注 expired 可以减少误领和跳出，也能把用户引到仍然有效的版本码和版本内容。\n\n### 现在最值得补什么内容？\n\n优先补 3.2 新代理人、版本时间、下期兑换码提醒和平台入坑 FAQ。",
+    "contentEn": "## Quick answer\n\nThe ZZZ v3.2 special program has aired and the livestream-code window has expired. Do not present livestream codes as claimable. Route users to expired-code context, active code checks, v3.2 agents, timing, and platform onboarding.\n\n## Fast checks\n\n| Question | Handling |\n|---|---|\n| Can FLINTWORKS still be claimed? | Treat it as expired |\n| Where should livestream codes appear? | In expired-code context, not active modules |\n| What should players check now? | New agents, timing, platform linking, and next-code reminders |\n\n## Post-stream route\n\nOpen redeem codes, separate active from expired, return to the version hub for v3.2 planning, then check Steam/Xbox/Microsoft Store account rules if you are a new platform player.",
+    "faq": [
+      {
+        "question": "Can I still redeem FLINTWORKS?",
+        "questionZh": "FLINTWORKS 还能兑换吗？",
+        "answer": "Treat it as expired after the v3.2 livestream window. Check the redeem-code page for active codes.",
+        "answerZh": "按 3.2 直播码窗口已过期处理；请到兑换码页查看仍可用代码。"
+      }
+    ],
+    "date": "2026-08-31"
   }
 ]

@@ -1,5 +1,15 @@
 [
   {
+    "code": "FLINTWORKS",
+    "reward": "3.2 特别节目直播码，奖励以官方兑换结果为准",
+    "rewardEn": "v3.2 special program livestream code. Rewards follow the official redemption result.",
+    "status": "expired",
+    "expiresAt": "2026-08-29T23:59:59+08:00",
+    "source": "2026-08-28 v3.2 special program",
+    "region": "global",
+    "revealedAt": "2026-08-28"
+  },
+  {
     "code": "ZZZCUTENESS",
     "reward": "音擎能源模块x1、丁尼x20000",
     "rewardEn": "W-Engine Energy Module x1, Denny x20,000",

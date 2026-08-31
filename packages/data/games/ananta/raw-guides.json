@@ -468,43 +468,46 @@
   },
   {
     "id": "gacha-strategy-guide",
-    "title": "祈愿系统与抽卡策略",
-    "titleEn": "Wish System & Gacha Strategy",
+    "title": "无限大无抽卡与商业模式 FAQ：角色获取、外观付费、通行证和 2027 上线前事实核查",
+    "titleEn": "Ananta No-Gacha and Monetization FAQ: Character Acquisition, Cosmetics, Passes, and 2027 Launch Checks",
     "category": "system",
     "categoryZh": "系统攻略",
     "categoryEn": "System",
-    "summary": "无限大祈愿系统详解，包括卡池类型、保底机制和最优抽卡策略。",
-    "summaryEn": "Complete Ananta wish system guide covering banner types, pity mechanics, and optimal pulling strategy.",
-    "content": "## 祈愿系统与抽卡策略\n\n### 一、卡池类型\n\n| 卡池 | SSR概率 | 保底 | 建议 |\n|------|---------|------|------|\n| 限定祈愿 | 1.2% | 90抽保底 | 优先投入 |\n| 常驻祈愿 | 1.2% | 90抽保底 | 用免费票 |\n| 装备祈愿 | 2.0% | 70抽保底 | 有余力再抽 |\n| 新手祈愿 | 2.5% | 20抽保底SSR | 必抽 |\n\n### 二、保底机制\n\n- **软保底**：约60抽起概率提升\n- **硬保底**：90抽必出SSR\n- **大保底**：歪了非UP后，下次必出UP\n- 保底在同类卡池间继承\n\n### 三、抽卡优先级\n\n1. **新手池**：20抽保底SSR，性价比最高\n2. **限定角色**：限定通常比常驻更强或更独特\n3. **常驻用免费票**：不要花珍贵货币在常驻池\n4. **装备池最后**：角色永远比装备重要\n\n### 四、免费祈愿资源\n\n- 每日任务：约80祈愿币/天\n- 周常任务：约400/周\n- 活动奖励：每版本1500-2500\n- 探索收集：一次性大量奖励\n- 成就系统：按完成度给奖励\n- PVP赛季奖励：每赛季额外祈愿币\n\n### 五、省钱建议\n\n- 不冲动抽卡：确定目标再投入\n- 存够保底（80+抽）再下池\n- 关注版本预告提前规划\n- 无限大采用无抽卡设计，核心角色可通过游戏内获取",
-    "contentEn": "## Wish System & Gacha Strategy\n\n### 1. Banner Types\n\n| Banner | SSR Rate | Pity | Recommendation |\n|--------|----------|------|----------------|\n| Limited Wish | 1.2% | 90 pity | Priority |\n| Standard Wish | 1.2% | 90 pity | Use free tickets |\n| Equipment Wish | 2.0% | 70 pity | Only with surplus |\n| Beginner Wish | 2.5% | 20 pity SSR | Must pull |\n\n### 2. Pity Mechanics\n\n- **Soft pity**: Rates increase from ~60 pulls\n- **Hard pity**: Guaranteed SSR at 90 pulls\n- **Guarantee**: Lost 50/50 means next SSR is featured\n- Pity carries over between same banner types\n\n### 3. Pulling Priority\n\n1. **Beginner banner**: 20-pity SSR is best value\n2. **Limited characters**: Limited usually stronger or more unique\n3. **Standard with free tickets**: Don't spend premium currency here\n4. **Equipment last**: Characters always matter more than gear\n\n### 4. Free Wish Resources\n\n- Daily tasks: ~80 wish coins/day\n- Weekly tasks: ~400/week\n- Event rewards: 1500-2500 per patch\n- Exploration: Large one-time rewards\n- Achievement system: Rewards by completion\n- PvP season rewards: Extra wish coins per season\n\n### 5. Saving Tips\n\n- Don't impulse pull: Set a target before spending\n- Save for pity (80+ pulls) before pulling\n- Plan ahead using version previews\n- Ananta features a no-gacha design where core characters can be obtained through gameplay",
+    "summary": "把旧的抽卡疑问改成无抽卡事实核查：角色获取、外观付费、通行证、付费是否影响强度和上线前仍待确认事项。",
+    "summaryEn": "A no-gacha fact-check FAQ for character acquisition, cosmetics, passes, paid power, and pre-launch items still pending confirmation.",
+    "content": "## 先看结论\n\n无限大 / Ananta 当前不应再按传统抽卡游戏写。2026-08-31 这一轮内容应围绕 no-gacha、角色获取、外观付费、通行证、付费是否影响强度和 2027年1月15日上线准备做事实核查。\n\n## 现在可以怎么写\n\n| 用户问题 | 安全回答 |\n|---|---|\n| 有抽卡吗 | 按官方 no-gacha / 非抽卡角色获取方向说明 |\n| 角色怎么获得 | 等官方最终角色获取规则，不补写卡池和保底 |\n| 会卖什么 | 可以关注 cosmetics、外观、通行证等方向，但细节等公告 |\n| 付费影响强度吗 | 不能提前下结论，等正式商业化说明 |\n| Steam / Xbox 有吗 | 当前不作为确认平台，除非官方补充 |\n\n## 不再使用的旧口径\n\n以下内容不要继续出现在 Ananta 页面里：SSR 概率、限定祈愿、常驻祈愿、武器池、软保底、硬保底、大保底、80-90 抽规划。这些属于旧模板或其他游戏逻辑，会误导用户。\n\n## 上线前继续跟踪\n\n1. 角色获取是否完全来自剧情、活动或其他玩法。\n2. 外观、载具、家具、通行证是否付费。\n3. 付费内容是否影响战斗强度或 PvP。\n4. PS5、PC、Android、iOS 的账号互通。\n5. 预下载、容量、配置和地区开服时间。\n\n## 推荐阅读\n\n- /ananta/version：2027年1月15日上线准备。\n- /ananta/download：PS5、PC、Android、iOS 下载和预下载。\n- /ananta/guides/release-date-beta-pc-faq：上线日期、平台和测试资格。\n- /ananta/guides/gameplay-city-no-gacha-comparison-faq：重霄、城市开放世界和 no-gacha 理解。",
+    "contentEn": "## Quick answer\n\nAnanta should not be written as a traditional gacha game. The August 31 content pass should frame it around no-gacha positioning, character acquisition, cosmetics, passes, paid-power questions, and January 15, 2027 launch preparation.\n\n## Safe wording\n\n| User question | Safe answer |\n|---|---|\n| Is there gacha? | Use official no-gacha / non-gacha character-acquisition wording |\n| How are characters obtained? | Wait for final official acquisition rules; do not invent banners or pity |\n| What is monetized? | Watch cosmetics, appearances, passes, or similar systems, but wait for official details |\n| Does payment affect power? | Do not conclude before official monetization details |\n| Steam / Xbox? | Do not treat them as confirmed unless official updates add them |\n\n## Retire this old wording\n\nDo not use SSR rates, limited wishes, standard banners, weapon banners, soft pity, hard pity, 50/50 guarantees, or 80-90 pull planning for Ananta. Those are old template assumptions and can mislead users.\n\n## Track before launch\n\nCharacter acquisition, cosmetics, vehicles, housing, passes, paid power, cross-save, preload, file size, specs, and regional launch times still need official confirmation.",
     "tags": [
-      "祈愿",
-      "抽卡",
-      "保底",
-      "Wish",
-      "Gacha",
-      "Pity"
+      "no gacha",
+      "monetization",
+      "character acquisition",
+      "cosmetics",
+      "battle pass",
+      "release date",
+      "2027"
     ],
     "faq": [
       {
-        "question": "Is Ananta truly no-gacha?",
-        "questionZh": "无限大真的无抽卡吗？",
-        "answer": "Ananta has a unique model where core characters can be earned through gameplay, with gacha as an optional acceleration method. You can build competitive teams without spending.",
-        "answerZh": "无限大采用独特模式，核心角色可通过游戏内获取，抽卡只是加速获取的手段。不花钱也能组建有竞争力的队伍。"
+        "question": "Is Ananta a gacha game?",
+        "questionZh": "无限大是抽卡游戏吗？",
+        "questionJa": "Anantaはガチャゲームですか？",
+        "answer": "Current positioning should be handled as no-gacha / non-gacha character acquisition, with final monetization details pending official notices.",
+        "answerZh": "当前应按 no-gacha / 非抽卡角色获取方向处理，最终商业化细节等官方公告。",
+        "answerJa": "現在はガチャなし / 非ガチャのキャラ入手として扱い、収益モデルの詳細は公式告知を待ちます。"
       },
       {
-        "question": "How do I save for pity efficiently?",
-        "questionZh": "如何高效攒保底？",
-        "answer": "Complete all dailies and weeklies consistently — they provide a steady income of wish coins. Save event rewards and exploration one-time bonuses for banners you want. Avoid spending on standard banners with premium currency; use only free tickets there. Planning 80-90 pulls ahead before committing to a banner ensures you always hit pity.",
-        "answerZh": "坚持完成所有日常和周常——它们提供稳定的祈愿币收入。把活动奖励和探索一次性奖励留给想要的卡池。不要用珍贵货币抽常驻池，只用免费票。提前规划80-90抽再下池，确保每次都能触发保底。"
-      },
-      {
-        "question": "Is a no-gacha playthrough really viable?",
-        "questionZh": "不抽卡真的能玩吗？",
-        "answer": "Yes. Since core characters are obtainable through story and events, free players can build fully competitive teams. The progression is slower without gacha acceleration, but all PvE content is clearable and PvP remains accessible with earned characters.",
-        "answerZh": "可以。核心角色可以通过剧情和活动获取，免费玩家也能组建完全有竞争力的队伍。不抽卡的进度会慢一些，但所有PVE内容都可以通关，PVP也可以用免费角色参与。"
+        "question": "Should Ananta pages mention pity or SSR rates?",
+        "questionZh": "无限大页面要写保底或 SSR 概率吗？",
+        "questionJa": "Anantaページに天井やSSR確率を書くべきですか？",
+        "answer": "No. Do not publish pity, banner, or SSR-rate assumptions unless official systems introduce them.",
+        "answerZh": "不要。除非官方系统明确引入，否则不写保底、卡池或 SSR 概率假设。",
+        "answerJa": "いいえ。公式システムが明示しない限り、天井、バナー、SSR確率の仮定は掲載しません。"
       }
-    ]
+    ],
+    "titleJa": "Ananta ガチャなし・収益モデルFAQ：キャラ入手、外観課金、パス、2027配信前確認",
+    "summaryJa": "ガチャなし、キャラ入手、外観課金、パス、課金影響、配信前の未確認事項を整理します。",
+    "contentJa": "## 先に結論\n\nAnanta は従来型のガチャゲームとして書かないでください。2026年8月31日の更新では、ガチャなし、キャラ入手、外観課金、パス、課金が強さに影響するか、2027年1月15日の配信準備を事実確認として扱います。\n\n## 安全な書き方\n\nキャラ入手、収益モデル、外観、パス、Steam/Xbox対応は公式の最終告知を基準にします。SSR確率、限定祈願、武器バナー、天井、80-90連計画は公式発表がない限り使いません。",
+    "date": "2026-08-31"
   },
   {
     "id": "version-roadmap-guide",

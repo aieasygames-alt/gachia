@@ -1163,5 +1163,38 @@
       "Pull Budget",
       "Beginner"
     ]
+  },
+  {
+    "id": "v3-6-qingxiao-jingran-post-launch-route",
+    "title": "鸣潮 3.6 上线后路线：Qingxiao/Jingran、卡池、地图、兑换码和 Xbox/Steam 入坑",
+    "titleEn": "WuWa v3.6 Post-Launch Route: Qingxiao/Jingran, Banners, Map, Codes, and Xbox/Steam Starters",
+    "titleJa": "鳴潮 v3.6 実装後ルート：Qingxiao/Jingran、バナー、マップ、コード、Xbox/Steam入門",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "categoryJa": "バージョン攻略",
+    "summary": "把鸣潮 3.6 上线后的 Qingxiao、Jingran、当前/下期卡池、地图、兑换码和 Xbox/Steam 新玩家问题放进同一条路线。",
+    "summaryEn": "A v3.6 post-launch route for Qingxiao, Jingran, current/next banners, maps, redeem codes, and Xbox/Steam onboarding.",
+    "tags": [
+      "v3.6",
+      "Qingxiao",
+      "Jingran",
+      "banner",
+      "map",
+      "codes",
+      "Xbox",
+      "Steam"
+    ],
+    "content": "## 先看结论\n\n鸣潮 3.6 已进入上线后承接期，用户现在更关心 Qingxiao / Jingran 值不值得、当前卡池怎么抽、地图先跑哪里、兑换码有没有新码，以及 Xbox / Steam 新玩家怎么入坑。\n\n## 上线后 30 秒路线\n\n| 顺序 | 动作 | 入口 |\n|---|---|---|\n| 1 | 领兑换码和邮件 | /wuwa/redeem-codes |\n| 2 | 看当前/下期卡池 | /wuwa/guides/banner-schedule-guide |\n| 3 | 判断 Qingxiao / Jingran 是否补缺口 | /wuwa/characters |\n| 4 | 开地图和材料路线 | /wuwa/map |\n| 5 | Xbox / Steam 玩家再确认账号和平台 | /wuwa/download |\n\n## 抽卡前先问\n\n- 你缺主 C、辅助、生存还是地图探索体验。\n- 当前角色资源是否够养到能上场。\n- 星声、保底和下期目标是否冲突。\n- 兑换码和活动资源是否已经领完。\n\n## 平台新玩家提醒\n\nXbox、Steam 或 Game Pass 用户先处理登录、手柄、区服、画质和资源领取，再进入抽卡规划。不要把平台入口问题和角色强度问题混在一起。",
+    "contentEn": "## Quick answer\n\nWuWa v3.6 is in post-launch routing. Players are searching for Qingxiao, Jingran, banners, maps, codes, and Xbox/Steam onboarding. Claim codes first, check banners, evaluate role gaps, open map routes, then handle platform setup.\n\n## Fast route\n\n| Order | Action | Entry |\n|---|---|---|\n| 1 | Claim codes and mail | /wuwa/redeem-codes |\n| 2 | Check current/next banners | /wuwa/guides/banner-schedule-guide |\n| 3 | Evaluate Qingxiao / Jingran | /wuwa/characters |\n| 4 | Open map and material routes | /wuwa/map |\n| 5 | Confirm Xbox/Steam account setup | /wuwa/download |\n\n## Before pulling\n\nCheck role gaps, build resources, Astrite, pity, future targets, and whether event/code income is already claimed.",
+    "faq": [
+      {
+        "question": "What should I do first in WuWa v3.6?",
+        "questionZh": "鸣潮 3.6 上线后先做什么？",
+        "answer": "Claim codes, check current banners, then decide whether Qingxiao or Jingran fills a real account gap.",
+        "answerZh": "先领兑换码，看当前卡池，再判断 Qingxiao 或 Jingran 是否补账号缺口。"
+      }
+    ],
+    "date": "2026-08-31"
   }
 ]

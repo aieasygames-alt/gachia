@@ -1223,5 +1223,36 @@
       }
     ],
     "date": "2026-07-21"
+  },
+  {
+    "id": "4x-fate-gilgamesh-kafka-cyrene-evergreen-plan",
+    "title": "崩坏：星穹铁道 4.x Fate / Gilgamesh / Kafka / Cyrene 常青抽取规划",
+    "titleEn": "Honkai: Star Rail 4.x Fate / Gilgamesh / Kafka / Cyrene Evergreen Pull Plan",
+    "category": "banner",
+    "categoryZh": "卡池攻略",
+    "categoryEn": "Banner Guide",
+    "summary": "把 4.x 长尾搜索里的 Fate 联动、Gilgamesh、Kafka、Cyrene、兑换码、卡池和队伍构建放进常青规划。",
+    "summaryEn": "An evergreen 4.x planner for Fate collab, Gilgamesh, Kafka, Cyrene, codes, banners, and team-building searches.",
+    "tags": [
+      "4.x",
+      "Fate collab",
+      "Gilgamesh",
+      "Kafka",
+      "Cyrene",
+      "banners",
+      "codes",
+      "team builder"
+    ],
+    "content": "## 先看结论\n\n星铁 4.x 搜索已经从单版本爆点转成常青规划：Fate 联动、Gilgamesh、Kafka、Cyrene、兑换码、卡池和队伍构建需要放在一条资源路线里。\n\n## 规划顺序\n\n| 顺序 | 先看什么 |\n|---|---|\n| 1 | 兑换码和版本奖励 |\n| 2 | 当前跃迁和复刻节奏 |\n| 3 | Fate / Gilgamesh 是否是必留目标 |\n| 4 | Kafka / Cyrene 是否补队伍缺口 |\n| 5 | 队伍构建和光锥资源 |\n\n## 内容边界\n\n不承接 leaks、内鬼、成人同人或未证实卡池。联动、角色和复刻节奏以官方公告和游戏内跃迁为准。",
+    "contentEn": "## Quick answer\n\nHSR 4.x searches have become evergreen planning around Fate collab, Gilgamesh, Kafka, Cyrene, codes, banners, and team building. Route players through rewards, current warps, collab priority, rerun value, and team gaps.\n\n## Boundary\n\nDo not route leaks, adult fan content, or unconfirmed banners. Use official notices and in-game warps for final timing.",
+    "faq": [
+      {
+        "question": "Should I save for Fate or pull Kafka/Cyrene?",
+        "questionZh": "该留给 Fate 还是抽 Kafka/Cyrene？",
+        "answer": "Save for Fate/Gilgamesh if collab priority is highest; pull Kafka or Cyrene only if they solve a real team gap and resources remain.",
+        "answerZh": "如果联动优先级最高就留给 Fate/Gilgamesh；Kafka 或 Cyrene 只有在补真实队伍缺口且资源够时再抽。"
+      }
+    ],
+    "date": "2026-08-31"
   }
 ]

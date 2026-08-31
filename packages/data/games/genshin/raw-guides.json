@@ -1358,5 +1358,38 @@
       }
     ],
     "date": "2026-07-21"
+  },
+  {
+    "id": "nod-krai-cryoculus-phase-ii-checklist",
+    "title": "原神 7.0 Phase II Nod-Krai / Cryoculus 收集清单：地图、卡池和兑换码先看什么",
+    "titleEn": "Genshin v7.0 Phase II Nod-Krai / Cryoculus Checklist: Map, Banners, and Codes",
+    "titleJa": "原神 v7.0 Phase II Nod-Krai / Cryoculus チェックリスト：マップ、バナー、コード",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "categoryJa": "バージョン攻略",
+    "summary": "把 7.0 Phase II 的 Nod-Krai、Cryoculus、interactive map、当前/下期卡池和兑换码整理成上线后检查顺序。",
+    "summaryEn": "A v7.0 Phase II route for Nod-Krai, Cryoculus, interactive map checks, current/next banners, and redeem codes.",
+    "summaryJa": "v7.0 Phase II の Nod-Krai、Cryoculus、マップ、現在/次回バナー、コードを整理します。",
+    "tags": [
+      "7.0",
+      "Phase II",
+      "Nod-Krai",
+      "Cryoculus",
+      "interactive map",
+      "banner",
+      "codes"
+    ],
+    "content": "## 先看结论\n\n原神 7.0 已进入 Phase II 后，搜索重点从“版本是否上线”转向 Nod-Krai 地图、Cryoculus 收集、当前/下期卡池和兑换码。建议顺序是：先领可用兑换码，再看 Phase II 卡池，最后按地图区域推进 Cryoculus 和资源收集。\n\n## 30 秒路线\n\n| 顺序 | 做什么 | 入口 |\n|---|---|---|\n| 1 | 检查兑换码和邮件 | /genshin/redeem-codes |\n| 2 | 看 Phase II 当前/下期卡池 | /genshin/guides/banner-schedule-guide |\n| 3 | 打开 Nod-Krai 地图入口 | /genshin/map |\n| 4 | 标记 Cryoculus 与关键资源 | /genshin/map |\n| 5 | 再决定角色、武器和圣遗物资源 | /genshin/characters |\n\n## Phase II 抽卡前先确认\n\n- 当前角色是否补队伍短板。\n- 你离小保底/大保底还有多远。\n- 后续版本是否还有更高优先级目标。\n- 兑换码、活动和地图探索能补多少原石。\n- 武器池不要优先于核心角色。\n\n## Nod-Krai / Cryoculus 怎么推进\n\n先按地图分区标点，不建议第一天靠记忆硬跑。地图收集页应该让用户能快速回到 interactive map，再根据主线、传送点、世界任务和资源路线逐步清。\n\n## 风险词处理\n\nleaks、mod、成人同人和非官方资源不进入本页正文。卡池、地图和收集信息以官网、游戏内公告和站内已核验内容为准。",
+    "contentEn": "## Quick answer\n\nGenshin v7.0 has moved into Phase II. Search intent is now about Nod-Krai, Cryoculus, interactive maps, current/next banners, and codes. Claim active codes first, check Phase II banners next, then route map collection through the interactive map.\n\n## Fast route\n\n| Order | Action | Entry |\n|---|---|---|\n| 1 | Check codes and mail | /genshin/redeem-codes |\n| 2 | Review Phase II banners | /genshin/guides/banner-schedule-guide |\n| 3 | Open Nod-Krai map routing | /genshin/map |\n| 4 | Mark Cryoculus and key resources | /genshin/map |\n| 5 | Plan characters, weapons, and artifacts | /genshin/characters |\n\n## Before pulling\n\nCheck role gaps, pity distance, future targets, code/event income, and map exploration Primogems before spending on weapons.\n\n## Collection notes\n\nUse map sections and pins instead of memory routing. Keep official notices and in-game data ahead of rumor or leak terms.",
+    "faq": [
+      {
+        "question": "What should I do first in Genshin v7.0 Phase II?",
+        "questionZh": "原神 7.0 Phase II 先做什么？",
+        "answer": "Claim active codes, check current/next banners, then use the map route for Nod-Krai and Cryoculus collection.",
+        "answerZh": "先领有效兑换码，看当前/下期卡池，再用地图路线推进 Nod-Krai 和 Cryoculus 收集。"
+      }
+    ],
+    "date": "2026-08-31"
   }
 ]
