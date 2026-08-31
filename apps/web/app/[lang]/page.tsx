@@ -78,6 +78,13 @@ const FEATURED: Partial<Record<keyof typeof GAMES, FeaturedCharacter[]>> = {
     { id: 'sparka', name: { zh: '斯帕卡', en: 'Sparka', ja: 'スパーカ' } },
     { id: 'cerulla', name: { zh: '瑟露拉', en: 'Cerulla', ja: 'セルラ' } },
   ],
+  aniimo: [
+    { id: 'susuta', name: { zh: 'Susuta', en: 'Susuta', ja: 'Susuta' } },
+    { id: 'emberpup', name: { zh: 'Emberpup', en: 'Emberpup', ja: 'Emberpup' } },
+    { id: 'celestis', name: { zh: 'Celestis', en: 'Celestis', ja: 'Celestis' } },
+    { id: 'tuckin', name: { zh: 'Tuckin', en: 'Tuckin', ja: 'Tuckin' } },
+    { id: 'panpanta', name: { zh: 'Panpanta', en: 'Panpanta', ja: 'Panpanta' } },
+  ],
 };
 
 const HOME_COPY = {

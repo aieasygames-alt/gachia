@@ -51,6 +51,11 @@ const PRIORITY_GUIDES = [
   ['roco-cn', 'redeem-codes-cn'],
   ['roco-cn', 'starter-guide-cn'],
   ['roco-cn', 's2-season-guide'],
+  ['aniimo', 'release-date'],
+  ['aniimo', 'download'],
+  ['aniimo', 'codes-rewards'],
+  ['aniimo', 'beginner-guide'],
+  ['aniimo', 'map-regions'],
 ];
 
 const PRIORITY_PATHS = [
@@ -132,6 +137,26 @@ const PRIORITY_PATHS = [
   '/en/roco-cn/characters/xuewawa',
   '/zh/roco-cn/characters/youguang-rongrong',
   '/en/roco-cn/characters/youguang-rongrong',
+  '/zh/aniimo',
+  '/en/aniimo',
+  '/zh/aniimo/characters',
+  '/en/aniimo/characters',
+  '/zh/aniimo/guides',
+  '/en/aniimo/guides',
+  '/zh/aniimo/map',
+  '/en/aniimo/map',
+  '/zh/aniimo/version',
+  '/en/aniimo/version',
+  '/zh/aniimo/download',
+  '/en/aniimo/download',
+  '/zh/aniimo/redeem-codes',
+  '/en/aniimo/redeem-codes',
+  '/zh/aniimo/characters/susuta',
+  '/en/aniimo/characters/susuta',
+  '/zh/aniimo/characters/emberpup',
+  '/en/aniimo/characters/emberpup',
+  '/zh/aniimo/characters/celestis',
+  '/en/aniimo/characters/celestis',
 ];
 
 function usage() {

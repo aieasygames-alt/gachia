@@ -96,7 +96,7 @@ echo -n "[$((TESTS_RUN + 1))] Checking OG images optimization... "
 TESTS_RUN=$((TESTS_RUN + 1))
 
 OG_DIR="apps/web/public/images/og"
-OG_WEBP_IMAGES=("$OG_DIR/genshin.webp" "$OG_DIR/starrail.webp" "$OG_DIR/wuwa.webp" "$OG_DIR/nte.webp" "$OG_DIR/zzz.webp" "$OG_DIR/guihuan.webp")
+OG_WEBP_IMAGES=("$OG_DIR"/*.webp)
 
 LARGE_IMAGES=0
 TOTAL_SIZE=0

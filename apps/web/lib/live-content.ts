@@ -77,6 +77,7 @@ export const HOMEPAGE_PRIORITY_GAMES: GameId[] = [
   'wuwa',
   'zzz',
   'roco',
+  'aniimo',
   'skjh',
   'endfield',
   'nte',
@@ -175,6 +176,23 @@ export const LIVE_VERSION_UPDATES: LiveVersionUpdate[] = [
     status: 'fresh',
     updatedAt: LIVE_UPDATED_AT,
     priority: 1,
+  },
+  {
+    gameId: 'aniimo',
+    title: {
+      zh: 'Aniimo 全球上线日期确认',
+      en: 'Aniimo Global Launch Dates Confirmed',
+      ja: 'Aniimo グローバル配信日確認',
+    },
+    summary: {
+      zh: 'PC/主机 2026-09-16，移动端 2026-09-23；上线前优先追踪下载、奖励、图鉴和区域路线。',
+      en: 'PC/console arrives on 2026-09-16, mobile on 2026-09-23; track downloads, rewards, database entries, and region routes before launch.',
+      ja: 'PC/コンソールは2026-09-16、モバイルは2026-09-23。DL、報酬、図鑑、地域ルートを追跡します。',
+    },
+    href: '/aniimo/version',
+    status: 'upcoming',
+    updatedAt: LIVE_UPDATED_AT,
+    priority: 2,
   },
   {
     gameId: 'genshin',
