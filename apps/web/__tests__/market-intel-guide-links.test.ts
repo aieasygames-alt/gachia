@@ -52,6 +52,8 @@ describe('market-intel guide links', () => {
 
       for (const link of snapshot.links.filter((link) => link.href.includes('/guides/'))) {
         const slug = link.href.split('/guides/')[1];
+        expect(slug).toBeDefined();
+        if (!slug) continue;
         expect(guideIds.has(slug)).toBe(true);
       }
     }

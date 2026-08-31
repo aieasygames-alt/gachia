@@ -1,4 +1,4 @@
-import { GAME_IDS } from '@gachia/core';
+import { GAME_IDS, type GameId } from '@gachia/core';
 import { describe, expect, it } from 'vitest';
 import {
   MARKET_INTEL_BATCH_ID,
@@ -18,7 +18,7 @@ describe('market intelligence backlog', () => {
   });
 
   it('covers the current-site games in the 2026-08-31 batch', () => {
-    const currentSiteGames = [
+    const currentSiteGames: GameId[] = [
       'genshin',
       'starrail',
       'wuwa',
