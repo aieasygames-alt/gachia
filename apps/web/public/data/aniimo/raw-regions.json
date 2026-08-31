@@ -21,7 +21,7 @@
     "guideNote": "Mistwoods should act as a hub page for map searches, creature searches and launch verification. Keep preview-based scenery separate from exact coordinates until in-game checks are available.",
     "status": "Confirmed",
     "source": "https://www.aniimo.com/main",
-    "image": "/images/aniimo/regions/region-mistwoods.webp"
+    "image": "/images/aniimo/regions/mistwoods.webp"
   },
   {
     "id": "echoback-landing",
@@ -45,7 +45,7 @@
     "guideNote": "Echoback Landing should act as a hub page for map searches, creature searches and launch verification. Keep preview-based scenery separate from exact coordinates until in-game checks are available.",
     "status": "Confirmed",
     "source": "https://www.aniimo.com/main",
-    "image": "/images/aniimo/regions/region-echoback-landing.webp"
+    "image": "/images/aniimo/regions/echoback-landing.webp"
   },
   {
     "id": "sea-of-flowers",
@@ -69,7 +69,7 @@
     "guideNote": "Sea of Flowers should act as a hub page for map searches, creature searches and launch verification. Keep preview-based scenery separate from exact coordinates until in-game checks are available.",
     "status": "Confirmed",
     "source": "https://www.aniimo.com/main",
-    "image": "/images/aniimo/regions/region-sea-of-flowers.webp"
+    "image": "/images/aniimo/regions/sea-of-flowers.webp"
   },
   {
     "id": "blitzwood",
@@ -95,7 +95,7 @@
     "guideNote": "Blitzwood should act as a hub page for map searches, creature searches and launch verification. Keep preview-based scenery separate from exact coordinates until in-game checks are available.",
     "status": "Confirmed",
     "source": "https://www.aniimo.com/main",
-    "image": "/images/aniimo/regions/region-blitzwood.webp"
+    "image": "/images/aniimo/regions/blitzwood.webp"
   },
   {
     "id": "nimbus-fields",
@@ -119,7 +119,7 @@
     "guideNote": "Nimbus Fields should act as a hub page for map searches, creature searches and launch verification. Keep preview-based scenery separate from exact coordinates until in-game checks are available.",
     "status": "Confirmed",
     "source": "https://www.aniimo.com/main",
-    "image": "/images/aniimo/regions/region-nimbus-fields.webp"
+    "image": "/images/aniimo/regions/nimbus-fields.webp"
   },
   {
     "id": "forest-of-falling-stars",
@@ -143,6 +143,6 @@
     "guideNote": "Forest of Falling Stars should act as a hub page for map searches, creature searches and launch verification. Keep preview-based scenery separate from exact coordinates until in-game checks are available.",
     "status": "Confirmed",
     "source": "https://www.aniimo.com/main",
-    "image": "/images/aniimo/regions/region-forest-of-falling-stars.webp"
+    "image": "/images/aniimo/regions/forest-of-falling-stars.webp"
   }
 ]
