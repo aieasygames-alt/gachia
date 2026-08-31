@@ -15,7 +15,7 @@ export function getZzzCharacterName(char: ZzzCharacter, locale: SupportedLocale)
 }
 
 export function getZzzCharacterDescription(char: ZzzCharacter, locale: SupportedLocale): string {
-  return localeStr(char.description, char.descriptionEn, locale);
+  return localeStr(char.description, char.descriptionEn, locale, char.descriptionJa);
 }
 
 export function getZzzCharacterImage(char: ZzzCharacter): string {
@@ -27,7 +27,7 @@ export function getZzzCharacterById(id: string): ZzzCharacter | undefined {
 }
 
 export function getZzzCharacterTierReason(char: ZzzCharacter, locale: SupportedLocale): string {
-  return localeStr(char.tierReasonZh, char.tierReason, locale);
+  return localeStr(char.tierReasonZh, char.tierReason, locale, char.tierReasonJa);
 }
 
 export const characters: Character[] = zzzCharacters.map((char) => ({
@@ -37,7 +37,7 @@ export const characters: Character[] = zzzCharacters.map((char) => ({
   rarity: char.rank === 'S' ? 5 : 4,
   element: char.attribute,
   weaponType: char.specialtyEn,
-  description: { zh: char.description, en: char.descriptionEn, ja: char.descriptionEn },
+  description: { zh: char.description, en: char.descriptionEn, ja: char.descriptionJa ?? char.descriptionEn },
   images: {
     icon: `/images/zzz/characters/${char.id}.webp`,
     card: `/images/zzz/characters/${char.id}.webp`,
@@ -54,32 +54,32 @@ function mapSkills(skills: ZzzCharacter['skills']): Character['skills'] {
   if (skills.normalAttack) {
     result.push({
       id: 'normal-attack',
-      name: { zh: skills.normalAttack.name, en: skills.normalAttack.nameEn, ja: skills.normalAttack.nameEn },
-      description: { zh: skills.normalAttack.description, en: skills.normalAttack.descriptionEn, ja: skills.normalAttack.descriptionEn },
+      name: { zh: skills.normalAttack.name, en: skills.normalAttack.nameEn, ja: skills.normalAttack.nameJa ?? skills.normalAttack.nameEn },
+      description: { zh: skills.normalAttack.description, en: skills.normalAttack.descriptionEn, ja: skills.normalAttack.descriptionJa ?? skills.normalAttack.descriptionEn },
       type: 'normal',
     });
   }
   if (skills.special) {
     result.push({
       id: 'special',
-      name: { zh: skills.special.name, en: skills.special.nameEn, ja: skills.special.nameEn },
-      description: { zh: skills.special.description, en: skills.special.descriptionEn, ja: skills.special.descriptionEn },
+      name: { zh: skills.special.name, en: skills.special.nameEn, ja: skills.special.nameJa ?? skills.special.nameEn },
+      description: { zh: skills.special.description, en: skills.special.descriptionEn, ja: skills.special.descriptionJa ?? skills.special.descriptionEn },
       type: 'elemental',
     });
   }
   if (skills.ultimate) {
     result.push({
       id: 'ultimate',
-      name: { zh: skills.ultimate.name, en: skills.ultimate.nameEn, ja: skills.ultimate.nameEn },
-      description: { zh: skills.ultimate.description, en: skills.ultimate.descriptionEn, ja: skills.ultimate.descriptionEn },
+      name: { zh: skills.ultimate.name, en: skills.ultimate.nameEn, ja: skills.ultimate.nameJa ?? skills.ultimate.nameEn },
+      description: { zh: skills.ultimate.description, en: skills.ultimate.descriptionEn, ja: skills.ultimate.descriptionJa ?? skills.ultimate.descriptionEn },
       type: 'burst',
     });
   }
   if (skills.corePassive) {
     result.push({
       id: 'core-passive',
-      name: { zh: skills.corePassive.name, en: skills.corePassive.nameEn, ja: skills.corePassive.nameEn },
-      description: { zh: skills.corePassive.description, en: skills.corePassive.descriptionEn, ja: skills.corePassive.descriptionEn },
+      name: { zh: skills.corePassive.name, en: skills.corePassive.nameEn, ja: skills.corePassive.nameJa ?? skills.corePassive.nameEn },
+      description: { zh: skills.corePassive.description, en: skills.corePassive.descriptionEn, ja: skills.corePassive.descriptionJa ?? skills.corePassive.descriptionEn },
       type: 'passive',
     });
   }

@@ -8,6 +8,7 @@ export interface ZzzSkillBase {
   nameJa?: string;
   description: string;
   descriptionEn: string;
+  descriptionJa?: string;
 }
 
 export interface ZzzActiveSkill extends ZzzSkillBase {
@@ -31,16 +32,20 @@ export interface ZzzSkillSet {
 export interface ZzzFaq {
   question: string;
   questionZh: string;
+  questionJa?: string;
   answer: string;
   answerZh: string;
+  answerJa?: string;
 }
 
 export interface ZzzTeamComp {
   name: string;
   nameEn: string;
+  nameJa?: string;
   members: string[];
   description: string;
   descriptionEn: string;
+  descriptionJa?: string;
 }
 
 export interface ZzzRecommendedBuild {
@@ -61,20 +66,26 @@ export interface ZzzCharacter {
   nameEn: string;
   nameJa?: string;
   attribute: string;
+  attributeJa?: string;
   specialty: string;
   specialtyEn: string;
+  specialtyJa?: string;
   rank: 'S' | 'A';
   faction: string;
   factionEn: string;
+  factionJa?: string;
   attackType: string;
   attackTypeEn: string;
+  attackTypeJa?: string;
   description: string;
   descriptionEn: string;
+  descriptionJa?: string;
   faq: ZzzFaq[];
   relatedCharacters: string[];
   tierRank: string;
   tierReason: string;
   tierReasonZh: string;
+  tierReasonJa?: string;
   skills: ZzzSkillSet;
   recommendedBuild: ZzzRecommendedBuild;
   teamComps: ZzzTeamComp[];
@@ -92,8 +103,10 @@ export interface ZzzMindscapeCinema {
   level: number;
   name: string;
   nameEn: string;
+  nameJa?: string;
   description: string;
   descriptionEn: string;
+  descriptionJa?: string;
 }
 
 // --- Weapon Types (W-Engines) ---

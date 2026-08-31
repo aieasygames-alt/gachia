@@ -642,9 +642,10 @@
     "availableAtLaunch": true,
     "acquisitionMethod": "限定信号检索（卡池）",
     "status": "available",
-    "cvZh": "Mace",
+    "cvZh": "Mace（中文配音信息待核验）",
     "cvJp": "鬼頭明里",
-    "cvEn": "Samantha Cooper"
+    "cvEn": "Samantha Cooper",
+    "cvJa": "鬼頭明里"
   },
   {
     "id": "nekomata",
