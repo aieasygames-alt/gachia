@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
+import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { genshinCharacters, getGenshinCharacterById, getGenshinCharacterImage } from '../games/genshin/characters';
 import { starrailCharacters, getStarRailCharacterById, getStarRailCharacterImage } from '../games/starrail/characters';
@@ -14,6 +15,7 @@ import { wuwaGuides } from '../games/wuwa/guides';
 import { guides as nteGuides } from '../games/nte/guides';
 import { zzzGuides } from '../games/zzz/guides';
 import { aniimoGuides } from '../games/aniimo/guides';
+import { aniimoRegions } from '../games/aniimo/regions';
 
 describe('Genshin Impact', () => {
   it('all characters have required fields', () => {
@@ -94,6 +96,15 @@ describe('Aniimo', () => {
       expect(getAniimoCharacterImage(c)).toContain('/images/aniimo/characters/');
       expect(getAniimoCharacterImage(c)).toContain('.webp');
     });
+  });
+
+  it('all public image references exist', () => {
+    for (const c of aniimoCharacters) {
+      expect(existsSync(join(process.cwd(), `../../apps/web/public${c.image}`)), `${c.id} image should exist`).toBe(true);
+    }
+    for (const region of aniimoRegions) {
+      expect(existsSync(join(process.cwd(), `../../apps/web/public${region.image}`)), `${region.id} image should exist`).toBe(true);
+    }
   });
 
   it('no duplicate ids', () => {

@@ -252,23 +252,97 @@ export default async function RedeemCodesPage({
         <SkjhRedeemHub locale={locale} />
       )}
 
-      <CodeSection
-        title={locale === 'zh' ? '有效兑换码' : locale === 'ja' ? '有効な交換コード' : 'Active Redeem Codes'}
-        emptyText={locale === 'zh' ? '当前没有已确认有效的兑换码。请先查看下方过期/待复核列表，并关注本页更新。' : locale === 'ja' ? '現在確認済みの有効コードはありません。下の期限切れ/要確認リストと更新を確認してください。' : 'No confirmed active codes right now. Check expired/to-recheck codes below and watch this page for updates.'}
-        codes={activeCodes}
-        gameId={gameId}
-        locale={locale}
-        sourceLabels={sourceLabels}
-      />
+      {gameId === 'aniimo' && (
+        <AniimoRedeemHub locale={locale} />
+      )}
 
-      <CodeSection
-        title={locale === 'zh' ? '已过期 / 待复核兑换码' : locale === 'ja' ? '期限切れ / 要確認コード' : 'Expired / To-Recheck Codes'}
-        emptyText={locale === 'zh' ? '暂未收录过期码。' : locale === 'ja' ? '期限切れコードはまだありません。' : 'No expired codes recorded yet.'}
-        codes={expiredCodes}
-        gameId={gameId}
-        locale={locale}
-        sourceLabels={sourceLabels}
-      />
+      {gameId !== 'aniimo' && (
+        <>
+          <CodeSection
+            title={locale === 'zh' ? '有效兑换码' : locale === 'ja' ? '有効な交換コード' : 'Active Redeem Codes'}
+            emptyText={locale === 'zh' ? '当前没有已确认有效的兑换码。请先查看下方过期/待复核列表，并关注本页更新。' : locale === 'ja' ? '現在確認済みの有効コードはありません。下の期限切れ/要確認リストと更新を確認してください。' : 'No confirmed active codes right now. Check expired/to-recheck codes below and watch this page for updates.'}
+            codes={activeCodes}
+            gameId={gameId}
+            locale={locale}
+            sourceLabels={sourceLabels}
+          />
+
+          <CodeSection
+            title={locale === 'zh' ? '已过期 / 待复核兑换码' : locale === 'ja' ? '期限切れ / 要確認コード' : 'Expired / To-Recheck Codes'}
+            emptyText={locale === 'zh' ? '暂未收录过期码。' : locale === 'ja' ? '期限切れコードはまだありません。' : 'No expired codes recorded yet.'}
+            codes={expiredCodes}
+            gameId={gameId}
+            locale={locale}
+            sourceLabels={sourceLabels}
+          />
+        </>
+      )}
+    </div>
+  );
+}
+
+function AniimoRedeemHub({ locale }: { locale: SupportedLocale }) {
+  const t = (zh: string, en: string, ja?: string) => locale === 'zh' ? zh : locale === 'ja' ? (ja ?? en) : en;
+  const rewards = [
+    ['Junior Wayfarer Prismana Aniimo choice', 'Junior Wayfarer Prismana Aniimo choice'],
+    ['Mysterious Susuta egg', 'Mysterious Susuta egg'],
+    ['10M milestone: Glimmer x200', '10M milestone: Glimmer x200'],
+    ['15M milestone: Aniipod Ultra x2', '15M milestone: Aniipod Ultra x2'],
+    ['20M milestone: Companion Promise avatar frame', '20M milestone: Companion Promise avatar frame'],
+    ['30M milestone: Sunlit Meadow outfit', '30M milestone: Sunlit Meadow outfit'],
+  ] as const;
+  const sources = ['Official website', 'Steam', 'Epic Games Store', 'Xbox', 'PlayStation', 'App Store', 'Google Play'] as const;
+
+  return (
+    <div className="mb-8 space-y-6">
+      <section className="rounded-lg border border-game-border bg-game-surface p-6">
+        <h2 className="mb-3 text-lg font-semibold text-game-text">
+          {t('Aniimo 兑换码状态', 'Aniimo Code Status', 'Aniimoコード状況')}
+        </h2>
+        <p className="mb-4 text-sm leading-relaxed text-game-text-muted">
+          {t(
+            '截至 2026-08-27，暂无已确认的公开 Aniimo 兑换码。PC/主机上线日期为 2026-09-16，移动端上线日期为 2026-09-23；上线后将优先核验游戏内兑换入口、官网新闻、平台商店活动和官方社区。',
+            'As of 2026-08-27, no public Aniimo redeem code is confirmed. PC/console launches on 2026-09-16 and mobile launches on 2026-09-23; after launch, this page will verify the in-game redemption flow, official news, store campaigns, and community posts.',
+            '2026-08-27時点で、公開交換コードは未確認です。PC/コンソールは2026-09-16、モバイルは2026-09-23予定。リリース後に交換入口と公式情報を確認します。'
+          )}
+        </p>
+        <div className="grid gap-3 sm:grid-cols-3">
+          <div className="rounded bg-game-surface-alt p-3">
+            <div className="text-xs text-game-text-muted">{t('当前有效码', 'Active Codes', '有効コード')}</div>
+            <div className="mt-1 text-xl font-bold text-game-primary">0</div>
+          </div>
+          <div className="rounded bg-game-surface-alt p-3">
+            <div className="text-xs text-game-text-muted">{t('已确认奖励', 'Confirmed Rewards', '確認済み報酬')}</div>
+            <div className="mt-1 text-xl font-bold text-game-primary">{rewards.length}</div>
+          </div>
+          <div className="rounded bg-game-surface-alt p-3">
+            <div className="text-xs text-game-text-muted">{t('下一次重点核验', 'Next Check', '次回確認')}</div>
+            <div className="mt-1 text-sm font-semibold text-game-text">2026-09-16</div>
+          </div>
+        </div>
+      </section>
+
+      <section className="rounded-lg border border-game-border bg-game-surface p-6">
+        <h2 className="mb-3 text-lg font-semibold text-game-text">{t('已确认奖励', 'Confirmed Rewards', '確認済み報酬')}</h2>
+        <div className="grid gap-3 md:grid-cols-2">
+          {rewards.map(([zh, en]) => (
+            <div key={en} className="rounded bg-game-surface-alt p-3 text-sm text-game-text">
+              {locale === 'zh' ? zh : en}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="rounded-lg border border-game-border bg-game-surface p-6">
+        <h2 className="mb-3 text-lg font-semibold text-game-text">{t('上线后核验来源', 'Launch Verification Sources', 'リリース後確認元')}</h2>
+        <div className="flex flex-wrap gap-2">
+          {sources.map((source) => (
+            <span key={source} className="rounded bg-game-surface-alt px-3 py-1.5 text-sm text-game-text">
+              {source}
+            </span>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
