@@ -267,6 +267,7 @@ const ELEMENT_COLORS: Record<string, string> = {
   radiance: '#fbbf24', frost: '#67e8f9', flame: '#ef4444', gale: '#6ee7b7', thunder: '#8b5cf6',
   heat: '#ef4444', nature: '#4ade80',
   str: '#ef4444', agi: '#22c55e', con: '#f97316', int: '#8b5cf6', per: '#3b82f6', cha: '#ec4899',
+  grass: '#4ade80', rock: '#f59e0b', holy: '#fbbf24', unknown: '#9ca3af', dark: '#64748b',
 };
 
 const ROCO_ELEMENT_COLORS: Record<string, string> = {

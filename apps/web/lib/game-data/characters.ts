@@ -118,6 +118,13 @@ export async function getCharacterSummariesByIds(
         return character ? [{ id: character.id, name: mod.getRocoCnCharacterName(character, locale), image: toAbs(mod.getRocoCnCharacterImage(character)) }] : [];
       });
     }
+    case 'aniimo': {
+      const mod = await import('@gachia/data/games/aniimo/characters');
+      return ids.flatMap((id) => {
+        const character = mod.getAniimoCharacterById(id);
+        return character ? [{ id: character.id, name: mod.getAniimoCharacterName(character, locale), image: toAbs(mod.getAniimoCharacterImage(character)) }] : [];
+      });
+    }
     default:
       return [];
   }
@@ -168,6 +175,10 @@ export async function getCharactersForStaticParams(gameId: GameId): Promise<Arra
     case 'roco-cn': {
       const mod = await import('@gachia/data/games/roco-cn/characters');
       return mod.rocoCnCharacters.map((character) => ({ id: character.id }));
+    }
+    case 'aniimo': {
+      const mod = await import('@gachia/data/games/aniimo/characters');
+      return mod.aniimoCharacters.map((character) => ({ id: character.id }));
     }
     default:
       return [];
@@ -337,6 +348,23 @@ export async function getCharacterMetaData(
         elementLabel: character.attributeEn,
       };
     }
+    case 'aniimo': {
+      const mod = await import('@gachia/data/games/aniimo/characters');
+      const character = mod.getAniimoCharacterById(id);
+      if (!character) return null;
+      return {
+        id: character.id,
+        name: mod.getAniimoCharacterName(character, locale),
+        description: mod.getAniimoCharacterDescription(character, locale),
+        image: toAbs(mod.getAniimoCharacterImage(character)),
+        element: character.element,
+        elementLabel: locale === 'zh' ? character.elementZh : locale === 'ja' ? character.elementJa : character.elementEn,
+        weaponLabel: locale === 'zh' ? character.roleZh : locale === 'ja' ? character.roleJa : character.roleEn,
+        pathLabel: character.stage,
+        specialtyLabel: character.region,
+        tierRank: character.tierRank,
+      };
+    }
     default:
       return null;
   }
@@ -487,6 +515,19 @@ export async function getCharacterListData(
         rarityLabel: `${character.rarity}★`,
         rankGroup: `${character.rarity}★`,
         subtitle: character.attributeEn,
+      }));
+    }
+    case 'aniimo': {
+      const mod = await import('@gachia/data/games/aniimo/characters');
+      return mod.aniimoCharacters.map((character) => ({
+        id: character.id,
+        name: mod.getAniimoCharacterName(character, locale),
+        image: toAbs(mod.getAniimoCharacterImage(character)),
+        element: character.element,
+        elementLabel: locale === 'zh' ? character.elementZh : locale === 'ja' ? character.elementJa : character.elementEn,
+        rarityLabel: character.stage.replace(' Stage', ''),
+        rankGroup: character.stage,
+        subtitle: locale === 'zh' ? character.roleZh : locale === 'ja' ? character.roleJa : character.roleEn,
       }));
     }
     default:

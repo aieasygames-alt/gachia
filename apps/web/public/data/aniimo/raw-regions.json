@@ -1,0 +1,148 @@
+[
+  {
+    "id": "mistwoods",
+    "name": "Mistwoods",
+    "theme": "An off-key singing echoes among withered twigs, while swamp mists and glimmer fruits guide lost travelers.",
+    "aniimo": [
+      "Emberpup",
+      "Iris",
+      "Leafy"
+    ],
+    "mechanics": [
+      "Exploration",
+      "Weather encounters",
+      "Time-of-day discovery"
+    ],
+    "checklist": [
+      "Confirm exact Mistwoods route boundaries after launch.",
+      "Add spawn screenshots and route notes for Emberpup, Iris, Leafy.",
+      "Check whether exploration changes encounters by weather or time of day."
+    ],
+    "guideNote": "Mistwoods should act as a hub page for map searches, creature searches and launch verification. Keep preview-based scenery separate from exact coordinates until in-game checks are available.",
+    "status": "Confirmed",
+    "source": "https://www.aniimo.com/main",
+    "image": "/images/aniimo/regions/region-mistwoods.webp"
+  },
+  {
+    "id": "echoback-landing",
+    "name": "Echoback Landing",
+    "theme": "A stranded giant Aniimo waits away from the sea, with answers hidden in the enchanting Echoback singing.",
+    "aniimo": [
+      "Chirpi",
+      "Tromber",
+      "Cornet"
+    ],
+    "mechanics": [
+      "Traversal",
+      "Route discovery",
+      "Twine puzzle paths"
+    ],
+    "checklist": [
+      "Confirm exact Echoback Landing route boundaries after launch.",
+      "Add spawn screenshots and route notes for Chirpi, Tromber, Cornet.",
+      "Check whether traversal changes encounters by weather or time of day."
+    ],
+    "guideNote": "Echoback Landing should act as a hub page for map searches, creature searches and launch verification. Keep preview-based scenery separate from exact coordinates until in-game checks are available.",
+    "status": "Confirmed",
+    "source": "https://www.aniimo.com/main",
+    "image": "/images/aniimo/regions/region-echoback-landing.webp"
+  },
+  {
+    "id": "sea-of-flowers",
+    "name": "Sea of Flowers",
+    "theme": "Endless flowers paint the landscape, surrounding a perfume village that has lived beside Aniimo for generations.",
+    "aniimo": [
+      "Irisal",
+      "Flutternym",
+      "Gracewing"
+    ],
+    "mechanics": [
+      "Collection routes",
+      "Environmental encounters",
+      "Aniilog progression"
+    ],
+    "checklist": [
+      "Confirm exact Sea of Flowers route boundaries after launch.",
+      "Add spawn screenshots and route notes for Irisal, Flutternym, Gracewing.",
+      "Check whether collection routes changes encounters by weather or time of day."
+    ],
+    "guideNote": "Sea of Flowers should act as a hub page for map searches, creature searches and launch verification. Keep preview-based scenery separate from exact coordinates until in-game checks are available.",
+    "status": "Confirmed",
+    "source": "https://www.aniimo.com/main",
+    "image": "/images/aniimo/regions/region-sea-of-flowers.webp"
+  },
+  {
+    "id": "blitzwood",
+    "name": "Blitzwood",
+    "theme": "Thunder drawn by Bolties carves scorched furrows through grassy slopes as electric sparks crackle in the woods.",
+    "aniimo": [
+      "Bolty",
+      "Blazen",
+      "Sparki",
+      "Eko",
+      "Eklue"
+    ],
+    "mechanics": [
+      "Phenomena encounters",
+      "Electric Aniimo routes",
+      "Weather timing"
+    ],
+    "checklist": [
+      "Confirm exact Blitzwood route boundaries after launch.",
+      "Add spawn screenshots and route notes for Bolty, Blazen, Sparki, Eko, Eklue.",
+      "Check whether phenomena encounters changes encounters by weather or time of day."
+    ],
+    "guideNote": "Blitzwood should act as a hub page for map searches, creature searches and launch verification. Keep preview-based scenery separate from exact coordinates until in-game checks are available.",
+    "status": "Confirmed",
+    "source": "https://www.aniimo.com/main",
+    "image": "/images/aniimo/regions/region-blitzwood.webp"
+  },
+  {
+    "id": "nimbus-fields",
+    "name": "Nimbus Fields",
+    "theme": "Soft clouds caress thick grassland, where field Aniimo move through open routes and sky-adjacent paths.",
+    "aniimo": [
+      "Fentuft",
+      "Hummin",
+      "Somniwing"
+    ],
+    "mechanics": [
+      "Gliding",
+      "Open-world travel",
+      "Field exploration"
+    ],
+    "checklist": [
+      "Confirm exact Nimbus Fields route boundaries after launch.",
+      "Add spawn screenshots and route notes for Fentuft, Hummin, Somniwing.",
+      "Check whether gliding changes encounters by weather or time of day."
+    ],
+    "guideNote": "Nimbus Fields should act as a hub page for map searches, creature searches and launch verification. Keep preview-based scenery separate from exact coordinates until in-game checks are available.",
+    "status": "Confirmed",
+    "source": "https://www.aniimo.com/main",
+    "image": "/images/aniimo/regions/region-nimbus-fields.webp"
+  },
+  {
+    "id": "forest-of-falling-stars",
+    "name": "Forest of Falling Stars",
+    "theme": "Upstream from the forest, Celestises glide among starine trees like tiny shooting stars.",
+    "aniimo": [
+      "Celestis",
+      "Stellarys",
+      "Susuta"
+    ],
+    "mechanics": [
+      "Rare Aniimo discovery",
+      "Story quests",
+      "Special encounters"
+    ],
+    "checklist": [
+      "Confirm exact Forest of Falling Stars route boundaries after launch.",
+      "Add spawn screenshots and route notes for Celestis, Stellarys, Susuta.",
+      "Check whether rare aniimo discovery changes encounters by weather or time of day."
+    ],
+    "guideNote": "Forest of Falling Stars should act as a hub page for map searches, creature searches and launch verification. Keep preview-based scenery separate from exact coordinates until in-game checks are available.",
+    "status": "Confirmed",
+    "source": "https://www.aniimo.com/main",
+    "image": "/images/aniimo/regions/region-forest-of-falling-stars.webp"
+  }
+]

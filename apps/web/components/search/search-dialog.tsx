@@ -30,6 +30,7 @@ const GAME_NAMES: Record<string, Record<string, string>> = {
   endfield: { zh: '终末地', en: 'Endfield', ja: 'エンドフィールド' },
   sea: { zh: '遗忘之海', en: 'Sea of Remnants', ja: 'シー・オブ・レムナンツ' },
   skjh: { zh: '失控进化', en: 'Ashfall Evolution', ja: '失控進化' },
+  aniimo: { zh: 'Aniimo', en: 'Aniimo', ja: 'Aniimo' },
 };
 
 const TYPE_LABELS: Record<string, Record<string, string>> = {
@@ -201,10 +202,17 @@ function loadDataset(locale: SupportedLocale): Promise<Partial<Record<string, Se
           };
           return;
         }
+        case 'aniimo': {
+          const characters = await import('@gachia/data/games/aniimo/characters');
+          datasets[gameId] = {
+            characters: characters.aniimoCharacters.map((c) => ({ id: c.id, name: characters.getAniimoCharacterName(c, locale), nameAlt: c.nameEn })),
+          };
+          return;
+        }
       }
     };
 
-    const gameIds: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'];
+    const gameIds: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'aniimo'];
     for (const gameId of gameIds) {
       tasks.push(addGame(gameId));
     }

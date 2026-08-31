@@ -11,6 +11,7 @@ import { endfieldCharacters } from '@gachia/data/games/endfield/characters';
 import { seaCharacters } from '@gachia/data/games/sea/characters';
 import { rocoCharacters } from '@gachia/data/games/roco/characters';
 import { rocoCnCharacters } from '@gachia/data/games/roco-cn/characters';
+import { aniimoCharacters } from '@gachia/data/games/aniimo/characters';
 
 // Weapons
 import { genshinWeapons } from '@gachia/data/games/genshin/weapons';
@@ -37,6 +38,7 @@ import { seaGuides } from '@gachia/data/games/sea/guides';
 import { skjhGuides } from '@gachia/data/games/skjh/guides';
 import { rocoGuides } from '@gachia/data/games/roco/guides';
 import { rocoCnGuides } from '@gachia/data/games/roco-cn/guides';
+import { aniimoGuides } from '@gachia/data/games/aniimo/guides';
 
 // Materials / Items
 import { genshinMaterials } from '@gachia/data/games/genshin/items';
@@ -64,9 +66,9 @@ import { getEntryUpdatedAt, hasLocalizedContent } from '@/lib/seo-metadata';
 const BASE_URL = 'https://gachia.com';
 
 // Games with real content for each category
-const CHAR_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'roco', 'roco-cn'] as const;
+const CHAR_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'roco', 'roco-cn', 'aniimo'] as const;
 const WEAPON_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'] as const;
-const GUIDE_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco', 'roco-cn'] as const;
+const GUIDE_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco', 'roco-cn', 'aniimo'] as const;
 const ARTIFACT_GAMES = ['genshin', 'starrail'] as const;
 const ECHO_GAMES = ['wuwa'] as const;
 const DISK_SET_GAMES = ['nte'] as const;
@@ -88,6 +90,7 @@ const REAL_CONTENT_ROUTES: Record<string, string[]> = {
   skjh: ['weapons', 'guides', 'items', 'redeem-codes', 'version', 'download', 'calculator', 'teams', 'map'],
   roco: ['characters', 'guides', 'weapons', 'tier-list', 'version', 'download', 'redeem-codes'],
   'roco-cn': ['characters', 'guides', 'items', 'weapons', 'tier-list', 'version', 'download', 'redeem-codes'],
+  aniimo: ['characters', 'guides', 'map', 'version', 'download', 'redeem-codes'],
 };
 
 // Revalidate every 24 hours
@@ -268,6 +271,7 @@ function getCharactersForGame(gameId: string) {
     case 'sea': return seaCharacters;
     case 'roco': return rocoCharacters;
     case 'roco-cn': return rocoCnCharacters;
+    case 'aniimo': return aniimoCharacters;
     default: return [];
   }
 }
@@ -302,6 +306,7 @@ function getGuidesForGame(gameId: string) {
     case 'skjh': return skjhGuides;
     case 'roco': return rocoGuides;
     case 'roco-cn': return rocoCnGuides;
+    case 'aniimo': return aniimoGuides;
     default: return [];
   }
 }

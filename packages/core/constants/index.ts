@@ -18,7 +18,7 @@ export const LOCALE_NAMES: Record<SupportedLocale, string> = {
 // Games Registry
 // ============================================================
 
-export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco', 'roco-cn'];
+export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco', 'roco-cn', 'aniimo'];
 
 export const GAMES: Record<GameId, GameModule> = {
   genshin: {
@@ -539,6 +539,54 @@ export const GAMES: Record<GameId, GameModule> = {
       'tier-list': true,
       calculator: false,
       map: false,
+      version: true,
+      download: true,
+      guides: true,
+      build: false,
+      compare: false,
+      teams: false,
+      'redeem-codes': true,
+    },
+  },
+  aniimo: {
+    id: 'aniimo',
+    name: { zh: 'Aniimo', en: 'Aniimo', ja: 'Aniimo' },
+    theme: {
+      primary: '#22c55e',
+      accent: '#38bdf8',
+      background: '#101714',
+      surface: '#16221e',
+    },
+    elements: [
+      { id: 'fire', name: { zh: '火', en: 'Fire', ja: '火' }, color: '#ef4444' },
+      { id: 'water', name: { zh: '水', en: 'Water', ja: '水' }, color: '#3b82f6' },
+      { id: 'grass', name: { zh: '草', en: 'Grass', ja: '草' }, color: '#4ade80' },
+      { id: 'wind', name: { zh: '风', en: 'Wind', ja: '風' }, color: '#6ee7b7' },
+      { id: 'rock', name: { zh: '岩', en: 'Rock', ja: '岩' }, color: '#f59e0b' },
+      { id: 'electric', name: { zh: '电', en: 'Electric', ja: '電気' }, color: '#facc15' },
+      { id: 'ice', name: { zh: '冰', en: 'Ice', ja: '氷' }, color: '#67e8f9' },
+      { id: 'holy', name: { zh: '圣', en: 'Holy', ja: '聖' }, color: '#fbbf24' },
+      { id: 'dark', name: { zh: '暗', en: 'Dark', ja: '闇' }, color: '#64748b' },
+      { id: 'unknown', name: { zh: '未知', en: 'Unknown', ja: '不明' }, color: '#9ca3af' },
+    ],
+    rarities: [
+      { stars: 5, color: '#fbbf24', label: { zh: 'Nova', en: 'Nova Stage', ja: 'Nova' } },
+      { stars: 4, color: '#a855f7', label: { zh: 'Gamma', en: 'Gamma Stage', ja: 'Gamma' } },
+      { stars: 3, color: '#60a5fa', label: { zh: 'Lumin', en: 'Lumin Stage', ja: 'Lumin' } },
+      { stars: 2, color: '#9ca3af', label: { zh: '索引', en: 'Official Index', ja: 'Index' } },
+    ],
+    stats: {
+      baseStats: ['hp', 'atk', 'def'],
+      subStats: ['stage', 'region', 'ability'],
+      specialStats: ['twine'],
+    },
+    routes: {
+      characters: true,
+      weapons: false,
+      items: false,
+      'tier-list': false,
+      calculator: false,
+      map: true,
       version: true,
       download: true,
       guides: true,

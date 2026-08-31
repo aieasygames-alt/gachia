@@ -7,11 +7,13 @@ import { wuwaCharacters, getWuWaCharacterById, getWuWaCharacterImage } from '../
 import { nteCharacters, getNteCharacterById, getNteCharacterImage } from '../games/nte/characters';
 import { zzzCharacters, getZzzCharacterById, getZzzCharacterImage } from '../games/zzz/characters';
 import { guihuanCharacters, getGuihuanCharacterById, getGuihuanCharacterImage } from '../games/guihuan/characters';
+import { aniimoCharacters, getAniimoCharacterById, getAniimoCharacterImage } from '../games/aniimo/characters';
 import { genshinGuides } from '../games/genshin/guides';
 import { starrailGuides } from '../games/starrail/guides';
 import { wuwaGuides } from '../games/wuwa/guides';
 import { guides as nteGuides } from '../games/nte/guides';
 import { zzzGuides } from '../games/zzz/guides';
+import { aniimoGuides } from '../games/aniimo/guides';
 
 describe('Genshin Impact', () => {
   it('all characters have required fields', () => {
@@ -49,6 +51,7 @@ describe('Cloudflare data assets', () => {
     { game: 'wuwa', guides: wuwaGuides },
     { game: 'nte', guides: nteGuides },
     { game: 'zzz', guides: zzzGuides },
+    { game: 'aniimo', guides: aniimoGuides },
   ];
 
   it.each(guideDatasets)('keeps the $game guide asset synchronized with the source data', ({ game, guides }) => {
@@ -66,6 +69,36 @@ describe('Cloudflare data assets', () => {
       expect(guide.tags.length, `${guide.id} should have tags`).toBeGreaterThan(0);
       expect(guide.tags.every((tag) => typeof tag === 'string'), `${guide.id} tags should be strings`).toBe(true);
     }
+  });
+});
+
+describe('Aniimo', () => {
+  it('all characters have required fields', () => {
+    aniimoCharacters.forEach((c) => {
+      expect(c.id).toBeTruthy();
+      expect(c.name).toBeTruthy();
+      expect(c.element).toBeTruthy();
+      expect(c.role).toBeTruthy();
+      expect(c.stage).toBeTruthy();
+    });
+  });
+
+  it('all characters are findable by id', () => {
+    aniimoCharacters.forEach((c) => {
+      expect(getAniimoCharacterById(c.id)).toBeDefined();
+    });
+  });
+
+  it('all characters have image paths', () => {
+    aniimoCharacters.forEach((c) => {
+      expect(getAniimoCharacterImage(c)).toContain('/images/aniimo/characters/');
+      expect(getAniimoCharacterImage(c)).toContain('.webp');
+    });
+  });
+
+  it('no duplicate ids', () => {
+    const ids = aniimoCharacters.map((c) => c.id);
+    expect(new Set(ids).size).toBe(ids.length);
   });
 });
 

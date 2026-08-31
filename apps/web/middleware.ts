@@ -32,6 +32,7 @@ const INDEXABLE_GAME_ROUTES: Record<GameId, readonly string[]> = {
   skjh: ['weapons', 'guides', 'items', 'redeem-codes', 'calculator', 'teams', 'map', 'build', 'version', 'download'],
   roco: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'version', 'download', 'redeem-codes'],
   'roco-cn': ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'version', 'download', 'redeem-codes'],
+  aniimo: ['characters', 'guides', 'map', 'version', 'download', 'redeem-codes'],
 };
 
 function asLocale(segment?: string): LocaleId | undefined {
@@ -196,6 +197,6 @@ export const config = {
     '/',
     '/(zh|en|ja)/:path*',
     '/(sitemap|api|privacy|terms|contact)',
-    '/(genshin|starrail|wuwa|nte|zzz|guihuan|ananta|endfield|sea|skjh|roco|roco-cn)/:path*',
+    '/(genshin|starrail|wuwa|nte|zzz|guihuan|ananta|endfield|sea|skjh|roco|roco-cn|aniimo)/:path*',
   ],
 };

@@ -65,6 +65,12 @@ import {
   items as skjhItems,
   tierLists as skjhTierLists,
 } from '../games/skjh';
+import {
+  characters as aniimoCharacters,
+  weapons as aniimoWeapons,
+  items as aniimoItems,
+  tierLists as aniimoTierLists,
+} from '../games/aniimo';
 
 /**
  * Get game data by game ID
@@ -140,6 +146,13 @@ export async function getGameData(gameId: GameId) {
         weapons: skjhWeapons,
         items: skjhItems,
         tierLists: skjhTierLists,
+      };
+    case 'aniimo':
+      return {
+        characters: aniimoCharacters,
+        weapons: aniimoWeapons,
+        items: aniimoItems,
+        tierLists: aniimoTierLists,
       };
     default:
       throw new Error(`Unknown game ID: ${gameId}`);

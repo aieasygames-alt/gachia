@@ -402,6 +402,49 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
     ],
     faq: liveFaq('洛克王国:世界', 'Roco Kingdom (CN)', 'ロコキングダム（中国版）'),
   },
+  aniimo: {
+    officialUrl: 'https://www.aniimo.com/',
+    status: {
+      zh: 'Aniimo 官方日期为 PC/主机 2026-09-16，上线移动端 2026-09-23；下载入口以官网、Steam、Epic、Xbox、PlayStation、App Store 与 Google Play 为准。',
+      en: 'Aniimo is officially dated for PC/console on 2026-09-16 and mobile on 2026-09-23; use the official site and platform stores.',
+      ja: 'AniimoはPC/コンソールが2026-09-16、モバイルが2026-09-23予定。公式サイトと各ストアを確認してください。',
+    },
+    intro: {
+      zh: '这里集中查看 Aniimo 官网、发售日期、平台入口、预注册奖励、兑换码状态和上线前下载注意事项。',
+      en: 'Use this hub for Aniimo official links, release dates, platform stores, pre-registration rewards, code status, and safe download notes.',
+      ja: '公式リンク、発売日、ストア、事前登録報酬、コード状態、安全なDL情報をまとめます。',
+    },
+    officialNote: DEFAULT_STATUS,
+    platforms: [
+      platform('PC / Steam / Epic', '2026-09-16', '2026-09-16', '2026-09-16', 'PC 端优先确认 Steam、Epic 与官网公告。', 'Check Steam, Epic, and official news first for PC.', 'PCはSteam、Epic、公式告知を確認。'),
+      platform('Xbox / PlayStation', '2026-09-16', '2026-09-16', '2026-09-16', '主机端以对应平台商店开放时间为准。', 'Console timing follows each platform store.', 'コンソールは各ストアの公開時間基準。'),
+      platform('iOS / Android', '2026-09-23', '2026-09-23', '2026-09-23', '移动端比 PC/主机晚一周，注意地区商店可见性。', 'Mobile follows one week later; store visibility can vary by region.', 'モバイルは1週間後。地域ごとの表示差に注意。'),
+    ],
+    specs: specs('正式配置和包体大小以上线前官方公告为准，避免使用非官方 APK 或安装器。', 'Final specs and size should follow official pre-launch notices; avoid unofficial APKs or installers.', '最終環境と容量は公式告知基準。非公式APKやインストーラーは避けてください。'),
+    cloud: {
+      zh: '暂未确认官方云游戏入口；如果平台商店新增云游或试玩入口，以上线后公告为准。',
+      en: 'No official cloud gaming entry is confirmed yet; follow post-launch platform notices if one appears.',
+      ja: '公式クラウド入口は未確認です。追加時はリリース後の告知を確認してください。',
+    },
+    crossPlay: {
+      zh: '跨平台账号、服务器和进度规则等待正式上线说明，建议注册时保留同一账号体系。',
+      en: 'Cross-platform account, server, and progress rules are awaiting launch details; keep one account ecosystem where possible.',
+      ja: 'クロス進行とサーバー規則は正式告知待ち。同じアカウント体系を使うのが無難です。',
+    },
+    nextLinks: [
+      {
+        href: '/aniimo/guides/release-date',
+        label: { zh: '发售日期', en: 'Release dates', ja: '発売日' },
+        description: { zh: '确认 PC/主机与移动端两个上线日期。', en: 'Check PC/console and mobile launch dates.', ja: 'PC/コンソールとモバイルの日程を確認。' },
+      },
+      {
+        href: '/aniimo/redeem-codes',
+        label: { zh: '兑换码与奖励', en: 'Codes & rewards', ja: 'コードと報酬' },
+        description: { zh: '区分暂无兑换码和已确认预注册奖励。', en: 'Separate code status from confirmed launch rewards.', ja: 'コード状態と事前登録報酬を分けて確認。' },
+      },
+    ],
+    faq: liveFaq('Aniimo', 'Aniimo', 'Aniimo'),
+  },
 };
 
 export function generateStaticParams() {

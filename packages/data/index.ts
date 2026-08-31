@@ -812,6 +812,42 @@ export {
 } from './games/roco-cn/weapons';
 export type { RocoCnJinie, RocoCnMaterial } from './games/roco-cn/types';
 
+// Aniimo exports
+export {
+  aniimoCharacters,
+  getAniimoCharacterById,
+  getAniimoCharacterName,
+  getAniimoCharacterDescription,
+  getAniimoCharacterImage,
+  getAniimoCharacterTierReason,
+} from './games/aniimo/characters';
+export {
+  aniimoGuides,
+  getAniimoGuideTitle,
+  getAniimoGuideContent,
+  getAniimoGuideSummary,
+  getAniimoGuideCategory,
+  getAniimoGuideCategories,
+  getAniimoGuidesByCategory,
+  getAniimoGuideById,
+  getAniimoGuideSlugs,
+  getAniimoGuideFaqQuestion,
+  getAniimoGuideFaqAnswer,
+  ANIIMO_GUIDE_CATEGORIES,
+} from './games/aniimo/guides';
+export {
+  aniimoRegions,
+  getAniimoRegionById,
+  getAniimoRegionName,
+  getAniimoRegionDescription,
+} from './games/aniimo/regions';
+export {
+  redeemCodes as aniimoRedeemCodes,
+  getActiveRedeemCodes as getAniimoActiveRedeemCodes,
+  getRedeemCodeReward as getAniimoRedeemCodeReward,
+} from './games/aniimo/redeem-codes';
+export type { AniimoCharacter, AniimoGuide, AniimoGuideFaq, AniimoRegion } from './games/aniimo/types';
+
 // --- Material-Character Reverse Lookup ---
 export { getCharactersNeedingMaterial, type MaterialCharacter } from './material-characters';
 
@@ -875,6 +911,10 @@ export async function getGameData(gameId: GameId): Promise<GameData> {
     }
     case 'roco-cn': {
       const { characters, weapons, items, tierLists } = await import('./games/roco-cn');
+      return { characters, weapons, items, tierLists };
+    }
+    case 'aniimo': {
+      const { characters, weapons, items, tierLists } = await import('./games/aniimo');
       return { characters, weapons, items, tierLists };
     }
   }

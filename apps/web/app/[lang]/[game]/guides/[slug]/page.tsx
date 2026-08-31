@@ -86,6 +86,7 @@ const ARTICLE_IMAGE_LABELS: Partial<Record<GameId, Record<SupportedLocale, strin
   guihuan: { zh: '归环攻略参考图', en: 'Guihuan guide reference image', ja: 'Guihuanガイド参考画像' },
   roco: { zh: '洛克王国:世界攻略参考图', en: 'Roco Kingdom guide reference image', ja: 'ロコキングダムガイド参考画像' },
   'roco-cn': { zh: '洛克王国:世界（国服）攻略参考图', en: 'Roco Kingdom (CN) guide reference image', ja: 'ロコキングダム（中国版）ガイド参考画像' },
+  aniimo: { zh: 'Aniimo 攻略参考图', en: 'Aniimo guide reference image', ja: 'Aniimoガイド参考画像' },
 };
 
 const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> = {
@@ -580,6 +581,10 @@ async function getGuideRuntime(gameId: GameId): Promise<GuideRuntime> {
     case 'roco-cn': {
       const mod = await import('@gachia/data/games/roco-cn/guides');
       return makeRuntime(mod.rocoCnGuides, mod.ROCO_CN_GUIDE_CATEGORIES, mod.getRocoCnGuideById, mod.getRocoCnGuideTitle, mod.getRocoCnGuideSummary, mod.getRocoCnGuideContent, mod.getRocoCnGuideCategory, mod.getRocoCnGuideFaqQuestion, mod.getRocoCnGuideFaqAnswer);
+    }
+    case 'aniimo': {
+      const mod = await import('@gachia/data/games/aniimo/guides');
+      return makeRuntime(mod.aniimoGuides, mod.ANIIMO_GUIDE_CATEGORIES, mod.getAniimoGuideById, mod.getAniimoGuideTitle, mod.getAniimoGuideSummary, mod.getAniimoGuideContent, mod.getAniimoGuideCategory, mod.getAniimoGuideFaqQuestion, mod.getAniimoGuideFaqAnswer);
     }
     default:
       notFound();
