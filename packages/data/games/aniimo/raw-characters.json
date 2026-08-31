@@ -1133,7 +1133,7 @@
     "rarity": 3,
     "region": "Blitzwood",
     "ability": "With their big ears perked up, they are extremely sensitive to sound. They won't miss any movement that catches their attention, near or far.",
-    "description": "With their big ears perked up, they are extremely sensitive to sound. They won't miss any movement that catches their attention, near or far.",
+    "description": "Eko 竖起大耳朵时，对声音极其敏感。无论远近，只要有动静吸引它注意，就不会被错过。",
     "descriptionEn": "With their big ears perked up, they are extremely sensitive to sound. They won't miss any movement that catches their attention, near or far.",
     "image": "/images/aniimo/characters/eko.webp",
     "evolution": "Eko is part of the Eko -> Eklue line.",
@@ -1146,7 +1146,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Eko は大きな耳を立てると音にとても敏感になります。近くても遠くても、気になる動きを見逃しません。",
+    "abilityZh": "Eko 竖起大耳朵时，对声音极其敏感。无论远近，只要有动静吸引它注意，就不会被错过。",
+    "abilityJa": "Eko は大きな耳を立てると音にとても敏感になります。近くても遠くても、気になる動きを見逃しません。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "eklue",
@@ -1166,7 +1170,7 @@
     "rarity": 4,
     "region": "Blitzwood",
     "ability": "Curious and keen on searching for traces and tracking targets. The ring on their tail amplifies ultrasound, allowing them to easily see through cloaked creatures.",
-    "description": "Curious and keen on searching for traces and tracking targets. The ring on their tail amplifies ultrasound, allowing them to easily see through cloaked creatures.",
+    "description": "Eklue 好奇心强，擅长搜寻痕迹并追踪目标。尾巴上的环能放大超声波，让它轻松看穿隐匿的生物。",
     "descriptionEn": "Curious and keen on searching for traces and tracking targets. The ring on their tail amplifies ultrasound, allowing them to easily see through cloaked creatures.",
     "image": "/images/aniimo/characters/eklue.webp",
     "evolution": "Eklue is part of the Eko -> Eklue line.",
@@ -1179,7 +1183,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Eklue は好奇心が強く、痕跡探しと追跡が得意です。尾の輪が超音波を増幅し、隠れた生き物も簡単に見抜きます。",
+    "abilityZh": "Eklue 好奇心强，擅长搜寻痕迹并追踪目标。尾巴上的环能放大超声波，让它轻松看穿隐匿的生物。",
+    "abilityJa": "Eklue は好奇心が強く、痕跡探しと追跡が得意です。尾の輪が超音波を増幅し、隠れた生き物も簡単に見抜きます。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "susuta",
@@ -1199,7 +1207,7 @@
     "rarity": 3,
     "region": "Forest of Falling Stars",
     "ability": "They dig around to search for gifts to give to their crushes, but their wooing always fails because they are so shy.",
-    "description": "They dig around to search for gifts to give to their crushes, but their wooing always fails because they are so shy.",
+    "description": "Susuta 会四处挖掘，寻找礼物送给喜欢的对象。但因为太害羞，它们的示爱总是失败。",
     "descriptionEn": "They dig around to search for gifts to give to their crushes, but their wooing always fails because they are so shy.",
     "image": "/images/aniimo/characters/susuta.webp",
     "evolution": "Susuta is part of the Susuta -> Popota -> Piopiota -> Panpanta line.",
@@ -1212,7 +1220,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Susuta は好きな相手に贈るためのプレゼントを探して掘り回ります。ただし恥ずかしがり屋なので、求愛はいつも失敗します。",
+    "abilityZh": "Susuta 会四处挖掘，寻找礼物送给喜欢的对象。但因为太害羞，它们的示爱总是失败。",
+    "abilityJa": "Susuta は好きな相手に贈るためのプレゼントを探して掘り回ります。ただし恥ずかしがり屋なので、求愛はいつも失敗します。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "popota",
@@ -1232,7 +1244,7 @@
     "rarity": 3,
     "region": "Forest of Falling Stars",
     "ability": "They select shells and make them into shovels. It's said that they produce pink bubbles when they see someone they love.",
-    "description": "They select shells and make them into shovels. It's said that they produce pink bubbles when they see someone they love.",
+    "description": "Popota 会挑选贝壳，把它们做成铲子。据说见到喜欢的人时，它们会冒出粉色泡泡。",
     "descriptionEn": "They select shells and make them into shovels. It's said that they produce pink bubbles when they see someone they love.",
     "image": "/images/aniimo/characters/popota.webp",
     "evolution": "Popota is part of the Susuta -> Popota -> Piopiota -> Panpanta line.",
@@ -1245,7 +1257,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Popota は貝殻を選んでシャベルにします。好きな相手を見ると、ピンク色の泡を出すと言われています。",
+    "abilityZh": "Popota 会挑选贝壳，把它们做成铲子。据说见到喜欢的人时，它们会冒出粉色泡泡。",
+    "abilityJa": "Popota は貝殻を選んでシャベルにします。好きな相手を見ると、ピンク色の泡を出すと言われています。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "piopiota",
@@ -1265,7 +1281,7 @@
     "rarity": 4,
     "region": "Forest of Falling Stars",
     "ability": "Narcissistic little creatures who spend a large amount of time grooming their fur and striking the perfect pose.",
-    "description": "Narcissistic little creatures who spend a large amount of time grooming their fur and striking the perfect pose.",
+    "description": "Piopiota 是有些自恋的小家伙，会花大量时间整理毛发，并摆出最完美的姿势。",
     "descriptionEn": "Narcissistic little creatures who spend a large amount of time grooming their fur and striking the perfect pose.",
     "image": "/images/aniimo/characters/piopiota.webp",
     "evolution": "Piopiota is part of the Susuta -> Popota -> Piopiota -> Panpanta line.",
@@ -1278,7 +1294,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Piopiota は少しナルシストな小さな Aniimo で、毛づくろいと完璧なポーズ作りに長い時間をかけます。",
+    "abilityZh": "Piopiota 是有些自恋的小家伙，会花大量时间整理毛发，并摆出最完美的姿势。",
+    "abilityJa": "Piopiota は少しナルシストな小さな Aniimo で、毛づくろいと完璧なポーズ作りに長い時間をかけます。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "panpanta",
@@ -1298,7 +1318,7 @@
     "rarity": 5,
     "region": "Forest of Falling Stars",
     "ability": "They are strong and powerful, but they'd rather stay in their nests and decorate than show off their muscles.",
-    "description": "They are strong and powerful, but they'd rather stay in their nests and decorate than show off their muscles.",
+    "description": "Panpanta 强壮有力，但比起炫耀肌肉，它们更愿意待在巢里慢慢装饰。",
     "descriptionEn": "They are strong and powerful, but they'd rather stay in their nests and decorate than show off their muscles.",
     "image": "/images/aniimo/characters/panpanta.webp",
     "evolution": "Panpanta is part of the Susuta -> Popota -> Piopiota -> Panpanta line.",
@@ -1311,7 +1331,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Panpanta は力強いですが、筋肉を見せびらかすより巣にこもって飾り付ける方を好みます。",
+    "abilityZh": "Panpanta 强壮有力，但比起炫耀肌肉，它们更愿意待在巢里慢慢装饰。",
+    "abilityJa": "Panpanta は力強いですが、筋肉を見せびらかすより巣にこもって飾り付ける方を好みます。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "shelly",
@@ -1331,7 +1355,7 @@
     "rarity": 3,
     "region": "Echoback Landing",
     "ability": "Conceals itself among beach shells using its soft appendages to hold shells in place. Remains sealed during daylight.",
-    "description": "Conceals itself among beach shells using its soft appendages to hold shells in place. Remains sealed during daylight.",
+    "description": "Shelly 会用柔软附肢固定贝壳，把自己藏在海滩贝壳之间。白天时通常紧紧封闭不动。",
     "descriptionEn": "Conceals itself among beach shells using its soft appendages to hold shells in place. Remains sealed during daylight.",
     "image": "/images/aniimo/characters/shelly.webp",
     "evolution": "Shelly is part of the Shelly -> Sheldon -> Sherro line.",
@@ -1344,7 +1368,11 @@
     "aliases": [],
     "tierRank": "B",
     "tierReason": "BREAK role entry with official source tracking before launch.",
-    "tierReasonZh": "破韧定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "破韧定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Shelly は柔らかな付属肢で貝殻を固定し、浜辺の貝殻に紛れて身を隠します。昼間は閉じこもったままです。",
+    "abilityZh": "Shelly 会用柔软附肢固定贝壳，把自己藏在海滩贝壳之间。白天时通常紧紧封闭不动。",
+    "abilityJa": "Shelly は柔らかな付属肢で貝殻を固定し、浜辺の貝殻に紛れて身を隠します。昼間は閉じこもったままです。",
+    "tierReasonJa": "ブレイクロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "sheldon",
@@ -1364,7 +1392,7 @@
     "rarity": 4,
     "region": "Echoback Landing",
     "ability": "Lying on their shells, they face the night sky, drowning in a dream woven by the stars.",
-    "description": "Lying on their shells, they face the night sky, drowning in a dream woven by the stars.",
+    "description": "Sheldon 躺在自己的贝壳上仰望夜空，沉浸在星星编织出的梦境里。",
     "descriptionEn": "Lying on their shells, they face the night sky, drowning in a dream woven by the stars.",
     "image": "/images/aniimo/characters/sheldon.webp",
     "evolution": "Sheldon is part of the Shelly -> Sheldon -> Sherro line.",
@@ -1377,7 +1405,11 @@
     "aliases": [],
     "tierRank": "B",
     "tierReason": "BREAK role entry with official source tracking before launch.",
-    "tierReasonZh": "破韧定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "破韧定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Sheldon は貝殻の上に寝そべって夜空を見上げ、星が紡ぐ夢に浸ります。",
+    "abilityZh": "Sheldon 躺在自己的贝壳上仰望夜空，沉浸在星星编织出的梦境里。",
+    "abilityJa": "Sheldon は貝殻の上に寝そべって夜空を見上げ、星が紡ぐ夢に浸ります。",
+    "tierReasonJa": "ブレイクロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "sherro",
@@ -1397,7 +1429,7 @@
     "rarity": 5,
     "region": "Echoback Landing",
     "ability": "They turn the shells that once covered them into swords and shields to protect fragile Shellies along the coastline.",
-    "description": "They turn the shells that once covered them into swords and shields to protect fragile Shellies along the coastline.",
+    "description": "Sherro 会把曾经保护自己的贝壳改造成剑与盾，用来守护海岸线上脆弱的 Shelly。",
     "descriptionEn": "They turn the shells that once covered them into swords and shields to protect fragile Shellies along the coastline.",
     "image": "/images/aniimo/characters/sherro.webp",
     "evolution": "Sherro is part of the Shelly -> Sheldon -> Sherro line.",
@@ -1410,7 +1442,11 @@
     "aliases": [],
     "tierRank": "B",
     "tierReason": "BREAK role entry with official source tracking before launch.",
-    "tierReasonZh": "破韧定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "破韧定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Sherro はかつて自分を守っていた貝殻を剣と盾に変え、海岸の弱い Shelly を守ります。",
+    "abilityZh": "Sherro 会把曾经保护自己的贝壳改造成剑与盾，用来守护海岸线上脆弱的 Shelly。",
+    "abilityJa": "Sherro はかつて自分を守っていた貝殻を剣と盾に変え、海岸の弱い Shelly を守ります。",
+    "tierReasonJa": "ブレイクロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "baleetle",
@@ -1430,7 +1466,7 @@
     "rarity": 3,
     "region": "Blitzwood",
     "ability": "They never go anywhere without their stone balls, and the constant rolling makes the balls rounder and stranger.",
-    "description": "They never go anywhere without their stone balls, and the constant rolling makes the balls rounder and stranger.",
+    "description": "Baleetle 走到哪里都带着石球。不断滚动让石球变得越来越圆，也越来越奇妙。",
     "descriptionEn": "They never go anywhere without their stone balls, and the constant rolling makes the balls rounder and stranger.",
     "image": "/images/aniimo/characters/baleetle.webp",
     "evolution": "Baleetle is part of the Baleetle -> Waleetle -> Bouldus line.",
@@ -1443,7 +1479,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "DPS role entry with official source tracking before launch.",
-    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Baleetle は石の玉を手放しません。転がし続けることで、その玉はより丸く、より不思議な形になります。",
+    "abilityZh": "Baleetle 走到哪里都带着石球。不断滚动让石球变得越来越圆，也越来越奇妙。",
+    "abilityJa": "Baleetle は石の玉を手放しません。転がし続けることで、その玉はより丸く、より不思議な形になります。",
+    "tierReasonJa": "DPSロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "waleetle",
@@ -1463,7 +1503,7 @@
     "rarity": 4,
     "region": "Blitzwood",
     "ability": "They move backwards like their kin, but in a much fancier way.",
-    "description": "They move backwards like their kin, but in a much fancier way.",
+    "description": "Waleetle 和同类一样倒着移动，只是动作要华丽得多。",
     "descriptionEn": "They move backwards like their kin, but in a much fancier way.",
     "image": "/images/aniimo/characters/waleetle.webp",
     "evolution": "Waleetle is part of the Baleetle -> Waleetle -> Bouldus line.",
@@ -1476,7 +1516,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "DPS role entry with official source tracking before launch.",
-    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Waleetle は仲間と同じく後ろ向きに動きますが、その動きはずっと華やかです。",
+    "abilityZh": "Waleetle 和同类一样倒着移动，只是动作要华丽得多。",
+    "abilityJa": "Waleetle は仲間と同じく後ろ向きに動きますが、その動きはずっと華やかです。",
+    "tierReasonJa": "DPSロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "bouldus",
@@ -1496,7 +1540,7 @@
     "rarity": 5,
     "region": "Blitzwood",
     "ability": "A round stone that had stayed with Baleetle day and night woke up from all that bumping. Tired of being controlled, it swallowed an insect and could finally move by its own will.",
-    "description": "A round stone that had stayed with Baleetle day and night woke up from all that bumping. Tired of being controlled, it swallowed an insect and could finally move by its own will.",
+    "description": "一块日夜陪伴 Baleetle 的圆石在不断碰撞中苏醒。厌倦被操控后，它吞下一只昆虫，终于能凭自己的意志移动。",
     "descriptionEn": "A round stone that had stayed with Baleetle day and night woke up from all that bumping. Tired of being controlled, it swallowed an insect and could finally move by its own will.",
     "image": "/images/aniimo/characters/bouldus.webp",
     "evolution": "Bouldus is part of the Baleetle -> Waleetle -> Bouldus line.",
@@ -1509,7 +1553,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "DPS role entry with official source tracking before launch.",
-    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Baleetle と昼夜を共にした丸石が、衝撃を受け続けて目覚めました。操られることに飽きたそれは虫を飲み込み、自分の意思で動けるようになりました。",
+    "abilityZh": "一块日夜陪伴 Baleetle 的圆石在不断碰撞中苏醒。厌倦被操控后，它吞下一只昆虫，终于能凭自己的意志移动。",
+    "abilityJa": "Baleetle と昼夜を共にした丸石が、衝撃を受け続けて目覚めました。操られることに飽きたそれは虫を飲み込み、自分の意思で動けるようになりました。",
+    "tierReasonJa": "DPSロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "cubbo",
@@ -1529,7 +1577,7 @@
     "rarity": 3,
     "region": "Nimbus Fields",
     "ability": "They spend the day sleepwalking. If woken up, they instantly become violent and lose control. Once they exhaust their energy, they fall back asleep like a baby.",
-    "description": "They spend the day sleepwalking. If woken up, they instantly become violent and lose control. Once they exhaust their energy, they fall back asleep like a baby.",
+    "description": "Cubbo 白天总在梦游。如果被吵醒，会立刻变得狂暴并失控；耗尽体力后，又会像婴儿一样睡去。",
     "descriptionEn": "They spend the day sleepwalking. If woken up, they instantly become violent and lose control. Once they exhaust their energy, they fall back asleep like a baby.",
     "image": "/images/aniimo/characters/cubbo.webp",
     "evolution": "Cubbo is part of the Cubbo -> Grizbo line.",
@@ -1542,7 +1590,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "DPS role entry with official source tracking before launch.",
-    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Cubbo は昼間ずっと夢遊しています。起こされるとすぐ凶暴化して制御不能になりますが、力を使い果たすと赤ん坊のように眠ります。",
+    "abilityZh": "Cubbo 白天总在梦游。如果被吵醒，会立刻变得狂暴并失控；耗尽体力后，又会像婴儿一样睡去。",
+    "abilityJa": "Cubbo は昼間ずっと夢遊しています。起こされるとすぐ凶暴化して制御不能になりますが、力を使い果たすと赤ん坊のように眠ります。",
+    "tierReasonJa": "DPSロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "grizbo",
@@ -1562,7 +1614,7 @@
     "rarity": 4,
     "region": "Nimbus Fields",
     "ability": "They hide constant endurance and restraint beneath a gentle exterior. However, if provoked or hungry, they lose control and fall into a frenzy.",
-    "description": "They hide constant endurance and restraint beneath a gentle exterior. However, if provoked or hungry, they lose control and fall into a frenzy.",
+    "description": "Grizbo 温和外表下藏着惊人的耐力与克制。但一旦被挑衅或感到饥饿，就会失控陷入狂暴。",
     "descriptionEn": "They hide constant endurance and restraint beneath a gentle exterior. However, if provoked or hungry, they lose control and fall into a frenzy.",
     "image": "/images/aniimo/characters/grizbo.webp",
     "evolution": "Grizbo is part of the Cubbo -> Grizbo line.",
@@ -1575,7 +1627,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "DPS role entry with official source tracking before launch.",
-    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Grizbo は穏やかな外見の下に強い忍耐力と自制心を隠しています。しかし挑発されたり空腹になると、制御を失って暴走します。",
+    "abilityZh": "Grizbo 温和外表下藏着惊人的耐力与克制。但一旦被挑衅或感到饥饿，就会失控陷入狂暴。",
+    "abilityJa": "Grizbo は穏やかな外見の下に強い忍耐力と自制心を隠しています。しかし挑発されたり空腹になると、制御を失って暴走します。",
+    "tierReasonJa": "DPSロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "pebbling",
@@ -1595,7 +1651,7 @@
     "rarity": 3,
     "region": "Mistwoods",
     "ability": "They are natural geologists who like eating all kinds of minerals. And what they eat determines how they grow.",
-    "description": "They are natural geologists who like eating all kinds of minerals. And what they eat determines how they grow.",
+    "description": "Pebbling 是天生的地质学家，喜欢吃各种矿物。它们吃下的东西会决定之后的成长方向。",
     "descriptionEn": "They are natural geologists who like eating all kinds of minerals. And what they eat determines how they grow.",
     "image": "/images/aniimo/characters/pebbling.webp",
     "evolution": "Pebbling is part of the Pebbling -> Lavazar -> Magmarex line.",
@@ -1608,7 +1664,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Pebbling は生まれながらの地質学者で、さまざまな鉱物を食べるのが好きです。何を食べるかが成長の方向を決めます。",
+    "abilityZh": "Pebbling 是天生的地质学家，喜欢吃各种矿物。它们吃下的东西会决定之后的成长方向。",
+    "abilityJa": "Pebbling は生まれながらの地質学者で、さまざまな鉱物を食べるのが好きです。何を食べるかが成長の方向を決めます。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "lavazar",
@@ -1628,7 +1688,7 @@
     "rarity": 4,
     "region": "Blitzwood",
     "ability": "They use hard claws to crush crystals and eat them to store heat, causing fiery red patterns to appear on their body. Though small, they can continuously spew high-heat flame streams from their mouth.",
-    "description": "They use hard claws to crush crystals and eat them to store heat, causing fiery red patterns to appear on their body. Though small, they can continuously spew high-heat flame streams from their mouth.",
+    "description": "Lavazar 会用坚硬利爪碾碎水晶并吃下，以此储存热量，身体上也会浮现火红纹路。虽然体型小，却能持续喷出高热火流。",
     "descriptionEn": "They use hard claws to crush crystals and eat them to store heat, causing fiery red patterns to appear on their body. Though small, they can continuously spew high-heat flame streams from their mouth.",
     "image": "/images/aniimo/characters/lavazar.webp",
     "evolution": "Lavazar is part of the Pebbling -> Lavazar -> Magmarex line.",
@@ -1641,7 +1701,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "DPS role entry with official source tracking before launch.",
-    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Lavazar は硬い爪で結晶を砕いて食べ、熱を蓄えます。体には炎のような赤い模様が現れ、小柄でも高熱の炎を吐き続けられます。",
+    "abilityZh": "Lavazar 会用坚硬利爪碾碎水晶并吃下，以此储存热量，身体上也会浮现火红纹路。虽然体型小，却能持续喷出高热火流。",
+    "abilityJa": "Lavazar は硬い爪で結晶を砕いて食べ、熱を蓄えます。体には炎のような赤い模様が現れ、小柄でも高熱の炎を吐き続けられます。",
+    "tierReasonJa": "DPSロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "magmarex",
@@ -1661,7 +1725,7 @@
     "rarity": 5,
     "region": "Blitzwood",
     "ability": "Scorching crystals grow on their body like solidified lava. If the stored heat erupts, it can melt everything in their path.",
-    "description": "Scorching crystals grow on their body like solidified lava. If the stored heat erupts, it can melt everything in their path.",
+    "description": "Magmarex 身上长着像凝固熔岩一样的灼热水晶。若储存的热量爆发，能融化前方的一切。",
     "descriptionEn": "Scorching crystals grow on their body like solidified lava. If the stored heat erupts, it can melt everything in their path.",
     "image": "/images/aniimo/characters/magmarex.webp",
     "evolution": "Magmarex is part of the Pebbling -> Lavazar -> Magmarex line.",
@@ -1674,7 +1738,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "DPS role entry with official source tracking before launch.",
-    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Magmarex の体には固まった溶岩のような灼熱の結晶が生えています。蓄えた熱が噴き出すと、進路上のものを溶かします。",
+    "abilityZh": "Magmarex 身上长着像凝固熔岩一样的灼热水晶。若储存的热量爆发，能融化前方的一切。",
+    "abilityJa": "Magmarex の体には固まった溶岩のような灼熱の結晶が生えています。蓄えた熱が噴き出すと、進路上のものを溶かします。",
+    "tierReasonJa": "DPSロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "reefish",
@@ -1694,7 +1762,7 @@
     "rarity": 3,
     "region": "Echoback Landing",
     "ability": "They burrow underground to camouflage as coral and bite any prey that comes near. However, they sometimes get impatient and peek around.",
-    "description": "They burrow underground to camouflage as coral and bite any prey that comes near. However, they sometimes get impatient and peek around.",
+    "description": "Reefish 会钻入地下伪装成珊瑚，咬住任何靠近的猎物。不过它们有时会不耐烦地探头张望。",
     "descriptionEn": "They burrow underground to camouflage as coral and bite any prey that comes near. However, they sometimes get impatient and peek around.",
     "image": "/images/aniimo/characters/reefish.webp",
     "evolution": "Reefish is part of the Reefish -> Coraliz line.",
@@ -1707,7 +1775,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Reefish は地中に潜ってサンゴに擬態し、近づく獲物に噛みつきます。ただし待ちきれずに顔を出すこともあります。",
+    "abilityZh": "Reefish 会钻入地下伪装成珊瑚，咬住任何靠近的猎物。不过它们有时会不耐烦地探头张望。",
+    "abilityJa": "Reefish は地中に潜ってサンゴに擬態し、近づく獲物に噛みつきます。ただし待ちきれずに顔を出すこともあります。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "coraliz",
@@ -1727,7 +1799,7 @@
     "rarity": 4,
     "region": "Echoback Landing",
     "ability": "They love to bury themselves in sand, mimicking coral clumps. They use the glow of the coral on their head and back to lure creatures for a surprise attack.",
-    "description": "They love to bury themselves in sand, mimicking coral clumps. They use the glow of the coral on their head and back to lure creatures for a surprise attack.",
+    "description": "Coraliz 喜欢把自己埋进沙里，模仿珊瑚丛。它会用头部和背上的珊瑚光芒引诱生物，再突然袭击。",
     "descriptionEn": "They love to bury themselves in sand, mimicking coral clumps. They use the glow of the coral on their head and back to lure creatures for a surprise attack.",
     "image": "/images/aniimo/characters/coraliz.webp",
     "evolution": "Coraliz is part of the Reefish -> Coraliz line.",
@@ -1740,7 +1812,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Coraliz は砂に潜ってサンゴの茂みに擬態するのが好きです。頭と背中の光るサンゴで相手を誘い、不意打ちを仕掛けます。",
+    "abilityZh": "Coraliz 喜欢把自己埋进沙里，模仿珊瑚丛。它会用头部和背上的珊瑚光芒引诱生物，再突然袭击。",
+    "abilityJa": "Coraliz は砂に潜ってサンゴの茂みに擬態するのが好きです。頭と背中の光るサンゴで相手を誘い、不意打ちを仕掛けます。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "cheekie",
@@ -1760,7 +1836,7 @@
     "rarity": 3,
     "region": "Echoback Landing",
     "ability": "People often mistake the circles on their cheeks for eyes. They love to gather in groups on the shore, feeling safe only when they huddle closely with their companions.",
-    "description": "People often mistake the circles on their cheeks for eyes. They love to gather in groups on the shore, feeling safe only when they huddle closely with their companions.",
+    "description": "人们常把 Cheekie 脸颊上的圆圈误认为眼睛。它们喜欢在岸边群聚，只有和同伴紧紧挤在一起才会安心。",
     "descriptionEn": "People often mistake the circles on their cheeks for eyes. They love to gather in groups on the shore, feeling safe only when they huddle closely with their companions.",
     "image": "/images/aniimo/characters/cheekie.webp",
     "evolution": "Cheekie is part of the Cheekie -> Wavwal line.",
@@ -1773,7 +1849,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Support role entry with official source tracking before launch.",
-    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "辅助定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Cheekie の頬の丸模様はよく目と間違えられます。岸辺で群れるのが好きで、仲間と寄り添っている時だけ安心します。",
+    "abilityZh": "人们常把 Cheekie 脸颊上的圆圈误认为眼睛。它们喜欢在岸边群聚，只有和同伴紧紧挤在一起才会安心。",
+    "abilityJa": "Cheekie の頬の丸模様はよく目と間違えられます。岸辺で群れるのが好きで、仲間と寄り添っている時だけ安心します。",
+    "tierReasonJa": "サポートロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "wavwal",
@@ -1793,7 +1873,7 @@
     "rarity": 3,
     "region": "Echoback Landing",
     "ability": "They move clumsily on land using their four limbs, but they are experts at sliding on their bellies. The males are highly territorial against other males, once angered, they unleash their wrath like a tsunami.",
-    "description": "They move clumsily on land using their four limbs, but they are experts at sliding on their bellies. The males are highly territorial against other males, once angered, they unleash their wrath like a tsunami.",
+    "description": "Wavwal 在陆地上用四肢笨拙移动，却是用肚皮滑行的高手。雄性领地意识很强，一旦被激怒，怒火会像海啸般爆发。",
     "descriptionEn": "They move clumsily on land using their four limbs, but they are experts at sliding on their bellies. The males are highly territorial against other males, once angered, they unleash their wrath like a tsunami.",
     "image": "/images/aniimo/characters/wavwal.webp",
     "evolution": "Wavwal is part of the Cheekie -> Wavwal line.",
@@ -1806,7 +1886,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "DPS role entry with official source tracking before launch.",
-    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "输出定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Wavwal は陸では四肢でぎこちなく動きますが、腹ばいで滑るのは得意です。オスは縄張り意識が強く、怒ると津波のように怒りを解き放ちます。",
+    "abilityZh": "Wavwal 在陆地上用四肢笨拙移动，却是用肚皮滑行的高手。雄性领地意识很强，一旦被激怒，怒火会像海啸般爆发。",
+    "abilityJa": "Wavwal は陸では四肢でぎこちなく動きますが、腹ばいで滑るのは得意です。オスは縄張り意識が強く、怒ると津波のように怒りを解き放ちます。",
+    "tierReasonJa": "DPSロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "bubbeep",
@@ -1826,7 +1910,7 @@
     "rarity": 3,
     "region": "Sea of Flowers",
     "ability": "It stretches its leafy feathers with lazy ease, always chewing away as it turns algae and slime into floating bubbles. One light hop, and off it drifts, riding the bubbles like a little boat in the breeze.",
-    "description": "It stretches its leafy feathers with lazy ease, always chewing away as it turns algae and slime into floating bubbles. One light hop, and off it drifts, riding the bubbles like a little boat in the breeze.",
+    "description": "Bubbeep 慵懒地伸展叶状羽毛，一边咀嚼，一边把藻类和黏液变成漂浮泡泡。轻轻一跳，就能像小船一样乘着泡泡随风飘走。",
     "descriptionEn": "It stretches its leafy feathers with lazy ease, always chewing away as it turns algae and slime into floating bubbles. One light hop, and off it drifts, riding the bubbles like a little boat in the breeze.",
     "image": "/images/aniimo/characters/bubbeep.webp",
     "evolution": "Bubbeep is part of the Bubbeep -> Glameep line.",
@@ -1839,7 +1923,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Heal role entry with official source tracking before launch.",
-    "tierReasonZh": "治疗定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "治疗定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Bubbeep は葉のような羽をのんびり伸ばし、藻やぬめりを噛みながら浮かぶ泡に変えます。軽く跳ねるだけで、小舟のように泡に乗って風に漂います。",
+    "abilityZh": "Bubbeep 慵懒地伸展叶状羽毛，一边咀嚼，一边把藻类和黏液变成漂浮泡泡。轻轻一跳，就能像小船一样乘着泡泡随风飘走。",
+    "abilityJa": "Bubbeep は葉のような羽をのんびり伸ばし、藻やぬめりを噛みながら浮かぶ泡に変えます。軽く跳ねるだけで、小舟のように泡に乗って風に漂います。",
+    "tierReasonJa": "ヒールロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "glameep",
@@ -1859,7 +1947,7 @@
     "rarity": 4,
     "region": "Sea of Flowers",
     "ability": "Draped in fresh green leaf-feathers, Glameep moves lightly along the lake shore. It adores clear water most of all, especially when that water reflects its own graceful, unhurried beauty.",
-    "description": "Draped in fresh green leaf-feathers, Glameep moves lightly along the lake shore. It adores clear water most of all, especially when that water reflects its own graceful, unhurried beauty.",
+    "description": "Glameep 披着清新的绿色叶羽，轻盈地沿湖岸移动。它最喜爱清澈的水，尤其喜欢水面映出自己优雅从容的样子。",
     "descriptionEn": "Draped in fresh green leaf-feathers, Glameep moves lightly along the lake shore. It adores clear water most of all, especially when that water reflects its own graceful, unhurried beauty.",
     "image": "/images/aniimo/characters/glameep.webp",
     "evolution": "Glameep is part of the Bubbeep -> Glameep line.",
@@ -1872,7 +1960,11 @@
     "aliases": [],
     "tierRank": "A",
     "tierReason": "Heal role entry with official source tracking before launch.",
-    "tierReasonZh": "治疗定位条目，已按官方公开资料追踪。"
+    "tierReasonZh": "治疗定位条目，已按官方公开资料追踪。",
+    "descriptionJa": "Glameep は新緑の葉羽をまとい、湖岸を軽やかに歩きます。澄んだ水を何より好み、とくに自分の優雅な姿が映る水面を愛します。",
+    "abilityZh": "Glameep 披着清新的绿色叶羽，轻盈地沿湖岸移动。它最喜爱清澈的水，尤其喜欢水面映出自己优雅从容的样子。",
+    "abilityJa": "Glameep は新緑の葉羽をまとい、湖岸を軽やかに歩きます。澄んだ水を何より好み、とくに自分の優雅な姿が映る水面を愛します。",
+    "tierReasonJa": "ヒールロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "budsquire",
@@ -1892,7 +1984,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "The timid crybabies can also rise up against enemies when cornered. The buds on their heads will blossom as they do so.",
-    "description": "The timid crybabies can also rise up against enemies when cornered. The buds on their heads will blossom as they do so.",
+    "description": "胆小爱哭的 Budsquire 被逼到绝境时，也会挺身反抗敌人。那一刻，头顶的花苞会随之绽放。",
     "descriptionEn": "The timid crybabies can also rise up against enemies when cornered. The buds on their heads will blossom as they do so.",
     "image": "/images/aniimo/characters/budsquire.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -1905,7 +1997,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "臆病で泣き虫な Budsquire も、追い詰められると敵に立ち向かいます。その時、頭のつぼみが花開きます。",
+    "abilityZh": "胆小爱哭的 Budsquire 被逼到绝境时，也会挺身反抗敌人。那一刻，头顶的花苞会随之绽放。",
+    "abilityJa": "臆病で泣き虫な Budsquire も、追い詰められると敵に立ち向かいます。その時、頭のつぼみが花開きます。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "thornblade",
@@ -1925,7 +2021,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "The swords made from thorny stems are drawn only when it's time to protect their pack against enemies.",
-    "description": "The swords made from thorny stems are drawn only when it's time to protect their pack against enemies.",
+    "description": "由带刺茎干形成的剑，只有在保护族群免受敌人伤害时才会出鞘。",
     "descriptionEn": "The swords made from thorny stems are drawn only when it's time to protect their pack against enemies.",
     "image": "/images/aniimo/characters/thornblade.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -1938,7 +2034,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "棘のある茎でできた剣は、群れを敵から守る時にだけ抜かれます。",
+    "abilityZh": "由带刺茎干形成的剑，只有在保护族群免受敌人伤害时才会出鞘。",
+    "abilityJa": "棘のある茎でできた剣は、群れを敵から守る時にだけ抜かれます。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "melloblum",
@@ -1958,7 +2058,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "To quell disputes, they scatter fragrant petals, causing those who touch them to feel happiness and crush their fighting spirit.",
-    "description": "To quell disputes, they scatter fragrant petals, causing those who touch them to feel happiness and crush their fighting spirit.",
+    "description": "Melloblum 会撒下芬芳花瓣来平息争端。触碰花瓣的人会感到幸福，战意也会被悄悄瓦解。",
     "descriptionEn": "To quell disputes, they scatter fragrant petals, causing those who touch them to feel happiness and crush their fighting spirit.",
     "image": "/images/aniimo/characters/melloblum.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -1971,7 +2071,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Melloblum は争いを鎮めるために香り高い花びらを撒きます。触れた者は幸せな気分になり、戦う気持ちを失います。",
+    "abilityZh": "Melloblum 会撒下芬芳花瓣来平息争端。触碰花瓣的人会感到幸福，战意也会被悄悄瓦解。",
+    "abilityJa": "Melloblum は争いを鎮めるために香り高い花びらを撒きます。触れた者は幸せな気分になり、戦う気持ちを失います。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "pomegg",
@@ -1991,7 +2095,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "They retreat into their shells to rest, often getting mistaken for eggs. They fear battle but love a crowd, dancing with grass balls to cheer others on.",
-    "description": "They retreat into their shells to rest, often getting mistaken for eggs. They fear battle but love a crowd, dancing with grass balls to cheer others on.",
+    "description": "Pomegg 会缩进壳里休息，常被误认成蛋。它们害怕战斗，却喜欢热闹，会挥舞草球跳舞为大家打气。",
     "descriptionEn": "They retreat into their shells to rest, often getting mistaken for eggs. They fear battle but love a crowd, dancing with grass balls to cheer others on.",
     "image": "/images/aniimo/characters/pomegg.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2004,7 +2108,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Pomegg は殻にこもって休むため、卵と間違えられがちです。戦いは怖いものの賑やかな場所が好きで、草の玉と踊って仲間を応援します。",
+    "abilityZh": "Pomegg 会缩进壳里休息，常被误认成蛋。它们害怕战斗，却喜欢热闹，会挥舞草球跳舞为大家打气。",
+    "abilityJa": "Pomegg は殻にこもって休むため、卵と間違えられがちです。戦いは怖いものの賑やかな場所が好きで、草の玉と踊って仲間を応援します。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "dazmand",
@@ -2024,7 +2132,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "They have flexible limbs and love to show off their flashy kicks to anyone watching. They wear their shed skin over their heads like a cool hood.",
-    "description": "They have flexible limbs and love to show off their flashy kicks to anyone watching. They wear their shed skin over their heads like a cool hood.",
+    "description": "Dazmand 四肢灵活，喜欢向观众展示华丽踢技。它们还会把蜕下的皮套在头上，当作帅气兜帽。",
     "descriptionEn": "They have flexible limbs and love to show off their flashy kicks to anyone watching. They wear their shed skin over their heads like a cool hood.",
     "image": "/images/aniimo/characters/dazmand.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2037,7 +2145,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Dazmand はしなやかな手足を持ち、見ている相手に派手な蹴りを見せるのが好きです。脱皮した皮を頭にかぶり、格好いいフードのように使います。",
+    "abilityZh": "Dazmand 四肢灵活，喜欢向观众展示华丽踢技。它们还会把蜕下的皮套在头上，当作帅气兜帽。",
+    "abilityJa": "Dazmand はしなやかな手足を持ち、見ている相手に派手な蹴りを見せるのが好きです。脱皮した皮を頭にかぶり、格好いいフードのように使います。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "pomawk",
@@ -2057,7 +2169,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "Their towering manes display their wild nature, while their feral roars reveal their true colors. Their tails are built to store sound waves, releasing a sonic boom when they strike an opponent.",
-    "description": "Their towering manes display their wild nature, while their feral roars reveal their true colors. Their tails are built to store sound waves, releasing a sonic boom when they strike an opponent.",
+    "description": "Pomawk 高耸的鬃毛展现出野性，凶猛咆哮也暴露了本性。尾巴能储存声波，击中对手时释放音爆。",
     "descriptionEn": "Their towering manes display their wild nature, while their feral roars reveal their true colors. Their tails are built to store sound waves, releasing a sonic boom when they strike an opponent.",
     "image": "/images/aniimo/characters/pomawk.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2070,7 +2182,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Pomawk の高くそびえるたてがみは野性を示し、荒々しい咆哮が本性をあらわにします。尾は音波を蓄え、相手を打つ時にソニックブームを放ちます。",
+    "abilityZh": "Pomawk 高耸的鬃毛展现出野性，凶猛咆哮也暴露了本性。尾巴能储存声波，击中对手时释放音爆。",
+    "abilityJa": "Pomawk の高くそびえるたてがみは野性を示し、荒々しい咆哮が本性をあらわにします。尾は音波を蓄え、相手を打つ時にソニックブームを放ちます。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "dewy",
@@ -2090,7 +2206,7 @@
     "rarity": 2,
     "region": "Official Wiki",
     "ability": "As partners to perfumers, they store and ferment nectar within their bodies, transforming it into perfume ingredients.",
-    "description": "As partners to perfumers, they store and ferment nectar within their bodies, transforming it into perfume ingredients.",
+    "description": "Dewy 是调香师的伙伴，会在体内储存并发酵花蜜，把它转化为香水原料。",
     "descriptionEn": "As partners to perfumers, they store and ferment nectar within their bodies, transforming it into perfume ingredients.",
     "image": "/images/aniimo/characters/dewy.webp",
     "evolution": "Official Index form listed in the official Aniimo Wiki index.",
@@ -2103,7 +2219,11 @@
     "aliases": [],
     "tierRank": "C",
     "tierReason": "Public index entry awaiting launch gameplay verification.",
-    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。"
+    "tierReasonZh": "公开索引条目，等待上线后验证玩法定位。",
+    "descriptionJa": "Dewy は調香師の相棒で、体内に蜜を蓄えて発酵させ、香水の材料へと変えます。",
+    "abilityZh": "Dewy 是调香师的伙伴，会在体内储存并发酵花蜜，把它转化为香水原料。",
+    "abilityJa": "Dewy は調香師の相棒で、体内に蜜を蓄えて発酵させ、香水の材料へと変えます。",
+    "tierReasonJa": "確認待ちロールの項目。公式公開情報に基づいて追跡中です。"
   },
   {
     "id": "fragrancier",
