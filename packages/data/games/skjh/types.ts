@@ -3,8 +3,10 @@ import type { SupportedLocale } from '@gachia/core';
 export interface SkjhGuideFaq {
   question: string;
   questionZh: string;
+  questionJa?: string;
   answer: string;
   answerZh: string;
+  answerJa?: string;
 }
 
 export interface SkjhGuide {

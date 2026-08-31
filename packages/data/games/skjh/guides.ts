@@ -1,6 +1,12 @@
 import type { SupportedLocale } from '@gachia/core';
+import { join } from 'node:path';
+import { loadJson } from '../../load-json';
 import { localeStr, type SkjhGuide, type SkjhGuideFaq } from './types';
-import rawGuides from './raw-guides.json';
+
+const rawGuides = await loadJson<unknown>(
+  join(process.cwd(), '../../packages/data/games/skjh/raw-guides.json'),
+  '/data/skjh/raw-guides.json',
+);
 
 export type { SkjhGuide, SkjhGuideFaq } from './types';
 
@@ -39,11 +45,11 @@ export function getSkjhGuideSlugs(): string[] {
 }
 
 export function getSkjhGuideFaqQuestion(faq: SkjhGuideFaq, locale: SupportedLocale): string {
-  return localeStr(faq.questionZh, faq.question, locale);
+  return localeStr(faq.questionZh, faq.question, locale, faq.questionJa);
 }
 
 export function getSkjhGuideFaqAnswer(faq: SkjhGuideFaq, locale: SupportedLocale): string {
-  return localeStr(faq.answerZh, faq.answer, locale);
+  return localeStr(faq.answerZh, faq.answer, locale, faq.answerJa);
 }
 
 export const SKJH_GUIDE_CATEGORIES: Record<string, Record<SupportedLocale, string>> = {};
