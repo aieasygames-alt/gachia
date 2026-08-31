@@ -1,10 +1,6 @@
 import { NextResponse } from 'next/server';
-import { z } from 'zod';
 
 const INDEXNOW_KEY = 'gachia2026indexnowkey';
-const UrlListSchema = z.object({
-  urls: z.array(z.string().url().max(2048)).min(1).max(10000),
-});
 
 // IndexNow API endpoint — ping search engines when content changes
 export async function POST(request: Request) {
@@ -21,11 +17,11 @@ export async function POST(request: Request) {
   }
 
   try {
-    const parsedBody = UrlListSchema.safeParse(await request.json());
-    if (!parsedBody.success) {
+    const payload: unknown = await request.json();
+    const urls = isUrlPayload(payload) ? payload.urls : null;
+    if (!urls) {
       return NextResponse.json({ error: 'Invalid urls array' }, { status: 400 });
     }
-    const urls = parsedBody.data.urls;
 
     if (urls.some((url) => {
       const parsedUrl = new URL(url);
@@ -67,4 +63,13 @@ export async function POST(request: Request) {
   } catch {
     return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
   }
+}
+
+function isUrlPayload(payload: unknown): payload is { urls: string[] } {
+  if (!payload || typeof payload !== 'object' || !('urls' in payload)) return false;
+  const urls = (payload as { urls: unknown }).urls;
+  return Array.isArray(urls)
+    && urls.length >= 1
+    && urls.length <= 10000
+    && urls.every((url) => typeof url === 'string' && url.length <= 2048 && URL.canParse(url));
 }

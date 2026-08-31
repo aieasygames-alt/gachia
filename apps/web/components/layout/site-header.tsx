@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
 import { GAMES, GAME_IDS } from '@gachia/core';
 import type { SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
@@ -73,7 +72,7 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
         <div className="container mx-auto flex h-16 items-center justify-between gap-4 px-4">
           {/* Logo */}
           <Link href="/" className="flex shrink-0 items-center gap-3">
-            <Image src="/images/logo.webp" alt="Gachia" width={36} height={36} className="h-9 w-9 rounded-lg" />
+            <img src="/images/logo.webp" alt="Gachia" width={36} height={36} className="h-9 w-9 rounded-lg" />
             <span className="text-xl font-black text-game-text">Gachia</span>
           </Link>
 

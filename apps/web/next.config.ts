@@ -36,6 +36,9 @@ const nextConfig: NextConfig = {
   },
   trailingSlash: false,
   outputFileTracingRoot: join(__dirname, '../..'),
+  outputFileTracingExcludes: {
+    '*': ['../../packages/data/games/**/raw-*.json'],
+  },
   transpilePackages: ['react-leaflet', '@react-leaflet/core', 'react-leaflet-cluster'],
 };
 

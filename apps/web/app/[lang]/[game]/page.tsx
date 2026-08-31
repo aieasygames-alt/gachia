@@ -1,6 +1,5 @@
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import Image from 'next/image';
 import { Link } from '@/lib/i18n/navigation';
 import { getCharacterSummariesByIds } from '@/lib/game-data/characters';
 import { getGuideListData } from '@/lib/game-data/guides';
@@ -943,7 +942,7 @@ export default async function GameHome({
       <div className="mb-8">
         <div className="flex items-center gap-4 mb-2">
           <div className="relative h-14 w-14 flex-shrink-0 overflow-hidden rounded-xl">
-            <Image
+            <img
               src={`/images/og/${gameId}.webp`}
               alt={`${gameConfig.name[locale]} ${locale === 'zh' ? '游戏封面' : locale === 'ja' ? 'ゲームアイコン' : 'game cover'}`}
               width={56}
@@ -1266,7 +1265,7 @@ export default async function GameHome({
                 className="group flex items-center gap-2.5 rounded-lg border border-game-border bg-game-surface px-3 py-2 transition-colors hover:border-game-primary"
               >
                 <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                  <Image
+                  <img
                     src={char.image}
                     alt={char.name}
                     width={40}

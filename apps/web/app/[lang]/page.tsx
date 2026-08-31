@@ -3,7 +3,6 @@ import type { SupportedLocale } from '@gachia/core';
 import { GAMES, GAME_IDS, CATEGORY_LABELS } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
 import { buildHomepageJsonLd } from '@/lib/jsonld';
-import Image from 'next/image';
 import zhMessages from '@/messages/zh.json';
 import enMessages from '@/messages/en.json';
 import jaMessages from '@/messages/ja.json';
@@ -330,13 +329,11 @@ export default async function LocaleHome({
                     style={{ borderColor: game.theme.primary + '66' }}
                   >
                     <div className="relative aspect-[16/9]">
-                      <Image
+                      <img
                         src={`/images/og/${gameId}.webp`}
                         alt={game.name[locale]}
-                        fill
-                        sizes="(min-width: 1280px) 170px, (min-width: 640px) 50vw, 100vw"
-                        className="object-cover transition-transform group-hover:scale-105"
-                        priority={gameId === spotlightGames[0]}
+                        className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                        fetchPriority={gameId === spotlightGames[0] ? 'high' : undefined}
                       />
                     </div>
                     <div className="flex items-center justify-between gap-2 p-3">
@@ -447,11 +444,9 @@ export default async function LocaleHome({
             >
               <Link href={`/${gameId}` as '/'} className="block">
                 <div className="relative h-36 w-full overflow-hidden sm:h-full">
-                  <Image
+                  <img
                     src={`/images/og/${gameId}.webp`}
                     alt={`${game.name[locale]} - ${locale === 'zh' ? '游戏攻略Wiki' : locale === 'ja' ? 'ゲーム攻略Wiki' : 'Game Wiki'}`}
-                    fill
-                    sizes="(min-width: 1280px) 150px, (min-width: 768px) 150px, 100vw"
                     className="h-full w-full object-cover transition-transform group-hover:scale-105"
                     loading="lazy"
                   />
@@ -549,7 +544,7 @@ export default async function LocaleHome({
                   className="group flex items-center gap-3 rounded-lg border border-game-border bg-game-surface px-4 py-3 transition-colors hover:border-game-primary"
                 >
                   <div className="relative h-12 w-12 overflow-hidden rounded-full">
-                      <Image
+                    <img
                       src={`/images/${gameId}/characters/${char.id}.webp`}
                       alt={char.name[locale]}
                       width={48}

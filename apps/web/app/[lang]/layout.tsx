@@ -1,6 +1,5 @@
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
-import { GoogleAnalytics } from '@next/third-parties/google';
 import { LOCALES, DEFAULT_LOCALE } from '@gachia/core';
 import type { SupportedLocale } from '@gachia/core';
 import { SiteHeader } from '@/components/layout/site-header';
@@ -38,7 +37,17 @@ export default async function LocaleLayout({
   return (
     <html lang={locale === 'zh' ? 'zh-Hans' : locale}>
       <head>
-        <GoogleAnalytics gaId="G-4L1VKXGY2Y" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4L1VKXGY2Y" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-4L1VKXGY2Y');
+          `,
+          }}
+        />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8569630257520732"

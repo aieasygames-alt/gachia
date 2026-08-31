@@ -19,21 +19,16 @@ const LEGACY_CHARACTER_LIST_REDIRECTS: Partial<Record<GameId, readonly string[]>
 
 const LEGACY_STARRAIL_ITEM_SLUGS = ['ancient-spar', 'scorched-acorn', 'storm-eye', 'void-cast-iron'] as const;
 
-const INDEXABLE_GAME_ROUTES: Record<GameId, readonly string[]> = {
-  genshin: ['characters', 'weapons', 'items', 'tier-list', 'calculator', 'map', 'guides', 'artifacts', 'build', 'version', 'download', 'compare', 'teams', 'redeem-codes'],
-  starrail: ['characters', 'weapons', 'items', 'tier-list', 'calculator', 'map', 'guides', 'artifacts', 'build', 'version', 'download', 'compare', 'teams', 'redeem-codes'],
-  wuwa: ['characters', 'weapons', 'items', 'tier-list', 'map', 'guides', 'build', 'version', 'download', 'compare', 'teams', 'redeem-codes'],
-  nte: ['characters', 'weapons', 'items', 'tier-list', 'map', 'guides', 'disk-sets', 'redeem-codes', 'gacha', 'anomalies', 'build', 'version', 'download'],
-  zzz: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'drive-discs', 'build', 'version', 'download', 'compare', 'teams', 'redeem-codes'],
-  guihuan: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'version', 'download', 'compare', 'teams'],
-  ananta: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'version', 'download'],
-  endfield: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'version', 'download', 'compare', 'teams', 'map'],
-  sea: ['characters', 'guides', 'items', 'tier-list', 'redeem-codes', 'build', 'version', 'download', 'calculator'],
-  skjh: ['weapons', 'guides', 'items', 'redeem-codes', 'calculator', 'teams', 'map', 'build', 'version', 'download'],
-  roco: ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'version', 'download', 'redeem-codes'],
-  'roco-cn': ['characters', 'weapons', 'items', 'tier-list', 'guides', 'build', 'version', 'download', 'redeem-codes'],
-  aniimo: ['characters', 'guides', 'map', 'version', 'download', 'redeem-codes'],
+const GAME_ROUTE_DENYLIST: Partial<Record<GameId, readonly string[]>> = {
+  aniimo: ['weapons', 'items', 'tier-list', 'build', 'compare', 'teams', 'artifacts', 'drive-discs', 'disk-sets', 'calculator', 'gacha', 'anomalies'],
+  skjh: ['characters', 'tier-list', 'artifacts', 'drive-discs', 'disk-sets', 'compare', 'gacha', 'anomalies'],
+  roco: ['items', 'artifacts', 'drive-discs', 'disk-sets', 'calculator', 'compare', 'teams', 'gacha', 'anomalies', 'map'],
+  sea: ['weapons', 'artifacts', 'drive-discs', 'disk-sets', 'compare', 'teams', 'gacha', 'anomalies', 'map'],
 };
+
+function isIndexableRoute(game: GameId, route: string): boolean {
+  return !GAME_ROUTE_DENYLIST[game]?.includes(route);
+}
 
 function asLocale(segment?: string): LocaleId | undefined {
   return LOCALES.includes(segment as LocaleId) ? (segment as LocaleId) : undefined;
@@ -72,8 +67,7 @@ export default function middleware(request: NextRequest) {
     const cleanedThirdSegment = stripLabelSuffix(thirdSegment);
 
     if (secondSegment && !thirdSegment && cleanedSecondSegment) {
-      const indexableRoutes = INDEXABLE_GAME_ROUTES[game];
-      if (indexableRoutes.includes(cleanedSecondSegment)) {
+      if (isIndexableRoute(game, cleanedSecondSegment)) {
         return redirectTo(request, `/${DEFAULT_CANONICAL_LOCALE}/${game}/${cleanedSecondSegment}`);
       }
     }
@@ -132,8 +126,7 @@ export default function middleware(request: NextRequest) {
   }
 
   if (locale && game && thirdSegment && !fourthSegment) {
-    const indexableRoutes = INDEXABLE_GAME_ROUTES[game];
-    if (!indexableRoutes.includes(thirdSegment)) {
+    if (!isIndexableRoute(game, thirdSegment)) {
       return redirectTo(request, `/${locale}/${game}`);
     }
   }
@@ -143,8 +136,7 @@ export default function middleware(request: NextRequest) {
     const targetLocale = DEFAULT_CANONICAL_LOCALE;
 
     if (secondSegment && !thirdSegment) {
-      const indexableRoutes = INDEXABLE_GAME_ROUTES[game];
-      if (!indexableRoutes.includes(secondSegment)) {
+      if (!isIndexableRoute(game, secondSegment)) {
         return redirectTo(request, `/${targetLocale}/${game}`);
       }
     }
