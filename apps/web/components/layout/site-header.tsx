@@ -39,7 +39,7 @@ const NAV_GROUPS = [
 
 function getCompactGameName(gameId: (typeof FEATURED_GAMES)[number], locale: SupportedLocale) {
   if (locale === 'zh' && gameId === 'roco') return '洛克国际服';
-  if (locale === 'zh' && gameId === 'skjh') return '世界计划';
+  if (locale === 'zh' && gameId === 'skjh') return '失控进化';
   if (locale === 'ja' && gameId === 'roco') return 'Roco';
   return GAMES[gameId].name[locale];
 }
