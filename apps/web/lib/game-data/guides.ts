@@ -9,7 +9,6 @@ export interface GuideListEntry {
   tags: string[];
   updatedAt?: string;
   currentVersion?: string;
-  raw?: unknown;
 }
 
 export interface GuideListData {
@@ -42,7 +41,6 @@ function toGuideListEntry<T extends RawGuide>(
     tags: guide.tags ?? [],
     updatedAt: guide.updatedAt,
     currentVersion: guide.currentVersion,
-    raw: guide,
   };
 }
 
