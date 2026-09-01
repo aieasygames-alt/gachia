@@ -1,0 +1,2351 @@
+[
+  {
+    "id": "dimo",
+    "name": "迪莫",
+    "nameEn": "Dimo",
+    "attribute": "light",
+    "attributeEn": "Light",
+    "rarity": 5,
+    "status": "revealed"
+  },
+  {
+    "id": "huohua",
+    "name": "火花",
+    "nameEn": "Huohua",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "shuilanlan",
+    "name": "水蓝蓝",
+    "nameEn": "Shuilanlan",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "miaomiao",
+    "name": "喵喵",
+    "nameEn": "Miaomiao",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "huangjia-shijiu",
+    "name": "皇家狮鹫",
+    "nameEn": "Royal Griffin",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "luoyin",
+    "name": "罗隐",
+    "nameEn": "Luoyin",
+    "attribute": "dark",
+    "attributeEn": "Dark",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "xuewawa",
+    "name": "雪娃娃",
+    "nameEn": "Xuewawa",
+    "attribute": "ice",
+    "attributeEn": "Ice",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "youguang-rongrong",
+    "name": "优光绒绒",
+    "nameEn": "Youguang Rongrong",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 5,
+    "status": "revealed"
+  },
+  {
+    "id": "huoshen",
+    "name": "火神",
+    "nameEn": "Huoshen",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "liehuozhanshen",
+    "name": "烈火战神",
+    "nameEn": "Liehuo Zhanshen",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "shuiling",
+    "name": "水灵",
+    "nameEn": "Shuiling",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "shengshuishouhu",
+    "name": "圣水守护",
+    "nameEn": "Shengshui Shouhu",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "molimao",
+    "name": "魔力猫",
+    "nameEn": "Molimao",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "yinsuquan",
+    "name": "音速犬",
+    "nameEn": "Yinsuquan",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "abu",
+    "name": "阿布",
+    "nameEn": "Abu",
+    "attribute": "dragon",
+    "attributeEn": "Dragon",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "kula",
+    "name": "酷拉",
+    "nameEn": "Kula",
+    "attribute": "electric",
+    "attributeEn": "Electric",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "lanniao",
+    "name": "岚鸟",
+    "nameEn": "Lanniao",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 3,
+    "status": "released"
+  },
+  {
+    "id": "baijindujiaoshou",
+    "name": "白金独角兽",
+    "nameEn": "Baijindujiaoshou",
+    "attribute": "light",
+    "attributeEn": "Light",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "amiying",
+    "name": "阿米樱",
+    "nameEn": "Amiying",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 3,
+    "status": "released"
+  },
+  {
+    "id": "emolang",
+    "name": "恶魔狼",
+    "nameEn": "Emolang",
+    "attribute": "dark",
+    "attributeEn": "Dark",
+    "rarity": 3,
+    "status": "released"
+  },
+  {
+    "id": "bushishi",
+    "name": "布是石",
+    "nameEn": "Bushishi",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 2,
+    "status": "released"
+  },
+  {
+    "id": "miaowu",
+    "name": "喵呜",
+    "nameEn": "Miaowu",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "yanhuo",
+    "name": "焰火",
+    "nameEn": "Yanhuo",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "bobola",
+    "name": "波波拉",
+    "nameEn": "Bobola",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "yajiji",
+    "name": "鸭吉吉",
+    "nameEn": "Yajiji",
+    "attribute": "normal",
+    "attributeEn": "Normal",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "banbanke",
+    "name": "板板壳",
+    "nameEn": "Banbanke",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "kakake",
+    "name": "咔咔壳",
+    "nameEn": "Kakake",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "shuipaoke",
+    "name": "水泡壳",
+    "nameEn": "Shuipaoke",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "zhuiweiyang",
+    "name": "锥尾羊",
+    "nameEn": "Zhuiweiyang",
+    "attribute": "ghost",
+    "attributeEn": "Ghost",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "linglanyang",
+    "name": "铃兰羊",
+    "nameEn": "Linglanyang",
+    "attribute": "ghost",
+    "attributeEn": "Ghost",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "huayinglingyang",
+    "name": "花影羚羊",
+    "nameEn": "Huayinglingyang",
+    "attribute": "ghost",
+    "attributeEn": "Ghost",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "xuerongniao",
+    "name": "雪绒鸟",
+    "nameEn": "Xuerongniao",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "dongyuque",
+    "name": "冬羽雀",
+    "nameEn": "Dongyuque",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "xiaolinggu",
+    "name": "小灵菇",
+    "nameEn": "Xiaolinggu",
+    "attribute": "ghost",
+    "attributeEn": "Ghost",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "huanlinggu",
+    "name": "幻灵菇",
+    "nameEn": "Huanlinggu",
+    "attribute": "ghost",
+    "attributeEn": "Ghost",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "huanyinglinggu",
+    "name": "幻影灵菇",
+    "nameEn": "Huanyinglinggu",
+    "attribute": "ghost",
+    "attributeEn": "Ghost",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "shifuxi",
+    "name": "石肤蜥",
+    "nameEn": "Shifuxi",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "shicixi",
+    "name": "石刺蜥",
+    "nameEn": "Shicixi",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "shiguanwangxi",
+    "name": "石冠王蜥",
+    "nameEn": "Shiguanwangxi",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "bushiyan",
+    "name": "布是岩",
+    "nameEn": "Bushiyan",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "bukelengyan",
+    "name": "布克棱岩",
+    "nameEn": "Bukelengyan",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "emoding",
+    "name": "恶魔叮",
+    "nameEn": "Emoding",
+    "attribute": "dark",
+    "attributeEn": "Dark",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "dingdingemo",
+    "name": "叮叮恶魔",
+    "nameEn": "Dingdingemo",
+    "attribute": "dark",
+    "attributeEn": "Dark",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "maomao",
+    "name": "毛毛",
+    "nameEn": "Maomao",
+    "attribute": "bug",
+    "attributeEn": "Bug",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "papa",
+    "name": "爬爬",
+    "nameEn": "Papa",
+    "attribute": "bug",
+    "attributeEn": "Bug",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "huadie",
+    "name": "化蝶",
+    "nameEn": "Huadie",
+    "attribute": "bug",
+    "attributeEn": "Bug",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "youyingshu",
+    "name": "幽影树",
+    "nameEn": "Youyingshu",
+    "attribute": "ghost",
+    "attributeEn": "Ghost",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "xiaoshuta",
+    "name": "小鼠獭",
+    "nameEn": "Xiaoshuta",
+    "attribute": "normal",
+    "attributeEn": "Normal",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "yanweita",
+    "name": "燕尾獭",
+    "nameEn": "Yanweita",
+    "attribute": "normal",
+    "attributeEn": "Normal",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "juanhujuta",
+    "name": "卷胡巨獭",
+    "nameEn": "Juanhujuta",
+    "attribute": "normal",
+    "attributeEn": "Normal",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "kuangjingchong",
+    "name": "矿晶虫",
+    "nameEn": "Kuangjingchong",
+    "attribute": "light",
+    "attributeEn": "Light",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "jingshiwo",
+    "name": "晶石蜗",
+    "nameEn": "Jingshiwo",
+    "attribute": "light",
+    "attributeEn": "Light",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "qilicao",
+    "name": "奇丽草",
+    "nameEn": "Qilicao",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "qiliye",
+    "name": "奇丽叶",
+    "nameEn": "Qiliye",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "qilihua",
+    "name": "奇丽花",
+    "nameEn": "Qilihua",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "diudiu",
+    "name": "丢丢",
+    "nameEn": "Diudiu",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "kakachong",
+    "name": "卡卡虫",
+    "nameEn": "Kakachong",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "kawazhong",
+    "name": "卡瓦重",
+    "nameEn": "Kawazhong",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "huzhuquan",
+    "name": "护主犬",
+    "nameEn": "Huzhuquan",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "l-ersongshu",
+    "name": "绿耳松鼠",
+    "nameEn": "L Ersongshu",
+    "attribute": "normal",
+    "attributeEn": "Normal",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "baozhensongshu",
+    "name": "抱枕松鼠",
+    "nameEn": "Baozhensongshu",
+    "attribute": "normal",
+    "attributeEn": "Normal",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "bengchuangsongshu",
+    "name": "蹦床松鼠",
+    "nameEn": "Bengchuangsongshu",
+    "attribute": "normal",
+    "attributeEn": "Normal",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "dudubao",
+    "name": "嘟嘟煲",
+    "nameEn": "Dudubao",
+    "attribute": "poison",
+    "attributeEn": "Poison",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "duduguo",
+    "name": "嘟嘟锅",
+    "nameEn": "Duduguo",
+    "attribute": "poison",
+    "attributeEn": "Poison",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "xiaolingmian",
+    "name": "小灵面",
+    "nameEn": "Xiaolingmian",
+    "attribute": "ghost",
+    "attributeEn": "Ghost",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "anyinglingmian",
+    "name": "暗影灵面",
+    "nameEn": "Anyinglingmian",
+    "attribute": "ghost",
+    "attributeEn": "Ghost",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "youmingyan",
+    "name": "幽冥眼",
+    "nameEn": "Youmingyan",
+    "attribute": "ghost",
+    "attributeEn": "Ghost",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "mengyou",
+    "name": "梦游",
+    "nameEn": "Mengyou",
+    "attribute": "ghost",
+    "attributeEn": "Ghost",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "mengyouyou",
+    "name": "梦悠悠",
+    "nameEn": "Mengyouyou",
+    "attribute": "ghost",
+    "attributeEn": "Ghost",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "shouhualei",
+    "name": "兽花蕾",
+    "nameEn": "Shouhualei",
+    "attribute": "light",
+    "attributeEn": "Light",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "fudishou",
+    "name": "伏地兽",
+    "nameEn": "Fudishou",
+    "attribute": "normal",
+    "attributeEn": "Normal",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "tanshiyan",
+    "name": "贪食鼹",
+    "nameEn": "Tanshiyan",
+    "attribute": "normal",
+    "attributeEn": "Normal",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "jushizhenyan",
+    "name": "巨噬针鼹",
+    "nameEn": "Jushizhenyan",
+    "attribute": "normal",
+    "attributeEn": "Normal",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "bengbengzhongzi-haishenqiuxingtai",
+    "name": "蹦蹦种子",
+    "nameEn": "BengbengzhongziHaishenqiuxingtai",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "bengbengcao-haishenqiuxingtai",
+    "name": "蹦蹦草",
+    "nameEn": "BengbengcaoHaishenqiuxingtai",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "bengbenghua-haishenqiuxingtai",
+    "name": "蹦蹦花",
+    "nameEn": "BengbenghuaHaishenqiuxingtai",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "dianmiemie",
+    "name": "电咩咩",
+    "nameEn": "Dianmiemie",
+    "attribute": "electric",
+    "attributeEn": "Electric",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "fenmiemie",
+    "name": "粉咩咩",
+    "nameEn": "Fenmiemie",
+    "attribute": "electric",
+    "attributeEn": "Electric",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "dianqiumiemie",
+    "name": "电球咩咩",
+    "nameEn": "Dianqiumiemie",
+    "attribute": "electric",
+    "attributeEn": "Electric",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "pugongying",
+    "name": "蒲公英",
+    "nameEn": "Pugongying",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "pugongyingwawa",
+    "name": "蒲公英娃娃",
+    "nameEn": "Pugongyingwawa",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "yibeier",
+    "name": "伊贝儿",
+    "nameEn": "Yibeier",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "yibeifenfen",
+    "name": "伊贝粉粉",
+    "nameEn": "Yibeifenfen",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "baifalanren",
+    "name": "白发懒人",
+    "nameEn": "Baifalanren",
+    "attribute": "normal",
+    "attributeEn": "Normal",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "dongliyuan",
+    "name": "动力猿",
+    "nameEn": "Dongliyuan",
+    "attribute": "normal",
+    "attributeEn": "Normal",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "keshuiwang",
+    "name": "瞌睡王",
+    "nameEn": "Keshuiwang",
+    "attribute": "normal",
+    "attributeEn": "Normal",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "haikuichong",
+    "name": "海盔虫",
+    "nameEn": "Haikuichong",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "cikuichong",
+    "name": "刺盔虫",
+    "nameEn": "Cikuichong",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "qianjikui",
+    "name": "千棘盔",
+    "nameEn": "Qianjikui",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "juhuali",
+    "name": "菊花梨",
+    "nameEn": "Juhuali",
+    "attribute": "fairy",
+    "attributeEn": "Fairy",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "yiwofeng",
+    "name": "一窝蜂",
+    "nameEn": "Yiwofeng",
+    "attribute": "bug",
+    "attributeEn": "Bug",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "huangfenghou",
+    "name": "黄蜂后",
+    "nameEn": "Huangfenghou",
+    "attribute": "bug",
+    "attributeEn": "Bug",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "nvwangfeng",
+    "name": "女王蜂",
+    "nameEn": "NWangfeng",
+    "attribute": "bug",
+    "attributeEn": "Bug",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "xiaoye",
+    "name": "小夜",
+    "nameEn": "Xiaoye",
+    "attribute": "dark",
+    "attributeEn": "Dark",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "ziye",
+    "name": "紫夜",
+    "nameEn": "Ziye",
+    "attribute": "dark",
+    "attributeEn": "Dark",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "shuoyeyifu",
+    "name": "朔夜伊芙",
+    "nameEn": "Shuoyeyifu",
+    "attribute": "dark",
+    "attributeEn": "Dark",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "guaiguaihu",
+    "name": "乖乖鹄",
+    "nameEn": "Guaiguaihu",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "lanzhutiane",
+    "name": "蓝珠天鹅",
+    "nameEn": "Lanzhutiane",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "cuidinfuren",
+    "name": "翠顶夫人",
+    "nameEn": "Cuidingfuren",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "heiyufuren",
+    "name": "黑羽夫人",
+    "nameEn": "Heiyufuren",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "chuitouguan",
+    "name": "锤头鹳",
+    "nameEn": "Chuitouguan",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "l-caojingling",
+    "name": "绿草精灵",
+    "nameEn": "L Caojingling",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "jiyishi",
+    "name": "记忆石",
+    "nameEn": "Jiyishi",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "kakayumao",
+    "name": "咔咔羽毛",
+    "nameEn": "Kakayumao",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "kakaque",
+    "name": "咔咔雀",
+    "nameEn": "Kakaque",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "kakaniao",
+    "name": "咔咔鸟",
+    "nameEn": "Kakaniao",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "xiaocaochong",
+    "name": "小草虫",
+    "nameEn": "Xiaocaochong",
+    "attribute": "bug",
+    "attributeEn": "Bug",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "caoyichong",
+    "name": "草衣虫",
+    "nameEn": "Caoyichong",
+    "attribute": "bug",
+    "attributeEn": "Bug",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "huayidie",
+    "name": "花衣蝶",
+    "nameEn": "Huayidie",
+    "attribute": "bug",
+    "attributeEn": "Bug",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "l-yiniao",
+    "name": "绿翼鸟",
+    "nameEn": "L Yiniao",
+    "attribute": "fairy",
+    "attributeEn": "Fairy",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "moyiniao",
+    "name": "魔翼鸟",
+    "nameEn": "Moyiniao",
+    "attribute": "fairy/flying",
+    "attributeEn": "Fairy/Flying",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "mojuanniao",
+    "name": "魔眷鸟",
+    "nameEn": "Mojuanniao",
+    "attribute": "fairy/flying",
+    "attributeEn": "Fairy/Flying",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "amiyate",
+    "name": "阿米亚特",
+    "nameEn": "Amiyate",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "fenglingsha",
+    "name": "风铃鲨",
+    "nameEn": "Fenglingsha",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "landiesha",
+    "name": "蓝蝶鲨",
+    "nameEn": "Landiesha",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "shenyusha",
+    "name": "神谕鲨",
+    "nameEn": "Shenyusha",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 5,
+    "status": "revealed"
+  },
+  {
+    "id": "shishi",
+    "name": "石石",
+    "nameEn": "Shishi",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "julingshi",
+    "name": "巨灵石",
+    "nameEn": "Julingshi",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "yishizhe",
+    "name": "仪使者",
+    "nameEn": "Yishizhe",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "yishizhixing",
+    "name": "仪式之星",
+    "nameEn": "Yishizhixing",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "yishijuxiang",
+    "name": "仪式巨像",
+    "nameEn": "Yishijuxiang",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "xiaodujiaoshou",
+    "name": "小独角兽",
+    "nameEn": "Xiaodujiaoshou",
+    "attribute": "light",
+    "attributeEn": "Light",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "xuanyechong",
+    "name": "旋叶虫（枯叶的样子）",
+    "nameEn": "Xuanyechong",
+    "attribute": "normal",
+    "attributeEn": "Normal",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "pengyechong",
+    "name": "蓬叶虫（枯叶的样子）",
+    "nameEn": "Pengyechong",
+    "attribute": "normal",
+    "attributeEn": "Normal",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "fenggunmuchong",
+    "name": "风滚暮虫（枯叶的样子）",
+    "nameEn": "Fenggunmuchong",
+    "attribute": "normal",
+    "attributeEn": "Normal",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "xiaoheimao",
+    "name": "小黑猫",
+    "nameEn": "Xiaoheimao",
+    "attribute": "normal",
+    "attributeEn": "Normal",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "heimaowushi",
+    "name": "黑猫巫师",
+    "nameEn": "Heimaowushi",
+    "attribute": "normal",
+    "attributeEn": "Normal",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "huyouli",
+    "name": "忽幽狸",
+    "nameEn": "Huyouli",
+    "attribute": "ghost",
+    "attributeEn": "Ghost",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "yingli",
+    "name": "影狸",
+    "nameEn": "Yingli",
+    "attribute": "ghost",
+    "attributeEn": "Ghost",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "duoduo",
+    "name": "多多",
+    "nameEn": "Duoduo",
+    "attribute": "poison",
+    "attributeEn": "Poison",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "duoladuo",
+    "name": "多啦多",
+    "nameEn": "Duoladuo",
+    "attribute": "poison",
+    "attributeEn": "Poison",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "guladuo",
+    "name": "古啦多",
+    "nameEn": "Guladuo",
+    "attribute": "poison",
+    "attributeEn": "Poison",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "kukugu",
+    "name": "哭哭菇",
+    "nameEn": "Kukugu",
+    "attribute": "psychic",
+    "attributeEn": "Psychic",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "buxugu",
+    "name": "怖须菇",
+    "nameEn": "Buxugu",
+    "attribute": "psychic",
+    "attributeEn": "Psychic",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "bukugu",
+    "name": "怖哭菇",
+    "nameEn": "Bukugu",
+    "attribute": "psychic",
+    "attributeEn": "Psychic",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "xiaodianqie",
+    "name": "小电企鹅",
+    "nameEn": "Xiaodianqie",
+    "attribute": "ice",
+    "attributeEn": "Ice",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "dianqie",
+    "name": "电企鹅",
+    "nameEn": "Dianqie",
+    "attribute": "ice",
+    "attributeEn": "Ice",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "xuedouding",
+    "name": "雪豆丁",
+    "nameEn": "Xuedouding",
+    "attribute": "ice",
+    "attributeEn": "Ice",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "xuemanren",
+    "name": "雪蛮人",
+    "nameEn": "Xuemanren",
+    "attribute": "ice",
+    "attributeEn": "Ice",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "xuejuren",
+    "name": "雪巨人",
+    "nameEn": "Xuejuren",
+    "attribute": "ice",
+    "attributeEn": "Ice",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "huhuzhu",
+    "name": "呼呼猪",
+    "nameEn": "Huhuzhu",
+    "attribute": "ice",
+    "attributeEn": "Ice",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "liaoyazhu",
+    "name": "獠牙猪",
+    "nameEn": "Liaoyazhu",
+    "attribute": "ice",
+    "attributeEn": "Ice",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "daermaodou",
+    "name": "大耳帽兜",
+    "nameEn": "Daermaodou",
+    "attribute": "ice",
+    "attributeEn": "Ice",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "maodouwawa",
+    "name": "帽兜娃娃",
+    "nameEn": "Maodouwawa",
+    "attribute": "ice",
+    "attributeEn": "Ice",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "xueyingwawa",
+    "name": "雪影娃娃",
+    "nameEn": "Xueyingwawa",
+    "attribute": "ice",
+    "attributeEn": "Ice",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "quanzhang",
+    "name": "权杖-Ⅱ",
+    "nameEn": "Quanzhang",
+    "attribute": "steel",
+    "attributeEn": "Steel",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "quanzhang-v",
+    "name": "权杖-V",
+    "nameEn": "QuanzhangV",
+    "attribute": "steel",
+    "attributeEn": "Steel",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "linghu",
+    "name": "灵狐",
+    "nameEn": "Linghu",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "jiuweihu",
+    "name": "九尾狐",
+    "nameEn": "Jiuweihu",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "jianzuihuxian",
+    "name": "尖嘴狐仙",
+    "nameEn": "Jianzuihuxian",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "liao",
+    "name": "里奥",
+    "nameEn": "Liao",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "lingyuyongshi",
+    "name": "灵羽勇士",
+    "nameEn": "Lingyuyongshi",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "shengyuyiwang",
+    "name": "圣羽翼王",
+    "nameEn": "Shengyuyiwang",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "songzai",
+    "name": "松仔",
+    "nameEn": "Songzai",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "songyeyang",
+    "name": "松叶羊",
+    "nameEn": "Songyeyang",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "zhenyexunlin",
+    "name": "针叶巡林",
+    "nameEn": "Zhenyexunlin",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "xiaoyongshi",
+    "name": "小勇狮",
+    "nameEn": "Xiaoyongshi",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "chiyanshi",
+    "name": "炽焰狮",
+    "nameEn": "Chiyanshi",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "chixinyongshi",
+    "name": "炽心勇狮",
+    "nameEn": "Chixinyongshi",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "shuidishe",
+    "name": "水滴蛇",
+    "nameEn": "Shuidishe",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "shuishesuo",
+    "name": "水蛇锁",
+    "nameEn": "Shuishesuo",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "bingfengyuanling",
+    "name": "冰封怨灵",
+    "nameEn": "Bingfengyuanling",
+    "attribute": "ice",
+    "attributeEn": "Ice",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "xueling",
+    "name": "雪灵",
+    "nameEn": "Xueling",
+    "attribute": "ice",
+    "attributeEn": "Ice",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "youshemoshi",
+    "name": "游蛇魔使",
+    "nameEn": "Youshemoshi",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "xiaosongmao",
+    "name": "小怂猫",
+    "nameEn": "Xiaosongmao",
+    "attribute": "fighting",
+    "attributeEn": "Fighting",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "numusongmao",
+    "name": "怒目怂猫",
+    "nameEn": "Numusongmao",
+    "attribute": "fighting",
+    "attributeEn": "Fighting",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "xiaoshijiu",
+    "name": "小狮鹫（高山地的样子）",
+    "nameEn": "Xiaoshijiu",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "yuanyanzhizhu",
+    "name": "圆眼蜘蛛",
+    "nameEn": "Yuanyanzhizhu",
+    "attribute": "bug",
+    "attributeEn": "Bug",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "jianjiaozhizhu",
+    "name": "尖角蜘蛛",
+    "nameEn": "Jianjiaozhizhu",
+    "attribute": "bug",
+    "attributeEn": "Bug",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "yuxiangjujiaozhu",
+    "name": "芋香巨角蛛",
+    "nameEn": "Yuxiangjujiaozhu",
+    "attribute": "bug",
+    "attributeEn": "Bug",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "boboluo-2",
+    "name": "波波螺",
+    "nameEn": "Boboluo",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "xiaoboluo-2",
+    "name": "消波螺",
+    "nameEn": "Xiaoboluo",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "shiboluo-2",
+    "name": "嗜波螺",
+    "nameEn": "Shiboluo",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "guguding",
+    "name": "菇菇丁",
+    "nameEn": "Guguding",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "duoguding",
+    "name": "多菇丁",
+    "nameEn": "Duoguding",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "jiuyougu",
+    "name": "九幽菇",
+    "nameEn": "Jiuyougu",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "banban",
+    "name": "斑斑",
+    "nameEn": "Banban",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "banxiao",
+    "name": "斑枭",
+    "nameEn": "Banxiao",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "caotouya",
+    "name": "草头鸭",
+    "nameEn": "Caotouya",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "juanmaoya",
+    "name": "卷毛鸭",
+    "nameEn": "Juanmaoya",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "haibaozhanshi",
+    "name": "海豹战士",
+    "nameEn": "Haibaozhanshi",
+    "attribute": "fighting",
+    "attributeEn": "Fighting",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "haibaochuanchang",
+    "name": "海豹船长",
+    "nameEn": "Haibaochuanchang",
+    "attribute": "fighting",
+    "attributeEn": "Fighting",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "haoeryu",
+    "name": "号儿鱼",
+    "nameEn": "Haoeryu",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "yuanhaoyu",
+    "name": "圆号鱼",
+    "nameEn": "Yuanhaoyu",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "tiantianluo",
+    "name": "甜田螺",
+    "nameEn": "Tiantianluo",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "keyiluo",
+    "name": "壳乙螺",
+    "nameEn": "Keyiluo",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "kaluoer",
+    "name": "卡洛儿",
+    "nameEn": "Kaluoer",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "qiqi",
+    "name": "棋棋（黑子）",
+    "nameEn": "Qiqi",
+    "attribute": "fighting",
+    "attributeEn": "Fighting",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "qiqishi",
+    "name": "棋骑士（黑子）",
+    "nameEn": "Qiqishi",
+    "attribute": "fighting",
+    "attributeEn": "Fighting",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "qiqilei",
+    "name": "棋齐垒（黑子）",
+    "nameEn": "Qiqilei",
+    "attribute": "fighting",
+    "attributeEn": "Fighting",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "qiqidu",
+    "name": "棋祈督（黑子）",
+    "nameEn": "Qiqidu",
+    "attribute": "fighting",
+    "attributeEn": "Fighting",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "qiqihou",
+    "name": "棋绮后（黑子）",
+    "nameEn": "Qiqihou",
+    "attribute": "fighting",
+    "attributeEn": "Fighting",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "benboshu",
+    "name": "奔波鼠",
+    "nameEn": "Benboshu",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "liulangshu",
+    "name": "流浪鼠",
+    "nameEn": "Liulangshu",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "daixiaolu",
+    "name": "呆小路",
+    "nameEn": "Daixiaolu",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "wudonglulu",
+    "name": "舞动路路",
+    "nameEn": "Wudonglulu",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "baifalulu",
+    "name": "白发路路",
+    "nameEn": "Baifalulu",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "doudou",
+    "name": "逗逗",
+    "nameEn": "Doudou",
+    "attribute": "fairy",
+    "attributeEn": "Fairy",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "qiqiumao",
+    "name": "气球猫",
+    "nameEn": "Qiqiumao",
+    "attribute": "fairy",
+    "attributeEn": "Fairy",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "mengxiangsansan",
+    "name": "梦想三三",
+    "nameEn": "Mengxiangsansan",
+    "attribute": "fairy",
+    "attributeEn": "Fairy",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "huayuanman",
+    "name": "花怨鳗",
+    "nameEn": "Huayuanman",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "manweishou",
+    "name": "鳗尾兽",
+    "nameEn": "Manweishou",
+    "attribute": "ground",
+    "attributeEn": "Ground",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "yileilong",
+    "name": "伊雷龙",
+    "nameEn": "Yileilong",
+    "attribute": "dragon",
+    "attributeEn": "Dragon",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "yilanyalong",
+    "name": "伊兰亚龙",
+    "nameEn": "Yilanyalong",
+    "attribute": "dragon",
+    "attributeEn": "Dragon",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "late",
+    "name": "拉特",
+    "nameEn": "Late",
+    "attribute": "electric",
+    "attributeEn": "Electric",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "shandianhuan",
+    "name": "闪电环",
+    "nameEn": "Shandianhuan",
+    "attribute": "electric",
+    "attributeEn": "Electric",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "cidianhuan",
+    "name": "刺电环",
+    "nameEn": "Cidianhuan",
+    "attribute": "electric",
+    "attributeEn": "Electric",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "jingjidianhuan",
+    "name": "荆棘电环",
+    "nameEn": "Jingjidianhuan",
+    "attribute": "electric",
+    "attributeEn": "Electric",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "xiaoxiangguai",
+    "name": "小箱怪",
+    "nameEn": "Xiaoxiangguai",
+    "attribute": "steel",
+    "attributeEn": "Steel",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "gongpingge",
+    "name": "公平鸽",
+    "nameEn": "Gongpingge",
+    "attribute": "normal",
+    "attributeEn": "Normal",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "mimixiangguai",
+    "name": "迷迷箱怪",
+    "nameEn": "Mimixiangguai",
+    "attribute": "steel",
+    "attributeEn": "Steel",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "guzhongshe",
+    "name": "古钟蛇",
+    "nameEn": "Guzhongshe",
+    "attribute": "fairy",
+    "attributeEn": "Fairy",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "hanyinshe",
+    "name": "寒音蛇",
+    "nameEn": "Hanyinshe",
+    "attribute": "fairy",
+    "attributeEn": "Fairy",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "aijiaopapa",
+    "name": "矮脚爬爬",
+    "nameEn": "Aijiaopapa",
+    "attribute": "bug",
+    "attributeEn": "Bug",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "emohongzuan",
+    "name": "恶魔红钻",
+    "nameEn": "Emohongzuan",
+    "attribute": "bug",
+    "attributeEn": "Bug",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "huoweiwate",
+    "name": "火尾瓦特",
+    "nameEn": "Huoweiwate",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "huoweizhanshi",
+    "name": "火尾战士",
+    "nameEn": "Huoweizhanshi",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "liehuoshouhu",
+    "name": "烈火守护",
+    "nameEn": "Liehuoshouhu",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "lilayao",
+    "name": "里拉鳐",
+    "nameEn": "Lilayao",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "haizhizhi",
+    "name": "海枝枝（翠绿纶布）",
+    "nameEn": "Haizhizhi",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 5,
+    "status": "revealed"
+  },
+  {
+    "id": "duoxi",
+    "name": "多西",
+    "nameEn": "Duoxi",
+    "attribute": "steel",
+    "attributeEn": "Steel",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "kuduoxi",
+    "name": "库多西",
+    "nameEn": "Kuduoxi",
+    "attribute": "steel",
+    "attributeEn": "Steel",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "boduoxi",
+    "name": "波多西",
+    "nameEn": "Boduoxi",
+    "attribute": "steel",
+    "attributeEn": "Steel",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "xiaoyilong",
+    "name": "小翼龙",
+    "nameEn": "Xiaoyilong",
+    "attribute": "dragon",
+    "attributeEn": "Dragon",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "yilong",
+    "name": "翼龙",
+    "nameEn": "Yilong",
+    "attribute": "dragon",
+    "attributeEn": "Dragon",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "diandongchangjinglu",
+    "name": "电动长颈鹿",
+    "nameEn": "Diandongchangjinglu",
+    "attribute": "electric",
+    "attributeEn": "Electric",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "benlelu",
+    "name": "奔乐鹿",
+    "nameEn": "Benlelu",
+    "attribute": "electric",
+    "attributeEn": "Electric",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "jueshilu",
+    "name": "爵士鹿",
+    "nameEn": "Jueshilu",
+    "attribute": "electric",
+    "attributeEn": "Electric",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "tita",
+    "name": "缇塔",
+    "nameEn": "Tita",
+    "attribute": "steel",
+    "attributeEn": "Steel",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "shengbotita",
+    "name": "声波缇塔",
+    "nameEn": "Shengbotita",
+    "attribute": "steel",
+    "attributeEn": "Steel",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "xiaoyu",
+    "name": "小鹬",
+    "nameEn": "Xiaoyu",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "bimuyu",
+    "name": "鄙目鹬",
+    "nameEn": "Bimuyu",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "gaojiaoyu",
+    "name": "高脚鹬",
+    "nameEn": "Gaojiaoyu",
+    "attribute": "flying",
+    "attributeEn": "Flying",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "cuitongtiantian",
+    "name": "脆筒甜甜",
+    "nameEn": "Cuitongtiantian",
+    "attribute": "ice",
+    "attributeEn": "Ice",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "xiangcaotiantian-2",
+    "name": "香草甜甜",
+    "nameEn": "Xiangcaotiantian",
+    "attribute": "ice",
+    "attributeEn": "Ice",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "shengdaitiantian-2",
+    "name": "圣代甜甜",
+    "nameEn": "Shengdaitiantian",
+    "attribute": "ice",
+    "attributeEn": "Ice",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "ciluntuo",
+    "name": "刺轮砣（下弦的样子）",
+    "nameEn": "Ciluntuo",
+    "attribute": "poison",
+    "attributeEn": "Poison",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "yueliangtuo",
+    "name": "月亮砣（下弦的样子）",
+    "nameEn": "Yueliangtuo",
+    "attribute": "poison",
+    "attributeEn": "Poison",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "doudingyu",
+    "name": "豆丁鱼",
+    "nameEn": "Doudingyu",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "kuaiqiyu",
+    "name": "快鳍鱼",
+    "nameEn": "Kuaiqiyu",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "longyu",
+    "name": "龙鱼",
+    "nameEn": "Longyu",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "danxiaomanyu",
+    "name": "胆小鳗鱼",
+    "nameEn": "Danxiaomanyu",
+    "attribute": "electric",
+    "attributeEn": "Electric",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "shandianmanyu",
+    "name": "闪电鳗鱼",
+    "nameEn": "Shandianmanyu",
+    "attribute": "electric",
+    "attributeEn": "Electric",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "feicuishuimu",
+    "name": "翡翠水母",
+    "nameEn": "Feicuishuimu",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "liulishuimu",
+    "name": "琉璃水母",
+    "nameEn": "Liulishuimu",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "qiuluo",
+    "name": "裘洛",
+    "nameEn": "Qiuluo",
+    "attribute": "poison",
+    "attributeEn": "Poison",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "qiuli",
+    "name": "裘力",
+    "nameEn": "Qiuli",
+    "attribute": "poison",
+    "attributeEn": "Poison",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "qiuka",
+    "name": "裘卡",
+    "nameEn": "Qiuka",
+    "attribute": "poison",
+    "attributeEn": "Poison",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "keaiyuan",
+    "name": "可爱猿",
+    "nameEn": "Keaiyuan",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "chireyuan",
+    "name": "炽热猿",
+    "nameEn": "Chireyuan",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "huoyanyuan",
+    "name": "火焰猿",
+    "nameEn": "Huoyanyuan",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "bulusi",
+    "name": "布鲁斯",
+    "nameEn": "Bulusi",
+    "attribute": "ice",
+    "attributeEn": "Ice",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "xuedingbulusi",
+    "name": "雪顶布鲁斯",
+    "nameEn": "Xuedingbulusi",
+    "attribute": "ice",
+    "attributeEn": "Ice",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "bingzuanbulusi",
+    "name": "冰钻布鲁斯",
+    "nameEn": "Bingzuanbulusi",
+    "attribute": "ice",
+    "attributeEn": "Ice",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "zhiyutu",
+    "name": "治愈兔",
+    "nameEn": "Zhiyutu",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "hongsirong",
+    "name": "红丝绒",
+    "nameEn": "Hongsirong",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "hongrongshizi",
+    "name": "红绒十字",
+    "nameEn": "Hongrongshizi",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "wuda",
+    "name": "乌达（极夜的样子）",
+    "nameEn": "Wuda",
+    "attribute": "dark",
+    "attributeEn": "Dark",
+    "rarity": 2,
+    "status": "revealed"
+  },
+  {
+    "id": "miniwu",
+    "name": "迷你乌（极夜的样子）",
+    "nameEn": "Miniwu",
+    "attribute": "dark",
+    "attributeEn": "Dark",
+    "rarity": 3,
+    "status": "revealed"
+  },
+  {
+    "id": "wulata",
+    "name": "乌拉塔（极夜的样子）",
+    "nameEn": "Wulata",
+    "attribute": "dark",
+    "attributeEn": "Dark",
+    "rarity": 4,
+    "status": "revealed"
+  },
+  {
+    "id": "shenshengshijiu",
+    "name": "神圣狮鹫（高山地的样子）",
+    "nameEn": "Shenshengshijiu",
+    "attribute": "Flying",
+    "attributeEn": "Flying",
+    "rarity": 3,
+    "status": "revealed"
+  }
+]

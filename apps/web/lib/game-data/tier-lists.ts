@@ -138,21 +138,21 @@ export async function getTierListGroups(gameId: GameId, locale: SupportedLocale)
       }));
     }
     case 'roco-cn': {
-      const [{ rocoCnCharacters, getRocoCnCharacterImage, getRocoCnCharacterName }, { tierLists }] = await Promise.all([
-        import('@gachia/data/games/roco-cn/characters'),
+      const [{ rocoCnCharacterSummaries, getRocoCnCharacterSummaryImage, getRocoCnCharacterSummaryName }, { tierLists }] = await Promise.all([
+        import('@gachia/data/games/roco-cn/character-summaries'),
         import('@gachia/data/games/roco-cn/tier-lists'),
       ]);
       const tierData = tierLists.find((tl) => tl.gameId === 'roco-cn' && tl.category === 'overall' && tl.locale === locale)
         ?? tierLists.find((tl) => tl.gameId === 'roco-cn' && tl.category === 'overall');
       const entries = tierData?.entries ?? [];
-      const charMap = new Map(rocoCnCharacters.map((char) => [char.id, char]));
+      const charMap = new Map(rocoCnCharacterSummaries.map((char) => [char.id, char]));
       return idsByTier(entries, TIER_ORDER).map((group) => ({
         tier: group.tier,
         characters: group.ids.flatMap((id) => {
           const char = charMap.get(id);
           if (!char) return [];
           const entry = entries.find((e) => e.characterId === id);
-          return [{ id: char.id, name: getRocoCnCharacterName(char, locale), href: `/roco-cn/characters/${char.id}`, imageUrl: getRocoCnCharacterImage(char), element: char.attribute, role: entry?.role ?? char.attributeEn }];
+          return [{ id: char.id, name: getRocoCnCharacterSummaryName(char, locale), href: `/roco-cn/characters/${char.id}`, imageUrl: getRocoCnCharacterSummaryImage(char), element: char.attribute, role: entry?.role ?? char.attributeEn }];
         }),
       }));
     }

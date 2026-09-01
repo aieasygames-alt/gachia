@@ -112,10 +112,10 @@ export async function getCharacterSummariesByIds(
       });
     }
     case 'roco-cn': {
-      const mod = await import('@gachia/data/games/roco-cn/characters');
+      const mod = await import('@gachia/data/games/roco-cn/character-summaries');
       return ids.flatMap((id) => {
-        const character = mod.rocoCnCharacters.find((entry) => entry.id === id);
-        return character ? [{ id: character.id, name: mod.getRocoCnCharacterName(character, locale), image: toAbs(mod.getRocoCnCharacterImage(character)) }] : [];
+        const character = mod.rocoCnCharacterSummaries.find((entry) => entry.id === id);
+        return character ? [{ id: character.id, name: mod.getRocoCnCharacterSummaryName(character, locale), image: toAbs(mod.getRocoCnCharacterSummaryImage(character)) }] : [];
       });
     }
     case 'aniimo': {
@@ -173,8 +173,8 @@ export async function getCharactersForStaticParams(gameId: GameId): Promise<Arra
       return mod.rocoCharacters.map((character) => ({ id: character.id }));
     }
     case 'roco-cn': {
-      const mod = await import('@gachia/data/games/roco-cn/characters');
-      return mod.rocoCnCharacters.map((character) => ({ id: character.id }));
+      const mod = await import('@gachia/data/games/roco-cn/character-summaries');
+      return mod.rocoCnCharacterSummaries.map((character) => ({ id: character.id }));
     }
     case 'aniimo': {
       const mod = await import('@gachia/data/games/aniimo/characters');
@@ -505,11 +505,11 @@ export async function getCharacterListData(
       }));
     }
     case 'roco-cn': {
-      const mod = await import('@gachia/data/games/roco-cn/characters');
-      return mod.rocoCnCharacters.map((character) => ({
+      const mod = await import('@gachia/data/games/roco-cn/character-summaries');
+      return mod.rocoCnCharacterSummaries.map((character) => ({
         id: character.id,
-        name: mod.getRocoCnCharacterName(character, locale),
-        image: toAbs(mod.getRocoCnCharacterImage(character)),
+        name: mod.getRocoCnCharacterSummaryName(character, locale),
+        image: toAbs(mod.getRocoCnCharacterSummaryImage(character)),
         element: character.attribute,
         elementLabel: labelFromId(character.attributeEn),
         rarityLabel: `${character.rarity}★`,

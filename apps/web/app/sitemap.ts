@@ -211,7 +211,7 @@ async function getCharactersForGame(gameId: string): Promise<SitemapItem[]> {
     case 'endfield': return (await import('@gachia/data/games/endfield/characters')).endfieldCharacters;
     case 'sea': return (await import('@gachia/data/games/sea/characters')).seaCharacters;
     case 'roco': return (await import('@gachia/data/games/roco/characters')).rocoCharacters;
-    case 'roco-cn': return (await import('@gachia/data/games/roco-cn/characters')).rocoCnCharacters;
+    case 'roco-cn': return (await import('@gachia/data/games/roco-cn/character-summaries')).rocoCnCharacterSummaries;
     case 'aniimo': return (await import('@gachia/data/games/aniimo/characters')).aniimoCharacters;
     default: return [];
   }
