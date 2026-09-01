@@ -1,0 +1,1037 @@
+[
+  {
+    "id": "hu-tao",
+    "name": "胡桃",
+    "nameEn": "Hu Tao",
+    "element": "pyro",
+    "weaponType": "Polearm",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "diluc",
+    "name": "迪卢克",
+    "nameEn": "Diluc",
+    "element": "pyro",
+    "weaponType": "Claymore",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "klee",
+    "name": "可莉",
+    "nameEn": "Klee",
+    "element": "pyro",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "yanfei",
+    "name": "烟绯",
+    "nameEn": "Yanfei",
+    "element": "pyro",
+    "weaponType": "Catalyst",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "yoimiya",
+    "name": "宵宫",
+    "nameEn": "Yoimiya",
+    "element": "pyro",
+    "weaponType": "Bow",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "xiangling",
+    "name": "香菱",
+    "nameEn": "Xiangling",
+    "element": "pyro",
+    "weaponType": "Polearm",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "bennett",
+    "name": "班尼特",
+    "nameEn": "Bennett",
+    "element": "pyro",
+    "weaponType": "Sword",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "thoma",
+    "name": "托马",
+    "nameEn": "Thoma",
+    "element": "pyro",
+    "weaponType": "Polearm",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "amber",
+    "name": "安柏",
+    "nameEn": "Amber",
+    "element": "pyro",
+    "weaponType": "Bow",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "xinyan",
+    "name": "辛焱",
+    "nameEn": "Xinyan",
+    "element": "pyro",
+    "weaponType": "Claymore",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "dehya",
+    "name": "迪希雅",
+    "nameEn": "Dehya",
+    "element": "pyro",
+    "weaponType": "Claymore",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "lyney",
+    "name": "林尼",
+    "nameEn": "Lyney",
+    "element": "pyro",
+    "weaponType": "Bow",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "arlecchino",
+    "name": "阿蕾奇诺",
+    "nameEn": "Arlecchino",
+    "element": "pyro",
+    "weaponType": "Polearm",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "gaming",
+    "name": "嘉明",
+    "nameEn": "Gaming",
+    "element": "pyro",
+    "weaponType": "Claymore",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "chevreuse",
+    "name": "夏沃蕾",
+    "nameEn": "Chevreuse",
+    "element": "pyro",
+    "weaponType": "Polearm",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "tartaglia",
+    "name": "达达利亚",
+    "nameEn": "Tartaglia",
+    "element": "hydro",
+    "weaponType": "Bow",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "mona",
+    "name": "莫娜",
+    "nameEn": "Mona",
+    "element": "hydro",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "kokomi",
+    "name": "珊瑚宫心海",
+    "nameEn": "Sangonomiya Kokomi",
+    "element": "hydro",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "ayato",
+    "name": "神里绫人",
+    "nameEn": "Kamisato Ayato",
+    "element": "hydro",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "yelan",
+    "name": "夜兰",
+    "nameEn": "Yelan",
+    "element": "hydro",
+    "weaponType": "Bow",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "nilou",
+    "name": "妮露",
+    "nameEn": "Nilou",
+    "element": "hydro",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "candace",
+    "name": "坎蒂丝",
+    "nameEn": "Candace",
+    "element": "hydro",
+    "weaponType": "Polearm",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "barbara",
+    "name": "芭芭拉",
+    "nameEn": "Barbara",
+    "element": "hydro",
+    "weaponType": "Catalyst",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "xingqiu",
+    "name": "行秋",
+    "nameEn": "Xingqiu",
+    "element": "hydro",
+    "weaponType": "Sword",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "neuvillette",
+    "name": "那维莱特",
+    "nameEn": "Neuvillette",
+    "element": "hydro",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "furina",
+    "name": "芙宁娜",
+    "nameEn": "Furina",
+    "element": "hydro",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "sigewinne",
+    "name": "希格雯",
+    "nameEn": "Sigewinne",
+    "element": "hydro",
+    "weaponType": "Bow",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "keqing",
+    "name": "刻晴",
+    "nameEn": "Keqing",
+    "element": "electro",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "lisa",
+    "name": "丽莎",
+    "nameEn": "Lisa",
+    "element": "electro",
+    "weaponType": "Catalyst",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "razor",
+    "name": "雷泽",
+    "nameEn": "Razor",
+    "element": "electro",
+    "weaponType": "Claymore",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "fischl",
+    "name": "菲谢尔",
+    "nameEn": "Fischl",
+    "element": "electro",
+    "weaponType": "Bow",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "beidou",
+    "name": "北斗",
+    "nameEn": "Beidou",
+    "element": "electro",
+    "weaponType": "Claymore",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "raiden-shogun",
+    "name": "雷电将军",
+    "nameEn": "Raiden Shogun",
+    "element": "electro",
+    "weaponType": "Polearm",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "yae-miko",
+    "name": "八重神子",
+    "nameEn": "Yae Miko",
+    "element": "electro",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "kujou-sara",
+    "name": "九条裟罗",
+    "nameEn": "Kujou Sara",
+    "element": "electro",
+    "weaponType": "Bow",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "kuki-shinobu",
+    "name": "久岐忍",
+    "nameEn": "Kuki Shinobu",
+    "element": "electro",
+    "weaponType": "Sword",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "heizou",
+    "name": "鹿野院平藏",
+    "nameEn": "Shikanoin Heizou",
+    "element": "electro",
+    "weaponType": "Catalyst",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "dori",
+    "name": "多莉",
+    "nameEn": "Dori",
+    "element": "electro",
+    "weaponType": "Claymore",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "sethos",
+    "name": "赛索斯",
+    "nameEn": "Sethos",
+    "element": "electro",
+    "weaponType": "Bow",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "clorinde",
+    "name": "克洛琳德",
+    "nameEn": "Clorinde",
+    "element": "electro",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "ayaka",
+    "name": "神里绫华",
+    "nameEn": "Kamisato Ayaka",
+    "element": "cryo",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "ganyu",
+    "name": "甘雨",
+    "nameEn": "Ganyu",
+    "element": "cryo",
+    "weaponType": "Bow",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "qiqi",
+    "name": "七七",
+    "nameEn": "Qiqi",
+    "element": "cryo",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "chongyun",
+    "name": "重云",
+    "nameEn": "Chongyun",
+    "element": "cryo",
+    "weaponType": "Claymore",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "rosaria",
+    "name": "罗莎莉亚",
+    "nameEn": "Rosaria",
+    "element": "cryo",
+    "weaponType": "Polearm",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "eula",
+    "name": "优菈",
+    "nameEn": "Eula",
+    "element": "cryo",
+    "weaponType": "Claymore",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "shenhe",
+    "name": "申鹤",
+    "nameEn": "Shenhe",
+    "element": "cryo",
+    "weaponType": "Polearm",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "diona",
+    "name": "迪奥娜",
+    "nameEn": "Diona",
+    "element": "cryo",
+    "weaponType": "Bow",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "kaeya",
+    "name": "凯亚",
+    "nameEn": "Kaeya",
+    "element": "cryo",
+    "weaponType": "Sword",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "layla",
+    "name": "莱依拉",
+    "nameEn": "Layla",
+    "element": "cryo",
+    "weaponType": "Sword",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "wriothesley",
+    "name": "莱欧斯利",
+    "nameEn": "Wriothesley",
+    "element": "cryo",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "charlotte",
+    "name": "夏洛蒂",
+    "nameEn": "Charlotte",
+    "element": "cryo",
+    "weaponType": "Catalyst",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "freminet",
+    "name": "菲米尼",
+    "nameEn": "Freminet",
+    "element": "cryo",
+    "weaponType": "Claymore",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "tighnari",
+    "name": "提纳里",
+    "nameEn": "Tighnari",
+    "element": "dendro",
+    "weaponType": "Bow",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "nahida",
+    "name": "纳西妲",
+    "nameEn": "Nahida",
+    "element": "dendro",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "alhaitham",
+    "name": "艾尔海森",
+    "nameEn": "Alhaitham",
+    "element": "dendro",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "collei",
+    "name": "柯莱",
+    "nameEn": "Collei",
+    "element": "dendro",
+    "weaponType": "Bow",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "yaoyao",
+    "name": "瑶瑶",
+    "nameEn": "Yaoyao",
+    "element": "dendro",
+    "weaponType": "Polearm",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "kaveh",
+    "name": "卡维",
+    "nameEn": "Kaveh",
+    "element": "dendro",
+    "weaponType": "Claymore",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "baizhu",
+    "name": "白术",
+    "nameEn": "Baizhu",
+    "element": "dendro",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "emilie",
+    "name": "艾梅莉埃",
+    "nameEn": "Emilie",
+    "element": "dendro",
+    "weaponType": "Polearm",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "kirara",
+    "name": "绮良良",
+    "nameEn": "Kirara",
+    "element": "dendro",
+    "weaponType": "Sword",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "kinich",
+    "name": "基尼奇",
+    "nameEn": "Kinich",
+    "element": "dendro",
+    "weaponType": "Claymore",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "venti",
+    "name": "温迪",
+    "nameEn": "Venti",
+    "element": "anemo",
+    "weaponType": "Bow",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "xiao",
+    "name": "魈",
+    "nameEn": "Xiao",
+    "element": "anemo",
+    "weaponType": "Polearm",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "kazuha",
+    "name": "枫原万叶",
+    "nameEn": "Kaedehara Kazuha",
+    "element": "anemo",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "sucrose",
+    "name": "砂糖",
+    "nameEn": "Sucrose",
+    "element": "anemo",
+    "weaponType": "Catalyst",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "jean",
+    "name": "琴",
+    "nameEn": "Jean",
+    "element": "anemo",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "sayu",
+    "name": "早柚",
+    "nameEn": "Sayu",
+    "element": "anemo",
+    "weaponType": "Claymore",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "wanderer",
+    "name": "流浪者",
+    "nameEn": "Wanderer",
+    "element": "anemo",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "faruzan",
+    "name": "珐露珊",
+    "nameEn": "Faruzan",
+    "element": "anemo",
+    "weaponType": "Bow",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "lan-yan",
+    "name": "蓝砚",
+    "nameEn": "Lan Yan",
+    "element": "anemo",
+    "weaponType": "Catalyst",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "zhongli",
+    "name": "钟离",
+    "nameEn": "Zhongli",
+    "element": "geo",
+    "weaponType": "Polearm",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "albedo",
+    "name": "阿贝多",
+    "nameEn": "Albedo",
+    "element": "geo",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "ningguang",
+    "name": "凝光",
+    "nameEn": "Ningguang",
+    "element": "geo",
+    "weaponType": "Catalyst",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "noelle",
+    "name": "诺艾尔",
+    "nameEn": "Noelle",
+    "element": "geo",
+    "weaponType": "Claymore",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "itto",
+    "name": "荒�一斗",
+    "nameEn": "Arataki Itto",
+    "element": "geo",
+    "weaponType": "Claymore",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "gorou",
+    "name": "五郎",
+    "nameEn": "Gorou",
+    "element": "geo",
+    "weaponType": "Bow",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "yun-jin",
+    "name": "云堇",
+    "nameEn": "Yun Jin",
+    "element": "geo",
+    "weaponType": "Polearm",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "navia",
+    "name": "娜维娅",
+    "nameEn": "Navia",
+    "element": "geo",
+    "weaponType": "Claymore",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "chiori",
+    "name": "千织",
+    "nameEn": "Chiori",
+    "element": "geo",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "xilonen",
+    "name": "希诺宁",
+    "nameEn": "Xilonen",
+    "element": "geo",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "yumemizuki-mizuki",
+    "name": "梦见月瑞希",
+    "nameEn": "Yumemizuki Mizuki",
+    "element": "anemo",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "varesa",
+    "name": "瓦雷莎",
+    "nameEn": "Varesa",
+    "element": "electro",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "iansan",
+    "name": "伊安珊",
+    "nameEn": "Iansan",
+    "element": "electro",
+    "weaponType": "Polearm",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "escoffier",
+    "name": "爱可菲",
+    "nameEn": "Escoffier",
+    "element": "cryo",
+    "weaponType": "Polearm",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "ifa",
+    "name": "伊法",
+    "nameEn": "Ifa",
+    "element": "anemo",
+    "weaponType": "Catalyst",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "skirk",
+    "name": "丝柯克",
+    "nameEn": "Skirk",
+    "element": "cryo",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "dahlia",
+    "name": "塔利雅",
+    "nameEn": "Dahlia",
+    "element": "hydro",
+    "weaponType": "Sword",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "ineffa",
+    "name": "伊涅芙",
+    "nameEn": "Ineffa",
+    "element": "electro",
+    "weaponType": "Polearm",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "lauma",
+    "name": "菈乌玛",
+    "nameEn": "Lauma",
+    "element": "dendro",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "flins",
+    "name": "克里洛·楚德米洛维奇·菲林斯",
+    "nameEn": "Flins",
+    "element": "electro",
+    "weaponType": "Polearm",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "aino",
+    "name": "爱诺",
+    "nameEn": "Aino",
+    "element": "hydro",
+    "weaponType": "Claymore",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "nefer",
+    "name": "奈芙尔",
+    "nameEn": "Nefer",
+    "element": "dendro",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "wonderland-manekin",
+    "name": "奇域人偶",
+    "nameEn": "Wonderland Manekin",
+    "element": "none",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "durin",
+    "name": "杜林",
+    "nameEn": "Durin",
+    "element": "pyro",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "jahoda",
+    "name": "雅珂达",
+    "nameEn": "Jahoda",
+    "element": "anemo",
+    "weaponType": "Bow",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "zibai",
+    "name": "兹白",
+    "nameEn": "Zibai",
+    "element": "geo",
+    "weaponType": "Sword",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "columbina",
+    "name": "哥伦比娅",
+    "nameEn": "Columbina",
+    "element": "hydro",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "illuga",
+    "name": "叶洛亚",
+    "nameEn": "Illuga",
+    "element": "geo",
+    "weaponType": "Polearm",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "varka",
+    "name": "法尔伽",
+    "nameEn": "Varka",
+    "element": "anemo",
+    "weaponType": "Claymore",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "linnea",
+    "name": "莉奈娅",
+    "nameEn": "Linnea",
+    "element": "geo",
+    "weaponType": "Bow",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "nicole",
+    "name": "尼可",
+    "nameEn": "Nicole",
+    "element": "pyro",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "aloy",
+    "name": "埃洛伊",
+    "nameEn": "Aloy",
+    "element": "cryo",
+    "weaponType": "Bow",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "cyno",
+    "name": "赛诺",
+    "nameEn": "Cyno",
+    "element": "electro",
+    "weaponType": "Polearm",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "mika",
+    "name": "米卡",
+    "nameEn": "Mika",
+    "element": "cryo",
+    "weaponType": "Polearm",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "lynette",
+    "name": "琳妮特",
+    "nameEn": "Lynette",
+    "element": "anemo",
+    "weaponType": "Sword",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "xianyun",
+    "name": "闲云",
+    "nameEn": "Xianyun",
+    "element": "anemo",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "chasca",
+    "name": "恰斯卡",
+    "nameEn": "Chasca",
+    "element": "anemo",
+    "weaponType": "Bow",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "kachina",
+    "name": "卡齐娜",
+    "nameEn": "Kachina",
+    "element": "geo",
+    "weaponType": "Polearm",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "citlali",
+    "name": "茜特菈莉",
+    "nameEn": "Citlali",
+    "element": "cryo",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "mavuika",
+    "name": "玛薇卡",
+    "nameEn": "Mavuika",
+    "element": "pyro",
+    "weaponType": "Claymore",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "prune",
+    "name": "普鲁涅",
+    "nameEn": "Prune",
+    "element": "anemo",
+    "weaponType": "Catalyst",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "lohen",
+    "name": "洛恩",
+    "nameEn": "Lohen",
+    "element": "cryo",
+    "weaponType": "Polearm",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "sandrone",
+    "name": "桑多涅",
+    "nameEn": "Sandrone",
+    "element": "cryo",
+    "weaponType": "",
+    "rarity": 5,
+    "status": "upcoming"
+  }
+]

@@ -39,14 +39,14 @@ function idsByTier(entries: Array<{ tier: string; characterId: string }>, order:
 export async function getTierListGroups(gameId: GameId, locale: SupportedLocale): Promise<TierListGroup[]> {
   switch (gameId) {
     case 'nte': {
-      const mod = await import('@gachia/data/games/nte/characters');
-      return groupByTier(mod.nteCharacters, (char) => char.tierRank, ['SS', 'S+', 'A+', 'A', 'B']).map((group) => ({
+      const mod = await import('@gachia/data/games/nte/character-summaries');
+      return groupByTier(mod.nteCharacterSummaries, (char) => char.tierRank, ['SS', 'S+', 'A+', 'A', 'B']).map((group) => ({
         tier: group.tier,
         characters: group.characters.map((char) => ({
           id: char.id,
-          name: mod.getNteCharacterName(char, locale),
+          name: mod.getNteCharacterSummaryName(char, locale),
           href: `/nte/characters/${char.id}`,
-          imageUrl: mod.getNteCharacterImage(char),
+          imageUrl: mod.getNteCharacterSummaryImage(char),
           element: char.attribute,
           role: char.roleEn,
         })),

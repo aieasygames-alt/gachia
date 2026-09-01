@@ -1,0 +1,733 @@
+[
+  {
+    "id": "seele",
+    "name": "希儿",
+    "nameEn": "Seele",
+    "element": "quantum",
+    "path": "hunt",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "bronya",
+    "name": "布洛妮娅",
+    "nameEn": "Bronya",
+    "element": "wind",
+    "path": "harmony",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "clara",
+    "name": "克拉拉",
+    "nameEn": "Clara",
+    "element": "physical",
+    "path": "destruction",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "himeko",
+    "name": "姬子",
+    "nameEn": "Himeko",
+    "element": "fire",
+    "path": "erudition",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "welt",
+    "name": "瓦尔特",
+    "nameEn": "Welt",
+    "element": "imaginary",
+    "path": "nihility",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "gepard",
+    "name": "杰帕德",
+    "nameEn": "Gepard",
+    "element": "ice",
+    "path": "preservation",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "yanqing",
+    "name": "彦卿",
+    "nameEn": "Yanqing",
+    "element": "ice",
+    "path": "hunt",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "bailu",
+    "name": "白露",
+    "nameEn": "Bailu",
+    "element": "lightning",
+    "path": "abundance",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "jing-yuan",
+    "name": "景元",
+    "nameEn": "Jing Yuan",
+    "element": "lightning",
+    "path": "erudition",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "kafka",
+    "name": "卡芙卡",
+    "nameEn": "Kafka",
+    "element": "lightning",
+    "path": "nihility",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "blade",
+    "name": "刃",
+    "nameEn": "Blade",
+    "element": "wind",
+    "path": "destruction",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "silver-wolf",
+    "name": "银狼",
+    "nameEn": "Silver Wolf",
+    "element": "quantum",
+    "path": "nihility",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "luocha",
+    "name": "罗刹",
+    "nameEn": "Luocha",
+    "element": "imaginary",
+    "path": "abundance",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "jingliu",
+    "name": "镜流",
+    "nameEn": "Jingliu",
+    "element": "ice",
+    "path": "destruction",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "topaz",
+    "name": "托帕",
+    "nameEn": "Topaz & Numby",
+    "element": "fire",
+    "path": "hunt",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "huohuo",
+    "name": "藿藿",
+    "nameEn": "Huohuo",
+    "element": "wind",
+    "path": "abundance",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "ruan-mei",
+    "name": "阮·梅",
+    "nameEn": "Ruan Mei",
+    "element": "ice",
+    "path": "harmony",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "dr-ratio",
+    "name": "真理医生",
+    "nameEn": "Dr. Ratio",
+    "element": "imaginary",
+    "path": "hunt",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "black-swan",
+    "name": "黑天鹅",
+    "nameEn": "Black Swan",
+    "element": "wind",
+    "path": "nihility",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "acheron",
+    "name": "黄泉",
+    "nameEn": "Acheron",
+    "element": "lightning",
+    "path": "nihility",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "aventurine",
+    "name": "砂金",
+    "nameEn": "Aventurine",
+    "element": "imaginary",
+    "path": "preservation",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "robin",
+    "name": "知更鸟",
+    "nameEn": "Robin",
+    "element": "physical",
+    "path": "harmony",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "firefly",
+    "name": "流萤",
+    "nameEn": "Firefly",
+    "element": "fire",
+    "path": "destruction",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "sunday",
+    "name": "星期日",
+    "nameEn": "Sunday",
+    "element": "imaginary",
+    "path": "harmony",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "aglaea",
+    "name": "阿格莱雅",
+    "nameEn": "Aglaea",
+    "element": "lightning",
+    "path": "remembrance",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "the-herta",
+    "name": "大黑塔",
+    "nameEn": "The Herta",
+    "element": "ice",
+    "path": "erudition",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "tribbie",
+    "name": "缇宝",
+    "nameEn": "Tribbie",
+    "element": "quantum",
+    "path": "harmony",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "castorice",
+    "name": "卡芙卡",
+    "nameEn": "Castorice",
+    "element": "quantum",
+    "path": "remembrance",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "mydei",
+    "name": "迈迪",
+    "nameEn": "Mydei",
+    "element": "imaginary",
+    "path": "destruction",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "march-7th",
+    "name": "三月七",
+    "nameEn": "March 7th",
+    "element": "ice",
+    "path": "preservation",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "dan-heng",
+    "name": "丹恒",
+    "nameEn": "Dan Heng",
+    "element": "wind",
+    "path": "destruction",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "herta",
+    "name": "黑塔",
+    "nameEn": "Herta",
+    "element": "ice",
+    "path": "erudition",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "natasha",
+    "name": "娜塔莎",
+    "nameEn": "Natasha",
+    "element": "physical",
+    "path": "abundance",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "serval",
+    "name": "希露瓦",
+    "nameEn": "Serval",
+    "element": "lightning",
+    "path": "erudition",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "pela",
+    "name": "佩拉",
+    "nameEn": "Pela",
+    "element": "ice",
+    "path": "nihility",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "sampo",
+    "name": "桑博",
+    "nameEn": "Sampo",
+    "element": "wind",
+    "path": "nihility",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "hook",
+    "name": "虎克",
+    "nameEn": "Hook",
+    "element": "fire",
+    "path": "destruction",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "qingque",
+    "name": "青雀",
+    "nameEn": "Qingque",
+    "element": "quantum",
+    "path": "erudition",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "tingyun",
+    "name": "停云",
+    "nameEn": "Tingyun",
+    "element": "lightning",
+    "path": "harmony",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "asta",
+    "name": "艾丝妲",
+    "nameEn": "Asta",
+    "element": "fire",
+    "path": "harmony",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "hanya",
+    "name": "寒鸦",
+    "nameEn": "Hanya",
+    "element": "physical",
+    "path": "harmony",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "lynx",
+    "name": "玲可",
+    "nameEn": "Lynx",
+    "element": "quantum",
+    "path": "abundance",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "xueyi",
+    "name": "雪衣",
+    "nameEn": "Xueyi",
+    "element": "quantum",
+    "path": "destruction",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "misha",
+    "name": "米沙",
+    "nameEn": "Misha",
+    "element": "ice",
+    "path": "destruction",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "gallagher",
+    "name": "加拉赫尔",
+    "nameEn": "Gallagher",
+    "element": "fire",
+    "path": "abundance",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "moze",
+    "name": "莫泽",
+    "nameEn": "Moze",
+    "element": "lightning",
+    "path": "hunt",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "guinaifen",
+    "name": "桂乃芬",
+    "nameEn": "Guinaifen",
+    "element": "fire",
+    "path": "nihility",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "sushang",
+    "name": "素裳",
+    "nameEn": "Sushang",
+    "element": "physical",
+    "path": "hunt",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "yukong",
+    "name": "驭空",
+    "nameEn": "Yukong",
+    "element": "imaginary",
+    "path": "harmony",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "luka",
+    "name": "卢卡",
+    "nameEn": "Luka",
+    "element": "physical",
+    "path": "nihility",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "arlan",
+    "name": "阿兰",
+    "nameEn": "Arlan",
+    "element": "lightning",
+    "path": "destruction",
+    "rarity": 4,
+    "status": "released"
+  },
+  {
+    "id": "dan-heng-imbibitor-lunae",
+    "name": "丹恒·饮月",
+    "nameEn": "Dan Heng • Imbibitor Lunae",
+    "element": "imaginary",
+    "path": "destruction",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "fu-xuan",
+    "name": "符玄",
+    "nameEn": "Fu Xuan",
+    "element": "quantum",
+    "path": "preservation",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "argenti",
+    "name": "银枝",
+    "nameEn": "Argenti",
+    "element": "physical",
+    "path": "erudition",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "sparkle",
+    "name": "花火",
+    "nameEn": "Sparkle",
+    "element": "quantum",
+    "path": "harmony",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "boothill",
+    "name": "波提欧",
+    "nameEn": "Boothill",
+    "element": "physical",
+    "path": "hunt",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "jade",
+    "name": "翡翠",
+    "nameEn": "Jade",
+    "element": "quantum",
+    "path": "erudition",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "yunli",
+    "name": "云璃",
+    "nameEn": "Yunli",
+    "element": "physical",
+    "path": "destruction",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "feixiao",
+    "name": "飞霄",
+    "nameEn": "Feixiao",
+    "element": "wind",
+    "path": "hunt",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "lingsha",
+    "name": "灵砂",
+    "nameEn": "Lingsha",
+    "element": "fire",
+    "path": "abundance",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "jiaoqiu",
+    "name": "椒丘",
+    "nameEn": "Jiaoqiu",
+    "element": "fire",
+    "path": "nihility",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "rappa",
+    "name": "乱破",
+    "nameEn": "Rappa",
+    "element": "imaginary",
+    "path": "erudition",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "fugue",
+    "name": "忘归人",
+    "nameEn": "Fugue",
+    "element": "fire",
+    "path": "harmony",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "anaxa",
+    "name": "那刻夏",
+    "nameEn": "Anaxa",
+    "element": "wind",
+    "path": "erudition",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "hyacine",
+    "name": "风堇",
+    "nameEn": "Hyacine",
+    "element": "wind",
+    "path": "remembrance",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "cipher",
+    "name": "赛飞儿",
+    "nameEn": "Cipher",
+    "element": "quantum",
+    "path": "nihility",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "phainon",
+    "name": "白厄",
+    "nameEn": "Phainon",
+    "element": "physical",
+    "path": "destruction",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "archer",
+    "name": "Archer",
+    "nameEn": "Archer",
+    "nameJa": "アーチャー",
+    "element": "quantum",
+    "path": "hunt",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "saber",
+    "name": "Saber",
+    "nameEn": "Saber",
+    "nameJa": "セイバー",
+    "element": "wind",
+    "path": "destruction",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "cerydra",
+    "name": "刻律德菈",
+    "nameEn": "Cerydra",
+    "element": "wind",
+    "path": "harmony",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "hysilens",
+    "name": "海瑟音",
+    "nameEn": "Hysilens",
+    "element": "physical",
+    "path": "nihility",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "evernight",
+    "name": "长夜月",
+    "nameEn": "Evernight",
+    "element": "ice",
+    "path": "remembrance",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "dan-heng-permansor-terrae",
+    "name": "丹恒•腾荒",
+    "nameEn": "Dan Heng • Permansor Terrae",
+    "element": "physical",
+    "path": "preservation",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "cyrene",
+    "name": "昔涟",
+    "nameEn": "Cyrene",
+    "element": "ice",
+    "path": "remembrance",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "the-dahlia",
+    "name": "大丽花",
+    "nameEn": "The Dahlia",
+    "element": "fire",
+    "path": "nihility",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "yao-guang",
+    "name": "爻光",
+    "nameEn": "Yao Guang",
+    "element": "physical",
+    "path": "elation",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "sparxie",
+    "name": "火花",
+    "nameEn": "Sparxie",
+    "element": "fire",
+    "path": "elation",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "ashveil",
+    "name": "不死途",
+    "nameEn": "Ashveil",
+    "element": "lightning",
+    "path": "hunt",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "silver-wolf-lv999",
+    "name": "银狼LV.999",
+    "nameEn": "Silver Wolf LV.999",
+    "element": "imaginary",
+    "path": "elation",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "evanescia",
+    "name": "绯英",
+    "nameEn": "Evanescia",
+    "element": "physical",
+    "path": "elation",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "mortenax-blade",
+    "name": "千冶·刃",
+    "nameEn": "Mortenax Blade",
+    "element": "fire",
+    "path": "nihility",
+    "rarity": 5,
+    "status": "released"
+  }
+]

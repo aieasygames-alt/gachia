@@ -42,17 +42,17 @@ export async function getCharacterSummariesByIds(
 ): Promise<CharacterSummary[]> {
   switch (gameId) {
     case 'genshin': {
-      const mod = await import('@gachia/data/games/genshin/characters');
+      const mod = await import('@gachia/data/games/genshin/character-summaries');
       return ids.flatMap((id) => {
-        const character = mod.genshinCharacters.find((entry) => entry.id === id);
-        return character ? [{ id: character.id, name: mod.getGenshinCharacterName(character, locale), image: toAbs(mod.getGenshinCharacterImage(character)) }] : [];
+        const character = mod.genshinCharacterSummaries.find((entry) => entry.id === id);
+        return character ? [{ id: character.id, name: mod.getGenshinCharacterSummaryName(character, locale), image: toAbs(mod.getGenshinCharacterSummaryImage(character)) }] : [];
       });
     }
     case 'starrail': {
-      const mod = await import('@gachia/data/games/starrail/characters');
+      const mod = await import('@gachia/data/games/starrail/character-summaries');
       return ids.flatMap((id) => {
-        const character = mod.starrailCharacters.find((entry) => entry.id === id);
-        return character ? [{ id: character.id, name: mod.getStarRailCharacterName(character, locale), image: toAbs(mod.getStarRailCharacterImage(character)) }] : [];
+        const character = mod.starrailCharacterSummaries.find((entry) => entry.id === id);
+        return character ? [{ id: character.id, name: mod.getStarRailCharacterSummaryName(character, locale), image: toAbs(mod.getStarRailCharacterSummaryImage(character)) }] : [];
       });
     }
     case 'wuwa': {
@@ -63,10 +63,10 @@ export async function getCharacterSummariesByIds(
       });
     }
     case 'nte': {
-      const mod = await import('@gachia/data/games/nte/characters');
+      const mod = await import('@gachia/data/games/nte/character-summaries');
       return ids.flatMap((id) => {
-        const character = mod.nteCharacters.find((entry) => entry.id === id);
-        return character ? [{ id: character.id, name: mod.getNteCharacterName(character, locale), image: toAbs(mod.getNteCharacterImage(character)) }] : [];
+        const character = mod.nteCharacterSummaries.find((entry) => entry.id === id);
+        return character ? [{ id: character.id, name: mod.getNteCharacterSummaryName(character, locale), image: toAbs(mod.getNteCharacterSummaryImage(character)) }] : [];
       });
     }
     case 'zzz': {
@@ -133,20 +133,20 @@ export async function getCharacterSummariesByIds(
 export async function getCharactersForStaticParams(gameId: GameId): Promise<Array<{ id: string }>> {
   switch (gameId) {
     case 'genshin': {
-      const mod = await import('@gachia/data/games/genshin/characters');
-      return mod.genshinCharacters.map((character) => ({ id: character.id }));
+      const mod = await import('@gachia/data/games/genshin/character-summaries');
+      return mod.genshinCharacterSummaries.map((character) => ({ id: character.id }));
     }
     case 'starrail': {
-      const mod = await import('@gachia/data/games/starrail/characters');
-      return mod.starrailCharacters.map((character) => ({ id: character.id }));
+      const mod = await import('@gachia/data/games/starrail/character-summaries');
+      return mod.starrailCharacterSummaries.map((character) => ({ id: character.id }));
     }
     case 'wuwa': {
       const mod = await import('@gachia/data/games/wuwa/characters');
       return mod.wuwaCharacters.map((character) => ({ id: character.id }));
     }
     case 'nte': {
-      const mod = await import('@gachia/data/games/nte/characters');
-      return mod.nteCharacters.map((character) => ({ id: character.id }));
+      const mod = await import('@gachia/data/games/nte/character-summaries');
+      return mod.nteCharacterSummaries.map((character) => ({ id: character.id }));
     }
     case 'zzz': {
       const mod = await import('@gachia/data/games/zzz/characters');
@@ -376,11 +376,11 @@ export async function getCharacterListData(
 ): Promise<CharacterListEntry[]> {
   switch (gameId) {
     case 'genshin': {
-      const mod = await import('@gachia/data/games/genshin/characters');
-      return mod.genshinCharacters.map((character) => ({
+      const mod = await import('@gachia/data/games/genshin/character-summaries');
+      return mod.genshinCharacterSummaries.map((character) => ({
         id: character.id,
-        name: mod.getGenshinCharacterName(character, locale),
-        image: toAbs(mod.getGenshinCharacterImage(character)),
+        name: mod.getGenshinCharacterSummaryName(character, locale),
+        image: toAbs(mod.getGenshinCharacterSummaryImage(character)),
         element: character.element,
         elementLabel: labelFromId(character.element),
         rarityLabel: `${character.rarity}★`,
@@ -389,11 +389,11 @@ export async function getCharacterListData(
       }));
     }
     case 'starrail': {
-      const mod = await import('@gachia/data/games/starrail/characters');
-      return mod.starrailCharacters.map((character) => ({
+      const mod = await import('@gachia/data/games/starrail/character-summaries');
+      return mod.starrailCharacterSummaries.map((character) => ({
         id: character.id,
-        name: mod.getStarRailCharacterName(character, locale),
-        image: toAbs(mod.getStarRailCharacterImage(character)),
+        name: mod.getStarRailCharacterSummaryName(character, locale),
+        image: toAbs(mod.getStarRailCharacterSummaryImage(character)),
         element: character.element,
         elementLabel: labelFromId(character.element),
         rarityLabel: `${character.rarity}★`,
@@ -415,11 +415,11 @@ export async function getCharacterListData(
       }));
     }
     case 'nte': {
-      const mod = await import('@gachia/data/games/nte/characters');
-      return mod.nteCharacters.map((character) => ({
+      const mod = await import('@gachia/data/games/nte/character-summaries');
+      return mod.nteCharacterSummaries.map((character) => ({
         id: character.id,
-        name: mod.getNteCharacterName(character, locale),
-        image: toAbs(mod.getNteCharacterImage(character)),
+        name: mod.getNteCharacterSummaryName(character, locale),
+        image: toAbs(mod.getNteCharacterSummaryImage(character)),
         element: character.attribute,
         elementLabel: labelFromId(character.attribute),
         rarityLabel: character.rank,

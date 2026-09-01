@@ -201,10 +201,10 @@ function getGuideSitemapHints(entry: unknown): Pick<MetadataRoute.Sitemap[number
 
 async function getCharactersForGame(gameId: string): Promise<SitemapItem[]> {
   switch (gameId) {
-    case 'genshin': return (await import('@gachia/data/games/genshin/characters')).genshinCharacters;
-    case 'starrail': return (await import('@gachia/data/games/starrail/characters')).starrailCharacters;
+    case 'genshin': return (await import('@gachia/data/games/genshin/character-summaries')).genshinCharacterSummaries;
+    case 'starrail': return (await import('@gachia/data/games/starrail/character-summaries')).starrailCharacterSummaries;
     case 'wuwa': return (await import('@gachia/data/games/wuwa/characters')).wuwaCharacters;
-    case 'nte': return (await import('@gachia/data/games/nte/characters')).nteCharacters;
+    case 'nte': return (await import('@gachia/data/games/nte/character-summaries')).nteCharacterSummaries;
     case 'zzz': return (await import('@gachia/data/games/zzz/characters')).zzzCharacters;
     case 'guihuan': return (await import('@gachia/data/games/guihuan/characters')).guihuanCharacters;
     case 'ananta': return (await import('@gachia/data/games/ananta/characters')).anantaCharacters;
