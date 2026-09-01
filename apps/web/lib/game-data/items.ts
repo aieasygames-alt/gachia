@@ -16,7 +16,6 @@ export interface ItemListEntry {
   rarity: number;
   type: string;
   source: string;
-  raw?: unknown;
 }
 
 export interface GearSetListEntry {
@@ -85,7 +84,6 @@ function toItemListEntry<T extends MaterialEntry>(
     rarity: material.rarity,
     type: material.type,
     source: sourceFor(material, locale),
-    raw: material,
   };
 }
 
