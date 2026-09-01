@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { Link } from '@/lib/i18n/navigation';
 import { ClientMarkdown } from '@/components/wiki/client-markdown';
 import { buildGuideJsonLd } from '@/lib/jsonld';
-import { buildLocalizedAlternates, ensureMetaLength, getEntryUpdatedAt, hasLocalizedContent } from '@/lib/seo-metadata';
+import { buildLocalizedAlternates, ensureMetaLength, getEntryUpdatedAt, hasLocalizedContent, limitMetaTitle } from '@/lib/seo-metadata';
 import { BANNER_INTENT_PANELS } from '@/lib/banner-intent';
 
 export const dynamicParams = false;
@@ -766,7 +766,7 @@ function buildGuideMeta(guide: GuideLike, guideTitle: string, summary: string, g
   const serpTitle = getLocalizedSeoText(guide.serpTitle, locale);
   const serpDescription = getLocalizedSeoText(guide.serpDescription, locale);
   if (serpTitle && serpDescription) {
-    return { title: serpTitle, description: ensureMetaLength(serpDescription, locale) };
+    return { title: limitMetaTitle(serpTitle, guideTitle), description: ensureMetaLength(serpDescription, locale) };
   }
 
   const titleSuffix = guideTitle.length > 45 ? '' : locale === 'zh' ? ` — ${gameName}攻略详解` : locale === 'ja' ? ` — ${gameName}攻略ガイド` : ` — ${gameName} Guide`;
@@ -780,7 +780,7 @@ function buildGuideMeta(guide: GuideLike, guideTitle: string, summary: string, g
         ? `${guideTitle}の${gameName}攻略ガイド。Tips、戦略、FAQ、版本要点をまとめます。${baseSummary ? ` 補足: ${baseSummary}` : ''}`
         : `Complete ${guideTitle} guide for ${gameName} with tips, strategies, FAQ, version notes, and practical advice. ${baseSummary ? `Summary: ${baseSummary}` : ''}`;
 
-  return { title, description: ensureMetaLength(description, locale) };
+  return { title: limitMetaTitle(title, guideTitle), description: ensureMetaLength(description, locale) };
 }
 
 function getLocalizedSeoText(values: LocalizedText | undefined, locale: SupportedLocale) {

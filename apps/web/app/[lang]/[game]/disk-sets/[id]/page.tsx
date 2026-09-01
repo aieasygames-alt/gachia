@@ -8,6 +8,7 @@ import {
   getNteCharacterById, getNteCharacterName,
 } from '@gachia/data/games/nte/characters';
 import { Link } from '@/lib/i18n/navigation';
+import { ensureMetaLength } from '@/lib/seo-metadata';
 
 export async function generateStaticParams() {
   return LOCALES.flatMap((lang) =>
@@ -162,5 +163,5 @@ function buildDiskSetDescription(name: string, bonus2pc: string, bestFor: readon
       parts.push(`${label}: ${names.join(', ')}`);
     }
   }
-  return parts.join('. ').slice(0, 160);
+  return ensureMetaLength(parts.join('. '), locale);
 }

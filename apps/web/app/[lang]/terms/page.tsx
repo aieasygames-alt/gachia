@@ -2,6 +2,11 @@ import type { Metadata } from 'next';
 import type { SupportedLocale } from '@gachia/core';
 
 const TITLE: Record<string, string> = { zh: '服务条款', en: 'Terms of Service', ja: '利用規約' };
+const DESCRIPTION: Record<string, string> = {
+  zh: 'Gachia 服务条款说明网站内容用途、游戏素材版权、用户行为规则、免责声明、第三方链接、服务变更和联系方式。',
+  en: 'Gachia Terms of Service explains content usage, game asset ownership, user conduct, disclaimers, third-party links, service changes, and contact options.',
+  ja: 'Gachia利用規約では、コンテンツ利用、ゲーム素材の権利、利用者の行動、免責事項、外部リンク、サービス変更、問い合わせ方法を説明します。',
+};
 
 export async function generateMetadata({
   params,
@@ -10,7 +15,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale = lang as SupportedLocale;
-  return { title: TITLE[locale] };
+  return { title: TITLE[locale], description: DESCRIPTION[locale] };
 }
 
 const CONTENT: Record<string, { title: string; sections: { heading: string; body: string }[] }> = {

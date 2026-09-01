@@ -15,6 +15,7 @@ import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 import { CHARACTER_META_OVERRIDES } from './character-detail-shared';
+import { ensureMetaLength } from '@/lib/seo-metadata';
 
 export const dynamicParams = false;
 
@@ -88,9 +89,10 @@ export async function generateMetadata({
     : locale === 'ja'
       ? `${meta.name}${roleParts ? ` (${roleParts})` : ''} のビルド攻略。役割、武器、セット、素材、スキル、編成、育成優先度を整理。${meta.tierRank ? `${meta.tierRank} Tier.` : ''}`
       : `${meta.name}${roleParts ? ` (${roleParts})` : ''} build guide for ${gameName}: role, best weapons, sets, materials, skills, teams, and investment priority. ${meta.tierRank ? `${meta.tierRank} tier.` : ''}`;
-  const description = baseDescription.length >= 120
-    ? baseDescription.slice(0, 160)
-    : `${baseDescription} ${meta.description}`.slice(0, 160);
+  const description = ensureMetaLength(
+    baseDescription.length >= 120 ? baseDescription : `${baseDescription} ${meta.description}`,
+    locale,
+  );
 
   return { title, description, openGraph, alternates };
 }

@@ -276,7 +276,7 @@ export function NteCompare({ locale }: { locale: SupportedLocale }) {
           {filtered.map(c => (
             <button key={c.id} onClick={() => setChar(c)}
               className="flex items-center gap-2 rounded-lg border border-game-border bg-game-surface-alt p-2 text-left text-xs transition-colors hover:border-game-primary">
-              <CharacterAvatar src={getNteCharacterImage(c)} alt="" element={c.attribute} className="h-8 w-8 rounded object-cover" />
+              <CharacterAvatar src={getNteCharacterImage(c)} alt={getNteCharacterName(c, locale)} element={c.attribute} className="h-8 w-8 rounded object-cover" />
               <span className="text-game-text">{getNteCharacterName(c, locale)}</span>
             </button>
           ))}

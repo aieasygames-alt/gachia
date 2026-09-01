@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { Link } from '@/lib/i18n/navigation';
 import { getCharactersNeedingMaterial, getItemData, getItemsForStaticParams } from '@/lib/game-data/items';
 import { buildItemJsonLd } from '@/lib/jsonld';
-import { buildLocalizedAlternates } from '@/lib/seo-metadata';
+import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
 
 const RARITY_COLORS = ['', '#9ca3af', '#4ade80', '#60a5fa', '#a855f7', '#eab308'];
 
@@ -286,7 +286,7 @@ export async function generateMetadata({
   const data = await getItemData(gameId, id, locale);
   if (!data) return {};
   const name = data.name;
-  const description = data.source.slice(0, 160);
+  const sourceDescription = data.source.trim();
 
   const override = ITEM_META_OVERRIDES[`${gameId}/${id}`]?.[locale];
   const alternates = buildLocalizedAlternates(locale, (l) => `/${l}/${gameId}/items/${id}`, LOCALES);
@@ -314,19 +314,20 @@ export async function generateMetadata({
       ? `${name} — ${gameName}素材入手方法 | ドロップ場所と必要キャラ一覧`
       : `${name} — ${gameName} Material Guide | Drop Sources & Characters`;
 
-  const desc = description || (locale === 'zh'
+  const desc = sourceDescription || (locale === 'zh'
     ? `${name}是${gameName}中的材料，本页包含掉落来源、获取方式以及需要此材料的角色一览。`
     : locale === 'ja'
       ? `${name}の入手方法、ドロップ場所、この素材を必要とするキャラクター一覧を掲載。`
       : `Where to find ${name} in ${gameName}. Drop sources, farming locations, and all characters that need this material for ascension.`);
+  const metaDescription = ensureMetaLength(desc, locale);
 
   return {
     title,
-    description: desc.slice(0, 160),
+    description: metaDescription,
     alternates,
     openGraph: {
       title,
-      description: desc.slice(0, 160),
+      description: metaDescription,
       url: `https://gachia.com/${locale}/${gameId}/items/${id}`,
       siteName: 'Gachia',
       images: [{ url: `https://gachia.com/images/og/${gameId}.webp`, width: 1200, height: 630 }],

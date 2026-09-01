@@ -205,7 +205,7 @@ export function StarRailTierListClient({ locale }: { locale: SupportedLocale }) 
                   <Link key={char.id} href={`/starrail/characters/${char.id}` as '/'}
                     className="group flex items-center gap-2 rounded-lg border border-game-border bg-game-surface px-3 py-2 transition-colors hover:border-game-primary">
                     <div className="h-8 w-8 shrink-0 overflow-hidden rounded-full bg-game-surface-alt">
-                      <CharacterAvatar src={imageUrl} alt="" element={char.element} className="h-full w-full object-cover object-top" />
+                      <CharacterAvatar src={imageUrl} alt={getStarRailCharacterName(char, locale)} element={char.element} className="h-full w-full object-cover object-top" />
                     </div>
                     <div>
                       <p className="text-sm font-medium text-game-text group-hover:text-game-primary">{getStarRailCharacterName(char, locale)}</p>

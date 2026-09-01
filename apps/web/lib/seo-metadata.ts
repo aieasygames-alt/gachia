@@ -65,10 +65,21 @@ const META_SUFFIX: Record<SupportedLocale, string> = {
   en: ' It also links to characters, weapons, guides, and useful tools for deeper browsing.',
   ja: 'さらにキャラ、武器、攻略、実用ツールへの導線もまとめています。',
 };
+const META_TITLE_MAX_LENGTH = 70;
 
 export function ensureMetaLength(value: string, locale: SupportedLocale, target = META_MIN_LENGTH) {
   if ([...value].length >= target) return value;
   return `${value}${META_SUFFIX[locale] ?? META_SUFFIX.zh}`;
+}
+
+export function limitMetaTitle(value: string, fallback?: string, target = META_TITLE_MAX_LENGTH) {
+  const trimmed = value.trim();
+  if ([...trimmed].length <= target) return trimmed;
+
+  const fallbackTitle = fallback?.trim();
+  if (fallbackTitle && [...fallbackTitle].length <= target) return fallbackTitle;
+
+  return [...trimmed].slice(0, target).join('').trim();
 }
 
 export function toHreflang(locale: SupportedLocale) {

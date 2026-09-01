@@ -230,7 +230,7 @@ function EndfieldCharacterDetail({ char, locale }: { char: EndfieldCharacter; lo
                             return (
                               <span key={j} className="inline-flex items-center gap-1.5 rounded bg-game-surface-alt px-2 py-1 text-xs text-game-text-muted">
                                 {matInfo && (
-                                  <img src={`/images/endfield/materials/${matInfo.id}.webp`} alt="" className="h-4 w-4 rounded" loading="lazy" />
+                                  <img src={`/images/endfield/materials/${matInfo.id}.webp`} alt={locale === 'zh' ? matInfo.name : matInfo.nameEn} className="h-4 w-4 rounded" loading="lazy" />
                                 )}
                                 {matInfo ? (locale === 'zh' ? matInfo.name : matInfo.nameEn) : mat.materialId} x{mat.quantity}
                               </span>

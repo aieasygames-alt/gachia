@@ -269,7 +269,7 @@ function TierGroups({ groups }: { groups: TierListGroup[] }) {
                 <Link key={char.id} href={char.href as '/'}
                   className="group flex items-center gap-2 rounded-lg border border-game-border bg-game-surface px-3 py-2 transition-colors hover:border-game-primary">
                   <div className="h-8 w-8 shrink-0 overflow-hidden rounded-full bg-game-surface-alt">
-                    <CharacterAvatar src={char.imageUrl} alt="" element={char.element} className="h-full w-full object-cover object-top" />
+                    <CharacterAvatar src={char.imageUrl} alt={char.name} element={char.element} className="h-full w-full object-cover object-top" />
                   </div>
                   <div>
                     <p className="text-sm font-medium text-game-text group-hover:text-game-primary">{char.name}</p>

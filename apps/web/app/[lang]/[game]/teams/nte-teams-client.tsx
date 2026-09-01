@@ -210,7 +210,7 @@ export function NteTeams({ locale }: { locale: SupportedLocale }) {
             className={`flex flex-col items-center gap-2 rounded-xl border-2 p-4 transition-colors ${activeSlot === i ? 'border-game-primary bg-game-primary/10' : 'border-game-border bg-game-surface hover:border-game-primary/50'}`}>
             {char ? (
               <>
-                <CharacterAvatar src={getNteCharacterImage(char)} alt="" element={char.attribute} className="h-14 w-14 rounded-xl object-cover" />
+                <CharacterAvatar src={getNteCharacterImage(char)} alt={getNteCharacterName(char, locale)} element={char.attribute} className="h-14 w-14 rounded-xl object-cover" />
                 <span className="text-xs font-medium text-game-text">{getNteCharacterName(char, locale)}</span>
                 <span className="text-[10px]" style={{ color: NTE_TEAM_COLORS[char.attribute] }}>{NTE_TEAM_NAMES[char.attribute]?.[locale] ?? char.attribute}</span>
               </>
@@ -253,7 +253,7 @@ export function NteTeams({ locale }: { locale: SupportedLocale }) {
           {filtered.map(c => (
             <button key={c.id} onClick={() => addToSlot(c)}
               className={`group flex flex-col items-center gap-1 rounded-lg border p-2 transition-all ${slots.some(s => s?.id === c.id) ? 'border-game-primary/30 bg-game-primary/5 opacity-50' : 'border-game-border bg-game-surface-alt hover:border-game-primary/50'}`}>
-              <CharacterAvatar src={getNteCharacterImage(c)} alt="" element={c.attribute} className="h-10 w-10 rounded-lg object-cover" />
+              <CharacterAvatar src={getNteCharacterImage(c)} alt={getNteCharacterName(c, locale)} element={c.attribute} className="h-10 w-10 rounded-lg object-cover" />
               <span className="text-center text-[11px] text-game-text">{getNteCharacterName(c, locale)}</span>
             </button>
           ))}

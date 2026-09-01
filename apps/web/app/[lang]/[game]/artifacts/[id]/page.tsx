@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { Link } from '@/lib/i18n/navigation';
 import { getArtifactDetailData, getArtifactsForStaticParams } from '@/lib/game-data/artifacts';
 import type { ArtifactDetailData } from '@/lib/game-data/artifacts';
+import { ensureMetaLength } from '@/lib/seo-metadata';
 
 const RARITY_COLORS: Record<number, string> = { 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };
 
@@ -224,5 +225,5 @@ function buildArtifactDescription(name: string, bonus2pc: string, bestForNames: 
     const label = locale === 'zh' ? '推荐' : locale === 'ja' ? 'おすすめ' : 'Best for';
     parts.push(`${label}: ${bestForNames.join(', ')}`);
   }
-  return parts.join('. ').slice(0, 160);
+  return ensureMetaLength(parts.join('. '), locale);
 }

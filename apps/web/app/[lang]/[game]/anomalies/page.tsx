@@ -2,15 +2,32 @@ import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { anomalies as nteAnomalies, getAnomalyName } from '@gachia/data/games/nte/anomalies';
 import type { NteAnomaly } from '@gachia/data/games/nte/anomalies';
+import { ensureMetaLength } from '@/lib/seo-metadata';
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ lang: string; game: string }>;
 }) {
-  const { game } = await params;
-  if (game !== 'nte') return { robots: { index: false, follow: false } };
-  return {};
+  const { lang, game } = await params;
+  const locale = lang as SupportedLocale;
+  if (game !== 'nte') {
+    return {
+      title: locale === 'zh' ? '异象图鉴暂未开放' : locale === 'ja' ? 'アノマリー図鑑は未対応' : 'Anomalies unavailable',
+      description: ensureMetaLength(
+        locale === 'zh' ? '该游戏暂未开放异象图鉴页面，请返回角色、材料、地图、版本专题或攻略百科继续浏览可用内容。' : locale === 'ja' ? 'このゲームではアノマリー図鑑は未対応です。キャラ、素材、マップ、版本特集、攻略ページをご利用ください。' : 'This game does not have an anomalies database yet. Return to characters, items, maps, version hubs, or guides for available content.',
+        locale,
+      ),
+      robots: { index: false, follow: false },
+    };
+  }
+  return {
+    title: locale === 'zh' ? '异环异象图鉴 — Boss、精英与掉落机制' : locale === 'ja' ? '異環アノマリー図鑑 — ボス、精鋭、ドロップ' : 'NTE Anomalies — Bosses, Elite Enemies & Drops',
+    description: ensureMetaLength(
+      locale === 'zh' ? '异环异象图鉴整理 Boss、精英、普通敌人的名称、属性、类型、机制说明和掉落信息，方便开荒、刷材料和配队前查询。' : locale === 'ja' ? '異環のアノマリー図鑑。ボス、精鋭、通常敵の名称、属性、タイプ、ギミック、ドロップを整理し、攻略と素材集めに役立てます。' : 'Neverness to Everness anomalies database with bosses, elite enemies, attributes, mechanics, drops, farming context, and team-planning notes.',
+      locale,
+    ),
+  };
 }
 
 export default async function AnomaliesPage({

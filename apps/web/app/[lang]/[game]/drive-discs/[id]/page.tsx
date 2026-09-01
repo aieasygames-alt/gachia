@@ -4,7 +4,7 @@ import type { GameId, SupportedLocale } from '@gachia/core';
 import { getZzzDriveDiscById, getZzzDriveDiscName, getZzzDriveDiscDesc2pc, getZzzDriveDiscDesc4pc, zzzDriveDiscs } from '@gachia/data/games/zzz/drive-discs';
 import { getZzzCharacterName, getZzzCharacterById } from '@gachia/data/games/zzz/characters';
 import { notFound } from 'next/navigation';
-import { buildLocalizedAlternates } from '@/lib/seo-metadata';
+import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -43,11 +43,22 @@ export async function generateMetadata({
     return c ? getZzzCharacterName(c, locale) : null;
   }).filter(Boolean).join(', ');
 
+  const description = ensureMetaLength(
+    locale === 'zh'
+      ? `${name}驱动盘：2件套${desc}；4件套${desc4pc}。${bestForNames ? `推荐角色：${bestForNames}。` : ''}查看全部属性与搭配建议。`
+      : `${name} ZZZ drive disc: 2pc — ${desc}. 4pc — ${desc4pc}.${bestForNames ? ` Best for ${bestForNames}.` : ''} Full stats and build guide.`,
+    locale,
+  );
+
+  const title = locale === 'zh'
+    ? `${name}驱动盘攻略 — ${gameName}`
+    : locale === 'ja'
+      ? `${name}ドライブディスク攻略 — ${gameName}`
+      : `${name} ZZZ Drive Disc Guide`;
+
   return {
-    title: `${name} — ${gameName} Drive Disc: 2pc & 4pc Set Bonus${bestForNames ? `, Best for ${bestForNames}` : ''}`,
-    description: locale === 'zh'
-      ? `${name}驱动盘：2件套${desc}；4件套${desc4pc}。${bestForNames ? `推荐角色：${bestForNames}。` : ''}查看全部属性与搭配建议。`.slice(0, 160)
-      : `${name} ZZZ drive disc: 2pc — ${desc}. 4pc — ${desc4pc}.${bestForNames ? ` Best for ${bestForNames}.` : ''} Full stats and build guide.`.slice(0, 160),
+    title,
+    description,
     alternates,
   };
 }

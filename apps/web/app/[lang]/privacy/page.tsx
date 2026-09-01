@@ -2,6 +2,11 @@ import type { Metadata } from 'next';
 import type { SupportedLocale } from '@gachia/core';
 
 const TITLE: Record<string, string> = { zh: '隐私政策', en: 'Privacy Policy', ja: 'プライバシーポリシー' };
+const DESCRIPTION: Record<string, string> = {
+  zh: 'Gachia 隐私政策说明网站如何处理 Google Analytics、Google 登录、会话、收藏、角色、地图进度和共享配装等数据，以及用户的数据访问与删除方式。',
+  en: 'Gachia Privacy Policy explains how the site handles analytics, Google sign-in, sessions, favorites, characters, map progress, shared builds, and deletion requests.',
+  ja: 'Gachiaのプライバシーポリシーでは、分析、Googleログイン、セッション、お気に入り、キャラ、マップ進捗、共有ビルド、削除請求の扱いを説明します。',
+};
 
 export async function generateMetadata({
   params,
@@ -10,7 +15,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale = lang as SupportedLocale;
-  return { title: TITLE[locale] };
+  return { title: TITLE[locale], description: DESCRIPTION[locale] };
 }
 
 const CONTENT: Record<string, { title: string; sections: { heading: string; body: string }[] }> = {

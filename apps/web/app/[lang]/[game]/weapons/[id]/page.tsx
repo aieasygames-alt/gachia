@@ -5,7 +5,7 @@ import { Link } from '@/lib/i18n/navigation';
 import { getWeaponDetailData, getWeaponsForStaticParams } from '@/lib/game-data/weapons';
 import type { WeaponDetailData } from '@/lib/game-data/weapons';
 import { buildWeaponJsonLd } from '@/lib/jsonld';
-import { buildLocalizedAlternates } from '@/lib/seo-metadata';
+import { buildLocalizedAlternates, limitMetaTitle } from '@/lib/seo-metadata';
 
 const RARITY_COLORS: Record<number, string> = { 1: '#9ca3af', 2: '#4ade80', 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };
 
@@ -254,7 +254,7 @@ function buildWeaponMetaDescription(base: string, locale: SupportedLocale) {
       ? 'おすすめキャラ、入手方法、実戦での役割を補足し、育成優先度の判断に役立てます。'
       : 'The page also covers recommended users, acquisition, and practical role so you can judge whether the weapon is worth investing in.';
   const text = base.trim().length >= 120 ? base.trim() : `${base.trim()} ${addition}`;
-  return text.slice(0, 160);
+  return text;
 }
 
 function WeaponJsonLd({
@@ -330,6 +330,7 @@ export async function generateMetadata({
   }
 
   const meta = { title, description: buildWeaponMetaDescription(desc, locale) };
+  meta.title = limitMetaTitle(meta.title, `${detail.name} — ${gameName} ${weaponNoun} Guide`);
   return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, id, locale) };
 }
 

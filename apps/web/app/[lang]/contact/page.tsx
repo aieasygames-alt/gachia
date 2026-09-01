@@ -2,6 +2,11 @@ import type { Metadata } from 'next';
 import type { SupportedLocale } from '@gachia/core';
 
 const TITLE: Record<string, string> = { zh: '联系我们', en: 'Contact Us', ja: 'お問い合わせ' };
+const DESCRIPTION: Record<string, string> = {
+  zh: '通过邮箱或 GitHub Issue 联系 Gachia，反馈游戏数据、攻略内容、网站功能、合作建议和账号相关问题，我们会在 1-3 个工作日内尽快回复。',
+  en: 'Contact Gachia by email or GitHub Issue for game data corrections, guide feedback, website features, partnerships, and account-related questions.',
+  ja: 'ゲームデータ修正、攻略内容、サイト機能、提携、アカウント関連の問い合わせは、メールまたはGitHub IssueからGachiaへご連絡ください。',
+};
 
 export async function generateMetadata({
   params,
@@ -10,7 +15,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale = lang as SupportedLocale;
-  return { title: TITLE[locale] };
+  return { title: TITLE[locale], description: DESCRIPTION[locale] };
 }
 
 const CONTENT: Record<string, { title: string; sections: { heading: string; body: string }[] }> = {

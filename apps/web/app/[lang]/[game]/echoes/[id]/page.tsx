@@ -12,6 +12,7 @@ import {
   getWuWaCharacterById, getWuWaCharacterName,
 } from '@gachia/data/games/wuwa/characters';
 import { Link } from '@/lib/i18n/navigation';
+import { ensureMetaLength } from '@/lib/seo-metadata';
 
 export async function generateStaticParams() {
   return LOCALES.flatMap((lang) =>
@@ -152,5 +153,5 @@ function buildEchoDescription(name: string, bonus2pc: string, bestFor: readonly 
       parts.push(`${label}: ${names.join(', ')}`);
     }
   }
-  return parts.join('. ').slice(0, 160);
+  return ensureMetaLength(parts.join('. '), locale);
 }
