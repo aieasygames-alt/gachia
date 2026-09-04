@@ -46,71 +46,71 @@ const VERSION_META_OVERRIDES: Partial<Record<GameId, Partial<Record<SupportedLoc
 }>>>> = {
   genshin: {
     zh: {
-      title: '原神 Luna VIII 版本专题：Sandrone、卡池、活动与兑换码',
+      title: '原神 Luna VIII 版本专题：卡池、活动与兑换码',
       description: '追踪原神 Luna VIII、Sandrone、Sunny Summer Fontinalia、当前卡池、下期祈愿、活动日历、兑换码和原石规划。',
     },
     en: {
-      title: 'Genshin Luna VIII Hub: Sandrone, Banners, Events & Codes',
-      description: 'Track Genshin Luna VIII, Sandrone, Sunny Summer Fontinalia, current banners, next banner planning, event calendar, redeem codes, and Primogem priorities.',
+      title: 'Genshin Luna VIII Hub: Banners, Events & Codes',
+      description: 'Track Genshin Luna VIII, Sandrone, current banners, next banner planning, event calendar, redeem codes, and Primogem priorities.',
     },
     ja: {
-      title: '原神 Luna VIII 特集：Sandrone、バナー、イベント、コード',
+      title: '原神 Luna VIII 特集：バナー、イベント、コード',
       description: '原神 Luna VIII、Sandrone、Sunny Summer Fontinalia、現在バナー、次回計画、イベント日程、交換コード、原石計画を確認できます。',
     },
   },
   starrail: {
     zh: {
-      title: '崩铁 4.4 版本专题：Himeko Nova、Fate 联动与卡池',
+      title: '崩铁 4.4 版本专题：卡池、联动与兑换码',
       description: '追踪崩坏星穹铁道 4.4、Himeko Nova、Fate/stay night 联动、Rin/Gilgamesh、当前跃迁、兑换码和星琼规划。',
     },
     en: {
-      title: 'HSR v4.4 Hub: Himeko Nova, Fate Collab, Banners & Codes',
-      description: 'Track Honkai: Star Rail v4.4, Himeko Nova, Fate/stay night collab, Rin/Gilgamesh, current banners, redeem codes, and Stellar Jade planning.',
+      title: 'HSR v4.4 Hub: Banners, Collab & Codes',
+      description: 'Track Honkai: Star Rail v4.4, Himeko Nova, Fate/stay night collab, current banners, redeem codes, and Stellar Jade planning.',
     },
     ja: {
-      title: 'HSR v4.4 特集：Himeko Nova、Fate、バナー、コード',
+      title: 'HSR v4.4 特集：バナー、コラボ、コード',
       description: 'スターレイル v4.4、Himeko Nova、Fate/stay nightコラボ、Rin/Gilgamesh、現在バナー、交換コード、星玉計画を確認できます。',
     },
   },
   wuwa: {
     zh: {
-      title: '鸣潮 3.5 版本专题：Yangyang、Suisui、Xbox 与卡池',
+      title: '鸣潮 3.5 版本专题：卡池、平台与兑换码',
       description: '追踪鸣潮 3.5、Yangyang: Xuanling、Suisui、Xbox/Game Pass、SP 机制、当前卡池、声骸路线、兑换码和星声规划。',
     },
     en: {
-      title: 'WuWa v3.5 Hub: Yangyang, Suisui, Xbox, Banners & Codes',
-      description: 'Track Wuthering Waves v3.5, Yangyang: Xuanling, Suisui, Xbox/Game Pass onboarding, SP mechanics, current banners, Echo routes, codes, and Astrite planning.',
+      title: 'WuWa v3.5 Hub: Banners, Platform & Codes',
+      description: 'Track Wuthering Waves v3.5, Xbox/Game Pass onboarding, SP mechanics, current banners, Echo routes, codes, and Astrite planning.',
     },
     ja: {
-      title: '鳴潮 v3.5 特集：Yangyang、Suisui、Xbox、バナー',
+      title: '鳴潮 v3.5 特集：バナー、平台、コード',
       description: '鳴潮 v3.5、Yangyang: Xuanling、Suisui、Xbox/Game Pass、SP機構、現在バナー、エコー導線、コード、星声計画を確認できます。',
     },
   },
   nte: {
     zh: {
-      title: '异环 1.2 版本专题：999 Nights、Shinku、Iroi 与下载',
+      title: '异环 1.2 版本专题：下载、卡池与兑换码',
       description: '追踪异环 1.2 999 Nights、Shinku 当前池、Iroi 后续期、Steam/download、兑换码、活动资源和抽卡规划。',
     },
     en: {
-      title: 'NTE v1.2 Hub: 999 Nights, Shinku, Iroi, Download & Codes',
-      description: 'Track Neverness to Everness v1.2 999 Nights, Shinku, Iroi, Steam/download routes, redeem codes, event resources, and gacha planning.',
+      title: 'NTE v1.2 Hub: Download, Banners & Codes',
+      description: 'Track Neverness to Everness v1.2, Steam/download routes, redeem codes, event resources, and gacha planning.',
     },
     ja: {
-      title: 'NTE v1.2 特集：999 Nights、Shinku、Iroi、DL',
+      title: 'NTE v1.2 特集：DL、バナー、コード',
       description: 'NTE v1.2 999 Nights、Shinku、Iroi、Steam/DL、交換コード、イベント資源、ガチャ計画を確認できます。',
     },
   },
   zzz: {
     zh: {
-      title: '绝区零 3.1 版本专题：2 周年、Remielle、Xbox 与卡池',
+      title: '绝区零 3.1 版本专题：卡池、周年与兑换码',
       description: '追踪绝区零 3.1 The Long Goodbye、2 周年、Remielle/Sigrid、Xbox/Microsoft Store、Steam 入坑、卡池、兑换码和配队。',
     },
     en: {
-      title: 'ZZZ v3.1 Hub: 2nd Anniversary, Remielle, Xbox & Banners',
-      description: 'Track Zenless Zone Zero v3.1 The Long Goodbye, 2nd anniversary, Remielle/Sigrid, Xbox and Microsoft Store onboarding, Steam starters, banners, codes, and teams.',
+      title: 'ZZZ v3.1 Hub: Banners, Anniversary & Codes',
+      description: 'Track Zenless Zone Zero v3.1 The Long Goodbye, 2nd anniversary, Xbox and Microsoft Store onboarding, Steam starters, banners, codes, and teams.',
     },
     ja: {
-      title: 'ZZZ v3.1 特集：2周年、Remielle、Xbox、バナー',
+      title: 'ZZZ v3.1 特集：バナー、周年、コード',
       description: 'ZZZ v3.1 The Long Goodbye、2周年、Remielle/Sigrid、Xbox / Microsoft Store、Steam入門、バナー、コード、編成を確認できます。',
     },
   },

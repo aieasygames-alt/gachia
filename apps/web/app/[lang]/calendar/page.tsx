@@ -6,14 +6,14 @@ import { LIVE_CALENDAR_EVENTS, LIVE_UPDATED_AT, sortCalendarEvents } from '@/lib
 import { CalendarClient } from './calendar-client';
 
 const TITLE = {
-  zh: '跨游戏当前卡池、版本与兑换码日历',
-  en: 'Gacha Banner Calendar: Current & Next Banners, Codes and Version Dates',
-  ja: 'ガチャ現在バナー・版本・コードカレンダー',
+  zh: '跨游戏卡池与版本日历',
+  en: 'Gacha Banner Calendar',
+  ja: 'ガチャ日程カレンダー',
 };
 
 const DESCRIPTION = {
   zh: '查看原神、崩铁、鸣潮、绝区零、异环等游戏的当前卡池、下期卡池、版本日期、兑换码期限和活动节点。',
-  en: 'Track current banners, next banners, version dates, redeem-code deadlines, and events across Genshin, HSR, WuWa, ZZZ, NTE, and other Gachia games.',
+  en: 'Track current banners, next banners, version dates, redeem-code deadlines, and events across Genshin, HSR, WuWa, ZZZ, NTE, and more.',
   ja: '原神、スターレイル、鳴潮、ZZZ、NTE などの現在バナー、次回バナー、版本日、コード期限、イベントを確認できます。',
 };
 
@@ -26,7 +26,7 @@ export async function generateMetadata({
   const locale = lang as SupportedLocale;
 
   return {
-    title: `${TITLE[locale]} - Gachia`,
+    title: `${TITLE[locale]} | Gachia`,
     description: DESCRIPTION[locale],
     alternates: buildLocalizedAlternates(locale, (lang) => `/${lang}/calendar`, LOCALES),
   };

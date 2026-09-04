@@ -92,11 +92,11 @@ const ARTICLE_IMAGE_LABELS: Partial<Record<GameId, Record<SupportedLocale, strin
 const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> = {
   genshin: {
     'banner-schedule-guide': {
-      heading: { zh: '快速结论：先看当前祈愿、下期卡池和复刻', en: 'Quick answer: check current banner, next banner, and reruns first', ja: '要点：現在、次回、復刻バナーを先に確認' },
+      heading: { zh: '快速结论：先看当前卡池、下期和复刻', en: 'Quick answer: check current banner, next banner, and reruns first', ja: '要点：現在、次回、復刻を先に確認' },
       points: {
-        zh: ['当前角色池、下期祈愿和复刻预测要一起看。', '抽卡前先确认保底、原石预算和后续版本目标。', '如果只能覆盖一次大保底，优先保证真正补队伍缺口的角色。'],
-        en: ['Use this as a Genshin current banner, next banner, upcoming banners, rerun, and Primogem pull-plan page.', 'Before pulling, check pity, guarantee status, remaining Luna VIII income, redeem codes, and future version targets.', 'If you only have one full guarantee, prioritize the character that fixes a real team gap before chasing weapons.'],
-        ja: ['現在、次回、復刻予想を同じ場所で確認します。', '引く前に天井、保証、原石、次版本目標を確認します。', '天井一回分なら編成不足を解決するキャラを優先します。'],
+        zh: ['先看当前卡池，再看下期和复刻预测。', '抽卡前把保底、原石预算和版本目标放在一起。', '只有一次大保底时，优先补队伍缺口最大的角色。'],
+        en: ['Use this page to compare current banners, next banners, reruns, pity, and Primogem budget.', 'Check guarantee status, remaining income, and future version targets before pulling.', 'If you only have one full guarantee, secure the character that fixes the biggest team gap first.'],
+        ja: ['現在、次回、復刻、天井、原石予算を同時に確認。', '引く前に保証、残り収入、次版本目標をチェック。', '大天井が一回だけなら、編成不足を埋めるキャラを優先。'],
       },
     },
     'cross-game-comparison-guide': {
@@ -120,9 +120,9 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> 
     'banner-schedule-guide': {
       heading: { zh: '快速结论：先看当前跃迁、下期和复刻', en: 'Quick answer: check current warp, next banner, and reruns first', ja: '要点：現在、次回、復刻を先に確認' },
       points: {
-        zh: ['当前跃迁、下期复刻和 Fate/联动目标要一起规划。', '抽卡前先算星琼、大小保底和光锥风险。', '资源有限时只保一个角色目标，光锥放后面。'],
-        en: ['Use this as an HSR banner schedule, current banner, next banner, rerun, and Stellar Jade pull-plan page.', 'Before pulling, compare v4.4 live warps, Fate/collab targets, pity state, redeem codes, and Light Cone risk.', 'With limited resources, secure one character target first and delay Light Cones.'],
-        ja: ['現在跳躍、次回、復刻、Fate/コラボ目標を一緒に計画します。', '星玉、保証、光円錐リスクを先に計算します。', '資源が少ない時はキャラ一人を優先します。'],
+        zh: ['先看当前跃迁，再看下期和复刻。', '把星琼、保底和联动目标放在同一张预算表里。', '资源有限时，先保角色，再考虑光锥。'],
+        en: ['Use this page to compare current warps, next banners, reruns, pity, and Stellar Jade budget.', 'Check collab targets, redeem codes, and guaranteed status before pulling.', 'If resources are tight, secure the character first and leave Light Cones for later.'],
+        ja: ['現在跳躍、次回、復刻、星玉予算を同時に確認。', 'コラボ目標、コード、保証を引く前に整理。', '資源が少ない時はキャラ優先、光円錐は後回し。'],
       },
     },
     'fate-collab-guide': {
@@ -138,9 +138,9 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> 
     'banner-schedule-guide': {
       heading: { zh: '快速结论：先看当前卡池、下期和复刻', en: 'Quick answer: check current banner, next banner, and reruns first', ja: '要点：現在、次回、復刻を先に確認' },
       points: {
-        zh: ['当前 UP、下期目标和复刻预测要一起看。', '角色池和武器池保底分开计算。', '星声紧张时先保角色，再追武器。'],
-        en: ['Use this as a WuWa next banner, current banner, upcoming banners, rerun, and Astrite pull-plan page.', 'Compare v3.5 rate-ups, next targets, rerun timing, redeem codes, and version income together.', 'Track character pity and weapon pity separately; if Astrite is tight, secure the character before chasing weapons.'],
-        ja: ['現在UP、次回目標、復刻予想を一緒に確認。', 'キャラ天井と武器天井は分けて計算。', '星声が少ない時はキャラ優先。'],
+        zh: ['先看当前卡池，再看下期和复刻。', '角色池和武器池保底要分开算。', '星声紧张时先保角色，再追武器。'],
+        en: ['Use this page to compare current banners, next banners, reruns, pity, and Astrite budget.', 'Track character pity and weapon pity separately before pulling.', 'If Astrite is tight, secure the character first and leave weapons for later.'],
+        ja: ['現在、次回、復刻、天井、星声予算を確認。', 'キャラ天井と武器天井は分けて計算。', '星声が少ない時はキャラ優先、武器は後回し。'],
       },
     },
     'cross-game-comparison-guide': {
@@ -154,11 +154,11 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> 
   },
   zzz: {
     'banner-schedule-guide': {
-      heading: { zh: '快速结论：先看当前调频、下期与复刻', en: 'Quick answer: check current, next, and upcoming ZZZ banners first', ja: '要点：現在、次回、復刻バナーを先に確認' },
+      heading: { zh: '快速结论：先看当前卡池、下期和复刻', en: 'Quick answer: check current, next, and upcoming ZZZ banners first', ja: '要点：現在、次回、復刻バナーを先に確認' },
       points: {
-        zh: ['当前代理人频道、下期卡池和复刻节点要放在同一条抽卡路线里。', '抽卡前先确认专属频道保底、音擎保底、菲林预算和队伍缺口。', '资源有限时先保代理人，再考虑专属音擎。'],
-        en: ['Compare the current ZZZ banner, next banner, upcoming banners, and likely reruns before spending Polychromes.', 'Check agent pity, W-Engine pity, guarantee status, and team needs together.', 'If resources are tight, secure the agent first and treat signature W-Engines as optional upgrades.'],
-        ja: ['現在、次回、復刻予想を同じ計画で確認します。', '代理人天井、音擎天井、菲林、編成不足をまとめて見ます。', '資源が少ない場合は代理人を先に確保します。'],
+        zh: ['先看当前代理人，再看下期和复刻。', '把代理人保底、音擎保底、菲林预算和队伍缺口放在一起。', '资源有限时先保代理人，再考虑专属音擎。'],
+        en: ['Use this page to compare current banners, next banners, reruns, pity, and Polychrome budget.', 'Check agent pity, W-Engine pity, guarantee status, and team needs before pulling.', 'If resources are tight, secure the agent first and treat signature W-Engines as optional upgrades.'],
+        ja: ['現在、次回、復刻、天井、菲林予算を同時に確認。', '代理人天井、音擎天井、保証、編成不足を先に整理。', '資源が少ない時は代理人優先、専用音擎は後回し。'],
       },
     },
     'team-building-guide': {
@@ -327,6 +327,7 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
     'banner-schedule-guide': [
       { href: '/genshin/guides/luna-viii-sandrone-guide', label: { zh: 'Luna VIII 专题', en: 'Luna VIII guide', ja: 'Luna VIII特集' }, description: { zh: '继续看版本、角色和活动路线。', en: 'Continue into version, character, and event routing.', ja: '版本、キャラ、イベントへ。' } },
       { href: '/genshin/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '抽卡前先补资源。', en: 'Claim resources before pulling.', ja: 'ガチャ前に資源を回収。' } },
+      { href: '/calendar', label: { zh: '跨游戏日历', en: 'Banner calendar', ja: 'ガチャ日程' }, description: { zh: '对比多游戏卡池、版本和兑换码期限。', en: 'Compare banners, versions, and code deadlines across games.', ja: '複数ゲームのバナー、版本、コード期限を比較。' } },
     ],
     'snezhnaya-version-guide': [
       { href: '/genshin/guides/lunar-reaction-guide', label: { zh: '月反应指南', en: 'Lunar reaction guide', ja: '月反応ガイド' }, description: { zh: '把 Nod-Krai 角色、月元素和队伍机制接起来。', en: 'Connect Nod-Krai characters, Lunar element rules, and team value.', ja: 'Nod-Kraiキャラ、月元素、編成価値を接続。' } },
@@ -345,6 +346,7 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
     'banner-schedule-guide': [
       { href: '/starrail/guides/himeko-nova-fate-pull-plan', label: { zh: 'Fate 抽卡规划', en: 'Fate pull plan', ja: 'Fateガチャ計画' }, description: { zh: '把当前跃迁和联动预算放一起。', en: 'Connect current warps with collab budget.', ja: '現在跳躍とコラボ予算を接続。' } },
       { href: '/starrail/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '先领码再算星琼。', en: 'Claim codes before calculating Jade.', ja: 'コード後に星玉計算。' } },
+      { href: '/calendar', label: { zh: '跨游戏日历', en: 'Banner calendar', ja: 'ガチャ日程' }, description: { zh: '对比多游戏卡池、版本和兑换码期限。', en: 'Compare banners, versions, and code deadlines across games.', ja: '複数ゲームのバナー、版本、コード期限を比較。' } },
     ],
     'fate-collab-guide': [
       { href: '/starrail/guides/banner-schedule-guide', label: { zh: '当前跃迁', en: 'Current warps', ja: '現在跳躍' }, description: { zh: '回到 v4.4 当前卡池算预算。', en: 'Return to v4.4 banners for budget checks.', ja: 'v4.4バナーで予算確認。' } },
@@ -363,6 +365,7 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
     'banner-schedule-guide': [
       { href: '/wuwa/guides/v3-5-preview-guide', label: { zh: 'v3.5 专题', en: 'v3.5 guide', ja: 'v3.5特集' }, description: { zh: '当前版本角色、平台和活动入口。', en: 'Current version characters, platforms, and events.', ja: '現在版本のキャラ、平台、イベント。' } },
       { href: '/wuwa/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '抽前先补星声。', en: 'Claim Astrite before pulling.', ja: 'ガチャ前に星声を回収。' } },
+      { href: '/calendar', label: { zh: '跨游戏日历', en: 'Banner calendar', ja: 'ガチャ日程' }, description: { zh: '对比多游戏卡池、版本和兑换码期限。', en: 'Compare banners, versions, and code deadlines across games.', ja: '複数ゲームのバナー、版本、コード期限を比較。' } },
     ],
     'echo-advanced-guide': [
       { href: '/wuwa/guides/banner-schedule-guide', label: { zh: '当前卡池', en: 'Current banners', ja: '現在バナー' }, description: { zh: '先确认要养谁。', en: 'Confirm who you are building first.', ja: '育成対象を確認。' } },
@@ -377,6 +380,7 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
     'banner-schedule-guide': [
       { href: '/zzz/version', label: { zh: 'v3.1 专题', en: 'v3.1 hub', ja: 'v3.1特集' }, description: { zh: '当前代理人、奖励和平台入口。', en: 'Current agents, rewards, and platform routes.', ja: '現在代理人、報酬、平台。' } },
       { href: '/zzz/teams', label: { zh: '配队模拟器', en: 'ZZZ team builder', ja: 'ZZZ編成ツール' }, description: { zh: '抽前先看当前代理人能进哪些队伍。', en: 'Check best teams and agent synergy before pulling.', ja: '引く前に編成相性を確認。' } },
+      { href: '/calendar', label: { zh: '跨游戏日历', en: 'Banner calendar', ja: 'ガチャ日程' }, description: { zh: '对比多游戏卡池、版本和兑换码期限。', en: 'Compare banners, versions, and code deadlines across games.', ja: '複数ゲームのバナー、版本、コード期限を比較。' } },
     ],
     'team-building-guide': [
       { href: '/zzz/guides/meta-teams-v3-guide', label: { zh: 'v3.1 最强队伍', en: 'Best v3.1 teams', ja: 'v3.1最強編成' }, description: { zh: '从通用配队继续看当前版本队伍优先级。', en: 'Move from team basics into current meta priorities.', ja: '基本編成から現在メタへ。' } },
@@ -1010,7 +1014,7 @@ function NextStepSection({ gameId, currentSlug, locale }: { gameId: GameId; curr
       <h2 className="mb-3 text-base font-semibold text-game-text">
         {locale === 'zh' ? '下一步去看' : locale === 'ja' ? '次に見るページ' : 'Next Steps'}
       </h2>
-      <div className="grid gap-3 sm:grid-cols-2">
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {nextSteps.map((step) => (
           <Link key={step.href} href={step.href as '/'} className="group rounded-lg border border-game-border bg-game-surface p-3 transition-all hover:border-game-primary">
             <h3 className="mb-1 text-sm font-semibold text-game-text group-hover:text-game-primary">{step.label[locale]}</h3>
