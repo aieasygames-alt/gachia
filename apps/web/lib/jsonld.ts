@@ -38,6 +38,12 @@ interface ItemJsonLdOptions {
 }
 
 const BASE_URL = 'https://gachia.com';
+const PUBLISHER = {
+  '@type': 'Organization',
+  name: 'Gachia',
+  url: BASE_URL,
+  logo: `${BASE_URL}/icon.svg`,
+};
 
 function homeLabel(locale: SupportedLocale) {
   return locale === 'zh' ? '首页' : locale === 'ja' ? 'ホーム' : 'Home';
@@ -336,6 +342,17 @@ export function buildItemJsonLd(options: ItemJsonLdOptions) {
  */
 export function buildHomepageJsonLd(locale: SupportedLocale) {
   const siteName = locale === 'zh' ? 'Gachia - 二次元游戏数据库' : locale === 'ja' ? 'Gachia - ゲームWiki' : 'Gachia - Game Wiki Database';
+  const title = locale === 'zh'
+    ? 'Gachia 游戏攻略 Wiki：卡池、版本、兑换码与角色图鉴'
+    : locale === 'ja'
+      ? 'Gachia ゲーム攻略 Wiki：バナー、版本、コード、キャラ'
+      : 'Gachia Game Wiki: Banners, Version Hubs, Codes & Character Guides';
+  const description = locale === 'zh'
+    ? 'Gachia 是多游戏攻略 Wiki 与实时规划入口，覆盖当前卡池、下期卡池、版本专题、兑换码、角色图鉴、武器数据、配装和热门攻略。'
+    : locale === 'ja'
+      ? 'Gachia は多ゲーム攻略 Wiki とリアルタイム計画ハブです。現在バナー、次回バナー、版本更新、コード、キャラ、武器、ビルド、攻略を整理します。'
+      : 'Gachia is a multi-game wiki and live planning hub for current banners, next banners, version updates, redeem codes, characters, weapons, builds, and guides.';
+  const modifiedDate = '2026-09-04';
 
   return [
     {
@@ -343,12 +360,57 @@ export function buildHomepageJsonLd(locale: SupportedLocale) {
       '@type': 'WebSite',
       name: siteName,
       url: `${BASE_URL}/${locale}`,
+      publisher: PUBLISHER,
     },
     {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'Gachia',
       url: BASE_URL,
+      logo: `${BASE_URL}/icon.svg`,
+      sameAs: [
+        'https://github.com/aieasygames-alt/gachia',
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: title,
+      headline: title,
+      description,
+      url: `${BASE_URL}/${locale}`,
+      inLanguage: locale === 'zh' ? 'zh-Hans' : locale,
+      datePublished: '2026-08-01',
+      dateModified: modifiedDate,
+      author: PUBLISHER,
+      publisher: PUBLISHER,
+      about: [
+        { '@type': 'Thing', name: 'game wiki' },
+        { '@type': 'Thing', name: 'gacha game guides' },
+        { '@type': 'Thing', name: 'character database' },
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: title,
+      description,
+      url: `${BASE_URL}/${locale}`,
+      inLanguage: locale === 'zh' ? 'zh-Hans' : locale,
+      datePublished: '2026-08-01',
+      dateModified: modifiedDate,
+      author: PUBLISHER,
+      publisher: PUBLISHER,
+      articleSection: locale === 'zh' ? '游戏攻略与资料库' : locale === 'ja' ? 'ゲーム攻略データベース' : 'Game Guides and Database',
+      about: [
+        { '@type': 'Thing', name: 'gacha games' },
+        { '@type': 'Thing', name: 'game banners' },
+        { '@type': 'Thing', name: 'character guides' },
+      ],
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': `${BASE_URL}/${locale}`,
+      },
     },
   ];
 }

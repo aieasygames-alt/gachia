@@ -47,6 +47,11 @@ export function SiteFooter({ locale }: SiteFooterProps) {
             </h4>
             <ul className="space-y-1 text-sm">
               <li>
+                <Link href="/about" className="text-game-text-muted hover:text-game-primary">
+                  {locale === 'zh' ? '关于 Gachia' : locale === 'ja' ? 'Gachiaについて' : 'About Gachia'}
+                </Link>
+              </li>
+              <li>
                 <Link href="/sitemap" className="text-game-text-muted hover:text-game-primary">
                   {locale === 'zh' ? '网站地图' : locale === 'ja' ? 'サイトマップ' : 'Sitemap'}
                 </Link>

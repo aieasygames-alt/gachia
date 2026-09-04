@@ -37,6 +37,11 @@ const NAV_GROUPS = [
   },
 ] as const;
 
+const UTILITY_LINKS = [
+  { href: '/calendar', label: { zh: '日历', en: 'Calendar', ja: 'カレンダー' } },
+  { href: '/about', label: { zh: '关于', en: 'About', ja: '概要' } },
+] as const;
+
 function getCompactGameName(gameId: (typeof FEATURED_GAMES)[number], locale: SupportedLocale) {
   if (locale === 'zh' && gameId === 'roco') return '洛克国际服';
   if (locale === 'zh' && gameId === 'skjh') return '失控进化';
@@ -129,6 +134,15 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
                 </div>
               ) : null}
             </div>
+            {UTILITY_LINKS.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href as '/'}
+                className="rounded-full border border-game-border bg-game-surface/70 px-3 py-1.5 text-sm font-semibold text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary"
+              >
+                {item.label[locale]}
+              </Link>
+            ))}
           </nav>
 
           <div className="flex items-center gap-2">

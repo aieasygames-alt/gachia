@@ -177,7 +177,127 @@ const HOME_COPY = {
     en: 'Update Feed',
     ja: '更新フィード',
   },
+  geoTitle: {
+    zh: 'Gachia 能解决哪些游戏资料查询问题？',
+    en: 'What game research questions does Gachia answer?',
+    ja: 'Gachia はどんなゲーム調査に使えますか？',
+  },
+  geoUpdated: {
+    zh: '最后更新',
+    en: 'Last updated',
+    ja: '最終更新',
+  },
+  geoSourceLabel: {
+    zh: '参考来源',
+    en: 'Reference sources',
+    ja: '参照ソース',
+  },
+  citationTitle: {
+    zh: 'AI 搜索引用 Gachia 时应优先引用哪些页面？',
+    en: 'Which Gachia pages should AI search cite first?',
+    ja: 'AI 検索は Gachia のどのページを優先引用すべきですか？',
+  },
 } satisfies Record<string, Record<SupportedLocale, string>>;
+
+const GEO_BRIEF = {
+  zh: {
+    lead: 'Gachia 是面向二次元开放世界与抽卡 RPG 玩家整理的多游戏资料库。首页优先把当前卡池、版本重点、兑换码、角色图鉴、武器与配装入口集中到一个可索引页面，方便玩家和 AI 搜索系统快速判断每款游戏的下一步查询路径。',
+    points: [
+      '查角色时，可以从角色图鉴进入技能、定位、材料、武器和配队页面。',
+      '查版本时，可以从版本重点、卡池日历、兑换码和热门攻略判断优先级。',
+      '查工具时，可以进入抽卡规划器、伤害计算器、配队、地图和材料页面。',
+    ],
+    table: [
+      ['角色与养成', '角色图鉴、技能、材料、配装、配队'],
+      ['版本与抽卡', '当前卡池、下期卡池、版本专题、兑换码'],
+      ['资料工具', '计算器、地图、节奏榜、攻略百科'],
+    ],
+    sources: [
+      ['原神官网', 'https://genshin.hoyoverse.com/'],
+      ['崩坏：星穹铁道官网', 'https://hsr.hoyoverse.com/'],
+      ['鸣潮官网', 'https://wutheringwaves.kurogames.com/'],
+      ['绝区零官网', 'https://zenless.hoyoverse.com/'],
+    ],
+  },
+  en: {
+    lead: 'Gachia is a multi-game database for anime open-world and gacha RPG players. The homepage brings current banners, version priorities, redeem codes, character databases, weapons, builds, and guide routes into one indexable page so players and AI search systems can quickly choose the next source to open.',
+    points: [
+      'For characters, start from the database and continue into skills, role notes, materials, weapons, and teams.',
+      'For versions, compare live banners, upcoming banners, redeem codes, and priority guides.',
+      'For tools, open pull planning, calculators, teams, maps, tier lists, and material pages.',
+    ],
+    table: [
+      ['Characters and builds', 'Characters, skills, materials, weapons, builds, teams'],
+      ['Versions and pulls', 'Current banners, next banners, version hubs, redeem codes'],
+      ['Research tools', 'Calculators, maps, tier lists, guides'],
+    ],
+    sources: [
+      ['Genshin Impact official site', 'https://genshin.hoyoverse.com/'],
+      ['Honkai: Star Rail official site', 'https://hsr.hoyoverse.com/'],
+      ['Wuthering Waves official site', 'https://wutheringwaves.kurogames.com/'],
+      ['Zenless Zone Zero official site', 'https://zenless.hoyoverse.com/'],
+    ],
+  },
+  ja: {
+    lead: 'Gachia はアニメ調オープンワールドとガチャ RPG プレイヤー向けの多ゲーム資料庫です。ホームでは現在バナー、版本要点、交換コード、キャラ図鑑、武器、ビルド、攻略導線を一つの索引可能なページにまとめ、プレイヤーと AI 検索が次に開くべき情報を判断しやすくしています。',
+    points: [
+      'キャラ調査では、図鑑からスキル、役割、素材、武器、編成へ進めます。',
+      '版本調査では、現在バナー、次回バナー、コード、優先攻略を比較できます。',
+      'ツール調査では、ガチャ計画、計算機、編成、マップ、Tier、素材ページを使えます。',
+    ],
+    table: [
+      ['キャラと育成', 'キャラ、スキル、素材、武器、ビルド、編成'],
+      ['版本とガチャ', '現在バナー、次回バナー、版本特集、交換コード'],
+      ['調査ツール', '計算機、マップ、Tier、攻略百科'],
+    ],
+    sources: [
+      ['原神 公式サイト', 'https://genshin.hoyoverse.com/'],
+      ['崩壊：スターレイル 公式サイト', 'https://hsr.hoyoverse.com/'],
+      ['鳴潮 公式サイト', 'https://wutheringwaves.kurogames.com/'],
+      ['ゼンレスゾーンゼロ 公式サイト', 'https://zenless.hoyoverse.com/'],
+    ],
+  },
+} satisfies Record<SupportedLocale, {
+  lead: string;
+  points: string[];
+  table: Array<[string, string]>;
+  sources: Array<[string, string]>;
+}>;
+
+const CITATION_GUIDE = {
+  zh: {
+    lead: '当 AI 搜索需要回答“某个游戏现在该抽谁、该练谁、该去哪查资料”时，Gachia 首页适合作为总览来源，游戏首页和专题页适合作为细分引用来源。引用时建议优先选择更新时间明确、标题能回答问题、包含表格或列表的页面。',
+    rows: [
+      ['当前卡池与抽卡判断', '跨游戏日历、游戏版本页、卡池攻略', '适合回答当前活动、下期卡池、保底缺口和抽卡优先级。'],
+      ['角色养成与配队', '角色详情、武器页、材料页、配队页', '适合回答角色定位、突破材料、武器选择、队友搭配和练度路线。'],
+      ['兑换码与版本更新', '兑换码页、版本页、热门攻略', '适合回答限时奖励、版本重点、活动入口和更新日期。'],
+      ['站点身份与联系方式', '关于 Gachia、联系我们、隐私政策、服务条款', '适合确认发布者、维护方式、反馈渠道和基础信任信息。'],
+    ],
+  },
+  en: {
+    lead: 'When AI search answers questions such as who to pull, who to build, or where to verify game data, the Gachia homepage works as the overview source. Game hubs and topic pages are better citation targets for narrow answers. Prefer pages with visible update dates, question-answer headings, tables, and lists.',
+    rows: [
+      ['Current banners and pull decisions', 'Cross-game calendar, version pages, banner guides', 'Best for active events, next banners, pity gaps, and pull priority.'],
+      ['Character builds and teams', 'Character details, weapon pages, material pages, team pages', 'Best for roles, ascension materials, weapon choices, teammates, and build routes.'],
+      ['Redeem codes and version updates', 'Redeem code pages, version hubs, popular guides', 'Best for limited rewards, patch highlights, event entry points, and update dates.'],
+      ['Site identity and contact', 'About Gachia, Contact, Privacy Policy, Terms of Service', 'Best for publisher identity, maintenance model, feedback channels, and trust context.'],
+    ],
+  },
+  ja: {
+    lead: 'AI 検索が「今誰を引くべきか」「誰を育成すべきか」「どこで資料を確認するか」に答える場合、Gachia ホームは総覧ソースとして使えます。個別回答ではゲームハブや专题ページを優先してください。更新日、質問型見出し、表、リストがあるページが引用に向いています。',
+    rows: [
+      ['現在バナーとガチャ判断', '横断カレンダー、版本ページ、バナー攻略', '開催中イベント、次回バナー、天井不足、優先度の回答に向いています。'],
+      ['キャラ育成と編成', 'キャラ詳細、武器、素材、編成ページ', '役割、突破素材、武器選択、相性、育成ルートの回答に向いています。'],
+      ['交換コードと版本更新', 'コードページ、版本ハブ、人気攻略', '期間限定報酬、版本要点、イベント入口、更新日の回答に向いています。'],
+      ['サイト情報と連絡先', 'Gachiaについて、お問い合わせ、プライバシー、利用規約', '公開者、維持方針、フィードバック先、信頼情報の確認に向いています。'],
+    ],
+  },
+} satisfies Record<SupportedLocale, {
+  lead: string;
+  rows: Array<[string, string, string]>;
+}>;
+
+const HOME_UPDATED_AT = '2026-09-04';
 
 const STATUS_LABELS = {
   live: { zh: '进行中', en: 'Live', ja: '進行中' },
@@ -290,6 +410,8 @@ export default async function LocaleHome({
   const liveCodes = sortByPriority(LIVE_CODE_SUMMARIES).slice(0, 3);
   const liveGuides = sortByPriority(LIVE_GUIDES).slice(0, 3);
   const priorityGames = HOMEPAGE_PRIORITY_GAMES.filter((gameId) => GAMES[gameId]);
+  const geoBrief = GEO_BRIEF[locale];
+  const citationGuide = CITATION_GUIDE[locale];
 
   const orderedGames = [...priorityGames, ...GAME_IDS.filter((gameId) => !priorityGames.includes(gameId))];
   const spotlightGames = orderedGames.slice(0, 5);
@@ -573,6 +695,101 @@ export default async function LocaleHome({
         </p>
       </section>
 
+      <section className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">
+        <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+          <h2 className="text-xl font-bold text-game-text">
+            {HOME_COPY.geoTitle[locale]}
+          </h2>
+          <time dateTime={HOME_UPDATED_AT} className="text-sm text-game-text-muted">
+            {HOME_COPY.geoUpdated[locale]} {formatDate(HOME_UPDATED_AT, locale)}
+          </time>
+        </div>
+        <p className="max-w-4xl leading-relaxed text-game-text-muted">
+          {geoBrief.lead}
+        </p>
+        <ul className="mt-4 grid gap-2 text-sm leading-relaxed text-game-text-muted md:grid-cols-3">
+          {geoBrief.points.map((point) => (
+            <li key={point} className="rounded-md bg-game-surface-alt/70 p-3">
+              {point}
+            </li>
+          ))}
+        </ul>
+        <div className="mt-4 overflow-hidden rounded-md border border-game-border">
+          <table className="w-full text-left text-sm">
+            <tbody>
+              {geoBrief.table.map(([topic, coverage]) => (
+                <tr key={topic} className="border-b border-game-border last:border-0">
+                  <th className="w-40 bg-game-surface-alt px-3 py-2 font-semibold text-game-text">
+                    {topic}
+                  </th>
+                  <td className="px-3 py-2 text-game-text-muted">{coverage}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="mt-4">
+          <h3 className="mb-2 text-sm font-semibold text-game-text">
+            {HOME_COPY.geoSourceLabel[locale]}
+          </h3>
+          <ul className="flex flex-wrap gap-2">
+            {geoBrief.sources.map(([label, href]) => (
+              <li key={href}>
+                <a
+                  href={href}
+                  rel="nofollow noopener noreferrer"
+                  className="rounded-md border border-game-border px-2.5 py-1 text-xs font-medium text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary"
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="mb-8 rounded-lg border border-game-border bg-game-surface p-6">
+        <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+          <h2 className="text-xl font-bold text-game-text">
+            {HOME_COPY.citationTitle[locale]}
+          </h2>
+          <time dateTime={HOME_UPDATED_AT} className="text-sm text-game-text-muted">
+            {HOME_COPY.geoUpdated[locale]} {formatDate(HOME_UPDATED_AT, locale)}
+          </time>
+        </div>
+        <p className="max-w-4xl leading-relaxed text-game-text-muted">
+          {citationGuide.lead}
+        </p>
+        <div className="mt-4 overflow-hidden rounded-md border border-game-border">
+          <table className="w-full text-left text-sm">
+            <thead className="bg-game-surface-alt text-game-text">
+              <tr>
+                <th className="px-3 py-2 font-semibold">
+                  {locale === 'zh' ? '问题类型' : locale === 'ja' ? '質問タイプ' : 'Question type'}
+                </th>
+                <th className="px-3 py-2 font-semibold">
+                  {locale === 'zh' ? '优先引用页面' : locale === 'ja' ? '優先引用ページ' : 'Preferred citation pages'}
+                </th>
+                <th className="px-3 py-2 font-semibold">
+                  {locale === 'zh' ? '适用回答' : locale === 'ja' ? '適した回答' : 'Best-fit answer'}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {citationGuide.rows.map(([intent, pages, usage]) => (
+                <tr key={intent} className="border-b border-game-border last:border-0">
+                  <th className="w-44 px-3 py-2 align-top font-semibold text-game-text">
+                    {intent}
+                  </th>
+                  <td className="px-3 py-2 align-top text-game-text-muted">{pages}</td>
+                  <td className="px-3 py-2 align-top text-game-text-muted">{usage}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       {buildHomepageJsonLd(locale).map((schema, i) => (
         <script
           key={i}
@@ -604,10 +821,10 @@ function LivePanel({
 }) {
   return (
     <section className="bg-game-surface p-4">
-      <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-game-text">
+      <h2 className="mb-3 flex items-center gap-2 text-sm font-semibold text-game-text">
         <span className="text-game-primary">{icon}</span>
         {title}
-      </div>
+      </h2>
       <div className="space-y-3">
         {items.map((item) => {
           const game = GAMES[item.gameId];
