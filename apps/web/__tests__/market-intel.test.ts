@@ -12,13 +12,14 @@ import { getKeywordRisk } from '@/lib/keyword-governance';
 
 describe('market intelligence backlog', () => {
   it('stores the current sampling batch as structured opportunities', () => {
-    expect(MARKET_INTEL_BATCH_ID).toBe('market-intel-2026-08-31');
-    expect(MARKET_INTEL_OPPORTUNITIES.length).toBe(10);
+    expect(MARKET_INTEL_BATCH_ID).toBe('market-intel-2026-09-03');
+    expect(MARKET_INTEL_OPPORTUNITIES.length).toBe(13);
     expect(getMarketIntelValidationIssues()).toEqual([]);
   });
 
-  it('covers the current-site games in the 2026-08-31 batch', () => {
+  it('covers the current-site games in the 2026-09-03 batch', () => {
     const currentSiteGames: GameId[] = [
+      'aniimo',
       'genshin',
       'starrail',
       'wuwa',
@@ -29,13 +30,16 @@ describe('market intelligence backlog', () => {
       'endfield',
       'sea',
       'skjh',
+      'roco',
+      'roco-cn',
     ];
 
     for (const gameId of currentSiteGames) {
       expect(getMarketIntelForGame(gameId).length).toBeGreaterThan(0);
     }
-    expect(MARKET_INTEL_OPPORTUNITIES.map((opportunity) => opportunity.gameId)).not.toContain('roco');
-    expect(MARKET_INTEL_OPPORTUNITIES.map((opportunity) => opportunity.gameId)).not.toContain('roco-cn');
+    expect(MARKET_INTEL_OPPORTUNITIES.map((opportunity) => opportunity.gameId)).toContain('roco');
+    expect(MARKET_INTEL_OPPORTUNITIES.map((opportunity) => opportunity.gameId)).toContain('roco-cn');
+    expect(MARKET_INTEL_OPPORTUNITIES.map((opportunity) => opportunity.gameId)).toContain('aniimo');
     expect(currentSiteGames.every((gameId) => GAME_IDS.includes(gameId))).toBe(true);
   });
 
@@ -44,17 +48,18 @@ describe('market intelligence backlog', () => {
     const p1 = getMarketIntelByPriority('P1');
 
     expect(p0.map((opportunity) => opportunity.gameId)).toEqual([
+      'aniimo',
       'genshin',
       'zzz',
+      'starrail',
       'endfield',
-      'sea',
-      'ananta',
     ]);
     expect(p1.map((opportunity) => opportunity.gameId)).toEqual([
+      'sea',
       'wuwa',
       'nte',
       'skjh',
-      'starrail',
+      'roco',
       'guihuan',
     ]);
 
@@ -62,7 +67,7 @@ describe('market intelligence backlog', () => {
       expect(opportunity.status).toBe('done');
       expect(opportunity.targetPages.length).toBeGreaterThan(0);
       expect(opportunity.actions).toContain('update_existing_page');
-      expect(opportunity.actions.some((action) => action === 'update_live_module' || action === 'update_download_route' || action === 'create_topic_page')).toBe(true);
+      expect(opportunity.actions.some((action) => action === 'update_live_module' || action === 'update_download_route' || action === 'create_topic_page' || action === 'update_code_route')).toBe(true);
     }
     for (const opportunity of p1) {
       expect(opportunity.status).toBe('done');

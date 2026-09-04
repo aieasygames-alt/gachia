@@ -9,6 +9,9 @@ import anantaGuides from '../public/data/ananta/raw-guides.json';
 import endfieldGuides from '../public/data/endfield/raw-guides.json';
 import seaGuides from '../public/data/sea/raw-guides.json';
 import skjhGuides from '../public/data/skjh/raw-guides.json';
+import rocoGuides from '../public/data/roco/raw-guides.json';
+import rocoCnGuides from '../public/data/roco-cn/raw-guides.json';
+import aniimoGuides from '../public/data/aniimo/raw-guides.json';
 import { MARKET_INTEL_OPPORTUNITIES } from '@/lib/market-intel';
 import { VERSION_SNAPSHOTS } from '@/lib/version-snapshots';
 
@@ -23,6 +26,9 @@ const guideIdsByGame = {
   endfield: new Set(endfieldGuides.map((guide) => guide.id)),
   sea: new Set(seaGuides.map((guide) => guide.id)),
   skjh: new Set(skjhGuides.map((guide) => guide.id)),
+  roco: new Set(rocoGuides.map((guide) => guide.id)),
+  'roco-cn': new Set(rocoCnGuides.map((guide) => guide.id)),
+  aniimo: new Set(aniimoGuides.map((guide) => guide.id)),
 };
 
 const expectedNewGuides = {
@@ -35,10 +41,13 @@ const expectedNewGuides = {
   skjh: 'aug31-event-ended-beginner-catchup',
   starrail: '4x-fate-gilgamesh-kafka-cyrene-evergreen-plan',
   guihuan: 'test-release-timeline-guide',
+  roco: 'cbt-registration-guide',
+  'roco-cn': 's2-season-guide',
+  aniimo: 'download',
 };
 
 describe('market-intel guide links', () => {
-  it('creates the guide slugs introduced by the 2026-08-31 batch', () => {
+  it('creates the guide slugs introduced by the 2026-09-03 batch', () => {
     for (const [gameId, guideId] of Object.entries(expectedNewGuides)) {
       expect(guideIdsByGame[gameId as keyof typeof guideIdsByGame].has(guideId)).toBe(true);
     }

@@ -16,18 +16,18 @@ describe('version snapshots', () => {
     }
   });
 
-  it('marks the current ZZZ snapshot as a v3.2 post-livestream watch', () => {
+  it('marks the current ZZZ snapshot as a v3.2 release hub watch', () => {
     expect(getVersionSnapshot('zzz')).toMatchObject({
-      currentVersion: '3.2 post-livestream',
+      currentVersion: '3.2 release hub',
       status: 'watch',
       lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     });
   });
 
-  it('uses the 2026-08-31 snapshot batch', () => {
-    expect(VERSION_SNAPSHOT_UPDATED_AT).toBe('2026-08-31');
-    expect(getVersionSnapshot('genshin')?.currentVersion).toBe('7.0 Phase II');
-    expect(getVersionSnapshot('endfield')?.currentVersion).toBe('Steam Pioneer Test watch');
+  it('uses the 2026-09-03 snapshot batch', () => {
+    expect(VERSION_SNAPSHOT_UPDATED_AT).toBe('2026-09-03');
+    expect(getVersionSnapshot('genshin')?.currentVersion).toBe('Luna I pre-launch');
+    expect(getVersionSnapshot('endfield')?.currentVersion).toBe('Steam Pioneer Test last call');
     expect(getVersionSnapshot('sea')?.currentVersion).toBe('early 2027 / December beta watch');
   });
 

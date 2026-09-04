@@ -21,42 +21,42 @@ export interface VersionSnapshot {
   links: VersionSnapshotLink[];
 }
 
-export const VERSION_SNAPSHOT_UPDATED_AT = '2026-08-31';
+export const VERSION_SNAPSHOT_UPDATED_AT = '2026-09-03';
 
 export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   zzz: {
     gameId: 'zzz',
-    currentVersion: '3.2 post-livestream',
-    releaseDate: '2026-08-28',
+    currentVersion: '3.2 release hub',
+    releaseDate: '2026-09-09',
     status: 'watch',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     summary: {
-      zh: '3.2 特别节目已播，直播码窗口已过期；当前重点是 3.2 新代理人、版本时间、下期兑换码提醒和 Xbox/Microsoft Store/Steam 入坑。',
-      en: 'The v3.2 special program has aired and its livestream-code window has expired; route players to v3.2 agents, timing, next-code reminders, and Xbox/Microsoft Store/Steam onboarding.',
-      ja: 'v3.2特番は配信済みで、配信コード期間は終了済みです。新エージェント、版本時期、次回コード通知、Xbox/Microsoft Store/Steam入門を案内します。',
+      zh: '3.2 release hub 已进入上线倒计时，当前重点是 Claret、Roxy、Armorer、Maim、版本时间、过期直播码和 HoYoLAND 2026。',
+      en: 'The v3.2 release hub is in countdown mode, focusing on Claret, Roxy, Armorer, Maim, timing, expired livestream codes, and HoYoLAND 2026.',
+      ja: 'v3.2リリースハブはカウントダウン段階です。Claret、Roxy、Armorer、Maim、時期、期限切れコード、HoYoLAND 2026を案内します。',
     },
     whatChanged: [
       {
-        zh: '版本页从直播前 watch 改为直播后 recap，过期直播码不再放入可领取模块。',
-        en: 'The hub moves from pre-stream watch into post-stream recap, keeping expired livestream codes out of claimable modules.',
-        ja: '版本ページを配信前注目から配信後まとめへ切り替え、期限切れコードを受取可能欄に入れません。',
+        zh: '版本页从直播后 recap 切到 3.2 上线前倒计时。',
+        en: 'The hub moves from post-stream recap into v3.2 pre-launch countdown mode.',
+        ja: '版本ページを配信後まとめからv3.2実装前カウントダウンへ移します。',
       },
       {
-        zh: '新代理人、版本时间、平台绑定和下期兑换码提醒被放到同一条路线。',
-        en: 'New agents, version timing, platform linking, and next-code reminders now share one route.',
-        ja: '新エージェント、版本時期、平台連携、次回コード通知を一つの導線にまとめます。',
+        zh: '过期直播码和平台下载入口保留，但不再作为主要转化点。',
+        en: 'Expired livestream codes and platform download links remain visible but are no longer the primary conversion point.',
+        ja: '期限切れコードとプラットフォームDLは残しますが、主導線にはしません。',
       },
     ],
     firstSteps: [
       {
-        zh: '先确认直播码是否已过期，再检查仍可用版本码、邮件和平台绑定奖励。',
-        en: 'Confirm whether livestream codes have expired first, then check active patch codes, mail, and platform-linking rewards.',
-        ja: 'まず配信コードの期限切れを確認し、その後有効な版本コード、メール、平台連携報酬を確認します。',
+        zh: '先看 3.2 上线日期，再确认 Claret 和 Roxy 的抽取优先级。',
+        en: 'Check the v3.2 launch date first, then decide Claret and Roxy pull priority.',
+        ja: 'まずv3.2の実装日を確認し、その後ClaretとRoxyの優先度を決めます。',
       },
       {
-        zh: '再看 3.2 新代理人是否需要提前留抽。',
-        en: 'Then decide whether to reserve pulls for v3.2 new agents.',
-        ja: '次にv3.2新エージェントへガチャ資源を残すか判断します。',
+        zh: '直播码只保留过期说明，不放入可领取模块。',
+        en: 'Keep livestream codes in expired context only, not in claimable modules.',
+        ja: '配信コードは期限切れ文脈のみで扱い、受取可能欄には入れません。',
       },
     ],
     links: [
@@ -113,37 +113,37 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   starrail: {
     gameId: 'starrail',
-    currentVersion: '4.x watch',
-    releaseDate: '2026-08-14',
+    currentVersion: '4.5 live',
+    releaseDate: '2026-08-26',
     status: 'fresh',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     summary: {
-      zh: '4.x 继续承接 Fate 联动、Gilgamesh、Kafka、Cyrene、当前跃迁、兑换码和队伍构建搜索。',
-      en: 'The 4.x watch continues routing Fate collab, Gilgamesh, Kafka, Cyrene, current warps, codes, and team-builder searches.',
-      ja: '4.xはFateコラボ、Gilgamesh、Kafka、Cyrene、現在跳躍、コード、編成検索を案内します。',
+      zh: '4.5 已上线，当前重点是 Phase 2、兑换码、当前跃迁和队伍构建。',
+      en: 'v4.5 is live, with focus on Phase 2, codes, current warps, and team-building.',
+      ja: 'v4.5は実装済みで、Phase 2、コード、現在跳躍、編成が中心です。',
     },
     whatChanged: [
       {
-        zh: '页面继续从单版本专题扩展到 4.x 联动、复刻和队伍构建的常青入口。',
-        en: 'The page expands from a single-version hub into an evergreen 4.x collab, rerun, and team-building route.',
-        ja: '単一版本特集から4.xコラボ、復刻、編成の常設導線へ広げます。',
+        zh: '页面继续从单版本专题扩展到 4.5 Phase 2 和队伍构建的常青入口。',
+        en: 'The page expands from a single-version hub into an evergreen 4.5 Phase 2 and team-building route.',
+        ja: '単一版本特集から4.5 Phase 2と編成の常設導線へ広げます。',
       },
       {
-        zh: 'Banner、Fate FAQ 和兑换码页互相打通，减少用户重复跳转。',
-        en: 'Banner, Fate FAQ, and code pages now reinforce each other to reduce repeated navigation.',
-        ja: 'バナー、Fate FAQ、コードページを相互接続し、移動の手間を減らします。',
+        zh: 'Banner、4.5 Phase 2 和兑换码页互相打通，减少用户重复跳转。',
+        en: 'Banner, Phase 2, and code pages now reinforce each other to reduce repeated navigation.',
+        ja: 'バナー、Phase 2、コードページを相互接続し、移動の手間を減らします。',
       },
     ],
     firstSteps: [
       {
-        zh: '先领直播码和版本奖励，再计算 Himeko Nova / Fate 目标缺口。',
-        en: 'Claim livestream/version rewards first, then calculate gaps for Himeko Nova or Fate targets.',
-        ja: 'まず配信/版本報酬を受け取り、Himeko NovaやFate目標の不足を計算します。',
+        zh: '先领版本奖励，再计算 4.5 目标缺口。',
+        en: 'Claim version rewards first, then calculate 4.5 target gaps.',
+        ja: 'まず版本報酬を受け取り、4.5目標の不足を計算します。',
       },
       {
-        zh: '资源紧张时，只锁定一个联动或版本目标。',
-        en: 'With limited resources, lock one collab or version target first.',
-        ja: '資源が少ない場合は、コラボか版本目標を一つに絞ります。',
+        zh: '资源紧张时，只锁定一个 4.5 目标。',
+        en: 'With limited resources, lock one 4.5 target first.',
+        ja: '資源が少ない場合は、4.5目標を一つに絞ります。',
       },
     ],
     links: [
@@ -192,32 +192,32 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   genshin: {
     gameId: 'genshin',
-    currentVersion: '7.0 Phase II',
-    releaseDate: '2026-08-28',
+    currentVersion: 'Luna I pre-launch',
+    releaseDate: '2026-09-10',
     status: 'live',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     summary: {
-      zh: '当前版本中心进入 7.0 Phase II，优先承接 Snezhnaya、Nod-Krai、Cryoculus、地图收集、当前/下期卡池和兑换码。',
-      en: 'The hub is now in v7.0 Phase II, routing Snezhnaya, Nod-Krai, Cryoculus, map collection, current/next banners, and redeem codes.',
-      ja: '現在の中心はv7.0 Phase IIです。Snezhnaya、Nod-Krai、Cryoculus、マップ収集、現在/次回バナー、コードを案内します。',
+      zh: 'Luna I 已进入上线前最后一周，优先承接 Nod-Krai、Lauma、Flins、Aino、免费 5 星、回归奖励和地图准备。',
+      en: 'Luna I is in its final pre-launch week, routing Nod-Krai, Lauma, Flins, Aino, free-5-star planning, returning-player rewards, and map prep.',
+      ja: 'Luna Iは実装前の最終週です。Nod-Krai、Lauma、Flins、Aino、無料5星、復帰報酬、マップ準備を案内します。',
     },
     whatChanged: [
       {
-        zh: '版本页从 7.0 上线后泛路线继续细分到 Phase II 卡池与 Nod-Krai 地图收集。',
-        en: 'The hub narrows from broad v7.0 post-launch routing into Phase II banners and Nod-Krai collection.',
-        ja: '版本ページをv7.0実装後の広い導線から、Phase IIバナーとNod-Krai収集へ細分化します。',
+        zh: '版本页从 7.0 Phase II 改为 Luna I 上线前清单。',
+        en: 'The hub narrows from v7.0 Phase II into a Luna I pre-launch checklist.',
+        ja: '版本ページをv7.0 Phase IIからLuna I実装前チェックリストへ切り替えます。',
       },
       {
-        zh: 'Cryoculus、interactive map、兑换码、角色和卡池入口保持在版本页可见位置。',
-        en: 'Cryoculus, interactive map, codes, characters, and banner entries stay visible from the version hub.',
-        ja: 'Cryoculus、インタラクティブマップ、コード、キャラ、バナー入口を版本ページで見える位置に保ちます。',
+        zh: '回归奖励、免费 5 星和地图入口保持在版本页可见位置。',
+        en: 'Returning-player rewards, free-5-star planning, and map entries stay visible from the version hub.',
+        ja: '復帰報酬、無料5星、マップ入口を版本ページで見える位置に保ちます。',
       },
     ],
     firstSteps: [
       {
-        zh: '先看 Phase II 当前/下期卡池，再核对兑换码、Nod-Krai 地图和 Cryoculus 收集。',
-        en: 'Check Phase II current/next banners first, then verify codes, Nod-Krai maps, and Cryoculus collection.',
-        ja: 'まずPhase IIの現在/次回バナーを確認し、コード、Nod-Kraiマップ、Cryoculus収集を照合します。',
+        zh: '先看 Luna I 上线前准备，再核对兑换码、Nod-Krai 地图和免费 5 星规划。',
+        en: 'Check Luna I prep first, then verify codes, Nod-Krai maps, and free-5-star planning.',
+        ja: 'まずLuna I準備を確認し、コード、Nod-Kraiマップ、無料5星計画を照合します。',
       },
       {
         zh: '抽卡前把原石、保底和目标角色优先级排好。',
@@ -236,7 +236,7 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   skjh: {
     gameId: 'skjh',
     currentVersion: 'August event wrap-up',
-    releaseDate: '2026-08-31',
+    releaseDate: '2026-09-03',
     status: 'live',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     summary: {
@@ -272,14 +272,14 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   endfield: {
     gameId: 'endfield',
-    currentVersion: 'Steam Pioneer Test watch',
-    releaseDate: '2026-08-26',
+    currentVersion: 'Steam Pioneer Test last call',
+    releaseDate: '2026-09-10',
     status: 'watch',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     summary: {
-      zh: 'Steam Pioneer Test 招募成为新增强信号，当前重点是测试资格、Steam 下载、Homecoming、角色、蓝图和 AIC 工厂系统。',
-      en: 'Steam Pioneer Test recruitment is the new strong signal, with focus on test access, Steam download, Homecoming, characters, blueprints, and the AIC factory system.',
-      ja: 'Steam Pioneer Test募集が新しい強いシグナルです。テスト資格、Steam DL、Homecoming、キャラ、設計図、AIC工場を中心に案内します。',
+      zh: 'Steam Pioneer Test 仍是 9/10 前强时效窗口，当前重点是测试资格、Steam 下载、Homecoming、角色、蓝图和 AIC 工厂系统。',
+      en: 'Steam Pioneer Test recruitment remains the last-call signal, with focus on test access, Steam download, Homecoming, characters, blueprints, and the AIC factory system.',
+      ja: 'Steam Pioneer Test募集はラストコールです。テスト資格、Steam DL、Homecoming、キャラ、設計図、AIC工場を中心に案内します。',
     },
     whatChanged: [
       {
@@ -310,7 +310,7 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   sea: {
     gameId: 'sea',
     currentVersion: 'early 2027 / December beta watch',
-    releaseDate: '2026-08-31',
+    releaseDate: '2026-09-03',
     status: 'watch',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     summary: {
