@@ -193,15 +193,15 @@ const HOME_COPY = {
     ja: '参照ソース',
   },
   citationTitle: {
-    zh: 'AI 搜索引用 Gachia 时应优先引用哪些页面？',
-    en: 'Which Gachia pages should AI search cite first?',
-    ja: 'AI 検索は Gachia のどのページを優先引用すべきですか？',
+    zh: '不同问题应该从哪里开始查？',
+    en: 'Where should each research path start?',
+    ja: '調べたい内容ごとの入口はどこですか？',
   },
 } satisfies Record<string, Record<SupportedLocale, string>>;
 
 const GEO_BRIEF = {
   zh: {
-    lead: 'Gachia 是面向二次元开放世界与抽卡 RPG 玩家整理的多游戏资料库。首页优先把当前卡池、版本重点、兑换码、角色图鉴、武器与配装入口集中到一个可索引页面，方便玩家和 AI 搜索系统快速判断每款游戏的下一步查询路径。',
+    lead: 'Gachia 是面向二次元开放世界与抽卡 RPG 玩家整理的多游戏资料库。首页优先把当前卡池、版本重点、兑换码、角色图鉴、武器与配装入口集中到一个页面，方便玩家快速判断每款游戏的下一步查询路径。',
     points: [
       '查角色时，可以从角色图鉴进入技能、定位、材料、武器和配队页面。',
       '查版本时，可以从版本重点、卡池日历、兑换码和热门攻略判断优先级。',
@@ -220,7 +220,7 @@ const GEO_BRIEF = {
     ],
   },
   en: {
-    lead: 'Gachia is a multi-game database for anime open-world and gacha RPG players. The homepage brings current banners, version priorities, redeem codes, character databases, weapons, builds, and guide routes into one indexable page so players and AI search systems can quickly choose the next source to open.',
+    lead: 'Gachia is a multi-game database for anime open-world and gacha RPG players. The homepage brings current banners, version priorities, redeem codes, character databases, weapons, builds, and guide routes into one page so players can quickly choose the next source to open.',
     points: [
       'For characters, start from the database and continue into skills, role notes, materials, weapons, and teams.',
       'For versions, compare live banners, upcoming banners, redeem codes, and priority guides.',
@@ -239,7 +239,7 @@ const GEO_BRIEF = {
     ],
   },
   ja: {
-    lead: 'Gachia はアニメ調オープンワールドとガチャ RPG プレイヤー向けの多ゲーム資料庫です。ホームでは現在バナー、版本要点、交換コード、キャラ図鑑、武器、ビルド、攻略導線を一つの索引可能なページにまとめ、プレイヤーと AI 検索が次に開くべき情報を判断しやすくしています。',
+    lead: 'Gachia はアニメ調オープンワールドとガチャ RPG プレイヤー向けの多ゲーム資料庫です。ホームでは現在バナー、版本要点、交換コード、キャラ図鑑、武器、ビルド、攻略導線を一つのページにまとめ、次に開くべき情報を判断しやすくしています。',
     points: [
       'キャラ調査では、図鑑からスキル、役割、素材、武器、編成へ進めます。',
       '版本調査では、現在バナー、次回バナー、コード、優先攻略を比較できます。',
@@ -266,16 +266,16 @@ const GEO_BRIEF = {
 
 const CITATION_GUIDE = {
   zh: {
-    lead: '当 AI 搜索需要回答“某个游戏现在该抽谁、该练谁、该去哪查资料”时，Gachia 首页适合作为总览来源，游戏首页和专题页适合作为细分引用来源。引用时建议优先选择更新时间明确、标题能回答问题、包含表格或列表的页面。',
+    lead: '如果你想判断某个游戏现在该抽谁、该练谁、该去哪查资料，可以先从首页确认整体状态，再进入游戏首页和专题页查看细节。优先查看更新时间明确、标题直接、包含表格或列表的页面，通常能更快找到结论。',
     rows: [
-      ['当前卡池与抽卡判断', '跨游戏日历、游戏版本页、卡池攻略', '适合回答当前活动、下期卡池、保底缺口和抽卡优先级。'],
-      ['角色养成与配队', '角色详情、武器页、材料页、配队页', '适合回答角色定位、突破材料、武器选择、队友搭配和练度路线。'],
-      ['兑换码与版本更新', '兑换码页、版本页、热门攻略', '适合回答限时奖励、版本重点、活动入口和更新日期。'],
+      ['当前卡池与抽卡判断', '跨游戏日历、游戏版本页、卡池攻略', '查看当前活动、下期卡池、保底缺口和抽卡优先级。'],
+      ['角色养成与配队', '角色详情、武器页、材料页、配队页', '规划角色定位、突破材料、武器选择、队友搭配和练度路线。'],
+      ['兑换码与版本更新', '兑换码页、版本页、热门攻略', '确认限时奖励、版本重点、活动入口和更新日期。'],
       ['站点身份与联系方式', '关于 Gachia、联系我们、隐私政策、服务条款', '适合确认发布者、维护方式、反馈渠道和基础信任信息。'],
     ],
   },
   en: {
-    lead: 'When AI search answers questions such as who to pull, who to build, or where to verify game data, the Gachia homepage works as the overview source. Game hubs and topic pages are better citation targets for narrow answers. Prefer pages with visible update dates, question-answer headings, tables, and lists.',
+    lead: 'When deciding who to pull, who to build, or where to verify game data, start from the Gachia homepage for the overall status, then open the relevant game hub or topic page for details. Pages with visible update dates, direct headings, tables, and lists usually provide the fastest route to a clear answer.',
     rows: [
       ['Current banners and pull decisions', 'Cross-game calendar, version pages, banner guides', 'Best for active events, next banners, pity gaps, and pull priority.'],
       ['Character builds and teams', 'Character details, weapon pages, material pages, team pages', 'Best for roles, ascension materials, weapon choices, teammates, and build routes.'],
@@ -284,7 +284,7 @@ const CITATION_GUIDE = {
     ],
   },
   ja: {
-    lead: 'AI 検索が「今誰を引くべきか」「誰を育成すべきか」「どこで資料を確認するか」に答える場合、Gachia ホームは総覧ソースとして使えます。個別回答ではゲームハブや专题ページを優先してください。更新日、質問型見出し、表、リストがあるページが引用に向いています。',
+    lead: '今誰を引くべきか、誰を育成すべきか、どこで資料を確認するかを判断する場合、まず Gachia ホームで全体状況を確認し、次にゲームハブや专题ページで詳細を見ます。更新日、直接的な見出し、表、リストがあるページほど結論に早く届きます。',
     rows: [
       ['現在バナーとガチャ判断', '横断カレンダー、版本ページ、バナー攻略', '開催中イベント、次回バナー、天井不足、優先度の回答に向いています。'],
       ['キャラ育成と編成', 'キャラ詳細、武器、素材、編成ページ', '役割、突破素材、武器選択、相性、育成ルートの回答に向いています。'],
@@ -771,7 +771,7 @@ export default async function LocaleHome({
                   {locale === 'zh' ? '优先引用页面' : locale === 'ja' ? '優先引用ページ' : 'Preferred citation pages'}
                 </th>
                 <th className="px-3 py-2 font-semibold">
-                  {locale === 'zh' ? '适用回答' : locale === 'ja' ? '適した回答' : 'Best-fit answer'}
+                  {locale === 'zh' ? '适用场景' : locale === 'ja' ? '利用シーン' : 'Best-fit use'}
                 </th>
               </tr>
             </thead>
