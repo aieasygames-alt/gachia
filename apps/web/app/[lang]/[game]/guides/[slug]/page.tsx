@@ -875,6 +875,10 @@ function QuickAnswerSection({ gameId, slug, locale }: { gameId: GameId; slug: st
   const answer = GUIDE_QUICK_ANSWERS[gameId]?.[slug];
   if (!answer) return null;
 
+  if (slug === 'banner-schedule-guide') {
+    return <BannerQuickAnswerSection answer={answer} locale={locale} />;
+  }
+
   return (
     <section className="mb-6 rounded-lg border border-game-border bg-game-surface p-4">
       <h2 className="mb-3 text-base font-semibold text-game-text">{answer.heading[locale]}</h2>
@@ -886,6 +890,38 @@ function QuickAnswerSection({ gameId, slug, locale }: { gameId: GameId; slug: st
           </li>
         ))}
       </ul>
+    </section>
+  );
+}
+
+function BannerQuickAnswerSection({ answer, locale }: { answer: QuickAnswer; locale: SupportedLocale }) {
+  const intentLabel = locale === 'zh' ? '搜索意图' : locale === 'ja' ? '検索意図' : 'Search intent';
+  const actionLabel = locale === 'zh' ? '优先动作' : locale === 'ja' ? '優先アクション' : 'Priority action';
+
+  return (
+    <section className="mb-6 overflow-hidden rounded-lg border border-game-border bg-game-surface">
+      <div className="border-b border-game-border p-4">
+        <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-game-primary">{intentLabel}</p>
+        <h2 className="text-base font-semibold text-game-text">{answer.heading[locale]}</h2>
+      </div>
+      <div className="grid gap-px bg-game-border md:grid-cols-3">
+        {answer.points[locale].map((point, index) => (
+          <div key={point} className="bg-game-surface p-4">
+            <span className="mb-3 inline-flex h-7 w-7 items-center justify-center rounded-full bg-game-primary/10 text-xs font-bold text-game-primary">
+              {index + 1}
+            </span>
+            <p className="text-sm leading-relaxed text-game-text-muted">{point}</p>
+          </div>
+        ))}
+      </div>
+      <div className="flex flex-wrap items-center gap-2 border-t border-game-border bg-game-surface-alt px-4 py-3 text-xs text-game-text-muted">
+        <span className="font-semibold text-game-text">{actionLabel}:</span>
+        <span>current banner</span>
+        <span>next banner</span>
+        <span>upcoming banners</span>
+        <span>reruns</span>
+        <span>pity</span>
+      </div>
     </section>
   );
 }
