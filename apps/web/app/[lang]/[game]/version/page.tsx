@@ -130,6 +130,11 @@ const OFFICIAL_STATUS_NOTES: Partial<Record<GameId, Record<SupportedLocale, stri
 };
 
 const INTENT_LINKS: Partial<Record<GameId, IntentLink[]>> = {
+  aniimo: [
+    { href: '/aniimo/download', label: { zh: '官网 / 下载', en: 'Official / Download', ja: '公式 / DL' }, description: { zh: '确认 PC、主机、移动端入口和安全下载边界。', en: 'Check PC, console, mobile stores, and safe download boundaries.', ja: 'PC、コンソール、モバイル入口と安全なDL範囲を確認。' } },
+    { href: '/aniimo/redeem-codes', label: { zh: '兑换码 / 奖励', en: 'Codes / Rewards', ja: 'コード / 報酬' }, description: { zh: '区分暂无公开兑换码、预注册奖励和上线后待核验入口。', en: 'Separate no public codes from pre-registration rewards and launch checks.', ja: '公開コード未確認、事前登録報酬、リリース後確認を分けます。' } },
+    { href: '/aniimo/map', label: { zh: '区域 / 路线', en: 'Regions / Routes', ja: '地域 / ルート' }, description: { zh: '查看 6 个区域、已知 Aniimo 和上线后刷新点核验清单。', en: 'Review 6 regions, known Aniimo, and post-launch spawn checks.', ja: '6地域、既知Aniimo、リリース後の出現確認を整理。' } },
+  ],
   genshin: [
     { href: '/genshin/version', label: { zh: '官网 / 版本入口', en: 'Official / Version hub', ja: '公式 / バージョン' }, description: { zh: '集中整理官网、版本、活动和卡池信息。', en: 'Collect official, version, event, and banner information.', ja: '公式、版本、イベント、バナー情報を整理します。' } },
     { href: '/genshin/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '直播码、版本码和过期状态集中查看。', en: 'Check livestream, version, and expired code status.', ja: '配信コード、版本コード、期限切れを確認。' } },
@@ -780,6 +785,86 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
 };
 
 const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusLane[]>>> = {
+  aniimo: {
+    zh: [
+      {
+        title: { zh: '上线节奏', en: 'Launch timing', ja: 'リリース日程' },
+        description: { zh: '先分清 PC/主机与移动端两个上线窗口，避免把商店预约、愿望单和正式开服混在一起。', en: 'Separate PC/console and mobile windows before mixing wishlist, preorder, and server-open signals.', ja: 'PC/コンソールとモバイルの日程を分け、予約と開服情報を混同しないようにします。' },
+        links: [
+          { href: '/aniimo/guides/release-date', label: { zh: '发售日期', en: 'Release date', ja: '発売日' } },
+          { href: '/aniimo/download', label: { zh: '下载入口', en: 'Download hub', ja: 'DL入口' } },
+        ],
+      },
+      {
+        title: { zh: '图鉴与区域', en: 'Database and regions', ja: '図鑑と地域' },
+        description: { zh: '把 89 个 Aniimo、6 个区域、阶段、元素和上线后刷新点核验连成一条浏览路线。', en: 'Connect 89 Aniimo, 6 regions, stages, elements, and post-launch spawn checks.', ja: '89体、6地域、段階、元素、出現確認をつなげます。' },
+        links: [
+          { href: '/aniimo/characters', label: { zh: 'Aniimo 图鉴', en: 'Aniimo database', ja: 'Aniimo図鑑' } },
+          { href: '/aniimo/map', label: { zh: '区域地图', en: 'Region map', ja: '地域マップ' } },
+        ],
+      },
+      {
+        title: { zh: '奖励核验', en: 'Reward checks', ja: '報酬確認' },
+        description: { zh: '兑换码、预注册奖励和里程碑奖励分开追踪，上线当天优先核验输入入口。', en: 'Track codes, pre-registration rewards, and milestone rewards separately, then verify redemption on launch day.', ja: 'コード、事前登録、マイルストーン報酬を分け、リリース日に入力入口を確認。' },
+        links: [
+          { href: '/aniimo/redeem-codes', label: { zh: '兑换码状态', en: 'Code status', ja: 'コード状況' } },
+          { href: '/aniimo/guides/codes-rewards', label: { zh: '奖励攻略', en: 'Reward guide', ja: '報酬ガイド' } },
+        ],
+      },
+    ],
+    en: [
+      {
+        title: { zh: '上线节奏', en: 'Launch timing', ja: 'リリース日程' },
+        description: { zh: '先分清 PC/主机与移动端两个上线窗口，避免把商店预约、愿望单和正式开服混在一起。', en: 'Separate PC/console and mobile launch windows before mixing wishlist, preorder, and server-open signals.', ja: 'PC/コンソールとモバイルの日程を分け、予約と開服情報を混同しないようにします。' },
+        links: [
+          { href: '/aniimo/guides/release-date', label: { zh: '发售日期', en: 'Release date', ja: '発売日' } },
+          { href: '/aniimo/download', label: { zh: '下载入口', en: 'Download hub', ja: 'DL入口' } },
+        ],
+      },
+      {
+        title: { zh: '图鉴与区域', en: 'Database and regions', ja: '図鑑と地域' },
+        description: { zh: '把 89 个 Aniimo、6 个区域、阶段、元素和上线后刷新点核验连成一条浏览路线。', en: 'Connect 89 Aniimo, 6 regions, stages, elements, and post-launch spawn checks into one route.', ja: '89体、6地域、段階、元素、出現確認をつなげます。' },
+        links: [
+          { href: '/aniimo/characters', label: { zh: 'Aniimo 图鉴', en: 'Aniimo database', ja: 'Aniimo図鑑' } },
+          { href: '/aniimo/map', label: { zh: '区域地图', en: 'Region map', ja: '地域マップ' } },
+        ],
+      },
+      {
+        title: { zh: '奖励核验', en: 'Reward checks', ja: '報酬確認' },
+        description: { zh: '兑换码、预注册奖励和里程碑奖励分开追踪，上线当天优先核验输入入口。', en: 'Track codes, pre-registration rewards, and milestone rewards separately, then verify redemption on launch day.', ja: 'コード、事前登録、マイルストーン報酬を分け、リリース日に入力入口を確認。' },
+        links: [
+          { href: '/aniimo/redeem-codes', label: { zh: '兑换码状态', en: 'Code status', ja: 'コード状況' } },
+          { href: '/aniimo/guides/codes-rewards', label: { zh: '奖励攻略', en: 'Reward guide', ja: '報酬ガイド' } },
+        ],
+      },
+    ],
+    ja: [
+      {
+        title: { zh: '上线节奏', en: 'Launch timing', ja: 'リリース日程' },
+        description: { zh: '先分清 PC/主机与移动端两个上线窗口，避免把商店预约、愿望单和正式开服混在一起。', en: 'Separate PC/console and mobile windows before mixing wishlist, preorder, and server-open signals.', ja: 'PC/コンソールとモバイルの日程を分け、予約、ウィッシュリスト、開服情報を混同しないようにします。' },
+        links: [
+          { href: '/aniimo/guides/release-date', label: { zh: '发售日期', en: 'Release date', ja: '発売日' } },
+          { href: '/aniimo/download', label: { zh: '下载入口', en: 'Download hub', ja: 'DL入口' } },
+        ],
+      },
+      {
+        title: { zh: '图鉴与区域', en: 'Database and regions', ja: '図鑑と地域' },
+        description: { zh: '把 89 个 Aniimo、6 个区域、阶段、元素和上线后刷新点核验连成一条浏览路线。', en: 'Connect 89 Aniimo, 6 regions, stages, elements, and post-launch spawn checks.', ja: '89体のAniimo、6地域、段階、元素、リリース後の出現確認を一つの導線にします。' },
+        links: [
+          { href: '/aniimo/characters', label: { zh: 'Aniimo 图鉴', en: 'Aniimo database', ja: 'Aniimo図鑑' } },
+          { href: '/aniimo/map', label: { zh: '区域地图', en: 'Region map', ja: '地域マップ' } },
+        ],
+      },
+      {
+        title: { zh: '奖励核验', en: 'Reward checks', ja: '報酬確認' },
+        description: { zh: '兑换码、预注册奖励和里程碑奖励分开追踪，上线当天优先核验输入入口。', en: 'Track codes, pre-registration rewards, and milestone rewards separately, then verify redemption on launch day.', ja: 'コード、事前登録報酬、マイルストーン報酬を分け、リリース日に入力入口を確認します。' },
+        links: [
+          { href: '/aniimo/redeem-codes', label: { zh: '兑换码状态', en: 'Code status', ja: 'コード状況' } },
+          { href: '/aniimo/guides/codes-rewards', label: { zh: '奖励攻略', en: 'Reward guide', ja: '報酬ガイド' } },
+        ],
+      },
+    ],
+  },
   zzz: {
     zh: [
       {

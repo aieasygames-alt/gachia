@@ -438,6 +438,16 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
         description: { zh: '确认 PC/主机与移动端两个上线日期。', en: 'Check PC/console and mobile launch dates.', ja: 'PC/コンソールとモバイルの日程を確認。' },
       },
       {
+        href: '/aniimo/characters',
+        label: { zh: 'Aniimo 图鉴', en: 'Aniimo database', ja: 'Aniimo図鑑' },
+        description: { zh: '查看 89 个 Aniimo 的元素、阶段、区域和进化线。', en: 'Browse 89 Aniimo by element, stage, region, and evolution line.', ja: '89体の元素、段階、地域、進化ラインを確認。' },
+      },
+      {
+        href: '/aniimo/map',
+        label: { zh: '区域地图', en: 'Region map', ja: '地域マップ' },
+        description: { zh: '从 6 个区域继续看已知 Aniimo 和上线后刷新点核验。', en: 'Use 6 regions to track known Aniimo and post-launch spawn checks.', ja: '6地域から既知Aniimoと出現確認を追跡。' },
+      },
+      {
         href: '/aniimo/redeem-codes',
         label: { zh: '兑换码与奖励', en: 'Codes & rewards', ja: 'コードと報酬' },
         description: { zh: '区分暂无兑换码和已确认预注册奖励。', en: 'Separate code status from confirmed launch rewards.', ja: 'コード状態と事前登録報酬を分けて確認。' },
