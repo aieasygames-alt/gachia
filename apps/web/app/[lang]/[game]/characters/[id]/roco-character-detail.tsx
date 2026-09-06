@@ -16,6 +16,8 @@ const FavoriteButton = dynamic(
 import { Section, NextStepSection } from './character-detail-shared';
 
 import type { RocoCnSkill, RocoCnStats } from '@gachia/data/games/roco-cn/types';
+import { loadJson } from '@gachia/data/load-json';
+import { join } from 'node:path';
 
 // ============================================================
 // Roco Kingdom Jinie Detail
@@ -311,8 +313,13 @@ export async function RocoCharacterDetailPage({ id, locale }: { id: string; loca
 }
 
 export async function RocoCnCharacterDetailPage({ id, locale }: { id: string; locale: SupportedLocale }) {
-  const { getRocoCnCharacterById, getRocoCnCharacterImage } = await import('@gachia/data/games/roco-cn/characters');
-  const char = getRocoCnCharacterById(id);
+  let char: JinieLike | undefined;
+  try {
+    char = await loadJson<JinieLike>(join(process.cwd(), '../../packages/data/games/roco-cn/raw-characters.json'), `/data-client/roco-cn/characters/${id}.json`);
+  } catch {
+    const { getRocoCnCharacterById } = await import('@gachia/data/games/roco-cn/characters');
+    char = getRocoCnCharacterById(id);
+  }
   if (!char) notFound();
-  return <JinieDetail char={char} locale={locale} gameId="roco-cn" imageUrl={getRocoCnCharacterImage(char)} />;
+  return <JinieDetail char={char} locale={locale} gameId="roco-cn" imageUrl={`https://gachia.com/images/roco-cn/characters/${char.id}.webp`} />;
 }

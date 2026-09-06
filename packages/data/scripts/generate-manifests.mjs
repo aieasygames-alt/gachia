@@ -2,6 +2,7 @@ import { readFile, mkdir, writeFile } from 'node:fs/promises';
 
 const gamesRoot = new URL('../games/', import.meta.url);
 const outputRoot = new URL('../../../apps/web/public/data-manifest/', import.meta.url);
+const clientDataRoot = new URL('../../../apps/web/public/data-client/', import.meta.url);
 
 const gameIds = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'roco', 'roco-cn', 'aniimo'];
 const searchGames = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'aniimo'];
@@ -12,7 +13,8 @@ function idsFromJson(value) {
 }
 
 await mkdir(outputRoot, { recursive: true });
-const manifest = { version: 1, generatedAt: new Date().toISOString(), games: {} };
+await mkdir(clientDataRoot, { recursive: true });
+const manifest = { version: 1, games: {} };
 
 for (const game of gameIds) {
   const files = ['raw-character-summaries.json', 'raw-characters.json'];
@@ -61,5 +63,47 @@ for (const locale of locales) {
     if (Object.keys(data).length) index[game] = data;
   }
   await writeFile(new URL(`search-${locale}.json`, outputRoot), `${JSON.stringify(index)}\n`);
+}
+
+const tierListFields = {
+  genshin: ['element', 'weaponType'],
+  starrail: ['element', 'path'],
+  wuwa: ['element', 'weaponType'],
+};
+for (const [game, fields] of Object.entries(tierListFields)) {
+  const raw = JSON.parse(await readFile(new URL(`${game}/raw-characters.json`, gamesRoot), 'utf8'));
+  const data = raw
+    .filter((entry) => entry?.status !== 'upcoming' && typeof entry?.id === 'string')
+    .map((entry) => {
+      const result = {
+        id: entry.id,
+        name: entry.name,
+        nameEn: entry.nameEn,
+        nameJa: entry.nameJa,
+        image: entry.image || `/images/${game}/characters/${entry.id}.webp`,
+        rarity: entry.rarity,
+        tierRank: entry.tierRank,
+      };
+      for (const field of fields) result[field] = entry[field];
+      if (game === 'wuwa') result.tierReason = entry.tierReason;
+      return result;
+    });
+  await writeFile(new URL(`tier-list-${game}.json`, clientDataRoot), `${JSON.stringify(data)}\n`);
+}
+
+const rocoCnCharacters = JSON.parse(await readFile(new URL('roco-cn/raw-characters.json', gamesRoot), 'utf8'))
+  .filter((entry) => entry?.status !== 'upcoming' && typeof entry?.id === 'string');
+const rocoCnRoot = new URL('../../../apps/web/public/data-client/roco-cn/characters/', import.meta.url);
+await mkdir(rocoCnRoot, { recursive: true });
+for (const character of rocoCnCharacters) {
+  await writeFile(new URL(`${character.id}.json`, rocoCnRoot), `${JSON.stringify(character)}\n`);
+}
+await writeFile(new URL('roco-cn/characters.json', clientDataRoot), `${JSON.stringify(rocoCnCharacters.map(({ id, number, name, nameEn, nameJa, attribute, attributeEn, rarity, status }) => ({ id, number, name, nameEn, nameJa, attribute, attributeEn, rarity, status })))}\n`);
+
+for (const game of ['sea']) {
+  await mkdir(new URL(`${game}/`, clientDataRoot), { recursive: true });
+  const raw = JSON.parse(await readFile(new URL(`${game}/raw-guides.json`, gamesRoot), 'utf8'));
+  const summaries = raw.map(({ content: _content, contentEn: _contentEn, contentJa: _contentJa, faq: _faq, ...summary }) => summary);
+  await writeFile(new URL(`${game}/guides.json`, clientDataRoot), `${JSON.stringify(summaries)}\n`);
 }
 console.log(`Generated ${Object.keys(manifest.games).length} game manifests.`);

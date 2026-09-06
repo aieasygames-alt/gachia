@@ -1,4 +1,6 @@
 import type { GameId, SupportedLocale } from '@gachia/core';
+import { join } from 'node:path';
+import { loadJson } from '@gachia/data/load-json';
 
 export interface GuideListEntry {
   id: string;
@@ -23,6 +25,18 @@ type RawGuide = {
   tags?: string[];
   updatedAt?: string;
   currentVersion?: string;
+};
+
+type SeaGuideSummary = RawGuide & {
+  title: string;
+  titleEn: string;
+  titleJa?: string;
+  summary: string;
+  summaryEn: string;
+  summaryJa?: string;
+  categoryZh: string;
+  categoryEn: string;
+  categoryJa?: string;
 };
 
 function toGuideListEntry<T extends RawGuide>(
@@ -100,6 +114,18 @@ export async function getGuideListData(
       return buildGuideListData(mod.endfieldGuides, locale, mod.getEndfieldGuideTitle, mod.getEndfieldGuideSummary, mod.getEndfieldGuideCategory);
     }
     case 'sea': {
+      try {
+        const summaries = await loadJson<SeaGuideSummary[]>(join(process.cwd(), '../../apps/web/public/data-client/sea/guides.json'), '/data-client/sea/guides.json');
+        return buildGuideListData(
+          summaries,
+          locale,
+          (guide, currentLocale) => currentLocale === 'zh' ? guide.title : currentLocale === 'ja' ? (guide.titleJa ?? guide.titleEn) : guide.titleEn,
+          (guide, currentLocale) => currentLocale === 'zh' ? guide.summary : currentLocale === 'ja' ? (guide.summaryJa ?? guide.summaryEn) : guide.summaryEn,
+          (guide, currentLocale) => currentLocale === 'zh' ? guide.categoryZh : currentLocale === 'ja' ? (guide.categoryJa ?? guide.categoryEn) : guide.categoryEn,
+        );
+      } catch {
+        // Fall back to the complete guide module for local setups or stale assets.
+      }
       const mod = await import('@gachia/data/games/sea/guides');
       return buildGuideListData(mod.seaGuides, locale, mod.getSeaGuideTitle, mod.getSeaGuideSummary, mod.getSeaGuideCategory);
     }

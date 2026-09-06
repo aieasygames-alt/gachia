@@ -1,11 +1,10 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import type { SupportedLocale } from '@gachia/core';
-import { wuwaCharacters, getWuWaCharacterName, getWuWaCharacterImage } from '@gachia/data/games/wuwa/characters';
-import type { WuWaCharacter } from '@gachia/data/games/wuwa/types';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
+import { getTierListCharacterImage, getTierListCharacterName, loadTierListClientData, type TierListClientCharacter } from '@/lib/game-data/tier-list-client-data';
 
 const TIER_STYLES: Record<string, { bg: string; text: string; border: string }> = {
   SS: { bg: 'bg-red-900/30', text: 'text-red-400', border: 'border-red-500/30' },
@@ -30,21 +29,24 @@ function t(locale: SupportedLocale, zh: string, en: string) {
 }
 
 export function WuWaTierListClient({ locale }: { locale: SupportedLocale }) {
+  const [characters, setCharacters] = useState<TierListClientCharacter[]>([]);
+  const [loadError, setLoadError] = useState(false);
+  useEffect(() => { loadTierListClientData('wuwa').then(setCharacters).catch(() => setLoadError(true)); }, []);
   const [filterElement, setFilterElement] = useState<string>('all');
   const [search, setSearch] = useState('');
 
   const filtered = useMemo(() => {
-    let chars = wuwaCharacters;
+    let chars = characters;
     if (filterElement !== 'all') chars = chars.filter((c) => c.element === filterElement);
     if (search.trim()) {
       const q = search.toLowerCase();
       chars = chars.filter((c) => c.name.toLowerCase().includes(q) || c.nameEn.toLowerCase().includes(q) || c.id.includes(q));
     }
     return chars;
-  }, [filterElement, search]);
+  }, [characters, filterElement, search]);
 
   const tierGroups = useMemo(() => {
-    const groups: Record<string, WuWaCharacter[]> = {};
+    const groups: Record<string, TierListClientCharacter[]> = {};
     for (const char of filtered) {
       const tier = char.tierRank || 'B';
       if (!groups[tier]) groups[tier] = [];
@@ -61,6 +63,7 @@ export function WuWaTierListClient({ locale }: { locale: SupportedLocale }) {
       <p className="mb-6 text-sm text-game-text-muted">
         {t(locale, '基于角色综合强度评级，仅供参考', 'Based on overall character strength, for reference only')}
       </p>
+      {loadError && <p className="mb-4 text-sm text-red-400">{t(locale, '角色数据加载失败，请刷新重试', 'Failed to load character data, please refresh')}</p>}
 
       {/* Filters */}
       <div className="mb-6 flex flex-wrap items-center gap-3">
@@ -105,7 +108,7 @@ export function WuWaTierListClient({ locale }: { locale: SupportedLocale }) {
             </div>
             <div className="flex flex-wrap gap-3">
               {chars.map((char) => {
-                const imageUrl = getWuWaCharacterImage(char);
+                const imageUrl = getTierListCharacterImage(char);
                 const reason = char.tierReason as { zh?: string; en?: string } | undefined;
                 return (
                   <Link
@@ -114,11 +117,11 @@ export function WuWaTierListClient({ locale }: { locale: SupportedLocale }) {
                     className="group flex items-center gap-2 rounded-lg border border-game-border bg-game-surface px-3 py-2 transition-colors hover:border-game-primary"
                   >
                     <div className="h-8 w-8 shrink-0 overflow-hidden rounded-full bg-game-surface-alt">
-                      <CharacterAvatar src={imageUrl} alt={getWuWaCharacterName(char, locale)} element={char.element} className="h-full w-full object-cover object-top" />
+                      <CharacterAvatar src={imageUrl} alt={getTierListCharacterName(char, locale)} element={char.element} className="h-full w-full object-cover object-top" />
                     </div>
                     <div>
                       <p className="text-sm font-medium text-game-text group-hover:text-game-primary">
-                        {getWuWaCharacterName(char, locale)}
+                        {getTierListCharacterName(char, locale)}
                       </p>
                       <div className="flex items-center gap-1.5 text-xs text-game-text-muted">
                         <span className="inline-block h-2 w-2 rounded-full" style={{ backgroundColor: ELEMENT_COLORS[char.element] || '#888' }} />

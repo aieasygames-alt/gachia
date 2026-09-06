@@ -1,15 +1,11 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { SupportedLocale } from '@gachia/core';
-import {
-  starrailCharacters,
-  getStarRailCharacterName,
-  getStarRailCharacterImage,
-} from '@gachia/data/games/starrail/characters';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 import { Link } from '@/lib/i18n/navigation';
+import { getTierListCharacterImage, getTierListCharacterName, loadTierListClientData, type TierListClientCharacter } from '@/lib/game-data/tier-list-client-data';
 
 // --- Constants ---
 
@@ -57,22 +53,25 @@ function t(locale: SupportedLocale, zh: string, en: string, ja?: string) {
 // --- Component ---
 
 export function StarRailTierListClient({ locale }: { locale: SupportedLocale }) {
+  const [characters, setCharacters] = useState<TierListClientCharacter[]>([]);
+  const [loadError, setLoadError] = useState(false);
+  useEffect(() => { loadTierListClientData('starrail').then(setCharacters).catch(() => setLoadError(true)); }, []);
   const [filterElement, setFilterElement] = useState<string>('all');
   const [filterPath, setFilterPath] = useState<string>('all');
   const [filterRarity, setFilterRarity] = useState<string>('all');
   const [showDistribution, setShowDistribution] = useState(false);
 
   const filtered = useMemo(() => {
-    let chars = starrailCharacters;
+    let chars = characters;
     if (filterElement !== 'all') chars = chars.filter((c) => c.element === filterElement);
     if (filterPath !== 'all') chars = chars.filter((c) => c.path === filterPath);
     if (filterRarity !== 'all') chars = chars.filter((c) => c.rarity === Number(filterRarity));
     return chars;
-  }, [filterElement, filterPath, filterRarity]);
+  }, [characters, filterElement, filterPath, filterRarity]);
 
   // Group by tier
   const tierGroups = useMemo(() => {
-    const groups: Record<string, typeof starrailCharacters> = {};
+    const groups: Record<string, TierListClientCharacter[]> = {};
     for (const char of filtered) {
       const tier = char.tierRank || 'B';
       if (!groups[tier]) groups[tier] = [];
@@ -93,8 +92,9 @@ export function StarRailTierListClient({ locale }: { locale: SupportedLocale }) 
       </h1>
       <p className="mb-4 text-sm text-game-text-muted">
         {t(locale, '基于角色综合强度评级，仅供参考', 'Based on overall character strength, for reference only', 'キャラクターの総合的な強さに基づく評価です')}
-        <span className="ml-2 text-game-text-muted/60">({filtered.length}/{starrailCharacters.length})</span>
+        <span className="ml-2 text-game-text-muted/60">({filtered.length}/{characters.length})</span>
       </p>
+      {loadError && <p className="mb-4 text-sm text-red-400">{t(locale, '角色数据加载失败，请刷新重试', 'Failed to load character data, please refresh', 'キャラクターデータの読み込みに失敗しました')}</p>}
 
       {/* Filters */}
       <div className="mb-4 rounded-xl border border-game-border bg-game-surface p-4">
@@ -199,16 +199,16 @@ export function StarRailTierListClient({ locale }: { locale: SupportedLocale }) 
             </div>
             <div className="flex flex-wrap gap-3">
               {chars.map((char) => {
-                const imageUrl = getStarRailCharacterImage(char);
-                const pathLabel = STARRAIL_PATH_NAMES[char.path]?.[locale] ?? char.path;
+                const imageUrl = getTierListCharacterImage(char);
+                const pathLabel = STARRAIL_PATH_NAMES[char.path ?? '']?.[locale] ?? char.path;
                 return (
                   <Link key={char.id} href={`/starrail/characters/${char.id}` as '/'}
                     className="group flex items-center gap-2 rounded-lg border border-game-border bg-game-surface px-3 py-2 transition-colors hover:border-game-primary">
                     <div className="h-8 w-8 shrink-0 overflow-hidden rounded-full bg-game-surface-alt">
-                      <CharacterAvatar src={imageUrl} alt={getStarRailCharacterName(char, locale)} element={char.element} className="h-full w-full object-cover object-top" />
+                      <CharacterAvatar src={imageUrl} alt={getTierListCharacterName(char, locale)} element={char.element} className="h-full w-full object-cover object-top" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-game-text group-hover:text-game-primary">{getStarRailCharacterName(char, locale)}</p>
+                      <p className="text-sm font-medium text-game-text group-hover:text-game-primary">{getTierListCharacterName(char, locale)}</p>
                       <div className="flex items-center gap-1.5 text-xs text-game-text-muted">
                         <span className="inline-block h-2 w-2 rounded-full" style={{ backgroundColor: STARRAIL_ELEMENT_COLORS[char.element] || '#888' }} />
                         <span>{pathLabel}</span>

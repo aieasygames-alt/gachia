@@ -338,14 +338,24 @@ export async function getCharacterMetaData(
       };
     }
     case 'roco-cn': {
-      const mod = await import('@gachia/data/games/roco-cn/characters');
-      const character = mod.getRocoCnCharacterById(id);
+      let character: {
+        id: string; name: string; nameEn: string; nameJa?: string; attribute: string; attributeEn: string;
+        description: string; descriptionEn: string;
+      } | undefined;
+      try {
+        character = await import('@gachia/data/games/roco-cn/character-summaries').then((mod) => {
+          const summary = mod.rocoCnCharacterSummaries.find((entry) => entry.id === id);
+          return summary ? { ...summary, description: '', descriptionEn: '' } : undefined;
+        });
+      } catch {
+        character = undefined;
+      }
       if (!character) return null;
       return {
         id: character.id,
-        name: mod.getRocoCnCharacterName(character, locale),
-        description: mod.getRocoCnCharacterDescription(character, locale),
-        image: toAbs(mod.getRocoCnCharacterImage(character)),
+        name: locale === 'zh' ? character.name : locale === 'ja' ? (character.nameJa ?? character.nameEn) : character.nameEn,
+        description: locale === 'zh' ? character.description : character.descriptionEn,
+        image: toAbs(`/images/roco-cn/characters/${character.id}.webp`),
         element: character.attribute,
         elementLabel: character.attributeEn,
       };
