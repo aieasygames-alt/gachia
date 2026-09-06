@@ -6,6 +6,8 @@ import { ClientMarkdown } from '@/components/wiki/client-markdown';
 import { buildGuideJsonLd } from '@/lib/jsonld';
 import { buildLocalizedAlternates, ensureMetaLength, getEntryUpdatedAt, hasLocalizedContent, limitMetaTitle } from '@/lib/seo-metadata';
 import { BANNER_INTENT_PANELS } from '@/lib/banner-intent';
+import { join } from 'node:path';
+import { loadJson } from '@gachia/data/load-json';
 
 export const dynamicParams = false;
 
@@ -572,7 +574,8 @@ async function getGuideRuntime(gameId: GameId): Promise<GuideRuntime> {
     }
     case 'sea': {
       const mod = await import('@gachia/data/games/sea/guides');
-      return makeRuntime(mod.seaGuides, mod.SEA_GUIDE_CATEGORIES, mod.getSeaGuideById, mod.getSeaGuideTitle, mod.getSeaGuideSummary, mod.getSeaGuideContent, mod.getSeaGuideCategory, mod.getSeaGuideFaqQuestion, mod.getSeaGuideFaqAnswer);
+      const summaries = await loadJson<GuideLike[]>(join(process.cwd(), '../../apps/web/public/data-client/sea/guides.json'), '/data-client/sea/guides.json').catch(() => mod.seaGuides);
+      return makeRuntime(summaries, mod.SEA_GUIDE_CATEGORIES, mod.getSeaGuideById, mod.getSeaGuideTitle, mod.getSeaGuideSummary, mod.getSeaGuideContent, mod.getSeaGuideCategory, mod.getSeaGuideFaqQuestion, mod.getSeaGuideFaqAnswer);
     }
     case 'skjh': {
       const mod = await import('@gachia/data/games/skjh/guides');
@@ -593,6 +596,14 @@ async function getGuideRuntime(gameId: GameId): Promise<GuideRuntime> {
     default:
       notFound();
   }
+}
+
+async function getGuideBySlug(runtime: GuideRuntime, gameId: GameId, slug: string) {
+  if (gameId !== 'sea') return runtime.getById(slug);
+  return loadJson<GuideLike>(
+    join(process.cwd(), '../../apps/web/public/data-client/sea/guides', `${slug}.json`),
+    `/data-client/sea/guides/${slug}.json`,
+  ).catch(() => runtime.getById(slug));
 }
 
 function makeRuntime(
@@ -637,7 +648,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   if (!isGameId(gameId)) return {};
 
   const runtime = await getGuideRuntime(gameId);
-  const guide = runtime.getById(slug);
+  const guide = await getGuideBySlug(runtime, gameId, slug);
   if (!guide) return {};
 
   const gameName = GAMES[gameId].name[locale];
@@ -666,7 +677,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ la
   if (!isGameId(gameId)) notFound();
 
   const runtime = await getGuideRuntime(gameId);
-  const guide = runtime.getById(slug);
+  const guide = await getGuideBySlug(runtime, gameId, slug);
   if (!guide) notFound();
 
   const title = runtime.getTitle(guide, locale);

@@ -58,5 +58,13 @@ try {
 } catch (error) {
   throw new Error(`Invalid or missing sea guide index: ${error.message}`);
 }
+for (const guide of JSON.parse(await readFile(new URL('sea/guides.json', clientDataRoot), 'utf8'))) {
+  try {
+    const detail = JSON.parse(await readFile(new URL(`sea/guides/${guide.id}.json`, clientDataRoot), 'utf8'));
+    if (detail.id !== guide.id || typeof detail.content !== 'string') throw new Error('invalid detail');
+  } catch (error) {
+    throw new Error(`Missing sea guide detail ${guide.id}: ${error.message}`);
+  }
+}
 
 console.log('Data manifests verified.');

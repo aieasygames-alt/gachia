@@ -105,5 +105,10 @@ for (const game of ['sea']) {
   const raw = JSON.parse(await readFile(new URL(`${game}/raw-guides.json`, gamesRoot), 'utf8'));
   const summaries = raw.map(({ content: _content, contentEn: _contentEn, contentJa: _contentJa, faq: _faq, ...summary }) => summary);
   await writeFile(new URL(`${game}/guides.json`, clientDataRoot), `${JSON.stringify(summaries)}\n`);
+  const detailsRoot = new URL(`${game}/guides/`, clientDataRoot);
+  await mkdir(detailsRoot, { recursive: true });
+  for (const guide of raw) {
+    await writeFile(new URL(`${guide.id}.json`, detailsRoot), `${JSON.stringify(guide)}\n`);
+  }
 }
 console.log(`Generated ${Object.keys(manifest.games).length} game manifests.`);
