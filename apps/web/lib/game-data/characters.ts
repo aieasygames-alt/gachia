@@ -1,4 +1,5 @@
 import type { GameId, SupportedLocale } from '@gachia/core';
+import { getCharacterIdsFromManifest } from './manifests';
 
 export interface CharacterSummary {
   id: string;
@@ -131,6 +132,7 @@ export async function getCharacterSummariesByIds(
 }
 
 export async function getCharactersForStaticParams(gameId: GameId): Promise<Array<{ id: string }>> {
+  if (process.env.NODE_ENV !== 'production') return getCharacterIdsFromManifest(gameId);
   switch (gameId) {
     case 'genshin': {
       const mod = await import('@gachia/data/games/genshin/character-summaries');

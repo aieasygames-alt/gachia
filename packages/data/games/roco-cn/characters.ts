@@ -1,10 +1,15 @@
 import { IMAGE_BASE } from '../../image-base';
 import type { SupportedLocale, Character } from '@gachia/core';
 import type { RocoCnJinie, RocoCnSkill, RocoCnStats } from './types';
-import rawCharacters from './raw-characters.json';
+import { join } from 'node:path';
+import { loadJson } from '../../load-json';
 import { localeStr } from './types';
 
-const allCharacters: RocoCnJinie[] = rawCharacters as unknown as RocoCnJinie[];
+const rawCharacters = await loadJson<unknown>(
+  join(process.cwd(), '../../packages/data/games/roco-cn/raw-characters.json'),
+  '/data/roco-cn/raw-characters.json',
+);
+const allCharacters: RocoCnJinie[] = rawCharacters as RocoCnJinie[];
 
 export const rocoCnCharacters: RocoCnJinie[] = allCharacters.filter(
   (c) => c.status !== 'upcoming'

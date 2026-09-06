@@ -1,4 +1,3 @@
-const ASSET_ORIGIN = process.env.GACHIA_ASSET_ORIGIN ?? 'https://gachia.aieasygames.workers.dev';
 const JSON_CACHE = new Map<string, Promise<unknown>>();
 
 type CloudflareRequestContext = {
@@ -27,9 +26,10 @@ export async function loadJson<T>(localPath: string, assetPath: string): Promise
       return JSON.parse(readFileSync(localPath, 'utf8')) as T;
     } catch {
       const assets = getAssetsBinding();
-      const response = assets
-        ? await assets.fetch(new Request(new URL(assetPath, ASSET_ORIGIN)))
-        : await fetch(new URL(assetPath, ASSET_ORIGIN));
+      if (!assets) {
+        throw new Error(`Local data file is unavailable and Cloudflare ASSETS is not bound: ${localPath}`);
+      }
+      const response = await assets.fetch(new Request(`https://assets.internal${assetPath}`));
       if (!response.ok) {
         throw new Error(`Failed to load ${assetPath}: ${response.status} ${response.statusText}`);
       }
@@ -37,6 +37,9 @@ export async function loadJson<T>(localPath: string, assetPath: string): Promise
     }
   })();
 
-  JSON_CACHE.set(cacheKey, promise);
+  JSON_CACHE.set(cacheKey, promise.catch((error) => {
+    JSON_CACHE.delete(cacheKey);
+    throw error;
+  }));
   return promise;
 }

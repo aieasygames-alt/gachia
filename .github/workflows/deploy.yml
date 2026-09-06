@@ -37,6 +37,12 @@ jobs:
       - name: Validate game data
         run: pnpm --filter @gachia/data validate
 
+      - name: Generate data manifests
+        run: pnpm --filter @gachia/data generate:manifests
+
+      - name: Verify data manifests
+        run: pnpm --filter @gachia/data verify:manifests
+
       - name: Build Cloudflare Worker
         run: pnpm --filter @gachia/web exec opennextjs-cloudflare build
 
@@ -65,6 +71,12 @@ jobs:
           cache: pnpm
 
       - run: pnpm install --frozen-lockfile
+
+      - name: Generate data manifests
+        run: pnpm --filter @gachia/data generate:manifests
+
+      - name: Verify data manifests
+        run: pnpm --filter @gachia/data verify:manifests
 
       - name: Build Cloudflare Worker
         run: pnpm --filter @gachia/web exec opennextjs-cloudflare build
@@ -122,6 +134,12 @@ jobs:
           cache: pnpm
 
       - run: pnpm install --frozen-lockfile
+
+      - name: Generate data manifests
+        run: pnpm --filter @gachia/data generate:manifests
+
+      - name: Verify data manifests
+        run: pnpm --filter @gachia/data verify:manifests
 
       - name: Build Cloudflare Worker
         run: pnpm --filter @gachia/web exec opennextjs-cloudflare build

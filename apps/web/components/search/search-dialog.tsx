@@ -60,169 +60,17 @@ function loadDataset(locale: SupportedLocale): Promise<Partial<Record<string, Se
   const cached = datasetCache.get(locale);
   if (cached) return cached;
 
-  const promise = (async () => {
-    const datasets: Partial<Record<string, SearchDataset>> = {};
-    const tasks: Array<Promise<void>> = [];
-
-    const addGame = async (gameId: string) => {
-      switch (gameId) {
-        case 'genshin': {
-          const [characters, weapons, items, artifacts] = await Promise.all([
-            import('@gachia/data/games/genshin/characters'),
-            import('@gachia/data/games/genshin/weapons'),
-            import('@gachia/data/games/genshin/items'),
-            import('@gachia/data/games/genshin/artifacts'),
-          ]);
-          datasets[gameId] = {
-            characters: characters.genshinCharacters.map((c) => ({ id: c.id, name: characters.getGenshinCharacterName(c, locale), nameAlt: locale === 'zh' ? c.nameEn : c.name })),
-            weapons: weapons.genshinWeapons.map((w) => ({ id: w.id, name: weapons.getGenshinWeaponName(w, locale), nameAlt: locale === 'zh' ? w.nameEn : w.name })),
-            items: items.genshinMaterials.map((m) => ({ id: m.id, name: items.getGenshinMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name })),
-            artifacts: artifacts.artifactSets.map((s) => ({ id: s.id, name: artifacts.getArtifactSetName(s, locale), nameAlt: locale === 'zh' ? s.nameEn : s.name })),
-          };
-          return;
-        }
-        case 'starrail': {
-          const [characters, weapons, items, relics] = await Promise.all([
-            import('@gachia/data/games/starrail/characters'),
-            import('@gachia/data/games/starrail/weapons'),
-            import('@gachia/data/games/starrail/items'),
-            import('@gachia/data/games/starrail/relics'),
-          ]);
-          datasets[gameId] = {
-            characters: characters.starrailCharacters.map((c) => ({ id: c.id, name: characters.getStarRailCharacterName(c, locale), nameAlt: locale === 'zh' ? c.nameEn : c.name })),
-            weapons: weapons.starrailLightCones.map((w) => ({ id: w.id, name: weapons.getStarRailLightConeName(w, locale), nameAlt: locale === 'zh' ? w.nameEn : w.name })),
-            items: items.starrailMaterials.map((m) => ({ id: m.id, name: items.getStarRailMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name })),
-            artifacts: relics.relicSets.map((s) => ({ id: s.id, name: relics.getRelicSetName(s, locale), nameAlt: locale === 'zh' ? s.nameEn : s.name })),
-          };
-          return;
-        }
-        case 'wuwa': {
-          const [characters, weapons, items, echoes] = await Promise.all([
-            import('@gachia/data/games/wuwa/characters'),
-            import('@gachia/data/games/wuwa/weapons'),
-            import('@gachia/data/games/wuwa/items'),
-            import('@gachia/data/games/wuwa/echoes'),
-          ]);
-          datasets[gameId] = {
-            characters: characters.wuwaCharacters.map((c) => ({ id: c.id, name: characters.getWuWaCharacterName(c, locale), nameAlt: locale === 'zh' ? c.nameEn : c.name })),
-            weapons: weapons.wuwaWeapons.map((w) => ({ id: w.id, name: weapons.getWuWaWeaponName(w, locale), nameAlt: locale === 'zh' ? w.nameEn : w.name })),
-            items: items.wuwaMaterials.map((m) => ({ id: m.id, name: items.getWuWaMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name })),
-            artifacts: echoes.echoSets.map((s) => ({ id: s.id, name: echoes.getEchoSetName(s, locale), nameAlt: locale === 'zh' ? s.nameEn : s.name })),
-          };
-          return;
-        }
-        case 'nte': {
-          const [characters, weapons, items, extras] = await Promise.all([
-            import('@gachia/data/games/nte/characters'),
-            import('@gachia/data/games/nte/weapons'),
-            import('@gachia/data/games/nte/items'),
-            import('@gachia/data/games/nte/extras'),
-          ]);
-          datasets[gameId] = {
-            characters: characters.nteCharacters.map((c) => ({ id: c.id, name: characters.getNteCharacterName(c, locale), nameAlt: locale === 'zh' ? c.nameEn : c.name })),
-            weapons: weapons.nteWeapons.map((w) => ({ id: w.id, name: weapons.getNteWeaponName(w, locale), nameAlt: locale === 'zh' ? (w.nameEn ?? '') : (w.name ?? '') })),
-            items: items.nteMaterials.map((m) => ({ id: m.id, name: items.getNteMaterialName(m, locale), nameAlt: locale === 'zh' ? (m.nameEn ?? '') : (m.name ?? '') })),
-            artifacts: extras.diskSets.map((s) => ({ id: s.id, name: extras.getNteDiskSetName(s, locale), nameAlt: locale === 'zh' ? (s.nameEn ?? '') : (s.name ?? '') })),
-          };
-          return;
-        }
-        case 'zzz': {
-          const [characters, weapons, items, driveDiscs] = await Promise.all([
-            import('@gachia/data/games/zzz/characters'),
-            import('@gachia/data/games/zzz/weapons'),
-            import('@gachia/data/games/zzz/items'),
-            import('@gachia/data/games/zzz/drive-discs'),
-          ]);
-          datasets[gameId] = {
-            characters: characters.zzzCharacters.map((c) => ({ id: c.id, name: characters.getZzzCharacterName(c, locale), nameAlt: locale === 'zh' ? c.nameEn : c.name })),
-            weapons: weapons.zzzWeapons.map((w) => ({ id: w.id, name: weapons.getZzzWeaponName(w, locale), nameAlt: locale === 'zh' ? w.nameEn : w.name })),
-            items: items.zzzMaterials.map((m) => ({ id: m.id, name: items.getZzzMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name })),
-            artifacts: driveDiscs.zzzDriveDiscs.map((s) => ({ id: s.id, name: driveDiscs.getZzzDriveDiscName(s, locale), nameAlt: locale === 'zh' ? s.nameEn : s.name })),
-          };
-          return;
-        }
-        case 'guihuan': {
-          const [characters, weapons, items] = await Promise.all([
-            import('@gachia/data/games/guihuan/characters'),
-            import('@gachia/data/games/guihuan/weapons'),
-            import('@gachia/data/games/guihuan/items'),
-          ]);
-          datasets[gameId] = {
-            characters: characters.guihuanCharacters.map((c) => ({ id: c.id, name: characters.getGuihuanCharacterName(c, locale), nameAlt: locale === 'zh' ? c.nameEn : c.name })),
-            weapons: weapons.guihuanWeapons.map((w) => ({ id: w.id, name: weapons.getGuihuanWeaponName(w, locale), nameAlt: locale === 'zh' ? w.nameEn : w.name })),
-            items: items.guihuanMaterials.map((m) => ({ id: m.id, name: items.getGuihuanMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name })),
-          };
-          return;
-        }
-        case 'ananta': {
-          const [characters, weapons, items] = await Promise.all([
-            import('@gachia/data/games/ananta/characters'),
-            import('@gachia/data/games/ananta/weapons'),
-            import('@gachia/data/games/ananta/items'),
-          ]);
-          datasets[gameId] = {
-            characters: characters.anantaCharacters.map((c) => ({ id: c.id, name: characters.getAnantaCharacterName(c, locale), nameAlt: locale === 'zh' ? c.nameEn : c.name })),
-            weapons: weapons.anantaWeapons.map((w) => ({ id: w.id, name: weapons.getAnantaWeaponName(w, locale), nameAlt: locale === 'zh' ? w.nameEn : w.name })),
-            items: items.anantaMaterials.map((m) => ({ id: m.id, name: items.getAnantaMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name })),
-          };
-          return;
-        }
-        case 'endfield': {
-          const [characters, weapons, items] = await Promise.all([
-            import('@gachia/data/games/endfield/characters'),
-            import('@gachia/data/games/endfield/weapons'),
-            import('@gachia/data/games/endfield/items'),
-          ]);
-          datasets[gameId] = {
-            characters: characters.endfieldCharacters.map((c) => ({ id: c.id, name: characters.getEndfieldCharacterName(c, locale), nameAlt: locale === 'zh' ? c.nameEn : c.name })),
-            weapons: weapons.endfieldWeapons.map((w) => ({ id: w.id, name: weapons.getEndfieldWeaponName(w, locale), nameAlt: locale === 'zh' ? w.nameEn : w.name })),
-            items: items.endfieldMaterials.map((m) => ({ id: m.id, name: items.getEndfieldMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name })),
-          };
-          return;
-        }
-        case 'sea': {
-          const [characters, items] = await Promise.all([
-            import('@gachia/data/games/sea/characters'),
-            import('@gachia/data/games/sea/items'),
-          ]);
-          datasets[gameId] = {
-            characters: characters.seaCharacters.map((c) => ({ id: c.id, name: characters.getSeaCharacterName(c, locale), nameAlt: locale === 'zh' ? c.nameEn : c.name })),
-            items: items.seaMaterials.map((m) => ({ id: m.id, name: items.getSeaMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name })),
-          };
-          return;
-        }
-        case 'skjh': {
-          const [weapons, items] = await Promise.all([
-            import('@gachia/data/games/skjh/weapons'),
-            import('@gachia/data/games/skjh/items'),
-          ]);
-          datasets[gameId] = {
-            weapons: weapons.skjhWeapons.map((w) => ({ id: w.id, name: weapons.getSkjhWeaponName(w, locale), nameAlt: locale === 'zh' ? w.nameEn : w.name })),
-            items: items.skjhMaterials.map((m) => ({ id: m.id, name: items.getSkjhMaterialName(m, locale), nameAlt: locale === 'zh' ? m.nameEn : m.name })),
-          };
-          return;
-        }
-        case 'aniimo': {
-          const characters = await import('@gachia/data/games/aniimo/characters');
-          datasets[gameId] = {
-            characters: characters.aniimoCharacters.map((c) => ({ id: c.id, name: characters.getAniimoCharacterName(c, locale), nameAlt: c.nameEn })),
-          };
-          return;
-        }
-      }
-    };
-
-    const gameIds: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'aniimo'];
-    for (const gameId of gameIds) {
-      tasks.push(addGame(gameId));
-    }
-    await Promise.all(tasks);
-    return datasets;
-  })();
-
+  const promise = fetch(`/data-manifest/search-${locale}.json`)
+    .then(async (response) => {
+      if (!response.ok) throw new Error(`Search index request failed: ${response.status}`);
+      return response.json() as Promise<Partial<Record<string, SearchDataset>>>;
+    });
   datasetCache.set(locale, promise);
   return promise;
 }
+
+// Search data is kept in a generated static index so this client component
+// never imports full game records or server-only loaders.
 
 export function SearchDialog({ locale, open, onClose }: {
   locale: SupportedLocale;

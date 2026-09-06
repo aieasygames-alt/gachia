@@ -1,6 +1,7 @@
 import type { SupportedLocale } from '@gachia/core';
+import { join } from 'node:path';
 import { localeStr } from './types';
-import rawRedeemCodes from './raw-redeem-codes.json';
+import { loadJson } from '../../load-json';
 
 export interface SkjhRedeemCode {
   code: string;
@@ -13,7 +14,12 @@ export interface SkjhRedeemCode {
   revealedAt: string;
 }
 
-export const redeemCodes: SkjhRedeemCode[] = rawRedeemCodes as unknown as SkjhRedeemCode[];
+const rawRedeemCodes = await loadJson<unknown>(
+  join(process.cwd(), '../../packages/data/games/skjh/raw-redeem-codes.json'),
+  '/data/skjh/raw-redeem-codes.json',
+);
+
+export const redeemCodes: SkjhRedeemCode[] = rawRedeemCodes as SkjhRedeemCode[];
 
 export function getActiveRedeemCodes(): SkjhRedeemCode[] {
   return redeemCodes.filter((c) => c.status === 'active');
