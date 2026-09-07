@@ -50,6 +50,7 @@ export interface GameRouteConfig {
   'type-chart'?: boolean;
   merchant?: boolean;
   eggs?: boolean;
+  events?: boolean;
   gacha?: boolean;
   anomalies?: boolean;
   artifacts?: boolean;

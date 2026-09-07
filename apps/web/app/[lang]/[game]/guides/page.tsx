@@ -204,16 +204,16 @@ const ROCO_ACTION_LINKS: Record<'roco' | 'roco-cn', Array<{
   roco: [
     {
       id: 'cbt',
-      href: '/roco/guides/cbt-registration-guide',
+      href: '/roco/events',
       label: {
-        zh: '先确认 CBT 报名',
-        en: 'Check CBT signup first',
-        ja: 'まずCBT登録を確認',
+        zh: 'CBT 活动日历',
+        en: 'CBT events calendar',
+        ja: 'CBTイベント日程',
       },
       description: {
-        zh: '把首测资格、地区、平台和注册步骤先核对清楚。',
-        en: 'Verify playtest eligibility, regions, platforms, and signup steps before planning.',
-        ja: 'テスト資格、地域、プラットフォーム、登録手順を先に確認します。',
+        zh: '把报名窗口、开测时间、奖励节点和结束状态放在一起看。',
+        en: 'Review signup windows, test dates, reward milestones, and event status together.',
+        ja: '応募期間、テスト日、報酬节点、状態をまとめて確認します。',
       },
     },
     {
@@ -262,16 +262,16 @@ const ROCO_ACTION_LINKS: Record<'roco' | 'roco-cn', Array<{
   'roco-cn': [
     {
       id: 'season',
-      href: '/roco-cn/guides/daily-events-merchant-guide',
+      href: '/roco-cn/events',
       label: {
-        zh: '今日活动与商人',
-        en: 'Today: events and merchants',
-        ja: '今日のイベントと商人',
+        zh: '活动日历',
+        en: 'Events calendar',
+        ja: 'イベント日程',
       },
       description: {
-        zh: '把 S2 限时、兑换码、远行商人和地图资源点放进一张每日清单。',
-        en: 'Use one checklist for S2 limited tasks, codes, merchants, and map resources.',
-        ja: 'S2限定、コード、行商人、地図資源を一つのリストで確認します。',
+        zh: '按进行中、即将开始和已结束查看 S2、兑换码和限时奖励。',
+        en: 'Check S2, codes, and limited rewards by live, upcoming, and ended status.',
+        ja: 'S2、コード、限定報酬を開催中・近日開始・終了で確認します。',
       },
     },
     {

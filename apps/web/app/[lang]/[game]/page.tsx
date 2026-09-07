@@ -856,16 +856,16 @@ const ROUTE_ICONS: Record<string, string> = {
 const ROCO_DAILY_COPY: Record<'roco' | 'roco-cn', RocoDailyCard[]> = {
   roco: [
     {
-      href: '/roco/version',
+      href: '/roco/events',
       icon: '📰',
-      title: { zh: 'CBT 时间线', en: 'CBT timeline', ja: 'CBT日程' },
+      title: { zh: 'CBT 活动日历', en: 'CBT events', ja: 'CBTイベント' },
       description: {
-        zh: '跟进 Quack Quack Test、平台入口和官方确认状态。',
-        en: 'Track Quack Quack Test timing, platforms, and confirmation status.',
-        ja: 'Quack Quack Test、平台、確認状況を追跡。',
+        zh: '跟进报名窗口、首测时间和官方奖励节点。',
+        en: 'Track sign-up windows, CBT timing, and official reward milestones.',
+        ja: '応募期間、CBT日程、公式報酬节点を確認。',
       },
-      metric: () => '2026-10-27',
-      action: { zh: '查看节点', en: 'Check timeline', ja: '日程を見る' },
+      metric: () => 'Live',
+      action: { zh: '看活动', en: 'Open events', ja: 'イベントへ' },
     },
     {
       href: '/roco/characters',
@@ -930,16 +930,16 @@ const ROCO_DAILY_COPY: Record<'roco' | 'roco-cn', RocoDailyCard[]> = {
   ],
   'roco-cn': [
     {
-      href: '/roco-cn/version',
+      href: '/roco-cn/events',
       icon: '📰',
-      title: { zh: 'S1 赛季', en: 'S1 season', ja: 'S1シーズン' },
+      title: { zh: '活动日历', en: 'Events calendar', ja: 'イベント日程' },
       description: {
-        zh: '查看暗夜拾光赛季、活动与版本节点。',
-        en: 'Review Shadowlight season, events, and version milestones.',
-        ja: '暗夜拾光シーズン、イベント、版本を確認。',
+        zh: '按进行中、即将开始和已结束查看赛季与兑换码。',
+        en: 'Review live, upcoming, and ended seasons and code windows.',
+        ja: '開催中、近日開始、終了したシーズンとコードを確認。',
       },
-      metric: () => 'S1',
-      action: { zh: '看赛季', en: 'Open season', ja: 'シーズンへ' },
+      metric: () => 'Live',
+      action: { zh: '看活动', en: 'Open events', ja: 'イベントへ' },
     },
     {
       href: '/roco-cn/characters',

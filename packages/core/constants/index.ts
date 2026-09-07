@@ -408,6 +408,7 @@ export const GAMES: Record<GameId, GameModule> = {
       'type-chart': true,
       merchant: true,
       eggs: true,
+      events: true,
     },
   },
   skjh: {
@@ -503,6 +504,7 @@ export const GAMES: Record<GameId, GameModule> = {
       'type-chart': true,
       merchant: true,
       eggs: true,
+      events: true,
     },
   },
   'roco-cn': {
@@ -636,6 +638,7 @@ export const CATEGORY_LABELS: Record<string, Record<SupportedLocale, string>> = 
   'type-chart': { zh: '属性克制', en: 'Type Chart', ja: 'タイプ相性' },
   merchant: { zh: '商人刷新', en: 'Merchant', ja: '商人更新' },
   eggs: { zh: '精灵蛋', en: 'Eggs', ja: '卵' },
+  events: { zh: '活动日历', en: 'Events', ja: 'イベント' },
   gacha: { zh: '祈愿', en: 'Gacha', ja: 'ガチャ' },
   anomalies: { zh: '异象', en: 'Anomalies', ja: 'アノマリー' },
   artifacts: { zh: '圣遗物', en: 'Artifacts', ja: '聖遺物' },
