@@ -246,16 +246,16 @@ const ROCO_ACTION_LINKS: Record<'roco' | 'roco-cn', Array<{
     },
     {
       id: 'codes',
-      href: '/roco/redeem-codes',
+      href: '/roco/merchant',
       label: {
-        zh: '兑换码和奖励观察',
-        en: 'Codes and reward watch',
-        ja: 'コードと報酬を確認',
+        zh: '商人刷新观察',
+        en: 'Merchant refresh watch',
+        ja: '商人更新ウォッチ',
       },
       description: {
-        zh: '国际服暂未稳定放码，先建立可更新入口，方便首测后快速补齐。',
-        en: 'Global codes are not stable yet, so this keeps the reward watch page ready.',
-        ja: '国際版コードは未安定のため、報酬確認入口を先に用意しています。',
+        zh: '国际服开测后优先核验捕捉球、经验材料和周期商店。',
+        en: 'Track capture pods, EXP items, and shop rotations once the CBT opens.',
+        ja: 'CBT開始後に捕獲、経験値素材、ショップ周期を確認します。',
       },
     },
   ],
@@ -304,7 +304,7 @@ const ROCO_ACTION_LINKS: Record<'roco' | 'roco-cn', Array<{
     },
     {
       id: 'map',
-      href: '/roco-cn/map',
+      href: '/roco-cn/merchant',
       label: {
         zh: '地图、商人和资源点',
         en: 'Map, merchants, and resources',
