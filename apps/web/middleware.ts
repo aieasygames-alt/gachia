@@ -22,7 +22,7 @@ const LEGACY_STARRAIL_ITEM_SLUGS = ['ancient-spar', 'scorched-acorn', 'storm-eye
 const GAME_ROUTE_DENYLIST: Partial<Record<GameId, readonly string[]>> = {
   aniimo: ['weapons', 'items', 'tier-list', 'build', 'compare', 'teams', 'artifacts', 'drive-discs', 'disk-sets', 'calculator', 'gacha', 'anomalies'],
   skjh: ['characters', 'tier-list', 'artifacts', 'drive-discs', 'disk-sets', 'compare', 'gacha', 'anomalies'],
-  roco: ['items', 'artifacts', 'drive-discs', 'disk-sets', 'calculator', 'compare', 'teams', 'gacha', 'anomalies', 'map'],
+  roco: ['items', 'artifacts', 'drive-discs', 'disk-sets', 'calculator', 'compare', 'teams', 'gacha', 'anomalies'],
   sea: ['weapons', 'artifacts', 'drive-discs', 'disk-sets', 'compare', 'teams', 'gacha', 'anomalies', 'map'],
 };
 

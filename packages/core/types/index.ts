@@ -47,6 +47,7 @@ export interface GameRouteConfig {
   'disk-sets'?: boolean;
   'drive-discs'?: boolean;
   'redeem-codes'?: boolean;
+  'type-chart'?: boolean;
   gacha?: boolean;
   anomalies?: boolean;
   artifacts?: boolean;

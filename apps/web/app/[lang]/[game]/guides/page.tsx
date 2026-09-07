@@ -218,16 +218,16 @@ const ROCO_ACTION_LINKS: Record<'roco' | 'roco-cn', Array<{
     },
     {
       id: 'starter',
-      href: '/roco/guides/starter-guide',
+      href: '/roco/type-chart',
       label: {
-        zh: '首日开荒路线',
-        en: 'Day-one starter route',
-        ja: '初日の進行ルート',
+        zh: '属性克制速查',
+        en: 'Type matchup chart',
+        ja: 'タイプ相性早見',
       },
       description: {
-        zh: '从精灵选择、任务推进和资源保留开始，先避免前期走弯路。',
-        en: 'Start with Jinie choices, quest routing, and resource holds to avoid early detours.',
-        ja: 'ジニー選択、任務進行、資源温存から序盤の迷いを減らします。',
+        zh: '战斗、抓宠和配队前，先查攻击属性与防御属性的克制关系。',
+        en: 'Check attack and defense type matchups before battles, catching, and team planning.',
+        ja: '戦闘、捕獲、編成前に攻撃と防御タイプの相性を確認します。',
       },
     },
     {
@@ -290,16 +290,16 @@ const ROCO_ACTION_LINKS: Record<'roco' | 'roco-cn', Array<{
     },
     {
       id: 'starter',
-      href: '/roco-cn/guides/starter-guide-cn',
+      href: '/roco-cn/type-chart',
       label: {
-        zh: '新手养成顺序',
-        en: 'Starter progression order',
-        ja: '初心者育成の順番',
+        zh: '属性克制速查',
+        en: 'Type matchup chart',
+        ja: 'タイプ相性早見',
       },
       description: {
-        zh: '从精灵、资源、任务和日常优先级切入，适合作为回流入口。',
-        en: 'Use Jinies, resources, quests, and daily priorities as the return-player entry.',
-        ja: 'ジニー、資源、任務、日課優先度から復帰導線を作ります。',
+        zh: '打 BOSS、PVP 和抓宠前，先查当前国服属性克制关系。',
+        en: 'Check CN matchups before bosses, PvP, and catching routes.',
+        ja: 'ボス、PvP、捕獲ルート前に中国版のタイプ相性を確認します。',
       },
     },
     {

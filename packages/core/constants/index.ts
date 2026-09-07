@@ -405,6 +405,7 @@ export const GAMES: Record<GameId, GameModule> = {
       compare: true,
       teams: false,
       'redeem-codes': true,
+      'type-chart': true,
     },
   },
   skjh: {
@@ -497,6 +498,7 @@ export const GAMES: Record<GameId, GameModule> = {
       compare: false,
       teams: false,
       'redeem-codes': true,
+      'type-chart': true,
     },
   },
   'roco-cn': {
@@ -627,6 +629,7 @@ export const CATEGORY_LABELS: Record<string, Record<SupportedLocale, string>> = 
   'disk-sets': { zh: '光盘套装', en: 'Disk Sets', ja: 'ディスクセット' },
   'drive-discs': { zh: '驱动盘', en: 'Drive Discs', ja: 'ドライブディスク' },
   'redeem-codes': { zh: '兑换码', en: 'Redeem Codes', ja: '交換コード' },
+  'type-chart': { zh: '属性克制', en: 'Type Chart', ja: 'タイプ相性' },
   gacha: { zh: '祈愿', en: 'Gacha', ja: 'ガチャ' },
   anomalies: { zh: '异象', en: 'Anomalies', ja: 'アノマリー' },
   artifacts: { zh: '圣遗物', en: 'Artifacts', ja: '聖遺物' },

@@ -51,6 +51,7 @@ export const GameRouteConfigSchema = z.object({
   'disk-sets': z.boolean().optional(),
   'drive-discs': z.boolean().optional(),
   'redeem-codes': z.boolean().optional(),
+  'type-chart': z.boolean().optional(),
   gacha: z.boolean().optional(),
   anomalies: z.boolean().optional(),
   artifacts: z.boolean().optional(),
