@@ -232,16 +232,16 @@ const ROCO_ACTION_LINKS: Record<'roco' | 'roco-cn', Array<{
     },
     {
       id: 'map',
-      href: '/roco/map',
+      href: '/roco/eggs',
       label: {
-        zh: '地图与区域观察',
-        en: 'Map and region watch',
-        ja: 'マップと地域を確認',
+        zh: '精灵蛋与孵化',
+        en: 'Eggs and hatching',
+        ja: '卵と孵化',
       },
       description: {
-        zh: '先把已公开区域、资源点和后续可补地图信息集中到一处。',
-        en: 'Review known regions, resource points, and map notes that can be expanded later.',
-        ja: '公開済み地域、資源地点、今後補完する地図情報をまとめて確認します。',
+        zh: '先整理蛋种、预约奖励和 CBT 后需要核验的孵化信息。',
+        en: 'Track egg types, preregistration rewards, and hatching notes to verify after CBT.',
+        ja: '卵種、事前登録報酬、CBT後に確認する孵化情報を整理します。',
       },
     },
     {

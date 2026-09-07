@@ -53,6 +53,7 @@ export const GameRouteConfigSchema = z.object({
   'redeem-codes': z.boolean().optional(),
   'type-chart': z.boolean().optional(),
   merchant: z.boolean().optional(),
+  eggs: z.boolean().optional(),
   gacha: z.boolean().optional(),
   anomalies: z.boolean().optional(),
   artifacts: z.boolean().optional(),

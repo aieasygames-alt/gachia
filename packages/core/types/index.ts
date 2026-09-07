@@ -49,6 +49,7 @@ export interface GameRouteConfig {
   'redeem-codes'?: boolean;
   'type-chart'?: boolean;
   merchant?: boolean;
+  eggs?: boolean;
   gacha?: boolean;
   anomalies?: boolean;
   artifacts?: boolean;

@@ -407,6 +407,7 @@ export const GAMES: Record<GameId, GameModule> = {
       'redeem-codes': true,
       'type-chart': true,
       merchant: true,
+      eggs: true,
     },
   },
   skjh: {
@@ -501,6 +502,7 @@ export const GAMES: Record<GameId, GameModule> = {
       'redeem-codes': true,
       'type-chart': true,
       merchant: true,
+      eggs: true,
     },
   },
   'roco-cn': {
@@ -633,6 +635,7 @@ export const CATEGORY_LABELS: Record<string, Record<SupportedLocale, string>> = 
   'redeem-codes': { zh: '兑换码', en: 'Redeem Codes', ja: '交換コード' },
   'type-chart': { zh: '属性克制', en: 'Type Chart', ja: 'タイプ相性' },
   merchant: { zh: '商人刷新', en: 'Merchant', ja: '商人更新' },
+  eggs: { zh: '精灵蛋', en: 'Eggs', ja: '卵' },
   gacha: { zh: '祈愿', en: 'Gacha', ja: 'ガチャ' },
   anomalies: { zh: '异象', en: 'Anomalies', ja: 'アノマリー' },
   artifacts: { zh: '圣遗物', en: 'Artifacts', ja: '聖遺物' },
