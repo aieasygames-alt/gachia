@@ -220,6 +220,23 @@ type SpecialHubCopy = {
   }>;
 };
 
+type RocoDailyCard = {
+  href: string;
+  icon: string;
+  title: Record<SupportedLocale, string>;
+  description: Record<SupportedLocale, string>;
+  metric: (stats: RocoDashboardStats, locale: SupportedLocale) => string;
+  action: Record<SupportedLocale, string>;
+};
+
+type RocoDashboardStats = {
+  characters: number;
+  guides: number;
+  weapons: number;
+  enabledRoutes: number;
+  codeStatus: 'watch' | 'active';
+};
+
 const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
   genshin: {
     eyebrow: { zh: '6.x 版本专题入口', en: 'v6.x Version Hub', ja: 'v6.x バージョン特集' },
@@ -836,6 +853,157 @@ const ROUTE_ICONS: Record<string, string> = {
   'redeem-codes': '🎁', anomalies: '🌀',
 };
 
+const ROCO_DAILY_COPY: Record<'roco' | 'roco-cn', RocoDailyCard[]> = {
+  roco: [
+    {
+      href: '/roco/version',
+      icon: '📰',
+      title: { zh: 'CBT 时间线', en: 'CBT timeline', ja: 'CBT日程' },
+      description: {
+        zh: '跟进 Quack Quack Test、平台入口和官方确认状态。',
+        en: 'Track Quack Quack Test timing, platforms, and confirmation status.',
+        ja: 'Quack Quack Test、平台、確認状況を追跡。',
+      },
+      metric: () => '2026-10-27',
+      action: { zh: '查看节点', en: 'Check timeline', ja: '日程を見る' },
+    },
+    {
+      href: '/roco/characters',
+      icon: '👤',
+      title: { zh: '精灵图鉴', en: 'Jinie wiki', ja: 'ジニー図鑑' },
+      description: {
+        zh: '查看已曝光精灵、属性、稀有度与进化链。',
+        en: 'Browse revealed Jinies, types, rarity, and evolution lines.',
+        ja: '公開ジニー、属性、レア度、進化を確認。',
+      },
+      metric: (stats, locale) => locale === 'zh' ? `${stats.characters} 只` : locale === 'ja' ? `${stats.characters}体` : `${stats.characters} Jinies`,
+      action: { zh: '打开图鉴', en: 'Open wiki', ja: '図鑑へ' },
+    },
+    {
+      href: '/roco/tier-list',
+      icon: '🏆',
+      title: { zh: '早测节奏榜', en: 'Provisional tier', ja: '暫定Tier' },
+      description: {
+        zh: '基于 CBT 暂定分级，正式上线后继续校准。',
+        en: 'CBT-based ratings that will be recalibrated after launch.',
+        ja: 'CBTベースの評価。リリース後に調整。',
+      },
+      metric: () => 'CBT',
+      action: { zh: '看强度', en: 'View tiers', ja: 'Tierを見る' },
+    },
+    {
+      href: '/roco/weapons',
+      icon: '⚔️',
+      title: { zh: '法杖外观', en: 'Staff catalog', ja: '杖図鑑' },
+      description: {
+        zh: '法杖是外观特效武器，不提供攻击力成长。',
+        en: 'Staves are cosmetic effect weapons, not attack-stat gear.',
+        ja: '杖は攻撃値なしの外観武器です。',
+      },
+      metric: (stats, locale) => locale === 'zh' ? `${stats.weapons} 款` : locale === 'ja' ? `${stats.weapons}本` : `${stats.weapons} staves`,
+      action: { zh: '查看法杖', en: 'View staves', ja: '杖を見る' },
+    },
+    {
+      href: '/roco/guides',
+      icon: '📖',
+      title: { zh: 'CBT 攻略', en: 'CBT guides', ja: 'CBTガイド' },
+      description: {
+        zh: '报名、下载、御三家和早测注意事项集中查看。',
+        en: 'Registration, download, starters, and CBT notes in one place.',
+        ja: '応募、DL、御三家、CBT要点を整理。',
+      },
+      metric: (stats, locale) => locale === 'zh' ? `${stats.guides} 篇` : locale === 'ja' ? `${stats.guides}本` : `${stats.guides} guides`,
+      action: { zh: '读攻略', en: 'Read guides', ja: '読む' },
+    },
+    {
+      href: '/roco/map',
+      icon: '🗺️',
+      title: { zh: '地图待核验', en: 'Map watch', ja: 'マップ確認待ち' },
+      description: {
+        zh: '上线后优先补区域、捕捉点和探索路线。',
+        en: 'Regions, capture points, and routes are queued for launch checks.',
+        ja: '地域、捕獲地点、探索ルートをリリース後に確認。',
+      },
+      metric: () => 'Watch',
+      action: { zh: '查看地图', en: 'Open map', ja: 'マップへ' },
+    },
+  ],
+  'roco-cn': [
+    {
+      href: '/roco-cn/version',
+      icon: '📰',
+      title: { zh: 'S1 赛季', en: 'S1 season', ja: 'S1シーズン' },
+      description: {
+        zh: '查看暗夜拾光赛季、活动与版本节点。',
+        en: 'Review Shadowlight season, events, and version milestones.',
+        ja: '暗夜拾光シーズン、イベント、版本を確認。',
+      },
+      metric: () => 'S1',
+      action: { zh: '看赛季', en: 'Open season', ja: 'シーズンへ' },
+    },
+    {
+      href: '/roco-cn/characters',
+      icon: '👤',
+      title: { zh: '精灵图鉴', en: 'Jinie wiki', ja: 'ジニー図鑑' },
+      description: {
+        zh: '筛选国服精灵、属性、技能和进化链。',
+        en: 'Filter CN Jinies by type, skills, and evolution lines.',
+        ja: '中国版ジニーの属性、スキル、進化を確認。',
+      },
+      metric: (stats, locale) => locale === 'zh' ? `${stats.characters} 只` : locale === 'ja' ? `${stats.characters}体` : `${stats.characters} Jinies`,
+      action: { zh: '打开图鉴', en: 'Open wiki', ja: '図鑑へ' },
+    },
+    {
+      href: '/roco-cn/redeem-codes',
+      icon: '🎁',
+      title: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' },
+      description: {
+        zh: '集中核验国服礼包码、奖励与过期状态。',
+        en: 'Check CN codes, rewards, and expiration status.',
+        ja: '中国版コード、報酬、期限を確認。',
+      },
+      metric: (_stats, locale) => locale === 'zh' ? '有效码' : locale === 'ja' ? '有効コード' : 'Active',
+      action: { zh: '领取奖励', en: 'Check rewards', ja: '報酬確認' },
+    },
+    {
+      href: '/roco-cn/tier-list',
+      icon: '🏆',
+      title: { zh: '节奏榜', en: 'Tier list', ja: 'Tier' },
+      description: {
+        zh: '按当前环境查看优先培养和捕捉目标。',
+        en: 'Find training and capture priorities for the current meta.',
+        ja: '現環境の育成・捕獲優先度を確認。',
+      },
+      metric: () => 'SS/S/A/B',
+      action: { zh: '看强度', en: 'View tiers', ja: 'Tierを見る' },
+    },
+    {
+      href: '/roco-cn/weapons',
+      icon: '⚔️',
+      title: { zh: '法杖外观', en: 'Staff catalog', ja: '杖図鑑' },
+      description: {
+        zh: '按活动、战令和商城来源查看法杖特效。',
+        en: 'Browse staff effects by event, pass, and shop source.',
+        ja: 'イベント、パス、ショップ別に杖を確認。',
+      },
+      metric: (stats, locale) => locale === 'zh' ? `${stats.weapons} 款` : locale === 'ja' ? `${stats.weapons}本` : `${stats.weapons} staves`,
+      action: { zh: '查看法杖', en: 'View staves', ja: '杖を見る' },
+    },
+    {
+      href: '/roco-cn/map',
+      icon: '🗺️',
+      title: { zh: '地图探索', en: 'Map routes', ja: 'マップ探索' },
+      description: {
+        zh: '继续串联区域、捕捉点和后续资源路线。',
+        en: 'Connect regions, capture points, and resource routes.',
+        ja: '地域、捕獲地点、資源ルートへつなげます。',
+      },
+      metric: (_stats, locale) => locale === 'zh' ? '待补点位' : locale === 'ja' ? '地点追加中' : 'Marker watch',
+      action: { zh: '查看地图', en: 'Open map', ja: 'マップへ' },
+    },
+  ],
+};
+
 // --- Helper: resolve character data ---
 interface CharInfo { id: string; name: string; image: string }
 
@@ -868,6 +1036,42 @@ async function getGuideInfos(gameId: GameId, locale: SupportedLocale): Promise<G
   const featured = featuredIds.map((id) => guideMap.get(id)).filter((guide): guide is typeof guides[number] => Boolean(guide));
   const fallback = guides.filter((guide) => !featuredIds.includes(guide.id));
   return [...featured, ...fallback].slice(0, 3).map((guide) => ({ id: guide.id, title: guide.title, summary: guide.summary }));
+}
+
+async function getRocoDashboardStats(
+  gameId: GameId,
+  guideCount: number,
+  enabledRouteCount: number,
+): Promise<RocoDashboardStats | null> {
+  if (gameId === 'roco') {
+    const [{ rocoCharacters }, { rocoWeapons }] = await Promise.all([
+      import('@gachia/data/games/roco/characters'),
+      import('@gachia/data/games/roco/weapons'),
+    ]);
+    return {
+      characters: rocoCharacters.length,
+      guides: guideCount,
+      weapons: rocoWeapons.length,
+      enabledRoutes: enabledRouteCount,
+      codeStatus: 'watch',
+    };
+  }
+
+  if (gameId === 'roco-cn') {
+    const [{ rocoCnCharacterSummaries }, { rocoCnWeapons }] = await Promise.all([
+      import('@gachia/data/games/roco-cn/character-summaries'),
+      import('@gachia/data/games/roco-cn/weapons'),
+    ]);
+    return {
+      characters: rocoCnCharacterSummaries.length,
+      guides: guideCount,
+      weapons: rocoCnWeapons.length,
+      enabledRoutes: enabledRouteCount,
+      codeStatus: 'active',
+    };
+  }
+
+  return null;
 }
 
 function ensureMetaLength(value: string, locale: SupportedLocale, target = META_MIN_LENGTH) {
@@ -935,6 +1139,8 @@ export default async function GameHome({
     getCharInfos(gameId, locale),
     getGuideInfos(gameId, locale),
   ]);
+  const rocoDashboardStats = await getRocoDashboardStats(gameId, guides.length, enabledRoutes.length);
+  const rocoDailyCards = gameId === 'roco' || gameId === 'roco-cn' ? ROCO_DAILY_COPY[gameId] : null;
 
   return (
     <div>
@@ -1193,6 +1399,80 @@ export default async function GameHome({
                 ))}
               </div>
             </div>
+          </div>
+        </section>
+      )}
+
+      {rocoDashboardStats && rocoDailyCards && (
+        <section className="mb-10 rounded-2xl border border-game-border bg-game-surface p-6 shadow-lg">
+          <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-game-primary">
+                {locale === 'zh' ? '今日入口' : locale === 'ja' ? '今日の入口' : 'Today hub'}
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-game-text">
+                {gameId === 'roco-cn'
+                  ? locale === 'zh' ? '国服日常资料入口' : locale === 'ja' ? '中国版デイリー資料入口' : 'CN daily data hub'
+                  : locale === 'zh' ? '国际服 CBT 跟进入口' : locale === 'ja' ? '国際版CBT確認入口' : 'Global CBT watch hub'}
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-game-text-muted">
+                {gameId === 'roco-cn'
+                  ? locale === 'zh'
+                    ? '把活动、兑换码、精灵图鉴、法杖和地图路线放在同一屏，适合每天快速确认下一步。'
+                    : locale === 'ja'
+                      ? 'イベント、コード、ジニー図鑑、杖、マップ導線を一画面にまとめます。'
+                      : 'Events, codes, Jinies, staves, and map routes are grouped for quick daily checks.'
+                  : locale === 'zh'
+                    ? '国际服仍处于 CBT 信息核验阶段，先追踪测试节点、精灵图鉴、法杖和待补地图。'
+                    : locale === 'ja'
+                      ? '国際版はCBT情報確認中。日程、ジニー、杖、マップ待ち項目を先に追跡します。'
+                      : 'Global is still in CBT verification, so this hub tracks timing, Jinies, staves, and map watch items.'}
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-2 text-right text-xs text-game-text-muted sm:grid-cols-4">
+              <div className="rounded-lg border border-game-border bg-game-surface-alt px-3 py-2">
+                <div className="text-base font-bold text-game-text">{rocoDashboardStats.characters}</div>
+                <div>{locale === 'zh' ? '精灵' : locale === 'ja' ? 'ジニー' : 'Jinies'}</div>
+              </div>
+              <div className="rounded-lg border border-game-border bg-game-surface-alt px-3 py-2">
+                <div className="text-base font-bold text-game-text">{rocoDashboardStats.weapons}</div>
+                <div>{locale === 'zh' ? '法杖' : locale === 'ja' ? '杖' : 'Staves'}</div>
+              </div>
+              <div className="rounded-lg border border-game-border bg-game-surface-alt px-3 py-2">
+                <div className="text-base font-bold text-game-text">{rocoDashboardStats.guides}</div>
+                <div>{locale === 'zh' ? '精选攻略' : locale === 'ja' ? '注目ガイド' : 'Featured guides'}</div>
+              </div>
+              <div className="rounded-lg border border-game-border bg-game-surface-alt px-3 py-2">
+                <div className="text-base font-bold text-game-text">{rocoDashboardStats.enabledRoutes}</div>
+                <div>{locale === 'zh' ? '可用入口' : locale === 'ja' ? '入口' : 'Routes'}</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+            {rocoDailyCards.map((card) => (
+              <Link
+                key={card.href}
+                href={card.href as '/'}
+                className="group flex min-h-[150px] flex-col rounded-xl border border-game-border bg-game-surface-alt p-4 transition-all hover:border-game-primary/60 hover:shadow-lg"
+              >
+                <div className="mb-3 flex items-center justify-between gap-3">
+                  <span className="text-2xl" aria-hidden="true">{card.icon}</span>
+                  <span className="rounded-full bg-game-surface px-3 py-1 text-xs font-semibold text-game-primary">
+                    {card.metric(rocoDashboardStats, locale)}
+                  </span>
+                </div>
+                <h3 className="text-base font-semibold text-game-text group-hover:text-game-primary">
+                  {card.title[locale]}
+                </h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-game-text-muted">
+                  {card.description[locale]}
+                </p>
+                <span className="mt-4 text-sm font-semibold text-game-primary">
+                  {card.action[locale]}
+                </span>
+              </Link>
+            ))}
           </div>
         </section>
       )}
