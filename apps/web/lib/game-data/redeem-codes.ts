@@ -50,7 +50,7 @@ export async function getRedeemCodesForGame(gameId: GameId): Promise<RedeemCodeE
     }
     case 'roco-cn': {
       const mod = await import('@gachia/data/games/roco-cn/redeem-codes');
-      return mod.getActiveRedeemCodes() as unknown as RedeemCodeEntry[];
+      return mod.redeemCodes as unknown as RedeemCodeEntry[];
     }
     case 'aniimo': {
       const mod = await import('@gachia/data/games/aniimo/redeem-codes');

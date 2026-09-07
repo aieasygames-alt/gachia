@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { isRedeemCodeActive } from '@/lib/redeem-codes';
+import { getRedeemCodesForGame } from '@/lib/game-data/redeem-codes';
 import zzzCodes from '../public/data/zzz/raw-redeem-codes.json';
 
 describe('redeem code status', () => {
@@ -33,5 +34,14 @@ describe('redeem code status', () => {
       source: '2026-08-28 v3.2 special program',
     });
     expect(isRedeemCodeActive(flintworks!, new Date('2026-08-31T00:00:00Z'))).toBe(false);
+  });
+
+  it('keeps dated Roco CN codes visible so the page can classify expired entries', async () => {
+    const codes = await getRedeemCodesForGame('roco-cn');
+    const augustLimited = codes.find((code) => code.code === '不要小瞧我和精灵的羁绊啊');
+
+    expect(codes.length).toBeGreaterThan(20);
+    expect(augustLimited).toBeDefined();
+    expect(isRedeemCodeActive(augustLimited!, new Date('2026-09-07T00:00:00Z'))).toBe(false);
   });
 });
