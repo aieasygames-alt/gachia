@@ -16,7 +16,22 @@ export type MarketIntelAction =
   | 'monitor_only'
   | 'reject';
 
-export type MarketIntelStatus = 'todo' | 'in_progress' | 'done' | 'deferred' | 'rejected';
+export type MarketIntelStatus =
+  | 'watch'
+  | 'planned'
+  | 'todo'
+  | 'in_progress'
+  | 'done'
+  | 'expired'
+  | 'deferred'
+  | 'rejected';
+
+export type MarketIntelSignalStrength = 'confirmed' | 'mixed' | 'needs_verification';
+
+export interface MarketIntelSignal {
+  strength: MarketIntelSignalStrength;
+  deadline?: string;
+}
 
 export interface MarketIntelOpportunity {
   id: string;
@@ -30,82 +45,88 @@ export interface MarketIntelOpportunity {
   status: MarketIntelStatus;
   sourceDate: string;
   sourceUrls: string[];
+  signal?: MarketIntelSignal;
   notes: string;
 }
 
-export const MARKET_INTEL_BATCH_ID = 'market-intel-2026-09-03';
-export const MARKET_INTEL_SOURCE_REPORT = '/plans/market-intel-2026-09-03.md';
+export const MARKET_INTEL_BATCH_ID = 'market-intel-2026-09-07';
+export const MARKET_INTEL_SOURCE_REPORT = '/plans/market-intel-2026-09-07.md';
 
 export const MARKET_INTEL_OPPORTUNITIES: MarketIntelOpportunity[] = [
   {
-    id: 'aniimo-2026-09-03-launch-countdown',
-    gameId: 'aniimo',
-    priority: 'P0',
-    title: 'Aniimo 全球上线倒计时 / 平台 FAQ',
-    keywordCluster: ['Aniimo release date', 'September 16 2026', 'September 23 mobile', 'PC', 'console', 'mobile', 'pre-order', 'starter', 'creature catching', 'map'],
-    riskTerms: ['Pokemon', '侵权争议', 'mod', 'private server'],
-    targetPages: ['/aniimo/version', '/aniimo/download', '/aniimo/guides'],
-    actions: ['update_existing_page', 'create_topic_page', 'update_download_route', 'add_faq', 'refresh_metadata'],
-    status: 'done',
-    sourceDate: '2026-09-03',
-    sourceUrls: ['https://www.aniimo.com/main', 'https://www.aniimo.com/newslist/detail/100051'],
-    notes: '官方站已确认 PC/主机 2026-09-16、移动端 2026-09-23；应立即承接上线倒计时、预购/预注册和捕捉入门。',
-  },
-  {
-    id: 'genshin-7-0-luna-i-nod-krai',
-    gameId: 'genshin',
-    priority: 'P0',
-    title: '原神 Luna I / Nod-Krai 上线前中心',
-    keywordCluster: ['Genshin Luna I', 'Song of the Welkin Moon', 'Nod-Krai', 'September 10', 'Lauma', 'Flins', 'Aino', 'free 5-star', 'returning players', 'codes'],
-    riskTerms: ['leaks', 'mod', 'akt', 'vicineko', '同人动漫', '成人动画'],
-    targetPages: ['/genshin/version', '/genshin/map', '/genshin/redeem-codes', '/genshin/guides/banner-schedule-guide'],
-    actions: ['update_existing_page', 'update_live_module', 'add_internal_links', 'refresh_metadata'],
-    status: 'done',
-    sourceDate: '2026-09-03',
-    sourceUrls: ['https://blog.playstation.com/2025/08/29/genshin-impact-version-luna-i-song-of-the-welkin-moon-segue-launches-september-10/', 'https://x.com/GenshinImpact/status/1962459976124993689'],
-    notes: 'Luna I / Nod-Krai 进入上线前最后一周，版本页需要从 7.0 Phase II 改为新地图、角色和回归奖励路线。',
-  },
-  {
-    id: 'zzz-3-2-release-hub',
+    id: 'zzz-3-2-launch-day-route',
     gameId: 'zzz',
     priority: 'P0',
-    title: '绝区零 3.2 上线倒计时 / Claret + Roxy 中心',
-    keywordCluster: ['Zenless Zone Zero 3.2', 'September 9', 'Their Secret Histories', 'Claret', 'Roxy', 'Armorer', 'Maim', 'livestream codes expired', 'HoYoLAND 2026'],
+    title: '绝区零 3.2 launch day route',
+    keywordCluster: ['Zenless Zone Zero 3.2', 'September 9', 'Their Secret Histories', 'Claret', 'Roxy', 'Armorer', 'Maim', 'rerun banners', 'Steam', 'Xbox', 'expired livestream codes'],
     riskTerms: ['akt', '同人动漫', '成人向', 'mod'],
     targetPages: ['/zzz/version', '/zzz/redeem-codes', '/zzz/guides/steam-3-0-start-guide'],
     actions: ['update_existing_page', 'update_live_module', 'update_download_route', 'update_code_route', 'refresh_metadata'],
     status: 'done',
-    sourceDate: '2026-09-03',
-    sourceUrls: ['https://zenless.hoyoverse.com/en-us/news/', 'https://www.gematsu.com/2026/08/zenless-zone-zero-version-3-2-update-their-secret-histories-launches-september-9'],
-    notes: '3.2 已确认 9 月 9 日上线，直播码从可领改为过期说明，新代理人与平台入口需要合并承接。',
+    sourceDate: '2026-09-07',
+    sourceUrls: ['https://www.hoyoverse.com/en-us/news/165951', 'https://noisypixel.net/zenless-zone-zero-version-3-2-claret-roxy-armorer/'],
+    signal: { strength: 'confirmed', deadline: '2026-09-09' },
+    notes: '3.2 已进入 9/9 上线前最后窗口，版本页应从 release hub 升级为首日路线，兑换码页明确直播码 expired。',
   },
   {
-    id: 'starrail-4-5-phase-2-planning',
-    gameId: 'starrail',
+    id: 'genshin-luna-i-final-prep',
+    gameId: 'genshin',
     priority: 'P0',
-    title: '星铁 4.5 Phase 2 资源与卡池规划',
-    keywordCluster: ['Honkai Star Rail 4.5', 'Astropolis', 'September 12', 'Phase 2', 'banners', 'pull count', 'codes', 'Fate collab', 'team builder'],
-    riskTerms: ['leaks', '内鬼吧', '同人', 'akt', 'mod'],
-    targetPages: ['/starrail/version', '/starrail/redeem-codes', '/starrail/guides/banner-schedule-guide'],
-    actions: ['update_existing_page', 'update_code_route', 'add_internal_links', 'refresh_metadata'],
+    title: '原神 Luna I / Nod-Krai final prep',
+    keywordCluster: ['Genshin Luna I', 'Song of the Welkin Moon', 'Nod-Krai', 'September 10', 'Lauma', 'Flins', 'Aino', 'free 5-star', 'anniversary rewards', 'returning player', 'interactive map'],
+    riskTerms: ['leaks', 'mod', 'akt', 'vicineko', '同人动漫', '成人动画'],
+    targetPages: ['/genshin/version', '/genshin/map', '/genshin/redeem-codes', '/genshin/guides/banner-schedule-guide'],
+    actions: ['update_existing_page', 'update_live_module', 'add_internal_links', 'refresh_metadata'],
     status: 'done',
-    sourceDate: '2026-09-03',
-    sourceUrls: ['https://www.hoyoverse.com/en-us/news/165826', 'https://x.com/honkaistarrail'],
-    notes: '4.5 已上线，当前窗口更适合做 Phase 2 前准备、兑换码和队伍规划。',
+    sourceDate: '2026-09-07',
+    sourceUrls: ['https://www.hoyoverse.com/en-us/news/159364', 'https://blog.playstation.com/2025/08/29/genshin-impact-version-luna-i-song-of-the-welkin-moon-segue-launches-september-10/'],
+    signal: { strength: 'confirmed', deadline: '2026-09-10' },
+    notes: 'Luna I / Nod-Krai 仍是 9/10 前核心入口，版本页需要突出最终准备、免费 5 星、周年/回归奖励和地图材料。',
   },
   {
-    id: 'endfield-steam-pioneer-test-last-call',
+    id: 'endfield-steam-pioneer-test-cutoff',
     gameId: 'endfield',
     priority: 'P0',
-    title: '终末地 Steam Pioneer Test 最后召集',
-    keywordCluster: ['Arknights Endfield Steam Pioneer Test', 'September 10', 'beta recruitment', 'download', 'AIC factory', 'blueprint', 'Sanity', 'characters'],
+    title: '终末地 Steam Pioneer Test cutoff',
+    keywordCluster: ['Arknights Endfield Steam Pioneer Test', 'September 10', '13:00 UTC+8', 'beta recruitment', 'Steam test rewards', 'download', 'AIC factory', 'blueprint', 'Sanity'],
     riskTerms: ['解包', 'mod', 'mods', '未证实爆料'],
     targetPages: ['/endfield/version', '/endfield/download', '/endfield/guides/download-install-guide', '/endfield/guides/homecoming-update-guide'],
     actions: ['update_existing_page', 'create_topic_page', 'update_download_route', 'add_internal_links'],
     status: 'done',
-    sourceDate: '2026-09-03',
-    sourceUrls: ['https://endfield.hypergryph.com/news/', 'https://x.com/AKEndfield'],
-    notes: 'Steam Pioneer Test 招募仍是 9/10 前的强时效窗口，资格、下载、AIC 和 blueprint 需要继续放在同一条入口。',
+    sourceDate: '2026-09-07',
+    sourceUrls: ['https://survey.gryphline.com/s/bf70c9fca887998cb784808ed6c17b0d', 'https://store.steampowered.com/news/app/4732690/view/689766422328378820'],
+    signal: { strength: 'confirmed', deadline: '2026-09-10' },
+    notes: 'Steam Pioneer Test 9/10 13:00 UTC+8 截止，页面需要 last-call 倒计时，并准备 9/10 后切 recap/expired。',
+  },
+  {
+    id: 'aniimo-global-launch-starter-route',
+    gameId: 'aniimo',
+    priority: 'P0',
+    title: 'Aniimo 全球上线倒计时 / starter route',
+    keywordCluster: ['Aniimo release date', 'September 16 2026', 'September 23 mobile', 'PC', 'PS5', 'Xbox', 'Steam', 'Epic Games Store', 'Game Pass', 'pre-order', 'starter', 'creature catching'],
+    riskTerms: ['Pokemon', '侵权争议', 'mod', 'private server'],
+    targetPages: ['/aniimo/version', '/aniimo/download', '/aniimo/guides/download'],
+    actions: ['update_existing_page', 'create_topic_page', 'update_download_route', 'add_faq', 'refresh_metadata'],
+    status: 'done',
+    sourceDate: '2026-09-07',
+    sourceUrls: ['https://www.aniimo.com/newslist/detail/100051', 'https://www.aniimo.com/newslist'],
+    signal: { strength: 'confirmed', deadline: '2026-09-16' },
+    notes: '官方上线日期仍是 PC/主机 9/16、移动端 9/23，当前需要把平台表、预购、starter、capture/twine/map 串起来。',
+  },
+  {
+    id: 'starrail-4-5-phase-2-planning',
+    gameId: 'starrail',
+    priority: 'P1',
+    title: '星铁 4.5 Phase 2 抽取规划',
+    keywordCluster: ['Honkai Star Rail 4.5', 'Phase 2', 'September 12', 'banners', 'pull count', 'codes', 'Fate collab', 'team builder'],
+    riskTerms: ['leaks', '内鬼吧', '同人', 'akt', 'mod'],
+    targetPages: ['/starrail/version', '/starrail/redeem-codes', '/starrail/guides/banner-schedule-guide'],
+    actions: ['update_existing_page', 'update_code_route', 'add_internal_links', 'refresh_metadata'],
+    status: 'done',
+    sourceDate: '2026-09-07',
+    sourceUrls: ['https://www.hoyoverse.com/en-us/news/165826', 'https://x.com/honkaistarrail'],
+    signal: { strength: 'confirmed', deadline: '2026-09-12' },
+    notes: '4.5 已上线且 9/12 前仍有 Phase 2 短期窗口，继续承接抽取规划、兑换码和队伍构建。',
   },
   {
     id: 'sea-early-2027-december-beta',
@@ -117,37 +138,40 @@ export const MARKET_INTEL_OPPORTUNITIES: MarketIntelOpportunity[] = [
     targetPages: ['/sea/version', '/sea/download', '/sea/guides/platform-download-guide', '/sea/guides/what-is-forgotten-sea'],
     actions: ['update_existing_page', 'add_faq', 'update_download_route', 'add_internal_links', 'refresh_metadata'],
     status: 'done',
-    sourceDate: '2026-09-03',
+    sourceDate: '2026-09-07',
     sourceUrls: ['https://www.seaofremnants.com/', 'https://www.gematsu.com/2026/08/sea-of-remnants-adds-xbox-series-version-launches-in-early-2027'],
-    notes: 'release date 已转向 early 2027 + December closed beta，继续保持 watch 口径。',
+    signal: { strength: 'mixed' },
+    notes: '本轮没有更强新信号，继续维持 early 2027 + December closed beta + platform FAQ 的谨慎 watch 口径。',
   },
   {
-    id: 'wuwa-3-6-post-launch',
+    id: 'wuwa-3-6-phase-2-jingran-prep',
     gameId: 'wuwa',
     priority: 'P1',
-    title: '鸣潮 3.6 上线后抽卡 / 地图 / 平台页',
-    keywordCluster: ['Wuthering Waves 3.6', 'codes', 'banners', 'characters', 'Qingxiao', 'Jingran', 'map', 'Xbox', 'Steam'],
+    title: '鸣潮 3.6 Phase 2 / Jingran prep',
+    keywordCluster: ['Wuthering Waves 3.6', 'Jingran', 'Qingxiao', 'banners', 'codes', 'map', 'Xbox', 'Steam', 'download'],
     riskTerms: ['mod', '3d区', '同人', 'akt'],
     targetPages: ['/wuwa/version', '/wuwa/redeem-codes', '/wuwa/guides/banner-schedule-guide', '/wuwa/download', '/wuwa/map'],
     actions: ['update_existing_page', 'update_live_module', 'update_download_route', 'add_internal_links'],
     status: 'done',
-    sourceDate: '2026-09-03',
+    sourceDate: '2026-09-07',
     sourceUrls: ['https://wutheringwaves.kurogames.com/en/main/news/detail/5281', 'https://wutheringwaves.kurogames.com/en/main/news'],
-    notes: '3.6 已进入 Phase 1 / Phase 2 转换窗口，继续强化卡池、角色、地图、兑换码和平台入口。',
+    signal: { strength: 'mixed', deadline: '2026-09-10' },
+    notes: '3.6 Phase 2/Jingran 接近 9/10，继续强化卡池、地图、兑换码和平台入口；机制细节避免未核验爆料。',
   },
   {
-    id: 'nte-september-events-codes',
+    id: 'nte-september-codes-banner-calendar',
     gameId: 'nte',
     priority: 'P1',
-    title: 'NTE 9 月活动 / codes / banner hub',
-    keywordCluster: ['NTE codes September 2026', 'events', 'Shipwreck Salvage', 'Ghost Train', 'Iroi', 'Shinku', 'Zankou', 'Linko', 'download', 'Steam'],
+    title: 'NTE September codes / banner calendar',
+    keywordCluster: ['NTE codes September 2026', 'Linko', 'Hotori', 'banner calendar', 'active codes', 'expired codes', 'redeem code', 'Steam'],
     riskTerms: ['mod', 'maa', '未验证泄露词'],
     targetPages: ['/nte/version', '/nte/redeem-codes', '/nte/guides/download-install-guide'],
     actions: ['update_existing_page', 'update_code_route', 'add_faq', 'add_internal_links'],
     status: 'done',
-    sourceDate: '2026-09-03',
-    sourceUrls: ['https://nte.perfectworld.com/en/article/news/gamenews/20260706/263029.html', 'https://www.ldshop.gg/blog/nte'],
-    notes: '9 月活动和 codes 搜索继续存在，但所有日期需要区分官方和攻略站口径。',
+    sourceDate: '2026-09-07',
+    sourceUrls: ['https://nte.perfectworld.com/en/article/news/gamenews/20260706/263029.html', 'https://www.ldshop.gg/blog/nte/nte-codes.html', 'https://ntegame.net/en/calendar/'],
+    signal: { strength: 'mixed' },
+    notes: '9 月 codes、active/expired、Linko/Hotori 和 banner calendar 信号增强，页面必须标注官方/攻略站/待核验来源等级。',
   },
   {
     id: 'skjh-post-launch-beginner-catchup',
@@ -159,69 +183,89 @@ export const MARKET_INTEL_OPPORTUNITIES: MarketIntelOpportunity[] = [
     targetPages: ['/skjh/version', '/skjh/guides/official-pc-download-faq', '/skjh/guides/first-2-hours-starter-route', '/skjh/guides/server-mode-choice'],
     actions: ['update_existing_page', 'create_topic_page', 'update_download_route', 'add_internal_links'],
     status: 'done',
-    sourceDate: '2026-09-03',
+    sourceDate: '2026-09-07',
     sourceUrls: ['https://skjh.qq.com/', 'https://www.taptap.cn/app/733908'],
-    notes: '活动结束后应转向下载、礼包、PC 配置、服务器模式和防抄家常青页。',
+    signal: { strength: 'mixed' },
+    notes: '本轮继续保持上线后常青承接，下载、礼包、PC 配置、服务器模式和防抄家优先于过期礼包词。',
   },
   {
-    id: 'roco-global-and-cn-separation',
+    id: 'roco-global-quack-quack-test-watch',
     gameId: 'roco',
     priority: 'P1',
-    title: 'Roco Global / Roco CN 分流',
-    keywordCluster: ['Roco Kingdom global', 'release date', 'platforms', 'creatures', 'pre-register', 'Roco vs Roco CN'],
+    title: 'Roco Global Quack Quack Test watch',
+    keywordCluster: ['Roco Kingdom global', 'Quack Quack Test', 'October 27', 'closed beta', 'pre-register', 'release date', 'platforms', 'creatures'],
     riskTerms: ['老页游', '私服'],
     targetPages: ['/roco/version', '/roco/guides/cbt-registration-guide'],
     actions: ['update_existing_page', 'add_faq', 'monitor_only'],
     status: 'done',
-    sourceDate: '2026-09-03',
-    sourceUrls: ['https://en.wikipedia.org/wiki/Roco_Kingdom'],
-    notes: 'Global reveal 后更适合做海外版与国服分流，避免把国服上线信息写到全球版页面。',
+    sourceDate: '2026-09-07',
+    sourceUrls: ['https://mobalytics.gg/gamebase/previews/roco-kingdom-early-release-date', 'https://game8.co/articles/release-dates/roco-kingdom-release-date-and-time'],
+    signal: { strength: 'needs_verification', deadline: '2026-10-27' },
+    notes: 'Global 版出现 October 27 / Quack Quack Test 第三方 CBT 信号，必须标注待官方核验并继续与 Roco CN 分流。',
   },
   {
     id: 'roco-cn-catchup-route',
     gameId: 'roco-cn',
-    priority: 'P2',
-    title: 'Roco CN 国服开服后图鉴 / 活动 / 新手路线',
+    priority: 'P1',
+    title: 'Roco CN 国服兑换码 / 图鉴路线',
     keywordCluster: ['洛克王国世界', '国服', '公测', '兑换码', '宠物图鉴', '精灵推荐', '活动', '新手攻略'],
     riskTerms: ['代充', '脚本', '私服', '破解版', '账号交易'],
     targetPages: ['/roco-cn/version', '/roco-cn/guides/redeem-codes-cn', '/roco-cn/guides/s2-season-guide'],
     actions: ['update_existing_page', 'add_internal_links', 'monitor_only'],
     status: 'done',
-    sourceDate: '2026-09-03',
-    sourceUrls: ['https://www.gamerbraves.com/roco-kingdom-world-launches-in-china-on-march-26-2026/'],
-    notes: '国服更适合做图鉴、兑换码、活动和新手路线，避免与全球版信息混用。',
+    sourceDate: '2026-09-07',
+    sourceUrls: ['https://rocom.qq.com/cp/a20260303welfare/', 'https://www.gamerbraves.com/roco-kingdom-world-launches-in-china-on-march-26-2026/'],
+    signal: { strength: 'mixed' },
+    notes: '国服继续适合图鉴、兑换码、活动和新手路线，兑换码页应突出有效期与来源，减少过期码误导。',
   },
   {
     id: 'ananta-no-gacha-launch-prep',
     gameId: 'ananta',
-    priority: 'P2',
-    title: '无限大 no-gacha / 上线准备补位',
+    priority: 'P1',
+    title: '无限大 no-gacha / release fact-check',
     keywordCluster: ['Ananta release date', 'January 15 2027', 'no gacha', 'PS5', 'PC', 'Android', 'iOS', 'Chongxiao', 'pre-registration'],
     riskTerms: ['无限大符号'],
     targetPages: ['/ananta/version', '/ananta/download', '/ananta/guides/release-date-beta-pc-faq'],
     actions: ['update_existing_page', 'add_faq', 'monitor_only'],
     status: 'done',
-    sourceDate: '2026-09-03',
-    sourceUrls: ['https://www.anantagame.com/', 'https://www.pcgamer.com/games/rpg/ananta-guide/'],
-    notes: '补位到站内 currentSiteGames 覆盖，继续用 no-gacha、平台和上线准备的事实核查口径。',
+    sourceDate: '2026-09-07',
+    sourceUrls: ['https://www.anantagame.com/m/', 'https://www.pcgamer.com/games/rpg/ananta-guide/'],
+    signal: { strength: 'mixed', deadline: '2027-01-15' },
+    notes: '官方站继续写 January 15th, 2027，no character gacha 和平台表需要继续做事实核查。',
   },
   {
     id: 'guihuan-test-timeline-faq',
     gameId: 'guihuan',
-    priority: 'P1',
+    priority: 'P2',
     title: '归环测试时间线 / 开发商解释',
     keywordCluster: ['归环上线时间', '国际服', '官方', '开发商', '公司', '英文名', '公测', '测试招募', '下载'],
     riskTerms: ['回环测试', '库洛'],
     targetPages: ['/guihuan/version', '/guihuan/guides/test-release-timeline-guide', '/guihuan/guides/download-install-guide', '/guihuan/guides/official-release-company-faq'],
     actions: ['update_existing_page', 'add_faq', 'monitor_only'],
     status: 'done',
-    sourceDate: '2026-09-03',
+    sourceDate: '2026-09-07',
     sourceUrls: ['https://gh.sarosgame.com/'],
-    notes: '继续保持事实核查型 FAQ，重点回答上线时间、国际服、官方、开发商和测试资格。',
+    signal: { strength: 'confirmed' },
+    notes: '暂无新定档强信号，继续保持测试资格、英文名、开发商、公测时间真实性的事实核查。',
   },
 ];
 
 const SUPPORTED_GAME_IDS = new Set<GameId>(GAME_IDS);
+const SUPPORTED_MARKET_INTEL_STATUSES = new Set<MarketIntelStatus>([
+  'watch',
+  'planned',
+  'todo',
+  'in_progress',
+  'done',
+  'expired',
+  'deferred',
+  'rejected',
+]);
+const SUPPORTED_MARKET_INTEL_SIGNAL_STRENGTHS = new Set<MarketIntelSignalStrength>([
+  'confirmed',
+  'mixed',
+  'needs_verification',
+]);
 
 export function getMarketIntelByPriority(priority: MarketIntelPriority): MarketIntelOpportunity[] {
   return MARKET_INTEL_OPPORTUNITIES.filter((opportunity) => opportunity.priority === priority);
@@ -253,6 +297,9 @@ export function getMarketIntelValidationIssues(
     if (!SUPPORTED_GAME_IDS.has(opportunity.gameId)) {
       issues.push(`${opportunity.id} has unsupported gameId: ${opportunity.gameId}`);
     }
+    if (!SUPPORTED_MARKET_INTEL_STATUSES.has(opportunity.status)) {
+      issues.push(`${opportunity.id} has unsupported status: ${opportunity.status}`);
+    }
     if (opportunity.keywordCluster.length === 0) {
       issues.push(`${opportunity.id} has no keyword cluster`);
     }
@@ -264,6 +311,17 @@ export function getMarketIntelValidationIssues(
     }
     if (Number.isNaN(Date.parse(`${opportunity.sourceDate}T00:00:00Z`))) {
       issues.push(`${opportunity.id} has invalid source date`);
+    }
+    if (opportunity.signal) {
+      if (!SUPPORTED_MARKET_INTEL_SIGNAL_STRENGTHS.has(opportunity.signal.strength)) {
+        issues.push(`${opportunity.id} has unsupported signal strength: ${opportunity.signal.strength}`);
+      }
+      if (
+        opportunity.signal.deadline &&
+        Number.isNaN(Date.parse(`${opportunity.signal.deadline}T00:00:00Z`))
+      ) {
+        issues.push(`${opportunity.id} has invalid signal deadline: ${opportunity.signal.deadline}`);
+      }
     }
     for (const targetPage of opportunity.targetPages) {
       if (!targetPage.startsWith('/')) issues.push(`${opportunity.id} has non-root target page: ${targetPage}`);

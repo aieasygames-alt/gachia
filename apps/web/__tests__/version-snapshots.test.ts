@@ -7,7 +7,7 @@ import {
 } from '@/lib/version-snapshots';
 
 const locales = ['zh', 'en', 'ja'] as const;
-const priorityGames = ['zzz', 'wuwa', 'starrail', 'genshin', 'endfield', 'sea', 'ananta', 'skjh'] as const;
+const priorityGames = ['zzz', 'wuwa', 'starrail', 'genshin', 'endfield', 'aniimo', 'sea', 'roco', 'roco-cn', 'ananta', 'skjh'] as const;
 
 describe('version snapshots', () => {
   it('covers priority version hubs', () => {
@@ -16,18 +16,22 @@ describe('version snapshots', () => {
     }
   });
 
-  it('marks the current ZZZ snapshot as a v3.2 release hub watch', () => {
+  it('marks the current ZZZ snapshot as a v3.2 launch-day watch', () => {
     expect(getVersionSnapshot('zzz')).toMatchObject({
-      currentVersion: '3.2 release hub',
+      currentVersion: '3.2 launch day route',
       status: 'watch',
       lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     });
   });
 
-  it('uses the 2026-09-03 snapshot batch', () => {
-    expect(VERSION_SNAPSHOT_UPDATED_AT).toBe('2026-09-03');
+  it('uses the 2026-09-07 snapshot batch', () => {
+    expect(VERSION_SNAPSHOT_UPDATED_AT).toBe('2026-09-07');
     expect(getVersionSnapshot('genshin')?.currentVersion).toBe('Luna I pre-launch');
-    expect(getVersionSnapshot('endfield')?.currentVersion).toBe('Steam Pioneer Test last call');
+    expect(getVersionSnapshot('endfield')?.currentVersion).toBe('Steam Pioneer Test cutoff');
+    expect(getVersionSnapshot('aniimo')?.currentVersion).toBe('global launch countdown');
+    expect(getVersionSnapshot('roco')?.currentVersion).toBe('Quack Quack Test watch');
+    expect(getVersionSnapshot('roco')?.sourceTier).toBe('third_party_watch');
+    expect(getVersionSnapshot('roco-cn')?.currentVersion).toBe('post-launch codes / encyclopedia');
     expect(getVersionSnapshot('sea')?.currentVersion).toBe('early 2027 / December beta watch');
   });
 
@@ -38,6 +42,7 @@ describe('version snapshots', () => {
 
       expect(Date.parse(`${snapshot.releaseDate}T00:00:00Z`)).not.toBeNaN();
       expect(Date.parse(`${snapshot.lastUpdatedAt}T00:00:00Z`)).not.toBeNaN();
+      expect(['official', 'mixed', 'third_party_watch']).toContain(snapshot.sourceTier);
       expect(snapshot.whatChanged.length).toBeGreaterThan(0);
       expect(snapshot.firstSteps.length).toBeGreaterThan(0);
       expect(snapshot.links.length).toBeGreaterThanOrEqual(3);

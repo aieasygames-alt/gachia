@@ -12,6 +12,7 @@ import {
   getMarketIntelValidationIssues,
   sortMarketIntelByPriority,
   type MarketIntelPriority,
+  type MarketIntelSignalStrength,
   type MarketIntelStatus,
 } from '@/lib/market-intel';
 
@@ -54,12 +55,47 @@ const priorityClass: Record<MarketIntelPriority, string> = {
 };
 
 const statusClass: Record<MarketIntelStatus, string> = {
+  watch: 'border-sky-500/30 bg-sky-500/10 text-sky-200',
+  planned: 'border-violet-500/30 bg-violet-500/10 text-violet-200',
   todo: 'border-slate-500/30 bg-slate-500/10 text-slate-200',
   in_progress: 'border-blue-500/30 bg-blue-500/10 text-blue-200',
   done: 'border-green-500/30 bg-green-500/10 text-green-200',
+  expired: 'border-orange-500/30 bg-orange-500/10 text-orange-200',
   deferred: 'border-zinc-500/30 bg-zinc-500/10 text-zinc-200',
   rejected: 'border-red-500/30 bg-red-500/10 text-red-200',
 };
+
+const signalClass: Record<MarketIntelSignalStrength, string> = {
+  confirmed: 'border-emerald-500/30 bg-emerald-500/10 text-emerald-200',
+  mixed: 'border-amber-500/30 bg-amber-500/10 text-amber-200',
+  needs_verification: 'border-rose-500/30 bg-rose-500/10 text-rose-200',
+};
+
+function signalLabel(strength: MarketIntelSignalStrength, locale: SupportedLocale) {
+  const labels: Record<MarketIntelSignalStrength, Record<SupportedLocale, string>> = {
+    confirmed: {
+      zh: '已确认信号',
+      en: 'Confirmed signal',
+      ja: '確認済み',
+    },
+    mixed: {
+      zh: '混合来源',
+      en: 'Mixed sources',
+      ja: '混合ソース',
+    },
+    needs_verification: {
+      zh: '待官方核验',
+      en: 'Needs verification',
+      ja: '公式確認待ち',
+    },
+  };
+
+  return labels[strength][locale];
+}
+
+function deadlineLabel(locale: SupportedLocale) {
+  return t(locale, '截止/节点', 'Deadline', '期限');
+}
 
 function Badge({ children, className }: { children: React.ReactNode; className: string }) {
   return (
@@ -170,6 +206,18 @@ export default async function MarketIntelPage({
                   {gameName(opportunity.gameId, locale)}
                 </Badge>
                 <span className="text-xs text-game-text-muted">{opportunity.sourceDate}</span>
+                {opportunity.signal ? (
+                  <>
+                    <Badge className={signalClass[opportunity.signal.strength]}>
+                      {signalLabel(opportunity.signal.strength, locale)}
+                    </Badge>
+                    {opportunity.signal.deadline ? (
+                      <span className="text-xs text-game-text-muted">
+                        {deadlineLabel(locale)} {opportunity.signal.deadline}
+                      </span>
+                    ) : null}
+                  </>
+                ) : null}
               </div>
               <h3 className="mb-2 text-lg font-semibold text-game-text">{opportunity.title}</h3>
               <p className="mb-4 text-sm leading-relaxed text-game-text-muted">{opportunity.notes}</p>

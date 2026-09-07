@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import Script from 'next/script';
 import { NextIntlClientProvider } from 'next-intl';
 import { LOCALES, DEFAULT_LOCALE } from '@gachia/core';
 import type { SupportedLocale } from '@gachia/core';
@@ -37,21 +38,22 @@ export default async function LocaleLayout({
   return (
     <html lang={locale === 'zh' ? 'zh-Hans' : locale}>
       <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4L1VKXGY2Y" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-4L1VKXGY2Y"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-4L1VKXGY2Y');
-          `,
-          }}
-        />
-        <script
-          async
+          `}
+        </Script>
+        <Script
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8569630257520732"
           crossOrigin="anonymous"
+          strategy="afterInteractive"
         />
       </head>
       <body className="min-h-screen bg-game-bg text-game-text antialiased">

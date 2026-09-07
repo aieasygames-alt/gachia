@@ -47,7 +47,7 @@ const expectedNewGuides = {
 };
 
 describe('market-intel guide links', () => {
-  it('creates the guide slugs introduced by the 2026-09-03 batch', () => {
+  it('creates the guide slugs introduced by the 2026-09-07 batch', () => {
     for (const [gameId, guideId] of Object.entries(expectedNewGuides)) {
       expect(guideIdsByGame[gameId as keyof typeof guideIdsByGame].has(guideId)).toBe(true);
     }

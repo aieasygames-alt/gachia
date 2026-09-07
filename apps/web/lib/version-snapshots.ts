@@ -2,6 +2,7 @@ import type { GameId, SupportedLocale } from '@gachia/core';
 import type { LocalizedText, LiveStatus } from './live-content';
 
 export type VersionSnapshotLinkType = 'banner' | 'codes' | 'characters' | 'guides' | 'builds' | 'download' | 'map';
+export type VersionSnapshotSourceTier = 'official' | 'mixed' | 'third_party_watch';
 
 export interface VersionSnapshotLink {
   type: VersionSnapshotLinkType;
@@ -15,43 +16,45 @@ export interface VersionSnapshot {
   releaseDate: string;
   status: LiveStatus;
   lastUpdatedAt: string;
+  sourceTier?: VersionSnapshotSourceTier;
   summary: LocalizedText;
   whatChanged: LocalizedText[];
   firstSteps: LocalizedText[];
   links: VersionSnapshotLink[];
 }
 
-export const VERSION_SNAPSHOT_UPDATED_AT = '2026-09-03';
+export const VERSION_SNAPSHOT_UPDATED_AT = '2026-09-07';
 
 export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   zzz: {
     gameId: 'zzz',
-    currentVersion: '3.2 release hub',
+    currentVersion: '3.2 launch day route',
     releaseDate: '2026-09-09',
     status: 'watch',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    sourceTier: 'official',
     summary: {
-      zh: '3.2 release hub 已进入上线倒计时，当前重点是 Claret、Roxy、Armorer、Maim、版本时间、过期直播码和 HoYoLAND 2026。',
-      en: 'The v3.2 release hub is in countdown mode, focusing on Claret, Roxy, Armorer, Maim, timing, expired livestream codes, and HoYoLAND 2026.',
-      ja: 'v3.2リリースハブはカウントダウン段階です。Claret、Roxy、Armorer、Maim、時期、期限切れコード、HoYoLAND 2026を案内します。',
+      zh: '3.2 已进入 9/9 上线前最后窗口，当前重点是 Claret、Roxy、Armorer、Maim、rerun、平台入口和首日路线。',
+      en: 'v3.2 is in its final September 9 launch window, focusing on Claret, Roxy, Armorer, Maim, reruns, platform entry, and launch-day routing.',
+      ja: 'v3.2は9月9日実装前の最終段階です。Claret、Roxy、Armorer、Maim、復刻、平台入口、初日ルートを案内します。',
     },
     whatChanged: [
       {
-        zh: '版本页从直播后 recap 切到 3.2 上线前倒计时。',
-        en: 'The hub moves from post-stream recap into v3.2 pre-launch countdown mode.',
-        ja: '版本ページを配信後まとめからv3.2実装前カウントダウンへ移します。',
+        zh: '版本页从 release countdown 升级为 launch-day route。',
+        en: 'The hub moves from release countdown into a launch-day route.',
+        ja: '版本ページをリリースカウントダウンから初日ルートへ移します。',
       },
       {
-        zh: '过期直播码和平台下载入口保留，但不再作为主要转化点。',
-        en: 'Expired livestream codes and platform download links remain visible but are no longer the primary conversion point.',
-        ja: '期限切れコードとプラットフォームDLは残しますが、主導線にはしません。',
+        zh: '直播码继续标为 expired，首屏改为“何时开、先做什么、平台怎么进”。',
+        en: 'Livestream codes stay marked expired while the first screen answers timing, first steps, and platform entry.',
+        ja: '配信コードは期限切れ扱いのまま、初画面で時期、初手、平台入口を答えます。',
       },
     ],
     firstSteps: [
       {
-        zh: '先看 3.2 上线日期，再确认 Claret 和 Roxy 的抽取优先级。',
-        en: 'Check the v3.2 launch date first, then decide Claret and Roxy pull priority.',
-        ja: 'まずv3.2の実装日を確認し、その後ClaretとRoxyの優先度を決めます。',
+        zh: '先确认 9/9 开服和平台入口，再看 Claret/Roxy 与 rerun 优先级。',
+        en: 'Confirm the September 9 launch and platform entry first, then decide Claret/Roxy and rerun priority.',
+        ja: 'まず9月9日の実装と平台入口を確認し、その後Claret/Roxyと復刻の優先度を決めます。',
       },
       {
         zh: '直播码只保留过期说明，不放入可领取模块。',
@@ -62,7 +65,7 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
     links: [
       { type: 'codes', href: '/zzz/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
       { type: 'characters', href: '/zzz/characters', label: { zh: '角色图鉴', en: 'Characters', ja: 'キャラ' } },
-      { type: 'guides', href: '/zzz/guides/v3-1-anniversary-xbox-guide', label: { zh: '3.1 / 周年 FAQ', en: 'v3.1 / Anniversary FAQ', ja: 'v3.1 / 周年FAQ' } },
+      { type: 'guides', href: '/zzz/guides/v3-2-livestream-recap-expired-codes', label: { zh: '3.2 首日路线', en: 'v3.2 launch route', ja: 'v3.2初日ルート' } },
       { type: 'download', href: '/zzz/download', label: { zh: '平台下载', en: 'Platform download', ja: 'プラットフォームDL' } },
       { type: 'builds', href: '/zzz/build', label: { zh: '配装推荐', en: 'Builds', ja: 'ビルド' } },
     ],
@@ -73,21 +76,22 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
     releaseDate: '2026-08-20',
     status: 'live',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    sourceTier: 'mixed',
     summary: {
-      zh: '3.6 已进入上线后承接，重点是卡池、兑换码、角色、地图和 Xbox/Steam 新玩家入口。',
-      en: 'v3.6 is now in post-launch routing, focusing on banners, codes, characters, maps, and Xbox/Steam starter routes.',
-      ja: 'v3.6は実装後の導線へ移り、バナー、コード、キャラ、マップ、Xbox/Steam入門が中心です。',
+      zh: '3.6 已接近 Phase 2/Jingran 预热窗口，重点是卡池、兑换码、地图和 Xbox/Steam 新玩家入口。',
+      en: 'v3.6 is nearing the Phase 2/Jingran prep window, focusing on banners, codes, maps, and Xbox/Steam starter routes.',
+      ja: 'v3.6はPhase 2/Jingran準備期間に近づき、バナー、コード、マップ、Xbox/Steam入門が中心です。',
     },
     whatChanged: [
       {
-        zh: '版本页首屏从 3.6 维护口径切到上线后卡池、地图和平台入口。',
-        en: 'The hub moves from v3.6 maintenance wording into post-launch banners, maps, and platform routes.',
-        ja: '版本ページをv3.6メンテ表現から実装後バナー、マップ、平台導線へ更新します。',
+        zh: '版本页从上线后承接推进到 Phase 2/Jingran watch。',
+        en: 'The hub moves from post-launch routing into Phase 2/Jingran watch.',
+        ja: '版本ページを実装後導線からPhase 2/Jingran注目へ進めます。',
       },
       {
-        zh: 'Banner、兑换码和 Xbox 入坑内容被串成可执行检查顺序。',
-        en: 'Banner, codes, and Xbox starter content are tied into a practical checklist.',
-        ja: 'バナー、コード、Xbox入門を実用的なチェック順に接続しています。',
+        zh: '角色机制细节只用已核验口径，避免把爆料写成正式内容。',
+        en: 'Character mechanics stay within verified wording so leaks do not become published facts.',
+        ja: 'キャラ性能は確認済み表現に留め、リークを正式情報として扱いません。',
       },
     ],
     firstSteps: [
@@ -117,6 +121,7 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
     releaseDate: '2026-08-26',
     status: 'fresh',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    sourceTier: 'official',
     summary: {
       zh: '4.5 已上线，当前重点是 Phase 2、兑换码、当前跃迁和队伍构建。',
       en: 'v4.5 is live, with focus on Phase 2, codes, current warps, and team-building.',
@@ -155,39 +160,40 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   nte: {
     gameId: 'nte',
-    currentVersion: '1.2 phase two',
-    releaseDate: '2026-08-14',
+    currentVersion: 'September codes / banner calendar',
+    releaseDate: '2026-09-07',
     status: 'live',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    sourceTier: 'mixed',
     summary: {
-      zh: '1.2 后半继续承接 Iroi、Shinku、999 Nights，新增 2026-08-31 至 2026-09-14 活动窗口；1.3 只保持监控口径。',
-      en: 'v1.2 phase two continues routing Iroi, Shinku, and 999 Nights, with an August 31 to September 14 event window; v1.3 stays in watch wording.',
-      ja: 'v1.2後半はIroi、Shinku、999 Nightsを継続し、2026年8月31日から9月14日のイベント期間を追加します。v1.3は注目表現に留めます。',
+      zh: '9 月 codes 与 banner calendar 信号增强，重点是 Linko、Hotori、active/expired codes、redeem path 和来源分层。',
+      en: 'September codes and banner-calendar signals are stronger, focusing on Linko, Hotori, active/expired codes, redeem paths, and source labeling.',
+      ja: '9月コードとバナーカレンダーのシグナルが強まり、Linko、Hotori、有効/期限切れコード、交換導線、出典ラベルを案内します。',
     },
     whatChanged: [
       {
-        zh: 'NTE 从 Shinku 当前池扩展到 Iroi 后半预热和 999 Nights 模式承接。',
-        en: 'NTE expands from the Shinku banner into Iroi phase-two prep and 999 Nights routing.',
-        ja: 'NTEはShinkuバナーからIroi後半準備と999 Nights導線へ広がります。',
+        zh: 'NTE 从泛活动路线改为 codes、banner calendar 和来源等级路线。',
+        en: 'NTE moves from broad event routing into codes, banner calendar, and source-tier routing.',
+        ja: 'NTEは広いイベント導線からコード、バナーカレンダー、出典分類へ移ります。',
       },
     ],
     firstSteps: [
       {
-        zh: '先复核兑换码和活动资源，再判断 Iroi 是否值得抽。',
-        en: 'Recheck codes and event resources first, then decide whether Iroi is worth pulling.',
-        ja: 'まずコードとイベント資源を確認し、Iroiを引くか判断します。',
+        zh: '先区分 active、expired、unknown 兑换码，再看 Linko/Hotori 日历。',
+        en: 'Separate active, expired, and unknown codes first, then review the Linko/Hotori calendar.',
+        ja: 'まず有効、期限切れ、不明コードを分け、その後Linko/Hotoriカレンダーを確認します。',
       },
       {
-        zh: '下载与 Steam 问题按官方渠道核验，不承接非官方包。',
-        en: 'Verify download and Steam questions through official channels, not unofficial packages.',
-        ja: 'DLとSteamは公式チャネルで確認し、非公式パッケージは扱いません。',
+        zh: '攻略站来源不能直接写成官方日期，页面要保留来源标签。',
+        en: 'Guide-site dates should not become official dates; keep source labels on the page.',
+        ja: '攻略サイトの日付を公式日程として扱わず、ページに出典ラベルを残します。',
       },
     ],
     links: [
       { type: 'download', href: '/nte/download', label: { zh: '下载', en: 'Download', ja: 'DL' } },
       { type: 'codes', href: '/nte/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
       { type: 'characters', href: '/nte/characters', label: { zh: '角色', en: 'Characters', ja: 'キャラ' } },
-      { type: 'guides', href: '/nte/guides/aug31-sep14-event-calendar-999-nights', label: { zh: '活动日历', en: 'Event calendar', ja: 'イベント日程' } },
+      { type: 'guides', href: '/nte/guides/aug31-sep14-event-calendar-999-nights', label: { zh: '9月日历', en: 'September calendar', ja: '9月日程' } },
     ],
   },
   genshin: {
@@ -196,16 +202,17 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
     releaseDate: '2026-09-10',
     status: 'live',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    sourceTier: 'official',
     summary: {
-      zh: 'Luna I 已进入上线前最后一周，优先承接 Nod-Krai、Lauma、Flins、Aino、免费 5 星、回归奖励和地图准备。',
-      en: 'Luna I is in its final pre-launch week, routing Nod-Krai, Lauma, Flins, Aino, free-5-star planning, returning-player rewards, and map prep.',
-      ja: 'Luna Iは実装前の最終週です。Nod-Krai、Lauma、Flins、Aino、無料5星、復帰報酬、マップ準備を案内します。',
+      zh: 'Luna I 仍是 9/10 前核心入口，优先承接 Nod-Krai、Lauma、Flins、Aino、免费 5 星、周年/回归奖励和地图材料。',
+      en: 'Luna I remains the key September 10 prep route, covering Nod-Krai, Lauma, Flins, Aino, free-5-star planning, anniversary/returning rewards, and map materials.',
+      ja: 'Luna Iは9月10日前の主要導線です。Nod-Krai、Lauma、Flins、Aino、無料5星、周年/復帰報酬、マップ素材を案内します。',
     },
     whatChanged: [
       {
-        zh: '版本页从 7.0 Phase II 改为 Luna I 上线前清单。',
-        en: 'The hub narrows from v7.0 Phase II into a Luna I pre-launch checklist.',
-        ja: '版本ページをv7.0 Phase IIからLuna I実装前チェックリストへ切り替えます。',
+        zh: '版本页从上线前清单推进到 final prep，首屏强调 9/10 前最后检查。',
+        en: 'The hub moves from pre-launch checklist into final prep, foregrounding the last September 10 checks.',
+        ja: '版本ページを実装前チェックリストからfinal prepへ進め、9月10日前の最終確認を強調します。',
       },
       {
         zh: '回归奖励、免费 5 星和地图入口保持在版本页可见位置。',
@@ -215,9 +222,9 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
     ],
     firstSteps: [
       {
-        zh: '先看 Luna I 上线前准备，再核对兑换码、Nod-Krai 地图和免费 5 星规划。',
-        en: 'Check Luna I prep first, then verify codes, Nod-Krai maps, and free-5-star planning.',
-        ja: 'まずLuna I準備を確認し、コード、Nod-Kraiマップ、無料5星計画を照合します。',
+        zh: '先完成 Luna I final prep，再核对兑换码、Nod-Krai 地图、材料和免费 5 星规划。',
+        en: 'Finish Luna I final prep first, then verify codes, Nod-Krai maps, materials, and free-5-star planning.',
+        ja: 'まずLuna I final prepを済ませ、コード、Nod-Kraiマップ、素材、無料5星計画を確認します。',
       },
       {
         zh: '抽卡前把原石、保底和目标角色优先级排好。',
@@ -230,25 +237,26 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       { type: 'codes', href: '/genshin/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
       { type: 'characters', href: '/genshin/characters', label: { zh: '角色图鉴', en: 'Characters', ja: 'キャラ' } },
       { type: 'map', href: '/genshin/map', label: { zh: '地图', en: 'Map', ja: 'マップ' } },
-      { type: 'guides', href: '/genshin/guides/nod-krai-cryoculus-phase-ii-checklist', label: { zh: 'Phase II 清单', en: 'Phase II checklist', ja: 'Phase IIチェック' } },
+      { type: 'guides', href: '/genshin/guides/nod-krai-cryoculus-phase-ii-checklist', label: { zh: 'Luna I 清单', en: 'Luna I checklist', ja: 'Luna Iチェック' } },
     ],
   },
   skjh: {
     gameId: 'skjh',
     currentVersion: 'August event wrap-up',
-    releaseDate: '2026-09-03',
+    releaseDate: '2026-09-07',
     status: 'live',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    sourceTier: 'official',
     summary: {
-      zh: '8/31 活动进入收尾节点，重点改为活动结束后还能做什么、WeGame 下载注册、礼包、S1 开荒、服务器模式和防抄家。',
-      en: 'The August 31 event window is wrapping up, shifting focus to post-event catch-up, WeGame download/registration, rewards, S1 starts, server modes, and base-defense guidance.',
-      ja: '8月31日のイベント終了期に入り、終了後の追いつき、WeGame DL/登録、報酬、S1序盤、サーバーモード、拠点防衛を重視します。',
+      zh: '上线后常青需求稳定，重点是官方下载、礼包、PC 配置、服务器模式、安全区/标准/挑战和防抄家。',
+      en: 'Post-launch evergreen demand is stable, focusing on official download, rewards, PC specs, server modes, safe/standard/challenge routes, and base defense.',
+      ja: '実装後の常設需要は安定しており、公式DL、報酬、PC構成、サーバーモード、安全/標準/挑戦、拠点防衛を案内します。',
     },
     whatChanged: [
       {
-        zh: '活动页从进行中提醒改成收尾和补课路线，避免继续暗示奖励长期可领。',
-        en: 'Event coverage moves from active reminders into wrap-up and catch-up routing, avoiding stale reward claims.',
-        ja: 'イベント案内を開催中表現から終了期と追いつき導線へ切り替え、古い報酬表現を避けます。',
+        zh: '页面继续从活动收尾转向新手常青内容，避免承接过期礼包词。',
+        en: 'Coverage continues moving from event wrap-up into evergreen beginner content, avoiding expired reward terms.',
+        ja: 'イベント終了案内から初心者向け常設内容へ進め、期限切れ報酬語を避けます。',
       },
     ],
     firstSteps: [
@@ -272,27 +280,28 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   endfield: {
     gameId: 'endfield',
-    currentVersion: 'Steam Pioneer Test last call',
+    currentVersion: 'Steam Pioneer Test cutoff',
     releaseDate: '2026-09-10',
     status: 'watch',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    sourceTier: 'official',
     summary: {
-      zh: 'Steam Pioneer Test 仍是 9/10 前强时效窗口，当前重点是测试资格、Steam 下载、Homecoming、角色、蓝图和 AIC 工厂系统。',
-      en: 'Steam Pioneer Test recruitment remains the last-call signal, with focus on test access, Steam download, Homecoming, characters, blueprints, and the AIC factory system.',
-      ja: 'Steam Pioneer Test募集はラストコールです。テスト資格、Steam DL、Homecoming、キャラ、設計図、AIC工場を中心に案内します。',
+      zh: 'Steam Pioneer Test 已进入 9/10 13:00 UTC+8 截止倒计时，重点是资格、Steam 下载、测试奖励、蓝图和 AIC 工厂。',
+      en: 'Steam Pioneer Test is in its September 10 13:00 UTC+8 cutoff countdown, focusing on access, Steam download, test rewards, blueprints, and the AIC factory.',
+      ja: 'Steam Pioneer Testは9月10日13:00 UTC+8締切カウントダウンです。資格、Steam DL、テスト報酬、設計図、AIC工場を案内します。',
     },
     whatChanged: [
       {
-        zh: '测试期页面需要把 Steam 招募、资格、下载、角色和工厂系统放在同一条入口。',
-        en: 'Test-era pages should connect Steam recruitment, access, downloads, characters, and factory systems in one route.',
-        ja: 'テスト期ページではSteam募集、資格、DL、キャラ、工場システムを一つの導線にまとめます。',
+        zh: '版本页要突出截止时间，并准备 9/10 后切换到 recap/expired。',
+        en: 'The hub should foreground the cutoff and prepare a post-September-10 recap/expired switch.',
+        ja: '版本ページで締切を強調し、9月10日後のrecap/expired切替を準備します。',
       },
     ],
     firstSteps: [
       {
-        zh: '先确认 Steam Pioneer Test 资格和平台状态，再看蓝图/AIC 工厂入门。',
-        en: 'Confirm Steam Pioneer Test eligibility and platform status first, then read the blueprint/AIC factory intro.',
-        ja: 'まずSteam Pioneer Test資格と平台状態を確認し、設計図/AIC工場入門へ進みます。',
+        zh: '先确认 9/10 13:00 UTC+8 前是否还能报名，再看 Steam 下载和测试奖励。',
+        en: 'Check whether registration is still open before September 10 13:00 UTC+8, then review Steam download and test rewards.',
+        ja: 'まず9月10日13:00 UTC+8前に応募可能か確認し、その後Steam DLとテスト報酬を確認します。',
       },
       {
         zh: '未确认上线日期保持 watch 口径，不写成正式定档。',
@@ -307,12 +316,56 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       { type: 'guides', href: '/endfield/guides/homecoming-update-guide', label: { zh: '蓝图 / AIC', en: 'Blueprint / AIC', ja: '設計図 / AIC' } },
     ],
   },
+  aniimo: {
+    gameId: 'aniimo',
+    currentVersion: 'global launch countdown',
+    releaseDate: '2026-09-16',
+    status: 'watch',
+    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    sourceTier: 'official',
+    summary: {
+      zh: 'Aniimo 官方上线倒计时继续增强，PC/主机指向 2026-09-16，移动端指向 2026-09-23，重点是平台、预购、starter、capture 和地图入口。',
+      en: 'Aniimo launch countdown is getting stronger, with PC/console on September 16, 2026 and mobile on September 23, focusing on platforms, pre-order, starter, capture, and map entry.',
+      ja: 'Aniimoのリリースカウントダウンが強まっています。PC/コンソールは2026年9月16日、モバイルは9月23日で、平台、予約、starter、capture、マップ入口が中心です。',
+    },
+    whatChanged: [
+      {
+        zh: '版本页需要从泛 release date 升级为分平台上线倒计时。',
+        en: 'The version hub should move from broad release-date coverage into platform-specific launch countdown.',
+        ja: '版本ページを広いrelease date案内から平台別カウントダウンへ進めます。',
+      },
+      {
+        zh: 'download、starter、capture/twine 和 map 入口需要互相导流。',
+        en: 'Download, starter, capture/twine, and map entries should cross-link.',
+        ja: 'download、starter、capture/twine、map入口を相互接続します。',
+      },
+    ],
+    firstSteps: [
+      {
+        zh: '先确认自己的平台是 9/16 还是 9/23，再看预购/预注册和下载入口。',
+        en: 'Check whether your platform launches on September 16 or September 23, then review pre-order/pre-registration and download entry.',
+        ja: '自分の平台が9月16日か9月23日か確認し、予約/事前登録とDL入口を見ます。',
+      },
+      {
+        zh: '入坑内容优先回答 starter、捕捉玩法和地图区域。',
+        en: 'Starter content should prioritize starter choice, creature-catching, and map regions.',
+        ja: '入門内容はstarter、捕獲玩法、マップ地域を優先します。',
+      },
+    ],
+    links: [
+      { type: 'download', href: '/aniimo/download', label: { zh: '平台下载', en: 'Platform download', ja: '平台DL' } },
+      { type: 'codes', href: '/aniimo/items', label: { zh: '资料入口', en: 'Data hub', ja: 'データ' } },
+      { type: 'characters', href: '/aniimo/characters', label: { zh: 'Aniimo 图鉴', en: 'Aniimo index', ja: 'Aniimo図鑑' } },
+      { type: 'guides', href: '/aniimo/guides/download', label: { zh: '下载 FAQ', en: 'Download FAQ', ja: 'DL FAQ' } },
+    ],
+  },
   sea: {
     gameId: 'sea',
     currentVersion: 'early 2027 / December beta watch',
-    releaseDate: '2026-09-03',
+    releaseDate: '2026-09-07',
     status: 'watch',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    sourceTier: 'mixed',
     summary: {
       zh: '海外口径转向 early 2027 和 December closed beta，当前重点是 release date、closed beta、Steam、PS5、Xbox、mobile、gacha 和 solo FAQ。',
       en: 'The overseas signal has shifted toward early 2027 and a December closed beta, so route release date, closed beta, Steam, PS5, Xbox, mobile, gacha, and solo FAQs.',
@@ -344,12 +397,94 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       { type: 'guides', href: '/sea/guides/platform-download-guide', label: { zh: 'Steam / 平台 FAQ', en: 'Steam / Platform FAQ', ja: 'Steam / 平台FAQ' } },
     ],
   },
+  roco: {
+    gameId: 'roco',
+    currentVersion: 'Quack Quack Test watch',
+    releaseDate: '2026-09-07',
+    status: 'watch',
+    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    sourceTier: 'third_party_watch',
+    summary: {
+      zh: 'Roco Global 出现 October 27 / Quack Quack Test 第三方 CBT 信号，当前应作为待官方核验的 watch 入口，并继续与 Roco CN 分流。',
+      en: 'Roco Global has third-party October 27 / Quack Quack Test CBT signals, so treat it as a watch entry pending official verification and keep it separate from Roco CN.',
+      ja: 'Roco Globalには第三者のOctober 27 / Quack Quack Test CBTシグナルがあります。公式確認待ちのwatch入口として扱い、Roco CNと分けます。',
+    },
+    whatChanged: [
+      {
+        zh: '页面从单纯 global/CN 分流推进到 CBT watch，但 10/27 不写成官方日期。',
+        en: 'The page moves from global/CN separation into CBT watch, without treating October 27 as an official date.',
+        ja: 'ページをglobal/CN分流からCBT watchへ進めますが、10月27日を公式日程として扱いません。',
+      },
+    ],
+    firstSteps: [
+      {
+        zh: '先看官方是否确认 CBT，再决定是否承接 Quack Quack Test 申请路线。',
+        en: 'Check official CBT confirmation first, then decide how to route Quack Quack Test registration.',
+        ja: 'まず公式CBT確認を見てから、Quack Quack Test応募導線を判断します。',
+      },
+      {
+        zh: '国服上线、兑换码和图鉴内容继续留在 Roco CN 页面。',
+        en: 'China launch, codes, and encyclopedia content stay on Roco CN pages.',
+        ja: '中国版リリース、コード、図鑑内容はRoco CNページに残します。',
+      },
+    ],
+    links: [
+      { type: 'download', href: '/roco/download', label: { zh: '平台入口', en: 'Platform entry', ja: '平台入口' } },
+      { type: 'codes', href: '/roco/items', label: { zh: '资料入口', en: 'Data hub', ja: 'データ' } },
+      { type: 'characters', href: '/roco/characters', label: { zh: '生物图鉴', en: 'Creatures', ja: '生物図鑑' } },
+      { type: 'guides', href: '/roco/guides/cbt-registration-guide', label: { zh: 'CBT 申请', en: 'CBT registration', ja: 'CBT応募' } },
+    ],
+  },
+  'roco-cn': {
+    gameId: 'roco-cn',
+    currentVersion: 'post-launch codes / encyclopedia',
+    releaseDate: '2026-09-07',
+    status: 'live',
+    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    sourceTier: 'mixed',
+    summary: {
+      zh: 'Roco CN 继续承接国服上线后的兑换码、图鉴、活动、宠物推荐和新手路线，重点是有效期与来源标注。',
+      en: 'Roco CN continues routing post-launch codes, encyclopedia, events, creature picks, and beginner paths, with focus on validity and source labels.',
+      ja: 'Roco CNは中国版リリース後のコード、図鑑、イベント、ペット推薦、初心者ルートを案内し、有効期限と出典ラベルを重視します。',
+    },
+    whatChanged: [
+      {
+        zh: '国服内容从 global 页面分离，兑换码和图鉴入口保持在 Roco CN。',
+        en: 'China-version content stays separated from global pages, with codes and encyclopedia entry kept on Roco CN.',
+        ja: '中国版内容をglobalページから分け、コードと図鑑入口をRoco CNに置きます。',
+      },
+      {
+        zh: '第三方兑换码多有过期风险，需要标注 active、expired 或 unknown。',
+        en: 'Third-party code lists often expire, so mark codes as active, expired, or unknown.',
+        ja: '第三者コード一覧は期限切れリスクが高いため、active、expired、unknownを明示します。',
+      },
+    ],
+    firstSteps: [
+      {
+        zh: '先确认兑换码来源和有效期，再进入宠物图鉴与活动路线。',
+        en: 'Verify code source and validity first, then move into encyclopedia and event routing.',
+        ja: 'まずコードの出典と有効期限を確認し、その後図鑑とイベント導線へ進みます。',
+      },
+      {
+        zh: '全球版 CBT、预注册和海外平台问题不要写入国服页面。',
+        en: 'Do not mix global CBT, pre-registration, or overseas-platform questions into China-version pages.',
+        ja: 'global CBT、事前登録、海外平台の話題を中国版ページに混ぜません。',
+      },
+    ],
+    links: [
+      { type: 'download', href: '/roco-cn/download', label: { zh: '国服入口', en: 'CN entry', ja: '中国版入口' } },
+      { type: 'codes', href: '/roco-cn/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
+      { type: 'characters', href: '/roco-cn/characters', label: { zh: '宠物图鉴', en: 'Creature index', ja: 'ペット図鑑' } },
+      { type: 'guides', href: '/roco-cn/guides/s2-season-guide', label: { zh: '赛季路线', en: 'Season route', ja: 'シーズン導線' } },
+    ],
+  },
   ananta: {
     gameId: 'ananta',
     currentVersion: 'global launch prep',
     releaseDate: '2027-01-15',
     status: 'watch',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    sourceTier: 'mixed',
     summary: {
       zh: '无限大已进入 2027年1月15日全球上线准备，承接 release date、download、PS5、PC、Android、iOS、gameplay 和 no-gacha 搜索。',
       en: 'Ananta is now in January 15, 2027 global launch prep, routing release date, download, PS5, PC, Android, iOS, gameplay, and no-gacha searches.',
@@ -392,6 +527,7 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
     releaseDate: '2026-08-14',
     status: 'watch',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    sourceTier: 'official',
     summary: {
       zh: '归环继续以测试时间线、开发商、国际服、官网、公测和测试招募事实核查承接。',
       en: 'Guihuan stays in test-timeline watch mode for developer, global-server, official site, public beta, and recruitment checks.',

@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { Link } from '@/lib/i18n/navigation';
 import { NextStepStrip, type NextStepLink } from '@/components/wiki/next-step-strip';
 import { getVersionSnapshot, localizeVersionText } from '@/lib/version-snapshots';
+import type { VersionSnapshotSourceTier } from '@/lib/version-snapshots';
 
 import { getGuideListData } from '@/lib/game-data/guides';
 import { buildLocalizedAlternates } from '@/lib/seo-metadata';
@@ -1942,6 +1943,28 @@ function buildFaqJsonLd(faq: FaqItem[], locale: SupportedLocale) {
   };
 }
 
+function sourceTierLabel(tier: VersionSnapshotSourceTier, locale: SupportedLocale) {
+  const labels: Record<VersionSnapshotSourceTier, Record<SupportedLocale, string>> = {
+    official: {
+      zh: '官方源',
+      en: 'Official sources',
+      ja: '公式ソース',
+    },
+    mixed: {
+      zh: '官方 + 公开采样',
+      en: 'Official + public sampling',
+      ja: '公式 + 公開サンプル',
+    },
+    third_party_watch: {
+      zh: '第三方信号待核验',
+      en: 'Third-party signal pending verification',
+      ja: '第三者シグナル確認待ち',
+    },
+  };
+
+  return labels[tier][locale];
+}
+
 function pickFeaturedGuides<T extends { id: string }>(guides: T[], featuredIds: string[]): T[] {
   const guideMap = new Map(guides.map((guide) => [guide.id, guide] as const));
   return featuredIds.map((id) => guideMap.get(id)).filter((guide): guide is T => Boolean(guide));
@@ -2357,6 +2380,11 @@ export default async function VersionHubPage({
               <span className="rounded-full bg-game-primary/10 px-3 py-1 text-xs font-medium text-game-primary">
                 {versionSnapshot.status}
               </span>
+              {versionSnapshot.sourceTier && (
+                <span className="rounded-full border border-game-border px-3 py-1 text-xs text-game-text-muted">
+                  {sourceTierLabel(versionSnapshot.sourceTier, locale)}
+                </span>
+              )}
             </div>
           </div>
 
