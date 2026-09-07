@@ -12,7 +12,7 @@ export interface RedeemCodeEntry {
   revealedAt: string;
 }
 
-export const GAMES_WITH_REDEEM_CODES: GameId[] = ['genshin', 'starrail', 'wuwa', 'zzz', 'nte', 'sea', 'skjh', 'roco-cn', 'aniimo'];
+export const GAMES_WITH_REDEEM_CODES: GameId[] = ['genshin', 'starrail', 'wuwa', 'zzz', 'nte', 'sea', 'skjh', 'roco', 'roco-cn', 'aniimo'];
 
 export async function getRedeemCodesForGame(gameId: GameId): Promise<RedeemCodeEntry[]> {
   switch (gameId) {
@@ -42,6 +42,10 @@ export async function getRedeemCodesForGame(gameId: GameId): Promise<RedeemCodeE
     }
     case 'skjh': {
       const mod = await import('@gachia/data/games/skjh/redeem-codes');
+      return mod.redeemCodes as unknown as RedeemCodeEntry[];
+    }
+    case 'roco': {
+      const mod = await import('@gachia/data/games/roco/redeem-codes');
       return mod.redeemCodes as unknown as RedeemCodeEntry[];
     }
     case 'roco-cn': {
@@ -95,6 +99,10 @@ export async function getRedeemCodeReward(gameId: GameId, code: RedeemCodeEntry,
     }
     case 'skjh': {
       const mod = await import('@gachia/data/games/skjh/redeem-codes');
+      return mod.getRedeemCodeReward(code as never, locale);
+    }
+    case 'roco': {
+      const mod = await import('@gachia/data/games/roco/redeem-codes');
       return mod.getRedeemCodeReward(code as never, locale);
     }
     case 'roco-cn': {

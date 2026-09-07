@@ -489,7 +489,7 @@ export const GAMES: Record<GameId, GameModule> = {
       items: false,
       'tier-list': true,
       calculator: false,
-      map: false,
+      map: true,
       version: true,
       download: true,
       guides: true,
