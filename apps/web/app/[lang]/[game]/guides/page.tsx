@@ -35,7 +35,7 @@ const FEATURED_GUIDE_IDS: Record<GameId, string[]> = {
   sea: ['open-beta-version-center', 'launch-day-guide', 'download-install-guide'],
   skjh: ['week-one-live-ops-overview', 'anti-cheat-reporting-guide', 'custom-mode-community-server-guide'],
   roco: ['cbt-registration-guide', 'starter-guide', 'what-is-roco-kingdom', 'platforms-and-download-guide'],
-  'roco-cn': ['redeem-codes-cn', 'starter-guide-cn', 's2-season-guide'],
+  'roco-cn': ['daily-events-merchant-guide', 'redeem-codes-cn', 's2-season-guide', 'starter-guide-cn'],
   aniimo: ['download', 'release-date', 'codes-rewards', 'beginner-guide', 'map-regions'],
 };
 
@@ -262,16 +262,16 @@ const ROCO_ACTION_LINKS: Record<'roco' | 'roco-cn', Array<{
   'roco-cn': [
     {
       id: 'season',
-      href: '/roco-cn/guides/s2-season-guide',
+      href: '/roco-cn/guides/daily-events-merchant-guide',
       label: {
-        zh: '先看 S2 赛季活动',
-        en: 'Start with S2 season events',
-        ja: 'S2シーズンから確認',
+        zh: '今日活动与商人',
+        en: 'Today: events and merchants',
+        ja: '今日のイベントと商人',
       },
       description: {
-        zh: '国服搜索需求更偏活动、限时奖励和赛季路线，先看这里最稳。',
-        en: 'CN demand leans toward events, limited rewards, and season routing.',
-        ja: '中国版はイベント、限定報酬、シーズン進行の需要が強いです。',
+        zh: '把 S2 限时、兑换码、远行商人和地图资源点放进一张每日清单。',
+        en: 'Use one checklist for S2 limited tasks, codes, merchants, and map resources.',
+        ja: 'S2限定、コード、行商人、地図資源を一つのリストで確認します。',
       },
     },
     {
