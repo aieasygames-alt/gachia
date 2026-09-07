@@ -195,6 +195,132 @@ const SKJH_DECISION_LINKS: Array<{
   },
 ];
 
+const ROCO_ACTION_LINKS: Record<'roco' | 'roco-cn', Array<{
+  id: string;
+  href: string;
+  label: Record<SupportedLocale, string>;
+  description: Record<SupportedLocale, string>;
+}>> = {
+  roco: [
+    {
+      id: 'cbt',
+      href: '/roco/guides/cbt-registration-guide',
+      label: {
+        zh: '先确认 CBT 报名',
+        en: 'Check CBT signup first',
+        ja: 'まずCBT登録を確認',
+      },
+      description: {
+        zh: '把首测资格、地区、平台和注册步骤先核对清楚。',
+        en: 'Verify playtest eligibility, regions, platforms, and signup steps before planning.',
+        ja: 'テスト資格、地域、プラットフォーム、登録手順を先に確認します。',
+      },
+    },
+    {
+      id: 'starter',
+      href: '/roco/guides/starter-guide',
+      label: {
+        zh: '首日开荒路线',
+        en: 'Day-one starter route',
+        ja: '初日の進行ルート',
+      },
+      description: {
+        zh: '从精灵选择、任务推进和资源保留开始，先避免前期走弯路。',
+        en: 'Start with Jinie choices, quest routing, and resource holds to avoid early detours.',
+        ja: 'ジニー選択、任務進行、資源温存から序盤の迷いを減らします。',
+      },
+    },
+    {
+      id: 'map',
+      href: '/roco/map',
+      label: {
+        zh: '地图与区域观察',
+        en: 'Map and region watch',
+        ja: 'マップと地域を確認',
+      },
+      description: {
+        zh: '先把已公开区域、资源点和后续可补地图信息集中到一处。',
+        en: 'Review known regions, resource points, and map notes that can be expanded later.',
+        ja: '公開済み地域、資源地点、今後補完する地図情報をまとめて確認します。',
+      },
+    },
+    {
+      id: 'codes',
+      href: '/roco/redeem-codes',
+      label: {
+        zh: '兑换码和奖励观察',
+        en: 'Codes and reward watch',
+        ja: 'コードと報酬を確認',
+      },
+      description: {
+        zh: '国际服暂未稳定放码，先建立可更新入口，方便首测后快速补齐。',
+        en: 'Global codes are not stable yet, so this keeps the reward watch page ready.',
+        ja: '国際版コードは未安定のため、報酬確認入口を先に用意しています。',
+      },
+    },
+  ],
+  'roco-cn': [
+    {
+      id: 'season',
+      href: '/roco-cn/guides/s2-season-guide',
+      label: {
+        zh: '先看 S2 赛季活动',
+        en: 'Start with S2 season events',
+        ja: 'S2シーズンから確認',
+      },
+      description: {
+        zh: '国服搜索需求更偏活动、限时奖励和赛季路线，先看这里最稳。',
+        en: 'CN demand leans toward events, limited rewards, and season routing.',
+        ja: '中国版はイベント、限定報酬、シーズン進行の需要が強いです。',
+      },
+    },
+    {
+      id: 'codes',
+      href: '/roco-cn/redeem-codes',
+      label: {
+        zh: '兑换码查漏补缺',
+        en: 'Redeem code checklist',
+        ja: '交換コード確認',
+      },
+      description: {
+        zh: '把仍可用、可能过期和需要复核的奖励码单独处理。',
+        en: 'Separate active, possibly expired, and needs-review reward codes.',
+        ja: '有効、期限切れ候補、要確認のコードを分けて確認します。',
+      },
+    },
+    {
+      id: 'starter',
+      href: '/roco-cn/guides/starter-guide-cn',
+      label: {
+        zh: '新手养成顺序',
+        en: 'Starter progression order',
+        ja: '初心者育成の順番',
+      },
+      description: {
+        zh: '从精灵、资源、任务和日常优先级切入，适合作为回流入口。',
+        en: 'Use Jinies, resources, quests, and daily priorities as the return-player entry.',
+        ja: 'ジニー、資源、任務、日課優先度から復帰導線を作ります。',
+      },
+    },
+    {
+      id: 'map',
+      href: '/roco-cn/map',
+      label: {
+        zh: '地图、商人和资源点',
+        en: 'Map, merchants, and resources',
+        ja: 'マップ・商人・資源',
+      },
+      description: {
+        zh: '当前先承接地图和资源点需求，后续可继续拆出商人刷新专题。',
+        en: 'Capture map and resource needs now, then split merchant rotations later.',
+        ja: 'まず地図と資源需要を受け、後で商人更新を分離できます。',
+      },
+    },
+  ],
+};
+
+type RocoGameId = keyof typeof ROCO_ACTION_LINKS;
+
 export async function generateMetadata({
   params,
 }: {
@@ -1572,10 +1698,11 @@ async function SkjhGuides({ locale, gameId }: { locale: SupportedLocale; gameId:
 
 // --- Roco Kingdom (Global) Guides ---
 
-async function RocoGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
+async function RocoGuides({ locale, gameId }: { locale: SupportedLocale; gameId: RocoGameId }) {
   const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES[gameId];
   const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS[gameId]);
+  const actionLinks = ROCO_ACTION_LINKS[gameId];
 
   return (
     <div>
@@ -1589,6 +1716,37 @@ async function RocoGuides({ locale, gameId }: { locale: SupportedLocale; gameId:
           ? `${guides.length} 件のガイド`
           : `${guides.length} guides`}
       </p>
+
+      <section className="mb-8">
+        <div className="mb-4 flex items-center justify-between gap-4">
+          <h2 className="text-lg font-semibold text-game-text">
+            {locale === 'zh' ? '今日行动入口' : locale === 'ja' ? '今日の行動入口' : 'Daily Action Hub'}
+          </h2>
+          <span className="text-xs text-game-text-muted">
+            {locale === 'zh'
+              ? '活动/地图/奖励先分流'
+              : locale === 'ja'
+              ? 'イベント・地図・報酬を整理'
+              : 'Route events, map, and rewards'}
+          </span>
+        </div>
+        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+          {actionLinks.map((entry) => (
+            <Link
+              key={entry.id}
+              href={entry.href as '/'}
+              className="group rounded-md border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary"
+            >
+              <span className="mb-1 block text-sm font-semibold text-game-text group-hover:text-game-primary">
+                {entry.label[locale]}
+              </span>
+              <span className="line-clamp-3 text-xs leading-relaxed text-game-text-muted">
+                {entry.description[locale]}
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       {featuredGuides.length > 0 && (
         <section className="mb-8">
