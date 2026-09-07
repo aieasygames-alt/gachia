@@ -554,6 +554,10 @@ export const GAMES: Record<GameId, GameModule> = {
       compare: false,
       teams: false,
       'redeem-codes': true,
+      'type-chart': true,
+      merchant: true,
+      eggs: true,
+      events: true,
     },
   },
   aniimo: {
