@@ -351,7 +351,28 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
     specs: specs('开放世界精灵收集游戏对存储和网络稳定性有要求，CBT 具体配置与包体大小以官方公告为准。', 'An open-world creature-collector needs storage and stable network; exact CBT specs and package size follow official notices.', 'オープンワールド捕獲ゲームは容量と安定回線が必要です。CBTの推奨環境と容量は公式告知を確認。'),
     cloud: cloudUnreleased(),
     crossPlay: unreleasedCrossPlay(),
-    nextLinks: commonLinks('roco', 'cbt-registration-guide'),
+    nextLinks: [
+      {
+        href: '/roco/guides/cbt-registration-guide',
+        label: { zh: 'CBT 报名指南', en: 'CBT registration', ja: 'CBT応募' },
+        description: { zh: '确认报名问卷、资格邮件、平台和测试前检查。', en: 'Check questionnaire, eligibility mail, platforms, and pre-test steps.', ja: '応募フォーム、資格メール、平台、テスト前確認を整理。' },
+      },
+      {
+        href: '/roco/version',
+        label: { zh: 'CBT 时间线', en: 'CBT timeline', ja: 'CBT日程' },
+        description: { zh: '跟进 2026-10-27 CBT、平台边界和正式版计划。', en: 'Track the Oct 27, 2026 CBT, platform scope, and full-release plan.', ja: '2026-10-27 CBT、平台範囲、正式版予定を確認。' },
+      },
+      {
+        href: '/roco/characters',
+        label: { zh: '精灵图鉴', en: 'Jinie wiki', ja: 'ジニー図鑑' },
+        description: { zh: '下载前先看已曝光精灵、属性和进化链。', en: 'Review revealed Jinies, types, and evolution lines before downloading.', ja: 'DL前に公開ジニー、属性、進化を確認。' },
+      },
+      {
+        href: '/roco/map',
+        label: { zh: '地图核验入口', en: 'Map watch', ja: 'マップ確認' },
+        description: { zh: '记录 CBT 后需要补的区域、捕捉点和路线。', en: 'Track regions, capture spots, and routes queued for CBT checks.', ja: 'CBT後に確認する地域、捕獲地点、ルートを追跡。' },
+      },
+    ],
     faq: [
       {
         question: { zh: '国际服 CBT 怎么报名？', en: 'How do I sign up for the international CBT?', ja: '国際CBTにはどう申し込む？' },
@@ -395,9 +416,19 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
         description: { zh: '确认当前版本、赛季、活动和时间节点。', en: 'Check the current patch, season, events, and timing.', ja: '現在の版本、シーズン、イベント、時期を確認。' },
       },
       {
+        href: '/roco-cn/characters',
+        label: { zh: '精灵图鉴', en: 'Jinie wiki', ja: 'ジニー図鑑' },
+        description: { zh: '下载后继续筛选精灵、属性、技能和进化链。', en: 'After install, filter Jinies by type, skills, and evolution lines.', ja: 'DL後にジニー、属性、スキル、進化を確認。' },
+      },
+      {
         href: '/roco-cn/redeem-codes',
         label: { zh: '兑换码与福利', en: 'Codes & rewards', ja: 'コードと報酬' },
         description: { zh: '查看礼包码、预约奖励和版本福利。', en: 'Check gift codes, reservation rewards, and patch bonuses.', ja: 'コード、予約報酬、版本報酬を確認。' },
+      },
+      {
+        href: '/roco-cn/map',
+        label: { zh: '地图与资源路线', en: 'Map & routes', ja: 'マップとルート' },
+        description: { zh: '把区域、捕捉点、活动和后续商人刷新串起来。', en: 'Connect regions, captures, events, and future merchant refreshes.', ja: '地域、捕獲、イベント、商人更新へ接続。' },
       },
     ],
     faq: liveFaq('洛克王国:世界', 'Roco Kingdom (CN)', 'ロコキングダム（中国版）'),
