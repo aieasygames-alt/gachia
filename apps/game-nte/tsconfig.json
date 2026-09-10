@@ -17,6 +17,9 @@
       ],
       "@gachia/data": [
         "../../packages/data"
+      ],
+      "@gachia/ui": [
+        "../../packages/ui"
       ]
     },
     "allowJs": true,

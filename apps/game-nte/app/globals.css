@@ -40,6 +40,24 @@ a { color: inherit; text-decoration: none; }
 .nav { display: flex; gap: 16px; flex-wrap: wrap; color: var(--color-text-muted); font-size: 14px; }
 .nav a:hover { color: var(--color-primary); }
 .nav__link--current { color: var(--color-primary); font-weight: 700; }
+.gachia-header { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--color-border); background: rgb(10 15 26 / 94%); box-shadow: 0 8px 24px rgb(0 0 0 / 18%); backdrop-filter: blur(14px); }
+.gachia-header__top { border-bottom: 1px solid rgb(42 58 76 / 72%); }
+.gachia-header__container, .gachia-header__section { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+.gachia-header__container { display: flex; min-height: 58px; align-items: center; gap: 18px; }
+.gachia-header__brand { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 9px; color: var(--color-text); font-size: 18px; font-weight: 800; }
+.gachia-header__logo { display: grid; width: 29px; height: 29px; place-items: center; border: 1px solid rgb(0 212 170 / 65%); border-radius: 7px; background: #123a3c; color: var(--color-primary); font-size: 15px; }
+.gachia-header__games { display: flex; min-width: 0; flex: 1; gap: 6px; overflow-x: auto; }
+.gachia-header__games a { flex: 0 0 auto; border-radius: 5px; color: var(--color-text-muted); font-size: 13px; font-weight: 600; padding: 7px 9px; }
+.gachia-header__games a:hover, .gachia-header__game--current { background: rgb(0 212 170 / 13%); color: var(--color-primary); }
+.gachia-header__actions, .gachia-header__locale { display: flex; align-items: center; gap: 4px; }
+.gachia-header__locale { margin-left: auto; }
+.gachia-header__locale a { border: 1px solid transparent; border-radius: 4px; color: var(--color-text-muted); font-size: 11px; font-weight: 700; padding: 4px 6px; }
+.gachia-header__locale a:hover, .gachia-header__locale a[aria-current="page"] { border-color: rgb(0 212 170 / 42%); color: var(--color-primary); }
+.gachia-header__section-wrap { overflow-x: auto; }
+.gachia-header__section { display: flex; min-height: 45px; align-items: center; gap: 3px; }
+.gachia-header__section a { position: relative; flex: 0 0 auto; color: var(--color-text-muted); font-size: 14px; font-weight: 600; padding: 13px 12px 11px; transition: color .18s ease; }
+.gachia-header__section a:hover, .gachia-header__section-link--current { color: var(--color-primary); }
+.gachia-header__section-link--current::after { position: absolute; right: 12px; bottom: 0; left: 12px; height: 2px; background: var(--color-primary); content: ''; }
 .content { padding: 36px 0 64px; }
 .eyebrow { color: var(--color-primary); font-size: 13px; font-weight: 700; text-transform: uppercase; }
 h1 { margin: 8px 0 12px; font-size: clamp(28px, 4vw, 42px); line-height: 1.1; }
@@ -116,6 +134,10 @@ p { color: var(--color-text-muted); line-height: 1.65; }
 .notice ul { padding-left: 18px; margin: 8px 0 0; }
 .notice li { margin: 5px 0; }
 @media (max-width: 640px) {
+  .gachia-header__container, .gachia-header__section { width: min(100% - 24px, 1120px); }
+  .gachia-header__container { min-height: 52px; gap: 10px; }
+  .gachia-header__games { display: none; }
+  .gachia-header__section a { padding: 12px 10px 10px; font-size: 13px; }
   .global-bar__inner { align-items: flex-start; flex-wrap: wrap; gap: 8px 14px; padding: 12px 0; }
   .global-nav { order: 3; flex-basis: 100%; }
   .global-footer__inner { align-items: flex-start; flex-direction: column; gap: 12px; }

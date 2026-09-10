@@ -9,7 +9,7 @@ import { LocaleSwitcher } from './locale-switcher';
 import { UserMenu } from '@/components/auth/user-menu';
 import { AuthDialog } from '@/components/auth/auth-dialog';
 import { useSession } from '@/lib/auth-client';
-import { ChevronDown, Gamepad2, Search, Sparkles } from 'lucide-react';
+import { Search } from 'lucide-react';
 
 const SearchDialog = dynamic(
   () => import('@/components/search/search-dialog').then((m) => m.SearchDialog),
@@ -20,39 +20,9 @@ interface SiteHeaderProps {
   locale: SupportedLocale;
 }
 
-const FEATURED_GAMES = ['genshin', 'wuwa', 'zzz', 'roco', 'skjh'] as const;
-
-const NAV_GROUPS = [
-  {
-    label: { zh: '长期运营', en: 'Live Service', ja: '運営中' },
-    ids: ['genshin', 'starrail', 'wuwa', 'zzz'],
-  },
-  {
-    label: { zh: '新游观察', en: 'Launch Watch', ja: '新作注目' },
-    ids: ['roco', 'roco-cn', 'skjh', 'endfield', 'nte'],
-  },
-  {
-    label: { zh: '资料补全', en: 'Data Track', ja: 'データ整理' },
-    ids: ['sea', 'ananta', 'guihuan'],
-  },
-] as const;
-
-const UTILITY_LINKS = [
-  { href: '/calendar', label: { zh: '日历', en: 'Calendar', ja: 'カレンダー' } },
-  { href: '/about', label: { zh: '关于', en: 'About', ja: '概要' } },
-] as const;
-
-function getCompactGameName(gameId: (typeof FEATURED_GAMES)[number], locale: SupportedLocale) {
-  if (locale === 'zh' && gameId === 'roco') return '洛克国际服';
-  if (locale === 'zh' && gameId === 'skjh') return '失控进化';
-  if (locale === 'ja' && gameId === 'roco') return 'Roco';
-  return GAMES[gameId].name[locale];
-}
-
 export function SiteHeader({ locale }: SiteHeaderProps) {
   const [searchOpen, setSearchOpen] = useState(false);
   const [authOpen, setAuthOpen] = useState(false);
-  const [gamesOpen, setGamesOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   // Keyboard shortcut: Cmd/Ctrl+K to open search
@@ -73,79 +43,21 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-game-border bg-game-bg/90 shadow-lg shadow-black/10 backdrop-blur-xl">
-        <div className="container mx-auto flex h-16 items-center justify-between gap-4 px-4">
-          {/* Logo */}
-          <Link href="/" className="flex shrink-0 items-center gap-3">
-            <img src="/images/logo.webp" alt="Gachia" width={36} height={36} className="h-9 w-9 rounded-lg" />
-            <span className="text-xl font-black text-game-text">Gachia</span>
-          </Link>
-
-          {/* Game Switcher */}
-          <nav className="hidden min-w-0 flex-1 items-center gap-2 lg:flex">
-            {FEATURED_GAMES.map((gameId) => (
-              <Link
-                key={gameId}
-                href={`/${gameId}` as '/'}
-                className="max-w-36 truncate rounded-full border border-game-border bg-game-surface/70 px-3 py-1.5 text-sm font-semibold text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary"
-              >
-                {getCompactGameName(gameId, locale)}
-              </Link>
-            ))}
-            <div
-              className="relative"
-              onMouseEnter={() => setGamesOpen(true)}
-              onMouseLeave={() => setGamesOpen(false)}
-            >
-              <button
-                type="button"
-                onClick={() => setGamesOpen((open) => !open)}
-                className="inline-flex items-center gap-2 rounded-full border border-game-border bg-game-surface/70 px-3 py-1.5 text-sm font-semibold text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary"
-              >
-                <Gamepad2 className="h-4 w-4" aria-hidden="true" />
-                {locale === 'zh' ? '全部游戏' : locale === 'ja' ? '全ゲーム' : 'All games'}
-                <ChevronDown className="h-4 w-4" aria-hidden="true" />
-              </button>
-              {gamesOpen ? (
-                <div className="absolute left-0 top-full w-[560px] pt-3">
-                  <div className="grid grid-cols-3 gap-3 rounded-lg border border-game-border bg-game-surface p-4 shadow-2xl shadow-black/30">
-                    {NAV_GROUPS.map((group) => (
-                      <div key={group.label.en}>
-                        <div className="mb-2 flex items-center gap-2 text-xs font-bold uppercase text-game-text-muted">
-                          <Sparkles className="h-3.5 w-3.5 text-game-primary" aria-hidden="true" />
-                          {group.label[locale]}
-                        </div>
-                        <div className="space-y-1.5">
-                          {group.ids.map((gameId) => (
-                            <Link
-                              key={gameId}
-                              href={`/${gameId}` as '/'}
-                              className="block rounded-md border border-transparent px-3 py-2 text-sm font-medium text-game-text transition-colors hover:border-game-border hover:bg-game-surface-alt"
-                              style={{ color: GAMES[gameId].theme.primary }}
-                              onClick={() => setGamesOpen(false)}
-                            >
-                              {GAMES[gameId].name[locale]}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ) : null}
-            </div>
-            {UTILITY_LINKS.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href as '/'}
-                className="rounded-full border border-game-border bg-game-surface/70 px-3 py-1.5 text-sm font-semibold text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary"
-              >
-                {item.label[locale]}
-              </Link>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-2">
+      <header className="gachia-header sticky top-0 z-50">
+        <div className="gachia-header__top border-b border-game-border bg-game-bg/90 shadow-lg shadow-black/10 backdrop-blur-xl">
+          <div className="gachia-header__container container mx-auto flex h-16 items-center gap-4 px-4">
+            <Link href="/" className="gachia-header__brand flex shrink-0 items-center gap-3">
+              <img src="/images/logo.webp" alt="Gachia" width={36} height={36} className="h-9 w-9 rounded-lg" />
+              <span className="text-xl font-black text-game-text">Gachia</span>
+            </Link>
+            <nav className="gachia-header__games hidden min-w-0 flex-1 items-center gap-1 overflow-x-auto lg:flex" aria-label="Game navigation">
+              {GAME_IDS.map((gameId) => (
+                <Link key={gameId} href={`/${gameId}` as '/'} className="shrink-0 rounded-md px-2.5 py-1.5 text-sm font-semibold text-game-text-muted transition-colors hover:bg-game-surface-alt hover:text-game-primary">
+                  {GAMES[gameId].name[locale]}
+                </Link>
+              ))}
+            </nav>
+            <div className="gachia-header__actions flex items-center gap-2">
             {/* Search Button */}
             <button
               onClick={() => setSearchOpen(true)}
@@ -173,9 +85,10 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
                 {locale === 'zh' ? '登录' : locale === 'ja' ? 'ログイン' : 'Login'}
               </button>
             )}
+            </div>
           </div>
         </div>
-        <div className="container mx-auto flex gap-2 overflow-x-auto px-4 pb-3 lg:hidden">
+        <div className="gachia-header__games container mx-auto flex gap-2 overflow-x-auto px-4 pb-3 lg:hidden">
           {GAME_IDS.map((gameId) => (
             <Link
               key={gameId}
