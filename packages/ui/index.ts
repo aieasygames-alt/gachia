@@ -7,6 +7,7 @@ export type HeaderRoute = {
 };
 
 export const headerGameIds = GAME_IDS;
+export const headerFeaturedGameIds = ['genshin', 'wuwa', 'zzz', 'roco', 'skjh'] as const;
 
 export const headerLanguageLabels: Record<SupportedLocale, string> = {
   zh: '中文',
