@@ -14,7 +14,7 @@ for (const file of files) {
 }
 
 const games = documents.get('games.json');
-if (games?.version !== 1 || Object.keys(games.games ?? {}).length !== 12) {
+if (games?.version !== 1 || Object.keys(games.games ?? {}).length !== 13) {
   throw new Error('games.json does not contain the expected version 1 game manifest');
 }
 
