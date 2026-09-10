@@ -13,5 +13,55 @@ const pages = [
 ] as const;
 
 export function GameNav({ locale, current }: { locale: SupportedLocale; current?: string }) {
-  return <header className="site-bar"><div className="site-bar__inner"><Link className="brand" href={`/${locale}/azur-promilia`}>Gachia · {gameName(locale)}</Link><nav className="nav" aria-label={`${gameName(locale)} navigation`}>{pages.map(([page, labels]) => <Link aria-current={current === page ? 'page' : undefined} className={current === page ? 'nav__link--current' : undefined} key={page} href={`/${locale}/azur-promilia/${page}`}>{labels[locale]}</Link>)}</nav></div></header>;
+  const labels = {
+    zh: { home: 'Gachia 首页', guide: '蓝色星原：旅谣' },
+    en: { home: 'Gachia Home', guide: 'Azur Promilia' },
+    ja: { home: 'Gachia ホーム', guide: 'アズールプロミリア' },
+  }[locale];
+
+  return (
+    <header className="game-header">
+      <div className="game-header__top">
+        <div className="game-header__container">
+          <Link className="game-header__brand" href={`/${locale}/azur-promilia`}>
+            <span className="game-header__logo">G</span>
+            <span>Gachia</span>
+          </Link>
+          <div className="game-header__context">
+            <Link href={`https://gachia.com/${locale}`}>{labels.home}</Link>
+            <span aria-hidden="true">/</span>
+            <strong>{gameName(locale)}</strong>
+          </div>
+          <div className="game-header__locale">
+            {(['zh', 'en', 'ja'] as const).map((targetLocale) => (
+              <Link
+                key={targetLocale}
+                href={`/${targetLocale}/azur-promilia${current ? `/${current}` : ''}`}
+                aria-current={targetLocale === locale ? 'page' : undefined}
+              >
+                {targetLocale.toUpperCase()}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="game-header__nav-wrap">
+        <nav className="game-header__nav" aria-label={`${gameName(locale)} navigation`}>
+          <Link className={!current ? 'game-header__nav-link--current' : undefined} href={`/${locale}/azur-promilia`}>
+            {labels.guide}
+          </Link>
+          {pages.map(([page, pageLabels]) => (
+            <Link
+              aria-current={current === page ? 'page' : undefined}
+              className={current === page ? 'game-header__nav-link--current' : undefined}
+              key={page}
+              href={`/${locale}/azur-promilia/${page}`}
+            >
+              {pageLabels[locale]}
+            </Link>
+          ))}
+        </nav>
+      </div>
+    </header>
+  );
 }
