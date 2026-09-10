@@ -1,0 +1,142 @@
+{
+  "generatedAt": "2026-09-10T02:03:59.573Z",
+  "origin": "http://127.0.0.1:3017",
+  "timeoutMs": 8000,
+  "pages": [
+    {
+      "path": "/zh/azur-promilia",
+      "status": 200,
+      "title": "蓝色星原：旅谣 Wiki｜角色、攻略与官方信息",
+      "canonical": "https://gachia.com/zh/azur-promilia",
+      "hreflang": [
+        "zh-Hans:https://gachia.com/zh/azur-promilia",
+        "en:https://gachia.com/en/azur-promilia",
+        "ja:https://gachia.com/ja/azur-promilia",
+        "x-default:https://gachia.com/zh/azur-promilia"
+      ],
+      "jsonLdCount": 1,
+      "hasExternalAssetPrefix": true,
+      "noindex": true
+    },
+    {
+      "path": "/en/azur-promilia",
+      "status": 200,
+      "title": "Azur Promilia Wiki | Characters, Guides, and Official Information",
+      "canonical": "https://gachia.com/en/azur-promilia",
+      "hreflang": [
+        "zh-Hans:https://gachia.com/zh/azur-promilia",
+        "en:https://gachia.com/en/azur-promilia",
+        "ja:https://gachia.com/ja/azur-promilia",
+        "x-default:https://gachia.com/zh/azur-promilia"
+      ],
+      "jsonLdCount": 1,
+      "hasExternalAssetPrefix": true,
+      "noindex": true
+    },
+    {
+      "path": "/ja/azur-promilia",
+      "status": 200,
+      "title": "アズールプロミリア Wiki｜キャラクター、攻略、公式情報",
+      "canonical": "https://gachia.com/ja/azur-promilia",
+      "hreflang": [
+        "zh-Hans:https://gachia.com/zh/azur-promilia",
+        "en:https://gachia.com/en/azur-promilia",
+        "ja:https://gachia.com/ja/azur-promilia",
+        "x-default:https://gachia.com/zh/azur-promilia"
+      ],
+      "jsonLdCount": 1,
+      "hasExternalAssetPrefix": true,
+      "noindex": true
+    },
+    {
+      "path": "/zh/azur-promilia/characters",
+      "status": 200,
+      "title": "蓝色星原：旅谣角色图鉴",
+      "canonical": "https://gachia.com/zh/azur-promilia/characters",
+      "hreflang": [
+        "zh-Hans:https://gachia.com/zh/azur-promilia/characters",
+        "en:https://gachia.com/en/azur-promilia/characters",
+        "ja:https://gachia.com/ja/azur-promilia/characters",
+        "x-default:https://gachia.com/zh/azur-promilia/characters"
+      ],
+      "jsonLdCount": 1,
+      "hasExternalAssetPrefix": true,
+      "noindex": true
+    },
+    {
+      "path": "/zh/azur-promilia/weapons",
+      "status": 200,
+      "title": "蓝色星原：旅谣武器资料",
+      "canonical": "https://gachia.com/zh/azur-promilia/weapons",
+      "hreflang": [
+        "zh-Hans:https://gachia.com/zh/azur-promilia/weapons",
+        "en:https://gachia.com/en/azur-promilia/weapons",
+        "ja:https://gachia.com/ja/azur-promilia/weapons",
+        "x-default:https://gachia.com/zh/azur-promilia/weapons"
+      ],
+      "jsonLdCount": 1,
+      "hasExternalAssetPrefix": true,
+      "noindex": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides",
+      "status": 200,
+      "title": "蓝色星原：旅谣攻略",
+      "canonical": "https://gachia.com/zh/azur-promilia/guides",
+      "hreflang": [
+        "zh-Hans:https://gachia.com/zh/azur-promilia/guides",
+        "en:https://gachia.com/en/azur-promilia/guides",
+        "ja:https://gachia.com/ja/azur-promilia/guides",
+        "x-default:https://gachia.com/zh/azur-promilia/guides"
+      ],
+      "jsonLdCount": 1,
+      "hasExternalAssetPrefix": true,
+      "noindex": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides/official-information-checklist",
+      "status": 200,
+      "title": "《蓝色星原：旅谣》官方信息核对清单",
+      "canonical": "https://gachia.com/zh/azur-promilia/guides/official-information-checklist",
+      "hreflang": [
+        "zh-Hans:https://gachia.com/zh/azur-promilia/guides/official-information-checklist",
+        "en:https://gachia.com/en/azur-promilia/guides/official-information-checklist",
+        "ja:https://gachia.com/ja/azur-promilia/guides/official-information-checklist",
+        "x-default:https://gachia.com/zh/azur-promilia/guides/official-information-checklist"
+      ],
+      "jsonLdCount": 1,
+      "hasExternalAssetPrefix": true,
+      "noindex": true
+    },
+    {
+      "path": "/zh/azur-promilia/tier-list",
+      "status": 200,
+      "title": "蓝色星原：旅谣强度参考",
+      "canonical": "https://gachia.com/zh/azur-promilia/tier-list",
+      "hreflang": [
+        "zh-Hans:https://gachia.com/zh/azur-promilia/tier-list",
+        "en:https://gachia.com/en/azur-promilia/tier-list",
+        "ja:https://gachia.com/ja/azur-promilia/tier-list",
+        "x-default:https://gachia.com/zh/azur-promilia/tier-list"
+      ],
+      "jsonLdCount": 1,
+      "hasExternalAssetPrefix": true,
+      "noindex": true
+    },
+    {
+      "path": "/zh/azur-promilia/redeem-codes",
+      "status": 200,
+      "title": "蓝色星原：旅谣兑换码",
+      "canonical": "https://gachia.com/zh/azur-promilia/redeem-codes",
+      "hreflang": [
+        "zh-Hans:https://gachia.com/zh/azur-promilia/redeem-codes",
+        "en:https://gachia.com/en/azur-promilia/redeem-codes",
+        "ja:https://gachia.com/ja/azur-promilia/redeem-codes",
+        "x-default:https://gachia.com/zh/azur-promilia/redeem-codes"
+      ],
+      "jsonLdCount": 1,
+      "hasExternalAssetPrefix": true,
+      "noindex": true
+    }
+  ]
+}

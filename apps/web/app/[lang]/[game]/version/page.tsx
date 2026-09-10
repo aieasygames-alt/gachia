@@ -782,6 +782,15 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
       },
     ],
     guideIds: ['release-date', 'download', 'codes-rewards', 'map-regions'],
+  },
+  'azur-promilia': {
+    title: { zh: '官方信息核对专题', en: 'Official Information Hub', ja: '公式情報確認ハブ' },
+    description: { zh: '追踪蓝色星原：旅谣的官方公告、平台、测试与上线信息，避免把传闻当作已确认内容。', en: 'Track official Azur Promilia announcements, platforms, tests, and launch information without treating rumors as confirmed.', ja: 'アズールプロミリアの公式告知、対応機種、テスト、配信情報を確認し、未確認情報と区別します。' },
+    highlights: { zh: ['官方公告', '平台信息', '测试状态'], en: ['Official notices', 'Platforms', 'Test status'], ja: ['公式告知', '対応機種', 'テスト状況'] },
+    kicker: { zh: '资料建档', en: 'Information intake', ja: '資料整理' },
+    freshness: { zh: '内容会在官方来源可核验后更新。', en: 'Content will be updated when official sources can be verified.', ja: '公式情報を確認でき次第更新します。' },
+    faq: [],
+    guideIds: ['official-information-checklist'],
   }
 };
 

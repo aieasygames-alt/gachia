@@ -632,10 +632,12 @@ function makeRuntime(
 
 export async function generateStaticParams() {
   const entries = await Promise.all(
-    (Object.keys(GAMES) as GameId[]).map(async (gameId) => {
+    (Object.keys(GAMES) as GameId[])
+      .filter((gameId) => gameId !== 'azur-promilia')
+      .map(async (gameId) => {
       const runtime = await getGuideRuntime(gameId);
       return LOCALES.flatMap((lang) => runtime.guides.map((guide) => ({ lang, game: gameId, slug: guide.id })));
-    })
+      })
   );
 
   return entries.flat();

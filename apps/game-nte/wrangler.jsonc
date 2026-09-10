@@ -1,0 +1,23 @@
+{
+  "name": "gachia-game-nte",
+  "main": ".open-next/worker.js",
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "compatibility_date": "2026-07-08",
+  "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "NEXT_PUBLIC_APP_URL": "https://gachia.com",
+    "NTE_DEPLOYMENT_MODE": "preview"
+  },
+  "env": {
+    "staging": {
+      "name": "gachia-game-nte-staging",
+      "vars": {
+        "NEXT_PUBLIC_APP_URL": "https://gachia-staging.aieasygames.workers.dev",
+        "NTE_DEPLOYMENT_MODE": "preview"
+      }
+    }
+  }
+}

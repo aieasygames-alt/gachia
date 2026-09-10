@@ -1,0 +1,21 @@
+[
+  { "id": "abby", "name": "阿比", "nameEn": "Abby", "nameJa": "アビー" },
+  { "id": "faridah", "name": "法里达", "nameEn": "Faridah", "nameJa": "ファリダ" },
+  { "id": "luruka", "name": "璐璐卡", "nameEn": "Luruka", "nameJa": "ルルカ" },
+  { "id": "metsa", "name": "梅茨娅", "nameEn": "Metsa", "nameJa": "メーツァ" },
+  { "id": "morwyn-halkon", "name": "莫温·霍尔康", "nameEn": "Morwyn Halkon", "nameJa": "モーウィン・ハルコン" },
+  { "id": "ruby", "name": "露比", "nameEn": "Ruby", "nameJa": "ルビー" },
+  { "id": "shalle-ensys", "name": "沙勒·恩西斯", "nameEn": "Shalle Ensys", "nameJa": "シャーレ・エンシス" },
+  { "id": "xiaoyu", "name": "涂山小玉", "nameEn": "Xiaoyu", "nameJa": "涂山小玉" },
+  { "id": "anais", "name": "阿妮斯", "nameEn": "Anais", "nameJa": "アニス" },
+  { "id": "cathbelle", "name": "卡斯贝尔", "nameEn": "Cathbelle", "nameJa": "キャスベル" },
+  { "id": "han-youyou", "name": "寒悠悠", "nameEn": "Han Youyou", "nameJa": "寒悠悠" },
+  { "id": "katalua", "name": "卡塔露亚", "nameEn": "Katalua", "nameJa": "カタルア" },
+  { "id": "lily", "name": "莉莉", "nameEn": "Lily", "nameJa": "リリー" },
+  { "id": "mitty", "name": "米蒂", "nameEn": "Mitty", "nameJa": "ミッティ" },
+  { "id": "nono", "name": "诺诺", "nameEn": "Nono", "nameJa": "ノノ" },
+  { "id": "pengpeng", "name": "蓬蓬", "nameEn": "Pengpeng", "nameJa": "ポンポン" },
+  { "id": "starborn", "name": "星临者", "nameEn": "Starborn", "nameJa": "スター・ボーン" },
+  { "id": "symphoria", "name": "辛福莉娅", "nameEn": "Symphoria", "nameJa": "シンフォーリア" },
+  { "id": "terara", "name": "特拉拉", "nameEn": "Terara", "nameJa": "テララ" }
+]

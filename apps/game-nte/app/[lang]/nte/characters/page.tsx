@@ -1,0 +1,9 @@
+import type { SupportedLocale } from '@gachia/core';
+import Link from 'next/link';
+import { characterImage, characterName, nteCharacterSummaries } from '@/lib/data';
+import { previewMetadata } from '@/lib/seo';
+import { NteNav } from '@/components/nte-nav';
+
+export const dynamic = 'force-dynamic';
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) { const locale = (await params).lang as SupportedLocale; return previewMetadata(locale === 'zh' ? '异环角色图鉴' : locale === 'ja' ? 'NTE キャラクター' : 'NTE Characters', 'NTE character database preview', locale, '/characters'); }
+export default async function Characters({ params }: { params: Promise<{ lang: string }> }) { const locale = (await params).lang as SupportedLocale; const title = locale === 'zh' ? '异环角色图鉴' : locale === 'ja' ? 'NTE キャラクター図鑑' : 'NTE Character Database'; return <><NteNav locale={locale} current="characters"/><main className="content"><div className="eyebrow">NTE Database</div><h1>{title}</h1><p className="lead">{locale === 'zh' ? `收录 ${nteCharacterSummaries.length} 名角色，查看属性、稀有度、定位与对应攻略。` : locale === 'ja' ? `${nteCharacterSummaries.length}人の属性・レアリティ・役割と攻略を確認できます。` : `Browse ${nteCharacterSummaries.length} characters by attribute, rank, role and related guides.`}</p><div className="grid">{nteCharacterSummaries.map((character) => <Link className="card card--character" key={character.id} href={`/${locale}/nte/characters/${character.id}`}><img className="card__image" src={characterImage(character)} alt="" loading="lazy" /><div className="card__title">{characterName(character, locale)}</div><div className="card__meta">{character.attribute} · {character.rank} · {character.roleEn ?? ''}</div><p>{character.weaponEn ? `${locale==='zh'?'武器': 'Weapon'}: ${character.weaponEn}` : ''}</p></Link>)}</div></main></>; }

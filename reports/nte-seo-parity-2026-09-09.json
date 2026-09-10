@@ -1,0 +1,1590 @@
+{
+  "generatedAt": "2026-09-09T04:42:01.795Z",
+  "stagingOrigin": "http://127.0.0.1:8810",
+  "productionOrigin": "https://gachia.com",
+  "previewOnly": true,
+  "requestTimeoutMs": 3000,
+  "pages": [
+    {
+      "path": "/zh/nte",
+      "production": {
+        "url": "/zh/nte",
+        "status": 200,
+        "title": "异环 Wiki｜官网入口、角色图鉴、兑换码与下载攻略 | Gachia",
+        "description": "异环（NTE）Wiki 与官网入口，整理角色图鉴、兑换码、下载安装、官网资讯、武器数据、光盘推荐和祈愿模拟。页面覆盖完整角色库、新手入门、Boss 攻略、伤害公式和养成路线，适合搜索异环官网、异环下载、异环角色和异环攻略时快速进入。同时收录版本专题、图鉴页、攻略页和实用工具入口，方便继续深入浏览与查找。",
+        "canonical": "https://gachia.com/zh/nte",
+        "alternates": [
+          "en:https://gachia.com/en/nte",
+          "ja:https://gachia.com/ja/nte",
+          "x-default:https://gachia.com/zh/nte",
+          "zh-Hans:https://gachia.com/zh/nte"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "",
+        "bodyText": "异环 Wiki｜官网入口、角色图鉴、兑换码与下载攻略 | Gachia Gachia 原神 鸣潮 绝区零 洛克国际服 失控进化 全部游戏 日历 关于 搜索 ⌘K 中文 English 日本語 登录 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 角色图鉴 武器 材料道具 节奏榜 地图 版本专题 下载配置 攻略百科 光盘套装 兑换码 祈愿 异象 中文 异环 异环 异环（NTE）Wiki 与官网入口，整理角色图鉴、兑换码、下载安装、官网资讯、武器数据、光盘推荐和祈愿模拟。页面覆盖完整角色库、新手入门、Boss 攻略、伤害公式和养成路线，适合搜索异环官网、异环下载、异环角色和异环攻略时快速进入。同时收录版本专题、图鉴页、攻略页和实用工具入口，方便继续深入浏览与查找。 异环官网 / Wiki 入口 版本专题 异环 Wiki、官网、角色、兑换码与下载入口 把异环官网、角色图鉴、下载安装、兑换码、999 Nights、Shinku 当前池和 Iroi 预热一起前置，覆盖搜索里最常见的官网、wiki、下载和角色意图。 异环官网 异环 Wiki 角色图鉴 兑换码 下载入口 999 Nights 专题展开 继续查看相关内容 官网与下载 优先解决异环官网、下载、设备、区服和安装入口。 下载入口 下载安装指南 角色与 Wiki 把角色图鉴、版本角色和新手培养路线接到可查页面。 角色图鉴 1.2 专题 兑换码与抽卡 搜索兑换码、Shinku、Iroi 的用户继续进入福利和抽卡规划。 兑换码 Shinku vs Iroi 优先入口 去 1.2 专题 下载安装 新手入门 Boss 攻略 补充问答 异环官网、Wiki 和下载应该先点哪个？ 找安装包先点下载入口或下载安装指南；查角色和攻略先点角色图鉴、1.2 专题和兑换码。 👤 角色图鉴 ⚔️ 武器 📦 材料道具 🏆 节奏榜 🗺️ 地图 📰 版本专题 📋 下载配置 📖 攻略百科 💿 光盘套装 🎁 兑换码 🎰 祈愿 🌀 异象 异环角色图鉴入口 先看高频角色、强度排行和抽卡价值，再进入完整角色图鉴。 查看全部角色 赤子 奥蕾莉亚 翳 哈尼尔 咲里 娜娜莉 精选攻略 异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级 把 1.2「999 Nights」模式、活动奖励、兑换码、Shinku 当前池和 Iroi 预留资源拆成每日执行路线。 异环 Shinku vs Iroi 抽取规划：1.2「999 Nights」资源、兑换码与保底路线 把 1.2「999 Nights」里的 Shinku 当前池、Iroi 预热、兑换码、Steam/download 入坑与保底资源放在同一张决策表里。 异",
+        "bodyTextLength": 1823,
+        "headingCount": 32,
+        "internalLinkCount": 62,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/zh/nte",
+        "status": 200,
+        "title": "异环 Wiki｜官网入口、角色、兑换码与下载攻略",
+        "description": "异环官网入口、角色图鉴、999 Nights、Shinku/Iroi 抽卡规划、兑换码、下载与安装、武器、驱动盘和新手攻略集中查看。",
+        "canonical": "https://gachia.com/zh/nte",
+        "alternates": [
+          "en:https://gachia.com/en/nte",
+          "ja:https://gachia.com/ja/nte",
+          "x-default:https://gachia.com/zh/nte",
+          "zh-Hans:https://gachia.com/zh/nte"
+        ],
+        "jsonLdCount": 1,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环 Wiki｜官网入口、角色、兑换码与下载攻略 Gachia 原神 崩坏：星穹铁道 鸣潮 绝区零 日历 关于 中文 EN 日本語 首页 / 异环 Gachia · NTE 角色 攻略 版本 武器 兑换码 Neverness to Everness 异环 Wiki、官网、角色、兑换码与下载入口 把异环官网、角色图鉴、下载安装、兑换码、999 Nights、Shinku 当前池和 Iroi 预留资源放在同一条路线，方便按当前目标继续查阅。 官网与下载 先确认官方下载入口、设备要求和安装问题。 下载入口 下载安装指南 角色与版本 查看角色图鉴、999 Nights 和版本目标。 角色图鉴 1.2 专题 兑换码与抽卡 把兑换码、Shinku 与 Iroi 资源规划接在一起。 兑换码 Shinku vs Iroi 资料入口 版本资讯 打开资料页 武器资料 打开资料页 驱动盘套装 打开资料页 强度排行 打开资料页 下载与配置 打开资料页 区域地图 打开资料页 养成材料 打开资料页 抽卡与保底 打开资料页 异象与 Boss 打开资料页 角色配装 打开资料页 配队规划 打开资料页 角色对比 打开资料页 伤害计算参考 打开资料页 活动与版本事件 打开资料页 商店与资源规划 打开资料页 角色图鉴 打开资料页 攻略百科 打开资料页 兑换码 打开资料页 角色图鉴 42 名角色 攻略百科 53 篇资料 最新兑换码 8 条记录 热门角色 从高频角色、强度参考和队伍缺口开始，再进入完整角色图鉴比较属性、定位、配装与培养材料。 娜娜莉 anima · S · Attack 咲里 incantation · S · Support 法蒂亚 psyche · S · Attack 拉克莉莫萨 chaos · S · Attack 白藏 incantation · S · Defense 零（男） cosmos · S · Attack 零（女） cosmos · S · Attack 穗鸟 cosmos · S · Attack 精选攻略 异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级 把 1.2「999 Nights」模式、活动奖励、兑换码、Shinku 当前池和 Iroi 预留资源拆成每日执行路线。 异环 Shinku vs Iroi 抽取规划：1.2「999 Nights」资源、兑换码与保底路线 把 1.2「999 Nights」里的 Shinku 当前池、Iroi 预热、兑换码、Steam/download 入坑与保底资源放在同一张决策表里。 异环官网入口与下载安装：全平台下载地址、安装教程与配置要求 异环官网入口与全平台下载安装指南，包括 PC、Android、iOS、Mac、PS5、鸿蒙各平台的下载地址、安装方法、配置要求和注意事",
+        "bodyTextLength": 1672,
+        "headingCount": 8,
+        "internalLinkCount": 65,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": -151,
+        "headingDelta": -24,
+        "internalLinkDelta": 3,
+        "jsonLdDelta": 1
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": true,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": true
+      }
+    },
+    {
+      "path": "/en/nte",
+      "production": {
+        "url": "/en/nte",
+        "status": 200,
+        "title": "NTE Wiki — Characters, Codes, Download & Guides | Gachia",
+        "description": "Neverness to Everness character guides, weapon data, disk set recommendations, redeem codes, and gacha simulator. Now released with 19 playable characters, download help, beginner routes, boss guides, and damage formulas.",
+        "canonical": "https://gachia.com/en/nte",
+        "alternates": [
+          "en:https://gachia.com/en/nte",
+          "ja:https://gachia.com/ja/nte",
+          "x-default:https://gachia.com/zh/nte",
+          "zh-Hans:https://gachia.com/zh/nte"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "",
+        "bodyText": "NTE Wiki — Characters, Codes, Download &amp; Guides | Gachia Gachia Genshin Impact Wuthering Waves Zenless Zone Zero Roco Kingdom Ashfall Evolution All games Calendar About Search ⌘K 中文 English 日本語 Login Genshin Impact Honkai: Star Rail Wuthering Waves Neverness to Everness Zenless Zone Zero Guihuan Ananta Arknights: Endfield Sea of Remnants Ashfall Evolution Roco Kingdom Roco Kingdom (CN) Aniimo Characters Weapons Items Tier List Map Version Hub Download Guides Disk Sets Redeem Codes Gacha Anomalies English Neverness to Everness Neverness to Everness Neverness to Everness character guides, weapon data, disk set recommendations, redeem codes, and gacha simulator. Now released with 19 playable characters, download help, beginner routes, boss guides, and damage formulas. NTE Official / Wiki Hub Version Hub NTE wiki, official site, characters, codes, and download hub Put 999 Nights, Shinku, Iroi, codes, Steam/download intent, and install help up front. v1.2 live 999 Nights Shinku Iroi Codes Steam/download Topic tracks Continue into related pages Patch and characters Catch 999 Nights, Shinku, and Iroi searches first. v1.2 hub Shinku vs Iroi Pulls and rewards Route codes and gacha strat",
+        "bodyTextLength": 3698,
+        "headingCount": 32,
+        "internalLinkCount": 62,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/en/nte",
+        "status": 200,
+        "title": "NTE Wiki — Characters, Codes, Download & Guides",
+        "description": "Browse NTE characters, 999 Nights, Shinku/Iroi pull planning, redeem codes, download and install help, weapons, disk sets, and beginner guides.",
+        "canonical": "https://gachia.com/en/nte",
+        "alternates": [
+          "en:https://gachia.com/en/nte",
+          "ja:https://gachia.com/ja/nte",
+          "x-default:https://gachia.com/zh/nte",
+          "zh-Hans:https://gachia.com/zh/nte"
+        ],
+        "jsonLdCount": 1,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "NTE Wiki — Characters, Codes, Download &amp; Guides Gachia Genshin Honkai: Star Rail Wuthering Waves Zenless Zone Zero Calendar About 中文 EN 日本語 Home / NTE Gachia · NTE Characters Guides Version Weapons Codes Neverness to Everness NTE wiki, official site, characters, codes, and download hub Start with 999 Nights, Shinku, Iroi, codes, and download/install help, then continue into character, weapon, and build planning. Official and download Verify official entry points, device requirements, and installation help. Download entry Download guide Characters and patch Open the character database, 999 Nights, and current patch hub. Characters v1.2 hub Codes and pulls Connect codes with Shinku and Iroi resource planning. Codes Shinku vs Iroi Browse NTE data Version updates Open reference Weapon database Open reference Disk sets Open reference Tier list Open reference Download and requirements Open reference Region map Open reference Materials Open reference Gacha and pity Open reference Anomalies and bosses Open reference Character builds Open reference Team planning Open reference Character compare Open reference Damage planning Open reference Events Open reference Shop planning Open refere",
+        "bodyTextLength": 3700,
+        "headingCount": 8,
+        "internalLinkCount": 65,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": 2,
+        "headingDelta": -24,
+        "internalLinkDelta": 3,
+        "jsonLdDelta": 1
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": true,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": true
+      }
+    },
+    {
+      "path": "/ja/nte",
+      "production": {
+        "url": "/ja/nte",
+        "status": 200,
+        "title": "NTE Wiki — キャラ、コード、DL、攻略 | Gachia",
+        "description": "異環（NTE）のキャラ図鑑、武器データ、ディスクおすすめ、交換コード、ガチャシミュレーターを提供し、正式リリース済みです。19体のキャラ、DL、入門、ボス攻略、ダメージ計算、育成導線をまとめて確認でき、開服期の準備に役立ちます。版本特集や報酬導線もあります。さらに版本特集、図鑑、攻略、実用ツールへの導線もまとめています。",
+        "canonical": "https://gachia.com/ja/nte",
+        "alternates": [
+          "en:https://gachia.com/en/nte",
+          "ja:https://gachia.com/ja/nte",
+          "x-default:https://gachia.com/zh/nte",
+          "zh-Hans:https://gachia.com/zh/nte"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "",
+        "bodyText": "Gachia 原神 鳴潮 ゼンレスゾーンゼロ Roco 失控進化 全ゲーム カレンダー 概要 検索 ⌘K 中文 English 日本語 ログイン 原神 崩壊：スターレイル 鳴潮 異環 ゼンレスゾーンゼロ 帰環 アナンタ アークナイツ：エンドフィールド シー・オブ・レムナンツ 失控進化 ロコキングダム ロコキングダム（中国版） アニモ キャラクター 武器 アイテム ティアリスト マップ バージョン特集 DL・環境 ガイド ディスクセット 交換コード ガチャ アノマリー 日本語 異環 異環 異環（NTE）のキャラ図鑑、武器データ、ディスクおすすめ、交換コード、ガチャシミュレーターを提供し、正式リリース済みです。19体のキャラ、DL、入門、ボス攻略、ダメージ計算、育成導線をまとめて確認でき、開服期の準備に役立ちます。版本特集や報酬導線もあります。さらに版本特集、図鑑、攻略、実用ツールへの導線もまとめています。 NTE公式 / Wiki導線 バージョン特集 NTE Wiki、公式、キャラ、コード、DL導線 999 Nights、Shinku、Iroi、コード、Steam/DL、インストール導線を前面に出します。 v1.2実装 999 Nights Shinku Iroi コード Steam/DL 特集の展開 関連コンテンツへ進む 版本とキャラ 999 Nights、Shinku、Iroi検索を先に受け止めます。 v1.2特集 Shinku vs Iroi ガチャと報酬 コードとガチャ戦略を実用ページへつなげます。 コード ガチャ戦略 モードと入門 Steam/DLユーザーは公式入口を確認し、999 Nightsの毎日ルートへ。 DLとインストール 999 Nights 優先導線 v1.2特集へ DLとインストール 初心者ガイド ボス攻略 補足Q&amp;A NTEホームで最初に見るべきものは？ まずv1.2 / 999 Nights、その後Shinku、Iroi、コード、DLへ。 👤 キャラクター ⚔️ 武器 📦 アイテム 🏆 ティアリスト 🗺️ マップ 📰 バージョン特集 📋 DL・環境 📖 ガイド 💿 ディスクセット 🎁 交換コード 🎰 ガチャ 🌀 アノマリー NTE キャラWiki入口 主要キャラ、Tier、ガチャ価値を確認してから全キャラWikiへ。 全キャラを見る Chiz Aurelia Skia Haniel Sakiri Nanally 人気ガイド 異環 999 Nights モードガイド：v1.2イベント、Shinku/Iroi資源、毎日優先度 v1.2「999 Nights」のモード、報酬、コード、Shinku、Iroi貯蓄、毎日優先度を整理します。 NTE Shinku vs Iroi Pull Plan: v1.2 99",
+        "bodyTextLength": 2234,
+        "headingCount": 32,
+        "internalLinkCount": 62,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/ja/nte",
+        "status": 200,
+        "title": "NTE Wiki — キャラ、コード、DL、攻略",
+        "description": "NTEのキャラ、999 Nights、Shinku/Iroiガチャ、コード、DLとインストール、武器、ディスク、初心者攻略をまとめて確認できます。",
+        "canonical": "https://gachia.com/ja/nte",
+        "alternates": [
+          "en:https://gachia.com/en/nte",
+          "ja:https://gachia.com/ja/nte",
+          "x-default:https://gachia.com/zh/nte",
+          "zh-Hans:https://gachia.com/zh/nte"
+        ],
+        "jsonLdCount": 1,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "NTE Wiki — キャラ、コード、DL、攻略 Gachia 原神 崩壊：スターレイル 鳴潮 ゼンレスゾーンゼロ カレンダー 概要 中文 EN 日本語 ホーム / NTE Gachia · NTE キャラクター 攻略 バージョン 武器 交換コード Neverness to Everness NTE Wiki、公式、キャラ、コード、DL導線 999 Nights、Shinku、Iroi、コード、DLとインストールを入口に、キャラ、武器、ビルド計画へ進めます。 DLと公式 公式入口、端末要件、インストールを確認。 DL入口 DLガイド キャラとバージョン キャラ図鑑、999 Nights、バージョン目標を確認。 キャラクター図鑑 v1.2特集 コードとガチャ コード、Shinku、Iroiの資源計画へ進む。 コード Shinku vs Iroi 資料入口 バージョン情報 資料を見る 武器データ 資料を見る ディスクセット 資料を見る Tier リスト 資料を見る ダウンロードと動作環境 資料を見る エリアマップ 資料を見る 育成素材 資料を見る ガチャと天井 資料を見る 異象とボス 資料を見る キャラビルド 資料を見る パーティ編成 資料を見る キャラ比較 資料を見る ダメージ計算 資料を見る イベント 資料を見る ショップ計画 資料を見る キャラクター図鑑 資料を見る 攻略百科 資料を見る 交換コード 資料を見る キャラクター図鑑 42 キャラクター 攻略 53 記事 交換コード 8 件 注目キャラクター よく調べられるキャラ、Tier、編成不足を確認してから、属性、役割、ビルド、育成素材を図鑑で比較してください。 Nanally anima · S · Attack Sakiri incantation · S · Support Fadia psyche · S · Attack Lacrimosa chaos · S · Attack Baicang incantation · S · Defense Zero (Male) cosmos · S · Attack Zero (Female) cosmos · S · Attack Hotori cosmos · S · Attack 注目ガイド 異環 999 Nights モードガイド：v1.2イベント、Shinku/Iroi資源、毎日優先度 v1.2「999 Nights」のモード、報酬、コード、Shinku、Iroi貯蓄、毎日優先度を整理します。 NTE Shinku vs Iroi Pull Plan: v1.2 999 Nights Resources, Codes, and Pity Route A v1.2 999 Nights decision guide comparing Shink",
+        "bodyTextLength": 2278,
+        "headingCount": 8,
+        "internalLinkCount": 65,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": 44,
+        "headingDelta": -24,
+        "internalLinkDelta": 3,
+        "jsonLdDelta": 1
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": true,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": true
+      }
+    },
+    {
+      "path": "/zh/nte/characters",
+      "production": {
+        "url": "/zh/nte/characters",
+        "status": 200,
+        "title": "异环角色图鉴 — 全角色Wiki、Build、技能与配队",
+        "description": "按属性、评级和定位快速浏览异环角色图鉴，适合先看抽卡价值、队伍分工和培养优先级。，同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。",
+        "canonical": "https://gachia.com/zh/nte/characters",
+        "alternates": [
+          "en:https://gachia.com/en/nte/characters",
+          "ja:https://gachia.com/ja/nte/characters",
+          "x-default:https://gachia.com/zh/nte/characters",
+          "zh-Hans:https://gachia.com/zh/nte/characters"
+        ],
+        "jsonLdCount": 1,
+        "xRobotsTag": "",
+        "bodyText": "Gachia 原神 鸣潮 绝区零 洛克国际服 失控进化 全部游戏 日历 关于 搜索 ⌘K 中文 English 日本語 登录 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 角色图鉴 武器 材料道具 节奏榜 地图 版本专题 下载配置 攻略百科 光盘套装 兑换码 祈愿 异象 中文 异环 异环角色图鉴 Wiki 共 18 名异环角色，覆盖属性、定位、强度排行、抽卡价值和培养优先级。 如果你搜索的是“异环角色图鉴 / 异环 wiki / 异环角色”，先从 Nanally、Sakiri、Fadia、Chiz、Aurelia 这些高频角色看起，再进入强度排行、兑换码和抽卡规划。 异环 Wiki 首页 回到官网、下载、兑换码、版本和攻略入口 角色强度排行 先看 S/A 分级、定位和培养优先级 Shinku / Iroi 抽卡规划 把当前角色热度和资源保底放在一起判断 S 级 (12) Anima S 娜娜莉 Attack Incantation S 咲里 Support Psyche S 法蒂亚 Attack Incantation S 白藏 Defense Cosmos S 零（男） Attack Cosmos S 零（女） Attack Cosmos S 穗鸟 Attack Chaos S 达芙迪尔 Attack Anima S 九原 Utility Lakshana S 哈索尔 Attack Cosmos S 赤子 Attack Cosmos S 浔 Support A 级 (6) Psyche A 哈尼尔 Support Incantation A 阿德勒 Attack Lakshana A 翳 Attack Cosmos A 埃德加 Support Anima A 薄荷 Support Psyche A 奥蕾莉亚 Support 探索更多游戏 原神 崩坏：星穹铁道 鸣潮 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 Gachia 本站数据来源于游戏客户端，仅供学习参考。所有游戏素材版权归原厂商所有。 Games 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 资源 关于 Gachia 网站地图 API Legal 隐私政策 服务条款 联系我们 © 2026 Gachia. All rights reserved. 异环角色图鉴 — 全角色Wiki、Build、技能与配队",
+        "bodyTextLength": 1126,
+        "headingCount": 26,
+        "internalLinkCount": 39,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/zh/nte/characters",
+        "status": 200,
+        "title": "异环角色图鉴",
+        "description": "NTE character database preview",
+        "canonical": "https://gachia.com/zh/nte/characters",
+        "alternates": [
+          "en:https://gachia.com/en/nte/characters",
+          "ja:https://gachia.com/ja/nte/characters",
+          "x-default:https://gachia.com/zh/nte/characters",
+          "zh-Hans:https://gachia.com/zh/nte/characters"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环角色图鉴 Gachia 原神 崩坏：星穹铁道 鸣潮 绝区零 日历 关于 中文 EN 日本語 首页 / 异环 Gachia · NTE 角色 攻略 版本 武器 兑换码 NTE Database 异环角色图鉴 收录 42 名角色，查看属性、稀有度、定位与对应攻略。 娜娜莉 anima · S · Attack 武器: Plasma 咲里 incantation · S · Support 武器: Gas 法蒂亚 psyche · S · Attack 武器: Synthesis 拉克莉莫萨 chaos · S · Attack 武器: Synthesis 白藏 incantation · S · Defense 武器: Synthesis 零（男） cosmos · S · Attack 武器: Solid 零（女） cosmos · S · Attack 武器: Solid 穗鸟 cosmos · S · Attack 武器: Gas 达芙迪尔 chaos · S · Attack 武器: Liquid 九原 anima · S · Utility 武器: Solid 哈尼尔 psyche · A · Support 武器: Solid 阿德勒 incantation · A · Attack 武器: Synthesis 翳 lakshana · A · Attack 武器: Gas 埃德加 cosmos · A · Support 武器: Liquid 薄荷 anima · A · Support 武器: Liquid 奈莉 anima · A · Support 武器: Gas 梅露拉 lakshana · A · Attack 武器: Plasma 阿尔法德 lakshana · A · TBD 武器: Liquid 泰格多 cosmos · A · Support 武器: Synthesis 哈索尔 lakshana · S · Attack 武器: Plasma 赤子 cosmos · S · Attack 武器: Gas 莉莉娜 cosmos · S · TBD 武器: Solid 凛子 incantation · A · Attack 武器: Liquid 密斯莫 chaos · A · Support 武器: Synthesis 沁红 anima · A · Attack 武器: Plasma 尼察 psyche · A · Support 武器: Solid 黑鸟 chaos · S · Attack 武器: Gas 明虎 anima · S · Attack 武器: Solid 赤音 incantation · S · Attack 武器: Plasma 詹森 psyche · A · Defense 武器: Solid 伊利卡 lak",
+        "bodyTextLength": 1633,
+        "headingCount": 1,
+        "internalLinkCount": 52,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": 507,
+        "headingDelta": -25,
+        "internalLinkDelta": 13,
+        "jsonLdDelta": -1
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": true,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": false
+      }
+    },
+    {
+      "path": "/zh/nte/characters/nanally",
+      "production": {
+        "url": "/zh/nte/characters/nanally",
+        "status": 200,
+        "title": "娜娜莉配装攻略 — 异环角色、武器与配队推荐",
+        "description": "娜娜莉（Anima Plasma）配装攻略：角色定位、推荐武器、套装、材料、技能、配队和培养优先级。SS Tier。 Eibon古董店的明星店员，Coluccis家族的未来一代目。开朗大方、慷慨善良，参与了多次重大异象收容行动。，同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。",
+        "canonical": "https://gachia.com/zh/nte/characters/nanally",
+        "alternates": [
+          "en:https://gachia.com/en/nte/characters/nanally",
+          "ja:https://gachia.com/ja/nte/characters/nanally",
+          "x-default:https://gachia.com/zh/nte/characters/nanally",
+          "zh-Hans:https://gachia.com/zh/nte/characters/nanally"
+        ],
+        "jsonLdCount": 1,
+        "xRobotsTag": "",
+        "bodyText": "娜娜莉配装攻略 — 异环角色、武器与配队推荐 Gachia 原神 鸣潮 绝区零 洛克国际服 失控进化 全部游戏 日历 关于 搜索 ⌘K 中文 English 日本語 登录 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 角色图鉴 武器 材料道具 节奏榜 地图 版本专题 下载配置 攻略百科 光盘套装 兑换码 祈愿 异象 中文 异环 娜娜莉 创生 S -Rank 进攻 等离子 SS Eibon古董店的明星店员，Coluccis家族的未来一代目。开朗大方、慷慨善良，参与了多次重大异象收容行动。 阵营 : Eibon Antique Shop CV: 宋媛媛 获取方式 : 限定祈愿 开服最强限S主C，数值独一档，短期不会退役 技能 [ 普通攻击 ] 柯林斯秘传技法 娜娜莉使用巨型拳套进行连续攻击，造成灵系属性伤害。包含地面连击与空中连击。 [ 战技 ] 柯林斯·嗷呜术 10s | 40 能量 发射灵系属性弹幕，造成5次远程灵系伤害，并进入「一代目的权柄」状态，提升暴击伤害。 [ 终结技 ] 柯林斯·终极术 80 能量 召唤副手发动终极攻击，造成7次远程灵系属性伤害。 [ 被动 1 ] 不止「一腔」的热血 ... [ 被动 2 ] 绝对「公正」的决斗 ... [ QTE ] 天降正义 旋转飞踢，造成1次远程灵系伤害 推荐配装 最佳弧盘 预备备 光盘套装 森林萤火之心 主属性 攻击力% / 灵属性伤害加成 / 暴击率 副属性优先 暴击率 &gt; 暴击伤害 &gt; 攻击力% &gt; 元素精通 详细配装 创生主C输出流 以暴击和攻击力为核心的创生反应主C Build，搭配九原聚怪+早雾增伤 主属性 : 攻击力% 副属性 : 暴击率, 暴击伤害, 攻击力%, 充能效率 推荐配队 娜娜莉最佳配队 以娜娜莉为核心输出的队伍，搭配辅助角色提供增益和元素反应触发，最大化娜娜莉的伤害输出。 娜娜莉 九原 薄荷 nelly Eibon Antique Shop阵容 以Eibon Antique Shop成员为主的队伍，利用阵营加成和角色间的协同效果。 娜娜莉 咲里 零（男） 穗鸟 养成材料 等级 材料 1-10 basic-hunter-guide × 3 credits × 2000 11-20 basic-hunter-guide × 5 anima-fragment × 3 credits × 4000 21-30 advanced-hunter-guide × 4 anima-fragment × 5 credits × 8000 31-40 advanced-hunter-guide × 6 anima-crystal × 3 pioneer-permit × 2 credits",
+        "bodyTextLength": 2087,
+        "headingCount": 20,
+        "internalLinkCount": 31,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/zh/nte/characters/nanally",
+        "status": 200,
+        "title": "娜娜莉 — NTE",
+        "description": "Eibon古董店的明星店员，Coluccis家族的未来一代目。开朗大方、慷慨善良，参与了多次重大异象收容行动。",
+        "canonical": "https://gachia.com/zh/nte/characters/nanally",
+        "alternates": [
+          "en:https://gachia.com/en/nte/characters/nanally",
+          "ja:https://gachia.com/ja/nte/characters/nanally",
+          "x-default:https://gachia.com/zh/nte/characters/nanally",
+          "zh-Hans:https://gachia.com/zh/nte/characters/nanally"
+        ],
+        "jsonLdCount": 1,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "娜娜莉 — NTE Gachia 原神 崩坏：星穹铁道 鸣潮 绝区零 日历 关于 中文 EN 日本語 首页 / 异环 Gachia · NTE 角色 攻略 版本 武器 兑换码 返回角色图鉴 NTE Character 娜娜莉 属性 anima 稀有度 S 定位 进攻 武器类型 等离子 角色简介 Eibon古董店的明星店员，Coluccis家族的未来一代目。开朗大方、慷慨善良，参与了多次重大异象收容行动。 阵营 : Eibon Antique Shop 配音 : 宋媛媛 获取方式 : 限定祈愿 强度参考 开服最强限S主C，数值独一档，短期不会退役 技能资料 柯林斯秘传技法 娜娜莉使用巨型拳套进行连续攻击，造成灵系属性伤害。包含地面连击与空中连击。 柯林斯·嗷呜术 10s · 40 能量 发射灵系属性弹幕，造成5次远程灵系伤害，并进入「一代目的权柄」状态，提升暴击伤害。 柯林斯·终极术 80 能量 召唤副手发动终极攻击，造成7次远程灵系属性伤害。 天降正义 旋转飞踢，造成1次远程灵系伤害 不止「一腔」的热血 ... 绝对「公正」的决斗 ... 推荐配装 推荐武器 预备备 推荐驱动盘 森林萤火之心 主词条 沙漏 : 攻击力% 杯子 : 灵属性伤害加成 头冠 : 暴击率 副词条优先级 暴击率 · 暴击伤害 · 攻击力% · 元素精通 详细配装 创生主C输出流 以暴击和攻击力为核心的创生反应主C Build，搭配九原聚怪+早雾增伤 主词条 : 攻击力% 副词条优先级 : 暴击率 · 暴击伤害 · 攻击力% · 充能效率 娜娜莉创生队核心，九原聚怪+早雾增伤+主角即瞬环合。0觉无治疗，九原1觉补奶。 养成材料 1-10 basic-hunter-guide x3 · credits x2000 11-20 basic-hunter-guide x5 · anima-fragment x3 · credits x4000 21-30 advanced-hunter-guide x4 · anima-fragment x5 · credits x8000 31-40 advanced-hunter-guide x6 · anima-crystal x3 · pioneer-permit x2 · credits x16000 41-50 精英猎手指南 x4 · anima-crystal x5 · expert-permit x3 · credits x32000 51-60 精英猎手指南 x8 · boss-anima x3 · master-permit x4 · credits x64000 技能材料 : manual-attack x12 · basic-hunter-guide x15 · credits x200000 推荐配队 娜娜莉最佳配队 以娜娜莉为核心输",
+        "bodyTextLength": 1793,
+        "headingCount": 9,
+        "internalLinkCount": 26,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": -294,
+        "headingDelta": -11,
+        "internalLinkDelta": -5,
+        "jsonLdDelta": 0
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": true,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": true
+      }
+    },
+    {
+      "path": "/zh/nte/guides",
+      "production": {
+        "url": "/zh/nte/guides",
+        "status": 200,
+        "title": "异环攻略大全 — 新手指南/配队/角色攻略",
+        "description": "异环攻略百科，包含下载安装、新手指南、角色培养、Boss 攻略、伤害公式、弧盘推荐和版本专题，帮助你快速了解当前版本最值得关注的内容。，同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。",
+        "canonical": "https://gachia.com/zh/nte/guides",
+        "alternates": [
+          "en:https://gachia.com/en/nte/guides",
+          "ja:https://gachia.com/ja/nte/guides",
+          "x-default:https://gachia.com/zh/nte/guides",
+          "zh-Hans:https://gachia.com/zh/nte/guides"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "",
+        "bodyText": "Gachia 原神 鸣潮 绝区零 洛克国际服 失控进化 全部游戏 日历 关于 搜索 ⌘K 中文 English 日本語 登录 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 角色图鉴 武器 材料道具 节奏榜 地图 版本专题 下载配置 攻略百科 光盘套装 兑换码 祈愿 异象 中文 异环 攻略百科 共 53 篇攻略 热门攻略 版本热词入口 探索攻略 拍照 NTE 拍照模式攻略：相机操作、滤镜、姿势、天气和最佳拍照点 NTE 拍照模式攻略，覆盖相机入口、快捷键、滤镜、角色姿势、时间/天气、景深、Hethereau 拍照点和截图构图技巧。 战斗 伤害 伤害计算公式详解 深入解析异环的伤害计算公式，了解各属性如何影响最终伤害，帮助你优化角色装备和配队。 战斗攻略 BOSS 世界BOSS挑战攻略 各世界BOSS的打法技巧和推荐阵容，含元素弱点和掉落材料一览。 版本攻略 ( 4 ) 新手指南 ( 10 ) 战斗攻略 ( 8 ) 进阶攻略 ( 11 ) 探索攻略 ( 5 ) 评测 ( 1 ) 排行 ( 3 ) 装备系统 ( 3 ) 角色攻略 ( 4 ) 刷取 ( 2 ) 攻略指南 ( 1 ) 活动攻略 ( 1 ) 版本攻略 异环 1.2「999 Nights」版本专题：Shinku、Iroi 与抽卡规划 汇总异环 1.2「999 Nights」版本重点：Shinku 当前池、Iroi 下期焦点、活动路线、兑换码检查和抽卡资源规划。 版本攻略 1.2 999 Nights Shinku 异环 Shinku vs Iroi 抽取规划：1.2「999 Nights」资源、兑换码与保底路线 把 1.2「999 Nights」里的 Shinku 当前池、Iroi 预热、兑换码、Steam/download 入坑与保底资源放在同一张决策表里。 版本攻略 Shinku Iroi 999 Nights 异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级 把 1.2「999 Nights」模式、活动奖励、兑换码、Shinku 当前池和 Iroi 预留资源拆成每日执行路线。 版本攻略 999 Nights v1.2 Shinku 异环 Iroi 预热期准备指南：999 Nights 后资源、Shinku 取舍、兑换码和每日清单 面向 Iroi 预热和 1.2 后半搜索，整理 Shinku 当前池后的资源止损、兑换码检查、活动每日路线和保底预留。 版本攻略 Iroi Shinku 999 Nights 新手指南 异环官网入口与下载安装：全平台下载地址、安装教程与配置要求 异环官网入口与全平台下载安装指南，包括 PC、Android、iOS、Mac、PS5、鸿",
+        "bodyTextLength": 5228,
+        "headingCount": 75,
+        "internalLinkCount": 74,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/zh/nte/guides",
+        "status": 200,
+        "title": "异环攻略百科",
+        "description": "NTE guides preview",
+        "canonical": "https://gachia.com/zh/nte/guides",
+        "alternates": [
+          "en:https://gachia.com/en/nte/guides",
+          "ja:https://gachia.com/ja/nte/guides",
+          "x-default:https://gachia.com/zh/nte/guides",
+          "zh-Hans:https://gachia.com/zh/nte/guides"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "Gachia 原神 崩坏：星穹铁道 鸣潮 绝区零 日历 关于 中文 EN 日本語 首页 / 异环 Gachia · NTE 角色 攻略 版本 武器 兑换码 NTE Guides 异环攻略百科 安装、版本、抽卡与养成攻略，共 53 篇内容。 异环 1.2「999 Nights」版本专题：Shinku、Iroi 与抽卡规划 汇总异环 1.2「999 Nights」版本重点：Shinku 当前池、Iroi 下期焦点、活动路线、兑换码检查和抽卡资源规划。 异环 1.2「999 Nights」版本专题 1.2 的搜索热度集中在 Shinku、Iroi、999 Nights、兑换码和抽卡机制。这个专题的目标不是堆传闻，而是把玩家真正需要的入口整理成一条清晰路线：先确认版本活动，再看当前卡池，最后决定资源是否要留给下一期。 版本重点 - 版本主题：1.2「999 Nights」。 - 当前焦点：Shinku 是当前阶段最容易带来搜索和抽卡讨论的角色关键词。 - 下一期焦点：Iroi ... 异环官网入口与下载安装：全平台下载地址、安装教程与配置要求 异环官网入口与全平台下载安装指南，包括 PC、Android、iOS、Mac、PS5、鸿蒙各平台的下载地址、安装方法、配置要求和注意事项。 异环（Neverness to Everness）现已正式上线，免费游玩！国服已于2026年4月23日上午10:00率先开启，全球服将于2026年4月29日正式上线。游戏覆盖PC、PS5、iOS、Android四大平台，本文提供各平台的完整下载安装指南。 游戏概况 异环是一款免费游玩（Free-to-Play）的超自然都市开放世界动作RPG，由完美世界旗下Hotta Studio采用虚幻引擎5开发。游戏支持全平台数据互通，同一账号 ... 新手入门完全指南 从零开始的异环新手教程，涵盖基础系统、资源分配、角色培养优先级。 欢迎来到异环（Neverness to Everness）！本指南将帮助你快速上手游戏的核心系统，从创建角色到组建第一支强力队伍，一步步带你走进这个充满奇幻色彩的开放世界。 基础系统介绍 异环是一款开放世界动作RPG游戏，拥有丰富的角色收集和战斗系统。游戏采用元素反应机制，不同属性角色之间的配合是战斗的关键。游戏的核心玩法围绕角色养成、元素反应战斗、开放世界探索三大系统展开。 初次进入游戏后，建议先完成教学关卡，了解基本的移动、 ... 角色升级材料优先级指南 详解各等级阶段的角色升级材料需求，包含突破材料、经验书和金币消耗，帮助你高效规划体力分配和刷本路线。 角色升级是提升战斗力的基础。了解不同阶段的材料需求可以帮助你更高效地分配体力，避免在错误的阶段浪费宝贵资源。 1-20级：快速过渡期 这个阶段消耗的材料较少，可以通过主线和探索自然获取。建议快速推进到20级解锁更多",
+        "bodyTextLength": 15224,
+        "headingCount": 1,
+        "internalLinkCount": 63,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": 9996,
+        "headingDelta": -74,
+        "internalLinkDelta": -11,
+        "jsonLdDelta": 0
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": true,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": true
+      }
+    },
+    {
+      "path": "/zh/nte/guides/999-nights-mode-guide",
+      "production": {
+        "url": "/zh/nte/guides/999-nights-mode-guide",
+        "status": 200,
+        "title": "异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级",
+        "description": "异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级是异环的详细攻略，包含技巧、策略、FAQ、版本要点和实战思路。 额外摘要：把 1.2「999 Nights」模式、活动奖励、兑换码、Shinku 当前池和 Iroi 预留资源拆成每日执行路线。，同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。",
+        "canonical": "https://gachia.com/zh/nte/guides/999-nights-mode-guide",
+        "alternates": [
+          "en:https://gachia.com/en/nte/guides/999-nights-mode-guide",
+          "x-default:https://gachia.com/zh/nte/guides/999-nights-mode-guide",
+          "zh-Hans:https://gachia.com/zh/nte/guides/999-nights-mode-guide"
+        ],
+        "jsonLdCount": 4,
+        "xRobotsTag": "",
+        "bodyText": "异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级 Gachia 原神 鸣潮 绝区零 洛克国际服 失控进化 全部游戏 日历 关于 搜索 ⌘K 中文 English 日本語 登录 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 角色图鉴 武器 材料道具 节奏榜 地图 版本专题 下载配置 攻略百科 光盘套装 兑换码 祈愿 异象 中文 异环 攻略百科 / 版本攻略 / 异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级 异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级 把 1.2「999 Nights」模式、活动奖励、兑换码、Shinku 当前池和 Iroi 预留资源拆成每日执行路线。 版本攻略 999 Nights v1.2 Shinku Iroi 兑换码 活动 抽卡规划 异环攻略参考图 先看结论 1.2「999 Nights」最重要的不是把所有内容一次清完，而是每天把活动奖励、兑换码、日常资源和抽卡目标串起来。如果你在 Shinku 和 Iroi 之间摇摆，999 Nights 的资源应该先服务“保底路线”，再服务强度追逐。 每天上线先做什么 优先级 动作 为什么 1 检查活动任务 限时奖励错过就少一段资源 2 领取兑换码和邮件 补 Shinku/Iroi 保底缺口 3 清日常与体力 稳定换取养成材料 4 推 999 Nights 进度 解锁阶段奖励和模式资源 5 再决定抽卡 避免先抽后发现资源不够 999 Nights 怎么理解 999 Nights 更像版本活动与模式汇总页。它会把剧情、挑战、奖励和角色热度集中到同一时期，因此用户搜索时经常同时出现： 999 Nights 怎么玩。 Shinku 值不值得抽。 Iroi 要不要留。 兑换码有没有新码。 Steam/download 新玩家现在能不能追。 页面不要把这些问题混成一团，最好的结构是先讲模式，再讲资源，再讲抽卡决策。 Shinku 当前期怎么安排 如果你想抽 Shinku，先确认三件事： 当前队伍是否真的缺她的定位。 活动和兑换码补完后是否够保底。 抽完后是否还保得住 Iroi 或后续角色。 如果你只差小额资源，可以先补活动、日常和兑换码；如果离保底很远，不要把 999 Nights 的奖励想象成万能补票。 Iroi 预留路线 想留 Iroi 的玩家，999 Nights 期间要控制冲动消费： 当前池只做必要尝试。 武器和外观消费先降级。 每天记录新增资源。 等角色实测和后续公告再决定是否转向。 新玩家追赶路线 刚下载入坑的玩家建议按这个顺序： /nte/guides",
+        "bodyTextLength": 2455,
+        "headingCount": 23,
+        "internalLinkCount": 24,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/zh/nte/guides/999-nights-mode-guide",
+        "status": 200,
+        "title": "异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级 — NTE",
+        "description": "把 1.2「999 Nights」模式、活动奖励、兑换码、Shinku 当前池和 Iroi 预留资源拆成每日执行路线。",
+        "canonical": "https://gachia.com/zh/nte/guides/999-nights-mode-guide",
+        "alternates": [
+          "en:https://gachia.com/en/nte/guides/999-nights-mode-guide",
+          "ja:https://gachia.com/ja/nte/guides/999-nights-mode-guide",
+          "x-default:https://gachia.com/zh/nte/guides/999-nights-mode-guide",
+          "zh-Hans:https://gachia.com/zh/nte/guides/999-nights-mode-guide"
+        ],
+        "jsonLdCount": 1,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级 — NTE Gachia 原神 崩坏：星穹铁道 鸣潮 绝区零 日历 关于 中文 EN 日本語 首页 / 异环 Gachia · NTE 角色 攻略 版本 武器 兑换码 返回攻略列表 NTE Guide 异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级 把 1.2「999 Nights」模式、活动奖励、兑换码、Shinku 当前池和 Iroi 预留资源拆成每日执行路线。 先看结论 1.2「999 Nights」最重要的不是把所有内容一次清完，而是每天把活动奖励、兑换码、日常资源和抽卡目标串起来。如果你在 Shinku 和 Iroi 之间摇摆，999 Nights 的资源应该先服务“保底路线”，再服务强度追逐。 每天上线先做什么 优先级 动作 为什么 1 检查活动任务 限时奖励错过就少一段资源 2 领取兑换码和邮件 补 Shinku/Iroi 保底缺口 3 清日常与体力 稳定换取养成材料 4 推 999 Nights 进度 解锁阶段奖励和模式资源 5 再决定抽卡 避免先抽后发现资源不够 999 Nights 怎么理解 999 Nights 更像版本活动与模式汇总页。它会把剧情、挑战、奖励和角色热度集中到同一时期，因此用户搜索时经常同时出现： 999 Nights 怎么玩。 Shinku 值不值得抽。 Iroi 要不要留。 兑换码有没有新码。 Steam/download 新玩家现在能不能追。 页面不要把这些问题混成一团，最好的结构是先讲模式，再讲资源，再讲抽卡决策。 Shinku 当前期怎么安排 如果你想抽 Shinku，先确认三件事： 当前队伍是否真的缺她的定位。 活动和兑换码补完后是否够保底。 抽完后是否还保得住 Iroi 或后续角色。 如果你只差小额资源，可以先补活动、日常和兑换码；如果离保底很远，不要把 999 Nights 的奖励想象成万能补票。 Iroi 预留路线 想留 Iroi 的玩家，999 Nights 期间要控制冲动消费： 当前池只做必要尝试。 武器和外观消费先降级。 每天记录新增资源。 等角色实测和后续公告再决定是否转向。 新玩家追赶路线 刚下载入坑的玩家建议按这个顺序： /nte/guides/download-install-guide：先解决下载、设备和账号。 /nte/redeem-codes：领有效兑换码。 /nte/guides/beginner-guide：理解基础系统。 /nte/version：看 1.2 版本路线。 /nte/guides/shinku-iroi-pull-plan：决定 Shinku 还是 Iroi。 常见误区 误区 1：活动奖励够补所有抽卡缺口 不一定。活动",
+        "bodyTextLength": 1633,
+        "headingCount": 13,
+        "internalLinkCount": 13,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": -822,
+        "headingDelta": -10,
+        "internalLinkDelta": -11,
+        "jsonLdDelta": -3
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": true,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": true
+      }
+    },
+    {
+      "path": "/zh/nte/version",
+      "production": {
+        "url": "/zh/nte/version",
+        "status": 200,
+        "title": "异环 1.2 版本专题：下载、卡池与兑换码",
+        "description": "追踪异环 1.2 999 Nights、Shinku 当前池、Iroi 后续期、Steam/download、兑换码、活动资源和抽卡规划。",
+        "canonical": "https://gachia.com/zh/nte/version",
+        "alternates": [
+          "en:https://gachia.com/en/nte/version",
+          "ja:https://gachia.com/ja/nte/version",
+          "x-default:https://gachia.com/zh/nte/version",
+          "zh-Hans:https://gachia.com/zh/nte/version"
+        ],
+        "jsonLdCount": 2,
+        "xRobotsTag": "",
+        "bodyText": "异环 1.2 版本专题：下载、卡池与兑换码 Gachia 原神 鸣潮 绝区零 洛克国际服 失控进化 全部游戏 日历 关于 搜索 ⌘K 中文 English 日本語 登录 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 角色图鉴 武器 材料道具 节奏榜 地图 版本专题 下载配置 攻略百科 光盘套装 兑换码 祈愿 异象 中文 异环 版本入坑 版本专题 异环 1.2「999 Nights」Shinku / Iroi 专题 整理 1.2「999 Nights」上线后、Shinku 当前期、Iroi 后续期、兑换码、Steam/download 与抽卡机制等重点问题。 1.2 版本、Shinku/Iroi 抽取、999 Nights 模式、兑换码和下载入口会持续整理。 持续对接近期热搜与版本节点 版本快照 9 月 codes 与 banner calendar 信号增强，重点是 Linko、Hotori、active/expired codes、redeem path 和来源分层。 当前版本 : September codes / banner calendar 发布日期 : 2026-09-07 live 官方 + 公开采样 What changed NTE 从泛活动路线改为 codes、banner calendar 和来源等级路线。 先做什么 先区分 active、expired、unknown 兑换码，再看 Linko/Hotori 日历。 攻略站来源不能直接写成官方日期，页面要保留来源标签。 相关行动 下载 兑换码 角色 9月日历 最后更新 : 2026-09-07 关键节点 当前版本快速概览 1.2 已上线 点击下方专题和攻略查看完整解析。 999 Nights 点击下方专题和攻略查看完整解析。 Shinku 点击下方专题和攻略查看完整解析。 Iroi 点击下方专题和攻略查看完整解析。 高频搜索入口 集中整理官网、下载、云游戏、配置、兑换码和核心机制问题。 快速入口 官网 / 下载 集中查看官网、下载、安装和设备问题。 兑换码 1.2 版本码和活动奖励入口。 Shinku / Iroi 角色抽取、版本活动和抽卡机制。 继续往下看 按版本重点继续查看角色、配装、工具和机制页。 继续深入 角色 把角色定位和版本关键词先连起来，再看培养路线。 角色图鉴 武器图鉴 异能 用异常机制、异常培养和属性理解来判断版本重点。 异能体系 套装图鉴 资源 开局资源、抽卡和兑换码适合放在一起看。 抽卡记录 兑换码 机制 攻略专题会继续整理玩法、下载和版本信息。 版本专题 攻略专题 专题推荐 对应高频问题 异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资",
+        "bodyTextLength": 1988,
+        "headingCount": 19,
+        "internalLinkCount": 46,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/zh/nte/version",
+        "status": 200,
+        "title": "异环 1.2 版本专题：下载、卡池与兑换码",
+        "description": "追踪异环 1.2 999 Nights、Shinku 当前池、Iroi 后续期、Steam/download、兑换码、活动资源和抽卡规划。",
+        "canonical": "https://gachia.com/zh/nte/version",
+        "alternates": [
+          "en:https://gachia.com/en/nte/version",
+          "ja:https://gachia.com/ja/nte/version",
+          "x-default:https://gachia.com/zh/nte/version",
+          "zh-Hans:https://gachia.com/zh/nte/version"
+        ],
+        "jsonLdCount": 1,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环 1.2 版本专题：下载、卡池与兑换码 Gachia 原神 崩坏：星穹铁道 鸣潮 绝区零 日历 关于 中文 EN 日本語 首页 / 异环 Gachia · NTE 角色 攻略 版本 武器 兑换码 NTE v1.2 1.2「999 Nights」Shinku / Iroi 专题 整理 1.2「999 Nights」上线后、Shinku 当前期、Iroi 后续期、兑换码、Steam/download 与抽卡机制等重点问题。 1.2 已上线 999 Nights Shinku Iroi 版本路线 999 Nights 先处理每日优先级、活动奖励与资源缺口。 Shinku / Iroi 结合队伍缺口、保底与后续目标安排资源。 Steam / Download 确认官方入口、设备要求和安装问题。 相关攻略 异环 1.2「999 Nights」版本专题：Shinku、Iroi 与抽卡规划 汇总异环 1.2「999 Nights」版本重点：Shinku 当前池、Iroi 下期焦点、活动路线、兑换码检查和抽卡资源规划。 版本更新日志 异环版本更新历史汇总，记录每个版本的主要内容更新、平衡性调整和新功能。 异环 Shinku vs Iroi 抽取规划：1.2「999 Nights」资源、兑换码与保底路线 把 1.2「999 Nights」里的 Shinku 当前池、Iroi 预热、兑换码、Steam/download 入坑与保底资源放在同一张决策表里。 异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级 把 1.2「999 Nights」模式、活动奖励、兑换码、Shinku 当前池和 Iroi 预留资源拆成每日执行路线。 异环 Iroi 预热期准备指南：999 Nights 后资源、Shinku 取舍、兑换码和每日清单 面向 Iroi 预热和 1.2 后半搜索，整理 Shinku 当前池后的资源止损、兑换码检查、活动每日路线和保底预留。 异环 8/31-9/14 活动日历：999 Nights、Clash、Iroi/Shinku、兑换码和 Steam/download 路线 整理 2026-08-31 至 2026-09-14 活动窗口，把 999 Nights、Clash、Iroi/Shinku、兑换码和下载问题串起来。 常见问题 异环 1.2 现在最该看什么？ 先看 999 Nights 版本专题，再按 Shinku 当前池、Iroi 预留、兑换码和下载安装顺序往下走。 搜索 Steam/download 的用户应该去哪？ 先进入下载安装页确认官方入口和设备要求，再回到版本页看角色、活动资源和抽卡规划。 活动清单 抽卡规划 兑换码 Gachia 是独立的游戏资料站点，与游戏发行方无隶属关系。 关于 联系我们 隐私政策 服务",
+        "bodyTextLength": 1202,
+        "headingCount": 4,
+        "internalLinkCount": 22,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": -786,
+        "headingDelta": -15,
+        "internalLinkDelta": -24,
+        "jsonLdDelta": -1
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": true,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": true
+      }
+    },
+    {
+      "path": "/zh/nte/weapons",
+      "production": {
+        "url": "/zh/nte/weapons",
+        "status": 200,
+        "title": "异环武器图鉴 — 外观法杖Wiki、特效与获取方式",
+        "description": "按弧盘类型、评级和适配角色快速浏览异环弧盘图鉴，适合先看核心加成、推荐角色和配装取舍。，同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。",
+        "canonical": "https://gachia.com/zh/nte/weapons",
+        "alternates": [
+          "en:https://gachia.com/en/nte/weapons",
+          "ja:https://gachia.com/ja/nte/weapons",
+          "x-default:https://gachia.com/zh/nte/weapons",
+          "zh-Hans:https://gachia.com/zh/nte/weapons"
+        ],
+        "jsonLdCount": 1,
+        "xRobotsTag": "",
+        "bodyText": "异环武器图鉴 — 外观法杖Wiki、特效与获取方式 Gachia 原神 鸣潮 绝区零 洛克国际服 失控进化 全部游戏 日历 关于 搜索 ⌘K 中文 English 日本語 登录 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 角色图鉴 武器 材料道具 节奏榜 地图 版本专题 下载配置 攻略百科 光盘套装 兑换码 祈愿 异象 中文 异环 弧盘 共 42 件弧盘 按弧盘类型、评级和适配角色快速浏览异环弧盘图鉴，适合先看核心加成、推荐角色和配装取舍。 S ( 21 ) S 引爆全场 固体 ATK 512 27.5% atkPct 后台时活跃角色ATK+10%+2%/层(最多4层)，每2秒触发1次，站场时重置。站场时灵魂伤害+12%+2%/层(最多10层)，每0.3秒触发1次，切换角色时重置。 专属 : haniel S 茶花会 合成 ATK 666 12% critRate HP不因受伤减少时暴伤+12%~20%持续5秒，最多4层。解锁弧盘·静默庭院：消耗5%当前HP，随机发动苛责(5次咒术伤害24%~40%ATK)或絮叨(6次咒术伤害18%~30%ATK，末次双倍)(CD 25秒)。 专属 : baicang S 思考喵 气体 ATK 512 44% critDmg 每持有10万源泉，宇宙伤害+2.5%~4.5%，最多10层。 专属 : xiaozhi S 休息日 固体 ATK 512 33% chargeEff ATK+30%~50%。解锁弧盘·日蚀：创造40秒日蚀，期间击败敌人回复6~10终结能量，最多5次(CD 300秒)。 专属 : zero-male S 永恒圆舞曲 合成 ATK 424 41.25% hpPct 最大HP+20%~32%。施放终结技后精神伤害+10%~18%持续10秒。 专属 : fadia S 好狗狗走四方 气体 ATK 474 45% atkPct 充能效率+18%~30%。施放终结技后全队ATK+10%~16%持续20秒。若敌人被终结技控制，额外+6%~10%。 S 海特洛的安宁 固体 ATK 512 27.5% atkPct ATK+15%~25%。对Boss伤害+15%~25%。解锁弧盘·威须：召唤威须助战，每击造成100%~200%ATK伤害，持续30秒(CD 60秒)。 S 踏越时间行军 固体 ATK 570 24% critRate ATK+16%~32%。施放变轨后每秒获得1层沙漏(最多15层)，施放终结技消耗所有沙漏，每层终结暴伤+3%~6%。15层时额外无视12%~24%防御持续3秒。 S 焰魂狂飙 plasma ATK 666 24% critDmg 施放终结技后变轨伤害+22.5%~37.5%持续10秒。站场时每施放",
+        "bodyTextLength": 4031,
+        "headingCount": 51,
+        "internalLinkCount": 18,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/zh/nte/weapons",
+        "status": 200,
+        "title": "异环武器图鉴",
+        "description": "NTE weapon database preview",
+        "canonical": "https://gachia.com/zh/nte/weapons",
+        "alternates": [
+          "en:https://gachia.com/en/nte/weapons",
+          "ja:https://gachia.com/ja/nte/weapons",
+          "x-default:https://gachia.com/zh/nte/weapons",
+          "zh-Hans:https://gachia.com/zh/nte/weapons"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "Gachia 原神 崩坏：星穹铁道 鸣潮 绝区零 日历 关于 中文 EN 日本語 首页 / 异环 Gachia · NTE 角色 攻略 版本 武器 兑换码 NTE Database 异环武器图鉴 收录 42 件武器，查看类型、基础攻击与效果说明。 引爆全场 S · solid · 512 ATK 后台时活跃角色ATK+10%+2%/层(最多4层)，每2秒触发1次，站场时重置。站场时灵魂伤害+12%+2%/层(最多10层)，每0.3秒触发1次，切换角色时重置。 茶花会 S · synthesis · 666 ATK HP不因受伤减少时暴伤+12%~20%持续5秒，最多4层。解锁弧盘·静默庭院：消耗5%当前HP，随机发动苛责(5次咒术伤害24%~40%ATK)或絮叨(6次咒术伤害18%~30%ATK，末次双倍)(CD 25秒)。 思考喵 S · gas · 512 ATK 每持有10万源泉，宇宙伤害+2.5%~4.5%，最多10层。 休息日 S · solid · 512 ATK ATK+30%~50%。解锁弧盘·日蚀：创造40秒日蚀，期间击败敌人回复6~10终结能量，最多5次(CD 300秒)。 永恒圆舞曲 S · synthesis · 424 ATK 最大HP+20%~32%。施放终结技后精神伤害+10%~18%持续10秒。 好狗狗走四方 S · gas · 474 ATK 充能效率+18%~30%。施放终结技后全队ATK+10%~16%持续20秒。若敌人被终结技控制，额外+6%~10%。 海特洛的安宁 S · solid · 512 ATK ATK+15%~25%。对Boss伤害+15%~25%。解锁弧盘·威须：召唤威须助战，每击造成100%~200%ATK伤害，持续30秒(CD 60秒)。 踏越时间行军 S · solid · 570 ATK ATK+16%~32%。施放变轨后每秒获得1层沙漏(最多15层)，施放终结技消耗所有沙漏，每层终结暴伤+3%~6%。15层时额外无视12%~24%防御持续3秒。 焰魂狂飙 S · plasma · 666 ATK 施放终结技后变轨伤害+22.5%~37.5%持续10秒。站场时每施放变轨伤害+15%~25%，最多2层。 预备备 S · plasma · 570 ATK ATK+15%~30%。施放变轨或终结技后普攻和暴击反击伤害+15%~30%持续15秒，最多2层。变轨获得左虎符，终结技获得右虎符。15秒内获得另一虎符时解锁弧盘·猛虎特刊：对Boss伤害+10%~20%持续10秒。 现实避难所 S · solid · 570 ATK 灵魂伤害+15%~25%。附身伤害+10%~15%。施放终结技后附身伤害提升至20%~30%持续6秒。 鲸之歌 S · plasma · 512 ATK ATK+12%~20%。对破碎",
+        "bodyTextLength": 3262,
+        "headingCount": 1,
+        "internalLinkCount": 52,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": -769,
+        "headingDelta": -50,
+        "internalLinkDelta": 34,
+        "jsonLdDelta": -1
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": true,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": false
+      }
+    },
+    {
+      "path": "/zh/nte/redeem-codes",
+      "production": {
+        "url": "/zh/nte/redeem-codes",
+        "status": 200,
+        "title": "异环兑换码大全｜最新礼包码与领取方法",
+        "description": "异环兑换码大全，追踪官方直播、预约奖励、活动福利和可用礼包码，帮助你在开服和后续版本第一时间领取资源。",
+        "canonical": "https://gachia.com/zh/nte/redeem-codes",
+        "alternates": [],
+        "jsonLdCount": 0,
+        "xRobotsTag": "",
+        "bodyText": "异环兑换码大全｜最新礼包码与领取方法 Gachia 原神 鸣潮 绝区零 洛克国际服 失控进化 全部游戏 日历 关于 搜索 ⌘K 中文 English 日本語 登录 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 角色图鉴 武器 材料道具 节奏榜 地图 版本专题 下载配置 攻略百科 光盘套装 兑换码 祈愿 异象 中文 异环 兑换码 当前有效码 0 已过期/待复核 8 最后核验 2026年4月29日 前往官方兑换页面或游戏内设置→兑换码，输入兑换码领取奖励。 有效兑换码 ( 0 ) 当前没有已确认有效的兑换码。请先查看下方过期/待复核列表，并关注本页更新。 已过期 / 待复核兑换码 ( 8 ) YHNOWTOENJOY 已过期/待复核 前瞻直播 国服 环石x100、新锐猎人攻略x5、淡色染剂x5、甲硬币x4000 有效期: 2026年5月7日 收录: 2026年4月18日 YHNANALLYGO 已过期/待复核 前瞻直播 国服 环石x100、新锐猎人攻略x5、淡色染剂x5、甲硬币x6000 有效期: 2026年5月7日 收录: 2026年4月18日 YHOB0423 已过期/待复核 前瞻直播 国服 环石x100、特级猎人攻略x2、混沌染剂x2、甲硬币x12000 有效期: 2026年5月7日 收录: 2026年4月18日 NTENOWTOENJOY 已过期/待复核 前瞻直播 国际服 前瞻直播专属奖励 有效期: 2026年5月29日 收录: 2026年4月18日 NTENANALLYGO 已过期/待复核 前瞻直播 国际服 前瞻直播专属奖励 有效期: 2026年5月29日 收录: 2026年4月18日 NTE0429 已过期/待复核 前瞻直播 国际服 前瞻直播专属奖励 有效期: 2026年5月29日 收录: 2026年4月18日 NTEGIFT 已过期/待复核 公测福利 国际服 公测福利奖励 有效期: 2026年5月29日 收录: 2026年4月29日 NTEHAVEFUN 已过期/待复核 公测福利 国际服 公测福利奖励 有效期: 2026年5月29日 收录: 2026年4月29日 探索更多游戏 原神 崩坏：星穹铁道 鸣潮 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 Gachia 本站数据来源于游戏客户端，仅供学习参考。所有游戏素材版权归原厂商所有。 Games 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 资源 关于 Gachia 网站地图 API Legal 隐私政策 服务条款 联系我们 © 2026 Gachi",
+        "bodyTextLength": 1223,
+        "headingCount": 8,
+        "internalLinkCount": 18,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/zh/nte/redeem-codes",
+        "status": 200,
+        "title": "异环兑换码：奖励、状态与兑换说明",
+        "description": "整理已收录兑换码的奖励、地区、来源、公布和到期记录。代码会随活动变化，页面记录不等于当前必定可用，请以游戏内兑换结果和官方公告为准。",
+        "canonical": "https://gachia.com/zh/nte/redeem-codes",
+        "alternates": [
+          "en:https://gachia.com/en/nte/redeem-codes",
+          "ja:https://gachia.com/ja/nte/redeem-codes",
+          "x-default:https://gachia.com/zh/nte/redeem-codes",
+          "zh-Hans:https://gachia.com/zh/nte/redeem-codes"
+        ],
+        "jsonLdCount": 1,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环兑换码：奖励、状态与兑换说明 Gachia 原神 崩坏：星穹铁道 鸣潮 绝区零 日历 关于 中文 EN 日本語 首页 / 异环 Gachia · NTE 角色 攻略 版本 武器 兑换码 NTE Rewards 异环兑换码：奖励、状态与兑换说明 整理已收录兑换码的奖励、地区、来源、公布和到期记录。代码会随活动变化，页面记录不等于当前必定可用，请以游戏内兑换结果和官方公告为准。 兑换前检查 确认地区 先确认代码对应的服务器或地区，避免跨服代码无法使用。 确认状态 活动可能提前结束或追加新码，优先以游戏内兑换结果为准。 保存记录 兑换后检查邮件和背包，再回到版本页规划资源。 历史记录 YHNOWTOENJOY 状态 : 已过期 地区 : cn 来源 : livestream 奖励 : 环石x100、新锐猎人攻略x5、淡色染剂x5、甲硬币x4000 公布 : 2026-04-18 · 到期 : 2026-05-07 YHNANALLYGO 状态 : 已过期 地区 : cn 来源 : livestream 奖励 : 环石x100、新锐猎人攻略x5、淡色染剂x5、甲硬币x6000 公布 : 2026-04-18 · 到期 : 2026-05-07 YHOB0423 状态 : 已过期 地区 : cn 来源 : livestream 奖励 : 环石x100、特级猎人攻略x2、混沌染剂x2、甲硬币x12000 公布 : 2026-04-18 · 到期 : 2026-05-07 NTENOWTOENJOY 状态 : 已过期 地区 : global 来源 : livestream 奖励 : 前瞻直播专属奖励 公布 : 2026-04-18 · 到期 : 2026-05-29 NTENANALLYGO 状态 : 已过期 地区 : global 来源 : livestream 奖励 : 前瞻直播专属奖励 公布 : 2026-04-18 · 到期 : 2026-05-29 NTE0429 状态 : 已过期 地区 : global 来源 : livestream 奖励 : 前瞻直播专属奖励 公布 : 2026-04-18 · 到期 : 2026-05-29 NTEGIFT 状态 : 已过期 地区 : global 来源 : launch 奖励 : 公测福利奖励 公布 : 2026-04-29 · 到期 : 2026-05-29 NTEHAVEFUN 状态 : 已过期 地区 : global 来源 : launch 奖励 : 公测福利奖励 公布 : 2026-04-29 · 到期 : 2026-05-29 版本专题 抽卡与保底 999 Nights Gachia 是独立的游戏资料站点，与游戏发行方无隶属关系。 关于 联系我们 隐私政策 服务条款",
+        "bodyTextLength": 1179,
+        "headingCount": 3,
+        "internalLinkCount": 13,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": -44,
+        "headingDelta": -5,
+        "internalLinkDelta": -5,
+        "jsonLdDelta": 1
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": true,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": true
+      }
+    },
+    {
+      "path": "/zh/nte/items",
+      "production": {
+        "url": "/zh/nte/items",
+        "status": 200,
+        "title": "异环材料图鉴 — 全材料Wiki、掉落来源与刷取路线",
+        "description": "按猎手指南、弧盘经验、模块经验和突破材料快速浏览异环材料图鉴，适合先看阶段需求与来源。，同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。",
+        "canonical": "https://gachia.com/zh/nte/items",
+        "alternates": [
+          "en:https://gachia.com/en/nte/items",
+          "ja:https://gachia.com/ja/nte/items",
+          "x-default:https://gachia.com/zh/nte/items",
+          "zh-Hans:https://gachia.com/zh/nte/items"
+        ],
+        "jsonLdCount": 1,
+        "xRobotsTag": "",
+        "bodyText": "Gachia 原神 鸣潮 绝区零 洛克国际服 失控进化 全部游戏 日历 关于 搜索 ⌘K 中文 English 日本語 登录 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 角色图鉴 武器 材料道具 节奏榜 地图 版本专题 下载配置 攻略百科 光盘套装 兑换码 祈愿 异象 中文 异环 材料道具 共 57 种材料 按猎手指南、弧盘经验、模块经验和突破材料快速浏览异环材料图鉴，适合先看阶段需求与来源。 猎手指南 ( 3 ) 基础猎手指南 猎手指南 ★ Houdinii的魔术舞台、猎手交易所、世界探索 进阶猎手指南 猎手指南 ★★ 材料选择箱、Houdinii的魔术舞台、猎手交易所、世界探索 精英猎手指南 猎手指南 ★★★ 材料选择箱、Houdinii的魔术舞台、猎手交易所、世界探索 弧盘经验 ( 3 ) 浅色染料 弧盘经验 ★ Houdinii的魔术舞台、猎手交易所、世界探索 无色染料 弧盘经验 ★★ Houdinii的魔术舞台、猎手交易所、世界探索 混沌染料 弧盘经验 ★★★ 材料选择箱、Houdinii的魔术舞台、猎手交易所、世界探索 模块经验 ( 3 ) 井盖打手 模块经验 ★ 兔子洞 井盖混混 模块经验 ★★ 材料选择箱、兔子洞 井盖头目 模块经验 ★★★ 材料选择箱、兔子洞 突破材料 ( 12 ) 遗失低语 突破材料 ★ 材料选择箱、异常体掉落、猎手交易所、遗失交易所 晦暗低语 突破材料 ★★ 异常体掉落、合成、猎手交易所、遗失交易所 悖论低语 突破材料 ★★★ 异常体掉落、合成、猎手交易所 褪色剪影 突破材料 ★ 材料选择箱、异常体掉落、猎手交易所、遗失交易所 模糊剪影 突破材料 ★★ 异常体掉落、合成、猎手交易所、遗失交易所 混沌剪影 突破材料 ★★★ 异常体掉落、合成、猎手交易所 模糊数字 突破材料 ★ 材料选择箱、异常体掉落、猎手交易所、遗失交易所 未解数字 突破材料 ★★ 异常体掉落、合成、猎手交易所、遗失交易所 扭曲数字 突破材料 ★★★ 异常体掉落、合成、猎手交易所 悬置妄想 突破材料 ★ 材料选择箱、异常体掉落、猎手交易所、遗失交易所 渴望妄想 突破材料 ★★ 异常体掉落、合成、猎手交易所、遗失交易所 超越妄想 突破材料 ★★★ 异常体掉落、合成、猎手交易所 Boss掉落 ( 7 ) 告解花种 Boss掉落 ★★★★ 材料选择箱、异常体讨伐「Serenetti」 冲锋骑士火花塞 Boss掉落 ★★★★ 材料选择箱、异常体讨伐「Headless Rider」 妄想之岸残页 Boss掉落 ★★★★ 材料选择箱、异常体讨伐「Black Tome」 水月拨片 Boss掉落 ★★★★ 材料选择箱、异常体讨伐「Beat King」 巢卫碎片 Boss掉落 ",
+        "bodyTextLength": 1859,
+        "headingCount": 48,
+        "internalLinkCount": 54,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/zh/nte/items",
+        "status": 200,
+        "title": "异环材料图鉴",
+        "description": "异环材料图鉴与获取来源。",
+        "canonical": "https://gachia.com/zh/nte/items",
+        "alternates": [
+          "en:https://gachia.com/en/nte/items",
+          "ja:https://gachia.com/ja/nte/items",
+          "x-default:https://gachia.com/zh/nte/items",
+          "zh-Hans:https://gachia.com/zh/nte/items"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "Gachia 原神 崩坏：星穹铁道 鸣潮 绝区零 日历 关于 中文 EN 日本語 首页 / 异环 Gachia · NTE 角色 攻略 版本 武器 兑换码 NTE Database 异环材料图鉴 收录 57 类养成材料，并标记可用来源信息。 基础猎手指南 guide · Houdinii的魔术舞台、猎手交易所、世界探索 养成前建议先确认角色、武器和技能所需材料。 进阶猎手指南 guide · 材料选择箱、Houdinii的魔术舞台、猎手交易所、世界探索 养成前建议先确认角色、武器和技能所需材料。 精英猎手指南 guide · 材料选择箱、Houdinii的魔术舞台、猎手交易所、世界探索 养成前建议先确认角色、武器和技能所需材料。 浅色染料 原弧经验 · Houdinii的魔术舞台、猎手交易所、世界探索 养成前建议先确认角色、武器和技能所需材料。 无色染料 原弧经验 · Houdinii的魔术舞台、猎手交易所、世界探索 养成前建议先确认角色、武器和技能所需材料。 混沌染料 原弧经验 · 材料选择箱、Houdinii的魔术舞台、猎手交易所、世界探索 养成前建议先确认角色、武器和技能所需材料。 井盖打手 模组经验 · 兔子洞 养成前建议先确认角色、武器和技能所需材料。 井盖混混 模组经验 · 材料选择箱、兔子洞 养成前建议先确认角色、武器和技能所需材料。 井盖头目 模组经验 · 材料选择箱、兔子洞 养成前建议先确认角色、武器和技能所需材料。 遗失低语 突破材料 · 材料选择箱、异常体掉落、猎手交易所、遗失交易所 养成前建议先确认角色、武器和技能所需材料。 晦暗低语 突破材料 · 异常体掉落、合成、猎手交易所、遗失交易所 养成前建议先确认角色、武器和技能所需材料。 悖论低语 突破材料 · 异常体掉落、合成、猎手交易所 养成前建议先确认角色、武器和技能所需材料。 褪色剪影 突破材料 · 材料选择箱、异常体掉落、猎手交易所、遗失交易所 养成前建议先确认角色、武器和技能所需材料。 模糊剪影 突破材料 · 异常体掉落、合成、猎手交易所、遗失交易所 养成前建议先确认角色、武器和技能所需材料。 混沌剪影 突破材料 · 异常体掉落、合成、猎手交易所 养成前建议先确认角色、武器和技能所需材料。 模糊数字 突破材料 · 材料选择箱、异常体掉落、猎手交易所、遗失交易所 养成前建议先确认角色、武器和技能所需材料。 未解数字 突破材料 · 异常体掉落、合成、猎手交易所、遗失交易所 养成前建议先确认角色、武器和技能所需材料。 扭曲数字 突破材料 · 异常体掉落、合成、猎手交易所 养成前建议先确认角色、武器和技能所需材料。 悬置妄想 突破材料 · 材料选择箱、异常体掉落、猎手交易所、遗失交易所 养成前建议先确认角色、武器和技能所需材料。 渴望妄想 突破材料 · 异常体掉落、合成、猎手交易所、遗",
+        "bodyTextLength": 3308,
+        "headingCount": 1,
+        "internalLinkCount": 13,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": 1449,
+        "headingDelta": -47,
+        "internalLinkDelta": -41,
+        "jsonLdDelta": -1
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": true,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": false
+      }
+    },
+    {
+      "path": "/zh/nte/disk-sets",
+      "production": {
+        "url": "/zh/nte/disk-sets",
+        "status": 200,
+        "title": "异环磁盘套装图鉴 — 2件/4件效果与推荐角色",
+        "description": "异环磁盘套装图鉴，整理2件套与4件套效果、元素倾向、推荐角色和配装思路，帮助你快速判断哪些套装值得优先刷取。，同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。",
+        "canonical": "https://gachia.com/zh/nte/disk-sets",
+        "alternates": [
+          "en:https://gachia.com/en/nte/disk-sets",
+          "ja:https://gachia.com/ja/nte/disk-sets",
+          "x-default:https://gachia.com/zh/nte/disk-sets",
+          "zh-Hans:https://gachia.com/zh/nte/disk-sets"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "",
+        "bodyText": "Gachia 原神 鸣潮 绝区零 洛克国际服 失控进化 全部游戏 日历 关于 搜索 ⌘K 中文 English 日本語 登录 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 角色图鉴 武器 材料道具 节奏榜 地图 版本专题 下载配置 攻略百科 光盘套装 兑换码 祈愿 异象 中文 异环 光盘套装 共 12 套光盘 通用套装 ( 6 ) 影之信条 2pc: 攻击力提高10% 4pc: 施放技能后，佩戴者攻击力提高25%，持续20秒 娜娜莉 翳 赤子 九原 达芙迪尔 哈索尔 + 2 音速蓝刺猬 2pc: 充能效率提高12% 4pc: 佩戴者施放必杀技后，全队攻击力提高15%，持续20秒（不可叠加） 咲里 哈尼尔 埃德加 薄荷 九原 白藏 缇娜的夜间酒馆 2pc: 生命值上限提高10% 4pc: 佩戴者的治疗加成提高20% 埃德加 小小大冒险 2pc: 生命值上限提高10% 4pc: 佩戴者HP降低时，最大HP提高4%，最多叠加10层，每层持续10秒。施放必杀技立即获得10层 法蒂亚 静谧山庄 2pc: 心灵伤害提高10% 4pc: 佩戴者使用普通攻击时，心灵伤害提高12%，最多叠加3层，每层持续6秒 阿德勒 守卫王国 2pc: 防御力提高15% 4pc: 佩戴者的护盾效果提高20% 阿德勒 元素套装 ( 6 ) 迪亚波罗斯 chaos 2pc: 暗属性伤害提高10% 4pc: 无视敌人12%暗属性抗性。佩戴者触发Nova或Scorch反应后，无视效果提高至24%，持续20秒 达芙迪尔 失落光芒 cosmos 2pc: 光属性伤害提高10% 4pc: 佩戴者施放必杀技后，造成的伤害无视25%防御力，持续20秒（不可叠加） 赤子 翳 浔 真红：双生蝶 incantation 2pc: 咒属性伤害提高10% 4pc: 附近敌人受到队伍造成的咒属性伤害时，佩戴者攻击力提高6%，最多叠加6层，每层持续10秒（后台也生效） 白藏 咲里 森林萤火之心 anima 2pc: 灵属性伤害提高10% 4pc: 附近敌人受到队伍造成的灵属性伤害时，佩戴者暴击伤害提高8%，最多叠加7层，每层持续10秒（后台也生效） 娜娜莉 九原 薄荷 恶魔之血：魂伤 psyche 2pc: 魂属性伤害提高10% 4pc: 佩戴者造成的伤害提高18%。攻击处于Nova或Stain状态的敌人时，伤害提升效果变为36% 奥蕾莉亚 街头拳王 lakshana 2pc: 相属性伤害提高10% 4pc: 暴击率提高14%。队伍触发Remora或Stain时，额外获得14%暴击率，持续20秒 哈索尔 翳 探索更多游戏 原神 崩坏：星穹铁道 鸣潮 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际",
+        "bodyTextLength": 1436,
+        "headingCount": 20,
+        "internalLinkCount": 18,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/zh/nte/disk-sets",
+        "status": 200,
+        "title": "异环光盘套装",
+        "description": "异环光盘套装效果与推荐。",
+        "canonical": "https://gachia.com/zh/nte/disk-sets",
+        "alternates": [
+          "en:https://gachia.com/en/nte/disk-sets",
+          "ja:https://gachia.com/ja/nte/disk-sets",
+          "x-default:https://gachia.com/zh/nte/disk-sets",
+          "zh-Hans:https://gachia.com/zh/nte/disk-sets"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "Gachia 原神 崩坏：星穹铁道 鸣潮 绝区零 日历 关于 中文 EN 日本語 首页 / 异环 Gachia · NTE 角色 攻略 版本 武器 兑换码 NTE Database 异环光盘套装 共 12 套驱动盘，包含 2 件和 4 件套效果及配装参考。 影之信条 General 攻击力提高10% 施放技能后，佩戴者攻击力提高25%，持续20秒 迪亚波罗斯 chaos 暗属性伤害提高10% 无视敌人12%暗属性抗性。佩戴者触发Nova或Scorch反应后，无视效果提高至24%，持续20秒 失落光芒 cosmos 光属性伤害提高10% 佩戴者施放必杀技后，造成的伤害无视25%防御力，持续20秒（不可叠加） 真红：双生蝶 incantation 咒属性伤害提高10% 附近敌人受到队伍造成的咒属性伤害时，佩戴者攻击力提高6%，最多叠加6层，每层持续10秒（后台也生效） 森林萤火之心 anima 灵属性伤害提高10% 附近敌人受到队伍造成的灵属性伤害时，佩戴者暴击伤害提高8%，最多叠加7层，每层持续10秒（后台也生效） 恶魔之血：魂伤 psyche 魂属性伤害提高10% 佩戴者造成的伤害提高18%。攻击处于Nova或Stain状态的敌人时，伤害提升效果变为36% 街头拳王 lakshana 相属性伤害提高10% 暴击率提高14%。队伍触发Remora或Stain时，额外获得14%暴击率，持续20秒 音速蓝刺猬 General 充能效率提高12% 佩戴者施放必杀技后，全队攻击力提高15%，持续20秒（不可叠加） 缇娜的夜间酒馆 General 生命值上限提高10% 佩戴者的治疗加成提高20% 小小大冒险 General 生命值上限提高10% 佩戴者HP降低时，最大HP提高4%，最多叠加10层，每层持续10秒。施放必杀技立即获得10层 静谧山庄 General 心灵伤害提高10% 佩戴者使用普通攻击时，心灵伤害提高12%，最多叠加3层，每层持续6秒 守卫王国 General 防御力提高15% 佩戴者的护盾效果提高20% Gachia 是独立的游戏资料站点，与游戏发行方无隶属关系。 关于 联系我们 隐私政策 服务条款 异环光盘套装",
+        "bodyTextLength": 925,
+        "headingCount": 1,
+        "internalLinkCount": 22,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": -511,
+        "headingDelta": -19,
+        "internalLinkDelta": 4,
+        "jsonLdDelta": 0
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": true,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": true
+      }
+    },
+    {
+      "path": "/zh/nte/tier-list",
+      "production": {
+        "url": "/zh/nte/tier-list",
+        "status": 200,
+        "title": "异环角色强度排行 — SS/S/A/B分级 | 攻略",
+        "description": "异环角色强度排行，覆盖SS/S+/A+/A/B分级、场景表现和推荐优先级，帮助你在抽卡与养成前快速判断角色价值。，同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。",
+        "canonical": "https://gachia.com/zh/nte/tier-list",
+        "alternates": [
+          "en:https://gachia.com/en/nte/tier-list",
+          "ja:https://gachia.com/ja/nte/tier-list",
+          "x-default:https://gachia.com/zh/nte/tier-list",
+          "zh-Hans:https://gachia.com/zh/nte/tier-list"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "",
+        "bodyText": "Gachia 原神 鸣潮 绝区零 洛克国际服 失控进化 全部游戏 日历 关于 搜索 ⌘K 中文 English 日本語 登录 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 角色图鉴 武器 材料道具 节奏榜 地图 版本专题 下载配置 攻略百科 光盘套装 兑换码 祈愿 异象 中文 异环 节奏榜 基于角色综合强度评级，仅供参考 SS ( 3 ) 娜娜莉 Attack 九原 Utility 浔 Support S+ ( 4 ) 白藏 Defense 零（男） Attack 零（女） Attack 穗鸟 Attack A+ ( 4 ) 咲里 Support 达芙迪尔 Attack 哈尼尔 Support 阿德勒 Attack A ( 3 ) 法蒂亚 Attack 薄荷 Support 赤子 Attack B ( 4 ) 翳 Attack 埃德加 Support 哈索尔 Attack 奥蕾莉亚 Support 探索更多游戏 原神 崩坏：星穹铁道 鸣潮 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 Gachia 本站数据来源于游戏客户端，仅供学习参考。所有游戏素材版权归原厂商所有。 Games 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 资源 关于 Gachia 网站地图 API Legal 隐私政策 服务条款 联系我们 © 2026 Gachia. All rights reserved. 异环角色强度排行 — SS/S/A/B分级 | 攻略",
+        "bodyTextLength": 753,
+        "headingCount": 6,
+        "internalLinkCount": 36,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/zh/nte/tier-list",
+        "status": 200,
+        "title": "异环角色强度排行",
+        "description": "异环角色强度排行与培养优先级。",
+        "canonical": "https://gachia.com/zh/nte/tier-list",
+        "alternates": [
+          "en:https://gachia.com/en/nte/tier-list",
+          "ja:https://gachia.com/ja/nte/tier-list",
+          "x-default:https://gachia.com/zh/nte/tier-list",
+          "zh-Hans:https://gachia.com/zh/nte/tier-list"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环角色强度排行 Gachia 原神 崩坏：星穹铁道 鸣潮 绝区零 日历 关于 中文 EN 日本語 首页 / 异环 Gachia · NTE 角色 攻略 版本 武器 兑换码 NTE Tier List 异环角色强度排行 按当前版本综合表现、场景适配和培养优先级浏览角色。排行仅供规划参考，实际表现取决于队伍和操作。 娜娜莉 S · Attack 综合输出、生存、辅助价值与养成成本评估。 咲里 S · Support 综合输出、生存、辅助价值与养成成本评估。 法蒂亚 S · Attack 综合输出、生存、辅助价值与养成成本评估。 拉克莉莫萨 S · Attack 综合输出、生存、辅助价值与养成成本评估。 白藏 S · Defense 综合输出、生存、辅助价值与养成成本评估。 零（男） S · Attack 综合输出、生存、辅助价值与养成成本评估。 零（女） S · Attack 综合输出、生存、辅助价值与养成成本评估。 穗鸟 S · Attack 综合输出、生存、辅助价值与养成成本评估。 达芙迪尔 S · Attack 综合输出、生存、辅助价值与养成成本评估。 九原 S · Utility 综合输出、生存、辅助价值与养成成本评估。 哈尼尔 A · Support 综合输出、生存、辅助价值与养成成本评估。 阿德勒 A · Attack 综合输出、生存、辅助价值与养成成本评估。 翳 A · Attack 综合输出、生存、辅助价值与养成成本评估。 埃德加 A · Support 综合输出、生存、辅助价值与养成成本评估。 薄荷 A · Support 综合输出、生存、辅助价值与养成成本评估。 奈莉 A · Support 综合输出、生存、辅助价值与养成成本评估。 梅露拉 A · Attack 综合输出、生存、辅助价值与养成成本评估。 阿尔法德 A · TBD 综合输出、生存、辅助价值与养成成本评估。 泰格多 A · Support 综合输出、生存、辅助价值与养成成本评估。 哈索尔 S · Attack 综合输出、生存、辅助价值与养成成本评估。 赤子 S · Attack 综合输出、生存、辅助价值与养成成本评估。 莉莉娜 S · TBD 综合输出、生存、辅助价值与养成成本评估。 凛子 A · Attack 综合输出、生存、辅助价值与养成成本评估。 密斯莫 A · Support 综合输出、生存、辅助价值与养成成本评估。 沁红 A · Attack 综合输出、生存、辅助价值与养成成本评估。 尼察 A · Support 综合输出、生存、辅助价值与养成成本评估。 黑鸟 S · Attack 综合输出、生存、辅助价值与养成成本评估。 明虎 S · Attack 综合输出、生存、辅助价值与养成成本评估。 赤音 S · Attack 综合输出、生存、辅助价值与养成成本评估。 詹森 ",
+        "bodyTextLength": 1702,
+        "headingCount": 1,
+        "internalLinkCount": 52,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": 949,
+        "headingDelta": -5,
+        "internalLinkDelta": 16,
+        "jsonLdDelta": 0
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": true,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": true
+      }
+    },
+    {
+      "path": "/zh/nte/download",
+      "production": {
+        "url": "/zh/nte/download",
+        "status": 200,
+        "title": "异环下载｜官网入口、官网下载与配置要求",
+        "description": "集中查看异环官网、下载、配置、云游戏、兑换码、Shinku/Iroi 和 1.2 版本入坑问题。，同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。",
+        "canonical": "https://gachia.com/zh/nte/download",
+        "alternates": [
+          "en:https://gachia.com/en/nte/download",
+          "ja:https://gachia.com/ja/nte/download",
+          "x-default:https://gachia.com/zh/nte/download",
+          "zh-Hans:https://gachia.com/zh/nte/download"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "",
+        "bodyText": "Gachia 原神 鸣潮 绝区零 洛克国际服 失控进化 全部游戏 日历 关于 搜索 ⌘K 中文 English 日本語 登录 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 角色图鉴 武器 材料道具 节奏榜 地图 版本专题 下载配置 攻略百科 光盘套装 兑换码 祈愿 异象 中文 异环 官方入口 / 下载 / 配置 异环下载入口与配置要求 集中查看异环官网、下载、配置、云游戏、兑换码、Shinku/Iroi 和 1.2 版本入坑问题。 打开官网 当前下载状态 异环已进入正式上线阶段，下载、区服、PS5 与移动端入口建议统一从官方和商店确认。 请优先确认官网、平台商店和官方社区公告；下载包、预下载和服务器开放时间可能按地区变化。 平台入口怎么选 安全优先 PC 可玩 UE5 开放世界建议优先装 SSD。 iOS / Android 可玩 移动端下载资源包前检查剩余空间。 PlayStation 5 可玩 PS5 入口以 PlayStation Store 为准。 配置与空间 PC 建议 SSD 和 16GB 内存起步，移动端建议预留 20GB 以上。 下载前先确认磁盘空间、系统版本、显卡驱动和网络稳定性。 云游戏 / 云试玩 云游戏入口通常按地区、平台合作和账号体系开放，最稳妥做法是从官网或平台商店进入。 账号与互通 跨平台进度通常取决于同一账号和同一区服，国服/国际服切换前请先确认数据是否互通。 下载后下一步 版本专题 确认当前版本、活动、角色和时间节点。 下载/入坑攻略 继续查看更细的安装、账号、平台或首日路线。 兑换码与福利 下载完成后先检查礼包码、预约奖励和版本福利。 常见问题 异环在哪里下载最安全？ 优先使用官网、官方启动器、平台商店或官方社区公告给出的入口，不建议使用来历不明的网盘或安装包。 下载前最容易忽略什么？ 账号区服、剩余空间、首包大小、资源包更新时间和平台绑定规则最容易被忽略。 探索更多游戏 原神 崩坏：星穹铁道 鸣潮 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 Gachia 本站数据来源于游戏客户端，仅供学习参考。所有游戏素材版权归原厂商所有。 Games 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 资源 关于 Gachia 网站地图 API Legal 隐私政策 服务条款 联系我们 © 2026 Gachia. All rights reserved. 异环下载｜官网入口、官网下载与配置要求",
+        "bodyTextLength": 1152,
+        "headingCount": 21,
+        "internalLinkCount": 21,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/zh/nte/download",
+        "status": 200,
+        "title": "异环下载与配置",
+        "description": "异环下载入口、平台状态、安全安装路径与配置建议。",
+        "canonical": "https://gachia.com/zh/nte/download",
+        "alternates": [
+          "en:https://gachia.com/en/nte/download",
+          "ja:https://gachia.com/ja/nte/download",
+          "x-default:https://gachia.com/zh/nte/download",
+          "zh-Hans:https://gachia.com/zh/nte/download"
+        ],
+        "jsonLdCount": 1,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环下载与配置 Gachia 原神 崩坏：星穹铁道 鸣潮 绝区零 日历 关于 中文 EN 日本語 首页 / 异环 Gachia · NTE 角色 攻略 版本 武器 兑换码 NTE Official Entry 异环下载与配置 下载入口、平台状态与配置建议请以官方和平台商店为准。本页提供安全的验证路径；完整安装步骤、平台说明与排错内容请继续阅读安装指南。 安全下载路径 1. 先核对官方入口 从官网或对应平台商店进入，不使用来历不明的安装包。 2. 确认地区与账号 下载前确认服务器、账号与跨平台规则，避免数据或兑换码不匹配。 3. 再检查空间与网络 预留足够存储并使用稳定网络完成资源下载。 可用平台 PC 请以商店上架状态为准 iOS / Android 请以商店上架状态为准 PlayStation 5 请以商店上架状态为准 配置建议 PC 建议 SSD 和 16GB 内存起步，移动端建议预留 20GB 以上。 继续阅读 下载安装指南 查看完整平台步骤、配置说明与常见排错。 新手入门 安装完成后从基础系统和资源分配开始。 Official NTE site Gachia 是独立的游戏资料站点，与游戏发行方无隶属关系。 关于 联系我们 隐私政策 服务条款",
+        "bodyTextLength": 532,
+        "headingCount": 5,
+        "internalLinkCount": 12,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": -620,
+        "headingDelta": -16,
+        "internalLinkDelta": -9,
+        "jsonLdDelta": 1
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": true,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": true
+      }
+    },
+    {
+      "path": "/zh/nte/gacha",
+      "production": {
+        "url": "/zh/nte/gacha",
+        "status": 200,
+        "title": "异环祈愿系统 — 概率、保底机制详解",
+        "description": "异环祈愿系统详解：卡池类型、概率说明、保底机制、天井系统。，同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。",
+        "canonical": "https://gachia.com/zh/nte/gacha",
+        "alternates": [
+          "en:https://gachia.com/en/nte/gacha",
+          "ja:https://gachia.com/ja/nte/gacha",
+          "x-default:https://gachia.com/zh/nte/gacha",
+          "zh-Hans:https://gachia.com/zh/nte/gacha"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "",
+        "bodyText": "Gachia 原神 鸣潮 绝区零 洛克国际服 失控进化 全部游戏 日历 关于 搜索 ⌘K 中文 English 日本語 登录 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 角色图鉴 武器 材料道具 节奏榜 地图 版本专题 下载配置 攻略百科 光盘套装 兑换码 祈愿 异象 中文 异环 祈愿 祈愿系统概率与保底机制说明 卡池类型 限定祈愿（角色池） UP角色概率提升，90抽硬保底，无50/50机制，首次S级必为UP角色 0.6% S 级 10% A 级 89.4% B 级 硬保底 : 90 软保底 : 74 平均抽数 : 53.5 无50/50 新手祈愿 限定一次，20抽内必出S级角色，可从6位S级角色中自选一位 0.6% S 级 10% A 级 89.4% B 级 硬保底 : 20 平均抽数 : 12 无50/50 常驻祈愿 常驻池，90抽硬保底，50抽可自选S级角色 0.6% S 级 10% A 级 89.4% B 级 硬保底 : 90 软保底 : 75 平均抽数 : 55 武器祈愿 限定武器概率提升，60抽保底UP武器，80抽大保底 1.0% S 级 13% A 级 86% B 级 硬保底 : 60 软保底 : 50 平均抽数 : 40 无50/50 常见问题 异环抽卡有50/50吗？ 没有。异环的限定角色池没有50/50机制。当你在限定池抽到S级角色时，必定是当期UP角色。这一点已在官方前瞻直播中确认。 异环的保底机制是怎样的？ 异环限定池和常驻池的S级角色硬保底为90抽，软保底从第74抽开始，S级概率显著提升。平均出S级的抽数约为53-54抽。保底会在同类卡池之间继承。 大保底需要多少抽？多少钱？ 因为异环没有50/50机制，最多只需90抽就能获得当期UP的S级角色。相比有50/50机制的游戏需要180抽大保底，异环对零氪和微氪玩家非常友好。 新手应该先抽新手池吗？ 是的，强烈推荐。新手池20抽内必出S级角色，而且可以在薄荷和早雾之间自选。两位都是非常强的S级角色，这是全游戏性价比最高的卡池，建议优先抽。 零氪玩家应该优先抽什么卡池？ 优先级顺序：1) 新手池（20抽必出自选S级）。2) 限定角色池，抽你需要的核心DPS或辅助。3) 常驻池（自然积累即可）。4) 武器池只在抽到需要的角色后还有余力时考虑。 异环抽卡用什么货币？ 异环使用「方斯」作为抽卡的高级货币。可以通过每日委托、活动奖励、剧情推进和探索奖励获得。零氪玩家通过日常游戏就能积累大量方斯。 保底会继承到下一个卡池吗？ 会。限定角色池之间的保底计数会继承。如果你在某个限定池抽了50次没出S级，下一个限定池会从50抽保底开始。但不同类型卡池之间的保底不互通（比如角色池和武器池）。 公测能白嫖多少抽？",
+        "bodyTextLength": 1562,
+        "headingCount": 12,
+        "internalLinkCount": 18,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/zh/nte/gacha",
+        "status": 200,
+        "title": "异环祈愿与保底",
+        "description": "异环角色、新手、常驻和武器祈愿的保底、概率与抽卡规划。",
+        "canonical": "https://gachia.com/zh/nte/gacha",
+        "alternates": [
+          "en:https://gachia.com/en/nte/gacha",
+          "ja:https://gachia.com/ja/nte/gacha",
+          "x-default:https://gachia.com/zh/nte/gacha",
+          "zh-Hans:https://gachia.com/zh/nte/gacha"
+        ],
+        "jsonLdCount": 1,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环祈愿与保底 Gachia 原神 崩坏：星穹铁道 鸣潮 绝区零 日历 关于 中文 EN 日本語 首页 / 异环 Gachia · NTE 角色 攻略 版本 武器 兑换码 NTE Gacha 异环祈愿与保底 把角色池、新手池、常驻池和武器池的保底、概率与资源规划放在同一页。实际开放时间、概率和兑换内容请以游戏公告与卡池详情为准。 限定祈愿（角色池） UP角色概率提升，90抽硬保底，无50/50机制，首次S级必为UP角色 S级概率 0.6% 硬保底 90 软保底 74 平均出货 53.5 资料标注该池无 50/50；抽取前仍应确认当期规则。 新手祈愿 限定一次，20抽内必出S级角色，可从6位S级角色中自选一位 S级概率 0.6% 硬保底 20 平均出货 12 资料标注该池无 50/50；抽取前仍应确认当期规则。 常驻祈愿 常驻池，90抽硬保底，50抽可自选S级角色 S级概率 0.6% 硬保底 90 软保底 75 平均出货 55 抽取前请预留完整保底资源，并确认当前卡池规则。 武器祈愿 限定武器概率提升，60抽保底UP武器，80抽大保底 S级概率 1.0% 硬保底 60 软保底 50 平均出货 40 资料标注该池无 50/50；抽取前仍应确认当期规则。 抽卡决策路线 先核对资源 记录当前抽数、现有货币、活动与兑换码，再判断是否够覆盖目标保底。 再判断队伍缺口 先看目标角色是否补足当前队伍定位，不要只按单池热度决定。 最后保留后续空间 资源紧张时把当前池和后续目标放在同一张计划中比较。 常见问题 异环抽卡有50/50吗？ 没有。异环的限定角色池没有50/50机制。当你在限定池抽到S级角色时，必定是当期UP角色。这一点已在官方前瞻直播中确认。 异环的保底机制是怎样的？ 异环限定池和常驻池的S级角色硬保底为90抽，软保底从第74抽开始，S级概率显著提升。平均出S级的抽数约为53-54抽。保底会在同类卡池之间继承。 大保底需要多少抽？多少钱？ 因为异环没有50/50机制，最多只需90抽就能获得当期UP的S级角色。相比有50/50机制的游戏需要180抽大保底，异环对零氪和微氪玩家非常友好。 新手应该先抽新手池吗？ 是的，强烈推荐。新手池20抽内必出S级角色，而且可以在薄荷和早雾之间自选。两位都是非常强的S级角色，这是全游戏性价比最高的卡池，建议优先抽。 零氪玩家应该优先抽什么卡池？ 优先级顺序：1) 新手池（20抽必出自选S级）。2) 限定角色池，抽你需要的核心DPS或辅助。3) 常驻池（自然积累即可）。4) 武器池只在抽到需要的角色后还有余力时考虑。 异环抽卡用什么货币？ 异环使用「方斯」作为抽卡的高级货币。可以通过每日委托、活动奖励、剧情推进和探索奖励获得。零氪玩家通过日常游戏就能积累大量方斯。 保底会继承到下一个卡池吗？ 会。限定角色池之间的保底计数会继承。如果你在",
+        "bodyTextLength": 1418,
+        "headingCount": 3,
+        "internalLinkCount": 14,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": -144,
+        "headingDelta": -9,
+        "internalLinkDelta": -4,
+        "jsonLdDelta": 1
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": true,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": true
+      }
+    },
+    {
+      "path": "/zh/nte/anomalies",
+      "production": {
+        "url": "/zh/nte/anomalies",
+        "status": 200,
+        "title": "异环异象图鉴 — Boss、精英与掉落机制",
+        "description": "异环异象图鉴整理 Boss、精英、普通敌人的名称、属性、类型、机制说明和掉落信息，方便开荒、刷材料和配队前查询。，同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。",
+        "canonical": "https://gachia.com/zh/nte",
+        "alternates": [
+          "en:https://gachia.com/en/nte",
+          "ja:https://gachia.com/ja/nte",
+          "x-default:https://gachia.com/zh/nte",
+          "zh-Hans:https://gachia.com/zh/nte"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "",
+        "bodyText": "异环异象图鉴 — Boss、精英与掉落机制 Gachia 原神 鸣潮 绝区零 洛克国际服 失控进化 全部游戏 日历 关于 搜索 ⌘K 中文 English 日本語 登录 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 角色图鉴 武器 材料道具 节奏榜 地图 版本专题 下载配置 攻略百科 光盘套装 兑换码 祈愿 异象 中文 异环 异象 共 17 个异象 Boss ( 5 ) 无首铁驭 首领 生物类 Fire HP: 15段 正面撞击50%最大生命值伤害；中期场地生成回血花苞；护盾击破后3秒不可行动 掉落 : 金色属性弧盘 狐盘武器 基础养成材料 黑之书 首领 物体类 Beam HP: 多阶段 单向持续激光束触发强制定身；旋转扫射阶段覆盖角度广 掉落 : 高级养成材料 墨菲克斯 首领 生物类 Unknown HP: 多阶段 第一阶段地面近战形态（长尾横扫+击飞）；第二阶段升空展开双翼进行远程范围轰炸 掉落 : 高级养成材料 海囚 首领 生物类 Multi-form HP: 多阶段 全程多次形态切换：全图AOE压制技 + 高速单体连击两种模式 掉落 : 稀有武器蓝图 专属装备 角色觉醒核心材料 斑蝶 首领 生物类 Unknown HP: 三阶段 第一阶段（满血~60%）攻击节奏缓；第二阶段（~40%）位移范围加大；最终阶段（&lt;20%）最高难度 掉落 : 异象收容奖励 精英/普通 ( 12 ) 雨人 精英 物体类 Water/Rain HP: 本体+3把悬浮雨伞(每把约1.2万HP) 伪装成雨伞；非雨夜靠近拖入雨巷异空间；地面生成减速水洼 掉落 : 中级养成材料 波普 精英 物体类 Graffiti/Color HP: 免疫普通攻击；藏匿于街头涂鸦墙 掉落 : 中级养成材料 欧拉拳套 精英 物体类 Physical/Fighting HP: 连胜三场擂台赛；低血量进入狂暴状态 掉落 : 中级养成材料 灵感终结者 精英 生物类 Insect/Parasite HP: 蚊虫状寄生体吸附市民头部吸食灵感；满额后隐身藏匿 掉落 : 中级养成材料 绷带怪 精英 生物类 Unknown HP: 存在于废弃医院区域；全楼通电完成瞬间、同一类型线索收集满三件时触发 掉落 : 经验值 稀有材料 猎人声望奖励 拖车艄 普通 生物类 Unknown HP: 进入区域自动触发，标志性随机异象玩法 掉落 : 基础资源 棉绒绒 普通 生物类 Anomaly-corrupted HP: NPC埃里克对话接取魔法传送装置任务后出现 掉落 : 基础资源 任务奖励 增殖的C 普通 物体类 TBC HP: 时空放映机 普通 物体类 TBC HP: 赤门 普通 物体类 TBC HP: 胶卷-MANISH 普",
+        "bodyTextLength": 1515,
+        "headingCount": 25,
+        "internalLinkCount": 18,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/zh/nte/anomalies",
+        "status": 200,
+        "title": "异环异象与 Boss 攻略",
+        "description": "异环异象与 Boss 机制攻略。",
+        "canonical": "https://gachia.com/zh/nte/anomalies",
+        "alternates": [
+          "en:https://gachia.com/en/nte/anomalies",
+          "ja:https://gachia.com/ja/nte/anomalies",
+          "x-default:https://gachia.com/zh/nte/anomalies",
+          "zh-Hans:https://gachia.com/zh/nte/anomalies"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环异象与 Boss 攻略 Gachia 原神 崩坏：星穹铁道 鸣潮 绝区零 日历 关于 中文 EN 日本語 首页 / 异环 Gachia · NTE 角色 攻略 版本 武器 兑换码 NTE Anomalies 异环异象与 Boss 攻略 按异象类型和属性整理机制要点。进场前可结合队伍、武器与角色培养页面调整配置。 无首铁驭 首领 · 火 护盾击破后3秒不可行动期间全力输出，注意闪避正面撞击 黑之书 首领 · 光束 绕背走位压缩激光瞄准时间，高频位移削减生命值 墨菲克斯 首领 · 未知 第一阶段保持距离输出，第二阶段切换远程角色维持中远距离DPS 海囚 首领 · 多形态 中后期核心资源来源，需高熟练度和资源管理 斑蝶 首领 · 未知 阶段节奏把控+异象系统打断+规避水面突袭 雨人 精英 · 水/雨 速射伞骨连接点，显形后大招直击核心可跳过二阶段 波普 精英 · 涂鸦/色块 火系角色点燃涂鸦逼出，预判路径放置重击造成硬直 欧拉拳套 精英 · 物理/格斗 前两场保留闪避值，第三场蓄力红光时侧闪后三段破防+异能环合增伤 灵感终结者 精英 · 虫/寄生 灵视扫描追踪能量轨迹，破坏五个容器后速杀防二次传送 绷带怪 精英 · 未知 通电后闪身至配电箱后方规避，利用环境交互 拖车艄 普通 · 未知 棉绒绒 普通 · 异象污染 增殖的C 普通 · 待确认 时空放映机 普通 · 待确认 赤门 普通 · 待确认 胶卷-MANISH 普通 · 待确认 高塔 普通 · 待确认 战前准备 配队建议 配装方向 驱动盘套装 Gachia 是独立的游戏资料站点，与游戏发行方无隶属关系。 关于 联系我们 隐私政策 服务条款",
+        "bodyTextLength": 706,
+        "headingCount": 2,
+        "internalLinkCount": 13,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": -809,
+        "headingDelta": -23,
+        "internalLinkDelta": -5,
+        "jsonLdDelta": 0
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": true,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": true
+      }
+    },
+    {
+      "path": "/zh/nte/build",
+      "production": {
+        "url": "/zh/nte/build",
+        "status": 200,
+        "title": "异环 配装推荐",
+        "description": "异环 角色配装推荐、最佳武器、弧盘搭配，整理毕业思路、词条优先级、常见阵容与版本答案，帮助你快速完成养成决策。，同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。",
+        "canonical": "https://gachia.com/zh/nte/build",
+        "alternates": [
+          "en:https://gachia.com/en/nte/build",
+          "ja:https://gachia.com/ja/nte/build",
+          "x-default:https://gachia.com/zh/nte/build",
+          "zh-Hans:https://gachia.com/zh/nte/build"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "",
+        "bodyText": "Gachia 原神 鸣潮 绝区零 洛克国际服 失控进化 全部游戏 日历 关于 搜索 ⌘K 中文 English 日本語 登录 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 角色图鉴 武器 材料道具 节奏榜 地图 版本专题 下载配置 攻略百科 光盘套装 兑换码 祈愿 异象 中文 异环 Loading builds... 继续往下看 看角色图鉴 先把角色底池和定位看清，再回到配装页挑最合适的方案。 看武器图鉴 对照可用武器和替代方案，快速补齐主武器选择。 看版本更新 如果想看当前版本的角色调整、活动和趋势，这里是下一站。 探索更多游戏 原神 崩坏：星穹铁道 鸣潮 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 Gachia 本站数据来源于游戏客户端，仅供学习参考。所有游戏素材版权归原厂商所有。 Games 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 资源 关于 Gachia 网站地图 API Legal 隐私政策 服务条款 联系我们 © 2026 Gachia. All rights reserved. 异环 配装推荐 配装推荐 全部 创生 混沌 宇宙 咒术 相 精神 娜娜莉 咲里 法蒂亚 白藏 零（男） 零（女） 穗鸟 达芙迪尔 九原 哈尼尔 阿德勒 翳 埃德加 薄荷 哈索尔 赤子 奥蕾莉亚 浔",
+        "bodyTextLength": 682,
+        "headingCount": 10,
+        "internalLinkCount": 21,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/zh/nte/build",
+        "status": 200,
+        "title": "异环角色配装推荐",
+        "description": "异环角色武器与光盘配装推荐。",
+        "canonical": "https://gachia.com/zh/nte/build",
+        "alternates": [
+          "en:https://gachia.com/en/nte/build",
+          "ja:https://gachia.com/ja/nte/build",
+          "x-default:https://gachia.com/zh/nte/build",
+          "zh-Hans:https://gachia.com/zh/nte/build"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环角色配装推荐 Gachia 原神 崩坏：星穹铁道 鸣潮 绝区零 日历 关于 中文 EN 日本語 首页 / 异环 Gachia · NTE 角色 攻略 版本 武器 兑换码 NTE Builds 异环角色配装推荐 按角色定位选择武器、驱动盘与主属性，再根据队伍循环和实战生存压力微调。 娜娜莉 anima · S 引爆全场 · 影之信条 咲里 incantation · S 茶花会 · 迪亚波罗斯 法蒂亚 psyche · S 思考喵 · 失落光芒 拉克莉莫萨 chaos · S 休息日 · 真红：双生蝶 白藏 incantation · S 永恒圆舞曲 · 森林萤火之心 零（男） cosmos · S 好狗狗走四方 · 恶魔之血：魂伤 零（女） cosmos · S 海特洛的安宁 · 街头拳王 穗鸟 cosmos · S 踏越时间行军 · 音速蓝刺猬 达芙迪尔 chaos · S 焰魂狂飙 · 缇娜的夜间酒馆 九原 anima · S 预备备 · 小小大冒险 哈尼尔 psyche · A 现实避难所 · 静谧山庄 阿德勒 incantation · A 鲸之歌 · 守卫王国 翳 lakshana · A 面具下的泪 · 影之信条 埃德加 cosmos · A 最后的玫瑰 · 迪亚波罗斯 薄荷 anima · A 千金难买你开心 · 失落光芒 奈莉 anima · A 漆黑青春妄想 · 真红：双生蝶 梅露拉 lakshana · A 勇气绒绒 · 森林萤火之心 阿尔法德 lakshana · A 猛绒绒 · 恶魔之血：魂伤 泰格多 cosmos · A 灵巧绒绒 · 街头拳王 哈索尔 lakshana · S 飞速绒绒 · 音速蓝刺猬 赤子 cosmos · S 坚韧绒绒 · 缇娜的夜间酒馆 莉莉娜 cosmos · S 时机终至 · 小小大冒险 凛子 incantation · A 扭曲之城呼唤 · 静谧山庄 密斯莫 chaos · A 晴空 · 守卫王国 沁红 anima · A 宇宙迷离狂想曲 · 影之信条 尼察 psyche · A 拔刀 · 迪亚波罗斯 黑鸟 chaos · S 辜负你心中沉重 · 失落光芒 明虎 anima · S 灵感王冠 · 真红：双生蝶 赤音 incantation · S 欧拉欧拉！ · 森林萤火之心 詹森 psyche · A 闪亮的日子 · 恶魔之血：魂伤 伊利卡 lakshana · S 愚者之春 · 街头拳王 风花 anima · A 被遗忘的 · 音速蓝刺猬 克劳 chaos · S 好的坏的苦的 · 缇娜的夜间酒馆 蕾妮 psyche · A 大盗 · 小小大冒险 吾郎 incantation · A 时间大盗 · 静谧山庄 玛丽娜 cosmos · S 雨伞 · 守卫王国 海斗 lakshana · A 小心头",
+        "bodyTextLength": 1416,
+        "headingCount": 1,
+        "internalLinkCount": 55,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": 734,
+        "headingDelta": -9,
+        "internalLinkDelta": 34,
+        "jsonLdDelta": 0
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": true,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": true
+      }
+    },
+    {
+      "path": "/zh/nte/teams",
+      "production": {
+        "url": "/zh/nte/teams",
+        "status": 200,
+        "title": "异环 配队模拟器",
+        "description": "异环 角色配队模拟器，查看最佳阵容搭配",
+        "canonical": "https://gachia.com/zh/nte/teams",
+        "alternates": [
+          "en:https://gachia.com/en/nte/teams",
+          "ja:https://gachia.com/ja/nte/teams",
+          "x-default:https://gachia.com/zh/nte/teams",
+          "zh-Hans:https://gachia.com/zh/nte/teams"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "",
+        "bodyText": "Gachia 原神 鸣潮 绝区零 洛克国际服 失控进化 全部游戏 日历 关于 搜索 ⌘K 中文 English 日本語 登录 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 角色图鉴 武器 材料道具 节奏榜 地图 版本专题 下载配置 攻略百科 光盘套装 兑换码 祈愿 异象 中文 异环 Loading teams... 继续往下看 看角色图鉴 先确认角色定位和技能，再回来搭队会更顺手。 看配装推荐 如果你已经有主 C 或主坦，直接看配装会更快。 看攻略专题 想看更完整的养成、站位和版本思路，可以继续往攻略页走。 探索更多游戏 原神 崩坏：星穹铁道 鸣潮 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 Gachia 本站数据来源于游戏客户端，仅供学习参考。所有游戏素材版权归原厂商所有。 Games 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 资源 关于 Gachia 网站地图 API Legal 隐私政策 服务条款 联系我们 © 2026 Gachia. All rights reserved. 异环 配队模拟器 配队模拟器 1 选择角色 2 选择角色 3 选择角色 4 选择角色 娜娜莉 咲里 法蒂亚 白藏 零（男） 零（女） 穗鸟 达芙迪尔 九原 哈尼尔 阿德勒 翳 埃德加 薄荷 哈索尔 赤子 奥蕾莉亚 浔",
+        "bodyTextLength": 687,
+        "headingCount": 10,
+        "internalLinkCount": 21,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/zh/nte/teams",
+        "status": 200,
+        "title": "异环配队模拟器",
+        "description": "异环角色配队与队伍规划。",
+        "canonical": "https://gachia.com/zh/nte/teams",
+        "alternates": [
+          "en:https://gachia.com/en/nte/teams",
+          "ja:https://gachia.com/ja/nte/teams",
+          "x-default:https://gachia.com/zh/nte/teams",
+          "zh-Hans:https://gachia.com/zh/nte/teams"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环配队模拟器 Gachia 原神 崩坏：星穹铁道 鸣潮 绝区零 日历 关于 中文 EN 日本語 首页 / 异环 Gachia · NTE 角色 攻略 版本 武器 兑换码 NTE Team Planning 异环配队规划 先确定输出核心，再以增伤、聚怪、生存和属性反应补齐队伍。以下为配队思路参考，不代表唯一最优组合。 DPS + Support + Sustain 适合优先保证稳定输出的通用框架。主C之外，补齐增伤、聚怪、治疗或护盾。 Reaction Core 围绕同一属性反应安排技能循环，并保留足够能量与冷却窗口。 Flexible Slot 面对高压战斗优先补生存位；清杂或爆发窗口则补功能位。 可选角色池 娜娜莉 anima · S 咲里 incantation · S 法蒂亚 psyche · S 拉克莉莫萨 chaos · S 白藏 incantation · S 零（男） cosmos · S 零（女） cosmos · S 穗鸟 cosmos · S 达芙迪尔 chaos · S 九原 anima · S 哈尼尔 psyche · A 阿德勒 incantation · A 翳 lakshana · A 埃德加 cosmos · A 薄荷 anima · A 奈莉 anima · A 梅露拉 lakshana · A 阿尔法德 lakshana · A 泰格多 cosmos · A 哈索尔 lakshana · S 赤子 cosmos · S 莉莉娜 cosmos · S 凛子 incantation · A 密斯莫 chaos · A 沁红 anima · A 尼察 psyche · A 黑鸟 chaos · S 明虎 anima · S 赤音 incantation · S 詹森 psyche · A 伊利卡 lakshana · S 风花 anima · A 克劳 chaos · S 蕾妮 psyche · A 吾郎 incantation · A 玛丽娜 cosmos · S 海斗 lakshana · A 希尔菲 anima · S 奥蕾莉亚 psyche · A 小吱 anima · S 浔 cosmos · S 卡厄斯 lakshana · S 查看配装方向 查看异象机制 Gachia 是独立的游戏资料站点，与游戏发行方无隶属关系。 关于 联系我们 隐私政策 服务条款",
+        "bodyTextLength": 1015,
+        "headingCount": 2,
+        "internalLinkCount": 54,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": 328,
+        "headingDelta": -8,
+        "internalLinkDelta": 33,
+        "jsonLdDelta": 0
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": true,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": true
+      }
+    },
+    {
+      "path": "/zh/nte/map",
+      "production": {
+        "url": "/zh/nte/map",
+        "status": 200,
+        "title": "异环互动地图 — 传送锚点、宝箱、收集品",
+        "description": "异环互动地图攻略：传送锚点位置、宝箱分布、材料采集点、世界任务标记。，同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。",
+        "canonical": "https://gachia.com/zh/nte/map",
+        "alternates": [
+          "en:https://gachia.com/en/nte/map",
+          "ja:https://gachia.com/ja/nte/map",
+          "x-default:https://gachia.com/zh/nte/map",
+          "zh-Hans:https://gachia.com/zh/nte/map"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "",
+        "bodyText": "异环互动地图 — 传送锚点、宝箱、收集品 Gachia 原神 鸣潮 绝区零 洛克国际服 失控进化 全部游戏 日历 关于 搜索 ⌘K 中文 English 日本語 登录 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 角色图鉴 武器 材料道具 节奏榜 地图 版本专题 下载配置 攻略百科 光盘套装 兑换码 祈愿 异象 中文 异环 区域攻略 共 4 个区域 12 子区域 12 Boss 8 区域特产 8 挑战关卡 常见地点锚点 海瑟劳 地图锚点 / 路线入口 六街 地图锚点 / 路线入口 空洞零号 地图锚点 / 路线入口 光映广场 地图锚点 / 路线入口 🏙️ 中央区 异环世界的核心区域，拥有丰富的异常现象和变异体。 区域要点 • 传送点: 28个 • 异常Boss: 4处 • 收集品: 大量 区域特产 异常核心碎片 能量结晶 子区域 商业街 住宅区 中央公园 地下通道 异常Boss 👹 变异体Alpha 👹 裂隙守卫 👹 虚数回廊Boss 👹 混沌核心 挑战关卡 🏛️ 战术模拟室 🏛️ 材料挑战关卡 💡 探索提示 • 中央区是开局区域，优先解锁所有传送点 • 异常Boss掉落角色升级材料 • 每日收集品刷新后记得重新拾取 🏭 工业区 废弃的工业设施，充满了危险的变异体和珍贵的材料。 区域要点 • 传送点: 22个 • 异常Boss: 3处 • 收集品: 30+ 区域特产 工业废料精华 金属催化剂 子区域 钢铁工厂 能源站 仓库区 异常Boss 👹 机械巨蛇 👹 熔炉守护者 👹 电磁核心 挑战关卡 🏛️ 装备挑战关卡 🏛️ 材料挑战关卡 💡 探索提示 • 工业区的Boss掉落武器升级材料 • 部分区域需要解谜才能进入 • 夜间出现的怪物会更强但掉落更好 🔬 研究所 神秘的异象研究中心，隐藏着关于异环世界的秘密。 区域要点 • 传送点: 18个 • 异常Boss: 3处 • 收集品: 25+ 区域特产 研究数据芯片 异象结晶 子区域 实验室A区 实验室B区 地下设施 异常Boss 👹 实验体Omega 👹 数据侵蚀者 👹 维度裂隙 挑战关卡 🏛️ 高级战术模拟 🏛️ 高级材料挑战 💡 探索提示 • 研究所是中后期区域，敌人较强 • 需要完成前置任务才能解锁 • 隐藏房间里有稀有材料 🕳️ 深渊区域 异环世界最深处的危险区域，只有最强的小队才能挑战。 区域要点 • 传送点: 12个 • 异常Boss: 2处 • 收集品: 15+ 区域特产 深渊结晶 混沌核心碎片 子区域 浅层区域 深层区域 异常Boss 👹 深渊领主 👹 终极裂隙 挑战关卡 🏛️ 深渊挑战 🏛️ 极限模拟 💡 探索提示 • 深渊区域是终局内容，建议队伍全",
+        "bodyTextLength": 1516,
+        "headingCount": 35,
+        "internalLinkCount": 18,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/zh/nte/map",
+        "status": 200,
+        "title": "异环互动地图 - 区域、Boss 与材料路线",
+        "description": "异环区域攻略，整理地点锚点、Boss、材料特产、挑战关卡与探索提示。",
+        "canonical": "https://gachia.com/zh/nte/map",
+        "alternates": [
+          "en:https://gachia.com/en/nte/map",
+          "ja:https://gachia.com/ja/nte/map",
+          "x-default:https://gachia.com/zh/nte/map",
+          "zh-Hans:https://gachia.com/zh/nte/map"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环互动地图 - 区域、Boss 与材料路线 Gachia 原神 崩坏：星穹铁道 鸣潮 绝区零 日历 关于 中文 EN 日本語 首页 / 异环 Gachia · NTE 角色 攻略 版本 武器 兑换码 NTE Map Guide 异环区域攻略 按区域整理地点锚点、Boss、特产、挑战和探索提示。实际点位与开放条件请以游戏内信息为准。 4 区域 12 子区域 12 异常 Boss 8 挑战关卡 常见地点锚点 海瑟劳 地图锚点与路线入口 六街 地图锚点与路线入口 空洞零号 地图锚点与路线入口 光映广场 地图锚点与路线入口 Central 中央区 异环世界的核心区域，拥有丰富的异常现象和变异体。 区域要点 传送点: 28个 异常Boss: 4处 收集品: 大量 区域特产 异常核心碎片 能量结晶 子区域 商业街 住宅区 中央公园 地下通道 异常 Boss 变异体Alpha 裂隙守卫 虚数回廊Boss 混沌核心 挑战关卡 战术模拟室 材料挑战关卡 探索提示 中央区是开局区域，优先解锁所有传送点 异常Boss掉落角色升级材料 每日收集品刷新后记得重新拾取 Industrial 工业区 废弃的工业设施，充满了危险的变异体和珍贵的材料。 区域要点 传送点: 22个 异常Boss: 3处 收集品: 30+ 区域特产 工业废料精华 金属催化剂 子区域 钢铁工厂 能源站 仓库区 异常 Boss 机械巨蛇 熔炉守护者 电磁核心 挑战关卡 装备挑战关卡 材料挑战关卡 探索提示 工业区的Boss掉落武器升级材料 部分区域需要解谜才能进入 夜间出现的怪物会更强但掉落更好 Research 研究所 神秘的异象研究中心，隐藏着关于异环世界的秘密。 区域要点 传送点: 18个 异常Boss: 3处 收集品: 25+ 区域特产 研究数据芯片 异象结晶 子区域 实验室A区 实验室B区 地下设施 异常 Boss 实验体Omega 数据侵蚀者 维度裂隙 挑战关卡 高级战术模拟 高级材料挑战 探索提示 研究所是中后期区域，敌人较强 需要完成前置任务才能解锁 隐藏房间里有稀有材料 Abyss 深渊区域 异环世界最深处的危险区域，只有最强的小队才能挑战。 区域要点 传送点: 12个 异常Boss: 2处 收集品: 15+ 区域特产 深渊结晶 混沌核心碎片 子区域 浅层区域 深层区域 异常 Boss 深渊领主 终极裂隙 挑战关卡 深渊挑战 极限模拟 探索提示 深渊区域是终局内容，建议队伍全满级后再来 Boss有特殊机制需要特定策略应对 深渊结晶是高级材料的必要素材 材料图鉴 异象机制 角色配装 Gachia 是独立的游戏资料站点，与游戏发行方无隶属关系。 关于 联系我们 隐私政策 服务条款",
+        "bodyTextLength": 1139,
+        "headingCount": 26,
+        "internalLinkCount": 13,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": -377,
+        "headingDelta": -9,
+        "internalLinkDelta": -5,
+        "jsonLdDelta": 0
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": true,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": true
+      }
+    },
+    {
+      "path": "/zh/nte/compare",
+      "production": {
+        "url": "/zh/nte/compare",
+        "status": 200,
+        "title": "异环角色对比｜X vs Y 强度、定位与培养优先级",
+        "description": "异环 角色对比工具，适合做 X vs Y 强度比较、定位分析、配装差异判断和培养优先级筛选，帮助你在抽卡和组队前先选对角色。，同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。",
+        "canonical": "https://gachia.com/zh/nte/compare",
+        "alternates": [
+          "en:https://gachia.com/en/nte/compare",
+          "ja:https://gachia.com/ja/nte/compare",
+          "x-default:https://gachia.com/zh/nte/compare",
+          "zh-Hans:https://gachia.com/zh/nte/compare"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "",
+        "bodyText": "Gachia 原神 鸣潮 绝区零 洛克国际服 失控进化 全部游戏 日历 关于 搜索 ⌘K 中文 English 日本語 登录 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 角色图鉴 武器 材料道具 节奏榜 地图 版本专题 下载配置 攻略百科 光盘套装 兑换码 祈愿 异象 中文 异环 Loading comparison... 继续往下看 看角色图鉴 先确认角色定位和养成基础，再回来对比更容易看出差异。 看配装推荐 如果你已经选好角色，这里可以直接看对应配装和替代方案。 看版本更新 想看当前版本更适合谁、谁被加强了，可以从这里继续。 探索更多游戏 原神 崩坏：星穹铁道 鸣潮 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 Gachia 本站数据来源于游戏客户端，仅供学习参考。所有游戏素材版权归原厂商所有。 Games 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 资源 关于 Gachia 网站地图 API Legal 隐私政策 服务条款 联系我们 © 2026 Gachia. All rights reserved. 异环角色对比｜X vs Y 强度、定位与培养优先级 角色对比 角色 A 娜娜莉 咲里 法蒂亚 白藏 零（男） 零（女） 穗鸟 达芙迪尔 九原 哈尼尔 阿德勒 翳 埃德加 薄荷 哈索尔 赤子 奥蕾莉亚 浔 角色 B 娜娜莉 咲里 法蒂亚 白藏 零（男） 零（女） 穗鸟 达芙迪尔 九原 哈尼尔 阿德勒 翳 埃德加 薄荷 哈索尔 赤子 奥蕾莉亚 浔",
+        "bodyTextLength": 763,
+        "headingCount": 12,
+        "internalLinkCount": 21,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/zh/nte/compare",
+        "status": 200,
+        "title": "异环角色对比",
+        "description": "异环角色属性、定位与培养优先级对比。",
+        "canonical": "https://gachia.com/zh/nte/compare",
+        "alternates": [
+          "en:https://gachia.com/en/nte/compare",
+          "ja:https://gachia.com/ja/nte/compare",
+          "x-default:https://gachia.com/zh/nte/compare",
+          "zh-Hans:https://gachia.com/zh/nte/compare"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环角色对比 Gachia 原神 崩坏：星穹铁道 鸣潮 绝区零 日历 关于 中文 EN 日本語 首页 / 异环 Gachia · NTE 角色 攻略 版本 武器 兑换码 NTE Comparison 异环角色对比 从属性、稀有度与培养方向对比角色。实际强度与优先级会随队伍、版本和操作变化。 娜娜莉 anima · S 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 咲里 incantation · S 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 法蒂亚 psyche · S 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 拉克莉莫萨 chaos · S 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 白藏 incantation · S 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 零（男） cosmos · S 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 零（女） cosmos · S 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 穗鸟 cosmos · S 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 达芙迪尔 chaos · S 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 九原 anima · S 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 哈尼尔 psyche · A 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 阿德勒 incantation · A 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 翳 lakshana · A 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 埃德加 cosmos · A 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 薄荷 anima · A 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 奈莉 anima · A 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 梅露拉 lakshana · A 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 阿尔法德 lakshana · A 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 泰格多 cosmos · A 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 哈索尔 lakshana · S 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 赤子 cosmos · S 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 莉莉娜 cosmos · S 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 凛子 incantation · A 打开角色详情，结合武器、驱动盘和队伍需求判断投入优先级。 密斯莫 chaos · A 打开角色详情，结合武",
+        "bodyTextLength": 2065,
+        "headingCount": 1,
+        "internalLinkCount": 54,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": 1302,
+        "headingDelta": -11,
+        "internalLinkDelta": 33,
+        "jsonLdDelta": 0
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": true,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": true
+      }
+    },
+    {
+      "path": "/zh/nte/calculator",
+      "production": {
+        "url": "/zh/nte/calculator",
+        "status": 200,
+        "title": "计算器 - 异环",
+        "description": "计算器 - 异环",
+        "canonical": "https://gachia.com/zh/nte/calculator",
+        "alternates": [
+          "en:https://gachia.com/en/nte/calculator",
+          "ja:https://gachia.com/ja/nte/calculator",
+          "x-default:https://gachia.com/zh/nte/calculator",
+          "zh-Hans:https://gachia.com/zh/nte/calculator"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "",
+        "bodyText": "Gachia 原神 鸣潮 绝区零 洛克国际服 失控进化 全部游戏 日历 关于 搜索 ⌘K 中文 English 日本語 登录 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 角色图鉴 武器 材料道具 节奏榜 地图 版本专题 下载配置 攻略百科 光盘套装 兑换码 祈愿 异象 中文 异环 敬请期待 该游戏的计算器功能正在开发中 探索更多游戏 原神 崩坏：星穹铁道 鸣潮 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 Gachia 本站数据来源于游戏客户端，仅供学习参考。所有游戏素材版权归原厂商所有。 Games 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 资源 关于 Gachia 网站地图 API Legal 隐私政策 服务条款 联系我们 © 2026 Gachia. All rights reserved. 计算器 - 异环",
+        "bodyTextLength": 492,
+        "headingCount": 6,
+        "internalLinkCount": 18,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/zh/nte/calculator",
+        "status": 200,
+        "title": "异环伤害计算器",
+        "description": "异环角色伤害与配装计算工具。",
+        "canonical": "https://gachia.com/zh/nte/calculator",
+        "alternates": [
+          "en:https://gachia.com/en/nte/calculator",
+          "ja:https://gachia.com/ja/nte/calculator",
+          "x-default:https://gachia.com/zh/nte/calculator",
+          "zh-Hans:https://gachia.com/zh/nte/calculator"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环伤害计算器 Gachia 原神 崩坏：星穹铁道 鸣潮 绝区零 日历 关于 中文 EN 日本語 首页 / 异环 Gachia · NTE 角色 攻略 版本 武器 兑换码 NTE Damage Planning 异环伤害计算参考 本页说明伤害拆分方法，便于核对配装和词条方向；暂不替代游戏内数值或实时模拟器。 基础伤害 基础攻击力 × 技能倍率，是后续乘区计算起点。 增伤与暴击 分别记录属性增伤、暴击率和暴击伤害，避免重复计算。 反应与抗性 最后应用反应倍率、敌方防御和属性抗性。 核对顺序 确认角色等级、武器基础属性与技能倍率。 分开统计暴击与各类增伤。 按目标敌人的防御、抗性和战斗条件复核。 配装方向 武器资料 Gachia 是独立的游戏资料站点，与游戏发行方无隶属关系。 关于 联系我们 隐私政策 服务条款",
+        "bodyTextLength": 358,
+        "headingCount": 2,
+        "internalLinkCount": 12,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": -134,
+        "headingDelta": -4,
+        "internalLinkDelta": -6,
+        "jsonLdDelta": 0
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": false,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": true
+      }
+    },
+    {
+      "path": "/zh/nte/events",
+      "production": {
+        "url": "/zh/nte/events",
+        "status": 200,
+        "title": "异环 Wiki | Gachia",
+        "description": "无限暖暖角色图鉴、弧盘数据、光盘推荐、攻略百科 — Gachia",
+        "canonical": "https://gachia.com/zh/nte",
+        "alternates": [
+          "en:https://gachia.com/en/nte",
+          "ja:https://gachia.com/ja/nte",
+          "x-default:https://gachia.com/zh/nte",
+          "zh-Hans:https://gachia.com/zh/nte"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "",
+        "bodyText": "异环 Wiki | Gachia Gachia 原神 鸣潮 绝区零 洛克国际服 失控进化 全部游戏 日历 关于 搜索 ⌘K 中文 English 日本語 登录 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 角色图鉴 武器 材料道具 节奏榜 地图 版本专题 下载配置 攻略百科 光盘套装 兑换码 祈愿 异象 中文 异环 探索更多游戏 原神 崩坏：星穹铁道 鸣潮 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 Gachia 本站数据来源于游戏客户端，仅供学习参考。所有游戏素材版权归原厂商所有。 Games 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 资源 关于 Gachia 网站地图 API Legal 隐私政策 服务条款 联系我们 © 2026 Gachia. All rights reserved.",
+        "bodyTextLength": 480,
+        "headingCount": 5,
+        "internalLinkCount": 18,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/zh/nte/events",
+        "status": 200,
+        "title": "异环活动与版本事件",
+        "description": "异环当前版本活动与奖励。",
+        "canonical": "https://gachia.com/zh/nte/events",
+        "alternates": [
+          "en:https://gachia.com/en/nte/events",
+          "ja:https://gachia.com/ja/nte/events",
+          "x-default:https://gachia.com/zh/nte/events",
+          "zh-Hans:https://gachia.com/zh/nte/events"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "Gachia 原神 崩坏：星穹铁道 鸣潮 绝区零 日历 关于 中文 EN 日本語 首页 / 异环 Gachia · NTE 角色 攻略 版本 武器 兑换码 NTE Events 异环活动与版本事件 用于汇总版本活动和资源规划要点。具体开启时间、奖励与规则应以游戏内公告为准。 999 Nights 完成活动任务、每日挑战和奖励兑换时，优先处理有截止时间的项目。 版本卡池 先核对卡池剩余时间与保底资源，再决定是否投入。 活动检查清单 登录后检查活动、兑换码、邮件和商店，避免遗漏限时奖励。 版本专题 兑换码 商店规划 Gachia 是独立的游戏资料站点，与游戏发行方无隶属关系。 关于 联系我们 隐私政策 服务条款 异环活动与版本事件",
+        "bodyTextLength": 317,
+        "headingCount": 1,
+        "internalLinkCount": 13,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": -163,
+        "headingDelta": -4,
+        "internalLinkDelta": -5,
+        "jsonLdDelta": 0
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": false,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": true
+      }
+    },
+    {
+      "path": "/zh/nte/merchant",
+      "production": {
+        "url": "/zh/nte/merchant",
+        "status": 200,
+        "title": "异环 Wiki | Gachia",
+        "description": "无限暖暖角色图鉴、弧盘数据、光盘推荐、攻略百科 — Gachia",
+        "canonical": "https://gachia.com/zh/nte",
+        "alternates": [
+          "en:https://gachia.com/en/nte",
+          "ja:https://gachia.com/ja/nte",
+          "x-default:https://gachia.com/zh/nte",
+          "zh-Hans:https://gachia.com/zh/nte"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "",
+        "bodyText": "异环 Wiki | Gachia Gachia 原神 鸣潮 绝区零 洛克国际服 失控进化 全部游戏 日历 关于 搜索 ⌘K 中文 English 日本語 登录 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 角色图鉴 武器 材料道具 节奏榜 地图 版本专题 下载配置 攻略百科 光盘套装 兑换码 祈愿 异象 中文 异环 探索更多游戏 原神 崩坏：星穹铁道 鸣潮 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 Gachia 本站数据来源于游戏客户端，仅供学习参考。所有游戏素材版权归原厂商所有。 Games 原神 崩坏：星穹铁道 鸣潮 异环 绝区零 归环 无限大 明日方舟：终末地 遗忘之海 失控进化 洛克王国：世界（国际服） 洛克王国：世界 伊莫 资源 关于 Gachia 网站地图 API Legal 隐私政策 服务条款 联系我们 © 2026 Gachia. All rights reserved.",
+        "bodyTextLength": 480,
+        "headingCount": 5,
+        "internalLinkCount": 18,
+        "hasSharedNavigation": false,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "staging": {
+        "url": "/zh/nte/merchant",
+        "status": 200,
+        "title": "异环商店与资源规划",
+        "description": "异环商店兑换优先级与资源规划。",
+        "canonical": "https://gachia.com/zh/nte/merchant",
+        "alternates": [
+          "en:https://gachia.com/en/nte/merchant",
+          "ja:https://gachia.com/ja/nte/merchant",
+          "x-default:https://gachia.com/zh/nte/merchant",
+          "zh-Hans:https://gachia.com/zh/nte/merchant"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "Gachia 原神 崩坏：星穹铁道 鸣潮 绝区零 日历 关于 中文 EN 日本語 首页 / 异环 Gachia · NTE 角色 攻略 版本 武器 兑换码 NTE Resource Planning 异环商店与资源规划 用有限货币优先补足队伍短板。刷新周期、价格和可兑换内容可能变化，请以游戏内商店为准。 优先兑换 优先角色突破、技能和当前版本难以稳定获得的材料。 资源留存 抽卡前先保留完整保底资源，再评估武器和养成材料。 版本商店 限时商店优先换取无法稳定获取的材料，再补常规资源。 材料图鉴 抽卡规划 活动清单 Gachia 是独立的游戏资料站点，与游戏发行方无隶属关系。 关于 联系我们 隐私政策 服务条款 异环商店与资源规划",
+        "bodyTextLength": 317,
+        "headingCount": 1,
+        "internalLinkCount": 13,
+        "hasSharedNavigation": true,
+        "hasSharedFooter": true,
+        "hasBreadcrumbs": true
+      },
+      "differences": {
+        "titleEqual": false,
+        "descriptionEqual": false,
+        "bodyLengthDelta": -163,
+        "headingDelta": -4,
+        "internalLinkDelta": -5,
+        "jsonLdDelta": 0
+      },
+      "checks": {
+        "productionReachable": true,
+        "stagingReachable": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "contentFloor": false,
+        "navigationFloor": true,
+        "sharedNavigation": true,
+        "sharedFooter": true,
+        "breadcrumbs": true,
+        "structuredDataFloor": true
+      }
+    }
+  ]
+}

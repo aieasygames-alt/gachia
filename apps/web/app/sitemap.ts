@@ -1,6 +1,7 @@
 import { GAMES, LOCALES } from '@gachia/core';
 import type { MetadataRoute } from 'next';
 import { getEntryUpdatedAt, hasLocalizedContent } from '@/lib/seo-metadata';
+import { GAME_DEPLOYMENTS } from '@gachia/core';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -30,6 +31,7 @@ const REAL_CONTENT_ROUTES: Record<string, string[]> = {
   roco: ['characters', 'guides', 'weapons', 'tier-list', 'version', 'download', 'redeem-codes', 'type-chart', 'merchant', 'eggs', 'events'],
   'roco-cn': ['characters', 'guides', 'items', 'weapons', 'tier-list', 'version', 'download', 'redeem-codes', 'type-chart', 'merchant', 'eggs', 'events'],
   aniimo: ['characters', 'guides', 'map', 'version', 'download', 'redeem-codes'],
+  'azur-promilia': ['characters', 'weapons', 'guides', 'tier-list', 'redeem-codes'],
 };
 
 type SitemapItem = { id: string };
@@ -49,6 +51,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (const [gameId, game] of Object.entries(GAMES)) {
       const realRoutes = REAL_CONTENT_ROUTES[gameId];
       if (!realRoutes) continue;
+      // Draft/preview games are served by their own Worker but must not enter
+      // the production sitemap until content and canary checks are complete.
+      if (GAME_DEPLOYMENTS[gameId as keyof typeof GAME_DEPLOYMENTS]?.status && GAME_DEPLOYMENTS[gameId as keyof typeof GAME_DEPLOYMENTS]?.status !== 'live') continue;
 
       // Game home page
       entries.push({
@@ -213,6 +218,7 @@ async function getCharactersForGame(gameId: string): Promise<SitemapItem[]> {
     case 'roco': return (await import('@gachia/data/games/roco/characters')).rocoCharacters;
     case 'roco-cn': return (await import('@gachia/data/games/roco-cn/character-summaries')).rocoCnCharacterSummaries;
     case 'aniimo': return (await import('@gachia/data/games/aniimo/characters')).aniimoCharacters;
+    case 'azur-promilia': return (await import('@gachia/data/games/azur-promilia')).characters;
     default: return [];
   }
 }
@@ -248,6 +254,7 @@ async function getGuidesForGame(gameId: string): Promise<SitemapItem[]> {
     case 'roco': return (await import('@gachia/data/games/roco/guides')).rocoGuides;
     case 'roco-cn': return (await import('@gachia/data/games/roco-cn/guides')).rocoCnGuides;
     case 'aniimo': return (await import('@gachia/data/games/aniimo/guides')).aniimoGuides;
+    case 'azur-promilia': return [];
     default: return [];
   }
 }

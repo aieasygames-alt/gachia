@@ -86,6 +86,7 @@ export const HOMEPAGE_PRIORITY_GAMES: GameId[] = [
   'ananta',
   'guihuan',
   'roco-cn',
+  'azur-promilia',
 ];
 
 export const LIVE_BANNERS: LiveBanner[] = [

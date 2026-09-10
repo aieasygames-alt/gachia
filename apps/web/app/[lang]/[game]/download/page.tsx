@@ -486,6 +486,26 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
     ],
     faq: liveFaq('伊莫', 'Aniimo', 'アニモ'),
   },
+  'azur-promilia': {
+    officialUrl: 'https://azurpromilia.com/',
+    status: {
+      zh: '蓝色星原：旅谣的上线时间、平台和下载状态等待官方公告确认。',
+      en: 'Azur Promilia launch timing, platforms, and download status await official confirmation.',
+      ja: 'アズールプロミリアの配信時期、対応機種、ダウンロード情報は公式発表待ちです。',
+    },
+    intro: {
+      zh: '这里仅提供官方信息核对入口，不展示未经确认的下载包、测试资格或设备要求。',
+      en: 'This hub provides official-information checks only; unverified downloads, test access, and device requirements are not listed.',
+      ja: '公式情報の確認入口のみを掲載し、未確認のDL、テスト参加条件、端末要件は掲載しません。',
+    },
+    officialNote: DEFAULT_STATUS,
+    platforms: [],
+    specs: specs('等待官方设备要求。', 'Awaiting official device requirements.', '公式端末要件を確認中。'),
+    cloud: { zh: '尚未确认官方云游戏入口。', en: 'No official cloud gaming entry is confirmed.', ja: '公式クラウド入口は未確認です。' },
+    crossPlay: { zh: '跨平台账号与进度规则等待官方说明。', en: 'Cross-platform account and progress rules await official details.', ja: 'クロス進行とアカウント規則は公式発表待ちです。' },
+    nextLinks: [],
+    faq: liveFaq('蓝色星原：旅谣', 'Azur Promilia', 'アズールプロミリア'),
+  },
 };
 
 export function generateStaticParams() {

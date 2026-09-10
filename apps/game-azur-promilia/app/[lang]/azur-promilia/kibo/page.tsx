@@ -1,0 +1,8 @@
+import { kibo } from '@/lib/data';
+import { asLocale, localize } from '@/lib/i18n';
+import { metadata, url } from '@/lib/seo';
+import { GameNav } from '@/components/game-nav';
+import { KiboFilter } from '@/components/kibo-filter';
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) { const locale = asLocale((await params).lang); return metadata(locale, localize(locale, { zh: '蓝色星原：旅谣 Kibo 图鉴', en: 'Azur Promilia Kibo Index', ja: 'アズールプロミリア キボ図鑑' }), localize(locale, { zh: '官方 Kibo 资料与 CBT 战斗、生产能力参考。', en: 'Official Kibo profiles plus CBT combat and production references.', ja: '公式キボ資料とCBT戦闘・生産能力リファレンス。' }), 'kibo'); }
+export default async function KiboPage({ params }: { params: Promise<{ lang: string }> }) { const locale = asLocale((await params).lang); const title = localize(locale, { zh: 'Kibo 图鉴', en: 'Kibo Index', ja: 'キボ図鑑' }); return <><GameNav locale={locale} current="kibo"/><main className="content"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'CollectionPage', name: title, url: url(locale, 'kibo') }) }} /><h1>{title}</h1><p className="card__meta">{localize(locale, { zh: '来源：日本官方 Kibo 页与 GameWith CBT 指南（核对：2026-09-10）', en: 'Sources: Japanese official Kibo pages and GameWith CBT guides (checked 2026-09-10)', ja: '出典：日本公式キボページおよびGameWith CBTガイド（2026-09-10確認）' })}</p><p className="notice">{localize(locale, { zh: '战斗技能、生活技能和派遣设施为 CBT 参考，正式版本可能调整。', en: 'Combat skills, life skills, and facilities are CBT references and may change at release.', ja: '戦闘技能、生活技能、派遣施設はCBT参照であり、正式版で変更される場合があります。' })}</p><KiboFilter entries={kibo} locale={locale}/></main></>; }

@@ -84,6 +84,11 @@ const FEATURED: Partial<Record<keyof typeof GAMES, FeaturedCharacter[]>> = {
     { id: 'tuckin', name: { zh: 'Tuckin', en: 'Tuckin', ja: 'Tuckin' } },
     { id: 'panpanta', name: { zh: 'Panpanta', en: 'Panpanta', ja: 'Panpanta' } },
   ],
+  'azur-promilia': [
+    { id: 'abby', name: { zh: '阿比', en: 'Abby', ja: 'アビー' } },
+    { id: 'metsa', name: { zh: '梅茨娅', en: 'Metsa', ja: 'メーツァ' } },
+    { id: 'terara', name: { zh: '特拉拉', en: 'Terara', ja: 'テララ' } },
+  ],
 };
 
 const HOME_COPY = {
@@ -361,9 +366,9 @@ function getStatusForGame(gameId: keyof typeof GAMES) {
 }
 
 const DESCRIPTIONS: Record<string, string> = {
-  zh: 'Gachia 是多游戏攻略 Wiki 与实时规划入口，覆盖原神、崩铁、鸣潮、绝区零、异环等游戏的当前卡池、下期卡池、版本专题、兑换码、角色图鉴、武器数据、配装和热门攻略。',
-  en: 'Gachia is a multi-game wiki and live planning hub for current banners, next banners, version updates, redeem codes, characters, weapons, builds, and guides across Genshin, HSR, WuWa, ZZZ, NTE, and more.',
-  ja: 'Gachia は多ゲーム攻略 Wiki とリアルタイム計画ハブです。原神、HSR、鳴潮、ZZZ、NTE などの現在バナー、次回バナー、版本更新、コード、キャラ、武器、ビルド、攻略を整理します。',
+  zh: 'Gachia 是多游戏攻略 Wiki 与实时规划入口，覆盖原神、崩铁、鸣潮、绝区零、异环、蓝色星原：旅谣等游戏的当前卡池、版本专题、兑换码、角色图鉴、武器数据和攻略。',
+  en: 'Gachia is a multi-game wiki and live planning hub for banners, version updates, redeem codes, characters, weapons, builds, and guides across Genshin, HSR, WuWa, ZZZ, NTE, Azur Promilia, and more.',
+  ja: 'Gachia は多ゲーム攻略 Wiki とリアルタイム計画ハブです。原神、HSR、鳴潮、ZZZ、NTE、アズールプロミリアなどのバナー、版本更新、コード、キャラ、武器、攻略を整理します。',
 };
 
 const TITLES: Record<string, string> = {

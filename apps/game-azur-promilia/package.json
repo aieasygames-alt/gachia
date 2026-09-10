@@ -1,0 +1,33 @@
+{
+  "name": "@gachia/game-azur-promilia",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "build:worker": "opennextjs-cloudflare build",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview --config wrangler.jsonc",
+    "deploy:preview": "opennextjs-cloudflare build && opennextjs-cloudflare deploy --config wrangler.jsonc",
+    "deploy:staging": "opennextjs-cloudflare build && opennextjs-cloudflare deploy --config wrangler.jsonc --env staging",
+    "smoke:staging": "AZUR_PROMILIA_PREVIEW_ORIGIN=${AZUR_PROMILIA_PREVIEW_ORIGIN:?Set AZUR_PROMILIA_PREVIEW_ORIGIN} pnpm run smoke",
+    "smoke": "node scripts/smoke.mjs",
+    "seo:parity": "node ../../scripts/azur-promilia-seo-parity.mjs",
+    "verify:bundle": "opennextjs-cloudflare build && wrangler deploy --dry-run --config wrangler.jsonc --env \"\"",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@gachia/core": "workspace:*",
+    "@gachia/data": "workspace:*",
+    "next": "^15.5.18",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260708.1",
+    "@opennextjs/cloudflare": "^1.20.1",
+    "@types/node": "25.6.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "typescript": "^5.8.0",
+    "wrangler": "^4.110.0"
+  }
+}

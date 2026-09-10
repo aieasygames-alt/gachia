@@ -18,7 +18,7 @@ export const LOCALE_NAMES: Record<SupportedLocale, string> = {
 // Games Registry
 // ============================================================
 
-export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco', 'roco-cn', 'aniimo'];
+export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco', 'roco-cn', 'aniimo', 'azur-promilia'];
 
 export const GAMES: Record<GameId, GameModule> = {
   genshin: {
@@ -605,6 +605,46 @@ export const GAMES: Record<GameId, GameModule> = {
       build: false,
       compare: false,
       teams: false,
+      'redeem-codes': true,
+    },
+  },
+  'azur-promilia': {
+    id: 'azur-promilia',
+    name: { zh: '蓝色星原：旅谣', en: 'Azur Promilia', ja: 'アズールプロミリア' },
+    theme: {
+      primary: '#4cc9f0',
+      accent: '#f9c74f',
+      background: '#10233f',
+      surface: '#183454',
+    },
+    elements: [
+      { id: 'fire', name: { zh: '火', en: 'Fire', ja: '火' }, color: '#ef4444' },
+      { id: 'wind', name: { zh: '风', en: 'Wind', ja: '風' }, color: '#6ee7b7' },
+      { id: 'water', name: { zh: '水', en: 'Water', ja: '水' }, color: '#3b82f6' },
+      { id: 'nature', name: { zh: '自然', en: 'Nature', ja: '自然' }, color: '#4ade80' },
+      { id: 'thunder', name: { zh: '雷', en: 'Thunder', ja: '雷' }, color: '#facc15' },
+      { id: 'earth', name: { zh: '土', en: 'Earth', ja: '土' }, color: '#f59e0b' },
+      { id: 'light', name: { zh: '光', en: 'Light', ja: '光' }, color: '#fde68a' },
+      { id: 'ice', name: { zh: '冰', en: 'Ice', ja: '氷' }, color: '#67e8f9' },
+      { id: 'unknown', name: { zh: '未公布', en: 'Unannounced', ja: '未発表' }, color: '#94a3b8' },
+    ],
+    rarities: [
+      { stars: 4, color: '#a855f7', label: { zh: '紫', en: 'Purple', ja: '紫' } },
+      { stars: 5, color: '#eab308', label: { zh: '金', en: 'Gold', ja: '金' } },
+    ],
+    stats: {
+      baseStats: ['hp', 'atk', 'def'],
+      subStats: [],
+      specialStats: [],
+    },
+    routes: {
+      characters: true,
+      weapons: true,
+      items: false,
+      'tier-list': true,
+      calculator: false,
+      map: false,
+      guides: true,
       'redeem-codes': true,
     },
   },

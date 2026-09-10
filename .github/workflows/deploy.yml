@@ -50,6 +50,15 @@ jobs:
         working-directory: apps/web
         run: pnpm exec wrangler deploy --dry-run --config wrangler.jsonc --env ""
 
+      - name: Type check Router
+        run: pnpm --filter @gachia/router type-check
+
+      - name: Test Router
+        run: pnpm --filter @gachia/router test
+
+      - name: Verify Azur Promilia bundle
+        run: pnpm --filter @gachia/game-azur-promilia verify:bundle
+
   deploy-staging:
     needs: build
     if: github.ref == 'refs/heads/main' && github.event_name == 'push' && vars.CLOUDFLARE_DEPLOY_STAGING_FROM_GITHUB == 'true'
@@ -164,6 +173,13 @@ jobs:
         working-directory: apps/web
         run: pnpm exec wrangler d1 migrations apply gachia-db --remote --env "" --config wrangler.jsonc
 
+      - name: Deploy Azur Promilia Worker
+        run: pnpm --filter @gachia/game-azur-promilia deploy:preview
+
+      - name: Deploy Router Worker
+        working-directory: apps/router
+        run: pnpm exec wrangler deploy --config wrangler.jsonc --env ""
+
       - name: Deploy to Cloudflare
         working-directory: apps/web
         run: pnpm exec opennextjs-cloudflare deploy --config wrangler.jsonc --env ""
@@ -176,9 +192,13 @@ jobs:
             https://gachia.com/en
             https://gachia.com/ja
             https://gachia.com/zh/genshin
+            https://gachia.com/zh/azur-promilia
+            https://gachia.com/zh/azur-promilia/characters
             https://gachia.com/zh/privacy
             https://gachia.com/zh/contact
             https://gachia.com/sitemap.xml
+            https://gachia.com/sitemaps/azur-promilia/index.xml
+            https://gachia.com/_games/azur-promilia/_next/static/chunks/webpack.js
             https://gachia.com/ads.txt
           )
           for url in "${urls[@]}"; do

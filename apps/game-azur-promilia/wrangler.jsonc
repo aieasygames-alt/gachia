@@ -1,0 +1,15 @@
+{
+  "name": "gachia-game-azur-promilia",
+  "main": ".open-next/worker.js",
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "compatibility_date": "2026-07-08",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "vars": {
+    "NEXT_PUBLIC_APP_URL": "https://gachia.com",
+    "AZUR_PROMILIA_DEPLOYMENT_MODE": "production"
+  },
+}

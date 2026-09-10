@@ -1,0 +1,1063 @@
+{
+  "generatedAt": "2026-09-08T13:45:44.112Z",
+  "stagingOrigin": "http://localhost:8787",
+  "productionOrigin": "http://localhost:8787",
+  "pages": [
+    {
+      "path": "/zh/nte",
+      "production": {
+        "url": "/zh/nte",
+        "status": 200,
+        "title": "异环 NTE Wiki",
+        "description": "异环角色、武器、攻略与兑换码预发布页面。",
+        "canonical": "https://gachia.com/zh/nte",
+        "alternates": [
+          "en:https://gachia.com/en/nte",
+          "ja:https://gachia.com/ja/nte",
+          "x-default:https://gachia.com/zh/nte",
+          "zh-Hans:https://gachia.com/zh/nte"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环 NTE Wiki 异环（NTE） NTE 独立 Worker 预发布验证页面。 角色图鉴 武器数据 攻略 兑换码 角色 娜娜莉 咲里 法蒂亚 拉克莉莫萨 白藏 零（男）"
+      },
+      "staging": {
+        "url": "/zh/nte",
+        "status": 200,
+        "title": "异环 NTE Wiki",
+        "description": "异环角色、武器、攻略与兑换码预发布页面。",
+        "canonical": "https://gachia.com/zh/nte",
+        "alternates": [
+          "en:https://gachia.com/en/nte",
+          "ja:https://gachia.com/ja/nte",
+          "x-default:https://gachia.com/zh/nte",
+          "zh-Hans:https://gachia.com/zh/nte"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环 NTE Wiki 异环（NTE） NTE 独立 Worker 预发布验证页面。 角色图鉴 武器数据 攻略 兑换码 角色 娜娜莉 咲里 法蒂亚 拉克莉莫萨 白藏 零（男）"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": true
+      }
+    },
+    {
+      "path": "/en/nte",
+      "production": {
+        "url": "/en/nte",
+        "status": 200,
+        "title": "NTE Wiki",
+        "description": "NTE characters, weapons, guides, and redeem codes preview.",
+        "canonical": "https://gachia.com/en/nte",
+        "alternates": [
+          "en:https://gachia.com/en/nte",
+          "ja:https://gachia.com/ja/nte",
+          "x-default:https://gachia.com/zh/nte",
+          "zh-Hans:https://gachia.com/zh/nte"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "NTE Wiki Neverness to Everness (NTE) NTE standalone Worker preview. Characters Weapons Guides Redeem codes Characters Nanally Sakiri Fadia Lacrimosa Baicang Zero (Male)"
+      },
+      "staging": {
+        "url": "/en/nte",
+        "status": 200,
+        "title": "NTE Wiki",
+        "description": "NTE characters, weapons, guides, and redeem codes preview.",
+        "canonical": "https://gachia.com/en/nte",
+        "alternates": [
+          "en:https://gachia.com/en/nte",
+          "ja:https://gachia.com/ja/nte",
+          "x-default:https://gachia.com/zh/nte",
+          "zh-Hans:https://gachia.com/zh/nte"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "NTE Wiki Neverness to Everness (NTE) NTE standalone Worker preview. Characters Weapons Guides Redeem codes Characters Nanally Sakiri Fadia Lacrimosa Baicang Zero (Male)"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": true
+      }
+    },
+    {
+      "path": "/ja/nte",
+      "production": {
+        "url": "/ja/nte",
+        "status": 200,
+        "title": "NTE Wiki",
+        "description": "異環のキャラ、武器、攻略、交換コードのプレビュー。",
+        "canonical": "https://gachia.com/ja/nte",
+        "alternates": [
+          "en:https://gachia.com/en/nte",
+          "ja:https://gachia.com/ja/nte",
+          "x-default:https://gachia.com/zh/nte",
+          "zh-Hans:https://gachia.com/zh/nte"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "NTE Wiki 異環（NTE） NTE独立Workerプレビュー。 キャラクター 武器 攻略 交換コード キャラクター Nanally Sakiri Fadia Lacrimosa Baicang Zero (Male)"
+      },
+      "staging": {
+        "url": "/ja/nte",
+        "status": 200,
+        "title": "NTE Wiki",
+        "description": "異環のキャラ、武器、攻略、交換コードのプレビュー。",
+        "canonical": "https://gachia.com/ja/nte",
+        "alternates": [
+          "en:https://gachia.com/en/nte",
+          "ja:https://gachia.com/ja/nte",
+          "x-default:https://gachia.com/zh/nte",
+          "zh-Hans:https://gachia.com/zh/nte"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "NTE Wiki 異環（NTE） NTE独立Workerプレビュー。 キャラクター 武器 攻略 交換コード キャラクター Nanally Sakiri Fadia Lacrimosa Baicang Zero (Male)"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": true
+      }
+    },
+    {
+      "path": "/zh/nte/characters",
+      "production": {
+        "url": "/zh/nte/characters",
+        "status": 200,
+        "title": "异环角色图鉴",
+        "description": "NTE character database preview",
+        "canonical": "https://gachia.com/zh/nte/characters",
+        "alternates": [
+          "en:https://gachia.com/en/nte/characters",
+          "ja:https://gachia.com/ja/nte/characters",
+          "x-default:https://gachia.com/zh/nte/characters",
+          "zh-Hans:https://gachia.com/zh/nte/characters"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环角色图鉴 Gachia · NTE Characters Guides Version NTE Database 异环角色图鉴 按角色定位、属性与稀有度浏览异环角色资料。 娜娜莉 anima · S 咲里 incantation · S 法蒂亚 psyche · S 拉克莉莫萨 chaos · S 白藏 incantation · S 零（男） cosmos · S 零（女） cosmos · S 穗鸟 cosmos · S 达芙迪尔 chaos · S 九原 anima · S 哈尼尔 psyche · A 阿德勒 incantation · A 翳 lakshana · A 埃德加 cosmos · A 薄荷 anima · A 奈莉 anima · A 梅露拉 lakshana · A 阿尔法德 lakshana · A 泰格多 cosmos · A 哈索尔 lakshana · S 赤子 cosmos · S 莉莉娜 cosmos · S 凛子 incantation · A 密斯莫 chaos · A 沁红 anima · A 尼察 psyche · A 黑鸟 chaos · S 明虎 anima · S 赤音 incantation · S 詹森 psyche · A 伊利卡 lakshana · S 风花 anima · A 克劳 chaos · S 蕾妮 psyche · A 吾郎 incantation · A 玛丽娜 cosmos · S 海斗 lakshana · A 希尔菲 anima · S 奥蕾莉亚 psyche · A 小吱 anima · S 浔 cosmos · S 卡厄斯 lakshana · S"
+      },
+      "staging": {
+        "url": "/zh/nte/characters",
+        "status": 200,
+        "title": "异环角色图鉴",
+        "description": "NTE character database preview",
+        "canonical": "https://gachia.com/zh/nte/characters",
+        "alternates": [
+          "en:https://gachia.com/en/nte/characters",
+          "ja:https://gachia.com/ja/nte/characters",
+          "x-default:https://gachia.com/zh/nte/characters",
+          "zh-Hans:https://gachia.com/zh/nte/characters"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环角色图鉴 Gachia · NTE Characters Guides Version NTE Database 异环角色图鉴 按角色定位、属性与稀有度浏览异环角色资料。 娜娜莉 anima · S 咲里 incantation · S 法蒂亚 psyche · S 拉克莉莫萨 chaos · S 白藏 incantation · S 零（男） cosmos · S 零（女） cosmos · S 穗鸟 cosmos · S 达芙迪尔 chaos · S 九原 anima · S 哈尼尔 psyche · A 阿德勒 incantation · A 翳 lakshana · A 埃德加 cosmos · A 薄荷 anima · A 奈莉 anima · A 梅露拉 lakshana · A 阿尔法德 lakshana · A 泰格多 cosmos · A 哈索尔 lakshana · S 赤子 cosmos · S 莉莉娜 cosmos · S 凛子 incantation · A 密斯莫 chaos · A 沁红 anima · A 尼察 psyche · A 黑鸟 chaos · S 明虎 anima · S 赤音 incantation · S 詹森 psyche · A 伊利卡 lakshana · S 风花 anima · A 克劳 chaos · S 蕾妮 psyche · A 吾郎 incantation · A 玛丽娜 cosmos · S 海斗 lakshana · A 希尔菲 anima · S 奥蕾莉亚 psyche · A 小吱 anima · S 浔 cosmos · S 卡厄斯 lakshana · S"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": true
+      }
+    },
+    {
+      "path": "/zh/nte/characters/nanally",
+      "production": {
+        "url": "/zh/nte/characters/nanally",
+        "status": 200,
+        "title": "娜娜莉 — NTE",
+        "description": "NTE character detail preview",
+        "canonical": "https://gachia.com/zh/nte/characters/nanally",
+        "alternates": [
+          "en:https://gachia.com/en/nte/characters/nanally",
+          "ja:https://gachia.com/ja/nte/characters/nanally",
+          "x-default:https://gachia.com/zh/nte/characters/nanally",
+          "zh-Hans:https://gachia.com/zh/nte/characters/nanally"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "娜娜莉 — NTE Back 娜娜莉"
+      },
+      "staging": {
+        "url": "/zh/nte/characters/nanally",
+        "status": 200,
+        "title": "娜娜莉 — NTE",
+        "description": "NTE character detail preview",
+        "canonical": "https://gachia.com/zh/nte/characters/nanally",
+        "alternates": [
+          "en:https://gachia.com/en/nte/characters/nanally",
+          "ja:https://gachia.com/ja/nte/characters/nanally",
+          "x-default:https://gachia.com/zh/nte/characters/nanally",
+          "zh-Hans:https://gachia.com/zh/nte/characters/nanally"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "娜娜莉 — NTE Back 娜娜莉"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": false
+      }
+    },
+    {
+      "path": "/zh/nte/guides",
+      "production": {
+        "url": "/zh/nte/guides",
+        "status": 200,
+        "title": "异环攻略百科",
+        "description": "NTE guides preview",
+        "canonical": "https://gachia.com/zh/nte/guides",
+        "alternates": [
+          "en:https://gachia.com/en/nte/guides",
+          "ja:https://gachia.com/ja/nte/guides",
+          "x-default:https://gachia.com/zh/nte/guides",
+          "zh-Hans:https://gachia.com/zh/nte/guides"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环攻略百科 Gachia · NTE Characters Version NTE Guides 异环攻略百科 安装、版本、抽卡与养成攻略，共 53 篇内容。 异环 1.2「999 Nights」版本专题：Shinku、Iroi 与抽卡规划 汇总异环 1.2「999 Nights」版本重点：Shinku 当前池、Iroi 下期焦点、活动路线、兑换码检查和抽卡资源规划。 异环 1.2「999 Nights」版本专题 1.2 的搜索热度集中在 Shinku、Iroi、999 Nights、兑换码和抽卡机制。这个专题的目标不是堆传闻，而是把玩家真正需要的入口整理成一条清晰路线：先确认版本活动，再看当前卡池，最后决定资源是否要留给下一期。 版本重点 - 版本主题：1.2「999 Nights」。 - 当前焦点：Shinku 是当前阶段最容易带来搜索和抽卡讨论的角色关键词。 - 下一期焦点：Iroi ... 异环官网入口与下载安装：全平台下载地址、安装教程与配置要求 异环官网入口与全平台下载安装指南，包括 PC、Android、iOS、Mac、PS5、鸿蒙各平台的下载地址、安装方法、配置要求和注意事项。 异环（Neverness to Everness）现已正式上线，免费游玩！国服已于2026年4月23日上午10:00率先开启，全球服将于2026年4月29日正式上线。游戏覆盖PC、PS5、iOS、Android四大平台，本文提供各平台的完整下载安装指南。 游戏概况 异环是一款免费游玩（Free-to-Play）的超自然都市开放世界动作RPG，由完美世界旗下Hotta Studio采用虚幻引擎5开发。游戏支持全平台数据互通，同一账号 ... 新手入门完全指南 从零开始的异环新手教程，涵盖基础系统、资源分配、角色培养优先级。 欢迎来到异环（Neverness to Everness）！本指南将帮助你快速上手游戏的核心系统，从创建角色到组建第一支强力队伍，一步步带你走进这个充满奇幻色彩的开放世界。 基础系统介绍 异环是一款开放世界动作RPG游戏，拥有丰富的角色收集和战斗系统。游戏采用元素反应机制，不同属性角色之间的配合是战斗的关键。游戏的核心玩法围绕角色养成、元素反应战斗、开放世界探索三大系统展开。 初次进入游戏后，建议先完成教学关卡，了解基本的移动、 ... 角色升级材料优先级指南 详解各等级阶段的角色升级材料需求，包含突破材料、经验书和金币消耗，帮助你高效规划体力分配和刷本路线。 角色升级是提升战斗力的基础。了解不同阶段的材料需求可以帮助你更高效地分配体力，避免在错误的阶段浪费宝贵资源。 1-20级：快速过渡期 这个阶段消耗的材料较少，可以通过主线和探索自然获取。建议快速推进到20级解锁更多玩法。1-20级的角色只需要基础的经验书和少量金币，不需要专门的突破材料。 这"
+      },
+      "staging": {
+        "url": "/zh/nte/guides",
+        "status": 200,
+        "title": "异环攻略百科",
+        "description": "NTE guides preview",
+        "canonical": "https://gachia.com/zh/nte/guides",
+        "alternates": [
+          "en:https://gachia.com/en/nte/guides",
+          "ja:https://gachia.com/ja/nte/guides",
+          "x-default:https://gachia.com/zh/nte/guides",
+          "zh-Hans:https://gachia.com/zh/nte/guides"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环攻略百科 Gachia · NTE Characters Version NTE Guides 异环攻略百科 安装、版本、抽卡与养成攻略，共 53 篇内容。 异环 1.2「999 Nights」版本专题：Shinku、Iroi 与抽卡规划 汇总异环 1.2「999 Nights」版本重点：Shinku 当前池、Iroi 下期焦点、活动路线、兑换码检查和抽卡资源规划。 异环 1.2「999 Nights」版本专题 1.2 的搜索热度集中在 Shinku、Iroi、999 Nights、兑换码和抽卡机制。这个专题的目标不是堆传闻，而是把玩家真正需要的入口整理成一条清晰路线：先确认版本活动，再看当前卡池，最后决定资源是否要留给下一期。 版本重点 - 版本主题：1.2「999 Nights」。 - 当前焦点：Shinku 是当前阶段最容易带来搜索和抽卡讨论的角色关键词。 - 下一期焦点：Iroi ... 异环官网入口与下载安装：全平台下载地址、安装教程与配置要求 异环官网入口与全平台下载安装指南，包括 PC、Android、iOS、Mac、PS5、鸿蒙各平台的下载地址、安装方法、配置要求和注意事项。 异环（Neverness to Everness）现已正式上线，免费游玩！国服已于2026年4月23日上午10:00率先开启，全球服将于2026年4月29日正式上线。游戏覆盖PC、PS5、iOS、Android四大平台，本文提供各平台的完整下载安装指南。 游戏概况 异环是一款免费游玩（Free-to-Play）的超自然都市开放世界动作RPG，由完美世界旗下Hotta Studio采用虚幻引擎5开发。游戏支持全平台数据互通，同一账号 ... 新手入门完全指南 从零开始的异环新手教程，涵盖基础系统、资源分配、角色培养优先级。 欢迎来到异环（Neverness to Everness）！本指南将帮助你快速上手游戏的核心系统，从创建角色到组建第一支强力队伍，一步步带你走进这个充满奇幻色彩的开放世界。 基础系统介绍 异环是一款开放世界动作RPG游戏，拥有丰富的角色收集和战斗系统。游戏采用元素反应机制，不同属性角色之间的配合是战斗的关键。游戏的核心玩法围绕角色养成、元素反应战斗、开放世界探索三大系统展开。 初次进入游戏后，建议先完成教学关卡，了解基本的移动、 ... 角色升级材料优先级指南 详解各等级阶段的角色升级材料需求，包含突破材料、经验书和金币消耗，帮助你高效规划体力分配和刷本路线。 角色升级是提升战斗力的基础。了解不同阶段的材料需求可以帮助你更高效地分配体力，避免在错误的阶段浪费宝贵资源。 1-20级：快速过渡期 这个阶段消耗的材料较少，可以通过主线和探索自然获取。建议快速推进到20级解锁更多玩法。1-20级的角色只需要基础的经验书和少量金币，不需要专门的突破材料。 这"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": true
+      }
+    },
+    {
+      "path": "/zh/nte/guides/999-nights-mode-guide",
+      "production": {
+        "url": "/zh/nte/guides/999-nights-mode-guide",
+        "status": 200,
+        "title": "异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级 — NTE",
+        "description": "NTE guide preview",
+        "canonical": "https://gachia.com/zh/nte/guides/999-nights-mode-guide",
+        "alternates": [
+          "en:https://gachia.com/en/nte/guides/999-nights-mode-guide",
+          "ja:https://gachia.com/ja/nte/guides/999-nights-mode-guide",
+          "x-default:https://gachia.com/zh/nte/guides/999-nights-mode-guide",
+          "zh-Hans:https://gachia.com/zh/nte/guides/999-nights-mode-guide"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级 — NTE Back 异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级 ## 先看结论 1.2「999 Nights」最重要的不是把所有内容一次清完，而是每天把活动奖励、兑换码、日常资源和抽卡目标串起来。如果你在 Shinku 和 Iroi 之间摇摆，999 Nights 的资源应该先服务“保底路线”，再服务强度追逐。 ## 每天上线先做什么 | 优先级 | 动作 | 为什么 | | --- | --- | --- | | 1 | 检查活动任务 | 限时奖励错过就少一段资源 | | 2 | 领取兑换码和邮件 | 补 Shinku/Iroi 保底缺口 | | 3 | 清日常与体力 | 稳定换取养成材料 | | 4 | 推 999 Nights 进度 | 解锁阶段奖励和模式资源 | | 5 | 再决定抽卡 | 避免先抽后发现资源不够 | ## 999 Nights 怎么理解 999 Nights 更像版本活动与模式汇总页。它会把剧情、挑战、奖励和角色热度集中到同一时期，因此用户搜索时经常同时出现： - 999 Nights 怎么玩。 - Shinku 值不值得抽。 - Iroi 要不要留。 - 兑换码有没有新码。 - Steam/download"
+      },
+      "staging": {
+        "url": "/zh/nte/guides/999-nights-mode-guide",
+        "status": 200,
+        "title": "异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级 — NTE",
+        "description": "NTE guide preview",
+        "canonical": "https://gachia.com/zh/nte/guides/999-nights-mode-guide",
+        "alternates": [
+          "en:https://gachia.com/en/nte/guides/999-nights-mode-guide",
+          "ja:https://gachia.com/ja/nte/guides/999-nights-mode-guide",
+          "x-default:https://gachia.com/zh/nte/guides/999-nights-mode-guide",
+          "zh-Hans:https://gachia.com/zh/nte/guides/999-nights-mode-guide"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级 — NTE Back 异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级 ## 先看结论 1.2「999 Nights」最重要的不是把所有内容一次清完，而是每天把活动奖励、兑换码、日常资源和抽卡目标串起来。如果你在 Shinku 和 Iroi 之间摇摆，999 Nights 的资源应该先服务“保底路线”，再服务强度追逐。 ## 每天上线先做什么 | 优先级 | 动作 | 为什么 | | --- | --- | --- | | 1 | 检查活动任务 | 限时奖励错过就少一段资源 | | 2 | 领取兑换码和邮件 | 补 Shinku/Iroi 保底缺口 | | 3 | 清日常与体力 | 稳定换取养成材料 | | 4 | 推 999 Nights 进度 | 解锁阶段奖励和模式资源 | | 5 | 再决定抽卡 | 避免先抽后发现资源不够 | ## 999 Nights 怎么理解 999 Nights 更像版本活动与模式汇总页。它会把剧情、挑战、奖励和角色热度集中到同一时期，因此用户搜索时经常同时出现： - 999 Nights 怎么玩。 - Shinku 值不值得抽。 - Iroi 要不要留。 - 兑换码有没有新码。 - Steam/download"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": true
+      }
+    },
+    {
+      "path": "/zh/nte/version",
+      "production": {
+        "url": "/zh/nte/version",
+        "status": 200,
+        "title": "异环 1.2 版本专题",
+        "description": "NTE version hub preview",
+        "canonical": "https://gachia.com/zh/nte/version",
+        "alternates": [
+          "en:https://gachia.com/en/nte/version",
+          "ja:https://gachia.com/ja/nte/version",
+          "x-default:https://gachia.com/zh/nte/version",
+          "zh-Hans:https://gachia.com/zh/nte/version"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环 1.2 版本专题 Gachia · NTE Characters Guides NTE v1.2 异环 1.2 版本专题 集中整理 999 Nights 活动、Shinku 与 Iroi 卡池规划、兑换码、下载入口和版本攻略。 版本重点 999 Nights 活动路线与每日优先级 Shinku 当前池与 Iroi 预留资源规划 当前可查看 8 个兑换码 相关攻略 异环 1.2「999 Nights」版本专题：Shinku、Iroi 与抽卡规划 汇总异环 1.2「999 Nights」版本重点：Shinku 当前池、Iroi 下期焦点、活动路线、兑换码检查和抽卡资源规划。 版本更新日志 异环版本更新历史汇总，记录每个版本的主要内容更新、平衡性调整和新功能。 异环 Shinku vs Iroi 抽取规划：1.2「999 Nights」资源、兑换码与保底路线 把 1.2「999 Nights」里的 Shinku 当前池、Iroi 预热、兑换码、Steam/download 入坑与保底资源放在同一张决策表里。 异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级 把 1.2「999 Nights」模式、活动奖励、兑换码、Shinku 当前池和 Iroi 预留资源拆成每日执行路线。 异环 Iroi 预热期准备指南：999 Nights 后资源、Shinku 取舍、兑换码和每日清单 面向 Iroi 预热和 1.2 后半搜索，整理 Shinku 当前池后的资源止损、兑换码检查、活动每日路线和保底预留。 异环 8/31-9/14 活动日历：999 Nights、Clash、Iroi/Shinku、兑换码和 Steam/download 路线 整理 2026-08-31 至 2026-09-14 活动窗口，把 999 Nights、Clash、Iroi/Shinku、兑换码和下载问题串起来。"
+      },
+      "staging": {
+        "url": "/zh/nte/version",
+        "status": 200,
+        "title": "异环 1.2 版本专题",
+        "description": "NTE version hub preview",
+        "canonical": "https://gachia.com/zh/nte/version",
+        "alternates": [
+          "en:https://gachia.com/en/nte/version",
+          "ja:https://gachia.com/ja/nte/version",
+          "x-default:https://gachia.com/zh/nte/version",
+          "zh-Hans:https://gachia.com/zh/nte/version"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环 1.2 版本专题 Gachia · NTE Characters Guides NTE v1.2 异环 1.2 版本专题 集中整理 999 Nights 活动、Shinku 与 Iroi 卡池规划、兑换码、下载入口和版本攻略。 版本重点 999 Nights 活动路线与每日优先级 Shinku 当前池与 Iroi 预留资源规划 当前可查看 8 个兑换码 相关攻略 异环 1.2「999 Nights」版本专题：Shinku、Iroi 与抽卡规划 汇总异环 1.2「999 Nights」版本重点：Shinku 当前池、Iroi 下期焦点、活动路线、兑换码检查和抽卡资源规划。 版本更新日志 异环版本更新历史汇总，记录每个版本的主要内容更新、平衡性调整和新功能。 异环 Shinku vs Iroi 抽取规划：1.2「999 Nights」资源、兑换码与保底路线 把 1.2「999 Nights」里的 Shinku 当前池、Iroi 预热、兑换码、Steam/download 入坑与保底资源放在同一张决策表里。 异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级 把 1.2「999 Nights」模式、活动奖励、兑换码、Shinku 当前池和 Iroi 预留资源拆成每日执行路线。 异环 Iroi 预热期准备指南：999 Nights 后资源、Shinku 取舍、兑换码和每日清单 面向 Iroi 预热和 1.2 后半搜索，整理 Shinku 当前池后的资源止损、兑换码检查、活动每日路线和保底预留。 异环 8/31-9/14 活动日历：999 Nights、Clash、Iroi/Shinku、兑换码和 Steam/download 路线 整理 2026-08-31 至 2026-09-14 活动窗口，把 999 Nights、Clash、Iroi/Shinku、兑换码和下载问题串起来。"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": true
+      }
+    },
+    {
+      "path": "/zh/nte/weapons",
+      "production": {
+        "url": "/zh/nte/weapons",
+        "status": 200,
+        "title": "异环武器图鉴",
+        "description": "NTE weapon database preview",
+        "canonical": "https://gachia.com/zh/nte/weapons",
+        "alternates": [
+          "en:https://gachia.com/en/nte/weapons",
+          "ja:https://gachia.com/ja/nte/weapons",
+          "x-default:https://gachia.com/zh/nte/weapons",
+          "zh-Hans:https://gachia.com/zh/nte/weapons"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环武器图鉴 Gachia · NTE NTE Database 异环武器图鉴 查看武器类型、基础攻击、属性和效果。 引爆全场 S · solid · 512 ATK 后台时活跃角色ATK+10%+2%/层(最多4层)，每2秒触发1次，站场时重置。站场时灵魂伤害+12%+2%/层(最多10层)，每0.3秒触发1次，切换角色时重置。 茶花会 S · synthesis · 666 ATK HP不因受伤减少时暴伤+12%~20%持续5秒，最多4层。解锁弧盘·静默庭院：消耗5%当前HP，随机发动苛责(5次咒术伤害24%~40%ATK)或絮叨(6次咒术伤害18%~30%ATK，末次双倍)(CD 25秒)。 思考喵 S · gas · 512 ATK 每持有10万源泉，宇宙伤害+2.5%~4.5%，最多10层。 休息日 S · solid · 512 ATK ATK+30%~50%。解锁弧盘·日蚀：创造40秒日蚀，期间击败敌人回复6~10终结能量，最多5次(CD 300秒)。 永恒圆舞曲 S · synthesis · 424 ATK 最大HP+20%~32%。施放终结技后精神伤害+10%~18%持续10秒。 好狗狗走四方 S · gas · 474 ATK 充能效率+18%~30%。施放终结技后全队ATK+10%~16%持续20秒。若敌人被终结技控制，额外+6%~10%。 海特洛的安宁 S · solid · 512 ATK ATK+15%~25%。对Boss伤害+15%~25%。解锁弧盘·威须：召唤威须助战，每击造成100%~200%ATK伤害，持续30秒(CD 60秒)。 踏越时间行军 S · solid · 570 ATK ATK+16%~32%。施放变轨后每秒获得1层沙漏(最多15层)，施放终结技消耗所有沙漏，每层终结暴伤+3%~6%。15层时额外无视12%~24%防御持续3秒。 焰魂狂飙 S · plasma · 666 ATK 施放终结技后变轨伤害+22.5%~37.5%持续10秒。站场时每施放变轨伤害+15%~25%，最多2层。 预备备 S · plasma · 570 ATK ATK+15%~30%。施放变轨或终结技后普攻和暴击反击伤害+15%~30%持续15秒，最多2层。变轨获得左虎符，终结技获得右虎符。15秒内获得另一虎符时解锁弧盘·猛虎特刊：对Boss伤害+10%~20%持续10秒。 现实避难所 S · solid · 570 ATK 灵魂伤害+15%~25%。附身伤害+10%~15%。施放终结技后附身伤害提升至20%~30%持续6秒。 鲸之歌 S · plasma · 512 ATK ATK+12%~20%。对破碎状态敌人伤害+12%~20%。击败破碎敌人回复30%HP(CD 30秒)。 面具下的泪 S · gas · 512 ATK 被终结"
+      },
+      "staging": {
+        "url": "/zh/nte/weapons",
+        "status": 200,
+        "title": "异环武器图鉴",
+        "description": "NTE weapon database preview",
+        "canonical": "https://gachia.com/zh/nte/weapons",
+        "alternates": [
+          "en:https://gachia.com/en/nte/weapons",
+          "ja:https://gachia.com/ja/nte/weapons",
+          "x-default:https://gachia.com/zh/nte/weapons",
+          "zh-Hans:https://gachia.com/zh/nte/weapons"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环武器图鉴 Gachia · NTE NTE Database 异环武器图鉴 查看武器类型、基础攻击、属性和效果。 引爆全场 S · solid · 512 ATK 后台时活跃角色ATK+10%+2%/层(最多4层)，每2秒触发1次，站场时重置。站场时灵魂伤害+12%+2%/层(最多10层)，每0.3秒触发1次，切换角色时重置。 茶花会 S · synthesis · 666 ATK HP不因受伤减少时暴伤+12%~20%持续5秒，最多4层。解锁弧盘·静默庭院：消耗5%当前HP，随机发动苛责(5次咒术伤害24%~40%ATK)或絮叨(6次咒术伤害18%~30%ATK，末次双倍)(CD 25秒)。 思考喵 S · gas · 512 ATK 每持有10万源泉，宇宙伤害+2.5%~4.5%，最多10层。 休息日 S · solid · 512 ATK ATK+30%~50%。解锁弧盘·日蚀：创造40秒日蚀，期间击败敌人回复6~10终结能量，最多5次(CD 300秒)。 永恒圆舞曲 S · synthesis · 424 ATK 最大HP+20%~32%。施放终结技后精神伤害+10%~18%持续10秒。 好狗狗走四方 S · gas · 474 ATK 充能效率+18%~30%。施放终结技后全队ATK+10%~16%持续20秒。若敌人被终结技控制，额外+6%~10%。 海特洛的安宁 S · solid · 512 ATK ATK+15%~25%。对Boss伤害+15%~25%。解锁弧盘·威须：召唤威须助战，每击造成100%~200%ATK伤害，持续30秒(CD 60秒)。 踏越时间行军 S · solid · 570 ATK ATK+16%~32%。施放变轨后每秒获得1层沙漏(最多15层)，施放终结技消耗所有沙漏，每层终结暴伤+3%~6%。15层时额外无视12%~24%防御持续3秒。 焰魂狂飙 S · plasma · 666 ATK 施放终结技后变轨伤害+22.5%~37.5%持续10秒。站场时每施放变轨伤害+15%~25%，最多2层。 预备备 S · plasma · 570 ATK ATK+15%~30%。施放变轨或终结技后普攻和暴击反击伤害+15%~30%持续15秒，最多2层。变轨获得左虎符，终结技获得右虎符。15秒内获得另一虎符时解锁弧盘·猛虎特刊：对Boss伤害+10%~20%持续10秒。 现实避难所 S · solid · 570 ATK 灵魂伤害+15%~25%。附身伤害+10%~15%。施放终结技后附身伤害提升至20%~30%持续6秒。 鲸之歌 S · plasma · 512 ATK ATK+12%~20%。对破碎状态敌人伤害+12%~20%。击败破碎敌人回复30%HP(CD 30秒)。 面具下的泪 S · gas · 512 ATK 被终结"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": true
+      }
+    },
+    {
+      "path": "/zh/nte/redeem-codes",
+      "production": {
+        "url": "/zh/nte/redeem-codes",
+        "status": 200,
+        "title": "异环兑换码大全",
+        "description": "NTE redeem codes preview",
+        "canonical": "https://gachia.com/zh/nte/redeem-codes",
+        "alternates": [
+          "en:https://gachia.com/en/nte/redeem-codes",
+          "ja:https://gachia.com/ja/nte/redeem-codes",
+          "x-default:https://gachia.com/zh/nte/redeem-codes",
+          "zh-Hans:https://gachia.com/zh/nte/redeem-codes"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环兑换码大全 Gachia · NTE NTE Rewards 异环兑换码大全 整理当前可用兑换码、奖励和领取状态。 YHNOWTOENJOY 请在游戏内兑换 YHNANALLYGO 请在游戏内兑换 YHOB0423 请在游戏内兑换 NTENOWTOENJOY 请在游戏内兑换 NTENANALLYGO 请在游戏内兑换 NTE0429 请在游戏内兑换 NTEGIFT 请在游戏内兑换 NTEHAVEFUN 请在游戏内兑换"
+      },
+      "staging": {
+        "url": "/zh/nte/redeem-codes",
+        "status": 200,
+        "title": "异环兑换码大全",
+        "description": "NTE redeem codes preview",
+        "canonical": "https://gachia.com/zh/nte/redeem-codes",
+        "alternates": [
+          "en:https://gachia.com/en/nte/redeem-codes",
+          "ja:https://gachia.com/ja/nte/redeem-codes",
+          "x-default:https://gachia.com/zh/nte/redeem-codes",
+          "zh-Hans:https://gachia.com/zh/nte/redeem-codes"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环兑换码大全 Gachia · NTE NTE Rewards 异环兑换码大全 整理当前可用兑换码、奖励和领取状态。 YHNOWTOENJOY 请在游戏内兑换 YHNANALLYGO 请在游戏内兑换 YHOB0423 请在游戏内兑换 NTENOWTOENJOY 请在游戏内兑换 NTENANALLYGO 请在游戏内兑换 NTE0429 请在游戏内兑换 NTEGIFT 请在游戏内兑换 NTEHAVEFUN 请在游戏内兑换"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": true
+      }
+    },
+    {
+      "path": "/zh/nte/items",
+      "production": {
+        "url": "/zh/nte/items",
+        "status": 200,
+        "title": "异环材料图鉴",
+        "description": "异环材料图鉴与获取来源。",
+        "canonical": "https://gachia.com/zh/nte/items",
+        "alternates": [
+          "en:https://gachia.com/en/nte/items",
+          "ja:https://gachia.com/ja/nte/items",
+          "x-default:https://gachia.com/zh/nte/items",
+          "zh-Hans:https://gachia.com/zh/nte/items"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环材料图鉴 Gachia · NTE NTE Database 异环材料图鉴 按材料类型和来源浏览异环养成资源。 基础猎手指南 guide · Houdinii的魔术舞台、猎手交易所、世界探索 进阶猎手指南 guide · 材料选择箱、Houdinii的魔术舞台、猎手交易所、世界探索 精英猎手指南 guide · 材料选择箱、Houdinii的魔术舞台、猎手交易所、世界探索 浅色染料 arc-exp · Houdinii的魔术舞台、猎手交易所、世界探索 无色染料 arc-exp · Houdinii的魔术舞台、猎手交易所、世界探索 混沌染料 arc-exp · 材料选择箱、Houdinii的魔术舞台、猎手交易所、世界探索 井盖打手 module-exp · 兔子洞 井盖混混 module-exp · 材料选择箱、兔子洞 井盖头目 module-exp · 材料选择箱、兔子洞 遗失低语 ascension · 材料选择箱、异常体掉落、猎手交易所、遗失交易所 晦暗低语 ascension · 异常体掉落、合成、猎手交易所、遗失交易所 悖论低语 ascension · 异常体掉落、合成、猎手交易所 褪色剪影 ascension · 材料选择箱、异常体掉落、猎手交易所、遗失交易所 模糊剪影 ascension · 异常体掉落、合成、猎手交易所、遗失交易所 混沌剪影 ascension · 异常体掉落、合成、猎手交易所 模糊数字 ascension · 材料选择箱、异常体掉落、猎手交易所、遗失交易所 未解数字 ascension · 异常体掉落、合成、猎手交易所、遗失交易所 扭曲数字 ascension · 异常体掉落、合成、猎手交易所 悬置妄想 ascension · 材料选择箱、异常体掉落、猎手交易所、遗失交易所 渴望妄想 ascension · 异常体掉落、合成、猎手交易所、遗失交易所 超越妄想 ascension · 异常体掉落、合成、猎手交易所 告解花种 boss · 材料选择箱、异常体讨伐「Serenetti」 冲锋骑士火花塞 boss · 材料选择箱、异常体讨伐「Headless Rider」 妄想之岸残页 boss · 材料选择箱、异常体讨伐「Black Tome」 水月拨片 boss · 材料选择箱、异常体讨伐「Beat King」 巢卫碎片 boss · 材料选择箱、异常体讨伐「Nestbound Bird」 彩色票根 boss · 材料选择箱、异常体讨伐「Swallowtail」 海之泪 boss · 材料选择箱、异常体讨伐「Sea Prisoner」 好孩子印章 esper · 异常体朝圣「Morphix」 好孩子绒毛 esper · 异常体朝圣「Morphix」 蒲公英通行证 esper · 异常体朝圣「Morphix」 虚荣礼服袖 esp"
+      },
+      "staging": {
+        "url": "/zh/nte/items",
+        "status": 200,
+        "title": "异环材料图鉴",
+        "description": "异环材料图鉴与获取来源。",
+        "canonical": "https://gachia.com/zh/nte/items",
+        "alternates": [
+          "en:https://gachia.com/en/nte/items",
+          "ja:https://gachia.com/ja/nte/items",
+          "x-default:https://gachia.com/zh/nte/items",
+          "zh-Hans:https://gachia.com/zh/nte/items"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环材料图鉴 Gachia · NTE NTE Database 异环材料图鉴 按材料类型和来源浏览异环养成资源。 基础猎手指南 guide · Houdinii的魔术舞台、猎手交易所、世界探索 进阶猎手指南 guide · 材料选择箱、Houdinii的魔术舞台、猎手交易所、世界探索 精英猎手指南 guide · 材料选择箱、Houdinii的魔术舞台、猎手交易所、世界探索 浅色染料 arc-exp · Houdinii的魔术舞台、猎手交易所、世界探索 无色染料 arc-exp · Houdinii的魔术舞台、猎手交易所、世界探索 混沌染料 arc-exp · 材料选择箱、Houdinii的魔术舞台、猎手交易所、世界探索 井盖打手 module-exp · 兔子洞 井盖混混 module-exp · 材料选择箱、兔子洞 井盖头目 module-exp · 材料选择箱、兔子洞 遗失低语 ascension · 材料选择箱、异常体掉落、猎手交易所、遗失交易所 晦暗低语 ascension · 异常体掉落、合成、猎手交易所、遗失交易所 悖论低语 ascension · 异常体掉落、合成、猎手交易所 褪色剪影 ascension · 材料选择箱、异常体掉落、猎手交易所、遗失交易所 模糊剪影 ascension · 异常体掉落、合成、猎手交易所、遗失交易所 混沌剪影 ascension · 异常体掉落、合成、猎手交易所 模糊数字 ascension · 材料选择箱、异常体掉落、猎手交易所、遗失交易所 未解数字 ascension · 异常体掉落、合成、猎手交易所、遗失交易所 扭曲数字 ascension · 异常体掉落、合成、猎手交易所 悬置妄想 ascension · 材料选择箱、异常体掉落、猎手交易所、遗失交易所 渴望妄想 ascension · 异常体掉落、合成、猎手交易所、遗失交易所 超越妄想 ascension · 异常体掉落、合成、猎手交易所 告解花种 boss · 材料选择箱、异常体讨伐「Serenetti」 冲锋骑士火花塞 boss · 材料选择箱、异常体讨伐「Headless Rider」 妄想之岸残页 boss · 材料选择箱、异常体讨伐「Black Tome」 水月拨片 boss · 材料选择箱、异常体讨伐「Beat King」 巢卫碎片 boss · 材料选择箱、异常体讨伐「Nestbound Bird」 彩色票根 boss · 材料选择箱、异常体讨伐「Swallowtail」 海之泪 boss · 材料选择箱、异常体讨伐「Sea Prisoner」 好孩子印章 esper · 异常体朝圣「Morphix」 好孩子绒毛 esper · 异常体朝圣「Morphix」 蒲公英通行证 esper · 异常体朝圣「Morphix」 虚荣礼服袖 esp"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": true
+      }
+    },
+    {
+      "path": "/zh/nte/disk-sets",
+      "production": {
+        "url": "/zh/nte/disk-sets",
+        "status": 200,
+        "title": "异环光盘套装",
+        "description": "异环光盘套装效果与推荐。",
+        "canonical": "https://gachia.com/zh/nte/disk-sets",
+        "alternates": [
+          "en:https://gachia.com/en/nte/disk-sets",
+          "ja:https://gachia.com/ja/nte/disk-sets",
+          "x-default:https://gachia.com/zh/nte/disk-sets",
+          "zh-Hans:https://gachia.com/zh/nte/disk-sets"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环光盘套装 Gachia · NTE NTE Database 异环光盘套装 共 12 套光盘，包含 2 件和 4 件套效果及推荐角色。 影之信条 General 攻击力提高10% 施放技能后，佩戴者攻击力提高25%，持续20秒 迪亚波罗斯 chaos 暗属性伤害提高10% 无视敌人12%暗属性抗性。佩戴者触发Nova或Scorch反应后，无视效果提高至24%，持续20秒 失落光芒 cosmos 光属性伤害提高10% 佩戴者施放必杀技后，造成的伤害无视25%防御力，持续20秒（不可叠加） 真红：双生蝶 incantation 咒属性伤害提高10% 附近敌人受到队伍造成的咒属性伤害时，佩戴者攻击力提高6%，最多叠加6层，每层持续10秒（后台也生效） 森林萤火之心 anima 灵属性伤害提高10% 附近敌人受到队伍造成的灵属性伤害时，佩戴者暴击伤害提高8%，最多叠加7层，每层持续10秒（后台也生效） 恶魔之血：魂伤 psyche 魂属性伤害提高10% 佩戴者造成的伤害提高18%。攻击处于Nova或Stain状态的敌人时，伤害提升效果变为36% 街头拳王 lakshana 相属性伤害提高10% 暴击率提高14%。队伍触发Remora或Stain时，额外获得14%暴击率，持续20秒 音速蓝刺猬 General 充能效率提高12% 佩戴者施放必杀技后，全队攻击力提高15%，持续20秒（不可叠加） 缇娜的夜间酒馆 General 生命值上限提高10% 佩戴者的治疗加成提高20% 小小大冒险 General 生命值上限提高10% 佩戴者HP降低时，最大HP提高4%，最多叠加10层，每层持续10秒。施放必杀技立即获得10层 静谧山庄 General 心灵伤害提高10% 佩戴者使用普通攻击时，心灵伤害提高12%，最多叠加3层，每层持续6秒 守卫王国 General 防御力提高15% 佩戴者的护盾效果提高20%"
+      },
+      "staging": {
+        "url": "/zh/nte/disk-sets",
+        "status": 200,
+        "title": "异环光盘套装",
+        "description": "异环光盘套装效果与推荐。",
+        "canonical": "https://gachia.com/zh/nte/disk-sets",
+        "alternates": [
+          "en:https://gachia.com/en/nte/disk-sets",
+          "ja:https://gachia.com/ja/nte/disk-sets",
+          "x-default:https://gachia.com/zh/nte/disk-sets",
+          "zh-Hans:https://gachia.com/zh/nte/disk-sets"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环光盘套装 Gachia · NTE NTE Database 异环光盘套装 共 12 套光盘，包含 2 件和 4 件套效果及推荐角色。 影之信条 General 攻击力提高10% 施放技能后，佩戴者攻击力提高25%，持续20秒 迪亚波罗斯 chaos 暗属性伤害提高10% 无视敌人12%暗属性抗性。佩戴者触发Nova或Scorch反应后，无视效果提高至24%，持续20秒 失落光芒 cosmos 光属性伤害提高10% 佩戴者施放必杀技后，造成的伤害无视25%防御力，持续20秒（不可叠加） 真红：双生蝶 incantation 咒属性伤害提高10% 附近敌人受到队伍造成的咒属性伤害时，佩戴者攻击力提高6%，最多叠加6层，每层持续10秒（后台也生效） 森林萤火之心 anima 灵属性伤害提高10% 附近敌人受到队伍造成的灵属性伤害时，佩戴者暴击伤害提高8%，最多叠加7层，每层持续10秒（后台也生效） 恶魔之血：魂伤 psyche 魂属性伤害提高10% 佩戴者造成的伤害提高18%。攻击处于Nova或Stain状态的敌人时，伤害提升效果变为36% 街头拳王 lakshana 相属性伤害提高10% 暴击率提高14%。队伍触发Remora或Stain时，额外获得14%暴击率，持续20秒 音速蓝刺猬 General 充能效率提高12% 佩戴者施放必杀技后，全队攻击力提高15%，持续20秒（不可叠加） 缇娜的夜间酒馆 General 生命值上限提高10% 佩戴者的治疗加成提高20% 小小大冒险 General 生命值上限提高10% 佩戴者HP降低时，最大HP提高4%，最多叠加10层，每层持续10秒。施放必杀技立即获得10层 静谧山庄 General 心灵伤害提高10% 佩戴者使用普通攻击时，心灵伤害提高12%，最多叠加3层，每层持续6秒 守卫王国 General 防御力提高15% 佩戴者的护盾效果提高20%"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": true
+      }
+    },
+    {
+      "path": "/zh/nte/tier-list",
+      "production": {
+        "url": "/zh/nte/tier-list",
+        "status": 200,
+        "title": "异环角色强度排行",
+        "description": "异环角色强度排行与培养优先级。",
+        "canonical": "https://gachia.com/zh/nte/tier-list",
+        "alternates": [
+          "en:https://gachia.com/en/nte/tier-list",
+          "ja:https://gachia.com/ja/nte/tier-list",
+          "x-default:https://gachia.com/zh/nte/tier-list",
+          "zh-Hans:https://gachia.com/zh/nte/tier-list"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环角色强度排行 Gachia · NTE NTE Tier List 异环角色强度排行 按当前版本综合表现、场景适配和培养优先级浏览角色。排行仅供规划参考，实际表现取决于队伍和操作。 娜娜莉 S · Character 综合输出、生存、辅助价值与养成成本评估。 咲里 S · Character 综合输出、生存、辅助价值与养成成本评估。 法蒂亚 S · Character 综合输出、生存、辅助价值与养成成本评估。 拉克莉莫萨 S · Character 综合输出、生存、辅助价值与养成成本评估。 白藏 S · Character 综合输出、生存、辅助价值与养成成本评估。 零（男） S · Character 综合输出、生存、辅助价值与养成成本评估。 零（女） S · Character 综合输出、生存、辅助价值与养成成本评估。 穗鸟 S · Character 综合输出、生存、辅助价值与养成成本评估。 达芙迪尔 S · Character 综合输出、生存、辅助价值与养成成本评估。 九原 S · Character 综合输出、生存、辅助价值与养成成本评估。 哈尼尔 A · Character 综合输出、生存、辅助价值与养成成本评估。 阿德勒 A · Character 综合输出、生存、辅助价值与养成成本评估。 翳 A · Character 综合输出、生存、辅助价值与养成成本评估。 埃德加 A · Character 综合输出、生存、辅助价值与养成成本评估。 薄荷 A · Character 综合输出、生存、辅助价值与养成成本评估。 奈莉 A · Character 综合输出、生存、辅助价值与养成成本评估。 梅露拉 A · Character 综合输出、生存、辅助价值与养成成本评估。 阿尔法德 A · Character 综合输出、生存、辅助价值与养成成本评估。 泰格多 A · Character 综合输出、生存、辅助价值与养成成本评估。 哈索尔 S · Character 综合输出、生存、辅助价值与养成成本评估。 赤子 S · Character 综合输出、生存、辅助价值与养成成本评估。 莉莉娜 S · Character 综合输出、生存、辅助价值与养成成本评估。 凛子 A · Character 综合输出、生存、辅助价值与养成成本评估。 密斯莫 A · Character 综合输出、生存、辅助价值与养成成本评估。 沁红 A · Character 综合输出、生存、辅助价值与养成成本评估。 尼察 A · Character 综合输出、生存、辅助价值与养成成本评估。 黑鸟 S · Character 综合输出、生存、辅助价值与养成成本评估。 明虎 S · Character 综合输出、生存、辅助价值与养成成本评估。 赤音 S · Character 综合输出、生"
+      },
+      "staging": {
+        "url": "/zh/nte/tier-list",
+        "status": 200,
+        "title": "异环角色强度排行",
+        "description": "异环角色强度排行与培养优先级。",
+        "canonical": "https://gachia.com/zh/nte/tier-list",
+        "alternates": [
+          "en:https://gachia.com/en/nte/tier-list",
+          "ja:https://gachia.com/ja/nte/tier-list",
+          "x-default:https://gachia.com/zh/nte/tier-list",
+          "zh-Hans:https://gachia.com/zh/nte/tier-list"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环角色强度排行 Gachia · NTE NTE Tier List 异环角色强度排行 按当前版本综合表现、场景适配和培养优先级浏览角色。排行仅供规划参考，实际表现取决于队伍和操作。 娜娜莉 S · Character 综合输出、生存、辅助价值与养成成本评估。 咲里 S · Character 综合输出、生存、辅助价值与养成成本评估。 法蒂亚 S · Character 综合输出、生存、辅助价值与养成成本评估。 拉克莉莫萨 S · Character 综合输出、生存、辅助价值与养成成本评估。 白藏 S · Character 综合输出、生存、辅助价值与养成成本评估。 零（男） S · Character 综合输出、生存、辅助价值与养成成本评估。 零（女） S · Character 综合输出、生存、辅助价值与养成成本评估。 穗鸟 S · Character 综合输出、生存、辅助价值与养成成本评估。 达芙迪尔 S · Character 综合输出、生存、辅助价值与养成成本评估。 九原 S · Character 综合输出、生存、辅助价值与养成成本评估。 哈尼尔 A · Character 综合输出、生存、辅助价值与养成成本评估。 阿德勒 A · Character 综合输出、生存、辅助价值与养成成本评估。 翳 A · Character 综合输出、生存、辅助价值与养成成本评估。 埃德加 A · Character 综合输出、生存、辅助价值与养成成本评估。 薄荷 A · Character 综合输出、生存、辅助价值与养成成本评估。 奈莉 A · Character 综合输出、生存、辅助价值与养成成本评估。 梅露拉 A · Character 综合输出、生存、辅助价值与养成成本评估。 阿尔法德 A · Character 综合输出、生存、辅助价值与养成成本评估。 泰格多 A · Character 综合输出、生存、辅助价值与养成成本评估。 哈索尔 S · Character 综合输出、生存、辅助价值与养成成本评估。 赤子 S · Character 综合输出、生存、辅助价值与养成成本评估。 莉莉娜 S · Character 综合输出、生存、辅助价值与养成成本评估。 凛子 A · Character 综合输出、生存、辅助价值与养成成本评估。 密斯莫 A · Character 综合输出、生存、辅助价值与养成成本评估。 沁红 A · Character 综合输出、生存、辅助价值与养成成本评估。 尼察 A · Character 综合输出、生存、辅助价值与养成成本评估。 黑鸟 S · Character 综合输出、生存、辅助价值与养成成本评估。 明虎 S · Character 综合输出、生存、辅助价值与养成成本评估。 赤音 S · Character 综合输出、生"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": true
+      }
+    },
+    {
+      "path": "/zh/nte/download",
+      "production": {
+        "url": "/zh/nte/download",
+        "status": 200,
+        "title": "异环下载与配置",
+        "description": "异环下载入口、平台状态与配置建议。",
+        "canonical": "https://gachia.com/zh/nte/download",
+        "alternates": [
+          "en:https://gachia.com/en/nte/download",
+          "ja:https://gachia.com/ja/nte/download",
+          "x-default:https://gachia.com/zh/nte/download",
+          "zh-Hans:https://gachia.com/zh/nte/download"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环下载与配置 Gachia · NTE NTE Official Entry 异环下载与配置 下载入口、平台状态与配置建议请以官方和平台商店为准。 PC 建议 SSD 和 16GB 内存起步，移动端建议预留 20GB 以上。 PC iOS / Android PlayStation 5 Official NTE site"
+      },
+      "staging": {
+        "url": "/zh/nte/download",
+        "status": 200,
+        "title": "异环下载与配置",
+        "description": "异环下载入口、平台状态与配置建议。",
+        "canonical": "https://gachia.com/zh/nte/download",
+        "alternates": [
+          "en:https://gachia.com/en/nte/download",
+          "ja:https://gachia.com/ja/nte/download",
+          "x-default:https://gachia.com/zh/nte/download",
+          "zh-Hans:https://gachia.com/zh/nte/download"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环下载与配置 Gachia · NTE NTE Official Entry 异环下载与配置 下载入口、平台状态与配置建议请以官方和平台商店为准。 PC 建议 SSD 和 16GB 内存起步，移动端建议预留 20GB 以上。 PC iOS / Android PlayStation 5 Official NTE site"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": true
+      }
+    },
+    {
+      "path": "/zh/nte/gacha",
+      "production": {
+        "url": "/zh/nte/gacha",
+        "status": 200,
+        "title": "异环祈愿与保底",
+        "description": "异环祈愿卡池与保底信息。",
+        "canonical": "https://gachia.com/zh/nte/gacha",
+        "alternates": [
+          "en:https://gachia.com/en/nte/gacha",
+          "ja:https://gachia.com/ja/nte/gacha",
+          "x-default:https://gachia.com/zh/nte/gacha",
+          "zh-Hans:https://gachia.com/zh/nte/gacha"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环祈愿与保底 Gachia · NTE NTE Gacha 异环祈愿与保底 限定祈愿（角色池） UP角色概率提升，90抽硬保底，无50/50机制，首次S级必为UP角色 · 90 pity 新手祈愿 限定一次，20抽内必出S级角色，可从6位S级角色中自选一位 · 20 pity 常驻祈愿 常驻池，90抽硬保底，50抽可自选S级角色 · 90 pity 武器祈愿 限定武器概率提升，60抽保底UP武器，80抽大保底 · 60 pity"
+      },
+      "staging": {
+        "url": "/zh/nte/gacha",
+        "status": 200,
+        "title": "异环祈愿与保底",
+        "description": "异环祈愿卡池与保底信息。",
+        "canonical": "https://gachia.com/zh/nte/gacha",
+        "alternates": [
+          "en:https://gachia.com/en/nte/gacha",
+          "ja:https://gachia.com/ja/nte/gacha",
+          "x-default:https://gachia.com/zh/nte/gacha",
+          "zh-Hans:https://gachia.com/zh/nte/gacha"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环祈愿与保底 Gachia · NTE NTE Gacha 异环祈愿与保底 限定祈愿（角色池） UP角色概率提升，90抽硬保底，无50/50机制，首次S级必为UP角色 · 90 pity 新手祈愿 限定一次，20抽内必出S级角色，可从6位S级角色中自选一位 · 20 pity 常驻祈愿 常驻池，90抽硬保底，50抽可自选S级角色 · 90 pity 武器祈愿 限定武器概率提升，60抽保底UP武器，80抽大保底 · 60 pity"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": true
+      }
+    },
+    {
+      "path": "/zh/nte/anomalies",
+      "production": {
+        "url": "/zh/nte/anomalies",
+        "status": 200,
+        "title": "异环异象与 Boss 攻略",
+        "description": "异环异象与 Boss 机制攻略。",
+        "canonical": "https://gachia.com/zh/nte/anomalies",
+        "alternates": [
+          "en:https://gachia.com/en/nte/anomalies",
+          "ja:https://gachia.com/ja/nte/anomalies",
+          "x-default:https://gachia.com/zh/nte/anomalies",
+          "zh-Hans:https://gachia.com/zh/nte/anomalies"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环异象与 Boss 攻略 Gachia · NTE NTE Anomalies 异环异象与 Boss 攻略 无首铁驭 首领 · 火 护盾击破后3秒不可行动期间全力输出，注意闪避正面撞击 黑之书 首领 · 光束 绕背走位压缩激光瞄准时间，高频位移削减生命值 墨菲克斯 首领 · 未知 第一阶段保持距离输出，第二阶段切换远程角色维持中远距离DPS 海囚 首领 · 多形态 中后期核心资源来源，需高熟练度和资源管理 斑蝶 首领 · 未知 阶段节奏把控+异象系统打断+规避水面突袭 雨人 精英 · 水/雨 速射伞骨连接点，显形后大招直击核心可跳过二阶段 波普 精英 · 涂鸦/色块 火系角色点燃涂鸦逼出，预判路径放置重击造成硬直 欧拉拳套 精英 · 物理/格斗 前两场保留闪避值，第三场蓄力红光时侧闪后三段破防+异能环合增伤 灵感终结者 精英 · 虫/寄生 灵视扫描追踪能量轨迹，破坏五个容器后速杀防二次传送 绷带怪 精英 · 未知 通电后闪身至配电箱后方规避，利用环境交互 拖车艄 普通 · 未知 棉绒绒 普通 · 异象污染 增殖的C 普通 · 待确认 时空放映机 普通 · 待确认 赤门 普通 · 待确认 胶卷-MANISH 普通 · 待确认 高塔 普通 · 待确认"
+      },
+      "staging": {
+        "url": "/zh/nte/anomalies",
+        "status": 200,
+        "title": "异环异象与 Boss 攻略",
+        "description": "异环异象与 Boss 机制攻略。",
+        "canonical": "https://gachia.com/zh/nte/anomalies",
+        "alternates": [
+          "en:https://gachia.com/en/nte/anomalies",
+          "ja:https://gachia.com/ja/nte/anomalies",
+          "x-default:https://gachia.com/zh/nte/anomalies",
+          "zh-Hans:https://gachia.com/zh/nte/anomalies"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环异象与 Boss 攻略 Gachia · NTE NTE Anomalies 异环异象与 Boss 攻略 无首铁驭 首领 · 火 护盾击破后3秒不可行动期间全力输出，注意闪避正面撞击 黑之书 首领 · 光束 绕背走位压缩激光瞄准时间，高频位移削减生命值 墨菲克斯 首领 · 未知 第一阶段保持距离输出，第二阶段切换远程角色维持中远距离DPS 海囚 首领 · 多形态 中后期核心资源来源，需高熟练度和资源管理 斑蝶 首领 · 未知 阶段节奏把控+异象系统打断+规避水面突袭 雨人 精英 · 水/雨 速射伞骨连接点，显形后大招直击核心可跳过二阶段 波普 精英 · 涂鸦/色块 火系角色点燃涂鸦逼出，预判路径放置重击造成硬直 欧拉拳套 精英 · 物理/格斗 前两场保留闪避值，第三场蓄力红光时侧闪后三段破防+异能环合增伤 灵感终结者 精英 · 虫/寄生 灵视扫描追踪能量轨迹，破坏五个容器后速杀防二次传送 绷带怪 精英 · 未知 通电后闪身至配电箱后方规避，利用环境交互 拖车艄 普通 · 未知 棉绒绒 普通 · 异象污染 增殖的C 普通 · 待确认 时空放映机 普通 · 待确认 赤门 普通 · 待确认 胶卷-MANISH 普通 · 待确认 高塔 普通 · 待确认"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": true
+      }
+    },
+    {
+      "path": "/zh/nte/build",
+      "production": {
+        "url": "/zh/nte/build",
+        "status": 200,
+        "title": "异环角色配装推荐",
+        "description": "异环角色武器与光盘配装推荐。",
+        "canonical": "https://gachia.com/zh/nte/build",
+        "alternates": [
+          "en:https://gachia.com/en/nte/build",
+          "ja:https://gachia.com/ja/nte/build",
+          "x-default:https://gachia.com/zh/nte/build",
+          "zh-Hans:https://gachia.com/zh/nte/build"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环角色配装推荐 Gachia · NTE 异环角色配装推荐 查看角色、武器与光盘搭配方向。 娜娜莉 引爆全场 · 影之信条 咲里 引爆全场 · 影之信条 法蒂亚 引爆全场 · 影之信条 拉克莉莫萨 引爆全场 · 影之信条 白藏 引爆全场 · 影之信条 零（男） 引爆全场 · 影之信条 零（女） 引爆全场 · 影之信条 穗鸟 引爆全场 · 影之信条 达芙迪尔 引爆全场 · 影之信条 九原 引爆全场 · 影之信条 哈尼尔 引爆全场 · 影之信条 阿德勒 引爆全场 · 影之信条"
+      },
+      "staging": {
+        "url": "/zh/nte/build",
+        "status": 200,
+        "title": "异环角色配装推荐",
+        "description": "异环角色武器与光盘配装推荐。",
+        "canonical": "https://gachia.com/zh/nte/build",
+        "alternates": [
+          "en:https://gachia.com/en/nte/build",
+          "ja:https://gachia.com/ja/nte/build",
+          "x-default:https://gachia.com/zh/nte/build",
+          "zh-Hans:https://gachia.com/zh/nte/build"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环角色配装推荐 Gachia · NTE 异环角色配装推荐 查看角色、武器与光盘搭配方向。 娜娜莉 引爆全场 · 影之信条 咲里 引爆全场 · 影之信条 法蒂亚 引爆全场 · 影之信条 拉克莉莫萨 引爆全场 · 影之信条 白藏 引爆全场 · 影之信条 零（男） 引爆全场 · 影之信条 零（女） 引爆全场 · 影之信条 穗鸟 引爆全场 · 影之信条 达芙迪尔 引爆全场 · 影之信条 九原 引爆全场 · 影之信条 哈尼尔 引爆全场 · 影之信条 阿德勒 引爆全场 · 影之信条"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": true
+      }
+    },
+    {
+      "path": "/zh/nte/teams",
+      "production": {
+        "url": "/zh/nte/teams",
+        "status": 200,
+        "title": "异环配队模拟器",
+        "description": "异环角色配队与队伍规划。",
+        "canonical": "https://gachia.com/zh/nte/teams",
+        "alternates": [
+          "en:https://gachia.com/en/nte/teams",
+          "ja:https://gachia.com/ja/nte/teams",
+          "x-default:https://gachia.com/zh/nte/teams",
+          "zh-Hans:https://gachia.com/zh/nte/teams"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环配队模拟器 Gachia · NTE 异环配队模拟器 从角色图鉴中规划队伍定位。 娜娜莉 咲里 法蒂亚 拉克莉莫萨 白藏 零（男） 零（女） 穗鸟"
+      },
+      "staging": {
+        "url": "/zh/nte/teams",
+        "status": 200,
+        "title": "异环配队模拟器",
+        "description": "异环角色配队与队伍规划。",
+        "canonical": "https://gachia.com/zh/nte/teams",
+        "alternates": [
+          "en:https://gachia.com/en/nte/teams",
+          "ja:https://gachia.com/ja/nte/teams",
+          "x-default:https://gachia.com/zh/nte/teams",
+          "zh-Hans:https://gachia.com/zh/nte/teams"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环配队模拟器 Gachia · NTE 异环配队模拟器 从角色图鉴中规划队伍定位。 娜娜莉 咲里 法蒂亚 拉克莉莫萨 白藏 零（男） 零（女） 穗鸟"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": false
+      }
+    },
+    {
+      "path": "/zh/nte/compare",
+      "production": {
+        "url": "/zh/nte/compare",
+        "status": 200,
+        "title": "异环角色对比",
+        "description": "异环角色属性、定位与培养优先级对比。",
+        "canonical": "https://gachia.com/zh/nte/compare",
+        "alternates": [
+          "en:https://gachia.com/en/nte/compare",
+          "ja:https://gachia.com/ja/nte/compare",
+          "x-default:https://gachia.com/zh/nte/compare",
+          "zh-Hans:https://gachia.com/zh/nte/compare"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环角色对比 Gachia · NTE 异环角色对比 对比角色定位、属性与培养优先级。 娜娜莉 anima · S 咲里 incantation · S 法蒂亚 psyche · S 拉克莉莫萨 chaos · S 白藏 incantation · S 零（男） cosmos · S 零（女） cosmos · S 穗鸟 cosmos · S 达芙迪尔 chaos · S 九原 anima · S"
+      },
+      "staging": {
+        "url": "/zh/nte/compare",
+        "status": 200,
+        "title": "异环角色对比",
+        "description": "异环角色属性、定位与培养优先级对比。",
+        "canonical": "https://gachia.com/zh/nte/compare",
+        "alternates": [
+          "en:https://gachia.com/en/nte/compare",
+          "ja:https://gachia.com/ja/nte/compare",
+          "x-default:https://gachia.com/zh/nte/compare",
+          "zh-Hans:https://gachia.com/zh/nte/compare"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环角色对比 Gachia · NTE 异环角色对比 对比角色定位、属性与培养优先级。 娜娜莉 anima · S 咲里 incantation · S 法蒂亚 psyche · S 拉克莉莫萨 chaos · S 白藏 incantation · S 零（男） cosmos · S 零（女） cosmos · S 穗鸟 cosmos · S 达芙迪尔 chaos · S 九原 anima · S"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": true
+      }
+    },
+    {
+      "path": "/zh/nte/calculator",
+      "production": {
+        "url": "/zh/nte/calculator",
+        "status": 200,
+        "title": "异环伤害计算器",
+        "description": "异环角色伤害与配装计算工具。",
+        "canonical": "https://gachia.com/zh/nte/calculator",
+        "alternates": [
+          "en:https://gachia.com/en/nte/calculator",
+          "ja:https://gachia.com/ja/nte/calculator",
+          "x-default:https://gachia.com/zh/nte/calculator",
+          "zh-Hans:https://gachia.com/zh/nte/calculator"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环伤害计算器 Gachia · NTE 异环伤害计算器 选择角色和配装后规划伤害测试；当前页面提供计算入口。 计算器功能正在独立迁移中。"
+      },
+      "staging": {
+        "url": "/zh/nte/calculator",
+        "status": 200,
+        "title": "异环伤害计算器",
+        "description": "异环角色伤害与配装计算工具。",
+        "canonical": "https://gachia.com/zh/nte/calculator",
+        "alternates": [
+          "en:https://gachia.com/en/nte/calculator",
+          "ja:https://gachia.com/ja/nte/calculator",
+          "x-default:https://gachia.com/zh/nte/calculator",
+          "zh-Hans:https://gachia.com/zh/nte/calculator"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环伤害计算器 Gachia · NTE 异环伤害计算器 选择角色和配装后规划伤害测试；当前页面提供计算入口。 计算器功能正在独立迁移中。"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": false
+      }
+    },
+    {
+      "path": "/zh/nte/events",
+      "production": {
+        "url": "/zh/nte/events",
+        "status": 200,
+        "title": "异环活动与版本事件",
+        "description": "异环当前版本活动与奖励。",
+        "canonical": "https://gachia.com/zh/nte/events",
+        "alternates": [
+          "en:https://gachia.com/en/nte/events",
+          "ja:https://gachia.com/ja/nte/events",
+          "x-default:https://gachia.com/zh/nte/events",
+          "zh-Hans:https://gachia.com/zh/nte/events"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环活动与版本事件 Gachia · NTE 异环活动与版本事件 查看当前版本活动、奖励和时间节点。 活动数据将按版本持续更新。"
+      },
+      "staging": {
+        "url": "/zh/nte/events",
+        "status": 200,
+        "title": "异环活动与版本事件",
+        "description": "异环当前版本活动与奖励。",
+        "canonical": "https://gachia.com/zh/nte/events",
+        "alternates": [
+          "en:https://gachia.com/en/nte/events",
+          "ja:https://gachia.com/ja/nte/events",
+          "x-default:https://gachia.com/zh/nte/events",
+          "zh-Hans:https://gachia.com/zh/nte/events"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环活动与版本事件 Gachia · NTE 异环活动与版本事件 查看当前版本活动、奖励和时间节点。 活动数据将按版本持续更新。"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": false
+      }
+    },
+    {
+      "path": "/zh/nte/merchant",
+      "production": {
+        "url": "/zh/nte/merchant",
+        "status": 200,
+        "title": "异环商店与资源规划",
+        "description": "异环商店兑换优先级与资源规划。",
+        "canonical": "https://gachia.com/zh/nte/merchant",
+        "alternates": [
+          "en:https://gachia.com/en/nte/merchant",
+          "ja:https://gachia.com/ja/nte/merchant",
+          "x-default:https://gachia.com/zh/nte/merchant",
+          "zh-Hans:https://gachia.com/zh/nte/merchant"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环商店与资源规划 Gachia · NTE 异环商店与资源规划 整理商店兑换优先级和资源规划建议。 商店数据将按版本持续更新。"
+      },
+      "staging": {
+        "url": "/zh/nte/merchant",
+        "status": 200,
+        "title": "异环商店与资源规划",
+        "description": "异环商店兑换优先级与资源规划。",
+        "canonical": "https://gachia.com/zh/nte/merchant",
+        "alternates": [
+          "en:https://gachia.com/en/nte/merchant",
+          "ja:https://gachia.com/ja/nte/merchant",
+          "x-default:https://gachia.com/zh/nte/merchant",
+          "zh-Hans:https://gachia.com/zh/nte/merchant"
+        ],
+        "jsonLdCount": 0,
+        "xRobotsTag": "noindex, nofollow",
+        "bodyText": "异环商店与资源规划 Gachia · NTE 异环商店与资源规划 整理商店兑换优先级和资源规划建议。 商店数据将按版本持续更新。"
+      },
+      "differences": {
+        "titleEqual": true,
+        "descriptionEqual": true,
+        "bodyLengthDelta": 0
+      },
+      "checks": {
+        "status": true,
+        "titlePresent": true,
+        "canonicalOnProductionHost": true,
+        "hreflangComplete": true,
+        "noindexPreview": true,
+        "bodyPresent": false
+      }
+    }
+  ]
+}

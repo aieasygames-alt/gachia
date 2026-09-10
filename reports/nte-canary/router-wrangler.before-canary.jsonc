@@ -1,0 +1,39 @@
+{
+  "name": "gachia-router",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-08",
+  "vars": {
+    "NTE_ENABLED": "false",
+    "NTE_CANARY_COOKIE": "enabled"
+  },
+  "services": [
+    {
+      "binding": "MAIN_SITE",
+      "service": "gachia"
+    },
+    {
+      "binding": "NTE_SITE",
+      "service": "gachia-game-nte"
+    }
+  ],
+  "env": {
+    "staging": {
+      "name": "gachia-router-staging",
+      "vars": {
+        "NTE_ENABLED": "false",
+        "NTE_CANARY_COOKIE": "enabled",
+        "PREVIEW_MODE": "true"
+      },
+      "services": [
+        {
+          "binding": "MAIN_SITE",
+          "service": "gachia-staging"
+        },
+        {
+          "binding": "NTE_SITE",
+          "service": "gachia-game-nte-staging"
+        }
+      ]
+    }
+  }
+}
