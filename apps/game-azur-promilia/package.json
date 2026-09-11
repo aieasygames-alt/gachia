@@ -12,6 +12,7 @@
     "smoke": "node scripts/smoke.mjs",
     "seo:parity": "node ../../scripts/azur-promilia-seo-parity.mjs",
     "audit:production": "node ../../scripts/azur-promilia-production-audit.mjs",
+    "audit:content": "node ../../scripts/azur-promilia-content-audit.mjs",
     "verify:bundle": "opennextjs-cloudflare build && wrangler deploy --dry-run --config wrangler.jsonc --env \"\"",
     "type-check": "tsc --noEmit"
   },

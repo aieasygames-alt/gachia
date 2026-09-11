@@ -56,8 +56,14 @@ jobs:
       - name: Test Router
         run: pnpm --filter @gachia/router test
 
+      - name: Validate game deployments
+        run: pnpm validate:game-deployments
+
       - name: Verify Azur Promilia bundle
         run: pnpm --filter @gachia/game-azur-promilia verify:bundle
+
+      - name: Audit Azur Promilia content
+        run: pnpm --filter @gachia/game-azur-promilia audit:content
 
   deploy-staging:
     needs: build
