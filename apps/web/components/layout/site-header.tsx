@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { GAMES } from '@gachia/core';
-import { headerFeaturedGameIds } from '@gachia/ui';
+import { createSharedHeaderModel } from '@gachia/ui';
 import type { SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
 import { LocaleSwitcher } from './locale-switcher';
@@ -42,6 +42,8 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
     setMounted(true);
   }, []);
 
+  const header = createSharedHeaderModel(locale);
+
   return (
     <>
       <header className="gachia-header sticky top-0 z-50">
@@ -52,12 +54,12 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
               <span className="text-xl font-black text-game-text">Gachia</span>
             </Link>
             <nav className="gachia-header__games hidden min-w-0 flex-1 flex-wrap items-center gap-1 lg:flex" aria-label="Game navigation">
-              {headerFeaturedGameIds.map((gameId) => (
-                <Link key={gameId} href={`/${gameId}` as '/'} className="shrink-0 rounded-md px-2.5 py-1.5 text-sm font-semibold text-game-text-muted transition-colors hover:bg-game-surface-alt hover:text-game-primary">
-                  {GAMES[gameId].name[locale]}
+              {header.featuredGames.map((game) => (
+                <Link key={game.id} href={`/${game.id}` as '/'} className="shrink-0 rounded-md px-2.5 py-1.5 text-sm font-semibold text-game-text-muted transition-colors hover:bg-game-surface-alt hover:text-game-primary">
+                  {game.label}
                 </Link>
               ))}
-              <Link href="/games" className="shrink-0 rounded-md border border-game-border px-2.5 py-1.5 text-sm font-semibold text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">{locale === 'zh' ? '更多游戏' : locale === 'ja' ? 'その他のゲーム' : 'More games'}</Link>
+              <Link href="/games" className="shrink-0 rounded-md border border-game-border px-2.5 py-1.5 text-sm font-semibold text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">{header.moreGamesLabel}</Link>
             </nav>
             <div className="gachia-header__actions flex items-center gap-2">
             {/* Search Button */}
@@ -91,17 +93,17 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
           </div>
         </div>
         <div className="gachia-header__games container mx-auto flex flex-wrap gap-2 px-4 pb-3 lg:hidden">
-          {headerFeaturedGameIds.map((gameId) => (
+          {header.featuredGames.map((game) => (
             <Link
-              key={gameId}
-              href={`/${gameId}` as '/'}
+              key={game.id}
+              href={`/${game.id}` as '/'}
               className="shrink-0 rounded-full border border-game-border bg-game-surface px-3 py-1.5 text-xs font-semibold text-game-text-muted"
             >
-              {GAMES[gameId].name[locale]}
+              {game.label}
             </Link>
           ))}
           <Link href="/games" className="shrink-0 rounded-full border border-game-border bg-game-surface px-3 py-1.5 text-xs font-semibold text-game-text-muted">
-            {locale === 'zh' ? '更多游戏' : locale === 'ja' ? 'その他のゲーム' : 'More games'}
+            {header.moreGamesLabel}
           </Link>
         </div>
       </header>

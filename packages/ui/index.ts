@@ -19,3 +19,26 @@ export const headerLanguageLabels: Record<SupportedLocale, string> = {
 export function headerGameName(gameId: GameId, locale: SupportedLocale) {
   return GAMES[gameId].name[locale];
 }
+
+export type SharedHeaderGameItem = {
+  id: GameId;
+  label: string;
+};
+
+export type SharedHeaderModel = {
+  featuredGames: SharedHeaderGameItem[];
+  moreGames: SharedHeaderGameItem[];
+  moreGamesLabel: string;
+  languages: Array<{ locale: SupportedLocale; label: string }>;
+};
+
+export function createSharedHeaderModel(locale: SupportedLocale): SharedHeaderModel {
+  const toItem = (id: GameId): SharedHeaderGameItem => ({ id, label: headerGameName(id, locale) });
+
+  return {
+    featuredGames: headerFeaturedGameIds.map(toItem),
+    moreGames: headerMoreGameIds.map(toItem),
+    moreGamesLabel: locale === 'zh' ? '更多游戏' : locale === 'ja' ? 'その他のゲーム' : 'More games',
+    languages: (['zh', 'en', 'ja'] as const).map((target) => ({ locale: target, label: headerLanguageLabels[target] })),
+  };
+}
