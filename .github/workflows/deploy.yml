@@ -59,6 +59,22 @@ jobs:
       - name: Validate game deployments
         run: pnpm validate:game-deployments
 
+      - name: Install Playwright browser
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Start web server for browser tests
+        run: |
+          pnpm --filter @gachia/web dev > /tmp/gachia-web.log 2>&1 &
+          for attempt in {1..30}; do
+            if curl --fail --silent --max-time 2 http://127.0.0.1:3000/zh > /dev/null; then exit 0; fi
+            sleep 2
+          done
+          cat /tmp/gachia-web.log
+          exit 1
+
+      - name: Browser navigation smoke tests
+        run: pnpm test:browser
+
       - name: Verify Azur Promilia bundle
         run: pnpm --filter @gachia/game-azur-promilia verify:bundle
 

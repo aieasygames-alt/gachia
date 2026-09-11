@@ -10,16 +10,24 @@
     "clean": "turbo clean",
     "indexnow:new-pages": "node scripts/indexnow-submit-new-pages.mjs",
     "indexnow:seo-updates": "node scripts/indexnow-submit-seo-updates.mjs",
-    "gsc:report": "node scripts/analyze-gsc-export.mjs"
-    ,"validate:game-deployments": "node scripts/validate-game-deployment.mjs"
+    "gsc:report": "node scripts/analyze-gsc-export.mjs",
+    "validate:game-deployments": "node scripts/validate-game-deployment.mjs",
+    "test:browser": "playwright test"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "turbo": "^2.5.0",
     "typescript": "^5.8.0"
   },
   "packageManager": "pnpm@10.10.0",
   "pnpm": {
-    "onlyBuiltDependencies": ["@swc/core", "esbuild", "sharp", "workerd", "@parcel/watcher"],
+    "onlyBuiltDependencies": [
+      "@swc/core",
+      "esbuild",
+      "sharp",
+      "workerd",
+      "@parcel/watcher"
+    ],
     "overrides": {
       "kysely": "0.28.17",
       "vite": "8.0.16"
