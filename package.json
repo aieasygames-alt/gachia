@@ -14,6 +14,7 @@
     "validate:game-deployments": "node scripts/validate-game-deployment.mjs",
     "generate:router-config": "node scripts/generate-router-game-config.mjs",
     "test:browser": "playwright test"
+    ,"audit:production": "node scripts/production-site-audit.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",

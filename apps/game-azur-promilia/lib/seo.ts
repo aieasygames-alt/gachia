@@ -8,6 +8,14 @@ export function metadata(locale: SupportedLocale, title: string, description: st
   return {
     title,
     description,
+    openGraph: {
+      title,
+      description,
+      url: `${BASE_URL}/${locale}/azur-promilia${normalizedPath}`,
+      siteName: 'Gachia',
+      type: 'website',
+    },
+    twitter: { card: 'summary_large_image', title, description },
     alternates: {
       canonical: `${BASE_URL}/${locale}/azur-promilia${normalizedPath}`,
       languages: {
@@ -23,4 +31,3 @@ export function metadata(locale: SupportedLocale, title: string, description: st
 export function url(locale: SupportedLocale, path = '') {
   return `https://gachia.com/${locale}/azur-promilia${path ? `/${path.replace(/^\/+/, '')}` : ''}`;
 }
-
