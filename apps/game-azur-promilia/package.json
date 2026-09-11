@@ -11,6 +11,7 @@
     "smoke:production": "AZUR_PROMILIA_ORIGIN=${AZUR_PROMILIA_ORIGIN:?Set AZUR_PROMILIA_ORIGIN} pnpm run smoke",
     "smoke": "node scripts/smoke.mjs",
     "seo:parity": "node ../../scripts/azur-promilia-seo-parity.mjs",
+    "audit:production": "node ../../scripts/azur-promilia-production-audit.mjs",
     "verify:bundle": "opennextjs-cloudflare build && wrangler deploy --dry-run --config wrangler.jsonc --env \"\"",
     "type-check": "tsc --noEmit"
   },
