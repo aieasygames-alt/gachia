@@ -319,6 +319,169 @@ Sitemap: https://gachia.com/sitemap.xml
 | 上线短暂 5xx | Google 降低抓取频率 | 蓝绿发布、切换前完整预发布验证 |
 | sitemap 与内容版本不同步 | Sitemap URL 404 或过期 | 每个游戏独立生成自己的 sitemap，与游戏内容同次部署 |
 
+## 11. 新增游戏标准 SOP
+
+新增游戏不是“复制一个页面目录”即可上线，必须按以下顺序完成。任何一步未通过，都不能绑定生产路由。
+
+### 11.1 先决定部署边界
+
+在开发前明确游戏是主站游戏还是独立 Worker：
+
+1. 评估该游戏新增代码、数据、图片和依赖对主站 Worker 包体的影响。
+2. 一旦选择独立 Worker，游戏页面、数据、静态资源、sitemap 和专属样式全部放入 `apps/game-<game>`。
+3. 主站只保留首页入口、跨游戏摘要和指向该游戏的链接，不得继续静态导入该游戏完整数据。
+4. Router 增加 Service Binding、生产开关和路径判断；默认关闭开关，完成验证后再开启。
+
+### 11.2 游戏注册与共享协议
+
+按以下顺序注册游戏，避免只改一处导致测试或路由遗漏：
+
+1. `packages/core/types`：新增 `GameId`。
+2. `packages/core/constants`：新增游戏名称、主题、启用路由。
+3. `packages/core/deployments`：登记 Worker 名称、资源前缀和 sitemap 路径。
+4. `packages/data/games/<game>`：新增原始数据、类型和数据校验。
+5. `packages/ui`：只增加共享导航所需的游戏清单或精选游戏配置，不在各 Worker 复制游戏名单。
+6. 主站 `middleware`、sitemap、首页入口、搜索 manifest 和测试：显式确认是否应由主站处理。
+
+共享 Header 的结构、游戏列表、精选游戏和语言标签必须来自 `packages/ui`。独立 Worker 可以有自己的二级栏目，但不得另写一套全局顶部布局、游戏列表或语言切换逻辑。
+
+### 11.3 独立 Worker 实现
+
+`apps/game-<game>` 至少应具备：
+
+```text
+app/[lang]/<game>/...
+components/game-nav.tsx
+lib/data.ts
+app/robots.ts
+app/sitemap.ts
+wrangler.jsonc
+scripts/smoke.mjs
+```
+
+必须在构建前确定：
+
+- `assetPrefix` 使用 `/_games/<game>`，不能使用通用 `/_next`。
+- 页面 canonical、Open Graph、hreflang 全部指向 `https://gachia.com`。
+- 游戏 sitemap 在独立 Worker 内生成，页面 URL 仍使用主域名。
+- Worker 不得依赖主站未声明的运行时变量、D1、R2 或认证绑定。
+
+### 11.4 Router 接入
+
+每个游戏至少要覆盖以下路径族：
+
+```text
+/<lang>/<game>/*
+/_games/<game>/_next/*
+/sitemaps/<game>/*
+```
+
+页面路径和资源路径必须分别测试。Router 的生产配置应明确写出：
+
+- `GAME_ENABLED=true|false`
+- Canary Cookie 名称必须按游戏独立，不能复用其他游戏的 Cookie 名称。
+- Service Binding 名称与 Worker 名称一一对应。
+- 根 `/sitemap.xml`、`/_next/*`、`/api/*` 和认证 Cookie 不得被错误转发到游戏 Worker。
+
+### 11.5 CI 与锁文件闸门
+
+提交前必须本地执行：
+
+```bash
+pnpm install --frozen-lockfile
+pnpm type-check
+pnpm test
+pnpm lint
+pnpm --filter @gachia/data validate
+pnpm --filter @gachia/data generate:manifests
+pnpm --filter @gachia/data verify:manifests
+pnpm --filter @gachia/game-<game> verify:bundle
+pnpm --filter @gachia/router test
+```
+
+修改任何 workspace `package.json` 后，必须重新生成并提交 `pnpm-lock.yaml`。不能用 `--no-frozen-lockfile` 掩盖锁文件漂移，否则 Cloudflare 构建环境会在安装阶段失败。
+
+Manifest 校验中的游戏数量、搜索索引和客户端数据文件必须与注册表同步。新增游戏后，生成器和校验器必须同时更新。
+
+### 11.6 生产部署顺序
+
+GitHub Actions 的生产部署顺序固定为：
+
+```text
+1. 构建并验证主站
+2. 部署游戏 Worker
+3. 部署 Router Worker
+4. 部署主站 Worker
+5. 执行生产冒烟测试
+```
+
+先部署游戏 Worker 是为了保证 Router 切换后目标 Service Binding 已可用；Router 必须在主站之前发布，确保绑定和路径规则先就绪。
+
+### 11.7 线上全流程验证
+
+新游戏上线后至少验证以下 URL，且同时检查状态码、最终 URL、canonical 和 HTML 中的资源前缀：
+
+```text
+https://gachia.com/<lang>/<game>
+https://gachia.com/<lang>/<game>/characters
+https://gachia.com/<lang>/<game>/guides
+https://gachia.com/<lang>/<game>/sitemap.xml
+https://gachia.com/sitemaps/<game>/index.xml
+https://gachia.com/sitemap.xml
+https://gachia.com/_games/<game>/_next/<实际 hash 资源>
+https://gachia.com/api/auth/get-session
+```
+
+静态资源不能写死为 `webpack.js` 等不稳定文件名，必须从线上 HTML 提取实际带 hash 的 CSS/JS URL 再验证。冒烟脚本应对每个 URL 重试，并输出失败 URL。
+
+## 12. Azur Promilia 复盘：经验与教训
+
+Azur Promilia 的接入暴露了以下可复用问题：
+
+1. **通用路由静态生成遗漏独立 Worker 边界**：Azur 被加入核心游戏注册表后，主站通用攻略详情自动生成了 Azur 参数，但主站没有 Azur runtime，导致构建 404。独立 Worker 游戏必须从主站通用 `generateStaticParams`、通用数据导入和主站详情路由中排除。
+2. **注册表不是单点配置**：新增 `GameId` 后还必须同步 middleware matcher、manifest 生成器、manifest 校验器、sitemap、首页入口和测试。应把这些同步项列入 PR checklist。
+3. **独立 Worker 复制导航会产生视觉漂移**：主站、NTE、Azur 曾分别实现 Header，导致容器宽度、右侧操作区、游戏菜单和移动端行为不一致。共享导航数据与 CSS 契约后，独立 Worker 只实现游戏二级栏目。
+4. **顶部平铺全部游戏不可扩展**：游戏数量增长后会出现横向滚动条。顶部只展示精选游戏，其余通过“更多游戏”入口进入本地化全部游戏页；该页面必须在主站真实存在，不能只写 `/games` 占位链接。
+5. **生产冒烟探针必须稳定**：固定检查不存在的 `/_next/static/chunks/webpack.js` 会让三段 Worker 都部署成功后仍被判定失败。应检查页面、sitemap 和从 HTML 提取的实际 hash 资源。
+6. **配置环境必须和发布策略一致**：用户决定直接生产上线后，生产开关应开启，staging Worker 可以删除；但 staging 配置、预览工作流和“生产必须关闭”的断言也必须同步清理或改写。
+7. **删除 staging 不等于删除所有引用**：删除 Worker 后要同时检查 Router Service Binding、wrangler 环境、GitHub Actions、文档和 smoke 脚本，避免部署时绑定到不存在的服务。
+8. **先验证再绑定域名**：生产 Route 绑定前，必须先用 `workers.dev` origin 验证独立 Worker 页面和资源，再绑定 `gachia.com/*`；绑定后还要确认根 sitemap、主站 `/_next/*`、API、认证 Cookie 和其他游戏路径未被截断。
+
+## 13. 新增游戏上线检查清单
+
+### 代码与数据
+
+- [ ] `GameId`、主题、路由、部署登记已同步
+- [ ] 游戏数据只被独立 Worker 导入
+- [ ] 主站通用静态参数不会生成该游戏页面
+- [ ] 数据校验、搜索 manifest、客户端 manifest 已更新
+- [ ] `pnpm-lock.yaml` 与所有 workspace package.json 一致
+
+### Worker 与 Router
+
+- [ ] 独立 Worker 生产构建通过
+- [ ] `assetPrefix` 和资源路由已隔离
+- [ ] Service Binding 名称、Worker 名称和生产环境一致
+- [ ] 生产开关、Canary Cookie 名称和 staging 策略已确认
+- [ ] 页面、资源、sitemap 三类路径均已加入 Router 测试
+
+### UI 与 SEO
+
+- [ ] 全局 Header 使用 `packages/ui` 共享协议
+- [ ] 顶部没有强制横向滚动条
+- [ ] “更多游戏”目标页面真实存在且带语言前缀
+- [ ] canonical、hreflang、OG、JSON-LD 使用主域名
+- [ ] 根 sitemap 仍由主站返回聚合内容
+
+### 发布与线上验证
+
+- [ ] CI install 使用 `--frozen-lockfile` 通过
+- [ ] type-check、test、lint、data validate 全部通过
+- [ ] 部署顺序为游戏 Worker → Router → 主站 Worker
+- [ ] 生产 Route 绑定前已完成 origin 验证
+- [ ] 绑定后所有主站、已有游戏和新游戏 URL 冒烟通过
+- [ ] 部署版本 ID、Route、Service Binding 和验证结果已记录
+
 ## 11. 上线策略
 
 不应一次拆分所有游戏。
