@@ -1,11 +1,10 @@
 interface Env {
   MAIN_SITE: Fetcher;
   NTE_SITE?: Fetcher;
-  AZUR_PROMILIA_SITE?: Fetcher;
   NTE_ENABLED?: string;
+  AZUR_PROMILIA_SITE?: Fetcher;
   AZUR_PROMILIA_ENABLED?: string;
   PREVIEW_MODE?: string;
-  NTE_CANARY_COOKIE?: string;
   AZUR_PROMILIA_CANARY_COOKIE?: string;
 }
 
@@ -60,7 +59,7 @@ function isAzurPromiliaRequest(pathname: string): boolean {
 
 function requestForNteWorker(request: Request): Request {
   const url = new URL(request.url);
-  if (url.pathname === '/sitemaps/nte/index.xml') {
+  if (NTE_DEPLOYMENT && (url.pathname === NTE_DEPLOYMENT.sitemapPath || url.pathname === `${NTE_DEPLOYMENT.sitemapPath}/`)) {
     url.pathname = '/sitemap.xml';
     return new Request(url, request);
   }
@@ -74,7 +73,7 @@ function requestForNteWorker(request: Request): Request {
 
 function requestForAzurPromiliaWorker(request: Request): Request {
   const url = new URL(request.url);
-  if (url.pathname === '/sitemaps/azur-promilia/index.xml') {
+  if (AZUR_PROMILIA_DEPLOYMENT && (url.pathname === AZUR_PROMILIA_DEPLOYMENT.sitemapPath || url.pathname === `${AZUR_PROMILIA_DEPLOYMENT.sitemapPath}/`)) {
     url.pathname = '/sitemap.xml';
     return new Request(url, request);
   }
@@ -99,7 +98,7 @@ export default {
 
     // This remains false until preview and SEO parity checks have passed.
     // Falling back preserves all current production behavior and URLs.
-    if (isEnabled(env.NTE_ENABLED) && env.NTE_SITE && isNteRequest(url.pathname) && hasCanaryCookie(request, env.NTE_CANARY_COOKIE, 'gachia_nte_canary')) {
+    if (env.NTE_SITE && env.NTE_ENABLED !== 'false' && isNteRequest(url.pathname)) {
       return env.NTE_SITE.fetch(requestForNteWorker(request));
     }
 

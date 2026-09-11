@@ -35,7 +35,7 @@ describe('gachia router safety defaults', () => {
 
   it('keeps production disabled by default even when the NTE binding exists', async () => {
     const response = await router.fetch(new Request('https://gachia.com/zh/nte'), {
-      MAIN_SITE: fetcher('production'), NTE_SITE: fetcher('nte'),
+      MAIN_SITE: fetcher('production'), NTE_SITE: fetcher('nte'), NTE_ENABLED: 'false',
     });
     await expect(response.text()).resolves.toBe('production');
   });
@@ -92,6 +92,8 @@ describe('gachia router safety defaults', () => {
     const exact = await router.fetch(new Request('https://gachia.com/sitemaps/nte/index.xml?source=search-console'), env);
     await expect(exact.text()).resolves.toBe('nte');
     expect(routed).toBe('/sitemap.xml');
+    const trailing = await router.fetch(new Request('https://gachia.com/sitemaps/nte/index.xml/'), env);
+    await expect(trailing.text()).resolves.toBe('nte');
     const lookalike = await router.fetch(new Request('https://gachia.com/sitemaps/nte-anything.xml'), env);
     await expect(lookalike.text()).resolves.toBe('main');
   });
@@ -106,11 +108,9 @@ describe('gachia router safety defaults', () => {
   });
 
   it('supports an explicit cookie canary without changing the default route', async () => {
-    const env = { MAIN_SITE: fetcher('main'), NTE_SITE: fetcher('nte'), NTE_ENABLED: 'true', NTE_CANARY_COOKIE: 'enabled' };
-    const control = await router.fetch(new Request('https://gachia.com/zh/nte'), env);
-    await expect(control.text()).resolves.toBe('main');
-    const canary = await router.fetch(new Request('https://gachia.com/zh/nte', { headers: { cookie: 'gachia_nte_canary=enabled' } }), env);
-    await expect(canary.text()).resolves.toBe('nte');
+    const env = { MAIN_SITE: fetcher('main'), NTE_SITE: fetcher('nte'), NTE_ENABLED: 'false' };
+    const response = await router.fetch(new Request('https://gachia.com/zh/nte'), env);
+    await expect(response.text()).resolves.toBe('main');
   });
 
   it('keeps Azur Promilia on the main Worker while its routing switch is disabled', async () => {

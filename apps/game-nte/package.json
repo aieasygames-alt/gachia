@@ -6,7 +6,7 @@
     "build": "next build",
     "build:worker": "opennextjs-cloudflare build",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview --config wrangler.jsonc",
-    "deploy:preview": "opennextjs-cloudflare build && opennextjs-cloudflare deploy --config wrangler.jsonc",
+    "deploy:preview": "pnpm run deploy",
     "smoke": "node scripts/smoke.mjs",
     "audit:full": "node scripts/full-audit.mjs",
     "audit:content": "node scripts/content-audit.mjs",

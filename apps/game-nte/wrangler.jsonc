@@ -9,7 +9,7 @@
   "compatibility_flags": ["nodejs_compat"],
   "vars": {
     "NEXT_PUBLIC_APP_URL": "https://gachia.com",
-    "NTE_DEPLOYMENT_MODE": "preview"
+    "NTE_DEPLOYMENT_MODE": "live"
   },
   "env": {
     "staging": {
