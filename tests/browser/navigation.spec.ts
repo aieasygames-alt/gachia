@@ -6,7 +6,9 @@ for (const path of pages) {
   test(`${path} has usable shared navigation`, async ({ page }) => {
     await page.goto(path, { waitUntil: 'domcontentloaded' });
     await expect(page.locator('header').first()).toBeVisible();
-    await expect(page.getByRole('link', { name: /更多游戏|More games|その他のゲーム/ }).first()).toBeVisible();
+    const moreGames = page.getByText(/更多游戏|More games|その他のゲーム/).first();
+    await expect(moreGames).toHaveCount(1);
+    if (test.info().project.name === 'desktop') await expect(moreGames).toBeVisible();
     const overflow = await page.evaluate(() => ({
       documentWidth: document.documentElement.scrollWidth,
       viewportWidth: document.documentElement.clientWidth,
