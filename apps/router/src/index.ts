@@ -9,11 +9,16 @@ interface Env {
   AZUR_PROMILIA_CANARY_COOKIE?: string;
 }
 
+import { GENERATED_GAME_DEPLOYMENTS } from './generated-game-deployments';
+
 const LOCALES = new Set(['zh', 'en', 'ja']);
 const NTE_PAGES = new Set(['characters', 'guides', 'weapons', 'redeem-codes', 'version', 'items', 'disk-sets', 'tier-list', 'download', 'gacha', 'anomalies', 'build', 'teams', 'compare', 'calculator', 'events', 'merchant', 'map']);
 const NTE_DETAIL_PAGES = new Set(['characters', 'guides', 'disk-sets', 'weapons']);
 const AZUR_PROMILIA_PAGES = new Set(['characters', 'guides', 'weapons', 'tier-list', 'redeem-codes', 'kibo', 'world']);
 const AZUR_PROMILIA_DETAIL_PAGES = new Set(['characters', 'guides', 'weapons']);
+
+const NTE_DEPLOYMENT = GENERATED_GAME_DEPLOYMENTS.find((deployment) => deployment.id === 'nte');
+const AZUR_PROMILIA_DEPLOYMENT = GENERATED_GAME_DEPLOYMENTS.find((deployment) => deployment.id === 'azur-promilia');
 
 function isEnabled(value: string | undefined): boolean {
   return value === 'true';

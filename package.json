@@ -12,6 +12,7 @@
     "indexnow:seo-updates": "node scripts/indexnow-submit-seo-updates.mjs",
     "gsc:report": "node scripts/analyze-gsc-export.mjs",
     "validate:game-deployments": "node scripts/validate-game-deployment.mjs",
+    "generate:router-config": "node scripts/generate-router-game-config.mjs",
     "test:browser": "playwright test"
   },
   "devDependencies": {

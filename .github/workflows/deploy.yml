@@ -59,6 +59,9 @@ jobs:
       - name: Validate game deployments
         run: pnpm validate:game-deployments
 
+      - name: Generate Router game config
+        run: pnpm generate:router-config && git diff --exit-code -- apps/router/src/generated-game-deployments.ts
+
       - name: Install Playwright browser
         run: pnpm exec playwright install --with-deps chromium
 
