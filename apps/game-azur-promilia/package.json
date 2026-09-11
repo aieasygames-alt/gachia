@@ -8,7 +8,7 @@
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview --config wrangler.jsonc",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy --config wrangler.jsonc --env \"\"",
     "deploy:preview": "pnpm run deploy",
-    "smoke:production": "AZUR_PROMILIA_ORIGIN=${AZUR_PROMILIA_ORIGIN:?Set AZUR_PROMILIA_ORIGIN} pnpm run smoke",
+    "smoke:production": "AZUR_PROMILIA_ORIGIN=${AZUR_PROMILIA_ORIGIN:?Set AZUR_PROMILIA_ORIGIN} pnpm run audit:production",
     "smoke": "node scripts/smoke.mjs",
     "seo:parity": "node ../../scripts/azur-promilia-seo-parity.mjs",
     "audit:production": "node ../../scripts/azur-promilia-production-audit.mjs",

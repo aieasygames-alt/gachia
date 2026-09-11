@@ -132,7 +132,7 @@ export type Kibo = {
   combatSkill: Record<SupportedLocale, string>;
   lifeSkills: string[];
   facilities: string[];
-  source: { name: string; url: string; checkedAt: string; version: 'official' | 'cbt-beta' };
+  source: { name: string; url: string; checkedAt: string; sourceType?: 'official' | 'cbt' | 'community' | 'third-party'; version?: 'official' | 'cbt-beta' };
   description: Record<SupportedLocale, string>;
 };
 

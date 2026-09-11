@@ -6,6 +6,7 @@ export const officialSource: AzurPromiliaSource = {
   url: 'https://azurpromilia.jp/character',
   checkedAt: '2026-09-10',
   version: 'official',
+  sourceType: 'official',
 };
 
 export const betaSource: AzurPromiliaSource = {
@@ -13,6 +14,7 @@ export const betaSource: AzurPromiliaSource = {
   url: 'https://gamewith.ai/azurpromilia/en/characters',
   checkedAt: '2026-09-10',
   version: 'cbt-beta',
+  sourceType: 'cbt',
 };
 
 type Names = Record<SupportedLocale, string>;
