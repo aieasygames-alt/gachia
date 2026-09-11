@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { GAMES, GAME_IDS } from '@gachia/core';
+import { headerFeaturedGameIds } from '@gachia/ui';
 import type { SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
 import { LocaleSwitcher } from './locale-switcher';
@@ -51,11 +52,12 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
               <span className="text-xl font-black text-game-text">Gachia</span>
             </Link>
             <nav className="gachia-header__games hidden min-w-0 flex-1 items-center gap-1 overflow-x-auto lg:flex" aria-label="Game navigation">
-              {GAME_IDS.map((gameId) => (
+              {headerFeaturedGameIds.map((gameId) => (
                 <Link key={gameId} href={`/${gameId}` as '/'} className="shrink-0 rounded-md px-2.5 py-1.5 text-sm font-semibold text-game-text-muted transition-colors hover:bg-game-surface-alt hover:text-game-primary">
                   {GAMES[gameId].name[locale]}
                 </Link>
               ))}
+              <Link href="/games" className="shrink-0 rounded-md border border-game-border px-2.5 py-1.5 text-sm font-semibold text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">{locale === 'zh' ? '更多游戏' : locale === 'ja' ? 'その他のゲーム' : 'More games'}</Link>
             </nav>
             <div className="gachia-header__actions flex items-center gap-2">
             {/* Search Button */}
