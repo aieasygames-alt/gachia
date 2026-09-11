@@ -8,6 +8,7 @@ export type HeaderRoute = {
 
 export const headerGameIds = GAME_IDS;
 export const headerFeaturedGameIds = ['genshin', 'wuwa', 'zzz', 'roco', 'skjh'] as const;
+export const headerMoreGameIds = GAME_IDS.filter((id) => !headerFeaturedGameIds.includes(id as typeof headerFeaturedGameIds[number]));
 
 export const headerLanguageLabels: Record<SupportedLocale, string> = {
   zh: '中文',

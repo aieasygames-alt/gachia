@@ -1,6 +1,6 @@
-const origin = process.env.AZUR_PROMILIA_PREVIEW_ORIGIN;
+const origin = process.env.AZUR_PROMILIA_ORIGIN;
 if (!origin) {
-  console.error('AZUR_PROMILIA_PREVIEW_ORIGIN is required; refusing to test an unspecified host.');
+  console.error('AZUR_PROMILIA_ORIGIN is required; refusing to test an unspecified host.');
   process.exit(1);
 }
 
