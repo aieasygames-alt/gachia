@@ -98,6 +98,13 @@ describe('gachia router safety defaults', () => {
     await expect(lookalike.text()).resolves.toBe('main');
   });
 
+  it('exposes an opt-in route marker for production diagnostics', async () => {
+    const response = await router.fetch(new Request('https://gachia.com/zh/nte', { headers: { 'x-gachia-route-debug': '1' } }), {
+      MAIN_SITE: fetcher('main'), NTE_SITE: fetcher('nte'), NTE_ENABLED: 'true',
+    });
+    expect(response.headers.get('x-gachia-route-target')).toBe('nte');
+  });
+
   it('never routes unknown locale or lookalike paths to NTE', async () => {
     const env = { MAIN_SITE: fetcher('main'), NTE_SITE: fetcher('nte'), NTE_ENABLED: 'true' };
 

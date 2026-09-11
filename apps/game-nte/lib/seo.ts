@@ -30,11 +30,15 @@ export function alternates(locale: SupportedLocale, path: string): Metadata['alt
   };
 }
 
-export function previewMetadata(title: string, description: string, locale: SupportedLocale, path = ''): Metadata {
+export function productionMetadata(title: string, description: string, locale: SupportedLocale, path = ''): Metadata {
   return {
     title: limitVisible(title, 68),
     description: limitVisible(description, 155),
     alternates: alternates(locale, path),
-    robots: { index: false, follow: false },
+    openGraph: { title: limitVisible(title, 68), description: limitVisible(description, 155), url: `${BASE_URL}/${locale}/nte${path}`, siteName: 'Gachia', type: 'website' },
+    twitter: { card: 'summary_large_image', title: limitVisible(title, 68), description: limitVisible(description, 155) },
   };
 }
+
+/** @deprecated Use productionMetadata now that NTE is fully live. */
+export const previewMetadata = productionMetadata;

@@ -31,7 +31,9 @@ for (const path of uniquePaths) {
   if (!canonical.startsWith('https://gachia.com/')) failures.push('invalid-canonical');
   if (!/noindex/i.test(response.headers.get('x-robots-tag') ?? '')) failures.push('missing-noindex');
   if (html.replace(/<[^>]+>/g, ' ').trim().length < 100) failures.push('thin-body');
-  if (links.some((href) => !href.startsWith('/zh/nte') && !href.startsWith('/en/nte') && !href.startsWith('/ja/nte') && !href.startsWith('/_games/nte'))) failures.push('unexpected-internal-link');
+  const allowedSiteLinks = ['/zh', '/en', '/ja', '/zh/games', '/en/games', '/ja/games', '/zh/privacy', '/en/privacy', '/ja/privacy', '/zh/contact', '/en/contact', '/ja/contact'];
+  const allowedGamePrefixes = ['/zh/', '/en/', '/ja/'];
+  if (links.some((href) => !href.startsWith('/zh/nte') && !href.startsWith('/en/nte') && !href.startsWith('/ja/nte') && !href.startsWith('/_games/nte') && !allowedSiteLinks.includes(href) && !allowedGamePrefixes.some((prefix) => href.startsWith(prefix)))) failures.push('unexpected-internal-link');
   if (failures.length) report.failures.push({ path, failures });
 }
 

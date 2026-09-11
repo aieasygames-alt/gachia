@@ -85,6 +85,14 @@ function requestForAzurPromiliaWorker(request: Request): Request {
   return request;
 }
 
+async function fetchWithRouteMarker(worker: Fetcher, request: Request, marker: string): Promise<Response> {
+  const response = await worker.fetch(request);
+  if (request.headers.get('x-gachia-route-debug') !== '1') return response;
+  const headers = new Headers(response.headers);
+  headers.set('x-gachia-route-target', marker);
+  return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
+}
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
@@ -99,11 +107,11 @@ export default {
     // This remains false until preview and SEO parity checks have passed.
     // Falling back preserves all current production behavior and URLs.
     if (env.NTE_SITE && env.NTE_ENABLED !== 'false' && isNteRequest(url.pathname)) {
-      return env.NTE_SITE.fetch(requestForNteWorker(request));
+      return fetchWithRouteMarker(env.NTE_SITE, requestForNteWorker(request), 'nte');
     }
 
     if (isEnabled(env.AZUR_PROMILIA_ENABLED) && env.AZUR_PROMILIA_SITE && isAzurPromiliaRequest(url.pathname) && hasCanaryCookie(request, env.AZUR_PROMILIA_CANARY_COOKIE, 'gachia_azur_promilia_canary')) {
-      return env.AZUR_PROMILIA_SITE.fetch(requestForAzurPromiliaWorker(request));
+      return fetchWithRouteMarker(env.AZUR_PROMILIA_SITE, requestForAzurPromiliaWorker(request), 'azur-promilia');
     }
 
     return env.MAIN_SITE.fetch(request);
