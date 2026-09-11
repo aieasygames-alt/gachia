@@ -446,6 +446,9 @@ Azur Promilia 的接入暴露了以下可复用问题：
 6. **配置环境必须和发布策略一致**：用户决定直接生产上线后，生产开关应开启，staging Worker 可以删除；但 staging 配置、预览工作流和“生产必须关闭”的断言也必须同步清理或改写。
 7. **删除 staging 不等于删除所有引用**：删除 Worker 后要同时检查 Router Service Binding、wrangler 环境、GitHub Actions、文档和 smoke 脚本，避免部署时绑定到不存在的服务。
 8. **先验证再绑定域名**：生产 Route 绑定前，必须先用 `workers.dev` origin 验证独立 Worker 页面和资源，再绑定 `gachia.com/*`；绑定后还要确认根 sitemap、主站 `/_next/*`、API、认证 Cookie 和其他游戏路径未被截断。
+9. **导航应由共享数据驱动**：`packages/ui` 同时提供精选游戏列表和“更多游戏”列表；主站与独立 Worker 只消费这份配置。主站移动端也只能展示精选入口并换行，不能恢复全量游戏横向滚动。
+10. **独立 Worker 的顶部布局必须遵守 CSS 契约**：顶部游戏栏允许换行且不得使用 `overflow-x-auto`；游戏自身的二级栏目同样应在窄屏换行。表格、对比工具等内容区域的局部横向滚动不属于导航问题，可单独保留。
+11. **部署配置必须可执行校验**：每次新增或切换游戏状态后运行 `pnpm validate:game-deployments`，确认独立 Worker、Router Service Binding、生产开关和 Worker 名称仍一致；该命令应纳入 CI。
 
 ## 13. 新增游戏上线检查清单
 
@@ -469,6 +472,8 @@ Azur Promilia 的接入暴露了以下可复用问题：
 
 - [ ] 全局 Header 使用 `packages/ui` 共享协议
 - [ ] 顶部没有强制横向滚动条
+- [ ] 主站桌面和移动端均只展示精选游戏，完整列表通过本地化“更多游戏”页面访问
+- [ ] 独立 Worker 未复制全量游戏名单，且顶部/二级导航在窄屏可换行
 - [ ] “更多游戏”目标页面真实存在且带语言前缀
 - [ ] canonical、hreflang、OG、JSON-LD 使用主域名
 - [ ] 根 sitemap 仍由主站返回聚合内容
@@ -476,6 +481,7 @@ Azur Promilia 的接入暴露了以下可复用问题：
 ### 发布与线上验证
 
 - [ ] CI install 使用 `--frozen-lockfile` 通过
+- [ ] `pnpm validate:game-deployments` 通过且已纳入 CI
 - [ ] type-check、test、lint、data validate 全部通过
 - [ ] 部署顺序为游戏 Worker → Router → 主站 Worker
 - [ ] 生产 Route 绑定前已完成 origin 验证
