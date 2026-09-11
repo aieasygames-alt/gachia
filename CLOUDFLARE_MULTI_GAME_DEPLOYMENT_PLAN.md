@@ -676,6 +676,8 @@ export const GAME_DEPLOYMENTS = {
 } as const;
 ```
 
+当前仓库状态（2026-09-11）：NTE 与 Azur Promilia 均登记为 `live`，并已接入生产 Router；Azur staging Worker 已不再作为发布前置条件。新增游戏仍必须逐项完成上线清单，不能因现有游戏已上线而跳过 origin、Router、资源、SEO、认证和回滚验证。
+
 Router、主站游戏目录、sitemap index、部署脚本和回归测试都应读取该清单。
 
 建议的发布状态：
