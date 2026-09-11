@@ -85,6 +85,17 @@ describe('gachia router safety defaults', () => {
     expect(azurPath).toBe('/sitemap.xml');
   });
 
+  it('keeps sitemap routing exact and independent from the main sitemap', async () => {
+    let routed = '';
+    const nte = { fetch: async (request: Request) => { routed = new URL(request.url).pathname; return new Response('nte'); }, connect: () => { throw new Error('not used'); } } as Fetcher;
+    const env = { MAIN_SITE: fetcher('main'), NTE_SITE: nte, NTE_ENABLED: 'true' };
+    const exact = await router.fetch(new Request('https://gachia.com/sitemaps/nte/index.xml?source=search-console'), env);
+    await expect(exact.text()).resolves.toBe('nte');
+    expect(routed).toBe('/sitemap.xml');
+    const lookalike = await router.fetch(new Request('https://gachia.com/sitemaps/nte-anything.xml'), env);
+    await expect(lookalike.text()).resolves.toBe('main');
+  });
+
   it('never routes unknown locale or lookalike paths to NTE', async () => {
     const env = { MAIN_SITE: fetcher('main'), NTE_SITE: fetcher('nte'), NTE_ENABLED: 'true' };
 

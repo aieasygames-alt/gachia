@@ -4,6 +4,7 @@ const paths = [
   '/zh/games', '/sitemap.xml', '/sitemaps/nte/index.xml',
   '/sitemaps/azur-promilia/index.xml', '/robots.txt', '/ads.txt',
   '/api/auth/get-session',
+  '/sitemaps/nte/index.xml?source=production-audit',
 ];
 
 const failures = [];
@@ -13,7 +14,7 @@ for (const path of paths) {
   const expectedRedirect = path === '/' && response.status === 307 && response.headers.get('location') === '/zh';
   const expectedStatus = path === '/' ? expectedRedirect : response.ok;
   if (!expectedStatus) failures.push(`${path}: expected ${path === '/' ? '307 -> /zh' : '2xx'}, got ${response.status}`);
-  if (path === '/sitemaps/nte/index.xml' && response.headers.get('content-type')?.includes('text/html')) failures.push(`${path}: returned HTML instead of XML`);
+  if (path.startsWith('/sitemaps/nte/index.xml') && response.headers.get('content-type')?.includes('text/html')) failures.push(`${path}: returned HTML instead of XML`);
   if (path === '/sitemaps/azur-promilia/index.xml' && response.headers.get('content-type')?.includes('text/html')) failures.push(`${path}: returned HTML instead of XML`);
   if (path.startsWith('/zh/') && !path.includes('sitemaps') && response.ok) {
     if (!/<link[^>]+rel=["']canonical["'][^>]+href=["']https:\/\/gachia\.com\//i.test(body)) failures.push(`${path}: missing canonical`);
