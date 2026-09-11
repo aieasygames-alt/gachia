@@ -20,7 +20,7 @@ export const GAME_DEPLOYMENTS: Partial<Record<GameId, GameDeployment>> = {
     worker: 'gachia-game-nte',
     assetPrefix: '/_games/nte',
     sitemapPath: '/sitemaps/nte/index.xml',
-    status: 'preview',
+    status: 'live',
   },
   'azur-promilia': {
     deployment: 'game',

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { SupportedLocale } from '@gachia/core';
-import { headerFeaturedGameIds, headerGameIds, headerGameName, headerLanguageLabels } from '@gachia/ui';
+import { headerFeaturedGameIds, headerGameName, headerLanguageLabels } from '@gachia/ui';
 
 const pages = [
   ['characters', { zh: '角色', en: 'Characters', ja: 'キャラクター' }],

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
-import { GAMES, GAME_IDS } from '@gachia/core';
+import { GAMES } from '@gachia/core';
 import { headerFeaturedGameIds } from '@gachia/ui';
 import type { SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
@@ -51,7 +51,7 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
               <img src="/images/logo.webp" alt="Gachia" width={36} height={36} className="h-9 w-9 rounded-lg" />
               <span className="text-xl font-black text-game-text">Gachia</span>
             </Link>
-            <nav className="gachia-header__games hidden min-w-0 flex-1 items-center gap-1 overflow-x-auto lg:flex" aria-label="Game navigation">
+            <nav className="gachia-header__games hidden min-w-0 flex-1 flex-wrap items-center gap-1 lg:flex" aria-label="Game navigation">
               {headerFeaturedGameIds.map((gameId) => (
                 <Link key={gameId} href={`/${gameId}` as '/'} className="shrink-0 rounded-md px-2.5 py-1.5 text-sm font-semibold text-game-text-muted transition-colors hover:bg-game-surface-alt hover:text-game-primary">
                   {GAMES[gameId].name[locale]}
@@ -90,8 +90,8 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
             </div>
           </div>
         </div>
-        <div className="gachia-header__games container mx-auto flex gap-2 overflow-x-auto px-4 pb-3 lg:hidden">
-          {GAME_IDS.map((gameId) => (
+        <div className="gachia-header__games container mx-auto flex flex-wrap gap-2 px-4 pb-3 lg:hidden">
+          {headerFeaturedGameIds.map((gameId) => (
             <Link
               key={gameId}
               href={`/${gameId}` as '/'}
@@ -100,6 +100,9 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
               {GAMES[gameId].name[locale]}
             </Link>
           ))}
+          <Link href="/games" className="shrink-0 rounded-full border border-game-border bg-game-surface px-3 py-1.5 text-xs font-semibold text-game-text-muted">
+            {locale === 'zh' ? '更多游戏' : locale === 'ja' ? 'その他のゲーム' : 'More games'}
+          </Link>
         </div>
       </header>
 

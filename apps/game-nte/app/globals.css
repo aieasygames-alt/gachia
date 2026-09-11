@@ -144,6 +144,7 @@ p { color: var(--color-text-muted); line-height: 1.65; }
   .gachia-header__container, .gachia-header__section { width: min(100% - 24px, 1120px); }
   .gachia-header__container { min-height: 52px; gap: 10px; }
   .gachia-header__games { display: none; }
+  .gachia-header__section { flex-wrap: wrap; overflow: visible; }
   .gachia-header__section a { padding: 12px 10px 10px; font-size: 13px; }
   .global-bar__inner { align-items: flex-start; flex-wrap: wrap; gap: 8px 14px; padding: 12px 0; }
   .global-nav { order: 3; flex-basis: 100%; }
