@@ -423,7 +423,7 @@ export default async function LocaleHome({
   const updateFeed: HomeFeedItem[] = sortByPriority([...LIVE_BANNERS, ...LIVE_VERSION_UPDATES, ...LIVE_CODE_SUMMARIES, ...LIVE_GUIDES]).slice(0, 8);
 
   return (
-    <div className="container mx-auto px-4 py-6 md:py-8">
+    <div className="container mx-auto min-w-0 max-w-full px-4 py-6 md:py-8">
       {/* Live Hub */}
       <section className="mb-8 overflow-hidden rounded-lg border border-game-border bg-game-surface">
         <div className="grid gap-0 xl:grid-cols-[minmax(0,1.05fr)_minmax(380px,0.95fr)]">
