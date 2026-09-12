@@ -13,6 +13,7 @@
     "gsc:report": "node scripts/analyze-gsc-export.mjs",
     "validate:game-deployments": "node scripts/validate-game-deployment.mjs",
     "generate:router-config": "node scripts/generate-router-game-config.mjs",
+    "audit:seo-contract": "node scripts/seo-contract-audit.mjs",
     "test:browser": "playwright test"
     ,"audit:production": "node scripts/production-site-audit.mjs"
   },

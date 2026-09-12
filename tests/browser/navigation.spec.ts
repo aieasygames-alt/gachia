@@ -16,5 +16,17 @@ for (const path of pages) {
     }));
     expect(overflow.documentWidth, `${path} document overflows viewport`).toBeLessThanOrEqual(overflow.viewportWidth + 1);
     expect(overflow.bodyWidth, `${path} body overflows viewport`).toBeLessThanOrEqual(overflow.viewportWidth + 1);
+
+    const seo = await page.evaluate(() => ({
+      canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') ?? '',
+      hreflangCount: document.querySelectorAll('link[rel="alternate"][hreflang]').length,
+      ogImage: document.querySelector('meta[property="og:image"]')?.getAttribute('content') ?? '',
+      jsonLdCount: document.querySelectorAll('script[type="application/ld+json"]').length,
+      breadcrumbCount: document.querySelectorAll('.breadcrumb-bar').length,
+    }));
+    expect(seo.canonical, `${path} canonical should use production host`).toMatch(/^https:\/\/gachia\.com\//);
+    expect(seo.hreflangCount, `${path} should expose locale alternates`).toBeGreaterThanOrEqual(4);
+    if (path === '/zh') expect(seo.ogImage, `${path} should expose an OG image`).toMatch(/^https:\/\/gachia\.com\//);
+    if (path === '/zh/nte') expect(seo.breadcrumbCount, 'NTE should not render duplicate top breadcrumbs').toBe(0);
   });
 }
