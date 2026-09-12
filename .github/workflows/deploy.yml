@@ -86,11 +86,10 @@ jobs:
 
       - name: Validate llms.txt
         run: |
-          test -s apps/web/app/llms.txt/route.ts
-          grep -q '^const body = `# ' apps/web/app/llms.txt/route.ts
-          grep -q "BASE_URL = 'https://gachia.com'" apps/web/app/llms.txt/route.ts
-          grep -q 'Azur Promilia guides' apps/web/app/llms.txt/route.ts
-          grep -q '/en/azur-promilia/guides' apps/web/app/llms.txt/route.ts
+          curl --fail --silent --show-error http://127.0.0.1:3000/llms.txt > /tmp/llms.txt
+          grep -q '^# ' /tmp/llms.txt
+          grep -q 'Azur Promilia guides' /tmp/llms.txt
+          grep -q '\- .*https://gachia.com/' /tmp/llms.txt
 
   deploy-staging:
     needs: build
