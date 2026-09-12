@@ -87,9 +87,11 @@ function requestForAzurPromiliaWorker(request: Request): Request {
 
 async function fetchWithRouteMarker(worker: Fetcher, request: Request, marker: string): Promise<Response> {
   const response = await worker.fetch(request);
-  if (request.headers.get('x-gachia-route-debug') !== '1') return response;
   const headers = new Headers(response.headers);
-  headers.set('x-gachia-route-target', marker);
+  const contentType = headers.get('content-type') ?? '';
+  const isPublicHtml = request.method === 'GET' && response.status === 200 && contentType.includes('text/html') && !request.headers.has('cookie') && !request.headers.has('authorization');
+  if (isPublicHtml && !headers.has('cache-control')) headers.set('cache-control', 'public, s-maxage=60, stale-while-revalidate=300');
+  if (request.headers.get('x-gachia-route-debug') === '1') headers.set('x-gachia-route-target', marker);
   return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
 }
 
