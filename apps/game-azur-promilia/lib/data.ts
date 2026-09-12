@@ -8,7 +8,7 @@ export type Guide = {
   title: Record<SupportedLocale, string>;
   summary: Record<SupportedLocale, string>;
   content: Record<SupportedLocale, string>;
-  source?: { name: string; url: string; checkedAt: string; version: 'official' | 'cbt-beta' };
+  source?: { name: string; url: string; checkedAt: string; sourceType: 'official' | 'cbt' | 'community' | 'third-party'; version: 'official' | 'cbt-beta'; status: 'official' | 'reference' | 'unverified' };
 };
 
 export const sourceStatusLabel = (status: 'official' | 'reference' | 'unverified' | undefined, locale: SupportedLocale) => ({
@@ -100,6 +100,8 @@ export const guides: Guide[] = [
       url: 'https://gamewith.ai/azurpromilia/en/article/show/52295',
       checkedAt: '2026-09-10',
       version: 'cbt-beta',
+      sourceType: 'cbt',
+      status: 'reference',
     },
   },
   {
@@ -124,6 +126,8 @@ export const guides: Guide[] = [
       url: 'https://gamewith.ai/azurpromilia/en/beginner-guide',
       checkedAt: '2026-09-10',
       version: 'cbt-beta',
+      sourceType: 'cbt',
+      status: 'reference',
     },
   },
   {
@@ -148,18 +152,20 @@ export const guides: Guide[] = [
       url: 'https://gamewith.ai/azurpromilia/en/starter-kibo',
       checkedAt: '2026-09-10',
       version: 'cbt-beta',
+      sourceType: 'cbt',
+      status: 'reference',
     },
   },
 ];
 
-export type AzurRedeemCode = { code: string; status: 'active' | 'expired' | 'watch'; reward: Record<SupportedLocale, string>; region: string[]; expiresAt?: string; source?: { name: string; url: string; checkedAt: string } };
+export type AzurRedeemCode = { code: string; status: 'active' | 'expired' | 'watch'; reward: Record<SupportedLocale, string>; region: string[]; platform: string[]; firstSeenAt?: string; expiresAt?: string; claimConditions: Record<SupportedLocale, string>; source?: { name: string; url: string; checkedAt: string; sourceType: 'official' | 'cbt' | 'community' | 'third-party'; version: 'official' | 'cbt-beta'; status: 'official' | 'reference' | 'unverified' } };
 export const redeemCodes: AzurRedeemCode[] = [];
 
-export type AzurVersionEntry = { id: string; label: Record<SupportedLocale, string>; status: 'confirmed' | 'watch'; date?: string; source?: { name: string; url: string; checkedAt: string } };
+export type AzurVersionEntry = { id: string; label: Record<SupportedLocale, string>; status: 'confirmed' | 'watch'; date?: string; platform: string[]; region: string[]; eligibility: Record<SupportedLocale, string>; downloadStatus: 'available' | 'watch' | 'unavailable'; changeSummary: Record<SupportedLocale, string>; source?: { name: string; url: string; checkedAt: string; sourceType: 'official' | 'cbt' | 'community' | 'third-party'; version: 'official' | 'cbt-beta'; status: 'official' | 'reference' | 'unverified' } };
 export const versionTimeline: AzurVersionEntry[] = [
-  { id: 'launch-watch', label: { zh: '正式上线时间', en: 'Official launch timing', ja: '正式配信時期' }, status: 'watch' },
-  { id: 'platform-watch', label: { zh: '平台与地区', en: 'Platforms and regions', ja: '対応機種と地域' }, status: 'watch' },
-  { id: 'test-watch', label: { zh: '测试资格与开放时间', en: 'Test access and schedule', ja: 'テスト参加条件と日程' }, status: 'watch' },
+  { id: 'launch-watch', label: { zh: '正式上线时间', en: 'Official launch timing', ja: '正式配信時期' }, status: 'watch', platform: [], region: [], eligibility: { zh: '待官方公告', en: 'Awaiting official announcement', ja: '公式告知待ち' }, downloadStatus: 'watch', changeSummary: { zh: '尚无已核验变更记录', en: 'No verified change history yet', ja: '確認済みの変更履歴はありません' } },
+  { id: 'platform-watch', label: { zh: '平台与地区', en: 'Platforms and regions', ja: '対応機種と地域' }, status: 'watch', platform: [], region: [], eligibility: { zh: '待官方公告', en: 'Awaiting official announcement', ja: '公式告知待ち' }, downloadStatus: 'watch', changeSummary: { zh: '尚无已核验变更记录', en: 'No verified change history yet', ja: '確認済みの変更履歴はありません' } },
+  { id: 'test-watch', label: { zh: '测试资格与开放时间', en: 'Test access and schedule', ja: 'テスト参加条件と日程' }, status: 'watch', platform: [], region: [], eligibility: { zh: '待官方公告', en: 'Awaiting official announcement', ja: '公式告知待ち' }, downloadStatus: 'watch', changeSummary: { zh: '尚无已核验变更记录', en: 'No verified change history yet', ja: '確認済みの変更履歴はありません' } },
 ];
 
 export type Kibo = {
@@ -170,16 +176,16 @@ export type Kibo = {
   combatSkill: Record<SupportedLocale, string>;
   lifeSkills: string[];
   facilities: string[];
-  source: { name: string; url: string; checkedAt: string; sourceType?: 'official' | 'cbt' | 'community' | 'third-party'; version?: 'official' | 'cbt-beta' };
+  source: { name: string; url: string; checkedAt: string; sourceType: 'official' | 'cbt' | 'community' | 'third-party'; version: 'official' | 'cbt-beta'; status: 'official' | 'reference' | 'unverified' };
   description: Record<SupportedLocale, string>;
 };
 
 export const kibo: Kibo[] = [
-  { id: 'staray', name: { zh: '梅特奥尔', en: 'Staray', ja: 'メテオール' }, species: { zh: '鳞形族', en: 'Scale-form clan', ja: '鱗形族' }, element: 'poison', combatSkill: { zh: '释放毒素攻击敌人。', en: 'Releases poison to attack enemies.', ja: '毒を放って敵を攻撃する。' }, lifeSkills: ['watering'], facilities: ['feeding-ground', 'fishery'], source: { name: 'Azur Promilia official Kibo page', url: 'https://azurpromilia.jp/kibo', checkedAt: '2026-09-10', version: 'official' }, description: { zh: '官方介绍：拥有强韧翅膀、可以长时间滑翔，并能释放毒素攻击敌人的 Kibo。', en: 'Official profile: a Kibo with strong wings that can glide for long periods and attack with freely released poison.', ja: '公式紹介：強靭な翼で長時間滑空し、毒をまいて敵を攻撃するキボ。' } },
-  { id: 'downybrinny', name: { zh: '莫芙琳', en: 'Downybrinny', ja: 'モフリーネ' }, species: { zh: '兽形族', en: 'Beast-form clan', ja: '獣形族' }, element: 'nature', combatSkill: { zh: '以伙伴攻击协助当前角色。', en: 'Assists the active character with a companion attack.', ja: '仲間攻撃で操作キャラクターを支援する。' }, lifeSkills: ['farm labor'], facilities: ['gathering-hut', 'feeding-ground'], source: { name: 'Azur Promilia official Kibo page', url: 'https://azurpromilia.jp/kibo', checkedAt: '2026-09-10', version: 'official' }, description: { zh: '官方介绍：数量稀少、拥有八只可以独立活动耳朵的珍稀 Kibo。', en: 'Official profile: a very rare Kibo whose eight ears can move independently.', ja: '公式紹介：個体数が少なく、8つの耳を独立して動かす珍しいキボ。' } },
-  { id: 'cabbird', name: { zh: '卡巴德', en: 'Cabbird', ja: 'キャバード' }, species: { zh: '翼形族', en: 'Wing-form clan', ja: '翼形族' }, element: 'wind', combatSkill: { zh: '提供基础 Kibo Strike 协作攻击。', en: 'Provides a basic Kibo Strike companion attack.', ja: '基本的なキボストライクで協力攻撃を行う。' }, lifeSkills: ['woodworking'], facilities: ['logging-camp', 'sawmill'], source: { name: 'Azur Promilia official Kibo page', url: 'https://azurpromilia.jp/kibo', checkedAt: '2026-09-10', version: 'official' }, description: { zh: '官方介绍：性格温和、警戒心低，常被智慧种族饲养的 Kibo。', en: 'Official profile: a mild, low-alert Kibo commonly raised by intelligent peoples.', ja: '公式紹介：警戒心が薄く温和で、知的種族によく飼育されるキボ。' } },
-  { id: 'bluda', name: { zh: '布鲁达', en: 'Bluda', ja: 'ブルーダ' }, species: { zh: '翼形族', en: 'Wing-form clan', ja: '翼形族' }, element: 'water', combatSkill: { zh: '在水域移动与战斗中提供协作。', en: 'Provides cooperation during water traversal and combat.', ja: '水上移動と戦闘で協力する。' }, lifeSkills: ['watering'], facilities: ['fishery', 'gathering-hut'], source: { name: 'Azur Promilia official Kibo page', url: 'https://azurpromilia.jp/kibo', checkedAt: '2026-09-10', version: 'official' }, description: { zh: '官方介绍：外表独特、平衡感较差，可能在水面移动时翻转下沉。', en: 'Official profile: a uniquely shaped Kibo with poor balance that can flip and sink while moving across water.', ja: '公式紹介：ユニークな姿で、バランスが悪く水上移動中にひっくり返ることもあるキボ。' } },
-  { id: 'vespervamp', name: { zh: '奈特弗尔', en: 'Vespervamp', ja: 'ナイトフォール' }, species: { zh: '精鬼族', en: 'Spirit-demon clan', ja: '精鬼族' }, element: 'dark', combatSkill: { zh: '通过 Kibo Strike 进行暗属性协作攻击。', en: 'Performs a Dark cooperative attack through Kibo Strike.', ja: 'キボストライクで闇属性の協力攻撃を行う。' }, lifeSkills: ['armorsmithing'], facilities: ['armor-workshop', 'hunting-ground'], source: { name: 'Azur Promilia official Kibo page', url: 'https://azurpromilia.jp/kibo', checkedAt: '2026-09-10', version: 'official' }, description: { zh: '官方介绍：容易害怕、性格内向，但闻到感兴趣的食物气味时会展现好战一面。', en: 'Official profile: a shy, easily frightened Kibo that reveals a fierce side when it smells appealing food.', ja: '公式紹介：内向的で怯えやすいが、興味を引く食べ物の匂いには好戦的な一面を見せるキボ。' } },
+  { id: 'staray', name: { zh: '梅特奥尔', en: 'Staray', ja: 'メテオール' }, species: { zh: '鳞形族', en: 'Scale-form clan', ja: '鱗形族' }, element: 'poison', combatSkill: { zh: '释放毒素攻击敌人。', en: 'Releases poison to attack enemies.', ja: '毒を放って敵を攻撃する。' }, lifeSkills: ['watering'], facilities: ['feeding-ground', 'fishery'], source: { name: 'Azur Promilia official Kibo page', url: 'https://azurpromilia.jp/kibo', checkedAt: '2026-09-10', version: 'official', sourceType: 'official', status: 'official' }, description: { zh: '官方介绍：拥有强韧翅膀、可以长时间滑翔，并能释放毒素攻击敌人的 Kibo。', en: 'Official profile: a Kibo with strong wings that can glide for long periods and attack with freely released poison.', ja: '公式紹介：強靭な翼で長時間滑空し、毒をまいて敵を攻撃するキボ。' } },
+  { id: 'downybrinny', name: { zh: '莫芙琳', en: 'Downybrinny', ja: 'モフリーネ' }, species: { zh: '兽形族', en: 'Beast-form clan', ja: '獣形族' }, element: 'nature', combatSkill: { zh: '以伙伴攻击协助当前角色。', en: 'Assists the active character with a companion attack.', ja: '仲間攻撃で操作キャラクターを支援する。' }, lifeSkills: ['farm labor'], facilities: ['gathering-hut', 'feeding-ground'], source: { name: 'Azur Promilia official Kibo page', url: 'https://azurpromilia.jp/kibo', checkedAt: '2026-09-10', version: 'official', sourceType: 'official', status: 'official' }, description: { zh: '官方介绍：数量稀少、拥有八只可以独立活动耳朵的珍稀 Kibo。', en: 'Official profile: a very rare Kibo whose eight ears can move independently.', ja: '公式紹介：個体数が少なく、8つの耳を独立して動かす珍しいキボ。' } },
+  { id: 'cabbird', name: { zh: '卡巴德', en: 'Cabbird', ja: 'キャバード' }, species: { zh: '翼形族', en: 'Wing-form clan', ja: '翼形族' }, element: 'wind', combatSkill: { zh: '提供基础 Kibo Strike 协作攻击。', en: 'Provides a basic Kibo Strike companion attack.', ja: '基本的なキボストライクで協力攻撃を行う。' }, lifeSkills: ['woodworking'], facilities: ['logging-camp', 'sawmill'], source: { name: 'Azur Promilia official Kibo page', url: 'https://azurpromilia.jp/kibo', checkedAt: '2026-09-10', version: 'official', sourceType: 'official', status: 'official' }, description: { zh: '官方介绍：性格温和、警戒心低，常被智慧种族饲养的 Kibo。', en: 'Official profile: a mild, low-alert Kibo commonly raised by intelligent peoples.', ja: '公式紹介：警戒心が薄く温和で、知的種族によく飼育されるキボ。' } },
+  { id: 'bluda', name: { zh: '布鲁达', en: 'Bluda', ja: 'ブルーダ' }, species: { zh: '翼形族', en: 'Wing-form clan', ja: '翼形族' }, element: 'water', combatSkill: { zh: '在水域移动与战斗中提供协作。', en: 'Provides cooperation during water traversal and combat.', ja: '水上移動と戦闘で協力する。' }, lifeSkills: ['watering'], facilities: ['fishery', 'gathering-hut'], source: { name: 'Azur Promilia official Kibo page', url: 'https://azurpromilia.jp/kibo', checkedAt: '2026-09-10', version: 'official', sourceType: 'official', status: 'official' }, description: { zh: '官方介绍：外表独特、平衡感较差，可能在水面移动时翻转下沉。', en: 'Official profile: a uniquely shaped Kibo with poor balance that can flip and sink while moving across water.', ja: '公式紹介：ユニークな姿で、バランスが悪く水上移動中にひっくり返ることもあるキボ。' } },
+  { id: 'vespervamp', name: { zh: '奈特弗尔', en: 'Vespervamp', ja: 'ナイトフォール' }, species: { zh: '精鬼族', en: 'Spirit-demon clan', ja: '精鬼族' }, element: 'dark', combatSkill: { zh: '通过 Kibo Strike 进行暗属性协作攻击。', en: 'Performs a Dark cooperative attack through Kibo Strike.', ja: 'キボストライクで闇属性の協力攻撃を行う。' }, lifeSkills: ['armorsmithing'], facilities: ['armor-workshop', 'hunting-ground'], source: { name: 'Azur Promilia official Kibo page', url: 'https://azurpromilia.jp/kibo', checkedAt: '2026-09-10', version: 'official', sourceType: 'official', status: 'official' }, description: { zh: '官方介绍：容易害怕、性格内向，但闻到感兴趣的食物气味时会展现好战一面。', en: 'Official profile: a shy, easily frightened Kibo that reveals a fierce side when it smells appealing food.', ja: '公式紹介：内向的で怯えやすいが、興味を引く食べ物の匂いには好戦的な一面を見せるキボ。' } },
 ];
 
 export const worldRegions = [

@@ -7,6 +7,7 @@ export const officialSource: AzurPromiliaSource = {
   checkedAt: '2026-09-10',
   version: 'official',
   sourceType: 'official',
+  status: 'official',
 };
 
 export const betaSource: AzurPromiliaSource = {
@@ -15,6 +16,7 @@ export const betaSource: AzurPromiliaSource = {
   checkedAt: '2026-09-10',
   version: 'cbt-beta',
   sourceType: 'cbt',
+  status: 'reference',
 };
 
 type Names = Record<SupportedLocale, string>;

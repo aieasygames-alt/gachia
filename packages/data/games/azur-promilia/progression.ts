@@ -6,8 +6,9 @@ export type AzurProgressionMaterial = {
   id: string;
   name: Record<SupportedLocale, string>;
   quantities: number[];
-  source: Record<SupportedLocale, string>;
+  acquisition: Record<SupportedLocale, string>;
   status: 'official' | 'reference' | 'unverified';
+  source?: { name: string; url: string; checkedAt: string; sourceType: 'official' | 'cbt' | 'community' | 'third-party'; version: 'official' | 'cbt-beta'; status: 'official' | 'reference' | 'unverified' };
 };
 
 export type AzurProgressionPlan = {

@@ -4,9 +4,9 @@ export type AzurPromiliaSource = {
   name: string;
   url: string;
   checkedAt: string;
-  sourceType?: 'official' | 'cbt' | 'community' | 'third-party';
+  sourceType: 'official' | 'cbt' | 'community' | 'third-party';
   version?: 'official' | 'cbt-beta';
-  status?: 'official' | 'reference' | 'unverified';
+  status: 'official' | 'reference' | 'unverified';
 };
 
 export type AzurPromiliaSkillSummary = {
