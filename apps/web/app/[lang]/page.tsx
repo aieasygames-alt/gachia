@@ -642,7 +642,7 @@ export default async function LocaleHome({
                 <span className="min-w-0 flex-1 truncate text-sm font-semibold text-game-text">
                   {localizeText(item.title, locale)}
                 </span>
-                <span className="shrink-0 text-xs text-game-text-muted">{game.name[locale]}</span>
+                <span className="hidden shrink-0 text-xs text-game-text-muted sm:inline">{game.name[locale]}</span>
               </Link>
             );
           })}
