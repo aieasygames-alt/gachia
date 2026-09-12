@@ -85,12 +85,7 @@ jobs:
         run: pnpm --filter @gachia/game-azur-promilia audit:content
 
       - name: Validate llms.txt
-        run: |
-          curl --fail --silent --show-error http://127.0.0.1:3000/llms.txt > /tmp/llms.txt
-          grep -q '^# ' /tmp/llms.txt
-          grep -q 'Azur Promilia guides' /tmp/llms.txt
-          grep -q '^\- ' /tmp/llms.txt
-          grep -q 'https://gachia.com/' /tmp/llms.txt
+        run: node scripts/validate-llms-route.mjs
 
   deploy-staging:
     needs: build
