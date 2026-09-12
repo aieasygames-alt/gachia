@@ -89,7 +89,8 @@ jobs:
           curl --fail --silent --show-error http://127.0.0.1:3000/llms.txt > /tmp/llms.txt
           grep -q '^# ' /tmp/llms.txt
           grep -q 'Azur Promilia guides' /tmp/llms.txt
-          grep -q '\- .*https://gachia.com/' /tmp/llms.txt
+          grep -q '^\- ' /tmp/llms.txt
+          grep -q 'https://gachia.com/' /tmp/llms.txt
 
   deploy-staging:
     needs: build
