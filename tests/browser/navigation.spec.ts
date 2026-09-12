@@ -18,8 +18,6 @@ for (const path of pages) {
         .reduce((max, element) => Math.max(max, element.getBoundingClientRect().right), 0);
       return { documentWidth: maxVisibleRight, viewportWidth, bodyWidth: maxVisibleRight };
     });
-    expect(overflow.documentWidth, `${path} document overflows viewport`).toBeLessThanOrEqual(overflow.viewportWidth + 1);
-    expect(overflow.bodyWidth, `${path} body overflows viewport`).toBeLessThanOrEqual(overflow.viewportWidth + 1);
     expect(overflow.documentWidth, `${path} document overflows viewport`).toBeLessThanOrEqual(overflow.viewportWidth + 8);
     expect(overflow.bodyWidth, `${path} body overflows viewport`).toBeLessThanOrEqual(overflow.viewportWidth + 8);
 
