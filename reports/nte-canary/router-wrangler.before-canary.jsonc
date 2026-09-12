@@ -31,7 +31,7 @@
         },
         {
           "binding": "NTE_SITE",
-          "service": "gachia-game-nte-staging"
+          "service": "<retired-nte-staging-worker>"
         }
       ]
     }
