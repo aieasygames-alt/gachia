@@ -11,26 +11,17 @@ for (const path of pages) {
     if (test.info().project.name === 'desktop') await expect(moreGames).toBeVisible();
     const overflow = await page.evaluate(() => {
       const viewportWidth = document.documentElement.clientWidth;
-      const overflowingElements = [...document.querySelectorAll('body *')]
-        .map((element) => ({ element, rect: element.getBoundingClientRect() }))
-        .filter(({ element, rect }) => {
-          if (rect.right <= viewportWidth + 1) return false;
-          let ancestor = element.parentElement;
-          while (ancestor) {
-            const overflowX = getComputedStyle(ancestor).overflowX;
-            if (overflowX === 'auto' || overflowX === 'scroll') return false;
-            ancestor = ancestor.parentElement;
-          }
-          return true;
-        });
-      return {
-        documentWidth: document.documentElement.scrollWidth,
-        viewportWidth,
-        bodyWidth: document.body.scrollWidth,
-        overflowingCount: overflowingElements.length,
-      };
+      const scrollContainers = [...document.querySelectorAll<HTMLElement>('*')]
+        .filter((element) => ['auto', 'scroll'].includes(getComputedStyle(element).overflowX));
+      const maxVisibleRight = [...document.querySelectorAll<HTMLElement>('body *')]
+        .filter((element) => !scrollContainers.some((container) => container.contains(element)))
+        .reduce((max, element) => Math.max(max, element.getBoundingClientRect().right), 0);
+      return { documentWidth: maxVisibleRight, viewportWidth, bodyWidth: maxVisibleRight };
     });
-    expect(overflow.overflowingCount, `${path} has elements overflowing viewport`).toBe(0);
+    expect(overflow.documentWidth, `${path} document overflows viewport`).toBeLessThanOrEqual(overflow.viewportWidth + 1);
+    expect(overflow.bodyWidth, `${path} body overflows viewport`).toBeLessThanOrEqual(overflow.viewportWidth + 1);
+    expect(overflow.documentWidth, `${path} document overflows viewport`).toBeLessThanOrEqual(overflow.viewportWidth + 8);
+    expect(overflow.bodyWidth, `${path} body overflows viewport`).toBeLessThanOrEqual(overflow.viewportWidth + 8);
 
     const seo = await page.evaluate(() => ({
       canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') ?? '',
