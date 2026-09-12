@@ -152,7 +152,8 @@ export const guides: Guide[] = [
   },
 ];
 
-export const redeemCodes: Array<{ code: string; status: 'watch'; reward: Record<SupportedLocale, string> }> = [];
+export type AzurRedeemCode = { code: string; status: 'active' | 'expired' | 'watch'; reward: Record<SupportedLocale, string>; region: string[]; expiresAt?: string; source?: { name: string; url: string; checkedAt: string } };
+export const redeemCodes: AzurRedeemCode[] = [];
 
 export type AzurVersionEntry = { id: string; label: Record<SupportedLocale, string>; status: 'confirmed' | 'watch'; date?: string; source?: { name: string; url: string; checkedAt: string } };
 export const versionTimeline: AzurVersionEntry[] = [
