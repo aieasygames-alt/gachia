@@ -163,7 +163,8 @@ export default function middleware(request: NextRequest) {
 
   // Override cache-control for public pages to allow Googlebot caching
   const isStaticAsset = pathname.startsWith('/_next') || pathname.startsWith('/images');
-  if (!isStaticAsset) {
+  const isApiRoute = pathname.startsWith('/api/');
+  if (!isStaticAsset && !isApiRoute) {
     response.headers.set(
       'Cache-Control',
       'public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400'
