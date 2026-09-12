@@ -1,0 +1,17 @@
+# Gachia Game Guides
+
+Gachia provides multilingual, structured guides and reference data for live-service games.
+
+## Game hubs
+
+- [Azur Promilia guides](https://gachia.com/en/azur-promilia/guides)
+- [Azur Promilia characters](https://gachia.com/en/azur-promilia/characters)
+- [Azur Promilia weapons](https://gachia.com/en/azur-promilia/weapons)
+- [Genshin Impact guides](https://gachia.com/en/genshin/guides)
+- [Zenless Zone Zero guides](https://gachia.com/en/zzz/guides)
+- [Neverness to Everness guides](https://gachia.com/en/nte/guides)
+
+## Site navigation
+
+- [Gachia home](https://gachia.com/en)
+- [Sitemap](https://gachia.com/sitemap.xml)

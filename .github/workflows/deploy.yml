@@ -84,6 +84,12 @@ jobs:
       - name: Audit Azur Promilia content
         run: pnpm --filter @gachia/game-azur-promilia audit:content
 
+      - name: Validate llms.txt
+        run: |
+          test -s apps/web/public/llms.txt
+          grep -q '^# ' apps/web/public/llms.txt
+          grep -qE '^\\- \\[.+\\]\\(https://gachia\\.com/.+\\)$' apps/web/public/llms.txt
+
   deploy-staging:
     needs: build
     if: github.ref == 'refs/heads/main' && github.event_name == 'push' && vars.CLOUDFLARE_DEPLOY_STAGING_FROM_GITHUB == 'true'
