@@ -11,6 +11,25 @@ export type Guide = {
   source?: { name: string; url: string; checkedAt: string; version: 'official' | 'cbt-beta' };
 };
 
+export const sourceStatusLabel = (status: 'official' | 'reference' | 'unverified' | undefined, locale: SupportedLocale) => ({
+  official: { zh: '官方已确认', en: 'Officially verified', ja: '公式確認済み' },
+  reference: { zh: '测试参考', en: 'Test reference', ja: 'テスト参照' },
+  unverified: { zh: '待核验', en: 'Unverified', ja: '未確認' },
+}[status ?? 'reference'][locale]);
+
+export const kiboFacilities = [
+  { id: 'logging-camp', label: { zh: '伐木场', en: 'Logging camp', ja: '伐採場' } },
+  { id: 'quarry', label: { zh: '采石场', en: 'Quarry', ja: '採石場' } },
+  { id: 'gathering-hut', label: { zh: '采集屋', en: 'Gathering hut', ja: '採集小屋' } },
+  { id: 'hunting-ground', label: { zh: '狩猎场', en: 'Hunting ground', ja: '狩猟場' } },
+  { id: 'mining-camp', label: { zh: '采矿营地', en: 'Mining camp', ja: '採掘場' } },
+  { id: 'element-altar', label: { zh: '元素祭坛', en: 'Element altar', ja: '元素祭壇' } },
+  { id: 'feeding-ground', label: { zh: '饲养场', en: 'Feeding ground', ja: '飼育場' } },
+  { id: 'fishery', label: { zh: '渔场', en: 'Fishery', ja: '漁場' } },
+  { id: 'sawmill', label: { zh: '锯木厂', en: 'Sawmill', ja: '製材所' } },
+  { id: 'armor-workshop', label: { zh: '制甲工坊', en: 'Armor workshop', ja: '防具工房' } },
+];
+
 export const guides: Guide[] = [
   {
     id: 'official-information-checklist',

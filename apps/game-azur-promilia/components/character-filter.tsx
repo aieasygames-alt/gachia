@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import type { AzurPromiliaCharacter } from '@gachia/data/games/azur-promilia';
 import type { SupportedLocale } from '@gachia/core';
+import { sourceStatusLabel } from '@/lib/data';
 
 export function CharacterFilter({ characters, locale }: { characters: AzurPromiliaCharacter[]; locale: SupportedLocale }) {
   const [element, setElement] = useState('all');
@@ -24,7 +25,7 @@ export function CharacterFilter({ characters, locale }: { characters: AzurPromil
       <label>{labels.rarity}<select value={rarity} onChange={(event) => setRarity(event.target.value)}><option value="all">{labels.all}</option><option value="5">5★</option><option value="4">4★</option></select></label>
     </div>
     <p className="card__meta">{filtered.length}{labels.results}</p>
-    <section className="grid">{filtered.map((character) => <Link className="card" href={`/${locale}/azur-promilia/characters/${character.id}`} key={character.id}><div className="card__title">{character.name[locale]}</div><div className="card__meta">{character.beta.element} · {character.beta.rarity}★ · {character.beta.profession} · {character.beta.weaponType}</div><div className="card__badge">{character.officialSource ? 'Official + CBT' : 'CBT/Beta'}</div></Link>)}</section>
+    <section className="grid">{filtered.map((character) => <Link className="card" href={`/${locale}/azur-promilia/characters/${character.id}`} key={character.id}><div className="card__title">{character.name[locale]}</div><div className="card__meta">{character.beta.element} · {character.beta.rarity}★ · {character.beta.profession} · {character.beta.weaponType}</div><div className="card__badge">{sourceStatusLabel(character.officialSource ? 'official' : 'reference', locale)}</div></Link>)}</section>
     {filtered.length === 0 && <p className="notice">No characters match the selected filters.</p>}
   </>;
 }

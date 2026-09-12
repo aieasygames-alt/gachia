@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { characters, characterName } from '@/lib/data';
+import { characters, characterName, sourceStatusLabel } from '@/lib/data';
 import { asLocale, localize } from '@/lib/i18n';
 import { metadata, url } from '@/lib/seo';
 import { GameNav } from '@/components/game-nav';
@@ -24,6 +24,7 @@ export default async function CharacterDetail({ params }: { params: Promise<{ la
     <main className="content article">
       <Link className="back" href={`/${locale}/azur-promilia/characters`}>{localize(locale, { zh: '返回角色图鉴', en: 'Back to characters', ja: 'キャラクター一覧に戻る' })}</Link>
       <h1>{name}</h1>
+      <p className="card__badge">{sourceStatusLabel(character.officialSource ? 'official' : 'reference', locale)}</p>
       <p className="notice">{localize(locale, { zh: '以下战斗资料为 CBT/Beta 公开参考，并非正式版本承诺；上线后会以官方说明为准更新。', en: 'The combat details below are public CBT/Beta references, not release commitments. Official release information will take precedence.', ja: '以下の戦闘情報は公開CBT/Betaの参照情報であり、正式版の保証ではありません。配信後は公式情報を優先して更新します。' })}</p>
       <div className="facts">
         <div><span>{localize(locale, { zh: '元素', en: 'Element', ja: '属性' })}</span><strong>{beta.element}</strong></div>

@@ -6,6 +6,7 @@ export type AzurPromiliaSource = {
   checkedAt: string;
   sourceType?: 'official' | 'cbt' | 'community' | 'third-party';
   version?: 'official' | 'cbt-beta';
+  status?: 'official' | 'reference' | 'unverified';
 };
 
 export type AzurPromiliaSkillSummary = {
