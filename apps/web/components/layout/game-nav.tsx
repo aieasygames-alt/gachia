@@ -18,7 +18,7 @@ export function GameNav({ gameId, locale }: GameNavProps) {
       className="border-b border-game-border bg-game-surface"
       style={{ borderColor: game.theme.primary + '30' }}
     >
-      <div className="container mx-auto flex items-center gap-1 overflow-x-auto px-4 py-2">
+      <div className="container mx-auto flex max-w-full items-center gap-1 overflow-x-auto px-4 py-2">
         {enabledRoutes.map((route) => (
           <Link
             key={route}
