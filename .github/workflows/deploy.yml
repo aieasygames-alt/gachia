@@ -199,7 +199,7 @@ jobs:
         run: pnpm exec wrangler d1 migrations apply gachia-db --remote --env "" --config wrangler.jsonc
 
       - name: Deploy Azur Promilia Worker
-        run: pnpm --filter @gachia/game-azur-promilia deploy
+        run: pnpm run --filter @gachia/game-azur-promilia deploy
 
       - name: Deploy Router Worker
         working-directory: apps/router
