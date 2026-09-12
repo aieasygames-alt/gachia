@@ -41,6 +41,17 @@ export function kiboLabel(id: string, locale: SupportedLocale) {
   return [...kiboFacilities, ...kiboLifeSkills].find((entry) => entry.id === id)?.label[locale] ?? id;
 }
 
+export const tuningMarkGlossary = [
+  { id: 'gains', label: { zh: '获得方式', en: 'How marks are gained', ja: '獲得方法' }, description: { zh: '角色通过攻击、技能或特定条件积累调谐印记。', en: 'Characters gain marks through attacks, skills, or specific conditions.', ja: '攻撃、スキル、特定条件で調律マークを蓄積します。' } },
+  { id: 'consumes', label: { zh: '消耗方式', en: 'How marks are spent', ja: '消費方法' }, description: { zh: '部分技能会消耗已积累的调谐印记。', en: 'Some skills consume accumulated marks.', ja: '一部スキルは蓄積した調律マークを消費します。' } },
+  { id: 'requires', label: { zh: '触发条件', en: 'Trigger requirements', ja: '発動条件' }, description: { zh: '技能或祝福可能要求特定元素、层数或战斗状态。', en: 'Skills or blessings may require an element, stack count, or combat state.', ja: 'スキルや祝福には属性、スタック数、戦闘状態が必要な場合があります。' } },
+];
+
+export const kiboLifecycle = [
+  { id: 'capture', label: { zh: '捕捉', en: 'Capture', ja: '捕獲' }, description: { zh: '使用 Stella Card 通过 Star Link 尝试捕捉；降低目标生命值或使用更高稀有度卡片可提高成功率。', en: 'Use a Stella Card through Star Link; lowering target HP or using a higher-rarity card can improve success.', ja: 'ステラカードでスターリンク捕獲。対象HPを下げるか高レアカードで成功率が上がる場合があります。' } },
+  { id: 'evolution', label: { zh: '进化', en: 'Evolution', ja: '進化' }, description: { zh: '进化规则和消耗尚未有正式版本数据；当前仅记录 CBT 中外观与战斗表现可能变化。', en: 'Release evolution rules and costs are not verified; CBT references only indicate appearance and behavior may change.', ja: '正式版の進化条件と消費は未確認。CBTでは外見や挙動が変化する可能性のみ記録しています。' } },
+];
+
 export const guides: Guide[] = [
   {
     id: 'official-information-checklist',

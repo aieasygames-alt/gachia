@@ -8,7 +8,7 @@ const pages = [
   ['guides', { zh: '攻略', en: 'Guides', ja: '攻略' }],
   ['kibo', { zh: 'Kibo 图鉴', en: 'Kibo', ja: 'キボ' }],
   ['world', { zh: '世界', en: 'World', ja: '世界' }],
-  ['tier-list', { zh: '强度参考', en: 'Tier List', ja: 'Tier リスト' }],
+  ['tier-list', { zh: '定位参考', en: 'Role Reference', ja: '役割参照' }],
   ['redeem-codes', { zh: '兑换码', en: 'Codes', ja: '交換コード' }],
   ['planner', { zh: '养成规划', en: 'Planner', ja: '育成計画' }],
   ['version', { zh: '版本', en: 'Version', ja: 'バージョン' }],
