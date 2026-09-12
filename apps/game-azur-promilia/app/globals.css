@@ -72,6 +72,7 @@ p { color: var(--muted); line-height: 1.7; }
 .filter-bar { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 24px 0 4px; }
 .filter-bar label { color: var(--muted); font-size: 12px; }
 .filter-bar select { display: block; width: 100%; margin-top: 5px; border: 1px solid var(--border); border-radius: 4px; background: var(--surface); color: var(--text); padding: 9px; }
+.filter-bar input { display: block; width: 100%; margin-top: 5px; border: 1px solid var(--border); border-radius: 4px; background: var(--surface); color: var(--text); padding: 9px; }
 .compare { margin-top: 38px; border-top: 1px solid var(--border); padding-top: 8px; }
 .compare__select { display: block; color: var(--muted); font-size: 12px; }
 .compare__select select { display: block; min-height: 84px; width: 100%; margin-top: 5px; border: 1px solid var(--border); border-radius: 4px; background: var(--surface); color: var(--text); padding: 7px; }
