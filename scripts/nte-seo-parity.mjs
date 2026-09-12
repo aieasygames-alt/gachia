@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 
-const stagingOrigin = process.env.NTE_STAGING_ORIGIN ?? 'https://gachia-game-nte-staging.aieasygames.workers.dev';
+const stagingOrigin = process.env.NTE_STAGING_ORIGIN;
+if (!stagingOrigin) throw new Error('Set NTE_STAGING_ORIGIN to a temporary protected preview origin before running SEO parity.');
 const productionOrigin = process.env.NTE_PRODUCTION_ORIGIN ?? 'https://gachia.com';
 const previewOnly = process.env.NTE_PREVIEW_ONLY === 'true';
 const requestTimeoutMs = Number.parseInt(process.env.NTE_PARITY_TIMEOUT_MS ?? '8000', 10);

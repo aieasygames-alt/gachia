@@ -21,7 +21,7 @@ The repository workflow `.github/workflows/nte-preview.yml` runs the non-deployi
 
 ## Current staging deployment
 
-- NTE Worker: `gachia-game-nte-staging` (SSR build, preview-only)
+- The former dedicated NTE staging Worker has been retired. Use a temporary protected preview origin when parity testing is required.
 - Router Worker: `gachia-router-staging`
 - Router staging was temporarily enabled for manual validation on 2026-09-08. Restore `NTE_ENABLED` to `false` after validation; production remains disabled.
 

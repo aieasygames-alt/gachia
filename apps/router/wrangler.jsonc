@@ -35,10 +35,6 @@
           "service": "gachia-staging"
         },
         {
-          "binding": "NTE_SITE",
-          "service": "gachia-game-nte"
-        },
-        {
           "binding": "AZUR_PROMILIA_SITE",
           "service": "gachia-game-azur-promilia"
         }
