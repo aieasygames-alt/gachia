@@ -154,6 +154,13 @@ export const guides: Guide[] = [
 
 export const redeemCodes: Array<{ code: string; status: 'watch'; reward: Record<SupportedLocale, string> }> = [];
 
+export type AzurVersionEntry = { id: string; label: Record<SupportedLocale, string>; status: 'confirmed' | 'watch'; date?: string; source?: { name: string; url: string; checkedAt: string } };
+export const versionTimeline: AzurVersionEntry[] = [
+  { id: 'launch-watch', label: { zh: '正式上线时间', en: 'Official launch timing', ja: '正式配信時期' }, status: 'watch' },
+  { id: 'platform-watch', label: { zh: '平台与地区', en: 'Platforms and regions', ja: '対応機種と地域' }, status: 'watch' },
+  { id: 'test-watch', label: { zh: '测试资格与开放时间', en: 'Test access and schedule', ja: 'テスト参加条件と日程' }, status: 'watch' },
+];
+
 export type Kibo = {
   id: string;
   name: Record<SupportedLocale, string>;

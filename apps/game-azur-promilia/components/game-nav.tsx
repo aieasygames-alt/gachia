@@ -11,6 +11,7 @@ const pages = [
   ['tier-list', { zh: '强度参考', en: 'Tier List', ja: 'Tier リスト' }],
   ['redeem-codes', { zh: '兑换码', en: 'Codes', ja: '交換コード' }],
   ['planner', { zh: '养成规划', en: 'Planner', ja: '育成計画' }],
+  ['version', { zh: '版本', en: 'Version', ja: 'バージョン' }],
 ] as const;
 
 export function GameNav({ locale, current }: { locale: SupportedLocale; current?: string }) {
