@@ -48,7 +48,7 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
     <>
       <header className="gachia-header sticky top-0 z-50">
         <div className="gachia-header__top border-b border-game-border bg-game-bg/90 shadow-lg shadow-black/10 backdrop-blur-xl">
-          <div className="gachia-header__container container mx-auto flex h-16 items-center gap-4 px-4">
+          <div className="gachia-header__container container mx-auto flex h-16 max-w-full items-center gap-4 px-4">
             <Link href="/" className="gachia-header__brand flex shrink-0 items-center gap-3">
               <img src="/images/logo.webp" alt="Gachia" width={36} height={36} className="h-9 w-9 rounded-lg" />
               <span className="text-xl font-black text-game-text">Gachia</span>
@@ -92,7 +92,7 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
             </div>
           </div>
         </div>
-        <div className="gachia-header__games container mx-auto flex flex-wrap gap-2 px-4 pb-3 lg:hidden">
+        <div className="gachia-header__games container mx-auto flex max-w-full flex-wrap gap-2 px-4 pb-3 lg:hidden">
           {header.featuredGames.map((game) => (
             <Link
               key={game.id}
