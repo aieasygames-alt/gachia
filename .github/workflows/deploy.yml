@@ -88,7 +88,7 @@ jobs:
         run: |
           test -s apps/web/app/llms.txt/route.ts
           grep -q '^const body = `# ' apps/web/app/llms.txt/route.ts
-          grep -qE '\\- .+: \$\\{BASE_URL\\}/.+' apps/web/app/llms.txt/route.ts
+          grep -q -- '- Azur Promilia guides: ${BASE_URL}/en/azur-promilia/guides' apps/web/app/llms.txt/route.ts
           grep -q 'Azur Promilia guides' apps/web/app/llms.txt/route.ts
 
   deploy-staging:
