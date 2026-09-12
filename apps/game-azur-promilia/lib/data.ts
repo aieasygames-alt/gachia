@@ -30,6 +30,17 @@ export const kiboFacilities = [
   { id: 'armor-workshop', label: { zh: '制甲工坊', en: 'Armor workshop', ja: '防具工房' } },
 ];
 
+export const kiboLifeSkills = [
+  { id: 'watering', label: { zh: '浇水', en: 'Watering', ja: '水やり' } },
+  { id: 'farm labor', label: { zh: '农场劳作', en: 'Farm labor', ja: '農場作業' } },
+  { id: 'woodworking', label: { zh: '木工', en: 'Woodworking', ja: '木工' } },
+  { id: 'armorsmithing', label: { zh: '制甲', en: 'Armorsmithing', ja: '鎧製作' } },
+];
+
+export function kiboLabel(id: string, locale: SupportedLocale) {
+  return [...kiboFacilities, ...kiboLifeSkills].find((entry) => entry.id === id)?.label[locale] ?? id;
+}
+
 export const guides: Guide[] = [
   {
     id: 'official-information-checklist',
