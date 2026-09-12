@@ -35,8 +35,8 @@ export function productionMetadata(title: string, description: string, locale: S
     title: limitVisible(title, 68),
     description: limitVisible(description, 155),
     alternates: alternates(locale, path),
-    openGraph: { title: limitVisible(title, 68), description: limitVisible(description, 155), url: `${BASE_URL}/${locale}/nte${path}`, siteName: 'Gachia', type: 'website' },
-    twitter: { card: 'summary_large_image', title: limitVisible(title, 68), description: limitVisible(description, 155) },
+    openGraph: { title: limitVisible(title, 68), description: limitVisible(description, 155), url: `${BASE_URL}/${locale}/nte${path}`, siteName: 'Gachia', type: 'website', images: [{ url: `${BASE_URL}/images/og/nte.webp`, width: 1200, height: 630, alt: limitVisible(title, 68) }] },
+    twitter: { card: 'summary_large_image', title: limitVisible(title, 68), description: limitVisible(description, 155), images: [`${BASE_URL}/images/og/nte.webp`] },
   };
 }
 

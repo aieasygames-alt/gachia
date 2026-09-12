@@ -14,8 +14,9 @@ export function metadata(locale: SupportedLocale, title: string, description: st
       url: `${BASE_URL}/${locale}/azur-promilia${normalizedPath}`,
       siteName: 'Gachia',
       type: 'website',
+      images: [{ url: `${BASE_URL}/images/og/azur-promilia.webp`, width: 1200, height: 630, alt: title }],
     },
-    twitter: { card: 'summary_large_image', title, description },
+    twitter: { card: 'summary_large_image', title, description, images: [`${BASE_URL}/images/og/azur-promilia.webp`] },
     alternates: {
       canonical: `${BASE_URL}/${locale}/azur-promilia${normalizedPath}`,
       languages: {

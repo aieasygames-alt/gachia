@@ -1141,9 +1141,18 @@ export default async function GameHome({
   ]);
   const rocoDashboardStats = await getRocoDashboardStats(gameId, guides.length, enabledRoutes.length);
   const rocoDailyCards = gameId === 'roco' || gameId === 'roco-cn' ? ROCO_DAILY_COPY[gameId] : null;
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Gachia', item: `${BASE_URL}/${locale}` },
+      { '@type': 'ListItem', position: 2, name: gameConfig.name[locale], item: `${BASE_URL}/${locale}/${gameId}` },
+    ],
+  };
 
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       {/* Game Header */}
       <div className="mb-8">
         <div className="flex items-center gap-4 mb-2">
