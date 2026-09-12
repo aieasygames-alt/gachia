@@ -88,7 +88,8 @@ jobs:
         run: |
           test -s apps/web/app/llms.txt/route.ts
           grep -q '^const body = `# ' apps/web/app/llms.txt/route.ts
-          grep -qE '\\- .+: https://gachia\\.com/.+' apps/web/app/llms.txt/route.ts
+          grep -qE '\\- .+: \$\\{BASE_URL\\}/.+' apps/web/app/llms.txt/route.ts
+          grep -q 'Azur Promilia guides' apps/web/app/llms.txt/route.ts
 
   deploy-staging:
     needs: build
