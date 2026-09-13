@@ -133,7 +133,7 @@ describe('gachia router safety defaults', () => {
   it('routes only supported Azur Promilia paths when enabled', async () => {
     const env = { MAIN_SITE: fetcher('main'), AZUR_PROMILIA_SITE: fetcher('azur-promilia'), AZUR_PROMILIA_ENABLED: 'true' };
 
-    for (const pathname of ['/zh/azur-promilia', '/en/azur-promilia/characters/test', '/ja/azur-promilia/tier-list', '/_games/azur-promilia/_next/static/app.js', '/sitemaps/azur-promilia/index.xml']) {
+    for (const pathname of ['/zh/azur-promilia', '/en/azur-promilia/characters/test', '/ja/azur-promilia/tier-list', '/zh/azur-promilia/systems', '/_games/azur-promilia/_next/static/app.js', '/sitemaps/azur-promilia/index.xml']) {
       const response = await router.fetch(new Request(`https://gachia.com${pathname}`), env);
       await expect(response.text()).resolves.toBe('azur-promilia');
     }
