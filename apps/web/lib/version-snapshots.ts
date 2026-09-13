@@ -10,6 +10,12 @@ export interface VersionSnapshotLink {
   label: LocalizedText;
 }
 
+export interface VersionSnapshotPlatformDate {
+  platform: string;
+  date: string;
+  time?: string;
+}
+
 export interface VersionSnapshot {
   gameId: GameId;
   currentVersion: string;
@@ -17,44 +23,45 @@ export interface VersionSnapshot {
   status: LiveStatus;
   lastUpdatedAt: string;
   sourceTier?: VersionSnapshotSourceTier;
+  platformReleaseDates?: VersionSnapshotPlatformDate[];
   summary: LocalizedText;
   whatChanged: LocalizedText[];
   firstSteps: LocalizedText[];
   links: VersionSnapshotLink[];
 }
 
-export const VERSION_SNAPSHOT_UPDATED_AT = '2026-09-07';
+export const VERSION_SNAPSHOT_UPDATED_AT = '2026-09-13';
 
 export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   zzz: {
     gameId: 'zzz',
-    currentVersion: '3.2 launch day route',
+    currentVersion: '3.2 live launch recap',
     releaseDate: '2026-09-09',
-    status: 'watch',
+    status: 'live',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     sourceTier: 'official',
     summary: {
-      zh: '3.2 已进入 9/9 上线前最后窗口，当前重点是 Claret、Roxy、Armorer、Maim、rerun、平台入口和首日路线。',
-      en: 'v3.2 is in its final September 9 launch window, focusing on Claret, Roxy, Armorer, Maim, reruns, platform entry, and launch-day routing.',
-      ja: 'v3.2は9月9日実装前の最終段階です。Claret、Roxy、Armorer、Maim、復刻、平台入口、初日ルートを案内します。',
+      zh: '3.2 已于 9/9 上线，当前重点是 Claret、Roxy、Armorer、Maim、活动、卡池、平台入口和首日复盘。',
+      en: 'v3.2 launched on September 9, with focus on Claret, Roxy, Armorer, Maim, events, banners, platform entry, and launch recap.',
+      ja: 'v3.2は9月9日に実装済みです。Claret、Roxy、Armorer、Maim、イベント、バナー、平台入口、初日まとめを案内します。',
     },
     whatChanged: [
       {
-        zh: '版本页从 release countdown 升级为 launch-day route。',
-        en: 'The hub moves from release countdown into a launch-day route.',
-        ja: '版本ページをリリースカウントダウンから初日ルートへ移します。',
+        zh: '版本页从上线倒计时切换为 live launch recap，首屏回答上线后先做什么。',
+        en: 'The hub moves from countdown into a live launch recap that answers what to do first after launch.',
+        ja: '版本ページをカウントダウンからlive launch recapへ切り替え、実装後の初手を案内します。',
       },
       {
-        zh: '直播码继续标为 expired，首屏改为“何时开、先做什么、平台怎么进”。',
-        en: 'Livestream codes stay marked expired while the first screen answers timing, first steps, and platform entry.',
-        ja: '配信コードは期限切れ扱いのまま、初画面で時期、初手、平台入口を答えます。',
+        zh: '直播码继续保留 expired 说明，active 代码与活动奖励单独核验。',
+        en: 'Livestream codes stay in expired context while active codes and event rewards are verified separately.',
+        ja: '配信コードは期限切れとして残し、有効コードとイベント報酬は別途確認します。',
       },
     ],
     firstSteps: [
       {
-        zh: '先确认 9/9 开服和平台入口，再看 Claret/Roxy 与 rerun 优先级。',
-        en: 'Confirm the September 9 launch and platform entry first, then decide Claret/Roxy and rerun priority.',
-        ja: 'まず9月9日の実装と平台入口を確認し、その後Claret/Roxyと復刻の優先度を決めます。',
+        zh: '先看 3.2 首日路线和活动入口，再决定 Claret/Roxy、Armorer/Maim 的培养优先级。',
+        en: 'Start with the 3.2 launch route and event entry, then decide Claret/Roxy and Armorer/Maim build priorities.',
+        ja: 'まず3.2初日ルートとイベント入口を確認し、Claret/Roxy、Armorer/Maimの育成優先度を決めます。',
       },
       {
         zh: '直播码只保留过期说明，不放入可领取模块。',
@@ -78,15 +85,15 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     sourceTier: 'mixed',
     summary: {
-      zh: '3.6 已接近 Phase 2/Jingran 预热窗口，重点是卡池、兑换码、地图和 Xbox/Steam 新玩家入口。',
-      en: 'v3.6 is nearing the Phase 2/Jingran prep window, focusing on banners, codes, maps, and Xbox/Steam starter routes.',
-      ja: 'v3.6はPhase 2/Jingran準備期間に近づき、バナー、コード、マップ、Xbox/Steam入門が中心です。',
+      zh: '3.6 Phase 2/Jingran 已进入当前窗口，重点是卡池、活动、兑换码、地图和 Xbox/Steam 新玩家入口。',
+      en: 'v3.6 Phase 2/Jingran is now in the current window, focusing on banners, events, codes, maps, and Xbox/Steam starter routes.',
+      ja: 'v3.6 Phase 2/Jingranは現在の注目期間に入り、バナー、イベント、コード、マップ、Xbox/Steam入門が中心です。',
     },
     whatChanged: [
       {
-        zh: '版本页从上线后承接推进到 Phase 2/Jingran watch。',
-        en: 'The hub moves from post-launch routing into Phase 2/Jingran watch.',
-        ja: '版本ページを実装後導線からPhase 2/Jingran注目へ進めます。',
+        zh: '版本页从 Phase 2 预热切换为当前窗口，首屏优先回答卡池、活动和兑换码。',
+        en: 'The hub moves from Phase 2 preparation into the current window, foregrounding banners, events, and codes.',
+        ja: '版本ページをPhase 2準備から現在の注目期間へ切り替え、バナー、イベント、コードを優先します。',
       },
       {
         zh: '角色机制细节只用已核验口径，避免把爆料写成正式内容。',
@@ -123,9 +130,9 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     sourceTier: 'official',
     summary: {
-      zh: '4.5 已上线，当前重点是 Phase 2、兑换码、当前跃迁和队伍构建。',
-      en: 'v4.5 is live, with focus on Phase 2, codes, current warps, and team-building.',
-      ja: 'v4.5は実装済みで、Phase 2、コード、現在跳躍、編成が中心です。',
+      zh: '4.5 Phase 2 已进入当前窗口，重点是当前跃迁、兑换码、抽取计算和队伍构建。',
+      en: 'v4.5 Phase 2 is now the current window, focusing on current warps, codes, pull planning, and team-building.',
+      ja: 'v4.5 Phase 2が現在の注目期間で、現在跳躍、コード、抽選計画、編成が中心です。',
     },
     whatChanged: [
       {
@@ -161,14 +168,14 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   nte: {
     gameId: 'nte',
     currentVersion: 'September codes / banner calendar',
-    releaseDate: '2026-09-07',
+    releaseDate: '2026-09-12',
     status: 'live',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     sourceTier: 'mixed',
     summary: {
-      zh: '9 月 codes 与 banner calendar 信号增强，重点是 Linko、Hotori、active/expired codes、redeem path 和来源分层。',
-      en: 'September codes and banner-calendar signals are stronger, focusing on Linko, Hotori, active/expired codes, redeem paths, and source labeling.',
-      ja: '9月コードとバナーカレンダーのシグナルが強まり、Linko、Hotori、有効/期限切れコード、交換導線、出典ラベルを案内します。',
+      zh: '9 月 codes 与 banner calendar 继续更新，重点是 Linko、Hotori、active/expired/unknown codes、redeem path 和来源分层。',
+      en: 'September codes and banner-calendar coverage continues, focusing on Linko, Hotori, active/expired/unknown codes, redeem paths, and source labeling.',
+      ja: '9月コードとバナーカレンダーの更新が続いており、Linko、Hotori、有効/期限切れ/不明コード、交換導線、出典ラベルが中心です。',
     },
     whatChanged: [
       {
@@ -198,21 +205,21 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   genshin: {
     gameId: 'genshin',
-    currentVersion: 'Luna I pre-launch',
+    currentVersion: 'Luna I live launch recap',
     releaseDate: '2026-09-10',
     status: 'live',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     sourceTier: 'official',
     summary: {
-      zh: 'Luna I 仍是 9/10 前核心入口，优先承接 Nod-Krai、Lauma、Flins、Aino、免费 5 星、周年/回归奖励和地图材料。',
-      en: 'Luna I remains the key September 10 prep route, covering Nod-Krai, Lauma, Flins, Aino, free-5-star planning, anniversary/returning rewards, and map materials.',
-      ja: 'Luna Iは9月10日前の主要導線です。Nod-Krai、Lauma、Flins、Aino、無料5星、周年/復帰報酬、マップ素材を案内します。',
+      zh: 'Luna I 已进入上线后复盘阶段，重点是 Nod-Krai 地图、Lauma/Flins/Aino、免费 5 星、周年/回归奖励和材料。',
+      en: 'Luna I is now in its live launch recap phase, covering Nod-Krai maps, Lauma/Flins/Aino, the free 5-star, anniversary/returning rewards, and materials.',
+      ja: 'Luna Iは実装後のまとめ段階です。Nod-Kraiマップ、Lauma/Flins/Aino、無料5星、周年/復帰報酬、素材を案内します。',
     },
     whatChanged: [
       {
-        zh: '版本页从上线前清单推进到 final prep，首屏强调 9/10 前最后检查。',
-        en: 'The hub moves from pre-launch checklist into final prep, foregrounding the last September 10 checks.',
-        ja: '版本ページを実装前チェックリストからfinal prepへ進め、9月10日前の最終確認を強調します。',
+        zh: '版本页从上线前清单切换为上线后复盘，首屏强调现在先做什么。',
+        en: 'The hub moves from a pre-launch checklist into a live recap that foregrounds what to do now.',
+        ja: '版本ページを実装前チェックリストから実装後まとめへ切り替え、今やることを強調します。',
       },
       {
         zh: '回归奖励、免费 5 星和地图入口保持在版本页可见位置。',
@@ -222,9 +229,9 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
     ],
     firstSteps: [
       {
-        zh: '先完成 Luna I final prep，再核对兑换码、Nod-Krai 地图、材料和免费 5 星规划。',
-        en: 'Finish Luna I final prep first, then verify codes, Nod-Krai maps, materials, and free-5-star planning.',
-        ja: 'まずLuna I final prepを済ませ、コード、Nod-Kraiマップ、素材、無料5星計画を確認します。',
+        zh: '先领取版本/周年奖励，再核对 Nod-Krai 地图、材料和免费 5 星规划。',
+        en: 'Claim version and anniversary rewards first, then verify Nod-Krai maps, materials, and free-5-star planning.',
+        ja: 'まず版本/周年報酬を受け取り、Nod-Kraiマップ、素材、無料5星計画を確認します。',
       },
       {
         zh: '抽卡前把原石、保底和目标角色优先级排好。',
@@ -242,28 +249,28 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   skjh: {
     gameId: 'skjh',
-    currentVersion: 'August event wrap-up',
+    currentVersion: 'S2 制霸王座',
     releaseDate: '2026-09-07',
     status: 'live',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     sourceTier: 'official',
     summary: {
-      zh: '上线后常青需求稳定，重点是官方下载、礼包、PC 配置、服务器模式、安全区/标准/挑战和防抄家。',
-      en: 'Post-launch evergreen demand is stable, focusing on official download, rewards, PC specs, server modes, safe/standard/challenge routes, and base defense.',
-      ja: '実装後の常設需要は安定しており、公式DL、報酬、PC構成、サーバーモード、安全/標準/挑戦、拠点防衛を案内します。',
+      zh: 'S2「制霸王座」已成为当前主入口，重点是渗透补给、首充/限定礼包、服务器模式和防抄家。',
+      en: 'S2 “制霸王座” is now the main entry, focusing on infiltration supplies, first-purchase/limited packs, server modes, and base defense.',
+      ja: 'S2「制霸王座」が現在の主要入口です。侵入補給、初回購入/限定パック、サーバーモード、拠点防衛を案内します。',
     },
     whatChanged: [
       {
-        zh: '页面继续从活动收尾转向新手常青内容，避免承接过期礼包词。',
-        en: 'Coverage continues moving from event wrap-up into evergreen beginner content, avoiding expired reward terms.',
-        ja: 'イベント終了案内から初心者向け常設内容へ進め、期限切れ報酬語を避けます。',
+        zh: '页面从活动收尾升级为 S2 玩法与新手常青入口，礼包内容保留有效期说明。',
+        en: 'Coverage moves from event wrap-up into an S2 and evergreen beginner entry, with validity dates kept on pack content.',
+        ja: 'イベント終了案内からS2玩法と初心者向け常設入口へ進め、パックには有効期限を残します。',
       },
     ],
     firstSteps: [
       {
-        zh: '先走官方下载和账号入口，再选择服务器模式。',
-        en: 'Start with official download/account entry, then choose a server mode.',
-        ja: 'まず公式DLとアカウント入口を確認し、サーバーモードを選びます。',
+        zh: '先看 S2 活动和官方下载，再选择服务器模式。',
+        en: 'Start with S2 events and official download, then choose a server mode.',
+        ja: 'まずS2イベントと公式DLを確認し、サーバーモードを選びます。',
       },
       {
         zh: '进入游戏后按 0-2 小时路线稳定资源和基地。',
@@ -275,45 +282,45 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       { type: 'download', href: '/skjh/download', label: { zh: '官方下载', en: 'Official download', ja: '公式DL' } },
       { type: 'codes', href: '/skjh/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
       { type: 'characters', href: '/skjh/weapons', label: { zh: '武器资料', en: 'Weapons', ja: '武器' } },
-      { type: 'guides', href: '/skjh/guides/aug31-event-ended-beginner-catchup', label: { zh: '活动后补课', en: 'Post-event catch-up', ja: 'イベント後追いつき' } },
+      { type: 'guides', href: '/skjh/guides/aug31-event-ended-beginner-catchup', label: { zh: 'S2 / 新手路线', en: 'S2 / beginner route', ja: 'S2 / 初心者ルート' } },
     ],
   },
   endfield: {
     gameId: 'endfield',
-    currentVersion: 'Steam Pioneer Test cutoff',
+    currentVersion: 'Pioneer Test recap / AIC blueprint',
     releaseDate: '2026-09-10',
-    status: 'watch',
+    status: 'fresh',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     sourceTier: 'official',
     summary: {
-      zh: 'Steam Pioneer Test 已进入 9/10 13:00 UTC+8 截止倒计时，重点是资格、Steam 下载、测试奖励、蓝图和 AIC 工厂。',
-      en: 'Steam Pioneer Test is in its September 10 13:00 UTC+8 cutoff countdown, focusing on access, Steam download, test rewards, blueprints, and the AIC factory.',
-      ja: 'Steam Pioneer Testは9月10日13:00 UTC+8締切カウントダウンです。資格、Steam DL、テスト報酬、設計図、AIC工場を案内します。',
+      zh: 'Steam Pioneer Test 招募已结束，当前重点转为测试复盘、测试奖励、AIC 工厂、Wuling 和蓝图。',
+      en: 'Steam Pioneer Test recruitment has ended, shifting focus to the recap, test rewards, AIC factories, Wuling, and blueprints.',
+      ja: 'Steam Pioneer Test募集は終了し、まとめ、テスト報酬、AIC工場、Wuling、設計図が中心です。',
     },
     whatChanged: [
       {
-        zh: '版本页要突出截止时间，并准备 9/10 后切换到 recap/expired。',
-        en: 'The hub should foreground the cutoff and prepare a post-September-10 recap/expired switch.',
-        ja: '版本ページで締切を強調し、9月10日後のrecap/expired切替を準備します。',
+        zh: '版本页从报名截止切换为测试复盘与蓝图/工厂入口，避免继续使用 last-call。',
+        en: 'The hub moves from recruitment cutoff into recap and blueprint/factory entry, avoiding stale last-call language.',
+        ja: '版本ページを募集締切からまとめと設計図/工場入口へ切り替え、古いlast-call表現を避けます。',
       },
     ],
     firstSteps: [
       {
-        zh: '先确认 9/10 13:00 UTC+8 前是否还能报名，再看 Steam 下载和测试奖励。',
-        en: 'Check whether registration is still open before September 10 13:00 UTC+8, then review Steam download and test rewards.',
-        ja: 'まず9月10日13:00 UTC+8前に応募可能か確認し、その後Steam DLとテスト報酬を確認します。',
+        zh: '先看 Pioneer Test 复盘和测试奖励，再进入 AIC/Wuling 蓝图路线。',
+        en: 'Start with the Pioneer Test recap and rewards, then move into AIC/Wuling blueprint routes.',
+        ja: 'まずPioneer Testのまとめと報酬を確認し、その後AIC/Wuling設計図ルートへ進みます。',
       },
       {
-        zh: '未确认上线日期保持 watch 口径，不写成正式定档。',
-        en: 'Keep unconfirmed release timing in watch wording instead of treating it as a final date.',
-        ja: '未確認リリース時期は正式日程ではなく注目表現に留めます。',
+        zh: '正式上线日期仍未确认，继续使用 watch 口径。',
+        en: 'The full release date is still unconfirmed, so keep watch wording.',
+        ja: '正式リリース日は未確認のため、引き続き注目表現に留めます。',
       },
     ],
     links: [
       { type: 'download', href: '/endfield/download', label: { zh: '下载 / 测试', en: 'Download / Tests', ja: 'DL / テスト' } },
       { type: 'codes', href: '/endfield/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
       { type: 'characters', href: '/endfield/characters', label: { zh: '角色', en: 'Characters', ja: 'キャラ' } },
-      { type: 'guides', href: '/endfield/guides/homecoming-update-guide', label: { zh: '蓝图 / AIC', en: 'Blueprint / AIC', ja: '設計図 / AIC' } },
+      { type: 'guides', href: '/endfield/guides/homecoming-update-guide', label: { zh: '测试复盘 / 蓝图', en: 'Test recap / blueprints', ja: 'テストまとめ / 設計図' } },
     ],
   },
   aniimo: {
@@ -323,28 +330,32 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
     status: 'watch',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     sourceTier: 'official',
+    platformReleaseDates: [
+      { platform: 'PC / PS5 / Xbox', date: '2026-09-16', time: '10:00 UTC+8' },
+      { platform: 'Mobile', date: '2026-09-23' },
+    ],
     summary: {
-      zh: 'Aniimo 官方上线倒计时继续增强，PC/主机指向 2026-09-16，移动端指向 2026-09-23，重点是平台、预购、starter、capture 和地图入口。',
-      en: 'Aniimo launch countdown is getting stronger, with PC/console on September 16, 2026 and mobile on September 23, focusing on platforms, pre-order, starter, capture, and map entry.',
-      ja: 'Aniimoのリリースカウントダウンが強まっています。PC/コンソールは2026年9月16日、モバイルは9月23日で、平台、予約、starter、capture、マップ入口が中心です。',
+      zh: 'Aniimo 已进入上线前最后窗口：PC/主机为 9/16 10:00 UTC+8，移动端为 9/23，重点是预注册奖励、预购包、starter、capture 和地图入口。',
+      en: 'Aniimo is in its final pre-launch window: PC/console on September 16 at 10:00 UTC+8 and mobile on September 23, focusing on pre-registration rewards, pre-order packs, starter, capture, and map entry.',
+      ja: 'Aniimoは実装前の最終期間です。PC/コンソールは9月16日10:00 UTC+8、モバイルは9月23日で、事前登録報酬、予約パック、starter、capture、マップ入口が中心です。',
     },
     whatChanged: [
       {
-        zh: '版本页需要从泛 release date 升级为分平台上线倒计时。',
-        en: 'The version hub should move from broad release-date coverage into platform-specific launch countdown.',
-        ja: '版本ページを広いrelease date案内から平台別カウントダウンへ進めます。',
+        zh: '版本页从泛 release date 升级为分平台上线时间，并突出 9/16 10:00 UTC+8。',
+        en: 'The version hub moves from broad release-date coverage into platform-specific launch times, foregrounding September 16 at 10:00 UTC+8.',
+        ja: '版本ページを広いrelease date案内から平台別の実装時刻へ進め、9月16日10:00 UTC+8を強調します。',
       },
       {
-        zh: 'download、starter、capture/twine 和 map 入口需要互相导流。',
-        en: 'Download, starter, capture/twine, and map entries should cross-link.',
-        ja: 'download、starter、capture/twine、map入口を相互接続します。',
+        zh: '预注册奖励、预购包、download、starter、capture/twine 和 map 入口需要互相导流。',
+        en: 'Pre-registration rewards, pre-order packs, download, starter, capture/twine, and map entries should cross-link.',
+        ja: '事前登録報酬、予約パック、download、starter、capture/twine、map入口を相互接続します。',
       },
     ],
     firstSteps: [
       {
-        zh: '先确认自己的平台是 9/16 还是 9/23，再看预购/预注册和下载入口。',
-        en: 'Check whether your platform launches on September 16 or September 23, then review pre-order/pre-registration and download entry.',
-        ja: '自分の平台が9月16日か9月23日か確認し、予約/事前登録とDL入口を見ます。',
+        zh: '先确认自己的平台是 9/16 10:00 UTC+8 还是 9/23，再看预注册奖励、预购包和下载入口。',
+        en: 'Check whether your platform launches on September 16 at 10:00 UTC+8 or September 23, then review pre-registration rewards, pre-order packs, and download entry.',
+        ja: '自分の平台が9月16日10:00 UTC+8か9月23日か確認し、事前登録報酬、予約パック、DL入口を見ます。',
       },
       {
         zh: '入坑内容优先回答 starter、捕捉玩法和地图区域。',

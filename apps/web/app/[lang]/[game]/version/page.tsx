@@ -47,50 +47,50 @@ const VERSION_META_OVERRIDES: Partial<Record<GameId, Partial<Record<SupportedLoc
 }>>>> = {
   genshin: {
     zh: {
-      title: '原神 Luna VIII 版本专题：卡池、活动与兑换码',
-      description: '追踪原神 Luna VIII、Sandrone、Sunny Summer Fontinalia、当前卡池、下期祈愿、活动日历、兑换码和原石规划。',
+      title: '原神 Luna I 版本专题：Nod-Krai、卡池与兑换码',
+      description: '追踪原神 Luna I、Nod-Krai、Lauma、Flins、Aino、当前卡池、活动日历、兑换码和原石规划。',
     },
     en: {
-      title: 'Genshin Luna VIII Hub: Banners, Events & Codes',
-      description: 'Track Genshin Luna VIII, Sandrone, current banners, next banner planning, event calendar, redeem codes, and Primogem priorities.',
+      title: 'Genshin Luna I Hub: Nod-Krai, Banners & Codes',
+      description: 'Track Genshin Luna I, Nod-Krai, Lauma, Flins, Aino, current banners, event calendar, redeem codes, and Primogem priorities.',
     },
     ja: {
-      title: '原神 Luna VIII 特集：バナー、イベント、コード',
-      description: '原神 Luna VIII、Sandrone、Sunny Summer Fontinalia、現在バナー、次回計画、イベント日程、交換コード、原石計画を確認できます。',
+      title: '原神 Luna I 特集：Nod-Krai、バナー、コード',
+      description: '原神 Luna I、Nod-Krai、Lauma、Flins、Aino、現在バナー、イベント日程、交換コード、原石計画を確認できます。',
     },
   },
   starrail: {
     zh: {
-      title: '崩铁 4.4 版本专题：卡池、联动与兑换码',
-      description: '追踪崩坏星穹铁道 4.4、Himeko Nova、Fate/stay night 联动、Rin/Gilgamesh、当前跃迁、兑换码和星琼规划。',
+      title: '崩铁 4.5 版本专题：卡池、联动与兑换码',
+      description: '追踪崩坏星穹铁道 4.5、Fate/stay night 联动、当前跃迁、兑换码、活动和星琼规划。',
     },
     en: {
-      title: 'HSR v4.4 Hub: Banners, Collab & Codes',
-      description: 'Track Honkai: Star Rail v4.4, Himeko Nova, Fate/stay night collab, current banners, redeem codes, and Stellar Jade planning.',
+      title: 'HSR v4.5 Hub: Banners, Collab & Codes',
+      description: 'Track Honkai: Star Rail v4.5, Fate/stay night collab, current warps, redeem codes, events, and Stellar Jade planning.',
     },
     ja: {
-      title: 'HSR v4.4 特集：バナー、コラボ、コード',
-      description: 'スターレイル v4.4、Himeko Nova、Fate/stay nightコラボ、Rin/Gilgamesh、現在バナー、交換コード、星玉計画を確認できます。',
+      title: 'HSR v4.5 特集：バナー、コラボ、コード',
+      description: 'スターレイル v4.5、Fate/stay nightコラボ、現在バナー、交換コード、イベント、星玉計画を確認できます。',
     },
   },
   wuwa: {
     zh: {
-      title: '鸣潮 3.5 版本专题：卡池、平台与兑换码',
-      description: '追踪鸣潮 3.5、Yangyang: Xuanling、Suisui、Xbox/Game Pass、SP 机制、当前卡池、声骸路线、兑换码和星声规划。',
+      title: '鸣潮 3.6 版本专题：卡池、平台与兑换码',
+      description: '追踪鸣潮 3.6、Jingran、Xbox/Game Pass、当前卡池、声骸路线、兑换码和星声规划。',
     },
     en: {
-      title: 'WuWa v3.5 Hub: Banners, Platform & Codes',
-      description: 'Track Wuthering Waves v3.5, Xbox/Game Pass onboarding, SP mechanics, current banners, Echo routes, codes, and Astrite planning.',
+      title: 'WuWa v3.6 Hub: Banners, Platform & Codes',
+      description: 'Track Wuthering Waves v3.6, Jingran, Xbox/Game Pass onboarding, current banners, Echo routes, codes, and Astrite planning.',
     },
     ja: {
-      title: '鳴潮 v3.5 特集：バナー、平台、コード',
-      description: '鳴潮 v3.5、Yangyang: Xuanling、Suisui、Xbox/Game Pass、SP機構、現在バナー、エコー導線、コード、星声計画を確認できます。',
+      title: '鳴潮 v3.6 特集：バナー、平台、コード',
+      description: '鳴潮 v3.6、Jingran、Xbox/Game Pass、現在バナー、エコー導線、コード、星声計画を確認できます。',
     },
   },
   nte: {
     zh: {
       title: '异环 1.2 版本专题：下载、卡池与兑换码',
-      description: '追踪异环 1.2 999 Nights、Shinku 当前池、Iroi 后续期、Steam/download、兑换码、活动资源和抽卡规划。',
+      description: '追踪异环 1.2、999 Nights、Shinku、Iroi、Steam/download、兑换码、活动资源和抽卡规划。',
     },
     en: {
       title: 'NTE v1.2 Hub: Download, Banners & Codes',
@@ -103,16 +103,16 @@ const VERSION_META_OVERRIDES: Partial<Record<GameId, Partial<Record<SupportedLoc
   },
   zzz: {
     zh: {
-      title: '绝区零 3.1 版本专题：卡池、周年与兑换码',
-      description: '追踪绝区零 3.1 The Long Goodbye、2 周年、Remielle/Sigrid、Xbox/Microsoft Store、Steam 入坑、卡池、兑换码和配队。',
+      title: '绝区零 3.2 版本专题：卡池、活动与兑换码',
+      description: '追踪绝区零 3.2、Claret、Roxy、Armorer、Maim、活动、平台入口、卡池、兑换码和配队。',
     },
     en: {
-      title: 'ZZZ v3.1 Hub: Banners, Anniversary & Codes',
-      description: 'Track Zenless Zone Zero v3.1 The Long Goodbye, 2nd anniversary, Xbox and Microsoft Store onboarding, Steam starters, banners, codes, and teams.',
+      title: 'ZZZ v3.2 Hub: Banners, Events & Codes',
+      description: 'Track Zenless Zone Zero v3.2, Claret, Roxy, Armorer, Maim, events, platform onboarding, banners, codes, and teams.',
     },
     ja: {
-      title: 'ZZZ v3.1 特集：バナー、周年、コード',
-      description: 'ZZZ v3.1 The Long Goodbye、2周年、Remielle/Sigrid、Xbox / Microsoft Store、Steam入門、バナー、コード、編成を確認できます。',
+      title: 'ZZZ v3.2 特集：バナー、イベント、コード',
+      description: 'ZZZ v3.2、Claret、Roxy、Armorer、Maim、イベント、プラットフォーム入門、バナー、コード、編成を確認できます。',
     },
   },
 };
@@ -233,7 +233,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['lightrace-wish-phase-ii-faq', 'phase-ii-columbina-raiden-pull-plan', 'luna-viii-sandrone-guide'],
+    guideIds: ['nod-krai-cryoculus-phase-ii-checklist', 'phase-ii-columbina-raiden-pull-plan', 'luna-viii-sandrone-guide'],
   },
   starrail: {
     title: { zh: '4.4 Himeko Nova / Fate 专题', en: 'v4.4 Himeko Nova / Fate Hub', ja: 'v4.4 Himeko Nova / Fate 特集' },
@@ -325,7 +325,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['yangyang-suisui-sp-pull-plan', 'steam-xbox-game-pass-starter', 'v3-5-preview-guide'],
+    guideIds: ['v3-6-qingxiao-jingran-post-launch-route', 'steam-xbox-game-pass-starter', 'v3-5-preview-guide'],
   },
   nte: {
     title: { zh: '1.2「999 Nights」Shinku / Iroi 专题', en: 'v1.2 999 Nights Shinku / Iroi Hub', ja: 'v1.2 999 Nights Shinku / Iroi 特集' },
@@ -417,7 +417,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
         },
       },
     ],
-    guideIds: ['anniversary-rewards-codes-plan', 'v3-1-anniversary-xbox-guide', 'meta-teams-v3-guide'],
+    guideIds: ['v3-2-livestream-recap-expired-codes', 'anniversary-rewards-codes-plan', 'meta-teams-v3-guide'],
   },
   guihuan: {
     title: { zh: '测试 / 公测时间线专题', en: 'Test & Release Timeline Hub', ja: 'テスト・リリース時期特集' },
@@ -790,7 +790,7 @@ const VERSION_COPY: Record<GameId, HubCopy> = {
     kicker: { zh: '资料建档', en: 'Information intake', ja: '資料整理' },
     freshness: { zh: '内容会在官方来源可核验后更新。', en: 'Content will be updated when official sources can be verified.', ja: '公式情報を確認でき次第更新します。' },
     faq: [],
-    guideIds: ['official-information-checklist'],
+    guideIds: [],
   }
 };
 
@@ -2396,6 +2396,28 @@ export default async function VersionHubPage({
               )}
             </div>
           </div>
+
+          {versionSnapshot.platformReleaseDates && versionSnapshot.platformReleaseDates.length > 0 && (
+            <div className="mb-4 rounded-xl border border-game-primary/20 bg-game-primary/5 p-4">
+              <h3 className="mb-3 text-sm font-semibold text-game-primary">
+                {locale === 'zh' ? '分平台上线时间' : locale === 'ja' ? '平台別の配信時期' : 'Platform release times'}
+              </h3>
+              <div className="grid gap-2 sm:grid-cols-2">
+                {versionSnapshot.platformReleaseDates.map((platformRelease) => (
+                  <div
+                    key={`${platformRelease.platform}-${platformRelease.date}`}
+                    className="flex items-center justify-between gap-3 rounded-lg border border-game-border bg-game-bg/60 px-3 py-2 text-sm"
+                  >
+                    <span className="text-game-text-muted">{platformRelease.platform}</span>
+                    <span className="font-semibold text-game-text">
+                      {platformRelease.date}
+                      {platformRelease.time ? ` · ${platformRelease.time}` : ''}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="grid gap-4 lg:grid-cols-[1fr_1fr_0.85fr]">
             <div className="rounded-xl border border-game-border bg-game-bg/80 p-4">

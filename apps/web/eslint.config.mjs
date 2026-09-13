@@ -8,7 +8,7 @@ const compat = new FlatCompat({ baseDirectory });
 const config = [
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
   {
-    ignores: ['.next/**', '.open-next/**', 'cloudflare-env.d.ts', 'next-env.d.ts'],
+    ignores: ['.next/**', '.open-next/**', '.wrangler/**', 'cloudflare-env.d.ts', 'next-env.d.ts'],
   },
   {
     rules: {

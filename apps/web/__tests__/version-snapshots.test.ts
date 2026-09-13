@@ -16,23 +16,32 @@ describe('version snapshots', () => {
     }
   });
 
-  it('marks the current ZZZ snapshot as a v3.2 launch-day watch', () => {
+  it('marks the current ZZZ snapshot as a v3.2 live recap', () => {
     expect(getVersionSnapshot('zzz')).toMatchObject({
-      currentVersion: '3.2 launch day route',
-      status: 'watch',
+      currentVersion: '3.2 live launch recap',
+      status: 'live',
       lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     });
   });
 
-  it('uses the 2026-09-07 snapshot batch', () => {
-    expect(VERSION_SNAPSHOT_UPDATED_AT).toBe('2026-09-07');
-    expect(getVersionSnapshot('genshin')?.currentVersion).toBe('Luna I pre-launch');
-    expect(getVersionSnapshot('endfield')?.currentVersion).toBe('Steam Pioneer Test cutoff');
+  it('uses the 2026-09-13 snapshot batch', () => {
+    expect(VERSION_SNAPSHOT_UPDATED_AT).toBe('2026-09-13');
+    expect(getVersionSnapshot('genshin')?.currentVersion).toBe('Luna I live launch recap');
+    expect(getVersionSnapshot('endfield')?.currentVersion).toBe('Pioneer Test recap / AIC blueprint');
     expect(getVersionSnapshot('aniimo')?.currentVersion).toBe('global launch countdown');
     expect(getVersionSnapshot('roco')?.currentVersion).toBe('Quack Quack Test watch');
     expect(getVersionSnapshot('roco')?.sourceTier).toBe('third_party_watch');
     expect(getVersionSnapshot('roco-cn')?.currentVersion).toBe('post-launch codes / encyclopedia');
     expect(getVersionSnapshot('sea')?.currentVersion).toBe('early 2027 / December beta watch');
+  });
+
+  it('keeps the highest-priority launch times explicit', () => {
+    expect(getVersionSnapshot('aniimo')?.summary.zh).toContain('9/16 10:00 UTC+8');
+    expect(getVersionSnapshot('aniimo')?.summary.zh).toContain('9/23');
+    expect(getVersionSnapshot('aniimo')?.platformReleaseDates).toEqual([
+      { platform: 'PC / PS5 / Xbox', date: '2026-09-16', time: '10:00 UTC+8' },
+      { platform: 'Mobile', date: '2026-09-23' },
+    ]);
   });
 
   it('has localized copy, dates, and actionable links', () => {
@@ -46,6 +55,21 @@ describe('version snapshots', () => {
       expect(snapshot.whatChanged.length).toBeGreaterThan(0);
       expect(snapshot.firstSteps.length).toBeGreaterThan(0);
       expect(snapshot.links.length).toBeGreaterThanOrEqual(3);
+
+      if (snapshot.platformReleaseDates) {
+        const platforms = new Set<string>();
+        let previousDate = '';
+
+        for (const platformRelease of snapshot.platformReleaseDates) {
+          expect(platformRelease.platform.trim()).not.toBe('');
+          expect(platforms.has(platformRelease.platform)).toBe(false);
+          platforms.add(platformRelease.platform);
+          expect(Date.parse(`${platformRelease.date}T00:00:00Z`)).not.toBeNaN();
+          expect(platformRelease.time ?? '').not.toMatch(/[未待]/);
+          expect(platformRelease.date >= previousDate).toBe(true);
+          previousDate = platformRelease.date;
+        }
+      }
 
       const linkTypes = new Set(snapshot.links.map((link) => link.type));
       expect(linkTypes.has('codes')).toBe(true);
