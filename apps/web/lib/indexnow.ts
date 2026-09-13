@@ -2,6 +2,17 @@ import 'server-only';
 
 const BASE_URL = 'https://gachia.com';
 
+function normalizeProductionUrl(path: string): string | null {
+  try {
+    const url = new URL(path, BASE_URL);
+    if (url.protocol !== 'https:' || url.hostname !== 'gachia.com' || url.port) return null;
+    url.hash = '';
+    return url.toString();
+  } catch {
+    return null;
+  }
+}
+
 /**
  * Notify search engines about new/updated URLs via IndexNow.
  * Fire-and-forget — do not block the response.
@@ -18,8 +29,11 @@ export async function notifyIndexNow(paths: string[]): Promise<void> {
     return;
   }
 
-  const baseUrl = process.env.BETTER_AUTH_URL || BASE_URL;
-  const urls = paths.map((p) => `${baseUrl}${p}`);
+  const urls = [...new Set(paths.map(normalizeProductionUrl).filter((url): url is string => Boolean(url)))];
+  if (urls.length === 0) {
+    console.warn('notifyIndexNow received no valid production URLs');
+    return;
+  }
   const authToken = process.env.INDEXNOW_AUTH_TOKEN;
   if (!authToken) {
     console.error('INDEXNOW_AUTH_TOKEN is not configured');
@@ -27,7 +41,7 @@ export async function notifyIndexNow(paths: string[]): Promise<void> {
   }
 
   try {
-    const response = await fetch(`${baseUrl}/api/indexnow`, {
+    const response = await fetch(`${BASE_URL}/api/indexnow`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${authToken}`,

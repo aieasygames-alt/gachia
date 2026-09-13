@@ -18,7 +18,7 @@ export async function POST(request: Request) {
 
   try {
     const payload: unknown = await request.json();
-    const urls = isUrlPayload(payload) ? payload.urls : null;
+    const urls = isUrlPayload(payload) ? [...new Set(payload.urls)] : null;
     if (!urls) {
       return NextResponse.json({ error: 'Invalid urls array' }, { status: 400 });
     }

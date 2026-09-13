@@ -68,8 +68,9 @@ const META_SUFFIX: Record<SupportedLocale, string> = {
 const META_TITLE_MAX_LENGTH = 70;
 
 export function ensureMetaLength(value: string, locale: SupportedLocale, target = META_MIN_LENGTH) {
-  if ([...value].length >= target) return value;
-  return `${value}${META_SUFFIX[locale] ?? META_SUFFIX.zh}`;
+  const normalized = value.trim().replace(/\s+/g, ' ');
+  if ([...normalized].length >= target) return normalized;
+  return `${normalized}${META_SUFFIX[locale] ?? META_SUFFIX.zh}`;
 }
 
 export function limitMetaTitle(value: string, fallback?: string, target = META_TITLE_MAX_LENGTH) {

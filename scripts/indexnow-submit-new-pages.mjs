@@ -45,18 +45,14 @@ async function submit(urls) {
     return;
   }
 
-  for (const [index, url] of urls.entries()) {
-    for (const endpoint of ENDPOINTS) {
-      const requestUrl = new URL(endpoint);
-      requestUrl.searchParams.set('url', url);
-      requestUrl.searchParams.set('key', INDEXNOW_KEY);
-
-      const res = await fetch(requestUrl, { method: 'GET' });
-      console.log(`${endpoint} [${index + 1}/${urls.length}] -> ${res.status} ${url}`);
-    }
+  const urlList = [...new Set(urls)].slice(0, 10_000);
+  const body = { host: 'gachia.com', key: INDEXNOW_KEY, keyLocation: `${BASE_URL}/${INDEXNOW_KEY}.txt`, urlList };
+  for (const endpoint of ENDPOINTS) {
+    const res = await fetch(endpoint, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) });
+    console.log(`${endpoint} -> ${res.status} (${urlList.length} URLs)`);
   }
 
-  console.log(`Submitted ${urls.length} URLs.`);
+  console.log(`Submitted ${urlList.length} URLs.`);
 }
 
 const addedFiles = gitAddedFiles();
