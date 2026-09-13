@@ -7,6 +7,7 @@ const pages = [
   ['weapons', { zh: '武器', en: 'Weapons', ja: '武器' }],
   ['guides', { zh: '攻略', en: 'Guides', ja: '攻略' }],
   ['kibo', { zh: 'Kibo 图鉴', en: 'Kibo', ja: 'キボ' }],
+  ['systems', { zh: '系统词典', en: 'Systems', ja: 'システム' }],
   ['world', { zh: '世界', en: 'World', ja: '世界' }],
   ['tier-list', { zh: '定位参考', en: 'Role Reference', ja: '役割参照' }],
   ['redeem-codes', { zh: '兑换码', en: 'Codes', ja: '交換コード' }],

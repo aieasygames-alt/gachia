@@ -18,6 +18,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
     ['weapons', { zh: '武器资料', en: 'Weapons', ja: '武器' }, weapons.length],
     ['guides', { zh: '攻略与核对清单', en: 'Guides and checklists', ja: '攻略と確認リスト' }, guides.length],
     ['kibo', { zh: 'Kibo 图鉴', en: 'Kibo index', ja: 'キボ図鑑' }, kibo.length],
+    ['systems', { zh: '系统词典', en: 'Systems glossary', ja: 'システム用語集' }, 5],
     ['world', { zh: '世界与地区', en: 'World and regions', ja: '世界と地域' }, worldRegions.length],
     ['tier-list', { zh: '角色定位参考', en: 'Role reference', ja: '役割リファレンス' }, 0],
     ['redeem-codes', { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, 0],

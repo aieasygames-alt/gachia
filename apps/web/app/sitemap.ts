@@ -31,7 +31,7 @@ const REAL_CONTENT_ROUTES: Record<string, string[]> = {
   roco: ['characters', 'guides', 'weapons', 'tier-list', 'version', 'download', 'redeem-codes', 'type-chart', 'merchant', 'eggs', 'events'],
   'roco-cn': ['characters', 'guides', 'items', 'weapons', 'tier-list', 'version', 'download', 'redeem-codes', 'type-chart', 'merchant', 'eggs', 'events'],
   aniimo: ['characters', 'guides', 'map', 'version', 'download', 'redeem-codes'],
-  'azur-promilia': ['characters', 'weapons', 'guides', 'tier-list', 'redeem-codes'],
+  'azur-promilia': ['characters', 'weapons', 'guides', 'systems', 'tier-list', 'redeem-codes'],
 };
 
 type SitemapItem = { id: string };
