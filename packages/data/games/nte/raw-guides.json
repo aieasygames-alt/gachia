@@ -1994,13 +1994,13 @@
   },
   {
     "id": "aug31-sep14-event-calendar-999-nights",
-    "title": "异环 8/31-9/14 活动日历：999 Nights、Clash、Iroi/Shinku、兑换码和 Steam/download 路线",
-    "titleEn": "NTE Aug 31-Sep 14 Event Calendar: 999 Nights, Clash, Iroi/Shinku, Codes, and Steam/Download Route",
+    "title": "异环 9 月活动复盘：999 Nights、Clash、Iroi/Shinku 与兑换码状态",
+    "titleEn": "NTE September Event Recap: 999 Nights, Clash, Iroi/Shinku, and Code Status",
     "category": "event",
     "categoryZh": "活动攻略",
     "categoryEn": "Event",
-    "summary": "整理 2026-08-31 至 2026-09-14 活动窗口，把 999 Nights、Clash、Iroi/Shinku、兑换码和下载问题串起来。",
-    "summaryEn": "An August 31 to September 14 event route for 999 Nights, Clash, Iroi/Shinku, codes, and download intent.",
+    "summary": "9/14 活动窗口结束后，整理 999 Nights、Clash、Iroi/Shinku、兑换码和 Steam/download 的复盘与状态核验。",
+    "summaryEn": "After the September 14 event window, review 999 Nights, Clash, Iroi/Shinku, code status, and Steam/download checks.",
     "tags": [
       "Aug 31",
       "Sep 14",
@@ -2011,8 +2011,8 @@
       "codes",
       "Steam"
     ],
-    "content": "## 先看结论\n\n异环 1.2 后半的新搜索窗口集中在 2026-08-31 至 2026-09-14 活动、999 Nights、Clash、Iroi/Shinku、兑换码和 Steam/download。页面要先讲活动时间，再讲资源和抽卡，不要把 1.3 推测写成官方日期。\n\n## 每日路线\n\n| 顺序 | 动作 |\n|---|---|\n| 1 | 检查 8/31-9/14 活动任务 |\n| 2 | 领取兑换码、邮件和活动奖励 |\n| 3 | 推 999 Nights / Clash 进度 |\n| 4 | 盘点 Shinku 与 Iroi 资源缺口 |\n| 5 | 新玩家确认官网、Steam/download 和设备 |\n\n## 内容承接\n\n活动页负责回答什么时候开始/结束、每天先做什么、奖励怎么拿；抽卡页负责 Shinku vs Iroi；下载页负责平台、账号和安装。",
-    "contentEn": "## Quick answer\n\nNTE v1.2 phase-two searches now center on the August 31 to September 14 event window, 999 Nights, Clash, Iroi/Shinku, codes, and Steam/download. Keep v1.3 as watch wording only unless official notices confirm it.\n\n## Daily route\n\nCheck event tasks, claim codes and mail, push 999 Nights / Clash progress, count Shinku/Iroi resources, then verify official download or Steam entry for new players.",
+    "content": "## 先看结论\n\n异环 1.2 后半的 2026-08-31 至 2026-09-14 活动窗口已经进入复盘阶段。页面现在应先说明活动是否结束、奖励是否还能领取，再承接 999 Nights、Clash、Iroi/Shinku、兑换码和 Steam/download。不要把 1.3 推测写成官方日期。\n\n## 活动结束后复盘路线\n\n| 顺序 | 动作 |\n|---|---|\n| 1 | 检查 8/31-9/14 活动是否已结束 |\n| 2 | 领取兑换码、邮件和活动奖励 |\n| 3 | 推 999 Nights / Clash 进度 |\n| 4 | 盘点 Shinku 与 Iroi 资源缺口 |\n| 5 | 新玩家确认官网、Steam/download 和设备 |\n\n## 内容承接\n\n活动页负责回答什么时候开始/结束、每天先做什么、奖励怎么拿；抽卡页负责 Shinku vs Iroi；下载页负责平台、账号和安装。",
+    "contentEn": "## Quick answer\n\nAfter the August 31 to September 14 event window, NTE v1.2 searches now center on event recap and reward status, 999 Nights, Clash, Iroi/Shinku, codes, and Steam/download. Keep v1.3 as watch wording only unless official notices confirm it.\n\n## Post-event recap route\n\nCheck event tasks, claim codes and mail, push 999 Nights / Clash progress, count Shinku/Iroi resources, then verify official download or Steam entry for new players.",
     "faq": [
       {
         "question": "Should I treat v1.3 as confirmed?",
