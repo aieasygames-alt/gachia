@@ -179,6 +179,13 @@ async function GenericTierListPage({ gameId, locale }: { gameId: GameId; locale:
         {getTierTitle(gameId, locale)}
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">{intro}</p>
+      <div className="mb-6 flex flex-wrap items-center gap-3 rounded-md border border-game-border bg-game-surface px-4 py-3 text-sm">
+        <span className="text-game-text-muted">{locale === 'zh' ? '按队伍验证评级：' : locale === 'ja' ? '編成で評価を確認：' : 'Validate ratings with your roster:'}</span>
+        <Link href={`/${gameId}/teams` as '/'} className="font-semibold text-game-primary hover:text-game-accent">
+          {locale === 'zh' ? '打开 Team Builder →' : locale === 'ja' ? 'Team Builderを開く →' : 'Open Team Builder →'}
+        </Link>
+        <span className="text-xs text-game-text-muted">{locale === 'zh' ? '按版本和队伍定位决定培养优先级。' : locale === 'ja' ? 'バージョンと役割で育成優先度を決定。' : 'Prioritize by patch context and team role.'}</span>
+      </div>
       {gameId === 'sea' && <SeaQuickLinks locale={locale} />}
       <TierGroups groups={groups} />
     </div>

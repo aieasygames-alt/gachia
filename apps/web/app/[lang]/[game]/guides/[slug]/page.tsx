@@ -654,7 +654,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   if (!guide) return {};
 
   const gameName = GAMES[gameId].name[locale];
-  const meta = buildGuideMeta(guide, runtime.getTitle(guide, locale), runtime.getSummary(guide, locale), gameName, locale);
+  const meta = buildGuideMeta(guide, runtime.getTitle(guide, locale), runtime.getSummary(guide, locale), gameName, locale, gameId);
 
   return withGuideIndexing(locale, guide, {
     ...meta,
@@ -712,6 +712,23 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ la
         <p className="mb-4 max-w-4xl text-sm leading-relaxed text-game-text-muted">
           {summary}
         </p>
+      )}
+
+      {slug === 'banner-schedule-guide' && (
+        <nav aria-label={locale === 'zh' ? '卡池相关工具' : locale === 'ja' ? 'バナー関連ツール' : 'Banner tools'} className="mb-6 grid gap-2 sm:grid-cols-3">
+          <Link href={`/${gameId}/teams` as '/'} className="rounded-md border border-game-primary/40 bg-game-surface p-3 transition-colors hover:border-game-primary">
+            <span className="block text-sm font-semibold text-game-text">{locale === 'zh' ? '用配队验证目标' : locale === 'ja' ? '編成で目標を確認' : 'Validate with Team Builder'}</span>
+            <span className="mt-1 block text-xs text-game-text-muted">{locale === 'zh' ? '先看队伍缺口，再决定是否抽卡。' : locale === 'ja' ? '編成不足を見てから引く。' : 'Check roster gaps before pulling.'}</span>
+          </Link>
+          <Link href={`/${gameId}/tier-list` as '/'} className="rounded-md border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+            <span className="block text-sm font-semibold text-game-text">{locale === 'zh' ? '查看角色强度榜' : locale === 'ja' ? 'キャラTierを見る' : 'Check Character Tier List'}</span>
+            <span className="mt-1 block text-xs text-game-text-muted">{locale === 'zh' ? '对照版本评级和培养优先级。' : locale === 'ja' ? '評価と育成優先度を比較。' : 'Compare current ratings and priorities.'}</span>
+          </Link>
+          <Link href={`/${gameId}/redeem-codes` as '/'} className="rounded-md border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
+            <span className="block text-sm font-semibold text-game-text">{locale === 'zh' ? '领取兑换码' : locale === 'ja' ? '交換コード' : 'Claim Redeem Codes'}</span>
+            <span className="mt-1 block text-xs text-game-text-muted">{locale === 'zh' ? '把免费资源计入卡池预算。' : locale === 'ja' ? '無料資源を予算に加算。' : 'Add free currency to your banner budget.'}</span>
+          </Link>
+        </nav>
       )}
 
       <div className="mb-6 flex flex-wrap items-center gap-3 text-sm text-game-text-muted">
@@ -779,7 +796,14 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ la
   );
 }
 
-function buildGuideMeta(guide: GuideLike, guideTitle: string, summary: string, gameName: string, locale: SupportedLocale) {
+function buildGuideMeta(guide: GuideLike, guideTitle: string, summary: string, gameName: string, locale: SupportedLocale, gameId?: GameId) {
+  const intentMeta = getBannerIntentMeta(guide.id, gameName, locale, gameId);
+  if (intentMeta) {
+    return {
+      title: limitMetaTitle(intentMeta.title, guideTitle),
+      description: ensureMetaLength(intentMeta.description, locale),
+    };
+  }
   const serpTitle = getLocalizedSeoText(guide.serpTitle, locale);
   const serpDescription = getLocalizedSeoText(guide.serpDescription, locale);
   if (serpTitle && serpDescription) {
@@ -798,6 +822,30 @@ function buildGuideMeta(guide: GuideLike, guideTitle: string, summary: string, g
         : `Complete ${guideTitle} guide for ${gameName} with tips, strategies, FAQ, version notes, and practical advice. ${baseSummary ? `Summary: ${baseSummary}` : ''}`;
 
   return { title: limitMetaTitle(title, guideTitle), description: ensureMetaLength(description, locale) };
+}
+
+function getBannerIntentMeta(slug: string, gameName: string, locale: SupportedLocale, gameId?: GameId) {
+  if (slug !== 'banner-schedule-guide') return null;
+  const copy: Record<string, { title: string; description: string }> = {
+    genshin: {
+      title: locale === 'zh' ? '原神卡池时间表 2026：当前、下一个祈愿与复刻' : locale === 'ja' ? '原神バナー予定 2026：現在・次回・復刻' : 'Genshin Impact Banner Schedule 2026: Current, Next & Reruns',
+      description: locale === 'zh' ? '查看原神当前卡池、下一个祈愿、复刻预测、结束时间和原石规划。按版本持续更新，抽卡前快速确认目标。' : locale === 'ja' ? '原神の現在・次回・復刻バナー、終了日、原石計画を確認。バージョンごとに更新します。' : 'Check the current Genshin Impact banners, next wishes, reruns, end dates, and Primogem planning. Updated for each version before you pull.',
+    },
+    starrail: {
+      title: locale === 'zh' ? '崩坏：星穹铁道卡池时间表 2026：当前、下期与复刻' : locale === 'ja' ? '崩壊スターレイル バナー予定 2026：現在・次回・復刻' : 'Honkai: Star Rail Banner Schedule 2026: Current, Next & Reruns',
+      description: locale === 'zh' ? '查看崩坏：星穹铁道当前跃迁、下期角色、复刻、结束时间和星琼预算，按版本及时更新。' : locale === 'ja' ? '崩壊：スターレイルの現在跳躍、次回、復刻、終了日、星玉計画を確認。' : 'Track current Honkai: Star Rail warps, next characters, reruns, end dates, and Stellar Jade planning with version updates.',
+    },
+    wuwa: {
+      title: locale === 'zh' ? '鸣潮卡池时间表 2026：当前、下一个角色与复刻' : locale === 'ja' ? '鳴潮バナー予定 2026：現在・次回・復刻' : 'Wuthering Waves Banner Schedule 2026: Current, Next & Reruns',
+      description: locale === 'zh' ? '查看鸣潮当前卡池、下一个角色、复刻预测、结束时间和星声规划，角色池与武器池分开计算。' : locale === 'ja' ? '鳴潮の現在・次回・復刻、終了日、星声計画を確認。キャラと武器を分けて管理。' : 'See current Wuthering Waves banners, next characters, reruns, end dates, and Astrite planning. Track character and weapon pity separately.',
+    },
+    zzz: {
+      title: locale === 'zh' ? '绝区零卡池时间表 2026：当前、下一个代理人与复刻' : locale === 'ja' ? 'ゼンレスゾーンゼロ バナー予定 2026：現在・次回・復刻' : 'Zenless Zone Zero Banner Schedule 2026: Current, Next & Reruns',
+      description: locale === 'zh' ? '查看绝区零当前卡池、下一个代理人、复刻、结束时间和菲林规划，抽卡前先核对队伍缺口。' : locale === 'ja' ? 'ゼンレスゾーンゼロの現在・次回・復刻、終了日、菲林計画を確認。' : 'Track current Zenless Zone Zero agents, next banners, reruns, end dates, and Polychrome planning before you pull.',
+    },
+  };
+  const key = gameId && copy[gameId] ? gameId : null;
+  return key ? copy[key] : null;
 }
 
 function getLocalizedSeoText(values: LocalizedText | undefined, locale: SupportedLocale) {
