@@ -124,38 +124,38 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   starrail: {
     gameId: 'starrail',
-    currentVersion: '4.5 live',
+    currentVersion: '4.4 live content review',
     releaseDate: '2026-08-26',
     status: 'fresh',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     sourceTier: 'official',
     summary: {
-      zh: '4.5 Phase 2 已进入当前窗口，重点是当前跃迁、兑换码、抽取计算和队伍构建。',
-      en: 'v4.5 Phase 2 is now the current window, focusing on current warps, codes, pull planning, and team-building.',
-      ja: 'v4.5 Phase 2が現在の注目期間で、現在跳躍、コード、抽選計画、編成が中心です。',
+      zh: 'v4.4 当前内容周期重点是当前跃迁、兑换码、抽取计算和队伍构建。',
+      en: 'The v4.4 content cycle focuses on current warps, codes, pull planning, and team-building.',
+      ja: 'v4.4内容周期は現在跳躍、コード、抽選計画、編成が中心です。',
     },
     whatChanged: [
       {
-        zh: '页面继续从单版本专题扩展到 4.5 Phase 2 和队伍构建的常青入口。',
-        en: 'The page expands from a single-version hub into an evergreen 4.5 Phase 2 and team-building route.',
-        ja: '単一版本特集から4.5 Phase 2と編成の常設導線へ広げます。',
+        zh: '页面从单版本专题扩展为 v4.4 当前跃迁和队伍构建的常青入口。',
+        en: 'The page is an evergreen route for the v4.4 current warp cycle and team-building.',
+        ja: 'v4.4現在跳躍と編成の常設導線として更新します。',
       },
       {
-        zh: 'Banner、4.5 Phase 2 和兑换码页互相打通，减少用户重复跳转。',
-        en: 'Banner, Phase 2, and code pages now reinforce each other to reduce repeated navigation.',
-        ja: 'バナー、Phase 2、コードページを相互接続し、移動の手間を減らします。',
+        zh: '当前跃迁、兑换码和队伍页互相打通，减少用户重复跳转。',
+        en: 'Current warp, code, and team pages now reinforce each other to reduce repeated navigation.',
+        ja: '現在跳躍、コード、編成ページを相互接続し、移動の手間を減らします。',
       },
     ],
     firstSteps: [
       {
-        zh: '先领版本奖励，再计算 4.5 目标缺口。',
-        en: 'Claim version rewards first, then calculate 4.5 target gaps.',
-        ja: 'まず版本報酬を受け取り、4.5目標の不足を計算します。',
+        zh: '先领版本奖励，再计算当前目标缺口。',
+        en: 'Claim version rewards first, then calculate current target gaps.',
+        ja: 'まず版本報酬を受け取り、現在目標の不足を計算します。',
       },
       {
-        zh: '资源紧张时，只锁定一个 4.5 目标。',
-        en: 'With limited resources, lock one 4.5 target first.',
-        ja: '資源が少ない場合は、4.5目標を一つに絞ります。',
+        zh: '资源紧张时，只锁定一个当前目标。',
+        en: 'With limited resources, lock one current target first.',
+        ja: '資源が少ない場合は、現在目標を一つに絞ります。',
       },
     ],
     links: [
@@ -205,15 +205,15 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   genshin: {
     gameId: 'genshin',
-    currentVersion: 'Luna I live launch recap',
+    currentVersion: 'Luna VIII content review',
     releaseDate: '2026-09-10',
     status: 'live',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     sourceTier: 'official',
     summary: {
-      zh: 'Luna I 已进入上线后复盘阶段，重点是 Nod-Krai 地图、Lauma/Flins/Aino、免费 5 星、周年/回归奖励和材料。',
-      en: 'Luna I is now in its live launch recap phase, covering Nod-Krai maps, Lauma/Flins/Aino, the free 5-star, anniversary/returning rewards, and materials.',
-      ja: 'Luna Iは実装後のまとめ段階です。Nod-Kraiマップ、Lauma/Flins/Aino、無料5星、周年/復帰報酬、素材を案内します。',
+      zh: 'Luna VIII 当前内容周期重点是 Nod-Krai 地图、角色、卡池、奖励和材料。',
+      en: 'The Luna VIII content cycle focuses on Nod-Krai maps, characters, banners, rewards, and materials.',
+      ja: 'Luna VIII内容周期はNod-Kraiマップ、キャラ、バナー、報酬、素材が中心です。',
     },
     whatChanged: [
       {
@@ -244,7 +244,7 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       { type: 'codes', href: '/genshin/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
       { type: 'characters', href: '/genshin/characters', label: { zh: '角色图鉴', en: 'Characters', ja: 'キャラ' } },
       { type: 'map', href: '/genshin/map', label: { zh: '地图', en: 'Map', ja: 'マップ' } },
-      { type: 'guides', href: '/genshin/guides/nod-krai-cryoculus-phase-ii-checklist', label: { zh: 'Luna I 清单', en: 'Luna I checklist', ja: 'Luna Iチェック' } },
+      { type: 'guides', href: '/genshin/guides/nod-krai-cryoculus-phase-ii-checklist', label: { zh: 'Nod-Krai 清单', en: 'Nod-Krai checklist', ja: 'Nod-Kraiチェック' } },
     ],
   },
   skjh: {

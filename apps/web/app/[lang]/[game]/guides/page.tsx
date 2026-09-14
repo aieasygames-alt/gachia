@@ -27,7 +27,7 @@ const GUIDE_DESC: Record<string, Record<string, string>> = {
 const FEATURED_GUIDE_IDS: Record<GameId, string[]> = {
   genshin: ['banner-schedule-guide', 'snezhnaya-version-guide', 'lunar-reaction-guide'],
   starrail: ['banner-schedule-guide', 'v4-4-preview-guide', 'fate-collab-guide'],
-  wuwa: ['banner-schedule-guide', 'v3-5-preview-guide', 'v3-4-version-guide'],
+  wuwa: ['banner-schedule-guide', 'v3-6-qingxiao-jingran-post-launch-route', 'farming-route-guide'],
   nte: ['photo-mode-guide', 'damage-formula', 'boss-guide'],
   zzz: ['banner-schedule-guide', 'team-building-guide', 'meta-teams-v3-guide'],
   guihuan: ['beginner-guide', 'download-install-guide', 'spirit-build-guide'],

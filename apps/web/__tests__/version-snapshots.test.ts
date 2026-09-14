@@ -26,7 +26,8 @@ describe('version snapshots', () => {
 
   it('uses the 2026-09-13 snapshot batch', () => {
     expect(VERSION_SNAPSHOT_UPDATED_AT).toBe('2026-09-13');
-    expect(getVersionSnapshot('genshin')?.currentVersion).toBe('Luna I live launch recap');
+    expect(getVersionSnapshot('genshin')?.currentVersion).toBe('Luna VIII content review');
+    expect(getVersionSnapshot('starrail')?.currentVersion).toBe('4.4 live content review');
     expect(getVersionSnapshot('endfield')?.currentVersion).toBe('Pioneer Test recap / AIC blueprint');
     expect(getVersionSnapshot('aniimo')?.currentVersion).toBe('global launch countdown');
     expect(getVersionSnapshot('roco')?.currentVersion).toBe('Quack Quack Test watch');
