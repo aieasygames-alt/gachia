@@ -714,6 +714,15 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ la
         </p>
       )}
 
+      {guide.currentVersion && (
+        <div className="mb-6 rounded-md border border-game-border bg-game-surface px-4 py-3 text-xs leading-relaxed text-game-text-muted">
+          <strong className="mr-1 text-game-text">{guide.currentVersion.toLowerCase().includes('historical') ? (locale === 'zh' ? '历史参考' : locale === 'ja' ? '過去の参考' : 'Historical reference') : (locale === 'zh' ? '版本状态' : locale === 'ja' ? 'バージョン状況' : 'Version status')}:</strong>
+          {guide.currentVersion.toLowerCase().includes('historical')
+            ? (locale === 'zh' ? '本页保留历史版本资料，用于理解旧机制或旧活动；当前卡池、奖励和版本状态请前往最新版本专题。' : locale === 'ja' ? '過去バージョンの資料です。現在のバナー、報酬、版本状況は最新特集を確認してください。' : 'This page preserves historical version information for context. Use the latest version hub for live banners, rewards, and status.')
+            : (locale === 'zh' ? `当前内容周期：${guide.currentVersion}。卡池、活动和数值可能变化，请以游戏内或官方公告为最终依据。` : locale === 'ja' ? `現在の内容周期：${guide.currentVersion}。バナー、イベント、数値は変わる可能性があるため公式告知を確認してください。` : `Current content cycle: ${guide.currentVersion}. Banners, events, and values can change; confirm final details in the client or official notices.`)}
+        </div>
+      )}
+
       {slug === 'banner-schedule-guide' && (
         <nav aria-label={locale === 'zh' ? '卡池相关工具' : locale === 'ja' ? 'バナー関連ツール' : 'Banner tools'} className="mb-6 grid gap-2 sm:grid-cols-3">
           <Link href={`/${gameId}/teams` as '/'} className="rounded-md border border-game-primary/40 bg-game-surface p-3 transition-colors hover:border-game-primary">
