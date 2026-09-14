@@ -4,7 +4,6 @@ import type { SupportedLocale } from '@gachia/core';
 import { nteMetadata } from '@/lib/metadata';
 import { NteNav } from '@/components/nte-nav';
 
-export const dynamic = 'force-dynamic';
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) { const locale=(await params).lang as SupportedLocale; return nteMetadata(locale,'items',{zh:'异环材料图鉴',en:'NTE Materials',ja:'NTE 素材図鑑'},{zh:'异环材料图鉴与获取来源。',en:'NTE materials and sources.',ja:'異環素材と入手先。'}); }
 export default async function Items({ params }: { params: Promise<{ lang: string }> }) {
   const locale = (await params).lang as SupportedLocale;

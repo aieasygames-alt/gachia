@@ -4,7 +4,6 @@ import type { SupportedLocale } from '@gachia/core';
 import { NteNav } from '@/components/nte-nav';
 import { nteMetadata } from '@/lib/metadata';
 
-export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   return nteMetadata((await params).lang as SupportedLocale, 'gacha', { zh: '异环祈愿与保底', en: 'NTE Gacha & Pity', ja: 'NTE ガチャ' }, { zh: '异环角色、新手、常驻和武器祈愿的保底、概率与抽卡规划。', en: 'NTE character, beginner, standard, and weapon banner pity, rates, and pull planning.', ja: 'NTEのキャラクター、新手、恒常、武器バナーの天井、確率、ガチャ計画。' });

@@ -4,7 +4,6 @@ import type { SupportedLocale } from '@gachia/core';
 import { nteMetadata } from '@/lib/metadata';
 import { NteNav } from '@/components/nte-nav';
 
-export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) { const locale = (await params).lang as SupportedLocale; return nteMetadata(locale, 'download', { zh: '异环下载与配置', en: 'NTE Download & Requirements', ja: 'NTE ダウンロード' }, { zh: '异环下载入口、平台状态、安全安装路径与配置建议。', en: 'NTE download entry points, storefront status, safe installation path, and requirements guidance.', ja: 'NTEのダウンロード、ストア状況、安全な導入手順、環境ガイド。' }); }
 

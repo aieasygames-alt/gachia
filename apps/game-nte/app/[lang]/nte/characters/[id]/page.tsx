@@ -5,7 +5,6 @@ import { characterDescription, characterImage, characterName, characterText, get
 import { previewMetadata } from '@/lib/seo';
 import { NteNav } from '@/components/nte-nav';
 
-export const dynamic = 'force-dynamic';
 const labels = {
   zh: { back: '返回角色图鉴', attribute: '属性', rank: '稀有度', role: '定位', weapon: '武器类型', faction: '阵营', overview: '角色简介', tier: '强度参考', skills: '技能资料', build: '推荐配装', weaponBuild: '推荐武器', alternatives: '备选武器', diskSet: '推荐驱动盘', mainStats: '主词条', subStats: '副词条优先级', detailedBuilds: '详细配装', materials: '养成材料', skillMaterials: '技能材料', voice: '配音', acquisition: '获取方式', teams: '推荐配队', faq: '常见问题', related: '相关角色', sourceNote: '日文页面的详细资料当前采用已有的英文或中文原文。' },
   en: { back: 'Back to characters', attribute: 'Attribute', rank: 'Rank', role: 'Role', weapon: 'Weapon', faction: 'Faction', overview: 'Overview', tier: 'Tier reference', skills: 'Skills', build: 'Recommended build', weaponBuild: 'Recommended weapon', alternatives: 'Alternatives', diskSet: 'Recommended disk set', mainStats: 'Main stats', subStats: 'Substat priority', detailedBuilds: 'Detailed builds', materials: 'Ascension materials', skillMaterials: 'Skill materials', voice: 'Voice', acquisition: 'Acquisition', teams: 'Recommended teams', faq: 'FAQ', related: 'Related characters', sourceNote: '' },

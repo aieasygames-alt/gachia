@@ -4,7 +4,6 @@ import { NteNav } from '@/components/nte-nav';
 import { anomalies } from '@/lib/data';
 import { nteMetadata } from '@/lib/metadata';
 
-export const dynamic = 'force-dynamic';
 
 const copy = {
   zh: { title: '异环异象图鉴：Boss、精英与掉落机制', description: '查看异环 Boss 与精英异象的属性、弱点、机制、掉落和实战策略。', lead: '按 Boss 与其他异象整理战斗信息。先确认属性弱点与机制，再结合队伍和配装调整进场方案。', boss: 'Boss 异象', other: '精英与普通异象', count: '收录异象', before: '战前准备', fields: { hp: '生命值', weakness: '弱点', mechanics: '核心机制', location: '出现地点', drops: '主要掉落', strategy: '应对策略' }, links: [['teams', '配队建议'], ['build', '角色配装'], ['disk-sets', '驱动盘套装'], ['items', '材料与掉落'], ['map', '地图与区域'], ['guides/boss-guide', 'Boss 攻略指南']] },

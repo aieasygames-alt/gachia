@@ -5,7 +5,6 @@ import { previewMetadata } from '@/lib/seo';
 import { text } from '@/lib/i18n';
 import { NteNav } from '@/components/nte-nav';
 
-export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   const locale = (await params).lang as SupportedLocale;

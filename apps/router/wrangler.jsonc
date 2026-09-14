@@ -24,6 +24,7 @@
   "env": {
     "staging": {
       "name": "gachia-router-staging",
+		"workers_dev": false,
       "vars": {
         "AZUR_PROMILIA_ENABLED": "false",
         "AZUR_PROMILIA_CANARY_COOKIE": "enabled",

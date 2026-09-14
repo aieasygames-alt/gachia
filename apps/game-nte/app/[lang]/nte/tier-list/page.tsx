@@ -4,7 +4,6 @@ import type { SupportedLocale } from '@gachia/core';
 import { nteMetadata } from '@/lib/metadata';
 import { NteNav } from '@/components/nte-nav';
 
-export const dynamic = 'force-dynamic';
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) { const locale=(await params).lang as SupportedLocale; return nteMetadata(locale,'tier-list',{zh:'异环角色强度排行',en:'NTE Character Tier List',ja:'NTE キャラ Tier リスト'},{zh:'异环角色强度排行与培养优先级。',en:'NTE character rankings and investment priority.',ja:'異環キャラ評価と育成優先度。'}); }
 export default async function TierList({ params }: { params: Promise<{ lang: string }> }) {
   const locale = (await params).lang as SupportedLocale;

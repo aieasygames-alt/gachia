@@ -4,7 +4,6 @@ import { previewMetadata } from '@/lib/seo';
 import { NteNav } from '@/components/nte-nav';
 import Link from 'next/link';
 
-export const dynamic = 'force-dynamic';
 
 const copy = {
   zh: { title: '异环兑换码：奖励、状态与兑换说明', intro: '整理已收录兑换码的奖励、地区、来源、公布和到期记录。代码会随活动变化，页面记录不等于当前必定可用，请以游戏内兑换结果和官方公告为准。', active: '可用记录', history: '历史记录', reward: '奖励', status: '状态', region: '地区', source: '来源', revealed: '公布', expires: '到期', expired: '已过期', check: '待游戏内确认', steps: '兑换前检查' },

@@ -4,7 +4,6 @@ import { characterBuilds, characterName, getNteWeaponName, nteCharacterSummaries
 import { NteNav } from '@/components/nte-nav';
 import { nteMetadata } from '@/lib/metadata';
 
-export const dynamic = 'force-dynamic';
 
 const copy = {
   zh: { title: '异环角色配装推荐', description: '基于已收录角色方案的异环武器、主词条、副词条与配队参考。', lead: '本页仅展示已有资料来源明确记录的角色方案。选择前请结合自己的武器、队伍循环和战斗环境复核。', documented: '已收录方案', character: '角色', weapon: '推荐武器', mainStat: '主词条', subStats: '副词条优先级', team: '推荐队友', notes: '配装说明', related: '继续规划', allCharacters: '全部角色资料', weapons: '武器图鉴', disks: '驱动盘图鉴', teams: '配队规划' },

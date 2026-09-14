@@ -71,6 +71,7 @@
 	"env": {
 		"staging": {
 			"name": "gachia-staging",
+			"workers_dev": false,
 			"vars": {
 				"BETTER_AUTH_URL": "https://gachia-staging.aieasygames.workers.dev",
 				"NEXT_PUBLIC_APP_URL": "https://gachia-staging.aieasygames.workers.dev"

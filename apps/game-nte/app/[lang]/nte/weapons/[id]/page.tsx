@@ -5,7 +5,6 @@ import { getNteWeaponName, nteWeapons } from '@/lib/data';
 import { NteNav } from '@/components/nte-nav';
 import { previewMetadata } from '@/lib/seo';
 
-export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; id: string }> }) {
   const { lang, id } = await params;

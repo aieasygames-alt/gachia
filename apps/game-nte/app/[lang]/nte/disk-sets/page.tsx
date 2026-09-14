@@ -4,7 +4,6 @@ import type { SupportedLocale } from '@gachia/core';
 import { nteMetadata } from '@/lib/metadata';
 import { NteNav } from '@/components/nte-nav';
 
-export const dynamic = 'force-dynamic';
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) { const locale=(await params).lang as SupportedLocale; return nteMetadata(locale,'disk-sets',{zh:'异环光盘套装',en:'NTE Disk Sets',ja:'NTE ディスクセット'},{zh:'异环光盘套装效果与推荐。',en:'NTE disk set effects and recommendations.',ja:'異環ディスクセットの効果とおすすめ。'}); }
 export default async function DiskSets({ params }: { params: Promise<{ lang: string }> }) {
   const locale = (await params).lang as SupportedLocale;
