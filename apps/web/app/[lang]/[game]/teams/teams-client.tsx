@@ -163,14 +163,21 @@ function getResonances(team: ({ element: string } | null)[]) {
 // =====================================================================
 
 export function TeamsClient({ gameId, locale }: { gameId: GameId; locale: SupportedLocale }) {
-  if (gameId === 'skjh') return withNextSteps(<SkjhSquadSimulator locale={locale} />, locale, getTeamNextSteps(gameId, locale));
-  if (gameId === 'genshin') return withNextSteps(<GenshinTeams locale={locale} />, locale, getTeamNextSteps(gameId, locale));
-  if (gameId === 'starrail') return withNextSteps(<StarRailTeams locale={locale} />, locale, getTeamNextSteps(gameId, locale));
-  if (gameId === 'wuwa') return withNextSteps(<WuWaTeams locale={locale} />, locale, getTeamNextSteps(gameId, locale));
-  if (gameId === 'nte') return withNextSteps(<NteTeams locale={locale} />, locale, getTeamNextSteps(gameId, locale));
-  if (gameId === 'zzz') return withNextSteps(<ZzzTeams locale={locale} />, locale, getTeamNextSteps(gameId, locale));
-  if (gameId === 'guihuan') return withNextSteps(<GuihuanTeams locale={locale} />, locale, getTeamNextSteps(gameId, locale));
-  if (gameId === 'endfield') return withNextSteps(<EndfieldTeams locale={locale} />, locale, getTeamNextSteps(gameId, locale));
+  const interpretation = (
+    <div className="mb-5 rounded-md border border-game-border bg-game-surface px-4 py-3 text-sm leading-relaxed text-game-text-muted">
+      <strong className="mr-2 text-game-text">{t(locale, '使用说明', 'How to use these recommendations', '使い方')}</strong>
+      {t(locale, '先确认队伍角色是否齐全，再根据循环、替代位和养成成本决定抽卡与培养顺序。推荐结果是版本参考，不代表所有模式的永久排名。', 'Check role coverage first, then use rotation, alternatives, and investment cost to decide pulls and upgrades. Recommendations are patch references, not permanent rankings for every mode.', '役割の不足を確認し、ローテーション、代替、育成コストで引く順番を決めます。推奨はバージョン時点の参考です。')}
+    </div>
+  );
+  const withInterpretation = (content: ReactNode) => <>{interpretation}{content}</>;
+  if (gameId === 'skjh') return withNextSteps(withInterpretation(<SkjhSquadSimulator locale={locale} />), locale, getTeamNextSteps(gameId, locale));
+  if (gameId === 'genshin') return withNextSteps(withInterpretation(<GenshinTeams locale={locale} />), locale, getTeamNextSteps(gameId, locale));
+  if (gameId === 'starrail') return withNextSteps(withInterpretation(<StarRailTeams locale={locale} />), locale, getTeamNextSteps(gameId, locale));
+  if (gameId === 'wuwa') return withNextSteps(withInterpretation(<WuWaTeams locale={locale} />), locale, getTeamNextSteps(gameId, locale));
+  if (gameId === 'nte') return withNextSteps(withInterpretation(<NteTeams locale={locale} />), locale, getTeamNextSteps(gameId, locale));
+  if (gameId === 'zzz') return withNextSteps(withInterpretation(<ZzzTeams locale={locale} />), locale, getTeamNextSteps(gameId, locale));
+  if (gameId === 'guihuan') return withNextSteps(withInterpretation(<GuihuanTeams locale={locale} />), locale, getTeamNextSteps(gameId, locale));
+  if (gameId === 'endfield') return withNextSteps(withInterpretation(<EndfieldTeams locale={locale} />), locale, getTeamNextSteps(gameId, locale));
   return <ComingSoon locale={locale} />;
 }
 

@@ -179,6 +179,15 @@ async function GenericTierListPage({ gameId, locale }: { gameId: GameId; locale:
         {getTierTitle(gameId, locale)}
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">{intro}</p>
+      <details className="mb-6 rounded-md border border-game-border bg-game-surface p-4">
+        <summary className="cursor-pointer text-sm font-semibold text-game-text">
+          {locale === 'zh' ? '评级方法与使用边界' : locale === 'ja' ? '評価方法と利用上の注意' : 'How to read this tier list'}
+        </summary>
+        <div className="mt-3 grid gap-3 text-sm leading-relaxed text-game-text-muted md:grid-cols-2">
+          <p>{locale === 'zh' ? '评级综合考虑终局模式、日常体验、队伍协同、养成成本和操作门槛；同一角色在不同模式中的价值可能不同。' : locale === 'ja' ? '評価はエンドコンテンツ、日常性、編成相性、育成コスト、操作難度を総合します。モードにより価値は変わります。' : 'Ratings combine endgame performance, everyday value, team synergy, investment cost, and execution requirements. A character can change value by mode.'}</p>
+          <p>{locale === 'zh' ? '这是版本参考，不是永久排名。抽卡前请先查看当前版本、队伍缺口、角色页的配装与替代方案。' : locale === 'ja' ? 'これはバージョン時点の参考です。引く前に現在版本、編成不足、キャラページのビルドと代替を確認してください。' : 'This is a patch snapshot, not a permanent ranking. Check the current patch, roster gaps, builds, and alternatives before pulling.'}</p>
+        </div>
+      </details>
       <div className="mb-6 flex flex-wrap items-center gap-3 rounded-md border border-game-border bg-game-surface px-4 py-3 text-sm">
         <span className="text-game-text-muted">{locale === 'zh' ? '按队伍验证评级：' : locale === 'ja' ? '編成で評価を確認：' : 'Validate ratings with your roster:'}</span>
         <Link href={`/${gameId}/teams` as '/'} className="font-semibold text-game-primary hover:text-game-accent">
