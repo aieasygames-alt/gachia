@@ -140,14 +140,22 @@ jobs:
 
       - name: Deploy to Cloudflare staging
         working-directory: apps/web
-        run: pnpm exec opennextjs-cloudflare deploy --config wrangler.jsonc --env staging
+        run: |
+          set -euo pipefail
+          pnpm exec opennextjs-cloudflare deploy --config wrangler.jsonc --env staging 2>&1 | tee /tmp/staging-deploy.log
+          origin=$(sed -nE 's#.*(https://[^[:space:]]+\.workers\.dev[^[:space:]]*).*#\1#p' /tmp/staging-deploy.log | tail -n 1)
+          if [ -z "$origin" ]; then
+            echo 'Unable to determine staging deployment URL from Wrangler output.' >&2
+            exit 1
+          fi
+          echo "STAGING_ORIGIN=$origin" >> "$GITHUB_ENV"
 
       - name: Smoke test staging
         run: |
           set -euo pipefail
-          origin=https://gachia-staging.aieasygames.workers.dev
+          : "${STAGING_ORIGIN:?STAGING_ORIGIN was not exported by the deploy step}"
           for path in sitemap.xml api/auth/get-session; do
-            url="${origin}/${path}"
+            url="${STAGING_ORIGIN}/${path}"
             echo "Checking ${url}"
             curl --fail --silent --show-error --retry 5 --retry-all-errors --retry-delay 2 --max-time 30 "$url" > /dev/null
           done
