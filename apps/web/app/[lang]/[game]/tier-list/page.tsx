@@ -209,6 +209,29 @@ function getTierTitle(gameId: GameId, locale: SupportedLocale) {
 }
 
 function getTierIntro(gameId: GameId, locale: SupportedLocale) {
+  const gameSpecific: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
+    genshin: {
+      zh: '按深境螺旋、大世界、队伍协同和养成成本综合评估原神角色；评级是版本参考，抽卡前请结合命座、武器和已有队伍判断。',
+      en: 'Genshin ratings combine Spiral Abyss, overworld value, team synergy, and investment cost. Use the patch snapshot with your constellations, weapons, and existing roster.',
+      ja: '深境螺旋、大世界、編成相性、育成コストで原神キャラを評価。命ノ星座、武器、手持ちと合わせて判断してください。',
+    },
+    starrail: {
+      zh: '按忘却之庭、虚构叙事、末日幻影、日常自动战斗和队伍绑定综合评估崩铁角色；不同模式的最优解可能不同。',
+      en: 'HSR ratings combine Memory of Chaos, Pure Fiction, Apocalyptic Shadow, auto-battle value, and team dependence. The best pick can change by mode.',
+      ja: '忘却の庭、虚構叙事、末日幻影、周回性能、編成依存度で評価。モードごとに最適解は異なります。',
+    },
+    wuwa: {
+      zh: '按终局战斗、探索、声骸成本、操作门槛和协同能力综合评估鸣潮角色；请同时查看武器与声骸路线。',
+      en: 'WuWa ratings combine endgame combat, exploration, Echo cost, execution difficulty, and coordination. Check the weapon and Echo route before investing.',
+      ja: '終盤戦、探索、音骸コスト、操作難度、協力性能で鳴潮キャラを評価。武器と音骸ルートも確認してください。',
+    },
+    zzz: {
+      zh: '按式舆防卫、日常战斗、强攻/击破/异常/支援定位、队伍循环和驱动盘成本综合评估绝区零代理人。',
+      en: 'ZZZ ratings combine Shiyu Defense, everyday combat, Attack/Stun/Anomaly/Support roles, team rotations, and Drive Disc cost.',
+      ja: '式輿防衛、日常戦闘、強攻/撃破/異常/支援の役割、編成ローテーション、ドライブコストで評価します。',
+    },
+  };
+  if (gameSpecific[gameId]) return gameSpecific[gameId]![locale];
   if (gameId === 'sea') {
     return locale === 'zh'
       ? '遗忘之海角色强度排行按 SS/S/A/B 分级整理，适合先判断 Traveler、Ais、Little Axe、Princess、Molly 等角色的开荒价值、队伍分工和培养优先级。'
