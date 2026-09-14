@@ -165,6 +165,10 @@ function WuWaCharacterDetail({ char, locale }: { char: WuWaCharacter; locale: Su
             {char.voiceActors?.jp && <span>{locale === 'zh' ? '日配' : 'CV(JP)'}: {char.voiceActors.jp}</span>}
             {char.voiceActors?.en && <span>{locale === 'zh' ? '英配' : 'CV(EN)'}: {char.voiceActors.en}</span>}
           </div>
+          <div className="mt-4 rounded-md border border-game-border bg-game-surface px-3 py-2 text-xs leading-relaxed text-game-text-muted">
+            <strong className="mr-1 text-game-text">{locale === 'zh' ? '数据状态' : locale === 'ja' ? 'データ状況' : 'Data status'}:</strong>
+            {locale === 'zh' ? '页面已按鸣潮 v3.6 内容周期检查至 2026-09-12。技能、声骸和配队仅在有可核验资料时展示；缺失部分不会用推测补齐。' : locale === 'ja' ? '鳴潮 v3.6 の内容を2026-09-12まで確認。検証可能な資料がある項目のみ掲載し、不明点は推測で補いません。' : 'Checked through the WuWa v3.6 content cycle on 2026-09-12. Skills, Echoes, and teams are shown only when verifiable data is available; missing fields are not guessed.'}
+          </div>
         </div>
       </div>
 
@@ -193,6 +197,18 @@ function WuWaCharacterDetail({ char, locale }: { char: WuWaCharacter; locale: Su
                 extra={skill.cooldown}
               />
             ))}
+          </div>
+        </Section>
+      )}
+      {skillItems.length === 0 && (
+        <Section title={locale === 'zh' ? '技能数据状态' : locale === 'ja' ? 'スキルデータ状況' : 'Skill data status'}>
+          <p className="text-sm leading-relaxed text-game-text-muted">
+            {locale === 'zh' ? '该角色的逐项技能说明尚未完成核验。你可以先查看当前版本刷取路线、配队工具和强度参考，待官方或可核验数据补齐后再更新本页。' : locale === 'ja' ? 'このキャラの詳細スキルは検証中です。現在版本の周回、編成ツール、Tier参考を先に確認し、公式または検証可能なデータで更新します。' : 'Detailed skill text is still being verified for this character. Use the current farming route, team builder, and tier reference first; this page will be updated when official or verifiable data is available.'}
+          </p>
+          <div className="mt-3 flex flex-wrap gap-3 text-sm">
+            <Link href="/wuwa/teams" className="text-game-primary hover:text-game-accent">{locale === 'zh' ? '打开配队工具 →' : locale === 'ja' ? '編成ツール →' : 'Open Team Builder →'}</Link>
+            <Link href="/wuwa/tier-list" className="text-game-primary hover:text-game-accent">{locale === 'zh' ? '查看强度参考 →' : locale === 'ja' ? 'Tierリスト →' : 'Check Tier List →'}</Link>
+            <Link href="/wuwa/guides/farming-route-guide" className="text-game-primary hover:text-accent">{locale === 'zh' ? '查看养成路线 →' : locale === 'ja' ? '育成ルート →' : 'Open Farming Route →'}</Link>
           </div>
         </Section>
       )}

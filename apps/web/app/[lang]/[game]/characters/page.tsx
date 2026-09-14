@@ -400,7 +400,7 @@ function CharacterListPage({ chars, locale, gameId, gameConfig }: { chars: Chara
         </p>
       )}
 
-      {gameId === 'sea' || gameId === 'nte' || gameId === 'zzz' ? <SearchIntentLinks locale={locale} gameId={gameId} /> : <NextStepStrip locale={locale} links={CHARACTER_NEXT_STEPS[gameId]} />}
+      {gameId === 'sea' || gameId === 'nte' || gameId === 'zzz' ? <SearchIntentLinks locale={locale} gameId={gameId} /> : <><CoverageNote locale={locale} gameId={gameId} /><NextStepStrip locale={locale} links={CHARACTER_NEXT_STEPS[gameId]} /></>}
 
       {sections.map(({ rank, entries }) => {
         const heading = rankHeading(rank, entries.length, locale);
@@ -417,6 +417,21 @@ function CharacterListPage({ chars, locale, gameId, gameConfig }: { chars: Chara
       })}
     </div>
   );
+}
+
+function CoverageNote({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
+  const copy = gameId === 'wuwa'
+    ? {
+        zh: '鸣潮角色页优先展示属性、武器、等级属性、材料与已核验强度信息；技能、声骸和配队资料会在完成核验后逐步补齐。',
+        en: 'WuWa pages prioritize attributes, weapons, stats, materials, and verified tier context. Skills, Echoes, and team data are added only after verification.',
+        ja: '鳴潮キャラページは属性、武器、ステータス、素材、検証済みTierを優先掲載。スキル、音骸、編成は検証後に追加します。',
+      }
+    : {
+        zh: '角色定位、技能、配装、配队和培养建议按版本持续复核；抽卡前请结合当前版本和自己的队伍缺口判断。',
+        en: 'Roles, skills, builds, teams, and investment advice are reviewed by patch. Check the current version and your roster gaps before pulling.',
+        ja: '役割、スキル、ビルド、編成、育成情報はバージョンごとに確認。引く前に現在版本と手持ちの不足を確認してください。',
+      };
+  return <div className="mb-6 rounded-md border border-game-border bg-game-surface px-4 py-3 text-xs leading-relaxed text-game-text-muted"><strong className="mr-1 text-game-text">{locale === 'zh' ? '内容覆盖说明' : locale === 'ja' ? 'データ範囲' : 'Coverage note'}:</strong>{copy[locale]}</div>;
 }
 
 function CharacterCard({ char, gameId }: { char: CharacterCardEntry; gameId: GameId }) {
