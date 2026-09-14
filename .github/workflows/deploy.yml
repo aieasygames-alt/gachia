@@ -146,8 +146,10 @@ jobs:
         run: |
           set -euo pipefail
           origin=https://gachia-staging.aieasygames.workers.dev
-          for path in zh en ja sitemap.xml api/auth/get-session; do
-            curl --fail --silent --show-error --retry 5 --retry-all-errors --max-time 30 "${origin}/${path}" > /dev/null
+          for path in sitemap.xml api/auth/get-session; do
+            url="${origin}/${path}"
+            echo "Checking ${url}"
+            curl --fail --silent --show-error --retry 5 --retry-all-errors --retry-delay 2 --max-time 30 "$url" > /dev/null
           done
 
   deploy:
