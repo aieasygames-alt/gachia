@@ -996,14 +996,14 @@
       {
         "question": "How many Primogems do I need for a guaranteed 5-star?",
         "questionZh": "大保底需要多少原石？",
-        "answer": "Worst case (losing 50/50 at 90 pulls, then guaranteed at 90 pulls again): 180 pulls = 28,800 Primogems. Average case: ~120 pulls (19,200 Primogems). Most players get their featured character between 105-150 pulls including the 50/50 mechanic. Always save at least 160 pulls (25,600 Primogems) for safety.",
-        "answerZh": "最坏情况（90抽歪了，再90抽大保底）：180抽 = 28,800原石。平均情况约120抽（19,200原石）。大多数玩家在105-150抽之间获得目标角色。建议预留至少160抽（25,600原石）才比较安全。"
+        "answer": "Calculate your own risk from the live banner rules, current pity, guarantee status, and available Primogems. Keep enough reserve for the next character guarantee you are personally willing to commit to, and verify banner details in-game before pulling.",
+        "answerZh": "请按当前卡池规则、现有垫抽、是否大保底和可用原石计算自己的风险。为你愿意投入的下一次角色保底保留足够资源，并在抽取前以游戏内规则为准。"
       },
       {
         "question": "When will a specific character get a rerun?",
         "questionZh": "某个角色什么时候复刻？",
-        "answer": "Popular characters typically rerun every 4-8 versions (about 6-12 months). Characters tied to the current story region get priority. Official livestreams announce banners about 10 days before the update. You can also follow community leak aggregators for early estimates, but treat unofficial information with caution.",
-        "answerZh": "热门角色通常每4-8个版本复刻一次（约6-12个月）。与当前剧情地区相关的角色优先。官方前瞻直播会在版本更新前约10天公布卡池信息。也可以关注社区爆料汇总获取早期估计，但非官方信息请谨慎对待。"
+        "answer": "Rerun timing is not guaranteed until it appears in official or in-game banner information. Use your roster gap and future reserve to decide whether to pull now; treat community forecasts only as planning scenarios, not a schedule.",
+        "answerZh": "复刻时间在官方或游戏内卡池信息公布前都不能视为确定。请按自己的队伍缺口和后续储备决定是否现在抽取；社区预测只能用于情景规划，不能当作排期。"
       },
       {
         "question": "Should I pull on the weapon banner?",
@@ -1012,31 +1012,31 @@
         "answerZh": "对大多数玩家来说，武器池优先级低于角色池。武器提供的是增量提升（通常比4星替代强10-20%），而新角色能开启全新阵容。只有在以下情况才建议抽武器池：（1）抽完目标角色后还有多余原石，（2）池子里两把5星武器都想要（降低歪的风险），（3）阵容已经成型，在为深境螺旋等终局内容优化。"
       }
     ],
-    "updatedAt": "2026-09-12",
-    "currentVersion": "Genshin Luna VIII current and next-banner route",
+    "updatedAt": "2026-09-20",
+    "currentVersion": "Genshin banner-planning reference; verify live banners, phases, and reruns in-game",
     "serpTitle": {
-      "en": "Genshin Current Banner, Next Banner & Reruns",
+      "en": "Genshin Current Banner, Next Banner, Reruns & Pull Plan",
       "zh": "原神卡池排期：当前祈愿、下期与复刻规划",
       "ja": "原神バナー予定：現在・次回・復刻"
     },
     "serpDescription": {
-      "en": "See the Genshin current banner, next banner, upcoming reruns, pity, guarantee, Primogem budget, codes, version income, and weapon pull advice.",
+      "en": "Compare the current Genshin banner, next banner, upcoming reruns, pity, Primogems, and weapon risk. Verify live phases and end times in-game before pulling.",
       "zh": "更新原神当前祈愿、下期卡池、复刻预测、原石预算、保底、兑换码和武器池风险。",
       "ja": "原神の現在バナー、次回、復刻予想、原石予算、天井、コード、武器リスクを確認。"
     },
     "quickFacts": {
       "en": [
-        "Checked through 2026-09-12 for the Genshin Luna VIII banner cycle; live, confirmed, and unconfirmed rerun information are labeled separately.",
+        "Use this as a pull-planning reference; confirm the live banner, phase end time, and reruns in the client or official notices.",
         "Start with the live banner, then compare next-banner and rerun value before spending premium currency.",
         "Secure the character target before chasing weapons or signature gear unless your budget is already comfortable."
       ],
       "zh": [
-        "已按原神 Luna VIII 当前祈愿周期更新，数据检查至 2026-09-12。",
+        "本页用于抽卡规划；当前卡池、阶段结束时间与复刻请以游戏内或官方公告为准。",
         "覆盖当前祈愿、下期卡池、复刻预测、保底、原石、兑换码和武器池风险。",
         "用于判断现在抽、等下期、追复刻还是碰武器池。"
       ],
       "ja": [
-        "原神 Luna VIII 現在バナー周期に対応。",
+        "本ページはガチャ計画用です。現在バナー、終了時刻、復刻はゲーム内または公式告知で確認してください。",
         "現在、次回、復刻、天井、原石、コード、武器リスクを確認。",
         "今引くか、待つか、復刻や武器を追うかの判断用。"
       ]
@@ -1223,20 +1223,20 @@
       }
     ],
     "serpTitle": {
-    "en": "Genshin Boss Guide: Weekly Boss Mechanics, Teams & Resin Planning"
+      "en": "Genshin Boss Guide: Weekly Boss Mechanics, Teams & Resin Planning"
     },
     "serpDescription": {
-    "en": "Use legacy Genshin boss mechanics, team fundamentals, co-op tips, and Resin planning. Verify the current boss roster, drops, and resistances in-game before farming."
+      "en": "Use legacy Genshin boss mechanics, team fundamentals, co-op tips, and Resin planning. Verify the current boss roster, drops, and resistances in-game before farming."
     },
     "quickFacts": {
       "en": [
-      "This page is a legacy boss-mechanics reference, not a complete current-version roster.",
-      "Check the target character's in-game material requirement before spending Resin.",
-      "Verify the current encounter, drops, and resistances in-game before forming a team."
+        "This page is a legacy boss-mechanics reference, not a complete current-version roster.",
+        "Check the target character's in-game material requirement before spending Resin.",
+        "Verify the current encounter, drops, and resistances in-game before forming a team."
       ]
     },
-  "updatedAt": "2026-09-20",
-  "currentVersion": "Historical Genshin boss mechanics; verify current material routes in-game"
+    "updatedAt": "2026-09-20",
+    "currentVersion": "Historical Genshin boss mechanics; verify current material routes in-game"
   },
   {
     "id": "v6-7-version-guide",

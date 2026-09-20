@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import endfieldGuides from '../public/data/endfield/raw-guides.json';
+import genshinGuides from '../public/data/genshin/raw-guides.json';
 import starrailGuides from '../public/data/starrail/raw-guides.json';
+import zzzGuides from '../public/data/zzz/raw-guides.json';
 
 type SearchGuide = {
   id: string;
@@ -34,6 +36,21 @@ describe('high-impression guide freshness', () => {
       expect(guide.currentVersion).toContain('verify live');
       expect(guide.serpDescription?.en).toMatch(/verify|check/i);
       expect(guide.quickFacts?.en).toHaveLength(3);
+    }
+  });
+
+  it('keeps high-impression banner pages scoped to live banner checks', () => {
+    for (const [guides, game] of [
+      [genshinGuides, 'Genshin'],
+      [starrailGuides, 'HSR'],
+      [zzzGuides, 'ZZZ'],
+    ] as const) {
+      const guide = guideById(guides, 'banner-schedule-guide');
+
+      expect(guide.currentVersion).toContain('verify live');
+      expect(guide.serpTitle?.en).toContain(game);
+      expect(guide.serpDescription?.en).toMatch(/verify live/i);
+      expect(guide.quickFacts?.en?.[0]).toMatch(/confirm the live/i);
     }
   });
 });

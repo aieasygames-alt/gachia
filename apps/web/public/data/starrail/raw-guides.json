@@ -10,8 +10,8 @@
     "summaryEn": "HSR v4.4 launches on July 15, 2026. This hub focuses on Himeko Nova, the Fate collaboration, banner planning, redeem codes, and resource routing.",
     "content": "## 星铁 4.4 版本专题\n\n4.4「In Ravages Does the Whistle Sound」将于 2026 年 7 月 15 日上线。当前搜索重点已经从“前瞻爆料”切换到“上线后怎么抽、先做什么、Fate 联动怎么处理”。\n\n### 版本重点\n\n- **上线时间**：2026 年 7 月 15 日。\n- **核心关键词**：4.4、Himeko Nova、Fate 联动、兑换码、卡池规划、星琼规划。\n- **内容策略**：把联动 FAQ、角色页、抽卡规划和兑换码入口放在同一屏，减少玩家来回跳转。\n\n### Himeko Nova 与卡池规划\n\nHimeko Nova 会带来大量角色查询和抽卡讨论。建议先判断：\n\n1. 你是否缺当前版本对应输出/辅助定位。\n2. Fate 联动角色是否仍是你的优先目标。\n3. 你当前保底距离和 4.4 活动资源是否足够。\n\n如果你同时想要 Himeko Nova 和 Fate 联动内容，建议先保留至少一轮大保底，再根据实装表现补抽。\n\n### Fate 联动 FAQ 整理\n\nFate 联动词会继续带来高相关问题量，内容页要避免只写新闻。更适合回答这些问题：\n\n- Fate 联动内容从哪里进入。\n- 联动奖励是否限时。\n- 新玩家是否来得及体验。\n- 和 4.4 卡池资源是否冲突。\n\n### 版本上线后先做什么\n\n1. 检查维护补偿、直播兑换码和版本邮件。\n2. 打开活动页，确认限时奖励周期。\n3. 记录当前保底和星琼缺口。\n4. 先试用新角色，再决定是否补光锥或命座。\n5. 如果只想追联动，避免被常驻资源消耗分散。\n\n### 推荐继续看\n\n- /starrail/version：4.4 总入口。\n- 角色页：Himeko Nova 与 Fate 相关角色。\n- 兑换码页：直播码、版本码、过期码状态。\n- 抽卡规划：星琼收入、保底计算和角色优先级。",
     "contentEn": "## HSR v4.4 Version Hub\n\n### Freshness and archive status\n\nThis page is retained as a historical reference. Use the live version hub and current banner page for present schedules, rewards, and balance context.\nVersion 4.4, \"In Ravages Does the Whistle Sound\", launches on July 15, 2026. Search intent has moved from preview leaks to practical launch questions: what to pull, what to do first, and how the Fate collaboration fits into the resource plan.\n\n### Version Focus\n\n- **Launch date**: July 15, 2026.\n- **Core keywords**: v4.4, Himeko Nova, Fate collaboration, redeem codes, banner planning, Stellar Jade planning.\n- **Content strategy**: keep collab FAQ, character pages, pull planning, and code checks on one path.\n\n### Himeko Nova and Pull Planning\n\nBefore pulling Himeko Nova, check:\n\n1. Whether your account needs the role she fills.\n2. Whether Fate collaboration units remain your priority.\n3. Your pity count and how much v4.4 event income can cover.\n\nIf you want both Himeko Nova and the Fate content, keep at least one full pity banked before chasing upgrades.\n\n### Fate Collaboration FAQ\n\nFate-related searches will stay strong. The page should answer:\n\n- Where to access the collab content.\n- Whether rewards are time-limited.\n- Whether new players can still catch up.\n- Whether collab pulls conflict with v4.4 banner planning.\n\n### What to Do After Launch\n\n1. Claim maintenance compensation, livestream codes, and version mail.\n2. Check event timers and limited rewards.\n3. Record pity and Stellar Jade gaps.\n4. Trial new characters before pulling cones or copies.\n5. If your goal is only the collab, avoid spending resources on low-priority banners.\n\n### Internal Path\n\n- /starrail/version: v4.4 hub.\n- Character pages: Himeko Nova and Fate-related characters.\n- Redeem codes: livestream codes, version codes, expired status.\n- Pull planning: Stellar Jade income, pity math, and priority.",
-    "updatedAt": "2026-09-20",
-    "currentVersion": "HSR relic-planning reference; verify live sets, drops, and character thresholds",
+    "updatedAt": "2026-09-12",
+    "currentVersion": "HSR historical v4.x reference",
     "serpTitle": {
       "en": "HSR Relic Guide: Main Stats, Substats, Roles & Farming Priority",
       "zh": "崩坏：星穹铁道遗器指南：主词条、副词条、定位与刷取优先级",
@@ -61,9 +61,7 @@
         "answer": "If Fate is your collection priority, keep a full pity reserved first. Pull Himeko Nova only after confirming your pity and v4.4 event income.",
         "answerZh": "如果 Fate 联动是收藏优先目标，先保留一轮大保底；确认保底和 4.4 活动收入后再决定是否抽 Himeko Nova。"
       }
-    ],
-    "currentVersion": "HSR historical v4.x reference",
-    "updatedAt": "2026-09-12"
+    ]
   },
   {
     "id": "v4-3-version-guide",
@@ -824,30 +822,30 @@
     "category": "build",
     "categoryZh": "配装攻略",
     "categoryEn": "Build Guide",
-  "summary": "流萤击破流配装参考，覆盖光锥、遗器、行迹、队伍与星魂思路；当前版本强度、配队条件和替代方案请以游戏内数据与实时内容核验。",
-  "summaryEn": "Firefly Break build reference covering Light Cones, Relics, Traces, teams, and Eidolons. Verify current endgame value, team conditions, and alternatives with live game data.",
+    "summary": "流萤击破流配装参考，覆盖光锥、遗器、行迹、队伍与星魂思路；当前版本强度、配队条件和替代方案请以游戏内数据与实时内容核验。",
+    "summaryEn": "Firefly Break build reference covering Light Cones, Relics, Traces, teams, and Eidolons. Verify current endgame value, team conditions, and alternatives with live game data.",
     "content": "## 流萤配装与养成攻略\n\n流萤（Firefly）是毁灭命途的火属性击破流输出角色。她通过强化状态下的高速行动和超高击破伤害称霸终局内容，是当前版本最强击破主C。\n\n### 最佳光锥\n- **「于焦土之上」**(Whereabouts Should Dreams Rest): 专属5星光锥，提供击破特攻和击破伤害加成\n- **「记忆的质料」**(Brighter Than the Sun): 5星替代，高攻击力加成\n- **「秘密誓心」**(Swordplay): 4星替代，对同一目标叠加增伤\n- **「无处可逃」**(Nowhere to Run): 4星替代，提供攻击力和击破相关效果\n\n### 最佳遗器\n- **4件套**: 「铁骑漫踪」(Iron Cavalry Against the Scourge) — 击破流专属套装，大幅提升击破伤害\n- **2件套**: 「劫火莲灯之乡」(Forge of the Kalpagna) — 击破特攻加成\n- **替代2件套**: 「盗贼公国」(Thief of Shooting Meteor) — 击破特攻和击破回能\n\n#### 主词条推荐\n- 躯干：击破特攻%\n- 脚部：攻击力% / 速度\n- 位面球：火属性伤害加成 / 攻击力%\n- 连结绳：击破特攻%\n\n#### 副词条优先级\n击破特攻 > 速度 > 攻击力% > 暴击率/暴击伤害（暴击对流萤价值低）\n\n### 行迹优先级\n1. 终结技（核心强化状态，最优先拉满）\n2. 战技（强化状态下的主要输出手段）\n3. 天赋（击破增伤相关被动）\n4. 普攻（优先级最低）\n\n### 配队推荐\n\n#### 1. 流萤超击破队（最强配队）\n- 流萤 + 阮梅 + 同谐主（开拓者）+ 生存位（加拉赫/藿藿）\n- 阮梅提供击破效率和减抗，同谐主提供超击破倍率\n- 当前版本最强击破配队\n\n#### 2. 流萤通用击破队\n- 流萤 + 阮梅 + 停云 + 生存位\n- 停云提供充能和增伤，循环更流畅\n- 适合没有同谐主练度的玩家\n\n#### 3. 流萤预算队\n- 流萤 + 阮梅 + 佩拉 + 生存位\n- 佩拉提供减防辅助击破\n- 低成本高效率\n\n### 星魂里程碑\n- **E0**: 完整可用的击破主C，强度在线\n- **E1**: 强化状态下速度进一步提升，输出节奏更好\n- **E2**: 击破时无视更多防御，伤害质变\n- **E6**: 击破伤害上限大幅提升，达到天花板",
     "contentEn": "## Firefly Build Guide\n\nFirefly is a Fire Destruction DPS built around the Break playstyle. Through her enhanced state with high-Speed actions and massive Break damage, she dominates endgame content as the premier Break DPS in the current meta.\n\n### Best Light Cones\n- **\"Whereabouts Should Dreams Rest\"**: Signature 5-star LC, provides Break Effect and Break DMG bonus\n- **\"Brighter Than the Sun\"**: 5-star alternative with high ATK scaling\n- **\"Swordplay\"**: 4-star alternative, stacking DMG bonus on same target\n- **\"Nowhere to Run\"**: 4-star alternative, ATK and Break-related effects\n\n### Best Relics\n- **4-piece**: Iron Cavalry Against the Scourge — dedicated Break set, massive Break DMG boost\n- **2-piece**: Forge of the Kalpagna — Break Effect bonus\n- **Alternative 2-piece**: Thief of Shooting Meteor — Break Effect and Energy on Break\n\n#### Recommended Main Stats\n- Body: Break Effect%\n- Feet: ATK% / SPD\n- Planar Sphere: Fire DMG Bonus / ATK%\n- Link Rope: Break Effect%\n\n#### Substat Priority\nBreak Effect > SPD > ATK% > CRIT Rate / CRIT DMG (CRIT has low value for Firefly)\n\n### Trace Priority\n1. Ultimate (core enhanced state, max first)\n2. Skill (primary damage dealer during enhanced state)\n3. Talent (Break DMG-related passives)\n4. Basic ATK (lowest priority)\n\n### Team Compositions\n\n#### 1. Super Break Team (Best)\n- Firefly + Ruan Mei + Harmony MC (Trailblazer) + Sustain (Gallagher / Huohuo)\n- Ruan Mei provides Break Efficiency and RES PEN; Harmony MC adds Super Break multiplier\n- The strongest Break composition in the current version\n\n#### 2. Firefly General Break Team\n- Firefly + Ruan Mei + Tingyun + Sustain\n- Tingyun provides energy and DMG buffs for smoother rotations\n- Good option if Harmony MC is not built\n\n#### 3. Firefly Budget Team\n- Firefly + Ruan Mei + Pela + Sustain\n- Pela provides DEF shred to support Break damage\n- Low-cost, high-efficiency option\n\n### Eidolon Milestones\n- **E0**: Fully functional Break DPS, strong out of the box\n- **E1**: Enhanced state grants more SPD, better damage rotation\n- **E2**: Break ignores more DEF — transformative damage increase\n- **E6**: Break DMG ceiling significantly raised, top-tier performance",
-  "updatedAt": "2026-09-20",
-  "currentVersion": "Historical Firefly build reference; verify current endgame and team conditions",
-  "quickFacts": {
-    "en": [
-      "This is a Firefly Break-build reference, not a current meta ranking.",
-      "Check the current endgame mode, enemy weakness, and available supports before copying a team.",
-      "Use current character, team, and banner pages before spending pulls or relic resources."
-    ],
-    "zh": [
-      "本页是流萤击破配装参考，不代表当前版本强度排名。",
-      "照搬配队前先确认当前终局环境、敌人弱点和可用辅助。",
-      "投入星琼或遗器体力前，请核对当前角色、配队和卡池页面。"
-    ],
-    "ja": [
-      "本ページはFireflyの撃破ビルド参考で、現行メタ順位ではありません。",
-      "編成を使う前に、現行エンドコンテンツ、弱点、所持サポートを確認してください。",
-      "星玉や遺物素材を使う前に、現行キャラ、編成、バナー情報を確認してください。"
-    ]
-  },
-  "tags": [
+    "updatedAt": "2026-09-20",
+    "currentVersion": "Historical Firefly build reference; verify current endgame and team conditions",
+    "quickFacts": {
+      "en": [
+        "This is a Firefly Break-build reference, not a current meta ranking.",
+        "Check the current endgame mode, enemy weakness, and available supports before copying a team.",
+        "Use current character, team, and banner pages before spending pulls or relic resources."
+      ],
+      "zh": [
+        "本页是流萤击破配装参考，不代表当前版本强度排名。",
+        "照搬配队前先确认当前终局环境、敌人弱点和可用辅助。",
+        "投入星琼或遗器体力前，请核对当前角色、配队和卡池页面。"
+      ],
+      "ja": [
+        "本ページはFireflyの撃破ビルド参考で、現行メタ順位ではありません。",
+        "編成を使う前に、現行エンドコンテンツ、弱点、所持サポートを確認してください。",
+        "星玉や遺物素材を使う前に、現行キャラ、編成、バナー情報を確認してください。"
+      ]
+    },
+    "tags": [
       "配装",
       "流萤",
       "Build",
@@ -1036,14 +1034,14 @@
       {
         "question": "How many pulls can I save per patch as F2P?",
         "questionZh": "免费玩家每个版本能攒多少抽？",
-        "answer": "As a free-to-play player, you can expect approximately 7,700 Stellar Jade per 6-week patch, which equals roughly 48 pulls. With the Express Pass, this increases to about 10,200 Jade or 63 pulls per patch.",
-        "answerZh": "免费玩家每个6周版本大约可获得7700星琼，约合48抽。如果购买月卡（列车补给凭证），增加到约10200星琼，即63抽。"
+        "answer": "Patch income changes with events, exploration, schedules, and account progress. Check the current version notices, your completed content, and the live reward list before treating any pull estimate as a budget guarantee.",
+        "answerZh": "版本资源会受活动、探索、周期和账号进度影响。不要把固定抽数当作预算保证；请先核对当前版本公告、已完成内容和游戏内奖励列表。"
       },
       {
         "question": "Should I pull for a character or their signature Light Cone first?",
         "questionZh": "先抽角色还是先抽专武？",
-        "answer": "Always prioritize the character first. A signature Light Cone typically provides 15-25% more damage compared to a free alternative, but the character itself is essential. Only pull for the Light Cone if you already have the character and have spare pulls after securing future characters.",
-        "answerZh": "永远优先抽角色。专武相比免费替代品通常提升15-25%的伤害，但角色本身是不可或缺的。只有在你已经拥有角色，且在确保未来目标角色后还有余力时，才考虑抽专武。"
+        "answer": "Secure the character first when that agent fills a real roster gap. Compare the live Light Cone banner, available alternatives, and your next character guarantee before deciding whether a signature is worth the remaining Jade.",
+        "answerZh": "当角色能补上真实队伍缺口时，先确保角色。决定是否追专属光锥前，请比较当前光锥池、可用替代和下一个角色保底所需的星琼。"
       },
       {
         "question": "What happens if I lose the 50/50?",
@@ -1052,31 +1050,31 @@
         "answerZh": "如果你在角色活动跃迁中歪了（出了常驻5星），下一个5星必定是当期限定角色。这个大保底会继承到未来的角色活动跃迁，所以即使当前卡池抽不起，下一个角色活动跃迁出的5星也必定是限定角色。"
       }
     ],
-    "updatedAt": "2026-09-12",
-    "currentVersion": "HSR v4.4 current warp and Stellar Jade route",
+    "updatedAt": "2026-09-20",
+    "currentVersion": "HSR banner-planning reference; verify live warps, phases, and reruns in-game",
     "serpTitle": {
-      "en": "HSR Banner Schedule: Current, Next & Reruns",
+      "en": "HSR Banner Schedule: Current, Next, Reruns & Jade Plan",
       "zh": "崩铁卡池排期：当前跃迁、下期与复刻规划",
       "ja": "崩スタ バナー予定：現在跳躍・次回・復刻"
     },
     "serpDescription": {
-      "en": "See the HSR current banner, next banner, upcoming reruns, Fate collab targets, pity, Stellar Jade budget, codes, and Light Cone pull advice.",
+      "en": "Compare the current HSR banner, next banner, upcoming reruns, pity, Stellar Jade, Fate targets, and Light Cone risk. Verify live warps and end times in-game before pulling.",
       "zh": "更新崩铁当前跃迁、下期卡池、复刻、Fate 联动、保底、星琼预算和光锥抽取风险。",
       "ja": "崩壊：スターレイルの現在跳躍、次回、復刻、Fate連動、天井、星玉、光円錐リスクを確認。"
     },
     "quickFacts": {
       "en": [
-        "Checked through 2026-09-12 for the HSR v4.4 warp cycle; live, confirmed, and unconfirmed rerun information are labeled separately.",
+        "Use this as a pull-planning reference; confirm the live warp, phase end time, and reruns in the client or official notices.",
         "Start with the live banner, then compare next-banner and rerun value before spending premium currency.",
         "Secure the character target before chasing weapons or signature gear unless your budget is already comfortable."
       ],
       "zh": [
-        "已按崩铁 v4.4 当前跃迁周期更新，数据检查至 2026-09-12。",
+        "本页用于跃迁规划；当前跃迁、阶段结束时间与复刻请以游戏内或官方公告为准。",
         "覆盖当前跃迁、下期、复刻、Fate/联动优先级、保底、星琼和光锥风险。",
         "用于判断抽角色、追光锥还是继续存资源。"
       ],
       "ja": [
-        "崩スタ v4.4 現在跳躍周期に対応。",
+        "本ページは跳躍計画用です。現在跳躍、終了時刻、復刻はゲーム内または公式告知で確認してください。",
         "現在、次回、復刻、Fate/連動優先度、天井、星玉、光円錐リスクを確認。",
         "キャラ、光円錐、温存の判断用。"
       ]
