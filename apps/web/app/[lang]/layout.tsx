@@ -59,10 +59,10 @@ export default async function LocaleLayout({
             })(window, document, "clarity", "script", "yho16e4xxp");
           `}
         </Script>
-        <Script
+        <script
+          async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8569630257520732"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
         />
       </head>
       <body className="min-h-screen bg-game-bg text-game-text antialiased">
