@@ -262,6 +262,16 @@ const ITEM_META_OVERRIDES: Record<string, LocaleMeta> = {
       description: 'Genshin Impact Subdetection Unit guide with uses, locations, and farming routes so you can plan ahead.',
     },
   },
+  'wuwa/violet-coral': {
+    zh: {
+      title: '鸣潮紫珊瑚获取攻略：用途、来源与角色需求',
+      description: '鸣潮紫珊瑚材料攻略，整理野外采集来源、角色突破用途和需要该材料的角色。进入地图前先核对角色需求与当前采集路线。',
+    },
+    en: {
+      title: 'Violet Coral WuWa Guide: Uses, Sources & Characters',
+      description: 'Violet Coral guide for Wuthering Waves with overworld gathering sources, ascension use, and the characters that need it.',
+    },
+  },
 };
 
 export async function generateStaticParams() {
