@@ -220,6 +220,36 @@ const WEAPON_META_OVERRIDES: Record<string, LocaleMeta> = {
       description: '原神西风秘典攻略，整理属性、充能效果、适用角色和配装建议，方便快速做出培养判断。',
     },
   },
+  'genshin/wolf-fang': {
+    en: {
+      title: 'Wolf-Fang Genshin: Stats, Passive, Battle Pass & Best Users',
+      description: 'Wolf-Fang Genshin guide: 4-star Sword, CRIT Rate substat, Normal Attack and Elemental Skill CRIT passive, Battle Pass source, and best-user checks.',
+    },
+    zh: {
+      title: '狼牙攻略：属性、被动、纪行获取与适用角色',
+      description: '原神狼牙攻略：4星单手剑、暴击率副属性、普攻与元素战技暴击被动、纪行获取方式，以及适配角色判断。',
+    },
+  },
+  'genshin/lost-prayer-to-the-sacred-winds': {
+    en: {
+      title: 'Lost Prayer Genshin: Stats, Passive & Best Catalyst Users',
+      description: 'Lost Prayer to the Sacred Winds guide: 5-star Catalyst, CRIT Rate substat, movement speed and on-field Elemental DMG passive, Gacha source, and best-user checks.',
+    },
+    zh: {
+      title: '四风原典攻略：属性、被动与适用法器角色',
+      description: '原神四风原典攻略：5星法器、暴击率副属性、移速与站场元素伤害被动、祈愿获取方式，以及适配角色判断。',
+    },
+  },
+  'genshin/key-of-khaj-nisut': {
+    en: {
+      title: 'Key of Khaj-Nisut Genshin: HP Sword Stats, Passive & Users',
+      description: 'Key of Khaj-Nisut guide: 5-star HP Sword, HP substat, HP and Elemental Mastery passive, Gacha source, signature association, and best-user checks.',
+    },
+    zh: {
+      title: '圣显之钥攻略：生命单手剑属性、被动与适用角色',
+      description: '原神圣显之钥攻略：5星生命值单手剑、生命值与元素精通被动、祈愿获取方式、妮露关联与适配角色判断。',
+    },
+  },
   'genshin/a-thousand-blazing-suns': {
     en: {
       title: 'A Thousand Blazing Suns Genshin: Stats, Best Users & Builds',
@@ -369,7 +399,7 @@ function WeaponDetail({ detail, locale }: { detail: WeaponDetailData; locale: Su
       </div>
       <EffectSection detail={detail} locale={locale} />
       {detail.source && <SourceSection source={detail.source} locale={locale} />}
-      <UsageTipsSection name={detail.name} gameName={gameName} locale={locale} />
+      <UsageTipsSection detail={detail} gameName={gameName} locale={locale} />
       <NextStepSection gameId={detail.gameId} locale={locale} />
       <BreadcrumbJsonLd gameId={detail.gameId} gameName={gameName} name={detail.name} locale={locale} />
     </div>
@@ -483,12 +513,14 @@ function SourceSection({ source, locale }: { source: string; locale: SupportedLo
   );
 }
 
-function UsageTipsSection({ name, gameName, locale }: { name: string; gameName: string; locale: SupportedLocale }) {
+function UsageTipsSection({ detail, gameName, locale }: { detail: WeaponDetailData; gameName: string; locale: SupportedLocale }) {
+  const stat = detail.titleStat || (locale === 'zh' ? '副属性' : locale === 'ja' ? 'サブステータス' : 'substat');
+  const passive = detail.effectDescription;
   const tips = locale === 'zh'
-    ? `${name}是${gameName}中的一把武器，选择适合角色的武器能显著提升战斗力。建议根据角色的定位和属性需求来搭配武器，优先提升主C角色的武器等级。注意武器副属性的配合，例如暴击率副属性的武器适合需要暴击的角色。`
+    ? `${detail.name}是${gameName}中的${detail.rarity > 0 ? `${detail.rarity}星` : ''}武器。先确认角色是否需要${stat}，再看被动是否能在该角色的常用站场时间和技能循环中稳定触发。${passive ? ` 当前数据中的被动为：${passive}。` : ''}不要只因稀有度投入资源；和角色页的定位、队伍与材料路线一起核对。`
     : locale === 'ja'
-      ? `${name}は${gameName}の武器です。キャラクターに合った武器を選ぶことで戦力が大きく向上します。キャラの役割とステータス要件に合わせて武器を装備し、メインアタッカーの武器レベルを優先して上げましょう。サブステータスとの相性も重要です。`
-      : `${name} is a weapon in ${gameName}. Choosing the right weapon for each character significantly boosts combat effectiveness. Match weapons to character roles and stat needs — prioritize leveling your main DPS weapon first. Pay attention to substat synergy; for example, weapons with CRIT Rate substats pair well with characters who need higher crit consistency.`;
+      ? `${detail.name}は${gameName}の${detail.rarity > 0 ? `${detail.rarity}星` : ''}武器です。まずキャラが${stat}を必要とするか、次にパッシブが通常の出場時間とスキル循環で安定して発動するかを確認します。${passive ? ` 現在のパッシブデータ：${passive}。` : ''}レアリティだけで育成せず、キャラページの役割、編成、素材ルートと合わせて判断してください。`
+      : `${detail.name} is a ${detail.rarity > 0 ? `${detail.rarity}-star ` : ''}weapon in ${gameName}. First check whether a character wants its ${stat}; then check whether the passive can trigger consistently in that character's normal field time and skill loop.${passive ? ` Current passive data: ${passive}.` : ''} Do not invest on rarity alone; validate the choice with the character's role, team, and material route.`;
   return (
     <section className="mt-6">
       <h2 className="mb-2 text-base font-semibold text-game-text">
