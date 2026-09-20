@@ -10,6 +10,35 @@
     "summaryEn": "HSR v4.4 launches on July 15, 2026. This hub focuses on Himeko Nova, the Fate collaboration, banner planning, redeem codes, and resource routing.",
     "content": "## 星铁 4.4 版本专题\n\n4.4「In Ravages Does the Whistle Sound」将于 2026 年 7 月 15 日上线。当前搜索重点已经从“前瞻爆料”切换到“上线后怎么抽、先做什么、Fate 联动怎么处理”。\n\n### 版本重点\n\n- **上线时间**：2026 年 7 月 15 日。\n- **核心关键词**：4.4、Himeko Nova、Fate 联动、兑换码、卡池规划、星琼规划。\n- **内容策略**：把联动 FAQ、角色页、抽卡规划和兑换码入口放在同一屏，减少玩家来回跳转。\n\n### Himeko Nova 与卡池规划\n\nHimeko Nova 会带来大量角色查询和抽卡讨论。建议先判断：\n\n1. 你是否缺当前版本对应输出/辅助定位。\n2. Fate 联动角色是否仍是你的优先目标。\n3. 你当前保底距离和 4.4 活动资源是否足够。\n\n如果你同时想要 Himeko Nova 和 Fate 联动内容，建议先保留至少一轮大保底，再根据实装表现补抽。\n\n### Fate 联动 FAQ 整理\n\nFate 联动词会继续带来高相关问题量，内容页要避免只写新闻。更适合回答这些问题：\n\n- Fate 联动内容从哪里进入。\n- 联动奖励是否限时。\n- 新玩家是否来得及体验。\n- 和 4.4 卡池资源是否冲突。\n\n### 版本上线后先做什么\n\n1. 检查维护补偿、直播兑换码和版本邮件。\n2. 打开活动页，确认限时奖励周期。\n3. 记录当前保底和星琼缺口。\n4. 先试用新角色，再决定是否补光锥或命座。\n5. 如果只想追联动，避免被常驻资源消耗分散。\n\n### 推荐继续看\n\n- /starrail/version：4.4 总入口。\n- 角色页：Himeko Nova 与 Fate 相关角色。\n- 兑换码页：直播码、版本码、过期码状态。\n- 抽卡规划：星琼收入、保底计算和角色优先级。",
     "contentEn": "## HSR v4.4 Version Hub\n\n### Freshness and archive status\n\nThis page is retained as a historical reference. Use the live version hub and current banner page for present schedules, rewards, and balance context.\nVersion 4.4, \"In Ravages Does the Whistle Sound\", launches on July 15, 2026. Search intent has moved from preview leaks to practical launch questions: what to pull, what to do first, and how the Fate collaboration fits into the resource plan.\n\n### Version Focus\n\n- **Launch date**: July 15, 2026.\n- **Core keywords**: v4.4, Himeko Nova, Fate collaboration, redeem codes, banner planning, Stellar Jade planning.\n- **Content strategy**: keep collab FAQ, character pages, pull planning, and code checks on one path.\n\n### Himeko Nova and Pull Planning\n\nBefore pulling Himeko Nova, check:\n\n1. Whether your account needs the role she fills.\n2. Whether Fate collaboration units remain your priority.\n3. Your pity count and how much v4.4 event income can cover.\n\nIf you want both Himeko Nova and the Fate content, keep at least one full pity banked before chasing upgrades.\n\n### Fate Collaboration FAQ\n\nFate-related searches will stay strong. The page should answer:\n\n- Where to access the collab content.\n- Whether rewards are time-limited.\n- Whether new players can still catch up.\n- Whether collab pulls conflict with v4.4 banner planning.\n\n### What to Do After Launch\n\n1. Claim maintenance compensation, livestream codes, and version mail.\n2. Check event timers and limited rewards.\n3. Record pity and Stellar Jade gaps.\n4. Trial new characters before pulling cones or copies.\n5. If your goal is only the collab, avoid spending resources on low-priority banners.\n\n### Internal Path\n\n- /starrail/version: v4.4 hub.\n- Character pages: Himeko Nova and Fate-related characters.\n- Redeem codes: livestream codes, version codes, expired status.\n- Pull planning: Stellar Jade income, pity math, and priority.",
+    "updatedAt": "2026-09-20",
+    "currentVersion": "HSR relic-planning reference; verify live sets, drops, and character thresholds",
+    "serpTitle": {
+      "en": "HSR Relic Guide: Main Stats, Substats, Roles & Farming Priority",
+      "zh": "崩坏：星穹铁道遗器指南：主词条、副词条、定位与刷取优先级",
+      "ja": "スターレイル遺物ガイド：メイン、サブ、役割、周回優先度"
+    },
+    "serpDescription": {
+      "en": "Plan HSR relics by main stats, substats, role thresholds, and farming order. Verify current set effects, sources, and character needs in-game before choosing a best set.",
+      "zh": "按主词条、副词条、角色阈值与刷取顺序规划崩铁遗器；选择毕业套前请在游戏内核对当前套装效果、来源和角色需求。",
+      "ja": "メイン、サブ、役割ごとの閾値、周回順でスターレイル遺物を計画。最適セットを決める前にゲーム内で現行効果、入手先、キャラ要件を確認します。"
+    },
+    "quickFacts": {
+      "en": [
+        "Choose a character role and main-stat threshold before chasing a specific set or substat roll.",
+        "A usable main stat and stable rotation normally matter before perfect substats.",
+        "Current set effects, drops, and character requirements must be checked in the live client."
+      ],
+      "zh": [
+        "先确定角色定位与主词条阈值，再追特定套装或副词条。",
+        "可用主词条和稳定循环通常比完美副词条更重要。",
+        "当前套装效果、掉落和角色需求请以游戏内为准。"
+      ],
+      "ja": [
+        "特定セットやサブ厳選の前に、キャラ役割とメインの閾値を決めます。",
+        "使えるメインと安定した循環は、完璧なサブより優先されます。",
+        "現行セット効果、ドロップ、キャラ要件はゲーム内で確認してください。"
+      ]
+    },
     "tags": [
       "v4.4",
       "Himeko Nova",
@@ -148,12 +177,41 @@
   {
     "id": "relic-guide",
     "title": "遗器系统完全指南",
-    "titleEn": "Honkai: Star Rail Relic Guide — Best Sets, Main Stats & Substats by Character",
+    "titleEn": "HSR Relic Guide: Main Stats, Substats, Roles & Live Set Checks",
     "category": "equipment",
     "categoryZh": "装备攻略",
     "categoryEn": "Equipment",
     "summary": "从遗器基础到毕业搭配，全面了解崩坏：星穹铁道的遗器系统。",
-    "summaryEn": "Complete HSR relic guide: all relic sets explained, main stat options, substat priority, which sets for each path, and farming efficiency tips for optimal builds.",
+    "summaryEn": "HSR relic-planning guide for main stats, substats, role fit, and farming order. Verify current set effects, drop sources, and character requirements in-game before treating a set as best-in-slot.",
+    "updatedAt": "2026-09-20",
+    "currentVersion": "HSR relic-planning reference; verify live sets, drops, and character thresholds",
+    "serpTitle": {
+      "en": "HSR Relic Guide: Main Stats, Substats, Roles & Farming Priority",
+      "zh": "崩坏：星穹铁道遗器指南：主词条、副词条、定位与刷取优先级",
+      "ja": "スターレイル遺物ガイド：メイン、サブ、役割、周回優先度"
+    },
+    "serpDescription": {
+      "en": "Plan HSR relics by main stats, substats, role thresholds, and farming order. Verify current set effects, sources, and character needs in-game before choosing a best set.",
+      "zh": "按主词条、副词条、角色阈值与刷取顺序规划崩铁遗器；选择毕业套前请在游戏内核对当前套装效果、来源和角色需求。",
+      "ja": "メイン、サブ、役割ごとの閾値、周回順でスターレイル遺物を計画。最適セットを決める前にゲーム内で現行効果、入手先、キャラ要件を確認します。"
+    },
+    "quickFacts": {
+      "en": [
+        "Choose a character role and main-stat threshold before chasing a specific set or substat roll.",
+        "A usable main stat and stable rotation normally matter before perfect substats.",
+        "Current set effects, drops, and character requirements must be checked in the live client."
+      ],
+      "zh": [
+        "先确定角色定位与主词条阈值，再追特定套装或副词条。",
+        "可用主词条和稳定循环通常比完美副词条更重要。",
+        "当前套装效果、掉落和角色需求请以游戏内为准。"
+      ],
+      "ja": [
+        "特定セットやサブ厳選の前に、キャラ役割とメインの閾値を決めます。",
+        "使えるメインと安定した循環は、完璧なサブより優先されます。",
+        "現行セット効果、ドロップ、キャラ要件はゲーム内で確認してください。"
+      ]
+    },
     "content": "## 遗器系统完全指南\n\n### 遗器基础\n- 6个遗器位：头部、手部、躯干、脚部、位面球、连接绳\n- 4件套来自侵蚀隧洞（4件洞窟遗器）\n- 2件套来自模拟宇宙（2件位面饰品）\n\n### 主词条与副词条\n- **头部**: 固定生命值\n- **手部**: 固定攻击力\n- **躯干**: 生命%/攻击%/防御%/治疗加成/暴击率/暴击伤害\n- **脚部**: 生命%/攻击%/防御%/速度\n- **位面球**: 生命%/攻击%/防御%/属性伤害加成\n- **连接绳**: 生命%/攻击%/防御%/击破特攻/能量回复\n\n### 副词条优先级\n- 暴击率和暴击伤害是最有价值的副词条\n- 速度是第二优先级\n- 攻击力%和生命值%根据角色需求选择",
     "contentEn": "## Complete Relic Guide for Honkai: Star Rail\n\nRelics are the primary gear system in Honkai: Star Rail. Understanding how they work is essential for building strong characters.\n\n## Relic Basics\n\n### Slots\nCharacters have 6 relic slots divided into two categories:\n\n**Cavern Relics (4-piece sets)**\n- Head (Crown) — Fixed HP main stat\n- Hands (Gloves) — Fixed ATK main stat\n- Body (Chest) — Variable main stat\n- Feet (Boots) — Variable main stat\n\n**Planar Ornaments (2-piece sets)**\n- Planar Sphere — Variable main stat\n- Link Rope — Variable main stat\n\n### Rarity\n- **5-star relics** are the goal — significantly better than 4-star\n- Gold (5★) > Purple (4★) > Blue (3★)\n- Only farm at Equilibrium Level 5+ for guaranteed 5★ drops\n\n## Main Stats by Slot\n\n| Slot | Possible Main Stats |\n|------|-------------------|\n| Body | HP% / ATK% / DEF% / Outgoing Healing% / CRIT Rate% / CRIT DMG% |\n| Feet | HP% / ATK% / DEF% / SPD |\n| Planar Sphere | HP% / ATK% / DEF% / Elemental DMG% (Fire, Ice, Lightning, Wind, Physical, Quantum, Imaginary) |\n| Link Rope | HP% / ATK% / DEF% / Break Effect% / Energy Regeneration% |\n\n## Substats Explained\n\nEvery relic can have up to 4 substats (rolled from this pool):\n- CRIT Rate, CRIT DMG, SPD, HP%, ATK%, DEF%, Break Effect%, Effect Hit Rate%, Effect RES\n\n### Substat Priority by Role\n\n| Role | Priority |\n|------|----------|\n| DPS | CRIT Rate > CRIT DMG > SPD > ATK% |\n| Support | SPD > HP%/DEF% > Effect RES > Effect Hit Rate |\n| Sustain | SPD > HP%/DEF% > Outgoing Healing > Effect RES |\n| Break | Break Effect > SPD > HP%/DEF% > Effect Hit Rate |\n\n## Best Relic Sets by Path\n\n### Destruction\n- **4-piece**: Champion of Streetwise Boxing (stacking ATK)\n- **2-piece Planar**: Space Sealing Station or Rutilant Arena\n\n### Hunt (Single-target DPS)\n- **4-piece**: Wastelander of Banditry Desert or Musketeer of Wild Wheat\n- **2-piece Planar**: Rutilant Arena or Space Sealing Station\n\n### Erudition (AoE DPS)\n- **4-piece**: Genius of Brilliant Stars (DEF ignore) or Wastelander\n- **2-piece Planar**: Rutilant Arena or Space Sealing Station\n\n### Harmony (Buffer)\n- **4-piece**: Messenger Traversing Hackerspace (SPD team buff)\n- **2-piece Planar**: Fleet of the Ageless or Broken Keel\n\n### Nihility (Debuffer)\n- **4-piece**: Prisoner in Deep Confinement or Eagle\n- **2-piece Planar**: Pan-Cosmic Commercial Enterprise or Fleet of the Ageless\n\n### Preservation (Shielder)\n- **4-piece**: Knight of Purity Palace\n- **2-piece Planar**: Fleet of the Ageless or Belobog of the Architects\n\n### Abundance (Healer)\n- **4-piece**: Longevous Disciple or Passerby of Wandering Cloud\n- **2-piece Planar**: Fleet of the Ageless or Broken Keel\n\n## Farming Efficiency\n\n### Where to Farm\n- **Cavern of Corrosion**: 4-piece relic sets (costs 40 Trailblaze Power per run)\n- **Simulated Universe**: 2-piece planar ornaments (free, uses Trailblaze Power only for Immersifiers)\n\n### Tips for Efficient Farming\n1. **Farm Simulated Universe weekly** — use your free Immersifiers first\n2. **Focus on main stat** before worrying about substats — a correct main stat with bad substats is still usable\n3. **Keep relics with 3+ desired substats** — these have higher upgrade potential\n4. **Use the Relic Scorer** to check if your builds are optimal\n5. **Don't over-farm early** — pre-farm at Equilibrium 5+ for best efficiency\n\n## Common Mistakes\n\n1. **Ignoring SPD** — Speed is crucial for turn order; most supports want 134+ SPD\n2. **Wrong main stat on Body** — DPS characters almost always want CRIT Rate or CRIT DMG\n3. **Mixing sets randomly** — set bonuses are significant; try to complete 4-piece + 2-piece combos\n4. **Upgrading bad relics** — if a relic rolls Effect RES on your DPS, it's likely not worth maxing",
     "tags": [
@@ -167,14 +225,14 @@
       {
         "question": "What are the best relics in Honkai: Star Rail?",
         "questionZh": "崩坏：星穹铁道最好的遗器是什么？",
-        "answer": "Best relics depend on the character's path. DPS characters want Champion of Streetwise Boxing or Wastelander; supports want Messenger Traversing Hackerspace; healers want Longevous Disciple. Always match main stats to role.",
-        "answerZh": "最好的遗器取决于角色命途。输出位推荐街亭拳王或废土客，辅助推荐骇域漫游信使，治疗推荐长寿学习者。主词条务必匹配角色定位。"
+        "answer": "There is no permanent best relic set by Path alone. Start with the character's damage or support scaling, required speed and energy thresholds, then verify current set effects and available alternatives in-game.",
+        "answerZh": "没有只按命途就能确定的永久最佳遗器。先看角色的伤害或辅助倍率、速度与充能阈值，再在游戏内核对当前套装效果和可用替代。"
       },
       {
         "question": "How do I get 5-star relics in HSR?",
         "questionZh": "星穹铁道怎么获得5星遗器？",
-        "answer": "Farm Cavern of Corrosion at Equilibrium Level 5+ for guaranteed 5★ drops. Simulated Universe also provides 5★ planar ornaments. Use Trailblaze Power efficiently.",
-        "answerZh": "在均衡等级5+的腐蚀隧道刷取必掉5星遗器。模拟宇宙也提供5星位面饰品。合理使用开拓力。"
+        "answer": "Use the live relic and planar-farming interfaces to check current difficulties, rewards, and costs. Prioritize the next meaningful main-stat or set upgrade after character levels, Light Cones, and key traces are stable.",
+        "answerZh": "请在游戏内遗器与位面饰品刷取界面核对当前难度、掉落和消耗。角色等级、光锥和关键行迹稳定后，再优先补下一个有意义的主词条或套装升级。"
       }
     ]
   },

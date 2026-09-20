@@ -248,16 +248,45 @@
   {
     "id": "damage-formula-guide",
     "title": "《明日方舟：终末地》伤害计算公式详解",
-    "titleEn": "Arknights: Endfield Damage Formula & Calculation Guide",
+    "titleEn": "Arknights: Endfield Damage Guide: Stats, Reactions & Live Formula Checks",
     "titleJa": "エンドフィールド ダメージ計算式まとめ — 火力を最大化する方法",
     "category": "combat",
     "categoryZh": "战斗攻略",
     "categoryEn": "Combat",
     "summary": "深入解析终末地的伤害计算公式，包括基础伤害、属性加成、抗性计算、暴击、Arts Reaction伤害等。",
-    "summaryEn": "Detailed breakdown of Endfield's damage formula including base damage, stat scaling, resistance, crits, and Arts Reaction damage calculations.",
+    "summaryEn": "Endfield damage-planning reference for stats, resistance, crits, and reaction concepts. Verify live formulas, stat scaling, and reaction behavior in the current client before optimizing a build.",
     "summaryJa": "エンドフィールドのダメージ計算式を完全解説。基礎ダメージ、ステータス倍率、耐性、クリティカル、Arts Reactionの仕組みを理解して火力を最適化。",
     "content": "## 伤害类型\n\n终末地有以下伤害类型：\n- **Physical DMG** — 白色数字，受DEF减免\n- **Heat DMG** — 红色数字\n- **Cryo DMG** — 青色数字\n- **Nature DMG** — 绿色数字\n- **Electric DMG** — 黄色数字\n- **Arts DMG** — 元素伤害的统称\n\n## 核心属性\n\n### 6大基础属性\n\n| 属性 | 作用 |\n|------|------|\n| HP | 生命值 |\n| ATK | 攻击力，影响所有伤害 |\n| STR (Strength) | 影响Physical DMG和DEF |\n| AGL (Agility) | 影响CRIT Rate和闪避 |\n| INT (Intellect) | 影响Arts DMG |\n| WIL (Will) | 影响Treatment效果和Ultimate增益 |\n\n### 关键二级属性\n\n- **CRIT Rate** — 基础5%，受AGL和装备影响\n- **CRIT DMG** — 暴击伤害倍率\n- **Arts Intensity** — 每点增加1% Arts DMG\n- **Stagger Efficiency** — 影响失衡效果\n- **DMG Reduction** — 伤害减免\n\n## Arts Reaction 伤害计算\n\n### 初始基础Arts DMG\n\n触发Arts Reaction时的初始伤害受以下因素影响：\n\n1. **等级倍率**: `(195 + 角色等级) / 196` — 每级约增加0.51%\n2. **Arts Intensity倍率**: `(100 + Arts Intensity) / 100` — 每点AI增加1%\n\n### 公式\n\n`最终伤害 = 基础Arts DMG × 等级倍率 × Arts Intensity倍率 × 抗性系数 × 增伤系数`\n\n### Combustion DOT\n\n燃烧反应每秒造成Heat DMG，持续10秒，伤害量受Status Level影响。\n\n## 提升伤害的方法\n\n1. **提升ATK** — 基础乘区\n2. **提升对应属性** — STR(Physical) / INT(Arts) 专属乘区\n3. **Arts Intensity** — Arts DMG独立乘区\n4. **CRIT Rate/DMG** — 暴击乘区\n5. **Arts Reaction** — 反应乘区\n6. **装备套装效果** — 各种专属加成\n7. **降低敌人抗性** — Corrosion等debuff",
     "contentEn": "## Damage Types\n\nEndfield features the following damage types:\n- **Physical DMG** — White numbers, reduced by DEF\n- **Heat DMG** — Red numbers\n- **Cryo DMG** — Cyan numbers\n- **Nature DMG** — Green numbers\n- **Electric DMG** — Yellow numbers\n- **Arts DMG** — Collective term for elemental damage\n\n## Core Stats\n\n### 6 Base Stats\n\n| Stat | Role |\n|------|------|\n| HP | Health Points |\n| ATK | Attack Power, affects all damage |\n| STR (Strength) | Affects Physical DMG and DEF |\n| AGL (Agility) | Affects CRIT Rate and evasion |\n| INT (Intellect) | Affects Arts DMG |\n| WIL (Will) | Affects Treatment and Ultimate增益 |\n\n### Key Secondary Stats\n\n- **CRIT Rate** — Base 5%, affected by AGL and gear\n- **CRIT DMG** — Critical damage multiplier\n- **Arts Intensity** — Each point increases Arts DMG by 1%\n- **Stagger Efficiency** — Affects stagger effects\n- **DMG Reduction** — Reduces incoming damage\n\n## Arts Reaction Damage Calculation\n\n### Initial Base Arts DMG\n\nThe initial damage from triggering an Arts Reaction is affected by:\n\n1. **Level Multiplier**: `(195 + Operator Level) / 196` — ~0.51% per level\n2. **Arts Intensity Multiplier**: `(100 + Arts Intensity) / 100` — +1% per AI point\n\n### Formula\n\n`Final DMG = Base Arts DMG × Level Multiplier × Arts Intensity Multiplier × Resistance Factor × DMG Bonus Factor`\n\n### Combustion DOT\n\nCombustion deals Heat DMG per second for 10s. Damage amount scales with Status Level.\n\n## Ways to Increase Damage\n\n1. **Increase ATK** — Base multiplier\n2. **Increase relevant stat** — STR (Physical) / INT (Arts) dedicated multiplier\n3. **Arts Intensity** — Independent Arts DMG multiplier\n4. **CRIT Rate/DMG** — Critical multiplier\n5. **Arts Reactions** — Reaction multiplier\n6. **Gear Set effects** — Various dedicated bonuses\n7. **Reduce enemy resistance** — Corrosion and other debuffs",
+    "updatedAt": "2026-09-20",
+    "currentVersion": "Endfield damage-planning reference; verify live formulas and reaction behavior",
+    "serpTitle": {
+      "en": "Endfield Damage Guide: Stats, Reactions & Formula Checks",
+      "zh": "明日方舟：终末地伤害指南：属性、反应与公式核对",
+      "ja": "エンドフィールド火力ガイド：ステータス、反応、計算確認"
+    },
+    "serpDescription": {
+      "en": "Plan Endfield damage around role, stats, resistance, crits, and reactions. Check current in-game formulas, scaling, and enemy behavior before committing upgrade resources.",
+      "zh": "按角色定位、属性、抗性、暴击和反应规划终末地伤害；投入培养资源前，请在游戏内核对当前公式、倍率与敌人机制。",
+      "ja": "役割、ステータス、耐性、会心、反応でエンドフィールドの火力を計画。育成資源を使う前に、現行の計算式、倍率、敵の挙動をゲーム内で確認します。"
+    },
+    "quickFacts": {
+      "en": [
+        "Test one damage change at a time: stat, gear effect, reaction setup, or enemy state.",
+        "Use current in-game skill and enemy details when comparing upgrades.",
+        "A build should be judged by its rotation and target content, not a formula alone."
+      ],
+      "zh": [
+        "每次只测试一个伤害变量：属性、装备效果、反应条件或敌人状态。",
+        "比较培养收益时，以游戏内当前技能与敌人详情为准。",
+        "配装应结合循环和目标内容判断，不能只看单一公式。"
+      ],
+      "ja": [
+        "ステータス、装備効果、反応条件、敵状態のいずれか一つずつを検証します。",
+        "育成比較にはゲーム内の現行スキルと敵詳細を使います。",
+        "ビルドは単一式だけでなく、循環と対象コンテンツで判断します。"
+      ]
+    },
     "tags": [
       "伤害",
       "公式",
@@ -271,28 +300,57 @@
       {
         "question": "How does ATK affect damage in Endfield?",
         "questionZh": "ATK如何影响终末地的伤害？",
-        "answer": "ATK is the base multiplier for all damage types. Skills and reactions scale off ATK. Increasing ATK benefits both Physical and Arts damage.",
-        "answerZh": "ATK是所有伤害类型的基础乘区。技能和反应都以ATK为基础计算。提升ATK同时增加Physical和Arts伤害。"
+        "answer": "ATK is one input in an operator's damage calculation, but the live skill description, scaling stat, enemy defenses, and reaction state determine whether an ATK upgrade is the best next investment. Compare those values in the current client.",
+        "answerZh": "ATK 是干员伤害计算中的一个输入，但是否优先提升还取决于当前技能说明、倍率属性、敌方防御和反应状态。请在现行客户端中对照这些数值。"
       },
       {
         "question": "What is Arts Intensity?",
         "questionZh": "Arts Intensity是什么？",
-        "answer": "Arts Intensity increases Arts DMG by 1% per point. It affects initial Arts Reaction damage and is a key stat for Caster builds.",
-        "answerZh": "每点Arts Intensity增加1%的Arts DMG。它影响Arts Reaction的初始伤害，是术师Build的核心属性。"
+        "answer": "Arts Intensity is an Arts-focused stat. Check its current tooltip, the operator's skill scaling, and the reaction you are trying to trigger before ranking it against ATK, crit, or other upgrades.",
+        "answerZh": "Arts Intensity 是面向法术伤害的属性。把它与 ATK、暴击或其他培养项比较前，请先核对当前说明、干员技能倍率和计划触发的反应。"
       }
     ]
   },
   {
     "id": "gear-guide",
     "title": "《明日方舟：终末地》装备系统与Gear套装选择指南",
-    "titleEn": "Arknights: Endfield Gear System & Best Gear Sets Guide",
+    "titleEn": "Arknights: Endfield Gear Guide: Sets, Roles & Live Effect Checks",
     "category": "equipment",
     "categoryZh": "装备攻略",
     "categoryEn": "Equipment",
     "summary": "详解终末地装备系统，包含22套Gear套装效果一览、最佳套装推荐、装备制作材料和Artificing精炼系统。",
-    "summaryEn": "Complete guide to Endfield's gear system with all 22 gear set effects, best set recommendations, crafting costs, and Artificing upgrade system.",
+    "summaryEn": "Endfield gear-planning guide for set roles, crafting decisions, and upgrade order. Verify current set effects, costs, and Artificing behavior in-game before treating a set as best-in-slot.",
     "content": "## 装备系统概述\n\n每个干员可装备4件装备：1件Armor、1双Gloves、2个Kit。装备提供DEF和多种属性加成。\n\n### 装备制作\n\n在Gear Assembly菜单中使用Component材料和Stock Bills制作。大多数配方通过Authority Level解锁。\n\n### 装备等级与材料\n\n| 等级 | 材料 |\n|------|------|\n| 10 | Wood x2, Origocrust x10 |\n| 20 | Amethyst Component x5, Valley Stock Bill x30 |\n| 28 | Amethyst Component x20, Valley Stock Bill x160 |\n| 36 | Ferrium Component x50, Valley Stock Bill x1200 |\n| 50 | Cryston Component x50, Valley Stock Bill x9600 |\n| 70 | Xiranite/Cuprium/Hetonite Component x50, Wuling Stock Bill x8000-25000 |\n\n## 套装效果一览\n\n### SS级套装\n\n1. **Æthertech (源石技艺)** — ATK+8%，施加Vulnerable后Physical DMG+8%/层(4层)，满4层Vulnerable时额外+16%\n2. **Bonekrusha (碎骨者)** — ATK+15%，连携技后下一次战技DMG+30%(2层)\n3. **Pulser Labs (脉冲实验室)** — Arts Intensity+30，Electric/Cryo DMG+50%\n4. **Hot Work (热工)** — Arts Intensity+30，Heat/Nature DMG+50%\n5. **Xiranflow (锡兰流)** — ATK+10%，消耗Electric/Nature反应后DMG+15%/层(3层)\n6. **Grizzled Edge (苍刃)** — ATK+8%，Crush/Breach时Physical DMG+[6%×Vulnerable层数]\n\n### S级套装\n\n- **Aburrey's Legacy** — Skill DMG+24%，三技能类型独立ATK+5%\n- **LYNX** — 治疗+20%，目标获得15-30% DMG Reduction\n- **Swordmancer** — Stagger+20%，Physical Status额外250%ATK伤害\n- **Frontiers** — 连携CDR+15%，SP回复后全队DMG+16%\n- **MI Security** — CRIT+5%，暴击后ATK+5%(5层)，满层额外CRIT+5%\n- **Type 50 Yinglung** — ATK+15%，队友战技触发连携技DMG+20%(3层)\n- **Eternal Xiranite** — HP+1000，施加debuff时队友DMG+16%\n- **Qingbo** — 连携CDR+15%，连携技后Skill DMG+20%(2层)\n- **Tide Surge** — Skill DMG+20%，2层以上Arts Infliction后Arts DMG+35%\n\n## Artificing 精炼系统\n\n解锁条件：完成Wuling City的Gear Artificing任务。\n\n- 消耗一件金色装备和对应的Artificing Catalyst\n- 每个属性最多成功精炼3次（共9次）\n- 使用高基础值材料（Good Match）提高成功率\n- 失败会增加精炼进度，进度满后下次必定成功\n\n## 推荐配装\n\n| 职业 | 推荐套装 |\n|------|----------|\n| Guard (物理) | Æthertech / Grizzled Edge / Swordmancer |\n| Guard (元素) | Tide Surge / Aburrey's Legacy |\n| Striker | Bonekrusha / Type 50 Yinglung / Qingbo |\n| Caster (Heat/Nature) | Hot Work / Xiranflow |\n| Caster (Electric/Cryo) | Pulser Labs |\n| Supporter | LYNX / Eternal Xiranite / Frontiers |\n| Defender | Armored MSGR / Eternal Xiranite |\n| Vanguard | Æthertech / Roving MSGR / Frontiers |",
     "contentEn": "## Gear System Overview\n\nEach operator can equip 4 gear pieces: 1 Armor, 1 pair of Gloves, and 2 Kits. Gear provides DEF and various stat bonuses.\n\n### Gear Crafting\n\nCraft gear in the Gear Assembly menu using Component materials and Stock Bills. Most recipes unlock through Authority Levels.\n\n### Gear Levels & Costs\n\n| Level | Cost |\n|-------|------|\n| 10 | Wood x2, Origocrust x10 |\n| 20 | Amethyst Component x5, Valley Stock Bill x30 |\n| 28 | Amethyst Component x20, Valley Stock Bill x160 |\n| 36 | Ferrium Component x50, Valley Stock Bill x1200 |\n| 50 | Cryston Component x50, Valley Stock Bill x9600 |\n| 70 | Xiranite/Cuprium/Hetonite Component x50, Wuling Stock Bill x8000-25000 |\n\n## Gear Set Effects\n\n### SS-Tier Sets\n\n1. **Æthertech** — ATK +8%, Physical DMG +8%/stack (4 stacks) on Vulnerability application. Extra +16% at 4 Vulnerability stacks.\n2. **Bonekrusha** — ATK +15%, next battle skill DMG +30% after combo skill (2 stacks).\n3. **Pulser Labs** — Arts Intensity +30, Electric/Cryo DMG +50%.\n4. **Hot Work** — Arts Intensity +30, Heat/Nature DMG +50%.\n5. **Xiranflow** — ATK +10%, Electric/Nature DMG +15%/stack (3 stacks) on reaction consumption.\n6. **Grizzled Edge** — ATK +8%, Physical DMG +[6% × Vulnerable stacks consumed] on Crush/Breach.\n\n### S-Tier Sets\n\n- **Aburrey's Legacy** — Skill DMG +24%, independent ATK +5% from each skill type.\n- **LYNX** — Treatment +20%, targets gain 15-30% DMG Reduction.\n- **Swordmancer** — Stagger +20%, Physical Status triggers 250% ATK bonus hit.\n- **Frontiers** — Combo CDR +15%, team DMG +16% on SP recovery.\n- **MI Security** — CRIT +5%, ATK +5% on crit (5 stacks), extra CRIT +5% at max.\n- **Type 50 Yinglung** — ATK +15%, combo DMG +20%/stack (3 stacks) from team skills.\n- **Eternal Xiranite** — HP +1000, teammates DMG +16% on debuff application.\n- **Qingbo** — Combo CDR +15%, Skill DMG +20%/stack (2 stacks) on combo.\n- **Tide Surge** — Skill DMG +20%, Arts DMG +35% with 2+ Arts Infliction stacks.\n\n## Artificing System\n\nUnlocked by completing the Gear Artificing mission in Wuling City.\n\n- Costs one gold-quality gear + matching Artificing Catalyst\n- Each stat can be successfully upgraded up to 3 times (9 total per piece)\n- Higher base value material (Good Match) increases success rate\n- Failed attempts add Artificing Progress; full progress guarantees next success\n\n## Recommended Sets by Class\n\n| Class | Recommended Sets |\n|-------|-----------------|\n| Guard (Physical) | Æthertech / Grizzled Edge / Swordmancer |\n| Guard (Elemental) | Tide Surge / Aburrey's Legacy |\n| Striker | Bonekrusha / Type 50 Yinglung / Qingbo |\n| Caster (Heat/Nature) | Hot Work / Xiranflow |\n| Caster (Electric/Cryo) | Pulser Labs |\n| Supporter | LYNX / Eternal Xiranite / Frontiers |\n| Defender | Armored MSGR / Eternal Xiranite |\n| Vanguard | Æthertech / Roving MSGR / Frontiers |",
+    "updatedAt": "2026-09-20",
+    "currentVersion": "Endfield gear-planning reference; verify live set effects, costs, and upgrades",
+    "serpTitle": {
+      "en": "Endfield Gear Guide: Sets, Roles, Crafting & Upgrade Checks",
+      "zh": "明日方舟：终末地装备指南：套装、定位、制作与强化核对",
+      "ja": "エンドフィールド装備ガイド：セット、役割、製作、強化確認"
+    },
+    "serpDescription": {
+      "en": "Choose Endfield gear by operator role, rotation, and target content. Verify live set effects, crafting costs, and Artificing details before committing resources.",
+      "zh": "按干员定位、循环和目标内容选择终末地装备；投入资源前请核对游戏内当前套装效果、制作成本和 Artificing 规则。",
+      "ja": "役割、循環、対象コンテンツでエンドフィールド装備を選択。資源を使う前に現行セット効果、製作コスト、Artificingの詳細をゲーム内で確認します。"
+    },
+    "quickFacts": {
+      "en": [
+        "Choose gear for the operator's role and rotation before chasing a named best set.",
+        "Compare the next upgrade against its live cost and the content you are clearing.",
+        "Set effects and Artificing behavior should be verified in-game after patches."
+      ],
+      "zh": [
+        "先按干员定位与循环选装备，再追某个固定的最佳套装。",
+        "将下一次强化的当前成本与要挑战的内容一起比较。",
+        "版本更新后请在游戏内核对套装效果和 Artificing 规则。"
+      ],
+      "ja": [
+        "特定の最適セットを追う前に、役割と循環に合わせて装備を選びます。",
+        "次の強化は現行コストと挑戦するコンテンツを合わせて比較します。",
+        "パッチ後はセット効果とArtificingの挙動をゲーム内で確認してください。"
+      ]
+    },
     "tags": [
       "装备",
       "Gear",
@@ -305,14 +363,14 @@
       {
         "question": "What is the best gear set for Physical DPS?",
         "questionZh": "物理输出最佳Gear套装是什么？",
-        "answer": "Æthertech is the best for Physical DPS, offering ATK +8% and scaling Physical DMG based on Vulnerability stacks. Grizzled Edge is also excellent for Crush/Breach focused builds.",
-        "answerZh": "Æthertech是物理输出的最佳选择，提供ATK+8%和基于Vulnerable层数的Physical DMG。专注于Crush/Breach的Build也很适合Grizzled Edge。"
+        "answer": "There is no permanent best set for every Physical DPS. Start from the operator's rotation, the statuses they can maintain, and the target encounter; then compare the current in-game set effects and costs before crafting or upgrading.",
+        "answerZh": "不存在适用于所有物理输出的永久最佳套装。先看干员循环、能够稳定维持的状态和目标关卡，再依据游戏内当前套装效果与成本决定制作或强化。"
       },
       {
         "question": "How does the Artificing system work?",
         "questionZh": "Artificing精炼系统怎么运作？",
-        "answer": "Artificing lets you upgrade gold gear stats. Each attempt costs one gold gear + a Catalyst. Use higher-value gear as material for better success rates. Each stat can be upgraded 3 times (9 total per piece).",
-        "answerZh": "Artificing可以强化金色装备属性。每次消耗一件金装+Catalyst。使用更高基础值的材料提高成功率。每个属性最多强化3次（每件9次）。"
+        "answer": "Artificing is the gear-upgrade system. Open its current in-game interface before investing: confirm eligible gear, materials, success or progress rules, and the expected value of the next upgrade for that operator.",
+        "answerZh": "Artificing 是装备强化系统。投入前请打开游戏内当前界面，确认可强化装备、材料、成功或进度规则，以及这次强化对该干员的实际收益。"
       }
     ]
   },
