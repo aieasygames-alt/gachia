@@ -10,7 +10,7 @@ import type { TierListGroup } from '@/lib/game-data/tier-lists';
 const BASE_URL = 'https://gachia.com';
 
 const TIER_DESC: Record<string, Record<string, string>> = {
-  genshin: { zh: '2026年原神角色强度排行，覆盖深渊与大世界综合评级，提供SS/S/A/B分级、主流配队参考和每月更新的培养优先级建议。', en: 'Genshin Impact character tier list (2026) with SS to B rankings for Spiral Abyss and overworld, plus team context, build priority, and monthly updates.', ja: '2026年原神キャラTierリスト。深境螺旋と大世界の総合評価、SS/S/A/B分類、編成参考、毎月更新を掲載。' },
+  genshin: { zh: '原神角色强度参考，按深渊、大世界与队伍依赖整理 SS 至 B 分级。结构化数据最后更新于 2026-06-28，抽卡或养成前请核对当前版本与配队条件。', en: 'Genshin Impact character tier reference with SS to B groups for Spiral Abyss, overworld, and team dependence. Structured data was last updated on 2026-06-28; verify current patch and teams before investing.', ja: '原神キャラ評価の参考。深境螺旋、大世界、編成依存をSSからBで整理。構造化データは2026-06-28更新のため、育成前に現行版本と編成条件を確認してください。' },
   starrail: { zh: '崩坏：星穹铁道角色强度参考，按忘却之庭、虚构叙事、末日幻影与队伍依赖解读。查看更新时间和配队条件后，再决定培养或抽取。', en: 'Honkai: Star Rail character tier reference with Memory of Chaos, Pure Fiction, Apocalyptic Shadow, and team-dependence context. Check the data date and team conditions before investing.', ja: '崩壊：スターレイルのキャラ評価参考。忘却の庭、虚構叙事、末日幻影、編成依存を整理し、更新日と条件を確認してから育成を判断します。' },
   wuwa: { zh: '2026年鸣潮角色强度排行，覆盖全角色综合评级、SS/S/A/B分级、主流玩法与培养优先级，帮助你把资源投到最值得的角色上。', en: 'Wuthering Waves character tier list (2026) with SS to B rankings for endgame and exploration value, plus build priority and team context.', ja: '2026年鳴潮キャラTierリスト。全キャラの総合評価、SS/S/A/B分類、育成優先度、編成参考を掲載。' },
   nte: { zh: '异环角色强度排行，覆盖SS/S+/A+/A/B分级、场景表现和推荐优先级，帮助你在抽卡与养成前快速判断角色价值。', en: 'Neverness to Everness character tier list (2026) with SS to B rankings, content performance, and investment priority for pull planning.', ja: '異環キャラTierリスト。SS/S+/A+/A/B評価、場面別性能、育成優先度を整理しています。' },
@@ -69,6 +69,8 @@ export async function generateMetadata({
       ? `${gameName}角色强度排行 — SS/S/A/B分级 | 攻略`
       : locale === 'ja'
         ? `${gameName}キャラTierリスト 2026 — SS/S/A/B評価`
+      : gameId === 'genshin' || gameId === 'starrail'
+        ? `${gameName} Character Tier Reference — Roles, Teams & Data Date`
         : `${gameName} Character Tier List 2026 — Best Characters SS/S/A/B Ranked`;
 
   const description = ensureMetaLength(
@@ -102,13 +104,18 @@ export default async function TierListPage({
   const gameConfig = GAMES[gameId];
 
   if (gameId === 'genshin') {
-    return <GenshinTierListClient locale={locale} />;
+    return (
+      <div>
+        <TierDataNotice gameId="genshin" locale={locale} />
+        <GenshinTierListClient locale={locale} />
+      </div>
+    );
   }
 
   if (gameId === 'starrail') {
     return (
       <div>
-        <StarRailTierDataNotice locale={locale} />
+        <TierDataNotice gameId="starrail" locale={locale} />
         <StarRailTierListClient locale={locale} />
       </div>
     );
@@ -160,9 +167,10 @@ export default async function TierListPage({
   );
 }
 
-function StarRailTierDataNotice({ locale }: { locale: SupportedLocale }) {
+function TierDataNotice({ gameId, locale }: { gameId: 'genshin' | 'starrail'; locale: SupportedLocale }) {
+  const gameName = gameId === 'genshin' ? '原神' : '崩坏：星穹铁道';
   const copy = locale === 'zh'
-    ? '当前结构化评级数据最后更新于 2026-06-28。它适合作为角色定位和旧队伍参考，但不应替代当前版本的卡池、敌人环境或实战配队判断。'
+    ? `${gameName}当前结构化评级数据最后更新于 2026-06-28。它适合作为角色定位和旧队伍参考，但不应替代当前版本的卡池、敌人环境或实战配队判断。`
     : locale === 'ja'
       ? '現在の構造化評価データの最終更新日は2026-06-28です。役割や旧編成の参考には使えますが、現行バナー、敵編成、実戦の編成判断の代わりにはなりません。'
       : 'The structured rating data was last updated on 2026-06-28. Use it for role and legacy-team reference, not as a substitute for current banners, enemy rotations, or live team decisions.';

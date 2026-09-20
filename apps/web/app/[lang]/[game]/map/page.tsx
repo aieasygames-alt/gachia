@@ -18,6 +18,11 @@ const REGION_ICONS: Record<string, string> = {
 const BASE_URL = 'https://gachia.com';
 
 const MAP_META_TITLES: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
+  aniimo: {
+    zh: '伊莫地图指南｜已公开区域、精灵线索与上线后核验',
+    en: 'Aniimo Map Guide — Public Regions, Creature Leads & Launch Checks',
+    ja: 'アニモマップガイド｜公開地域・生物の手掛かり・リリース後確認',
+  },
   roco: {
     zh: '洛克王国：世界国际服地图｜CBT 区域、捕捉点与探索路线',
     en: 'Roco Kingdom Global Map — CBT Regions, Capture Spots & Routes',
@@ -41,6 +46,11 @@ const MAP_META_TITLES: Partial<Record<GameId, Record<SupportedLocale, string>>> 
 };
 
 const MAP_META_DESCRIPTIONS: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
+  aniimo: {
+    zh: '伊莫地图指南，整理已公开区域、代表精灵、探索线索与上线后需要核验的出没条件。本页不是逐点位互动地图；查精灵、奖励和新手路线请继续进入相关页面。',
+    en: 'Aniimo region map guide for public regions, representative creatures, exploration leads, and launch-day spawn checks. This is not a marker-by-marker interactive map; continue to creature, reward, and beginner routes.',
+    ja: 'アニモの地域マップガイド。公開地域、代表生物、探索の手掛かり、リリース後に確認する出現条件を整理します。ピン単位のインタラクティブマップではありません。',
+  },
   roco: {
     zh: '洛克王国：世界国际服地图入口，当前用于追踪 CBT 区域、已曝光精灵、捕捉点、地图路线和上线后点位核验。继续查看精灵图鉴、CBT 专题、法杖与攻略。',
     en: 'Roco Kingdom global map hub for CBT regions, revealed Jinies, capture spots, exploration routes, and launch verification. Continue into Jinies, CBT hub, staves, and guides.',
@@ -202,7 +212,7 @@ function RegionMapPage({ data, locale }: { data: MapPageData; locale: SupportedL
       </div>
 
       {data.gameId === 'nte' && <NteLocationAnchors locale={locale} />}
-      {(data.gameId === 'wuwa' || data.gameId === 'starrail') && <MapIntentPanel gameId={data.gameId} locale={locale} />}
+      {(data.gameId === 'wuwa' || data.gameId === 'starrail' || data.gameId === 'aniimo') && <MapIntentPanel gameId={data.gameId} locale={locale} />}
       <div className="space-y-6">
         {data.regions.map((region) => (
           <RegionCard key={region.id} region={region} gameId={data.gameId} locale={locale} />
@@ -213,7 +223,25 @@ function RegionMapPage({ data, locale }: { data: MapPageData; locale: SupportedL
 }
 
 function MapIntentPanel({ gameId, locale }: { gameId: GameId; locale: SupportedLocale }) {
-  const links = gameId === 'wuwa'
+  const links = gameId === 'aniimo'
+    ? [
+        {
+          href: '/aniimo/characters',
+          label: { zh: '伊莫图鉴', en: 'Aniimo index', ja: 'アニモ図鑑' },
+          desc: { zh: '按已公开信息继续查精灵条目与待核验字段。', en: 'Check creature entries and fields still awaiting verification.', ja: '生物一覧と確認待ちの情報を確認。' },
+        },
+        {
+          href: '/aniimo/redeem-codes',
+          label: { zh: '奖励与兑换码', en: 'Rewards and codes', ja: '報酬とコード' },
+          desc: { zh: '区分预注册奖励与尚未确认的兑换码。', en: 'Separate pre-registration rewards from unconfirmed codes.', ja: '事前登録報酬と未確認コードを分けて確認。' },
+        },
+        {
+          href: '/aniimo/guides/beginner-guide',
+          label: { zh: '新手路线', en: 'Beginner route', ja: '初心者ルート' },
+          desc: { zh: '把区域信息接到上线后的开荒顺序。', en: 'Connect region information to a launch-day progression route.', ja: '地域情報をリリース後の進行順へつなげます。' },
+        },
+      ]
+    : gameId === 'wuwa'
     ? [
         {
           href: '/wuwa/guides/roya-frostlands-guide',
@@ -252,12 +280,20 @@ function MapIntentPanel({ gameId, locale }: { gameId: GameId; locale: SupportedL
   return (
     <section className="mb-8 rounded-lg border border-game-border bg-game-surface p-4">
       <h2 className="mb-2 text-lg font-semibold text-game-text">
-        {gameId === 'wuwa'
+        {gameId === 'aniimo'
+          ? locale === 'zh' ? '伊莫地图怎么用' : locale === 'ja' ? 'アニモマップの使い方' : 'How to use this Aniimo map guide'
+          : gameId === 'wuwa'
           ? locale === 'zh' ? '鸣潮地图怎么用' : locale === 'ja' ? '鳴潮マップの使い方' : 'How to use this WuWa map guide'
           : locale === 'zh' ? '星球地图怎么用' : locale === 'ja' ? '星マップの使い方' : 'How to use this world map guide'}
       </h2>
       <p className="mb-4 text-sm leading-6 text-game-text-muted">
-        {gameId === 'wuwa'
+        {gameId === 'aniimo'
+          ? locale === 'zh'
+            ? '这里按已公开信息整理区域与代表精灵，不是逐点位、可筛选的互动地图。精确坐标、天气、时间和最终出没条件需要在上线后通过游戏内与官方来源核验。'
+            : locale === 'ja'
+              ? 'ここは公開情報に基づく地域と代表生物のガイドであり、ピン単位で絞り込めるインタラクティブマップではありません。正確な座標、天候、時間、最終出現条件はリリース後にゲーム内と公式情報で確認します。'
+              : 'This page organizes public regions and representative creatures. It is not a filterable, marker-by-marker interactive map; exact coordinates, weather, time, and final spawn rules need live-game and official verification after launch.'
+          : gameId === 'wuwa'
           ? locale === 'zh'
             ? '这里是区域路线与材料攻略页，不是完整点位交互地图。先确认区域、Boss、特产和探索提示，再进入材料图鉴或当前版本路线。'
             : locale === 'ja'
