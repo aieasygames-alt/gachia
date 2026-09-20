@@ -241,6 +241,26 @@ const TYPE_LABELS: Record<string, Record<string, string>> = {
 
 type LocaleMeta = Partial<Record<SupportedLocale, { title: string; description: string }>>;
 
+type ItemIntentContent = {
+  summary: Record<SupportedLocale, string>;
+  checks: Record<SupportedLocale, string[]>;
+};
+
+const ITEM_INTENT_CONTENT: Record<string, ItemIntentContent> = {
+  'wuwa/violet-coral': {
+    summary: {
+      zh: '紫珊瑚是鸣潮的区域特产材料。先在角色需求列表确认是否为当前培养目标所需，再用地图和野外采集路线集中收集；没有明确角色需求时，不必优先占用探索时间。',
+      en: 'Violet Coral is a Wuthering Waves local specialty. First confirm that a character you are building needs it, then use the map and overworld route to collect it in one pass. Do not make it an exploration priority without a current character need.',
+      ja: 'Violet Coralは鳴潮の地域特産素材です。育成中のキャラが必要かを先に確認し、必要な場合だけマップとフィールド採集ルートでまとめて集めましょう。',
+    },
+    checks: {
+      zh: ['先确认当前培养角色是否需要紫珊瑚。', '先处理角色突破瓶颈，再补探索采集。', '进地图前核对背包数量，避免重复跑图。'],
+      en: ['Confirm that your current build target needs Violet Coral.', 'Clear the ascension bottleneck before optional exploration farming.', 'Check your inventory before opening the map to avoid duplicate routes.'],
+      ja: ['現在育成しているキャラがViolet Coralを必要とするか確認。', '任意の探索採集より先に突破の不足を解消。', 'マップを開く前に所持数を確認し、重複ルートを避ける。'],
+    },
+  },
+};
+
 const ITEM_META_OVERRIDES: Record<string, LocaleMeta> = {
   'nte/tri-key': {
     zh: {
@@ -420,6 +440,7 @@ export default async function ItemDetailPage({
     : locale === 'ja'
       ? `${gameName}では、${data.name}は主にキャラクターのレベル突破とスキル強化に使用されます。メインアタッカーの突破素材を優先して集めることで、チーム全体の戦力を大きく向上させることができます。`
       : `In ${gameName}, ${data.name} is primarily used for character ascension and skill upgrades. Planning your material farming efficiently and prioritizing your main DPS ascension materials can significantly boost your team's overall strength.`;
+  const intentContent = ITEM_INTENT_CONTENT[`${gameId}/${id}`];
 
   return (
     <div>
@@ -449,6 +470,20 @@ export default async function ItemDetailPage({
       <div className="mb-4 rounded-lg border border-game-border bg-game-surface p-4">
         <p className="text-sm leading-relaxed text-game-text">{descText}</p>
       </div>
+
+      {intentContent && (
+        <section className="mb-4 rounded-lg border border-game-border bg-game-surface p-4">
+          <h2 className="mb-2 text-base font-semibold text-game-text">
+            {locale === 'zh' ? '先看结论' : locale === 'ja' ? '先に結論' : 'Quick answer'}
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-game-text-muted">{intentContent.summary[locale]}</p>
+          <ul className="grid gap-2 text-sm text-game-text-muted sm:grid-cols-3">
+            {intentContent.checks[locale].map((check) => (
+              <li key={check} className="rounded-md bg-game-surface-alt px-3 py-2">{check}</li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <div className="grid gap-4 sm:grid-cols-2">
         {typeLabel && (
