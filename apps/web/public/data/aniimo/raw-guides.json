@@ -88,7 +88,7 @@
   {
     "id": "codes-rewards",
     "title": "伊莫兑换码与上线奖励追踪",
-    "titleEn": "Aniimo Codes & Launch Rewards",
+    "titleEn": "Aniimo Codes: No Confirmed Public Codes & Launch Rewards",
     "category": "codes",
     "categoryZh": "兑换码与奖励",
     "categoryEn": "Codes",
@@ -119,7 +119,35 @@
         "answerJa": "Glimmer、Aniipod Ultra、Companion Promise アバターフレーム、Sunlit Meadow 衣装、Prismana Aniimo 選択報酬、Susuta 卵などが公開されています。"
       }
     ],
-    "updatedAt": "2026-08-30",
+    "updatedAt": "2026-09-20",
+    "currentVersion": "Aniimo code watchlist; no confirmed public redeem code",
+    "serpTitle": {
+      "en": "Aniimo Codes: No Confirmed Public Codes & Launch Rewards",
+      "zh": "伊莫兑换码：暂无已确认公开码与上线奖励",
+      "ja": "アニモコード：確認済み公開コードなし・リリース報酬"
+    },
+    "serpDescription": {
+      "en": "No public Aniimo redeem code is confirmed. Track official launch rewards, pre-registration milestones, and the official redemption flow separately from unverified code lists.",
+      "zh": "暂无已确认的公开伊莫兑换码。预注册、里程碑和上线奖励与可输入代码分开追踪，只有官方公告或游戏内入口可核验后才标为有效。",
+      "ja": "確認済みの公開アニモ交換コードはありません。事前登録、マイルストーン、リリース報酬は未確認コードと分け、公式告知またはゲーム内で確認後に有効扱いにします。"
+    },
+    "quickFacts": {
+      "en": [
+        "Current answer: no public Aniimo redeem code is confirmed.",
+        "Pre-registration and milestone rewards are not automatically redeemable code strings.",
+        "Treat a code as active only after it appears in an official notice or can be redeemed in the live client."
+      ],
+      "zh": [
+        "当前结论：暂无已确认的公开伊莫兑换码。",
+        "预注册与里程碑奖励不等于可输入的兑换字符串。",
+        "只有官方公告或游戏内可兑换后，才将代码标为有效。"
+      ],
+      "ja": [
+        "現在の結論：確認済みの公開アニモ交換コードはありません。",
+        "事前登録・マイルストーン報酬は、入力できる交換文字列とは別です。",
+        "公式告知またはゲーム内で交換できた場合のみ、有効として扱います。"
+      ]
+    },
     "titleJa": "Aniimo 交換コード・リリース報酬まとめ",
     "summaryJa": "現時点で、このサイトでは公開済みの Aniimo 交換コードを確認していません。事前登録報酬、マイルストーン報酬、リリースイベント報酬は実在する報酬ですが、必ずしもコード入力で受け取るとは限りません。公式が交換文字列を公開するか、ゲーム内に交換導線が出るまでは、コード情報は確認待ちとして扱います。",
     "contentJa": "## 現在 Aniimo の交換コードはありますか？\n\n現時点で、このサイトでは公開済みの Aniimo 交換コードを確認していません。「codes」と検索するユーザーは、事前登録報酬、マイルストーン報酬、リリースイベント報酬、本当の交換コードを混同しやすいです。前者は自動配布やイベントページ受け取りの場合があり、文字列入力が不要なこともあります。\n\n公式チャンネルがコードを公開する、ゲーム内に交換画面が出る、または公式サイトに交換ページが用意されるまでは、転載画像や出所不明のリストを有効コードとして扱わない方針です。\n\n## Aniimo コードの確認方法\n\n有効なコードは、公式ニュース、公式 SNS、プラットフォームキャンペーン、配信イベント、またはゲーム内交換画面にたどれる必要があります。配信後は、コード、報酬、地域制限、プラットフォーム制限、有効期限、交換手順、最終確認時刻をまとめるのが理想です。\n\n## 確認済みの報酬\n\n現在追跡している報酬には、Glimmer、Aniipod Ultra、Companion Promise アバターフレーム、Sunlit Meadow 衣装、Prismana Aniimo 選択報酬、謎の Susuta 卵があります。これらは報酬トラッカーに載せられますが、交換文字列がない限り「使用可能コード」とは表記しません。\n\n- 交換コード：現時点で確認済みの公開コードはありません。\n- 事前登録報酬：コードとは別枠で整理します。\n- 確認ルール：公式公開またはゲーム内交換確認後に有効扱いにします。"
@@ -203,12 +231,12 @@
   {
     "id": "map-regions",
     "title": "Aniimo 地图与区域指南",
-    "titleEn": "Aniimo Map & Region Guide",
+    "titleEn": "Aniimo Map Guide: Public Regions, Creature Leads & Launch Checks",
     "category": "map",
     "categoryZh": "地图与区域",
     "categoryEn": "Map",
     "summary": "Aniimo 地图指南把已公开区域整理成可搜索、可继续扩展的路线页面。每个区域会连接官方场景、代表 Aniimo、玩法机制和待验证事项。上线前不要把预告画面写成最终坐标表；上线后再补充刷新点、天气、时间段、Twine 能力和路线截图。",
-    "summaryEn": "The Aniimo map guide organizes known public regions into search-friendly route pages. Each region page connects official scenery, representative Aniimo, mechanics and verification notes. This is useful before launch because searchers often look for a creature, then need a region, route condition or related evolution line. The map page acts as the hub that connects those intents.",
+    "summaryEn": "Aniimo region guide for public areas, representative creatures, and launch-day verification. This is not a marker-by-marker interactive map; exact coordinates, filters, weather, and spawn rules require live-game confirmation.",
     "content": "## Aniimo 地图指南如何使用\n\nAniimo 地图指南把已公开区域整理成可搜索的路线页面。每个区域会连接官方场景、代表 Aniimo、相关机制和验证备注。上线前玩家通常会先搜索某个 Aniimo，再需要知道它可能在哪个区域、是否有天气或时间条件、是否与进化线相关。\n\n## 上线后哪些内容会变化？\n\n准确刷新点、时间段、天气条件、移动限制和 Twine 能力要求，都需要等玩家进入正式版本后验证。当前地图页不把预览画面当成最终坐标表，而是先区分“已公开区域名”和“仍待实测路线”。\n\n## 地图后续升级重点\n\n上线后，最有价值的地图升级会是坐标、路线截图、天气筛选、时间筛选、Twine 能力要求，以及从区域页到相关 Aniimo 图鉴页的内链。这样既方便玩家查路线，也方便搜索引擎理解地点、属性、定位和进化线的关系。\n\n- Mistwoods：枯枝与雾气中的森林区域，可追踪 Emberpup、Iris、Leafy。\n- Echoback Landing：围绕搁浅巨型 Aniimo 与歌声线索的区域。\n- Sea of Flowers：花海与香氛村落，适合连接花系和飞行类 Aniimo。\n- Blitzwood：雷电现象明显，是电系 Aniimo 路线的重点。\n- Nimbus Fields：草地、云层与开放移动路线相关。\n- Forest of Falling Stars：与 Celestis、Stellarys、Susuta 等稀有条目相关。",
     "contentEn": "## How the Aniimo map guide works\n\nThe Aniimo map guide organizes known public regions into search-friendly route pages. Each region page connects official scenery, representative Aniimo, mechanics and verification notes. This is useful before launch because searchers often look for a creature, then need a region, route condition or related evolution line. The map page acts as the hub that connects those intents.\n\n## What can change after launch?\n\nExact spawn points, time windows, weather requirements and traversal locks should be verified after players can test the live game. The current map avoids pretending that preview footage is a final coordinate table. Instead, it separates confirmed region names and public mechanics from launch-day route details that still need in-game confirmation.\n\n## Best next map upgrades\n\nAfter launch, the strongest map upgrades will be coordinates, route screenshots, weather filters, time-of-day filters, required Twine abilities and internal links from every region to related Aniimo pages. That structure helps both players and search crawlers understand the relationship between locations, elements, roles and evolution lines.\n\n- Mistwoods: An off-key singing echoes among withered twigs, while swamp mists and glimmer fruits guide lost travelers.\n- Echoback Landing: A stranded giant Aniimo waits away from the sea, with answers hidden in the enchanting Echoback singing.\n- Sea of Flowers: Endless flowers paint the landscape, surrounding a perfume village that has lived beside Aniimo for generations.\n- Blitzwood: Thunder drawn by Bolties carves scorched furrows through grassy slopes as electric sparks crackle in the woods.\n- Nimbus Fields: Soft clouds caress thick grassland, where field Aniimo move through open routes and sky-adjacent paths.\n- Forest of Falling Stars: Upstream from the forest, Celestises glide among starine trees like tiny shooting stars.",
     "tags": [
@@ -234,7 +262,35 @@
         "answerJa": "確認済みの項目は公式 Wiki の属性、役割、段階ラベルを使用します。索引のみ同期した項目は確認待ちとして扱います。"
       }
     ],
-    "updatedAt": "2026-08-30",
+    "updatedAt": "2026-09-20",
+    "currentVersion": "Aniimo public-region reference; live map coordinates and spawns require verification",
+    "serpTitle": {
+      "en": "Aniimo Map Guide: Public Regions, Creature Leads & Launch Checks",
+      "zh": "伊莫地图指南：已公开区域、精灵线索与上线核验",
+      "ja": "アニモマップガイド：公開地域・生物の手掛かり・配信後確認"
+    },
+    "serpDescription": {
+      "en": "Explore public Aniimo regions and creature leads. This is not a marker-by-marker interactive map; exact coordinates, filters, weather, and spawn rules need live-game verification.",
+      "zh": "查看伊莫已公开区域与精灵线索。本页不是逐点位互动地图；精确坐标、筛选器、天气和出没规则需以上线后的游戏内信息核验。",
+      "ja": "公開済みアニモ地域と生物の手掛かりを確認。本ページはピン単位のインタラクティブマップではなく、座標、フィルター、天候、出現規則は配信後に確認します。"
+    },
+    "quickFacts": {
+      "en": [
+        "This page is a public-region guide, not a marker-by-marker interactive map.",
+        "Use it to connect a region with a representative creature and a verification note.",
+        "Exact coordinates, weather, time windows, and spawn rules need live-game confirmation."
+      ],
+      "zh": [
+        "本页是公开区域指南，不是逐点位互动地图。",
+        "可用它连接区域、代表精灵与待核验信息。",
+        "精确坐标、天气、时间窗口和出没规则需以上线实测为准。"
+      ],
+      "ja": [
+        "本ページは公開地域ガイドで、ピン単位のインタラクティブマップではありません。",
+        "地域、代表生物、確認待ち情報をつなげて確認できます。",
+        "座標、天候、時間帯、出現規則は配信後の実機確認が必要です。"
+      ]
+    },
     "titleJa": "Aniimo マップ・地域ガイド",
     "summaryJa": "Aniimo のマップガイドでは、公開済み地域を検索しやすく、後から拡張しやすいルートページとして整理します。各地域は公式風景、代表的な Aniimo、関連システム、確認待ち項目と接続します。配信前の映像を最終座標表として扱わず、配信後に出現地点、天候、時間帯、Twine 能力、ルート画像を追加します。",
     "contentJa": "## Aniimo マップガイドの使い方\n\nAniimo のマップガイドは、公開済み地域を検索しやすいルートページとして整理します。各地域では、公式風景、代表的な Aniimo、関連システム、確認メモをまとめます。配信前のユーザーは、まず特定の Aniimo を検索し、その後で地域、天候条件、時間帯、進化ラインとの関係を知りたくなるためです。\n\n## 配信後に変わる可能性がある内容\n\n正確な出現地点、時間帯、天候条件、移動制限、必要な Twine 能力は、正式版での実機確認が必要です。現在のマップページでは、プレビュー映像を最終座標表として扱わず、公開済みの地域名と検証待ちルートを分けて掲載します。\n\n## 今後のマップ更新方針\n\n配信後に価値が高い更新は、座標、ルート画像、天候フィルター、時間帯フィルター、必要な Twine 能力、地域ページから関連 Aniimo 図鑑への内部リンクです。これにより、プレイヤーがルートを探しやすくなり、検索エンジンにも地域、属性、役割、進化ラインの関係が伝わりやすくなります。\n\n- Mistwoods：枯れ枝と霧に包まれた森林地域。Emberpup、Iris、Leafy を追跡。\n- Echoback Landing：座礁した巨大 Aniimo と歌声の手がかりがある地域。\n- Sea of Flowers：花畑と香りの村を中心にした地域。\n- Blitzwood：雷の現象が強く、電気系 Aniimo の導線に重要。\n- Nimbus Fields：草地、雲、開けた移動ルートに関係。\n- Forest of Falling Stars：Celestis、Stellarys、Susuta など希少な項目と関係。"

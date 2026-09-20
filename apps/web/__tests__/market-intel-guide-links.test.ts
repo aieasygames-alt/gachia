@@ -74,4 +74,15 @@ describe('market-intel guide links', () => {
       expect(opportunity.targetPages.some((page) => page.includes('/guides/') || page.endsWith('/version'))).toBe(true);
     }
   });
+
+  it('keeps GSC Aniimo map and code answers explicit', () => {
+    const byId = new Map(aniimoGuides.map((guide) => [guide.id, guide]));
+    const mapGuide = byId.get('map-regions');
+    const codeGuide = byId.get('codes-rewards');
+
+    expect(mapGuide?.serpDescription?.en).toContain('not a marker-by-marker interactive map');
+    expect(mapGuide?.quickFacts?.en).toContain('This page is a public-region guide, not a marker-by-marker interactive map.');
+    expect(codeGuide?.serpDescription?.en).toContain('No public Aniimo redeem code is confirmed');
+    expect(codeGuide?.quickFacts?.en).toContain('Current answer: no public Aniimo redeem code is confirmed.');
+  });
 });
