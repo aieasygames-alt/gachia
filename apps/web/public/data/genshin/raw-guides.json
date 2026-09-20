@@ -1223,20 +1223,20 @@
       }
     ],
     "serpTitle": {
-      "en": "Genshin Boss Strategy Guide: Weekly Bosses, Weaknesses & Teams"
+    "en": "Genshin Boss Guide: Weekly Boss Mechanics, Teams & Resin Planning"
     },
     "serpDescription": {
-      "en": "Beat Genshin weekly and world bosses with weakness tables, attack patterns, recommended teams, farming materials, co-op tips, builds, and reward planning."
+    "en": "Use legacy Genshin boss mechanics, team fundamentals, co-op tips, and Resin planning. Verify the current boss roster, drops, and resistances in-game before farming."
     },
     "quickFacts": {
       "en": [
-        "Built for Genshin boss strategy, weekly boss, world boss, weakness, and team searches.",
-        "Check boss materials before spending Resin so farming matches your current build target.",
-        "Read with item pages, character builds, and current banner targets before farming."
+      "This page is a legacy boss-mechanics reference, not a complete current-version roster.",
+      "Check the target character's in-game material requirement before spending Resin.",
+      "Verify the current encounter, drops, and resistances in-game before forming a team."
       ]
     },
-    "updatedAt": "2026-08-22",
-    "currentVersion": "Genshin Luna VIII boss and material route"
+  "updatedAt": "2026-09-20",
+  "currentVersion": "Historical Genshin boss mechanics; verify current material routes in-game"
   },
   {
     "id": "v6-7-version-guide",

@@ -126,6 +126,7 @@ export default async function RedeemCodesPage({
   const activeCodes = codes.filter((code) => isRedeemCodeActive(code));
   const expiredCodes = codes.filter((code) => !isRedeemCodeActive(code));
   const lastCheckedAt = getLastCheckedAt(codes);
+  const isOfficialWatchlist = gameId === 'aniimo' && activeCodes.length === 0 && codes.some((code) => code.status === 'Watchlist');
 
   const sourceLabels: Record<string, Record<string, string>> = {
     livestream: { zh: '前瞻直播', en: 'Livestream', ja: '生放送' },
@@ -205,9 +206,13 @@ export default async function RedeemCodesPage({
       <div className="mb-4 grid gap-3 sm:grid-cols-3">
         <div className="rounded-lg border border-game-border bg-game-surface p-3">
           <div className="text-xs text-game-text-muted">
-            {locale === 'zh' ? '当前有效码' : locale === 'ja' ? '有効コード' : 'Active Codes'}
+            {isOfficialWatchlist
+              ? (locale === 'zh' ? '官方公开码' : locale === 'ja' ? '公式公開コード' : 'Official Public Codes')
+              : (locale === 'zh' ? '当前有效码' : locale === 'ja' ? '有効コード' : 'Active Codes')}
           </div>
-          <div className="mt-1 text-2xl font-bold text-game-primary">{activeCodes.length}</div>
+          <div className="mt-1 text-2xl font-bold text-game-primary">
+            {isOfficialWatchlist ? (locale === 'zh' ? '暂无确认' : locale === 'ja' ? '未確認' : 'None confirmed') : activeCodes.length}
+          </div>
         </div>
         <div className="rounded-lg border border-game-border bg-game-surface p-3">
           <div className="text-xs text-game-text-muted">
@@ -228,6 +233,20 @@ export default async function RedeemCodesPage({
         <p className="mb-6 text-xs text-game-text-muted">
           {redeemInstructions[gameId][locale] ?? redeemInstructions[gameId]['en']}
         </p>
+      )}
+      {isOfficialWatchlist && (
+        <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-4 text-sm text-game-text-muted">
+          <h2 className="mb-2 font-semibold text-game-text">
+            {locale === 'zh' ? '当前结论：暂无已确认公开兑换码' : locale === 'ja' ? '現在の結論：確認済みの公開交換コードはありません' : 'Current answer: no public redeem code is confirmed'}
+          </h2>
+          <p>
+            {locale === 'zh'
+              ? '预注册、里程碑和上线活动奖励不等于可输入的兑换码。只有官方公告或游戏内兑换入口可核验时，才会在本页标记为有效。'
+              : locale === 'ja'
+                ? '事前登録、マイルストーン、リリースイベント報酬は、入力できる交換コードとは別です。公式告知またはゲーム内交換画面で確認できた場合のみ、有効として掲載します。'
+                : 'Pre-registration, milestone, and launch-event rewards are not automatically redeemable codes. A code is marked active only after it can be verified in an official notice or the live client.'}
+          </p>
+        </div>
       )}
 
       {codes.length === 0 && gameId === 'sea' && (

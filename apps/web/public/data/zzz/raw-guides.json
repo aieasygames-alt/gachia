@@ -1175,12 +1175,12 @@
   {
     "id": "meta-teams-v3-guide",
     "title": "绝区零v3.0版本主流配队推荐 — 突击与风属性体系",
-    "titleEn": "ZZZ Best Teams v3.1: Meta Comps, F2P Teams & Pull Priorities",
+  "titleEn": "ZZZ v3.0-v3.1 Team Archive: Meta Comps, F2P References & Pull Context",
     "category": "team",
     "categoryZh": "配队攻略",
     "categoryEn": "Teams",
     "summary": "绝区零v3.0版本T0配队推荐：仪玄突击队、维林娜风弱BOSS队、普罗米亚火队、星光比利物理突击队、3.0-3.1卡池抽取规划。",
-    "summaryEn": "Updated ZZZ best teams guide for v3.1 meta comps, F2P teams, Attack/Stun/Anomaly/Support roles, current-banner pulls, Drive Discs, W-Engines, and roster gaps.",
+  "summaryEn": "Historical ZZZ v3.0-v3.1 team reference with meta comps, F2P examples, and pull context. Use current team and banner pages for live roster, balance, and banner decisions.",
     "content": "## 绝区零v3.0版本主流配队推荐\n\nv3.0「新秩序」带来了突击专精深化和全新风属性体系，配队格局发生重大变化。\n\n### 一、T0级配队（v3.0版本最强）\n\n#### 1. 仪玄突击队（版本答案）\n- **成员**: 仪玄(Yixuan) + 般岳(Banyue) + Lucia Elowen\n- **核心**: 仪玄墨韵突击爆发 + Lucia全队增伤 + 般岳火突击清杂\n- **评价**: ★★★★★ v3.0依然是突击版本，突击值共享机制加强了\n\n#### 2. 维林娜风弱BOSS队（新风体系）\n- **成员**: 维林娜(Velina) + 风属性支援 + 生存位(Sunna/支援)\n- **核心**: 维林娜风属性爆发 + v3.0新风弱BOSS环境\n- **评价**: ★★★★★ 当前危局最强对策队伍\n\n#### 3. 普罗米亚火队\n- **成员**: 普罗米亚(Promeia) + 柯拉(Cora/冰支援) + 生存位\n- **核心**: 普罗米亚火属性持续输出 + 元素反应\n- **评价**: ★★★★★ 版本核心火C\n\n### 二、T1级配队（强力稳定）\n\n#### 4. 星光比利物理突击队\n- **成员**: 星光·比利·奇德 + 诺姆(Nome/物理击破) + 支援位\n- **核心**: 星光比利觉醒形态突击 + 诺姆快速眩晕\n- **评价**: ★★★★☆ 比利免费，星光形态质变\n\n#### 5. 叶瞬光利刃队\n- **成员**: 叶瞬光 + 浮波柚叶 + Ukinami Yuzuha\n- **核心**: 叶瞬光利刃爆发 + Yuzuha物理支援\n- **评价**: ★★★★☆ 利刃属性稳定输出\n\n### 三、v3.0-3.1抽卡规划\n\n#### 优先级排序\n\n| 优先级 | 角色 | 理由 |\n|--------|------|------|\n| T0 | 维林娜 | 风弱BOSS必带，当前环境最强对策 |\n| T0 | 普罗米亚 | 火属性版本核心C |\n| T1 | 星光比利 | 比利免费升级，高性价比 |\n| T1 | 叶瞬光 | 利刃属性稳定，但非必须 |\n| T2 | 蕾米埃尔 | 冰属性异常对策 |\n\n#### 资源规划建议\n\n1. **980底片福利**务必全部领取\n2. v3.0-3.1大约可获 60-80抽（含活动福利）\n3. 建议至少保留一个大保底给维林娜或普罗米亚\n4. 新手优先抽普罗米亚（通用火C > 风C对策）\n\n### 四、配队通用原则\n\n1. **三角阵型**: 输出 + 击破/控制 + 支援/生存\n2. **属性对策**: 根据BOSS弱点选择对应属性主C\n3. **突击值管理**: v3.0突击值共享机制需注意节奏\n4. **连携循环**: 确保换人连携流畅不断档",
     "contentEn": "## ZZZ v3.0-v3.1 Best Teams Guide\n\n### Freshness and archive status\n\nThis page is retained as a historical reference. Use the live version hub and current banner page for present schedules, rewards, and balance context.\n### Start here\n\nUse this page as the \"ZZZ best teams\" route, then move into [/zzz/teams](/zzz/teams) when you want character-specific team comps. If your Polychrome budget is tight, compare [/zzz/guides/banner-schedule-guide](/zzz/guides/banner-schedule-guide) before chasing another agent or W-Engine.\n\nv3.0 \"New Order\" brings Assault specialization deepening and new Anemo system, significantly shifting the meta.\n\n### 1. T0 Teams (v3.0 Strongest)\n\n#### Yixuan Assault Team (Meta Answer)\n- Yixuan + Banyue + Lucia Elowen\n- Core: Yixuan Ink Assault burst + Lucia team buff + Banyue Fire Assault\n- Rating: 5/5 — Still Assault meta in v3.0\n\n#### Velina Anemo Boss Counter (NEW)\n- Velina + Anemo support + Sustain (Sunna)\n- Core: Velina Anemo burst + v3.0 new Wind-weak boss environment\n- Rating: 5/5 — Strongest current boss counter\n\n#### Promeia Fire Team\n- Promeia + Cora (Ice support) + Sustain\n- Core: Promeia sustained Fire DPS + elemental reactions\n- Rating: 5/5 — Core Fire DPS\n\n### 2. v3.0-3.1 Pull Planning\n\n| Priority | Character | Reason |\n|----------|-----------|--------|\n| T0 | Velina | Wind-weak boss required, best counter |\n| T0 | Promeia | Fire DPS core |\n| T1 | Starlight Billy | Free upgrade, high value |\n| T1 | Ye Shunguang | Stable Blade output |\n| T2 | Remiel | Ice anomaly counter |\n\n**Tips**: Collect all 980 Polychrome rewards. Save at least one pity for Velina or Promeia.",
     "tags": [
@@ -1208,33 +1208,34 @@
     ],
     "updatedAt": "2026-08-22",
     "serpTitle": {
-      "en": "ZZZ Best Teams v3.1: Meta Comps, F2P Teams & Pull Priorities",
+    "en": "ZZZ v3.0-v3.1 Team Archive: Meta Comps & F2P References",
       "zh": "绝区零最佳配队 v3.0-v3.1：主流阵容、平民队与抽卡优先级",
       "ja": "ZZZおすすめ編成 v3.0-v3.1：メタ、無課金、ガチャ優先度"
     },
     "serpDescription": {
-      "en": "Compare ZZZ best teams for v3.1 with meta comps, F2P teams, role coverage, current-banner pulls, Drive Discs, W-Engines, and roster gaps.",
+    "en": "Review historical ZZZ v3.0-v3.1 team comps and F2P references. For live roster, banner, and balance decisions, use the current team and banner pages.",
       "zh": "对比绝区零 v3.0-v3.1 最佳队伍、主流阵容、平民搭配、突击/异常体系、抽卡优先级和配队模拟器入口。",
       "ja": "ZZZ v3.0-v3.1のおすすめ編成、メタ、無課金、突撃/異常、ガチャ優先度、編成入口を確認。"
     },
     "quickFacts": {
       "en": [
-        "Use this as a ZZZ best teams v3.1 guide for meta comps, F2P teams, and pull priorities.",
-        "Build role coverage first: Attack, Stun, Anomaly, Support, and survival where needed.",
-        "Use current banners, Drive Disc farming, and W-Engine value to decide the next upgrade."
+      "This is a historical v3.0-v3.1 team reference, not a live tier list.",
+      "Use [/zzz/teams](/zzz/teams) to check team recommendations for the current roster.",
+      "Confirm current banners and balance context before spending Polychromes or farming upgrades."
       ],
       "zh": [
-        "先养一队当前版本能用的完整队伍，不要追所有新代理人。",
-        "主流队伍当模板，再按已有代理人和音擎替换。",
-        "读完后进入配队模拟器，对比具体角色推荐队伍。"
+      "本页是 v3.0-v3.1 的历史配队参考，不是当前强度榜。",
+      "当前角色配队请前往 [/zzz/teams](/zzz/teams) 核对。",
+      "投入菲林或培养资源前，请确认当前卡池和版本平衡状态。"
       ],
       "ja": [
-        "全新代理人を追う前に、現在版本で使える一隊を完成。",
-        "メタ編成を土台に、所持代理人と音動機で調整。",
-        "読後に編成ページでキャラ別おすすめを比較。"
+      "本ページはv3.0-v3.1の過去編成参考で、現行のTier表ではありません。",
+      "現在の編成は [/zzz/teams](/zzz/teams) で確認してください。",
+      "菲林や育成素材を使う前に、現行バナーとバランス状況を確認してください。"
       ]
     },
-    "currentVersion": "ZZZ historical v3.1 reference"
+  "currentVersion": "Historical ZZZ v3.0-v3.1 team reference; use live team routes",
+  "updatedAt": "2026-09-20"
   },
   {
     "id": "v3-1-anniversary-xbox-guide",

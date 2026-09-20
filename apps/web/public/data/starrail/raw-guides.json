@@ -708,11 +708,30 @@
     "category": "build",
     "categoryZh": "配装攻略",
     "categoryEn": "Build Guide",
-    "summary": "流萤是崩坏：星穹铁道最强击破流输出，本攻略详解光锥、遗器、行迹、配队与星魂优先级。",
-    "summaryEn": "Firefly is the premier Break DPS in Honkai: Star Rail. Complete build guide covering Light Cones, Relics, Traces, team comps, and Eidolon milestones.",
+  "summary": "流萤击破流配装参考，覆盖光锥、遗器、行迹、队伍与星魂思路；当前版本强度、配队条件和替代方案请以游戏内数据与实时内容核验。",
+  "summaryEn": "Firefly Break build reference covering Light Cones, Relics, Traces, teams, and Eidolons. Verify current endgame value, team conditions, and alternatives with live game data.",
     "content": "## 流萤配装与养成攻略\n\n流萤（Firefly）是毁灭命途的火属性击破流输出角色。她通过强化状态下的高速行动和超高击破伤害称霸终局内容，是当前版本最强击破主C。\n\n### 最佳光锥\n- **「于焦土之上」**(Whereabouts Should Dreams Rest): 专属5星光锥，提供击破特攻和击破伤害加成\n- **「记忆的质料」**(Brighter Than the Sun): 5星替代，高攻击力加成\n- **「秘密誓心」**(Swordplay): 4星替代，对同一目标叠加增伤\n- **「无处可逃」**(Nowhere to Run): 4星替代，提供攻击力和击破相关效果\n\n### 最佳遗器\n- **4件套**: 「铁骑漫踪」(Iron Cavalry Against the Scourge) — 击破流专属套装，大幅提升击破伤害\n- **2件套**: 「劫火莲灯之乡」(Forge of the Kalpagna) — 击破特攻加成\n- **替代2件套**: 「盗贼公国」(Thief of Shooting Meteor) — 击破特攻和击破回能\n\n#### 主词条推荐\n- 躯干：击破特攻%\n- 脚部：攻击力% / 速度\n- 位面球：火属性伤害加成 / 攻击力%\n- 连结绳：击破特攻%\n\n#### 副词条优先级\n击破特攻 > 速度 > 攻击力% > 暴击率/暴击伤害（暴击对流萤价值低）\n\n### 行迹优先级\n1. 终结技（核心强化状态，最优先拉满）\n2. 战技（强化状态下的主要输出手段）\n3. 天赋（击破增伤相关被动）\n4. 普攻（优先级最低）\n\n### 配队推荐\n\n#### 1. 流萤超击破队（最强配队）\n- 流萤 + 阮梅 + 同谐主（开拓者）+ 生存位（加拉赫/藿藿）\n- 阮梅提供击破效率和减抗，同谐主提供超击破倍率\n- 当前版本最强击破配队\n\n#### 2. 流萤通用击破队\n- 流萤 + 阮梅 + 停云 + 生存位\n- 停云提供充能和增伤，循环更流畅\n- 适合没有同谐主练度的玩家\n\n#### 3. 流萤预算队\n- 流萤 + 阮梅 + 佩拉 + 生存位\n- 佩拉提供减防辅助击破\n- 低成本高效率\n\n### 星魂里程碑\n- **E0**: 完整可用的击破主C，强度在线\n- **E1**: 强化状态下速度进一步提升，输出节奏更好\n- **E2**: 击破时无视更多防御，伤害质变\n- **E6**: 击破伤害上限大幅提升，达到天花板",
     "contentEn": "## Firefly Build Guide\n\nFirefly is a Fire Destruction DPS built around the Break playstyle. Through her enhanced state with high-Speed actions and massive Break damage, she dominates endgame content as the premier Break DPS in the current meta.\n\n### Best Light Cones\n- **\"Whereabouts Should Dreams Rest\"**: Signature 5-star LC, provides Break Effect and Break DMG bonus\n- **\"Brighter Than the Sun\"**: 5-star alternative with high ATK scaling\n- **\"Swordplay\"**: 4-star alternative, stacking DMG bonus on same target\n- **\"Nowhere to Run\"**: 4-star alternative, ATK and Break-related effects\n\n### Best Relics\n- **4-piece**: Iron Cavalry Against the Scourge — dedicated Break set, massive Break DMG boost\n- **2-piece**: Forge of the Kalpagna — Break Effect bonus\n- **Alternative 2-piece**: Thief of Shooting Meteor — Break Effect and Energy on Break\n\n#### Recommended Main Stats\n- Body: Break Effect%\n- Feet: ATK% / SPD\n- Planar Sphere: Fire DMG Bonus / ATK%\n- Link Rope: Break Effect%\n\n#### Substat Priority\nBreak Effect > SPD > ATK% > CRIT Rate / CRIT DMG (CRIT has low value for Firefly)\n\n### Trace Priority\n1. Ultimate (core enhanced state, max first)\n2. Skill (primary damage dealer during enhanced state)\n3. Talent (Break DMG-related passives)\n4. Basic ATK (lowest priority)\n\n### Team Compositions\n\n#### 1. Super Break Team (Best)\n- Firefly + Ruan Mei + Harmony MC (Trailblazer) + Sustain (Gallagher / Huohuo)\n- Ruan Mei provides Break Efficiency and RES PEN; Harmony MC adds Super Break multiplier\n- The strongest Break composition in the current version\n\n#### 2. Firefly General Break Team\n- Firefly + Ruan Mei + Tingyun + Sustain\n- Tingyun provides energy and DMG buffs for smoother rotations\n- Good option if Harmony MC is not built\n\n#### 3. Firefly Budget Team\n- Firefly + Ruan Mei + Pela + Sustain\n- Pela provides DEF shred to support Break damage\n- Low-cost, high-efficiency option\n\n### Eidolon Milestones\n- **E0**: Fully functional Break DPS, strong out of the box\n- **E1**: Enhanced state grants more SPD, better damage rotation\n- **E2**: Break ignores more DEF — transformative damage increase\n- **E6**: Break DMG ceiling significantly raised, top-tier performance",
-    "tags": [
+  "updatedAt": "2026-09-20",
+  "currentVersion": "Historical Firefly build reference; verify current endgame and team conditions",
+  "quickFacts": {
+    "en": [
+      "This is a Firefly Break-build reference, not a current meta ranking.",
+      "Check the current endgame mode, enemy weakness, and available supports before copying a team.",
+      "Use current character, team, and banner pages before spending pulls or relic resources."
+    ],
+    "zh": [
+      "本页是流萤击破配装参考，不代表当前版本强度排名。",
+      "照搬配队前先确认当前终局环境、敌人弱点和可用辅助。",
+      "投入星琼或遗器体力前，请核对当前角色、配队和卡池页面。"
+    ],
+    "ja": [
+      "本ページはFireflyの撃破ビルド参考で、現行メタ順位ではありません。",
+      "編成を使う前に、現行エンドコンテンツ、弱点、所持サポートを確認してください。",
+      "星玉や遺物素材を使う前に、現行キャラ、編成、バナー情報を確認してください。"
+    ]
+  },
+  "tags": [
       "配装",
       "流萤",
       "Build",
