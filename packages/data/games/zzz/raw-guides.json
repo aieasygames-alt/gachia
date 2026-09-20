@@ -985,9 +985,38 @@
     "categoryZh": "战斗攻略",
     "categoryEn": "Combat Guide",
     "summary": "全面解析绝区零所有主要BOSS的攻击模式、红光闪避提示、失衡机制和最佳应对策略，包括零号空洞和式舆防卫战BOSS。",
-    "summaryEn": "Complete boss strategy guide for Zenless Zone Zero covering all major boss attack patterns, red flash dodge tells, daze mechanics, and optimal counter strategies for Hollow Zero and Shiyu Defense boss encounters.",
+    "summaryEn": "ZZZ boss-combat fundamentals for dodge cues, Daze windows, assists, and team planning. Verify current mode rules, enemy attacks, and agent availability in-game before treating an encounter note as live.",
     "content": "## 绝区零BOSS攻略大全\n\n### 一、零号空洞主要BOSS\n\n#### 1. 以太卫兵（Ethereal Guardian）\n- **攻击模式**：大范围横扫、突进刺击、蓄力砸地\n- **红光提示**：蓄力砸地前有明显的红色闪光提示，闪避后触发极限闪避可获得大量失衡值\n- **失衡策略**：在BOSS释放连击后的硬直窗口集中攻击，快速积累失衡条\n- **推荐代理**：近战输出型代理（妮可、安比）配合支援角色\n\n#### 2. 污染猎手（Corrupted Hunter）\n- **攻击模式**：多段连斩、跳跃下砸、远程投射物\n- **红光提示**：跳跃下砸和蓄力连斩前有红色闪光\n- **失衡策略**：利用远程攻击消耗，近身时注意闪避节奏。多段攻击可以积累大量失衡\n- **关键技巧**：跳跃下砸闪避后的反击窗口最长，是最佳输出时机\n\n#### 3. 腐蚀主宰（Decaying Overlord）\n- **攻击模式**：三连重击、地面冲击波、全屏AOE蓄力\n- **红光提示**：全屏AOE蓄力时整个身体发出红光，有约2秒闪避窗口\n- **失衡策略**：三连重击期间持续闪避积累失衡，最后一个攻击后的硬直窗口全力输出\n- **关键技巧**：全屏AOE必须闪避，否则造成大量伤害。使用支援技能打断蓄力\n\n### 二、式舆防卫战BOSS\n\n#### 式舆防卫战BOSS机制\n- 式舆防卫战中会遭遇加强版BOSS，攻击模式相同但伤害更高、血量更厚\n- 合理选择增益插件（鸣徽）对战斗效率影响巨大\n- 推荐携带失衡相关鸣徽：增加失衡积累速度、延长失衡持续时间\n\n#### 常见式舆BOSS\n1. **强化版以太卫兵**：攻击频率大幅提升，需要更精准的闪避时机\n2. **强化版污染猎手**：投射物数量增加，连斩段数增加\n3. **双BOSS同时出现**：需要交替闪避两个BOSS的攻击，优先击破一个\n\n### 三、BOSS战斗核心机制\n\n#### 1. 失衡系统（Daze）\n- 持续攻击BOSS会积累失衡条（显示在BOSS血条下方）\n- 失衡条满后BOSS进入失衡状态（眩晕），无法行动\n- 失衡状态下受到的伤害大幅增加（约额外50%伤害加成）\n- 在失衡窗口释放连携技（Chain Attack）可以最大化输出\n- 不同代理的攻击积累失衡值的速率不同：近战重击积累最快\n\n#### 2. 极限闪避（Perfect Dodge）\n- 在BOSS攻击即将命中的瞬间闪避可以触发极限闪避\n- 极限闪避后时间短暂减速，同时积累大量失衡值\n- 红光闪烁是极限闪避的最佳触发信号\n- 连续极限闪避可以快速积累失衡条到满\n- 不同代理的闪避性能有差异，选择手感合适的代理练习\n\n#### 3. 连携技（Chain Attack）\n- 失衡状态下或极限闪避后可以触发连携技\n- 连携技造成大量伤害且可以连续触发多名代理的连携\n- 合理安排连携顺序：先辅助增伤后输出角色收尾\n- 连携技期间代理处于无敌状态，可以安全输出\n\n#### 4. 支援技能（Assist Skill）\n- 切换代理时会触发支援攻击\n- 支援攻击也能积累失衡值\n- 合理利用角色切换不仅是输出手段，也是闪避替代方案\n- 支援技能有冷却时间，注意规划切换节奏",
     "contentEn": "## Zenless Zone Zero Boss Strategy Guide\n\n### 1. Hollow Zero Major Bosses\n\n#### Ethereal Guardian\n- **Attack Patterns**: Wide sweeping attacks, thrusting charges, charged ground slam\n- **Red Flash Tells**: Charged ground slam has a clear red flash warning. Dodging it triggers a Perfect Dodge, granting large Daze accumulation\n- **Daze Strategy**: Focus attacks during the recovery window after the boss combo finishes to rapidly build the Daze bar\n- **Recommended Agents**: Melee DPS agents (Nicole, Anby) paired with support characters\n\n#### Corrupted Hunter\n- **Attack Patterns**: Multi-hit slash combos, leaping slam, ranged projectiles\n- **Red Flash Tells**: Leaping slam and charged slash combos have red flash warnings\n- **Daze Strategy**: Use ranged attacks to whittle down health. Watch dodge timing during close-range engagements. Multi-hit attacks build large Daze accumulation\n- **Key Tips**: The counter-attack window after dodging the leaping slam is the longest, making it the best damage opportunity\n\n#### Decaying Overlord\n- **Attack Patterns**: Triple heavy strikes, ground shockwaves, full-screen AoE charge\n- **Red Flash Tells**: The entire body glows red during the full-screen AoE charge, with roughly a 2-second dodge window\n- **Daze Strategy**: Continuously dodge during the triple heavy strikes to accumulate Daze. Unleash full damage during the recovery window after the final attack\n- **Key Tips**: The full-screen AoE must be dodged or it deals massive damage. Use assist skills to interrupt the charge\n\n### 2. Shiyu Defense Boss Encounters\n\n#### Shiyu Defense Boss Mechanics\n- Shiyu Defense features buffed boss versions with the same attack patterns but higher damage and HP\n- Choosing the right Resonium (booster) plugins greatly impacts combat efficiency\n- Recommended Resonium: Daze accumulation speed boost, extended Daze duration\n\n#### Common Shiyu Bosses\n1. **Enhanced Ethereal Guardian**: Significantly increased attack frequency, requiring more precise dodge timing\n2. **Enhanced Corrupted Hunter**: Increased projectile count and slash combo hits\n3. **Dual Boss Encounters**: Must alternate dodges between two bosses, prioritize defeating one first\n\n### 3. Core Boss Combat Mechanics\n\n#### 1. Daze System\n- Continuously attacking a boss fills the Daze bar (displayed below the boss HP bar)\n- When the Daze bar is full, the boss enters a Dazed (stunned) state and cannot act\n- Damage taken in the Dazed state is significantly increased (approximately 50% extra damage)\n- Trigger Chain Attacks during the Daze window to maximize damage output\n- Different agents build Daze at different rates: melee heavy attacks build the fastest\n\n#### 2. Perfect Dodge\n- Dodging at the exact moment a boss attack is about to hit triggers a Perfect Dodge\n- Perfect Dodge briefly slows time and accumulates a large amount of Daze\n- Red flash signals are the best triggers for Perfect Dodges\n- Consecutive Perfect Dodges can rapidly fill the Daze bar\n- Different agents have different dodge performance. Choose agents that feel comfortable to practice with\n\n#### 3. Chain Attacks\n- Chain Attacks can be triggered during Dazed state or after Perfect Dodges\n- Chain Attacks deal massive damage and can chain through multiple agents sequentially\n- Plan chain order: support buffs first, DPS finishes last\n- Agents are invincible during Chain Attacks, allowing safe damage output\n\n#### 4. Assist Skills\n- Switching agents triggers an assist attack\n- Assist attacks also build Daze\n- Agent switching is both a damage tool and a dodge alternative\n- Assist skills have cooldowns, so plan switch rhythm carefully",
+    "updatedAt": "2026-09-20",
+    "currentVersion": "ZZZ boss-combat fundamentals; verify live encounters and mode rules",
+    "serpTitle": {
+      "en": "ZZZ Boss Guide: Dodge Cues, Daze Windows, Assists & Team Planning",
+      "zh": "绝区零BOSS指南：闪避提示、失衡窗口、支援与配队",
+      "ja": "ZZZボスガイド：回避合図、ブレイク、支援、編成"
+    },
+    "serpDescription": {
+      "en": "Learn ZZZ boss fundamentals for dodge timing, Daze windows, assists, and team planning. Confirm current encounter attacks and mode rules in-game before challenging endgame content.",
+      "zh": "了解绝区零BOSS战的闪避时机、失衡窗口、支援技与配队基础；挑战高难前请在游戏内核对当前敌人招式和模式规则。",
+      "ja": "ZZZボス戦の回避、ブレイク、支援、編成の基本を確認。高難度へ挑む前にゲーム内で現行の敵行動とモード規則を確認してください。"
+    },
+    "quickFacts": {
+      "en": [
+        "Use this page for combat fundamentals, not a complete live boss roster.",
+        "Learn one dodge cue and one Daze damage window before optimizing rotations.",
+        "Check current mode rules, enemy weaknesses, and your team roles in-game before spending Battery Charge."
+      ],
+      "zh": [
+        "本页讲解战斗基础，不是完整的当前BOSS名录。",
+        "先练一个闪避提示和一个失衡输出窗口，再优化队伍循环。",
+        "投入电量前，请在游戏内核对当前模式规则、敌人弱点和队伍定位。"
+      ],
+      "ja": [
+        "本ページは戦闘の基本用で、現行ボスの完全一覧ではありません。",
+        "まず回避合図とブレイク中の火力時間を一つずつ覚えます。",
+        "バッテリーを使う前にゲーム内で現行規則、弱点、編成役割を確認してください。"
+      ]
+    },
     "tags": [
       "BOSS攻略",
       "零号空洞",

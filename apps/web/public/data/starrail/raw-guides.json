@@ -498,14 +498,43 @@
   {
     "id": "meta-teams-guide",
     "title": "当前版本主流配队推荐",
-    "titleEn": "Current Meta Team Recommendations",
+    "titleEn": "HSR Team Reference: Legacy Comps, Roles & Current-Team Checks",
     "category": "team",
     "categoryZh": "配队攻略",
     "categoryEn": "Teams",
     "summary": "v4.x当前版本主流配队一览：黄泉单核、飞霄追击、流萤击破、云璃反击等顶级队伍推荐。",
-    "summaryEn": "Up-to-date meta team guide for v4.x — Acheron hypercarry, Feixiao follow-up, Firefly break, Yunli counter, Elation and Remembrance team compositions.",
+    "summaryEn": "Historical HSR team reference for legacy comps, roles, and playstyles. Verify the current endgame mode, enemy lineup, and roster before treating any comp as a live recommendation.",
     "content": "## 当前版本主流配队推荐\n\n### 黄泉单核队（Acheron Hypercarry）\n- **核心**: 黄泉 + 花火 + 银狼/佩拉 + 存护/丰饶\n- 黄泉是目前最强单体输出之一\n- 花火提供高额增伤和行动提前\n- 银狼或佩拉负责减防和挂弱点\n\n### 飞霄追击队（Feixiao Follow-up）\n- **核心**: 飞霄 + 知更鸟 + 停云 + 生存位\n- 飞霄的追击机制伤害极高\n- 知更鸟提供全队增伤和能量回复\n- 适合虚构叙事和混沌回忆\n\n### 流萤击破队（Firefly Break）\n- **核心**: 流萤 + 阮梅 + 同谐主 + 生存位\n- 流萤是击破流核心输出\n- 阮梅提供击破效率和减抗\n- 同谐主提供超击破加成\n\n### 云璃反击队（Yunli Counter）\n- **核心**: 云璃 + 知更鸟 + 停云/花火 + 生存位\n- 云璃以反击为核心输出方式\n- 需要吸引敌人攻击触发反击\n- 知更鸟的增伤完美适配\n\n### 欢愉队（Elation Teams）\n- **核心**: 曜青 + 火花机 + 谐乐辅助 + 生存位\n- 基于笑点系统的高爆发队伍\n- v4.0新命途配队\n\n### 记忆队（Remembrance Teams）\n- **核心**: 海辛 + 赛伦 + 辅助 + 生存位\n- 忆灵提供额外行动和输出\n- 适合长线战斗",
     "contentEn": "## Current Meta Team Recommendations (v4.x)\n\n### Acheron Hypercarry\n- **Core**: Acheron + Sparkle + Silver Wolf / Pela + Sustain\n- Acheron is one of the strongest single-target DPS in the game\n- Sparkle provides massive damage buffs and action advance\n- Silver Wolf or Pela handles DEF shred and weakness implant\n\n### Feixiao Follow-up\n- **Core**: Feixiao + Robin + Tingyun + Sustain\n- Feixiao's follow-up attack mechanic deals incredible damage\n- Robin provides team-wide buffs and energy regeneration\n- Strong in both Pure Fiction and Memory of Chaos\n\n### Firefly Break\n- **Core**: Firefly + Ruan Mei + Harmony MC + Sustain\n- Firefly is the premier Break DPS\n- Ruan Mei provides Break Efficiency and resistance penetration\n- Harmony Trailblazer adds Super Break scaling\n\n### Yunli Counter\n- **Core**: Yunli + Robin + Tingyun / Sparkle + Sustain\n- Yunli deals damage primarily through counter-attacks\n- Requires drawing enemy aggro to trigger counters\n- Robin's buffs perfectly complement counter damage\n\n### Elation Teams (v4.0)\n- **Core**: Yao Guang + Sparxie + Harmony support + Sustain\n- Built around the Punchline burst mechanic\n- The newest path in the current meta\n\n### Remembrance Teams\n- **Core**: Hyacine + Cyrene + Support + Sustain\n- Memosprites provide additional actions and damage\n- Strong in sustained, longer fights",
+    "updatedAt": "2026-09-20",
+    "currentVersion": "Historical HSR team reference; verify live endgame and roster conditions",
+    "serpTitle": {
+      "en": "HSR Team Reference: Roles, Legacy Comps & Current-Team Checks",
+      "zh": "崩坏：星穹铁道配队参考：定位、旧配队与当前核验",
+      "ja": "スターレイル編成参考：役割、過去編成、現行確認"
+    },
+    "serpDescription": {
+      "en": "Use legacy HSR team examples to understand roles and playstyles. Confirm current endgame mode, enemy lineup, and available supports before building or pulling.",
+      "zh": "用旧配队示例理解崩铁角色定位和流派；养成或抽卡前，请核对当前终局模式、敌人环境和可用辅助。",
+      "ja": "過去のHSR編成例で役割と流派を理解し、育成やガチャ前に現行エンドコンテンツ、敵編成、所持サポートを確認します。"
+    },
+    "quickFacts": {
+      "en": [
+        "This is a historical team reference, not a live v4.x meta list.",
+        "Start from the current mode, enemy weakness, and the supports you actually own.",
+        "Use current banners and character pages before spending Stellar Jade on a team plan."
+      ],
+      "zh": [
+        "本页是历史配队参考，不是当前 v4.x 强度榜。",
+        "先按当前模式、敌人弱点和已有辅助确定队伍核心。",
+        "为队伍投入星琼前，请先核对当前卡池和角色页面。"
+      ],
+      "ja": [
+        "本ページは過去の編成参考で、現行v4.xのメタ表ではありません。",
+        "現在のモード、敵の弱点、所持サポートからコアを決めます。",
+        "星玉を使う前に現在バナーとキャラページを確認してください。"
+      ]
+    },
     "tags": [
       "配队",
       "主流",
@@ -615,14 +644,43 @@
   {
     "id": "endgame-cycle-guide",
     "title": "混沌回忆·虚构叙事·末日幻影攻略",
-    "titleEn": "Memory of Chaos, Pure Fiction & Apocalyptic Shadow Guide",
+    "titleEn": "HSR Endgame Guide: Mode Fundamentals, Team Planning & Live Checks",
     "category": "endgame",
     "categoryZh": "终局攻略",
     "categoryEn": "Endgame",
     "summary": "崩铁三大终局模式全面攻略：混沌回忆、虚构叙事、末日幻影的机制解析、配队建议与周期规划。",
-    "summaryEn": "Complete strategy guide for all three HSR endgame modes — Memory of Chaos, Pure Fiction, and Apocalyptic Shadow — with mechanics breakdown, team recommendations, and cycle planning.",
+    "summaryEn": "HSR endgame fundamentals for Memory of Chaos, Pure Fiction, and Apocalyptic Shadow. Use the framework to plan teams, then verify current schedules, buffs, enemies, and rewards in-game.",
     "content": "## 混沌回忆·虚构叙事·末日幻影攻略\n\n崩坏：星穹铁道的终局内容包含三大核心模式，每种模式考验不同的队伍构建思路。掌握三大模式的差异是高效获取星琼的关键。\n\n### 一、混沌回忆(Memory of Chaos)\n\n#### 核心机制\n- 两路同时作战，每路4名角色，两路角色不可重复\n- 共10个节点，逐步提升难度\n- 每期有不同的「记忆紊流」增益效果\n- 计分基于通关行动次数，行动越少星数越高\n- 每6周更新一次敌人配置和增益\n\n#### 配队策略\n- **需要2支完全独立的队伍**，覆盖不同元素和输出模式\n- 优先安排最强队伍应对更高难度的下半\n- 关注当期增益（如追加攻击增伤、战技增伤等）并据此选择队伍\n- **速度调轴**至关重要：确保辅助在主C之前行动以提供增益\n\n#### 推荐队伍模板\n| 队伍类型 | 核心组成 | 适用场景 |\n|----------|----------|----------|\n| 单核超载队 | 黄泉+花火+虚无+生存 | 通用高难 |\n| 追击队 | 飞霄+知更鸟+停云+生存 | 增伤增益期 |\n| 击破队 | 流萤+阮梅+同谐主+生存 | 弱点匹配期 |\n| 反击队 | 云璃+知更鸟+停云+生存 | 高攻击频率敌人 |\n\n### 二、虚构叙事(Pure Fiction)\n\n#### 核心机制\n- **波次制**战斗，敌人分波次出现\n- 计分基于清波速度和总伤害输出\n- 每期有特定虚构增益，合理利用可大幅提升分数\n- 同样需要两路独立队伍\n\n#### 与混沌回忆的关键区别\n- **需要强力AOE输出**（智识命途角色优势明显）\n- 清波速度比单体伤害更重要\n- 每波敌人数量多，群攻和扩散伤害效率高\n- 生存压力相对较低，可考虑双输出阵容\n\n#### 虚构叙事推荐角色\n- **智识AOE输出**：景元、银枝、黑塔（免费）、希露瓦\n- **通用副C**：黄泉、卡芙卡\n- **关键辅助**：知更鸟、阮梅、布洛妮娅\n\n### 三、末日幻影(Apocalyptic Shadow)\n\n#### 核心机制\n- **Boss战为核心**的终局模式\n- 每期有不同Boss和对应的专属增益\n- Boss拥有多阶段机制和大量血量\n- 生存压力最大，治疗/护盾角色不可或缺\n\n#### 末日幻影要点\n- **高单体DPS角色**（巡猎/毁灭命途）是核心\n- Boss机制各不相同，需针对性配队和策略\n- 注意Boss的**弱点和阶段变化**，某些阶段会改变弱点\n- 携带对应元素的角色可以快速击破Boss韧性条\n\n#### 通用策略\n1. **先了解Boss机制**：查看Boss的攻击模式和阶段转换条件\n2. **弱点匹配**：优先使用Boss弱点属性的角色\n3. **生存保障**：至少一个治疗或护盾角色\n4. **爆发窗口**：在Boss进入虚弱状态时全力输出\n\n### 四、三大模式对比\n\n| 对比项 | 混沌回忆 | 虚构叙事 | 末日幻影 |\n|--------|----------|----------|----------|\n| 核心机制 | 两路精英战 | 波次清场 | Boss战 |\n| 推荐命途 | 毁灭/巡猎 | 智识/毁灭 | 巡猎/毁灭 |\n| 生存需求 | 中等 | 较低 | 最高 |\n| 速度要求 | 高（调轴） | 高（清波） | 中等 |\n| 刷新周期 | 6周 | 6周 | 6周 |\n| 最大星数 | 30星 | 30星 | 30星 |\n\n### 五、长期规划\n\n1. **培养3-4支队伍**：覆盖不同元素和流派\n2. **关注版本预告**：提前了解下期增益和敌人\n3. **资源分配**：优先保证2支核心队伍毕业\n4. **灵活调整**：每期根据增益效果调整配队\n5. **角色box广度**：多培养不同属性的4星角色作为后备",
     "contentEn": "## Memory of Chaos, Pure Fiction & Apocalyptic Shadow Guide\n\nHonkai: Star Rail features three core endgame modes, each testing different aspects of your roster. Understanding the differences between them is key to efficiently earning Stellar Jade each cycle.\n\n### 1. Memory of Chaos\n\n#### Core Mechanics\n- Two simultaneous lanes, each with 4 characters; no character overlap allowed\n- 10 nodes total with escalating difficulty\n- Each cycle features a different \"Memory Turbulence\" buff effect\n- Scoring is based on cycles taken — fewer cycles = more stars\n- Enemy lineups and buffs refresh every 6 weeks\n\n#### Team Strategy\n- **Two completely independent teams** are required, covering different elements and DPS styles\n- Assign your strongest team to the harder second half\n- Study the current cycle's buff (e.g., Follow-up ATK DMG boost, Skill DMG boost) and choose teams accordingly\n- **Speed tuning** is critical: ensure supports act before your DPS to apply buffs\n\n#### Recommended Team Templates\n| Team Type | Core Composition | Best Scenario |\n|-----------|-----------------|---------------|\n| Hypercarry | Acheron + Sparkle + Nihility + Sustain | Universal hard content |\n| Follow-up | Feixiao + Robin + Tingyun + Sustain | DMG buff cycles |\n| Break | Firefly + Ruan Mei + Harmony MC + Sustain | Weakness-matched cycles |\n| Counter | Yunli + Robin + Tingyun + Sustain | High ATK frequency enemies |\n\n### 2. Pure Fiction\n\n#### Core Mechanics\n- **Wave-based** combat with enemies arriving in successive waves\n- Scoring is based on wave-clear speed and total damage output\n- Each cycle features specific Pure Fiction buffs that can dramatically boost performance\n- Also requires two independent teams\n\n#### Key Differences from Memory of Chaos\n- **Strong AoE damage dealers are essential** (Erudition path characters excel here)\n- Wave-clear speed matters more than single-target damage\n- Each wave has many enemies — AoE and spread damage are highly efficient\n- Survival pressure is relatively lower, allowing double-DPS compositions\n\n#### Recommended Characters for Pure Fiction\n- **Erudition AoE DPS**: Jing Yuan, Argenti, Herta (free), Serval\n- **Universal Sub-DPS**: Acheron, Kafka\n- **Key Supports**: Robin, Ruan Mei, Bronya\n\n### 3. Apocalyptic Shadow\n\n#### Core Mechanics\n- **Boss-focused** endgame mode\n- Each cycle features different bosses with unique buffs\n- Bosses have multi-phase mechanics and massive HP pools\n- Highest survival pressure — healers and shielders are mandatory\n\n#### Key Points\n- **High single-target DPS characters** (Hunt / Destruction paths) are core\n- Each boss has unique mechanics — tailor teams and strategies accordingly\n- Watch for boss **weaknesses and phase changes** — some phases alter weaknesses\n- Bring matching-element characters to quickly break the boss's Toughness bar\n\n#### General Strategy\n1. **Learn boss mechanics first**: Study attack patterns and phase transition conditions\n2. **Match weaknesses**: Prioritize characters matching the boss's weakness elements\n3. **Bring sustain**: At least one healer or shielder is non-negotiable\n4. **Burst windows**: Unload everything during the boss's vulnerable phases\n\n### 4. Three Modes Comparison\n\n| Aspect | Memory of Chaos | Pure Fiction | Apocalyptic Shadow |\n|--------|----------------|-------------|-------------------|\n| Core Mechanic | Two-way elite fights | Wave clearing | Boss fights |\n| Best Paths | Destruction / Hunt | Erudition / Destruction | Hunt / Destruction |\n| Sustain Need | Medium | Lower | Highest |\n| SPD Requirement | High (tuning) | High (wave clear) | Medium |\n| Refresh Cycle | 6 weeks | 6 weeks | 6 weeks |\n| Max Stars | 30 stars | 30 stars | 30 stars |\n\n### 5. Long-term Planning\n\n1. **Build 3-4 teams**: Cover different elements and playstyles\n2. **Follow version previews**: Learn upcoming buffs and enemies in advance\n3. **Resource allocation**: Prioritize fully investing in 2 core teams first\n4. **Stay flexible**: Adjust compositions each cycle based on buff effects\n5. **Roster breadth**: Invest in 4-star characters across different elements as reserves",
+    "updatedAt": "2026-09-20",
+    "currentVersion": "HSR endgame fundamentals; verify live rotations, rewards, and enemies",
+    "serpTitle": {
+      "en": "HSR Endgame Guide: MoC, Pure Fiction, Apocalyptic Shadow & Teams",
+      "zh": "崩坏：星穹铁道终局指南：混沌、虚构、末日与配队",
+      "ja": "スターレイル終盤ガイド：混沌、虚構、末日、編成"
+    },
+    "serpDescription": {
+      "en": "Learn HSR endgame mode fundamentals and team-planning principles for Memory of Chaos, Pure Fiction, and Apocalyptic Shadow. Verify live rotations and rewards in-game.",
+      "zh": "了解崩铁混沌回忆、虚构叙事与末日幻影的基础机制和配队思路；当前轮换、敌人与奖励请以游戏内为准。",
+      "ja": "混沌の記憶、虚構叙事、末日の幻影の基本と編成方針を確認。現行ローテーション、敵、報酬はゲーム内で確認してください。"
+    },
+    "quickFacts": {
+      "en": [
+        "Use this page for mode fundamentals, not a forecast of the current rotation.",
+        "Build two independent teams around the current enemy lineup and blessing.",
+        "Check live reset dates, rewards, and enemy weaknesses in the client before planning resources."
+      ],
+      "zh": [
+        "本页讲解模式基础，不预测当前轮换。",
+        "围绕当前敌人阵容和增益，准备两支独立队伍。",
+        "安排资源前，请在游戏内核对实时重置、奖励和敌人弱点。"
+      ],
+      "ja": [
+        "本ページはモードの基本用で、現行ローテーションの予測ではありません。",
+        "現在の敵編成と祝福に合わせ、独立した2編成を準備します。",
+        "資源計画前にゲーム内でリセット、報酬、弱点を確認してください。"
+      ]
+    },
     "tags": [
       "终局",
       "混沌回忆",

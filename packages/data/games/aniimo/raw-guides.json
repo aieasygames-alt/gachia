@@ -127,14 +127,42 @@
   {
     "id": "beginner-guide",
     "title": "Aniimo 新手入门指南",
-    "titleEn": "Aniimo Beginner Guide",
+    "titleEn": "Aniimo Beginner Guide: Public Systems, Launch-Day Checks & First Steps",
     "category": "beginner",
     "categoryZh": "新手指南",
     "categoryEn": "Beginner",
     "summary": "Aniimo 的前期重点是理解捕捉、Twine、环境遭遇、Egg Heist 和 Homeland。玩家会用 Aniipod 捕捉 Aniimo，通过陷阱和时机提高成功率，再借助 Twine 使用已收集 Aniimo 的能力完成战斗、移动和解谜。上线前资料仍以官方公开机制为准，具体数值和刷新点等待实机验证。",
-    "summaryEn": "Players catch Aniimo with Aniipods, set traps, and time catches around encounter behavior.",
+    "summaryEn": "Aniimo beginner guide to the public systems: catching with Aniipods, Twine, exploration, and launch-day verification. Keep preview details separate from live routes, spawns, and progression rules.",
     "content": "## 生物捕捉\n\nAniimo 的核心循环之一是用 Aniipod 捕捉 Aniimo。上线前公开信息显示，捕捉不只是丢道具，还会涉及遭遇行为、陷阱、时机和环境条件。新手应先熟悉不同 Aniimo 的行动习惯，再判断是否需要等待天气、时间或区域条件。\n\n## Twine\n\nTwine 让玩家与已收集的 Aniimo 连接，借用它们的能力解决谜题、参与战斗、穿越地形或开启探索路线。它不只是外观变身，更像是把生物能力变成地图和战斗工具。\n\n## 环境遭遇\n\n部分 Aniimo 可能与地区、天气、自然现象和时间段相关。上线初期不要把预告片画面当成最终刷新表，优先记录“在哪个地区出现过”“是否和天气有关”“是否需要特定 Twine 能力”。\n\n## Egg Heist\n\nEgg Heist 被描述为三人队伍参与的 PVEVP 模式，玩家会在 Lost Isles 中搜索、遭遇和战斗。它可能是上线后最需要实测的模式之一，因为路线、奖励和对抗强度都需要玩家验证。\n\n## Homeland 与 RV\n\nPathfinder 拥有个人 RV 与 Homeland，可种植作物、布置装饰，并与 Aniimo 互动。对休闲玩家来说，这部分可能和收集图鉴同样重要。\n\n- 图鉴状态：本站目前追踪 89 个公开 Aniimo 条目。\n- 地图状态：六个公开区域已接入地图与攻略入口。\n- 维护重点：上线后优先补充刷新点、天气条件、Twine 用途和截图。",
     "contentEn": "## Creature catching\n\nPlayers catch Aniimo with Aniipods, set traps, and time catches around encounter behavior.\n\n## Twine\n\nPlayers can Twine with collected Aniimo, essentially becoming them to use skills for puzzles, battles and traversal.\n\n## Environment-based encounters\n\nUnique Aniimo can appear according to environment, weather, phenomena and time of day.\n\n## Egg Heist\n\nEgg Heist is described as a PVEVP mode where three-player teams search and battle in the Lost Isles.\n\n## Homeland and RV\n\nPathfinders have a personal RV and Homeland where they can plant crops, build decorations and interact with Aniimo.\n\n- Aniimo index: The database currently tracks all 89 public Aniimo entries discoverable from the official Wiki probe page. Entries with incomplete element, role or stage data remain labeled as watchlist fields.\n- Map index: Six public world regions are connected to guide pages with official artwork and representative Aniimo.\n- Maintenance: New official Wiki and site updates should flow into the changelog before pages are refreshed.",
+    "currentVersion": "Aniimo public-systems reference; verify live routes and progression after launch",
+    "serpTitle": {
+      "en": "Aniimo Beginner Guide: Catching, Twine, Exploration & Launch Checks",
+      "zh": "伊莫新手指南：捕捉、Twine、探索与上线核验",
+      "ja": "アニモ初心者ガイド：捕獲、Twine、探索、配信後確認"
+    },
+    "serpDescription": {
+      "en": "Start Aniimo with public catching, Twine, exploration, and reward fundamentals. Verify live routes, spawn conditions, and progression rules after launch instead of relying on preview claims.",
+      "zh": "从捕捉、Twine、探索和奖励基础开始了解伊莫；上线后请核验实际路线、出没条件和成长规则，不把预览信息当作最终攻略。",
+      "ja": "捕獲、Twine、探索、報酬の基本からアニモを始めます。プレビュー情報を最終攻略とせず、配信後にルート、出現、進行規則を確認してください。"
+    },
+    "quickFacts": {
+      "en": [
+        "Use public systems to plan your first session; exact spawn routes and progression unlocks need live verification.",
+        "Start with official download or store pages, then confirm account, server, and reward rules before claiming anything.",
+        "Keep pre-registration rewards separate from redeem-code claims until an official redemption flow appears."
+      ],
+      "zh": [
+        "先用公开系统规划首日体验；精确出没路线和解锁条件需以上线实测为准。",
+        "先从官网或商店入口开始，领奖前核对账号、区服和奖励规则。",
+        "官方兑换入口出现前，请把预注册奖励与兑换码分开看。"
+      ],
+      "ja": [
+        "公開システムで初日を計画し、正確な出現ルートと解放条件は配信後に確認します。",
+        "公式サイトまたはストアから始め、報酬前にアカウント、サーバー、規則を確認します。",
+        "公式交換導線が出るまで、事前登録報酬とコードを分けて扱います。"
+      ]
+    },
     "tags": [
       "beginner",
       "twine",
