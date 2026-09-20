@@ -159,7 +159,7 @@
     "categoryZh": "刷取攻略",
     "categoryEn": "Farming",
     "summary": "鸣潮 v3.6 当前刷取攻略，把 Waveplates、角色材料、武器材料、声骸、兑换码、当前卡池目标和每日路线放在同一张资源规划里。",
-    "summaryEn": "Updated WuWa farming guide for Waveplates, character materials, boss drops, weekly materials, Echo farming, v3.6 banner priorities, and stamina planning.",
+    "summaryEn": "Decision-first WuWa farming guide for Waveplates, character materials, weekly materials, Echoes, and stamina planning. Verify the target challenge, live costs, and rewards in-game before farming.",
     "content": "## 2026-09-12 当前刷取优先级\n\n刷取路线现在要跟 v3.6 当前卡池绑定：先把正在培养或准备抽的角色列出来，再决定 Waveplates 给角色突破、武器材料、技能材料还是声骸。\n\n## 材料刷取与资源管理指南\n\n### 1. 波片(Waveplate)优先级\n波片是最重要的有限资源：\n- **前期(Union Level 1-20)**:\n  - 模拟挑战(Simulation Challenge): 获取经验和信用点\n  - Boss挑战: 获取角色突破材料\n- **中期(Union Level 20-40)**:\n  - 声骸域(Tacet Field): 刷取声骸套装\n  - Boss挑战: 持续获取突破材料\n- **后期(Union Level 40+)**:\n  - 回音域: 刷取高品质声骸\n  - 周常Boss: 获取技能升级材料\n\n### 2. Boss挑战\n- 每次消耗60波片\n- 16个Boss分布在不同国度\n- 掉落角色突破材料和声骸\n- Boss位置：\n  - 瑝珑: Mechanical Division, Crownless, Dreamless, Feilian Beringal, Impermanence Heron, Bell-Borne Geochelone\n  - 黑海岸: Hecate, Crownless Shadow\n  - 黎那汐塔: Thundering Mephis, Abomination, Luminous Crown\n  - 拉海洛: Frost-Blaze, Glacial Crown, Abyss Walker\n\n### 3. 每日规划\n推荐每日完成以下内容：\n- **日常任务**: 获取活跃度和基础奖励\n- **消耗波片**: 至少消耗当日恢复的波片\n- **声骸猎杀**: 每日可猎杀一定数量的精英声骸\n- **探索活动**: 收集地图上的材料、开宝箱\n- **活动参与**: 完成当期限时活动任务\n\n### 4. 材料分类\n- **通用材料**: 多个角色共用，优先刷取\n- **专属材料**: 特定角色需要，按需刷取\n- **稀有材料**: Boss掉落，每周限制获取次数\n- **特产**: 地图采集物，刷新周期较长\n\n### 5. 省体力技巧\n1. 提前规划要培养的角色，避免浪费材料\n2. 利用声骸数据银行(Data Bank)补全声骸图鉴\n3. 周常Boss周刷新，合理安排挑战时间\n4. 活动奖励通常性价比很高，优先完成\n5. 高SOL3阶段掉落更好，但不建议过早提升难度",
     "contentEn": "## Current Farming Priority for September 12, 2026\n\n### Quality checkpoint (checked 2026-09-12)\n\nThis route is aligned to the WuWa v3.6 content review. Check current event bonuses, weekly boss limits, and the target Resonator's weapon before spending Waveplates; rerun timing is forecast-only unless officially announced.\n\n**Priority order:** unlock the Resonator and weapon level caps, farm Forte and boss materials, then tune Echo main stats. Do not split Waveplates across several unfinished teams when one complete team can unlock more content.\nFarming should now be tied to the v3.6 banner cycle: list the characters you are building or preparing to pull, then decide whether Waveplates go to ascension, weapons, skills, or Echoes.\n\n## Farming & Resource Management Guide\n\n### 1. Waveplate Priority\nWaveplate is the most important limited resource:\n- **Early (Union Level 1-20)**:\n  - Simulation Challenge: EXP and Credits\n  - Boss Challenges: Character ascension materials\n- **Mid (Union Level 20-40)**:\n  - Tacet Field: Echo sets\n  - Boss Challenges: Ongoing ascension materials\n- **Late (Union Level 40+)**:\n  - Tacet Fields: High-quality Echoes\n  - Weekly Bosses: Skill upgrade materials\n\n### 2. Boss Challenges\n- Costs 60 Waveplate per attempt\n- 16 bosses across different nations\n- Drop ascension materials and Echoes\n- Boss Locations:\n  - Huanglong: Mechanical Division, Crownless, Dreamless, Feilian Beringal, Impermanence Heron, Bell-Borne Geochelone\n  - The Black Shores: Hecate, Crownless Shadow\n  - Rinascita: Thundering Mephis, Abomination, Luminous Crown\n  - Lahai-Roi: Frost-Blaze, Glacial Crown, Abyss Walker\n\n### 3. Daily Planning\nRecommended daily activities:\n- **Daily Missions**: Activity points and basic rewards\n- **Spend Waveplate**: At minimum, use daily recovered Waveplate\n- **Echo Hunts**: Limited elite Echo kills per day\n- **Exploration**: Gather map materials, open chests\n- **Events**: Complete limited-time event tasks\n\n### 4. Material Categories\n- **Universal Materials**: Shared across characters, farm first\n- **Character-Specific**: Only needed for certain characters\n- **Rare Materials**: Boss drops, weekly acquisition limits\n- **Local Specialties**: Map gathering items, long respawn timers\n\n### 5. Efficiency Tips\n1. Plan which characters to build in advance to avoid waste\n2. Use the Data Bank to complete Echo collection\n3. Weekly bosses reset weekly, schedule your attempts\n4. Event rewards are usually high value, prioritize them\n5. Higher SOL3 Phase has better drops but don't raise difficulty too early",
     "tags": [
@@ -180,19 +180,19 @@
       {
         "question": "How many bosses are there and where?",
         "questionZh": "有多少个Boss，分别在哪里？",
-        "answer": "16 bosses total across all nations. Huanglong has 6, The Black Shores has 2, Rinascita has 3, Lahai-Roi has 3. New Federation has no bosses yet. Each costs 60 Waveplate.",
-        "answerZh": "共16个Boss分布在不同国度。瑝珑6个、黑海岸2个、黎那汐塔3个、拉海洛3个。新联邦暂无Boss。每次消耗60波片。"
+        "answer": "Use the target Resonator's in-game ascension screen to find the matching challenge. Challenge availability, costs, and material targets can change by version, so the live client is the final source of truth.",
+        "answerZh": "请先在目标共鸣者的游戏内突破界面查看对应挑战。挑战入口、消耗和材料目标会随版本变化，因此以游戏内信息为最终依据。"
       }
     ],
     "updatedAt": "2026-09-12",
     "currentVersion": "WuWa v3.6 content review",
     "serpTitle": {
-      "en": "WuWa Farming Guide: Waveplates, Materials, Echoes and v3.6 Priority",
+      "en": "WuWa Farming Guide: Waveplates, Materials, Echoes & Priorities",
       "zh": "鸣潮刷取攻略：体力、材料、声骸和 v3.6 养成优先级",
       "ja": "鳴潮周回攻略：スタミナ、素材、エコー、v3.6優先度"
     },
     "serpDescription": {
-      "en": "Plan WuWa Waveplates, materials, boss drops, weekly resets, Echo farming, v3.6 banner priorities, current builds, and stamina spending.",
+      "en": "Plan WuWa Waveplates, character materials, weekly materials, Echo farming, current builds, and stamina priorities. Verify live challenge costs and rewards in-game.",
       "zh": "规划鸣潮 Waveplates、角色材料、武器材料、声骸、v3.6 配队需求、当前卡池、兑换码和每日资源优先级。",
       "ja": "鳴潮のWaveplate、キャラ素材、武器素材、エコー、v3.6編成、現在バナー、コード、日課優先度を整理。"
     },
@@ -295,7 +295,7 @@
     "category": "echo",
     "categoryZh": "声骸攻略",
     "categoryEn": "Echo",
-    "summary": "鸣潮 v3.5 当前声骸攻略，按角色定位、Sonata 套装、COST、主词条、副词条、刷取体力和当前卡池配队来规划养成。",
+    "summary": "鸣潮 v3.6 声骸养成参考，按角色定位、Sonata 套装、COST、主词条、副词条、刷取体力和当前卡池配队规划资源；具体套装效果以游戏内为准。",
     "summaryEn": "Updated WuWa Echo guide for best Echo sets, main stats, substats, Sonata effects, cost planning, farming priority, current banners, and team builds.",
     "content": "## 2026-09-12 当前声骸路线\n\n声骸页现在要和 v3.6 当前卡池一起看：先确定你要养的角色和队伍，再决定 Sonata 套装、COST 结构、主词条和副词条刷取深度。\n\n## 声骸进阶攻略：词条与套装搭配\n\n### 1. 副词条优先级\n不同定位角色的副词条优先级不同：\n- **主C**: 暴击率 > 暴击伤害 > 攻击力% > 元素伤害加成 > 充能\n- **副C**: 暴击率 > 暴击伤害 > 元素伤害加成 > 攻击力% > 充能\n- **辅助**: 充能效率 > 生命值% > 防御力% > 攻击力%\n- **治疗**: 充能效率 > 生命值% > 治疗加成 > 防御力%\n\n### 2. 套装选择指南\n| 定位 | 推荐套装 | 备选 |\n|------|----------|------|\n| 冰系主C | 凝寒霜焰5件 | 2+2+1混搭 |\n| 火系主C | 热熔裂隙5件 | 2+2+1混搭 |\n| 雷系主C | 雷啸霆击5件 | 2+2+1混搭 |\n| 通用辅助 | 月华之力5件 | 治愈之光2+月华2 |\n| 治疗角色 | 治愈之光5件 | 月华2+治愈2 |\n\n### 3. Cost搭配策略\n- **4+4+3+1+1**: 最大化5件套，适合大多数情况\n- **4+3+3+1+1**: 两个3-COST提供更灵活的属性选择\n- **Cost 4声骸**优先选择灾厄/霸主声骸，主属性更强\n\n### 4. 调律(Tuning)技巧\n- 每次调律随机强化一个副词条\n- 前两次调律先用低级材料测试\n- 如果前两次强化到无用词条，建议换一个声骸\n- 目标：暴击率+暴击伤害合计40%以上为合格\n\n### 5. 常见误区\n- 不要为了套装效果牺牲优质副词条\n- 2件套+散搭有时优于5件套烂词条\n- 主C的暴击率建议稳定在70%以上再堆暴击伤害",
     "contentEn": "## Current Echo Route for September 12, 2026\n\n### Freshness and archive status\n\nChecked through 2026-09-12 for the WuWa v3.6 content cycle; verify set effects and stat rules in the current client.\n\n已按鸣潮 v3.6 内容周期检查至 2026-09-12；套装与词条请以当前游戏版本为准。\nRead Echoes together with the v3.6 banner plan: choose the character and team first, then decide Sonata set, COST structure, main stats, and how hard to chase substats.\n\n## Advanced Echo Guide: Stats & Set Combinations\n\n### 1. Substat Priority\nSubstat priority varies by role:\n- **Main DPS**: CRIT Rate > CRIT DMG > ATK% > Elemental DMG Bonus > Energy Recharge\n- **Sub DPS**: CRIT Rate > CRIT DMG > Elemental DMG Bonus > ATK% > Energy Recharge\n- **Support**: Energy Recharge > HP% > DEF% > ATK%\n- **Healer**: Energy Recharge > HP% > Healing Bonus > DEF%\n\n### 2. Set Selection Guide\n| Role | Recommended Set | Alternative |\n|------|----------------|-------------|\n| Glacio DPS | Glacio 5-piece | 2+2+1 mixed |\n| Fusion DPS | Fusion 5-piece | 2+2+1 mixed |\n| Electro DPS | Electro 5-piece | 2+2+1 mixed |\n| General Support | Moonlit 5-piece | Healing 2 + Moonlit 2 |\n| Healer | Healing 5-piece | Moonlit 2 + Healing 2 |\n\n### 3. COST Strategy\n- **4+4+3+1+1**: Maximizes 5-piece set, suitable for most cases\n- **4+3+3+1+1**: Two 3-COST Echoes for more flexible stat options\n- Prioritize Calamity/Overlord Echoes for Cost 4 slots due to stronger main stats\n\n### 4. Tuning Tips\n- Each tuning randomly upgrades one substat\n- Use low-grade materials for the first two rolls as a test\n- If the first two rolls hit useless stats, switch to a different Echo\n- Target: combined CRIT Rate + CRIT DMG above 40% is acceptable\n\n### 5. Common Mistakes\n- Don't sacrifice good substats for set bonuses\n- 2-piece + off-set pieces with great stats can outperform 5-piece with bad stats\n- Aim for 70%+ CRIT Rate on main DPS before stacking CRIT DMG",
@@ -347,12 +347,12 @@
       ],
       "zh": [
         "已按鸣潮 v3.6 内容周期检查至 2026-09-12；套装与词条请以当前游戏版本为准。",
-        "声骸刷取要围绕 v3.5 配队和当前卡池目标。",
+      "声骸刷取要围绕 v3.6 配队和当前卡池目标。",
         "和配装、角色、卡池、刷取路线一起看。"
       ],
       "ja": [
         "メインステ優先、完璧なサブは後。",
-        "v3.5編成と現在バナー目標に合わせて周回。",
+      "v3.6編成と現在バナー目標に合わせて周回。",
         "ビルド、キャラ、バナー、周回を一緒に確認。"
       ]
     }
