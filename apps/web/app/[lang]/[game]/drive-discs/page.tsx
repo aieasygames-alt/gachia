@@ -19,8 +19,8 @@ type NextStepLink = {
 const ZZZ_DRIVE_DISC_NEXT_STEPS: NextStepLink[] = [
   {
     href: '/zzz/version',
-    label: { zh: '先看 3.1 当前版本', en: 'Start with the live v3.1 hub', ja: '配信中のv3.1特集へ' },
-    description: { zh: '当前版本、周年福利和热词先看一遍', en: 'Review the live patch, anniversary rewards, and hot topics', ja: '現在版本、周年報酬、注目トピックを確認', },
+    label: { zh: '先看 3.3 观察入口', en: 'Start with the v3.3 watch hub', ja: 'v3.3観察入口へ' },
+    description: { zh: '3.3 观察、3.2 回顾和热词先看一遍', en: 'Review the v3.3 watchlist, v3.2 recap, and hot topics', ja: 'v3.3観察、v3.2回顧、注目トピックを確認', },
   },
   {
     href: '/zzz/characters',

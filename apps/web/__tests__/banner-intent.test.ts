@@ -36,4 +36,12 @@ describe('banner intent panels', () => {
       }
     }
   });
+
+  it('keeps Star Rail banner intent aligned to the 4.6 watch window', () => {
+    const starrail = BANNER_INTENT_PANELS.starrail;
+
+    expect(starrail?.links[0]?.label.zh).toContain('4.6');
+    expect(starrail?.links[0]?.description.en).toContain('v4.6');
+    expect(starrail?.links[0]?.description.zh).not.toContain('4.4');
+  });
 });

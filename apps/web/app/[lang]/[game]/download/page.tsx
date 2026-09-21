@@ -78,9 +78,9 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
       ja: 'スターレイルは配信中です。PC、モバイル、コンソールはHoYoverse公式と各ストアを確認してください。',
     },
     intro: {
-      zh: '这里集中处理星铁下载、官网、云游戏、配置、兑换码和 4.4 版本入坑路径。',
-      en: 'Use this hub for Star Rail download, official links, cloud gaming, specs, codes, and v4.4 onboarding.',
-      ja: 'DL、公式、クラウド、環境、コード、v4.4入門をまとめます。',
+      zh: '这里集中处理星铁下载、官网、云游戏、配置、兑换码和 4.6 版本入坑路径。',
+      en: 'Use this hub for Star Rail download, official links, cloud gaming, specs, codes, and v4.6 onboarding.',
+      ja: 'DL、公式、クラウド、環境、コード、v4.6入門をまとめます。',
     },
     officialNote: DEFAULT_STATUS,
     platforms: [
@@ -91,20 +91,20 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
     specs: specs('建议预留 40GB 以上空间，版本更新前再检查资源包大小。', 'Reserve 40GB+ and recheck asset size before major updates.', '40GB以上を確保し大型更新前に容量を確認。'),
     cloud: cloudOfficial(),
     crossPlay: crossSaveHoyoverse(),
-    nextLinks: commonLinks('starrail', 'v4-4-preview-guide'),
+    nextLinks: commonLinks('starrail', 'banner-schedule-guide'),
     faq: liveFaq('崩坏：星穹铁道', 'Honkai: Star Rail', 'スターレイル'),
   },
   wuwa: {
     officialUrl: 'https://wutheringwaves.kurogames.com/',
     status: {
-      zh: '鸣潮已上线，3.5 后 Xbox / Game Pass 相关下载与账号问题需要优先看官方和商店公告。',
-      en: 'Wuthering Waves is live; after v3.5, verify Xbox/Game Pass download and account details through official and store notices.',
-      ja: '鳴潮は配信中です。v3.5以降のXbox/Game Pass関連は公式とストア告知を確認してください。',
+      zh: '鸣潮已上线，3.7 观察期与 3.6 今汐复盘下，Xbox / Game Pass 相关下载与账号问题仍需优先看官方和商店公告。',
+      en: 'Wuthering Waves is live; around the v3.7 watchlist and v3.6 Jingran recap, verify Xbox/Game Pass download and account details through official and store notices.',
+      ja: '鳴潮は配信中です。v3.7観察とv3.6今汐回顧ではXbox/Game Pass関連も公式とストア告知を確認してください。',
     },
     intro: {
-      zh: '集中查看鸣潮下载、官网、国际服、Xbox、云游戏、配置和 3.5 新玩家入坑问题。',
-      en: 'A hub for Wuthering Waves download, official links, global server, Xbox, cloud gaming, specs, and v3.5 starters.',
-      ja: 'DL、公式、グローバル、Xbox、クラウド、環境、v3.5入門を整理します。',
+      zh: '集中查看鸣潮下载、官网、国际服、Xbox、云游戏、配置、3.7 观察和 3.6 后新玩家入坑问题。',
+      en: 'A hub for Wuthering Waves download, official links, global server, Xbox, cloud gaming, specs, v3.7 watch items, and v3.6+ starters.',
+      ja: 'DL、公式、グローバル、Xbox、クラウド、環境、v3.7観察、v3.6以降の入門を整理します。',
     },
     officialNote: DEFAULT_STATUS,
     platforms: [
@@ -119,7 +119,7 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
       en: 'Cross-platform progress and server rules follow Kuro account and platform notices; confirm login method before switching devices.',
       ja: 'クロス進行とサーバールールはKuroアカウントと告知基準。端末変更前にログイン方式を確認。',
     },
-    nextLinks: commonLinks('wuwa', 'v3-5-preview-guide'),
+    nextLinks: commonLinks('wuwa', 'banner-schedule-guide'),
     faq: liveFaq('鸣潮', 'Wuthering Waves', '鳴潮'),
   },
   nte: {
@@ -158,9 +158,9 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
       ja: 'ゼンレスゾーンゼロは配信中です。Steam、公式ランチャー、モバイル、コンソールは同じHoYoverseアカウントを確認。',
     },
     intro: {
-      zh: '集中查看绝区零 Steam 下载、账号绑定、云游戏、兑换码、配置和 3.0 回流入坑问题。',
-      en: 'Covers ZZZ Steam download, account linking, cloud gaming, codes, specs, and v3.0 starter questions.',
-      ja: 'Steam DL、アカウント連携、クラウド、コード、環境、v3.0復帰/入門を整理。',
+      zh: '集中查看绝区零 Steam 下载、账号绑定、云游戏、兑换码、配置、3.3 观察和 3.2 后回流入坑问题。',
+      en: 'Covers ZZZ Steam download, account linking, cloud gaming, codes, specs, v3.3 watch items, and v3.2+ starter questions.',
+      ja: 'Steam DL、アカウント連携、クラウド、コード、環境、v3.3観察、v3.2以降の復帰/入門を整理。',
     },
     officialNote: DEFAULT_STATUS,
     platforms: [
@@ -242,14 +242,14 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
   endfield: {
     officialUrl: 'https://endfield.hypergryph.com/',
     status: {
-      zh: '终末地下载、测试资格、Homecoming 更新和平台状态请以鹰角官方、商店与测试公告为准。',
-      en: 'Endfield downloads, test access, Homecoming updates, and platform status should follow Hypergryph, stores, and test notices.',
-      ja: 'EndfieldのDL、テスト資格、Homecoming更新、プラットフォーム状態はHypergryph公式、ストア、テスト告知を基準にしてください。',
+      zh: '终末地下载、测试资格、Pioneer Test 复盘和平台状态请以鹰角官方、商店与测试公告为准。',
+      en: 'Endfield downloads, test access, Pioneer Test recaps, and platform status should follow Hypergryph, stores, and test notices.',
+      ja: 'EndfieldのDL、テスト資格、Pioneer Test回顧、プラットフォーム状態はHypergryph公式、ストア、テスト告知を基準にしてください。',
     },
     intro: {
-      zh: '集中查看终末地官网、下载、配置、云游戏、角色、AIC 工厂和 Homecoming 问题。',
-      en: 'Covers Endfield official site, downloads, specs, cloud gaming, operators, AIC factory, and Homecoming intent.',
-      ja: '公式、DL、環境、クラウド、オペレーター、AIC工場、Homecoming検索を整理。',
+      zh: '集中查看终末地官网、下载、配置、云游戏、角色、AIC 工厂和 Pioneer Test 后续问题。',
+      en: 'Covers Endfield official site, downloads, specs, cloud gaming, operators, AIC factory, and post-Pioneer-Test intent.',
+      ja: '公式、DL、環境、クラウド、オペレーター、AIC工場、Pioneer Test後の検索を整理。',
     },
     officialNote: DEFAULT_STATUS,
     platforms: [
@@ -441,9 +441,9 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
       ja: 'アニモ（Aniimo）はPC/コンソールが2026-09-16、モバイルが2026-09-23予定。公式サイトと各ストアを確認してください。',
     },
     intro: {
-      zh: '这里集中查看伊莫官网、发售日期、平台入口、预注册奖励、兑换码状态和上线前下载注意事项。',
-      en: 'Use this hub for Aniimo official links, release dates, platform stores, pre-registration rewards, code status, and safe download notes.',
-      ja: '公式リンク、発売日、ストア、事前登録報酬、コード状態、安全なDL情報をまとめます。',
+      zh: '这里集中查看伊莫官网、发售日期、平台入口、预注册奖励、兑换码状态、PC/主机上线后核验和移动端倒计时。',
+      en: 'Use this hub for Aniimo official links, release dates, platform stores, pre-registration rewards, code status, PC/console post-launch checks, and the mobile countdown.',
+      ja: '公式リンク、発売日、ストア、事前登録報酬、コード状態、PC/コンソール配信後確認、モバイルカウントダウンをまとめます。',
     },
     officialNote: DEFAULT_STATUS,
     platforms: [
@@ -451,7 +451,7 @@ const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
       platform('Xbox / PlayStation', '2026-09-16', '2026-09-16', '2026-09-16', '主机端以对应平台商店开放时间为准。', 'Console timing follows each platform store.', 'コンソールは各ストアの公開時間基準。'),
       platform('iOS / Android', '2026-09-23', '2026-09-23', '2026-09-23', '移动端比 PC/主机晚一周，注意地区商店可见性。', 'Mobile follows one week later; store visibility can vary by region.', 'モバイルは1週間後。地域ごとの表示差に注意。'),
     ],
-    specs: specs('正式配置和包体大小以上线前官方公告为准，避免使用非官方 APK 或安装器。', 'Final specs and size should follow official pre-launch notices; avoid unofficial APKs or installers.', '最終環境と容量は公式告知基準。非公式APKやインストーラーは避けてください。'),
+    specs: specs('正式配置和包体大小以官方公告与平台商店为准，避免使用非官方 APK 或安装器。', 'Final specs and size should follow official notices and platform stores; avoid unofficial APKs or installers.', '最終環境と容量は公式告知とストア基準。非公式APKやインストーラーは避けてください。'),
     cloud: {
       zh: '暂未确认官方云游戏入口；如果平台商店新增云游或试玩入口，以上线后公告为准。',
       en: 'No official cloud gaming entry is confirmed yet; follow post-launch platform notices if one appears.',

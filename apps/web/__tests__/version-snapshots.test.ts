@@ -16,28 +16,28 @@ describe('version snapshots', () => {
     }
   });
 
-  it('marks the current ZZZ snapshot as a v3.2 live recap', () => {
+  it('marks the current ZZZ snapshot as a v3.3 watch with v3.2 recap', () => {
     expect(getVersionSnapshot('zzz')).toMatchObject({
-      currentVersion: '3.2 live launch recap',
-      status: 'live',
+      currentVersion: '3.3 watch / 3.2 recap',
+      status: 'watch',
       lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     });
   });
 
-  it('uses the 2026-09-13 snapshot batch', () => {
-    expect(VERSION_SNAPSHOT_UPDATED_AT).toBe('2026-09-13');
-    expect(getVersionSnapshot('genshin')?.currentVersion).toBe('Luna VIII content review');
-    expect(getVersionSnapshot('starrail')?.currentVersion).toBe('4.4 live content review');
+  it('uses the 2026-09-21 snapshot batch', () => {
+    expect(VERSION_SNAPSHOT_UPDATED_AT).toBe('2026-09-21');
+    expect(getVersionSnapshot('genshin')?.currentVersion).toBe('7.1 livestream / Luna II watch');
+    expect(getVersionSnapshot('starrail')?.currentVersion).toBe('4.6 special program watch');
     expect(getVersionSnapshot('endfield')?.currentVersion).toBe('Pioneer Test recap / AIC blueprint');
-    expect(getVersionSnapshot('aniimo')?.currentVersion).toBe('global launch countdown');
-    expect(getVersionSnapshot('roco')?.currentVersion).toBe('Quack Quack Test watch');
-    expect(getVersionSnapshot('roco')?.sourceTier).toBe('third_party_watch');
+    expect(getVersionSnapshot('aniimo')?.currentVersion).toBe('PC/console live / mobile countdown');
+    expect(getVersionSnapshot('roco')?.currentVersion).toBe('Quack Quack Test official watch');
+    expect(getVersionSnapshot('roco')?.sourceTier).toBe('official');
     expect(getVersionSnapshot('roco-cn')?.currentVersion).toBe('post-launch codes / encyclopedia');
     expect(getVersionSnapshot('sea')?.currentVersion).toBe('early 2027 / December beta watch');
   });
 
   it('keeps the highest-priority launch times explicit', () => {
-    expect(getVersionSnapshot('aniimo')?.summary.zh).toContain('9/16 10:00 UTC+8');
+    expect(getVersionSnapshot('aniimo')?.summary.zh).toContain('PC/主机已上线');
     expect(getVersionSnapshot('aniimo')?.summary.zh).toContain('9/23');
     expect(getVersionSnapshot('aniimo')?.platformReleaseDates).toEqual([
       { platform: 'PC / PS5 / Xbox', date: '2026-09-16', time: '10:00 UTC+8' },

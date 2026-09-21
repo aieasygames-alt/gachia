@@ -95,7 +95,7 @@ export const CHARACTER_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
   zzz: [
     {
       href: '/zzz/version',
-      title: { zh: '回到 3.0 专题', en: 'Back to v3.0 hub', ja: 'v3.0特集へ戻る' },
+      title: { zh: '回到 3.3 观察入口', en: 'Back to v3.3 watch hub', ja: 'v3.3観察入口へ戻る' },
       description: { zh: '先把版本热词、福利和卡池信息补齐', en: 'Revisit version topics, rewards, and banner info', ja: '版本トピック、報酬、バナー情報を確認' },
     },
     {

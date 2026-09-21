@@ -1,7 +1,20 @@
 import type { Metadata } from 'next';
-import { BarChart3, CheckCircle2, FileText, Link2, ShieldAlert, Target } from 'lucide-react';
+import { Archive, BarChart3, CheckCircle2, FileText, Link2, Radar, ShieldAlert, Target } from 'lucide-react';
 import { GAMES, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
+import aniimoGuides from '../../../../public/data/aniimo/raw-guides.json';
+import endfieldGuides from '../../../../public/data/endfield/raw-guides.json';
+import genshinGuides from '../../../../public/data/genshin/raw-guides.json';
+import seaGuides from '../../../../public/data/sea/raw-guides.json';
+import starrailGuides from '../../../../public/data/starrail/raw-guides.json';
+import wuwaGuides from '../../../../public/data/wuwa/raw-guides.json';
+import zzzGuides from '../../../../public/data/zzz/raw-guides.json';
+import {
+  scanFreshnessGuides,
+  summarizeFreshnessFindings,
+  type FreshnessFinding,
+  type FreshnessGuide,
+} from '@/lib/content-freshness';
 import { buildLocalizedAlternates } from '@/lib/seo-metadata';
 import { KEYWORD_RISK_RULES } from '@/lib/keyword-governance';
 import {
@@ -132,6 +145,20 @@ function gameName(gameId: GameId, locale: SupportedLocale) {
   return GAMES[gameId].name[locale] ?? GAMES[gameId].name.zh;
 }
 
+const freshnessGuideSources: Array<{ gameId: GameId; guides: readonly FreshnessGuide[]; file: string }> = [
+  { gameId: 'genshin', guides: genshinGuides, file: 'apps/web/public/data/genshin/raw-guides.json' },
+  { gameId: 'starrail', guides: starrailGuides, file: 'apps/web/public/data/starrail/raw-guides.json' },
+  { gameId: 'wuwa', guides: wuwaGuides, file: 'apps/web/public/data/wuwa/raw-guides.json' },
+  { gameId: 'zzz', guides: zzzGuides, file: 'apps/web/public/data/zzz/raw-guides.json' },
+  { gameId: 'endfield', guides: endfieldGuides, file: 'apps/web/public/data/endfield/raw-guides.json' },
+  { gameId: 'sea', guides: seaGuides, file: 'apps/web/public/data/sea/raw-guides.json' },
+  { gameId: 'aniimo', guides: aniimoGuides, file: 'apps/web/public/data/aniimo/raw-guides.json' },
+];
+
+function getDashboardFreshnessFindings() {
+  return freshnessGuideSources.flatMap((source) => scanFreshnessGuides(source.gameId, source.guides, source.file));
+}
+
 export default async function MarketIntelPage({
   params,
 }: {
@@ -145,6 +172,10 @@ export default async function MarketIntelPage({
   const p1Count = getMarketIntelByPriority('P1').length;
   const coveredGames = new Set(MARKET_INTEL_OPPORTUNITIES.map((item) => item.gameId)).size;
   const riskyTerms = new Set(MARKET_INTEL_OPPORTUNITIES.flatMap((item) => item.riskTerms)).size;
+  const freshnessFindings = getDashboardFreshnessFindings();
+  const freshnessSummary = summarizeFreshnessFindings(freshnessFindings);
+  const freshnessRisks = freshnessFindings.filter((finding) => finding.severity === 'risk');
+  const archivedFreshnessMatches = freshnessFindings.filter((finding) => finding.severity === 'archive');
 
   return (
     <div className="container mx-auto px-4 py-6">
@@ -180,6 +211,64 @@ export default async function MarketIntelPage({
         <StatCard icon={FileText} label={t(locale, '游戏', 'Games', 'ゲーム')} value={coveredGames} helper={t(locale, '已覆盖站点游戏', 'Supported games covered', '対応ゲームを網羅')} />
         <StatCard icon={ShieldAlert} label={t(locale, '风险词', 'Risk terms', 'リスク語')} value={riskyTerms} helper={t(locale, '从承接词中分离', 'Separated from target keywords', '対象語から分離')} />
         <StatCard icon={CheckCircle2} label={t(locale, '校验问题', 'Issues', '問題')} value={validationIssues.length} helper={t(locale, '数据结构校验结果', 'Data validation result', 'データ検証結果')} />
+      </section>
+
+      <section className="mb-8 rounded-lg border border-game-border bg-game-surface p-5">
+        <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <div className="mb-2 flex items-center gap-2">
+              <Radar className="h-5 w-5 text-game-primary" aria-hidden="true" />
+              <h2 className="text-xl font-semibold text-game-text">{t(locale, '过期词雷达', 'Freshness Radar', '鮮度レーダー')}</h2>
+            </div>
+            <p className="text-sm leading-relaxed text-game-text-muted">
+              {t(
+                locale,
+                '扫描高时效 guide 中的旧版本词，并区分当前风险与历史归档命中。完整命令：pnpm content:freshness -- --fail-on-risk。',
+                'Scans time-sensitive guides for stale version terms and separates current risks from archived matches. Full command: pnpm content:freshness -- --fail-on-risk.',
+                '時効性の高い guide の古い版本語を検出し、現在リスクと履歴アーカイブを分けます。完全なコマンド: pnpm content:freshness -- --fail-on-risk。'
+              )}
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <Badge className={freshnessSummary.risk === 0 ? 'border-green-500/30 bg-green-500/10 text-green-200' : 'border-red-500/30 bg-red-500/10 text-red-200'}>
+              {t(locale, '风险', 'Risks', 'リスク')}: {freshnessSummary.risk}
+            </Badge>
+            <Badge className="border-sky-500/30 bg-sky-500/10 text-sky-200">
+              {t(locale, '归档命中', 'Archived', 'アーカイブ')}: {freshnessSummary.archive}
+            </Badge>
+          </div>
+        </div>
+
+        {freshnessRisks.length > 0 ? (
+          <div className="mb-4 rounded-lg border border-red-500/30 bg-red-500/10 p-3">
+            <h3 className="mb-2 text-sm font-semibold text-red-100">{t(locale, '需要处理', 'Needs attention', '要確認')}</h3>
+            <ul className="space-y-2 text-sm text-red-100/85">
+              {freshnessRisks.slice(0, 8).map((finding) => (
+                <li key={`${finding.file}-${finding.id}-${finding.term}`}>
+                  <code>{finding.gameId}/{finding.id || 'entry'}</code> - {finding.term} - {finding.currentRoute}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : (
+          <div className="mb-4 rounded-lg border border-green-500/30 bg-green-500/10 p-3 text-sm text-green-100">
+            {t(locale, '当前入口未发现过期词风险。', 'No stale-term risk found in current guide routing.', '現在導線に古い語のリスクは見つかりません。')}
+          </div>
+        )}
+
+        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          {archivedFreshnessMatches.slice(0, 9).map((finding: FreshnessFinding) => (
+            <div key={`${finding.file}-${finding.id}-${finding.term}`} className="rounded-lg border border-game-border bg-game-bg/50 p-3">
+              <div className="mb-2 flex items-center gap-2">
+                <Archive className="h-4 w-4 text-game-text-muted" aria-hidden="true" />
+                <code className="text-sm text-game-text">{finding.gameId}/{finding.id}</code>
+              </div>
+              <p className="text-xs text-game-text-muted">
+                {finding.term} - {finding.currentRoute}
+              </p>
+            </div>
+          ))}
+        </div>
       </section>
 
       {validationIssues.length > 0 && (

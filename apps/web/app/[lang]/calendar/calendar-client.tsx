@@ -78,9 +78,9 @@ const SEARCH_ROUTES: Array<{
       ja: '版本日、新キャラ、平台入門、イベント導線をまとめます。',
     },
     links: [
-      { href: '/zzz/version', label: { zh: 'ZZZ 3.1', en: 'ZZZ v3.1', ja: 'ZZZ v3.1' } },
-      { href: '/wuwa/version', label: { zh: '鸣潮 3.5', en: 'WuWa v3.5', ja: '鳴潮 v3.5' } },
-      { href: '/starrail/version', label: { zh: '崩铁 4.4', en: 'HSR v4.4', ja: 'HSR v4.4' } },
+      { href: '/zzz/version', label: { zh: 'ZZZ 3.3', en: 'ZZZ v3.3', ja: 'ZZZ v3.3' } },
+      { href: '/wuwa/version', label: { zh: '鸣潮 3.7', en: 'WuWa v3.7', ja: '鳴潮 v3.7' } },
+      { href: '/starrail/version', label: { zh: '崩铁 4.6', en: 'HSR v4.6', ja: 'HSR v4.6' } },
       { href: '/nte/version', label: { zh: '异环 1.2', en: 'NTE v1.2', ja: 'NTE v1.2' } },
     ],
   },

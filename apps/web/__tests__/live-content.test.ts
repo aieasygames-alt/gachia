@@ -22,6 +22,31 @@ const allLiveItems = [
 ];
 
 describe('homepage live content', () => {
+  it('uses the 2026-09-21 intelligence batch for live modules', () => {
+    expect(LIVE_UPDATED_AT).toBe('2026-09-21');
+
+    expect(LIVE_BANNERS.map((item) => item.gameId)).toEqual(['aniimo', 'genshin', 'roco']);
+    expect(LIVE_VERSION_UPDATES.map((item) => item.gameId)).toEqual([
+      'aniimo',
+      'starrail',
+      'zzz',
+      'wuwa',
+      'roco',
+      'skjh',
+      'endfield',
+      'sea',
+      'nte',
+      'ananta',
+    ]);
+    expect(LIVE_CODE_SUMMARIES.map((item) => item.gameId)).toEqual([
+      'genshin',
+      'starrail',
+      'aniimo',
+      'nte',
+      'zzz',
+    ]);
+  });
+
   it('has complete localized text and valid dates', () => {
     for (const item of allLiveItems) {
       expect(item.href).toMatch(/^\//);
@@ -39,13 +64,14 @@ describe('homepage live content', () => {
     expect(new Set(HOMEPAGE_PRIORITY_GAMES).size).toBe(HOMEPAGE_PRIORITY_GAMES.length);
   });
 
-  it('marks the released ZZZ v3.1 module as live', () => {
+  it('marks the ZZZ module as a v3.3 watch route', () => {
     const zzzVersion = LIVE_VERSION_UPDATES.find((item) => item.gameId === 'zzz');
 
     expect(zzzVersion).toMatchObject({
-      status: 'live',
+      status: 'watch',
       updatedAt: LIVE_UPDATED_AT,
     });
+    expect(zzzVersion?.title.en).toContain('v3.3');
   });
 
   it('sorts live modules by priority', () => {

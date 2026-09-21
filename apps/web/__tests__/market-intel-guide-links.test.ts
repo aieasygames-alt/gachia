@@ -34,11 +34,11 @@ const guideIdsByGame = {
 const expectedNewGuides = {
   genshin: 'nod-krai-cryoculus-phase-ii-checklist',
   zzz: 'v3-2-livestream-recap-expired-codes',
-  endfield: 'steam-pioneer-test-registration-faq',
+  endfield: 'official-download-specs-homecoming-faq',
   sea: 'early-2027-december-closed-beta-faq',
   wuwa: 'v3-6-qingxiao-jingran-post-launch-route',
   nte: 'aug31-sep14-event-calendar-999-nights',
-  skjh: 'aug31-event-ended-beginner-catchup',
+  skjh: 'server-mode-choice',
   starrail: '4x-fate-gilgamesh-kafka-cyrene-evergreen-plan',
   guihuan: 'test-release-timeline-guide',
   roco: 'cbt-registration-guide',
@@ -47,7 +47,7 @@ const expectedNewGuides = {
 };
 
 describe('market-intel guide links', () => {
-  it('creates the guide slugs introduced by the 2026-09-07 batch', () => {
+  it('keeps the guide slugs required by the 2026-09-21 batch', () => {
     for (const [gameId, guideId] of Object.entries(expectedNewGuides)) {
       expect(guideIdsByGame[gameId as keyof typeof guideIdsByGame].has(guideId)).toBe(true);
     }

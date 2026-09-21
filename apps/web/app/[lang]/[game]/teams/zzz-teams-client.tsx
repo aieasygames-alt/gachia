@@ -185,7 +185,7 @@ export function ZzzTeams({ locale }: { locale: SupportedLocale }) {
     {
       href: '/zzz/guides/meta-teams-v3-guide',
       title: t(locale, '当前版本主流队伍', 'Current Meta Teams', '現在版本のメタ編成'),
-      description: t(locale, '查看 3.0-3.1 主流队伍、抽卡目标和版本环境。', 'Review v3.0-v3.1 meta teams, pull targets, and patch context.', 'v3.0-v3.1の主流編成、ガチャ目標、環境を確認。'),
+      description: t(locale, '查看 3.3 观察期队伍缺口、抽卡目标和 3.2 回顾环境。', 'Review v3.3-watch team gaps, pull targets, and v3.2 recap context.', 'v3.3観察期の不足枠、ガチャ目標、v3.2回顧環境を確認。'),
     },
     {
       href: '/zzz/guides/banner-schedule-guide',

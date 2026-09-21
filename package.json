@@ -15,6 +15,7 @@
     "generate:router-config": "node scripts/generate-router-game-config.mjs",
     "scaffold:game": "node scripts/scaffold-game.mjs",
     "audit:seo-contract": "node scripts/seo-contract-audit.mjs",
+    "content:freshness": "NODE_OPTIONS=--disable-warning=MODULE_TYPELESS_PACKAGE_JSON node scripts/content-freshness-audit.mjs",
     "test:browser": "playwright test"
     ,"audit:production": "node scripts/production-site-audit.mjs"
   },

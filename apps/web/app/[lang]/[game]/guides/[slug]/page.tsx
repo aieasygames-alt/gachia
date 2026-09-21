@@ -180,7 +180,7 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> 
       },
     },
     'meta-teams-v3-guide': {
-      heading: { zh: '快速结论：v3.1 配队先看队伍缺口和抽卡优先级', en: 'Quick answer: rank v3.1 teams by roster gaps and pull priority', ja: '要点：v3.1編成は不足枠とガチャ優先度で判断' },
+      heading: { zh: '快速结论：v3.3 观察期先看队伍缺口和抽卡优先级', en: 'Quick answer: rank v3.3-watch teams by roster gaps and pull priority', ja: '要点：v3.3観察期の編成は不足枠とガチャ優先度で判断' },
       points: {
         zh: ['先把可用代理人按强攻、击破、异常和支援分组。', 'F2P 队伍优先保证循环稳定，再追更高上限。', '当前卡池、音擎和驱动盘刷取要服务于同一个队伍目标。'],
         en: ['Group your agents by Attack, Stun, Anomaly, and Support before picking a meta comp.', 'F2P teams should secure stable rotations before chasing higher ceilings.', 'Current banners, W-Engines, and Drive Disc farming should support one team goal.'],
@@ -351,7 +351,7 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
       { href: '/calendar', label: { zh: '跨游戏日历', en: 'Banner calendar', ja: 'ガチャ日程' }, description: { zh: '对比多游戏卡池、版本和兑换码期限。', en: 'Compare banners, versions, and code deadlines across games.', ja: '複数ゲームのバナー、版本、コード期限を比較。' } },
     ],
     'fate-collab-guide': [
-      { href: '/starrail/guides/banner-schedule-guide', label: { zh: '当前跃迁', en: 'Current warps', ja: '現在跳躍' }, description: { zh: '回到 v4.4 当前卡池算预算。', en: 'Return to v4.4 banners for budget checks.', ja: 'v4.4バナーで予算確認。' } },
+      { href: '/starrail/guides/banner-schedule-guide', label: { zh: '当前跃迁', en: 'Current warps', ja: '現在跳躍' }, description: { zh: '回到 4.6 跃迁观察入口算预算。', en: 'Return to v4.6 warp planning for budget checks.', ja: 'v4.6跳躍計画で予算確認。' } },
       { href: '/starrail/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '补齐联动前资源。', en: 'Top up resources before collab pulls.', ja: 'コラボ前に資源補充。' } },
     ],
     'cross-game-comparison-guide': [
@@ -380,16 +380,16 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
   },
   zzz: {
     'banner-schedule-guide': [
-      { href: '/zzz/version', label: { zh: 'v3.1 专题', en: 'v3.1 hub', ja: 'v3.1特集' }, description: { zh: '当前代理人、奖励和平台入口。', en: 'Current agents, rewards, and platform routes.', ja: '現在代理人、報酬、平台。' } },
+      { href: '/zzz/version', label: { zh: 'v3.3 观察', en: 'v3.3 watch', ja: 'v3.3観察' }, description: { zh: '3.3 观察、3.2 回顾、奖励和平台入口。', en: 'v3.3 watch items, v3.2 recap, rewards, and platform routes.', ja: 'v3.3観察、v3.2回顧、報酬、平台。' } },
       { href: '/zzz/teams', label: { zh: '配队模拟器', en: 'ZZZ team builder', ja: 'ZZZ編成ツール' }, description: { zh: '抽前先看当前代理人能进哪些队伍。', en: 'Check best teams and agent synergy before pulling.', ja: '引く前に編成相性を確認。' } },
       { href: '/calendar', label: { zh: '跨游戏日历', en: 'Banner calendar', ja: 'ガチャ日程' }, description: { zh: '对比多游戏卡池、版本和兑换码期限。', en: 'Compare banners, versions, and code deadlines across games.', ja: '複数ゲームのバナー、版本、コード期限を比較。' } },
     ],
     'team-building-guide': [
-      { href: '/zzz/guides/meta-teams-v3-guide', label: { zh: 'v3.1 最强队伍', en: 'Best v3.1 teams', ja: 'v3.1最強編成' }, description: { zh: '从通用配队继续看当前版本队伍优先级。', en: 'Move from team basics into current meta priorities.', ja: '基本編成から現在メタへ。' } },
+      { href: '/zzz/guides/meta-teams-v3-guide', label: { zh: 'v3.3 观察期队伍', en: 'v3.3-watch teams', ja: 'v3.3観察期編成' }, description: { zh: '从通用配队继续看当前版本队伍优先级。', en: 'Move from team basics into current meta priorities.', ja: '基本編成から現在メタへ。' } },
       { href: '/zzz/guides/w-engine-guide', label: { zh: '音擎优先级', en: 'W-Engine priority', ja: '音動機優先度' }, description: { zh: '队伍确定后再判断是否追专属音擎。', en: 'After team roles are set, decide whether signatures are worth chasing.', ja: '編成後に餅武器価値を判断。' } },
     ],
     'v3-0-version-guide': [
-      { href: '/zzz/guides/banner-schedule-guide', label: { zh: '当前卡池', en: 'Current banners', ja: '現在バナー' }, description: { zh: '先看 3.1 当前代理人、复刻和菲林规划。', en: 'Check live v3.1 agents, reruns, and Polychrome planning.', ja: 'v3.1代理人、復刻、菲林計画を確認。' } },
+      { href: '/zzz/guides/banner-schedule-guide', label: { zh: '当前卡池', en: 'Current banners', ja: '現在バナー' }, description: { zh: '先看 3.3 观察、3.2 回顾、复刻和菲林规划。', en: 'Check v3.3 watch items, v3.2 recap, reruns, and Polychrome planning.', ja: 'v3.3観察、v3.2回顧、復刻、菲林計画を確認。' } },
       { href: '/zzz/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '回顾版本前先补当前可领资源。', en: 'Claim live rewards before using the version recap.', ja: '振り返り前に現在の報酬を回収。' } },
     ],
     'cross-game-comparison-guide': [
@@ -401,7 +401,7 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
       { href: '/zzz/teams', label: { zh: '简·杜配队', en: 'Jane Doe teams', ja: 'Jane Doe編成' }, description: { zh: '配装前先确认异常队和当前队伍缺口。', en: 'Check Anomaly teams and roster gaps before finishing the build.', ja: '異常編成と不足枠を確認。' } },
     ],
     'steam-3-0-start-guide': [
-      { href: '/zzz/version', label: { zh: 'v3.1 当前专题', en: 'Live v3.1 hub', ja: 'v3.1特集' }, description: { zh: '先走当前版本入口。', en: 'Start from the current version route.', ja: '現在版本から開始。' } },
+      { href: '/zzz/version', label: { zh: 'v3.3 观察入口', en: 'v3.3 watch hub', ja: 'v3.3観察入口' }, description: { zh: '先走当前版本入口。', en: 'Start from the current version route.', ja: '現在版本から開始。' } },
       { href: '/zzz/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '新号先领资源。', en: 'Claim starter resources first.', ja: '新規資源を回収。' } },
     ],
     'w-engine-guide': [

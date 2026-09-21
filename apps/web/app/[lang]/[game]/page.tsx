@@ -32,14 +32,14 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     ja: '原神のキャラビルド、武器データベース、聖遺物おすすめ、攻略百科をまとめ、v6.x Nod-Krai まで対応。116+ キャラの性能、突破素材、命ノ星座、編成、素材ルート、インタラクティブマップ、版本トピックを一度に確認でき、育成計画にも役立ちます。版本特集と実用導線も整理済みです。',
   },
   starrail: {
-    zh: '崩坏：星穹铁道角色图鉴、光锥数据库、遗器推荐与攻略百科，覆盖 4.x Planarcadia 星球，整理 86+ 角色命途、技能、行迹、遗器搭配、配队方案、伤害计算器和版本专题，适合抽卡前、养成期与版本回流时快速查阅，并补充联动和实用工具入口。',
-    en: 'Honkai: Star Rail character builds, light cone database, relic recommendations, and guides up to v4.x Planarcadia. Browse 86+ characters, Paths, traces, relic sets, team comps, tools, and version topics in one place.',
-    ja: '崩壊：スターレイルのキャラビルド、光円錐データベース、遺物おすすめ、攻略百科を整理し、v4.x Planarcadia に対応。86+ キャラの運命、軌跡、遺物、編成、ダメージ計算、版本特集をまとめて確認でき、育成と周回の判断に使えます。コラボ情報と便利ツールも掲載しています。',
+    zh: '崩坏：星穹铁道角色图鉴、光锥数据库、遗器推荐与配队攻略，覆盖 4.x 版本、4.6 前瞻、直播码、下期跃迁、星琼规划与队伍构筑。Gachia 提供完整角色属性、命途、技能、突破材料、光锥适配、遗器词条和版本专题入口，帮助你规划抽卡和养成路线。',
+    en: 'Honkai: Star Rail character guides, light cone database, relic recommendations, and team comps for v4.x, v4.6 previews, livestream codes, next warps, Stellar Jade planning, and team building. Gachia connects character stats, Paths, skills, materials, light cones, relic stats, and version hubs for pull and build planning.',
+    ja: '崩壊：スターレイルのキャラ図鑑、光円錐、遺物、編成攻略。v4.x、v4.6前瞻、配信コード、次回跳躍、星玉計画、編成構築を整理します。Gachiaではキャラ性能、運命、スキル、素材、光円錐、遺物、版本特集をつなぎ、抽選と育成計画を支援します。',
   },
   wuwa: {
-    zh: '鸣潮角色图鉴、武器数据、声骸推荐与攻略百科，覆盖 3.x Roya Frostlands，整理 48+ 角色共鸣链、技能、武器、声骸套装、Tune Break 战斗系统、配队思路和版本热点，方便你查找养成、刷图和版本更新入口，并继续查看版本专题。',
-    en: 'Wuthering Waves character builds, weapon database, echo recommendations, and guides up to v3.x Roya Frostlands. Browse 48+ characters, Resonance Chain notes, echo sets, teams, combat tips, and version topics for progression.',
-    ja: '鳴潮のキャラビルド、武器データベース、エコーおすすめ、攻略百科をまとめ、v3.x Roya Frostlands に対応。48+ キャラの共鳴チェーン、武器、エコーセット、Tune Break 戦闘、編成、版本トピックをすぐ確認でき、周回導線も分かります。前瞻や実用ページも探しやすいです。',
+    zh: '鸣潮（Wuthering Waves）角色图鉴、武器数据库、声骸系统与配装攻略，当前重点覆盖 3.7 watch、3.6 Jingran 收尾、兑换码、地图活动、Xbox/Game Pass 与 Steam 入坑。Gachia 将角色、声骸、武器、地图、兑换码和版本专题串成可执行路线。',
+    en: 'Wuthering Waves character guides, weapon data, Echo system, and builds, now focused on v3.7 watch, v3.6 Jingran wrap-up, codes, map events, Xbox/Game Pass, and Steam onboarding. Gachia connects characters, Echoes, weapons, maps, codes, and version hubs into practical routes.',
+    ja: '鳴潮のキャラ図鑑、武器、エコー、ビルド攻略。現在はv3.7注目、v3.6 Jingranまとめ、コード、マップイベント、Xbox/Game Pass、Steam入門を重点化。Gachiaではキャラ、エコー、武器、マップ、コード、版本特集を実用導線にします。',
   },
   nte: {
     zh: '异环（NTE）Wiki 与官网入口，整理角色图鉴、兑换码、下载安装、官网资讯、武器数据、光盘推荐和祈愿模拟。页面覆盖完整角色库、新手入门、Boss 攻略、伤害公式和养成路线，适合搜索异环官网、异环下载、异环角色和异环攻略时快速进入。',
@@ -47,9 +47,9 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     ja: '異環（NTE）のキャラ図鑑、武器データ、ディスクおすすめ、交換コード、ガチャシミュレーターを提供し、正式リリース済みです。19体のキャラ、DL、入門、ボス攻略、ダメージ計算、育成導線をまとめて確認でき、開服期の準備に役立ちます。版本特集や報酬導線もあります。',
   },
   zzz: {
-    zh: '绝区零 3.1 当前版本入口，整理 The Long Goodbye、2 周年、Remielle/Sigrid、Xbox / Microsoft Store、Steam 入坑、当前卡池、音擎、驱动盘、代理人配队和兑换码，方便新玩家与回流玩家快速规划抽卡、养成和首周优先级。',
-    en: 'Zenless Zone Zero v3.1 live hub for The Long Goodbye, 2nd anniversary rewards, Remielle/Sigrid, Xbox and Microsoft Store onboarding, Steam starter routes, current banners, W-Engines, Drive Discs, teams, and codes.',
-    ja: 'ゼンレスゾーンゼロ v3.1 の現在入口として、The Long Goodbye、2周年、Remielle/Sigrid、Xbox / Microsoft Store、Steam入門、現在バナー、Wエンジン、ドライブディスク、編成、コードを整理します。',
+    zh: '绝区零（Zenless Zone Zero）代理人图鉴、音擎数据库、驱动盘推荐、兑换码和版本专题，当前重点覆盖 3.3 前瞻、3.2 Claret/Roxy/Armorer/Maim 复盘、下期卡池、直播码提醒以及 Steam/Xbox 平台入坑。',
+    en: 'Zenless Zone Zero agent database, W-Engine guide, Drive Disc builds, codes, and version hubs, now focused on v3.3 watch, v3.2 Claret/Roxy/Armorer/Maim recap, next banners, code reminders, and Steam/Xbox onboarding.',
+    ja: 'ゼンレスゾーンゼロのエージェント図鑑、Wエンジン、ドライブディスク、コード、版本特集。現在はv3.3注目、v3.2 Claret/Roxy/Armorer/Maimまとめ、次回バナー、コード提醒、Steam/Xbox入門を重点化します。',
   },
   guihuan: {
     zh: '归环角色图鉴、武器数据与攻略百科，整理全部可用角色的技能数据、定位说明、配装推荐和成长思路，帮助你更快了解游戏基础玩法、完成入门判断并找到适合当前版本的培养方向，同时持续补充图鉴与攻略专题。',
@@ -62,9 +62,9 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     ja: 'Anantaのキャラ図鑑、DL入口、攻略百科を、2027年1月15日グローバル配信、PS5、PC、Android、iOS、Chongxiao都市OW、ガチャなし、配信前準備に合わせて更新。',
   },
   endfield: {
-    zh: '《明日方舟：终末地》是鹰角网络开发的开放世界动作 RPG，背景来自明日方舟 IP。页面介绍博士在塔洛斯 II 号星建立据点、指挥干员实时战斗、探索地图与版本节点，方便测试期和入坑期快速查阅并继续进入攻略页，同时保留测试专题入口。',
-    en: 'Arknights: Endfield is an open-world action RPG by Hypergryph. Pages cover Talos II base building, operator combat, exploration, test timing, and launch topics players search for first.',
-    ja: 'アークナイツ：エンドフィールドはハイパーグリフ開発のオープンワールドアクションRPG。ドクターによるタロスII号星での拠点建設、リアルタイム戦闘、探索、テスト時期、入門導線を整理しています。初心者が次に開くページも見つけやすく、実用導線も明確です。',
+    zh: '《明日方舟：终末地》（Arknights: Endfield）开放世界动作 RPG 攻略百科，当前重点覆盖 Pioneer Test 复盘、测试奖励、Wuling、AIC 工厂、蓝图、下载配置和正式上线观察。Gachia 提供角色、武器、配装、基地建设和测试后路线入口。',
+    en: 'Arknights: Endfield open-world action RPG guides, now focused on Pioneer Test recap, rewards, Wuling, AIC factory, blueprints, downloads/specs, and release watch. Gachia links operators, weapons, builds, base building, and post-test routes.',
+    ja: 'アークナイツ：エンドフィールド攻略百科。現在はPioneer Testまとめ、報酬、Wuling、AIC工場、ブループリント、DL/環境、正式版注目を重点化。キャラ、武器、ビルド、基地建設、テスト後導線を整理します。',
   },
   sea: {
     zh: '遗忘之海 Wiki 与官网入口，整理网易 Joker Studio 海洋冒险 RPG 的角色图鉴、下载入口、官网资讯、云游戏、PC 配置、开服福利、移动端安装和开荒攻略。PC 端已于 2026 年 7 月 9 日公测，移动端入口与下载排错可继续进入下载专题。',
@@ -72,14 +72,14 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     ja: 'シー・オブ・レムナンツはNetEase Joker Studioの海洋アドベンチャー型オープンワールドRPG。PC版は2026年7月9日にCBT開始。Gachiaではキャラ、顔作成、クラウド作成、PC環境、DL、報酬、開荒ルートを整理します。先に全体像を把握したい人向けで、公測特集も見やすいです。',
   },
   skjh: {
-    zh: '失控进化 Wiki 与官网入口，整理腾讯游戏发行、无端科技研发的开放世界多人生存对抗游戏资料。覆盖失控进化官网、下载、WeGame、手游入口、服务器模式、公测时间、开荒路线、基地建设、资源科技树、基因流派、武器和福利活动。',
-    en: 'Ashfall Evolution is an open-world survival game published by Tencent Games and developed by Wuduan Technology. Gachia covers launch timing, beginner routes, base building, resources, weapons, and rewards.',
-    ja: '失控進化はTencent Games配信、無端科技開発、Rust正式ライセンスの多人数サバイバル対戦型オープンワールドゲームです。Gachiaでは公測時期、開荒ルート、拠点建設、資源、遺伝子ビルド、武器、報酬を整理します。初心者が次に見るべきページも案内し、公測特集へもつなげます。',
+    zh: '《失控进化》开放世界硬核生存对抗攻略，当前重点覆盖 S2「制霸王座」、官网/WeGame/TapTap 下载、礼包有效期、服务器模式、安全区 / 标准 / 挑战、0-2 小时开荒和防抄家。',
+    en: 'Ashfall Evolution hardcore survival PvP guides, now focused on S2 Throne Rush, official/WeGame/TapTap downloads, reward validity, server modes, safe-zone / standard / challenge, first 0-2 hours, and anti-raid planning.',
+    ja: '失控進化のハードコアサバイバル攻略。現在はS2「制霸王座」、公式/WeGame/TapTap DL、報酬期限、サーバーモード、安全区/標準/挑戦、0-2時間開荒、防衛を重点化します。',
   },
   'roco-cn': {
-    zh: '《洛克王国：世界》国服精灵图鉴、法杖数据库、节奏榜与攻略百科，聚焦 S1「暗夜拾光」赛季，覆盖 347 只精灵的属性、技能、进化链、培养方向与配队思路。法杖为外观特效武器，无数值攻击力，按赛季战令与活动获取；节奏榜帮助你在养成前先看清当前版本强势精灵。同时收录版本专题、图鉴页、攻略页和实用工具入口，方便继续深入浏览与查找。',
-    en: 'Roco Kingdom (CN) Jinie database, staff catalog, tier list, and guides for the S1 "Shadowlight" season. Covers 347 Jinies\' attributes, skills, evolution chains, build directions, and team ideas. Staves are cosmetic effect weapons with no attack stats, obtained from season battle passes and events; the tier list helps you spot the current meta before investing. Also links to version hubs, character pages, guides, and tools.',
-    ja: 'ロコキングダム中国版のジニー図鑑、杖（武器）データベース、Tier、攻略百科をS1「暗夜拾光」シーズン向けに整理。347体の属性、スキル、進化、育成方針、編成を網羅。杖は攻撃数値を持たない外観・エフェクト武器で、シーズンバトルパスとイベントで入手。Tierで現環境を把握。版本特集、図鑑、攻略、ツールも導線あり。',
+    zh: '《洛克王国：世界》国服已上线，Gachia 重点整理兑换码有效期、宠物图鉴、活动路线、宠物推荐、精灵培养、新手路线和与 Roco Global 的版本分流，帮助玩家避免把国服和国际服 CBT 信息混在一起。',
+    en: 'Roco Kingdom: World CN is live. Gachia focuses on code validity, creature encyclopedia, events, creature picks, training, beginner routes, and separation from Roco Global so players do not mix CN live content with global CBT information.',
+    ja: 'ロコキングダム：中国版は配信中。Gachiaはコード期限、ペット図鑑、イベント、推薦、育成、初心者導線、Roco Globalとの分流を整理し、中国版と国際CBTを混同しないようにします。',
   },
   roco: {
     zh: '《洛克王国：世界》国际服精灵图鉴、法杖数据库、节奏榜与攻略百科，覆盖 CBT「等等鸭测试」已曝光精灵的属性、稀有度、进化链与定位。法杖为外观特效武器，无数值攻击力；节奏榜基于早测暂定分级，正式版以官方为准。同时收录 CBT 报名、版本节点与实用入口，方便继续深入浏览。',
@@ -111,9 +111,9 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
     ja: '異環（Neverness to Everness）はHotta StudioのUE5製超自然オープンワールドゲーム、2026年4月正式リリース。Gachiaは最も充実したNTEデータベースを提供。19体のプレイアブルキャラ図鑑、武器データ、ディスクセットおすすめ、DL/入門、ボス攻略、ダメージ計算、交換コード、ガチャシミュレーターを網羅。',
   },
   zzz: {
-    zh: '绝区零（Zenless Zone Zero）是 HoYoverse 开发的都市动作游戏，当前首页重点覆盖 v3.1「The Long Goodbye」、2 周年、Remielle/Sigrid、Xbox / Microsoft Store 上线与 Steam 入坑路线。Gachia 将代理人图鉴、音擎（W-Engine）数据库、驱动盘推荐、当前卡池、兑换码、版本专题和主流配队串成一页，帮助新玩家、回流玩家和抽卡规划用户更快找到下一步。',
-    en: 'Zenless Zone Zero (ZZZ) is HoYoverse\'s urban action game, now focused on v3.1 "The Long Goodbye", the 2nd anniversary, Remielle/Sigrid, Xbox and Microsoft Store onboarding, and Steam starter routes. Gachia connects the agent database, W-Engine guide, Drive Disc builds, current banners, codes, teams, and version hubs so new and returning players can plan Polychromes, builds, and first-week priorities.',
-    ja: 'ゼンレスゾーンゼロ（ZZZ）はHoYoverseの都市アクションゲームで、現在は v3.1「The Long Goodbye」、2周年、Remielle/Sigrid、Xbox / Microsoft Store、Steam入門を重点的に整理しています。Gachiaではエージェント図鑑、Wエンジン、ドライブディスク、現在バナー、コード、編成、バージョン特集をつなぎ、新規・復帰勢が抽卡、育成、初週優先度を決めやすい導線にしています。',
+    zh: '绝区零（Zenless Zone Zero）是 HoYoverse 开发的都市动作游戏，当前首页重点覆盖 3.3 前瞻、3.2 Claret/Roxy/Armorer/Maim 复盘、下期卡池、直播码提醒、Steam 与 Xbox 入坑路线。Gachia 将代理人图鉴、音擎、驱动盘、兑换码、版本专题和主流配队串成一页。',
+    en: 'Zenless Zone Zero (ZZZ) is HoYoverse\'s urban action game, now focused on v3.3 watch, v3.2 Claret/Roxy/Armorer/Maim recap, next banners, code reminders, Steam, and Xbox onboarding. Gachia connects agents, W-Engines, Drive Discs, codes, teams, and version hubs for new and returning players.',
+    ja: 'ゼンレスゾーンゼロ（ZZZ）はHoYoverseの都市アクションゲームで、現在はv3.3注目、v3.2 Claret/Roxy/Armorer/Maimまとめ、次回バナー、コード提醒、Steam、Xbox入門を重点的に整理しています。Gachiaではエージェント、Wエンジン、ディスク、コード、編成、版本特集をつなぎます。',
   },
   guihuan: {
     zh: '归环（Guihuan）是一款二次元开放世界冒险游戏。Gachia 提供归环角色图鉴、武器数据库、配装推荐与攻略百科，帮助玩家快速上手游戏并了解各角色的最优培养路线。',
@@ -132,7 +132,7 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
   },
   sea: {
     zh: '遗忘之海是一款极具美术风格的海洋冒险RPG，采用回合制战斗、即时海战与 Roguelite 遗忘之旅多模式。PC端2026年7月9日公测，移动端2026年7月23日10:00首发。Gachia 会持续整理移动端入口、首周运营、兑换码、角色与 BOSS 档案、捏脸、配置要求、开荒 Build 和海区探索路线。',
-    en: 'Sea of Remnants is a stylized ocean adventure RPG with turn-based combat, real-time naval battles, and Roguelite Remnant Journey runs. PC open beta started on July 9, 2026, and mobile launched on July 23, 2026 at 10:00. Gachia tracks mobile entry, troubleshooting, cross-progress, codes, crews, bosses, builds, specs, and sea-region routes.',
+    en: 'Sea of Remnants is a stylized ocean adventure RPG with turn-based combat, naval exploration, and creature/crew progression. Gachia now treats the overseas timeline as an early 2027 / December beta watch, separating official site, store pages, platform boundaries, gacha, solo, and gameplay FAQs by source tier.',
     ja: 'ターン制バトルとリアルタイム海戦を特徴とする海洋アドベンチャーRPG。PC版は2026年7月9日にオープンベータ開始、モバイル版は2026年7月23日10:00に開始。Gachiaではモバイル導線、トラブル対応、連携、交換コード、キャラとボス、ビルド、環境、海域ルートを整理します。',
   },
   skjh: {
@@ -141,9 +141,9 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
     ja: '『失控進化』は、採集、道具作成、武器製作、拠点建築、技術解放、領地攻防を中心にしたハードコアなオープンワールドサバイバル対戦ゲームです。Gachiaでは初心者ルート、領地キャビネット、資源優先度、遺伝子ビルド、武器、リリース報酬を整理します。',
   },
   'roco-cn': {
-    zh: '《洛克王国：世界》是腾讯研发的开放世界精灵收集 RPG，国服已全平台上线，当前为 S1「暗夜拾光」赛季。Gachia 提供完整国服精灵图鉴，覆盖 347 只精灵的属性、技能、进化链与培养方向。法杖系统为外观特效武器，无数值攻击力，通过赛季战令、活动与商城获取，主要影响战斗特效与外观表现。节奏榜汇总社区 PVP 强度分级（SS/S/A/B），帮助你在捕捉与培养前先判断强势精灵。精灵按草、水、火、光、暗、龙、钢、毒、地面、飞行、虫、超能、妖精、普通等属性相互克制，配队时需要考虑属性搭配与元素反应。',
-    en: 'Roco Kingdom: World is an open-world creature-collection RPG by Tencent, now live in CN on all platforms in the S1 "Shadowlight" season. Gachia provides a full CN Jinie database covering 347 creatures\' attributes, skills, evolution chains, and build directions. The staff system is a cosmetic effect weapon with no attack stats, obtained from season battle passes, events, and the shop, affecting mainly combat effects and appearance. Our tier list summarizes community PVP ratings (SS/S/A/B) so you can spot strong Jinies before capture and training. Jinies use elements such as grass, water, fire, light, dark, dragon, steel, poison, ground, flying, bug, psychic, fairy, and normal with mutual type advantage; team building should weigh element matchups and reactions.',
-    ja: 'ロコキングダム：ワールドはTencent開発のオープンワールド収集RPG。中国版は全平台配信中、S1「暗夜拾光」シーズン。Gachiaは347体の属性、スキル、進化、育成方針を網羅。杖システムは攻撃数値なしの外観・エフェクト武器で、シーズンバトルパス・イベント・ショップから入手し、主に戦闘エフェクトと外観に影響。TierはコミュニティPVP評価（SS/S/A/B）を集約。草・水・火・光・闇・龍・鋼・毒・地面・飛行・虫・超・妖精・通常の属性相性と反応を編成で考慮。',
+    zh: '《洛克王国：世界》国服已上线，Gachia 重点整理兑换码有效期、宠物图鉴、活动路线、宠物推荐、精灵培养、新手路线和与 Roco Global 的版本分流。法杖系统为外观特效武器，无数值攻击力；节奏榜帮助你在捕捉与培养前判断强势精灵。',
+    en: 'Roco Kingdom: World CN is live. Gachia focuses on code validity, creature encyclopedia, events, creature picks, training, beginner routes, and separation from Roco Global. Staves are cosmetic effect weapons with no attack stats, and the tier list helps players judge strong Jinies before capture and training.',
+    ja: 'ロコキングダム：中国版は配信中。Gachiaはコード期限、ペット図鑑、イベント、推薦、育成、初心者導線、Roco Globalとの分流を整理します。杖は攻撃数値なしの外観武器で、Tierは捕獲と育成前の判断に役立ちます。',
   },
   roco: {
     zh: '《洛克王国：世界》国际服是腾讯面向全球发行的开放世界精灵收集 RPG，首轮 CBT「等等鸭测试」于 2026-10-27 开启。Gachia 整理官方已曝光精灵的属性、稀有度、进化链与基础定位，CBT 结束后持续补全。法杖系统为外观特效武器，无数值攻击力，通过战令与活动获取。节奏榜基于早测暂定分级，正式版以官方数据为准。国际服与国服数据相互独立，正式版支持繁中、英文、日文等多语言。',
@@ -174,9 +174,9 @@ const GAME_META_TITLES: Partial<Record<GameId, Record<SupportedLocale, string>>>
     ja: '失控進化 Wiki — DL、サーバー、開荒攻略',
   },
   zzz: {
-    zh: '绝区零 3.1 Wiki — 当前卡池、周年、Xbox、音擎与兑换码',
-    en: 'ZZZ v3.1 Wiki — Current Banners, Anniversary, Xbox & Codes',
-    ja: 'ZZZ v3.1 Wiki — エージェント、バナー、Wエンジン、ディスク',
+    zh: '绝区零 3.3 Wiki — 前瞻、3.2 复盘、卡池与兑换码',
+    en: 'ZZZ v3.3 Wiki — Watch, v3.2 Recap, Banners & Codes',
+    ja: 'ZZZ v3.3 Wiki — 前瞻、v3.2まとめ、バナー、コード',
   },
   aniimo: {
     zh: '伊莫 Aniimo Wiki｜发售日期、下载、图鉴、地图与兑换码追踪',
@@ -348,39 +348,17 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     ],
   },
   starrail: {
-    eyebrow: { zh: '4.4 已上线专题入口', en: 'v4.4 Live Hub', ja: 'v4.4 実装特集' },
-    title: { zh: '星穹铁道 4.4 / Fate 联动重点入口', en: 'Star Rail v4.4 / Fate collab hub', ja: 'スターレイル v4.4 / Fate導線' },
-    description: {
-      zh: '把 Himeko Nova、Fate/stay night 联动、Rin/Gilgamesh、兑换码和星琼规划放到首页第一跳。',
-      en: 'Surface Himeko Nova, Fate/stay night, Rin/Gilgamesh, codes, and Jade planning directly on the homepage.',
-      ja: 'Himeko Nova、Fate/stay night、Rin/Gilgamesh、コード、星玉計画をトップで受け止めます。',
-    },
-    chips: {
-      zh: ['4.4 已上线', 'Himeko Nova', 'Fate 联动', 'Rin/Gilgamesh', '兑换码', '卡池规划'],
-      en: ['v4.4 live', 'Himeko Nova', 'Fate collab', 'Rin/Gilgamesh', 'Codes', 'Current warps'],
-      ja: ['v4.4実装', 'Himeko Nova', 'Fateコラボ', 'Rin/Gilgamesh', 'コード', 'バナー計画'],
-    },
-    cta: { zh: '去 4.4 专题', en: 'Open v4.4 hub', ja: 'v4.4特集へ' },
+    eyebrow: { zh: '4.6 前瞻 / 直播码入口', en: 'v4.6 Preview / Codes Hub', ja: 'v4.6前瞻 / コード導線' },
+    title: { zh: '星穹铁道 4.6 前瞻、直播码与下期跃迁重点入口', en: 'Star Rail v4.6 preview, codes, and next-warps hub', ja: 'スターレイル v4.6前瞻・コード・次回跳躍導線' },
+    description: { zh: '把 4.6 special program、直播兑换码、下期跃迁、4.5 收尾资源、星琼缺口和队伍规划放到首页第一跳。', en: 'Surface the v4.6 special program, livestream codes, next warps, v4.5 wrap-up resources, Jade gaps, and team planning directly on the homepage.', ja: 'v4.6前瞻、配信コード、次回跳躍、v4.5まとめ資源、星玉不足、編成計画をトップで受け止めます。' },
+    chips: { zh: ['4.6 前瞻', '直播码', '下期跃迁', '4.5 收尾', '星琼规划', '配队'], en: ['v4.6 preview', 'Livestream codes', 'Next warps', 'v4.5 wrap-up', 'Jade planning', 'Teams'], ja: ['v4.6前瞻', '配信コード', '次回跳躍', 'v4.5まとめ', '星玉計画', '編成'] },
+    cta: { zh: '去 4.6 前瞻', en: 'Open v4.6 watch', ja: 'v4.6前瞻へ' },
     tracks: {
-      zh: [
-        { title: '4.4 节点', description: '先覆盖已上线版本、Himeko Nova 和联动重点问题。', links: [{ href: '/starrail/version', label: '4.4 专题' }, { href: '/starrail/guides/himeko-nova-fate-pull-plan', label: 'Himeko Nova 规划' }] },
-        { title: 'Fate 联动', description: '继续查看 Saber、Archer、Rin/Gilgamesh 和奖励规划。', links: [{ href: '/starrail/guides/fate-collab-guide', label: 'Fate 联动 FAQ' }, { href: '/starrail/redeem-codes', label: '兑换码' }] },
-        { title: '抽卡资源', description: '把遗器、光锥、配队和星琼缺口串成下一步。', links: [{ href: '/starrail/build', label: '配装推荐' }, { href: '/starrail/guides/banner-schedule-guide', label: '当前跃迁' }] },
-      ],
-      en: [
-        { title: 'v4.4 node', description: 'Catch the live patch, Himeko Nova, and collab intent first.', links: [{ href: '/starrail/version', label: 'v4.4 hub' }, { href: '/starrail/guides/himeko-nova-fate-pull-plan', label: 'Himeko Nova plan' }] },
-        { title: 'Fate collab', description: 'Route Saber, Archer, Rin/Gilgamesh, and reward planning.', links: [{ href: '/starrail/guides/fate-collab-guide', label: 'Fate FAQ' }, { href: '/starrail/redeem-codes', label: 'Codes' }] },
-        { title: 'Pull resources', description: 'Connect relics, light cones, teams, and Jade gaps.', links: [{ href: '/starrail/build', label: 'Builds' }, { href: '/starrail/guides/banner-schedule-guide', label: 'Current warps' }] },
-      ],
-      ja: [
-        { title: 'v4.4導線', description: '実装版本、Himeko Nova、コラボ検索を先に受け止めます。', links: [{ href: '/starrail/version', label: 'v4.4特集' }, { href: '/starrail/guides/himeko-nova-fate-pull-plan', label: 'Himeko Nova計画' }] },
-        { title: 'Fateコラボ', description: 'Saber、Archer、Rin/Gilgamesh、報酬計画へつなげます。', links: [{ href: '/starrail/guides/fate-collab-guide', label: 'Fate FAQ' }, { href: '/starrail/redeem-codes', label: 'コード' }] },
-        { title: 'ガチャ資源', description: '遺物、光円錐、編成、星玉不足を次の導線にします。', links: [{ href: '/starrail/build', label: 'ビルド' }, { href: '/starrail/guides/banner-schedule-guide', label: 'バナー計画' }] },
-      ],
+      zh: [{ title: '4.6 前瞻', description: '先确认直播码、下期跃迁和前瞻节目重点。', links: [{ href: '/starrail/version', label: '4.6 前瞻' }, { href: '/starrail/redeem-codes', label: '直播码' }] }, { title: '资源预留', description: '把 4.5 收尾奖励、星琼缺口和保底计划放到同一条路线。', links: [{ href: '/starrail/guides/banner-schedule-guide', label: '下期跃迁' }, { href: '/starrail/guides/4x-fate-gilgamesh-kafka-cyrene-evergreen-plan', label: '抽取规划' }] }, { title: '队伍与养成', description: '抽前看定位，抽后继续看遗器、光锥和配队。', links: [{ href: '/starrail/build', label: '配装推荐' }, { href: '/starrail/teams', label: '配队' }] }],
+      en: [{ title: 'v4.6 preview', description: 'Check livestream codes, next warps, and special-program highlights first.', links: [{ href: '/starrail/version', label: 'v4.6 watch' }, { href: '/starrail/redeem-codes', label: 'Codes' }] }, { title: 'Resource reserve', description: 'Put v4.5 wrap-up rewards, Jade gaps, and pity planning in one path.', links: [{ href: '/starrail/guides/banner-schedule-guide', label: 'Next warps' }, { href: '/starrail/guides/4x-fate-gilgamesh-kafka-cyrene-evergreen-plan', label: 'Pull plan' }] }, { title: 'Teams and builds', description: 'Check roles before pulling, then continue into relics, light cones, and teams.', links: [{ href: '/starrail/build', label: 'Builds' }, { href: '/starrail/teams', label: 'Teams' }] }],
+      ja: [{ title: 'v4.6前瞻', description: '配信コード、次回跳躍、特番要点を先に確認します。', links: [{ href: '/starrail/version', label: 'v4.6前瞻' }, { href: '/starrail/redeem-codes', label: 'コード' }] }, { title: '資源温存', description: 'v4.5まとめ報酬、星玉不足、天井計画を一つの導線にします。', links: [{ href: '/starrail/guides/banner-schedule-guide', label: '次回跳躍' }, { href: '/starrail/guides/4x-fate-gilgamesh-kafka-cyrene-evergreen-plan', label: '抽選計画' }] }, { title: '編成と育成', description: '引く前に役割を見て、引いた後は遺物、光円錐、編成へ。', links: [{ href: '/starrail/build', label: 'ビルド' }, { href: '/starrail/teams', label: '編成' }] }],
     },
-    faq: [
-      { question: { zh: '星铁首页现在先看什么？', en: 'What should I open first now?', ja: '今ホームで最初に見るべきものは？' }, answer: { zh: '先看 4.4 专题和 Fate 联动，再看兑换码、当前跃迁和配装。', en: 'Start with the v4.4 hub and Fate collab, then codes, current warps, and builds.', ja: 'まずv4.4特集とFateコラボ、その後コード、現在跳躍、ビルドへ。' } },
-    ],
+    faq: [{ question: { zh: '星铁首页现在先看什么？', en: 'What should I open first now?', ja: '今ホームで最初に見るべきものは？' }, answer: { zh: '先看 4.6 前瞻和直播兑换码，再看下期跃迁、星琼缺口和队伍规划。', en: 'Start with the v4.6 preview and livestream codes, then check next warps, Jade gaps, and team planning.', ja: 'まずv4.6前瞻と配信コード、その後次回跳躍、星玉不足、編成計画へ。' } }],
   },
   nte: {
     eyebrow: { zh: '异环官网 / Wiki 入口', en: 'NTE Official / Wiki Hub', ja: 'NTE公式 / Wiki導線' },
@@ -418,386 +396,88 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     ],
   },
   sea: {
-    eyebrow: { zh: '遗忘之海官网 / 下载入口', en: 'Sea Official / Download Hub', ja: '遺忘之海 公式 / DL導線' },
-    title: { zh: '遗忘之海 Wiki、官网、下载、云游戏与开服攻略', en: 'Sea of Remnants official hub | mobile launch, wiki, launch guide', ja: '遺忘之海 公式導線｜モバイル開始・Wiki・開服攻略' },
+    eyebrow: { zh: '遗忘之海 early 2027 / Beta 观察', en: 'Sea Early 2027 / Beta Watch', ja: 'Sea early 2027 / Beta注目' },
+    title: { zh: '遗忘之海官网、平台、early 2027 与 December beta 入口', en: 'Sea of Remnants official, platform, early 2027, and December beta hub', ja: 'Sea of Remnants 公式・平台・early 2027・December beta導線' },
     description: {
-      zh: '这里整理遗忘之海官网入口、官网下载、移动端安装、云游戏、Wiki、角色图鉴、首周任务和开服攻略，把下载与官网意图统一导向清晰页面。',
-      en: 'Find the July 23 mobile launch, official hub, wiki, week-one tasks, download/install help, character wiki, and gamescom demo coverage in one place.',
-      ja: '7月23日のモバイル開始後に必要な公式入口、Wiki、初週タスク、DL、キャラ図鑑、gamescom demo情報をまとめています。',
+      zh: '这里整理遗忘之海官网入口、Steam/PS5/Xbox/mobile 平台边界、early 2027、December closed beta、gacha、solo 和玩法 FAQ，避免把测试资格或平台日期写死。',
+      en: 'Find official entry points, Steam/PS5/Xbox/mobile platform boundaries, early 2027, December closed beta, gacha, solo, and gameplay FAQs without treating beta access or platform dates as final.',
+      ja: '公式入口、Steam/PS5/Xbox/mobile平台境界、early 2027、December closed beta、gacha、solo、玩法FAQを整理し、未確認資格や平台日程を確定扱いしません。',
     },
     chips: {
-      zh: ['遗忘之海官网', '官网下载', '云游戏', '移动端', '角色图鉴', '开服攻略'],
-      en: ['July 23', 'Mobile', 'Live ops', 'gamescom demo', 'Download/install', 'Tier list'],
-      ja: ['7/23', 'モバイル', '初週運営', 'gamescom demo', 'DL', 'Tier'],
+      zh: ['early 2027', 'December beta', 'Steam', 'PS5/Xbox', 'mobile', 'gacha/solo'],
+      en: ['early 2027', 'December beta', 'Steam', 'PS5/Xbox', 'mobile', 'gacha/solo'],
+      ja: ['early 2027', 'December beta', 'Steam', 'PS5/Xbox', 'mobile', 'gacha/solo'],
     },
-    cta: { zh: '去移动端首发 FAQ', en: 'Open mobile launch FAQ', ja: 'モバイルFAQへ' },
+    cta: { zh: '去 Beta 观察', en: 'Open beta watch', ja: 'Beta注目へ' },
     tracks: {
       zh: [
-        {
-          title: '官网与下载',
-          description: '先确认官网入口、官网下载、移动端安装、云游戏和账号互通。',
-          links: [
-            { href: '/sea/download', label: '下载入口' },
-            { href: '/sea/guides/download-install-guide', label: '下载安装' },
-            { href: '/sea/guides/pc-mobile-cross-progression-faq', label: '互通 FAQ' },
-          ],
-        },
-        {
-          title: '公测与开服',
-          description: '查看公测版本中心、开服路线、首周运营和 gamescom demo 相关内容。',
-          links: [
-            { href: '/sea/guides/open-beta-version-center', label: '版本中心' },
-            { href: '/sea/guides/launch-day-guide', label: '开服攻略' },
-            { href: '/sea/guides/week-one-live-ops-overview', label: '首周总览' },
-          ],
-        },
-        {
-          title: '茉莉与进阶',
-          description: '查看茉莉开荒、N3/深渊进阶路线和角色图鉴。',
-          links: [
-            { href: '/sea/guides/molly-starter-team-guide', label: '茉莉首发队' },
-            { href: '/sea/guides/n3-abyss-week-one-route', label: 'N3 / 深渊' },
-            { href: '/sea/characters', label: '角色图鉴' },
-          ],
-        },
+        { title: '时间线与 Beta', description: '先确认 early 2027、December closed beta 和测试资格来源。', links: [{ href: '/sea/version', label: '版本专题' }, { href: '/sea/guides/early-2027-december-closed-beta-faq', label: 'Beta FAQ' }] },
+        { title: '平台与下载', description: '把 Steam、PS5、Xbox、移动端和官网入口按来源分层。', links: [{ href: '/sea/download', label: '下载入口' }, { href: '/sea/guides/platform-download-guide', label: '平台 FAQ' }] },
+        { title: '玩法与抽卡', description: '继续承接 gacha、solo、角色、战斗和是否 MMO 的搜索。', links: [{ href: '/sea/guides/what-is-forgotten-sea', label: '玩法 FAQ' }, { href: '/sea/characters', label: '角色图鉴' }] },
       ],
       en: [
-        {
-          title: 'Mobile launch',
-          description: 'Check mobile entry, account setup, specs, and first-day troubleshooting.',
-          links: [
-            { href: '/sea/guides/mobile-launch-guide', label: 'Mobile FAQ' },
-            { href: '/sea/guides/pc-mobile-cross-progression-faq', label: 'Cross-progress' },
-          ],
-        },
-        {
-          title: 'Week-one live ops',
-          description: 'Review hotfixes, Horns, Face Coins, exploration cleanup, and gamescom demo coverage.',
-          links: [
-            { href: '/sea/guides/week-one-live-ops-overview', label: 'Live-ops hub' },
-            { href: '/sea/guides/mobile-troubleshooting-guide', label: 'Troubleshooting' },
-          ],
-        },
-        {
-          title: 'Molly and progression',
-          description: 'Open Molly starter teams, N3/Abyss progression, and the character wiki.',
-          links: [
-            { href: '/sea/guides/molly-starter-team-guide', label: 'Molly teams' },
-            { href: '/sea/guides/n3-abyss-week-one-route', label: 'N3 / Abyss' },
-            { href: '/sea/characters', label: 'Characters' },
-          ],
-        },
+        { title: 'Timeline and beta', description: 'Check early 2027, December closed beta, and access-source tiers first.', links: [{ href: '/sea/version', label: 'Version hub' }, { href: '/sea/guides/early-2027-december-closed-beta-faq', label: 'Beta FAQ' }] },
+        { title: 'Platforms and download', description: 'Tier Steam, PS5, Xbox, mobile, and official entry points by source.', links: [{ href: '/sea/download', label: 'Download hub' }, { href: '/sea/guides/platform-download-guide', label: 'Platform FAQ' }] },
+        { title: 'Gameplay and gacha', description: 'Route gacha, solo, characters, combat, and MMO-boundary searches.', links: [{ href: '/sea/guides/what-is-forgotten-sea', label: 'Gameplay FAQ' }, { href: '/sea/characters', label: 'Characters' }] },
       ],
       ja: [
-        {
-          title: 'モバイル開始',
-          description: 'モバイル入口、アカウント、環境、初日のよくある問題を確認できます。',
-          links: [
-            { href: '/sea/guides/mobile-launch-guide', label: 'モバイルFAQ' },
-            { href: '/sea/guides/pc-mobile-cross-progression-faq', label: '連携FAQ' },
-          ],
-        },
-        {
-          title: '初週運営',
-          description: 'Hotfix、Horn、Face Coin、探索漏れ、gamescom demo関連情報を確認できます。',
-          links: [
-            { href: '/sea/guides/week-one-live-ops-overview', label: '初週総覧' },
-            { href: '/sea/guides/mobile-troubleshooting-guide', label: '初日対応' },
-          ],
-        },
-        {
-          title: 'Mollyと進行',
-          description: 'Molly編成、N3/深淵、キャラ図鑑を確認できます。',
-          links: [
-            { href: '/sea/guides/molly-starter-team-guide', label: 'Molly編成' },
-            { href: '/sea/guides/n3-abyss-week-one-route', label: 'N3 / Abyss' },
-            { href: '/sea/characters', label: 'キャラ図鑑' },
-          ],
-        },
+        { title: '時期とBeta', description: 'early 2027、December closed beta、資格情報の出典を先に確認します。', links: [{ href: '/sea/version', label: '版本特集' }, { href: '/sea/guides/early-2027-december-closed-beta-faq', label: 'Beta FAQ' }] },
+        { title: '平台とDL', description: 'Steam、PS5、Xbox、mobile、公式入口を出典別に分けます。', links: [{ href: '/sea/download', label: 'DL入口' }, { href: '/sea/guides/platform-download-guide', label: '平台FAQ' }] },
+        { title: '玩法とガチャ', description: 'gacha、solo、キャラ、戦闘、MMO境界検索を受け止めます。', links: [{ href: '/sea/guides/what-is-forgotten-sea', label: '玩法FAQ' }, { href: '/sea/characters', label: 'キャラ図鑑' }] },
       ],
     },
     faq: [
-      {
-        question: {
-          zh: '遗忘之海先看什么最不容易踩空？',
-          en: 'What should I check first for Sea of Remnants?',
-          ja: '遺忘之海で最初に見るべきものは？',
-        },
-        answer: {
-          zh: '找官网或下载先看下载入口；找攻略先看公测版本中心、开服攻略、角色图鉴和队伍思路。',
-          en: 'Start with the open beta version center, then launch guide, download/install, and team-building pages.',
-          ja: 'まずCBT特集、次に開服攻略、DL、編成案を見るのが最短です。',
-        },
-      },
-      {
-        question: {
-          zh: '遗忘之海官网入口和 Wiki 应该先看哪？',
-          en: 'Where should I start for the Sea of Remnants official hub and wiki?',
-          ja: '遺忘之海の公式導線とWikiはどこから見ればいいですか？',
-        },
-        answer: {
-          zh: '先从首页的版本中心入口进入，再往下看开服攻略、下载安装、角色图鉴和节奏榜。',
-          en: 'Start from the version center on the homepage, then move into launch guides, download/install, characters, and tier list pages.',
-          ja: 'まずホームのバージョン特集から入り、その後に開服攻略、DL、キャラ図鑑、Tierへ進んでください。',
-        },
-      },
+      { question: { zh: '遗忘之海现在应该先看什么？', en: 'What should I check first for Sea of Remnants?', ja: 'Sea of Remnantsで最初に見るべきものは？' }, answer: { zh: '先看 early 2027 / December beta 观察，再看平台 FAQ、下载入口和玩法说明。', en: 'Start with early 2027 / December beta watch, then platform FAQ, download entry, and gameplay explanation.', ja: 'まずearly 2027 / December beta注目、その後平台FAQ、DL入口、玩法説明へ。' } },
     ],
   },
   zzz: {
-    eyebrow: { zh: '3.1 / 2 周年专题入口', en: 'v3.1 / 2nd Anniversary Hub', ja: 'v3.1 / 2周年導線' },
-    title: { zh: '绝区零 3.1、周年与 Xbox 入坑重点入口', en: 'ZZZ v3.1, anniversary, and Xbox onboarding hub', ja: 'ZZZ v3.1・周年・Xbox導線' },
-    description: {
-      zh: '把 The Long Goodbye、7 月 29 日、2 周年、Remielle/Sigrid、Microsoft Store、Xbox Play Anywhere 和 Steam 入坑放在首页第一跳。',
-      en: 'Surface The Long Goodbye, July 29, the 2nd anniversary, Remielle/Sigrid, Microsoft Store, Xbox Play Anywhere, and Steam onboarding.',
-      ja: 'The Long Goodbye、7月29日、2周年、Remielle/Sigrid、Microsoft Store、Xbox Play Anywhere、Steam入門をトップで受け止めます。',
-    },
-    chips: {
-      zh: ['3.1 7/29', 'The Long Goodbye', '2 周年', 'Remielle/Sigrid', 'Xbox', 'Microsoft Store'],
-      en: ['v3.1 July 29', 'The Long Goodbye', '2nd anniversary', 'Remielle/Sigrid', 'Xbox', 'Microsoft Store'],
-      ja: ['v3.1 7/29', 'The Long Goodbye', '2周年', 'Remielle/Sigrid', 'Xbox', 'Microsoft Store'],
-    },
-    cta: { zh: '去 3.1 专题', en: 'Open v3.1 hub', ja: 'v3.1特集へ' },
+    eyebrow: { zh: '3.3 前瞻 / 3.2 复盘入口', en: 'v3.3 Watch / v3.2 Recap Hub', ja: 'v3.3注目 / v3.2まとめ導線' },
+    title: { zh: '绝区零 3.3 前瞻、3.2 复盘与平台入坑入口', en: 'ZZZ v3.3 watch, v3.2 recap, and platform starter hub', ja: 'ZZZ v3.3注目・v3.2まとめ・平台入門導線' },
+    description: { zh: '把 3.3 special program、下期卡池、直播码提醒、3.2 Claret/Roxy/Armorer/Maim 复盘和 Steam/Xbox 平台入口放到首页第一跳。', en: 'Surface v3.3 special-program watch, next banners, code reminders, v3.2 Claret/Roxy/Armorer/Maim recap, and Steam/Xbox onboarding.', ja: 'v3.3前瞻、次回バナー、コード提醒、v3.2 Claret/Roxy/Armorer/Maimまとめ、Steam/Xbox入門をトップで受け止めます。' },
+    chips: { zh: ['3.3 watch', '3.2 复盘', 'Claret/Roxy', '直播码提醒', 'Steam', 'Xbox'], en: ['v3.3 watch', 'v3.2 recap', 'Claret/Roxy', 'Code reminder', 'Steam', 'Xbox'], ja: ['v3.3注目', 'v3.2まとめ', 'Claret/Roxy', 'コード提醒', 'Steam', 'Xbox'] },
+    cta: { zh: '去 3.3 前瞻', en: 'Open v3.3 watch', ja: 'v3.3前瞻へ' },
     tracks: {
-      zh: [
-        { title: '3.1 节点', description: '先整理 The Long Goodbye、周年、新代理人和当前卡池。', links: [{ href: '/zzz/version', label: '3.1 专题' }, { href: '/zzz/guides/banner-schedule-guide', label: '当前卡池' }, { href: '/zzz/guides/anniversary-rewards-codes-plan', label: '周年奖励' }] },
-        { title: '平台入坑', description: 'Steam、Microsoft Store、Xbox 用户先看账号、下载和兑换码。', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Steam 入坑' }, { href: '/zzz/guides/v3-1-anniversary-xbox-guide', label: 'Xbox FAQ' }, { href: '/zzz/redeem-codes', label: '兑换码' }] },
-        { title: '养成与配队', description: '把周年回流继续送到配队、音擎、驱动盘和养成页。', links: [{ href: '/zzz/guides/meta-teams-v3-guide', label: '主流配队' }, { href: '/zzz/guides/w-engine-guide', label: '音擎指南' }, { href: '/zzz/guides/drive-disc-guide', label: '驱动盘指南' }] },
-      ],
-      en: [
-        { title: 'v3.1 node', description: 'Catch The Long Goodbye, anniversary, new-agent, and current-banner searches.', links: [{ href: '/zzz/version', label: 'v3.1 hub' }, { href: '/zzz/guides/banner-schedule-guide', label: 'Current banners' }, { href: '/zzz/guides/anniversary-rewards-codes-plan', label: 'Rewards plan' }] },
-        { title: 'Platform starters', description: 'Steam, Microsoft Store, and Xbox users need account, download, and code help.', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Steam starter' }, { href: '/zzz/guides/v3-1-anniversary-xbox-guide', label: 'Xbox FAQ' }, { href: '/zzz/redeem-codes', label: 'Codes' }] },
-        { title: 'Builds and teams', description: 'Route anniversary returners into teams, W-Engines, Drive Discs, and progression.', links: [{ href: '/zzz/guides/meta-teams-v3-guide', label: 'Meta teams' }, { href: '/zzz/guides/w-engine-guide', label: 'W-Engine guide' }, { href: '/zzz/guides/drive-disc-guide', label: 'Drive Disc guide' }] },
-      ],
-      ja: [
-        { title: 'v3.1導線', description: 'The Long Goodbye、周年、新エージェント、現在バナー検索を受け止めます。', links: [{ href: '/zzz/version', label: 'v3.1特集' }, { href: '/zzz/guides/banner-schedule-guide', label: '現在バナー' }, { href: '/zzz/guides/anniversary-rewards-codes-plan', label: '周年報酬' }] },
-        { title: 'プラットフォーム入門', description: 'Steam、Microsoft Store、Xbox勢はアカウント、DL、コードから。', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Steam入門' }, { href: '/zzz/guides/v3-1-anniversary-xbox-guide', label: 'Xbox FAQ' }, { href: '/zzz/redeem-codes', label: 'コード' }] },
-        { title: '育成と編成', description: '周年復帰勢を編成、Wエンジン、ディスク、育成へつなげます。', links: [{ href: '/zzz/guides/meta-teams-v3-guide', label: '主要編成' }, { href: '/zzz/guides/w-engine-guide', label: 'Wエンジン' }, { href: '/zzz/guides/drive-disc-guide', label: 'ディスク攻略' }] },
-      ],
+      zh: [{ title: '3.3 前瞻', description: '先看下期卡池、直播码提醒和资源预留。', links: [{ href: '/zzz/version', label: '3.3 前瞻' }, { href: '/zzz/redeem-codes', label: '兑换码' }] }, { title: '3.2 复盘', description: '继续承接 Claret/Roxy、Armorer/Maim、活动和平台玩家回流。', links: [{ href: '/zzz/guides/v3-2-livestream-recap-expired-codes', label: '3.2 复盘' }, { href: '/zzz/guides/banner-schedule-guide', label: '当前卡池' }] }, { title: '平台与养成', description: 'Steam/Xbox 玩家先看账号下载，再进配队、音擎和驱动盘。', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Steam 入坑' }, { href: '/zzz/guides/meta-teams-v3-guide', label: '主流配队' }] }],
+      en: [{ title: 'v3.3 watch', description: 'Start with next banners, code reminders, and resource reserves.', links: [{ href: '/zzz/version', label: 'v3.3 watch' }, { href: '/zzz/redeem-codes', label: 'Codes' }] }, { title: 'v3.2 recap', description: 'Keep Claret/Roxy, Armorer/Maim, events, and platform returners connected.', links: [{ href: '/zzz/guides/v3-2-livestream-recap-expired-codes', label: 'v3.2 recap' }, { href: '/zzz/guides/banner-schedule-guide', label: 'Current banners' }] }, { title: 'Platform and builds', description: 'Steam/Xbox players should solve account and download first, then teams and builds.', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Steam starter' }, { href: '/zzz/guides/meta-teams-v3-guide', label: 'Meta teams' }] }],
+      ja: [{ title: 'v3.3注目', description: '次回バナー、コード提醒、資源温存を先に確認します。', links: [{ href: '/zzz/version', label: 'v3.3前瞻' }, { href: '/zzz/redeem-codes', label: 'コード' }] }, { title: 'v3.2まとめ', description: 'Claret/Roxy、Armorer/Maim、イベント、平台復帰導線を維持します。', links: [{ href: '/zzz/guides/v3-2-livestream-recap-expired-codes', label: 'v3.2まとめ' }, { href: '/zzz/guides/banner-schedule-guide', label: '現在バナー' }] }, { title: '平台と育成', description: 'Steam/Xbox勢はアカウントとDL、その後編成と育成へ。', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Steam入門' }, { href: '/zzz/guides/meta-teams-v3-guide', label: '主要編成' }] }],
     },
-    faq: [
-      { question: { zh: '绝区零首页现在先看什么？', en: 'What should I open first on the ZZZ homepage?', ja: 'ZZZホームで最初に見るべきものは？' }, answer: { zh: '先看 3.1 / 2 周年专题，再看平台入坑 FAQ、兑换码和主流配队。', en: 'Start with the v3.1 / anniversary hub, then platform FAQ, codes, and meta teams.', ja: 'まずv3.1 / 周年特集、その後平台FAQ、コード、主要編成へ。' } },
-    ],
+    faq: [{ question: { zh: '绝区零首页现在先看什么？', en: 'What should I open first on the ZZZ homepage?', ja: 'ZZZホームで最初に見るべきものは？' }, answer: { zh: '先看 3.3 前瞻和兑换码提醒，再看 3.2 复盘、平台入坑和主流配队。', en: 'Start with v3.3 watch and code reminders, then v3.2 recap, platform onboarding, and meta teams.', ja: 'まずv3.3前瞻とコード提醒、その後v3.2まとめ、平台入門、主要編成へ。' } }],
   },
   wuwa: {
-    eyebrow: { zh: '3.x 版本专题入口', en: 'v3.x Version Hub', ja: 'v3.x バージョン特集' },
-    title: { zh: '鸣潮版本与入坑重点入口', en: 'WuWa version and onboarding hub', ja: '鳴潮 バージョン・入門導線' },
-    description: {
-      zh: '把 v3.4、v3.5、Roya Frostlands、声骸系统和新手入坑页放到首页，优先整理版本和养成重点。',
-      en: 'Bring v3.4, v3.5, Roya Frostlands, the Echo system, and beginner routes to the front page.',
-      ja: 'v3.4、v3.5、Roya Frostlands、声骸、新手導線をトップにまとめます。',
-    },
-    chips: {
-      zh: ['v3.4 / v3.5', 'Roya Frostlands', '声骸', '共鸣链', '新手入坑', '波片规划'],
-      en: ['v3.4 / v3.5', 'Roya Frostlands', 'Echoes', 'Resonance Chain', 'Beginner route', 'Waveplate'],
-      ja: ['v3.4 / v3.5', 'Roya Frostlands', '声骸', '共鳴チェーン', '初心者', '波片'],
-    },
-    cta: { zh: '去版本专题', en: 'Open version hub', ja: 'バージョン特集へ' },
-    tracks: {
-      zh: [
-        {
-          title: '版本节点',
-          description: '把 v3.4 / v3.5 和 Roya Frostlands 放到最前面，先整理版本重点。',
-          links: [
-            { href: '/wuwa/version', label: '版本专题' },
-            { href: '/wuwa/guides/yangyang-suisui-sp-pull-plan', label: 'Yangyang/Suisui' },
-          ],
-        },
-        {
-          title: '声骸养成',
-          description: '围绕声骸、共鸣链和主流配装，继续查看培养页。',
-          links: [
-            { href: '/wuwa/build', label: '配装推荐' },
-            { href: '/wuwa/guides/roya-frostlands-guide', label: 'Roya Frostlands' },
-          ],
-        },
-        {
-          title: '新手入坑',
-          description: '把开荒路线、版本回流和基础玩法整合成可直接点击的路径。',
-          links: [
-            { href: '/wuwa/characters', label: '角色图鉴' },
-            { href: '/wuwa/guides/steam-xbox-game-pass-starter', label: 'Steam/Xbox 入坑' },
-          ],
-        },
-      ],
-      en: [
-        {
-          title: 'Version node',
-          description: 'Bring v3.4 / v3.5 and Roya Frostlands to the front of search intent.',
-          links: [
-            { href: '/wuwa/version', label: 'Version hub' },
-            { href: '/wuwa/guides/yangyang-suisui-sp-pull-plan', label: 'Yangyang/Suisui' },
-          ],
-        },
-        {
-          title: 'Echo builds',
-          description: 'Route echo, resonance chain, and build queries into practical pages.',
-          links: [
-            { href: '/wuwa/build', label: 'Builds' },
-            { href: '/wuwa/guides/roya-frostlands-guide', label: 'Roya Frostlands' },
-          ],
-        },
-        {
-          title: 'Starter path',
-          description: 'Merge beginner routes, returner timing, and basics into a clickable path.',
-          links: [
-            { href: '/wuwa/characters', label: 'Character wiki' },
-            { href: '/wuwa/guides/steam-xbox-game-pass-starter', label: 'Steam/Xbox starter' },
-          ],
-        },
-      ],
-      ja: [
-        {
-          title: 'バージョン導線',
-          description: 'v3.4 / v3.5 と Roya Frostlands を前面に出して検索意図を受け止めます。',
-          links: [
-            { href: '/wuwa/version', label: 'バージョン特集' },
-            { href: '/wuwa/guides/yangyang-suisui-sp-pull-plan', label: 'Yangyang/Suisui' },
-          ],
-        },
-        {
-          title: '声骸育成',
-          description: '声骸、共鳴チェーン、ビルドを実用ページへつなげます。',
-          links: [
-            { href: '/wuwa/build', label: 'ビルド' },
-            { href: '/wuwa/guides/roya-frostlands-guide', label: 'Roya Frostlands' },
-          ],
-        },
-        {
-          title: '入門ルート',
-          description: '初心者ルートと復帰導線をひとつの流れにまとめます。',
-          links: [
-            { href: '/wuwa/characters', label: 'キャラ図鑑' },
-            { href: '/wuwa/guides/steam-xbox-game-pass-starter', label: 'Steam/Xbox入門' },
-          ],
-        },
-      ],
-    },
-    faq: [
-      {
-        question: {
-          zh: '鸣潮首页先看什么最实用？',
-          en: 'What is the most practical starting point on the WuWa homepage?',
-          ja: '鳴潮ホームで最初に見ると実用的なものは？',
-        },
-        answer: {
-          zh: '先看版本专题和声骸系统，再看入门攻略，基本就能覆盖搜索里最常问的问题。',
-          en: 'Start with the version hub and Echo system, then move to beginner guides.',
-          ja: 'まずバージョン特集と声骸システム、次に入門ガイドを見るのがおすすめです。',
-        },
-      },
-    ],
+    eyebrow: { zh: '3.7 watch / 3.6 Jingran 入口', en: 'v3.7 Watch / v3.6 Jingran Hub', ja: 'v3.7注目 / v3.6 Jingran導線' },
+    title: { zh: '鸣潮 3.7 前瞻、3.6 Jingran 与平台入坑重点入口', en: 'WuWa v3.7 watch, v3.6 Jingran, and platform starter hub', ja: '鳴潮 v3.7注目・v3.6 Jingran・平台入門導線' },
+    description: { zh: '把 3.7 next banner、codes、map/event watch、3.6 Jingran 收尾、Xbox/Game Pass 与 Steam 入坑放到首页。', en: 'Bring v3.7 next-banner, codes, map/event watch, v3.6 Jingran wrap-up, Xbox/Game Pass, and Steam onboarding to the homepage.', ja: 'v3.7次回バナー、コード、マップ/イベント注目、v3.6 Jingranまとめ、Xbox/Game Pass、Steam入門をトップに出します。' },
+    chips: { zh: ['3.7 watch', '3.6 Jingran', '下期卡池', '兑换码', '地图活动', 'Xbox/Steam'], en: ['v3.7 watch', 'v3.6 Jingran', 'Next banners', 'Codes', 'Map events', 'Xbox/Steam'], ja: ['v3.7注目', 'v3.6 Jingran', '次回バナー', 'コード', 'マップイベント', 'Xbox/Steam'] },
+    cta: { zh: '去 3.7 watch', en: 'Open v3.7 watch', ja: 'v3.7注目へ' },
+    tracks: { zh: [{ title: '3.7 watch', description: '先看下期卡池、兑换码、地图活动和资源预留。', links: [{ href: '/wuwa/version', label: '3.7 watch' }, { href: '/wuwa/redeem-codes', label: '兑换码' }] }, { title: '3.6 Jingran', description: '当前养成和卡池仍看 Jingran 收尾与复盘。', links: [{ href: '/wuwa/guides/v3-6-qingxiao-jingran-post-launch-route', label: 'Jingran 复盘' }, { href: '/wuwa/guides/banner-schedule-guide', label: '卡池规划' }] }, { title: '平台与入坑', description: 'Xbox/Game Pass 和 Steam 玩家继续看登录、手柄、资源和声骸路线。', links: [{ href: '/wuwa/guides/steam-xbox-game-pass-starter', label: 'Steam/Xbox 入坑' }, { href: '/wuwa/build', label: '配装推荐' }] }], en: [{ title: 'v3.7 watch', description: 'Check next banners, codes, map events, and resource reserves first.', links: [{ href: '/wuwa/version', label: 'v3.7 watch' }, { href: '/wuwa/redeem-codes', label: 'Codes' }] }, { title: 'v3.6 Jingran', description: 'Current builds and banners still route through the Jingran recap.', links: [{ href: '/wuwa/guides/v3-6-qingxiao-jingran-post-launch-route', label: 'Jingran recap' }, { href: '/wuwa/guides/banner-schedule-guide', label: 'Banner plan' }] }, { title: 'Platform starter', description: 'Xbox/Game Pass and Steam players continue into login, controller, resources, and Echo routes.', links: [{ href: '/wuwa/guides/steam-xbox-game-pass-starter', label: 'Steam/Xbox starter' }, { href: '/wuwa/build', label: 'Builds' }] }], ja: [{ title: 'v3.7注目', description: '次回バナー、コード、マップイベント、資源温存を先に確認します。', links: [{ href: '/wuwa/version', label: 'v3.7注目' }, { href: '/wuwa/redeem-codes', label: 'コード' }] }, { title: 'v3.6 Jingran', description: '現在育成とバナーはJingranまとめへつなげます。', links: [{ href: '/wuwa/guides/v3-6-qingxiao-jingran-post-launch-route', label: 'Jingranまとめ' }, { href: '/wuwa/guides/banner-schedule-guide', label: 'バナー計画' }] }, { title: '平台入門', description: 'Xbox/Game PassとSteam勢はログイン、コントローラー、資源、エコー導線へ。', links: [{ href: '/wuwa/guides/steam-xbox-game-pass-starter', label: 'Steam/Xbox入門' }, { href: '/wuwa/build', label: 'ビルド' }] }] },
+    faq: [{ question: { zh: '鸣潮首页现在先看什么最实用？', en: 'What is the most practical starting point on the WuWa homepage?', ja: '鳴潮ホームで最初に見ると実用的なものは？' }, answer: { zh: '先看 3.7 watch 和兑换码，再看 3.6 Jingran 复盘、平台入坑和声骸配装。', en: 'Start with v3.7 watch and codes, then v3.6 Jingran recap, platform onboarding, and Echo builds.', ja: 'まずv3.7注目とコード、その後v3.6 Jingranまとめ、平台入門、エコービルドへ。' } }],
   },
   endfield: {
-    eyebrow: { zh: 'Homecoming / AIC 工厂入口', en: 'Homecoming / AIC Factory Hub', ja: 'Homecoming / AIC工場導線' },
-    title: { zh: '终末地 Homecoming 与蓝图工厂重点入口', en: 'Endfield Homecoming and blueprint factory hub', ja: 'Endfield Homecoming・ブループリント工場導線' },
-    description: {
-      zh: '把 Homecoming 已上线、新地图、Arcane/Liino、蓝图、AIC 工厂 QoL 和庆典奖励放到首页。',
-      en: 'Bring live Homecoming coverage, new maps, Arcane/Liino, blueprints, AIC factory QoL, and celebration rewards to the homepage.',
-      ja: 'Homecoming実装、新マップ、Arcane/Liino、ブループリント、AIC工場QoL、報酬をトップに出します。',
-    },
-    chips: {
-      zh: ['Homecoming 已上线', '蓝图', 'AIC 工厂', '新地图', 'Arcane/Liino', '庆典奖励'],
-      en: ['Homecoming live', 'Blueprints', 'AIC factory', 'New maps', 'Arcane/Liino', 'Rewards'],
-      ja: ['Homecoming実装', 'ブループリント', 'AIC工場', '新マップ', 'Arcane/Liino', '報酬'],
-    },
-    cta: { zh: '去 Homecoming 专题', en: 'Open Homecoming hub', ja: 'Homecoming特集へ' },
-    tracks: {
-      zh: [
-        { title: 'Homecoming', description: '先整理半周年、新地图、新干员和奖励。', links: [{ href: '/endfield/version', label: 'Homecoming 专题' }, { href: '/endfield/guides/homecoming-operators-map-route', label: '新地图 / 干员' }] },
-        { title: '蓝图 / AIC', description: '把工厂效率、蓝图复用和建设节奏继续下沉。', links: [{ href: '/endfield/guides/blueprint-aic-factory-guide', label: '蓝图 / AIC' }, { href: '/endfield/build', label: '配装推荐' }] },
-        { title: '入坑与角色', description: '新玩家和回流玩家继续看下载、战斗和干员。', links: [{ href: '/endfield/guides/download-install-guide', label: '下载与配置' }, { href: '/endfield/characters', label: '角色图鉴' }] },
-      ],
-      en: [
-        { title: 'Homecoming', description: 'Catch half-year, maps, operators, and rewards first.', links: [{ href: '/endfield/version', label: 'Homecoming hub' }, { href: '/endfield/guides/homecoming-operators-map-route', label: 'Map/operators' }] },
-        { title: 'Blueprint / AIC', description: 'Push factory efficiency, blueprint reuse, and build cadence deeper.', links: [{ href: '/endfield/guides/blueprint-aic-factory-guide', label: 'Blueprint / AIC' }, { href: '/endfield/build', label: 'Builds' }] },
-        { title: 'Start and roles', description: 'New and returning players continue into download, combat, and operators.', links: [{ href: '/endfield/guides/download-install-guide', label: 'Download & specs' }, { href: '/endfield/characters', label: 'Characters' }] },
-      ],
-      ja: [
-        { title: 'Homecoming', description: '半周年、マップ、オペレーター、報酬を先に受け止めます。', links: [{ href: '/endfield/version', label: 'Homecoming特集' }, { href: '/endfield/guides/homecoming-operators-map-route', label: 'マップ/干員' }] },
-        { title: 'Blueprint / AIC', description: '工場効率、ブループリント再利用、建設テンポへつなげます。', links: [{ href: '/endfield/guides/blueprint-aic-factory-guide', label: 'Blueprint / AIC' }, { href: '/endfield/build', label: 'ビルド' }] },
-        { title: '入門と役割', description: '新規と復帰勢をDL、戦闘、キャラへ誘導します。', links: [{ href: '/endfield/guides/download-install-guide', label: 'DLと環境' }, { href: '/endfield/characters', label: 'キャラ図鑑' }] },
-      ],
-    },
-    faq: [
-      { question: { zh: '终末地首页现在先看哪？', en: 'What should I open first for Endfield?', ja: 'Endfieldホームで最初に見るべきものは？' }, answer: { zh: '先看 Homecoming 专题，再看蓝图 / AIC 工厂、下载配置和角色入口。', en: 'Start with Homecoming, then blueprint / AIC factory, download specs, and operators.', ja: 'まずHomecoming、その後ブループリント / AIC工場、DL環境、キャラへ。' } },
-    ],
+    eyebrow: { zh: 'Pioneer Test 复盘 / AIC 蓝图入口', en: 'Pioneer Test Recap / AIC Blueprint Hub', ja: 'Pioneer Testまとめ / AIC設計図導線' },
+    title: { zh: '终末地 Pioneer Test 复盘、AIC 工厂与蓝图重点入口', en: 'Endfield Pioneer Test recap, AIC factory, and blueprint hub', ja: 'Endfield Pioneer Testまとめ・AIC工場・設計図導線' },
+    description: { zh: '把 Pioneer Test 招募结束后的测试复盘、奖励、Wuling、AIC 工厂、蓝图、下载配置和正式上线观察放到首页。', en: 'Bring post-recruitment Pioneer Test recap, rewards, Wuling, AIC factory, blueprints, download/specs, and release watch to the homepage.', ja: 'Pioneer Test募集後のまとめ、報酬、Wuling、AIC工場、ブループリント、DL/環境、正式版注目をトップに出します。' },
+    chips: { zh: ['Pioneer Test', '测试奖励', 'Wuling', '蓝图', 'AIC 工厂', '上线观察'], en: ['Pioneer Test', 'Test rewards', 'Wuling', 'Blueprints', 'AIC factory', 'Release watch'], ja: ['Pioneer Test', 'テスト報酬', 'Wuling', '設計図', 'AIC工場', '正式版注目'] },
+    cta: { zh: '去测试复盘', en: 'Open test recap', ja: 'テストまとめへ' },
+    tracks: { zh: [{ title: '测试后复盘', description: '先整理 Pioneer Test、奖励、Wuling 和后续上线观察。', links: [{ href: '/endfield/version', label: '测试复盘' }, { href: '/endfield/guides/official-download-specs-homecoming-faq', label: '下载与配置' }] }, { title: '蓝图 / AIC', description: '把工厂效率、蓝图复用和建设节奏继续下沉。', links: [{ href: '/endfield/guides/blueprint-aic-factory-guide', label: '蓝图 / AIC' }, { href: '/endfield/build', label: '配装推荐' }] }, { title: '入坑与角色', description: '新玩家和回流玩家继续看下载、战斗和干员。', links: [{ href: '/endfield/guides/download-install-guide', label: '下载指南' }, { href: '/endfield/characters', label: '角色图鉴' }] }], en: [{ title: 'Post-test recap', description: 'Start with Pioneer Test, rewards, Wuling, and release watch.', links: [{ href: '/endfield/version', label: 'Test recap' }, { href: '/endfield/guides/official-download-specs-homecoming-faq', label: 'Download & specs' }] }, { title: 'Blueprint / AIC', description: 'Push factory efficiency, blueprint reuse, and build cadence deeper.', links: [{ href: '/endfield/guides/blueprint-aic-factory-guide', label: 'Blueprint / AIC' }, { href: '/endfield/build', label: 'Builds' }] }, { title: 'Start and roles', description: 'New and returning players continue into download, combat, and operators.', links: [{ href: '/endfield/guides/download-install-guide', label: 'Download guide' }, { href: '/endfield/characters', label: 'Characters' }] }], ja: [{ title: 'テスト後まとめ', description: 'Pioneer Test、報酬、Wuling、正式版注目を先に受け止めます。', links: [{ href: '/endfield/version', label: 'テストまとめ' }, { href: '/endfield/guides/official-download-specs-homecoming-faq', label: 'DLと環境' }] }, { title: 'Blueprint / AIC', description: '工場効率、ブループリント再利用、建設テンポへつなげます。', links: [{ href: '/endfield/guides/blueprint-aic-factory-guide', label: 'Blueprint / AIC' }, { href: '/endfield/build', label: 'ビルド' }] }, { title: '入門と役割', description: '新規と復帰勢をDL、戦闘、キャラへ誘導します。', links: [{ href: '/endfield/guides/download-install-guide', label: 'DLガイド' }, { href: '/endfield/characters', label: 'キャラ図鑑' }] }] },
+    faq: [{ question: { zh: '终末地首页现在先看哪？', en: 'What should I open first for Endfield?', ja: 'Endfieldホームで最初に見るべきものは？' }, answer: { zh: '先看 Pioneer Test 复盘，再看蓝图 / AIC 工厂、下载配置和角色入口。', en: 'Start with the Pioneer Test recap, then blueprint / AIC factory, download specs, and operators.', ja: 'まずPioneer Testまとめ、その後ブループリント / AIC工場、DL環境、キャラへ。' } }],
   },
   skjh: {
-    eyebrow: { zh: '失控进化官网 / 下载入口', en: 'Ashfall Official / Download Hub', ja: '失控進化 公式 / DL導線' },
-    title: { zh: '失控进化 Wiki、官网、下载、服务器模式与开荒入口', en: 'Ashfall Evolution server modes, starters, and anti-raid hub', ja: '失控進化 サーバー・開荒・防衛導線' },
-    description: {
-      zh: '把失控进化官网、下载、WeGame、手游入口、服务器模式、安全区 / 标准 / 挑战、0-2 小时开荒、基地选址和防抄家前置。',
-      en: 'Surface PC download, official PC entry, server modes, safe-zone / standard / challenge, first 0-2 hours, base location, and anti-raid basics.',
-      ja: 'PC版DL、公式PC入口、サーバーモード、安全区/標準/挑戦、0-2時間開荒、拠点選び、防衛を前面に出します。',
-    },
-    chips: {
-      zh: ['失控进化官网', '官网下载', 'WeGame', '服务器模式', '安全区', '防抄家'],
-      en: ['S1 season', 'PC download', 'Server modes', 'Safe-zone', 'Standard/challenge', 'Anti-raid'],
-      ja: ['S1シーズン', 'PC DL', 'サーバー', '安全区', '標準/挑戦', '防衛'],
-    },
-    cta: { zh: '看 S1 专题', en: 'Open S1 hub', ja: 'S1特集へ' },
-    tracks: {
-      zh: [
-        { title: '官网与下载', description: '先解决官网、WeGame、手游入口、下载电脑版和安装前检查。', links: [{ href: '/skjh/download', label: '下载入口' }, { href: '/skjh/guides/platform-download-guide', label: '平台下载指南' }] },
-        { title: '服务器模式', description: '安全区、标准、挑战和好友同服会直接影响开局选择。', links: [{ href: '/skjh/guides/server-mode-choice', label: '服务器模式' }, { href: '/skjh/guides/season-1-launch', label: '上线专题' }] },
-        { title: '工具与防抄家', description: '先算领地柜维护、抄家爆破和烧矿收益，再看基地防御路线。', links: [{ href: '/skjh/calculator', label: '资源计算器' }, { href: '/skjh/guides/base-location-anti-raid-plan', label: '选址防抄家' }] },
-      ],
-      en: [
-        { title: 'Download and modes', description: 'Solve official PC entry, PC download, and server choice first.', links: [{ href: '/skjh/guides/official-pc-download-faq', label: 'Official PC FAQ' }, { href: '/skjh/guides/server-mode-choice', label: 'Server modes' }] },
-        { title: 'First 0-2 hours', description: 'Turn tools, territory cabinet, and low-risk loot lines into a route.', links: [{ href: '/skjh/guides/first-2-hours-starter-route', label: '0-2 hour route' }, { href: '/skjh/guides/launch-30min-checklist', label: '30-min checklist' }] },
-        { title: 'Base and anti-raid', description: 'Route base sites, upkeep, and anti-raid layouts deeper.', links: [{ href: '/skjh/guides/base-location-anti-raid-plan', label: 'Base sites' }, { href: '/skjh/guides/anti-raid-base-layouts', label: 'Anti-raid layouts' }] },
-      ],
-      ja: [
-        { title: 'DLとモード', description: '公式PC入口、PC版DL、サーバー選択を先に解決します。', links: [{ href: '/skjh/guides/official-pc-download-faq', label: '公式PC FAQ' }, { href: '/skjh/guides/server-mode-choice', label: 'サーバーモード' }] },
-        { title: '0-2時間開荒', description: '道具、領地柜、低リスク資源線を実行ルートにします。', links: [{ href: '/skjh/guides/first-2-hours-starter-route', label: '0-2時間ルート' }, { href: '/skjh/guides/launch-30min-checklist', label: '30分チェック' }] },
-        { title: '拠点と防衛', description: '拠点選び、維持、防衛レイアウトへつなげます。', links: [{ href: '/skjh/guides/base-location-anti-raid-plan', label: '拠点選び' }, { href: '/skjh/guides/anti-raid-base-layouts', label: '防衛レイアウト' }] },
-      ],
-    },
-    faq: [
-      { question: { zh: '失控进化官网和下载入口应该先点哪？', en: 'What should I click first now that it is live?', ja: '実装後ホームで最初に押すべきものは？' }, answer: { zh: '找安装包先点下载入口或平台下载指南；准备开局再看服务器模式、30 分钟清单、防抄家和基地建设。', en: 'Open server modes and download FAQ first, then the 30-minute checklist, anti-raid, and base building.', ja: 'まずサーバーモードとDL FAQ、その後30分チェック、防衛、基地建設へ。' } },
-    ],
+    eyebrow: { zh: 'S2 制霸王座 / 下载入口', en: 'S2 Throne Rush / Download Hub', ja: 'S2 制霸王座 / DL導線' },
+    title: { zh: '失控进化 S2、官网、下载、服务器模式与防抄家入口', en: 'Ashfall Evolution S2, download, server modes, and anti-raid hub', ja: '失控進化 S2・DL・サーバー・防衛導線' },
+    description: { zh: '把 S2「制霸王座」、礼包有效期、官网/WeGame/TapTap 下载、服务器模式、安全区 / 标准 / 挑战、0-2 小时开荒和防抄家前置。', en: 'Surface S2 Throne Rush, reward validity, official/WeGame/TapTap download, server modes, safe-zone / standard / challenge, first 0-2 hours, and anti-raid basics.', ja: 'S2「制霸王座」、報酬期限、公式/WeGame/TapTap DL、サーバーモード、安全区/標準/挑戦、0-2時間開荒、防衛を前面に出します。' },
+    chips: { zh: ['S2 制霸王座', '官网下载', 'WeGame', '服务器模式', '安全区', '防抄家'], en: ['S2 Throne Rush', 'Official download', 'WeGame', 'Server modes', 'Safe-zone', 'Anti-raid'], ja: ['S2 制霸王座', '公式DL', 'WeGame', 'サーバー', '安全区', '防衛'] },
+    cta: { zh: '看 S2 专题', en: 'Open S2 hub', ja: 'S2特集へ' },
+    tracks: { zh: [{ title: '官网与下载', description: '先解决官网、WeGame、TapTap、下载电脑版和安装前检查。', links: [{ href: '/skjh/download', label: '下载入口' }, { href: '/skjh/guides/official-pc-download-faq', label: '官方下载 FAQ' }] }, { title: 'S2 与服务器', description: 'S2 活动、礼包有效期、安全区、标准和挑战服会直接影响开局选择。', links: [{ href: '/skjh/version', label: 'S2 专题' }, { href: '/skjh/guides/server-mode-choice', label: '服务器模式' }] }, { title: '开荒与防抄家', description: '先算领地柜维护、抄家爆破和烧矿收益，再看基地防御路线。', links: [{ href: '/skjh/guides/first-2-hours-starter-route', label: '0-2 小时' }, { href: '/skjh/guides/base-location-anti-raid-plan', label: '选址防抄家' }] }], en: [{ title: 'Download and modes', description: 'Solve official PC entry, WeGame/TapTap, and install checks first.', links: [{ href: '/skjh/download', label: 'Download hub' }, { href: '/skjh/guides/official-pc-download-faq', label: 'Official PC FAQ' }] }, { title: 'S2 and servers', description: 'S2 events, reward validity, safe-zone, standard, and challenge servers shape your start.', links: [{ href: '/skjh/version', label: 'S2 hub' }, { href: '/skjh/guides/server-mode-choice', label: 'Server modes' }] }, { title: 'Starter and anti-raid', description: 'Turn tools, territory cabinet, and low-risk loot lines into a route.', links: [{ href: '/skjh/guides/first-2-hours-starter-route', label: '0-2 hour route' }, { href: '/skjh/guides/base-location-anti-raid-plan', label: 'Base sites' }] }], ja: [{ title: 'DLとモード', description: '公式PC入口、WeGame/TapTap、インストール確認を先に解決します。', links: [{ href: '/skjh/download', label: 'DL入口' }, { href: '/skjh/guides/official-pc-download-faq', label: '公式PC FAQ' }] }, { title: 'S2とサーバー', description: 'S2イベント、報酬期限、安全区、標準、挑戦が序盤選択に影響します。', links: [{ href: '/skjh/version', label: 'S2特集' }, { href: '/skjh/guides/server-mode-choice', label: 'サーバーモード' }] }, { title: '開荒と防衛', description: '道具、領地柜、低リスク資源線を実行ルートにします。', links: [{ href: '/skjh/guides/first-2-hours-starter-route', label: '0-2時間ルート' }, { href: '/skjh/guides/base-location-anti-raid-plan', label: '拠点選び' }] }] },
+    faq: [{ question: { zh: '失控进化官网和下载入口应该先点哪？', en: 'What should I click first now that S2 is live?', ja: 'S2で最初に押すべきものは？' }, answer: { zh: '找安装包先点下载入口或官方下载 FAQ；准备开局再看 S2 专题、服务器模式、0-2 小时路线和防抄家。', en: 'Open download or the official PC FAQ first, then S2 hub, server modes, 0-2 hour route, and anti-raid planning.', ja: 'まずDL入口か公式PC FAQ、その後S2特集、サーバーモード、0-2時間ルート、防衛へ。' } }],
   },
   'roco-cn': {
-    eyebrow: { zh: 'S1 暗夜拾光 / 玩法入口', en: 'S1 Shadowlight / Gameplay Hub', ja: 'S1 暗夜拾光 / 玩法導線' },
-    title: { zh: '国服精灵图鉴、法杖与节奏榜入口', en: 'CN Jinie wiki, staves, and tier list', ja: '中国版ジニー図鑑・杖・Tier' },
-    description: {
-      zh: '把精灵图鉴、法杖（纯外观特效武器）和节奏榜合到首页，先看清属性克制、强势精灵和培养顺序。',
-      en: 'Bring the Jinie wiki, staves (cosmetic effect weapons), and tier list to the front page so you can read type matchups, strong Jinies, and progression order first.',
-      ja: 'ジニー図鑑、杖（外観武器）、Tierをトップにまとめ、属性相性・強ジニー・育成順を先に確認。',
-    },
-    chips: {
-      zh: ['347 只精灵', '法杖', '节奏榜', 'S1 暗夜拾光', '属性克制', '配队'],
-      en: ['347 Jinies', 'Staves', 'Tier list', 'S1 Shadowlight', 'Type matchups', 'Teams'],
-      ja: ['347 ジニー', '杖', 'Tier', 'S1 暗夜拾光', '属性相性', '編成'],
-    },
-    cta: { zh: '去 S1 赛季专题', en: 'Open S1 hub', ja: 'S1特集へ' },
-    tracks: {
-      zh: [
-        { title: '精灵图鉴与节奏榜', description: '先看图鉴和强度分级，判断先养谁、先捕谁。', links: [{ href: '/roco-cn/characters', label: '精灵图鉴' }, { href: '/roco-cn/tier-list', label: '节奏榜' }] },
-        { title: '法杖系统', description: '法杖是纯外观特效武器，无数值攻击力，按赛季战令与活动获取。', links: [{ href: '/roco-cn/weapons', label: '法杖图鉴' }, { href: '/roco-cn/version', label: '赛季专题' }] },
-        { title: '版本与养成', description: '继续看 S1 赛季节点、活动与培养路线。', links: [{ href: '/roco-cn/version', label: '赛季专题' }, { href: '/roco-cn/characters', label: '精灵图鉴' }] },
-      ],
-      en: [
-        { title: 'Jinie wiki & tier list', description: 'Check the roster and strength tiers to decide who to raise and capture first.', links: [{ href: '/roco-cn/characters', label: 'Jinie wiki' }, { href: '/roco-cn/tier-list', label: 'Tier list' }] },
-        { title: 'Staff system', description: 'Staves are cosmetic effect weapons with no attack stats, from season passes and events.', links: [{ href: '/roco-cn/weapons', label: 'Staff catalog' }, { href: '/roco-cn/version', label: 'Season hub' }] },
-        { title: 'Version & progression', description: 'Continue into S1 milestones, events, and progression routes.', links: [{ href: '/roco-cn/version', label: 'Season hub' }, { href: '/roco-cn/characters', label: 'Jinie wiki' }] },
-      ],
-      ja: [
-        { title: 'ジニー図鑑とTier', description: '図鑑と強さTierを確認し、育成・捕獲の優先順を決めます。', links: [{ href: '/roco-cn/characters', label: 'ジニー図鑑' }, { href: '/roco-cn/tier-list', label: 'Tier' }] },
-      { title: '杖システム', description: '杖は攻撃数値なしの純粋な外観・エフェクト武器で、シーズンパスとイベントで入手。', links: [{ href: '/roco-cn/weapons', label: '杖図鑑' }, { href: '/roco-cn/version', label: 'シーズン特集' }] },
-        { title: '版本と育成', description: 'S1の節目、イベント、育成導線を続けて確認。', links: [{ href: '/roco-cn/version', label: 'シーズン特集' }, { href: '/roco-cn/characters', label: 'ジニー図鑑' }] },
-      ],
-    },
-    faq: [
-      {
-        question: { zh: '洛克王国的法杖有攻击力吗？', en: 'Do Roco Kingdom staves have attack stats?', ja: 'ロコキングダムの杖に攻撃力はありますか？' },
-        answer: { zh: '没有。法杖是外观特效武器，无数值攻击力，主要影响战斗特效与外观表现，不影响精灵基础属性。', en: 'No. Staves are cosmetic effect weapons with no attack stats; they affect combat visuals and appearance, not a Jinie\'s base stats.', ja: 'いいえ。杖は攻撃数値を持たない外観・エフェクト武器で、戦闘エフェクトと外観に影響し、ジニーの基礎ステータスには影響しません。' },
-      },
-      {
-        question: { zh: '节奏榜怎么看最实用？', en: 'How should I use the tier list?', ja: 'Tierはどう使うのが実用的？' },
-        answer: { zh: '按社区 PVP 强度分 SS/S/A/B，捕捉与培养前先看强势精灵，再结合自身属性克制与配队需求做决定。', en: 'The tier list ranks community PVP strength as SS/S/A/B. Check strong Jinies before capture and training, then weigh your own type matchups and team needs.', ja: 'TierはコミュニティPVP評価をSS/S/A/Bで表示。捕獲・育成前に強ジニーを確認し、自身の属性相性と編成で判断しましょう。' },
-      },
-    ],
+    eyebrow: { zh: '国服上线后 / 图鉴与兑换码入口', en: 'CN Live / Codes and Encyclopedia Hub', ja: '中国版配信中 / 図鑑とコード導線' },
+    title: { zh: '洛克王国世界国服图鉴、兑换码、活动与新手入口', en: 'Roco CN creature wiki, codes, events, and beginner hub', ja: 'Roco CN 図鑑・コード・イベント・初心者導線' },
+    description: { zh: '把国服兑换码有效期、宠物图鉴、活动、宠物推荐、精灵培养、新手路线和与 Roco Global 分流放到首页。', en: 'Bring CN code validity, creature encyclopedia, events, creature picks, training, beginner routes, and separation from Roco Global to the homepage.', ja: '中国版コード期限、ペット図鑑、イベント、推薦、育成、初心者導線、Roco Globalとの分流をトップに出します。' },
+    chips: { zh: ['国服已上线', '兑换码有效期', '宠物图鉴', '活动路线', '宠物推荐', '国际服分流'], en: ['CN live', 'Code validity', 'Creature index', 'Event route', 'Creature picks', 'Global split'], ja: ['中国版配信中', 'コード期限', 'ペット図鑑', 'イベント導線', '推薦', '国際版分流'] },
+    cta: { zh: '去国服专题', en: 'Open CN hub', ja: '中国版特集へ' },
+    tracks: { zh: [{ title: '兑换码与活动', description: '先确认兑换码来源、有效期和当前活动入口。', links: [{ href: '/roco-cn/redeem-codes', label: '兑换码' }, { href: '/roco-cn/version', label: '国服专题' }] }, { title: '宠物图鉴与培养', description: '先看图鉴、属性克制、宠物推荐和培养顺序。', links: [{ href: '/roco-cn/characters', label: '宠物图鉴' }, { href: '/roco-cn/tier-list', label: '节奏榜' }] }, { title: '版本分流', description: '国服上线内容和 Global CBT / Quack Quack Test 分开阅读。', links: [{ href: '/roco-cn/download', label: '国服入口' }, { href: '/roco/version', label: 'Global CBT' }] }], en: [{ title: 'Codes and events', description: 'Verify code source, validity, and current event entry first.', links: [{ href: '/roco-cn/redeem-codes', label: 'Codes' }, { href: '/roco-cn/version', label: 'CN hub' }] }, { title: 'Creatures and training', description: 'Start with the encyclopedia, type matchups, creature picks, and training order.', links: [{ href: '/roco-cn/characters', label: 'Creature index' }, { href: '/roco-cn/tier-list', label: 'Tier list' }] }, { title: 'Version split', description: 'Keep CN live content separate from Global CBT / Quack Quack Test.', links: [{ href: '/roco-cn/download', label: 'CN entry' }, { href: '/roco/version', label: 'Global CBT' }] }], ja: [{ title: 'コードとイベント', description: 'コード出典、期限、現在イベント入口を先に確認します。', links: [{ href: '/roco-cn/redeem-codes', label: 'コード' }, { href: '/roco-cn/version', label: '中国版特集' }] }, { title: 'ペット図鑑と育成', description: '図鑑、属性相性、推薦、育成順を先に確認します。', links: [{ href: '/roco-cn/characters', label: 'ペット図鑑' }, { href: '/roco-cn/tier-list', label: 'Tier' }] }, { title: '版本分流', description: '中国版配信内容とGlobal CBT / Quack Quack Testを分けて読みます。', links: [{ href: '/roco-cn/download', label: '中国版入口' }, { href: '/roco/version', label: 'Global CBT' }] }] },
+    faq: [{ question: { zh: '国服和国际服内容怎么分？', en: 'How should I separate CN and global Roco content?', ja: '中国版と国際版はどう分ける？' }, answer: { zh: '国服页面看兑换码、图鉴、活动和培养；Roco Global 页面看 CBT、预注册、平台和 Quack Quack Test。', en: 'Use CN pages for codes, encyclopedia, events, and progression; use Roco Global for CBT, preregistration, platforms, and Quack Quack Test.', ja: '中国版ページはコード、図鑑、イベント、育成。Roco GlobalはCBT、事前登録、平台、Quack Quack Testへ。' } }],
   },
   roco: {
     eyebrow: { zh: 'CBT「等等鸭测试」/ 玩法入口', en: 'CBT Quack Quack Test / Gameplay', ja: 'CBT「Quack Quack Test」/ 玩法導線' },
@@ -1331,7 +1011,7 @@ export default async function GameHome({
                       {locale === 'zh' ? '版本专题' : locale === 'ja' ? 'バージョン特集' : 'Version Hub'}
                     </Link>
                     <Link href={`/${gameId}/guides/v3-5-preview-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
-                      {locale === 'zh' ? 'v3.5 前瞻' : locale === 'ja' ? 'v3.5 前瞻' : 'v3.5 Preview'}
+                      {locale === 'zh' ? '3.7 watch' : locale === 'ja' ? '3.7注目' : 'v3.7 Watch'}
                     </Link>
                     <Link href={`/${gameId}/guides/v3-4-version-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
                       {locale === 'zh' ? 'v3.4 版本' : locale === 'ja' ? 'v3.4 バージョン' : 'v3.4 Version'}
@@ -1344,7 +1024,7 @@ export default async function GameHome({
                 {gameId === 'endfield' && (
                   <>
                     <Link href={`/${gameId}/version` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
-                      {locale === 'zh' ? 'Homecoming 专题' : locale === 'ja' ? 'Homecoming特集' : 'Homecoming Hub'}
+                      {locale === 'zh' ? '测试复盘' : locale === 'ja' ? 'テストまとめ' : 'Test Recap'}
                     </Link>
                     <Link href={`/${gameId}/guides/download-install-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
                       {locale === 'zh' ? '下载与配置' : locale === 'ja' ? 'DLと環境' : 'Download & Specs'}
@@ -1369,7 +1049,7 @@ export default async function GameHome({
                       {locale === 'zh' ? '节奏榜' : locale === 'ja' ? 'Tier' : 'Tier list'}
                     </Link>
                     <Link href={`/${gameId}/version` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
-                      {locale === 'zh' ? 'S1 赛季专题' : locale === 'ja' ? 'S1特集' : 'S1 hub'}
+                      {locale === 'zh' ? 'S2 专题' : locale === 'ja' ? 'S2特集' : 'S2 hub'}
                     </Link>
                   </>
                 )}

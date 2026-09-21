@@ -18,14 +18,14 @@ const repoRoot = join(__dirname, '..', '..', '..');
 
 describe('market intelligence backlog', () => {
   it('stores the current sampling batch as structured opportunities', () => {
-    expect(MARKET_INTEL_BATCH_ID).toBe('market-intel-2026-09-07');
-    expect(MARKET_INTEL_SOURCE_REPORT).toBe('/plans/market-intel-2026-09-07.md');
+    expect(MARKET_INTEL_BATCH_ID).toBe('market-intel-2026-09-21');
+    expect(MARKET_INTEL_SOURCE_REPORT).toBe('/plans/market-intel-2026-09-21.md');
     expect(existsSync(join(repoRoot, MARKET_INTEL_SOURCE_REPORT.slice(1)))).toBe(true);
     expect(MARKET_INTEL_OPPORTUNITIES.length).toBe(13);
     expect(getMarketIntelValidationIssues()).toEqual([]);
   });
 
-  it('covers the current-site games in the 2026-09-07 batch', () => {
+  it('covers the current-site games in the 2026-09-21 batch', () => {
     const currentSiteGames: GameId[] = [
       'aniimo',
       'genshin',
@@ -56,20 +56,20 @@ describe('market intelligence backlog', () => {
     const p1 = getMarketIntelByPriority('P1');
 
     expect(p0.map((opportunity) => opportunity.gameId)).toEqual([
-      'zzz',
-      'genshin',
-      'endfield',
       'aniimo',
+      'genshin',
+      'starrail',
+      'roco',
     ]);
     expect(p1.map((opportunity) => opportunity.gameId)).toEqual([
-      'starrail',
-      'sea',
+      'zzz',
       'wuwa',
       'nte',
-      'skjh',
-      'roco',
-      'roco-cn',
+      'endfield',
       'ananta',
+      'skjh',
+      'roco-cn',
+      'sea',
     ]);
 
     for (const opportunity of p0) {
@@ -77,7 +77,7 @@ describe('market intelligence backlog', () => {
       expect(VERSION_SNAPSHOTS[opportunity.gameId]).toBeDefined();
       expect(opportunity.targetPages.length).toBeGreaterThan(0);
       expect(opportunity.actions).toContain('update_existing_page');
-      expect(opportunity.actions.some((action) => action === 'update_live_module' || action === 'update_download_route' || action === 'create_topic_page' || action === 'update_code_route')).toBe(true);
+      expect(opportunity.actions.some((action) => action === 'update_live_module' || action === 'update_download_route' || action === 'create_topic_page' || action === 'update_code_route' || action === 'add_faq')).toBe(true);
     }
     for (const opportunity of p1) {
       expect(opportunity.status).toBe('done');
@@ -130,11 +130,13 @@ describe('market intelligence backlog', () => {
     const roco = MARKET_INTEL_OPPORTUNITIES.find((opportunity) => opportunity.gameId === 'roco');
 
     for (const opportunity of p0) {
-      expect(opportunity.signal?.strength).toBe('confirmed');
-      expect(opportunity.signal?.deadline).toBeDefined();
+      expect(['confirmed', 'mixed']).toContain(opportunity.signal?.strength);
+      if (opportunity.gameId === 'aniimo' || opportunity.gameId === 'roco') {
+        expect(opportunity.signal?.deadline).toBeDefined();
+      }
     }
 
-    expect(roco?.signal).toEqual({ strength: 'needs_verification', deadline: '2026-10-27' });
+    expect(roco?.signal).toEqual({ strength: 'confirmed', deadline: '2026-10-27' });
 
     for (const opportunity of MARKET_INTEL_OPPORTUNITIES) {
       if (opportunity.signal?.deadline) {

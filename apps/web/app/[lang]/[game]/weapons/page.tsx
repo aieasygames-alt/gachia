@@ -237,7 +237,7 @@ const WUWA_WEAPON_NEXT_STEPS: NextStepLink[] = [
 ];
 
 const ZZZ_WEAPON_NEXT_STEPS: NextStepLink[] = [
-  { href: '/zzz/version', title: { zh: '先看 3.1 当前版本', en: 'Start with the live v3.1 hub', ja: '配信中のv3.1特集へ' }, description: { zh: '当前版本、周年福利、卡池和热词都在这里', en: 'Live patch, anniversary rewards, banners, and hot topics live here', ja: '現在版本、周年報酬、バナー、注目トピックを確認' } },
+  { href: '/zzz/version', title: { zh: '先看 3.3 观察入口', en: 'Start with the v3.3 watch hub', ja: 'v3.3観察入口へ' }, description: { zh: '3.3 观察、3.2 回顾、卡池和热词都在这里', en: 'v3.3 watch items, v3.2 recap, banners, and hot topics live here', ja: 'v3.3観察、v3.2回顧、バナー、注目トピックを確認' } },
   { href: '/zzz/characters', title: { zh: '继续看代理人图鉴', en: 'Browse agents', ja: '代理人図鑑へ' }, description: { zh: '按代理人反查音擎适配和毕业配置', en: 'Match W-Engines to the right agents', ja: '代理人ごとの適性を確認' } },
   { href: '/zzz/drive-discs', title: { zh: '看驱动盘图鉴', en: 'Browse drive discs', ja: 'ドライブディスクへ' }, description: { zh: '把驱动盘套装和成型思路补齐', en: 'Complete disc sets and build paths', ja: 'セット効果と完成形を整理' } },
 ];

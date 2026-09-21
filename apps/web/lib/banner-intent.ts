@@ -65,8 +65,8 @@ export const BANNER_INTENT_PANELS: Partial<Record<GameId, BannerIntentPanelConfi
     links: [
       {
         href: '/starrail/version',
-        label: { zh: '4.4 专题', en: 'Version hub', ja: 'バージョン特集' },
-        description: { zh: '看当前版本、联动和卡池上下文。', en: 'Check current version, collab context, and patch priorities.', ja: '現在版本、コラボ、優先度を確認。' },
+        label: { zh: '4.6 前瞻', en: 'v4.6 watch', ja: 'v4.6前瞻' },
+        description: { zh: '看 4.6 前瞻、直播码、下期跃迁和 4.5 收尾资源。', en: 'Check v4.6 preview, livestream codes, next warps, and v4.5 wrap-up resources.', ja: 'v4.6前瞻、配信コード、次回跳躍、v4.5まとめ資源を確認。' },
       },
       {
         href: '/starrail/redeem-codes',
