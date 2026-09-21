@@ -39,9 +39,13 @@ const CURRENT_ENTRY_FILES = [
 
 function parseArgs(argv) {
   const args = argv.filter((arg) => arg !== '--');
+  const outputIndex = args.findIndex((arg) => arg === '--output' || arg === '-o');
+
   return {
     json: args.includes('--json'),
+    markdown: args.includes('--markdown') || args.includes('--md'),
     failOnRisk: args.includes('--fail-on-risk'),
+    output: outputIndex >= 0 ? args[outputIndex + 1] : undefined,
   };
 }
 
@@ -74,27 +78,109 @@ function scanCurrentEntryFiles() {
   return findings;
 }
 
-function printTable(findings) {
+function renderTable(findings) {
   const summary = summarizeFreshnessFindings(findings);
-  console.log(`Content freshness audit: ${summary.risk} risks, ${summary.archive} archived matches, ${summary.total} total matches.`);
+  const lines = [`Content freshness audit: ${summary.risk} risks, ${summary.archive} archived matches, ${summary.total} total matches.`];
 
   const risky = findings.filter((item) => item.severity === 'risk');
   if (risky.length > 0) {
-    console.log('\nRisks');
+    lines.push('', 'Risks');
     for (const item of risky) {
       const target = item.id ? `${item.gameId}/${item.id}` : item.gameId;
-      console.log(`- [${item.scope}] ${target}: "${item.term}" in ${item.file} -> ${item.currentRoute}`);
+      lines.push(`- [${item.scope}] ${target}: "${item.term}" in ${item.file} -> ${item.currentRoute}`);
     }
   }
 
   const archived = findings.filter((item) => item.severity === 'archive');
   if (archived.length > 0) {
-    console.log('\nArchived matches');
+    lines.push('', 'Archived matches');
     for (const item of archived.slice(0, 40)) {
-      console.log(`- ${item.gameId}/${item.id}: "${item.term}"`);
+      lines.push(`- ${item.gameId}/${item.id}: "${item.term}"`);
     }
-    if (archived.length > 40) console.log(`- ... ${archived.length - 40} more archived matches`);
+    if (archived.length > 40) lines.push(`- ... ${archived.length - 40} more archived matches`);
   }
+
+  return `${lines.join('\n')}\n`;
+}
+
+function countByGame(findings) {
+  return findings.reduce((acc, item) => {
+    acc[item.gameId] ??= { risk: 0, archive: 0, total: 0 };
+    acc[item.gameId][item.severity] += 1;
+    acc[item.gameId].total += 1;
+    return acc;
+  }, {});
+}
+
+function renderMarkdown(report) {
+  const { generatedAt, summary, findings } = report;
+  const byGame = countByGame(findings);
+  const risky = findings.filter((item) => item.severity === 'risk');
+  const archived = findings.filter((item) => item.severity === 'archive');
+  const lines = [];
+
+  lines.push('# Content Freshness Audit');
+  lines.push('');
+  lines.push(`Generated: ${generatedAt}`);
+  lines.push('');
+  lines.push('## Summary');
+  lines.push('');
+  lines.push(`- Risk matches: ${summary.risk}`);
+  lines.push(`- Archived matches: ${summary.archive}`);
+  lines.push(`- Total matches: ${summary.total}`);
+  lines.push('');
+
+  lines.push('## By Game');
+  lines.push('');
+  lines.push('| Game | Risks | Archives | Total |');
+  lines.push('|---|---:|---:|---:|');
+  for (const [gameId, counts] of Object.entries(byGame).sort(([left], [right]) => left.localeCompare(right))) {
+    lines.push(`| ${gameId} | ${counts.risk} | ${counts.archive} | ${counts.total} |`);
+  }
+  if (Object.keys(byGame).length === 0) {
+    lines.push('| none | 0 | 0 | 0 |');
+  }
+  lines.push('');
+
+  lines.push('## Action Queue');
+  lines.push('');
+  if (risky.length === 0) {
+    lines.push('- No live-entry stale wording risks found.');
+  } else {
+    for (const item of risky) {
+      const target = item.id ? `${item.gameId}/${item.id}` : item.gameId;
+      lines.push(`- [${item.scope}] ${target}: replace "${item.term}" with ${item.currentRoute} context in ${item.file}.`);
+    }
+  }
+  lines.push('');
+
+  lines.push('## Archive Coverage');
+  lines.push('');
+  if (archived.length === 0) {
+    lines.push('- No archived stale-version matches found.');
+    return `${lines.join('\n')}\n`;
+  }
+
+  for (const item of archived.slice(0, 30)) {
+    lines.push(`- ${item.gameId}/${item.id}: "${item.term}" retained as archive.`);
+  }
+  if (archived.length > 30) {
+    lines.push(`- ${archived.length - 30} more archived matches omitted from this short report.`);
+  }
+
+  return `${lines.join('\n')}\n`;
+}
+
+function writeOrPrint(content, outputPath) {
+  if (!outputPath) {
+    process.stdout.write(content);
+    return;
+  }
+
+  const absoluteOutput = path.resolve(ROOT, outputPath);
+  fs.mkdirSync(path.dirname(absoluteOutput), { recursive: true });
+  fs.writeFileSync(absoluteOutput, content);
+  console.log(`Wrote ${path.relative(ROOT, absoluteOutput)}`);
 }
 
 const options = parseArgs(process.argv.slice(2));
@@ -102,9 +188,11 @@ const findings = [...scanCurrentEntryFiles(), ...scanRawGuides()];
 const output = { generatedAt: new Date().toISOString(), summary: summarizeFreshnessFindings(findings), findings };
 
 if (options.json) {
-  console.log(JSON.stringify(output, null, 2));
+  writeOrPrint(`${JSON.stringify(output, null, 2)}\n`, options.output);
+} else if (options.markdown) {
+  writeOrPrint(renderMarkdown(output), options.output);
 } else {
-  printTable(findings);
+  writeOrPrint(renderTable(findings), options.output);
 }
 
 if (options.failOnRisk && output.summary.risk > 0) {

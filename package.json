@@ -16,8 +16,10 @@
     "scaffold:game": "node scripts/scaffold-game.mjs",
     "audit:seo-contract": "node scripts/seo-contract-audit.mjs",
     "content:freshness": "NODE_OPTIONS=--disable-warning=MODULE_TYPELESS_PACKAGE_JSON node scripts/content-freshness-audit.mjs",
-    "test:browser": "playwright test"
-    ,"audit:production": "node scripts/production-site-audit.mjs"
+    "content:freshness:md": "NODE_OPTIONS=--disable-warning=MODULE_TYPELESS_PACKAGE_JSON node scripts/content-freshness-audit.mjs --markdown",
+    "content:freshness:report": "NODE_OPTIONS=--disable-warning=MODULE_TYPELESS_PACKAGE_JSON node scripts/content-freshness-audit.mjs --markdown --output plans/content-freshness-latest.md",
+    "test:browser": "playwright test",
+    "audit:production": "node scripts/production-site-audit.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",
