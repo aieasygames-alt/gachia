@@ -1,33 +1,34 @@
 [
   {
     "id": "homecoming-update-guide",
-    "title": "终末地 Homecoming 半周年更新专题：7 月 16 日、新地图、AIC 工厂与新干员",
-    "titleEn": "Arknights: Endfield Homecoming Update Guide: July 16, New Maps, AIC Factory, and Operators",
-    "titleJa": "エンドフィールド Homecoming 更新ガイド",
+    "title": "终末地 Pioneer Test 复盘：AIC 工厂、Wuling 蓝图与测试后路线",
+    "titleEn": "Arknights: Endfield Pioneer Test Recap: AIC Factory, Wuling Blueprints, and Next Steps",
+    "titleJa": "エンドフィールド Pioneer Testまとめ：AIC工場とWuling設計図",
     "category": "version",
     "categoryZh": "版本攻略",
     "categoryEn": "Version Guide",
-    "summary": "整理 Homecoming 半周年更新重点：7 月 16 日上线、乌陵剧情收束、新地图、Arcane/Liino、新 AIC 工厂流程和庆典奖励。",
-    "summaryEn": "A Homecoming hub for the July 16 half-year update, Wuling story, new maps, Arcane and Liino, AIC factory expansion, and celebration rewards.",
-    "summaryJa": "7月16日のHomecoming半周年更新、新マップ、AIC拡張、新オペレーターを整理します。",
-    "content": "## 终末地 Homecoming 半周年更新专题\n\nHomecoming 将在 2026 年 7 月 16 日上线，是《明日方舟：终末地》的半周年大型更新。它同时承担三个搜索意图：新剧情/新地图、Arcane 与 Liino 新干员、AIC 工厂系统扩展。\n\n### 更新重点速览\n\n- **上线时间**：2026 年 7 月 16 日。\n- **版本定位**：半周年更新，也是乌陵主线的重要收束节点。\n- **地图扩展**：新增 Yinglung Pass 与 North Wuling Exclusion Zone 两张主线地图。\n- **新干员**：Arcane 与 Liino 登场。\n- **系统更新**：AIC 工厂加入气体物料状态、更多配方、机器和生产线。\n- **庆典奖励**：登录、邮件和活动奖励适合放在版本页首屏重点展示。\n\n### 新地图与剧情\n\nHomecoming 聚焦乌陵故事线，玩家会继续推进归乡、灾难遗留和封锁区重建相关内容。新地图适合拆成两类页面：\n\n1. **探索路线**：解锁条件、主线推进、隐藏路线、采集点。\n2. **敌人与 Boss**：新敌人机制、Boss 打断窗口、队伍配置建议。\n\n### Arcane 与 Liino 内容重点\n\nArcane 是版本旗舰干员，适合做角色页和配队页双入口；Liino 是偏支援定位，适合整理“辅助值得抽吗”“低成本队伍”这类相关问题。\n\n建议站点路径：版本专题 -> 角色页 -> 配队/武器 -> AIC 材料需求。\n\n### AIC 工厂系统为什么要单独写\n\nHomecoming 的差异化核心在 AIC。气体物料状态会改变生产链路，让玩家能用更短流程生产部分材料，也会带来更密集的工厂布局需求。\n\n建议独立拆一篇 AIC 入门：\n\n- 气体、液体、固体物料怎么互转。\n- 新机器和新配方优先解锁什么。\n- 新手如何避免管线和物流拥堵。\n- 半周年回流玩家怎样快速补工厂进度。\n\n### 新玩家入口\n\n如果你是 Homecoming 才入坑，优先顺序是：\n\n1. 下载与配置要求。\n2. 新手主线和功能解锁。\n3. Homecoming 早期解锁条件。\n4. Arcane/Liino 试用与抽取建议。\n5. AIC 工厂基础布局。",
-    "contentEn": "## Arknights: Endfield Homecoming Update Hub\n\nHomecoming launches on July 16, 2026 as Endfield's half-year celebration update. It captures three major search intents at once: new story/maps, Arcane and Liino, and the AIC factory expansion.\n\n### Quick Update Summary\n\n- **Launch date**: July 16, 2026.\n- **Update role**: half-year celebration and a major Wuling storyline milestone.\n- **Map expansion**: Yinglung Pass and North Wuling Exclusion Zone.\n- **New operators**: Arcane and Liino.\n- **System update**: AIC factory expansion with gas-state materials, new recipes, machines, and production lines.\n- **Rewards**: login, mail, and event rewards should be surfaced near the top of the version page.\n\n### New Maps and Story\n\nHomecoming continues the Wuling arc with themes of returning home, disaster aftermath, and reclaiming sealed territory. Split map coverage into:\n\n1. **Exploration route**: unlock requirements, main-story path, hidden routes, and gathering points.\n2. **Enemies and boss**: new mechanics, interruption windows, and team suggestions.\n\n### Arcane and Liino Content Path\n\nArcane is the flagship operator and should connect to both character and team pages. Liino is a support-focused operator, making her a good fit for searches like \"is Liino worth pulling\" and \"low-cost Endfield team\".\n\nRecommended path: version hub -> operator page -> team/weapon guide -> AIC material needs.\n\n### Why AIC Needs a Separate Guide\n\nAIC is the differentiator for Homecoming. Gas-state materials can shorten production chains and create denser factory layouts.\n\nA dedicated AIC guide should cover:\n\n- Gas, liquid, and solid material conversion.\n- New machines and recipe unlock priority.\n- How beginners avoid conduit and logistics bottlenecks.\n- How returning players catch up on factory progress.\n\n### New Player Path\n\n1. Download and system requirements.\n2. Beginner story and feature unlocks.\n3. Homecoming early unlock requirements.\n4. Arcane/Liino trials and pull advice.\n5. Basic AIC factory layout.",
+    "summary": "Pioneer Test 招募结束后，整理测试复盘、测试奖励、Wuling 资源产线、AIC 工厂和蓝图规划，避免继续使用过期报名倒计时。",
+    "summaryEn": "After Pioneer Test recruitment, this hub covers the test recap, rewards, Wuling production lines, AIC factories, and blueprint planning without stale recruitment countdowns.",
+    "summaryJa": "Pioneer Test終了後のまとめ、AIC工場、Wuling資源、設計図、次の導線を整理します。",
+    "content": "## 终末地 Pioneer Test 复盘与 AIC 蓝图路线\n\nSteam Pioneer Test 招募窗口已经结束，页面重点应从“还能不能报名”切换为“测试后如何复盘、奖励如何确认、工厂和蓝图如何继续使用”。正式上线日期仍以官方公告为准。\n\n### 当前重点速览\n\n- **测试状态**：Pioneer Test 招募已结束，避免继续使用 last-call 或报名倒计时。\n- **复盘方向**：整理测试奖励、玩法反馈、账号/平台问题和后续公告。\n- **地图与资源**：继续关注 Wuling 相关资源、生产链和探索路线。\n- **工厂系统**：AIC 工厂、配方、机器、物流和生产线布局仍是高价值长尾需求。\n- **蓝图路线**：优先整理可复用布局、资源入口、瓶颈排查和回流玩家补线。\n\n### 测试后先做什么\n\n1. 先确认测试资格、平台和奖励是否已经结算。\n2. 把测试体验中遇到的账号、下载、性能和玩法问题分开记录。\n3. 再进入 Wuling 资源路线、AIC 工厂和蓝图复用专题。\n4. 正式上线日期只引用官网、Steam 或官方社区公告。\n\n### AIC 工厂与蓝图\n\n当前更值得承接的搜索不是报名倒计时，而是：\n\n- 蓝图能否复用布局。\n- 工厂线路如何减少返工。\n- Wuling 资源如何接入生产链。\n- 回流玩家怎样从旧基地过渡。\n\n建议按“小模块、清晰入口出口、预留升级空间、按用途命名”保存蓝图，避免把低效布局复制到整个基地。",
+    "contentEn": "## Arknights: Endfield Pioneer Test Recap and AIC Blueprint Route\n\nPioneer Test recruitment has ended. The useful route now is a recap of test access and rewards, followed by Wuling resource planning, AIC factory layouts, and reusable blueprints. The full release date remains subject to official confirmation.\n\n### Current Focus\n\n- **Test status**: recruitment has ended; do not keep stale last-call wording.\n- **Recap**: cover test rewards, platform/account issues, gameplay feedback, and next official notices.\n- **Resource route**: follow Wuling production chains and exploration needs.\n- **Factory system**: prioritize AIC recipes, machines, logistics, and layout bottlenecks.\n- **Blueprint route**: document reusable layouts, resource inputs, and catch-up steps for returning players.\n\n### What to Do After the Test\n\n1. Confirm test access, platform, and reward settlement.\n2. Separate account, download, performance, and gameplay feedback.\n3. Move into Wuling resources, AIC factories, and blueprint reuse.\n4. Treat the full release date as unconfirmed until official sources publish it.\n\n### AIC and Blueprint Route\n\nThe strongest post-test intent is now blueprint reuse, lower-rework factory lines, Wuling resource routing, and returner base transition. Save small modules with clear inputs and outputs, leave upgrade space, and name layouts by purpose.",
     "tags": [
-      "Homecoming",
-      "7月16日",
-      "半周年",
+      "Pioneer Test",
+      "测试复盘",
+      "Wuling",
       "AIC",
       "工厂系统",
+      "蓝图",
       "Arcane",
       "Liino",
       "新地图"
     ],
     "faq": [
       {
-        "question": "When does Homecoming launch?",
-        "questionZh": "Homecoming 什么时候上线？",
-        "answer": "Homecoming is scheduled for July 16, 2026 as Endfield's half-year celebration update.",
-        "answerZh": "Homecoming 计划于 2026 年 7 月 16 日上线，是终末地半周年大型更新。"
+        "question": "What should Endfield players do after Pioneer Test recruitment ends?",
+        "questionZh": "终末地 Pioneer Test 招募结束后看什么？",
+        "answer": "Review the test recap and rewards first, then move into Wuling resources, AIC factory layouts, and reusable blueprints.",
+        "answerZh": "先看测试复盘和奖励，再进入 Wuling 资源、AIC 工厂布局和可复用蓝图路线。"
       },
       {
         "question": "What should returning players check first?",
@@ -519,14 +520,14 @@
   },
   {
     "id": "blueprint-aic-factory-guide",
-    "title": "终末地蓝图 / AIC 工厂系统入门：Homecoming 后生产线、蓝图复用与回流建设路线",
-    "titleEn": "Arknights: Endfield Blueprint / AIC Factory Guide: Production Lines, Blueprint Reuse, and Returner Routes after Homecoming",
+    "title": "终末地蓝图 / AIC 工厂系统入门：Pioneer Test 复盘、生产线与回流建设路线",
+    "titleEn": "Endfield Blueprint / AIC Factory Guide: Pioneer Test Recap, Production Lines and Returner Route",
     "titleJa": "エンドフィールド Blueprint / AIC工場 入門ガイド",
     "category": "system",
     "categoryZh": "系统攻略",
     "categoryEn": "System Guide",
-    "summary": "围绕 Homecoming 后升温的 blueprint、蓝图、AIC 工厂、生产线 QoL 和回流建设问题，整理从新手到回流玩家都能执行的工厂路线。",
-    "summaryEn": "A practical guide for blueprint, AIC factory, production-line QoL, and returner construction questions after Homecoming.",
+    "summary": "围绕 Pioneer Test 后升温的 blueprint、蓝图、AIC 工厂、生产线 QoL 和回流建设问题，整理从新手到回流玩家都能执行的工厂路线。",
+    "summaryEn": "A post-Pioneer-Test Endfield blueprint and AIC factory starter covering production lines, QoL expectations, returner routing, and what to verify before the next test.",
     "summaryJa": "Homecoming後のBlueprint、AIC工場、生産ライン、復帰導線を整理します。",
     "content": "## 先看结论\n\nHomecoming 之后，终末地的高意图搜索明显从“什么时候更新”转到“蓝图怎么用、AIC 工厂怎么搭、生产线怎么更省事”。这类用户通常不是想读新闻，而是想马上把基地效率提起来。\n\n### 蓝图 / AIC 先解决什么\n\n- **蓝图**：解决重复搭建、布局复用和生产线迁移的问题。\n- **AIC 工厂**：解决材料加工、配方衔接、机器布局和自动化的问题。\n- **Homecoming QoL**：重点关注新增物料状态、更多配方、机器和生产线调整。\n- **回流玩家**：先恢复基础产能，再追新地图和新干员养成。\n\n## 新手的 AIC 工厂顺序\n\n1. **先保基础材料**：优先能稳定供给升级、装备和干员养成的材料。\n2. **再做单线闭环**：不要一开始铺太大，先做一条可理解、可维护的生产线。\n3. **最后再复制蓝图**：等路线稳定后再保存蓝图，避免把低效布局复制到全基地。\n\n### 第一条生产线建议\n\n| 阶段 | 目标 | 判断标准 |\n|---|---|---|\n| 起步 | 能持续产基础材料 | 不需要频繁手动补缺口 |\n| 扩展 | 能支撑装备和干员养成 | 日常材料不再卡主线 |\n| 优化 | 能用蓝图复制稳定模块 | 新区建设不需要重搭一次 |\n\n## 回流玩家先别重建整个基地\n\n回流玩家最常犯的错是看到 Homecoming 新系统后直接拆家。更稳的路线是：\n\n1. 先标记旧生产线还能用的模块。\n2. 把瓶颈材料、断线机器和低效搬运点列出来。\n3. 只改瓶颈处，再保存新蓝图。\n4. 等新地图材料需求明确后，再决定是否大规模迁移。\n\n## 蓝图复用的 4 个原则\n\n- **小模块优先**：保存 1 条生产线或 1 个功能区，比保存整个基地更灵活。\n- **入口出口清楚**：蓝图里要能一眼看出材料从哪里进、成品从哪里出。\n- **留升级空间**：机器、配方和物流以后会变，别把空间塞死。\n- **按用途命名**：例如“基础材料线”“装备材料线”“新地图采集处理线”。\n\n## 和 Homecoming 版本页怎么配合\n\n- 想看新地图、Arcane / Liino 和奖励：先看 /endfield/version。\n- 想把基地和生产线效率拉起来：看本页。\n- 想理解战斗和干员搭配：接 /endfield/guides/combat-system-guide 与 /endfield/characters。\n\n## 常见排查表\n\n| 问题 | 可能原因 | 先做什么 |\n|---|---|---|\n| 生产线停住 | 前置材料不足或机器断线 | 从最终产物倒推缺口 |\n| 蓝图不好复用 | 模块太大或依赖太多 | 拆成小型功能模块 |\n| 回流后看不懂基地 | 旧布局没有命名 | 先做区域标记再改造 |\n| 新地图材料卡住 | 没有独立处理线 | 建一条新材料缓冲线 |",
     "contentEn": "## Quick answer\n\nAfter Homecoming, high-intent Endfield searches shifted from \"when is the update\" to \"how do blueprints work, how should I build the AIC factory, and how do I make production lines less painful.\" These users usually want a practical build route, not news.\n\n### What blueprints / AIC solve\n\n- **Blueprints**: Repeated builds, layout reuse, and production-line migration.\n- **AIC factory**: Material processing, recipe chains, machine layout, and automation.\n- **Homecoming QoL**: New material states, recipes, machines, and production-line improvements.\n- **Returners**: Restore core output first, then chase new maps and operator progression.\n\n## Beginner AIC factory order\n\n1. **Secure basic materials**: Prioritize materials used for upgrades, gear, and operator progression.\n2. **Build one closed loop**: Do not overbuild. Start with one understandable, maintainable line.\n3. **Save blueprints after it works**: Stabilize the route before copying it across your base.\n\n### First production line\n\n| Stage | Goal | Success check |\n|---|---|---|\n| Start | Stable basic materials | Few manual supply gaps |\n| Expand | Support gear and operators | Dailies no longer block progression |\n| Optimize | Reuse stable modules as blueprints | New areas do not require rebuilding from scratch |\n\n## Returners should not rebuild everything first\n\nA common returner mistake is tearing down the whole base after seeing new Homecoming systems. A safer route:\n\n1. Mark old production modules that still work.\n2. List bottleneck materials, disconnected machines, and weak transport points.\n3. Fix bottlenecks only, then save updated blueprints.\n4. Wait until new-map material needs are clear before large migration.\n\n## Four blueprint reuse rules\n\n- **Small modules first**: One line or one function zone is more flexible than a full-base blueprint.\n- **Clear input and output**: You should see where materials enter and products exit.\n- **Leave upgrade space**: Machines, recipes, and logistics can change.\n- **Name by purpose**: Examples: basic-material line, gear-material line, new-map processing line.\n\n## How this connects to Homecoming\n\n- New maps, Arcane / Liino, and rewards: /endfield/version.\n- Base and production-line efficiency: this guide.\n- Combat and operators: /endfield/guides/combat-system-guide and /endfield/characters.\n\n## Troubleshooting\n\n| Problem | Likely cause | First action |\n|---|---|---|\n| Line stops | Missing inputs or disconnected machines | Trace backward from final output |\n| Blueprint is hard to reuse | Module is too large or dependency-heavy | Split into smaller function modules |\n| Returner base is confusing | Old layout has no names | Label zones before rebuilding |\n| New-map material bottleneck | No dedicated processing line | Build a buffer line for new materials |",
@@ -558,7 +559,8 @@
         "answer": "A reusable blueprint is small, clearly named, has obvious input/output points, and leaves space for upgrades.",
         "answerZh": "好复用的蓝图应该模块小、命名清楚、入口出口明确，并且留出升级空间。"
       }
-    ]
+    ],
+    "currentVersion": "Endfield Pioneer Test recap; verify AIC and blueprint details before the next test"
   },
   {
     "id": "homecoming-operators-map-route",
@@ -569,11 +571,11 @@
     "categoryZh": "版本攻略",
     "categoryEn": "Version Guide",
     "categoryJa": "バージョン攻略",
-    "summary": "整理 Homecoming、新地图、Camille、Arcane/Liino、新干员、AIC 工厂、blueprint 和奖励等问题，把回流玩家下一步路线拆清楚。",
-    "summaryEn": "A Homecoming route for new maps, Camille, Arcane/Liino, new operators, AIC factory, blueprints, and reward checks.",
+    "summary": "整理 Homecoming、新地图、Camille、Arcane/Liino、新干员、AIC 工厂、blueprint 和奖励等问题，把回流玩家下一步路线拆清楚。（历史归档：当前请先看 Pioneer Test 复盘。）",
+    "summaryEn": "A Homecoming route for new maps, Camille, Arcane/Liino, new operators, AIC factory, blueprints, and reward checks. Archive note: start from the Pioneer Test recap for current routing.",
     "summaryJa": "Homecoming、新マップ、Camille、Arcane/Liino、新オペレーター、AIC工場、報酬を整理します。",
-    "content": "## 先看结论\n\nHomecoming 后，终末地玩家最容易卡在“先看地图、先抽干员，还是先研究 AIC 工厂”。推荐顺序是：先确认 Homecoming 总览和奖励，再看新地图开放内容，然后进入新干员与蓝图 / AIC 工厂路线。\n\n## Homecoming 下一步路线\n\n| 用户类型 | 先看什么 | 下一步 |\n| --- | --- | --- |\n| 回流玩家 | Homecoming 总览 | 新地图 + 奖励 + 工厂 QoL |\n| 建设玩家 | 蓝图 / AIC 工厂 | 生产线复用和基地效率 |\n| 角色玩家 | 新干员与队伍 | Camille、Arcane/Liino 和阵容定位 |\n| 新玩家 | 下载与战斗系统 | 先理解 Talos II 探索和实时战斗 |\n\n## 新地图怎么安排\n\n新地图搜索通常不是只想看地点名，而是想知道：\n\n- 哪些区域先开放。\n- 是否影响主线推进。\n- 新资源和工厂材料在哪里接入。\n- 回流玩家需要补哪些前置。\n- 地图探索和干员培养哪个更优先。\n\n如果你刚回归，先完成版本引导和奖励，再进入探索，不要直接跳到高效率路线。\n\n## 新干员怎么判断\n\nCamille、Arcane/Liino 等名字适合做角色入口，但目前页面最好先强调定位判断：\n\n1. 这个干员补的是输出、控制、辅助还是生产效率。\n2. 是否需要新地图资源培养。\n3. 是否和 AIC 工厂或蓝图系统有间接收益。\n4. 你的现有队伍是否已经能覆盖主线和探索。\n\n## AIC 工厂与蓝图为什么要放一起看\n\nHomecoming 的差异化关键词是 blueprint / AIC。用户真正关心的是：\n\n- 蓝图能不能复用布局。\n- 工厂线路怎么少返工。\n- 新地图资源如何接进生产线。\n- 回流玩家怎样从旧基地过渡。\n\n所以建议先看 /endfield/guides/blueprint-aic-factory-guide，再回到基地建设和材料刷取页。\n\n## 奖励检查清单\n\n- 登录奖励和版本补偿。\n- Homecoming 活动任务。\n- 新地图探索奖励。\n- 工厂/基地相关任务。\n- 新干员培养材料。\n- 兑换码或社区活动奖励。\n\n## 推荐阅读顺序\n\n1. /endfield/version：Homecoming 专题。\n2. /endfield/guides/homecoming-update-guide：更新总览。\n3. /endfield/guides/blueprint-aic-factory-guide：蓝图 / AIC 工厂。\n4. /endfield/characters：干员图鉴。\n5. /endfield/guides/base-building-guide：基地建设。",
-    "contentEn": "## Quick answer\n\nAfter Homecoming, the key question is whether to check maps, operators, or the AIC factory first. The safest order is: Homecoming overview and rewards, new map content, then operators and blueprint/AIC routes.\n\n## Next-step route\n\n| User type | First page | Next step |\n| --- | --- | --- |\n| Returning player | Homecoming overview | New map, rewards, factory QoL |\n| Builder | Blueprint / AIC factory | Production reuse and base efficiency |\n| Operator-focused | New operators and teams | Camille, Arcane/Liino, role fit |\n| New player | Download and combat basics | Talos II exploration and real-time combat |\n\n## New map planning\n\nPlayers want to know which areas open first, whether story progress is affected, where resources connect to factory materials, what prerequisites returners need, and whether map exploration or operator progression comes first.\n\n## Operator checks\n\nEvaluate whether a new operator fills output, control, support, or production needs; whether new-map materials are required; and whether your current roster already handles exploration.\n\n## AIC and blueprints\n\nBlueprint/AIC demand is about layout reuse, fewer factory rebuilds, new-map resource routing, and old-base transition planning.\n\n## Read next\n\nOpen the Homecoming hub, update guide, blueprint/AIC guide, operator wiki, and base-building guide.",
+    "content": "## 历史归档提示\n\n本页保留 Homecoming 期间的新地图、新干员和回流路线。当前终末地入口已转向 Pioneer Test 复盘、AIC 工厂、Wuling、蓝图和下一轮测试观察；做当前判断请先看 /endfield/version。\n\n## 先看结论\n\nHomecoming 后，终末地玩家最容易卡在“先看地图、先抽干员，还是先研究 AIC 工厂”。推荐顺序是：先确认 Homecoming 总览和奖励，再看新地图开放内容，然后进入新干员与蓝图 / AIC 工厂路线。\n\n## Homecoming 下一步路线\n\n| 用户类型 | 先看什么 | 下一步 |\n| --- | --- | --- |\n| 回流玩家 | Homecoming 总览 | 新地图 + 奖励 + 工厂 QoL |\n| 建设玩家 | 蓝图 / AIC 工厂 | 生产线复用和基地效率 |\n| 角色玩家 | 新干员与队伍 | Camille、Arcane/Liino 和阵容定位 |\n| 新玩家 | 下载与战斗系统 | 先理解 Talos II 探索和实时战斗 |\n\n## 新地图怎么安排\n\n新地图搜索通常不是只想看地点名，而是想知道：\n\n- 哪些区域先开放。\n- 是否影响主线推进。\n- 新资源和工厂材料在哪里接入。\n- 回流玩家需要补哪些前置。\n- 地图探索和干员培养哪个更优先。\n\n如果你刚回归，先完成版本引导和奖励，再进入探索，不要直接跳到高效率路线。\n\n## 新干员怎么判断\n\nCamille、Arcane/Liino 等名字适合做角色入口，但目前页面最好先强调定位判断：\n\n1. 这个干员补的是输出、控制、辅助还是生产效率。\n2. 是否需要新地图资源培养。\n3. 是否和 AIC 工厂或蓝图系统有间接收益。\n4. 你的现有队伍是否已经能覆盖主线和探索。\n\n## AIC 工厂与蓝图为什么要放一起看\n\nHomecoming 的差异化关键词是 blueprint / AIC。用户真正关心的是：\n\n- 蓝图能不能复用布局。\n- 工厂线路怎么少返工。\n- 新地图资源如何接进生产线。\n- 回流玩家怎样从旧基地过渡。\n\n所以建议先看 /endfield/guides/blueprint-aic-factory-guide，再回到基地建设和材料刷取页。\n\n## 奖励检查清单\n\n- 登录奖励和版本补偿。\n- Homecoming 活动任务。\n- 新地图探索奖励。\n- 工厂/基地相关任务。\n- 新干员培养材料。\n- 兑换码或社区活动奖励。\n\n## 推荐阅读顺序\n\n1. /endfield/version：Homecoming 专题。\n2. /endfield/guides/homecoming-update-guide：更新总览。\n3. /endfield/guides/blueprint-aic-factory-guide：蓝图 / AIC 工厂。\n4. /endfield/characters：干员图鉴。\n5. /endfield/guides/base-building-guide：基地建设。",
+    "contentEn": "## Archive note\n\nThis page keeps Homecoming-era map, operator, and returner routing. Current Endfield coverage now starts from the Pioneer Test recap, AIC factory, Wuling, blueprints, and next-test watch at /endfield/version.\n\n## Quick answer\n\nAfter Homecoming, the key question is whether to check maps, operators, or the AIC factory first. The safest order is: Homecoming overview and rewards, new map content, then operators and blueprint/AIC routes.\n\n## Next-step route\n\n| User type | First page | Next step |\n| --- | --- | --- |\n| Returning player | Homecoming overview | New map, rewards, factory QoL |\n| Builder | Blueprint / AIC factory | Production reuse and base efficiency |\n| Operator-focused | New operators and teams | Camille, Arcane/Liino, role fit |\n| New player | Download and combat basics | Talos II exploration and real-time combat |\n\n## New map planning\n\nPlayers want to know which areas open first, whether story progress is affected, where resources connect to factory materials, what prerequisites returners need, and whether map exploration or operator progression comes first.\n\n## Operator checks\n\nEvaluate whether a new operator fills output, control, support, or production needs; whether new-map materials are required; and whether your current roster already handles exploration.\n\n## AIC and blueprints\n\nBlueprint/AIC demand is about layout reuse, fewer factory rebuilds, new-map resource routing, and old-base transition planning.\n\n## Read next\n\nOpen the Homecoming hub, update guide, blueprint/AIC guide, operator wiki, and base-building guide.",
     "tags": [
       "Homecoming",
       "Camille",
@@ -604,22 +606,23 @@
         "answerZh": "新地图资源往往会影响生产线、材料流转和基地升级优先级。"
       }
     ],
-    "date": "2026-07-21"
+    "date": "2026-07-21",
+    "currentVersion": "Endfield Homecoming archive; current route starts from Pioneer Test recap"
   },
   {
     "id": "official-download-specs-homecoming-faq",
-    "title": "终末地官网下载安装到配置 FAQ：Homecoming 后 PC、移动端、测试资格和 AIC 入坑先确认什么",
-    "titleEn": "Arknights: Endfield Official Download and Specs FAQ: PC, Mobile, Test Access, and Homecoming Starter Checks",
+    "title": "终末地官方下载与配置 FAQ：测试后 PC、移动端、账号和 AIC 入坑",
+    "titleEn": "Arknights: Endfield Official Download and Specs FAQ: Post-test PC, Mobile, Account, and AIC Starter Checks",
     "titleJa": "エンドフィールド公式DL・環境FAQ：PC、モバイル、テスト資格、Homecoming入門確認",
     "category": "beginner",
     "categoryZh": "新手指南",
     "categoryEn": "Beginner",
     "categoryJa": "初心者ガイド",
-    "summary": "整理终末地官网、下载、PC、配置、移动端、测试资格和 Homecoming 回流等问题，把入口、设备和下一步攻略分清楚。",
-    "summaryEn": "A starter FAQ for Endfield official site, download, PC specs, mobile, test access, and Homecoming returner searches.",
+    "summary": "整理终末地官网、下载、PC、配置、移动端、测试后账号状态和 AIC 入坑问题，把入口、设备和下一步攻略分清楚。（历史归档：当前请先看 Pioneer Test 复盘。）",
+    "summaryEn": "A post-test FAQ for Endfield official download, PC specs, mobile, account status, and AIC starter routes. Archive note: start from the Pioneer Test recap for current routing.",
     "summaryJa": "公式サイト、DL、PC環境、モバイル、テスト資格、Homecoming復帰検索を整理します。",
-    "content": "## 先看结论\n\n搜终末地官网、下载、PC、配置或移动端时，先确认你要解决的是“能不能下载”、还是“设备能不能跑”、或者“Homecoming 回流后该看什么”。下载入口、测试资格和平台节奏都以官网、商店页和官方公告为准，不建议使用非官方安装包或未确认渠道。\n\n## 快速 FAQ\n\n| 问题 | 建议口径 |\n|---|---|\n| 官网在哪里？ | 以官方站和官方社区链接为准。 |\n| PC 能玩吗？ | 先看官方测试/发行公告与配置要求。 |\n| 移动端有吗？ | 以 App Store / Google Play / 官网渠道公布为准。 |\n| 现在能下载吗？ | 看当前测试资格、预下载和平台开放状态。 |\n| 配置不够怎么办？ | 优先确认最低/推荐配置、容量、显卡驱动和画质档位。 |\n\n## 下载前先查 5 件事\n\n1. **账号和地区**：确认账号体系、地区可用性和测试资格。\n2. **平台入口**：官网、PC 启动器、商店页是否一致。\n3. **设备配置**：CPU、显卡、内存、系统版本和存储空间。\n4. **网络与更新**：预下载、补丁大小和更新校验时间。\n5. **安全来源**：只使用官方渠道，不用来历不明的安装包。\n\n## Homecoming 后新玩家先看什么\n\nHomecoming 让终末地搜索从“什么时候能玩”转向“进来以后看什么”。推荐顺序：\n\n| 用户类型 | 先看 | 下一步 |\n|---|---|---|\n| 新玩家 | 下载与战斗系统 | 理解 Talos II 探索和实时战斗 |\n| 回流玩家 | Homecoming 专题 | 新地图、新干员、奖励和工厂 QoL |\n| 建设玩家 | 蓝图 / AIC 工厂 | 生产线、布局复用和材料流转 |\n| 角色玩家 | 干员图鉴 | Camille、Arcane/Liino 与队伍定位 |\n\n## PC 配置怎么解释\n\n配置页不要只给一张表，还要解释玩家真正会遇到的问题：\n\n- 安装包和更新包需要预留额外空间。\n- 首次启动可能需要编译缓存或校验资源。\n- 开放世界探索比菜单/剧情更吃显卡和内存。\n- 如果帧率不稳，先降阴影、体积效果和远景细节。\n- 驱动和系统版本往往比“刚好达到最低配置”更重要。\n\n## AIC / blueprint 为什么也放在入坑页\n\n很多新玩家不是只想下载，他们马上会搜 blueprint、AIC、factory 和 base building。下载页要把他们送到建设入口：\n\n- 先理解 AIC 工厂是长期效率系统。\n- 再看蓝图复用，避免每次更新都重建生产线。\n- 回流玩家优先修瓶颈，不要第一天推倒重来。\n\n## 推荐下一步\n\n- /endfield/version：Homecoming 专题。\n- /endfield/guides/homecoming-operators-map-route：新地图和新干员路线。\n- /endfield/guides/blueprint-aic-factory-guide：蓝图 / AIC 工厂入门。\n- /endfield/guides/download-install-guide：基础下载指南。\n- /endfield/guides/combat-system-guide：战斗系统。",
-    "contentEn": "## Quick answer\n\nWhen users search Endfield official site, download, PC, specs, or mobile, first determine whether they need download access, device readiness, or a Homecoming returner route. Download availability, test access, and platform timing should be based on the official site, store pages, and official announcements. Avoid unofficial installers or unverified channels.\n\n## Fast FAQ\n\n| Question | Safe wording |\n|---|---|\n| Where is the official site? | Use the official site and official community links. |\n| Can I play on PC? | Check official test/release notices and specs first. |\n| Is mobile available? | Use App Store, Google Play, or official-site channels as the source of truth. |\n| Can I download now? | Check current test access, preload status, and platform availability. |\n| What if my specs are low? | Confirm minimum/recommended specs, storage, GPU driver, and graphics settings. |\n\n## Check these before downloading\n\n1. **Account and region**: account system, region availability, and test access.\n2. **Platform entry**: official site, PC launcher, and store pages.\n3. **Device specs**: CPU, GPU, RAM, OS version, and storage.\n4. **Network and updates**: preload, patch size, and file verification time.\n5. **Safe source**: use official channels only.\n\n## What to read after Homecoming\n\n| User type | First page | Next step |\n|---|---|---|\n| New player | Download and combat basics | Talos II exploration and real-time combat |\n| Returning player | Homecoming hub | New maps, operators, rewards, and factory QoL |\n| Builder | Blueprint / AIC factory | Production lines, layout reuse, and material flow |\n| Operator-focused | Operator wiki | Camille, Arcane/Liino, and team roles |\n\n## How to explain PC specs\n\nDo not only publish a table. Explain that installer and patch files need extra storage, first launch may verify or compile resources, open-world exploration is heavier than menus, and unstable FPS should be addressed by lowering shadows, volumetric effects, and distance detail first.\n\n## Why AIC / blueprint belongs here\n\nMany new users go from download intent directly into blueprint, AIC, factory, and base-building searches. Route them to AIC as a long-term efficiency system, blueprint reuse to avoid rebuilds, and bottleneck fixes before full base reconstruction.\n\n## Next steps\n\n- /endfield/version: Homecoming hub.\n- /endfield/guides/homecoming-operators-map-route: New map and operator route.\n- /endfield/guides/blueprint-aic-factory-guide: Blueprint / AIC factory starter.\n- /endfield/guides/download-install-guide: Basic download guide.\n- /endfield/guides/combat-system-guide: Combat system.",
+    "content": "## 历史归档提示\n\n本页保留 Homecoming 期间的新地图、新干员和回流路线。当前终末地入口已转向 Pioneer Test 复盘、AIC 工厂、Wuling、蓝图和下一轮测试观察；做当前判断请先看 /endfield/version。\n\n## 先看结论\n\n搜终末地官网、下载、PC、配置或移动端时，先确认你要解决的是“能不能下载”、还是“设备能不能跑”、或者“Pioneer Test 后该看什么”。下载入口、测试资格和平台节奏都以官网、商店页和官方公告为准，不建议使用非官方安装包或未确认渠道。\n\n## 快速 FAQ\n\n| 问题 | 建议口径 |\n|---|---|\n| 官网在哪里？ | 以官方站和官方社区链接为准。 |\n| PC 能玩吗？ | 先看官方测试/发行公告与配置要求。 |\n| 移动端有吗？ | 以 App Store / Google Play / 官网渠道公布为准。 |\n| 现在能下载吗？ | 看当前测试资格、预下载和平台开放状态。 |\n| 配置不够怎么办？ | 优先确认最低/推荐配置、容量、显卡驱动和画质档位。 |\n\n## 下载前先查 5 件事\n\n1. **账号和地区**：确认账号体系、地区可用性和测试资格。\n2. **平台入口**：官网、PC 启动器、商店页是否一致。\n3. **设备配置**：CPU、显卡、内存、系统版本和存储空间。\n4. **网络与更新**：预下载、补丁大小和更新校验时间。\n5. **安全来源**：只使用官方渠道，不用来历不明的安装包。\n\n## Pioneer Test 后新玩家先看什么\n\nPioneer Test 结束后，终末地搜索从“什么时候能报名”转向“测试后该看什么”。推荐顺序：\n\n| 用户类型 | 先看 | 下一步 |\n|---|---|---|\n| 新玩家 | 下载与战斗系统 | 理解 Talos II 探索和实时战斗 |\n| 回流玩家 | Homecoming 专题 | 新地图、新干员、奖励和工厂 QoL |\n| 建设玩家 | 蓝图 / AIC 工厂 | 生产线、布局复用和材料流转 |\n| 角色玩家 | 干员图鉴 | Camille、Arcane/Liino 与队伍定位 |\n\n## PC 配置怎么解释\n\n配置页不要只给一张表，还要解释玩家真正会遇到的问题：\n\n- 安装包和更新包需要预留额外空间。\n- 首次启动可能需要编译缓存或校验资源。\n- 开放世界探索比菜单/剧情更吃显卡和内存。\n- 如果帧率不稳，先降阴影、体积效果和远景细节。\n- 驱动和系统版本往往比“刚好达到最低配置”更重要。\n\n## AIC / blueprint 为什么也放在入坑页\n\n很多新玩家不是只想下载，他们马上会搜 blueprint、AIC、factory 和 base building。下载页要把他们送到建设入口：\n\n- 先理解 AIC 工厂是长期效率系统。\n- 再看蓝图复用，避免每次更新都重建生产线。\n- 回流玩家优先修瓶颈，不要第一天推倒重来。\n\n## 推荐下一步\n\n- /endfield/version：Homecoming 专题。\n- /endfield/guides/homecoming-operators-map-route：新地图和新干员路线。\n- /endfield/guides/blueprint-aic-factory-guide：蓝图 / AIC 工厂入门。\n- /endfield/guides/download-install-guide：基础下载指南。\n- /endfield/guides/combat-system-guide：战斗系统。",
+    "contentEn": "## Archive note\n\nThis page keeps Homecoming-era map, operator, and returner routing. Current Endfield coverage now starts from the Pioneer Test recap, AIC factory, Wuling, blueprints, and next-test watch at /endfield/version.\n\n## Quick answer\n\nWhen users search Endfield official site, download, PC, specs, or mobile, first determine whether they need download access, device readiness, or a post-test route. Download availability, test access, and platform timing should be based on the official site, store pages, and official announcements. Avoid unofficial installers or unverified channels.\n\n## Fast FAQ\n\n| Question | Safe wording |\n|---|---|\n| Where is the official site? | Use the official site and official community links. |\n| Can I play on PC? | Check official test/release notices and specs first. |\n| Is mobile available? | Use App Store, Google Play, or official-site channels as the source of truth. |\n| Can I download now? | Check current test access, preload status, and platform availability. |\n| What if my specs are low? | Confirm minimum/recommended specs, storage, GPU driver, and graphics settings. |\n\n## Check these before downloading\n\n1. **Account and region**: account system, region availability, and test access.\n2. **Platform entry**: official site, PC launcher, and store pages.\n3. **Device specs**: CPU, GPU, RAM, OS version, and storage.\n4. **Network and updates**: preload, patch size, and file verification time.\n5. **Safe source**: use official channels only.\n\n## What to read after the Pioneer Test\n\n| User type | First page | Next step |\n|---|---|---|\n| New player | Download and combat basics | Talos II exploration and real-time combat |\n| Returning player | Homecoming hub | New maps, operators, rewards, and factory QoL |\n| Builder | Blueprint / AIC factory | Production lines, layout reuse, and material flow |\n| Operator-focused | Operator wiki | Camille, Arcane/Liino, and team roles |\n\n## How to explain PC specs\n\nDo not only publish a table. Explain that installer and patch files need extra storage, first launch may verify or compile resources, open-world exploration is heavier than menus, and unstable FPS should be addressed by lowering shadows, volumetric effects, and distance detail first.\n\n## Why AIC / blueprint belongs here\n\nMany new users go from download intent directly into blueprint, AIC, factory, and base-building searches. Route them to AIC as a long-term efficiency system, blueprint reuse to avoid rebuilds, and bottleneck fixes before full base reconstruction.\n\n## Next steps\n\n- /endfield/version: Homecoming hub.\n- /endfield/guides/homecoming-operators-map-route: New map and operator route.\n- /endfield/guides/blueprint-aic-factory-guide: Blueprint / AIC factory starter.\n- /endfield/guides/download-install-guide: Basic download guide.\n- /endfield/guides/combat-system-guide: Combat system.",
     "contentJa": "## 先に結論\n\nエンドフィールドの公式、DL、PC、環境、モバイルを検索する場合、まず「DLできるか」「端末で動くか」「Homecoming後に何を見るか」を分けて確認します。DL可否、テスト資格、プラットフォーム時期は公式サイト、ストア、公式告知を基準にしてください。\n\n## 確認すること\n\n- 公式サイトと公式コミュニティリンク。\n- PC版のテスト/リリース告知と必要環境。\n- App Store / Google Play / 公式サイトの案内。\n- 事前DL、テスト資格、プラットフォーム開放状態。\n- 容量、GPUドライバー、OSバージョン、画質設定。\n\n## Homecoming後の導線\n\n新規プレイヤーはDLと戦闘基本、復帰プレイヤーはHomecoming特集、建設重視ならblueprint / AIC工場、キャラ重視ならオペレーター図鑑から確認するのがおすすめです。",
     "tags": [
       "official site",
@@ -658,19 +661,20 @@
         "answerJa": "戦闘基本、Homecoming特集、効率重視ならblueprint/AIC工場入門を確認してください。"
       }
     ],
-    "date": "2026-07-21"
+    "date": "2026-07-21",
+    "currentVersion": "Endfield Homecoming archive; current route starts from Pioneer Test recap"
   },
   {
     "id": "steam-pioneer-test-registration-faq",
-    "title": "终末地 Steam Pioneer Test 招募 FAQ：测试资格、下载入口、Homecoming 与 AIC 蓝图先看什么",
-    "titleEn": "Arknights: Endfield Steam Pioneer Test FAQ: Recruitment, Download, Homecoming, and AIC Blueprints",
+    "title": "终末地 Steam Pioneer Test 复盘 FAQ：测试状态、下载入口、AIC 蓝图与下一轮观察",
+    "titleEn": "Endfield Steam Pioneer Test Recap FAQ: Test Status, Download Routes, AIC Blueprints and Next Watch",
     "titleJa": "エンドフィールド Steam Pioneer Test FAQ：募集、DL、Homecoming、AIC設計図",
     "category": "beginner",
     "categoryZh": "新手指南",
     "categoryEn": "Beginner",
     "categoryJa": "初心者ガイド",
-    "summary": "整理 Steam Pioneer Test 招募、测试资格、下载入口、官方来源、Homecoming 和 AIC/blueprint 入坑路线。",
-    "summaryEn": "A Steam Pioneer Test starter FAQ for recruitment, eligibility, download entry, official sources, Homecoming, and AIC/blueprints.",
+    "summary": "整理 Steam Pioneer Test 当前状态、测试资格回看、下载入口、官方来源和 AIC/blueprint 入坑路线；招募期结束后不要把历史报名入口写成仍可申请。",
+    "summaryEn": "A recap FAQ for the Endfield Steam Pioneer Test: test status, historical eligibility, download routes, official sources, AIC/blueprint starter notes, and next-test watch items.",
     "summaryJa": "Steam Pioneer Test募集、資格、DL入口、公式情報、Homecoming、AIC/blueprint導線を整理します。",
     "tags": [
       "Steam Pioneer Test",
@@ -690,6 +694,7 @@
         "answerZh": "不是。除非官方公告明确，否则按测试招募处理。"
       }
     ],
-    "date": "2026-08-31"
+    "date": "2026-08-31",
+    "currentVersion": "Endfield Pioneer Test recap; recruitment details are historical unless official channels reopen"
   }
 ]
