@@ -20,6 +20,17 @@ const SKILL_COST = [
   { level: 9, scale: 0.82 }, { level: 11, scale: 1 },
 ];
 
+const ATTRIBUTE_CHIP_IDS: Record<string, [string, string, string]> = {
+  physical: ['zzz-basic-physical-chip', 'zzz-advanced-physical-chip', 'zzz-specializer-physical-chip'],
+  fire: ['zzz-basic-fire-chip', 'zzz-advanced-fire-chip', 'zzz-specializer-fire-chip'],
+  ice: ['zzz-basic-ice-chip', 'zzz-advanced-ice-chip', 'zzz-specializer-ice-chip'],
+  electric: ['zzz-basic-electric-chip', 'zzz-advanced-electric-chip', 'zzz-specializer-electric-chip'],
+  ether: ['zzz-basic-ether-chip', 'zzz-advanced-ether-chip', 'zzz-specializer-ether-chip'],
+};
+
+const SKILL_MATERIAL_IDS = ['zzz-plating-agent', 'zzz-polarizing-agent', 'zzz-charge-drive'] as const;
+const WEAPON_MATERIAL_IDS = ['zzz-plating-agent', 'zzz-polarizing-agent', 'zzz-crystallized-plating'] as const;
+
 export function ZzzCalculator({ locale }: { locale: SupportedLocale }) {
   const [selectedId, setSelectedId] = useState(zzzCharacters[0]?.id ?? '');
   const [targetLevel, setTargetLevel] = useState(60);
@@ -36,26 +47,29 @@ export function ZzzCalculator({ locale }: { locale: SupportedLocale }) {
   const selected = zzzCharacters.find((character) => character.id === selectedId) ?? zzzCharacters[0];
   const weapon = zzzWeapons.find((item) => item.id === weaponId);
   const mats = useMemo(() => {
-    const byType = (term: string) => zzzMaterials.find((item) => `${item.id} ${item.name} ${item.nameEn} ${item.type}`.toLowerCase().includes(term))?.id;
-    const role = selected?.specialtyEn.toLowerCase() ?? 'attack';
     const attribute = selected?.attribute.toLowerCase() ?? 'physical';
     const levelScale = LEVEL_COST.find((entry) => entry.level === targetLevel)?.scale ?? 1;
     const skillScale = SKILL_COST.find((entry) => entry.level === targetSkill)?.scale ?? 1;
     const coreScale = targetCore === 'C' ? 0.55 : targetCore === 'E' ? 0.82 : 1;
+    const chips = ATTRIBUTE_CHIP_IDS[attribute] ?? ATTRIBUTE_CHIP_IDS.physical!;
     const definitions = [
-      { id: byType('denny') ?? 'danny', qty: Math.round(400000 * levelScale + 300000 * skillScale + (weapon ? 120000 * (weaponLevel / 60) : 0)), group: 'currency' },
-      { id: byType('investigator') ?? byType('exp') ?? 'investigator-log', qty: Math.round(300 * levelScale), group: 'level' },
-      { id: byType(role) ?? byType('certification') ?? 'agent-certification-seal', qty: Math.round(60 * levelScale), group: 'promotion' },
-      { id: byType(attribute) ?? byType('chip') ?? 'basic-chip', qty: Math.round(120 * skillScale), group: 'skills' },
-      { id: byType('notorious') ?? byType('higher-dimensional') ?? 'core-skill-material', qty: Math.round(9 * coreScale), group: 'core' },
-      ...(weapon ? [{ id: byType('w-engine') ?? byType('component') ?? 'w-engine-component', qty: Math.round(50 * (weaponLevel / 60)), group: 'weapon' }] : []),
+      { id: 'zzz-denny', qty: Math.round(400000 * levelScale + 300000 * skillScale + (weapon ? 120000 * (weaponLevel / 60) : 0)), group: 'currency' },
+      { id: 'zzz-investigator-log', qty: Math.round(300 * levelScale), group: 'level' },
+      { id: chips[0], qty: Math.round(20 * skillScale), group: 'skills' },
+      { id: chips[1], qty: Math.round(40 * skillScale), group: 'skills' },
+      { id: chips[2], qty: Math.round(80 * skillScale), group: 'skills' },
+      { id: SKILL_MATERIAL_IDS[0], qty: Math.round(15 * skillScale), group: 'skills' },
+      { id: SKILL_MATERIAL_IDS[1], qty: Math.round(35 * skillScale), group: 'skills' },
+      { id: SKILL_MATERIAL_IDS[2], qty: Math.round(55 * skillScale), group: 'skills' },
+      { id: `zzz-high-dimensional-data-${attribute}`, qty: Math.max(1, Math.round(9 * coreScale)), group: 'core' },
+      ...(weapon ? WEAPON_MATERIAL_IDS.map((id, index) => ({ id, qty: Math.round([25, 40, 25][index]! * (weaponLevel / 60)), group: 'weapon' })) : []),
     ];
     return definitions.map((entry) => {
       const item = zzzMaterials.find((material) => material.id === entry.id);
       const have = owned[entry.id] ?? 0;
       return { ...entry, item, have, missing: Math.max(0, entry.qty - have) };
     });
-  }, [owned, selected?.attribute, selected?.specialtyEn, targetCore, targetLevel, targetSkill, weapon, weaponLevel]);
+  }, [owned, selected?.attribute, targetCore, targetLevel, targetSkill, weapon, weaponLevel]);
 
   const totalMissing = mats.reduce((sum, entry) => sum + entry.missing, 0);
   const updateOwned = (id: string, value: number) => {

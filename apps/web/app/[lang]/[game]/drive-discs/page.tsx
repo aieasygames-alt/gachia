@@ -4,6 +4,9 @@ import { zzzDriveDiscs, getZzzDriveDiscName, getZzzDriveDiscDesc2pc, getZzzDrive
 import { getZzzCharacterName, getZzzCharacterById } from '@gachia/data/games/zzz/characters';
 import { Link } from '@/lib/i18n/navigation';
 import { ensureMetaLength } from '@/lib/seo-metadata';
+import dynamic from 'next/dynamic';
+
+const ZzzDriveDiscEvaluator = dynamic(() => import('./zzz-drive-disc-evaluator').then((mod) => mod.ZzzDriveDiscEvaluator));
 
 const ELEMENT_COLORS: Record<string, string> = {
   physical: '#9ca3af', fire: '#ef4444', ice: '#67e8f9', electric: '#8b5cf6', ether: '#ec4899',
@@ -99,6 +102,8 @@ export default async function DriveDiscsPage({
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh' ? `共 ${driveDiscs.length} 套驱动盘` : locale === 'ja' ? `${driveDiscs.length} セット` : `${driveDiscs.length} Drive Disc Sets`}
       </p>
+
+      <ZzzDriveDiscEvaluator locale={locale} />
 
       {general.length > 0 && (
         <section className="mb-8">
