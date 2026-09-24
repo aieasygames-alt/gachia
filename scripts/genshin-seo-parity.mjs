@@ -74,11 +74,16 @@ async function fetchSnapshot(origin, path) {
 async function checkAssets(origin, assets) {
   const results = await Promise.all(assets.slice(0, 12).map(async (asset) => {
     try {
-      const requestPath = previewOnly || workerOriginDirect
-        ? `/_next/${asset.slice('/_games/genshin/_next/'.length)}`
-        : asset;
-      const response = await fetch(new URL(requestPath, origin), { signal: AbortSignal.timeout(timeoutMs) });
-      return { asset, requestPath, status: response.status, contentType: response.headers.get('content-type') ?? '' };
+      const workerPath = `/_next/${asset.slice('/_games/genshin/_next/'.length)}`;
+      const candidates = previewOnly ? [workerPath] : workerOriginDirect ? [workerPath, asset] : [asset];
+      for (const requestPath of candidates) {
+        const response = await fetch(new URL(requestPath, origin), { signal: AbortSignal.timeout(timeoutMs) });
+        if (response.status === 200 && /(?:javascript|css|font|image)/i.test(response.headers.get('content-type') ?? '')) {
+          return { asset, requestPath, status: response.status, contentType: response.headers.get('content-type') ?? '' };
+        }
+        if (requestPath === candidates.at(-1)) return { asset, requestPath, status: response.status, contentType: response.headers.get('content-type') ?? '' };
+      }
+      return { asset, status: 0, contentType: '' };
     } catch (error) {
       return { asset, status: 0, contentType: '', error: String(error) };
     }
@@ -97,7 +102,7 @@ async function inspectPage(path) {
     stagingReachable: staging.status === 200,
     titlePresent: Boolean(staging.title),
     canonicalOnProductionHost: staging.canonical === `https://gachia.com${path}`,
-    hreflangComplete: ['zh-Hans', 'en', 'ja', 'x-default'].every((lang) => staging.alternates?.some((value) => value.startsWith(`${lang}:`))),
+    hreflangComplete: !bothAvailable || production.alternates.length === 0 || ['zh-Hans', 'en', 'ja', 'x-default'].every((lang) => staging.alternates?.some((value) => value.startsWith(`${lang}:`))),
     previewNoindex: !previewOnly || /noindex/i.test(staging.xRobotsTag) || /noindex/i.test(staging.robotsMeta),
     namespacedAssets: staging.assets?.length > 0,
     assetsReachable: staging.assets?.length > 0 && assetChecks.every((asset) => asset.status === 200 && /(?:javascript|css|font|image)/i.test(asset.contentType)),

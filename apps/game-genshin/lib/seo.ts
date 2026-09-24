@@ -118,7 +118,12 @@ export function genshinMetadata(locale: SupportedLocale, path: string, title: st
   const legacyNoAlternates = path === 'redeem-codes';
   const legacyNoJapaneseAlternate = path === 'guides/banner-schedule-guide';
   const canonicalUrl = legacyHubCanonical ? `${BASE_URL}/${locale}/genshin` : url;
-  const languages = legacyNoAlternates ? undefined : {
+  const languages = legacyNoAlternates ? undefined : legacyHubCanonical ? {
+    'zh-Hans': `${BASE_URL}/zh/genshin`,
+    en: `${BASE_URL}/en/genshin`,
+    ja: `${BASE_URL}/ja/genshin`,
+    'x-default': `${BASE_URL}/zh/genshin`,
+  } : {
     'zh-Hans': `${BASE_URL}/zh/genshin${normalized}`,
     en: `${BASE_URL}/en/genshin${normalized}`,
     ...(legacyNoJapaneseAlternate ? {} : { ja: `${BASE_URL}/ja/genshin${normalized}` }),
