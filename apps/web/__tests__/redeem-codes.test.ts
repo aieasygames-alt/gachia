@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { isRedeemCodeActive } from '@/lib/redeem-codes';
 import { getRedeemCodesForGame } from '@/lib/game-data/redeem-codes';
+import seaCodes from '../public/data/sea/raw-redeem-codes.json';
 import zzzCodes from '../public/data/zzz/raw-redeem-codes.json';
 
 describe('redeem code status', () => {
@@ -19,6 +20,12 @@ describe('redeem code status', () => {
 
     expect(isRedeemCodeActive(code, new Date('2026-08-29T15:59:58Z'))).toBe(true);
     expect(isRedeemCodeActive(code, new Date('2026-08-29T16:00:00Z'))).toBe(false);
+  });
+
+  it('keeps timestamp-based Sea expiry values valid for page formatting', () => {
+    for (const code of seaCodes) {
+      expect(new Date(code.expiresAt).getTime(), `${code.code} expiry should parse`).not.toBeNaN();
+    }
   });
 
   it('treats expired dates and non-active statuses as inactive', () => {

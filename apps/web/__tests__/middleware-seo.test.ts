@@ -15,5 +15,8 @@ describe('SEO redirect contracts', () => {
     expect(middleware).toContain("const DEFAULT_CANONICAL_LOCALE: LocaleId = 'zh';");
     expect(middleware).toContain('return redirectTo(request, `/${targetLocale}${pathname}`);');
     expect(middleware).toContain("sea: ['weapons', 'artifacts', 'drive-discs', 'disk-sets'");
+    expect(middleware).toContain("nte: ['characters', 'weapons', 'items', 'tier-list'");
+    expect(middleware).toContain("zzz: ['characters', 'weapons', 'items', 'tier-list'");
+    expect(middleware).toContain('isUnsupportedGameRoute(game, thirdSegment)');
   });
 });

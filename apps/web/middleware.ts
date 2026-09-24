@@ -30,6 +30,16 @@ function isIndexableRoute(game: GameId, route: string): boolean {
   return !GAME_ROUTE_DENYLIST[game]?.includes(route);
 }
 
+const GAME_ROUTE_ALLOWLIST: Partial<Record<GameId, readonly string[]>> = {
+  nte: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'map', 'guides', 'disk-sets', 'redeem-codes', 'gacha', 'anomalies'],
+  zzz: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'guides', 'drive-discs', 'build', 'compare', 'teams', 'redeem-codes'],
+};
+
+function isUnsupportedGameRoute(game: GameId, route: string): boolean {
+  const allowedRoutes = GAME_ROUTE_ALLOWLIST[game];
+  return Boolean(allowedRoutes && !allowedRoutes.includes(route));
+}
+
 function asLocale(segment?: string): LocaleId | undefined {
   return LOCALES.includes(segment as LocaleId) ? (segment as LocaleId) : undefined;
 }
@@ -126,7 +136,7 @@ export default function middleware(request: NextRequest) {
   }
 
   if (locale && game && thirdSegment && !fourthSegment) {
-    if (!isIndexableRoute(game, thirdSegment)) {
+    if (!isIndexableRoute(game, thirdSegment) || isUnsupportedGameRoute(game, thirdSegment)) {
       return redirectTo(request, `/${locale}/${game}`);
     }
   }

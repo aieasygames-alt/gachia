@@ -70,11 +70,15 @@ function formatDateLabel(date: string, locale: SupportedLocale): string {
   if (!date || date === 'permanent') {
     return locale === 'zh' ? '永久有效' : locale === 'ja' ? '恒常' : 'Permanent';
   }
+  const parsedDate = date.includes('T') ? new Date(date) : new Date(`${date}T00:00:00Z`);
+  if (Number.isNaN(parsedDate.getTime())) {
+    return date;
+  }
   return new Intl.DateTimeFormat(locale === 'zh' ? 'zh-CN' : locale, {
     month: 'short',
     day: 'numeric',
     year: 'numeric',
-  }).format(new Date(`${date}T00:00:00Z`));
+  }).format(parsedDate);
 }
 
 export async function generateMetadata({
