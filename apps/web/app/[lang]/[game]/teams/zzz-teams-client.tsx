@@ -7,6 +7,7 @@ import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import { GAMES } from '@gachia/core';
 
 import { NextStepStrip, type NextStepLink } from '@/components/wiki/next-step-strip';
+import { Link } from '@/lib/i18n/navigation';
 
 import {
   zzzCharacters,
@@ -191,6 +192,10 @@ export function ZzzTeams({ locale }: { locale: SupportedLocale }) {
   };
   const teamRows = useMemo(() => teamsWithComps.flatMap((char) => char.teamComps.map((team) => ({ char, team, missing: team.members.filter((id) => !owned.has(id)) }))), [owned, teamsWithComps]);
   const displayedRows = showOwnedOnly ? teamRows.filter((row) => row.missing.length === 0) : teamRows;
+  const rosterGapIds = useMemo(() => [...new Set(teamRows.flatMap((row) => row.missing))], [teamRows]);
+  useEffect(() => {
+    try { localStorage.setItem('gachia-zzz-roster-gaps', JSON.stringify(rosterGapIds)); } catch { /* local storage is optional */ }
+  }, [rosterGapIds]);
   const zzzIntentLinks = [
     {
       href: '/zzz/guides/team-building-guide',
@@ -242,6 +247,7 @@ export function ZzzTeams({ locale }: { locale: SupportedLocale }) {
         </div>
         <div className="flex max-h-40 flex-wrap gap-2 overflow-y-auto pr-1">{zzzCharacters.map((character) => <button key={character.id} type="button" onClick={() => toggleOwned(character.id)} className={`flex items-center gap-1.5 border px-2 py-1.5 text-xs ${owned.has(character.id) ? 'border-game-primary bg-game-primary/10 text-game-text' : 'border-game-border bg-game-surface-alt text-game-text-muted'}`}><CharacterAvatar src={getZzzCharacterImage(character)} alt="" element={character.attribute} className="h-5 w-5 object-cover" />{getZzzCharacterName(character, locale)}</button>)}</div>
         <p className="mt-3 text-xs text-game-text-muted">{t(locale, `已选 ${owned.size} 位代理人；${teamRows.filter((row) => row.missing.length === 0).length} 支推荐队可以直接组出。`, `${owned.size} agents selected; ${teamRows.filter((row) => row.missing.length === 0).length} recommended teams are buildable now.`, `${owned.size}人選択中。${teamRows.filter((row) => row.missing.length === 0).length}編成を今組めます。`)}</p>
+        {rosterGapIds.length > 0 && <div className="mt-3 flex flex-wrap items-center gap-2 border-t border-game-border pt-3"><span className="text-xs text-game-text-muted">{t(locale, '候选补位已同步到抽卡规划器：', 'Roster-gap candidates are synced to Pull Planner:', '不足候補をガチャ計画へ同期しました:')}</span>{rosterGapIds.slice(0, 5).map((id) => { const character = getZzzCharacterById(id); return character ? <span key={id} className="border border-game-border bg-game-surface-alt px-2 py-1 text-xs text-game-primary">{getZzzCharacterName(character, locale)}</span> : null; })}<Link href="/zzz/gacha" className="text-xs font-semibold text-game-primary hover:text-game-accent">{t(locale, '规划抽卡 →', 'Plan pulls →', 'ガチャを計画 →')}</Link></div>}
       </section>
 
       <div className="space-y-4">
