@@ -44,7 +44,7 @@ jobs:
           set -euo pipefail
           : "${GENSHIN_STAGING_ORIGIN:?GENSHIN_STAGING_ORIGIN was not exported by the deploy step}"
           tail_log=/tmp/genshin-worker-tail.log
-          pnpm --dir apps/game-genshin exec wrangler tail gachia-game-genshin-staging --config wrangler.jsonc --format pretty --status error > "$tail_log" 2>&1 &
+          pnpm --dir apps/game-genshin exec wrangler tail gachia-game-genshin-staging --config wrangler.jsonc --format pretty > "$tail_log" 2>&1 &
           tail_pid=$!
           cleanup() {
             kill "$tail_pid" 2>/dev/null || true
@@ -53,7 +53,12 @@ jobs:
             cat "$tail_log" || true
           }
           trap cleanup EXIT
-          sleep 5
+          for attempt in 1 2 3 4 5; do
+            if grep -q 'Connected to gachia-game-genshin-staging' "$tail_log"; then
+              break
+            fi
+            sleep 1
+          done
           fetch() {
             local path="$1"
             local name="${path//\//_}"
