@@ -25,7 +25,7 @@
   },
   "vars": {
     "NEXT_PUBLIC_APP_URL": "https://gachia.com",
-    "GENSHIN_DEPLOYMENT_MODE": "preview"
+    "GENSHIN_DEPLOYMENT_MODE": "production"
   },
   "env": {
     "staging": {
