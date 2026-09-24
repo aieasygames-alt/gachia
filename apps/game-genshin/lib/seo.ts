@@ -114,17 +114,22 @@ export function genshinMetadata(locale: SupportedLocale, path: string, title: st
   const baseline = mainMetaBaseline[path]?.[locale];
   const resolvedTitle = baseline?.title ?? title;
   const resolvedDescription = baseline?.description ?? description;
+  const legacyHubCanonical = path === 'gacha';
+  const legacyNoAlternates = path === 'redeem-codes';
+  const legacyNoJapaneseAlternate = path === 'guides/banner-schedule-guide';
+  const canonicalUrl = legacyHubCanonical ? `${BASE_URL}/${locale}/genshin` : url;
+  const languages = legacyNoAlternates ? undefined : {
+    'zh-Hans': `${BASE_URL}/zh/genshin${normalized}`,
+    en: `${BASE_URL}/en/genshin${normalized}`,
+    ...(legacyNoJapaneseAlternate ? {} : { ja: `${BASE_URL}/ja/genshin${normalized}` }),
+    'x-default': `${BASE_URL}/zh/genshin${normalized}`,
+  };
   return {
     title: resolvedTitle,
     description: resolvedDescription,
     alternates: {
-      canonical: url,
-      languages: {
-        'zh-Hans': `${BASE_URL}/zh/genshin${normalized}`,
-        en: `${BASE_URL}/en/genshin${normalized}`,
-        ja: `${BASE_URL}/ja/genshin${normalized}`,
-        'x-default': `${BASE_URL}/zh/genshin${normalized}`,
-      },
+      canonical: canonicalUrl,
+      ...(languages ? { languages } : {}),
     },
     openGraph: { title: resolvedTitle, description: resolvedDescription, url, siteName: 'Gachia', type: 'website', images: [{ url: `${BASE_URL}/images/og/genshin.webp`, width: 1200, height: 630, alt: resolvedTitle }] },
     twitter: { card: 'summary_large_image', title: resolvedTitle, description: resolvedDescription, images: [`${BASE_URL}/images/og/genshin.webp`] },
