@@ -59,7 +59,7 @@ const mainMetaBaseline: Record<string, Record<SupportedLocale, MetaCopy>> = {
   teams: {
     zh: { title: '原神 配队模拟器', description: '原神 角色配队模拟器，查看最佳阵容搭配' },
     en: { title: 'Genshin Impact Team Builder', description: 'Genshin Impact team builder - best team compositions and synergies' },
-    ja: { title: '原神 パーティ編成', description: '原神 パーティ编成シミュレーター、おすすめ編成' },
+    ja: { title: '原神 パーティ編成', description: '原神 パーティ編成シミュレーター、おすすめ編成' },
   },
   'tier-list': {
     zh: { title: '原神角色强度排行 — SS/S/A/B分级 | 攻略', description: '原神角色强度参考，按深渊、大世界与队伍依赖整理 SS 至 B 分级。结构化数据最后更新于 2026-06-28，抽卡或养成前请核对当前版本与配队条件。，同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。' },
