@@ -7,6 +7,7 @@ import { useState, useMemo, useEffect, type ReactNode } from 'react';
 import { GAMES } from '@gachia/core';
 
 import { NextStepStrip, type NextStepLink } from '@/components/wiki/next-step-strip';
+import { Link } from '@/lib/i18n/navigation';
 
 import {
   zzzCharacters,
@@ -231,11 +232,19 @@ function BuildInfoRow({ label, value }: { label: string; value: string }) {
 export function ZzzBuildRecommender({ locale }: { locale: SupportedLocale }) {
   const [selectedChar, setSelectedChar] = useState<ZzzCharacter | null>(null);
   const [elementFilter, setElementFilter] = useState<string>('all');
+  const [progressionQueue, setProgressionQueue] = useState<string[]>([]);
+
+  useEffect(() => {
+    try { setProgressionQueue(JSON.parse(localStorage.getItem('gachia-zzz-progression-queue') ?? '[]')); } catch { /* local storage is optional */ }
+  }, []);
 
   const filtered = useMemo(() => {
     if (elementFilter === 'all') return zzzCharacters;
     return zzzCharacters.filter((c) => c.attribute === elementFilter);
   }, [elementFilter]);
+  const queuedAgents = progressionQueue
+    .map((id) => zzzCharacters.find((character) => character.id === id))
+    .filter((character): character is NonNullable<typeof character> => character !== undefined);
 
   return (
     <div>
@@ -247,6 +256,7 @@ export function ZzzBuildRecommender({ locale }: { locale: SupportedLocale }) {
           <p><strong className="text-game-text">{t(locale, '不要为了毕业词条停滞', 'Do not stall for perfect rolls', '理想厳選で止まらない')}</strong><br />{t(locale, '主词条正确、套装生效且有两条有效副词条时即可先升级；把资源优先给两队核心。', 'Upgrade once main stats and set are right with two useful subs; prioritize cores across two teams.', '主属性・セット・有効サブ2本が揃えば先に育成し、二編成の核を優先します。')}</p>
         </div>
       </section>
+      {queuedAgents.length > 0 && <section className="mb-6 border border-game-border bg-game-surface p-4"><h2 className="text-sm font-semibold text-game-text">{t(locale, '从养成队列继续配装', 'Continue builds from progression queue', '育成キューからビルドを続ける')}</h2><p className="mt-1 text-xs text-game-text-muted">{t(locale, '先选择当前养成目标，再确认音擎、驱动盘和词条方向。', 'Pick your active progression target, then confirm W-Engine, Drive Disc, and stat direction.', '現在の育成目標を選び、Wエンジン、ディスク、ステータス方針を確認します。')}</p><div className="mt-3 flex flex-wrap gap-2">{queuedAgents.map((character) => <button key={character.id} type="button" onClick={() => setSelectedChar(character)} className={`border px-3 py-1.5 text-xs ${selectedChar?.id === character.id ? 'border-game-primary bg-game-primary/10 text-game-text' : 'border-game-border bg-game-surface-alt text-game-text-muted hover:border-game-primary'}`}>{getZzzCharacterName(character, locale)}</button>)}</div></section>}
       <div className="mb-6">
         <h2 className="mb-2 text-lg font-semibold text-game-primary">
           {t(locale, '选择代理人查看推荐配装', 'Select an agent to view recommended build', 'エージェントを選択してビルドを確認')}
@@ -302,6 +312,7 @@ export function ZzzBuildRecommender({ locale }: { locale: SupportedLocale }) {
                 <BuildInfoRow label={t(locale, '主属性', 'Main Stats', 'メインステータス')} value={Object.values(locale === 'zh' ? selectedChar.recommendedBuild.mainStats : selectedChar.recommendedBuild.mainStatsEn).join(' / ')} />
                 <BuildInfoRow label={t(locale, '副属性', 'Sub Stats', 'サブステータス')} value={(locale === 'zh' ? selectedChar.recommendedBuild.subStatPriority : selectedChar.recommendedBuild.subStatPriorityEn).join(' > ')} />
               </div>
+              <div className="mt-4 flex flex-wrap gap-3 border-t border-game-border pt-3 text-sm"><Link href="/zzz/weapons" className="font-semibold text-game-primary hover:text-game-accent">{t(locale, '核对音擎替代方案', 'Check W-Engine alternatives', 'Wエンジン代替を確認')}</Link><Link href="/zzz/drive-discs" className="font-semibold text-game-primary hover:text-game-accent">{t(locale, '评估驱动盘词条', 'Evaluate Drive Disc stats', 'ディスク詞条を評価')}</Link></div>
             </div>
           ) : (
             <div className="flex h-48 items-center justify-center rounded-lg border border-dashed border-game-border text-sm text-game-text-muted">
