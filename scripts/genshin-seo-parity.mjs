@@ -101,7 +101,9 @@ async function inspectPage(path) {
     previewNoindex: !previewOnly || /noindex/i.test(staging.xRobotsTag) || /noindex/i.test(staging.robotsMeta),
     namespacedAssets: staging.assets?.length > 0,
     assetsReachable: staging.assets?.length > 0 && assetChecks.every((asset) => asset.status === 200 && /(?:javascript|css|font|image)/i.test(asset.contentType)),
-    structuredDataPresent: previewOnly || staging.jsonLdCount > 0,
+    // In production parity mode, Main is the source of truth: some legacy pages
+    // deliberately have no JSON-LD, so require the Worker to match that output.
+    structuredDataPresent: previewOnly || !bothAvailable || production.jsonLdCount === 0 || staging.jsonLdCount > 0,
     contentFloor: !bothAvailable || staging.bodyTextLength >= Math.min(400, production.bodyTextLength),
     internalLinkFloor: !bothAvailable || staging.genshinInternalLinkCount >= Math.min(6, production.genshinInternalLinkCount),
     sameStatus: !strictParity || !bothAvailable || staging.status === production.status,
