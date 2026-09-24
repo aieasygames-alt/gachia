@@ -3,8 +3,10 @@ import type { GameId, SupportedLocale } from '@gachia/core';
 import { getWeaponListData, sortWeaponRanks } from '@/lib/game-data/weapons';
 import { Link } from '@/lib/i18n/navigation';
 import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
+import dynamic from 'next/dynamic';
 
 const BASE_URL = 'https://gachia.com';
+const ZzzQueuedWeapons = dynamic(() => import('./zzz-queued-weapons').then((mod) => mod.ZzzQueuedWeapons));
 
 const WEAPON_DESC: Record<string, Record<string, string>> = {
   genshin: { zh: '原神全武器图鉴，覆盖五星、四星、三星武器的属性、被动效果、适配角色和获取方式，方便你快速筛选毕业武器。', en: 'Complete Genshin Impact weapon list with stats, passive effects, rarity tiers, recommended users, and acquisition methods for faster build planning.', ja: '原神全武器図鑑。ステータス、武器スキル、適性キャラ、入手方法をまとめて、武器選びをしやすくします。' },
@@ -316,6 +318,8 @@ function WeaponListPage({ gameId, locale, weapons }: { gameId: GameId; locale: S
       <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
         {getWeaponIntro(gameId, locale)}
       </p>
+
+      {gameId === 'zzz' && <ZzzQueuedWeapons locale={locale} />}
 
       {sections.map(({ key, entries }) => {
         const title = gameId === 'skjh' ? localTypeLabel(key, locale) : key;
