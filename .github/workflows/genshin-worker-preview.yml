@@ -43,10 +43,10 @@ jobs:
         run: |
           set -euo pipefail
           : "${GENSHIN_STAGING_ORIGIN:?GENSHIN_STAGING_ORIGIN was not exported by the deploy step}"
-          curl --fail --silent --show-error "$GENSHIN_STAGING_ORIGIN/robots.txt" | rg 'Disallow: /'
+          curl --fail --silent --show-error "$GENSHIN_STAGING_ORIGIN/robots.txt" | grep -q 'Disallow: /'
           for path in zh/genshin zh/genshin/characters/hu-tao; do
             headers=$(curl --fail --silent --show-error --dump-header - --output /dev/null "$GENSHIN_STAGING_ORIGIN/$path")
-            printf '%s\n' "$headers" | rg -i '^x-robots-tag:.*noindex'
+            printf '%s\n' "$headers" | grep -qi '^x-robots-tag:.*noindex'
           done
           curl --fail --silent --show-error "$GENSHIN_STAGING_ORIGIN/sitemap.xml" > /dev/null
       - name: Run Genshin SEO parity

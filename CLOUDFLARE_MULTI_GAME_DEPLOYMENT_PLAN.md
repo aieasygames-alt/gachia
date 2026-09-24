@@ -1214,6 +1214,7 @@ Genshin Router 白名单必须精确覆盖以下三类路径，未知游戏路�
 | 2026-09-24 | 阶段 2：Router 默认关闭接入 | 已完成（未发布） | `pnpm generate:router-config && pnpm --filter @gachia/router type-check && pnpm --filter @gachia/router test` | 已加入精确 Genshin 页面/资源/sitemap 白名单、`GENSHIN_SITE`、`GENSHIN_ENABLED=false` 和独立 Cookie；17 项 Router 测试通过，无 Cookie 或开关关闭时继续由 Main Worker 响应 |
 | 2026-09-24 | 阶段 3：本地预发布排查 | 进行中 | Node standalone SSR、OpenNext/Wrangler preview | Node SSR 的代表页 SEO metadata 正常；但当前本地 OpenNext preview 对页面路由返回 500/404，不能作为切流依据。已加入 preview `X-Robots-Tag` 和 `pnpm --filter @gachia/game-genshin seo:parity`，必须在受保护 Cloudflare staging Worker 完成 parity 后才可继续 |
 | 2026-09-24 | 阶段 3：远端 preview 门禁 | 已实现，待手动触发 | `.github/workflows/genshin-worker-preview.yml` | 仅手动部署 `gachia-game-genshin-staging`，强制 `robots.txt` 禁止抓取、页面 `X-Robots-Tag: noindex` 和实际 hash 资源 200，再运行 60 URL parity；不发布 Router、不修改生产开关 |
+| 2026-09-24 | 阶段 3：首次远端 preview 执行 | 阻断（CI 工具修复中） | GitHub Actions run `35976409089` | staging Worker 已成功部署至 `gachia-game-genshin-staging.aieasygames.workers.dev`，但检查步骤依赖 runner 未安装的 `rg`，在 Worker 响应验证前失败；已改用系统 `grep`，生产 Router 仍关闭 |
 | 待填写 | 阶段 1 | 未开始 |  |  |
 | 待填写 | 阶段 2 | 未开始 |  |  |
 | 待填写 | 阶段 3 | 未开始 |  |  |
