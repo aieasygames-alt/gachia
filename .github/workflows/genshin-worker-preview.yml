@@ -44,7 +44,7 @@ jobs:
           set -euo pipefail
           : "${GENSHIN_STAGING_ORIGIN:?GENSHIN_STAGING_ORIGIN was not exported by the deploy step}"
           tail_log=/tmp/genshin-worker-tail.log
-          pnpm --dir apps/game-genshin exec wrangler tail gachia-game-genshin-staging --env staging --format pretty --status error > "$tail_log" 2>&1 &
+          pnpm --dir apps/game-genshin exec wrangler tail gachia-game-genshin-staging --config wrangler.jsonc --format pretty --status error > "$tail_log" 2>&1 &
           tail_pid=$!
           cleanup() {
             kill "$tail_pid" 2>/dev/null || true
@@ -63,15 +63,19 @@ jobs:
             cat "/tmp/${name}.headers" || true
             head -c 2000 "/tmp/${name}.body" || true
             echo
-            test "$status" = 200
+            if [ "$status" != 200 ]; then
+              failures=1
+            fi
           }
+          failures=0
           fetch robots.txt
-          grep -q 'Disallow: /' /tmp/robots.txt.body
+          grep -q 'Disallow: /' /tmp/robots.txt.body || failures=1
           for path in zh/genshin zh/genshin/characters/hu-tao; do
             fetch "$path"
-            grep -qi '^x-robots-tag:.*noindex' "/tmp/${path//\//_}.headers"
+            grep -qi '^x-robots-tag:.*noindex' "/tmp/${path//\//_}.headers" || failures=1
           done
           fetch sitemap.xml
+          test "$failures" = 0
       - name: Run Genshin SEO parity
         env:
           GENSHIN_STAGING_ORIGIN: ${{ env.GENSHIN_STAGING_ORIGIN }}
