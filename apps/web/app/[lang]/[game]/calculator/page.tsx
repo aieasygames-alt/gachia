@@ -9,6 +9,7 @@ const CALC_DESC: Record<string, Record<string, string>> = {
   genshin: { zh: '原神角色养成计算器，计算升级、突破所需材料数量，支持材料库存管理', en: 'Genshin Impact character upgrade calculator — compute ascension materials, level-up costs, and track your inventory', ja: '原神キャラ育成計算機、昇格素材・レベルアップ必要数を計算、在庫管理対応' },
   starrail: { zh: '崩坏：星穹铁道角色养成计算器，计算升级、突破所需材料数量', en: 'Honkai: Star Rail character upgrade calculator — compute ascension and trace materials needed', ja: 'スターレイルキャラ育成計算機、昇格素材・軌跡素材の必要数を計算' },
   wuwa: { zh: '鸣潮角色养成计算器，计算升级、突破所需材料数量，支持材料库存管理', en: 'Wuthering Waves character upgrade calculator — compute ascension materials and track your inventory', ja: '鳴潮キャラ育成計算機、昇格素材必要数を計算、在庫管理対応' },
+  zzz: { zh: '绝区零代理人养成计划器，按等级、核心技、技能和音擎目标汇总材料、丁尼、库存缺口与体力刷取顺序。', en: 'Zenless Zone Zero agent planner for level, Core Skill, skills, and W-Engine targets with materials, Denny, inventory gaps, and farming order.', ja: 'ゼンレスゾーンゼロのエージェント育成計画。レベル、コアスキル、スキル、Wエンジン目標ごとの素材、ディニー、在庫不足、周回順を確認。' },
   sea: { zh: '遗忘之海黑券 6 选 1 推荐器与首周资源分配器，按队伍缺口、开荒目标、好金砖、周常打捞和外观预算规划路线。', en: 'Sea of Remnants Black Ticket selector and week-one resource planner for roster gaps, launch focus, Good Gold Bricks, weekly dredging, and outfit budget.', ja: 'Sea of Remnants 黒券6択おすすめと初週リソース配分。編成不足、開荒目標、好金砖、週課、衣装予算を整理します。' },
   skjh: { zh: '失控进化资源计算器，估算领地柜维护、石墙地基、金属门升级、抄家爆破、硫磺预算和自动化烧矿收益，适合开荒、建家和服务器周期规划。', en: 'Ashfall Evolution resource calculator for territory upkeep, stone foundations, metal doors, raid costs, sulfur budget, and automated smelting returns.', ja: '失控進化の資源計算機。領地維持、石壁、金属扉、レイド、硫黄、自動精錬を見積もります。' },
 };

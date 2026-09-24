@@ -11,6 +11,9 @@ import {
 import { getNteCharacterName, getNteCharacterById } from '@gachia/data/games/nte/characters';
 import { Link } from '@/lib/i18n/navigation';
 import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
+import dynamic from 'next/dynamic';
+
+const ZzzPullPlanner = dynamic(() => import('./zzz-pull-planner').then((mod) => mod.ZzzPullPlanner));
 
 const BASE_URL = 'https://gachia.com';
 
@@ -20,8 +23,13 @@ export async function generateMetadata({
   params: Promise<{ lang: string; game: string }>;
 }) {
   const { lang, game } = await params;
-  if (game !== 'nte') return { robots: { index: false, follow: false } };
+  if (game !== 'nte' && game !== 'zzz') return { robots: { index: false, follow: false } };
   const locale = lang as SupportedLocale;
+  if (game === 'zzz') {
+    const title = locale === 'zh' ? '绝区零菲林规划器｜保底、资源缺口与抽取建议' : locale === 'ja' ? 'ZZZ ポリクローム計画｜天井・資源不足・ガチャ判断' : 'ZZZ Pull Planner — Pity, Resource Gaps and Pull Advice';
+    const description = ensureMetaLength(locale === 'zh' ? '绝区零菲林规划器：输入菲林、加密母带、保底状态和音擎目标，估算最坏情况抽数、资源缺口与抽取优先级。' : locale === 'ja' ? 'ZZZのポリクローム計画。所持数、暗号化マスターテープ、天井、Wエンジン目標から最悪ケースと不足を確認。' : 'ZZZ pull planner: enter Polychromes, Encrypted Master Tapes, pity, guarantee, and W-Engine goals to estimate worst-case pulls and resource gaps.', locale);
+    return { title, description, alternates: buildLocalizedAlternates(locale, (entry) => `/${entry}/zzz/gacha`, LOCALES) };
+  }
   const gameName = GAMES.nte.name[locale];
   const title = locale === 'zh'
     ? `异环祈愿系统 — 概率、保底机制详解`
@@ -60,6 +68,8 @@ export default async function GachaPage({
   const gameId = game as GameId;
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];
+
+  if (gameId === 'zzz') return <ZzzPullPlanner locale={locale} />;
 
   if (gameId !== 'nte') {
     return (

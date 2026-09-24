@@ -1417,5 +1417,43 @@
       }
     ],
     "date": "2026-08-31"
+  },
+  {
+    "id": "bangboo-team-selection-guide",
+    "title": "绝区零邦布怎么选：按队伍、核心被动与资源优先级判断",
+    "titleEn": "ZZZ Bangboo Guide: Choose by Team, Core Passive and Resources",
+    "titleJa": "ZZZ ボンプ選び：編成・追加能力・育成優先度で判断",
+    "category": "team-building",
+    "categoryZh": "配队攻略",
+    "categoryEn": "Team Building",
+    "categoryJa": "編成攻略",
+    "summary": "不要先问哪只邦布绝对最强。先确定主队的输出机制、同阵营/同属性条件、已有代理人和养成资源，再选择能稳定触发队伍收益的邦布。",
+    "summaryEn": "Do not start by asking which Bangboo is universally best. Identify your main team's damage plan, faction/attribute conditions, roster, and resources, then choose the option that consistently works in that team.",
+    "summaryJa": "最強のボンプを先に決めるのではなく、主力編成の火力軸、陣営・属性条件、所持エージェント、育成資源を確認し、安定して機能するボンプを選びます。",
+    "tags": ["Bangboo", "邦布", "team building", "core passive", "ZZZ teams"],
+    "content": "## 先看结论\n\n邦布不是脱离队伍的强度榜。先锁定你的第一队或第二队核心，再检查同阵营、同属性和异常/击破/强攻的协同条件。能稳定满足队伍条件的邦布，通常比单看面板或稀有度更有价值。\n\n## 三步选择法\n\n1. **先选队伍，不先选邦布**：用配队器勾选已拥有代理人，找出能完整组出的三人队。\n2. **检查额外能力是否能开**：邦布、代理人的同阵营或同属性条件必须按游戏内描述核对；没有满足条件时，不要把预期收益当作已经生效。\n3. **最后才看投资**：第一、第二队的核心角色、音擎和驱动盘未成型前，不要为了某只邦布牺牲更关键的养成节点。\n\n## 常见队伍判断\n\n- **强攻 + 击破 + 支援**：优先选择能帮助输出窗口、集怪或保持循环顺畅的邦布；队伍角色和驱动盘完成度通常比邦布等级更影响通关。\n- **异常队**：先确认异常积蓄、紊乱或队伍属性条件，再选能配合元素节奏的邦布。\n- **双队终局**：两队都缺核心角色或关键盘时，邦布投资应后置；先把每队至少一套可运行的角色、音擎与驱动盘做出来。\n\n## 不建议的做法\n\n- 只因为某只邦布稀有就跨队硬塞。\n- 把社区推荐当作所有队伍的固定答案。\n- 忽略版本、关卡和敌人差异。\n\n## 下一步\n\n先到配队器选择手头代理人，确认一队和二队的缺位；随后在角色配装页检查对应的音擎和驱动盘，再决定是否投入邦布资源。",
+    "contentEn": "## Quick answer\n\nBangboos are not a universal tier list. Lock your first or second team first, then check faction, attribute, and Attack/Stun/Anomaly synergy conditions. A Bangboo that consistently enables your actual team is usually more valuable than a higher-rarity option selected in isolation.\n\n## Three-step choice\n\n1. **Choose a team before a Bangboo.** Use the Team Builder to mark owned agents and find complete trios.\n2. **Verify additional abilities.** Check faction or attribute requirements against the in-game description. Do not count an effect as active when its condition is not met.\n3. **Invest last.** Until both endgame teams have working agents, W-Engines, and Drive Discs, Bangboo upgrades should not displace core progression.\n\n## Team heuristics\n\n- **Attack + Stun + Support:** favor reliable damage-window, grouping, or rotation support.\n- **Anomaly teams:** check buildup, Disorder, and attribute conditions before choosing.\n- **Two-team endgame:** finish a functional base for each team before investing heavily in Bangboos.\n\nUse the Team Builder, then open build recommendations for the agents you will actually field.",
+    "faq": [{"question":"Which Bangboo is best in ZZZ?","questionZh":"绝区零哪只邦布最强？","answer":"There is no universal answer. Choose the Bangboo whose conditions and role consistently fit your actual three-agent team.","answerZh":"没有脱离队伍的通用答案。优先选择能稳定满足你实际三人队条件和定位的邦布。"},{"question":"Should I level Bangboos before Drive Discs?","questionZh":"邦布要先于驱动盘培养吗？","answer":"Usually no. Correct Drive Disc sets, main stats, and core agent progression normally produce a larger first upgrade.","answerZh":"通常不建议。角色等级、核心技、正确套装和主词条一般比先升邦布带来更大的提升。"}],
+    "updatedAt": "2026-09-24",
+    "currentVersion": "ZZZ v3.3 watch / v3.2 recap; verify team conditions and live balance in game"
+  },
+  {
+    "id": "shiyu-defense-critical-frontier-guide",
+    "title": "绝区零式舆防卫与危局强袭配队：双队养成优先级与检查清单",
+    "titleEn": "ZZZ Shiyu Defense and Critical Frontier: Two-Team Priority Checklist",
+    "titleJa": "ZZZ 式輿防衛・危局強襲：二編成の育成優先度チェック",
+    "category": "endgame",
+    "categoryZh": "高难攻略",
+    "categoryEn": "Endgame",
+    "categoryJa": "高難度攻略",
+    "summary": "终局内容的核心不是照抄一套所谓毕业队，而是先让两支队伍各自具备主输出、循环支撑、正确驱动盘主词条和可执行的养成顺序。",
+    "summaryEn": "The core of endgame is not copying one perfect team. Build two squads with a carry, rotation support, correct Drive Disc main stats, and an executable progression order.",
+    "summaryJa": "高難度の鍵は理想編成をコピーすることではありません。二編成それぞれに主力、ローテーション支援、正しい主属性、実行可能な育成順を用意します。",
+    "tags": ["Shiyu Defense", "Critical Frontier", "式舆防卫", "危局强袭", "endgame", "two teams"],
+    "content": "## 先看结论\n\n式舆防卫和危局强袭最容易暴露的不是单个角色强度，而是双队资源分配失衡：一队毕业、二队缺主输出或关键循环位。先做两支能运行的队，再追单队上限。\n\n## 双队检查清单\n\n### 第一队\n\n- 有明确站场/输出核心。\n- 有能衔接失衡、异常或增益窗口的第二位。\n- 驱动盘套装和 4/5/6 号位主词条正确。\n- 主输出的音擎与关键技能优先完成。\n\n### 第二队\n\n- 不和第一队争同一个唯一核心。\n- 先解决角色缺位，再追专属音擎或极限副词条。\n- 用现有 A 级替代位跑通循环后，再决定下个卡池是否补洞。\n\n## 资源优先级\n\n1. 两队主输出等级、核心技和关键技能。\n2. 正确的音擎与驱动盘主词条。\n3. 能开启队伍协同的击破、支援或异常组件。\n4. 驱动盘副词条、邦布等级和专属音擎的上限投资。\n\n## 实战复盘方式\n\n打不过时不要立刻换角色。先记下是输出窗口不够、失衡太慢、生存中断，还是第二队资源太薄。然后只改一个变量：角色站位/循环、主词条、一个技能等级或一个队伍缺位。这样才能判断问题来自操作、配装还是角色池。\n\n## 下一步\n\n用配队器标记自己的代理人，先筛出两支完整队；再用养成计划器算第一和第二队核心的材料缺口。需要抽取新角色时，最后再回到菲林规划器看最坏情况预算。",
+    "contentEn": "## Quick answer\n\nShiyu Defense and Critical Frontier expose uneven two-team investment more often than a single weak character. Build two functional squads before chasing the ceiling of one squad.\n\n## Two-team checklist\n\n### Team one\n\n- A clear on-field or damage core.\n- A second agent that supports Stun, Anomaly, or buff windows.\n- Correct Drive Disc set and slots 4/5/6 main stats.\n- Main damage agent's W-Engine and key skills prioritized.\n\n### Team two\n\n- Does not depend on the same unique core as team one.\n- Fix role gaps before signature W-Engines or perfect substats.\n- Use working A-Rank alternatives before deciding whether a future banner must fill a gap.\n\n## Upgrade order\n\n1. Main damage agents' levels, Core Skills, and key skills across both teams.\n2. Correct W-Engines and Drive Disc main stats.\n3. Stun, Support, or Anomaly pieces that activate team synergy.\n4. Substats, Bangboo levels, and signature-weapon ceiling investment.\n\nUse Team Builder to find two complete teams, the Progression Planner to calculate their materials, then the Pull Planner only when a remaining role gap justifies a banner target.",
+    "faq": [{"question":"Should I finish one team before building a second in ZZZ?","questionZh":"绝区零要先毕业一队再培养二队吗？","answer":"For two-team endgame, build two functional teams first. Correct roles, main stats, and key skills on both teams usually beat perfect substats on one team.","answerZh":"面对双队终局，先让两队都能运行。两队正确的角色定位、主词条和关键技能通常优于一队极限副词条。"},{"question":"What should I change when a stage is too slow?","questionZh":"关卡时间不够时先改什么？","answer":"Identify whether the problem is damage window, Stun/Anomaly buildup, survivability, or an underbuilt second team, then change one variable at a time.","answerZh":"先定位是输出窗口、失衡/异常积蓄、生存，还是二队养成不足，再一次只改一个变量。"}],
+    "updatedAt": "2026-09-24",
+    "currentVersion": "ZZZ v3.3 watch / v3.2 recap; validate mode rules, enemy rotations, and live balance in game"
   }
 ]

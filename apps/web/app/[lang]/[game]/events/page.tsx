@@ -113,6 +113,8 @@ export default async function RocoEventsPage({
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
 
+  if (gameId === 'zzz') return <ZzzEventsPage locale={locale} />;
+
   if (!isRocoEventGame(gameId)) return null;
 
   const events = ROCO_EVENTS[gameId].map((event) => ({
@@ -205,4 +207,14 @@ export default async function RocoEventsPage({
       </section>
     </div>
   );
+}
+
+function ZzzEventsPage({ locale }: { locale: SupportedLocale }) {
+  const entries = [
+    { id: 'version-watch', status: 'watch', title: { zh: '3.3 前瞻与下期卡池观察', en: 'v3.3 preview and next-banner watch', ja: 'v3.3前瞻と次回バナー注目' }, body: { zh: '尚未确认的角色、时间和奖励只保留观察状态；出现官方公告后再更新为具体活动。', en: 'Unconfirmed characters, dates, and rewards remain watch-only until an official notice is published.', ja: '未確認のキャラ、日程、報酬は公式告知まで注目状態として扱います。' }, href: '/zzz/version' },
+    { id: 'codes', status: 'live', title: { zh: '兑换码与邮件检查', en: 'Codes and mail check', ja: 'コードとメール確認' }, body: { zh: '兑换码页按 active、expired、unknown 分层；领取前先核对有效期和官方来源。', en: 'The code page separates active, expired, and unknown states. Verify expiry and official source before redeeming.', ja: 'コードページはactive、expired、unknownを分けます。交換前に期限と公式出典を確認してください。' }, href: '/zzz/redeem-codes' },
+    { id: 'resources', status: 'route', title: { zh: '菲林与养成资源安排', en: 'Polychrome and progression planning', ja: 'ポリクロームと育成資源計画' }, body: { zh: '用菲林规划器确认最坏情况资源缺口，再用养成计划器安排代理人、核心技、技能和音擎。', en: 'Use the pull planner for worst-case gaps, then the progression planner for agents, Core Skills, skills, and W-Engines.', ja: 'ガチャ計画で最悪ケースの不足を確認し、育成計画でエージェント、コア、スキル、Wエンジンを整理します。' }, href: '/zzz/gacha' },
+  ] as const;
+  const label = { live: { zh: '现在可做', en: 'Do now', ja: '今やる' }, watch: { zh: '等待官方确认', en: 'Await official confirmation', ja: '公式確認待ち' }, route: { zh: '资源路线', en: 'Resource route', ja: '資源ルート' } } as const;
+  return <div><h1 className="mb-2 text-2xl font-bold text-game-text">{locale === 'zh' ? '绝区零版本活动看板' : locale === 'ja' ? 'ZZZ バージョン・イベント看板' : 'ZZZ Version and Event Board'}</h1><p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">{locale === 'zh' ? '更新时间：2026-09-24。此页只整理可执行的版本事项；未有官方公告支撑的日期、角色和奖励不会伪装成已上线活动。' : locale === 'ja' ? '更新日：2026-09-24。実行できるバージョン事項だけを整理し、公式告知のない日程・キャラ・報酬は開催済みとして扱いません。' : 'Updated 2026-09-24. This board lists actionable version items; dates, characters, and rewards without official notices are not presented as live events.'}</p><div className="grid gap-4 md:grid-cols-3">{entries.map((entry) => <article key={entry.id} className="border border-game-border bg-game-surface p-4"><span className="text-xs font-semibold text-game-primary">{label[entry.status][locale]}</span><h2 className="mt-2 text-lg font-semibold text-game-text">{entry.title[locale]}</h2><p className="mt-2 text-sm leading-6 text-game-text-muted">{entry.body[locale]}</p><Link href={entry.href as '/'} className="mt-4 inline-block text-sm font-semibold text-game-primary hover:text-game-accent">{locale === 'zh' ? '打开对应入口 →' : locale === 'ja' ? '入口を開く →' : 'Open related page →'}</Link></article>)}</div></div>;
 }

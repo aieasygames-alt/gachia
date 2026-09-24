@@ -2,7 +2,7 @@
 
 
 
-import { useState, useMemo, type ReactNode } from 'react';
+import { useEffect, useMemo, useState, type ReactNode } from 'react';
 
 import { GAMES } from '@gachia/core';
 
@@ -175,7 +175,22 @@ const ZZZ_TEAM_ELEMENT_COLORS: Record<string, string> = {
 
 
 export function ZzzTeams({ locale }: { locale: SupportedLocale }) {
+  const [owned, setOwned] = useState<Set<string>>(new Set());
+  const [showOwnedOnly, setShowOwnedOnly] = useState(false);
   const teamsWithComps = zzzCharacters.filter((c) => c.teamComps.length > 0);
+  useEffect(() => {
+    try { setOwned(new Set(JSON.parse(localStorage.getItem('gachia-zzz-owned-agents') ?? '[]'))); } catch { /* no stored roster */ }
+  }, []);
+  const toggleOwned = (id: string) => {
+    setOwned((current) => {
+      const next = new Set(current);
+      if (next.has(id)) next.delete(id); else next.add(id);
+      try { localStorage.setItem('gachia-zzz-owned-agents', JSON.stringify([...next])); } catch { /* storage may be unavailable */ }
+      return next;
+    });
+  };
+  const teamRows = useMemo(() => teamsWithComps.flatMap((char) => char.teamComps.map((team) => ({ char, team, missing: team.members.filter((id) => !owned.has(id)) }))), [owned, teamsWithComps]);
+  const displayedRows = showOwnedOnly ? teamRows.filter((row) => row.missing.length === 0) : teamRows;
   const zzzIntentLinks = [
     {
       href: '/zzz/guides/team-building-guide',
@@ -220,13 +235,18 @@ export function ZzzTeams({ locale }: { locale: SupportedLocale }) {
           ))}
         </div>
       </section>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {t(locale, `共 ${teamsWithComps.length} 位代理人的推荐配队`, `${teamsWithComps.length} agents with recommended teams`, `${teamsWithComps.length}エージェントのおすすめ編成`)}
-      </p>
+      <section className="mb-6 border border-game-border bg-game-surface p-4">
+        <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+          <div><h2 className="font-semibold text-game-text">{t(locale, '我的角色池', 'My roster', '自分の手持ち')}</h2><p className="mt-1 text-xs text-game-text-muted">{t(locale, '选择已拥有的代理人，本机保存；用于筛出可以直接组出的推荐队。', 'Select agents you own. Saved on this device and used to surface teams you can build now.', '所持エージェントを選択すると、この端末に保存して今組める編成を絞り込みます。')}</p></div>
+          <button type="button" onClick={() => setShowOwnedOnly((current) => !current)} className={`border px-3 py-2 text-sm ${showOwnedOnly ? 'border-game-primary bg-game-primary/10 text-game-primary' : 'border-game-border text-game-text-muted hover:border-game-primary'}`}>{showOwnedOnly ? t(locale, '显示全部推荐', 'Show all teams', 'すべて表示') : t(locale, '只看可直接组队', 'Only buildable teams', '今組める編成だけ')}</button>
+        </div>
+        <div className="flex max-h-40 flex-wrap gap-2 overflow-y-auto pr-1">{zzzCharacters.map((character) => <button key={character.id} type="button" onClick={() => toggleOwned(character.id)} className={`flex items-center gap-1.5 border px-2 py-1.5 text-xs ${owned.has(character.id) ? 'border-game-primary bg-game-primary/10 text-game-text' : 'border-game-border bg-game-surface-alt text-game-text-muted'}`}><CharacterAvatar src={getZzzCharacterImage(character)} alt="" element={character.attribute} className="h-5 w-5 object-cover" />{getZzzCharacterName(character, locale)}</button>)}</div>
+        <p className="mt-3 text-xs text-game-text-muted">{t(locale, `已选 ${owned.size} 位代理人；${teamRows.filter((row) => row.missing.length === 0).length} 支推荐队可以直接组出。`, `${owned.size} agents selected; ${teamRows.filter((row) => row.missing.length === 0).length} recommended teams are buildable now.`, `${owned.size}人選択中。${teamRows.filter((row) => row.missing.length === 0).length}編成を今組めます。`)}</p>
+      </section>
 
       <div className="space-y-4">
-        {teamsWithComps.map((char) => (
-          <div key={char.id} className="rounded-lg border border-game-border bg-game-surface p-4">
+        {displayedRows.map(({ char, team, missing }) => (
+          <div key={`${char.id}-${team.nameEn}`} className="rounded-lg border border-game-border bg-game-surface p-4">
             <div className="mb-3 flex items-center gap-3">
               <CharacterAvatar src={getZzzCharacterImage(char)} alt={getZzzCharacterName(char, locale)} element={char.attribute} className="h-10 w-10 rounded-lg object-cover" />
               <div>
@@ -235,8 +255,7 @@ export function ZzzTeams({ locale }: { locale: SupportedLocale }) {
               </div>
             </div>
             <div className="space-y-3">
-              {char.teamComps.map((team, i) => (
-                <div key={i} className="rounded border border-game-border/50 bg-game-surface-alt p-3">
+                <div className="rounded border border-game-border/50 bg-game-surface-alt p-3">
                   <div className="mb-1 flex items-center gap-2">
                     <span className="text-sm font-medium text-game-text">{locale === 'zh' ? team.name : team.nameEn}</span>
                   </div>
@@ -245,7 +264,7 @@ export function ZzzTeams({ locale }: { locale: SupportedLocale }) {
                     {team.members.map((memberId) => {
                       const member = getZzzCharacterById(memberId);
                       return member ? (
-                        <span key={memberId} className="flex items-center gap-1 rounded bg-game-surface px-2 py-0.5 text-xs text-game-primary">
+                        <span key={memberId} className={`flex items-center gap-1 rounded bg-game-surface px-2 py-0.5 text-xs ${owned.has(memberId) ? 'text-emerald-400' : 'text-game-primary'}`}>
                           {getZzzCharacterName(member, locale)}
                         </span>
                       ) : (
@@ -253,11 +272,12 @@ export function ZzzTeams({ locale }: { locale: SupportedLocale }) {
                       );
                     })}
                   </div>
+                  <p className={`mt-3 text-xs ${missing.length ? 'text-amber-300' : 'text-emerald-400'}`}>{missing.length ? t(locale, `还缺：${missing.map((id) => getZzzCharacterName(getZzzCharacterById(id)!, locale)).join('、')}`, `Missing: ${missing.map((id) => getZzzCharacterName(getZzzCharacterById(id)!, locale)).join(', ')}`, `不足：${missing.map((id) => getZzzCharacterName(getZzzCharacterById(id)!, locale)).join('、')}`) : t(locale, '角色齐全，可直接按此队伍继续看配装。', 'Roster complete. Open builds for the next step.', '手持ちが揃っています。次はビルドを確認。')}</p>
                 </div>
-              ))}
             </div>
           </div>
         ))}
+        {displayedRows.length === 0 && <div className="border border-dashed border-game-border p-6 text-sm text-game-text-muted">{t(locale, '当前角色池还没有完整匹配的推荐队。可关闭筛选查看缺失位。', 'No listed team matches your roster yet. Turn off the filter to see missing slots.', '手持ちだけで組める掲載編成はまだありません。フィルターを外して不足枠を確認してください。')}</div>}
       </div>
     </div>
   );

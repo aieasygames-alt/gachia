@@ -107,6 +107,7 @@ export const GAMES: Record<GameId, GameModule> = {
       compare: true,
       teams: true,
       'redeem-codes': true,
+      events: true,
     },
   },
   wuwa: {

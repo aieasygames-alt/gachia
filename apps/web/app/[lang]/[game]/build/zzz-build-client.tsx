@@ -239,6 +239,14 @@ export function ZzzBuildRecommender({ locale }: { locale: SupportedLocale }) {
 
   return (
     <div>
+      <section className="mb-6 border border-game-border bg-game-surface p-4">
+        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-game-primary">{t(locale, '驱动盘决策规则', 'Drive Disc decision rules', 'ドライブディスク判断')}</p>
+        <div className="mt-3 grid gap-4 text-sm leading-6 text-game-text-muted md:grid-cols-3">
+          <p><strong className="text-game-text">{t(locale, '先看套装，再看盘位', 'Set before slot', 'セットを先に')}</strong><br />{t(locale, '先锁定角色的 4 件套或 2+2，再根据其定位选择 4/5/6 号位主属性。', 'Lock the 4-piece or 2+2 set first, then choose slots 4/5/6 by role.', '4セットまたは2+2を決めてから、役割で4/5/6番の主属性を選びます。')}</p>
+          <p><strong className="text-game-text">{t(locale, '副词条只留有效项', 'Keep effective subs', '有効なサブだけ残す')}</strong><br />{t(locale, '双暴主 C 留双暴/攻击，异常位留异常精通/攻击，击破位优先冲击力；不合定位的多次强化通常不值得继续投。', 'Crit carries value CRIT/ATK, Anomaly values Mastery/ATK, and Stun values Impact. Repeated rolls outside role are usually not worth further investment.', '会心主力は会心/攻撃、異常は熟知/攻撃、撃破は衝撃力を優先。役割外への複数回強化は通常投資しません。')}</p>
+          <p><strong className="text-game-text">{t(locale, '不要为了毕业词条停滞', 'Do not stall for perfect rolls', '理想厳選で止まらない')}</strong><br />{t(locale, '主词条正确、套装生效且有两条有效副词条时即可先升级；把资源优先给两队核心。', 'Upgrade once main stats and set are right with two useful subs; prioritize cores across two teams.', '主属性・セット・有効サブ2本が揃えば先に育成し、二編成の核を優先します。')}</p>
+        </div>
+      </section>
       <div className="mb-6">
         <h2 className="mb-2 text-lg font-semibold text-game-primary">
           {t(locale, '选择代理人查看推荐配装', 'Select an agent to view recommended build', 'エージェントを選択してビルドを確認')}
