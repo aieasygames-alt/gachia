@@ -73,3 +73,21 @@ jobs:
           test -n "$asset"
           internal_asset="/_next/${asset#/_games/genshin/_next/}"
           curl --fail --silent --show-error --max-time 30 --output /dev/null "$GENSHIN_PRODUCTION_ORIGIN$internal_asset"
+      - name: Compare production Worker origin with the Main SEO baseline
+        env:
+          GENSHIN_STAGING_ORIGIN: ${{ env.GENSHIN_PRODUCTION_ORIGIN }}
+          GENSHIN_PRODUCTION_ORIGIN: https://gachia.com
+          GENSHIN_STRICT_PARITY: 'true'
+        run: pnpm --filter @gachia/game-genshin seo:parity
+      - name: Verify anonymous API boundaries remain on the main domain
+        env:
+          GENSHIN_API_ORIGIN: https://gachia.com
+        run: pnpm --filter @gachia/game-genshin api:boundary-smoke
+      - uses: actions/upload-artifact@v7.0.0
+        if: always()
+        with:
+          name: genshin-production-origin-reports
+          path: |
+            reports/genshin/seo-parity-*.json
+            reports/genshin/api-boundary-*.json
+          if-no-files-found: warn
