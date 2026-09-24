@@ -39,9 +39,13 @@ export function ZzzCalculator({ locale }: { locale: SupportedLocale }) {
   const [weaponId, setWeaponId] = useState('none');
   const [weaponLevel, setWeaponLevel] = useState(60);
   const [owned, setOwned] = useState<Record<string, number>>({});
+  const [ownedAgents, setOwnedAgents] = useState<Set<string>>(new Set());
+  const [queue, setQueue] = useState<string[]>([]);
 
   useEffect(() => {
     try { setOwned(JSON.parse(localStorage.getItem('gachia-zzz-owned-materials') ?? '{}')); } catch { /* ignore saved malformed data */ }
+    try { setOwnedAgents(new Set(JSON.parse(localStorage.getItem('gachia-zzz-owned-agents') ?? '[]'))); } catch { /* no saved roster */ }
+    try { setQueue(JSON.parse(localStorage.getItem('gachia-zzz-progression-queue') ?? '[]')); } catch { /* no saved queue */ }
   }, []);
 
   const selected = zzzCharacters.find((character) => character.id === selectedId) ?? zzzCharacters[0];
@@ -77,6 +81,15 @@ export function ZzzCalculator({ locale }: { locale: SupportedLocale }) {
     setOwned(next);
     try { localStorage.setItem('gachia-zzz-owned-materials', JSON.stringify(next)); } catch { /* storage may be unavailable */ }
   };
+  const toggleQueued = (id: string) => {
+    setQueue((current) => {
+      const next = current.includes(id) ? current.filter((item) => item !== id) : [...current, id];
+      try { localStorage.setItem('gachia-zzz-progression-queue', JSON.stringify(next)); } catch { /* local storage may be unavailable */ }
+      return next;
+    });
+  };
+  const queuedCharacters = queue.map((id) => zzzCharacters.find((character) => character.id === id)).filter(Boolean);
+  const rosterCharacters = zzzCharacters.filter((character) => ownedAgents.has(character.id));
 
   return (
     <div className="space-y-6">
@@ -88,6 +101,7 @@ export function ZzzCalculator({ locale }: { locale: SupportedLocale }) {
 
       <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_20rem]">
         <section className="border border-game-border bg-game-surface p-4">
+          {rosterCharacters.length > 0 && <div className="mb-5 border-b border-game-border pb-4"><div className="mb-2 flex items-center justify-between gap-3"><div><p className="text-sm font-medium text-game-text">{t(locale, '从我的角色池加入养成队列', 'Add from my roster', '手持ちから育成キューへ')}</p><p className="mt-1 text-xs text-game-text-muted">{t(locale, '角色池来自配队器，本机保存。点击角色即可切换计算目标，再用加号加入队列。', 'Roster comes from Team Builder and is saved on this device. Select an agent to calculate it, then add it to the queue.', '手持ちは編成ツールから読み込みます。エージェントを選択して計算し、プラスでキューに追加します。')}</p></div><span className="text-xs text-game-primary">{queue.length}</span></div><div className="flex flex-wrap gap-2">{rosterCharacters.map((character) => <div key={character.id} className="flex border border-game-border bg-game-surface-alt"><button type="button" onClick={() => setSelectedId(character.id)} className={`px-2 py-1.5 text-xs ${selectedId === character.id ? 'bg-game-primary/15 text-game-text' : 'text-game-text-muted'}`}>{getZzzCharacterName(character, locale)}</button><button type="button" aria-label={`Toggle ${getZzzCharacterName(character, locale)} progression queue`} onClick={() => toggleQueued(character.id)} className={`border-l border-game-border px-2 text-sm ${queue.includes(character.id) ? 'text-emerald-400' : 'text-game-primary'}`}>{queue.includes(character.id) ? '✓' : '+'}</button></div>)}</div></div>}
           <label className="mb-2 block text-sm font-medium text-game-text">{t(locale, '代理人', 'Agent', 'エージェント')}</label>
           <select value={selectedId} onChange={(event) => setSelectedId(event.target.value)} className="mb-5 w-full border border-game-border bg-game-surface-alt px-3 py-2 text-sm text-game-text outline-none focus:border-game-primary">
             {zzzCharacters.map((character) => <option key={character.id} value={character.id}>{getZzzCharacterName(character, locale)} · {character.specialtyEn}</option>)}
@@ -113,6 +127,8 @@ export function ZzzCalculator({ locale }: { locale: SupportedLocale }) {
           </div>
         </aside>
       </div>
+
+      {queuedCharacters.length > 0 && <section className="border border-game-border bg-game-surface p-4"><div className="mb-3 flex items-center justify-between gap-3"><div><h2 className="font-semibold text-game-text">{t(locale, '养成队列', 'Progression queue', '育成キュー')}</h2><p className="mt-1 text-xs text-game-text-muted">{t(locale, '按添加顺序处理。先完成队列前两名的等级、核心技和关键技能，再继续追求副词条或专属音擎。', 'Follow the added order. Finish level, Core Skill, and key skills for the first two before chasing substats or signature W-Engines.', '追加順に処理します。先頭2人のレベル、コア、主力スキルを整えてからサブや餅Wエンジンへ進みます。')}</p></div><button type="button" onClick={() => { setQueue([]); try { localStorage.setItem('gachia-zzz-progression-queue', '[]'); } catch {} }} className="border border-game-border px-3 py-2 text-xs text-game-text-muted hover:border-game-primary hover:text-game-primary">{t(locale, '清空', 'Clear', 'クリア')}</button></div><ol className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">{queuedCharacters.map((character, index) => character && <li key={character.id} className="flex items-center justify-between gap-3 border border-game-border bg-game-surface-alt px-3 py-2"><button type="button" onClick={() => setSelectedId(character.id)} className="text-left text-sm font-medium text-game-text"><span className="mr-2 text-game-primary">{index + 1}</span>{getZzzCharacterName(character, locale)}</button><button type="button" onClick={() => toggleQueued(character.id)} className="text-xs text-game-text-muted hover:text-game-primary">{t(locale, '移除', 'Remove', '削除')}</button></li>)}</ol></section>}
 
       <section className="border border-game-border bg-game-surface">
         <div className="border-b border-game-border px-4 py-3"><h2 className="font-semibold text-game-text">{t(locale, '材料清单与库存', 'Materials and inventory', '素材一覧と在庫')}</h2></div>
