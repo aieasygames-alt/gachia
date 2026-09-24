@@ -74,7 +74,7 @@ async function fetchSnapshot(origin, path) {
 async function checkAssets(origin, assets) {
   const results = await Promise.all(assets.slice(0, 12).map(async (asset) => {
     try {
-      const requestPath = previewOnly
+      const requestPath = previewOnly || workerOriginDirect
         ? `/_next/${asset.slice('/_games/genshin/_next/'.length)}`
         : asset;
       const response = await fetch(new URL(requestPath, origin), { signal: AbortSignal.timeout(timeoutMs) });
