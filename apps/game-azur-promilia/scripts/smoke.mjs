@@ -18,7 +18,6 @@ const paths = [
   '/zh/azur-promilia/guides/cbt-kibo-system-reference',
   '/zh/azur-promilia/kibo',
   '/zh/azur-promilia/world',
-  '/zh/azur-promilia/tier-list',
   '/zh/azur-promilia/redeem-codes',
   '/robots.txt',
   '/sitemap.xml',
