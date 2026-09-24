@@ -1210,15 +1210,14 @@ Genshin Router 白名单必须精确覆盖以下三类路径，未知游戏路�
 |---|---|---|---|---|
 | 2026-09-24 | 专项方案创建 | 已完成 | 本文第 27 章 | 未开始代码迁移；生产路由未变更 |
 | 2026-09-24 | 阶段 0：SEO 基线采集脚本 | 进行中 | `pnpm genshin:seo-baseline` | 已覆盖 60 个三语言代表 URL；解析器兼容 Next.js `hrefLang` 输出，现有两类页面的 hreflang 缺失已登记为迁移前待修复项 |
-| 2026-09-24 | 阶段 1：独立应用骨架 | 进行中 | `pnpm --filter @gachia/game-genshin verify:bundle` | 已建立 preview-only Worker、`/_games/genshin` 资源前缀、主域名 SEO metadata 和完整页面路由初版；地图进度、收藏、账号与私有数据仍留在 Main/API；gzip `1034.72 KiB`，未接入 Router |
+| 2026-09-24 | 阶段 1：独立应用骨架 | 进行中 | `pnpm --filter @gachia/game-genshin verify:bundle` | 已建立独立 Worker、`/_games/genshin` 资源前缀、主域名 SEO metadata 和完整页面路由初版；地图进度、收藏、账号与私有数据仍留在 Main/API；最新 dry-run gzip `1167.89 KiB`，未接入 Router |
 | 2026-09-24 | 阶段 2：Router 默认关闭接入 | 已完成（未发布） | `pnpm generate:router-config && pnpm --filter @gachia/router type-check && pnpm --filter @gachia/router test` | 已加入精确 Genshin 页面/资源/sitemap 白名单、`GENSHIN_SITE`、`GENSHIN_ENABLED=false` 和独立 Cookie；17 项 Router 测试通过，无 Cookie 或开关关闭时继续由 Main Worker 响应 |
-| 2026-09-24 | 阶段 3：本地预发布排查 | 进行中 | Node standalone SSR、OpenNext/Wrangler preview | Node SSR 的代表页 SEO metadata 正常；但当前本地 OpenNext preview 对页面路由返回 500/404，不能作为切流依据。已加入 preview `X-Robots-Tag` 和 `pnpm --filter @gachia/game-genshin seo:parity`，必须在受保护 Cloudflare staging Worker 完成 parity 后才可继续 |
-| 2026-09-24 | 阶段 3：远端 preview 门禁 | 已实现，待手动触发 | `.github/workflows/genshin-worker-preview.yml` | 仅手动部署 `gachia-game-genshin-staging`，强制 `robots.txt` 禁止抓取、页面 `X-Robots-Tag: noindex` 和实际 hash 资源 200，再运行 60 URL parity；不发布 Router、不修改生产开关 |
+| 2026-09-24 | 阶段 3：本地与远端预发布排查 | 已完成 | `pnpm --filter @gachia/game-genshin verify:bundle`、GitHub Actions run `35980547028` | 已修复 Worker 运行期 JSON 动态加载导致的 500；staging Worker 的 60 个代表 URL、实际 hash 资源、robots 禁抓取和 preview noindex metadata 均通过。未发布 Router、不修改生产开关 |
+| 2026-09-24 | 阶段 3：远端 preview 门禁 | 已完成 | `.github/workflows/genshin-worker-preview.yml`、GitHub Actions run `35980547028` | 仅手动部署 `gachia-game-genshin-staging`，检查 `robots.txt` 禁止抓取、页面 `meta robots=noindex`、实际 hash 资源 200，并运行 60 URL parity；不发布 Router、不修改生产开关 |
 | 2026-09-24 | 阶段 3：首次远端 preview 执行 | 阻断（CI 工具修复中） | GitHub Actions run `35976409089` | staging Worker 已成功部署至 `gachia-game-genshin-staging.aieasygames.workers.dev`，但检查步骤依赖 runner 未安装的 `rg`，在 Worker 响应验证前失败；已改用系统 `grep`，生产 Router 仍关闭 |
 | 2026-09-24 | 阶段 3：第二次远端 preview 执行 | 阻断（Worker 500，诊断增强中） | GitHub Actions run `35976787956` | staging Worker 上传成功，但 `robots.txt` 后的 Genshin 页面请求返回 HTTP 500；未运行 parity，生产 Router 保持关闭。已使 workflow 在后续失败时输出完整 headers/body，并补齐 preview HTML robots metadata |
-| 2026-09-24 | 阶段 3：Worker 500 诊断 | 进行中 | staging Worker observability | `robots.txt` 正常且返回 noindex；`/zh/genshin` 返回 Next.js 500 错误页。为获取 Cloudflare 运行期栈，已为 Genshin Worker 打开持久化 invocation logs；未调整生产 Router 或流量 |
-| 待填写 | 阶段 1 | 未开始 |  |  |
-| 待填写 | 阶段 2 | 未开始 |  |  |
-| 待填写 | 阶段 3 | 未开始 |  |  |
-| 待填写 | 阶段 4 | 未开始 |  |  |
-| 待填写 | 阶段 5 | 未开始 |  |  |
+| 2026-09-24 | 阶段 3：Worker 500 诊断与修复 | 已完成 | commits `b8b9767`、`1810a93` | 根因是 Genshin JSON 数据模块在 Cloudflare runtime 中使用 Node 路径动态加载；改为静态 JSON import 后，Worker SSR 正常。未调整生产 Router 或流量 |
+| 2026-09-24 | 阶段 3：生产 Worker origin 验证 | 已完成 | `.github/workflows/genshin-worker-production-origin.yml`、GitHub Actions run `35983948069` | 已部署独立生产 Worker 并验证 `robots.txt` 可抓取、首页、SSG 角色详情页、sitemap 与内部 hash 资源均为 200；生产 Router 断言 `GENSHIN_ENABLED=false`，无用户流量切换 |
+| 2026-09-24 | 阶段 3：生产 noindex 修复 | 已完成 | commits `9911285`、`07f02f0`、GitHub Actions run `35983948069` | SSG 页面曾因 Next 静态 header 冻结而返回 `X-Robots-Tag: noindex`；已移除构建期 header，并将 preview 防抓取改为 `robots.txt` 与 `meta robots=noindex`。生产 origin 的首页、SSG 详情页和 sitemap 已确认无 noindex |
+| 待完成 | 阶段 3/4：主域名 canary SEO/API 验证 | 切流阻断 | 主域名 cookie canary、完整 parity 与权限 smoke | 在 `GENSHIN_ENABLED=true` 且仅内部 Cookie 的 Router 发布前，必须先补齐完整基线内容/JSON-LD/hreflang 比对及登录、收藏、地图进度 API 边界验证；未通过前不得切流 |
+| 待完成 | 阶段 5：生产 canary 与全量切流 | 未开始 |  | 仅在所有切流硬门槛通过后执行 |
