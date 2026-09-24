@@ -1,16 +1,23 @@
 import { readFile } from 'node:fs/promises';
 
 const router = await readFile(new URL('../apps/router/wrangler.jsonc', import.meta.url), 'utf8');
-const expectedIndependent = ['nte', 'azur-promilia'];
+const generated = await readFile(new URL('../apps/router/src/generated-game-deployments.ts', import.meta.url), 'utf8');
+const deployments = [...generated.matchAll(/"id": "([^"]+)",[\s\S]*?"worker": "([^"]+)",[\s\S]*?"status": "(preview|live)",[\s\S]*?"binding": "([^"]+)",[\s\S]*?"enabled": "([^"]+)"/g)]
+  .map(([, id, worker, status, binding, enabled]) => ({ id, worker, status, binding, enabled }));
 const failures = [];
 
-for (const game of expectedIndependent) {
-  const binding = game === 'nte' ? 'NTE_SITE' : 'AZUR_PROMILIA_SITE';
-  const enabled = game === 'nte' ? null : 'AZUR_PROMILIA_ENABLED';
-  const worker = `gachia-game-${game}`;
-  if (!router.includes(`"binding": "${binding}"`) || !router.includes(`"service": "${worker}"`)) failures.push(`${game}: missing production service binding`);
-  if (enabled && !router.includes(`"${enabled}": "true"`)) failures.push(`${game}: production routing is not enabled`);
+for (const deployment of deployments) {
+  if (!router.includes(`"binding": "${deployment.binding}"`) || !router.includes(`"service": "${deployment.worker}"`)) {
+    failures.push(`${deployment.id}: missing production service binding`);
+  }
+  const enabledValue = router.match(new RegExp(`"${deployment.enabled}": "(true|false)"`))?.[1];
+  if (deployment.status === 'preview' && enabledValue !== 'false') {
+    failures.push(`${deployment.id}: preview deployment must explicitly set ${deployment.enabled}=false`);
+  }
+  if (deployment.status === 'live' && enabledValue === 'false') {
+    failures.push(`${deployment.id}: live deployment must not disable ${deployment.enabled}`);
+  }
 }
 
 if (failures.length) { console.error(failures.join('\n')); process.exit(1); }
-console.log(`Validated ${expectedIndependent.length} independent game deployments.`);
+console.log(`Validated ${deployments.length} Router game deployment(s).`);

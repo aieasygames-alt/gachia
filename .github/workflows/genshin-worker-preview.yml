@@ -1,0 +1,62 @@
+name: Genshin Worker Preview
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: genshin-worker-preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy-and-verify:
+    runs-on: ubuntu-latest
+    environment: staging
+    permissions:
+      contents: read
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v7.0.0
+      - uses: pnpm/action-setup@v6.0.9
+      - uses: actions/setup-node@v6.4.0
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm generate:router-config
+      - run: pnpm validate:game-deployments
+      - run: pnpm --filter @gachia/router type-check
+      - run: pnpm --filter @gachia/router test
+      - run: pnpm --filter @gachia/game-genshin type-check
+      - name: Deploy protected Genshin Worker preview
+        run: |
+          set -euo pipefail
+          pnpm --filter @gachia/game-genshin deploy:staging 2>&1 | tee /tmp/genshin-staging-deploy.log
+          origin=$(sed -nE 's#.*(https://[^[:space:]]+\.workers\.dev[^[:space:]]*).*#\1#p' /tmp/genshin-staging-deploy.log | tail -n 1)
+          if [ -z "$origin" ]; then
+            echo 'Unable to determine Genshin staging Worker URL from Wrangler output.' >&2
+            exit 1
+          fi
+          echo "GENSHIN_STAGING_ORIGIN=$origin" >> "$GITHUB_ENV"
+      - name: Verify preview crawl protection and basic routes
+        run: |
+          set -euo pipefail
+          : "${GENSHIN_STAGING_ORIGIN:?GENSHIN_STAGING_ORIGIN was not exported by the deploy step}"
+          curl --fail --silent --show-error "$GENSHIN_STAGING_ORIGIN/robots.txt" | rg 'Disallow: /'
+          for path in zh/genshin zh/genshin/characters/hu-tao; do
+            headers=$(curl --fail --silent --show-error --dump-header - --output /dev/null "$GENSHIN_STAGING_ORIGIN/$path")
+            printf '%s\n' "$headers" | rg -i '^x-robots-tag:.*noindex'
+          done
+          curl --fail --silent --show-error "$GENSHIN_STAGING_ORIGIN/sitemap.xml" > /dev/null
+      - name: Run Genshin SEO parity
+        env:
+          GENSHIN_STAGING_ORIGIN: ${{ env.GENSHIN_STAGING_ORIGIN }}
+          GENSHIN_PREVIEW_ONLY: 'true'
+        run: pnpm --filter @gachia/game-genshin seo:parity
+      - uses: actions/upload-artifact@v7.0.0
+        if: always()
+        with:
+          name: genshin-seo-parity-report
+          path: reports/genshin/seo-parity-*.json
+          if-no-files-found: warn

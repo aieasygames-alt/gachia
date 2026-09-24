@@ -1099,3 +1099,123 @@ Cloudflare 安全策略调整
 - [ ] Router 已准备可即时启用的回滚目标，回滚不改变 URL。
 - [ ] Cloudflare 日志、错误告警和 Search Console 基线已建立。
 - [ ] 迁移期间不同时合并不相关的大版本升级或数据库破坏性变更。
+
+## 27. Genshin 独立 Worker 实施专项（当前执行方案）
+
+### 27.1 目标、范围与状态
+
+**目标**：将 `https://gachia.com/{zh,en,ja}/genshin/*` 从 `gachia-main` 无跳转切换到 `gachia-game-genshin`。浏览器、Googlebot、外链和 Search Console 看到的 URL、HTTP 语义和可索引内容均保持不变。
+
+**当前状态（2026-09-24）**：`NTE`、`Azur Promilia` 已为 `live` 独立 Worker；`Genshin` 仍由 Main Worker 服务。本章是 Genshin 的唯一实施清单。每完成一项，应将对应状态更新为 `[x]`，同时在“执行记录”中写入日期、PR/提交、验证命令和结果；任何标记为“切流阻断”的项未通过，均不得修改生产 Router 分流。
+
+**迁移范围**：游戏首页、角色/武器/圣遗物/材料资料、攻略、兑换码、版本、抽卡、配装、队伍、强度榜、角色对比、伤害计算器、交互地图、下载页，以及 Genshin 专属 sitemap 和静态资源。
+
+**明确留在 Main / Platform API 的范围**：首页、`/{lang}/games`、跨游戏导航、日历、市场情报、全站 `robots.txt`、根 `/sitemap.xml`、`/api/auth/*`、`/api/favorites`、`/api/map/*`、`/api/shared-builds`、`/api/user-characters`。Genshin Worker 对这些能力只经同域 `/api/*` 调用；不得复制认证、D1 写入逻辑或跨游戏数据到游戏 Worker。
+
+| 阶段 | 状态 | 切流阻断 | 交付物 |
+|---|---|---:|---|
+| 0. 基线冻结与 URL 清单 | [~] 进行中 | 是 | 可复测的旧站 SEO/功能基线 |
+| 1. 创建隔离应用与数据边界 | [~] 进行中 | 是 | `apps/game-genshin` 可本地构建 |
+| 2. 路由、静态资源与 API 契约 | [x] 已完成（默认关闭） | 是 | Router 白名单、资源命名空间、API 兼容性 |
+| 3. Sitemap、SEO 与预发布验证 | [ ] 未开始 | 是 | SEO parity 报告与预发布冒烟结果 |
+| 4. CI、包体预算与可回滚发布 | [ ] 未开始 | 是 | 自动门禁、发布和回滚步骤 |
+| 5. 生产切流与观察 | [ ] 未开始 | 是 | 生产验收记录及 Search Console 观察 |
+
+### 27.2 阶段 0：冻结迁移基线（先做，禁止混入内容重写）
+
+- [ ] 从生产站抓取三种语言的首页、角色列表/详情、武器列表/详情、圣遗物、材料、攻略列表/详情、兑换码、版本、抽卡、配装、队伍、强度榜、对比、计算器、地图、下载页。
+- [ ] 每条样本保存：请求 URL、最终 URL、状态码、`title`、`meta description`、canonical、hreflang、robots/X-Robots-Tag、JSON-LD 类型与 `mainEntityOfPage`、正文文本长度、站内链接数、HTML 中的 CSS/JS/RSC/图片地址。
+- [ ] 选择每种 URL 至少一个真实详情 slug；不可用虚构或即将下线的版本 slug。建议覆盖 `characters/<id>`、`weapons/<id>`、`guides/<slug>`、`artifacts/<id>`、`items/<id>`。
+- [ ] 保存根 `/sitemap.xml`、现有 Genshin URL 集合及 `lastModified` 基线；切换期间禁止改 URL 结构、删除可索引页面、批量改标题或重写正文。
+- [ ] 对匿名、登录、登出三种会话分别记录地图进度、收藏和共享配装的响应头与行为；私有响应必须维持 `Cache-Control: private, no-store` 和 `Vary: Cookie, Authorization`。
+- [ ] 记录当前 Main Worker dry-run gzip 包体和 Genshin 数据模块大小，作为拆分收益基线。
+- [x] 新增 `pnpm genshin:seo-baseline`，对三种语言的核心页面和真实角色、武器、圣遗物、攻略详情生成可版本化的生产 SEO 基线报告。
+- [x] 确认当前生产站的 `guides/banner-schedule-guide` 与 `redeem-codes` 缺少完整 hreflang；它们列为独立 Worker 必须修复的迁移前缺陷，不能被当作可接受的切流回归。
+
+**阶段通过标准**：基线报告可在 CI 或本地重跑，且所有样本明确属于 Genshin 页面或 Main/API 页面。未取得基线，不创建生产 Router 绑定。
+
+### 27.3 阶段 1：建立 `apps/game-genshin`（仅导入 Genshin）
+
+- [ ] 基于 `apps/game-nte` 的 OpenNext/Cloudflare 结构创建 `apps/game-genshin`，Worker 名称定为 `gachia-game-genshin`，并将其加入 pnpm workspace、类型检查和 bundle 验证。
+- [ ] 设置 `assetPrefix: '/_games/genshin'`，且仅在独立 Worker 的 preview rewrite 中将 `/_games/genshin/_next/*` 映射回 `/_next/*`；生产浏览器 HTML 必须只引用 `/_games/genshin/_next/*`。
+- [ ] 将 Genshin 路由迁入：`characters`、`weapons`、`artifacts`、`items`、`guides`、`redeem-codes`、`version`、`gacha`、`build`、`teams`、`tier-list`、`compare`、`calculator`、`map`、`download`，以及相应详情页。不存在内容的路由必须与旧站保持同样的 404/重定向语义。
+- [ ] 只从 `@gachia/data/games/genshin/*` 导入 Genshin 原始数据、类型和图片映射；禁止通过 `@gachia/data` 根 barrel 或通用全游戏静态参数间接拉入其它游戏数据。
+- [ ] 复用 `@gachia/core`、`@gachia/ui` 的语言、游戏配置和 Header 协议；不要复制全站游戏列表、语言切换规则或全局导航 CSS。
+- [ ] Main Worker 中的通用 `[game]` 路由、`generateStaticParams`、sitemap、搜索 manifest 和内容导入必须在 Genshin 变为 `live` 后显式排除 Genshin runtime 数据，避免“Router 已拆但主 Worker 仍打包 Genshin”的伪拆分。
+- [ ] Genshin Worker 自身不导入 `better-auth`、D1 schema、全站搜索索引或 Leaflet 以外不必需的主站依赖；地图相关客户端依赖只在地图路由按需加载。
+- [x] 初版独立 Worker 已通过 `pnpm --filter @gachia/game-genshin type-check`、`build`、`verify:bundle`；dry-run gzip 为 `1034.72 KiB`，低于 `2.2 MiB` 预算。
+- [x] 已补入版本、强度榜、下载、地图、配装、队伍、对比和材料规划页面的 Genshin 专属 SSR 实现；地图进度和用户态数据仍只经主域名 `/api/*`，未复制认证或 D1 写入逻辑。
+
+**阶段通过标准**：`pnpm --filter @gachia/game-genshin type-check`、`build`、`verify:bundle` 通过，压缩上传体积不超过 `2.2 MiB`；若超过绝对 `3 MiB`，立即停止，不进入 Router 接入阶段。
+
+### 27.4 阶段 2：Router、资源、API 与身份边界
+
+Genshin Router 白名单必须精确覆盖以下三类路径，未知游戏路径一律继续交给 `MAIN_SITE`，以保留旧的 404、301 与公共页面行为：
+
+```text
+/<lang>/genshin
+/<lang>/genshin/<页面白名单>
+/<lang>/genshin/<详情页白名单>/<slug>
+/_games/genshin/_next/*
+/sitemaps/genshin/index.xml
+```
+
+页面白名单初始值：`characters`、`weapons`、`artifacts`、`items`、`guides`、`redeem-codes`、`version`、`gacha`、`build`、`teams`、`tier-list`、`compare`、`calculator`、`map`、`download`。详情页白名单应根据实际路由限定为 `characters`、`weapons`、`artifacts`、`items`、`guides`；实施时必须以迁入后的文件系统和测试为准，不允许为省事放宽为任意深度路径。
+
+- [x] 在 `packages/core/deployments.ts` 登记 `genshin`：Worker `gachia-game-genshin`、资源前缀 `/_games/genshin`、sitemap `/sitemaps/genshin/index.xml`，初始状态为 `preview`，不得提前设为 `live`。
+- [x] 扩展生成 Router 清单、`apps/router/wrangler.jsonc` Service Binding、Router `Env`、路径判断、请求改写和单元测试；Service Binding 名为 `GENSHIN_SITE`，开关为 `GENSHIN_ENABLED`，Canary Cookie 单独命名为 `gachia_genshin_canary`。
+- [x] Router 将 `/_games/genshin/_next/*` 转发到 `GENSHIN_SITE` 前，剥离 `/_games/genshin` 前缀为 Worker 内部的 `/_next/*`；将 `/sitemaps/genshin/index.xml` 改写为该 Worker 的 `/sitemap.xml`。不得转发根 `/_next/*`、根 sitemap、`/api/*`、认证回调或其它游戏资源。
+- [x] Router 测试覆盖 Genshin 三语言页面、详情页、资源重写、游戏 sitemap、非法 locale、未知页面、过深路径和相似前缀；既有 NTE/Azur/Main 路径测试继续通过。`/api/*` 和根 `/_next/*` 不在任何 Genshin 白名单中，继续交给 Main Worker。
+- [ ] Genshin 的收藏、地图进度、共享配装和用户角色请求继续指向 `https://gachia.com/api/*`；验证 Worker 通过 Router 返回 Main/API 响应时没有 Service Binding 递归。禁止在 Genshin Worker 中 `fetch('https://gachia.com/...')` 回调自己的页面路径。
+- [ ] 地图 tile、点位和进度接口按匿名/认证属性分别测试缓存：公开地图数据可缓存，用户进度绝不能缓存或跨用户复用。Cookie 域保持主域名，Path 和 SameSite 不得因 Worker 切换改变。
+
+**阶段通过标准**：所有 Router 单元测试通过；打开 `GENSHIN_ENABLED=false` 时，所有 Genshin 生产路径仍由 Main Worker 返回原响应；开启仅 preview/canary 后，只有持有正确 Cookie 的请求进入 Genshin Worker。
+
+### 27.5 阶段 3：SEO、sitemap 与预发布等价性（最高优先级）
+
+- [ ] 在 `apps/game-genshin` 统一生成 metadata：canonical、hreflang、Open Graph、Twitter、JSON-LD 的 URL 一律为 `https://gachia.com/{lang}/genshin/...`；禁止出现 `workers.dev`、preview 主机或 `/_games/genshin` 作为 canonical/OG URL。
+- [ ] 预发布 Worker 必须返回 `X-Robots-Tag: noindex, nofollow` 且其 `robots.txt` 为 `Disallow: /`；生产 Worker 和经主域名 Router 返回的 Genshin 页面不得错误继承 noindex。
+- [ ] Genshin Worker 生成自己的 `/sitemap.xml`，并仅列出实际可索引的 Genshin 页面；Router 暴露为 `/sitemaps/genshin/index.xml`。根 `/sitemap.xml` 必须成为 sitemap index 或聚合入口，并稳定包含该 Genshin sitemap，不能重复列出同一 Genshin URL。
+- [ ] Main sitemap、主站通用 `generateStaticParams` 与资料页静态导入在 Genshin `live` 后不得再生成或打包完整 Genshin 页面；根 sitemap 仍需保留 Genshin 子 sitemap 的发现入口。
+- [ ] 新增 `genshin-seo-parity` 脚本：将阶段 0 样本在 Main 基线与独立 Worker preview/主域名 canary 上逐项比较状态码、最终 URL、title、description、canonical、hreflang、robots、JSON-LD、正文文本长度和 Genshin 内链数；允许的正文长度偏差必须有书面原因，默认不得减少。
+- [ ] 从每个预发布 HTML 动态提取实际 hash CSS/JS/RSC 地址，并检查 200、正确 MIME、无跨游戏资源前缀、首访与硬刷新均无 hydration 错误。不要固定检查 `webpack.js` 等构建产物名。
+- [ ] 用未登录、已登录、Cookie 缺失/过期、Googlebot User-Agent（只验证匿名 HTML，不伪造特权）验证：可索引资料页始终为匿名可访问；私有 API 不会泄露数据或返回可索引登录页。
+- [ ] Genshin Worker 页面应保留原 URL 的语言规范化、历史 URL 301、错误 slug 404；若这些规则目前在 `apps/web/middleware.ts`，必须先抽取为 Router 或 Genshin Worker 可共享逻辑，并在 parity 中逐条比对。
+
+**切流硬门槛**：任一代表 URL 出现状态码变化、canonical/hreflang 缺失或指向非 `gachia.com`、正文显著减少、JSON-LD 丢失、Genshin 内链断裂、资源 404、匿名访问变为登录/401、或 sitemap URL 404，即判定失败，禁止开启生产分流。
+
+### 27.6 阶段 4：CI、发布顺序与回滚
+
+- [ ] CI 新增 `@gachia/game-genshin` 的 `type-check`、`verify:bundle`、SEO parity、预发布 smoke 和 Router 测试；`verify:bundle` 输出并保存 gzip 体积，超过 `2.2 MiB` 阻止合并。
+- [x] 更新 `pnpm validate:game-deployments`，从部署清单派生校验 `GENSHIN_SITE`、Worker 名称、资源前缀、sitemap、开关和生产状态，不新增只覆盖 Genshin 的硬编码分支。
+- [ ] 新增生产 smoke：游戏首页、每种列表和详情、地图、工具、Genshin sitemap、根 sitemap、从 HTML 提取的 hash 资源、`/api/auth/get-session`、收藏和地图进度权限边界；同时验证 `X-Gachia-Route-Target` 调试标记（仅在请求头显式开启时）。
+- [ ] 部署顺序固定为：兼容 API（如有） -> Genshin Worker preview -> preview parity/smoke -> Genshin Worker production -> Router（先保持 `GENSHIN_ENABLED=false`） -> Main Worker（移除 Genshin runtime） -> 生产 canary -> Router 全量开启。
+- [ ] Router 发布前保留 `MAIN_SITE` 作为 Genshin 的直接 fallback，记录切换前 Main Worker 版本和 Genshin Worker 版本；故障时将 `GENSHIN_ENABLED=false` 回滚到 Main，不改变 URL、canonical 或 sitemap URL。
+- [ ] 发布窗口内禁止同时改 D1 schema、认证提供商、全站中间件、Next.js/OpenNext/Wrangler 大版本或 Genshin 内容模型；将这些变更拆到独立发布。
+
+**阶段通过标准**：CI 全绿，预发布/生产 canary 的 SEO parity 无阻断项，Router 回滚演练可在不改 URL 的情况下恢复 Main Worker，并且记录实际恢复耗时。
+
+### 27.7 阶段 5：生产切流、验收与 2-4 周观察
+
+- [ ] 先将 `GENSHIN_ENABLED=true` 与仅内部 canary Cookie 一起发布，使用 `X-Gachia-Route-Debug: 1` 验证只有预期请求命中 `genshin`；无 Cookie 请求仍命中 `main`。
+- [ ] Canary 保持至少一个完整的流量与缓存周期，完成阶段 3 的全量样本、Chrome 首访/硬刷新/站内跳转、移动端地图和登录功能验证后，再移除 Canary 限制进行全量分流。
+- [ ] 全量切流后立即验证：根 `/sitemap.xml`、`/sitemaps/genshin/index.xml`、三语言 Genshin 代表页、根 `/_next/*`、其它独立游戏资产、主站首页、认证、收藏、地图进度和无效 URL。
+- [ ] 记录 Cloudflare Worker 错误率、5xx、资源 404、Router 目标分布、TTFB、缓存命中率；出现持续 5xx、资源/hydration 故障、认证泄露或 SEO 硬门槛失败时，立即 `GENSHIN_ENABLED=false` 回滚。
+- [ ] 在 Search Console 连续观察 2-4 周：Genshin sitemap 读取状态、已编入索引页数、抓取统计、404/5xx、重定向错误、canonical 选择、hreflang 诊断、Genshin 查询的展示/点击/排名。期间不因短期波动调整 URL。
+- [ ] 观察期结束并确认无回归后，将 `GAME_DEPLOYMENTS.genshin.status` 从 `preview` 更新为 `live`，移除过渡 canary 配置，并更新本章执行记录。
+
+### 27.8 Genshin 执行记录
+
+| 日期 | 阶段/步骤 | 状态 | 证据（PR/提交、命令、报告） | SEO 结论/备注 |
+|---|---|---|---|---|
+| 2026-09-24 | 专项方案创建 | 已完成 | 本文第 27 章 | 未开始代码迁移；生产路由未变更 |
+| 2026-09-24 | 阶段 0：SEO 基线采集脚本 | 进行中 | `pnpm genshin:seo-baseline` | 已覆盖 60 个三语言代表 URL；解析器兼容 Next.js `hrefLang` 输出，现有两类页面的 hreflang 缺失已登记为迁移前待修复项 |
+| 2026-09-24 | 阶段 1：独立应用骨架 | 进行中 | `pnpm --filter @gachia/game-genshin verify:bundle` | 已建立 preview-only Worker、`/_games/genshin` 资源前缀、主域名 SEO metadata 和完整页面路由初版；地图进度、收藏、账号与私有数据仍留在 Main/API；gzip `1034.72 KiB`，未接入 Router |
+| 2026-09-24 | 阶段 2：Router 默认关闭接入 | 已完成（未发布） | `pnpm generate:router-config && pnpm --filter @gachia/router type-check && pnpm --filter @gachia/router test` | 已加入精确 Genshin 页面/资源/sitemap 白名单、`GENSHIN_SITE`、`GENSHIN_ENABLED=false` 和独立 Cookie；17 项 Router 测试通过，无 Cookie 或开关关闭时继续由 Main Worker 响应 |
+| 2026-09-24 | 阶段 3：本地预发布排查 | 进行中 | Node standalone SSR、OpenNext/Wrangler preview | Node SSR 的代表页 SEO metadata 正常；但当前本地 OpenNext preview 对页面路由返回 500/404，不能作为切流依据。已加入 preview `X-Robots-Tag` 和 `pnpm --filter @gachia/game-genshin seo:parity`，必须在受保护 Cloudflare staging Worker 完成 parity 后才可继续 |
+| 2026-09-24 | 阶段 3：远端 preview 门禁 | 已实现，待手动触发 | `.github/workflows/genshin-worker-preview.yml` | 仅手动部署 `gachia-game-genshin-staging`，强制 `robots.txt` 禁止抓取、页面 `X-Robots-Tag: noindex` 和实际 hash 资源 200，再运行 60 URL parity；不发布 Router、不修改生产开关 |
+| 待填写 | 阶段 1 | 未开始 |  |  |
+| 待填写 | 阶段 2 | 未开始 |  |  |
+| 待填写 | 阶段 3 | 未开始 |  |  |
+| 待填写 | 阶段 4 | 未开始 |  |  |
+| 待填写 | 阶段 5 | 未开始 |  |  |

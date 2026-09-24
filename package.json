@@ -13,6 +13,7 @@
     "gsc:report": "node scripts/analyze-gsc-export.mjs",
     "validate:game-deployments": "node scripts/validate-game-deployment.mjs",
     "generate:router-config": "node scripts/generate-router-game-config.mjs",
+    "genshin:seo-baseline": "node scripts/genshin-seo-baseline.mjs",
     "scaffold:game": "node scripts/scaffold-game.mjs",
     "audit:seo-contract": "node scripts/seo-contract-audit.mjs",
     "content:freshness": "NODE_OPTIONS=--disable-warning=MODULE_TYPELESS_PACKAGE_JSON node scripts/content-freshness-audit.mjs",

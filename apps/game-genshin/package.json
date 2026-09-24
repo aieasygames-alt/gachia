@@ -1,0 +1,32 @@
+{
+  "name": "@gachia/game-genshin",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "build:worker": "opennextjs-cloudflare build",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview --config wrangler.jsonc",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy --config wrangler.jsonc --env \"\"",
+    "deploy:staging": "opennextjs-cloudflare build && opennextjs-cloudflare deploy --config wrangler.jsonc --env staging",
+    "verify:bundle": "opennextjs-cloudflare build && wrangler deploy --dry-run --config wrangler.jsonc --env \"\"",
+    "seo:parity": "node ../../scripts/genshin-seo-parity.mjs",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@gachia/core": "workspace:*",
+    "@gachia/data": "workspace:*",
+    "@gachia/ui": "workspace:*",
+    "next": "^15.5.18",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260708.1",
+    "@opennextjs/cloudflare": "^1.20.1",
+    "@types/node": "25.6.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "typescript": "^5.8.0",
+    "wrangler": "^4.110.0"
+  }
+}

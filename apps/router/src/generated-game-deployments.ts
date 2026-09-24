@@ -5,16 +5,27 @@ export type GeneratedGameDeployment = {
   worker: string;
   assetPrefix: string;
   sitemapPath: string;
+  status: 'preview' | 'live';
   binding: string;
   enabled: string;
 };
 
 export const GENERATED_GAME_DEPLOYMENTS = [
   {
+    "id": "genshin",
+    "worker": "gachia-game-genshin",
+    "assetPrefix": "/_games/genshin",
+    "sitemapPath": "/sitemaps/genshin/index.xml",
+    "status": "preview",
+    "binding": "GENSHIN_SITE",
+    "enabled": "GENSHIN_ENABLED"
+  },
+  {
     "id": "nte",
     "worker": "gachia-game-nte",
     "assetPrefix": "/_games/nte",
     "sitemapPath": "/sitemaps/nte/index.xml",
+    "status": "live",
     "binding": "NTE_SITE",
     "enabled": "NTE_ENABLED"
   },
@@ -23,6 +34,7 @@ export const GENERATED_GAME_DEPLOYMENTS = [
     "worker": "gachia-game-azur-promilia",
     "assetPrefix": "/_games/azur-promilia",
     "sitemapPath": "/sitemaps/azur-promilia/index.xml",
+    "status": "live",
     "binding": "AZUR_PROMILIA_SITE",
     "enabled": "AZUR_PROMILIA_ENABLED"
   }

@@ -1,0 +1,9 @@
+import Link from 'next/link';
+import { GameNav } from '@/components/game-nav';
+import { genshinCharacters, getGenshinCharacterName } from '@/lib/data';
+import { asLocale, text } from '@/lib/i18n';
+import { genshinMetadata } from '@/lib/seo';
+
+const tiers = ['SS', 'S', 'A', 'B'] as const;
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) { const locale = asLocale((await params).lang); const title = text(locale, { zh: '原神角色强度参考', en: 'Genshin Impact Tier Reference', ja: '原神キャラTier参考' }); return genshinMetadata(locale, 'tier-list', title, text(locale, { zh: '按现有资料整理的原神角色强度参考，培养或抽取前请核对当前版本和队伍条件。', en: 'A Genshin Impact tier reference based on available data; verify current patch and team conditions before investing.', ja: '既存データに基づく原神キャラTier参考です。育成・ガチャ前に現行バージョンと編成条件を確認してください。' })); }
+export default async function TierList({ params }: { params: Promise<{ lang: string }> }) { const locale = asLocale((await params).lang); const groups = tiers.map((tier) => ({ tier, entries: genshinCharacters.filter((character) => character.tierRank === tier) })); return <><GameNav locale={locale} current="tier-list"/><main className="content"><h1>{text(locale, { zh: '原神角色强度参考', en: 'Genshin Impact Tier Reference', ja: '原神キャラTier参考' })}</h1><p className="notice">{text(locale, { zh: '强度受版本、队伍、武器、圣遗物和玩法环境影响，不应单独作为抽卡结论。', en: 'Tier context depends on patch, teams, weapons, artifacts, and content; do not use it as the only pull decision.', ja: 'Tierはバージョン、編成、武器、聖遺物、コンテンツで変わるため、単独でガチャ判断に使わないでください。' })}</p>{groups.map((group) => <section key={group.tier}><h2>{group.tier}</h2><div className="grid">{group.entries.map((character) => <Link className="card" key={character.id} href={`/${locale}/genshin/characters/${character.id}`}><div className="card-title">{getGenshinCharacterName(character, locale)}</div><div className="meta">{character.element} · {character.weaponType}</div></Link>)}</div></section>)}</main></>; }

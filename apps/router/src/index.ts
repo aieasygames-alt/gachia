@@ -4,8 +4,11 @@ interface Env {
   NTE_ENABLED?: string;
   AZUR_PROMILIA_SITE?: Fetcher;
   AZUR_PROMILIA_ENABLED?: string;
+  GENSHIN_SITE?: Fetcher;
+  GENSHIN_ENABLED?: string;
   PREVIEW_MODE?: string;
   AZUR_PROMILIA_CANARY_COOKIE?: string;
+  GENSHIN_CANARY_COOKIE?: string;
 }
 
 import { GENERATED_GAME_DEPLOYMENTS } from './generated-game-deployments';
@@ -15,9 +18,12 @@ const NTE_PAGES = new Set(['characters', 'guides', 'weapons', 'redeem-codes', 'v
 const NTE_DETAIL_PAGES = new Set(['characters', 'guides', 'disk-sets', 'weapons']);
 const AZUR_PROMILIA_PAGES = new Set(['characters', 'guides', 'weapons', 'tier-list', 'redeem-codes', 'kibo', 'world', 'planner', 'version', 'systems']);
 const AZUR_PROMILIA_DETAIL_PAGES = new Set(['characters', 'guides', 'weapons']);
+const GENSHIN_PAGES = new Set(['characters', 'guides', 'weapons', 'artifacts', 'items', 'redeem-codes', 'gacha', 'version', 'tier-list', 'download', 'map', 'build', 'teams', 'compare', 'calculator']);
+const GENSHIN_DETAIL_PAGES = new Set(['characters', 'guides', 'weapons', 'artifacts', 'items']);
 
 const NTE_DEPLOYMENT = GENERATED_GAME_DEPLOYMENTS.find((deployment) => deployment.id === 'nte');
 const AZUR_PROMILIA_DEPLOYMENT = GENERATED_GAME_DEPLOYMENTS.find((deployment) => deployment.id === 'azur-promilia');
+const GENSHIN_DEPLOYMENT = GENERATED_GAME_DEPLOYMENTS.find((deployment) => deployment.id === 'genshin');
 
 function isEnabled(value: string | undefined): boolean {
   return value === 'true';
@@ -57,6 +63,20 @@ function isAzurPromiliaRequest(pathname: string): boolean {
   );
 }
 
+function isGenshinRequest(pathname: string): boolean {
+  const segments = pathname.split('/').filter(Boolean);
+  const isLocalizedPage = LOCALES.has(segments[0] ?? '') && segments[1] === 'genshin' && (
+    segments.length === 2 ||
+    (segments.length === 3 && GENSHIN_PAGES.has(segments[2] ?? '')) ||
+    (segments.length === 4 && GENSHIN_DETAIL_PAGES.has(segments[2] ?? ''))
+  );
+  return (
+    isLocalizedPage ||
+    (segments.length >= 2 && segments[0] === '_games' && segments[1] === 'genshin') ||
+    (segments.length >= 2 && segments[0] === 'sitemaps' && segments[1] === 'genshin')
+  );
+}
+
 function requestForNteWorker(request: Request): Request {
   const url = new URL(request.url);
   if (NTE_DEPLOYMENT && (url.pathname === NTE_DEPLOYMENT.sitemapPath || url.pathname === `${NTE_DEPLOYMENT.sitemapPath}/`)) {
@@ -78,6 +98,20 @@ function requestForAzurPromiliaWorker(request: Request): Request {
     return new Request(url, request);
   }
   const assetPrefix = '/_games/azur-promilia/_next/';
+  if (url.pathname.startsWith(assetPrefix)) {
+    url.pathname = `/_next/${url.pathname.slice(assetPrefix.length)}`;
+    return new Request(url, request);
+  }
+  return request;
+}
+
+function requestForGenshinWorker(request: Request): Request {
+  const url = new URL(request.url);
+  if (GENSHIN_DEPLOYMENT && (url.pathname === GENSHIN_DEPLOYMENT.sitemapPath || url.pathname === `${GENSHIN_DEPLOYMENT.sitemapPath}/`)) {
+    url.pathname = '/sitemap.xml';
+    return new Request(url, request);
+  }
+  const assetPrefix = '/_games/genshin/_next/';
   if (url.pathname.startsWith(assetPrefix)) {
     url.pathname = `/_next/${url.pathname.slice(assetPrefix.length)}`;
     return new Request(url, request);
@@ -114,6 +148,10 @@ export default {
 
     if (isEnabled(env.AZUR_PROMILIA_ENABLED) && env.AZUR_PROMILIA_SITE && isAzurPromiliaRequest(url.pathname) && hasCanaryCookie(request, env.AZUR_PROMILIA_CANARY_COOKIE, 'gachia_azur_promilia_canary')) {
       return fetchWithRouteMarker(env.AZUR_PROMILIA_SITE, requestForAzurPromiliaWorker(request), 'azur-promilia');
+    }
+
+    if (isEnabled(env.GENSHIN_ENABLED) && env.GENSHIN_SITE && isGenshinRequest(url.pathname) && hasCanaryCookie(request, env.GENSHIN_CANARY_COOKIE, 'gachia_genshin_canary')) {
+      return fetchWithRouteMarker(env.GENSHIN_SITE, requestForGenshinWorker(request), 'genshin');
     }
 
     return env.MAIN_SITE.fetch(request);

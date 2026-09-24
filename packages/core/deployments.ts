@@ -15,6 +15,13 @@ export type GameDeployment = {
  * until its Router binding is explicitly enabled after preview verification.
  */
 export const GAME_DEPLOYMENTS: Partial<Record<GameId, GameDeployment>> = {
+  genshin: {
+    deployment: 'game',
+    worker: 'gachia-game-genshin',
+    assetPrefix: '/_games/genshin',
+    sitemapPath: '/sitemaps/genshin/index.xml',
+    status: 'preview',
+  },
   nte: {
     deployment: 'game',
     worker: 'gachia-game-nte',

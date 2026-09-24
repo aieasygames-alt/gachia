@@ -1,0 +1,10 @@
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { GameNav } from '@/components/game-nav';
+import { genshinWeapons, getGenshinWeaponById, getGenshinWeaponEffect, getGenshinWeaponName, getGenshinWeaponSource } from '@/lib/data';
+import { asLocale, text } from '@/lib/i18n';
+import { genshinMetadata } from '@/lib/seo';
+
+export function generateStaticParams() { return ['zh', 'en', 'ja'].flatMap((lang) => genshinWeapons.map((weapon) => ({ lang, id: weapon.id }))); }
+export async function generateMetadata({ params }: { params: Promise<{ lang: string; id: string }> }) { const { lang, id } = await params; const locale = asLocale(lang); const weapon = getGenshinWeaponById(id); return weapon ? genshinMetadata(locale, `weapons/${id}`, `${getGenshinWeaponName(weapon, locale)} - Genshin Impact`, getGenshinWeaponEffect(weapon, locale).description) : {}; }
+export default async function WeaponDetail({ params }: { params: Promise<{ lang: string; id: string }> }) { const { lang, id } = await params; const locale = asLocale(lang); const weapon = getGenshinWeaponById(id); if (!weapon) notFound(); const name = getGenshinWeaponName(weapon, locale); const effect = getGenshinWeaponEffect(weapon, locale); return <><GameNav locale={locale} current="weapons"/><main className="content article"><Link className="back" href={`/${locale}/genshin/weapons`}>{text(locale, { zh: '返回武器图鉴', en: 'Back to weapons', ja: '武器一覧に戻る' })}</Link><h1>{name}</h1><div className="facts"><div><span>{text(locale, { zh: '类型', en: 'Type', ja: '種類' })}</span><strong>{weapon.weaponType}</strong></div><div><span>{text(locale, { zh: '稀有度', en: 'Rarity', ja: 'レアリティ' })}</span><strong>{weapon.rarity}★</strong></div><div><span>{text(locale, { zh: '基础攻击', en: 'Base ATK', ja: '基礎攻撃力' })}</span><strong>{weapon.baseAtk}</strong></div></div><h2>{effect.name}</h2><p className="lead">{effect.description}</p><p><strong>{text(locale, { zh: '获取方式', en: 'Source', ja: '入手方法' })}:</strong> {getGenshinWeaponSource(weapon, locale)}</p></main></>; }

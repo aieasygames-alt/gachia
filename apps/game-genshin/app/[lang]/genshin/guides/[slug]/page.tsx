@@ -1,0 +1,10 @@
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { GameNav } from '@/components/game-nav';
+import { genshinGuides, getGuideById, getGuideContent, getGuideSummary, getGuideTitle } from '@/lib/data';
+import { asLocale, text } from '@/lib/i18n';
+import { genshinMetadata } from '@/lib/seo';
+
+export async function generateStaticParams() { return ['zh', 'en', 'ja'].flatMap((lang) => genshinGuides.map((guide) => ({ lang, slug: guide.id }))); }
+export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string }> }) { const { lang, slug } = await params; const locale = asLocale(lang); const guide = getGuideById(slug); return guide ? genshinMetadata(locale, `guides/${slug}`, `${getGuideTitle(guide, locale)} - Genshin Impact`, getGuideSummary(guide, locale)) : {}; }
+export default async function GuideDetail({ params }: { params: Promise<{ lang: string; slug: string }> }) { const { lang, slug } = await params; const locale = asLocale(lang); const guide = getGuideById(slug); if (!guide) notFound(); const title = getGuideTitle(guide, locale); const summary = getGuideSummary(guide, locale); const content = getGuideContent(guide, locale); const faq = guide.faq ?? []; return <><GameNav locale={locale} current="guides"/><main className="content article"><Link className="back" href={`/${locale}/genshin/guides`}>{text(locale, { zh: '返回攻略列表', en: 'Back to guides', ja: '攻略一覧に戻る' })}</Link><h1>{title}</h1><p className="notice">{summary}</p><div style={{ whiteSpace: 'pre-wrap' }}>{content}</div>{faq.length > 0 && <section><h2>FAQ</h2>{faq.map((entry, index) => <article className="card" key={index}><div className="card-title">{locale === 'zh' ? entry.questionZh : entry.question}</div><p>{locale === 'zh' ? entry.answerZh : entry.answer}</p></article>)}</section>}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: title, description: summary, mainEntityOfPage: `https://gachia.com/${locale}/genshin/guides/${slug}` }) }} /></main></>; }

@@ -1,0 +1,22 @@
+{
+  "name": "gachia-game-genshin",
+  "main": ".open-next/worker.js",
+  "assets": { "directory": ".open-next/assets", "binding": "ASSETS" },
+  "compatibility_date": "2026-07-08",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "vars": {
+    "NEXT_PUBLIC_APP_URL": "https://gachia.com",
+    "GENSHIN_DEPLOYMENT_MODE": "preview"
+  },
+  "env": {
+    "staging": {
+      "name": "gachia-game-genshin-staging",
+      "workers_dev": true,
+      "vars": {
+        "NEXT_PUBLIC_APP_URL": "https://gachia.com",
+        "GENSHIN_DEPLOYMENT_MODE": "preview"
+      }
+    }
+  }
+}

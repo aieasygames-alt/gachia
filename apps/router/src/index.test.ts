@@ -120,6 +120,58 @@ describe('gachia router safety defaults', () => {
     await expect(response.text()).resolves.toBe('main');
   });
 
+  it('keeps Genshin pages on the main Worker while its routing switch is disabled', async () => {
+    const response = await router.fetch(new Request('https://gachia.com/zh/genshin/characters'), {
+      MAIN_SITE: fetcher('main'),
+      GENSHIN_SITE: fetcher('genshin'),
+      GENSHIN_ENABLED: 'false',
+    });
+
+    await expect(response.text()).resolves.toBe('main');
+  });
+
+  it('routes only approved Genshin URLs for the explicit cookie canary', async () => {
+    const env = {
+      MAIN_SITE: fetcher('main'),
+      GENSHIN_SITE: fetcher('genshin'),
+      GENSHIN_ENABLED: 'true',
+      GENSHIN_CANARY_COOKIE: 'preview',
+    };
+
+    for (const pathname of ['/zh/genshin', '/en/genshin/characters/test', '/ja/genshin/calculator', '/_games/genshin/_next/static/app.js', '/sitemaps/genshin/index.xml']) {
+      const request = new Request(`https://gachia.com${pathname}`, { headers: { cookie: 'gachia_genshin_canary=preview' } });
+      const response = await router.fetch(request, env);
+      await expect(response.text()).resolves.toBe('genshin');
+    }
+
+    for (const pathname of ['/zh/genshin', '/fr/genshin', '/zh/genshin/unknown', '/zh/genshin/characters/test/extra', '/_games/genshin-extra/file.js']) {
+      const response = await router.fetch(new Request(`https://gachia.com${pathname}`), env);
+      await expect(response.text()).resolves.toBe('main');
+    }
+  });
+
+  it('rewrites only the Genshin sitemap and asset namespaces for its Worker', async () => {
+    let receivedPath = '';
+    const genshin: Fetcher = {
+      fetch: async (request) => {
+        receivedPath = new URL(request instanceof Request ? request.url : String(request)).pathname;
+        return new Response('genshin');
+      },
+      connect: () => { throw new Error('connect is not used by the router'); },
+    } as Fetcher;
+    const env = {
+      MAIN_SITE: fetcher('main'),
+      GENSHIN_SITE: genshin,
+      GENSHIN_ENABLED: 'true',
+      GENSHIN_CANARY_COOKIE: '',
+    };
+
+    await router.fetch(new Request('https://gachia.com/sitemaps/genshin/index.xml'), env);
+    expect(receivedPath).toBe('/sitemap.xml');
+    await router.fetch(new Request('https://gachia.com/_games/genshin/_next/static/chunks/app.js'), env);
+    expect(receivedPath).toBe('/_next/static/chunks/app.js');
+  });
+
   it('keeps Azur Promilia on the main Worker while its routing switch is disabled', async () => {
     const response = await router.fetch(new Request('https://gachia.com/zh/azur-promilia/characters'), {
       MAIN_SITE: fetcher('main'),

@@ -5,7 +5,9 @@
   "workers_dev": true,
   "vars": {
     "AZUR_PROMILIA_ENABLED": "true",
-    "AZUR_PROMILIA_CANARY_COOKIE": ""
+    "AZUR_PROMILIA_CANARY_COOKIE": "",
+    "GENSHIN_ENABLED": "false",
+    "GENSHIN_CANARY_COOKIE": ""
   },
   "services": [
     {
@@ -19,6 +21,10 @@
     {
       "binding": "AZUR_PROMILIA_SITE",
       "service": "gachia-game-azur-promilia"
+    },
+    {
+      "binding": "GENSHIN_SITE",
+      "service": "gachia-game-genshin"
     }
   ],
   "env": {
@@ -28,6 +34,8 @@
       "vars": {
         "AZUR_PROMILIA_ENABLED": "false",
         "AZUR_PROMILIA_CANARY_COOKIE": "enabled",
+        "GENSHIN_ENABLED": "false",
+        "GENSHIN_CANARY_COOKIE": "enabled",
         "PREVIEW_MODE": "true"
       },
       "services": [
@@ -38,6 +46,10 @@
         {
           "binding": "AZUR_PROMILIA_SITE",
           "service": "gachia-game-azur-promilia"
+        },
+        {
+          "binding": "GENSHIN_SITE",
+          "service": "gachia-game-genshin"
         }
       ]
     }

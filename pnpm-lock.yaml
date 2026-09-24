@@ -67,6 +67,49 @@ importers:
         specifier: ^4.110.0
         version: 4.110.0(@cloudflare/workers-types@5.20260910.1)
 
+  apps/game-genshin:
+    dependencies:
+      '@gachia/core':
+        specifier: workspace:*
+        version: link:../../packages/core
+      '@gachia/data':
+        specifier: workspace:*
+        version: link:../../packages/data
+      '@gachia/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      next:
+        specifier: ^15.5.18
+        version: 15.5.18(@playwright/test@1.63.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      react:
+        specifier: ^19.1.0
+        version: 19.2.7
+      react-dom:
+        specifier: ^19.1.0
+        version: 19.2.7(react@19.2.7)
+    devDependencies:
+      '@cloudflare/workers-types':
+        specifier: ^5.20260708.1
+        version: 5.20260910.1
+      '@opennextjs/cloudflare':
+        specifier: ^1.20.1
+        version: 1.20.1(next@15.5.18(@playwright/test@1.63.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(wrangler@4.110.0(@cloudflare/workers-types@5.20260910.1))
+      '@types/node':
+        specifier: 25.6.0
+        version: 25.6.0
+      '@types/react':
+        specifier: ^19.1.0
+        version: 19.2.17
+      '@types/react-dom':
+        specifier: ^19.1.0
+        version: 19.2.3(@types/react@19.2.17)
+      typescript:
+        specifier: ^5.8.0
+        version: 5.9.3
+      wrangler:
+        specifier: ^4.110.0
+        version: 4.110.0(@cloudflare/workers-types@5.20260910.1)
+
   apps/game-nte:
     dependencies:
       '@gachia/core':
