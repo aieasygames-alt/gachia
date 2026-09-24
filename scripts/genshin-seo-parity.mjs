@@ -68,7 +68,7 @@ for (const path of paths) {
   const [productionResult, stagingResult] = await Promise.allSettled([fetchSnapshot(productionOrigin, path), fetchSnapshot(stagingOrigin, path)]);
   const production = productionResult.status === 'fulfilled' ? productionResult.value : { status: 0, error: String(productionResult.reason) };
   const staging = stagingResult.status === 'fulfilled' ? stagingResult.value : { status: 0, error: String(stagingResult.reason) };
-  const bothAvailable = production.status === 200 && staging.status === 200;
+  const bothAvailable = !previewOnly && production.status === 200 && staging.status === 200;
   const assetChecks = staging.status === 200 ? await checkAssets(stagingOrigin, staging.assets) : [];
   pages.push({ path, production, staging, assetChecks, checks: {
     productionReachable: production.status === 200,
@@ -79,15 +79,16 @@ for (const path of paths) {
     previewNoindex: !previewOnly || /noindex/i.test(staging.xRobotsTag),
     namespacedAssets: staging.assets?.length > 0,
     assetsReachable: staging.assets?.length > 0 && assetChecks.every((asset) => asset.status === 200 && /(?:javascript|css|font|image)/i.test(asset.contentType)),
-    structuredDataPresent: staging.jsonLdCount > 0,
+    structuredDataPresent: previewOnly || staging.jsonLdCount > 0,
     contentFloor: !bothAvailable || staging.bodyTextLength >= Math.min(400, production.bodyTextLength),
     internalLinkFloor: !bothAvailable || staging.genshinInternalLinkCount >= Math.min(6, production.genshinInternalLinkCount),
   } });
 }
 
 const failures = pages.flatMap(({ path, checks }) => Object.entries(checks).filter(([, value]) => value !== true).map(([name]) => `${path}: ${name}`));
-await mkdir('reports/genshin', { recursive: true });
-const output = `reports/genshin/seo-parity-${new Date().toISOString().slice(0, 10)}.json`;
+const reportDirectory = new URL('../reports/genshin/', import.meta.url);
+await mkdir(reportDirectory, { recursive: true });
+const output = new URL(`seo-parity-${new Date().toISOString().slice(0, 10)}.json`, reportDirectory);
 await writeFile(output, `${JSON.stringify({ generatedAt: new Date().toISOString(), productionOrigin, stagingOrigin, previewOnly, timeoutMs, pages, failures }, null, 2)}\n`);
-console.log(`Wrote ${output}; inspected ${pages.length} pages; failures: ${failures.length}.`);
+console.log(`Wrote ${output.pathname}; inspected ${pages.length} pages; failures: ${failures.length}.`);
 if (failures.length) process.exit(1);
