@@ -4,6 +4,7 @@ import { getWeaponListData, sortWeaponRanks } from '@/lib/game-data/weapons';
 import { Link } from '@/lib/i18n/navigation';
 import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
 import dynamic from 'next/dynamic';
+import { notFound } from 'next/navigation';
 
 const BASE_URL = 'https://gachia.com';
 const ZzzQueuedWeapons = dynamic(() => import('./zzz-queued-weapons').then((mod) => mod.ZzzQueuedWeapons));
@@ -143,35 +144,12 @@ export default async function WeaponsPage({
   };
   const ldScript = <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />;
 
-  if (gameId === 'sea') {
-    return (
-      <>
-      <div>
-        <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-          {CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons'}
-        </h1>
-        <div className="rounded-lg border border-dashed border-game-border bg-game-surface p-8 text-center text-sm text-game-text-muted">
-          {locale === 'zh' ? '该游戏没有武器系统' : locale === 'ja' ? 'このゲームには武器システムがありません' : 'This game does not have a weapon system'}
-        </div>
-      </div>
-      {ldScript}
-      </>
-    );
-  }
+  if (gameId === 'sea') notFound();
 
   const weapons = await getWeaponListData(gameId, locale);
   if (weapons.length > 0) return <><WeaponListPage gameId={gameId} locale={locale} weapons={weapons} />{ldScript}</>;
 
-  return (
-    <div>
-      <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons'}
-      </h1>
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-        <div className="flex h-40 items-center justify-center rounded-lg border border-dashed border-game-border text-sm text-game-text-muted">Coming Soon</div>
-      </div>
-    </div>
-  );
+  notFound();
 }
 
 type WeaponCardEntry = Awaited<ReturnType<typeof getWeaponListData>>[number];

@@ -4,6 +4,7 @@ import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 
 const middleware = readFileSync(join(__dirname, '../middleware.ts'), 'utf8');
+const weaponsPage = readFileSync(join(__dirname, '../app/[lang]/[game]/weapons/page.tsx'), 'utf8');
 
 describe('SEO redirect contracts', () => {
   it('removes search placeholder URLs from the indexable URL set', () => {
@@ -21,5 +22,13 @@ describe('SEO redirect contracts', () => {
     expect(middleware).toContain('LEGACY_ROOT_ROUTES');
     expect(middleware).toContain('stripLabelSuffix(fourthSegment)');
     expect(middleware).toContain("fourthSegment === 'harmony-trailblazer'");
+  });
+
+  it('does not render empty weapon databases as indexable placeholder pages', () => {
+    expect(weaponsPage).toContain("import { notFound } from 'next/navigation';");
+    expect(weaponsPage).toContain("if (gameId === 'sea') notFound();");
+    expect(weaponsPage).toContain('if (weapons.length > 0) return');
+    expect(weaponsPage).toContain('  notFound();');
+    expect(weaponsPage).not.toContain('>Coming Soon</div>');
   });
 });
