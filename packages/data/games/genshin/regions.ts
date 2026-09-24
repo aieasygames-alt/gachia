@@ -1,8 +1,6 @@
 import type { SupportedLocale } from '@gachia/core';
-import { join } from 'node:path';
-import { loadJson } from '../../load-json';
+import rawRegions from './raw-regions.json';
 import { localeStr } from './types';
-const rawRegions = await loadJson<unknown>(join(process.cwd(), '../../packages/data/games/genshin/raw-regions.json'), '/data/genshin/raw-regions.json');
 
 export interface GenshinRegion {
   id: string;

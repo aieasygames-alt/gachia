@@ -1,8 +1,6 @@
 import type { SupportedLocale } from '@gachia/core';
-import { join } from 'node:path';
-import { loadJson } from '../../load-json';
+import rawGuides from './raw-guides.json';
 import { localeStr } from './types';
-const rawGuides = await loadJson<unknown>(join(process.cwd(), '../../packages/data/games/genshin/raw-guides.json'), '/data/genshin/raw-guides.json');
 
 export interface GenshinGuideFaq {
   question: string;
