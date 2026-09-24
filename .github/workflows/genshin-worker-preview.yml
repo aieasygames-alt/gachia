@@ -43,6 +43,17 @@ jobs:
         run: |
           set -euo pipefail
           : "${GENSHIN_STAGING_ORIGIN:?GENSHIN_STAGING_ORIGIN was not exported by the deploy step}"
+          tail_log=/tmp/genshin-worker-tail.log
+          pnpm --dir apps/game-genshin exec wrangler tail gachia-game-genshin-staging --env staging --format pretty --status error > "$tail_log" 2>&1 &
+          tail_pid=$!
+          cleanup() {
+            kill "$tail_pid" 2>/dev/null || true
+            wait "$tail_pid" 2>/dev/null || true
+            echo 'Genshin staging Worker error log:'
+            cat "$tail_log" || true
+          }
+          trap cleanup EXIT
+          sleep 5
           fetch() {
             local path="$1"
             local name="${path//\//_}"
