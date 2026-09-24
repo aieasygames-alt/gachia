@@ -54,6 +54,9 @@ jobs:
             local status
             status=$(curl --silent --show-error --max-time 30 --dump-header "/tmp/${name}.headers" --output "/tmp/${name}.body" --write-out '%{http_code}' "$GENSHIN_PRODUCTION_ORIGIN/$path") || status=000
             echo "$path: HTTP $status"
+            cat "/tmp/${name}.headers" || true
+            head -c 2000 "/tmp/${name}.body" || true
+            echo
             test "$status" = 200
           }
           fetch robots.txt
