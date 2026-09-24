@@ -8,7 +8,7 @@ import { wuwaCharacters, getWuWaCharacterById, getWuWaCharacterImage } from '../
 import { nteCharacters, getNteCharacterById, getNteCharacterImage } from '../games/nte/characters';
 import { zzzCharacters, getZzzCharacterById, getZzzCharacterImage } from '../games/zzz/characters';
 import { guihuanCharacters, getGuihuanCharacterById, getGuihuanCharacterImage } from '../games/guihuan/characters';
-import { aniimoCharacters, getAniimoCharacterById, getAniimoCharacterImage } from '../games/aniimo/characters';
+import { aniimoCharacters, getAniimoCharacterById, getAniimoCharacterEvolution, getAniimoCharacterImage } from '../games/aniimo/characters';
 import { genshinGuides } from '../games/genshin/guides';
 import { starrailGuides } from '../games/starrail/guides';
 import { wuwaGuides } from '../games/wuwa/guides';
@@ -89,6 +89,12 @@ describe('Aniimo', () => {
     aniimoCharacters.forEach((c) => {
       expect(getAniimoCharacterById(c.id)).toBeDefined();
     });
+  });
+
+  it('normalizes optional evolution data for every detail page', () => {
+    for (const character of aniimoCharacters) {
+      expect(Array.isArray(getAniimoCharacterEvolution(character)), `${character.id} evolution should be safe to render`).toBe(true);
+    }
   });
 
   it('all characters have image paths', () => {

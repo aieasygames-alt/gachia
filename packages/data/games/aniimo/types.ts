@@ -24,7 +24,7 @@ export interface AniimoCharacter {
   descriptionEn: string;
   descriptionJa?: string;
   image: string;
-  evolution: string[];
+  evolution?: string[];
   locationNote: string;
   evolutionDetail: string;
   abilityUseCase: string;

@@ -9,7 +9,9 @@ import {
   getAniimoCharacterName,
   getAniimoCharacterDescription,
   getAniimoCharacterTierReason,
+  getAniimoCharacterEvolution,
 } from '@gachia/data/games/aniimo/characters';
+import { CharacterJsonLd, buildBreadcrumbJsonLd } from './character-detail-shared';
 
 function label(locale: SupportedLocale, zh: string, en: string, ja = en) {
   return locale === 'zh' ? zh : locale === 'ja' ? ja : en;
@@ -23,6 +25,7 @@ export function AniimoCharacterDetailPage({ id, locale }: { id: string; locale: 
   const charName = getAniimoCharacterName(char, locale);
   const elementLabel = locale === 'zh' ? char.elementZh : locale === 'ja' ? char.elementJa : char.elementEn;
   const roleLabel = locale === 'zh' ? char.roleZh : locale === 'ja' ? char.roleJa : char.roleEn;
+  const evolution = getAniimoCharacterEvolution(char);
   const facts = [
     [label(locale, '编号', 'No.', 'No.'), char.no],
     [label(locale, '元素', 'Element'), elementLabel],
@@ -34,6 +37,20 @@ export function AniimoCharacterDetailPage({ id, locale }: { id: string; locale: 
 
   return (
     <article className="space-y-8">
+      <CharacterJsonLd
+        gameId="aniimo"
+        locale={locale}
+        name={charName}
+        description={getAniimoCharacterDescription(char, locale).slice(0, 300)}
+        charId={char.id}
+        image={getAniimoCharacterImage(char)}
+        tags={[char.elementEn, char.roleEn, char.stage, char.tierRank].filter(Boolean)}
+        categoryLabel={CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildBreadcrumbJsonLd('aniimo', charName, locale)) }}
+      />
       <nav className="flex items-center gap-2 text-sm text-game-text-muted">
         <Link href="/aniimo" className="hover:text-game-primary">{game.name[locale]}</Link>
         <span>/</span>
@@ -87,14 +104,14 @@ export function AniimoCharacterDetailPage({ id, locale }: { id: string; locale: 
         </InfoPanel>
       </section>
 
-      {(char.evolution.length > 0 || char.evolutionDetail) && (
+      {(evolution.length > 0 || char.evolutionDetail) && (
         <section className="rounded-lg border border-game-border bg-game-surface p-5">
           <h2 className="mb-3 text-lg font-semibold text-game-text">
             {label(locale, '进化与形态', 'Evolution and Forms')}
           </h2>
-          {char.evolution.length > 0 && (
+          {evolution.length > 0 && (
             <div className="mb-3 flex flex-wrap gap-2">
-              {char.evolution.map((entry) => (
+              {evolution.map((entry) => (
                 <span key={entry} className="rounded bg-game-surface-alt px-2 py-1 text-sm text-game-text">
                   {entry}
                 </span>

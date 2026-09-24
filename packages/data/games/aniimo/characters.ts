@@ -18,7 +18,11 @@ export function getAniimoCharacterImage(char: AniimoCharacter): string {
 }
 
 export function getAniimoCharacterById(id: string): AniimoCharacter | undefined {
-  return aniimoCharacters.find((char) => char.id === id || char.aliases.includes(id));
+  return aniimoCharacters.find((char) => char.id === id || char.aliases?.includes(id));
+}
+
+export function getAniimoCharacterEvolution(char: AniimoCharacter): string[] {
+  return Array.isArray(char.evolution) ? char.evolution : [];
 }
 
 export function getAniimoCharacterTierReason(char: AniimoCharacter, locale: SupportedLocale): string {
