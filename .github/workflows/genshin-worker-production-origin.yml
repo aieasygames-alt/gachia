@@ -37,7 +37,7 @@ jobs:
       - name: Deploy production Genshin Worker without Router cutover
         run: |
           set -euo pipefail
-          pnpm --filter @gachia/game-genshin deploy 2>&1 | tee /tmp/genshin-production-deploy.log
+          pnpm --filter @gachia/game-genshin run deploy 2>&1 | tee /tmp/genshin-production-deploy.log
           origin=$(sed -nE 's#.*(https://[^[:space:]]+\.workers\.dev[^[:space:]]*).*#\1#p' /tmp/genshin-production-deploy.log | tail -n 1)
           if [ -z "$origin" ]; then
             echo 'Unable to determine Genshin production Worker URL from Wrangler output.' >&2
