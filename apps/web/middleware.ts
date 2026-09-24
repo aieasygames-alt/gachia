@@ -19,6 +19,21 @@ const LEGACY_CHARACTER_LIST_REDIRECTS: Partial<Record<GameId, readonly string[]>
 
 const LEGACY_STARRAIL_ITEM_SLUGS = ['ancient-spar', 'scorched-acorn', 'storm-eye', 'void-cast-iron'] as const;
 
+const LEGACY_ROOT_ROUTES: Record<string, string> = {
+  about: '/zh/about',
+  calendar: '/zh/calendar',
+  characters: '/zh/games',
+  eggs: '/zh/roco/eggs',
+  games: '/zh/games',
+  guides: '/zh/games',
+  map: '/zh/games',
+  merchant: '/zh/roco/merchant',
+  'pull-planner': '/zh/tools/pull-planner',
+  'redeem-codes': '/zh/games',
+  'tier-list': '/zh/games',
+  'type-chart': '/zh/roco/type-chart',
+};
+
 const GAME_ROUTE_DENYLIST: Partial<Record<GameId, readonly string[]>> = {
   aniimo: ['weapons', 'items', 'tier-list', 'build', 'compare', 'teams', 'artifacts', 'drive-discs', 'disk-sets', 'calculator', 'gacha', 'anomalies'],
   skjh: ['characters', 'tier-list', 'artifacts', 'drive-discs', 'disk-sets', 'compare', 'gacha', 'anomalies'],
@@ -72,6 +87,18 @@ export default function middleware(request: NextRequest) {
   const locale = asLocale(firstSegment);
   const game = asGame(locale ? secondSegment : firstSegment);
 
+  const legacyRootRoute = firstSegment ? LEGACY_ROOT_ROUTES[firstSegment] : undefined;
+  if (!locale && !game && segments.length === 1 && legacyRootRoute) {
+    return redirectTo(request, legacyRootRoute);
+  }
+
+  if (locale && game && thirdSegment && fourthSegment) {
+    const cleanedDetailSegment = stripLabelSuffix(fourthSegment);
+    if (cleanedDetailSegment) {
+      return redirectTo(request, `/${locale}/${game}/${thirdSegment}/${cleanedDetailSegment}`);
+    }
+  }
+
   if (game && !locale) {
     const cleanedSecondSegment = stripLabelSuffix(secondSegment);
     const cleanedThirdSegment = stripLabelSuffix(thirdSegment);
@@ -120,6 +147,10 @@ export default function middleware(request: NextRequest) {
   }
 
   if (locale && secondSegment === 'starrail' && thirdSegment === 'characters' && fourthSegment === 'preservation-trailblazer') {
+    return redirectTo(request, `/${locale}/starrail/characters`);
+  }
+
+  if (locale && secondSegment === 'starrail' && thirdSegment === 'characters' && fourthSegment === 'harmony-trailblazer') {
     return redirectTo(request, `/${locale}/starrail/characters`);
   }
 

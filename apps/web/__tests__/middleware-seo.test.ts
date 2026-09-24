@@ -18,5 +18,8 @@ describe('SEO redirect contracts', () => {
     expect(middleware).toContain("nte: ['characters', 'weapons', 'items', 'tier-list'");
     expect(middleware).toContain("zzz: ['characters', 'weapons', 'items', 'tier-list'");
     expect(middleware).toContain('isUnsupportedGameRoute(game, thirdSegment)');
+    expect(middleware).toContain('LEGACY_ROOT_ROUTES');
+    expect(middleware).toContain('stripLabelSuffix(fourthSegment)');
+    expect(middleware).toContain("fourthSegment === 'harmony-trailblazer'");
   });
 });
