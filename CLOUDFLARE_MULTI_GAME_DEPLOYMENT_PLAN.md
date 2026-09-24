@@ -1216,6 +1216,7 @@ Genshin Router 白名单必须精确覆盖以下三类路径，未知游戏路�
 | 2026-09-24 | 阶段 3：远端 preview 门禁 | 已实现，待手动触发 | `.github/workflows/genshin-worker-preview.yml` | 仅手动部署 `gachia-game-genshin-staging`，强制 `robots.txt` 禁止抓取、页面 `X-Robots-Tag: noindex` 和实际 hash 资源 200，再运行 60 URL parity；不发布 Router、不修改生产开关 |
 | 2026-09-24 | 阶段 3：首次远端 preview 执行 | 阻断（CI 工具修复中） | GitHub Actions run `35976409089` | staging Worker 已成功部署至 `gachia-game-genshin-staging.aieasygames.workers.dev`，但检查步骤依赖 runner 未安装的 `rg`，在 Worker 响应验证前失败；已改用系统 `grep`，生产 Router 仍关闭 |
 | 2026-09-24 | 阶段 3：第二次远端 preview 执行 | 阻断（Worker 500，诊断增强中） | GitHub Actions run `35976787956` | staging Worker 上传成功，但 `robots.txt` 后的 Genshin 页面请求返回 HTTP 500；未运行 parity，生产 Router 保持关闭。已使 workflow 在后续失败时输出完整 headers/body，并补齐 preview HTML robots metadata |
+| 2026-09-24 | 阶段 3：Worker 500 诊断 | 进行中 | staging Worker observability | `robots.txt` 正常且返回 noindex；`/zh/genshin` 返回 Next.js 500 错误页。为获取 Cloudflare 运行期栈，已为 Genshin Worker 打开持久化 invocation logs；未调整生产 Router 或流量 |
 | 待填写 | 阶段 1 | 未开始 |  |  |
 | 待填写 | 阶段 2 | 未开始 |  |  |
 | 待填写 | 阶段 3 | 未开始 |  |  |
