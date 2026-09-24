@@ -64,7 +64,10 @@ jobs:
           ! grep -q 'Disallow: /' /tmp/robots.txt.body
           for path in zh/genshin zh/genshin/characters/hu-tao sitemap.xml; do
             fetch "$path"
-            ! grep -qi '^x-robots-tag:.*noindex' "/tmp/${path//\//_}.headers"
+            if grep -qi '^x-robots-tag:.*noindex' "/tmp/${path//\//_}.headers"; then
+              echo "Unexpected noindex response on production origin: $path" >&2
+              exit 1
+            fi
           done
           asset=$(sed -nE 's#.*(/_games/genshin/_next/[^" ]+).*#\1#p' /tmp/zh_genshin.body | head -n 1)
           test -n "$asset"

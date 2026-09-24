@@ -1,5 +1,7 @@
 import type { NextConfig } from 'next';
 
+const isPreview = process.env.GENSHIN_DEPLOYMENT_MODE !== 'production';
+
 const nextConfig: NextConfig = {
   assetPrefix: '/_games/genshin',
   images: { unoptimized: true },
@@ -13,6 +15,8 @@ const nextConfig: NextConfig = {
     };
   },
   async headers() {
+    if (!isPreview) return [];
+
     return [
       {
         source: '/(.*)',

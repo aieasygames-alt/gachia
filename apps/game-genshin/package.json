@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "build:worker": "opennextjs-cloudflare build",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview --config wrangler.jsonc",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy --config wrangler.jsonc --env \"\"",
-    "deploy:staging": "opennextjs-cloudflare build && opennextjs-cloudflare deploy --config wrangler.jsonc --env staging",
-    "verify:bundle": "opennextjs-cloudflare build && wrangler deploy --dry-run --config wrangler.jsonc --env \"\"",
+    "build:worker": "GENSHIN_DEPLOYMENT_MODE=production opennextjs-cloudflare build",
+    "preview": "GENSHIN_DEPLOYMENT_MODE=preview opennextjs-cloudflare build && opennextjs-cloudflare preview --config wrangler.jsonc",
+    "deploy": "GENSHIN_DEPLOYMENT_MODE=production opennextjs-cloudflare build && opennextjs-cloudflare deploy --config wrangler.jsonc --env \"\"",
+    "deploy:staging": "GENSHIN_DEPLOYMENT_MODE=preview opennextjs-cloudflare build && opennextjs-cloudflare deploy --config wrangler.jsonc --env staging",
+    "verify:bundle": "GENSHIN_DEPLOYMENT_MODE=production opennextjs-cloudflare build && wrangler deploy --dry-run --config wrangler.jsonc --env \"\"",
     "seo:parity": "node ../../scripts/genshin-seo-parity.mjs",
     "type-check": "tsc --noEmit"
   },
