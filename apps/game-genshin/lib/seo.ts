@@ -59,3 +59,13 @@ export function entityJsonLd(locale: SupportedLocale, path: string, name: string
     },
   ];
 }
+
+export function breadcrumbJsonLd(locale: SupportedLocale, path: string, current: string) {
+  const segments = path.split('/').filter(Boolean);
+  const items = [
+    { '@type': 'ListItem', position: 1, name: locale === 'zh' ? '首页' : locale === 'ja' ? 'ホーム' : 'Home', item: `${BASE_URL}/${locale}` },
+    { '@type': 'ListItem', position: 2, name: locale === 'en' ? 'Genshin Impact' : '原神', item: `${BASE_URL}/${locale}/genshin` },
+  ];
+  if (segments.length > 0) items.push({ '@type': 'ListItem', position: 3, name: current, item: `${BASE_URL}/${locale}/genshin/${path}` });
+  return { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items };
+}
