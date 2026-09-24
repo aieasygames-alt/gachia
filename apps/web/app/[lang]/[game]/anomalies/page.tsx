@@ -3,6 +3,7 @@ import type { GameId, SupportedLocale } from '@gachia/core';
 import { anomalies as nteAnomalies, getAnomalyName } from '@gachia/data/games/nte/anomalies';
 import type { NteAnomaly } from '@gachia/data/games/nte/anomalies';
 import { ensureMetaLength } from '@/lib/seo-metadata';
+import { notFound } from 'next/navigation';
 
 export async function generateMetadata({
   params,
@@ -40,18 +41,7 @@ export default async function AnomaliesPage({
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];
 
-  if (gameId !== 'nte') {
-    return (
-      <div>
-        <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-          {CATEGORY_LABELS.anomalies?.[locale] ?? 'Anomalies'}
-        </h1>
-        <div className="flex h-48 items-center justify-center rounded-lg border border-dashed border-game-border text-sm text-game-text-muted">
-          Coming Soon
-        </div>
-      </div>
-    );
-  }
+  if (gameId !== 'nte') notFound();
 
   const all = nteAnomalies;
   const bosses = all.filter((a) => a.type === 'boss');

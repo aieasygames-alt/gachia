@@ -4,7 +4,9 @@ import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 
 const middleware = readFileSync(join(__dirname, '../middleware.ts'), 'utf8');
+const anomaliesPage = readFileSync(join(__dirname, '../app/[lang]/[game]/anomalies/page.tsx'), 'utf8');
 const charactersPage = readFileSync(join(__dirname, '../app/[lang]/[game]/characters/page.tsx'), 'utf8');
+const diskSetsPage = readFileSync(join(__dirname, '../app/[lang]/[game]/disk-sets/page.tsx'), 'utf8');
 const weaponsPage = readFileSync(join(__dirname, '../app/[lang]/[game]/weapons/page.tsx'), 'utf8');
 
 describe('SEO redirect contracts', () => {
@@ -38,5 +40,13 @@ describe('SEO redirect contracts', () => {
     expect(charactersPage).toContain('if (chars.length > 0)');
     expect(charactersPage).toContain('  notFound();');
     expect(charactersPage).not.toContain('>Coming Soon</div>');
+  });
+
+  it('returns 404 for category databases that only exist for another game', () => {
+    for (const page of [anomaliesPage, diskSetsPage]) {
+      expect(page).toContain("import { notFound } from 'next/navigation';");
+      expect(page).toContain("if (gameId !== 'nte') notFound();");
+      expect(page).not.toContain('>Coming Soon</div>');
+    }
   });
 });

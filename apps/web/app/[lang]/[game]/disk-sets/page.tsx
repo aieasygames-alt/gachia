@@ -3,6 +3,7 @@ import type { GameId, SupportedLocale } from '@gachia/core';
 import { diskSets as nteDiskSets, getNteDiskSetName, getNteDiskSetDesc2pc, getNteDiskSetDesc4pc } from '@gachia/data/games/nte/extras';
 import { getNteCharacterName, getNteCharacterById } from '@gachia/data/games/nte/characters';
 import { ensureMetaLength } from '@/lib/seo-metadata';
+import { notFound } from 'next/navigation';
 
 const ELEMENT_COLORS: Record<string, string> = {
   anima: '#4ade80', chaos: '#8b5cf6', cosmos: '#3b82f6',
@@ -58,18 +59,7 @@ export default async function DiskSetsPage({
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];
 
-  if (gameId !== 'nte') {
-    return (
-      <div>
-        <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-          {CATEGORY_LABELS['disk-sets']?.[locale] ?? 'Disk Sets'}
-        </h1>
-        <div className="flex h-48 items-center justify-center rounded-lg border border-dashed border-game-border text-sm text-game-text-muted">
-          Coming Soon
-        </div>
-      </div>
-    );
-  }
+  if (gameId !== 'nte') notFound();
 
   const diskSets = nteDiskSets;
   const general = diskSets.filter((d) => d.category === 'general');
