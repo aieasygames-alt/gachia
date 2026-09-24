@@ -4,6 +4,7 @@ import { getCharacterListData } from '@/lib/game-data/characters';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
+import { notFound } from 'next/navigation';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -243,18 +244,7 @@ export default async function CharactersPage({
     return <><CharacterListPage chars={chars} locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
   }
 
-  return (
-    <div>
-      <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
-      </h1>
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-        <div className="flex h-48 items-center justify-center rounded-lg border border-dashed border-game-border text-sm text-game-text-muted">
-          Coming Soon
-        </div>
-      </div>
-    </div>
-  );
+  notFound();
 }
 
 const ELEMENT_COLORS: Record<string, string> = {
