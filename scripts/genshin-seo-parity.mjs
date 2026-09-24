@@ -54,8 +54,11 @@ async function fetchSnapshot(origin, path) {
 async function checkAssets(origin, assets) {
   const results = await Promise.all(assets.slice(0, 12).map(async (asset) => {
     try {
-      const response = await fetch(new URL(asset, origin), { signal: AbortSignal.timeout(timeoutMs) });
-      return { asset, status: response.status, contentType: response.headers.get('content-type') ?? '' };
+      const requestPath = previewOnly
+        ? `/_next/${asset.slice('/_games/genshin/_next/'.length)}`
+        : asset;
+      const response = await fetch(new URL(requestPath, origin), { signal: AbortSignal.timeout(timeoutMs) });
+      return { asset, requestPath, status: response.status, contentType: response.headers.get('content-type') ?? '' };
     } catch (error) {
       return { asset, status: 0, contentType: '', error: String(error) };
     }
