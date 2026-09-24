@@ -3,6 +3,7 @@ import type { GameId, SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
 import { getArtifactListData } from '@/lib/game-data/artifacts';
 import type { ArtifactSetSummary } from '@/lib/game-data/artifacts';
+import { notFound } from 'next/navigation';
 
 const RARITY_COLORS: Record<number, string> = { 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };
 type NextStepLink = {
@@ -93,18 +94,7 @@ export default async function ArtifactsPage({
   const gameConfig = GAMES[gameId];
   const data = await getArtifactListData(gameId, locale);
 
-  if (!data) {
-    return (
-      <div>
-        <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-          {CATEGORY_LABELS.artifacts?.[locale] ?? 'Artifacts'}
-        </h1>
-        <div className="flex h-48 items-center justify-center rounded-lg border border-dashed border-game-border text-sm text-game-text-muted">
-          Coming Soon
-        </div>
-      </div>
-    );
-  }
+  if (!data) notFound();
 
   const label = getArtifactLabel(gameId, locale);
 

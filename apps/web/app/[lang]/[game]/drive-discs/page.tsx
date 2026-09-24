@@ -5,6 +5,7 @@ import { getZzzCharacterName, getZzzCharacterById } from '@gachia/data/games/zzz
 import { Link } from '@/lib/i18n/navigation';
 import { ensureMetaLength } from '@/lib/seo-metadata';
 import dynamic from 'next/dynamic';
+import { notFound } from 'next/navigation';
 
 const ZzzDriveDiscEvaluator = dynamic(() => import('./zzz-drive-disc-evaluator').then((mod) => mod.ZzzDriveDiscEvaluator));
 
@@ -77,18 +78,7 @@ export default async function DriveDiscsPage({
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];
 
-  if (gameId !== 'zzz') {
-    return (
-      <div>
-        <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-          {CATEGORY_LABELS['drive-discs']?.[locale] ?? 'Drive Discs'}
-        </h1>
-        <div className="flex h-48 items-center justify-center rounded-lg border border-dashed border-game-border text-sm text-game-text-muted">
-          Coming Soon
-        </div>
-      </div>
-    );
-  }
+  if (gameId !== 'zzz') notFound();
 
   const driveDiscs = zzzDriveDiscs;
   const general = driveDiscs.filter((d) => d.category === 'general');

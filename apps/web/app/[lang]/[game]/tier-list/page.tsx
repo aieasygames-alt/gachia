@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
 import { getTierListGroups } from '@/lib/game-data/tier-lists';
 import type { TierListGroup } from '@/lib/game-data/tier-lists';
+import { notFound } from 'next/navigation';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -157,14 +158,7 @@ export default async function TierListPage({
     return <GenericTierListPage gameId="roco" locale={locale} />;
   }
 
-  return (
-    <div>
-      <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {CATEGORY_LABELS['tier-list']?.[locale] ?? 'Tier List'}
-      </h1>
-      <div className="flex h-48 items-center justify-center rounded-lg border border-dashed border-game-border text-sm text-game-text-muted">Coming Soon</div>
-    </div>
-  );
+  notFound();
 }
 
 function TierDataNotice({ gameId, locale }: { gameId: 'genshin' | 'starrail'; locale: SupportedLocale }) {

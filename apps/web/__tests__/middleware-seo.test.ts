@@ -5,8 +5,11 @@ import { describe, expect, it } from 'vitest';
 
 const middleware = readFileSync(join(__dirname, '../middleware.ts'), 'utf8');
 const anomaliesPage = readFileSync(join(__dirname, '../app/[lang]/[game]/anomalies/page.tsx'), 'utf8');
+const artifactsPage = readFileSync(join(__dirname, '../app/[lang]/[game]/artifacts/page.tsx'), 'utf8');
 const charactersPage = readFileSync(join(__dirname, '../app/[lang]/[game]/characters/page.tsx'), 'utf8');
 const diskSetsPage = readFileSync(join(__dirname, '../app/[lang]/[game]/disk-sets/page.tsx'), 'utf8');
+const driveDiscsPage = readFileSync(join(__dirname, '../app/[lang]/[game]/drive-discs/page.tsx'), 'utf8');
+const tierListPage = readFileSync(join(__dirname, '../app/[lang]/[game]/tier-list/page.tsx'), 'utf8');
 const weaponsPage = readFileSync(join(__dirname, '../app/[lang]/[game]/weapons/page.tsx'), 'utf8');
 
 describe('SEO redirect contracts', () => {
@@ -43,9 +46,19 @@ describe('SEO redirect contracts', () => {
   });
 
   it('returns 404 for category databases that only exist for another game', () => {
-    for (const page of [anomaliesPage, diskSetsPage]) {
+    for (const page of [anomaliesPage, diskSetsPage, driveDiscsPage]) {
       expect(page).toContain("import { notFound } from 'next/navigation';");
-      expect(page).toContain("if (gameId !== 'nte') notFound();");
+      expect(page).not.toContain('>Coming Soon</div>');
+    }
+    expect(anomaliesPage).toContain("if (gameId !== 'nte') notFound();");
+    expect(diskSetsPage).toContain("if (gameId !== 'nte') notFound();");
+    expect(driveDiscsPage).toContain("if (gameId !== 'zzz') notFound();");
+  });
+
+  it('does not expose empty artifact or tier-list placeholders to indexing', () => {
+    for (const page of [artifactsPage, tierListPage]) {
+      expect(page).toContain("import { notFound } from 'next/navigation';");
+      expect(page).toContain('notFound();');
       expect(page).not.toContain('>Coming Soon</div>');
     }
   });
