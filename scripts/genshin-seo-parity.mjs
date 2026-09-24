@@ -5,6 +5,7 @@ if (!stagingOrigin) throw new Error('Set GENSHIN_STAGING_ORIGIN to a protected G
 
 const productionOrigin = process.env.GENSHIN_PRODUCTION_ORIGIN ?? 'https://gachia.com';
 const previewOnly = process.env.GENSHIN_PREVIEW_ONLY === 'true';
+const workerOriginDirect = process.env.GENSHIN_WORKER_ORIGIN_DIRECT === 'true';
 const strictParity = process.env.GENSHIN_STRICT_PARITY === 'true';
 const timeoutMs = Number.parseInt(process.env.GENSHIN_PARITY_TIMEOUT_MS ?? '15000', 10);
 const locales = ['zh', 'en', 'ja'];
@@ -73,7 +74,7 @@ async function fetchSnapshot(origin, path) {
 async function checkAssets(origin, assets) {
   const results = await Promise.all(assets.slice(0, 12).map(async (asset) => {
     try {
-      const requestPath = previewOnly
+      const requestPath = previewOnly || workerOriginDirect
         ? `/_next/${asset.slice('/_games/genshin/_next/'.length)}`
         : asset;
       const response = await fetch(new URL(requestPath, origin), { signal: AbortSignal.timeout(timeoutMs) });
@@ -125,6 +126,6 @@ const failures = pages.flatMap(({ path, checks }) => Object.entries(checks).filt
 const reportDirectory = new URL('../reports/genshin/', import.meta.url);
 await mkdir(reportDirectory, { recursive: true });
 const output = new URL(`seo-parity-${new Date().toISOString().slice(0, 10)}.json`, reportDirectory);
-await writeFile(output, `${JSON.stringify({ generatedAt: new Date().toISOString(), productionOrigin, stagingOrigin, previewOnly, strictParity, timeoutMs, pages, failures }, null, 2)}\n`);
+await writeFile(output, `${JSON.stringify({ generatedAt: new Date().toISOString(), productionOrigin, stagingOrigin, previewOnly, workerOriginDirect, strictParity, timeoutMs, pages, failures }, null, 2)}\n`);
 console.log(`Wrote ${output.pathname}; inspected ${pages.length} pages; failures: ${failures.length}.`);
 if (failures.length) process.exit(1);
