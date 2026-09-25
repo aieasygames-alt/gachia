@@ -1,4 +1,4 @@
-import { CATEGORY_LABELS, GAMES, LOCALES } from '@gachia/core';
+import { CATEGORY_LABELS, GAMES, LOCALES, MAIN_WORKER_GAME_IDS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { notFound } from 'next/navigation';
 import { Link } from '@/lib/i18n/navigation';
@@ -632,8 +632,7 @@ function makeRuntime(
 
 export async function generateStaticParams() {
   const entries = await Promise.all(
-    (Object.keys(GAMES) as GameId[])
-      .filter((gameId) => gameId !== 'azur-promilia')
+    MAIN_WORKER_GAME_IDS
       .map(async (gameId) => {
       const runtime = await getGuideRuntime(gameId);
       return LOCALES.flatMap((lang) => runtime.guides.map((guide) => ({ lang, game: gameId, slug: guide.id })));

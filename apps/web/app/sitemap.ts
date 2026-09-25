@@ -39,6 +39,16 @@ type SitemapItem = { id: string };
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [];
 
+  for (const deployment of Object.values(GAME_DEPLOYMENTS)) {
+    if (deployment?.deployment === 'game' && deployment.status === 'live' && deployment.sitemapPath) {
+      entries.push({
+        url: `${BASE_URL}${deployment.sitemapPath}`,
+        changeFrequency: 'daily',
+        priority: 0.8,
+      });
+    }
+  }
+
   for (const locale of LOCALES) {
     // Home pages
     entries.push({

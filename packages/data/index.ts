@@ -921,5 +921,7 @@ export async function getGameData(gameId: GameId): Promise<GameData> {
       const { characters, weapons, items, tierLists } = await import('./games/azur-promilia');
       return { characters, weapons, items, tierLists };
     }
+    default:
+      throw new Error(`Game data is served by a dedicated Worker: ${gameId}`);
   }
 }

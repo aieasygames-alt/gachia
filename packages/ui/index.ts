@@ -7,7 +7,7 @@ export type HeaderRoute = {
 };
 
 export const headerGameIds = GAME_IDS;
-export const headerFeaturedGameIds = ['genshin', 'wuwa', 'zzz', 'roco', 'skjh'] as const;
+export const headerFeaturedGameIds = ['lvmeng', 'genshin', 'wuwa', 'zzz', 'roco'] as const;
 export const headerMoreGameIds = GAME_IDS.filter((id) => !headerFeaturedGameIds.includes(id as typeof headerFeaturedGameIds[number]));
 
 export const headerLanguageLabels: Record<SupportedLocale, string> = {
@@ -34,10 +34,11 @@ export type SharedHeaderModel = {
 
 export function createSharedHeaderModel(locale: SupportedLocale): SharedHeaderModel {
   const toItem = (id: GameId): SharedHeaderGameItem => ({ id, label: headerGameName(id, locale) });
+  const localizedGameIds = locale === 'zh' ? headerGameIds : headerGameIds.filter((id) => id !== 'lvmeng');
 
   return {
-    featuredGames: headerFeaturedGameIds.map(toItem),
-    moreGames: headerMoreGameIds.map(toItem),
+    featuredGames: headerFeaturedGameIds.filter((id) => localizedGameIds.includes(id)).map(toItem),
+    moreGames: headerMoreGameIds.filter((id) => localizedGameIds.includes(id)).map(toItem),
     moreGamesLabel: locale === 'zh' ? '更多游戏' : locale === 'ja' ? 'その他のゲーム' : 'More games',
     languages: (['zh', 'en', 'ja'] as const).map((target) => ({ locale: target, label: headerLanguageLabels[target] })),
   };

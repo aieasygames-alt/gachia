@@ -11,16 +11,23 @@ describe('shared header contract', () => {
   it('keeps independently deployed games registered', () => {
     expect(headerGameIds).toContain('nte');
     expect(headerGameIds).toContain('azur-promilia');
+    expect(headerGameIds).toContain('lvmeng');
   });
 
-  it('creates the same complete navigation model for every locale', () => {
+  it('creates a complete localized navigation model for every locale', () => {
     for (const locale of ['zh', 'en', 'ja'] as const) {
       const header = createSharedHeaderModel(locale);
+      const expectedGameIds = locale === 'zh' ? headerGameIds : headerGameIds.filter((gameId) => gameId !== 'lvmeng');
 
-      expect(header.featuredGames.map((game) => game.id)).toEqual(headerFeaturedGameIds);
-      expect(header.moreGames.map((game) => game.id)).toEqual(headerMoreGameIds);
+      expect(new Set([...header.featuredGames, ...header.moreGames].map((game) => game.id))).toEqual(new Set(expectedGameIds));
       expect(header.languages.map((language) => language.locale)).toEqual(['zh', 'en', 'ja']);
       expect(header.moreGamesLabel).not.toBe('');
     }
+  });
+
+  it('only exposes the Chinese-only Lvmeng route in Chinese navigation', () => {
+    expect(createSharedHeaderModel('zh').featuredGames.map((game) => game.id)).toContain('lvmeng');
+    expect(createSharedHeaderModel('en').featuredGames.map((game) => game.id)).not.toContain('lvmeng');
+    expect(createSharedHeaderModel('ja').featuredGames.map((game) => game.id)).not.toContain('lvmeng');
   });
 });

@@ -18,7 +18,7 @@ export const LOCALE_NAMES: Record<SupportedLocale, string> = {
 // Games Registry
 // ============================================================
 
-export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco', 'roco-cn', 'aniimo', 'azur-promilia'];
+export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco', 'roco-cn', 'aniimo', 'azur-promilia', 'lvmeng'];
 
 export const GAMES: Record<GameId, GameModule> = {
   genshin: {
@@ -646,6 +646,35 @@ export const GAMES: Record<GameId, GameModule> = {
       calculator: false,
       map: false,
       guides: true,
+      'redeem-codes': true,
+    },
+  },
+  lvmeng: {
+    id: 'lvmeng',
+    name: { zh: '绿梦：时空之声', en: 'Lvmeng: Echoes of Time', ja: '緑夢：時空の声' },
+    theme: {
+      primary: '#55c681',
+      accent: '#e9b44c',
+      background: '#10251f',
+      surface: '#19372e',
+    },
+    elements: [],
+    rarities: [],
+    stats: {
+      baseStats: [],
+      subStats: [],
+      specialStats: [],
+    },
+    routes: {
+      characters: false,
+      weapons: false,
+      items: false,
+      'tier-list': false,
+      calculator: false,
+      map: false,
+      guides: true,
+      version: true,
+      download: true,
       'redeem-codes': true,
     },
   },

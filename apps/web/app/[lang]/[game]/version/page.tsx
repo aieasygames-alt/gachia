@@ -188,7 +188,7 @@ const INTENT_LINKS: Partial<Record<GameId, IntentLink[]>> = {
   ],
 };
 
-const VERSION_COPY: Record<GameId, HubCopy> = {
+const VERSION_COPY: Partial<Record<GameId, HubCopy>> = {
   genshin: {
     title: { zh: '7.1 前瞻 / Snezhnaya 专题', en: 'v7.1 Watch / Snezhnaya Hub', ja: 'v7.1注目 / Snezhnaya特集' },
     description: {
@@ -1665,6 +1665,7 @@ export async function generateMetadata({
   const gameId = game as GameId;
   const gameName = GAMES[gameId]?.name[locale];
   const hub = VERSION_COPY[gameId];
+  if (!gameName || !hub) return {};
   const title = VERSION_META_OVERRIDES[gameId]?.[locale]?.title ?? `${gameName} ${hub.title[locale]}`;
   const description = VERSION_META_OVERRIDES[gameId]?.[locale]?.description ?? hub.description[locale];
   const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/version`, LOCALES);

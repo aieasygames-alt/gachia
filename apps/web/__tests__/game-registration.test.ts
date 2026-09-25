@@ -1,6 +1,5 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { GAME_IDS } from '@gachia/core';
 import { describe, expect, it } from 'vitest';
 
 const root = join(__dirname, '../../..');
@@ -10,12 +9,11 @@ function readProjectFile(path: string) {
 }
 
 describe('game registration', () => {
-  it('keeps middleware route matching aligned with core games', () => {
+  it('keeps lvmeng out of the main worker non-localized matcher', () => {
     const middleware = readProjectFile('apps/web/middleware.ts');
 
-    for (const gameId of GAME_IDS) {
-      expect(middleware, `${gameId} should be matched by middleware`).toContain(gameId);
-    }
+    expect(middleware).toContain("'/(zh|en|ja)/:path*'");
+    expect(middleware).not.toContain('|lvmeng)');
   });
 
   it('keeps IndexNow new-page submission aligned with core games', () => {

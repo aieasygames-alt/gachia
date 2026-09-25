@@ -24,7 +24,7 @@ const GUIDE_DESC: Record<string, Record<string, string>> = {
   'azur-promilia': { zh: '蓝色星原：旅谣攻略百科，优先整理官方信息核对、角色、武器、版本与兑换码状态。', en: 'Azur Promilia guides focused on official-information checks, characters, weapons, versions, and code status.', ja: 'アズールプロミリア攻略百科。公式情報の確認、キャラクター、武器、バージョン、コード状態を整理します。' },
 };
 
-const FEATURED_GUIDE_IDS: Record<GameId, string[]> = {
+const FEATURED_GUIDE_IDS: Partial<Record<GameId, string[]>> = {
   genshin: ['banner-schedule-guide', 'snezhnaya-version-guide', 'lunar-reaction-guide'],
   starrail: ['banner-schedule-guide', 'v4-4-preview-guide', 'fate-collab-guide'],
   wuwa: ['banner-schedule-guide', 'v3-6-qingxiao-jingran-post-launch-route', 'farming-route-guide'],
@@ -463,7 +463,7 @@ export default async function GuidesPage({
 async function GenshinGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
   const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES.genshin;
-  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.genshin);
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.genshin ?? []);
 
   return (
     <div>
@@ -579,7 +579,7 @@ async function GenshinGuides({ locale, gameId }: { locale: SupportedLocale; game
 async function StarRailGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
   const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES.starrail;
-  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.starrail);
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.starrail ?? []);
 
   return (
     <div>
@@ -719,7 +719,7 @@ async function StarRailGuides({ locale, gameId }: { locale: SupportedLocale; gam
 async function NteGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
   const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES.nte;
-  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.nte);
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.nte ?? []);
 
   return (
     <div>
@@ -835,7 +835,7 @@ async function NteGuides({ locale, gameId }: { locale: SupportedLocale; gameId: 
 async function WuWaGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
   const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES.wuwa;
-  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.wuwa);
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.wuwa ?? []);
 
   return (
     <div>
@@ -953,7 +953,7 @@ async function WuWaGuides({ locale, gameId }: { locale: SupportedLocale; gameId:
 async function ZzzGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
   const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES.zzz;
-  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.zzz);
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.zzz ?? []);
 
   return (
     <div>
@@ -1069,7 +1069,7 @@ async function ZzzGuides({ locale, gameId }: { locale: SupportedLocale; gameId: 
 async function GuihuanGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
   const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES.guihuan;
-  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.guihuan);
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.guihuan ?? []);
 
   return (
     <div>
@@ -1183,7 +1183,7 @@ async function GuihuanGuides({ locale, gameId }: { locale: SupportedLocale; game
 async function AnantaGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
   const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES.ananta;
-  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.ananta);
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.ananta ?? []);
 
   return (
     <div>
@@ -1297,7 +1297,7 @@ async function AnantaGuides({ locale, gameId }: { locale: SupportedLocale; gameI
 async function EndfieldGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
   const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES.endfield;
-  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.endfield);
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.endfield ?? []);
 
   return (
     <div>
@@ -1411,7 +1411,7 @@ async function EndfieldGuides({ locale, gameId }: { locale: SupportedLocale; gam
 async function SeaGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
   const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES.sea;
-  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.sea);
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.sea ?? []);
 
   return (
     <div>
@@ -1563,7 +1563,7 @@ async function SeaGuides({ locale, gameId }: { locale: SupportedLocale; gameId: 
 async function SkjhGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
   const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES.skjh;
-  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.skjh);
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.skjh ?? []);
 
   return (
     <div>
@@ -1715,7 +1715,7 @@ async function SkjhGuides({ locale, gameId }: { locale: SupportedLocale; gameId:
 async function RocoGuides({ locale, gameId }: { locale: SupportedLocale; gameId: RocoGameId }) {
   const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
   const gameConfig = GAMES[gameId];
-  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS[gameId]);
+  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS[gameId] ?? []);
   const actionLinks = ROCO_ACTION_LINKS[gameId];
 
   return (

@@ -7,7 +7,9 @@
     "AZUR_PROMILIA_ENABLED": "true",
     "AZUR_PROMILIA_CANARY_COOKIE": "",
     "GENSHIN_ENABLED": "false",
-    "GENSHIN_CANARY_COOKIE": ""
+    "GENSHIN_CANARY_COOKIE": "",
+    "LVMENG_ENABLED": "true",
+    "LVMENG_CANARY_COOKIE": "enabled"
   },
   "services": [
     {
@@ -25,6 +27,10 @@
     {
       "binding": "GENSHIN_SITE",
       "service": "gachia-game-genshin"
+    },
+    {
+      "binding": "LVMENG_SITE",
+      "service": "gachia-game-lvmeng"
     }
   ],
   "env": {
@@ -36,6 +42,8 @@
         "AZUR_PROMILIA_CANARY_COOKIE": "enabled",
         "GENSHIN_ENABLED": "false",
         "GENSHIN_CANARY_COOKIE": "enabled",
+        "LVMENG_ENABLED": "false",
+        "LVMENG_CANARY_COOKIE": "enabled",
         "PREVIEW_MODE": "true"
       },
       "services": [
@@ -50,6 +58,10 @@
         {
           "binding": "GENSHIN_SITE",
           "service": "gachia-game-genshin"
+        },
+        {
+          "binding": "LVMENG_SITE",
+          "service": "gachia-game-lvmeng"
         }
       ]
     }

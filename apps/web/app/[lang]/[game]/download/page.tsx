@@ -41,7 +41,7 @@ const DEFAULT_STATUS: LocaleText = {
   ja: '公式サイト、ストア、公式コミュニティ告知を必ず確認してください。事前DL、容量、サーバー時間は地域で変わる場合があります。',
 };
 
-const DOWNLOAD_COPY: Record<GameId, DownloadCopy> = {
+const DOWNLOAD_COPY: Partial<Record<GameId, DownloadCopy>> = {
   genshin: {
     officialUrl: 'https://genshin.hoyoverse.com/',
     status: {

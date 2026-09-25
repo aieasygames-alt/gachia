@@ -1,6 +1,6 @@
 import { CharacterSchema, WeaponSchema, ItemSchema, TierListSchema } from '@gachia/core';
 import { getGameData } from '../index';
-import { GAME_IDS } from '@gachia/core';
+import { MAIN_WORKER_GAME_IDS } from '@gachia/core';
 
 // Declare process type for Node.js environment
 declare const process: {
@@ -10,7 +10,7 @@ declare const process: {
 async function validate() {
   let errors = 0;
 
-  for (const gameId of GAME_IDS) {
+  for (const gameId of MAIN_WORKER_GAME_IDS) {
     // CRITICAL FIX: Add await - getGameData returns a Promise
     const data = await getGameData(gameId);
 

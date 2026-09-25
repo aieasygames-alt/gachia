@@ -231,6 +231,6 @@ export const config = {
     '/',
     '/(zh|en|ja)/:path*',
     '/(sitemap|api|privacy|terms|contact)',
-    '/(genshin|starrail|wuwa|nte|zzz|guihuan|ananta|endfield|sea|skjh|roco|roco-cn|aniimo|azur-promilia)/:path*',
+    '/(genshin|starrail|wuwa|nte|zzz|guihuan|ananta|endfield|sea|skjh|roco|roco-cn|aniimo)/:path*',
   ],
 };

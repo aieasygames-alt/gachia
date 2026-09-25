@@ -414,11 +414,12 @@ export default async function LocaleHome({
   const liveVersions = sortByPriority(LIVE_VERSION_UPDATES).slice(0, 3);
   const liveCodes = sortByPriority(LIVE_CODE_SUMMARIES).slice(0, 3);
   const liveGuides = sortByPriority(LIVE_GUIDES).slice(0, 3);
-  const priorityGames = HOMEPAGE_PRIORITY_GAMES.filter((gameId) => GAMES[gameId]);
+  const availableGameIds = locale === 'zh' ? GAME_IDS : GAME_IDS.filter((gameId) => gameId !== 'lvmeng');
+  const priorityGames = HOMEPAGE_PRIORITY_GAMES.filter((gameId) => availableGameIds.includes(gameId));
   const geoBrief = GEO_BRIEF[locale];
   const citationGuide = CITATION_GUIDE[locale];
 
-  const orderedGames = [...priorityGames, ...GAME_IDS.filter((gameId) => !priorityGames.includes(gameId))];
+  const orderedGames = [...priorityGames, ...availableGameIds.filter((gameId) => !priorityGames.includes(gameId))];
   const spotlightGames = orderedGames.slice(0, 5);
   const updateFeed: HomeFeedItem[] = sortByPriority([...LIVE_BANNERS, ...LIVE_VERSION_UPDATES, ...LIVE_CODE_SUMMARIES, ...LIVE_GUIDES]).slice(0, 8);
 

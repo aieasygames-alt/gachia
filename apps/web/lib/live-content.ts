@@ -73,6 +73,7 @@ export interface LiveCalendarEvent {
 export const LIVE_UPDATED_AT = '2026-09-21';
 
 export const HOMEPAGE_PRIORITY_GAMES: GameId[] = [
+  'lvmeng',
   'genshin',
   'wuwa',
   'zzz',

@@ -37,5 +37,14 @@ export const GENERATED_GAME_DEPLOYMENTS = [
     "status": "live",
     "binding": "AZUR_PROMILIA_SITE",
     "enabled": "AZUR_PROMILIA_ENABLED"
+  },
+  {
+    "id": "lvmeng",
+    "worker": "gachia-game-lvmeng",
+    "assetPrefix": "/_games/lvmeng",
+    "sitemapPath": "/sitemaps/lvmeng/index.xml",
+    "status": "live",
+    "binding": "LVMENG_SITE",
+    "enabled": "LVMENG_ENABLED"
   }
 ] as const satisfies readonly GeneratedGameDeployment[];
