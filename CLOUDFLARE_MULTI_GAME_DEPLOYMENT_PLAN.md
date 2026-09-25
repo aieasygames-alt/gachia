@@ -1198,7 +1198,7 @@ Genshin Router 白名单必须精确覆盖以下三类路径，未知游戏路�
 ### 27.7 阶段 5：生产切流、验收与 2-4 周观察
 
 - [x] 已将 `GENSHIN_ENABLED=true` 与仅内部 canary Cookie 一起发布，使用 `X-Gachia-Route-Debug: 1` 验证只有预期请求命中 `genshin`；无 Cookie 请求仍命中 `main`。
-- [~] Canary 保持至少一个完整的流量与缓存周期；阶段 3 的全量样本、Chrome 桌面/移动首访与硬刷新、移动端地图及匿名 API 权限边界已通过。账号登录验收按产品范围排除；仍须完成完整缓存/流量周期观察及资源稳定性复测后，才可移除 Canary 限制进行全量分流。
+- [~] Canary 保持至少一个完整的流量与缓存周期；阶段 3 的全量样本、Chrome 桌面/移动首访与硬刷新、移动端地图及匿名 API 权限边界已通过。账号登录验收按产品范围排除；3 轮自动观察已完成且无失败，仍须跨完整缓存/流量周期持续观察后，才可移除 Canary 限制进行全量分流。
 - [ ] 全量切流后立即验证：根 `/sitemap.xml`、`/sitemaps/genshin/index.xml`、三语言 Genshin 代表页、根 `/_next/*`、其它独立游戏资产、主站首页、认证、收藏、地图进度和无效 URL。
 - [ ] 记录 Cloudflare Worker 错误率、5xx、资源 404、Router 目标分布、TTFB、缓存命中率；出现持续 5xx、资源/hydration 故障、认证泄露或 SEO 硬门槛失败时，立即 `GENSHIN_ENABLED=false` 回滚。
 - [ ] 在 Search Console 连续观察 2-4 周：Genshin sitemap 读取状态、已编入索引页数、抓取统计、404/5xx、重定向错误、canonical 选择、hreflang 诊断、Genshin 查询的展示/点击/排名。期间不因短期波动调整 URL。
@@ -1228,4 +1228,5 @@ Genshin Router 白名单必须精确覆盖以下三类路径，未知游戏路�
 | 2026-09-25 | 阶段 5：GitHub 主域名 canary 浏览器验收 | 已完成（仅内部 Cookie） | commit `2b44262`、GitHub Actions run `36084167352`、Router version `acb4cb9e-56ee-4085-b4f9-f93b7b8352c9` | production environment 的受保护 token 驱动默认/Main 与 Cookie/Genshin 分流验证；60 URL 严格 parity、5 项 API 边界和 8 项 Playwright 测试均通过，覆盖桌面与 iPhone 13 的首页、角色详情、地图首访及硬刷新。仍未验证真实登录会话，也未全量切流。 |
 | 2026-09-25 | 阶段 5：首次全量切流与自动回滚 | 已回滚 | commit `1c24a6a`、Router version `3ac0a174-2dc0-4fbb-9d64-d5c54dcc717f` -> `f2d22aec-035f-46ba-b070-4eec6c1db514` | 无 Cookie 路由、页面、sitemap、资源、跨游戏路径与 API 快速回归通过；严格 parity 发现两项静态资源请求超时（页面 HTML 与 SEO 内容仍一致），按资源稳定性硬门槛立即回滚至 Main。账号登录验收已按产品范围排除。必须在 canary 下完成带重试的资源稳定性复测后，才可再次全量切流。 |
 | 2026-09-25 | 阶段 5：资源稳定性 canary 复测 | 已完成（仅内部 Cookie） | commit `e37910c`、GitHub Actions run `36085573539`、Router version `93831610-fd0d-4eb5-8127-70577e9faac6` | 静态资源检查改为每个候选最多 3 次有限重试，仍强制 200 与正确 MIME，未放宽 SEO 或资源门槛。60 URL 严格 parity、API 边界和 8 项桌面/移动 Playwright 测试全部通过。保留 Cookie canary，等待完整缓存/流量周期观察后再评估第二次全量切流。 |
+| 2026-09-25 | 阶段 5：受保护 canary 启用与连续观察 | 进行中（仅内部 Cookie） | commits `07e679a`、`bdf7aab`、GitHub Actions runs `36106756224`、`36106831222` | GitHub 手动工作流现在负责恢复 Cookie-limited Router，防止常规生产部署覆盖临时 canary 配置。连续 3 轮、33 项路径检查全部通过：失败 0，平均 TTFB 278ms，最大 TTFB 1100ms；覆盖 Genshin 页面、资源、sitemap、无效路径、Main、NTE、Azur 和匿名 API。仍需跨完整缓存/流量周期观察。 |
 | 待完成 | 阶段 5：生产 canary 与全量切流 | 未开始 |  | 仅在所有切流硬门槛通过后执行 |
