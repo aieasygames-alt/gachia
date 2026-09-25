@@ -1,6 +1,6 @@
 import type { SupportedLocale } from '@gachia/core';
 
-type ReferenceTopic = 'home' | 'weapons' | 'artifacts' | 'items' | 'guides' | 'banner' | 'character';
+type ReferenceTopic = 'home' | 'weapons' | 'artifacts' | 'items' | 'guides' | 'banner' | 'character' | 'index-checklist';
 
 const content: Record<ReferenceTopic, Record<SupportedLocale, string[]>> = {
   home: {
@@ -37,6 +37,11 @@ const content: Record<ReferenceTopic, Record<SupportedLocale, string[]>> = {
     zh: ['角色详情页应当用于建立培养假设：这个角色在现有队伍中承担什么任务、需要哪些技能条件、能否使用已有武器和套装、以及需要多少材料投入。将这些假设写成短清单后，再进入武器、圣遗物、材料和配队页面逐项验证。', '技能与命之座字段适合解释角色的机制和可能的提升方向，但不应脱离操作、队友和资源成本作出结论。面对多个候选时，先比较谁能补足现有队伍的空缺，再比较更细的数值。', '实时数值、获取方式、卡池安排和版本改动可能影响最终选择。页面提供长期资料框架，最后的投入决定请结合游戏内状态和官方公告完成。'],
     en: ['Use a character detail page to form an investment hypothesis: what job does the character perform in the current team, which skill conditions matter, can owned weapons and sets be used, and what material investment is needed? Put those assumptions into a short list, then validate them one by one through weapon, artifact, material, and team pages.', 'Skill and constellation fields explain mechanics and possible upgrade directions, but they should not create a conclusion apart from execution, teammates, and resource cost. When comparing candidates, first ask which one fills the current roster gap, then compare more detailed numbers.', 'Live values, acquisition methods, banner plans, and version changes can affect the final choice. The page provides a durable reference framework; finish the investment decision with in-game status and official notices.'],
     ja: ['キャラ詳細ページは育成の仮説を作るために使います。現在の編成でどの仕事をするか、どのスキル条件が重要か、所持武器とセットを使えるか、どれだけの素材投資が必要かを考えます。前提を短いリストにしてから、武器、聖遺物、素材、編成ページで一つずつ確認してください。', 'スキルと命ノ星座の項目は仕組みと可能な強化方向を説明しますが、操作、味方、資源コストから切り離して結論を出すべきではありません。候補を比べるときは、まず現在の編成の不足を補えるかを考え、その後で細かい数値を比較します。', '最新の数値、入手方法、バナー計画、バージョン変更は最終選択に影響します。ページは長期的な資料の枠組みを提供し、最後の投資判断はゲーム内状態と公式告知を合わせて行ってください。'],
+  },
+  'index-checklist': {
+    zh: ['整理资料时，可以为每个候选加上四个固定字段：它解决的队伍问题、已经拥有的条件、仍需投入的资源，以及需要再次确认的时效信息。用相同字段比较角色、武器、套装和材料，能减少仅凭单一页面或单项数值做决定的情况。', '当多个目标同时存在时，先选择一个能在近期完成的项目，再把其他项目保留在后续列表中。完成后回看库存、队伍体验和版本信息，再决定是否开始下一项。这样的节奏可以避免把所有资源分散到没有完成节点的计划中。', '资料索引的目的在于支持比较和复核。所有与账号、登录、支付、奖励领取或实时活动有关的操作，都应回到游戏内或官方渠道完成，避免向第三方服务提供凭据。'],
+    en: ['When organizing references, give every candidate four stable fields: the roster problem it solves, the conditions already owned, the resources still required, and the time-sensitive information to recheck. Comparing characters, weapons, sets, and materials with the same fields reduces decisions made from one page or one isolated stat.', 'When several targets exist at once, choose one project that can be completed soon and keep the others on a later list. After completion, review inventory, team experience, and version information before starting the next item. This pace avoids spreading every resource across plans with no clear finish point.', 'The purpose of an index is comparison and verification. For accounts, logins, payments, reward redemption, or live events, return to the game or official channels and never provide credentials to third-party services.'],
+    ja: ['資料を整理するときは、各候補に四つの固定項目を付けます。編成のどの問題を解決するか、すでに所持している条件、まだ必要な資源、再確認が必要な時期依存情報です。キャラ、武器、セット、素材を同じ項目で比べると、一つのページや一つの数値だけで決めることを減らせます。', '複数の目標が同時にある場合は、まず近いうちに完了できる一つの項目を選び、残りは後のリストに置きます。完了後に在庫、編成での感触、バージョン情報を見直してから次を始めます。この進め方なら、完了地点のない計画にすべての資源を分散させずに済みます。', '資料索引の目的は比較と確認です。アカウント、ログイン、支払い、報酬受取、最新イベントに関する操作はゲーム内または公式経路へ戻り、第三者サービスに認証情報を渡さないでください。'],
   },
 };
 
