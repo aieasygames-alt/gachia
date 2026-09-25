@@ -1,0 +1,40 @@
+name: Genshin Canary Stability Observation
+
+on:
+  workflow_dispatch:
+    inputs:
+      rounds:
+        description: Number of consecutive observation rounds
+        required: false
+        default: '3'
+        type: string
+
+concurrency:
+  group: genshin-canary-observation-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    environment: production
+    permissions:
+      contents: read
+    env:
+      GENSHIN_CANARY_ORIGIN: https://gachia.com
+      GENSHIN_CANARY_TOKEN: ${{ secrets.GENSHIN_CANARY_TOKEN }}
+      GENSHIN_OBSERVATION_ROUNDS: ${{ inputs.rounds }}
+    steps:
+      - uses: actions/checkout@v7.0.0
+      - uses: actions/setup-node@v6.4.0
+        with:
+          node-version: 22
+      - name: Require the protected canary token
+        run: test -n "$GENSHIN_CANARY_TOKEN"
+      - name: Observe canary route, cache and latency stability
+        run: node scripts/genshin-canary-observe.mjs
+      - uses: actions/upload-artifact@v7.0.0
+        if: always()
+        with:
+          name: genshin-canary-observation
+          path: reports/genshin/canary-observation-*.json
+          if-no-files-found: warn
