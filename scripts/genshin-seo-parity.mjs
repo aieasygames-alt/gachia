@@ -7,6 +7,7 @@ const productionOrigin = process.env.GENSHIN_PRODUCTION_ORIGIN ?? 'https://gachi
 const previewOnly = process.env.GENSHIN_PREVIEW_ONLY === 'true';
 const workerOriginDirect = process.env.GENSHIN_WORKER_ORIGIN_DIRECT === 'true';
 const strictParity = process.env.GENSHIN_STRICT_PARITY === 'true';
+const stagingCookie = process.env.GENSHIN_STAGING_COOKIE ?? '';
 const timeoutMs = Number.parseInt(process.env.GENSHIN_PARITY_TIMEOUT_MS ?? '15000', 10);
 const locales = ['zh', 'en', 'ja'];
 const paths = locales.flatMap((locale) => [
@@ -67,7 +68,11 @@ function snapshot(path, response, html) {
   };
 }
 async function fetchSnapshot(origin, path) {
-  const response = await fetch(new URL(path, origin), { redirect: 'follow', signal: AbortSignal.timeout(timeoutMs) });
+  const response = await fetch(new URL(path, origin), {
+    redirect: 'follow',
+    signal: AbortSignal.timeout(timeoutMs),
+    headers: stagingCookie ? { cookie: stagingCookie } : undefined,
+  });
   return snapshot(path, response, await response.text());
 }
 
@@ -77,7 +82,10 @@ async function checkAssets(origin, assets) {
       const workerPath = `/_next/${asset.slice('/_games/genshin/_next/'.length)}`;
       const candidates = previewOnly ? [workerPath] : workerOriginDirect ? [workerPath, asset] : [asset];
       for (const requestPath of candidates) {
-        const response = await fetch(new URL(requestPath, origin), { signal: AbortSignal.timeout(timeoutMs) });
+        const response = await fetch(new URL(requestPath, origin), {
+          signal: AbortSignal.timeout(timeoutMs),
+          headers: stagingCookie ? { cookie: stagingCookie } : undefined,
+        });
         if (response.status === 200 && /(?:javascript|css|font|image)/i.test(response.headers.get('content-type') ?? '')) {
           return { asset, requestPath, status: response.status, contentType: response.headers.get('content-type') ?? '' };
         }

@@ -1166,8 +1166,8 @@ Genshin Router 白名单必须精确覆盖以下三类路径，未知游戏路�
 - [x] 扩展生成 Router 清单、`apps/router/wrangler.jsonc` Service Binding、Router `Env`、路径判断、请求改写和单元测试；Service Binding 名为 `GENSHIN_SITE`，开关为 `GENSHIN_ENABLED`，Canary Cookie 单独命名为 `gachia_genshin_canary`。
 - [x] Router 将 `/_games/genshin/_next/*` 转发到 `GENSHIN_SITE` 前，剥离 `/_games/genshin` 前缀为 Worker 内部的 `/_next/*`；将 `/sitemaps/genshin/index.xml` 改写为该 Worker 的 `/sitemap.xml`。不得转发根 `/_next/*`、根 sitemap、`/api/*`、认证回调或其它游戏资源。
 - [x] Router 测试覆盖 Genshin 三语言页面、详情页、资源重写、游戏 sitemap、非法 locale、未知页面、过深路径和相似前缀；既有 NTE/Azur/Main 路径测试继续通过。`/api/*` 和根 `/_next/*` 不在任何 Genshin 白名单中，继续交给 Main Worker。
-- [ ] Genshin 的收藏、地图进度、共享配装和用户角色请求继续指向 `https://gachia.com/api/*`；验证 Worker 通过 Router 返回 Main/API 响应时没有 Service Binding 递归。禁止在 Genshin Worker 中 `fetch('https://gachia.com/...')` 回调自己的页面路径。
-- [ ] 地图 tile、点位和进度接口按匿名/认证属性分别测试缓存：公开地图数据可缓存，用户进度绝不能缓存或跨用户复用。Cookie 域保持主域名，Path 和 SameSite 不得因 Worker 切换改变。
+- [x] Genshin 的收藏、地图进度、共享配装和用户角色请求继续指向 `https://gachia.com/api/*`；已验证匿名请求由 Main/API 返回且没有 Service Binding 递归。禁止在 Genshin Worker 中 `fetch('https://gachia.com/...')` 回调自己的页面路径。
+- [x] 地图 tile、点位和进度接口按匿名/认证属性分别测试缓存：公开地图数据可缓存，用户进度绝不能缓存或跨用户复用。Cookie 域保持主域名，Path 和 SameSite 不得因 Worker 切换改变。
 
 **阶段通过标准**：所有 Router 单元测试通过；打开 `GENSHIN_ENABLED=false` 时，所有 Genshin 生产路径仍由 Main Worker 返回原响应；开启仅 preview/canary 后，只有持有正确 Cookie 的请求进入 Genshin Worker。
 
@@ -1177,7 +1177,7 @@ Genshin Router 白名单必须精确覆盖以下三类路径，未知游戏路�
 - [ ] 预发布 Worker 必须返回 `X-Robots-Tag: noindex, nofollow` 且其 `robots.txt` 为 `Disallow: /`；生产 Worker 和经主域名 Router 返回的 Genshin 页面不得错误继承 noindex。
 - [ ] Genshin Worker 生成自己的 `/sitemap.xml`，并仅列出实际可索引的 Genshin 页面；Router 暴露为 `/sitemaps/genshin/index.xml`。根 `/sitemap.xml` 必须成为 sitemap index 或聚合入口，并稳定包含该 Genshin sitemap，不能重复列出同一 Genshin URL。
 - [ ] Main sitemap、主站通用 `generateStaticParams` 与资料页静态导入在 Genshin `live` 后不得再生成或打包完整 Genshin 页面；根 sitemap 仍需保留 Genshin 子 sitemap 的发现入口。
-- [ ] 新增 `genshin-seo-parity` 脚本：将阶段 0 样本在 Main 基线与独立 Worker preview/主域名 canary 上逐项比较状态码、最终 URL、title、description、canonical、hreflang、robots、JSON-LD、正文文本长度和 Genshin 内链数；允许的正文长度偏差必须有书面原因，默认不得减少。
+- [x] 新增 `genshin-seo-parity` 脚本：将阶段 0 样本在 Main 基线与独立 Worker preview/主域名 canary 上逐项比较状态码、最终 URL、title、description、canonical、hreflang、robots、JSON-LD、正文文本长度和 Genshin 内链数；允许的正文长度偏差必须有书面原因，默认不得减少。
 - [ ] 从每个预发布 HTML 动态提取实际 hash CSS/JS/RSC 地址，并检查 200、正确 MIME、无跨游戏资源前缀、首访与硬刷新均无 hydration 错误。不要固定检查 `webpack.js` 等构建产物名。
 - [ ] 用未登录、已登录、Cookie 缺失/过期、Googlebot User-Agent（只验证匿名 HTML，不伪造特权）验证：可索引资料页始终为匿名可访问；私有 API 不会泄露数据或返回可索引登录页。
 - [ ] Genshin Worker 页面应保留原 URL 的语言规范化、历史 URL 301、错误 slug 404；若这些规则目前在 `apps/web/middleware.ts`，必须先抽取为 Router 或 Genshin Worker 可共享逻辑，并在 parity 中逐条比对。
@@ -1188,7 +1188,7 @@ Genshin Router 白名单必须精确覆盖以下三类路径，未知游戏路�
 
 - [ ] CI 新增 `@gachia/game-genshin` 的 `type-check`、`verify:bundle`、SEO parity、预发布 smoke 和 Router 测试；`verify:bundle` 输出并保存 gzip 体积，超过 `2.2 MiB` 阻止合并。
 - [x] 更新 `pnpm validate:game-deployments`，从部署清单派生校验 `GENSHIN_SITE`、Worker 名称、资源前缀、sitemap、开关和生产状态，不新增只覆盖 Genshin 的硬编码分支。
-- [ ] 新增生产 smoke：游戏首页、每种列表和详情、地图、工具、Genshin sitemap、根 sitemap、从 HTML 提取的 hash 资源、`/api/auth/get-session`、收藏和地图进度权限边界；同时验证 `X-Gachia-Route-Target` 调试标记（仅在请求头显式开启时）。
+- [x] 新增生产 smoke：游戏首页、每种列表和详情、地图、工具、Genshin sitemap、根 sitemap、从 HTML 提取的 hash 资源、`/api/auth/get-session`、收藏和地图进度权限边界；同时验证 `X-Gachia-Route-Target` 调试标记（仅在请求头显式开启时）。
 - [ ] 部署顺序固定为：兼容 API（如有） -> Genshin Worker preview -> preview parity/smoke -> Genshin Worker production -> Router（先保持 `GENSHIN_ENABLED=false`） -> Main Worker（移除 Genshin runtime） -> 生产 canary -> Router 全量开启。
 - [ ] Router 发布前保留 `MAIN_SITE` 作为 Genshin 的直接 fallback，记录切换前 Main Worker 版本和 Genshin Worker 版本；故障时将 `GENSHIN_ENABLED=false` 回滚到 Main，不改变 URL、canonical 或 sitemap URL。
 - [ ] 发布窗口内禁止同时改 D1 schema、认证提供商、全站中间件、Next.js/OpenNext/Wrangler 大版本或 Genshin 内容模型；将这些变更拆到独立发布。
@@ -1197,7 +1197,7 @@ Genshin Router 白名单必须精确覆盖以下三类路径，未知游戏路�
 
 ### 27.7 阶段 5：生产切流、验收与 2-4 周观察
 
-- [ ] 先将 `GENSHIN_ENABLED=true` 与仅内部 canary Cookie 一起发布，使用 `X-Gachia-Route-Debug: 1` 验证只有预期请求命中 `genshin`；无 Cookie 请求仍命中 `main`。
+- [x] 已将 `GENSHIN_ENABLED=true` 与仅内部 canary Cookie 一起发布，使用 `X-Gachia-Route-Debug: 1` 验证只有预期请求命中 `genshin`；无 Cookie 请求仍命中 `main`。
 - [ ] Canary 保持至少一个完整的流量与缓存周期，完成阶段 3 的全量样本、Chrome 首访/硬刷新/站内跳转、移动端地图和登录功能验证后，再移除 Canary 限制进行全量分流。
 - [ ] 全量切流后立即验证：根 `/sitemap.xml`、`/sitemaps/genshin/index.xml`、三语言 Genshin 代表页、根 `/_next/*`、其它独立游戏资产、主站首页、认证、收藏、地图进度和无效 URL。
 - [ ] 记录 Cloudflare Worker 错误率、5xx、资源 404、Router 目标分布、TTFB、缓存命中率；出现持续 5xx、资源/hydration 故障、认证泄露或 SEO 硬门槛失败时，立即 `GENSHIN_ENABLED=false` 回滚。
@@ -1224,5 +1224,5 @@ Genshin Router 白名单必须精确覆盖以下三类路径，未知游戏路�
 | 2026-09-24 | 阶段 3：schema 基线校准与复测 | 进行中，仍阻断 | commits `59c4df2`、`2b25e18`，GitHub Actions run `35988650036`、artifact `genshin-production-origin-reports` | 生产严格对比改为以 Main 是否实际输出 JSON-LD 为存在性基线，类型数组仍须完全一致；撤回十个 Main 无 schema 页面上的额外 BreadcrumbList。独立 Worker 部署、源站可抓取和 `GENSHIN_ENABLED=false` 断言均通过；差异从 238 降至 208，`structuredDataPresent` 已归零、`sameJsonLdTypes` 降至 15。仍有全部 60 页 title/description 不同、45 页正文减少，故不得 canary。 |
 | 2026-09-24 | 阶段 3：Main metadata 基线回补与复测 | 进行中，仍阻断 | commit `6adbadb`，GitHub Actions run `36005617646`、artifact `genshin-production-origin-reports` | 将 20 个代表路径的三语 title/description 以 Main 实际渲染结果作为独立 Worker 基线，且不改 canonical、hreflang、正文或 Router。独立 Worker 部署、源站可抓取和 `GENSHIN_ENABLED=false` 断言均通过；严格差异从 208 降至 89，全部 60 项 title 差异与 59 项 description 差异已消除。仅余日语 teams 描述的一个字符转录差异，已在后续提交修正；仍有 45 页正文、15 页 schema 类型差异，故不得 canary。 |
 | 2026-09-25 | 阶段 3/4：生产 origin 严格 SEO parity 与 API 边界验收 | 已完成（未切流） | commit `4f5cd83`、GitHub Actions run `36083291008` | 独立生产 Worker 已部署；60 个三语言代表 URL 的状态码、最终路径、title、description、canonical、hreflang、JSON-LD、正文长度和 Genshin 内链严格对比全部通过；实际 hash 资源、origin 可访问性与匿名 API 边界也通过。生产 Router 断言并保持 `GENSHIN_ENABLED=false`，因此用户和搜索引擎仍由 Main Worker 服务。 |
-| 待完成 | 阶段 5：主域名 canary SEO/API 验证 | 切流阻断 | 主域名 cookie canary、完整 parity 与权限 smoke | 在 `GENSHIN_ENABLED=true` 且仅内部 Cookie 的 Router 发布前，已完成的 origin parity 必须在主域名路由链复验，并补齐登录、收藏、地图进度 API 边界验证；未通过前不得切流 |
+| 2026-09-25 | 阶段 5：主域名 Cookie canary SEO/API 验证 | 已完成（仅内部 Cookie） | commit `1875612`、Router version `a045cf0e-2c08-45f7-9b76-c8dee5cd5b08`、本地 `GENSHIN_STAGING_COOKIE` parity/smoke | 生产 Router 使用 Cloudflare secret 保存一次性 canary token；无 Cookie 请求保持 Main，携带 token 的请求命中 Genshin。主域名 60 URL 严格 SEO parity、Genshin sitemap、实际 hash JS 资源和 5 项 API 缓存/权限边界均通过。默认仓库配置仍为 `GENSHIN_ENABLED=false`，用于后续快速回滚。 |
 | 待完成 | 阶段 5：生产 canary 与全量切流 | 未开始 |  | 仅在所有切流硬门槛通过后执行 |
