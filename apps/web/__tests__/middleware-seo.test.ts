@@ -30,6 +30,13 @@ describe('SEO redirect contracts', () => {
     expect(middleware).toContain("fourthSegment === 'harmony-trailblazer'");
   });
 
+  it('does not allow Chinese-only Lvmeng to fall through to localized placeholder pages', () => {
+    expect(middleware).toContain('const LVMENG_ROUTES = new Set([');
+    expect(middleware).toContain("if (game === 'lvmeng')");
+    expect(middleware).toContain('const isSupportedChinesePage = locale === \'zh\'');
+    expect(middleware).toContain('return new NextResponse(null, { status: 404 });');
+  });
+
   it('does not render empty weapon databases as indexable placeholder pages', () => {
     expect(weaponsPage).toContain("import { notFound } from 'next/navigation';");
     expect(weaponsPage).toContain("if (gameId === 'sea') notFound();");

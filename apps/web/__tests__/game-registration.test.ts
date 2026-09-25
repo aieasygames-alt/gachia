@@ -16,6 +16,14 @@ describe('game registration', () => {
     expect(middleware).not.toContain('|lvmeng)');
   });
 
+  it('returns 404 instead of localized main-worker fallback pages for lvmeng', () => {
+    const middleware = readProjectFile('apps/web/middleware.ts');
+
+    expect(middleware).toContain("if (game === 'lvmeng')");
+    expect(middleware).toContain("locale === 'zh'");
+    expect(middleware).toContain('return new NextResponse(null, { status: 404 });');
+  });
+
   it('keeps IndexNow new-page submission aligned with core games', () => {
     const script = readProjectFile('scripts/indexnow-submit-new-pages.mjs');
 

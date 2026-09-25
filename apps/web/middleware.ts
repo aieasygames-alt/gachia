@@ -50,6 +50,21 @@ const GAME_ROUTE_ALLOWLIST: Partial<Record<GameId, readonly string[]>> = {
   zzz: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'guides', 'drive-discs', 'build', 'compare', 'teams', 'redeem-codes'],
 };
 
+const LVMENG_ROUTES = new Set([
+  'characters',
+  'guides',
+  'starter-guide',
+  'world',
+  'map',
+  'progression',
+  'news',
+  'version',
+  'download',
+  'redeem-codes',
+  'faq',
+  'roadmap',
+]);
+
 function isUnsupportedGameRoute(game: GameId, route: string): boolean {
   const allowedRoutes = GAME_ROUTE_ALLOWLIST[game];
   return Boolean(allowedRoutes && !allowedRoutes.includes(route));
@@ -90,6 +105,19 @@ export default function middleware(request: NextRequest) {
   const legacyRootRoute = firstSegment ? LEGACY_ROOT_ROUTES[firstSegment] : undefined;
   if (!locale && !game && segments.length === 1 && legacyRootRoute) {
     return redirectTo(request, legacyRootRoute);
+  }
+
+  // Lvmeng is served exclusively by its Chinese dedicated Worker. Never let the
+  // main site generate localized or unknown-path fallback pages for it.
+  if (game === 'lvmeng') {
+    const isSupportedChinesePage = locale === 'zh' && (
+      !thirdSegment ||
+      LVMENG_ROUTES.has(thirdSegment) ||
+      (thirdSegment === 'characters' && Boolean(fourthSegment) && segments.length === 4)
+    );
+    if (!isSupportedChinesePage) {
+      return new NextResponse(null, { status: 404 });
+    }
   }
 
   if (locale && game && thirdSegment && fourthSegment) {
