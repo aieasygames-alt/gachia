@@ -35,6 +35,18 @@ export const contentStatus = {
   pending: '公测后核验',
 } as const;
 
+export const sourcePolicy = [
+  { level: '官方已公开', description: '来自官网、官方 TapTap 公告、应用商店或监管审批信息，可直接用于基础资料。' },
+  { level: '客户端核验', description: '公测后在当前客户端可复现并记录版本号、前置条件与核验日期的资料。' },
+  { level: '社区待验证', description: '仅用于发现选题或机制方向，不作为数值、配装、掉落或活动结论。' },
+] as const;
+
+export const launchPriority = [
+  { phase: '开服前', tasks: ['确认预下载、开服时间和官方安装包入口。', '核对账号登录、服务器和互通说明。', '关注官方公告中的活动、奖励和兑换码。'] },
+  { phase: '开服当天', tasks: ['完成教学并记录功能解锁条件。', '核对首发版本号、活动期限和奖励领取条件。', '仅按当前客户端资料开始角色、地图与养成记录。'] },
+  { phase: '首周', tasks: ['补齐角色图鉴、技能、材料与获取方式。', '整理区域、传送、收集和敌人资料。', '依据实测版本发布开荒、构筑与资源路线。'] },
+] as const;
+
 export const releaseStatus = [
   { label: '公测定档', value: '2026-10-15', state: '官方公告已确认' },
   { label: '预下载与开服时间', value: '待官方公告', state: '尚未公开' },
@@ -45,6 +57,13 @@ export const releaseStatus = [
 export const officialAnnouncements = [
   { title: '全平台公测定档与预约里程碑奖励', date: '2026-09', status: '已核验', summary: '官方 TapTap 公告确认 2026 年 10 月 15 日在 Android、iOS、PC 平台公测，并列出全部解锁的预约奖励。', url: 'https://www.taptap.cn/app/237561/topic?type=official' },
   { title: '官方公告汇总入口', date: '持续更新', status: '跟踪中', summary: '公测预下载、开服、版本维护、活动和兑换码以此官方公告页为优先核对来源。', url: 'https://www.taptap.cn/app/237561/topic?type=official' },
+] as const;
+
+export const officialEntryPoints = [
+  { label: '官方网站', url: game.officialSite, purpose: '下载入口、官网活动与后续新闻。' },
+  { label: '官方角色页', url: 'https://lvmeng.zhuziplay.com/role', purpose: '已公开角色和设定线索。' },
+  { label: 'TapTap 官方公告', url: 'https://www.taptap.cn/app/237561/topic?type=official', purpose: '公测、版本、维护、活动和兑换码的优先核验来源。' },
+  { label: 'TapTap 官方预约页', url: game.taptap, purpose: '预约状态、平台资料与配置说明。' },
 ] as const;
 
 export const redeemCodeStatus = {

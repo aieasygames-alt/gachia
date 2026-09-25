@@ -665,7 +665,7 @@ Router 白名单必须明确支持以下路径族，且仅在 `LVMENG_ENABLED=tr
 |---|---|
 | 部署日期 | `2026-09-25` |
 | Worker origin | `https://gachia-game-lvmeng.aieasygames.workers.dev` |
-| Worker version ID | `0345a502-322b-4083-9133-2a9f29b8c860` |
+| Worker version ID | `0bd155f6-045e-49bb-84bf-73c0e13f4e1b` |
 | Router version ID | `f3026f84-41ed-4027-9e31-ec575783617b` |
 | Router 全量开关 | `LVMENG_ENABLED=true`，已部署；`/zh/lvmeng` 的主域名响应为 `200`，且 `x-gachia-route-target: lvmeng` |
 | 主域名验证 | `/zh/lvmeng`、`/zh/lvmeng/guides`、`/sitemaps/lvmeng/index.xml` 返回 `200`；首页 canonical 为 `https://gachia.com/zh/lvmeng`，资源使用 `/_games/lvmeng/_next/` 前缀，sitemap 仅含五个中文 URL |
@@ -678,6 +678,8 @@ Router 白名单必须明确支持以下路径族，且仅在 `LVMENG_ENABLED=tr
 | 内容验证 | `/zh/lvmeng/characters`、`/zh/lvmeng/guides`、`/zh/lvmeng/world`、`/sitemaps/lvmeng/index.xml` 均返回 `200`；`/en/lvmeng/characters` 与 `/en/lvmeng/world` 返回预期 `404`；线上已验证九名公开角色、四项预约奖励及世界观术语页面文案 |
 | 本轮内容与功能补充 | 已新增公告活动、开荒指南、地图探索、养成资料页面；角色名单接入九个独立详情页骨架；下载页增加公测定档、预下载、账号互通、首发活动的明确状态；兑换码页增加收录和失效规则；所有待正式资料均标记为“公测后核验”，不写入测试期强度、数值或构筑结论 |
 | 本轮线上验证 | `/zh/lvmeng/news`、`/zh/lvmeng/starter-guide`、`/zh/lvmeng/map`、`/zh/lvmeng/progression`、`/zh/lvmeng/characters/luoxi` 与 `/sitemaps/lvmeng/index.xml` 返回 `200`；未知角色 `/zh/lvmeng/characters/unknown` 返回预期 `404` |
+| 内容强化 | 首页新增开服前、开服当天、首周的任务型核验清单；公告页新增官方入口索引；版本页新增首发版本时间线；世界观页新增官方、客户端核验、社区待验证三级资料标准；角色详情补充公告、版本和养成资料的站内入口 |
+| 本轮部署验证 | 绿梦 Worker 已更新至 `0bd155f6-045e-49bb-84bf-73c0e13f4e1b`；主域名首页、公告活动、版本动态、世界观页面均返回 `200` 并输出新增内容。角色详情请求在本机网络抽样时发生一次 20 秒连接超时，保留上一轮已通过的 `200` 验证结果并持续观察 |
 | 回归验证 | NTE（中文、英文）、Azur Promilia、Genshin、ZZZ、绿梦代表页均返回 `200`；绿梦 hash CSS、OG 图片、游戏 sitemap 返回正确 MIME；认证 API 返回预期的 `200 null` |
 | 遗留任务 | 公测前最终复核日期、官方预约/下载链接、首发角色/版本、卡池、材料与兑换码；上线后持续监控 Search Console、5xx、canonical 和资源 404 |
 
