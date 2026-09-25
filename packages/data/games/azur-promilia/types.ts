@@ -37,5 +37,7 @@ export type AzurPromiliaBetaProfile = {
 
 export type AzurPromiliaCharacter = Character & {
   officialSource?: AzurPromiliaSource;
+  officialVisualUrl?: string;
+  officialRegion?: string;
   beta: AzurPromiliaBetaProfile;
 };

@@ -32,9 +32,15 @@ export default async function CharacterDetail({ params }: { params: Promise<{ la
         <div><span>{localize(locale, { zh: '职业', en: 'Profession', ja: '職業' })}</span><strong>{beta.profession}</strong></div>
         <div><span>{localize(locale, { zh: '武器', en: 'Weapon', ja: '武器' })}</span><strong>{beta.weaponType}</strong></div>
         <div><span>{localize(locale, { zh: '地区', en: 'Region', ja: '地域' })}</span><strong>{beta.region}</strong></div>
+        {character.officialRegion && <div><span>{localize(locale, { zh: '官方关联地', en: 'Official region', ja: '公式関連地域' })}</span><strong>{character.officialRegion}</strong></div>}
         <div><span>{localize(locale, { zh: '测试版本', en: 'Test Version', ja: 'テスト版' })}</span><strong>{beta.cbtVersion}</strong></div>
       </div>
       <p className="lead">{character.description[locale]}</p>
+      {character.officialVisualUrl && <section>
+        <h2>{localize(locale, { zh: '官方角色视觉资料', en: 'Official Character Visuals', ja: '公式キャラクタービジュアル' })}</h2>
+        <p>{localize(locale, { zh: '角色立绘与宣传视觉由官方站发布。本站不复制第三方或官方插画素材，以下链接将打开官方角色页。', en: 'Character art and promotional visuals are published by the official site. This site does not copy third-party or official illustration assets; use the link below to open the official character page.', ja: 'キャラクター立ち絵と宣伝ビジュアルは公式サイトで公開されています。当サイトは第三者または公式のイラスト素材を複製せず、以下のリンクから公式キャラクターページを開けます。' })}</p>
+        <a className="card" href={character.officialVisualUrl} rel="noreferrer" target="_blank">{localize(locale, { zh: '查看官方角色视觉', en: 'View official character visuals', ja: '公式キャラクタービジュアルを見る' })}</a>
+      </section>}
       <section>
         <h2>{localize(locale, { zh: '战斗类型', en: 'Battle Types', ja: '戦闘タイプ' })}</h2>
         <div className="chip-row">{beta.battleTypes.map((type) => <span className="chip" key={type}>{type}</span>)}</div>
