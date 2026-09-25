@@ -1,6 +1,6 @@
 import type { SupportedLocale } from '@gachia/core';
 
-type ReferenceTopic = 'home' | 'weapons' | 'artifacts' | 'items' | 'guides' | 'banner' | 'character' | 'index-checklist' | 'execution-plan' | 'weapon-workflow' | 'material-workflow' | 'guide-workflow' | 'artifact-workflow' | 'character-workflow' | 'live-checks' | 'weapon-audit' | 'material-audit' | 'guide-audit' | 'character-audit' | 'status-audit' | 'weapon-decision-record' | 'material-decision-record' | 'guide-decision-record' | 'character-decision-record' | 'version-decision-record' | 'weapon-review' | 'material-review' | 'guide-review' | 'character-review' | 'weapon-final-check' | 'material-final-check';
+type ReferenceTopic = 'home' | 'weapons' | 'artifacts' | 'items' | 'guides' | 'banner' | 'character' | 'index-checklist' | 'execution-plan' | 'weapon-workflow' | 'material-workflow' | 'guide-workflow' | 'artifact-workflow' | 'character-workflow' | 'live-checks' | 'weapon-audit' | 'material-audit' | 'guide-audit' | 'character-audit' | 'status-audit' | 'weapon-decision-record' | 'material-decision-record' | 'guide-decision-record' | 'character-decision-record' | 'version-decision-record' | 'weapon-review' | 'material-review' | 'guide-review' | 'character-review' | 'weapon-final-check' | 'material-final-check' | 'weapon-parity-note' | 'material-parity-note';
 
 const content: Record<ReferenceTopic, Record<SupportedLocale, string[]>> = {
   home: {
@@ -156,6 +156,16 @@ const content: Record<ReferenceTopic, Record<SupportedLocale, string[]>> = {
     zh: ['材料を使う直前に、必要数、入手先、次の段階、他の目標との競合を確認します。現在の不足を解決しない素材にはすぐ使わず、次の明確な育成節目まで残してください。'],
     en: ['Immediately before spending materials, check required quantity, source, next stage, and competition with other goals. Do not spend on materials that do not solve the current shortage; retain them for the next clear progression node.'],
     ja: ['素材を使う直前に、必要数、入手先、次の段階、他目標との競合を確認します。現在の不足を解決しない素材へすぐ使わず、次の明確な育成節目まで残してください。'],
+  },
+  'weapon-parity-note': {
+    zh: ['记录完成后，只在角色、队伍或资源条件变化时重做比较，避免为已解决的问题重复投入。'],
+    en: ['After recording the result, repeat comparison only when character, team, or resource conditions change, avoiding repeated investment in a solved problem.'],
+    ja: ['記録後はキャラ、編成、資源条件が変わった場合だけ比較をやり直し、解決済みの問題へ繰り返し投資しないでください。'],
+  },
+  'material-parity-note': {
+    zh: ['素材の記録は次に確認する条件が変わるまで保管し、同じ不足を重複して周回しないようにします。'],
+    en: ['Keep the material record until the next checked condition changes so the same shortage is not farmed twice.'],
+    ja: ['素材の記録は次に確認する条件が変わるまで保管し、同じ不足を重複して周回しないようにします。'],
   },
 };
 
