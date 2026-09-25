@@ -1198,7 +1198,7 @@ Genshin Router 白名单必须精确覆盖以下三类路径，未知游戏路�
 ### 27.7 阶段 5：生产切流、验收与 2-4 周观察
 
 - [x] 已将 `GENSHIN_ENABLED=true` 与仅内部 canary Cookie 一起发布，使用 `X-Gachia-Route-Debug: 1` 验证只有预期请求命中 `genshin`；无 Cookie 请求仍命中 `main`。
-- [ ] Canary 保持至少一个完整的流量与缓存周期，完成阶段 3 的全量样本、Chrome 首访/硬刷新/站内跳转、移动端地图和登录功能验证后，再移除 Canary 限制进行全量分流。
+- [~] Canary 保持至少一个完整的流量与缓存周期；阶段 3 的全量样本、Chrome 桌面/移动首访与硬刷新、移动端地图及匿名 API 权限边界已通过。仍须在真实登录会话中验证收藏、地图进度和共享配装，并完成完整缓存/流量周期观察后，才可移除 Canary 限制进行全量分流。
 - [ ] 全量切流后立即验证：根 `/sitemap.xml`、`/sitemaps/genshin/index.xml`、三语言 Genshin 代表页、根 `/_next/*`、其它独立游戏资产、主站首页、认证、收藏、地图进度和无效 URL。
 - [ ] 记录 Cloudflare Worker 错误率、5xx、资源 404、Router 目标分布、TTFB、缓存命中率；出现持续 5xx、资源/hydration 故障、认证泄露或 SEO 硬门槛失败时，立即 `GENSHIN_ENABLED=false` 回滚。
 - [ ] 在 Search Console 连续观察 2-4 周：Genshin sitemap 读取状态、已编入索引页数、抓取统计、404/5xx、重定向错误、canonical 选择、hreflang 诊断、Genshin 查询的展示/点击/排名。期间不因短期波动调整 URL。
@@ -1225,4 +1225,5 @@ Genshin Router 白名单必须精确覆盖以下三类路径，未知游戏路�
 | 2026-09-24 | 阶段 3：Main metadata 基线回补与复测 | 进行中，仍阻断 | commit `6adbadb`，GitHub Actions run `36005617646`、artifact `genshin-production-origin-reports` | 将 20 个代表路径的三语 title/description 以 Main 实际渲染结果作为独立 Worker 基线，且不改 canonical、hreflang、正文或 Router。独立 Worker 部署、源站可抓取和 `GENSHIN_ENABLED=false` 断言均通过；严格差异从 208 降至 89，全部 60 项 title 差异与 59 项 description 差异已消除。仅余日语 teams 描述的一个字符转录差异，已在后续提交修正；仍有 45 页正文、15 页 schema 类型差异，故不得 canary。 |
 | 2026-09-25 | 阶段 3/4：生产 origin 严格 SEO parity 与 API 边界验收 | 已完成（未切流） | commit `4f5cd83`、GitHub Actions run `36083291008` | 独立生产 Worker 已部署；60 个三语言代表 URL 的状态码、最终路径、title、description、canonical、hreflang、JSON-LD、正文长度和 Genshin 内链严格对比全部通过；实际 hash 资源、origin 可访问性与匿名 API 边界也通过。生产 Router 断言并保持 `GENSHIN_ENABLED=false`，因此用户和搜索引擎仍由 Main Worker 服务。 |
 | 2026-09-25 | 阶段 5：主域名 Cookie canary SEO/API 验证 | 已完成（仅内部 Cookie） | commit `1875612`、Router version `a045cf0e-2c08-45f7-9b76-c8dee5cd5b08`、本地 `GENSHIN_STAGING_COOKIE` parity/smoke | 生产 Router 使用 Cloudflare secret 保存一次性 canary token；无 Cookie 请求保持 Main，携带 token 的请求命中 Genshin。主域名 60 URL 严格 SEO parity、Genshin sitemap、实际 hash JS 资源和 5 项 API 缓存/权限边界均通过。默认仓库配置仍为 `GENSHIN_ENABLED=false`，用于后续快速回滚。 |
+| 2026-09-25 | 阶段 5：GitHub 主域名 canary 浏览器验收 | 已完成（仅内部 Cookie） | commit `2b44262`、GitHub Actions run `36084167352`、Router version `acb4cb9e-56ee-4085-b4f9-f93b7b8352c9` | production environment 的受保护 token 驱动默认/Main 与 Cookie/Genshin 分流验证；60 URL 严格 parity、5 项 API 边界和 8 项 Playwright 测试均通过，覆盖桌面与 iPhone 13 的首页、角色详情、地图首访及硬刷新。仍未验证真实登录会话，也未全量切流。 |
 | 待完成 | 阶段 5：生产 canary 与全量切流 | 未开始 |  | 仅在所有切流硬门槛通过后执行 |
