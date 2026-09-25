@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { contentStatus, officialAnnouncements, officialEntryPoints } from '@/lib/data';
 
 export const metadata: Metadata = { title: '绿梦：时空之声公告与活动 | Gachia', description: '绿梦：时空之声官方公告、活动与奖励核验状态。', alternates: { canonical: 'https://gachia.com/zh/lvmeng/news' } };
@@ -13,5 +14,6 @@ export default function NewsPage() {
     <div className="grid">{officialEntryPoints.map((entry) => <article className="card" key={entry.url}><h3>{entry.label}</h3><p>{entry.purpose}</p><a className="card-link" href={entry.url} rel="noreferrer">打开入口</a></article>)}</div>
     <h2>公测后更新规则</h2>
     <p>每项活动会标注开始时间、结束时间、适用平台、参与条件、奖励与官方来源。官方未明确的信息将保持“待核验”，不以测试服截图或搬运内容填充。</p>
+    <div className="link-list"><Link href="/zh/lvmeng/roadmap">查看资料更新计划</Link><Link href="/zh/lvmeng/version">查看版本动态</Link></div>
   </main>;
 }

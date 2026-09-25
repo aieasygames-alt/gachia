@@ -47,6 +47,13 @@ export const launchPriority = [
   { phase: '首周', tasks: ['补齐角色图鉴、技能、材料与获取方式。', '整理区域、传送、收集和敌人资料。', '依据实测版本发布开荒、构筑与资源路线。'] },
 ] as const;
 
+export const contentRoadmap = [
+  { phase: '开服前', status: '进行中', scope: '核对预下载、开服时间、平台入口、账号规则、首发公告与奖励领取条件。', destinations: ['预约 / 下载', '公告活动', '常见问题'] },
+  { phase: '开服当天', status: '待客户端核验', scope: '记录首发版本号、功能解锁、角色图鉴、活动期限、兑换入口与地图区域名称。', destinations: ['版本动态', '公开角色', '兑换码'] },
+  { phase: '公测首周', status: '待客户端核验', scope: '补齐材料、装备、敌人、收集、主线推进和资源路线，并标明版本与前置条件。', destinations: ['养成资料', '地图探索', '开荒指南'] },
+  { phase: '持续版本维护', status: '长期维护', scope: '按版本保留活动、角色、系统改动和旧资料适用范围，避免新版本覆盖历史结论。', destinations: ['版本动态', '公告活动', '入门与系统'] },
+] as const;
+
 export const releaseStatus = [
   { label: '公测定档', value: '2026-10-15', state: '官方公告已确认' },
   { label: '预下载与开服时间', value: '待官方公告', state: '尚未公开' },

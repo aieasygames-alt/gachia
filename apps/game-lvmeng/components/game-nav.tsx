@@ -13,6 +13,7 @@ const pages = [
   ['download', '预约 / 下载'],
   ['redeem-codes', '兑换码'],
   ['faq', '常见问题'],
+  ['roadmap', '资料计划'],
 ] as const;
 
 export function GameNav({ current }: { current?: string }) {
