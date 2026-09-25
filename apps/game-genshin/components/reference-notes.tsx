@@ -158,7 +158,7 @@ const content: Record<ReferenceTopic, Record<SupportedLocale, string[]>> = {
     ja: ['素材を使う直前に、必要数、入手先、次の段階、他目標との競合を確認します。現在の不足を解決しない素材へすぐ使わず、次の明確な育成節目まで残してください。'],
   },
   'weapon-parity-note': {
-    zh: ['记录完成后，只在角色、队伍或资源条件变化时重做比较，避免为已解决的问题重复投入。'],
+    zh: ['记录完成后，只在角色、队伍或资源条件变化时重做比较，避免为已解决的问题重复投入并保留结论。'],
     en: ['After recording the result, repeat comparison only when character, team, or resource conditions change, avoiding repeated investment in a solved problem.'],
     ja: ['記録後はキャラ、編成、資源条件が変わった場合だけ比較をやり直し、解決済みの問題へ繰り返し投資しないでください。'],
   },
