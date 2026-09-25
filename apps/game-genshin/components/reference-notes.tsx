@@ -1,6 +1,6 @@
 import type { SupportedLocale } from '@gachia/core';
 
-type ReferenceTopic = 'home' | 'weapons' | 'artifacts' | 'items' | 'guides' | 'banner' | 'character' | 'index-checklist';
+type ReferenceTopic = 'home' | 'weapons' | 'artifacts' | 'items' | 'guides' | 'banner' | 'character' | 'index-checklist' | 'execution-plan';
 
 const content: Record<ReferenceTopic, Record<SupportedLocale, string[]>> = {
   home: {
@@ -42,6 +42,10 @@ const content: Record<ReferenceTopic, Record<SupportedLocale, string[]>> = {
     zh: ['整理资料时，可以为每个候选加上四个固定字段：它解决的队伍问题、已经拥有的条件、仍需投入的资源，以及需要再次确认的时效信息。用相同字段比较角色、武器、套装和材料，能减少仅凭单一页面或单项数值做决定的情况。', '当多个目标同时存在时，先选择一个能在近期完成的项目，再把其他项目保留在后续列表中。完成后回看库存、队伍体验和版本信息，再决定是否开始下一项。这样的节奏可以避免把所有资源分散到没有完成节点的计划中。', '资料索引的目的在于支持比较和复核。所有与账号、登录、支付、奖励领取或实时活动有关的操作，都应回到游戏内或官方渠道完成，避免向第三方服务提供凭据。'],
     en: ['When organizing references, give every candidate four stable fields: the roster problem it solves, the conditions already owned, the resources still required, and the time-sensitive information to recheck. Comparing characters, weapons, sets, and materials with the same fields reduces decisions made from one page or one isolated stat.', 'When several targets exist at once, choose one project that can be completed soon and keep the others on a later list. After completion, review inventory, team experience, and version information before starting the next item. This pace avoids spreading every resource across plans with no clear finish point.', 'The purpose of an index is comparison and verification. For accounts, logins, payments, reward redemption, or live events, return to the game or official channels and never provide credentials to third-party services.'],
     ja: ['資料を整理するときは、各候補に四つの固定項目を付けます。編成のどの問題を解決するか、すでに所持している条件、まだ必要な資源、再確認が必要な時期依存情報です。キャラ、武器、セット、素材を同じ項目で比べると、一つのページや一つの数値だけで決めることを減らせます。', '複数の目標が同時にある場合は、まず近いうちに完了できる一つの項目を選び、残りは後のリストに置きます。完了後に在庫、編成での感触、バージョン情報を見直してから次を始めます。この進め方なら、完了地点のない計画にすべての資源を分散させずに済みます。', '資料索引の目的は比較と確認です。アカウント、ログイン、支払い、報酬受取、最新イベントに関する操作はゲーム内または公式経路へ戻り、第三者サービスに認証情報を渡さないでください。'],
+  },  'execution-plan': {
+    zh: ['执行资料计划时，先定义本周只处理的一个目标，并在开始前记录现有资源、可用时间和停止条件。停止条件可以是完成某个角色的基础等级、准备好一套可用装备，或在保留预算后完成一次抽卡判断。这样可让进度有明确终点，而不是不断扩大计划。', '每天或每次登录后，只更新会改变决定的信息：库存变化、卡池与活动状态、已完成的材料路线和队伍体验。其余长期资料可以保留为参考，不必重复比较。完成一个目标后，再决定下一项是否仍有最高优先级。', '遇到来源、数值或规则无法确认时，先将其标为待验证，而不是用猜测填补计划。打开游戏内详情和官方公告确认后，再把结果写入清单。'],
+    en: ['For an execution plan, define one goal to handle this week, then record current resources, available time, and a stopping condition before starting. The condition might be a basic character level, one workable equipment set, or one pull decision after a reserve is protected. A clear endpoint keeps progress from becoming an expanding plan.', 'After each session, update only the information that changes a decision: inventory, banner and event status, completed material routes, and team experience. Keep longer-term references for context without repeatedly comparing them. After one goal is done, decide whether the next item still has the highest priority.', 'When a source, value, or rule cannot be confirmed, mark it for verification instead of filling the plan with a guess. Check in-game details and official notices, then record the result in the list.'],
+    ja: ['実行計画では、今週扱う目標を一つだけ決め、始める前に現在の資源、使える時間、停止条件を記録します。停止条件はキャラの基礎レベル、一つの使える装備セット、または保留予算を残した後の一回のガチャ判断などにできます。明確な終点があれば、計画が際限なく広がるのを防げます。', '毎回のプレイ後に更新するのは、判断を変える情報だけです。在庫、バナーとイベントの状態、完了した素材ルート、編成の感触を記録します。長期資料は繰り返し比較せず、背景として残します。一つの目標が終わってから、次の項目がまだ最優先かを決めます。', '入手先、数値、ルールを確認できない場合は、推測で計画を埋めずに検証待ちとして印を付けます。ゲーム内詳細と公式告知を確認してから、結果をリストに記録してください。'],
   },
 };
 
