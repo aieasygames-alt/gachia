@@ -24,7 +24,7 @@ const AZUR_PROMILIA_PAGES = new Set(['characters', 'guides', 'weapons', 'tier-li
 const AZUR_PROMILIA_DETAIL_PAGES = new Set(['characters', 'guides', 'weapons']);
 const GENSHIN_PAGES = new Set(['characters', 'guides', 'weapons', 'artifacts', 'items', 'redeem-codes', 'gacha', 'version', 'tier-list', 'download', 'map', 'build', 'teams', 'compare', 'calculator']);
 const GENSHIN_DETAIL_PAGES = new Set(['characters', 'guides', 'weapons', 'artifacts', 'items']);
-const LVMENG_PAGES = new Set(['characters', 'guides', 'starter-guide', 'world', 'map', 'progression', 'news', 'version', 'download', 'redeem-codes']);
+const LVMENG_PAGES = new Set(['characters', 'guides', 'starter-guide', 'world', 'map', 'progression', 'news', 'version', 'download', 'redeem-codes', 'faq']);
 const LVMENG_DETAIL_PAGES = new Set(['characters']);
 
 const NTE_DEPLOYMENT = GENERATED_GAME_DEPLOYMENTS.find((deployment) => deployment.id === 'nte');

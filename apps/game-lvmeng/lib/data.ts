@@ -66,6 +66,15 @@ export const officialEntryPoints = [
   { label: 'TapTap 官方预约页', url: game.taptap, purpose: '预约状态、平台资料与配置说明。' },
 ] as const;
 
+export const launchFaq = [
+  { question: '绿梦：时空之声什么时候公测？', answer: '官方公告定档为 2026 年 10 月 15 日，全平台具体预下载和开服时间仍需等待官方进一步公告。' },
+  { question: '首发支持哪些平台？', answer: '官方定档信息列出 Android、iOS 与 PC。不同平台的安装包、配置、账号与互通规则应以开服前公告为准。' },
+  { question: '在哪里预约或下载最安全？', answer: '请使用官方网站、TapTap 官方预约页或 App Store 预登记页。不要使用论坛附件、转存安装包或第三方兑换工具。' },
+  { question: '预约奖励和兑换码是一回事吗？', answer: '不是。预约奖励、测试返还和兑换码通常是不同机制；本站仅在官方公告明确兑换方式、有效期与奖励后收录兑换码。' },
+  { question: '账号是否互通、服务器怎么选？', answer: '当前尚未收录可核验的官方说明。开服前应先确认登录方式、平台互通、服务器划分和角色数据规则。' },
+  { question: '测试期角色强度或配装能直接参考吗？', answer: '不能直接作为正式结论。测试版本的数值、装备、角色平衡、资源获取和系统名称都可能在公测调整。' },
+] as const;
+
 export const redeemCodeStatus = {
   verifiedAt: '2026-09-25',
   codes: [] as Array<{ code: string; reward: string; expiresAt: string; source: string }>,

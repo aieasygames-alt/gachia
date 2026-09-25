@@ -12,6 +12,7 @@ const pages = [
   ['version', '版本动态'],
   ['download', '预约 / 下载'],
   ['redeem-codes', '兑换码'],
+  ['faq', '常见问题'],
 ] as const;
 
 export function GameNav({ current }: { current?: string }) {

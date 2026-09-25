@@ -254,7 +254,7 @@ describe('gachia router safety defaults', () => {
 
   it('routes only Chinese Lvmeng pages plus its asset and sitemap namespaces', async () => {
     const env = { MAIN_SITE: fetcher('main'), LVMENG_SITE: fetcher('lvmeng'), LVMENG_ENABLED: 'true', LVMENG_CANARY_COOKIE: '' };
-    for (const pathname of ['/zh/lvmeng', '/zh/lvmeng/characters', '/zh/lvmeng/characters/luoxi', '/zh/lvmeng/news', '/zh/lvmeng/starter-guide', '/zh/lvmeng/world', '/zh/lvmeng/map', '/zh/lvmeng/progression', '/zh/lvmeng/version', '/zh/lvmeng/download', '/_games/lvmeng/_next/static/app.js', '/sitemaps/lvmeng/index.xml']) {
+    for (const pathname of ['/zh/lvmeng', '/zh/lvmeng/characters', '/zh/lvmeng/characters/luoxi', '/zh/lvmeng/news', '/zh/lvmeng/starter-guide', '/zh/lvmeng/world', '/zh/lvmeng/map', '/zh/lvmeng/progression', '/zh/lvmeng/version', '/zh/lvmeng/download', '/zh/lvmeng/faq', '/_games/lvmeng/_next/static/app.js', '/sitemaps/lvmeng/index.xml']) {
       const response = await router.fetch(new Request(`https://gachia.com${pathname}`), env);
       await expect(response.text()).resolves.toBe('lvmeng');
     }
