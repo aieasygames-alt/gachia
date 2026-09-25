@@ -42,7 +42,15 @@ jobs:
       - name: Confirm default requests remain on Main and token requests use Genshin
         run: |
           set -euo pipefail
-          default_target=$(curl --silent --show-error --max-time 30 -D - -o /dev/null -H 'X-Gachia-Route-Debug: 1' https://gachia.com/zh/genshin | tr -d '\r' | sed -nE 's/^x-gachia-route-target: *(.*)$/\1/ip')
-          canary_target=$(curl --silent --show-error --max-time 30 -D - -o /dev/null -H 'X-Gachia-Route-Debug: 1' -H "Cookie: gachia_genshin_canary=$GENSHIN_CANARY_TOKEN" https://gachia.com/zh/genshin | tr -d '\r' | sed -nE 's/^x-gachia-route-target: *(.*)$/\1/ip')
-          test -z "$default_target"
-          test "$canary_target" = genshin
+          for attempt in 1 2 3 4 5; do
+            default_headers=$(curl --silent --show-error --max-time 30 -D - -o /dev/null -H 'X-Gachia-Route-Debug: 1' https://gachia.com/zh/genshin | tr -d '\r')
+            canary_headers=$(curl --silent --show-error --max-time 30 -D - -o /dev/null -H 'X-Gachia-Route-Debug: 1' -H "Cookie: gachia_genshin_canary=$GENSHIN_CANARY_TOKEN" https://gachia.com/zh/genshin | tr -d '\r')
+            default_target=$(printf '%s\n' "$default_headers" | sed -nE 's/^x-gachia-route-target: *(.*)$/\1/ip')
+            canary_target=$(printf '%s\n' "$canary_headers" | sed -nE 's/^x-gachia-route-target: *(.*)$/\1/ip')
+            if [ -z "$default_target" ] && [ "$canary_target" = genshin ]; then exit 0; fi
+            echo "Attempt $attempt: default=$default_target canary=$canary_target" >&2
+            printf '%s\n' "$default_headers" | grep -iE '^(HTTP/|x-gachia-route-target:|content-type:)' >&2 || true
+            printf '%s\n' "$canary_headers" | grep -iE '^(HTTP/|x-gachia-route-target:|content-type:)' >&2 || true
+            sleep 5
+          done
+          exit 1
