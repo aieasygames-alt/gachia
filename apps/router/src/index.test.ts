@@ -150,6 +150,21 @@ describe('gachia router safety defaults', () => {
     }
   });
 
+  it('prefers the Genshin canary secret over the compatibility variable', async () => {
+    const env = {
+      MAIN_SITE: fetcher('main'),
+      GENSHIN_SITE: fetcher('genshin'),
+      GENSHIN_ENABLED: 'true',
+      GENSHIN_CANARY_COOKIE: 'legacy-token',
+      GENSHIN_CANARY_TOKEN: 'secret-token',
+    };
+
+    const legacy = await router.fetch(new Request('https://gachia.com/zh/genshin', { headers: { cookie: 'gachia_genshin_canary=legacy-token' } }), env);
+    await expect(legacy.text()).resolves.toBe('main');
+    const canary = await router.fetch(new Request('https://gachia.com/zh/genshin', { headers: { cookie: 'gachia_genshin_canary=secret-token' } }), env);
+    await expect(canary.text()).resolves.toBe('genshin');
+  });
+
   it('rewrites only the Genshin sitemap and asset namespaces for its Worker', async () => {
     let receivedPath = '';
     const genshin: Fetcher = {

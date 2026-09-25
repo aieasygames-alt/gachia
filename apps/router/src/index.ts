@@ -9,6 +9,7 @@ interface Env {
   PREVIEW_MODE?: string;
   AZUR_PROMILIA_CANARY_COOKIE?: string;
   GENSHIN_CANARY_COOKIE?: string;
+  GENSHIN_CANARY_TOKEN?: string;
 }
 
 import { GENERATED_GAME_DEPLOYMENTS } from './generated-game-deployments';
@@ -150,7 +151,8 @@ export default {
       return fetchWithRouteMarker(env.AZUR_PROMILIA_SITE, requestForAzurPromiliaWorker(request), 'azur-promilia');
     }
 
-    if (isEnabled(env.GENSHIN_ENABLED) && env.GENSHIN_SITE && isGenshinRequest(url.pathname) && hasCanaryCookie(request, env.GENSHIN_CANARY_COOKIE, 'gachia_genshin_canary')) {
+    const genshinCanaryToken = env.GENSHIN_CANARY_TOKEN ?? env.GENSHIN_CANARY_COOKIE;
+    if (isEnabled(env.GENSHIN_ENABLED) && env.GENSHIN_SITE && isGenshinRequest(url.pathname) && hasCanaryCookie(request, genshinCanaryToken, 'gachia_genshin_canary')) {
       return fetchWithRouteMarker(env.GENSHIN_SITE, requestForGenshinWorker(request), 'genshin');
     }
 
