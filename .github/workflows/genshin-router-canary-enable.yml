@@ -36,9 +36,9 @@ jobs:
         working-directory: apps/router
         run: |
           set -euo pipefail
-          node -e 'const fs=require("fs"); const source="wrangler.jsonc"; const target="wrangler.canary.tmp.jsonc"; const text=fs.readFileSync(source,"utf8"); const next=text.replace(/"GENSHIN_ENABLED": "false"/, "\\"GENSHIN_ENABLED\\": \\"true\\""); if(next===text) throw new Error("Expected disabled Genshin production switch"); fs.writeFileSync(target,next);'
+          trap 'rm -f wrangler.canary.tmp.jsonc' EXIT
+          node -e 'const fs=require("fs"); const source="wrangler.jsonc"; const target="wrangler.canary.tmp.jsonc"; const text=fs.readFileSync(source,"utf8"); const from="\"GENSHIN_ENABLED\": \"false\""; const to="\"GENSHIN_ENABLED\": \"true\""; const next=text.replace(from, to); if(next===text) throw new Error("Expected disabled Genshin production switch"); fs.writeFileSync(target,next);'
           pnpm exec wrangler deploy --config wrangler.canary.tmp.jsonc --env ""
-          node -e 'require("fs").unlinkSync("wrangler.canary.tmp.jsonc")'
       - name: Confirm default requests remain on Main and token requests use Genshin
         run: |
           set -euo pipefail
