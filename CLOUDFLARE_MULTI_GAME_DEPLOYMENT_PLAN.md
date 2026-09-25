@@ -571,6 +571,116 @@ gachia-game-aniimo
 
 ## 13. 最终建议
 
+## 13.1 接入记录：绿梦：时空之声（已上线，生产流量开启）
+
+### 基础登记
+
+| 字段 | 值 | 状态 |
+|---|---|---|
+| 游戏 ID | `lvmeng` | 已确定 |
+| 正式名称 | `绿梦：时空之声` | 已核验 |
+| 计划 Worker | `gachia-game-lvmeng` | 已确定 |
+| 页面路径 | `/zh/lvmeng/*` | 已确定 |
+| 静态资源前缀 | `/_games/lvmeng/_next/*` | 已确定 |
+| 游戏 Sitemap | `/sitemaps/lvmeng/index.xml` | 已确定 |
+| Router binding | `LVMENG_SITE` | 已确定 |
+| Router 生产开关 | `LVMENG_ENABLED=true` | 已配置，全量流量已启用 |
+| Canary Cookie | `gachia_lvmeng_canary` | 已确定 |
+| 公测日期 | `2026-10-15`（安卓、iOS、PC） | 已核验；上线前复核 |
+
+资料来源已完成首轮核验：官方站点 `https://lvmeng.zhuziplay.com/`、官方 TapTap 预约页、App Store 预登记页及国家新闻出版署审批信息。App Store 当前展示的预计日期与官方公测定档不一致；站内以官方 `2026-10-15` 为准，并在临近发布时再次核验。
+
+### 实施方案与状态
+
+| 阶段 | 工作项 | 状态 | 完成条件 |
+|---|---|---|---|
+| 0. 资料准备 | 核验名称、厂商、平台、版号、公测日期、官网与官方素材来源 | 已完成 | 数据来源和待复核项已记录 |
+| 1. 数据建模 | 建立首发可用的官方信息模型：公测日期、平台、厂商、版号、官网/商店入口、公开角色名单、系统概览、世界观术语、公告活动、开服状态、兑换码、首日核验、地图与养成资料目录、版本历史及待核验项；角色数值、卡池与材料待公测后补充 | 部分完成 | 仅使用可核验官方资料；完整角色数值、命座、材料、版本 manifest 待官方正式公开 |
+| 2. 核心注册 | 增加 `GameId`、主题、路由及 `GAME_DEPLOYMENTS` 配置 | 已完成 | `deployment: 'game'`、`status: 'live'`、资源前缀与 sitemap 路径一致 |
+| 3. 独立应用 | 创建 `apps/game-lvmeng`，实现简体中文首页、公告活动、入门与系统、开荒指南、公开角色及角色详情骨架、世界观与术语、地图探索、养成资料、版本、预约/下载、兑换码、`robots.ts`、`sitemap.ts`、主域名 SEO 与共享两层导航 | 已完成 | 独立构建通过；仅生成 `/zh/lvmeng/*`，不生成 en/ja 页面或 hreflang |
+| 4. Worker 配置 | 添加 `apps/game-lvmeng/wrangler.jsonc`，含 `gachia-game-lvmeng`、OpenNext assets binding、生产/预览环境与 observability | 已完成 | `verify:bundle` 通过；gzip 上传包为 `878.84 KiB` |
+| 5. Router 接入 | 生成 Router 部署元数据；添加 `LVMENG_SITE` Service Binding、全量开关、独立 canary 配置与白名单路由/测试 | 已完成 | 仅允许 `/zh/lvmeng/*`、资源与 sitemap；en/ja、未知路径继续由主站处理 |
+| 6. 主站边界 | 将主站全量内容表改为可选，防止新增独立 Worker 游戏后要求主站生成下载、攻略、版本内容 | 已完成 | 主站类型检查通过，绿梦内容不会被主站通用页面强制导入 |
+| 7. CI 与预览 | 更新锁文件，完成冻结安装、全仓类型检查/测试/lint、数据与部署配置校验、Worker dry-run，部署独立 Worker 源站和 Router cookie canary | 已完成 | Worker origin 与 Router canary 均已部署；主域名验证已完成关键路径 |
+| 8. 上线 | 部署 Router 并开启 `LVMENG_ENABLED=true`，将绿梦中文页面、资源和游戏 sitemap 全量转发至独立 Worker | 已完成 | 主域名首页、攻略页和游戏 sitemap 已返回 200；首页确认命中绿梦 Worker、canonical 和资源前缀正确 |
+| 9. 发布后 | 记录 Worker 版本、Route、Service Binding、验证结果；跟踪 Search Console 与错误率 | 进行中 | 已补充公开角色和系统内容，主站根 sitemap 已包含绿梦分片；线上抽样回归通过，持续观察索引、5xx、canonical 与资源冲突 |
+
+### 预览期配置草案
+
+上线后的生产配置如下：
+
+```ts
+// packages/core/deployments.ts
+lvmeng: {
+  deployment: 'game',
+  worker: 'gachia-game-lvmeng',
+  assetPrefix: '/_games/lvmeng',
+  sitemapPath: '/sitemaps/lvmeng/index.xml',
+  status: 'live',
+}
+```
+
+```jsonc
+// apps/router/wrangler.jsonc
+{
+  "vars": {
+    "LVMENG_ENABLED": "true",
+    "LVMENG_CANARY_COOKIE": "enabled"
+  },
+  "services": [
+    { "binding": "LVMENG_SITE", "service": "gachia-game-lvmeng" }
+  ]
+}
+```
+
+Router 白名单必须明确支持以下路径族，且仅在 `LVMENG_ENABLED=true` 或有效 `gachia_lvmeng_canary` Cookie 下转发到游戏 Worker：
+
+```text
+/zh/lvmeng/*
+/_games/lvmeng/_next/*
+/sitemaps/lvmeng/*
+```
+
+### 发布闸门
+
+- [x] 官方资料首轮收集与来源记录完成
+- [x] `pnpm scaffold:game lvmeng "绿梦：时空之声" gachia-game-lvmeng` 后，补齐实际应用实现，不保留脚手架占位页
+- [x] `pnpm generate:router-config && pnpm validate:game-deployments` 通过
+- [x] `pnpm install --frozen-lockfile`、全仓 `type-check`、`test`、`lint` 通过（主站 70 项、Router 21 项测试）
+- [x] `pnpm --filter @gachia/data validate` 通过；首发无完整角色/装备 manifest，公测资料补齐后再生成和校验相关 manifest
+- [x] `pnpm --filter @gachia/game-lvmeng verify:bundle` 通过，gzip 上传包 `878.01 KiB`；Worker origin 已部署
+- [x] Router 单测覆盖中文页面、非中文拒绝、未知路径、assetPrefix、sitemap、禁用开关及关闭全量开关时的有效 cookie canary
+- [x] 生产 HTML 的 canonical、仅中文语言边界及带 hash 的 `/_games/lvmeng/_next/` 资源前缀通过主域名首页验证；直接请求部分静态资源时本机网络发生 SSL 超时，待持续监控
+- [x] 主域名切换后，`/sitemap.xml` 与 `/api/auth/get-session` 回归通过；根 sitemap 已含 `/sitemaps/lvmeng/index.xml`，认证 API 返回预期的 `200 null`
+- [x] 既有游戏路由回归：NTE（中文、英文）、Azur Promilia、Genshin、ZZZ 与绿梦代表页均返回 `200`；绿梦 hash CSS、OG 图片、游戏 sitemap 亦返回 `200`
+- [ ] 公测日期、下载链接、官方角色/版本数据在上线前进行最终复核
+
+### 状态更新规则
+
+本节作为绿梦独立 Worker 的唯一接入状态记录。每完成一个阶段，应在“实施方案与状态”表中更新状态与完成条件，并在发布后补充部署日期、Worker version ID、Route、验证结果和遗留风险；未通过发布闸门不得将 `LVMENG_ENABLED` 设为 `true`。
+
+### 已部署记录
+
+| 字段 | 值 |
+|---|---|
+| 部署日期 | `2026-09-25` |
+| Worker origin | `https://gachia-game-lvmeng.aieasygames.workers.dev` |
+| Worker version ID | `0345a502-322b-4083-9133-2a9f29b8c860` |
+| Router version ID | `f3026f84-41ed-4027-9e31-ec575783617b` |
+| Router 全量开关 | `LVMENG_ENABLED=true`，已部署；`/zh/lvmeng` 的主域名响应为 `200`，且 `x-gachia-route-target: lvmeng` |
+| 主域名验证 | `/zh/lvmeng`、`/zh/lvmeng/guides`、`/sitemaps/lvmeng/index.xml` 返回 `200`；首页 canonical 为 `https://gachia.com/zh/lvmeng`，资源使用 `/_games/lvmeng/_next/` 前缀，sitemap 仅含五个中文 URL |
+| 主站 version ID | `767674e1-09aa-413a-bd04-d99279867e61` |
+| 主站回归 | 根 sitemap 已包含 `https://gachia.com/sitemaps/lvmeng/index.xml`；`/api/auth/get-session` 返回预期的 `200 null` |
+| 主站入口与 OG | 已将绿梦置入中文 Header 和首页首位游戏入口；`/images/og/lvmeng.webp` 返回 `200 image/webp`，绿梦页面输出对应 `og:image` 和 `twitter:image` |
+| 入口发布版本 | 绿梦 Worker `a02b7f54-38c5-45f1-a67b-47d9d76820e8`；主站 `767674e1-09aa-413a-bd04-d99279867e61` |
+| 内容扩充 | 已增加“入门与系统”“公开角色”及“世界观与术语”页面，记录官方角色页公开的洛夕、莉塔、诗凛、潘娜西娅、塔可、阿萌、贝伊、艾提、玛塔；补充官方公告的塔可、原装频带、信用点、作战经验预约里程碑奖励；补入大侵蚀、侵蚀裂隙、黑质、蚀生体、侵蚀管理局等公开术语及来源边界，并以主线、战斗、探索、养成为四个维度建立公测首日核验清单；第三方测试期资料仅用于机制观察，不作为正式强度、数值或配装结论 |
+| 统一导航 | 参考蓝色星原：旅谣，复用 `@gachia/ui` 的共享主站游戏导航与绿梦二级导航；跨游戏与“更多游戏”链接固定指向 `https://gachia.com/zh/*` |
+| 内容验证 | `/zh/lvmeng/characters`、`/zh/lvmeng/guides`、`/zh/lvmeng/world`、`/sitemaps/lvmeng/index.xml` 均返回 `200`；`/en/lvmeng/characters` 与 `/en/lvmeng/world` 返回预期 `404`；线上已验证九名公开角色、四项预约奖励及世界观术语页面文案 |
+| 本轮内容与功能补充 | 已新增公告活动、开荒指南、地图探索、养成资料页面；角色名单接入九个独立详情页骨架；下载页增加公测定档、预下载、账号互通、首发活动的明确状态；兑换码页增加收录和失效规则；所有待正式资料均标记为“公测后核验”，不写入测试期强度、数值或构筑结论 |
+| 本轮线上验证 | `/zh/lvmeng/news`、`/zh/lvmeng/starter-guide`、`/zh/lvmeng/map`、`/zh/lvmeng/progression`、`/zh/lvmeng/characters/luoxi` 与 `/sitemaps/lvmeng/index.xml` 返回 `200`；未知角色 `/zh/lvmeng/characters/unknown` 返回预期 `404` |
+| 回归验证 | NTE（中文、英文）、Azur Promilia、Genshin、ZZZ、绿梦代表页均返回 `200`；绿梦 hash CSS、OG 图片、游戏 sitemap 返回正确 MIME；认证 API 返回预期的 `200 null` |
+| 遗留任务 | 公测前最终复核日期、官方预约/下载链接、首发角色/版本、卡池、材料与兑换码；上线后持续监控 Search Console、5xx、canonical 和资源 404 |
+
 采用 Cloudflare Service Bindings 的多 Worker 架构：
 
 - 保持 `gachia.com/{lang}/{game}` URL 不变。

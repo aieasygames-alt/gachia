@@ -1,0 +1,28 @@
+{
+  "name": "@gachia/game-lvmeng",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:worker": "LVMENG_DEPLOYMENT_MODE=production opennextjs-cloudflare build",
+    "type-check": "tsc --noEmit",
+    "verify:bundle": "LVMENG_DEPLOYMENT_MODE=production opennextjs-cloudflare build && wrangler deploy --dry-run --config wrangler.jsonc --env production",
+    "smoke": "node scripts/smoke.mjs",
+    "deploy": "LVMENG_DEPLOYMENT_MODE=production opennextjs-cloudflare build && opennextjs-cloudflare deploy --config wrangler.jsonc --env production"
+  },
+  "dependencies": {
+    "next": "^15.5.18",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260708.1",
+    "@opennextjs/cloudflare": "^1.20.1",
+    "@types/node": "25.6.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "typescript": "^5.8.0",
+    "wrangler": "^4.110.0"
+  }
+}

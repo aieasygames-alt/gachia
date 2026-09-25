@@ -230,4 +230,51 @@ describe('gachia router safety defaults', () => {
 
     expect(receivedPath).toBe('/_next/static/chunks/app.js');
   });
+
+  it('keeps Lvmeng on the main Worker while its routing switch is disabled', async () => {
+    const response = await router.fetch(new Request('https://gachia.com/zh/lvmeng/guides'), {
+      MAIN_SITE: fetcher('main'),
+      LVMENG_SITE: fetcher('lvmeng'),
+      LVMENG_ENABLED: 'false',
+    });
+    await expect(response.text()).resolves.toBe('main');
+  });
+
+  it('routes Lvmeng to its Worker for an enabled canary cookie while the switch is disabled', async () => {
+    const response = await router.fetch(new Request('https://gachia.com/zh/lvmeng/guides', {
+      headers: { cookie: 'gachia_lvmeng_canary=enabled' },
+    }), {
+      MAIN_SITE: fetcher('main'),
+      LVMENG_SITE: fetcher('lvmeng'),
+      LVMENG_ENABLED: 'false',
+      LVMENG_CANARY_COOKIE: 'enabled',
+    });
+    await expect(response.text()).resolves.toBe('lvmeng');
+  });
+
+  it('routes only Chinese Lvmeng pages plus its asset and sitemap namespaces', async () => {
+    const env = { MAIN_SITE: fetcher('main'), LVMENG_SITE: fetcher('lvmeng'), LVMENG_ENABLED: 'true', LVMENG_CANARY_COOKIE: '' };
+    for (const pathname of ['/zh/lvmeng', '/zh/lvmeng/characters', '/zh/lvmeng/characters/luoxi', '/zh/lvmeng/news', '/zh/lvmeng/starter-guide', '/zh/lvmeng/world', '/zh/lvmeng/map', '/zh/lvmeng/progression', '/zh/lvmeng/version', '/zh/lvmeng/download', '/_games/lvmeng/_next/static/app.js', '/sitemaps/lvmeng/index.xml']) {
+      const response = await router.fetch(new Request(`https://gachia.com${pathname}`), env);
+      await expect(response.text()).resolves.toBe('lvmeng');
+    }
+    for (const pathname of ['/en/lvmeng', '/ja/lvmeng/guides', '/zh/lvmeng/unknown', '/zh/lvmeng/guides/release', '/zh/lvmeng/characters/unknown/extra', '/_games/lvmeng-extra/file.js', '/sitemaps/lvmeng-extra.xml']) {
+      const response = await router.fetch(new Request(`https://gachia.com${pathname}`), env);
+      await expect(response.text()).resolves.toBe('main');
+    }
+  });
+
+  it('rewrites only Lvmeng sitemap and asset paths before forwarding', async () => {
+    let receivedPath = '';
+    const lvmeng: Fetcher = {
+      fetch: async (request) => { receivedPath = new URL(request instanceof Request ? request.url : String(request)).pathname; return new Response('lvmeng'); },
+      connect: () => { throw new Error('connect is not used by the router'); },
+    } as Fetcher;
+    const env = { MAIN_SITE: fetcher('main'), LVMENG_SITE: lvmeng, LVMENG_ENABLED: 'true', LVMENG_CANARY_COOKIE: '' };
+    await router.fetch(new Request('https://gachia.com/sitemaps/lvmeng/index.xml'), env);
+    expect(receivedPath).toBe('/sitemap.xml');
+    await router.fetch(new Request('https://gachia.com/_games/lvmeng/_next/static/chunks/app.js'), env);
+    expect(receivedPath).toBe('/_next/static/chunks/app.js');
+  });
+
 });

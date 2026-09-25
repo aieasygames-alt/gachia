@@ -6,10 +6,13 @@ interface Env {
   AZUR_PROMILIA_ENABLED?: string;
   GENSHIN_SITE?: Fetcher;
   GENSHIN_ENABLED?: string;
+  LVMENG_SITE?: Fetcher;
+  LVMENG_ENABLED?: string;
   PREVIEW_MODE?: string;
   AZUR_PROMILIA_CANARY_COOKIE?: string;
   GENSHIN_CANARY_COOKIE?: string;
   GENSHIN_CANARY_TOKEN?: string;
+  LVMENG_CANARY_COOKIE?: string;
 }
 
 import { GENERATED_GAME_DEPLOYMENTS } from './generated-game-deployments';
@@ -21,10 +24,13 @@ const AZUR_PROMILIA_PAGES = new Set(['characters', 'guides', 'weapons', 'tier-li
 const AZUR_PROMILIA_DETAIL_PAGES = new Set(['characters', 'guides', 'weapons']);
 const GENSHIN_PAGES = new Set(['characters', 'guides', 'weapons', 'artifacts', 'items', 'redeem-codes', 'gacha', 'version', 'tier-list', 'download', 'map', 'build', 'teams', 'compare', 'calculator']);
 const GENSHIN_DETAIL_PAGES = new Set(['characters', 'guides', 'weapons', 'artifacts', 'items']);
+const LVMENG_PAGES = new Set(['characters', 'guides', 'starter-guide', 'world', 'map', 'progression', 'news', 'version', 'download', 'redeem-codes']);
+const LVMENG_DETAIL_PAGES = new Set(['characters']);
 
 const NTE_DEPLOYMENT = GENERATED_GAME_DEPLOYMENTS.find((deployment) => deployment.id === 'nte');
 const AZUR_PROMILIA_DEPLOYMENT = GENERATED_GAME_DEPLOYMENTS.find((deployment) => deployment.id === 'azur-promilia');
 const GENSHIN_DEPLOYMENT = GENERATED_GAME_DEPLOYMENTS.find((deployment) => deployment.id === 'genshin');
+const LVMENG_DEPLOYMENT = GENERATED_GAME_DEPLOYMENTS.find((deployment) => deployment.id === 'lvmeng');
 
 function isEnabled(value: string | undefined): boolean {
   return value === 'true';
@@ -78,6 +84,20 @@ function isGenshinRequest(pathname: string): boolean {
   );
 }
 
+function isLvmengRequest(pathname: string): boolean {
+  const segments = pathname.split('/').filter(Boolean);
+  const isChinesePage = segments[0] === 'zh' && segments[1] === 'lvmeng' && (
+    segments.length === 2 ||
+    (segments.length === 3 && LVMENG_PAGES.has(segments[2] ?? '')) ||
+    (segments.length === 4 && LVMENG_DETAIL_PAGES.has(segments[2] ?? ''))
+  );
+  return (
+    isChinesePage ||
+    (segments.length >= 2 && segments[0] === '_games' && segments[1] === 'lvmeng') ||
+    (segments.length >= 2 && segments[0] === 'sitemaps' && segments[1] === 'lvmeng')
+  );
+}
+
 function requestForNteWorker(request: Request): Request {
   const url = new URL(request.url);
   if (NTE_DEPLOYMENT && (url.pathname === NTE_DEPLOYMENT.sitemapPath || url.pathname === `${NTE_DEPLOYMENT.sitemapPath}/`)) {
@@ -120,6 +140,20 @@ function requestForGenshinWorker(request: Request): Request {
   return request;
 }
 
+function requestForLvmengWorker(request: Request): Request {
+  const url = new URL(request.url);
+  if (LVMENG_DEPLOYMENT && (url.pathname === LVMENG_DEPLOYMENT.sitemapPath || url.pathname === `${LVMENG_DEPLOYMENT.sitemapPath}/`)) {
+    url.pathname = '/sitemap.xml';
+    return new Request(url, request);
+  }
+  const assetPrefix = '/_games/lvmeng/_next/';
+  if (url.pathname.startsWith(assetPrefix)) {
+    url.pathname = `/_next/${url.pathname.slice(assetPrefix.length)}`;
+    return new Request(url, request);
+  }
+  return request;
+}
+
 async function fetchWithRouteMarker(worker: Fetcher, request: Request, marker: string): Promise<Response> {
   const response = await worker.fetch(request);
   const headers = new Headers(response.headers);
@@ -154,6 +188,11 @@ export default {
     const genshinCanaryToken = env.GENSHIN_CANARY_TOKEN ?? env.GENSHIN_CANARY_COOKIE;
     if (isEnabled(env.GENSHIN_ENABLED) && env.GENSHIN_SITE && isGenshinRequest(url.pathname) && hasCanaryCookie(request, genshinCanaryToken, 'gachia_genshin_canary')) {
       return fetchWithRouteMarker(env.GENSHIN_SITE, requestForGenshinWorker(request), 'genshin');
+    }
+
+    const lvmengCanaryEnabled = Boolean(env.LVMENG_CANARY_COOKIE) && hasCanaryCookie(request, env.LVMENG_CANARY_COOKIE, 'gachia_lvmeng_canary');
+    if (env.LVMENG_SITE && isLvmengRequest(url.pathname) && (isEnabled(env.LVMENG_ENABLED) || lvmengCanaryEnabled)) {
+      return fetchWithRouteMarker(env.LVMENG_SITE, requestForLvmengWorker(request), 'lvmeng');
     }
 
     return env.MAIN_SITE.fetch(request);

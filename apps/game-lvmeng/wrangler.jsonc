@@ -1,0 +1,30 @@
+{
+  "name": "gachia-game-lvmeng",
+  "main": ".open-next/worker.js",
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "compatibility_date": "2026-07-08",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "workers_dev": true,
+  "observability": {
+    "enabled": true,
+    "logs": { "enabled": true, "persist": true, "invocation_logs": true }
+  },
+  "vars": {
+    "NEXT_PUBLIC_APP_URL": "https://gachia.com",
+    "LVMENG_DEPLOYMENT_MODE": "preview"
+  },
+  "env": {
+    "production": {
+      "name": "gachia-game-lvmeng",
+      "vars": {
+        "NEXT_PUBLIC_APP_URL": "https://gachia.com",
+        "LVMENG_DEPLOYMENT_MODE": "production"
+      }
+    }
+  }
+}

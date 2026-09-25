@@ -1,0 +1,6 @@
+import type { Metadata } from 'next';
+import { game, launchRewards, releaseStatus } from '@/lib/data';
+
+export const metadata: Metadata = { title: '绿梦：时空之声预约与下载 | Gachia', description: '绿梦：时空之声官方预约与下载入口。', alternates: { canonical: 'https://gachia.com/zh/lvmeng/download' } };
+
+export default function DownloadPage() { return <main className="content"><div className="eyebrow">官方入口</div><h1>预约 / 下载</h1><p className="lead">公测前仅使用官方公布的预约和商店入口。不要从非官方来源下载测试包、安装包或所谓兑换工具。</p><ul className="link-list"><li><a href={game.officialSite} rel="noreferrer">官方网站</a></li><li><a href={game.taptap} rel="noreferrer">TapTap 官方预约</a></li><li><a href={game.appStore} rel="noreferrer">App Store 预登记</a></li></ul><h2>开服状态</h2><div className="grid">{releaseStatus.map((item) => <article className="card" key={item.label}><h3>{item.label}</h3><strong>{item.value}</strong><p>{item.state}</p></article>)}</div><h2>预约奖励已公告</h2><div className="grid">{launchRewards.map((reward) => <article className="card" key={reward.item}><h3>{reward.item}</h3><p>{reward.note}</p></article>)}</div><h2>PC 配置参考</h2><p>TapTap 当前列出的 PC 配置为 Windows 10（64 位）、Intel Core i7 第十代或 AMD Ryzen 7 3700X、16GB 内存、GeForce RTX 2060 或 AMD Radeon RX 5700 XT、15GB 存储空间。公测客户端最终要求请以官方公告为准。</p></main> }
