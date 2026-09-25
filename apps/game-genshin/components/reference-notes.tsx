@@ -1,6 +1,6 @@
 import type { SupportedLocale } from '@gachia/core';
 
-type ReferenceTopic = 'home' | 'weapons' | 'artifacts' | 'items' | 'guides' | 'banner' | 'character' | 'index-checklist' | 'execution-plan' | 'weapon-workflow' | 'material-workflow' | 'guide-workflow' | 'artifact-workflow' | 'character-workflow' | 'live-checks' | 'weapon-audit' | 'material-audit' | 'guide-audit' | 'character-audit' | 'status-audit' | 'weapon-decision-record' | 'material-decision-record' | 'guide-decision-record' | 'character-decision-record' | 'version-decision-record' | 'weapon-review' | 'material-review' | 'guide-review' | 'character-review';
+type ReferenceTopic = 'home' | 'weapons' | 'artifacts' | 'items' | 'guides' | 'banner' | 'character' | 'index-checklist' | 'execution-plan' | 'weapon-workflow' | 'material-workflow' | 'guide-workflow' | 'artifact-workflow' | 'character-workflow' | 'live-checks' | 'weapon-audit' | 'material-audit' | 'guide-audit' | 'character-audit' | 'status-audit' | 'weapon-decision-record' | 'material-decision-record' | 'guide-decision-record' | 'character-decision-record' | 'version-decision-record' | 'weapon-review' | 'material-review' | 'guide-review' | 'character-review' | 'weapon-final-check' | 'material-final-check';
 
 const content: Record<ReferenceTopic, Record<SupportedLocale, string[]>> = {
   home: {
@@ -146,6 +146,16 @@ const content: Record<ReferenceTopic, Record<SupportedLocale, string[]>> = {
     zh: ['胡桃的实战复盘应在同一队伍中记录一次完整循环是否稳定完成，而不是只保留最高伤害截图。若生命管理、反应触发或退场后的衔接不稳定，优先调整影响整轮的装备、队友或操作，再考虑词条和精炼的上限提升。'],
     en: ['A Hu Tao practical review should record whether one complete rotation finishes reliably in the same team rather than retaining only the highest damage screenshot. When HP management, reaction triggers, or exit connection is unstable, adjust equipment, teammates, or inputs affecting the whole loop before pursuing more stats or refinement.'],
     ja: ['胡桃の実戦振り返りでは、最高ダメージの画像だけでなく、同じ編成で一回の完全なローテーションを安定して終えられるかを記録します。HP管理、反応発動、退場後の接続が不安定なら、追加ステータスや精錬の上限を追う前に、全体へ影響する装備、味方、操作を調整してください。'],
+  },
+  'weapon-final-check': {
+    zh: ['最终确定武器前，再核对一次角色可装备类型、被动触发条件、现有强化等级和本周资源上限。若当前方案已稳定完成队伍职责，优先保留可用材料给下一项明确目标；只有确认存在可复现的短板时，才继续投入。'],
+    en: ['Before finalizing a weapon, recheck equip type, passive conditions, current upgrade level, and this week’s resource limit. When the current setup already performs its team role reliably, reserve usable materials for the next clear goal and invest further only for a repeatable shortfall.'],
+    ja: ['武器を最終決定する前に、装備できる種類、固有効果の発動条件、現在の強化段階、今週の資源上限をもう一度確認します。現在案が編成での役割を安定して果たせる場合は、使える素材を次の明確な目標へ残し、再現できる不足が確認されたときだけ追加投資してください。'],
+  },
+  'material-final-check': {
+    zh: ['材料を使う直前に、必要数、入手先、次の段階、他の目標との競合を確認します。現在の不足を解決しない素材にはすぐ使わず、次の明確な育成節目まで残してください。'],
+    en: ['Immediately before spending materials, check required quantity, source, next stage, and competition with other goals. Do not spend on materials that do not solve the current shortage; retain them for the next clear progression node.'],
+    ja: ['素材を使う直前に、必要数、入手先、次の段階、他目標との競合を確認します。現在の不足を解決しない素材へすぐ使わず、次の明確な育成節目まで残してください。'],
   },
 };
 
