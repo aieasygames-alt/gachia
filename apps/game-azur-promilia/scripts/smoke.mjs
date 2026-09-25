@@ -4,6 +4,12 @@ if (!origin) {
   process.exit(1);
 }
 
+const host = new URL(origin).hostname;
+if (host === 'gachia.com' || host.endsWith('.gachia.com')) {
+  console.error('Preview smoke tests require a preview origin because they assert noindex protection. Use `pnpm run verify:production` for gachia.com.');
+  process.exit(1);
+}
+
 const paths = [
   '/zh/azur-promilia',
   '/en/azur-promilia',
