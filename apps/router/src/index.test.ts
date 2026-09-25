@@ -130,7 +130,7 @@ describe('gachia router safety defaults', () => {
     await expect(response.text()).resolves.toBe('main');
   });
 
-  it('routes only approved Genshin URLs for the explicit cookie canary', async () => {
+  it('routes only approved Genshin URLs once the deployment is live', async () => {
     const env = {
       MAIN_SITE: fetcher('main'),
       GENSHIN_SITE: fetcher('genshin'),
@@ -139,18 +139,17 @@ describe('gachia router safety defaults', () => {
     };
 
     for (const pathname of ['/zh/genshin', '/en/genshin/characters/test', '/ja/genshin/calculator', '/_games/genshin/_next/static/app.js', '/sitemaps/genshin/index.xml']) {
-      const request = new Request(`https://gachia.com${pathname}`, { headers: { cookie: 'gachia_genshin_canary=preview' } });
-      const response = await router.fetch(request, env);
+      const response = await router.fetch(new Request(`https://gachia.com${pathname}`), env);
       await expect(response.text()).resolves.toBe('genshin');
     }
 
-    for (const pathname of ['/zh/genshin', '/fr/genshin', '/zh/genshin/unknown', '/zh/genshin/characters/test/extra', '/_games/genshin-extra/file.js']) {
+    for (const pathname of ['/fr/genshin', '/zh/genshin/unknown', '/zh/genshin/characters/test/extra', '/_games/genshin-extra/file.js']) {
       const response = await router.fetch(new Request(`https://gachia.com${pathname}`), env);
       await expect(response.text()).resolves.toBe('main');
     }
   });
 
-  it('prefers the Genshin canary secret over the compatibility variable', async () => {
+  it('ignores Genshin canary tokens after the deployment is live', async () => {
     const env = {
       MAIN_SITE: fetcher('main'),
       GENSHIN_SITE: fetcher('genshin'),
@@ -159,10 +158,18 @@ describe('gachia router safety defaults', () => {
       GENSHIN_CANARY_TOKEN: 'secret-token',
     };
 
-    const legacy = await router.fetch(new Request('https://gachia.com/zh/genshin', { headers: { cookie: 'gachia_genshin_canary=legacy-token' } }), env);
-    await expect(legacy.text()).resolves.toBe('main');
-    const canary = await router.fetch(new Request('https://gachia.com/zh/genshin', { headers: { cookie: 'gachia_genshin_canary=secret-token' } }), env);
-    await expect(canary.text()).resolves.toBe('genshin');
+    const response = await router.fetch(new Request('https://gachia.com/zh/genshin', { headers: { cookie: 'gachia_genshin_canary=invalid-token' } }), env);
+    await expect(response.text()).resolves.toBe('genshin');
+  });
+
+  it('routes approved Genshin URLs without a Cookie once the deployment is live', async () => {
+    const response = await router.fetch(new Request('https://gachia.com/zh/genshin'), {
+      MAIN_SITE: fetcher('main'),
+      GENSHIN_SITE: fetcher('genshin'),
+      GENSHIN_ENABLED: 'true',
+      GENSHIN_CANARY_TOKEN: 'still-restricted-in-preview',
+    });
+    await expect(response.text()).resolves.toBe('genshin');
   });
 
   it('rewrites only the Genshin sitemap and asset namespaces for its Worker', async () => {

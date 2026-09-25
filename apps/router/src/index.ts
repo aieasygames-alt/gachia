@@ -151,7 +151,7 @@ export default {
       return fetchWithRouteMarker(env.AZUR_PROMILIA_SITE, requestForAzurPromiliaWorker(request), 'azur-promilia');
     }
 
-    const genshinCanaryToken = env.GENSHIN_CANARY_TOKEN ?? env.GENSHIN_CANARY_COOKIE;
+    const genshinCanaryToken = GENSHIN_DEPLOYMENT?.status === 'live' ? '' : env.GENSHIN_CANARY_TOKEN ?? env.GENSHIN_CANARY_COOKIE;
     if (isEnabled(env.GENSHIN_ENABLED) && env.GENSHIN_SITE && isGenshinRequest(url.pathname) && hasCanaryCookie(request, genshinCanaryToken, 'gachia_genshin_canary')) {
       return fetchWithRouteMarker(env.GENSHIN_SITE, requestForGenshinWorker(request), 'genshin');
     }
