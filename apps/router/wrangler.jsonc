@@ -6,7 +6,7 @@
   "vars": {
     "AZUR_PROMILIA_ENABLED": "true",
     "AZUR_PROMILIA_CANARY_COOKIE": "",
-    "GENSHIN_ENABLED": "true",
+    "GENSHIN_ENABLED": "false",
     "GENSHIN_CANARY_COOKIE": ""
   },
   "services": [

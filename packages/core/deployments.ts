@@ -20,7 +20,7 @@ export const GAME_DEPLOYMENTS: Partial<Record<GameId, GameDeployment>> = {
     worker: 'gachia-game-genshin',
     assetPrefix: '/_games/genshin',
     sitemapPath: '/sitemaps/genshin/index.xml',
-    status: 'live',
+    status: 'preview',
   },
   nte: {
     deployment: 'game',

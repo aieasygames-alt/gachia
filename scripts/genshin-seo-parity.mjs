@@ -9,6 +9,7 @@ const workerOriginDirect = process.env.GENSHIN_WORKER_ORIGIN_DIRECT === 'true';
 const strictParity = process.env.GENSHIN_STRICT_PARITY === 'true';
 const stagingCookie = process.env.GENSHIN_STAGING_COOKIE ?? '';
 const timeoutMs = Number.parseInt(process.env.GENSHIN_PARITY_TIMEOUT_MS ?? '15000', 10);
+const assetAttempts = Number.parseInt(process.env.GENSHIN_ASSET_ATTEMPTS ?? '3', 10);
 const locales = ['zh', 'en', 'ja'];
 const paths = locales.flatMap((locale) => [
   `/${locale}/genshin`, `/${locale}/genshin/characters`, `/${locale}/genshin/characters/hu-tao`,
@@ -82,14 +83,24 @@ async function checkAssets(origin, assets) {
       const workerPath = `/_next/${asset.slice('/_games/genshin/_next/'.length)}`;
       const candidates = previewOnly ? [workerPath] : workerOriginDirect ? [workerPath, asset] : [asset];
       for (const requestPath of candidates) {
-        const response = await fetch(new URL(requestPath, origin), {
-          signal: AbortSignal.timeout(timeoutMs),
-          headers: stagingCookie ? { cookie: stagingCookie } : undefined,
-        });
-        if (response.status === 200 && /(?:javascript|css|font|image)/i.test(response.headers.get('content-type') ?? '')) {
-          return { asset, requestPath, status: response.status, contentType: response.headers.get('content-type') ?? '' };
+        let lastFailure = { asset, requestPath, status: 0, contentType: '' };
+        for (let attempt = 1; attempt <= assetAttempts; attempt += 1) {
+          try {
+            const response = await fetch(new URL(requestPath, origin), {
+              signal: AbortSignal.timeout(timeoutMs),
+              headers: stagingCookie ? { cookie: stagingCookie } : undefined,
+            });
+            const contentType = response.headers.get('content-type') ?? '';
+            if (response.status === 200 && /(?:javascript|css|font|image)/i.test(contentType)) {
+              return { asset, requestPath, status: response.status, contentType, attempt };
+            }
+            lastFailure = { asset, requestPath, status: response.status, contentType };
+          } catch (error) {
+            lastFailure = { asset, requestPath, status: 0, contentType: '', error: String(error) };
+          }
+          if (attempt < assetAttempts) await new Promise((resolve) => setTimeout(resolve, 250 * attempt));
         }
-        if (requestPath === candidates.at(-1)) return { asset, requestPath, status: response.status, contentType: response.headers.get('content-type') ?? '' };
+        if (requestPath === candidates.at(-1)) return lastFailure;
       }
       return { asset, status: 0, contentType: '' };
     } catch (error) {

@@ -16,7 +16,7 @@ export const GENERATED_GAME_DEPLOYMENTS = [
     "worker": "gachia-game-genshin",
     "assetPrefix": "/_games/genshin",
     "sitemapPath": "/sitemaps/genshin/index.xml",
-    "status": "live",
+    "status": "preview",
     "binding": "GENSHIN_SITE",
     "enabled": "GENSHIN_ENABLED"
   },
