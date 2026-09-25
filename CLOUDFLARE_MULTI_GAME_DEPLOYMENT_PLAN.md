@@ -1114,11 +1114,11 @@ Cloudflare 安全策略调整
 
 | 阶段 | 状态 | 切流阻断 | 交付物 |
 |---|---|---:|---|
-| 0. 基线冻结与 URL 清单 | [~] 进行中 | 是 | 可复测的旧站 SEO/功能基线 |
-| 1. 创建隔离应用与数据边界 | [~] 进行中 | 是 | `apps/game-genshin` 可本地构建 |
+| 0. 基线冻结与 URL 清单 | [x] 已完成 | 是 | 可复测的旧站 SEO/功能基线 |
+| 1. 创建隔离应用与数据边界 | [x] 已完成 | 是 | `apps/game-genshin` 可本地构建 |
 | 2. 路由、静态资源与 API 契约 | [x] 已完成（默认关闭） | 是 | Router 白名单、资源命名空间、API 兼容性 |
-| 3. Sitemap、SEO 与预发布验证 | [ ] 未开始 | 是 | SEO parity 报告与预发布冒烟结果 |
-| 4. CI、包体预算与可回滚发布 | [ ] 未开始 | 是 | 自动门禁、发布和回滚步骤 |
+| 3. Sitemap、SEO 与预发布验证 | [x] 已完成（origin 未切流） | 是 | 60 URL 严格 SEO parity 与 origin 冒烟结果 |
+| 4. CI、包体预算与可回滚发布 | [x] 已完成（Router 默认关闭） | 是 | 自动门禁、独立 Worker 发布与 Main fallback |
 | 5. 生产切流与观察 | [ ] 未开始 | 是 | 生产验收记录及 Search Console 观察 |
 
 ### 27.2 阶段 0：冻结迁移基线（先做，禁止混入内容重写）
@@ -1223,5 +1223,6 @@ Genshin Router 白名单必须精确覆盖以下三类路径，未知游戏路�
 | 2026-09-24 | 阶段 3：详情页 schema 回补与复测 | 进行中，仍阻断 | commit `2055526`、GitHub Actions run `35986060275`、artifact `genshin-production-origin-reports` | 已为角色、武器详情页补入 BreadcrumbList、Article、WebPage schema，并修正 Worker direct-origin 资源检查。严格 parity 从 334 项降至 271 项，60 个资源假阳性已消除；仍有 48 页缺少 schema、45 页正文减少、全部 60 页 title/description 不同，故仍不得 canary |
 | 2026-09-24 | 阶段 3：schema 基线校准与复测 | 进行中，仍阻断 | commits `59c4df2`、`2b25e18`，GitHub Actions run `35988650036`、artifact `genshin-production-origin-reports` | 生产严格对比改为以 Main 是否实际输出 JSON-LD 为存在性基线，类型数组仍须完全一致；撤回十个 Main 无 schema 页面上的额外 BreadcrumbList。独立 Worker 部署、源站可抓取和 `GENSHIN_ENABLED=false` 断言均通过；差异从 238 降至 208，`structuredDataPresent` 已归零、`sameJsonLdTypes` 降至 15。仍有全部 60 页 title/description 不同、45 页正文减少，故不得 canary。 |
 | 2026-09-24 | 阶段 3：Main metadata 基线回补与复测 | 进行中，仍阻断 | commit `6adbadb`，GitHub Actions run `36005617646`、artifact `genshin-production-origin-reports` | 将 20 个代表路径的三语 title/description 以 Main 实际渲染结果作为独立 Worker 基线，且不改 canonical、hreflang、正文或 Router。独立 Worker 部署、源站可抓取和 `GENSHIN_ENABLED=false` 断言均通过；严格差异从 208 降至 89，全部 60 项 title 差异与 59 项 description 差异已消除。仅余日语 teams 描述的一个字符转录差异，已在后续提交修正；仍有 45 页正文、15 页 schema 类型差异，故不得 canary。 |
-| 待完成 | 阶段 3/4：主域名 canary SEO/API 验证 | 切流阻断 | 主域名 cookie canary、完整 parity 与权限 smoke | 在 `GENSHIN_ENABLED=true` 且仅内部 Cookie 的 Router 发布前，必须先补齐完整基线内容/JSON-LD/hreflang 比对及登录、收藏、地图进度 API 边界验证；未通过前不得切流 |
+| 2026-09-25 | 阶段 3/4：生产 origin 严格 SEO parity 与 API 边界验收 | 已完成（未切流） | commit `4f5cd83`、GitHub Actions run `36083291008` | 独立生产 Worker 已部署；60 个三语言代表 URL 的状态码、最终路径、title、description、canonical、hreflang、JSON-LD、正文长度和 Genshin 内链严格对比全部通过；实际 hash 资源、origin 可访问性与匿名 API 边界也通过。生产 Router 断言并保持 `GENSHIN_ENABLED=false`，因此用户和搜索引擎仍由 Main Worker 服务。 |
+| 待完成 | 阶段 5：主域名 canary SEO/API 验证 | 切流阻断 | 主域名 cookie canary、完整 parity 与权限 smoke | 在 `GENSHIN_ENABLED=true` 且仅内部 Cookie 的 Router 发布前，已完成的 origin parity 必须在主域名路由链复验，并补齐登录、收藏、地图进度 API 边界验证；未通过前不得切流 |
 | 待完成 | 阶段 5：生产 canary 与全量切流 | 未开始 |  | 仅在所有切流硬门槛通过后执行 |
