@@ -85,6 +85,9 @@ jobs:
       - name: Audit Azur Promilia content
         run: pnpm --filter @gachia/game-azur-promilia audit:content
 
+      - name: Verify Lvmeng bundle
+        run: pnpm --filter @gachia/game-lvmeng verify:bundle
+
       - name: Validate llms.txt
         run: node scripts/validate-llms-route.mjs
 
@@ -215,6 +218,9 @@ jobs:
       - name: Deploy Azur Promilia Worker
         run: pnpm run --filter @gachia/game-azur-promilia deploy:production
 
+      - name: Deploy Lvmeng Worker
+        run: pnpm run --filter @gachia/game-lvmeng deploy
+
       - name: Deploy Router Worker
         working-directory: apps/router
         run: pnpm exec wrangler deploy --config wrangler.jsonc --env ""
@@ -233,6 +239,9 @@ jobs:
             https://gachia.com/zh/genshin
             https://gachia.com/zh/azur-promilia
             https://gachia.com/zh/azur-promilia/characters
+            https://gachia.com/zh/azur-promilia/travel-trace
+            https://gachia.com/zh/lvmeng
+            https://gachia.com/zh/lvmeng/launch-check
             https://gachia.com/zh/privacy
             https://gachia.com/zh/contact
             https://gachia.com/sitemap.xml
