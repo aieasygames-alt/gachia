@@ -42,19 +42,23 @@ jobs:
         run: |
           set -euo pipefail
           for pathname in /zh/genshin /en/genshin/characters /ja/genshin/calculator /sitemaps/genshin/index.xml; do
-            headers=$(curl --silent --show-error --max-time 30 -D - -o /dev/null -H 'X-Gachia-Route-Debug: 1' "https://gachia.com$pathname" | tr -d '\r')
-            target=$(printf '%s\n' "$headers" | sed -nE 's/^x-gachia-route-target: *(.*)$/\1/ip')
-            test "$target" = genshin
+            matched=false
+            for attempt in 1 2 3 4 5; do
+              headers=$(curl --silent --show-error --max-time 30 -D - -o /dev/null -H 'X-Gachia-Route-Debug: 1' "https://gachia.com$pathname" | tr -d '\r')
+              target=$(printf '%s\n' "$headers" | sed -nE 's/^x-gachia-route-target: *(.*)$/\1/ip')
+              if [ "$target" = genshin ]; then
+                matched=true
+                break
+              fi
+              echo "Attempt $attempt for $pathname: Genshin target=$target" >&2
+              printf '%s\n' "$headers" | grep -iE '^(HTTP/|x-gachia-route-target:|content-type:|cf-ray:)' >&2 || true
+              sleep 5
+            done
+            if [ "$matched" != true ]; then
+              echo "Genshin route did not propagate for $pathname" >&2
+              exit 1
+            fi
           done
-          for attempt in 1 2 3 4 5; do
-            genshin_headers=$(curl --silent --show-error --max-time 30 -D - -o /dev/null -H 'X-Gachia-Route-Debug: 1' https://gachia.com/zh/genshin | tr -d '\r')
-            genshin_target=$(printf '%s\n' "$genshin_headers" | sed -nE 's/^x-gachia-route-target: *(.*)$/\1/ip')
-            if [ "$genshin_target" = genshin ]; then exit 0; fi
-            echo "Attempt $attempt: Genshin target=$genshin_target" >&2
-            printf '%s\n' "$genshin_headers" | grep -iE '^(HTTP/|x-gachia-route-target:|content-type:)' >&2 || true
-            sleep 5
-          done
-          exit 1
       - name: Compare full cutover with the Main SEO baseline
         env:
           GENSHIN_PRODUCTION_ORIGIN: https://gachia.com
