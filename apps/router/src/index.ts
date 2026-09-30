@@ -6,6 +6,7 @@ interface Env {
   AZUR_PROMILIA_ENABLED?: string;
   GENSHIN_SITE?: Fetcher;
   GENSHIN_ENABLED?: string;
+  GENSHIN_FULL_CUTOVER?: string;
   LVMENG_SITE?: Fetcher;
   LVMENG_ENABLED?: string;
   PREVIEW_MODE?: string;
@@ -186,7 +187,8 @@ export default {
     }
 
     const genshinCanaryToken = env.GENSHIN_CANARY_TOKEN ?? env.GENSHIN_CANARY_COOKIE;
-    if (isEnabled(env.GENSHIN_ENABLED) && env.GENSHIN_SITE && isGenshinRequest(url.pathname) && hasCanaryCookie(request, genshinCanaryToken, 'gachia_genshin_canary')) {
+    const genshinCanaryAllowed = isEnabled(env.GENSHIN_FULL_CUTOVER) || hasCanaryCookie(request, genshinCanaryToken, 'gachia_genshin_canary');
+    if (isEnabled(env.GENSHIN_ENABLED) && env.GENSHIN_SITE && isGenshinRequest(url.pathname) && genshinCanaryAllowed) {
       return fetchWithRouteMarker(env.GENSHIN_SITE, requestForGenshinWorker(request), 'genshin');
     }
 

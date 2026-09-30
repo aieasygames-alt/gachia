@@ -36,11 +36,16 @@ jobs:
         run: |
           set -euo pipefail
           trap 'rm -f wrangler.full-cutover.tmp.jsonc' EXIT
-          node -e 'const fs=require("fs"); const source="wrangler.jsonc"; const target="wrangler.full-cutover.tmp.jsonc"; const text=fs.readFileSync(source,"utf8"); const from="\"GENSHIN_ENABLED\": \"false\""; const to="\"GENSHIN_ENABLED\": \"true\""; const next=text.replace(from, to); if(next===text) throw new Error("Expected disabled Genshin production switch"); fs.writeFileSync(target,next);'
+          node -e 'const fs=require("fs"); const source="wrangler.jsonc"; const target="wrangler.full-cutover.tmp.jsonc"; const text=fs.readFileSync(source,"utf8"); const switches=[["\"GENSHIN_ENABLED\": \"false\"","\"GENSHIN_ENABLED\": \"true\""],["\"GENSHIN_FULL_CUTOVER\": \"false\"","\"GENSHIN_FULL_CUTOVER\": \"true\""]]; const next=switches.reduce((value,[from,to]) => value.replace(from,to),text); if(next===text || !next.includes("\"GENSHIN_FULL_CUTOVER\": \"true\"")) throw new Error("Expected disabled Genshin production switches"); fs.writeFileSync(target,next);'
           pnpm exec wrangler deploy --config wrangler.full-cutover.tmp.jsonc --env ""
       - name: Verify full Genshin routing
         run: |
           set -euo pipefail
+          for pathname in /zh/genshin /en/genshin/characters /ja/genshin/calculator /sitemaps/genshin/index.xml; do
+            headers=$(curl --silent --show-error --max-time 30 -D - -o /dev/null -H 'X-Gachia-Route-Debug: 1' "https://gachia.com$pathname" | tr -d '\r')
+            target=$(printf '%s\n' "$headers" | sed -nE 's/^x-gachia-route-target: *(.*)$/\1/ip')
+            test "$target" = genshin
+          done
           for attempt in 1 2 3 4 5; do
             genshin_headers=$(curl --silent --show-error --max-time 30 -D - -o /dev/null -H 'X-Gachia-Route-Debug: 1' https://gachia.com/zh/genshin | tr -d '\r')
             genshin_target=$(printf '%s\n' "$genshin_headers" | sed -nE 's/^x-gachia-route-target: *(.*)$/\1/ip')

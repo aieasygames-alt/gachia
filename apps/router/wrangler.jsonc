@@ -7,6 +7,7 @@
     "AZUR_PROMILIA_ENABLED": "true",
     "AZUR_PROMILIA_CANARY_COOKIE": "",
     "GENSHIN_ENABLED": "false",
+    "GENSHIN_FULL_CUTOVER": "false",
     "GENSHIN_CANARY_COOKIE": "",
     "LVMENG_ENABLED": "true",
     "LVMENG_CANARY_COOKIE": "enabled"
@@ -41,6 +42,7 @@
         "AZUR_PROMILIA_ENABLED": "false",
         "AZUR_PROMILIA_CANARY_COOKIE": "enabled",
         "GENSHIN_ENABLED": "false",
+        "GENSHIN_FULL_CUTOVER": "false",
         "GENSHIN_CANARY_COOKIE": "enabled",
         "LVMENG_ENABLED": "false",
         "LVMENG_CANARY_COOKIE": "enabled",

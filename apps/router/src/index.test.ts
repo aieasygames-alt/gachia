@@ -165,6 +165,21 @@ describe('gachia router safety defaults', () => {
     await expect(canary.text()).resolves.toBe('genshin');
   });
 
+  it('routes approved Genshin URLs publicly when the full cutover switch is enabled', async () => {
+    const env = {
+      MAIN_SITE: fetcher('main'),
+      GENSHIN_SITE: fetcher('genshin'),
+      GENSHIN_ENABLED: 'true',
+      GENSHIN_FULL_CUTOVER: 'true',
+      GENSHIN_CANARY_TOKEN: 'secret-token',
+    };
+
+    for (const pathname of ['/zh/genshin', '/en/genshin/characters/test', '/ja/genshin/calculator', '/_games/genshin/_next/static/app.js', '/sitemaps/genshin/index.xml']) {
+      const response = await router.fetch(new Request(`https://gachia.com${pathname}`), env);
+      await expect(response.text()).resolves.toBe('genshin');
+    }
+  });
+
 
   it('rewrites only the Genshin sitemap and asset namespaces for its Worker', async () => {
     let receivedPath = '';
