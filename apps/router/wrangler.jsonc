@@ -6,8 +6,8 @@
   "vars": {
     "AZUR_PROMILIA_ENABLED": "true",
     "AZUR_PROMILIA_CANARY_COOKIE": "",
-    "GENSHIN_ENABLED": "false",
-    "GENSHIN_FULL_CUTOVER": "false",
+    "GENSHIN_ENABLED": "true",
+    "GENSHIN_FULL_CUTOVER": "true",
     "GENSHIN_CANARY_COOKIE": "",
     "LVMENG_ENABLED": "true",
     "LVMENG_CANARY_COOKIE": "enabled"
