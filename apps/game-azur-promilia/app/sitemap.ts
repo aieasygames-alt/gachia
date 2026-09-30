@@ -8,7 +8,7 @@ const hasTierListEntries = tierLists.some((list) => list.entries.length > 0);
 export default function sitemap(): MetadataRoute.Sitemap {
   return locales.flatMap((locale) => [
     { url: `${baseUrl}/${locale}/azur-promilia`, changeFrequency: 'weekly' as const, priority: 0.8 },
-    ...['characters', 'weapons', 'guides', 'systems', 'redeem-codes', 'kibo', 'world', 'planner', 'version'].map((page) => ({ url: `${baseUrl}/${locale}/azur-promilia/${page}`, changeFrequency: 'weekly' as const, priority: 0.6 })),
+    ...['characters', 'weapons', 'guides', 'systems', 'redeem-codes', 'kibo', 'world', 'planner', 'version', 'travel-trace'].map((page) => ({ url: `${baseUrl}/${locale}/azur-promilia/${page}`, changeFrequency: 'weekly' as const, priority: 0.6 })),
     ...(hasTierListEntries ? [{ url: `${baseUrl}/${locale}/azur-promilia/tier-list`, changeFrequency: 'weekly' as const, priority: 0.6 }] : []),
     ...characters.map((entry) => ({ url: `${baseUrl}/${locale}/azur-promilia/characters/${entry.id}`, changeFrequency: 'monthly' as const, priority: 0.5 })),
     ...weapons.map((entry) => ({ url: `${baseUrl}/${locale}/azur-promilia/weapons/${entry.id}`, changeFrequency: 'monthly' as const, priority: 0.5 })),

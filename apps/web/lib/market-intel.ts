@@ -49,10 +49,55 @@ export interface MarketIntelOpportunity {
   notes: string;
 }
 
-export const MARKET_INTEL_BATCH_ID = 'market-intel-2026-09-21';
-export const MARKET_INTEL_SOURCE_REPORT = '/plans/market-intel-2026-09-21.md';
+export const MARKET_INTEL_BATCH_ID = 'market-intel-2026-09-30';
+export const MARKET_INTEL_SOURCE_REPORT = '/plans/game-content-update-2026-09-30.md';
 
 export const MARKET_INTEL_OPPORTUNITIES: MarketIntelOpportunity[] = [
+  {
+    id: 'aniimo-s1-live-content-hub',
+    gameId: 'aniimo',
+    priority: 'P0',
+    title: '伊莫 S1 上线后内容中心',
+    keywordCluster: ['伊莫新手攻略', '伊莫虹光怎么选', '伊莫家园升级', '伊莫混沌模式', '伊莫全收集'],
+    riskTerms: ['mod', '私服', '代练', '账号交易'],
+    targetPages: ['/aniimo/version', '/aniimo/guides/s1-new-player-route', '/aniimo/guides/rainbow-aniimo-guide', '/aniimo/guides/homeland-resource-guide'],
+    actions: ['update_existing_page', 'create_topic_page', 'update_live_module', 'add_internal_links'],
+    status: 'done',
+    sourceDate: '2026-09-30',
+    sourceUrls: ['https://www.yimo.com/main', 'https://steamcommunity.com/app/4126040/allnews/?l=schinese'],
+    signal: { strength: 'confirmed' },
+    notes: 'S1 全平台上线后，将新手、虹光、家园、地图和奖励核验拆为独立入口；社区体验仅用于选题，不替代客户端或官方说明。',
+  },
+  {
+    id: 'azur-promilia-travel-trace-test-content-hub',
+    gameId: 'azur-promilia',
+    priority: 'P0',
+    title: '蓝色星原：旅谣旅迹测试内容中心',
+    keywordCluster: ['蓝色星原旅迹测试', '蓝色星原奇波', '蓝色星原家园', '蓝色星原不歪池', '蓝色星原养成'],
+    riskTerms: ['测试号交易', '泄露', '解包', '私服'],
+    targetPages: ['/azur-promilia/version', '/azur-promilia/guides/kibo-battle-and-ecology', '/azur-promilia/guides/homestead-progression', '/azur-promilia/guides/banner-system-status', '/azur-promilia/guides/test-feedback-tracker'],
+    actions: ['update_existing_page', 'create_topic_page', 'add_faq', 'add_internal_links'],
+    status: 'done',
+    sourceDate: '2026-09-30',
+    sourceUrls: ['https://promilia.cn/', 'https://www.taptap.cn/app/593829/topic?group_label_id=3448465'],
+    signal: { strength: 'confirmed' },
+    notes: '旅迹测试内容统一标为 CBT 参考或官方已确认，明确不将测试数值、养成成本和抽卡规则当作公测结论。',
+  },
+  {
+    id: 'lvmeng-public-beta-readiness-hub',
+    gameId: 'lvmeng',
+    priority: 'P0',
+    title: '绿梦：时空之声公测准备中心',
+    keywordCluster: ['绿梦公测', '绿梦横版ACT', '绿梦配队', '绿梦武器', '绿梦探索', '绿梦卡池福利'],
+    riskTerms: ['测试服安装包', '账号交易', '破解', '外挂'],
+    targetPages: ['/lvmeng/version', '/lvmeng/guides', '/lvmeng/starter-guide', '/lvmeng/roadmap'],
+    actions: ['update_existing_page', 'add_faq', 'add_internal_links', 'refresh_metadata'],
+    status: 'done',
+    sourceDate: '2026-09-30',
+    sourceUrls: ['https://www.taptap.cn/app/237561', 'https://apps.apple.com/cn/app/%E7%BB%BF%E6%A2%A6-%E6%97%B6%E7%A9%BA%E4%B9%8B%E5%A3%B0/id6791432398'],
+    signal: { strength: 'mixed' },
+    notes: '公测日期与商店显示可能存在差异，页面保留官方来源优先与待核验标记；以战斗、探索、配队和福利问题组织公测前内容。',
+  },
   {
     id: 'aniimo-launch-recap-mobile-countdown',
     gameId: 'aniimo',

@@ -20,4 +20,12 @@ describe('sitemap deployment shards', () => {
       expect(entries.some((entry) => entry.url === `https://gachia.com${deployment.sitemapPath}`)).toBe(false);
     }
   });
+
+  it('includes the Aniimo-only S1 starter checks page in every supported locale', async () => {
+    const entries = await sitemap();
+
+    for (const locale of ['zh', 'en', 'ja']) {
+      expect(entries.some((entry) => entry.url === `https://gachia.com/${locale}/aniimo/s1-check`)).toBe(true);
+    }
+  });
 });

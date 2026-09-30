@@ -20,7 +20,7 @@ const GUIDE_DESC: Record<string, Record<string, string>> = {
   skjh: { zh: '失控进化攻略百科，整理新手开荒、基地建设、资源科技树、基因流派、武器和公测福利，适合从版本总览一路看到账户养成。', en: 'Ashfall Evolution guides covering beginner routes, base building, resource tech, gene builds, weapons, and launch rewards so players can plan progression end to end.', ja: '失控進化攻略百科。初心者ルート、拠点建築、資源テック、遺伝子ビルド、武器、公測報酬をまとめて案内します。' },
   roco: { zh: '《洛克王国:世界》国际服攻略百科，聚焦 CBT 报名注册、版本时间线、下载安装、精灵图鉴和兑换码，帮助你在 10 月首测前做好准备。', en: 'Roco Kingdom (Global) guides focused on CBT sign-up, version timeline, download & install, Jinie database, and redeem codes to get you ready before the October playtest.', ja: 'ロコキングダム（国際版）攻略百科。CBT登録、版本タイムライン、DL/インストール、ジニー図鑑、交換コードをまとめ、10月のテストに備えます。' },
   'roco-cn': { zh: '《洛克王国:世界》国服攻略百科，覆盖版本专题、赛季活动、精灵图鉴、养成攻略与兑换码，内容陆续补充中。', en: 'Roco Kingdom (CN) guides covering version hubs, seasons, the Jinie database, build guides, and redeem codes — content is being added.', ja: 'ロコキングダム（中国版）攻略百科。版本特集、シーズン、ジニー図鑑、育成、交換コードをカバーし、順次追加中。' },
-  aniimo: { zh: '伊莫攻略百科，覆盖发售日期、下载入口、地图区域、Aniimo 图鉴、兑换码状态和上线前验证清单。', en: 'Aniimo guides covering release dates, official downloads, regions, the Aniimo database, code status, rewards, and launch verification.', ja: 'アニモ攻略百科。発売日、公式DL、地域、Aniimo図鑑、コード状態、リリース前確認を整理します。' },
+  aniimo: { zh: '伊莫 S1 攻略百科，覆盖新手开荒、虹光研究、家园资源、地图区域、Aniimo 图鉴、兑换码状态与当前客户端核验。', en: 'Aniimo S1 guides for new-player routes, Rainbow research, Homeland resources, regions, the Aniimo database, code status, and live-client verification.', ja: 'Aniimo S1攻略百科。初心者ルート、虹光研究、ホームランド資源、地域、Aniimo図鑑、コード状態、現行クライアント確認を整理します。' },
   'azur-promilia': { zh: '蓝色星原：旅谣攻略百科，优先整理官方信息核对、角色、武器、版本与兑换码状态。', en: 'Azur Promilia guides focused on official-information checks, characters, weapons, versions, and code status.', ja: 'アズールプロミリア攻略百科。公式情報の確認、キャラクター、武器、バージョン、コード状態を整理します。' },
 };
 
@@ -37,7 +37,7 @@ const FEATURED_GUIDE_IDS: Partial<Record<GameId, string[]>> = {
   skjh: ['week-one-live-ops-overview', 'anti-cheat-reporting-guide', 'custom-mode-community-server-guide'],
   roco: ['cbt-registration-guide', 'starter-guide', 'what-is-roco-kingdom', 'platforms-and-download-guide'],
   'roco-cn': ['daily-events-merchant-guide', 'redeem-codes-cn', 's2-season-guide', 'starter-guide-cn'],
-  aniimo: ['download', 'release-date', 'codes-rewards', 'beginner-guide', 'map-regions'],
+  aniimo: ['s1-new-player-route', 'rainbow-aniimo-guide', 'homeland-resource-guide', 'map-regions', 'codes-rewards'],
   'azur-promilia': ['official-information-checklist'],
 };
 

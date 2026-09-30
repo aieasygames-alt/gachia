@@ -19,6 +19,8 @@ import {
   localizeText,
   sortByPriority,
 } from '@/lib/live-content';
+import { THREE_GAME_STATUS_CARDS } from '@/lib/three-game-status';
+import { ThreeGameNextStep } from '@/components/three-game-next-step';
 
 const MESSAGES: Record<string, Record<string, string>> = {
   zh: zhMessages.homepage!,
@@ -422,6 +424,7 @@ export default async function LocaleHome({
   const orderedGames = [...priorityGames, ...availableGameIds.filter((gameId) => !priorityGames.includes(gameId))];
   const spotlightGames = orderedGames.slice(0, 5);
   const updateFeed: HomeFeedItem[] = sortByPriority([...LIVE_BANNERS, ...LIVE_VERSION_UPDATES, ...LIVE_CODE_SUMMARIES, ...LIVE_GUIDES]).slice(0, 8);
+  const threeGameStatus = locale === 'zh' ? THREE_GAME_STATUS_CARDS : [];
 
   return (
     <div className="container mx-auto min-w-0 max-w-full px-4 py-6 md:py-8">
@@ -531,6 +534,38 @@ export default async function LocaleHome({
           </div>
         </div>
       </section>
+
+      {threeGameStatus.length > 0 && (
+        <div className="mb-8 space-y-4">
+          <section className="rounded-lg border border-game-border bg-game-surface p-5 md:p-6">
+            <div className="mb-4 flex flex-wrap items-end justify-between gap-2">
+              <div>
+                <p className="text-sm font-semibold text-game-primary">内容更新状态</p>
+                <h2 className="mt-1 text-xl font-bold text-game-text">伊莫、蓝色星原与绿梦</h2>
+              </div>
+              <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-game-text-muted">
+                <Link href="/update-radar" className="hover:text-game-primary">查看更新雷达</Link>
+                <Link href="/content-verification" className="hover:text-game-primary">查看核验规则</Link>
+              </div>
+            </div>
+            <div className="grid gap-3 lg:grid-cols-3">
+              {threeGameStatus.map((item) => (
+                <Link key={item.id} href={item.href as '/'} className="group rounded-lg border border-game-border bg-game-surface-alt p-4 transition-colors hover:border-game-primary">
+                  <div className="flex items-center justify-between gap-3">
+                    <h3 className="text-base font-semibold text-game-text group-hover:text-game-primary">{item.title}</h3>
+                    <span className="rounded-full bg-game-surface px-2 py-1 text-[11px] font-semibold text-game-text-muted">
+                      {item.status === 'live' ? '已上线' : item.status === 'test' ? '测试中' : '待开服'}
+                    </span>
+                  </div>
+                  <p className="mt-3 text-sm leading-6 text-game-text-muted">{item.summary}</p>
+                  <p className="mt-4 text-sm font-semibold text-game-primary">{item.action} <span aria-hidden="true">→</span></p>
+                </Link>
+              ))}
+            </div>
+          </section>
+          <ThreeGameNextStep />
+        </div>
+      )}
 
       {/* Stats Section */}
       <section className="mb-8 grid grid-cols-2 gap-3 md:grid-cols-4">

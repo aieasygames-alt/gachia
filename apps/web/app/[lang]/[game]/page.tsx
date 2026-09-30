@@ -706,7 +706,7 @@ const FEATURED_GUIDE_IDS: Record<string, string[]> = {
   endfield: ['official-download-specs-homecoming-faq', 'homecoming-operators-map-route', 'blueprint-aic-factory-guide'],
   sea: ['identity-v-signin-screenshot-rewards-guide', 'lost-sea-new-islands-ship-prep-guide', 'sea-of-remnants-p2w-gacha-explained'],
   skjh: ['official-pc-download-faq', 'first-2-hours-starter-route', 'base-location-anti-raid-plan'],
-  aniimo: ['release-date', 'download', 'codes-rewards'],
+  aniimo: ['s1-new-player-route', 'rainbow-aniimo-guide', 'homeland-resource-guide'],
 };
 
 async function getGuideInfos(gameId: GameId, locale: SupportedLocale): Promise<GuideInfo[]> {

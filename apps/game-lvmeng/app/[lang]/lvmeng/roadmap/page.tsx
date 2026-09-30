@@ -20,6 +20,7 @@ const routeByLabel: Record<string, string> = {
   '地图探索': '/zh/lvmeng/map',
   '开荒指南': '/zh/lvmeng/starter-guide',
   '入门与系统': '/zh/lvmeng/guides',
+  '开服核验台': '/zh/lvmeng/launch-check',
 };
 
 export default function RoadmapPage() {
@@ -34,5 +35,6 @@ export default function RoadmapPage() {
     })}</div></article>)}</div>
     <h2>发布标准</h2>
     <p>角色数值、装备词条、材料掉落、地图坐标、活动期限与兑换码，均需要官方公告或当前客户端可复核来源。资料会保留核验日期和适用版本；无法确认的信息不会以猜测补全。</p>
+    <div className="link-list"><Link href="/zh/lvmeng/launch-check">开服核验台</Link></div>
   </main>;
 }

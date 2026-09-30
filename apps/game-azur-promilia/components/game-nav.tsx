@@ -6,6 +6,8 @@ const pages = [
   ['characters', { zh: '角色', en: 'Characters', ja: 'キャラクター' }],
   ['weapons', { zh: '武器', en: 'Weapons', ja: '武器' }],
   ['guides', { zh: '攻略', en: 'Guides', ja: '攻略' }],
+  ['guides/kibo-battle-and-ecology', { zh: '旅迹专题', en: 'Travel Trace', ja: '旅跡特集' }],
+  ['travel-trace', { zh: '测试核验', en: 'Test checks', ja: 'テスト確認' }],
   ['kibo', { zh: 'Kibo 图鉴', en: 'Kibo', ja: 'キボ' }],
   ['systems', { zh: '系统词典', en: 'Systems', ja: 'システム' }],
   ['world', { zh: '世界', en: 'World', ja: '世界' }],

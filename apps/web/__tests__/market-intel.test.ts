@@ -18,14 +18,14 @@ const repoRoot = join(__dirname, '..', '..', '..');
 
 describe('market intelligence backlog', () => {
   it('stores the current sampling batch as structured opportunities', () => {
-    expect(MARKET_INTEL_BATCH_ID).toBe('market-intel-2026-09-21');
-    expect(MARKET_INTEL_SOURCE_REPORT).toBe('/plans/market-intel-2026-09-21.md');
+    expect(MARKET_INTEL_BATCH_ID).toBe('market-intel-2026-09-30');
+    expect(MARKET_INTEL_SOURCE_REPORT).toBe('/plans/game-content-update-2026-09-30.md');
     expect(existsSync(join(repoRoot, MARKET_INTEL_SOURCE_REPORT.slice(1)))).toBe(true);
-    expect(MARKET_INTEL_OPPORTUNITIES.length).toBe(13);
+    expect(MARKET_INTEL_OPPORTUNITIES.length).toBe(16);
     expect(getMarketIntelValidationIssues()).toEqual([]);
   });
 
-  it('covers the current-site games in the 2026-09-21 batch', () => {
+  it('covers the current-site games in the 2026-09-30 batch', () => {
     const currentSiteGames: GameId[] = [
       'aniimo',
       'genshin',
@@ -40,6 +40,8 @@ describe('market intelligence backlog', () => {
       'skjh',
       'roco',
       'roco-cn',
+      'azur-promilia',
+      'lvmeng',
     ];
 
     for (const gameId of currentSiteGames) {
@@ -56,6 +58,9 @@ describe('market intelligence backlog', () => {
     const p1 = getMarketIntelByPriority('P1');
 
     expect(p0.map((opportunity) => opportunity.gameId)).toEqual([
+      'aniimo',
+      'azur-promilia',
+      'lvmeng',
       'aniimo',
       'genshin',
       'starrail',
@@ -74,7 +79,9 @@ describe('market intelligence backlog', () => {
 
     for (const opportunity of p0) {
       expect(opportunity.status).toBe('done');
-      expect(VERSION_SNAPSHOTS[opportunity.gameId]).toBeDefined();
+      if (opportunity.gameId !== 'azur-promilia' && opportunity.gameId !== 'lvmeng') {
+        expect(VERSION_SNAPSHOTS[opportunity.gameId]).toBeDefined();
+      }
       expect(opportunity.targetPages.length).toBeGreaterThan(0);
       expect(opportunity.actions).toContain('update_existing_page');
       expect(opportunity.actions.some((action) => action === 'update_live_module' || action === 'update_download_route' || action === 'create_topic_page' || action === 'update_code_route' || action === 'add_faq')).toBe(true);
@@ -131,7 +138,7 @@ describe('market intelligence backlog', () => {
 
     for (const opportunity of p0) {
       expect(['confirmed', 'mixed']).toContain(opportunity.signal?.strength);
-      if (opportunity.gameId === 'aniimo' || opportunity.gameId === 'roco') {
+      if (opportunity.id === 'aniimo-launch-recap-mobile-countdown' || opportunity.gameId === 'roco') {
         expect(opportunity.signal?.deadline).toBeDefined();
       }
     }

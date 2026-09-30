@@ -132,7 +132,11 @@ const OFFICIAL_STATUS_NOTES: Partial<Record<GameId, Record<SupportedLocale, stri
 
 const INTENT_LINKS: Partial<Record<GameId, IntentLink[]>> = {
   aniimo: [
+    { href: '/aniimo/s1-check', label: { zh: 'S1 入坑检查台', en: 'S1 starter checks', ja: 'S1入門チェック' }, description: { zh: '按下载、首日、虹光、家园、地图和奖励顺序进入当前 S1 资料。', en: 'Follow the current S1 material in order: download, first session, Rainbow, Homeland, map, and rewards.', ja: 'DL、初日、虹光、ホームランド、マップ、報酬の順で現行S1資料を確認。' } },
     { href: '/aniimo/download', label: { zh: '官网 / 下载', en: 'Official / Download', ja: '公式 / DL' }, description: { zh: '确认 PC、主机、移动端入口和安全下载边界。', en: 'Check PC, console, mobile stores, and safe download boundaries.', ja: 'PC、コンソール、モバイル入口と安全なDL範囲を確認。' } },
+    { href: '/aniimo/guides/s1-new-player-route', label: { zh: 'S1 新手开荒', en: 'S1 starter route', ja: 'S1 初心者ルート' }, description: { zh: '主线解锁、捕捉、飞行回访、活动与资源的首日顺序。', en: 'First-day order for story unlocks, catching, flight revisits, events, and resources.', ja: 'メイン解放、捕獲、飛行再訪、イベント、資源の初日順序。' } },
+    { href: '/aniimo/guides/rainbow-aniimo-guide', label: { zh: '虹光怎么选', en: 'Rainbow choices', ja: '虹光の選び方' }, description: { zh: '分开处理自选、活动、自然捕捉与研究进度。', en: 'Separate selectors, events, natural catches, and research progress.', ja: '自選、イベント、自然捕獲、研究進行を分けて確認。' } },
+    { href: '/aniimo/guides/homeland-resource-guide', label: { zh: '家园资源', en: 'Homeland resources', ja: 'ホームランド資源' }, description: { zh: '按当前任务和产出安排升级与每日处理，避免家园挤占探索节奏。', en: 'Plan upgrades and daily tasks around current needs so Homeland does not crowd out exploration.', ja: '現在の需要で強化と日課を組み、ホームランドが探索を圧迫しないようにします。' } },
     { href: '/aniimo/redeem-codes', label: { zh: '兑换码 / 奖励', en: 'Codes / Rewards', ja: 'コード / 報酬' }, description: { zh: '区分暂无公开兑换码、预注册奖励和上线后待核验入口。', en: 'Separate no public codes from pre-registration rewards and launch checks.', ja: '公開コード未確認、事前登録報酬、リリース後確認を分けます。' } },
     { href: '/aniimo/map', label: { zh: '区域 / 路线', en: 'Regions / Routes', ja: '地域 / ルート' }, description: { zh: '查看 6 个区域、已知 Aniimo 和上线后刷新点核验清单。', en: 'Review 6 regions, known Aniimo, and post-launch spawn checks.', ja: '6地域、既知Aniimo、リリース後の出現確認を整理。' } },
   ],
@@ -643,25 +647,25 @@ const VERSION_COPY: Partial<Record<GameId, HubCopy>> = {
   },
   aniimo: {
     title: {
-      zh: '上线后复盘 / 移动端倒计时专题',
-      en: 'Launch Recap / Mobile Countdown Hub',
-      ja: '配信後まとめ / モバイル直前特集',
+      zh: 'S1「逐风启程」版本专题',
+      en: 'S1 Launching With the Wind Hub',
+      ja: 'S1「逐風啓程」バージョン特集',
     },
     description: {
-      zh: '伊莫（Aniimo）PC/主机已上线，移动端 2026-09-23 即将上线。本专题追踪下载入口、兑换码状态、Aniimo 图鉴、地图区域、starter 和上线后验证清单。',
-      en: 'Aniimo is live on PC/console, with mobile launching on 2026-09-23. This hub tracks downloads, code status, the Aniimo database, regions, starter routes, and launch verification.',
-      ja: 'アニモ（Aniimo）はPC/コンソール配信中、モバイルは2026-09-23予定。DL、コード状態、図鑑、地域、starter、配信後確認を追跡します。',
+      zh: 'S1「逐风启程」已全平台上线。优先处理新手开荒、虹光研究、家园资源、混沌模式、图鉴地图与已知问题，时效结论以官方公告和当前客户端为准。',
+      en: 'S1 is live across platforms. Prioritize onboarding, Rainbow research, Homeland resources, Chaos mode, database/map routes, and known issues; time-sensitive facts follow official notices and the live client.',
+      ja: 'S1「逐風啓程」は全プラットフォームで配信中です。初心者導線、虹光研究、ホームランド資源、混沌モード、図鑑/マップ、既知問題を優先し、時効情報は公式告知と現行クライアントを基準にします。',
     },
     highlights: {
-      zh: ['PC/主机已上线', '2026-09-23 移动端', '89 个 Aniimo', '6 个区域', '兑换码核验'],
-      en: ['PC/console live', '2026-09-23 mobile', '89 Aniimo', '6 regions', 'Code checks'],
-      ja: ['PC/コンソール配信中', '2026-09-23 モバイル', '89体のAniimo', '6地域', 'コード確認'],
+      zh: ['S1 全平台上线', '新手开荒', '虹光研究', '家园资源', '图鉴 / 地图'],
+      en: ['S1 live', 'New-player route', 'Rainbow research', 'Homeland resources', 'Database / map'],
+      ja: ['S1配信中', '初心者ルート', '虹光研究', 'ホームランド資源', '図鑑 / マップ'],
     },
-    kicker: { zh: '上线后追踪', en: 'Launch recap', ja: '配信後追跡' },
+    kicker: { zh: 'S1 实装后追踪', en: 'Live S1 tracking', ja: 'S1実装後追跡' },
     freshness: {
-      zh: 'PC/主机上线后优先补充兑换码状态、服务器开放、图鉴、地图和移动端上线验证。',
-      en: 'After PC/console launch, prioritize code status, server timing, database, map, and mobile launch checks.',
-      ja: 'PC/コンソール配信後はコード状態、サーバー時間、図鑑、マップ、モバイル配信確認を優先します。',
+      zh: '持续核验 S1 活动、限时虹光、混沌模式、家园问题和奖励领取条件。',
+      en: 'Continuously verify S1 events, limited Rainbow content, Chaos mode, Homeland issues, and claim conditions.',
+      ja: 'S1イベント、期間限定虹光、混沌モード、ホームランド問題、報酬条件を継続確認します。',
     },
     faq: [
       {
@@ -671,9 +675,9 @@ const VERSION_COPY: Partial<Record<GameId, HubCopy>> = {
           ja: 'アニモの現在の配信状況は？',
         },
         answer: {
-          zh: 'PC/主机已进入上线后复盘，移动端官方日期为 2026-09-23。具体小时可能按平台和地区变化。',
-          en: 'PC/console is now in launch recap mode, while the official mobile date is 2026-09-23. Exact unlock hours may vary by platform and region.',
-          ja: 'PC/コンソールは配信後まとめ段階、モバイル公式日程は2026-09-23です。時間は地域とストアで変わる場合があります。',
+          zh: 'S1「逐风启程」已全平台上线。PC、主机、云游戏与移动端的账号、区服和活动条件请以当前客户端及官方公告为准。',
+          en: 'S1 is live across platforms. Confirm account, server, and event conditions for PC, console, cloud, and mobile in the live client and official notices.',
+          ja: 'S1「逐風啓程」は全プラットフォームで配信中です。PC、コンソール、クラウド、モバイルのアカウント、サーバー、イベント条件は現行クライアントと公式告知で確認してください。',
         },
       },
       {
@@ -689,7 +693,7 @@ const VERSION_COPY: Partial<Record<GameId, HubCopy>> = {
         },
       },
     ],
-    guideIds: ['release-date', 'download', 'codes-rewards', 'map-regions'],
+    guideIds: ['s1-new-player-route', 'rainbow-aniimo-guide', 'homeland-resource-guide', 'map-regions'],
   },
   'azur-promilia': {
     title: { zh: '官方信息核对专题', en: 'Official Information Hub', ja: '公式情報確認ハブ' },
@@ -706,11 +710,11 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
   aniimo: {
     zh: [
       {
-        title: { zh: '上线节奏', en: 'Launch timing', ja: 'リリース日程' },
-        description: { zh: '先分清 PC/主机与移动端两个上线窗口，避免把商店预约、愿望单和正式开服混在一起。', en: 'Separate PC/console and mobile windows before mixing wishlist, preorder, and server-open signals.', ja: 'PC/コンソールとモバイルの日程を分け、予約と開服情報を混同しないようにします。' },
+        title: { zh: 'S1 开荒顺序', en: 'S1 onboarding order', ja: 'S1の進行順' },
+        description: { zh: '先推进主线与系统解锁，再安排捕捉、飞行回访、家园和限时活动，避免用旧路线替代当前客户端条件。', en: 'Finish story and system unlocks before catches, flight revisits, Homeland, and limited events; do not substitute old routes for live-client conditions.', ja: 'メイン進行とシステム解放を終えてから捕獲、飛行での再訪、ホームランド、期間限定イベントへ進み、旧ルートを現行条件の代わりにしません。' },
         links: [
-          { href: '/aniimo/guides/release-date', label: { zh: '发售日期', en: 'Release date', ja: '発売日' } },
-          { href: '/aniimo/download', label: { zh: '下载入口', en: 'Download hub', ja: 'DL入口' } },
+          { href: '/aniimo/guides/s1-new-player-route', label: { zh: 'S1 新手路线', en: 'S1 starter route', ja: 'S1 初心者ルート' } },
+          { href: '/aniimo/guides/rainbow-aniimo-guide', label: { zh: '虹光研究', en: 'Rainbow research', ja: '虹光研究' } },
         ],
       },
       {
@@ -722,63 +726,63 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
         ],
       },
       {
-        title: { zh: '奖励核验', en: 'Reward checks', ja: '報酬確認' },
+        title: { zh: '家园与奖励核验', en: 'Homeland and reward checks', ja: 'ホームランドと報酬確認' },
         description: { zh: '兑换码、预注册奖励和里程碑奖励分开追踪，上线当天优先核验输入入口。', en: 'Track codes, pre-registration rewards, and milestone rewards separately, then verify redemption on launch day.', ja: 'コード、事前登録、マイルストーン報酬を分け、リリース日に入力入口を確認。' },
         links: [
           { href: '/aniimo/redeem-codes', label: { zh: '兑换码状态', en: 'Code status', ja: 'コード状況' } },
-          { href: '/aniimo/guides/codes-rewards', label: { zh: '奖励攻略', en: 'Reward guide', ja: '報酬ガイド' } },
+          { href: '/aniimo/guides/homeland-resource-guide', label: { zh: '家园资源', en: 'Homeland resources', ja: 'ホームランド資源' } },
         ],
       },
     ],
     en: [
       {
-        title: { zh: '上线节奏', en: 'Launch timing', ja: 'リリース日程' },
-        description: { zh: '先分清 PC/主机与移动端两个上线窗口，避免把商店预约、愿望单和正式开服混在一起。', en: 'Separate PC/console and mobile launch windows before mixing wishlist, preorder, and server-open signals.', ja: 'PC/コンソールとモバイルの日程を分け、予約と開服情報を混同しないようにします。' },
+        title: { zh: 'S1 开荒顺序', en: 'S1 onboarding order', ja: 'S1の進行順' },
+        description: { zh: '先推进主线与系统解锁，再安排捕捉、飞行回访、家园和限时活动，避免用旧路线替代当前客户端条件。', en: 'Finish story and system unlocks before catches, flight revisits, Homeland, and limited events; do not substitute old routes for live-client conditions.', ja: 'メイン進行とシステム解放を終えてから捕獲、飛行での再訪、ホームランド、期間限定イベントへ進み、旧ルートを現行条件の代わりにしません。' },
         links: [
-          { href: '/aniimo/guides/release-date', label: { zh: '发售日期', en: 'Release date', ja: '発売日' } },
-          { href: '/aniimo/download', label: { zh: '下载入口', en: 'Download hub', ja: 'DL入口' } },
+          { href: '/aniimo/guides/s1-new-player-route', label: { zh: 'S1 新手路线', en: 'S1 starter route', ja: 'S1 初心者ルート' } },
+          { href: '/aniimo/guides/rainbow-aniimo-guide', label: { zh: '虹光研究', en: 'Rainbow research', ja: '虹光研究' } },
         ],
       },
       {
-        title: { zh: '图鉴与区域', en: 'Database and regions', ja: '図鑑と地域' },
-        description: { zh: '把 89 个 Aniimo、6 个区域、阶段、元素和上线后刷新点核验连成一条浏览路线。', en: 'Connect 89 Aniimo, 6 regions, stages, elements, and post-launch spawn checks into one route.', ja: '89体、6地域、段階、元素、出現確認をつなげます。' },
+        title: { zh: '图鉴与地图', en: 'Database and map', ja: '図鑑とマップ' },
+        description: { zh: '用图鉴确认已知 Aniimo，再按区域与解锁条件安排探索；地图页不是逐点交互地图。', en: 'Use the database to confirm known Aniimo, then plan exploration by region and unlock conditions; the map page is not a marker-by-marker map.', ja: '図鑑で既知のAniimoを確認してから地域と解放条件で探索を組みます。マップページは地点別の対話型マップではありません。' },
         links: [
           { href: '/aniimo/characters', label: { zh: 'Aniimo 图鉴', en: 'Aniimo database', ja: 'Aniimo図鑑' } },
           { href: '/aniimo/map', label: { zh: '区域地图', en: 'Region map', ja: '地域マップ' } },
         ],
       },
       {
-        title: { zh: '奖励核验', en: 'Reward checks', ja: '報酬確認' },
-        description: { zh: '兑换码、预注册奖励和里程碑奖励分开追踪，上线当天优先核验输入入口。', en: 'Track codes, pre-registration rewards, and milestone rewards separately, then verify redemption on launch day.', ja: 'コード、事前登録、マイルストーン報酬を分け、リリース日に入力入口を確認。' },
+        title: { zh: '家园与奖励核验', en: 'Homeland and reward checks', ja: 'ホームランドと報酬確認' },
+        description: { zh: '兑换码、预注册奖励和里程碑奖励分开追踪，上线当天优先核验输入入口。', en: 'Track codes, pre-registration rewards, and milestone rewards separately, then verify redemption in the live client.', ja: 'コード、事前登録、マイルストーン報酬を分け、現行クライアントで入力入口を確認します。' },
         links: [
           { href: '/aniimo/redeem-codes', label: { zh: '兑换码状态', en: 'Code status', ja: 'コード状況' } },
-          { href: '/aniimo/guides/codes-rewards', label: { zh: '奖励攻略', en: 'Reward guide', ja: '報酬ガイド' } },
+          { href: '/aniimo/guides/homeland-resource-guide', label: { zh: '家园资源', en: 'Homeland resources', ja: 'ホームランド資源' } },
         ],
       },
     ],
     ja: [
       {
-        title: { zh: '上线节奏', en: 'Launch timing', ja: 'リリース日程' },
-        description: { zh: '先分清 PC/主机与移动端两个上线窗口，避免把商店预约、愿望单和正式开服混在一起。', en: 'Separate PC/console and mobile windows before mixing wishlist, preorder, and server-open signals.', ja: 'PC/コンソールとモバイルの日程を分け、予約、ウィッシュリスト、開服情報を混同しないようにします。' },
+        title: { zh: 'S1 开荒顺序', en: 'S1 onboarding order', ja: 'S1の進行順' },
+        description: { zh: '先推进主线与系统解锁，再安排捕捉、飞行回访、家园和限时活动，避免用旧路线替代当前客户端条件。', en: 'Finish story and system unlocks before catches, flight revisits, Homeland, and limited events; do not substitute old routes for live-client conditions.', ja: 'メイン進行とシステム解放を終えてから捕獲、飛行での再訪、ホームランド、期間限定イベントへ進み、旧ルートを現行条件の代わりにしません。' },
         links: [
-          { href: '/aniimo/guides/release-date', label: { zh: '发售日期', en: 'Release date', ja: '発売日' } },
-          { href: '/aniimo/download', label: { zh: '下载入口', en: 'Download hub', ja: 'DL入口' } },
+          { href: '/aniimo/guides/s1-new-player-route', label: { zh: 'S1 新手路线', en: 'S1 starter route', ja: 'S1 初心者ルート' } },
+          { href: '/aniimo/guides/rainbow-aniimo-guide', label: { zh: '虹光研究', en: 'Rainbow research', ja: '虹光研究' } },
         ],
       },
       {
-        title: { zh: '图鉴与区域', en: 'Database and regions', ja: '図鑑と地域' },
-        description: { zh: '把 89 个 Aniimo、6 个区域、阶段、元素和上线后刷新点核验连成一条浏览路线。', en: 'Connect 89 Aniimo, 6 regions, stages, elements, and post-launch spawn checks.', ja: '89体のAniimo、6地域、段階、元素、リリース後の出現確認を一つの導線にします。' },
+        title: { zh: '图鉴与地图', en: 'Database and map', ja: '図鑑とマップ' },
+        description: { zh: '用图鉴确认已知 Aniimo，再按区域与解锁条件安排探索；地图页不是逐点交互地图。', en: 'Use the database to confirm known Aniimo, then plan exploration by region and unlock conditions; the map page is not a marker-by-marker map.', ja: '図鑑で既知のAniimoを確認してから地域と解放条件で探索を組みます。マップページは地点別の対話型マップではありません。' },
         links: [
           { href: '/aniimo/characters', label: { zh: 'Aniimo 图鉴', en: 'Aniimo database', ja: 'Aniimo図鑑' } },
           { href: '/aniimo/map', label: { zh: '区域地图', en: 'Region map', ja: '地域マップ' } },
         ],
       },
       {
-        title: { zh: '奖励核验', en: 'Reward checks', ja: '報酬確認' },
-        description: { zh: '兑换码、预注册奖励和里程碑奖励分开追踪，上线当天优先核验输入入口。', en: 'Track codes, pre-registration rewards, and milestone rewards separately, then verify redemption on launch day.', ja: 'コード、事前登録報酬、マイルストーン報酬を分け、リリース日に入力入口を確認します。' },
+        title: { zh: '家园与奖励核验', en: 'Homeland and reward checks', ja: 'ホームランドと報酬確認' },
+        description: { zh: '兑换码、预注册奖励和里程碑奖励分开追踪，上线当天优先核验输入入口。', en: 'Track codes, pre-registration rewards, and milestone rewards separately, then verify redemption in the live client.', ja: 'コード、事前登録、マイルストーン報酬を分け、現行クライアントで入力入口を確認します。' },
         links: [
           { href: '/aniimo/redeem-codes', label: { zh: '兑换码状态', en: 'Code status', ja: 'コード状況' } },
-          { href: '/aniimo/guides/codes-rewards', label: { zh: '奖励攻略', en: 'Reward guide', ja: '報酬ガイド' } },
+          { href: '/aniimo/guides/homeland-resource-guide', label: { zh: '家园资源', en: 'Homeland resources', ja: 'ホームランド資源' } },
         ],
       },
     ],

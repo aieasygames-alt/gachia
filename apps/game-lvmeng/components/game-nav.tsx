@@ -10,6 +10,7 @@ const pages = [
   ['map', '地图探索'],
   ['progression', '养成资料'],
   ['version', '版本动态'],
+  ['launch-check', '开服核验'],
   ['download', '预约 / 下载'],
   ['redeem-codes', '兑换码'],
   ['faq', '常见问题'],

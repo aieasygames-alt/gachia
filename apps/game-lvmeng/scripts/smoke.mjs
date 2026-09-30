@@ -9,6 +9,7 @@ const expectedPaths = [
   '/zh/lvmeng',
   '/zh/lvmeng/guides',
   '/zh/lvmeng/version',
+  '/zh/lvmeng/launch-check',
   '/zh/lvmeng/download',
   '/zh/lvmeng/redeem-codes',
   '/robots.txt',

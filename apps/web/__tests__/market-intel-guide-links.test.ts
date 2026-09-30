@@ -43,14 +43,28 @@ const expectedNewGuides = {
   guihuan: 'test-release-timeline-guide',
   roco: 'cbt-registration-guide',
   'roco-cn': 's2-season-guide',
-  aniimo: 'download',
+  aniimo: ['s1-new-player-route', 'rainbow-aniimo-guide', 'homeland-resource-guide'],
 };
 
 describe('market-intel guide links', () => {
-  it('keeps the guide slugs required by the 2026-09-21 batch', () => {
-    for (const [gameId, guideId] of Object.entries(expectedNewGuides)) {
-      expect(guideIdsByGame[gameId as keyof typeof guideIdsByGame].has(guideId)).toBe(true);
+  it('keeps the guide slugs required by the 2026-09-30 batch', () => {
+    for (const [gameId, guideIds] of Object.entries(expectedNewGuides)) {
+      for (const guideId of Array.isArray(guideIds) ? guideIds : [guideIds]) {
+        expect(guideIdsByGame[gameId as keyof typeof guideIdsByGame].has(guideId)).toBe(true);
+      }
     }
+  });
+
+  it('keeps all Aniimo S1 guide entry points in the version hub', () => {
+    const aniimoGuideLinks = VERSION_SNAPSHOTS.aniimo?.links
+      .filter((link) => link.href.includes('/guides/'))
+      .map((link) => link.href) ?? [];
+
+    expect(aniimoGuideLinks).toEqual(expect.arrayContaining([
+      '/aniimo/guides/s1-new-player-route',
+      '/aniimo/guides/rainbow-aniimo-guide',
+      '/aniimo/guides/homeland-resource-guide',
+    ]));
   });
 
   it('keeps guide links in version snapshots resolvable', () => {
@@ -84,5 +98,20 @@ describe('market-intel guide links', () => {
     expect(mapGuide?.quickFacts?.en).toContain('This page is a public-region guide, not a marker-by-marker interactive map.');
     expect(codeGuide?.serpDescription?.en).toContain('No public Aniimo redeem code is confirmed');
     expect(codeGuide?.quickFacts?.en).toContain('Current answer: no public Aniimo redeem code is confirmed.');
+  });
+
+  it('keeps legacy Aniimo entry pages in the S1 live-client context', () => {
+    const byId = new Map(aniimoGuides.map((guide) => [guide.id, guide]));
+    const downloadGuide = byId.get('download');
+    const releaseGuide = byId.get('release-date');
+    const beginnerGuide = byId.get('beginner-guide');
+    const mapGuide = byId.get('map-regions');
+
+    expect(downloadGuide?.currentVersion).toContain('S1 live across platforms');
+    expect(releaseGuide?.summaryEn).toContain('live across platforms');
+    expect(releaseGuide?.summaryJa).toContain('全プラットフォームで配信中');
+    expect(beginnerGuide?.currentVersion).toContain('S1 live systems reference');
+    expect(beginnerGuide?.updatedAt).toBe('2026-09-30');
+    expect(mapGuide?.currentVersion).toContain('S1 live public-region reference');
   });
 });

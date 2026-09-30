@@ -14,7 +14,7 @@ const ECHO_GAMES = ['wuwa'] as const;
 const DISK_SET_GAMES = ['nte'] as const;
 const DRIVE_DISC_GAMES = ['zzz'] as const;
 const ITEM_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco-cn'] as const;
-const STATIC_SITE_PAGES = ['about', 'contact', 'privacy', 'terms', 'sitemap', 'calendar', 'tools/pull-planner'] as const;
+const STATIC_SITE_PAGES = ['about', 'contact', 'privacy', 'terms', 'sitemap', 'calendar', 'tools/pull-planner', 'content-verification', 'update-radar'] as const;
 
 // Category routes that have real content per game
 const REAL_CONTENT_ROUTES: Record<string, string[]> = {
@@ -77,6 +77,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         if (!game.routes[route as keyof typeof game.routes]) continue;
         entries.push({
           url: `${BASE_URL}/${locale}/${gameId}/${route}`,
+          changeFrequency: 'weekly',
+          priority: 0.8,
+        });
+      }
+
+      if (gameId === 'aniimo') {
+        entries.push({
+          url: `${BASE_URL}/${locale}/aniimo/s1-check`,
           changeFrequency: 'weekly',
           priority: 0.8,
         });
@@ -184,6 +192,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
 
     for (const page of STATIC_SITE_PAGES) {
+      if ((page === 'content-verification' || page === 'update-radar') && locale !== 'zh') continue;
       entries.push({
         url: `${BASE_URL}/${locale}/${page}`,
         changeFrequency: 'monthly',

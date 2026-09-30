@@ -17,6 +17,57 @@ export const sourceStatusLabel = (status: 'official' | 'reference' | 'unverified
   unverified: { zh: '待核验', en: 'Unverified', ja: '未確認' },
 }[status ?? 'reference'][locale]);
 
+export const travelTraceVerification = [
+  {
+    id: 'access-and-client',
+    status: 'official' as const,
+    label: { zh: '测试资格与客户端', en: 'Test access and client', ja: 'テスト参加とクライアント' },
+    summary: { zh: '先核对是否仍在测试期、资格取得方式、客户端下载入口及实际版本号。', en: 'First verify whether the test is active, how access is granted, the client source, and the actual version number.', ja: 'テスト開催中か、参加資格、クライアント入手先、実際のバージョン番号を最初に確認します。' },
+    action: { zh: '只从官方页面进入；记录公告日期、客户端版本与所在地区。', en: 'Use official entry points only; record notice date, client version, and region.', ja: '公式入口だけを使用し、告知日、クライアント版、地域を記録します。' },
+    href: 'version',
+  },
+  {
+    id: 'kibo-and-homestead',
+    status: 'reference' as const,
+    label: { zh: '奇波与家园循环', en: 'Kibo and homestead loop', ja: 'キボと拠点循環' },
+    summary: { zh: '捕捉、派遣、设施与产出均以当前测试客户端为准，旧录像不推导正式效率。', en: 'Capture, dispatch, facilities, and output follow the current test client; old footage does not establish release efficiency.', ja: '捕獲、派遣、施設、産出は現行テストクライアント基準で、古い映像から正式版効率を導きません。' },
+    action: { zh: '记录前置条件、派遣技能、实际产出与核验日期。', en: 'Record prerequisites, dispatch skills, actual output, and verification date.', ja: '前提条件、派遣スキル、実際の産出、確認日を記録します。' },
+    href: 'kibo',
+  },
+  {
+    id: 'combat-and-progression',
+    status: 'reference' as const,
+    label: { zh: '战斗与养成', en: 'Combat and progression', ja: '戦闘と育成' },
+    summary: { zh: '角色数值、材料、配装和强度仅作为测试参考，不建立正式服优先级。', en: 'Character values, materials, builds, and power are test references only and do not establish release priorities.', ja: 'キャラ数値、素材、ビルド、強さはテスト参照であり、正式版優先度を定めません。' },
+    action: { zh: '先设定试玩目标；材料表公开并复核后再计算养成缺口。', en: 'Set a playtest goal first; calculate material gaps only after tables are published and verified.', ja: '先にテスト目標を設定し、素材表が公開・確認された後に不足を計算します。' },
+    href: 'planner',
+  },
+  {
+    id: 'banner-and-currency',
+    status: 'unverified' as const,
+    label: { zh: '抽取、货币与保底', en: 'Banners, currency, and pity', ja: 'バナー、通貨、天井' },
+    summary: { zh: '讨论“不歪池”时，仍须分别核对池名、概率、保底、货币来源与跨池规则。', en: 'Even when discussing no off-banner loss, verify banner name, rates, pity, currency sources, and carryover separately.', ja: 'すり抜けなしを議論する場合でも、バナー名、確率、天井、通貨源、持越し規則を個別に確認します。' },
+    action: { zh: '以客户端概率页和官方公告为准；未确认项目不纳入公测抽数规划。', en: 'Use the client rate page and official notices; exclude unverified items from release pull planning.', ja: 'クライアント確率画面と公式告知を基準にし、未確認項目は正式版のガチャ計画に含めません。' },
+    href: 'guides/banner-system-status',
+  },
+  {
+    id: 'rewards-and-codes',
+    status: 'unverified' as const,
+    label: { zh: '奖励与兑换码', en: 'Rewards and codes', ja: '報酬と交換コード' },
+    summary: { zh: '测试奖励、预约福利、活动邮件和兑换码是不同机制，不能合并估算。', en: 'Test rewards, pre-registration benefits, event mail, and codes are separate mechanisms and cannot be combined for estimates.', ja: 'テスト報酬、事前登録特典、イベントメール、交換コードは別の仕組みであり、まとめて見積もれません。' },
+    action: { zh: '记录奖励来源、领取条件、有效期和适用角色；无官方公告即保持待核验。', en: 'Record reward source, claim condition, expiry, and applicable character; keep it unverified without an official notice.', ja: '報酬の出典、受取条件、期限、対象キャラを記録し、公式告知がなければ未確認のままにします。' },
+    href: 'redeem-codes',
+  },
+  {
+    id: 'feedback-and-change-log',
+    status: 'official' as const,
+    label: { zh: '反馈与改动记录', en: 'Feedback and change log', ja: 'フィードバックと変更記録' },
+    summary: { zh: '把复现步骤、版本号与截图/录像上下文分开记录，便于跟踪后续公告是否修复或调整。', en: 'Separate reproduction steps, version number, and screenshot/video context so later fixes or changes can be tracked.', ja: '再現手順、バージョン番号、スクリーンショット・動画の文脈を分けて記録し、後続の修正や調整を追跡します。' },
+    action: { zh: '先确认问题是否可复现，再通过官方测试反馈渠道提交。', en: 'Confirm that an issue reproduces before submitting it through the official test feedback channel.', ja: '問題が再現することを確認してから、公式テストフィードバック窓口へ提出します。' },
+    href: 'guides/test-feedback-tracker',
+  },
+] as const;
+
 export const kiboFacilities = [
   { id: 'logging-camp', label: { zh: '伐木场', en: 'Logging camp', ja: '伐採場' } },
   { id: 'quarry', label: { zh: '采石场', en: 'Quarry', ja: '採石場' } },
@@ -71,6 +122,34 @@ export const kiboLifecycle = [
 ];
 
 export const guides: Guide[] = [
+  {
+    id: 'kibo-battle-and-ecology',
+    title: { zh: '旅迹测试奇波指南：生态、捕捉、对决与正式服核验边界', en: 'Travel Trace Kibo Guide: Ecology, Capture, Duels, and Release Boundaries', ja: '旅跡テストのキボガイド：生態、捕獲、対決、正式版の確認範囲' },
+    summary: { zh: '把奇波的探索生态、捕捉、家园派遣和对决讨论归到同一套测试记录框架，不把测试环境里的强度或奖励写成正式服规则。', en: 'Puts Kibo ecology, capture, homestead dispatch, and duel discussion into one test-recording framework without presenting test rewards or balance as release rules.', ja: 'キボの探索生態、捕獲、拠点派遣、対決を一つのテスト記録枠にまとめ、テスト環境の報酬や強さを正式版規則として扱いません。' },
+    content: { zh: '旅迹测试中，奇波同时连接探索、战斗、家园和对决等多个系统。记录时先分清四类问题：在哪里遇到、用什么方式捕捉、能为当前家园或队伍提供什么、对决模式如何解锁与结算。这样可以避免把单次遭遇视频、测试服强度榜或旧版本截图混为一条“最强奇波”结论。\n\n探索记录应保留地区、时间、天气、前置任务和测试版本；捕捉记录应保留道具、目标状态和是否存在教程引导；家园记录应保留派遣技能、设施需求、实际产出和验证日期；对决记录则应区分玩法体验、匹配条件和奖励，奖励以当前客户端和官方公告为准。\n\n公测前最有价值的不是提前给出固定养成表，而是建立可快速更新的奇波档案：来源状态、获取条件、用途、相邻系统和待验证项。', en: 'In Travel Trace, Kibo connect exploration, combat, homestead play, and duels. Separate four questions in every record: where a Kibo appears, how it is captured, what it contributes to the current team or homestead, and how duel mode unlocks and settles. This avoids turning a single encounter video, a CBT tier list, or an old screenshot into a universal “best Kibo” conclusion.\n\nExploration notes should retain region, time, weather, prerequisites, and test version. Capture notes should retain tools, target state, and tutorial conditions. Homestead notes should retain dispatch skills, facility needs, actual output, and verification date. Duel notes should separate play feel, matchmaking conditions, and rewards; the client and official notice decide the reward facts.\n\nBefore release, a fast-updatable Kibo record is more valuable than a fixed build table: source status, acquisition conditions, use cases, connected systems, and open verification items.', ja: '旅跡テストでは、キボは探索、戦闘、拠点、対決の複数システムをつなぎます。記録は、どこで遭遇するか、どう捕獲するか、現在の編成・拠点に何をもたらすか、対決モードの解放と精算はどうなるかの4点に分けます。単発の遭遇動画、CBT Tier表、旧スクリーンショットを「最強キボ」という一つの結論にしないためです。\n\n探索記録には地域、時間、天候、前提任務、テスト版を残します。捕獲記録には道具、対象状態、チュートリアル条件を残します。拠点記録には派遣技能、施設需要、実際の産出、確認日を残します。対決記録は体験、マッチング条件、報酬を分け、報酬は現行クライアントと公式告知を基準にします。\n\n正式版前は固定育成表よりも、出典状態、入手条件、用途、関連システム、未確認項目を持つ更新しやすいキボ記録の方が価値があります。' },
+    source: { name: 'Azur Promilia Travel Trace Test official page', url: 'https://promilia.cn/', checkedAt: '2026-09-30', version: 'cbt-beta', sourceType: 'official', status: 'official' },
+  },
+  {
+    id: 'homestead-progression',
+    title: { zh: '旅迹测试家园养成：设施、派遣、资源缺口与减负记录法', en: 'Travel Trace Homestead Progression: Facilities, Dispatch, Resource Gaps, and Low-Friction Logs', ja: '旅跡テストの拠点育成：施設、派遣、資源不足、負担を抑える記録法' },
+    summary: { zh: '以“当前资源缺口”而不是“全设施立刻开完”组织家园建设，并将设施产出、派遣条件和测试版本分开记录。', en: 'Organizes homestead construction around current resource gaps instead of unlocking every facility immediately, with separate records for output, dispatch conditions, and test version.', ja: '全施設の即時解放ではなく現在の資源不足で拠点建設を考え、産出、派遣条件、テスト版を分けて記録します。' },
+    content: { zh: '家园系统最容易造成“看起来事情很多”的感受，因此需要让每次建设都回答一个明确问题：它解决哪项当前任务、哪种稳定资源，或哪一项派遣瓶颈。木材、石材、基础食物通常先于低频配方；装备、料理、鞍具或特定任务出现真实缺口后，再投入狩猎、采矿、元素、饲养或渔业链。\n\n派遣时同时记录设施适配、生活技能、奇波是否在出战队伍、饱食等条件及实际产出。若产出暂时没有消耗去向，就不应只为“全图鉴”占满派遣位。每条记录均应写明它来自旅迹测试，避免公测后配方、产量或开放条件变化时沿用旧结论。\n\n面向玩家的页面应优先给出短循环：领取已完成产出、补一个真实缺口、检查派遣条件、回到主线或探索。这样既能承接“家园怎么养”的搜索，也不会把测试期的重复劳动包装成必做日课。', en: 'Homestead systems can feel overwhelming, so each construction decision should answer one clear question: which current quest, reliable resource, or dispatch bottleneck does it solve? Wood, stone, and basic food usually precede low-frequency recipes. Add hunting, mining, elemental, care, or fishing chains only when equipment, cooking, saddles, or a task creates a real shortage.\n\nWhen dispatching, record facility fit, life skill, whether a Kibo is in the active party, satiety conditions, and actual output. If output has no current use, do not fill dispatch slots only for completion. Every record should name Travel Trace as its source so old conclusions are not carried into release after recipes, yields, or gates change.\n\nPlayer-facing pages should lead with a short loop: claim finished output, fill one real shortage, check dispatch conditions, then return to story or exploration. This serves “how to build homestead” searches without turning CBT repetition into a mandatory daily checklist.', ja: '拠点システムはやることが多く見えやすいため、各建設判断は現在の任務、安定資源、派遣ボトルネックのどれを解決するかを明確にします。木材、石材、基礎食料は通常、低頻度レシピより先です。装備、料理、鞍、任務で本当の不足が出てから、狩猟、採掘、元素、飼育、漁業を追加します。\n\n派遣では、施設適性、生活技能、キボが出撃編成か、満腹度、実際の産出を記録します。現在使い道がない産出なら、達成目的だけで派遣枠を埋めません。すべての記録に旅跡テスト由来であることを記載し、正式版でレシピ、産出量、解放条件が変わった後に古い結論を使わないようにします。\n\nプレイヤー向けには、完了した産出を受け取り、一つの実際の不足を補い、派遣条件を確認し、メイン進行か探索へ戻る短い循環を案内します。CBTの反復を必須日課にせず、「拠点をどう育てるか」という検索に応えます。' },
+    source: { name: 'Azur Promilia Travel Trace Test official page', url: 'https://promilia.cn/', checkedAt: '2026-09-30', version: 'cbt-beta', sourceType: 'official', status: 'official' },
+  },
+  {
+    id: 'banner-system-status',
+    title: { zh: '旅迹测试抽卡与“不歪池”状态说明：已确认内容、测试规则与公测待核验项', en: 'Travel Trace Banner Status: Confirmed Details, Test Rules, and Release Checks', ja: '旅跡テストのバナー状況：確認済み情報、テスト規則、正式版確認項目' },
+    summary: { zh: '围绕“不歪池”讨论，明确限定获取、保底、概率、货币和角色规划必须按来源和版本拆分；测试口径不外推到公测。', en: 'Clarifies that limited acquisition, pity, rates, currency, and pull planning must be separated by source and version; CBT wording is not projected onto release.', ja: '「すり抜けなし」議論を軸に、限定入手、天井、確率、通貨、ガチャ計画を出典と版で分け、CBT表現を正式版へ外挿しません。' },
+    content: { zh: '“不歪池”是旅迹测试期间最容易传播的抽卡话题，但它不足以单独说明整个获取系统。页面应把四类信息分开：官方明确公布的测试规则、当前客户端能看到的展示规则、玩家对体感和资源压力的讨论，以及公测尚未确认的项目。\n\n在测试期，任何抽取建议都应先写清适用版本、池子名称、角色/武器范围、保底显示、概率说明和结束时间。不要把单次结果、社区汇总或上一轮测试的规则包装成正式服福利。对没有正式确认的部分，最有价值的内容是核验清单：公测时需要确认是否仍适用、是否跨池继承、货币来源和礼包边界是什么。\n\n对玩家而言，测试期可先按目标角色与试玩需求安排资源，不建议以未确认的长期产出或公测返利来计算最终抽数。', en: '“No off-banner loss” is one of Travel Trace’s most shareable pull topics, but it does not describe the whole acquisition system. Separate four layers on the page: test rules explicitly published by the official team, rules visible in the current client, player discussion about feel and resource pressure, and items not confirmed for release.\n\nDuring a test, every pull recommendation should state its version, banner name, character/weapon scope, displayed pity, rate notice, and end time. Do not present a single result, community compilation, or a prior test rule as a release benefit. For unconfirmed points, the most useful content is a release checklist: whether it remains applicable, whether pity carries between banners, and how currency sources and package limits work.\n\nPlayers can plan around a target character and test needs, but should not calculate final pulls from unconfirmed long-term income or release rebates.', ja: '「すり抜けなし」は旅跡テストで広まりやすいガチャ話題ですが、取得システム全体を説明するものではありません。公式が明示したテスト規則、現行クライアントで見える規則、体感や資源負担に関するプレイヤー議論、正式版未確認項目の4層を分けます。\n\nテスト中のガチャ推奨には、適用バージョン、バナー名、キャラ/武器範囲、表示天井、確率表示、終了時刻を必ず記します。単発結果、コミュニティ集計、前回テスト規則を正式版の福利として扱いません。未確認項目は、正式版でも適用されるか、天井がバナー間で引き継がれるか、通貨入手とパック境界は何かを確認するリストとして出すのが有用です。\n\nプレイヤーは目標キャラとテスト需要に沿って資源を計画できますが、未確認の長期収入や正式版還元から最終抽数を計算すべきではありません。' },
+    source: { name: 'Azur Promilia Travel Trace Test official page', url: 'https://promilia.cn/', checkedAt: '2026-09-30', version: 'cbt-beta', sourceType: 'official', status: 'official' },
+  },
+  {
+    id: 'test-feedback-tracker',
+    title: { zh: '旅迹测试反馈追踪：家园、奇波、战斗、探索、养成与界面如何记录', en: 'Travel Trace Feedback Tracker: Homestead, Kibo, Combat, Exploration, Progression, and UI', ja: '旅跡テストのフィードバック追跡：拠点、キボ、戦闘、探索、育成、UIの記録方法' },
+    summary: { zh: '将社媒高频讨论转为可复核反馈：记录平台、版本、前置条件、复现路径和影响，而不是只保留情绪化结论。', en: 'Turns high-frequency social discussion into verifiable feedback by recording platform, version, prerequisites, reproduction, and impact rather than preserving only sentiment.', ja: 'SNSの頻出議論を、感情的な結論だけでなく、機種、版、前提、再現手順、影響を記録する検証可能なフィードバックに変えます。' },
+    content: { zh: '旅迹测试的反馈应按系统分类：家园与派遣、奇波生态和对决、战斗手感、探索路径、养成节奏、界面与性能。每条记录至少包含平台、客户端版本、发生时间、前置任务/队伍状态、可复现步骤、实际结果、预期结果和截图或官方公告链接。\n\n“太肝”“没新意”“很好玩”可以保留为情绪信号，但不能直接成为站内事实。编辑时将其改写为可行动的问题，例如：某个资源循环的完成时长、某项功能的引导缺口、某个界面在移动端的可读性，或某个叙事视角的理解门槛。若官方随后回应或修复，应在原问题旁标注版本、状态和来源，而不是删除历史反馈。\n\n该追踪页的目标不是制造争议，而是让玩家、编辑和开发观察到哪些问题可以在下一次测试或公测版本中被验证。', en: 'Classify Travel Trace feedback by system: homestead and dispatch, Kibo ecology and duels, combat feel, exploration paths, progression pacing, and UI/performance. Each record should include platform, client version, time, prerequisite quest or party state, reproduction steps, actual result, expected result, and a screenshot or official-notice link.\n\n“Too grindy,” “not novel,” and “very fun” may remain as sentiment signals, but they cannot become site facts. Rewrite them into actionable questions: time to complete a resource loop, a missing onboarding step, mobile UI readability, or the comprehension burden of a narrative viewpoint. When the official team responds or fixes something, annotate the original issue with version, status, and source instead of deleting feedback history.\n\nThe tracker exists to let players, editors, and developers see which problems can be verified in a later test or release, not to manufacture controversy.', ja: '旅跡テストのフィードバックは、拠点と派遣、キボ生態と対決、戦闘感、探索経路、育成テンポ、UIと性能で分類します。各記録には、機種、クライアント版、時刻、前提任務/編成状態、再現手順、実際結果、期待結果、スクリーンショットまたは公式告知リンクを含めます。\n\n「周回が重い」「新しさがない」「とても楽しい」は感情シグナルとして残せますが、サイト上の事実にはできません。資源循環の完了時間、案内不足、モバイルUIの可読性、物語視点の理解負荷など、実行可能な問いに書き換えます。公式が対応・修正した時は、元の問題を消さずに、版、状態、出典を追記します。\n\nこの追跡ページの目的は論争を作ることではなく、次のテストや正式版で検証できる問題をプレイヤー、編集者、開発者が見つけられるようにすることです。' },
+    source: { name: 'Azur Promilia Travel Trace Test official page', url: 'https://promilia.cn/', checkedAt: '2026-09-30', version: 'cbt-beta', sourceType: 'official', status: 'official' },
+  },
   {
     id: 'official-character-region-guide',
     title: { zh: '官方角色与地区关联整理', en: 'Official Character and Region Connections', ja: '公式キャラクターと地域の関係' },

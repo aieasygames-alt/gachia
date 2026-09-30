@@ -30,9 +30,58 @@ export interface VersionSnapshot {
   links: VersionSnapshotLink[];
 }
 
-export const VERSION_SNAPSHOT_UPDATED_AT = '2026-09-21';
+export const VERSION_SNAPSHOT_UPDATED_AT = '2026-09-30';
 
 export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
+  aniimo: {
+    gameId: 'aniimo',
+    currentVersion: 'S1 逐风启程',
+    releaseDate: '2026-09-23',
+    status: 'live',
+    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    sourceTier: 'official',
+    platformReleaseDates: [
+      { platform: 'PC / console / cloud', date: '2026-09-16' },
+      { platform: 'iOS / Android', date: '2026-09-23' },
+    ],
+    summary: {
+      zh: 'S1「逐风启程」已全平台上线。当前内容重点是新手开荒、虹光研究、家园资源、混沌模式与已知问题的官方核验。',
+      en: 'S1 is live across platforms. The current hub prioritizes starter routes, Rainbow research, Homeland resources, Chaos mode, and official known-issue checks.',
+      ja: 'S1「逐風啓程」は全プラットフォームで配信中です。初心者ルート、虹光研究、ホームランド資源、混沌モード、公式既知問題を優先します。',
+    },
+    whatChanged: [
+      {
+        zh: '版本页从上线倒计时切换为 S1 实装后的玩法与问题导航。',
+        en: 'The hub moves from launch countdown into live S1 systems and issue navigation.',
+        ja: 'バージョンページを配信カウントダウンからS1実装後のシステム・問題導線へ切り替えます。',
+      },
+      {
+        zh: '虹光、自选、捕捉和研究进度保持分层，避免把赠送或外观变化写成统一结论。',
+        en: 'Rainbow selectors, catches, gifts, and research progress remain separated instead of being presented as one universal rule.',
+        ja: '虹光自選、捕獲、配布、研究進行は一律の結論にせず分けて扱います。',
+      },
+    ],
+    firstSteps: [
+      {
+        zh: '先完成主线与系统引导，再安排捕捉、飞行回访、家园和限时活动。',
+        en: 'Finish story and system tutorials before scheduling catches, flight revisits, Homeland, and limited events.',
+        ja: 'メイン進行とシステム導入を終えてから、捕獲、飛行での再訪、ホームランド、期間限定イベントを進めます。',
+      },
+      {
+        zh: '领取限时奖励前，核对活动页的条件、区服、结束时间和官方已知问题。',
+        en: 'Before claiming a limited reward, verify the event requirements, server scope, end time, and official known issues.',
+        ja: '期間限定報酬の受取前に、イベント条件、サーバー範囲、終了時刻、公式既知問題を確認します。',
+      },
+    ],
+    links: [
+      { type: 'guides', href: '/aniimo/guides/s1-new-player-route', label: { zh: 'S1 新手路线', en: 'S1 starter route', ja: 'S1 初心者ルート' } },
+      { type: 'guides', href: '/aniimo/guides/rainbow-aniimo-guide', label: { zh: '虹光指南', en: 'Rainbow guide', ja: '虹光ガイド' } },
+      { type: 'guides', href: '/aniimo/guides/homeland-resource-guide', label: { zh: '家园资源', en: 'Homeland resources', ja: 'ホームランド資源' } },
+      { type: 'characters', href: '/aniimo/characters', label: { zh: '伊莫图鉴', en: 'Aniimo index', ja: 'Aniimo 図鑑' } },
+      { type: 'map', href: '/aniimo/map', label: { zh: '区域地图', en: 'Region map', ja: '地域マップ' } },
+      { type: 'codes', href: '/aniimo/redeem-codes', label: { zh: '兑换码与奖励', en: 'Codes and rewards', ja: 'コードと報酬' } },
+    ],
+  },
   zzz: {
     gameId: 'zzz',
     currentVersion: '3.3 watch / 3.2 recap',
@@ -321,53 +370,6 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       { type: 'codes', href: '/endfield/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
       { type: 'characters', href: '/endfield/characters', label: { zh: '角色', en: 'Characters', ja: 'キャラ' } },
       { type: 'guides', href: '/endfield/guides/homecoming-update-guide', label: { zh: '测试复盘 / 蓝图', en: 'Test recap / blueprints', ja: 'テストまとめ / 設計図' } },
-    ],
-  },
-  aniimo: {
-    gameId: 'aniimo',
-    currentVersion: 'PC/console live / mobile countdown',
-    releaseDate: '2026-09-16',
-    status: 'fresh',
-    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
-    sourceTier: 'official',
-    platformReleaseDates: [
-      { platform: 'PC / PS5 / Xbox', date: '2026-09-16', time: '10:00 UTC+8' },
-      { platform: 'Mobile', date: '2026-09-23' },
-    ],
-    summary: {
-      zh: 'Aniimo PC/主机已上线，移动端 9/23 即将上线；当前重点是兑换码状态、starter、图鉴、地图、下载和上线后评价。',
-      en: 'Aniimo is live on PC/console with mobile arriving September 23; focus now shifts to code status, starters, database, maps, downloads, and launch reviews.',
-      ja: 'AniimoはPC/コンソール配信中で、モバイルは9月23日予定です。コード状態、starter、図鑑、マップ、DL、配信後評価が中心です。',
-    },
-    whatChanged: [
-      {
-        zh: '版本页从上线倒计时切换为 PC/主机上线后复盘 + 移动端倒计时。',
-        en: 'The hub moves from launch countdown into PC/console live recap plus mobile countdown.',
-        ja: '版本ページをカウントダウンからPC/コンソール配信後まとめ + モバイル直前へ切り替えます。',
-      },
-      {
-        zh: '兑换码、download、starter、Aniimo 图鉴和 map 入口需要互相导流。',
-        en: 'Codes, download, starter, Aniimo database, and map entries should cross-link.',
-        ja: 'コード、download、starter、Aniimo図鑑、map入口を相互接続します。',
-      },
-    ],
-    firstSteps: [
-      {
-        zh: 'PC/主机玩家先查下载、服务器和兑换码状态；移动端玩家确认 9/23 平台入口。',
-        en: 'PC/console players should check download, server, and code status first; mobile players should confirm the September 23 platform entry.',
-        ja: 'PC/コンソール勢はDL、サーバー、コード状態を確認し、モバイル勢は9月23日の平台入口を確認します。',
-      },
-      {
-        zh: '入坑内容优先回答 starter、捕捉玩法、图鉴和地图区域。',
-        en: 'Starter content should prioritize starter choice, creature-catching, database, and map regions.',
-        ja: '入門内容はstarter、捕獲玩法、図鑑、マップ地域を優先します。',
-      },
-    ],
-    links: [
-      { type: 'download', href: '/aniimo/download', label: { zh: '平台下载', en: 'Platform download', ja: '平台DL' } },
-      { type: 'codes', href: '/aniimo/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
-      { type: 'characters', href: '/aniimo/characters', label: { zh: 'Aniimo 图鉴', en: 'Aniimo index', ja: 'Aniimo図鑑' } },
-      { type: 'guides', href: '/aniimo/guides/download', label: { zh: '下载 FAQ', en: 'Download FAQ', ja: 'DL FAQ' } },
     ],
   },
   sea: {

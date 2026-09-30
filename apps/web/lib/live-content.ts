@@ -70,7 +70,7 @@ export interface LiveCalendarEvent {
   priority: number;
 }
 
-export const LIVE_UPDATED_AT = '2026-09-21';
+export const LIVE_UPDATED_AT = '2026-09-30';
 
 export const HOMEPAGE_PRIORITY_GAMES: GameId[] = [
   'lvmeng',
@@ -94,14 +94,14 @@ export const LIVE_BANNERS: LiveBanner[] = [
   {
     gameId: 'aniimo',
     title: {
-      zh: 'Aniimo 上线后复盘与移动端倒计时',
-      en: 'Aniimo Launch Recap and Mobile Countdown',
-      ja: 'Aniimo 配信後まとめとモバイル直前',
+      zh: '伊莫 S1「逐风启程」全平台上线',
+      en: 'Aniimo S1 Is Live Across Platforms',
+      ja: 'Aniimo S1 全プラットフォーム配信中',
     },
     summary: {
-      zh: 'PC/主机已上线，移动端 9/23 即将到来；优先查看下载、兑换码状态、starter、图鉴和地图路线。',
-      en: 'PC/console is live and mobile arrives on Sep 23; check downloads, code status, starters, database, and map routes first.',
-      ja: 'PC/コンソールは配信中、モバイルは9/23予定。DL、コード状態、starter、図鑑、マップ導線を優先します。',
+      zh: '优先查看 S1 新手开荒、虹光研究、家园资源、图鉴地图和官方已知问题，再安排限时活动。',
+      en: 'Start with S1 onboarding, Rainbow research, Homeland resources, database/map routes, and official known issues before limited events.',
+      ja: '期間限定イベントの前に、S1導入、虹光研究、ホームランド資源、図鑑/マップ、公式既知問題を確認します。',
     },
     href: '/aniimo/version',
     status: 'fresh',
@@ -148,14 +148,14 @@ export const LIVE_VERSION_UPDATES: LiveVersionUpdate[] = [
   {
     gameId: 'aniimo',
     title: {
-      zh: 'Aniimo PC/主机已上线，移动端 9/23',
-      en: 'Aniimo PC/Console Live, Mobile Sep 23',
-      ja: 'Aniimo PC/コンソール配信中、モバイル9/23',
+      zh: '伊莫 S1「逐风启程」已全平台上线',
+      en: 'Aniimo S1 Is Live Across Platforms',
+      ja: 'Aniimo S1 全プラットフォーム配信中',
     },
     summary: {
-      zh: '上线后入口已切到 launch recap + mobile countdown，兑换码、下载、starter、map/database 分层承接。',
-      en: 'The hub is now launch recap plus mobile countdown, with codes, downloads, starters, map, and database routes separated.',
-      ja: '配信後まとめ＋モバイル直前へ切替済み。コード、DL、starter、マップ、図鑑を分けて案内します。',
+      zh: '版本入口切到 S1 实装后的新手路线、虹光研究、家园资源、图鉴地图和奖励核验。',
+      en: 'The hub now routes live S1 onboarding, Rainbow research, Homeland resources, database/map paths, and reward verification.',
+      ja: 'バージョン入口はS1実装後の初心者ルート、虹光研究、ホームランド資源、図鑑/マップ、報酬確認へ切り替わりました。',
     },
     href: '/aniimo/version',
     status: 'fresh',
