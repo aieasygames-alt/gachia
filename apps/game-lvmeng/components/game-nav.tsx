@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import { createSharedHeaderModel, headerGameName } from '@gachia/ui';
+import { SharedGameHeader, createSharedGameHeaderModel, headerGameName } from '@gachia/ui';
 
 const pages = [
   ['characters', '公开角色'],
@@ -17,9 +16,18 @@ const pages = [
   ['roadmap', '资料计划'],
 ] as const;
 
-export function GameNav({ current }: { current?: string }) {
+export function GameNav({ current, isHome = false }: { current?: string; isHome?: boolean }) {
   const locale = 'zh';
-  const header = createSharedHeaderModel(locale);
+  const header = createSharedGameHeaderModel({
+    gameId: 'lvmeng',
+    locale,
+    localeLinks: [{ href: '/zh/lvmeng', label: '中文', current: true }],
+    sectionLabel: '绿梦：时空之声导航',
+    sectionLinks: [
+      { href: '/zh/lvmeng', label: headerGameName('lvmeng', locale), current: isHome },
+      ...pages.map(([id, label]) => ({ href: `/zh/lvmeng/${id}`, label, current: current === id })),
+    ],
+  });
 
-  return <header className="gachia-header"><div className="gachia-header__top"><div className="gachia-header__container"><Link className="gachia-header__brand" href="https://gachia.com/zh"><span className="gachia-header__logo">G</span><span>Gachia</span></Link><nav className="gachia-header__games" aria-label="Game navigation">{header.featuredGames.map((game) => <Link key={game.id} href={`https://gachia.com/zh/${game.id}`} className="gachia-header__game-link">{game.label}</Link>)}<Link href="https://gachia.com/zh/games" className="gachia-header__all-link">{header.moreGamesLabel}</Link></nav><div className="gachia-header__actions"><span className="gachia-header__search-placeholder" aria-hidden="true">⌕ 搜索</span><span className="gachia-header__locale-current">中文</span></div></div></div><div className="gachia-header__section-wrap"><nav className="gachia-header__section" aria-label="绿梦：时空之声导航"><Link className={!current ? 'gachia-header__section-link--current' : undefined} href="/zh/lvmeng">{headerGameName('lvmeng', locale)}</Link>{pages.map(([id, label]) => <Link key={id} href={`/zh/lvmeng/${id}`} className={current === id ? 'gachia-header__section-link--current' : undefined}>{label}</Link>)}</nav></div></header>;
+  return <SharedGameHeader header={header} />;
 }

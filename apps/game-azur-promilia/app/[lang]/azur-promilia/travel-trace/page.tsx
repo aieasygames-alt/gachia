@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 export default async function TravelTracePage({ params }: { params: Promise<{ lang: string }> }) {
   const locale = asLocale((await params).lang);
   const title = localize(locale, { zh: '旅迹测试核验台', en: 'Travel Trace Test Checks', ja: '旅跡テスト確認台' });
-  return <><GameNav locale={locale} current="travel-trace"/><main className="content">
+  return <><GameNav locale={locale} current="travel-trace"/><main id="main-content" tabIndex={-1} className="content">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'CollectionPage', name: title, url: url(locale, 'travel-trace') }) }} />
     <div className="eyebrow">Travel Trace Test</div>
     <h1>{title}</h1>

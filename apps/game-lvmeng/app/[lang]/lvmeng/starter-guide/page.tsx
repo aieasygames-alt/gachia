@@ -4,7 +4,7 @@ import { contentStatus, starterGuideSections } from '@/lib/data';
 export const metadata: Metadata = { title: '绿梦：时空之声开荒指南 | Gachia', description: '绿梦：时空之声公测首日开荒与资源规划核验框架。', alternates: { canonical: 'https://gachia.com/zh/lvmeng/starter-guide' } };
 
 export default function StarterGuidePage() {
-  return <main className="content">
+  return <main id="main-content" tabIndex={-1} className="content">
     <div className="eyebrow">{contentStatus.pending}</div>
     <h1>开荒指南</h1>
     <p className="lead">本页先建立公测首日的核验顺序。角色强度、配队、装备词条与资源效率会在正式客户端确认后再给出具体结论。</p>

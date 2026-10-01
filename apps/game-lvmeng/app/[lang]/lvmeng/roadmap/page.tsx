@@ -24,7 +24,7 @@ const routeByLabel: Record<string, string> = {
 };
 
 export default function RoadmapPage() {
-  return <main className="content">
+  return <main id="main-content" tabIndex={-1} className="content">
     <div className="eyebrow">内容治理</div>
     <h1>资料更新计划</h1>
     <p className="lead">公测资料将按公开时间和客户端可复现程度逐步完善。计划页用于说明本站当前优先核验什么，以及对应内容会更新到哪里。</p>

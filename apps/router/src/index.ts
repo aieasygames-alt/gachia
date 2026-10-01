@@ -160,7 +160,9 @@ async function fetchWithRouteMarker(worker: Fetcher, request: Request, marker: s
   const headers = new Headers(response.headers);
   const contentType = headers.get('content-type') ?? '';
   const isPublicHtml = request.method === 'GET' && response.status === 200 && contentType.includes('text/html') && !request.headers.has('cookie') && !request.headers.has('authorization');
-  if (isPublicHtml && !headers.has('cache-control')) headers.set('cache-control', 'public, s-maxage=60, stale-while-revalidate=300');
+  // Game workers are independently deployed. Never let the router retain their HTML
+  // across a release; static assets retain their immutable cache policy downstream.
+  if (isPublicHtml) headers.set('cache-control', 'private, no-cache, no-store, max-age=0, must-revalidate');
   if (request.headers.get('x-gachia-route-debug') === '1') headers.set('x-gachia-route-target', marker);
   return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
 }

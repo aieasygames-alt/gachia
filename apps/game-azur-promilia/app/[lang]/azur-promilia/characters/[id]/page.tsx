@@ -21,7 +21,7 @@ export default async function CharacterDetail({ params }: { params: Promise<{ la
   const { beta } = character;
   return <>
     <GameNav locale={locale} current="characters" />
-    <main className="content article">
+    <main id="main-content" tabIndex={-1} className="content article">
       <Link className="back" href={`/${locale}/azur-promilia/characters`}>{localize(locale, { zh: '返回角色图鉴', en: 'Back to characters', ja: 'キャラクター一覧に戻る' })}</Link>
       <h1>{name}</h1>
       <p className="card__badge">{sourceStatusLabel(character.officialSource ? 'official' : 'reference', locale)}</p><p className="card__meta">{localize(locale, { zh: '战斗资料核验：', en: 'Combat data checked: ', ja: '戦闘資料確認：' })}{beta.source.checkedAt} · {beta.source.name}</p>

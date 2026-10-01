@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function WorldPage() {
-  return <main className="content">
+  return <main id="main-content" tabIndex={-1} className="content">
     <div className="eyebrow">公开设定整理</div>
     <h1>世界观与术语</h1>
     <p className="lead">竞品 Wiki 通常会先建立术语、势力和地图的检索入口。以下仅整理官方页面与公开背景资料已经出现的名称，不补写未公开的剧情、角色关系或机制。</p>

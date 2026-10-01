@@ -5,7 +5,7 @@ import { contentStatus, officialAnnouncements, officialEntryPoints } from '@/lib
 export const metadata: Metadata = { title: '绿梦：时空之声公告与活动 | Gachia', description: '绿梦：时空之声官方公告、活动与奖励核验状态。', alternates: { canonical: 'https://gachia.com/zh/lvmeng/news' } };
 
 export default function NewsPage() {
-  return <main className="content">
+  return <main id="main-content" tabIndex={-1} className="content">
     <div className="eyebrow">最后核验：{contentStatus.verifiedAt}</div>
     <h1>公告与活动</h1>
     <p className="lead">优先整理官方公告中的公测、维护、活动、奖励与兑换信息。社区转述不会单独作为本站活动结论。</p>

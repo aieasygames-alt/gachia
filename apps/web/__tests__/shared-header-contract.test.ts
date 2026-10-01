@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { createSharedHeaderModel, headerFeaturedGameIds, headerGameIds, headerMoreGameIds } from '@gachia/ui';
+import { createSharedHeaderModel, headerFeaturedGameIds, headerGameIds, headerMoreGameIds, mainSitePath } from '@gachia/ui';
 
 describe('shared header contract', () => {
   it('keeps featured and more games disjoint and complete', () => {
@@ -29,5 +29,11 @@ describe('shared header contract', () => {
     expect(createSharedHeaderModel('zh').featuredGames.map((game) => game.id)).toContain('lvmeng');
     expect(createSharedHeaderModel('en').featuredGames.map((game) => game.id)).not.toContain('lvmeng');
     expect(createSharedHeaderModel('ja').featuredGames.map((game) => game.id)).not.toContain('lvmeng');
+  });
+
+  it('uses main-site URLs when an independently deployed game changes games', () => {
+    expect(mainSitePath('zh')).toBe('https://gachia.com/zh');
+    expect(mainSitePath('en', '/genshin')).toBe('https://gachia.com/en/genshin');
+    expect(mainSitePath('ja', '/azur-promilia')).toBe('https://gachia.com/ja/azur-promilia');
   });
 });

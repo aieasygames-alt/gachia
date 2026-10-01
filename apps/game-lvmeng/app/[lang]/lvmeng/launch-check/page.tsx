@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ContentStatus } from '@/components/content-status';
+import { LaunchVerificationBoard } from '@/components/launch-verification-board';
 import { launchDayVerification } from '@/lib/data';
 
 export const metadata: Metadata = {
@@ -10,18 +11,13 @@ export const metadata: Metadata = {
 };
 
 export default function LaunchCheckPage() {
-  return <main className="content">
+  return <main id="main-content" tabIndex={-1} className="content">
     <div className="eyebrow">开服当天优先事项</div>
     <h1>开服核验台</h1>
     <p className="lead">把首日需要确认的事实按影响顺序放在一起。它不是预设开荒路线：只有官方公告或当前客户端可复现的信息，才会进入后续的角色、养成、地图和资源攻略。</p>
     <ContentStatus />
     <div className="notice">App Store 页面显示的 2026 年 10 月 31 日仅为预计推出日期。预下载、实际开服时间、平台同步、账号互通、卡池和奖励都必须以最新官网或官方 TapTap 公告复核。</div>
-    <section className="grid">{launchDayVerification.map((item, index) => <Link className="card" href={item.href} key={item.id}>
-      <span className="tag">{index + 1}. {item.status}</span>
-      <h3>{item.title}</h3>
-      <p>{item.summary}</p>
-      <p className="card-link">核验动作：{item.action}</p>
-    </Link>)}</section>
+    <LaunchVerificationBoard tasks={launchDayVerification} />
     <h2>推荐顺序</h2>
     <ol className="checklist">
       <li>先确认官方入口、客户端版本和实际开服状态，再开始下载或创建角色。</li>

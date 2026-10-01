@@ -16,6 +16,16 @@ export const headerLanguageLabels: Record<SupportedLocale, string> = {
   ja: 'JA',
 };
 
+export const sharedHeaderLayout = {
+  desktopInset: 16,
+  mobileInset: 12,
+  compactBreakpoint: 1023,
+} as const;
+
+export function mainSitePath(locale: SupportedLocale, path = '') {
+  return `https://gachia.com/${locale}${path}`;
+}
+
 export function headerGameName(gameId: GameId, locale: SupportedLocale) {
   return GAMES[gameId].name[locale];
 }
@@ -43,3 +53,57 @@ export function createSharedHeaderModel(locale: SupportedLocale): SharedHeaderMo
     languages: (['zh', 'en', 'ja'] as const).map((target) => ({ locale: target, label: headerLanguageLabels[target] })),
   };
 }
+
+export type SharedHeaderLink = {
+  href: string;
+  label: string;
+  current?: boolean;
+};
+
+export type SharedGameHeaderModel = {
+  gameId: GameId;
+  locale: SupportedLocale;
+  brandHref: string;
+  searchLabel: string;
+  skipLabel: string;
+  featuredGames: SharedHeaderGameItem[];
+  moreGames: SharedHeaderGameItem[];
+  moreGamesLabel: string;
+  localeLinks: SharedHeaderLink[];
+  sectionLabel: string;
+  sectionLinks: SharedHeaderLink[];
+};
+
+export function createSharedGameHeaderModel({
+  gameId,
+  locale,
+  localeLinks,
+  sectionLabel,
+  sectionLinks,
+  brandHref = mainSitePath(locale),
+}: {
+  gameId: GameId;
+  locale: SupportedLocale;
+  localeLinks: SharedHeaderLink[];
+  sectionLabel: string;
+  sectionLinks: SharedHeaderLink[];
+  brandHref?: string;
+}): SharedGameHeaderModel {
+  const header = createSharedHeaderModel(locale);
+
+  return {
+    gameId,
+    locale,
+    brandHref,
+    searchLabel: locale === 'zh' ? '搜索' : locale === 'ja' ? '検索' : 'Search',
+    skipLabel: locale === 'zh' ? '跳至主要内容' : locale === 'ja' ? '本文へ移動' : 'Skip to main content',
+    featuredGames: header.featuredGames,
+    moreGames: header.moreGames,
+    moreGamesLabel: header.moreGamesLabel,
+    localeLinks,
+    sectionLabel,
+    sectionLinks,
+  };
+}
+
+export { SharedGameHeader } from './shared-game-header';

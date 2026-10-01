@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default function FaqPage() {
-  return <main className="content">
+  return <main id="main-content" tabIndex={-1} className="content">
     <div className="eyebrow">公测信息答疑</div>
     <h1>常见问题</h1>
     <p className="lead">优先回答开服前会影响预约、下载和首日决策的问题。官方尚未公开的内容会保持待核验状态。</p>

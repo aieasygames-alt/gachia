@@ -16,7 +16,7 @@ export default async function CharacterDetailPage({ params }: Props) {
   const { slug } = await params;
   const character = playableCharacters.find((entry) => entry.slug === slug);
   if (!character) notFound();
-  return <main className="content">
+  return <main id="main-content" tabIndex={-1} className="content">
     <div className="eyebrow">{contentStatus.official} · 最后核验：{contentStatus.verifiedAt}</div>
     <h1>{character.name}</h1>
     <section className="facts"><div className="fact"><span>公开状态</span><strong>官方角色页已公开</strong></div><div className="fact"><span>组织 / 线索</span><strong>{character.affiliation}</strong></div><div className="fact"><span>资料状态</span><strong>{contentStatus.pending}</strong></div></section>
