@@ -437,21 +437,30 @@
         "question": "What is the best team in NTE launch version?",
         "questionZh": "异环公测版本最强配队是什么？",
         "answer": "Nanally Genesis team (Nanally + Jiuyuan + Protagonist + Hotori) is overall the strongest. For F2P players, Xiaozhi Accumulation team (Xiaozhi + Jiuyuan + Hathor + Protagonist) is the best choice.",
-        "answerZh": "娜娜莉创生队（娜娜莉+九原+主角+早雾）综合最强。零氪玩家推荐小吱盈蓄队（小吱+九原+哈索尔+主角）。"
+        "answerZh": "娜娜莉创生队（娜娜莉+九原+主角+早雾）综合最强。零氪玩家推荐小吱盈蓄队（小吱+九原+哈索尔+主角）。",
+        "questionJa": "NTEローンチ版で最も強い編成は何ですか？",
+        "answerJa": "Nanally＋Jiuyuan＋主人公＋HotoriのGenesis編成が総合的に最も強く、無課金ではXiaozhi＋Jiuyuan＋Hathor＋主人公のAccumulation編成が推奨されています。"
       },
       {
         "question": "Which standard S character should I pick in NTE?",
         "questionZh": "异环常驻S级角色自选选谁？",
         "answer": "Jiuyuan is the best pick with versatile grouping and off-healing at 1-awaken. Hotori is second for irreplaceable support buffs.",
-        "answerZh": "九原是最优选，超大范围聚怪+1觉客串奶妈，泛用性顶级。早雾第二选，唯一S级辅助。"
+        "answerZh": "九原是最优选，超大范围聚怪+1觉客串奶妈，泛用性顶级。早雾第二选，唯一S级辅助。",
+        "questionJa": "NTEで恒常Sキャラクターは誰を選ぶべきですか？",
+        "answerJa": "汎用的な集敵と1覚醒時の控え回復を持つJiuyuanが最優先で、代替しにくいサポートバフを持つHotoriが次点です。"
       },
       {
         "question": "Is Xiaozhi worth building for F2P players?",
         "questionZh": "零氪玩家小吱值得培养吗？",
         "answer": "Absolutely. Xiaozhi is free 6+5 from City Tycoon and at max investment outperforms all DPS. Must-build for F2P.",
-        "answerZh": "绝对值得。小吱通过都市大亨免费满配6+5，满配后强度超过所有主C，零氪必练。"
+        "answerZh": "绝对值得。小吱通过都市大亨免费满配6+5，满配后强度超过所有主C，零氪必练。",
+        "questionJa": "無課金プレイヤーはXiaozhiを育てるべきですか？",
+        "answerJa": "原稿では、City Tycoonで無料6＋5にでき、最大投資時には全DPSを上回るため、無課金向けの育成候補とされています。"
       }
-    ]
+    ],
+    "titleJa": "ローンチ版おすすめ編成：メタチーム編成ガイド",
+    "summaryJa": "NTEローンチ版のおすすめチーム編成。NanallyのGenesis編成、XiaozhiのAccumulation編成、BaicangのBlaze編成、無課金向けの選択肢をまとめます。",
+    "contentJa": "適切なチーム編成はNTEの戦闘の中核です。ローンチ版では、メインDPSを軸にした3つの主要反応システムが中心になります。\n\n## チームの基本枠\n\n各チームは4人で構成します。メインDPS、サブDPS／集敵役、サポート／バッファー、生存／ユーティリティです。1つの元素反応システムを軸に組み、Ring Fusionで2人または3人の反応を発動します。\n\n重要な仕組みとして、主人公（Zero）は固有のInstant Ring Fusionを持ち、Eスキル1回でゲージを即座に満たせます。ほぼ全てのチームで重要な、育成必須のキャラクターです。\n\n## チーム1：Nanally Genesis編成（総合おすすめ）\n\n最適編成：Nanally（限定S）＋Jiuyuan（恒常S）＋主人公＋Hotori（恒常S）\n\n| 枠 | キャラクター | 元素 | 役割 |\n| --- | --- | --- | --- |\n| メインDPS | Nanally | Anima | Genesis反応の中核、非常に高いダメージ |\n| サブDPS | Jiuyuan | Anima | 広範囲の集敵、1覚醒で控え回復 |\n| サポート | Hotori | Incantation | 集敵＋攻撃力バフ、1覚醒でバフが2倍 |\n| ユーティリティ | 主人公 | Cosmos | Instant Ring Fusionで素早く準備 |\n\n低予算の代替として、JiuyuanはMint、HotoriはAdler（シールド＋耐性）またはHaniel（バッファー）に置き換えられます。\n\n戦略：Anima＋CosmosでGenesis反応を発動します。0覚醒では回復がなく、Jiuyuanは1覚醒で回復を追加します。Xun（1.0後半）は主人公の上位候補です。\n\n恒常Sの選択優先度：Jiuyuan（汎用性）＞Hotori（サポート）＞その他\n\n## チーム2：Xiaozhi Accumulation編成（無課金向け）\n\n最適編成：Xiaozhi（無料最大）＋Jiuyuan＋Hathor＋主人公\n\n| 枠 | キャラクター | 元素 | 役割 |\n| --- | --- | --- | --- |\n| メインDPS | Xiaozhi | Cosmos | City Tycoonで無料6＋5 |\n| サブDPS | Jiuyuan | Anima | 集敵＋反応発動 |\n| 反応役 | Hathor | Lakshana | Accumulationを発動 |\n| サポート | 主人公 | Cosmos | 高頻度のRing Fusion |\n\n低予算の代替として、HathorはSkia、JiuyuanはMintに置き換えられます。\n\n戦略：Cosmos＋Anima＋LakshanaでAccumulationを発動し、大きな増幅を得ます。最大投資時のXiaozhiは全DPSを上回ります。\n\n## チーム3：Baicang Blaze編成\n\n最適編成：Baicang（恒常S）＋Hotori＋Daffodil＋Fadia\n\n戦略：Incantation＋ChaosでBlazeの継続ダメージを発動します。Daffodilは代替不可です。Requiem（v1.1）はBaicangを上回る可能性があります。\n\n## 無課金向けの優先順位\n\n1. Xiaozhi（無料6＋5、主力DPS）\n2. Jiuyuan（恒常S選択、集敵＋回復）\n3. Haniel（無料Aランクのバッファー）\n4. 主人公（代替できないInstant Ring Fusion）\n5. Adler（無料の優秀な生存役）\n\n無課金向け推奨編成：Xiaozhi＋Jiuyuan＋Hathor／Skia＋主人公\n\n## 反応システムの概要\n\n| 反応 | 元素 | おすすめ編成 |\n| --- | --- | --- |\n| Genesis | Anima＋Cosmos | Nanally編成 |\n| Accumulation | Cosmos＋Anima＋Lakshana | Xiaozhi編成 |\n| Blaze | Incantation＋Chaos | Baicang編成 |\n| Discord | Incantation＋Chaos＋Psyche | Baicang上級編成 |\n\n## 恒常Sの選択優先度\n\nJiuyuan（汎用性）＞Hotori（唯一のSランクサポート）＞Baicang（編成依存）＞その他"
   },
   {
     "id": "exploration-tips",
@@ -485,21 +494,30 @@
         "question": "What is the best open world exploration tips in Neverness to Everness?",
         "questionZh": "异环中开放世界探索技巧最重要的是什么？",
         "answer": "Tips for efficient open world exploration - never miss a chest or collectible.",
-        "answerZh": "高效探索开放世界的技巧，不遗漏任何宝箱和收集品。"
+        "answerZh": "高效探索开放世界的技巧，不遗漏任何宝箱和收集品。",
+        "questionJa": "NTEのオープンワールド探索で重要なことは？",
+        "answerJa": "宝箱や収集品を見落とさないために、地域ごとにルートを決めて探索することです。"
       },
       {
         "question": "How to improve at Neverness to Everness?",
         "questionZh": "如何提升异环的游戏水平？",
         "answer": "Follow our open world exploration tips for the best results. This guide covers essential tips and strategies for Neverness to Everness players.",
-        "answerZh": "遵循我们的开放世界探索技巧可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。"
+        "answerZh": "遵循我们的开放世界探索技巧可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。",
+        "questionJa": "NTEで探索効率を上げるには？",
+        "answerJa": "探索のヒントを参考に、ワープポイントを先に開放し、目的地を結ぶルートを計画してください。"
       },
       {
         "question": "Is open world exploration tips worth it in Neverness to Everness?",
         "questionZh": "异环开放世界探索技巧值得投入吗？",
         "answer": "Yes, Tips for efficient open world exploration - never miss a chest or collectible.",
-        "answerZh": "高效探索开放世界的技巧，不遗漏任何宝箱和收集品。"
+        "answerZh": "高效探索开放世界的技巧，不遗漏任何宝箱和收集品。",
+        "questionJa": "オープンワールド探索のヒントを確認する価値はありますか？",
+        "answerJa": "あります。宝箱、収集品、隠しクエストを効率よく見つけるために役立ちます。"
       }
-    ]
+    ],
+    "titleJa": "オープンワールド探索のヒント",
+    "summaryJa": "Neverness to Evernessのオープンワールドを効率よく探索するための、宝箱、収集品、隠しクエスト、ワープポイントの探し方です。",
+    "contentJa": "Everyloop のオープンワールドには、収集品や隠しコンテンツが数多くあります。効率よく探索するための技術を身につけましょう。\n\n## ルート計画\n\n地域ごとに探索してください。各エリアには固有のパズル要素と収集品の配置があります。\n\n## 宝箱の種類と報酬\n\n- **通常宝箱**：基本素材と少量のゴールド\n- **精巧な宝箱**：より良い素材と経験値本\n- **貴重な宝箱**：希少素材と武器経験値\n- **豪華な宝箱**：上級素材、ジェム、キャラクター経験値\n\n## まずワープポイントを開放する\n\n見つけたワープポイントはすぐに有効化し、移動時間を減らしましょう。ワープポイント同士を結ぶルートに沿って探索すると効率的です。\n\n## 隠しクエストの発生条件\n\n多くの隠しクエストは、環境への干渉で始まります。不自然なオブジェクト、NPCの会話、特別なマップマーカーに注目してください。\n\n## 天候システム\n\n一部の収集品は特定の天候でしか出現しません。天候の変化を確認し、それに合わせて探索計画を立てましょう。"
   },
   {
     "id": "boss-guide",
@@ -569,21 +587,30 @@
         "question": "What is the best weapon selection & enhancement strategy in Neverness to Everness?",
         "questionZh": "异环中武器选择与强化最重要的是什么？",
         "answer": "Best weapon choices and enhancement priorities for different character types.",
-        "answerZh": "不同类型角色的最佳武器选择和强化优先级。"
+        "answerZh": "不同类型角色的最佳武器选择和强化优先级。",
+        "questionJa": "NTEの武器選択と強化で最も重要なことは何ですか？",
+        "answerJa": "キャラクタータイプに合わせた武器を選び、強化の優先順位を決めることです。"
       },
       {
         "question": "How to improve at Neverness to Everness?",
         "questionZh": "如何提升异环的游戏水平？",
         "answer": "Follow our weapon selection & enhancement guide for the best results. This guide covers essential tips and strategies for Neverness to Everness players.",
-        "answerZh": "遵循我们的武器选择与强化指南可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。"
+        "answerZh": "遵循我们的武器选择与强化指南可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。",
+        "questionJa": "NTEで効率よく強くなるには？",
+        "answerJa": "武器選択と強化ガイドを参考に、役割に応じて武器を選び、主力から強化してください。"
       },
       {
         "question": "Is weapon selection & enhancement  worth it in Neverness to Everness?",
         "questionZh": "异环武器选择与强化值得投入吗？",
         "answer": "Yes, Best weapon choices and enhancement priorities for different character types.",
-        "answerZh": "不同类型角色的最佳武器选择和强化优先级。"
+        "answerZh": "不同类型角色的最佳武器选择和强化优先级。",
+        "questionJa": "武器選択と強化を確認する価値はありますか？",
+        "answerJa": "あります。キャラクターごとの武器選択と強化優先度を判断する助けになります。"
       }
-    ]
+    ],
+    "titleJa": "武器選択と強化ガイド",
+    "summaryJa": "Neverness to Evernessの各キャラクタータイプに向けた武器の選び方と強化優先度を、無料・クラフト可能な選択肢も含めて解説します。",
+    "contentJa": "武器はキャラクターの戦闘力を高めるうえで重要です。適切な武器を選ぶと、出力を大きく向上させられます。\n\n## 武器タイプとキャラクターの組み合わせ\n\n武器タイプごとに適したキャラクターの役割があります。各武器タイプを理解して最適な選択をしましょう。\n\n## 星3武器を強化する価値はあるか\n\n一部の星3武器は、特定キャラクターでは星5武器に匹敵する性能を発揮します。序盤に賢く使うのは有効です。\n\n## 強化の優先順位\n\n1. まずメインDPSの武器を最大レベルまで上げる\n2. 次にサブDPSの武器を強化する\n3. サポート武器は必要に応じて選んで強化する\n4. 専用性の高い武器より汎用武器の方が価値を保ちやすい\n\n## 精錬と突破\n\n精錬は武器のパッシブ効果を強化し、突破は基礎ステータスを上げます。メインDPSの武器では精錬を優先してください。\n\n## 無料武器のおすすめ\n\nゲーム内では複数の無料星5武器を入手できます。一部は特定の場面で非常に優れた性能を発揮します。"
   },
   {
     "id": "disk-build",
@@ -611,21 +638,30 @@
         "question": "What is the best disk build & stat priority strategy in Neverness to Everness?",
         "questionZh": "异环中磁盘搭配与属性选择最重要的是什么？",
         "answer": "Disk system building strategies and optimal stat choices for each character.",
-        "answerZh": "磁盘系统的搭配思路和各角色的最优属性选择。"
+        "answerZh": "磁盘系统的搭配思路和各角色的最优属性选择。",
+        "questionJa": "NTEのディスク構成とステータス選択で重要なことは何ですか？",
+        "answerJa": "ディスクシステムの構成方針と、キャラクターに適したステータスを選ぶことです。"
       },
       {
         "question": "How to improve at Neverness to Everness?",
         "questionZh": "如何提升异环的游戏水平？",
         "answer": "Follow our disk build & stat priority guide for the best results. This guide covers essential tips and strategies for Neverness to Everness players.",
-        "answerZh": "遵循我们的磁盘搭配与属性选择可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。"
+        "answerZh": "遵循我们的磁盘搭配与属性选择可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。",
+        "questionJa": "NTEで効率よく強くなるには？",
+        "answerJa": "ディスク構成ガイドを参考に、役割に合うセット効果とステータスを選んでください。"
       },
       {
         "question": "Is disk build & stat priority  worth it in Neverness to Everness?",
         "questionZh": "异环磁盘搭配与属性选择值得投入吗？",
         "answer": "Yes, Disk system building strategies and optimal stat choices for each character.",
-        "answerZh": "磁盘系统的搭配思路和各角色的最优属性选择。"
+        "answerZh": "磁盘系统的搭配思路和各角色的最优属性选择。",
+        "questionJa": "ディスク構成とステータス優先度を確認する価値はありますか？",
+        "answerJa": "あります。キャラクターごとのディスク構成と最適なステータスを判断できます。"
       }
-    ]
+    ],
+    "titleJa": "ディスク構成とステータス優先度ガイド",
+    "summaryJa": "Neverness to Evernessのディスク（アーティファクト）システムについて、セット効果、メインステータスとサブステータスの優先度、キャラクター別構成を解説します。",
+    "contentJa": "ディスクはEveryloopの装備システムで、他ゲームのアーティファクトに似ています。適切なディスク構成はキャラクターの性能を大きく高めます。\n\n## ディスクの基本\n\n各キャラクターは6枚のディスクを装備し、スロットごとに異なるメインステータスが付きます。セット効果が最も重要な検討要素です。\n\n## セット選択の原則\n\n1. まず4セット効果を完成させる\n2. キャラクターの役割に応じてセットを選ぶ\n3. 移行期には混成セットも有効\n4. セット効果同士の相乗効果を考える\n\n## メインステータスの選択\n\n- **Flower／Feather**：固定HP／固定攻撃力\n- **Sands**：必要に応じて攻撃力％／エネルギー回復／元素熟知\n- **Goblet**：元素ダメージボーナスを優先\n- **Circlet**：会心率／会心ダメージ\n\n## サブステータスの優先順位\n\n会心率 ＞ 会心ダメージ ＞ 攻撃力％ ＞ 元素熟知 ＞ エネルギー回復\n\n## 強化方針\n\n全てのディスクを均等に強化しないでください。優秀なサブステータスを持つディスクに資源を集中させましょう。"
   },
   {
     "id": "farming-efficiency",
@@ -653,15 +689,22 @@
         "question": "What is the most stamina-efficient way to farm in NTE?",
         "questionZh": "异环最节省体力的刷本方式？",
         "answer": "Farm character ascension domains on matching element days, use condensed stamina during double-drop events, and prioritize event shops for free materials.",
-        "answerZh": "在对应属性日刷角色突破副本，在双倍掉落活动时使用浓缩体力，优先兑换活动商店的免费材料。"
+        "answerZh": "在对应属性日刷角色突破副本，在双倍掉落活动时使用浓缩体力，优先兑换活动商店的免费材料。",
+        "questionJa": "NTEで最もスタミナ効率のよい素材周回方法は？",
+        "answerJa": "対応する元素の日にキャラクター突破領域を周回し、ドロップ2倍イベントでは濃縮スタミナを使い、無料素材のイベントショップを優先することです。"
       },
       {
         "question": "How do I plan my weekly farming in NTE?",
         "questionZh": "异环每周刷本怎么安排？",
         "answer": "Dedicate Mon-Tue to skill domains, Wed-Thu to weekly bosses, Friday to weapon materials, and Sat-Sun for flexible farming. Always participate in events first.",
-        "answerZh": "周一二刷技能本，周三四周本，周五刷武器材料，周末灵活安排。活动内容永远优先。"
+        "answerZh": "周一二刷技能本，周三四周本，周五刷武器材料，周末灵活安排。活动内容永远优先。",
+        "questionJa": "NTEの週次周回はどう計画すればよいですか？",
+        "answerJa": "月火はスキル領域、水木は週ボス、金曜は武器素材、土日は柔軟な周回に充て、イベントを常に優先してください。"
       }
-    ]
+    ],
+    "titleJa": "NTE素材周回ガイド：スタミナ効率ルートと優先順位",
+    "summaryJa": "NTEの素材周回効率を高めるため、素材別のスタミナコスト、日ごとの周回ルート、週次プランナー、キャラクター育成の優先順位をまとめます。",
+    "contentJa": "## 素材周回の効率ガイド\n\n効率よく素材を集めることは、キャラクター育成の土台です。このガイドでは、最適な周回方法、スタミナ管理、週ごとの計画を扱います。\n\n## 素材の種類\n\n| 種類 | 主な入手先 | スタミナコスト | 優先度 |\n| --- | --- | --- | --- |\n| キャラクター突破 | 領域 | 20〜40 | 最高 |\n| 武器突破 | 領域 | 20〜40 | 高 |\n| スキル強化 | スキル領域 | 20 | 高 |\n| 一般強化 | オープンワールド＋ショップ | 無料 | 中 |\n| イベント素材 | イベント限定 | イベント通貨 | 最高（開催時） |\n\n## スタミナ管理\n\n### 毎日のスタミナ予算\n\n- **基礎スタミナ**：120（8分ごとに1回復）\n- **レベルボーナス込み**：最大AR時に180まで\n- **追加スタミナ**：イベント、レベルアップ、プレミアム回復から獲得\n\n### スタミナの優先順位（使い道）\n\n1. **キャラクター突破領域**：進行を最も制限しやすい\n2. **スキル強化領域**：大きな戦力向上につながる\n3. **武器突破**：DPSキャラクターに必要\n4. **Mora／Vons領域**：本当に必要なときだけ\n5. **経験値領域**：一般には効率が低く、イベントを使う\n\n## 領域の周回スケジュール\n\n領域で利用できる元素は日替わりで変わります。\n\n| 曜日 | 利用できる元素 |\n| --- | --- |\n| 月曜日 | Fire、Physical |\n| 火曜日 | Ice、Electric |\n| 水曜日 | Wind、Anomaly |\n| 木曜日 | Fire、Physical |\n| 金曜日 | Ice、Electric |\n| 土曜日 | 全元素が開放 |\n| 日曜日 | 全元素が開放 |\n\n**ヒント**：全ての領域が開放される土日までスタミナを残すと、柔軟に周回できます。\n\n## オープンワールドでの採集\n\n一部の素材はオープンワールドでしか集められません。\n\n### 採集ルートのヒント\n\n1. 希少素材を見つけた場所をマップに記録する\n2. 探索中に集める。特定素材が必要になるまで専用ルートにこだわらない\n3. リスポーン時間：一般素材は24時間、希少素材は48時間\n4. 付近の素材を表示するパッシブを持つ採集キャラクターを使う\n\n## 週次周回プランナー\n\n### 月曜日〜火曜日\n\n- メインDPS用のスキル領域を周回する\n- 週ボス1体目を完了する\n- オープンワールド素材を集める\n\n### 水曜日〜木曜日\n\n- スキル領域の周回を続ける\n- 週ボス2体目\n- ギルド活動\n\n### 金曜日\n\n- 武器突破素材を周回する\n- 週ボス3体目\n- ショップ交換\n\n### 土曜日〜日曜日\n\n- 必要な素材に応じた柔軟な周回\n- 深淵チャレンジへの挑戦\n- イベントコンテンツ\n\n## 素材のショップ交換\n\nショップでは確定素材を補えます。\n\n1. **イベントショップ**：常に最優先。最も価値が高い\n2. **週次ショップ**：突破素材を購入する\n3. **名誉ショップ**：スキル素材（月間上限あり）\n4. **ギルドショップ**：強化アイテム\n\n## 効率化のヒント\n\n1. **元素の日に周回する**：一致する日には領域のスタミナコストが低い\n2. **ドロップ2倍イベントを使う**：このために濃縮スタミナを残す\n3. **高速周回チームを作る**：早く終わるほど、1回のプレイで多く周回できる\n4. **資源を分散しない**：同時に育てるのは2〜3キャラクターに絞る\n5. **次のキャラクターを事前周回する**：バナーを確認し、実装前に素材を集める"
   },
   {
     "id": "endgame-content",
