@@ -450,6 +450,30 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
     ],
   },
   roco: {
+    'global-cn-content-roadmap': [
+      { href: '/roco/guides/global-launch-readiness-checklist', label: { zh: '首发验收清单', en: 'Launch checklist', ja: 'ローンチ確認リスト' }, description: { zh: '将路线图转成 CBT 到首发的可验收条件。', en: 'Turn the roadmap into CBT-to-launch acceptance criteria.', ja: 'ロードマップをCBTからローンチまでの確認条件へ。' } },
+      { href: '/roco/guides/global-cn-release-governance', label: { zh: '跨服版本治理', en: 'CN-global governance', ja: '地域間リリース統治' }, description: { zh: '明确什么同步、什么本地化验证、何时公告或回滚。', en: 'Define parity, localization gates, communication, and rollback.', ja: '同期、翻訳ゲート、告知、ロールバックを定義。' } },
+    ],
+    'global-launch-readiness-checklist': [
+      { href: '/roco/guides/global-first-30-days-pve-plan', label: { zh: '前 30 天 PvE 包', en: 'Days 1–30 PvE plan', ja: '1〜30日PvE案' }, description: { zh: '首发通过后，安排稳定的挑战区、周常和追赶机制。', en: 'After launch readiness, plan challenge zones, weekly goals, and catch-up.', ja: 'ローンチ確認後、挑戦、週次、追いつきへ。' } },
+      { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '运营指标与实验', en: 'Live-ops metrics', ja: '運営指標と実験' }, description: { zh: '用统一指标验证首发，而不是只看下载和总参与。', en: 'Validate launch with shared metrics, not downloads alone.', ja: 'DL数だけでなく共通指標でローンチを検証。' } },
+    ],
+    'global-first-30-days-pve-plan': [
+      { href: '/roco/guides/global-days-31-90-season-event-plan', label: { zh: '31–90 天赛季包', en: 'Days 31–90 season plan', ja: '31〜90日シーズン案' }, description: { zh: '首月循环稳定后，再进入首赛季和全球社区活动。', en: 'Move into first-season and global-event planning after month one stabilizes.', ja: '初月安定後に初回シーズンと世界イベントへ。' } },
+      { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '首月指标', en: 'Month-one metrics', ja: '初月指標' }, description: { zh: '检查失败重试、材料来源和回归追赶是否有效。', en: 'Check retries, material sourcing, and returner catch-up.', ja: '再挑戦、素材導線、復帰者追いつきを確認。' } },
+    ],
+    'global-days-31-90-season-event-plan': [
+      { href: '/roco/guides/global-cn-release-governance', label: { zh: '跨服版本治理', en: 'CN-global governance', ja: '地域間リリース統治' }, description: { zh: '把赛季移植、区域差异、补领与回滚写进发布规则。', en: 'Put ports, regional differences, late claims, and rollback into release rules.', ja: '移植、地域差、補受取、ロールバックを配信規則へ。' } },
+      { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '活动复盘指标', en: 'Event recap metrics', ja: 'イベント振り返り指標' }, description: { zh: '评估时区公平、活动回流和旧新精灵使用分布。', en: 'Evaluate time-zone fairness, return, and old/new creature use.', ja: '時区公平、復帰、旧新精霊の利用を評価。' } },
+    ],
+    'global-cn-release-governance': [
+      { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '治理指标与实验', en: 'Governance metrics', ja: '統治指標と実験' }, description: { zh: '将发布门槛与上线后的数据、实验和事故复盘连接起来。', en: 'Connect release gates with live data, experiments, and incident reviews.', ja: 'リリースゲートを運用データ、実験、事故振り返りへ接続。' } },
+      { href: '/roco/guides/global-cn-content-roadmap', label: { zh: '回到补充路线图', en: 'Return to roadmap', ja: '補完ロードマップへ戻る' }, description: { zh: '查看首发到 90 天的内容顺序和长期双向策略。', en: 'Review launch-to-day-90 sequencing and long-term two-way strategy.', ja: 'ローンチから90日と長期双方向戦略を確認。' } },
+    ],
+    'global-live-ops-metrics-experiments': [
+      { href: '/roco/guides/global-launch-readiness-checklist', label: { zh: '首发验收清单', en: 'Launch checklist', ja: 'ローンチ確認リスト' }, description: { zh: '将指标回写到新手、跨端、本地化与安全验收。', en: 'Feed metrics back into onboarding, cross-play, localization, and safety acceptance.', ja: '指標を導入、クロスプレイ、翻訳、安全の確認へ戻す。' } },
+      { href: '/roco/guides/global-days-31-90-season-event-plan', label: { zh: '赛季与活动包', en: 'Season and event plan', ja: 'シーズン・イベント案' }, description: { zh: '将实验结果用于下一阶段赛季和全球活动调整。', en: 'Use experiment results to tune the next season and global event.', ja: '実験結果を次のシーズンと世界イベントへ反映。' } },
+    ],
     'cbt-registration-guide': [
       { href: '/roco/version', label: { zh: '版本时间线', en: 'Version timeline', ja: '版本タイムライン' }, description: { zh: '报名后接着看 CBT 到正式版的节点和已确认内容。', en: 'After signing up, continue into the CBT-to-launch timeline and confirmed content.', ja: '申込後はCBTから正式版までの予定と確定情報へ。' } },
       { href: '/roco/guides/platforms-and-download-guide', label: { zh: '平台与下载', en: 'Platforms & download', ja: '平台とDL' }, description: { zh: '确认 CBT 可玩平台与设备要求。', en: 'Confirm CBT platforms and device requirements.', ja: 'CBTの対応平台と端末要件を確認。' } },

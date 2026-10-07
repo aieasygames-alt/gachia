@@ -53,6 +53,8 @@ describe('market-intel guide links', () => {
       'global-launch-readiness-checklist',
       'global-first-30-days-pve-plan',
       'global-days-31-90-season-event-plan',
+      'global-cn-release-governance',
+      'global-live-ops-metrics-experiments',
     ];
     const snapshotGuideLinks = VERSION_SNAPSHOTS.roco?.links.map((link) => link.href) ?? [];
 
