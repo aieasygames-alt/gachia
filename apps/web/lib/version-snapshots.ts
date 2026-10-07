@@ -446,6 +446,7 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       { type: 'codes', href: '/roco/items', label: { zh: '资料入口', en: 'Data hub', ja: 'データ' } },
       { type: 'characters', href: '/roco/characters', label: { zh: '生物图鉴', en: 'Creatures', ja: '生物図鑑' } },
       { type: 'guides', href: '/roco/guides/cbt-registration-guide', label: { zh: 'CBT 申请', en: 'CBT registration', ja: 'CBT応募' } },
+      { type: 'guides', href: '/roco/guides/global-cn-content-roadmap', label: { zh: '国服差距与补充方案', en: 'CN gap & rollout plan', ja: '中国版との差分・展開案' } },
     ],
   },
   'roco-cn': {
