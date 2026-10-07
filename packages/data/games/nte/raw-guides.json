@@ -386,21 +386,30 @@
         "question": "What is the best gacha strategy & pity system in Neverness to Everness?",
         "questionZh": "异环中抽卡策略与保底机制最重要的是什么？",
         "answer": "Deep analysis of gacha rates, pity system, and strategies for smart pulling.",
-        "answerZh": "深入分析抽卡概率、保底机制，制定合理的抽卡策略。"
+        "answerZh": "深入分析抽卡概率、保底机制，制定合理的抽卡策略。",
+        "questionJa": "NTEのガチャ戦略と天井システムで重要なことは何ですか？",
+        "answerJa": "ガチャ確率、天井システム、計画的な引き方を理解することです。"
       },
       {
         "question": "How to improve at Neverness to Everness?",
         "questionZh": "如何提升异环的游戏水平？",
         "answer": "Follow our gacha strategy & pity system for the best results. This guide covers essential tips and strategies for Neverness to Everness players.",
-        "answerZh": "遵循我们的抽卡策略与保底机制可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。"
+        "answerZh": "遵循我们的抽卡策略与保底机制可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。",
+        "questionJa": "NTEでガチャを効率よく引くには？",
+        "answerJa": "ガチャ戦略と天井システムを参考に、必要な回数を計算してから資源を使ってください。"
       },
       {
         "question": "Is gacha strategy & pity system worth it in Neverness to Everness?",
         "questionZh": "异环抽卡策略与保底机制值得投入吗？",
         "answer": "Yes, Deep analysis of gacha rates, pity system, and strategies for smart pulling.",
-        "answerZh": "深入分析抽卡概率、保底机制，制定合理的抽卡策略。"
+        "answerZh": "深入分析抽卡概率、保底机制，制定合理的抽卡策略。",
+        "questionJa": "ガチャ戦略と天井システムを確認する価値はありますか？",
+        "answerJa": "あります。確率と天井を理解し、資源を計画的に使う助けになります。"
       }
-    ]
+    ],
+    "titleJa": "ガチャ戦略と天井システム",
+    "summaryJa": "Neverness to Evernessのガチャ確率と天井システムを分析し、資源を有効に使うための引き方をまとめます。",
+    "contentJa": "ガチャはEveryloopでキャラクターを入手する主な方法です。確率の仕組みを理解すると、より賢く判断できます。\n\n## 基本確率\n\n限定星5の基本確率は0.6％、星4は5.1％です。ソフト天井は74回目から確率が上がり、ハード天井では90回目に星5が確定します。\n\n## 天井システムの詳細\n\n- **ソフト天井**：74回目から確率が上昇する\n- **ハード天井**：90回目で星5が確定する\n- **50／50**：バナーキャラクターを引く確率は50％で、外れた場合は次回確定\n- **星4天井**：10回以内に少なくとも1体の星4が確定\n\n## ガチャ戦略\n\n1. 狙う対象を決めた後、必要な回数を計算する\n2. 安全マージンとして少なくとも30回分を残す\n3. 目的外のバナーに資源を使わない\n4. 先の予定を立てるため、テストサーバーの情報を追う\n\n## 初心者向けガチャの助言\n\n初心者バナーには通常、割引があります。初回チャージボーナスと初心者クエスト報酬を、強力な星4キャラクターに使うことができます。"
   },
   {
     "id": "team-building",
@@ -545,21 +554,30 @@
         "question": "What is the best world boss challenge strategy in Neverness to Everness?",
         "questionZh": "异环中世界BOSS挑战最重要的是什么？",
         "answer": "Strategies and recommended teams for all world bosses.",
-        "answerZh": "各世界BOSS的打法技巧和推荐阵容。"
+        "answerZh": "各世界BOSS的打法技巧和推荐阵容。",
+        "questionJa": "NTEのワールドボス挑戦で最も重要なことは何ですか？",
+        "answerJa": "各ワールドボスの攻略法とおすすめチームを確認し、攻撃パターンと元素弱点を理解することです。"
       },
       {
         "question": "How to improve at Neverness to Everness?",
         "questionZh": "如何提升异环的游戏水平？",
         "answer": "Follow our world boss challenge guide for the best results. This guide covers essential tips and strategies for Neverness to Everness players.",
-        "answerZh": "遵循我们的世界BOSS挑战攻略可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。"
+        "answerZh": "遵循我们的世界BOSS挑战攻略可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。",
+        "questionJa": "NTEでボス戦をうまく進めるには？",
+        "answerJa": "ワールドボス挑戦ガイドを参考に、攻撃予兆、元素カウンター、チーム準備を見直してください。"
       },
       {
         "question": "Is world boss challenge  worth it in Neverness to Everness?",
         "questionZh": "异环世界BOSS挑战值得投入吗？",
         "answer": "Yes, Strategies and recommended teams for all world bosses.",
-        "answerZh": "各世界BOSS的打法技巧和推荐阵容。"
+        "answerZh": "各世界BOSS的打法技巧和推荐阵容。",
+        "questionJa": "ワールドボス挑戦を行う価値はありますか？",
+        "answerJa": "あります。上級素材を集める重要な手段です。"
       }
-    ]
+    ],
+    "titleJa": "ワールドボス挑戦ガイド",
+    "summaryJa": "Neverness to Evernessの全ワールドボスについて、攻略法、元素弱点、おすすめチーム、ドロップ報酬をまとめたガイドです。",
+    "contentJa": "ワールドボスは、Neverness to Evernessで上級素材を得る重要な手段です。各ボスには効率的に対処するための固有ギミックがあり、攻撃パターンと元素弱点を学ぶことが安定攻略の鍵になります。\n\n## ボス挑戦の基本\n\nワールドボスには1日の挑戦回数制限があるため、各挑戦が重要です。効率を最大化するために適切な元素カウンターを使いましょう。攻撃パターンの理解は生存の鍵で、多くのボスは大技の1〜2秒前に予備動作を見せます。回避や位置調整のための時間を確保できます。特に初心者にとって、協力モードは難しいボスを攻略しやすくします。\n\n## 共通のボス攻略法\n\n1. 攻撃の予兆を確認して適切に回避する。オレンジの表示は防御できない攻撃を示す\n2. ボスが短時間スタンする攻撃後の硬直にダメージを与える\n3. 戦闘中は元素付与を維持して反応ダメージを継続させる\n4. バーストスキルは慎重に使う。開始直後ではなく脆弱フェーズに残す\n5. 特定の飛び道具を遮れる遮蔽物の近くに位置取る\n\n## 準備チェックリスト\n\n- 新しいボスのパターンを学ぶときは、許容ミスを増やすためヒーラーまたはシールダーを連れて行く\n- 戦闘前に食事バフで攻撃力と防御力を強化する\n- 武器とキャラクターのレベルが推奨戦力に見合っていることを確認する\n- あらかじめボスの弱点元素を確認し、それに応じてチームを組む\n- 進行中の緊急事態に備えて復活アイテムを用意する\n\n## 素材ドロップと周回の優先順位\n\n各ボスは特定キャラクターに使う異なる突破素材を落とします。無作為に周回するのではなく、現在育てているキャラクターに必要な素材を基準に周回先を選びましょう。複数キャラクターで共有する素材もあるため、そのボスの優先度は高くなります。毎日入手できるとは限らない希少ドロップについては、週替わりボスを確認してください。\n\n## 高速周回のための上級ヒント\n\nボスを十分に上回る戦力になったら、30秒以内の撃破を目標にローテーションを最適化し、スタミナ効率を高めましょう。ボスの激昂フェーズでは無敵時間を持つスキルを使い、大きなバースト時間に元素バーストを連携させてください。高速撃破の実績では、追加の素材や通貨が得られることがあります。"
   },
   {
     "id": "weapon-guide",
@@ -732,21 +750,30 @@
         "question": "What is the best endgame strategy in Neverness to Everness?",
         "questionZh": "异环终局最佳策略是什么？",
         "answer": "Focus on building two strong teams for Abyss, complete weekly bosses, participate in all events, and follow a consistent daily routine of commissions and stamina spending.",
-        "answerZh": "重点培养两支强力队伍用于深渊，完成周本，参与所有活动，坚持每日委托和体力消耗的日常循环。"
+        "answerZh": "重点培养两支强力队伍用于深渊，完成周本，参与所有活动，坚持每日委托和体力消耗的日常循环。",
+        "questionJa": "NTEの終盤で最も重要な戦略は何ですか？",
+        "answerJa": "深淵用に強い2チームを育て、週ボスを完了し、すべてのイベントに参加し、依頼とスタミナ消費の日課を継続することです。"
       },
       {
         "question": "How do I progress faster in NTE endgame?",
         "questionZh": "异环终局如何快速提升？",
         "answer": "Prioritize one main DPS character first, join an active guild, participate in every event, and use the shop exchange guide to maximize currency value.",
-        "answerZh": "优先培养一个主C角色，加入活跃公会，参加所有活动，参考商店兑换攻略最大化货币价值。"
+        "answerZh": "优先培养一个主C角色，加入活跃公会，参加所有活动，参考商店兑换攻略最大化货币价值。",
+        "questionJa": "NTEの終盤でより早く進めるには？",
+        "answerJa": "まずメインDPS1人を優先し、活動的なギルドに入り、すべてのイベントに参加して、ショップ交換ガイドを参考に通貨価値を高めてください。"
       },
       {
         "question": "Is endgame content worth it in Neverness to Everness?",
         "questionZh": "异环终局内容值得打吗？",
         "answer": "Absolutely. Endgame activities like Abyss and weekly bosses provide the best rewards including premium currency, rare ascension materials, and exclusive items unavailable elsewhere.",
-        "answerZh": "非常值得。深渊和周本等终局活动提供最好的奖励，包括高级货币、稀有突破材料和独占物品。"
+        "answerZh": "非常值得。深渊和周本等终局活动提供最好的奖励，包括高级货币、稀有突破材料和独占物品。",
+        "questionJa": "NTEの終盤コンテンツをプレイする価値はありますか？",
+        "answerJa": "あります。深淵や週ボスなどの終盤活動では、プレミアム通貨、希少突破素材、他では入手できない限定アイテムを得られます。"
       }
-    ]
+    ],
+    "titleJa": "NTE終盤コンテンツガイド：深淵、週ボス、育成進行",
+    "summaryJa": "NTEの終盤向けに、深淵挑戦の戦略、週ボスのローテーション、期間限定イベント、最大レベル後の長期育成ロードマップをまとめます。",
+    "contentJa": "## 終盤コンテンツガイド\n\nメインストーリーを完了した後には、多くの終盤コンテンツが待っています。これらの活動は最も優れた報酬を提供し、Neverness to Evernessにおける長期育成の中核です。\n\n## 深淵チャレンジ\n\n深淵はチーム編成とビルドの完成度を試す主なコンテンツです。\n\n### 構造\n\n- **複数階層のダンジョン**で、難度は徐々に上がる\n- 各階層には固有の挑戦修正と元素のおすすめがある\n- **全階層クリア報酬**にはプレミアム通貨と希少素材が含まれる\n\n### 深淵の戦略\n\n1. **別々の2チーム**を作る（階層ごとに異なるパーティが必要）\n2. 各階層に入る前に**元素のおすすめ**を確認する\n3. **ヒーラーまたはシールダー**を連れて行く。後半では純粋なDPSより生存が重要\n4. **バースト能力**はエリート敵と階層ボスに残す\n\n### 階層報酬\n\n| 階層 | 主な報酬 |\n| --- | --- |\n| 1〜4 | 強化素材、Vons |\n| 5〜8 | 突破素材、プレミアム通貨 |\n| 9〜12 | 希少素材、限定称号 |\n\n## 週ボス\n\n週に1回挑戦できる上級ボスで、キャラクターと武器の突破に必要な重要素材を落とします。\n\n### ボスローテーション\n\n- 毎週**3体の週ボス**が利用できる\n- それぞれ異なるキャラクターに必要な固有素材を落とす\n- 毎週最初の3回のクリアは**樹脂コストが軽減**される\n\n### ボス攻略のヒント\n\n- まず通常モードでボスの攻撃パターンを学ぶ\n- 適切な元素カウンターを連れて行く\n- 最高難度では食事バフが重要\n- 協力モードでは戦闘が大幅に楽になる\n\n## 期間限定イベント\n\nイベントはNTEで最も報酬がよいコンテンツです。\n\n1. **ストーリーイベント**：新キャラクター、物語、多くの報酬\n2. **挑戦イベント**：固有の修正でチームを試す\n3. **収集イベント**：探索を中心とし、完了しやすい\n4. **コラボイベント**：限定アイテムを含むクロスオーバーコンテンツ\n\n**イベントには常に参加してください**。通貨に対する時間効率が最も高いからです。\n\n## 長期育成ロードマップ\n\n### 1〜2週目（最大レベル到達直後）\n\n- メインDPS1人を最大突破まで育てる\n- 深淵1〜6階をクリアする\n- 週ボスをすべて完了する\n\n### 3〜4週目\n\n- 深淵7階以降に向けて2チーム目を作る\n- 最適なArcセットの周回を始める\n- ギルド報酬のために活動的なギルドへ参加する\n\n### 2か月目以降\n\n- Tierリストの環境を参考にチームを最適化する\n- 深淵の全階層クリアを目指す\n- 横方向の育成（育成済みキャラクターを増やす）に集中する\n\n### 3か月目以降\n\n- 装備のサブステータスを厳選する\n- 限定報酬のためにランクモードに参加する\n- 新キャラクターのバナーに備える\n\n## 終盤の日課\n\n効率的な日課は進行を最大化します。\n\n1. **デイリー依頼を完了する**（5分）\n2. **素材領域でスタミナを使う**（10分）\n3. **アリーナ挑戦**：毎日10回をすべて使う（10分）\n4. **ギルド活動**：貢献して報酬を受け取る（5分）\n5. **イベントショップを確認する**：イベント通貨を使う（2分）\n\n合計：中核となる毎日の進行は約30分です。"
   },
   {
     "id": "game-review",
@@ -1091,19 +1118,25 @@
         "question": "Which talent should I level first for DPS characters in NTE?",
         "questionZh": "异环输出角色应该先升哪个天赋？",
         "answer": "For most DPS characters, prioritize the skill that contributes the highest percentage of total damage. Usually this is the Elemental Burst or primary damage skill first, then Elemental Skill, then Normal Attack. Check each character's damage breakdown to confirm which skill deals the most damage.",
-        "answerZh": "对于大部分输出角色，优先升级贡献总伤害比例最高的技能。通常是元素爆发或主要输出技能优先，然后是元素战技，最后是普攻。建议查看每个角色的伤害占比来确认哪个技能伤害最高。"
+        "answerZh": "对于大部分输出角色，优先升级贡献总伤害比例最高的技能。通常是元素爆发或主要输出技能优先，然后是元素战技，最后是普攻。建议查看每个角色的伤害占比来确认哪个技能伤害最高。",
+        "questionJa": "NTEのDPSキャラクターはどの天賦を先に上げるべきですか？",
+        "answerJa": "多くのDPSでは総ダメージへの寄与が最も大きいスキルを優先します。通常は元素バーストまたは主力ダメージスキル、次に元素スキル、最後に通常攻撃です。各キャラクターのダメージ内訳で確認してください。"
       },
       {
         "question": "What talent level should I aim for in NTE?",
         "questionZh": "异环天赋应该升到几级？",
         "answer": "Level 8 is the sweet spot for cost-effectiveness on most talents. Level 6 is the minimum for core talents. Only invest in level 10 (crown) for your main DPS's primary damage talent, as the material cost increases dramatically after level 8.",
-        "answerZh": "大部分天赋升到8级是性价比最高的选择。核心天赋至少升到6级。10级（皇冠）只为你的主C核心输出天赋投入，因为8级之后材料消耗急剧增加。"
+        "answerZh": "大部分天赋升到8级是性价比最高的选择。核心天赋至少升到6级。10级（皇冠）只为你的主C核心输出天赋投入，因为8级之后材料消耗急剧增加。",
+        "questionJa": "NTEの天賦は何レベルを目標にすべきですか？",
+        "answerJa": "ほとんどの天賦ではレベル8が費用対効果のよい到達点で、コア天賦は少なくともレベル6が目安です。レベル10のクラウンはメインDPSの主力天賦に限るべきです。"
       },
       {
         "question": "Should I level all talents evenly or focus on one?",
         "questionZh": "应该平均升级所有天赋还是集中升一个？",
         "answer": "Focus on one core talent at a time. Leveling one talent to 8 provides more value than leveling three talents to 4. Get your core damage skill to 6 first, then push it to 8 before investing in secondary talents.",
-        "answerZh": "建议集中升级一个核心天赋。一个天赋升到8级的效果比三个天赋都升到4级要好得多。先把核心输出技能升到6级，然后推到8级，再考虑次要天赋。"
+        "answerZh": "建议集中升级一个核心天赋。一个天赋升到8级的效果比三个天赋都升到4级要好得多。先把核心输出技能升到6级，然后推到8级，再考虑次要天赋。",
+        "questionJa": "すべての天賦を均等に上げるべきですか？",
+        "answerJa": "1つのコア天賦に集中してください。天賦1つをレベル8にする方が、3つをレベル4にするより価値があります。まず主力スキルをレベル6、次に8まで上げてから副次的な天賦へ進みます。"
       }
     ],
     "serpTitle": {
@@ -1120,7 +1153,10 @@
       ]
     },
     "updatedAt": "2026-08-22",
-    "currentVersion": "NTE v1.2 talent and material planning route"
+    "currentVersion": "NTE v1.2 talent and material planning route",
+    "titleJa": "NTE天賦優先度ガイド：役割別に先に上げるべきスキル",
+    "summaryJa": "Neverness to Evernessで先に上げるべきスキル、役割別の強化順、素材計画、費用効率のよい到達点、DPS・支援・生存役の育成ルートを解説します。",
+    "contentJa": "## 天賦優先度完全ガイド\n\n正しい順番で天賦を上げると、貴重な素材を節約しながらキャラクターの性能を最大化できます。このガイドでは、Neverness to Evernessの各キャラクターに推奨される天賦強化の優先度を扱います。\n\n## 天賦素材を理解する\n\n各天賦には、日替わりのスキル領域で手に入る専用素材が必要です。各日に利用できる領域に合わせて周回予定を立てましょう。天賦レベルが高くなるほど必要素材は大幅に増えるため、資源効率のために優先順位が重要になります。クラウンレベルの強化（レベル10）には希少な週ボス素材が必要で、最も重要な天賦にだけ使うべきです。\n\n## DPSキャラクターの優先順位\n\nメインDPSでは、通常攻撃（または主力ダメージスキル）、元素スキル、元素バーストの順を基本とします。実際の順番は、総ダメージに最も大きく寄与するスキルによって変わることがあります。各キャラクターのダメージ内訳を確認し、最適な優先順位を決めてください。\n\n## サポートキャラクターの優先順位\n\nサポートはまずユーティリティスキルを優先します。ヒーラーなら回復スキルを何より先に上げます。ダメージバッファーなら、チーム全体への上昇量が最も大きいバフスキルを上げてください。サポートの通常攻撃は、控えにいる時間が長いため通常は最も優先度が低くなります。\n\n## サブDPSの優先順位\n\nサブDPSは、まず控えからダメージを与えるスキルに集中します。交代後も元素バーストが残るなら、それを優先してください。サブDPSが表に出ていない時間のダメージを最大化するのが目標です。\n\n## 一般ルール\n\n- 次の天賦に移る前に、必ず1つの天賦を少なくともレベル6まで上げる\n- ほとんどの天賦では、レベル8が費用対効果のよい到達点\n- クラウンはメインDPSの主力ダメージ天賦に残す\n- サポートの元素バーストを見落とさない。多くはバーストレベルに連動したチームバフを持つ\n- 各レベルの天賦倍率を確認し、最も大きいダメージ上昇点を探す\n\n## 素材計画\n\n育てる全キャラクターについて、必要な天賦素材を記録してください。同じ日に複数キャラクターの素材を集められるよう、領域スケジュールを使って効率的な周回ルートを組みます。急に素材が必要になったときのスタミナ浪費を防げます。"
   },
   {
     "id": "anomaly-dungeon",
@@ -1142,7 +1178,10 @@
     "relatedCharacters": [],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "異常ダンジョンガイド",
+    "summaryJa": "Neverness to Evernessの異常ダンジョンについて、ギミック、チームのおすすめ、攻略のヒントをまとめた完全ガイドです。",
+    "contentJa": "## 異常ダンジョン完全ガイド\n\n異常ダンジョンは、Neverness to Evernessの挑戦的な終盤コンテンツです。希少素材、ディスクセット、強化通貨などの上級報酬を獲得できます。このガイドでは、ギミック、チーム編成、攻略戦略を扱います。\n\n## ダンジョンの概要\n\n異常ダンジョンはアドベンチャーランク30で解放され、週ごとに変わる特殊な戦闘ルールがあります。各ダンジョンには、元素制限、制限時間、強化された敵タイプなどの固有条件があります。週ごとの修正を理解することがチーム準備の鍵です。\n\n## ダンジョンギミック\n\n各異常ダンジョンには難度が上がる複数の階層があります。高層では敵のステータスが強化され、新しい攻撃パターンを使います。毒エリアやエネルギー吸収のような環境ギミックも、さらに挑戦を加えます。ダンジョンは毎週リセットされるため、より良いクリアタイムや追加報酬を目指して再挑戦できます。\n\n## 異常ダンジョン向けのチーム編成\n\n週ごとの元素ボーナスに合うチームを組みましょう。強化対象の元素を持つキャラクターは大きなダメージ上昇を受け、育成度が低くても補えます。高層での生存のために、少なくとも1人はヒーラーまたはシールダーを入れてください。ダメージチェックを満たすには頻繁なバーストローテーションが必要なため、エネルギー回復も重要です。\n\n## 階層別の戦略\n\n下層（1〜5階）は中程度の育成と基本的なチーム相乗効果でクリアできます。中層（6〜8階）では特定の元素カウンターと最適化されたローテーションが必要です。上層（9〜10階）では、天賦最大レベルと最適化されたディスクセットを持つ十分に育成したキャラクターが求められます。現在の戦力を大きく超える階層に苦戦するより、対応できる階層を安定してクリアすることを優先してください。\n\n## 報酬の最適化\n\n毎週できるだけ多くの階層をクリアしましょう。部分クリアでも意味のある報酬が得られます。最も価値の高い報酬は通常8階以上にあるため、その到達を優先してください。通常の素材周回後に余ったスタミナで難しい階層を練習し、将来のクリアにつなげましょう。\n\n## よくあるミス\n\n週ごとの修正を無視すること、元素が合わないチームを連れて行くこと、生存を無視して火力だけを追うこと、現在の戦力を大きく超える階層に挑戦することが、異常ダンジョンで初心者によく見られるミスです。"
   },
   {
     "id": "pvp-guide",
