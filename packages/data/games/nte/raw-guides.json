@@ -1005,7 +1005,10 @@
     "relatedCharacters": [],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "完全版武器Tierリスト",
+    "summaryJa": "Neverness to Evernessの全武器を武器タイプ別にランク付けし、詳細な評価とともにまとめたTierリストです。",
+    "contentJa": "## 完全版武器Tierリスト\n\n各キャラクターに適した武器を選ぶことは、性能に大きく影響します。このガイドでは、すべての武器をタイプ別にランク付けし、パッシブ、ステータス、人気キャラクターとの相乗効果を評価します。\n\n## 武器タイプの概要\n\nNeverness to Evernessには複数の武器タイプがあり、それぞれ異なる攻撃パターンと適した使用者がいます。各キャラクターは指定された武器クラスしか装備できないため、武器タイプとキャラクターを一致させることは必須です。各タイプ内では、基礎ステータス、パッシブ能力、汎用性に基づき、武器を上位から下位まで評価します。\n\n## SSR武器（星5）\n\nSSR武器は最も高い基礎ステータスと強力なパッシブを持ち、主に武器バナーから入手します。上位SSR武器は通常、精錬レベルに応じて伸びるダメージ上昇パッシブを持ち、大きな投資対象になります。ただし、武器バナーはキャラクターを引くためのプレミアム通貨と競合するため、慎重な資源計画が必要です。\n\n## SR武器（星4）\n\nバトルパスやイベントのSR武器は、低精錬のSSR武器に匹敵することがよくあります。バトルパス武器は、バトルパスを繰り返し購入して精錬できるため、優れた無課金向け選択肢です。イベントSR武器は無料ですが、最大まで強化するにはイベントへの積極的な参加が必要になる場合があります。無課金または少額課金のプレイヤーにとって、これらは主な目標になります。\n\n## R武器（星3）\n\n一部の星3武器は意外に有用なパッシブを持ち、序盤から中盤の選択肢として使えます。すべての星3武器を素材にしないでください。特定ビルドや移行用武器として残す価値があるものもあります。強化素材に使う前に、各武器のパッシブを確認しましょう。\n\n## 評価基準\n\n武器は基礎攻撃力、サブステータス、パッシブの価値、精錬による伸び、キャラクターとの相乗効果で評価します。上位DPSと完全に相性がよい武器は、一般的にはより強くても相性が悪い武器より上位になることがあります。最適な武器を知るには、各キャラクターの個別おすすめを確認してください。\n\n## 無課金向け武器のおすすめ\n\n各武器タイプでは、SSRを持たないプレイヤーが限られた武器強化素材をどこに投資すべきか判断できるよう、プレミアムの代替と並べて、無課金で入手できる最良の選択肢を紹介します。"
   },
   {
     "id": "reroll-guide-detailed",
@@ -1297,7 +1300,10 @@
     "relatedCharacters": [],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "パッチノートとアップデート",
+    "summaryJa": "Neverness to Evernessのアップデート、バランス調整、新機能を含むパッチノート履歴をまとめます。",
+    "contentJa": "## バージョン更新履歴とパッチノート\n\nNeverness to Evernessには、新キャラクター、イベント、QoL改善、バランス調整を導入する定期アップデートがあります。このガイドでは主なバージョン更新とゲームへの影響をまとめます。\n\n## バージョン履歴の概要\n\n各メジャーバージョンは通常6週間続き、1〜2人の新しい限定キャラクター、ストーリー章の続き、少なくとも1つの大型イベント、さまざまなシステム改善を導入します。バージョン間の小規模パッチでは、バグ修正とバランス調整が行われます。\n\n## アップデートが環境へ与える影響\n\n新キャラクターの実装はTierリストを大きく変えることがあります。新キャラクターと相性がよいキャラクターは順位を上げる一方、古いキャラクターの重要度は下がることがあります。バランスパッチではキャラクターのスキルや武器ステータスが調整され、キャラクターの実用性が大きく変わる場合があります。チーム編成戦略を調整するため、パッチノートを確認し続けましょう。\n\n## 新コンテンツのロードマップ\n\n開発者は、今後の複数バージョンを対象にした大まかなコンテンツロードマップを共有しています。予定には新しい探索地域、追加ストーリー章、新武器タイプ、終盤モードの拡張、QoL機能が含まれます。具体的な日程は変わる可能性がありますが、ロードマップはゲームの方向性を知る目安になります。\n\n## QoL改善\n\n最近のアップデートでは、オートバトルの選択肢改善、アーティファクトの並び替え強化、一括強化、よりよいチーム管理ツールなど、プレイヤーから要望の多かった機能が導入されています。これらの改善は日課の負担を減らし、資源管理を便利にします。\n\n## バグ修正と既知の問題\n\n各パッチには、報告されたバグの修正が含まれます。ゲームプレイや進行に影響する大きなバグは通常数日以内にホットフィックスされます。最新の既知の問題と回避策は公式告知を確認してください。新しいバグはゲーム内フィードバックから報告し、開発者が早く特定・修正できるようにしましょう。\n\n## 最新情報を追う方法\n\n最新ニュースは公式SNSチャンネルとコミュニティフォーラムで確認してください。パッチプレビューは通常アップデートの1週間前に公開されるため、新キャラクターの素材準備やガチャ計画を立てる時間があります。コミュニティのコンテンツ制作者も、今後の変更と環境への影響を分析します。"
   },
   {
     "id": "arc-disc-guide",
@@ -1325,9 +1331,14 @@
         "question": "How to get S-rank Arc Discs in NTE?",
         "questionZh": "异环S级弧盘怎么获得？",
         "answer": "S-rank Arc Discs drop from high-level Boss anomalies, especially Sea Prisoner. You can also get them from Tower dungeons at higher difficulty levels.",
-        "answerZh": "S级弧盘主要通过击败高级Boss异象获得，海囚Boss掉落概率最高。高级弧盘副本也有概率产出S级弧盘。"
+        "answerZh": "S级弧盘主要通过击败高级Boss异象获得，海囚Boss掉落概率最高。高级弧盘副本也有概率产出S级弧盘。",
+        "questionJa": "NTEでSランクArc Discを入手するには？",
+        "answerJa": "SランクArc Discは高レベルのBoss anomaly、とくにSea Prisonerからドロップします。高難度の塔ダンジョンでも入手できることがあります。"
       }
-    ]
+    ],
+    "titleJa": "Arc Disc完全ガイド：Sランクディスク、入手方法、おすすめ構成",
+    "summaryJa": "Arc DiscはNTEローンチ版で最も重要な装備システムです。ディスクの入手、Sランクのおすすめ、ダンジョン戦略、ステータス優先度を解説します。",
+    "contentJa": "Arc DiscはNTEのローンチ版で最も影響力のある装備システムです。各キャラクターは1枚のディスクを装備し、大きなステータス上昇と特殊効果を得ます。このガイドでは必要な情報をまとめます。\n\n## Arc Discとは\n\nArc DiscはC、B、A、Sにランク分けされた特殊装備です。品質が高いほど基礎ステータスと効果が強くなります。各キャラクターはちょうど1枚を装備しますが、適切なディスクは戦闘性能を大きく変えます。\n\n## Arc Discの入手方法\n\n1. **Boss Anomalyドロップ**：Boss anomalyを倒すとディスクを落とすことがあります。Sea PrisonerはSランクのドロップ率が最も高いです。\n2. **塔ダンジョン**：Cランクドロップが確定するディスク専用の挑戦です。高層ほどドロップ率が上がります。\n3. **ショップ交換**：Blank Screen DeviceショップでDrive BlocksとCassettesを交換します。\n4. **Anomaly Containment**：Spotted Butterflyなどのボスに対する封じ込め任務を完了します。\n5. **イベント報酬**：ローンチイベントではAランクディスクが確定で得られます。\n6. **City Tycoon**：Xiaozhiのイベントで、完全強化済みの無料ディスクを得られます。\n\n## Sランクディスクのおすすめ\n\n| ディスク | 適した役割 | 主な効果 |\n| --- | --- | --- |\n| Golden ATK Disc | DPSキャリー | 攻撃力＋会心率を大きく上昇 |\n| Golden Support Disc | バフサポート | エネルギー回復＋効果時間延長 |\n| Golden DEF Disc | タンク／生存役 | ダメージ軽減＋シールド強化 |\n| Golden Heal Disc | ヒーラー | 回復ボーナス＋追加回復効果 |\n\n## 役割別のステータス優先度\n\n**DPS**：会心率 ＞ 会心ダメージ ＞ 攻撃力％ ＞ 元素ダメージ\n**サポート**：エネルギー回復 ＞ 効果命中 ＞ HP％ ＞ 防御力％\n**タンク**：HP％ ＞ 防御力％ ＞ ダメージ軽減 ＞ エネルギー回復\n**ヒーラー**：HP％ ＞ エネルギー回復 ＞ 回復ボーナス ＞ 防御力％\n\n## ディスク強化\n\n同じ品質のディスクを強化素材に使います。優先順位は次のとおりです。\n\n1. Sランクディスク：すぐに最大レベルまで強化する\n2. Aランクディスク：移行用として使い、最大＋12まで強化する\n3. B／Cランクディスク：強化素材としてのみ使う\n\n## キャラクター別のおすすめディスク\n\n- **Nanally**：会心／攻撃力サブステータスのGolden ATK Disc\n- **Jiuyuan**：エネルギー回復サブステータスのGolden Support Disc\n- **Baicang**：攻撃力％／元素ダメージサブステータスのGolden ATK Disc\n- **Hotori**：HP／エネルギー回復サブステータスのGolden Support Disc\n- **Adler**：HP／防御力サブステータスのGolden DEF Disc\n- **Xiaozhi**：Golden ATK Disc（City Tycoonから無料で入手、すでに最大強化）"
   },
   {
     "id": "team-composition-guide",
@@ -1364,33 +1375,46 @@
         "question": "How many characters are in a team?",
         "questionZh": "异环一支队伍几个人？",
         "answer": "Each team has 3 characters. You can switch between them during combat to chain skills and trigger elemental effects.",
-        "answerZh": "每支队伍由3名角色组成。战斗中可以切换角色衔接技能并触发元素效果。"
+        "answerZh": "每支队伍由3名角色组成。战斗中可以切换角色衔接技能并触发元素效果。",
+        "questionJa": "NTEの1チームは何人ですか？",
+        "answerJa": "各チームは3人で構成されます。戦闘中に交代してスキルをつなぎ、元素効果を発動できます。"
       },
       {
         "question": "What is the best beginner team?",
         "questionZh": "异环新手最强配队是什么？",
         "answer": "Use your beginner selector S-rank as core, add Adler for shields and Mint for healing. This gives you a balanced team with DPS, tank, and healer.",
-        "answerZh": "以新手池自选S级角色为核心，搭配Adler提供护盾和Mint提供治疗。这样队伍有输出、有坦、有奶，非常均衡。"
+        "answerZh": "以新手池自选S级角色为核心，搭配Adler提供护盾和Mint提供治疗。这样队伍有输出、有坦、有奶，非常均衡。",
+        "questionJa": "初心者におすすめのチームは何ですか？",
+        "answerJa": "初心者選択のSランクを軸にし、Adlerでシールド、Mintで回復を補うと、DPS、タンク、ヒーラーを備えたバランスのよいチームになります。"
       },
       {
         "question": "Should I focus on same-element teams?",
         "questionZh": "异环应该玩同色队还是混色队？",
         "answer": "Same-element teams benefit from resonance bonuses at 3 matching elements, but mixed teams offer more flexibility. For beginners, mixed teams are recommended until you have enough characters for mono-element.",
-        "answerZh": "同元素队有共鸣加成，但混色队更灵活。新手建议先用混色队，等角色池深了再考虑纯色队。"
+        "answerZh": "同元素队有共鸣加成，但混色队更灵活。新手建议先用混色队，等角色池深了再考虑纯色队。",
+        "questionJa": "同元素チームに集中すべきですか？",
+        "answerJa": "同元素チームは3元素一致で共鳴ボーナスを得ますが、混成チームは柔軟性があります。初心者はキャラクターがそろうまで混成チームがおすすめです。"
       },
       {
         "question": "How do elemental reactions work in teams?",
         "questionZh": "异环元素反应怎么触发？",
         "answer": "Elemental reactions trigger when different elements interact on enemies. Switching characters and applying different elements in sequence creates powerful combination effects that deal bonus damage.",
-        "answerZh": "不同元素作用于敌人时触发元素反应。按顺序切换角色施加不同元素可以产生强力的组合效果，造成额外伤害。"
+        "answerZh": "不同元素作用于敌人时触发元素反应。按顺序切换角色施加不同元素可以产生强力的组合效果，造成额外伤害。",
+        "questionJa": "チームで元素反応はどう発動しますか？",
+        "answerJa": "異なる元素が敵に作用すると元素反応が発動します。順番にキャラクターを交代し、異なる元素を付与すると、追加ダメージを与える強力な組み合わせ効果を作れます。"
       },
       {
         "question": "Which characters should I prioritize building for teams?",
         "questionZh": "异环配队优先培养哪些角色？",
         "answer": "Prioritize your main DPS first, then a support character (Mint is excellent and free from beginner selector), then a utility/flex pick. Level your DPS to max before heavily investing in supports.",
-        "answerZh": "优先培养主C角色，其次是辅助（薄荷非常好，新手池可自选），最后是功能位。主C拉满后再重点投入辅助。"
+        "answerZh": "优先培养主C角色，其次是辅助（薄荷非常好，新手池可自选），最后是功能位。主C拉满后再重点投入辅助。",
+        "questionJa": "チームのためにどのキャラクターを優先して育てるべきですか？",
+        "answerJa": "まずメインDPS、次にサポート（Mintは初心者選択から得られる優秀な候補）、最後にユーティリティ／フレックスを優先します。サポートへ大きく投資する前にDPSを最大まで育ててください。"
       }
-    ]
+    ],
+    "titleJa": "NTEチーム編成ガイド：おすすめチーム構成",
+    "summaryJa": "チーム編成はNTEの戦闘システムの中核です。編成の考え方、元素相乗効果、役割のバランス、環境編成と無課金向けチームを解説します。",
+    "contentJa": "NTEの戦闘システムは3人チームを中心に作られています。適切なチーム編成は戦闘効率を大きく高めます。このガイドでは基本から上級のチーム構成まで扱います。\n\n## チームの基本\n\n各チームはメインDPS、サポート／ユーティリティ、フレックス役を担う3人で構成されます。チームを作るときは、元素の相乗効果、スキル連携、全体のダメージローテーションを考慮してください。\n\n## 役割の分類\n\nメインDPS：主なダメージ担当。例：Jiuyuan（Anima／バースト）、Nanally（Lakshana／継続火力）。DPSにはバフと生存を支えるチームサポートが必要です。\n\nサポート：バフ、デバフ、回復を提供します。例：Mint（回復＋バフ）、Adler（シールド＋バフ）。サポートはDPSの出力を大きく増幅します。\n\nユーティリティ：集敵、シールド破壊、特殊ギミックを提供します。例：Zero（Cosmos／汎用）、Baicang（Bose／制御）。コンテンツに応じて調整してください。\n\n## 元素の原則\n\nNTEにはAnima、Incantation、Chaos、Psyche、Cosmos、Lakshanaの6元素があります。\n\nおすすめの方針は、1）同元素共鳴（同じ元素の2〜3人でボーナス効果を発動）、2）異元素反応チーム、3）単元素チーム（共鳴を最大化）です。\n\n## 環境チーム構成\n\n### チーム1：Jiuyuanバースト\n\nJiuyuan（DPS）＋Baicang（サポート／制御）＋Mint（回復／バフ）\n\n中核：BaicangがBose元素で制御し、Mintが生存とバフを提供、Jiuyuanが大きなAnimaバーストダメージを与えます。安定しており汎用的です。\n\n### チーム2：Nanally継続火力\n\nNanally（DPS）＋Xiaozhi（サポート／シールド破壊）＋Zero（ユーティリティ／汎用）\n\n中核：NanallyのLakshanaが安定したダメージを出し、Xiaozhiが効率を上げ、Zeroがチームの弱点を補います。\n\n### チーム3：Hotori高速コンボ\n\nHotori（DPS）＋Sakiri（サブDPS／サポート）＋Edgar（ユーティリティ／DPS）\n\n中核：Hotoriの高速コンボにSakiriのGasサポートとEdgarのLiquidダメージを組み合わせます。アクションゲームが好きな人向けの、高い操作難度を持つ編成です。\n\n## 無課金向けチーム\n\nMint（初心者選択）＋Adler＋Edgar：Cosmos共鳴チーム。Adlerがシールド、Edgarがダメージ、Mintが回復とバフを提供します。\n\n初心者向け：初心者選択のSランクを軸に、相性のよい2人を足してください。チームにダメージ、サポート、生存があることを確認しましょう。\n\n## 上級のヒント\n\n1. スキル順：最大ダメージ時間のため、必殺技の前にバフを使う\n2. 交代キャンセル：キャラクター交代には無敵時間があり、回避に使える\n3. ボス弱点を合わせる：元素弱点を確認し、チームを調整する\n4. 覚醒共鳴：3／6で得られるボーナス効果のため、覚醒レベルを考慮する\n\n## よくあるミス\n\n1. サポートなしで同じ役割を3人（例：DPS3人）入れる\n2. 元素カウンターを無視する\n3. サポートを過小評価する\n4. スキルローテーションを理解しない\n\n詳細なキャラクターデータはキャラクターページを確認してください。戦力ランキングはTierリストも参照できます。"
   },
   {
     "id": "boss-guide-comprehensive",
@@ -1419,33 +1443,46 @@
         "question": "How do I check a boss's elemental weakness?",
         "questionZh": "怎么查看Boss的元素弱点？",
         "answer": "In the team selection screen before battle, elemental weakness icons are displayed next to the boss info. Build your team around these weaknesses for maximum damage.",
-        "answerZh": "在Boss战前的队伍选择界面，Boss信息旁边会显示元素弱点图标。根据弱点组建队伍可以最大化伤害。"
+        "answerZh": "在Boss战前的队伍选择界面，Boss信息旁边会显示元素弱点图标。根据弱点组建队伍可以最大化伤害。",
+        "questionJa": "ボスの元素弱点はどう確認しますか？",
+        "answerJa": "戦闘前のチーム選択画面で、ボス情報の横に元素弱点アイコンが表示されます。弱点に合わせたチームを組むとダメージを最大化できます。"
       },
       {
         "question": "What happens when I break a boss's shield?",
         "questionZh": "打破Boss护盾后会发生什么？",
         "answer": "Breaking a boss's shield puts it into a vulnerable state for several seconds. During this time, the boss takes increased damage and cannot attack. This is the optimal window to use your strongest skills and ultimates.",
-        "answerZh": "打破Boss护盾后Boss会进入数秒的虚弱状态，期间受到的伤害增加且无法攻击。这是释放大招和最强技能的最佳时机。"
+        "answerZh": "打破Boss护盾后Boss会进入数秒的虚弱状态，期间受到的伤害增加且无法攻击。这是释放大招和最强技能的最佳时机。",
+        "questionJa": "ボスのシールドを破壊すると何が起こりますか？",
+        "answerJa": "シールドを破壊すると、ボスは数秒間脆弱状態になり、受けるダメージが増えて攻撃できなくなります。最強のスキルと必殺技を使う最適な時間です。"
       },
       {
         "question": "Can I solo boss content in NTE?",
         "questionZh": "异环Boss可以单刷吗？",
         "answer": "World bosses can be soloed with a well-built team. Anomaly Prison bosses are designed for co-op but can be soloed by highly skilled players with strong characters. Weekly bosses have matchmaking for easy grouping.",
-        "answerZh": "世界Boss可以用成型队伍单刷。异象监狱Boss设计为组队内容，但高练度玩家也可以单刷。周本有匹配系统方便组队。"
+        "answerZh": "世界Boss可以用成型队伍单刷。异象监狱Boss设计为组队内容，但高练度玩家也可以单刷。周本有匹配系统方便组队。",
+        "questionJa": "NTEのボスコンテンツはソロで攻略できますか？",
+        "answerJa": "ワールドボスは十分に育てたチームでソロ攻略できます。Anomaly Prisonボスは協力向けですが、強いキャラクターを持つ熟練プレイヤーならソロも可能です。週ボスには組みやすいマッチングがあります。"
       },
       {
         "question": "What are the best characters for boss fights?",
         "questionZh": "打Boss用哪些角色最好？",
         "answer": "High-burst DPS characters like Jiuyuan and Nanally excel in boss fights. Supports like Mint (healing) and Baicang (crowd control) are also valuable. Always match your team's elements to the boss weakness.",
-        "answerZh": "高爆发角色如九渊和南那在Boss战中表现出色。薄荷（治疗）和白藏（控制）等辅助也很有价值。记得根据Boss弱点匹配队伍元素。"
+        "answerZh": "高爆发角色如九渊和南那在Boss战中表现出色。薄荷（治疗）和白藏（控制）等辅助也很有价值。记得根据Boss弱点匹配队伍元素。",
+        "questionJa": "ボス戦に最適なキャラクターは誰ですか？",
+        "answerJa": "JiuyuanやNanallyのような高バーストDPSはボス戦で優れます。Mint（回復）やBaicang（制御）などのサポートも価値があります。常にボス弱点にチーム元素を合わせてください。"
       },
       {
         "question": "How often can I fight weekly bosses?",
         "questionZh": "周本Boss一周能打几次？",
         "answer": "Weekly bosses can be challenged a limited number of times per week (typically 3 clears per boss). Resets on Monday. Prioritize clearing all weekly bosses for awakening materials.",
-        "answerZh": "周本Boss每周有挑战次数限制（通常每个Boss可通关3次），周一重置。建议优先打完所有周本获取觉醒材料。"
+        "answerZh": "周本Boss每周有挑战次数限制（通常每个Boss可通关3次），周一重置。建议优先打完所有周本获取觉醒材料。",
+        "questionJa": "週ボスはどのくらいの頻度で戦えますか？",
+        "answerJa": "週ボスには週ごとの挑戦回数制限があり、通常は各ボスを3回クリアできます。月曜日にリセットされるため、覚醒素材のために全週ボスを優先してください。"
       }
-    ]
+    ],
+    "titleJa": "NTEボスガイド：弱点分析と戦略",
+    "summaryJa": "NTEのボスギミックについて、元素弱点、攻撃パターン、おすすめチーム、ドロップ報酬を包括的に解説します。",
+    "contentJa": "ボス戦はNTEで最も挑戦的なコンテンツの一つです。弱点、攻撃パターン、チーム戦略を理解することが効率的なクリアの鍵になります。\n\n## ボスの種類\n\nワールドボス：Hethereauの各地に出現し、中程度の難度で基本強化素材を落とします。\n\nAnomaly Prisonボス：チーム連携を必要とする高難度インスタンスボスです。上級素材と希少ディスクセットを落とし、終盤コンテンツの中核です。\n\n週ボス：週ごとの挑戦回数が限られ、価値の高い覚醒素材を落とします。毎週の挑戦回数をすべて使いましょう。\n\nイベントボス：固有ギミックと限定報酬を持つ、期間限定の特別なボスです。\n\n## 元素弱点システム\n\n各ボスには固有の元素弱点と耐性があります。弱点を突くと1.5〜2倍のダメージを与え、耐性に当てると約0.5倍のダメージになります。\n\n戦闘前のチーム選択画面で弱点を確認し、1〜2人をボスの弱点に合わせて調整してください。\n\n## 中核ギミック\n\nシールドシステム：一部のボスは定期的に元素シールドを生成します。対抗元素で素早く破壊してください。破壊後、ボスは脆弱状態に入り、最もダメージを与えやすい時間になります。\n\n激昂モード：HPが約30％未満になると、ボスは攻撃力と速度が上がる激昂モードに入ります。この段階ではより防御的に立ち回りましょう。\n\n特殊ギミック：一部のボスは取り巻きを召喚し、範囲AoEを使い、追尾攻撃を行います。実戦で学んでください。\n\n## 共通戦略\n\n1. まず攻撃パターンを観察する\n2. パリィ可能な攻撃にはパリィを使い、大ダメージと中断を狙う\n3. 対抗元素でシールド破壊を優先する\n4. 必殺技は脆弱フェーズに残す\n5. キャラクター交代の無敵時間で強力な攻撃を回避する\n\n## おすすめの汎用チーム\n\nJiuyuan（バースト）＋Mint（回復／バフ）＋Baicang（制御）：ほとんどのボスで使える汎用構成です。\nNanally（継続火力）＋Adler（シールド）＋Sakiri（サポート）：高難度ボスで安定します。\n\n## ボスのドロップ報酬\n\nワールドボス：基本強化素材、低ランクディスク、経験値素材。\nAnomaly Prison：上級素材、SR／SSRディスクセット、覚醒素材の欠片。\n週ボス：覚醒素材、希少アイテム、キャラクター強化素材。\nイベント：限定報酬、イベントトークン、コラボアイテム。\n\n## 効率化のヒント\n\n1. キャラクターと装備を上げ、直接的に戦力を高める\n2. ダメージボーナスのため、元素特化ディスクセットを使う\n3. 覚醒でスキル効果を強化する\n4. ボスパターンを学ぶことは、素のステータスより効果的です。ほとんどのボスには予測可能な攻撃サイクルがあります。\n\nチーム編成の助言はチームガイドを確認してください。キャラクターランキングはTierリストを参照できます。"
   },
   {
     "id": "housing-system-guide",
