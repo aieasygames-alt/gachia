@@ -31,15 +31,22 @@
         "question": "What is the main focus of NTE v1.2?",
         "questionZh": "异环 1.2 最值得关注什么？",
         "answer": "The strongest search intent is around 999 Nights, Shinku, Iroi, redeem codes, and pull planning.",
-        "answerZh": "最强搜索意图集中在 999 Nights、Shinku、Iroi、兑换码和抽卡规划。"
+        "answerZh": "最强搜索意图集中在 999 Nights、Shinku、Iroi、兑换码和抽卡规划。",
+        "questionJa": "NTE v1.2の主な焦点は何ですか？",
+        "answerJa": "最も強い検索意図は999 Nights、Shinku、Iroi、交換コード、ガチャ計画にあります。"
       },
       {
         "question": "Should I pull Shinku or save for Iroi?",
         "questionZh": "该抽 Shinku 还是等 Iroi？",
         "answer": "If Shinku fills a current team gap and you still have enough pity for Iroi, pulling is safer. If resources are tight, wait for Iroi details before committing.",
-        "answerZh": "如果 Shinku 正好补队伍短板且还能给 Iroi 留保底，可以考虑抽；资源紧张时建议等 Iroi 信息更完整后再决定。"
+        "answerZh": "如果 Shinku 正好补队伍短板且还能给 Iroi 留保底，可以考虑抽；资源紧张时建议等 Iroi 信息更完整后再决定。",
+        "questionJa": "Shinkuを引くべきですか、それともIroiに備えるべきですか？",
+        "answerJa": "Shinkuが現在のチームの穴を埋め、Iroiのための十分な天井も残せるなら引く方が安全です。資源が厳しい場合は、決める前にIroiの詳細を待ってください。"
       }
-    ]
+    ],
+    "titleJa": "Neverness to Everness v1.2 999 Nightsガイド：Shinku、Iroi、ガチャ計画",
+    "summaryJa": "Shinku、Iroi、イベント、交換コード確認、ガチャ計画を扱うNTE v1.2 999 Nightsの実用ハブです。",
+    "contentJa": "## NTE v1.2 999 Nightsハブ\n\nバージョン1.2の検索需要は、Shinku、Iroi、999 Nights、交換コード、ガチャの仕組みに集中しています。このページでは実用的な導線を用意します。バージョンイベントを確認し、開催中のバナーを確認した後、資源をShinkuに使うかIroiに残すかを決めてください。\n\n### バージョンの焦点\n\n- **バージョンテーマ**：v1.2 999 Nights。\n- **現在の焦点**：Shinkuは現在、高意図のキャラクターキーワードです。\n- **次の焦点**：Iroiは次のバナーとキャラクター調査対象として準備すべきです。\n- **よくある検索**：NTEダウンロード、公式サイト、交換コード、クラウドゲーミング、Shinku、Iroi、ガチャの仕組み。\n\n### Shinkuを評価する方法\n\nShinkuを引く前に、次の3点を確認してください。\n\n1. メインチームにShinkuの役割が必要か。\n2. Iroiまたは次バージョンに向けてまだ貯めたいか。\n3. 現在のイベントで天井まで足りない回数を補えるか。\n\nカジュアルプレイヤーにとって、Shinkuは主に現バージョンを快適にする選択です。長期プレイヤーは、バナーの話題だけに反応するのではなく、ShinkuとIroiを1つの資源計画で比較してください。\n\n### Iroiを早く準備する理由\n\nバナー切り替え前にはIroiの検索需要が上がるはずです。次を準備してください。\n\n- キャラクターページ：役割、元素、キットのメモ、チーム案。\n- ガチャページ：Shinku対Iroi、凸、武器の優先度。\n- 資源ページ：v1.2イベント、コード、日課収入、天井との差。\n\n### 交換コードと資源チェックリスト\n\n1. 交換コードページで新規または期限切れコードを確認する。\n2. メール、ログイン、イベント、メンテナンス報酬を受け取る。\n3. 引く前に天井進行を記録する。\n4. 1天井分に足りないなら、Iroiのより完全な詳細を待つ。\n\n### 導線\n\n- 新規プレイヤー：ダウンロード／インストールと初心者ガイド。\n- ガチャ計画：本ページ、ガチャ戦略、交換コード。\n- キャラクター確認：ShinkuとIroiのキャラクターページ。\n- バージョン確認：v1.2イベント、999 Nights、バナーの流れ。\n\n### 注意事項\n\nSNSには未確認リークや成人向け／ファンコンテンツのノイズが混ざることがあります。Gachiaは公式更新、攻略、ダウンロード、wiki、交換コード、健全なキャラクター強度の意図のみを扱うべきです。"
   },
   {
     "id": "download-install-guide",
@@ -1849,7 +1856,10 @@
     ],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "Nanally完全ガイド：T0キャットファイターのビルド",
+    "summaryJa": "NanallyはNTE v1.0のT0限定キャラクターです。スキル、チーム構成、Arc、ディスク構成をまとめた完全ガイドです。",
+    "contentJa": "NanallyはNTE v1.0のピックアップバナーキャラクターで、T0と評価されています。猫族の近接戦闘ファイターです。結論だけ言えば、引く価値があります。\n\n## キャラクター概要\n\n- レアリティ：Sランク｜元素：Anima｜役割：メインDPS\n- 入手先：限定バナー（v1.0）\n\n## スキル分析\n\n- 通常攻撃：最後の一撃が強い連続近接コンボ\n- 元素スキル（E）：元素を伴う強力な単体／小範囲攻撃\n- バースト（Q）：高いバーストダメージと広い範囲。T0の中核スキル\n- パッシブ：元素反応後に追加ダメージ\n\n## チーム構成\n\n最適：Nanally＋Jiuyuan＋Mint＋Adler\n無課金向け：Nanally＋主人公＋Mint＋Xiaozhi\n\n## Arc（武器）\n\n- 最適：モチーフArc\n- 代替：会心率／会心ダメージを主ステータスに持つもの\n- 優先度：会心率 ＞ 会心ダメージ ＞ 攻撃力％ ＞ 元素ダメージ\n\n## ディスク（アーティファクト）\n\n- 最適：攻撃力＋元素ダメージの4セット\n- 代替：攻撃力2＋元素2の混成\n- メインステータス：攻撃力％／元素ダメージ／会心\n\n## 覚醒\n\n1. A1：必殺技ダメージ上昇（最優先）\n2. A2：コンボ強化\n3. A3以降：あればよい\n\n## 評価\n\nv1.0で最も投資価値のあるキャラクターで、汎用的なメインDPSです。"
   },
   {
     "id": "jiuyuan-guide",
@@ -1877,7 +1887,10 @@
     ],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "Jiuyuan完全ガイド：T0集敵・サブDPSビルド",
+    "summaryJa": "Jiuyuanは集敵とサブDPSでT0評価を受ける、最強クラスの恒常キャラクターです。6択1選択に最もおすすめのキャラクターです。",
+    "contentJa": "Jiuyuanは恒常キャラクターの中で最も入手価値が高いとされています。T0の集敵役＋サブDPSで、6択1選択への決定的な答えです。\n\n## 概要\n\n- Sランク｜Anima｜集敵／サブDPS／ヒーラー（A1）\n- 入手先：恒常バナー／6択1\n\n## Jiuyuanを選ぶ理由\n\n1. ゲーム内最大の広範囲集敵\n2. 完璧なDPS時間を作る\n3. A1で回復が解放され、1人で3役を担う\n4. 恒常バナーのため、限定の引きを使わない\n\n## チーム構成\n\n- Nanally＋Jiuyuan＋Mint＋Adler（T0）\n- Baicang＋Jiuyuan＋Mint＋主人公\n- Xiaozhi＋Jiuyuan＋Mint＋Edgar（無課金向け）\n\n## Arcとディスク\n\nエネルギー回復と元素熟知に集中してください。\n\n## 覚醒\n\nA1は回復を解放するため重要です。A2は集敵を強化します。\n\n## 評価\n\n最も安全な投資で、どのチームにも入れます。"
   },
   {
     "id": "character-selector-guide",
@@ -1933,7 +1946,10 @@
     ],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "Baicang完全ガイド：T1汎用DPSビルド",
+    "summaryJa": "BaicangはNTEのT1 Sランクキャラクターで、メインまたはサブキャリーとして使える汎用DPSです。スキル、チーム、Arc、ディスク構成を解説します。",
+    "contentJa": "BaicangはNTEローンチ時において最も汎用性の高いDPSの一人です。JiuyuanまたはHayamuを選ばなかった場合、Baicangが最もよいDPS追加候補です。\n\n## 概要\n\n- Sランク｜Incantation｜メイン／サブDPS\n- 入手先：恒常バナー／6択1\n\n## スキル\n\n- 通常攻撃：安全な位置取りができる、射程のよい遠距離攻撃\n- Eスキル：元素効果を伴う範囲攻撃、中程度のクールダウン\n- Qバースト：高倍率のバーストで、DPSの中核\n- パッシブ：特定元素の味方がいると元素ダメージボーナス\n\n## チーム構成\n\n- Baicang＋Jiuyuan＋Mint＋Adler（標準）\n- Baicang＋Nanally＋Mint＋Jiuyuan（2DPS）\n- Baicang＋Xiaozhi＋Mint＋Edgar（無課金向け）\n\n## Arcとディスク\n\n- 最適Arc：モチーフArc\n- 代替：会心率／会心ダメージを主ステータスに持つもの\n- ディスク：元素ダメージ＋攻撃力4セット、または2＋2混成\n- 優先度：会心率 ＞ 会心ダメージ ＞ 攻撃力％ ＞ 元素ダメージ\n\n## 覚醒\n\nA1：中核スキルダメージ。A2：反応強化。A3以降：段階的な上昇。\n\n## 評価\n\n最もバランスのよいDPSです。選択ではJiuyuanとHayamuに次ぐ3番目の候補です。"
   },
   {
     "id": "mint-guide",
@@ -1961,7 +1977,10 @@
     ],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "Mint完全ガイド：高相性ローンチサポートビルド",
+    "summaryJa": "MintはNTEローンチ時を代表するAランクキャラクターで、非常に高い汎用性を持つ猫耳キャラクターです。スキル、チーム、Arc、ディスク構成を解説します。",
+    "contentJa": "MintはNTEで最も象徴的なAランクキャラクターの一人です。Aランクでありながら、その汎用性は多くのSランクをしのぎます。ほぼすべてのおすすめチームに登場します。\n\n## 概要\n\n- Aランク｜Anima｜サポート／ヒーラー／サブDPS\n- 入手先：恒常バナー／無料\n\n## Mintを育てる理由\n\n1. 無料で入手でき、低投資でよい\n2. ほぼすべてのチームに入る\n3. 回復とバフの両方を提供する\n4. 象徴的な猫耳デザイン\n5. Sランクの枠を使わない\n\n## スキル\n\n- 通常攻撃：ダメージは平均的だが、Mintは主に控えからサポートする\n- Eスキル：チームバフ。中核となる価値\n- Qバースト：回復＋バフ。エネルギーコストが低く頻繁に使える\n- パッシブ：非アクティブ時にも控え効果を発揮する\n\n## チーム構成\n\nMintはどこにでも入ります。\n\n- Nanally＋Jiuyuan＋Mint＋Adler\n- Baicang＋Jiuyuan＋Mint＋主人公\n- Xiaozhi＋Jiuyuan＋Mint＋Edgar\n\n「入れて間違いない」キャラクターです。\n\n## Arcとディスク\n\n- 重視：エネルギー回復＋元素熟知\n- ディスク：エネルギー回復4セット、またはHPとの2＋2\n- 会心／攻撃力Arcは不要\n\n## 覚醒\n\nA1：回復とバフを改善。A2：控え効果を強化。A3以降：任意。\n\n## 評価\n\n最も投資価値のあるAランクキャラクターです。無料で、汎用的で、有効な最高の仲間です。"
   },
   {
     "id": "arc-tier-list",
