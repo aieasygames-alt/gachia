@@ -829,21 +829,30 @@
         "question": "Who are the best characters in Neverness to Everness?",
         "questionZh": "异环中最强的角色有哪些？",
         "answer": "S-Tier characters are currently the strongest in Neverness to Everness. Check our detailed tier list for complete rankings and analysis.",
-        "answerZh": "S级角色是当前异环中最强的角色。查看我们的详细排行获取完整排名和分析。"
+        "answerZh": "S级角色是当前异环中最强的角色。查看我们的详细排行获取完整排名和分析。",
+        "questionJa": "Neverness to Evernessで最も強いキャラクターは誰ですか？",
+        "answerJa": "Sランクキャラクターが現在のNeverness to Evernessで最も強いとされています。完全なランキングと分析は詳細Tierリストを確認してください。"
       },
       {
         "question": "What characters should a beginner focus on?",
         "questionZh": "新手应该重点培养哪些角色？",
         "answer": "Beginners should focus on versatile S/A-Tier characters with good team synergy. Don't spread resources too thin early game.",
-        "answerZh": "新手应该专注于泛用性强的S/A级角色，具备良好的队伍配合。前期不要平均分配资源。"
+        "answerZh": "新手应该专注于泛用性强的S/A级角色，具备良好的队伍配合。前期不要平均分配资源。",
+        "questionJa": "初心者はどのキャラクターを育てるべきですか？",
+        "answerJa": "初心者はチーム相乗効果がよい汎用的なS／Aランクキャラクターに集中してください。序盤は資源を分散しすぎないでください。"
       },
       {
         "question": "Is tier list important in Neverness to Everness?",
         "questionZh": "异环中排行重要吗？",
         "answer": "Tier list is a helpful reference for resource allocation, but character preference and playstyle matter more. A well-built character you enjoy playing will outperform a poorly-built top-tier unit.",
-        "answerZh": "排行是资源分配的有用参考，但角色喜好和操作风格更重要。一个你喜欢的角色发挥会比不擅长的顶级角色更好。"
+        "answerZh": "排行是资源分配的有用参考，但角色喜好和操作风格更重要。一个你喜欢的角色发挥会比不擅长的顶级角色更好。",
+        "questionJa": "Neverness to EvernessでTierリストは重要ですか？",
+        "answerJa": "Tierリストは資源配分の有用な参考ですが、キャラクターの好みとプレイスタイルの方が重要です。よく育てた好きなキャラクターは、育成不足の上位Tierユニットを上回ります。"
       }
-    ]
+    ],
+    "titleJa": "キャラクターTierリスト",
+    "summaryJa": "S／A／B評価と初心者向け優先順位を含むNeverness to EvernessのキャラクターTierリストです。",
+    "contentJa": "キャラクターのTier評価を理解すると、限られた資源を効率的に配分できます。このTierリストは、深淵、Anomalyチャレンジ、日課コンテンツでの1.0ローンチキャラクターの性能に基づきます。\n\n## T0キャラクター（育成必須）\n\n| キャラクター | 元素 | 役割 | 理由 |\n| --- | --- | --- | --- |\n| Nanally | Anima | Genesis DPS | ローンチ版最強の限定SランクDPS、並外れた数値、Genesis反応の中核 |\n| Jiuyuan | Anima | 集敵サポート | 最良の恒常S選択、広範囲集敵、1覚醒で回復を追加 |\n| Hotori | Dark | バフサポート | 集敵＋攻撃力バフを持つ唯一のSランクサポート、1覚醒でバフ効果が2倍 |\n\n## T1キャラクター（強く推奨）\n\n| キャラクター | 元素 | 役割 | 理由 |\n| --- | --- | --- | --- |\n| Baicang | Incantation | Blaze DPS | Blazeチームの中核、発動にはDaffodilが必要 |\n| Xiaozhi | Dark | Accumulation DPS | City Tycoonで無料6＋5、最大時には全DPSを上回る |\n| Daffodil | Anima | BlazeサブDPS | Baicangチームに必要、高頻度パリィの専門家 |\n| Adler | Anima | 生存役 | 最良の1.0生存枠、シールド＋攻撃力低下＋耐性 |\n| Akane | Fire | Burn DPS | Burnチームの中核、Blazing Heart 4セット |\n| Black Bird | Dark | クイックスワップDPS | クイックスワップの中核、高頻度の連鎖攻撃 |\n\n## T2キャラクター（任意）\n\n| キャラクター | 元素 | 役割 | 理由 |\n| --- | --- | --- | --- |\n| Zero | Dark | 剣DPS | 流れるような剣コンボ、初心者向け |\n| Fadia | Fire | ハイブリッドDPS | 攻撃的なプレイ向けの内蔵シールド |\n| Haniel | Anima | バッファー | Aランクの強力キャラクター、最大覚醒で会心ダメージ12％ |\n| Hathor | Anima | Blade Wing DPS | 飛行＋攻撃による極めて高い機動力 |\n| Chiz | Dark | 重撃DPS | 広い攻撃範囲を持つ妖怪ハンマー |\n\n## チームのおすすめ\n\n### Genesisチーム（T0）\n\nNanally＋Jiuyuan＋Hotori\nJiuyuanが集敵 → Hotoriがバフ → Nanallyが即時Ring Fusionバースト\n\n### Blazeチーム（T1）\n\nBaicang＋Daffodil＋Hotori／Adler\nDaffodilがBlazeを発動 → BaicangがDPS\n\n### 無課金チーム（T1）\n\nXiaozhi＋Haniel＋Jiuyuan／Hathor\n無料最大のXiaozhi＋Hanielのバフ\n\n## 育成優先度\n\n1. メインDPS → Jiuyuan／Hotori → 生存役 → サブDPS\n2. 無課金：Xiaozhi（無料）→ Haniel（無料）→ Jiuyuan（選択）\n3. 課金：Nanally（限定）→ Jiuyuan（恒常）→ Hotori（恒常）\n\n詳細な分析は[詳細Tierリスト](/ja/nte/guides/detailed-tier-list)を参照してください。"
   },
   {
     "id": "detailed-tier-list",
@@ -898,19 +907,25 @@
         "question": "What is the optimal Crit Rate to Crit Damage ratio in NTE?",
         "questionZh": "异环中暴击率和暴击伤害的最优比例是多少？",
         "answer": "The generally optimal ratio is 1:2 (e.g., 50% Crit Rate with 100% Crit Damage, or 70% Crit Rate with 140% Crit Damage). This ratio maximizes expected damage value. Once your Crit Rate reaches 70-80%, prioritize Crit Damage or other stats instead.",
-        "answerZh": "通常最优比例是1:2（例如50%暴击率配100%暴击伤害，或70%暴击率配140%暴击伤害）。这个比例能最大化期望伤害值。当暴击率达到70-80%后，应该优先提升暴击伤害或其他属性。"
+        "answerZh": "通常最优比例是1:2（例如50%暴击率配100%暴击伤害，或70%暴击率配140%暴击伤害）。这个比例能最大化期望伤害值。当暴击率达到70-80%后，应该优先提升暴击伤害或其他属性。",
+        "questionJa": "NTEで最適な会心率と会心ダメージの比率は？",
+        "answerJa": "一般に最適な比率は1：2です（例：会心率50％に会心ダメージ100％、または会心率70％に会心ダメージ140％）。この比率は期待ダメージを最大化します。会心率が70〜80％に達したら、会心ダメージまたは他ステータスを優先してください。"
       },
       {
         "question": "Does elemental mastery affect all damage in NTE?",
         "questionZh": "元素精通会影响异环中的所有伤害吗？",
         "answer": "No, elemental mastery only affects reaction damage (vaporize, melt, overload, etc.), not base attack damage. If your character deals damage primarily through normal attacks and skills without triggering reactions, elemental mastery has very low value. For reaction-based builds, elemental mastery can be more valuable than ATK%.",
-        "answerZh": "不会，元素精通只影响反应伤害（蒸发、融化、超载等），不影响基础攻击伤害。如果你的角色主要通过普攻和技能造成伤害而不依赖反应，元素精通的价值很低。对于依赖反应的配装，元素精通可能比攻击力百分比更有价值。"
+        "answerZh": "不会，元素精通只影响反应伤害（蒸发、融化、超载等），不影响基础攻击伤害。如果你的角色主要通过普攻和技能造成伤害而不依赖反应，元素精通的价值很低。对于依赖反应的配装，元素精通可能比攻击力百分比更有价值。",
+        "questionJa": "元素熟知はNTEのすべてのダメージに影響しますか？",
+        "answerJa": "いいえ。元素熟知は蒸発、溶解、過負荷などの反応ダメージにのみ影響し、基礎攻撃ダメージには影響しません。通常攻撃とスキルが主で反応を起こさないキャラクターでは価値が低く、反応ビルドでは攻撃力％より価値が高い場合があります。"
       },
       {
         "question": "How does enemy defense affect damage in NTE?",
         "questionZh": "敌人的防御力如何影响异环中的伤害？",
         "answer": "Enemy defense reduces damage based on the level difference between your character and the enemy. The formula involves a constant K (approximately 923 for level 80 enemies). Higher character levels reduce the defense penalty. Defense-shredding effects and certain reactions can further lower enemy effective defense.",
-        "answerZh": "敌人防御力根据你的角色与敌人的等级差来减少伤害。公式中涉及一个常数K（80级敌人约为923）。角色等级越高，防御力惩罚越小。减防效果和特定反应可以进一步降低敌人的有效防御。"
+        "answerZh": "敌人防御力根据你的角色与敌人的等级差来减少伤害。公式中涉及一个常数K（80级敌人约为923）。角色等级越高，防御力惩罚越小。减防效果和特定反应可以进一步降低敌人的有效防御。",
+        "questionJa": "敵防御力はNTEのダメージにどう影響しますか？",
+        "answerJa": "敵防御力はキャラクターと敵のレベル差に応じてダメージを減らします。式には定数K（レベル80敵では約923）が含まれます。キャラクターレベルが高いほど防御ペナルティは小さくなります。減防効果と一部の反応で敵の実効防御をさらに下げられます。"
       }
     ],
     "serpTitle": {
@@ -939,7 +954,10 @@
         "会心率と会心ダメのバランスが重要。",
         "キャラ、弧盤、武器、ボス耐性と一緒に確認。"
       ]
-    }
+    },
+    "titleJa": "NTEダメージ計算式ガイド：ダメージ計算、会心、防御、耐性",
+    "summaryJa": "攻撃力スケーリング、スキル倍率、会心比率、元素ボーナス、防御、耐性、ステータス優先度、ビルド判断を解説するNeverness to Evernessのダメージ計算ガイドです。",
+    "contentJa": "## ダメージ計算式の解説\n\n### 簡単な答え\n\n多くのNTEビルドでは、ダメージは**攻撃力×スキル倍率**から始まり、会心、元素ボーナス、防御、耐性、最終倍率によって変化します。完全なビルドを固定する前に、このガイドを[/nte/build](/nte/build)、[/nte/weapons](/nte/weapons)、[/nte/guides/boss-guide-comprehensive](/nte/guides/boss-guide-comprehensive)と併せて使ってください。\n\nNeverness to Evernessでダメージがどう計算されるかを理解すると、ビルドを最適化しDPS出力を最大化できます。このガイドではダメージ式のすべての要素を分解します。\n\n## 基礎ダメージ\n\n基礎ダメージは、キャラクターの攻撃力にスキルの倍率を掛けたものから始まります。式は「基礎ダメージ＝攻撃力×スキル倍率」です。攻撃力とスキルレベルの両方がこの基礎値に影響するため、主な成長対象になります。\n\n## 会心\n\n会心時は、会心ダメージ（CD）％によりダメージが乗算されます。会心発生率は会心率（CR）で決まります。最適なCR：CD比は一般に1：2で、会心率50％なら少なくとも会心ダメージ100％を目指します。バランスの取れた会心ステータスによる安定性は、1つのステータスへの過剰投資を上回ることが多いです。\n\n## 元素ダメージボーナス\n\nディスクと武器パッシブによる元素ダメージボーナスは、他のダメージボーナスとは加算ですが、基礎ダメージとは乗算です。このため、元素ダメージ杯は優先度の高い装備になります。メインステータスディスクの元素ダメージボーナス46.6％は大きなダメージ上昇を提供します。\n\n## 防御と耐性\n\n敵の防御力は、キャラクターと敵のレベル差に基づき受けるダメージを減らします。耐性はさらに割合でダメージを減らします。一部のデバフと超電導反応は敵の防御と耐性を下げ、実効ダメージを大きく上げます。\n\n## 反応ダメージ\n\n元素反応には通常攻撃の修正を無視する別のスケーリングがあり、キャラクターレベルと元素熟知で伸びます。過負荷のような変換反応は固定ダメージを与える一方、蒸発のような増幅反応は発動した攻撃のダメージを乗算します。チームがどの反応を発動するかを理解すると、適切なステータスを積めます。\n\n## 最終ダメージ式\n\n総ダメージ＝（基礎ダメージ×スキル倍率×ダメージボーナス）×（1＋CR×CD）×敵防御倍率×敵耐性倍率×反応倍率。複利的なダメージ上昇のため、各層を最適化してください。"
   },
   {
     "id": "beginner-mistakes",
@@ -1116,7 +1134,10 @@
     "relatedCharacters": [],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "NTEイベントガイド：参加、報酬優先度、最新確認",
+    "summaryJa": "イベントタイプ、計画、完了順を扱うNTEイベント参加と報酬優先度の資料です。現在のイベント、日付、参加条件、報酬はゲーム内または公式告知で確認してください。",
+    "contentJa": "## 完全イベントガイド集\n\nNeverness to Evernessのイベントでは、プレミアム通貨、限定武器、キャラクター強化素材、ときには無料キャラクターを含む多くの報酬が得られます。このガイドでは、開催中および繰り返し行われるイベントタイプと、報酬を最大化する戦略をまとめます。\n\n## イベントタイプの概要\n\nNTEには、固有物語を持つストーリーイベント、ランキングを持つ戦闘チャレンジイベント、隠し収集品を含む探索イベント、クロスオーバーコンテンツを扱うコラボイベントなど、複数のカテゴリーがあります。各タイプで報酬構造と必要時間が異なります。\n\n## ストーリーイベント\n\nストーリーイベントは通常2〜3週間開催され、段階的に解放される独立した物語を持ちます。報酬プール全体を得るため、すべてのストーリー段階を完了してください。これらのイベントでは5〜10回分の追加ガチャに相当するプレミアム通貨を提供することがよくあります。ストーリー段階は一般に簡単で、すべてのプレイヤーレベルにとって効率的です。\n\n## 戦闘チャレンジイベント\n\nチャレンジイベントには、簡単から極限までの難度段階があります。高難度ほどよい報酬を得ますが、より強いキャラクターが必要です。極限モードに苦戦するより、安定して勝てる最高難度をクリアすることに集中してください。一部のチャレンジイベントでは強化キャラクターが用意されます。十分に育っていなくても、イベントボーナスが低い投資を補うため、強化対象ユニットを使ってください。\n\n## 探索イベント\n\n探索イベントは、オープンワールドに一時エリアまたは収集品を追加します。通常は最も時間がかかるイベントですが、最も報酬も多いです。探索イベントは再登場が少ないため、専用のプレイ時間を確保してください。すべての収集品を効率よく見つけるため、コミュニティのインタラクティブマップを使いましょう。\n\n## 期間限定ショップ\n\n多くのイベントには、イベント通貨を報酬と交換する期間限定ショップがあります。常にショップのプレミアム通貨と突破素材を優先してください。キャラクター経験値素材と一般強化アイテムは通常のプレイから得られるため、優先度は低いです。必須アイテムに必要な総通貨を計算し、それに応じてイベント参加を計画してください。\n\n## イベント効率のヒント\n\n毎週の初めにイベント予定を確認してください。ログインボーナスを受け取るだけでも、イベント中は毎日ログインしましょう。一部のイベントにはリセットされるデイリータスクがあるため、継続的な毎日参加が最もよい結果につながります。"
   },
   {
     "id": "talent-priority",
@@ -1233,15 +1254,22 @@
         "question": "Is there PvP in Neverness to Everness?",
         "questionZh": "异环有PVP吗？",
         "answer": "NTE features asynchronous competitive modes like leaderboards and ranked arenas rather than direct player-vs-player combat.",
-        "answerZh": "异环采用的是异步竞技模式，包括排行榜和排位赛，而非直接PVP对战。"
+        "answerZh": "异环采用的是异步竞技模式，包括排行榜和排位赛，而非直接PVP对战。",
+        "questionJa": "Neverness to EvernessにPvPはありますか？",
+        "answerJa": "NTEには直接のプレイヤー対プレイヤー戦闘ではなく、ランキングやランクアリーナなどの非同期競技モードがあります。"
       },
       {
         "question": "How does the ranked system work in NTE?",
         "questionZh": "异环排位赛怎么打？",
         "answer": "The ranked system has tiers from Bronze to Radiant. You earn points through Arena challenges and leaderboard placements, with seasons lasting ~6 weeks.",
-        "answerZh": "排位赛从青铜到辉光共6个段位，通过竞技场挑战和排行榜获得积分，每个赛季约6周。"
+        "answerZh": "排位赛从青铜到辉光共6个段位，通过竞技场挑战和排行榜获得积分，每个赛季约6周。",
+        "questionJa": "NTEのランクシステムはどう機能しますか？",
+        "answerJa": "ランクシステムにはBronzeからRadiantまでのTierがあります。アリーナ挑戦とランキング順位でポイントを得て、シーズンは約6週間続きます。"
       }
-    ]
+    ],
+    "titleJa": "Neverness to Everness PvP・競技モードガイド：ランク、ランキング",
+    "summaryJa": "NTEにPvPはあるのか。はい。非同期ランクモード、ランキング、アリーナ挑戦、BronzeからRadiantまでのTier報酬、最適チームと上昇戦略を解説します。",
+    "contentJa": "## NTEの競技モード\n\nNeverness to Evernessには、直接PvPではなく非同期の競技モードがあります。これらのモードでは他プレイヤーのスコアと自分の成績を比較するため、リアルタイム対戦を必要とせずに競技環境が作られます。\n\n## ランキングチャレンジ\n\n### 仕組み\n\n- 特定シナリオをできるだけ速くクリアする、または最大ダメージを与える\n- ランキングはリアルタイムで更新される\n- 上位者は限定称号とプレミアム通貨を得る\n\n### より高い順位のヒント\n\n1. 特定のチャレンジ元素とギミックに合わせて**チームを最適化**する\n2. ランキング挑戦前に**食事バフ**を使う\n3. 敵パターンを学び、ウェーブ間の無駄時間を減らす\n4. **Arcを強化**する。武器ステータスはクリア時間へ直接影響する\n\n## シーズンランクモード\n\n### Tierシステム\n\n| Tier | ランク範囲 | 報酬 |\n| --- | --- | --- |\n| Bronze | 1〜3 Stars | 基本素材 |\n| Silver | 1〜3 Stars | 強化鉱石、Vons |\n| Gold | 1〜3 Stars | プレミアム通貨、限定コスメティック |\n| Platinum | 1〜3 Stars | 希少素材、称号 |\n| Diamond | 1〜3 Stars | 限定キャラクタースキン |\n| Radiant | Top 100 | 限定アバターフレーム、シーズン称号 |\n\n### 上昇戦略\n\n- **継続的にプレイ**：1日の参加は、まとめて遊ぶより多くのポイントを得る\n- **環境を対策**：現在シーズンで強いキャラクターを確認し、対策を作る\n- **挑戦する時間を選ぶ**：昇格に必要なスコアが低いオフピーク時に競う\n- **チーム相乗効果＞素の戦力**：連携したチームは個別に強いキャラクターを上回る\n\n## アリーナチャレンジ\n\nアリーナは主な競技モードです。\n\n- 毎週月曜日に**リセット**\n- 1日**10回の無料挑戦**（追加挑戦は購入可能）\n- **スコア基準**：クリア時間、与ダメージ、被ダメージ、チーム構成ボーナス\n\n### アリーナ向けのおすすめキャラクター\n\n現在の環境では次に集中してください。\n\n- 速いクリアのための**バーストDPS**\n- チームダメージをバフする**サポートキャラクター**\n- 生存ボーナスのための**シールド／回復キャラクター**\n\n## 周回する価値がある報酬\n\n1. **Arena Coins**：希少突破素材と交換する\n2. **シーズン称号**：名誉コスメティック報酬\n3. **プレミアム通貨**：ガチャバナーの無料引き\n4. **限定レシピ**：ランクプレイでのみ得られる固有アイテムをクラフトする\n\n## よくある質問\n\n**NTEは本当にPvPですか？** いいえ。NTEは非同期競技モードを使います。他プレイヤー本人ではなく、他プレイヤーのスコアと競います。\n\n**競うために最上位キャラクターが必要ですか？** 強いキャラクターは役立ちますが、チーム編成と戦略の方が重要です。よく育てた低予算チームでもGold Tierに到達できます。\n\n**シーズンはどのくらいでリセットされますか？** ランクシーズンは約6週間続き、各シーズンの間には1週間のプレシーズン休止があります。"
   },
   {
     "id": "collectibles-guide",
@@ -1263,7 +1291,10 @@
     "relatedCharacters": [],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "完全収集品ガイド",
+    "summaryJa": "全宝箱タイプ、隠しアイテム、地域特産、探索到達点報酬を含むNeverness to Evernessの完全収集品場所ガイドです。",
+    "contentJa": "## 完全収集品場所ガイド\n\nNeverness to Evernessには、オープンワールド全体に数百の収集品があります。このガイドでは、場所の詳細と追跡のヒントにより、すべての収集品タイプを見つける助けになります。\n\n## 収集品の種類\n\nゲームには複数の収集品カテゴリーがあります。宝箱（通常、精巧、貴重、豪華）、Anomalies（隠し挑戦）、Viewpoints（景観地点）、Character Stories（解放できる伝承記録）、Region Progressマーカーです。各タイプは全体の探索率に貢献し、異なる報酬を提供します。\n\n## 宝箱の場所\n\n宝箱は最も一般的な収集品です。通常宝箱は近くにいるとミニマップに表示されます。精巧と貴重な宝箱では、簡単なパズルを解くか敵グループを倒す必要がある場合があります。豪華宝箱は希少で、通常は複雑なパズルの奥かエリート敵が守る場所に隠されています。ミニマップに表示されない隠し宝箱を探すため、滝の裏、屋上、洞窟を確認してください。\n\n## 地域完了報酬\n\n各地域には完了トラッカーがあり、到達点に応じてプレミアム通貨、キャラクター素材、限定アイテムを得られます。地域探索を100％にすると、通常は数回分のガチャに十分な通貨を得られます。トラッカーの進行は自動保存されるため、自分のペースで地域を進められます。\n\n## インタラクティブマップツール\n\nコミュニティ管理のインタラクティブマップを使い、収集品の進行を追跡してください。これらのツールでは取得済みアイテムを記録し、タイプ別に絞り込めるため、足りないものを見つけやすくなります。ゲームのバージョン間で収集品の場所が変わることがあるため、正確性のためゲーム内マップと照合してください。\n\n## 効率的な収集のヒント\n\n残りの場所が少ないほど見つけやすいため、完了率が最も高い地域を優先してください。移動能力を持つキャラクターを使い、到達しにくい場所へ向かいましょう。一部の収集品は特定の時間帯または天候でのみ出現します。探す前に、その地域に時間制限のあるアイテムがないか確認してください。"
   },
   {
     "id": "farming-route",
