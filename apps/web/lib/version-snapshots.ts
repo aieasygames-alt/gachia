@@ -447,6 +447,9 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       { type: 'characters', href: '/roco/characters', label: { zh: '生物图鉴', en: 'Creatures', ja: '生物図鑑' } },
       { type: 'guides', href: '/roco/guides/cbt-registration-guide', label: { zh: 'CBT 申请', en: 'CBT registration', ja: 'CBT応募' } },
       { type: 'guides', href: '/roco/guides/global-cn-content-roadmap', label: { zh: '国服差距与补充方案', en: 'CN gap & rollout plan', ja: '中国版との差分・展開案' } },
+      { type: 'guides', href: '/roco/guides/global-launch-readiness-checklist', label: { zh: '首发验收清单', en: 'Launch checklist', ja: 'ローンチ確認' } },
+      { type: 'guides', href: '/roco/guides/global-first-30-days-pve-plan', label: { zh: '前 30 天 PvE 包', en: 'Days 1–30 PvE plan', ja: '1〜30日PvE案' } },
+      { type: 'guides', href: '/roco/guides/global-days-31-90-season-event-plan', label: { zh: '31–90 天赛季包', en: 'Days 31–90 season plan', ja: '31〜90日シーズン案' } },
     ],
   },
   'roco-cn': {

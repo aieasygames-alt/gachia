@@ -35,7 +35,7 @@ const FEATURED_GUIDE_IDS: Partial<Record<GameId, string[]>> = {
   endfield: ['download-install-guide', 'combat-system-guide', 'crisis-contract-guide'],
   sea: ['open-beta-version-center', 'launch-day-guide', 'download-install-guide'],
   skjh: ['week-one-live-ops-overview', 'anti-cheat-reporting-guide', 'custom-mode-community-server-guide'],
-  roco: ['cbt-registration-guide', 'starter-guide', 'what-is-roco-kingdom', 'platforms-and-download-guide'],
+  roco: ['cbt-registration-guide', 'global-cn-content-roadmap', 'global-launch-readiness-checklist', 'global-first-30-days-pve-plan', 'global-days-31-90-season-event-plan', 'starter-guide', 'what-is-roco-kingdom', 'platforms-and-download-guide'],
   'roco-cn': ['daily-events-merchant-guide', 'redeem-codes-cn', 's2-season-guide', 'starter-guide-cn'],
   aniimo: ['s1-new-player-route', 'rainbow-aniimo-guide', 'homeland-resource-guide', 'map-regions', 'codes-rewards'],
   'azur-promilia': ['official-information-checklist'],

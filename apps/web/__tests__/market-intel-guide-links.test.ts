@@ -47,6 +47,21 @@ const expectedNewGuides = {
 };
 
 describe('market-intel guide links', () => {
+  it('keeps the Roco global rollout sequence published and reachable', () => {
+    const roadmapGuideIds = [
+      'global-cn-content-roadmap',
+      'global-launch-readiness-checklist',
+      'global-first-30-days-pve-plan',
+      'global-days-31-90-season-event-plan',
+    ];
+    const snapshotGuideLinks = VERSION_SNAPSHOTS.roco?.links.map((link) => link.href) ?? [];
+
+    for (const guideId of roadmapGuideIds) {
+      expect(guideIdsByGame.roco.has(guideId)).toBe(true);
+      expect(snapshotGuideLinks).toContain(`/roco/guides/${guideId}`);
+    }
+  });
+
   it('keeps the guide slugs required by the 2026-09-30 batch', () => {
     for (const [gameId, guideIds] of Object.entries(expectedNewGuides)) {
       for (const guideId of Array.isArray(guideIds) ? guideIds : [guideIds]) {
