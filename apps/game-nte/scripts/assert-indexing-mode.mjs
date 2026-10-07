@@ -14,7 +14,7 @@ const required = [
   [nextConfig, "process.env.NTE_DEPLOYMENT_MODE !== 'live'"],
   [nextConfig, "{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }"],
   [layout, "robots: isPreview ? { index: false, follow: false } : undefined"],
-  [metadata, "robots: isPreview ? { index: false, follow: false } : undefined"],
+  [metadata, "robots: isPreview ? { index: false, follow: false } : indexable ? undefined : { index: false, follow: true }"],
   [robots, "process.env.NTE_DEPLOYMENT_MODE !== 'live'"],
   [robots, "sitemap: 'https://gachia.com/sitemaps/nte/index.xml'"],
 ];

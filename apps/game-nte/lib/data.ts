@@ -73,6 +73,25 @@ export const regions = rawRegions as Array<{ id: string; name: string; nameEn: s
 export const characterBuilds = rawBuilds as Array<{ characterId: string; builds: Array<{ id: string; name: string; nameEn: string; description: string; descriptionEn: string; mainStat: string; mainStatEn: string; subStats: string[]; subStatsEn: string[]; recommendedWeapons: string[]; teamComp: string[]; notes: string; notesEn: string }> }>;
 export const characterMaterials = rawCharacterMaterials as Array<{ characterId: string; levelingMaterials: Array<{ levelRange: string; materials: Array<{ id: string; quantity: number }> }>; skillMaterials: Array<{ id: string; quantity: number }> }>;
 
+function hasJapaneseText(value: unknown, minimumLength = 40): value is string {
+  return typeof value === 'string' && Array.from(value.trim()).length >= minimumLength && /[\u3040-\u30ff]/.test(value);
+}
+
+export function hasJapaneseNteGuideContent(guide: GuideEntry): boolean {
+  return hasJapaneseText(guide.titleJa, 8) && hasJapaneseText(guide.summaryJa) && hasJapaneseText(guide.contentJa, 200);
+}
+
+export function isNteJapanesePathIndexable(path = ''): boolean {
+  const guideMatch = path.match(/^\/guides\/([^/]+)$/);
+  if (!guideMatch) return false;
+  const guide = guides.find((entry) => entry.id === guideMatch[1]);
+  return Boolean(guide && hasJapaneseNteGuideContent(guide));
+}
+
+export function isNteLocaleIndexable(locale: SupportedLocale, path = ''): boolean {
+  return locale !== 'ja' || isNteJapanesePathIndexable(path);
+}
+
 export function localeName(value: { zh: string; en: string; ja: string }, locale: SupportedLocale) {
   return value[locale];
 }
