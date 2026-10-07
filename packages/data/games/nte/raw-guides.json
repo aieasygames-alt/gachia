@@ -2155,27 +2155,38 @@
         "question": "How long does it take to get the free S-rank character Xiaozhi from City Tycoon?",
         "questionZh": "都市大亨获取免费S级角色小吱需要多长时间？",
         "answer": "Approximately 6-8 weeks of consistent daily play. You need 60 Xiaozhi fragments earned through City Tycoon milestones. Daily time investment is only 5-10 minutes to collect income and manage buildings.",
-        "answerZh": "大约需要6-8周的持续经营。你需要通过都市大亨里程碑奖励集齐60个小吱碎片。每天只需投入5-10分钟收取收益和管理建筑即可。"
+        "answerZh": "大约需要6-8周的持续经营。你需要通过都市大亨里程碑奖励集齐60个小吱碎片。每天只需投入5-10分钟收取收益和管理建筑即可。",
+        "questionJa": "City Tycoonから無料SランクキャラクターXiaozhiを得るにはどのくらいかかりますか？",
+        "answerJa": "毎日継続して約6〜8週間です。City Tycoonの到達点で得るXiaozhiの欠片60個が必要です。収入回収と建物管理に必要な時間は1日5〜10分だけです。"
       },
       {
         "question": "What is the best building to construct first in City Tycoon?",
         "questionZh": "都市大亨第一个建什么建筑最好？",
         "answer": "Build a Restaurant first. It has the best cost-to-income ratio among commercial buildings, pays back in about 2 days, and pairs well with a Convenience Store for the +10% synergy bonus.",
-        "answerZh": "第一个建议建造餐厅。餐厅在商业建筑中性价比最高，大约2天即可回本，搭配便利店还能触发+10%收益的联动效果。"
+        "answerZh": "第一个建议建造餐厅。餐厅在商业建筑中性价比最高，大约2天即可回本，搭配便利店还能触发+10%收益的联动效果。",
+        "questionJa": "City Tycoonで最初に建てるべき最良の建物は何ですか？",
+        "answerJa": "まずレストランを建ててください。商業建物の中でコスト対収入比が最もよく、約2日で回収でき、コンビニとの組み合わせで収入＋10％の相乗効果を得ます。"
       },
       {
         "question": "Does City Tycoon use stamina?",
         "questionZh": "都市大亨消耗体力吗？",
         "answer": "No. City Tycoon is completely independent from the main stamina system. It uses its own City Coins currency and does not consume any stamina, making it essentially free content.",
-        "answerZh": "不消耗。都市大亨完全独立于主线的体力系统，使用自己的城市币货币，不消耗任何体力，可以说是完全免费的额外玩法。"
+        "answerZh": "不消耗。都市大亨完全独立于主线的体力系统，使用自己的城市币货币，不消耗任何体力，可以说是完全免费的额外玩法。",
+        "questionJa": "City Tycoonはスタミナを使いますか？",
+        "answerJa": "使いません。City Tycoonはメインのスタミナシステムから完全に独立し、独自のCity Coinsを使います。スタミナを消費しないため、実質的に無料のコンテンツです。"
       },
       {
         "question": "Can I lose progress in City Tycoon if I don't log in?",
         "questionZh": "不登录会导致都市大亨进度损失吗？",
         "answer": "Your buildings and upgrades are permanent and never degrade. The only thing you lose by not logging in is income that exceeds the storage cap. Log in at least once daily to collect and you'll be fine.",
-        "answerZh": "你的建筑和升级是永久的，不会降级。不登录唯一的损失是收益达到存储上限后停止累积。每天至少登录一次收取收益即可。"
+        "answerZh": "你的建筑和升级是永久的，不会降级。不登录唯一的损失是收益达到存储上限后停止累积。每天至少登录一次收取收益即可。",
+        "questionJa": "ログインしないとCity Tycoonの進行を失いますか？",
+        "answerJa": "建物と強化は永久で、劣化しません。ログインしない場合に失うのは、保管上限を超えた収入だけです。毎日少なくとも1回ログインして回収すれば問題ありません。"
       }
-    ]
+    ],
+    "titleJa": "NTE City Tycoon完全ガイド：建物、収入、無料Sランク、上級ヒント",
+    "summaryJa": "建物タイプ、収入最適化、無料SランクキャラクターXiaozhiの入手、到達点報酬、Hethereau都市管理の上級ヒントを解説するNTE City Tycoon完全ガイドです。",
+    "contentJa": "City Tycoonは、Neverness to Everness内に組み込まれた独自の都市経営シミュレーションです。プレイヤーはHethereauの各地でさまざまな建物を購入、アップグレード、管理して受動収入と価値ある報酬を得られます。最も重要なのは、City Tycoonの到達点を完了すると無料のSランクキャラクターXiaozhiを得られることです。このガイドではシステムに必要な内容をまとめます。\n\n## City Tycoonとは\n\nCity TycoonはNTE内の都市経営シミュレーションシステムです。メインRPGとは異なり、都市管理者としてHethereauの指定エリアで区画を購入し、建物を建設・強化して、安定した受動収入と資源報酬を得ます。\n\nこれは単なる放置ゲームではありません。建物の選択、強化順、地区への配置は全体の収入効率に影響します。賢い計画は受動収益を2倍にできますが、悪い判断は貴重なCity Coinsを無駄にします。\n\nCity Tycoonの収入はオフライン中も自動で蓄積します（保管上限まで）。無駄を防ぐため、少なくとも1日1回の回収をおすすめします。\n\n## City Tycoonの解放方法\n\nCity Tycoonはメインストーリーの進行により自動で解放されます。\n\n1. メインストーリー第2章「Arrival in Hethereau」を完了する\n2. キャラクターレベル15に到達する\n3. ガイドクエスト「Pulse of the City」を完了する\n\n解放時に初期City Coinsと無料の商業区画1つを得ます。基本の建設・強化を学ぶため、チュートリアルをすぐ終えてください。\n\n重要：City Tycoonは可能な限り早く解放してください。毎日の受動収入の重要な源であり、早く始めるほど累積報酬が増えます。\n\n## 建物タイプと強化ルート\n\nCity Tycoonの建物は3つの大分類に分かれ、それぞれ収入特性と強化ルートが異なります。\n\n### 商業建物\n\n商業建物は安定した収益と早い回収を持ち、序盤投資の最優先です。\n\n| 建物 | 基礎収入／時 | 最大収入／時 | 建設コスト |\n| --- | --- | --- | --- |\n| コンビニ | 120 | 580 | 1,000 Coins |\n| レストラン | 200 | 960 | 2,000 Coins |\n| ショッピングモール | 350 | 1,800 | 5,000 Coins |\n| 高級クラブ | 500 | 3,200 | 12,000 Coins |\n\n商業建物は30分ごとに収入を精算し、序盤のCoins蓄積に向きます。レストランはコスト対収入比のため、最初の建設に最適です。\n\n### 住宅建物\n\n住宅建物は中程度ながら非常に安定した収入を提供し、追加報酬の可能性があります。\n\n| 建物 | 基礎収入／時 | 最大収入／時 | 建設コスト |\n| --- | --- | --- | --- |\n| アパート | 80 | 420 | 800 Coins |\n| ガーデンコンプレックス | 150 | 780 | 1,800 Coins |\n| 高級コンドミニアム | 280 | 1,500 | 4,500 Coins |\n| 高級ヴィラ | 450 | 2,800 | 10,000 Coins |\n\n各住宅収入の発生時には10％の確率で、経験値本、突破素材などの追加報酬が得られるため、長期的に非常に価値があります。\n\n### 産業建物\n\n産業建物は序盤収入が低い一方、最大レベルの出力が最も高く、希少素材を落とします。\n\n| 建物 | 基礎収入／時 | 最大収入／時 | 建設コスト |\n| --- | --- | --- | --- |\n| 小規模工場 | 100 | 520 | 1,200 Coins |\n| 加工センター | 180 | 880 | 2,500 Coins |\n| テックパーク | 320 | 1,600 | 6,000 Coins |\n| 研究所 | 480 | 3,500 | 15,000 Coins |\n\n産業建物は、他の建物タイプから得られない特別なキャラクター突破素材を含む希少素材を生産します。終盤では必須です。\n\n### 強化戦略\n\n序盤（1〜2週）：商業建物2〜3件をレベル5以上まで上げる。\n中盤（3〜4週）：収入のバランスのため住宅物件を建て始める。\n終盤（1か月以降）：希少素材生産のため産業建物を伸ばす。\n\n各建物はレベル10で上限です。強化にはCity Coinsと時間が必要です。寝る前に長い強化を始め、オンライン中は短いものを始めてください。\n\n## 収入最適化戦略\n\n### 地区ボーナス\n\nHethereauは地区に分かれ、配置ボーナスがあります。\n\n- 商業地区：商業収入＋15％\n- 住宅地区：住宅収入＋15％\n- 産業地区：産業収入＋15％\n- 混合地区：すべての収入＋5％\n\n### 建物相乗効果\n\n特定の建物組み合わせで相乗効果が発生します。\n\n- コンビニ＋レストラン：両方の収入＋10％\n- ガーデンコンプレックス＋ショッピングモール：住宅収入＋20％\n- テックパーク＋研究所：希少素材ドロップ率＋15％\n\n相乗効果を使った戦略的配置は、全体の収益を大きく上げます。\n\n### オンライン回収ボーナス\n\nオンラインで手動回収すると1.2倍のボーナスを得ます。最大収益のため、1日2〜3回手動で回収してください。\n\n### 再投資戦略\n\n得たCity Coinsは常に建物強化へすぐ再投資してください。Coinsを貯め込まず、強化レベルを将来の収入への投資と考えます。通常の回収期間は2〜3日で、その後は純利益です。\n\n## 無料Sランクキャラクター：Xiaozhi\n\nCity Tycoon最大の報酬は無料のSランクキャラクターXiaozhiです。時間を投資する価値がある強力なキャラクターです。\n\n### Xiaozhiの入手方法\n\nXiaozhiはCity Tycoonの到達点報酬から得ます。\n\n1. City Tycoonの到達点タスクを累計で完了する\n2. 指定された到達点レベルでXiaozhiの欠片を解放する\n3. Xiaozhiの欠片を60個集めてキャラクターを解放する\n\n### 到達点タスクの種類\n\n- 指定数の建物を建てる\n- 建物を指定レベルまで強化する\n- 指定量の回収収入を累積する\n- 特別な都市イベントを完了する\n- 都市の繁栄度要件に到達する\n\n### Xiaozhi欠片の到達点\n\n| 到達点 | 欠片 | おおよその期間 |\n| --- | --- | --- |\n| 初心者市民 | 5 | 1週目 |\n| 新星 | 10 | 2週目 |\n| 経営専門家 | 15 | 3〜4週目 |\n| ビジネスエリート | 15 | 5〜6週目 |\n| City Tycoon | 15 | 7〜8週目 |\n\nXiaozhiを得るには約6〜8週間の継続プレイが必要です。期間は長めですが、収入回収に必要なのは毎日数分だけで、わずかな労力で無料Sランクキャラクターを得られます。\n\n### Xiaozhiのキャラクター概要\n\nXiaozhiは優れた範囲ダメージと都市テーマの固有能力を持つSランクThunder元素DPSです。パッシブスキルはCity Tycoonの建物収入も上げるため、戦闘と経営システムの両方で価値があります。すでに他のThunderキャラクターがいても、固有ギミックにより特定のチーム構成へ加える価値があります。\n\n## 進行到達点と報酬\n\nXiaozhi以外にも、City Tycoon到達点は多くの報酬を提供します。\n\n| 到達点レベル | 主な報酬 |\n| --- | --- |\n| レベル1〜5 | City Coins、Credits、経験値本 |\n| レベル6〜10 | 上級突破素材、ガチャチケット |\n| レベル11〜15 | Xiaozhi欠片、限定アバターフレーム |\n| レベル16〜20 | 大量のCity Coins、希少素材、限定称号 |\n| レベル21以降 | Xiaozhi欠片、限定装飾、特別家具 |\n\n高報酬の到達点タスクを優先してください。低報酬のタスクは時間とともに自然に完了します。\n\n## ヒントとよくあるミス\n\n### よくあるミス\n\n1. **序盤に建物を建てすぎる**：量より質です。低レベル建物10件より、2〜3件を完全に強化する方が優れます。\n2. **地区ボーナスを無視する**：ランダム配置は15％の地区ボーナスを失い、長期的に大きな損失です。\n3. **収入回収を忘れる**：収入には保管上限があります。少なくとも毎日1回は回収してください。\n4. **強化順が間違っている**：次を始める前に1つの建物を最大にします。複数の建物へ同時に強化を分散しないでください。\n5. **都市イベントを飛ばす**：期間限定の都市イベントは多くのCoinsボーナスと経験値を提供します。逃さないでください。\n\n### 上級ヒント\n\n1. **オフライン前にすべて回収する**：オフライン蓄積をゼロから始め、オフライン収入を最大化します。\n2. **イベントボーナスを利用する**：一部のイベントはCity Tycoon収入を上げます。この期間は積極的に回収してください。\n3. **都市イベントの更新時間を見る**：イベントは毎日決まった時間に更新されます。追加報酬のため時間どおりに参加しましょう。\n4. **短縮アイテムを戦略的に使う**：重要な強化到達点のために加速アイテムを残します。\n5. **Xiaozhi入手後も続ける**：後の到達点ではXiaozhiの共鳴チェーン欠片や他の希少アイテムを得られます。\n\n## 時間投資の価値はあるか\n\nもちろんです。City Tycoonは収入回収と建物管理に毎日5〜10分だけ必要で、大きな受動収入を得られます。さらに無料SランクキャラクターXiaozhiはこのシステムだけに紐づきます。\n\n投資対効果の観点から、City Tycoonはゲーム全体で最も価値が高いものを提供します。\n\n- 少ない時間投資（1日5〜10分）\n- 寛大な報酬（無料Sランクキャラクター、大量のCoins収入、希少素材）\n- 長期の複利的リターン（高レベル建物は指数的に多く稼ぐ）\n- スタミナコストゼロ（メインスタミナシステムと完全に独立）\n\nすべてのプレイヤーに、解放後すぐCity Tycoonを始めることをおすすめします。カジュアルプレイヤーでも利用可能な報酬を簡単に得られます。\n\n## まとめ\n\nCity TycoonはNTEでリラックスして楽しめる報酬豊富なシステムです。早く解放する、強化に集中する、ボーナスを使う、毎日回収するという原則を覚えてください。このガイドに従えば、6〜8週で無料SランクのXiaozhiと安定した受動収入を得られます。"
   },
   {
     "id": "shinku-iroi-pull-plan",
@@ -2203,38 +2214,47 @@
         "question": "Should I pull Shinku or save for Iroi?",
         "questionZh": "Shinku 和 Iroi 应该抽谁？",
         "answer": "Pull Shinku if you need immediate v1.2 power and have enough resources left. Save for Iroi if your team is already stable or you only have one guarantee.",
-        "answerZh": "如果你缺当前版本战力且资源够，可以优先 Shinku；如果队伍已稳定或只够一轮保底，优先给 Iroi 预留更稳。"
+        "answerZh": "如果你缺当前版本战力且资源够，可以优先 Shinku；如果队伍已稳定或只够一轮保底，优先给 Iroi 预留更稳。",
+        "questionJa": "Shinkuを引くべきですか、それともIroiに備えるべきですか？",
+        "answerJa": "即時のv1.2戦力が必要で、引いた後も十分な資源が残るならShinkuを引いてください。チームがすでに安定しているか、1天井しかない場合はIroiに備える方が安全です。"
       },
       {
         "question": "Should new players pull immediately in v1.2?",
         "questionZh": "新玩家 1.2 要不要马上抽？",
         "answer": "New players should claim codes, finish onboarding, and understand pity first. Pull after you know which role your first team actually needs.",
-        "answerZh": "新玩家先领兑换码、完成入门并理解保底，再根据第一队缺口决定是否抽当前池。"
+        "answerZh": "新玩家先领兑换码、完成入门并理解保底，再根据第一队缺口决定是否抽当前池。",
+        "questionJa": "新規プレイヤーはv1.2ですぐに引くべきですか？",
+        "answerJa": "新規プレイヤーはまずコードを受け取り、導入を終え、天井を理解してください。最初のチームにどの役割が必要か分かってから引きましょう。"
       },
       {
         "question": "Can redeem codes cover my pity gap?",
         "questionZh": "兑换码能补保底缺口吗？",
         "answer": "Codes help with small gaps, but they rarely replace event, daily, and exploration income. Calculate all resources before committing.",
-        "answerZh": "兑换码适合补小缺口，但通常不能替代活动、日常和探索资源；抽前要先算总资源。"
+        "answerZh": "兑换码适合补小缺口，但通常不能替代活动、日常和探索资源；抽前要先算总资源。",
+        "questionJa": "交換コードで天井の不足を補えますか？",
+        "answerJa": "コードは小さな不足には役立ちますが、イベント、日課、探索収入の代わりになることはほとんどありません。決める前にすべての資源を計算してください。"
       }
     ],
     "relatedCharacters": [
       "shinku"
     ],
-    "date": "2026-07-21"
+    "date": "2026-07-21",
+    "titleJa": "NTE Shinku対Iroiのガチャ計画：v1.2 999 Nights資源、コード、天井ルート",
+    "summaryJa": "ShinkuとIroiを、コード、Steam／ダウンロード導入、天井資源計画とともに比較するv1.2 999 Nightsの判断ガイドです。",
+    "contentJa": "## 簡単な答え\n\nNTE v1.2「999 Nights」では、話題だけでShinkuとIroiを決めないでください。まず天井に使える資源を計算し、アカウントに即時戦力、次バナーへの貯蓄、コレクション価値のどれが必要かを決めましょう。\n\n### 30秒の判断表\n\n| アカウント状況 | 先に確認すること | 理由 |\n| --- | --- | --- |\n| 現在のDPS／キャリー枠が不足 | Shinku | 現在のバナー価値がパッチ進行へ速く変わる |\n| すでに安定したメインチームがある | Iroi貯蓄 | 次の焦点に資源を残せる |\n| 1天井しかない | 目標を1つ選ぶ | Shinku、Iroi、武器を同時に追わない |\n| ダウンロード直後 | ダウンロード＋コード＋初心者ルート | 先に無料資源を受け取りシステムを解放する |\n| コレクター | 好きなキャラクター | 短期環境の圧力に任せない |\n\n## Shinkuの判断方法\n\nShinkuはv1.2で「今すぐ遊ぶ」ための選択です。999 Nights、現在のイベント、現チームの強化をすぐに体験したいなら、Shinkuはより早い手応えを作ります。\n\n引く前に3つ確認してください。\n\n1. Shinkuが担う役割が足りないか。\n2. Shinkuを支えるディスク、武器、仲間がすでにいるか。\n3. 引いた後もIroiまたは次の目標のために十分な天井を残せるか。\n\n3つ目が否定なら、決める前に資源の不足を確認してください。\n\n## Iroiの準備方法\n\nIroiは貯蓄目標として扱う方がよいです。多くのプレイヤーは現在のバナーに天井を使い、後でv1.2イベントとコードでは1天井をすぐ再構築できないと気づきます。\n\nより安全なルートは次のとおりです。\n\n- 現在の天井を記録する。\n- v1.2イベント、コード、日課資源を受け取る。\n- 天井から遠い場合は、キャラクターと武器を同時に追わない。\n- Iroiが好きなら、Shinkuのテストと復刻の状況を待つ。\n\n## 999 Nights資源チェックリスト\n\n引く前に次を開いてください。\n\n- /nte/version：v1.2 999 Nightsのルートを確認する。\n- /nte/redeem-codes：有効・期限切れのコードを確認する。\n- /nte/guides/download-install-guide：Steam／ダウンロード、公式サイト、端末設定を確認する。\n- /nte/guides/gacha-strategy：天井、確率、資源コストを再確認する。\n\n## よくあるミス\n\n### ミス1：現在のバナーが常に優れている\n\nそうとは限りません。現在のバナーは今すぐ遊べますが、チームが完成しているならIroiや後の目標の方が長期計画に合うことがあります。\n\n### ミス2：コードがすべての不足を補う\n\nコードは小さな不足には役立ちますが、1天井全体の主な入手先として扱うべきではありません。\n\n### ミス3：新規プレイヤーは最初に引くべき\n\n新規プレイヤーは大きく使う前に、ダウンロード、導入、コード、序盤イベントを終えるべきです。そうしないと、アカウントに必要のない役割へ資源を使う可能性があります。\n\n## おすすめルート\n\n資源が少ない：ShinkuかIroiのどちらかを選び、両方を追わない。\n\n今すぐv1.2を進めたい：まずShinkuを評価する。\n\n長期計画：Iroiのために残す。\n\n新規プレイヤー：ダウンロード、コード受取、初心者とガチャの基本を先に読む。"
   },
   {
     "id": "999-nights-mode-guide",
     "title": "异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级",
     "titleEn": "NTE 999 Nights Mode Guide: v1.2 Event Route, Shinku/Iroi Resources, and Daily Priority",
-    "titleJa": "異環 999 Nights モードガイド：v1.2イベント、Shinku/Iroi資源、毎日優先度",
+    "titleJa": "NTE 999 Nightsモードガイド：v1.2イベントルート、Shinku／Iroi資源、日課優先度",
     "category": "version",
     "categoryZh": "版本攻略",
     "categoryEn": "Version Guide",
     "categoryJa": "バージョン攻略",
     "summary": "把 1.2「999 Nights」模式、活动奖励、兑换码、Shinku 当前池和 Iroi 预留资源拆成每日执行路线。",
     "summaryEn": "A v1.2 999 Nights event route covering mode basics, rewards, codes, Shinku current banner, Iroi savings, and daily priorities.",
-    "summaryJa": "v1.2「999 Nights」のモード、報酬、コード、Shinku、Iroi貯蓄、毎日優先度を整理します。",
+    "summaryJa": "モードの基本、報酬、コード、Shinku現在バナー、Iroi貯蓄、日課の優先順位を扱うv1.2 999 Nightsイベントルートです。",
     "content": "## 先看结论\n\n1.2「999 Nights」最重要的不是把所有内容一次清完，而是每天把活动奖励、兑换码、日常资源和抽卡目标串起来。如果你在 Shinku 和 Iroi 之间摇摆，999 Nights 的资源应该先服务“保底路线”，再服务强度追逐。\n\n## 每天上线先做什么\n\n| 优先级 | 动作 | 为什么 |\n| --- | --- | --- |\n| 1 | 检查活动任务 | 限时奖励错过就少一段资源 |\n| 2 | 领取兑换码和邮件 | 补 Shinku/Iroi 保底缺口 |\n| 3 | 清日常与体力 | 稳定换取养成材料 |\n| 4 | 推 999 Nights 进度 | 解锁阶段奖励和模式资源 |\n| 5 | 再决定抽卡 | 避免先抽后发现资源不够 |\n\n## 999 Nights 怎么理解\n\n999 Nights 更像版本活动与模式汇总页。它会把剧情、挑战、奖励和角色热度集中到同一时期，因此用户搜索时经常同时出现：\n\n- 999 Nights 怎么玩。\n- Shinku 值不值得抽。\n- Iroi 要不要留。\n- 兑换码有没有新码。\n- Steam/download 新玩家现在能不能追。\n\n页面不要把这些问题混成一团，最好的结构是先讲模式，再讲资源，再讲抽卡决策。\n\n## Shinku 当前期怎么安排\n\n如果你想抽 Shinku，先确认三件事：\n\n1. 当前队伍是否真的缺她的定位。\n2. 活动和兑换码补完后是否够保底。\n3. 抽完后是否还保得住 Iroi 或后续角色。\n\n如果你只差小额资源，可以先补活动、日常和兑换码；如果离保底很远，不要把 999 Nights 的奖励想象成万能补票。\n\n## Iroi 预留路线\n\n想留 Iroi 的玩家，999 Nights 期间要控制冲动消费：\n\n- 当前池只做必要尝试。\n- 武器和外观消费先降级。\n- 每天记录新增资源。\n- 等角色实测和后续公告再决定是否转向。\n\n## 新玩家追赶路线\n\n刚下载入坑的玩家建议按这个顺序：\n\n1. /nte/guides/download-install-guide：先解决下载、设备和账号。\n2. /nte/redeem-codes：领有效兑换码。\n3. /nte/guides/beginner-guide：理解基础系统。\n4. /nte/version：看 1.2 版本路线。\n5. /nte/guides/shinku-iroi-pull-plan：决定 Shinku 还是 Iroi。\n\n## 常见误区\n\n### 误区 1：活动奖励够补所有抽卡缺口\n\n不一定。活动奖励适合补差额，不适合当成完整保底来源。\n\n### 误区 2：先抽再补资源\n\n容易出问题。先算当前资源、活动剩余、兑换码和日常收入，再抽更稳。\n\n### 误区 3：新玩家必须追当前池\n\n新玩家先把基础系统、兑换码和活动解锁做好，再根据第一队缺口判断。\n\n## 推荐路线\n\n资源紧：每天先做 999 Nights 和兑换码，只锁定一个抽卡目标。\n\n想马上提升：评估 Shinku 是否补队伍短板。\n\n想长期规划：为 Iroi 和后续角色预留。",
     "contentEn": "## Quick answer\n\nThe key to v1.2 999 Nights is not clearing everything at once. Connect event rewards, codes, daily resources, and pull goals every day. If you are choosing between Shinku and Iroi, use 999 Nights resources for pity planning before chasing hype.\n\n## Daily priority\n\n| Priority | Action | Why |\n| --- | --- | --- |\n| 1 | Check event tasks | Limited rewards can disappear |\n| 2 | Claim codes and mail | Helps cover Shinku/Iroi pity gaps |\n| 3 | Spend dailies and stamina | Stable material income |\n| 4 | Push 999 Nights progress | Unlocks stage rewards and mode resources |\n| 5 | Decide pulls after counting | Avoid spending before resource math |\n\n## What is 999 Nights?\n\nTreat it as the v1.2 event and mode layer that connects story, challenges, rewards, and character hype. Search demand usually combines how to play, Shinku value, Iroi savings, codes, and new-player download questions.\n\n## Shinku route\n\nBefore pulling Shinku, confirm whether your team needs her role, whether event/code resources cover pity, and whether you can still save for Iroi or later targets.\n\n## Iroi savings route\n\nLimit current-banner impulse pulls, delay weapon or cosmetic spending, track daily resources, and wait for testing or official notes before switching targets.\n\n## New-player route\n\nDownload/install, claim codes, read beginner basics, open the v1.2 hub, then use the Shinku vs Iroi pull plan.\n\n## Common mistakes\n\nDo not assume event rewards replace a full guarantee, do not pull before counting resources, and do not force current-banner pulls on brand-new accounts.",
     "tags": [
@@ -2251,35 +2271,42 @@
         "question": "What should I do first in 999 Nights?",
         "questionZh": "999 Nights 每天先做什么？",
         "answer": "Check limited event tasks, claim codes and mail, clear daily resources, then push mode progress before pulling.",
-        "answerZh": "先看限时任务，领兑换码和邮件，清日常资源，再推模式进度，最后决定是否抽卡。"
+        "answerZh": "先看限时任务，领兑换码和邮件，清日常资源，再推模式进度，最后决定是否抽卡。",
+        "questionJa": "999 Nightsでは最初に何をすべきですか？",
+        "answerJa": "限定イベントタスクを確認し、コードとメールを受け取り、日課資源を消費してからモード進行を進め、最後にガチャを決めてください。"
       },
       {
         "question": "Can 999 Nights rewards cover a full pity?",
         "questionZh": "999 Nights 奖励够一轮保底吗？",
         "answer": "Treat them as gap-filling resources, not a guaranteed full pity source. Count all resources before committing.",
-        "answerZh": "建议当成补差资源，而不是完整保底来源；抽前要先算总资源。"
+        "answerZh": "建议当成补差资源，而不是完整保底来源；抽前要先算总资源。",
+        "questionJa": "999 Nightsの報酬で1天井を賄えますか？",
+        "answerJa": "天井全体を保証する入手先ではなく、不足を補う資源として扱ってください。決める前にすべての資源を計算しましょう。"
       },
       {
         "question": "Should new players pull Shinku immediately?",
         "questionZh": "新玩家要马上抽 Shinku 吗？",
         "answer": "Not immediately. Finish download setup, claim codes, unlock basics, then decide whether Shinku fills your first-team gap.",
-        "answerZh": "不建议立刻抽。先完成下载、领码、解锁基础系统，再看 Shinku 是否补第一队缺口。"
+        "answerZh": "不建议立刻抽。先完成下载、领码、解锁基础系统，再看 Shinku 是否补第一队缺口。",
+        "questionJa": "新規プレイヤーはShinkuをすぐ引くべきですか？",
+        "answerJa": "すぐには引かないでください。ダウンロード設定、コード受取、基本システム解放を終えてから、Shinkuが最初のチームの不足を埋めるか判断してください。"
       }
     ],
-    "date": "2026-07-21"
+    "date": "2026-07-21",
+    "contentJa": "## 簡単な答え\n\nv1.2 999 Nightsで重要なのは、一度にすべてを終えることではありません。毎日、イベント報酬、コード、日課資源、ガチャ目標をつなげましょう。ShinkuとIroiの間で迷うなら、話題を追う前に999 Nightsの資源を天井計画に使ってください。\n\n## 毎日の優先順位\n\n| 優先度 | 行動 | 理由 |\n| --- | --- | --- |\n| 1 | イベントタスクを確認する | 限定報酬は消える可能性がある |\n| 2 | コードとメールを受け取る | Shinku／Iroiの天井差を埋める助けになる |\n| 3 | デイリーとスタミナを消費する | 安定した素材収入 |\n| 4 | 999 Nightsの進行を進める | 段階報酬とモード資源を解放する |\n| 5 | 数えた後にガチャを決める | 資源計算前の消費を避ける |\n\n## 999 Nightsとは\n\n999 Nightsは、ストーリー、挑戦、報酬、キャラクターの話題をつなぐv1.2のイベント・モード層として扱ってください。検索需要には、遊び方、Shinkuの価値、Iroi貯蓄、コード、新規プレイヤーのダウンロード質問が一緒に現れることが多いです。\n\n## Shinkuルート\n\nShinkuを引く前に、チームにその役割が必要か、イベントとコードの資源で天井を補えるか、Iroiまたは後の目標のためにまだ残せるかを確認してください。\n\n## Iroi貯蓄ルート\n\n現在のバナーでの衝動的な引きを抑え、武器やコスメティックへの支出を遅らせ、毎日の資源を記録し、目標を変える前にテストや公式情報を待ってください。\n\n## 新規プレイヤールート\n\nダウンロード／インストール、コード受取、初心者の基本、v1.2ハブ、Shinku対Iroiのガチャ計画の順に進めてください。\n\n## よくあるミス\n\nイベント報酬が1天井を完全に置き換えるとは考えないでください。資源を数える前に引かず、まったく新しいアカウントで現在のバナーを無理に引かないでください。"
   },
   {
     "id": "iroi-phase-prep-guide",
     "title": "异环 Iroi 预热期准备指南：999 Nights 后资源、Shinku 取舍、兑换码和每日清单",
     "titleEn": "NTE Iroi Phase Prep Guide: Post-999 Nights Resources, Shinku Trade-Offs, Codes, and Daily Checklist",
-    "titleJa": "異環 Iroi準備ガイド：999 Nights後の資源、Shinku判断、コード、毎日チェック",
+    "titleJa": "NTE Iroiフェーズ準備ガイド：999 Nights後の資源、Shinkuのトレードオフ、コード、日課チェック",
     "category": "version",
     "categoryZh": "版本攻略",
     "categoryEn": "Version Guide",
     "categoryJa": "バージョン攻略",
     "summary": "面向 Iroi 预热和 1.2 后半搜索，整理 Shinku 当前池后的资源止损、兑换码检查、活动每日路线和保底预留。",
     "summaryEn": "A late-v1.2 Iroi preparation guide covering Shinku trade-offs, resource preservation, codes, daily tasks, and pity planning.",
-    "summaryJa": "Iroi準備とv1.2後半向けに、Shinkuとの取捨選択、資源維持、コード、毎日タスク、天井計画を整理します。",
+    "summaryJa": "Shinkuのトレードオフ、資源温存、コード、日課、天井計画を扱うv1.2後半のIroi準備ガイドです。",
     "content": "## 先看结论\n\n如果你已经在 999 Nights 期间抽过 Shinku，Iroi 预热期最重要的是止损和盘点资源；如果你还没抽，最重要的是确认自己到底需要当前战力，还是更想留给 Iroi。\n\n这页不重复 999 Nights 模式玩法，重点解决“现在该不该停手、每天还要做什么、资源够不够下一期”。\n\n## Iroi 预热期资源表\n\n| 状态 | 建议 | 风险 |\n| --- | --- | --- |\n| 已抽到 Shinku | 先停手盘点资源 | 继续追武器可能影响 Iroi |\n| Shinku 歪了 | 算大保底价值 | 情绪补票最容易亏 |\n| 没抽但心动 | 等实测和后续公告 | 错过当前池即时体验 |\n| 只够一次保底 | 二选一 | 不建议双追 |\n| 新玩家 | 先补基础系统 | 抽到也可能养不起 |\n\n## 每日清单\n\n1. 先做 999 Nights 限时任务。\n2. 领取兑换码、邮件和活动奖励。\n3. 记录当天新增抽卡资源。\n4. 清体力，补主队材料。\n5. 不确定目标时，不碰武器池和外观消费。\n6. 等 Iroi 信息更明确后再更新抽卡计划。\n\n## Shinku 之后要不要追武器\n\n只有在三个条件都满足时才建议考虑：你已经确定 Shinku 是长期核心、主队材料跟得上、追武器后仍不影响 Iroi 或后续角色。否则武器池很容易把后半资源吃空。\n\n## FAQ\n\n### Iroi 预热期该囤什么？\n\n优先囤抽卡资源、通用养成材料和当前主队刚需材料。不要为未公布细节提前消耗高价值资源。\n\n### Shinku 没抽到还要继续吗？\n\n先算距离保底还差多少，再看是否真的缺她的定位。如果只是被当前热度影响，可以等 Iroi 信息和实测再决定。\n\n### 新玩家现在追 Iroi 来得及吗？\n\n来得及准备，但不要跳过下载、兑换码、基础系统和主队养成。资源规划比盲抽更重要。",
     "contentEn": "## Quick answer\n\nDuring the Iroi warm-up phase, count resources before chasing more Shinku pulls or weapons. If you already pulled Shinku, stop and recalculate. If you have not, decide whether you need current power or prefer saving for Iroi.\n\n## Daily checklist\n\n| Step | Action |\n|---|---|\n| 1 | Finish limited 999 Nights tasks |\n| 2 | Claim codes and mail |\n| 3 | Track daily pull income |\n| 4 | Spend stamina on core-team materials |\n| 5 | Avoid weapon/skin spending if undecided |\n\n## FAQ\n\n### Should I chase Shinku's weapon?\n\nOnly if Shinku is a long-term core and you can still afford Iroi or later targets.\n\n### Can new players prepare for Iroi?\n\nYes, but finish onboarding, codes, events, and basic team building first.",
     "tags": [
@@ -2291,7 +2318,8 @@
       "Pity",
       "Resource Planning",
       "Daily Checklist"
-    ]
+    ],
+    "contentJa": "## 簡単な答え\n\nIroiの準備期間では、Shinkuをさらに引いたり武器を追ったりする前に資源を数えてください。すでにShinkuを引いたなら、一度止まって再計算します。まだ引いていないなら、現在の戦力が必要か、Iroiに残したいかを決めてください。\n\n## 日課チェックリスト\n\n| 手順 | 行動 |\n| --- | --- |\n| 1 | 限定999 Nightsタスクを完了する |\n| 2 | コードとメールを受け取る |\n| 3 | 毎日のガチャ収入を記録する |\n| 4 | スタミナをコアチームの素材に使う |\n| 5 | 決めていない場合は武器／スキン支出を避ける |\n\n## FAQ\n\n### Shinkuの武器を追うべきですか？\n\nShinkuが長期的なコアで、Iroiまたは後の目標にもまだ余裕がある場合だけにしてください。\n\n### 新規プレイヤーもIroiを準備できますか？\n\nできますが、まず導入、コード、イベント、基本チーム作りを完了してください。"
   },
   {
     "id": "aug31-sep14-event-calendar-999-nights",
@@ -2319,9 +2347,14 @@
         "question": "Should I treat v1.3 as confirmed?",
         "questionZh": "异环 1.3 可以写成已确认吗？",
         "answer": "No. Keep it as watch wording unless official notices confirm the date and content.",
-        "answerZh": "不要。除非官方公告确认日期和内容，否则保持观察口径。"
+        "answerZh": "不要。除非官方公告确认日期和内容，否则保持观察口径。",
+        "questionJa": "v1.3を確定として扱うべきですか？",
+        "answerJa": "いいえ。公式告知が日付と内容を確認するまで、監視表現にとどめてください。"
       }
     ],
-    "date": "2026-08-31"
+    "date": "2026-08-31",
+    "titleJa": "NTE 9月イベント振り返り：999 Nights、Clash、Iroi／Shinku、コード状況",
+    "summaryJa": "9月14日のイベント期間後に、999 Nights、Clash、Iroi／Shinku、コード状況、Steam／ダウンロード確認を振り返るガイドです。",
+    "contentJa": "## 簡単な答え\n\n8月31日から9月14日のイベント期間後、NTE v1.2の検索はイベント振り返りと報酬状況、999 Nights、Clash、Iroi／Shinku、コード、Steam／ダウンロードに集中しています。公式告知が確認するまで、v1.3は監視表現にとどめてください。\n\n## イベント後の振り返りルート\n\nイベントタスクを確認し、コードとメールを受け取り、999 Nights／Clashの進行を進め、Shinku／Iroiの資源を数え、その後新規プレイヤーは公式ダウンロードまたはSteam入口を確認してください。"
   }
 ]

@@ -35,7 +35,7 @@ const indexableGuides = guideData.filter((guide) =>
 );
 
 if (indexableGuides.length === 0) throw new Error('No Japanese guides meet the indexing quality threshold.');
-if (indexableGuides.some((guide) => !Array.isArray(guide.faq) || guide.faq.some((item) => !item.questionJa || !item.answerJa))) {
+if (indexableGuides.some((guide) => Array.isArray(guide.faq) && guide.faq.some((item) => !item.questionJa || !item.answerJa))) {
   throw new Error('An indexable Japanese guide is missing localized FAQ content.');
 }
 
