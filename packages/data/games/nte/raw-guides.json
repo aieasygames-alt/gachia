@@ -131,21 +131,30 @@
         "question": "What is the best complete beginner strategy in Neverness to Everness?",
         "questionZh": "异环中新手入门完全最重要的是什么？",
         "answer": "A comprehensive beginner guide for Everyloop, covering basic systems, resource allocation, and character building priorities.",
-        "answerZh": "从零开始的异环新手教程，涵盖基础系统、资源分配、角色培养优先级。"
+        "answerZh": "从零开始的异环新手教程，涵盖基础系统、资源分配、角色培养优先级。",
+        "questionJa": "NTEで初心者が最初に重視すべきことは？",
+        "answerJa": "基本システム、資源配分、キャラクター育成の優先順位を把握することです。"
       },
       {
         "question": "How to start playing Neverness to Everness?",
         "questionZh": "如何提升异环的游戏水平？",
         "answer": "Follow our complete beginner guide for the best results. This guide covers essential tips and strategies for Neverness to Everness players.",
-        "answerZh": "遵循我们的新手入门完全指南可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。"
+        "answerZh": "遵循我们的新手入门完全指南可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。",
+        "questionJa": "NTEを始めるには何から進めればよいですか？",
+        "answerJa": "本ガイドを参考に、基本操作と育成の優先順位を確認しながら進めてください。"
       },
       {
         "question": "Is complete beginner  worth it in Neverness to Everness?",
         "questionZh": "异环新手入门完全值得投入吗？",
         "answer": "Yes, A comprehensive beginner guide for Everyloop, covering basic systems, resource allocation, and character building priorities.",
-        "answerZh": "从零开始的异环新手教程，涵盖基础系统、资源分配、角色培养优先级。"
+        "answerZh": "从零开始的异环新手教程，涵盖基础系统、资源分配、角色培养优先级。",
+        "questionJa": "初心者向けガイドを読む価値はありますか？",
+        "answerJa": "あります。序盤の資源配分と育成方針を決める基準を確認できます。"
       }
-    ]
+    ],
+    "titleJa": "NTE 初心者向け完全ガイド",
+    "summaryJa": "Neverness to Everness（NTE）の基本システム、資源配分、キャラクター育成の優先順位をまとめた初心者向けガイドです。",
+    "contentJa": "Everyloop へようこそ。このガイドでは、ゲームの基本システムをすばやく把握するための要点を説明します。\n\n## 基本システム\n\nEveryloop は、キャラクター収集と戦闘システムを備えたオープンワールドアクションRPGです。元素反応の仕組みがあり、異なる元素を持つキャラクター同士の連携が戦闘の鍵になります。\n\n## 資源配分\n\n序盤の資源には限りがあります。メインDPSを1〜2人に絞ってレベルを上げ、スタミナと経験値素材を集中的に使いましょう。全キャラクターに均等に資源を配分しないでください。\n\n## キャラクター育成の優先順位\n\n1. メインDPSとその武器のレベルを優先する\n2. 次にサポートキャラクターの重要スキルを強化する\n3. 防御系の素材は後から補ってもよい\n4. 共鳴チェーンの解放も見落とさない\n\n## 序盤の探索のヒント\n\nメインストーリーは資源を得る主な手段です。安定した収入のためにデイリー依頼もこなしつつ、ストーリー進行を優先してください。\n\n## ガチャの考え方\n\n自分の主力チームに必要な役割を基準にバナーを選びましょう。限定キャラクターをむやみに追う必要はありません。適切な編成なら星4キャラクターも十分に活躍します。今後登場する強力なキャラクターに備えて、資源を残しておきましょう。"
   },
   {
     "id": "leveling-priority",
@@ -173,21 +182,30 @@
         "question": "What is the best character leveling material priority strategy in Neverness to Everness?",
         "questionZh": "异环中角色升级材料优先级最重要的是什么？",
         "answer": "Detailed material requirements for each level stage to help you plan stamina allocation efficiently.",
-        "answerZh": "详解各等级阶段的材料需求，帮助你高效规划体力分配。"
+        "answerZh": "详解各等级阶段的材料需求，帮助你高效规划体力分配。",
+        "questionJa": "キャラクター育成素材は何を優先すべきですか？",
+        "answerJa": "各レベル帯の必要素材を確認し、スタミナ配分を計画することが重要です。"
       },
       {
         "question": "How to improve at Neverness to Everness?",
         "questionZh": "如何提升异环的游戏水平？",
         "answer": "Follow our character leveling material priority guide for the best results. This guide covers essential tips and strategies for Neverness to Everness players.",
-        "answerZh": "遵循我们的角色升级材料优先级指南可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。"
+        "answerZh": "遵循我们的角色升级材料优先级指南可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。",
+        "questionJa": "NTEで効率よく強くなるには？",
+        "answerJa": "本ガイドを参考に、育成素材の優先順位を決めて計画的に使ってください。"
       },
       {
         "question": "Is character leveling material priority  worth it in Neverness to Everness?",
         "questionZh": "异环角色升级材料优先级值得投入吗？",
         "answer": "Yes, Detailed material requirements for each level stage to help you plan stamina allocation efficiently.",
-        "answerZh": "详解各等级阶段的材料需求，帮助你高效规划体力分配。"
+        "answerZh": "详解各等级阶段的材料需求，帮助你高效规划体力分配。",
+        "questionJa": "育成素材の優先順位を確認する価値はありますか？",
+        "answerJa": "あります。段階ごとの必要素材を把握し、資源の分散を避けるために役立ちます。"
       }
-    ]
+    ],
+    "titleJa": "キャラクター育成素材の優先順位ガイド",
+    "summaryJa": "Neverness to Evernessのキャラクター育成に必要な突破素材、経験値素材、通貨コストを段階別に整理したガイドです。",
+    "contentJa": "キャラクターのレベル上げは、Neverness to Everness における戦闘力の土台です。段階ごとの必要素材を理解すると、スタミナを効率よく配分でき、長期的に優先しないキャラクターへの資源浪費を防げます。\n\n## レベル1〜20：素早く移行する段階\n\nこの段階では素材消費は少なめです。効率を気にしすぎず、メインクエストと探索を自然に進めましょう。序盤の難度はキャラクターレベルに応じて上がるため、まずメインDPSをできるだけ早くレベル20にすることを優先します。序盤の多くのコンテンツでは強力な主力1人で対応できるため、サブキャラクターは遅れていても構いません。\n\n## レベル20〜40：最初のボトルネック\n\nレベル20からは専用の突破素材が必要になります。スタミナはキャラクター育成素材とスキル強化素材に半分ずつ配分してください。この時期に、投資する4人のコアチームを決めます。素材コストは大きく増えるため、あまり多くのユニットに資源を分散させないようにしましょう。週末のダンジョンでは育成素材の報酬が2倍になることがあります。\n\n## レベル40〜60：消費のピーク\n\nゲーム内で最も資源を消費する段階です。最終的に編成から外れるユニットに素材を使わないよう、育てるキャラクターを前もって計画してください。エリート素材が進行を制限する要因になり、各キャラクターには固有の領域ドロップが必要です。素材ダンジョンの日替わりローテーションに合わせて周回予定を組みましょう。\n\n## レベル60〜80：慎重な計画\n\n高レベル素材は手に入りにくく、集中して周回する必要があります。特定ダンジョンの開催予定を確認し、スタミナ2倍イベントを有効に使いましょう。突破素材の報酬が増えるイベントに備えて、スタミナ回復アイテムを一部残しておくことも検討してください。この段階では新しいユニットを育てるより、最も強い2チームに集中します。\n\n## レベル80：最大レベル後の方針\n\n最大レベルに到達したら、余った素材は今後の新キャラクター用に保管してください。環境はパッチごとに変わるため、素材の備蓄があれば新実装キャラクターをすぐに育成できます。余剰の低ランク素材は、インベントリに放置するのではなく、クラフトシステムで上位素材へ変換しましょう。"
   },
   {
     "id": "elemental-reactions",
@@ -215,21 +233,30 @@
         "question": "What is the best elemental reaction system strategy in Neverness to Everness?",
         "questionZh": "异环中元素反应系统详解最重要的是什么？",
         "answer": "In-depth analysis of Everyloop's elemental reaction system and the core logic of team composition.",
-        "answerZh": "深入解析异环的元素反应机制，掌握队伍搭配的核心逻辑。"
+        "answerZh": "深入解析异环的元素反应机制，掌握队伍搭配的核心逻辑。",
+        "questionJa": "NTEの元素反応で最も重要なことは何ですか？",
+        "answerJa": "元素反応の仕組みと、チーム編成における基本ロジックを理解することです。"
       },
       {
         "question": "How to improve at Neverness to Everness?",
         "questionZh": "如何提升异环的游戏水平？",
         "answer": "Follow our elemental reaction system guide for the best results. This guide covers essential tips and strategies for Neverness to Everness players.",
-        "answerZh": "遵循我们的元素反应系统详解可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。"
+        "answerZh": "遵循我们的元素反应系统详解可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。",
+        "questionJa": "NTEで戦闘力を高めるには？",
+        "answerJa": "元素反応ガイドを参考に、キャラクターの役割と元素の組み合わせを見直してください。"
       },
       {
         "question": "Is elemental reaction system  worth it in Neverness to Everness?",
         "questionZh": "异环元素反应系统详解值得投入吗？",
         "answer": "Yes, In-depth analysis of Everyloop's elemental reaction system and the core logic of team composition.",
-        "answerZh": "深入解析异环的元素反应机制，掌握队伍搭配的核心逻辑。"
+        "answerZh": "深入解析异环的元素反应机制，掌握队伍搭配的核心逻辑。",
+        "questionJa": "元素反応システムを確認する価値はありますか？",
+        "answerJa": "あります。強いチームを組むための基礎になるためです。"
       }
-    ]
+    ],
+    "titleJa": "元素反応システムガイド",
+    "summaryJa": "Neverness to Everness（NTE）の元素反応システムと、最適なチーム編成を考えるための基本ロジックを解説します。",
+    "contentJa": "元素反応は Everyloop の戦闘システムにおける中核です。異なる元素の間で起こる反応を理解することが、強いチームを組む鍵になります。\n\n## 基本的な元素タイプ\n\nEveryloop には複数の元素属性があり、それぞれに固有の特徴と反応パターンがあります。\n\n## よくある元素反応\n\n### 増幅反応\n\n増幅反応はダメージ出力を大きく高めます。DPSを中心にしたチーム編成に向いています。\n\n### 弱体化反応\n\n弱体化反応は敵の防御力や耐性を下げ、チームがダメージを与えやすい状態を作ります。\n\n### 制御反応\n\n特定の元素組み合わせでは、凍結やスタンのような群集制御効果が発生します。特定の戦闘場面で特に有用です。\n\n## チーム編成のヒント\n\nバランスのよいチームは通常、メインDPS1人、サブDPS1人、サポート1人、ヒーラーまたはシールダー1人で構成されます。複数の反応を発動できるよう、元素の組み合わせに幅を持たせてください。"
   },
   {
     "id": "stamina-management",
@@ -257,21 +284,30 @@
         "question": "What is the best stamina management strategy in Neverness to Everness?",
         "questionZh": "异环中体力管理最优策略最重要的是什么？",
         "answer": "How to efficiently use your daily limited stamina for maximum returns.",
-        "answerZh": "如何高效使用每天有限的体力资源，最大化收益。"
+        "answerZh": "如何高效使用每天有限的体力资源，最大化收益。",
+        "questionJa": "NTEでスタミナ管理で最も重要なことは何ですか？",
+        "answerJa": "限られた毎日のスタミナを、必要な素材へ優先的に使うことです。"
       },
       {
         "question": "How to improve at Neverness to Everness?",
         "questionZh": "如何提升异环的游戏水平？",
         "answer": "Follow our stamina management strategy for the best results. This guide covers essential tips and strategies for Neverness to Everness players.",
-        "answerZh": "遵循我们的体力管理最优策略可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。"
+        "answerZh": "遵循我们的体力管理最优策略可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。",
+        "questionJa": "NTEで効率よく進めるには？",
+        "answerJa": "スタミナ管理戦略を参考に、毎日の使用先を優先順位に沿って決めてください。"
       },
       {
         "question": "Is stamina management strategy worth it in Neverness to Everness?",
         "questionZh": "异环体力管理最优策略值得投入吗？",
         "answer": "Yes, How to efficiently use your daily limited stamina for maximum returns.",
-        "answerZh": "如何高效使用每天有限的体力资源，最大化收益。"
+        "answerZh": "如何高效使用每天有限的体力资源，最大化收益。",
+        "questionJa": "スタミナ管理戦略を確認する価値はありますか？",
+        "answerJa": "あります。毎日の限られたスタミナから得られる成果を高める助けになります。"
       }
-    ]
+    ],
+    "titleJa": "スタミナ管理戦略",
+    "summaryJa": "Neverness to Evernessで毎日のスタミナを効率よく使うための優先順位、日課、長期的な資源計画をまとめます。",
+    "contentJa": "スタミナは Everyloop で特に貴重な資源の一つです。毎日の自然回復には限りがあるため、使い道を計画することが効率的なプレイの鍵になります。\n\n## 毎日のスタミナ獲得\n\nスタミナは8分ごとに1回復し、自然回復では1日180まで回復します。補給やイベントと組み合わせることで、1日に使えるスタミナはさらに増やせます。\n\n## スタミナの優先順位\n\n1. **メインストーリー素材**：コンテンツを解放するために進める\n2. **キャラクター突破素材**：レベル上限を上げる\n3. **武器強化素材**：武器レベルを上げる\n4. **スキル本**：スキルレベルを上げる\n5. **ゴールドダンジョン**：資金を補う\n\n## イベント期間の方針\n\n報酬2倍や特別ダンジョンがあるイベント中は、対応する素材の周回を優先してください。\n\n## 初心者へのヒント\n\n序盤はスタミナを貯め込みすぎないようにしましょう。まず主力キャラクターを実用的な状態にすることを優先してください。序盤は資源をためることより、探索を速く進められることの方が重要です。"
   },
   {
     "id": "daily-routine",
@@ -299,21 +335,30 @@
         "question": "What is the best daily routine checklist in Neverness to Everness?",
         "questionZh": "异环中每日必做任务清单最重要的是什么？",
         "answer": "What to do every time you log in - a complete daily task planning guide.",
-        "answerZh": "每天登录游戏后应该做什么，完整的每日任务规划。"
+        "answerZh": "每天登录游戏后应该做什么，完整的每日任务规划。",
+        "questionJa": "NTEの日課で最も重要なことは何ですか？",
+        "answerJa": "ログインごとに行うことを整理し、毎日・毎週・毎月の資源獲得を見落とさないことです。"
       },
       {
         "question": "How to improve at Neverness to Everness?",
         "questionZh": "如何提升异环的游戏水平？",
         "answer": "Follow our daily routine checklist for the best results. This guide covers essential tips and strategies for Neverness to Everness players.",
-        "answerZh": "遵循我们的每日必做任务清单可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。"
+        "answerZh": "遵循我们的每日必做任务清单可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。",
+        "questionJa": "NTEで効率よく進めるには？",
+        "answerJa": "日課チェックリストを参考に、優先するタスクを決めて進めてください。"
       },
       {
         "question": "Is daily routine checklist worth it in Neverness to Everness?",
         "questionZh": "异环每日必做任务清单值得投入吗？",
         "answer": "Yes, What to do every time you log in - a complete daily task planning guide.",
-        "answerZh": "每天登录游戏后应该做什么，完整的每日任务规划。"
+        "answerZh": "每天登录游戏后应该做什么，完整的每日任务规划。",
+        "questionJa": "デイリー行動チェックリストを確認する価値はありますか？",
+        "answerJa": "あります。毎日の資源獲得機会を逃さないために役立ちます。"
       }
-    ]
+    ],
+    "titleJa": "デイリー行動チェックリスト",
+    "summaryJa": "Neverness to Evernessでログインごとに行うこと、週次タスク、月間目標、効率化のヒントをまとめた日課ガイドです。",
+    "contentJa": "よい日課を作ることで、資源を獲得できる機会を逃しにくくなります。\n\n## 毎日必ず行うこと\n\n- **デイリー依頼**（4件）：経験値と資源を安定して得られる\n- **スタミナ消費**：今もっとも必要な素材を周回する\n- **ショップ確認**：交換に役立つアイテムを探す\n- **イベント進行**：期間限定イベントのタスクを進める\n\n## 毎週必ず行うこと\n\n- **週ボス**：高級なキャラクター・武器突破素材を得る\n- **深淵チャレンジ**：スターライトストーンなどの報酬を得る\n- **ショップ更新**：週ごとの通貨で素材を交換する\n\n## 毎月の確認事項\n\n- **月間パス／バトルパス**：更新が必要か確認する\n- **イベントカレンダー**：翌月の重要イベントを計画する\n- **資源インベントリ**：各種素材の備蓄を確認する\n\n## 効率化のヒント\n\nロード画面を利用してインベントリを整理し、探索中は目的地の間のルートを計画して、不要な移動時間を減らしてください。"
   },
   {
     "id": "gacha-strategy",
