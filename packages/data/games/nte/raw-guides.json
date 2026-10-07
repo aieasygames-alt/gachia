@@ -1516,27 +1516,38 @@
         "question": "When does the housing system unlock?",
         "questionZh": "异环房屋系统什么时候解锁？",
         "answer": "Housing unlocks after completing Chapter 2 of the main story. You'll receive a guide quest that walks you through your first property purchase.",
-        "answerZh": "完成主线第二章后解锁。系统会给你一个引导任务，带你完成首次购房。"
+        "answerZh": "完成主线第二章后解锁。系统会给你一个引导任务，带你完成首次购房。",
+        "questionJa": "住宅システムはいつ解放されますか？",
+        "answerJa": "メインストーリー第2章の完了後に解放されます。最初の物件購入を案内するガイドクエストを受け取ります。"
       },
       {
         "question": "How do I get the free S-rank character from City Tycoon?",
         "questionZh": "城市经营怎么免费获得S级角色？",
         "answer": "Progress through City Tycoon milestones by managing shops, completing city quests, and developing your district. At a specific milestone, you'll unlock Xiaozhi (S-rank) for free. This takes approximately 2-3 weeks of active play.",
-        "answerZh": "通过经营店铺、完成城市任务和发展区域来推进城市经营进度。达到特定里程碑时解锁免费S级角色小吱，大约需要2-3周活跃游戏。"
+        "answerZh": "通过经营店铺、完成城市任务和发展区域来推进城市经营进度。达到特定里程碑时解锁免费S级角色小吱，大约需要2-3周活跃游戏。",
+        "questionJa": "City Tycoonから無料Sランクキャラクターを得るには？",
+        "answerJa": "ショップを経営し、都市クエストを完了し、地区を開発してCity Tycoonの到達点を進めます。特定の到達点でXiaozhi（Sランク）が無料で解放されます。原稿では、活発にプレイして約2〜3週間かかるとされています。"
       },
       {
         "question": "Can I buy multiple properties?",
         "questionZh": "异环可以买多套房子吗？",
         "answer": "Yes, you can purchase multiple properties in different districts. Each property can be decorated independently and host different types of shops for varied income streams.",
-        "answerZh": "可以。你可以在不同区域购买多处房产，每处独立装修并开设不同类型的店铺获取多样收益。"
+        "answerZh": "可以。你可以在不同区域购买多处房产，每处独立装修并开设不同类型的店铺获取多样收益。",
+        "questionJa": "複数の物件を購入できますか？",
+        "answerJa": "できます。異なる地区で複数の物件を購入できます。各物件は個別に装飾でき、さまざまな収入源のため異なる種類のショップを置けます。"
       },
       {
         "question": "Is the housing system pay-to-win?",
         "questionZh": "房屋系统要氪金吗？",
         "answer": "No. Properties are purchased with Coins (free currency). Furniture can be crafted or bought with free currency. The City Tycoon free S-rank character is achievable entirely without spending real money.",
-        "answerZh": "不需要。房产用甲硬币（免费货币）购买，家具可以制作或用免费货币购买。城市经营的免费S级角色完全可以零氪获得。"
+        "answerZh": "不需要。房产用甲硬币（免费货币）购买，家具可以制作或用免费货币购买。城市经营的免费S级角色完全可以零氪获得。",
+        "questionJa": "住宅システムは課金必須ですか？",
+        "answerJa": "いいえ。物件はCoins（無料通貨）で購入します。家具はクラフトするか無料通貨で購入でき、City Tycoonの無料Sランクキャラクターは現金を使わずに獲得できます。"
       }
-    ]
+    ],
+    "titleJa": "NTE住宅システムガイド：購入、装飾、収益",
+    "summaryJa": "物件購入、装飾、収入の仕組み、無料Sランクキャラクターを得るCity Tycoonモードを含むNTE住宅システムの完全ガイドです。",
+    "contentJa": "NTEの住宅システムは独自のライフスタイル機能です。プレイヤーはHethereauで物件を購入し、家を装飾し、City Tycoonモードを通じて継続収入を得られます。無料のSランクキャラクターも含まれます。\n\n## 住宅の解放\n\n住宅はメインストーリーの第2章を完了すると解放されます。ガイドクエストにより、システム補助金を使った最初の物件購入まで案内されます。\n\n## 物件購入\n\n1. Hethereauの不動産NPCを訪れ、利用可能な物件を確認する\n2. 地区ごとに価格と機能が異なる。中心街は最も高価だが最も高い収益を得られる\n3. Coins（無料のゲーム内通貨）を支払って購入を完了する\n4. 物件に入り、自由に装飾する\n\n## 装飾システム\n\n家具の配置：家具店で購入するか、アイテムをクラフトします。装飾家具は見た目のみで、機能家具はステータスボーナスを提供します。\n\n機能家具：休息ベッド（スタミナ回復＋XPバフ）、収納（追加インベントリ）、展示棚（収集品の展示）、作業台（家具とアイテムのクラフト）。\n\nスタイル：モダンミニマル、日本風、工業風など。自由に混ぜることもできます。\n\nインタラクト要素：スピーカーは収集した音楽（P5Rコラボ曲を含む）を再生し、テレビはゲーム内アニメーションを表示します。\n\n## City Tycoonモード\n\n住宅の最も価値ある部分です。\n\nショップ経営：物件内でショップを開き、定期的にCoinsと素材収入を得ます。ショップの種類により得られる資源が異なります。\n\n地区開発：地区に投資して繁栄度を上げます。繁栄度が高いほど、そのエリアの全プレイヤーの収益ボーナスが上がります。\n\n都市クエスト：毎日の都市経営タスクを完了してCity Pointsを得て、報酬と交換します。\n\n無料Sランクキャラクター：特定のCity Tycoon到達点に達すると、Xiaozhi（Sランク）を無料で得られます。最も重要な無料キャラクター源の一つなので、積極的に参加してください。\n\n## 収入の最適化\n\n1. ショップを置ける物件を優先する\n2. ショップ収入は毎日回収し、上限に達させない\n3. 高収益ショップを先にアップグレードする\n4. 他プレイヤーと地区協力プロジェクトに参加する\n5. 最大ポイントのため、毎日の都市クエストをすべて完了する\n\n## ソーシャル機能\n\n友達を家に招待し、デザインを見せられます。住宅デザインコンテストでは限定報酬を得られます。\n\nNTEの住宅システムは、リラックスできる活動であると同時に重要な資源エンジンです。無料Sランクキャラクターのため、早めに解放してCity Tycoonへ投資しましょう。"
   },
   {
     "id": "awakening-system-guide",
@@ -1565,27 +1576,38 @@
         "question": "What is the awakening system in NTE?",
         "questionZh": "异环觉醒系统是什么？",
         "answer": "Awakening is a character progression system with 6 levels. Each level boosts base stats, and levels 3 and 6 unlock powerful resonance effects that significantly enhance character abilities.",
-        "answerZh": "觉醒是角色培养系统，共6级。每级提升基础属性，3级和6级解锁强力的共鸣效果，大幅增强角色能力。"
+        "answerZh": "觉醒是角色培养系统，共6级。每级提升基础属性，3级和6级解锁强力的共鸣效果，大幅增强角色能力。",
+        "questionJa": "NTEの覚醒システムとは何ですか？",
+        "answerJa": "覚醒は6段階のキャラクター育成システムです。各段階で基礎ステータスが上がり、3段階と6段階ではキャラクター能力を大きく強化する共鳴効果が解放されます。"
       },
       {
         "question": "Which characters should I awaken first?",
         "questionZh": "优先觉醒哪些角色？",
         "answer": "Always awaken your main DPS first, then core supports. The level 3 resonance is the most cost-effective milestone. Focus resources on one character at a time rather than spreading them thin.",
-        "answerZh": "优先觉醒主C角色，其次是核心辅助。3级觉醒是性价比最高的里程碑。集中资源一个一个来，不要分散。"
+        "answerZh": "优先觉醒主C角色，其次是核心辅助。3级觉醒是性价比最高的里程碑。集中资源一个一个来，不要分散。",
+        "questionJa": "どのキャラクターを先に覚醒すべきですか？",
+        "answerJa": "常にメインDPSを最優先し、次にコアサポートを覚醒してください。3段階の共鳴は最も費用対効果がよい到達点です。資源は分散せず、1キャラクターずつ集中してください。"
       },
       {
         "question": "Where do I get awakening materials?",
         "questionZh": "觉醒材料怎么获取？",
         "answer": "Anomaly Prisons are the primary source. Weekly bosses and events also provide materials. Farm the highest difficulty you can clear efficiently.",
-        "answerZh": "异象监狱是主要来源。周本Boss和活动也提供材料。尽量刷你能高效通关的最高难度。"
+        "answerZh": "异象监狱是主要来源。周本Boss和活动也提供材料。尽量刷你能高效通关的最高难度。",
+        "questionJa": "覚醒素材はどこで入手できますか？",
+        "answerJa": "Anomaly Prisonsが主な入手先です。週ボスとイベントも素材を提供します。効率よくクリアできる最高難度を周回してください。"
       },
       {
         "question": "How long does it take to fully awaken a character?",
         "questionZh": "满觉醒一个角色需要多久？",
         "answer": "Getting to level 3 takes about 1-2 weeks for F2P players. Full level 6 awakening takes approximately 1-2 months of consistent farming.",
-        "answerZh": "零氪玩家到3级觉醒大约需要1-2周。满6级觉醒大约需要1-2个月的持续积累。"
+        "answerZh": "零氪玩家到3级觉醒大约需要1-2周。满6级觉醒大约需要1-2个月的持续积累。",
+        "questionJa": "キャラクターを完全覚醒するにはどのくらいかかりますか？",
+        "answerJa": "原稿では、無課金プレイヤーが3段階に達するには約1〜2週間、6段階の完全覚醒には約1〜2か月の継続周回が必要とされています。"
       }
-    ]
+    ],
+    "titleJa": "NTE覚醒システムガイド：素材と共鳴効果",
+    "summaryJa": "6段階の進行、3／6段階の共鳴効果、素材周回、優先順位を解説するNTE覚醒システムの完全ガイドです。",
+    "contentJa": "覚醒システムはNTEにおけるキャラクター育成の中核です。特定素材を消費することで、キャラクターは主要到達点でステータス上昇と強力な共鳴効果を得ます。\n\n## 概要\n\n各キャラクターには6段階の覚醒があります。各段階にはキャラクターごとに異なる素材が必要です。覚醒は基礎ステータス（攻撃力、HP、防御力）を上げ、3段階と6段階で共鳴効果を解放します。\n\n## 段階の進行\n\n1〜2段階：小さなステータス上昇\n3段階：ステータス上昇＋第1共鳴効果\n4〜5段階：中程度のステータス上昇\n6段階：大きなステータス上昇＋第2共鳴効果\n\n3段階と6段階が重要な到達点です。\n\n## 共鳴効果\n\n3段階の共鳴：第1共鳴スキルを解放します。通常は条件付きダメージ上昇、ダメージ軽減、チームバフなどのパッシブです。共鳴はキャラクターごとに固有です。\n\n6段階の共鳴：より強力な第2共鳴スキルを解放します。プレイスタイルを変えたり、出力を大きく上げたりすることがあります。素材コストは大幅に高くなります。\n\n## 素材の入手先\n\nAnomaly Prisons（主な入手先）：高難度ほどドロップがよく、最も効率的な入手先です。\n週ボス：希少な覚醒素材を落とします。毎週の挑戦をすべて完了してください。\nイベント報酬：期間限定イベントには覚醒素材が含まれることがよくあります。\nショップ交換：ゲーム内通貨を素材と交換します。\n探索：Hethereauの各地で少量を見つけられます。\n\n## 優先度ガイド\n\n最高：メインDPS。チームのダメージ上限を直接上げます。\n高：コアサポート（Mint、Adler）。覚醒後のチームユーティリティが強くなります。\n中：よく使うサブDPSとユーティリティキャラクター。\n低：使用頻度が低い、または交代したキャラクター。\n\n## 無課金戦略\n\n1. まずメインDPSを3段階にする\n2. コアサポートを3段階にする\n3. メインDPSを6段階まで進める\n4. 多数のキャラクターに同時に資源を分散しない\n\n## 素材コスト\n\n1〜3段階：約1〜2週間の周回。\n4〜6段階：約1〜2か月の継続周回。\n\n現在の環境と手持ちに基づいて覚醒進行を計画してください。覚醒はディスクセット、武器、チーム編成と相乗し、乗算的な戦力上昇を得られます。"
   },
   {
     "id": "hidden-quests-chests-guide",
@@ -1617,27 +1639,38 @@
         "question": "How do I find hidden quests in NTE?",
         "questionZh": "异环隐藏任务怎么找？",
         "answer": "Hidden quests trigger through specific conditions: visiting particular locations, talking to certain NPCs at specific times, or picking up special items. Explore thoroughly and interact with everything to discover them.",
-        "answerZh": "隐藏任务通过特定条件触发：到达特定地点、在特定时间与特定NPC对话、或拾取特殊物品。多探索多互动就能发现。"
+        "answerZh": "隐藏任务通过特定条件触发：到达特定地点、在特定时间与特定NPC对话、或拾取特殊物品。多探索多互动就能发现。",
+        "questionJa": "NTEで隠しクエストを見つけるには？",
+        "answerJa": "隠しクエストは、特定の場所を訪れる、特定の時間にNPCと話す、特別なアイテムを拾うなどの条件で発生します。十分に探索し、あらゆるものと交流して見つけてください。"
       },
       {
         "question": "How many chests are in Hethereau?",
         "questionZh": "海瑟劳城有多少宝箱？",
         "answer": "The exact number varies as the game updates, but there are hundreds of chests across all districts. Each region has a completion percentage tracker so you can see how many you've found.",
-        "answerZh": "随版本更新数量会变化，但全城有数百个宝箱。每个区域有完成度追踪器，可以查看你已找到的数量。"
+        "answerZh": "随版本更新数量会变化，但全城有数百个宝箱。每个区域有完成度追踪器，可以查看你已找到的数量。",
+        "questionJa": "Hethereauには宝箱がいくつありますか？",
+        "answerJa": "正確な数はゲーム更新で変わりますが、全地区には数百の宝箱があります。各地域には発見数を確認できる達成率トラッカーがあります。"
       },
       {
         "question": "Do chests respawn in NTE?",
         "questionZh": "异环宝箱会刷新吗？",
         "answer": "Most chests are one-time collection and do not respawn. However, some special chests in dynamic events may reappear. Focus on collecting permanent chests first for guaranteed rewards.",
-        "answerZh": "大部分宝箱是一次性收集的，不会刷新。但动态活动中的特殊宝箱可能重新出现。优先收集永久宝箱。"
+        "answerZh": "大部分宝箱是一次性收集的，不会刷新。但动态活动中的特殊宝箱可能重新出现。优先收集永久宝箱。",
+        "questionJa": "NTEの宝箱はリスポーンしますか？",
+        "answerJa": "ほとんどの宝箱は一度だけ収集でき、リスポーンしません。ただし、動的イベント内の一部の特別宝箱は再出現する場合があります。確実な報酬のため、恒久的な宝箱を先に集めてください。"
       },
       {
         "question": "What rewards do I get for 100% exploration?",
         "questionZh": "探索100%有什么奖励？",
         "answer": "Each region at 100% grants an exclusive title and a large amount of Fangs. Completing all regions to 100% unlocks an exclusive avatar frame and an S-rank material selector box.",
-        "answerZh": "每个区域100%给限定称号和大量方斯。全城100%解锁限定头像框和S级材料自选箱。"
+        "answerZh": "每个区域100%给限定称号和大量方斯。全城100%解锁限定头像框和S级材料自选箱。",
+        "questionJa": "探索100％ではどのような報酬を得られますか？",
+        "answerJa": "各地域を100％にすると限定称号と大量のFangsを得られます。全地域を100％にすると限定アバターフレームとSランク素材選択箱が解放されます。"
       }
-    ]
+    ],
+    "titleJa": "NTE隠しクエストと宝箱収集ガイド",
+    "summaryJa": "Hethereauにある隠しクエストと宝箱について、発生条件、場所、収集報酬をまとめたガイドです。",
+    "contentJa": "Hethereauには、メインストーリー以外にも多数の秘密クエストと宝箱が隠されています。このガイドは、それらをすべて見つける助けになります。\n\n## 隠しクエストシステム\n\n隠しクエストは、特定条件で発生するまでクエストログに表示されません。\n\n時間依存：ゲーム内の昼または夜にのみ現れるクエストがあります。\n場所依存：隠しエリアに入ると自動的にクエストが発生します。\nNPC交流：特定のNPCと話す、または特定の行動を行います。\nアイテム発生：特定のアイテムを拾うと、関連する隠しクエストが解放されます。\n\n## 隠しクエストの種類\n\n謎の依頼：人里離れた場所にいる謎めいたNPCから受ける特別なタスクです。希少素材と限定アイテムを得られます。\n\n収集シリーズ：特定のアイテム（anomaly fragments、memory shardsなど）を集めると発生します。\n\n連鎖クエスト：1つを完了すると次が解放され、報酬が段階的に増える複数ステップのクエストです。\n\n時間制限チャレンジ：特定エリアで制限時間内にすべての敵を倒します。\n\n## 宝箱システム\n\n宝箱は4段階あります。\n\n通常（白）：基本素材と少量通貨。最も数が多い。\n精巧（青）：より良い素材と中程度の通貨。少し隠されている。\n貴重（紫）：希少素材と多めの通貨。パズルや挑戦が必要。\n壮麗（金）：最も希少。貴重品と大量資源が入り、隠しクエストや複雑なパズルに関連します。\n\n## 収集のヒント\n\n1. 視覚的な手がかりを見る。光る物、不自然な地形、触れられるアイテム\n2. 乗り物を使って、探す範囲を広げる\n3. 隠しコンテンツの近くにある小さなヒントをミニマップで確認する\n4. 夜間探索。ゲーム内の夜にのみ現れるコンテンツもある\n5. すべてのNPCと話す。隠しコンテンツの場所を示すことがある\n6. 環境との交流を試す\n\n## 探索報酬\n\n- Fangs（ガチャ通貨）\n- キャラクターXP素材\n- 突破素材\n- ディスクセット\n- 限定称号とアバター\n- 実績ポイント\n\n## 完了報酬\n\n地域100％：限定称号＋大量のFangs。\n都市全体100％：限定アバターフレーム＋Sランク素材選択。\n\nゲーム内で探索進行度を確認してください。体系的に進めるため、地域ごとに完了しましょう。\n\n隠しコンテンツはNTE探索の中心的な楽しみです。時間をかけて周囲を観察し、驚きを見つけてください。さらに探索のヒントが必要な場合は、探索ガイドを参照してください。"
   },
   {
     "id": "vehicle-system-guide",
@@ -1669,27 +1702,38 @@
         "question": "When do vehicles unlock in NTE?",
         "questionZh": "异环载具什么时候解锁？",
         "answer": "Vehicles unlock after completing Chapter 1 of the main story. You'll receive a free basic sedan to get started.",
-        "answerZh": "完成主线第一章后解锁。系统会赠送一辆基础轿车作为起步。"
+        "answerZh": "完成主线第一章后解锁。系统会赠送一辆基础轿车作为起步。",
+        "questionJa": "NTEで乗り物はいつ解放されますか？",
+        "answerJa": "メインストーリー第1章を完了すると解放されます。開始用に無料の基本セダンを受け取ります。"
       },
       {
         "question": "How many vehicle types are in NTE?",
         "questionZh": "异环有几种载具？",
         "answer": "There are five main types: sedans (balanced), sports cars (speed), SUVs (durability), motorcycles (agility), and special event vehicles. Each suits different exploration scenarios.",
-        "answerZh": "主要有五种：轿车（均衡）、跑车（速度）、越野车（耐久）、摩托车（灵活）和活动限定特殊载具。各适合不同场景。"
+        "answerZh": "主要有五种：轿车（均衡）、跑车（速度）、越野车（耐久）、摩托车（灵活）和活动限定特殊载具。各适合不同场景。",
+        "questionJa": "NTEには何種類の乗り物がありますか？",
+        "answerJa": "主に5種類あります。セダン（バランス）、スポーツカー（速度）、SUV（耐久）、バイク（機動性）、イベント限定の特殊車両です。各タイプは異なる探索場面に向きます。"
       },
       {
         "question": "Can I customize my vehicles?",
         "questionZh": "异环载具可以改装吗？",
         "answer": "Yes, you can customize vehicle appearance with paint colors, decals, and wheel modifications. Customization is purely cosmetic and doesn't affect performance.",
-        "answerZh": "可以。可以自定义车身颜色、贴纸和轮毂。改装纯属外观，不影响性能。"
+        "answerZh": "可以。可以自定义车身颜色、贴纸和轮毂。改装纯属外观，不影响性能。",
+        "questionJa": "乗り物をカスタマイズできますか？",
+        "answerJa": "できます。塗装色、デカール、ホイールを変更できます。カスタマイズは見た目のみで性能には影響しません。"
       },
       {
         "question": "Are there racing events in NTE?",
         "questionZh": "异环有赛车活动吗？",
         "answer": "Yes, NTE has regular racing events including speed races, drift challenges, and timed delivery missions. These events offer exclusive vehicle rewards and rare materials.",
-        "answerZh": "有。异环定期举办竞速赛、漂移挑战和限时配送等赛车活动。活动奖励包括限定载具和稀有材料。"
+        "answerZh": "有。异环定期举办竞速赛、漂移挑战和限时配送等赛车活动。活动奖励包括限定载具和稀有材料。",
+        "questionJa": "NTEにはレースイベントがありますか？",
+        "answerJa": "あります。NTEではスピードレース、ドリフトチャレンジ、時間制限配達などのレースイベントが定期的に行われます。限定車両と希少素材が報酬です。"
       }
-    ]
+    ],
+    "titleJa": "NTE乗り物システムガイド：全車両と運転のヒント",
+    "summaryJa": "乗り物の入手方法、運転操作、車両タイプ、乗り物関連イベントを解説するNTE乗り物システムの完全ガイドです。",
+    "contentJa": "NTEの乗り物システムは特徴的な機能です。現代都市Hethereauでさまざまな乗り物を自由に運転でき、探索効率を上げ、レースイベントに参加して報酬を得られます。\n\n## 乗り物の解放\n\n乗り物は第1章を完了すると解放されます。無料の基本セダンを受け取り、都市各地の駐車場所で乗り物を呼び出せます。\n\n## 乗り物の入手方法\n\nストーリー報酬：メインクエストで無料の基本セダンを得る。\nショップ購入：Coinsで購入し、価格は数千から数万まで。\nイベント報酬：期間限定イベントで限定車両を得る。\n収集解放：実績到達点から特別な乗り物を得る。\n\n## 車両タイプ\n\nセダン：速度と操作性のバランスがよく、一般探索に最適。\nスポーツカー：非常に速いが操作が難しく、直線レースに向く。\nSUV：耐久性と安定性があり、荒れた地形に強い。\nバイク：小回りが利き、加速が速く、狭い路地を通れる。\n特殊車両：特別な効果を持つ、イベント／実績の固有報酬。\n\n## 運転操作\n\nPC：WASDで操舵／加速、Spaceでハンドブレーキ、Shiftでブースト。\nモバイル：仮想ジョイスティック＋ボタン。\nPS5：コントローラーのスティックとトリガー。\n\n## 運転のヒント\n\n1. 長い直線道路ではブーストを使う\n2. ハンドブレーキドリフトでコーナーの速度を維持する\n3. バイクは車が通れない狭い路地を通れる\n4. SUVは隠しコンテンツを見つけるためにオフロードを走れる\n5. 物件の近くに乗り物を駐車して装飾にする\n\n## 乗り物と探索\n\n乗り物は場面ごとに適します。中心街の路地にはバイク、郊外にはSUV、高速道路にはスポーツカーが向いています。乗り物はHethereauを横断する移動速度を大きく高めます。\n\n## レースイベント\n\nスピードレース：他プレイヤーと最速ラップタイムを競う。\nドリフトチャレンジ：ドリフトの距離と時間で得点を競う。\n時間制限配達：制限時間内に配達を完了する。\n\n報酬には限定車両、希少素材、大量のFangsが含まれます。\n\n## 車両カスタマイズ\n\n一部の車両は外見のカスタマイズに対応します。塗装色、デカール、ホイールを変更できます。見た目だけで、性能への影響はありません。\n\nNTEの乗り物システムは都市探索をより動的で楽しいものにします。さまざまな場面に備えて異なるタイプを集めましょう。さらに探索のヒントが必要なら、探索ガイドを参照してください。"
   },
   {
     "id": "photo-mode-guide",
@@ -1719,25 +1763,33 @@
         "question": "How do I access photo mode in NTE?",
         "questionZh": "异环中如何进入拍照模式？",
         "answer": "Press the P key on PC, the touchpad or Select button on controller, or tap the camera icon on mobile. You can also access it through the main menu or the quick wheel.",
-        "answerZh": "PC端按P键，手柄端按触摸板或Select键，移动端点击右上角相机图标。也可以通过主菜单或快捷轮盘进入。"
+        "answerZh": "PC端按P键，手柄端按触摸板或Select键，移动端点击右上角相机图标。也可以通过主菜单或快捷轮盘进入。",
+        "questionJa": "NTEでフォトモードに入るには？",
+        "answerJa": "PCではPキー、コントローラーではタッチパッドまたはSelectボタン、モバイルではカメラアイコンを使います。メインメニューまたはクイックホイールからも入れます。"
       },
       {
         "question": "Can I change the time of day in photo mode?",
         "questionZh": "拍照模式可以调整时间吗？",
         "answer": "Yes, photo mode includes a time slider that lets you set the scene to any time of day. Weather effects can also be changed independently. These adjustments only apply within photo mode and do not affect your actual game progression.",
-        "answerZh": "可以。拍照模式内置时间滑块，可以将场景调整为一天中的任意时刻。天气效果也可以独立切换。这些调整仅在拍照模式内生效，不会影响实际游戏进度。"
+        "answerZh": "可以。拍照模式内置时间滑块，可以将场景调整为一天中的任意时刻。天气效果也可以独立切换。这些调整仅在拍照模式内生效，不会影响实际游戏进度。",
+        "questionJa": "フォトモードで時間帯を変更できますか？",
+        "answerJa": "できます。フォトモードには、好きな時刻へ場面を設定する時間スライダーがあります。天候効果も個別に変更できます。これらはフォトモード内のみで適用され、実際のゲーム進行には影響しません。"
       },
       {
         "question": "Are there hidden photo spots that give achievements?",
         "questionZh": "异环有隐藏的成就拍照点吗？",
         "answer": "Yes, there are special photo locations scattered throughout the world tied to achievements. When you aim your camera at these spots, a camera icon hint will appear. Completing these photos earns Star Rail Coins, rare materials, and limited titles.",
-        "answerZh": "有。世界各地散布着与成就关联的特殊拍照地点。将镜头对准这些地点时会出现相机图标提示，完成拍照可获得星轨币、稀有材料和限定称号。"
+        "answerZh": "有。世界各地散布着与成就关联的特殊拍照地点。将镜头对准这些地点时会出现相机图标提示，完成拍照可获得星轨币、稀有材料和限定称号。",
+        "questionJa": "実績が得られる隠し撮影場所はありますか？",
+        "answerJa": "あります。世界各地には実績に関連した特別な撮影場所があります。カメラを向けるとカメラアイコンのヒントが表示されます。撮影を完了するとStar Rail Coins、希少素材、限定称号を得られます。"
       },
       {
         "question": "Can I pose multiple characters together in one photo?",
         "questionZh": "拍照模式可以让多个角色一起合影吗？",
         "answer": "Yes, you can summon all party members into the frame for a team photo. You can freely adjust each character's position and pose. Certain character combinations even unlock exclusive interaction poses.",
-        "answerZh": "可以。你可以召唤队伍中的全部角色同时进入画面，自由调整各自的站位和姿势。特定角色组合还会解锁专属互动姿势。"
+        "answerZh": "可以。你可以召唤队伍中的全部角色同时进入画面，自由调整各自的站位和姿势。特定角色组合还会解锁专属互动姿势。",
+        "questionJa": "1枚の写真に複数キャラクターをポーズさせられますか？",
+        "answerJa": "できます。パーティメンバー全員を画面に呼び、位置とポーズを自由に調整できます。特定のキャラクター組み合わせでは限定インタラクションポーズも解放されます。"
       }
     ],
     "serpTitle": {
@@ -1766,7 +1818,10 @@
         "隠しスポット前にフィルター、ポーズ、時間、天気、被写界深度。",
         "NTE photo mode / camera / screenshot / Hethereau検索向け。"
       ]
-    }
+    },
+    "titleJa": "NTEフォトモードガイド：カメラ操作、フィルター、ポーズ、おすすめ撮影場所",
+    "summaryJa": "カメラの起動、操作、フィルター、キャラクターポーズ、時間・天候、被写界深度、Hethereauの撮影場所、スクリーンショット構図を解説するNTEフォトモードガイドです。",
+    "contentJa": "## 2026年8月3日時点のフォトモード簡易回答\n\nNTEのフォトモードやカメラを調べているなら、まずカメラの開き方、HUDを隠してフィルターを使う方法、キャラクターや都市風景を撮る場所の3つを確認してください。隠し撮影場所を探す前に、時間、天候、ポーズ、被写界深度を調整しましょう。\n\nフォトモードはNeverness to Everness（NTE）で特に愛されている息抜き機能の一つです。旅の途中で壮大な風景を撮る場合も、キャラクターの象徴的な戦闘シーンを残す場合も、フォトモードには必要な機能があります。このガイドでは、フォトモードへの入り方、全機能、構図技術、隠し撮影場所を扱います。\n\n## フォトモードへの入り方\n\nフォトモードには複数の方法で入れます。\n\n1. **ホットキー**：PCでは「P」キー。コントローラーではタッチパッドまたはSelectボタン。モバイルでは画面右上のカメラアイコンをタップ。\n2. **メニュー**：メインメニューを開き、「Photo」オプションを選ぶ。\n3. **クイックホイール**：クイックホイールキー（PCではAlt）を長押しし、円形メニューからカメラアイコンを選ぶ。\n\nフォトモードに入ると、ゲームはすべての動的イベントを自動で一時停止します（戦闘撮影を除く）。時間をかけて撮影を調整できます。\n\n## カメラ操作\n\nフォトモードでは、精密な構図のために包括的なカメラ操作が使えます。\n\n- **ズーム**：マウスホイールまたはコントローラートリガーでズームします。焦点距離は超広角（24mm相当）から望遠（200mm相当）までです。広角は都市のパノラマに、望遠はキャラクターのクローズアップに向きます。\n- **回転**：右クリックを押したままマウスをドラッグするか、コントローラーの右スティックで、カメラを任意方向に360度回転させます。\n- **チルト**：マウスを上下にドラッグするかスティックを傾け、カメラのピッチを調整します。ローアングルから俯瞰まで自由に切り替えられます。\n- **パン**：Shiftを押したままマウスをドラッグし、視野角を変えずに水平・垂直にカメラを動かします。構図の微調整に最適です。\n\n## フィルターシステム\n\nNTEのフォトモードには、写真に独自の芸術的なスタイルを与える多様な内蔵フィルターがあります。\n\n- **クラシックフィルター**：Vivid、Soft、Vintage、Film、Black & Whiteの基本フィルターがあり、それぞれ3段階の強度を選べます。\n- **テーマフィルター**：バージョンごとに更新される期間限定のテーマフィルターです。例として「Cherry Blossom Season」「Neon Night」「Winter Warmth」があり、現在のバージョンのイベントテーマに対応します。\n- **カスタムフィルター**：上級者は色温度、色かぶり、彩度、コントラスト、ビネットなどを手動で調整し、完全に個人向けのフィルタースタイルを作れます。\n\n## キャラクターのポーズと表情\n\nフォトモードでは、現在のパーティにいるキャラクターへさまざまなポーズを設定できます。\n\n- **標準ポーズ**：各キャラクターには立ち、座り、インタラクションなど複数の固有ポーズがあり、性格を反映します。\n- **表情システム**：笑顔、真剣、驚き、喜びなどの表情に切り替えられます。一部のキャラクターには期間限定の特別表情もあります。\n- **チーム写真**：すべてのパーティメンバーを同時に画面へ呼び、位置とポーズを自由に調整してグループ写真を作れます。\n- **インタラクションポーズ**：特定のキャラクター組み合わせを配置すると、限定の相互作用ポーズが解放されます。これらの隠しポーズは試行を通じて見つけます。\n\n## 時間と天候の操作\n\nフォトモードでは、ゲーム内の時間と天候を自由に調整できます。\n\n- **時間調整**：時間スライダーを動かして、好きな時刻に設定します。日の出、昼、夕暮れ、深夜では光が大きく異なり、適切な時間選びがよい写真の鍵です。日の出1時間後と日没1時間前のゴールデンアワーは最も柔らかく美しい光を得られます。\n- **天候効果**：晴れ、曇り、厚い雲、小雨、大雨、霧などを選べます。雨の日は地面の水たまりに反射が現れ、霧は神秘的な雰囲気を作ります。\n\n注：時間と天候の調整はフォトモード内でのみ適用され、実際のゲーム世界の時間進行には影響しません。\n\n## 被写界深度\n\nフォトモードでは専門的な被写界深度操作ができます。\n\n- **絞り調整**：実写カメラの絞り効果を再現します。大きな絞り（f/1.4）は強い背景ぼけを作り、小さな絞り（f/16）は画面全体をシャープに保ちます。\n- **フォーカス選択**：画面内の任意の場所をクリックしてピント位置を設定します。焦点面の外側は自然なボケになります。\n- **ボケ形状**：円形、六角形、星型のボケを選び、夜景の光源に異なる表情を加えます。\n\n## 実績撮影スポット\n\nNTE世界の各地には、実績に関連する特別な撮影場所があります。特定のランドマークへカメラを向けると、ヒントとして特別なカメラアイコンが表示されます。これらの場所で撮影を完了すると、Star Rail Coins、希少素材、限定称号などの実績報酬を解放します。知られている実績撮影スポットには、象徴的な建物を含むHethereauのスカイライン、夜のネオンに照らされたダウンタウンの通り、港湾地区の夕日パノラマがあります。\n\n## Hethereauの隠し撮影場所\n\nHethereauには、優れているが見つけにくい撮影場所が多数あります。\n\n- **屋上庭園**：一部の高層ビルには、都市全体を見下ろせる隠れた庭園テラスがあります。\n- **地下通路**：一部の地下通路の先には意外な景色があります。照明効果と組み合わせると、印象的なサイバーパンク風写真を撮れます。\n- **川沿いの小道**：都市の水路を歩くと、キャラクターと自然風景を組み合わせるのに向く静かな場所を見つけられます。\n- **スカイブリッジ**：2つの建物を結ぶガラス通路は、下の街と上の空を1フレームに収められる独自の視点です。\n\n## スクリーンショットのヒント\n\n1. **三分割法を使う**：画面を横・縦に3分割し、被写体を交点に置くと、最も古典的で安定した構図になります。\n2. **リーディングラインを使う**：都市の道路、橋、建築線は、見る人の視線を被写体へ導く線になります。\n3. **光の方向を見る**：逆光はシルエットとレンズフレアを作り、サイド光はキャラクターの輪郭を際立たせ、正面光は細部を見せるのに適します。\n4. **環境要素を取り入れる**：キャラクターを手すりにもたれさせたりベンチに座らせたりして、より自然で生き生きした写真にします。\n5. **焦点距離を試す**：広角は環境の雰囲気に、望遠は空間を圧縮して被写体を強調するのに向き、50mm付近は人の視野に近く自然な写真になります。\n6. **背景を整理する**：雑然とした背景は被写体から注意をそらします。被写界深度のぼけや角度調整で背景を単純にしてください。\n\n## 共有オプション\n\n撮影後はローカルアルバムに保存するか、ゲーム内コミュニティへ直接共有できます。ゲームはSNSへのワンタップ共有をサポートします。また、パーソナルスペースの壁にベストショットを表示し、他プレイヤーが閲覧・評価できる「Photo Wall」機能もあります。\n\n各写真には使用した時間、場所、カメラ設定が自動で記録され、後で同じ効果を再現しやすくなります。ゲームは構図、光などに基づき写真を採点し、撮影技術の改善に役立てます。\n\nフォトモードはNTE体験の独自の魅力です。写真を追求する人も、旅を記録したいカジュアルプレイヤーも、このシステムで楽しめます。カメラを手に取り、Neverness to Evernessの世界で見落とされている美しい瞬間を見つけましょう。"
   },
   {
     "id": "nanally-guide",
