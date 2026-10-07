@@ -1,6 +1,6 @@
 import { GAMES, LOCALES } from '@gachia/core';
 import type { MetadataRoute } from 'next';
-import { getEntryUpdatedAt, hasLocalizedContent } from '@/lib/seo-metadata';
+import { getEntryUpdatedAt, hasLocalizedContent, isAniimoCharacterIndexable } from '@/lib/seo-metadata';
 import { GAME_DEPLOYMENTS } from '@gachia/core';
 
 const BASE_URL = 'https://gachia.com';
@@ -94,6 +94,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       if (CHAR_GAMES.includes(gameId as typeof CHAR_GAMES[number])) {
         const chars = await getCharactersForGame(gameId);
         for (const char of chars) {
+          if (gameId === 'aniimo' && !isAniimoCharacterIndexable(char, locale)) continue;
           entries.push({
             url: `${BASE_URL}/${locale}/${gameId}/characters/${char.id}`,
             changeFrequency: 'weekly',

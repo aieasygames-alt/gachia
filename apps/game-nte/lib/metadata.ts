@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 import type { SupportedLocale } from '@gachia/core';
+
+const isPreview = process.env.NTE_DEPLOYMENT_MODE !== 'live';
+
 export function nteMetadata(locale: SupportedLocale, path: string, titles: Record<SupportedLocale, string>, descriptions: Record<SupportedLocale, string>): Metadata {
   const title = titles[locale];
   const description = descriptions[locale];
@@ -7,7 +10,7 @@ export function nteMetadata(locale: SupportedLocale, path: string, titles: Recor
   return {
     title,
     description,
-    robots: { index: false, follow: false },
+    robots: isPreview ? { index: false, follow: false } : undefined,
     alternates: {
       canonical: url,
       languages: {

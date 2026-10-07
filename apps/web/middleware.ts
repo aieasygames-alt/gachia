@@ -32,7 +32,18 @@ const LEGACY_ROOT_ROUTES: Record<string, string> = {
   'redeem-codes': '/zh/games',
   'tier-list': '/zh/games',
   'type-chart': '/zh/roco/type-chart',
+  'update-radar': '/zh/update-radar',
 };
+
+const LEGACY_PATH_REDIRECTS: Record<string, string> = {
+  '/tools/pull-planner': '/zh/tools/pull-planner',
+  '/sea/guides/spongebob-collab-summer-faq-SpongeBob夏': '/zh/sea/guides/spongebob-collab-summer-faq',
+  '/zzz/guides/steam-3-0-start-guide-Steam入門': '/zh/zzz/guides/steam-3-0-start-guide',
+};
+
+const RETIRED_PATHS = new Set([
+  '/en/roco-cn/guides/daily-events-merchant-guide',
+]);
 
 const GAME_ROUTE_DENYLIST: Partial<Record<GameId, readonly string[]>> = {
   aniimo: ['weapons', 'items', 'tier-list', 'build', 'compare', 'teams', 'artifacts', 'drive-discs', 'disk-sets', 'calculator', 'gacha', 'anomalies'],
@@ -97,10 +108,18 @@ function stripLabelSuffix(segment?: string) {
 
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  const decodedPathname = decodeURIComponent(pathname);
   const segments = pathname.split('/').filter(Boolean);
   const [firstSegment, secondSegment, thirdSegment, fourthSegment] = segments;
   const locale = asLocale(firstSegment);
   const game = asGame(locale ? secondSegment : firstSegment);
+
+  const legacyPathTarget = LEGACY_PATH_REDIRECTS[decodedPathname];
+  if (legacyPathTarget) return redirectTo(request, legacyPathTarget);
+
+  if (RETIRED_PATHS.has(decodedPathname)) {
+    return new NextResponse(null, { status: 404 });
+  }
 
   const legacyRootRoute = firstSegment ? LEGACY_ROOT_ROUTES[firstSegment] : undefined;
   if (!locale && !game && segments.length === 1 && legacyRootRoute) {
@@ -257,6 +276,20 @@ export default function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     '/',
+    '/about',
+    '/calendar',
+    '/characters',
+    '/eggs',
+    '/games',
+    '/guides',
+    '/map',
+    '/merchant',
+    '/pull-planner',
+    '/redeem-codes',
+    '/tier-list',
+    '/tools/pull-planner',
+    '/type-chart',
+    '/update-radar',
     '/(zh|en|ja)/:path*',
     '/(sitemap|api|privacy|terms|contact)',
     '/(genshin|starrail|wuwa|nte|zzz|guihuan|ananta|endfield|sea|skjh|roco|roco-cn|aniimo)/:path*',

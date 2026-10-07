@@ -1,5 +1,7 @@
 import type { NextConfig } from 'next';
 
+const isPreview = process.env.NTE_DEPLOYMENT_MODE !== 'live';
+
 const nextConfig: NextConfig = {
   assetPrefix: '/_games/nte',
   images: { unoptimized: true },
@@ -15,13 +17,16 @@ const nextConfig: NextConfig = {
     };
   },
   async headers() {
+    const headers = [
+      { key: 'Cache-Control', value: 'public, s-maxage=3600, stale-while-revalidate=86400' },
+    ];
+
+    if (isPreview) headers.unshift({ key: 'X-Robots-Tag', value: 'noindex, nofollow' });
+
     return [
       {
         source: '/(.*)',
-        headers: [
-          { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
-          { key: 'Cache-Control', value: 'public, s-maxage=3600, stale-while-revalidate=86400' },
-        ],
+        headers,
       },
     ];
   },

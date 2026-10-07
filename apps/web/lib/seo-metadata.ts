@@ -132,6 +132,45 @@ export function hasLocalizedContent(entry: unknown, locale: SupportedLocale, min
   return typeof content === 'string' && content.trim().length >= minimumLength;
 }
 
+export function isAniimoCharacterIndexable(entry: unknown, locale: SupportedLocale) {
+  if (!entry || typeof entry !== 'object') return false;
+
+  const character = entry as {
+    status?: unknown;
+    description?: unknown;
+    descriptionEn?: unknown;
+    descriptionJa?: unknown;
+    ability?: unknown;
+    abilityZh?: unknown;
+    abilityJa?: unknown;
+    locationNote?: unknown;
+    evolutionDetail?: unknown;
+    sourceNote?: unknown;
+  };
+  const localizedDescription = locale === 'zh'
+    ? character.description
+    : locale === 'en'
+      ? character.descriptionEn
+      : character.descriptionJa;
+  const localizedAbility = locale === 'zh'
+    ? character.abilityZh
+    : locale === 'en'
+      ? character.ability
+      : character.abilityJa;
+  const requiredFields = [
+    localizedDescription,
+    localizedAbility,
+    character.locationNote,
+    character.evolutionDetail,
+    character.sourceNote,
+  ];
+  const minimumLength = locale === 'en' ? 80 : 40;
+
+  return character.status === 'Verified' && requiredFields.every(
+    (field) => typeof field === 'string' && Array.from(field.trim()).length >= minimumLength,
+  );
+}
+
 /**
  * Generate metadata for game pages
  */

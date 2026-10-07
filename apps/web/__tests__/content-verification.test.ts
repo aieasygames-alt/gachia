@@ -19,4 +19,13 @@ describe('content verification page', () => {
     expect(urls).not.toContain('https://gachia.com/en/update-radar');
     expect(urls).not.toContain('https://gachia.com/ja/update-radar');
   });
+
+  it('keeps unverified Aniimo character detail pages out of the sitemap', async () => {
+    const entries = await sitemap();
+    const urls = entries.map((entry) => entry.url);
+
+    for (const locale of ['zh', 'en', 'ja']) {
+      expect(urls).not.toContain(`https://gachia.com/${locale}/aniimo/characters/eklue`);
+    }
+  });
 });

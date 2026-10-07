@@ -26,6 +26,14 @@ describe('SEO redirect contracts', () => {
     expect(middleware).toContain("zzz: ['characters', 'weapons', 'items', 'tier-list'");
     expect(middleware).toContain('isUnsupportedGameRoute(game, thirdSegment)');
     expect(middleware).toContain('LEGACY_ROOT_ROUTES');
+    expect(middleware).toContain("'/tools/pull-planner'");
+    expect(middleware).toContain("'/update-radar'");
+    expect(middleware).toContain('LEGACY_PATH_REDIRECTS');
+    expect(middleware).toContain('const decodedPathname = decodeURIComponent(pathname);');
+    expect(middleware).toContain('const RETIRED_PATHS = new Set([');
+    expect(middleware).toContain('/en/roco-cn/guides/daily-events-merchant-guide');
+    expect(middleware).toContain('spongebob-collab-summer-faq-SpongeBob夏');
+    expect(middleware).toContain('steam-3-0-start-guide-Steam入門');
     expect(middleware).toContain('stripLabelSuffix(fourthSegment)');
     expect(middleware).toContain("fourthSegment === 'harmony-trailblazer'");
   });

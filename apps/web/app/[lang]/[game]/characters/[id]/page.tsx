@@ -15,7 +15,8 @@ import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 import { CHARACTER_META_OVERRIDES } from './character-detail-shared';
-import { ensureMetaLength } from '@/lib/seo-metadata';
+import { ensureMetaLength, isAniimoCharacterIndexable } from '@/lib/seo-metadata';
+import { getAniimoCharacterById } from '@gachia/data/games/aniimo/characters';
 
 export const dynamicParams = false;
 
@@ -58,6 +59,15 @@ export async function generateMetadata({
   const gameId = game as GameId;
   const meta = await getCharacterMetaData(gameId, id, locale);
   if (!meta) return {};
+
+  if (gameId === 'aniimo') {
+    const character = getAniimoCharacterById(id);
+    if (!isAniimoCharacterIndexable(character, locale)) {
+      return {
+        robots: { index: false, follow: true },
+      };
+    }
+  }
 
   const gameName = GAMES[gameId]?.name[locale] ?? gameId;
   const override = CHARACTER_META_OVERRIDES[`${gameId}/${id}`]?.[locale];
