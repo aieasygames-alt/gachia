@@ -59,6 +59,7 @@ describe('market-intel guide links', () => {
       'global-cbt-to-launch-decision-gates',
       'global-accessibility-cross-device-playbook',
       'global-economy-monetization-fairness-playbook',
+      'global-returning-player-event-legacy-playbook',
       'global-player-support-trust-playbook',
       'global-social-safety-guild-playbook',
     ];
