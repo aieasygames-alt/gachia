@@ -55,6 +55,8 @@ describe('market-intel guide links', () => {
       'global-days-31-90-season-event-plan',
       'global-cn-release-governance',
       'global-live-ops-metrics-experiments',
+      'global-localization-cultural-event-playbook',
+      'global-cbt-to-launch-decision-gates',
     ];
     const snapshotGuideLinks = VERSION_SNAPSHOTS.roco?.links.map((link) => link.href) ?? [];
 

@@ -452,6 +452,8 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       { type: 'guides', href: '/roco/guides/global-days-31-90-season-event-plan', label: { zh: '31–90 天赛季包', en: 'Days 31–90 season plan', ja: '31〜90日シーズン案' } },
       { type: 'guides', href: '/roco/guides/global-cn-release-governance', label: { zh: '跨服版本治理', en: 'CN-global governance', ja: '地域間リリース統治' } },
       { type: 'guides', href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '运营指标与实验', en: 'Live-ops metrics', ja: '運営指標と実験' } },
+      { type: 'guides', href: '/roco/guides/global-localization-cultural-event-playbook', label: { zh: '本地化与文化活动', en: 'Localization playbook', ja: 'ローカライズ手帳' } },
+      { type: 'guides', href: '/roco/guides/global-cbt-to-launch-decision-gates', label: { zh: 'CBT 上线决策', en: 'CBT launch gates', ja: 'CBTローンチ判断' } },
     ],
   },
   'roco-cn': {

@@ -455,6 +455,7 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
       { href: '/roco/guides/global-cn-release-governance', label: { zh: '跨服版本治理', en: 'CN-global governance', ja: '地域間リリース統治' }, description: { zh: '明确什么同步、什么本地化验证、何时公告或回滚。', en: 'Define parity, localization gates, communication, and rollback.', ja: '同期、翻訳ゲート、告知、ロールバックを定義。' } },
     ],
     'global-launch-readiness-checklist': [
+      { href: '/roco/guides/global-cbt-to-launch-decision-gates', label: { zh: 'CBT 上线决策', en: 'CBT launch gates', ja: 'CBTローンチ判断' }, description: { zh: '把验收清单转成测试问题、缺陷优先级和 Go/No-Go 门槛。', en: 'Turn acceptance checks into test questions, defect priority, and Go/No-Go gates.', ja: '確認項目をテスト課題、不具合優先度、Go/No-Goへ変換。' } },
       { href: '/roco/guides/global-first-30-days-pve-plan', label: { zh: '前 30 天 PvE 包', en: 'Days 1–30 PvE plan', ja: '1〜30日PvE案' }, description: { zh: '首发通过后，安排稳定的挑战区、周常和追赶机制。', en: 'After launch readiness, plan challenge zones, weekly goals, and catch-up.', ja: 'ローンチ確認後、挑戦、週次、追いつきへ。' } },
       { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '运营指标与实验', en: 'Live-ops metrics', ja: '運営指標と実験' }, description: { zh: '用统一指标验证首发，而不是只看下载和总参与。', en: 'Validate launch with shared metrics, not downloads alone.', ja: 'DL数だけでなく共通指標でローンチを検証。' } },
     ],
@@ -463,6 +464,7 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
       { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '首月指标', en: 'Month-one metrics', ja: '初月指標' }, description: { zh: '检查失败重试、材料来源和回归追赶是否有效。', en: 'Check retries, material sourcing, and returner catch-up.', ja: '再挑戦、素材導線、復帰者追いつきを確認。' } },
     ],
     'global-days-31-90-season-event-plan': [
+      { href: '/roco/guides/global-localization-cultural-event-playbook', label: { zh: '本地化与文化活动', en: 'Localization playbook', ja: 'ローカライズ手帳' }, description: { zh: '为赛季和全球活动补上术语、时区、补领与复刻规则。', en: 'Add terminology, time-zone, late-claim, and rerun rules to seasonal events.', ja: 'シーズンイベントへ用語、時区、補受取、復刻規則を追加。' } },
       { href: '/roco/guides/global-cn-release-governance', label: { zh: '跨服版本治理', en: 'CN-global governance', ja: '地域間リリース統治' }, description: { zh: '把赛季移植、区域差异、补领与回滚写进发布规则。', en: 'Put ports, regional differences, late claims, and rollback into release rules.', ja: '移植、地域差、補受取、ロールバックを配信規則へ。' } },
       { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '活动复盘指标', en: 'Event recap metrics', ja: 'イベント振り返り指標' }, description: { zh: '评估时区公平、活动回流和旧新精灵使用分布。', en: 'Evaluate time-zone fairness, return, and old/new creature use.', ja: '時区公平、復帰、旧新精霊の利用を評価。' } },
     ],
@@ -471,8 +473,17 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
       { href: '/roco/guides/global-cn-content-roadmap', label: { zh: '回到补充路线图', en: 'Return to roadmap', ja: '補完ロードマップへ戻る' }, description: { zh: '查看首发到 90 天的内容顺序和长期双向策略。', en: 'Review launch-to-day-90 sequencing and long-term two-way strategy.', ja: 'ローンチから90日と長期双方向戦略を確認。' } },
     ],
     'global-live-ops-metrics-experiments': [
+      { href: '/roco/guides/global-cbt-to-launch-decision-gates', label: { zh: 'CBT 上线决策', en: 'CBT launch gates', ja: 'CBTローンチ判断' }, description: { zh: '将测试指标和缺陷证据用于正式上线的 Go/No-Go 判断。', en: 'Use test metrics and defect evidence for launch Go/No-Go decisions.', ja: 'テスト指標と不具合証拠をGo/No-Go判断に使う。' } },
       { href: '/roco/guides/global-launch-readiness-checklist', label: { zh: '首发验收清单', en: 'Launch checklist', ja: 'ローンチ確認リスト' }, description: { zh: '将指标回写到新手、跨端、本地化与安全验收。', en: 'Feed metrics back into onboarding, cross-play, localization, and safety acceptance.', ja: '指標を導入、クロスプレイ、翻訳、安全の確認へ戻す。' } },
       { href: '/roco/guides/global-days-31-90-season-event-plan', label: { zh: '赛季与活动包', en: 'Season and event plan', ja: 'シーズン・イベント案' }, description: { zh: '将实验结果用于下一阶段赛季和全球活动调整。', en: 'Use experiment results to tune the next season and global event.', ja: '実験結果を次のシーズンと世界イベントへ反映。' } },
+    ],
+    'global-localization-cultural-event-playbook': [
+      { href: '/roco/guides/global-days-31-90-season-event-plan', label: { zh: '31–90 天赛季包', en: 'Days 31–90 season plan', ja: '31〜90日シーズン案' }, description: { zh: '将文化活动模板应用到首赛季与全球社区活动。', en: 'Apply the cultural-event template to the first season and global community event.', ja: '文化イベントの型を初回シーズンと世界イベントに適用。' } },
+      { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '本地化指标', en: 'Localization metrics', ja: 'ローカライズ指標' }, description: { zh: '用时区参与、文本理解和补领数据复盘本地化效果。', en: 'Review localization through time-zone, comprehension, and late-claim data.', ja: '時区参加、文章理解、補受取データでローカライズを振り返る。' } },
+    ],
+    'global-cbt-to-launch-decision-gates': [
+      { href: '/roco/guides/global-launch-readiness-checklist', label: { zh: '首发验收清单', en: 'Launch checklist', ja: 'ローンチ確認リスト' }, description: { zh: '回到核心循环、跨端、本地化和服务的上线条件。', en: 'Return to core-loop, cross-play, localization, and service readiness.', ja: '基本循環、クロスプレイ、翻訳、サービスの準備条件へ戻る。' } },
+      { href: '/roco/guides/global-cn-release-governance', label: { zh: '跨服版本治理', en: 'CN-global governance', ja: '地域間リリース統治' }, description: { zh: '将 CBT 结论接入跨服移植、公告和回滚规则。', en: 'Connect CBT conclusions to cross-region ports, communication, and rollback.', ja: 'CBT結論を地域間移植、告知、ロールバックへ接続。' } },
     ],
     'cbt-registration-guide': [
       { href: '/roco/version', label: { zh: '版本时间线', en: 'Version timeline', ja: '版本タイムライン' }, description: { zh: '报名后接着看 CBT 到正式版的节点和已确认内容。', en: 'After signing up, continue into the CBT-to-launch timeline and confirmed content.', ja: '申込後はCBTから正式版までの予定と確定情報へ。' } },
