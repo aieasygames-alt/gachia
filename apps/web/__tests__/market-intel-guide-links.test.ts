@@ -61,6 +61,7 @@ describe('market-intel guide links', () => {
       'global-economy-monetization-fairness-playbook',
       'global-returning-player-event-legacy-playbook',
       'global-change-communication-playbook',
+      'global-fair-play-integrity-playbook',
       'global-player-support-trust-playbook',
       'global-social-safety-guild-playbook',
     ];

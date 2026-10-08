@@ -458,6 +458,7 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       { type: 'guides', href: '/roco/guides/global-economy-monetization-fairness-playbook', label: { zh: '经济与付费公平', en: 'Economy & fairness', ja: '経済・課金公平性' } },
       { type: 'guides', href: '/roco/guides/global-returning-player-event-legacy-playbook', label: { zh: '回流与活动遗产', en: 'Return & event legacy', ja: '復帰・イベント遺産' } },
       { type: 'guides', href: '/roco/guides/global-change-communication-playbook', label: { zh: '版本沟通与热修', en: 'Patch communication', ja: '変更・ホットフィックス' } },
+      { type: 'guides', href: '/roco/guides/global-fair-play-integrity-playbook', label: { zh: '公平竞争与完整性', en: 'Fair play & integrity', ja: 'フェアプレイ・完全性' } },
       { type: 'guides', href: '/roco/guides/global-player-support-trust-playbook', label: { zh: '玩家支持与信任', en: 'Player support', ja: 'プレイヤーサポート' } },
       { type: 'guides', href: '/roco/guides/global-social-safety-guild-playbook', label: { zh: '社交安全与公会', en: 'Social safety & guilds', ja: 'ソーシャル安全・ギルド' } },
     ],
