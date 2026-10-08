@@ -14,6 +14,9 @@ export function SharedGameHeader({ header }: { header: SharedGameHeaderModel }) 
             </a>
             <nav className="gachia-header__games" aria-label="Game navigation">
               {header.featuredGames.map((game) => <a key={game.id} href={gamePath(game.id)} className="gachia-header__game-link">{game.label}</a>)}
+              <details className="gachia-header__all"><summary>{header.moreGamesLabel}</summary><div className="gachia-header__all-menu">
+                {header.moreGames.map((game) => <a key={game.id} href={gamePath(game.id)} className={game.id === header.gameId ? 'gachia-header__game--current' : undefined}>{game.label}</a>)}
+              </div></details>
             </nav>
             <div className="gachia-header__actions">
               <a className="gachia-header__search" href={`https://gachia.com/${header.locale}/search?q=`} aria-label={header.searchLabel}><span aria-hidden="true">⌕</span><span>{header.searchLabel}</span></a>
@@ -23,9 +26,6 @@ export function SharedGameHeader({ header }: { header: SharedGameHeaderModel }) 
             </div>
           </div>
         </div>
-        <details className="gachia-header__all"><summary>{header.moreGamesLabel}</summary><div className="gachia-header__all-menu">
-          {header.moreGames.map((game) => <a key={game.id} href={gamePath(game.id)} className={game.id === header.gameId ? 'gachia-header__game--current' : undefined}>{game.label}</a>)}
-        </div></details>
         <div className="gachia-header__section-wrap"><nav className="gachia-header__section" aria-label={header.sectionLabel}>
           {header.sectionLinks.map((link) => <a key={link.href} href={link.href} aria-current={link.current ? 'page' : undefined} className={link.current ? 'gachia-header__section-link--current' : undefined}>{link.label}</a>)}
         </nav></div>

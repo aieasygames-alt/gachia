@@ -1315,7 +1315,7 @@ Genshin Router 白名单必须精确覆盖以下三类路径，未知游戏路�
 
 - [x] 已将 `GENSHIN_ENABLED=true` 与仅内部 canary Cookie 一起发布，使用 `X-Gachia-Route-Debug: 1` 验证只有预期请求命中 `genshin`；无 Cookie 请求仍命中 `main`。
 - [x] Canary 已完成跨日期的真实缓存与流量观察；阶段 3 的全量样本、Chrome 桌面/移动首访与硬刷新、移动端地图及匿名 API 权限边界已通过。账号登录验收按产品范围排除；受保护 canary 的连续 12 轮、132 项自动观察均无失败。经人工决定进入全量分流。
-- [ ] 全量切流后立即验证：根 `/sitemap.xml`、`/sitemaps/genshin/index.xml`、三语言 Genshin 代表页、根 `/_next/*`、其它独立游戏资产、主站首页、认证、收藏、地图进度和无效 URL。
+- [x] 全量切流后已立即验证：根 `/sitemap.xml`、`/sitemaps/genshin/index.xml`、三语言 Genshin 代表页、页面中提取的实际 hash 资源、其它独立游戏资产、主站首页、匿名认证接口和无效 URL。账号登录、收藏与地图进度按既定产品范围排除。
 - [ ] 记录 Cloudflare Worker 错误率、5xx、资源 404、Router 目标分布、TTFB、缓存命中率；出现持续 5xx、资源/hydration 故障、认证泄露或 SEO 硬门槛失败时，立即 `GENSHIN_ENABLED=false` 回滚。
 - [ ] 在 Search Console 连续观察 2-4 周：Genshin sitemap 读取状态、已编入索引页数、抓取统计、404/5xx、重定向错误、canonical 选择、hreflang 诊断、Genshin 查询的展示/点击/排名。期间不因短期波动调整 URL。
 - [x] 观察期、生产 origin 验证和人工全量切流决定均已完成；已将 `GAME_DEPLOYMENTS.genshin.status` 更新为 `live`，生产 Router 使用持久全量开关。保留 canary 密钥仅作兼容，不再作为公开路由条件。
@@ -1348,4 +1348,4 @@ Genshin Router 白名单必须精确覆盖以下三类路径，未知游戏路�
 | 2026-09-25 | 阶段 5：最终生产版本后的 canary 长轮观察 | 进行中（仅内部 Cookie） | GitHub Actions runs `36106920215`、`36107853571`、`36107944593` | 常规生产与 staging 部署均全绿后，受保护 workflow 重新启用 Cookie canary。连续 12 轮、132 项检查全部通过：失败 0，平均 TTFB 132ms，最大 TTFB 1057ms。仍保留完整缓存/流量周期门槛，未全量切流。 |
 | 2026-09-25 | 阶段 5：最新生产部署后的 canary 恢复与复测 | 进行中（仅内部 Cookie） | GitHub Actions runs `36108065074`、`36108893750`、`36108973654`；任务内每日观测 `genshin-canary-daily-observation` | 普通生产部署、预发布、生产 smoke test 与审计均通过后，已恢复 Cookie-limited canary。随后连续 12 轮、132 项路由、SEO、sitemap、资源与匿名 API 观察全部通过。每日任务会在普通部署重置 canary 时恢复它并复测；不执行全量切流。仍需跨真实缓存/流量周期观察。 |
 | 2026-09-27 | 阶段 5：跨日期 canary 恢复与稳定性复测 | 进行中（仅内部 Cookie） | GitHub Actions runs `36141931043`、`36284988671`、`36285045914` | 9 月 25 日后续普通生产部署全绿；9 月 27 日恢复受保护 canary，并确认默认请求仍命中 Main、令牌请求命中 Genshin。随后 12 轮、132 项路由、页面、sitemap、资源和匿名 API 检查全部通过。现已形成跨日期稳定样本，但距离建议的 7 天观察门槛仍不足，继续保持 canary。 |
-| 2026-09-30 | 阶段 5：独立生产 origin 复验与持久全量切流 | 进行中 | GitHub Actions run `36678500522`、Router 持久开关待生产发布 | 已重新部署 `gachia-game-genshin` 并通过 robots、页面、sitemap、内部 hash 资源、60 URL 严格 SEO 对照及匿名 API 边界验证。根据人工切流决定，将部署状态升级为 `live`，并在生产 Router 持久开启 `GENSHIN_ENABLED` 与 `GENSHIN_FULL_CUTOVER`；发布后必须执行公开路由、sitemap、跨游戏与 API 即时验收。 |
+| 2026-09-30 | 阶段 5：独立生产 origin 复验与持久全量切流 | 已完成，进入 Search Console 观察 | GitHub Actions runs `36678500522`、`36678998698`；commit `329335c` | 已重新部署 `gachia-game-genshin` 并通过 robots、页面、sitemap、内部 hash 资源、60 URL 严格 SEO 对照及匿名 API 边界验证。生产 Router 持久开启 `GENSHIN_ENABLED=true` 与 `GENSHIN_FULL_CUTOVER=true`，部署全绿。公网即时验收确认三语言 Genshin 页面、Genshin sitemap 和从当前 HTML 提取的 hash JS 资源均为 200 且命中 `genshin`；根 sitemap、主站、NTE、Azur、匿名认证接口和无效 URL 均保持正确边界。 |

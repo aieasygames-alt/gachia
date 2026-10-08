@@ -42,6 +42,26 @@ export const guides = rawGuides as GuideEntry[];
 export const nteWeapons = rawWeapons as Array<LocalizedEntry & { rank?: string; type?: string; baseAtk?: number; effectDescription?: string; effectDescriptionEn?: string }>;
 export const diskSets = rawDiskSets as Array<LocalizedEntry & { element?: string; setDescription2pc?: string; setDescription2pcEn?: string; setDescription4pc?: string; setDescription4pcEn?: string }>;
 export const redeemCodes = rawRedeemCodes as Array<{ code: string; reward: string; rewardEn: string; status: string; expiresAt: string; source: string; region: string; revealedAt: string }>;
+export const versionCheckRoute = [
+  {
+    id: 'notice-and-expiry',
+    href: 'events',
+    title: { zh: '先核对公告与有效期', en: 'Check notices and expiry first', ja: 'まず告知と期限を確認' },
+    summary: { zh: '确认 1.4 更新、维护、活动条件和结束时间；过期活动仅作为历史记录。', en: 'Confirm v1.4 updates, maintenance, event requirements, and end times; treat expired events as history only.', ja: 'v1.4更新、メンテナンス、イベント条件、終了時刻を確認し、期限切れイベントは履歴として扱います。' },
+  },
+  {
+    id: 'codes-and-mail',
+    href: 'redeem-codes',
+    title: { zh: '再核对兑换、邮件与商店', en: 'Then check codes, mail, and shops', ja: '次にコード、メール、ショップを確認' },
+    summary: { zh: '逐条确认兑换码地区、状态与到期信息，再检查游戏内邮件和限时商店。', en: 'Verify each code region, status, and expiry, then check in-game mail and limited shops.', ja: '各コードの地域、状態、期限を確認してから、ゲーム内メールと期間限定ショップを確認します。' },
+  },
+  {
+    id: 'pity-and-resources',
+    href: 'gacha',
+    title: { zh: '最后再安排抽卡与资源', en: 'Plan pulls and resources last', ja: '最後にガチャと資源を計画' },
+    summary: { zh: '以当前客户端的池子、剩余时间、抽数和保底显示为准，不用过期福利或社媒转述补足预算。', en: 'Use the live client banner, remaining time, pull count, and pity display; do not pad a budget with expired rewards or social retellings.', ja: '現行クライアントのバナー、残り時間、抽選回数、天井表示を基準にし、期限切れ報酬やSNSの伝聞で予算を補いません。' },
+  },
+] as const;
 export const materials = rawMaterials as Array<LocalizedEntry & { type?: string; typeZh?: string; rarity?: number; source?: string }>;
 export const tierLists = [{ locale: 'zh', entries: nteCharacterSummaries.map((item) => ({ characterId: item.id, tier: item.rank ?? 'B', role: 'Character' })) }, { locale: 'en', entries: nteCharacterSummaries.map((item) => ({ characterId: item.id, tier: item.rank ?? 'B', role: 'Character' })) }, { locale: 'ja', entries: nteCharacterSummaries.map((item) => ({ characterId: item.id, tier: item.rank ?? 'B', role: 'Character' })) }];
 export const downloadInfo = { officialUrl: 'https://nte.perfectworld.com/', platforms: ['PC', 'iOS / Android', 'PlayStation 5'], specs: { zh: 'PC 建议 SSD 和 16GB 内存起步，移动端建议预留 20GB 以上。', en: 'Use SSD and 16GB RAM on PC; reserve 20GB+ on mobile.', ja: 'PCはSSDと16GB RAM、モバイルは20GB以上推奨。' } };

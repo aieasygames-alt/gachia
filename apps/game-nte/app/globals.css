@@ -53,14 +53,14 @@ main#main-content:focus { outline: 2px solid rgb(0 212 170 / 64%); outline-offse
 .gachia-header__games { display: flex; min-width: 0; flex: 1; flex-wrap: wrap; gap: 4px; overflow: visible; }
 .gachia-header__games a { flex: 0 0 auto; border-radius: 5px; color: var(--color-text-muted); font-size: 13px; font-weight: 600; padding: 7px 9px; }
 .gachia-header__games a:hover, .gachia-header__game--current { background: rgb(0 212 170 / 13%); color: var(--color-primary); }
-.gachia-header__all { display: block; padding: 0 16px; border-bottom: 1px solid rgb(42 58 76 / 72%); }
+.gachia-header__all { flex: 0 0 auto; position: relative; }
 .gachia-header__all summary { display: inline-flex; min-height: 34px; align-items: center; cursor: pointer; border: 1px solid var(--color-border); border-radius: 5px; color: var(--color-text-muted); font-size: 13px; font-weight: 650; list-style: none; padding: 6px 9px; }
 .gachia-header__all summary::-webkit-details-marker { display: none; }
 .gachia-header__all summary::after { width: 6px; height: 6px; margin-left: 8px; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; content: ''; transform: translateY(-2px) rotate(45deg); transition: transform .18s ease; }
 .gachia-header__all summary:hover { border-color: var(--color-primary); color: var(--color-primary); }
 .gachia-header__all[open] summary { border-color: var(--color-primary); color: var(--color-primary); }
 .gachia-header__all[open] summary::after { transform: translateY(2px) rotate(225deg); }
-.gachia-header__all-menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 3px; margin: 8px -16px 0; border-top: 1px solid var(--color-border); background: var(--color-surface); padding: 10px 16px; }
+.gachia-header__all-menu { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3px; margin-top: 8px; border: 1px solid var(--color-border); background: var(--color-surface); box-shadow: 0 16px 30px rgb(0 0 0 / 28%); padding: 8px; position: absolute; top: 100%; left: 0; width: min(296px, calc(100vw - 24px)); z-index: 30; }
 .gachia-header__all-menu a { border-radius: 4px; color: var(--color-text-muted); font-size: 12px; padding: 8px; }
 .gachia-header__all-menu a:hover, .gachia-header__all-menu .gachia-header__game--current { background: var(--color-surface-alt); color: var(--color-primary); }
 .gachia-header__actions, .gachia-header__locale { display: flex; align-items: center; gap: 4px; }
@@ -224,8 +224,9 @@ p { color: var(--color-text-muted); line-height: 1.65; }
 @media (max-width: 640px) {
   .gachia-header__container, .gachia-header__section { padding-inline: 12px; }
   .gachia-header__container { min-height: 52px; gap: 10px; }
-  .gachia-header__games { display: none; }
-  .gachia-header__all { padding-inline: 12px; }
+  .gachia-header__games { display: flex; flex: 0 0 auto; }
+  .gachia-header__game-link { display: none; }
+  .gachia-header__all-menu { left: auto; right: 0; }
   .gachia-header__section { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: thin; }
   .gachia-header__section a { padding: 12px 10px 10px; font-size: 13px; }
   .global-bar__inner { align-items: flex-start; flex-wrap: wrap; gap: 8px 14px; padding: 12px 0; }

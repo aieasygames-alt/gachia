@@ -21,17 +21,17 @@ export const travelTraceVerification = [
   {
     id: 'access-and-client',
     status: 'official' as const,
-    label: { zh: '测试资格与客户端', en: 'Test access and client', ja: 'テスト参加とクライアント' },
-    summary: { zh: '先核对是否仍在测试期、资格取得方式、客户端下载入口及实际版本号。', en: 'First verify whether the test is active, how access is granted, the client source, and the actual version number.', ja: 'テスト開催中か、参加資格、クライアント入手先、実際のバージョン番号を最初に確認します。' },
-    action: { zh: '只从官方页面进入；记录公告日期、客户端版本与所在地区。', en: 'Use official entry points only; record notice date, client version, and region.', ja: '公式入口だけを使用し、告知日、クライアント版、地域を記録します。' },
+    label: { zh: '测试资格与客户端归档', en: 'Archived test access and client', ja: 'テスト参加とクライアントの記録' },
+    summary: { zh: '旅迹测试已结束；保留资格、客户端来源和版本号，仅用于核对当时资料。', en: 'Travel Trace has ended; access, client-source, and version records remain only for checking period material.', ja: '旅跡テストは終了しました。参加資格、クライアント出典、版の記録は当時の資料確認にのみ使います。' },
+    action: { zh: '仅通过官方页面追踪下一次开放或正式上线公告；不要使用旧客户端尝试登录。', en: 'Track a future opening or launch only through official pages; do not attempt to log in with an old client.', ja: '次回の開放または正式配信は公式ページだけで追跡し、旧クライアントでのログインは試みません。' },
     href: 'version',
   },
   {
     id: 'kibo-and-homestead',
     status: 'reference' as const,
     label: { zh: '奇波与家园循环', en: 'Kibo and homestead loop', ja: 'キボと拠点循環' },
-    summary: { zh: '捕捉、派遣、设施与产出均以当前测试客户端为准，旧录像不推导正式效率。', en: 'Capture, dispatch, facilities, and output follow the current test client; old footage does not establish release efficiency.', ja: '捕獲、派遣、施設、産出は現行テストクライアント基準で、古い映像から正式版効率を導きません。' },
-    action: { zh: '记录前置条件、派遣技能、实际产出与核验日期。', en: 'Record prerequisites, dispatch skills, actual output, and verification date.', ja: '前提条件、派遣スキル、実際の産出、確認日を記録します。' },
+    summary: { zh: '捕捉、派遣、设施与产出均为旅迹测试记录，旧录像不推导正式效率。', en: 'Capture, dispatch, facilities, and output are Travel Trace records; old footage does not establish release efficiency.', ja: '捕獲、派遣、施設、産出は旅跡テストの記録であり、古い映像から正式版効率を導きません。' },
+    action: { zh: '保留前置条件、派遣技能、实际产出与核验日期，待下一次官方版本开放后重新复核。', en: 'Retain prerequisites, dispatch skills, actual output, and verification date for re-checking when an official build next opens.', ja: '前提条件、派遣スキル、実際の産出、確認日を残し、次の公式版公開時に再確認します。' },
     href: 'kibo',
   },
   {
@@ -39,7 +39,7 @@ export const travelTraceVerification = [
     status: 'reference' as const,
     label: { zh: '战斗与养成', en: 'Combat and progression', ja: '戦闘と育成' },
     summary: { zh: '角色数值、材料、配装和强度仅作为测试参考，不建立正式服优先级。', en: 'Character values, materials, builds, and power are test references only and do not establish release priorities.', ja: 'キャラ数値、素材、ビルド、強さはテスト参照であり、正式版優先度を定めません。' },
-    action: { zh: '先设定试玩目标；材料表公开并复核后再计算养成缺口。', en: 'Set a playtest goal first; calculate material gaps only after tables are published and verified.', ja: '先にテスト目標を設定し、素材表が公開・確認された後に不足を計算します。' },
+    action: { zh: '待正式材料表公开并复核后，再计算养成缺口；测试数值仅保留为对照。', en: 'Calculate material gaps only after official release tables are published and verified; retain test values only for comparison.', ja: '正式版の素材表が公開・確認された後に不足を計算し、テスト数値は比較用にのみ残します。' },
     href: 'planner',
   },
   {
@@ -47,7 +47,7 @@ export const travelTraceVerification = [
     status: 'unverified' as const,
     label: { zh: '抽取、货币与保底', en: 'Banners, currency, and pity', ja: 'バナー、通貨、天井' },
     summary: { zh: '讨论“不歪池”时，仍须分别核对池名、概率、保底、货币来源与跨池规则。', en: 'Even when discussing no off-banner loss, verify banner name, rates, pity, currency sources, and carryover separately.', ja: 'すり抜けなしを議論する場合でも、バナー名、確率、天井、通貨源、持越し規則を個別に確認します。' },
-    action: { zh: '以客户端概率页和官方公告为准；未确认项目不纳入公测抽数规划。', en: 'Use the client rate page and official notices; exclude unverified items from release pull planning.', ja: 'クライアント確率画面と公式告知を基準にし、未確認項目は正式版のガチャ計画に含めません。' },
+    action: { zh: '以未来正式客户端概率页和官方公告为准；未确认项目不纳入抽数规划。', en: 'Use a future release client rate page and official notices; exclude unverified items from pull planning.', ja: '今後の正式クライアント確率画面と公式告知を基準にし、未確認項目はガチャ計画に含めません。' },
     href: 'guides/banner-system-status',
   },
   {
@@ -63,7 +63,7 @@ export const travelTraceVerification = [
     status: 'official' as const,
     label: { zh: '反馈与改动记录', en: 'Feedback and change log', ja: 'フィードバックと変更記録' },
     summary: { zh: '把复现步骤、版本号与截图/录像上下文分开记录，便于跟踪后续公告是否修复或调整。', en: 'Separate reproduction steps, version number, and screenshot/video context so later fixes or changes can be tracked.', ja: '再現手順、バージョン番号、スクリーンショット・動画の文脈を分けて記録し、後続の修正や調整を追跡します。' },
-    action: { zh: '先确认问题是否可复现，再通过官方测试反馈渠道提交。', en: 'Confirm that an issue reproduces before submitting it through the official test feedback channel.', ja: '問題が再現することを確認してから、公式テストフィードバック窓口へ提出します。' },
+    action: { zh: '保留可复现记录，待官方再次开放反馈渠道后按版本重新提交。', en: 'Retain reproducible records and submit them against the relevant version when an official feedback channel reopens.', ja: '再現記録を残し、公式フィードバック窓口が再開した際に対象版で再提出します。' },
     href: 'guides/test-feedback-tracker',
   },
 ] as const;
@@ -88,8 +88,8 @@ export const facilityReference = [
   { id: 'hunting-ground', label: { zh: '狩猎场', en: 'Hunting ground', ja: '狩猟場' }, description: { zh: '按当前配方需求补皮革与肉类，通常排在木材、石材和基础食物之后。', en: 'Adds leather and meat as recipes demand them, usually after wood, stone, and basic food.', ja: '必要なレシピに応じて革と肉を補う。通常は木材・石材・基礎食料の後。' } },
   { id: 'mining-camp', label: { zh: '采矿营地', en: 'Mining camp', ja: '採掘場' }, description: { zh: '在装备或设施配方需要矿石时投入，不以旧测试产量推导正式优先级。', en: 'Use when equipment or facility recipes need ore; do not infer release priority from old output.', ja: '装備・施設レシピが鉱石を必要とする時に使う。旧テストの産出量から正式優先度を推測しない。' } },
   { id: 'element-altar', label: { zh: '元素祭坛', en: 'Element altar', ja: '元素祭壇' }, description: { zh: '服务于元素材料链，适合在队伍、成长或配方确有元素需求后再配置。', en: 'Supports elemental materials; add it when teams, growth, or recipes actually need them.', ja: '元素素材の供給に関わる。編成・育成・レシピで実際に必要になってから配置。' } },
-  { id: 'feeding-ground', label: { zh: '饲养场', en: 'Feeding ground', ja: '飼育場' }, description: { zh: '与 Kibo 养护和生产链相关，具体产出与开放条件按当前测试确认。', en: 'Related to Kibo care and production; verify output and unlock conditions in the current test.', ja: 'キボの世話と生産に関係。産出と解放条件は現行テストで確認。' } },
-  { id: 'fishery', label: { zh: '渔场', en: 'Fishery', ja: '漁場' }, description: { zh: '为料理、制作或特定任务补充水产资源，按当前缺口决定是否投入。', en: 'Adds aquatic resources for cooking, crafting, or specific tasks; invest only for current demand.', ja: '料理、製作、特定任務向けの水産資源を補う。現在の不足に応じて投資。' } },
+  { id: 'feeding-ground', label: { zh: '饲养场', en: 'Feeding ground', ja: '飼育場' }, description: { zh: '与 Kibo 养护和生产链相关；产出与开放条件为旅迹测试记录，须待正式版本重新确认。', en: 'Related to Kibo care and production; output and unlock conditions are Travel Trace records and need release verification.', ja: 'キボの世話と生産に関係。産出と解放条件は旅跡テストの記録であり、正式版で再確認が必要です。' } },
+  { id: 'fishery', label: { zh: '渔场', en: 'Fishery', ja: '漁場' }, description: { zh: '为料理、制作或特定任务补充水产资源；投资顺序仅记录旅迹测试中的资源判断。', en: 'Adds aquatic resources for cooking, crafting, or specific tasks; its investment order records only the Travel Trace resource judgment.', ja: '料理、製作、特定任務向けの水産資源を補う。投資順は旅跡テストでの資源判断のみを記録します。' } },
 ];
 
 export const kiboLifeSkills = [
@@ -452,7 +452,7 @@ export type Kibo = {
 export const kibo: Kibo[] = [
   { id: 'leaf-fox', name: { zh: '小芽狐', en: 'Leaf Fox', ja: 'コメギツネ' }, species: { zh: '草木族', en: 'Plant clan', ja: '草木族' }, element: 'nature', combatSkill: { zh: '以干扰型协作攻击配合战斗。', en: 'Supports combat with disruption-oriented cooperation.', ja: '妨害型の協力攻撃で戦闘を支援する。' }, lifeSkills: ['weaponsmithing', 'woodworking'], facilities: ['logging-camp', 'sawmill'], battleTags: ['disruption'], catchable: true, mountType: 'ground', source: { name: 'GameWith Kibo index', url: 'https://gamewith.ai/azurpromilia/en/kibos', checkedAt: '2026-09-25', version: 'cbt-beta', sourceType: 'cbt', status: 'reference' }, description: { zh: 'CBT 索引中的木属性奇波；生产与战斗标签需以实际测试版本为准。', en: 'A Nature Kibo in the CBT index; production and combat tags must be confirmed in the active test build.', ja: 'CBT索引にある木属性キボ。生産・戦闘タグは実際のテスト版で確認が必要。' } },
   { id: 'flame-calf', name: { zh: '焰哞哞', en: 'Flame Calf', ja: 'ホムモ' }, species: { zh: '兽形族', en: 'Beast clan', ja: '獣形族' }, element: 'fire', combatSkill: { zh: '偏向单体输出的协作攻击。', en: 'Cooperative attacks oriented toward single-target damage.', ja: '単体火力寄りの協力攻撃。' }, lifeSkills: ['ignition', 'weaponsmithing'], facilities: ['feeding-ground', 'hunting-ground'], battleTags: ['solo-fighter'], catchable: true, mountType: 'unknown', source: { name: 'GameWith Kibo index', url: 'https://gamewith.ai/azurpromilia/en/kibos', checkedAt: '2026-09-25', version: 'cbt-beta', sourceType: 'cbt', status: 'reference' }, description: { zh: '火属性奇波的 CBT 参考记录，适合按点火或单体战斗需求筛选。', en: 'A CBT reference entry for a Fire Kibo; filter it by ignition or single-target combat needs.', ja: '火属性キボのCBT参照記録。点火または単体戦闘の需要で絞り込み可能。' } },
-  { id: 'river-beaver', name: { zh: '河狸大师', en: 'River Beaver', ja: 'ビリバー' }, species: { zh: '兽形族', en: 'Beast clan', ja: '獣形族' }, element: 'water', combatSkill: { zh: '提供持续干扰型的水属性协作。', en: 'Provides Water cooperation with sustained disruption.', ja: '持続妨害型の水属性協力を行う。' }, lifeSkills: ['watering', 'armorsmithing'], facilities: ['fishery', 'gathering-hut'], battleTags: ['sustained-disruption'], catchable: true, mountType: 'ground', source: { name: 'GameWith Kibo index', url: 'https://gamewith.ai/azurpromilia/en/kibos', checkedAt: '2026-09-25', version: 'cbt-beta', sourceType: 'cbt', status: 'reference' }, description: { zh: '水域和生产玩法的 CBT 参考入口；是否可骑乘以当前测试内鞍具与限制为准。', en: 'A CBT reference for water and production play; mount availability depends on current-test saddles and restrictions.', ja: '水上・生産プレイのCBT参照。騎乗可否はテスト中の鞍と制限を確認。' } },
+  { id: 'river-beaver', name: { zh: '河狸大师', en: 'River Beaver', ja: 'ビリバー' }, species: { zh: '兽形族', en: 'Beast clan', ja: '獣形族' }, element: 'water', combatSkill: { zh: '提供持续干扰型的水属性协作。', en: 'Provides Water cooperation with sustained disruption.', ja: '持続妨害型の水属性協力を行う。' }, lifeSkills: ['watering', 'armorsmithing'], facilities: ['fishery', 'gathering-hut'], battleTags: ['sustained-disruption'], catchable: true, mountType: 'ground', source: { name: 'GameWith Kibo index', url: 'https://gamewith.ai/azurpromilia/en/kibos', checkedAt: '2026-09-25', version: 'cbt-beta', sourceType: 'cbt', status: 'reference' }, description: { zh: '水域和生产玩法的 CBT 参考入口；是否可骑乘须待正式版本公布鞍具与限制后重新确认。', en: 'A CBT reference for water and production play; mount availability needs release verification once saddles and restrictions are published.', ja: '水上・生産プレイのCBT参照。騎乗可否は正式版で鞍と制限が公開された後に再確認が必要です。' } },
   { id: 'ice-bud', name: { zh: '冰灵芽', en: 'Ice Bud', ja: 'アイシィ' }, species: { zh: '元素族', en: 'Elemental clan', ja: '元素族' }, element: 'ice', combatSkill: { zh: '以持续干扰型协作影响敌方行动。', en: 'Influences enemy actions through sustained-disruption cooperation.', ja: '持続妨害型の協力で敵の行動に干渉する。' }, lifeSkills: ['elemental-work', 'hunting'], facilities: ['element-altar', 'hunting-ground'], battleTags: ['sustained-disruption'], catchable: true, mountType: 'unknown', source: { name: 'GameWith Kibo index', url: 'https://gamewith.ai/azurpromilia/en/kibos', checkedAt: '2026-09-25', version: 'cbt-beta', sourceType: 'cbt', status: 'reference' }, description: { zh: '冰属性奇波的 CBT 索引记录，可作为元素素材与干扰标签的筛选样本。', en: 'A CBT-indexed Ice Kibo, useful as a filter sample for elemental materials and disruption tags.', ja: '氷属性キボのCBT索引記録。元素素材と妨害タグの絞り込み例。' } },
   { id: 'windy', name: { zh: '风灵', en: 'Windy', ja: 'ウィンディ' }, species: { zh: '元素族', en: 'Elemental clan', ja: '元素族' }, element: 'wind', combatSkill: { zh: '提供干扰型风属性协作。', en: 'Provides disruption-oriented Wind cooperation.', ja: '妨害型の風属性協力を行う。' }, lifeSkills: ['elemental-work', 'caretaking'], facilities: ['element-altar', 'feeding-ground'], battleTags: ['disruption'], catchable: true, mountType: 'unknown', source: { name: 'GameWith Kibo index', url: 'https://gamewith.ai/azurpromilia/en/kibos', checkedAt: '2026-09-25', version: 'cbt-beta', sourceType: 'cbt', status: 'reference' }, description: { zh: '风属性奇波的 CBT 索引记录。飞行能力不能由元素或名称推断，需以游戏内状态为准。', en: 'A CBT-indexed Wind Kibo. Flight cannot be inferred from element or name; verify it in-game.', ja: '風属性キボのCBT索引記録。飛行能力は属性や名称から推測せず、ゲーム内で確認。' } },
   { id: 'fumo', name: { zh: '浮云兽', en: 'Fumo', ja: 'フーモ' }, species: { zh: '羽形族', en: 'Wing clan', ja: '羽形族' }, element: 'wind', combatSkill: { zh: '提供战斗支援型协作。', en: 'Provides combat-support cooperation.', ja: '戦闘支援型の協力を行う。' }, lifeSkills: ['field-work'], facilities: ['gathering-hut', 'mining-camp'], battleTags: ['combat-support'], catchable: true, mountType: 'unknown', source: { name: 'GameWith Kibo index', url: 'https://gamewith.ai/azurpromilia/en/kibos', checkedAt: '2026-09-25', version: 'cbt-beta', sourceType: 'cbt', status: 'reference' }, description: { zh: '羽形奇波的 CBT 参考记录，可按野外劳作与战斗支援标签筛选。', en: 'A CBT reference entry for a Wing-clan Kibo, filterable by field work and combat support.', ja: '羽形族キボのCBT参照記録。フィールド作業と戦闘支援で絞り込み可能。' } },

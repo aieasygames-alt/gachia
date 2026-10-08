@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import { createSharedHeaderModel, headerFeaturedGameIds, headerGameIds, headerMoreGameIds, mainSitePath } from '@gachia/ui';
+import { createElement } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
+import { createSharedGameHeaderModel, createSharedHeaderModel, headerFeaturedGameIds, headerGameIds, headerMoreGameIds, mainSitePath, SharedGameHeader } from '@gachia/ui';
 
 describe('shared header contract', () => {
   it('keeps featured and more games disjoint and complete', () => {
@@ -35,5 +37,22 @@ describe('shared header contract', () => {
     expect(mainSitePath('zh')).toBe('https://gachia.com/zh');
     expect(mainSitePath('en', '/genshin')).toBe('https://gachia.com/en/genshin');
     expect(mainSitePath('ja', '/azur-promilia')).toBe('https://gachia.com/ja/azur-promilia');
+  });
+
+  it('renders exactly one reachable more-games disclosure in the shared worker header', () => {
+    const header = createSharedGameHeaderModel({
+      gameId: 'genshin',
+      locale: 'zh',
+      sectionLabel: 'Genshin navigation',
+      sectionLinks: [],
+      localeLinks: [],
+    });
+    const markup = renderToStaticMarkup(createElement(SharedGameHeader, { header }));
+
+    expect(markup.match(/<details/g)).toHaveLength(1);
+    expect(markup).toContain(`<summary>${header.moreGamesLabel}</summary>`);
+    for (const game of header.moreGames) {
+      expect(markup).toContain(`href="https://gachia.com/zh/${game.id}"`);
+    }
   });
 });

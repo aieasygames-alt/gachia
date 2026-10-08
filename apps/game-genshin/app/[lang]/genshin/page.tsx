@@ -24,6 +24,7 @@ export default async function GenshinHome({ params }: { params: Promise<{ lang: 
     { path: 'characters', label: text(locale, { zh: '再看角色定位', en: 'Review character roles', ja: 'キャラの役割を確認' }) },
     { path: 'items', label: text(locale, { zh: '核对养成材料', en: 'Check upgrade materials', ja: '育成素材を確認' }) },
   ];
+  const versionNotice = text(locale, { zh: '当前站内版本入口已切换至 7.1「往冥府的安魂歌」。活动祈愿、武器祈愿、剧情活动、兑换码和奖励都可能随服务器与时间变化；在抽取或投入资源前，请先在版本专题和游戏内公告核对有效期。', en: 'The version entry now follows v7.1 "A Requiem for the Underworld." Event wishes, weapon wishes, story events, codes, and rewards change by server and time; verify expiry in the version hub and in-game notices before spending resources.', ja: 'バージョン入口はv7.1「冥府への鎮魂歌」に更新されています。イベント祈願、武器祈願、ストーリーイベント、コード、報酬はサーバーと時期で変わるため、資源を使う前にバージョン特集とゲーム内告知で期限を確認してください。' });
   const featuredGuides = genshinGuides.slice(0, 36);
   const researchNotes = locale === 'zh'
     ? ['资料页按“先目标、后资源”的顺序设计。若目标是抽取新角色，先在版本与卡池页面确认时间和规则，再从角色图鉴了解元素、武器种类与技能字段；随后把已有武器、套装和材料库存放到同一张清单里比较。这样可以把一次抽卡决定和后续养成成本一起评估。', '若目标是提升已有阵容，先明确角色是站场输出、后台支援、生存位还是反应触发位。再从角色页进入同种武器、推荐套装、材料和配队资料，逐项检查你已有的选择。资料中的链接用于帮助横向比较，不把静态页面当成跨版本的唯一结论。', '地图、材料和计算工具适合用于安排采集与培养顺序。先确定近期最需要突破或升级的角色与武器，再查看来源、区域和资源类型；遇到活动、商店或版本变动时，请用游戏内说明和官方公告确认当前可得性。', '所有需要登录的账号、收藏和进度仍由主域服务处理。公开资料可以匿名浏览；本资料站不会要求提供密码、验证码或账户凭据。']

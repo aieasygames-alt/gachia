@@ -17,13 +17,13 @@ main#main-content:focus { outline: 2px solid rgb(125 226 166 / 64%); outline-off
 .gachia-header__games { flex: 1; min-width: 0; }
 .gachia-header__game-link, .gachia-header__section a { border-radius: 4px; color: var(--muted); font-size: 14px; padding: 9px 10px; }
 .gachia-header__game-link:hover, .gachia-header__section a:hover, .gachia-header__section-link--current { background: #71d9941f; color: var(--primary) !important; }
-.gachia-header__all { border-bottom: 1px solid var(--border); display: block; padding: 0 16px; }
+.gachia-header__all { flex: 0 0 auto; position: relative; }
 .gachia-header__all summary { align-items: center; border: 1px solid var(--border); border-radius: 4px; color: var(--muted); cursor: pointer; display: inline-flex; font-size: 14px; list-style: none; min-height: 36px; padding: 8px 10px; }
 .gachia-header__all summary::-webkit-details-marker { display: none; }
 .gachia-header__all summary::after { border-bottom: 1px solid currentColor; border-right: 1px solid currentColor; content: ''; height: 6px; margin-left: 8px; transform: translateY(-2px) rotate(45deg); transition: transform .18s ease; width: 6px; }
 .gachia-header__all summary:hover, .gachia-header__all[open] summary { border-color: var(--primary); color: var(--primary); }
 .gachia-header__all[open] summary::after { transform: translateY(2px) rotate(225deg); }
-.gachia-header__all-menu { background: var(--surface-alt); border-top: 1px solid var(--border); display: grid; gap: 3px; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); margin: 8px -16px 0; padding: 10px 16px; }
+.gachia-header__all-menu { background: var(--surface-alt); border: 1px solid var(--border); box-shadow: 0 16px 30px rgb(0 0 0 / 28%); display: grid; gap: 3px; grid-template-columns: repeat(2, minmax(0, 1fr)); left: 0; margin-top: 8px; padding: 8px; position: absolute; top: 100%; width: min(296px, calc(100vw - 24px)); z-index: 30; }
 .gachia-header__all-menu a { border-radius: 4px; color: var(--muted); font-size: 12px; padding: 8px; }
 .gachia-header__all-menu a:hover, .gachia-header__all-menu .gachia-header__game--current { background: var(--surface-alt); color: var(--primary); }
 .gachia-header__locale { align-items: center; display: flex; flex: 0 0 auto; }
@@ -117,7 +117,7 @@ p, li { color: var(--muted); line-height: 1.75; }
 .launch-board__item h3 { margin: 5px 0 6px; font-size: 16px; }
 .launch-board__item p { margin: 0; font-size: 13px; }
 .launch-board__item a { display: inline-block; margin-top: 10px; color: var(--primary); font-size: 13px; font-weight: 800; }
-@media (max-width: 1023px) { .gachia-header__games { display: none; } .gachia-header__all { padding-inline: 12px; } }
+@media (max-width: 1023px) { .gachia-header__games { display: flex; flex: 0 0 auto; } .gachia-header__game-link { display: none; } .gachia-header__all-menu { left: auto; right: 0; } }
 @media (max-width: 760px) { .gachia-header__container, .gachia-header__section-wrap { padding-inline: 12px; } .gachia-header__container { min-height: 56px; } .gachia-header__section { gap: 3px; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 2px; } .gachia-header__section a { padding: 7px 8px; } .content { width: min(100% - 24px, 1080px); padding: 34px 0 64px; } h1 { font-size: 36px; } .facts { grid-template-columns: 1fr; } }
 .article > h1 { max-width: 760px; }
 .article > section { border-top: 1px solid rgb(47 99 81 / 76%); padding-top: 28px; }

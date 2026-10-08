@@ -1,5 +1,5 @@
 export const game = {
-  launchDate: '2026-10-31（应用商店预计；官方具体开服时间待核验）',
+  launchDate: '2026-10-15（官方已定档）',
   platforms: ['Android', 'iOS', 'PC'],
   developer: '上海竹子绿梦网络科技有限公司',
   operator: '上海竹子互联网信息服务有限公司',
@@ -30,7 +30,7 @@ export const playableCharacters = [
 ] as const;
 
 export const contentStatus = {
-  verifiedAt: '2026-09-30',
+  verifiedAt: '2026-10-08',
   official: '官方已公开',
   pending: '公测后核验',
 } as const;
@@ -98,15 +98,43 @@ export const contentRoadmap = [
 ] as const;
 
 export const releaseStatus = [
-  { label: '公测预计日期', value: '2026-10-31', state: '应用商店页面显示；以官方开服公告复核' },
+  { label: '全平台公测日期', value: '2026-10-15', state: '官方 TapTap 公告已定档；具体开服时刻仍以开服公告为准' },
   { label: '预下载与开服时间', value: '待官方公告', state: '尚未公开' },
   { label: '账号互通与服务器', value: '待官方公告', state: '尚未公开' },
   { label: '首发活动与卡池', value: '待官方公告', state: '尚未公开' },
 ] as const;
 
 export const officialAnnouncements = [
-  { title: 'App Store 预订与公测日期观察', date: '2026-09', status: '待官方开服公告复核', summary: '应用商店页面显示预计 2026 年 10 月 31 日推出。预下载、实际开服时刻、账号互通与首发版本以官网或官方 TapTap 公告为准。', url: 'https://apps.apple.com/cn/app/%E7%BB%BF%E6%A2%A6-%E6%97%B6%E7%A9%BA%E4%B9%8B%E5%A3%B0/id6791432398' },
+  { title: '全平台公测定档与预约里程碑', date: '2026-09-24', status: '官方已公开', summary: '官方已宣布 2026 年 10 月 15 日于 Android、PC、iOS 全平台公测；预约里程碑奖励列有 A 级御能者「塔可」、原装频带×20、信用点×100000、作战经验×50000。具体到账与领取入口以开服公告为准。', url: 'https://www.taptap.cn/app/237561/topic?type=official' },
+  { title: '公测前瞻特别节目', date: '2026-10-09 18:00', status: '官方已预告', summary: '官方预告将公开地图、角色、BOSS、战斗设计、抽卡规则与公测福利。节目公布前，卡池与规则不提前写成正式结论。', url: 'https://www.taptap.cn/app/237561/topic?type=official' },
   { title: '官方公告汇总入口', date: '持续更新', status: '跟踪中', summary: '公测预下载、开服、版本维护、活动和兑换码以此官方公告页为优先核对来源。', url: 'https://www.taptap.cn/app/237561/topic?type=official' },
+] as const;
+
+export const previewFollowUpChecklist = [
+  {
+    title: '开服与下载信息',
+    status: '先看官方公告',
+    summary: '核对预下载开始时间、各平台实际上架状态、开服时刻、客户端版本号与维护窗口。定档日期不等同于每个平台已经可下载或服务器已经开放。',
+    href: '/zh/lvmeng/download',
+  },
+  {
+    title: '账号、区服与互通',
+    status: '逐项确认',
+    summary: '确认登录方式、服务器划分、跨平台角色数据、预注册奖励归属与改区规则。未见官方说明时，不根据社区截图提前创建角色或充值。',
+    href: '/zh/lvmeng/faq',
+  },
+  {
+    title: '卡池、福利与兑换',
+    status: '不要合并估算',
+    summary: '把首发卡池、概率与保底、预约里程碑、登录活动、测试返还和兑换码分别记录来源、有效期、参与条件与领取入口。',
+    href: '/zh/lvmeng/redeem-codes',
+  },
+  {
+    title: '首日客户端复核',
+    status: '以正式客户端为准',
+    summary: '进入游戏后再核对功能解锁、角色图鉴、材料来源、活动期限和地图区域名称；前瞻演示与测试攻略不直接替代可复现资料。',
+    href: '/zh/lvmeng/launch-check',
+  },
 ] as const;
 
 export const officialEntryPoints = [
@@ -117,7 +145,7 @@ export const officialEntryPoints = [
 ] as const;
 
 export const launchFaq = [
-  { question: '绿梦：时空之声什么时候公测？', answer: '当前 App Store 页面显示预计 2026 年 10 月 31 日推出；具体预下载、开服时间和是否存在平台差异，仍以官网或官方 TapTap 公告为准。' },
+  { question: '绿梦：时空之声什么时候公测？', answer: '官方已定档 2026 年 10 月 15 日于 Android、iOS 与 PC 全平台公测。预下载、实际开服时刻和账号互通规则仍以开服前官方公告为准。' },
   { question: '首发支持哪些平台？', answer: '当前公开资料列出 Android、iOS 与 PC，但各平台是否同步开放、安装包、配置、账号与互通规则仍应以开服前官方公告为准。' },
   { question: '在哪里预约或下载最安全？', answer: '请使用官方网站、TapTap 官方预约页或 App Store 预登记页。不要使用论坛附件、转存安装包或第三方兑换工具。' },
   { question: '绿梦的横版 ACT 玩法先该学什么？', answer: '先在正式客户端熟悉闪避、地面与空中衔接、角色切换和援护触发。测试期连招与帧数细节可以作为练习线索，但不能直接替代公测操作结论。' },
@@ -155,7 +183,7 @@ export const progressionDirectory = [
 ] as const;
 
 export const versionHistory = [
-  { version: '公测首发', date: '2026-10-31（预计）', status: '待官方开服公告复核', summary: '应用商店页面显示预计推出日期；版本号、维护说明、首发活动、平台规则与实际开服时刻待官方公告确认。' },
+  { version: '公测首发', date: '2026-10-15', status: '官方已定档', summary: '官方已宣布 Android、PC、iOS 全平台公测。版本号、预下载、具体开服时刻、账号互通、首发活动与卡池规则仍待开服公告和客户端核验。' },
 ] as const;
 
 export const systemOverview = [
