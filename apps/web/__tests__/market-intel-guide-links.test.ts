@@ -63,6 +63,7 @@ describe('market-intel guide links', () => {
       'global-change-communication-playbook',
       'global-fair-play-integrity-playbook',
       'global-player-discovery-codex-playbook',
+      'global-onboarding-learning-recovery-playbook',
       'global-player-support-trust-playbook',
       'global-social-safety-guild-playbook',
     ];
