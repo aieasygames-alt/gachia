@@ -57,6 +57,8 @@ describe('market-intel guide links', () => {
       'global-live-ops-metrics-experiments',
       'global-localization-cultural-event-playbook',
       'global-cbt-to-launch-decision-gates',
+      'global-player-support-trust-playbook',
+      'global-social-safety-guild-playbook',
     ];
     const snapshotGuideLinks = VERSION_SNAPSHOTS.roco?.links.map((link) => link.href) ?? [];
 

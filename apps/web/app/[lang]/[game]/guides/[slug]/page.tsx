@@ -478,12 +478,22 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
       { href: '/roco/guides/global-days-31-90-season-event-plan', label: { zh: '赛季与活动包', en: 'Season and event plan', ja: 'シーズン・イベント案' }, description: { zh: '将实验结果用于下一阶段赛季和全球活动调整。', en: 'Use experiment results to tune the next season and global event.', ja: '実験結果を次のシーズンと世界イベントへ反映。' } },
     ],
     'global-localization-cultural-event-playbook': [
+      { href: '/roco/guides/global-player-support-trust-playbook', label: { zh: '玩家支持与信任', en: 'Player support', ja: 'プレイヤーサポート' }, description: { zh: '将本地化、奖励和时区问题接入可追踪的支持与补偿路径。', en: 'Connect localization, reward, and time-zone issues to trackable support and compensation paths.', ja: '翻訳、報酬、時区問題を追跡可能なサポート・補償導線へ。' } },
       { href: '/roco/guides/global-days-31-90-season-event-plan', label: { zh: '31–90 天赛季包', en: 'Days 31–90 season plan', ja: '31〜90日シーズン案' }, description: { zh: '将文化活动模板应用到首赛季与全球社区活动。', en: 'Apply the cultural-event template to the first season and global community event.', ja: '文化イベントの型を初回シーズンと世界イベントに適用。' } },
       { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '本地化指标', en: 'Localization metrics', ja: 'ローカライズ指標' }, description: { zh: '用时区参与、文本理解和补领数据复盘本地化效果。', en: 'Review localization through time-zone, comprehension, and late-claim data.', ja: '時区参加、文章理解、補受取データでローカライズを振り返る。' } },
     ],
     'global-cbt-to-launch-decision-gates': [
+      { href: '/roco/guides/global-social-safety-guild-playbook', label: { zh: '社交安全与公会', en: 'Social safety & guilds', ja: 'ソーシャル安全・ギルド' }, description: { zh: '将跨端组队、权限、举报与未成年人保护列入上线门槛。', en: 'Include cross-play parties, permissions, reports, and youth safety in launch gates.', ja: 'クロスプレイPT、権限、通報、未成年保護をローンチゲートへ。' } },
       { href: '/roco/guides/global-launch-readiness-checklist', label: { zh: '首发验收清单', en: 'Launch checklist', ja: 'ローンチ確認リスト' }, description: { zh: '回到核心循环、跨端、本地化和服务的上线条件。', en: 'Return to core-loop, cross-play, localization, and service readiness.', ja: '基本循環、クロスプレイ、翻訳、サービスの準備条件へ戻る。' } },
       { href: '/roco/guides/global-cn-release-governance', label: { zh: '跨服版本治理', en: 'CN-global governance', ja: '地域間リリース統治' }, description: { zh: '将 CBT 结论接入跨服移植、公告和回滚规则。', en: 'Connect CBT conclusions to cross-region ports, communication, and rollback.', ja: 'CBT結論を地域間移植、告知、ロールバックへ接続。' } },
+    ],
+    'global-player-support-trust-playbook': [
+      { href: '/roco/guides/global-social-safety-guild-playbook', label: { zh: '社交安全与公会', en: 'Social safety & guilds', ja: 'ソーシャル安全・ギルド' }, description: { zh: '将举报、申诉、权限事故和社区保护纳入支持闭环。', en: 'Bring reports, appeals, permission incidents, and community protection into support operations.', ja: '通報、異議申立て、権限事故、コミュニティ保護をサポート運用へ。' } },
+      { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '支持与信任指标', en: 'Support metrics', ja: 'サポート指標' }, description: { zh: '用处理时长、补发正确率和语言差异改进服务。', en: 'Improve service through resolution time, restoration accuracy, and language-gap data.', ja: '処理時間、復旧正確性、言語差データでサービスを改善。' } },
+    ],
+    'global-social-safety-guild-playbook': [
+      { href: '/roco/guides/global-player-support-trust-playbook', label: { zh: '玩家支持与信任', en: 'Player support', ja: 'プレイヤーサポート' }, description: { zh: '查看进度、奖励、退款、申诉和隐私问题的支持规则。', en: 'Review support rules for progression, rewards, refunds, appeals, and privacy.', ja: '進行、報酬、返金、異議申立て、プライバシーのサポート規則へ。' } },
+      { href: '/roco/guides/global-first-30-days-pve-plan', label: { zh: '前 30 天 PvE 包', en: 'Days 1–30 PvE plan', ja: '1〜30日PvE案' }, description: { zh: '确认单人、公开匹配和公会协作都能获得核心养成。', en: 'Ensure solo, public-match, and guild routes all access core progression.', ja: 'ソロ、公開マッチ、ギルドの全ルートで核心育成へアクセス。' } },
     ],
     'cbt-registration-guide': [
       { href: '/roco/version', label: { zh: '版本时间线', en: 'Version timeline', ja: '版本タイムライン' }, description: { zh: '报名后接着看 CBT 到正式版的节点和已确认内容。', en: 'After signing up, continue into the CBT-to-launch timeline and confirmed content.', ja: '申込後はCBTから正式版までの予定と確定情報へ。' } },
