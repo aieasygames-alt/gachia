@@ -15,7 +15,7 @@ const ITEM_DESC: Record<string, Record<string, string>> = {
   zzz: { zh: '绝区零材料图鉴 Wiki，覆盖代理人突破材料、技能材料、特殊材料、抽卡道具、刷取来源、当前版本培养优先级和配队养成路线。', en: 'Zenless Zone Zero materials wiki with agent ascension materials, skill materials, special mats, gacha items, farming sources, current-version upgrade priority, and team-building routes.', ja: 'ゼンレスゾーンゼロ素材Wiki。突破素材、スキル素材、特殊素材、ガチャアイテム、周回先、育成優先度を整理。' },
   guihuan: { zh: '归环全材料图鉴，覆盖使灵突破、元素突破、Boss材料和对应来源，便于你在培养前快速确认每类素材的获取方式。', en: 'Complete Guihuan material list with spirit ascension, element ascension, boss materials, and acquisition sources for easy build planning.', ja: '帰環全素材図鑑。スピリット昇格、元素昇格、ボス素材、入手先をまとめています。' },
   ananta: { zh: '无限大全材料图鉴，覆盖突破材料、Boss材料、区域特产和刷取来源，帮助你在培养角色时快速整理所有所需资源。', en: 'Complete Ananta material list with ascension, boss materials, local specialties, and farming sources to keep your upgrade path organized.', ja: 'アナンタ全素材図鑑。昇格素材、ボス素材、地域特産品、周回先を整理して確認できます。' },
-  endfield: { zh: '明日方舟：终末地全材料图鉴，覆盖突破材料、技能材料、货币材料和来源，方便你从培养计划一路查到具体掉落。', en: 'Complete Arknights: Endfield material list with ascension materials, skill materials, currency materials, and farming sources for full upgrade planning.', ja: 'アークナイツ：エンドフィールド全素材図鑑。昇格素材、スキル素材、通貨素材、入手先を確認できます。' },
+  endfield: { zh: '明日方舟：终末地材料图鉴，收录 Pioneer Test 的突破、技能、武器与货币资料参考。后续测试和正式版的掉落、配方与来源请以官方公告复核。', en: 'Arknights: Endfield materials roster with Pioneer Test references for ascension, skill, weapon, and currency data. Verify future-test and release drops, recipes, and sources through official announcements.', ja: 'アークナイツ：エンドフィールド素材図鑑。Pioneer Test の昇格、スキル、武器、通貨資料を参考として収録。今後のテストと正式版のドロップ、レシピ、入手先は公式発表で再確認してください。' },
   skjh: { zh: '失控进化资源道具图鉴，覆盖废料、布料、木石金属、领地柜、睡袋和公测奖励，方便你规划开荒阶段的资源收集路线。', en: 'Ashfall Evolution resource and item list with scrap, cloth, wood, stone, metal, territory cabinet, sleeping bag, and launch rewards for early-game planning.', ja: '失控進化の資源・アイテム一覧。スクラップ、布、木石金属、領地キャビネット、寝袋、報酬を整理しています。' },
   'roco-cn': { zh: '洛克王国材料图鉴，覆盖咕噜球、经验果、进化材料、矿石与货币代币的获取来源，方便你规划捕捉与培养路线。', en: 'Roco Kingdom (CN) materials list with Gulu Balls, EXP fruits, evolution materials, ores, and currency tokens with acquisition sources for capture and training planning.', ja: '洛克王国素材一覧。グルーボール、経験値フルーツ、進化素材、鉱石、通貨の入手先を整理しています。' },
 };
@@ -51,9 +51,9 @@ type NextStepLink = {
 
 const ENDFIELD_ITEM_NEXT_STEPS: NextStepLink[] = [
   {
-    href: '/endfield/version',
-    label: { zh: '先看测试专题', en: 'Start with test hub', ja: 'まずテスト特集へ' },
-    description: { zh: '先看测试进度、入口和最新节点', en: 'Review the test progress, entry, and current status', ja: 'テスト進行、入口、最新状況を確認', },
+    href: '/endfield/events',
+    label: { zh: '先看测试后状态', en: 'Start with post-test status', ja: 'まずテスト後状態へ' },
+    description: { zh: '确认可复用资料、官方观察项和当前节点', en: 'Check reusable references, official watch items, and the current state', ja: '再利用資料、公式確認項目、現状を確認', },
   },
   {
     href: '/endfield/characters',
@@ -61,9 +61,9 @@ const ENDFIELD_ITEM_NEXT_STEPS: NextStepLink[] = [
     description: { zh: '按干员反查材料需求和养成路线', en: 'Match material needs to each operator', ja: '干員ごとの素材需要を確認', },
   },
   {
-    href: '/endfield/guides/crisis-contract-guide',
-    label: { zh: '看危机合约攻略', en: 'Read crisis guide', ja: '危機合約攻略へ' },
-    description: { zh: '把材料、装备和高难打法串起来', en: 'Connect materials, gear, and high-difficulty prep', ja: '素材、装備、高難度対策を接続', },
+    href: '/endfield/guides/blueprint-aic-factory-guide',
+    label: { zh: '整理 AIC 工厂路线', en: 'Plan AIC factory modules', ja: 'AIC工場モジュールを整理' },
+    description: { zh: '按输入、输出和瓶颈保留可复用的资源线', en: 'Keep reusable resource lines by input, output, and bottleneck', ja: '入力、出力、ボトルネック別に再利用可能な資源ラインを残す', },
   },
 ];
 
@@ -104,9 +104,9 @@ const ITEM_INTRO: Record<string, Record<SupportedLocale, string>> = {
     ja: 'スピリットガイド、突破素材、元素昇格、ボス素材で帰環素材図鑑を確認し、ビルドと育成導線を把握できます。',
   },
   endfield: {
-    zh: '按突破材料、技能材料、武器材料和装备套装快速浏览终末地材料图鉴，适合先看升级需求和掉落来源。',
-    en: 'Browse the Arknights: Endfield material wiki by ascension, skill, weapon mats, and gear sets to review upgrade needs and drop sources.',
-    ja: '突破素材、スキル素材、武器素材、装備セットでエンドフィールド素材図鑑を確認し、強化需要とドロップ元を把握できます。',
+    zh: '按突破、技能、武器材料和装备套装浏览终末地 Pioneer Test 资料参考；升级需求、掉落和配方须在后续测试或正式版以官方信息复核。',
+    en: 'Browse Pioneer Test Arknights: Endfield references for ascension, skill, weapon materials, and gear sets. Recheck upgrade needs, drops, and recipes against official future-test or release information.',
+    ja: '突破、スキル、武器素材、装備セットでエンドフィールド Pioneer Test の資料参考を確認できます。強化需要、ドロップ、レシピは今後のテストまたは正式版の公式情報で再確認してください。',
   },
   sea: {
     zh: '按货币、船员突破、船只升级和制造材料快速浏览遗忘之海材料图鉴，适合先看开荒消耗和获取路线。',
@@ -712,6 +712,14 @@ async function EndfieldItemsPage({ locale, gameId }: { locale: SupportedLocale; 
       <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
         {getItemIntro('endfield', locale)}
       </p>
+      <div className="mb-6 rounded-md border border-amber-500/40 bg-amber-500/10 px-4 py-3 text-xs leading-relaxed text-game-text-muted">
+        <strong className="mr-1 text-game-text">{locale === 'zh' ? '资料状态' : locale === 'ja' ? 'データ状態' : 'Data status'}:</strong>
+        {locale === 'zh'
+          ? '材料、装备套装、来源与推荐来自 Pioneer Test 资料快照；未来测试与正式版的掉落、配方、成本和解锁条件仅以官方公告为准。'
+          : locale === 'ja'
+            ? '素材、ギアセット、入手先、推奨は Pioneer Test 資料のスナップショットです。今後のテストと正式版のドロップ、レシピ、コスト、解放条件は公式発表のみを基準にしてください。'
+            : 'Materials, gear sets, sources, and recommendations are Pioneer Test snapshots. Use official announcements only for future-test and release drops, recipes, costs, and unlock requirements.'}
+      </div>
 
       {typeOrder.map((type) => {
         const list = grouped[type];

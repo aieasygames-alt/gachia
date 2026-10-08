@@ -530,7 +530,7 @@ export const LIVE_GUIDES: LiveGuideLink[] = [
       en: 'Test access, downloads, characters, blueprints, and AIC factory content are the current focus.',
       ja: 'テスト資格、DL、キャラ、設計図、AIC工場を重点化します。',
     },
-    href: '/endfield/guides/homecoming-update-guide',
+    href: '/endfield/guides/pioneer-test-post-test-route',
     updatedAt: LIVE_UPDATED_AT,
     priority: 3,
   },

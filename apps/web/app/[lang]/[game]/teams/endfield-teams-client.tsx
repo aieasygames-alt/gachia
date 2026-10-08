@@ -189,6 +189,16 @@ export function EndfieldTeams({ locale }: { locale: SupportedLocale }) {
 
   return (
     <div>
+      <section className="mb-6 rounded-lg border border-game-border bg-game-surface p-4">
+        <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-game-primary">{t(locale, '终末地测试后入口', 'Endfield post-test route', 'エンドフィールド テスト後入口')}</p>
+        <h1 className="mb-2 text-2xl font-bold text-game-text">{t(locale, '已有干员配队与测试后养成复盘', 'Owned-operator teams and post-test build review', '所持オペレーター編成とテスト後育成の見直し')}</h1>
+        <p className="mb-4 text-sm leading-relaxed text-game-text-muted">{t(locale, '先按已有干员的职业、元素和职责整理队伍；旧测试期的数值与 Tier 仅作参考，下一轮测试或正式版变动以官方公告为准。', 'Build around owned operators by profession, element, and duty. Older test numbers and tiers are references only; use official notices for a future test or release.', '所持オペレーターの職分、元素、役割から編成を組みます。旧テストの数値とTierは参考に留め、次回テストや正式版の変更は公式告知を基準にします。')}</p>
+        <div className="grid gap-2 md:grid-cols-3">
+          <a href={`/${locale}/endfield/events`} className="rounded-md border border-game-border bg-game-surface-alt p-3 transition-colors hover:border-game-primary"><span className="mb-1 block text-sm font-semibold text-game-text">{t(locale, '测试后状态', 'Post-test status', 'テスト後状態')}</span><span className="line-clamp-2 text-xs leading-relaxed text-game-text-muted">{t(locale, '核对测试历史、AIC 与官方确认状态。', 'Review test history, AIC, and official confirmation.', 'テスト履歴、AIC、公式確認状態を確認。')}</span></a>
+          <a href={`/${locale}/endfield/guides/pioneer-test-post-test-route`} className="rounded-md border border-game-border bg-game-surface-alt p-3 transition-colors hover:border-game-primary"><span className="mb-1 block text-sm font-semibold text-game-text">{t(locale, '测试后路线', 'Post-test route', 'テスト後ルート')}</span><span className="line-clamp-2 text-xs leading-relaxed text-game-text-muted">{t(locale, '先做奖励核对，再整理可复用的队伍资料。', 'Verify rewards first, then organize reusable team notes.', '報酬確認後に再利用可能な編成資料を整理。')}</span></a>
+          <a href={`/${locale}/endfield/build`} className="rounded-md border border-game-border bg-game-surface-alt p-3 transition-colors hover:border-game-primary"><span className="mb-1 block text-sm font-semibold text-game-text">{t(locale, '查看已有干员配装', 'Review owned-operator builds', '所持オペレーターのビルド')}</span><span className="line-clamp-2 text-xs leading-relaxed text-game-text-muted">{t(locale, '用可核验的武器和替代方案继续养成。', 'Continue with verifiable weapons and alternatives.', '検証可能な武器と代替案で育成を続ける。')}</span></a>
+        </div>
+      </section>
       <p className="mb-6 text-sm text-game-text-muted">
         {t(locale, `共 ${filtered.length} 位干员的推荐配队`, `${filtered.length} operators with recommended teams`, `${filtered.length}オペレーターのおすすめ編成`)}
       </p>

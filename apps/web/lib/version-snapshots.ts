@@ -369,7 +369,7 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       { type: 'download', href: '/endfield/download', label: { zh: '下载 / 测试', en: 'Download / Tests', ja: 'DL / テスト' } },
       { type: 'codes', href: '/endfield/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
       { type: 'characters', href: '/endfield/characters', label: { zh: '角色', en: 'Characters', ja: 'キャラ' } },
-      { type: 'guides', href: '/endfield/guides/homecoming-update-guide', label: { zh: '测试复盘 / 蓝图', en: 'Test recap / blueprints', ja: 'テストまとめ / 設計図' } },
+      { type: 'guides', href: '/endfield/guides/pioneer-test-post-test-route', label: { zh: '测试后状态 / 蓝图', en: 'Post-test status / blueprints', ja: 'テスト後状態 / 設計図' } },
     ],
   },
   sea: {

@@ -11,6 +11,7 @@ import {
   type RocoEventStatus,
 } from '@/lib/game-data/roco-events';
 import { ZZZ_EVENTS, ZZZ_EVENT_STATUS_COPY, ZZZ_EVENT_UPDATED_AT, type ZzzEventStatus } from '@/lib/game-data/zzz-events';
+import { ENDFIELD_EVENTS, ENDFIELD_EVENT_STATUS_COPY, ENDFIELD_EVENT_UPDATED_AT, type EndfieldEventStatus } from '@/lib/game-data/endfield-events';
 
 const BASE_URL = 'https://gachia.com';
 const SNAPSHOT_DATE = new Date('2026-09-07T00:00:00Z');
@@ -57,7 +58,7 @@ function formatDate(date: string, locale: SupportedLocale) {
 
 export function generateStaticParams() {
   return LOCALES.flatMap((lang) =>
-    (['roco', 'roco-cn', 'zzz'] as const).map((game) => ({ lang, game })),
+    (['roco', 'roco-cn', 'zzz', 'endfield'] as const).map((game) => ({ lang, game })),
   );
 }
 
@@ -70,7 +71,7 @@ export async function generateMetadata({
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
 
-  if (!isRocoEventGame(gameId) && gameId !== 'zzz') {
+  if (!isRocoEventGame(gameId) && gameId !== 'zzz' && gameId !== 'endfield') {
     return { robots: { index: false, follow: false } };
   }
 
@@ -99,6 +100,36 @@ export async function generateMetadata({
         url: `${BASE_URL}/${locale}/zzz/events`,
         siteName: 'Gachia',
         images: [{ url: `${BASE_URL}/images/og/zzz.webp`, width: 1200, height: 630 }],
+        locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
+      },
+    };
+  }
+
+  if (gameId === 'endfield') {
+    const title = locale === 'zh'
+      ? '明日方舟：终末地活动看板｜测试复盘、AIC 与官方状态'
+      : locale === 'ja'
+        ? 'アークナイツ：エンドフィールド 状態ボード｜テストまとめ・AIC・公式情報'
+        : 'Arknights: Endfield Status Board — Test Recap, AIC, and Official Watch';
+    const description = ensureMetaLength(
+      locale === 'zh'
+        ? '明日方舟：终末地活动看板整理 Pioneer Test 后可执行的复盘、AIC 蓝图、已有干员养成和下一轮测试/正式上线的官方确认状态。'
+        : locale === 'ja'
+          ? 'エンドフィールドのPioneer Test後のまとめ、AIC設計図、所持オペレーター育成、次回テスト・正式版の公式確認状態を整理します。'
+          : 'Arknights: Endfield status board for post-Pioneer-Test actions, AIC blueprints, owned-operator planning, and official next-test or release confirmation.',
+      locale,
+    );
+
+    return {
+      title,
+      description,
+      alternates: buildLocalizedAlternates(locale, (entry) => `/${entry}/endfield/events`, LOCALES),
+      openGraph: {
+        title,
+        description,
+        url: `${BASE_URL}/${locale}/endfield/events`,
+        siteName: 'Gachia',
+        images: [{ url: `${BASE_URL}/images/og/endfield.webp`, width: 1200, height: 630 }],
         locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
       },
     };
@@ -145,6 +176,7 @@ export default async function RocoEventsPage({
   const gameId = game as GameId;
 
   if (gameId === 'zzz') return <ZzzEventsPage locale={locale} />;
+  if (gameId === 'endfield') return <EndfieldEventsPage locale={locale} />;
 
   if (!isRocoEventGame(gameId)) return null;
 
@@ -243,4 +275,9 @@ export default async function RocoEventsPage({
 function ZzzEventsPage({ locale }: { locale: SupportedLocale }) {
   const statuses: ZzzEventStatus[] = ['action', 'planning', 'watch'];
   return <div><h1 className="mb-2 text-2xl font-bold text-game-text">{locale === 'zh' ? '绝区零版本活动看板' : locale === 'ja' ? 'ZZZ バージョン・イベント看板' : 'ZZZ Version and Event Board'}</h1><p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">{locale === 'zh' ? `更新时间：${ZZZ_EVENT_UPDATED_AT}。此页只整理可执行的版本事项；未有官方公告支撑的日期、角色和奖励不会伪装成已上线活动。` : locale === 'ja' ? `更新日：${ZZZ_EVENT_UPDATED_AT}。実行できるバージョン事項だけを整理し、公式告知のない日程・キャラ・報酬は開催済みとして扱いません。` : `Updated ${ZZZ_EVENT_UPDATED_AT}. This board lists actionable version items; dates, characters, and rewards without official notices are not presented as live events.`}</p><div className="space-y-6">{statuses.map((status) => <section key={status}><h2 className="mb-3 text-base font-semibold text-game-text">{ZZZ_EVENT_STATUS_COPY[status][locale]}</h2><div className="grid gap-4 md:grid-cols-2">{ZZZ_EVENTS.filter((entry) => entry.status === status).map((entry) => <article key={entry.id} className="border border-game-border bg-game-surface p-4"><span className="text-xs font-semibold text-game-primary">{ZZZ_EVENT_STATUS_COPY[entry.status][locale]}</span><h3 className="mt-2 text-lg font-semibold text-game-text">{entry.title[locale]}</h3><p className="mt-2 text-sm leading-6 text-game-text-muted">{entry.summary[locale]}</p><p className="mt-3 text-xs text-game-text-muted">{locale === 'zh' ? '来源：' : locale === 'ja' ? '出典：' : 'Source: '}{entry.source[locale]} · {entry.updatedAt}</p><Link href={entry.href as '/'} className="mt-4 inline-block text-sm font-semibold text-game-primary hover:text-game-accent">{entry.action[locale]} →</Link></article>)}</div></section>)}</div></div>;
+}
+
+function EndfieldEventsPage({ locale }: { locale: SupportedLocale }) {
+  const statuses: EndfieldEventStatus[] = ['action', 'planning', 'watch'];
+  return <div><h1 className="mb-2 text-2xl font-bold text-game-text">{locale === 'zh' ? '终末地测试后状态看板' : locale === 'ja' ? 'エンドフィールド テスト後状態ボード' : 'Endfield Post-Test Status Board'}</h1><p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">{locale === 'zh' ? `更新时间：${ENDFIELD_EVENT_UPDATED_AT}。本页将 Pioneer Test 历史、可复用的 AIC/蓝图经验与下一轮测试或正式上线的官方确认状态分开呈现。` : locale === 'ja' ? `更新日：${ENDFIELD_EVENT_UPDATED_AT}。Pioneer Testの履歴、再利用可能なAIC/設計図の知見、次回テスト・正式版の公式確認状態を分けて整理します。` : `Updated ${ENDFIELD_EVENT_UPDATED_AT}. This board separates Pioneer Test history, reusable AIC/blueprint learning, and official confirmation for a future test or full release.`}</p><div className="space-y-6">{statuses.map((status) => <section key={status}><h2 className="mb-3 text-base font-semibold text-game-text">{ENDFIELD_EVENT_STATUS_COPY[status][locale]}</h2><div className="grid gap-4 md:grid-cols-2">{ENDFIELD_EVENTS.filter((entry) => entry.status === status).map((entry) => <article key={entry.id} className="border border-game-border bg-game-surface p-4"><span className="text-xs font-semibold text-game-primary">{ENDFIELD_EVENT_STATUS_COPY[entry.status][locale]}</span><h3 className="mt-2 text-lg font-semibold text-game-text">{entry.title[locale]}</h3><p className="mt-2 text-sm leading-6 text-game-text-muted">{entry.summary[locale]}</p><p className="mt-3 text-xs text-game-text-muted">{locale === 'zh' ? '来源：' : locale === 'ja' ? '出典：' : 'Source: '}{entry.source[locale]} · {entry.updatedAt}</p><Link href={entry.href as '/'} className="mt-4 inline-block text-sm font-semibold text-game-primary hover:text-game-accent">{entry.action[locale]} →</Link></article>)}</div></section>)}</div></div>;
 }

@@ -33,6 +33,11 @@ type GuideLike = {
   quickFacts?: Partial<Record<SupportedLocale, string[]>>;
 };
 
+function isHistoricalGuideVersion(currentVersion: string) {
+  const normalized = currentVersion.toLowerCase();
+  return normalized.includes('historical') || normalized.includes('pioneer test archive');
+}
+
 type GuideRuntime = {
   guides: GuideLike[];
   categories: Record<string, Partial<Record<SupportedLocale, string>>>;
@@ -832,9 +837,9 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ la
 
       {guide.currentVersion && (
         <div className="mb-6 rounded-md border border-game-border bg-game-surface px-4 py-3 text-xs leading-relaxed text-game-text-muted">
-          <strong className="mr-1 text-game-text">{guide.currentVersion.toLowerCase().includes('historical') ? (locale === 'zh' ? '历史参考' : locale === 'ja' ? '過去の参考' : 'Historical reference') : (locale === 'zh' ? '版本状态' : locale === 'ja' ? 'バージョン状況' : 'Version status')}:</strong>
-          {guide.currentVersion.toLowerCase().includes('historical')
-            ? (locale === 'zh' ? '本页保留历史版本资料，用于理解旧机制或旧活动；当前卡池、奖励和版本状态请前往最新版本专题。' : locale === 'ja' ? '過去バージョンの資料です。現在のバナー、報酬、版本状況は最新特集を確認してください。' : 'This page preserves historical version information for context. Use the latest version hub for live banners, rewards, and status.')
+          <strong className="mr-1 text-game-text">{isHistoricalGuideVersion(guide.currentVersion) ? (locale === 'zh' ? '历史参考' : locale === 'ja' ? '過去の参考' : 'Historical reference') : (locale === 'zh' ? '版本状态' : locale === 'ja' ? 'バージョン状況' : 'Version status')}:</strong>
+          {isHistoricalGuideVersion(guide.currentVersion)
+            ? (locale === 'zh' ? '本页保留历史测试或旧版本资料，用于理解已测试的机制、队伍或活动；当前卡池、奖励、规则和版本状态请以官方公告及测试后状态板为准。' : locale === 'ja' ? '過去のテスト・旧バージョン資料です。確認済みの仕組み、編成、イベントの理解用に残しています。現在のバナー、報酬、ルール、バージョン状況は公式告知とテスト後状態ボードを基準にしてください。' : 'This page preserves historical-test or older-version information for context. Use official announcements and the post-test status board for current banners, rewards, rules, and version status.')
             : (locale === 'zh' ? `当前内容周期：${guide.currentVersion}。卡池、活动和数值可能变化，请以游戏内或官方公告为最终依据。` : locale === 'ja' ? `現在の内容周期：${guide.currentVersion}。バナー、イベント、数値は変わる可能性があるため公式告知を確認してください。` : `Current content cycle: ${guide.currentVersion}. Banners, events, and values can change; confirm final details in the client or official notices.`)}
         </div>
       )}

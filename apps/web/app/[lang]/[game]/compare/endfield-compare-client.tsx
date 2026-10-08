@@ -243,6 +243,12 @@ export function EndfieldCompare({ locale }: { locale: SupportedLocale }) {
       <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
         {t(locale, '角色对比', 'Character Compare', 'キャラ比較')}
       </h1>
+      <p className="mb-6 rounded-md border border-amber-500/40 bg-amber-500/10 px-4 py-3 text-sm leading-relaxed text-game-text-muted">
+        {t(locale,
+          '这里的角色属性、获取方式、Tier 与配队来自 Pioneer Test 资料快照，仅适合回看测试期的职业分工和已有干员思路。下一轮测试或正式版请以官方数值、系统和活动说明重新判断。',
+          'Character stats, acquisition, tiers, and teams here are Pioneer Test snapshots. Use them only to review test-period roles and owned-operator planning; reassess with official values, systems, and event details for a future test or release.',
+          'ここにあるキャラ性能、入手方法、Tier、編成は Pioneer Test の資料スナップショットです。テスト期の役割と所持オペレーターの整理に限って使い、次回テスト・正式版では公式の数値、システム、イベント案内で再判断してください。')}
+      </p>
 
       {/* Slot Selection Bar */}
       <div className="mb-6 grid grid-cols-2 gap-4">

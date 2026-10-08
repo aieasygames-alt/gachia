@@ -236,6 +236,7 @@ export function EndfieldBuildRecommender({ locale }: { locale: SupportedLocale }
       <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
         {t(locale, '配装推荐', 'Build Recommender', 'ビルドおすすめ')}
       </h1>
+      <p className="mb-6 rounded-md border border-amber-500/40 bg-amber-500/10 px-4 py-3 text-sm leading-relaxed text-game-text-muted">{t(locale, '以下武器、属性与配队建议来自 Pioneer Test 资料。把它们用于已有干员的测试期参考；下一轮测试或正式版的配方、数值与获取方式以官方公告为准。', 'The weapon, stat, and team suggestions below come from Pioneer Test material. Use them as test-period reference for owned operators; official notices control future-test or release recipes, values, and acquisition.', '以下の武器、ステータス、編成案はPioneer Test資料に基づきます。所持オペレーターのテスト期参考として使い、次回テスト・正式版のレシピ、数値、入手方法は公式告知を基準にしてください。')}</p>
 
       {selectedChar && !showSelector ? (
         <div className="mb-4 flex items-center gap-4 rounded-xl border border-game-primary/30 bg-game-surface p-4">
@@ -312,7 +313,7 @@ export function EndfieldBuildRecommender({ locale }: { locale: SupportedLocale }
         <div className="space-y-4">
           {selectedChar.tierReason && (
             <div className="rounded-xl border border-game-border bg-game-surface p-4">
-              <p className="text-sm text-game-primary">{getEndfieldCharacterTierReason(selectedChar, locale)}</p>
+              <p className="text-sm text-game-primary">{t(locale, 'Pioneer Test 参考：', 'Pioneer Test reference: ', 'Pioneer Test参考：')}{getEndfieldCharacterTierReason(selectedChar, locale)}</p>
             </div>
           )}
 

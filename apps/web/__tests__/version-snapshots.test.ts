@@ -6,6 +6,7 @@ import {
   localizeVersionText,
 } from '@/lib/version-snapshots';
 import { getZzzGuideById } from '@gachia/data/games/zzz/guides';
+import { getEndfieldGuideById, getEndfieldGuideContent } from '@gachia/data/games/endfield/guides';
 
 const locales = ['zh', 'en', 'ja'] as const;
 const priorityGames = ['zzz', 'wuwa', 'starrail', 'genshin', 'endfield', 'aniimo', 'sea', 'roco', 'roco-cn', 'ananta', 'skjh'] as const;
@@ -45,6 +46,25 @@ describe('version snapshots', () => {
     expect(previewGuide?.currentVersion).toContain('2026-10-09');
     expect(bannerGuide?.updatedAt).toBe('2026-10-08');
     expect(steamGuide?.updatedAt).toBe('2026-10-08');
+  });
+
+  it('keeps the Endfield post-test route official-only for future access', () => {
+    const postTestGuide = getEndfieldGuideById('pioneer-test-post-test-route');
+
+    expect(postTestGuide?.updatedAt).toBe('2026-10-08');
+    expect(postTestGuide?.currentVersion).toContain('official confirmation');
+    expect(postTestGuide?.summary).toContain('Pioneer Test 招募结束后');
+  });
+
+  it('marks legacy Endfield combat, base, gacha, tier, and event guides as Pioneer Test archives', () => {
+    for (const id of ['combat-system-guide', 'base-building-guide', 'gacha-headhunting-guide', 'best-operators-tier-list', 'crisis-contract-guide']) {
+      const guide = getEndfieldGuideById(id);
+
+      expect(guide?.updatedAt).toBe('2026-10-08');
+      expect(guide?.currentVersion).toContain('Pioneer Test archive');
+      expect(getEndfieldGuideContent(guide!, 'zh')).toContain('Pioneer Test 历史资料提示');
+      expect(getEndfieldGuideContent(guide!, 'en')).toContain('Pioneer Test archive notice');
+    }
   });
 
   it('keeps the highest-priority launch times explicit', () => {

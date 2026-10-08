@@ -73,9 +73,9 @@ const CHARACTER_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
   ],
   endfield: [
     {
-      href: '/endfield/version',
-      title: { zh: '先看测试专题', en: 'Start with test hub', ja: 'まずテスト特集へ' },
-      description: { zh: '先确认测试节奏、下载入口和当前节点', en: 'Check the test timing, download entry, and current status', ja: 'テスト時期、DL導線、現状を確認', },
+      href: '/endfield/events',
+      title: { zh: '先看测试后状态', en: 'Start with post-test status', ja: 'まずテスト後状態へ' },
+      description: { zh: '先确认测试后状态、官方观察项和当前节点', en: 'Check post-test status, official watch items, and the current state', ja: 'テスト後状態、公式確認項目、現状を確認', },
     },
     {
       href: '/endfield/guides/combat-system-guide',
@@ -98,7 +98,7 @@ const CHAR_DESC: Record<string, Record<string, string>> = {
   zzz: { zh: '绝区零角色图鉴 Wiki，覆盖全代理人属性、专精、阵营、技能、音擎、驱动盘、官方卡池信息和配队方向，帮助你判断已有角色的培养与配队优先级。', en: "Zenless Zone Zero characters wiki covering every agent's attribute, specialty, faction, skills, W-Engines, Drive Discs, officially confirmed banners, and team direction.", ja: 'ゼンレスゾーンゼロキャラWiki。全エージェントの属性、専門、陣営、スキル、Wエンジン、ドライブ、公式確認済みバナーを整理。' },
   ananta: { zh: '无限大全异能者图鉴，覆盖SSR、SR角色数据、异能和配装推荐，方便你在角色选择前快速掌握强度和定位。', en: 'Complete Ananta Esper roster with SSR and SR data, abilities, and build recommendations to help you compare power and role before investing.', ja: 'アナンタ全エスパー図鑑。SSR・SRのデータ、能力、ビルド案をまとめています。' },
   guihuan: { zh: '归环全使灵图鉴，覆盖SSR、SR角色数据、元素和配装推荐，方便你先看清定位，再决定培养顺序。', en: 'Complete Guihuan Spirit roster with SSR and SR data, elements, and build recommendations so you can prioritize the right spirits first.', ja: '帰環全精霊図鑑。SSR・SRのデータ、元素、ビルド案を整理しています。' },
-  endfield: { zh: '明日方舟：终末地全干员图鉴，覆盖六星、五星、四星角色数据、元素属性和配装推荐，适合先看定位再进培养页。', en: 'Complete Arknights: Endfield operator roster with 6-Star, 5-Star, and 4-Star data, elements, and build recommendations for fast team planning.', ja: 'エンドフィールド全オペレーター図鑑。★6、★5、★4のデータ、属性、ビルド案を整理しています。' },
+  endfield: { zh: '明日方舟：终末地干员图鉴，收录 Pioneer Test 角色、元素属性和配装参考。后续测试与正式版本请以官方公告为准。', en: 'Arknights: Endfield operator roster with Pioneer Test character, element, and build references. Use official announcements for future tests and release data.', ja: 'エンドフィールド干員図鑑。Pioneer Test のキャラ、属性、ビルド参考を収録。今後のテストと正式版は公式発表を基準にしてください。' },
   sea: { zh: '遗忘之海角色图鉴 Wiki，覆盖 Traveler、Ais、Little Axe、Princess、Molly 等角色属性、定位、强度、配队和开荒培养顺序。', en: 'Sea of Remnants characters wiki with Traveler, Ais, Little Axe, Princess, Molly, roles, attributes, tier notes, teams, and early progression picks.', ja: 'シー・オブ・レムナンツキャラWiki。Traveler、Ais、Little Axe、Princess、Molly、役割、属性、Tier、育成順を整理。' },
   roco: { zh: '《洛克王国：世界》国际服精灵图鉴，覆盖官方已曝光精灵的属性、稀有度、栖息地、进化链与获取说明，CBT 开测后持续补全。', en: 'Roco Kingdom international character encyclopedia, covering officially revealed Jinies\' attributes, rarity, habitats, evolution chains, and acquisition notes. Will expand after CBT launch.', ja: 'ロコキングダム国際版のジニー図鑑。公式公開済みジニーの属性、レアリティ、生息地、進化、入手方法をまとめ、CBT 後に随時追加。' },
   'roco-cn': { zh: '《洛克王国：世界》国服精灵图鉴，覆盖 S2 赛季已登场精灵的属性、技能、进化链和培养方向，适合先查图鉴再决定捕捉与培养顺序。', en: 'Roco Kingdom CN character encyclopedia, covering S2 season Jinies\' attributes, skills, evolution chains, and build directions for capture and progression planning.', ja: 'ロコキングダム中国版のジニー図鑑。S2 シーズンのジニー属性、スキル、進化、育成方針を整理。' },
@@ -141,9 +141,9 @@ const CHARACTER_INTRO: Record<string, Record<SupportedLocale, string>> = {
     ja: '元素、レアリティ、役割で帰環図鑑を確認し、ビルド方向、主力候補、育成順を把握できます。',
   },
   endfield: {
-    zh: '按属性、职业和星级快速浏览终末地干员图鉴，适合先看战斗分工、队伍配置和养成路径。',
-    en: 'Browse the Arknights: Endfield operator wiki by element, role, and rarity to review combat duties, squad fit, and progression paths.',
-    ja: '属性、職分、レアリティでエンドフィールド干員図鑑を確認し、戦闘分担、編成相性、育成導線を把握できます。',
+    zh: '按属性、职业和星级浏览终末地 Pioneer Test 干员参考，战斗分工、队伍配置和养成内容需在后续测试或正式版以官方信息复核。',
+    en: 'Browse Pioneer Test Arknights: Endfield operator references by element, role, and rarity. Recheck combat, squad, and progression data against official future-test or release information.',
+    ja: '属性、職分、レアリティでエンドフィールド Pioneer Test の干員参考を確認できます。戦闘、編成、育成情報は今後のテストまたは正式版の公式情報で再確認してください。',
   },
   sea: {
     zh: '按属性、定位和强度快速浏览遗忘之海角色图鉴 Wiki，适合先看开荒强度、队伍分工、节奏榜和培养路线。',
@@ -416,7 +416,13 @@ function CoverageNote({ locale, gameId }: { locale: SupportedLocale; gameId: Gam
         en: 'WuWa pages prioritize attributes, weapons, stats, materials, and verified tier context. Skills, Echoes, and team data are added only after verification.',
         ja: '鳴潮キャラページは属性、武器、ステータス、素材、検証済みTierを優先掲載。スキル、音骸、編成は検証後に追加します。',
       }
-    : {
+    : gameId === 'endfield'
+      ? {
+          zh: '终末地角色、技能、材料、武器与配队内容均为 Pioneer Test 资料参考，并非正式版定案；后续测试、数值、获取方式与版本节奏仅以官方公告复核。',
+          en: 'Endfield character, skill, material, weapon, and team content is Pioneer Test reference material, not final release data. Verify future tests, values, availability, and timing through official announcements only.',
+          ja: 'エンドフィールドのキャラ、スキル、素材、武器、編成は Pioneer Test の参考資料であり、正式版の確定情報ではありません。今後のテスト、数値、入手方法、時期は公式発表のみで確認してください。',
+        }
+      : {
         zh: '角色定位、技能、配装、配队和培养建议按版本持续复核；抽卡前请结合当前版本和自己的队伍缺口判断。',
         en: 'Roles, skills, builds, teams, and investment advice are reviewed by patch. Check the current version and your roster gaps before pulling.',
         ja: '役割、スキル、ビルド、編成、育成情報はバージョンごとに確認。引く前に現在版本と手持ちの不足を確認してください。',

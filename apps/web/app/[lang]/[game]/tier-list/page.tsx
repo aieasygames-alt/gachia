@@ -18,7 +18,7 @@ const TIER_DESC: Record<string, Record<string, string>> = {
   zzz: { zh: '2026年绝区零代理人强度排行，覆盖SS/S/A/B分级、深渊与高难表现、配队定位和每月更新，方便你按版本答案选人。', en: 'Zenless Zone Zero agent tier list (2026) with SS to B rankings for Shiyu Defense and other endgame modes, plus role and team context.', ja: '2026年ゼンレスゾーンゼロTierリスト。SS/S/A/B評価、深層評価、編成参考、毎月更新を掲載。' },
   guihuan: { zh: '归环使灵强度排行，覆盖SS/S/A/B分级、场景表现、配队定位和培养优先级，帮助你更快决定先养谁。', en: 'Guihuan spirit tier list (2026) with SS to B rankings, performance notes, and priority guidance so you know which spirits to build first.', ja: '帰環スピリットTierリスト。SS/S/A/B評価、場面別性能、育成優先度をまとめています。' },
   ananta: { zh: '无限大异能者强度排行，覆盖SS/S/A/B分级、玩法表现和培养优先级，方便你在开服阶段快速选出主力角色。', en: 'Ananta esper tier list (2026) with SS to B rankings, gameplay notes, and investment priority to help you pick early-game mains.', ja: 'アナンタTierリスト。SS/S/A/B評価、性能メモ、育成優先度を整理しています。' },
-  endfield: { zh: '明日方舟：终末地干员强度排行，覆盖SS/S/A/B分级、战斗表现、配队定位和培养优先级，方便你按版本节奏安排资源。', en: 'Arknights: Endfield operator tier list (2026) with SS to B rankings, combat notes, team roles, and build priority for smarter resource planning.', ja: 'エンドフィールド干員Tierリスト。SS/S/A/B評価、戦闘評価、編成参考、育成優先度を掲載。' },
+  endfield: { zh: '明日方舟：终末地 Pioneer Test 干员强度参考，覆盖测试期 SS/S/A/B 分级、战斗定位与配队思路。结构化评级最后更新于 2026-06-06，下一轮测试或正式版前请勿当作当前版本结论。', en: 'Arknights: Endfield Pioneer Test operator tier reference with SS to B test-period rankings, combat roles, and team context. Structured ratings were last updated on 2026-06-06 and are not current-release conclusions.', ja: 'エンドフィールド Pioneer Testのオペレーター評価参考。テスト期のSS/S/A/B、戦闘役割、編成方針を整理。構造化評価の最終更新は2026-06-06で、次回テスト・正式版前の現行結論ではありません。' },
   sea: { zh: '遗忘之海角色强度排行 Wiki，覆盖 Traveler、Ais、Little Axe、Princess、Molly 等角色 SS/S/A/B 分级、开荒价值、配队定位和培养优先级。', en: 'Sea of Remnants character tier list wiki with SS to B rankings for Traveler, Ais, Little Axe, Princess, Molly, early-game value, team roles, and investment priority.', ja: 'Sea of RemnantsキャラTierリスト。Traveler、Ais、Little Axe、Princess、MollyのSS/S/A/B評価、序盤価値、育成優先度を整理。' },
   'roco-cn': { zh: '洛克王国：世界国服精灵强度节奏榜，基于社区 PVP 天梯与 PVE 综合表现整理 SS/S/A/B 分级，覆盖迪莫、罗隐、优光绒绒、圣水守护等主流精灵，帮助你把资源投到最值得培养的主力上。', en: 'Roco Kingdom: World CN sprite tier list with SS to B rankings from community PVP ladders and PVE performance, covering Dimo, Luoyin, Youguang Rongrong, Shengshui Shouhu and other top sprites for smarter build priority.', ja: 'ロコ・キングダム：ワールド中国版スプライトTierリスト。社区PVPラダーとPVE性能からSS/S/A/B評価、ディモ、ロウイン、ユウコウロンロン、シェンシュイショウゴなど主力スプライトを掲載。' },
   'roco': { zh: '洛克王国：世界国际服精灵强度节奏榜（早测参考）。国际服当前为 6 只精灵的早测阵容，御三家沿用 A 级，其余野外宠暂定 B 级，后续会随社区天梯数据继续校准。', en: 'Roco Kingdom: World global sprite tier list (provisional reference). The global roster is currently limited to 6 sprites; starters sit at A and wild sprites are provisionally B, pending further ladder data.', ja: 'ロコ・キングダム：ワールド国際版スプライトTierリスト（暫定参考）。国際版は現在6体のみで、御三家はA、野生は仮B、今後ラダーデータで調整予定。' },
@@ -143,7 +143,7 @@ export default async function TierListPage({
   }
 
   if (gameId === 'endfield') {
-    return <GenericTierListPage gameId="endfield" locale={locale} />;
+    return <><EndfieldTierDataNotice locale={locale} /><GenericTierListPage gameId="endfield" locale={locale} /></>;
   }
 
   if (gameId === 'sea') {
@@ -168,6 +168,20 @@ function TierDataNotice({ gameId, locale }: { gameId: 'genshin' | 'starrail'; lo
     : locale === 'ja'
       ? '現在の構造化評価データの最終更新日は2026-06-28です。役割や旧編成の参考には使えますが、現行バナー、敵編成、実戦の編成判断の代わりにはなりません。'
       : 'The structured rating data was last updated on 2026-06-28. Use it for role and legacy-team reference, not as a substitute for current banners, enemy rotations, or live team decisions.';
+
+  return (
+    <p className="mb-4 rounded-md border border-amber-500/40 bg-amber-500/10 px-4 py-3 text-sm leading-relaxed text-game-text-muted">
+      {copy}
+    </p>
+  );
+}
+
+function EndfieldTierDataNotice({ locale }: { locale: SupportedLocale }) {
+  const copy = locale === 'zh'
+    ? '终末地结构化 Tier 数据是 Pioneer Test 快照，最后更新于 2026-06-06。它适合回看测试期定位、队伍职责与已有干员培养思路；下一轮测试或正式版公布后，请以官方数值、系统和环境为准重新判断。'
+    : locale === 'ja'
+      ? 'エンドフィールドの構造化TierデータはPioneer Testのスナップショットで、最終更新は2026-06-06です。テスト期の役割、編成分担、所持オペレーター育成の参考には使えますが、次回テスト・正式版後は公式数値、システム、環境で再判断してください。'
+      : 'Endfield structured tier data is a Pioneer Test snapshot last updated on 2026-06-06. Use it for test-period roles, team duties, and owned-operator planning; reassess against official numbers, systems, and content when another test or release arrives.';
 
   return (
     <p className="mb-4 rounded-md border border-amber-500/40 bg-amber-500/10 px-4 py-3 text-sm leading-relaxed text-game-text-muted">
@@ -250,6 +264,11 @@ function getTierIntro(gameId: GameId, locale: SupportedLocale) {
       zh: '按式舆防卫、日常战斗、强攻/击破/异常/支援定位、队伍循环和驱动盘成本综合评估绝区零代理人。',
       en: 'ZZZ ratings combine Shiyu Defense, everyday combat, Attack/Stun/Anomaly/Support roles, team rotations, and Drive Disc cost.',
       ja: '式輿防衛、日常戦闘、強攻/撃破/異常/支援の役割、編成ローテーション、ドライブコストで評価します。',
+    },
+    endfield: {
+      zh: '本榜是 Pioneer Test 的结构化快照，不是正式版或下一轮测试的实时强度表。先把分级当作职业和队伍职责参考，再结合已有干员、武器与官方更新决定培养。',
+      en: 'This list is a Pioneer Test structured snapshot, not a live tier table for a release or future test. Use ranks as role and team-duty reference, then decide investment from owned operators, weapons, and official updates.',
+      ja: 'この一覧はPioneer Testの構造化スナップショットで、正式版や次回テストのリアルタイムTierではありません。職分・編成役割の参考に留め、所持オペレーター、武器、公式更新で育成を決めてください。',
     },
   };
   if (gameSpecific[gameId]) return gameSpecific[gameId]![locale];

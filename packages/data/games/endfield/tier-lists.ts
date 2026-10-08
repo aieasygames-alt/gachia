@@ -1,5 +1,8 @@
 import type { TierList } from '@gachia/core';
 
+// Pioneer Test snapshot only. Revalidate all ranks when official future-test or release data lands.
+const END_FIELD_TIER_SNAPSHOT_UPDATED_AT = '2026-06-06';
+
 const tierEntries = [
   // SS
   { characterId: 'endministrator', tier: 'SS' as const, role: 'Guard' },
@@ -41,20 +44,20 @@ export const tierLists: TierList[] = [
     category: 'overall',
     locale: 'zh',
     entries: tierEntries,
-    updatedAt: '2026-06-06',
+    updatedAt: END_FIELD_TIER_SNAPSHOT_UPDATED_AT,
   },
   {
     gameId: 'endfield',
     category: 'overall',
     locale: 'en',
     entries: tierEntries,
-    updatedAt: '2026-06-06',
+    updatedAt: END_FIELD_TIER_SNAPSHOT_UPDATED_AT,
   },
   {
     gameId: 'endfield',
     category: 'overall',
     locale: 'ja',
     entries: tierEntries,
-    updatedAt: '2026-06-06',
+    updatedAt: END_FIELD_TIER_SNAPSHOT_UPDATED_AT,
   },
 ];

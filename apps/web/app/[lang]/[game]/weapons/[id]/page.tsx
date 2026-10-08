@@ -142,6 +142,11 @@ const WEAPON_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
   ],
   endfield: [
     {
+      href: '/endfield/events',
+      title: { zh: '看测试后状态', en: 'View post-test status', ja: 'テスト後状態を見る' },
+      description: { zh: '先确认武器资料适用范围与官方观察项', en: 'Check data scope and official watch items first', ja: '武器資料の範囲と公式確認項目を先に見る' },
+    },
+    {
       href: '/endfield/characters',
       title: { zh: '看干员图鉴', en: 'Browse operators', ja: 'オペレーター図鑑へ' },
       description: { zh: '先看这把武器适合哪些干员', en: 'Check which operators suit this weapon', ja: '適性オペレーターを確認' },
@@ -150,11 +155,6 @@ const WEAPON_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
       href: '/endfield/items',
       title: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
       description: { zh: '继续看升级材料和获取地点', en: 'Continue with upgrade materials and sources', ja: '強化素材と入手先を確認' },
-    },
-    {
-      href: '/endfield/guides',
-      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
-      description: { zh: '把武器页接到测试与养成专题', en: 'Connect the weapon page to test and build guides', ja: '武器ページをテスト・育成へ接続' },
     },
   ],
   skjh: [

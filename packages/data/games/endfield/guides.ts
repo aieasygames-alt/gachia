@@ -39,12 +39,27 @@ export interface EndfieldGuide {
 
 export const endfieldGuides: EndfieldGuide[] = rawGuides as unknown as EndfieldGuide[];
 
+const PIONEER_TEST_ARCHIVE_GUIDE_IDS = new Set([
+  'combat-system-guide',
+  'base-building-guide',
+  'gacha-headhunting-guide',
+  'best-operators-tier-list',
+  'crisis-contract-guide',
+]);
+
+const PIONEER_TEST_ARCHIVE_PREFIX: Record<SupportedLocale, string> = {
+  zh: '## Pioneer Test 历史资料提示\n\n本页保留 Pioneer Test 的玩法、队伍或系统记录，仅用于复盘和理解已测试过的设计。测试已结束，具体数值、规则、角色、奖励、活动开放与抽卡机制都不是当前版本结论；下一轮测试或正式版请只以官方公告、游戏内说明和官方商店页面为准。\n\n当前请先看 [/endfield/events](/endfield/events) 的状态板和 [/endfield/guides/pioneer-test-post-test-route](/endfield/guides/pioneer-test-post-test-route) 的测试后路线。\n\n',
+  en: '## Pioneer Test archive notice\n\nThis page preserves Pioneer Test gameplay, team, or system notes for recap and for understanding designs that were tested. The test has ended: values, rules, operators, rewards, event availability, and gacha mechanics are not current-version conclusions. For another test or release, rely only on official announcements, in-game notices, and official store pages.\n\nStart with the [/endfield/events](/endfield/events) status board and the [/endfield/guides/pioneer-test-post-test-route](/endfield/guides/pioneer-test-post-test-route) post-test route.\n\n',
+  ja: '## Pioneer Testの履歴資料について\n\n本ページは、Pioneer Testで確認されたゲームプレイ、編成、システムの記録を振り返り用に残しています。テストは終了しており、数値、ルール、オペレーター、報酬、イベントの開催状況、ガチャ仕様は現行版の結論ではありません。次回テスト・正式版では、公式告知、ゲーム内案内、公式ストアページのみを基準にしてください。\n\nまず [/endfield/events](/endfield/events) の状態ボードと [/endfield/guides/pioneer-test-post-test-route](/endfield/guides/pioneer-test-post-test-route) のテスト後ルートを確認してください。\n\n',
+};
+
 export function getEndfieldGuideTitle(guide: EndfieldGuide, locale: SupportedLocale): string {
   return localeStr(guide.title, guide.titleEn, locale, guide.titleJa);
 }
 
 export function getEndfieldGuideContent(guide: EndfieldGuide, locale: SupportedLocale): string {
-  return localeStr(guide.content, guide.contentEn, locale, guide.contentJa);
+  const content = localeStr(guide.content, guide.contentEn, locale, guide.contentJa);
+  return PIONEER_TEST_ARCHIVE_GUIDE_IDS.has(guide.id) ? `${PIONEER_TEST_ARCHIVE_PREFIX[locale]}${content}` : content;
 }
 
 export function getEndfieldGuideSummary(guide: EndfieldGuide, locale: SupportedLocale): string {

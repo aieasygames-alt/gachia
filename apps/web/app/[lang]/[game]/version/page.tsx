@@ -176,9 +176,9 @@ const INTENT_LINKS: Partial<Record<GameId, IntentLink[]>> = {
     { href: '/ananta/guides/preregistration-no-gacha-guide', label: { zh: '无抽卡 FAQ', en: 'No-gacha FAQ', ja: 'ガチャなしFAQ' }, description: { zh: '把商业模式已知信息和推测分开。', en: 'Separate confirmed monetization facts from speculation.', ja: '収益モデルの確定情報と推測を分離。' } },
   ],
   endfield: [
-    { href: '/endfield/guides/download-install-guide', label: { zh: '官网 / 下载', en: 'Official / Download', ja: '公式 / DL' }, description: { zh: '下载、配置、平台和测试状态入口。', en: 'Download, specs, platform, and test-status entry.', ja: 'DL、環境、プラットフォーム、テスト状態。' } },
-    { href: '/endfield/guides/official-download-specs-homecoming-faq', label: { zh: '测试后复盘', en: 'Post-test recap', ja: 'テスト後まとめ' }, description: { zh: 'Pioneer Test、奖励、Wuling、AIC 工厂和蓝图后续路线。', en: 'Pioneer Test, rewards, Wuling, AIC factory, and blueprint next steps.', ja: 'Pioneer Test、報酬、Wuling、AIC工場、設計図の次導線。' } },
-    { href: '/endfield/guides/combat-system-guide', label: { zh: '玩法 / 配置', en: 'Gameplay / Specs', ja: '玩法 / 環境' }, description: { zh: '集中查看 Wiki、角色、配置和玩法问题。', en: 'Check wiki, character, specs, and gameplay questions.', ja: 'Wiki、キャラ、環境、玩法情報を確認。' } },
+    { href: '/endfield/events', label: { zh: '官方状态', en: 'Official status', ja: '公式状態' }, description: { zh: '测试后事项、官方观察项与下一步核对。', en: 'Post-test items, official watch points, and next checks.', ja: 'テスト後事項、公式確認項目、次の確認。' } },
+    { href: '/endfield/guides/pioneer-test-post-test-route', label: { zh: '测试后状态', en: 'Post-test status', ja: 'テスト後状態' }, description: { zh: 'Pioneer Test、奖励核对、Wuling、AIC 工厂和蓝图后续路线。', en: 'Pioneer Test, reward verification, Wuling, AIC factory, and blueprint next steps.', ja: 'Pioneer Test、報酬確認、Wuling、AIC工場、設計図の次導線。' } },
+    { href: '/endfield/guides/blueprint-aic-factory-guide', label: { zh: 'AIC / 蓝图', en: 'AIC / Blueprints', ja: 'AIC / 設計図' }, description: { zh: '整理可复用的工厂模块，待官方数据发布后再复核。', en: 'Organize reusable factory modules, then recheck after official data arrives.', ja: '再利用可能な工場モジュールを整理し、公式データ後に再確認。' } },
   ],
   sea: [
     { href: '/sea/guides/identity-v-mobile-launch-event-guide', label: { zh: '第五人格联动', en: 'Identity V collab', ja: 'Identity Vコラボ' }, description: { zh: '纽扣眼、狂欢之椅、拍照动作、活动任务和移动端领取顺序。', en: 'Button eyes, chair prop, photo pose, event tasks, and mobile claim order.', ja: 'ボタン目、椅子、写真ポーズ、イベント任務、モバイル受取順。' } },
@@ -439,7 +439,7 @@ const VERSION_COPY: Partial<Record<GameId, HubCopy>> = {
         },
       },
     ],
-    guideIds: ['official-download-specs-homecoming-faq', 'homecoming-operators-map-route', 'blueprint-aic-factory-guide'],
+    guideIds: ['pioneer-test-post-test-route', 'blueprint-aic-factory-guide', 'homecoming-update-guide'],
   },
   sea: {
     title: {
@@ -1023,10 +1023,10 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '机制', en: 'Mechanics', ja: '機構' },
-        description: { zh: '继续查看测试节点、基地建设和危机合约相关攻略。', en: 'Keep test timing, base building, and crisis contract content moving deeper.', ja: 'テスト時期、基地建設、危機契約へ進めます。' },
+        description: { zh: '先确认测试后状态，再整理 AIC 工厂与可复用的建设资料。', en: 'Confirm post-test status first, then organize AIC factories and reusable construction notes.', ja: 'まずテスト後状態を確認し、AIC工場と再利用可能な建設資料を整理します。' },
         links: [
-          { href: '/endfield/version', label: { zh: '版本专题', en: 'Version hub', ja: 'バージョン特集' } },
-          { href: '/endfield/guides/crisis-contract-guide', label: { zh: '机制攻略', en: 'Mechanics guide', ja: '機構攻略' } },
+          { href: '/endfield/events', label: { zh: '状态看板', en: 'Status board', ja: '状態ボード' } },
+          { href: '/endfield/guides/blueprint-aic-factory-guide', label: { zh: 'AIC / 蓝图', en: 'AIC / Blueprints', ja: 'AIC / 設計図' } },
         ],
       },
     ],
@@ -1057,10 +1057,10 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '机制', en: 'Mechanics', ja: '機構' },
-        description: { zh: '继续查看测试节点、基地建设和危机合约相关攻略。', en: 'Keep test timing, base building, and crisis contract content moving deeper.', ja: 'テスト時期、基地建設、危機契約へ進めます。' },
+        description: { zh: '先确认测试后状态，再整理 AIC 工厂与可复用的建设资料。', en: 'Confirm post-test status first, then organize AIC factories and reusable construction notes.', ja: 'まずテスト後状態を確認し、AIC工場と再利用可能な建設資料を整理します。' },
         links: [
-          { href: '/endfield/version', label: { zh: '版本专题', en: 'Version hub', ja: 'バージョン特集' } },
-          { href: '/endfield/guides/crisis-contract-guide', label: { zh: '机制攻略', en: 'Mechanics guide', ja: '機構攻略' } },
+          { href: '/endfield/events', label: { zh: '状态看板', en: 'Status board', ja: '状態ボード' } },
+          { href: '/endfield/guides/blueprint-aic-factory-guide', label: { zh: 'AIC / 蓝图', en: 'AIC / Blueprints', ja: 'AIC / 設計図' } },
         ],
       },
     ],
@@ -1091,10 +1091,10 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '机制', en: 'Mechanics', ja: '機構' },
-        description: { zh: '继续查看测试节点、基地建设和危机合约相关攻略。', en: 'Keep test timing, base building, and crisis contract content moving deeper.', ja: 'テスト時期、基地建設、危機契約へ進めます。' },
+        description: { zh: '先确认测试后状态，再整理 AIC 工厂与可复用的建设资料。', en: 'Confirm post-test status first, then organize AIC factories and reusable construction notes.', ja: 'まずテスト後状態を確認し、AIC工場と再利用可能な建設資料を整理します。' },
         links: [
-          { href: '/endfield/version', label: { zh: '版本专题', en: 'Version hub', ja: 'バージョン特集' } },
-          { href: '/endfield/guides/crisis-contract-guide', label: { zh: '机制攻略', en: 'Mechanics guide', ja: '機構攻略' } },
+          { href: '/endfield/events', label: { zh: '状态看板', en: 'Status board', ja: '状態ボード' } },
+          { href: '/endfield/guides/blueprint-aic-factory-guide', label: { zh: 'AIC / 蓝图', en: 'AIC / Blueprints', ja: 'AIC / 設計図' } },
         ],
       },
     ],

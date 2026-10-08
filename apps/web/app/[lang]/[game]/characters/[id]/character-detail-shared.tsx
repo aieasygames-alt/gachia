@@ -145,14 +145,14 @@ export const CHARACTER_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
   ],
   endfield: [
     {
-      href: '/endfield/version',
-      title: { zh: '回到测试专题', en: 'Back to test hub', ja: 'テスト特集へ戻る' },
-      description: { zh: '先确认当前测试节奏和入口', en: 'Re-check the test cadence and entry points', ja: 'テスト時期と入口を再確認' },
+      href: '/endfield/events',
+      title: { zh: '查看测试后状态', en: 'View post-test status', ja: 'テスト後状態を見る' },
+      description: { zh: '先确认资料适用范围、官方观察项和当前节点', en: 'Check data scope, official watch items, and the current state first', ja: '資料の範囲、公式確認項目、現状を先に確認', },
     },
     {
-      href: '/endfield/guides/combat-system-guide',
-      title: { zh: '看战斗系统', en: 'Read combat guide', ja: '戦闘ガイドへ' },
-      description: { zh: '把职业定位和战斗理解接起来', en: 'Link roles, kits, and combat understanding', ja: '職分、スキル、戦闘理解を接続' },
+      href: '/endfield/guides/pioneer-test-post-test-route',
+      title: { zh: '查看测试后路线', en: 'Open post-test route', ja: 'テスト後ルートを見る' },
+      description: { zh: '整理已有干员、奖励核对与可复用资料', en: 'Organize owned operators, reward checks, and reusable references', ja: '所持オペレーター、報酬確認、再利用資料を整理', },
     },
     {
       href: '/endfield/items',

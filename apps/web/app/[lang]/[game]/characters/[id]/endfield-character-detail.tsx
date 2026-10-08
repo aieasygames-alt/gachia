@@ -113,8 +113,8 @@ function EndfieldCharacterDetail({ char, locale }: { char: EndfieldCharacter; lo
               {localeStr(char.profession, char.professionEn, locale)}
             </span>
             {char.tierRank && (
-              <span className="rounded px-2 py-0.5 text-sm font-bold" style={{ color: '#ef4444' }}>
-                {char.tierRank}
+              <span className="rounded px-2 py-0.5 text-sm font-bold" style={{ color: '#ef4444' }} title={locale === 'zh' ? 'Pioneer Test 参考评级' : locale === 'ja' ? 'Pioneer Test参考評価' : 'Pioneer Test reference rating'}>
+                {locale === 'zh' ? `测试参考 ${char.tierRank}` : locale === 'ja' ? `テスト参考 ${char.tierRank}` : `Test ref. ${char.tierRank}`}
               </span>
             )}
           </div>
@@ -122,8 +122,9 @@ function EndfieldCharacterDetail({ char, locale }: { char: EndfieldCharacter; lo
             {getEndfieldCharacterDescription(char, locale)}
           </p>
           {char.tierReason && (
-            <p className="mt-3 text-sm text-game-primary">{getEndfieldCharacterTierReason(char, locale)}</p>
+            <p className="mt-3 text-sm text-game-primary">{locale === 'zh' ? 'Pioneer Test 参考：' : locale === 'ja' ? 'Pioneer Test参考：' : 'Pioneer Test reference: '}{getEndfieldCharacterTierReason(char, locale)}</p>
           )}
+          <p className="mt-2 text-xs leading-relaxed text-game-text-muted">{locale === 'zh' ? '技能、数值、材料与强度会随下一轮测试或正式版调整；当前请结合官方公告和已有队伍使用本页资料。' : locale === 'ja' ? 'スキル、数値、素材、評価は次回テストや正式版で変わる可能性があります。現時点では公式告知と所持編成に合わせて参照してください。' : 'Skills, values, materials, and ratings can change in a future test or release. Use this page with official notices and your existing roster.'}</p>
         </div>
       </div>
 

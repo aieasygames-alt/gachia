@@ -1,5 +1,32 @@
 [
   {
+    "id": "pioneer-test-post-test-route",
+    "title": "终末地 Pioneer Test 后续路线：奖励核对、AIC 蓝图、干员养成与官方状态",
+    "titleEn": "Arknights: Endfield Post-Pioneer-Test Route: Rewards, AIC Blueprints, Operators, and Official Status",
+    "titleJa": "エンドフィールド Pioneer Test後の導線：報酬・AIC設計図・オペレーター・公式情報",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "categoryJa": "バージョンガイド",
+    "summary": "Pioneer Test 招募结束后，先核对测试奖励与账号状态，再把 AIC 工厂、Wuling 资源线和已有干员养成拆成可复用路线；下一轮测试、预下载、正式上线和兑换码只以官方公告为准。",
+    "summaryEn": "After Pioneer Test recruitment, verify reward and account status first, then organize reusable AIC factory, Wuling resource, and owned-operator routes. Treat another test, preload, full release, and redeem codes as official-only until announced.",
+    "summaryJa": "Pioneer Test募集終了後は、まず報酬とアカウント状態を確認し、AIC工場、Wuling資源、所持オペレーター育成を再利用可能な導線に整理します。次回テスト、事前DL、正式版、コードは公式告知のみを基準にします。",
+    "content": "## 当前状态：先分清已结束、可复用与待确认\n\nPioneer Test 招募已经结束。当前最有价值的不是继续寻找历史报名入口，而是把测试后信息分为三类：\n\n- **已结束的测试事项**：资格、客户端下载窗口、测试奖励和历史反馈，只用于复盘或结算核对。\n- **可复用的玩法资料**：AIC 工厂的模块化布局、Wuling 资源线、已有干员的职业分工和培养笔记。\n- **待官方确认的未来信息**：下一轮测试、预下载、正式上线日期、平台开放和兑换码。没有官网、Steam、官方邮件或官方社区公告时，不把它们写成已开放。\n\n## 15 分钟测试后检查表\n\n1. **账号与奖励**：检查官方邮件、测试资格通知和结算说明；不要相信非官方截图中的奖励或代码。\n2. **平台状态**：区分历史 Steam 测试与当前可下载状态；下载、预下载和移动端节奏都以官方页面为准。\n3. **保存有效笔记**：保留 AIC 生产线的输入、输出、运输和瓶颈记录，而不是照搬整张旧地图布局。\n4. **整理已有干员**：按职业、元素、武器与队伍职责标记已验证的培养方向；旧数值与 Tier 只能作为测试期参考。\n5. **建立官方观察清单**：官网、Steam、官方社媒/社区和官方邮件是下一轮测试、预下载与兑换码的唯一确认来源。\n\n## AIC 与 Wuling：把经验变成可复用模块\n\n测试结束后，工厂资料最容易因为版本改动而失效。保存蓝图时建议：\n\n| 模块 | 记录内容 | 目的 |\n| --- | --- | --- |\n| 资源入口 | 原料、采集方式、运输方向 | 下次测试快速恢复资源线 |\n| 中间产物 | 配方、机器数、缓存位置 | 找出真正瓶颈，避免整线返工 |\n| 成品出口 | 用途、需求频率、升级预留 | 判断要扩线还是临时补产 |\n| 电力与物流 | 接口、冗余、拥堵点 | 方便替换机器或改变地图位置 |\n\nWuling 资源路线和 AIC 布局应当按“小模块 + 清晰输入输出 + 可替换接口”保存。下一轮测试或正式版若调整配方、成本、机器和解锁条件，再用官方数据重算，而不是把旧蓝图当作最终答案。\n\n## 干员、配队与养成：先投资已有资料\n\n当没有新的官方版本公告时，优先处理已经有数据支撑的内容：\n\n1. 在干员图鉴确认已有干员的职业、元素、武器和技能定位。\n2. 在配队页先补队伍职责缺口，再决定谁需要优先升级。\n3. 用配装页对照可获得武器与替代方案，不为未公布角色预留整套资源。\n4. 旧测试期的 Tier、伤害公式、装备效果和材料成本都应标为参考，等待下一次官方测试或正式版验证。\n\n## 官方状态观察：什么出现后才更新行动\n\n| 官方信息出现 | 应该做什么 | 不该做什么 |\n| --- | --- | --- |\n| 下一轮测试公告 | 核对平台、地区、资格时间与规则 | 把转述日期当作报名开放 |\n| 预下载公告 | 核对客户端来源、容量、系统要求与开放时间 | 使用第三方安装包或镜像 |\n| 正式上线公告 | 核对平台、区服、账号与数据继承说明 | 把测试资料直接当成正式版结论 |\n| 官方兑换码 | 到兑换码入口核对状态和有效期 | 输入社区传播的未验证字符串 |\n\n## 推荐阅读顺序\n\n1. [/endfield/events](/endfield/events)：看测试后行动、AIC 路线和官方确认状态。\n2. [/endfield/guides/blueprint-aic-factory-guide](/endfield/guides/blueprint-aic-factory-guide)：整理蓝图与工厂模块。\n3. [/endfield/characters](/endfield/characters)、[/endfield/teams](/endfield/teams) 与 [/endfield/build](/endfield/build)：复盘已有干员的队伍和养成。\n4. [/endfield/download](/endfield/download)：只在官方测试或平台状态变化后核对下载与配置。\n\n## 常见误区\n\n- **把 Pioneer Test 当成正式上线**：测试资格或历史客户端不代表当前可玩。\n- **把旧工厂图当成最终蓝图**：系统、配方和地图可能在下一次测试变动。\n- **把社区截图当作代码或奖励凭证**：只采信官方来源和站内已核验状态。\n- **为了未公布干员暂停现有养成**：先提高已有队伍与可复用工厂模块的完成度。",
+    "contentEn": "## Current status: separate ended, reusable, and unconfirmed information\n\nPioneer Test recruitment has ended. The useful route is no longer an old application link. Separate post-test information into three groups:\n\n- **Ended test items:** eligibility, client windows, test rewards, and historical feedback are for recap or settlement checks only.\n- **Reusable gameplay notes:** modular AIC layouts, Wuling resource lines, and owned-operator role and build notes.\n- **Future official-only information:** another test, preload, full release dates, platform availability, and redeem codes. Do not present these as open without an official site, Steam, official email, or official community notice.\n\n## 15-minute post-test checklist\n\n1. **Account and rewards:** Check official mail, eligibility notices, and settlement details. Do not trust rewards or codes from unofficial screenshots.\n2. **Platform status:** Separate a historical Steam test from current download availability. Downloads, preload, and mobile timing follow official pages.\n3. **Keep useful notes:** Preserve AIC line inputs, outputs, transport, and bottlenecks rather than copying an old full-map layout.\n4. **Review owned operators:** Organize verified build directions by profession, element, weapon, and team duty. Older numbers and tiers are test references only.\n5. **Keep an official watchlist:** Official site, Steam, official social/community posts, and official email are the only confirmation sources for another test, preload, or codes.\n\n## AIC and Wuling: turn test learning into reusable modules\n\nFactory details can change between tests. Record resource inputs, intermediate recipes and machine counts, product outputs, and power/logistics interfaces as small modules. Recalculate with official data if a future test or release changes recipes, costs, machines, or unlock requirements.\n\n## Operators, teams, and builds\n\nWithout a new official version notice, invest in information with data behind it: confirm roles in the operator wiki, fill team-duty gaps, compare obtainable weapon alternatives, and keep older test tiers, formulas, gear effects, and material costs marked as references. Do not suspend owned-operator growth for unannounced characters.\n\n## What turns watch items into actions\n\n| Official notice | Do | Do not |\n| --- | --- | --- |\n| Another test | Verify platform, region, eligibility window, and rules | Treat reposted dates as open recruitment |\n| Preload | Verify client source, size, requirements, and opening time | Use third-party installers or mirrors |\n| Full release | Verify platforms, servers, account, and carryover terms | Treat test material as final-release conclusions |\n| Official code | Check status and validity at the code route | Enter unverified community strings |\n\n## Read next\n\n1. [/endfield/events](/endfield/events): post-test actions, AIC route, and official watch state.\n2. [/endfield/guides/blueprint-aic-factory-guide](/endfield/guides/blueprint-aic-factory-guide): blueprint and factory modules.\n3. [/endfield/characters](/endfield/characters), [/endfield/teams](/endfield/teams), and [/endfield/build](/endfield/build): owned-operator teams and builds.\n4. [/endfield/download](/endfield/download): verify download and specs only after an official platform status changes.",
+    "contentJa": "## 現在の状態：終了済み・再利用可能・未確認を分ける\n\nPioneer Testの募集は終了しました。過去の応募導線を探すのではなく、テスト後の情報を三つに分けます。\n\n- **終了済みのテスト事項**：資格、クライアント公開、報酬、履歴フィードバックは振り返り・精算確認用です。\n- **再利用可能な資料**：AICのモジュール型レイアウト、Wuling資源ライン、所持オペレーターの役割と育成メモです。\n- **公式確認待ちの情報**：次回テスト、事前DL、正式リリース日、対応プラットフォーム、コードです。公式サイト、Steam、公式メール、公式コミュニティの告知なしに公開済みとして扱いません。\n\n## テスト後15分チェック\n\n1. 公式メール、資格通知、報酬精算を確認。\n2. 過去のSteamテストと現在のDL可否を分ける。\n3. AICの入力、出力、輸送、ボトルネックを小モジュールで保存。\n4. 所持オペレーターを職分、元素、武器、編成役割で見直す。旧Tierや数値はテスト参考に留める。\n5. 次回テスト、事前DL、コードは公式サイト、Steam、公式コミュニティ、公式メールのみで確認。\n\n## 次に読むページ\n\n- [/endfield/events](/endfield/events)：テスト後の行動、AIC、公式確認状態。\n- [/endfield/guides/blueprint-aic-factory-guide](/endfield/guides/blueprint-aic-factory-guide)：設計図と工場モジュール。\n- [/endfield/characters](/endfield/characters)、[/endfield/teams](/endfield/teams)、[/endfield/build](/endfield/build)：所持オペレーターの編成と育成。\n- [/endfield/download](/endfield/download)：公式状態変更後にDLと必要環境を確認。",
+    "tags": ["Pioneer Test", "测试复盘", "测试后路线", "AIC", "Wuling", "蓝图", "工厂", "官方公告", "正式上线", "Endfield"],
+    "faq": [
+      {"question":"What should I do after Endfield Pioneer Test recruitment ends?","questionZh":"终末地 Pioneer Test 招募结束后应该做什么？","questionJa":"Pioneer Test募集終了後は何をすべき？","answer":"Verify test-account and reward settlement through official notices, then organize reusable AIC, Wuling, and owned-operator notes. Keep future tests and release timing in an official-only watchlist.","answerZh":"先通过官方公告核对测试账号和奖励结算，再整理可复用的 AIC、Wuling 与已有干员资料；下一轮测试和正式上线时间只进入官方观察清单。","answerJa":"公式告知でテストアカウントと報酬精算を確認し、再利用可能なAIC、Wuling、所持オペレーター資料を整理します。次回テストと正式版時期は公式情報のみを追います。"},
+      {"question":"Can I still download or apply for Pioneer Test?","questionZh":"现在还能下载或申请 Pioneer Test 吗？","questionJa":"今もPioneer TestをDLまたは応募できますか？","answer":"Recruitment has ended. Do not treat historical test pages as a current download or application route; use official site, Steam, official email, or official community notices for any new access window.","answerZh":"招募已结束。不要把历史测试页当作当前下载或报名入口；任何新资格窗口只以官网、Steam、官方邮件或官方社区公告为准。","answerJa":"募集は終了しています。過去のテストページを現在のDL・応募入口として扱わず、新しい資格枠は公式サイト、Steam、公式メール、公式コミュニティの告知で確認してください。"},
+      {"question":"Should I trust old Endfield tier lists and AIC blueprints?","questionZh":"旧终末地节奏榜和 AIC 蓝图还能直接照用吗？","questionJa":"古いTierとAIC設計図をそのまま使えますか？","answer":"Use them as test-period references. Keep modular notes, but recheck official recipes, costs, operator balance, and unlock rules when the next test or release publishes them.","answerZh":"可以作为测试期参考。保留模块化笔记，但下一轮测试或正式版公布后，要重新核对官方配方、成本、干员平衡和解锁规则。","answerJa":"テスト期の参考には使えます。モジュール型のメモは残し、次回テストや正式版で公式レシピ、コスト、バランス、解放条件を再確認してください。"}
+    ],
+    "updatedAt": "2026-10-08",
+    "currentVersion": "Endfield Pioneer Test post-test route; next test and full release require official confirmation",
+    "serpTitle": {"zh":"终末地 Pioneer Test 后续路线｜AIC 蓝图、奖励与官方状态","en":"Endfield Post-Pioneer-Test Route — AIC, Rewards & Official Watch","ja":"エンドフィールド Pioneer Test後｜AIC・報酬・公式情報"},
+    "serpDescription": {"zh":"终末地 Pioneer Test 招募结束后的安全路线：核对官方奖励，整理 AIC 与 Wuling 蓝图、已有干员养成，并等待下一轮测试或正式上线的官方公告。","en":"A safe route after Endfield Pioneer Test recruitment: verify official rewards, organize AIC/Wuling blueprints and owned operators, then await official test or release notices.","ja":"Pioneer Test募集終了後の安全な導線。公式報酬、AIC/Wuling設計図、所持オペレーターを整理し、次回テスト・正式版は公式告知を待ちます。"},
+    "quickFacts": {"zh":["Pioneer Test 招募已结束，历史测试页不是当前下载或报名入口。","AIC 与 Wuling 笔记按模块保存，下一次官方数据发布后再重算。","下一轮测试、预下载、正式上线与兑换码都必须以官方公告确认。"],"en":["Pioneer Test recruitment has ended; historical test pages are not current download or signup routes.","Save AIC and Wuling notes as modules, then recalculate when official data changes.","Another test, preload, full release, and codes all require official confirmation."],"ja":["Pioneer Test募集は終了し、過去のテストページは現在のDL・応募入口ではありません。","AICとWulingのメモはモジュールとして保存し、公式データ更新後に再計算します。","次回テスト、事前DL、正式版、コードはすべて公式確認が必要です。"]}
+  },
+  {
     "id": "homecoming-update-guide",
     "title": "终末地 Pioneer Test 复盘：AIC 工厂、Wuling 蓝图与测试后路线",
     "titleEn": "Arknights: Endfield Pioneer Test Recap: AIC Factory, Wuling Blueprints, and Next Steps",
@@ -75,15 +102,15 @@
   },
   {
     "id": "download-install-guide",
-    "title": "《明日方舟：终末地》下载安装指南 — 全平台下载地址",
-    "titleEn": "Arknights: Endfield System Requirements & Download Guide — PC, Mobile, Android, iOS",
+    "title": "《明日方舟：终末地》官方状态与下载核对指南",
+    "titleEn": "Arknights: Endfield Official Status and Download Verification Guide",
     "category": "beginner",
     "categoryZh": "新手指南",
     "categoryEn": "Beginner",
-    "summary": "提供《明日方舟：终末地》在PC、安卓、iOS平台的下载安装教程和系统配置要求。",
-    "summaryEn": "Arknights: Endfield system requirements for PC, Android, and iOS. Download links, install guide, and troubleshooting for all platforms.",
-    "content": "## 系统配置要求\n\n### PC端\n- 操作系统: Windows 10 64位以上\n- 处理器: Intel i5 / 同等AMD处理器\n- 内存: 8GB RAM\n- 显卡: NVIDIA GTX 1060 6GB\n- 存储空间: 40GB\n\n### 推荐配置\n- 处理器: Intel i7 / AMD Ryzen 7\n- 内存: 16GB RAM\n- 显卡: NVIDIA RTX 3060\n- 存储空间: 40GB SSD\n\n### 移动端\n- 安卓: 骁龙8 Gen 1及以上，6GB RAM\n- iOS: iPhone 12及以上\n\n## 下载方式\n\n1. **PC端**: 前往官网下载客户端\n2. **安卓**: 官网下载APK或Google Play\n3. **iOS**: App Store 搜索「Arknights: Endfield」",
-    "contentEn": "## System Requirements\n\n### PC Minimum\n- **OS**: Windows 10 64-bit or above\n- **CPU**: Intel Core i5-8400 / AMD Ryzen 5 2600\n- **RAM**: 8GB\n- **GPU**: NVIDIA GTX 1060 6GB / AMD Radeon RX 580\n- **Storage**: 40GB\n\n### PC Recommended\n- **CPU**: Intel Core i7-9700 / AMD Ryzen 7 3700X\n- **RAM**: 16GB\n- **GPU**: NVIDIA RTX 3060 / AMD Radeon RX 6600 XT\n- **Storage**: 40GB SSD\n\n### Mobile\n- **Android**: Snapdragon 8 Gen 1+, 6GB RAM, Android 12+\n- **iOS**: iPhone 12 or later, iOS 15.0+\n\n## Download\n\n1. **PC**: Download from the official website\n2. **Android**: Download APK from official site or Google Play\n3. **iOS**: Search 'Arknights: Endfield' on the App Store",
+    "summary": "Pioneer Test 后的官方状态与下载核对清单：没有官方开放通知时，不把历史客户端、第三方安装包、配置截图或社区转述当作当前可下载信息。",
+    "summaryEn": "A post-Pioneer-Test official status and download checklist. Without an official opening notice, do not treat historical clients, third-party installers, spec screenshots, or community reposts as current availability.",
+    "content": "## 当前下载状态：先核对官方开放\n\nPioneer Test 招募已结束。历史测试资格、旧客户端、截图中的配置或商店占位页都不等于当前可下载、可预下载或正式上线。\n\n## 官方核对顺序\n\n1. **官网与官方社媒**：确认是否有新的测试、预下载或正式上线公告。\n2. **官方商店页**：确认地区、平台、开放时间与页面是否真的提供下载。\n3. **官方邮件或资格通知**：测试客户端只应从官方资格渠道领取。\n4. **站内状态板**：进入 [/endfield/events](/endfield/events) 查看当前已结束事项、可复用资料与待官方确认项目。\n\n## 配置与平台：不要预设\n\nPC、移动端、主机支持、跨平台存档、客户端容量和硬件配置都应等官方针对下一轮测试或正式版的页面说明。未出现官方要求时，只做设备存储空间、系统更新和账号登录方式的基础准备。\n\n## 下载开放后再做什么\n\n- 只从官网、官方商店或官方邮件链接获取客户端。\n- 核对地区、服务器、账号继承与开服时间。\n- 对照官方页面确认容量、系统版本和最低/推荐配置。\n- 遇到安装、登录或更新问题时，优先使用官方 FAQ 或客服入口。\n\n## 不该做什么\n\n- 不使用第三方镜像、网盘安装包或所谓提前客户端。\n- 不把社区截图、历史测试配置或转述日期当作官方开放。\n- 不在没有官方卡池、兑换码或账号规则前提前充值或绑定未知页面。\n\n## 推荐继续阅读\n\n- [/endfield/events](/endfield/events)：测试后状态与官方观察清单。\n- [/endfield/guides/pioneer-test-post-test-route](/endfield/guides/pioneer-test-post-test-route)：奖励、账号、AIC 和已有干员的测试后路线。\n- [/endfield/guides/blueprint-aic-factory-guide](/endfield/guides/blueprint-aic-factory-guide)：把工厂经验整理为可复用模块。",
+    "contentEn": "## Current download status: verify an official opening first\n\nPioneer Test recruitment has ended. Historical eligibility, old clients, configuration screenshots, and placeholder store pages do not establish current download, preload, or release availability.\n\n## Official verification order\n\n1. **Official site and social channels:** Look for a new test, preload, or release notice.\n2. **Official store pages:** Verify region, platform, opening time, and that the page actually offers a download.\n3. **Official email or eligibility notice:** Obtain a test client only through the official eligibility channel.\n4. **Status board:** Open [/endfield/events](/endfield/events) to separate ended items, reusable references, and official-only watch items.\n\n## Specs and platforms: do not assume\n\nPC, mobile, console support, cross-save, client size, and hardware requirements should follow official pages for a future test or release. Until then, limit preparation to free storage, system updates, and account-access readiness.\n\n## When downloads open\n\n- Get the client only through official site, store, or email links.\n- Verify region, server, account carryover, and opening time.\n- Use the official page for size, OS, minimum, and recommended requirements.\n- Use official FAQ or support routes for install, login, and update issues.\n\n## Do not\n\n- Use third-party mirrors, shared installers, or supposed early clients.\n- Treat community screenshots, historical test specs, or reposted dates as an official opening.\n- Prepay or bind an account to unknown pages before official banner, code, and account rules exist.\n\n## Continue with\n\n- [/endfield/events](/endfield/events): post-test status and official watchlist.\n- [/endfield/guides/pioneer-test-post-test-route](/endfield/guides/pioneer-test-post-test-route): post-test rewards, account, AIC, and owned-operator route.\n- [/endfield/guides/blueprint-aic-factory-guide](/endfield/guides/blueprint-aic-factory-guide): reusable factory modules.",
     "tags": [
       "下载",
       "安装",
@@ -93,15 +120,17 @@
     ],
     "faq": [
       {
-        "question": "Is Endfield available on all platforms?",
-        "questionZh": "终末地支持哪些平台？",
-        "answer": "Endfield supports PC (Windows), Android, and iOS with cross-save functionality.",
-        "answerZh": "终末地支持PC、安卓和iOS平台，支持跨平台存档互通。"
+        "question": "Can I download Endfield now?",
+        "questionZh": "现在可以下载终末地吗？",
+        "answer": "Only treat a download as available when the official site, official store, or official test notice opens it for your region and platform. Historical test clients and third-party packages are not current download proof.",
+        "answerZh": "只有当官网、官方商店或官方测试公告为你的地区和平台开放下载时，才视为可下载。历史测试客户端和第三方安装包不能证明当前开放。"
       }
     ]
   },
   {
     "id": "combat-system-guide",
+    "updatedAt": "2026-10-08",
+    "currentVersion": "Pioneer Test archive; verify combat rules, roles, and systems through official future-test or release information",
     "title": "《明日方舟：终末地》战斗系统详解 — 部署费用与干员配合",
     "titleEn": "Arknights: Endfield Combat System Guide — DP Management & Operator Synergy",
     "category": "combat",
@@ -129,6 +158,8 @@
   },
   {
     "id": "best-operators-tier-list",
+    "updatedAt": "2026-10-08",
+    "currentVersion": "Pioneer Test archive; use the structured tier page for dated reference and recheck official future-test or release data",
     "title": "《明日方舟：终末地》干员节奏榜 — 最佳干员推荐",
     "titleEn": "Arknights: Endfield Operator Tier List — Best Operators Ranked",
     "titleJa": "エンドフィールド オペレーター Tier List — 最強キャラランキング",
@@ -156,6 +187,8 @@
   },
   {
     "id": "base-building-guide",
+    "updatedAt": "2026-10-08",
+    "currentVersion": "Pioneer Test archive; verify AIC systems, facilities, recipes, and costs through official future-test or release information",
     "title": "《明日方舟：终末地》基地建设攻略 — 设施优先级与资源管理",
     "titleEn": "Arknights: Endfield Base Building Guide — Facility Priority & Resource Management",
     "category": "base",
@@ -183,6 +216,8 @@
   },
   {
     "id": "gacha-headhunting-guide",
+    "updatedAt": "2026-10-08",
+    "currentVersion": "Pioneer Test archive; verify all banners, rates, pity, currencies, and rules through official future-test or release information",
     "title": "《明日方舟：终末地》寻访系统攻略 — 保底机制与抽卡建议",
     "titleEn": "Arknights: Endfield Headhunting Guide — Pity System & Pulling Strategy",
     "titleJa": "エンドフィールド スカウト（ガチャ）攻略 — 天井・排出率まとめ",
@@ -492,6 +527,8 @@
   },
   {
     "id": "crisis-contract-guide",
+    "updatedAt": "2026-10-08",
+    "currentVersion": "Pioneer Test archive; event availability, rules, rewards, and strategies require official confirmation before use",
     "title": "明日方舟终末地 — 危机合约重燃测试作战攻略",
     "titleEn": "Arknights Endfield — Crisis Contract Retest Operation Guide",
     "category": "combat",

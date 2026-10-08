@@ -17,7 +17,7 @@ const WEAPON_DESC: Record<string, Record<string, string>> = {
   zzz: { zh: '绝区零全音擎图鉴，覆盖S级、A级音擎的属性、被动效果、适配角色和获取方式，方便你快速查出最值得升阶的装备。', en: 'Complete Zenless Zone Zero W-Engine list with S-Rank and A-Rank data, passive effects, best users, and acquisition routes for upgrade planning.', ja: 'ゼンレスゾーンゼロ全Wエンジン図鑑。S級・A級、効果、適性キャラ、入手先を整理しています。' },
   guihuan: { zh: '归环全武器图鉴，覆盖SSR、SR武器的属性、技能和获取方式，帮助你更快判断武器是否适合当前角色。', en: 'Complete Guihuan weapon list with SSR and SR data, passive effects, and acquisition methods to help you compare weapon choices faster.', ja: '帰環全武器図鑑。SSR・SRのステータス、効果、入手方法をまとめて確認できます。' },
   ananta: { zh: '无限大全武器图鉴，覆盖SSR、SR武器的属性、技能和获取方式，方便你在培养角色前先确定武器优先级。', en: 'Complete Ananta weapon list with SSR and SR data, passive effects, and acquisition methods so you can prioritize the right gear first.', ja: 'アナンタ全武器図鑑。SSR・SRのステータス、効果、入手方法を整理しています。' },
-  endfield: { zh: '明日方舟：终末地全武器图鉴，覆盖六星、五星、四星武器的属性、效果和适配方向，适合提前规划配装。', en: 'Complete Arknights: Endfield weapon list with 6-star, 5-star, and 4-star data, passive effects, and best-fit roles for build planning.', ja: 'アークナイツ：エンドフィールド全武器図鑑。6星・5星・4星の性能、効果、適性をまとめています。' },
+  endfield: { zh: '明日方舟：终末地武器图鉴，收录 Pioneer Test 武器属性、效果和适配参考。后续测试与正式版请以官方公告为准。', en: 'Arknights: Endfield weapon roster with Pioneer Test stats, effects, and fit references. Use official announcements for future tests and release data.', ja: 'アークナイツ：エンドフィールド武器図鑑。Pioneer Test の性能、効果、適性参考を収録。今後のテストと正式版は公式発表を基準にしてください。' },
   skjh: { zh: '失控进化武器与工具图鉴，覆盖石斧、石镐、木矛、猎弓和预约外观，方便你区分开荒工具、战斗武器和外观奖励。', en: 'Ashfall Evolution weapon and tool list with stone tools, spear, bow, and reservation cosmetics, covering early-game tools, combat gear, and rewards.', ja: '失控進化の武器・道具一覧。石斧、石つるはし、槍、弓、予約外観を整理しています。' },
   'roco-cn': { zh: '洛克王国：世界国服魔法杖图鉴，覆盖 S1/S2/S3 赛季战令限定与活动赠送的法杖，整理每把法杖的施法特效、变身表现与获取方式，方便你规划外观收集。', en: 'Roco Kingdom: World CN magic staff list covering S1/S2/S3 battle-pass and event staves, with casting effects, transformation looks, and how to obtain them for collection planning.', ja: 'ロコ・キングダム：ワールド中国版の魔法杖図鑑。S1/S2/S3バトルパスとイベントの杖を網羅し、演出・変身見た目・入手方法を整理。' },
   'roco': { zh: '洛克王国：世界国际服魔法杖图鉴，覆盖赛季战令限定与活动赠送的法杖，整理每把法杖的施法特效、变身表现与获取方式，方便你规划外观收集。', en: 'Roco Kingdom: World global magic staff list covering battle-pass and event staves, with casting effects, transformation looks, and how to obtain them for collection planning.', ja: 'ロコ・キングダム：ワールド国際版の魔法杖図鑑。バトルパスとイベントの杖を網羅し、演出・変身見た目・入手方法を整理。' },
@@ -60,9 +60,9 @@ const WEAPON_INTRO: Record<string, Record<SupportedLocale, string>> = {
     ja: '武器種別、レアリティ、適性キャラで帰環武器図鑑を確認し、効果、職分適性、最終方向を把握できます。',
   },
   endfield: {
-    zh: '按武器类型、星级和适配干员快速浏览终末地武器图鉴，适合先看属性、被动和配装路线。',
-    en: 'Browse the Arknights: Endfield weapon wiki by type, rarity, and best operators to review stats, passives, and build routes.',
-    ja: '武器種別、レアリティ、適性オペレーターでエンドフィールド武器図鑑を確認し、性能、効果、配装導線を把握できます。',
+    zh: '按类型、星级和适配干员浏览终末地 Pioneer Test 武器参考；属性、被动和配装路线需在后续测试或正式版以官方信息复核。',
+    en: 'Browse Pioneer Test Arknights: Endfield weapon references by type, rarity, and fit. Recheck stats, passives, and build routes against official future-test or release information.',
+    ja: 'タイプ、レアリティ、適性干員でエンドフィールド Pioneer Test の武器参考を確認できます。性能、効果、ビルドは今後のテストまたは正式版の公式情報で再確認してください。',
   },
   skjh: {
     zh: '按工具、近战、远程和外观分类快速浏览失控进化武器图鉴，适合区分开荒工具、战斗装备和预约奖励。',
@@ -223,7 +223,7 @@ const ZZZ_WEAPON_NEXT_STEPS: NextStepLink[] = [
 ];
 
 const ENDFIELD_WEAPON_NEXT_STEPS: NextStepLink[] = [
-  { href: '/endfield/version', title: { zh: '先看测试专题', en: 'Start with test hub', ja: 'まずテスト特集へ' }, description: { zh: '先确认测试节奏、入口和当前节点', en: 'Check the test cadence, entry, and current status', ja: 'テスト時期、入口、進行状況を確認' } },
+  { href: '/endfield/events', title: { zh: '先看测试后状态', en: 'Start with post-test status', ja: 'まずテスト後状態へ' }, description: { zh: '先确认测试后行动、官方观察项和当前节点', en: 'Check post-test actions, official watch items, and the current state', ja: 'テスト後の行動、公式確認項目、現状を確認' } },
   { href: '/endfield/characters', title: { zh: '继续看干员图鉴', en: 'Browse characters', ja: '干員図鑑へ' }, description: { zh: '按干员回看武器适配和队伍分工', en: 'Revisit weapon fit and team roles by operator', ja: '干員ごとの武器適性と役割を確認' } },
   { href: '/endfield/guides/combat-system-guide', title: { zh: '看战斗系统', en: 'Read combat guide', ja: '戦闘ガイドへ' }, description: { zh: '把武器、职业和战斗逻辑串起来', en: 'Connect weapons, roles, and combat flow', ja: '武器、職分、戦闘理解を接続' } },
 ];
@@ -296,6 +296,8 @@ function WeaponListPage({ gameId, locale, weapons }: { gameId: GameId; locale: S
       <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
         {getWeaponIntro(gameId, locale)}
       </p>
+
+      {gameId === 'endfield' && <div className="mb-6 rounded-md border border-amber-500/40 bg-amber-500/10 px-4 py-3 text-xs leading-relaxed text-game-text-muted"><strong className="mr-1 text-game-text">{locale === 'zh' ? '资料状态' : locale === 'ja' ? 'データ状態' : 'Data status'}:</strong>{locale === 'zh' ? '本页武器属性、效果与来源来自 Pioneer Test 资料快照；未来测试与正式版的数值、配方、获取方式仅以官方公告为准。' : locale === 'ja' ? '本ページの武器性能、効果、入手先は Pioneer Test 資料のスナップショットです。今後のテストと正式版の数値、レシピ、入手方法は公式発表のみを基準にしてください。' : 'Weapon stats, effects, and sources on this page are Pioneer Test snapshots. Use official announcements only for future-test and release values, recipes, and availability.'}</div>}
 
       {gameId === 'zzz' && <ZzzQueuedWeapons locale={locale} />}
 
