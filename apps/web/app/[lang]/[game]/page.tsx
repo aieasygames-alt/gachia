@@ -47,9 +47,9 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     ja: '異環（NTE）のキャラ図鑑、武器データ、ディスクおすすめ、交換コード、ガチャシミュレーターを提供し、正式リリース済みです。19体のキャラ、DL、入門、ボス攻略、ダメージ計算、育成導線をまとめて確認でき、開服期の準備に役立ちます。版本特集や報酬導線もあります。',
   },
   zzz: {
-    zh: '绝区零（Zenless Zone Zero）代理人图鉴、音擎数据库、驱动盘推荐、兑换码和版本专题，当前重点覆盖 3.3 前瞻、3.2 Claret/Roxy/Armorer/Maim 复盘、下期卡池、直播码提醒以及 Steam/Xbox 平台入坑。',
-    en: 'Zenless Zone Zero agent database, W-Engine guide, Drive Disc builds, codes, and version hubs, now focused on v3.3 watch, v3.2 Claret/Roxy/Armorer/Maim recap, next banners, code reminders, and Steam/Xbox onboarding.',
-    ja: 'ゼンレスゾーンゼロのエージェント図鑑、Wエンジン、ドライブディスク、コード、版本特集。現在はv3.3注目、v3.2 Claret/Roxy/Armorer/Maimまとめ、次回バナー、コード提醒、Steam/Xbox入門を重点化します。',
+    zh: '绝区零（Zenless Zone Zero）代理人图鉴、音擎数据库、驱动盘推荐、兑换码和版本专题，当前重点覆盖 3.3「重返天空的旅程」10 月 9 日官方前瞻、直播码提醒与 3.2 复盘；卡池与角色细节以节目后公告为准。',
+    en: 'Zenless Zone Zero agent database, W-Engine guide, Drive Disc builds, codes, and version hubs, now focused on the official October 9 v3.3 “Journey Back to the Sky” program, code reminders, and the v3.2 recap. Banner and agent details await post-program notices.',
+    ja: 'ゼンレスゾーンゼロのエージェント図鑑、Wエンジン、ドライブディスク、コード、版本特集。現在はv3.3「空へ戻る旅」の10月9日公式番組、コード提醒、v3.2まとめを重点化し、バナーとキャラ詳細は番組後の告知を基準にします。',
   },
   guihuan: {
     zh: '归环角色图鉴、武器数据与攻略百科，整理全部可用角色的技能数据、定位说明、配装推荐和成长思路，帮助你更快了解游戏基础玩法、完成入门判断并找到适合当前版本的培养方向，同时持续补充图鉴与攻略专题。',
@@ -111,9 +111,9 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
     ja: '異環（Neverness to Everness）はHotta StudioのUE5製超自然オープンワールドゲーム、2026年4月正式リリース。Gachiaは最も充実したNTEデータベースを提供。19体のプレイアブルキャラ図鑑、武器データ、ディスクセットおすすめ、DL/入門、ボス攻略、ダメージ計算、交換コード、ガチャシミュレーターを網羅。',
   },
   zzz: {
-    zh: '绝区零（Zenless Zone Zero）是 HoYoverse 开发的都市动作游戏，当前首页重点覆盖 3.3 前瞻、3.2 Claret/Roxy/Armorer/Maim 复盘、下期卡池、直播码提醒、Steam 与 Xbox 入坑路线。Gachia 将代理人图鉴、音擎、驱动盘、兑换码、版本专题和主流配队串成一页。',
-    en: 'Zenless Zone Zero (ZZZ) is HoYoverse\'s urban action game, now focused on v3.3 watch, v3.2 Claret/Roxy/Armorer/Maim recap, next banners, code reminders, Steam, and Xbox onboarding. Gachia connects agents, W-Engines, Drive Discs, codes, teams, and version hubs for new and returning players.',
-    ja: 'ゼンレスゾーンゼロ（ZZZ）はHoYoverseの都市アクションゲームで、現在はv3.3注目、v3.2 Claret/Roxy/Armorer/Maimまとめ、次回バナー、コード提醒、Steam、Xbox入門を重点的に整理しています。Gachiaではエージェント、Wエンジン、ディスク、コード、編成、版本特集をつなぎます。',
+    zh: '绝区零（Zenless Zone Zero）是 HoYoverse 开发的都市动作游戏，当前首页重点覆盖 3.3「重返天空的旅程」10 月 9 日官方前瞻、直播码提醒和 3.2 复盘。Gachia 将代理人图鉴、音擎、驱动盘、兑换码、版本专题和主流配队串成一页；未公布卡池与角色不提前定论。',
+    en: 'Zenless Zone Zero (ZZZ) is HoYoverse\'s urban action game, now focused on the official October 9 v3.3 “Journey Back to the Sky” program, code reminders, and the v3.2 recap. Gachia connects agents, W-Engines, Drive Discs, codes, teams, and version hubs without presenting unannounced banners or agents as confirmed.',
+    ja: 'ゼンレスゾーンゼロ（ZZZ）はHoYoverseの都市アクションゲームです。現在はv3.3「空へ戻る旅」の10月9日公式番組、コード提醒、v3.2まとめを重点化しています。Gachiaはエージェント、Wエンジン、ディスク、コード、編成、版本特集をつなぎ、未発表のバナーやキャラは確定扱いしません。',
   },
   guihuan: {
     zh: '归环（Guihuan）是一款二次元开放世界冒险游戏。Gachia 提供归环角色图鉴、武器数据库、配装推荐与攻略百科，帮助玩家快速上手游戏并了解各角色的最优培养路线。',
@@ -174,9 +174,9 @@ const GAME_META_TITLES: Partial<Record<GameId, Record<SupportedLocale, string>>>
     ja: '失控進化 Wiki — DL、サーバー、開荒攻略',
   },
   zzz: {
-    zh: '绝区零 3.3 Wiki — 前瞻、3.2 复盘、卡池与兑换码',
-    en: 'ZZZ v3.3 Wiki — Watch, v3.2 Recap, Banners & Codes',
-    ja: 'ZZZ v3.3 Wiki — 前瞻、v3.2まとめ、バナー、コード',
+    zh: '绝区零 3.3 Wiki — 10 月 9 日前瞻、兑换码与 3.2 复盘',
+    en: 'ZZZ v3.3 Wiki — October 9 Program, Codes & v3.2 Recap',
+    ja: 'ZZZ v3.3 Wiki — 10月9日番組、コード、v3.2まとめ',
   },
   aniimo: {
     zh: '伊莫 Aniimo Wiki｜发售日期、下载、图鉴、地图与兑换码追踪',
@@ -431,17 +431,17 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     ],
   },
   zzz: {
-    eyebrow: { zh: '3.3 前瞻 / 3.2 复盘入口', en: 'v3.3 Watch / v3.2 Recap Hub', ja: 'v3.3注目 / v3.2まとめ導線' },
-    title: { zh: '绝区零 3.3 前瞻、3.2 复盘与平台入坑入口', en: 'ZZZ v3.3 watch, v3.2 recap, and platform starter hub', ja: 'ZZZ v3.3注目・v3.2まとめ・平台入門導線' },
-    description: { zh: '把 3.3 special program、下期卡池、直播码提醒、3.2 Claret/Roxy/Armorer/Maim 复盘和 Steam/Xbox 平台入口放到首页第一跳。', en: 'Surface v3.3 special-program watch, next banners, code reminders, v3.2 Claret/Roxy/Armorer/Maim recap, and Steam/Xbox onboarding.', ja: 'v3.3前瞻、次回バナー、コード提醒、v3.2 Claret/Roxy/Armorer/Maimまとめ、Steam/Xbox入門をトップで受け止めます。' },
-    chips: { zh: ['3.3 watch', '3.2 复盘', 'Claret/Roxy', '直播码提醒', 'Steam', 'Xbox'], en: ['v3.3 watch', 'v3.2 recap', 'Claret/Roxy', 'Code reminder', 'Steam', 'Xbox'], ja: ['v3.3注目', 'v3.2まとめ', 'Claret/Roxy', 'コード提醒', 'Steam', 'Xbox'] },
-    cta: { zh: '去 3.3 前瞻', en: 'Open v3.3 watch', ja: 'v3.3前瞻へ' },
+    eyebrow: { zh: '3.3 官方前瞻 / 3.2 复盘入口', en: 'v3.3 Official Program / v3.2 Recap Hub', ja: 'v3.3公式番組 / v3.2まとめ導線' },
+    title: { zh: '绝区零 3.3 前瞻直播、兑换码与 3.2 复盘入口', en: 'ZZZ v3.3 program, codes, and v3.2 recap hub', ja: 'ZZZ v3.3番組・コード・v3.2まとめ導線' },
+    description: { zh: '3.3「重返天空的旅程」前瞻将于 10 月 9 日 19:30（UTC+8）播出。先看官方节目与直播码，卡池和角色以节目后公告为准；3.2 内容仍可从复盘入口查看。', en: 'The v3.3 “Journey Back to the Sky” program airs October 9 at 19:30 (UTC+8). Watch the official program and claim codes first; use post-program notices for banners and agents. v3.2 remains available as a recap route.', ja: 'v3.3「空へ戻る旅」番組は10月9日19:30（UTC+8）です。公式番組とコードを先に確認し、バナーとキャラは番組後の告知を基準にします。v3.2はまとめ入口として利用できます。' },
+    chips: { zh: ['10 月 9 日 19:30', '官方前瞻', '直播码提醒', '3.2 复盘', 'Steam', 'Xbox'], en: ['Oct 9, 19:30 UTC+8', 'Official program', 'Code reminder', 'v3.2 recap', 'Steam', 'Xbox'], ja: ['10月9日 19:30', '公式番組', 'コード提醒', 'v3.2まとめ', 'Steam', 'Xbox'] },
+    cta: { zh: '看 3.3 前瞻时间线', en: 'Open v3.3 program timeline', ja: 'v3.3番組タイムラインへ' },
     tracks: {
-      zh: [{ title: '3.3 前瞻', description: '先看下期卡池、直播码提醒和资源预留。', links: [{ href: '/zzz/version', label: '3.3 前瞻' }, { href: '/zzz/redeem-codes', label: '兑换码' }] }, { title: '3.2 复盘', description: '继续承接 Claret/Roxy、Armorer/Maim、活动和平台玩家回流。', links: [{ href: '/zzz/guides/v3-2-livestream-recap-expired-codes', label: '3.2 复盘' }, { href: '/zzz/guides/banner-schedule-guide', label: '当前卡池' }] }, { title: '平台与养成', description: 'Steam/Xbox 玩家先看账号下载，再进配队、音擎和驱动盘。', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Steam 入坑' }, { href: '/zzz/guides/meta-teams-v3-guide', label: '主流配队' }] }],
-      en: [{ title: 'v3.3 watch', description: 'Start with next banners, code reminders, and resource reserves.', links: [{ href: '/zzz/version', label: 'v3.3 watch' }, { href: '/zzz/redeem-codes', label: 'Codes' }] }, { title: 'v3.2 recap', description: 'Keep Claret/Roxy, Armorer/Maim, events, and platform returners connected.', links: [{ href: '/zzz/guides/v3-2-livestream-recap-expired-codes', label: 'v3.2 recap' }, { href: '/zzz/guides/banner-schedule-guide', label: 'Current banners' }] }, { title: 'Platform and builds', description: 'Steam/Xbox players should solve account and download first, then teams and builds.', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Steam starter' }, { href: '/zzz/guides/meta-teams-v3-guide', label: 'Meta teams' }] }],
-      ja: [{ title: 'v3.3注目', description: '次回バナー、コード提醒、資源温存を先に確認します。', links: [{ href: '/zzz/version', label: 'v3.3前瞻' }, { href: '/zzz/redeem-codes', label: 'コード' }] }, { title: 'v3.2まとめ', description: 'Claret/Roxy、Armorer/Maim、イベント、平台復帰導線を維持します。', links: [{ href: '/zzz/guides/v3-2-livestream-recap-expired-codes', label: 'v3.2まとめ' }, { href: '/zzz/guides/banner-schedule-guide', label: '現在バナー' }] }, { title: '平台と育成', description: 'Steam/Xbox勢はアカウントとDL、その後編成と育成へ。', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Steam入門' }, { href: '/zzz/guides/meta-teams-v3-guide', label: '主要編成' }] }],
+      zh: [{ title: '3.3 官方前瞻', description: '10 月 9 日 19:30 看官方节目；节目后再核对卡池、角色和版本日期。', links: [{ href: '/zzz/version', label: '3.3 前瞻时间线' }, { href: '/zzz/redeem-codes', label: '兑换码' }] }, { title: '3.2 复盘', description: '继续查看现有角色、活动和配队，避免将复盘内容误读为 3.3 已公布信息。', links: [{ href: '/zzz/guides/v3-2-livestream-recap-expired-codes', label: '3.2 复盘' }, { href: '/zzz/guides/banner-schedule-guide', label: '当前卡池' }] }, { title: '平台与养成', description: 'Steam/Xbox 玩家先看账号下载，再进配队、音擎和驱动盘。', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Steam 入坑' }, { href: '/zzz/guides/meta-teams-v3-guide', label: '主流配队' }] }],
+      en: [{ title: 'Official v3.3 program', description: 'Watch the official broadcast at 19:30 UTC+8 on October 9; verify banners, agents, and patch timing afterwards.', links: [{ href: '/zzz/version', label: 'v3.3 program timeline' }, { href: '/zzz/redeem-codes', label: 'Codes' }] }, { title: 'v3.2 recap', description: 'Use this for existing agents, events, and teams without reading recap content as v3.3 confirmation.', links: [{ href: '/zzz/guides/v3-2-livestream-recap-expired-codes', label: 'v3.2 recap' }, { href: '/zzz/guides/banner-schedule-guide', label: 'Current banners' }] }, { title: 'Platform and builds', description: 'Steam/Xbox players should solve account and download first, then teams and builds.', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Steam starter' }, { href: '/zzz/guides/meta-teams-v3-guide', label: 'Meta teams' }] }],
+      ja: [{ title: 'v3.3公式番組', description: '10月9日19:30（UTC+8）に公式番組を確認し、バナー、キャラ、実装日はその後に検証します。', links: [{ href: '/zzz/version', label: 'v3.3番組タイムライン' }, { href: '/zzz/redeem-codes', label: 'コード' }] }, { title: 'v3.2まとめ', description: '既存キャラ、イベント、編成の確認に使い、まとめ内容をv3.3確定情報として扱わないでください。', links: [{ href: '/zzz/guides/v3-2-livestream-recap-expired-codes', label: 'v3.2まとめ' }, { href: '/zzz/guides/banner-schedule-guide', label: '現在バナー' }] }, { title: '平台と育成', description: 'Steam/Xbox勢はアカウントとDL、その後編成と育成へ。', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Steam入門' }, { href: '/zzz/guides/meta-teams-v3-guide', label: '主要編成' }] }],
     },
-    faq: [{ question: { zh: '绝区零首页现在先看什么？', en: 'What should I open first on the ZZZ homepage?', ja: 'ZZZホームで最初に見るべきものは？' }, answer: { zh: '先看 3.3 前瞻和兑换码提醒，再看 3.2 复盘、平台入坑和主流配队。', en: 'Start with v3.3 watch and code reminders, then v3.2 recap, platform onboarding, and meta teams.', ja: 'まずv3.3前瞻とコード提醒、その後v3.2まとめ、平台入門、主要編成へ。' } }],
+    faq: [{ question: { zh: '绝区零首页现在先看什么？', en: 'What should I open first on the ZZZ homepage?', ja: 'ZZZホームで最初に見るべきものは？' }, answer: { zh: '先确认 10 月 9 日 19:30 的官方 3.3 前瞻与兑换码提醒；卡池和角色等节目后公告。等待期间可回看 3.2、平台入坑和主流配队。', en: 'Confirm the official v3.3 program at 19:30 UTC+8 on October 9 and its code reminder first. Wait for post-program notices on banners and agents; use the interim for v3.2 recap, platform onboarding, and teams.', ja: 'まず10月9日19:30（UTC+8）の公式v3.3番組とコード提醒を確認します。バナーとキャラは番組後の告知を待ち、待機中はv3.2まとめ、平台入門、主要編成を確認できます。' } }],
   },
   wuwa: {
     eyebrow: { zh: '3.7 watch / 3.6 Jingran 入口', en: 'v3.7 Watch / v3.6 Jingran Hub', ja: 'v3.7注目 / v3.6 Jingran導線' },

@@ -121,14 +121,14 @@ export const BANNER_INTENT_PANELS: Partial<Record<GameId, BannerIntentPanelConfi
       ja: '調律前に代理人、音擎、菲林を確認',
     },
     summary: {
-      zh: '这页优先承接 ZZZ banner schedule、current banner、next banner 和 rerun 搜索。先确认专属频道，再把音擎和菲林风险分开规划。',
-      en: 'This page targets ZZZ banner schedule, current banner, next banner, and rerun searches. Check the Exclusive Channel first, then plan W-Engine and Polychrome risk separately.',
-      ja: 'ZZZ banner schedule、現在、次回、復刻検索に対応します。先に専属チャンネルを確認し、音擎と菲林リスクを分けて計画します。',
+      zh: '3.3「重返天空的旅程」前瞻将于 10 月 9 日 19:30（UTC+8）播出。节目日前先盘点菲林与两队缺位；节目后只按官方卡池、角色和阶段时间做抽卡判断。',
+      en: 'The v3.3 “Journey Back to the Sky” program airs October 9 at 19:30 UTC+8. Audit Polychromes and two-team gaps first; after the program, make pull decisions only from official banners, agents, and phase timing.',
+      ja: 'v3.3「空へ戻る旅」番組は10月9日19:30（UTC+8）です。番組前は菲林と二編成不足を確認し、番組後は公式バナー、キャラ、期間だけで判断します。',
     },
     checks: {
-      zh: ['当前代理人是否补击破、输出或异常队缺口', '下期/复刻是否更适合保底', '菲林是否覆盖专属频道和音擎频道风险', '抽前是否领完兑换码、周年和版本奖励'],
-      en: ['Does the current agent fix Stun, DPS, or Anomaly team gaps?', 'Is the next or rerun banner a better guarantee target?', 'Does your Polychrome budget cover agent and W-Engine risk separately?', 'Have you claimed codes, anniversary rewards, and patch rewards?'],
-      ja: ['現在代理人がブレイク、火力、異常編成不足を補うか', '次回や復刻が保証先として良いか', '菲林が代理人と音擎リスクを別々に覆えるか', 'コード、周年、版本報酬を回収したか'],
+      zh: ['节目日前是否已记录菲林、保底和两队缺位', '直播码是否已由官方公布并标记为有效', '节目后官方角色是否补足真实队伍缺口', '菲林是否分别覆盖代理人与音擎风险'],
+      en: ['Have you recorded Polychromes, pity, and two-team gaps before the program?', 'Have livestream codes been officially published and marked active?', 'Does an official post-program agent fix a real team gap?', 'Does your budget cover agent and W-Engine risk separately?'],
+      ja: ['番組前に菲林、天井、二編成不足を記録したか', '配信コードは公式発表済みで有効表示か', '番組後の公式キャラが実際の編成不足を補うか', '予算が代理人と音動機リスクを別々に覆えるか'],
     },
     links: [
       {

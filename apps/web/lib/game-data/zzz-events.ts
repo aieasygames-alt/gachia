@@ -13,15 +13,15 @@ export type ZzzEvent = {
   updatedAt: string;
 };
 
-export const ZZZ_EVENT_UPDATED_AT = '2026-09-24';
+export const ZZZ_EVENT_UPDATED_AT = '2026-10-08';
 
 // Keep live claims and unconfirmed preview information separate by status.
 export const ZZZ_EVENTS: ZzzEvent[] = [
   {
     id: 'code-check',
     status: 'action',
-    title: { zh: '兑换码与邮件检查', en: 'Codes and mail check', ja: 'コードとメール確認' },
-    summary: { zh: '兑换码页按 active、expired、unknown 分层；领取前先确认有效期和官方来源。', en: 'The code page separates active, expired, and unknown states. Verify expiry and official source before redeeming.', ja: 'コードページはactive、expired、unknownを分けます。交換前に期限と公式出典を確認してください。' },
+    title: { zh: '现有兑换码与邮件检查', en: 'Check current codes and mail', ja: '既存コードとメール確認' },
+    summary: { zh: '先领取已标记为有效的兑换码并检查邮件。3.3 直播码尚待官方在 10 月 9 日 19:30（UTC+8）节目后公布，不要输入未核验字符串。', en: 'Claim only codes marked active and check mail. v3.3 livestream codes await official publication after the October 9 19:30 UTC+8 program; do not enter unverified strings.', ja: '有効表示のコードのみ交換してメールを確認します。v3.3配信コードは10月9日19:30（UTC+8）の番組後に公式発表待ちです。未確認文字列は入力しません。' },
     action: { zh: '检查可领资源', en: 'Check claimable resources', ja: '受取可能な資源を確認' },
     href: '/zzz/redeem-codes',
     source: { zh: '站内兑换码状态维护', en: 'Gachia code-status maintenance', ja: 'サイト内コード状態管理' },
@@ -41,7 +41,7 @@ export const ZZZ_EVENTS: ZzzEvent[] = [
     id: 'progression-plan',
     status: 'planning',
     title: { zh: '菲林与养成资源安排', en: 'Polychrome and progression planning', ja: 'ポリクロームと育成資源計画' },
-    summary: { zh: '先用菲林规划器确认最坏情况资源缺口，再把主力代理人、核心技、技能与音擎拆成养成队列。', en: 'Use the pull planner for worst-case gaps, then turn core agents, Core Skills, skills, and W-Engines into a progression queue.', ja: 'ガチャ計画で最悪ケースの不足を確認し、主力エージェント、コア、スキル、Wエンジンを育成キューに分けます。' },
+    summary: { zh: '节目日前先记录菲林、加密母带、保底和两队缺位；不要为未公布目标暂停已有代理人的核心技、技能、音擎和驱动盘养成。', en: 'Before the program, record Polychromes, Encrypted Master Tapes, pity, and two-team gaps. Do not pause Core Skills, skills, W-Engines, or Drive Disc work for unannounced targets.', ja: '番組前はポリクローム、暗号化マスターテープ、天井、二編成の不足を記録します。未発表目標のために既存エージェントのコア、スキル、音動機、ドライブ育成を止めません。' },
     action: { zh: '规划资源', en: 'Plan resources', ja: '資源を計画' },
     href: '/zzz/calculator',
     source: { zh: '站内规划工具', en: 'Gachia planning tools', ja: 'サイト内計画ツール' },
@@ -50,10 +50,10 @@ export const ZZZ_EVENTS: ZzzEvent[] = [
   {
     id: 'version-watch',
     status: 'watch',
-    title: { zh: '3.3 前瞻与下期卡池观察', en: 'v3.3 preview and next-banner watch', ja: 'v3.3前瞻と次回バナー注目' },
-    summary: { zh: '未确认的角色、时间和奖励只保留观察状态；官方公告发布后再更新为具体活动或卡池信息。', en: 'Unconfirmed characters, dates, and rewards remain watch-only until an official notice is published.', ja: '未確認のキャラ、日程、報酬は公式告知まで注目状態として扱います。' },
-    action: { zh: '查看版本观察', en: 'Open version watch', ja: 'バージョン注目を見る' },
-    href: '/zzz/version',
+    title: { zh: '3.3 官方前瞻：10 月 9 日 19:30', en: 'v3.3 official program: October 9, 19:30', ja: 'v3.3公式番組：10月9日19:30' },
+    summary: { zh: '3.3「重返天空的旅程」前瞻特别节目将于 10 月 9 日 19:30（UTC+8）播出。节目后再将官方卡池、角色、阶段与奖励写入具体入口。', en: 'The v3.3 “Journey Back to the Sky” special program airs October 9 at 19:30 UTC+8. Official banners, agents, phases, and rewards will be added to actionable routes only after the program.', ja: 'v3.3「空へ戻る旅」特別番組は10月9日19:30（UTC+8）です。公式バナー、キャラ、期間、報酬は番組後に実行導線へ追加します。' },
+    action: { zh: '查看节目准备清单', en: 'Open program checklist', ja: '番組準備リストを見る' },
+    href: '/zzz/guides/v3-3-special-program-prep-guide',
     source: { zh: '官方公告与站内版本快照', en: 'Official notices and Gachia version snapshot', ja: '公式告知とサイト内バージョンスナップショット' },
     updatedAt: ZZZ_EVENT_UPDATED_AT,
   },

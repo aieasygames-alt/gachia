@@ -30,7 +30,7 @@ export interface VersionSnapshot {
   links: VersionSnapshotLink[];
 }
 
-export const VERSION_SNAPSHOT_UPDATED_AT = '2026-09-30';
+export const VERSION_SNAPSHOT_UPDATED_AT = '2026-10-08';
 
 export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   aniimo: {
@@ -84,21 +84,21 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   zzz: {
     gameId: 'zzz',
-    currentVersion: '3.3 watch / 3.2 recap',
-    releaseDate: '2026-09-21',
+    currentVersion: '3.3 special program / 3.2 recap',
+    releaseDate: '2026-10-09',
     status: 'watch',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
-    sourceTier: 'mixed',
+    sourceTier: 'official',
     summary: {
-      zh: '3.2 已进入上线后复盘，新增 3.3 前瞻、下期卡池、直播码提醒和平台玩家回流需求。',
-      en: 'v3.2 is now in recap mode, with added v3.3 watch, next-banner planning, code reminders, and platform-player return routes.',
-      ja: 'v3.2はまとめ段階に入り、v3.3前瞻、次回バナー、コード提醒、平台プレイヤー復帰需要を追加します。',
+      zh: '3.3「重返天空的旅程」前瞻特别节目将于 10 月 9 日 19:30（UTC+8）播出。当前先确认官方节目、领取时限短的直播码；角色、卡池和版本日期以节目及后续公告为准。',
+      en: 'The v3.3 “Journey Back to the Sky” special program airs on October 9 at 19:30 (UTC+8). Confirm the official program and short-lived livestream codes first; agents, banners, and patch timing await the program and follow-up notices.',
+      ja: 'v3.3「空へ戻る旅」特別番組は10月9日19:30（UTC+8）配信です。公式番組と短期限の配信コードを先に確認し、エージェント、バナー、実装日は番組と後続告知を基準にします。',
     },
     whatChanged: [
       {
-        zh: '版本页从 3.2 首日路线扩展为 3.3 watch + 3.2 recap。',
-        en: 'The hub expands from a v3.2 launch route into v3.3 watch plus v3.2 recap.',
-        ja: '版本ページをv3.2初日ルートからv3.3注目 + v3.2まとめへ拡張します。',
+        zh: '版本页进入 3.3 官方前瞻窗口；已公布的是节目时间，节目外角色、卡池与活动细节暂不作推断。',
+        en: 'The hub enters the official v3.3 preview window. The program time is confirmed; agent, banner, and event details outside the program are not inferred.',
+        ja: 'バージョンページはv3.3公式前瞻期間へ移行します。確定しているのは番組時刻のみで、番組外のキャラ、バナー、イベント詳細は推測しません。',
       },
       {
         zh: '旧直播码继续只放 expired，新前瞻码出现后按 active/expired/unknown 分层。',
@@ -108,9 +108,9 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
     ],
     firstSteps: [
       {
-        zh: '先看 3.2 复盘和平台入口，再为 3.3 下期卡池预留菲林。',
-        en: 'Start with the v3.2 recap and platform entry, then reserve Polychrome for v3.3 banners.',
-        ja: 'まずv3.2まとめと平台入口を確認し、v3.3バナー用にポリクロームを温存します。',
+        zh: '10 月 9 日 19:30 前看完 3.2 复盘并保留菲林；节目开始后先兑换直播码，再根据官方卡池与角色信息决定抽取。',
+        en: 'Before 19:30 on October 9, finish the v3.2 recap and keep Polychrome reserved. Once the program starts, redeem codes first, then decide pulls from official banner and agent information.',
+        ja: '10月9日19:30まではv3.2まとめを確認してポリクロームを温存します。番組開始後はコード交換を先に済ませ、公式のバナーとキャラ情報で抽選を判断します。',
       },
       {
         zh: '兑换码页继续区分 active、expired、unknown。',

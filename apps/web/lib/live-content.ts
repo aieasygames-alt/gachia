@@ -70,7 +70,7 @@ export interface LiveCalendarEvent {
   priority: number;
 }
 
-export const LIVE_UPDATED_AT = '2026-09-30';
+export const LIVE_UPDATED_AT = '2026-10-08';
 
 export const HOMEPAGE_PRIORITY_GAMES: GameId[] = [
   'lvmeng',
@@ -182,14 +182,14 @@ export const LIVE_VERSION_UPDATES: LiveVersionUpdate[] = [
   {
     gameId: 'zzz',
     title: {
-      zh: '绝区零 3.3 前瞻与 3.2 复盘',
-      en: 'ZZZ v3.3 Watch and v3.2 Recap',
-      ja: 'ZZZ v3.3注目とv3.2まとめ',
+      zh: '绝区零 3.3 前瞻直播与 3.2 复盘',
+      en: 'ZZZ v3.3 Special Program and v3.2 Recap',
+      ja: 'ZZZ v3.3特別番組とv3.2まとめ',
     },
     summary: {
-      zh: '3.2 继续承接 Claret/Roxy、Armorer/Maim 与平台玩家，新增 3.3 special program、next banner 和 code reminder。',
-      en: 'v3.2 still routes Claret/Roxy, Armorer/Maim, and platform players while adding v3.3 special program, next banner, and code reminders.',
-      ja: 'v3.2のClaret/Roxy、Armorer/Maim、平台導線を残し、v3.3前瞻、次回バナー、コード提醒を追加。',
+      zh: '3.3「重返天空的旅程」官方前瞻将于 10 月 9 日 19:30（UTC+8）播出。先看节目与直播码，卡池和角色以节目后官方公告为准；3.2 保留为回顾入口。',
+      en: 'The official v3.3 “Journey Back to the Sky” program airs October 9 at 19:30 UTC+8. Watch the program and claim codes first; use post-program official notices for banners and agents, with v3.2 retained as recap.',
+      ja: 'v3.3「空へ戻る旅」公式番組は10月9日19:30（UTC+8）です。番組とコードを先に確認し、バナーとキャラは番組後の公式告知を基準にします。v3.2はまとめ入口として残します。',
     },
     href: '/zzz/version',
     status: 'watch',
@@ -394,9 +394,9 @@ export const LIVE_CODE_SUMMARIES: LiveCodeSummary[] = [
       ja: 'ZZZ v3.3コード提醒',
     },
     summary: {
-      zh: '旧直播码保持 expired 说明，新一轮前瞻码出现后再进入 active/unknown 分层。',
-      en: 'Old livestream codes stay expired; new preview codes move into active/unknown tiers when confirmed.',
-      ja: '旧配信コードはexpired、新前瞻コードは確認後active/unknownへ分けます。',
+      zh: '3.3 前瞻将在 10 月 9 日 19:30（UTC+8）播出。节目后仅把官方可验证的代码标记为有效；旧直播码继续保留 expired 说明。',
+      en: 'The v3.3 program airs October 9 at 19:30 UTC+8. Mark a code active only after official verification; older livestream codes remain expired context.',
+      ja: 'v3.3番組は10月9日19:30（UTC+8）です。公式に確認できたコードのみ有効とし、旧配信コードは期限切れとして残します。',
     },
     href: '/zzz/redeem-codes',
     status: 'watch',

@@ -203,14 +203,14 @@ export function ZzzTeams({ locale }: { locale: SupportedLocale }) {
       description: t(locale, '先理解强攻、击破、异常、支援和防护位怎么组合。', 'Start with Attack, Stun, Anomaly, Support, and Defense role logic.', '強攻、撃破、異常、支援、防護の組み方を確認。'),
     },
     {
-      href: '/zzz/guides/meta-teams-v3-guide',
-      title: t(locale, '当前版本主流队伍', 'Current Meta Teams', '現在版本のメタ編成'),
-      description: t(locale, '查看 3.3 观察期队伍缺口、抽卡目标和 3.2 回顾环境。', 'Review v3.3-watch team gaps, pull targets, and v3.2 recap context.', 'v3.3観察期の不足枠、ガチャ目標、v3.2回顧環境を確認。'),
+      href: '/zzz/guides/v3-3-special-program-prep-guide',
+      title: t(locale, '3.3 节目准备清单', 'v3.3 Program Checklist', 'v3.3番組準備リスト'),
+      description: t(locale, '节目日前记录两队缺位；节目后只按官方角色和卡池更新配队。', 'Record two-team gaps before the program; update teams only from official post-program agents and banners.', '番組前に二編成の不足を記録し、番組後は公式キャラとバナーのみで編成を更新。'),
     },
     {
       href: '/zzz/guides/banner-schedule-guide',
       title: t(locale, '按卡池决定养谁', 'Plan Around Banners', 'バナーから育成判断'),
-      description: t(locale, '抽代理人前先确认当前、下期、复刻和菲林预算。', 'Check current banners, next banners, reruns, and Polychrome budget first.', '現在、次回、復刻、菲林予算を先に確認。'),
+      description: t(locale, '先确认官方卡池、阶段时间与菲林预算，再决定是否抽取。', 'Verify official banners, phase timing, and Polychrome budget before pulling.', '公式バナー、期間、ポリクローム予算を確認してから引くか決める。'),
     },
   ];
 

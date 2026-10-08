@@ -43,6 +43,17 @@ describe('redeem code status', () => {
     expect(isRedeemCodeActive(flintworks!, new Date('2026-08-31T00:00:00Z'))).toBe(false);
   });
 
+  it('keeps the ZZZ v3.3 livestream-code watchlist out of active code modules', () => {
+    const pending = zzzCodes.find((code) => code.code === '3.3_LIVESTREAM_PENDING');
+
+    expect(pending).toMatchObject({
+      status: 'watchlist',
+      source: 'official-watchlist',
+      revealedAt: '2026-10-08',
+    });
+    expect(isRedeemCodeActive(pending!, new Date('2026-10-09T12:00:00Z'))).toBe(false);
+  });
+
   it('keeps dated Roco CN codes visible so the page can classify expired entries', async () => {
     const codes = await getRedeemCodesForGame('roco-cn');
     const augustLimited = codes.find((code) => code.code === '不要小瞧我和精灵的羁绊啊');

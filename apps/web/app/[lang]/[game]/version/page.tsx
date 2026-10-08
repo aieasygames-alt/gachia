@@ -103,16 +103,16 @@ const VERSION_META_OVERRIDES: Partial<Record<GameId, Partial<Record<SupportedLoc
   },
   zzz: {
     zh: {
-      title: '绝区零 3.3 前瞻专题：3.2 复盘、卡池与兑换码',
-      description: '追踪绝区零 3.3 前瞻、3.2 Claret/Roxy/Armorer/Maim 复盘、平台入口、卡池、兑换码和配队。',
+      title: '绝区零 3.3 前瞻专题：10 月 9 日直播、兑换码与 3.2 复盘',
+      description: '追踪绝区零 3.3「重返天空的旅程」10 月 9 日前瞻直播、限时兑换码、官方卡池公告与 3.2 复盘；未公布内容不作推断。',
     },
     en: {
-      title: 'ZZZ v3.3 Watch: v3.2 Recap, Banners & Codes',
-      description: 'Track Zenless Zone Zero v3.3 watch, v3.2 Claret/Roxy/Armorer/Maim recap, platform onboarding, banners, codes, and teams.',
+      title: 'ZZZ v3.3 Preview: October 9 Program, Codes & v3.2 Recap',
+      description: 'Track Zenless Zone Zero v3.3 “Journey Back to the Sky,” its October 9 special program, short-lived codes, official banner notices, and the v3.2 recap without speculating on unannounced details.',
     },
     ja: {
-      title: 'ZZZ v3.3 注目：v3.2まとめ、バナー、コード',
-      description: 'ZZZ v3.3注目、v3.2 Claret/Roxy/Armorer/Maimまとめ、プラットフォーム入門、バナー、コード、編成を確認できます。',
+      title: 'ZZZ v3.3 注目：10月9日番組、コード、v3.2まとめ',
+      description: 'ZZZ v3.3「空へ戻る旅」の10月9日特別番組、短期限コード、公式バナー告知、v3.2まとめを確認できます。未発表内容は推測しません。',
     },
   },
 };
@@ -288,16 +288,16 @@ const VERSION_COPY: Partial<Record<GameId, HubCopy>> = {
     guideIds: ['999-nights-mode-guide', 'shinku-iroi-pull-plan', 'v1-2-999-nights-guide'],
   },
   zzz: {
-    title: { zh: '3.3 前瞻 / 3.2 复盘专题', en: 'v3.3 Watch / v3.2 Recap Hub', ja: 'v3.3注目 / v3.2まとめ特集' },
-    description: { zh: '聚焦 3.3 前瞻、下一期卡池、直播码提醒，以及 3.2 Claret/Roxy/Armorer/Maim、平台入口和配队复盘。', en: 'Track v3.3 watch, next banners, code reminders, plus v3.2 Claret/Roxy/Armorer/Maim, platform onboarding, and team recap.', ja: 'v3.3注目、次回バナー、コード提醒、v3.2 Claret/Roxy/Armorer/Maim、平台入門、編成まとめを整理します。' },
-    highlights: { zh: ['3.3 watch', '3.2 复盘', '直播码提醒', '平台入口'], en: ['v3.3 watch', 'v3.2 recap', 'Code reminder', 'Platform entry'], ja: ['v3.3注目', 'v3.2まとめ', 'コード提醒', '平台入口'] },
-    kicker: { zh: '前瞻与复盘', en: 'Preview and recap', ja: '前瞻とまとめ' },
-    freshness: { zh: '从 3.2 首日路线扩展到 3.3 前瞻、下期卡池、直播码和平台玩家回流需求。', en: 'Expanded from v3.2 launch routing into v3.3 previews, next banners, livestream codes, and platform-player return routes.', ja: 'v3.2初日導線からv3.3前瞻、次回バナー、配信コード、平台プレイヤー復帰導線へ拡張しています。' },
+    title: { zh: '3.3 前瞻直播 / 3.2 复盘专题', en: 'v3.3 Special Program / v3.2 Recap Hub', ja: 'v3.3特別番組 / v3.2まとめ特集' },
+    description: { zh: '3.3「重返天空的旅程」将于 10 月 9 日 19:30（UTC+8）前瞻。先追踪官方节目与直播码，再依据公告看卡池；3.2 内容保留为复盘入口。', en: 'v3.3 “Journey Back to the Sky” has a special program on October 9 at 19:30 (UTC+8). Track the official broadcast and its codes first, then use notices for banners; v3.2 remains available as a recap route.', ja: 'v3.3「空へ戻る旅」の特別番組は10月9日19:30（UTC+8）です。まず公式番組とコードを確認し、バナーは告知を基準に判断します。v3.2はまとめ入口として残します。' },
+    highlights: { zh: ['10 月 9 日 19:30', '官方前瞻', '直播码提醒', '3.2 复盘'], en: ['Oct 9, 19:30 UTC+8', 'Official program', 'Code reminder', 'v3.2 recap'], ja: ['10月9日 19:30 UTC+8', '公式番組', 'コード提醒', 'v3.2まとめ'] },
+    kicker: { zh: '官方前瞻窗口', en: 'Official preview window', ja: '公式前瞻期間' },
+    freshness: { zh: '已更新为 10 月 8 日状态：节目时间来自官方公告，角色、卡池和活动细节等待节目及后续公告核验。', en: 'Updated for October 8: the program time is official; agent, banner, and event details await verification from the program and follow-up notices.', ja: '10月8日時点に更新：番組時刻は公式発表済みで、キャラ、バナー、イベント詳細は番組と後続告知で確認します。' },
     faq: [
-      { question: { zh: '现在是看 3.2 还是 3.3？', en: 'Should I focus on v3.2 or v3.3 now?', ja: '今はv3.2とv3.3のどちらを見るべき？' }, answer: { zh: '3.2 仍适合看 Claret/Roxy、Armorer/Maim 和活动复盘；资源规划和直播码提醒应开始看 3.3 watch。', en: 'Use v3.2 for Claret/Roxy, Armorer/Maim, and event recap; use v3.3 watch for resource planning and code reminders.', ja: 'Claret/Roxy、Armorer/Maim、イベントまとめはv3.2、資源計画とコード提醒はv3.3注目を見るのがおすすめです。' } },
+      { question: { zh: '现在是看 3.2 还是 3.3？', en: 'Should I focus on v3.2 or v3.3 now?', ja: '今はv3.2とv3.3のどちらを見るべき？' }, answer: { zh: '10 月 9 日节目播出前，3.3 页面只用于确认节目时间和兑换码提醒；3.2 仍适合看已有角色、活动与配队内容。节目后再按官方公告处理 3.3 卡池与角色。', en: 'Before the October 9 program, use the v3.3 page only for timing and code reminders; v3.2 remains the route for existing agents, events, and teams. Use official notices after the program for v3.3 banners and agents.', ja: '10月9日番組前は、v3.3ページを時刻とコード確認に使います。既存キャラ、イベント、編成はv3.2を見てください。v3.3のバナーとキャラは番組後の公式告知を基準にします。' } },
       { question: { zh: '直播码还能领吗？', en: 'Can I still claim livestream codes?', ja: '配信コードはまだ受け取れますか？' }, answer: { zh: '旧直播码只放 expired 说明；新一轮前瞻码出现后，兑换码页会按 active、expired、unknown 分层。', en: 'Old livestream codes stay in expired context; when new preview codes appear, the code page separates active, expired, and unknown status.', ja: '古い配信コードは期限切れ文脈のみ。新しい前瞻コードが出たら、コードページでactive、expired、unknownを分けます。' } },
     ],
-    guideIds: ['v3-2-livestream-recap-expired-codes', 'anniversary-rewards-codes-plan', 'meta-teams-v3-guide'],
+    guideIds: ['v3-3-special-program-prep-guide', 'banner-schedule-guide', 'v3-2-livestream-recap-expired-codes'],
   },
   guihuan: {
     title: { zh: '测试 / 公测时间线专题', en: 'Test & Release Timeline Hub', ja: 'テスト・リリース時期特集' },

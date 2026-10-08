@@ -1,5 +1,15 @@
 [
   {
+    "code": "3.3_LIVESTREAM_PENDING",
+    "reward": "3.3 前瞻直播码尚未由官方公布；请于 2026-10-09 19:30（UTC+8）节目播出后核对。",
+    "rewardEn": "v3.3 livestream codes are not officially published yet. Check after the October 9, 2026 19:30 (UTC+8) program.",
+    "status": "watchlist",
+    "expiresAt": "watchlist",
+    "source": "official-watchlist",
+    "region": "global",
+    "revealedAt": "2026-10-08"
+  },
+  {
     "code": "FLINTWORKS",
     "reward": "3.2 特别节目直播码，奖励以官方兑换结果为准",
     "rewardEn": "v3.2 special program livestream code. Rewards follow the official redemption result.",

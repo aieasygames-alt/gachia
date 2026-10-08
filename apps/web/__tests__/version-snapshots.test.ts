@@ -5,6 +5,7 @@ import {
   getVersionSnapshot,
   localizeVersionText,
 } from '@/lib/version-snapshots';
+import { getZzzGuideById } from '@gachia/data/games/zzz/guides';
 
 const locales = ['zh', 'en', 'ja'] as const;
 const priorityGames = ['zzz', 'wuwa', 'starrail', 'genshin', 'endfield', 'aniimo', 'sea', 'roco', 'roco-cn', 'ananta', 'skjh'] as const;
@@ -16,16 +17,16 @@ describe('version snapshots', () => {
     }
   });
 
-  it('marks the current ZZZ snapshot as a v3.3 watch with v3.2 recap', () => {
+  it('marks the current ZZZ snapshot as the v3.3 special-program window with a v3.2 recap', () => {
     expect(getVersionSnapshot('zzz')).toMatchObject({
-      currentVersion: '3.3 watch / 3.2 recap',
+      currentVersion: '3.3 special program / 3.2 recap',
       status: 'watch',
       lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
     });
   });
 
-  it('uses the 2026-09-30 snapshot batch', () => {
-    expect(VERSION_SNAPSHOT_UPDATED_AT).toBe('2026-09-30');
+  it('uses the 2026-10-08 snapshot batch', () => {
+    expect(VERSION_SNAPSHOT_UPDATED_AT).toBe('2026-10-08');
     expect(getVersionSnapshot('genshin')?.currentVersion).toBe('7.1 livestream / Luna II watch');
     expect(getVersionSnapshot('starrail')?.currentVersion).toBe('4.6 special program watch');
     expect(getVersionSnapshot('endfield')?.currentVersion).toBe('Pioneer Test recap / AIC blueprint');
@@ -34,6 +35,16 @@ describe('version snapshots', () => {
     expect(getVersionSnapshot('roco')?.sourceTier).toBe('official');
     expect(getVersionSnapshot('roco-cn')?.currentVersion).toBe('post-launch codes / encyclopedia');
     expect(getVersionSnapshot('sea')?.currentVersion).toBe('early 2027 / December beta watch');
+  });
+
+  it('keeps the ZZZ preview route aligned across the version hub and high-intent guides', () => {
+    const previewGuide = getZzzGuideById('v3-3-special-program-prep-guide');
+    const bannerGuide = getZzzGuideById('banner-schedule-guide');
+    const steamGuide = getZzzGuideById('steam-3-0-start-guide');
+
+    expect(previewGuide?.currentVersion).toContain('2026-10-09');
+    expect(bannerGuide?.updatedAt).toBe('2026-10-08');
+    expect(steamGuide?.updatedAt).toBe('2026-10-08');
   });
 
   it('keeps the highest-priority launch times explicit', () => {

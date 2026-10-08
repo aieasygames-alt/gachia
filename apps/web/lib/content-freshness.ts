@@ -64,6 +64,7 @@ export const FRESHNESS_ARCHIVE_GUIDE_IDS: Record<string, Set<string>> = {
   ]),
   zzz: new Set([
     'steam-3-0-start-guide',
+    'banner-schedule-guide',
     'team-building-guide',
     'w-engine-guide',
     'drive-disc-guide',

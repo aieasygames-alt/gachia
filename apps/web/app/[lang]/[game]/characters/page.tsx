@@ -53,7 +53,7 @@ const CHARACTER_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
     {
       href: '/zzz/version',
       title: { zh: '先看 3.3 观察入口', en: 'Start with the v3.3 watch hub', ja: 'v3.3観察入口へ' },
-      description: { zh: '把 3.3 观察、3.2 回顾、卡池和热词先看一遍', en: 'Review the v3.3 watchlist, v3.2 recap, banners, and hot topics first', ja: 'v3.3観察、v3.2回顧、バナー、注目トピックを確認', },
+      description: { zh: '先看 3.3 观察、3.2 回顾及官方确认后的卡池信息', en: 'Review the v3.3 watchlist, v3.2 recap, and officially confirmed banner information first', ja: 'v3.3観察、v3.2回顧、公式確認済みバナー情報を確認', },
     },
     {
       href: '/zzz/weapons',
@@ -67,8 +67,8 @@ const CHARACTER_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
     },
     {
       href: '/zzz/guides/banner-schedule-guide',
-      title: { zh: '当前卡池与复刻', en: 'Current banners and reruns', ja: '現在バナーと復刻' },
-      description: { zh: '先确认当前代理人、下期卡池和菲林预算。', en: 'Check current agents, next banners, and Polychrome budget first', ja: '現在代理人、次回バナー、ポリクローム予算を確認', },
+      title: { zh: '官方卡池与复刻', en: 'Official banners and reruns', ja: '公式バナーと復刻' },
+      description: { zh: '节目后核对官方代理人、阶段时间和菲林预算。', en: 'Verify official agents, phase timing, and Polychrome budget after the program.', ja: '番組後に公式代理人、期間、ポリクローム予算を確認。', },
     },
   ],
   endfield: [
@@ -95,7 +95,7 @@ const CHAR_DESC: Record<string, Record<string, string>> = {
   starrail: { zh: '崩坏：星穹铁道全角色图鉴，覆盖属性、命途、技能数据和培养方向，帮助你在配队前快速看懂角色定位。', en: 'Complete Honkai: Star Rail character roster with elements, paths, skills, and build directions so you can understand each unit before investing.', ja: 'スターレイル全キャラ図鑑。属性、運命、スキル、育成方針を整理しています。' },
   wuwa: { zh: '鸣潮全角色图鉴，覆盖属性、武器类型、技能数据和培养方向，适合在组队和资源分配前快速查角色定位。', en: 'Complete Wuthering Waves character roster with elements, weapon types, skills, and build directions to help with team and resource planning.', ja: '鳴潮全キャラ図鑑。属性、武器タイプ、スキル、育成方針をまとめています。' },
   nte: { zh: '异环全角色图鉴，覆盖S级、A级角色的数据、定位和培养方向，方便你在抽卡与配队时快速判断是否值得投入。', en: 'Complete Neverness to Everness character roster with S-Rank and A-Rank data, roles, and build directions for pull and team planning.', ja: '異環全キャラ図鑑。S級・A級のデータ、役割、育成方針を整理しています。' },
-  zzz: { zh: '绝区零角色图鉴 Wiki，覆盖全代理人属性、专精、阵营、技能、音擎、驱动盘、当前卡池和配队方向，帮助你快速判断当前版本该抽谁、养谁。', en: "Zenless Zone Zero characters wiki covering every agent's attribute, specialty, faction, skills, W-Engines, Drive Discs, current banners, and team direction.", ja: 'ゼンレスゾーンゼロキャラWiki。全エージェントの属性、専門、陣営、スキル、Wエンジン、ドライブ、現在バナーを整理。' },
+  zzz: { zh: '绝区零角色图鉴 Wiki，覆盖全代理人属性、专精、阵营、技能、音擎、驱动盘、官方卡池信息和配队方向，帮助你判断已有角色的培养与配队优先级。', en: "Zenless Zone Zero characters wiki covering every agent's attribute, specialty, faction, skills, W-Engines, Drive Discs, officially confirmed banners, and team direction.", ja: 'ゼンレスゾーンゼロキャラWiki。全エージェントの属性、専門、陣営、スキル、Wエンジン、ドライブ、公式確認済みバナーを整理。' },
   ananta: { zh: '无限大全异能者图鉴，覆盖SSR、SR角色数据、异能和配装推荐，方便你在角色选择前快速掌握强度和定位。', en: 'Complete Ananta Esper roster with SSR and SR data, abilities, and build recommendations to help you compare power and role before investing.', ja: 'アナンタ全エスパー図鑑。SSR・SRのデータ、能力、ビルド案をまとめています。' },
   guihuan: { zh: '归环全使灵图鉴，覆盖SSR、SR角色数据、元素和配装推荐，方便你先看清定位，再决定培养顺序。', en: 'Complete Guihuan Spirit roster with SSR and SR data, elements, and build recommendations so you can prioritize the right spirits first.', ja: '帰環全精霊図鑑。SSR・SRのデータ、元素、ビルド案を整理しています。' },
   endfield: { zh: '明日方舟：终末地全干员图鉴，覆盖六星、五星、四星角色数据、元素属性和配装推荐，适合先看定位再进培养页。', en: 'Complete Arknights: Endfield operator roster with 6-Star, 5-Star, and 4-Star data, elements, and build recommendations for fast team planning.', ja: 'エンドフィールド全オペレーター図鑑。★6、★5、★4のデータ、属性、ビルド案を整理しています。' },
@@ -126,9 +126,9 @@ const CHARACTER_INTRO: Record<string, Record<SupportedLocale, string>> = {
     ja: '属性、ランク、役割で異環キャラ図鑑を確認し、ガチャ価値、編成分担、育成優先度を把握できます。',
   },
   zzz: {
-    zh: '按属性、专精、星级和阵营快速浏览绝区零角色图鉴 Wiki，适合先看代理人定位、当前版本用途、音擎、驱动盘和配队方向。',
-    en: 'Browse the Zenless Zone Zero characters wiki by attribute, specialty, rarity, and faction to review agent roles, patch value, W-Engines, Drive Discs, and team fit.',
-    ja: '属性、専門、レアリティ、陣営でゼンゼロキャラWikiを確認し、代理人役割、版本価値、Wエンジン、ドライブ、編成相性を把握できます。',
+    zh: '按属性、专精、星级和阵营快速浏览绝区零角色图鉴 Wiki，适合先看已有代理人定位、音擎、驱动盘和配队方向；未公告卡池以官方节目后信息为准。',
+    en: 'Browse the Zenless Zone Zero characters wiki by attribute, specialty, rarity, and faction to review owned-agent roles, W-Engines, Drive Discs, and team fit; use post-program official information for unannounced banners.',
+    ja: '属性、専門、レアリティ、陣営でゼンゼロキャラWikiを確認し、所持代理人の役割、Wエンジン、ドライブ、編成相性を把握できます。未発表バナーは番組後の公式情報を基準にしてください。',
   },
   ananta: {
     zh: '按元素、稀有度和职业快速浏览无限大角色图鉴，适合先看强度、定位和培养优先级。',
@@ -327,7 +327,7 @@ function SearchIntentLinks({ locale, gameId }: { locale: SupportedLocale; gameId
               : 'If you searched for NTE characters or wiki, start with Nanally, Sakiri, Fadia, Chiz, and Aurelia, then move into the tier list and pull plan.'
           : gameId === 'zzz'
             ? locale === 'zh'
-              ? '如果你搜索的是“绝区零角色 / 绝区零角色图鉴 / 绝区零 wiki”，先从当前版本代理人、阵营、属性和专精确认定位，再进入音擎、驱动盘、当前卡池和配队页面。'
+              ? '如果你搜索的是“绝区零角色 / 绝区零角色图鉴 / 绝区零 wiki”，先从已有代理人的阵营、属性和专精确认定位，再进入音擎、驱动盘、官方卡池和配队页面。'
               : locale === 'ja'
                 ? 'ゼンゼロキャラ / Wiki 検索なら、現在版本の代理人、陣営、属性、専門を確認し、Wエンジン、ドライブ、バナー、編成へ進みます。'
                 : 'If you searched for ZZZ characters or Zenless Zone Zero wiki, start with live-patch agents, factions, attributes, and specialties, then continue into W-Engines, Drive Discs, banners, and teams.'

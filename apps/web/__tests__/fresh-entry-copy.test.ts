@@ -47,7 +47,9 @@ describe('fresh entry copy', () => {
 
     expect(weaponsPage).toContain('先看 3.3 观察入口');
     expect(discsPage).toContain('先看 3.3 观察入口');
-    expect(teamsPage).toContain('查看 3.3 观察期队伍缺口');
+    expect(teamsPage).toContain('3.3 节目准备清单');
+    expect(teamsPage).toContain('v3-3-special-program-prep-guide');
+    expect(teamsPage).not.toContain('meta-teams-v3-guide');
     expect(weaponsPage).not.toContain('先看 3.1 当前版本');
     expect(discsPage).not.toContain('先看 3.1 当前版本');
   });

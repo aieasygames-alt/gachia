@@ -22,8 +22,8 @@ const allLiveItems = [
 ];
 
 describe('homepage live content', () => {
-  it('uses the 2026-09-30 intelligence batch for live modules', () => {
-    expect(LIVE_UPDATED_AT).toBe('2026-09-30');
+  it('uses the 2026-10-08 intelligence batch for live modules', () => {
+    expect(LIVE_UPDATED_AT).toBe('2026-10-08');
 
     expect(LIVE_BANNERS.map((item) => item.gameId)).toEqual(['aniimo', 'genshin', 'roco']);
     expect(LIVE_VERSION_UPDATES.map((item) => item.gameId)).toEqual([

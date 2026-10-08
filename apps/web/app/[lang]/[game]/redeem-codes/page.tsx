@@ -130,7 +130,8 @@ export default async function RedeemCodesPage({
   const activeCodes = codes.filter((code) => isRedeemCodeActive(code));
   const expiredCodes = codes.filter((code) => !isRedeemCodeActive(code));
   const lastCheckedAt = getLastCheckedAt(codes);
-  const isOfficialWatchlist = gameId === 'aniimo' && activeCodes.length === 0 && codes.some((code) => code.status === 'Watchlist');
+  const isOfficialWatchlist = (gameId === 'aniimo' && activeCodes.length === 0 && codes.some((code) => code.status === 'Watchlist'))
+    || (gameId === 'zzz' && codes.some((code) => code.status === 'watchlist' && code.source === 'official-watchlist'));
 
   const sourceLabels: Record<string, Record<string, string>> = {
     livestream: { zh: '前瞻直播', en: 'Livestream', ja: '生放送' },
@@ -210,12 +211,12 @@ export default async function RedeemCodesPage({
       <div className="mb-4 grid gap-3 sm:grid-cols-3">
         <div className="rounded-lg border border-game-border bg-game-surface p-3">
           <div className="text-xs text-game-text-muted">
-            {isOfficialWatchlist
+            {isOfficialWatchlist && gameId === 'aniimo'
               ? (locale === 'zh' ? '官方公开码' : locale === 'ja' ? '公式公開コード' : 'Official Public Codes')
               : (locale === 'zh' ? '当前有效码' : locale === 'ja' ? '有効コード' : 'Active Codes')}
           </div>
           <div className="mt-1 text-2xl font-bold text-game-primary">
-            {isOfficialWatchlist ? (locale === 'zh' ? '暂无确认' : locale === 'ja' ? '未確認' : 'None confirmed') : activeCodes.length}
+            {isOfficialWatchlist && gameId === 'aniimo' ? (locale === 'zh' ? '暂无确认' : locale === 'ja' ? '未確認' : 'None confirmed') : activeCodes.length}
           </div>
         </div>
         <div className="rounded-lg border border-game-border bg-game-surface p-3">
@@ -238,7 +239,7 @@ export default async function RedeemCodesPage({
           {redeemInstructions[gameId][locale] ?? redeemInstructions[gameId]['en']}
         </p>
       )}
-      {isOfficialWatchlist && (
+      {isOfficialWatchlist && gameId === 'aniimo' && (
         <div className="mb-8 rounded-lg border border-game-border bg-game-surface p-4 text-sm text-game-text-muted">
           <h2 className="mb-2 font-semibold text-game-text">
             {locale === 'zh' ? '当前结论：暂无已确认公开兑换码' : locale === 'ja' ? '現在の結論：確認済みの公開交換コードはありません' : 'Current answer: no public redeem code is confirmed'}
@@ -249,6 +250,21 @@ export default async function RedeemCodesPage({
               : locale === 'ja'
                 ? '事前登録、マイルストーン、リリースイベント報酬は、入力できる交換コードとは別です。公式告知またはゲーム内交換画面で確認できた場合のみ、有効として掲載します。'
                 : 'Pre-registration, milestone, and launch-event rewards are not automatically redeemable codes. A code is marked active only after it can be verified in an official notice or the live client.'}
+          </p>
+        </div>
+      )}
+
+      {gameId === 'zzz' && codes.some((code) => code.status === 'watchlist' && code.source === 'official-watchlist') && (
+        <div className="mb-8 rounded-lg border border-game-primary/40 bg-game-surface p-4 text-sm text-game-text-muted">
+          <h2 className="mb-2 font-semibold text-game-text">
+            {locale === 'zh' ? '3.3 直播码：等待官方公布' : locale === 'ja' ? 'v3.3配信コード：公式発表待ち' : 'v3.3 livestream codes: awaiting official publication'}
+          </h2>
+          <p>
+            {locale === 'zh'
+              ? '3.3「重返天空的旅程」前瞻特别节目将于 2026 年 10 月 9 日 19:30（UTC+8）播出。节目开始后，本页只会将官方可验证的代码标记为有效；不要输入社区转述或未核验字符串。'
+              : locale === 'ja'
+                ? 'v3.3「空へ戻る旅」特別番組は2026年10月9日19:30（UTC+8）です。番組開始後、本ページでは公式に確認できたコードのみ有効として掲載します。未確認の文字列は入力しないでください。'
+                : 'The v3.3 “Journey Back to the Sky” special program airs on October 9, 2026 at 19:30 (UTC+8). After it begins, this page will mark only officially verifiable codes as active. Do not enter community reposts or unverified strings.'}
           </p>
         </div>
       )}

@@ -44,4 +44,13 @@ describe('banner intent panels', () => {
     expect(starrail?.links[0]?.description.en).toContain('v4.6');
     expect(starrail?.links[0]?.description.zh).not.toContain('4.4');
   });
+
+  it('keeps ZZZ banner intent aligned to the official v3.3 program window', () => {
+    const zzz = BANNER_INTENT_PANELS.zzz;
+
+    expect(zzz?.summary.zh).toContain('10 月 9 日 19:30');
+    expect(zzz?.summary.en).toContain('October 9 at 19:30');
+    expect(zzz?.checks.zh[1]).toContain('官方公布');
+    expect(zzz?.checks.en[2]).toContain('official post-program agent');
+  });
 });
