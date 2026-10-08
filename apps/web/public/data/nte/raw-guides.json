@@ -31,15 +31,22 @@
         "question": "What is the main focus of NTE v1.2?",
         "questionZh": "异环 1.2 最值得关注什么？",
         "answer": "The strongest search intent is around 999 Nights, Shinku, Iroi, redeem codes, and pull planning.",
-        "answerZh": "最强搜索意图集中在 999 Nights、Shinku、Iroi、兑换码和抽卡规划。"
+        "answerZh": "最强搜索意图集中在 999 Nights、Shinku、Iroi、兑换码和抽卡规划。",
+        "questionJa": "NTE v1.2の主な焦点は何ですか？",
+        "answerJa": "最も強い検索意図は999 Nights、Shinku、Iroi、交換コード、ガチャ計画にあります。"
       },
       {
         "question": "Should I pull Shinku or save for Iroi?",
         "questionZh": "该抽 Shinku 还是等 Iroi？",
         "answer": "If Shinku fills a current team gap and you still have enough pity for Iroi, pulling is safer. If resources are tight, wait for Iroi details before committing.",
-        "answerZh": "如果 Shinku 正好补队伍短板且还能给 Iroi 留保底，可以考虑抽；资源紧张时建议等 Iroi 信息更完整后再决定。"
+        "answerZh": "如果 Shinku 正好补队伍短板且还能给 Iroi 留保底，可以考虑抽；资源紧张时建议等 Iroi 信息更完整后再决定。",
+        "questionJa": "Shinkuを引くべきですか、それともIroiに備えるべきですか？",
+        "answerJa": "Shinkuが現在のチームの穴を埋め、Iroiのための十分な天井も残せるなら引く方が安全です。資源が厳しい場合は、決める前にIroiの詳細を待ってください。"
       }
-    ]
+    ],
+    "titleJa": "Neverness to Everness v1.2 999 Nightsガイド：Shinku、Iroi、ガチャ計画",
+    "summaryJa": "Shinku、Iroi、イベント、交換コード確認、ガチャ計画を扱うNTE v1.2 999 Nightsの実用ハブです。",
+    "contentJa": "## NTE v1.2 999 Nightsハブ\n\nバージョン1.2の検索需要は、Shinku、Iroi、999 Nights、交換コード、ガチャの仕組みに集中しています。このページでは実用的な導線を用意します。バージョンイベントを確認し、開催中のバナーを確認した後、資源をShinkuに使うかIroiに残すかを決めてください。\n\n### バージョンの焦点\n\n- **バージョンテーマ**：v1.2 999 Nights。\n- **現在の焦点**：Shinkuは現在、高意図のキャラクターキーワードです。\n- **次の焦点**：Iroiは次のバナーとキャラクター調査対象として準備すべきです。\n- **よくある検索**：NTEダウンロード、公式サイト、交換コード、クラウドゲーミング、Shinku、Iroi、ガチャの仕組み。\n\n### Shinkuを評価する方法\n\nShinkuを引く前に、次の3点を確認してください。\n\n1. メインチームにShinkuの役割が必要か。\n2. Iroiまたは次バージョンに向けてまだ貯めたいか。\n3. 現在のイベントで天井まで足りない回数を補えるか。\n\nカジュアルプレイヤーにとって、Shinkuは主に現バージョンを快適にする選択です。長期プレイヤーは、バナーの話題だけに反応するのではなく、ShinkuとIroiを1つの資源計画で比較してください。\n\n### Iroiを早く準備する理由\n\nバナー切り替え前にはIroiの検索需要が上がるはずです。次を準備してください。\n\n- キャラクターページ：役割、元素、キットのメモ、チーム案。\n- ガチャページ：Shinku対Iroi、凸、武器の優先度。\n- 資源ページ：v1.2イベント、コード、日課収入、天井との差。\n\n### 交換コードと資源チェックリスト\n\n1. 交換コードページで新規または期限切れコードを確認する。\n2. メール、ログイン、イベント、メンテナンス報酬を受け取る。\n3. 引く前に天井進行を記録する。\n4. 1天井分に足りないなら、Iroiのより完全な詳細を待つ。\n\n### 導線\n\n- 新規プレイヤー：ダウンロード／インストールと初心者ガイド。\n- ガチャ計画：本ページ、ガチャ戦略、交換コード。\n- キャラクター確認：ShinkuとIroiのキャラクターページ。\n- バージョン確認：v1.2イベント、999 Nights、バナーの流れ。\n\n### 注意事項\n\nSNSには未確認リークや成人向け／ファンコンテンツのノイズが混ざることがあります。Gachiaは公式更新、攻略、ダウンロード、wiki、交換コード、健全なキャラクター強度の意図のみを扱うべきです。"
   },
   {
     "id": "download-install-guide",
@@ -68,13 +75,17 @@
         "question": "What platforms is Neverness to Everness available on?",
         "questionZh": "异环支持哪些平台？",
         "answer": "NTE is available on PC, Android, iOS, Mac, HarmonyOS, and PlayStation 5. All platforms support cross-save with the same account.",
-        "answerZh": "异环支持PC、Android、iOS、Mac、鸿蒙和PlayStation 5六大平台，同一账号所有平台数据互通。"
+        "answerZh": "异环支持PC、Android、iOS、Mac、鸿蒙和PlayStation 5六大平台，同一账号所有平台数据互通。",
+        "questionJa": "Neverness to Evernessはどのプラットフォームで利用できますか？",
+        "answerJa": "NTEはPC、Android、iOS、Mac、HarmonyOS、PlayStation 5で利用できます。すべてのプラットフォームで同じアカウントのクロスセーブに対応します。"
       },
       {
         "question": "Does NTE require PS+ on PlayStation 5?",
         "questionZh": "PS5版需要PS+会员吗？",
         "answer": "No, NTE on PS5 is free to download and play without a PS+ subscription.",
-        "answerZh": "不需要，PS5版异环免费下载游玩，无需PS+会员。"
+        "answerZh": "不需要，PS5版异环免费下载游玩，无需PS+会员。",
+        "questionJa": "PlayStation 5でNTEを遊ぶにはPS+が必要ですか？",
+        "answerJa": "いいえ。PS5版NTEはPS+に加入せず、無料でダウンロードしてプレイできます。"
       }
     ],
     "serpTitle": {
@@ -103,7 +114,10 @@
         "DL前にサーバー、連携、容量、環境を確認。",
         "NTE DL / 公式検索向け。"
       ]
-    }
+    },
+    "titleJa": "NTE公式ハブ、ダウンロードとインストール：全プラットフォームリンクとPC動作環境",
+    "summaryJa": "PC、Android、iOS、Mac、PS5、HarmonyOSのリンク、インストール手順、PC動作環境、注意事項を含むNTE公式ハブと全プラットフォーム向けダウンロード／インストールガイドです。",
+    "contentJa": "Neverness to Everness（NTE）は現在、基本無料タイトルとして正式に利用できます。中国サーバーは2026年4月23日10時（CST）に開始し、グローバルサーバーは2026年4月29日に開始します。ゲームはPC、PS5、iOS、Androidで利用できます。このガイドでは、全プラットフォームのダウンロードとインストール手順を扱います。\n\n## ゲーム概要\n\nNTEは、Perfect World傘下のHotta StudioがUnreal Engine 5で開発した、基本無料の超常都市オープンワールドアクションRPGです。ゲームは完全なクロスプラットフォーム進行に対応し、アカウントデータ、キャラクター、装備、クエスト進行がすべてのプラットフォームでリアルタイムに同期されます。\n\n## PCクライアント\n\nダウンロード先：公式サイト nte.perfectworld.com\n\n### インストール手順\n\n1. nte.perfectworld.comへアクセスし、ダウンロードをクリックする\n2. インストーラーをダウンロードする（約46GB。インストール全体には約90GBの空きが必要で、最適なロードのためNVMe SSDを強く推奨）\n3. インストーラーを実行し、インストール先を選ぶ（SSDを推奨）\n4. インストール後にゲームを起動し、Perfect Worldアカウント（中国サーバー）または地域アカウント（グローバルサーバー）でログインする\n5. 初回起動時に追加のリソースパッチをダウンロードするため、安定したネットワークを確保する\n\n### PC動作環境\n\n| 構成 | 最低 | 推奨 |\n| --- | --- | --- |\n| OS | Windows 10 64-bit | Windows 10／11 64-bit |\n| CPU | Intel i5-9400／AMD Ryzen 5 3600 | Intel i7-10700／AMD Ryzen 7 5800X |\n| GPU | NVIDIA GTX 1060 6GB／AMD RX 580 | NVIDIA RTX 3060／AMD RX 6700 XT |\n| RAM | 16GB | 16GB |\n| ストレージ | 90GB SSD | 90GB NVMe SSD |\n| DirectX | バージョン12 | バージョン12 |\n\n注：NTEはUE5で構築され、性能の高いハードウェアを必要とします。最低要件では中〜低設定で30〜45fps、推奨要件では高設定で安定した60fpsを提供します。レイトレーシングを含む最高設定を求める場合は、RTX 4070以上を推奨します。\n\n## PlayStation 5\n\nダウンロード先：PlayStation Store\n\n### インストール手順\n\n1. PS5ホーム画面からPlayStation Storeへ進む\n2. 「Neverness to Everness」または「異環」を検索する\n3. 無料でダウンロードする（プレイにPS+加入は不要）\n4. ダウンロード完了後にゲームを起動する\n\n### PS5の機能\n\n- PS5 Pro Enhancedグラフィックモード\n- DualSenseのハプティックフィードバックとアダプティブトリガー効果\n- 4人オンライン協力\n- 4月23日から5月14日：全国のソニー直営店と認定体験店での店頭デモ\n\n## iOS（iPhone／iPad）\n\nダウンロード先：App Store\n\n### インストール手順\n\n1. App Storeを開く\n2. 「Neverness to Everness」または「異環」を検索する\n3. 入手／ダウンロードをタップする（本体は無料で約20GB）\n4. インストール後にゲームを開き、リソースパックをダウンロードする\n\n### iOS要件\n\n- iPhone 12 Pro Max以降\n- iPad Air（第3世代）以降\n- iPad Pro（2018年モデル）以降\n- システム：iOS 15.0以降\n- ストレージ：約20〜25GBの空き\n\n## Android\n\nダウンロード経路：\n\n- **Google Play**：「Neverness to Everness」を検索（グローバルサーバーに推奨）\n- **公式APK**：nte.perfectworld.comから直接ダウンロード\n- **TapTap**：「異環」を検索（中国サーバーに推奨）\n- **Huawei AppGallery**：「異環」を検索\n- **Bilibili Game Center**：「異環」を検索\n\n### インストール手順\n\n1. 上記いずれかの経路からインストーラーをダウンロードする\n2. 公式サイトからAPKをダウンロードする場合は、システム設定で「不明な提供元からのアプリのインストール」を許可する\n3. インストール完了後にゲームを開く\n4. ゲームのリソースパック（約20GB）をダウンロードする。可能ならWi-Fiを使う\n\n### Android要件\n\n- プロセッサ：Snapdragon 855／Kirin 990または同等以上（最適な体験にはSnapdragon 8 Gen2以上を推奨）\n- RAM：6GB以上（8GB推奨）\n- ストレージ：約20〜25GBの空き\n- システム：Android 10.0以降\n\n## クロスプラットフォーム進行\n\nNTEは利用可能な全プラットフォーム間で完全なデータ同期に対応します。同じアカウントでどのプラットフォームにログインしても、キャラクターレベル、装備、クエスト進行、ガチャ履歴がリアルタイムに同期されます。PCでストーリーと戦闘を楽しみ、外出中はスマートフォンで日課を進め、帰宅後はPS5の大画面で高画質プレイを続けられます。進行はすべてシームレスに引き継がれます。\n\n注：中国サーバーとグローバルサーバーのデータは分かれています。地域に合うサーバー版クライアントをダウンロードしてください。\n\n## よくある質問\n\n### ダウンロード速度が遅い場合は？\n\n- PCではランチャー設定からダウンロードノードの切り替えを試す\n- モバイルではモバイルデータではなくWi-Fiでダウンロードする\n- 地域によってはゲームアクセラレーター／VPNで改善する場合がある\n\n### ストレージが足りない場合は？\n\n- PCではディスク容量を空けるか、より大きなSSDに交換する\n- モバイルではキャッシュや不要なアプリを削除する\n- ゲームは高解像度アセットの選択ダウンロードに対応し、低性能端末では標準品質アセットを選べる\n\n### 初回起動時に黒画面またはクラッシュする場合は？\n\n- 端末が最低動作環境を満たすことを確認する\n- PCではGPUドライバーを最新版に更新する\n- メモリを多く使う他アプリを閉じる\n- PCランチャーのファイル整合性確認を使う\n\n### 中国サーバーとグローバルサーバーの違いは？\n\n- 中国サーバーは4月23日に開始し、グローバルサーバーは4月29日に開始する\n- 両サーバーのデータと進行は分かれている\n- 一部のコラボコンテンツとイベント時期は地域で異なる場合がある\n\n## ゲームは本当に無料ですか？\n\nはい。Neverness to Evernessはダウンロード、インストール、プレイが完全に無料です。ガチャ、月間パス、バトルパスなどの任意課金はありますが、すべての中核コンテンツは無料で体験できます。ゲームには50／50ガチャ機構がなく、ローンチ版では約418回の無料ガチャを提供するため、無課金プレイヤーにも非常に親しみやすいとされています。"
   },
   {
     "id": "beginner-guide",
@@ -131,21 +145,30 @@
         "question": "What is the best complete beginner strategy in Neverness to Everness?",
         "questionZh": "异环中新手入门完全最重要的是什么？",
         "answer": "A comprehensive beginner guide for Everyloop, covering basic systems, resource allocation, and character building priorities.",
-        "answerZh": "从零开始的异环新手教程，涵盖基础系统、资源分配、角色培养优先级。"
+        "answerZh": "从零开始的异环新手教程，涵盖基础系统、资源分配、角色培养优先级。",
+        "questionJa": "NTEで初心者が最初に重視すべきことは？",
+        "answerJa": "基本システム、資源配分、キャラクター育成の優先順位を把握することです。"
       },
       {
         "question": "How to start playing Neverness to Everness?",
         "questionZh": "如何提升异环的游戏水平？",
         "answer": "Follow our complete beginner guide for the best results. This guide covers essential tips and strategies for Neverness to Everness players.",
-        "answerZh": "遵循我们的新手入门完全指南可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。"
+        "answerZh": "遵循我们的新手入门完全指南可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。",
+        "questionJa": "NTEを始めるには何から進めればよいですか？",
+        "answerJa": "本ガイドを参考に、基本操作と育成の優先順位を確認しながら進めてください。"
       },
       {
         "question": "Is complete beginner  worth it in Neverness to Everness?",
         "questionZh": "异环新手入门完全值得投入吗？",
         "answer": "Yes, A comprehensive beginner guide for Everyloop, covering basic systems, resource allocation, and character building priorities.",
-        "answerZh": "从零开始的异环新手教程，涵盖基础系统、资源分配、角色培养优先级。"
+        "answerZh": "从零开始的异环新手教程，涵盖基础系统、资源分配、角色培养优先级。",
+        "questionJa": "初心者向けガイドを読む価値はありますか？",
+        "answerJa": "あります。序盤の資源配分と育成方針を決める基準を確認できます。"
       }
-    ]
+    ],
+    "titleJa": "NTE 初心者向け完全ガイド",
+    "summaryJa": "Neverness to Everness（NTE）の基本システム、資源配分、キャラクター育成の優先順位をまとめた初心者向けガイドです。",
+    "contentJa": "Everyloop へようこそ。このガイドでは、ゲームの基本システムをすばやく把握するための要点を説明します。\n\n## 基本システム\n\nEveryloop は、キャラクター収集と戦闘システムを備えたオープンワールドアクションRPGです。元素反応の仕組みがあり、異なる元素を持つキャラクター同士の連携が戦闘の鍵になります。\n\n## 資源配分\n\n序盤の資源には限りがあります。メインDPSを1〜2人に絞ってレベルを上げ、スタミナと経験値素材を集中的に使いましょう。全キャラクターに均等に資源を配分しないでください。\n\n## キャラクター育成の優先順位\n\n1. メインDPSとその武器のレベルを優先する\n2. 次にサポートキャラクターの重要スキルを強化する\n3. 防御系の素材は後から補ってもよい\n4. 共鳴チェーンの解放も見落とさない\n\n## 序盤の探索のヒント\n\nメインストーリーは資源を得る主な手段です。安定した収入のためにデイリー依頼もこなしつつ、ストーリー進行を優先してください。\n\n## ガチャの考え方\n\n自分の主力チームに必要な役割を基準にバナーを選びましょう。限定キャラクターをむやみに追う必要はありません。適切な編成なら星4キャラクターも十分に活躍します。今後登場する強力なキャラクターに備えて、資源を残しておきましょう。"
   },
   {
     "id": "leveling-priority",
@@ -173,21 +196,30 @@
         "question": "What is the best character leveling material priority strategy in Neverness to Everness?",
         "questionZh": "异环中角色升级材料优先级最重要的是什么？",
         "answer": "Detailed material requirements for each level stage to help you plan stamina allocation efficiently.",
-        "answerZh": "详解各等级阶段的材料需求，帮助你高效规划体力分配。"
+        "answerZh": "详解各等级阶段的材料需求，帮助你高效规划体力分配。",
+        "questionJa": "キャラクター育成素材は何を優先すべきですか？",
+        "answerJa": "各レベル帯の必要素材を確認し、スタミナ配分を計画することが重要です。"
       },
       {
         "question": "How to improve at Neverness to Everness?",
         "questionZh": "如何提升异环的游戏水平？",
         "answer": "Follow our character leveling material priority guide for the best results. This guide covers essential tips and strategies for Neverness to Everness players.",
-        "answerZh": "遵循我们的角色升级材料优先级指南可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。"
+        "answerZh": "遵循我们的角色升级材料优先级指南可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。",
+        "questionJa": "NTEで効率よく強くなるには？",
+        "answerJa": "本ガイドを参考に、育成素材の優先順位を決めて計画的に使ってください。"
       },
       {
         "question": "Is character leveling material priority  worth it in Neverness to Everness?",
         "questionZh": "异环角色升级材料优先级值得投入吗？",
         "answer": "Yes, Detailed material requirements for each level stage to help you plan stamina allocation efficiently.",
-        "answerZh": "详解各等级阶段的材料需求，帮助你高效规划体力分配。"
+        "answerZh": "详解各等级阶段的材料需求，帮助你高效规划体力分配。",
+        "questionJa": "育成素材の優先順位を確認する価値はありますか？",
+        "answerJa": "あります。段階ごとの必要素材を把握し、資源の分散を避けるために役立ちます。"
       }
-    ]
+    ],
+    "titleJa": "キャラクター育成素材の優先順位ガイド",
+    "summaryJa": "Neverness to Evernessのキャラクター育成に必要な突破素材、経験値素材、通貨コストを段階別に整理したガイドです。",
+    "contentJa": "キャラクターのレベル上げは、Neverness to Everness における戦闘力の土台です。段階ごとの必要素材を理解すると、スタミナを効率よく配分でき、長期的に優先しないキャラクターへの資源浪費を防げます。\n\n## レベル1〜20：素早く移行する段階\n\nこの段階では素材消費は少なめです。効率を気にしすぎず、メインクエストと探索を自然に進めましょう。序盤の難度はキャラクターレベルに応じて上がるため、まずメインDPSをできるだけ早くレベル20にすることを優先します。序盤の多くのコンテンツでは強力な主力1人で対応できるため、サブキャラクターは遅れていても構いません。\n\n## レベル20〜40：最初のボトルネック\n\nレベル20からは専用の突破素材が必要になります。スタミナはキャラクター育成素材とスキル強化素材に半分ずつ配分してください。この時期に、投資する4人のコアチームを決めます。素材コストは大きく増えるため、あまり多くのユニットに資源を分散させないようにしましょう。週末のダンジョンでは育成素材の報酬が2倍になることがあります。\n\n## レベル40〜60：消費のピーク\n\nゲーム内で最も資源を消費する段階です。最終的に編成から外れるユニットに素材を使わないよう、育てるキャラクターを前もって計画してください。エリート素材が進行を制限する要因になり、各キャラクターには固有の領域ドロップが必要です。素材ダンジョンの日替わりローテーションに合わせて周回予定を組みましょう。\n\n## レベル60〜80：慎重な計画\n\n高レベル素材は手に入りにくく、集中して周回する必要があります。特定ダンジョンの開催予定を確認し、スタミナ2倍イベントを有効に使いましょう。突破素材の報酬が増えるイベントに備えて、スタミナ回復アイテムを一部残しておくことも検討してください。この段階では新しいユニットを育てるより、最も強い2チームに集中します。\n\n## レベル80：最大レベル後の方針\n\n最大レベルに到達したら、余った素材は今後の新キャラクター用に保管してください。環境はパッチごとに変わるため、素材の備蓄があれば新実装キャラクターをすぐに育成できます。余剰の低ランク素材は、インベントリに放置するのではなく、クラフトシステムで上位素材へ変換しましょう。"
   },
   {
     "id": "elemental-reactions",
@@ -215,21 +247,30 @@
         "question": "What is the best elemental reaction system strategy in Neverness to Everness?",
         "questionZh": "异环中元素反应系统详解最重要的是什么？",
         "answer": "In-depth analysis of Everyloop's elemental reaction system and the core logic of team composition.",
-        "answerZh": "深入解析异环的元素反应机制，掌握队伍搭配的核心逻辑。"
+        "answerZh": "深入解析异环的元素反应机制，掌握队伍搭配的核心逻辑。",
+        "questionJa": "NTEの元素反応で最も重要なことは何ですか？",
+        "answerJa": "元素反応の仕組みと、チーム編成における基本ロジックを理解することです。"
       },
       {
         "question": "How to improve at Neverness to Everness?",
         "questionZh": "如何提升异环的游戏水平？",
         "answer": "Follow our elemental reaction system guide for the best results. This guide covers essential tips and strategies for Neverness to Everness players.",
-        "answerZh": "遵循我们的元素反应系统详解可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。"
+        "answerZh": "遵循我们的元素反应系统详解可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。",
+        "questionJa": "NTEで戦闘力を高めるには？",
+        "answerJa": "元素反応ガイドを参考に、キャラクターの役割と元素の組み合わせを見直してください。"
       },
       {
         "question": "Is elemental reaction system  worth it in Neverness to Everness?",
         "questionZh": "异环元素反应系统详解值得投入吗？",
         "answer": "Yes, In-depth analysis of Everyloop's elemental reaction system and the core logic of team composition.",
-        "answerZh": "深入解析异环的元素反应机制，掌握队伍搭配的核心逻辑。"
+        "answerZh": "深入解析异环的元素反应机制，掌握队伍搭配的核心逻辑。",
+        "questionJa": "元素反応システムを確認する価値はありますか？",
+        "answerJa": "あります。強いチームを組むための基礎になるためです。"
       }
-    ]
+    ],
+    "titleJa": "元素反応システムガイド",
+    "summaryJa": "Neverness to Everness（NTE）の元素反応システムと、最適なチーム編成を考えるための基本ロジックを解説します。",
+    "contentJa": "元素反応は Everyloop の戦闘システムにおける中核です。異なる元素の間で起こる反応を理解することが、強いチームを組む鍵になります。\n\n## 基本的な元素タイプ\n\nEveryloop には複数の元素属性があり、それぞれに固有の特徴と反応パターンがあります。\n\n## よくある元素反応\n\n### 増幅反応\n\n増幅反応はダメージ出力を大きく高めます。DPSを中心にしたチーム編成に向いています。\n\n### 弱体化反応\n\n弱体化反応は敵の防御力や耐性を下げ、チームがダメージを与えやすい状態を作ります。\n\n### 制御反応\n\n特定の元素組み合わせでは、凍結やスタンのような群集制御効果が発生します。特定の戦闘場面で特に有用です。\n\n## チーム編成のヒント\n\nバランスのよいチームは通常、メインDPS1人、サブDPS1人、サポート1人、ヒーラーまたはシールダー1人で構成されます。複数の反応を発動できるよう、元素の組み合わせに幅を持たせてください。"
   },
   {
     "id": "stamina-management",
@@ -257,21 +298,30 @@
         "question": "What is the best stamina management strategy in Neverness to Everness?",
         "questionZh": "异环中体力管理最优策略最重要的是什么？",
         "answer": "How to efficiently use your daily limited stamina for maximum returns.",
-        "answerZh": "如何高效使用每天有限的体力资源，最大化收益。"
+        "answerZh": "如何高效使用每天有限的体力资源，最大化收益。",
+        "questionJa": "NTEでスタミナ管理で最も重要なことは何ですか？",
+        "answerJa": "限られた毎日のスタミナを、必要な素材へ優先的に使うことです。"
       },
       {
         "question": "How to improve at Neverness to Everness?",
         "questionZh": "如何提升异环的游戏水平？",
         "answer": "Follow our stamina management strategy for the best results. This guide covers essential tips and strategies for Neverness to Everness players.",
-        "answerZh": "遵循我们的体力管理最优策略可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。"
+        "answerZh": "遵循我们的体力管理最优策略可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。",
+        "questionJa": "NTEで効率よく進めるには？",
+        "answerJa": "スタミナ管理戦略を参考に、毎日の使用先を優先順位に沿って決めてください。"
       },
       {
         "question": "Is stamina management strategy worth it in Neverness to Everness?",
         "questionZh": "异环体力管理最优策略值得投入吗？",
         "answer": "Yes, How to efficiently use your daily limited stamina for maximum returns.",
-        "answerZh": "如何高效使用每天有限的体力资源，最大化收益。"
+        "answerZh": "如何高效使用每天有限的体力资源，最大化收益。",
+        "questionJa": "スタミナ管理戦略を確認する価値はありますか？",
+        "answerJa": "あります。毎日の限られたスタミナから得られる成果を高める助けになります。"
       }
-    ]
+    ],
+    "titleJa": "スタミナ管理戦略",
+    "summaryJa": "Neverness to Evernessで毎日のスタミナを効率よく使うための優先順位、日課、長期的な資源計画をまとめます。",
+    "contentJa": "スタミナは Everyloop で特に貴重な資源の一つです。毎日の自然回復には限りがあるため、使い道を計画することが効率的なプレイの鍵になります。\n\n## 毎日のスタミナ獲得\n\nスタミナは8分ごとに1回復し、自然回復では1日180まで回復します。補給やイベントと組み合わせることで、1日に使えるスタミナはさらに増やせます。\n\n## スタミナの優先順位\n\n1. **メインストーリー素材**：コンテンツを解放するために進める\n2. **キャラクター突破素材**：レベル上限を上げる\n3. **武器強化素材**：武器レベルを上げる\n4. **スキル本**：スキルレベルを上げる\n5. **ゴールドダンジョン**：資金を補う\n\n## イベント期間の方針\n\n報酬2倍や特別ダンジョンがあるイベント中は、対応する素材の周回を優先してください。\n\n## 初心者へのヒント\n\n序盤はスタミナを貯め込みすぎないようにしましょう。まず主力キャラクターを実用的な状態にすることを優先してください。序盤は資源をためることより、探索を速く進められることの方が重要です。"
   },
   {
     "id": "daily-routine",
@@ -299,21 +349,30 @@
         "question": "What is the best daily routine checklist in Neverness to Everness?",
         "questionZh": "异环中每日必做任务清单最重要的是什么？",
         "answer": "What to do every time you log in - a complete daily task planning guide.",
-        "answerZh": "每天登录游戏后应该做什么，完整的每日任务规划。"
+        "answerZh": "每天登录游戏后应该做什么，完整的每日任务规划。",
+        "questionJa": "NTEの日課で最も重要なことは何ですか？",
+        "answerJa": "ログインごとに行うことを整理し、毎日・毎週・毎月の資源獲得を見落とさないことです。"
       },
       {
         "question": "How to improve at Neverness to Everness?",
         "questionZh": "如何提升异环的游戏水平？",
         "answer": "Follow our daily routine checklist for the best results. This guide covers essential tips and strategies for Neverness to Everness players.",
-        "answerZh": "遵循我们的每日必做任务清单可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。"
+        "answerZh": "遵循我们的每日必做任务清单可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。",
+        "questionJa": "NTEで効率よく進めるには？",
+        "answerJa": "日課チェックリストを参考に、優先するタスクを決めて進めてください。"
       },
       {
         "question": "Is daily routine checklist worth it in Neverness to Everness?",
         "questionZh": "异环每日必做任务清单值得投入吗？",
         "answer": "Yes, What to do every time you log in - a complete daily task planning guide.",
-        "answerZh": "每天登录游戏后应该做什么，完整的每日任务规划。"
+        "answerZh": "每天登录游戏后应该做什么，完整的每日任务规划。",
+        "questionJa": "デイリー行動チェックリストを確認する価値はありますか？",
+        "answerJa": "あります。毎日の資源獲得機会を逃さないために役立ちます。"
       }
-    ]
+    ],
+    "titleJa": "デイリー行動チェックリスト",
+    "summaryJa": "Neverness to Evernessでログインごとに行うこと、週次タスク、月間目標、効率化のヒントをまとめた日課ガイドです。",
+    "contentJa": "よい日課を作ることで、資源を獲得できる機会を逃しにくくなります。\n\n## 毎日必ず行うこと\n\n- **デイリー依頼**（4件）：経験値と資源を安定して得られる\n- **スタミナ消費**：今もっとも必要な素材を周回する\n- **ショップ確認**：交換に役立つアイテムを探す\n- **イベント進行**：期間限定イベントのタスクを進める\n\n## 毎週必ず行うこと\n\n- **週ボス**：高級なキャラクター・武器突破素材を得る\n- **深淵チャレンジ**：スターライトストーンなどの報酬を得る\n- **ショップ更新**：週ごとの通貨で素材を交換する\n\n## 毎月の確認事項\n\n- **月間パス／バトルパス**：更新が必要か確認する\n- **イベントカレンダー**：翌月の重要イベントを計画する\n- **資源インベントリ**：各種素材の備蓄を確認する\n\n## 効率化のヒント\n\nロード画面を利用してインベントリを整理し、探索中は目的地の間のルートを計画して、不要な移動時間を減らしてください。"
   },
   {
     "id": "gacha-strategy",
@@ -341,21 +400,30 @@
         "question": "What is the best gacha strategy & pity system in Neverness to Everness?",
         "questionZh": "异环中抽卡策略与保底机制最重要的是什么？",
         "answer": "Deep analysis of gacha rates, pity system, and strategies for smart pulling.",
-        "answerZh": "深入分析抽卡概率、保底机制，制定合理的抽卡策略。"
+        "answerZh": "深入分析抽卡概率、保底机制，制定合理的抽卡策略。",
+        "questionJa": "NTEのガチャ戦略と天井システムで重要なことは何ですか？",
+        "answerJa": "ガチャ確率、天井システム、計画的な引き方を理解することです。"
       },
       {
         "question": "How to improve at Neverness to Everness?",
         "questionZh": "如何提升异环的游戏水平？",
         "answer": "Follow our gacha strategy & pity system for the best results. This guide covers essential tips and strategies for Neverness to Everness players.",
-        "answerZh": "遵循我们的抽卡策略与保底机制可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。"
+        "answerZh": "遵循我们的抽卡策略与保底机制可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。",
+        "questionJa": "NTEでガチャを効率よく引くには？",
+        "answerJa": "ガチャ戦略と天井システムを参考に、必要な回数を計算してから資源を使ってください。"
       },
       {
         "question": "Is gacha strategy & pity system worth it in Neverness to Everness?",
         "questionZh": "异环抽卡策略与保底机制值得投入吗？",
         "answer": "Yes, Deep analysis of gacha rates, pity system, and strategies for smart pulling.",
-        "answerZh": "深入分析抽卡概率、保底机制，制定合理的抽卡策略。"
+        "answerZh": "深入分析抽卡概率、保底机制，制定合理的抽卡策略。",
+        "questionJa": "ガチャ戦略と天井システムを確認する価値はありますか？",
+        "answerJa": "あります。確率と天井を理解し、資源を計画的に使う助けになります。"
       }
-    ]
+    ],
+    "titleJa": "ガチャ戦略と天井システム",
+    "summaryJa": "Neverness to Evernessのガチャ確率と天井システムを分析し、資源を有効に使うための引き方をまとめます。",
+    "contentJa": "ガチャはEveryloopでキャラクターを入手する主な方法です。確率の仕組みを理解すると、より賢く判断できます。\n\n## 基本確率\n\n限定星5の基本確率は0.6％、星4は5.1％です。ソフト天井は74回目から確率が上がり、ハード天井では90回目に星5が確定します。\n\n## 天井システムの詳細\n\n- **ソフト天井**：74回目から確率が上昇する\n- **ハード天井**：90回目で星5が確定する\n- **50／50**：バナーキャラクターを引く確率は50％で、外れた場合は次回確定\n- **星4天井**：10回以内に少なくとも1体の星4が確定\n\n## ガチャ戦略\n\n1. 狙う対象を決めた後、必要な回数を計算する\n2. 安全マージンとして少なくとも30回分を残す\n3. 目的外のバナーに資源を使わない\n4. 先の予定を立てるため、テストサーバーの情報を追う\n\n## 初心者向けガチャの助言\n\n初心者バナーには通常、割引があります。初回チャージボーナスと初心者クエスト報酬を、強力な星4キャラクターに使うことができます。"
   },
   {
     "id": "team-building",
@@ -392,21 +460,30 @@
         "question": "What is the best team in NTE launch version?",
         "questionZh": "异环公测版本最强配队是什么？",
         "answer": "Nanally Genesis team (Nanally + Jiuyuan + Protagonist + Hotori) is overall the strongest. For F2P players, Xiaozhi Accumulation team (Xiaozhi + Jiuyuan + Hathor + Protagonist) is the best choice.",
-        "answerZh": "娜娜莉创生队（娜娜莉+九原+主角+早雾）综合最强。零氪玩家推荐小吱盈蓄队（小吱+九原+哈索尔+主角）。"
+        "answerZh": "娜娜莉创生队（娜娜莉+九原+主角+早雾）综合最强。零氪玩家推荐小吱盈蓄队（小吱+九原+哈索尔+主角）。",
+        "questionJa": "NTEローンチ版で最も強い編成は何ですか？",
+        "answerJa": "Nanally＋Jiuyuan＋主人公＋HotoriのGenesis編成が総合的に最も強く、無課金ではXiaozhi＋Jiuyuan＋Hathor＋主人公のAccumulation編成が推奨されています。"
       },
       {
         "question": "Which standard S character should I pick in NTE?",
         "questionZh": "异环常驻S级角色自选选谁？",
         "answer": "Jiuyuan is the best pick with versatile grouping and off-healing at 1-awaken. Hotori is second for irreplaceable support buffs.",
-        "answerZh": "九原是最优选，超大范围聚怪+1觉客串奶妈，泛用性顶级。早雾第二选，唯一S级辅助。"
+        "answerZh": "九原是最优选，超大范围聚怪+1觉客串奶妈，泛用性顶级。早雾第二选，唯一S级辅助。",
+        "questionJa": "NTEで恒常Sキャラクターは誰を選ぶべきですか？",
+        "answerJa": "汎用的な集敵と1覚醒時の控え回復を持つJiuyuanが最優先で、代替しにくいサポートバフを持つHotoriが次点です。"
       },
       {
         "question": "Is Xiaozhi worth building for F2P players?",
         "questionZh": "零氪玩家小吱值得培养吗？",
         "answer": "Absolutely. Xiaozhi is free 6+5 from City Tycoon and at max investment outperforms all DPS. Must-build for F2P.",
-        "answerZh": "绝对值得。小吱通过都市大亨免费满配6+5，满配后强度超过所有主C，零氪必练。"
+        "answerZh": "绝对值得。小吱通过都市大亨免费满配6+5，满配后强度超过所有主C，零氪必练。",
+        "questionJa": "無課金プレイヤーはXiaozhiを育てるべきですか？",
+        "answerJa": "原稿では、City Tycoonで無料6＋5にでき、最大投資時には全DPSを上回るため、無課金向けの育成候補とされています。"
       }
-    ]
+    ],
+    "titleJa": "ローンチ版おすすめ編成：メタチーム編成ガイド",
+    "summaryJa": "NTEローンチ版のおすすめチーム編成。NanallyのGenesis編成、XiaozhiのAccumulation編成、BaicangのBlaze編成、無課金向けの選択肢をまとめます。",
+    "contentJa": "適切なチーム編成はNTEの戦闘の中核です。ローンチ版では、メインDPSを軸にした3つの主要反応システムが中心になります。\n\n## チームの基本枠\n\n各チームは4人で構成します。メインDPS、サブDPS／集敵役、サポート／バッファー、生存／ユーティリティです。1つの元素反応システムを軸に組み、Ring Fusionで2人または3人の反応を発動します。\n\n重要な仕組みとして、主人公（Zero）は固有のInstant Ring Fusionを持ち、Eスキル1回でゲージを即座に満たせます。ほぼ全てのチームで重要な、育成必須のキャラクターです。\n\n## チーム1：Nanally Genesis編成（総合おすすめ）\n\n最適編成：Nanally（限定S）＋Jiuyuan（恒常S）＋主人公＋Hotori（恒常S）\n\n| 枠 | キャラクター | 元素 | 役割 |\n| --- | --- | --- | --- |\n| メインDPS | Nanally | Anima | Genesis反応の中核、非常に高いダメージ |\n| サブDPS | Jiuyuan | Anima | 広範囲の集敵、1覚醒で控え回復 |\n| サポート | Hotori | Incantation | 集敵＋攻撃力バフ、1覚醒でバフが2倍 |\n| ユーティリティ | 主人公 | Cosmos | Instant Ring Fusionで素早く準備 |\n\n低予算の代替として、JiuyuanはMint、HotoriはAdler（シールド＋耐性）またはHaniel（バッファー）に置き換えられます。\n\n戦略：Anima＋CosmosでGenesis反応を発動します。0覚醒では回復がなく、Jiuyuanは1覚醒で回復を追加します。Xun（1.0後半）は主人公の上位候補です。\n\n恒常Sの選択優先度：Jiuyuan（汎用性）＞Hotori（サポート）＞その他\n\n## チーム2：Xiaozhi Accumulation編成（無課金向け）\n\n最適編成：Xiaozhi（無料最大）＋Jiuyuan＋Hathor＋主人公\n\n| 枠 | キャラクター | 元素 | 役割 |\n| --- | --- | --- | --- |\n| メインDPS | Xiaozhi | Cosmos | City Tycoonで無料6＋5 |\n| サブDPS | Jiuyuan | Anima | 集敵＋反応発動 |\n| 反応役 | Hathor | Lakshana | Accumulationを発動 |\n| サポート | 主人公 | Cosmos | 高頻度のRing Fusion |\n\n低予算の代替として、HathorはSkia、JiuyuanはMintに置き換えられます。\n\n戦略：Cosmos＋Anima＋LakshanaでAccumulationを発動し、大きな増幅を得ます。最大投資時のXiaozhiは全DPSを上回ります。\n\n## チーム3：Baicang Blaze編成\n\n最適編成：Baicang（恒常S）＋Hotori＋Daffodil＋Fadia\n\n戦略：Incantation＋ChaosでBlazeの継続ダメージを発動します。Daffodilは代替不可です。Requiem（v1.1）はBaicangを上回る可能性があります。\n\n## 無課金向けの優先順位\n\n1. Xiaozhi（無料6＋5、主力DPS）\n2. Jiuyuan（恒常S選択、集敵＋回復）\n3. Haniel（無料Aランクのバッファー）\n4. 主人公（代替できないInstant Ring Fusion）\n5. Adler（無料の優秀な生存役）\n\n無課金向け推奨編成：Xiaozhi＋Jiuyuan＋Hathor／Skia＋主人公\n\n## 反応システムの概要\n\n| 反応 | 元素 | おすすめ編成 |\n| --- | --- | --- |\n| Genesis | Anima＋Cosmos | Nanally編成 |\n| Accumulation | Cosmos＋Anima＋Lakshana | Xiaozhi編成 |\n| Blaze | Incantation＋Chaos | Baicang編成 |\n| Discord | Incantation＋Chaos＋Psyche | Baicang上級編成 |\n\n## 恒常Sの選択優先度\n\nJiuyuan（汎用性）＞Hotori（唯一のSランクサポート）＞Baicang（編成依存）＞その他"
   },
   {
     "id": "exploration-tips",
@@ -440,21 +517,30 @@
         "question": "What is the best open world exploration tips in Neverness to Everness?",
         "questionZh": "异环中开放世界探索技巧最重要的是什么？",
         "answer": "Tips for efficient open world exploration - never miss a chest or collectible.",
-        "answerZh": "高效探索开放世界的技巧，不遗漏任何宝箱和收集品。"
+        "answerZh": "高效探索开放世界的技巧，不遗漏任何宝箱和收集品。",
+        "questionJa": "NTEのオープンワールド探索で重要なことは？",
+        "answerJa": "宝箱や収集品を見落とさないために、地域ごとにルートを決めて探索することです。"
       },
       {
         "question": "How to improve at Neverness to Everness?",
         "questionZh": "如何提升异环的游戏水平？",
         "answer": "Follow our open world exploration tips for the best results. This guide covers essential tips and strategies for Neverness to Everness players.",
-        "answerZh": "遵循我们的开放世界探索技巧可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。"
+        "answerZh": "遵循我们的开放世界探索技巧可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。",
+        "questionJa": "NTEで探索効率を上げるには？",
+        "answerJa": "探索のヒントを参考に、ワープポイントを先に開放し、目的地を結ぶルートを計画してください。"
       },
       {
         "question": "Is open world exploration tips worth it in Neverness to Everness?",
         "questionZh": "异环开放世界探索技巧值得投入吗？",
         "answer": "Yes, Tips for efficient open world exploration - never miss a chest or collectible.",
-        "answerZh": "高效探索开放世界的技巧，不遗漏任何宝箱和收集品。"
+        "answerZh": "高效探索开放世界的技巧，不遗漏任何宝箱和收集品。",
+        "questionJa": "オープンワールド探索のヒントを確認する価値はありますか？",
+        "answerJa": "あります。宝箱、収集品、隠しクエストを効率よく見つけるために役立ちます。"
       }
-    ]
+    ],
+    "titleJa": "オープンワールド探索のヒント",
+    "summaryJa": "Neverness to Evernessのオープンワールドを効率よく探索するための、宝箱、収集品、隠しクエスト、ワープポイントの探し方です。",
+    "contentJa": "Everyloop のオープンワールドには、収集品や隠しコンテンツが数多くあります。効率よく探索するための技術を身につけましょう。\n\n## ルート計画\n\n地域ごとに探索してください。各エリアには固有のパズル要素と収集品の配置があります。\n\n## 宝箱の種類と報酬\n\n- **通常宝箱**：基本素材と少量のゴールド\n- **精巧な宝箱**：より良い素材と経験値本\n- **貴重な宝箱**：希少素材と武器経験値\n- **豪華な宝箱**：上級素材、ジェム、キャラクター経験値\n\n## まずワープポイントを開放する\n\n見つけたワープポイントはすぐに有効化し、移動時間を減らしましょう。ワープポイント同士を結ぶルートに沿って探索すると効率的です。\n\n## 隠しクエストの発生条件\n\n多くの隠しクエストは、環境への干渉で始まります。不自然なオブジェクト、NPCの会話、特別なマップマーカーに注目してください。\n\n## 天候システム\n\n一部の収集品は特定の天候でしか出現しません。天候の変化を確認し、それに合わせて探索計画を立てましょう。"
   },
   {
     "id": "boss-guide",
@@ -482,21 +568,30 @@
         "question": "What is the best world boss challenge strategy in Neverness to Everness?",
         "questionZh": "异环中世界BOSS挑战最重要的是什么？",
         "answer": "Strategies and recommended teams for all world bosses.",
-        "answerZh": "各世界BOSS的打法技巧和推荐阵容。"
+        "answerZh": "各世界BOSS的打法技巧和推荐阵容。",
+        "questionJa": "NTEのワールドボス挑戦で最も重要なことは何ですか？",
+        "answerJa": "各ワールドボスの攻略法とおすすめチームを確認し、攻撃パターンと元素弱点を理解することです。"
       },
       {
         "question": "How to improve at Neverness to Everness?",
         "questionZh": "如何提升异环的游戏水平？",
         "answer": "Follow our world boss challenge guide for the best results. This guide covers essential tips and strategies for Neverness to Everness players.",
-        "answerZh": "遵循我们的世界BOSS挑战攻略可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。"
+        "answerZh": "遵循我们的世界BOSS挑战攻略可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。",
+        "questionJa": "NTEでボス戦をうまく進めるには？",
+        "answerJa": "ワールドボス挑戦ガイドを参考に、攻撃予兆、元素カウンター、チーム準備を見直してください。"
       },
       {
         "question": "Is world boss challenge  worth it in Neverness to Everness?",
         "questionZh": "异环世界BOSS挑战值得投入吗？",
         "answer": "Yes, Strategies and recommended teams for all world bosses.",
-        "answerZh": "各世界BOSS的打法技巧和推荐阵容。"
+        "answerZh": "各世界BOSS的打法技巧和推荐阵容。",
+        "questionJa": "ワールドボス挑戦を行う価値はありますか？",
+        "answerJa": "あります。上級素材を集める重要な手段です。"
       }
-    ]
+    ],
+    "titleJa": "ワールドボス挑戦ガイド",
+    "summaryJa": "Neverness to Evernessの全ワールドボスについて、攻略法、元素弱点、おすすめチーム、ドロップ報酬をまとめたガイドです。",
+    "contentJa": "ワールドボスは、Neverness to Evernessで上級素材を得る重要な手段です。各ボスには効率的に対処するための固有ギミックがあり、攻撃パターンと元素弱点を学ぶことが安定攻略の鍵になります。\n\n## ボス挑戦の基本\n\nワールドボスには1日の挑戦回数制限があるため、各挑戦が重要です。効率を最大化するために適切な元素カウンターを使いましょう。攻撃パターンの理解は生存の鍵で、多くのボスは大技の1〜2秒前に予備動作を見せます。回避や位置調整のための時間を確保できます。特に初心者にとって、協力モードは難しいボスを攻略しやすくします。\n\n## 共通のボス攻略法\n\n1. 攻撃の予兆を確認して適切に回避する。オレンジの表示は防御できない攻撃を示す\n2. ボスが短時間スタンする攻撃後の硬直にダメージを与える\n3. 戦闘中は元素付与を維持して反応ダメージを継続させる\n4. バーストスキルは慎重に使う。開始直後ではなく脆弱フェーズに残す\n5. 特定の飛び道具を遮れる遮蔽物の近くに位置取る\n\n## 準備チェックリスト\n\n- 新しいボスのパターンを学ぶときは、許容ミスを増やすためヒーラーまたはシールダーを連れて行く\n- 戦闘前に食事バフで攻撃力と防御力を強化する\n- 武器とキャラクターのレベルが推奨戦力に見合っていることを確認する\n- あらかじめボスの弱点元素を確認し、それに応じてチームを組む\n- 進行中の緊急事態に備えて復活アイテムを用意する\n\n## 素材ドロップと周回の優先順位\n\n各ボスは特定キャラクターに使う異なる突破素材を落とします。無作為に周回するのではなく、現在育てているキャラクターに必要な素材を基準に周回先を選びましょう。複数キャラクターで共有する素材もあるため、そのボスの優先度は高くなります。毎日入手できるとは限らない希少ドロップについては、週替わりボスを確認してください。\n\n## 高速周回のための上級ヒント\n\nボスを十分に上回る戦力になったら、30秒以内の撃破を目標にローテーションを最適化し、スタミナ効率を高めましょう。ボスの激昂フェーズでは無敵時間を持つスキルを使い、大きなバースト時間に元素バーストを連携させてください。高速撃破の実績では、追加の素材や通貨が得られることがあります。"
   },
   {
     "id": "weapon-guide",
@@ -524,21 +619,30 @@
         "question": "What is the best weapon selection & enhancement strategy in Neverness to Everness?",
         "questionZh": "异环中武器选择与强化最重要的是什么？",
         "answer": "Best weapon choices and enhancement priorities for different character types.",
-        "answerZh": "不同类型角色的最佳武器选择和强化优先级。"
+        "answerZh": "不同类型角色的最佳武器选择和强化优先级。",
+        "questionJa": "NTEの武器選択と強化で最も重要なことは何ですか？",
+        "answerJa": "キャラクタータイプに合わせた武器を選び、強化の優先順位を決めることです。"
       },
       {
         "question": "How to improve at Neverness to Everness?",
         "questionZh": "如何提升异环的游戏水平？",
         "answer": "Follow our weapon selection & enhancement guide for the best results. This guide covers essential tips and strategies for Neverness to Everness players.",
-        "answerZh": "遵循我们的武器选择与强化指南可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。"
+        "answerZh": "遵循我们的武器选择与强化指南可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。",
+        "questionJa": "NTEで効率よく強くなるには？",
+        "answerJa": "武器選択と強化ガイドを参考に、役割に応じて武器を選び、主力から強化してください。"
       },
       {
         "question": "Is weapon selection & enhancement  worth it in Neverness to Everness?",
         "questionZh": "异环武器选择与强化值得投入吗？",
         "answer": "Yes, Best weapon choices and enhancement priorities for different character types.",
-        "answerZh": "不同类型角色的最佳武器选择和强化优先级。"
+        "answerZh": "不同类型角色的最佳武器选择和强化优先级。",
+        "questionJa": "武器選択と強化を確認する価値はありますか？",
+        "answerJa": "あります。キャラクターごとの武器選択と強化優先度を判断する助けになります。"
       }
-    ]
+    ],
+    "titleJa": "武器選択と強化ガイド",
+    "summaryJa": "Neverness to Evernessの各キャラクタータイプに向けた武器の選び方と強化優先度を、無料・クラフト可能な選択肢も含めて解説します。",
+    "contentJa": "武器はキャラクターの戦闘力を高めるうえで重要です。適切な武器を選ぶと、出力を大きく向上させられます。\n\n## 武器タイプとキャラクターの組み合わせ\n\n武器タイプごとに適したキャラクターの役割があります。各武器タイプを理解して最適な選択をしましょう。\n\n## 星3武器を強化する価値はあるか\n\n一部の星3武器は、特定キャラクターでは星5武器に匹敵する性能を発揮します。序盤に賢く使うのは有効です。\n\n## 強化の優先順位\n\n1. まずメインDPSの武器を最大レベルまで上げる\n2. 次にサブDPSの武器を強化する\n3. サポート武器は必要に応じて選んで強化する\n4. 専用性の高い武器より汎用武器の方が価値を保ちやすい\n\n## 精錬と突破\n\n精錬は武器のパッシブ効果を強化し、突破は基礎ステータスを上げます。メインDPSの武器では精錬を優先してください。\n\n## 無料武器のおすすめ\n\nゲーム内では複数の無料星5武器を入手できます。一部は特定の場面で非常に優れた性能を発揮します。"
   },
   {
     "id": "disk-build",
@@ -566,21 +670,30 @@
         "question": "What is the best disk build & stat priority strategy in Neverness to Everness?",
         "questionZh": "异环中磁盘搭配与属性选择最重要的是什么？",
         "answer": "Disk system building strategies and optimal stat choices for each character.",
-        "answerZh": "磁盘系统的搭配思路和各角色的最优属性选择。"
+        "answerZh": "磁盘系统的搭配思路和各角色的最优属性选择。",
+        "questionJa": "NTEのディスク構成とステータス選択で重要なことは何ですか？",
+        "answerJa": "ディスクシステムの構成方針と、キャラクターに適したステータスを選ぶことです。"
       },
       {
         "question": "How to improve at Neverness to Everness?",
         "questionZh": "如何提升异环的游戏水平？",
         "answer": "Follow our disk build & stat priority guide for the best results. This guide covers essential tips and strategies for Neverness to Everness players.",
-        "answerZh": "遵循我们的磁盘搭配与属性选择可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。"
+        "answerZh": "遵循我们的磁盘搭配与属性选择可以获得最佳效果。本攻略涵盖异环玩家必备的技巧和策略。",
+        "questionJa": "NTEで効率よく強くなるには？",
+        "answerJa": "ディスク構成ガイドを参考に、役割に合うセット効果とステータスを選んでください。"
       },
       {
         "question": "Is disk build & stat priority  worth it in Neverness to Everness?",
         "questionZh": "异环磁盘搭配与属性选择值得投入吗？",
         "answer": "Yes, Disk system building strategies and optimal stat choices for each character.",
-        "answerZh": "磁盘系统的搭配思路和各角色的最优属性选择。"
+        "answerZh": "磁盘系统的搭配思路和各角色的最优属性选择。",
+        "questionJa": "ディスク構成とステータス優先度を確認する価値はありますか？",
+        "answerJa": "あります。キャラクターごとのディスク構成と最適なステータスを判断できます。"
       }
-    ]
+    ],
+    "titleJa": "ディスク構成とステータス優先度ガイド",
+    "summaryJa": "Neverness to Evernessのディスク（アーティファクト）システムについて、セット効果、メインステータスとサブステータスの優先度、キャラクター別構成を解説します。",
+    "contentJa": "ディスクはEveryloopの装備システムで、他ゲームのアーティファクトに似ています。適切なディスク構成はキャラクターの性能を大きく高めます。\n\n## ディスクの基本\n\n各キャラクターは6枚のディスクを装備し、スロットごとに異なるメインステータスが付きます。セット効果が最も重要な検討要素です。\n\n## セット選択の原則\n\n1. まず4セット効果を完成させる\n2. キャラクターの役割に応じてセットを選ぶ\n3. 移行期には混成セットも有効\n4. セット効果同士の相乗効果を考える\n\n## メインステータスの選択\n\n- **Flower／Feather**：固定HP／固定攻撃力\n- **Sands**：必要に応じて攻撃力％／エネルギー回復／元素熟知\n- **Goblet**：元素ダメージボーナスを優先\n- **Circlet**：会心率／会心ダメージ\n\n## サブステータスの優先順位\n\n会心率 ＞ 会心ダメージ ＞ 攻撃力％ ＞ 元素熟知 ＞ エネルギー回復\n\n## 強化方針\n\n全てのディスクを均等に強化しないでください。優秀なサブステータスを持つディスクに資源を集中させましょう。"
   },
   {
     "id": "farming-efficiency",
@@ -608,15 +721,22 @@
         "question": "What is the most stamina-efficient way to farm in NTE?",
         "questionZh": "异环最节省体力的刷本方式？",
         "answer": "Farm character ascension domains on matching element days, use condensed stamina during double-drop events, and prioritize event shops for free materials.",
-        "answerZh": "在对应属性日刷角色突破副本，在双倍掉落活动时使用浓缩体力，优先兑换活动商店的免费材料。"
+        "answerZh": "在对应属性日刷角色突破副本，在双倍掉落活动时使用浓缩体力，优先兑换活动商店的免费材料。",
+        "questionJa": "NTEで最もスタミナ効率のよい素材周回方法は？",
+        "answerJa": "対応する元素の日にキャラクター突破領域を周回し、ドロップ2倍イベントでは濃縮スタミナを使い、無料素材のイベントショップを優先することです。"
       },
       {
         "question": "How do I plan my weekly farming in NTE?",
         "questionZh": "异环每周刷本怎么安排？",
         "answer": "Dedicate Mon-Tue to skill domains, Wed-Thu to weekly bosses, Friday to weapon materials, and Sat-Sun for flexible farming. Always participate in events first.",
-        "answerZh": "周一二刷技能本，周三四周本，周五刷武器材料，周末灵活安排。活动内容永远优先。"
+        "answerZh": "周一二刷技能本，周三四周本，周五刷武器材料，周末灵活安排。活动内容永远优先。",
+        "questionJa": "NTEの週次周回はどう計画すればよいですか？",
+        "answerJa": "月火はスキル領域、水木は週ボス、金曜は武器素材、土日は柔軟な周回に充て、イベントを常に優先してください。"
       }
-    ]
+    ],
+    "titleJa": "NTE素材周回ガイド：スタミナ効率ルートと優先順位",
+    "summaryJa": "NTEの素材周回効率を高めるため、素材別のスタミナコスト、日ごとの周回ルート、週次プランナー、キャラクター育成の優先順位をまとめます。",
+    "contentJa": "## 素材周回の効率ガイド\n\n効率よく素材を集めることは、キャラクター育成の土台です。このガイドでは、最適な周回方法、スタミナ管理、週ごとの計画を扱います。\n\n## 素材の種類\n\n| 種類 | 主な入手先 | スタミナコスト | 優先度 |\n| --- | --- | --- | --- |\n| キャラクター突破 | 領域 | 20〜40 | 最高 |\n| 武器突破 | 領域 | 20〜40 | 高 |\n| スキル強化 | スキル領域 | 20 | 高 |\n| 一般強化 | オープンワールド＋ショップ | 無料 | 中 |\n| イベント素材 | イベント限定 | イベント通貨 | 最高（開催時） |\n\n## スタミナ管理\n\n### 毎日のスタミナ予算\n\n- **基礎スタミナ**：120（8分ごとに1回復）\n- **レベルボーナス込み**：最大AR時に180まで\n- **追加スタミナ**：イベント、レベルアップ、プレミアム回復から獲得\n\n### スタミナの優先順位（使い道）\n\n1. **キャラクター突破領域**：進行を最も制限しやすい\n2. **スキル強化領域**：大きな戦力向上につながる\n3. **武器突破**：DPSキャラクターに必要\n4. **Mora／Vons領域**：本当に必要なときだけ\n5. **経験値領域**：一般には効率が低く、イベントを使う\n\n## 領域の周回スケジュール\n\n領域で利用できる元素は日替わりで変わります。\n\n| 曜日 | 利用できる元素 |\n| --- | --- |\n| 月曜日 | Fire、Physical |\n| 火曜日 | Ice、Electric |\n| 水曜日 | Wind、Anomaly |\n| 木曜日 | Fire、Physical |\n| 金曜日 | Ice、Electric |\n| 土曜日 | 全元素が開放 |\n| 日曜日 | 全元素が開放 |\n\n**ヒント**：全ての領域が開放される土日までスタミナを残すと、柔軟に周回できます。\n\n## オープンワールドでの採集\n\n一部の素材はオープンワールドでしか集められません。\n\n### 採集ルートのヒント\n\n1. 希少素材を見つけた場所をマップに記録する\n2. 探索中に集める。特定素材が必要になるまで専用ルートにこだわらない\n3. リスポーン時間：一般素材は24時間、希少素材は48時間\n4. 付近の素材を表示するパッシブを持つ採集キャラクターを使う\n\n## 週次周回プランナー\n\n### 月曜日〜火曜日\n\n- メインDPS用のスキル領域を周回する\n- 週ボス1体目を完了する\n- オープンワールド素材を集める\n\n### 水曜日〜木曜日\n\n- スキル領域の周回を続ける\n- 週ボス2体目\n- ギルド活動\n\n### 金曜日\n\n- 武器突破素材を周回する\n- 週ボス3体目\n- ショップ交換\n\n### 土曜日〜日曜日\n\n- 必要な素材に応じた柔軟な周回\n- 深淵チャレンジへの挑戦\n- イベントコンテンツ\n\n## 素材のショップ交換\n\nショップでは確定素材を補えます。\n\n1. **イベントショップ**：常に最優先。最も価値が高い\n2. **週次ショップ**：突破素材を購入する\n3. **名誉ショップ**：スキル素材（月間上限あり）\n4. **ギルドショップ**：強化アイテム\n\n## 効率化のヒント\n\n1. **元素の日に周回する**：一致する日には領域のスタミナコストが低い\n2. **ドロップ2倍イベントを使う**：このために濃縮スタミナを残す\n3. **高速周回チームを作る**：早く終わるほど、1回のプレイで多く周回できる\n4. **資源を分散しない**：同時に育てるのは2〜3キャラクターに絞る\n5. **次のキャラクターを事前周回する**：バナーを確認し、実装前に素材を集める"
   },
   {
     "id": "endgame-content",
@@ -644,21 +764,30 @@
         "question": "What is the best endgame strategy in Neverness to Everness?",
         "questionZh": "异环终局最佳策略是什么？",
         "answer": "Focus on building two strong teams for Abyss, complete weekly bosses, participate in all events, and follow a consistent daily routine of commissions and stamina spending.",
-        "answerZh": "重点培养两支强力队伍用于深渊，完成周本，参与所有活动，坚持每日委托和体力消耗的日常循环。"
+        "answerZh": "重点培养两支强力队伍用于深渊，完成周本，参与所有活动，坚持每日委托和体力消耗的日常循环。",
+        "questionJa": "NTEの終盤で最も重要な戦略は何ですか？",
+        "answerJa": "深淵用に強い2チームを育て、週ボスを完了し、すべてのイベントに参加し、依頼とスタミナ消費の日課を継続することです。"
       },
       {
         "question": "How do I progress faster in NTE endgame?",
         "questionZh": "异环终局如何快速提升？",
         "answer": "Prioritize one main DPS character first, join an active guild, participate in every event, and use the shop exchange guide to maximize currency value.",
-        "answerZh": "优先培养一个主C角色，加入活跃公会，参加所有活动，参考商店兑换攻略最大化货币价值。"
+        "answerZh": "优先培养一个主C角色，加入活跃公会，参加所有活动，参考商店兑换攻略最大化货币价值。",
+        "questionJa": "NTEの終盤でより早く進めるには？",
+        "answerJa": "まずメインDPS1人を優先し、活動的なギルドに入り、すべてのイベントに参加して、ショップ交換ガイドを参考に通貨価値を高めてください。"
       },
       {
         "question": "Is endgame content worth it in Neverness to Everness?",
         "questionZh": "异环终局内容值得打吗？",
         "answer": "Absolutely. Endgame activities like Abyss and weekly bosses provide the best rewards including premium currency, rare ascension materials, and exclusive items unavailable elsewhere.",
-        "answerZh": "非常值得。深渊和周本等终局活动提供最好的奖励，包括高级货币、稀有突破材料和独占物品。"
+        "answerZh": "非常值得。深渊和周本等终局活动提供最好的奖励，包括高级货币、稀有突破材料和独占物品。",
+        "questionJa": "NTEの終盤コンテンツをプレイする価値はありますか？",
+        "answerJa": "あります。深淵や週ボスなどの終盤活動では、プレミアム通貨、希少突破素材、他では入手できない限定アイテムを得られます。"
       }
-    ]
+    ],
+    "titleJa": "NTE終盤コンテンツガイド：深淵、週ボス、育成進行",
+    "summaryJa": "NTEの終盤向けに、深淵挑戦の戦略、週ボスのローテーション、期間限定イベント、最大レベル後の長期育成ロードマップをまとめます。",
+    "contentJa": "## 終盤コンテンツガイド\n\nメインストーリーを完了した後には、多くの終盤コンテンツが待っています。これらの活動は最も優れた報酬を提供し、Neverness to Evernessにおける長期育成の中核です。\n\n## 深淵チャレンジ\n\n深淵はチーム編成とビルドの完成度を試す主なコンテンツです。\n\n### 構造\n\n- **複数階層のダンジョン**で、難度は徐々に上がる\n- 各階層には固有の挑戦修正と元素のおすすめがある\n- **全階層クリア報酬**にはプレミアム通貨と希少素材が含まれる\n\n### 深淵の戦略\n\n1. **別々の2チーム**を作る（階層ごとに異なるパーティが必要）\n2. 各階層に入る前に**元素のおすすめ**を確認する\n3. **ヒーラーまたはシールダー**を連れて行く。後半では純粋なDPSより生存が重要\n4. **バースト能力**はエリート敵と階層ボスに残す\n\n### 階層報酬\n\n| 階層 | 主な報酬 |\n| --- | --- |\n| 1〜4 | 強化素材、Vons |\n| 5〜8 | 突破素材、プレミアム通貨 |\n| 9〜12 | 希少素材、限定称号 |\n\n## 週ボス\n\n週に1回挑戦できる上級ボスで、キャラクターと武器の突破に必要な重要素材を落とします。\n\n### ボスローテーション\n\n- 毎週**3体の週ボス**が利用できる\n- それぞれ異なるキャラクターに必要な固有素材を落とす\n- 毎週最初の3回のクリアは**樹脂コストが軽減**される\n\n### ボス攻略のヒント\n\n- まず通常モードでボスの攻撃パターンを学ぶ\n- 適切な元素カウンターを連れて行く\n- 最高難度では食事バフが重要\n- 協力モードでは戦闘が大幅に楽になる\n\n## 期間限定イベント\n\nイベントはNTEで最も報酬がよいコンテンツです。\n\n1. **ストーリーイベント**：新キャラクター、物語、多くの報酬\n2. **挑戦イベント**：固有の修正でチームを試す\n3. **収集イベント**：探索を中心とし、完了しやすい\n4. **コラボイベント**：限定アイテムを含むクロスオーバーコンテンツ\n\n**イベントには常に参加してください**。通貨に対する時間効率が最も高いからです。\n\n## 長期育成ロードマップ\n\n### 1〜2週目（最大レベル到達直後）\n\n- メインDPS1人を最大突破まで育てる\n- 深淵1〜6階をクリアする\n- 週ボスをすべて完了する\n\n### 3〜4週目\n\n- 深淵7階以降に向けて2チーム目を作る\n- 最適なArcセットの周回を始める\n- ギルド報酬のために活動的なギルドへ参加する\n\n### 2か月目以降\n\n- Tierリストの環境を参考にチームを最適化する\n- 深淵の全階層クリアを目指す\n- 横方向の育成（育成済みキャラクターを増やす）に集中する\n\n### 3か月目以降\n\n- 装備のサブステータスを厳選する\n- 限定報酬のためにランクモードに参加する\n- 新キャラクターのバナーに備える\n\n## 終盤の日課\n\n効率的な日課は進行を最大化します。\n\n1. **デイリー依頼を完了する**（5分）\n2. **素材領域でスタミナを使う**（10分）\n3. **アリーナ挑戦**：毎日10回をすべて使う（10分）\n4. **ギルド活動**：貢献して報酬を受け取る（5分）\n5. **イベントショップを確認する**：イベント通貨を使う（2分）\n\n合計：中核となる毎日の進行は約30分です。"
   },
   {
     "id": "game-review",
@@ -679,7 +808,10 @@
     "relatedCharacters": [],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "Neverness to Everness完全レビュー",
+    "summaryJa": "グラフィック、戦闘、育成、ソーシャル機能などを扱うNeverness to Evernessの包括的レビューです。",
+    "contentJa": "## Neverness to Everness完全レビュー\n\nNeverness to Everness（NTE）は、都市ファンタジーの美学と奥深い戦闘メカニクスを組み合わせた、Hotta Studioによる意欲的なオープンワールドアクションRPGです。このレビューでは、時間を使う価値があるか判断するため、ゲームの主な側面をすべて扱います。\n\n## グラフィックとアートディレクション\n\nゲームは、ほかのアニメRPGと一線を画す見事な都市ファンタジーのアートスタイルを備えています。キャラクターデザインは詳細で表情豊かで、ムービーとゲームプレイの両方で高品質なモデルが保たれます。オープンワールドには、現代的な都市景観から異世界的な次元まで多様な環境があります。戦闘中のパーティクル効果は視覚的に印象的でありながら、推奨ハードウェアでは性能問題を起こしません。昼夜サイクルと天候システムは探索に雰囲気の変化を加えます。\n\n## 戦闘システム\n\n戦闘はNTEが特に優れる点です。元素反応システムは戦略的なチーム編成を促し、各キャラクターの固有スキルキットは異なるプレイスタイルを提供します。アクション戦闘は反応がよく満足感があり、回避メカニクスは完璧回避ボーナスを通じて正確なタイミングを報います。連鎖攻撃とバーストスキルは刺激的なダメージ時間を作り、遭遇戦を魅力的に保ちます。難度曲線は適切なペースで、挑戦的なボス戦へ組み合わせる前にメカニクスを徐々に導入します。\n\n## 育成とガチャ\n\n育成システムは、キャラクターレベル上げ、武器強化、ディスク（アーティファクト）周回という親しみやすい構成です。ガチャシステムには、一定回数以内にSSRキャラクターを保証する天井があります。毎日のスタミナ上限は過度な周回を防ぎながら、各セッションで意味のある進行を可能にします。素材周回は高レベルでは繰り返しに感じることがありますが、協力モードが変化を加えます。\n\n## ソーシャルとマルチプレイ機能\n\n協力ボス戦と共有探索はソーシャルな側面を加えます。ギルドシステムは追加の報酬と活動を提供します。コミュニティは活発で、チーム編成の助言を求める新規プレイヤーに役立ちます。\n\n## 評価\n\nNeverness to EvernessはアクションRPGジャンルの強力な作品です。戦闘の奥深さと視覚品質によりプレイする価値がありますが、ガチャメカニクスと周回はすべての人に合うとは限りません。新しい体験を求めるGenshin ImpactとWuthering Wavesのファンにおすすめします。"
   },
   {
     "id": "tier-list",
@@ -707,21 +839,30 @@
         "question": "Who are the best characters in Neverness to Everness?",
         "questionZh": "异环中最强的角色有哪些？",
         "answer": "S-Tier characters are currently the strongest in Neverness to Everness. Check our detailed tier list for complete rankings and analysis.",
-        "answerZh": "S级角色是当前异环中最强的角色。查看我们的详细排行获取完整排名和分析。"
+        "answerZh": "S级角色是当前异环中最强的角色。查看我们的详细排行获取完整排名和分析。",
+        "questionJa": "Neverness to Evernessで最も強いキャラクターは誰ですか？",
+        "answerJa": "Sランクキャラクターが現在のNeverness to Evernessで最も強いとされています。完全なランキングと分析は詳細Tierリストを確認してください。"
       },
       {
         "question": "What characters should a beginner focus on?",
         "questionZh": "新手应该重点培养哪些角色？",
         "answer": "Beginners should focus on versatile S/A-Tier characters with good team synergy. Don't spread resources too thin early game.",
-        "answerZh": "新手应该专注于泛用性强的S/A级角色，具备良好的队伍配合。前期不要平均分配资源。"
+        "answerZh": "新手应该专注于泛用性强的S/A级角色，具备良好的队伍配合。前期不要平均分配资源。",
+        "questionJa": "初心者はどのキャラクターを育てるべきですか？",
+        "answerJa": "初心者はチーム相乗効果がよい汎用的なS／Aランクキャラクターに集中してください。序盤は資源を分散しすぎないでください。"
       },
       {
         "question": "Is tier list important in Neverness to Everness?",
         "questionZh": "异环中排行重要吗？",
         "answer": "Tier list is a helpful reference for resource allocation, but character preference and playstyle matter more. A well-built character you enjoy playing will outperform a poorly-built top-tier unit.",
-        "answerZh": "排行是资源分配的有用参考，但角色喜好和操作风格更重要。一个你喜欢的角色发挥会比不擅长的顶级角色更好。"
+        "answerZh": "排行是资源分配的有用参考，但角色喜好和操作风格更重要。一个你喜欢的角色发挥会比不擅长的顶级角色更好。",
+        "questionJa": "Neverness to EvernessでTierリストは重要ですか？",
+        "answerJa": "Tierリストは資源配分の有用な参考ですが、キャラクターの好みとプレイスタイルの方が重要です。よく育てた好きなキャラクターは、育成不足の上位Tierユニットを上回ります。"
       }
-    ]
+    ],
+    "titleJa": "キャラクターTierリスト",
+    "summaryJa": "S／A／B評価と初心者向け優先順位を含むNeverness to EvernessのキャラクターTierリストです。",
+    "contentJa": "キャラクターのTier評価を理解すると、限られた資源を効率的に配分できます。このTierリストは、深淵、Anomalyチャレンジ、日課コンテンツでの1.0ローンチキャラクターの性能に基づきます。\n\n## T0キャラクター（育成必須）\n\n| キャラクター | 元素 | 役割 | 理由 |\n| --- | --- | --- | --- |\n| Nanally | Anima | Genesis DPS | ローンチ版最強の限定SランクDPS、並外れた数値、Genesis反応の中核 |\n| Jiuyuan | Anima | 集敵サポート | 最良の恒常S選択、広範囲集敵、1覚醒で回復を追加 |\n| Hotori | Dark | バフサポート | 集敵＋攻撃力バフを持つ唯一のSランクサポート、1覚醒でバフ効果が2倍 |\n\n## T1キャラクター（強く推奨）\n\n| キャラクター | 元素 | 役割 | 理由 |\n| --- | --- | --- | --- |\n| Baicang | Incantation | Blaze DPS | Blazeチームの中核、発動にはDaffodilが必要 |\n| Xiaozhi | Dark | Accumulation DPS | City Tycoonで無料6＋5、最大時には全DPSを上回る |\n| Daffodil | Anima | BlazeサブDPS | Baicangチームに必要、高頻度パリィの専門家 |\n| Adler | Anima | 生存役 | 最良の1.0生存枠、シールド＋攻撃力低下＋耐性 |\n| Akane | Fire | Burn DPS | Burnチームの中核、Blazing Heart 4セット |\n| Black Bird | Dark | クイックスワップDPS | クイックスワップの中核、高頻度の連鎖攻撃 |\n\n## T2キャラクター（任意）\n\n| キャラクター | 元素 | 役割 | 理由 |\n| --- | --- | --- | --- |\n| Zero | Dark | 剣DPS | 流れるような剣コンボ、初心者向け |\n| Fadia | Fire | ハイブリッドDPS | 攻撃的なプレイ向けの内蔵シールド |\n| Haniel | Anima | バッファー | Aランクの強力キャラクター、最大覚醒で会心ダメージ12％ |\n| Hathor | Anima | Blade Wing DPS | 飛行＋攻撃による極めて高い機動力 |\n| Chiz | Dark | 重撃DPS | 広い攻撃範囲を持つ妖怪ハンマー |\n\n## チームのおすすめ\n\n### Genesisチーム（T0）\n\nNanally＋Jiuyuan＋Hotori\nJiuyuanが集敵 → Hotoriがバフ → Nanallyが即時Ring Fusionバースト\n\n### Blazeチーム（T1）\n\nBaicang＋Daffodil＋Hotori／Adler\nDaffodilがBlazeを発動 → BaicangがDPS\n\n### 無課金チーム（T1）\n\nXiaozhi＋Haniel＋Jiuyuan／Hathor\n無料最大のXiaozhi＋Hanielのバフ\n\n## 育成優先度\n\n1. メインDPS → Jiuyuan／Hotori → 生存役 → サブDPS\n2. 無課金：Xiaozhi（無料）→ Haniel（無料）→ Jiuyuan（選択）\n3. 課金：Nanally（限定）→ Jiuyuan（恒常）→ Hotori（恒常）\n\n詳細な分析は[詳細Tierリスト](/ja/nte/guides/detailed-tier-list)を参照してください。"
   },
   {
     "id": "detailed-tier-list",
@@ -743,7 +884,10 @@
     "relatedCharacters": [],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "完全版キャラクターTierリスト（詳細）",
+    "summaryJa": "Neverness to Evernessの全キャラクターを、複数コンテンツにおける性能評価とともにまとめた詳細Tierリストです。",
+    "contentJa": "## Neverness to Evernessの完全版キャラクターTierリスト\n\nこのTierリストでは、深淵、協力ボス、通常探索など複数のゲームモードでの性能に基づき、利用可能な全キャラクターを評価します。ランキングでは、ダメージ出力、ユーティリティ、生存力、チーム相乗効果を考慮します。\n\n## Sランクキャラクター\n\nSランクキャラクターはゲーム内で最も強く、育成を優先すべきです。ほぼすべてのコンテンツで優れ、環境チームの土台になります。高いダメージ倍率、有用なユーティリティ、上位サポートとの優れた相乗効果を備えた完成度の高いキットを持ちます。Sランクキャラクターを引いたらすぐに育ててください。\n\n## Aランクキャラクター\n\nAランクキャラクターは非常に強く、適切な投資があればすべてのコンテンツをクリアできます。Sランクよりダメージ上限がやや低いか、力を発揮するのにより特定のチーム編成が必要な場合があります。特定のSランクユニットがいないとき、多くのAランクキャラクターは優れた代替になります。\n\n## Bランクキャラクター\n\nBランクキャラクターは堅実な性能を持ち、ほとんどのチームに意味のある貢献ができます。特定の使い道に限られるか、上位の選択肢に並ぶには大きな投資が必要なことがあります。プレイスタイルが好きな場合や元素カバーが必要な場合には育成する価値があります。\n\n## サポートのTier評価\n\nサポートはチーム編成への依存が大きいため、別に評価します。上位サポートは、ダメージ増幅、回復、シールド、集敵を提供し、チーム全体を引き上げられます。よいサポートはBランクDPSをAランク相当の働きにできます。\n\n## このTierリストの使い方\n\nTierリストは主観的で、ゲーム更新ごとに変化します。資源の優先順位を決める一般的な指針として使いつつ、キャラクターへの好みやプレイスタイルが生のランク配置より重要であることを忘れないでください。よく育てた好きなキャラクターは、育成不足の上位Tierユニットより常に強くなります。"
   },
   {
     "id": "damage-formula",
@@ -773,19 +917,25 @@
         "question": "What is the optimal Crit Rate to Crit Damage ratio in NTE?",
         "questionZh": "异环中暴击率和暴击伤害的最优比例是多少？",
         "answer": "The generally optimal ratio is 1:2 (e.g., 50% Crit Rate with 100% Crit Damage, or 70% Crit Rate with 140% Crit Damage). This ratio maximizes expected damage value. Once your Crit Rate reaches 70-80%, prioritize Crit Damage or other stats instead.",
-        "answerZh": "通常最优比例是1:2（例如50%暴击率配100%暴击伤害，或70%暴击率配140%暴击伤害）。这个比例能最大化期望伤害值。当暴击率达到70-80%后，应该优先提升暴击伤害或其他属性。"
+        "answerZh": "通常最优比例是1:2（例如50%暴击率配100%暴击伤害，或70%暴击率配140%暴击伤害）。这个比例能最大化期望伤害值。当暴击率达到70-80%后，应该优先提升暴击伤害或其他属性。",
+        "questionJa": "NTEで最適な会心率と会心ダメージの比率は？",
+        "answerJa": "一般に最適な比率は1：2です（例：会心率50％に会心ダメージ100％、または会心率70％に会心ダメージ140％）。この比率は期待ダメージを最大化します。会心率が70〜80％に達したら、会心ダメージまたは他ステータスを優先してください。"
       },
       {
         "question": "Does elemental mastery affect all damage in NTE?",
         "questionZh": "元素精通会影响异环中的所有伤害吗？",
         "answer": "No, elemental mastery only affects reaction damage (vaporize, melt, overload, etc.), not base attack damage. If your character deals damage primarily through normal attacks and skills without triggering reactions, elemental mastery has very low value. For reaction-based builds, elemental mastery can be more valuable than ATK%.",
-        "answerZh": "不会，元素精通只影响反应伤害（蒸发、融化、超载等），不影响基础攻击伤害。如果你的角色主要通过普攻和技能造成伤害而不依赖反应，元素精通的价值很低。对于依赖反应的配装，元素精通可能比攻击力百分比更有价值。"
+        "answerZh": "不会，元素精通只影响反应伤害（蒸发、融化、超载等），不影响基础攻击伤害。如果你的角色主要通过普攻和技能造成伤害而不依赖反应，元素精通的价值很低。对于依赖反应的配装，元素精通可能比攻击力百分比更有价值。",
+        "questionJa": "元素熟知はNTEのすべてのダメージに影響しますか？",
+        "answerJa": "いいえ。元素熟知は蒸発、溶解、過負荷などの反応ダメージにのみ影響し、基礎攻撃ダメージには影響しません。通常攻撃とスキルが主で反応を起こさないキャラクターでは価値が低く、反応ビルドでは攻撃力％より価値が高い場合があります。"
       },
       {
         "question": "How does enemy defense affect damage in NTE?",
         "questionZh": "敌人的防御力如何影响异环中的伤害？",
         "answer": "Enemy defense reduces damage based on the level difference between your character and the enemy. The formula involves a constant K (approximately 923 for level 80 enemies). Higher character levels reduce the defense penalty. Defense-shredding effects and certain reactions can further lower enemy effective defense.",
-        "answerZh": "敌人防御力根据你的角色与敌人的等级差来减少伤害。公式中涉及一个常数K（80级敌人约为923）。角色等级越高，防御力惩罚越小。减防效果和特定反应可以进一步降低敌人的有效防御。"
+        "answerZh": "敌人防御力根据你的角色与敌人的等级差来减少伤害。公式中涉及一个常数K（80级敌人约为923）。角色等级越高，防御力惩罚越小。减防效果和特定反应可以进一步降低敌人的有效防御。",
+        "questionJa": "敵防御力はNTEのダメージにどう影響しますか？",
+        "answerJa": "敵防御力はキャラクターと敵のレベル差に応じてダメージを減らします。式には定数K（レベル80敵では約923）が含まれます。キャラクターレベルが高いほど防御ペナルティは小さくなります。減防効果と一部の反応で敵の実効防御をさらに下げられます。"
       }
     ],
     "serpTitle": {
@@ -814,7 +964,10 @@
         "会心率と会心ダメのバランスが重要。",
         "キャラ、弧盤、武器、ボス耐性と一緒に確認。"
       ]
-    }
+    },
+    "titleJa": "NTEダメージ計算式ガイド：ダメージ計算、会心、防御、耐性",
+    "summaryJa": "攻撃力スケーリング、スキル倍率、会心比率、元素ボーナス、防御、耐性、ステータス優先度、ビルド判断を解説するNeverness to Evernessのダメージ計算ガイドです。",
+    "contentJa": "## ダメージ計算式の解説\n\n### 簡単な答え\n\n多くのNTEビルドでは、ダメージは**攻撃力×スキル倍率**から始まり、会心、元素ボーナス、防御、耐性、最終倍率によって変化します。完全なビルドを固定する前に、このガイドを[/nte/build](/nte/build)、[/nte/weapons](/nte/weapons)、[/nte/guides/boss-guide-comprehensive](/nte/guides/boss-guide-comprehensive)と併せて使ってください。\n\nNeverness to Evernessでダメージがどう計算されるかを理解すると、ビルドを最適化しDPS出力を最大化できます。このガイドではダメージ式のすべての要素を分解します。\n\n## 基礎ダメージ\n\n基礎ダメージは、キャラクターの攻撃力にスキルの倍率を掛けたものから始まります。式は「基礎ダメージ＝攻撃力×スキル倍率」です。攻撃力とスキルレベルの両方がこの基礎値に影響するため、主な成長対象になります。\n\n## 会心\n\n会心時は、会心ダメージ（CD）％によりダメージが乗算されます。会心発生率は会心率（CR）で決まります。最適なCR：CD比は一般に1：2で、会心率50％なら少なくとも会心ダメージ100％を目指します。バランスの取れた会心ステータスによる安定性は、1つのステータスへの過剰投資を上回ることが多いです。\n\n## 元素ダメージボーナス\n\nディスクと武器パッシブによる元素ダメージボーナスは、他のダメージボーナスとは加算ですが、基礎ダメージとは乗算です。このため、元素ダメージ杯は優先度の高い装備になります。メインステータスディスクの元素ダメージボーナス46.6％は大きなダメージ上昇を提供します。\n\n## 防御と耐性\n\n敵の防御力は、キャラクターと敵のレベル差に基づき受けるダメージを減らします。耐性はさらに割合でダメージを減らします。一部のデバフと超電導反応は敵の防御と耐性を下げ、実効ダメージを大きく上げます。\n\n## 反応ダメージ\n\n元素反応には通常攻撃の修正を無視する別のスケーリングがあり、キャラクターレベルと元素熟知で伸びます。過負荷のような変換反応は固定ダメージを与える一方、蒸発のような増幅反応は発動した攻撃のダメージを乗算します。チームがどの反応を発動するかを理解すると、適切なステータスを積めます。\n\n## 最終ダメージ式\n\n総ダメージ＝（基礎ダメージ×スキル倍率×ダメージボーナス）×（1＋CR×CD）×敵防御倍率×敵耐性倍率×反応倍率。複利的なダメージ上昇のため、各層を最適化してください。"
   },
   {
     "id": "beginner-mistakes",
@@ -837,7 +990,10 @@
     "relatedCharacters": [],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "初心者が避けるべき10のよくあるミス",
+    "summaryJa": "Neverness to Evernessで新規プレイヤーがしがちな10のミスと、序盤を円滑に進めるための回避方法をまとめます。",
+    "contentJa": "## 新規プレイヤーによくある10のミス\n\nNeverness to Evernessを始めると、やることが多く感じられるかもしれません。ここでは新規プレイヤーに多いミスと、より円滑な序盤のための避け方を紹介します。\n\n## 1. 資源を広く分散しすぎる\n\n最大のミスは、すべてのキャラクターを均等に育てようとすることです。メインDPS1人、サブDPS1人、サポート2人からなる4人のコアチームに資源を集中させましょう。育成対象が多すぎると、難度が上がったときに全体の戦力が不足します。\n\n## 2. 元素反応を無視する\n\n反応を使わない純粋なダメージは、反応を活用したダメージより大きく弱くなります。基本的な反応の組み合わせを学び、元素の相乗効果を軸にチームを組んでください。過負荷や凍結のような単純な反応でも、素のステータスだけでは得られない大きな戦闘上の利点があります。\n\n## 3. デイリータスクを飛ばす\n\nデイリー依頼とスタミナ消費は、育成素材を得る主な手段です。数日でも飛ばすと、キャラクター育成が遅れます。ログインしたら他の活動より先にスタミナを使い、デイリーを完了する習慣を作りましょう。\n\n## 4. すべてのバナーを引く\n\nすべての限定バナーを引きたい衝動を抑えましょう。自分のチームを本当に強化するキャラクターのためにプレミアム通貨を残してください。育成不足のキャラクターを多数持つより、よく育った少数のキャラクターの方が強くなります。\n\n## 5. 武器強化を怠る\n\n武器は大きなステータス上昇を与え、キャラクターレベルより影響が大きいこともあります。メインDPSの武器は常に最大まで強化してください。武器強化に必要な投資はキャラクター育成より少ない一方、同程度の戦力上昇を得られます。\n\n## 6〜10：その他のミス\n\nほかにも、ディスク最適化を無視する、食事バフを使い忘れる、協力報酬を飛ばす、スキル説明をよく読まない、天賦優先度システムを軽視するといったミスがあります。これらは時間とともに積み重なり、大きな戦力差につながる見落としやすい最適化の機会です。\n\n## まとめ\n\nこれらのミスを避ける鍵は、忍耐と計画です。コアチームに集中し、反応システムを学び、日課を継続して、資源を慎重に投資することが最もよい長期的な結果につながります。"
   },
   {
     "id": "f2p-guide",
@@ -859,7 +1015,10 @@
     "relatedCharacters": [],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "無課金プレイヤー向けガイド",
+    "summaryJa": "Neverness to Evernessを課金せずに楽しむための完全ガイド。利用できる無料資源を最大限に活かす方法を解説します。",
+    "contentJa": "## 無課金プレイヤー向け完全ガイド\n\nNeverness to Evernessは多くのガチャゲームと比べて寛大で、無課金プレイヤーも適切な計画があれば全コンテンツをクリアできます。このガイドでは、利用できる無料資源を最大化する方法を扱います。\n\n## 通貨管理\n\nプレミアム通貨は、デイリー依頼、週次チャレンジ、イベント、実績報酬、探索宝箱、ストーリー進行から得られます。無課金プレイヤーは通常の入手先から月におよそ60〜80回分を期待でき、大型パッチや周年イベントでは追加の回数を得られます。プレミアム通貨はキャラクターを引く以外に使わないでください。武器バナーや回復はぜいたくな消費です。\n\n## 引く戦略\n\nパッチサイクルごとに限定バナーを1つに絞りましょう。好きなキャラクターだけを基準にするのではなく、手持ちの穴を埋めるキャラクターを選んでください。恒常バナーのキャラクターは時間とともに無料の引きで手に入るため、ローテーションで消える限定キャラクターを優先します。限定バナーでは90回以内にピックアップSSRが確定する天井システムがあります。\n\n## 低予算でのチーム編成\n\n無課金チームも適切な投資があれば、すべての終盤コンテンツをクリアできます。低い育成度でも高い価値を発揮するキャラクターに集中してください。多くのAランクとBランクのキャラクターは、十分に育てれば非常に優れた性能を発揮します。星4キャラクターは星5ユニットと相性のよいキットを持つことが多く、無課金のチーム編成で重要です。\n\n## 資源効率\n\n毎日すべてのスタミナを使いましょう。使わなかったスタミナは恒久的に失われる進行度です。序盤は、ランダム性がありすぐに成果を得られない可能性があるディスク周回よりも、キャラクターレベルと武器強化を優先してください。下位素材は上位素材を直接周回するのではなく、クラフトシステムで上位素材に変換しましょう。\n\n## イベント参加\n\nイベントは無課金プレイヤーにとって追加報酬の主な入手先です。報酬が小さく見えても、すべてのイベントを完了してください。時間とともに、イベント報酬の積み重ねが総資源の大きな割合を占めます。期間限定イベントでは、他では手に入らない限定武器やキャラクターが提供されることがあります。\n\n## 長期的な無課金の考え方\n\n無課金プレイヤーにとって最大の資産は忍耐です。すべてのキャラクターを持つことはできないと受け入れ、多様なコンテンツに対応できる汎用チームを育てることに集中してください。ゲームは断続的な課金より、毎日の継続プレイをより評価します。"
   },
   {
     "id": "weapon-tier-list",
@@ -881,7 +1040,10 @@
     "relatedCharacters": [],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "完全版武器Tierリスト",
+    "summaryJa": "Neverness to Evernessの全武器を武器タイプ別にランク付けし、詳細な評価とともにまとめたTierリストです。",
+    "contentJa": "## 完全版武器Tierリスト\n\n各キャラクターに適した武器を選ぶことは、性能に大きく影響します。このガイドでは、すべての武器をタイプ別にランク付けし、パッシブ、ステータス、人気キャラクターとの相乗効果を評価します。\n\n## 武器タイプの概要\n\nNeverness to Evernessには複数の武器タイプがあり、それぞれ異なる攻撃パターンと適した使用者がいます。各キャラクターは指定された武器クラスしか装備できないため、武器タイプとキャラクターを一致させることは必須です。各タイプ内では、基礎ステータス、パッシブ能力、汎用性に基づき、武器を上位から下位まで評価します。\n\n## SSR武器（星5）\n\nSSR武器は最も高い基礎ステータスと強力なパッシブを持ち、主に武器バナーから入手します。上位SSR武器は通常、精錬レベルに応じて伸びるダメージ上昇パッシブを持ち、大きな投資対象になります。ただし、武器バナーはキャラクターを引くためのプレミアム通貨と競合するため、慎重な資源計画が必要です。\n\n## SR武器（星4）\n\nバトルパスやイベントのSR武器は、低精錬のSSR武器に匹敵することがよくあります。バトルパス武器は、バトルパスを繰り返し購入して精錬できるため、優れた無課金向け選択肢です。イベントSR武器は無料ですが、最大まで強化するにはイベントへの積極的な参加が必要になる場合があります。無課金または少額課金のプレイヤーにとって、これらは主な目標になります。\n\n## R武器（星3）\n\n一部の星3武器は意外に有用なパッシブを持ち、序盤から中盤の選択肢として使えます。すべての星3武器を素材にしないでください。特定ビルドや移行用武器として残す価値があるものもあります。強化素材に使う前に、各武器のパッシブを確認しましょう。\n\n## 評価基準\n\n武器は基礎攻撃力、サブステータス、パッシブの価値、精錬による伸び、キャラクターとの相乗効果で評価します。上位DPSと完全に相性がよい武器は、一般的にはより強くても相性が悪い武器より上位になることがあります。最適な武器を知るには、各キャラクターの個別おすすめを確認してください。\n\n## 無課金向け武器のおすすめ\n\n各武器タイプでは、SSRを持たないプレイヤーが限られた武器強化素材をどこに投資すべきか判断できるよう、プレミアムの代替と並べて、無課金で入手できる最良の選択肢を紹介します。"
   },
   {
     "id": "reroll-guide-detailed",
@@ -903,7 +1065,10 @@
     "relatedCharacters": [],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "詳細リセマラガイド",
+    "summaryJa": "Neverness to Evernessのリセマラについて、必要性の分析、効率的な手順、狙うべきキャラクターをまとめたガイドです。",
+    "contentJa": "## Neverness to Evernessの詳細リセマラガイド\n\nNeverness to Evernessにおけるリセマラとは、初回の無料引きで欲しいキャラクターを得るために新しいアカウントを作ることです。このガイドでは、リセマラに時間を使う価値があるかと、最も効率的な進め方を扱います。\n\n## リセマラは必要か\n\n多くのガチャゲームと異なり、NTEは特定のSSRキャラクターがいないと序盤を進められない設計ではありません。無料資源とストーリーモードのキャラクターで、序盤から中盤のほとんどのコンテンツを進められます。ただし、上位DPSキャラクターで始めると進行がかなり楽になり、周回時間を減らせます。長期的にプレイする予定で忍耐力があるなら、リセマラは役立ちますが必須ではありません。\n\n## リセマラの手順\n\n1. 新しいメールアドレスでアカウントを作成する\n2. チュートリアルとプロローグを完了する（約15〜20分）\n3. メール、実績、探索から得られる無料のプレミアム通貨をすべて受け取る\n4. 初心者バナーまたは限定バナーに通貨をすべて使う\n5. 引きを評価し、狙ったSSRを得た場合はそのアカウントを残す\n6. 満足できなければ新しいアカウントで繰り返す\n\n## おすすめのリセマラ対象\n\nリセマラでは、序盤から中盤のコンテンツを引っ張れる上位DPSキャラクターを優先します。最新のおすすめは現在のTierリストを確認してください。一般には、Sランクの限定DPSなら確保する価値があります。恒常バナーSSRは時間とともに無料の引きで得られるため、優先度は下がります。\n\n## 時間投資の考え方\n\n1回のリセマラには15〜25分かかります。多くのプレイヤーは3〜5回で満足できる結果を得ます。10回を超える試行では、投じた時間に対する見返りが下がることが一般的です。機会費用も考えてください。2時間リセマラに使うと、十分に使えるアカウントで実際に遊び、進行する時間が2時間減ります。\n\n## 代替案：初期アカウント購入\n\n欲しいキャラクターがいる初期アカウントを購入するプレイヤーもいますが、これは利用規約に違反し、元の所有者によるアカウント回復の危険があります。セキュリティ上の理由から、この方法は推奨しません。"
   },
   {
     "id": "performance-guide",
@@ -925,7 +1090,10 @@
     "relatedCharacters": [],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "動作環境と最適化ガイド",
+    "summaryJa": "Neverness to Evernessのローンチ後ベンチマークに基づくPC動作環境と最適化ガイド。RTX 5090、RTX 3060などのFPSデータを含みます。",
+    "contentJa": "快適なプレイはNeverness to Evernessを楽しむ土台です。UE5で構築されたNTEは、アニメ調ゲームの中でも高いハードウェア要件を持ちます。このガイドはローンチ後のベンチマークデータに基づきます。\n\n## 最低PC動作環境（テスト済み）\n\n| 構成 | 要件 |\n| --- | --- |\n| OS | Windows 10 64-bit以降 |\n| CPU | Intel Core i7-10700または同等のAMD |\n| RAM | 16GB |\n| GPU | エントリークラスGPU |\n| ストレージ | 40〜60GB SSD |\n\n最低要件に近い機器では、すべての高度な効果を無効にして解像度を下げる必要があります。SSDの代わりにHDDを使うと、深刻なロード時のカクつきが発生します。\n\n## 推奨PC動作環境\n\n| 構成 | 要件 |\n| --- | --- |\n| OS | Windows 10／11 64-bit |\n| CPU | Intel Core i7-12700または同等品 |\n| GPU | NVIDIA RTX 3060／AMD RX 6700 |\n| RAM | 16GB以上 |\n| ストレージ | 60GB以上のSSD |\n\n推奨要件では、中〜高設定で安定した60FPSを実現します。\n\n## ハイエンドベンチマーク\n\nRTX 5090では、4K、DLSS Quality、Lumenで約90〜100FPSに達します。VRAM使用量は14GBに達し、現時点で最も負荷が高いアニメ調ゲームの一つです。\n\n## 主なグラフィック設定\n\n### 影響が大きい項目\n\n1. 解像度：画質と性能への影響が最も大きい\n2. レイトレーシング／Lumen：ハイエンド向け。中級機では無効にする\n3. 影品質：FPSへの影響が大きい\n4. エフェクト品質：戦闘中のFPSに大きく影響する\n5. 描画距離：探索時の性能に影響する\n\n### 無効化を推奨する項目\n\n- 被写界深度：純粋に視覚的な効果\n- モーションブラー：無効を好むプレイヤーが多い\n- フレーム生成：低〜中性能GPUで強制的に有効化しない\n\n## モバイルの最適化\n\nモバイルはローンチ後に最も問題が起きやすいプラットフォームです。\n\n1. バックグラウンドアプリを閉じてメモリを空ける\n2. レンダリング解像度を下げる\n3. 省電力を有効にする（FPSは制限されるが発熱を抑える）\n4. 熱による性能低下対策に冷却クリップを使う\n5. 中級スマートフォンでは30〜45FPSに固定する\n\n## PC最適化のヒント\n\n1. GPUドライバーを更新する\n2. GPUコントロールパネルで高パフォーマンスモードに設定する\n3. バックグラウンドプログラムを閉じる\n4. ノートPCでは外部GPUが有効であることを確認する\n5. FPS目標を60以上に固定する\n6. ネットワーク用にゲームブースターを使う\n\n## ネットワーク最適化\n\n- Wi-Fiより有線接続を使う\n- 最も遅延の低いサーバーを選ぶ\n- ゲームアクセラレーターを使う\n- 協力プレイは混雑時間を避ける\n\n## よくある問題と対処法\n\n- カクつき：グラフィックを下げ、アプリを閉じ、SSDを確認する\n- ロードが遅い：SSDを確認し、キャッシュを削除する\n- クラッシュ：ドライバーを更新し、ファイルを検証する\n- 過熱：FPS上限を下げ、冷却を改善する\n- モバイルでの低下：レンダリング解像度を下げ、エフェクトを無効にする\n\n## 機器別FPS\n\n- ハイエンドPC／PS5 Pro：60FPS以上、RT可\n- 中級PC：45〜60FPS、中〜高設定\n- 低性能PC／ノートPC：30FPS固定、低設定\n- フラッグシップスマートフォン：45〜60FPS\n- 中級スマートフォン：30FPS固定\n\nメモリリークを解消するため、クライアントは2〜3時間ごとに再起動してください。アップデート後は設定を再確認しましょう。"
   },
   {
     "id": "event-guides",
@@ -976,7 +1144,10 @@
     "relatedCharacters": [],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "NTEイベントガイド：参加、報酬優先度、最新確認",
+    "summaryJa": "イベントタイプ、計画、完了順を扱うNTEイベント参加と報酬優先度の資料です。現在のイベント、日付、参加条件、報酬はゲーム内または公式告知で確認してください。",
+    "contentJa": "## 完全イベントガイド集\n\nNeverness to Evernessのイベントでは、プレミアム通貨、限定武器、キャラクター強化素材、ときには無料キャラクターを含む多くの報酬が得られます。このガイドでは、開催中および繰り返し行われるイベントタイプと、報酬を最大化する戦略をまとめます。\n\n## イベントタイプの概要\n\nNTEには、固有物語を持つストーリーイベント、ランキングを持つ戦闘チャレンジイベント、隠し収集品を含む探索イベント、クロスオーバーコンテンツを扱うコラボイベントなど、複数のカテゴリーがあります。各タイプで報酬構造と必要時間が異なります。\n\n## ストーリーイベント\n\nストーリーイベントは通常2〜3週間開催され、段階的に解放される独立した物語を持ちます。報酬プール全体を得るため、すべてのストーリー段階を完了してください。これらのイベントでは5〜10回分の追加ガチャに相当するプレミアム通貨を提供することがよくあります。ストーリー段階は一般に簡単で、すべてのプレイヤーレベルにとって効率的です。\n\n## 戦闘チャレンジイベント\n\nチャレンジイベントには、簡単から極限までの難度段階があります。高難度ほどよい報酬を得ますが、より強いキャラクターが必要です。極限モードに苦戦するより、安定して勝てる最高難度をクリアすることに集中してください。一部のチャレンジイベントでは強化キャラクターが用意されます。十分に育っていなくても、イベントボーナスが低い投資を補うため、強化対象ユニットを使ってください。\n\n## 探索イベント\n\n探索イベントは、オープンワールドに一時エリアまたは収集品を追加します。通常は最も時間がかかるイベントですが、最も報酬も多いです。探索イベントは再登場が少ないため、専用のプレイ時間を確保してください。すべての収集品を効率よく見つけるため、コミュニティのインタラクティブマップを使いましょう。\n\n## 期間限定ショップ\n\n多くのイベントには、イベント通貨を報酬と交換する期間限定ショップがあります。常にショップのプレミアム通貨と突破素材を優先してください。キャラクター経験値素材と一般強化アイテムは通常のプレイから得られるため、優先度は低いです。必須アイテムに必要な総通貨を計算し、それに応じてイベント参加を計画してください。\n\n## イベント効率のヒント\n\n毎週の初めにイベント予定を確認してください。ログインボーナスを受け取るだけでも、イベント中は毎日ログインしましょう。一部のイベントにはリセットされるデイリータスクがあるため、継続的な毎日参加が最もよい結果につながります。"
   },
   {
     "id": "talent-priority",
@@ -1003,19 +1174,25 @@
         "question": "Which talent should I level first for DPS characters in NTE?",
         "questionZh": "异环输出角色应该先升哪个天赋？",
         "answer": "For most DPS characters, prioritize the skill that contributes the highest percentage of total damage. Usually this is the Elemental Burst or primary damage skill first, then Elemental Skill, then Normal Attack. Check each character's damage breakdown to confirm which skill deals the most damage.",
-        "answerZh": "对于大部分输出角色，优先升级贡献总伤害比例最高的技能。通常是元素爆发或主要输出技能优先，然后是元素战技，最后是普攻。建议查看每个角色的伤害占比来确认哪个技能伤害最高。"
+        "answerZh": "对于大部分输出角色，优先升级贡献总伤害比例最高的技能。通常是元素爆发或主要输出技能优先，然后是元素战技，最后是普攻。建议查看每个角色的伤害占比来确认哪个技能伤害最高。",
+        "questionJa": "NTEのDPSキャラクターはどの天賦を先に上げるべきですか？",
+        "answerJa": "多くのDPSでは総ダメージへの寄与が最も大きいスキルを優先します。通常は元素バーストまたは主力ダメージスキル、次に元素スキル、最後に通常攻撃です。各キャラクターのダメージ内訳で確認してください。"
       },
       {
         "question": "What talent level should I aim for in NTE?",
         "questionZh": "异环天赋应该升到几级？",
         "answer": "Level 8 is the sweet spot for cost-effectiveness on most talents. Level 6 is the minimum for core talents. Only invest in level 10 (crown) for your main DPS's primary damage talent, as the material cost increases dramatically after level 8.",
-        "answerZh": "大部分天赋升到8级是性价比最高的选择。核心天赋至少升到6级。10级（皇冠）只为你的主C核心输出天赋投入，因为8级之后材料消耗急剧增加。"
+        "answerZh": "大部分天赋升到8级是性价比最高的选择。核心天赋至少升到6级。10级（皇冠）只为你的主C核心输出天赋投入，因为8级之后材料消耗急剧增加。",
+        "questionJa": "NTEの天賦は何レベルを目標にすべきですか？",
+        "answerJa": "ほとんどの天賦ではレベル8が費用対効果のよい到達点で、コア天賦は少なくともレベル6が目安です。レベル10のクラウンはメインDPSの主力天賦に限るべきです。"
       },
       {
         "question": "Should I level all talents evenly or focus on one?",
         "questionZh": "应该平均升级所有天赋还是集中升一个？",
         "answer": "Focus on one core talent at a time. Leveling one talent to 8 provides more value than leveling three talents to 4. Get your core damage skill to 6 first, then push it to 8 before investing in secondary talents.",
-        "answerZh": "建议集中升级一个核心天赋。一个天赋升到8级的效果比三个天赋都升到4级要好得多。先把核心输出技能升到6级，然后推到8级，再考虑次要天赋。"
+        "answerZh": "建议集中升级一个核心天赋。一个天赋升到8级的效果比三个天赋都升到4级要好得多。先把核心输出技能升到6级，然后推到8级，再考虑次要天赋。",
+        "questionJa": "すべての天賦を均等に上げるべきですか？",
+        "answerJa": "1つのコア天賦に集中してください。天賦1つをレベル8にする方が、3つをレベル4にするより価値があります。まず主力スキルをレベル6、次に8まで上げてから副次的な天賦へ進みます。"
       }
     ],
     "serpTitle": {
@@ -1032,7 +1209,10 @@
       ]
     },
     "updatedAt": "2026-08-22",
-    "currentVersion": "NTE v1.2 talent and material planning route"
+    "currentVersion": "NTE v1.2 talent and material planning route",
+    "titleJa": "NTE天賦優先度ガイド：役割別に先に上げるべきスキル",
+    "summaryJa": "Neverness to Evernessで先に上げるべきスキル、役割別の強化順、素材計画、費用効率のよい到達点、DPS・支援・生存役の育成ルートを解説します。",
+    "contentJa": "## 天賦優先度完全ガイド\n\n正しい順番で天賦を上げると、貴重な素材を節約しながらキャラクターの性能を最大化できます。このガイドでは、Neverness to Evernessの各キャラクターに推奨される天賦強化の優先度を扱います。\n\n## 天賦素材を理解する\n\n各天賦には、日替わりのスキル領域で手に入る専用素材が必要です。各日に利用できる領域に合わせて周回予定を立てましょう。天賦レベルが高くなるほど必要素材は大幅に増えるため、資源効率のために優先順位が重要になります。クラウンレベルの強化（レベル10）には希少な週ボス素材が必要で、最も重要な天賦にだけ使うべきです。\n\n## DPSキャラクターの優先順位\n\nメインDPSでは、通常攻撃（または主力ダメージスキル）、元素スキル、元素バーストの順を基本とします。実際の順番は、総ダメージに最も大きく寄与するスキルによって変わることがあります。各キャラクターのダメージ内訳を確認し、最適な優先順位を決めてください。\n\n## サポートキャラクターの優先順位\n\nサポートはまずユーティリティスキルを優先します。ヒーラーなら回復スキルを何より先に上げます。ダメージバッファーなら、チーム全体への上昇量が最も大きいバフスキルを上げてください。サポートの通常攻撃は、控えにいる時間が長いため通常は最も優先度が低くなります。\n\n## サブDPSの優先順位\n\nサブDPSは、まず控えからダメージを与えるスキルに集中します。交代後も元素バーストが残るなら、それを優先してください。サブDPSが表に出ていない時間のダメージを最大化するのが目標です。\n\n## 一般ルール\n\n- 次の天賦に移る前に、必ず1つの天賦を少なくともレベル6まで上げる\n- ほとんどの天賦では、レベル8が費用対効果のよい到達点\n- クラウンはメインDPSの主力ダメージ天賦に残す\n- サポートの元素バーストを見落とさない。多くはバーストレベルに連動したチームバフを持つ\n- 各レベルの天賦倍率を確認し、最も大きいダメージ上昇点を探す\n\n## 素材計画\n\n育てる全キャラクターについて、必要な天賦素材を記録してください。同じ日に複数キャラクターの素材を集められるよう、領域スケジュールを使って効率的な周回ルートを組みます。急に素材が必要になったときのスタミナ浪費を防げます。"
   },
   {
     "id": "anomaly-dungeon",
@@ -1054,7 +1234,10 @@
     "relatedCharacters": [],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "異常ダンジョンガイド",
+    "summaryJa": "Neverness to Evernessの異常ダンジョンについて、ギミック、チームのおすすめ、攻略のヒントをまとめた完全ガイドです。",
+    "contentJa": "## 異常ダンジョン完全ガイド\n\n異常ダンジョンは、Neverness to Evernessの挑戦的な終盤コンテンツです。希少素材、ディスクセット、強化通貨などの上級報酬を獲得できます。このガイドでは、ギミック、チーム編成、攻略戦略を扱います。\n\n## ダンジョンの概要\n\n異常ダンジョンはアドベンチャーランク30で解放され、週ごとに変わる特殊な戦闘ルールがあります。各ダンジョンには、元素制限、制限時間、強化された敵タイプなどの固有条件があります。週ごとの修正を理解することがチーム準備の鍵です。\n\n## ダンジョンギミック\n\n各異常ダンジョンには難度が上がる複数の階層があります。高層では敵のステータスが強化され、新しい攻撃パターンを使います。毒エリアやエネルギー吸収のような環境ギミックも、さらに挑戦を加えます。ダンジョンは毎週リセットされるため、より良いクリアタイムや追加報酬を目指して再挑戦できます。\n\n## 異常ダンジョン向けのチーム編成\n\n週ごとの元素ボーナスに合うチームを組みましょう。強化対象の元素を持つキャラクターは大きなダメージ上昇を受け、育成度が低くても補えます。高層での生存のために、少なくとも1人はヒーラーまたはシールダーを入れてください。ダメージチェックを満たすには頻繁なバーストローテーションが必要なため、エネルギー回復も重要です。\n\n## 階層別の戦略\n\n下層（1〜5階）は中程度の育成と基本的なチーム相乗効果でクリアできます。中層（6〜8階）では特定の元素カウンターと最適化されたローテーションが必要です。上層（9〜10階）では、天賦最大レベルと最適化されたディスクセットを持つ十分に育成したキャラクターが求められます。現在の戦力を大きく超える階層に苦戦するより、対応できる階層を安定してクリアすることを優先してください。\n\n## 報酬の最適化\n\n毎週できるだけ多くの階層をクリアしましょう。部分クリアでも意味のある報酬が得られます。最も価値の高い報酬は通常8階以上にあるため、その到達を優先してください。通常の素材周回後に余ったスタミナで難しい階層を練習し、将来のクリアにつなげましょう。\n\n## よくあるミス\n\n週ごとの修正を無視すること、元素が合わないチームを連れて行くこと、生存を無視して火力だけを追うこと、現在の戦力を大きく超える階層に挑戦することが、異常ダンジョンで初心者によく見られるミスです。"
   },
   {
     "id": "pvp-guide",
@@ -1081,15 +1264,22 @@
         "question": "Is there PvP in Neverness to Everness?",
         "questionZh": "异环有PVP吗？",
         "answer": "NTE features asynchronous competitive modes like leaderboards and ranked arenas rather than direct player-vs-player combat.",
-        "answerZh": "异环采用的是异步竞技模式，包括排行榜和排位赛，而非直接PVP对战。"
+        "answerZh": "异环采用的是异步竞技模式，包括排行榜和排位赛，而非直接PVP对战。",
+        "questionJa": "Neverness to EvernessにPvPはありますか？",
+        "answerJa": "NTEには直接のプレイヤー対プレイヤー戦闘ではなく、ランキングやランクアリーナなどの非同期競技モードがあります。"
       },
       {
         "question": "How does the ranked system work in NTE?",
         "questionZh": "异环排位赛怎么打？",
         "answer": "The ranked system has tiers from Bronze to Radiant. You earn points through Arena challenges and leaderboard placements, with seasons lasting ~6 weeks.",
-        "answerZh": "排位赛从青铜到辉光共6个段位，通过竞技场挑战和排行榜获得积分，每个赛季约6周。"
+        "answerZh": "排位赛从青铜到辉光共6个段位，通过竞技场挑战和排行榜获得积分，每个赛季约6周。",
+        "questionJa": "NTEのランクシステムはどう機能しますか？",
+        "answerJa": "ランクシステムにはBronzeからRadiantまでのTierがあります。アリーナ挑戦とランキング順位でポイントを得て、シーズンは約6週間続きます。"
       }
-    ]
+    ],
+    "titleJa": "Neverness to Everness PvP・競技モードガイド：ランク、ランキング",
+    "summaryJa": "NTEにPvPはあるのか。はい。非同期ランクモード、ランキング、アリーナ挑戦、BronzeからRadiantまでのTier報酬、最適チームと上昇戦略を解説します。",
+    "contentJa": "## NTEの競技モード\n\nNeverness to Evernessには、直接PvPではなく非同期の競技モードがあります。これらのモードでは他プレイヤーのスコアと自分の成績を比較するため、リアルタイム対戦を必要とせずに競技環境が作られます。\n\n## ランキングチャレンジ\n\n### 仕組み\n\n- 特定シナリオをできるだけ速くクリアする、または最大ダメージを与える\n- ランキングはリアルタイムで更新される\n- 上位者は限定称号とプレミアム通貨を得る\n\n### より高い順位のヒント\n\n1. 特定のチャレンジ元素とギミックに合わせて**チームを最適化**する\n2. ランキング挑戦前に**食事バフ**を使う\n3. 敵パターンを学び、ウェーブ間の無駄時間を減らす\n4. **Arcを強化**する。武器ステータスはクリア時間へ直接影響する\n\n## シーズンランクモード\n\n### Tierシステム\n\n| Tier | ランク範囲 | 報酬 |\n| --- | --- | --- |\n| Bronze | 1〜3 Stars | 基本素材 |\n| Silver | 1〜3 Stars | 強化鉱石、Vons |\n| Gold | 1〜3 Stars | プレミアム通貨、限定コスメティック |\n| Platinum | 1〜3 Stars | 希少素材、称号 |\n| Diamond | 1〜3 Stars | 限定キャラクタースキン |\n| Radiant | Top 100 | 限定アバターフレーム、シーズン称号 |\n\n### 上昇戦略\n\n- **継続的にプレイ**：1日の参加は、まとめて遊ぶより多くのポイントを得る\n- **環境を対策**：現在シーズンで強いキャラクターを確認し、対策を作る\n- **挑戦する時間を選ぶ**：昇格に必要なスコアが低いオフピーク時に競う\n- **チーム相乗効果＞素の戦力**：連携したチームは個別に強いキャラクターを上回る\n\n## アリーナチャレンジ\n\nアリーナは主な競技モードです。\n\n- 毎週月曜日に**リセット**\n- 1日**10回の無料挑戦**（追加挑戦は購入可能）\n- **スコア基準**：クリア時間、与ダメージ、被ダメージ、チーム構成ボーナス\n\n### アリーナ向けのおすすめキャラクター\n\n現在の環境では次に集中してください。\n\n- 速いクリアのための**バーストDPS**\n- チームダメージをバフする**サポートキャラクター**\n- 生存ボーナスのための**シールド／回復キャラクター**\n\n## 周回する価値がある報酬\n\n1. **Arena Coins**：希少突破素材と交換する\n2. **シーズン称号**：名誉コスメティック報酬\n3. **プレミアム通貨**：ガチャバナーの無料引き\n4. **限定レシピ**：ランクプレイでのみ得られる固有アイテムをクラフトする\n\n## よくある質問\n\n**NTEは本当にPvPですか？** いいえ。NTEは非同期競技モードを使います。他プレイヤー本人ではなく、他プレイヤーのスコアと競います。\n\n**競うために最上位キャラクターが必要ですか？** 強いキャラクターは役立ちますが、チーム編成と戦略の方が重要です。よく育てた低予算チームでもGold Tierに到達できます。\n\n**シーズンはどのくらいでリセットされますか？** ランクシーズンは約6週間続き、各シーズンの間には1週間のプレシーズン休止があります。"
   },
   {
     "id": "collectibles-guide",
@@ -1111,7 +1301,10 @@
     "relatedCharacters": [],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "完全収集品ガイド",
+    "summaryJa": "全宝箱タイプ、隠しアイテム、地域特産、探索到達点報酬を含むNeverness to Evernessの完全収集品場所ガイドです。",
+    "contentJa": "## 完全収集品場所ガイド\n\nNeverness to Evernessには、オープンワールド全体に数百の収集品があります。このガイドでは、場所の詳細と追跡のヒントにより、すべての収集品タイプを見つける助けになります。\n\n## 収集品の種類\n\nゲームには複数の収集品カテゴリーがあります。宝箱（通常、精巧、貴重、豪華）、Anomalies（隠し挑戦）、Viewpoints（景観地点）、Character Stories（解放できる伝承記録）、Region Progressマーカーです。各タイプは全体の探索率に貢献し、異なる報酬を提供します。\n\n## 宝箱の場所\n\n宝箱は最も一般的な収集品です。通常宝箱は近くにいるとミニマップに表示されます。精巧と貴重な宝箱では、簡単なパズルを解くか敵グループを倒す必要がある場合があります。豪華宝箱は希少で、通常は複雑なパズルの奥かエリート敵が守る場所に隠されています。ミニマップに表示されない隠し宝箱を探すため、滝の裏、屋上、洞窟を確認してください。\n\n## 地域完了報酬\n\n各地域には完了トラッカーがあり、到達点に応じてプレミアム通貨、キャラクター素材、限定アイテムを得られます。地域探索を100％にすると、通常は数回分のガチャに十分な通貨を得られます。トラッカーの進行は自動保存されるため、自分のペースで地域を進められます。\n\n## インタラクティブマップツール\n\nコミュニティ管理のインタラクティブマップを使い、収集品の進行を追跡してください。これらのツールでは取得済みアイテムを記録し、タイプ別に絞り込めるため、足りないものを見つけやすくなります。ゲームのバージョン間で収集品の場所が変わることがあるため、正確性のためゲーム内マップと照合してください。\n\n## 効率的な収集のヒント\n\n残りの場所が少ないほど見つけやすいため、完了率が最も高い地域を優先してください。移動能力を持つキャラクターを使い、到達しにくい場所へ向かいましょう。一部の収集品は特定の時間帯または天候でのみ出現します。探す前に、その地域に時間制限のあるアイテムがないか確認してください。"
   },
   {
     "id": "farming-route",
@@ -1133,7 +1326,10 @@
     "relatedCharacters": [],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "効率的な周回ルートガイド",
+    "summaryJa": "Neverness to Evernessでゴールド、素材、経験値本を集める最も効率的な周回ルートをまとめます。",
+    "contentJa": "## 通貨と素材の効率的な周回ルート\n\n周回ルートを最適化すると、使ったスタミナ1ポイントあたりの資源獲得を最大化できます。このガイドでは、ゲーム内通貨とキャラクター強化素材を得る最も効率的な経路を扱います。\n\n## 通貨の種類\n\nNeverness to Evernessには複数の通貨があります。Credits（すべての活動から得る基本通貨）、プレミアム通貨（イベントと実績から）、イベントトークン（期間限定イベントから）です。Creditsはキャラクターレベル上げ、武器強化、ディスク強化に使います。Creditsを効率よく管理すると、キャラクター育成中のボトルネックを防げます。\n\n## デイリー周回ルート\n\n各セッションは、利用可能なスタミナを最優先の素材領域にすべて使うことから始めます。次にCreditsと経験値報酬のため、デイリー依頼を完了します。最後に、ボーナス報酬を提供する期間限定イベントがないか確認します。このルーチンにより、スタミナや毎日の機会を無駄にせず、安定した進行を得られます。\n\n## 週次活動\n\n週ボスは他では得られない希少な強化素材を提供します。リセット前にすべての週ボスをクリアし、報酬を逃さないようにしてください。週次ダンジョンは、デイリー周回よりよい効率で専門素材を提供します。正しい日に特定キャラクター素材を周回するため、領域ローテーションに合わせて週を計画してください。\n\n## スタミナ効率のよい周回\n\n異なる領域の素材ドロップ率を比較し、特定素材にとって最も効率的な周回場所を判断してください。領域によって、特定素材でのスタミナ1ポイントあたりの収益が異なります。交換比率が有利な場合は、下位素材をクラフトシステムで上位素材へ変換してください。これは上位素材を直接周回するより、スタミナ効率がよいことが多いです。\n\n## Credits周回ルート\n\n最も効率的なCredits周回は、オープンワールドのエリート敵ルートとイベントショップから得られます。エリート敵は時間でリスポーンし、Creditsと強化素材の両方を落とします。イベントショップはイベントトークンで、よい交換レートのCreditsを売ることがよくあります。Creditsボーナスイベント中は、倍率効果により機会費用に見合うため、他の活動よりCredits周回を優先してください。\n\n## 長期計画\n\n今後育てたいキャラクターの目標を記録し、キャラクター実装前に素材を事前周回してください。これにより、緊急周回によるスタミナ浪費を防ぎ、入手直後に新キャラクターを楽しめます。"
   },
   {
     "id": "patch-notes",
@@ -1155,7 +1351,10 @@
     "relatedCharacters": [],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "パッチノートとアップデート",
+    "summaryJa": "Neverness to Evernessのアップデート、バランス調整、新機能を含むパッチノート履歴をまとめます。",
+    "contentJa": "## バージョン更新履歴とパッチノート\n\nNeverness to Evernessには、新キャラクター、イベント、QoL改善、バランス調整を導入する定期アップデートがあります。このガイドでは主なバージョン更新とゲームへの影響をまとめます。\n\n## バージョン履歴の概要\n\n各メジャーバージョンは通常6週間続き、1〜2人の新しい限定キャラクター、ストーリー章の続き、少なくとも1つの大型イベント、さまざまなシステム改善を導入します。バージョン間の小規模パッチでは、バグ修正とバランス調整が行われます。\n\n## アップデートが環境へ与える影響\n\n新キャラクターの実装はTierリストを大きく変えることがあります。新キャラクターと相性がよいキャラクターは順位を上げる一方、古いキャラクターの重要度は下がることがあります。バランスパッチではキャラクターのスキルや武器ステータスが調整され、キャラクターの実用性が大きく変わる場合があります。チーム編成戦略を調整するため、パッチノートを確認し続けましょう。\n\n## 新コンテンツのロードマップ\n\n開発者は、今後の複数バージョンを対象にした大まかなコンテンツロードマップを共有しています。予定には新しい探索地域、追加ストーリー章、新武器タイプ、終盤モードの拡張、QoL機能が含まれます。具体的な日程は変わる可能性がありますが、ロードマップはゲームの方向性を知る目安になります。\n\n## QoL改善\n\n最近のアップデートでは、オートバトルの選択肢改善、アーティファクトの並び替え強化、一括強化、よりよいチーム管理ツールなど、プレイヤーから要望の多かった機能が導入されています。これらの改善は日課の負担を減らし、資源管理を便利にします。\n\n## バグ修正と既知の問題\n\n各パッチには、報告されたバグの修正が含まれます。ゲームプレイや進行に影響する大きなバグは通常数日以内にホットフィックスされます。最新の既知の問題と回避策は公式告知を確認してください。新しいバグはゲーム内フィードバックから報告し、開発者が早く特定・修正できるようにしましょう。\n\n## 最新情報を追う方法\n\n最新ニュースは公式SNSチャンネルとコミュニティフォーラムで確認してください。パッチプレビューは通常アップデートの1週間前に公開されるため、新キャラクターの素材準備やガチャ計画を立てる時間があります。コミュニティのコンテンツ制作者も、今後の変更と環境への影響を分析します。"
   },
   {
     "id": "arc-disc-guide",
@@ -1183,9 +1382,14 @@
         "question": "How to get S-rank Arc Discs in NTE?",
         "questionZh": "异环S级弧盘怎么获得？",
         "answer": "S-rank Arc Discs drop from high-level Boss anomalies, especially Sea Prisoner. You can also get them from Tower dungeons at higher difficulty levels.",
-        "answerZh": "S级弧盘主要通过击败高级Boss异象获得，海囚Boss掉落概率最高。高级弧盘副本也有概率产出S级弧盘。"
+        "answerZh": "S级弧盘主要通过击败高级Boss异象获得，海囚Boss掉落概率最高。高级弧盘副本也有概率产出S级弧盘。",
+        "questionJa": "NTEでSランクArc Discを入手するには？",
+        "answerJa": "SランクArc Discは高レベルのBoss anomaly、とくにSea Prisonerからドロップします。高難度の塔ダンジョンでも入手できることがあります。"
       }
-    ]
+    ],
+    "titleJa": "Arc Disc完全ガイド：Sランクディスク、入手方法、おすすめ構成",
+    "summaryJa": "Arc DiscはNTEローンチ版で最も重要な装備システムです。ディスクの入手、Sランクのおすすめ、ダンジョン戦略、ステータス優先度を解説します。",
+    "contentJa": "Arc DiscはNTEのローンチ版で最も影響力のある装備システムです。各キャラクターは1枚のディスクを装備し、大きなステータス上昇と特殊効果を得ます。このガイドでは必要な情報をまとめます。\n\n## Arc Discとは\n\nArc DiscはC、B、A、Sにランク分けされた特殊装備です。品質が高いほど基礎ステータスと効果が強くなります。各キャラクターはちょうど1枚を装備しますが、適切なディスクは戦闘性能を大きく変えます。\n\n## Arc Discの入手方法\n\n1. **Boss Anomalyドロップ**：Boss anomalyを倒すとディスクを落とすことがあります。Sea PrisonerはSランクのドロップ率が最も高いです。\n2. **塔ダンジョン**：Cランクドロップが確定するディスク専用の挑戦です。高層ほどドロップ率が上がります。\n3. **ショップ交換**：Blank Screen DeviceショップでDrive BlocksとCassettesを交換します。\n4. **Anomaly Containment**：Spotted Butterflyなどのボスに対する封じ込め任務を完了します。\n5. **イベント報酬**：ローンチイベントではAランクディスクが確定で得られます。\n6. **City Tycoon**：Xiaozhiのイベントで、完全強化済みの無料ディスクを得られます。\n\n## Sランクディスクのおすすめ\n\n| ディスク | 適した役割 | 主な効果 |\n| --- | --- | --- |\n| Golden ATK Disc | DPSキャリー | 攻撃力＋会心率を大きく上昇 |\n| Golden Support Disc | バフサポート | エネルギー回復＋効果時間延長 |\n| Golden DEF Disc | タンク／生存役 | ダメージ軽減＋シールド強化 |\n| Golden Heal Disc | ヒーラー | 回復ボーナス＋追加回復効果 |\n\n## 役割別のステータス優先度\n\n**DPS**：会心率 ＞ 会心ダメージ ＞ 攻撃力％ ＞ 元素ダメージ\n**サポート**：エネルギー回復 ＞ 効果命中 ＞ HP％ ＞ 防御力％\n**タンク**：HP％ ＞ 防御力％ ＞ ダメージ軽減 ＞ エネルギー回復\n**ヒーラー**：HP％ ＞ エネルギー回復 ＞ 回復ボーナス ＞ 防御力％\n\n## ディスク強化\n\n同じ品質のディスクを強化素材に使います。優先順位は次のとおりです。\n\n1. Sランクディスク：すぐに最大レベルまで強化する\n2. Aランクディスク：移行用として使い、最大＋12まで強化する\n3. B／Cランクディスク：強化素材としてのみ使う\n\n## キャラクター別のおすすめディスク\n\n- **Nanally**：会心／攻撃力サブステータスのGolden ATK Disc\n- **Jiuyuan**：エネルギー回復サブステータスのGolden Support Disc\n- **Baicang**：攻撃力％／元素ダメージサブステータスのGolden ATK Disc\n- **Hotori**：HP／エネルギー回復サブステータスのGolden Support Disc\n- **Adler**：HP／防御力サブステータスのGolden DEF Disc\n- **Xiaozhi**：Golden ATK Disc（City Tycoonから無料で入手、すでに最大強化）"
   },
   {
     "id": "team-composition-guide",
@@ -1222,33 +1426,46 @@
         "question": "How many characters are in a team?",
         "questionZh": "异环一支队伍几个人？",
         "answer": "Each team has 3 characters. You can switch between them during combat to chain skills and trigger elemental effects.",
-        "answerZh": "每支队伍由3名角色组成。战斗中可以切换角色衔接技能并触发元素效果。"
+        "answerZh": "每支队伍由3名角色组成。战斗中可以切换角色衔接技能并触发元素效果。",
+        "questionJa": "NTEの1チームは何人ですか？",
+        "answerJa": "各チームは3人で構成されます。戦闘中に交代してスキルをつなぎ、元素効果を発動できます。"
       },
       {
         "question": "What is the best beginner team?",
         "questionZh": "异环新手最强配队是什么？",
         "answer": "Use your beginner selector S-rank as core, add Adler for shields and Mint for healing. This gives you a balanced team with DPS, tank, and healer.",
-        "answerZh": "以新手池自选S级角色为核心，搭配Adler提供护盾和Mint提供治疗。这样队伍有输出、有坦、有奶，非常均衡。"
+        "answerZh": "以新手池自选S级角色为核心，搭配Adler提供护盾和Mint提供治疗。这样队伍有输出、有坦、有奶，非常均衡。",
+        "questionJa": "初心者におすすめのチームは何ですか？",
+        "answerJa": "初心者選択のSランクを軸にし、Adlerでシールド、Mintで回復を補うと、DPS、タンク、ヒーラーを備えたバランスのよいチームになります。"
       },
       {
         "question": "Should I focus on same-element teams?",
         "questionZh": "异环应该玩同色队还是混色队？",
         "answer": "Same-element teams benefit from resonance bonuses at 3 matching elements, but mixed teams offer more flexibility. For beginners, mixed teams are recommended until you have enough characters for mono-element.",
-        "answerZh": "同元素队有共鸣加成，但混色队更灵活。新手建议先用混色队，等角色池深了再考虑纯色队。"
+        "answerZh": "同元素队有共鸣加成，但混色队更灵活。新手建议先用混色队，等角色池深了再考虑纯色队。",
+        "questionJa": "同元素チームに集中すべきですか？",
+        "answerJa": "同元素チームは3元素一致で共鳴ボーナスを得ますが、混成チームは柔軟性があります。初心者はキャラクターがそろうまで混成チームがおすすめです。"
       },
       {
         "question": "How do elemental reactions work in teams?",
         "questionZh": "异环元素反应怎么触发？",
         "answer": "Elemental reactions trigger when different elements interact on enemies. Switching characters and applying different elements in sequence creates powerful combination effects that deal bonus damage.",
-        "answerZh": "不同元素作用于敌人时触发元素反应。按顺序切换角色施加不同元素可以产生强力的组合效果，造成额外伤害。"
+        "answerZh": "不同元素作用于敌人时触发元素反应。按顺序切换角色施加不同元素可以产生强力的组合效果，造成额外伤害。",
+        "questionJa": "チームで元素反応はどう発動しますか？",
+        "answerJa": "異なる元素が敵に作用すると元素反応が発動します。順番にキャラクターを交代し、異なる元素を付与すると、追加ダメージを与える強力な組み合わせ効果を作れます。"
       },
       {
         "question": "Which characters should I prioritize building for teams?",
         "questionZh": "异环配队优先培养哪些角色？",
         "answer": "Prioritize your main DPS first, then a support character (Mint is excellent and free from beginner selector), then a utility/flex pick. Level your DPS to max before heavily investing in supports.",
-        "answerZh": "优先培养主C角色，其次是辅助（薄荷非常好，新手池可自选），最后是功能位。主C拉满后再重点投入辅助。"
+        "answerZh": "优先培养主C角色，其次是辅助（薄荷非常好，新手池可自选），最后是功能位。主C拉满后再重点投入辅助。",
+        "questionJa": "チームのためにどのキャラクターを優先して育てるべきですか？",
+        "answerJa": "まずメインDPS、次にサポート（Mintは初心者選択から得られる優秀な候補）、最後にユーティリティ／フレックスを優先します。サポートへ大きく投資する前にDPSを最大まで育ててください。"
       }
-    ]
+    ],
+    "titleJa": "NTEチーム編成ガイド：おすすめチーム構成",
+    "summaryJa": "チーム編成はNTEの戦闘システムの中核です。編成の考え方、元素相乗効果、役割のバランス、環境編成と無課金向けチームを解説します。",
+    "contentJa": "NTEの戦闘システムは3人チームを中心に作られています。適切なチーム編成は戦闘効率を大きく高めます。このガイドでは基本から上級のチーム構成まで扱います。\n\n## チームの基本\n\n各チームはメインDPS、サポート／ユーティリティ、フレックス役を担う3人で構成されます。チームを作るときは、元素の相乗効果、スキル連携、全体のダメージローテーションを考慮してください。\n\n## 役割の分類\n\nメインDPS：主なダメージ担当。例：Jiuyuan（Anima／バースト）、Nanally（Lakshana／継続火力）。DPSにはバフと生存を支えるチームサポートが必要です。\n\nサポート：バフ、デバフ、回復を提供します。例：Mint（回復＋バフ）、Adler（シールド＋バフ）。サポートはDPSの出力を大きく増幅します。\n\nユーティリティ：集敵、シールド破壊、特殊ギミックを提供します。例：Zero（Cosmos／汎用）、Baicang（Bose／制御）。コンテンツに応じて調整してください。\n\n## 元素の原則\n\nNTEにはAnima、Incantation、Chaos、Psyche、Cosmos、Lakshanaの6元素があります。\n\nおすすめの方針は、1）同元素共鳴（同じ元素の2〜3人でボーナス効果を発動）、2）異元素反応チーム、3）単元素チーム（共鳴を最大化）です。\n\n## 環境チーム構成\n\n### チーム1：Jiuyuanバースト\n\nJiuyuan（DPS）＋Baicang（サポート／制御）＋Mint（回復／バフ）\n\n中核：BaicangがBose元素で制御し、Mintが生存とバフを提供、Jiuyuanが大きなAnimaバーストダメージを与えます。安定しており汎用的です。\n\n### チーム2：Nanally継続火力\n\nNanally（DPS）＋Xiaozhi（サポート／シールド破壊）＋Zero（ユーティリティ／汎用）\n\n中核：NanallyのLakshanaが安定したダメージを出し、Xiaozhiが効率を上げ、Zeroがチームの弱点を補います。\n\n### チーム3：Hotori高速コンボ\n\nHotori（DPS）＋Sakiri（サブDPS／サポート）＋Edgar（ユーティリティ／DPS）\n\n中核：Hotoriの高速コンボにSakiriのGasサポートとEdgarのLiquidダメージを組み合わせます。アクションゲームが好きな人向けの、高い操作難度を持つ編成です。\n\n## 無課金向けチーム\n\nMint（初心者選択）＋Adler＋Edgar：Cosmos共鳴チーム。Adlerがシールド、Edgarがダメージ、Mintが回復とバフを提供します。\n\n初心者向け：初心者選択のSランクを軸に、相性のよい2人を足してください。チームにダメージ、サポート、生存があることを確認しましょう。\n\n## 上級のヒント\n\n1. スキル順：最大ダメージ時間のため、必殺技の前にバフを使う\n2. 交代キャンセル：キャラクター交代には無敵時間があり、回避に使える\n3. ボス弱点を合わせる：元素弱点を確認し、チームを調整する\n4. 覚醒共鳴：3／6で得られるボーナス効果のため、覚醒レベルを考慮する\n\n## よくあるミス\n\n1. サポートなしで同じ役割を3人（例：DPS3人）入れる\n2. 元素カウンターを無視する\n3. サポートを過小評価する\n4. スキルローテーションを理解しない\n\n詳細なキャラクターデータはキャラクターページを確認してください。戦力ランキングはTierリストも参照できます。"
   },
   {
     "id": "boss-guide-comprehensive",
@@ -1277,33 +1494,46 @@
         "question": "How do I check a boss's elemental weakness?",
         "questionZh": "怎么查看Boss的元素弱点？",
         "answer": "In the team selection screen before battle, elemental weakness icons are displayed next to the boss info. Build your team around these weaknesses for maximum damage.",
-        "answerZh": "在Boss战前的队伍选择界面，Boss信息旁边会显示元素弱点图标。根据弱点组建队伍可以最大化伤害。"
+        "answerZh": "在Boss战前的队伍选择界面，Boss信息旁边会显示元素弱点图标。根据弱点组建队伍可以最大化伤害。",
+        "questionJa": "ボスの元素弱点はどう確認しますか？",
+        "answerJa": "戦闘前のチーム選択画面で、ボス情報の横に元素弱点アイコンが表示されます。弱点に合わせたチームを組むとダメージを最大化できます。"
       },
       {
         "question": "What happens when I break a boss's shield?",
         "questionZh": "打破Boss护盾后会发生什么？",
         "answer": "Breaking a boss's shield puts it into a vulnerable state for several seconds. During this time, the boss takes increased damage and cannot attack. This is the optimal window to use your strongest skills and ultimates.",
-        "answerZh": "打破Boss护盾后Boss会进入数秒的虚弱状态，期间受到的伤害增加且无法攻击。这是释放大招和最强技能的最佳时机。"
+        "answerZh": "打破Boss护盾后Boss会进入数秒的虚弱状态，期间受到的伤害增加且无法攻击。这是释放大招和最强技能的最佳时机。",
+        "questionJa": "ボスのシールドを破壊すると何が起こりますか？",
+        "answerJa": "シールドを破壊すると、ボスは数秒間脆弱状態になり、受けるダメージが増えて攻撃できなくなります。最強のスキルと必殺技を使う最適な時間です。"
       },
       {
         "question": "Can I solo boss content in NTE?",
         "questionZh": "异环Boss可以单刷吗？",
         "answer": "World bosses can be soloed with a well-built team. Anomaly Prison bosses are designed for co-op but can be soloed by highly skilled players with strong characters. Weekly bosses have matchmaking for easy grouping.",
-        "answerZh": "世界Boss可以用成型队伍单刷。异象监狱Boss设计为组队内容，但高练度玩家也可以单刷。周本有匹配系统方便组队。"
+        "answerZh": "世界Boss可以用成型队伍单刷。异象监狱Boss设计为组队内容，但高练度玩家也可以单刷。周本有匹配系统方便组队。",
+        "questionJa": "NTEのボスコンテンツはソロで攻略できますか？",
+        "answerJa": "ワールドボスは十分に育てたチームでソロ攻略できます。Anomaly Prisonボスは協力向けですが、強いキャラクターを持つ熟練プレイヤーならソロも可能です。週ボスには組みやすいマッチングがあります。"
       },
       {
         "question": "What are the best characters for boss fights?",
         "questionZh": "打Boss用哪些角色最好？",
         "answer": "High-burst DPS characters like Jiuyuan and Nanally excel in boss fights. Supports like Mint (healing) and Baicang (crowd control) are also valuable. Always match your team's elements to the boss weakness.",
-        "answerZh": "高爆发角色如九渊和南那在Boss战中表现出色。薄荷（治疗）和白藏（控制）等辅助也很有价值。记得根据Boss弱点匹配队伍元素。"
+        "answerZh": "高爆发角色如九渊和南那在Boss战中表现出色。薄荷（治疗）和白藏（控制）等辅助也很有价值。记得根据Boss弱点匹配队伍元素。",
+        "questionJa": "ボス戦に最適なキャラクターは誰ですか？",
+        "answerJa": "JiuyuanやNanallyのような高バーストDPSはボス戦で優れます。Mint（回復）やBaicang（制御）などのサポートも価値があります。常にボス弱点にチーム元素を合わせてください。"
       },
       {
         "question": "How often can I fight weekly bosses?",
         "questionZh": "周本Boss一周能打几次？",
         "answer": "Weekly bosses can be challenged a limited number of times per week (typically 3 clears per boss). Resets on Monday. Prioritize clearing all weekly bosses for awakening materials.",
-        "answerZh": "周本Boss每周有挑战次数限制（通常每个Boss可通关3次），周一重置。建议优先打完所有周本获取觉醒材料。"
+        "answerZh": "周本Boss每周有挑战次数限制（通常每个Boss可通关3次），周一重置。建议优先打完所有周本获取觉醒材料。",
+        "questionJa": "週ボスはどのくらいの頻度で戦えますか？",
+        "answerJa": "週ボスには週ごとの挑戦回数制限があり、通常は各ボスを3回クリアできます。月曜日にリセットされるため、覚醒素材のために全週ボスを優先してください。"
       }
-    ]
+    ],
+    "titleJa": "NTEボスガイド：弱点分析と戦略",
+    "summaryJa": "NTEのボスギミックについて、元素弱点、攻撃パターン、おすすめチーム、ドロップ報酬を包括的に解説します。",
+    "contentJa": "ボス戦はNTEで最も挑戦的なコンテンツの一つです。弱点、攻撃パターン、チーム戦略を理解することが効率的なクリアの鍵になります。\n\n## ボスの種類\n\nワールドボス：Hethereauの各地に出現し、中程度の難度で基本強化素材を落とします。\n\nAnomaly Prisonボス：チーム連携を必要とする高難度インスタンスボスです。上級素材と希少ディスクセットを落とし、終盤コンテンツの中核です。\n\n週ボス：週ごとの挑戦回数が限られ、価値の高い覚醒素材を落とします。毎週の挑戦回数をすべて使いましょう。\n\nイベントボス：固有ギミックと限定報酬を持つ、期間限定の特別なボスです。\n\n## 元素弱点システム\n\n各ボスには固有の元素弱点と耐性があります。弱点を突くと1.5〜2倍のダメージを与え、耐性に当てると約0.5倍のダメージになります。\n\n戦闘前のチーム選択画面で弱点を確認し、1〜2人をボスの弱点に合わせて調整してください。\n\n## 中核ギミック\n\nシールドシステム：一部のボスは定期的に元素シールドを生成します。対抗元素で素早く破壊してください。破壊後、ボスは脆弱状態に入り、最もダメージを与えやすい時間になります。\n\n激昂モード：HPが約30％未満になると、ボスは攻撃力と速度が上がる激昂モードに入ります。この段階ではより防御的に立ち回りましょう。\n\n特殊ギミック：一部のボスは取り巻きを召喚し、範囲AoEを使い、追尾攻撃を行います。実戦で学んでください。\n\n## 共通戦略\n\n1. まず攻撃パターンを観察する\n2. パリィ可能な攻撃にはパリィを使い、大ダメージと中断を狙う\n3. 対抗元素でシールド破壊を優先する\n4. 必殺技は脆弱フェーズに残す\n5. キャラクター交代の無敵時間で強力な攻撃を回避する\n\n## おすすめの汎用チーム\n\nJiuyuan（バースト）＋Mint（回復／バフ）＋Baicang（制御）：ほとんどのボスで使える汎用構成です。\nNanally（継続火力）＋Adler（シールド）＋Sakiri（サポート）：高難度ボスで安定します。\n\n## ボスのドロップ報酬\n\nワールドボス：基本強化素材、低ランクディスク、経験値素材。\nAnomaly Prison：上級素材、SR／SSRディスクセット、覚醒素材の欠片。\n週ボス：覚醒素材、希少アイテム、キャラクター強化素材。\nイベント：限定報酬、イベントトークン、コラボアイテム。\n\n## 効率化のヒント\n\n1. キャラクターと装備を上げ、直接的に戦力を高める\n2. ダメージボーナスのため、元素特化ディスクセットを使う\n3. 覚醒でスキル効果を強化する\n4. ボスパターンを学ぶことは、素のステータスより効果的です。ほとんどのボスには予測可能な攻撃サイクルがあります。\n\nチーム編成の助言はチームガイドを確認してください。キャラクターランキングはTierリストを参照できます。"
   },
   {
     "id": "housing-system-guide",
@@ -1337,27 +1567,38 @@
         "question": "When does the housing system unlock?",
         "questionZh": "异环房屋系统什么时候解锁？",
         "answer": "Housing unlocks after completing Chapter 2 of the main story. You'll receive a guide quest that walks you through your first property purchase.",
-        "answerZh": "完成主线第二章后解锁。系统会给你一个引导任务，带你完成首次购房。"
+        "answerZh": "完成主线第二章后解锁。系统会给你一个引导任务，带你完成首次购房。",
+        "questionJa": "住宅システムはいつ解放されますか？",
+        "answerJa": "メインストーリー第2章の完了後に解放されます。最初の物件購入を案内するガイドクエストを受け取ります。"
       },
       {
         "question": "How do I get the free S-rank character from City Tycoon?",
         "questionZh": "城市经营怎么免费获得S级角色？",
         "answer": "Progress through City Tycoon milestones by managing shops, completing city quests, and developing your district. At a specific milestone, you'll unlock Xiaozhi (S-rank) for free. This takes approximately 2-3 weeks of active play.",
-        "answerZh": "通过经营店铺、完成城市任务和发展区域来推进城市经营进度。达到特定里程碑时解锁免费S级角色小吱，大约需要2-3周活跃游戏。"
+        "answerZh": "通过经营店铺、完成城市任务和发展区域来推进城市经营进度。达到特定里程碑时解锁免费S级角色小吱，大约需要2-3周活跃游戏。",
+        "questionJa": "City Tycoonから無料Sランクキャラクターを得るには？",
+        "answerJa": "ショップを経営し、都市クエストを完了し、地区を開発してCity Tycoonの到達点を進めます。特定の到達点でXiaozhi（Sランク）が無料で解放されます。原稿では、活発にプレイして約2〜3週間かかるとされています。"
       },
       {
         "question": "Can I buy multiple properties?",
         "questionZh": "异环可以买多套房子吗？",
         "answer": "Yes, you can purchase multiple properties in different districts. Each property can be decorated independently and host different types of shops for varied income streams.",
-        "answerZh": "可以。你可以在不同区域购买多处房产，每处独立装修并开设不同类型的店铺获取多样收益。"
+        "answerZh": "可以。你可以在不同区域购买多处房产，每处独立装修并开设不同类型的店铺获取多样收益。",
+        "questionJa": "複数の物件を購入できますか？",
+        "answerJa": "できます。異なる地区で複数の物件を購入できます。各物件は個別に装飾でき、さまざまな収入源のため異なる種類のショップを置けます。"
       },
       {
         "question": "Is the housing system pay-to-win?",
         "questionZh": "房屋系统要氪金吗？",
         "answer": "No. Properties are purchased with Coins (free currency). Furniture can be crafted or bought with free currency. The City Tycoon free S-rank character is achievable entirely without spending real money.",
-        "answerZh": "不需要。房产用甲硬币（免费货币）购买，家具可以制作或用免费货币购买。城市经营的免费S级角色完全可以零氪获得。"
+        "answerZh": "不需要。房产用甲硬币（免费货币）购买，家具可以制作或用免费货币购买。城市经营的免费S级角色完全可以零氪获得。",
+        "questionJa": "住宅システムは課金必須ですか？",
+        "answerJa": "いいえ。物件はCoins（無料通貨）で購入します。家具はクラフトするか無料通貨で購入でき、City Tycoonの無料Sランクキャラクターは現金を使わずに獲得できます。"
       }
-    ]
+    ],
+    "titleJa": "NTE住宅システムガイド：購入、装飾、収益",
+    "summaryJa": "物件購入、装飾、収入の仕組み、無料Sランクキャラクターを得るCity Tycoonモードを含むNTE住宅システムの完全ガイドです。",
+    "contentJa": "NTEの住宅システムは独自のライフスタイル機能です。プレイヤーはHethereauで物件を購入し、家を装飾し、City Tycoonモードを通じて継続収入を得られます。無料のSランクキャラクターも含まれます。\n\n## 住宅の解放\n\n住宅はメインストーリーの第2章を完了すると解放されます。ガイドクエストにより、システム補助金を使った最初の物件購入まで案内されます。\n\n## 物件購入\n\n1. Hethereauの不動産NPCを訪れ、利用可能な物件を確認する\n2. 地区ごとに価格と機能が異なる。中心街は最も高価だが最も高い収益を得られる\n3. Coins（無料のゲーム内通貨）を支払って購入を完了する\n4. 物件に入り、自由に装飾する\n\n## 装飾システム\n\n家具の配置：家具店で購入するか、アイテムをクラフトします。装飾家具は見た目のみで、機能家具はステータスボーナスを提供します。\n\n機能家具：休息ベッド（スタミナ回復＋XPバフ）、収納（追加インベントリ）、展示棚（収集品の展示）、作業台（家具とアイテムのクラフト）。\n\nスタイル：モダンミニマル、日本風、工業風など。自由に混ぜることもできます。\n\nインタラクト要素：スピーカーは収集した音楽（P5Rコラボ曲を含む）を再生し、テレビはゲーム内アニメーションを表示します。\n\n## City Tycoonモード\n\n住宅の最も価値ある部分です。\n\nショップ経営：物件内でショップを開き、定期的にCoinsと素材収入を得ます。ショップの種類により得られる資源が異なります。\n\n地区開発：地区に投資して繁栄度を上げます。繁栄度が高いほど、そのエリアの全プレイヤーの収益ボーナスが上がります。\n\n都市クエスト：毎日の都市経営タスクを完了してCity Pointsを得て、報酬と交換します。\n\n無料Sランクキャラクター：特定のCity Tycoon到達点に達すると、Xiaozhi（Sランク）を無料で得られます。最も重要な無料キャラクター源の一つなので、積極的に参加してください。\n\n## 収入の最適化\n\n1. ショップを置ける物件を優先する\n2. ショップ収入は毎日回収し、上限に達させない\n3. 高収益ショップを先にアップグレードする\n4. 他プレイヤーと地区協力プロジェクトに参加する\n5. 最大ポイントのため、毎日の都市クエストをすべて完了する\n\n## ソーシャル機能\n\n友達を家に招待し、デザインを見せられます。住宅デザインコンテストでは限定報酬を得られます。\n\nNTEの住宅システムは、リラックスできる活動であると同時に重要な資源エンジンです。無料Sランクキャラクターのため、早めに解放してCity Tycoonへ投資しましょう。"
   },
   {
     "id": "awakening-system-guide",
@@ -1386,27 +1627,38 @@
         "question": "What is the awakening system in NTE?",
         "questionZh": "异环觉醒系统是什么？",
         "answer": "Awakening is a character progression system with 6 levels. Each level boosts base stats, and levels 3 and 6 unlock powerful resonance effects that significantly enhance character abilities.",
-        "answerZh": "觉醒是角色培养系统，共6级。每级提升基础属性，3级和6级解锁强力的共鸣效果，大幅增强角色能力。"
+        "answerZh": "觉醒是角色培养系统，共6级。每级提升基础属性，3级和6级解锁强力的共鸣效果，大幅增强角色能力。",
+        "questionJa": "NTEの覚醒システムとは何ですか？",
+        "answerJa": "覚醒は6段階のキャラクター育成システムです。各段階で基礎ステータスが上がり、3段階と6段階ではキャラクター能力を大きく強化する共鳴効果が解放されます。"
       },
       {
         "question": "Which characters should I awaken first?",
         "questionZh": "优先觉醒哪些角色？",
         "answer": "Always awaken your main DPS first, then core supports. The level 3 resonance is the most cost-effective milestone. Focus resources on one character at a time rather than spreading them thin.",
-        "answerZh": "优先觉醒主C角色，其次是核心辅助。3级觉醒是性价比最高的里程碑。集中资源一个一个来，不要分散。"
+        "answerZh": "优先觉醒主C角色，其次是核心辅助。3级觉醒是性价比最高的里程碑。集中资源一个一个来，不要分散。",
+        "questionJa": "どのキャラクターを先に覚醒すべきですか？",
+        "answerJa": "常にメインDPSを最優先し、次にコアサポートを覚醒してください。3段階の共鳴は最も費用対効果がよい到達点です。資源は分散せず、1キャラクターずつ集中してください。"
       },
       {
         "question": "Where do I get awakening materials?",
         "questionZh": "觉醒材料怎么获取？",
         "answer": "Anomaly Prisons are the primary source. Weekly bosses and events also provide materials. Farm the highest difficulty you can clear efficiently.",
-        "answerZh": "异象监狱是主要来源。周本Boss和活动也提供材料。尽量刷你能高效通关的最高难度。"
+        "answerZh": "异象监狱是主要来源。周本Boss和活动也提供材料。尽量刷你能高效通关的最高难度。",
+        "questionJa": "覚醒素材はどこで入手できますか？",
+        "answerJa": "Anomaly Prisonsが主な入手先です。週ボスとイベントも素材を提供します。効率よくクリアできる最高難度を周回してください。"
       },
       {
         "question": "How long does it take to fully awaken a character?",
         "questionZh": "满觉醒一个角色需要多久？",
         "answer": "Getting to level 3 takes about 1-2 weeks for F2P players. Full level 6 awakening takes approximately 1-2 months of consistent farming.",
-        "answerZh": "零氪玩家到3级觉醒大约需要1-2周。满6级觉醒大约需要1-2个月的持续积累。"
+        "answerZh": "零氪玩家到3级觉醒大约需要1-2周。满6级觉醒大约需要1-2个月的持续积累。",
+        "questionJa": "キャラクターを完全覚醒するにはどのくらいかかりますか？",
+        "answerJa": "原稿では、無課金プレイヤーが3段階に達するには約1〜2週間、6段階の完全覚醒には約1〜2か月の継続周回が必要とされています。"
       }
-    ]
+    ],
+    "titleJa": "NTE覚醒システムガイド：素材と共鳴効果",
+    "summaryJa": "6段階の進行、3／6段階の共鳴効果、素材周回、優先順位を解説するNTE覚醒システムの完全ガイドです。",
+    "contentJa": "覚醒システムはNTEにおけるキャラクター育成の中核です。特定素材を消費することで、キャラクターは主要到達点でステータス上昇と強力な共鳴効果を得ます。\n\n## 概要\n\n各キャラクターには6段階の覚醒があります。各段階にはキャラクターごとに異なる素材が必要です。覚醒は基礎ステータス（攻撃力、HP、防御力）を上げ、3段階と6段階で共鳴効果を解放します。\n\n## 段階の進行\n\n1〜2段階：小さなステータス上昇\n3段階：ステータス上昇＋第1共鳴効果\n4〜5段階：中程度のステータス上昇\n6段階：大きなステータス上昇＋第2共鳴効果\n\n3段階と6段階が重要な到達点です。\n\n## 共鳴効果\n\n3段階の共鳴：第1共鳴スキルを解放します。通常は条件付きダメージ上昇、ダメージ軽減、チームバフなどのパッシブです。共鳴はキャラクターごとに固有です。\n\n6段階の共鳴：より強力な第2共鳴スキルを解放します。プレイスタイルを変えたり、出力を大きく上げたりすることがあります。素材コストは大幅に高くなります。\n\n## 素材の入手先\n\nAnomaly Prisons（主な入手先）：高難度ほどドロップがよく、最も効率的な入手先です。\n週ボス：希少な覚醒素材を落とします。毎週の挑戦をすべて完了してください。\nイベント報酬：期間限定イベントには覚醒素材が含まれることがよくあります。\nショップ交換：ゲーム内通貨を素材と交換します。\n探索：Hethereauの各地で少量を見つけられます。\n\n## 優先度ガイド\n\n最高：メインDPS。チームのダメージ上限を直接上げます。\n高：コアサポート（Mint、Adler）。覚醒後のチームユーティリティが強くなります。\n中：よく使うサブDPSとユーティリティキャラクター。\n低：使用頻度が低い、または交代したキャラクター。\n\n## 無課金戦略\n\n1. まずメインDPSを3段階にする\n2. コアサポートを3段階にする\n3. メインDPSを6段階まで進める\n4. 多数のキャラクターに同時に資源を分散しない\n\n## 素材コスト\n\n1〜3段階：約1〜2週間の周回。\n4〜6段階：約1〜2か月の継続周回。\n\n現在の環境と手持ちに基づいて覚醒進行を計画してください。覚醒はディスクセット、武器、チーム編成と相乗し、乗算的な戦力上昇を得られます。"
   },
   {
     "id": "hidden-quests-chests-guide",
@@ -1438,27 +1690,38 @@
         "question": "How do I find hidden quests in NTE?",
         "questionZh": "异环隐藏任务怎么找？",
         "answer": "Hidden quests trigger through specific conditions: visiting particular locations, talking to certain NPCs at specific times, or picking up special items. Explore thoroughly and interact with everything to discover them.",
-        "answerZh": "隐藏任务通过特定条件触发：到达特定地点、在特定时间与特定NPC对话、或拾取特殊物品。多探索多互动就能发现。"
+        "answerZh": "隐藏任务通过特定条件触发：到达特定地点、在特定时间与特定NPC对话、或拾取特殊物品。多探索多互动就能发现。",
+        "questionJa": "NTEで隠しクエストを見つけるには？",
+        "answerJa": "隠しクエストは、特定の場所を訪れる、特定の時間にNPCと話す、特別なアイテムを拾うなどの条件で発生します。十分に探索し、あらゆるものと交流して見つけてください。"
       },
       {
         "question": "How many chests are in Hethereau?",
         "questionZh": "海瑟劳城有多少宝箱？",
         "answer": "The exact number varies as the game updates, but there are hundreds of chests across all districts. Each region has a completion percentage tracker so you can see how many you've found.",
-        "answerZh": "随版本更新数量会变化，但全城有数百个宝箱。每个区域有完成度追踪器，可以查看你已找到的数量。"
+        "answerZh": "随版本更新数量会变化，但全城有数百个宝箱。每个区域有完成度追踪器，可以查看你已找到的数量。",
+        "questionJa": "Hethereauには宝箱がいくつありますか？",
+        "answerJa": "正確な数はゲーム更新で変わりますが、全地区には数百の宝箱があります。各地域には発見数を確認できる達成率トラッカーがあります。"
       },
       {
         "question": "Do chests respawn in NTE?",
         "questionZh": "异环宝箱会刷新吗？",
         "answer": "Most chests are one-time collection and do not respawn. However, some special chests in dynamic events may reappear. Focus on collecting permanent chests first for guaranteed rewards.",
-        "answerZh": "大部分宝箱是一次性收集的，不会刷新。但动态活动中的特殊宝箱可能重新出现。优先收集永久宝箱。"
+        "answerZh": "大部分宝箱是一次性收集的，不会刷新。但动态活动中的特殊宝箱可能重新出现。优先收集永久宝箱。",
+        "questionJa": "NTEの宝箱はリスポーンしますか？",
+        "answerJa": "ほとんどの宝箱は一度だけ収集でき、リスポーンしません。ただし、動的イベント内の一部の特別宝箱は再出現する場合があります。確実な報酬のため、恒久的な宝箱を先に集めてください。"
       },
       {
         "question": "What rewards do I get for 100% exploration?",
         "questionZh": "探索100%有什么奖励？",
         "answer": "Each region at 100% grants an exclusive title and a large amount of Fangs. Completing all regions to 100% unlocks an exclusive avatar frame and an S-rank material selector box.",
-        "answerZh": "每个区域100%给限定称号和大量方斯。全城100%解锁限定头像框和S级材料自选箱。"
+        "answerZh": "每个区域100%给限定称号和大量方斯。全城100%解锁限定头像框和S级材料自选箱。",
+        "questionJa": "探索100％ではどのような報酬を得られますか？",
+        "answerJa": "各地域を100％にすると限定称号と大量のFangsを得られます。全地域を100％にすると限定アバターフレームとSランク素材選択箱が解放されます。"
       }
-    ]
+    ],
+    "titleJa": "NTE隠しクエストと宝箱収集ガイド",
+    "summaryJa": "Hethereauにある隠しクエストと宝箱について、発生条件、場所、収集報酬をまとめたガイドです。",
+    "contentJa": "Hethereauには、メインストーリー以外にも多数の秘密クエストと宝箱が隠されています。このガイドは、それらをすべて見つける助けになります。\n\n## 隠しクエストシステム\n\n隠しクエストは、特定条件で発生するまでクエストログに表示されません。\n\n時間依存：ゲーム内の昼または夜にのみ現れるクエストがあります。\n場所依存：隠しエリアに入ると自動的にクエストが発生します。\nNPC交流：特定のNPCと話す、または特定の行動を行います。\nアイテム発生：特定のアイテムを拾うと、関連する隠しクエストが解放されます。\n\n## 隠しクエストの種類\n\n謎の依頼：人里離れた場所にいる謎めいたNPCから受ける特別なタスクです。希少素材と限定アイテムを得られます。\n\n収集シリーズ：特定のアイテム（anomaly fragments、memory shardsなど）を集めると発生します。\n\n連鎖クエスト：1つを完了すると次が解放され、報酬が段階的に増える複数ステップのクエストです。\n\n時間制限チャレンジ：特定エリアで制限時間内にすべての敵を倒します。\n\n## 宝箱システム\n\n宝箱は4段階あります。\n\n通常（白）：基本素材と少量通貨。最も数が多い。\n精巧（青）：より良い素材と中程度の通貨。少し隠されている。\n貴重（紫）：希少素材と多めの通貨。パズルや挑戦が必要。\n壮麗（金）：最も希少。貴重品と大量資源が入り、隠しクエストや複雑なパズルに関連します。\n\n## 収集のヒント\n\n1. 視覚的な手がかりを見る。光る物、不自然な地形、触れられるアイテム\n2. 乗り物を使って、探す範囲を広げる\n3. 隠しコンテンツの近くにある小さなヒントをミニマップで確認する\n4. 夜間探索。ゲーム内の夜にのみ現れるコンテンツもある\n5. すべてのNPCと話す。隠しコンテンツの場所を示すことがある\n6. 環境との交流を試す\n\n## 探索報酬\n\n- Fangs（ガチャ通貨）\n- キャラクターXP素材\n- 突破素材\n- ディスクセット\n- 限定称号とアバター\n- 実績ポイント\n\n## 完了報酬\n\n地域100％：限定称号＋大量のFangs。\n都市全体100％：限定アバターフレーム＋Sランク素材選択。\n\nゲーム内で探索進行度を確認してください。体系的に進めるため、地域ごとに完了しましょう。\n\n隠しコンテンツはNTE探索の中心的な楽しみです。時間をかけて周囲を観察し、驚きを見つけてください。さらに探索のヒントが必要な場合は、探索ガイドを参照してください。"
   },
   {
     "id": "vehicle-system-guide",
@@ -1490,27 +1753,38 @@
         "question": "When do vehicles unlock in NTE?",
         "questionZh": "异环载具什么时候解锁？",
         "answer": "Vehicles unlock after completing Chapter 1 of the main story. You'll receive a free basic sedan to get started.",
-        "answerZh": "完成主线第一章后解锁。系统会赠送一辆基础轿车作为起步。"
+        "answerZh": "完成主线第一章后解锁。系统会赠送一辆基础轿车作为起步。",
+        "questionJa": "NTEで乗り物はいつ解放されますか？",
+        "answerJa": "メインストーリー第1章を完了すると解放されます。開始用に無料の基本セダンを受け取ります。"
       },
       {
         "question": "How many vehicle types are in NTE?",
         "questionZh": "异环有几种载具？",
         "answer": "There are five main types: sedans (balanced), sports cars (speed), SUVs (durability), motorcycles (agility), and special event vehicles. Each suits different exploration scenarios.",
-        "answerZh": "主要有五种：轿车（均衡）、跑车（速度）、越野车（耐久）、摩托车（灵活）和活动限定特殊载具。各适合不同场景。"
+        "answerZh": "主要有五种：轿车（均衡）、跑车（速度）、越野车（耐久）、摩托车（灵活）和活动限定特殊载具。各适合不同场景。",
+        "questionJa": "NTEには何種類の乗り物がありますか？",
+        "answerJa": "主に5種類あります。セダン（バランス）、スポーツカー（速度）、SUV（耐久）、バイク（機動性）、イベント限定の特殊車両です。各タイプは異なる探索場面に向きます。"
       },
       {
         "question": "Can I customize my vehicles?",
         "questionZh": "异环载具可以改装吗？",
         "answer": "Yes, you can customize vehicle appearance with paint colors, decals, and wheel modifications. Customization is purely cosmetic and doesn't affect performance.",
-        "answerZh": "可以。可以自定义车身颜色、贴纸和轮毂。改装纯属外观，不影响性能。"
+        "answerZh": "可以。可以自定义车身颜色、贴纸和轮毂。改装纯属外观，不影响性能。",
+        "questionJa": "乗り物をカスタマイズできますか？",
+        "answerJa": "できます。塗装色、デカール、ホイールを変更できます。カスタマイズは見た目のみで性能には影響しません。"
       },
       {
         "question": "Are there racing events in NTE?",
         "questionZh": "异环有赛车活动吗？",
         "answer": "Yes, NTE has regular racing events including speed races, drift challenges, and timed delivery missions. These events offer exclusive vehicle rewards and rare materials.",
-        "answerZh": "有。异环定期举办竞速赛、漂移挑战和限时配送等赛车活动。活动奖励包括限定载具和稀有材料。"
+        "answerZh": "有。异环定期举办竞速赛、漂移挑战和限时配送等赛车活动。活动奖励包括限定载具和稀有材料。",
+        "questionJa": "NTEにはレースイベントがありますか？",
+        "answerJa": "あります。NTEではスピードレース、ドリフトチャレンジ、時間制限配達などのレースイベントが定期的に行われます。限定車両と希少素材が報酬です。"
       }
-    ]
+    ],
+    "titleJa": "NTE乗り物システムガイド：全車両と運転のヒント",
+    "summaryJa": "乗り物の入手方法、運転操作、車両タイプ、乗り物関連イベントを解説するNTE乗り物システムの完全ガイドです。",
+    "contentJa": "NTEの乗り物システムは特徴的な機能です。現代都市Hethereauでさまざまな乗り物を自由に運転でき、探索効率を上げ、レースイベントに参加して報酬を得られます。\n\n## 乗り物の解放\n\n乗り物は第1章を完了すると解放されます。無料の基本セダンを受け取り、都市各地の駐車場所で乗り物を呼び出せます。\n\n## 乗り物の入手方法\n\nストーリー報酬：メインクエストで無料の基本セダンを得る。\nショップ購入：Coinsで購入し、価格は数千から数万まで。\nイベント報酬：期間限定イベントで限定車両を得る。\n収集解放：実績到達点から特別な乗り物を得る。\n\n## 車両タイプ\n\nセダン：速度と操作性のバランスがよく、一般探索に最適。\nスポーツカー：非常に速いが操作が難しく、直線レースに向く。\nSUV：耐久性と安定性があり、荒れた地形に強い。\nバイク：小回りが利き、加速が速く、狭い路地を通れる。\n特殊車両：特別な効果を持つ、イベント／実績の固有報酬。\n\n## 運転操作\n\nPC：WASDで操舵／加速、Spaceでハンドブレーキ、Shiftでブースト。\nモバイル：仮想ジョイスティック＋ボタン。\nPS5：コントローラーのスティックとトリガー。\n\n## 運転のヒント\n\n1. 長い直線道路ではブーストを使う\n2. ハンドブレーキドリフトでコーナーの速度を維持する\n3. バイクは車が通れない狭い路地を通れる\n4. SUVは隠しコンテンツを見つけるためにオフロードを走れる\n5. 物件の近くに乗り物を駐車して装飾にする\n\n## 乗り物と探索\n\n乗り物は場面ごとに適します。中心街の路地にはバイク、郊外にはSUV、高速道路にはスポーツカーが向いています。乗り物はHethereauを横断する移動速度を大きく高めます。\n\n## レースイベント\n\nスピードレース：他プレイヤーと最速ラップタイムを競う。\nドリフトチャレンジ：ドリフトの距離と時間で得点を競う。\n時間制限配達：制限時間内に配達を完了する。\n\n報酬には限定車両、希少素材、大量のFangsが含まれます。\n\n## 車両カスタマイズ\n\n一部の車両は外見のカスタマイズに対応します。塗装色、デカール、ホイールを変更できます。見た目だけで、性能への影響はありません。\n\nNTEの乗り物システムは都市探索をより動的で楽しいものにします。さまざまな場面に備えて異なるタイプを集めましょう。さらに探索のヒントが必要なら、探索ガイドを参照してください。"
   },
   {
     "id": "photo-mode-guide",
@@ -1540,25 +1814,33 @@
         "question": "How do I access photo mode in NTE?",
         "questionZh": "异环中如何进入拍照模式？",
         "answer": "Press the P key on PC, the touchpad or Select button on controller, or tap the camera icon on mobile. You can also access it through the main menu or the quick wheel.",
-        "answerZh": "PC端按P键，手柄端按触摸板或Select键，移动端点击右上角相机图标。也可以通过主菜单或快捷轮盘进入。"
+        "answerZh": "PC端按P键，手柄端按触摸板或Select键，移动端点击右上角相机图标。也可以通过主菜单或快捷轮盘进入。",
+        "questionJa": "NTEでフォトモードに入るには？",
+        "answerJa": "PCではPキー、コントローラーではタッチパッドまたはSelectボタン、モバイルではカメラアイコンを使います。メインメニューまたはクイックホイールからも入れます。"
       },
       {
         "question": "Can I change the time of day in photo mode?",
         "questionZh": "拍照模式可以调整时间吗？",
         "answer": "Yes, photo mode includes a time slider that lets you set the scene to any time of day. Weather effects can also be changed independently. These adjustments only apply within photo mode and do not affect your actual game progression.",
-        "answerZh": "可以。拍照模式内置时间滑块，可以将场景调整为一天中的任意时刻。天气效果也可以独立切换。这些调整仅在拍照模式内生效，不会影响实际游戏进度。"
+        "answerZh": "可以。拍照模式内置时间滑块，可以将场景调整为一天中的任意时刻。天气效果也可以独立切换。这些调整仅在拍照模式内生效，不会影响实际游戏进度。",
+        "questionJa": "フォトモードで時間帯を変更できますか？",
+        "answerJa": "できます。フォトモードには、好きな時刻へ場面を設定する時間スライダーがあります。天候効果も個別に変更できます。これらはフォトモード内のみで適用され、実際のゲーム進行には影響しません。"
       },
       {
         "question": "Are there hidden photo spots that give achievements?",
         "questionZh": "异环有隐藏的成就拍照点吗？",
         "answer": "Yes, there are special photo locations scattered throughout the world tied to achievements. When you aim your camera at these spots, a camera icon hint will appear. Completing these photos earns Star Rail Coins, rare materials, and limited titles.",
-        "answerZh": "有。世界各地散布着与成就关联的特殊拍照地点。将镜头对准这些地点时会出现相机图标提示，完成拍照可获得星轨币、稀有材料和限定称号。"
+        "answerZh": "有。世界各地散布着与成就关联的特殊拍照地点。将镜头对准这些地点时会出现相机图标提示，完成拍照可获得星轨币、稀有材料和限定称号。",
+        "questionJa": "実績が得られる隠し撮影場所はありますか？",
+        "answerJa": "あります。世界各地には実績に関連した特別な撮影場所があります。カメラを向けるとカメラアイコンのヒントが表示されます。撮影を完了するとStar Rail Coins、希少素材、限定称号を得られます。"
       },
       {
         "question": "Can I pose multiple characters together in one photo?",
         "questionZh": "拍照模式可以让多个角色一起合影吗？",
         "answer": "Yes, you can summon all party members into the frame for a team photo. You can freely adjust each character's position and pose. Certain character combinations even unlock exclusive interaction poses.",
-        "answerZh": "可以。你可以召唤队伍中的全部角色同时进入画面，自由调整各自的站位和姿势。特定角色组合还会解锁专属互动姿势。"
+        "answerZh": "可以。你可以召唤队伍中的全部角色同时进入画面，自由调整各自的站位和姿势。特定角色组合还会解锁专属互动姿势。",
+        "questionJa": "1枚の写真に複数キャラクターをポーズさせられますか？",
+        "answerJa": "できます。パーティメンバー全員を画面に呼び、位置とポーズを自由に調整できます。特定のキャラクター組み合わせでは限定インタラクションポーズも解放されます。"
       }
     ],
     "serpTitle": {
@@ -1587,7 +1869,10 @@
         "隠しスポット前にフィルター、ポーズ、時間、天気、被写界深度。",
         "NTE photo mode / camera / screenshot / Hethereau検索向け。"
       ]
-    }
+    },
+    "titleJa": "NTEフォトモードガイド：カメラ操作、フィルター、ポーズ、おすすめ撮影場所",
+    "summaryJa": "カメラの起動、操作、フィルター、キャラクターポーズ、時間・天候、被写界深度、Hethereauの撮影場所、スクリーンショット構図を解説するNTEフォトモードガイドです。",
+    "contentJa": "## 2026年8月3日時点のフォトモード簡易回答\n\nNTEのフォトモードやカメラを調べているなら、まずカメラの開き方、HUDを隠してフィルターを使う方法、キャラクターや都市風景を撮る場所の3つを確認してください。隠し撮影場所を探す前に、時間、天候、ポーズ、被写界深度を調整しましょう。\n\nフォトモードはNeverness to Everness（NTE）で特に愛されている息抜き機能の一つです。旅の途中で壮大な風景を撮る場合も、キャラクターの象徴的な戦闘シーンを残す場合も、フォトモードには必要な機能があります。このガイドでは、フォトモードへの入り方、全機能、構図技術、隠し撮影場所を扱います。\n\n## フォトモードへの入り方\n\nフォトモードには複数の方法で入れます。\n\n1. **ホットキー**：PCでは「P」キー。コントローラーではタッチパッドまたはSelectボタン。モバイルでは画面右上のカメラアイコンをタップ。\n2. **メニュー**：メインメニューを開き、「Photo」オプションを選ぶ。\n3. **クイックホイール**：クイックホイールキー（PCではAlt）を長押しし、円形メニューからカメラアイコンを選ぶ。\n\nフォトモードに入ると、ゲームはすべての動的イベントを自動で一時停止します（戦闘撮影を除く）。時間をかけて撮影を調整できます。\n\n## カメラ操作\n\nフォトモードでは、精密な構図のために包括的なカメラ操作が使えます。\n\n- **ズーム**：マウスホイールまたはコントローラートリガーでズームします。焦点距離は超広角（24mm相当）から望遠（200mm相当）までです。広角は都市のパノラマに、望遠はキャラクターのクローズアップに向きます。\n- **回転**：右クリックを押したままマウスをドラッグするか、コントローラーの右スティックで、カメラを任意方向に360度回転させます。\n- **チルト**：マウスを上下にドラッグするかスティックを傾け、カメラのピッチを調整します。ローアングルから俯瞰まで自由に切り替えられます。\n- **パン**：Shiftを押したままマウスをドラッグし、視野角を変えずに水平・垂直にカメラを動かします。構図の微調整に最適です。\n\n## フィルターシステム\n\nNTEのフォトモードには、写真に独自の芸術的なスタイルを与える多様な内蔵フィルターがあります。\n\n- **クラシックフィルター**：Vivid、Soft、Vintage、Film、Black & Whiteの基本フィルターがあり、それぞれ3段階の強度を選べます。\n- **テーマフィルター**：バージョンごとに更新される期間限定のテーマフィルターです。例として「Cherry Blossom Season」「Neon Night」「Winter Warmth」があり、現在のバージョンのイベントテーマに対応します。\n- **カスタムフィルター**：上級者は色温度、色かぶり、彩度、コントラスト、ビネットなどを手動で調整し、完全に個人向けのフィルタースタイルを作れます。\n\n## キャラクターのポーズと表情\n\nフォトモードでは、現在のパーティにいるキャラクターへさまざまなポーズを設定できます。\n\n- **標準ポーズ**：各キャラクターには立ち、座り、インタラクションなど複数の固有ポーズがあり、性格を反映します。\n- **表情システム**：笑顔、真剣、驚き、喜びなどの表情に切り替えられます。一部のキャラクターには期間限定の特別表情もあります。\n- **チーム写真**：すべてのパーティメンバーを同時に画面へ呼び、位置とポーズを自由に調整してグループ写真を作れます。\n- **インタラクションポーズ**：特定のキャラクター組み合わせを配置すると、限定の相互作用ポーズが解放されます。これらの隠しポーズは試行を通じて見つけます。\n\n## 時間と天候の操作\n\nフォトモードでは、ゲーム内の時間と天候を自由に調整できます。\n\n- **時間調整**：時間スライダーを動かして、好きな時刻に設定します。日の出、昼、夕暮れ、深夜では光が大きく異なり、適切な時間選びがよい写真の鍵です。日の出1時間後と日没1時間前のゴールデンアワーは最も柔らかく美しい光を得られます。\n- **天候効果**：晴れ、曇り、厚い雲、小雨、大雨、霧などを選べます。雨の日は地面の水たまりに反射が現れ、霧は神秘的な雰囲気を作ります。\n\n注：時間と天候の調整はフォトモード内でのみ適用され、実際のゲーム世界の時間進行には影響しません。\n\n## 被写界深度\n\nフォトモードでは専門的な被写界深度操作ができます。\n\n- **絞り調整**：実写カメラの絞り効果を再現します。大きな絞り（f/1.4）は強い背景ぼけを作り、小さな絞り（f/16）は画面全体をシャープに保ちます。\n- **フォーカス選択**：画面内の任意の場所をクリックしてピント位置を設定します。焦点面の外側は自然なボケになります。\n- **ボケ形状**：円形、六角形、星型のボケを選び、夜景の光源に異なる表情を加えます。\n\n## 実績撮影スポット\n\nNTE世界の各地には、実績に関連する特別な撮影場所があります。特定のランドマークへカメラを向けると、ヒントとして特別なカメラアイコンが表示されます。これらの場所で撮影を完了すると、Star Rail Coins、希少素材、限定称号などの実績報酬を解放します。知られている実績撮影スポットには、象徴的な建物を含むHethereauのスカイライン、夜のネオンに照らされたダウンタウンの通り、港湾地区の夕日パノラマがあります。\n\n## Hethereauの隠し撮影場所\n\nHethereauには、優れているが見つけにくい撮影場所が多数あります。\n\n- **屋上庭園**：一部の高層ビルには、都市全体を見下ろせる隠れた庭園テラスがあります。\n- **地下通路**：一部の地下通路の先には意外な景色があります。照明効果と組み合わせると、印象的なサイバーパンク風写真を撮れます。\n- **川沿いの小道**：都市の水路を歩くと、キャラクターと自然風景を組み合わせるのに向く静かな場所を見つけられます。\n- **スカイブリッジ**：2つの建物を結ぶガラス通路は、下の街と上の空を1フレームに収められる独自の視点です。\n\n## スクリーンショットのヒント\n\n1. **三分割法を使う**：画面を横・縦に3分割し、被写体を交点に置くと、最も古典的で安定した構図になります。\n2. **リーディングラインを使う**：都市の道路、橋、建築線は、見る人の視線を被写体へ導く線になります。\n3. **光の方向を見る**：逆光はシルエットとレンズフレアを作り、サイド光はキャラクターの輪郭を際立たせ、正面光は細部を見せるのに適します。\n4. **環境要素を取り入れる**：キャラクターを手すりにもたれさせたりベンチに座らせたりして、より自然で生き生きした写真にします。\n5. **焦点距離を試す**：広角は環境の雰囲気に、望遠は空間を圧縮して被写体を強調するのに向き、50mm付近は人の視野に近く自然な写真になります。\n6. **背景を整理する**：雑然とした背景は被写体から注意をそらします。被写界深度のぼけや角度調整で背景を単純にしてください。\n\n## 共有オプション\n\n撮影後はローカルアルバムに保存するか、ゲーム内コミュニティへ直接共有できます。ゲームはSNSへのワンタップ共有をサポートします。また、パーソナルスペースの壁にベストショットを表示し、他プレイヤーが閲覧・評価できる「Photo Wall」機能もあります。\n\n各写真には使用した時間、場所、カメラ設定が自動で記録され、後で同じ効果を再現しやすくなります。ゲームは構図、光などに基づき写真を採点し、撮影技術の改善に役立てます。\n\nフォトモードはNTE体験の独自の魅力です。写真を追求する人も、旅を記録したいカジュアルプレイヤーも、このシステムで楽しめます。カメラを手に取り、Neverness to Evernessの世界で見落とされている美しい瞬間を見つけましょう。"
   },
   {
     "id": "nanally-guide",
@@ -1615,7 +1900,10 @@
     ],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "Nanally完全ガイド：T0キャットファイターのビルド",
+    "summaryJa": "NanallyはNTE v1.0のT0限定キャラクターです。スキル、チーム構成、Arc、ディスク構成をまとめた完全ガイドです。",
+    "contentJa": "NanallyはNTE v1.0のピックアップバナーキャラクターで、T0と評価されています。猫族の近接戦闘ファイターです。結論だけ言えば、引く価値があります。\n\n## キャラクター概要\n\n- レアリティ：Sランク｜元素：Anima｜役割：メインDPS\n- 入手先：限定バナー（v1.0）\n\n## スキル分析\n\n- 通常攻撃：最後の一撃が強い連続近接コンボ\n- 元素スキル（E）：元素を伴う強力な単体／小範囲攻撃\n- バースト（Q）：高いバーストダメージと広い範囲。T0の中核スキル\n- パッシブ：元素反応後に追加ダメージ\n\n## チーム構成\n\n最適：Nanally＋Jiuyuan＋Mint＋Adler\n無課金向け：Nanally＋主人公＋Mint＋Xiaozhi\n\n## Arc（武器）\n\n- 最適：モチーフArc\n- 代替：会心率／会心ダメージを主ステータスに持つもの\n- 優先度：会心率 ＞ 会心ダメージ ＞ 攻撃力％ ＞ 元素ダメージ\n\n## ディスク（アーティファクト）\n\n- 最適：攻撃力＋元素ダメージの4セット\n- 代替：攻撃力2＋元素2の混成\n- メインステータス：攻撃力％／元素ダメージ／会心\n\n## 覚醒\n\n1. A1：必殺技ダメージ上昇（最優先）\n2. A2：コンボ強化\n3. A3以降：あればよい\n\n## 評価\n\nv1.0で最も投資価値のあるキャラクターで、汎用的なメインDPSです。"
   },
   {
     "id": "jiuyuan-guide",
@@ -1643,7 +1931,10 @@
     ],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "Jiuyuan完全ガイド：T0集敵・サブDPSビルド",
+    "summaryJa": "Jiuyuanは集敵とサブDPSでT0評価を受ける、最強クラスの恒常キャラクターです。6択1選択に最もおすすめのキャラクターです。",
+    "contentJa": "Jiuyuanは恒常キャラクターの中で最も入手価値が高いとされています。T0の集敵役＋サブDPSで、6択1選択への決定的な答えです。\n\n## 概要\n\n- Sランク｜Anima｜集敵／サブDPS／ヒーラー（A1）\n- 入手先：恒常バナー／6択1\n\n## Jiuyuanを選ぶ理由\n\n1. ゲーム内最大の広範囲集敵\n2. 完璧なDPS時間を作る\n3. A1で回復が解放され、1人で3役を担う\n4. 恒常バナーのため、限定の引きを使わない\n\n## チーム構成\n\n- Nanally＋Jiuyuan＋Mint＋Adler（T0）\n- Baicang＋Jiuyuan＋Mint＋主人公\n- Xiaozhi＋Jiuyuan＋Mint＋Edgar（無課金向け）\n\n## Arcとディスク\n\nエネルギー回復と元素熟知に集中してください。\n\n## 覚醒\n\nA1は回復を解放するため重要です。A2は集敵を強化します。\n\n## 評価\n\n最も安全な投資で、どのチームにも入れます。"
   },
   {
     "id": "character-selector-guide",
@@ -1671,7 +1962,10 @@
     ],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "NTEキャラクター選択ガイド：誰を選ぶべきか",
+    "summaryJa": "NTEでは複数の無料Sランク選択が用意されています。最適な選択のために各候補を分析するガイドです。",
+    "contentJa": "NTEでは、ローンチ時に寛大な無料Sランク選択が用意されています。\n\n## 利用できる選択\n\n1. 初心者バナー20回選択\n2. 恒常バナー50回選択\n3. City Tycoonの無料Xiaozhi（最大強化）\n\n## ランキング\n\n1. Jiuyuan：T0集敵、A1で回復。すべてのチームに合う。\n2. Hayamu：T0バーストDPS\n3. Baicang：T1汎用DPS\n4. Hotori：唯一のSランクサポート\n5. Haniel：ニッチな価値\n\n## 状況別の助言\n\n- 初心者：Jiuyuanを選ぶ（集敵は最も希少）\n- Jiuyuanを所持：HayamuまたはBaicangを選ぶ\n- Nanallyを所持：それでもJiuyuanを選ぶ\n- 無課金：Jiuyuan ＞ Baicang ＞ Hayamu\n- Xiaozhiを所持：それでもJiuyuanを選ぶ\n\n## 評価\n\n答えは1つです。Jiuyuan。所持している場合はHayamuまたはBaicangを選んでください。"
   },
   {
     "id": "baicang-guide",
@@ -1699,7 +1993,10 @@
     ],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "Baicang完全ガイド：T1汎用DPSビルド",
+    "summaryJa": "BaicangはNTEのT1 Sランクキャラクターで、メインまたはサブキャリーとして使える汎用DPSです。スキル、チーム、Arc、ディスク構成を解説します。",
+    "contentJa": "BaicangはNTEローンチ時において最も汎用性の高いDPSの一人です。JiuyuanまたはHayamuを選ばなかった場合、Baicangが最もよいDPS追加候補です。\n\n## 概要\n\n- Sランク｜Incantation｜メイン／サブDPS\n- 入手先：恒常バナー／6択1\n\n## スキル\n\n- 通常攻撃：安全な位置取りができる、射程のよい遠距離攻撃\n- Eスキル：元素効果を伴う範囲攻撃、中程度のクールダウン\n- Qバースト：高倍率のバーストで、DPSの中核\n- パッシブ：特定元素の味方がいると元素ダメージボーナス\n\n## チーム構成\n\n- Baicang＋Jiuyuan＋Mint＋Adler（標準）\n- Baicang＋Nanally＋Mint＋Jiuyuan（2DPS）\n- Baicang＋Xiaozhi＋Mint＋Edgar（無課金向け）\n\n## Arcとディスク\n\n- 最適Arc：モチーフArc\n- 代替：会心率／会心ダメージを主ステータスに持つもの\n- ディスク：元素ダメージ＋攻撃力4セット、または2＋2混成\n- 優先度：会心率 ＞ 会心ダメージ ＞ 攻撃力％ ＞ 元素ダメージ\n\n## 覚醒\n\nA1：中核スキルダメージ。A2：反応強化。A3以降：段階的な上昇。\n\n## 評価\n\n最もバランスのよいDPSです。選択ではJiuyuanとHayamuに次ぐ3番目の候補です。"
   },
   {
     "id": "mint-guide",
@@ -1727,7 +2024,10 @@
     ],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "Mint完全ガイド：高相性ローンチサポートビルド",
+    "summaryJa": "MintはNTEローンチ時を代表するAランクキャラクターで、非常に高い汎用性を持つ猫耳キャラクターです。スキル、チーム、Arc、ディスク構成を解説します。",
+    "contentJa": "MintはNTEで最も象徴的なAランクキャラクターの一人です。Aランクでありながら、その汎用性は多くのSランクをしのぎます。ほぼすべてのおすすめチームに登場します。\n\n## 概要\n\n- Aランク｜Anima｜サポート／ヒーラー／サブDPS\n- 入手先：恒常バナー／無料\n\n## Mintを育てる理由\n\n1. 無料で入手でき、低投資でよい\n2. ほぼすべてのチームに入る\n3. 回復とバフの両方を提供する\n4. 象徴的な猫耳デザイン\n5. Sランクの枠を使わない\n\n## スキル\n\n- 通常攻撃：ダメージは平均的だが、Mintは主に控えからサポートする\n- Eスキル：チームバフ。中核となる価値\n- Qバースト：回復＋バフ。エネルギーコストが低く頻繁に使える\n- パッシブ：非アクティブ時にも控え効果を発揮する\n\n## チーム構成\n\nMintはどこにでも入ります。\n\n- Nanally＋Jiuyuan＋Mint＋Adler\n- Baicang＋Jiuyuan＋Mint＋主人公\n- Xiaozhi＋Jiuyuan＋Mint＋Edgar\n\n「入れて間違いない」キャラクターです。\n\n## Arcとディスク\n\n- 重視：エネルギー回復＋元素熟知\n- ディスク：エネルギー回復4セット、またはHPとの2＋2\n- 会心／攻撃力Arcは不要\n\n## 覚醒\n\nA1：回復とバフを改善。A2：控え効果を強化。A3以降：任意。\n\n## 評価\n\n最も投資価値のあるAランクキャラクターです。無料で、汎用的で、有効な最高の仲間です。"
   },
   {
     "id": "arc-tier-list",
@@ -1749,7 +2049,10 @@
     "relatedCharacters": [],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "Arc（武器）Tierリスト：最新T0〜T2ランキング",
+    "summaryJa": "役割別に分類し、モチーフArcと汎用Arcを比較したNTEローンチ版の最新Arc Tierリストです。",
+    "contentJa": "ArcはNTEの中核装備です。適切なArcを選ぶと性能に大きく影響します。ランキングはローンチ後データに基づきます。\n\n## Arcシステム\n\n- ガチャ（Arc Research Plan）で入手\n- 基本確率3％、二重天井システム\n- 各キャラクターにはモチーフArc（最適選択）がある\n\n## T0 Arc（必ず引くべき）\n\n- Nanallyモチーフ：最大ダメージ上昇、追加の会心と元素ダメージ\n- Jiuyuanモチーフ：集敵時間延長、エネルギー回復向上\n\n## T1 Arc（強く推奨）\n\n- Baicangモチーフ：遠距離DPS上昇、会心ダメージ\n- 汎用会心Arc：会心率／会心ダメージ。モチーフなしのすべてのDPSに最適\n- 汎用回復Arc：エネルギー回復。すべてのサポートに最適\n\n## T2 Arc（使用可能）\n\n- 汎用攻撃力Arc：攻撃力％。移行用としてよい\n- 汎用元素熟知Arc：反応チーム向け\n\n## ステータス優先度\n\nDPS：会心率 ＞ 会心ダメージ ＞ 攻撃力％ ＞ 元素ダメージ\nサポート：エネルギー回復 ＞ 元素熟知 ＞ HP％\n\n## ヒント\n\n1. まずメインDPSのモチーフを引く\n2. サポートは汎用Arcを使える\n3. 天井システムに合わせて引く計画を立てる"
   },
   {
     "id": "disk-set-guide",
@@ -1771,7 +2074,10 @@
     "relatedCharacters": [],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "ディスクセット完全ガイド：全セット効果と構成のおすすめ",
+    "summaryJa": "全2セット／4セット効果、適用キャラクター、サブステータス範囲、最適な組み合わせを含む完全ディスクセットガイドです。",
+    "contentJa": "ディスクはNTEの装備システムで、他ゲームのアーティファクトに似ています。このガイドではすべてのディスクセット、効果、構成のおすすめを扱います。\n\n## システムの基本\n\n- キャラクターごとに4枚のディスク\n- 2セットと4セットのセットボーナス\n- メインステータス＋サブステータス\n- サブステータスはランダムで、強化できる\n\n## DPSディスクセット\n\n### 攻撃力セット\n\n- 2セット：攻撃力＋15％｜4セット：反応後に会心＋8％、攻撃力＋12％\n- 最適：すべてのメインDPS\n\n### 元素ダメージセット\n\n- 2セット：元素ダメージ＋15％｜4セット：スキル使用後に＋20％\n- 最適：元素重視のDPS\n\n### 会心セット\n\n- 2セット：会心率＋12％｜4セット：会心ダメージ＋20％\n- 最適：高会心構成\n\n## サポートディスクセット\n\n### エネルギー回復セット\n\n- 2セット：ER＋20％｜4セット：バースト後にチームER＋10％\n- 最適：すべてのサポート\n\n### 元素熟知セット\n\n- 2セット：EM＋80｜4セット：反応後にチームEM＋40\n- 最適：反応の起点役\n\n### HPセット\n\n- 2セット：HP＋15％｜4セット：回復＋15％、回復対象に攻撃力＋10％\n- 最適：ヒーラー\n\n## メインステータスガイド\n\nスロット1：攻撃力％（DPS）／ERまたはHP％（サポート）\nスロット2：元素ダメージ（DPS）／EM（サポート）\nスロット3：会心率／会心ダメージ（DPS）／HP％（サポート）\nスロット4：攻撃力％（DPS）／ER（サポート）\n\n## 重要な原則\n\n正しいメインステータス ＞ セットボーナス ＞ サブステータスの最適化。"
   },
   {
     "id": "money-making-guide",
@@ -1793,7 +2099,10 @@
     "relatedCharacters": [],
     "relatedLocations": [],
     "relatedLore": [],
-    "faq": []
+    "faq": [],
+    "titleJa": "NTE金策ガイド：CreditsとVonsの周回ルート",
+    "summaryJa": "CreditsとVonsはNTEの中核通貨です。富を効率よく蓄えるための周回ルートと方法を解説します。",
+    "contentJa": "CreditsとVonsはNTEで最も重要な2つの通貨です。賢い周回ルートは育成のボトルネックを最小化します。\n\n## 通貨の種類\n\n- Credits：キャラクター強化、スキル、装備\n- Vons：ショップ購入、特別アイテム\n- Ring Stones：ガチャ通貨（最も貴重）\n\n## 毎日必ず行うこと\n\n- デイリークエスト4件（約15分）：Credits＋EXP＋Vons\n- 通貨領域：大量のCreditsを得る\n- City Tycoon：毎日の受動収入\n\n## 週次収入\n\n- 週次タスク：多くのVonsとCredits\n- Anomalyダンジョン：Credits＋希少素材\n\n## 効率的なルート\n\n### デイリーループ（30分）\n\n1. デイリー4件を完了する\n2. 通貨領域を1〜2回周回する\n3. City Tycoonの収入を回収する\n4. 活動報酬を受け取る\n\n### メインストーリー（序盤の優先）\n\n1. メインクエストのCredits報酬\n2. サイドクエストのボーナス\n3. オープンワールドの宝箱\n4. エリア解放の一回限りの報酬\n\n## 節約のヒント\n\n1. 3〜4人のコアキャラクターに集中する\n2. ショップ素材はスタミナ周回より安い場合がある\n3. 週次割引を逃さない\n4. スキルレベルよりキャラクターレベルを優先する\n\n## 優先度\n\nCredits：レベル突破 ＞ コアスキル ＞ ディスク強化\nVons：週次割引素材 ＞ 突破素材"
   },
   {
     "id": "shop-exchange-guide",
@@ -1820,15 +2129,22 @@
         "question": "What should I buy first in NTE shops?",
         "questionZh": "异环商店优先买什么？",
         "answer": "Always prioritize event shop items (limited time), then weekly shop ascension materials, discounted daily items, and Honor shop monthly limits.",
-        "answerZh": "优先兑换限时活动商店，然后是每周商店的突破材料、折扣日商店物品和荣誉商店月限。"
+        "answerZh": "优先兑换限时活动商店，然后是每周商店的突破材料、折扣日商店物品和荣誉商店月限。",
+        "questionJa": "NTEのショップでは何を最初に買うべきですか？",
+        "answerJa": "常にイベントショップのアイテム（期間限定）を優先し、次に週次ショップの突破素材、割引されたデイリーアイテム、名誉ショップの月間上限を優先してください。"
       },
       {
         "question": "How do I get more currency in NTE?",
         "questionZh": "异环如何获得更多货币？",
         "answer": "Complete daily and weekly missions for Vons, participate in events for event currency, do 10 daily arena runs for Honor Coins, and upgrade City Tycoon buildings for passive City Coins.",
-        "answerZh": "完成每日每周任务获得Vons，参加活动获得活动货币，每日打10次竞技场获得荣誉币，升级城市大亨建筑获得被动城市币。"
+        "answerZh": "完成每日每周任务获得Vons，参加活动获得活动货币，每日打10次竞技场获得荣誉币，升级城市大亨建筑获得被动城市币。",
+        "questionJa": "NTEでより多くの通貨を得るには？",
+        "answerJa": "Vonsはデイリーと週次ミッション、イベント通貨はイベント、Arena Coinsは毎日10回のアリーナ、City CoinsはCity Tycoonの建物アップグレードから得られます。"
       }
-    ]
+    ],
+    "titleJa": "NTEショップ交換優先度ガイド：各ショップで買うべき最良アイテム",
+    "summaryJa": "一般、週次、イベント、City Tycoon、名誉、ギルドショップにおける購入優先度をまとめ、各通貨を最大化するNTEショップ交換ガイドです。",
+    "contentJa": "## ショップ交換優先度ガイド\n\nNTEには異なる通貨を使う複数のショップシステムがあります。交換優先度を計画すると、資源効率を最大化し、キャラクター育成を加速できます。\n\n## 全ショップの概要\n\n| ショップ | 通貨 | リセット | 優先度 |\n| --- | --- | --- | --- |\n| 一般ショップ | Vons | 毎日 | 中 |\n| 週次ショップ | Vons | 毎週 | 高 |\n| イベントショップ | イベント通貨 | イベント中 | 最高 |\n| City Tycoon | City Coins | 毎週 | 高 |\n| 名誉ショップ | Arena Coins | 毎月 | 高 |\n| ギルドショップ | Guild Coins | 毎週 | 中 |\n\n## 一般ショップの優先度（毎日）\n\n1. **割引スキル素材**：30％以上の割引なら必ず買う\n2. **経験値本**：キャラクターレベル上げに必須\n3. **強化鉱石**：武器強化に必要\n4. **見送る**：基本クラフト素材（オープンワールドで集められる）\n\n## 週次ショップの優先度\n\n1. **キャラクター突破素材**：時間制限があるため毎週買う\n2. **希少強化アイテム**：入手可能数が限られる\n3. **レシピ設計図**：新しいクラフトアイテムを解放する\n4. **Vons**（通貨が余っている場合のみ）\n\n## イベントショップの優先度\n\nイベントショップは使った通貨に対する価値が最も高いです。**常にすべて交換してください。**\n\n1. **プレミアム通貨**（無料ガチャ回数）\n2. **限定イベントアイテム**：再登場しない可能性がある\n3. **キャラクター突破素材**\n4. **スキル本と経験値素材**\n5. **残りのアイテム**：イベント終了前にすべての通貨を使う\n\n## City Tycoonショップ\n\nCity TycoonはCity Coinsを通じて受動収入を生みます。\n\n1. **希少素材**：他の場所では入手できない\n2. **キャラクターの欠片**：新キャラクター解放に向けて進める\n3. **アップグレード素材**：City Coin生産を上げる建物用\n4. **コスメティック**：必須アイテムの後に購入\n\n## 名誉ショップ（Arena Coins）\n\n対戦モードで獲得します。\n\n1. **週次スキル素材**：コインあたりの価値が最も高い\n2. **突破素材**：月間上限あり\n3. **限定武器設計図**：アリーナ限定武器\n4. **称号とコスメティック**：名誉アイテム\n\n## ギルドショップ\n\n1. **ギルド限定レシピ**\n2. **スキル素材**：週次周回を補う\n3. **強化アイテム**\n4. **貢献アイテム**：ギルドレベルを上げ、よりよい報酬を得る\n\n## 週ごとの買い物チェックリスト\n\n毎週このリストを使い、重要な購入を逃さないようにしましょう。\n\n- [ ] 割引されたデイリーショップ素材をすべて買う\n- [ ] 週次ショップの突破素材をすべて交換する\n- [ ] タイマーが切れる前にイベント通貨をすべて使う\n- [ ] 名誉ショップの月間上限を購入する\n- [ ] ギルドに貢献し、Guild Coinsを使う\n\n## 通貨を集めるヒント\n\n- **Vons**：デイリーと週次を完了し、余剰素材を売る\n- **イベント通貨**：イベント開催中はイベントクエストに集中する\n- **Arena Coins**：毎日のアリーナ挑戦10回を行う\n- **City Coins**：City Tycoonモードで収入建物をアップグレードする\n- **Guild Coins**：毎日ギルド活動に参加する"
   },
   {
     "id": "city-tycoon-guide",
@@ -1883,27 +2199,38 @@
         "question": "How long does it take to get the free S-rank character Xiaozhi from City Tycoon?",
         "questionZh": "都市大亨获取免费S级角色小吱需要多长时间？",
         "answer": "Approximately 6-8 weeks of consistent daily play. You need 60 Xiaozhi fragments earned through City Tycoon milestones. Daily time investment is only 5-10 minutes to collect income and manage buildings.",
-        "answerZh": "大约需要6-8周的持续经营。你需要通过都市大亨里程碑奖励集齐60个小吱碎片。每天只需投入5-10分钟收取收益和管理建筑即可。"
+        "answerZh": "大约需要6-8周的持续经营。你需要通过都市大亨里程碑奖励集齐60个小吱碎片。每天只需投入5-10分钟收取收益和管理建筑即可。",
+        "questionJa": "City Tycoonから無料SランクキャラクターXiaozhiを得るにはどのくらいかかりますか？",
+        "answerJa": "毎日継続して約6〜8週間です。City Tycoonの到達点で得るXiaozhiの欠片60個が必要です。収入回収と建物管理に必要な時間は1日5〜10分だけです。"
       },
       {
         "question": "What is the best building to construct first in City Tycoon?",
         "questionZh": "都市大亨第一个建什么建筑最好？",
         "answer": "Build a Restaurant first. It has the best cost-to-income ratio among commercial buildings, pays back in about 2 days, and pairs well with a Convenience Store for the +10% synergy bonus.",
-        "answerZh": "第一个建议建造餐厅。餐厅在商业建筑中性价比最高，大约2天即可回本，搭配便利店还能触发+10%收益的联动效果。"
+        "answerZh": "第一个建议建造餐厅。餐厅在商业建筑中性价比最高，大约2天即可回本，搭配便利店还能触发+10%收益的联动效果。",
+        "questionJa": "City Tycoonで最初に建てるべき最良の建物は何ですか？",
+        "answerJa": "まずレストランを建ててください。商業建物の中でコスト対収入比が最もよく、約2日で回収でき、コンビニとの組み合わせで収入＋10％の相乗効果を得ます。"
       },
       {
         "question": "Does City Tycoon use stamina?",
         "questionZh": "都市大亨消耗体力吗？",
         "answer": "No. City Tycoon is completely independent from the main stamina system. It uses its own City Coins currency and does not consume any stamina, making it essentially free content.",
-        "answerZh": "不消耗。都市大亨完全独立于主线的体力系统，使用自己的城市币货币，不消耗任何体力，可以说是完全免费的额外玩法。"
+        "answerZh": "不消耗。都市大亨完全独立于主线的体力系统，使用自己的城市币货币，不消耗任何体力，可以说是完全免费的额外玩法。",
+        "questionJa": "City Tycoonはスタミナを使いますか？",
+        "answerJa": "使いません。City Tycoonはメインのスタミナシステムから完全に独立し、独自のCity Coinsを使います。スタミナを消費しないため、実質的に無料のコンテンツです。"
       },
       {
         "question": "Can I lose progress in City Tycoon if I don't log in?",
         "questionZh": "不登录会导致都市大亨进度损失吗？",
         "answer": "Your buildings and upgrades are permanent and never degrade. The only thing you lose by not logging in is income that exceeds the storage cap. Log in at least once daily to collect and you'll be fine.",
-        "answerZh": "你的建筑和升级是永久的，不会降级。不登录唯一的损失是收益达到存储上限后停止累积。每天至少登录一次收取收益即可。"
+        "answerZh": "你的建筑和升级是永久的，不会降级。不登录唯一的损失是收益达到存储上限后停止累积。每天至少登录一次收取收益即可。",
+        "questionJa": "ログインしないとCity Tycoonの進行を失いますか？",
+        "answerJa": "建物と強化は永久で、劣化しません。ログインしない場合に失うのは、保管上限を超えた収入だけです。毎日少なくとも1回ログインして回収すれば問題ありません。"
       }
-    ]
+    ],
+    "titleJa": "NTE City Tycoon完全ガイド：建物、収入、無料Sランク、上級ヒント",
+    "summaryJa": "建物タイプ、収入最適化、無料SランクキャラクターXiaozhiの入手、到達点報酬、Hethereau都市管理の上級ヒントを解説するNTE City Tycoon完全ガイドです。",
+    "contentJa": "City Tycoonは、Neverness to Everness内に組み込まれた独自の都市経営シミュレーションです。プレイヤーはHethereauの各地でさまざまな建物を購入、アップグレード、管理して受動収入と価値ある報酬を得られます。最も重要なのは、City Tycoonの到達点を完了すると無料のSランクキャラクターXiaozhiを得られることです。このガイドではシステムに必要な内容をまとめます。\n\n## City Tycoonとは\n\nCity TycoonはNTE内の都市経営シミュレーションシステムです。メインRPGとは異なり、都市管理者としてHethereauの指定エリアで区画を購入し、建物を建設・強化して、安定した受動収入と資源報酬を得ます。\n\nこれは単なる放置ゲームではありません。建物の選択、強化順、地区への配置は全体の収入効率に影響します。賢い計画は受動収益を2倍にできますが、悪い判断は貴重なCity Coinsを無駄にします。\n\nCity Tycoonの収入はオフライン中も自動で蓄積します（保管上限まで）。無駄を防ぐため、少なくとも1日1回の回収をおすすめします。\n\n## City Tycoonの解放方法\n\nCity Tycoonはメインストーリーの進行により自動で解放されます。\n\n1. メインストーリー第2章「Arrival in Hethereau」を完了する\n2. キャラクターレベル15に到達する\n3. ガイドクエスト「Pulse of the City」を完了する\n\n解放時に初期City Coinsと無料の商業区画1つを得ます。基本の建設・強化を学ぶため、チュートリアルをすぐ終えてください。\n\n重要：City Tycoonは可能な限り早く解放してください。毎日の受動収入の重要な源であり、早く始めるほど累積報酬が増えます。\n\n## 建物タイプと強化ルート\n\nCity Tycoonの建物は3つの大分類に分かれ、それぞれ収入特性と強化ルートが異なります。\n\n### 商業建物\n\n商業建物は安定した収益と早い回収を持ち、序盤投資の最優先です。\n\n| 建物 | 基礎収入／時 | 最大収入／時 | 建設コスト |\n| --- | --- | --- | --- |\n| コンビニ | 120 | 580 | 1,000 Coins |\n| レストラン | 200 | 960 | 2,000 Coins |\n| ショッピングモール | 350 | 1,800 | 5,000 Coins |\n| 高級クラブ | 500 | 3,200 | 12,000 Coins |\n\n商業建物は30分ごとに収入を精算し、序盤のCoins蓄積に向きます。レストランはコスト対収入比のため、最初の建設に最適です。\n\n### 住宅建物\n\n住宅建物は中程度ながら非常に安定した収入を提供し、追加報酬の可能性があります。\n\n| 建物 | 基礎収入／時 | 最大収入／時 | 建設コスト |\n| --- | --- | --- | --- |\n| アパート | 80 | 420 | 800 Coins |\n| ガーデンコンプレックス | 150 | 780 | 1,800 Coins |\n| 高級コンドミニアム | 280 | 1,500 | 4,500 Coins |\n| 高級ヴィラ | 450 | 2,800 | 10,000 Coins |\n\n各住宅収入の発生時には10％の確率で、経験値本、突破素材などの追加報酬が得られるため、長期的に非常に価値があります。\n\n### 産業建物\n\n産業建物は序盤収入が低い一方、最大レベルの出力が最も高く、希少素材を落とします。\n\n| 建物 | 基礎収入／時 | 最大収入／時 | 建設コスト |\n| --- | --- | --- | --- |\n| 小規模工場 | 100 | 520 | 1,200 Coins |\n| 加工センター | 180 | 880 | 2,500 Coins |\n| テックパーク | 320 | 1,600 | 6,000 Coins |\n| 研究所 | 480 | 3,500 | 15,000 Coins |\n\n産業建物は、他の建物タイプから得られない特別なキャラクター突破素材を含む希少素材を生産します。終盤では必須です。\n\n### 強化戦略\n\n序盤（1〜2週）：商業建物2〜3件をレベル5以上まで上げる。\n中盤（3〜4週）：収入のバランスのため住宅物件を建て始める。\n終盤（1か月以降）：希少素材生産のため産業建物を伸ばす。\n\n各建物はレベル10で上限です。強化にはCity Coinsと時間が必要です。寝る前に長い強化を始め、オンライン中は短いものを始めてください。\n\n## 収入最適化戦略\n\n### 地区ボーナス\n\nHethereauは地区に分かれ、配置ボーナスがあります。\n\n- 商業地区：商業収入＋15％\n- 住宅地区：住宅収入＋15％\n- 産業地区：産業収入＋15％\n- 混合地区：すべての収入＋5％\n\n### 建物相乗効果\n\n特定の建物組み合わせで相乗効果が発生します。\n\n- コンビニ＋レストラン：両方の収入＋10％\n- ガーデンコンプレックス＋ショッピングモール：住宅収入＋20％\n- テックパーク＋研究所：希少素材ドロップ率＋15％\n\n相乗効果を使った戦略的配置は、全体の収益を大きく上げます。\n\n### オンライン回収ボーナス\n\nオンラインで手動回収すると1.2倍のボーナスを得ます。最大収益のため、1日2〜3回手動で回収してください。\n\n### 再投資戦略\n\n得たCity Coinsは常に建物強化へすぐ再投資してください。Coinsを貯め込まず、強化レベルを将来の収入への投資と考えます。通常の回収期間は2〜3日で、その後は純利益です。\n\n## 無料Sランクキャラクター：Xiaozhi\n\nCity Tycoon最大の報酬は無料のSランクキャラクターXiaozhiです。時間を投資する価値がある強力なキャラクターです。\n\n### Xiaozhiの入手方法\n\nXiaozhiはCity Tycoonの到達点報酬から得ます。\n\n1. City Tycoonの到達点タスクを累計で完了する\n2. 指定された到達点レベルでXiaozhiの欠片を解放する\n3. Xiaozhiの欠片を60個集めてキャラクターを解放する\n\n### 到達点タスクの種類\n\n- 指定数の建物を建てる\n- 建物を指定レベルまで強化する\n- 指定量の回収収入を累積する\n- 特別な都市イベントを完了する\n- 都市の繁栄度要件に到達する\n\n### Xiaozhi欠片の到達点\n\n| 到達点 | 欠片 | おおよその期間 |\n| --- | --- | --- |\n| 初心者市民 | 5 | 1週目 |\n| 新星 | 10 | 2週目 |\n| 経営専門家 | 15 | 3〜4週目 |\n| ビジネスエリート | 15 | 5〜6週目 |\n| City Tycoon | 15 | 7〜8週目 |\n\nXiaozhiを得るには約6〜8週間の継続プレイが必要です。期間は長めですが、収入回収に必要なのは毎日数分だけで、わずかな労力で無料Sランクキャラクターを得られます。\n\n### Xiaozhiのキャラクター概要\n\nXiaozhiは優れた範囲ダメージと都市テーマの固有能力を持つSランクThunder元素DPSです。パッシブスキルはCity Tycoonの建物収入も上げるため、戦闘と経営システムの両方で価値があります。すでに他のThunderキャラクターがいても、固有ギミックにより特定のチーム構成へ加える価値があります。\n\n## 進行到達点と報酬\n\nXiaozhi以外にも、City Tycoon到達点は多くの報酬を提供します。\n\n| 到達点レベル | 主な報酬 |\n| --- | --- |\n| レベル1〜5 | City Coins、Credits、経験値本 |\n| レベル6〜10 | 上級突破素材、ガチャチケット |\n| レベル11〜15 | Xiaozhi欠片、限定アバターフレーム |\n| レベル16〜20 | 大量のCity Coins、希少素材、限定称号 |\n| レベル21以降 | Xiaozhi欠片、限定装飾、特別家具 |\n\n高報酬の到達点タスクを優先してください。低報酬のタスクは時間とともに自然に完了します。\n\n## ヒントとよくあるミス\n\n### よくあるミス\n\n1. **序盤に建物を建てすぎる**：量より質です。低レベル建物10件より、2〜3件を完全に強化する方が優れます。\n2. **地区ボーナスを無視する**：ランダム配置は15％の地区ボーナスを失い、長期的に大きな損失です。\n3. **収入回収を忘れる**：収入には保管上限があります。少なくとも毎日1回は回収してください。\n4. **強化順が間違っている**：次を始める前に1つの建物を最大にします。複数の建物へ同時に強化を分散しないでください。\n5. **都市イベントを飛ばす**：期間限定の都市イベントは多くのCoinsボーナスと経験値を提供します。逃さないでください。\n\n### 上級ヒント\n\n1. **オフライン前にすべて回収する**：オフライン蓄積をゼロから始め、オフライン収入を最大化します。\n2. **イベントボーナスを利用する**：一部のイベントはCity Tycoon収入を上げます。この期間は積極的に回収してください。\n3. **都市イベントの更新時間を見る**：イベントは毎日決まった時間に更新されます。追加報酬のため時間どおりに参加しましょう。\n4. **短縮アイテムを戦略的に使う**：重要な強化到達点のために加速アイテムを残します。\n5. **Xiaozhi入手後も続ける**：後の到達点ではXiaozhiの共鳴チェーン欠片や他の希少アイテムを得られます。\n\n## 時間投資の価値はあるか\n\nもちろんです。City Tycoonは収入回収と建物管理に毎日5〜10分だけ必要で、大きな受動収入を得られます。さらに無料SランクキャラクターXiaozhiはこのシステムだけに紐づきます。\n\n投資対効果の観点から、City Tycoonはゲーム全体で最も価値が高いものを提供します。\n\n- 少ない時間投資（1日5〜10分）\n- 寛大な報酬（無料Sランクキャラクター、大量のCoins収入、希少素材）\n- 長期の複利的リターン（高レベル建物は指数的に多く稼ぐ）\n- スタミナコストゼロ（メインスタミナシステムと完全に独立）\n\nすべてのプレイヤーに、解放後すぐCity Tycoonを始めることをおすすめします。カジュアルプレイヤーでも利用可能な報酬を簡単に得られます。\n\n## まとめ\n\nCity TycoonはNTEでリラックスして楽しめる報酬豊富なシステムです。早く解放する、強化に集中する、ボーナスを使う、毎日回収するという原則を覚えてください。このガイドに従えば、6〜8週で無料SランクのXiaozhiと安定した受動収入を得られます。"
   },
   {
     "id": "shinku-iroi-pull-plan",
@@ -1931,38 +2258,47 @@
         "question": "Should I pull Shinku or save for Iroi?",
         "questionZh": "Shinku 和 Iroi 应该抽谁？",
         "answer": "Pull Shinku if you need immediate v1.2 power and have enough resources left. Save for Iroi if your team is already stable or you only have one guarantee.",
-        "answerZh": "如果你缺当前版本战力且资源够，可以优先 Shinku；如果队伍已稳定或只够一轮保底，优先给 Iroi 预留更稳。"
+        "answerZh": "如果你缺当前版本战力且资源够，可以优先 Shinku；如果队伍已稳定或只够一轮保底，优先给 Iroi 预留更稳。",
+        "questionJa": "Shinkuを引くべきですか、それともIroiに備えるべきですか？",
+        "answerJa": "即時のv1.2戦力が必要で、引いた後も十分な資源が残るならShinkuを引いてください。チームがすでに安定しているか、1天井しかない場合はIroiに備える方が安全です。"
       },
       {
         "question": "Should new players pull immediately in v1.2?",
         "questionZh": "新玩家 1.2 要不要马上抽？",
         "answer": "New players should claim codes, finish onboarding, and understand pity first. Pull after you know which role your first team actually needs.",
-        "answerZh": "新玩家先领兑换码、完成入门并理解保底，再根据第一队缺口决定是否抽当前池。"
+        "answerZh": "新玩家先领兑换码、完成入门并理解保底，再根据第一队缺口决定是否抽当前池。",
+        "questionJa": "新規プレイヤーはv1.2ですぐに引くべきですか？",
+        "answerJa": "新規プレイヤーはまずコードを受け取り、導入を終え、天井を理解してください。最初のチームにどの役割が必要か分かってから引きましょう。"
       },
       {
         "question": "Can redeem codes cover my pity gap?",
         "questionZh": "兑换码能补保底缺口吗？",
         "answer": "Codes help with small gaps, but they rarely replace event, daily, and exploration income. Calculate all resources before committing.",
-        "answerZh": "兑换码适合补小缺口，但通常不能替代活动、日常和探索资源；抽前要先算总资源。"
+        "answerZh": "兑换码适合补小缺口，但通常不能替代活动、日常和探索资源；抽前要先算总资源。",
+        "questionJa": "交換コードで天井の不足を補えますか？",
+        "answerJa": "コードは小さな不足には役立ちますが、イベント、日課、探索収入の代わりになることはほとんどありません。決める前にすべての資源を計算してください。"
       }
     ],
     "relatedCharacters": [
       "shinku"
     ],
-    "date": "2026-07-21"
+    "date": "2026-07-21",
+    "titleJa": "NTE Shinku対Iroiのガチャ計画：v1.2 999 Nights資源、コード、天井ルート",
+    "summaryJa": "ShinkuとIroiを、コード、Steam／ダウンロード導入、天井資源計画とともに比較するv1.2 999 Nightsの判断ガイドです。",
+    "contentJa": "## 簡単な答え\n\nNTE v1.2「999 Nights」では、話題だけでShinkuとIroiを決めないでください。まず天井に使える資源を計算し、アカウントに即時戦力、次バナーへの貯蓄、コレクション価値のどれが必要かを決めましょう。\n\n### 30秒の判断表\n\n| アカウント状況 | 先に確認すること | 理由 |\n| --- | --- | --- |\n| 現在のDPS／キャリー枠が不足 | Shinku | 現在のバナー価値がパッチ進行へ速く変わる |\n| すでに安定したメインチームがある | Iroi貯蓄 | 次の焦点に資源を残せる |\n| 1天井しかない | 目標を1つ選ぶ | Shinku、Iroi、武器を同時に追わない |\n| ダウンロード直後 | ダウンロード＋コード＋初心者ルート | 先に無料資源を受け取りシステムを解放する |\n| コレクター | 好きなキャラクター | 短期環境の圧力に任せない |\n\n## Shinkuの判断方法\n\nShinkuはv1.2で「今すぐ遊ぶ」ための選択です。999 Nights、現在のイベント、現チームの強化をすぐに体験したいなら、Shinkuはより早い手応えを作ります。\n\n引く前に3つ確認してください。\n\n1. Shinkuが担う役割が足りないか。\n2. Shinkuを支えるディスク、武器、仲間がすでにいるか。\n3. 引いた後もIroiまたは次の目標のために十分な天井を残せるか。\n\n3つ目が否定なら、決める前に資源の不足を確認してください。\n\n## Iroiの準備方法\n\nIroiは貯蓄目標として扱う方がよいです。多くのプレイヤーは現在のバナーに天井を使い、後でv1.2イベントとコードでは1天井をすぐ再構築できないと気づきます。\n\nより安全なルートは次のとおりです。\n\n- 現在の天井を記録する。\n- v1.2イベント、コード、日課資源を受け取る。\n- 天井から遠い場合は、キャラクターと武器を同時に追わない。\n- Iroiが好きなら、Shinkuのテストと復刻の状況を待つ。\n\n## 999 Nights資源チェックリスト\n\n引く前に次を開いてください。\n\n- /nte/version：v1.2 999 Nightsのルートを確認する。\n- /nte/redeem-codes：有効・期限切れのコードを確認する。\n- /nte/guides/download-install-guide：Steam／ダウンロード、公式サイト、端末設定を確認する。\n- /nte/guides/gacha-strategy：天井、確率、資源コストを再確認する。\n\n## よくあるミス\n\n### ミス1：現在のバナーが常に優れている\n\nそうとは限りません。現在のバナーは今すぐ遊べますが、チームが完成しているならIroiや後の目標の方が長期計画に合うことがあります。\n\n### ミス2：コードがすべての不足を補う\n\nコードは小さな不足には役立ちますが、1天井全体の主な入手先として扱うべきではありません。\n\n### ミス3：新規プレイヤーは最初に引くべき\n\n新規プレイヤーは大きく使う前に、ダウンロード、導入、コード、序盤イベントを終えるべきです。そうしないと、アカウントに必要のない役割へ資源を使う可能性があります。\n\n## おすすめルート\n\n資源が少ない：ShinkuかIroiのどちらかを選び、両方を追わない。\n\n今すぐv1.2を進めたい：まずShinkuを評価する。\n\n長期計画：Iroiのために残す。\n\n新規プレイヤー：ダウンロード、コード受取、初心者とガチャの基本を先に読む。"
   },
   {
     "id": "999-nights-mode-guide",
     "title": "异环 999 Nights 模式指南：1.2 活动路线、Shinku/Iroi 资源与每日优先级",
     "titleEn": "NTE 999 Nights Mode Guide: v1.2 Event Route, Shinku/Iroi Resources, and Daily Priority",
-    "titleJa": "異環 999 Nights モードガイド：v1.2イベント、Shinku/Iroi資源、毎日優先度",
+    "titleJa": "NTE 999 Nightsモードガイド：v1.2イベントルート、Shinku／Iroi資源、日課優先度",
     "category": "version",
     "categoryZh": "版本攻略",
     "categoryEn": "Version Guide",
     "categoryJa": "バージョン攻略",
     "summary": "把 1.2「999 Nights」模式、活动奖励、兑换码、Shinku 当前池和 Iroi 预留资源拆成每日执行路线。",
     "summaryEn": "A v1.2 999 Nights event route covering mode basics, rewards, codes, Shinku current banner, Iroi savings, and daily priorities.",
-    "summaryJa": "v1.2「999 Nights」のモード、報酬、コード、Shinku、Iroi貯蓄、毎日優先度を整理します。",
+    "summaryJa": "モードの基本、報酬、コード、Shinku現在バナー、Iroi貯蓄、日課の優先順位を扱うv1.2 999 Nightsイベントルートです。",
     "content": "## 先看结论\n\n1.2「999 Nights」最重要的不是把所有内容一次清完，而是每天把活动奖励、兑换码、日常资源和抽卡目标串起来。如果你在 Shinku 和 Iroi 之间摇摆，999 Nights 的资源应该先服务“保底路线”，再服务强度追逐。\n\n## 每天上线先做什么\n\n| 优先级 | 动作 | 为什么 |\n| --- | --- | --- |\n| 1 | 检查活动任务 | 限时奖励错过就少一段资源 |\n| 2 | 领取兑换码和邮件 | 补 Shinku/Iroi 保底缺口 |\n| 3 | 清日常与体力 | 稳定换取养成材料 |\n| 4 | 推 999 Nights 进度 | 解锁阶段奖励和模式资源 |\n| 5 | 再决定抽卡 | 避免先抽后发现资源不够 |\n\n## 999 Nights 怎么理解\n\n999 Nights 更像版本活动与模式汇总页。它会把剧情、挑战、奖励和角色热度集中到同一时期，因此用户搜索时经常同时出现：\n\n- 999 Nights 怎么玩。\n- Shinku 值不值得抽。\n- Iroi 要不要留。\n- 兑换码有没有新码。\n- Steam/download 新玩家现在能不能追。\n\n页面不要把这些问题混成一团，最好的结构是先讲模式，再讲资源，再讲抽卡决策。\n\n## Shinku 当前期怎么安排\n\n如果你想抽 Shinku，先确认三件事：\n\n1. 当前队伍是否真的缺她的定位。\n2. 活动和兑换码补完后是否够保底。\n3. 抽完后是否还保得住 Iroi 或后续角色。\n\n如果你只差小额资源，可以先补活动、日常和兑换码；如果离保底很远，不要把 999 Nights 的奖励想象成万能补票。\n\n## Iroi 预留路线\n\n想留 Iroi 的玩家，999 Nights 期间要控制冲动消费：\n\n- 当前池只做必要尝试。\n- 武器和外观消费先降级。\n- 每天记录新增资源。\n- 等角色实测和后续公告再决定是否转向。\n\n## 新玩家追赶路线\n\n刚下载入坑的玩家建议按这个顺序：\n\n1. /nte/guides/download-install-guide：先解决下载、设备和账号。\n2. /nte/redeem-codes：领有效兑换码。\n3. /nte/guides/beginner-guide：理解基础系统。\n4. /nte/version：看 1.2 版本路线。\n5. /nte/guides/shinku-iroi-pull-plan：决定 Shinku 还是 Iroi。\n\n## 常见误区\n\n### 误区 1：活动奖励够补所有抽卡缺口\n\n不一定。活动奖励适合补差额，不适合当成完整保底来源。\n\n### 误区 2：先抽再补资源\n\n容易出问题。先算当前资源、活动剩余、兑换码和日常收入，再抽更稳。\n\n### 误区 3：新玩家必须追当前池\n\n新玩家先把基础系统、兑换码和活动解锁做好，再根据第一队缺口判断。\n\n## 推荐路线\n\n资源紧：每天先做 999 Nights 和兑换码，只锁定一个抽卡目标。\n\n想马上提升：评估 Shinku 是否补队伍短板。\n\n想长期规划：为 Iroi 和后续角色预留。",
     "contentEn": "## Quick answer\n\nThe key to v1.2 999 Nights is not clearing everything at once. Connect event rewards, codes, daily resources, and pull goals every day. If you are choosing between Shinku and Iroi, use 999 Nights resources for pity planning before chasing hype.\n\n## Daily priority\n\n| Priority | Action | Why |\n| --- | --- | --- |\n| 1 | Check event tasks | Limited rewards can disappear |\n| 2 | Claim codes and mail | Helps cover Shinku/Iroi pity gaps |\n| 3 | Spend dailies and stamina | Stable material income |\n| 4 | Push 999 Nights progress | Unlocks stage rewards and mode resources |\n| 5 | Decide pulls after counting | Avoid spending before resource math |\n\n## What is 999 Nights?\n\nTreat it as the v1.2 event and mode layer that connects story, challenges, rewards, and character hype. Search demand usually combines how to play, Shinku value, Iroi savings, codes, and new-player download questions.\n\n## Shinku route\n\nBefore pulling Shinku, confirm whether your team needs her role, whether event/code resources cover pity, and whether you can still save for Iroi or later targets.\n\n## Iroi savings route\n\nLimit current-banner impulse pulls, delay weapon or cosmetic spending, track daily resources, and wait for testing or official notes before switching targets.\n\n## New-player route\n\nDownload/install, claim codes, read beginner basics, open the v1.2 hub, then use the Shinku vs Iroi pull plan.\n\n## Common mistakes\n\nDo not assume event rewards replace a full guarantee, do not pull before counting resources, and do not force current-banner pulls on brand-new accounts.",
     "tags": [
@@ -1979,35 +2315,42 @@
         "question": "What should I do first in 999 Nights?",
         "questionZh": "999 Nights 每天先做什么？",
         "answer": "Check limited event tasks, claim codes and mail, clear daily resources, then push mode progress before pulling.",
-        "answerZh": "先看限时任务，领兑换码和邮件，清日常资源，再推模式进度，最后决定是否抽卡。"
+        "answerZh": "先看限时任务，领兑换码和邮件，清日常资源，再推模式进度，最后决定是否抽卡。",
+        "questionJa": "999 Nightsでは最初に何をすべきですか？",
+        "answerJa": "限定イベントタスクを確認し、コードとメールを受け取り、日課資源を消費してからモード進行を進め、最後にガチャを決めてください。"
       },
       {
         "question": "Can 999 Nights rewards cover a full pity?",
         "questionZh": "999 Nights 奖励够一轮保底吗？",
         "answer": "Treat them as gap-filling resources, not a guaranteed full pity source. Count all resources before committing.",
-        "answerZh": "建议当成补差资源，而不是完整保底来源；抽前要先算总资源。"
+        "answerZh": "建议当成补差资源，而不是完整保底来源；抽前要先算总资源。",
+        "questionJa": "999 Nightsの報酬で1天井を賄えますか？",
+        "answerJa": "天井全体を保証する入手先ではなく、不足を補う資源として扱ってください。決める前にすべての資源を計算しましょう。"
       },
       {
         "question": "Should new players pull Shinku immediately?",
         "questionZh": "新玩家要马上抽 Shinku 吗？",
         "answer": "Not immediately. Finish download setup, claim codes, unlock basics, then decide whether Shinku fills your first-team gap.",
-        "answerZh": "不建议立刻抽。先完成下载、领码、解锁基础系统，再看 Shinku 是否补第一队缺口。"
+        "answerZh": "不建议立刻抽。先完成下载、领码、解锁基础系统，再看 Shinku 是否补第一队缺口。",
+        "questionJa": "新規プレイヤーはShinkuをすぐ引くべきですか？",
+        "answerJa": "すぐには引かないでください。ダウンロード設定、コード受取、基本システム解放を終えてから、Shinkuが最初のチームの不足を埋めるか判断してください。"
       }
     ],
-    "date": "2026-07-21"
+    "date": "2026-07-21",
+    "contentJa": "## 簡単な答え\n\nv1.2 999 Nightsで重要なのは、一度にすべてを終えることではありません。毎日、イベント報酬、コード、日課資源、ガチャ目標をつなげましょう。ShinkuとIroiの間で迷うなら、話題を追う前に999 Nightsの資源を天井計画に使ってください。\n\n## 毎日の優先順位\n\n| 優先度 | 行動 | 理由 |\n| --- | --- | --- |\n| 1 | イベントタスクを確認する | 限定報酬は消える可能性がある |\n| 2 | コードとメールを受け取る | Shinku／Iroiの天井差を埋める助けになる |\n| 3 | デイリーとスタミナを消費する | 安定した素材収入 |\n| 4 | 999 Nightsの進行を進める | 段階報酬とモード資源を解放する |\n| 5 | 数えた後にガチャを決める | 資源計算前の消費を避ける |\n\n## 999 Nightsとは\n\n999 Nightsは、ストーリー、挑戦、報酬、キャラクターの話題をつなぐv1.2のイベント・モード層として扱ってください。検索需要には、遊び方、Shinkuの価値、Iroi貯蓄、コード、新規プレイヤーのダウンロード質問が一緒に現れることが多いです。\n\n## Shinkuルート\n\nShinkuを引く前に、チームにその役割が必要か、イベントとコードの資源で天井を補えるか、Iroiまたは後の目標のためにまだ残せるかを確認してください。\n\n## Iroi貯蓄ルート\n\n現在のバナーでの衝動的な引きを抑え、武器やコスメティックへの支出を遅らせ、毎日の資源を記録し、目標を変える前にテストや公式情報を待ってください。\n\n## 新規プレイヤールート\n\nダウンロード／インストール、コード受取、初心者の基本、v1.2ハブ、Shinku対Iroiのガチャ計画の順に進めてください。\n\n## よくあるミス\n\nイベント報酬が1天井を完全に置き換えるとは考えないでください。資源を数える前に引かず、まったく新しいアカウントで現在のバナーを無理に引かないでください。"
   },
   {
     "id": "iroi-phase-prep-guide",
     "title": "异环 Iroi 预热期准备指南：999 Nights 后资源、Shinku 取舍、兑换码和每日清单",
     "titleEn": "NTE Iroi Phase Prep Guide: Post-999 Nights Resources, Shinku Trade-Offs, Codes, and Daily Checklist",
-    "titleJa": "異環 Iroi準備ガイド：999 Nights後の資源、Shinku判断、コード、毎日チェック",
+    "titleJa": "NTE Iroiフェーズ準備ガイド：999 Nights後の資源、Shinkuのトレードオフ、コード、日課チェック",
     "category": "version",
     "categoryZh": "版本攻略",
     "categoryEn": "Version Guide",
     "categoryJa": "バージョン攻略",
     "summary": "面向 Iroi 预热和 1.2 后半搜索，整理 Shinku 当前池后的资源止损、兑换码检查、活动每日路线和保底预留。",
     "summaryEn": "A late-v1.2 Iroi preparation guide covering Shinku trade-offs, resource preservation, codes, daily tasks, and pity planning.",
-    "summaryJa": "Iroi準備とv1.2後半向けに、Shinkuとの取捨選択、資源維持、コード、毎日タスク、天井計画を整理します。",
+    "summaryJa": "Shinkuのトレードオフ、資源温存、コード、日課、天井計画を扱うv1.2後半のIroi準備ガイドです。",
     "content": "## 先看结论\n\n如果你已经在 999 Nights 期间抽过 Shinku，Iroi 预热期最重要的是止损和盘点资源；如果你还没抽，最重要的是确认自己到底需要当前战力，还是更想留给 Iroi。\n\n这页不重复 999 Nights 模式玩法，重点解决“现在该不该停手、每天还要做什么、资源够不够下一期”。\n\n## Iroi 预热期资源表\n\n| 状态 | 建议 | 风险 |\n| --- | --- | --- |\n| 已抽到 Shinku | 先停手盘点资源 | 继续追武器可能影响 Iroi |\n| Shinku 歪了 | 算大保底价值 | 情绪补票最容易亏 |\n| 没抽但心动 | 等实测和后续公告 | 错过当前池即时体验 |\n| 只够一次保底 | 二选一 | 不建议双追 |\n| 新玩家 | 先补基础系统 | 抽到也可能养不起 |\n\n## 每日清单\n\n1. 先做 999 Nights 限时任务。\n2. 领取兑换码、邮件和活动奖励。\n3. 记录当天新增抽卡资源。\n4. 清体力，补主队材料。\n5. 不确定目标时，不碰武器池和外观消费。\n6. 等 Iroi 信息更明确后再更新抽卡计划。\n\n## Shinku 之后要不要追武器\n\n只有在三个条件都满足时才建议考虑：你已经确定 Shinku 是长期核心、主队材料跟得上、追武器后仍不影响 Iroi 或后续角色。否则武器池很容易把后半资源吃空。\n\n## FAQ\n\n### Iroi 预热期该囤什么？\n\n优先囤抽卡资源、通用养成材料和当前主队刚需材料。不要为未公布细节提前消耗高价值资源。\n\n### Shinku 没抽到还要继续吗？\n\n先算距离保底还差多少，再看是否真的缺她的定位。如果只是被当前热度影响，可以等 Iroi 信息和实测再决定。\n\n### 新玩家现在追 Iroi 来得及吗？\n\n来得及准备，但不要跳过下载、兑换码、基础系统和主队养成。资源规划比盲抽更重要。",
     "contentEn": "## Quick answer\n\nDuring the Iroi warm-up phase, count resources before chasing more Shinku pulls or weapons. If you already pulled Shinku, stop and recalculate. If you have not, decide whether you need current power or prefer saving for Iroi.\n\n## Daily checklist\n\n| Step | Action |\n|---|---|\n| 1 | Finish limited 999 Nights tasks |\n| 2 | Claim codes and mail |\n| 3 | Track daily pull income |\n| 4 | Spend stamina on core-team materials |\n| 5 | Avoid weapon/skin spending if undecided |\n\n## FAQ\n\n### Should I chase Shinku's weapon?\n\nOnly if Shinku is a long-term core and you can still afford Iroi or later targets.\n\n### Can new players prepare for Iroi?\n\nYes, but finish onboarding, codes, events, and basic team building first.",
     "tags": [
@@ -2019,7 +2362,8 @@
       "Pity",
       "Resource Planning",
       "Daily Checklist"
-    ]
+    ],
+    "contentJa": "## 簡単な答え\n\nIroiの準備期間では、Shinkuをさらに引いたり武器を追ったりする前に資源を数えてください。すでにShinkuを引いたなら、一度止まって再計算します。まだ引いていないなら、現在の戦力が必要か、Iroiに残したいかを決めてください。\n\n## 日課チェックリスト\n\n| 手順 | 行動 |\n| --- | --- |\n| 1 | 限定999 Nightsタスクを完了する |\n| 2 | コードとメールを受け取る |\n| 3 | 毎日のガチャ収入を記録する |\n| 4 | スタミナをコアチームの素材に使う |\n| 5 | 決めていない場合は武器／スキン支出を避ける |\n\n## FAQ\n\n### Shinkuの武器を追うべきですか？\n\nShinkuが長期的なコアで、Iroiまたは後の目標にもまだ余裕がある場合だけにしてください。\n\n### 新規プレイヤーもIroiを準備できますか？\n\nできますが、まず導入、コード、イベント、基本チーム作りを完了してください。"
   },
   {
     "id": "aug31-sep14-event-calendar-999-nights",
@@ -2047,9 +2391,14 @@
         "question": "Should I treat v1.3 as confirmed?",
         "questionZh": "异环 1.3 可以写成已确认吗？",
         "answer": "No. Keep it as watch wording unless official notices confirm the date and content.",
-        "answerZh": "不要。除非官方公告确认日期和内容，否则保持观察口径。"
+        "answerZh": "不要。除非官方公告确认日期和内容，否则保持观察口径。",
+        "questionJa": "v1.3を確定として扱うべきですか？",
+        "answerJa": "いいえ。公式告知が日付と内容を確認するまで、監視表現にとどめてください。"
       }
     ],
-    "date": "2026-08-31"
+    "date": "2026-08-31",
+    "titleJa": "NTE 9月イベント振り返り：999 Nights、Clash、Iroi／Shinku、コード状況",
+    "summaryJa": "9月14日のイベント期間後に、999 Nights、Clash、Iroi／Shinku、コード状況、Steam／ダウンロード確認を振り返るガイドです。",
+    "contentJa": "## 簡単な答え\n\n8月31日から9月14日のイベント期間後、NTE v1.2の検索はイベント振り返りと報酬状況、999 Nights、Clash、Iroi／Shinku、コード、Steam／ダウンロードに集中しています。公式告知が確認するまで、v1.3は監視表現にとどめてください。\n\n## イベント後の振り返りルート\n\nイベントタスクを確認し、コードとメールを受け取り、999 Nights／Clashの進行を進め、Shinku／Iroiの資源を数え、その後新規プレイヤーは公式ダウンロードまたはSteam入口を確認してください。"
   }
 ]
