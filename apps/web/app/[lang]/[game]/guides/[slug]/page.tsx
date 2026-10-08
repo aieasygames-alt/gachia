@@ -456,6 +456,7 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
     ],
     'global-launch-readiness-checklist': [
       { href: '/roco/guides/global-cbt-to-launch-decision-gates', label: { zh: 'CBT 上线决策', en: 'CBT launch gates', ja: 'CBTローンチ判断' }, description: { zh: '把验收清单转成测试问题、缺陷优先级和 Go/No-Go 门槛。', en: 'Turn acceptance checks into test questions, defect priority, and Go/No-Go gates.', ja: '確認項目をテスト課題、不具合優先度、Go/No-Goへ変換。' } },
+      { href: '/roco/guides/global-accessibility-cross-device-playbook', label: { zh: '无障碍与跨设备', en: 'Accessibility & devices', ja: 'アクセシビリティ・端末' }, description: { zh: '把键鼠、手柄、触控、文本和断线恢复纳入首发验收。', en: 'Add keyboard, controller, touch, text, and recovery to launch validation.', ja: '鍵盤、パッド、タッチ、文字、切断復旧をローンチ検証へ。' } },
       { href: '/roco/guides/global-first-30-days-pve-plan', label: { zh: '前 30 天 PvE 包', en: 'Days 1–30 PvE plan', ja: '1〜30日PvE案' }, description: { zh: '首发通过后，安排稳定的挑战区、周常和追赶机制。', en: 'After launch readiness, plan challenge zones, weekly goals, and catch-up.', ja: 'ローンチ確認後、挑戦、週次、追いつきへ。' } },
       { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '运营指标与实验', en: 'Live-ops metrics', ja: '運営指標と実験' }, description: { zh: '用统一指标验证首发，而不是只看下载和总参与。', en: 'Validate launch with shared metrics, not downloads alone.', ja: 'DL数だけでなく共通指標でローンチを検証。' } },
     ],
@@ -483,17 +484,30 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
       { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '本地化指标', en: 'Localization metrics', ja: 'ローカライズ指標' }, description: { zh: '用时区参与、文本理解和补领数据复盘本地化效果。', en: 'Review localization through time-zone, comprehension, and late-claim data.', ja: '時区参加、文章理解、補受取データでローカライズを振り返る。' } },
     ],
     'global-cbt-to-launch-decision-gates': [
+      { href: '/roco/guides/global-accessibility-cross-device-playbook', label: { zh: '无障碍与跨设备', en: 'Accessibility & devices', ja: 'アクセシビリティ・端末' }, description: { zh: '验证不同输入、语言、网络和设备都可完成核心流程。', en: 'Verify core completion across input, language, network, and device conditions.', ja: '入力、言語、通信、端末の違いでもコア完了を検証。' } },
+      { href: '/roco/guides/global-economy-monetization-fairness-playbook', label: { zh: '经济与付费公平', en: 'Economy & fairness', ja: '経済・課金公平性' }, description: { zh: '将核心养成来源、价格透明和故障恢复列入上线门槛。', en: 'Put progression sources, price clarity, and recovery into launch gates.', ja: '育成入手元、価格透明性、障害復旧をローンチゲートへ。' } },
       { href: '/roco/guides/global-social-safety-guild-playbook', label: { zh: '社交安全与公会', en: 'Social safety & guilds', ja: 'ソーシャル安全・ギルド' }, description: { zh: '将跨端组队、权限、举报与未成年人保护列入上线门槛。', en: 'Include cross-play parties, permissions, reports, and youth safety in launch gates.', ja: 'クロスプレイPT、権限、通報、未成年保護をローンチゲートへ。' } },
       { href: '/roco/guides/global-launch-readiness-checklist', label: { zh: '首发验收清单', en: 'Launch checklist', ja: 'ローンチ確認リスト' }, description: { zh: '回到核心循环、跨端、本地化和服务的上线条件。', en: 'Return to core-loop, cross-play, localization, and service readiness.', ja: '基本循環、クロスプレイ、翻訳、サービスの準備条件へ戻る。' } },
       { href: '/roco/guides/global-cn-release-governance', label: { zh: '跨服版本治理', en: 'CN-global governance', ja: '地域間リリース統治' }, description: { zh: '将 CBT 结论接入跨服移植、公告和回滚规则。', en: 'Connect CBT conclusions to cross-region ports, communication, and rollback.', ja: 'CBT結論を地域間移植、告知、ロールバックへ接続。' } },
     ],
     'global-player-support-trust-playbook': [
+      { href: '/roco/guides/global-economy-monetization-fairness-playbook', label: { zh: '经济与付费公平', en: 'Economy & fairness', ja: '経済・課金公平性' }, description: { zh: '把价格、退款、未交付和代币异常接入公平性与恢复规则。', en: 'Connect prices, refunds, non-delivery, and token faults to fairness and recovery rules.', ja: '価格、返金、未配信、代币異常を公平性・復旧規則へ接続。' } },
       { href: '/roco/guides/global-social-safety-guild-playbook', label: { zh: '社交安全与公会', en: 'Social safety & guilds', ja: 'ソーシャル安全・ギルド' }, description: { zh: '将举报、申诉、权限事故和社区保护纳入支持闭环。', en: 'Bring reports, appeals, permission incidents, and community protection into support operations.', ja: '通報、異議申立て、権限事故、コミュニティ保護をサポート運用へ。' } },
       { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '支持与信任指标', en: 'Support metrics', ja: 'サポート指標' }, description: { zh: '用处理时长、补发正确率和语言差异改进服务。', en: 'Improve service through resolution time, restoration accuracy, and language-gap data.', ja: '処理時間、復旧正確性、言語差データでサービスを改善。' } },
     ],
     'global-social-safety-guild-playbook': [
       { href: '/roco/guides/global-player-support-trust-playbook', label: { zh: '玩家支持与信任', en: 'Player support', ja: 'プレイヤーサポート' }, description: { zh: '查看进度、奖励、退款、申诉和隐私问题的支持规则。', en: 'Review support rules for progression, rewards, refunds, appeals, and privacy.', ja: '進行、報酬、返金、異議申立て、プライバシーのサポート規則へ。' } },
       { href: '/roco/guides/global-first-30-days-pve-plan', label: { zh: '前 30 天 PvE 包', en: 'Days 1–30 PvE plan', ja: '1〜30日PvE案' }, description: { zh: '确认单人、公开匹配和公会协作都能获得核心养成。', en: 'Ensure solo, public-match, and guild routes all access core progression.', ja: 'ソロ、公開マッチ、ギルドの全ルートで核心育成へアクセス。' } },
+    ],
+    'global-economy-monetization-fairness-playbook': [
+      { href: '/roco/guides/global-player-support-trust-playbook', label: { zh: '玩家支持与信任', en: 'Player support', ja: 'プレイヤーサポート' }, description: { zh: '补齐退款、未交付、补偿与隐私的可追踪支持路径。', en: 'Add trackable support for refunds, non-delivery, compensation, and privacy.', ja: '返金、未配信、補償、プライバシーの追跡可能なサポートを確認。' } },
+      { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '运营指标与实验', en: 'Live-ops metrics', ja: '運営指標と実験' }, description: { zh: '用来源/消耗、回流追赶和地区差异验证经济是否健康。', en: 'Use source/sink, catch-up, and regional gaps to validate economic health.', ja: '入手/消費、追いつき、地域差で経済の健全性を検証。' } },
+      { href: '/roco/guides/global-first-30-days-pve-plan', label: { zh: '前 30 天 PvE 包', en: 'Days 1–30 PvE plan', ja: '1〜30日PvE案' }, description: { zh: '把稳定的核心养成来源和追赶路径写入首月内容。', en: 'Put dependable progression sources and catch-up into month-one content.', ja: '安定した育成入手元と追いつきを初月コンテンツへ。' } },
+    ],
+    'global-accessibility-cross-device-playbook': [
+      { href: '/roco/guides/global-cbt-to-launch-decision-gates', label: { zh: 'CBT 上线决策', en: 'CBT launch gates', ja: 'CBTローンチ判断' }, description: { zh: '把跨设备与无障碍证据转成可阻止上线的明确门槛。', en: 'Turn cross-device and accessibility evidence into concrete launch gates.', ja: 'クロスデバイス・アクセシビリティ証拠を明確なローンチゲートへ。' } },
+      { href: '/roco/guides/global-localization-cultural-event-playbook', label: { zh: '本地化与文化活动', en: 'Localization playbook', ja: 'ローカライズ手帳' }, description: { zh: '检查大字体、小屏、手柄焦点和多语言任务的可读性。', en: 'Check large text, small screens, controller focus, and multilingual task readability.', ja: '大きな文字、小画面、パッド焦点、多言語任務の可読性を確認。' } },
+      { href: '/roco/guides/global-player-support-trust-playbook', label: { zh: '玩家支持与信任', en: 'Player support', ja: 'プレイヤーサポート' }, description: { zh: '将无法操作、无法阅读或断线恢复问题接入支持和事故响应。', en: 'Connect blocked input, unreadable text, and recovery issues to support response.', ja: '操作不能、読めない文章、復旧問題をサポート対応へ接続。' } },
     ],
     'cbt-registration-guide': [
       { href: '/roco/version', label: { zh: '版本时间线', en: 'Version timeline', ja: '版本タイムライン' }, description: { zh: '报名后接着看 CBT 到正式版的节点和已确认内容。', en: 'After signing up, continue into the CBT-to-launch timeline and confirmed content.', ja: '申込後はCBTから正式版までの予定と確定情報へ。' } },
