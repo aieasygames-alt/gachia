@@ -2,8 +2,16 @@ import { describe, expect, it } from 'vitest';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { HI3_GUIDE_NEXT_STEPS, HI3_GUIDE_SCOPE } from '@/lib/hi3-guide-navigation';
+import { getCharacterListData } from '@/lib/game-data/characters';
 
 describe('HI3 guide reading paths', () => {
+  it('returns a populated character index in all supported languages', async () => {
+    for (const locale of ['zh', 'en', 'ja'] as const) {
+      const entries = await getCharacterListData('hi3', locale);
+      expect(entries.map(({ id }) => id)).toEqual(['fenghuang-of-vicissitude', 'senadina-astralop']);
+      expect(entries.every(({ name, image }) => name && image)).toBe(true);
+    }
+  });
   it('covers every published guide without self-links or unavailable tools', async () => {
     const guides = JSON.parse(await readFile(join(process.cwd(), 'public/data/hi3/raw-guides.json'), 'utf8')) as { id: string }[];
     expect(Object.keys(HI3_GUIDE_NEXT_STEPS).sort()).toEqual(guides.map(({ id }) => id).sort());

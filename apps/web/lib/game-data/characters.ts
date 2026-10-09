@@ -412,6 +412,19 @@ export async function getCharacterListData(
   locale: SupportedLocale,
 ): Promise<CharacterListEntry[]> {
   switch (gameId) {
+    case 'hi3': {
+      const mod = await import('@gachia/data/games/hi3/characters');
+      return mod.hi3Characters.map((character) => ({
+        id: character.id,
+        name: mod.getHi3CharacterName(character, locale),
+        image: toAbs(mod.getHi3CharacterImage(character)),
+        element: character.damageType,
+        elementLabel: labelFromId(character.damageType),
+        rarityLabel: character.rank,
+        rankGroup: character.rank,
+        subtitle: locale === 'zh' ? character.type : character.typeEn,
+      }));
+    }
     case 'genshin': {
       const mod = await import('@gachia/data/games/genshin/character-summaries');
       return mod.genshinCharacterSummaries.map((character) => ({
