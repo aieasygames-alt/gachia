@@ -58,5 +58,19 @@ export default async function BuildPage({
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
 
-  return <BuildClient gameId={gameId} locale={locale} />;
+  return (
+    <>
+      {gameId === 'zzz' && (
+        <header className="mb-6">
+          <h1 className="mb-2 text-2xl font-bold text-game-text">
+            {locale === 'zh' ? '绝区零代理人配装推荐' : locale === 'ja' ? 'ゼンレスゾーンゼロ エージェントビルド' : 'Zenless Zone Zero Agent Builds'}
+          </h1>
+          <p className="max-w-3xl text-sm leading-6 text-game-text-muted">
+            {locale === 'zh' ? '选择代理人，查看音擎、驱动盘与词条方向；结合已有装备和养成目标判断投入，具体效果以游戏内说明为准。' : locale === 'ja' ? 'エージェントを選び、Wエンジン、ドライブディスク、ステータス方針を確認。所持装備と育成目標に合わせて判断し、詳細効果はゲーム内で確認してください。' : 'Choose an agent to review W-Engines, Drive Discs, and stat priorities. Plan around your gear and upgrade goals, and confirm exact effects in-game.'}
+          </p>
+        </header>
+      )}
+      <BuildClient gameId={gameId} locale={locale} />
+    </>
+  );
 }

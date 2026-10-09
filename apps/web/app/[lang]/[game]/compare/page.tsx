@@ -61,5 +61,19 @@ export default async function ComparePage({
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
 
-  return <CompareClient gameId={gameId} locale={locale} />;
+  return (
+    <>
+      {gameId === 'zzz' && (
+        <header className="mb-6">
+          <h1 className="mb-2 text-2xl font-bold text-game-text">
+            {locale === 'zh' ? '绝区零代理人对比' : locale === 'ja' ? 'ゼンレスゾーンゼロ エージェント比較' : 'Zenless Zone Zero Agent Comparison'}
+          </h1>
+          <p className="max-w-3xl text-sm leading-6 text-game-text-muted">
+            {locale === 'zh' ? '选择两位代理人，对照定位与已有资料，再结合队伍缺口和资源预算决定培养顺序；本工具不代表实时强度排名。' : locale === 'ja' ? '2人のエージェントを選び、役割と収録資料を比較。編成の不足と資源予算から育成順を判断してください。本ツールはリアルタイムの強さランキングではありません。' : 'Select two agents to compare roles and recorded information, then plan upgrades around roster gaps and resources. This tool is not a live power ranking.'}
+          </p>
+        </header>
+      )}
+      <CompareClient gameId={gameId} locale={locale} />
+    </>
+  );
 }
