@@ -152,6 +152,16 @@ export function WuWaCalculator({ locale }: { locale: SupportedLocale }) {
         ))}
       </div>
 
+      <div className="mb-5 rounded-md border border-game-border bg-game-surface px-4 py-3 text-sm leading-relaxed text-game-text-muted">
+        <strong className="mr-1 text-game-text">{t(locale, '3.7 数据说明：', 'v3.7 data note:', 'Ver.3.7データ注記：')}</strong>
+        {t(
+          locale,
+          '心/锁暝的上线状态与活动入口已在版本专题整理；本计算器只展示已完成结构化材料核验的角色，新增角色的精确升级材料以游戏内界面和官方公告为准。',
+          'Hsin/Suoming live status and event entry points are covered in the version hub. This calculator lists only characters with verified structured material data; use the live client and official notices for exact new-character materials.',
+          '心/鎖暝の実装状況とイベント入口はバージョン特集で案内しています。この計算機は構造化素材データが確認済みのキャラのみを掲載し、新キャラの正確な育成素材はゲーム内と公式告知を基準にしてください。',
+        )}
+      </div>
+
       {tab === 'ascension' ? <WuWaAscensionCalc locale={locale} /> : tab === 'damage' ? <WuWaDamageCalc locale={locale} /> : <WuWaMaterialPlanner locale={locale} />}
     </div>
   );
@@ -624,4 +634,3 @@ function WuWaMaterialPlanner({ locale }: { locale: SupportedLocale }) {
 
 const SR_LEVELS = [1, 20, 30, 40, 50, 60, 70, 80];
 const SR_TRACE_LEVELS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-

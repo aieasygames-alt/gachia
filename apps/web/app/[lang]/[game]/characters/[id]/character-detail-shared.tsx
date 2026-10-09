@@ -70,9 +70,9 @@ export const CHARACTER_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
       description: { zh: '补齐角色对应的声骸和套装思路', en: 'Fill in the matching echo sets and bonuses', ja: '対応エコーとセット効果を補完' },
     },
     {
-      href: '/wuwa/guides/roya-frostlands-guide',
-      title: { zh: '看新区域攻略', en: 'Read the region guide', ja: '新エリア攻略へ' },
-      description: { zh: '把刷图、地图和养成路线接起来', en: 'Connect farming, map flow, and progression paths', ja: '周回、マップ、育成導線を接続' },
+      href: '/wuwa/guides/v3-7-live-route',
+      title: { zh: '看 3.7 上线后路线', en: 'Read the v3.7 live route', ja: 'Ver.3.7実装後ルートへ' },
+      description: { zh: '把梦枢天罗、活动、抽取与养成路线接起来', en: 'Connect the Simulacrum Nexus, events, pulling, and progression paths', ja: '夢枢天羅、イベント、集音、育成導線を接続' },
     },
   ],
   nte: [

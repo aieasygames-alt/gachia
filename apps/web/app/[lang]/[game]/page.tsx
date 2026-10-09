@@ -37,9 +37,9 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     ja: '崩壊：スターレイルのキャラ図鑑、光円錐、遺物、編成攻略。v4.x、v4.6前瞻、配信コード、次回跳躍、星玉計画、編成構築を整理します。Gachiaではキャラ性能、運命、スキル、素材、光円錐、遺物、版本特集をつなぎ、抽選と育成計画を支援します。',
   },
   wuwa: {
-    zh: '鸣潮（Wuthering Waves）角色图鉴、武器数据库、声骸系统与配装攻略，当前重点覆盖 3.7 watch、3.6 Jingran 收尾、兑换码、地图活动、Xbox/Game Pass 与 Steam 入坑。Gachia 将角色、声骸、武器、地图、兑换码和版本专题串成可执行路线。',
-    en: 'Wuthering Waves character guides, weapon data, Echo system, and builds, now focused on v3.7 watch, v3.6 Jingran wrap-up, codes, map events, Xbox/Game Pass, and Steam onboarding. Gachia connects characters, Echoes, weapons, maps, codes, and version hubs into practical routes.',
-    ja: '鳴潮のキャラ図鑑、武器、エコー、ビルド攻略。現在はv3.7注目、v3.6 Jingranまとめ、コード、マップイベント、Xbox/Game Pass、Steam入門を重点化。Gachiaではキャラ、エコー、武器、マップ、コード、版本特集を実用導線にします。',
+    zh: '鸣潮（Wuthering Waves）角色图鉴、武器数据库、声骸系统与配装攻略，当前重点覆盖 3.7「镜锁妄世，心照红尘」实装内容、梦枢天罗、活动、兑换码、地图活动、Xbox/Game Pass 与 Steam 入坑。Gachia 将角色、声骸、武器、地图、兑换码和版本专题串成可执行路线。',
+    en: 'Wuthering Waves character guides, weapon data, Echo system, and builds, now focused on live v3.7 “Prism\'s Illusion, Heart\'s Illumination”, the Simulacrum Nexus, events, codes, map activities, Xbox/Game Pass, and Steam onboarding. Gachia connects characters, Echoes, weapons, maps, codes, and version hubs into practical routes.',
+    ja: '鳴潮のキャラ図鑑、武器、エコー、ビルド攻略。現在はVer.3.7「鏡に鎖す妄世、心で照らす紅塵」の実装内容、夢枢天羅、イベント、コード、マップ活動、Xbox/Game Pass、Steam入門を重点化。Gachiaではキャラ、エコー、武器、マップ、コード、版本特集を実用導線にします。',
   },
   nte: {
     zh: '异环（NTE）Wiki 与官网入口，整理角色图鉴、兑换码、下载安装、官网资讯、武器数据、光盘推荐和祈愿模拟。页面覆盖完整角色库、新手入门、Boss 攻略、伤害公式和养成路线，适合搜索异环官网、异环下载、异环角色和异环攻略时快速进入。',
@@ -101,9 +101,9 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
     ja: '崩壊：スターレイル（Honkai: Star Rail）はHoYoverseのターン制ストラテジーRPG、現在v4.x Planarcadia星球と「愉悦」運命が追加済み。Gachiaでは86+キャラ図鑑、光円錐データベース、遺物おすすめ、パーティ編成、ダメージ計算機を提供。キャラは8つの運命（壊滅、存護、巡狩、知恵、調和、虚無、豊穣、愉悦）別に分類し、スキルと軌跡データを完全網羅。',
   },
   wuwa: {
-    zh: '鸣潮（Wuthering Waves）是库洛游戏开发的开放世界动作 RPG，当前版本3.x已开放Roya Frostlands区域，引入Tune Break战斗系统与Motorbike探索载具。Gachia 提供鸣潮48+角色图鉴、武器数据、声骸系统详解、配装推荐与配队方案。声骸按cost等级和Sonata套装效果分类，帮助玩家快速找到最优搭配。',
-    en: 'Wuthering Waves is an open-world action RPG by Kuro Games, currently in v3.x with the Roya Frostlands region, Tune Break combat system, and Motorbike traversal. Gachia provides 48+ character guides, weapon data, echo encyclopedia with Sonata set effects, build recommendations, and team comps organized by echo cost tier and set bonuses.',
-    ja: '鳴潮（Wuthering Waves）はKuro GamesのオープンワールドアクションRPG、現在v3.x Roya Frostlands地域、Tune Break戦闘システム、バイク探索が追加済み。Gachiaでは48+キャラ図鑑、武器データ、エコー百科（Sonataセット効果付き）、ビルドおすすめ、パーティ編成を提供。',
+    zh: '鸣潮（Wuthering Waves）是库洛游戏开发的开放世界动作 RPG。当前重点为 3.7「镜锁妄世，心照红尘」实装后的梦枢天罗、心/锁暝、活动与资源路线；Roya Frostlands、Tune Break 战斗系统与探索载具则作为既有内容保留参考。Gachia 提供角色图鉴、武器数据、声骸系统详解、配装推荐与配队方案，并按 Cost 与合鸣套装效果整理声骸选择。',
+    en: 'Wuthering Waves is an open-world action RPG by Kuro Games. Current coverage centers on the live v3.7 “Prism\'s Illusion, Heart\'s Illumination” update, the Simulacrum Nexus of Mengzhou, Hsin/Suoming, events, and resource routes; Roya Frostlands, Tune Break, and traversal tools remain as established reference content. Gachia provides character guides, weapon data, Echo system coverage, builds, and team planning organized by Cost and Sonata effects.',
+    ja: '鳴潮（Wuthering Waves）はKuro GamesのオープンワールドアクションRPGです。現在はVer.3.7「鏡に鎖す妄世、心で照らす紅塵」実装後の夢枢天羅、心/鎖暝、イベント、育成導線を重点化し、Roya Frostlands、Tune Break、探索用乗り物は既存コンテンツとして参照します。Gachiaではキャラ図鑑、武器データ、エコー解説、ビルド、編成をCostとソナタ効果別に整理しています。',
   },
   nte: {
     zh: '异环（Neverness to Everness）是 Hotta Studio 基于 UE5 开发的超自然开放世界游戏，2026年4月已正式发布。Gachia 提供最全的异环数据库，包含19个可玩角色的图鉴、武器数据、光盘套装推荐、下载安装、新手入门、Boss 攻略、伤害公式、兑换码汇总与祈愿模拟。',
@@ -444,13 +444,13 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     faq: [{ question: { zh: '绝区零首页现在先看什么？', en: 'What should I open first on the ZZZ homepage?', ja: 'ZZZホームで最初に見るべきものは？' }, answer: { zh: '先确认 10 月 9 日 19:30 的官方 3.3 前瞻与兑换码提醒；卡池和角色等节目后公告。等待期间可回看 3.2、平台入坑和主流配队。', en: 'Confirm the official v3.3 program at 19:30 UTC+8 on October 9 and its code reminder first. Wait for post-program notices on banners and agents; use the interim for v3.2 recap, platform onboarding, and teams.', ja: 'まず10月9日19:30（UTC+8）の公式v3.3番組とコード提醒を確認します。バナーとキャラは番組後の告知を待ち、待機中はv3.2まとめ、平台入門、主要編成を確認できます。' } }],
   },
   wuwa: {
-    eyebrow: { zh: '3.7 watch / 3.6 Jingran 入口', en: 'v3.7 Watch / v3.6 Jingran Hub', ja: 'v3.7注目 / v3.6 Jingran導線' },
-    title: { zh: '鸣潮 3.7 前瞻、3.6 Jingran 与平台入坑重点入口', en: 'WuWa v3.7 watch, v3.6 Jingran, and platform starter hub', ja: '鳴潮 v3.7注目・v3.6 Jingran・平台入門導線' },
-    description: { zh: '把 3.7 next banner、codes、map/event watch、3.6 Jingran 收尾、Xbox/Game Pass 与 Steam 入坑放到首页。', en: 'Bring v3.7 next-banner, codes, map/event watch, v3.6 Jingran wrap-up, Xbox/Game Pass, and Steam onboarding to the homepage.', ja: 'v3.7次回バナー、コード、マップ/イベント注目、v3.6 Jingranまとめ、Xbox/Game Pass、Steam入門をトップに出します。' },
-    chips: { zh: ['3.7 watch', '3.6 Jingran', '下期卡池', '兑换码', '地图活动', 'Xbox/Steam'], en: ['v3.7 watch', 'v3.6 Jingran', 'Next banners', 'Codes', 'Map events', 'Xbox/Steam'], ja: ['v3.7注目', 'v3.6 Jingran', '次回バナー', 'コード', 'マップイベント', 'Xbox/Steam'] },
-    cta: { zh: '去 3.7 watch', en: 'Open v3.7 watch', ja: 'v3.7注目へ' },
-    tracks: { zh: [{ title: '3.7 watch', description: '先看下期卡池、兑换码、地图活动和资源预留。', links: [{ href: '/wuwa/version', label: '3.7 watch' }, { href: '/wuwa/redeem-codes', label: '兑换码' }] }, { title: '3.6 Jingran', description: '当前养成和卡池仍看 Jingran 收尾与复盘。', links: [{ href: '/wuwa/guides/v3-6-qingxiao-jingran-post-launch-route', label: 'Jingran 复盘' }, { href: '/wuwa/guides/banner-schedule-guide', label: '卡池规划' }] }, { title: '平台与入坑', description: 'Xbox/Game Pass 和 Steam 玩家继续看登录、手柄、资源和声骸路线。', links: [{ href: '/wuwa/guides/steam-xbox-game-pass-starter', label: 'Steam/Xbox 入坑' }, { href: '/wuwa/build', label: '配装推荐' }] }], en: [{ title: 'v3.7 watch', description: 'Check next banners, codes, map events, and resource reserves first.', links: [{ href: '/wuwa/version', label: 'v3.7 watch' }, { href: '/wuwa/redeem-codes', label: 'Codes' }] }, { title: 'v3.6 Jingran', description: 'Current builds and banners still route through the Jingran recap.', links: [{ href: '/wuwa/guides/v3-6-qingxiao-jingran-post-launch-route', label: 'Jingran recap' }, { href: '/wuwa/guides/banner-schedule-guide', label: 'Banner plan' }] }, { title: 'Platform starter', description: 'Xbox/Game Pass and Steam players continue into login, controller, resources, and Echo routes.', links: [{ href: '/wuwa/guides/steam-xbox-game-pass-starter', label: 'Steam/Xbox starter' }, { href: '/wuwa/build', label: 'Builds' }] }], ja: [{ title: 'v3.7注目', description: '次回バナー、コード、マップイベント、資源温存を先に確認します。', links: [{ href: '/wuwa/version', label: 'v3.7注目' }, { href: '/wuwa/redeem-codes', label: 'コード' }] }, { title: 'v3.6 Jingran', description: '現在育成とバナーはJingranまとめへつなげます。', links: [{ href: '/wuwa/guides/v3-6-qingxiao-jingran-post-launch-route', label: 'Jingranまとめ' }, { href: '/wuwa/guides/banner-schedule-guide', label: 'バナー計画' }] }, { title: '平台入門', description: 'Xbox/Game PassとSteam勢はログイン、コントローラー、資源、エコー導線へ。', links: [{ href: '/wuwa/guides/steam-xbox-game-pass-starter', label: 'Steam/Xbox入門' }, { href: '/wuwa/build', label: 'ビルド' }] }] },
-    faq: [{ question: { zh: '鸣潮首页现在先看什么最实用？', en: 'What is the most practical starting point on the WuWa homepage?', ja: '鳴潮ホームで最初に見ると実用的なものは？' }, answer: { zh: '先看 3.7 watch 和兑换码，再看 3.6 Jingran 复盘、平台入坑和声骸配装。', en: 'Start with v3.7 watch and codes, then v3.6 Jingran recap, platform onboarding, and Echo builds.', ja: 'まずv3.7注目とコード、その後v3.6 Jingranまとめ、平台入門、エコービルドへ。' } }],
+    eyebrow: { zh: '3.7 实装 / 平台入坑入口', en: 'v3.7 Live / Platform Starter Hub', ja: 'Ver.3.7実装 / プラットフォーム入門導線' },
+    title: { zh: '鸣潮 3.7 实装内容、活动与平台入坑重点入口', en: 'WuWa v3.7 live, events, and platform starter hub', ja: '鳴潮 Ver.3.7実装・イベント・プラットフォーム入門導線' },
+    description: { zh: '把 3.7 上线后路线、梦枢天罗、活动、兑换码、卡池预算、Xbox/Game Pass 与 Steam 入坑放到首页。', en: 'Bring the v3.7 live route, Simulacrum Nexus, events, codes, banner budgeting, Xbox/Game Pass, and Steam onboarding to the homepage.', ja: 'Ver.3.7実装後ルート、夢枢天羅、イベント、コード、バナー予算、Xbox/Game Pass、Steam入門をトップにまとめます。' },
+    chips: { zh: ['3.7 已上线', '梦枢天罗', '限时活动', '兑换码', '卡池预算', 'Xbox/Steam'], en: ['v3.7 live', 'Simulacrum Nexus', 'Limited events', 'Codes', 'Banner budget', 'Xbox/Steam'], ja: ['Ver.3.7配信中', '夢枢天羅', '期間限定イベント', 'コード', 'バナー予算', 'Xbox/Steam'] },
+    cta: { zh: '查看 3.7 上线后路线', en: 'Open the v3.7 live route', ja: 'Ver.3.7実装後ルートを見る' },
+    tracks: { zh: [{ title: '3.7 实装与活动', description: '先检查邮件、资源下载、梦枢天罗解锁与活动前置条件。', links: [{ href: '/wuwa/guides/v3-7-live-route', label: '3.7 上线后路线' }, { href: '/wuwa/events', label: '活动看板' }] }, { title: '唤取与资源', description: '再核对当前保底、卡池结束时间、有效兑换码与养成预算。', links: [{ href: '/wuwa/guides/banner-schedule-guide', label: '卡池规划' }, { href: '/wuwa/redeem-codes', label: '兑换码' }] }, { title: '平台与养成', description: 'Xbox/Game Pass 和 Steam 玩家先处理登录与资源，再进入配装和声骸路线。', links: [{ href: '/wuwa/guides/steam-xbox-game-pass-starter', label: 'Steam/Xbox 入坑' }, { href: '/wuwa/build', label: '配装推荐' }] }], en: [{ title: 'v3.7 live and events', description: 'Check mail, downloads, Simulacrum Nexus access, and event prerequisites first.', links: [{ href: '/wuwa/guides/v3-7-live-route', label: 'v3.7 live route' }, { href: '/wuwa/events', label: 'Event board' }] }, { title: 'Convene and resources', description: 'Then verify pity, banner end time, valid codes, and your progression budget.', links: [{ href: '/wuwa/guides/banner-schedule-guide', label: 'Banner plan' }, { href: '/wuwa/redeem-codes', label: 'Codes' }] }, { title: 'Platform and builds', description: 'Xbox/Game Pass and Steam players should complete account and resource checks before builds and Echo routes.', links: [{ href: '/wuwa/guides/steam-xbox-game-pass-starter', label: 'Steam/Xbox starter' }, { href: '/wuwa/build', label: 'Builds' }] }], ja: [{ title: 'Ver.3.7実装とイベント', description: 'メール、DL、夢枢天羅の解放、イベント前提条件を先に確認します。', links: [{ href: '/wuwa/guides/v3-7-live-route', label: 'Ver.3.7実装後ルート' }, { href: '/wuwa/events', label: 'イベントボード' }] }, { title: '集音と資源', description: '次に天井、バナー終了時刻、有効コード、育成予算を確認します。', links: [{ href: '/wuwa/guides/banner-schedule-guide', label: 'バナー計画' }, { href: '/wuwa/redeem-codes', label: 'コード' }] }, { title: 'プラットフォームと育成', description: 'Xbox/Game PassとSteam勢はアカウントとリソースを確認してからビルドとエコーへ。', links: [{ href: '/wuwa/guides/steam-xbox-game-pass-starter', label: 'Steam/Xbox入門' }, { href: '/wuwa/build', label: 'ビルド' }] }] },
+    faq: [{ question: { zh: '鸣潮首页现在先看什么最实用？', en: 'What is the most practical starting point on the WuWa homepage?', ja: '鳴潮ホームで最初に見ると実用的なものは？' }, answer: { zh: '先看 3.7 上线后路线与活动看板，确认邮件、资源下载、解锁条件和本服时间；再处理卡池预算、兑换码、平台入坑与声骸配装。', en: 'Start with the v3.7 live route and event board to verify mail, downloads, unlock conditions, and server timing; then review banner budgeting, codes, platform onboarding, and Echo builds.', ja: 'まずVer.3.7実装後ルートとイベントボードでメール、DL、解放条件、サーバー時刻を確認し、その後バナー予算、コード、プラットフォーム入門、エコーへ進みます。' } }],
   },
   endfield: {
     eyebrow: { zh: 'Pioneer Test 复盘 / AIC 蓝图入口', en: 'Pioneer Test Recap / AIC Blueprint Hub', ja: 'Pioneer Testまとめ / AIC設計図導線' },
@@ -698,7 +698,7 @@ interface GuideInfo { id: string; title: string; summary: string }
 const FEATURED_GUIDE_IDS: Record<string, string[]> = {
   genshin: ['lightrace-wish-phase-ii-faq', 'phase-ii-columbina-raiden-pull-plan', 'banner-schedule-guide'],
   starrail: ['banner-schedule-guide', 'fate-rin-gilgamesh-reward-faq', 'himeko-nova-fate-pull-plan'],
-  wuwa: ['banner-schedule-guide', 'yangyang-suisui-sp-pull-plan', 'steam-xbox-game-pass-starter'],
+  wuwa: ['v3-7-live-route', 'echo-advanced-guide', 'farming-guide'],
   nte: ['999-nights-mode-guide', 'shinku-iroi-pull-plan', 'v1-2-999-nights-guide'],
   zzz: ['banner-schedule-guide', 'anniversary-rewards-codes-plan', 'v3-1-anniversary-xbox-guide'],
   guihuan: ['test-recruit-international-download-faq', 'official-release-company-faq', 'test-release-timeline-guide'],
@@ -1010,14 +1010,14 @@ export default async function GameHome({
                     <Link href={`/${gameId}/version` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
                       {locale === 'zh' ? '版本专题' : locale === 'ja' ? 'バージョン特集' : 'Version Hub'}
                     </Link>
-                    <Link href={`/${gameId}/guides/v3-5-preview-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
-                      {locale === 'zh' ? '3.7 watch' : locale === 'ja' ? '3.7注目' : 'v3.7 Watch'}
+                    <Link href={`/${gameId}/guides/v3-7-live-route` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '3.7 上线后路线' : locale === 'ja' ? 'Ver.3.7実装後ルート' : 'v3.7 Live Route'}
                     </Link>
-                    <Link href={`/${gameId}/guides/v3-4-version-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
-                      {locale === 'zh' ? 'v3.4 版本' : locale === 'ja' ? 'v3.4 バージョン' : 'v3.4 Version'}
+                    <Link href={`/${gameId}/events` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '3.7 活动看板' : locale === 'ja' ? 'Ver.3.7イベント' : 'v3.7 Events'}
                     </Link>
-                    <Link href={`/${gameId}/guides/roya-frostlands-guide` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
-                      {locale === 'zh' ? 'Roya Frostlands' : locale === 'ja' ? 'Roya Frostlands' : 'Roya Frostlands'}
+                    <Link href={`/${gameId}/map` as '/'} className="rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary">
+                      {locale === 'zh' ? '梦枢天罗地图' : locale === 'ja' ? '夢枢天羅マップ' : 'Simulacrum Nexus Map'}
                     </Link>
                   </>
                 )}

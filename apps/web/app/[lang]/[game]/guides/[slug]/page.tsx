@@ -370,7 +370,7 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
   },
   wuwa: {
     'banner-schedule-guide': [
-      { href: '/wuwa/guides/v3-5-preview-guide', label: { zh: 'v3.5 专题', en: 'v3.5 guide', ja: 'v3.5特集' }, description: { zh: '当前版本角色、平台和活动入口。', en: 'Current version characters, platforms, and events.', ja: '現在版本のキャラ、平台、イベント。' } },
+      { href: '/wuwa/guides/v3-7-live-route', label: { zh: '3.7 上线后路线', en: 'v3.7 live route', ja: 'Ver.3.7実装後ルート' }, description: { zh: '当前版本、梦枢天罗、活动和平台入口。', en: 'Live version, Simulacrum Nexus, event, and platform entry points.', ja: '実装中バージョン、夢枢天羅、イベント、プラットフォーム入口。' } },
       { href: '/wuwa/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '抽前先补星声。', en: 'Claim Astrite before pulling.', ja: 'ガチャ前に星声を回収。' } },
       { href: '/calendar', label: { zh: '跨游戏日历', en: 'Banner calendar', ja: 'ガチャ日程' }, description: { zh: '对比多游戏卡池、版本和兑换码期限。', en: 'Compare banners, versions, and code deadlines across games.', ja: '複数ゲームのバナー、版本、コード期限を比較。' } },
     ],

@@ -44,9 +44,9 @@ const CHARACTER_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
       description: { zh: '先把主流声骸套装和适配角色认全', en: 'Review the main echo sets and their best users', ja: '主要エコーセットと適性キャラを確認', },
     },
     {
-      href: '/wuwa/guides/roya-frostlands-guide',
-      title: { zh: '继续看新区域', en: 'Read the region guide', ja: '新エリア攻略へ' },
-      description: { zh: '把地图、刷图和养成路径接起来', en: 'Link the map, farming, and progression paths', ja: 'マップ、周回、育成導線をつなぐ', },
+      href: '/wuwa/guides/v3-7-live-route',
+      title: { zh: '查看 3.7 上线后路线', en: 'Read the v3.7 live route', ja: 'Ver.3.7実装後ルートを見る' },
+      description: { zh: '把区域解锁、活动、抽取和养成路径接起来', en: 'Connect region unlocks, events, pulling, and progression paths', ja: 'エリア解放、イベント、集音、育成導線をつなぐ', },
     },
   ],
   zzz: [
@@ -412,9 +412,9 @@ function CharacterListPage({ chars, locale, gameId, gameConfig }: { chars: Chara
 function CoverageNote({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
   const copy = gameId === 'wuwa'
     ? {
-        zh: '鸣潮角色页优先展示属性、武器、等级属性、材料与已核验强度信息；技能、声骸和配队资料会在完成核验后逐步补齐。',
-        en: 'WuWa pages prioritize attributes, weapons, stats, materials, and verified tier context. Skills, Echoes, and team data are added only after verification.',
-        ja: '鳴潮キャラページは属性、武器、ステータス、素材、検証済みTierを優先掲載。スキル、音骸、編成は検証後に追加します。',
+        zh: '鸣潮角色页优先展示已有完整属性、武器、等级属性、材料与已核验强度信息。3.7 的心/锁暝已在版本路线与活动看板中标注上线信息；完整技能、材料、数值和配队资料仅在结构化数据核验后加入图鉴与计算器。',
+        en: 'WuWa pages prioritize characters with complete verified attributes, weapons, stats, materials, and tier context. Hsin and Suoming are covered as live v3.7 content in the version route and event board; full skills, materials, values, and teams enter the index and calculator only after structured-data verification.',
+        ja: '鳴潮キャラページは、属性、武器、ステータス、素材、検証済みTierが揃ったキャラを優先掲載します。心/鎖暝はVer.3.7実装情報としてバージョンルートとイベントボードで案内し、スキル、素材、数値、編成は構造化データの確認後に図鑑と計算機へ追加します。',
       }
     : gameId === 'endfield'
       ? {

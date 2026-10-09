@@ -1,5 +1,45 @@
 [
   {
+    "id": "simulacrum-nexus",
+    "name": "梦枢天罗",
+    "nameEn": "Simulacrum Nexus of Mengzhou",
+    "nameJa": "夢枢天羅",
+    "description": "梦枢天罗是玄方城的控制中枢，也被称为万相神宫。区域围绕心相迷宫与多种心域展开，部分玩法的奖励进度可在地图界面对应入口查看。进入与后续探索需要遵循潮汐任务第四章第四幕「梦枢心相由心生」的游戏内指引。",
+    "descriptionEn": "The Simulacrum Nexus of Mengzhou is the control center of Xuanfang City, also known as the Myriad-Aspect Divine Palace. Its Heartscape Maze and themed heart realms include map-linked reward progress for selected activities. Follow the in-game Chapter IV, Act IV Tidal Task guidance to enter and continue exploration.",
+    "descriptionJa": "夢枢天羅は玄方城の制御中枢で、万相神宮とも呼ばれます。心相迷宮と複数の心域からなり、一部の遊びではマップから報酬進行を確認できます。進入と探索は潮汐任務第四章・第四幕「夢枢心相由心生」のゲーム内案内に従ってください。",
+    "highlights": [
+      "心相迷宫",
+      "烬心域、凄心域、怡心域、沉心域、墟心域、相心域",
+      "梦枢天罗残象聚落",
+      "部分玩法奖励进度地图显示"
+    ],
+    "specialties": [
+      "以游戏内采集与任务指引为准"
+    ],
+    "bosses": [
+      "玉冥蛇",
+      "全新 COST 4 声骸（以游戏内图鉴为准）"
+    ],
+    "domains": [
+      "沉心域无音区",
+      "烬心域无音区"
+    ],
+    "tips": [
+      "先完成潮汐任务第四章・幕间「幽客销残声」，再按第四幕任务引导进入区域",
+      "部分玩法可在地图界面查看当前奖励进度，先确认未领取奖励再离开区域",
+      "活动、采集与解谜的精确开放条件以游戏内显示为准"
+    ],
+    "subRegions": [
+      "Heartscape Maze",
+      "Emberheart Realm",
+      "Sorrowheart Realm",
+      "Joyheart Realm",
+      "Deepheart Realm",
+      "Ruinedheart Realm",
+      "Linkedheart Realm"
+    ]
+  },
+  {
     "id": "huanglong",
     "name": "瑝珑",
     "nameEn": "Huanglong",

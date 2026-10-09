@@ -167,7 +167,7 @@ function WuWaCharacterDetail({ char, locale }: { char: WuWaCharacter; locale: Su
           </div>
           <div className="mt-4 rounded-md border border-game-border bg-game-surface px-3 py-2 text-xs leading-relaxed text-game-text-muted">
             <strong className="mr-1 text-game-text">{locale === 'zh' ? '数据状态' : locale === 'ja' ? 'データ状況' : 'Data status'}:</strong>
-            {locale === 'zh' ? '页面已按鸣潮 v3.7 观察与 v3.6 复盘周期检查至 2026-09-21。技能、声骸和配队仅在有可核验资料时展示；缺失部分不会用推测补齐。' : locale === 'ja' ? '鳴潮 v3.7観察とv3.6回顧を2026-09-21まで確認。検証可能な資料がある項目のみ掲載し、不明点は推測で補いません。' : 'Checked through the WuWa v3.7 watchlist and v3.6 recap cycle on 2026-09-21. Skills, Echoes, and teams are shown only when verifiable data is available; missing fields are not guessed.'}
+            {locale === 'zh' ? '页面已按鸣潮 3.7 实装期资料检查至 2026-10-09。技能、声骸和配队仅在有可核验资料时展示；缺失部分不会用推测补齐。' : locale === 'ja' ? '鳴潮Ver.3.7実装情報を2026-10-09まで確認。検証可能な資料がある項目のみ掲載し、不明点は推測で補いません。' : 'Checked against WuWa v3.7 live information through 2026-10-09. Skills, Echoes, and teams are shown only when verifiable data is available; missing fields are not guessed.'}
           </div>
         </div>
       </div>

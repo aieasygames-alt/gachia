@@ -213,7 +213,7 @@ const TYPE_LABELS: Record<string, Record<string, string>> = {
 const WUWA_WEAPON_NEXT_STEPS: NextStepLink[] = [
   { href: '/wuwa/version', title: { zh: '先看版本专题', en: 'Start with version hub', ja: 'まず版本特集へ' }, description: { zh: '把当前版本、福利和热词先看一遍', en: 'Review the current version, rewards, and hot topics', ja: '版本、報酬、注目トピックを確認' } },
   { href: '/wuwa/characters', title: { zh: '继续看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' }, description: { zh: '按角色反查武器适配和毕业方向', en: 'Check which characters want which weapons', ja: 'キャラ別の適性と完成形を見る' } },
-  { href: '/wuwa/guides/roya-frostlands-guide', title: { zh: '看新区域攻略', en: 'Read region guide', ja: '新エリア攻略へ' }, description: { zh: '把刷图、材料和养成路径接起来', en: 'Connect farming, materials, and progression', ja: '周回、素材、育成導線を接続' } },
+  { href: '/wuwa/guides/v3-7-live-route', title: { zh: '看 3.7 上线后路线', en: 'Read the v3.7 live route', ja: 'Ver.3.7実装後ルートへ' }, description: { zh: '把梦枢天罗、材料与养成路径接起来', en: 'Connect the Simulacrum Nexus, materials, and progression', ja: '夢枢天羅、素材、育成導線を接続' } },
 ];
 
 const ZZZ_WEAPON_NEXT_STEPS: NextStepLink[] = [

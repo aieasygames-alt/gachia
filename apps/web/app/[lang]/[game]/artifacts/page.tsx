@@ -14,9 +14,9 @@ type NextStepLink = {
 
 const WUWA_ECHO_NEXT_STEPS: NextStepLink[] = [
   {
-    href: '/wuwa/version',
-    label: { zh: '先看版本专题', en: 'Start with version hub', ja: 'まず版本特集へ' },
-    description: { zh: '版本重点、福利和热词入口都在这里', en: 'Version highlights, rewards, and hot topics', ja: '版本重点、報酬、注目トピックを確認' },
+    href: '/wuwa/guides/v3-7-live-route',
+    label: { zh: '查看 3.7 上线后路线', en: 'Open the v3.7 live route', ja: 'Ver.3.7実装後ルートを見る' },
+    description: { zh: '确认梦枢天罗、活动与当前唤取的行动顺序', en: 'Confirm the action order for the Simulacrum Nexus, events, and live Convene', ja: '夢枢天羅、イベント、現在集音の行動順を確認' },
   },
   {
     href: '/wuwa/characters',
@@ -24,9 +24,9 @@ const WUWA_ECHO_NEXT_STEPS: NextStepLink[] = [
     description: { zh: '按角色反查声骸适配和毕业方向', en: 'Check which characters want which echo sets', ja: 'キャラ別の適性と完成形を見る' },
   },
   {
-    href: '/wuwa/weapons',
-    label: { zh: '再看武器图鉴', en: 'Browse weapons', ja: '武器図鑑へ' },
-    description: { zh: '把武器和声骸一起配起来看', en: 'Pair weapons with echo set planning', ja: '武器とエコーの組み合わせを確認' },
+    href: '/wuwa/map',
+    label: { zh: '探索梦枢天罗', en: 'Explore the Simulacrum Nexus', ja: '夢枢天羅を探索' },
+    description: { zh: '查看区域解锁、无音区与地图探索入口', en: 'Check region unlocks, Tacet Fields, and map-exploration entry points', ja: 'エリア解放、無音区、マップ探索入口を確認' },
   },
 ];
 

@@ -12,6 +12,7 @@ import {
 } from '@/lib/game-data/roco-events';
 import { ZZZ_EVENTS, ZZZ_EVENT_STATUS_COPY, ZZZ_EVENT_UPDATED_AT, type ZzzEventStatus } from '@/lib/game-data/zzz-events';
 import { ENDFIELD_EVENTS, ENDFIELD_EVENT_STATUS_COPY, ENDFIELD_EVENT_UPDATED_AT, type EndfieldEventStatus } from '@/lib/game-data/endfield-events';
+import { WUWA_EVENTS, WUWA_EVENT_STATUS_COPY, WUWA_EVENT_UPDATED_AT, type WuWaEventStatus } from '@/lib/game-data/wuwa-events';
 
 const BASE_URL = 'https://gachia.com';
 const SNAPSHOT_DATE = new Date('2026-09-07T00:00:00Z');
@@ -58,7 +59,7 @@ function formatDate(date: string, locale: SupportedLocale) {
 
 export function generateStaticParams() {
   return LOCALES.flatMap((lang) =>
-    (['roco', 'roco-cn', 'zzz', 'endfield'] as const).map((game) => ({ lang, game })),
+    (['roco', 'roco-cn', 'wuwa', 'zzz', 'endfield'] as const).map((game) => ({ lang, game })),
   );
 }
 
@@ -71,7 +72,7 @@ export async function generateMetadata({
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
 
-  if (!isRocoEventGame(gameId) && gameId !== 'zzz' && gameId !== 'endfield') {
+  if (!isRocoEventGame(gameId) && gameId !== 'wuwa' && gameId !== 'zzz' && gameId !== 'endfield') {
     return { robots: { index: false, follow: false } };
   }
 
@@ -135,6 +136,36 @@ export async function generateMetadata({
     };
   }
 
+  if (gameId === 'wuwa') {
+    const title = locale === 'zh'
+      ? '鸣潮 3.7 活动看板｜梦枢天罗、心与活动时间'
+      : locale === 'ja'
+        ? '鳴潮 Ver.3.7 イベントボード｜夢枢天羅・心・開催時刻'
+        : 'Wuthering Waves v3.7 Event Board — Simulacrum Nexus, Hsin and Event Timing';
+    const description = ensureMetaLength(
+      locale === 'zh'
+        ? '鸣潮 3.7 活动看板整理梦枢天罗、新角色唤取、限时战斗活动、资源下载检查与后续活动的官方核验入口。'
+        : locale === 'ja'
+          ? '鳴潮Ver.3.7の夢枢天羅、新キャラ集音、期間限定戦闘、リソースDL確認、今後のイベントを公式情報に基づき整理します。'
+          : 'Official-status v3.7 board for the Simulacrum Nexus, Hsin Convene, limited combat events, resource-download checks, and upcoming event verification.',
+      locale,
+    );
+
+    return {
+      title,
+      description,
+      alternates: buildLocalizedAlternates(locale, (entry) => `/${entry}/wuwa/events`, LOCALES),
+      openGraph: {
+        title,
+        description,
+        url: `${BASE_URL}/${locale}/wuwa/events`,
+        siteName: 'Gachia',
+        images: [{ url: `${BASE_URL}/images/og/wuwa.webp`, width: 1200, height: 630 }],
+        locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
+      },
+    };
+  }
+
   const gameName = GAMES[gameId].name[locale];
   const label = CATEGORY_LABELS.events?.[locale] ?? COPY.title[locale];
   const title = locale === 'zh'
@@ -177,6 +208,7 @@ export default async function RocoEventsPage({
 
   if (gameId === 'zzz') return <ZzzEventsPage locale={locale} />;
   if (gameId === 'endfield') return <EndfieldEventsPage locale={locale} />;
+  if (gameId === 'wuwa') return <WuWaEventsPage locale={locale} />;
 
   if (!isRocoEventGame(gameId)) return null;
 
@@ -280,4 +312,9 @@ function ZzzEventsPage({ locale }: { locale: SupportedLocale }) {
 function EndfieldEventsPage({ locale }: { locale: SupportedLocale }) {
   const statuses: EndfieldEventStatus[] = ['action', 'planning', 'watch'];
   return <div><h1 className="mb-2 text-2xl font-bold text-game-text">{locale === 'zh' ? '终末地测试后状态看板' : locale === 'ja' ? 'エンドフィールド テスト後状態ボード' : 'Endfield Post-Test Status Board'}</h1><p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">{locale === 'zh' ? `更新时间：${ENDFIELD_EVENT_UPDATED_AT}。本页将 Pioneer Test 历史、可复用的 AIC/蓝图经验与下一轮测试或正式上线的官方确认状态分开呈现。` : locale === 'ja' ? `更新日：${ENDFIELD_EVENT_UPDATED_AT}。Pioneer Testの履歴、再利用可能なAIC/設計図の知見、次回テスト・正式版の公式確認状態を分けて整理します。` : `Updated ${ENDFIELD_EVENT_UPDATED_AT}. This board separates Pioneer Test history, reusable AIC/blueprint learning, and official confirmation for a future test or full release.`}</p><div className="space-y-6">{statuses.map((status) => <section key={status}><h2 className="mb-3 text-base font-semibold text-game-text">{ENDFIELD_EVENT_STATUS_COPY[status][locale]}</h2><div className="grid gap-4 md:grid-cols-2">{ENDFIELD_EVENTS.filter((entry) => entry.status === status).map((entry) => <article key={entry.id} className="border border-game-border bg-game-surface p-4"><span className="text-xs font-semibold text-game-primary">{ENDFIELD_EVENT_STATUS_COPY[entry.status][locale]}</span><h3 className="mt-2 text-lg font-semibold text-game-text">{entry.title[locale]}</h3><p className="mt-2 text-sm leading-6 text-game-text-muted">{entry.summary[locale]}</p><p className="mt-3 text-xs text-game-text-muted">{locale === 'zh' ? '来源：' : locale === 'ja' ? '出典：' : 'Source: '}{entry.source[locale]} · {entry.updatedAt}</p><Link href={entry.href as '/'} className="mt-4 inline-block text-sm font-semibold text-game-primary hover:text-game-accent">{entry.action[locale]} →</Link></article>)}</div></section>)}</div></div>;
+}
+
+function WuWaEventsPage({ locale }: { locale: SupportedLocale }) {
+  const statuses: WuWaEventStatus[] = ['action', 'planning', 'watch'];
+  return <div><h1 className="mb-2 text-2xl font-bold text-game-text">{locale === 'zh' ? '鸣潮 3.7 活动看板' : locale === 'ja' ? '鳴潮 Ver.3.7 イベントボード' : 'Wuthering Waves v3.7 Event Board'}</h1><p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">{locale === 'zh' ? `更新时间：${WUWA_EVENT_UPDATED_AT}。本页只列出官方公告可核验的 3.7 行动、活动时间与排查入口；具体区服时间、前置条件和奖励以游戏内显示为准。` : locale === 'ja' ? `更新日：${WUWA_EVENT_UPDATED_AT}。このページは公式告知で確認できるVer.3.7の行動、開催時刻、確認入口のみを掲載します。サーバー時刻、前提条件、報酬はゲーム内表示を基準にしてください。` : `Updated ${WUWA_EVENT_UPDATED_AT}. This board lists only v3.7 actions, timing, and checks verifiable from official notices. Use the live client for server timing, prerequisites, and rewards.`}</p><div className="space-y-6">{statuses.map((status) => <section key={status}><h2 className="mb-3 text-base font-semibold text-game-text">{WUWA_EVENT_STATUS_COPY[status][locale]}</h2><div className="grid gap-4 md:grid-cols-2">{WUWA_EVENTS.filter((entry) => entry.status === status).map((entry) => <article key={entry.id} className="border border-game-border bg-game-surface p-4"><span className="text-xs font-semibold text-game-primary">{WUWA_EVENT_STATUS_COPY[entry.status][locale]}</span><h3 className="mt-2 text-lg font-semibold text-game-text">{entry.title[locale]}</h3><p className="mt-2 text-sm leading-6 text-game-text-muted">{entry.summary[locale]}</p><p className="mt-3 text-xs text-game-text-muted">{locale === 'zh' ? '来源：' : locale === 'ja' ? '出典：' : 'Source: '}{entry.source[locale]} · {entry.updatedAt}</p><Link href={entry.href as '/'} className="mt-4 inline-block text-sm font-semibold text-game-primary hover:text-game-accent">{entry.action[locale]} →</Link></article>)}</div></section>)}</div></div>;
 }

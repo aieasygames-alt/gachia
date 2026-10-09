@@ -85,6 +85,26 @@ function t(locale: SupportedLocale, zh: string, en: string, ja?: string) {
 }
 
 function getTeamNextSteps(gameId: string, locale: SupportedLocale): NextStepLink[] {
+  if (gameId === 'wuwa') {
+    return [
+      {
+        href: '/wuwa/artifacts',
+        title: { zh: '核对 3.7 声骸合鸣', en: 'Check v3.7 Echo sets', ja: 'Ver.3.7エコーセットを確認' },
+        description: { zh: '检查导电队和治疗位是否满足新合鸣的触发条件。', en: 'Check whether Electro and healer slots meet new Sonata triggers.', ja: '導電編成と回復枠が新ソナタの発動条件を満たすか確認。' },
+      },
+      {
+        href: '/wuwa/guides/v3-7-live-route',
+        title: { zh: '查看 3.7 队伍推进顺序', en: 'Open the v3.7 progression route', ja: 'Ver.3.7の進行順を見る' },
+        description: { zh: '先用可用队伍推进梦枢天罗和活动，再追高投入优化。', en: 'Use a workable team for the Simulacrum Nexus and events before high-investment optimization.', ja: '高投資最適化の前に、使える編成で夢枢天羅とイベントを進めます。' },
+      },
+      {
+        href: '/wuwa/events',
+        title: { zh: '核对活动条件', en: 'Verify event conditions', ja: 'イベント条件を確認' },
+        description: { zh: '根据本服时间、前置任务和奖励目标调整当前队伍。', en: 'Adjust the current team around server timing, prerequisites, and reward goals.', ja: 'サーバー時刻、前提任務、報酬目標に合わせて編成を調整。' },
+      },
+    ];
+  }
+
   const titles = {
     characters: { zh: '看角色图鉴', en: 'Browse Characters', ja: 'キャラ図鑑を見る' },
     build: { zh: '看配装推荐', en: 'Open Build Recommender', ja: 'ビルドを見る' },

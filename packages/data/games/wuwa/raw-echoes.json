@@ -1,5 +1,35 @@
 [
   {
+    "id": "heart-that-illuminates-dreams",
+    "name": "衔梦照世之心",
+    "nameEn": "Heart That Illuminates Dreams",
+    "bonus2pc": "导电伤害提升10%。",
+    "bonus2pcEn": "Electro DMG Bonus +10%.",
+    "bonus5pc": "角色为敌人添加电磁效应时，或自身获得同奏、响应同奏时，自身暴击提升15%，导电伤害提升22.5%，持续30秒。",
+    "bonus5pcEn": "When applying Electro Magnetism to an enemy, or when gaining Unison or responding to Unison, gain 15% CRIT and 22.5% Electro DMG for 30s.",
+    "bestFor": ["hsin"]
+  },
+  {
+    "id": "mirror-shadow-flowing-lightning",
+    "name": "镜影流电之瞬",
+    "nameEn": "Moment of Mirror-Shadow Flowing Lightning",
+    "bonus2pc": "导电伤害提升10%。",
+    "bonus2pcEn": "Electro DMG Bonus +10%.",
+    "bonus5pc": "角色为敌人添加电磁效应时，自身导电伤害提升10%，持续15秒。期间施放延奏技能后，下一个变奏技能登场的角色导电伤害提升25%，持续15秒。",
+    "bonus5pcEn": "When applying Electro Magnetism, gain 10% Electro DMG for 15s. After casting an Outro Skill during this effect, the next character entering with an Intro Skill gains 25% Electro DMG for 15s.",
+    "bestFor": ["suoming"]
+  },
+  {
+    "id": "flower-of-crimson-reminiscence",
+    "name": "茜染怀想之花",
+    "nameEn": "Flower of Crimson Reminiscence",
+    "bonus2pc": "治疗效果提升10%。",
+    "bonus2pcEn": "Healing Bonus +10%.",
+    "bonus5pc": "为队伍中角色提供治疗时，队伍中角色攻击提升10%，持续30秒，同名效果之间不可叠加。效果持续期间，若角色获得同奏、响应同奏，攻击额外提升15%。",
+    "bonus5pcEn": "When healing a team member, all team members gain 10% ATK for 30s; effects of the same name do not stack. While active, gaining Unison or responding to Unison grants an additional 15% ATK.",
+    "bestFor": []
+  },
+  {
     "id": "freezing-frost",
     "name": "凝夜白霜",
     "nameEn": "Freezing Frost",

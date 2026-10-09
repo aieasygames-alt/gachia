@@ -97,14 +97,14 @@ const DOWNLOAD_COPY: Partial<Record<GameId, DownloadCopy>> = {
   wuwa: {
     officialUrl: 'https://wutheringwaves.kurogames.com/',
     status: {
-      zh: '鸣潮已上线，3.7 观察期与 3.6 今汐复盘下，Xbox / Game Pass 相关下载与账号问题仍需优先看官方和商店公告。',
-      en: 'Wuthering Waves is live; around the v3.7 watchlist and v3.6 Jingran recap, verify Xbox/Game Pass download and account details through official and store notices.',
-      ja: '鳴潮は配信中です。v3.7観察とv3.6今汐回顧ではXbox/Game Pass関連も公式とストア告知を確認してください。',
+      zh: '鸣潮已上线并进入 3.7 实装期。下载、资源分级包、Xbox / Game Pass 账号与商店入口仍应以官方和平台公告为准。',
+      en: 'Wuthering Waves is live and in its v3.7 release window. Verify downloads, tiered resource packages, and Xbox/Game Pass account or store details through official and platform notices.',
+      ja: '鳴潮は配信中でVer.3.7実装期間です。DL、段階リソース、Xbox/Game Passのアカウントとストア入口は公式とプラットフォーム告知を基準にしてください。',
     },
     intro: {
-      zh: '集中查看鸣潮下载、官网、国际服、Xbox、云游戏、配置、3.7 观察和 3.6 后新玩家入坑问题。',
-      en: 'A hub for Wuthering Waves download, official links, global server, Xbox, cloud gaming, specs, v3.7 watch items, and v3.6+ starters.',
-      ja: 'DL、公式、グローバル、Xbox、クラウド、環境、v3.7観察、v3.6以降の入門を整理します。',
+      zh: '集中查看鸣潮下载、官网、国际服、Xbox、云游戏、配置、3.7 资源下载与新玩家入坑问题。',
+      en: 'A hub for Wuthering Waves download, official links, global server, Xbox, cloud gaming, specs, v3.7 resource downloads, and new-player onboarding.',
+      ja: 'DL、公式、グローバル、Xbox、クラウド、環境、Ver.3.7のリソースDL、新規入門を整理します。',
     },
     officialNote: DEFAULT_STATUS,
     platforms: [

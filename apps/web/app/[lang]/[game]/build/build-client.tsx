@@ -30,6 +30,26 @@ function t(locale: SupportedLocale, zh: string, en: string, ja?: string) {
 }
 
 function getBuildNextSteps(gameId: string, locale: SupportedLocale): NextStepLink[] {
+  if (gameId === 'wuwa') {
+    return [
+      {
+        href: '/wuwa/artifacts',
+        title: { zh: '查看 3.7 声骸合鸣', en: 'Browse v3.7 Echo sets', ja: 'Ver.3.7エコーセットを見る' },
+        description: { zh: '核对新合鸣的触发条件、两件套与五件套效果。', en: 'Check new Sonata triggers plus 2-piece and 5-piece effects.', ja: '新ソナタの発動条件、2セット・5セット効果を確認。' },
+      },
+      {
+        href: '/wuwa/guides/v3-7-live-route',
+        title: { zh: '查看 3.7 上线后路线', en: 'Open the v3.7 live route', ja: 'Ver.3.7実装後ルートを見る' },
+        description: { zh: '把梦枢天罗、活动、唤取和养成顺序接起来。', en: 'Connect Simulacrum Nexus, events, Convene, and progression order.', ja: '夢枢天羅、イベント、集音、育成順をつなげます。' },
+      },
+      {
+        href: '/wuwa/events',
+        title: { zh: '查看活动看板', en: 'Open the event board', ja: 'イベントボードを見る' },
+        description: { zh: '先核对本服时间、前置条件和当前可领取奖励。', en: 'Verify server timing, prerequisites, and currently claimable rewards.', ja: 'サーバー時刻、前提条件、現在受取可能な報酬を確認。' },
+      },
+    ];
+  }
+
   const titles = {
     characters: { zh: '看角色图鉴', en: 'Browse Characters', ja: 'キャラ図鑑を見る' },
     weapons: { zh: '看武器图鉴', en: 'Browse Weapons', ja: '武器図鑑を見る' },

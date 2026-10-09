@@ -75,16 +75,16 @@ const VERSION_META_OVERRIDES: Partial<Record<GameId, Partial<Record<SupportedLoc
   },
   wuwa: {
     zh: {
-      title: '鸣潮 3.7 前瞻专题：卡池、平台与兑换码',
-      description: '追踪鸣潮 3.7 前瞻、3.6 Jingran 收尾、Xbox/Game Pass、当前/下期卡池、声骸路线、兑换码和星声规划。',
+      title: '鸣潮 3.7 版本专题：梦枢天罗、心、活动与兑换码',
+      description: '追踪鸣潮 3.7「镜锁妄世，心照红尘」实装、梦枢天罗、心/锁暝、当前活动、卡池预算、兑换码与更新后平台检查。',
     },
     en: {
-      title: 'WuWa v3.7 Watch: Banners, Platform & Codes',
-      description: 'Track Wuthering Waves v3.7 watch, v3.6 Jingran wrap-up, Xbox/Game Pass onboarding, current and next banners, Echo routes, codes, and Astrite planning.',
+      title: 'WuWa v3.7 Hub: Simulacrum Nexus, Hsin, Events & Codes',
+      description: 'Track Wuthering Waves v3.7 live content: the Simulacrum Nexus of Mengzhou, Hsin/Suoming, current events, banner budgeting, codes, and post-update platform checks.',
     },
     ja: {
-      title: '鳴潮 v3.7 注目：バナー、平台、コード',
-      description: '鳴潮 v3.7注目、v3.6 Jingranまとめ、Xbox/Game Pass、現在/次回バナー、エコー導線、コード、星声計画を確認できます。',
+      title: '鳴潮 Ver.3.7 特集：夢枢天羅・心・イベント・コード',
+      description: '鳴潮Ver.3.7の実装情報、夢枢天羅、心/鎖暝、現在イベント、バナー予算、コード、更新後のプラットフォーム確認を整理します。',
     },
   },
   nte: {
@@ -151,7 +151,7 @@ const INTENT_LINKS: Partial<Record<GameId, IntentLink[]>> = {
     { href: '/starrail/guides/banner-schedule-guide', label: { zh: '下期跃迁', en: 'Next warps', ja: '次回跳躍' }, description: { zh: '把下期目标、当前资源、星琼缺口和队伍规划放到同一条路线。', en: 'Plan next targets, current resources, Stellar Jade gaps, and teams in one path.', ja: '次回目標、現在資源、星玉不足、編成計画を一つに整理。' } },
   ],
   wuwa: [
-    { href: '/wuwa/version', label: { zh: '官网 / 版本入口', en: 'Official / Version hub', ja: '公式 / バージョン' }, description: { zh: '集中查看 3.7 watch、3.6 Jingran 收尾、兑换码和平台入口。', en: 'Check v3.7 watch, v3.6 Jingran wrap-up, codes, and platform routes.', ja: 'v3.7注目、v3.6 Jingranまとめ、コード、平台導線を確認。' } },
+    { href: '/wuwa/version', label: { zh: '官网 / 版本入口', en: 'Official / Version hub', ja: '公式 / バージョン' }, description: { zh: '集中查看 3.7 实装内容、历史版本参考、兑换码和平台入口。', en: 'Check live v3.7 coverage, historical-version references, codes, and platform routes.', ja: 'Ver.3.7実装情報、過去バージョン参考、コード、プラットフォーム導線を確認。' } },
     { href: '/wuwa/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '版本码、活动码和过期状态。', en: 'Version codes, event codes, and expiry status.', ja: '版本コード、イベントコード、期限確認。' } },
     { href: '/wuwa/guides/banner-schedule-guide', label: { zh: '下期卡池', en: 'Next banners', ja: '次回バナー' }, description: { zh: '平台登录、当前资源、3.7 下期卡池和活动路线。', en: 'Platform login, current resources, v3.7 next banners, and event routes.', ja: 'ログイン、現在資源、v3.7次回バナー、イベント導線。' } },
   ],
@@ -230,16 +230,16 @@ const VERSION_COPY: Partial<Record<GameId, HubCopy>> = {
     guideIds: ['fate-rin-gilgamesh-reward-faq', 'himeko-nova-fate-pull-plan', 'fate-collab-guide'],
   },
   wuwa: {
-    title: { zh: '3.7 前瞻 / 3.6 Jingran 收尾专题', en: 'v3.7 Watch / v3.6 Jingran Wrap-up Hub', ja: 'v3.7注目 / v3.6 Jingranまとめ特集' },
-    description: { zh: '围绕 3.7 前瞻、3.6 Jingran 收尾、当前/下期卡池、兑换码、地图活动和 Xbox/Game Pass 入坑。', en: 'Track v3.7 watch, v3.6 Jingran wrap-up, current/next banners, codes, map events, and Xbox/Game Pass onboarding.', ja: 'v3.7注目、v3.6 Jingranまとめ、現在/次回バナー、コード、マップイベント、Xbox/Game Pass入門を整理します。' },
-    highlights: { zh: ['3.7 watch', '3.6 Jingran', '下期卡池', '兑换码'], en: ['v3.7 watch', 'v3.6 Jingran', 'Next banners', 'Redeem codes'], ja: ['v3.7注目', 'v3.6 Jingran', '次回バナー', '交換コード'] },
-    kicker: { zh: '下一版本观察', en: 'Next-version watch', ja: '次バージョン注目' },
-    freshness: { zh: '3.6 Jingran、3.7 前瞻、Xbox/Game Pass 新玩家入口和声骸路线会持续同步。', en: 'v3.6 Jingran, v3.7 previews, Xbox/Game Pass onboarding, and Echo routes stay in sync here.', ja: 'v3.6 Jingran、v3.7前瞻、Xbox/Game Pass入門、エコー導線を継続同期します。' },
+    title: { zh: '3.7「镜锁妄世，心照红尘」上线专题', en: 'v3.7 "Prism\'s Illusion, Heart\'s Illumination" Live Hub', ja: 'Ver.3.7「鏡に鎖す妄世、心で照らす紅塵」実装特集' },
+    description: { zh: '围绕 3.7 实装后的梦枢天罗、心/锁暝、当前活动、卡池预算、兑换码、资源下载和客户端排查展开。', en: 'Track live v3.7 content in the Simulacrum Nexus of Mengzhou, Hsin/Suoming, current events, banner budgeting, codes, resource downloads, and client checks.', ja: 'Ver.3.7実装後の夢枢天羅、心/鎖暝、現在イベント、バナー予算、コード、リソースDL、クライアント確認を整理します。' },
+    highlights: { zh: ['梦枢天罗', '心/锁暝', '限时活动', '卡池预算'], en: ['Simulacrum Nexus', 'Hsin/Suoming', 'Limited events', 'Banner budget'], ja: ['夢枢天羅', '心/鎖暝', '期間限定イベント', 'バナー予算'] },
+    kicker: { zh: '3.7 已上线', en: 'v3.7 is live', ja: 'Ver.3.7配信中' },
+    freshness: { zh: '已更新为 10 月 9 日状态：3.7 已实装；活动时间、奖励、前置条件与当前卡池继续以游戏内显示和官方公告为准。', en: 'Updated October 9: v3.7 is live; use the live client and official notices for event timing, rewards, prerequisites, and current banners.', ja: '10月9日時点に更新：Ver.3.7は実装済みです。イベント時刻、報酬、前提条件、現在バナーはゲーム内表示と公式告知を基準にしてください。' },
     faq: [
-      { question: { zh: '现在应该看 3.6 还是 3.7？', en: 'Should I read v3.6 or v3.7 content now?', ja: '今はv3.6とv3.7のどちらを見るべき？' }, answer: { zh: '当前养成和卡池仍看 3.6 Jingran，资源预留和下期规划则看 3.7 watch。', en: 'Use v3.6 Jingran for current builds and banners, and v3.7 watch for reserves and next-banner planning.', ja: '現在育成とバナーはv3.6 Jingran、資源温存と次回計画はv3.7注目を見るのがおすすめです。' } },
+      { question: { zh: '3.7 上线后先做什么？', en: 'What should I do first after v3.7 launches?', ja: 'Ver.3.7実装後は何から始めるべき？' }, answer: { zh: '先检查邮件、有效兑换码和平台资源更新；再按主线进度进入梦枢天罗和活动。抽取前先核对当前保底、队伍缺口与游戏内卡池结束时间。', en: 'Check mail, valid codes, and platform resource updates first; then enter the Simulacrum Nexus of Mengzhou and events according to story progress. Before pulling, verify pity, roster gaps, and the in-game banner end time.', ja: 'まずメール、有効コード、プラットフォームのリソース更新を確認し、ストーリー進行に応じて夢枢天羅とイベントへ進みます。抽選前には天井、編成不足、ゲーム内バナー終了時刻を確認してください。' } },
       { question: { zh: '角色机制可以直接照社区爆料写吗？', en: 'Can we publish community leak mechanics directly?', ja: 'コミュニティリークの性能をそのまま書けますか？' }, answer: { zh: '不建议。版本页只写官方或可核验信息，未核验机制放在 watch 口径里。', en: 'No. The hub should publish only official or verifiable details; unverified mechanics stay in watch wording.', ja: '推奨しません。公式または確認可能な情報だけを掲載し、未確認性能はwatch表現に留めます。' } },
     ],
-    guideIds: ['v3-6-qingxiao-jingran-post-launch-route', 'steam-xbox-game-pass-starter', 'v3-5-preview-guide'],
+    guideIds: ['v3-7-live-route', 'banner-schedule-guide', 'farming-route-guide'],
   },
   nte: {
     title: { zh: '1.2「999 Nights」Shinku / Iroi 专题', en: 'v1.2 999 Nights Shinku / Iroi Hub', ja: 'v1.2 999 Nights Shinku / Iroi 特集' },
@@ -919,10 +919,10 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '机制', en: 'Mechanics', ja: '機構' },
-        description: { zh: '版本前瞻、Roya Frostlands 和声骸系统继续往下接。', en: 'Keep previews, Roya Frostlands, and the Echo system moving deeper.', ja: '前瞻、Roya Frostlands、声骸システムへ進めます。' },
+        description: { zh: '3.7 实装、梦枢天罗与声骸系统继续往下接。', en: 'Continue into v3.7 live coverage, the Simulacrum Nexus, and the Echo system.', ja: 'Ver.3.7実装、夢枢天羅、エコーシステムへ進めます。' },
         links: [
           { href: '/wuwa/version', label: { zh: '版本专题', en: 'Version hub', ja: 'バージョン特集' } },
-          { href: '/wuwa/guides/roya-frostlands-guide', label: { zh: '机制攻略', en: 'Mechanics guide', ja: '機構攻略' } },
+          { href: '/wuwa/guides/v3-7-live-route', label: { zh: '3.7 上线后路线', en: 'v3.7 live route', ja: 'Ver.3.7実装後ルート' } },
         ],
       },
     ],
@@ -953,10 +953,10 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '机制', en: 'Mechanics', ja: '機構' },
-        description: { zh: '版本前瞻、Roya Frostlands 和声骸系统继续往下接。', en: 'Keep previews, Roya Frostlands, and the Echo system moving deeper.', ja: '前瞻、Roya Frostlands、声骸システムへ進めます。' },
+        description: { zh: '3.7 实装、梦枢天罗与声骸系统继续往下接。', en: 'Continue into v3.7 live coverage, the Simulacrum Nexus, and the Echo system.', ja: 'Ver.3.7実装、夢枢天羅、エコーシステムへ進めます。' },
         links: [
           { href: '/wuwa/version', label: { zh: '版本专题', en: 'Version hub', ja: 'バージョン特集' } },
-          { href: '/wuwa/guides/roya-frostlands-guide', label: { zh: '机制攻略', en: 'Mechanics guide', ja: '機構攻略' } },
+          { href: '/wuwa/guides/v3-7-live-route', label: { zh: '3.7 上线后路线', en: 'v3.7 live route', ja: 'Ver.3.7実装後ルート' } },
         ],
       },
     ],
@@ -987,10 +987,10 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '机制', en: 'Mechanics', ja: '機構' },
-        description: { zh: '版本前瞻、Roya Frostlands 和声骸系统继续往下接。', en: 'Keep previews, Roya Frostlands, and the Echo system moving deeper.', ja: '前瞻、Roya Frostlands、声骸システムへ進めます。' },
+        description: { zh: '3.7 实装、梦枢天罗与声骸系统继续往下接。', en: 'Continue into v3.7 live coverage, the Simulacrum Nexus, and the Echo system.', ja: 'Ver.3.7実装、夢枢天羅、エコーシステムへ進めます。' },
         links: [
           { href: '/wuwa/version', label: { zh: '版本专题', en: 'Version hub', ja: 'バージョン特集' } },
-          { href: '/wuwa/guides/roya-frostlands-guide', label: { zh: '机制攻略', en: 'Mechanics guide', ja: '機構攻略' } },
+          { href: '/wuwa/guides/v3-7-live-route', label: { zh: '3.7 上线后路线', en: 'v3.7 live route', ja: 'Ver.3.7実装後ルート' } },
         ],
       },
     ],

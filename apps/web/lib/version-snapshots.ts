@@ -30,7 +30,7 @@ export interface VersionSnapshot {
   links: VersionSnapshotLink[];
 }
 
-export const VERSION_SNAPSHOT_UPDATED_AT = '2026-10-08';
+export const VERSION_SNAPSHOT_UPDATED_AT = '2026-10-09';
 
 export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   aniimo: {
@@ -128,47 +128,48 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   wuwa: {
     gameId: 'wuwa',
-    currentVersion: '3.7 watch / 3.6 Jingran recap',
-    releaseDate: '2026-09-21',
-    status: 'watch',
+    currentVersion: '3.7 Prism\'s Illusion, Heart\'s Illumination',
+    releaseDate: '2026-09-30',
+    status: 'live',
     lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
-    sourceTier: 'mixed',
+    sourceTier: 'official',
     summary: {
-      zh: '3.6 Jingran 进入收尾承接，3.7 前瞻、下期卡池、兑换码和地图活动成为新 watch 入口。',
-      en: 'v3.6 Jingran moves into wrap-up while v3.7 watch, next banners, codes, and map events become the new entry.',
-      ja: 'v3.6 Jingranはまとめに入り、v3.7注目、次回バナー、コード、マップイベントが新しい入口です。',
+      zh: '3.7「镜锁妄世，心照红尘」已于 9 月 30 日上线。当前优先处理梦枢天罗、心/锁暝、活动窗口、邮件补偿和更新后客户端检查。',
+      en: 'v3.7 “Prism\'s Illusion, Heart\'s Illumination” launched September 30. Prioritize Simulacrum Nexus of Mengzhou, Hsin/Suoming, event windows, mail compensation, and post-update client checks.',
+      ja: 'Ver.3.7「鏡に鎖す妄世、心で照らす紅塵」は9月30日に配信されました。夢州の夢枢天羅、心/鎖暝、イベント期間、メール補償、更新後クライアント確認を優先します。',
     },
     whatChanged: [
       {
-        zh: '版本页从 3.6 当前窗口升级为 3.7 watch + 3.6 recap。',
-        en: 'The hub moves from the v3.6 current window into v3.7 watch plus v3.6 recap.',
-        ja: '版本ページをv3.6現在期間からv3.7注目 + v3.6まとめへ進めます。',
+        zh: '版本页从 3.7 观察期切换为实装期，并把 3.6 内容保留为历史参考而非当前卡池依据。',
+        en: 'The hub moves from v3.7 watch into live coverage, with v3.6 retained as historical reference rather than current-banner guidance.',
+        ja: 'バージョンページをVer.3.7注目から実装情報へ切り替え、Ver.3.6は現行バナー根拠ではなく履歴参考として残します。',
       },
       {
-        zh: '角色机制细节继续只用已核验口径，未确认内容保留 watch 表达。',
-        en: 'Character mechanics stay within verified wording, with unconfirmed details kept in watch phrasing.',
-        ja: 'キャラ性能は確認済み表現に留め、未確認内容はwatch表現にします。',
+        zh: '卡池、活动和奖励仍以游戏内显示与官方公告核对；不把传闻数值、复刻或后续角色当作已确认内容。',
+        en: 'Banners, events, and rewards still require live-client and official-notice verification; rumored stats, reruns, and later characters are not presented as confirmed.',
+        ja: 'バナー、イベント、報酬は引き続きゲーム内表示と公式告知で確認し、噂の性能、復刻、後続キャラを確定情報として扱いません。',
       },
     ],
     firstSteps: [
       {
-        zh: '先领兑换码，再看 3.6 Jingran 当前资源和 3.7 下期卡池预留。',
-        en: 'Claim codes first, then review v3.6 Jingran resources and v3.7 banner reserves.',
-        ja: 'まずコードを受け取り、v3.6 Jingran資源とv3.7バナー温存を確認します。',
+        zh: '先检查邮件、有效兑换码和更新资源，再按主线进度进入梦枢天罗及 3.7 活动。',
+        en: 'Check mail, valid codes, and downloaded resources first, then enter the Simulacrum Nexus of Mengzhou and v3.7 events according to story progress.',
+        ja: 'まずメール、有効コード、更新リソースを確認し、ストーリー進行に応じて夢州の夢枢天羅とVer.3.7イベントへ進みます。',
       },
       {
-        zh: 'Xbox/Game Pass 新玩家仍先确认登录、手柄和首周资源路线。',
-        en: 'Xbox/Game Pass newcomers should still confirm login, controller setup, and first-week resources.',
-        ja: 'Xbox/Game Pass新規は引き続きログイン、コントローラー、初週資源を確認します。',
+        zh: '抽取前记录保底与队伍缺口；若遇到更新后掉帧或下载异常，先完成平台资源更新并保留复现信息。',
+        en: 'Record pity and roster gaps before pulling; if you see post-update frame drops or download issues, finish platform resources first and retain reproduction details.',
+        ja: '抽選前に天井と編成不足を記録し、更新後のFPS低下やDL異常があれば、まずプラットフォームのリソース更新を完了して再現情報を残します。',
       },
     ],
     links: [
-      { type: 'banner', href: '/wuwa/guides/banner-schedule-guide', label: { zh: '当前/下期卡池', en: 'Current/next banners', ja: '現在/次回バナー' } },
+      { type: 'guides', href: '/wuwa/guides/v3-7-live-route', label: { zh: '3.7 上线后路线', en: 'v3.7 live route', ja: 'v3.7実装後ルート' } },
+      { type: 'guides', href: '/wuwa/events', label: { zh: '活动看板', en: 'Event board', ja: 'イベントボード' } },
+      { type: 'banner', href: '/wuwa/guides/banner-schedule-guide', label: { zh: '当前卡池与预算', en: 'Current banner and budget', ja: '現在バナーと予算' } },
       { type: 'codes', href: '/wuwa/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
       { type: 'characters', href: '/wuwa/characters', label: { zh: '角色图鉴', en: 'Characters', ja: 'キャラ' } },
       { type: 'download', href: '/wuwa/download', label: { zh: '平台下载', en: 'Platform download', ja: 'プラットフォームDL' } },
       { type: 'map', href: '/wuwa/map', label: { zh: '地图', en: 'Map', ja: 'マップ' } },
-      { type: 'guides', href: '/wuwa/guides/v3-6-qingxiao-jingran-post-launch-route', label: { zh: '3.6 复盘', en: 'v3.6 recap', ja: 'v3.6まとめ' } },
     ],
   },
   starrail: {

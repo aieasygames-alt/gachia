@@ -444,6 +444,33 @@ async function WuWaItemsPage({ locale, gameId }: { locale: SupportedLocale; game
         {getItemIntro('wuwa', locale)}
       </p>
 
+      <section className="mb-8 border border-game-border bg-game-surface p-4">
+        <h2 className="text-lg font-semibold text-game-text">
+          {locale === 'zh' ? '3.7 材料规划顺序' : locale === 'ja' ? 'Ver.3.7 素材計画の順番' : 'v3.7 material-planning order'}
+        </h2>
+        <p className="mt-2 max-w-3xl text-sm leading-6 text-game-text-muted">
+          {locale === 'zh'
+            ? '先在游戏内确认当前活动、唤取目标和本周限制，再为一支能推进内容的队伍刷角色突破、武器和关键技能材料；声骸副词条留到基础养成完成后。'
+            : locale === 'ja'
+              ? 'ゲーム内で現在のイベント、集音目標、週制限を確認してから、コンテンツを進める1編成のキャラ突破、武器、重要スキル素材を優先します。エコー副ステは基礎育成後です。'
+              : 'Confirm live events, Convene targets, and weekly limits in-game first. Then farm character ascension, weapon, and key-skill materials for one team that can progress content; leave Echo substats until baseline upgrades are complete.'}
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-3">
+          <Link href="/wuwa/map" className="border border-game-border bg-game-surface-alt p-3 transition hover:border-game-primary">
+            <span className="block text-sm font-semibold text-game-text">{locale === 'zh' ? '梦枢天罗地图' : locale === 'ja' ? '夢枢天羅マップ' : 'Simulacrum Nexus map'}</span>
+            <span className="mt-1 block text-xs leading-5 text-game-text-muted">{locale === 'zh' ? '查看区域解锁、无音区和探索提示。' : locale === 'ja' ? 'エリア解放、無音区、探索ヒントを確認。' : 'Check region access, Tacet Fields, and exploration notes.'}</span>
+          </Link>
+          <Link href="/wuwa/events" className="border border-game-border bg-game-surface-alt p-3 transition hover:border-game-primary">
+            <span className="block text-sm font-semibold text-game-text">{locale === 'zh' ? '活动看板' : locale === 'ja' ? 'イベントボード' : 'Event board'}</span>
+            <span className="mt-1 block text-xs leading-5 text-game-text-muted">{locale === 'zh' ? '先核对本服时间、前置条件与奖励。' : locale === 'ja' ? 'サーバー時刻、前提条件、報酬を先に確認。' : 'Verify server timing, prerequisites, and rewards first.'}</span>
+          </Link>
+          <Link href="/wuwa/artifacts" className="border border-game-border bg-game-surface-alt p-3 transition hover:border-game-primary">
+            <span className="block text-sm font-semibold text-game-text">{locale === 'zh' ? '3.7 声骸合鸣' : locale === 'ja' ? 'Ver.3.7 エコーセット' : 'v3.7 Echo sets'}</span>
+            <span className="mt-1 block text-xs leading-5 text-game-text-muted">{locale === 'zh' ? '基础材料完成后，再核对新套装与主词条。' : locale === 'ja' ? '基礎素材後に新セットとメインステを確認。' : 'Review new sets and main stats after core materials.'}</span>
+          </Link>
+        </div>
+      </section>
+
       {typeOrder.map((type) => {
         const list = grouped[type];
         if (!list || list.length === 0) return null;

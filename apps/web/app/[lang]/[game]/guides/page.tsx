@@ -10,7 +10,7 @@ const BASE_URL = 'https://gachia.com';
 const GUIDE_DESC: Record<string, Record<string, string>> = {
   genshin: { zh: '原神攻略百科，覆盖新手开荒、角色培养、配队推荐、深渊挑战、版本专题与热点攻略，帮助你快速找到当前版本最实用的下一步。', en: 'Genshin Impact guides for current banners, Luna VIII/Nod-Krai, Lunar reactions, character builds, teams, materials, boss strategies, codes, and Primogem planning.', ja: '原神攻略百科。初心者向け、キャラ育成、編成、深境螺旋、版本特集までまとめて、今知りたい攻略へすぐ進めます。' },
   starrail: { zh: '崩坏：星穹铁道攻略百科，涵盖新手指南、角色培养、配队思路、忘却之庭、虚构叙事和版本热点，让你更快进入可执行的攻略页面。', en: 'Honkai: Star Rail guides covering beginner tips, character builds, team recommendations, endgame modes, version hubs, and practical next steps for fast progress.', ja: 'スターレイル攻略百科。初心者ガイド、キャラ育成、編成、忘却の庭、虚構叙事、版本トピックをまとめて案内します。' },
-  wuwa: { zh: '鸣潮攻略百科，收录新手开荒、角色培养、声骸搭配、版本专题和实战攻略，方便你从首页直接进入最需要的养成或战斗内容。', en: 'Wuthering Waves guides for next banner, current banner, v3.5 pulls, character builds, Echo sets, Waveplate farming, materials, codes, and combat routes.', ja: '鳴潮攻略百科。初心者ルート、キャラ育成、エコー構成、版本特集、実戦攻略をまとめて、必要な導線へつなぎます。' },
+  wuwa: { zh: '鸣潮 3.7 攻略百科，优先整理梦枢天罗、心/锁暝、当前活动、卡池预算、声骸配装、波片规划、兑换码与更新后平台检查。', en: 'Wuthering Waves v3.7 guides for the Simulacrum Nexus of Mengzhou, Hsin/Suoming, current events, banner budgeting, Echo builds, Waveplate planning, codes, and post-update platform checks.', ja: '鳴潮Ver.3.7攻略百科。夢枢天羅、心/鎖暝、現在イベント、バナー予算、エコー、スタミナ、コード、更新後のプラットフォーム確認を整理します。' },
   nte: { zh: '异环攻略百科，包含下载安装、新手指南、角色培养、Boss 攻略、伤害公式、弧盘推荐和版本专题，帮助你快速了解当前版本最值得关注的内容。', en: 'Neverness to Everness guides with download/install help, beginner tips, character builds, boss guides, damage formulas, arc recommendations, and version hubs focused on the current patch.', ja: '異環攻略百科。DL/インストール、初心者ガイド、キャラ育成、ボス攻略、ダメージ計算、弧盤、版本特集を整理して案内します。' },
   zzz: { zh: '绝区零攻略百科，覆盖新手指引、代理人培养、音擎搭配、驱动盘思路、版本专题与高阶攻略，适合先看总览再进入细分页面。', en: 'Zenless Zone Zero guides covering beginner tips, agent builds, W-Engine choices, drive disc setups, version hubs, and endgame advice in one place.', ja: 'ゼンレスゾーンゼロ攻略百科。初心者ガイド、エージェント育成、Wエンジン、ディスク、版本特集、高難度攻略をまとめています。' },
   guihuan: { zh: '归环攻略百科，整理新手开荒、使灵培养、武器推荐、版本专题与实战思路，方便你按内容类型快速找到下一步该看什么。', en: 'Guihuan guides with beginner routes, spirit builds, weapon recommendations, version hubs, and practical combat notes that help you choose the best next page.', ja: '帰環攻略百科。初心者ルート、使霊育成、武器、版本特集、実戦メモをまとめて、次に読むべきページへ導きます。' },
@@ -27,7 +27,7 @@ const GUIDE_DESC: Record<string, Record<string, string>> = {
 const FEATURED_GUIDE_IDS: Partial<Record<GameId, string[]>> = {
   genshin: ['banner-schedule-guide', 'snezhnaya-version-guide', 'lunar-reaction-guide'],
   starrail: ['banner-schedule-guide', 'v4-4-preview-guide', 'fate-collab-guide'],
-  wuwa: ['banner-schedule-guide', 'v3-6-qingxiao-jingran-post-launch-route', 'farming-route-guide'],
+  wuwa: ['v3-7-live-route', 'banner-schedule-guide', 'farming-route-guide'],
   nte: ['photo-mode-guide', 'damage-formula', 'boss-guide'],
   zzz: ['banner-schedule-guide', 'team-building-guide', 'meta-teams-v3-guide'],
   guihuan: ['beginner-guide', 'download-install-guide', 'spirit-build-guide'],

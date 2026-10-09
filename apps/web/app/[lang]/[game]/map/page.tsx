@@ -8,7 +8,7 @@ import type { MapPageData, MapRegionEntry } from '@/lib/game-data/maps';
 
 const REGION_ICONS: Record<string, string> = {
   mondstadt: '🌬️', liyue: '⛰️', inazuma: '⚡', sumeru: '🌿', fontaine: '💧', natlan: '🔥', chasm: '⛏️',
-  huanglong: '🐲', 'black-shores': '🌑', rinascita: '🏛️', 'lahae-roi': '🌊', 'new-federation': '🌆',
+  huanglong: '🐲', 'black-shores': '🌑', rinascita: '🏛️', 'lahae-roi': '🌊', 'new-federation': '🌆', 'simulacrum-nexus': '🪞',
   'herta-space-station': '🛰️', 'jarilo-vi': '❄️', 'xianzhou-luofu': '⛵', penacony: '🌙', amphoreus: '🏛️',
   'central-district': '🏙️', 'industrial-zone': '🏭', 'research-lab': '🔬', 'abyss-zone': '🕳️',
   'talos-frontier': '🚀', 'originium-mines': '⛏️', 'protocol-city': '🏙️', 'barren-wastes': '🏜️', 'frozen-depths': '❄️',
@@ -34,9 +34,9 @@ const MAP_META_TITLES: Partial<Record<GameId, Record<SupportedLocale, string>>> 
     ja: 'ロコキングダム中国版マップ｜地域・ジニー捕獲地点・資源ルート',
   },
   wuwa: {
-    zh: '鸣潮地图攻略｜区域路线、材料、Boss 与探索要点',
-    en: 'Wuthering Waves Map Guide — Regions, Materials, Bosses & Routes',
-    ja: '鳴潮マップ攻略｜エリア、素材、Boss、探索ルート',
+    zh: '鸣潮 3.7 梦枢天罗地图攻略｜区域、材料、Boss 与探索要点',
+    en: 'WuWa v3.7 Simulacrum Nexus Map Guide — Regions, Materials, Bosses & Routes',
+    ja: '鳴潮 Ver.3.7 夢枢天羅マップ攻略｜エリア、素材、Boss、探索ルート',
   },
   starrail: {
     zh: '崩坏：星穹铁道星球地图｜空间锚点、花萼与侵蚀隧洞',
@@ -62,9 +62,9 @@ const MAP_META_DESCRIPTIONS: Partial<Record<GameId, Record<SupportedLocale, stri
     ja: 'ロコキングダム中国版マップ入口。地域、ジニー捕獲地点、資源ルート、イベント、商人更新確認を整理します。',
   },
   wuwa: {
-    zh: '鸣潮地图攻略，整理 Huanglong、Black Shores、Rinascita、Roya Frostlands 等区域路线、材料特产、Boss、探索提示和版本入口，适合查 wuwa map、鸣潮地图和材料路线。',
-    en: 'Wuthering Waves map guide for Huanglong, Black Shores, Rinascita, Roya Frostlands, region routes, materials, bosses, exploration tips, and version links. Useful for WuWa map and farming-route searches.',
-    ja: '鳴潮マップ攻略。Huanglong、Black Shores、Rinascita、Roya Frostlands、素材、Boss、探索ヒント、版本導線を整理します。',
+    zh: '鸣潮地图攻略，整理瑝珑、黑海岸、黎那汐塔、拉海洛、新联邦与 3.7 梦枢天罗的区域路线、材料、Boss、探索提示和版本入口，适合查 wuwa map、鸣潮地图和材料路线。',
+    en: 'Wuthering Waves map guide for Huanglong, Black Shores, Rinascita, Lahai-Roi, New Federation, and the v3.7 Simulacrum Nexus, with region routes, materials, bosses, exploration tips, and version links.',
+    ja: '鳴潮マップ攻略。瑝瓏、ブラックショア、リナシータ、ラハイロイ、新連邦、Ver.3.7の夢枢天羅、素材、Boss、探索ヒント、バージョン導線を整理します。',
   },
   starrail: {
     zh: '星穹铁道星球地图攻略，整理空间锚点、拟造花萼、历战余响、侵蚀隧洞、区域要点和材料路线，适合查 Star Rail map 与星球探索。',
@@ -244,9 +244,9 @@ function MapIntentPanel({ gameId, locale }: { gameId: GameId; locale: SupportedL
     : gameId === 'wuwa'
     ? [
         {
-          href: '/wuwa/guides/roya-frostlands-guide',
-          label: { zh: 'Roya Frostlands 路线', en: 'Roya Frostlands route', ja: 'Roya Frostlands ルート' },
-          desc: { zh: '继续看当前区域探索与版本重点。', en: 'Continue into current-region exploration and version notes.', ja: '現在エリア探索と版本要点へ。' },
+          href: '/wuwa/guides/v3-7-live-route',
+          label: { zh: '梦枢天罗上线后路线', en: 'Simulacrum Nexus live route', ja: '夢枢天羅実装後ルート' },
+          desc: { zh: '继续看当前区域解锁、活动与版本重点。', en: 'Continue into the new-region unlock, events, and version priorities.', ja: '新エリア解放、イベント、バージョン要点へ進む。' },
         },
         {
           href: '/wuwa/items',
