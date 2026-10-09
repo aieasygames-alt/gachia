@@ -24,6 +24,7 @@ describe('SEO redirect contracts', () => {
     expect(middleware).toContain("sea: ['weapons', 'artifacts', 'drive-discs', 'disk-sets'");
     expect(middleware).toContain("nte: ['characters', 'weapons', 'items', 'tier-list'");
     expect(middleware).toContain("zzz: ['characters', 'weapons', 'items', 'tier-list'");
+    expect(middleware).toContain("'redeem-codes', 'events'");
     expect(middleware).toContain('isUnsupportedGameRoute(game, thirdSegment)');
     expect(middleware).toContain('LEGACY_ROOT_ROUTES');
     expect(middleware).toContain("'/tools/pull-planner'");

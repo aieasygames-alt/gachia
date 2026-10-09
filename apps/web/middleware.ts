@@ -58,7 +58,7 @@ function isIndexableRoute(game: GameId, route: string): boolean {
 
 const GAME_ROUTE_ALLOWLIST: Partial<Record<GameId, readonly string[]>> = {
   nte: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'map', 'guides', 'disk-sets', 'redeem-codes', 'gacha', 'anomalies'],
-  zzz: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'guides', 'drive-discs', 'build', 'compare', 'teams', 'redeem-codes'],
+  zzz: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'guides', 'drive-discs', 'build', 'compare', 'teams', 'redeem-codes', 'events'],
 };
 
 const LVMENG_ROUTES = new Set([
