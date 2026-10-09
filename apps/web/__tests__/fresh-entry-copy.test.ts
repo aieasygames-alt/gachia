@@ -34,7 +34,7 @@ describe('fresh entry copy', () => {
     const downloadPage = readAppFile('[lang]/[game]/download/page.tsx');
 
     expect(downloadPage).toContain('4.6 版本入坑路径');
-    expect(downloadPage).toContain('3.7 观察和 3.6 后新玩家入坑问题');
+    expect(downloadPage).toContain('3.7 资源下载与新玩家入坑问题');
     expect(downloadPage).toContain('3.3 观察和 3.2 后回流入坑问题');
     expect(downloadPage).toContain('Pioneer Test 后续问题');
     expect(downloadPage).toContain('PC/主机上线后核验和移动端倒计时');

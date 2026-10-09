@@ -26,8 +26,8 @@ describe('version snapshots', () => {
     });
   });
 
-  it('uses the 2026-10-08 snapshot batch', () => {
-    expect(VERSION_SNAPSHOT_UPDATED_AT).toBe('2026-10-08');
+  it('uses the 2026-10-09 snapshot batch', () => {
+    expect(VERSION_SNAPSHOT_UPDATED_AT).toBe('2026-10-09');
     expect(getVersionSnapshot('genshin')?.currentVersion).toBe('7.1 livestream / Luna II watch');
     expect(getVersionSnapshot('starrail')?.currentVersion).toBe('4.6 special program watch');
     expect(getVersionSnapshot('endfield')?.currentVersion).toBe('Pioneer Test recap / AIC blueprint');
