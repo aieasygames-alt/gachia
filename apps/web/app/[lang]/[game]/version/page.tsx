@@ -8,6 +8,7 @@ import type { VersionSnapshotSourceTier } from '@/lib/version-snapshots';
 
 import { getGuideListData } from '@/lib/game-data/guides';
 import { buildLocalizedAlternates } from '@/lib/seo-metadata';
+import { getHi3ArchiveMetadata, Hi3VersionArchive } from './hi3-version-archive';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -1669,9 +1670,10 @@ export async function generateMetadata({
   const gameId = game as GameId;
   const gameName = GAMES[gameId]?.name[locale];
   const hub = VERSION_COPY[gameId];
-  if (!gameName || !hub) return {};
-  const title = VERSION_META_OVERRIDES[gameId]?.[locale]?.title ?? `${gameName} ${hub.title[locale]}`;
-  const description = VERSION_META_OVERRIDES[gameId]?.[locale]?.description ?? hub.description[locale];
+  const archive = gameId === 'hi3' ? getHi3ArchiveMetadata(locale) : undefined;
+  if (!gameName || (!hub && !archive)) return {};
+  const title = archive?.title ?? VERSION_META_OVERRIDES[gameId]?.[locale]?.title ?? `${gameName} ${hub!.title[locale]}`;
+  const description = archive?.description ?? VERSION_META_OVERRIDES[gameId]?.[locale]?.description ?? hub!.description[locale];
   const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/version`, LOCALES);
 
   return {
@@ -1697,6 +1699,7 @@ export default async function VersionHubPage({
   const { lang, game } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+  if (gameId === 'hi3') return <Hi3VersionArchive locale={locale} />;
   const gameConfig = GAMES[gameId];
   const hub = VERSION_COPY[gameId];
   if (!gameConfig || !hub) {

@@ -4,8 +4,8 @@ const gamesRoot = new URL('../games/', import.meta.url);
 const outputRoot = new URL('../../../apps/web/public/data-manifest/', import.meta.url);
 const clientDataRoot = new URL('../../../apps/web/public/data-client/', import.meta.url);
 
-const gameIds = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'roco', 'roco-cn', 'aniimo', 'azur-promilia'];
-const searchGames = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'aniimo', 'azur-promilia'];
+const gameIds = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'hi3', 'guihuan', 'ananta', 'endfield', 'sea', 'roco', 'roco-cn', 'aniimo', 'azur-promilia'];
+const searchGames = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'hi3', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'aniimo', 'azur-promilia'];
 
 function idsFromJson(value) {
   if (!Array.isArray(value)) throw new Error('Expected an array');

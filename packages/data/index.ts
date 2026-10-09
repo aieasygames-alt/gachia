@@ -885,6 +885,10 @@ export async function getGameData(gameId: GameId): Promise<GameData> {
       const { characters, weapons, items, tierLists } = await import('./games/zzz');
       return { characters, weapons, items, tierLists };
     }
+    case 'hi3': {
+      const { characters, weapons, items, tierLists } = await import('./games/hi3');
+      return { characters, weapons, items, tierLists };
+    }
     case 'guihuan': {
       const { characters, weapons, items, tierLists } = await import('./games/guihuan');
       return { characters, weapons, items, tierLists };

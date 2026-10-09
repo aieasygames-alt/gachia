@@ -15,6 +15,10 @@ type NextStepLink = {
 };
 
 const CHARACTER_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
+  hi3: [
+    { href: '/hi3/version', title: { zh: '查看版本档案', en: 'Version archive', ja: 'バージョン資料' }, description: { zh: '关联人偶、武器、圣痕与材料资料', en: 'Connect AstralOps, weapons, stigmata, and materials', ja: '人偶、武器、聖痕、素材資料を確認' } },
+    { href: '/hi3/guides', title: { zh: '查看攻略目录', en: 'Guide directory', ja: 'ガイド一覧' }, description: { zh: '选择版本总览、新手回归与资源核对', en: 'Choose the overview, returnee route, or resource checks', ja: '総覧、復帰ルート、資源チェックを選択' } },
+  ],
   nte: [
     {
       href: '/nte',
@@ -105,6 +109,11 @@ const CHAR_DESC: Record<string, Record<string, string>> = {
 };
 
 const CHARACTER_INTRO: Record<string, Record<SupportedLocale, string>> = {
+  hi3: {
+    zh: '当前收录浮生·渡尘与瑟莉姆的版本资料，包含女武神与协同人偶的已公开定位。角色技能数值、补给与当前配队请在游戏内核对。',
+    en: 'Current coverage records Fenghuang of Vicissitude and Senadina, including published battlesuit and AstralOp roles. Check skill values, supplies, and current teams in-game.',
+    ja: '浮生・渡塵とセナディナのバージョン資料を収録し、戦乙女と人偶の公開済み役割を整理。スキル数値、補給、現在の編成はゲーム内で確認してください。',
+  },
   genshin: {
     zh: '按属性、武器、星级快速浏览原神角色图鉴，适合在抽卡前先看定位、培养方向和组队思路。',
     en: 'Browse the Genshin Impact character wiki by element, weapon, and rarity to check roles, build direction, and team fit before pulling.',
@@ -180,7 +189,9 @@ export async function generateMetadata({
   const intro = CHARACTER_INTRO[gameId]?.[locale];
   const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/characters`, LOCALES);
 
-  const title = gameId === 'sea'
+  const title = gameId === 'hi3'
+    ? { zh: '崩坏3女武神与人偶资料 — 定位与版本档案', en: 'HI3 Battlesuit and AstralOp Entries — Roles and Version Archive', ja: '崩壊3rd 戦乙女・人偶資料 — 役割とバージョン' }[locale]
+    : gameId === 'sea'
     ? locale === 'zh'
       ? '遗忘之海角色图鉴 Wiki — 全角色、强度排行与开荒推荐'
       : locale === 'ja'

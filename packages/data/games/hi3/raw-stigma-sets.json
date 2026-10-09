@@ -1,0 +1,24 @@
+[
+  {
+    "id": "weeping-philosopher",
+    "name": "忧郁哲人",
+    "nameEn": "Weeping Philosopher",
+    "nameJa": "憂鬱な哲人",
+    "description": "9.0 官方公告列出的「浮生·渡尘」推荐圣痕套装。公告说明该套装可通过装备补给、登录活动自选和锻造获取；锻造单件需源晶 2 与以太燃素 600。具体套装效果以游戏内为准。",
+    "descriptionEn": "The recommended stigma set for Fenghuang of Vicissitude listed in the v9.0 official announcement. The announcement names Equipment Supply, a login selector, and crafting as acquisition routes; one crafted piece uses 2 Source Prisms and 600 Ether Fuel. Confirm set effects in-game.",
+    "descriptionJa": "Ver.9.0公式告知で「浮生・渡塵」の推奨聖痕として掲載。装備補給、ログイン選択箱、鍛造が入手経路で、鍛造1部位には源晶2とエーテル燃料600を使用します。セット効果はゲーム内で確認してください。",
+    "releaseVersion": "9.0",
+    "status": "available"
+  },
+  {
+    "id": "inimitable-stage-director",
+    "name": "无可替代的导演",
+    "nameEn": "Inimitable Stage Director",
+    "nameJa": "唯一無二の舞台監督",
+    "description": "9.0 官方公告列为回归支援可获得的 4★ 圣痕套装。资格、选择规则与当前可领取状态以客户端回归支援页面为准。",
+    "descriptionEn": "A 4-star stigma set listed in the v9.0 announcement for returnee support. Confirm eligibility, selection rules, and live availability in the client.",
+    "descriptionJa": "Ver.9.0公式告知で復帰支援の4★聖痕セットとして掲載。資格、選択ルール、現在の入手可否はクライアントで確認してください。",
+    "releaseVersion": "9.0",
+    "status": "available"
+  }
+]

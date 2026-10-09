@@ -126,6 +126,51 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       { type: 'builds', href: '/zzz/build', label: { zh: '配装推荐', en: 'Builds', ja: 'ビルド' } },
     ],
   },
+  hi3: {
+    gameId: 'hi3',
+    currentVersion: '9.0 The Light at Dream\'s End',
+    releaseDate: '2026-08-20',
+    status: 'fresh',
+    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    sourceTier: 'official',
+    summary: {
+      zh: '9.0「曙梦向明」的官方公告周期为 8 月 20 日至 10 月 22 日。当前资料聚焦 Part 2 终章、浮生·渡尘、瑟莉姆、版本活动与新装备；当前补给和活动状态须在客户端核对。',
+      en: 'The official v9.0 “The Light at Dream\'s End” period is August 20 to October 22. Coverage focuses on the Part 2 finale, Fenghuang of Vicissitude, Senadina, version events, and new gear; verify live supplies and events in the client.',
+      ja: 'Ver.9.0「曙夢向明」の公式告知期間は8月20日から10月22日です。Part 2終章、浮生・渡塵、セナディナ、イベント、新装備を整理し、現在の補給・イベントはクライアントで確認します。',
+    },
+    whatChanged: [
+      {
+        zh: '新增 Part 2 终章「未来所拥抱的未来」与 9.0 版本活动入口；章节前置与奖励以游戏内为准。',
+        en: 'The Part 2 finale, The Future We Embrace, and v9.0 event routes are added; use in-game requirements and rewards as the authority.',
+        ja: 'Part 2終章「未来が抱く未来」とVer.9.0イベントを追加。前提と報酬はゲーム内表記を基準にします。',
+      },
+      {
+        zh: '新增瑟莉姆人偶，以及浮生·渡尘的推荐神之键朱华 / 朱华·全燃与忧郁哲人圣痕；浮生·渡尘不是该期新女武神。',
+        en: 'Adds AstralOp Senadina and recommended gear for the existing Fenghuang of Vicissitude: Divine Key Vermillion Liuli / Full Burn and Weeping Philosopher stigmata.',
+        ja: '新人偶セナディナと、既存の浮生・渡塵向け神の鍵「朱華 / 朱華・全燃」および聖痕を追加。浮生・渡塵は当期の新戦乙女ではありません。',
+      },
+    ],
+    firstSteps: [
+      {
+        zh: '先在客户端确认服务器、活动与补给结束时间，再领取仍有效的登录和活动奖励。',
+        en: 'Confirm server, event deadlines, and supply end times in the client before claiming any still-active login or event rewards.',
+        ja: 'クライアントでサーバー、イベント、補給終了時刻を確認してから、有効なログイン・イベント報酬を受け取ります。',
+      },
+      {
+        zh: '盘点水晶、保底、已有队伍与装备后，才判断新角色或装备是否解决实际缺口。',
+        en: 'Audit Crystals, pity, existing teams, and equipment before deciding whether a new unit or weapon solves a real gap.',
+        ja: '水晶、天井、所持編成、装備を確認してから、新キャラ・武器が実際の不足を埋めるか判断します。',
+      },
+    ],
+    links: [
+      { type: 'guides', href: '/hi3/guides/v9-0-official-update-guide', label: { zh: '9.0 官方总览', en: 'v9.0 official overview', ja: 'Ver.9.0公式総覧' } },
+      { type: 'guides', href: '/hi3/version', label: { zh: '9.0 版本档案', en: 'v9.0 archive', ja: 'Ver.9.0アーカイブ' } },
+      { type: 'guides', href: '/hi3/guides/new-returning-captain-route', label: { zh: '新手 / 回归路线', en: 'New / returnee route', ja: '初心者 / 復帰ルート' } },
+      { type: 'characters', href: '/hi3/characters', label: { zh: '首批女武神资料', en: 'First battlesuit entries', ja: '初回戦乙女データ' } },
+      { type: 'codes', href: '/hi3/guides/new-returning-captain-route', label: { zh: '当前兑换码状态', en: 'Current code status', ja: '現在のコード状況' } },
+      { type: 'download', href: '/hi3/download', label: { zh: '平台 / 下载', en: 'Platforms / download', ja: 'プラットフォーム / DL' } },
+    ],
+  },
   wuwa: {
     gameId: 'wuwa',
     currentVersion: '3.7 Prism\'s Illusion, Heart\'s Illumination',

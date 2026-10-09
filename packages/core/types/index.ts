@@ -4,7 +4,7 @@
 
 // --- Game ---
 
-export type GameId = 'genshin' | 'starrail' | 'wuwa' | 'nte' | 'zzz' | 'guihuan' | 'ananta' | 'endfield' | 'sea' | 'skjh' | 'roco' | 'roco-cn' | 'aniimo' | 'azur-promilia' | 'lvmeng';
+export type GameId = 'genshin' | 'starrail' | 'wuwa' | 'nte' | 'zzz' | 'hi3' | 'guihuan' | 'ananta' | 'endfield' | 'sea' | 'skjh' | 'roco' | 'roco-cn' | 'aniimo' | 'azur-promilia' | 'lvmeng';
 
 export type SupportedLocale = 'zh' | 'en' | 'ja';
 

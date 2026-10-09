@@ -13,6 +13,7 @@ const ITEM_DESC: Record<string, Record<string, string>> = {
   wuwa: { zh: '鸣潮全材料图鉴，整理技能材料、Boss材料、区域特产和养成来源，适合在培养角色前先看清每种素材该去哪里刷。', en: 'Complete Wuthering Waves material list with skill materials, boss materials, local specialties, and farming routes so you can prep upgrades efficiently.', ja: '鳴潮全素材図鑑。スキル素材、ボス素材、地域特産品、周回ルートを整理して案内します。' },
   nte: { zh: '异环全材料图鉴，覆盖突破材料、Boss掉落、技能手册和养成来源，方便你按角色、阶段或用途快速整理资源。', en: 'Complete Neverness to Everness material list with ascension materials, boss drops, skill manuals, and farming sources for efficient progression planning.', ja: '異環全素材図鑑。昇格素材、ボスドロップ、スキルマニュアル、周回先を整理しています。' },
   zzz: { zh: '绝区零材料图鉴 Wiki，覆盖代理人突破材料、技能材料、特殊材料、抽卡道具、刷取来源、当前版本培养优先级和配队养成路线。', en: 'Zenless Zone Zero materials wiki with agent ascension materials, skill materials, special mats, gacha items, farming sources, current-version upgrade priority, and team-building routes.', ja: 'ゼンレスゾーンゼロ素材Wiki。突破素材、スキル素材、特殊素材、ガチャアイテム、周回先、育成優先度を整理。' },
+  hi3: { zh: '崩坏3 9.0 首批材料资料，整理官方公告中涉及的源晶、以太燃素、忧郁哲人圣痕自选与装备材料；当前获取方式和成本以客户端为准。', en: 'Honkai Impact 3rd v9.0 starter material index for Source Prisms, Ether Fuel, the Weeping Philosopher selector, and gear materials named in official notices. Confirm live sources and costs in the client.', ja: '崩壊3rd Ver.9.0初回素材資料。公式告知にある源晶、エーテル燃料、憂鬱な哲人選択箱、装備素材を整理し、現在の入手先とコストはクライアントで確認します。' },
   guihuan: { zh: '归环全材料图鉴，覆盖使灵突破、元素突破、Boss材料和对应来源，便于你在培养前快速确认每类素材的获取方式。', en: 'Complete Guihuan material list with spirit ascension, element ascension, boss materials, and acquisition sources for easy build planning.', ja: '帰環全素材図鑑。スピリット昇格、元素昇格、ボス素材、入手先をまとめています。' },
   ananta: { zh: '无限大全材料图鉴，覆盖突破材料、Boss材料、区域特产和刷取来源，帮助你在培养角色时快速整理所有所需资源。', en: 'Complete Ananta material list with ascension, boss materials, local specialties, and farming sources to keep your upgrade path organized.', ja: 'アナンタ全素材図鑑。昇格素材、ボス素材、地域特産品、周回先を整理して確認できます。' },
   endfield: { zh: '明日方舟：终末地材料图鉴，收录 Pioneer Test 的突破、技能、武器与货币资料参考。后续测试和正式版的掉落、配方与来源请以官方公告复核。', en: 'Arknights: Endfield materials roster with Pioneer Test references for ascension, skill, weapon, and currency data. Verify future-test and release drops, recipes, and sources through official announcements.', ja: 'アークナイツ：エンドフィールド素材図鑑。Pioneer Test の昇格、スキル、武器、通貨資料を参考として収録。今後のテストと正式版のドロップ、レシピ、入手先は公式発表で再確認してください。' },
@@ -68,6 +69,11 @@ const ENDFIELD_ITEM_NEXT_STEPS: NextStepLink[] = [
 ];
 
 const ITEM_INTRO: Record<string, Record<SupportedLocale, string>> = {
+  hi3: {
+    zh: '收录源晶、以太燃素、崩坏结晶与圣痕自选箱。先核对背包与已有圣痕部位，再查看客户端中的锻造成本、活动期限和领取资格。',
+    en: 'Browse Source Prisms, Ether Fuel, Honkai Shards, and the stigma selector. Check inventory and owned stigma pieces, then verify crafting costs, event deadlines, and eligibility in the client.',
+    ja: '源晶、エーテル燃料、崩壊結晶、聖痕選択箱を収録。所持素材と聖痕部位を確認してから、鍛造コスト、イベント期間、受取資格をゲーム内で確認します。',
+  },
   genshin: {
     zh: '按突破材料、天赋书、Boss 掉落和区域特产快速浏览原神材料图鉴，适合在养角色前先看来源与刷取路线。',
     en: 'Browse the Genshin Impact materials wiki by ascension items, talent books, weekly boss drops, local specialties, enemy drops, locations, and farming routes before upgrading characters.',
@@ -144,7 +150,9 @@ export async function generateMetadata({
   const desc = ITEM_DESC[gameId]?.[locale] ?? `${gameName} ${categoryLabel} database with farming sources, upgrade materials, and drop locations`;
   const intro = ITEM_INTRO[gameId]?.[locale];
 
-  const title = gameId === 'genshin'
+  const title = gameId === 'hi3'
+    ? { zh: '崩坏3材料资料 — 源晶、以太燃素与圣痕自选', en: 'HI3 Materials — Source Prism, Ether Fuel & Stigma Selector', ja: '崩壊3rd素材資料 — 源晶・エーテル燃料・聖痕選択箱' }[locale]
+    : gameId === 'genshin'
     ? locale === 'zh'
       ? '原神材料图鉴 — 突破材料、天赋书、Boss掉落与刷取路线'
       : locale === 'ja'
@@ -222,6 +230,30 @@ export default async function ItemsPage({
   if (gameId === 'zzz') {
     const content = await ZzzItemsPage({ locale, gameId });
     return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+  }
+
+  if (gameId === 'hi3') {
+    const materials = await getItemListData(gameId, locale);
+    const title = { zh: '崩坏3材料与奖励资料', en: 'Honkai Impact 3rd Materials and Rewards', ja: '崩壊3rd 素材・報酬資料' }[locale];
+    return (
+      <div>
+        <h1 className="mb-2 text-2xl font-bold text-game-text">{title}</h1>
+        <p className="mb-6 max-w-3xl text-sm leading-7 text-game-text-muted">{getItemIntro(gameId, locale)}</p>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {materials.map((material) => (
+            <Link key={material.id} href={`/hi3/items/${material.id}`} className="rounded-lg border border-game-border bg-game-surface p-5 transition-colors hover:border-game-primary focus-visible:outline-2 focus-visible:outline-game-primary">
+              <h2 className="text-lg font-semibold text-game-text">{material.name}</h2>
+              <p className="mt-3 text-sm leading-6 text-game-text-muted">{material.source}</p>
+            </Link>
+          ))}
+        </div>
+        <nav className="mt-8 flex flex-wrap gap-4 text-sm font-medium text-game-primary">
+          <Link href="/hi3/version">{{ zh: '版本档案', en: 'Version archive', ja: 'バージョン資料' }[locale]}</Link>
+          <Link href="/hi3/guides/v9-0-resource-returnee-checklist">{{ zh: '资源与回归核对', en: 'Resource and returnee checks', ja: '資源・復帰チェック' }[locale]}</Link>
+        </nav>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      </div>
+    );
   }
 
   if (gameId === 'ananta') {

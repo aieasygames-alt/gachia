@@ -15,6 +15,23 @@ type NextStepLink = {
 };
 
 const ITEM_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
+  hi3: [
+    {
+      href: '/hi3/version',
+      title: { zh: '圣痕与装备档案', en: 'Stigma and gear archive', ja: '聖痕・装備資料' },
+      description: { zh: '对照圣痕套装、武器与资源用途', en: 'Compare stigma sets, weapons, and resource uses', ja: '聖痕セット、武器、資源用途を確認' },
+    },
+    {
+      href: '/hi3/guides/v9-0-resource-returnee-checklist',
+      title: { zh: '资源与回归支援', en: 'Resources and returnee support', ja: '資源・復帰支援' },
+      description: { zh: '核对已有部位、锻造成本与领取资格', en: 'Check owned pieces, crafting costs, and eligibility', ja: '所持部位、鍛造コスト、受取資格を確認' },
+    },
+    {
+      href: '/hi3/items',
+      title: { zh: '返回材料与奖励列表', en: 'Materials and rewards', ja: '素材・報酬一覧へ' },
+      description: { zh: '继续查看源晶、以太燃素与自选箱', en: 'Browse Source Prisms, Ether Fuel, and the selector', ja: '源晶、エーテル燃料、選択箱を見る' },
+    },
+  ],
   genshin: [
     {
       href: '/genshin/characters',
@@ -338,7 +355,9 @@ export async function generateMetadata({
     };
   }
 
-  const title = locale === 'zh'
+  const title = gameId === 'hi3'
+    ? { zh: `${name} — 崩坏3用途与获取参考`, en: `${name} — HI3 Uses and Acquisition Reference`, ja: `${name} — 崩壊3rd 用途・入手参考` }[locale]
+    : locale === 'zh'
     ? `${name} — ${gameName}材料获取攻略 | 掉落来源与角色需求`
     : locale === 'ja'
       ? `${name} — ${gameName}素材入手方法 | ドロップ場所と必要キャラ一覧`
@@ -435,12 +454,26 @@ export default async function ItemDetailPage({
   // Generate descriptive text for SEO
   const descText = buildItemMetaDescription(data.name, gameName, typeLabel, data.source, relatedChars.length, locale);
 
-  const usageText = locale === 'zh'
+  const usageText = gameId === 'hi3'
+    ? data.source
+    : locale === 'zh'
     ? `在${gameName}中，${data.name}主要用于角色的等级突破和技能提升。合理安排材料刷取计划，优先满足主C角色的突破需求，可以显著提升队伍整体实力。建议在每天消耗体力时优先考虑角色突破材料的获取。`
     : locale === 'ja'
       ? `${gameName}では、${data.name}は主にキャラクターのレベル突破とスキル強化に使用されます。メインアタッカーの突破素材を優先して集めることで、チーム全体の戦力を大きく向上させることができます。`
       : `In ${gameName}, ${data.name} is primarily used for character ascension and skill upgrades. Planning your material farming efficiently and prioritizing your main DPS ascension materials can significantly boost your team's overall strength.`;
   const intentContent = ITEM_INTENT_CONTENT[`${gameId}/${id}`];
+  const faqs = gameId === 'hi3'
+    ? [
+      {
+        q: { zh: `${data.name}有什么用途与获取参考？`, en: `What are the uses and acquisition references for ${data.name}?`, ja: `${data.name}の用途・入手参考は？` }[locale],
+        a: data.source,
+      },
+      {
+        q: { zh: '领取或消耗前需要核对什么？', en: 'What should I check before claiming or spending?', ja: '受取・消費前に何を確認する？' }[locale],
+        a: { zh: '先核对背包数量、已有装备部位和当前目标，再在客户端确认锻造配方、选择范围、活动结束时间与领取资格。', en: 'Check inventory, owned gear pieces, and your target, then verify crafting recipes, selection pools, event deadlines, and eligibility in the client.', ja: '所持数、装備部位、育成目標を確認してから、鍛造レシピ、選択範囲、イベント終了時刻、受取資格をゲーム内で確認してください。' }[locale],
+      },
+    ]
+    : buildItemFaqs(data.name, gameName, typeLabel, data.source, relatedChars.length, locale);
 
   return (
     <div>
@@ -592,7 +625,7 @@ export default async function ItemDetailPage({
           {locale === 'zh' ? '常见问题' : locale === 'ja' ? 'よくある質問' : 'FAQ'}
         </h2>
         <div className="space-y-2">
-          {buildItemFaqs(data.name, gameName, typeLabel, data.source, relatedChars.length, locale).map((faq, i) => (
+          {faqs.map((faq, i) => (
             <details key={i} className="group rounded-lg border border-game-border bg-game-surface">
               <summary className="cursor-pointer px-4 py-2.5 text-sm font-medium text-game-text transition-colors group-hover:text-game-primary">
                 {faq.q}
@@ -633,7 +666,7 @@ export default async function ItemDetailPage({
         itemId: id,
         categoryLabel: typeLabel,
         tags: [gameName, typeLabel],
-        faq: buildItemFaqs(data.name, gameName, typeLabel, data.source, relatedChars.length, locale).map((faq) => ({
+        faq: faqs.map((faq) => ({
           question: faq.q,
           answer: faq.a,
         })),

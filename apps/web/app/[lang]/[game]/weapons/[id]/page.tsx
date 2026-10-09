@@ -106,6 +106,23 @@ const WEAPON_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
       description: { zh: '继续看配队、版本和养成专题', en: 'Continue with team, version, and build guides', ja: '編成・版本・育成へ' },
     },
   ],
+  hi3: [
+    {
+      href: '/hi3/characters',
+      title: { zh: '看首批女武神资料', en: 'Browse first battlesuit entries', ja: '初回戦乙女データを見る' },
+      description: { zh: '将武器定位与官方已核验的女武神资料对照。', en: 'Match the weapon role with officially verified battlesuit entries.', ja: '武器の役割を公式確認済み戦乙女データと照合します。' },
+    },
+    {
+      href: '/hi3/items',
+      title: { zh: '看装备材料', en: 'Browse gear materials', ja: '装備素材を見る' },
+      description: { zh: '核对源晶、以太燃素和活动型奖励的当前状态。', en: 'Check the current state of Source Prisms, Ether Fuel, and event-based rewards.', ja: '源晶、エーテル燃料、イベント型報酬の現状を確認します。' },
+    },
+    {
+      href: '/hi3/guides/v9-0-resource-returnee-checklist',
+      title: { zh: '资源与回归核对', en: 'Resource and returnee checks', ja: '資源・復帰チェック' },
+      description: { zh: '先确认补给、锻造和回归资格，再决定资源投入。', en: 'Verify supplies, crafting, and returnee status before investing resources.', ja: '資源投入前に補給、鍛造、復帰資格を確認します。' },
+    },
+  ],
   guihuan: [
     {
       href: '/guihuan/characters',
@@ -516,7 +533,13 @@ function SourceSection({ source, locale }: { source: string; locale: SupportedLo
 function UsageTipsSection({ detail, gameName, locale }: { detail: WeaponDetailData; gameName: string; locale: SupportedLocale }) {
   const stat = detail.titleStat || (locale === 'zh' ? '副属性' : locale === 'ja' ? 'サブステータス' : 'substat');
   const passive = detail.effectDescription;
-  const tips = locale === 'zh'
+  const tips = detail.gameId === 'hi3'
+    ? {
+      zh: '先确认已有武器与当前培养目标。朱华与朱华·全燃应结合客户端的超限解锁条件和升级成本判断；跃动火花的回归支援资格与选择范围须在当前回归页面确认。完整技能效果与数值请查看游戏内装备详情。',
+      en: 'Check owned weapons and your current build target. Evaluate Vermillion Liuli and Full Burn against in-game PRI-ARM requirements and upgrade costs; verify Volatile Sparkler eligibility and choices on the current returnee page. Use in-game equipment details for full skills and values.',
+      ja: '所持武器と育成目標を確認。朱華と朱華・全燃は超限解放条件と強化コストで判断し、ヴォラタイル・スパークラーの復帰資格と選択範囲は現在の復帰ページで確認。全スキル効果と数値はゲーム内装備詳細を参照してください。',
+    }[locale]
+    : locale === 'zh'
     ? `${detail.name}是${gameName}中的${detail.rarity > 0 ? `${detail.rarity}星` : ''}武器。先确认角色是否需要${stat}，再看被动是否能在该角色的常用站场时间和技能循环中稳定触发。${passive ? ` 当前数据中的被动为：${passive}。` : ''}不要只因稀有度投入资源；和角色页的定位、队伍与材料路线一起核对。`
     : locale === 'ja'
       ? `${detail.name}は${gameName}の${detail.rarity > 0 ? `${detail.rarity}星` : ''}武器です。まずキャラが${stat}を必要とするか、次にパッシブが通常の出場時間とスキル循環で安定して発動するかを確認します。${passive ? ` 現在のパッシブデータ：${passive}。` : ''}レアリティだけで育成せず、キャラページの役割、編成、素材ルートと合わせて判断してください。`

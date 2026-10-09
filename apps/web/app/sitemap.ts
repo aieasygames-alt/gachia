@@ -6,18 +6,19 @@ import { GAME_DEPLOYMENTS } from '@gachia/core';
 const BASE_URL = 'https://gachia.com';
 
 // Games with real content for each category
-const CHAR_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'roco', 'roco-cn', 'aniimo'] as const;
-const WEAPON_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'] as const;
-const GUIDE_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco', 'roco-cn', 'aniimo'] as const;
+const CHAR_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'hi3', 'guihuan', 'ananta', 'endfield', 'sea', 'roco', 'roco-cn', 'aniimo'] as const;
+const WEAPON_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'hi3', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'] as const;
+const GUIDE_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'hi3', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco', 'roco-cn', 'aniimo'] as const;
 const ARTIFACT_GAMES = ['genshin', 'starrail'] as const;
 const ECHO_GAMES = ['wuwa'] as const;
 const DISK_SET_GAMES = ['nte'] as const;
 const DRIVE_DISC_GAMES = ['zzz'] as const;
-const ITEM_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco-cn'] as const;
+const ITEM_GAMES = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'hi3', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco-cn'] as const;
 const STATIC_SITE_PAGES = ['about', 'contact', 'privacy', 'terms', 'sitemap', 'calendar', 'tools/pull-planner', 'content-verification', 'update-radar'] as const;
 
 // Category routes that have real content per game
 const REAL_CONTENT_ROUTES: Record<string, string[]> = {
+  hi3: ['characters', 'weapons', 'items', 'version', 'guides', 'download'],
   genshin: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'calculator', 'map', 'guides', 'artifacts', 'compare', 'teams'],
   starrail: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'calculator', 'map', 'guides', 'artifacts', 'compare', 'teams'],
   wuwa: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'map', 'guides', 'compare', 'teams'],
@@ -226,6 +227,7 @@ function getGuideSitemapHints(entry: unknown): Pick<MetadataRoute.Sitemap[number
 
 async function getCharactersForGame(gameId: string): Promise<SitemapItem[]> {
   switch (gameId) {
+    case 'hi3': return (await import('@gachia/data/games/hi3/characters')).hi3Characters;
     case 'genshin': return (await import('@gachia/data/games/genshin/character-summaries')).genshinCharacterSummaries;
     case 'starrail': return (await import('@gachia/data/games/starrail/character-summaries')).starrailCharacterSummaries;
     case 'wuwa': return (await import('@gachia/data/games/wuwa/characters')).wuwaCharacters;
@@ -245,6 +247,7 @@ async function getCharactersForGame(gameId: string): Promise<SitemapItem[]> {
 
 async function getWeaponsForGame(gameId: string): Promise<SitemapItem[]> {
   switch (gameId) {
+    case 'hi3': return (await import('@gachia/data/games/hi3/weapons')).hi3Weapons;
     case 'genshin': return (await import('@gachia/data/games/genshin/weapons')).genshinWeapons;
     case 'starrail': return (await import('@gachia/data/games/starrail/weapons')).starrailLightCones;
     case 'wuwa': return (await import('@gachia/data/games/wuwa/weapons')).wuwaWeapons;
@@ -261,6 +264,7 @@ async function getWeaponsForGame(gameId: string): Promise<SitemapItem[]> {
 
 async function getGuidesForGame(gameId: string): Promise<SitemapItem[]> {
   switch (gameId) {
+    case 'hi3': return (await import('@gachia/data/games/hi3/guides')).hi3Guides;
     case 'genshin': return (await import('@gachia/data/games/genshin/guides')).genshinGuides;
     case 'starrail': return (await import('@gachia/data/games/starrail/guides')).starrailGuides;
     case 'wuwa': return (await import('@gachia/data/games/wuwa/guides')).wuwaGuides;
@@ -310,6 +314,7 @@ async function getDriveDiscsForGame(gameId: string): Promise<SitemapItem[]> {
 
 async function getItemsForGame(gameId: string): Promise<SitemapItem[]> {
   switch (gameId) {
+    case 'hi3': return (await import('@gachia/data/games/hi3/items')).hi3Materials;
     case 'genshin': return (await import('@gachia/data/games/genshin/items')).genshinMaterials;
     case 'starrail': return (await import('@gachia/data/games/starrail/items')).starrailMaterials;
     case 'wuwa': return (await import('@gachia/data/games/wuwa/items')).wuwaMaterials;

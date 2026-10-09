@@ -2,13 +2,8 @@ import type { Metadata } from 'next';
 import { Archive, BarChart3, CheckCircle2, FileText, Link2, Radar, ShieldAlert, Target } from 'lucide-react';
 import { GAMES, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import aniimoGuides from '../../../../public/data/aniimo/raw-guides.json';
-import endfieldGuides from '../../../../public/data/endfield/raw-guides.json';
-import genshinGuides from '../../../../public/data/genshin/raw-guides.json';
-import seaGuides from '../../../../public/data/sea/raw-guides.json';
-import starrailGuides from '../../../../public/data/starrail/raw-guides.json';
-import wuwaGuides from '../../../../public/data/wuwa/raw-guides.json';
-import zzzGuides from '../../../../public/data/zzz/raw-guides.json';
+import { join } from 'node:path';
+import { loadJson } from '@gachia/data/load-json';
 import {
   scanFreshnessGuides,
   summarizeFreshnessFindings,
@@ -145,18 +140,15 @@ function gameName(gameId: GameId, locale: SupportedLocale) {
   return GAMES[gameId].name[locale] ?? GAMES[gameId].name.zh;
 }
 
-const freshnessGuideSources: Array<{ gameId: GameId; guides: readonly FreshnessGuide[]; file: string }> = [
-  { gameId: 'genshin', guides: genshinGuides, file: 'apps/web/public/data/genshin/raw-guides.json' },
-  { gameId: 'starrail', guides: starrailGuides, file: 'apps/web/public/data/starrail/raw-guides.json' },
-  { gameId: 'wuwa', guides: wuwaGuides, file: 'apps/web/public/data/wuwa/raw-guides.json' },
-  { gameId: 'zzz', guides: zzzGuides, file: 'apps/web/public/data/zzz/raw-guides.json' },
-  { gameId: 'endfield', guides: endfieldGuides, file: 'apps/web/public/data/endfield/raw-guides.json' },
-  { gameId: 'sea', guides: seaGuides, file: 'apps/web/public/data/sea/raw-guides.json' },
-  { gameId: 'aniimo', guides: aniimoGuides, file: 'apps/web/public/data/aniimo/raw-guides.json' },
-];
+const freshnessGuideGames = ['genshin', 'starrail', 'wuwa', 'zzz', 'endfield', 'sea', 'aniimo'] as const satisfies readonly GameId[];
 
-function getDashboardFreshnessFindings() {
-  return freshnessGuideSources.flatMap((source) => scanFreshnessGuides(source.gameId, source.guides, source.file));
+async function getDashboardFreshnessFindings() {
+  const findings = await Promise.all(freshnessGuideGames.map(async (gameId) => {
+    const assetPath = `/data/${gameId}/raw-guides.json`;
+    const guides = await loadJson<FreshnessGuide[]>(join(process.cwd(), 'public', assetPath), assetPath);
+    return scanFreshnessGuides(gameId, guides, `apps/web/public${assetPath}`);
+  }));
+  return findings.flat();
 }
 
 export default async function MarketIntelPage({
@@ -172,7 +164,7 @@ export default async function MarketIntelPage({
   const p1Count = getMarketIntelByPriority('P1').length;
   const coveredGames = new Set(MARKET_INTEL_OPPORTUNITIES.map((item) => item.gameId)).size;
   const riskyTerms = new Set(MARKET_INTEL_OPPORTUNITIES.flatMap((item) => item.riskTerms)).size;
-  const freshnessFindings = getDashboardFreshnessFindings();
+  const freshnessFindings = await getDashboardFreshnessFindings();
   const freshnessSummary = summarizeFreshnessFindings(freshnessFindings);
   const freshnessRisks = freshnessFindings.filter((finding) => finding.severity === 'risk');
   const archivedFreshnessMatches = freshnessFindings.filter((finding) => finding.severity === 'archive');

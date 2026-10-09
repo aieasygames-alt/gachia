@@ -42,6 +42,43 @@ const DEFAULT_STATUS: LocaleText = {
 };
 
 const DOWNLOAD_COPY: Partial<Record<GameId, DownloadCopy>> = {
+  hi3: {
+    officialUrl: 'https://honkaiimpact3.hoyoverse.com/',
+    status: {
+      zh: '下载前先确认地区、服务器与账号体系。本站版本档案参考全球服公告，国服和其他地区的活动、补给与客户端入口需分别核对。',
+      en: 'Confirm region, server, and account system before downloading. This site’s version archive references global notices; verify CN and other regional events, supplies, and client entry points separately.',
+      ja: 'ダウンロード前に地域、サーバー、アカウント体系を確認。本サイトのバージョン資料はグローバル告知を参照し、中国版などのイベント、補給、クライアント入口は個別に確認してください。',
+    },
+    intro: {
+      zh: '从崩坏3官网选择对应地区的客户端，再核对移动端商店发行方、账号登录方式和已有进度。安装完成后，可继续查看版本档案、新手回归路线与材料资料。',
+      en: 'Choose the regional client from the official HI3 site, then verify the mobile store publisher, sign-in method, and existing progress. After installation, continue to the version archive, returnee route, and materials.',
+      ja: '崩壊3rd公式サイトで地域に合うクライアントを選び、モバイルストアの配信元、ログイン方法、既存進行を確認。インストール後はバージョン資料、復帰ルート、素材資料へ進めます。',
+    },
+    officialNote: DEFAULT_STATUS,
+    platforms: [
+      platform('PC', '官网入口', 'Official entry', '公式入口', '从地区官网进入下载，安装前核对发行方与账号登录方式。', 'Use the regional official download and verify publisher and sign-in method.', '地域公式サイトからDLし、配信元とログイン方法を確認。'),
+      platform('iOS / Android', '地区商店入口', 'Regional stores', '地域ストア入口', '通过官网跳转至对应商店，核对商店地区与现有账号所属服务器。', 'Follow official store links and verify store region and the server of your existing account.', '公式ストアリンクを利用し、ストア地域と既存アカウントのサーバーを確認。'),
+    ],
+    specs: specs('安装前核对官网当前配置、启动器所需空间和游戏内资源包大小；更新解压需要额外空闲空间。', 'Check current official requirements, launcher storage, and in-game asset size before installing; updates need additional extraction space.', 'インストール前に公式の現行環境、ランチャー容量、追加データ容量を確認。更新展開用の空き容量も確保してください。'),
+    cloud: {
+      zh: '云游戏服务与地区入口请从官方渠道核对，登录前确认账号和服务器。',
+      en: 'Verify cloud services and regional availability through official channels; confirm account and server before signing in.',
+      ja: 'クラウドサービスと地域対応は公式で確認し、ログイン前にアカウントとサーバーを確認してください。',
+    },
+    crossPlay: {
+      zh: '换设备前确认客户端地区、账号体系和服务器一致。遇到新建角色或进度不符时，先核对登录方式与服务器，再联系官方客服；账号绑定与数据互通以官方说明为准。',
+      en: 'Before changing devices, match client region, account system, and server. If progress differs or a new profile appears, check sign-in method and server before contacting support. Follow official account-linking and cross-save instructions.',
+      ja: '端末変更前にクライアント地域、アカウント体系、サーバーを合わせてください。進行が違う場合はログイン方法とサーバーを確認し、公式サポートへ。連携とデータ共有は公式説明に従ってください。',
+    },
+    nextLinks: [
+      { href: '/hi3/version', label: { zh: '版本档案', en: 'Version archive', ja: 'バージョン資料' }, description: { zh: '查看已收录角色、人偶、装备与圣痕', en: 'Browse recorded units, AstralOps, gear, and stigmata', ja: '収録済み戦乙女、人偶、装備、聖痕を確認' } },
+      { href: '/hi3/guides/new-returning-captain-route', label: { zh: '新手与回归路线', en: 'New and returning Captain route', ja: '初心者・復帰ルート' }, description: { zh: '安装后核对账号、活动与资源', en: 'Check account, events, and resources after installation', ja: 'インストール後のアカウント、イベント、資源確認' } },
+    ],
+    faq: [{
+      question: { zh: '换设备后为什么看不到原有进度？', en: 'Why is my progress missing after changing devices?', ja: '端末変更後に進行が見つからないのは？' },
+      answer: { zh: '先检查客户端地区、登录方式、账号与服务器是否和之前一致。仍无法找到时，通过官网客服入口提供账号信息进行核查。', en: 'Check that client region, sign-in method, account, and server match your previous device. If progress is still missing, contact official support through the site.', ja: 'クライアント地域、ログイン方法、アカウント、サーバーが以前と同じか確認し、見つからない場合は公式サイトのサポートに連絡してください。' },
+    }],
+  },
   genshin: {
     officialUrl: 'https://genshin.hoyoverse.com/',
     status: {

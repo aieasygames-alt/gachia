@@ -24,6 +24,11 @@ const WEAPON_DESC: Record<string, Record<string, string>> = {
 };
 
 const WEAPON_INTRO: Record<string, Record<SupportedLocale, string>> = {
+  hi3: {
+    zh: '收录朱华、朱华·全燃与跃动火花的版本公告资料，区分拳套、超限拳套与驱动核心。完整效果、超限条件和当前回归支援资格请在客户端确认。',
+    en: 'Browse version-notice entries for Vermillion Liuli, its Full Burn PRI-ARM, and Volatile Sparkler, covering fists, PRI-ARM fists, and Drive Core gear. Verify full effects, PRI-ARM requirements, and returnee eligibility in the client.',
+    ja: '朱華、朱華・全燃、ヴォラタイル・スパークラーの告知資料を収録。拳套、超限拳套、ドライブコアを区別し、全効果、超限条件、復帰資格はゲーム内で確認します。',
+  },
   genshin: {
     zh: '按武器类型、稀有度和适配角色快速浏览原神武器图鉴，适合在配装前先看主词条、特效和毕业选择。',
     en: 'Browse the Genshin Impact weapon wiki by type, rarity, and best users to review main stats, passives, and endgame picks before building.',
@@ -100,7 +105,9 @@ export async function generateMetadata({
   const desc = WEAPON_DESC[gameId]?.[locale] ?? `${gameName} ${categoryLabel} database with cosmetic effects, visual transformations, and acquisition methods`;
   const intro = WEAPON_INTRO[gameId]?.[locale];
 
-  const title = locale === 'zh'
+  const title = gameId === 'hi3'
+    ? { zh: '崩坏3武器资料 — 拳套、超限武器与驱动核心', en: 'HI3 Weapons — Fists, PRI-ARMs and Drive Cores', ja: '崩壊3rd武器資料 — 拳套・超限武器・ドライブコア' }[locale]
+    : locale === 'zh'
     ? `${gameName}武器图鉴 — 外观法杖Wiki、特效与获取方式`
     : locale === 'ja'
       ? `${gameName}武器図鑑 — 杖Wiki、演出効果、入手方法`

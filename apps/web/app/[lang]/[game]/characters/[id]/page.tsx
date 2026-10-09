@@ -36,7 +36,7 @@ function validateLocale(lang: string): SupportedLocale {
 }
 
 export async function generateStaticParams() {
-  const gameIds = ['nte', 'genshin', 'starrail', 'wuwa', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'roco', 'roco-cn', 'aniimo'] as const;
+  const gameIds = ['nte', 'genshin', 'starrail', 'wuwa', 'zzz', 'hi3', 'guihuan', 'ananta', 'endfield', 'sea', 'roco', 'roco-cn', 'aniimo'] as const;
   const entries = await Promise.all(
     gameIds.map(async (gameId) => ({
       gameId,
@@ -131,6 +131,10 @@ export default async function CharacterDetailPage({ params }: Props) {
     case 'zzz': {
       const mod = await import('./zzz-character-detail');
       return <mod.ZzzCharacterDetailPage id={id} locale={locale} />;
+    }
+    case 'hi3': {
+      const mod = await import('./hi3-character-detail');
+      return <mod.Hi3CharacterDetailPage id={id} locale={locale} />;
     }
     case 'guihuan': {
       const mod = await import('./guihuan-character-detail');

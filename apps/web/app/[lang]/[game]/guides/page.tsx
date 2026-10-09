@@ -13,6 +13,7 @@ const GUIDE_DESC: Record<string, Record<string, string>> = {
   wuwa: { zh: '鸣潮 3.7 攻略百科，优先整理梦枢天罗、心/锁暝、当前活动、卡池预算、声骸配装、波片规划、兑换码与更新后平台检查。', en: 'Wuthering Waves v3.7 guides for the Simulacrum Nexus of Mengzhou, Hsin/Suoming, current events, banner budgeting, Echo builds, Waveplate planning, codes, and post-update platform checks.', ja: '鳴潮Ver.3.7攻略百科。夢枢天羅、心/鎖暝、現在イベント、バナー予算、エコー、スタミナ、コード、更新後のプラットフォーム確認を整理します。' },
   nte: { zh: '异环攻略百科，包含下载安装、新手指南、角色培养、Boss 攻略、伤害公式、弧盘推荐和版本专题，帮助你快速了解当前版本最值得关注的内容。', en: 'Neverness to Everness guides with download/install help, beginner tips, character builds, boss guides, damage formulas, arc recommendations, and version hubs focused on the current patch.', ja: '異環攻略百科。DL/インストール、初心者ガイド、キャラ育成、ボス攻略、ダメージ計算、弧盤、版本特集を整理して案内します。' },
   zzz: { zh: '绝区零攻略百科，覆盖新手指引、代理人培养、音擎搭配、驱动盘思路、版本专题与高阶攻略，适合先看总览再进入细分页面。', en: 'Zenless Zone Zero guides covering beginner tips, agent builds, W-Engine choices, drive disc setups, version hubs, and endgame advice in one place.', ja: 'ゼンレスゾーンゼロ攻略百科。初心者ガイド、エージェント育成、Wエンジン、ディスク、版本特集、高難度攻略をまとめています。' },
+  hi3: { zh: '崩坏3 9.0 攻略百科，优先整理官方版本总览、主线 Part 2 终章、天命之环队伍、新增装备与新手/回归的资源决策。当前卡池、奖励与数值以游戏内和官方公告为准。', en: 'Honkai Impact 3rd v9.0 guides covering the official patch overview, Part 2 finale, Astral Ring teams, new gear, and new/returning Captain decisions. Confirm current supplies, rewards, and values in-game or in official notices.', ja: '崩壊3rd Ver.9.0攻略。公式アップデート、Part 2終章、アストラルリング編成、新装備、初心者・復帰艦長の判断を整理します。現在の補給、報酬、数値はゲーム内・公式告知で確認してください。' },
   guihuan: { zh: '归环攻略百科，整理新手开荒、使灵培养、武器推荐、版本专题与实战思路，方便你按内容类型快速找到下一步该看什么。', en: 'Guihuan guides with beginner routes, spirit builds, weapon recommendations, version hubs, and practical combat notes that help you choose the best next page.', ja: '帰環攻略百科。初心者ルート、使霊育成、武器、版本特集、実戦メモをまとめて、次に読むべきページへ導きます。' },
   ananta: { zh: '无限大攻略百科，收录新手入门、异能者培养、武器推荐、版本专题和玩法拆解，让你快速进入最实用的培养与配队内容。', en: 'Ananta guides covering beginner tips, esper builds, weapon recommendations, version hubs, and gameplay breakdowns that route you into the most useful build pages.', ja: 'アナンタ攻略百科。初心者入門、異能者育成、武器、版本特集、遊び方の解説をまとめて、実用ページへ案内します。' },
   endfield: { zh: '明日方舟：终末地攻略百科，当前优先整理 Pioneer Test 测试后路线、官方状态核对、AIC 工厂与可复用蓝图；旧战斗、抽卡和活动攻略均标明测试期资料边界。', en: 'Arknights: Endfield guides now prioritize post-Pioneer-Test routing, official-status checks, AIC factories, and reusable blueprints; older combat, gacha, and event pages are clearly scoped as test-period references.', ja: 'アークナイツ：エンドフィールド攻略百科。現在はPioneer Test後の導線、公式状態の確認、AIC工場、再利用できる設計図を優先し、旧戦闘・ガチャ・イベント攻略はテスト期の参考として明示します。' },
@@ -400,6 +401,35 @@ export default async function GuidesPage({
   const gameConfig = GAMES[gameId];
 
   if (!gameConfig) return null;
+
+  if (gameId === 'hi3') {
+    const { guides } = await getGuideListData(gameId, locale);
+    const copy = {
+      zh: { title: '崩坏3版本与回归攻略', intro: '先读版本总览了解本站收录范围，再按自己的进度选择新手回归路线或资源核对清单。资料参考全球服 9.0 公告；当前活动、补给和奖励请核对对应服务器的客户端。', version: '版本档案', download: '官网与下载安装', updated: '资料更新' },
+      en: { title: 'HI3 Version and Returnee Guides', intro: 'Start with the version overview, then choose the new/returning Captain route or resource checklist for your progress. Coverage references global v9.0 notices; verify current events, supplies, and rewards in your server’s client.', version: 'Version archive', download: 'Official site and installation', updated: 'Updated' },
+      ja: { title: '崩壊3rd バージョン・復帰ガイド', intro: 'まずバージョン総覧で収録範囲を確認し、進行に合わせて初心者・復帰ルートや資源チェックへ進みます。グローバルVer.9.0告知を参照し、現在のイベント、補給、報酬は該当サーバーのゲーム内で確認してください。', version: 'バージョン資料', download: '公式サイト・インストール', updated: '資料更新' },
+    }[locale];
+    return (
+      <div>
+        <h1 className="mb-3 text-2xl font-bold text-game-text">{copy.title}</h1>
+        <p className="mb-6 max-w-3xl text-sm leading-7 text-game-text-muted">{copy.intro}</p>
+        <nav className="mb-8 flex flex-wrap gap-4 text-sm font-medium text-game-primary">
+          <Link href="/hi3/version">{copy.version}</Link>
+          <Link href="/hi3/download">{copy.download}</Link>
+        </nav>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {guides.map((guide) => (
+            <Link key={guide.id} href={`/hi3/guides/${guide.id}`} className="rounded-lg border border-game-border bg-game-surface p-5 transition-colors hover:border-game-primary focus-visible:outline-2 focus-visible:outline-game-primary">
+              <span className="text-xs font-medium text-game-primary">{guide.categoryLabel}</span>
+              <h2 className="mt-2 text-lg font-semibold text-game-text">{guide.title}</h2>
+              <p className="mt-3 text-sm leading-6 text-game-text-muted">{guide.summary}</p>
+              {guide.updatedAt && <p className="mt-4 text-xs text-game-text-muted">{copy.updated}: <time dateTime={guide.updatedAt}>{guide.updatedAt}</time></p>}
+            </Link>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   if (gameId === 'wuwa') {
     return await WuWaGuides({ locale, gameId });

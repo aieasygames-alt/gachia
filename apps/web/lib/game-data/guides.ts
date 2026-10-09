@@ -101,6 +101,10 @@ export async function getGuideListData(
       const mod = await import('@gachia/data/games/zzz/guides');
       return buildGuideListData(mod.zzzGuides, locale, mod.getZzzGuideTitle, mod.getZzzGuideSummary, mod.getZzzGuideCategory);
     }
+    case 'hi3': {
+      const mod = await import('@gachia/data/games/hi3/guides');
+      return buildGuideListData(mod.hi3Guides, locale, mod.getHi3GuideTitle, mod.getHi3GuideSummary, mod.getHi3GuideCategory);
+    }
     case 'ananta': {
       const mod = await import('@gachia/data/games/ananta/guides');
       return buildGuideListData(mod.anantaGuides, locale, mod.getAnantaGuideTitle, mod.getAnantaGuideSummary, mod.getAnantaGuideCategory);

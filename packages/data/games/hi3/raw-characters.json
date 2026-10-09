@@ -1,0 +1,58 @@
+[
+  {
+    "id": "fenghuang-of-vicissitude",
+    "name": "浮生·渡尘",
+    "nameEn": "Fenghuang of Vicissitude",
+    "nameJa": "浮生・渡塵",
+    "rank": "S",
+    "type": "生物",
+    "typeEn": "BIO",
+    "damageType": "fire",
+    "damageTypeEn": "Fire",
+    "weaponType": "拳套",
+    "weaponTypeEn": "Fists",
+    "description": "使用拳套的 S 级生物属性火焰输出女武神，并非 9.0 新角色。9.0 公告新增其推荐神之键「朱华」及超限形态；装备后可激活「命运之轮」天命之环并改变部分招式。完整技能与配队请以客户端为准。",
+    "descriptionEn": "An S-rank BIO Fire battlesuit using fists, not a new v9.0 character. The v9.0 notice adds her recommended Divine Key Vermillion Liuli and its PRI-ARM; equipping it activates Wheel of Destiny and alters some moves. Confirm full skills and teams in the client.",
+    "descriptionJa": "拳套を使うS級・生物タイプの炎戦乙女で、Ver.9.0の新キャラではありません。Ver.9.0では推奨神の鍵「朱華」と超限形態が追加され、装備時に運命の輪を有効化し、一部の技が変化します。詳細はゲーム内で確認してください。",
+    "releaseVersion": "7.2",
+    "status": "available",
+    "skills": [
+      {
+        "name": "官方定位",
+        "nameEn": "Official role",
+        "nameJa": "公式の役割",
+        "description": "火焰元素输出；9.0 新增神之键朱华及其超限形态可为她激活命运之轮天命之环。",
+        "descriptionEn": "A Fire DMG dealer; the v9.0 Divine Key Vermillion Liuli or its PRI-ARM activates Wheel of Destiny for her.",
+        "descriptionJa": "炎ダメージの戦乙女。Ver.9.0追加の神の鍵「朱華」または超限形態の装備で運命の輪を有効化します。"
+      }
+    ]
+  },
+  {
+    "id": "senadina-astralop",
+    "name": "瑟莉姆",
+    "nameEn": "Senadina",
+    "nameJa": "セナディナ",
+    "rank": "S",
+    "type": "人偶",
+    "typeEn": "AstralOp",
+    "damageType": "fire",
+    "damageTypeEn": "Fire",
+    "weaponType": "人偶",
+    "weaponTypeEn": "AstralOp",
+    "description": "9.0 官方公告中的新人偶，推荐用于「命运之轮」天命之环队伍。进入星爆后可进行协同攻击、牵引附近敌人并造成火焰元素伤害；具体触发条件与数值请以游戏内技能说明为准。",
+    "descriptionEn": "A new AstralOp in the official v9.0 announcement, recommended for Wheel of Destiny Astral Ring teams. During Stellar Outburst she can make synergy attacks, pull nearby enemies, and deal Fire DMG; confirm triggers and values in-game.",
+    "descriptionJa": "Ver.9.0公式告知の新人偶で、「運命の輪」アストラルリング編成向けです。星爆中に連携攻撃、敵の牽引、炎ダメージを行えます。発動条件と数値はゲーム内スキル表記を確認してください。",
+    "releaseVersion": "9.0",
+    "status": "available",
+    "skills": [
+      {
+        "name": "官方定位",
+        "nameEn": "Official role",
+        "nameJa": "公式の役割",
+        "description": "命运之轮队伍人偶；在星爆与幻影协同中提供牵引、协同攻击和增伤条件。",
+        "descriptionEn": "A Wheel of Destiny AstralOp with grouping, synergy attacks, and amplification conditions during Stellar Outburst and Phantom assists.",
+        "descriptionJa": "星爆とファントム支援中に、敵の牽引、連携攻撃、増幅条件を提供する運命の輪向け人偶です。"
+      }
+    ]
+  }
+]

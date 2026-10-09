@@ -77,6 +77,13 @@ export async function getCharacterSummariesByIds(
         return character ? [{ id: character.id, name: mod.getZzzCharacterName(character, locale), image: toAbs(mod.getZzzCharacterImage(character)) }] : [];
       });
     }
+    case 'hi3': {
+      const mod = await import('@gachia/data/games/hi3/characters');
+      return ids.flatMap((id) => {
+        const character = mod.hi3Characters.find((entry) => entry.id === id);
+        return character ? [{ id: character.id, name: mod.getHi3CharacterName(character, locale), image: toAbs(mod.getHi3CharacterImage(character)) }] : [];
+      });
+    }
     case 'guihuan': {
       const mod = await import('@gachia/data/games/guihuan/characters');
       return ids.flatMap((id) => {
@@ -153,6 +160,10 @@ export async function getCharactersForStaticParams(gameId: GameId): Promise<Arra
     case 'zzz': {
       const mod = await import('@gachia/data/games/zzz/characters');
       return mod.zzzCharacters.map((character) => ({ id: character.id }));
+    }
+    case 'hi3': {
+      const mod = await import('@gachia/data/games/hi3/characters');
+      return mod.hi3Characters.map((character) => ({ id: character.id }));
     }
     case 'guihuan': {
       const mod = await import('@gachia/data/games/guihuan/characters');
@@ -266,6 +277,20 @@ export async function getCharacterMetaData(
         elementLabel: labelFromId(character.attribute),
         specialtyLabel: character.specialtyEn,
         tierRank: character.tierRank,
+      };
+    }
+    case 'hi3': {
+      const mod = await import('@gachia/data/games/hi3/characters');
+      const character = mod.getHi3CharacterById(id);
+      if (!character) return null;
+      return {
+        id: character.id,
+        name: mod.getHi3CharacterName(character, locale),
+        description: mod.getHi3CharacterDescription(character, locale),
+        image: toAbs(mod.getHi3CharacterImage(character)),
+        element: character.damageType,
+        elementLabel: labelFromId(character.damageType),
+        weaponLabel: character.weaponType,
       };
     }
     case 'guihuan': {

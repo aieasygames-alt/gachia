@@ -56,6 +56,15 @@ export async function getGameData(gameId: GameId) {
         tierLists,
       };
     }
+    case 'hi3': {
+      const { characters, weapons, items, tierLists } = await import('../games/hi3');
+      return {
+        characters,
+        weapons,
+        items,
+        tierLists,
+      };
+    }
     case 'guihuan': {
       const { characters, weapons, items, tierLists } = await import('../games/guihuan');
       return {

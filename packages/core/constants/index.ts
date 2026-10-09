@@ -18,7 +18,7 @@ export const LOCALE_NAMES: Record<SupportedLocale, string> = {
 // Games Registry
 // ============================================================
 
-export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco', 'roco-cn', 'aniimo', 'azur-promilia', 'lvmeng'];
+export const GAME_IDS: GameId[] = ['genshin', 'starrail', 'wuwa', 'nte', 'zzz', 'hi3', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco', 'roco-cn', 'aniimo', 'azur-promilia', 'lvmeng'];
 
 export const GAMES: Record<GameId, GameModule> = {
   genshin: {
@@ -239,6 +239,46 @@ export const GAMES: Record<GameId, GameModule> = {
       compare: true,
       teams: true,
       'redeem-codes': true,
+    },
+  },
+  hi3: {
+    id: 'hi3',
+    name: { zh: '崩坏3', en: 'Honkai Impact 3rd', ja: '崩壊3rd' },
+    theme: {
+      primary: '#e85a8d',
+      accent: '#69d2e7',
+      background: '#171321',
+      surface: '#241b35',
+    },
+    elements: [
+      { id: 'physical', name: { zh: '物理', en: 'Physical', ja: '物理' }, color: '#cbd5e1' },
+      { id: 'fire', name: { zh: '火焰', en: 'Fire', ja: '炎' }, color: '#f97316' },
+      { id: 'ice', name: { zh: '冰冻', en: 'Ice', ja: '氷' }, color: '#67e8f9' },
+      { id: 'lightning', name: { zh: '雷电', en: 'Lightning', ja: '雷' }, color: '#a78bfa' },
+    ],
+    rarities: [
+      { stars: 5, color: '#eab308', label: { zh: 'S级', en: 'S-Rank', ja: 'S級' } },
+      { stars: 4, color: '#a855f7', label: { zh: 'A级', en: 'A-Rank', ja: 'A級' } },
+    ],
+    stats: {
+      baseStats: ['hp', 'atk', 'def'],
+      subStats: ['critRate', 'critDmg', 'elementalDmg', 'physicalDmg'],
+      specialStats: ['astralRing'],
+    },
+    routes: {
+      characters: true,
+      weapons: true,
+      items: true,
+      'tier-list': false,
+      calculator: false,
+      map: false,
+      version: true,
+      download: true,
+      guides: true,
+      build: false,
+      compare: false,
+      teams: false,
+      'redeem-codes': false,
     },
   },
   guihuan: {

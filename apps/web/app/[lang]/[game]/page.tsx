@@ -51,6 +51,11 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     en: 'Zenless Zone Zero agent database, W-Engine guide, Drive Disc builds, codes, and version hubs, now focused on the official October 9 v3.3 “Journey Back to the Sky” program, code reminders, and the v3.2 recap. Banner and agent details await post-program notices.',
     ja: 'ゼンレスゾーンゼロのエージェント図鑑、Wエンジン、ドライブディスク、コード、版本特集。現在はv3.3「空へ戻る旅」の10月9日公式番組、コード提醒、v3.2まとめを重点化し、バナーとキャラ詳細は番組後の告知を基準にします。',
   },
+  hi3: {
+    zh: '崩坏3 9.0「曙梦向明」资料入口，整理官方版本总览、Part 2 终章、浮生·渡尘、瑟莉姆、新拳套与圣痕；当前补给、活动与数值以客户端和官方公告为准。',
+    en: 'Honkai Impact 3rd v9.0 “The Light at Dream\'s End” hub for the official update overview, Part 2 finale, Fenghuang of Vicissitude, Senadina, new fists, and stigmata. Confirm live supplies, events, and values in-game and in official notices.',
+    ja: '崩壊3rd Ver.9.0「曙夢向明」の資料入口。公式アップデート、Part 2終章、浮生・渡塵、セナディナ、新拳套、聖痕を整理し、現在の補給・イベント・数値はクライアントと公式告知で確認します。',
+  },
   guihuan: {
     zh: '归环角色图鉴、武器数据与攻略百科，整理全部可用角色的技能数据、定位说明、配装推荐和成长思路，帮助你更快了解游戏基础玩法、完成入门判断并找到适合当前版本的培养方向，同时持续补充图鉴与攻略专题。',
     en: 'Guihuan character builds, weapon database, and guides. Full skill data, role notes, build recommendations, and progression ideas for every available character.',
@@ -192,6 +197,7 @@ const FEATURED_CHARS: Record<string, string[]> = {
   wuwa: ['jiyan', 'yinlin', 'jinhsi', 'changli', 'zhezhi'],
   nte: ['chiz', 'aurelia', 'skia', 'haniel', 'sakiri', 'nanally'],
   zzz: ['ellen', 'zhu-yuan', 'miyabi', 'burnice', 'caesar'],
+  hi3: ['fenghuang-of-vicissitude', 'senadina-astralop'],
   guihuan: [],
   ananta: [],
   endfield: ['laevatain', 'ardelia', 'tangtang', 'endministrator', 'lifeng'],

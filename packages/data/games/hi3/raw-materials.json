@@ -1,0 +1,46 @@
+[
+  {
+    "id": "source-prism",
+    "name": "源晶",
+    "nameEn": "Source Prism",
+    "nameJa": "源晶",
+    "type": "装备锻造材料",
+    "rarity": 4,
+    "source": "9.0 官方公告列为圣痕锻造材料；实际获取与消耗请以游戏内为准。",
+    "sourceEn": "Listed in the v9.0 official announcement for stigma crafting; confirm acquisition and costs in-game.",
+    "sourceJa": "Ver.9.0公式告知で聖痕鍛造素材として掲載。入手・消費はゲーム内で確認してください。"
+  },
+  {
+    "id": "honkai-shard",
+    "name": "崩坏结晶",
+    "nameEn": "Honkai Shard",
+    "nameJa": "崩壊結晶",
+    "type": "装备材料",
+    "rarity": 4,
+    "source": "9.0 官方活动奖励中列出的装备材料；实际来源请以游戏内为准。",
+    "sourceEn": "An equipment material listed among official v9.0 event rewards; confirm live sources in-game.",
+    "sourceJa": "Ver.9.0公式イベント報酬に含まれる装備素材。現在の入手先はゲーム内で確認してください。"
+  },
+  {
+    "id": "ether-fuel",
+    "name": "以太燃素",
+    "nameEn": "Ether Fuel",
+    "nameJa": "エーテル燃料",
+    "type": "装备锻造材料",
+    "rarity": 4,
+    "source": "9.0 官方公告说明，锻造「忧郁哲人」圣痕单件需消耗以太燃素 600；当前持有量与来源请以客户端为准。",
+    "sourceEn": "The v9.0 official announcement states that crafting one Weeping Philosopher stigma uses 600 Ether Fuel; confirm current inventory and sources in the client.",
+    "sourceJa": "Ver.9.0公式告知では「憂鬱な哲人」聖痕1部位の鍛造にエーテル燃料600を使用します。現在の所持量と入手先はクライアントで確認してください。"
+  },
+  {
+    "id": "weeping-philosopher-stigma-option",
+    "name": "忧郁哲人圣痕自选箱",
+    "nameEn": "Weeping Philosopher Stigma Option",
+    "nameJa": "憂鬱な哲人聖痕選択箱",
+    "type": "版本活动奖励",
+    "rarity": 5,
+    "source": "9.0 官方公告列为登录活动奖励，可从「忧郁哲人」圣痕套装中选择一件；活动是否仍开放请以客户端为准。",
+    "sourceEn": "Listed in the v9.0 official announcement as a login-event reward that selects one Weeping Philosopher stigma. Confirm whether the event remains active in the client.",
+    "sourceJa": "Ver.9.0公式告知ではログインイベント報酬で、「憂鬱な哲人」聖痕から1部位を選択できます。イベントの現在の開放状態はクライアントで確認してください。"
+  }
+]

@@ -54,6 +54,10 @@ export async function getWeaponsForStaticParams(gameId: GameId): Promise<Array<{
       const mod = await import('@gachia/data/games/zzz/weapons');
       return mod.zzzWeapons.map((weapon) => ({ id: weapon.id }));
     }
+    case 'hi3': {
+      const mod = await import('@gachia/data/games/hi3/weapons');
+      return mod.hi3Weapons.map((weapon) => ({ id: weapon.id }));
+    }
     case 'guihuan': {
       const mod = await import('@gachia/data/games/guihuan/weapons');
       return mod.guihuanWeapons.map((weapon) => ({ id: weapon.id }));
@@ -173,6 +177,24 @@ export async function getWeaponListData(
           stats: [`ATK ${weapon.baseAtk}`, `${weapon.substatValue} ${weapon.substat}`],
           effectDescription: effect.description,
           signatureCharacter: weapon.signatureCharacter,
+        };
+      });
+    }
+    case 'hi3': {
+      const mod = await import('@gachia/data/games/hi3/weapons');
+      return mod.hi3Weapons.map((weapon) => {
+        const effect = mod.getHi3WeaponEffect(weapon, locale);
+        return {
+          id: weapon.id,
+          name: mod.getHi3WeaponName(weapon, locale),
+          rankGroup: weapon.rank,
+          rankLabel: weapon.rank,
+          typeGroup: weapon.weaponTypeEn,
+          typeLabel: weapon.weaponTypeEn,
+          stats: [weapon.releaseVersion ? `v${weapon.releaseVersion}` : ''].filter(Boolean),
+          effectName: effect.name,
+          effectDescription: effect.description,
+          source: mod.getHi3WeaponSource(weapon, locale),
         };
       });
     }
@@ -324,6 +346,13 @@ export async function getWeaponMetaData(gameId: GameId, id: string, locale: Supp
       if (!weapon) return null;
       const effect = mod.getZzzWeaponEffect(weapon, locale);
       return { weapon, name: mod.getZzzWeaponName(weapon, locale), effect };
+    }
+    case 'hi3': {
+      const mod = await import('@gachia/data/games/hi3/weapons');
+      const weapon = mod.getHi3WeaponById(id);
+      if (!weapon) return null;
+      const effect = mod.getHi3WeaponEffect(weapon, locale);
+      return { weapon, name: mod.getHi3WeaponName(weapon, locale), effect };
     }
     case 'guihuan': {
       const mod = await import('@gachia/data/games/guihuan/weapons');
@@ -514,6 +543,32 @@ export async function getWeaponDetailData(
           { label: 'Base DEF', value: String(weapon.baseDef) },
         ],
         effectTitle: getWeaponEffectTitle(gameId, locale), effectName: effect.name, effectDescription: effect.description, source, statsLine, hasPassive: true,
+      };
+    }
+    case 'hi3': {
+      const mod = await import('@gachia/data/games/hi3/weapons');
+      const weapon = mod.getHi3WeaponById(id);
+      if (!weapon) return null;
+      const effect = mod.getHi3WeaponEffect(weapon, locale);
+      const source = mod.getHi3WeaponSource(weapon, locale);
+      const name = mod.getHi3WeaponName(weapon, locale);
+      return {
+        gameId,
+        id: weapon.id,
+        name,
+        nameAlt: locale === 'zh' ? weapon.nameEn : weapon.name,
+        rarity: weapon.rank === '5-star' ? 5 : 4,
+        rank: weapon.rank,
+        infoCards: [
+          { label: statLabel(locale, '武器类型', '武器タイプ', 'Weapon Type'), value: weapon.weaponTypeEn },
+          { label: statLabel(locale, '版本', 'バージョン', 'Version'), value: `v${weapon.releaseVersion}` },
+        ],
+        effectTitle: locale === 'zh' ? '版本公告摘要' : locale === 'ja' ? 'バージョン告知概要' : 'Version notice summary',
+        effectName: name,
+        effectDescription: effect.description,
+        source,
+        statsLine: `v${weapon.releaseVersion}`,
+        hasPassive: true,
       };
     }
     case 'wuwa': {

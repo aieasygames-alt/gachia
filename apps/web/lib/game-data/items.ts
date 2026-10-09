@@ -109,6 +109,10 @@ export async function getItemsForStaticParams(gameId: GameId): Promise<Array<{ i
       const mod = await import('@gachia/data/games/zzz/items');
       return mod.zzzMaterials.map((m) => ({ id: m.id }));
     }
+    case 'hi3': {
+      const mod = await import('@gachia/data/games/hi3/items');
+      return mod.hi3Materials.map((m) => ({ id: m.id }));
+    }
     case 'guihuan': {
       const mod = await import('@gachia/data/games/guihuan/items');
       return mod.guihuanMaterials.map((m) => ({ id: m.id }));
@@ -169,6 +173,11 @@ export async function getItemData(
       const material = mod.getZzzMaterialById(id);
       return material ? toItemData(material, locale, mod.getZzzMaterialName) : null;
     }
+    case 'hi3': {
+      const mod = await import('@gachia/data/games/hi3/items');
+      const material = mod.getHi3MaterialById(id);
+      return material ? toItemData(material, locale, mod.getHi3MaterialName) : null;
+    }
     case 'guihuan': {
       const mod = await import('@gachia/data/games/guihuan/items');
       const material = mod.getGuihuanMaterialById(id);
@@ -228,6 +237,10 @@ export async function getItemListData(
     case 'zzz': {
       const mod = await import('@gachia/data/games/zzz/items');
       return mod.zzzMaterials.map((material) => toItemListEntry(material, locale, mod.getZzzMaterialName));
+    }
+    case 'hi3': {
+      const mod = await import('@gachia/data/games/hi3/items');
+      return mod.hi3Materials.map((material) => toItemListEntry(material, locale, mod.getHi3MaterialName));
     }
     case 'guihuan': {
       const mod = await import('@gachia/data/games/guihuan/items');

@@ -6,6 +6,7 @@ import { ClientMarkdown } from '@/components/wiki/client-markdown';
 import { buildGuideJsonLd } from '@/lib/jsonld';
 import { buildLocalizedAlternates, ensureMetaLength, getEntryUpdatedAt, hasLocalizedContent, limitMetaTitle } from '@/lib/seo-metadata';
 import { BANNER_INTENT_PANELS } from '@/lib/banner-intent';
+import { HI3_GUIDE_NEXT_STEPS, HI3_GUIDE_SCOPE } from '@/lib/hi3-guide-navigation';
 import { join } from 'node:path';
 import { loadJson } from '@gachia/data/load-json';
 
@@ -73,6 +74,7 @@ const ARTICLE_IMAGE_COUNTS: Partial<Record<GameId, number>> = {
   wuwa: 10,
   nte: 17,
   zzz: 10,
+  hi3: 0,
   sea: 10,
   skjh: 9,
   endfield: 9,
@@ -87,6 +89,7 @@ const ARTICLE_IMAGE_LABELS: Partial<Record<GameId, Record<SupportedLocale, strin
   wuwa: { zh: '鸣潮攻略参考图', en: 'Wuthering Waves guide reference image', ja: '鳴潮ガイド参考画像' },
   nte: { zh: '异环攻略参考图', en: 'Neverness to Everness guide reference image', ja: 'Neverness to Evernessガイド参考画像' },
   zzz: { zh: '绝区零攻略参考图', en: 'Zenless Zone Zero guide reference image', ja: 'ゼンレスゾーンゼロガイド参考画像' },
+  hi3: { zh: '崩坏3攻略参考图', en: 'Honkai Impact 3rd guide reference image', ja: '崩壊3rdガイド参考画像' },
   sea: { zh: '遗忘之海攻略参考图', en: 'Sea of Remnants guide reference image', ja: 'Sea of Remnantsガイド参考画像' },
   skjh: { zh: '失控进化攻略参考图', en: 'Ashfall Evolution guide reference image', ja: 'Ashfall Evolutionガイド参考画像' },
   endfield: { zh: '终末地攻略参考图', en: 'Arknights: Endfield guide reference image', ja: 'エンドフィールドガイド参考画像' },
@@ -330,6 +333,7 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> 
 };
 
 const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> = {
+  hi3: HI3_GUIDE_NEXT_STEPS,
   genshin: {
     'banner-schedule-guide': [
       { href: '/genshin/guides/luna-viii-sandrone-guide', label: { zh: 'Luna VIII 专题', en: 'Luna VIII guide', ja: 'Luna VIII特集' }, description: { zh: '继续看版本、角色和活动路线。', en: 'Continue into version, character, and event routing.', ja: '版本、キャラ、イベントへ。' } },
@@ -682,6 +686,10 @@ async function getGuideRuntime(gameId: GameId): Promise<GuideRuntime> {
       const mod = await import('@gachia/data/games/zzz/guides');
       return makeRuntime(mod.zzzGuides, mod.ZZZ_GUIDE_CATEGORIES, mod.getZzzGuideById, mod.getZzzGuideTitle, mod.getZzzGuideSummary, mod.getZzzGuideContent, mod.getZzzGuideCategory, mod.getZzzGuideFaqQuestion, mod.getZzzGuideFaqAnswer);
     }
+    case 'hi3': {
+      const mod = await import('@gachia/data/games/hi3/guides');
+      return makeRuntime(mod.hi3Guides, mod.HI3_GUIDE_CATEGORIES, mod.getHi3GuideById, mod.getHi3GuideTitle, mod.getHi3GuideSummary, mod.getHi3GuideContent, mod.getHi3GuideCategory, mod.getHi3GuideFaqQuestion, mod.getHi3GuideFaqAnswer);
+    }
     case 'guihuan': {
       const mod = await import('@gachia/data/games/guihuan/guides');
       return makeRuntime(mod.guihuanGuides, mod.GUIHUAN_GUIDE_CATEGORIES, mod.getGuihuanGuideById, mod.getGuihuanGuideTitle, mod.getGuihuanGuideSummary, mod.getGuihuanGuideContent, mod.getGuihuanGuideCategory, mod.getGuihuanGuideFaqQuestion, mod.getGuihuanGuideFaqAnswer);
@@ -835,7 +843,14 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ la
         </p>
       )}
 
-      {guide.currentVersion && (
+      {gameId === 'hi3' && (
+        <aside className="mb-6 rounded-md border border-game-border bg-game-surface px-4 py-3 text-sm leading-relaxed text-game-text-muted">
+          <p className="mb-2 font-semibold text-game-text">{HI3_GUIDE_SCOPE[locale].label}{guide.currentVersion ? `: ${guide.currentVersion}` : ''}</p>
+          <p>{HI3_GUIDE_SCOPE[locale].notice}</p>
+        </aside>
+      )}
+
+      {gameId !== 'hi3' && guide.currentVersion && (
         <div className="mb-6 rounded-md border border-game-border bg-game-surface px-4 py-3 text-xs leading-relaxed text-game-text-muted">
           <strong className="mr-1 text-game-text">{isHistoricalGuideVersion(guide.currentVersion) ? (locale === 'zh' ? '历史参考' : locale === 'ja' ? '過去の参考' : 'Historical reference') : (locale === 'zh' ? '版本状态' : locale === 'ja' ? 'バージョン状況' : 'Version status')}:</strong>
           {isHistoricalGuideVersion(guide.currentVersion)
@@ -868,7 +883,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ la
         ))}
       </div>
 
-      <GuideFreshnessSection guide={guide} locale={locale} />
+      <GuideFreshnessSection guide={guide} locale={locale} gameId={gameId} />
       <BannerIntentPanel gameId={gameId} slug={slug} locale={locale} />
       <QuickAnswerSection gameId={gameId} slug={slug} locale={locale} />
 
@@ -994,12 +1009,12 @@ function withGuideIndexing(locale: SupportedLocale, guide: unknown, metadata: ob
   return metadata;
 }
 
-function GuideFreshnessSection({ guide, locale }: { guide: GuideLike; locale: SupportedLocale }) {
+function GuideFreshnessSection({ guide, locale, gameId }: { guide: GuideLike; locale: SupportedLocale; gameId: GameId }) {
   const facts = guide.quickFacts?.[locale] ?? guide.quickFacts?.en ?? guide.quickFacts?.zh ?? [];
   if (!guide.updatedAt && !guide.currentVersion && facts.length === 0) return null;
 
   const updatedLabel = locale === 'zh' ? '更新于' : locale === 'ja' ? '更新日' : 'Updated';
-  const versionLabel = locale === 'zh' ? '当前版本' : locale === 'ja' ? '現在版本' : 'Current version';
+  const versionLabel = gameId === 'hi3' ? HI3_GUIDE_SCOPE[locale].label : locale === 'zh' ? '当前版本' : locale === 'ja' ? '現在版本' : 'Current version';
 
   return (
     <section className="mb-6 rounded-lg border border-game-border bg-game-surface p-4">

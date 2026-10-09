@@ -1,0 +1,16 @@
+[
+  {
+    "id": "senadina",
+    "name": "瑟莉姆",
+    "nameEn": "Senadina",
+    "nameJa": "セナディナ",
+    "role": "命运之轮天命之环队伍人偶",
+    "roleEn": "Wheel of Destiny Astral Ring support",
+    "roleJa": "運命の輪アストラルリング支援人偶",
+    "description": "9.0 官方公告中的新人偶。星爆期间可进行协同攻击、牵引附近敌人并造成火焰元素伤害；幻影支援攻击与星余状态可影响后续星爆期间的增伤条件。",
+    "descriptionEn": "A new AstralOp from the v9.0 official announcement. During Stellar Outburst she can make synergy attacks, pull nearby enemies, and deal Fire DMG; Phantom assists and Stellar Surplus affect amplification conditions for the next Outburst.",
+    "descriptionJa": "Ver.9.0公式告知の新人偶。星爆中に連携攻撃、敵の牽引、炎ダメージを行い、ファントム支援と星余状態は次の星爆における増幅条件に関わります。",
+    "releaseVersion": "9.0",
+    "status": "available"
+  }
+]

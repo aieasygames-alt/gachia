@@ -1,0 +1,44 @@
+[
+  {
+    "id": "vermillion-liuli",
+    "name": "朱华",
+    "nameEn": "Vermillion Liuli",
+    "nameJa": "朱華",
+    "rank": "5-star",
+    "weaponType": "拳套",
+    "weaponTypeEn": "Fists",
+    "description": "9.0 版本官方公告列出的新拳套。其 PRI-ARM 为「Vermillion Liuli: Full Burn」。详细效果与适配请以游戏内说明为准。",
+    "descriptionEn": "A new fist weapon listed in the official v9.0 announcement. Its PRI-ARM is Vermillion Liuli: Full Burn. Confirm full effects and compatibility in-game.",
+    "descriptionJa": "Ver.9.0公式告知に掲載された新拳套。PRI-ARMは「Vermillion Liuli: Full Burn」です。詳細効果と適性はゲーム内表記を確認してください。",
+    "releaseVersion": "9.0",
+    "status": "available"
+  },
+  {
+    "id": "vermillion-liuli-full-burn",
+    "name": "朱华·全燃",
+    "nameEn": "Vermillion Liuli: Full Burn",
+    "nameJa": "朱華・全燃",
+    "rank": "5-star",
+    "weaponType": "超限拳套",
+    "weaponTypeEn": "PRI-ARM Fists",
+    "description": "9.0 版本官方公告列出的「朱华」PRI-ARM。解锁与升级条件以游戏内规则为准。",
+    "descriptionEn": "The PRI-ARM form of Vermillion Liuli listed in the official v9.0 announcement. Use in-game rules for unlock and upgrade conditions.",
+    "descriptionJa": "Ver.9.0公式告知に掲載された「朱華」のPRI-ARM。解放と強化条件はゲーム内ルールを確認してください。",
+    "releaseVersion": "9.0",
+    "status": "available"
+  },
+  {
+    "id": "volatile-sparkler",
+    "name": "跃动火花",
+    "nameEn": "Volatile Sparkler",
+    "nameJa": "ヴォラタイル・スパークラー",
+    "rank": "4-star",
+    "weaponType": "驱动核心",
+    "weaponTypeEn": "Drive Core",
+    "description": "9.0 官方公告列入回归支援可获得装备的 4★ 驱动核心。回归资格、选择范围和实际领取状态请以客户端回归支援页面为准。",
+    "descriptionEn": "A 4-star Drive Core listed among v9.0 returnee-support equipment. Confirm returnee eligibility, selection pool, and live claim status in the client.",
+    "descriptionJa": "Ver.9.0公式告知の復帰支援で入手可能な4★ドライブコア。復帰資格、選択範囲、現在の受取状況はクライアントの復帰支援で確認してください。",
+    "releaseVersion": "9.0",
+    "status": "available"
+  }
+]
