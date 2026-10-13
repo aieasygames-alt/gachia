@@ -29,6 +29,13 @@ describe('HI3 weapon announcement presentation boundaries', () => {
     expect(detail).toContain('`${hi3WeaponScope[locale]} ${bodyDescription}`');
     expect(detail).toContain('data-hi3-weapon-scope');
     expect(directory).toContain("gameId === 'hi3' ? hi3WeaponMetadata(locale).description");
+    expect(directory).toContain("gameId === 'hi3' ? { twitter:");
+    expect(directory).toContain("card: 'summary_large_image' as const, title, description");
+    expect(detail).toContain("twitter: { card: 'summary_large_image', title: meta.title, description: meta.description");
+    for (const source of [detail, directory]) {
+      expect(source).toContain("width: gameId === 'hi3' ? 1024 : 1200");
+      expect(source).toContain("height: gameId === 'hi3' ? 1024 : 630");
+    }
     expect(search).toContain("r.gameId === 'hi3' && r.type === 'weapon'");
     expect(search).toContain('data-hi3-weapon-search-scope');
   });

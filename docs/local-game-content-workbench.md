@@ -1346,3 +1346,55 @@ matrix-v6合并16.88至16.90实际限定路径，160候选有至少一份当前�
 final-handoff-check记录当前逐路径摘要、原清单差异、4类凭据形状及风险文件名检查、HEAD/索引状态。范围说明修正16.95变动与最新证据对应，并明确10手动工具/历史报告/4无关变更排除。检查不覆盖ignored、Git历史、媒体正文、依赖字节或完整语义；本轮不重跑测试、不覆盖旧报告。大模块保留限制见范围材料，不因“有记录”签发全文件批准。
 
 当前开发切片与限定回归、范围/风险材料已达到本阶段交付点；产品端到端仍未完成。下一实际核心路径是授权后的Git基线→重建限定Global三语草案→独立依赖与明确非沙箱真实预览，生产构建/预发布/正式上线继续独立。没有这些授权不自动写索引/提交、安装或执行原草案；一般“继续下一步”只继续普通开发/核对，不推断高风险操作许可。无须用户逐字段决定，代理内容审核授权保留。后续普通修复可继续，但不再仅为报告数量重复收口。无真实数据操作、原草案执行、暂存、提交或发布。
+
+### 16.97 已授权基线提交与新草案重建（2026-10-13）
+
+用户明确授权163路径核对后暂存/本地提交，已建立074b11030c18be82e0ec76af90d2e9db5ffcb55f。提交前管理端243/255（12默认跳过）、Web141、Router26、浏览器12/双宽、types和生成check4通过；暂存字节核对163一致。暂存check发现未跟踪文件原先未参与diff检查的末尾空行/Markdown行尾空格，仅清理两路径格式并复跑cleanup9项通过。无推送；报告/10工具/4无关变更未提交。提交回执authorized-baseline-commit-receipt另存，不修改提交。
+
+基于该新HEAD创建独立stage 7de47210-2144-4ab7-940a-2206f8eb3696，workspace ad38fe4a-a489-44fb-aa64-3e4045b0e378。保存的Global英文v9.0公告165770重新按有限声明核对：两装备名、推荐对象及PRI-ARM关系可确认，it激活指代/当前客户端状态仍待核验。未联网重新验证公告；不是新的当前时效证明。创建新事实/修订/代理审核，仅description/descriptionEn/descriptionJa六处文本与两份镜像变化，其他名称/status/数值未批准；旧stage和历史报告未改写。当前代理审核身份明确，中文/日文是代理翻译，保留英文专名，非正式本地化认证。
+
+新草案结构31通过/0失败/9未覆盖、当前审核和固定模板预览current；重开独立库后的18个桌面/移动固定HTML案例通过。源码固定范围对账0差异（旧草案13差异已不作为本阶段输入），不是全源码或真实应用验收；依赖锁975节点/2220边partial_pass，一项其他importer未覆盖，独立依赖仍未准备。报告新增real-announcement-trilingual-draft-baseline-074b110、对应draft-check-baseline-074b110和real-announcement-baseline-plan-074b110，旧报告不覆盖。手动脚本通过临时副本只改报告路径/模块解析，未执行旧脚本以覆盖旧结果。
+
+主目录两份游戏JSON保持不变，日常数据库未打开；本节及计划为提交后的状态更新，未再次暂存或提交。下一项独立依赖准备的具体范围与安装/制品校验授权，之后明确非沙箱原草案预览授权；当前无这些许可，不安装、不共享主目录依赖、不启动Next、不生产构建或发布。旧工作区不删除/覆盖，产品端到端仍未验收。
+
+### 16.98 独立依赖准备方案（2026-10-13）
+
+只读核对新基线packageManager/workspace/manifest/Next配置与锁。本机pnpm10.10.0与声明一致，Node25.9.0/darwin-arm64；.nvmrc20不视为所有工具兼容保证，不自动下载Node。锁976packages均有integrity、无显式tarball，不能证明制品已验证或无安装脚本；Web闭包仍partial_pass，root onlyBuiltDependencies不是本次执行许可。
+
+新增plans/workbench-independent-dependency-preparation.md，固定新stage，建议先独立HOME/store/cache、冻结锁、仅Web闭包、ignore-scripts的下载/布局准备，再按实际脚本/原生制品另审；不得共享主目录依赖或扩大其他游戏。用户/系统配置须在安装阶段隔离核对，未发现已跟踪.npmrc不代表没有外部配置。仅源码/锁读取，无联网、下载、安装、Next启动或生产操作。
+
+下一步A需要明确授权：允许在该独立工作区联网下载依赖并写node_modules/专用store/cache，但禁止安装脚本、锁修改和应用执行。B必要原生脚本、非沙箱真实Next预览仍各自另行确认。方案/状态文档未暂存提交，不把前次本地基线提交授权复用。
+
+### 16.99 已授权独立依赖布局准备（2026-10-13）
+
+用户授权A阶段联网下载/安装布局，禁脚本/锁修改/应用启动。先专用HOME检查发现/opt/homebrew/bin/pnpm实际10.32.1（此前项目上下文报告10.10.0不能代表隔离环境入口版本），版本门禁在安装前停止；保留空准备目录，不下载另一版工具。改用本机已有Library/pnpm/.tools下10.10.0入口和新专用HOME/config/cache/store/tmp，环境allowlist、不继承凭据/代理配置。
+
+filter确认仅Web/core/data/db/ui五工作区包；frozen-lockfile/ignore-scripts/copy/no-side-effects-cache/官方registry，40.6秒安装749包，无重用主目录store。记录的8配置/清单及两JSON共10输入摘要前后相同。结果见independent-dependency-install-result-074b110；没有安装脚本、migrate/build/dev执行，未修改主目录依赖或旧stage。
+
+安装后纯文件读取：50627普通文件、870519730表观字节、2678符号链接全部解析在独立workspace内，观察多硬链接文件0，按路径/字节摘要聚合制品指纹；1096个package.json含嵌套/捆绑包，不等于749安装包去重数。68个package.json有生命周期/prepare字段，均未执行；锁无requiresBuild不能推断无脚本。darwin-arm64的Next SWC、SWC、esbuild、sharp和workerd平台包已存在，未运行原生代码验证。readiness为filesystem_preflight_only，不是可执行/供应链批准；pnpm完整性配置开启，不等于独立逐制品SRI重验。布局报告independent-dependency-layout-074b110保留链接/包/脚本清单与聚合摘要。
+
+A阶段完成，B未授权。建议下一步受控Next非沙箱预览（不批量重建依赖），若缺原生制品先停下审查必要脚本，不自动rebuild。需明确允许草案及第三方代码在本机运行：loopback/独立HOME/不提供真实OAuth或生产凭据仍不是OS隔离，代码可能访问本机文件和网络。不得将A安装授权延伸为B执行或生产构建/部署。本轮无Next启动、安装脚本、生产操作、新Git提交；状态文档未提交。
+
+### 16.100 已授权原草案非沙箱预览（2026-10-13）
+
+用户明确授权后进行新stage真实Next预览，不执行安装脚本/生产构建。首次启动前acceptedReview被阻断：依赖安装后Git列出ignored文件约6.2MB，超过workspaces命令2MiB输出预算；不是JSON变化。修复主目录检查代码，在Git pathspec层排除既有允许的node_modules/apps/web/.next树，保留后置过滤及其他ignored文件阻断；无扩大草案JSON白名单。新增9000长路径临时文件夹具超过原预算，允许依赖目录同时仍拒绝private.tmp。专项11通过/1默认浏览器跳过，管理端256项244通过/12跳过，浏览器最终见dependency-listing-boundary-review。修复尚未提交，也未复制到原草案代码；控制面用本任务当前检查模块，应用仍运行074b110工作区源码，证据按此区分。
+
+原草案通过applicationPreviewService明确legacy_trusted_local/confirmExecuteCode/confirmNotSandboxed启动，本机loopback、独立HOME/TMP、无真实OAuth/生产凭据，stdout不持久化。application检查12受影响页、48项通过/4项未覆盖，结果partial_pass；三语双视口6组searchRecoverySmoke真实503→重试恢复通过。未覆盖包括第二武器的抽样搜索点击、排序/模糊词/备用名称/读屏/真实设备等，不因HTTP成功认证完整页面。正式名称/status/当前客户端效果仍未批准。此次为原草案，不是旧开发快照。
+
+服务finally关闭，保存stopped，主PID87761已退出；这不证明所有后代退出。主目录两JSON字节未变，审核复核仍current。报告original-draft-preview-074b110保存实际结果/退出/输入边界；初始临时驱动模块导入笔误在启动前修正，旧阶段报告未覆盖。无生产构建/Worker包体/线上对账/提交/推送。原草案真实预览首片完成，不代表P0-4整体验收；下一步补第二武器未抽样交互与范围说明/metadata真实页面核对，沿用本次限定预览权限，不扩OAuth/生产操作。控制面修复若纳入新基线仍需另行授权，不自动提交。
+
+### 16.101 两武器真实页面与社交metadata遗漏（2026-10-13）
+
+沿已授权限定非沙箱预览补两武器×三语×双视口12案例：全名搜索唯一目标/点击HTTP200、canonical、正文六描述、页面及搜索scope、description/OG描述、JSON-LD可解析且含scope、无横向溢出通过。审核仍current，主/草案两JSON前后未变，服务stopped、主PID23105退出。不是全字段/正式本地化/客户端效果批准。
+
+真实Twitter描述12案例均继承全站通用文案而非HI3边界，首次严格断言失败并停止；保留first-attempt报告，第二轮逐项观察完成后明确partial_pass_two_weapon_scope_twitter_failed，不能把12个其他断言通过当全部metadata通过。源码另查武器目录/detail OG尺寸仍1200x630，与已有1024方形素材不符；此尺寸问题是源码核对，不冒称本轮浏览器尺寸断言。
+
+主目录修复仅HI3两武器页面：显式twitter title/description/image，OG尺寸仅HI3改1024方形，其他游戏保持。hi3-weapon-scope增加源码契约断言，Web141项与types通过；该测试不是修复后真实页面渲染验证。修复未提交/未拷贝原草案，原草案仍074b110，实际Twitter缺陷保持记录，未覆盖旧报告为通过。无安装脚本/构建/发布/新提交。下一步为修复的metadata函数行为测试和新基线/草案同步计划，真实修复后预览须在明确对象重新审核后进行，不绕过JSON白名单。
+
+### 16.102 metadata函数行为测试与同步方案（2026-10-13）
+
+新增weapon-metadata-behavior.test.ts：转译实际两页面模块并调用generateMetadata，明确桩仅替代数据IO/渲染依赖；三语×目录/detail六项验证description/OG/Twitter一致、长名称不吞边界、方形图片，另两项非HI3不新增Twitter/保留1200尺寸，一项缺详情返回空。未知导入直接报错不静默泛化。不是Next合并head/页面渲染或全游戏批准。
+
+Web39文件150项及types、diff检查通过；无管理端/Router/浏览器重跑，不覆盖16.101真实Twitter失败报告。新增plans/workbench-preview-fix-baseline.md列6产品修复路径与另列状态/方案文档，明确新本地提交→新草案/审核→独立依赖→适用对象的非沙箱复验顺序，不绕过JSON白名单给旧草案补Web源码。旧基线授权已用完，本轮未暂存/提交、安装、启动或发布。
+
+下一实际核心动作是授权这组最小修复进入新代码基线；普通继续开发不会自动写索引。生产构建/发布、正式名称/效果验证仍独立，当前没有将旧草案partial改成全部通过。

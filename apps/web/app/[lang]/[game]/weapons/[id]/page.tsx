@@ -291,7 +291,7 @@ function buildOg(title: string, description: string, gameId: string, id: string,
     description,
     url: `${BASE_URL}/${locale}/${gameId}/weapons/${id}`,
     siteName: 'Gachia' as const,
-    images: [{ url: `${BASE_URL}/images/og/${gameId}.webp`, width: 1200, height: 630 }],
+    images: [{ url: `${BASE_URL}/images/og/${gameId}.webp`, width: gameId === 'hi3' ? 1024 : 1200, height: gameId === 'hi3' ? 1024 : 630 }],
     locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
   };
 }
@@ -354,7 +354,8 @@ export async function generateMetadata({
   if (gameId === 'hi3') {
     const meta = hi3WeaponMetadata(locale, detail.name);
     meta.title = limitMetaTitle(meta.title, hi3WeaponMetadata(locale).title);
-    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, id, locale) };
+    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, id, locale),
+      twitter: { card: 'summary_large_image', title: meta.title, description: meta.description, images: [`${BASE_URL}/images/og/hi3.webp`] } };
   }
 
   const statSuffix = detail.titleStat ? ` (${detail.titleStat})` : '';

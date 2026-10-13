@@ -404,6 +404,22 @@ test('out-of-scope, symlink, invalid JSON and revoked facts block inspection', (
   assert.ok(service.list()[0].inspection.reasons.some((reason) => reason.includes('永久失效')));
 });
 
+test('large ignored dependency listings are excluded before output budgeting without hiding other ignored files', (t) => {
+  const { root, service, revision } = fixture(t);
+  const workspace = service.create(revision().id);
+  writeFileSync(join(root, '.git/info/exclude'), 'node_modules/\n.next/\nprivate.tmp\n');
+  const directories = ['node_modules', 'apps/web/node_modules', 'apps/web/.next', 'packages/data/node_modules'];
+  for (const directory of directories) {
+    mkdirSync(join(workspace.path, directory), { recursive: true });
+    for (let i = 0; i < 2250; i++) writeFileSync(join(workspace.path, directory, `${'x'.repeat(230)}-${i}`), '');
+  }
+  assert.equal(service.list()[0].inspection.status, 'ready_for_manual_draft');
+  writeFileSync(join(workspace.path, 'private.tmp'), 'must remain visible');
+  const inspection = service.list()[0].inspection;
+  assert.equal(inspection.status, 'blocked');
+  assert.ok(inspection.changes.some((change) => change.path === 'private.tmp' && change.ignored && !change.allowed));
+});
+
 test('ignored out-of-scope files, checkout filters and changed HEAD are blocked', (t) => {
   const { service, revision, git } = fixture(t);
   const record = revision();

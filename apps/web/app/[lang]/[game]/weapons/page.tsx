@@ -121,12 +121,13 @@ export async function generateMetadata({
     title,
     description,
     alternates,
+    ...(gameId === 'hi3' ? { twitter: { card: 'summary_large_image' as const, title, description, images: [`${BASE_URL}/images/og/hi3.webp`] } } : {}),
     openGraph: {
       title,
       description,
       url: `${BASE_URL}/${locale}/${gameId}/weapons`,
       siteName: 'Gachia',
-      images: [{ url: `${BASE_URL}/images/og/${gameId}.webp`, width: 1200, height: 630 }],
+      images: [{ url: `${BASE_URL}/images/og/${gameId}.webp`, width: gameId === 'hi3' ? 1024 : 1200, height: gameId === 'hi3' ? 1024 : 630 }],
       locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
     },
   };

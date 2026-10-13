@@ -87,7 +87,10 @@ export function workspaceService(root, dataDir, store) {
       // Disable rename detection so both sides of a move are checked as independent paths.
       const paths = git(workspace.path, ['diff', '--no-renames', '--name-only', '-z', workspace.baselineCommit, '--']).split('\0').filter(Boolean);
       const untracked = git(workspace.path, ['ls-files', '--others', '--exclude-standard', '-z']).split('\0').filter(Boolean);
-      const ignored = git(workspace.path, ['ls-files', '--others', '--ignored', '--exclude-standard', '-z']).split('\0')
+      // Exclude permitted generated trees before Git fills the bounded output buffer.
+      const ignored = git(workspace.path, ['ls-files', '--others', '--ignored', '--exclude-standard', '-z', '--', '.',
+        ':(exclude)node_modules/**', ':(exclude)apps/web/node_modules/**', ':(exclude)apps/web/.next/**',
+        ':(exclude,glob)packages/*/node_modules/**']).split('\0')
         .filter((path) => path && !/^(node_modules\/|apps\/web\/(node_modules|\.next)\/|packages\/[^/]+\/node_modules\/)/.test(path));
       changes = [...new Set([...paths, ...untracked, ...ignored])].map((path) => {
         let safe = allowed(path);
