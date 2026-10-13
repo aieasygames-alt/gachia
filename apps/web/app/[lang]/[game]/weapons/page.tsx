@@ -5,6 +5,8 @@ import { Link } from '@/lib/i18n/navigation';
 import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
 import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
+import { hi3WeaponMetadata, hi3WeaponScope } from '@/lib/hi3-weapon-scope';
+import { serializeJsonLd } from '@/lib/jsonld-script';
 
 const BASE_URL = 'https://gachia.com';
 const ZzzQueuedWeapons = dynamic(() => import('./zzz-queued-weapons').then((mod) => mod.ZzzQueuedWeapons));
@@ -106,14 +108,14 @@ export async function generateMetadata({
   const intro = WEAPON_INTRO[gameId]?.[locale];
 
   const title = gameId === 'hi3'
-    ? { zh: '崩坏3武器资料 — 拳套、超限武器与驱动核心', en: 'HI3 Weapons — Fists, PRI-ARMs and Drive Cores', ja: '崩壊3rd武器資料 — 拳套・超限武器・ドライブコア' }[locale]
+    ? hi3WeaponMetadata(locale).title
     : locale === 'zh'
     ? `${gameName}武器图鉴 — 外观法杖Wiki、特效与获取方式`
     : locale === 'ja'
       ? `${gameName}武器図鑑 — 杖Wiki、演出効果、入手方法`
       : `${gameName} Weapons Wiki — Cosmetic Staffs, Effects & Sources`;
 
-  const description = ensureMetaLength(intro ?? desc, locale);
+  const description = gameId === 'hi3' ? hi3WeaponMetadata(locale).description : ensureMetaLength(intro ?? desc, locale);
 
   return {
     title,
@@ -149,7 +151,7 @@ export default async function WeaponsPage({
       { '@type': 'ListItem', position: 2, name: CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons', item: `${BASE_URL}/${locale}/${gameId}/weapons` },
     ],
   };
-  const ldScript = <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />;
+  const ldScript = <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} />;
 
   if (gameId === 'sea') notFound();
 
@@ -294,6 +296,7 @@ function WeaponListPage({ gameId, locale, weapons }: { gameId: GameId; locale: S
 
   return (
     <div>
+      {gameId === 'hi3' && <p data-hi3-weapon-scope className="mb-4 rounded-md border border-game-border bg-game-surface px-4 py-3 text-sm leading-relaxed text-game-text-muted">{hi3WeaponScope[locale]}</p>}
       <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
         {weaponDisplayName(gameId, locale)}
       </h1>
@@ -317,7 +320,7 @@ function WeaponListPage({ gameId, locale, weapons }: { gameId: GameId; locale: S
             </h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {entries.map((weapon) => (
-                <WeaponCard key={weapon.id} weapon={weapon} locale={locale} />
+                <WeaponCard key={weapon.id} weapon={weapon} locale={locale} gameId={gameId} />
               ))}
             </div>
           </section>
@@ -329,7 +332,7 @@ function WeaponListPage({ gameId, locale, weapons }: { gameId: GameId; locale: S
   );
 }
 
-function WeaponCard({ weapon, locale }: { weapon: WeaponCardEntry; locale: SupportedLocale }) {
+function WeaponCard({ weapon, locale, gameId }: { weapon: WeaponCardEntry; locale: SupportedLocale; gameId: GameId }) {
   const typeLabel = localTypeLabel(weapon.typeLabel, locale);
   const rankColor = WEAPON_RANK_COLORS[weapon.rankLabel] || WEAPON_RANK_COLORS[weapon.rankGroup] || '#888';
 
@@ -337,7 +340,13 @@ function WeaponCard({ weapon, locale }: { weapon: WeaponCardEntry; locale: Suppo
     <div className="rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary">
       <div className="mb-2 flex items-center gap-2">
         <span className="text-base font-bold" style={{ color: rankColor }}>{weapon.rankLabel}</span>
-        <h3 className="font-semibold text-game-text">{weapon.name}</h3>
+        <h3 className="font-semibold text-game-text">
+          {gameId === 'hi3' ? (
+            <Link href={`/hi3/weapons/${weapon.id}`} className="hover:text-game-primary focus-visible:outline-2 focus-visible:outline-game-primary">
+              {weapon.name}
+            </Link>
+          ) : weapon.name}
+        </h3>
         <span className="ml-auto rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted">{typeLabel}</span>
       </div>
       {weapon.stats.length > 0 && (

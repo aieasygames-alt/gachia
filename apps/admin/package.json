@@ -2,8 +2,21 @@
   "name": "@gachia/admin",
   "version": "0.0.1",
   "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
   "scripts": {
-    "dev": "echo 'Admin panel not yet implemented'",
+    "dev": "node --import tsx src/server.mjs",
+    "start": "node --import tsx src/server.mjs",
+    "test": "node --import tsx --test tests/*.test.mjs",
+    "test:browser": "node --import tsx tests/browser-smoke.mjs && WORKBENCH_BROWSER_TESTS=1 node --import tsx --test --test-name-pattern='desktop and mobile browsers|real browser|real React' tests/workspaces.test.mjs tests/application-preview.test.mjs tests/search-interactions.test.mjs tests/official-source.test.mjs tests/modal-background.test.mjs tests/search-loader-react.test.mjs tests/auth-dialog-react.test.mjs tests/preview-occupancy-browser.test.mjs",
     "clean": "rm -rf node_modules"
+  },
+  "dependencies": {
+    "@gachia/core": "workspace:*",
+    "tsx": "^4.23.0",
+    "typescript": "^5.9.3",
+    "yaml": "2.9.0"
   }
 }

@@ -9,7 +9,8 @@
     "deploy:staging": "wrangler deploy --env staging",
     "test": "vitest run",
     "type-check": "tsc --noEmit",
-    "validate:config": "node ../../scripts/validate-game-deployment.mjs"
+    "validate:config": "node ../../scripts/validate-game-deployment.mjs",
+    "check:generated": "node ../../scripts/generate-router-game-config.mjs --check"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20260702.1",

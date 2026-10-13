@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '@/lib/jsonld-script';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Link } from '@/lib/i18n/navigation';
@@ -32,7 +33,7 @@ export default async function ContentVerificationPage({ params }: { params: Prom
   ];
 
   return <main className="container mx-auto max-w-5xl px-4 py-10 md:py-14">
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebPage', name: '三游戏内容核验规则', url: `${BASE_URL}/zh/content-verification`, dateModified: UPDATED_AT }) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd({ '@context': 'https://schema.org', '@type': 'WebPage', name: '三游戏内容核验规则', url: `${BASE_URL}/zh/content-verification`, dateModified: UPDATED_AT }) }} />
     <p className="text-sm font-semibold text-game-primary">内容治理 · 最后核验 {UPDATED_AT}</p>
     <h1 className="mt-2 text-3xl font-bold text-game-text md:text-4xl">三游戏内容核验规则</h1>
     <p className="mt-4 max-w-3xl leading-7 text-game-text-muted">伊莫、蓝色星原：旅谣和绿梦处于不同阶段。本站将“已上线”“测试中”“待开服”的内容分开处理，避免把测试表现、预约页面或社区讨论写成正式客户端结论。</p>

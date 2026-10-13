@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gachia · 内容工作台</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header><a href="/" class="brand">GACHIA <span>EDITORIAL DESK</span></a><span class="local">仅本机 · 无发布权限</span></header>
+  <main>
+    <section class="hero"><div><p class="eyebrow">CONTENT OPERATIONS / 01</p><h1>让每次更新，<br>都有据可循。</h1><p class="intro">崩坏3内容工作台。从原文证据到待审核任务，先把事实与改动边界说清楚。</p></div><aside><span class="edition">M0 + M1 / MANUAL INTAKE</span><h2>证据 → 索引 → 任务</h2><p>仅显式点击采集固定国际服官方来源，不定时抓取、不生成代码、不发布。导入内容始终标记为待核验。</p><button id="refresh" class="secondary">重新扫描内容</button></aside></section>
+    <p id="notice" role="status" aria-live="polite">正在连接本地服务…</p>
+    <section class="panel" id="execution-policy" aria-label="执行隔离能力"></section>
+    <section class="panel"><h2>国际服官方来源 · 手动采集</h2><p class="muted">固定访问 HoYoverse Global 英文公告首屏，最多3篇。无登录、无定时任务。结果仅为待核验快照，不自动确认为事实；原始 HTML 只作为文本显示。</p><button id="collect-official" class="secondary">确认访问公开官方来源并采集</button><div id="official-source"></div></section>
+    <section class="metrics" aria-label="工作台概况"><article><span>来源状态</span><strong id="source-status">未配置采集</strong><small>手动导入不等于来源健康</small></article><article><span>已索引实体</span><strong id="entity-count">—</strong><small>角色 / 武器 / 材料 / 攻略</small></article><article><span>待核验证据</span><strong id="evidence-count">—</strong><small>官方声明与讨论分开记录</small></article><article><span>待审核任务</span><strong id="batch-count">—</strong><small>不可编辑 · 不可发布</small></article></section>
+    <div class="workspace">
+      <section class="panel"><div class="section-title"><span>01 / INTAKE</span><h2>保留原文，而非结论</h2></div><p class="muted">仅导入核验所需片段，请勿提交凭据或个人资料。来源链接不会被访问；标为官方声明也不代表已核实。</p>
+        <form id="intake">
+          <label>公告 / 讨论标题<input name="title" required maxlength="200" placeholder="例如：版本更新说明中的装备调整"></label>
+          <label>来源链接<input name="url" type="url" required maxlength="2048" placeholder="https://…（不含查询参数）"></label>
+          <div class="form-grid"><label>资料类型<select name="sourceType"><option value="official_claim">声称来自官方 · 待核验</option><option value="discussion">玩家讨论 · 仅供选题</option></select></label><label>适用服务器<input name="server" required maxlength="80" placeholder="例如：Global；未知请填待确认"></label></div>
+          <div class="form-grid"><label>原文语言<select name="language"><option value="zh">中文</option><option value="en">English</option><option value="ja">日本語</option></select></label><label>原始发布日期（可留空）<input name="publishedAt" type="date"></label></div>
+          <label>原文必要片段<textarea name="body" required maxlength="30000" rows="7" placeholder="保留实体名称、条件和时间范围。不把编辑时间当发布日期。"></textarea></label>
+          <button type="submit">保存待核验证据 <span>↗</span></button>
+        </form>
+      </section>
+      <section class="panel"><div class="section-title"><span>02 / EVIDENCE</span><h2>先核实，再安排更新</h2></div><div id="evidence-list" class="stack"></div></section>
+    </div>
+    <section class="panel"><div class="section-title"><span>03 / FACT REVIEW</span><h2>把原文落实到具体字段</h2></div><p class="muted">字段记录不可改写；录错请驳回后重新录入。人工或代理确认仅表示本机审核记录，不代表系统自动核实，也不是代码或发布审批。身份类型与名称均为自报；代理必须记录授权依据，旧记录不推定为人工。</p><div class="coverage"><form id="fact-intake">
+      <label>关联证据<select name="evidenceId" id="fact-evidence" required></select></label>
+      <div class="form-grid"><label>事实实体<input name="entity" required maxlength="200" placeholder="例如：浮生·渡尘"></label><label>事实字段<input name="field" required maxlength="100" placeholder="例如：推荐装备触发条件"></label></div>
+      <label>字段值<textarea name="value" required maxlength="4000" rows="3"></textarea></label>
+      <label>逐字出处片段<textarea name="quote" required maxlength="4000" rows="3" placeholder="必须逐字包含在关联证据原文中"></textarea></label>
+      <div class="form-grid"><label>事实服务器<input name="server" id="fact-server" required readonly></label><label>内容状态<select name="lifecycle"><option value="unknown">待确认</option><option value="announced">预告</option><option value="test">测试</option><option value="live">上线</option><option value="historical">历史</option></select></label></div>
+      <div class="form-grid"><label>生效日期（可留空）<input name="validFrom" type="date"></label><label>结束日期（可留空）<input name="validUntil" type="date"></label></div>
+      <button type="submit">保存待审核字段</button>
+    </form><div><h3>所选证据原文</h3><pre id="fact-source">请先导入证据。</pre><p class="muted">日期留空表示未知；时间字段或领取条件需要审核者核对。到期不会自动断言活动已关闭。</p></div></div><div id="fact-list" class="stack"></div></section>
+    <section class="panel"><div class="section-title"><span>04 / REVIEW QUEUE</span><h2>有明确边界的任务包</h2></div><p class="muted">仅用实体名称或 ID 字面匹配建议已有页面，不代表 AI 分析；无匹配时需人工选页。重复生成返回同一任务快照。后续事实审核变化不会改写已生成任务。</p><div id="batch-list" class="stack"></div></section>
+    <section class="panel"><div class="section-title"><span>04 / COVERAGE</span><h2>把未验证的地方留在明处</h2></div><p id="baseline" class="muted"></p><div class="coverage"><div><h3>本地内容索引</h3><div id="entry-list"></div></div><div><h3>检查结果</h3><div id="check-list"></div></div></div></section>
+    <section class="panel"><div class="section-title"><span>05 / JOURNAL</span><h2>持久化记录</h2></div><div id="event-list"></div></section>
+    <footer>GACHIA / LOCAL WORKBENCH <span>证据不是指令 · 审核不是上线</span></footer>
+  </main>
+</body>
+</html>

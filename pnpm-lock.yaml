@@ -22,7 +22,20 @@ importers:
         specifier: ^5.8.0
         version: 5.9.3
 
-  apps/admin: {}
+  apps/admin:
+    dependencies:
+      '@gachia/core':
+        specifier: workspace:*
+        version: link:../../packages/core
+      tsx:
+        specifier: ^4.23.0
+        version: 4.23.0
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+      yaml:
+        specifier: 2.9.0
+        version: 2.9.0
 
   apps/game-azur-promilia:
     dependencies:

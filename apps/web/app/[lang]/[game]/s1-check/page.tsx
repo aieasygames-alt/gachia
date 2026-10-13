@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '@/lib/jsonld-script';
 import { GAMES, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { notFound } from 'next/navigation';
@@ -84,7 +85,7 @@ export default async function AniimoS1CheckPage({ params }: { params: Promise<{ 
   }[locale];
 
   return <main className="container mx-auto max-w-6xl px-4 py-10 sm:py-14">
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'ItemList', name: copy.title, numberOfItems: S1_STEPS.length, itemListElement: S1_STEPS.map((step, index) => ({ '@type': 'ListItem', position: index + 1, name: step.label[locale], url: `${BASE_URL}/${locale}${step.href}` })) }) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd({ '@context': 'https://schema.org', '@type': 'ItemList', name: copy.title, numberOfItems: S1_STEPS.length, itemListElement: S1_STEPS.map((step, index) => ({ '@type': 'ListItem', position: index + 1, name: step.label[locale], url: `${BASE_URL}/${locale}${step.href}` })) }) }} />
     <p className="text-sm font-semibold text-game-primary">{copy.kicker}</p>
     <h1 className="mt-2 text-3xl font-bold text-game-text sm:text-4xl">{copy.title}</h1>
     <p className="mt-4 max-w-3xl text-base leading-7 text-game-text-muted">{copy.lead}</p>

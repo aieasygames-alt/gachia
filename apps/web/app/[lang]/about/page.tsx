@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '@/lib/jsonld-script';
 import type { Metadata } from 'next';
 import type { SupportedLocale } from '@gachia/core';
 
@@ -137,7 +138,7 @@ export default async function AboutPage({
 
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
         />
       </div>
     </div>

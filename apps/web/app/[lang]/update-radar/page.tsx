@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '@/lib/jsonld-script';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Link } from '@/lib/i18n/navigation';
@@ -21,7 +22,7 @@ export default async function UpdateRadarPage({ params }: { params: Promise<{ la
   if (lang !== 'zh') notFound();
 
   return <main className="container mx-auto max-w-6xl px-4 py-10 md:py-14">
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'CollectionPage', name: '三游戏更新雷达', url: `${BASE_URL}/zh/update-radar`, dateModified: THREE_GAME_STATUS_UPDATED_AT }) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd({ '@context': 'https://schema.org', '@type': 'CollectionPage', name: '三游戏更新雷达', url: `${BASE_URL}/zh/update-radar`, dateModified: THREE_GAME_STATUS_UPDATED_AT }) }} />
     <p className="text-sm font-semibold text-game-primary">更新雷达 · 最后核验 {THREE_GAME_STATUS_UPDATED_AT}</p>
     <h1 className="mt-2 text-3xl font-bold text-game-text md:text-4xl">三游戏更新雷达</h1>
     <p className="mt-4 max-w-3xl leading-7 text-game-text-muted">把伊莫、蓝色星原：旅谣和绿梦放在各自的内容阶段中处理。每项都先确认来源、版本或测试轮次，再把可执行结论写入对应行动页。</p>

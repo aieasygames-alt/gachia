@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '@/lib/jsonld-script';
 import { CATEGORY_LABELS, GAMES } from '@gachia/core';
 import type { SupportedLocale } from '@gachia/core';
 import { notFound } from 'next/navigation';
@@ -49,7 +50,7 @@ export function AniimoCharacterDetailPage({ id, locale }: { id: string; locale: 
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildBreadcrumbJsonLd('aniimo', charName, locale)) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(buildBreadcrumbJsonLd('aniimo', charName, locale)) }}
       />
       <nav className="flex items-center gap-2 text-sm text-game-text-muted">
         <Link href="/aniimo" className="hover:text-game-primary">{game.name[locale]}</Link>
