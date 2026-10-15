@@ -110,19 +110,11 @@ export const LIVE_BANNERS: LiveBanner[] = [
   },
   {
     gameId: 'genshin',
-    title: {
-      zh: '原神 7.1 前瞻与直播码',
-      en: 'Genshin v7.1 Watch and Livestream Codes',
-      ja: '原神 v7.1注目と配信コード',
-    },
-    summary: {
-      zh: '从 Luna I 复盘切到 7.1、Luna II、Snezhnaya、Sandrone、下期卡池和直播码窗口。',
-      en: 'Shift from Luna I recap into v7.1, Luna II, Snezhnaya, Sandrone, next banners, and livestream-code watch.',
-      ja: 'Luna Iまとめからv7.1、Luna II、Snezhnaya、Sandrone、次回バナー、配信コード注目へ。',
-    },
+    title: {"zh": "原神7.1已上线：版本与当前祈愿", "en": "Genshin v7.1 Live: Version and Wishes", "ja": "原神v7.1配信中：バージョンと祈願"},
+    summary: {"zh": "官方确认7.1「往冥府的安魂歌」已上线。先查当前祈愿、活动期限与角色材料，直播码按实际有效期分层。", "en": "The official site confirms v7.1 is live. Check wishes, event deadlines and materials; separate codes by verified validity.", "ja": "公式サイトでv7.1の配信を確認。祈願、イベント期限、素材を確認し、コードは確認済み期限で区分します。"},
     href: '/genshin/version',
-    status: 'watch',
-    updatedAt: LIVE_UPDATED_AT,
+    status: 'fresh',
+    updatedAt: '2026-10-15',
     priority: 2,
   },
   {
@@ -164,36 +156,20 @@ export const LIVE_VERSION_UPDATES: LiveVersionUpdate[] = [
   },
   {
     gameId: 'starrail',
-    title: {
-      zh: '星铁 4.6 前瞻与直播码',
-      en: 'HSR v4.6 Special Program and Codes',
-      ja: 'スターレイル v4.6前瞻と配信コード',
-    },
-    summary: {
-      zh: '4.5 进入收尾，版本页优先回答 4.6 special program、直播码、下期跃迁和星琼预留。',
-      en: 'v4.5 is in wrap-up; the hub now prioritizes v4.6 special program, livestream codes, next warps, and Jade reserves.',
-      ja: 'v4.5はまとめ段階。v4.6前瞻、配信コード、次回跳躍、星玉温存を優先します。',
-    },
+    title: {"zh": "星铁4.6已上线：跃迁与活动核验", "en": "HSR v4.6 Live: Warps and Events", "ja": "スターレイルv4.6配信中：跳躍とイベント"},
+    summary: {"zh": "国服官网确认4.6「月升之前，与兽共舞」正式上线。当前跃迁、活动、奖励与截止时间按所在服务器核对。", "en": "The CN official site confirms v4.6 is live. Verify warps, events, rewards and deadlines for your own server.", "ja": "中国公式サイトでv4.6の配信を確認。跳躍、イベント、報酬、期限は利用サーバーで確認してください。"},
     href: '/starrail/version',
-    status: 'watch',
-    updatedAt: LIVE_UPDATED_AT,
+    status: 'fresh',
+    updatedAt: '2026-10-15',
     priority: 2,
   },
   {
     gameId: 'zzz',
-    title: {
-      zh: '绝区零 3.3 前瞻直播与 3.2 复盘',
-      en: 'ZZZ v3.3 Special Program and v3.2 Recap',
-      ja: 'ZZZ v3.3特別番組とv3.2まとめ',
-    },
-    summary: {
-      zh: '3.3「重返天空的旅程」官方前瞻将于 10 月 9 日 19:30（UTC+8）播出。先看节目与直播码，卡池和角色以节目后官方公告为准；3.2 保留为回顾入口。',
-      en: 'The official v3.3 “Journey Back to the Sky” program airs October 9 at 19:30 UTC+8. Watch the program and claim codes first; use post-program official notices for banners and agents, with v3.2 retained as recap.',
-      ja: 'v3.3「空へ戻る旅」公式番組は10月9日19:30（UTC+8）です。番組とコードを先に確認し、バナーとキャラは番組後の公式告知を基準にします。v3.2はまとめ入口として残します。',
-    },
+    title: {"zh": "绝区零3.3前瞻复盘：节目码已过期", "en": "ZZZ v3.3 Preview Recap: Codes Expired", "ja": "ZZZ v3.3番組まとめ：コード失効済み"},
+    summary: {"zh": "10月9日前瞻已发布，菲欧妮、赛维里安即将登场。节目码已于10月11日23:59:59（UTC+8）失效；3.3上线日待后续公告核验。", "en": "The October 9 preview is published. Program codes expired October 11 at 23:59:59 UTC+8; verify the release date in follow-up notices.", "ja": "10月9日の番組は公開済み。コードは10月11日23:59:59（UTC+8）に失効。実装日は後続告知で確認してください。"},
     href: '/zzz/version',
     status: 'watch',
-    updatedAt: LIVE_UPDATED_AT,
+    updatedAt: '2026-10-15',
     priority: 3,
   },
   {
@@ -283,19 +259,11 @@ export const LIVE_VERSION_UPDATES: LiveVersionUpdate[] = [
   },
   {
     gameId: 'nte',
-    title: {
-      zh: '异环 9 月 codes / banner calendar',
-      en: 'NTE September Codes / Banner Calendar',
-      ja: 'NTE 9月コード / バナーカレンダー',
-    },
-    summary: {
-      zh: '继续维护 active、expired、unknown 三态，Linko/Hotori 与 banner calendar 标注来源等级。',
-      en: 'Keep active, expired, and unknown code states, with Linko/Hotori and banner-calendar source tiers labeled.',
-      ja: 'active、expired、unknownを維持し、Linko/Hotoriとbanner calendarの出典を分けます。',
-    },
+    title: {"zh": "异环国服1.4：10月15日更新公告", "en": "NTE CN v1.4: October 15 Update Notice", "ja": "NTE中国版v1.4：10月15日更新告知"},
+    summary: {"zh": "官方公告新增明音凛、限定弧盘与番外剧情，相关限定窗口至11月5日05:59；维护完成和国际服时间另行核验。", "en": "The CN notice adds a limited agent, arc and side story, with limited content through November 5 at 05:59. Verify maintenance completion and global timing separately.", "ja": "中国版告知で限定キャラ、弧盤、番外物語を追加。限定期間は11月5日05:59まで。完了告知と海外版日程は別途確認してください。"},
     href: '/nte/version',
-    status: 'watch',
-    updatedAt: LIVE_UPDATED_AT,
+    status: 'fresh',
+    updatedAt: '2026-10-15',
     priority: 9,
   },
   {
@@ -332,7 +300,7 @@ export const LIVE_CODE_SUMMARIES: LiveCodeSummary[] = [
     },
     href: '/genshin/redeem-codes',
     status: 'watch',
-    updatedAt: LIVE_UPDATED_AT,
+    updatedAt: '2026-10-15',
     priority: 1,
   },
   {
@@ -343,13 +311,13 @@ export const LIVE_CODE_SUMMARIES: LiveCodeSummary[] = [
       ja: 'スターレイル v4.6前瞻コード',
     },
     summary: {
-      zh: '优先确认 4.6 special program 直播码是否过期，再看 4.5 收尾资源和下期跃迁。',
+      zh: '4.6已上线；直播码按官方期限核验，不用旧版本收尾资源估算当前跃迁。',
       en: 'Check whether v4.6 special-program codes have expired before planning v4.5 wrap-up rewards and next warps.',
       ja: 'v4.6前瞻コードの期限を先に確認し、v4.5まとめ報酬と次回跳躍を見ます。',
     },
     href: '/starrail/redeem-codes',
     status: 'watch',
-    updatedAt: LIVE_UPDATED_AT,
+    updatedAt: '2026-10-15',
     priority: 2,
   },
   {
@@ -383,7 +351,7 @@ export const LIVE_CODE_SUMMARIES: LiveCodeSummary[] = [
     },
     href: '/nte/redeem-codes',
     status: 'watch',
-    updatedAt: LIVE_UPDATED_AT,
+    updatedAt: '2026-10-15',
     priority: 4,
   },
   {
@@ -394,13 +362,13 @@ export const LIVE_CODE_SUMMARIES: LiveCodeSummary[] = [
       ja: 'ZZZ v3.3コード提醒',
     },
     summary: {
-      zh: '3.3 前瞻将在 10 月 9 日 19:30（UTC+8）播出。节目后仅把官方可验证的代码标记为有效；旧直播码继续保留 expired 说明。',
-      en: 'The v3.3 program airs October 9 at 19:30 UTC+8. Mark a code active only after official verification; older livestream codes remain expired context.',
-      ja: 'v3.3番組は10月9日19:30（UTC+8）です。公式に確認できたコードのみ有効とし、旧配信コードは期限切れとして残します。',
+      zh: '3.3节目码已于10月11日23:59:59（UTC+8）失效；只保留过期记录，其他兑换码按各自官方期限核验。',
+      en: 'v3.3 program codes expired October 11 at 23:59:59 UTC+8. Keep them expired and verify other codes separately.',
+      ja: 'v3.3番組コードは10月11日23:59:59（UTC+8）に失効しました。他のコードは個別に確認してください。',
     },
     href: '/zzz/redeem-codes',
     status: 'watch',
-    updatedAt: LIVE_UPDATED_AT,
+    updatedAt: '2026-10-15',
     priority: 5,
   },
 ];
@@ -537,6 +505,27 @@ export const LIVE_GUIDES: LiveGuideLink[] = [
 ];
 
 export const LIVE_CALENDAR_EVENTS: LiveCalendarEvent[] = [
+{
+  "id": "wuwa-v37-fish-web-start",
+  "gameId": "wuwa",
+  "type": "event_start",
+  "title": {
+    "zh": "鸣潮：朝月鱼涌H5开启",
+    "en": "WuWa: Web Fishing Event Starts",
+    "ja": "鳴潮：Web釣りイベント開始"
+  },
+  "summary": {
+    "zh": "官方窗口10/15 10:00至11/1 09:59（UTC+8）；领取条件见活动页与官方公告。",
+    "en": "Official window: Oct 15 10:00 to Nov 1 09:59 UTC+8. Verify reward requirements in the official event.",
+    "ja": "公式期間は10/15 10:00〜11/1 09:59（UTC+8）。受取条件は公式イベントで確認。"
+  },
+  "href": "/wuwa/guides/v3-7-hsin-suoming-official-reference",
+  "startsAt": "2026-10-15",
+  "endsAt": "2026-11-01",
+  "timezone": "Asia/Shanghai",
+  "updatedAt": "2026-10-15",
+  "priority": 1
+},
   {
     id: 'aniimo-mobile-launch-2026-09-23',
     gameId: 'aniimo',

@@ -6,7 +6,7 @@ describe('three-game next-step selector data', () => {
     const status = new Set(THREE_GAME_STATUS_CARDS.map((item) => item.status));
     const paths = new Set(THREE_GAME_STATUS_CARDS.map((item) => item.href));
 
-    expect(status).toEqual(new Set(['live', 'test', 'upcoming']));
+    expect(status).toEqual(new Set(['live', 'post-test']));
     expect(paths.size).toBe(THREE_GAME_STATUS_CARDS.length);
     expect(THREE_GAME_STATUS_CARDS.every((item) => item.action.trim().length > 0)).toBe(true);
   });

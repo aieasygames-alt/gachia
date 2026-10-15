@@ -49,12 +49,12 @@ const VERSION_META_OVERRIDES: Partial<Record<GameId, Partial<Record<SupportedLoc
 }>>>> = {
   genshin: {
     zh: {
-      title: '原神 7.1 前瞻专题：直播码、Snezhnaya 与卡池',
-      description: '追踪原神 7.1 前瞻、Luna II、Snezhnaya、Sandrone、直播码、当前/下期卡池、Nod-Krai 长尾和原石规划。',
+      title: '原神 7.1正式版本专题：直播码、Snezhnaya 与卡池',
+      description: '追踪原神 7.1正式版本、Luna II、Snezhnaya、Sandrone、直播码、当前/下期卡池、Nod-Krai 长尾和原石规划。',
     },
     en: {
-      title: 'Genshin v7.1 Watch: Livestream Codes, Snezhnaya & Banners',
-      description: 'Track Genshin v7.1 watch, Luna II, Snezhnaya, Sandrone, livestream codes, current and next banners, Nod-Krai long-tail intent, and Primogem planning.',
+      title: 'Genshin v7.1 Live: Livestream Codes, Snezhnaya & Banners',
+      description: 'Track Genshin v7.1 live, Luna II, Snezhnaya, Sandrone, livestream codes, current and next banners, Nod-Krai long-tail intent, and Primogem planning.',
     },
     ja: {
       title: '原神 v7.1 注目：配信コード、Snezhnaya、バナー',
@@ -63,16 +63,16 @@ const VERSION_META_OVERRIDES: Partial<Record<GameId, Partial<Record<SupportedLoc
   },
   starrail: {
     zh: {
-      title: '崩铁 4.6 前瞻专题：直播码、卡池与资源规划',
-      description: '追踪崩坏星穹铁道 4.6 前瞻、直播兑换码、下期跃迁、4.5 收尾、活动和星琼规划。',
+      title: '崩铁 4.6正式版本专题：直播码、卡池与资源规划',
+      description: '追踪崩坏星穹铁道 4.6正式版本、直播兑换码、下期跃迁、当前版本、活动和星琼规划。',
     },
     en: {
       title: 'HSR v4.6 Watch: Livestream Codes, Banners & Pull Planning',
-      description: 'Track Honkai: Star Rail v4.6 special program, livestream codes, next warps, v4.5 wrap-up, events, and Stellar Jade planning.',
+      description: 'Track Honkai: Star Rail v4.6 live update, livestream codes, next warps, current-version, events, and Stellar Jade planning.',
     },
     ja: {
       title: 'HSR v4.6 注目：配信コード、バナー、抽選計画',
-      description: 'スターレイル v4.6前瞻、配信コード、次回跳躍、v4.5まとめ、イベント、星玉計画を確認できます。',
+      description: 'スターレイル v4.6配信中、配信コード、次回跳躍、v4.5まとめ、イベント、星玉計画を確認できます。',
     },
   },
   wuwa: {
@@ -106,7 +106,7 @@ const VERSION_META_OVERRIDES: Partial<Record<GameId, Partial<Record<SupportedLoc
   zzz: {
     zh: {
       title: '绝区零 3.3 前瞻专题：10 月 9 日直播、兑换码与 3.2 复盘',
-      description: '追踪绝区零 3.3「重返天空的旅程」10 月 9 日前瞻直播、限时兑换码、官方卡池公告与 3.2 复盘；未公布内容不作推断。',
+      description: '追踪绝区零 3.3「重返天空的旅程」10 月 9 日前瞻复盘、已过期节目码、官方卡池公告与 3.2 复盘；未公布内容不作推断。',
     },
     en: {
       title: 'ZZZ v3.3 Preview: October 9 Program, Codes & v3.2 Recap',
@@ -148,8 +148,8 @@ const INTENT_LINKS: Partial<Record<GameId, IntentLink[]>> = {
     { href: '/genshin/guides/banner-schedule-guide', label: { zh: '当前卡池', en: 'Current banners', ja: '現在バナー' }, description: { zh: '把当前卡池、下期角色、原石和保底放到同一条路线里。', en: 'Plan current banners, next characters, Primogems, and pity in one path.', ja: '現在バナー、次回キャラ、原石、天井を一緒に計画。' } },
   ],
   starrail: [
-    { href: '/starrail/version', label: { zh: '官网 / 版本入口', en: 'Official / Version hub', ja: '公式 / バージョン' }, description: { zh: '集中查看 4.6 前瞻、直播码、下期跃迁和 4.5 收尾资源。', en: 'Check v4.6 preview, livestream codes, next warps, and v4.5 wrap-up resources.', ja: 'v4.6前瞻、配信コード、次回跳躍、v4.5まとめ資源を確認。' } },
-    { href: '/starrail/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '4.6 前瞻直播码、版本码和过期状态入口。', en: 'v4.6 preview codes, patch codes, and expiry status.', ja: 'v4.6前瞻コード、版本コード、期限状態入口。' } },
+    { href: '/starrail/version', label: { zh: '官网 / 版本入口', en: 'Official / Version hub', ja: '公式 / バージョン' }, description: { zh: '集中查看 4.6正式版本、直播码、下期跃迁和 当前版本资源。', en: 'Check v4.6 live, livestream codes, next warps, and current-version resources.', ja: 'v4.6配信中、配信コード、次回跳躍、v4.5まとめ資源を確認。' } },
+    { href: '/starrail/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '4.6正式版本直播码、版本码和过期状态入口。', en: 'v4.6 live codes, patch codes, and expiry status.', ja: 'v4.6配信中コード、版本コード、期限状態入口。' } },
     { href: '/starrail/guides/banner-schedule-guide', label: { zh: '下期跃迁', en: 'Next warps', ja: '次回跳躍' }, description: { zh: '把下期目标、当前资源、星琼缺口和队伍规划放到同一条路线。', en: 'Plan next targets, current resources, Stellar Jade gaps, and teams in one path.', ja: '次回目標、現在資源、星玉不足、編成計画を一つに整理。' } },
   ],
   wuwa: [
@@ -196,37 +196,37 @@ const INTENT_LINKS: Partial<Record<GameId, IntentLink[]>> = {
 
 const VERSION_COPY: Partial<Record<GameId, HubCopy>> = {
   genshin: {
-    title: { zh: '7.1 前瞻 / Snezhnaya 专题', en: 'v7.1 Watch / Snezhnaya Hub', ja: 'v7.1注目 / Snezhnaya特集' },
+    title: { zh: '7.1正式版本 / Snezhnaya 专题', en: 'v7.1 Live / Snezhnaya Hub', ja: 'v7.1配信中 / Snezhnaya特集' },
     description: {
-      zh: '围绕 7.1 前瞻、Luna II、Snezhnaya、Sandrone、直播码、当前/下期卡池和 Nod-Krai 长尾需求定位版本重点。',
-      en: 'Track v7.1 watch, Luna II, Snezhnaya, Sandrone, livestream codes, current/next banners, and Nod-Krai long-tail needs.',
-      ja: 'v7.1注目、Luna II、Snezhnaya、Sandrone、配信コード、現在/次回バナー、Nod-Krai長尾需要をまとめます。',
+      zh: '围绕 7.1正式版本、Luna II、Snezhnaya、Sandrone、直播码、当前/下期卡池和 Nod-Krai 长尾需求定位版本重点。',
+      en: 'Track v7.1 live, Luna II, Snezhnaya, Sandrone, livestream codes, current/next banners, and Nod-Krai long-tail needs.',
+      ja: 'v7.1配信中、Luna II、Snezhnaya、Sandrone、配信コード、現在/次回バナー、Nod-Krai長尾需要をまとめます。',
     },
     highlights: {
-      zh: ['7.1 前瞻', 'Snezhnaya', '直播码', 'Nod-Krai 长尾'],
-      en: ['v7.1 watch', 'Snezhnaya', 'Livestream codes', 'Nod-Krai long-tail'],
-      ja: ['v7.1注目', 'Snezhnaya', '配信コード', 'Nod-Krai長尾'],
+      zh: ['7.1正式版本', 'Snezhnaya', '直播码', 'Nod-Krai 长尾'],
+      en: ['v7.1 live', 'Snezhnaya', 'Livestream codes', 'Nod-Krai long-tail'],
+      ja: ['v7.1配信中', 'Snezhnaya', '配信コード', 'Nod-Krai長尾'],
     },
     kicker: { zh: '前瞻码窗口', en: 'Livestream-code window', ja: '配信コード期間' },
     freshness: {
-      zh: '持续整理 7.1 前瞻、下一版本卡池、直播码有效期和 Nod-Krai 历史入口。',
+      zh: '持续整理 7.1正式版本、下一版本卡池、直播码有效期和 Nod-Krai 历史入口。',
       en: 'Kept current with v7.1 previews, next banners, livestream-code validity, and Nod-Krai history routes.',
       ja: 'v7.1前瞻、次回バナー、配信コード期限、Nod-Krai履歴導線を継続整理しています。',
     },
     faq: [
-      { question: { zh: '这个版本专题主要看什么？', en: 'What is this version hub for?', ja: 'このバージョン特集では何を見ればいいですか？' }, answer: { zh: '这里优先收录 7.1 前瞻、直播码、Snezhnaya / Sandrone、当前与下期卡池，以及 Nod-Krai 地图和材料长尾。', en: 'It highlights v7.1 watch, livestream codes, Snezhnaya / Sandrone, current and next banners, plus Nod-Krai map and material long-tail needs.', ja: 'v7.1注目、配信コード、Snezhnaya / Sandrone、現在/次回バナー、Nod-Kraiマップと素材長尾を優先整理します。' } },
+      { question: { zh: '这个版本专题主要看什么？', en: 'What is this version hub for?', ja: 'このバージョン特集では何を見ればいいですか？' }, answer: { zh: '这里优先收录 7.1正式版本、直播码、Snezhnaya / Sandrone、当前与下期卡池，以及 Nod-Krai 地图和材料长尾。', en: 'It highlights v7.1 live, livestream codes, Snezhnaya / Sandrone, current and next banners, plus Nod-Krai map and material long-tail needs.', ja: 'v7.1配信中、配信コード、Snezhnaya / Sandrone、現在/次回バナー、Nod-Kraiマップと素材長尾を優先整理します。' } },
       { question: { zh: 'Luna I / Nod-Krai 内容还看吗？', en: 'Should I still read Luna I / Nod-Krai content?', ja: 'Luna I / Nod-Krai内容はまだ見るべき？' }, answer: { zh: '要看。Nod-Krai 地图、材料和奖励仍是长尾入口，但首屏应先回答 7.1 直播码和下一版本卡池问题。', en: 'Yes. Nod-Krai maps, materials, and rewards remain useful long-tail routes, but the first screen should answer v7.1 codes and next-banner questions first.', ja: 'はい。Nod-Kraiのマップ、素材、報酬は長尾導線として残しつつ、首屏ではv7.1コードと次回バナーを優先します。' } },
     ],
     guideIds: ['nod-krai-cryoculus-phase-ii-checklist', 'phase-ii-columbina-raiden-pull-plan', 'luna-viii-sandrone-guide'],
   },
   starrail: {
-    title: { zh: '4.6 前瞻 / 直播码专题', en: 'v4.6 Special Program / Codes Hub', ja: 'v4.6前瞻 / コード特集' },
-    description: { zh: '聚焦 4.6 前瞻、直播兑换码、下期跃迁、4.5 收尾、活动奖励、星琼缺口与队伍规划。', en: 'Track the v4.6 special program, livestream codes, next warps, v4.5 wrap-up, event rewards, Stellar Jade gaps, and team planning.', ja: 'v4.6前瞻、配信コード、次回跳躍、v4.5まとめ、イベント報酬、星玉不足、編成計画を整理します。' },
-    highlights: { zh: ['4.6 前瞻', '直播码', '下期跃迁', '星琼规划'], en: ['v4.6 preview', 'Livestream codes', 'Next warps', 'Jade planning'], ja: ['v4.6前瞻', '配信コード', '次回跳躍', '星玉計画'] },
+    title: { zh: '4.6正式版本 / 直播码专题', en: 'v4.6 Special Program / Codes Hub', ja: 'v4.6配信中 / コード特集' },
+    description: { zh: '聚焦 4.6正式版本、直播兑换码、下期跃迁、当前版本、活动奖励、星琼缺口与队伍规划。', en: 'Track the v4.6 live update, livestream codes, next warps, current-version, event rewards, Stellar Jade gaps, and team planning.', ja: 'v4.6配信中、配信コード、次回跳躍、v4.5まとめ、イベント報酬、星玉不足、編成計画を整理します。' },
+    highlights: { zh: ['4.6正式版本', '直播码', '下期跃迁', '星琼规划'], en: ['v4.6 live', 'Livestream codes', 'Next warps', 'Jade planning'], ja: ['v4.6配信中', '配信コード', '次回跳躍', '星玉計画'] },
     kicker: { zh: '前瞻兑换码', en: 'Livestream codes', ja: '配信コード' },
-    freshness: { zh: '已从 4.5 当前期切换到 4.6 前瞻窗口，优先整理直播码有效期、下一池和资源预留。', en: 'Now shifted from v4.5 live coverage into the v4.6 preview window, prioritizing code validity, next warps, and resource reserves.', ja: 'v4.5現在情報からv4.6前瞻期間へ切り替え、コード期限、次回跳躍、資源温存を優先整理します。' },
+    freshness: { zh: '已从 4.5 当前期切换到 4.6正式版本窗口，优先整理直播码有效期、下一池和资源预留。', en: 'Now shifted from v4.5 live coverage into the v4.6 live window, prioritizing code validity, next warps, and resource reserves.', ja: 'v4.5現在情報からv4.6配信中期間へ切り替え、コード期限、次回跳躍、資源温存を優先整理します。' },
     faq: [
-      { question: { zh: '4.6 前瞻先看什么？', en: 'What should I check first for the v4.6 preview?', ja: 'v4.6前瞻で最初に見るべきものは？' }, answer: { zh: '先确认直播兑换码是否还有效，再看下期跃迁、4.5 收尾资源和星琼缺口。', en: 'Check whether livestream codes are still valid first, then review next warps, v4.5 wrap-up rewards, and Stellar Jade gaps.', ja: 'まず配信コードが有効か確認し、次回跳躍、v4.5まとめ報酬、星玉不足を見てください。' } },
+      { question: { zh: '4.6正式版本先看什么？', en: 'What should I check first for the v4.6 live?', ja: 'v4.6配信中で最初に見るべきものは？' }, answer: { zh: '先确认直播兑换码是否还有效，再看下期跃迁、当前版本资源和星琼缺口。', en: 'Check whether livestream codes are still valid first, then review next warps, current-version rewards, and Stellar Jade gaps.', ja: 'まず配信コードが有効か確認し、次回跳躍、v4.5まとめ報酬、星玉不足を見てください。' } },
       { question: { zh: '资源不够时怎么规划？', en: 'How should I plan with limited resources?', ja: '資源が少ない場合どう計画する？' }, answer: { zh: '先锁一个 4.6 目标，再用卡池规划页估算保底差距，不要把星琼同时拆给多个目标。', en: 'Lock one v4.6 target first, then use pull-planning pages to estimate pity gaps instead of splitting Jades across multiple goals.', ja: 'まずv4.6目標を一つに絞り、ガチャ計画で天井差を見積もり、複数目標に星玉を分散しすぎないようにします。' } },
     ],
     guideIds: ['fate-rin-gilgamesh-reward-faq', 'himeko-nova-fate-pull-plan', 'fate-collab-guide'],
@@ -291,13 +291,13 @@ const VERSION_COPY: Partial<Record<GameId, HubCopy>> = {
   },
   zzz: {
     title: { zh: '3.3 前瞻直播 / 3.2 复盘专题', en: 'v3.3 Special Program / v3.2 Recap Hub', ja: 'v3.3特別番組 / v3.2まとめ特集' },
-    description: { zh: '3.3「重返天空的旅程」将于 10 月 9 日 19:30（UTC+8）前瞻。先追踪官方节目与直播码，再依据公告看卡池；3.2 内容保留为复盘入口。', en: 'v3.3 “Journey Back to the Sky” has a special program on October 9 at 19:30 (UTC+8). Track the official broadcast and its codes first, then use notices for banners; v3.2 remains available as a recap route.', ja: 'v3.3「空へ戻る旅」の特別番組は10月9日19:30（UTC+8）です。まず公式番組とコードを確認し、バナーは告知を基準に判断します。v3.2はまとめ入口として残します。' },
-    highlights: { zh: ['10 月 9 日 19:30', '官方前瞻', '直播码提醒', '3.2 复盘'], en: ['Oct 9, 19:30 UTC+8', 'Official program', 'Code reminder', 'v3.2 recap'], ja: ['10月9日 19:30 UTC+8', '公式番組', 'コード提醒', 'v3.2まとめ'] },
+    description: { zh: '3.3「重返天空的旅程」10月9日前瞻已发布，菲欧妮、赛维里安即将登场。节目码已于10月11日23:59:59（UTC+8）失效；上线日期及卡池以正式公告为准。', en: 'The October 9 v3.3 preview is published. Program codes expired October 11 at 23:59:59 UTC+8; verify the release date and banners in official follow-up notices.', ja: '10月9日のv3.3番組は公開済み。コードは10月11日23:59:59（UTC+8）に失効。実装日とバナーは後続公式告知で確認してください。' },
+    highlights: { zh: ['10 月 9 日 19:30', '官方前瞻', '节目码已过期', '3.2 复盘'], en: ['Oct 9, 19:30 UTC+8', 'Official program', 'Codes expired', 'v3.2 recap'], ja: ['10月9日 19:30 UTC+8', '公式番組', 'コード失効済み', 'v3.2まとめ'] },
     kicker: { zh: '官方前瞻窗口', en: 'Official preview window', ja: '公式前瞻期間' },
     freshness: { zh: '已更新为 10 月 8 日状态：节目时间来自官方公告，角色、卡池和活动细节等待节目及后续公告核验。', en: 'Updated for October 8: the program time is official; agent, banner, and event details await verification from the program and follow-up notices.', ja: '10月8日時点に更新：番組時刻は公式発表済みで、キャラ、バナー、イベント詳細は番組と後続告知で確認します。' },
     faq: [
-      { question: { zh: '现在是看 3.2 还是 3.3？', en: 'Should I focus on v3.2 or v3.3 now?', ja: '今はv3.2とv3.3のどちらを見るべき？' }, answer: { zh: '10 月 9 日节目播出前，3.3 页面只用于确认节目时间和兑换码提醒；3.2 仍适合看已有角色、活动与配队内容。节目后再按官方公告处理 3.3 卡池与角色。', en: 'Before the October 9 program, use the v3.3 page only for timing and code reminders; v3.2 remains the route for existing agents, events, and teams. Use official notices after the program for v3.3 banners and agents.', ja: '10月9日番組前は、v3.3ページを時刻とコード確認に使います。既存キャラ、イベント、編成はv3.2を見てください。v3.3のバナーとキャラは番組後の公式告知を基準にします。' } },
-      { question: { zh: '直播码还能领吗？', en: 'Can I still claim livestream codes?', ja: '配信コードはまだ受け取れますか？' }, answer: { zh: '旧直播码只放 expired 说明；新一轮前瞻码出现后，兑换码页会按 active、expired、unknown 分层。', en: 'Old livestream codes stay in expired context; when new preview codes appear, the code page separates active, expired, and unknown status.', ja: '古い配信コードは期限切れ文脈のみ。新しい前瞻コードが出たら、コードページでactive、expired、unknownを分けます。' } },
+      { question: { zh: '现在是看 3.2 还是 3.3？', en: 'Should I focus on v3.2 or v3.3 now?', ja: '今はv3.2とv3.3のどちらを見るべき？' }, answer: { zh: '3.3前瞻已经发布；节目码10月11日失效。3.2仍作已实装内容参考，3.3卡池与上线时间按官方后续公告核验。', en: 'The v3.3 preview is published and its codes expired October 11. Keep v3.2 as a live-content reference and verify v3.3 timing in official notices.', ja: '10月9日番組前は、v3.3ページを時刻とコード確認に使います。既存キャラ、イベント、編成はv3.2を見てください。v3.3のバナーとキャラは番組後の公式告知を基準にします。' } },
+      { question: { zh: '直播码还能领吗？', en: 'Can I still claim livestream codes?', ja: '配信コードはまだ受け取れますか？' }, answer: { zh: '3.3节目码已于10月11日23:59:59（UTC+8）失效；其他兑换码分别核验，未确认不列为有效。', en: 'Old livestream codes stay in expired context; when new preview codes appear, the code page separates active, expired, and unknown status.', ja: '古い配信コードは期限切れ文脈のみ。新しい前瞻コードが出たら、コードページでactive、expired、unknownを分けます。' } },
     ],
     guideIds: ['v3-3-special-program-prep-guide', 'banner-schedule-guide', 'v3-2-livestream-recap-expired-codes'],
   },
@@ -1787,7 +1787,7 @@ export default async function VersionHubPage({
                 {locale === 'zh' ? '当前版本' : locale === 'ja' ? '現在版本' : 'Current'}: {versionSnapshot.currentVersion}
               </span>
               <span className="rounded-full border border-game-border px-3 py-1 text-xs text-game-text-muted">
-                {locale === 'zh' ? '发布日期' : locale === 'ja' ? '公開日' : 'Release'}: {versionSnapshot.releaseDate}
+                {versionSnapshot.dateKind === 'verified' ? (locale === 'zh' ? '状态核验日' : locale === 'ja' ? '状態確認日' : 'Status checked') : (locale === 'zh' ? '发布日期' : locale === 'ja' ? '公開日' : 'Release')}: {versionSnapshot.releaseDate}{versionSnapshot.sourceUrls?.map((url) => <a key={url} href={url} rel="noreferrer" className="ml-3 underline">{locale === 'zh' ? '官方来源' : locale === 'ja' ? '公式出典' : 'Official source'}</a>)}
               </span>
               <span className="rounded-full bg-game-primary/10 px-3 py-1 text-xs font-medium text-game-primary">
                 {versionSnapshot.status}

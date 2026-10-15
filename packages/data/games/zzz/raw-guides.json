@@ -1,29 +1,69 @@
 [
   {
     "id": "v3-3-special-program-prep-guide",
-    "title": "绝区零 3.3 前瞻准备：10 月 9 日直播、兑换码与抽卡决策顺序",
-    "titleEn": "ZZZ v3.3 Special Program Prep: October 9 Stream, Codes and Pull Decisions",
-    "titleJa": "ZZZ v3.3特別番組の準備：10月9日配信・コード・ガチャ判断",
+    "title": "绝区零3.3前瞻复盘：新代理人与已过期节目码",
+    "titleEn": "ZZZ v3.3 Preview Recap: Upcoming Agents and Expired Codes",
+    "titleJa": "ZZZ v3.3番組まとめ：新エージェントと失効済みコード",
     "category": "version",
     "categoryZh": "版本专题",
     "categoryEn": "Version Guide",
     "categoryJa": "バージョン特集",
-    "summary": "3.3「重返天空的旅程」前瞻特别节目将于 2026 年 10 月 9 日 19:30（UTC+8）播出。节目日前只做资源与队伍盘点；节目后先领直播码，再按官方卡池和角色信息决定是否抽取。",
-    "summaryEn": "The v3.3 “Journey Back to the Sky” special program airs on October 9, 2026 at 19:30 (UTC+8). Audit resources and teams before it airs; after it airs, claim livestream codes first, then decide pulls from official banner and agent information.",
-    "summaryJa": "v3.3「空へ戻る旅」特別番組は2026年10月9日19:30（UTC+8）配信です。配信前は資源と編成を確認し、配信後はコード交換を先に済ませ、公式バナーとキャラ情報で判断します。",
-    "tags": ["3.3", "special program", "前瞻", "直播码", "兑换码", "卡池", "菲林", "Polychrome", "ZZZ version"],
-    "content": "## 已确认的信息\n\n绝区零 3.3「重返天空的旅程」前瞻特别节目将于 **2026 年 10 月 9 日 19:30（UTC+8）**播出。节目外的角色、卡池、复刻、活动奖励和版本上线日期，在官方节目或后续公告出现前都应视为待核验信息。\n\n## 节目日前：15 分钟准备清单\n\n1. **记录资源**：在抽卡规划器填入菲林、加密母带、当前保底和下一个 S 级是否为限定。\n2. **检查两队缺位**：在配队页标记强攻、击破、异常、支援或生存方面的真实缺口。\n3. **整理培养需求**：已有角色先看驱动盘和音擎，不要因为未公布目标暂停正常养成。\n4. **确认领取入口**：账号、区服和邮箱正常后，再等官方直播码。\n5. **不预支保底**：不根据泄露、转述或社区猜测提前锁定 3.3 目标。\n\n## 节目播出后：正确的决策顺序\n\n| 顺序 | 动作 | 目的 |\n| --- | --- | --- |\n| 1 | 到兑换码页核对并兑换有效直播码 | 直播码通常有短领取窗口 |\n| 2 | 查看官方版本公告和游戏内调频详情 | 确认角色、音擎、阶段与结束时间 |\n| 3 | 把官方角色定位与自己的两队缺口对照 | 判断是否真正改善账号，而非只看单体热度 |\n| 4 | 用抽卡规划器计算最坏情况缺口 | 区分“能试试”与“能保底” |\n| 5 | 代理人确认后再评估专属音擎 | 资源有限时，完整角色通常优先于音擎上限 |\n\n## 三种常见结论\n\n- **目标补齐关键缺位，且资源足以保底**：优先保留代理人预算；音擎等代理人到手后再评估。\n- **目标有吸引力但不解决两队问题**：先等待实测、队伍条件和自己的资源变化，不必在节目当天决定。\n- **资源不足且下一个 S 级不保证限定**：把直播码、日常与活动资源纳入规划，避免同时追两个不完整目标。\n\n## 相关入口\n\n- [/zzz/version](/zzz/version)：官方前瞻状态与版本公告承接。\n- [/zzz/redeem-codes](/zzz/redeem-codes)：仅领取标记为有效的代码。\n- [/zzz/gacha](/zzz/gacha)：以实际保底和资源计算最坏情况。\n- [/zzz/teams](/zzz/teams)：先确认两队缺位。\n- [/zzz/build](/zzz/build)：已有代理人的音擎与驱动盘路线。\n\n## 3.2 内容的正确位置\n\n3.2 的角色、活动和配队资料仍可用于回流补课；它们不能作为 3.3 卡池、复刻或角色机制的证据。",
-    "contentEn": "## Confirmed information\n\nThe ZZZ v3.3 “Journey Back to the Sky” special program airs on **October 9, 2026 at 19:30 (UTC+8)**. Treat agents, banners, reruns, event rewards, and the patch release date outside the program or follow-up official notices as unverified.\n\n## Before the program: a 15-minute checklist\n\n1. **Record resources.** Enter Polychromes, Encrypted Master Tapes, pity, and guarantee state in the Pull Planner.\n2. **Check two-team gaps.** Mark actual Attack, Stun, Anomaly, Support, or survival gaps in Team Builder.\n3. **Keep normal progression moving.** Improve Drive Discs and W-Engines for agents you own instead of pausing for an unannounced target.\n4. **Verify claim access.** Confirm account, server, and mailbox before livestream codes appear.\n5. **Do not pre-spend pity.** Do not lock a v3.3 target from leaks, reposts, or community guesses.\n\n## After the program: decision order\n\n| Order | Action | Why |\n| --- | --- | --- |\n| 1 | Verify and redeem active livestream codes | Their claim window is usually short |\n| 2 | Read the official patch notice and in-game Signal Search details | Confirm agents, W-Engines, phases, and end times |\n| 3 | Compare official roles against your two-team gaps | Decide whether the target improves your account, not just its hype |\n| 4 | Calculate your worst-case gap in Pull Planner | Separate “I can try” from “I can guarantee” |\n| 5 | Evaluate the signature W-Engine only after the agent | A complete agent usually comes before a weapon ceiling on a limited budget |\n\n## Three common outcomes\n\n- **The target fixes a critical gap and your resources guarantee it:** reserve for the agent first and evaluate the W-Engine later.\n- **The target is appealing but does not solve a two-team problem:** wait for live details, team conditions, and your own resource changes.\n- **Resources are low and the next S-Rank is not guaranteed:** include codes, daily rewards, and events in the plan instead of chasing two incomplete goals.\n\n## Related routes\n\n- [/zzz/version](/zzz/version): official preview status and patch-notice routing.\n- [/zzz/redeem-codes](/zzz/redeem-codes): claim only codes marked active.\n- [/zzz/gacha](/zzz/gacha): calculate worst cases from your real pity and resources.\n- [/zzz/teams](/zzz/teams): verify two-team gaps first.\n- [/zzz/build](/zzz/build): W-Engine and Drive Disc paths for agents you already own.\n\n## Where v3.2 fits\n\nv3.2 agents, events, and team material remain useful for returners. They are not evidence for v3.3 banners, reruns, or mechanics.",
-    "contentJa": "## 確認済み情報\n\nZZZ v3.3「空へ戻る旅」特別番組は **2026年10月9日19:30（UTC+8）** 配信です。番組や後続の公式告知以外のキャラ、バナー、復刻、イベント報酬、実装日は未確認として扱います。\n\n## 番組前：15分の準備\n\n1. ポリクローム、暗号化マスターテープ、天井、確定状態を抽選計画に入力。\n2. 編成ツールで二編成の攻撃、ブレイク、異常、支援、生存の不足を確認。\n3. 未発表キャラのために既存キャラの育成を止めない。\n4. アカウント、サーバー、メールを確認してコード受取に備える。\n5. リークや社区推測で天井を先に使わない。\n\n## 番組後：判断順\n\n1. 有効な配信コードを確認して交換。\n2. 公式告知とゲーム内調律でキャラ、音動機、期間、終了時刻を確認。\n3. 公式の役割を二編成の不足と比較。\n4. 抽選計画で最悪ケースの不足を計算。\n5. キャラ確保後に専用音動機を検討。\n\n## v3.2の位置づけ\n\nv3.2のキャラ、イベント、編成資料は復帰者の補習に使えますが、v3.3のバナー、復刻、性能の根拠にはなりません。",
-    "faq": [
-      {"question":"When does the ZZZ v3.3 special program air?","questionZh":"绝区零 3.3 前瞻什么时候播出？","questionJa":"ZZZ v3.3特別番組はいつ？","answer":"The official program is scheduled for October 9, 2026 at 19:30 UTC+8. Use the official broadcast and later notices for any banner, agent, or patch details.","answerZh":"官方前瞻特别节目将于 2026 年 10 月 9 日 19:30（UTC+8）播出。卡池、角色和版本细节请以节目及后续公告为准。","answerJa":"公式特別番組は2026年10月9日19:30（UTC+8）予定です。バナー、キャラ、バージョン詳細は番組と後続告知を基準にしてください。"},
-      {"question":"Should I decide my v3.3 pulls before the program?","questionZh":"前瞻节目播出前要决定 3.3 抽卡吗？","questionJa":"番組前にv3.3のガチャを決めるべき？","answer":"No. Audit resources and team gaps before the broadcast, then decide only after official banner, role, and timing details are available.","answerZh":"不建议。节目日前只盘点资源和队伍缺位，官方卡池、定位与时间公布后再决定。","answerJa":"おすすめしません。配信前は資源と編成不足のみ確認し、公式バナー、役割、日程の公開後に決めてください。"}
+    "summary": "10月9日前瞻已发布，菲欧妮、赛维里安即将登场；节目码10月11日23:59:59（UTC+8）已失效。版本上线日与卡池详情继续核对正式公告。",
+    "summaryEn": "The October 9 preview is published. Program codes expired October 11 at 23:59:59 UTC+8. Verify release timing and banners in official follow-up notices.",
+    "summaryJa": "10月9日の番組は公開済み。コードは10月11日23:59:59（UTC+8）に失効。実装日とバナー詳細は後続公式告知で確認してください。",
+    "tags": [
+      "3.3",
+      "special program",
+      "前瞻",
+      "直播码",
+      "兑换码",
+      "卡池",
+      "菲林",
+      "Polychrome",
+      "ZZZ version"
     ],
-    "updatedAt": "2026-10-08",
-    "currentVersion": "ZZZ v3.3 special program on 2026-10-09 19:30 UTC+8; official-preview preparation",
-    "serpTitle": {"zh":"绝区零 3.3 前瞻准备：10 月 9 日直播、兑换码与抽卡","en":"ZZZ v3.3 Program Prep: October 9, Codes & Pull Plan","ja":"ZZZ v3.3番組準備：10月9日・コード・ガチャ"},
-    "serpDescription": {"zh":"绝区零 3.3 官方前瞻将于 10 月 9 日 19:30（UTC+8）播出。先盘点资源与两队缺位，节目后领取直播码并按官方卡池决定抽取。","en":"ZZZ v3.3's official program airs October 9 at 19:30 UTC+8. Audit resources and two-team gaps first, then claim codes and decide from official banners.","ja":"ZZZ v3.3公式番組は10月9日19:30（UTC+8）。資源と二編成不足を確認し、番組後にコードと公式バナーで判断します。"},
-    "quickFacts": {"zh":["3.3 官方前瞻：2026 年 10 月 9 日 19:30（UTC+8）。","节目日前不把未公告卡池、角色或复刻当作确定信息。","节目后先领有效直播码，再确认官方卡池和保底预算。"],"en":["Official v3.3 program: October 9, 2026 at 19:30 UTC+8.","Do not treat unannounced banners, agents, or reruns as confirmed before the program.","After it airs, claim active codes first and then verify official banners and pity budget."],"ja":["v3.3公式番組は2026年10月9日19:30（UTC+8）。","番組前は未発表のバナー、キャラ、復刻を確定扱いしない。","配信後は有効コードを先に交換し、公式バナーと天井予算を確認。"]}
+    "content": "## 已确认的前瞻信息\n\n10月9日官方发布3.3「重返天空的旅程」情报总览，公布菲欧妮、赛维里安即将登场，以及新皮肤、复刻、剧情与活动方向。\n\n## 节目码已失效\n\n该节目兑换码已于2026年10月11日23:59:59（UTC+8）失效。不要再尝试领取或把这些代码计入当前菲林预算；其他代码应逐条核验有效期。\n\n## 当前决策顺序\n\n先核对所在服务器的当前调频与活动期限，再记录资源、保底和队伍缺位。前瞻定位不能替代正式角色实测；版本日期和卡池阶段不按惯例推算。\n\n[官方情报总览](https://zenless.hoyoverse.com/zh-cn/news/166644) · [版本专题](/zzz/version) · [兑换码状态](/zzz/redeem-codes) · [抽卡规划](/zzz/gacha)",
+    "contentEn": "## Published preview\n\nThe October 9 official v3.3 recap introduces two upcoming agents, skins, reruns, story and events.\n\n## Codes expired\n\nProgram codes expired October 11, 2026 at 23:59:59 UTC+8. Do not redeem or include them in a current budget. Verify other codes separately.\n\n## Next steps\n\nCheck your server, live banners and event deadlines, then record resources, pity and team gaps. Verify release dates and banner phases in official notices rather than predicting them.\n\n[Official recap](https://zenless.hoyoverse.com/zh-cn/news/166644) · [Version hub](/zzz/version) · [Codes](/zzz/redeem-codes)",
+    "contentJa": "## 公開済み番組\n\n10月9日のv3.3公式まとめで新エージェント2名、衣装、復刻、物語、イベントを紹介。\n\n## コードは失効済み\n\n番組コードは2026年10月11日23:59:59（UTC+8）に失効しました。現在の資源計画に含めず、他コードの期限は個別に確認してください。\n\n## 次の行動\n\n利用サーバー、開催中のバナーと期限を確認し、資源、天井、編成不足を整理します。実装日とバナー期間は公式告知を基準にしてください。\n\n[公式まとめ](https://zenless.hoyoverse.com/zh-cn/news/166644) · [バージョン](/zzz/version)",
+    "faq": [
+      {
+        "question": "Are the program codes still active?",
+        "questionZh": "节目码还能领吗？",
+        "questionJa": "番組コードは有効ですか？",
+        "answer": "No. Program codes expired October 11 at 23:59:59 UTC+8. Other codes need separate verification.",
+        "answerZh": "不能。节目码已于10月11日23:59:59（UTC+8）失效；其他码需单独核验。",
+        "answerJa": "いいえ。10月11日23:59:59（UTC+8）に失効。他コードは個別に確認してください。"
+      }
+    ],
+    "updatedAt": "2026-10-15",
+    "currentVersion": "3.3 preview recap / codes expired 2026-10-11; program 2026-10-09",
+    "serpTitle": {
+      "zh": "绝区零3.3前瞻复盘：新代理人与已过期节目码",
+      "en": "ZZZ v3.3 Preview Recap: Upcoming Agents and Expired Codes",
+      "ja": "ZZZ v3.3番組まとめ：新エージェントと失効済みコード"
+    },
+    "serpDescription": {
+      "zh": "10月9日前瞻已发布，菲欧妮、赛维里安即将登场；节目码10月11日23:59:59（UTC+8）已失效。版本上线日与卡池详情继续核对正式公告。",
+      "en": "The October 9 preview is published. Program codes expired October 11 at 23:59:59 UTC+8. Verify release timing and banners in official follow-up notices.",
+      "ja": "10月9日の番組は公開済み。コードは10月11日23:59:59（UTC+8）に失効。実装日とバナー詳細は後続公式告知で確認してください。"
+    },
+    "quickFacts": {
+      "zh": [
+        "10月9日前瞻已发布，菲欧妮、赛维里安即将登场。",
+        "节目码已于10月11日23:59:59（UTC+8）失效。",
+        "上线日期与卡池阶段以官方后续公告为准。"
+      ],
+      "en": [
+        "The October 9 preview is published.",
+        "Program codes expired October 11 at 23:59:59 UTC+8.",
+        "Verify the release date and banner phases in official notices."
+      ],
+      "ja": [
+        "10月9日の番組は公開済み。",
+        "番組コードは10月11日23:59:59（UTC+8）に失効。",
+        "実装日とバナー期間は公式告知で確認。"
+      ]
+    }
   },
   {
     "id": "steam-3-0-start-guide",

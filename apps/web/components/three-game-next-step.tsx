@@ -7,12 +7,14 @@ import { THREE_GAME_STATUS_CARDS } from '@/lib/three-game-status';
 export function ThreeGameNextStep() {
   const [selectedId, setSelectedId] = useState(THREE_GAME_STATUS_CARDS[0]!.id);
   const selected = THREE_GAME_STATUS_CARDS.find((item) => item.id === selectedId) ?? THREE_GAME_STATUS_CARDS[0]!;
-  const stage = selected.status === 'live' ? '已上线' : selected.status === 'test' ? '测试中' : '待开服';
+  const stage = selected.status === 'live' ? '已上线' : selected.status === 'test' ? '测试中' : selected.status === 'post-test' ? '测试已结束' : '待开服';
   const prompt = selected.status === 'live'
     ? '先确认官方客户端与账号，再进入首日路线和系统资料。'
     : selected.status === 'test'
       ? '先确认来源状态与测试版本，再记录可复现的系统反馈。'
-      : '先确认官方入口、账号与开服信息，再等待客户端核验首日内容。';
+      : selected.status === 'post-test'
+        ? '先阅读测试归档与官方优化计划，等待新客户端核验实际改动。'
+        : '先确认官方入口、账号与开服信息，再等待客户端核验首日内容。';
 
   return <section className="rounded-lg border border-game-border bg-game-surface p-5 md:p-6">
     <div className="flex flex-wrap items-end justify-between gap-3">
@@ -25,7 +27,7 @@ export function ThreeGameNextStep() {
     <div className="mt-5 grid gap-3 md:grid-cols-3" role="radiogroup" aria-label="选择游戏">
       {THREE_GAME_STATUS_CARDS.map((item) => {
         const active = item.id === selected.id;
-        const label = item.status === 'live' ? '已上线' : item.status === 'test' ? '测试中' : '待开服';
+        const label = item.status === 'live' ? '已上线' : item.status === 'test' ? '测试中' : item.status === 'post-test' ? '测试已结束' : '待开服';
         return <button key={item.id} type="button" role="radio" aria-checked={active} onClick={() => setSelectedId(item.id)} className={`min-h-24 border p-4 text-left transition-colors ${active ? 'border-game-primary bg-game-primary/10' : 'border-game-border bg-game-surface-alt hover:border-game-primary/60'}`}>
           <span className="block text-xs font-semibold text-game-primary">{label}</span>
           <span className="mt-1 block text-sm font-semibold text-game-text">{item.title}</span>

@@ -62,6 +62,7 @@ p { color: var(--muted); line-height: 1.65; } .lead { max-width: 780px; font-siz
 .site-footer { border-top: 1px solid var(--border); color: var(--muted); padding: 24px 16px; text-align: center; }
 @media (max-width: 1023px) { .gachia-header__games { display: flex; flex: 0 0 auto; } .gachia-header__game-link { display: none; } .gachia-header__all-menu { left: auto; right: 0; } }
 @media (max-width: 640px) { .gachia-header__container, .gachia-header__section { padding-inline: 12px; } .gachia-header__container { min-height: 56px; } .content { width: min(100% - 24px, 1120px); padding-top: 34px; } h1 { font-size: 36px; } .grid { grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); } .content > .grid:not(section .grid) .card img { height: 148px; } }
+@media (max-width: 480px) { .gachia-header__container { flex-wrap: wrap; gap: 8px; padding-block: 8px; } .gachia-header__actions { margin-left: auto; } }
 .article > h1 { max-width: 760px; }
 .article > section > h2 { display: flex; align-items: center; gap: 10px; }
 .article > section > h2::before { width: 22px; height: 2px; background: var(--primary); content: ''; }

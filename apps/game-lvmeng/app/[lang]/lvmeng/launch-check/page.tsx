@@ -16,7 +16,7 @@ export default function LaunchCheckPage() {
     <h1>开服核验台</h1>
     <p className="lead">把首日需要确认的事实按影响顺序放在一起。它不是预设开荒路线：只有官方公告或当前客户端可复现的信息，才会进入后续的角色、养成、地图和资源攻略。</p>
     <ContentStatus />
-    <div className="notice">官方已定档 2026 年 10 月 15 日全平台公测。预下载、具体开服时刻、平台同步、账号互通、卡池和奖励都必须以最新官网或官方 TapTap 公告复核。</div>
+    <div className="notice">1.0公测已于2026年10月15日开启，官方已确认三端开放、同账号游戏数据互通和同一UID。开服延迟后已公告恢复；卡池细则、安装包build和个人到账仍须复核。</div>
     <LaunchVerificationBoard tasks={launchDayVerification} />
     <h2>推荐顺序</h2>
     <ol className="checklist">

@@ -42,9 +42,9 @@ const mainMetaBaseline: Record<string, Record<SupportedLocale, MetaCopy>> = {
     ja: { title: '原神 交換コード一覧｜最新特典と受け取り方法', description: '原神の交換コード一覧。生放送コード、イベント報酬、恒常コード、受け取り方法を整理し、原石や育成素材を素早く回収できます。' },
   },
   version: {
-    zh: { title: '原神 7.1 前瞻专题：直播码、Snezhnaya 与卡池', description: '追踪原神 7.1 前瞻、Luna II、Snezhnaya、Sandrone、直播码、当前/下期卡池、Nod-Krai 长尾和原石规划。' },
-    en: { title: 'Genshin v7.1 Watch: Livestream Codes, Snezhnaya & Banners', description: 'Track Genshin v7.1 watch, Luna II, Snezhnaya, Sandrone, livestream codes, current and next banners, Nod-Krai long-tail intent, and Primogem planning.' },
-    ja: { title: '原神 v7.1 注目：配信コード、Snezhnaya、バナー', description: '原神 v7.1、Luna II、Snezhnaya、Sandrone、配信コード、現在/次回バナー、Nod-Krai長尾、原石計画を確認できます。' },
+    zh: { title: '原神7.1版本专题：当前祈愿、剧情与活动', description: '原神7.1已上线，整理当前祈愿、剧情、活动、角色材料和资源规划；期限与奖励以官方公告及客户端为准。' },
+    en: { title: 'Genshin v7.1 Live: Wishes, Story & Events', description: 'Track Genshin v7.1 watch, Luna II, Snezhnaya, Sandrone, livestream codes, current and next banners, Nod-Krai long-tail intent, and Primogem planning.' },
+    ja: { title: '原神v7.1配信中：祈願・物語・イベント', description: '原神 v7.1、Luna II、Snezhnaya、Sandrone、配信コード、現在/次回バナー、Nod-Krai長尾、原石計画を確認できます。' },
   },
   gacha: {
     zh: { title: '原神 Wiki | Gachia', description: '原神角色图鉴、武器数据、圣遗物推荐、攻略百科 — Gachia' },

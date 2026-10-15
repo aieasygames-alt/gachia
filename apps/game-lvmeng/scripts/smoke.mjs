@@ -1,3 +1,5 @@
+import { blocksEntireSite, sitemapPathForOrigin } from './robots-policy.mjs';
+
 const origin = process.env.LVMENG_ORIGIN;
 
 if (!origin) {
@@ -5,6 +7,7 @@ if (!origin) {
 }
 
 const baseUrl = new URL(origin);
+const sitemapPath = sitemapPathForOrigin(origin);
 const expectedPaths = [
   '/zh/lvmeng',
   '/zh/lvmeng/guides',
@@ -13,7 +16,7 @@ const expectedPaths = [
   '/zh/lvmeng/download',
   '/zh/lvmeng/redeem-codes',
   '/robots.txt',
-  '/sitemap.xml',
+  sitemapPath,
 ];
 
 const responses = new Map();
@@ -40,11 +43,11 @@ const robots = responses.get('/robots.txt');
 if (!robots?.includes('Sitemap: https://gachia.com/sitemaps/lvmeng/index.xml')) {
   throw new Error('robots.txt does not point to the game sitemap.');
 }
-if (robots.includes('Disallow: /')) {
+if (blocksEntireSite(robots)) {
   throw new Error('robots.txt unexpectedly blocks indexing.');
 }
 
-const sitemap = responses.get('/sitemap.xml');
+const sitemap = responses.get(sitemapPath);
 if (!sitemap?.includes('https://gachia.com/zh/lvmeng')) {
   throw new Error('Sitemap is missing the Chinese game route.');
 }

@@ -69,7 +69,7 @@ describe('homepage live content', () => {
 
     expect(zzzVersion).toMatchObject({
       status: 'watch',
-      updatedAt: LIVE_UPDATED_AT,
+      updatedAt: '2026-10-15',
     });
     expect(zzzVersion?.title.en).toContain('v3.3');
   });

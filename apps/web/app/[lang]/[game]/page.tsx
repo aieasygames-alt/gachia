@@ -33,9 +33,9 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     ja: '原神のキャラビルド、武器データベース、聖遺物おすすめ、攻略百科をまとめ、v6.x Nod-Krai まで対応。116+ キャラの性能、突破素材、命ノ星座、編成、素材ルート、インタラクティブマップ、版本トピックを一度に確認でき、育成計画にも役立ちます。版本特集と実用導線も整理済みです。',
   },
   starrail: {
-    zh: '崩坏：星穹铁道角色图鉴、光锥数据库、遗器推荐与配队攻略，覆盖 4.x 版本、4.6 前瞻、直播码、下期跃迁、星琼规划与队伍构筑。Gachia 提供完整角色属性、命途、技能、突破材料、光锥适配、遗器词条和版本专题入口，帮助你规划抽卡和养成路线。',
-    en: 'Honkai: Star Rail character guides, light cone database, relic recommendations, and team comps for v4.x, v4.6 previews, livestream codes, next warps, Stellar Jade planning, and team building. Gachia connects character stats, Paths, skills, materials, light cones, relic stats, and version hubs for pull and build planning.',
-    ja: '崩壊：スターレイルのキャラ図鑑、光円錐、遺物、編成攻略。v4.x、v4.6前瞻、配信コード、次回跳躍、星玉計画、編成構築を整理します。Gachiaではキャラ性能、運命、スキル、素材、光円錐、遺物、版本特集をつなぎ、抽選と育成計画を支援します。',
+    zh: '崩坏：星穹铁道角色图鉴、光锥数据库、遗器推荐与配队攻略，覆盖 4.x 版本、4.6正式版本、直播码、下期跃迁、星琼规划与队伍构筑。Gachia 提供完整角色属性、命途、技能、突破材料、光锥适配、遗器词条和版本专题入口，帮助你规划抽卡和养成路线。',
+    en: 'Honkai: Star Rail character guides, light cone database, relic recommendations, and team comps for v4.x, v4.6 lives, livestream codes, next warps, Stellar Jade planning, and team building. Gachia connects character stats, Paths, skills, materials, light cones, relic stats, and version hubs for pull and build planning.',
+    ja: '崩壊：スターレイルのキャラ図鑑、光円錐、遺物、編成攻略。v4.x、v4.6配信中、配信コード、次回跳躍、星玉計画、編成構築を整理します。Gachiaではキャラ性能、運命、スキル、素材、光円錐、遺物、版本特集をつなぎ、抽選と育成計画を支援します。',
   },
   wuwa: {
     zh: '鸣潮（Wuthering Waves）角色图鉴、武器数据库、声骸系统与配装攻略，当前重点覆盖 3.7「镜锁妄世，心照红尘」实装内容、梦枢天罗、活动、兑换码、地图活动、Xbox/Game Pass 与 Steam 入坑。Gachia 将角色、声骸、武器、地图、兑换码和版本专题串成可执行路线。',
@@ -48,9 +48,9 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     ja: '異環（NTE）のキャラ図鑑、武器データ、ディスクおすすめ、交換コード、ガチャシミュレーターを提供し、正式リリース済みです。19体のキャラ、DL、入門、ボス攻略、ダメージ計算、育成導線をまとめて確認でき、開服期の準備に役立ちます。版本特集や報酬導線もあります。',
   },
   zzz: {
-    zh: '绝区零（Zenless Zone Zero）代理人图鉴、音擎数据库、驱动盘推荐、兑换码和版本专题，当前重点覆盖 3.3「重返天空的旅程」10 月 9 日官方前瞻、直播码提醒与 3.2 复盘；卡池与角色细节以节目后公告为准。',
+    zh: '绝区零（Zenless Zone Zero）代理人图鉴、音擎数据库、驱动盘推荐、兑换码和版本专题，当前重点覆盖 3.3「重返天空的旅程」10 月 9 日官方前瞻、节目码已过期与 3.2 复盘；卡池与角色细节以节目后公告为准。',
     en: 'Zenless Zone Zero agent database, W-Engine guide, Drive Disc builds, codes, and version hubs, now focused on the official October 9 v3.3 “Journey Back to the Sky” program, code reminders, and the v3.2 recap. Banner and agent details await post-program notices.',
-    ja: 'ゼンレスゾーンゼロのエージェント図鑑、Wエンジン、ドライブディスク、コード、版本特集。現在はv3.3「空へ戻る旅」の10月9日公式番組、コード提醒、v3.2まとめを重点化し、バナーとキャラ詳細は番組後の告知を基準にします。',
+    ja: 'ゼンレスゾーンゼロのエージェント図鑑、Wエンジン、ドライブディスク、コード、版本特集。現在はv3.3「空へ戻る旅」の10月9日公式番組、コード失効済み、v3.2まとめを重点化し、バナーとキャラ詳細は番組後の告知を基準にします。',
   },
   hi3: {
     zh: '崩坏3 9.0「曙梦向明」资料入口，整理官方版本总览、Part 2 终章、浮生·渡尘、瑟莉姆、新拳套与圣痕；当前补给、活动与数值以客户端和官方公告为准。',
@@ -117,9 +117,9 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
     ja: '異環（Neverness to Everness）はHotta StudioのUE5製超自然オープンワールドゲーム、2026年4月正式リリース。Gachiaは最も充実したNTEデータベースを提供。19体のプレイアブルキャラ図鑑、武器データ、ディスクセットおすすめ、DL/入門、ボス攻略、ダメージ計算、交換コード、ガチャシミュレーターを網羅。',
   },
   zzz: {
-    zh: '绝区零（Zenless Zone Zero）是 HoYoverse 开发的都市动作游戏，当前首页重点覆盖 3.3「重返天空的旅程」10 月 9 日官方前瞻、直播码提醒和 3.2 复盘。Gachia 将代理人图鉴、音擎、驱动盘、兑换码、版本专题和主流配队串成一页；未公布卡池与角色不提前定论。',
+    zh: '绝区零（Zenless Zone Zero）是 HoYoverse 开发的都市动作游戏，当前首页重点覆盖 3.3「重返天空的旅程」10 月 9 日官方前瞻、节目码已过期和 3.2 复盘。Gachia 将代理人图鉴、音擎、驱动盘、兑换码、版本专题和主流配队串成一页；未公布卡池与角色不提前定论。',
     en: 'Zenless Zone Zero (ZZZ) is HoYoverse\'s urban action game, now focused on the official October 9 v3.3 “Journey Back to the Sky” program, code reminders, and the v3.2 recap. Gachia connects agents, W-Engines, Drive Discs, codes, teams, and version hubs without presenting unannounced banners or agents as confirmed.',
-    ja: 'ゼンレスゾーンゼロ（ZZZ）はHoYoverseの都市アクションゲームです。現在はv3.3「空へ戻る旅」の10月9日公式番組、コード提醒、v3.2まとめを重点化しています。Gachiaはエージェント、Wエンジン、ディスク、コード、編成、版本特集をつなぎ、未発表のバナーやキャラは確定扱いしません。',
+    ja: 'ゼンレスゾーンゼロ（ZZZ）はHoYoverseの都市アクションゲームです。現在はv3.3「空へ戻る旅」の10月9日公式番組、コード失効済み、v3.2まとめを重点化しています。Gachiaはエージェント、Wエンジン、ディスク、コード、編成、版本特集をつなぎ、未発表のバナーやキャラは確定扱いしません。',
   },
   guihuan: {
     zh: '归环（Guihuan）是一款二次元开放世界冒险游戏。Gachia 提供归环角色图鉴、武器数据库、配装推荐与攻略百科，帮助玩家快速上手游戏并了解各角色的最优培养路线。',
@@ -355,17 +355,17 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     ],
   },
   starrail: {
-    eyebrow: { zh: '4.6 前瞻 / 直播码入口', en: 'v4.6 Preview / Codes Hub', ja: 'v4.6前瞻 / コード導線' },
-    title: { zh: '星穹铁道 4.6 前瞻、直播码与下期跃迁重点入口', en: 'Star Rail v4.6 preview, codes, and next-warps hub', ja: 'スターレイル v4.6前瞻・コード・次回跳躍導線' },
-    description: { zh: '把 4.6 special program、直播兑换码、下期跃迁、4.5 收尾资源、星琼缺口和队伍规划放到首页第一跳。', en: 'Surface the v4.6 special program, livestream codes, next warps, v4.5 wrap-up resources, Jade gaps, and team planning directly on the homepage.', ja: 'v4.6前瞻、配信コード、次回跳躍、v4.5まとめ資源、星玉不足、編成計画をトップで受け止めます。' },
-    chips: { zh: ['4.6 前瞻', '直播码', '下期跃迁', '4.5 收尾', '星琼规划', '配队'], en: ['v4.6 preview', 'Livestream codes', 'Next warps', 'v4.5 wrap-up', 'Jade planning', 'Teams'], ja: ['v4.6前瞻', '配信コード', '次回跳躍', 'v4.5まとめ', '星玉計画', '編成'] },
-    cta: { zh: '去 4.6 前瞻', en: 'Open v4.6 watch', ja: 'v4.6前瞻へ' },
+    eyebrow: { zh: '4.6正式版本 / 直播码入口', en: 'v4.6 Preview / Codes Hub', ja: 'v4.6配信中 / コード導線' },
+    title: { zh: '星穹铁道 4.6正式版本、直播码与下期跃迁重点入口', en: 'Star Rail v4.6 live, codes, and next-warps hub', ja: 'スターレイル v4.6配信中・コード・次回跳躍導線' },
+    description: { zh: '把 4.6 live update、直播兑换码、下期跃迁、当前版本资源、星琼缺口和队伍规划放到首页第一跳。', en: 'Surface the v4.6 live update, livestream codes, next warps, current-version resources, Jade gaps, and team planning directly on the homepage.', ja: 'v4.6配信中、配信コード、次回跳躍、v4.5まとめ資源、星玉不足、編成計画をトップで受け止めます。' },
+    chips: { zh: ['4.6正式版本', '直播码', '下期跃迁', '当前版本', '星琼规划', '配队'], en: ['v4.6 live', 'Livestream codes', 'Next warps', 'current-version', 'Jade planning', 'Teams'], ja: ['v4.6配信中', '配信コード', '次回跳躍', 'v4.5まとめ', '星玉計画', '編成'] },
+    cta: { zh: '去 4.6正式版本', en: 'Open v4.6 live', ja: 'v4.6配信中へ' },
     tracks: {
-      zh: [{ title: '4.6 前瞻', description: '先确认直播码、下期跃迁和前瞻节目重点。', links: [{ href: '/starrail/version', label: '4.6 前瞻' }, { href: '/starrail/redeem-codes', label: '直播码' }] }, { title: '资源预留', description: '把 4.5 收尾奖励、星琼缺口和保底计划放到同一条路线。', links: [{ href: '/starrail/guides/banner-schedule-guide', label: '下期跃迁' }, { href: '/starrail/guides/4x-fate-gilgamesh-kafka-cyrene-evergreen-plan', label: '抽取规划' }] }, { title: '队伍与养成', description: '抽前看定位，抽后继续看遗器、光锥和配队。', links: [{ href: '/starrail/build', label: '配装推荐' }, { href: '/starrail/teams', label: '配队' }] }],
-      en: [{ title: 'v4.6 preview', description: 'Check livestream codes, next warps, and special-program highlights first.', links: [{ href: '/starrail/version', label: 'v4.6 watch' }, { href: '/starrail/redeem-codes', label: 'Codes' }] }, { title: 'Resource reserve', description: 'Put v4.5 wrap-up rewards, Jade gaps, and pity planning in one path.', links: [{ href: '/starrail/guides/banner-schedule-guide', label: 'Next warps' }, { href: '/starrail/guides/4x-fate-gilgamesh-kafka-cyrene-evergreen-plan', label: 'Pull plan' }] }, { title: 'Teams and builds', description: 'Check roles before pulling, then continue into relics, light cones, and teams.', links: [{ href: '/starrail/build', label: 'Builds' }, { href: '/starrail/teams', label: 'Teams' }] }],
-      ja: [{ title: 'v4.6前瞻', description: '配信コード、次回跳躍、特番要点を先に確認します。', links: [{ href: '/starrail/version', label: 'v4.6前瞻' }, { href: '/starrail/redeem-codes', label: 'コード' }] }, { title: '資源温存', description: 'v4.5まとめ報酬、星玉不足、天井計画を一つの導線にします。', links: [{ href: '/starrail/guides/banner-schedule-guide', label: '次回跳躍' }, { href: '/starrail/guides/4x-fate-gilgamesh-kafka-cyrene-evergreen-plan', label: '抽選計画' }] }, { title: '編成と育成', description: '引く前に役割を見て、引いた後は遺物、光円錐、編成へ。', links: [{ href: '/starrail/build', label: 'ビルド' }, { href: '/starrail/teams', label: '編成' }] }],
+      zh: [{ title: '4.6正式版本', description: '先确认直播码、下期跃迁和前瞻节目重点。', links: [{ href: '/starrail/version', label: '4.6正式版本' }, { href: '/starrail/redeem-codes', label: '直播码' }] }, { title: '资源预留', description: '把 当前版本奖励、星琼缺口和保底计划放到同一条路线。', links: [{ href: '/starrail/guides/banner-schedule-guide', label: '下期跃迁' }, { href: '/starrail/guides/4x-fate-gilgamesh-kafka-cyrene-evergreen-plan', label: '抽取规划' }] }, { title: '队伍与养成', description: '抽前看定位，抽后继续看遗器、光锥和配队。', links: [{ href: '/starrail/build', label: '配装推荐' }, { href: '/starrail/teams', label: '配队' }] }],
+      en: [{ title: 'v4.6 live', description: 'Check livestream codes, next warps, and special-program highlights first.', links: [{ href: '/starrail/version', label: 'v4.6 live' }, { href: '/starrail/redeem-codes', label: 'Codes' }] }, { title: 'Resource reserve', description: 'Put current-version rewards, Jade gaps, and pity planning in one path.', links: [{ href: '/starrail/guides/banner-schedule-guide', label: 'Next warps' }, { href: '/starrail/guides/4x-fate-gilgamesh-kafka-cyrene-evergreen-plan', label: 'Pull plan' }] }, { title: 'Teams and builds', description: 'Check roles before pulling, then continue into relics, light cones, and teams.', links: [{ href: '/starrail/build', label: 'Builds' }, { href: '/starrail/teams', label: 'Teams' }] }],
+      ja: [{ title: 'v4.6配信中', description: '配信コード、次回跳躍、特番要点を先に確認します。', links: [{ href: '/starrail/version', label: 'v4.6配信中' }, { href: '/starrail/redeem-codes', label: 'コード' }] }, { title: '資源温存', description: 'v4.5まとめ報酬、星玉不足、天井計画を一つの導線にします。', links: [{ href: '/starrail/guides/banner-schedule-guide', label: '次回跳躍' }, { href: '/starrail/guides/4x-fate-gilgamesh-kafka-cyrene-evergreen-plan', label: '抽選計画' }] }, { title: '編成と育成', description: '引く前に役割を見て、引いた後は遺物、光円錐、編成へ。', links: [{ href: '/starrail/build', label: 'ビルド' }, { href: '/starrail/teams', label: '編成' }] }],
     },
-    faq: [{ question: { zh: '星铁首页现在先看什么？', en: 'What should I open first now?', ja: '今ホームで最初に見るべきものは？' }, answer: { zh: '先看 4.6 前瞻和直播兑换码，再看下期跃迁、星琼缺口和队伍规划。', en: 'Start with the v4.6 preview and livestream codes, then check next warps, Jade gaps, and team planning.', ja: 'まずv4.6前瞻と配信コード、その後次回跳躍、星玉不足、編成計画へ。' } }],
+    faq: [{ question: { zh: '星铁首页现在先看什么？', en: 'What should I open first now?', ja: '今ホームで最初に見るべきものは？' }, answer: { zh: '先看 4.6正式版本和直播兑换码，再看下期跃迁、星琼缺口和队伍规划。', en: 'Start with the v4.6 live and livestream codes, then check next warps, Jade gaps, and team planning.', ja: 'まずv4.6配信中と配信コード、その後次回跳躍、星玉不足、編成計画へ。' } }],
   },
   nte: {
     eyebrow: { zh: '异环官网 / Wiki 入口', en: 'NTE Official / Wiki Hub', ja: 'NTE公式 / Wiki導線' },
@@ -440,15 +440,15 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
   zzz: {
     eyebrow: { zh: '3.3 官方前瞻 / 3.2 复盘入口', en: 'v3.3 Official Program / v3.2 Recap Hub', ja: 'v3.3公式番組 / v3.2まとめ導線' },
     title: { zh: '绝区零 3.3 前瞻直播、兑换码与 3.2 复盘入口', en: 'ZZZ v3.3 program, codes, and v3.2 recap hub', ja: 'ZZZ v3.3番組・コード・v3.2まとめ導線' },
-    description: { zh: '3.3「重返天空的旅程」前瞻将于 10 月 9 日 19:30（UTC+8）播出。先看官方节目与直播码，卡池和角色以节目后公告为准；3.2 内容仍可从复盘入口查看。', en: 'The v3.3 “Journey Back to the Sky” program airs October 9 at 19:30 (UTC+8). Watch the official program and claim codes first; use post-program notices for banners and agents. v3.2 remains available as a recap route.', ja: 'v3.3「空へ戻る旅」番組は10月9日19:30（UTC+8）です。公式番組とコードを先に確認し、バナーとキャラは番組後の告知を基準にします。v3.2はまとめ入口として利用できます。' },
-    chips: { zh: ['10 月 9 日 19:30', '官方前瞻', '直播码提醒', '3.2 复盘', 'Steam', 'Xbox'], en: ['Oct 9, 19:30 UTC+8', 'Official program', 'Code reminder', 'v3.2 recap', 'Steam', 'Xbox'], ja: ['10月9日 19:30', '公式番組', 'コード提醒', 'v3.2まとめ', 'Steam', 'Xbox'] },
+    description: { zh: '3.3「重返天空的旅程」10月9日前瞻已发布，菲欧妮、赛维里安即将登场。节目码已于10月11日23:59:59（UTC+8）失效；上线日期及卡池以正式公告为准。', en: 'The October 9 v3.3 preview is published. Program codes expired October 11 at 23:59:59 UTC+8; verify the release date and banners in official follow-up notices.', ja: '10月9日のv3.3番組は公開済み。コードは10月11日23:59:59（UTC+8）に失効。実装日とバナーは後続公式告知で確認してください。' },
+    chips: { zh: ['10 月 9 日 19:30', '官方前瞻', '节目码已过期', '3.2 复盘', 'Steam', 'Xbox'], en: ['Oct 9, 19:30 UTC+8', 'Official program', 'Codes expired', 'v3.2 recap', 'Steam', 'Xbox'], ja: ['10月9日 19:30', '公式番組', 'コード失効済み', 'v3.2まとめ', 'Steam', 'Xbox'] },
     cta: { zh: '看 3.3 前瞻时间线', en: 'Open v3.3 program timeline', ja: 'v3.3番組タイムラインへ' },
     tracks: {
       zh: [{ title: '3.3 官方前瞻', description: '10 月 9 日 19:30 看官方节目；节目后再核对卡池、角色和版本日期。', links: [{ href: '/zzz/version', label: '3.3 前瞻时间线' }, { href: '/zzz/redeem-codes', label: '兑换码' }] }, { title: '3.2 复盘', description: '继续查看现有角色、活动和配队，避免将复盘内容误读为 3.3 已公布信息。', links: [{ href: '/zzz/guides/v3-2-livestream-recap-expired-codes', label: '3.2 复盘' }, { href: '/zzz/guides/banner-schedule-guide', label: '当前卡池' }] }, { title: '平台与养成', description: 'Steam/Xbox 玩家先看账号下载，再进配队、音擎和驱动盘。', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Steam 入坑' }, { href: '/zzz/guides/meta-teams-v3-guide', label: '主流配队' }] }],
       en: [{ title: 'Official v3.3 program', description: 'Watch the official broadcast at 19:30 UTC+8 on October 9; verify banners, agents, and patch timing afterwards.', links: [{ href: '/zzz/version', label: 'v3.3 program timeline' }, { href: '/zzz/redeem-codes', label: 'Codes' }] }, { title: 'v3.2 recap', description: 'Use this for existing agents, events, and teams without reading recap content as v3.3 confirmation.', links: [{ href: '/zzz/guides/v3-2-livestream-recap-expired-codes', label: 'v3.2 recap' }, { href: '/zzz/guides/banner-schedule-guide', label: 'Current banners' }] }, { title: 'Platform and builds', description: 'Steam/Xbox players should solve account and download first, then teams and builds.', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Steam starter' }, { href: '/zzz/guides/meta-teams-v3-guide', label: 'Meta teams' }] }],
       ja: [{ title: 'v3.3公式番組', description: '10月9日19:30（UTC+8）に公式番組を確認し、バナー、キャラ、実装日はその後に検証します。', links: [{ href: '/zzz/version', label: 'v3.3番組タイムライン' }, { href: '/zzz/redeem-codes', label: 'コード' }] }, { title: 'v3.2まとめ', description: '既存キャラ、イベント、編成の確認に使い、まとめ内容をv3.3確定情報として扱わないでください。', links: [{ href: '/zzz/guides/v3-2-livestream-recap-expired-codes', label: 'v3.2まとめ' }, { href: '/zzz/guides/banner-schedule-guide', label: '現在バナー' }] }, { title: '平台と育成', description: 'Steam/Xbox勢はアカウントとDL、その後編成と育成へ。', links: [{ href: '/zzz/guides/steam-3-0-start-guide', label: 'Steam入門' }, { href: '/zzz/guides/meta-teams-v3-guide', label: '主要編成' }] }],
     },
-    faq: [{ question: { zh: '绝区零首页现在先看什么？', en: 'What should I open first on the ZZZ homepage?', ja: 'ZZZホームで最初に見るべきものは？' }, answer: { zh: '先确认 10 月 9 日 19:30 的官方 3.3 前瞻与兑换码提醒；卡池和角色等节目后公告。等待期间可回看 3.2、平台入坑和主流配队。', en: 'Confirm the official v3.3 program at 19:30 UTC+8 on October 9 and its code reminder first. Wait for post-program notices on banners and agents; use the interim for v3.2 recap, platform onboarding, and teams.', ja: 'まず10月9日19:30（UTC+8）の公式v3.3番組とコード提醒を確認します。バナーとキャラは番組後の告知を待ち、待機中はv3.2まとめ、平台入門、主要編成を確認できます。' } }],
+    faq: [{ question: { zh: '绝区零首页现在先看什么？', en: 'What should I open first on the ZZZ homepage?', ja: 'ZZZホームで最初に見るべきものは？' }, answer: { zh: '先确认 10 月 9 日 19:30 的官方 3.3 前瞻与兑换码提醒；卡池和角色等节目后公告。等待期间可回看 3.2、平台入坑和主流配队。', en: 'Confirm the official v3.3 program at 19:30 UTC+8 on October 9 and its code reminder first. Wait for post-program notices on banners and agents; use the interim for v3.2 recap, platform onboarding, and teams.', ja: 'まず10月9日19:30（UTC+8）の公式v3.3番組とコード失効済みを確認します。バナーとキャラは番組後の告知を待ち、待機中はv3.2まとめ、平台入門、主要編成を確認できます。' } }],
   },
   wuwa: {
     eyebrow: { zh: '3.7 实装 / 平台入坑入口', en: 'v3.7 Live / Platform Starter Hub', ja: 'Ver.3.7実装 / プラットフォーム入門導線' },

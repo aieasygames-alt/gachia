@@ -65,8 +65,8 @@ export const BANNER_INTENT_PANELS: Partial<Record<GameId, BannerIntentPanelConfi
     links: [
       {
         href: '/starrail/version',
-        label: { zh: '4.6 前瞻', en: 'v4.6 watch', ja: 'v4.6前瞻' },
-        description: { zh: '看 4.6 前瞻、直播码、下期跃迁和 4.5 收尾资源。', en: 'Check v4.6 preview, livestream codes, next warps, and v4.5 wrap-up resources.', ja: 'v4.6前瞻、配信コード、次回跳躍、v4.5まとめ資源を確認。' },
+        label: { zh: '4.6正式版本', en: 'v4.6 live', ja: 'v4.6配信中' },
+        description: { zh: '看 4.6正式版本、直播码、下期跃迁和 当前版本资源。', en: 'Check v4.6 live, livestream codes, next warps, and current-version resources.', ja: 'v4.6配信中、配信コード、次回跳躍、v4.5まとめ資源を確認。' },
       },
       {
         href: '/starrail/redeem-codes',
@@ -121,9 +121,9 @@ export const BANNER_INTENT_PANELS: Partial<Record<GameId, BannerIntentPanelConfi
       ja: '調律前に代理人、音擎、菲林を確認',
     },
     summary: {
-      zh: '3.3「重返天空的旅程」前瞻将于 10 月 9 日 19:30（UTC+8）播出。节目日前先盘点菲林与两队缺位；节目后只按官方卡池、角色和阶段时间做抽卡判断。',
-      en: 'The v3.3 “Journey Back to the Sky” program airs October 9 at 19:30 UTC+8. Audit Polychromes and two-team gaps first; after the program, make pull decisions only from official banners, agents, and phase timing.',
-      ja: 'v3.3「空へ戻る旅」番組は10月9日19:30（UTC+8）です。番組前は菲林と二編成不足を確認し、番組後は公式バナー、キャラ、期間だけで判断します。',
+      zh: '3.3「重返天空的旅程」10月9日前瞻已发布，菲欧妮、赛维里安即将登场。节目码已于10月11日23:59:59（UTC+8）失效；上线日期及卡池以正式公告为准。',
+      en: 'The October 9 v3.3 preview is published. Program codes expired October 11 at 23:59:59 UTC+8; verify the release date and banners in official follow-up notices.',
+      ja: '10月9日のv3.3番組は公開済み。コードは10月11日23:59:59（UTC+8）に失効。実装日とバナーは後続公式告知で確認してください。',
     },
     checks: {
       zh: ['节目日前是否已记录菲林、保底和两队缺位', '直播码是否已由官方公布并标记为有效', '节目后官方角色是否补足真实队伍缺口', '菲林是否分别覆盖代理人与音擎风险'],

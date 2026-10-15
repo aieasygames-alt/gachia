@@ -1,10 +1,18 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import {
+import ts from 'typescript';
+
+// Node 20 cannot import TypeScript directly; compile the shared, import-free rules in memory.
+const rulesPath = new URL('../apps/web/lib/content-freshness.ts', import.meta.url);
+const rulesSource = fs.readFileSync(rulesPath, 'utf8');
+const { outputText } = ts.transpileModule(rulesSource, {
+  compilerOptions: { module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2022 },
+});
+const {
   scanFreshnessEntryFile,
   scanFreshnessGuides,
   summarizeFreshnessFindings,
-} from '../apps/web/lib/content-freshness.ts';
+} = await import(`data:text/javascript;base64,${Buffer.from(outputText).toString('base64')}`);
 
 const ROOT = process.cwd();
 const DATA_ROOT = path.join(ROOT, 'apps/web/public/data');
@@ -23,6 +31,9 @@ const GAME_IDS = [
   'roco',
   'roco-cn',
   'aniimo',
+  'hi3',
+  'azur-promilia',
+  'lvmeng',
 ];
 
 const CURRENT_ENTRY_FILES = [
@@ -35,6 +46,8 @@ const CURRENT_ENTRY_FILES = [
   'apps/web/lib/version-snapshots.ts',
   'apps/web/lib/market-intel.ts',
   'apps/web/lib/banner-intent.ts',
+  'apps/web/lib/three-game-status.ts',
+  'apps/web/lib/three-game-update-radar.ts',
 ];
 
 function parseArgs(argv) {
@@ -69,7 +82,16 @@ function scanRawGuides() {
 function scanCurrentEntryFiles() {
   const findings = [];
 
-  for (const relativeFile of CURRENT_ENTRY_FILES) {
+  const independentFiles = ['apps/game-lvmeng', 'apps/game-azur-promilia', 'apps/game-genshin', 'apps/game-nte']
+    .flatMap((directory) => ['app', 'lib'].flatMap((subdirectory) => {
+      const root = path.join(ROOT, directory, subdirectory);
+      if (!fs.existsSync(root)) return [];
+      return fs.readdirSync(root, { recursive: true, withFileTypes: true })
+        .filter((entry) => entry.isFile() && /\.(ts|tsx)$/.test(entry.name))
+        .map((entry) => path.relative(ROOT, path.join(entry.parentPath, entry.name)));
+    }));
+
+  for (const relativeFile of [...CURRENT_ENTRY_FILES, ...independentFiles]) {
     const file = path.join(ROOT, relativeFile);
     if (!fs.existsSync(file)) continue;
     findings.push(...scanFreshnessEntryFile(relativeFile, fs.readFileSync(file, 'utf8')));
