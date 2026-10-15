@@ -34,5 +34,14 @@ jobs:
       - run: pnpm --filter @gachia/router test
       - run: pnpm --filter @gachia/game-azur-promilia type-check
       - run: pnpm --filter @gachia/game-azur-promilia verify:bundle
-      - name: Confirm production routing remains disabled
-        run: test "$(rg -o 'AZUR_PROMILIA_ENABLED\"[[:space:]]*:[[:space:]]*\"false\"' apps/router/wrangler.jsonc | wc -l | tr -d ' ')" = "2"
+      - name: Validate current deployment registry
+        run: pnpm validate:game-deployments
+      - name: Keep staging routing explicitly disabled
+        run: |
+          node --input-type=module <<'EOF'
+          import fs from 'node:fs';
+          import assert from 'node:assert/strict';
+          const router = JSON.parse(fs.readFileSync('apps/router/wrangler.jsonc', 'utf8'));
+          assert.equal(router.env.staging.vars.AZUR_PROMILIA_ENABLED, 'false');
+          assert.equal(router.env.staging.vars.PREVIEW_MODE, 'true');
+          EOF

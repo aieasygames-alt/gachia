@@ -11,6 +11,11 @@ import { workspaceService } from '../src/workspaces.mjs';
 import { uncoveredRules } from '../src/draft-reviews.mjs';
 import { startWorkbench } from '../src/server.mjs';
 
+// Test repositories must not inherit the runner's global LFS/checkout filters.
+// Repository-local filters (including deliberately unsafe fixtures) still apply.
+process.env.GIT_CONFIG_GLOBAL = '/dev/null';
+process.env.GIT_CONFIG_NOSYSTEM = '1';
+
 function fixture(t) {
   const directory = mkdtempSync(join(tmpdir(), 'gachia-workspace-'));
   let store;
