@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   if (lang !== 'zh') return {};
   return {
     title: '三游戏更新雷达 | Gachia',
-    description: '按已上线、测试中、待开服三个阶段安排伊莫、蓝色星原：旅谣与绿梦：时空之声的下一轮内容核验重点。',
+    description: '按已上线、测试中、测试后与待开服阶段安排伊莫、蓝色星原：旅谣与绿梦：时空之声的下一轮内容核验重点。',
     alternates: { canonical: `${BASE_URL}/zh/update-radar` },
   };
 }
@@ -29,7 +29,7 @@ export default async function UpdateRadarPage({ params }: { params: Promise<{ la
 
     <section className="mt-10 grid gap-5 lg:grid-cols-3">
       {THREE_GAME_UPDATE_RADAR.map((item) => {
-        const state = item.status === 'live' ? '已上线' : item.status === 'test' ? '测试中' : '待开服';
+        const state = item.status === 'live' ? '已上线' : item.status === 'test' ? '测试中' : item.status === 'post-test' ? '测试已结束' : '待开服';
         return <article key={item.id} className="rounded-lg border border-game-border bg-game-surface p-5">
           <p className="text-xs font-semibold text-game-primary">{state} · {item.focus.title}</p>
           <h2 className="mt-2 text-xl font-semibold text-game-text">{item.title}</h2>

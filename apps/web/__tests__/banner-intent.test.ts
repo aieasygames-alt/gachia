@@ -48,8 +48,8 @@ describe('banner intent panels', () => {
   it('keeps ZZZ banner intent aligned to the official v3.3 program window', () => {
     const zzz = BANNER_INTENT_PANELS.zzz;
 
-    expect(zzz?.summary.zh).toContain('10 月 9 日 19:30');
-    expect(zzz?.summary.en).toContain('October 9 at 19:30');
+    expect(zzz?.summary.zh).toContain('节目码已于10月11日');
+    expect(zzz?.summary.en).toContain('codes expired October 11');
     expect(zzz?.checks.zh[1]).toContain('官方公布');
     expect(zzz?.checks.en[2]).toContain('official post-program agent');
   });

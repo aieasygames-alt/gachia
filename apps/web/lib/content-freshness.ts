@@ -171,7 +171,7 @@ export function scanFreshnessGuides(gameId: string, guides: readonly FreshnessGu
 }
 
 export function scanFreshnessEntryFile(file: string, text: string): FreshnessFinding[] {
-  return FRESHNESS_CURRENT_ENTRY_TERMS
+  const legacy: FreshnessFinding[] = FRESHNESS_CURRENT_ENTRY_TERMS
     .filter((rule) => text.includes(rule.term))
     .map((rule) => ({
       scope: 'current-entry',
@@ -182,6 +182,18 @@ export function scanFreshnessEntryFile(file: string, text: string): FreshnessFin
       currentRoute: rule.currentRoute,
       file,
     }));
+  // Narrow, source-backed transition rules supplement the legacy keyword scan.
+  // These rules flag current entry copy, not historical guide archives.
+  const transitions = [
+    { gameId: 'lvmeng', pattern: /(?:预计|显示预计)[^\n]{0,30}2026\s*年?\s*10\s*月\s*31\s*日/, route: '1.0 public beta live since 2026-10-15' },
+    { gameId: 'lvmeng', pattern: /id:\s*'lvmeng',\s*status:\s*'upcoming'/, route: 'live' },
+    { gameId: 'azur-promilia', pattern: /id:\s*'azur-promilia',\s*status:\s*'test'/, route: 'post-test since 2026-10-07' },
+    { gameId: 'zzz', pattern: /3\.3[^\n]{0,80}(?:将于|将在)[^\n]{0,40}10\s*月\s*9\s*日/, route: 'preview recap; program codes expired 2026-10-11' },
+  ];
+  return [...legacy, ...transitions.flatMap((rule): FreshnessFinding[] => {
+    const match = text.match(rule.pattern);
+    return match ? [{ scope: 'current-entry', severity: 'risk', gameId: rule.gameId, id: '', term: match[0], currentRoute: rule.route, file }] : [];
+  })];
 }
 
 export function summarizeFreshnessFindings(findings: readonly FreshnessFinding[]): FreshnessSummary {

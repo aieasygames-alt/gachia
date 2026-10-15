@@ -1,4 +1,28 @@
 [
+{
+  "id": "v3-7-hsin-suoming-official-reference",
+  "title": "鸣潮3.7心与锁暝：官方定位、新武器与梦枢天罗入口",
+  "titleEn": "WuWa v3.7 Hsin and Suoming: Official Roles, Weapons and Region Access",
+  "titleJa": "鳴潮v3.7 心・鎖暝：公式情報と新武器・エリア入口",
+  "category": "version",
+  "categoryZh": "版本专题",
+  "categoryEn": "Version Guide",
+  "categoryJa": "バージョン特集",
+  "updatedAt": "2026-10-15",
+  "currentVersion": "3.7 official notice; CN server scope",
+  "tags": [
+    "3.7",
+    "心",
+    "锁暝",
+    "梦枢天罗"
+  ],
+  "summary": "根据3.7官方内容说明整理两名新共鸣者、武器、声骸套装与剧情前置；不编造技能倍率、材料数量或毕业配装。",
+  "summaryEn": "Official v3.7 references for two new Resonators, weapons, Echo sets and story access; no inferred multipliers, material counts or final builds.",
+  "summaryJa": "v3.7公式告知から新共鳴者、武器、音骸セット、物語前提を整理。倍率、素材数、最終ビルドは推測しません。",
+  "content": "## 官方角色与武器\n\n- 心：5星、导电、音感仪；官方战斗风格包含主力输出、协同攻击、共鸣技能伤害、同奏、电磁。官方列出的武器为音感仪「玉阙玄华」。\n- 锁暝：5星、导电、迅刀；官方战斗风格包含快速协奏、普攻伤害、同奏、导电伤害加深、共鸣技能伤害加深。官方列出的武器为迅刀「沉冥」。\n\n本页是官方公告资料，不是完整客户端角色图鉴。技能倍率、突破材料数量、当前卡池阶段与毕业配装尚未实测，不填入推测数值。\n\n## 梦枢天罗与剧情前置\n\n跟随第四章第四幕「梦枢心相由心生」任务指引前往梦枢天罗。该任务需完成第四章幕间「幽客销残声」；奇谭任务「璇心如月寄尘情」在第四章第四幕后解锁。\n\n## 新合鸣与养成规划\n\n公告列出「衔梦照世之心」「镜影流电之瞬」「茜染怀想之花」三套新合鸣效果。选择前先核对当前客户端触发条件与队伍职责，不把新套装自动当作每名导电角色的毕业方案。\n\n## 当前活动窗口\n\n- 「朝月鱼涌」H5：10月15日10:00至11月1日09:59（UTC+8）。\n- 「无音消除」：10月22日10:00至11月9日03:59（服务器时间）。\n- 「凭栏听雨之礼」：10月22日10:00至11月11日03:59（服务器时间），累计登录1天、3天对应奖励分别核对。\n\n服务器时间不是所有地区统一UTC+8，请在客户端复核活动开放、前置和领取状态。\n\n[3.7官方内容说明](https://mc.kurogames.com/main/news/detail/5569) · [版本专题](/wuwa/version) · [地图](/wuwa/map) · [配装参考](/wuwa/build)\n",
+  "contentEn": "## Official roles\n\nHsin is a 5-star Electro Rectifier Resonator; the notice lists main damage, coordinated attacks, skill damage, Tune and electromagnetic play. Suoming is a 5-star Electro Sword Resonator with quick concerto, basic damage and amplification roles. The new weapons are Rectifier 玉阙玄华 and Sword 沉冥.\n\nThis is an announcement reference, not a client-verified complete character sheet. Multipliers, material counts, live banner phases and final builds remain unverified.\n\n## Region access\n\nFollow Chapter IV Act IV into the new region after completing Chapter IV Interlude. The new 奇谭 task unlocks after Act IV. Check the current client for localized quest names.\n\n## Events and timezones\n\nThe 朝月鱼涌 web event runs October 15 at 10:00 through November 1 at 09:59 UTC+8. Other events in the notice use server time, which must not be copied as UTC+8 for every region.\n\n[Official v3.7 notice](https://mc.kurogames.com/main/news/detail/5569) · [Version](/wuwa/version) · [Map](/wuwa/map)\n",
+  "contentJa": "## 公式キャラ情報\n\n心は星5・導電・増幅器、鎖暝は星5・導電・迅刀。公式告知に新武器「玉阙玄华」「沉冥」を掲載。本稿は告知資料であり、倍率、素材数、現行バナー期間、最終ビルドはクライアント実測待ちです。\n\n## エリアと前提\n\n第四章幕間を終えて第四章第四幕の案内で新エリアへ進みます。奇谭任務は第四幕後に解放。任務名のローカライズは利用クライアントで確認してください。\n\n## イベント時刻\n\n朝月鱼涌Webイベントは10月15日10:00から11月1日09:59まで（UTC+8）。他のイベントはサーバー時刻表記を確認し、全地域にUTC+8を適用しないでください。\n\n[公式3.7告知](https://mc.kurogames.com/main/news/detail/5569) · [バージョン](/wuwa/version)\n"
+},
   {
     "id": "quick-start-guide",
     "title": "鸣潮快速上手指南",

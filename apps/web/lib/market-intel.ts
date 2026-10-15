@@ -87,7 +87,7 @@ export const MARKET_INTEL_OPPORTUNITIES: MarketIntelOpportunity[] = [
     id: 'lvmeng-public-beta-readiness-hub',
     gameId: 'lvmeng',
     priority: 'P0',
-    title: '绿梦：时空之声公测准备中心',
+    title: '绿梦：时空之声1.0公测中心',
     keywordCluster: ['绿梦公测', '绿梦横版ACT', '绿梦配队', '绿梦武器', '绿梦探索', '绿梦卡池福利'],
     riskTerms: ['测试服安装包', '账号交易', '破解', '外挂'],
     targetPages: ['/lvmeng/version', '/lvmeng/guides', '/lvmeng/starter-guide', '/lvmeng/roadmap'],
@@ -96,7 +96,7 @@ export const MARKET_INTEL_OPPORTUNITIES: MarketIntelOpportunity[] = [
     sourceDate: '2026-09-30',
     sourceUrls: ['https://www.taptap.cn/app/237561', 'https://apps.apple.com/cn/app/%E7%BB%BF%E6%A2%A6-%E6%97%B6%E7%A9%BA%E4%B9%8B%E5%A3%B0/id6791432398'],
     signal: { strength: 'mixed' },
-    notes: '公测日期与商店显示可能存在差异，页面保留官方来源优先与待核验标记；以战斗、探索、配队和福利问题组织公测前内容。',
+    notes: '10月15日公测已开启，官方确认三端同账号游戏数据互通；优先维护正式配置、永久活动、恢复补偿和待客户端核验的攻略。',
   },
   {
     id: 'aniimo-launch-recap-mobile-countdown',

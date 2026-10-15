@@ -20,6 +20,8 @@ export interface VersionSnapshot {
   gameId: GameId;
   currentVersion: string;
   releaseDate: string;
+  dateKind?: 'release' | 'announcement' | 'verified';
+  sourceUrls?: string[];
   status: LiveStatus;
   lastUpdatedAt: string;
   sourceTier?: VersionSnapshotSourceTier;
@@ -84,40 +86,16 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   zzz: {
     gameId: 'zzz',
-    currentVersion: '3.3 special program / 3.2 recap',
-    releaseDate: '2026-10-09',
+    currentVersion: "3.3 preview recap / 3.2 live",
+    releaseDate: '2026-10-15',
+    dateKind: 'verified',
+    sourceUrls: ['https://zenless.hoyoverse.com/zh-cn/news/166644'],
     status: 'watch',
-    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    lastUpdatedAt: '2026-10-15',
     sourceTier: 'official',
-    summary: {
-      zh: '3.3「重返天空的旅程」前瞻特别节目将于 10 月 9 日 19:30（UTC+8）播出。当前先确认官方节目、领取时限短的直播码；角色、卡池和版本日期以节目及后续公告为准。',
-      en: 'The v3.3 “Journey Back to the Sky” special program airs on October 9 at 19:30 (UTC+8). Confirm the official program and short-lived livestream codes first; agents, banners, and patch timing await the program and follow-up notices.',
-      ja: 'v3.3「空へ戻る旅」特別番組は10月9日19:30（UTC+8）配信です。公式番組と短期限の配信コードを先に確認し、エージェント、バナー、実装日は番組と後続告知を基準にします。',
-    },
-    whatChanged: [
-      {
-        zh: '版本页进入 3.3 官方前瞻窗口；已公布的是节目时间，节目外角色、卡池与活动细节暂不作推断。',
-        en: 'The hub enters the official v3.3 preview window. The program time is confirmed; agent, banner, and event details outside the program are not inferred.',
-        ja: 'バージョンページはv3.3公式前瞻期間へ移行します。確定しているのは番組時刻のみで、番組外のキャラ、バナー、イベント詳細は推測しません。',
-      },
-      {
-        zh: '旧直播码继续只放 expired，新前瞻码出现后按 active/expired/unknown 分层。',
-        en: 'Old livestream codes remain expired-only; new preview codes should be split into active, expired, and unknown states.',
-        ja: '古い配信コードは期限切れのみ。新前瞻コードはactive/expired/unknownで分けます。',
-      },
-    ],
-    firstSteps: [
-      {
-        zh: '10 月 9 日 19:30 前看完 3.2 复盘并保留菲林；节目开始后先兑换直播码，再根据官方卡池与角色信息决定抽取。',
-        en: 'Before 19:30 on October 9, finish the v3.2 recap and keep Polychrome reserved. Once the program starts, redeem codes first, then decide pulls from official banner and agent information.',
-        ja: '10月9日19:30まではv3.2まとめを確認してポリクロームを温存します。番組開始後はコード交換を先に済ませ、公式のバナーとキャラ情報で抽選を判断します。',
-      },
-      {
-        zh: '兑换码页继续区分 active、expired、unknown。',
-        en: 'Keep active, expired, and unknown code states separated.',
-        ja: 'コードページではactive、expired、unknownを分け続けます。',
-      },
-    ],
+    summary: {"zh": "10月9日3.3「重返天空的旅程」前瞻已发布，菲欧妮、赛维里安即将登场。节目码已于10月11日23:59:59（UTC+8）失效；3.3上线日期待后续正式公告核验。", "en": "The October 9 v3.3 preview is available and introduces two upcoming agents. Its codes expired October 11 at 23:59:59 UTC+8. Verify the release date in follow-up official notices.", "ja": "10月9日のv3.3番組は公開済みで、新エージェント2名を紹介。番組コードは10月11日23:59:59（UTC+8）に失効。実装日は後続公式告知で確認してください。"},
+    whatChanged: [{"zh": "已切换到当前官方公告状态，旧前瞻仅作历史参考。", "en": "Coverage follows current official notices; old previews are historical reference.", "ja": "現行公式告知に合わせ、過去の番組は履歴参考として扱います。"}],
+    firstSteps: [{"zh": "先检查所在地区/服务器、当前活动和卡池结束时间，再规划资源；未核验的代码不列为有效。", "en": "Check your region, server and live event/banner deadlines before budgeting; unverified codes are not active codes.", "ja": "地域、サーバー、開催中イベントとバナー期限を確認してから計画し、未確認コードを有効扱いしません。"}],
     links: [
       { type: 'codes', href: '/zzz/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
       { type: 'characters', href: '/zzz/characters', label: { zh: '角色图鉴', en: 'Characters', ja: 'キャラ' } },
@@ -208,6 +186,7 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       },
     ],
     links: [
+      { type: 'guides', href: '/wuwa/guides/v3-7-hsin-suoming-official-reference', label: { zh: '心 / 锁暝官方资料', en: 'Hsin / Suoming official reference', ja: '心・鎖暝公式資料' } },
       { type: 'guides', href: '/wuwa/guides/v3-7-live-route', label: { zh: '3.7 上线后路线', en: 'v3.7 live route', ja: 'v3.7実装後ルート' } },
       { type: 'guides', href: '/wuwa/events', label: { zh: '活动看板', en: 'Event board', ja: 'イベントボード' } },
       { type: 'banner', href: '/wuwa/guides/banner-schedule-guide', label: { zh: '当前卡池与预算', en: 'Current banner and budget', ja: '現在バナーと予算' } },
@@ -219,40 +198,16 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   starrail: {
     gameId: 'starrail',
-    currentVersion: '4.6 special program watch',
-    releaseDate: '2026-09-21',
-    status: 'watch',
-    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    currentVersion: "4.6 月升之前，与兽共舞",
+    releaseDate: '2026-10-15',
+    dateKind: 'verified',
+    sourceUrls: ['https://sr.mihoyo.com/'],
+    status: 'live',
+    lastUpdatedAt: '2026-10-15',
     sourceTier: 'official',
-    summary: {
-      zh: '4.6 前瞻与直播兑换码成为当前窗口，4.5 进入收尾资源和队伍规划阶段。',
-      en: 'v4.6 special-program and livestream-code demand is now the current window, while v4.5 moves into wrap-up resource and team planning.',
-      ja: 'v4.6前瞻と配信コード需要が現在の注目期間で、v4.5は資源と編成まとめ段階です。',
-    },
-    whatChanged: [
-      {
-        zh: '页面从 4.5 current window 切换为 4.6 special program / code deadline watch。',
-        en: 'The page moves from the v4.5 current window into v4.6 special-program and code-deadline watch.',
-        ja: 'ページをv4.5現在期間からv4.6前瞻 / コード期限watchへ切り替えます。',
-      },
-      {
-        zh: 'Banner、直播码和抽取规划页互相打通，减少用户重复跳转。',
-        en: 'Banner, livestream-code, and pull-planning pages reinforce each other to reduce repeated navigation.',
-        ja: 'バナー、配信コード、抽選計画ページを相互接続し、移動の手間を減らします。',
-      },
-    ],
-    firstSteps: [
-      {
-        zh: '先确认 4.6 直播码是否仍有效，再计算下期目标缺口。',
-        en: 'Check whether v4.6 livestream codes are still valid first, then calculate gaps for next targets.',
-        ja: 'まずv4.6配信コードが有効か確認し、次回目標の不足を計算します。',
-      },
-      {
-        zh: '资源紧张时，只锁定一个 4.6 目标。',
-        en: 'With limited resources, lock one v4.6 target first.',
-        ja: '資源が少ない場合は、v4.6目標を一つに絞ります。',
-      },
-    ],
+    summary: {"zh": "国服官网确认4.6「月升之前，与兽共舞」正式上线。跃迁、活动与奖励按所在服务器的当前公告复核；其他地区不直接套用国服时间。", "en": "The mainland China official site confirms v4.6 is live. Verify warps, events and rewards against your server; do not copy CN timing to other regions.", "ja": "中国本土公式サイトでv4.6の配信を確認。跳躍、イベント、報酬は利用サーバーの告知で確認し、他地域に中国版時刻を流用しません。"},
+    whatChanged: [{"zh": "已切换到当前官方公告状态，旧前瞻仅作历史参考。", "en": "Coverage follows current official notices; old previews are historical reference.", "ja": "現行公式告知に合わせ、過去の番組は履歴参考として扱います。"}],
+    firstSteps: [{"zh": "先检查所在地区/服务器、当前活动和卡池结束时间，再规划资源；未核验的代码不列为有效。", "en": "Check your region, server and live event/banner deadlines before budgeting; unverified codes are not active codes.", "ja": "地域、サーバー、開催中イベントとバナー期限を確認してから計画し、未確認コードを有効扱いしません。"}],
     links: [
       { type: 'banner', href: '/starrail/guides/banner-schedule-guide', label: { zh: '当前/下期跃迁', en: 'Current/next warps', ja: '現在/次回跳躍' } },
       { type: 'codes', href: '/starrail/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
@@ -262,35 +217,16 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   nte: {
     gameId: 'nte',
-    currentVersion: 'September codes / banner calendar',
-    releaseDate: '2026-09-12',
-    status: 'live',
-    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    currentVersion: "1.4 / October 15 CN update",
+    releaseDate: '2026-10-15',
+    dateKind: 'verified',
+    sourceUrls: ['https://yh.wanmei.com/news/gamebroad/20261014/264537.html'],
+    status: 'fresh',
+    lastUpdatedAt: '2026-10-15',
     sourceTier: 'mixed',
-    summary: {
-      zh: '9 月 codes 与 banner calendar 继续更新，重点是 Linko、Hotori、active/expired/unknown codes、redeem path 和来源分层。',
-      en: 'September codes and banner-calendar coverage continues, focusing on Linko, Hotori, active/expired/unknown codes, redeem paths, and source labeling.',
-      ja: '9月コードとバナーカレンダーの更新が続いており、Linko、Hotori、有効/期限切れ/不明コード、交換導線、出典ラベルが中心です。',
-    },
-    whatChanged: [
-      {
-        zh: 'NTE 从泛活动路线改为 codes、banner calendar 和来源等级路线。',
-        en: 'NTE moves from broad event routing into codes, banner calendar, and source-tier routing.',
-        ja: 'NTEは広いイベント導線からコード、バナーカレンダー、出典分類へ移ります。',
-      },
-    ],
-    firstSteps: [
-      {
-        zh: '先区分 active、expired、unknown 兑换码，再看 Linko/Hotori 日历。',
-        en: 'Separate active, expired, and unknown codes first, then review the Linko/Hotori calendar.',
-        ja: 'まず有効、期限切れ、不明コードを分け、その後Linko/Hotoriカレンダーを確認します。',
-      },
-      {
-        zh: '攻略站来源不能直接写成官方日期，页面要保留来源标签。',
-        en: 'Guide-site dates should not become official dates; keep source labels on the page.',
-        ja: '攻略サイトの日付を公式日程として扱わず、ページに出典ラベルを残します。',
-      },
-    ],
+    summary: {"zh": "国服1.4期间10月15日维护公告公布明音凛、弧盘「月的对跖点」、番外剧情及海月羁遇10级。限定窗口至11月5日05:59；不将国服公告外推国际服或断言维护已按时完成。", "en": "The CN October 15 v1.4 notice adds a limited agent, arc, side story and Haiyue bond level 10. The limited window ends November 5 at 05:59; confirm maintenance completion and regional scope.", "ja": "中国版v1.4の10月15日告知に限定キャラ、弧盤、番外物語、海月の絆Lv10を追加。限定期間は11月5日05:59まで。終了告知と地域範囲を確認してください。"},
+    whatChanged: [{"zh": "已切换到当前官方公告状态，旧前瞻仅作历史参考。", "en": "Coverage follows current official notices; old previews are historical reference.", "ja": "現行公式告知に合わせ、過去の番組は履歴参考として扱います。"}],
+    firstSteps: [{"zh": "先检查所在地区/服务器、当前活动和卡池结束时间，再规划资源；未核验的代码不列为有效。", "en": "Check your region, server and live event/banner deadlines before budgeting; unverified codes are not active codes.", "ja": "地域、サーバー、開催中イベントとバナー期限を確認してから計画し、未確認コードを有効扱いしません。"}],
     links: [
       { type: 'download', href: '/nte/download', label: { zh: '下载', en: 'Download', ja: 'DL' } },
       { type: 'codes', href: '/nte/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
@@ -300,40 +236,16 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   genshin: {
     gameId: 'genshin',
-    currentVersion: '7.1 livestream / Luna II watch',
-    releaseDate: '2026-09-21',
-    status: 'watch',
-    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
-    sourceTier: 'mixed',
-    summary: {
-      zh: '公开需求已从 Luna I 上线后转向 7.1 前瞻、Luna II、Snezhnaya、Sandrone、直播码和下期卡池。',
-      en: 'Public demand has shifted from Luna I recap into v7.1 watch, Luna II, Snezhnaya, Sandrone, livestream codes, and next banners.',
-      ja: '公開需要はLuna Iまとめからv7.1注目、Luna II、Snezhnaya、Sandrone、配信コード、次回バナーへ移っています。',
-    },
-    whatChanged: [
-      {
-        zh: '版本页从 Luna I live recap 切到 7.1 livestream / next-version watch。',
-        en: 'The hub moves from Luna I live recap into v7.1 livestream and next-version watch.',
-        ja: '版本ページをLuna Iまとめからv7.1配信 / 次バージョンwatchへ切り替えます。',
-      },
-      {
-        zh: 'Nod-Krai 地图、材料和奖励保留为历史/长尾入口。',
-        en: 'Nod-Krai maps, materials, and rewards remain as history and long-tail routes.',
-        ja: 'Nod-Kraiマップ、素材、報酬は履歴/長尾入口として残します。',
-      },
-    ],
-    firstSteps: [
-      {
-        zh: '先看 7.1 直播码和下期卡池，再回到 Nod-Krai 地图与材料补课。',
-        en: 'Start with v7.1 livestream codes and next banners, then return to Nod-Krai maps and materials for catch-up.',
-        ja: 'まずv7.1配信コードと次回バナーを確認し、その後Nod-Kraiマップと素材へ戻ります。',
-      },
-      {
-        zh: '抽卡前把原石、保底和目标角色优先级排好。',
-        en: 'Before pulling, rank Primogems, pity, and target-character priority.',
-        ja: 'ガチャ前に原石、天井、目標キャラの優先度を整理します。',
-      },
-    ],
+    currentVersion: "7.1 往冥府的安魂歌",
+    releaseDate: '2026-10-15',
+    dateKind: 'verified',
+    sourceUrls: ['https://ys.mihoyo.com/'],
+    status: 'live',
+    lastUpdatedAt: '2026-10-15',
+    sourceTier: 'official',
+    summary: {"zh": "官方确认7.1「往冥府的安魂歌」已上线。先核对当前祈愿、活动期限与剧情入口；不再以待播前瞻或未经确认的直播码安排资源。", "en": "The official site confirms v7.1 is live. Check current wishes, event deadlines and story access; do not plan around a pending preview or unverified codes.", "ja": "公式サイトでv7.1の配信を確認。現在の祈願、イベント期限、物語の入口を確認し、未配信番組や未確認コードを資源計画に使いません。"},
+    whatChanged: [{"zh": "已切换到当前官方公告状态，旧前瞻仅作历史参考。", "en": "Coverage follows current official notices; old previews are historical reference.", "ja": "現行公式告知に合わせ、過去の番組は履歴参考として扱います。"}],
+    firstSteps: [{"zh": "先检查所在地区/服务器、当前活动和卡池结束时间，再规划资源；未核验的代码不列为有效。", "en": "Check your region, server and live event/banner deadlines before budgeting; unverified codes are not active codes.", "ja": "地域、サーバー、開催中イベントとバナー期限を確認してから計画し、未確認コードを有効扱いしません。"}],
     links: [
       { type: 'banner', href: '/genshin/guides/banner-schedule-guide', label: { zh: '当前/下期卡池', en: 'Current/next banners', ja: '現在/次回バナー' } },
       { type: 'codes', href: '/genshin/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },

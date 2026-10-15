@@ -20,16 +20,16 @@ describe('version snapshots', () => {
 
   it('marks the current ZZZ snapshot as the v3.3 special-program window with a v3.2 recap', () => {
     expect(getVersionSnapshot('zzz')).toMatchObject({
-      currentVersion: '3.3 special program / 3.2 recap',
+      currentVersion: '3.3 preview recap / 3.2 live',
       status: 'watch',
-      lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+      lastUpdatedAt: '2026-10-15',
     });
   });
 
   it('uses the 2026-10-09 snapshot batch', () => {
     expect(VERSION_SNAPSHOT_UPDATED_AT).toBe('2026-10-09');
-    expect(getVersionSnapshot('genshin')?.currentVersion).toBe('7.1 livestream / Luna II watch');
-    expect(getVersionSnapshot('starrail')?.currentVersion).toBe('4.6 special program watch');
+    expect(getVersionSnapshot('genshin')?.currentVersion).toBe('7.1 往冥府的安魂歌');
+    expect(getVersionSnapshot('starrail')?.currentVersion).toBe('4.6 月升之前，与兽共舞');
     expect(getVersionSnapshot('endfield')?.currentVersion).toBe('Pioneer Test recap / AIC blueprint');
     expect(getVersionSnapshot('aniimo')?.currentVersion).toBe('S1 逐风启程');
     expect(getVersionSnapshot('roco')?.currentVersion).toBe('Quack Quack Test official watch');

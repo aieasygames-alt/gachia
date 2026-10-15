@@ -18,9 +18,9 @@ const copy = {
     ],
   },
   en: {
-    title: 'Genshin v7.1 Watch',
-    lead: 'A hub for v7.1 watch, Luna II, Snezhnaya, Sandrone, livestream codes, and current and next banners. Confirm live dates, rewards, and banners in official notices and in-game.',
-    highlights: ['v7.1 watch and livestream codes', 'Snezhnaya / Sandrone coverage', 'Current and next banners', 'Nod-Krai maps and materials'],
+    title: 'Genshin v7.1 Live',
+    lead: 'A hub for v7.1 live story, events, and current wishes. Confirm live dates, rewards, and banners in official notices and in-game.',
+    highlights: ['v7.1 live wishes and events', 'Snezhnaya / Sandrone coverage', 'Current and next banners', 'Nod-Krai maps and materials'],
     overview: 'This hub organizes public version information by priority: verify livestream codes and the current banner first, then check materials, weapons, artifacts, and team references for a target character. Unconfirmed mechanics, dates, and rewards are not presented as settled facts.',
     faq: [
       ['What is this version hub for?', 'Start with the v7.1 watch, livestream codes, Snezhnaya / Sandrone, current and next banners, then continue into Nod-Krai maps and materials.'],
@@ -31,10 +31,10 @@ const copy = {
   ja: {
     title: '原神 v7.1 注目',
     lead: 'v7.1、Luna II、Snezhnaya、Sandrone、配信コード、現在と次回バナーを整理します。日程、報酬、バナーは公式告知とゲーム内で確認してください。',
-    highlights: ['v7.1注目と配信コード', 'Snezhnaya / Sandrone 情報', '現在と次回バナー', 'Nod-Krai マップと素材'],
+    highlights: ['v7.1配信中と配信コード', 'Snezhnaya / Sandrone 情報', '現在と次回バナー', 'Nod-Krai マップと素材'],
     overview: 'この特集では公開済みのバージョン情報を優先度順に整理します。まず配信コードと現在バナーを確認し、目標キャラの素材、武器、聖遺物、編成資料へ進んでください。未確認の性能、日程、報酬は確定情報として扱いません。',
     faq: [
-      ['このバージョン特集では何を見ればいいですか？', 'v7.1注目、配信コード、Snezhnaya / Sandrone、現在と次回バナーを先に確認し、その後 Nod-Krai のマップと素材へ進みます。'],
+      ['このバージョン特集では何を見ればいいですか？', 'v7.1配信中、配信コード、Snezhnaya / Sandrone、現在と次回バナーを先に確認し、その後 Nod-Krai のマップと素材へ進みます。'],
       ['Nod-Krai の内容はまだ役立ちますか？', 'はい。マップ、素材、報酬は長期的な検索導線として役立ちますが、直近の計画ではコードとバナーを優先してください。'],
       ['ガチャ前に何を確認すべきですか？', '公式バナーの日程とコード期限を先に確認し、目標キャラ、素材、使える武器、手持ちの不足を見直してください。'],
     ],
