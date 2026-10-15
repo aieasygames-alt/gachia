@@ -636,6 +636,9 @@ releaseButton.addEventListener('click', () => action(releaseButton, async () => 
     for (const gate of summary.items) {
       const item = element('li');
       item.append(element('h4', `${gate.title} · 尚未核验`), element('p', gate.requirement));
+      if (gate.acceptanceChecks) {
+        for (const check of gate.acceptanceChecks) item.append(element('p', `${check.title} · 尚未核验：${check.requirement}`));
+      }
       if (gate.dependsOn.length) item.append(element('p', `前置门禁：${gate.dependsOn.map((id) => summary.items.find((entry) => entry.id === id).title).join('、')}`));
       list.append(item);
     }

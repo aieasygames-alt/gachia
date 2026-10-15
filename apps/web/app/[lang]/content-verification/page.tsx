@@ -32,7 +32,7 @@ export default async function ContentVerificationPage({ params }: { params: Prom
     { label: '绿梦开服核验台', href: '/zh/lvmeng/launch-check', note: '待开服内容：安装、账号、功能解锁、奖励与可发布资料记录。' },
   ];
 
-  return <main className="container mx-auto max-w-5xl px-4 py-10 md:py-14">
+  return <div className="container mx-auto max-w-5xl px-4 py-10 md:py-14">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd({ '@context': 'https://schema.org', '@type': 'WebPage', name: '三游戏内容核验规则', url: `${BASE_URL}/zh/content-verification`, dateModified: UPDATED_AT }) }} />
     <p className="text-sm font-semibold text-game-primary">内容治理 · 最后核验 {UPDATED_AT}</p>
     <h1 className="mt-2 text-3xl font-bold text-game-text md:text-4xl">三游戏内容核验规则</h1>
@@ -52,5 +52,5 @@ export default async function ContentVerificationPage({ params }: { params: Prom
       <h2 className="text-xl font-semibold text-game-text">对应行动页</h2>
       <div className="mt-4 grid gap-4 md:grid-cols-3">{destinations.map((item) => <Link key={item.href} href={item.href as '/'} className="group rounded-lg border border-game-border bg-game-surface p-5 transition-colors hover:border-game-primary"><h3 className="font-semibold text-game-text group-hover:text-game-primary">{item.label}</h3><p className="mt-2 text-sm leading-6 text-game-text-muted">{item.note}</p><p className="mt-4 text-sm font-semibold text-game-primary">进入核验台 <span aria-hidden="true">→</span></p></Link>)}</div>
     </section>
-  </main>;
+  </div>;
 }

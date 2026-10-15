@@ -88,7 +88,7 @@ export function Hi3VersionArchive({ locale }: { locale: SupportedLocale }) {
   }));
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+    <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <nav aria-label="Breadcrumb" className="mb-5 text-sm text-game-text-muted">
         <Link href="/hi3" className="hover:text-game-primary">{GAMES.hi3.name[locale]}</Link><span className="px-1">/</span><span className="text-game-text">{copy.eyebrow}</span>
       </nav>
@@ -125,6 +125,6 @@ export function Hi3VersionArchive({ locale }: { locale: SupportedLocale }) {
         <Link href="/hi3/characters" className="rounded-lg border border-game-border bg-game-surface p-4 text-sm font-medium text-game-text hover:border-game-primary hover:text-game-primary">{copy.characters}</Link>
         <Link href="/hi3/items" className="rounded-lg border border-game-border bg-game-surface p-4 text-sm font-medium text-game-text hover:border-game-primary hover:text-game-primary">{copy.materialIndex}</Link>
       </nav>
-    </main>
+    </div>
   );
 }

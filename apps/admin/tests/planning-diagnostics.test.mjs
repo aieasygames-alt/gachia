@@ -95,3 +95,20 @@ test('invalid package configuration has one explicit input diagnostic and fails 
     assert.equal(plan.gateSummary.counts.verified, 0);
   }
 });
+
+test('build acceptance separates recovery, server body and navigation without granting approval', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'workbench-build-acceptance-'));
+  try {
+    const plan = releasePlan(dir);
+    const checks = plan.gateSummary.items.find(item => item.id === 'build').acceptanceChecks;
+    assert.deepEqual(checks.map(item => item.id), ['input_binding', 'hydration_recovery', 'server_body', 'navigation', 'artifact_budget']);
+    assert.ok(checks.every(item => item.status === 'not_verified'));
+    assert.equal(plan.gateSummary.counts.verified, 0);
+    assert.equal(plan.permissions.publish, false);
+    checks[0].status = 'verified';
+    assert.equal(releasePlan(dir).gateSummary.items.find(item => item.id === 'build').acceptanceChecks[0].status, 'not_verified');
+    const ui = readFileSync(new URL('../public/app.js', import.meta.url), 'utf8');
+    assert.match(ui, /gate\.acceptanceChecks/);
+    assert.match(ui, /check\.requirement/);
+  } finally { rmSync(dir, { recursive: true, force: true }); }
+});

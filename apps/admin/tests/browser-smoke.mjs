@@ -150,6 +150,12 @@ try {
     await page.waitForFunction(() => Array.from(document.querySelectorAll('pre')).some((item) => item.textContent.includes('planning_only_not_release_ready')));
     const release = JSON.parse(await page.locator('.release-plan pre').innerText());
     assert.equal(release.gateSummary.counts.verified, 0);
+    const buildChecks = release.gateSummary.items.find((item) => item.id === 'build').acceptanceChecks;
+    assert.equal(buildChecks.length, 5);
+    assert.ok(buildChecks.every((item) => item.status === 'not_verified'));
+    for (const check of buildChecks) {
+      assert.ok((await page.locator('.release-plan').innerText()).includes(`${check.title} · 尚未核验：`));
+    }
     assert.equal(release.configurationDiagnostics.counts.consistent, 10);
     assert.ok((await page.locator('.release-plan').innerText()).includes('不代表产物存在'));
     assert.equal(await page.locator('.release-plan li').count(), 8);

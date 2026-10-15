@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "package": "next",
+  "version": "15.5.18",
+  "status": "reviewed_candidate_not_production_enabled",
+  "patch": "next-15.5.18-deferred-initial.patch",
+  "patchSha256": "08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c2",
+  "files": [
+    {
+      "path": "dist/client/components/layout-router.js",
+      "originalSha256": "0821f45a91c9e4894d2b8e3f6f2fc5a776a5635d90e90edaf048affbb8ec7be2",
+      "patchedSha256": "0c1ca06f109657d840d520ca1ddf8a94c605ebe1e16ea3eb7ddcb3078eb6a464"
+    },
+    {
+      "path": "dist/client/components/app-router.js",
+      "originalSha256": "40965882017793245be84902100bdfcf8fa23d470288e3c2beed86988125f90f",
+      "patchedSha256": "85b52001d3faabf563e3fd7b4107047f63f9e391bc652848a1011fef2b537d3e"
+    },
+    {
+      "path": "dist/esm/client/components/layout-router.js",
+      "originalSha256": "83c23e6df225a99f2288c4a2c8c2b0b18568f59a4bd4b7b208ac9c618d0292a0",
+      "patchedSha256": "61d2635e7e869b0414e85ff9bc9cd7a4d9deec1a69426f2d62a271b3ae7359c1"
+    },
+    {
+      "path": "dist/esm/client/components/app-router.js",
+      "originalSha256": "21a31be2bf9ecb0057c3f2c26140a3f6afdb2279f34bd3539c1eab8b6323a26e",
+      "patchedSha256": "6a1cc9777a102a77355ae18caa308dd975c4349fa595b6c3911da0f2d16d9fd4"
+    }
+  ],
+  "scope": "Absent-prefetch initialValue only; CJS and ESM layout/head",
+  "acceptanceReport": "reports/workbench/hi3-deferred-runtime-decision-05.json"
+}

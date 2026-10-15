@@ -27,9 +27,9 @@ const WEAPON_DESC: Record<string, Record<string, string>> = {
 
 const WEAPON_INTRO: Record<string, Record<SupportedLocale, string>> = {
   hi3: {
-    zh: '收录朱华、朱华·全燃与跃动火花的版本公告资料，区分拳套、超限拳套与驱动核心。完整效果、超限条件和当前回归支援资格请在客户端确认。',
-    en: 'Browse version-notice entries for Vermillion Liuli, its Full Burn PRI-ARM, and Volatile Sparkler, covering fists, PRI-ARM fists, and Drive Core gear. Verify full effects, PRI-ARM requirements, and returnee eligibility in the client.',
-    ja: '朱華、朱華・全燃、ヴォラタイル・スパークラーの告知資料を収録。拳套、超限拳套、ドライブコアを区別し、全効果、超限条件、復帰資格はゲーム内で確認します。',
+    zh: '收录朱华、朱华·全燃与跃动火花的版本公告资料，公告明确列出跃动火花为 4★ 驱动核心；两把朱华装备的星级与类型沿用资料标签，尚待核实。完整效果、超限条件和当前回归支援资格请在客户端确认。',
+    en: 'Browse version-notice entries for Vermillion Liuli, its Full Burn PRI-ARM, and Volatile Sparkler, The notice identifies Volatile Sparkler as a 4-star Drive Core; rarity and type labels for the two Vermillion entries remain unverified. Verify full effects, PRI-ARM requirements, and returnee eligibility in the client.',
+    ja: '朱華、朱華・全燃、ヴォラタイル・スパークラーの告知資料を収録。告知はヴォラタイル・スパークラーを4★ドライブコアと記載しています。朱華2件のレア度・タイプは既存分類で未確認です。全効果、超限条件、復帰資格はゲーム内で確認します。',
   },
   genshin: {
     zh: '按武器类型、稀有度和适配角色快速浏览原神武器图鉴，适合在配装前先看主词条、特效和毕业选择。',

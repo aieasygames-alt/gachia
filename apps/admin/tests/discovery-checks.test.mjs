@@ -61,3 +61,42 @@ test('discovery rejects non-loopback origins before calling fetch', async () => 
   }
   assert.equal(calls, 0);
 });
+
+test('discovery distinguishes bounded failure categories without leaking response or error text', async () => {
+  const secret = 'SYNTHETIC_PRIVATE_DO_NOT_RECORD';
+  const cases = [
+    ['http_status', async () => new Response(secret, { status: 503 })],
+    ['expected_urlset', async () => new Response(`<sitemapindex>${secret}</sitemapindex>`) ],
+    ['response_too_large', async () => new Response('x'.repeat(8 * 1024 * 1024 + 1))],
+    ['timeout', async () => { throw new DOMException(secret, 'TimeoutError'); }],
+    ['aborted', async () => { throw new DOMException(secret, 'AbortError'); }],
+    ['request_failed', async () => { throw new Error(secret); }],
+    ['body_read_failed', async () => new Response(new ReadableStream({ start(controller) { controller.error(new Error(secret)); } }))],
+  ];
+  for (const [kind, fetcher] of cases) {
+    const checks = await fetchDiscovery('http://127.0.0.1:4318', plan, review, fetcher);
+    const failure = checks.find(c => c.ruleId === 'sitemap.fetch');
+    assert.equal(failure.diagnostic.failureKind, kind);
+    assert.equal(failure.diagnostic.path, '/sitemap.xml');
+    assert.equal(failure.diagnostic.timeoutMs, 30000);
+    assert.ok(failure.diagnostic.elapsedMs >= 0);
+    assert.equal(JSON.stringify(checks).includes(secret), false);
+    assert.equal(checks.some(c => c.ruleId === 'sitemap.membership'), false, 'invalid input must not produce misleading membership checks');
+    if (kind === 'http_status') assert.equal(failure.diagnostic.httpStatus, 503);
+    if (kind === 'response_too_large') assert.ok(failure.diagnostic.bytesRead > failure.diagnostic.byteLimit);
+  }
+});
+
+test('search JSON failures retain safe status and byte observations, valid discovery remains unchanged', async () => {
+  const xml = '<urlset><url><loc>https://gachia.com/zh/hi3</loc></url></urlset>';
+  const checks = await fetchDiscovery('http://127.0.0.1:4318', plan, review, async url =>
+    new Response(url.pathname === '/sitemap.xml' ? xml : 'private invalid json'));
+  const failures = checks.filter(c => c.ruleId === 'search.fetch');
+  assert.equal(failures.length, 3);
+  assert.ok(failures.every(c => c.diagnostic.failureKind === 'invalid_json' && c.diagnostic.httpStatus === 200 && c.diagnostic.bytesRead === 20));
+  assert.equal(JSON.stringify(checks).includes('private invalid json'), false);
+  const data = indexes();
+  const valid = await fetchDiscovery('http://127.0.0.1:4318', plan, review, async url =>
+    new Response(url.pathname === '/sitemap.xml' ? xml : JSON.stringify(data[url.pathname.match(/search-(\w+)\.json/)[1]])));
+  assert.equal(valid.filter(c => c.status === 'failed').length, 0);
+});

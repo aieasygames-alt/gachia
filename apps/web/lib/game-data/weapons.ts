@@ -1,4 +1,5 @@
 import type { GameId, SupportedLocale } from '@gachia/core';
+import { hi3WeaponFieldLabels } from '../hi3-weapon-field-labels';
 
 export interface WeaponListEntry {
   id: string;
@@ -184,13 +185,14 @@ export async function getWeaponListData(
       const mod = await import('@gachia/data/games/hi3/weapons');
       return mod.hi3Weapons.map((weapon) => {
         const effect = mod.getHi3WeaponEffect(weapon, locale);
+        const labels = hi3WeaponFieldLabels(weapon.id, weapon.rank, weapon.weaponTypeEn, locale);
         return {
           id: weapon.id,
           name: mod.getHi3WeaponName(weapon, locale),
           rankGroup: weapon.rank,
-          rankLabel: weapon.rank,
+          rankLabel: labels.rank,
           typeGroup: weapon.weaponTypeEn,
-          typeLabel: weapon.weaponTypeEn,
+          typeLabel: labels.type,
           stats: [weapon.releaseVersion ? `v${weapon.releaseVersion}` : ''].filter(Boolean),
           effectName: effect.name,
           effectDescription: effect.description,
@@ -552,15 +554,16 @@ export async function getWeaponDetailData(
       const effect = mod.getHi3WeaponEffect(weapon, locale);
       const source = mod.getHi3WeaponSource(weapon, locale);
       const name = mod.getHi3WeaponName(weapon, locale);
+      const labels = hi3WeaponFieldLabels(weapon.id, weapon.rank, weapon.weaponTypeEn, locale);
       return {
         gameId,
         id: weapon.id,
         name,
         nameAlt: locale === 'zh' ? weapon.nameEn : weapon.name,
-        rarity: weapon.rank === '5-star' ? 5 : 4,
-        rank: weapon.rank,
+        rarity: labels.rarity,
+        rank: labels.rank,
         infoCards: [
-          { label: statLabel(locale, '武器类型', '武器タイプ', 'Weapon Type'), value: weapon.weaponTypeEn },
+          { label: statLabel(locale, '武器类型', '武器タイプ', 'Weapon Type'), value: labels.type },
           { label: statLabel(locale, '版本', 'バージョン', 'Version'), value: `v${weapon.releaseVersion}` },
         ],
         effectTitle: locale === 'zh' ? '版本公告摘要' : locale === 'ja' ? 'バージョン告知概要' : 'Version notice summary',

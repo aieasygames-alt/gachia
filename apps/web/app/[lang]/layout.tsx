@@ -5,6 +5,7 @@ import { LOCALES, DEFAULT_LOCALE } from '@gachia/core';
 import type { SupportedLocale } from '@gachia/core';
 import { SiteHeader } from '@/components/layout/site-header';
 import { SiteFooter } from '@/components/layout/site-footer';
+import { MainContentBoundary } from '@/components/layout/main-content-boundary';
 import zhMessages from '@/messages/zh.json';
 import enMessages from '@/messages/en.json';
 import jaMessages from '@/messages/ja.json';
@@ -69,7 +70,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <div className="flex min-h-screen flex-col">
             <SiteHeader locale={locale} />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1"><MainContentBoundary>{children}</MainContentBoundary></main>
             <SiteFooter locale={locale} />
           </div>
         </NextIntlClientProvider>

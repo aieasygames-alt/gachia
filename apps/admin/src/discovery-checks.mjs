@@ -36,25 +36,57 @@ export async function fetchDiscovery(origin, plan, review, fetcher = fetch) {
     throw new Error('Explicit loopback preview origin required');
   }
   const load = async (path) => {
-    const response = await fetcher(new URL(path, origin), { redirect: 'error', signal: AbortSignal.timeout(30000) });
-    if (response.status !== 200) throw new Error('Unexpected status');
-    let size = 0; const chunks = [];
-    for await (const chunk of response.body) {
-      size += chunk.length;
-      if (size > 8 * 1024 * 1024) throw new Error('Response budget exceeded');
-      chunks.push(chunk);
+    const started = performance.now();
+    const signal = AbortSignal.timeout(30000);
+    const observation = { path, timeoutMs: 30000, byteLimit: 8 * 1024 * 1024, bytesRead: 0 };
+    let phase = 'request';
+    try {
+      const response = await fetcher(new URL(path, origin), { redirect: 'error', signal });
+      observation.httpStatus = response.status;
+      if (response.status !== 200) {
+        observation.failureKind = 'http_status';
+        await response.body?.cancel();
+        throw new Error('Unexpected status');
+      }
+      phase = 'body';
+      const chunks = [];
+      for await (const chunk of response.body) {
+        observation.bytesRead += chunk.length;
+        if (observation.bytesRead > observation.byteLimit) {
+          observation.failureKind = 'response_too_large';
+          throw new Error('Response budget exceeded');
+        }
+        chunks.push(chunk);
+      }
+      observation.elapsedMs = Math.round(performance.now() - started);
+      return { text: Buffer.concat(chunks).toString('utf8'), observation };
+    } catch (error) {
+      observation.elapsedMs = Math.round(performance.now() - started);
+      observation.failureKind ??= signal.aborted || error?.name === 'TimeoutError' ? 'timeout' :
+        error?.name === 'AbortError' ? 'aborted' : phase === 'body' ? 'body_read_failed' : 'request_failed';
+      // Never persist response bodies, headers, redirect targets, or arbitrary error text.
+      throw Object.assign(new Error('Local discovery failed'), { observation });
     }
-    return Buffer.concat(chunks).toString('utf8');
   };
   const checks = []; let sitemap; const indexes = {};
   try {
-    sitemap = await load('/sitemap.xml');
-    if (!/<urlset(?:\s|>)/.test(sitemap)) throw new Error('Expected sitemap urlset');
-  } catch { checks.push({ ruleId: 'sitemap.fetch', status: 'failed', message: 'sitemap 请求失败、超时、超限或不是 urlset；不自动跟随索引或重定向' }); }
+    const loaded = await load('/sitemap.xml');
+    if (!/<urlset(?:\s|>)/.test(loaded.text)) {
+      throw Object.assign(new Error('Expected sitemap urlset'), { observation: { ...loaded.observation, failureKind: 'expected_urlset' } });
+    }
+    sitemap = loaded.text;
+  } catch (error) { checks.push({ ruleId: 'sitemap.fetch', status: 'failed', diagnostic: error.observation,
+    message: 'sitemap 请求失败、超时、超限或不是 urlset；不自动跟随索引或重定向' }); }
   const hasSearchChanges = plan.changes.some((change) => Object.hasOwn(categories, change.dataset));
   if (hasSearchChanges) for (const locale of ['zh', 'en', 'ja']) {
-    try { indexes[locale] = JSON.parse(await load(`/data-manifest/search-${locale}.json`)); }
-    catch { checks.push({ ruleId: 'search.fetch', locale, status: 'failed', message: '搜索索引请求失败或数据无效' }); }
+    let observation;
+    try {
+      const loaded = await load(`/data-manifest/search-${locale}.json`);
+      observation = loaded.observation;
+      indexes[locale] = JSON.parse(loaded.text);
+    }
+    catch (error) { checks.push({ ruleId: 'search.fetch', locale, status: 'failed',
+      diagnostic: error.observation ?? { ...observation, failureKind: 'invalid_json' }, message: '搜索索引请求失败或数据无效' }); }
   }
   const evaluated = checkDiscovery(plan, review, sitemap ?? '', indexes);
   return [...checks, ...evaluated.filter((check) => sitemap !== undefined || check.ruleId !== 'sitemap.membership')];

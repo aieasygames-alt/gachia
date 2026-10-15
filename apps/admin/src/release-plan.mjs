@@ -14,9 +14,20 @@ const gateDefinitions = [
   ['reconciliation', '线上版本对账与回滚验收', ['release'], '上线后核对真实版本与路由，按独立授权核验失败处理和回滚。'],
 ];
 
+const buildAcceptanceChecks = [
+  ['input_binding', '输入与制品绑定', '明确提交、内容审核、依赖、工具链和产物摘要；历史构建不自动覆盖当前对象。'],
+  ['hydration_recovery', '水合与阻塞恢复', '真实阻塞条件、原始错误、恢复交互及重试活动均需核验；没有报错不等于水合完成。'],
+  ['server_body', '服务端正文保留', '同URL、语言、视口、JavaScript策略和User-Agent对照正文；减少重试不能以丢失正文为代价。'],
+  ['navigation', '搜索与详情导航', '弹窗内明确关键词、精确同语言目标、详情正文和关闭焦点恢复；不得用背景链接代替搜索结果。'],
+  ['artifact_budget', 'Worker与公共资源', '实际最终Worker测量与资源摘要、平台限额和共享影响均需核对；目录大小不等于上传包体。'],
+];
+
 function gateSummary(inputs) {
   const items = gateDefinitions.map(([id, title, dependsOn, requirement]) => ({ id, title, dependsOn, requirement,
-    status: 'not_verified', reason: '本接口未采集该门禁的当前验收证据；不判定为失败，也不判定为通过。' }));
+    status: 'not_verified', reason: '本接口未采集该门禁的当前验收证据；不判定为失败，也不判定为通过。',
+    ...(id === 'build' ? { acceptanceChecks: buildAcceptanceChecks.map(([checkId, checkTitle, checkRequirement]) => ({
+      id: checkId, title: checkTitle, requirement: checkRequirement, status: 'not_verified',
+    })) } : {}) }));
   return { version: 1, result: 'not_assessed_not_release_ready',
     scope: 'fixed_gate_requirements_and_configuration_observation_only',
     currentAcceptanceVerified: false,
