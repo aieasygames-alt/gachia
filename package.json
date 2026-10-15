@@ -29,6 +29,9 @@
   },
   "packageManager": "pnpm@10.10.0",
   "pnpm": {
+    "patchedDependencies": {
+      "next@15.5.18": "patches/next-15.5.18-deferred-initial.patch"
+    },
     "onlyBuiltDependencies": [
       "@swc/core",
       "esbuild",

@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { signIn } from '@/lib/auth-client';
+import { isolateModalBackground, isActiveModal } from '@/lib/modal-background';
 
 interface AuthDialogProps {
   open: boolean;
@@ -10,36 +11,78 @@ interface AuthDialogProps {
 
 export function AuthDialog({ open, onClose }: AuthDialogProps) {
   const [loading, setLoading] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const attempt = useRef(0);
+  const pending = useRef(false);
+  const overlay = useRef<HTMLDivElement>(null);
+  const close = useRef(onClose);
+  useEffect(() => { close.current = onClose; }, [onClose]);
+  useEffect(() => {
+    attempt.current++;
+    pending.current = false;
+    setLoading(false);
+    setFailed(false);
+    return () => { attempt.current++; pending.current = false; };
+  }, [open]);
+  useEffect(() => {
+    if (!open || !overlay.current) return;
+    const previous = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const restore = isolateModalBackground(overlay.current);
+    overlay.current.querySelector<HTMLButtonElement>('button')?.focus();
+    const keyboard = (event: KeyboardEvent) => {
+      if (event.isComposing || !overlay.current || !isActiveModal(overlay.current)) return;
+      if (event.key === 'Escape') { event.preventDefault(); close.current(); }
+      if (event.key === 'Tab') {
+        const buttons = Array.from(overlay.current?.querySelectorAll<HTMLButtonElement>('button:not(:disabled)') ?? []);
+        const first = buttons[0]; const last = buttons.at(-1);
+        if (first && last && (!overlay.current?.contains(document.activeElement) || document.activeElement === (event.shiftKey ? first : last))) {
+          event.preventDefault(); (event.shiftKey ? last : first).focus();
+        }
+      }
+    };
+    window.addEventListener('keydown', keyboard);
+    return () => { window.removeEventListener('keydown', keyboard); restore(); if (previous?.isConnected) previous.focus(); };
+  }, [open]);
 
   if (!open) return null;
 
   async function handleGoogleSignIn() {
+    if (!open || pending.current) return;
+    pending.current = true;
+    const request = ++attempt.current;
     setLoading(true);
+    setFailed(false);
     try {
-      await signIn.social({
+      const result = await signIn.social({
         provider: 'google',
         callbackURL: '/',
       });
+      if (request === attempt.current && result?.error) setFailed(true);
     } catch {
-      setLoading(false);
+      if (request === attempt.current) setFailed(true);
+    } finally {
+      if (request === attempt.current) { pending.current = false; setLoading(false); }
     }
   }
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center">
+    <div ref={overlay} className="fixed inset-0 z-[100] flex items-center justify-center">
       {/* Backdrop */}
       <div className="absolute inset-0 bg-black/50" onClick={onClose} />
 
       {/* Dialog */}
-      <div className="relative z-10 w-full max-w-sm rounded-xl border border-game-border bg-game-surface p-6 shadow-2xl">
+      <div role="dialog" aria-modal="true" aria-label="登录 Gachia" className="relative z-10 w-full max-w-sm rounded-xl border border-game-border bg-game-surface p-6 shadow-2xl">
         <button
           onClick={onClose}
+          aria-label="关闭 / Close / 閉じる"
           className="absolute right-3 top-3 text-game-text-muted hover:text-game-text"
         >
           <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
+
+        {failed && <p role="alert" className="mt-3 text-sm text-game-text-muted">登录未完成，请重试。 / Sign-in did not complete. Please retry. / ログインが完了しませんでした。再試行してください。</p>}
 
         <h2 className="mb-1 text-lg font-semibold text-game-text">登录 Gachia</h2>
         <p className="mb-6 text-sm text-game-text-muted">

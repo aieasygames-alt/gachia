@@ -1,0 +1,58 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
+import { mkdtempSync, writeFileSync, mkdirSync, symlinkSync, rmSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { tmpdir } from 'node:os';
+import { baselineInventory } from '../src/baseline-inventory.mjs';
+
+test('baseline inventory preserves rename paths, separates reports and never follows symlinks or stages', (t) => {
+  const parent = mkdtempSync(join(tmpdir(), 'gachia-inventory-')); const root = join(parent, 'repo '); mkdirSync(root);
+  t.after(() => rmSync(parent, { recursive: true, force: true }));
+  const git = (...args) => execFileSync('git', ['-C', root, ...args], { encoding: 'utf8' });
+  git('init', '-q'); git('config', 'user.name', 'Fixture'); git('config', 'user.email', 'fixture@example.invalid');
+  writeFileSync(join(root, 'original.txt'), 'fixture'); git('add', '.'); git('commit', '-qm', 'fixture');
+  git('mv', 'original.txt', 'renamed space.txt');
+  mkdirSync(join(root, 'reports')); writeFileSync(join(root, 'reports/result.json'), '{"passed":true}');
+  writeFileSync(join(root, 'large.txt'), '123456789'); symlinkSync('large.txt', join(root, 'link.txt'));
+  const before = git('status', '--porcelain=v1', '-z', '--untracked-files=all');
+  const report = baselineInventory(root, { maxBytes: 8 });
+  assert.equal(report.files.find((item) => item.path === 'renamed space.txt').originalPath, 'original.txt');
+  assert.equal(report.files.find((item) => item.path === 'link.txt').observation, 'missing_or_unsafe_or_unreadable');
+  assert.equal(report.files.find((item) => item.path === 'large.txt').observation, 'byte_budget_exceeded');
+  assert.equal(report.files.find((item) => item.path === 'reports/result.json').category, 'historical_report_not_acceptance');
+  assert.ok(report.files.every((item) => item.reviewStatus === 'not_reviewed'));
+  assert.ok(Object.values(report.permissions).every((value) => value === false));
+  assert.equal(report.consistency, 'two_git_observations_match_not_atomic');
+  assert.equal(git('status', '--porcelain=v1', '-z', '--untracked-files=all'), before);
+  assert.equal(readFileSync(join(root, 'renamed space.txt'), 'utf8'), 'fixture');
+  const bounded = baselineInventory(root, { maxFiles: 1 });
+  assert.equal(bounded.truncated, true); assert.equal(bounded.listedChanges, 1); assert.equal(bounded.observedChanges, 4);
+});
+
+test('inventory distinguishes deletions, staged bytes and JSON data from data package code', (t) => {
+  const root = mkdtempSync(join(tmpdir(), 'gachia-inventory-boundary-')); t.after(() => rmSync(root, { recursive: true, force: true }));
+  const git = (...args) => execFileSync('git', ['-C', root, ...args], { encoding: 'utf8' });
+  git('init', '-q'); git('config', 'user.name', 'Fixture'); git('config', 'user.email', 'fixture@example.invalid');
+  writeFileSync(join(root, 'deleted.txt'), 'old'); writeFileSync(join(root, 'modified.txt'), 'old');
+  git('add', '.'); git('commit', '-qm', 'fixture');
+  rmSync(join(root, 'deleted.txt')); writeFileSync(join(root, 'modified.txt'), 'staged'); git('add', 'modified.txt');
+  writeFileSync(join(root, 'modified.txt'), 'worktree');
+  mkdirSync(join(root, 'packages/data/games/hi3'), { recursive: true });
+  writeFileSync(join(root, 'packages/data/games/hi3/raw-weapons.json'), '[]');
+  writeFileSync(join(root, 'packages/data/games/hi3/weapons.ts'), 'export {};');
+  writeFileSync(join(root, 'newline\nfile.txt'), 'fixture');
+  execFileSync('mkfifo', [join(root, 'pipe')]);
+  const report = baselineInventory(root, { maxBytes: 8 });
+  assert.equal(report.version, 2);
+  assert.equal(report.files.find((item) => item.path === 'deleted.txt').observation, 'deleted_no_worktree_bytes');
+  const modified = report.files.find((item) => item.path === 'modified.txt');
+  assert.equal(modified.indexStatus, 'M'); assert.equal(modified.worktreeStatus, 'M');
+  assert.equal(modified.bytes, 8); assert.equal(git('show', ':modified.txt'), 'staged');
+  assert.equal(report.files.find((item) => item.path.endsWith('weapons.ts')).category, 'code_or_other_requires_review');
+  assert.equal(report.files.find((item) => item.path.endsWith('raw-weapons.json')).category, 'content_data');
+  assert.ok(report.files.some((item) => item.path === 'newline\nfile.txt'));
+  assert.equal(report.files.find((item) => item.path === 'pipe')?.digest, undefined);
+  assert.equal(report.byteCoverage.deleted, 1);
+  assert.equal(report.byteCoverage.hashed + report.byteCoverage.deleted + report.byteCoverage.notHashed, report.listedChanges);
+});

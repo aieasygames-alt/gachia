@@ -10,6 +10,8 @@ interface Env {
   LVMENG_SITE?: Fetcher;
   LVMENG_ENABLED?: string;
   PREVIEW_MODE?: string;
+  HI3_READING_SITE?: Fetcher;
+  HI3_READING_ENABLED?: string;
   AZUR_PROMILIA_CANARY_COOKIE?: string;
   GENSHIN_CANARY_COOKIE?: string;
   GENSHIN_CANARY_TOKEN?: string;
@@ -17,6 +19,7 @@ interface Env {
 }
 
 import { GENERATED_GAME_DEPLOYMENTS } from './generated-game-deployments';
+import { useHi3Reading } from './hi3-reading-policy';
 
 const LOCALES = new Set(['zh', 'en', 'ja']);
 const NTE_PAGES = new Set(['characters', 'guides', 'weapons', 'redeem-codes', 'version', 'items', 'disk-sets', 'tier-list', 'download', 'gacha', 'anomalies', 'build', 'teams', 'compare', 'calculator', 'events', 'merchant', 'map']);
@@ -180,6 +183,24 @@ export default {
 
     // This remains false until preview and SEO parity checks have passed.
     // Falling back preserves all current production behavior and URLs.
+    if (useHi3Reading(request, { previewMode: env.PREVIEW_MODE, enabled: env.HI3_READING_ENABLED })) {
+      if (!env.HI3_READING_SITE) {
+        return new Response('Reading preview unavailable', { status: 503,
+          headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'no-store', 'x-robots-tag': 'noindex' } });
+      }
+      // Do not silently fall back to a different content version if the selected preview fails.
+      try {
+        const response = await fetchWithRouteMarker(env.HI3_READING_SITE, request, 'hi3-reading-preview');
+        const headers = new Headers(response.headers);
+        headers.set('x-robots-tag', 'noindex, nofollow');
+        headers.set('cache-control', 'no-store');
+        return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
+      } catch {
+        return new Response('Reading preview unavailable', { status: 503,
+          headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'no-store', 'x-robots-tag': 'noindex' } });
+      }
+    }
+
     if (env.NTE_SITE && env.NTE_ENABLED !== 'false' && isNteRequest(url.pathname)) {
       return fetchWithRouteMarker(env.NTE_SITE, requestForNteWorker(request), 'nte');
     }

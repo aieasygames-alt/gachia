@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '@/lib/jsonld-script';
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import type { GearSetListEntry, ItemListEntry } from '@/lib/game-data/items';
@@ -209,27 +210,27 @@ export default async function ItemsPage({
 
   if (gameId === 'genshin') {
     const content = await GenshinItemsPage({ locale, gameId });
-    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} /></>;
   }
 
   if (gameId === 'starrail') {
     const content = await StarRailItemsPage({ locale, gameId });
-    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} /></>;
   }
 
   if (gameId === 'nte') {
     const content = await NteItemsPage({ locale, gameId });
-    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} /></>;
   }
 
   if (gameId === 'wuwa') {
     const content = await WuWaItemsPage({ locale, gameId });
-    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} /></>;
   }
 
   if (gameId === 'zzz') {
     const content = await ZzzItemsPage({ locale, gameId });
-    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} /></>;
   }
 
   if (gameId === 'hi3') {
@@ -251,39 +252,39 @@ export default async function ItemsPage({
           <Link href="/hi3/version">{{ zh: '版本档案', en: 'Version archive', ja: 'バージョン資料' }[locale]}</Link>
           <Link href="/hi3/guides/v9-0-resource-returnee-checklist">{{ zh: '资源与回归核对', en: 'Resource and returnee checks', ja: '資源・復帰チェック' }[locale]}</Link>
         </nav>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} />
       </div>
     );
   }
 
   if (gameId === 'ananta') {
     const content = await AnantaItemsPage({ locale, gameId });
-    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} /></>;
   }
 
   if (gameId === 'guihuan') {
     const content = await GuihuanItemsPage({ locale, gameId });
-    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} /></>;
   }
 
   if (gameId === 'endfield') {
     const content = await EndfieldItemsPage({ locale, gameId });
-    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} /></>;
   }
 
   if (gameId === 'sea') {
     const content = await SeaItemsPage({ locale, gameId });
-    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} /></>;
   }
 
   if (gameId === 'skjh') {
     const content = await SkjhItemsPage({ locale, gameId });
-    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} /></>;
   }
 
   if (gameId === 'roco-cn') {
     const content = await RocoCnItemsPage({ locale, gameId });
-    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></>;
+    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} /></>;
   }
 
   return (

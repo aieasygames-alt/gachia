@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '@/lib/jsonld-script';
 import { CATEGORY_LABELS, GAMES, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { notFound } from 'next/navigation';
@@ -1735,8 +1736,8 @@ export default async function VersionHubPage({
 
   return (
     <div>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqJsonLd) }} />
       <section className="mb-8 rounded-2xl border border-game-border bg-game-surface p-6 shadow-lg">
         <div className="mb-4 flex flex-wrap items-center gap-2">
           <span className="rounded-full bg-game-surface-alt px-3 py-1 text-xs font-medium text-game-primary">

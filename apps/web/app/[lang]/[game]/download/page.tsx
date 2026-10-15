@@ -604,7 +604,7 @@ export default async function DownloadPage({
   const gameName = gameConfig.name[locale];
 
   return (
-    <main className="space-y-8">
+    <div className="space-y-8">
       <section className="overflow-hidden rounded-3xl border border-game-border bg-game-surface p-6 shadow-xl shadow-black/10 md:p-8">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
@@ -714,7 +714,7 @@ export default async function DownloadPage({
           ))}
         </div>
       </section>
-    </main>
+    </div>
   );
 }
 

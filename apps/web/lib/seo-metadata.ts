@@ -41,8 +41,8 @@ export function generateSocialMetadata(config: SocialMetadata): Metadata {
       description,
       images: images.map((url) => ({
         url,
-        width: 1200,
-        height: 630,
+        width: url === '/images/og/hi3.webp' ? 1024 : 1200,
+        height: url === '/images/og/hi3.webp' ? 1024 : 630,
         alt: imageAlt,
       })),
       type: 'website',

@@ -1,8 +1,13 @@
 'use client';
 
+import { hi3WeaponSearchScope } from '@/lib/hi3-weapon-scope';
+
 import { useState, useEffect, useMemo, useRef } from 'react';
 import type { SupportedLocale, GameId } from '@gachia/core';
 import { isBlockedNoiseQuery } from '@/lib/keyword-governance';
+import { loadSearchDataset, type SearchDataset } from '@/lib/search-dataset';
+import { isolateModalBackground, isActiveModal } from '@/lib/modal-background';
+import { moveSearchFocus } from '@/lib/search-keyboard';
 
 interface SearchItem {
   id: string;
@@ -47,28 +52,6 @@ const TYPE_ORDER: Record<SearchType, number> = {
   item: 3,
 };
 
-type SearchDataset = {
-  characters?: Array<{ id: string; name: string; nameAlt: string }>;
-  weapons?: Array<{ id: string; name: string; nameAlt: string }>;
-  items?: Array<{ id: string; name: string; nameAlt: string }>;
-  artifacts?: Array<{ id: string; name: string; nameAlt: string }>;
-};
-
-const datasetCache = new Map<SupportedLocale, Promise<Partial<Record<string, SearchDataset>>>>();
-
-function loadDataset(locale: SupportedLocale): Promise<Partial<Record<string, SearchDataset>>> {
-  const cached = datasetCache.get(locale);
-  if (cached) return cached;
-
-  const promise = fetch(`/data-manifest/search-${locale}.json`)
-    .then(async (response) => {
-      if (!response.ok) throw new Error(`Search index request failed: ${response.status}`);
-      return response.json() as Promise<Partial<Record<string, SearchDataset>>>;
-    });
-  datasetCache.set(locale, promise);
-  return promise;
-}
-
 // Search data is kept in a generated static index so this client component
 // never imports full game records or server-only loaders.
 
@@ -79,12 +62,19 @@ export function SearchDialog({ locale, open, onClose }: {
 }) {
   const [query, setQuery] = useState('');
   const [index, setIndex] = useState<SearchItem[]>([]);
+  const [loadState, setLoadState] = useState<'loading' | 'ready' | 'failed'>('loading');
+  const [attempt, setAttempt] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
+  const closeRef = useRef(onClose);
+  useEffect(() => { closeRef.current = onClose; }, [onClose]);
 
   useEffect(() => {
     if (!open) return;
     let cancelled = false;
-    loadDataset(locale)
+    setLoadState('loading'); setIndex([]);
+    loadSearchDataset(locale)
       .then((datasets) => {
         if (cancelled) return;
         const items: SearchItem[] = [];
@@ -104,25 +94,40 @@ export function SearchDialog({ locale, open, onClose }: {
           }
         }
         setIndex(items);
+        setLoadState('ready');
       })
-      .catch((error) => {
-        console.error('Failed to build search index', error);
+      .catch(() => {
+        if (cancelled) return;
         setIndex([]);
+        setLoadState('failed');
       });
     return () => { cancelled = true; };
-  }, [open, locale]);
+  }, [open, locale, attempt]);
 
   useEffect(() => {
-    if (open && inputRef.current) inputRef.current.focus();
     if (!open) { setQuery(''); }
   }, [open]);
 
   useEffect(() => {
     if (!open) return;
-    const handleKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    const previous = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const restoreBackground = overlayRef.current ? isolateModalBackground(overlayRef.current) : () => {};
+    inputRef.current?.focus();
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.isComposing || !overlayRef.current || !isActiveModal(overlayRef.current)) return;
+      if (e.key === 'Escape') { e.preventDefault(); closeRef.current(); return; }
+      if (dialogRef.current && inputRef.current && moveSearchFocus(e, dialogRef.current, inputRef.current)) return;
+      if (e.key !== 'Tab') return;
+      const targets = Array.from(dialogRef.current?.querySelectorAll<HTMLElement>('input, a[href], button:not(:disabled)') ?? []);
+      const first = targets[0]; const last = targets.at(-1);
+      if (!first || !last) return;
+      if (!dialogRef.current?.contains(document.activeElement) || (e.shiftKey ? document.activeElement === first : document.activeElement === last)) {
+        e.preventDefault(); (e.shiftKey ? last : first).focus();
+      }
+    };
     window.addEventListener('keydown', handleKey);
-    return () => window.removeEventListener('keydown', handleKey);
-  }, [open, onClose]);
+    return () => { window.removeEventListener('keydown', handleKey); restoreBackground(); if (previous?.isConnected) previous.focus(); };
+  }, [open]);
 
   const results = useMemo(() => {
     if (!query.trim()) return [];
@@ -144,11 +149,11 @@ export function SearchDialog({ locale, open, onClose }: {
   const blockedNoiseQuery = isBlockedNoiseQuery(query);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center pt-[15vh]" onClick={(e) => {
+    <div ref={overlayRef} className="fixed inset-0 z-50 flex items-start justify-center pt-[15vh]" onClick={(e) => {
       if (e.target === e.currentTarget) onClose();
     }}>
-      <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" />
-      <div className="relative z-10 w-full max-w-2xl rounded-xl border border-game-border bg-game-surface shadow-2xl" role="dialog" aria-modal="true">
+      <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} aria-hidden="true" />
+      <div ref={dialogRef} className="relative z-10 min-w-0 w-full max-w-2xl rounded-xl border border-game-border bg-game-surface shadow-2xl" role="dialog" aria-modal="true" aria-label={locale === 'zh' ? '搜索' : locale === 'ja' ? '検索' : 'Search'}>
         <div className="flex items-center gap-3 border-b border-game-border px-4 py-3">
           <svg className="h-5 w-5 shrink-0 text-game-text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -156,31 +161,41 @@ export function SearchDialog({ locale, open, onClose }: {
           <input
             ref={inputRef}
             type="text"
+            aria-label={locale === 'zh' ? '搜索关键词' : locale === 'ja' ? '検索キーワード' : 'Search query'}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={t(locale, '搜索角色、武器、材料...', 'Search characters, weapons, items...')}
-            className="flex-1 bg-transparent text-game-text placeholder-game-text-muted/50 outline-none text-sm"
+            className="min-w-0 flex-1 bg-transparent text-game-text placeholder-game-text-muted/50 outline-none text-sm"
           />
           <kbd className="hidden sm:inline-block rounded border border-game-border bg-game-surface-alt px-1.5 py-0.5 text-[10px] text-game-text-muted">ESC</kbd>
         </div>
 
         <div className="max-h-[60vh] overflow-y-auto p-2">
-          {query.trim() && results.length === 0 && (
-            <div className="px-4 py-8 text-center text-sm text-game-text-muted">
+          {loadState === 'loading' && <p role="status" className="px-4 py-8 text-center text-sm text-game-text-muted">{locale === 'zh' ? '正在加载搜索索引…' : locale === 'ja' ? '検索データを読み込み中…' : 'Loading search index…'}</p>}
+          {loadState === 'failed' && <div role="alert" className="px-4 py-8 text-center text-sm text-game-text-muted">
+            <p>{locale === 'zh' ? '搜索暂不可用，请重试。' : locale === 'ja' ? '検索を利用できません。再試行してください。' : 'Search is unavailable. Please retry.'}</p>
+            <button className="mt-3 rounded border border-game-border px-4 py-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-game-primary" onClick={() => { inputRef.current?.focus(); setAttempt((value) => value + 1); }}>{locale === 'zh' ? '重试' : locale === 'ja' ? '再試行' : 'Retry'}</button>
+          </div>}
+          {loadState === 'ready' && query.trim() && results.length === 0 && (
+            <div role="status" aria-live="polite" aria-atomic="true" className="px-4 py-8 text-center text-sm text-game-text-muted">
               {blockedNoiseQuery
                 ? t(locale, '搜索只承接官方资料、攻略、角色、装备、材料和健康玩法意图。', 'Search only supports official data, guides, characters, gear, materials, and safe gameplay intent.')
-                : t(locale, '未找到相关结果', 'No results found')}
+                : locale === 'ja' ? '該当する結果がありません' : t(locale, '未找到相关结果', 'No results found')}
             </div>
           )}
+          {loadState === 'ready' && results.length > 0 && <p role="status" aria-live="polite" aria-atomic="true" className="px-4 py-2 text-xs text-game-text-muted">
+            {locale === 'zh' ? `显示 ${results.length} 条结果（最多30条）。上下键移动，Enter打开。` : locale === 'ja' ? `${results.length}件の結果を表示（最大30件）。上下キーで移動、Enterで開きます。` : `Showing ${results.length} results (up to 30). Use arrow keys to move, Enter to open.`}
+          </p>}
           {results.map((r) => (
             <a
               key={r.id}
+              data-search-result
               href={`/${lang}${r.url}`}
               onClick={onClose}
-              className="block rounded-lg px-4 py-3 transition-colors hover:bg-game-surface-alt"
+              className="block rounded-lg px-4 py-3 transition-colors hover:bg-game-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-game-primary"
             >
               <div className="flex items-center gap-2">
-                <span className="text-sm font-medium text-game-text">{r.name}</span>
+                <span className="min-w-0 break-words text-sm font-medium text-game-text">{r.name}</span>
                 <span className="rounded bg-game-primary/10 px-1.5 py-0.5 text-[10px] text-game-primary">
                   {GAME_NAMES[r.gameId]?.[locale] ?? r.gameId}
                 </span>
@@ -191,6 +206,7 @@ export function SearchDialog({ locale, open, onClose }: {
               {r.nameAlt && (
                 <p className="mt-0.5 text-xs text-game-text-muted">{r.nameAlt}</p>
               )}
+              {r.gameId === 'hi3' && r.type === 'weapon' && <p data-hi3-weapon-search-scope className="mt-1 text-xs text-game-text-muted">{hi3WeaponSearchScope[locale]}</p>}
             </a>
           ))}
         </div>

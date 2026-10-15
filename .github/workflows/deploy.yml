@@ -1,4 +1,4 @@
-name: Build, Verify & Deploy
+name: Verify & Main Worker Release
 
 on:
   push:
@@ -6,15 +6,50 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      release_target:
+        description: 'Explicit main Worker release scope (production first validates staging)'
+        type: choice
+        options: [verify, staging, production]
+        default: verify
+      production_confirmation:
+        description: 'Production only: enter RELEASE_MAIN_ONLY'
+        type: string
+        default: ''
+      rollback_version:
+        description: 'Production only: previously active main Worker version UUID, verified by operator'
+        type: string
+        default: ''
+
+permissions:
+  contents: read
 
 concurrency:
-  group: gachia-${{ github.event_name == 'push' && 'production' || github.ref }}
-  cancel-in-progress: true
+  # Serialize releases across refs; never interrupt a deployment in progress.
+  group: gachia-${{ github.event_name == 'workflow_dispatch' && inputs.release_target != 'verify' && 'main-release' || github.ref }}
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      web-artifact-id: ${{ steps.web-artifact.outputs.artifact-id }}
+      web-artifact-sha256: ${{ steps.seal-web.outputs.sha256 }}
     steps:
+      - name: Validate explicit release request
+        env:
+          RELEASE_TARGET: ${{ inputs.release_target }}
+          CONFIRMATION: ${{ inputs.production_confirmation }}
+          ROLLBACK_VERSION: ${{ inputs.rollback_version }}
+          RELEASE_REF: ${{ github.ref }}
+        run: |
+          set -euo pipefail
+          if [ "$RELEASE_TARGET" = 'production' ]; then
+            test "$RELEASE_REF" = 'refs/heads/main'
+            test "$CONFIRMATION" = 'RELEASE_MAIN_ONLY'
+            [[ "$ROLLBACK_VERSION" =~ ^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$ ]]
+          fi
+
       - uses: actions/checkout@v7.0.0
 
       - uses: pnpm/action-setup@v6.0.9
@@ -25,6 +60,9 @@ jobs:
           cache: pnpm
 
       - run: pnpm install --frozen-lockfile
+
+      - name: Verify pinned Next hydration patch
+        run: node scripts/verify-next-deferred-patch.mjs --require-patched
 
       - name: Type Check
         run: pnpm type-check
@@ -91,9 +129,31 @@ jobs:
       - name: Validate llms.txt
         run: node scripts/validate-llms-route.mjs
 
+      - name: Verify self-contained web artifact
+        run: node scripts/verify-worker-artifact.mjs apps/web/.open-next
+
+      # Tar preserves hidden compiled config and pnpm symlinks; upload's zip does not.
+      - name: Seal verified web artifact
+        id: seal-web
+        run: |
+          set -euo pipefail
+          test -s apps/web/.open-next/worker.js
+          test -s apps/web/.open-next/.build/open-next.config.edge.mjs
+          tar -C apps/web -czf web-worker.tar.gz .open-next
+          echo "sha256=$(sha256sum web-worker.tar.gz | cut -d ' ' -f 1)" >> "$GITHUB_OUTPUT"
+
+      - name: Store verified web artifact
+        id: web-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-worker-${{ github.sha }}-${{ github.run_attempt }}
+          path: web-worker.tar.gz
+          if-no-files-found: error
+          retention-days: 7
+
   deploy-staging:
     needs: build
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push' && vars.CLOUDFLARE_DEPLOY_STAGING_FROM_GITHUB == 'true'
+    if: github.event_name == 'workflow_dispatch' && (inputs.release_target == 'staging' || inputs.release_target == 'production') && vars.CLOUDFLARE_DEPLOY_STAGING_FROM_GITHUB == 'true'
     runs-on: ubuntu-latest
     environment: staging
     permissions:
@@ -113,14 +173,28 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
-      - name: Generate data manifests
-        run: pnpm --filter @gachia/data generate:manifests
+      - name: Verify pinned Next hydration patch
+        run: node scripts/verify-next-deferred-patch.mjs --require-patched
 
-      - name: Verify data manifests
-        run: pnpm --filter @gachia/data verify:manifests
+      - name: Download verified web artifact
+        uses: actions/download-artifact@v4
+        with:
+          artifact-ids: ${{ needs.build.outputs.web-artifact-id }}
+          path: .release-web
+          merge-multiple: true
 
-      - name: Build Cloudflare Worker
-        run: pnpm --filter @gachia/web exec opennextjs-cloudflare build
+      - name: Verify and restore web artifact
+        env:
+          EXPECTED_SHA256: ${{ needs.build.outputs.web-artifact-sha256 }}
+        run: |
+          set -euo pipefail
+          [[ "$EXPECTED_SHA256" =~ ^[a-f0-9]{64}$ ]]
+          actual=$(sha256sum .release-web/web-worker.tar.gz | cut -d ' ' -f 1)
+          test "$actual" = "$EXPECTED_SHA256"
+          test ! -e apps/web/.open-next
+          tar -C apps/web -xzf .release-web/web-worker.tar.gz
+          test -s apps/web/.open-next/worker.js
+          test -s apps/web/.open-next/.build/open-next.config.edge.mjs
 
       - name: Verify staging Worker secrets
         working-directory: apps/web
@@ -137,10 +211,6 @@ jobs:
             process.exit(1);
           }
           EOF
-
-      - name: Apply staging D1 migrations
-        working-directory: apps/web
-        run: pnpm exec wrangler d1 migrations apply gachia-db-staging --remote --env staging --config wrangler.jsonc
 
       - name: Deploy to Cloudflare staging
         working-directory: apps/web
@@ -164,9 +234,27 @@ jobs:
             curl --fail --silent --show-error --retry 5 --retry-all-errors --retry-delay 2 --max-time 30 "$url" > /dev/null
           done
 
+      - name: Smoke test HI3 reading routes
+        env:
+          READING_ORIGIN: ${{ env.STAGING_ORIGIN }}
+        run: &hi3-reading-smoke |
+          set -euo pipefail
+          : "${READING_ORIGIN:?Reading origin is required}"
+          for lang in zh en ja; do
+            for suffix in '' /vermillion-liuli /vermillion-liuli-full-burn /volatile-sparkler; do
+              url="${READING_ORIGIN%/}/${lang}/hi3/weapons${suffix}"
+              echo "Checking ${url}"
+              status=$(curl --silent --show-error --fail --retry 2 --retry-all-errors --retry-delay 2 --max-time 30 --output /dev/null --write-out '%{http_code}' "$url")
+              if [ "$status" != '200' ]; then
+                echo "Expected HTTP 200 without redirects, got $status" >&2
+                exit 1
+              fi
+            done
+          done
+
   deploy:
-    needs: build
-    if: needs.build.result == 'success' && github.ref == 'refs/heads/main' && github.event_name == 'push' && vars.CLOUDFLARE_DEPLOY_FROM_GITHUB == 'true'
+    needs: [build, deploy-staging]
+    if: needs.build.result == 'success' && needs.deploy-staging.result == 'success' && github.event_name == 'workflow_dispatch' && inputs.release_target == 'production' && inputs.production_confirmation == 'RELEASE_MAIN_ONLY' && vars.CLOUDFLARE_DEPLOY_FROM_GITHUB == 'true'
     runs-on: ubuntu-latest
     environment: production
     permissions:
@@ -186,14 +274,28 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
-      - name: Generate data manifests
-        run: pnpm --filter @gachia/data generate:manifests
+      - name: Verify pinned Next hydration patch
+        run: node scripts/verify-next-deferred-patch.mjs --require-patched
 
-      - name: Verify data manifests
-        run: pnpm --filter @gachia/data verify:manifests
+      - name: Download verified web artifact
+        uses: actions/download-artifact@v4
+        with:
+          artifact-ids: ${{ needs.build.outputs.web-artifact-id }}
+          path: .release-web
+          merge-multiple: true
 
-      - name: Build Cloudflare Worker
-        run: pnpm --filter @gachia/web exec opennextjs-cloudflare build
+      - name: Verify and restore web artifact
+        env:
+          EXPECTED_SHA256: ${{ needs.build.outputs.web-artifact-sha256 }}
+        run: |
+          set -euo pipefail
+          [[ "$EXPECTED_SHA256" =~ ^[a-f0-9]{64}$ ]]
+          actual=$(sha256sum .release-web/web-worker.tar.gz | cut -d ' ' -f 1)
+          test "$actual" = "$EXPECTED_SHA256"
+          test ! -e apps/web/.open-next
+          tar -C apps/web -xzf .release-web/web-worker.tar.gz
+          test -s apps/web/.open-next/worker.js
+          test -s apps/web/.open-next/.build/open-next.config.edge.mjs
 
       - name: Verify production Worker secrets
         working-directory: apps/web
@@ -211,19 +313,33 @@ jobs:
           }
           EOF
 
-      - name: Apply D1 migrations
+      - name: Record main deployment before promotion
         working-directory: apps/web
-        run: pnpm exec wrangler d1 migrations apply gachia-db --remote --env "" --config wrangler.jsonc
+        env:
+          ROLLBACK_VERSION: ${{ inputs.rollback_version }}
+        run: |
+          set -euo pipefail
+          pnpm exec wrangler deployments list --config wrangler.jsonc --env "" --json > /tmp/main-deployments-before.json
+          node --input-type=module <<'EOF'
+          import fs from 'node:fs';
+          const deployments = JSON.parse(fs.readFileSync('/tmp/main-deployments-before.json', 'utf8'));
+          if (!Array.isArray(deployments) || !deployments.length) {
+            throw new Error('Missing main deployment history');
+          }
+          const latest = deployments.toSorted((a, b) => a.created_on.localeCompare(b.created_on)).at(-1);
+          if (latest.versions?.length !== 1 || latest.versions[0].percentage !== 100 ||
+              latest.versions[0].version_id !== process.env.ROLLBACK_VERSION) {
+            throw new Error('Rollback version must match the currently active 100% main version');
+          }
+          EOF
 
-      - name: Deploy Azur Promilia Worker
-        run: pnpm run --filter @gachia/game-azur-promilia deploy:production
-
-      - name: Deploy Lvmeng Worker
-        run: pnpm run --filter @gachia/game-lvmeng deploy
-
-      - name: Deploy Router Worker
-        working-directory: apps/router
-        run: pnpm exec wrangler deploy --config wrangler.jsonc --env ""
+      - name: Preserve rollback evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: main-deployments-before-${{ github.run_id }}
+          path: /tmp/main-deployments-before.json
+          if-no-files-found: error
+          retention-days: 30
 
       - name: Deploy to Cloudflare
         working-directory: apps/web
@@ -256,3 +372,8 @@ jobs:
 
       - name: Audit production site
         run: pnpm audit:production
+
+      - name: Smoke test HI3 reading routes
+        env:
+          READING_ORIGIN: https://gachia.com
+        run: *hi3-reading-smoke

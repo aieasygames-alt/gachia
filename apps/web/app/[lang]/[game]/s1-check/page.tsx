@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '@/lib/jsonld-script';
 import { GAMES, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { notFound } from 'next/navigation';
@@ -83,8 +84,8 @@ export default async function AniimoS1CheckPage({ params }: { params: Promise<{ 
     ja: { kicker: 'S1 逐風出発', title: 'アニモ S1入門チェック', lead: 'DL、入門、収集、ホームランド、マップ、報酬入口をプレイ順に確認します。本ページは公開済みの現行資料だけをつなぎ、未確認情報をクライアント規則として扱いません。', notice: 'S1は2026年9月にPC、コンソール、クラウド、モバイルへ段階配信されました。アカウント、地域、追加データ、イベント、コード状況はプラットフォームで異なるため、公式入口と現行クライアントを確認してください。', sequence: '推奨順序' },
   }[locale];
 
-  return <main className="container mx-auto max-w-6xl px-4 py-10 sm:py-14">
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'ItemList', name: copy.title, numberOfItems: S1_STEPS.length, itemListElement: S1_STEPS.map((step, index) => ({ '@type': 'ListItem', position: index + 1, name: step.label[locale], url: `${BASE_URL}/${locale}${step.href}` })) }) }} />
+  return <div className="container mx-auto max-w-6xl px-4 py-10 sm:py-14">
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd({ '@context': 'https://schema.org', '@type': 'ItemList', name: copy.title, numberOfItems: S1_STEPS.length, itemListElement: S1_STEPS.map((step, index) => ({ '@type': 'ListItem', position: index + 1, name: step.label[locale], url: `${BASE_URL}/${locale}${step.href}` })) }) }} />
     <p className="text-sm font-semibold text-game-primary">{copy.kicker}</p>
     <h1 className="mt-2 text-3xl font-bold text-game-text sm:text-4xl">{copy.title}</h1>
     <p className="mt-4 max-w-3xl text-base leading-7 text-game-text-muted">{copy.lead}</p>
@@ -99,5 +100,5 @@ export default async function AniimoS1CheckPage({ params }: { params: Promise<{ 
         <Link href={step.href as '/'} className="mt-4 inline-flex text-sm font-semibold text-game-primary hover:underline">{step.action[locale]} <span aria-hidden="true" className="ml-1">→</span></Link>
       </li>)}
     </ol>
-  </main>;
+  </div>;
 }

@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '@/lib/jsonld-script';
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
@@ -838,7 +839,7 @@ export default async function GameHome({
 
   return (
     <div>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd) }} />
       {/* Game Header */}
       <div className="mb-8">
         <div className="flex items-center gap-4 mb-2">

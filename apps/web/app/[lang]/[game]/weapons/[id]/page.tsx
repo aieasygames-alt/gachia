@@ -5,7 +5,9 @@ import { Link } from '@/lib/i18n/navigation';
 import { getWeaponDetailData, getWeaponsForStaticParams } from '@/lib/game-data/weapons';
 import type { WeaponDetailData } from '@/lib/game-data/weapons';
 import { buildWeaponJsonLd } from '@/lib/jsonld';
+import { serializeJsonLd } from '@/lib/jsonld-script';
 import { buildLocalizedAlternates, limitMetaTitle } from '@/lib/seo-metadata';
+import { hi3WeaponMetadata, hi3WeaponScope } from '@/lib/hi3-weapon-scope';
 
 const RARITY_COLORS: Record<number, string> = { 1: '#9ca3af', 2: '#4ade80', 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };
 
@@ -289,7 +291,7 @@ function buildOg(title: string, description: string, gameId: string, id: string,
     description,
     url: `${BASE_URL}/${locale}/${gameId}/weapons/${id}`,
     siteName: 'Gachia' as const,
-    images: [{ url: `${BASE_URL}/images/og/${gameId}.webp`, width: 1200, height: 630 }],
+    images: [{ url: `${BASE_URL}/images/og/${gameId}.webp`, width: gameId === 'hi3' ? 1024 : 1200, height: gameId === 'hi3' ? 1024 : 630 }],
     locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
   };
 }
@@ -321,7 +323,7 @@ function WeaponJsonLd({
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(buildWeaponJsonLd({ gameId, locale, name, description, weaponId })),
+        __html: serializeJsonLd(buildWeaponJsonLd({ gameId, locale, name, description, weaponId })),
       }}
     />
   );
@@ -347,6 +349,13 @@ export async function generateMetadata({
       alternates: buildAlternates(locale, gameId, id),
       openGraph: buildOg(override.title, override.description, gameId, id, locale),
     };
+  }
+
+  if (gameId === 'hi3') {
+    const meta = hi3WeaponMetadata(locale, detail.name);
+    meta.title = limitMetaTitle(meta.title, hi3WeaponMetadata(locale).title);
+    return { ...meta, alternates: buildAlternates(locale, gameId, id), openGraph: buildOg(meta.title, meta.description, gameId, id, locale),
+      twitter: { card: 'summary_large_image', title: meta.title, description: meta.description, images: [`${BASE_URL}/images/og/hi3.webp`] } };
   }
 
   const statSuffix = detail.titleStat ? ` (${detail.titleStat})` : '';
@@ -402,13 +411,15 @@ export default async function WeaponDetailPage({
 
 function WeaponDetail({ detail, locale }: { detail: WeaponDetailData; locale: SupportedLocale }) {
   const gameName = GAMES[detail.gameId].name[locale];
-  const description = detail.effectDescription || detail.source || detail.name;
+  const bodyDescription = detail.effectDescription || detail.source || detail.name;
+  const description = detail.gameId === 'hi3' ? `${hi3WeaponScope[locale]} ${bodyDescription}` : bodyDescription;
 
   return (
     <div>
       <WeaponJsonLd gameId={detail.gameId} locale={locale} name={detail.name} description={description} weaponId={detail.id} />
       <Breadcrumb game={detail.gameId} gameName={gameName} locale={locale} />
       <Header name={detail.name} nameAlt={detail.nameAlt} rarity={detail.rarity} rank={detail.rank} />
+      {detail.gameId === 'hi3' && <p data-hi3-weapon-scope className="mb-4 rounded-md border border-game-border bg-game-surface px-4 py-3 text-sm leading-relaxed text-game-text-muted">{hi3WeaponScope[locale]}</p>}
       <div className={`grid gap-4 sm:grid-cols-2 ${detail.infoCards.length >= 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'}`}>
         {detail.infoCards.map((card) => (
           <InfoCard key={card.label} label={card.label} value={card.value} />
@@ -460,7 +471,7 @@ function BreadcrumbJsonLd({
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify({
+        __html: serializeJsonLd({
           '@context': 'https://schema.org',
           '@type': 'BreadcrumbList',
           itemListElement: [

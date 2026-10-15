@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '@/lib/jsonld-script';
 import { GAMES, LOCALES } from '@gachia/core';
 import type { SupportedLocale } from '@gachia/core';
 import { notFound } from 'next/navigation';
@@ -122,7 +123,7 @@ export default async function EchoDetailPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+          __html: serializeJsonLd({
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
