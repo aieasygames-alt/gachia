@@ -1,4 +1,4 @@
-name: Build, Verify & Deploy
+name: Verify & Main Worker Release
 
 on:
   push:
@@ -6,10 +6,28 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      release_target:
+        description: 'Explicit main Worker release scope (production first validates staging)'
+        type: choice
+        options: [verify, staging, production]
+        default: verify
+      production_confirmation:
+        description: 'Production only: enter RELEASE_MAIN_ONLY'
+        type: string
+        default: ''
+      rollback_version:
+        description: 'Production only: previously active main Worker version UUID, verified by operator'
+        type: string
+        default: ''
+
+permissions:
+  contents: read
 
 concurrency:
-  group: gachia-${{ github.event_name == 'push' && 'production' || github.ref }}
-  cancel-in-progress: true
+  # Serialize releases across refs; never interrupt a deployment in progress.
+  group: gachia-${{ github.event_name == 'workflow_dispatch' && inputs.release_target != 'verify' && 'main-release' || github.ref }}
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -18,6 +36,20 @@ jobs:
       web-artifact-id: ${{ steps.web-artifact.outputs.artifact-id }}
       web-artifact-sha256: ${{ steps.seal-web.outputs.sha256 }}
     steps:
+      - name: Validate explicit release request
+        env:
+          RELEASE_TARGET: ${{ inputs.release_target }}
+          CONFIRMATION: ${{ inputs.production_confirmation }}
+          ROLLBACK_VERSION: ${{ inputs.rollback_version }}
+          RELEASE_REF: ${{ github.ref }}
+        run: |
+          set -euo pipefail
+          if [ "$RELEASE_TARGET" = 'production' ]; then
+            test "$RELEASE_REF" = 'refs/heads/main'
+            test "$CONFIRMATION" = 'RELEASE_MAIN_ONLY'
+            [[ "$ROLLBACK_VERSION" =~ ^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$ ]]
+          fi
+
       - uses: actions/checkout@v7.0.0
 
       - uses: pnpm/action-setup@v6.0.9
@@ -121,7 +153,7 @@ jobs:
 
   deploy-staging:
     needs: build
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push' && vars.CLOUDFLARE_DEPLOY_STAGING_FROM_GITHUB == 'true'
+    if: github.event_name == 'workflow_dispatch' && (inputs.release_target == 'staging' || inputs.release_target == 'production') && vars.CLOUDFLARE_DEPLOY_STAGING_FROM_GITHUB == 'true'
     runs-on: ubuntu-latest
     environment: staging
     permissions:
@@ -180,10 +212,6 @@ jobs:
           }
           EOF
 
-      - name: Apply staging D1 migrations
-        working-directory: apps/web
-        run: pnpm exec wrangler d1 migrations apply gachia-db-staging --remote --env staging --config wrangler.jsonc
-
       - name: Deploy to Cloudflare staging
         working-directory: apps/web
         run: |
@@ -226,7 +254,7 @@ jobs:
 
   deploy:
     needs: [build, deploy-staging]
-    if: needs.build.result == 'success' && needs.deploy-staging.result == 'success' && github.ref == 'refs/heads/main' && github.event_name == 'push' && vars.CLOUDFLARE_DEPLOY_FROM_GITHUB == 'true'
+    if: needs.build.result == 'success' && needs.deploy-staging.result == 'success' && github.event_name == 'workflow_dispatch' && inputs.release_target == 'production' && inputs.production_confirmation == 'RELEASE_MAIN_ONLY' && vars.CLOUDFLARE_DEPLOY_FROM_GITHUB == 'true'
     runs-on: ubuntu-latest
     environment: production
     permissions:
@@ -285,26 +313,33 @@ jobs:
           }
           EOF
 
-      - name: Apply D1 migrations
+      - name: Record main deployment before promotion
         working-directory: apps/web
-        run: pnpm exec wrangler d1 migrations apply gachia-db --remote --env "" --config wrangler.jsonc
+        env:
+          ROLLBACK_VERSION: ${{ inputs.rollback_version }}
+        run: |
+          set -euo pipefail
+          pnpm exec wrangler deployments list --config wrangler.jsonc --env "" --json > /tmp/main-deployments-before.json
+          node --input-type=module <<'EOF'
+          import fs from 'node:fs';
+          const deployments = JSON.parse(fs.readFileSync('/tmp/main-deployments-before.json', 'utf8'));
+          if (!Array.isArray(deployments) || !deployments.length) {
+            throw new Error('Missing main deployment history');
+          }
+          const latest = deployments.toSorted((a, b) => a.created_on.localeCompare(b.created_on)).at(-1);
+          if (latest.versions?.length !== 1 || latest.versions[0].percentage !== 100 ||
+              latest.versions[0].version_id !== process.env.ROLLBACK_VERSION) {
+            throw new Error('Rollback version must match the currently active 100% main version');
+          }
+          EOF
 
-      # Other game Workers still have their own build chain; do not rebuild web.
-      - name: Generate data manifests
-        run: pnpm --filter @gachia/data generate:manifests
-
-      - name: Verify data manifests
-        run: pnpm --filter @gachia/data verify:manifests
-
-      - name: Deploy Azur Promilia Worker
-        run: pnpm run --filter @gachia/game-azur-promilia deploy:production
-
-      - name: Deploy Lvmeng Worker
-        run: pnpm run --filter @gachia/game-lvmeng deploy
-
-      - name: Deploy Router Worker
-        working-directory: apps/router
-        run: pnpm exec wrangler deploy --config wrangler.jsonc --env ""
+      - name: Preserve rollback evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: main-deployments-before-${{ github.run_id }}
+          path: /tmp/main-deployments-before.json
+          if-no-files-found: error
+          retention-days: 30
 
       - name: Deploy to Cloudflare
         working-directory: apps/web
