@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-16",
+  "scope": "local manual HI3 workbench v1; documentation handoff, not installer or automatic publisher",
+  "coreWorkflow": {
+    "decision": "accepted_limited_real_preview_and_restart",
+    "checks": [
+      "evidence and reviewed persisted draft",
+      "real Next accepted draft marker",
+      "HTTP restart retains state and rejects old token",
+      "fact revocation rejects accepted review"
+    ],
+    "sourceReportSha256": "ac775ee62fee61ac7b7b17099e4bf7d0385215088568937f2664879456f1ad1c",
+    "postcheckReportSha256": "9099715138459b38da94af4f1633f9e9c70c0378106e1e8959a17aabc83359ad"
+  },
+  "firstDailyStart": {
+    "decision": "accepted_limited_first_daily_start",
+    "starts": 1,
+    "initialBusinessCollectionsEmpty": 13,
+    "closed": true,
+    "sourceReportSha256": "935f52ec32908883d5208da034baa4d88e3ace966c4638a69e98c3bb86642b9b"
+  },
+  "limits": [
+    "No real content intake yet",
+    "No daily backup or restore acceptance",
+    "No OAuth/provider acceptance",
+    "No Git delivery commit yet"
+  ],
+  "sensitiveRuntimeDetailsIncluded": false
+}
