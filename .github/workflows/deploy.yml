@@ -51,6 +51,17 @@ jobs:
           fi
 
       - uses: actions/checkout@v7.0.0
+        with:
+          fetch-depth: 0
+
+      - name: Select conservative verification scope
+        id: scope
+        env:
+          CI_ADMIN_LIGHTWEIGHT: ${{ vars.CI_ADMIN_LIGHTWEIGHT }}
+        run: node scripts/ci-verification-scope.mjs
+
+      - name: Test verification scope policy
+        run: node --test scripts/ci-verification-scope.test.mjs
 
       - uses: pnpm/action-setup@v6.0.9
 
@@ -61,50 +72,69 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
+      - name: Test local workbench directly without Turbo build dependencies
+        if: steps.scope.outputs.scope == 'admin'
+        run: pnpm --filter @gachia/admin test
+
       - name: Verify pinned Next hydration patch
+        if: steps.scope.outputs.scope != 'admin'
         run: node scripts/verify-next-deferred-patch.mjs --require-patched
 
       - name: Type Check
+        if: steps.scope.outputs.scope != 'admin'
         run: pnpm type-check
 
       - name: Test
+        if: steps.scope.outputs.scope != 'admin'
         run: pnpm test
 
       - name: Lint
+        if: steps.scope.outputs.scope != 'admin'
         run: pnpm lint
 
       - name: Validate game data
+        if: steps.scope.outputs.scope != 'admin'
         run: pnpm --filter @gachia/data validate
 
       - name: Generate data manifests
+        if: steps.scope.outputs.scope != 'admin'
         run: pnpm --filter @gachia/data generate:manifests
 
       - name: Verify data manifests
+        if: steps.scope.outputs.scope != 'admin'
         run: pnpm --filter @gachia/data verify:manifests
 
       - name: Build Cloudflare Worker
+        if: steps.scope.outputs.scope != 'admin'
         run: pnpm --filter @gachia/web exec opennextjs-cloudflare build
 
       - name: Verify Worker bundle
+        if: steps.scope.outputs.scope != 'admin'
         working-directory: apps/web
         run: pnpm exec wrangler deploy --dry-run --config wrangler.jsonc --env ""
 
       - name: Type check Router
+        if: steps.scope.outputs.scope != 'admin'
         run: pnpm --filter @gachia/router type-check
 
       - name: Test Router
+        if: steps.scope.outputs.scope != 'admin'
         run: pnpm --filter @gachia/router test
 
       - name: Validate game deployments
+        if: steps.scope.outputs.scope != 'admin'
         run: pnpm validate:game-deployments
 
       - name: Generate Router game config
+        if: steps.scope.outputs.scope != 'admin'
         run: pnpm generate:router-config && git diff --exit-code -- apps/router/src/generated-game-deployments.ts
 
       - name: Install Playwright browser
+        if: steps.scope.outputs.scope != 'admin'
         run: pnpm exec playwright install --with-deps chromium
 
       - name: Start web server for browser tests
+        if: steps.scope.outputs.scope != 'admin'
         run: |
           pnpm --filter @gachia/web dev > /tmp/gachia-web.log 2>&1 &
           for attempt in {1..30}; do
@@ -115,25 +145,32 @@ jobs:
           exit 1
 
       - name: Browser navigation smoke tests
+        if: steps.scope.outputs.scope != 'admin'
         run: pnpm test:browser
 
       - name: Verify Azur Promilia bundle
+        if: steps.scope.outputs.scope != 'admin'
         run: pnpm --filter @gachia/game-azur-promilia verify:bundle
 
       - name: Audit Azur Promilia content
+        if: steps.scope.outputs.scope != 'admin'
         run: pnpm --filter @gachia/game-azur-promilia audit:content
 
       - name: Verify Lvmeng bundle
+        if: steps.scope.outputs.scope != 'admin'
         run: pnpm --filter @gachia/game-lvmeng verify:bundle
 
       - name: Validate llms.txt
+        if: steps.scope.outputs.scope != 'admin'
         run: node scripts/validate-llms-route.mjs
 
       - name: Verify self-contained web artifact
+        if: steps.scope.outputs.scope != 'admin'
         run: node scripts/verify-worker-artifact.mjs apps/web/.open-next
 
       # Tar preserves hidden compiled config and pnpm symlinks; upload's zip does not.
       - name: Seal verified web artifact
+        if: steps.scope.outputs.scope != 'admin'
         id: seal-web
         run: |
           set -euo pipefail
@@ -143,6 +180,7 @@ jobs:
           echo "sha256=$(sha256sum web-worker.tar.gz | cut -d ' ' -f 1)" >> "$GITHUB_OUTPUT"
 
       - name: Store verified web artifact
+        if: steps.scope.outputs.scope != 'admin'
         id: web-artifact
         uses: actions/upload-artifact@v4
         with:
