@@ -478,6 +478,9 @@ function render(state) {
         element('p', lifecycle.contextCurrent ? '结束时上下文仍一致；不代表发布批准。' : '结束时上下文已变化：保留历史结论，不代表当前内容再次通过，且不会自动重开。'));
     } else if (lifecycle) {
       const section = element('details'); section.append(element('summary', '核对后无需更新：结束任务'));
+      section.append(element('p', lifecycle.coverage?.status === 'ready'
+        ? '门禁覆盖HI3角色、武器、材料、攻略源数据及公共镜像；不覆盖其他数据集、页面代码、翻译语义或线上状态。'
+        : '源数据/公共镜像读取或一致性检查未通过，暂不能结束。请先处理扫描失败项；未覆盖不等于通过。'));
       const form = element('form');
       const fields = {};
       for (const [key, title] of [['reason', '结束理由'], ['contentCheck', '已核对的现有资料路径、实体及覆盖情况'], ['reviewer', '记录者']]) {
@@ -490,7 +493,7 @@ function render(state) {
       confirm.type = 'checkbox'; confirm.required = true;
       label.append(confirm, document.createTextNode('全部已记录事实已确认，现有内容已覆盖；无需草案，不授予发布权限。'));
       const close = element('button', '记录无需更新并结束', 'secondary');
-      close.disabled = !liveFacts.length || liveFacts.some((fact) => fact.status !== 'confirmed') || state.revisions.some((item) => item.batchId === batch.id);
+      close.disabled = lifecycle.coverage?.status !== 'ready' || !liveFacts.length || liveFacts.some((fact) => fact.status !== 'confirmed') || state.revisions.some((item) => item.batchId === batch.id);
       form.append(label, close); let pending;
       form.addEventListener('submit', (event) => {
         event.preventDefault(); action(close, async () => {
