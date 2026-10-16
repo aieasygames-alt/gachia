@@ -7,7 +7,7 @@ import { fingerprint, validateRevision } from './revisions.mjs';
 import { executionIntentStore } from './execution-intents.mjs';
 import { storageHealth } from './storage-health.mjs';
 import { sourceHistoryQuery } from './source-history-query.mjs';
-import { batchContext, validateBatchClosure } from './batch-lifecycle.mjs';
+import { batchContext, validateBatchClosure, closureCoverage } from './batch-lifecycle.mjs';
 
 export function openStore(filename, { intentNow = Date.now } = {}) {
   mkdirSync(dirname(filename), { recursive: true, mode: 0o700 });
@@ -505,13 +505,17 @@ export function openStore(filename, { intentNow = Date.now } = {}) {
         if (!currentFacts.length || currentFacts.some((fact) => fact.status !== 'confirmed')) {
           throw new FactError('需要先确认此证据的全部已记录事实', 409);
         }
+        const coverage = closureCoverage(context.index);
+        if (coverage.status !== 'ready') {
+          throw new FactError('HI3四类源数据/公共镜像读取或一致性检查未通过，不能记录无需更新；请先处理扫描失败项。未覆盖检查不等于通过。', 409);
+        }
         if (!context.baseline.commit || input.contextDigest !== batchContext(batch, currentFacts, context.index, context.baseline)) {
           throw new FactError('任务、事实、内容或代码上下文已变化，请刷新后核对', 409);
         }
         batch.lifecycle = { status: 'closed_no_update', closure: { ...input, requestDigest: digest,
           createdAt: new Date().toISOString(), evidenceId: batch.evidenceId,
           facts: currentFacts.map(({ id, revision }) => ({ id, revision })),
-          contentFingerprint: context.index.fingerprint, baseline: context.baseline,
+          contentFingerprint: context.index.fingerprint, baseline: context.baseline, coverage,
           permissions: { edit: false, publish: false } } };
         db.prepare('UPDATE batches SET payload=? WHERE id=?').run(JSON.stringify(batch), batch.id);
         log('batch.closed_no_update', batch.id);
