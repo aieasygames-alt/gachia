@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import Script from 'next/script';
+import { ProductionIntegrations } from '@/components/production-integrations';
 import { NextIntlClientProvider } from 'next-intl';
 import { LOCALES, DEFAULT_LOCALE } from '@gachia/core';
 import type { SupportedLocale } from '@gachia/core';
@@ -39,32 +39,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale === 'zh' ? 'zh-Hans' : locale}>
       <head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-4L1VKXGY2Y"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-4L1VKXGY2Y');
-          `}
-        </Script>
-        <Script id="microsoft-clarity" strategy="afterInteractive">
-          {`
-            (function(c,l,a,r,i,t,y){
-              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "yho16e4xxp");
-          `}
-        </Script>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8569630257520732"
-          crossOrigin="anonymous"
-        />
+        <ProductionIntegrations />
       </head>
       <body className="min-h-screen bg-game-bg text-game-text antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
