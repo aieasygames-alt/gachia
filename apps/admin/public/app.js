@@ -87,6 +87,7 @@ function draftReviewForm(packet, expectedLatest) {
   return form;
 }
 function renderRevisions(card, batch, state) {
+  if (batch.lifecycle?.status === 'closed_no_update') return;
   const records = state.revisions.filter((revision) => revision.batchId === batch.id);
   const latest = Math.max(0, ...records.map((revision) => revision.number));
   const candidates = state.facts.filter((fact) => fact.evidenceId === batch.evidenceId && fact.status === 'confirmed');
@@ -453,7 +454,8 @@ function render(state) {
   if (!state.batches.length) empty(batches, '还没有任务包。所有任务都需要事实审核，当前版本不提供发布操作。');
   for (const batch of state.batches) {
     const card = element('article', undefined, 'card');
-    card.append(element('span', 'AWAITING FACT REVIEW / 待事实审核', 'tag'), element('h3', batch.title));
+    const lifecycle = state.batchLifecycles?.[batch.id];
+    card.append(element('span', lifecycle?.status === 'closed_no_update' ? 'CLOSED / 无需更新，已结束' : 'AWAITING FACT REVIEW / 待事实审核', 'tag'), element('h3', batch.title));
     card.append(element('p', `${batch.server} · ${batch.deployment.worker} · 基线 ${batch.baseline.commit?.slice(0, 12) ?? '未知'}`, 'muted'));
     const liveFacts = state.facts.filter((fact) => fact.evidenceId === batch.evidenceId);
     const captured = batch.factSnapshot ?? [];
@@ -468,7 +470,42 @@ function render(state) {
       const url = URL.createObjectURL(new Blob([JSON.stringify(batch, null, 2)], { type: 'application/json' }));
       const link = element('a'); link.href = url; link.download = `hi3-batch-${batch.id}.json`; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
     });
-    card.append(button); renderRevisions(card, batch, state); batches.append(card);
+    card.append(button);
+    if (lifecycle?.status === 'closed_no_update') {
+      const closure = lifecycle.closure;
+      card.append(element('p', `${closure.reason}\n内容核对：${closure.contentCheck}`),
+        element('p', `${reviewIdentityLabel(closure)} · ${closure.reviewer} · ${closure.createdAt}`),
+        element('p', lifecycle.contextCurrent ? '结束时上下文仍一致；不代表发布批准。' : '结束时上下文已变化：保留历史结论，不代表当前内容再次通过，且不会自动重开。'));
+    } else if (lifecycle) {
+      const section = element('details'); section.append(element('summary', '核对后无需更新：结束任务'));
+      const form = element('form');
+      const fields = {};
+      for (const [key, title] of [['reason', '结束理由'], ['contentCheck', '已核对的现有资料路径、实体及覆盖情况'], ['reviewer', '记录者']]) {
+        const label = element('label', title); const input = element('textarea');
+        input.required = true; input.maxLength = 2000; input.rows = 2;
+        fields[key] = input; label.append(input); form.append(label);
+      }
+      const identity = reviewIdentityControls(form);
+      const label = element('label', undefined, 'checkbox-label'); const confirm = element('input');
+      confirm.type = 'checkbox'; confirm.required = true;
+      label.append(confirm, document.createTextNode('全部已记录事实已确认，现有内容已覆盖；无需草案，不授予发布权限。'));
+      const close = element('button', '记录无需更新并结束', 'secondary');
+      close.disabled = !liveFacts.length || liveFacts.some((fact) => fact.status !== 'confirmed') || state.revisions.some((item) => item.batchId === batch.id);
+      form.append(label, close); let pending;
+      form.addEventListener('submit', (event) => {
+        event.preventDefault(); action(close, async () => {
+          const payload = { batchId: batch.id, contextDigest: lifecycle.contextDigest,
+            ...Object.fromEntries(Object.entries(fields).map(([key, node]) => [key, node.value])),
+            reviewerType: identity.type.value, authorizationBasis: identity.basis.value, confirmNoUpdate: confirm.checked };
+          const signature = JSON.stringify(payload);
+          if (!pending || pending.signature !== signature) pending = { signature, requestId: crypto.randomUUID() };
+          await api('batches/close-no-update', { ...payload, requestId: pending.requestId });
+          await refresh(); notice('任务已按无需更新结束；没有创建草案或发布。');
+        });
+      });
+      section.append(form); card.append(section);
+    }
+    renderRevisions(card, batch, state); batches.append(card);
   }
   $('#entry-list').replaceChildren(...state.index.entries.map((entry) => element('p', `${entry.kind} / ${entry.title} · ${entry.routes.length} 个预期语言路径`, 'index-row')));
   $('#check-list').replaceChildren(...state.index.findings.map((check) => {

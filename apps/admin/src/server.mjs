@@ -19,6 +19,7 @@ import { storageFiles } from './storage-files.mjs';
 import { recoveryCoverage, compareStorage } from './storage-lifecycle.mjs';
 import { releasePlan } from './release-plan.mjs';
 import { buildCleanupPlan } from './cleanup-plan.mjs';
+import { assessBatchClosure } from './batch-lifecycle.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const repository = resolve(here, '../../..');
@@ -103,6 +104,7 @@ export async function startWorkbench({ root = repository, dataDir = join(root, '
         const facts = store.facts(); const index = scanContent(root, facts); const git = baseline(root);
         return send(200, { gameId: 'hi3', sourceHealth: sources.state(), executionPolicy: executionPolicy(),
           index, baseline: git, evidence: store.evidence(), batches: store.batches(),
+          batchLifecycles: Object.fromEntries(store.batches().map((batch) => [batch.id, assessBatchClosure(batch, facts, index, git)])),
           facts, reviewPreparations: store.evidence().map((item) => reviewPreparation(item, facts, store)).filter(Boolean),
           reviews: store.reviews(), events: store.events(),
           revisions: store.revisions().map((revision) => assessRevision(revision, facts, index, git)),
@@ -155,6 +157,9 @@ export async function startWorkbench({ root = repository, dataDir = join(root, '
       if (path === '/api/official-source/import-excerpt') {
         const result = sources.importExcerpt(input);
         return send(result.duplicate ? 200 : 201, result);
+      }
+      if (path === '/api/batches/close-no-update') {
+        return send(200, store.closeBatch(input, { index: scanContent(root, store.facts()), baseline: baseline(root) }));
       }
       if (path === '/api/batches') {
         if (!input || typeof input.evidenceId !== 'string' || !store.getEvidence(input.evidenceId)) {

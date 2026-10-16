@@ -7,6 +7,7 @@ import { fingerprint, validateRevision } from './revisions.mjs';
 import { executionIntentStore } from './execution-intents.mjs';
 import { storageHealth } from './storage-health.mjs';
 import { sourceHistoryQuery } from './source-history-query.mjs';
+import { batchContext, validateBatchClosure } from './batch-lifecycle.mjs';
 
 export function openStore(filename, { intentNow = Date.now } = {}) {
   mkdirSync(dirname(filename), { recursive: true, mode: 0o700 });
@@ -417,6 +418,7 @@ export function openStore(filename, { intentNow = Date.now } = {}) {
         }
         const batch = decode(db.prepare('SELECT payload FROM batches WHERE id=?').get(input.batchId));
         if (!batch) throw new FactError('Batch not found', 404);
+        if (batch.lifecycle?.status === 'closed_no_update') throw new FactError('任务已结束，不能创建修订', 409);
         const latest = db.prepare('SELECT COALESCE(MAX(number),0) AS number FROM batch_revisions WHERE batch_id=?').get(batch.id).number;
         if (input.expectedLatest !== latest) throw new FactError('任务已有新修订，请刷新后重试', 409);
         const selected = input.selectedFacts.map((item) => {
@@ -483,6 +485,37 @@ export function openStore(filename, { intentNow = Date.now } = {}) {
         db.prepare('INSERT INTO evidence VALUES(?,?,?,?)').run(evidence.id, fingerprint, JSON.stringify(evidence), evidence.createdAt);
         log('evidence.imported', evidence.id);
         return { evidence, duplicate: false };
+      });
+    },
+    closeBatch(raw, context) {
+      const input = validateBatchClosure(raw);
+      return transaction(() => {
+        const batch = decode(db.prepare('SELECT payload FROM batches WHERE id=?').get(input.batchId));
+        if (!batch) throw new FactError('Batch not found', 404);
+        const digest = fingerprint(input);
+        const previous = batch.lifecycle?.closure;
+        if (previous) {
+          if (previous.requestId === input.requestId && previous.requestDigest === digest) return { batch, duplicate: true };
+          throw new FactError('任务已结束；重复请求内容冲突或需重新评估', 409);
+        }
+        if (db.prepare('SELECT 1 FROM batch_revisions WHERE batch_id=? LIMIT 1').get(batch.id)) {
+          throw new FactError('已有修订的任务不能按无需更新结束，请先独立处理草案', 409);
+        }
+        const currentFacts = facts().filter((fact) => fact.evidenceId === batch.evidenceId);
+        if (!currentFacts.length || currentFacts.some((fact) => fact.status !== 'confirmed')) {
+          throw new FactError('需要先确认此证据的全部已记录事实', 409);
+        }
+        if (!context.baseline.commit || input.contextDigest !== batchContext(batch, currentFacts, context.index, context.baseline)) {
+          throw new FactError('任务、事实、内容或代码上下文已变化，请刷新后核对', 409);
+        }
+        batch.lifecycle = { status: 'closed_no_update', closure: { ...input, requestDigest: digest,
+          createdAt: new Date().toISOString(), evidenceId: batch.evidenceId,
+          facts: currentFacts.map(({ id, revision }) => ({ id, revision })),
+          contentFingerprint: context.index.fingerprint, baseline: context.baseline,
+          permissions: { edit: false, publish: false } } };
+        db.prepare('UPDATE batches SET payload=? WHERE id=?').run(JSON.stringify(batch), batch.id);
+        log('batch.closed_no_update', batch.id);
+        return { batch, duplicate: false };
       });
     },
     createBatch(evidenceId, build) {
