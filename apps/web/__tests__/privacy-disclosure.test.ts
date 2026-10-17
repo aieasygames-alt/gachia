@@ -35,6 +35,11 @@ describe('privacy disclosures across supported locales', () => {
       const metadata = await exports.generateMetadata!({ params });
       expect(metadata.description).toContain('Clarity');
       expect(metadata.description).toContain('AdSense');
+      expect(content).toContain('gachiawiki@gmail.com');
+      expect(content).toMatch(/默认关闭|off by default|初期状態で無効/);
+      expect(content).toMatch(/物理删除|physical deletion|物理削除/);
+      expect(content).not.toContain('through a GitHub Issue or the contact email');
+      expect(content).not.toContain('retained for their validity period');
     });
   }
 });

@@ -4,26 +4,13 @@ import type { NextRequest } from 'next/server';
 import { nextCookies } from 'better-auth/next-js';
 import { getDb } from './db';
 import { users, sessions, accounts, verifications } from '@gachia/db';
-
-function resolveBaseURL(request?: NextRequest) {
-  if (request) {
-    return request.nextUrl.origin;
-  }
-
-  return process.env.BETTER_AUTH_URL
-    || process.env.NEXT_PUBLIC_APP_URL
-    || 'https://gachia.com';
-}
+import { resolveAuthPolicy } from './auth-policy';
 
 export function createAuth(request?: NextRequest) {
   const googleClientId = process.env.GOOGLE_CLIENT_ID;
   const googleClientSecret = process.env.GOOGLE_CLIENT_SECRET;
-  const betterAuthUrl = process.env.BETTER_AUTH_URL;
   const betterAuthSecret = process.env.BETTER_AUTH_SECRET;
-
-  if (process.env.NODE_ENV === 'production' && (!betterAuthSecret || betterAuthSecret.length < 32)) {
-    throw new Error('BETTER_AUTH_SECRET must be set to at least 32 characters in production');
-  }
+  const policy = resolveAuthPolicy(process.env, request?.nextUrl.origin);
 
   if (!betterAuthSecret) {
     console.warn('WARNING: BETTER_AUTH_SECRET not set. Using a local-development-only secret.');
@@ -55,7 +42,7 @@ export function createAuth(request?: NextRequest) {
     }),
     socialProviders,
     plugins: [nextCookies()],
-    baseURL: betterAuthUrl || resolveBaseURL(request),
+    ...policy,
     secret: betterAuthSecret || 'dev-secret-change-in-production',
   });
 }

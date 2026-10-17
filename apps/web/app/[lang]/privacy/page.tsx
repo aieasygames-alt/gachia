@@ -22,13 +22,14 @@ const CONTENT: Record<string, { title: string; sections: { heading: string; body
   zh: {
     title: '隐私政策',
     sections: [
+      { heading: '0. 隐私选择与删除请求', body: '非必要访问分析默认关闭，您可通过页面左下角“隐私偏好”允许或拒绝 Google Analytics。广告和 Microsoft Clarity 会话回放暂不加载。更改选择会重新加载页面，不能撤回已发送的数据。偏好保存在本机浏览器，不同设备需分别设置。Google 登录不依赖分析同意。账号访问或删除请求请私密发送至 gachiawiki@gmail.com；不要发送密码、验证码、会话或访问令牌，也不要在公开 Issue 发布个人数据。我们先核验账号归属再处理请求。目前没有自助删除入口，尚未完成实际删除及备份到期清理验收；记录过期不等于已物理删除，第三方保留设置仍待核实。' },
       {
         heading: '1. 概述',
         body: 'Gachia（"我们"）尊重您的隐私。本隐私政策说明我们如何收集、使用和保护您的个人信息。本政策用于说明数据处理方式，不代替适用情况下所需的单独同意。',
       },
       {
         heading: '2. 信息收集',
-        body: '我们使用 Google Analytics 收集访问数据，包括页面浏览量、访问时长、浏览器类型和设备信息。使用 Google 登录时，我们会从 Google 获取并存储您的姓名、邮箱地址、头像和账号标识。我们还会处理会话令牌、IP 地址、User-Agent，以及您主动保存的收藏、角色、地图进度和共享配装。广告和访问分析服务还可能处理设备、浏览器、网络与交互信息，详见第三方服务说明。',
+        body: '您明确允许后，我们使用 Google Analytics 收集访问数据，包括页面浏览量、访问时长、浏览器类型和设备信息。使用 Google 登录时，我们会从 Google 获取并存储您的姓名、邮箱地址、头像和账号标识。我们还会处理会话令牌、IP 地址、User-Agent，以及您主动保存的收藏、角色、地图进度和共享配装。广告和访问分析服务还可能处理设备、浏览器、网络与交互信息，详见第三方服务说明。',
       },
       {
         heading: '3. 本地存储',
@@ -40,7 +41,7 @@ const CONTENT: Record<string, { title: string; sections: { heading: string; body
       },
       {
         heading: '5. 数据安全',
-        body: '我们通过 HTTPS、访问控制和受限的服务密钥保护数据。账号与用户内容会在提供服务所需期间保存；会话和验证记录按其有效期保存。您可以通过 GitHub Issue 或联系邮箱请求访问或删除个人数据。',
+        body: '我们通过 HTTPS、访问控制和受限的服务密钥保护数据。账号与用户内容会在提供服务所需期间保存；会话和验证记录具有有效期，但尚未验收统一的物理清理期限。您可以通过 私密联系邮箱 gachiawiki@gmail.com（不要在公开 GitHub Issue 提供个人数据）请求访问或删除个人数据。',
       },
       {
         heading: '6. 儿童隐私',
@@ -59,13 +60,14 @@ const CONTENT: Record<string, { title: string; sections: { heading: string; body
   en: {
     title: 'Privacy Policy',
     sections: [
+      { heading: '0. Privacy choices and deletion requests', body: 'Optional analytics are off by default. Use Privacy preferences at the bottom left to allow or reject Google Analytics. Ads and Microsoft Clarity session replay remain disabled. Changes reload the page and cannot recall data already sent. Preferences are local to each browser. Google sign-in does not require analytics consent. Send account access or deletion requests privately to gachiawiki@gmail.com. Never send passwords, verification codes, session/access tokens or personal data in public Issues. Account ownership must be verified before processing. Self-service deletion is not available; actual deletion and backup expiry cleanup have not been accepted in testing. Expiration does not prove physical deletion. Third-party retention settings remain unverified.' },
       {
         heading: '1. Overview',
         body: 'Gachia ("we") respects your privacy. This Privacy Policy explains how we collect, use, and protect your information. This policy describes data processing and does not replace separate consent where required.',
       },
       {
         heading: '2. Information Collection',
-        body: 'We use Google Analytics to collect usage data such as page views, visit duration, browser type, and device information. When you sign in with Google, we receive and store your name, email address, profile image, and account identifier. We also process session tokens, IP addresses, user agents, and information you choose to save, including favorites, characters, map progress, and shared builds. Advertising and analytics services may also process device, browser, network, and interaction information, as described under Third-Party Services.',
+        body: 'After you explicitly allow analytics, we use Google Analytics to collect usage data such as page views, visit duration, browser type, and device information. When you sign in with Google, we receive and store your name, email address, profile image, and account identifier. We also process session tokens, IP addresses, user agents, and information you choose to save, including favorites, characters, map progress, and shared builds. Advertising and analytics services may also process device, browser, network, and interaction information, as described under Third-Party Services.',
       },
       {
         heading: '3. Local Storage',
@@ -77,7 +79,7 @@ const CONTENT: Record<string, { title: string; sections: { heading: string; body
       },
       {
         heading: '5. Data Security',
-        body: 'We protect data using HTTPS, access controls, and restricted service credentials. Account information and user content are retained while needed to provide the service; sessions and verification records are retained for their validity period. You may request access to or deletion of personal data through a GitHub Issue or the contact email.',
+        body: 'We protect data using HTTPS, access controls, and restricted service credentials. Account information and user content are retained while needed to provide the service; sessions and verification records have expiry dates, which do not establish physical cleanup deadlines. Request access to or deletion of personal data privately via gachiawiki@gmail.com. Do not post personal data in public GitHub Issues.',
       },
       {
         heading: '6. Children\'s Privacy',
@@ -96,6 +98,7 @@ const CONTENT: Record<string, { title: string; sections: { heading: string; body
   ja: {
     title: 'プライバシーポリシー',
     sections: [
+      { heading: '0. 設定と削除請求', body: '任意のアクセス分析は初期状態で無効です。左下のプライバシー設定からGoogle Analyticsを許可または拒否できます。広告とMicrosoft Clarityのセッション再生は無効です。変更時は再読み込みし、送信済みデータは取り消せません。設定はブラウザごとに保存されます。Googleログインに分析の同意は不要です。アカウントの開示・削除請求はgachiawiki@gmail.comへ非公開メールでお送りください。パスワード、認証コード、セッショントークンを送信せず、公開Issueに個人情報を書かないでください。本人確認後に処理します。セルフサービス削除はなく、実際の削除とバックアップ期限後の消去は未検証です。有効期限切れは物理削除の証明ではなく、第三者の保存設定も未確認です。' },
       {
         heading: '1. 概要',
         body: 'Gachia（以下「当方」）は、お客様のプライバシーを尊重いたします。本プライバシーポリシーは、お客様の情報の収集、使用、保護について説明するものです。本ポリシーはデータの取扱いを説明するもので、必要な場合の個別の同意に代わるものではありません。',
@@ -114,7 +117,7 @@ const CONTENT: Record<string, { title: string; sections: { heading: string; body
       },
       {
         heading: '5. データセキュリティ',
-        body: 'HTTPS、アクセス制御、制限されたサービス認証情報によりデータを保護します。アカウント情報と利用者コンテンツはサービス提供に必要な期間保存し、セッションと検証記録は有効期間中保存します。GitHub Issue または連絡先メールから個人データの開示・削除を請求できます。',
+        body: 'HTTPS、アクセス制御、制限されたサービス認証情報によりデータを保護します。アカウント情報と利用者コンテンツはサービス提供に必要な期間保存し、セッションと検証記録には有効期限がありますが、物理削除の期限は未検証です。非公開メール gachiawiki@gmail.com（公開GitHub Issueには個人情報を記載しないでください）から個人データの開示・削除を請求できます。',
       },
       {
         heading: '6. 子供のプライバシー',
