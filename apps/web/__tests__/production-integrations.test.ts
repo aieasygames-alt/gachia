@@ -1,35 +1,16 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import ts from 'typescript';
 import { allowProductionIntegrations } from '../lib/production-integrations';
 
 describe('main-site third-party integration boundary', () => {
-  it('renders nothing initially and after mounting on staging, but enables production', () => {
+  it('keeps optional vendors gated by explicit choice', () => {
     const source = readFileSync(new URL('../components/production-integrations.tsx', import.meta.url), 'utf8');
-    const compiled = ts.transpileModule(source, { compilerOptions: {
-      jsx: ts.JsxEmit.ReactJSX, module: ts.ModuleKind.CommonJS,
-    } }).outputText;
-    for (const origin of ['https://gachia.com', 'https://gachia-staging.aieasygames.workers.dev']) {
-      let state = false;
-      let effect: () => void = () => {};
-      const exports: { ProductionIntegrations?: () => unknown } = {};
-      const require = (name: string) => {
-        if (name === 'react') return {
-          useState: () => [state, (value: boolean) => { state = value; }],
-          useEffect: (callback: () => void) => { effect = callback; },
-        };
-        if (name === 'react/jsx-runtime') return { jsx: (type: unknown, props: unknown) => ({ type, props }),
-          jsxs: (type: unknown, props: unknown) => ({ type, props }), Fragment: 'fragment' };
-        if (name === 'next/script') return { default: 'script' };
-        return { allowProductionIntegrations };
-      };
-      new Function('require', 'exports', 'process', 'window', compiled)(require, exports,
-        { env: { NODE_ENV: 'production' } }, { location: { origin } });
-      expect(exports.ProductionIntegrations!()).toBeNull();
-      effect();
-      if (origin === 'https://gachia.com') expect(exports.ProductionIntegrations!()).not.toBeNull();
-      else expect(exports.ProductionIntegrations!()).toBeNull();
-    }
+    expect(source).toContain('allowAnalytics(process.env.NODE_ENV, window.location.origin, choice)');
+    expect(source).toContain('{enabled &&');
+    expect(source).toContain('readPrivacyChoice(window.localStorage)');
+    expect(source).toContain('window.location.replace(url.href)');
+    expect(source).toContain("window.addEventListener('storage', changed)");
+    expect(source).not.toMatch(/clarity\.ms|googlesyndication|adsbygoogle/);
   });
 
   it('allows only the exact production browser origin in production mode', () => {
@@ -48,12 +29,14 @@ describe('main-site third-party integration boundary', () => {
   it('keeps the server layout free of direct tracking scripts', () => {
     const layout = readFileSync(new URL('../app/[lang]/layout.tsx', import.meta.url), 'utf8');
     expect(layout).toContain('<ProductionIntegrations />');
+    expect(layout.indexOf('<ProductionIntegrations />')).toBeGreaterThan(layout.indexOf('<body'));
+    expect(layout).not.toMatch(/<head>[\s\S]*?<ProductionIntegrations/);
     expect(layout).not.toMatch(/googletagmanager|googlesyndication|clarity\.ms|gtag\(/);
     const component = readFileSync(new URL('../components/production-integrations.tsx', import.meta.url), 'utf8');
     expect(component).toContain('useState(false)');
     expect(component).toContain('window.location.origin');
-    expect(component).toContain('if (!enabled) return null');
-    expect(component).toContain('id="google-adsense"');
+    expect(component).toContain('if (!available) return null');
+    expect(component).not.toContain('id="google-adsense"');
     expect(component).not.toMatch(/<script\b/);
   });
 });

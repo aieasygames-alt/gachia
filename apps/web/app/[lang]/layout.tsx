@@ -38,10 +38,8 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale === 'zh' ? 'zh-Hans' : locale}>
-      <head>
-        <ProductionIntegrations />
-      </head>
       <body className="min-h-screen bg-game-bg text-game-text antialiased">
+        <ProductionIntegrations />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <div className="flex min-h-screen flex-col">
             <SiteHeader locale={locale} />
