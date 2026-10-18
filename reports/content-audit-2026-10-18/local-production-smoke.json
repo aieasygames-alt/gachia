@@ -1,0 +1,215 @@
+{
+  "checkedAt": "2026-10-18T10:26:21.926Z",
+  "results": [
+    {
+      "app": "lvmeng",
+      "path": "/zh/lvmeng",
+      "status": 200,
+      "phrases": 2
+    },
+    {
+      "app": "lvmeng",
+      "path": "/zh/lvmeng/news",
+      "status": 200,
+      "phrases": 2
+    },
+    {
+      "app": "lvmeng",
+      "path": "/zh/lvmeng/version",
+      "status": 200,
+      "phrases": 2
+    },
+    {
+      "app": "lvmeng",
+      "path": "/zh/lvmeng/map",
+      "status": 200,
+      "phrases": 2
+    },
+    {
+      "app": "lvmeng",
+      "path": "/zh/lvmeng/download",
+      "status": 200,
+      "phrases": 3
+    },
+    {
+      "app": "lvmeng",
+      "path": "/zh/lvmeng/launch-check",
+      "status": 200,
+      "phrases": 3
+    },
+    {
+      "app": "lvmeng",
+      "path": "/zh/lvmeng/starter-guide",
+      "status": 200,
+      "phrases": 3
+    },
+    {
+      "app": "lvmeng",
+      "path": "/zh/lvmeng/progression",
+      "status": 200,
+      "phrases": 2
+    },
+    {
+      "app": "lvmeng",
+      "path": "/zh/lvmeng/characters/he-yulian",
+      "status": 200,
+      "phrases": 2
+    },
+    {
+      "app": "lvmeng",
+      "path": "/zh/lvmeng/characters/fulizi",
+      "status": 200,
+      "phrases": 2
+    },
+    {
+      "app": "lvmeng",
+      "path": "/zh/lvmeng/characters/lilang",
+      "status": 200,
+      "phrases": 2
+    },
+    {
+      "app": "lvmeng",
+      "path": "/zh/lvmeng/characters/daliya",
+      "status": 200,
+      "phrases": 2
+    },
+    {
+      "app": "lvmeng",
+      "path": "/zh/lvmeng/characters/lita",
+      "status": 200,
+      "phrases": 2
+    },
+    {
+      "app": "main",
+      "path": "/zh/endfield",
+      "status": 200,
+      "phrases": 2
+    },
+    {
+      "app": "main",
+      "path": "/zh/endfield/version",
+      "status": 200,
+      "phrases": 3
+    },
+    {
+      "app": "main",
+      "path": "/zh/endfield/events",
+      "status": 200,
+      "phrases": 2
+    },
+    {
+      "app": "main",
+      "path": "/zh/endfield/download",
+      "status": 200,
+      "phrases": 3
+    },
+    {
+      "app": "main",
+      "path": "/zh/endfield/guides/danqingdu-cn-update-guide",
+      "status": 200,
+      "phrases": 2
+    },
+    {
+      "app": "main",
+      "path": "/zh/hi3/version",
+      "status": 200,
+      "phrases": 3
+    },
+    {
+      "app": "main",
+      "path": "/zh/aniimo/version",
+      "status": 200,
+      "phrases": 3
+    },
+    {
+      "app": "main",
+      "path": "/zh/zzz/version",
+      "status": 200,
+      "phrases": 2
+    },
+    {
+      "app": "main",
+      "path": "/zh/wuwa/version",
+      "status": 200,
+      "phrases": 2
+    },
+    {
+      "app": "nte",
+      "path": "/zh/nte/version",
+      "status": 200,
+      "phrases": 2
+    },
+    {
+      "app": "main",
+      "path": "/en/endfield/version",
+      "status": 200,
+      "phrases": 1
+    },
+    {
+      "app": "main",
+      "path": "/en/hi3/version",
+      "status": 200,
+      "phrases": 1
+    },
+    {
+      "app": "main",
+      "path": "/en/aniimo/version",
+      "status": 200,
+      "phrases": 1
+    },
+    {
+      "app": "main",
+      "path": "/en/zzz/version",
+      "status": 200,
+      "phrases": 1
+    },
+    {
+      "app": "main",
+      "path": "/en/wuwa/version",
+      "status": 200,
+      "phrases": 1
+    },
+    {
+      "app": "nte",
+      "path": "/en/nte/version",
+      "status": 200,
+      "phrases": 1
+    },
+    {
+      "app": "main",
+      "path": "/ja/endfield/version",
+      "status": 200,
+      "phrases": 1
+    },
+    {
+      "app": "main",
+      "path": "/ja/hi3/version",
+      "status": 200,
+      "phrases": 1
+    },
+    {
+      "app": "main",
+      "path": "/ja/aniimo/version",
+      "status": 200,
+      "phrases": 1
+    },
+    {
+      "app": "main",
+      "path": "/ja/zzz/version",
+      "status": 200,
+      "phrases": 1
+    },
+    {
+      "app": "main",
+      "path": "/ja/wuwa/version",
+      "status": 200,
+      "phrases": 1
+    },
+    {
+      "app": "nte",
+      "path": "/ja/nte/version",
+      "status": 200,
+      "phrases": 1
+    }
+  ]
+}

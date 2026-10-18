@@ -41,13 +41,13 @@ export const FRESHNESS_WATCH_TERMS: FreshnessWatchTerm[] = [
   { term: 'v3.0', games: ['zzz'], currentRoute: 'v3.3 watch / v3.2 recap' },
   { term: 'v4.4', games: ['starrail'], currentRoute: 'v4.6 preview / live warps' },
   { term: '4.4 当前', games: ['starrail'], currentRoute: 'v4.6 preview / live warps' },
-  { term: 'Homecoming', games: ['endfield'], currentRoute: 'Pioneer Test recap / AIC blueprint' },
+  { term: 'Homecoming', games: ['endfield'], currentRoute: 'CN Danqingdu / historical test archive' },
   { term: '7 月 23', games: ['sea'], currentRoute: 'early 2027 / December beta watch' },
   { term: 'July 23', games: ['sea'], currentRoute: 'early 2027 / December beta watch' },
   { term: '移动端首发', games: ['sea'], currentRoute: 'early 2027 / December beta watch' },
   { term: 'Mobile launch', games: ['sea'], currentRoute: 'early 2027 / December beta watch' },
-  { term: '上线前', games: ['aniimo'], currentRoute: 'PC/console live / mobile countdown' },
-  { term: 'pre-launch', games: ['aniimo'], currentRoute: 'PC/console live / mobile countdown' },
+  { term: '上线前', games: ['aniimo'], currentRoute: 'S1 live / October 16 weekly update' },
+  { term: 'pre-launch', games: ['aniimo'], currentRoute: 'S1 live / October 16 weekly update' },
 ];
 
 export const FRESHNESS_CURRENT_ENTRY_TERMS = FRESHNESS_WATCH_TERMS.filter((rule) => !['上线前', 'pre-launch'].includes(rule.term));

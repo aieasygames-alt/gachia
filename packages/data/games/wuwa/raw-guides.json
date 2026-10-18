@@ -1,28 +1,28 @@
 [
-{
-  "id": "v3-7-hsin-suoming-official-reference",
-  "title": "鸣潮3.7心与锁暝：官方定位、新武器与梦枢天罗入口",
-  "titleEn": "WuWa v3.7 Hsin and Suoming: Official Roles, Weapons and Region Access",
-  "titleJa": "鳴潮v3.7 心・鎖暝：公式情報と新武器・エリア入口",
-  "category": "version",
-  "categoryZh": "版本专题",
-  "categoryEn": "Version Guide",
-  "categoryJa": "バージョン特集",
-  "updatedAt": "2026-10-15",
-  "currentVersion": "3.7 official notice; CN server scope",
-  "tags": [
-    "3.7",
-    "心",
-    "锁暝",
-    "梦枢天罗"
-  ],
-  "summary": "根据3.7官方内容说明整理两名新共鸣者、武器、声骸套装与剧情前置；不编造技能倍率、材料数量或毕业配装。",
-  "summaryEn": "Official v3.7 references for two new Resonators, weapons, Echo sets and story access; no inferred multipliers, material counts or final builds.",
-  "summaryJa": "v3.7公式告知から新共鳴者、武器、音骸セット、物語前提を整理。倍率、素材数、最終ビルドは推測しません。",
-  "content": "## 官方角色与武器\n\n- 心：5星、导电、音感仪；官方战斗风格包含主力输出、协同攻击、共鸣技能伤害、同奏、电磁。官方列出的武器为音感仪「玉阙玄华」。\n- 锁暝：5星、导电、迅刀；官方战斗风格包含快速协奏、普攻伤害、同奏、导电伤害加深、共鸣技能伤害加深。官方列出的武器为迅刀「沉冥」。\n\n本页是官方公告资料，不是完整客户端角色图鉴。技能倍率、突破材料数量、当前卡池阶段与毕业配装尚未实测，不填入推测数值。\n\n## 梦枢天罗与剧情前置\n\n跟随第四章第四幕「梦枢心相由心生」任务指引前往梦枢天罗。该任务需完成第四章幕间「幽客销残声」；奇谭任务「璇心如月寄尘情」在第四章第四幕后解锁。\n\n## 新合鸣与养成规划\n\n公告列出「衔梦照世之心」「镜影流电之瞬」「茜染怀想之花」三套新合鸣效果。选择前先核对当前客户端触发条件与队伍职责，不把新套装自动当作每名导电角色的毕业方案。\n\n## 当前活动窗口\n\n- 「朝月鱼涌」H5：10月15日10:00至11月1日09:59（UTC+8）。\n- 「无音消除」：10月22日10:00至11月9日03:59（服务器时间）。\n- 「凭栏听雨之礼」：10月22日10:00至11月11日03:59（服务器时间），累计登录1天、3天对应奖励分别核对。\n\n服务器时间不是所有地区统一UTC+8，请在客户端复核活动开放、前置和领取状态。\n\n[3.7官方内容说明](https://mc.kurogames.com/main/news/detail/5569) · [版本专题](/wuwa/version) · [地图](/wuwa/map) · [配装参考](/wuwa/build)\n",
-  "contentEn": "## Official roles\n\nHsin is a 5-star Electro Rectifier Resonator; the notice lists main damage, coordinated attacks, skill damage, Tune and electromagnetic play. Suoming is a 5-star Electro Sword Resonator with quick concerto, basic damage and amplification roles. The new weapons are Rectifier 玉阙玄华 and Sword 沉冥.\n\nThis is an announcement reference, not a client-verified complete character sheet. Multipliers, material counts, live banner phases and final builds remain unverified.\n\n## Region access\n\nFollow Chapter IV Act IV into the new region after completing Chapter IV Interlude. The new 奇谭 task unlocks after Act IV. Check the current client for localized quest names.\n\n## Events and timezones\n\nThe 朝月鱼涌 web event runs October 15 at 10:00 through November 1 at 09:59 UTC+8. Other events in the notice use server time, which must not be copied as UTC+8 for every region.\n\n[Official v3.7 notice](https://mc.kurogames.com/main/news/detail/5569) · [Version](/wuwa/version) · [Map](/wuwa/map)\n",
-  "contentJa": "## 公式キャラ情報\n\n心は星5・導電・増幅器、鎖暝は星5・導電・迅刀。公式告知に新武器「玉阙玄华」「沉冥」を掲載。本稿は告知資料であり、倍率、素材数、現行バナー期間、最終ビルドはクライアント実測待ちです。\n\n## エリアと前提\n\n第四章幕間を終えて第四章第四幕の案内で新エリアへ進みます。奇谭任務は第四幕後に解放。任務名のローカライズは利用クライアントで確認してください。\n\n## イベント時刻\n\n朝月鱼涌Webイベントは10月15日10:00から11月1日09:59まで（UTC+8）。他のイベントはサーバー時刻表記を確認し、全地域にUTC+8を適用しないでください。\n\n[公式3.7告知](https://mc.kurogames.com/main/news/detail/5569) · [バージョン](/wuwa/version)\n"
-},
+  {
+    "id": "v3-7-hsin-suoming-official-reference",
+    "title": "鸣潮3.7心与锁暝：官方定位、新武器与梦枢天罗入口",
+    "titleEn": "WuWa v3.7 Hsin and Suoming: Official Roles, Weapons and Region Access",
+    "titleJa": "鳴潮v3.7 心・鎖暝：公式情報と新武器・エリア入口",
+    "category": "version",
+    "categoryZh": "版本专题",
+    "categoryEn": "Version Guide",
+    "categoryJa": "バージョン特集",
+    "updatedAt": "2026-10-18",
+    "currentVersion": "3.7 official notice; CN server scope",
+    "tags": [
+      "3.7",
+      "心",
+      "锁暝",
+      "梦枢天罗"
+    ],
+    "summary": "根据3.7官方内容说明整理两名新共鸣者、武器、声骸套装与剧情前置；不编造技能倍率、材料数量或毕业配装。",
+    "summaryEn": "Official v3.7 references for two new Resonators, weapons, Echo sets and story access; no inferred multipliers, material counts or final builds.",
+    "summaryJa": "v3.7公式告知から新共鳴者、武器、音骸セット、物語前提を整理。倍率、素材数、最終ビルドは推測しません。",
+    "content": "## 10月18日增量：锁暝战斗演示\n\n[官网新闻列表](https://mc.kurogames.com/main/news)于10月18日新增「共鸣者战斗演示 | 锁暝」。演示不等于技能倍率、最优声骸或强度实测，也不等于确认3.8。当前卡池与期限独立核验。\n\n## 官方角色与武器\n\n- 心：5星、导电、音感仪；官方战斗风格包含主力输出、协同攻击、共鸣技能伤害、同奏、电磁。官方列出的武器为音感仪「玉阙玄华」。\n- 锁暝：5星、导电、迅刀；官方战斗风格包含快速协奏、普攻伤害、同奏、导电伤害加深、共鸣技能伤害加深。官方列出的武器为迅刀「沉冥」。\n\n本页是官方公告资料，不是完整客户端角色图鉴。技能倍率、突破材料数量、当前卡池阶段与毕业配装尚未实测，不填入推测数值。\n\n## 梦枢天罗与剧情前置\n\n跟随第四章第四幕「梦枢心相由心生」任务指引前往梦枢天罗。该任务需完成第四章幕间「幽客销残声」；奇谭任务「璇心如月寄尘情」在第四章第四幕后解锁。\n\n## 新合鸣与养成规划\n\n公告列出「衔梦照世之心」「镜影流电之瞬」「茜染怀想之花」三套新合鸣效果。选择前先核对当前客户端触发条件与队伍职责，不把新套装自动当作每名导电角色的毕业方案。\n\n## 当前活动窗口\n\n- 「朝月鱼涌」H5：10月15日10:00至11月1日09:59（UTC+8）。\n- 「无音消除」：10月22日10:00至11月9日03:59（服务器时间）。\n- 「凭栏听雨之礼」：10月22日10:00至11月11日03:59（服务器时间），累计登录1天、3天对应奖励分别核对。\n\n服务器时间不是所有地区统一UTC+8，请在客户端复核活动开放、前置和领取状态。\n\n[3.7官方内容说明](https://mc.kurogames.com/main/news/detail/5569) · [版本专题](/wuwa/version) · [地图](/wuwa/map) · [配装参考](/wuwa/build)\n",
+    "contentEn": "## October 18: Suoming showcase\n\nThe [official news list](https://mc.kurogames.com/main/news) adds Suoming’s combat showcase. It does not validate multipliers, best Echoes, tier ranks or v3.8. Verify current banners separately.\n\n## Official roles\n\nHsin is a 5-star Electro Rectifier Resonator; the notice lists main damage, coordinated attacks, skill damage, Tune and electromagnetic play. Suoming is a 5-star Electro Sword Resonator with quick concerto, basic damage and amplification roles. The new weapons are Rectifier 玉阙玄华 and Sword 沉冥.\n\nThis is an announcement reference, not a client-verified complete character sheet. Multipliers, material counts, live banner phases and final builds remain unverified.\n\n## Region access\n\nFollow Chapter IV Act IV into the new region after completing Chapter IV Interlude. The new 奇谭 task unlocks after Act IV. Check the current client for localized quest names.\n\n## Events and timezones\n\nThe 朝月鱼涌 web event runs October 15 at 10:00 through November 1 at 09:59 UTC+8. Other events in the notice use server time, which must not be copied as UTC+8 for every region.\n\n[Official v3.7 notice](https://mc.kurogames.com/main/news/detail/5569) · [Version](/wuwa/version) · [Map](/wuwa/map)\n",
+    "contentJa": "## 10月18日：鎖暝戦闘紹介\n\n[公式ニュース](https://mc.kurogames.com/main/news)に鎖暝映像を追加。倍率・最適エコー・Tier・3.8の証明ではありません。バナー期限は別途確認。\n\n## 公式キャラ情報\n\n心は星5・導電・増幅器、鎖暝は星5・導電・迅刀。公式告知に新武器「玉阙玄华」「沉冥」を掲載。本稿は告知資料であり、倍率、素材数、現行バナー期間、最終ビルドはクライアント実測待ちです。\n\n## エリアと前提\n\n第四章幕間を終えて第四章第四幕の案内で新エリアへ進みます。奇谭任務は第四幕後に解放。任務名のローカライズは利用クライアントで確認してください。\n\n## イベント時刻\n\n朝月鱼涌Webイベントは10月15日10:00から11月1日09:59まで（UTC+8）。他のイベントはサーバー時刻表記を確認し、全地域にUTC+8を適用しないでください。\n\n[公式3.7告知](https://mc.kurogames.com/main/news/detail/5569) · [バージョン](/wuwa/version)\n"
+  },
   {
     "id": "quick-start-guide",
     "title": "鸣潮快速上手指南",
@@ -1206,16 +1206,67 @@
     "content": "## 先看结论\n\n3.7「镜锁妄世，心照红尘」已于 2026 年 9 月 30 日上线。第一天优先处理邮件、资源下载、梦枢天罗解锁、活动前置和唤取预算；声骸副词条可以后置。\n\n本页只引用官方版本说明、官方唤取公告与游戏内可核验状态。未公布活动、后续复刻和角色数值不作为结论。\n\n## 30 秒行动顺序\n\n1. 检查邮件、公告和有效兑换码。\n2. 完成官方启动器或平台资源下载，并重启一次客户端确认资源齐全。\n3. 按主线进度进入梦枢天罗；精确条件以游戏内任务指引为准。\n4. 在活动页确认本服时间、前置条件与奖励领取方式。\n5. 再根据保底、队伍缺口和卡池结束时间评估心、锁暝及武器唤取。\n6. 将波片集中给一支能推进当前活动的队伍，再考虑声骸副词条。\n\n## 版本与活动边界\n\n官方 3.7 说明确认梦枢天罗的新内容，以及五星共鸣者 **心**（导电、音感仪）和 **锁暝**（导电、迅刀）的版本登场信息。角色是否值得抽取取决于账号缺口、保底与养成预算，而不是短期讨论热度。\n\n「天工寻物」活动窗口为 **10 月 8 日 04:00 至 10 月 26 日 03:59（服务器时间）**。进入前确认活动前置条件和本服时钟；先以已有可用配装通关，再定向补角色等级、武器、关键技能或声骸。\n\n## 更新后卡顿或下载异常\n\n1. 确认官方启动器、Steam、Xbox、PlayStation 或移动端资源包已完整下载。\n2. 记录设备型号、系统版本、画质预设、帧率限制、发生场景和复现步骤。\n3. 对比性能与画质设置，并关闭额外负载的后台录制或覆盖层。\n4. 若持续掉帧、崩溃或资源校验失败，通过游戏内客服或官方反馈提交记录。\n\n社区反馈只能帮助定位问题，不能替代对单一设备或全平台的结论。\n\n## 抽取与波片检查表\n\n- 当前角色池还剩多久？\n- 当前保底、是否大保底、星声和金髓波纹各有多少？\n- 角色实际补的是主输出、协同、辅助还是导电队缺口？\n- 抽到后是否有资源完成等级、武器与基础声骸？\n- 不抽时，现有队伍是否仍可完成本期活动？\n\n更多预算规则见 [当前卡池与抽卡规划](/zh/wuwa/guides/banner-schedule-guide)，每日投入可结合 [波片与素材刷取攻略](/zh/wuwa/guides/farming-route-guide) 规划。",
     "contentEn": "## Quick answer\n\nv3.7 \"Prism's Illusion, Heart's Illumination\" launched on September 30, 2026. Handle mail, resource downloads, Simulacrum Nexus access, event prerequisites, and Convene budgeting before optimizing Echo substats.\n\nThis route uses official patch notes, official Convene notices, and in-game-verifiable status. It does not present unannounced events, reruns, or character values as facts.\n\n## 30-second live route\n\n1. Check mail, notices, and valid codes.\n2. Finish official launcher or platform downloads, then restart the client once.\n3. Enter the Simulacrum Nexus of Mengzhou when the in-game story guidance permits.\n4. Verify the server clock, prerequisites, and reward-claim method on the event page.\n5. Review Hsin, Suoming, and weapon Convene only after checking pity, roster gaps, and banner end time.\n6. Put Waveplate into the team that can clear current events before chasing Echo substats.\n\n## Patch and event boundary\n\nOfficial v3.7 notes confirm the Simulacrum Nexus content and the version appearances of **Hsin** (Electro, Rectifier) and **Suoming** (Electro, Sword). Pull value depends on a real roster gap, pity, and progression budget, not short-term discussion volume.\n\nThe \"Tian Gong Search\" event runs from October 8, 04:00 through October 26, 03:59 server time. Verify your event prerequisites and server clock, clear with playable builds first, then target upgrades only where the team is blocked.\n\n## Post-update checks\n\nComplete official downloads first. For persistent frame drops, crashes, or verification failures, record device, OS, settings, frame cap, scene, and reproduction steps, then submit them through in-game support or official feedback. Community reports are useful signals, not platform-wide conclusions.\n\n## Before you pull\n\n- Verify the live banner end time.\n- Record pity, guarantee state, Astrite, and Radiant Tides.\n- Name the actual roster gap the character fills.\n- Confirm you can fund levels, weapon, and workable Echoes after pulling.\n- Keep a reserve if the current team already clears the event.\n\nContinue with the [banner schedule and pull-planning guide](/en/wuwa/guides/banner-schedule-guide) and [Waveplate farming guide](/en/wuwa/guides/farming-route-guide).",
     "contentJa": "## まず結論\n\nVer.3.7「鏡に鎖す妄世、心で照らす紅塵」は2026年9月30日に配信されました。エコー副ステ厳選より先に、メール、リソースDL、夢枢天羅の解放、イベント前提、集音予算を確認してください。\n\n本ページは公式パッチノート、公式集音告知、ゲーム内で確認できる状態を扱います。未発表イベント、復刻、性能数値を事実として扱いません。\n\n## 実装後の順番\n\n1. メール、告知、有効コードを確認。\n2. 公式ランチャー/プラットフォームのリソースDLを完了し、一度クライアントを再起動。\n3. ゲーム内のストーリー案内に従って夢枢天羅へ。\n4. イベントページでサーバー時刻、前提条件、報酬受取方法を確認。\n5. 天井、編成不足、バナー終了時刻を確認してから心、鎖暝、武器集音を検討。\n6. エコー副ステより、現行イベントを進められる編成へスタミナを使う。\n\n## バージョンとイベント\n\n公式Ver.3.7情報では夢枢天羅、および**心**（導電・音感儀）と**鎖暝**（導電・迅刀）の登場が確認されています。短期的な話題性ではなく、編成の不足、天井、育成予算で判断してください。\n\n「天工尋物」はサーバー時間で10月8日04:00から10月26日03:59までです。まず使えるビルドで挑戦し、詰まった箇所だけを強化してください。\n\n## 性能問題の確認\n\n公式DL完了後もFPS低下、クラッシュ、リソース検証失敗が続く場合、端末、OS、設定、FPS上限、発生場面、再現手順を記録し、ゲーム内サポートまたは公式フィードバックへ送ります。コミュニティ報告は参考ですが、全環境の結論にはなりません。",
-    "tags": ["v3.7", "梦枢天罗", "心", "锁暝", "活动", "卡池", "性能", "Simulacrum Nexus", "Hsin", "Suoming", "Event", "Banner"],
+    "tags": [
+      "v3.7",
+      "梦枢天罗",
+      "心",
+      "锁暝",
+      "活动",
+      "卡池",
+      "性能",
+      "Simulacrum Nexus",
+      "Hsin",
+      "Suoming",
+      "Event",
+      "Banner"
+    ],
     "faq": [
-      { "question": "What should I do first in WuWa v3.7?", "questionZh": "鸣潮 3.7 上线后先做什么？", "questionJa": "鳴潮Ver.3.7実装後は何から始めるべき？", "answer": "Check mail, valid codes, and resource downloads first. Then verify story requirements and event timing in the live client before spending resources or pulling.", "answerZh": "先检查邮件、有效兑换码和资源下载，再在游戏内确认主线要求与活动时间，之后再投入体力或抽取。", "answerJa": "まずメール、有効コード、リソースDLを確認し、ゲーム内でストーリー条件とイベント時刻を確認してからスタミナやガチャを使ってください。" },
-      { "question": "Should I trust social-media banner schedules?", "questionZh": "可以直接按社媒卡池排期抽吗？", "questionJa": "SNSのバナー予定をそのまま信じていい？", "answer": "Use social posts as reminders only. Confirm phase, end time, featured units, and rewards in the live client or official notice before spending premium currency.", "answerZh": "社媒只能作为提醒。花星声前，请在游戏内或官方公告确认阶段、结束时间、UP 内容与奖励。", "answerJa": "SNSはリマインダーに留め、星声を使う前にゲーム内または公式告知で期間、PU、報酬を確認してください。" }
+      {
+        "question": "What should I do first in WuWa v3.7?",
+        "questionZh": "鸣潮 3.7 上线后先做什么？",
+        "questionJa": "鳴潮Ver.3.7実装後は何から始めるべき？",
+        "answer": "Check mail, valid codes, and resource downloads first. Then verify story requirements and event timing in the live client before spending resources or pulling.",
+        "answerZh": "先检查邮件、有效兑换码和资源下载，再在游戏内确认主线要求与活动时间，之后再投入体力或抽取。",
+        "answerJa": "まずメール、有効コード、リソースDLを確認し、ゲーム内でストーリー条件とイベント時刻を確認してからスタミナやガチャを使ってください。"
+      },
+      {
+        "question": "Should I trust social-media banner schedules?",
+        "questionZh": "可以直接按社媒卡池排期抽吗？",
+        "questionJa": "SNSのバナー予定をそのまま信じていい？",
+        "answer": "Use social posts as reminders only. Confirm phase, end time, featured units, and rewards in the live client or official notice before spending premium currency.",
+        "answerZh": "社媒只能作为提醒。花星声前，请在游戏内或官方公告确认阶段、结束时间、UP 内容与奖励。",
+        "answerJa": "SNSはリマインダーに留め、星声を使う前にゲーム内または公式告知で期間、PU、報酬を確認してください。"
+      }
     ],
     "updatedAt": "2026-10-09",
     "currentVersion": "WuWa v3.7 live; verify event timing, rewards, and banner details in-game",
-    "serpTitle": { "zh": "鸣潮 3.7 上线后路线：梦枢天罗、心、活动与卡池", "en": "WuWa v3.7 Live Route: Simulacrum Nexus, Hsin, Events & Banners", "ja": "鳴潮 Ver.3.7 実装後ルート：夢枢天羅・心・イベント・バナー" },
-    "serpDescription": { "zh": "鸣潮 3.7「镜锁妄世，心照红尘」上线后先做什么：邮件补偿、资源下载、梦枢天罗、活动时间、心/锁暝唤取、波片与性能检查。", "en": "What to do after WuWa v3.7 launches: mail compensation, downloads, the Simulacrum Nexus, event timing, Hsin/Suoming Convene, Waveplate, and performance checks.", "ja": "鳴潮Ver.3.7実装後のメール補償、DL、夢枢天羅、イベント時刻、心/鎖暝集音、スタミナ、性能確認を整理。" },
-    "quickFacts": { "zh": ["3.7 已于 2026-09-30 上线；活动时刻、前置条件与奖励以游戏内和官方公告为准。", "先完成邮件和资源下载，再进入梦枢天罗与限时活动。", "抽取前确认保底、队伍缺口、卡池结束时间和养成预算。"], "en": ["v3.7 launched September 30, 2026; use the live client and official notices for timing, prerequisites, and rewards.", "Finish mail and resource downloads before the Simulacrum Nexus and limited events.", "Before pulling, verify pity, roster gaps, banner end time, and progression budget."], "ja": ["Ver.3.7は2026年9月30日に配信。時刻、前提条件、報酬はゲーム内と公式告知を基準にします。", "メールとリソースDLを終えてから夢枢天羅と期間限定イベントへ。", "抽選前に天井、編成不足、バナー終了時刻、育成予算を確認。"] }
+    "serpTitle": {
+      "zh": "鸣潮 3.7 上线后路线：梦枢天罗、心、活动与卡池",
+      "en": "WuWa v3.7 Live Route: Simulacrum Nexus, Hsin, Events & Banners",
+      "ja": "鳴潮 Ver.3.7 実装後ルート：夢枢天羅・心・イベント・バナー"
+    },
+    "serpDescription": {
+      "zh": "鸣潮 3.7「镜锁妄世，心照红尘」上线后先做什么：邮件补偿、资源下载、梦枢天罗、活动时间、心/锁暝唤取、波片与性能检查。",
+      "en": "What to do after WuWa v3.7 launches: mail compensation, downloads, the Simulacrum Nexus, event timing, Hsin/Suoming Convene, Waveplate, and performance checks.",
+      "ja": "鳴潮Ver.3.7実装後のメール補償、DL、夢枢天羅、イベント時刻、心/鎖暝集音、スタミナ、性能確認を整理。"
+    },
+    "quickFacts": {
+      "zh": [
+        "3.7 已于 2026-09-30 上线；活动时刻、前置条件与奖励以游戏内和官方公告为准。",
+        "先完成邮件和资源下载，再进入梦枢天罗与限时活动。",
+        "抽取前确认保底、队伍缺口、卡池结束时间和养成预算。"
+      ],
+      "en": [
+        "v3.7 launched September 30, 2026; use the live client and official notices for timing, prerequisites, and rewards.",
+        "Finish mail and resource downloads before the Simulacrum Nexus and limited events.",
+        "Before pulling, verify pity, roster gaps, banner end time, and progression budget."
+      ],
+      "ja": [
+        "Ver.3.7は2026年9月30日に配信。時刻、前提条件、報酬はゲーム内と公式告知を基準にします。",
+        "メールとリソースDLを終えてから夢枢天羅と期間限定イベントへ。",
+        "抽選前に天井、編成不足、バナー終了時刻、育成予算を確認。"
+      ]
+    }
   },
   {
     "id": "v3-6-qingxiao-jingran-post-launch-route",

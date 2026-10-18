@@ -29,13 +29,43 @@ export const playableCharacters = [
   { slug: 'beiyi', name: '贝伊', affiliation: '官方角色页已公开', note: '官方角色页公开角色；具体定位以公测内说明为准。' },
   { slug: 'aiti', name: '艾提', affiliation: '官方角色页已公开', note: '官方角色页公开角色；技能、养成和获取方式待公测客户端确认。' },
   { slug: 'mata', name: '玛塔', affiliation: '官方角色页已公开', note: '官方角色页公开角色；不根据测试期资料预设队伍定位。' },
+  { slug: 'fulizi', name: '弗莉兹', affiliation: '官方角色档案已公开', note: '官方8月20日公开档案。修复公告中另有「弗利兹」写法，别名对应待核验；不据档案公开推定当前卡池可获得性。' },
+  { slug: 'lilang', name: '璃琅', affiliation: '官方角色档案已公开', note: '官方8月6日公开档案；正式客户端可获得性、技能与养成材料仍待核验。' },
+  { slug: 'daliya', name: '达里娅', affiliation: '官方角色档案已公开', note: '官方7月30日公开档案；正式客户端可获得性、技能与养成材料仍待核验。' },
+] as const;
+
+export const characterSources: Record<string, { url: string; publishedAt: string; note: string }> = {
+  'he-yulian': { url: 'https://www.taptap.cn/moment/859169001488517438', publishedAt: '2026-10-14', note: '启程活动仅支持获取条件与活动奖励，不支持技能数值或毕业配装结论。' },
+  fulizi: { url: 'https://www.taptap.cn/moment/839571350325560067', publishedAt: '2026-08-20', note: '公开档案不等于当前版本可抽取。' },
+  lilang: { url: 'https://www.taptap.cn/moment/834478269179891580', publishedAt: '2026-08-06', note: '公开档案不等于当前版本可抽取。' },
+  daliya: { url: 'https://www.taptap.cn/moment/831939862348170248', publishedAt: '2026-07-30', note: '公开档案不等于当前版本可抽取。' },
+};
+
+export const patchSource = 'https://www.taptap.cn/moment/859843330974942172';
+export const patchChecks = [
+  { title: '更新并重新登录', detail: '官方持续更新公告要求更新后重新登录。先完成资源更新，再重登；不要为排障删除账号数据。' },
+  { title: '第三章任务与要塞', detail: '10月17日列入「蔓延的黑」「暗藏的刃」NPC缺失、瓦尔肯要塞复活后大门不开等修复。官方称已修复，本站未逐设备复测。' },
+  { title: '残片路线需要重验', detail: '10月17日调整瓦尔肯要塞VIII号残片位置。本站尚无当前版本实测坐标，旧测试截图不能作为新路线。' },
+] as const;
+
+export const firstWeekRoute = [
+  { title: '首次进入：序章与活动', status: '官方活动可核验', steps: ['先更新资源并重新登录，使用同账号核对UID。', '完成序章「梦境伊始」，进入奥城欢迎签到、成长与特训活动页。', '领取当前可领阶段奖励；功能精确解锁等级、通关用时尚未实测。'] },
+  { title: '累计第2天：何雨莲', status: '官方获取条件', steps: ['在奥城欢迎签到核对累计天数，累计第2天获得何雨莲（强袭·回声）。', '以背包/角色页核对个人到账；签到奖励不等同于卡池获取概率。', '先看正式技能与材料来源，再投入资源；本站尚无可验证的毕业构筑。'] },
+  { title: '首周回访：任务与签到', status: '永久奖励 + 修复排查', steps: ['累计第7天可获洛夕服饰「晴空漫游」，不是连续首周限定抢领承诺。', '第三章或要塞仍卡住时，先按10月17日修复说明排查，再向官方反馈。', '奥城防卫与30层深层演算试炼官方说明不消耗体力；先核对解锁和难度，不承诺首周全通。'] },
+] as const;
+
+export const clientEvidenceChecklist = [
+  '记录客户端build、平台、区服、采集日期与账号进度；公告核验日期不能冒充实测日期。',
+  '角色：保存图鉴正式名称、技能等级与数值、材料名称/数量、获取入口；没有截图或可复核说明的字段留空。',
+  '路线：记录任务前置、解锁条件、起点、步骤和实际耗时；瓦尔肯要塞VIII号残片需按10月17日调整后的位置重新采集。',
+  '养成：逐级核对消耗与来源，区分一次奖励、周期产出和随机掉落；不以单次掉落推算固定效率。',
 ] as const;
 
 export const contentStatus = {
-  verifiedAt: '2026-10-15',
+  verifiedAt: '2026-10-18',
   clientVerified: false,
   official: '官方已公开',
-  pending: '公测后核验',
+  pending: '正式客户端待实测',
 } as const;
 
 export const sourcePolicy = [
@@ -76,11 +106,27 @@ export const launchDayVerification = [
     href: '/zh/lvmeng/starter-guide',
   },
   {
-    id: 'rewards-and-banners',
-    status: '待官方公告',
-    title: '奖励、卡池与兑换',
-    summary: '预约奖励、登录活动、测试返还和兑换码是独立机制；概率与保底也不能从旧测试外推。',
-    action: '逐项核对来源、有效期、领取入口与适用角色；未确认信息不计入资源规划。',
+    id: 'permanent-rewards',
+    status: '官方已公开',
+    title: '永久签到与成长奖励',
+    summary: '完成序章「梦境伊始」后开放；累计第2天获得何雨莲（强袭·回声），第7天获得洛夕服饰「晴空漫游」。永久活动不是首周到期福利。',
+    action: '在活动页核对累计天数与个人领取状态；预约、邮件补偿另行确认资格与期限。',
+    href: '/zh/lvmeng/redeem-codes',
+  },
+  {
+    id: 'banners',
+    status: '待逐项核验',
+    title: '卡池、概率与保底',
+    summary: '当前卡池、概率、保底继承与期限尚未逐项核验，不从测试期或角色档案公开状态外推。',
+    action: '抽取前核对当前客户端概率公示、保底说明和剩余时间。',
+    href: '/zh/lvmeng/version',
+  },
+  {
+    id: 'codes',
+    status: '未验证到有效码',
+    title: '兑换码与限时邮件',
+    summary: '本站尚未验证到有效兑换码，不等于不存在；涌钻×1000延迟补偿不是兑换码，领取资格和期限仍需核对。',
+    action: '仅使用官方兑换入口，预约、返还、邮件与输入兑换码分别记录。',
     href: '/zh/lvmeng/redeem-codes',
   },
   {
@@ -108,6 +154,8 @@ export const releaseStatus = [
 ] as const;
 
 export const officialAnnouncements = [
+  { title: '10月17日修复：第三章任务、要塞与磁盘', date: '2026-10-17', status: '官方称已修复 · 本站未逐设备复测', summary: '涉及「蔓延的黑」「暗藏的刃」NPC缺失、瓦尔肯要塞复活后门不开、装备/磁盘效果与重连交互；瓦尔肯要塞VIII号残片位置调整。更新后请重新登录，旧地图路线需重新核验。', url: 'https://www.taptap.cn/moment/859843330974942172' },
+  { title: '10月16日修复：任务、技能与奖励领取', date: '2026-10-16', status: '官方称已修复 · 本站未逐设备复测', summary: '涉及副本推荐等级、作战合约磁盘描述、部分角色技能、首领无敌、残片限时与成就领取。按同一持续更新公告的日期分段查阅，不把公告修复等同于所有设备已实测。', url: 'https://www.taptap.cn/moment/859843330974942172' },
   { title: '公测现已开启：下载、配置与互通', date: '2026-10-15', status: '官方已公开', summary: 'PC Windows、Android、iOS开放；同账号跨平台游戏数据互通、同一UID。PC预留25GB以上，移动端15GB以上；建议卸载旧测试客户端后重新下载。', url: 'https://www.taptap.cn/moment/859747177096807583' },
   { title: '服务器恢复与延迟补偿', date: '2026-10-15', status: '官方恢复公告', summary: '原定10:00开服曾因云服务网络波动延迟，官方随后确认已可以正常进入，并公告涌钻×1000邮件补偿。领取资格、期限与个人到账状态请在当前公告和邮箱复核。', url: 'https://www.taptap.cn/moment/859745458094866984' },
   { title: '1.0公测版本反馈建议收集信箱', date: '2026-10-15', status: '官方反馈入口', summary: '按PC或移动端记录客户端版本、设备、网络、复现步骤与截图；不要将账号密码或验证码写入公开反馈。', url: 'https://www.taptap.cn/moment/859750698839969512' },
@@ -155,7 +203,8 @@ export const launchFaq = [
   { question: '首发支持哪些平台？', answer: '官方开服公告确认PC（Windows）、Android与iOS开放。同一账号跨平台游戏数据互通，各平台为同一UID。' },
   { question: '在哪里预约或下载最安全？', answer: '请使用官方网站、TapTap 官方下载页或 App Store 下载页。不要使用论坛附件、转存安装包或第三方兑换工具。' },
   { question: '绿梦的横版 ACT 玩法先该学什么？', answer: '先在正式客户端熟悉闪避、地面与空中衔接、角色切换和援护触发。测试期连招与帧数细节可以作为练习线索，但不能直接替代公测操作结论。' },
-  { question: '公测前能直接照搬配队和武器攻略吗？', answer: '不建议。测试版本的角色数值、武器效果、资源获取和敌人环境都可能调整。公测前可用角色定位和队伍职责理解思路，具体培养请等待当前客户端与官方说明。' },
+  { question: '公测后能直接照搬测试期配队和武器攻略吗？', answer: '不建议。测试版本的角色数值、武器效果、资源获取和敌人环境都可能调整。请按当前客户端与官方修复说明核对，未实测的强度与毕业装备不作为本站推荐。' },
+  { question: '更新后任务仍卡住怎么办？', answer: '官方10月17日修复公告要求更新后重新登录。先核对资源更新，再重登并复查任务；仍异常时记录任务名、客户端build、设备和复现步骤，提交官方反馈。不要删除账号数据或使用非官方修复工具。' },
   { question: '探索和隐藏内容应如何安排？', answer: '首日先完成主线与功能解锁，再回访有明确前置能力或任务条件的区域。不要因追逐测试期坐标而跳过传送、地图、任务或奖励入口。' },
   { question: '预约奖励、卡池福利和兑换码能一起计算吗？', answer: '不能。预约奖励、登录活动、测试返还和可输入兑换码是不同机制，只有官方明确领取条件、有效期和入口后才可纳入首日资源规划。' },
   { question: '预约奖励和兑换码是一回事吗？', answer: '不是。预约奖励、测试返还和兑换码通常是不同机制；本站仅在官方公告明确兑换方式、有效期与奖励后收录兑换码。' },
@@ -179,9 +228,9 @@ export const starterGuideSections = [
 ] as const;
 
 export const mapDirectory = [
-  { title: '区域目录', status: '公测后建立', description: '按客户端区域名称整理主线入口、传送点、收集与敌人图鉴。' },
-  { title: '探索与收集', status: '公测后核验', description: '仅发布经客户端复核的收集路线、前置任务和版本适用范围。' },
-  { title: '敌人与掉落', status: '公测后核验', description: '关联敌人图鉴、材料用途和推荐挑战条件，避免用测试期掉落替代正式资料。' },
+  { title: '瓦尔肯要塞', status: '10月17日官方修复 · 路线待实测', description: '官方调整VIII号残片位置，并修复复活后大门不开。先更新并重新登录，不使用旧测试坐标定位残片；本站尚未发布新坐标。' },
+  { title: '第三章任务阻断', status: '10月17日官方修复 · 本站未复测', description: '「蔓延的黑」查看情况与「暗藏的刃」苏利文NPC缺失已列入修复。若仍卡住，保留任务阶段、build和截图提交官方反馈。' },
+  { title: '敌人与掉落', status: '待客户端实测', description: '材料用途、掉落与挑战条件尚未实测，不用测试期掉落或补丁标题替代当前数据。' },
 ] as const;
 
 export const progressionDirectory = [
@@ -191,6 +240,8 @@ export const progressionDirectory = [
 ] as const;
 
 export const versionHistory = [
+  { version: '1.0 · 10月17日修复', date: '2026-10-17', status: '官方修复说明 · 本站未复测', summary: '第三章任务NPC、瓦尔肯要塞门与VIII号残片位置、装备/磁盘效果等调整。更新后重新登录；修复摘要和官方原文见公告页。' },
+  { version: '1.0 · 10月16日修复', date: '2026-10-16', status: '官方修复说明 · 本站未复测', summary: '推荐等级、磁盘描述、角色技能、首领与奖励领取相关修复；仅代表官方公告状态。' },
   { version: game.version, date: '2026-10-15', status: '公测已开启', summary: 'PC Windows、Android、iOS开放，同账号游戏数据互通、同一UID。原定10:00曾延迟，官方随后公告恢复及涌钻×1000补偿；当前状态以最新公告为准。产品版本不等于安装包build，角色数值与卡池规则仍待逐项核验。' },
   { version: '公测前瞻（历史事件）', date: '2026-10-09', status: '已结束', summary: '前瞻预告窗口已经过去，当前以1.0开服公告和正式客户端为准，不继续引导等待节目或领取未经核验的直播码。' },
 ] as const;
@@ -199,14 +250,14 @@ export const systemOverview = [
   { title: '横版动作与探索', description: '核心体验是横版战斗和关卡探索，场景包含荒野、都市废墟、人造奇观与危险禁区等不同环境。' },
   { title: '地面与空中切换', description: '战斗强调地面、空中的位移与衔接；实战应先熟悉闪避、起跳、落地和技能取消的节奏。' },
   { title: '队伍与援护', description: '第三方测试攻略普遍提及角色切换、援护和能量管理；正式服名称、触发条件与数值须以游戏内教程为准。' },
-  { title: '可选主角与女性角色池', description: '官方答疑说明主角性别可选，角色卡池为女性角色；正式卡池规则、概率和保底仍需等待公测公告。' },
+  { title: '可选主角与女性角色池', description: '官方答疑说明主角性别可选，角色卡池为女性角色；当前卡池规则、概率和保底仍待逐项核对正式客户端公示，不从旧测试外推。' },
 ] as const;
 
 export const preparationChecklist = [
   '使用官网、TapTap 官方页或 App Store 下载正式客户端；不从论坛附件或非官方分发页安装客户端。',
   '进入游戏前先确认账号登录方式、服务器、最新维护和恢复状态，再决定是否充值或购买礼包。',
   '完成教程后优先熟悉闪避、空中位移、角色切换与援护触发，不以测试期强度榜决定首日培养。',
-  '资源先集中投入一支可稳定通关的队伍；角色、装备、命座与卡池规则以公测客户端说明为准。',
+  '资源先集中投入一支可稳定通关的队伍；角色、装备、密录对轨与卡池规则以当前客户端说明为准。',
 ];
 
 export const launchRewards = [
@@ -235,7 +286,7 @@ export const worldGlossary = [
 ] as const;
 
 export const publicWorldSources = [
-  { label: '官方网站', url: game.officialSite, purpose: '核对公测前官方首页及后续设定更新。' },
+  { label: '官方网站', url: game.officialSite, purpose: '核对当前官方首页及设定更新。' },
   { label: '官方网站角色页', url: 'https://lvmeng.zhuziplay.com/role', purpose: '核对角色和已公开组织线索。' },
   { label: '公开背景资料参考', url: 'https://baike.baidu.com/item/%E7%BB%BF%E6%A2%A6%EF%BC%9A%E6%97%B6%E7%A9%BA%E4%B9%8B%E5%A3%B0/65952663', purpose: '交叉核对已公开的世界观术语；不替代官方客户端资料。' },
 ] as const;

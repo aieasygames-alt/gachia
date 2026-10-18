@@ -1,16 +1,16 @@
 [
   {
     "id": "v3-3-special-program-prep-guide",
-    "title": "绝区零3.3前瞻复盘：新代理人与已过期节目码",
-    "titleEn": "ZZZ v3.3 Preview Recap: Upcoming Agents and Expired Codes",
-    "titleJa": "ZZZ v3.3番組まとめ：新エージェントと失効済みコード",
+    "title": "绝区零3.3前瞻复盘：菲欧妮机制来源与过期节目码",
+    "titleEn": "ZZZ v3.3 Preview Recap: Feioni Reference and Expired Codes",
+    "titleJa": "ZZZ v3.3番組まとめ：菲欧妮機構資料と失効コード",
     "category": "version",
     "categoryZh": "版本专题",
     "categoryEn": "Version Guide",
     "categoryJa": "バージョン特集",
-    "summary": "10月9日前瞻已发布，菲欧妮、赛维里安即将登场；节目码10月11日23:59:59（UTC+8）已失效。版本上线日与卡池详情继续核对正式公告。",
-    "summaryEn": "The October 9 preview is published. Program codes expired October 11 at 23:59:59 UTC+8. Verify release timing and banners in official follow-up notices.",
-    "summaryJa": "10月9日の番組は公開済み。コードは10月11日23:59:59（UTC+8）に失効。実装日とバナー詳細は後続公式告知で確認してください。",
+    "summary": "10月9日前瞻已发布，菲欧妮10月17日机制介绍已公开。节目码10月11日已过期；3.3实装日、卡池和技能数值分别核验。",
+    "summaryEn": "The October 9 preview and October 17 Feioni mechanics reference are published. Program codes expired October 11; verify the v3.3 launch, banners and values separately.",
+    "summaryJa": "10月9日番組と17日菲欧妮機構紹介は公開済み。コードは11日失効。3.3実装日・バナー・数値は別途確認。",
     "tags": [
       "3.3",
       "special program",
@@ -22,48 +22,12 @@
       "Polychrome",
       "ZZZ version"
     ],
-    "content": "## 已确认的前瞻信息\n\n10月9日官方发布3.3「重返天空的旅程」情报总览，公布菲欧妮、赛维里安即将登场，以及新皮肤、复刻、剧情与活动方向。\n\n## 节目码已失效\n\n该节目兑换码已于2026年10月11日23:59:59（UTC+8）失效。不要再尝试领取或把这些代码计入当前菲林预算；其他代码应逐条核验有效期。\n\n## 当前决策顺序\n\n先核对所在服务器的当前调频与活动期限，再记录资源、保底和队伍缺位。前瞻定位不能替代正式角色实测；版本日期和卡池阶段不按惯例推算。\n\n[官方情报总览](https://zenless.hoyoverse.com/zh-cn/news/166644) · [版本专题](/zzz/version) · [兑换码状态](/zzz/redeem-codes) · [抽卡规划](/zzz/gacha)",
-    "contentEn": "## Published preview\n\nThe October 9 official v3.3 recap introduces two upcoming agents, skins, reruns, story and events.\n\n## Codes expired\n\nProgram codes expired October 11, 2026 at 23:59:59 UTC+8. Do not redeem or include them in a current budget. Verify other codes separately.\n\n## Next steps\n\nCheck your server, live banners and event deadlines, then record resources, pity and team gaps. Verify release dates and banner phases in official notices rather than predicting them.\n\n[Official recap](https://zenless.hoyoverse.com/zh-cn/news/166644) · [Version hub](/zzz/version) · [Codes](/zzz/redeem-codes)",
-    "contentJa": "## 公開済み番組\n\n10月9日のv3.3公式まとめで新エージェント2名、衣装、復刻、物語、イベントを紹介。\n\n## コードは失効済み\n\n番組コードは2026年10月11日23:59:59（UTC+8）に失効しました。現在の資源計画に含めず、他コードの期限は個別に確認してください。\n\n## 次の行動\n\n利用サーバー、開催中のバナーと期限を確認し、資源、天井、編成不足を整理します。実装日とバナー期間は公式告知を基準にしてください。\n\n[公式まとめ](https://zenless.hoyoverse.com/zh-cn/news/166644) · [バージョン](/zzz/version)",
-    "faq": [
-      {
-        "question": "Are the program codes still active?",
-        "questionZh": "节目码还能领吗？",
-        "questionJa": "番組コードは有効ですか？",
-        "answer": "No. Program codes expired October 11 at 23:59:59 UTC+8. Other codes need separate verification.",
-        "answerZh": "不能。节目码已于10月11日23:59:59（UTC+8）失效；其他码需单独核验。",
-        "answerJa": "いいえ。10月11日23:59:59（UTC+8）に失効。他コードは個別に確認してください。"
-      }
-    ],
-    "updatedAt": "2026-10-15",
-    "currentVersion": "3.3 preview recap / codes expired 2026-10-11; program 2026-10-09",
-    "serpTitle": {
-      "zh": "绝区零3.3前瞻复盘：新代理人与已过期节目码",
-      "en": "ZZZ v3.3 Preview Recap: Upcoming Agents and Expired Codes",
-      "ja": "ZZZ v3.3番組まとめ：新エージェントと失効済みコード"
-    },
-    "serpDescription": {
-      "zh": "10月9日前瞻已发布，菲欧妮、赛维里安即将登场；节目码10月11日23:59:59（UTC+8）已失效。版本上线日与卡池详情继续核对正式公告。",
-      "en": "The October 9 preview is published. Program codes expired October 11 at 23:59:59 UTC+8. Verify release timing and banners in official follow-up notices.",
-      "ja": "10月9日の番組は公開済み。コードは10月11日23:59:59（UTC+8）に失効。実装日とバナー詳細は後続公式告知で確認してください。"
-    },
-    "quickFacts": {
-      "zh": [
-        "10月9日前瞻已发布，菲欧妮、赛维里安即将登场。",
-        "节目码已于10月11日23:59:59（UTC+8）失效。",
-        "上线日期与卡池阶段以官方后续公告为准。"
-      ],
-      "en": [
-        "The October 9 preview is published.",
-        "Program codes expired October 11 at 23:59:59 UTC+8.",
-        "Verify the release date and banner phases in official notices."
-      ],
-      "ja": [
-        "10月9日の番組は公開済み。",
-        "番組コードは10月11日23:59:59（UTC+8）に失効。",
-        "実装日とバナー期間は公式告知で確認。"
-      ]
-    }
+    "content": "## 已公开与待核验分开\n\n10月9日3.3「重返天空的旅程」前瞻已发布。菲欧妮、赛维里安为已公开后续角色线索，但宣传不等于3.3已经实装。\n\n- [官方前瞻来源](https://zenless.hoyoverse.com/zh-cn/news/166644)\n- [10月17日菲欧妮机制介绍](https://zenless.hoyoverse.com/zh-cn/news/166907)\n\n## 菲欧妮资料如何使用\n\n官方资料库已收录战斗相关信息，机制图可以直接阅读原文。本站尚未逐图核对技能倍率、材料、音擎、驱动盘与队伍循环，不据演示给强度评级或毕业配装。角色机制不能再一概标为“尚未公开”，但公开原文与本站已完成数值录入是两个状态。\n\n## 节目码与资源\n\n节目码已于10月11日23:59:59（UTC+8）失效，不重新列为可领福利；其他代码使用[兑换码页](/zzz/redeem-codes)的独立核验状态。先检查所在地区、服务器、当前池子结束时间、菲林、母带和保底，再决定投入。\n\n## 当前资料边界\n\n3.2保留为已实装资料参考，3.3上线日期与卡池以正式公告核验，不凭前瞻日期推算维护时间。10月18日仅为本页官方来源核验日，不是版本发布日期，也不是客户端实测日。\n",
+    "contentEn": "## Published references, not an inferred launch\n\nThe October 9 v3.3 preview is published. The [official preview](https://zenless.hoyoverse.com/zh-cn/news/166644) and [October 17 Feioni mechanics post](https://zenless.hoyoverse.com/zh-cn/news/166907) are source references, not proof that v3.3 has launched.\n\nMechanic images are public, but we have not validated skill values, materials, W-Engines, Drive Discs or team rotations. Do not mark all mechanics as unpublished, and do not turn a public reference into a tested build recommendation.\n\n## Expired codes and planning\n\nProgram codes expired October 11 at 23:59:59 UTC+8 and stay expired. Check other strings separately on the [code page](/zzz/redeem-codes). Confirm region, server, current banner deadline, currency and pity before budgeting.\n\nKeep v3.2 as a live-content reference; verify the v3.3 release and banners in official follow-up notices. October 18 is the source-check date, not a release or client-test date.\n",
+    "contentJa": "## 公開資料と実装確認は別\n\n10月9日のv3.3番組は公開済み。[番組公式出典](https://zenless.hoyoverse.com/zh-cn/news/166644)と[17日の菲欧妮機構紹介](https://zenless.hoyoverse.com/zh-cn/news/166907)を参照してください。キャラ紹介だけでv3.3配信とは判断しません。\n\n機構画像は公開済みですが、本サイトでは倍率・素材・音動機・ディスク・編成循環を未検証。全機構を未公開と扱わず、公開済み資料を実測ビルドとも扱いません。\n\n## コードと資源\n\n番組コードは10月11日23:59:59（UTC+8）失効。その他は[コードページ](/zzz/redeem-codes)で個別確認。地域・サーバー・バナー期限・通貨・天井を確認して計画します。\n\n3.2は実装資料として保持し、3.3実装日とバナーは後続公式告知で確認。10月18日は出典確認日で、配信日やクライアント実測日ではありません。\n",
+    "faq": [],
+    "updatedAt": "2026-10-18",
+    "currentVersion": "v3.3 preview 2026-10-09 / mechanics 2026-10-17 / release unverified"
   },
   {
     "id": "steam-3-0-start-guide",
@@ -1496,10 +1460,29 @@
     "summary": "不要先问哪只邦布绝对最强。先确定主队的输出机制、同阵营/同属性条件、已有代理人和养成资源，再选择能稳定触发队伍收益的邦布。",
     "summaryEn": "Do not start by asking which Bangboo is universally best. Identify your main team's damage plan, faction/attribute conditions, roster, and resources, then choose the option that consistently works in that team.",
     "summaryJa": "最強のボンプを先に決めるのではなく、主力編成の火力軸、陣営・属性条件、所持エージェント、育成資源を確認し、安定して機能するボンプを選びます。",
-    "tags": ["Bangboo", "邦布", "team building", "core passive", "ZZZ teams"],
+    "tags": [
+      "Bangboo",
+      "邦布",
+      "team building",
+      "core passive",
+      "ZZZ teams"
+    ],
     "content": "## 先看结论\n\n邦布不是脱离队伍的强度榜。先锁定你的第一队或第二队核心，再检查同阵营、同属性和异常/击破/强攻的协同条件。能稳定满足队伍条件的邦布，通常比单看面板或稀有度更有价值。\n\n## 三步选择法\n\n1. **先选队伍，不先选邦布**：用配队器勾选已拥有代理人，找出能完整组出的三人队。\n2. **检查额外能力是否能开**：邦布、代理人的同阵营或同属性条件必须按游戏内描述核对；没有满足条件时，不要把预期收益当作已经生效。\n3. **最后才看投资**：第一、第二队的核心角色、音擎和驱动盘未成型前，不要为了某只邦布牺牲更关键的养成节点。\n\n## 常见队伍判断\n\n- **强攻 + 击破 + 支援**：优先选择能帮助输出窗口、集怪或保持循环顺畅的邦布；队伍角色和驱动盘完成度通常比邦布等级更影响通关。\n- **异常队**：先确认异常积蓄、紊乱或队伍属性条件，再选能配合元素节奏的邦布。\n- **双队终局**：两队都缺核心角色或关键盘时，邦布投资应后置；先把每队至少一套可运行的角色、音擎与驱动盘做出来。\n\n## 不建议的做法\n\n- 只因为某只邦布稀有就跨队硬塞。\n- 把社区推荐当作所有队伍的固定答案。\n- 忽略版本、关卡和敌人差异。\n\n## 下一步\n\n先到配队器选择手头代理人，确认一队和二队的缺位；随后在角色配装页检查对应的音擎和驱动盘，再决定是否投入邦布资源。",
     "contentEn": "## Quick answer\n\nBangboos are not a universal tier list. Lock your first or second team first, then check faction, attribute, and Attack/Stun/Anomaly synergy conditions. A Bangboo that consistently enables your actual team is usually more valuable than a higher-rarity option selected in isolation.\n\n## Three-step choice\n\n1. **Choose a team before a Bangboo.** Use the Team Builder to mark owned agents and find complete trios.\n2. **Verify additional abilities.** Check faction or attribute requirements against the in-game description. Do not count an effect as active when its condition is not met.\n3. **Invest last.** Until both endgame teams have working agents, W-Engines, and Drive Discs, Bangboo upgrades should not displace core progression.\n\n## Team heuristics\n\n- **Attack + Stun + Support:** favor reliable damage-window, grouping, or rotation support.\n- **Anomaly teams:** check buildup, Disorder, and attribute conditions before choosing.\n- **Two-team endgame:** finish a functional base for each team before investing heavily in Bangboos.\n\nUse the Team Builder, then open build recommendations for the agents you will actually field.",
-    "faq": [{"question":"Which Bangboo is best in ZZZ?","questionZh":"绝区零哪只邦布最强？","answer":"There is no universal answer. Choose the Bangboo whose conditions and role consistently fit your actual three-agent team.","answerZh":"没有脱离队伍的通用答案。优先选择能稳定满足你实际三人队条件和定位的邦布。"},{"question":"Should I level Bangboos before Drive Discs?","questionZh":"邦布要先于驱动盘培养吗？","answer":"Usually no. Correct Drive Disc sets, main stats, and core agent progression normally produce a larger first upgrade.","answerZh":"通常不建议。角色等级、核心技、正确套装和主词条一般比先升邦布带来更大的提升。"}],
+    "faq": [
+      {
+        "question": "Which Bangboo is best in ZZZ?",
+        "questionZh": "绝区零哪只邦布最强？",
+        "answer": "There is no universal answer. Choose the Bangboo whose conditions and role consistently fit your actual three-agent team.",
+        "answerZh": "没有脱离队伍的通用答案。优先选择能稳定满足你实际三人队条件和定位的邦布。"
+      },
+      {
+        "question": "Should I level Bangboos before Drive Discs?",
+        "questionZh": "邦布要先于驱动盘培养吗？",
+        "answer": "Usually no. Correct Drive Disc sets, main stats, and core agent progression normally produce a larger first upgrade.",
+        "answerZh": "通常不建议。角色等级、核心技、正确套装和主词条一般比先升邦布带来更大的提升。"
+      }
+    ],
     "updatedAt": "2026-09-24",
     "currentVersion": "ZZZ v3.3 watch / v3.2 recap; verify team conditions and live balance in game"
   },
@@ -1515,10 +1498,30 @@
     "summary": "终局内容的核心不是照抄一套所谓毕业队，而是先让两支队伍各自具备主输出、循环支撑、正确驱动盘主词条和可执行的养成顺序。",
     "summaryEn": "The core of endgame is not copying one perfect team. Build two squads with a carry, rotation support, correct Drive Disc main stats, and an executable progression order.",
     "summaryJa": "高難度の鍵は理想編成をコピーすることではありません。二編成それぞれに主力、ローテーション支援、正しい主属性、実行可能な育成順を用意します。",
-    "tags": ["Shiyu Defense", "Critical Frontier", "式舆防卫", "危局强袭", "endgame", "two teams"],
+    "tags": [
+      "Shiyu Defense",
+      "Critical Frontier",
+      "式舆防卫",
+      "危局强袭",
+      "endgame",
+      "two teams"
+    ],
     "content": "## 先看结论\n\n式舆防卫和危局强袭最容易暴露的不是单个角色强度，而是双队资源分配失衡：一队毕业、二队缺主输出或关键循环位。先做两支能运行的队，再追单队上限。\n\n## 双队检查清单\n\n### 第一队\n\n- 有明确站场/输出核心。\n- 有能衔接失衡、异常或增益窗口的第二位。\n- 驱动盘套装和 4/5/6 号位主词条正确。\n- 主输出的音擎与关键技能优先完成。\n\n### 第二队\n\n- 不和第一队争同一个唯一核心。\n- 先解决角色缺位，再追专属音擎或极限副词条。\n- 用现有 A 级替代位跑通循环后，再决定下个卡池是否补洞。\n\n## 资源优先级\n\n1. 两队主输出等级、核心技和关键技能。\n2. 正确的音擎与驱动盘主词条。\n3. 能开启队伍协同的击破、支援或异常组件。\n4. 驱动盘副词条、邦布等级和专属音擎的上限投资。\n\n## 实战复盘方式\n\n打不过时不要立刻换角色。先记下是输出窗口不够、失衡太慢、生存中断，还是第二队资源太薄。然后只改一个变量：角色站位/循环、主词条、一个技能等级或一个队伍缺位。这样才能判断问题来自操作、配装还是角色池。\n\n## 下一步\n\n用配队器标记自己的代理人，先筛出两支完整队；再用养成计划器算第一和第二队核心的材料缺口。需要抽取新角色时，最后再回到菲林规划器看最坏情况预算。",
     "contentEn": "## Quick answer\n\nShiyu Defense and Critical Frontier expose uneven two-team investment more often than a single weak character. Build two functional squads before chasing the ceiling of one squad.\n\n## Two-team checklist\n\n### Team one\n\n- A clear on-field or damage core.\n- A second agent that supports Stun, Anomaly, or buff windows.\n- Correct Drive Disc set and slots 4/5/6 main stats.\n- Main damage agent's W-Engine and key skills prioritized.\n\n### Team two\n\n- Does not depend on the same unique core as team one.\n- Fix role gaps before signature W-Engines or perfect substats.\n- Use working A-Rank alternatives before deciding whether a future banner must fill a gap.\n\n## Upgrade order\n\n1. Main damage agents' levels, Core Skills, and key skills across both teams.\n2. Correct W-Engines and Drive Disc main stats.\n3. Stun, Support, or Anomaly pieces that activate team synergy.\n4. Substats, Bangboo levels, and signature-weapon ceiling investment.\n\nUse Team Builder to find two complete teams, the Progression Planner to calculate their materials, then the Pull Planner only when a remaining role gap justifies a banner target.",
-    "faq": [{"question":"Should I finish one team before building a second in ZZZ?","questionZh":"绝区零要先毕业一队再培养二队吗？","answer":"For two-team endgame, build two functional teams first. Correct roles, main stats, and key skills on both teams usually beat perfect substats on one team.","answerZh":"面对双队终局，先让两队都能运行。两队正确的角色定位、主词条和关键技能通常优于一队极限副词条。"},{"question":"What should I change when a stage is too slow?","questionZh":"关卡时间不够时先改什么？","answer":"Identify whether the problem is damage window, Stun/Anomaly buildup, survivability, or an underbuilt second team, then change one variable at a time.","answerZh":"先定位是输出窗口、失衡/异常积蓄、生存，还是二队养成不足，再一次只改一个变量。"}],
+    "faq": [
+      {
+        "question": "Should I finish one team before building a second in ZZZ?",
+        "questionZh": "绝区零要先毕业一队再培养二队吗？",
+        "answer": "For two-team endgame, build two functional teams first. Correct roles, main stats, and key skills on both teams usually beat perfect substats on one team.",
+        "answerZh": "面对双队终局，先让两队都能运行。两队正确的角色定位、主词条和关键技能通常优于一队极限副词条。"
+      },
+      {
+        "question": "What should I change when a stage is too slow?",
+        "questionZh": "关卡时间不够时先改什么？",
+        "answer": "Identify whether the problem is damage window, Stun/Anomaly buildup, survivability, or an underbuilt second team, then change one variable at a time.",
+        "answerZh": "先定位是输出窗口、失衡/异常积蓄、生存，还是二队养成不足，再一次只改一个变量。"
+      }
+    ],
     "updatedAt": "2026-09-24",
     "currentVersion": "ZZZ v3.3 watch / v3.2 recap; validate mode rules, enemy rotations, and live balance in game"
   }

@@ -39,8 +39,9 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
     gameId: 'aniimo',
     currentVersion: 'S1 逐风启程',
     releaseDate: '2026-09-23',
+    sourceUrls: ["https://www.yimo.com/newslist/detail/100043", "https://www.yimo.com/newslist/detail/100046"],
     status: 'live',
-    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    lastUpdatedAt: '2026-10-18',
     sourceTier: 'official',
     platformReleaseDates: [
       { platform: 'PC / console / cloud', date: '2026-09-16' },
@@ -51,7 +52,7 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       en: 'S1 is live across platforms. The current hub prioritizes starter routes, Rainbow research, Homeland resources, Chaos mode, and official known-issue checks.',
       ja: 'S1「逐風啓程」は全プラットフォームで配信中です。初心者ルート、虹光研究、ホームランド資源、混沌モード、公式既知問題を優先します。',
     },
-    whatChanged: [
+    whatChanged: [{"zh": "10月16日周更新：家园作物增益、10月21日04:00丰收集会与修复；下半赛季预览不等于全部实装。", "en": "October 16 weekly update adds Homeland boosts, the October 21 at 04:00 gathering and fixes. The lower-half preview is not proof of full implementation.", "ja": "10月16日週次更新で作物増益、10月21日04:00集会、修正。下半期プレビューは全実装を意味しません。"},
       {
         zh: '版本页从上线倒计时切换为 S1 实装后的玩法与问题导航。',
         en: 'The hub moves from launch countdown into live S1 systems and issue navigation.',
@@ -89,12 +90,12 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
     currentVersion: "3.3 preview recap / 3.2 live",
     releaseDate: '2026-10-15',
     dateKind: 'verified',
-    sourceUrls: ['https://zenless.hoyoverse.com/zh-cn/news/166644'],
+    sourceUrls: ["https://zenless.hoyoverse.com/zh-cn/news/166644", "https://zenless.hoyoverse.com/zh-cn/news/166907"],
     status: 'watch',
-    lastUpdatedAt: '2026-10-15',
+    lastUpdatedAt: '2026-10-18',
     sourceTier: 'official',
     summary: {"zh": "10月9日3.3「重返天空的旅程」前瞻已发布，菲欧妮、赛维里安即将登场。节目码已于10月11日23:59:59（UTC+8）失效；3.3上线日期待后续正式公告核验。", "en": "The October 9 v3.3 preview is available and introduces two upcoming agents. Its codes expired October 11 at 23:59:59 UTC+8. Verify the release date in follow-up official notices.", "ja": "10月9日のv3.3番組は公開済みで、新エージェント2名を紹介。番組コードは10月11日23:59:59（UTC+8）に失効。実装日は後続公式告知で確認してください。"},
-    whatChanged: [{"zh": "已切换到当前官方公告状态，旧前瞻仅作历史参考。", "en": "Coverage follows current official notices; old previews are historical reference.", "ja": "現行公式告知に合わせ、過去の番組は履歴参考として扱います。"}],
+    whatChanged: [{"zh": "10月17日菲欧妮机制介绍已公开；技能图与数值待逐项整理，不据宣传认定3.3已上线。", "en": "The October 17 Feioni mechanics post is available; images and values need transcription. It does not establish that v3.3 is live.", "ja": "10月17日菲欧妮機構紹介公開。画像・数値の整理は未完で、3.3配信の証明ではありません。"}, {"zh": "已切换到当前官方公告状态，旧前瞻仅作历史参考。", "en": "Coverage follows current official notices; old previews are historical reference.", "ja": "現行公式告知に合わせ、過去の番組は履歴参考として扱います。"}],
     firstSteps: [{"zh": "先检查所在地区/服务器、当前活动和卡池结束时间，再规划资源；未核验的代码不列为有效。", "en": "Check your region, server and live event/banner deadlines before budgeting; unverified codes are not active codes.", "ja": "地域、サーバー、開催中イベントとバナー期限を確認してから計画し、未確認コードを有効扱いしません。"}],
     links: [
       { type: 'codes', href: '/zzz/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
@@ -106,28 +107,15 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   hi3: {
     gameId: 'hi3',
-    currentVersion: '9.0 The Light at Dream\'s End',
-    releaseDate: '2026-08-20',
+    currentVersion: 'CN 9.1 时序照新 / Global 9.0 archive',
+    releaseDate: '2026-10-18',
+    dateKind: 'verified',
+    sourceUrls: ['https://bh3.mihoyo.com/'],
     status: 'fresh',
-    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    lastUpdatedAt: '2026-10-18',
     sourceTier: 'official',
-    summary: {
-      zh: '9.0「曙梦向明」的官方公告周期为 8 月 20 日至 10 月 22 日。当前资料聚焦 Part 2 终章、浮生·渡尘、瑟莉姆、版本活动与新装备；当前补给和活动状态须在客户端核对。',
-      en: 'The official v9.0 “The Light at Dream\'s End” period is August 20 to October 22. Coverage focuses on the Part 2 finale, Fenghuang of Vicissitude, Senadina, version events, and new gear; verify live supplies and events in the client.',
-      ja: 'Ver.9.0「曙夢向明」の公式告知期間は8月20日から10月22日です。Part 2終章、浮生・渡塵、セナディナ、イベント、新装備を整理し、現在の補給・イベントはクライアントで確認します。',
-    },
-    whatChanged: [
-      {
-        zh: '新增 Part 2 终章「未来所拥抱的未来」与 9.0 版本活动入口；章节前置与奖励以游戏内为准。',
-        en: 'The Part 2 finale, The Future We Embrace, and v9.0 event routes are added; use in-game requirements and rewards as the authority.',
-        ja: 'Part 2終章「未来が抱く未来」とVer.9.0イベントを追加。前提と報酬はゲーム内表記を基準にします。',
-      },
-      {
-        zh: '新增瑟莉姆人偶，以及浮生·渡尘的推荐神之键朱华 / 朱华·全燃与忧郁哲人圣痕；浮生·渡尘不是该期新女武神。',
-        en: 'Adds AstralOp Senadina and recommended gear for the existing Fenghuang of Vicissitude: Divine Key Vermillion Liuli / Full Burn and Weeping Philosopher stigmata.',
-        ja: '新人偶セナディナと、既存の浮生・渡塵向け神の鍵「朱華 / 朱華・全燃」および聖痕を追加。浮生・渡塵は当期の新戦乙女ではありません。',
-      },
-    ],
+    summary: {"zh": "国服官网确认9.1「时序照新」正式上线；具体发布日期、角色、补给与活动细节待完整公告核验。本站全球服9.0资料仍作为档案保留，不代替国服当前状态。", "en": "The CN homepage confirms v9.1 is live; its release date, characters, supplies and events await the full notice. Global v9.0 content remains a separate archive, not current CN guidance.", "ja": "中国公式で9.1配信を確認。配信日・キャラ・補給・イベント詳細は公式全文確認待ち。グローバル9.0は資料として残し、中国版現況と混同しません。"},
+    whatChanged: [{"zh": "新增国服9.1状态核验；9.0人偶、装备和资源条目仍注明全球服公告来源，不改写为9.1新增内容。", "en": "Adds a CN v9.1 status check. v9.0 AstralOp, gear and resource records retain Global sourcing and are not relabeled as v9.1 additions.", "ja": "中国版9.1状態を追加。9.0人偶・装備・資源はグローバル出典を保持し、9.1追加として扱いません。"}],
     firstSteps: [
       {
         zh: '先在客户端确认服务器、活动与补给结束时间，再领取仍有效的登录和活动奖励。',
@@ -153,15 +141,16 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
     gameId: 'wuwa',
     currentVersion: '3.7 Prism\'s Illusion, Heart\'s Illumination',
     releaseDate: '2026-09-30',
+    sourceUrls: ["https://mc.kurogames.com/main/news"],
     status: 'live',
-    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    lastUpdatedAt: '2026-10-18',
     sourceTier: 'official',
     summary: {
       zh: '3.7「镜锁妄世，心照红尘」已于 9 月 30 日上线。当前优先处理梦枢天罗、心/锁暝、活动窗口、邮件补偿和更新后客户端检查。',
       en: 'v3.7 “Prism\'s Illusion, Heart\'s Illumination” launched September 30. Prioritize Simulacrum Nexus of Mengzhou, Hsin/Suoming, event windows, mail compensation, and post-update client checks.',
       ja: 'Ver.3.7「鏡に鎖す妄世、心で照らす紅塵」は9月30日に配信されました。夢州の夢枢天羅、心/鎖暝、イベント期間、メール補償、更新後クライアント確認を優先します。',
     },
-    whatChanged: [
+    whatChanged: [{"zh": "10月18日官网新增锁暝战斗演示，属于3.7资料增量，不等于确认3.8或角色强度。", "en": "The October 18 Suoming showcase adds v3.7 reference material, not confirmation of v3.8 or a power ranking.", "ja": "10月18日鎖暝映像を追加。3.7資料であり、3.8や強さの確定ではありません。"},
       {
         zh: '版本页从 3.7 观察期切换为实装期，并把 3.6 内容保留为历史参考而非当前卡池依据。',
         en: 'The hub moves from v3.7 watch into live coverage, with v3.6 retained as historical reference rather than current-banner guidance.',
@@ -220,12 +209,12 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
     currentVersion: "1.4 / October 15 CN update",
     releaseDate: '2026-10-15',
     dateKind: 'verified',
-    sourceUrls: ['https://yh.wanmei.com/news/gamebroad/20261014/264537.html'],
+    sourceUrls: ["https://yh.wanmei.com/news/gamebroad/20261014/264537.html", "https://yh.wanmei.com/news/gamebroad/20261015/264630.html", "https://yh.wanmei.com/news/gamebroad/20261016/264655.html"],
     status: 'fresh',
-    lastUpdatedAt: '2026-10-15',
+    lastUpdatedAt: '2026-10-18',
     sourceTier: 'mixed',
     summary: {"zh": "国服1.4期间10月15日维护公告公布明音凛、弧盘「月的对跖点」、番外剧情及海月羁遇10级。限定窗口至11月5日05:59；不将国服公告外推国际服或断言维护已按时完成。", "en": "The CN October 15 v1.4 notice adds a limited agent, arc, side story and Haiyue bond level 10. The limited window ends November 5 at 05:59; confirm maintenance completion and regional scope.", "ja": "中国版v1.4の10月15日告知に限定キャラ、弧盤、番外物語、海月の絆Lv10を追加。限定期間は11月5日05:59まで。終了告知と地域範囲を確認してください。"},
-    whatChanged: [{"zh": "已切换到当前官方公告状态，旧前瞻仅作历史参考。", "en": "Coverage follows current official notices; old previews are historical reference.", "ja": "現行公式告知に合わせ、過去の番組は履歴参考として扱います。"}],
+    whatChanged: [{"zh": "新增10月16、17日国服热修复摘要；明音凛拥抱问题仍按公告保留待修复状态，不写成1.5。", "en": "Adds October 16–17 CN hotfix summaries. The hug issue remains a planned fix in the notice; this is not v1.5.", "ja": "10月16・17日中国版修正を追加。抱擁問題は告知の修正予定扱いを保持し、1.5としません。"}, {"zh": "已切换到当前官方公告状态，旧前瞻仅作历史参考。", "en": "Coverage follows current official notices; old previews are historical reference.", "ja": "現行公式告知に合わせ、過去の番組は履歴参考として扱います。"}],
     firstSteps: [{"zh": "先检查所在地区/服务器、当前活动和卡池结束时间，再规划资源；未核验的代码不列为有效。", "en": "Check your region, server and live event/banner deadlines before budgeting; unverified codes are not active codes.", "ja": "地域、サーバー、開催中イベントとバナー期限を確認してから計画し、未確認コードを有効扱いしません。"}],
     links: [
       { type: 'download', href: '/nte/download', label: { zh: '下载', en: 'Download', ja: 'DL' } },
@@ -294,40 +283,21 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   endfield: {
     gameId: 'endfield',
-    currentVersion: 'Pioneer Test recap / AIC blueprint',
-    releaseDate: '2026-09-10',
-    status: 'fresh',
-    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
+    currentVersion: 'CN 丹青渡 / Pioneer Test archive',
+    releaseDate: '2026-10-18',
+    dateKind: 'verified',
+    sourceUrls: ['https://endfield.hypergryph.com/news/6094'],
+    status: 'live',
+    lastUpdatedAt: '2026-10-18',
     sourceTier: 'official',
-    summary: {
-      zh: 'Steam Pioneer Test 招募已结束，当前重点转为测试复盘、测试奖励、AIC 工厂、Wuling 和蓝图。',
-      en: 'Steam Pioneer Test recruitment has ended, shifting focus to the recap, test rewards, AIC factories, Wuling, and blueprints.',
-      ja: 'Steam Pioneer Test募集は終了し、まとめ、テスト報酬、AIC工場、Wuling、設計図が中心です。',
-    },
-    whatChanged: [
-      {
-        zh: '版本页从报名截止切换为测试复盘与蓝图/工厂入口，避免继续使用 last-call。',
-        en: 'The hub moves from recruitment cutoff into recap and blueprint/factory entry, avoiding stale last-call language.',
-        ja: '版本ページを募集締切からまとめと設計図/工場入口へ切り替え、古いlast-call表現を避けます。',
-      },
-    ],
-    firstSteps: [
-      {
-        zh: '先看 Pioneer Test 复盘和测试奖励，再进入 AIC/Wuling 蓝图路线。',
-        en: 'Start with the Pioneer Test recap and rewards, then move into AIC/Wuling blueprint routes.',
-        ja: 'まずPioneer Testのまとめと報酬を確認し、その後AIC/Wuling設計図ルートへ進みます。',
-      },
-      {
-        zh: '正式上线日期仍未确认，继续使用 watch 口径。',
-        en: 'The full release date is still unconfirmed, so keep watch wording.',
-        ja: '正式リリース日は未確認のため、引き続き注目表現に留めます。',
-      },
-    ],
+    summary: {"zh": "国服「丹青渡」版本已发布，新增祀、明河、「武陵 - 祀的画」与工业系统更新。按当前公告安排寻访和活动；Pioneer Test保留历史标记，其他地区另行核验。", "en": "CN Danqingdu adds Si, Minghe, a Wuling area and industry systems. Use the current CN notice for searches and events; Pioneer Test remains historical and other regions need separate verification.", "ja": "中国版「丹青渡」は祀・明河、武陵の新エリア、工業システムを追加。尋訪・イベントは中国公式告知で確認し、Pioneer Testは履歴、他地域は別途確認します。"},
+    whatChanged: [{"zh": "10月15日官方更新说明已公开；新增自动农植机、连携技优先级、装备方案与舱室班组，旧蓝图成本须重验。", "en": "The October 15 notice adds automated planting, combo priorities, equipment presets and cabin shifts. Recheck older blueprint costs.", "ja": "10月15日告知で自動農植機・連携技優先度・装備プラン・船室班組を追加。旧設計図のコストは再確認が必要です。"}],
+    firstSteps: [{"zh": "先核对国服公告、服务器时间与资格。祀寻访至11月5日11:59，明河11月5日12:00开始；补偿仅限更新前创建角色且邮件有期限。", "en": "Check CN scope, server time and eligibility. Si ends November 5 at 11:59; Minghe starts at 12:00. Compensation requires a pre-update character and expires.", "ja": "中国版対象・サーバー時刻・資格を確認。祀は11月5日11:59まで、明河は12:00開始。補償は更新前キャラが対象で期限があります。"}],
     links: [
-      { type: 'download', href: '/endfield/download', label: { zh: '下载 / 测试', en: 'Download / Tests', ja: 'DL / テスト' } },
+      { type: 'download', href: '/endfield/download', label: { zh: '官方客户端下载', en: 'Official client download', ja: '公式クライアントDL' } },
       { type: 'codes', href: '/endfield/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
       { type: 'characters', href: '/endfield/characters', label: { zh: '角色', en: 'Characters', ja: 'キャラ' } },
-      { type: 'guides', href: '/endfield/guides/pioneer-test-post-test-route', label: { zh: '测试后状态 / 蓝图', en: 'Post-test status / blueprints', ja: 'テスト後状態 / 設計図' } },
+      { type: 'guides', href: '/endfield/events', label: { zh: '国服版本与活动', en: 'CN version and events', ja: '中国版更新・イベント' } },
     ],
   },
   sea: {

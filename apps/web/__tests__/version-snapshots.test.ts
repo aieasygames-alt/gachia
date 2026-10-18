@@ -22,7 +22,7 @@ describe('version snapshots', () => {
     expect(getVersionSnapshot('zzz')).toMatchObject({
       currentVersion: '3.3 preview recap / 3.2 live',
       status: 'watch',
-      lastUpdatedAt: '2026-10-15',
+      lastUpdatedAt: '2026-10-18',
     });
   });
 
@@ -30,7 +30,7 @@ describe('version snapshots', () => {
     expect(VERSION_SNAPSHOT_UPDATED_AT).toBe('2026-10-09');
     expect(getVersionSnapshot('genshin')?.currentVersion).toBe('7.1 往冥府的安魂歌');
     expect(getVersionSnapshot('starrail')?.currentVersion).toBe('4.6 月升之前，与兽共舞');
-    expect(getVersionSnapshot('endfield')?.currentVersion).toBe('Pioneer Test recap / AIC blueprint');
+    expect(getVersionSnapshot('endfield')?.currentVersion).toBe('CN 丹青渡 / Pioneer Test archive');
     expect(getVersionSnapshot('aniimo')?.currentVersion).toBe('S1 逐风启程');
     expect(getVersionSnapshot('roco')?.currentVersion).toBe('Quack Quack Test official watch');
     expect(getVersionSnapshot('roco')?.sourceTier).toBe('official');
@@ -51,8 +51,9 @@ describe('version snapshots', () => {
   it('keeps the Endfield post-test route official-only for future access', () => {
     const postTestGuide = getEndfieldGuideById('pioneer-test-post-test-route');
 
-    expect(postTestGuide?.updatedAt).toBe('2026-10-08');
-    expect(postTestGuide?.currentVersion).toContain('official confirmation');
+    expect(postTestGuide?.updatedAt).toBe('2026-10-18');
+    expect(postTestGuide?.currentVersion).toContain('Pioneer Test archive');
+    expect(postTestGuide?.content).toContain('/endfield/guides/danqingdu-cn-update-guide');
     expect(postTestGuide?.summary).toContain('Pioneer Test 招募结束后');
   });
 

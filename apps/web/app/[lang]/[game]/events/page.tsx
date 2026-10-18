@@ -1,3 +1,4 @@
+import { OfficialUpdates } from '@/components/wiki/official-updates';
 import { CATEGORY_LABELS, GAMES, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
@@ -114,10 +115,10 @@ export async function generateMetadata({
         : 'Arknights: Endfield Status Board — Test Recap, AIC, and Official Watch';
     const description = ensureMetaLength(
       locale === 'zh'
-        ? '明日方舟：终末地活动看板整理 Pioneer Test 后可执行的复盘、AIC 蓝图、已有干员养成和下一轮测试/正式上线的官方确认状态。'
+        ? '终末地国服丹青渡活动看板：寻访阶段、补偿资格、服务器时间、工业更新与历史测试分流。'
         : locale === 'ja'
-          ? 'エンドフィールドのPioneer Test後のまとめ、AIC設計図、所持オペレーター育成、次回テスト・正式版の公式確認状態を整理します。'
-          : 'Arknights: Endfield status board for post-Pioneer-Test actions, AIC blueprints, owned-operator planning, and official next-test or release confirmation.',
+          ? 'エンドフィールド中国版丹青渡の尋訪段階、補償資格、サーバー時刻、工業更新と旧テストを整理。'
+          : 'Endfield CN Danqingdu event board: search phases, compensation eligibility, server time, industry updates and historical test scope.',
       locale,
     );
 
@@ -206,9 +207,9 @@ export default async function RocoEventsPage({
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
 
-  if (gameId === 'zzz') return <ZzzEventsPage locale={locale} />;
+  if (gameId === 'zzz') return <><ZzzEventsPage locale={locale} /><OfficialUpdates gameId="zzz" locale={locale} /></>;
   if (gameId === 'endfield') return <EndfieldEventsPage locale={locale} />;
-  if (gameId === 'wuwa') return <WuWaEventsPage locale={locale} />;
+  if (gameId === 'wuwa') return <><WuWaEventsPage locale={locale} /><OfficialUpdates gameId="wuwa" locale={locale} /></>;
 
   if (!isRocoEventGame(gameId)) return null;
 
@@ -311,7 +312,7 @@ function ZzzEventsPage({ locale }: { locale: SupportedLocale }) {
 
 function EndfieldEventsPage({ locale }: { locale: SupportedLocale }) {
   const statuses: EndfieldEventStatus[] = ['action', 'planning', 'watch'];
-  return <div><h1 className="mb-2 text-2xl font-bold text-game-text">{locale === 'zh' ? '终末地测试后状态看板' : locale === 'ja' ? 'エンドフィールド テスト後状態ボード' : 'Endfield Post-Test Status Board'}</h1><p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">{locale === 'zh' ? `更新时间：${ENDFIELD_EVENT_UPDATED_AT}。本页将 Pioneer Test 历史、可复用的 AIC/蓝图经验与下一轮测试或正式上线的官方确认状态分开呈现。` : locale === 'ja' ? `更新日：${ENDFIELD_EVENT_UPDATED_AT}。Pioneer Testの履歴、再利用可能なAIC/設計図の知見、次回テスト・正式版の公式確認状態を分けて整理します。` : `Updated ${ENDFIELD_EVENT_UPDATED_AT}. This board separates Pioneer Test history, reusable AIC/blueprint learning, and official confirmation for a future test or full release.`}</p><div className="space-y-6">{statuses.map((status) => <section key={status}><h2 className="mb-3 text-base font-semibold text-game-text">{ENDFIELD_EVENT_STATUS_COPY[status][locale]}</h2><div className="grid gap-4 md:grid-cols-2">{ENDFIELD_EVENTS.filter((entry) => entry.status === status).map((entry) => <article key={entry.id} className="border border-game-border bg-game-surface p-4"><span className="text-xs font-semibold text-game-primary">{ENDFIELD_EVENT_STATUS_COPY[entry.status][locale]}</span><h3 className="mt-2 text-lg font-semibold text-game-text">{entry.title[locale]}</h3><p className="mt-2 text-sm leading-6 text-game-text-muted">{entry.summary[locale]}</p><p className="mt-3 text-xs text-game-text-muted">{locale === 'zh' ? '来源：' : locale === 'ja' ? '出典：' : 'Source: '}{entry.source[locale]} · {entry.updatedAt}</p><Link href={entry.href as '/'} className="mt-4 inline-block text-sm font-semibold text-game-primary hover:text-game-accent">{entry.action[locale]} →</Link></article>)}</div></section>)}</div></div>;
+  return <div><h1 className="mb-2 text-2xl font-bold text-game-text">{locale === 'zh' ? '终末地国服丹青渡活动看板' : locale === 'ja' ? 'エンドフィールド中国版丹青渡イベント' : 'Endfield CN Danqingdu Event Board'}</h1><p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">{locale === 'zh' ? `更新时间：${ENDFIELD_EVENT_UPDATED_AT}。本页按国服官方公告列出寻访、签到、补偿与系统更新；时间保留服务器时间口径，不直接外推国际服。` : locale === 'ja' ? `更新日：${ENDFIELD_EVENT_UPDATED_AT}。中国版告知に基づく尋訪・ログイン・補償・システム更新です。サーバー時刻を保持し、国際版へ流用しません。` : `Updated ${ENDFIELD_EVENT_UPDATED_AT}. CN notice facts for searches, sign-in, compensation and systems. Server times are retained and do not establish international timing.`}</p><div className="space-y-6">{statuses.map((status) => <section key={status}><h2 className="mb-3 text-base font-semibold text-game-text">{ENDFIELD_EVENT_STATUS_COPY[status][locale]}</h2><div className="grid gap-4 md:grid-cols-2">{ENDFIELD_EVENTS.filter((entry) => entry.status === status).map((entry) => <article key={entry.id} className="border border-game-border bg-game-surface p-4"><span className="text-xs font-semibold text-game-primary">{ENDFIELD_EVENT_STATUS_COPY[entry.status][locale]}</span><h3 className="mt-2 text-lg font-semibold text-game-text">{entry.title[locale]}</h3><p className="mt-2 text-sm leading-6 text-game-text-muted">{entry.summary[locale]}</p><p className="mt-3 text-xs text-game-text-muted">{locale === 'zh' ? '来源：' : locale === 'ja' ? '出典：' : 'Source: '}{entry.source[locale]} · {entry.updatedAt}</p><Link href={entry.href as '/'} className="mt-4 inline-block text-sm font-semibold text-game-primary hover:text-game-accent">{entry.action[locale]} →</Link></article>)}</div></section>)}</div></div>;
 }
 
 function WuWaEventsPage({ locale }: { locale: SupportedLocale }) {

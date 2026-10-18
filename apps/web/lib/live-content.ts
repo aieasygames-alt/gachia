@@ -93,19 +93,11 @@ export const HOMEPAGE_PRIORITY_GAMES: GameId[] = [
 export const LIVE_BANNERS: LiveBanner[] = [
   {
     gameId: 'aniimo',
-    title: {
-      zh: '伊莫 S1「逐风启程」全平台上线',
-      en: 'Aniimo S1 Is Live Across Platforms',
-      ja: 'Aniimo S1 全プラットフォーム配信中',
-    },
-    summary: {
-      zh: '优先查看 S1 新手开荒、虹光研究、家园资源、图鉴地图和官方已知问题，再安排限时活动。',
-      en: 'Start with S1 onboarding, Rainbow research, Homeland resources, database/map routes, and official known issues before limited events.',
-      ja: '期間限定イベントの前に、S1導入、虹光研究、ホームランド資源、図鑑/マップ、公式既知問題を確認します。',
-    },
+    title: {"zh": "伊莫10月16日周更新：家园与赛季节点", "en": "Aniimo October 16 update: Homeland and season schedule", "ja": "伊莫10月16日更新：ホームランドとシーズン日時"},
+    summary: {"zh": "家园作物增益已公布，10月21日04:00开放丰收集会；100辉石补偿限定1.1更新前注册。下半赛季预览另行核验。", "en": "Homeland boosts are announced; the gathering opens October 21 at 04:00. Compensation requires registration before v1.1. Verify the lower-half preview separately.", "ja": "作物増益を公開、10月21日04:00に集会開始。補償は1.1更新前登録が条件。下半期プレビューは別途確認。"},
     href: '/aniimo/version',
     status: 'fresh',
-    updatedAt: LIVE_UPDATED_AT,
+    updatedAt: '2026-10-18',
     priority: 1,
   },
   {
@@ -139,19 +131,11 @@ export const LIVE_BANNERS: LiveBanner[] = [
 export const LIVE_VERSION_UPDATES: LiveVersionUpdate[] = [
   {
     gameId: 'aniimo',
-    title: {
-      zh: '伊莫 S1「逐风启程」已全平台上线',
-      en: 'Aniimo S1 Is Live Across Platforms',
-      ja: 'Aniimo S1 全プラットフォーム配信中',
-    },
-    summary: {
-      zh: '版本入口切到 S1 实装后的新手路线、虹光研究、家园资源、图鉴地图和奖励核验。',
-      en: 'The hub now routes live S1 onboarding, Rainbow research, Homeland resources, database/map paths, and reward verification.',
-      ja: 'バージョン入口はS1実装後の初心者ルート、虹光研究、ホームランド資源、図鑑/マップ、報酬確認へ切り替わりました。',
-    },
+    title: {"zh": "伊莫10月16日周更新：家园与赛季节点", "en": "Aniimo October 16 update: Homeland and season schedule", "ja": "伊莫10月16日更新：ホームランドとシーズン日時"},
+    summary: {"zh": "家园作物增益已公布，10月21日04:00开放丰收集会；100辉石补偿限定1.1更新前注册。下半赛季预览另行核验。", "en": "Homeland boosts are announced; the gathering opens October 21 at 04:00. Compensation requires registration before v1.1. Verify the lower-half preview separately.", "ja": "作物増益を公開、10月21日04:00に集会開始。補償は1.1更新前登録が条件。下半期プレビューは別途確認。"},
     href: '/aniimo/version',
     status: 'fresh',
-    updatedAt: LIVE_UPDATED_AT,
+    updatedAt: '2026-10-18',
     priority: 1,
   },
   {
@@ -225,19 +209,11 @@ export const LIVE_VERSION_UPDATES: LiveVersionUpdate[] = [
   },
   {
     gameId: 'endfield',
-    title: {
-      zh: '终末地 Pioneer Test 复盘与 AIC 蓝图',
-      en: 'Endfield Pioneer Test Recap and AIC Blueprints',
-      ja: 'エンドフィールド Pioneer TestまとめとAIC設計図',
-    },
-    summary: {
-      zh: 'Pioneer Test 招募结束后，重点转向测试复盘、奖励、Wuling、蓝图、AIC 工厂和正式上线观察。',
-      en: 'After Pioneer Test recruitment, focus moves to recap, rewards, Wuling, blueprints, AIC factory, and release watch.',
-      ja: 'Pioneer Test募集後はまとめ、報酬、Wuling、ブループリント、AIC工場、正式版注目へ。',
-    },
+    title: {"zh": "终末地国服丹青渡：寻访、补偿与工业更新", "en": "Endfield CN Danqingdu: searches, compensation and industry", "ja": "中国版丹青渡：尋訪・補償・工業更新"},
+    summary: {"zh": "10月15日官方更新公开祀、明河、新区域与系统改动。寻访分阶段、补偿有资格；旧测试独立保留，其他地区另行核验。", "en": "The October 15 CN notice adds operators, area and systems. Searches are phased and compensation is conditional; older tests and other regions remain separate.", "ja": "10月15日中国版告知で新キャラ・エリア・システム追加。尋訪は段階開催、補償は資格付き。旧テスト・他地域は区別。"},
     href: '/endfield/version',
-    status: 'watch',
-    updatedAt: LIVE_UPDATED_AT,
+    status: 'live',
+    updatedAt: '2026-10-18',
     priority: 7,
   },
   {

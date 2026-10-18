@@ -1,17 +1,19 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { GameNav } from '@/components/game-nav';
+import { PatchNotice } from '@/components/patch-notice';
 import { game, launchDayVerification, launchPriority, officialSources } from '@/lib/data';
 
-export const metadata: Metadata = { title: '绿梦：时空之声1.0公测资料 | Gachia', description: '绿梦：时空之声公测状态、官方入口、横版动作与探索资料。', alternates: { canonical: 'https://gachia.com/zh/lvmeng' }, openGraph: { url: 'https://gachia.com/zh/lvmeng', title: '绿梦：时空之声1.0公测资料', description: '官方入口、平台和已核验的1.0公测资料资料。', images: [{ url: 'https://gachia.com/images/og/lvmeng.webp', width: 596, height: 335, alt: '绿梦：时空之声' }] }, twitter: { card: 'summary_large_image', images: ['https://gachia.com/images/og/lvmeng.webp'] } };
+export const metadata: Metadata = { title: '绿梦：时空之声1.0公测资料 | Gachia', description: '绿梦：时空之声公测状态、官方入口、横版动作与探索资料。', alternates: { canonical: 'https://gachia.com/zh/lvmeng' }, openGraph: { url: 'https://gachia.com/zh/lvmeng', title: '绿梦：时空之声1.0公测资料', description: '官方入口、平台和已核验的1.0公测资料。', images: [{ url: 'https://gachia.com/images/og/lvmeng.webp', width: 596, height: 335, alt: '绿梦：时空之声' }] }, twitter: { card: 'summary_large_image', images: ['https://gachia.com/images/og/lvmeng.webp'] } };
 
 export default function LvmengHome() {
   return <><GameNav isHome/><main id="main-content" tabIndex={-1} className="content">
-    <div className="eyebrow">简体中文1.0公测资料资料站</div>
+    <div className="eyebrow">简体中文1.0公测资料站 · 首发周维护</div>
     <h1>绿梦：时空之声</h1>
     <p className="lead">3D 二次元横版动作冒险游戏。玩家作为侵蚀管理局特别行动队队长，深入时空裂隙，在战斗、探索与解谜中追查大侵蚀灾厄的源头。</p>
     <div className="notice">2026年10月15日，1.0「时序的回响」公测已开启。PC Windows、Android、iOS同账号游戏数据互通、同一UID。开服曾延迟，官方已公告恢复；当前维护与个人登录状态请继续核对最新公告。</div>
     <section className="facts" aria-label="基础信息"><div className="fact"><span>公测日期</span><strong>{game.launchDate}</strong></div><div className="fact"><span>首发平台</span><strong>{game.platforms.join(' / ')}</strong></div><div className="fact"><span>版号</span><strong>{game.license}</strong></div></section>
+    <PatchNotice />
     <h2>当前优先事项</h2><div className="grid">{launchPriority.map((item) => <article className="card" key={item.phase}><span className="tag">{item.phase}</span><h3>{item.phase}核验</h3><ul className="compact-list">{item.tasks.map((task) => <li key={task}>{task}</li>)}</ul></article>)}</div>
     <h2>开服核验台</h2><p className="lead">将首日最容易影响账号、资源与培养决策的信息分开核对；未确认内容不作为开服结论。</p><div className="grid">{launchDayVerification.map((item) => <Link className="card" href={item.href} key={item.id}><span className="tag">{item.status}</span><h3>{item.title}</h3><p>{item.summary}</p></Link>)}</div><div className="link-list"><Link href="/zh/lvmeng/launch-check">进入完整开服核验台</Link></div>
     <h2>开服信息</h2><div className="grid"><Link className="card" href="/zh/lvmeng/download"><h3>预约 / 下载</h3><p>官方入口、开服状态和安装前核对。</p></Link><Link className="card" href="/zh/lvmeng/news"><h3>公告活动</h3><p>官方公告、奖励和活动状态汇总。</p></Link><Link className="card" href="/zh/lvmeng/faq"><h3>常见问题</h3><p>平台、账号、奖励和测试资料边界。</p></Link><Link className="card" href="/zh/lvmeng/redeem-codes"><h3>兑换码</h3><p>仅收录官方可核验兑换信息。</p></Link></div>

@@ -6,15 +6,15 @@ import { launchDayVerification } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: '绿梦：时空之声开服核验台 | Gachia',
-  description: '绿梦：时空之声开服当天的安装、账号、功能、奖励和资料核验清单。',
+  description: '绿梦：时空之声首发周的安装、账号、功能、奖励和资料核验清单。',
   alternates: { canonical: 'https://gachia.com/zh/lvmeng/launch-check' },
 };
 
 export default function LaunchCheckPage() {
   return <main id="main-content" tabIndex={-1} className="content">
-    <div className="eyebrow">开服当天优先事项</div>
+    <div className="eyebrow">首发周核验事项</div>
     <h1>开服核验台</h1>
-    <p className="lead">把首日需要确认的事实按影响顺序放在一起。它不是预设开荒路线：只有官方公告或当前客户端可复现的信息，才会进入后续的角色、养成、地图和资源攻略。</p>
+    <p className="lead">把首发周需要确认的事实按影响顺序放在一起。它不是预设开荒路线：只有官方公告或当前客户端可复现的信息，才会进入后续的角色、养成、地图和资源攻略。</p>
     <ContentStatus />
     <div className="notice">1.0公测已于2026年10月15日开启，官方已确认三端开放、同账号游戏数据互通和同一UID。开服延迟后已公告恢复；卡池细则、安装包build和个人到账仍须复核。</div>
     <LaunchVerificationBoard tasks={launchDayVerification} />

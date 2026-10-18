@@ -12,11 +12,12 @@ import {
 import { getHi3MaterialName, hi3Materials } from '@gachia/data/games/hi3/items';
 import { getHi3WeaponName, hi3Weapons } from '@gachia/data/games/hi3/weapons';
 import { Hi3ClientChecklist } from './hi3-client-checklist';
+import { OfficialUpdates } from '@/components/wiki/official-updates';
 
 const COPY = {
   zh: {
-    eyebrow: '版本档案', title: '崩坏3 9.0「曙梦向明」已公开档案',
-    intro: '汇总本站已收录、且可由 9.0 官方公告直接核验的人偶与圣痕条目。当前补给、活动、资格和完整数值始终以客户端及最新官方公告为准。',
+    eyebrow: '版本档案', title: '崩坏3国服9.1状态 / 全球服9.0档案',
+    intro: '国服官网已确认9.1「时序照新」上线，详情仍待完整公告核验。以下人偶、装备与圣痕为全球服英文9.0公告档案，不代表国服9.1新增。当前补给、活动、资格和完整数值始终以客户端及最新官方公告为准。',
     astralOps: '协同人偶', stigmas: '圣痕套装', weapons: '装备档案', materials: '锻造与活动资源', route: '进入 9.0 资料的顺序', version: '收录版本', scope: '资料边界',
     routeCards: [
       { title: '1. 先核对现有队伍', description: '从浮生·渡尘与瑟莉姆条目确认已公开定位，不用历史配队结论替代当前客户端。', href: '/hi3/characters', action: '查看角色与人偶' },
@@ -27,8 +28,8 @@ const COPY = {
     guides: '查看资源与回归核对', characters: '查看女武神与人偶资料', materialIndex: '查看装备与锻造材料',
   },
   en: {
-    eyebrow: 'Version archive', title: 'Honkai Impact 3rd v9.0: The Light at Dream\'s End Archive',
-    intro: 'A browsable record of AstralOp and stigma entries already collected here and directly verifiable from the official v9.0 notice. Always use the client and the latest official notices for live supplies, events, eligibility, and full values.',
+    eyebrow: 'Version archive', title: 'Honkai Impact 3rd: CN v9.1 Status / Global v9.0 Archive',
+    intro: 'The CN homepage confirms v9.1 is live; details await the full notice. The entries below are a separate Global English v9.0 archive, not CN v9.1 additions. Always use the client and the latest official notices for live supplies, events, eligibility, and full values.',
     astralOps: 'AstralOps', stigmas: 'Stigma sets', weapons: 'Gear archive', materials: 'Crafting and event resources', route: 'A practical v9.0 reading order', version: 'Recorded version', scope: 'Data scope',
     routeCards: [
       { title: '1. Audit your current roster', description: 'Use Fenghuang of Vicissitude and Senadina entries for published positioning, rather than substituting old team advice for the live client.', href: '/hi3/characters', action: 'Browse battlesuits and AstralOps' },
@@ -39,8 +40,8 @@ const COPY = {
     guides: 'Check resources and returnee support', characters: 'Browse battlesuit and AstralOp entries', materialIndex: 'Browse gear and crafting materials',
   },
   ja: {
-    eyebrow: 'バージョンアーカイブ', title: '崩壊3rd Ver.9.0「曙夢向明」公開情報アーカイブ',
-    intro: '本サイトに収録済みで、Ver.9.0公式告知から直接確認できる人偶と聖痕の一覧です。現在の補給、イベント、資格、全数値はクライアントと最新公式告知を基準にしてください。',
+    eyebrow: 'バージョンアーカイブ', title: '崩壊3rd 中国版9.1状態 / グローバル版9.0資料',
+    intro: '中国公式で9.1配信を確認。詳細は全文確認待ち。下記はグローバル英語9.0告知の資料で、中国版9.1追加内容ではありません。現在の補給、イベント、資格、全数値はクライアントと最新公式告知を基準にしてください。',
     astralOps: '協同人偶', stigmas: '聖痕セット', weapons: '装備アーカイブ', materials: '鍛造・イベント資源', route: 'Ver.9.0資料を見る順番', version: '収録バージョン', scope: '情報の範囲',
     routeCards: [
       { title: '1. 所持編成を確認', description: '浮生・渡塵とセナディナの公開済み役割を確認し、古い編成結論を現行クライアントの代わりにしません。', href: '/hi3/characters', action: '戦乙女・人偶を見る' },
@@ -98,6 +99,7 @@ export function Hi3VersionArchive({ locale }: { locale: SupportedLocale }) {
         <p className="mt-4 leading-7 text-game-text-muted">{copy.intro}</p>
         <a href="https://honkaiimpact3.hoyoverse.com/global/en-us/news/165770" target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm text-game-primary hover:underline">{locale === 'zh' ? '来源：全球服 9.0 官方更新公告（英文）' : locale === 'ja' ? '出典：グローバル版Ver.9.0公式更新告知（英語）' : 'Source: Global v9.0 official update announcement (English)'}</a>
       </header>
+      <OfficialUpdates gameId="hi3" locale={locale} />
       <section className="mt-10" aria-labelledby="hi3-route">
         <h2 id="hi3-route" className="text-xl font-bold text-game-text">{copy.route}</h2>
         <div className="mt-4 grid gap-4 md:grid-cols-3">{copy.routeCards.map((entry) => <Link key={entry.href} href={entry.href} className="rounded-lg border border-game-border bg-game-surface p-5 hover:border-game-primary"><h3 className="text-lg font-semibold text-game-text">{entry.title}</h3><p className="mt-3 text-sm leading-6 text-game-text-muted">{entry.description}</p><span className="mt-4 inline-block text-sm font-medium text-game-primary">{entry.action}</span></Link>)}</div>
