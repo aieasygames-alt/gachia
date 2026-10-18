@@ -10,6 +10,7 @@ import type { VersionSnapshotSourceTier } from '@/lib/version-snapshots';
 import { getGuideListData } from '@/lib/game-data/guides';
 import { buildLocalizedAlternates } from '@/lib/seo-metadata';
 import { getHi3ArchiveMetadata, Hi3VersionArchive } from './hi3-version-archive';
+import { OfficialUpdates } from '@/components/wiki/official-updates';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -105,15 +106,15 @@ const VERSION_META_OVERRIDES: Partial<Record<GameId, Partial<Record<SupportedLoc
   },
   zzz: {
     zh: {
-      title: '绝区零 3.3 前瞻专题：10 月 9 日直播、兑换码与 3.2 复盘',
+      title: '绝区零3.3前瞻复盘：菲欧妮机制资料与过期节目码',
       description: '追踪绝区零 3.3「重返天空的旅程」10 月 9 日前瞻复盘、已过期节目码、官方卡池公告与 3.2 复盘；未公布内容不作推断。',
     },
     en: {
-      title: 'ZZZ v3.3 Preview: October 9 Program, Codes & v3.2 Recap',
+      title: 'ZZZ v3.3 Preview Recap: Feioni Mechanics Reference & Expired Codes',
       description: 'Track Zenless Zone Zero v3.3 “Journey Back to the Sky,” its October 9 special program, short-lived codes, official banner notices, and the v3.2 recap without speculating on unannounced details.',
     },
     ja: {
-      title: 'ZZZ v3.3 注目：10月9日番組、コード、v3.2まとめ',
+      title: 'ZZZ v3.3番組まとめ：菲欧妮機構資料と失効コード',
       description: 'ZZZ v3.3「空へ戻る旅」の10月9日特別番組、短期限コード、公式バナー告知、v3.2まとめを確認できます。未発表内容は推測しません。',
     },
   },
@@ -178,8 +179,8 @@ const INTENT_LINKS: Partial<Record<GameId, IntentLink[]>> = {
     { href: '/ananta/guides/preregistration-no-gacha-guide', label: { zh: '无抽卡 FAQ', en: 'No-gacha FAQ', ja: 'ガチャなしFAQ' }, description: { zh: '把商业模式已知信息和推测分开。', en: 'Separate confirmed monetization facts from speculation.', ja: '収益モデルの確定情報と推測を分離。' } },
   ],
   endfield: [
-    { href: '/endfield/events', label: { zh: '官方状态', en: 'Official status', ja: '公式状態' }, description: { zh: '测试后事项、官方观察项与下一步核对。', en: 'Post-test items, official watch points, and next checks.', ja: 'テスト後事項、公式確認項目、次の確認。' } },
-    { href: '/endfield/guides/pioneer-test-post-test-route', label: { zh: '测试后状态', en: 'Post-test status', ja: 'テスト後状態' }, description: { zh: 'Pioneer Test、奖励核对、Wuling、AIC 工厂和蓝图后续路线。', en: 'Pioneer Test, reward verification, Wuling, AIC factory, and blueprint next steps.', ja: 'Pioneer Test、報酬確認、Wuling、AIC工場、設計図の次導線。' } },
+    { href: '/endfield/events', label: { zh: '官方状态', en: 'Official status', ja: '公式状態' }, description: { zh: '国服版本、活动资格与历史测试分流。', en: 'Post-test items, official watch points, and next checks.', ja: 'テスト後事項、公式確認項目、次の確認。' } },
+    { href: '/endfield/events', label: { zh: '国服版本与活动', en: 'CN updates and events', ja: '中国版更新・イベント' }, description: { zh: '丹青渡寻访、补偿资格、活动与服务器时间；历史测试独立保留。', en: 'Danqingdu searches, compensation eligibility, events and server time; test history remains separate.', ja: '丹青渡の尋訪、補償資格、イベントとサーバー時刻。旧テストは区別します。' } },
     { href: '/endfield/guides/blueprint-aic-factory-guide', label: { zh: 'AIC / 蓝图', en: 'AIC / Blueprints', ja: 'AIC / 設計図' }, description: { zh: '整理可复用的工厂模块，待官方数据发布后再复核。', en: 'Organize reusable factory modules, then recheck after official data arrives.', ja: '再利用可能な工場モジュールを整理し、公式データ後に再確認。' } },
   ],
   sea: [
@@ -236,7 +237,7 @@ const VERSION_COPY: Partial<Record<GameId, HubCopy>> = {
     description: { zh: '围绕 3.7 实装后的梦枢天罗、心/锁暝、当前活动、卡池预算、兑换码、资源下载和客户端排查展开。', en: 'Track live v3.7 content in the Simulacrum Nexus of Mengzhou, Hsin/Suoming, current events, banner budgeting, codes, resource downloads, and client checks.', ja: 'Ver.3.7実装後の夢枢天羅、心/鎖暝、現在イベント、バナー予算、コード、リソースDL、クライアント確認を整理します。' },
     highlights: { zh: ['梦枢天罗', '心/锁暝', '限时活动', '卡池预算'], en: ['Simulacrum Nexus', 'Hsin/Suoming', 'Limited events', 'Banner budget'], ja: ['夢枢天羅', '心/鎖暝', '期間限定イベント', 'バナー予算'] },
     kicker: { zh: '3.7 已上线', en: 'v3.7 is live', ja: 'Ver.3.7配信中' },
-    freshness: { zh: '已更新为 10 月 9 日状态：3.7 已实装；活动时间、奖励、前置条件与当前卡池继续以游戏内显示和官方公告为准。', en: 'Updated October 9: v3.7 is live; use the live client and official notices for event timing, rewards, prerequisites, and current banners.', ja: '10月9日時点に更新：Ver.3.7は実装済みです。イベント時刻、報酬、前提条件、現在バナーはゲーム内表示と公式告知を基準にしてください。' },
+    freshness: { zh: '10月18日核验：3.7资料新增锁暝战斗演示；活动、卡池与技能数值仍需逐项核对。', en: 'Updated October 9: v3.7 is live; use the live client and official notices for event timing, rewards, prerequisites, and current banners.', ja: '10月9日時点に更新：Ver.3.7は実装済みです。イベント時刻、報酬、前提条件、現在バナーはゲーム内表示と公式告知を基準にしてください。' },
     faq: [
       { question: { zh: '3.7 上线后先做什么？', en: 'What should I do first after v3.7 launches?', ja: 'Ver.3.7実装後は何から始めるべき？' }, answer: { zh: '先检查邮件、有效兑换码和平台资源更新；再按主线进度进入梦枢天罗和活动。抽取前先核对当前保底、队伍缺口与游戏内卡池结束时间。', en: 'Check mail, valid codes, and platform resource updates first; then enter the Simulacrum Nexus of Mengzhou and events according to story progress. Before pulling, verify pity, roster gaps, and the in-game banner end time.', ja: 'まずメール、有効コード、プラットフォームのリソース更新を確認し、ストーリー進行に応じて夢枢天羅とイベントへ進みます。抽選前には天井、編成不足、ゲーム内バナー終了時刻を確認してください。' } },
       { question: { zh: '角色机制可以直接照社区爆料写吗？', en: 'Can we publish community leak mechanics directly?', ja: 'コミュニティリークの性能をそのまま書けますか？' }, answer: { zh: '不建议。版本页只写官方或可核验信息，未核验机制放在 watch 口径里。', en: 'No. The hub should publish only official or verifiable details; unverified mechanics stay in watch wording.', ja: '推奨しません。公式または確認可能な情報だけを掲載し、未確認性能はwatch表現に留めます。' } },
@@ -294,9 +295,9 @@ const VERSION_COPY: Partial<Record<GameId, HubCopy>> = {
     description: { zh: '3.3「重返天空的旅程」10月9日前瞻已发布，菲欧妮、赛维里安即将登场。节目码已于10月11日23:59:59（UTC+8）失效；上线日期及卡池以正式公告为准。', en: 'The October 9 v3.3 preview is published. Program codes expired October 11 at 23:59:59 UTC+8; verify the release date and banners in official follow-up notices.', ja: '10月9日のv3.3番組は公開済み。コードは10月11日23:59:59（UTC+8）に失効。実装日とバナーは後続公式告知で確認してください。' },
     highlights: { zh: ['10 月 9 日 19:30', '官方前瞻', '节目码已过期', '3.2 复盘'], en: ['Oct 9, 19:30 UTC+8', 'Official program', 'Codes expired', 'v3.2 recap'], ja: ['10月9日 19:30 UTC+8', '公式番組', 'コード失効済み', 'v3.2まとめ'] },
     kicker: { zh: '官方前瞻窗口', en: 'Official preview window', ja: '公式前瞻期間' },
-    freshness: { zh: '已更新为 10 月 8 日状态：节目时间来自官方公告，角色、卡池和活动细节等待节目及后续公告核验。', en: 'Updated for October 8: the program time is official; agent, banner, and event details await verification from the program and follow-up notices.', ja: '10月8日時点に更新：番組時刻は公式発表済みで、キャラ、バナー、イベント詳細は番組と後続告知で確認します。' },
+    freshness: { zh: '10月18日核验：菲欧妮10月17日机制介绍已公开；3.3上线日期与卡池另行核验，节目码已过期。', en: 'Checked October 18: the October 17 Feioni mechanics post is published. Verify v3.3 release and banners separately; program codes are expired.', ja: '10月18日確認：17日の菲欧妮機構紹介は公開済み。3.3実装日・バナーは別途確認し、番組コードは失効済みです。' },
     faq: [
-      { question: { zh: '现在是看 3.2 还是 3.3？', en: 'Should I focus on v3.2 or v3.3 now?', ja: '今はv3.2とv3.3のどちらを見るべき？' }, answer: { zh: '3.3前瞻已经发布；节目码10月11日失效。3.2仍作已实装内容参考，3.3卡池与上线时间按官方后续公告核验。', en: 'The v3.3 preview is published and its codes expired October 11. Keep v3.2 as a live-content reference and verify v3.3 timing in official notices.', ja: '10月9日番組前は、v3.3ページを時刻とコード確認に使います。既存キャラ、イベント、編成はv3.2を見てください。v3.3のバナーとキャラは番組後の公式告知を基準にします。' } },
+      { question: { zh: '现在是看 3.2 还是 3.3？', en: 'Should I focus on v3.2 or v3.3 now?', ja: '今はv3.2とv3.3のどちらを見るべき？' }, answer: { zh: '3.3前瞻已经发布；节目码10月11日失效。3.2仍作已实装内容参考，3.3卡池与上线时间按官方后续公告核验。', en: 'The v3.3 preview is published and its codes expired October 11. Keep v3.2 as a live-content reference and verify v3.3 timing in official notices.', ja: 'v3.3番組は公開済み、番組コードは10月11日失効。3.2は実装資料として保持し、3.3実装日・バナーは後続公式告知で確認します。' } },
       { question: { zh: '直播码还能领吗？', en: 'Can I still claim livestream codes?', ja: '配信コードはまだ受け取れますか？' }, answer: { zh: '3.3节目码已于10月11日23:59:59（UTC+8）失效；其他兑换码分别核验，未确认不列为有效。', en: 'Old livestream codes stay in expired context; when new preview codes appear, the code page separates active, expired, and unknown status.', ja: '古い配信コードは期限切れ文脈のみ。新しい前瞻コードが出たら、コードページでactive、expired、unknownを分けます。' } },
     ],
     guideIds: ['v3-3-special-program-prep-guide', 'banner-schedule-guide', 'v3-2-livestream-recap-expired-codes'],
@@ -394,55 +395,79 @@ const VERSION_COPY: Partial<Record<GameId, HubCopy>> = {
     guideIds: ['gameplay-city-no-gacha-comparison-faq', 'release-date-beta-pc-faq', 'preregistration-no-gacha-guide'],
   },
   endfield: {
-    title: {
-      zh: 'Pioneer Test 复盘 / AIC 蓝图专题',
-      en: 'Pioneer Test Recap / AIC Blueprint Hub',
-      ja: 'Pioneer Testまとめ / AICブループリント特集',
+    "title": {
+      "zh": "国服「丹青渡」/ 历史测试档案",
+      "en": "CN Danqingdu / historical test archive",
+      "ja": "中国版「丹青渡」/ 旧テスト資料"
     },
-    description: {
-      zh: '整理 Pioneer Test 招募结束后的测试复盘、奖励、Wuling、蓝图、AIC 工厂、下载入口与正式上线观察。',
-      en: 'Cover post-recruitment Pioneer Test recap, rewards, Wuling, blueprints, AIC factory, download entry points, and release-date watch.',
-      ja: 'Pioneer Test募集終了後のまとめ、報酬、Wuling、ブループリント、AIC工場、DL入口、正式リリース注目を整理します。',
+    "description": {
+      "zh": "10月15日国服更新公告公开新干员、区域、寻访、活动与工业系统。其他地区独立核验；Pioneer Test不再作为当前国服状态。",
+      "en": "The October 15 CN notice covers operators, area, searches, events and industry systems. Other regions need separate checks; Pioneer Test is not the current CN state.",
+      "ja": "10月15日中国版告知で新キャラ・エリア・尋訪・イベント・工業を追加。他地域は別途確認し、Pioneer Testを現行中国版扱いしません。"
     },
-    highlights: {
-      zh: ['Pioneer Test 复盘', '测试奖励', '蓝图/AIC', 'Wuling'],
-      en: ['Pioneer Test recap', 'Test rewards', 'Blueprint/AIC', 'Wuling'],
-      ja: ['Pioneer Testまとめ', 'テスト報酬', 'Blueprint/AIC', 'Wuling'],
+    "highlights": {
+      "zh": [
+        "祀 / 明河",
+        "祀的画",
+        "服务器时间",
+        "工业系统更新"
+      ],
+      "en": [
+        "Si / Minghe",
+        "New Wuling area",
+        "Server time",
+        "Industry updates"
+      ],
+      "ja": [
+        "祀 / 明河",
+        "武陵新エリア",
+        "サーバー時刻",
+        "工業更新"
+      ]
     },
-    kicker: { zh: '测试后复盘', en: 'Post-test recap', ja: 'テスト後まとめ' },
-    freshness: {
-      zh: '以 Pioneer Test 招募结束后的公开信息为准，优先整理测试奖励、AIC 工厂、蓝图流程、Wuling 和后续上线观察。',
-      en: 'Based on public information after Pioneer Test recruitment, prioritizing test rewards, AIC factory, blueprint flows, Wuling, and release watch.',
-      ja: 'Pioneer Test募集終了後の公開情報を基準に、報酬、AIC工場、ブループリント、Wuling、正式リリース注目を優先します。',
+    "kicker": {
+      "zh": "国服当前版本",
+      "en": "CN current version",
+      "ja": "中国版現行バージョン"
     },
-    faq: [
+    "freshness": {
+      "zh": "10月18日核验10月15日官方公告；领取资格、开放阶段与服务器时间分别记录。",
+      "en": "Checked October 18 against the October 15 notice. Eligibility, phases and server time remain separate.",
+      "ja": "10月18日に10月15日告知を確認。受取資格・開放段階・サーバー時刻を区別します。"
+    },
+    "faq": [
       {
-        question: {
-          zh: 'Pioneer Test 结束后还应该看什么？',
-          en: 'What should I read after Pioneer Test recruitment?',
-          ja: 'Pioneer Test募集後、何を見るべき？',
+        "question": {
+          "zh": "祀和明河的寻访同时开放吗？",
+          "en": "Are Si and Minghe featured simultaneously?",
+          "ja": "祀と明河のピックアップは同時？"
         },
-        answer: {
-          zh: '先看测试复盘和奖励说明，再补 AIC 工厂、蓝图、Wuling 与下载/配置入口。正式上线日期仍以官方后续公告为准。',
-          en: 'Start with the recap and reward notes, then catch up on AIC factory, blueprints, Wuling, and download/spec entry points. Full release timing still follows future official notices.',
-          ja: 'まずテストまとめと報酬を確認し、AIC工場、ブループリント、Wuling、DL/環境入口を補いましょう。正式リリース日は今後の公式告知基準です。',
-        },
+        "answer": {
+          "zh": "不是。国服公告中祀寻访至11月5日11:59，明河11月5日12:00开始，均为服务器时间。",
+          "en": "No. The CN notice lists Si until November 5 at 11:59, then Minghe from 12:00, both server time.",
+          "ja": "いいえ。中国告知では祀が11月5日11:59まで、明河が12:00開始。サーバー時刻です。"
+        }
       },
       {
-        question: {
-          zh: 'AIC 和蓝图为什么还值得单独看？',
-          en: 'Why are AIC and blueprints still worth separate coverage?',
-          ja: 'AICとブループリントを別に見る理由は？',
+        "question": {
+          "zh": "旧测试蓝图能直接照搬吗？",
+          "en": "Can I reuse test blueprints without checking?",
+          "ja": "旧テスト設計図をそのまま使える？"
         },
-        answer: {
-          zh: '因为测试后讨论集中在工厂效率、蓝图复用和流程优化，这些内容会直接影响后续测试和正式版的建设节奏。',
-          en: 'Because post-test demand centers on factory efficiency, blueprint reuse, and workflow planning, which will shape later tests and full-release progression.',
-          ja: 'テスト後は工場効率、ブループリント再利用、工程設計への需要が強く、次回テストや正式版の進行に直結します。',
-        },
-      },
+        "answer": {
+          "zh": "不能直接视为当前规则。自动农植机、装备方案等已更新，配方、成本与解锁需当前客户端复核。",
+          "en": "Not as current rules without verification. Automated planting and equipment presets have changed; verify recipes, costs and unlocks in the current client.",
+          "ja": "現行ルールとは断定できません。自動農植機や装備プランが更新され、レシピ・コスト・解放条件の再確認が必要です。"
+        }
+      }
     ],
-    guideIds: ['pioneer-test-post-test-route', 'blueprint-aic-factory-guide', 'homecoming-update-guide'],
+    "guideIds": [
+      "danqingdu-cn-update-guide",
+      "blueprint-aic-factory-guide",
+      "pioneer-test-post-test-route"
+    ]
   },
+
   sea: {
     title: {
       zh: 'Early 2027 / December Beta 观察专题',
@@ -1025,7 +1050,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '机制', en: 'Mechanics', ja: '機構' },
-        description: { zh: '先确认测试后状态，再整理 AIC 工厂与可复用的建设资料。', en: 'Confirm post-test status first, then organize AIC factories and reusable construction notes.', ja: 'まずテスト後状態を確認し、AIC工場と再利用可能な建設資料を整理します。' },
+        description: { zh: '先确认国服丹青渡版本，再复核 AIC 工厂与旧蓝图。', en: 'Check CN Danqingdu first, then revalidate AIC factories and older blueprints.', ja: '中国版丹青渡を先に確認し、AIC工場と旧設計図を再検証します。' },
         links: [
           { href: '/endfield/events', label: { zh: '状态看板', en: 'Status board', ja: '状態ボード' } },
           { href: '/endfield/guides/blueprint-aic-factory-guide', label: { zh: 'AIC / 蓝图', en: 'AIC / Blueprints', ja: 'AIC / 設計図' } },
@@ -1059,7 +1084,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '机制', en: 'Mechanics', ja: '機構' },
-        description: { zh: '先确认测试后状态，再整理 AIC 工厂与可复用的建设资料。', en: 'Confirm post-test status first, then organize AIC factories and reusable construction notes.', ja: 'まずテスト後状態を確認し、AIC工場と再利用可能な建設資料を整理します。' },
+        description: { zh: '先确认国服丹青渡版本，再复核 AIC 工厂与旧蓝图。', en: 'Check CN Danqingdu first, then revalidate AIC factories and older blueprints.', ja: '中国版丹青渡を先に確認し、AIC工場と旧設計図を再検証します。' },
         links: [
           { href: '/endfield/events', label: { zh: '状态看板', en: 'Status board', ja: '状態ボード' } },
           { href: '/endfield/guides/blueprint-aic-factory-guide', label: { zh: 'AIC / 蓝图', en: 'AIC / Blueprints', ja: 'AIC / 設計図' } },
@@ -1093,7 +1118,7 @@ const VERSION_FOCUS_LANES: Partial<Record<GameId, Record<SupportedLocale, FocusL
       },
       {
         title: { zh: '机制', en: 'Mechanics', ja: '機構' },
-        description: { zh: '先确认测试后状态，再整理 AIC 工厂与可复用的建设资料。', en: 'Confirm post-test status first, then organize AIC factories and reusable construction notes.', ja: 'まずテスト後状態を確認し、AIC工場と再利用可能な建設資料を整理します。' },
+        description: { zh: '先确认国服丹青渡版本，再复核 AIC 工厂与旧蓝图。', en: 'Check CN Danqingdu first, then revalidate AIC factories and older blueprints.', ja: '中国版丹青渡を先に確認し、AIC工場と旧設計図を再検証します。' },
         links: [
           { href: '/endfield/events', label: { zh: '状态看板', en: 'Status board', ja: '状態ボード' } },
           { href: '/endfield/guides/blueprint-aic-factory-guide', label: { zh: 'AIC / 蓝图', en: 'AIC / Blueprints', ja: 'AIC / 設計図' } },
@@ -1565,9 +1590,9 @@ function getVersionNextSteps(gameId: GameId): NextStepLink[] {
         href: '/endfield/characters',
         title: { zh: '角色图鉴', en: 'Character Wiki', ja: 'キャラ図鑑' },
         description: {
-          zh: '看完测试专题后，继续查看角色和职业理解。',
-          en: 'Move from the test hub into character roles and professions.',
-          ja: 'テスト特集の次にキャラと職業理解へ進めます。',
+          zh: '当前图鉴保留测试档案，角色数值需按丹青渡复核。',
+          en: 'Character records remain test archives; recheck their values against Danqingdu.',
+          ja: 'キャラ記録は旧テスト資料。丹青渡の数値は再確認が必要です。',
         },
       },
       {
@@ -1583,9 +1608,9 @@ function getVersionNextSteps(gameId: GameId): NextStepLink[] {
         href: '/endfield/guides',
         title: { zh: '攻略专题', en: 'Guides', ja: '攻略' },
         description: {
-          zh: '适合继续看测试节点、基地建设和危机合约。',
-          en: 'Best for test timing, base-building, and crisis contract notes.',
-          ja: 'テスト時期、基地建設、危機契約へ進めます。',
+          zh: '优先看丹青渡官方更新，历史测试攻略另行标记。',
+          en: 'Start with the Danqingdu official update; older test guides remain labeled.',
+          ja: '丹青渡公式更新を優先し、旧テストガイドは区別します。',
         },
       },
     ],
@@ -1771,6 +1796,7 @@ export default async function VersionHubPage({
         )}
       </section>
 
+      <OfficialUpdates gameId={gameId} locale={locale} />
       {versionSnapshot && (
         <section className="mb-8 rounded-2xl border border-game-border bg-game-surface p-5">
           <div className="mb-4 flex flex-wrap items-start justify-between gap-4">

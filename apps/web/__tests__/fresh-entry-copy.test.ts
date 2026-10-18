@@ -36,7 +36,7 @@ describe('fresh entry copy', () => {
     expect(downloadPage).toContain('4.6 版本入坑路径');
     expect(downloadPage).toContain('3.7 资源下载与新玩家入坑问题');
     expect(downloadPage).toContain('3.3 观察和 3.2 后回流入坑问题');
-    expect(downloadPage).toContain('Pioneer Test 后续问题');
+    expect(downloadPage).toContain('当前国服版本、下载更新与历史测试分开');
     expect(downloadPage).toContain('PC/主机上线后核验和移动端倒计时');
   });
 
@@ -68,13 +68,13 @@ describe('fresh entry copy', () => {
     expect(sea.contentEn).toContain('/sea/version');
   });
 
-  it('keeps Endfield current entries on the post-test route instead of Homecoming archives', () => {
+  it('prioritizes the current CN version while keeping test material separate', () => {
     const home = readAppFile('[lang]/[game]/page.tsx');
     const version = readAppFile('[lang]/[game]/version/page.tsx');
     const teams = readAppFile('[lang]/[game]/teams/endfield-teams-client.tsx');
 
-    expect(home).toContain("endfield: ['pioneer-test-post-test-route'");
-    expect(home).toContain("href: '/endfield/events'");
+    expect(home).toContain("endfield: ['danqingdu-cn-update-guide'");
+    expect(home).toContain('/endfield/events');
     expect(version).toContain('pioneer-test-post-test-route');
     expect(teams).toContain('终末地测试后入口');
   });
@@ -114,7 +114,7 @@ describe('fresh entry copy', () => {
     const home = readAppFile('[lang]/[game]/page.tsx');
     const weaponDetail = readAppFile('[lang]/[game]/weapons/[id]/page.tsx');
 
-    expect(home).toContain('Gachia 当前整理 Pioneer Test 的干员、武器、配装、AIC 工厂与测试后路线');
+    expect(home).toContain('旧数值、配方和蓝图不直接视为当前规则');
     expect(home).not.toContain('覆盖全部可玩角色');
     expect(weaponDetail).toContain("href: '/endfield/events'");
     expect(weaponDetail).toContain('先确认武器资料适用范围与官方观察项');
@@ -135,7 +135,7 @@ describe('fresh entry copy', () => {
     const guideIndex = readAppFile('[lang]/[game]/guides/page.tsx');
     const guideDetail = readAppFile('[lang]/[game]/guides/[slug]/page.tsx');
 
-    expect(guideIndex).toContain("endfield: ['pioneer-test-post-test-route', 'official-download-specs-homecoming-faq', 'blueprint-aic-factory-guide']");
+    expect(guideIndex).toContain("endfield: ['danqingdu-cn-update-guide', 'blueprint-aic-factory-guide', 'pioneer-test-post-test-route']");
     expect(guideIndex).not.toContain("endfield: ['download-install-guide', 'combat-system-guide', 'crisis-contract-guide']");
     expect(guideDetail).toContain("normalized.includes('pioneer test archive')");
     expect(guideDetail).toContain('历史测试或旧版本资料');

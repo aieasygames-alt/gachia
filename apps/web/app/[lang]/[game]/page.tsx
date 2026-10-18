@@ -68,10 +68,10 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     ja: 'Anantaのキャラ図鑑、DL入口、攻略百科を、2027年1月15日グローバル配信、PS5、PC、Android、iOS、Chongxiao都市OW、ガチャなし、配信前準備に合わせて更新。',
   },
   endfield: {
-    zh: '《明日方舟：终末地》（Arknights: Endfield）开放世界动作 RPG 攻略百科，当前重点覆盖 Pioneer Test 复盘、测试奖励、Wuling、AIC 工厂、蓝图、下载配置和正式上线观察。Gachia 提供角色、武器、配装、基地建设和测试后路线入口。',
-    en: 'Arknights: Endfield open-world action RPG guides, now focused on Pioneer Test recap, rewards, Wuling, AIC factory, blueprints, downloads/specs, and release watch. Gachia links operators, weapons, builds, base building, and post-test routes.',
-    ja: 'アークナイツ：エンドフィールド攻略百科。現在はPioneer Testまとめ、報酬、Wuling、AIC工場、ブループリント、DL/環境、正式版注目を重点化。キャラ、武器、ビルド、基地建設、テスト後導線を整理します。',
-  },
+  "zh": "终末地国服丹青渡版本攻略：祀、明河、武陵新区域、寻访阶段、补偿资格与工业系统更新。历史Pioneer Test资料独立保留，其他地区单独核验。",
+  "en": "Endfield CN Danqingdu guides: operators, new Wuling area, search phases, compensation eligibility and industry updates. Pioneer Test remains historical; other regions require separate checks.",
+  "ja": "中国版丹青渡攻略：新キャラ・武陵新エリア・尋訪段階・補償資格・工業更新。Pioneer Test履歴と他地域は区別します。"
+},
   sea: {
     zh: '遗忘之海 Wiki 与官网入口，整理网易 Joker Studio 海洋冒险 RPG 的角色图鉴、下载入口、官网资讯、云游戏、PC 配置、开服福利、移动端安装和开荒攻略。PC 端已于 2026 年 7 月 9 日公测，移动端入口与下载排错可继续进入下载专题。',
     en: 'Sea of Remnants is an ocean adventure RPG by NetEase Joker Studio. Gachia tracks crews, face sculpting, PC specs, download/install, rewards, and beginner routes.',
@@ -132,9 +132,9 @@ const GAME_ABOUT: Record<string, Record<string, string>> = {
     ja: 'Ananta（旧Project Mugen）はNaked Rain / NetEaseの都市オープンワールドアクションゲームです。公式サイトとgamescom 2026更新では、2027年1月15日にPS5、PC、Android、iOS向けグローバル配信予定。GachiaではChongxiao都市玩法、ガチャなし、DL、環境、キャラ、配信前準備を整理します。',
   },
   endfield: {
-    zh: '《明日方舟：终末地》（Arknights: Endfield）是鹰角网络（Hypergryph）开发的开放世界动作 RPG，以明日方舟 IP 为背景，玩家在塔拉二号星球上建立据点、指挥干员进行即时战斗和探索。Gachia 当前整理 Pioneer Test 的干员、武器、配装、AIC 工厂与测试后路线；下一轮测试和正式版内容以官方公告为准。',
-    en: 'Arknights: Endfield is an open-world action RPG by Hypergryph set in the Arknights universe, where players establish bases and command operators in real-time combat on Talos II. Gachia currently organizes Pioneer Test operator, weapon, build, AIC factory, and post-test references; rely on official announcements for future tests and release content.',
-    ja: 'アークナイツ：エンドフィールドはハイパーグリフ開発のオープンワールドアクションRPGです。プレイヤーはタロスII号星で拠点を建設し、オペレーターを指揮してリアルタイム戦闘と探索を行います。Gachiaは現在、Pioneer Testのオペレーター、武器、ビルド、AIC工場、テスト後導線を整理しており、今後のテスト・正式版は公式発表を基準にします。',
+    zh: '《明日方舟：终末地》（Arknights: Endfield）是鹰角网络（Hypergryph）开发的开放世界动作 RPG，以明日方舟 IP 为背景，玩家在塔拉二号星球上建立据点、指挥干员进行即时战斗和探索。Gachia 整理国服丹青渡官方更新，并保留Pioneer Test干员、武器与配装档案；旧数值、配方和蓝图不直接视为当前规则，其他地区另行核验。',
+    en: 'Arknights: Endfield is an open-world action RPG by Hypergryph set in the Arknights universe, where players establish bases and command operators in real-time combat on Talos II. Gachia covers CN Danqingdu official updates separately from Pioneer Test operator, gear and build archives; older values and recipes require revalidation, and other regions need separate checks.',
+    ja: 'アークナイツ：エンドフィールドはハイパーグリフ開発のオープンワールドアクションRPGです。プレイヤーはタロスII号星で拠点を建設し、オペレーターを指揮してリアルタイム戦闘と探索を行います。Gachiaは中国版丹青渡告知とPioneer Test旧資料を区別します。旧数値・レシピ・設計図の再確認と他地域の個別確認が必要です。',
   },
   sea: {
     zh: '遗忘之海是一款极具美术风格的海洋冒险RPG，采用回合制战斗、即时海战与 Roguelite 遗忘之旅多模式。PC端2026年7月9日公测，移动端2026年7月23日10:00首发。Gachia 会持续整理移动端入口、首周运营、兑换码、角色与 BOSS 档案、捏脸、配置要求、开荒 Build 和海区探索路线。',
@@ -460,13 +460,161 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     faq: [{ question: { zh: '鸣潮首页现在先看什么最实用？', en: 'What is the most practical starting point on the WuWa homepage?', ja: '鳴潮ホームで最初に見ると実用的なものは？' }, answer: { zh: '先看 3.7 上线后路线与活动看板，确认邮件、资源下载、解锁条件和本服时间；再处理卡池预算、兑换码、平台入坑与声骸配装。', en: 'Start with the v3.7 live route and event board to verify mail, downloads, unlock conditions, and server timing; then review banner budgeting, codes, platform onboarding, and Echo builds.', ja: 'まずVer.3.7実装後ルートとイベントボードでメール、DL、解放条件、サーバー時刻を確認し、その後バナー予算、コード、プラットフォーム入門、エコーへ進みます。' } }],
   },
   endfield: {
-    eyebrow: { zh: 'Pioneer Test 复盘 / AIC 蓝图入口', en: 'Pioneer Test Recap / AIC Blueprint Hub', ja: 'Pioneer Testまとめ / AIC設計図導線' },
-    title: { zh: '终末地 Pioneer Test 复盘、AIC 工厂与蓝图重点入口', en: 'Endfield Pioneer Test recap, AIC factory, and blueprint hub', ja: 'Endfield Pioneer Testまとめ・AIC工場・設計図導線' },
-    description: { zh: '把 Pioneer Test 招募结束后的测试复盘、奖励、Wuling、AIC 工厂、蓝图、下载配置和正式上线观察放到首页。', en: 'Bring post-recruitment Pioneer Test recap, rewards, Wuling, AIC factory, blueprints, download/specs, and release watch to the homepage.', ja: 'Pioneer Test募集後のまとめ、報酬、Wuling、AIC工場、ブループリント、DL/環境、正式版注目をトップに出します。' },
-    chips: { zh: ['Pioneer Test', '测试奖励', 'Wuling', '蓝图', 'AIC 工厂', '上线观察'], en: ['Pioneer Test', 'Test rewards', 'Wuling', 'Blueprints', 'AIC factory', 'Release watch'], ja: ['Pioneer Test', 'テスト報酬', 'Wuling', '設計図', 'AIC工場', '正式版注目'] },
-    cta: { zh: '去测试复盘', en: 'Open test recap', ja: 'テストまとめへ' },
-    tracks: { zh: [{ title: '测试后复盘', description: '先整理 Pioneer Test、奖励核对、Wuling 和后续上线观察。', links: [{ href: '/endfield/guides/pioneer-test-post-test-route', label: '测试后路线' }, { href: '/endfield/events', label: '状态看板' }] }, { title: '蓝图 / AIC', description: '把工厂效率、蓝图复用和建设节奏继续下沉。', links: [{ href: '/endfield/guides/blueprint-aic-factory-guide', label: '蓝图 / AIC' }, { href: '/endfield/build', label: '配装推荐' }] }, { title: '入坑与角色', description: '新玩家和回流玩家继续看下载、战斗和干员。', links: [{ href: '/endfield/guides/download-install-guide', label: '下载指南' }, { href: '/endfield/characters', label: '角色图鉴' }] }], en: [{ title: 'Post-test recap', description: 'Start with Pioneer Test, reward verification, Wuling, and release watch.', links: [{ href: '/endfield/guides/pioneer-test-post-test-route', label: 'Post-test route' }, { href: '/endfield/events', label: 'Status board' }] }, { title: 'Blueprint / AIC', description: 'Push factory efficiency, blueprint reuse, and build cadence deeper.', links: [{ href: '/endfield/guides/blueprint-aic-factory-guide', label: 'Blueprint / AIC' }, { href: '/endfield/build', label: 'Builds' }] }, { title: 'Start and roles', description: 'New and returning players continue into download, combat, and operators.', links: [{ href: '/endfield/guides/download-install-guide', label: 'Download guide' }, { href: '/endfield/characters', label: 'Characters' }] }], ja: [{ title: 'テスト後まとめ', description: 'Pioneer Test、報酬確認、Wuling、正式版注目を先に受け止めます。', links: [{ href: '/endfield/guides/pioneer-test-post-test-route', label: 'テスト後ルート' }, { href: '/endfield/events', label: '状態ボード' }] }, { title: 'Blueprint / AIC', description: '工場効率、ブループリント再利用、建設テンポへつなげます。', links: [{ href: '/endfield/guides/blueprint-aic-factory-guide', label: 'Blueprint / AIC' }, { href: '/endfield/build', label: 'ビルド' }] }, { title: '入門と役割', description: '新規と復帰勢をDL、戦闘、キャラへ誘導します。', links: [{ href: '/endfield/guides/download-install-guide', label: 'DLガイド' }, { href: '/endfield/characters', label: 'キャラ図鑑' }] }] },
-    faq: [{ question: { zh: '终末地首页现在先看哪？', en: 'What should I open first for Endfield?', ja: 'Endfieldホームで最初に見るべきものは？' }, answer: { zh: '先看 Pioneer Test 复盘，再看蓝图 / AIC 工厂、下载配置和角色入口。', en: 'Start with the Pioneer Test recap, then blueprint / AIC factory, download specs, and operators.', ja: 'まずPioneer Testまとめ、その後ブループリント / AIC工場、DL環境、キャラへ。' } }],
+    "eyebrow": {
+      "zh": "国服丹青渡 / 历史测试分流",
+      "en": "CN Danqingdu / test archive",
+      "ja": "中国版丹青渡 / 旧テスト資料"
+    },
+    "title": {
+      "zh": "终末地国服丹青渡：寻访、活动与工业更新",
+      "en": "Endfield CN Danqingdu: searches, events and industry",
+      "ja": "中国版丹青渡：尋訪・イベント・工業更新"
+    },
+    "description": {
+      "zh": "10月15日更新公开祀、明河、「武陵 - 祀的画」和系统改动。先核对寻访阶段、补偿资格与服务器时间，其他地区不直接套用。",
+      "en": "The October 15 CN notice adds Si, Minghe, a Wuling area and system changes. Check phases, compensation eligibility and server time; other regions remain separate.",
+      "ja": "10月15日中国版告知で祀・明河・新エリア・システムを追加。段階・資格・サーバー時刻を確認し他地域へ流用しません。"
+    },
+    "chips": {
+      "zh": [
+        "国服丹青渡",
+        "祀 / 明河",
+        "补偿资格",
+        "服务器时间",
+        "工业更新"
+      ],
+      "en": [
+        "CN Danqingdu",
+        "Si / Minghe",
+        "Eligibility",
+        "Server time",
+        "Industry"
+      ],
+      "ja": [
+        "中国版丹青渡",
+        "祀 / 明河",
+        "補償資格",
+        "サーバー時刻",
+        "工業更新"
+      ]
+    },
+    "cta": {
+      "zh": "查看国服当前版本",
+      "en": "Open current CN version",
+      "ja": "中国版現行情報へ"
+    },
+    "faq": [
+      {
+        "question": {
+          "zh": "现在先看什么？",
+          "en": "Where should I start?",
+          "ja": "最初に見るべきものは？"
+        },
+        "answer": {
+          "zh": "先看丹青渡官方更新整理与活动看板。旧测试蓝图、掉落与角色数值不可直接当作当前正式服规则。",
+          "en": "Start with Danqingdu and the event board. Test blueprints, drops and character values are not current rules without validation.",
+          "ja": "丹青渡公式更新整理とイベントボードへ。旧テスト設計図・ドロップ・数値は現行ルールとして扱いません。"
+        }
+      }
+    ],
+    "tracks": {
+      "zh": [
+        {
+          "title": "国服当前版本",
+          "description": "寻访阶段、补偿资格与活动节点。",
+          "links": [
+            {
+              "href": "/endfield/guides/danqingdu-cn-update-guide",
+              "label": "丹青渡更新"
+            }
+          ]
+        },
+        {
+          "title": "工业系统复核",
+          "description": "自动农植机、装备方案与连携优先级；旧蓝图需重验。",
+          "links": [
+            {
+              "href": "/endfield/events",
+              "label": "版本活动"
+            }
+          ]
+        },
+        {
+          "title": "历史测试档案",
+          "description": "保留测试内容，不与当前国服规则混用。",
+          "links": [
+            {
+              "href": "/endfield/guides/pioneer-test-post-test-route",
+              "label": "历史资料"
+            }
+          ]
+        }
+      ],
+      "en": [
+        {
+          "title": "Current CN version",
+          "description": "Search phases, compensation eligibility and events.",
+          "links": [
+            {
+              "href": "/endfield/guides/danqingdu-cn-update-guide",
+              "label": "Danqingdu update"
+            }
+          ]
+        },
+        {
+          "title": "Industry revalidation",
+          "description": "Automated planting, presets and combo priorities; recheck older blueprints.",
+          "links": [
+            {
+              "href": "/endfield/events",
+              "label": "Version events"
+            }
+          ]
+        },
+        {
+          "title": "Historical test archive",
+          "description": "Keep historical tests separate from current CN rules.",
+          "links": [
+            {
+              "href": "/endfield/guides/pioneer-test-post-test-route",
+              "label": "Historical scope"
+            }
+          ]
+        }
+      ],
+      "ja": [
+        {
+          "title": "中国版現行バージョン",
+          "description": "尋訪段階・補償資格・イベント。",
+          "links": [
+            {
+              "href": "/endfield/guides/danqingdu-cn-update-guide",
+              "label": "丹青渡更新"
+            }
+          ]
+        },
+        {
+          "title": "工業システム再検証",
+          "description": "農植機・装備プラン・連携優先度。旧設計図は再確認。",
+          "links": [
+            {
+              "href": "/endfield/events",
+              "label": "更新イベント"
+            }
+          ]
+        },
+        {
+          "title": "旧テスト資料",
+          "description": "旧テストと現行中国版ルールは区別。",
+          "links": [
+            {
+              "href": "/endfield/guides/pioneer-test-post-test-route",
+              "label": "旧資料"
+            }
+          ]
+        }
+      ]
+    }
   },
   skjh: {
     eyebrow: { zh: 'S2 制霸王座 / 下载入口', en: 'S2 Throne Rush / Download Hub', ja: 'S2 制霸王座 / DL導線' },
@@ -710,7 +858,7 @@ const FEATURED_GUIDE_IDS: Record<string, string[]> = {
   zzz: ['banner-schedule-guide', 'anniversary-rewards-codes-plan', 'v3-1-anniversary-xbox-guide'],
   guihuan: ['test-recruit-international-download-faq', 'official-release-company-faq', 'test-release-timeline-guide'],
   ananta: ['release-date-beta-pc-faq', 'download-install-guide', 'gameplay-city-no-gacha-comparison-faq'],
-  endfield: ['pioneer-test-post-test-route', 'blueprint-aic-factory-guide', 'homecoming-update-guide'],
+  endfield: ['danqingdu-cn-update-guide', 'blueprint-aic-factory-guide', 'pioneer-test-post-test-route'],
   sea: ['identity-v-signin-screenshot-rewards-guide', 'lost-sea-new-islands-ship-prep-guide', 'sea-of-remnants-p2w-gacha-explained'],
   skjh: ['official-pc-download-faq', 'first-2-hours-starter-route', 'base-location-anti-raid-plan'],
   aniimo: ['s1-new-player-route', 'rainbow-aniimo-guide', 'homeland-resource-guide'],

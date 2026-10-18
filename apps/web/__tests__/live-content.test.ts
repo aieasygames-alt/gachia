@@ -64,6 +64,13 @@ describe('homepage live content', () => {
     expect(new Set(HOMEPAGE_PRIORITY_GAMES).size).toBe(HOMEPAGE_PRIORITY_GAMES.length);
   });
 
+  it('does not replace the Aniimo code-status entry with weekly compensation', () => {
+    const entry = LIVE_CODE_SUMMARIES.find((item) => item.gameId === 'aniimo');
+    expect(entry?.title.en).toContain('Code Status');
+    expect(entry?.summary.en).toContain('unconfirmed public codes');
+    expect(entry?.summary.zh).not.toContain('100辉石');
+  });
+
   it('marks the ZZZ module as a v3.3 watch route', () => {
     const zzzVersion = LIVE_VERSION_UPDATES.find((item) => item.gameId === 'zzz');
 

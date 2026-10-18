@@ -9,7 +9,7 @@ describe('Lvmeng official launch contract', () => {
     expect(deviceRequirements.find((entry) => entry.platform === 'PC Windows')?.storage).toBe('25GB以上');
     expect(deviceRequirements.filter((entry) => entry.platform !== 'PC Windows').every((entry) => entry.storage === '15GB以上')).toBe(true);
     expect(releaseStatus.find((entry) => entry.label === '跨平台游戏数据')?.value).toContain('同一 UID');
-    expect(versionHistory[0].status).toBe('公测已开启');
+    expect(versionHistory.find((entry) => entry.date === '2026-10-15')?.status).toBe('公测已开启');
     expect(launchRewards[0].note).toContain('不是首周到期福利');
   });
 
