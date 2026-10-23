@@ -1,6 +1,6 @@
 # Gachia 多游戏长期运营与架构治理开发文档
 
-> 版本：v1.6，含无账号主站受控生产发布与限定验收
+> 版本：v1.7，含 S2.1 内容派生物与 sitemap 所有权本地交付
 >
 > 编制日期：2026-10-23，Asia/Shanghai
 >
@@ -17,6 +17,8 @@
 实施进展：S0 本地基线与 S1 限定工程实现已完成；S1.1/S1.2 完成五个 Next 应用统一运行时及限定本地回归，S1.3 完成账户/容量/预算核验及蓝色星原独立云端 staging 验收。S1.4 根据用户决定暂时下线站点登录，取消当前无账号版本对 Google OAuth 的依赖，保留历史数据与本地工具；见 [S1.4 交付记录](../plans/multi-game-s1-accounts-disabled-closeout-2026-10-23.md)。S1.5 补齐停用账号的生产审计、精确旧静态资源保留及主站跨 owner 原生导航，重新构建并通过主站 staging、浏览器及实际 Router 源码组合演练；将编译后验收纳入生产 CI 门禁，见 [S1.5 交付记录](../plans/multi-game-s1-main-preflight-closeout-2026-10-23.md)和[主站发布规范](main-release-static-retention.md)。S1.6 已将主站代码合入 main，通过显式 production 流程推广同一封存产物，线上采用无账号策略；实际版本、生产验收与观察边界见 [S1.6 交付记录](../plans/multi-game-s1-main-production-closeout-2026-10-23.md)。此前证据见 [S1 阶段交付记录](../plans/multi-game-s1-closeout-2026-10-23.md)、[S1.1 运行时交付记录](../plans/multi-game-s1-runtime-closeout-2026-10-23.md)、[S1.2 交付记录](../plans/multi-game-s1-runtime-rollout-closeout-2026-10-23.md)及 [S1.3 交付记录](../plans/multi-game-s1-staging-closeout-2026-10-23.md)。四个游戏 Worker 与 Router 未在 S1.6 发布，未合并 Worker、未删除业务或历史文件；不据此视为全站运行时、SEO、内容治理或整个方案完成。
 
 Gachia 是面向多游戏玩家的资料、攻略和工具站，现有 16 个游戏，并计划持续接入新游戏。平台需要同时满足内容可信、搜索可发现、发布安全和低维护成本，而不是单纯追求页面总量或 Worker 数量最少。
+
+S2.1 追加进展：完成根 sitemapindex/主站子图所有权改造、Sea 75 篇攻略的 77 个派生物一致性门禁及本地 Worker 验收；没有生产部署。六对历史漂移均完成归因和暂缓覆盖决策，但未完成事实核验/合并。源码与 ASSETS 回退仍存在 roco-cn 三语言 URL 的已知差异，S2 整体验收、原神缺译策略、首页及基础元数据仍待继续。见 [S2.1 交付记录](../plans/multi-game-s2-1-content-contract-closeout-2026-10-23.md)与[维护契约](content-source-and-sitemap-contract.md)。
 
 本次审计的核心结论：
 
@@ -502,7 +504,8 @@ planned -> validated -> preview_ready -> approved -> promoting -> verifying -> r
 |---|---|
 | 游戏注册与部署 | `packages/core/constants/index.ts`、`packages/core/deployments.ts` |
 | Router 与缓存策略 | `apps/router/src/index.ts`、`apps/router/wrangler.jsonc` |
-| 根 sitemap | `apps/web/app/sitemap.ts` |
+| 根 sitemap 与主站子图 | `apps/web/app/sitemap.xml/route.ts`、`apps/web/lib/sitemap-index.ts`、`apps/web/app/sitemaps/main/sitemap.ts` |
+| Sea 攻略派生物契约 | `packages/data/scripts/sea-guide-contract.mjs`、[维护说明](content-source-and-sitemap-contract.md) |
 | 日文索引与 fallback | `apps/web/lib/seo-metadata.ts`、`apps/game-nte/lib/seo.ts`、`apps/game-genshin/app/sitemap.ts`、`packages/data/games/genshin/guides.ts` |
 | 内容加载与镜像 | `packages/data/load-json.ts`、`packages/data/games`、`apps/web/public/data` |
 | 内容 freshness | `scripts/content-freshness-audit.mjs`、`apps/web/lib/content-freshness.ts` |

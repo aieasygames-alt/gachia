@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "baselineCommit": "fcded9f",
+  "productionVerified": false,
+  "baselineDefinitions": {
+    "source": "TS evaluation with filesystem source available; before JSON SHA-256 c5eaff461077363aadbaa131f766f04319f8d4aa8fdee3c82774c074b30d3017",
+    "runtime": "old sitemap code evaluated with unchanged public ASSETS fallback and unavailable local raw guides; reconstruction, NOT a previous production HTTP capture",
+    "currentCompiled": "actual local workerd HTTP response; fixture intentionally has no cloud databases, cache services or secrets"
+  },
+  "sourceEvaluation": {
+    "before": 6632,
+    "after": 4465,
+    "unchanged": 4465,
+    "added": [],
+    "removedCounts": {
+      "dedicated-owner:azur-promilia": 15,
+      "dedicated-owner:genshin": 1563,
+      "dedicated-owner:nte": 585,
+      "sitemap-reference-moved-to-index": 4
+    }
+  },
+  "runtimeFallback": {
+    "before": 6629,
+    "after": 4462,
+    "added": [],
+    "removedCounts": {
+      "dedicated-owner:azur-promilia": 15,
+      "dedicated-owner:genshin": 1563,
+      "dedicated-owner:nte": 585,
+      "sitemap-reference-moved-to-index": 4
+    }
+  },
+  "sourceVsRuntimeKnownGap": {
+    "sourceOnlyUrls": [
+      "https://gachia.com/en/roco-cn/guides/daily-events-merchant-guide",
+      "https://gachia.com/ja/roco-cn/guides/daily-events-merchant-guide",
+      "https://gachia.com/zh/roco-cn/guides/daily-events-merchant-guide"
+    ],
+    "runtimeOnlyUrls": [],
+    "cause": "roco-cn/raw-guides.json source has 4 guides while public mirror has 3; unchanged by S2.1",
+    "decision": "remain open for S2.2 editorial and language/retirement review, not a sitemap-removal allowlist"
+  },
+  "baselinePublicAssets": [
+    "/data/starrail/raw-guides.json",
+    "/data/wuwa/raw-guides.json",
+    "/data/nte/raw-guides.json",
+    "/data/zzz/raw-guides.json",
+    "/data/hi3/raw-guides.json",
+    "/data/guihuan/raw-guides.json",
+    "/data/ananta/raw-guides.json",
+    "/data/endfield/raw-guides.json",
+    "/data/sea/raw-guides.json",
+    "/data/skjh/raw-guides.json",
+    "/data/roco/raw-guides.json",
+    "/data/roco-cn/raw-guides.json",
+    "/data/aniimo/raw-guides.json"
+  ]
+}

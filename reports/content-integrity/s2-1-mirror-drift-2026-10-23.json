@@ -1,0 +1,285 @@
+{
+  "schemaVersion": 1,
+  "baselineCommit": "fcded9f",
+  "scope": "isolated committed source/public raw JSON pairs; not a live production data proof",
+  "pairedFiles": 90,
+  "equalPairs": 84,
+  "driftPairs": 6,
+  "contentModified": false,
+  "drifts": [
+    {
+      "source": "packages/data/games/roco/raw-characters.json",
+      "mirror": "apps/web/public/data/roco/raw-characters.json",
+      "sourceSha256": "154c996ee0666726475fd5a74b1837c69446373060c82c22c9d35ef2367a667a",
+      "mirrorSha256": "d1e392a5532739cc71185808bc7708773e075095b436b760c806fa5d7f0645f9",
+      "sourceCount": 6,
+      "mirrorCount": 6,
+      "sourceLastCommit": "bc613db feat(roco): 补国服/国际服武器(法杖)、节奏榜与玩法导向文案",
+      "mirrorLastCommit": "e18bd4d feat: launch Roco Kingdom dual entry (roco/roco-cn) with M2 content",
+      "classification": "source-only-edit",
+      "decision": "hold-for-editorial-verification; do-not-overwrite-in-S2.1",
+      "rationale": "源提交 bc613db 改动角色描述、技能、数值和版本；公开镜像仍是 e18bd4d。数值和技能属于事实内容，先复核官方依据，不能只因源更新就覆盖。",
+      "changes": [
+        {
+          "id": "cerulla",
+          "presence": "both",
+          "fields": [
+            "description",
+            "descriptionEn",
+            "releaseVersion",
+            "skills",
+            "stats"
+          ]
+        },
+        {
+          "id": "meewee",
+          "presence": "both",
+          "fields": [
+            "description",
+            "descriptionEn",
+            "releaseVersion",
+            "skills",
+            "stats"
+          ]
+        },
+        {
+          "id": "sparka",
+          "presence": "both",
+          "fields": [
+            "releaseVersion",
+            "skills",
+            "stats"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "packages/data/games/roco-cn/raw-guides.json",
+      "mirror": "apps/web/public/data/roco-cn/raw-guides.json",
+      "sourceSha256": "b4e9aa3d9358e4de7d92977d1d4a696594fda41cf04b518b11e92458f4f15b7e",
+      "mirrorSha256": "5fe03386f49370f7e28a3d72153c9658d467c7565313ff5384e335ad0285d57d",
+      "sourceCount": 4,
+      "mirrorCount": 3,
+      "sourceLastCommit": "75d9ed7 Add Roco CN daily events guide",
+      "mirrorLastCommit": "65c3378 feat: launch roco-cn M3 content (dex, guides, redeem codes)",
+      "classification": "source-only-addition",
+      "decision": "hold-for-editorial-verification; do-not-overwrite-in-S2.1",
+      "rationale": "源提交 75d9ed7 新增 daily-events-merchant-guide，公开镜像缺此条；该条英文路径已被 middleware 显式退役。后续先审核正文语言和退役约束，再同步公开镜像，不恢复已退役英文 URL。",
+      "changes": [
+        {
+          "id": "daily-events-merchant-guide",
+          "presence": "source-only",
+          "fields": [
+            "category",
+            "categoryEn",
+            "categoryJa",
+            "categoryZh",
+            "content",
+            "contentEn",
+            "contentJa",
+            "faq",
+            "id",
+            "summary",
+            "summaryEn",
+            "summaryJa",
+            "tags",
+            "title",
+            "titleEn",
+            "titleJa",
+            "updatedAt"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "packages/data/games/skjh/raw-guides.json",
+      "mirror": "apps/web/public/data/skjh/raw-guides.json",
+      "sourceSha256": "06f95ee14a0c07146bad2934528df37ea5495f52719e45e20737ee61b669cd8c",
+      "mirrorSha256": "ce60b48e591e1e56dca13378b779e175de21e54d6a1f8448fd67aa536582b09c",
+      "sourceCount": 45,
+      "mirrorCount": 45,
+      "sourceLastCommit": "4dad7be Localize remaining priority text",
+      "mirrorLastCommit": "9796db5 chore: refresh game intelligence content",
+      "classification": "mirror-only-editorial-edit",
+      "decision": "hold-for-editorial-verification; do-not-overwrite-in-S2.1",
+      "rationale": "镜像提交 9796db5 修改四篇攻略的 S2、历史活动和下载表述；源停留在 4dad7be。不能用源批量覆盖镜像，否则丢失已做的运营修订；后续将已核验修订回迁源后再生成。",
+      "changes": [
+        {
+          "id": "launch-rewards",
+          "presence": "both",
+          "fields": [
+            "content",
+            "summary",
+            "summaryEn",
+            "title",
+            "titleEn"
+          ]
+        },
+        {
+          "id": "launch-rewards-complete",
+          "presence": "both",
+          "fields": [
+            "content",
+            "contentEn",
+            "contentJa",
+            "summary",
+            "summaryEn",
+            "title",
+            "titleEn"
+          ]
+        },
+        {
+          "id": "preload-install-guide",
+          "presence": "both",
+          "fields": [
+            "content",
+            "summary",
+            "summaryEn",
+            "title",
+            "titleEn"
+          ]
+        },
+        {
+          "id": "season-1-launch",
+          "presence": "both",
+          "fields": [
+            "content",
+            "contentEn",
+            "contentJa",
+            "summary",
+            "summaryEn",
+            "title",
+            "titleEn"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "packages/data/games/wuwa/raw-echoes.json",
+      "mirror": "apps/web/public/data/wuwa/raw-echoes.json",
+      "sourceSha256": "715fa7f63026dd4c3939fbd33118f1278a483785dca0adb9b02553d9d084a5b4",
+      "mirrorSha256": "d75e6d53f627b4ee455d8feb18bb9da71027b6b7ad5db992efebe620f5deca84",
+      "sourceCount": 15,
+      "mirrorCount": 12,
+      "sourceLastCommit": "8988558 feat(wuwa): refresh v3.7 live content",
+      "mirrorLastCommit": "377e719 feat(seo): refresh metadata and indexnow submission",
+      "classification": "source-only-addition",
+      "decision": "hold-for-editorial-verification; do-not-overwrite-in-S2.1",
+      "rationale": "源提交 8988558 新增三套声骸，镜像缺失；先核验版本与命名，再做同批源/镜像发布。",
+      "changes": [
+        {
+          "id": "flower-of-crimson-reminiscence",
+          "presence": "source-only",
+          "fields": [
+            "bestFor",
+            "bonus2pc",
+            "bonus2pcEn",
+            "bonus5pc",
+            "bonus5pcEn",
+            "id",
+            "name",
+            "nameEn"
+          ]
+        },
+        {
+          "id": "heart-that-illuminates-dreams",
+          "presence": "source-only",
+          "fields": [
+            "bestFor",
+            "bonus2pc",
+            "bonus2pcEn",
+            "bonus5pc",
+            "bonus5pcEn",
+            "id",
+            "name",
+            "nameEn"
+          ]
+        },
+        {
+          "id": "mirror-shadow-flowing-lightning",
+          "presence": "source-only",
+          "fields": [
+            "bestFor",
+            "bonus2pc",
+            "bonus2pcEn",
+            "bonus5pc",
+            "bonus5pcEn",
+            "id",
+            "name",
+            "nameEn"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "packages/data/games/wuwa/raw-redeem-codes.json",
+      "mirror": "apps/web/public/data/wuwa/raw-redeem-codes.json",
+      "sourceSha256": "ffade7f8b4ddc54960ca2da3aa46f419bad1f150e779c18693e2da35933c377a",
+      "mirrorSha256": "a02d048bb0d04b3e03bd53b97632dbb6c369d548200ba78d7aad6de809e4b667",
+      "sourceCount": 5,
+      "mirrorCount": 5,
+      "sourceLastCommit": "8988558 feat(wuwa): refresh v3.7 live content",
+      "mirrorLastCommit": "377e719 feat(seo): refresh metadata and indexnow submission",
+      "classification": "source-only-status-edit",
+      "decision": "hold-for-editorial-verification; do-not-overwrite-in-S2.1",
+      "rationale": "源提交 8988558 把三个活动码改为 expired，镜像仍标 active。应优先核验到期事实并成对更新；本阶段不宣称这些码当前可领取。",
+      "changes": [
+        {
+          "id": "ROYALFROST2026",
+          "presence": "both",
+          "fields": [
+            "status"
+          ]
+        },
+        {
+          "id": "WUTHRINGWAVES",
+          "presence": "both",
+          "fields": [
+            "status"
+          ]
+        },
+        {
+          "id": "WUWACNY2026",
+          "presence": "both",
+          "fields": [
+            "status"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "packages/data/games/wuwa/raw-regions.json",
+      "mirror": "apps/web/public/data/wuwa/raw-regions.json",
+      "sourceSha256": "385fe0b5bbcf5387fd178e41ea150c0431b2d299f8bd3306bc45d3a8e28b7706",
+      "mirrorSha256": "e29d96b543b3be716bb90d58dacbf6788de2f09c932570403bdd8e001b4170e9",
+      "sourceCount": 6,
+      "mirrorCount": 5,
+      "sourceLastCommit": "8988558 feat(wuwa): refresh v3.7 live content",
+      "mirrorLastCommit": "377e719 feat(seo): refresh metadata and indexnow submission",
+      "classification": "source-only-addition",
+      "decision": "hold-for-editorial-verification; do-not-overwrite-in-S2.1",
+      "rationale": "源提交 8988558 新增 simulacrum-nexus，镜像缺失；先核验实装/公告、区服和语言，再成对发布。",
+      "changes": [
+        {
+          "id": "simulacrum-nexus",
+          "presence": "source-only",
+          "fields": [
+            "bosses",
+            "description",
+            "descriptionEn",
+            "descriptionJa",
+            "domains",
+            "highlights",
+            "id",
+            "name",
+            "nameEn",
+            "nameJa",
+            "specialties",
+            "subRegions",
+            "tips"
+          ]
+        }
+      ]
+    }
+  ]
+}

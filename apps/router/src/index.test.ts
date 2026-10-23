@@ -49,9 +49,17 @@ describe('gachia router safety defaults', () => {
     }
   });
 
-  it('keeps the root sitemap on the main worker while routing game sitemap shards', async () => {
-    const root = await router.fetch(new Request('https://gachia.com/sitemap.xml'), { MAIN_SITE: fetcher('main'), NTE_SITE: fetcher('nte'), NTE_ENABLED: 'true' });
-    await expect(root.text()).resolves.toBe('main');
+  it('keeps the root index and main page shard on main while routing game shards', async () => {
+    const mainPaths: string[] = [];
+    const main = { fetch: async (request: Request) => { mainPaths.push(new URL(request.url).pathname); return new Response('main'); }, connect: () => { throw new Error('not used'); } } as Fetcher;
+    for (const path of ['/sitemap.xml', '/sitemaps/main/sitemap.xml']) {
+      const response = await router.fetch(new Request(`https://gachia.com${path}`), {
+        MAIN_SITE: main, NTE_SITE: fetcher('nte'), AZUR_PROMILIA_SITE: fetcher('azur'), GENSHIN_SITE: fetcher('genshin'), LVMENG_SITE: fetcher('lvmeng'),
+        NTE_ENABLED: 'true', AZUR_PROMILIA_ENABLED: 'true', GENSHIN_ENABLED: 'true', LVMENG_ENABLED: 'true',
+      });
+      await expect(response.text()).resolves.toBe('main');
+    }
+    expect(mainPaths).toEqual(['/sitemap.xml', '/sitemaps/main/sitemap.xml']);
     const shard = await router.fetch(new Request('https://gachia.com/sitemaps/nte/index.xml'), { MAIN_SITE: fetcher('main'), NTE_SITE: fetcher('nte'), NTE_ENABLED: 'true' });
     await expect(shard.text()).resolves.toBe('nte');
   });

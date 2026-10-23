@@ -67,7 +67,15 @@ export async function verifyHttp(app, origin, { preview = false } = {}) {
   else assert(!/^Disallow:\s*\/\s*$/m.test(robots.body));
   const sitemap = await get('/sitemap.xml');
   assert.match(sitemap.response.headers.get('content-type') ?? '', /xml/);
-  for (const path of paths) assert(sitemap.body.includes(`https://gachia.com${path}</loc>`), `Missing sitemap path: ${path}`);
+  let pageSitemap = sitemap;
+  if (app === 'web') {
+    assert.match(sitemap.body, /<sitemapindex\s+xmlns="http:\/\/www.sitemaps.org\/schemas\/sitemap\/0.9">/);
+    assert(sitemap.body.includes('<sitemap><loc>https://gachia.com/sitemaps/main/sitemap.xml</loc></sitemap>'));
+    pageSitemap = await get('/sitemaps/main/sitemap.xml');
+    assert.match(pageSitemap.response.headers.get('content-type') ?? '', /xml/);
+    assert.match(pageSitemap.body, /<urlset\b/);
+  }
+  for (const path of paths) assert(pageSitemap.body.includes(`https://gachia.com${path}</loc>`), `Missing sitemap path: ${path}`);
   for (const extension of ['js', 'css']) {
     const asset = first.match(new RegExp(`(?:src|href)="([^"?#]+\\.${extension})(?:[?#][^"]*)?"`))?.[1];
     assert(asset?.startsWith('/'), `Missing local ${extension}`);

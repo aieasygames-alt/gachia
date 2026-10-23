@@ -40,16 +40,6 @@ type SitemapItem = { id: string };
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [];
 
-  for (const deployment of Object.values(GAME_DEPLOYMENTS)) {
-    if (deployment?.deployment === 'game' && deployment.status === 'live' && deployment.sitemapPath) {
-      entries.push({
-        url: `${BASE_URL}${deployment.sitemapPath}`,
-        changeFrequency: 'daily',
-        priority: 0.8,
-      });
-    }
-  }
-
   for (const locale of LOCALES) {
     // Home pages
     entries.push({
@@ -62,9 +52,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (const [gameId, game] of Object.entries(GAMES)) {
       const realRoutes = REAL_CONTENT_ROUTES[gameId];
       if (!realRoutes) continue;
-      // Draft/preview games are served by their own Worker but must not enter
-      // the production sitemap until content and canary checks are complete.
-      if (GAME_DEPLOYMENTS[gameId as keyof typeof GAME_DEPLOYMENTS]?.status && GAME_DEPLOYMENTS[gameId as keyof typeof GAME_DEPLOYMENTS]?.status !== 'live') continue;
+      // A dedicated Worker owns its entire URL set, including language gates.
+      const deployment = GAME_DEPLOYMENTS[gameId as keyof typeof GAME_DEPLOYMENTS];
+      if (deployment?.deployment === 'game' || (deployment?.status && deployment.status !== 'live')) continue;
 
       // Game home page
       entries.push({

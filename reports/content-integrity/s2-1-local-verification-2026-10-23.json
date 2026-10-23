@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "phase": "S2.1",
+  "baselineCommit": "fcded9f",
+  "status": "local_slice_verified_not_deployed",
+  "cloudVerification": "not_performed",
+  "tests": {
+    "data": 57,
+    "web": 272,
+    "router": 31,
+    "releaseNode": 96,
+    "releasePython": 9,
+    "xmlContractPython": 8
+  },
+  "typeChecks": [
+    "@gachia/data",
+    "@gachia/web",
+    "@gachia/router"
+  ],
+  "lint": {
+    "web": "pass with one pre-existing auth-dialog react-hooks/exhaustive-deps warning"
+  },
+  "compiledWorker": {
+    "openNextBuild": "passed",
+    "wranglerDryRun": "passed",
+    "entrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+    "dryRunUploadKiB": 13918.21,
+    "dryRunGzipKiB": 2838.6
+  },
+  "existingRuntimeRegression": {
+    "status": "local_runtime_verified",
+    "httpChecks": 32,
+    "browserCases": 18,
+    "recordSha256": "204606984c68559d3e555f60da941bedaffd6951ce934961aaacedde6b4deb0b"
+  },
+  "pilotAcceptance": {
+    "scope": "S2.1 local compiled main Worker",
+    "cloudVerification": "not_performed",
+    "startedAt": "2026-10-23T15:24:39.531Z",
+    "publicJsonChecks": 77,
+    "browser": [
+      {
+        "path": "/zh/sea/guides/early-2027-december-closed-beta-faq",
+        "width": 1440,
+        "status": 200,
+        "heading": true,
+        "body": true,
+        "canonical": true,
+        "robots": "index, follow",
+        "alternates": [
+          {
+            "lang": "zh-Hans",
+            "href": "https://gachia.com/zh/sea/guides/early-2027-december-closed-beta-faq"
+          },
+          {
+            "lang": "en",
+            "href": "https://gachia.com/en/sea/guides/early-2027-december-closed-beta-faq"
+          },
+          {
+            "lang": "x-default",
+            "href": "https://gachia.com/zh/sea/guides/early-2027-december-closed-beta-faq"
+          }
+        ],
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/sea/guides/early-2027-december-closed-beta-faq",
+        "width": 1440,
+        "status": 200,
+        "heading": true,
+        "body": true,
+        "canonical": true,
+        "robots": "index, follow",
+        "alternates": [
+          {
+            "lang": "zh-Hans",
+            "href": "https://gachia.com/zh/sea/guides/early-2027-december-closed-beta-faq"
+          },
+          {
+            "lang": "en",
+            "href": "https://gachia.com/en/sea/guides/early-2027-december-closed-beta-faq"
+          },
+          {
+            "lang": "x-default",
+            "href": "https://gachia.com/zh/sea/guides/early-2027-december-closed-beta-faq"
+          }
+        ],
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/sea/guides/early-2027-december-closed-beta-faq",
+        "width": 1440,
+        "status": 200,
+        "heading": true,
+        "body": true,
+        "canonical": true,
+        "robots": "noindex, follow",
+        "alternates": [
+          {
+            "lang": "zh-Hans",
+            "href": "https://gachia.com/zh/sea/guides/early-2027-december-closed-beta-faq"
+          },
+          {
+            "lang": "en",
+            "href": "https://gachia.com/en/sea/guides/early-2027-december-closed-beta-faq"
+          },
+          {
+            "lang": "x-default",
+            "href": "https://gachia.com/zh/sea/guides/early-2027-december-closed-beta-faq"
+          }
+        ],
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/sea/guides/early-2027-december-closed-beta-faq",
+        "width": 390,
+        "status": 200,
+        "heading": true,
+        "body": true,
+        "canonical": true,
+        "robots": "index, follow",
+        "alternates": [
+          {
+            "lang": "zh-Hans",
+            "href": "https://gachia.com/zh/sea/guides/early-2027-december-closed-beta-faq"
+          },
+          {
+            "lang": "en",
+            "href": "https://gachia.com/en/sea/guides/early-2027-december-closed-beta-faq"
+          },
+          {
+            "lang": "x-default",
+            "href": "https://gachia.com/zh/sea/guides/early-2027-december-closed-beta-faq"
+          }
+        ],
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/sea/guides/early-2027-december-closed-beta-faq",
+        "width": 390,
+        "status": 200,
+        "heading": true,
+        "body": true,
+        "canonical": true,
+        "robots": "index, follow",
+        "alternates": [
+          {
+            "lang": "zh-Hans",
+            "href": "https://gachia.com/zh/sea/guides/early-2027-december-closed-beta-faq"
+          },
+          {
+            "lang": "en",
+            "href": "https://gachia.com/en/sea/guides/early-2027-december-closed-beta-faq"
+          },
+          {
+            "lang": "x-default",
+            "href": "https://gachia.com/zh/sea/guides/early-2027-december-closed-beta-faq"
+          }
+        ],
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/sea/guides/early-2027-december-closed-beta-faq",
+        "width": 390,
+        "status": 200,
+        "heading": true,
+        "body": true,
+        "canonical": true,
+        "robots": "noindex, follow",
+        "alternates": [
+          {
+            "lang": "zh-Hans",
+            "href": "https://gachia.com/zh/sea/guides/early-2027-december-closed-beta-faq"
+          },
+          {
+            "lang": "en",
+            "href": "https://gachia.com/en/sea/guides/early-2027-december-closed-beta-faq"
+          },
+          {
+            "lang": "x-default",
+            "href": "https://gachia.com/zh/sea/guides/early-2027-december-closed-beta-faq"
+          }
+        ],
+        "errors": 0,
+        "failedAssets": 0
+      }
+    ],
+    "status": "passed",
+    "finishedAt": "2026-10-23T15:24:46.153Z"
+  },
+  "seaGuideContract": {
+    "guides": 75,
+    "outputs": 77,
+    "sourceSemanticSha256": "c4c48f4b7e9ddeccd7531cf96b306be7b6047f1aabc2e816f3768d4f4444f542",
+    "note": "Node canonical JSON semantic digest, not the SHA of formatted source file"
+  },
+  "notCompleted": [
+    "Six nonpilot raw mirror drifts are classified but not merged",
+    "Genshin dedicated Worker localization policy",
+    "Homepage routing/status and basic-page metadata",
+    "Dedicated Worker HTTP sitemap/body audit after main change",
+    "Cloud staging/production deployment and acceptance",
+    "Storage cleanup or Worker topology changes"
+  ],
+  "sourceRuntimeBoundaryFailureReproduction": {
+    "status": "expected_failure_verified",
+    "auditExitCode": 1,
+    "reason": "source baseline vs ASSETS fallback is rejected for roco-cn missing guide, no allowlist added"
+  }
+}

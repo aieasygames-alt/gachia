@@ -119,6 +119,10 @@ jobs:
         if: steps.scope.outputs.scope != 'admin'
         run: pnpm --filter @gachia/data validate
 
+      - name: Check committed Sea guide content before generation
+        if: steps.scope.outputs.scope != 'admin'
+        run: pnpm --filter @gachia/data check:sea-guides
+
       - name: Generate data manifests
         if: steps.scope.outputs.scope != 'admin'
         run: pnpm --filter @gachia/data generate:manifests

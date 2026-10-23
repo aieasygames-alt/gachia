@@ -1,4 +1,5 @@
 import { readFile, mkdir, writeFile } from 'node:fs/promises';
+import { writeSeaGuideOutputs } from './sea-guide-contract.mjs';
 
 const gamesRoot = new URL('../games/', import.meta.url);
 const outputRoot = new URL('../../../apps/web/public/data-manifest/', import.meta.url);
@@ -100,15 +101,5 @@ for (const character of rocoCnCharacters) {
 }
 await writeFile(new URL('roco-cn/characters.json', clientDataRoot), `${JSON.stringify(rocoCnCharacters.map(({ id, number, name, nameEn, nameJa, attribute, attributeEn, rarity, status }) => ({ id, number, name, nameEn, nameJa, attribute, attributeEn, rarity, status })))}\n`);
 
-for (const game of ['sea']) {
-  await mkdir(new URL(`${game}/`, clientDataRoot), { recursive: true });
-  const raw = JSON.parse(await readFile(new URL(`${game}/raw-guides.json`, gamesRoot), 'utf8'));
-  const summaries = raw.map(({ content: _content, contentEn: _contentEn, contentJa: _contentJa, faq: _faq, ...summary }) => summary);
-  await writeFile(new URL(`${game}/guides.json`, clientDataRoot), `${JSON.stringify(summaries)}\n`);
-  const detailsRoot = new URL(`${game}/guides/`, clientDataRoot);
-  await mkdir(detailsRoot, { recursive: true });
-  for (const guide of raw) {
-    await writeFile(new URL(`${guide.id}.json`, detailsRoot), `${JSON.stringify(guide)}\n`);
-  }
-}
+await writeSeaGuideOutputs();
 console.log(`Generated ${Object.keys(manifest.games).length} game manifests.`);

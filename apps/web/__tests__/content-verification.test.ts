@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import sitemap from '../app/sitemap';
+import sitemap from '../app/sitemaps/main/sitemap';
 
 describe('content verification page', () => {
   it('lists the Chinese verification page and does not create untranslated sitemap entries', async () => {

@@ -1,4 +1,7 @@
 import { readFile } from 'node:fs/promises';
+import { verifySeaGuideContract } from './sea-guide-contract.mjs';
+
+await verifySeaGuideContract();
 
 const outputRoot = new URL('../../../apps/web/public/data-manifest/', import.meta.url);
 const clientDataRoot = new URL('../../../apps/web/public/data-client/', import.meta.url);

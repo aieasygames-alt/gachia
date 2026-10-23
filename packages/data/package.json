@@ -10,6 +10,8 @@
     "validate": "tsx scripts/validate.ts",
     "generate:manifests": "node scripts/generate-manifests.mjs",
     "verify:manifests": "node scripts/verify-manifests.mjs",
+    "check:sea-guides": "node scripts/sea-guide-contract.mjs",
+    "generate:sea-guides": "node scripts/sea-guide-contract.mjs --write",
     "generate:character-summaries": "node scripts/generate-character-summaries.mjs",
     "test": "vitest run",
     "clean": "rm -rf dist node_modules"
