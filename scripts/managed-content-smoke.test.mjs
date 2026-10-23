@@ -16,5 +16,5 @@ test('compiled managed content runs after browser installation and before artifa
   const check = source.indexOf('run: pnpm test:managed-content:local');
   assert(check > source.indexOf('name: Install Playwright browser'));
   assert(check < source.indexOf('id: seal-web'));
-  assert.match(source, /name: Verify compiled managed content and official echo names\n\s+if: steps.scope.outputs.scope != 'admin'\n\s+run: pnpm test:managed-content:local/);
+  assert.match(source, /name: Verify compiled managed content and source-review decisions\n\s+if: steps.scope.outputs.scope != 'admin'\n\s+run: pnpm test:managed-content:local/);
 });

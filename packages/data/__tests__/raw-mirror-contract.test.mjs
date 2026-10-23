@@ -21,7 +21,7 @@ async function fixture() {
 afterEach(async () => { await Promise.all(roots.splice(0).map(root => rm(root, { recursive: true, force: true }))); });
 
 it('checks committed managed pairs', async () => {
-  expect(await verifyRawMirrors()).toEqual({ contract: 'managed-raw-mirrors-v1', pairs: 4, entries: 69 });
+  expect(await verifyRawMirrors()).toEqual({ contract: 'managed-raw-mirrors-v1', pairs: 5, entries: 75 });
 });
 it.each(MANAGED_MIRRORS)('blocks $game drift without repairing it', async (item) => {
   const root = await fixture();
@@ -33,12 +33,12 @@ it.each(MANAGED_MIRRORS)('blocks $game drift without repairing it', async (item)
 it('requires explicit generation after a source edit and keeps nonmanaged files intact', async () => {
   const root = await fixture();
   const item = MANAGED_MIRRORS[0];
-  const other = 'apps/web/public/data/wuwa/raw-regions.json';
+  const other = 'apps/web/public/data/wuwa/raw-materials.json';
   await put(root, other, ['Unreviewed content']);
   await put(root, source(item), [{ code: 'one', status: 'expired' }]);
   await expect(verifyRawMirrors(root)).rejects.toThrow('drift');
   await writeRawMirrors(root);
-  await expect(verifyRawMirrors(root)).resolves.toHaveProperty('pairs', 4);
+  await expect(verifyRawMirrors(root)).resolves.toHaveProperty('pairs', 5);
   expect(JSON.parse(await readFile(resolve(root, other), 'utf8'))).toEqual(['Unreviewed content']);
 });
 it('fails on missing or malformed output', async () => {
@@ -63,7 +63,7 @@ it('ignores object key order and preserves source dates on repeated generation',
   const root = await fixture();
   const item = MANAGED_MIRRORS[0];
   await put(root, source(item), [{ content: 'Existing copy', code: 'one' }]);
-  await expect(verifyRawMirrors(root)).resolves.toHaveProperty('pairs', 4);
+  await expect(verifyRawMirrors(root)).resolves.toHaveProperty('pairs', 5);
   await writeRawMirrors(root);
   const before = await readFile(resolve(root, mirror(item)), 'utf8');
   await writeRawMirrors(root);

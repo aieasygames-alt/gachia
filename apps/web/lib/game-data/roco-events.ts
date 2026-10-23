@@ -16,28 +16,8 @@ export interface RocoEventEntry {
 }
 
 export const ROCO_EVENTS: Record<RocoEventGameId, RocoEventEntry[]> = {
-  roco: [
-    {
-      id: 'global-cbt-signup',
-      title: { zh: '国际服 CBT 报名', en: 'Global CBT Sign-up', ja: '国際版CBT応募' },
-      category: 'test',
-      startAt: '2026-08-26',
-      endAt: '2026-10-20',
-      rewards: { zh: '测试资格、预约/邀请优先级', en: 'CBT eligibility and referral priority', ja: 'CBT資格、招待優先度' },
-      source: { zh: '官网报名页与 CBT 公告', en: 'Official signup page and CBT announcement', ja: '公式応募ページとCBT告知' },
-      updatedAt: '2026-09-07',
-    },
-    {
-      id: 'global-cbt-open',
-      title: { zh: 'Quack Quack Test 首测', en: 'Quack Quack Test CBT', ja: 'Quack Quack Test CBT' },
-      category: 'test',
-      startAt: '2026-10-27',
-      endAt: '2026-11-10',
-      rewards: { zh: 'PC/iOS/Android 测试体验，数据预计不保留', en: 'PC/iOS/Android test access; progress expected to wipe', ja: 'PC/iOS/Androidテスト参加。進行はリセット予定' },
-      source: { zh: '国际服官网公告，结束时间待复核', en: 'Global official announcement; end date needs recheck', ja: '国際版公式告知。終了日は要確認' },
-      updatedAt: '2026-09-07',
-    },
-  ],
+  // Withdrawn schedules are archived in the S2.6 source-decision report, not treated as cancelled.
+  roco: [],
   'roco-cn': [
     {
       id: 's2-carnival-tales',

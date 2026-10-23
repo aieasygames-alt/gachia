@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-23T17:36:44.858167+00:00",
+  "phase": "S2.6",
+  "baseline": "46edfd1",
+  "branch": "codex/multi-game-s1-release-safety",
+  "conclusion": "bounded_local_region_closeout_and_roco_schedule_withdrawal; not production approval",
+  "contracts": {
+    "inventory": {
+      "contract": "raw-inventory-v1",
+      "pairs": 90,
+      "equal": 89,
+      "sourceOnly": 5,
+      "pending": [
+        {
+          "path": "roco/raw-characters.json",
+          "status": "needs_review",
+          "sourceSha256": "154c996ee0666726475fd5a74b1837c69446373060c82c22c9d35ef2367a667a",
+          "mirrorSha256": "d1e392a5532739cc71185808bc7708773e075095b436b760c806fa5d7f0645f9",
+          "changes": [
+            {
+              "id": "cerulla",
+              "kind": "changed",
+              "fields": [
+                "description",
+                "descriptionEn",
+                "releaseVersion",
+                "skills",
+                "stats"
+              ]
+            },
+            {
+              "id": "meewee",
+              "kind": "changed",
+              "fields": [
+                "description",
+                "descriptionEn",
+                "releaseVersion",
+                "skills",
+                "stats"
+              ]
+            },
+            {
+              "id": "sparka",
+              "kind": "changed",
+              "fields": [
+                "releaseVersion",
+                "skills",
+                "stats"
+              ]
+            }
+          ],
+          "reason": "International starter skills/stats were reused from CN in a historical commit; international scope and values are not established.",
+          "reviewDocument": "plans/multi-game-s2-4-content-review-closeout-2026-10-24.md"
+        }
+      ],
+      "issues": [],
+      "engineeringReady": true,
+      "contentReleaseReady": false,
+      "factualApproval": "not_implied_by_mirror_equality"
+    },
+    "managed": {
+      "contract": "managed-raw-mirrors-v1",
+      "pairs": 5,
+      "entries": 75
+    }
+  },
+  "rawProtection": {
+    "rawFiles": {
+      "total": 185,
+      "byteUnchanged": 183,
+      "changed": [
+        "apps/web/public/data/wuwa/raw-regions.json",
+        "packages/data/games/wuwa/raw-regions.json"
+      ]
+    },
+    "oldFiveRegionsSemanticallyUnchanged": true,
+    "oldFiveRegionsSemanticSha256": "e29d96b543b3be716bb90d58dacbf6788de2f09c932570403bdd8e001b4170e9",
+    "regionIdsAndOrderUnchanged": true,
+    "rocoPendingSnapshotUnchanged": true,
+    "searchManifestsByteUnchanged": [
+      "apps/web/public/data-manifest/search-zh.json",
+      "apps/web/public/data-manifest/search-en.json",
+      "apps/web/public/data-manifest/search-ja.json"
+    ]
+  },
+  "sources": {
+    "decisionReport": "reports/content-integrity/s2-6-source-decisions-2026-10-24.json",
+    "scope": "Reused S2.5 captured historical v3.7 official responses; SHA checked. No new network fetch or in-game verification.",
+    "olderFiveRegions": "unchanged, not factually reapproved",
+    "rocoGuideMarkerMatches": 9,
+    "rocoGuideTotal": 30,
+    "markerScanExhaustive": false
+  },
+  "sitemap": {
+    "mainUrlCount": 4464,
+    "byLocale": {
+      "zh": 1570,
+      "en": 1567,
+      "ja": 1327
+    },
+    "added": [],
+    "removed": [],
+    "actualWorkerEqualsPrerender": true,
+    "baselineType": "previous local compiled Worker, not current production HTTP",
+    "baselineFile": ".release-records/managed-content-766238a2-32e6-4755-bfe4-d2574dc1e483/main-sitemap.xml",
+    "currentFile": ".release-records/managed-content-e7eb0bb0-ad89-4a2c-974f-a1d799366519/main-sitemap.xml",
+    "prerenderFile": "apps/web/.next/server/app/sitemaps/main/sitemap.xml.body",
+    "rootOwnersChanged": false
+  },
+  "verification": {
+    "dataTests": {
+      "passed": 103,
+      "files": 7,
+      "log": ".release-records/s2-6/data-tests-final.log"
+    },
+    "webTests": {
+      "passed": 294,
+      "files": 65,
+      "log": ".release-records/s2-6/web-tests-final.log"
+    },
+    "routerTests": {
+      "passed": 31,
+      "files": 3,
+      "log": ".release-records/s2-6/router-tests.log"
+    },
+    "releaseNodeTests": 104,
+    "retentionPythonTests": 9,
+    "xmlPythonTests": 8,
+    "dataValidation": "passed",
+    "types": [
+      "data",
+      "web",
+      "game-genshin",
+      "game-lvmeng",
+      "game-nte",
+      "game-azur-promilia"
+    ],
+    "lint": {
+      "errors": 0,
+      "existingWarnings": 1,
+      "warning": "auth-dialog.tsx react-hooks/exhaustive-deps, unchanged"
+    },
+    "manifests": "passed; three search files byte-identical; no generation needed for regions",
+    "webOpenNext": {
+      "status": "passed",
+      "log": ".release-records/s2-6/web-build-final.log",
+      "buildId": "q-2bXOFsE3kCrQecj69Su"
+    },
+    "wranglerDryRun": {
+      "status": "passed_local_only",
+      "uncompressedKiB": 13942.51,
+      "gzipKiB": 2829.85,
+      "log": ".release-records/s2-6/wrangler-dryrun-final.log"
+    },
+    "managedAcceptance": {
+      "record": ".release-records/managed-content-e7eb0bb0-ad89-4a2c-974f-a1d799366519/result.json",
+      "rawJson": 5,
+      "searchJson": 3,
+      "browserCases": 64,
+      "actualListDetailClicks": 6,
+      "newKinds": [
+        "region",
+        "roco-version",
+        "roco-events",
+        "roco-home"
+      ],
+      "viewports": [
+        1440,
+        390
+      ]
+    },
+    "runtimeAcceptance": {
+      "record": ".release-records/rollout-web-74aa266d-c8d4-433e-bb08-fb5c21c58278/result.json",
+      "http": 32,
+      "browser": 18
+    },
+    "discoveryAcceptance": {
+      "record": ".release-records/seo-discovery-web-bdcadb50-e5ca-4807-9ffe-93c61776e8c9/result.json",
+      "browser": 32
+    },
+    "negativeGates": [
+      {
+        "id": "release-ready",
+        "exitCode": 1,
+        "blockedBeforeBuild": true,
+        "cloudActions": "not_started",
+        "pendingPairs": 1
+      },
+      {
+        "id": "deploy",
+        "exitCode": 1,
+        "blockedBeforeBuild": true,
+        "cloudActions": "not_started",
+        "pendingPairs": 1
+      },
+      {
+        "id": "upload",
+        "exitCode": 1,
+        "blockedBeforeBuild": true,
+        "cloudActions": "not_started",
+        "pendingPairs": 1
+      }
+    ],
+    "workflow": "existing compiled managed-content step reused after browser installation and before artifact sealing; no new build or cloud run",
+    "manualVisual": [
+      "region-card-390.png",
+      "region-card-1440.png"
+    ],
+    "actions": "not_run",
+    "cloudStaging": "not_performed",
+    "productionHttp": "not_performed"
+  },
+  "localArtifact": {
+    "root": "apps/web/.open-next",
+    "fileCount": 3141,
+    "fileBytes": 108403681,
+    "treeSha256": "26e6c551b5927737e457b5010f2f2aa897f4337b8de84d84dcc0411a7ecbae73",
+    "hashAlgorithm": "SHA256 over sorted relative UTF-8 path + NUL + binary SHA256 of each file",
+    "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+    "note": "Entrypoint hash alone is not an artifact identity; tree digest also includes server, assets and cache contents. No cloud seal or promotion implied."
+  },
+  "remaining": [
+    "roco character pending: international scope and values unestablished; source and mirror snapshots unchanged",
+    "9 marker-matching Roco guides and other public references still require independent review or withdrawal; mirror equality is not factual approval",
+    "older five WuWa regions were not factually reviewed in this batch",
+    "Genshin strict old migration baseline differences require candidate review; all-owner cloud HTTP/SEO/assets/rollback and budget acceptance remain outstanding"
+  ],
+  "safety": {
+    "push": false,
+    "cloudDeployment": false,
+    "actionsTriggered": false,
+    "databaseChange": false,
+    "loginChange": false,
+    "topologyChange": false,
+    "businessOrHistoricalFileDeletion": false,
+    "originalDirtyCheckoutTouched": false
+  },
+  "evidenceDirectory": ".release-records/s2-6"
+}

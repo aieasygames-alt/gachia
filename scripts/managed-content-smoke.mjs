@@ -34,6 +34,7 @@ export async function verifyManagedContent(value, directory) {
   const guide = raw.find(entry => entry.id === SLUG);
   const skjh = JSON.parse(readFileSync(resolve(ROOT, 'packages/data/games/skjh/raw-guides.json'), 'utf8')).find(entry => entry.id === 'season-1-launch');
   const reviewedEchoes = JSON.parse(readFileSync(resolve(ROOT, 'packages/data/games/wuwa/raw-echoes.json'), 'utf8')).filter(entry => entry.sourceReview);
+  const reviewedRegion = JSON.parse(readFileSync(resolve(ROOT, 'packages/data/games/wuwa/raw-regions.json'), 'utf8')).find(entry => entry.id === 'simulacrum-nexus');
   for (const locale of ['zh', 'en', 'ja']) {
     const path = `/data-manifest/search-${locale}.json`;
     const response = await fetch(origin + path, { redirect: 'manual', signal: AbortSignal.timeout(30000) });
@@ -54,6 +55,10 @@ export async function verifyManagedContent(value, directory) {
     ...['zh', 'en', 'ja'].map(locale => ({ locale, path: `/${locale}/skjh/guides/season-1-launch`, kind: 'backport' })),
     ...['zh', 'en', 'ja'].flatMap(locale => reviewedEchoes.map(set => ({ locale, path: `/${locale}/wuwa/echoes/${set.id}`, kind: 'echo', id: set.id }))),
     ...['zh', 'en', 'ja'].map(locale => ({ locale, path: `/${locale}/wuwa/artifacts`, kind: 'echo-list' })),
+    ...['zh', 'en', 'ja'].map(locale => ({ locale, path: `/${locale}/wuwa/map`, kind: 'region' })),
+    ...['zh', 'en', 'ja'].map(locale => ({ locale, path: `/${locale}/roco/version`, kind: 'roco-version' })),
+    ...['zh', 'en', 'ja'].map(locale => ({ locale, path: `/${locale}/roco/events`, kind: 'roco-events' })),
+    ...['zh', 'en', 'ja'].map(locale => ({ locale, path: `/${locale}`, kind: 'roco-home' })),
   ];
   const browser = await chromium.launch({ headless: true });
   try {
@@ -64,7 +69,9 @@ export async function verifyManagedContent(value, directory) {
         const page = await context.newPage();
         const errors = [], failedAssets = [];
         page.on('pageerror', error => errors.push(error.message));
+        page.on('console', message => { if (message.type() === 'error' && /hydration|Minified React error|uncaught/i.test(message.text())) errors.push(message.text()); });
         page.on('response', response => { if (['script', 'stylesheet'].includes(response.request().resourceType()) && response.status() >= 400) failedAssets.push(response.url()); });
+        page.on('requestfailed', request => { if (new URL(request.url()).origin === origin && ['script', 'stylesheet'].includes(request.resourceType())) failedAssets.push(request.url()); });
         for (const { locale, path, kind, id } of cases) {
           const response = await page.goto(origin + path, { waitUntil: 'networkidle', timeout: 60000 });
           assert.equal(response.status(), 200, path);
@@ -93,6 +100,37 @@ export async function verifyManagedContent(value, directory) {
                 const sources = await page.locator('[data-echo-source] a').evaluateAll(nodes => nodes.map(node => node.href));
                 assert.deepEqual(sources, set.sourceReview.sources.map(source => source.url));
               }
+            }
+          } else if (kind === 'region') {
+            const card = page.locator('#simulacrum-nexus');
+            assert.equal(await card.count(), 1, 'Keep the stable map anchor');
+            const suffix = { zh: '', en: 'En', ja: 'Ja' }[locale];
+            assert.equal(await card.locator('h2').innerText(), reviewedRegion[`name${suffix}`]);
+            const text = await card.innerText();
+            for (const entry of [reviewedRegion[`description${suffix}`], ...reviewedRegion[`subRegions${suffix}`], ...reviewedRegion[`highlights${suffix}`]]) assert(text.includes(entry), `${path}: missing reviewed text`);
+            assert.equal(await card.getByRole('heading', { name: /^(区域特产|Specialties|特産品)$/ }).count(), 0);
+            for (const withdrawn of ['玉冥蛇', 'COST 4', '沉心域无音区', '烬心域无音区', 'Heartscape Maze', 'Myriad-Aspect Divine Palace']) assert(!text.includes(withdrawn), withdrawn);
+            const sources = await card.locator('[data-region-source] a').evaluateAll(nodes => nodes.map(node => node.href));
+            assert.deepEqual(sources, reviewedRegion.sourceReview.sources.map(source => source.url));
+            assert(text.includes({ zh: '不代表当前版本的实时核验', en: 'not a live check of the current version', ja: '現行版のリアルタイム確認ではありません' }[locale]));
+            assert.equal(await page.locator('[data-region-source]').count(), 1, 'Do not label older regions reviewed');
+            assert(await card.evaluate(node => node.scrollWidth <= node.clientWidth), `${path}: region card overflows viewport`);
+            if (directory && locale === 'zh') await card.screenshot({ path: resolve(directory, `region-card-${width}.png`) });
+          } else if (kind.startsWith('roco-')) {
+            const forbidden = /10\/27|10\/20|Oct(?:ober)? 27|Oct(?:ober)? 20|10月27|10月20|2026-10-27|2026-10-20|3688140/;
+            if (kind === 'roco-home') {
+              const links = page.locator(`main a[href^="/${locale}/roco/"]`);
+              assert((await links.count()) > 0);
+              for (const text of await links.allInnerTexts()) assert(!forbidden.test(text), text);
+              assert.equal(await page.locator(`a[href="/${locale}/roco/guides/cbt-registration-guide"]`).count(), 0);
+            } else {
+              assert(!forbidden.test(body), `${path}: withdrawn date or wrong source is still visible`);
+              assert(!forbidden.test(await page.title()), path);
+              assert(!forbidden.test(await page.locator('meta[name="description"]').getAttribute('content')), path);
+              for (const json of await page.locator('script[type="application/ld+json"]').allTextContents()) assert(!forbidden.test(json), path);
+              assert(body.includes({ zh: '不代表测试取消', en: 'cancel', ja: '中止' }[locale]));
+              if (kind === 'roco-events') assert.equal(await page.locator('[data-roco-schedule-review]').count(), 1);
+              else assert.equal(await page.locator(`a[href="/${locale}/roco/guides/cbt-registration-guide"]`).count(), 0);
             }
           } else {
             assert(!body.includes('Last Checked') && !body.includes('最后核验') && !body.includes('最終確認'));

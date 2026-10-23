@@ -32,8 +32,8 @@ describe('version snapshots', () => {
     expect(getVersionSnapshot('starrail')?.currentVersion).toBe('4.6 月升之前，与兽共舞');
     expect(getVersionSnapshot('endfield')?.currentVersion).toBe('CN 丹青渡 / Pioneer Test archive');
     expect(getVersionSnapshot('aniimo')?.currentVersion).toBe('S1 逐风启程');
-    expect(getVersionSnapshot('roco')?.currentVersion).toBe('Quack Quack Test official watch');
-    expect(getVersionSnapshot('roco')?.sourceTier).toBe('official');
+    expect(getVersionSnapshot('roco')?.currentVersion).toBe('Global test information under review');
+    expect(getVersionSnapshot('roco')?.sourceTier).toBe('needs_verification');
     expect(getVersionSnapshot('roco-cn')?.currentVersion).toBe('post-launch codes / encyclopedia');
     expect(getVersionSnapshot('sea')?.currentVersion).toBe('early 2027 / December beta watch');
   });
@@ -82,9 +82,10 @@ describe('version snapshots', () => {
       expect(snapshot).toBeDefined();
       if (!snapshot) continue;
 
-      expect(Date.parse(`${snapshot.releaseDate}T00:00:00Z`)).not.toBeNaN();
+      if (snapshot.releaseDate) expect(Date.parse(`${snapshot.releaseDate}T00:00:00Z`)).not.toBeNaN();
+      else expect(snapshot.gameId).toBe('roco');
       expect(Date.parse(`${snapshot.lastUpdatedAt}T00:00:00Z`)).not.toBeNaN();
-      expect(['official', 'mixed', 'third_party_watch']).toContain(snapshot.sourceTier);
+      expect(['official', 'mixed', 'third_party_watch', 'needs_verification']).toContain(snapshot.sourceTier);
       expect(snapshot.whatChanged.length).toBeGreaterThan(0);
       expect(snapshot.firstSteps.length).toBeGreaterThan(0);
       expect(snapshot.links.length).toBeGreaterThanOrEqual(3);

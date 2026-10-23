@@ -569,22 +569,22 @@ const VERSION_COPY: Partial<Record<GameId, HubCopy>> = {
     guideIds: ['official-pc-download-faq', 'first-2-hours-starter-route', 'base-location-anti-raid-plan'],
   },
   roco: {
-    title: { zh: '国际服 CBT「等等鸭测试」/ 预注册专题', en: 'Global CBT "Quack Quack Test" / Pre-Registration Hub', ja: '国際CBT「Quack Quack Test」/ 事前登録特集' },
+    title: { zh: '国际服测试信息 / 来源复核', en: 'Global Test Information / Source Review', ja: '国際版テスト情報 / 出典再確認' },
     description: {
-      zh: '聚焦《洛克王国:世界》国际服 CBT「等等鸭测试（Quack Quack Test）」10/27 开测、报名窗口 8/26–10/20、CBT 平台（PC/iOS/Android）、精灵阵容、法杖（外观特效武器）、早测节奏榜与版本时间线。',
-      en: 'Focus on the Roco Kingdom global CBT "Quack Quack Test" starting October 27, the Aug 26–Oct 20 sign-up window, CBT platforms (PC/iOS/Android), the Jinie roster, staves (cosmetic effect weapons), provisional tier list, and the version timeline.',
-      ja: 'ロコキングダム国際版のCBT「Quack Quack Test」（10/27開始）、応募窓口（8/26〜10/20）、CBT対応プラットフォーム（PC/iOS/Android）、ジニー、杖（外観武器）、暫定Tier、版本タイムラインを整理します。',
+      zh: '国际服测试日期、报名、平台与规则仍待独立核实。旧 Steam 来源对应其他游戏，已撤回其确认支持；查看来源复核与国服资料适用范围。',
+      en: 'Global test dates, signup, platforms and rules still need independent verification. The old Steam source identifies another game and its confirmation is withdrawn. Review source and region scope before acting.',
+      ja: '国際版テストの日程・応募・対応機種・ルールは独立した確認待ちです。旧Steam出典は別のゲームを示すため、確認根拠を撤回。出典と地域の適用範囲をご確認ください。',
     },
     highlights: {
-      zh: ['10/27 开测', '报名至 10/20', 'CBT: PC/iOS/Android', '法杖', '早测节奏榜'],
-      en: ['CBT Oct 27', 'Sign-up until Oct 20', 'CBT: PC/iOS/Android', 'Staves', 'Provisional tier'],
-      ja: ['CBT 10/27', '応募は10/20まで', 'CBT: PC/iOS/Android', '杖', '暫定Tier'],
+      zh: ['来源复核', '日程待核实', '区服范围'],
+      en: ['Source review', 'Schedule unverified', 'Region scope'],
+      ja: ['出典再確認', '日程未確認', '地域の適用範囲'],
     },
-    kicker: { zh: '首测倒计时', en: 'CBT countdown', ja: 'CBTカウントダウン' },
+    kicker: { zh: '测试信息待核实', en: 'Test information unverified', ja: 'テスト情報未確認' },
     freshness: {
-      zh: '以 2026-10-27 开测、报名 8/26–10/20 为口径，优先整理报名、CBT 平台、预注册福利、精灵和版本节点；正式版日期以官方为准。',
-      en: 'Centered on the October 27 CBT with sign-ups from Aug 26 to Oct 20: registration, CBT platforms, pre-registration rewards, Jinies, and version milestones; the full-release date follows official notices.',
-      ja: '2026年10月27日開始、応募8/26〜10/20を軸に、申込み、CBT対応平台、予約特典、ジニー、版本を整理。正式版は公式告知基準。',
+      zh: '2026-10-24 编辑纠错：撤回缺乏独立证据的确定日程，不是测试取消公告。旧攻略中的重复表述仍待复核，不能相互作为证明。',
+      en: 'Editorial correction, October 24, 2026: definite schedules lacking independent evidence are withdrawn. This is not a cancellation notice. Repeated claims in older guides remain under review and cannot corroborate one another.',
+      ja: '2026年10月24日の編集訂正：独立した根拠のない確定日程を撤回しました。中止告知ではありません。旧ガイドの重複記述は再確認中で、相互に証明する根拠にはできません。',
     },
     faq: [
       {
@@ -594,21 +594,21 @@ const VERSION_COPY: Partial<Record<GameId, HubCopy>> = {
           ja: '国際CBTはいつ始まり、どう申し込む？応募はいつまで？',
         },
         answer: {
-          zh: '国际服 CBT「等等鸭测试（Quack Quack Test）」定于 2026-10-27 开启，本轮仅支持 PC、iOS 与 Android；PS5、Xbox、Steam、Epic 与 Microsoft Store 属正式版平台。官网 www.rocokingdom.com 报名开放中，须在 10/20 前完成问卷。',
-          en: 'The global CBT "Quack Quack Test" starts October 27, 2026 and covers PC, iOS, and Android only; PS5, Xbox, Steam, Epic, and Microsoft Store belong to the full release. Sign up at www.rocokingdom.com and complete the questionnaire before Oct 20.',
-          ja: '国際CBT「Quack Quack Test」は2026年10月27日開始で、対応はPC、iOS、Androidのみ。PS5、Xbox、Steam、Epic、Microsoft Storeは正式版向けです。公式サイト（www.rocokingdom.com）で10/20までにアンケートを完了してください。',
+          zh: '本页暂不提供已确认的开测、报名和截止时间。先核对官方公告的游戏身份、区服、发布日期和时区；旧 Steam 链接与本站旧攻略不能证明这些日程。',
+          en: 'This page currently provides no confirmed test, signup or deadline dates. Check the game identity, region, publication date and time zone of an official notice. The old Steam link and our older guides do not establish that schedule.',
+          ja: '本ページでは現在、確認済みの開始・応募・締切日を掲載していません。公式告知のゲーム名・地域・公開日・時差を確認してください。旧Steamリンクや旧ガイドでは日程を証明できません。',
         },
       },
       {
         question: {
-          zh: '「等等鸭测试（Quack Quack Test）」是什么？',
-          en: 'What is the "Quack Quack Test"?',
-          ja: '「Quack Quack Test」とは？',
+          zh: '撤回来源是否意味着测试取消？',
+          en: 'Does withdrawing the source mean the test is cancelled?',
+          ja: '出典の撤回はテスト中止を意味しますか？',
         },
         answer: {
-          zh: '「等等鸭测试」是官方为国际服首轮封闭测试起的名称：10/27 在 PC/iOS/Android 开测，报名须在官网完成问卷，10/23 起可查询资格；测试结束后角色与进度会删除，测试期间无内购。',
-          en: 'The "Quack Quack Test" is the official name for the first global closed beta: it starts Oct 27 on PC/iOS/Android, sign-up requires the official questionnaire, eligibility checks open Oct 23, and all progress is wiped after the test with no in-game purchases.',
-          ja: '「Quack Quack Test」は公式が名付けた初回グローバルCBTの名称です。10/27にPC/iOS/Androidで開始。応募には公式アンケートが必要で、資格確認は10/23から。テスト後はデータが削除され、期間中の課金はありません。',
+          zh: '不意味着取消。原引用的 Steam App ID 对应其他游戏，只能说明该引用不能证明洛克测试信息。测试名称、平台、资格、删档与内购规则仍需独立核实。',
+          en: 'No. The cited Steam App ID identifies another game, which only establishes that this citation cannot verify Roco test information. The test name, platforms, eligibility, wipe and purchase rules still need independent verification.',
+          ja: 'いいえ。引用したSteam App IDが別のゲームを示すため、この引用ではRocoのテスト情報を証明できないという意味です。名称・対応機種・資格・データ削除・課金ルールは独立した確認が必要です。',
         },
       },
       {
@@ -618,13 +618,13 @@ const VERSION_COPY: Partial<Record<GameId, HubCopy>> = {
           ja: 'CBT前に何を準備すべき？',
         },
         answer: {
-          zh: '先完成官网预注册并确认测试资格规则，再看 CBT 注册指南确认平台选择、语言支持和预约福利，最后收藏版本页跟踪时间节点。',
-          en: 'Complete pre-registration and check eligibility rules, then use the CBT guide for platform choice, language support, and rewards, and bookmark this hub for milestones.',
-          ja: 'まず事前登録と資格ルールを確認し、CBTガイドでプラットフォーム、言語、予約特典を把握。最後にこの特集をブックマークして時期を追いましょう。',
+          zh: '先确认适用区服与可验证的官方公告。不要按旧攻略付款、安装客户端或安排测试；国服技能和数值也不能直接当作国际服规则。',
+          en: 'First confirm the region and a verifiable official notice. Do not pay, install clients or schedule testing based on older guides; CN skills and stats do not directly establish global rules either.',
+          ja: 'まず対象地域と検証できる公式告知を確認してください。旧ガイドを根拠に支払い・インストール・参加計画をしないでください。中国版のスキル・数値も国際版のルールを直接証明しません。',
         },
       },
     ],
-    guideIds: ['cbt-registration-guide'],
+    guideIds: [],
   },
   'roco-cn': {
     title: { zh: '国服上线后 / 图鉴与兑换码专题', en: 'CN Live / Codes and Encyclopedia Hub', ja: '中国版配信中 / 図鑑とコード特集' },
@@ -1379,6 +1379,7 @@ function buildFaqJsonLd(faq: FaqItem[], locale: SupportedLocale) {
 
 function sourceTierLabel(tier: VersionSnapshotSourceTier, locale: SupportedLocale) {
   const labels: Record<VersionSnapshotSourceTier, Record<SupportedLocale, string>> = {
+    needs_verification: { zh: '来源待核实', en: 'Sources need verification', ja: '出典未確認' },
     official: {
       zh: '官方源',
       en: 'Official sources',
@@ -1813,7 +1814,9 @@ export default async function VersionHubPage({
                 {locale === 'zh' ? '当前版本' : locale === 'ja' ? '現在版本' : 'Current'}: {versionSnapshot.currentVersion}
               </span>
               <span className="rounded-full border border-game-border px-3 py-1 text-xs text-game-text-muted">
-                {versionSnapshot.dateKind === 'verified' ? (locale === 'zh' ? '状态核验日' : locale === 'ja' ? '状態確認日' : 'Status checked') : (locale === 'zh' ? '发布日期' : locale === 'ja' ? '公開日' : 'Release')}: {versionSnapshot.releaseDate}{versionSnapshot.sourceUrls?.map((url) => <a key={url} href={url} rel="noreferrer" className="ml-3 underline">{locale === 'zh' ? '官方来源' : locale === 'ja' ? '公式出典' : 'Official source'}</a>)}
+                {versionSnapshot.releaseDate
+                  ? <>{versionSnapshot.dateKind === 'verified' ? (locale === 'zh' ? '状态核验日' : locale === 'ja' ? '状態確認日' : 'Status checked') : (locale === 'zh' ? '发布日期' : locale === 'ja' ? '公開日' : 'Release')}: {versionSnapshot.releaseDate}</>
+                  : (locale === 'zh' ? '日程尚未核实' : locale === 'ja' ? '日程未確認' : 'Schedule unverified')}{versionSnapshot.sourceUrls?.map((url) => <a key={url} href={url} rel="noreferrer" className="ml-3 underline">{locale === 'zh' ? '官方来源' : locale === 'ja' ? '公式出典' : 'Official source'}</a>)}
               </span>
               <span className="rounded-full bg-game-primary/10 px-3 py-1 text-xs font-medium text-game-primary">
                 {versionSnapshot.status}

@@ -1,5 +1,82 @@
 [
   {
+    "id": "simulacrum-nexus",
+    "name": "梦枢天罗",
+    "nameEn": "Simulacrum Nexus of Mengzhou",
+    "nameJa": "夢枢天羅",
+    "description": "玄方城的控制中枢，亦被称为「万相神宫」，司掌着维持玄方城运转的底层秩序。",
+    "descriptionEn": "Xuanfang Hold's control mainframe, otherwise known as the Manifold Sanctum, governing the foundational order that keeps the city running.",
+    "descriptionJa": "玄方城の制御中枢であり、「万相神居」とも呼ばれている。玄方城に張り巡らされた複雑な機巧、その根底にある秩序を司る場所。",
+    "highlights": [
+      "新增「梦枢天罗」区域内部分玩法的奖励进度显示，当处于对应玩法内时，可点击左上角地图界面旁的按钮查看当前奖励获得进度。",
+      "优化调整部分地图标记详情界面的信息显示，「梦枢天罗」区域内部分玩法地图标记在点击后将显示当前奖励获得进度。"
+    ],
+    "specialties": [],
+    "bosses": [],
+    "domains": [],
+    "tips": [
+      "跟随潮汐任务第四章・第四幕的游戏内指引前往。"
+    ],
+    "subRegions": [
+      "心相迷宫",
+      "烬心域",
+      "凄心域",
+      "怡心域",
+      "沉心域",
+      "墟心域",
+      "相心域"
+    ],
+    "subRegionsEn": [
+      "Heartscape Labyrinth",
+      "Heart of Flames",
+      "Heart of Frost",
+      "Heart of Bloom",
+      "Heart of Stillness",
+      "Heart of Ruin",
+      "Heart of Appearance"
+    ],
+    "highlightsEn": [
+      "Added a display of reward collection progress for certain gameplay features available in the Simulacrum Nexus of Mengzhou. When you're experiencing a specific gameplay feature, press the icon that appears next to the mini map in the top left corner of the screen to view your reward collection progress for the gameplay feature.",
+      "Adjusted the information that is displayed upon pressing certain icons on the map. When icons associated with certain gameplay features available in the Simulacrum Nexus of Mengzhou are selected, the displayed information will now include your reward collection progress."
+    ],
+    "tipsEn": [
+      "Follow the in-game guidance for Main Quest Chapter IV Act IV to reach the area."
+    ],
+    "subRegionsJa": [
+      "心相の迷宮",
+      "焼尽の心域",
+      "閑寂の心域",
+      "調和の心域",
+      "深沈の心域",
+      "退廃の心域",
+      "相生の心域"
+    ],
+    "highlightsJa": [
+      "「夢枢天羅」エリア内の一部コンテンツに報酬進捗表示を追加しました。該当コンテンツでは、左上のマップ画面横にあるボタンをクリックすると、現在の報酬獲得進捗を確認できます。",
+      "一部マップピンの詳細画面の情報表示を調整しました。「夢枢天羅」エリア内の一部コンテンツのマップピンをクリックすると、現在の報酬獲得進捗が表示されます。"
+    ],
+    "tipsJa": [
+      "潮汐任務第四章・第四幕のゲーム内ガイドに従って向かってください。"
+    ],
+    "sourceReview": {
+      "version": "3.7",
+      "sources": [
+        {
+          "language": "zh",
+          "url": "https://media-cdn-mingchao.kurogame.com/akiwebsite/website2.0/json/G152/zh/article/5569.json"
+        },
+        {
+          "language": "en",
+          "url": "https://hw-media-cdn-mingchao.kurogame.com/akiwebsite/website2.0/json/G152/en/article/5571.json"
+        },
+        {
+          "language": "ja",
+          "url": "https://hw-media-cdn-mingchao.kurogame.com/akiwebsite/website2.0/json/G152/jp/article/5570.json"
+        }
+      ]
+    }
+  },
+  {
     "id": "huanglong",
     "name": "瑝珑",
     "nameEn": "Huanglong",

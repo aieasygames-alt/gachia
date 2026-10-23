@@ -227,6 +227,13 @@ export default async function RocoEventsPage({
       <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
         {COPY.subtitle[locale]}
       </p>
+      {gameId === 'roco' && <aside data-roco-schedule-review className="mb-6 rounded-md border border-game-border bg-game-surface p-4 text-sm text-game-text-muted">
+        {locale === 'zh'
+          ? '测试日程待核实：旧 Steam App ID 对应其他游戏，已撤回其确认支持。报名与开测条目暂不参与日历分类，不代表测试取消；旧攻略仍在复核。'
+          : locale === 'ja'
+            ? 'テスト日程未確認：旧Steam App IDは別のゲームを示すため、確認根拠を撤回しました。応募・開始情報はカレンダー分類から外しています。中止告知ではなく、旧ガイドは再確認中です。'
+            : 'Test schedule unverified: the old Steam App ID identifies another game and its confirmation is withdrawn. Signup and test entries are excluded from calendar categories, not declared cancelled; older guides remain under review.'}
+      </aside>}
 
       <section className="mb-8 grid gap-3 sm:grid-cols-3">
         {STATUS_ORDER.map((status) => (

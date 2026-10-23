@@ -62,9 +62,9 @@ const MAP_META_DESCRIPTIONS: Partial<Record<GameId, Record<SupportedLocale, stri
     ja: 'ロコキングダム中国版マップ入口。地域、ジニー捕獲地点、資源ルート、イベント、商人更新確認を整理します。',
   },
   wuwa: {
-    zh: '鸣潮地图攻略，整理瑝珑、黑海岸、黎那汐塔、拉海洛、新联邦与 3.7 梦枢天罗的区域路线、材料、Boss、探索提示和版本入口，适合查 wuwa map、鸣潮地图和材料路线。',
-    en: 'Wuthering Waves map guide for Huanglong, Black Shores, Rinascita, Lahai-Roi, New Federation, and the v3.7 Simulacrum Nexus, with region routes, materials, bosses, exploration tips, and version links.',
-    ja: '鳴潮マップ攻略。瑝瓏、ブラックショア、リナシータ、ラハイロイ、新連邦、Ver.3.7の夢枢天羅、素材、Boss、探索ヒント、バージョン導線を整理します。',
+    zh: '鸣潮地图资料与探索入口。梦枢天罗按 3.7 官方公告整理区域简介、七个场景和部分玩法奖励进度说明，并注明未核实的归属；其他区域保留既有资料。',
+    en: 'Wuthering Waves map reference and exploration links. The Simulacrum Nexus entry uses official v3.7 region, seven-scene and partial reward-progress notes, with unverified assignments identified. Older region references remain separate.',
+    ja: '鳴潮マップ資料と探索入口。夢枢天羅はVer.3.7公式告知の概要・7フィールド・一部報酬進捗を整理し、未確認の所属を明示。他地域は既存資料です。',
   },
   starrail: {
     zh: '星穹铁道星球地图攻略，整理空间锚点、拟造花萼、历战余响、侵蚀隧洞、区域要点和材料路线，适合查 Star Rail map 与星球探索。',
@@ -330,7 +330,19 @@ function RegionCard({ region, gameId, locale }: { region: MapRegionEntry; gameId
         </div>
       </div>
       <div className="p-6">
-        <div className="grid gap-6 lg:grid-cols-3">
+        {region.sourceReview && (
+          <aside data-region-source className="mb-6 rounded-lg border border-game-border bg-game-surface-alt p-4 text-sm text-game-text-muted">
+            <p>{locale === 'zh'
+              ? `资料范围：${region.sourceReview.version} 官方公告摘录，不代表当前版本的实时核验。Boss、无音区和特产的区域归属尚未核实，暂不列出；不代表区域中不存在这些内容。`
+              : locale === 'ja'
+                ? `資料範囲：${region.sourceReview.version}公式告知の抜粋です。現行版のリアルタイム確認ではありません。ボス・無音区・特産の所属は未確認のため未掲載であり、存在しないという意味ではありません。`
+                : `Scope: official ${region.sourceReview.version} patch-note excerpts, not a live check of the current version. Regional boss, Tacet Field and specialty assignments are unverified and not listed; this does not mean they do not exist.`}</p>
+            <div className="mt-2 flex flex-wrap gap-4">
+              {region.sourceReview.sources.map(source => <a key={source.language} href={source.url} target="_blank" rel="noreferrer" className="underline">{source.language.toUpperCase()} · {region.sourceReview!.version}</a>)}
+            </div>
+          </aside>
+        )}
+        <div className={`grid gap-6 ${region.bosses.length || region.domains.length ? 'lg:grid-cols-3' : region.specialties.length || region.subRegions.length ? 'lg:grid-cols-2' : ''}`}>
           <div>
             <h3 className="mb-3 text-sm font-semibold text-game-primary">{highlightLabel(gameId, locale)}</h3>
             <div className="space-y-2">
@@ -341,20 +353,22 @@ function RegionCard({ region, gameId, locale }: { region: MapRegionEntry; gameId
               ))}
             </div>
           </div>
-          <div>
-            <h3 className="mb-3 text-sm font-semibold text-game-primary">{specialtyLabel(locale)}</h3>
-            <TagList values={region.specialties} />
+          {(region.specialties.length > 0 || region.subRegions.length > 0) && <div>
+            {region.specialties.length > 0 && <>
+              <h3 className="mb-3 text-sm font-semibold text-game-primary">{specialtyLabel(locale)}</h3>
+              <TagList values={region.specialties} />
+            </>}
             {region.subRegions.length > 0 && (
               <div className="mt-4">
                 <h3 className="mb-2 text-sm font-semibold text-game-primary">{subRegionLabel(locale)}</h3>
                 <TagList values={region.subRegions} />
               </div>
             )}
-          </div>
-          <div className="space-y-4">
+          </div>}
+          {(region.bosses.length > 0 || region.domains.length > 0) && <div className="space-y-4">
             {region.bosses.length > 0 && <InlineList title={bossLabel(gameId, locale)} icon="👹" values={region.bosses} />}
             {region.domains.length > 0 && <InlineList title={domainLabel(gameId, locale)} icon="🏛️" values={region.domains} />}
-          </div>
+          </div>}
         </div>
         {region.tips.length > 0 && (
           <div className="mt-6 rounded-lg border border-game-border bg-game-surface-alt p-4">

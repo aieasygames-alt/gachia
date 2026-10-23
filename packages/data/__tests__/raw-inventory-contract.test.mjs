@@ -32,10 +32,10 @@ afterEach(async () => { await Promise.all(roots.splice(0).map(root => rm(root, {
 
 it('checks all committed pairs and does not confuse containment with approval', async () => {
   const result = await verifyRawInventory();
-  expect(result).toMatchObject({ pairs: 90, equal: 88, sourceOnly: 5, issues: [], engineeringReady: true, contentReleaseReady: false });
-  expect(result.pending.map(row => row.path)).toEqual(['roco/raw-characters.json', 'wuwa/raw-regions.json']);
-  expect(result.pending.flatMap(row => row.changes)).toHaveLength(4);
-  await expect(verifyRawInventory(undefined, { release: true })).rejects.toThrow('2 raw pairs');
+  expect(result).toMatchObject({ pairs: 90, equal: 89, sourceOnly: 5, issues: [], engineeringReady: true, contentReleaseReady: false });
+  expect(result.pending.map(row => row.path)).toEqual(['roco/raw-characters.json']);
+  expect(result.pending.flatMap(row => row.changes)).toHaveLength(3);
+  await expect(verifyRawInventory(undefined, { release: true })).rejects.toThrow('1 raw pairs');
 });
 it('allows bounded engineering with pending content but blocks release without writing anything', async () => {
   const { root } = await fixture();

@@ -155,35 +155,6 @@
       ],
       "reason": "International starter skills/stats were reused from CN in a historical commit; international scope and values are not established.",
       "reviewDocument": "plans/multi-game-s2-4-content-review-closeout-2026-10-24.md"
-    },
-    {
-      "path": "wuwa/raw-regions.json",
-      "status": "needs_review",
-      "sourceSha256": "385fe0b5bbcf5387fd178e41ea150c0431b2d299f8bd3306bc45d3a8e28b7706",
-      "mirrorSha256": "e29d96b543b3be716bb90d58dacbf6788de2f09c932570403bdd8e001b4170e9",
-      "changes": [
-        {
-          "id": "simulacrum-nexus",
-          "kind": "source-only",
-          "fields": [
-            "bosses",
-            "description",
-            "descriptionEn",
-            "descriptionJa",
-            "domains",
-            "highlights",
-            "id",
-            "name",
-            "nameEn",
-            "nameJa",
-            "specialties",
-            "subRegions",
-            "tips"
-          ]
-        }
-      ],
-      "reason": "CN official v3.7 notice supports only part of these additions; localized names, two-piece effects, recommendations or location-specific claims remain unverified.",
-      "reviewDocument": "plans/multi-game-s2-4-content-review-closeout-2026-10-24.md"
     }
   ]
 }

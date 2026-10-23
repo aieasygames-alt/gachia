@@ -2,7 +2,7 @@ import type { GameId, SupportedLocale } from '@gachia/core';
 import type { LocalizedText, LiveStatus } from './live-content';
 
 export type VersionSnapshotLinkType = 'banner' | 'codes' | 'characters' | 'guides' | 'builds' | 'download' | 'map';
-export type VersionSnapshotSourceTier = 'official' | 'mixed' | 'third_party_watch';
+export type VersionSnapshotSourceTier = 'official' | 'mixed' | 'third_party_watch' | 'needs_verification';
 
 export interface VersionSnapshotLink {
   type: VersionSnapshotLinkType;
@@ -19,7 +19,7 @@ export interface VersionSnapshotPlatformDate {
 export interface VersionSnapshot {
   gameId: GameId;
   currentVersion: string;
-  releaseDate: string;
+  releaseDate?: string;
   dateKind?: 'release' | 'announcement' | 'verified';
   sourceUrls?: string[];
   status: LiveStatus;
@@ -340,28 +340,27 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
   },
   roco: {
     gameId: 'roco',
-    currentVersion: 'Quack Quack Test official watch',
-    releaseDate: '2026-10-27',
+    currentVersion: 'Global test information under review',
     status: 'watch',
-    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,
-    sourceTier: 'official',
+    lastUpdatedAt: '2026-10-24',
+    sourceTier: 'needs_verification',
     summary: {
-      zh: 'Roco Global 的 Quack Quack Test / 10/27 CBT 已有 Steam 与公开 FAQ 支撑，适合作为官方 watch 入口，并继续与 Roco CN 分流。',
-      en: 'Roco Global Quack Quack Test / October 27 CBT now has Steam and public FAQ support, making it an official watch entry while staying separate from Roco CN.',
-      ja: 'Roco GlobalのQuack Quack Test / 10月27日CBTはSteamと公開FAQで確認できるwatch入口になり、Roco CNとは分けます。',
+      zh: '旧 Steam App ID 对应其他游戏，已撤回其确认支持。国际服测试日期、报名、平台和规则仍待独立核实；不代表测试取消，国服资料不能直接证明国际服规则。',
+      en: 'The old Steam App ID identifies another game, so its confirmation is withdrawn. Global test dates, signup, platforms and rules need independent verification. This does not mean the test was cancelled, and CN data does not establish global rules.',
+      ja: '旧Steam App IDは別のゲームを示すため、確認根拠を撤回しました。国際版の日程・応募・対応機種・ルールは独立した確認待ちです。中止を意味せず、中国版の資料だけでは国際版のルールを証明できません。',
     },
     whatChanged: [
       {
-        zh: '页面从第三方信号升级为 Steam/公开 FAQ 可核验的 CBT watch，但不写成正式上线。',
-        en: 'The page moves from third-party signal into Steam/public-FAQ-verified CBT watch, without treating it as full release.',
-        ja: 'ページを第三者シグナルからSteam/公開FAQで確認できるCBT watchへ進め、正式配信とは扱いません。',
+        zh: '撤回已确认日程、报名截止和活动倒计时；旧攻略中的重复断言仍在复核，不能作为新的独立证据。',
+        en: 'Confirmed dates, signup deadlines and calendar countdowns are withdrawn. Repeated claims in older guides are still under review, not new independent evidence.',
+        ja: '確認済み日程・応募締切・カウントダウンを撤回。旧ガイドの重複記述は再確認中であり、新たな独立した根拠ではありません。',
       },
     ],
     firstSteps: [
       {
-        zh: '先看 CBT 报名、平台和资格查询，再决定是否准备 Quack Quack Test。',
-        en: 'Check CBT registration, platforms, and eligibility checks first, then decide how to prepare for Quack Quack Test.',
-        ja: 'まずCBT応募、平台、資格確認を見てから、Quack Quack Test準備を判断します。',
+        zh: '先确认公告属于正确游戏、区服和版本，再核对日期、时区、资格和下载入口；不要按旧攻略付款或安装客户端。',
+        en: 'Match the announcement to the correct game, region and version before checking dates, time zones, eligibility and downloads. Do not pay or install clients based on older guides.',
+        ja: '告知が正しいゲーム・地域・版のものか確認してから、日程・時差・資格・DL先を確認してください。旧ガイドを根拠に支払い・インストールをしないでください。',
       },
       {
         zh: '国服上线、兑换码和图鉴内容继续留在 Roco CN 页面。',
@@ -373,7 +372,6 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       { type: 'download', href: '/roco/download', label: { zh: '平台入口', en: 'Platform entry', ja: '平台入口' } },
       { type: 'codes', href: '/roco/items', label: { zh: '资料入口', en: 'Data hub', ja: 'データ' } },
       { type: 'characters', href: '/roco/characters', label: { zh: '生物图鉴', en: 'Creatures', ja: '生物図鑑' } },
-      { type: 'guides', href: '/roco/guides/cbt-registration-guide', label: { zh: 'CBT 申请', en: 'CBT registration', ja: 'CBT応募' } },
       { type: 'guides', href: '/roco/guides/global-cn-content-roadmap', label: { zh: '国服差距与补充方案', en: 'CN gap & rollout plan', ja: '中国版との差分・展開案' } },
       { type: 'guides', href: '/roco/guides/global-launch-readiness-checklist', label: { zh: '首发验收清单', en: 'Launch checklist', ja: 'ローンチ確認' } },
       { type: 'guides', href: '/roco/guides/global-first-30-days-pve-plan', label: { zh: '前 30 天 PvE 包', en: 'Days 1–30 PvE plan', ja: '1〜30日PvE案' } },

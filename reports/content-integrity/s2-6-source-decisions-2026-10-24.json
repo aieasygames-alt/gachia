@@ -1,0 +1,296 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-23T17:20:19.571025+00:00",
+  "baseline": "46edfd1",
+  "decision": "close_reviewed_region_and_withdraw_roco_schedule_amplification",
+  "evidenceScope": "Reuses the exact S2.5 captured historical official v3.7 responses; not a fresh network fetch or current-version/in-game verification.",
+  "notices": [
+    {
+      "language": "zh",
+      "url": "https://media-cdn-mingchao.kurogame.com/akiwebsite/website2.0/json/G152/zh/article/5569.json",
+      "articleId": 5569,
+      "title": "「镜锁妄世，心照红尘」3.7版本内容说明",
+      "publishedValue": "2026-09-30 10:00:00",
+      "publishedTimezone": "not_assumed_from_unzoned_field",
+      "responseSha256": "783a26f6a8460dd572070bf9cc478a522829e04ee6ef67cac4f0e6c807b5988e",
+      "responseBytes": 30245,
+      "regionExcerpt": [
+        "「梦枢天罗」",
+        "该区域包含场景：「心相迷宫」、「烬心域」、「凄心域」、「怡心域」、「沉心域」、「墟心域」、「相心域」",
+        "玄方城的控制中枢，亦被称为「万相神宫」，司掌着维持玄方城运转的底层秩序。",
+        "※跟随【潮汐任务】第四章・第四幕「梦枢心相由心生」的任务指引即可前往。"
+      ],
+      "uiProgressExcerpts": [
+        "- 新增「梦枢天罗」区域内部分玩法的奖励进度显示，当处于对应玩法内时，可点击左上角地图界面旁的按钮查看当前奖励获得进度。",
+        "- 优化调整部分地图标记详情界面的信息显示，「梦枢天罗」区域内部分玩法地图标记在点击后将显示当前奖励获得进度。"
+      ]
+    },
+    {
+      "language": "en",
+      "url": "https://hw-media-cdn-mingchao.kurogame.com/akiwebsite/website2.0/json/G152/en/article/5571.json",
+      "articleId": 5571,
+      "title": "Patch Notes for Wuthering Waves Version 3.7: Prism's Illusion, Heart's Illumination",
+      "publishedValue": "2026-09-30 10:00:00",
+      "publishedTimezone": "not_assumed_from_unzoned_field",
+      "responseSha256": "ac2224b158b9be029480b52a4d2a5906f4d11c1212e0affe4b84fb35007a509d",
+      "responseBytes": 57258,
+      "regionExcerpt": [
+        "Simulacrum Nexus of Mengzhou",
+        "Area includes: Heartscape Labyrinth, Heart of Flames, Heart of Frost, Heart of Bloom, Heart of Stillness, Heart of Ruin, Heart of Appearance",
+        "Xuanfang Hold's control mainframe, otherwise known as the Manifold Sanctum, governing the foundational order that keeps the city running.",
+        "※Reach the location during Main Quest Chapter IV Act IV \"Simulacrum of the Heartt.\""
+      ],
+      "uiProgressExcerpts": [
+        "- Added a display of reward collection progress for certain gameplay features available in the Simulacrum Nexus of Mengzhou. When you're experiencing a specific gameplay feature, press the icon that appears next to the mini map in the top left corner of the screen to view your reward collection progress for the gameplay feature.",
+        "- Adjusted the information that is displayed upon pressing certain icons on the map. When icons associated with certain gameplay features available in the Simulacrum Nexus of Mengzhou are selected, the displayed information will now include your reward collection progress."
+      ]
+    },
+    {
+      "language": "ja",
+      "url": "https://hw-media-cdn-mingchao.kurogame.com/akiwebsite/website2.0/json/G152/jp/article/5570.json",
+      "articleId": 5570,
+      "title": "Ver.3.7「鏡に鎖す妄世、心で照らす紅塵」 コンテンツ紹介",
+      "publishedValue": "2026-09-30 09:50:00",
+      "publishedTimezone": "not_assumed_from_unzoned_field",
+      "responseSha256": "2b539c3cc4d2ac24e2367c6e1ac6934b4d4fc86b1875683d8852184403bbd871",
+      "responseBytes": 64559,
+      "regionExcerpt": [
+        "「夢枢天羅」",
+        "このエリアには、下記のフィールドが含まれます：「心相の迷宮」、「焼尽の心域」、「閑寂の心域」、「調和の心域」、「深沈の心域」、「退廃の心域」、「相生の心域」",
+        "玄方城の制御中枢であり、「万相神居」とも呼ばれている。玄方城に張り巡らされた複雑な機巧、その根底にある秩序を司る場所。",
+        "※【潮汐任務】第四章・第四幕「夢枢の有り様、心のまま生ず」のガイドに従い、向かうことができます。"
+      ],
+      "uiProgressExcerpts": [
+        "- 「夢枢天羅」エリア内の一部コンテンツに報酬進捗表示を追加しました。該当コンテンツでは、左上のマップ画面横にあるボタンをクリックすると、現在の報酬獲得進捗を確認できます。",
+        "- 一部マップピンの詳細画面の情報表示を調整しました。「夢枢天羅」エリア内の一部コンテンツのマップピンをクリックすると、現在の報酬獲得進捗が表示されます。"
+      ]
+    }
+  ],
+  "originalRegionRecord": {
+    "id": "simulacrum-nexus",
+    "name": "梦枢天罗",
+    "nameEn": "Simulacrum Nexus of Mengzhou",
+    "nameJa": "夢枢天羅",
+    "description": "梦枢天罗是玄方城的控制中枢，也被称为万相神宫。区域围绕心相迷宫与多种心域展开，部分玩法的奖励进度可在地图界面对应入口查看。进入与后续探索需要遵循潮汐任务第四章第四幕「梦枢心相由心生」的游戏内指引。",
+    "descriptionEn": "The Simulacrum Nexus of Mengzhou is the control center of Xuanfang City, also known as the Myriad-Aspect Divine Palace. Its Heartscape Maze and themed heart realms include map-linked reward progress for selected activities. Follow the in-game Chapter IV, Act IV Tidal Task guidance to enter and continue exploration.",
+    "descriptionJa": "夢枢天羅は玄方城の制御中枢で、万相神宮とも呼ばれます。心相迷宮と複数の心域からなり、一部の遊びではマップから報酬進行を確認できます。進入と探索は潮汐任務第四章・第四幕「夢枢心相由心生」のゲーム内案内に従ってください。",
+    "highlights": [
+      "心相迷宫",
+      "烬心域、凄心域、怡心域、沉心域、墟心域、相心域",
+      "梦枢天罗残象聚落",
+      "部分玩法奖励进度地图显示"
+    ],
+    "specialties": [
+      "以游戏内采集与任务指引为准"
+    ],
+    "bosses": [
+      "玉冥蛇",
+      "全新 COST 4 声骸（以游戏内图鉴为准）"
+    ],
+    "domains": [
+      "沉心域无音区",
+      "烬心域无音区"
+    ],
+    "tips": [
+      "先完成潮汐任务第四章・幕间「幽客销残声」，再按第四幕任务引导进入区域",
+      "部分玩法可在地图界面查看当前奖励进度，先确认未领取奖励再离开区域",
+      "活动、采集与解谜的精确开放条件以游戏内显示为准"
+    ],
+    "subRegions": [
+      "Heartscape Maze",
+      "Emberheart Realm",
+      "Sorrowheart Realm",
+      "Joyheart Realm",
+      "Deepheart Realm",
+      "Ruinedheart Realm",
+      "Linkedheart Realm"
+    ]
+  },
+  "originalPendingSnapshot": {
+    "path": "wuwa/raw-regions.json",
+    "status": "needs_review",
+    "sourceSha256": "385fe0b5bbcf5387fd178e41ea150c0431b2d299f8bd3306bc45d3a8e28b7706",
+    "mirrorSha256": "e29d96b543b3be716bb90d58dacbf6788de2f09c932570403bdd8e001b4170e9",
+    "changes": [
+      {
+        "id": "simulacrum-nexus",
+        "kind": "source-only",
+        "fields": [
+          "bosses",
+          "description",
+          "descriptionEn",
+          "descriptionJa",
+          "domains",
+          "highlights",
+          "id",
+          "name",
+          "nameEn",
+          "nameJa",
+          "specialties",
+          "subRegions",
+          "tips"
+        ]
+      }
+    ],
+    "reason": "CN official v3.7 notice supports only part of these additions; localized names, two-piece effects, recommendations or location-specific claims remain unverified.",
+    "reviewDocument": "plans/multi-game-s2-4-content-review-closeout-2026-10-24.md"
+  },
+  "rocoWithdrawals": [
+    {
+      "path": "apps/web/lib/live-content.ts",
+      "originalBlocks": [
+        "  {\n    gameId: 'roco',\n    title: {\n      zh: 'Roco Global Quack Quack Test 观察',\n      en: 'Roco Global Quack Quack Test Watch',\n      ja: 'Roco Global Quack Quack Test注目',\n    },\n    summary: {\n      zh: '10/27 CBT 与 Quack Quack Test 已有 Steam/公开 FAQ 支撑；继续区分测试窗口和正式上线。',\n      en: 'The Oct 27 CBT and Quack Quack Test now have Steam/public FAQ support; keep CBT timing separate from full release.',\n      ja: '10/27 CBTとQuack Quack TestはSteam/公開FAQで確認可能。テスト時期と正式版を分けます。',\n    },\n    href: '/roco/version',\n    status: 'upcoming',\n    updatedAt: LIVE_UPDATED_AT,\n    priority: 3,\n  },",
+        "  {\n    gameId: 'roco',\n    title: {\n      zh: 'Roco Global 10/27 CBT watch',\n      en: 'Roco Global Oct 27 CBT Watch',\n      ja: 'Roco Global 10/27 CBT注目',\n    },\n    summary: {\n      zh: 'Quack Quack Test 可升级为 Steam/官方 FAQ 可核验的 CBT watch，但不能写成正式上线。',\n      en: 'Quack Quack Test can be treated as a Steam/official FAQ-backed CBT watch, but not as the full launch.',\n      ja: 'Quack Quack TestはSteam/公式FAQで確認できるCBT watch。ただし正式版扱いはしません。',\n    },\n    href: '/roco/version',\n    status: 'upcoming',\n    updatedAt: LIVE_UPDATED_AT,\n    priority: 5,\n  },",
+        "  {\n    gameId: 'roco',\n    title: {\n      zh: 'Roco Kingdom「等等鸭测试」注册指南',\n      en: 'Roco Kingdom \"Quack Quack Test\" Sign-up Guide',\n      ja: 'Roco Kingdom「Quack Quack Test」登録ガイド',\n    },\n    summary: {\n      zh: '国际服 CBT（10/27 开测）报名 8/26–10/20：官网问卷、邀请推荐、PC/iOS/Android 平台与语言说明。',\n      en: 'Global CBT (Oct 27) sign-ups run Aug 26–Oct 20: official questionnaire, referral invites, PC/iOS/Android platforms, and language notes.',\n      ja: '国際CBT（10/27開始）応募は8/26〜10/20：公式アンケート、紹介リンク、対応プラットフォームと言語。',\n    },\n    href: '/roco/guides/cbt-registration-guide',\n    updatedAt: LIVE_UPDATED_AT,\n    priority: 1,\n  },",
+        "  {\n    id: 'roco-cbt-signup-closes',\n    gameId: 'roco',\n    type: 'event_end',\n    title: {\n      zh: 'Roco Kingdom CBT 报名截止',\n      en: 'Roco Kingdom CBT Sign-up Deadline',\n      ja: 'Roco Kingdom CBT応募締切',\n    },\n    summary: {\n      zh: '「等等鸭测试（Quack Quack Test）」报名于 10/20 截止，须在官网完成问卷；10/23 起可查询资格。',\n      en: 'Quack Quack Test sign-ups close Oct 20; complete the official questionnaire. Eligibility check opens Oct 23.',\n      ja: '「Quack Quack Test」応募は10/20締切。公式アンケートの完了が必要です。資格確認は10/23から。',\n    },\n    href: '/roco/guides/cbt-registration-guide',\n    startsAt: '2026-10-20',\n    timezone: 'UTC',\n    updatedAt: LIVE_UPDATED_AT,\n    priority: 2,\n  },",
+        "  {\n    id: 'roco-cbt-2026',\n    gameId: 'roco',\n    type: 'event_start',\n    title: {\n      zh: 'Roco Kingdom「等等鸭测试」CBT 开服',\n      en: 'Roco Kingdom \"Quack Quack Test\" CBT Launch',\n      ja: 'Roco Kingdom「Quack Quack Test」CBT開始',\n    },\n    summary: {\n      zh: '全球首测开服（PC/iOS/Android）：下载、预约奖励、兑换码、御三家与 Jinies 图鉴；测试删档且无内购。',\n      en: 'Global CBT launch on PC/iOS/Android: downloads, pre-reg rewards, codes, starters, and the Jinies codex. Progress wipes; no IAP.',\n      ja: 'グローバルCBT開始（PC/iOS/Android）：DL、予約報酬、コード、御三家、Jinies図鑑。データ削除あり、課金なし。',\n    },\n    href: '/roco/version',\n    startsAt: '2026-10-27',\n    timezone: 'UTC',\n    updatedAt: LIVE_UPDATED_AT,\n    priority: 3,\n  },"
+      ],
+      "sha256": "6a729f4ffaf0767557ec0638dbca1d72eb97100b5b45ed6d5a7453dd47f5581a"
+    },
+    {
+      "path": "apps/web/lib/version-snapshots.ts",
+      "originalBlocks": [
+        "  roco: {\n    gameId: 'roco',\n    currentVersion: 'Quack Quack Test official watch',\n    releaseDate: '2026-10-27',\n    status: 'watch',\n    lastUpdatedAt: VERSION_SNAPSHOT_UPDATED_AT,\n    sourceTier: 'official',\n    summary: {\n      zh: 'Roco Global 的 Quack Quack Test / 10/27 CBT 已有 Steam 与公开 FAQ 支撑，适合作为官方 watch 入口，并继续与 Roco CN 分流。',\n      en: 'Roco Global Quack Quack Test / October 27 CBT now has Steam and public FAQ support, making it an official watch entry while staying separate from Roco CN.',\n      ja: 'Roco GlobalのQuack Quack Test / 10月27日CBTはSteamと公開FAQで確認できるwatch入口になり、Roco CNとは分けます。',\n    },\n    whatChanged: [\n      {\n        zh: '页面从第三方信号升级为 Steam/公开 FAQ 可核验的 CBT watch，但不写成正式上线。',\n        en: 'The page moves from third-party signal into Steam/public-FAQ-verified CBT watch, without treating it as full release.',\n        ja: 'ページを第三者シグナルからSteam/公開FAQで確認できるCBT watchへ進め、正式配信とは扱いません。',\n      },\n    ],\n    firstSteps: [\n      {\n        zh: '先看 CBT 报名、平台和资格查询，再决定是否准备 Quack Quack Test。',\n        en: 'Check CBT registration, platforms, and eligibility checks first, then decide how to prepare for Quack Quack Test.',\n        ja: 'まずCBT応募、平台、資格確認を見てから、Quack Quack Test準備を判断します。',\n      },\n      {\n        zh: '国服上线、兑换码和图鉴内容继续留在 Roco CN 页面。',\n        en: 'China launch, codes, and encyclopedia content stay on Roco CN pages.',\n        ja: '中国版リリース、コード、図鑑内容はRoco CNページに残します。',\n      },\n    ],\n    links: [\n      { type: 'download', href: '/roco/download', label: { zh: '平台入口', en: 'Platform entry', ja: '平台入口' } },\n      { type: 'codes', href: '/roco/items', label: { zh: '资料入口', en: 'Data hub', ja: 'データ' } },\n      { type: 'characters', href: '/roco/characters', label: { zh: '生物图鉴', en: 'Creatures', ja: '生物図鑑' } },\n      { type: 'guides', href: '/roco/guides/cbt-registration-guide', label: { zh: 'CBT 申请', en: 'CBT registration', ja: 'CBT応募' } },\n      { type: 'guides', href: '/roco/guides/global-cn-content-roadmap', label: { zh: '国服差距与补充方案', en: 'CN gap & rollout plan', ja: '中国版との差分・展開案' } },\n      { type: 'guides', href: '/roco/guides/global-launch-readiness-checklist', label: { zh: '首发验收清单', en: 'Launch checklist', ja: 'ローンチ確認' } },\n      { type: 'guides', href: '/roco/guides/global-first-30-days-pve-plan', label: { zh: '前 30 天 PvE 包', en: 'Days 1–30 PvE plan', ja: '1〜30日PvE案' } },\n      { type: 'guides', href: '/roco/guides/global-days-31-90-season-event-plan', label: { zh: '31–90 天赛季包', en: 'Days 31–90 season plan', ja: '31〜90日シーズン案' } },\n      { type: 'guides', href: '/roco/guides/global-cn-release-governance', label: { zh: '跨服版本治理', en: 'CN-global governance', ja: '地域間リリース統治' } },\n      { type: 'guides', href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '运营指标与实验', en: 'Live-ops metrics', ja: '運営指標と実験' } },\n      { type: 'guides', href: '/roco/guides/global-localization-cultural-event-playbook', label: { zh: '本地化与文化活动', en: 'Localization playbook', ja: 'ローカライズ手帳' } },\n      { type: 'guides', href: '/roco/guides/global-cbt-to-launch-decision-gates', label: { zh: 'CBT 上线决策', en: 'CBT launch gates', ja: 'CBTローンチ判断' } },\n      { type: 'guides', href: '/roco/guides/global-accessibility-cross-device-playbook', label: { zh: '无障碍与跨设备', en: 'Accessibility & devices', ja: 'アクセシビリティ・端末' } },\n      { type: 'guides', href: '/roco/guides/global-economy-monetization-fairness-playbook', label: { zh: '经济与付费公平', en: 'Economy & fairness', ja: '経済・課金公平性' } },\n      { type: 'guides', href: '/roco/guides/global-returning-player-event-legacy-playbook', label: { zh: '回流与活动遗产', en: 'Return & event legacy', ja: '復帰・イベント遺産' } },\n      { type: 'guides', href: '/roco/guides/global-change-communication-playbook', label: { zh: '版本沟通与热修', en: 'Patch communication', ja: '変更・ホットフィックス' } },\n      { type: 'guides', href: '/roco/guides/global-fair-play-integrity-playbook', label: { zh: '公平竞争与完整性', en: 'Fair play & integrity', ja: 'フェアプレイ・完全性' } },\n      { type: 'guides', href: '/roco/guides/global-player-discovery-codex-playbook', label: { zh: '玩家发现与图鉴', en: 'Discovery & codex trust', ja: '発見・図鑑信頼性' } },\n      { type: 'guides', href: '/roco/guides/global-onboarding-learning-recovery-playbook', label: { zh: '新手学习与恢复', en: 'Onboarding & recovery', ja: '導入・失敗復帰' } },\n      { type: 'guides', href: '/roco/guides/global-player-feedback-roadmap-playbook', label: { zh: '玩家反馈与路线图', en: 'Feedback & roadmap', ja: 'フィードバック・計画' } },\n      { type: 'guides', href: '/roco/guides/global-player-support-trust-playbook', label: { zh: '玩家支持与信任', en: 'Player support', ja: 'プレイヤーサポート' } },\n      { type: 'guides', href: '/roco/guides/global-social-safety-guild-playbook', label: { zh: '社交安全与公会', en: 'Social safety & guilds', ja: 'ソーシャル安全・ギルド' } },\n    ],\n  },\n"
+      ],
+      "sha256": "6a9d50c22fab9e177bee7e8bf38884ccdc2b127e141e6e73fd0c7e18a7d13d63"
+    },
+    {
+      "path": "apps/web/lib/game-data/roco-events.ts",
+      "originalBlocks": [
+        "  roco: [\n    {\n      id: 'global-cbt-signup',\n      title: { zh: '国际服 CBT 报名', en: 'Global CBT Sign-up', ja: '国際版CBT応募' },\n      category: 'test',\n      startAt: '2026-08-26',\n      endAt: '2026-10-20',\n      rewards: { zh: '测试资格、预约/邀请优先级', en: 'CBT eligibility and referral priority', ja: 'CBT資格、招待優先度' },\n      source: { zh: '官网报名页与 CBT 公告', en: 'Official signup page and CBT announcement', ja: '公式応募ページとCBT告知' },\n      updatedAt: '2026-09-07',\n    },\n    {\n      id: 'global-cbt-open',\n      title: { zh: 'Quack Quack Test 首测', en: 'Quack Quack Test CBT', ja: 'Quack Quack Test CBT' },\n      category: 'test',\n      startAt: '2026-10-27',\n      endAt: '2026-11-10',\n      rewards: { zh: 'PC/iOS/Android 测试体验，数据预计不保留', en: 'PC/iOS/Android test access; progress expected to wipe', ja: 'PC/iOS/Androidテスト参加。進行はリセット予定' },\n      source: { zh: '国际服官网公告，结束时间待复核', en: 'Global official announcement; end date needs recheck', ja: '国際版公式告知。終了日は要確認' },\n      updatedAt: '2026-09-07',\n    },\n  ],\n"
+      ],
+      "sha256": "d171c2feccdf1bc70553b6dc4750f93cd2c95e3b9d7cea2fb20d2ac7238b7acc"
+    },
+    {
+      "path": "apps/web/app/[lang]/[game]/version/page.tsx",
+      "originalBlocks": [
+        "  roco: {\n    title: { zh: '国际服 CBT「等等鸭测试」/ 预注册专题', en: 'Global CBT \"Quack Quack Test\" / Pre-Registration Hub', ja: '国際CBT「Quack Quack Test」/ 事前登録特集' },\n    description: {\n      zh: '聚焦《洛克王国:世界》国际服 CBT「等等鸭测试（Quack Quack Test）」10/27 开测、报名窗口 8/26–10/20、CBT 平台（PC/iOS/Android）、精灵阵容、法杖（外观特效武器）、早测节奏榜与版本时间线。',\n      en: 'Focus on the Roco Kingdom global CBT \"Quack Quack Test\" starting October 27, the Aug 26–Oct 20 sign-up window, CBT platforms (PC/iOS/Android), the Jinie roster, staves (cosmetic effect weapons), provisional tier list, and the version timeline.',\n      ja: 'ロコキングダム国際版のCBT「Quack Quack Test」（10/27開始）、応募窓口（8/26〜10/20）、CBT対応プラットフォーム（PC/iOS/Android）、ジニー、杖（外観武器）、暫定Tier、版本タイムラインを整理します。',\n    },\n    highlights: {\n      zh: ['10/27 开测', '报名至 10/20', 'CBT: PC/iOS/Android', '法杖', '早测节奏榜'],\n      en: ['CBT Oct 27', 'Sign-up until Oct 20', 'CBT: PC/iOS/Android', 'Staves', 'Provisional tier'],\n      ja: ['CBT 10/27', '応募は10/20まで', 'CBT: PC/iOS/Android', '杖', '暫定Tier'],\n    },\n    kicker: { zh: '首测倒计时', en: 'CBT countdown', ja: 'CBTカウントダウン' },\n    freshness: {\n      zh: '以 2026-10-27 开测、报名 8/26–10/20 为口径，优先整理报名、CBT 平台、预注册福利、精灵和版本节点；正式版日期以官方为准。',\n      en: 'Centered on the October 27 CBT with sign-ups from Aug 26 to Oct 20: registration, CBT platforms, pre-registration rewards, Jinies, and version milestones; the full-release date follows official notices.',\n      ja: '2026年10月27日開始、応募8/26〜10/20を軸に、申込み、CBT対応平台、予約特典、ジニー、版本を整理。正式版は公式告知基準。',\n    },\n    faq: [\n      {\n        question: {\n          zh: '国际服 CBT 什么时候开、怎么报名、什么时候截止？',\n          en: 'When is the global CBT, how do I sign up, and when does it close?',\n          ja: '国際CBTはいつ始まり、どう申し込む？応募はいつまで？',\n        },\n        answer: {\n          zh: '国际服 CBT「等等鸭测试（Quack Quack Test）」定于 2026-10-27 开启，本轮仅支持 PC、iOS 与 Android；PS5、Xbox、Steam、Epic 与 Microsoft Store 属正式版平台。官网 www.rocokingdom.com 报名开放中，须在 10/20 前完成问卷。',\n          en: 'The global CBT \"Quack Quack Test\" starts October 27, 2026 and covers PC, iOS, and Android only; PS5, Xbox, Steam, Epic, and Microsoft Store belong to the full release. Sign up at www.rocokingdom.com and complete the questionnaire before Oct 20.',\n          ja: '国際CBT「Quack Quack Test」は2026年10月27日開始で、対応はPC、iOS、Androidのみ。PS5、Xbox、Steam、Epic、Microsoft Storeは正式版向けです。公式サイト（www.rocokingdom.com）で10/20までにアンケートを完了してください。',\n        },\n      },\n      {\n        question: {\n          zh: '「等等鸭测试（Quack Quack Test）」是什么？',\n          en: 'What is the \"Quack Quack Test\"?',\n          ja: '「Quack Quack Test」とは？',\n        },\n        answer: {\n          zh: '「等等鸭测试」是官方为国际服首轮封闭测试起的名称：10/27 在 PC/iOS/Android 开测，报名须在官网完成问卷，10/23 起可查询资格；测试结束后角色与进度会删除，测试期间无内购。',\n          en: 'The \"Quack Quack Test\" is the official name for the first global closed beta: it starts Oct 27 on PC/iOS/Android, sign-up requires the official questionnaire, eligibility checks open Oct 23, and all progress is wiped after the test with no in-game purchases.',\n          ja: '「Quack Quack Test」は公式が名付けた初回グローバルCBTの名称です。10/27にPC/iOS/Androidで開始。応募には公式アンケートが必要で、資格確認は10/23から。テスト後はデータが削除され、期間中の課金はありません。',\n        },\n      },\n      {\n        question: {\n          zh: '首测前最值得准备什么？',\n          en: 'What should I prepare before the CBT?',\n          ja: 'CBT前に何を準備すべき？',\n        },\n        answer: {\n          zh: '先完成官网预注册并确认测试资格规则，再看 CBT 注册指南确认平台选择、语言支持和预约福利，最后收藏版本页跟踪时间节点。',\n          en: 'Complete pre-registration and check eligibility rules, then use the CBT guide for platform choice, language support, and rewards, and bookmark this hub for milestones.',\n          ja: 'まず事前登録と資格ルールを確認し、CBTガイドでプラットフォーム、言語、予約特典を把握。最後にこの特集をブックマークして時期を追いましょう。',\n        },\n      },\n    ],\n    guideIds: ['cbt-registration-guide'],\n  },\n"
+      ],
+      "sha256": "34aeb75a4908e184be9b59fa4cb7a14c7cdda5e48613ab3acfd93c1f328649ba"
+    }
+  ],
+  "rocoIdentityEvidence": "reports/content-integrity/s2-5-source-decisions-2026-10-24.json",
+  "rocoDecision": "Withdraw confirmation and calendar scheduling where independent evidence is missing; not evidence of cancellation. Raw guides and character assertions remain unresolved and production remains blocked.",
+  "legacyRegions": {
+    "ids": [
+      "huanglong",
+      "black-shores",
+      "rinascita",
+      "lahai-roi",
+      "new-federation"
+    ],
+    "semanticSha256": "e29d96b543b3be716bb90d58dacbf6788de2f09c932570403bdd8e001b4170e9",
+    "factualApproval": "not_reviewed_in_this_batch",
+    "recordSerializationSha256": "8549af462b0eabb4eb1b1d32e0b19fa20a71d6efa982da881e409ba4dc38a2b9"
+  },
+  "remainingRocoGuideReview": {
+    "scope": "Exact schedule/name markers only; not exhaustive factual review, not automatically withdrawn, not proven solely caused by Steam source",
+    "source": "packages/data/games/roco/raw-guides.json",
+    "mirror": "apps/web/public/data/roco/raw-guides.json",
+    "guidesTotal": 30,
+    "matchingGuides": 9,
+    "records": [
+      {
+        "id": "global-cn-content-roadmap",
+        "fields": [
+          "content",
+          "contentEn",
+          "contentJa"
+        ]
+      },
+      {
+        "id": "cbt-registration-guide",
+        "fields": [
+          "summary",
+          "summaryEn",
+          "content",
+          "contentEn",
+          "faq",
+          "quickFacts",
+          "serpTitle",
+          "serpDescription"
+        ]
+      },
+      {
+        "id": "what-is-roco-kingdom",
+        "fields": [
+          "content",
+          "contentEn"
+        ]
+      },
+      {
+        "id": "platforms-and-download-guide",
+        "fields": [
+          "summary",
+          "summaryEn",
+          "content",
+          "contentEn",
+          "faq",
+          "serpDescription"
+        ]
+      },
+      {
+        "id": "pre-registration-rewards-faq",
+        "fields": [
+          "content",
+          "contentEn"
+        ]
+      },
+      {
+        "id": "is-roco-kingdom-free-to-play",
+        "fields": [
+          "content",
+          "contentEn",
+          "faq"
+        ]
+      },
+      {
+        "id": "roco-kingdom-release-date-guide",
+        "fields": [
+          "summary",
+          "summaryEn",
+          "content",
+          "contentEn",
+          "faq",
+          "quickFacts",
+          "serpTitle",
+          "serpDescription"
+        ]
+      },
+      {
+        "id": "roco-kingdom-vs-pokemon",
+        "fields": [
+          "content",
+          "contentEn",
+          "faq"
+        ]
+      },
+      {
+        "id": "roco-kingdom-crossplay-guide",
+        "fields": [
+          "content",
+          "contentEn",
+          "faq"
+        ]
+      }
+    ],
+    "releaseDisposition": "Unresolved public content risk; review before any production approval, even if raw mirror pending is later zero."
+  },
+  "regionDecisions": {
+    "retained": [
+      "Stable ID and map anchor",
+      "Official names and descriptions in each locale",
+      "Seven scenes with corresponding official locale names",
+      "Only scoped UI reward progress excerpts for certain features",
+      "Neutral Chapter IV Act IV entry guidance"
+    ],
+    "withdrawn": [
+      "Unproven regional boss assignment from announcement-wide Echo list",
+      "Tacet Field assignments not independently established by the selected region excerpt",
+      "Generic specialty placeholder",
+      "Unofficial EN/JA translations and quest-title translation"
+    ],
+    "englishNoticeTypo": "The region section says Heartt; editorial guidance does not repeat the title or claim to silently correct the source.",
+    "olderRegions": "Five records unchanged, not factually approved; historical content requires separate review."
+  }
+}

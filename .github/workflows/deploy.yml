@@ -171,7 +171,7 @@ jobs:
         if: steps.scope.outputs.scope != 'admin'
         run: pnpm test:seo-discovery:local web
 
-      - name: Verify compiled managed content and official echo names
+      - name: Verify compiled managed content and source-review decisions
         if: steps.scope.outputs.scope != 'admin'
         run: pnpm test:managed-content:local
 

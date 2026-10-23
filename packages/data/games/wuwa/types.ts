@@ -119,10 +119,12 @@ export interface WuWaEchoSet {
   bonus5pcEn?: string; // English 5-piece bonus (optional)
   bonus5pcJa?: string;
   bestFor: string[];   // character IDs this set is recommended for
-  sourceReview?: {
-    version: string;
-    sources: { language: SupportedLocale; url: string }[];
-  };
+  sourceReview?: WuWaSourceReview;
+}
+
+export interface WuWaSourceReview {
+  version: string;
+  sources: { language: SupportedLocale; url: string }[];
 }
 
 // --- Locale Helper ---

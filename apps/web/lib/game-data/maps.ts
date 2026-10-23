@@ -1,5 +1,6 @@
 import type { GameId, SupportedLocale } from '@gachia/core';
 import type { GameMapData } from '@gachia/data/games/genshin/map-data';
+import type { WuWaSourceReview } from '@gachia/data/games/wuwa/types';
 
 export interface MapRegionEntry {
   id: string;
@@ -14,6 +15,7 @@ export interface MapRegionEntry {
   spaceAnchors?: number;
   calyxes?: number;
   echoesOfWar?: number;
+  sourceReview?: WuWaSourceReview;
 }
 
 export interface MapPageData {
@@ -53,12 +55,14 @@ export async function getMapPageData(gameId: GameId, locale: SupportedLocale): P
           id: region.id,
           name: mod.getRegionName(region, locale),
           description: mod.getRegionDescription(region, locale),
-          subRegions: [],
+          // Do not expose previously hidden legacy scene lists as newly reviewed facts.
+          subRegions: region.sourceReview ? mod.getRegionList(region, 'subRegions', locale) : [],
           bosses: region.bosses,
           specialties: region.specialties,
           domains: region.domains,
-          highlights: region.highlights,
-          tips: region.tips,
+          highlights: mod.getRegionList(region, 'highlights', locale),
+          tips: mod.getRegionList(region, 'tips', locale),
+          sourceReview: region.sourceReview,
         })),
       };
     }
