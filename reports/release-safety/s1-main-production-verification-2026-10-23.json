@@ -1,0 +1,1148 @@
+{
+  "schemaVersion": 1,
+  "phase": "S1.6",
+  "date": "2026-10-23",
+  "status": "main_production_released_and_bounded_acceptance_passed",
+  "scope": "main_only_not_whole_site_runtime_SEO_or_long_term_SLO_acceptance",
+  "source": {
+    "commit": "e88ceae39e4a836725c8039884c54eba18ebdaa1",
+    "ref": "refs/heads/main",
+    "workflowSha256": "2fb17644444d3059c099351b81031f57be3fa05de89490c9d8bc130cd6f383c8",
+    "originalDirtyCheckoutModified": false,
+    "derivedGuideFilesSynchronized": 5,
+    "rawContentSourcesEdited": false
+  },
+  "accounts": {
+    "accountFeatures": false,
+    "freshMainHeaderLoginHidden": true,
+    "clientSessionPollingObserved": 0,
+    "disabledMethodProbes": 14,
+    "rejectedBeforeBusinessDatabaseAccess": true,
+    "historicalDatabaseAndSecretsRetained": true,
+    "publicShareReadPolicyPreserved": true
+  },
+  "github": {
+    "successfulProductionRunId": 39971089654,
+    "runs": [
+      {
+        "runId": 39964815717,
+        "headSha": "6bfa1d3a843cc9cad47fc9528f0354bae9a080a3",
+        "event": "push",
+        "conclusion": "success",
+        "jobs": [
+          {
+            "name": "build",
+            "conclusion": "success",
+            "wallSeconds": 583.0
+          }
+        ]
+      },
+      {
+        "runId": 39966403205,
+        "headSha": "6bfa1d3a843cc9cad47fc9528f0354bae9a080a3",
+        "event": "workflow_dispatch",
+        "conclusion": "failure",
+        "jobs": [
+          {
+            "name": "build",
+            "conclusion": "failure",
+            "wallSeconds": 555.0
+          }
+        ]
+      },
+      {
+        "runId": 39968642646,
+        "headSha": "e88ceae39e4a836725c8039884c54eba18ebdaa1",
+        "event": "push",
+        "conclusion": "success",
+        "jobs": [
+          {
+            "name": "build",
+            "conclusion": "success",
+            "wallSeconds": 947.0
+          }
+        ]
+      },
+      {
+        "runId": 39971089654,
+        "headSha": "e88ceae39e4a836725c8039884c54eba18ebdaa1",
+        "event": "workflow_dispatch",
+        "conclusion": "success",
+        "jobs": [
+          {
+            "name": "build",
+            "conclusion": "success",
+            "wallSeconds": 603.0
+          },
+          {
+            "name": "deploy-staging",
+            "conclusion": "success",
+            "wallSeconds": 169.0
+          },
+          {
+            "name": "deploy",
+            "conclusion": "success",
+            "wallSeconds": 107.0
+          }
+        ]
+      }
+    ],
+    "repositoryDeploymentVariablesChanged": false,
+    "environmentProtectionRules": {
+      "staging": [],
+      "production": []
+    },
+    "independentHumanApprovalConfigured": false,
+    "operatorAuthorization": "current_user_authorized_task",
+    "runnerWallMinutes": 49.4,
+    "perJobCeilingMinutesEstimate": 52,
+    "billingAllowanceReadable": false,
+    "tokenScopesExpanded": false,
+    "notActualInvoice": true
+  },
+  "cliCompatibility": {
+    "failureRunId": 39966403205,
+    "failureBeforeAnyCloudDeploy": true,
+    "cause": "new_gh_terminal_escape_output_guard_on_historical_deployment_log",
+    "regressionNodeTestsAdded": 2,
+    "realNewCli": {
+      "newCli": "2.103.0",
+      "failureReproduced": true,
+      "logProvenanceVerified": true,
+      "logControlSequencesStripped": true,
+      "zipBytes": 53060358,
+      "zipSha256": "18dd82b28d781661a792b998d39d341b978024f7be1fa805ac23e6a7b7fdcd35",
+      "zipSaved": false,
+      "officialFixtureDigestVerified": true
+    },
+    "realLegacyCli": {
+      "verified": true,
+      "metadata": true,
+      "log": true,
+      "logControlCharactersStripped": true,
+      "legacyGhCompatible": true
+    },
+    "systemCliReplaced": false,
+    "guardrailsRemoved": false
+  },
+  "artifact": {
+    "id": 12509287773,
+    "zipSha256": "b1a8016284dbf39855d69c9ab54a7255a9b6db81e39b2670a936058fa6338858",
+    "tarSha256": "e7c56f407c41244ccdf0cbc2ddb71bbe9811810799b62fa8fb9b76b45c4ad541",
+    "zipBytes": 53929751,
+    "expiresAt": "2026-11-22T14:46:36Z",
+    "sameArtifactAndTarForBothDeployments": true,
+    "files": 3265,
+    "links": 19,
+    "portable": true,
+    "rebuildBetweenStagingAndProduction": false,
+    "localPriorTarEquivalenceClaimed": false,
+    "zipRedownloadedAfterRelease": false,
+    "metadataAndDeploymentLogMutuallyVerified": true,
+    "previousSourceArtifactId": 12135470423,
+    "previousStaticFiles": 131,
+    "previousStaticBytes": 4019894,
+    "copied": 127,
+    "shared": 4,
+    "stagingOldAssetSamples": 12,
+    "rollbackEvidenceArtifactId": 12510296496
+  },
+  "local": {
+    "releaseNode": 96,
+    "releasePython": 9,
+    "ciContracts": 13,
+    "webTests": 268,
+    "dataTests": 47,
+    "routerTests": 31,
+    "adminPassed": 265,
+    "adminSkipped": 17,
+    "typecheckPassed": 9,
+    "lintErrors": 0,
+    "existingAuthDialogLintWarnings": 1,
+    "staticPages": 7523,
+    "buildAndDryRunPassed": true,
+    "devBrowserPassed": 16,
+    "devCanaryTokenSkipped": 8,
+    "compiledHttp": 31,
+    "compiledBrowser": 18
+  },
+  "staging": {
+    "origin": "https://gachia-staging.aieasygames.workers.dev",
+    "versionId": "0c4a7fef-2eff-4259-b2aa-446be234590e",
+    "compiledHttp": 31,
+    "compiledBrowser": 18,
+    "crossOwnerFixtures": 8,
+    "evidence": "successful_fixed_source_workflow_steps_not_downloaded_success_JSON",
+    "startupMs": 17
+  },
+  "production": {
+    "origin": "https://gachia.com",
+    "versionId": "80d20cea-4407-4ece-a87c-30f27c915021",
+    "deploymentId": "67efb2f6-b62c-4059-bcc5-c6b3143db458",
+    "deployedAt": "2026-10-23T14:50:43.051304Z",
+    "percentage": 100,
+    "workerRawKiB": 13789.08,
+    "workerGzipKiB": 2809.06,
+    "startupMs": 33,
+    "audit": {
+      "origin": "https://gachia.com",
+      "accountFeatures": false,
+      "observations": [
+        {
+          "path": "/",
+          "status": 307
+        },
+        {
+          "path": "/zh",
+          "status": 200
+        },
+        {
+          "path": "/en",
+          "status": 200
+        },
+        {
+          "path": "/ja",
+          "status": 200
+        },
+        {
+          "path": "/zh/genshin",
+          "status": 200
+        },
+        {
+          "path": "/zh/nte",
+          "status": 200
+        },
+        {
+          "path": "/zh/azur-promilia",
+          "status": 200
+        },
+        {
+          "path": "/zh/games",
+          "status": 200
+        },
+        {
+          "path": "/sitemap.xml",
+          "status": 200
+        },
+        {
+          "path": "/sitemaps/nte/index.xml",
+          "status": 200
+        },
+        {
+          "path": "/sitemaps/azur-promilia/index.xml",
+          "status": 200
+        },
+        {
+          "path": "/robots.txt",
+          "status": 200
+        },
+        {
+          "path": "/ads.txt",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "status": 404
+        },
+        {
+          "path": "/sitemaps/nte/index.xml?source=production-audit",
+          "status": 200
+        }
+      ],
+      "failures": []
+    },
+    "owners": [
+      {
+        "path": "/zh",
+        "owner": "main",
+        "kind": "html",
+        "status": 200
+      },
+      {
+        "path": "/_next/static/chunks/webpack-3df35ff23edba597.js",
+        "owner": "main",
+        "kind": "js",
+        "status": 200
+      },
+      {
+        "path": "/_next/static/css/ec5eee9cfeecd060.css",
+        "owner": "main",
+        "kind": "css",
+        "status": 200
+      },
+      {
+        "path": "/zh/genshin",
+        "owner": "genshin",
+        "kind": "html",
+        "status": 200
+      },
+      {
+        "path": "/_games/genshin/_next/static/chunks/webpack-7617905341b98b06.js",
+        "owner": "genshin",
+        "kind": "js",
+        "status": 200
+      },
+      {
+        "path": "/_games/genshin/_next/static/css/4e6b2dc0fa1e36bc.css",
+        "owner": "genshin",
+        "kind": "css",
+        "status": 200
+      },
+      {
+        "path": "/sitemaps/genshin/index.xml",
+        "owner": "genshin",
+        "kind": "xml",
+        "status": 200
+      },
+      {
+        "path": "/zh/nte",
+        "owner": "nte",
+        "kind": "html",
+        "status": 200
+      },
+      {
+        "path": "/_games/nte/_next/static/chunks/webpack-4d85dff31b7820a4.js",
+        "owner": "nte",
+        "kind": "js",
+        "status": 200
+      },
+      {
+        "path": "/_games/nte/_next/static/css/a03f215a7bc52d77.css",
+        "owner": "nte",
+        "kind": "css",
+        "status": 200
+      },
+      {
+        "path": "/sitemaps/nte/index.xml",
+        "owner": "nte",
+        "kind": "xml",
+        "status": 200
+      },
+      {
+        "path": "/zh/azur-promilia",
+        "owner": "azur-promilia",
+        "kind": "html",
+        "status": 200
+      },
+      {
+        "path": "/_games/azur-promilia/_next/static/chunks/webpack-7f4954f5c5baa9f3.js",
+        "owner": "azur-promilia",
+        "kind": "js",
+        "status": 200
+      },
+      {
+        "path": "/_games/azur-promilia/_next/static/css/9aa93cdcbed4bf47.css",
+        "owner": "azur-promilia",
+        "kind": "css",
+        "status": 200
+      },
+      {
+        "path": "/sitemaps/azur-promilia/index.xml",
+        "owner": "azur-promilia",
+        "kind": "xml",
+        "status": 200
+      },
+      {
+        "path": "/zh/lvmeng",
+        "owner": "lvmeng",
+        "kind": "html",
+        "status": 200
+      },
+      {
+        "path": "/_games/lvmeng/_next/static/chunks/webpack-884e9febaa113cd6.js",
+        "owner": "lvmeng",
+        "kind": "js",
+        "status": 200
+      },
+      {
+        "path": "/_games/lvmeng/_next/static/css/6d814f1a9060c47b.css",
+        "owner": "lvmeng",
+        "kind": "css",
+        "status": 200
+      },
+      {
+        "path": "/sitemaps/lvmeng/index.xml",
+        "owner": "lvmeng",
+        "kind": "xml",
+        "status": 200
+      }
+    ],
+    "http": [
+      {
+        "path": "/zh/hi3/weapons",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/zh/hi3/weapons/vermillion-liuli",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/zh/hi3/weapons/vermillion-liuli-full-burn",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/zh/hi3/weapons/volatile-sparkler",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/en/hi3/weapons",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/en/hi3/weapons/vermillion-liuli",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/en/hi3/weapons/vermillion-liuli-full-burn",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/en/hi3/weapons/volatile-sparkler",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/ja/hi3/weapons",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/ja/hi3/weapons/vermillion-liuli",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/ja/hi3/weapons/vermillion-liuli-full-burn",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/ja/hi3/weapons/volatile-sparkler",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/robots.txt",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/sitemap.xml",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/_next/static/chunks/webpack-3df35ff23edba597.js",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/_next/static/css/ec5eee9cfeecd060.css",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/zh/hi3/weapons/__runtime_missing__",
+        "method": "GET",
+        "status": 404
+      },
+      {
+        "path": "/api/auth/get-session",
+        "method": "GET",
+        "status": 404
+      },
+      {
+        "path": "/api/auth/sign-in/social",
+        "method": "POST",
+        "status": 404
+      },
+      {
+        "path": "/api/auth/callback/google?code=disabled&state=disabled",
+        "method": "GET",
+        "status": 404
+      },
+      {
+        "path": "/api/auth/sign-out",
+        "method": "POST",
+        "status": 404
+      },
+      {
+        "path": "/api/favorites",
+        "method": "GET",
+        "status": 404
+      },
+      {
+        "path": "/api/favorites",
+        "method": "POST",
+        "status": 404
+      },
+      {
+        "path": "/api/favorites",
+        "method": "DELETE",
+        "status": 404
+      },
+      {
+        "path": "/api/user-characters",
+        "method": "GET",
+        "status": 404
+      },
+      {
+        "path": "/api/user-characters",
+        "method": "POST",
+        "status": 404
+      },
+      {
+        "path": "/api/user-characters",
+        "method": "DELETE",
+        "status": 404
+      },
+      {
+        "path": "/api/map/progress",
+        "method": "GET",
+        "status": 404
+      },
+      {
+        "path": "/api/map/progress",
+        "method": "POST",
+        "status": 404
+      },
+      {
+        "path": "/api/map/progress",
+        "method": "PUT",
+        "status": 404
+      },
+      {
+        "path": "/api/shared-builds",
+        "method": "POST",
+        "status": 404
+      }
+    ],
+    "browser": [
+      {
+        "path": "/zh/hi3/weapons",
+        "locale": "zh",
+        "width": 1440,
+        "mode": "interactive",
+        "delayedScripts": 0,
+        "prefetchRequests": 15,
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "accountRequests": 0,
+        "cumulativeRequests": 41
+      },
+      {
+        "path": "/zh/hi3/weapons",
+        "locale": "zh",
+        "width": 1440,
+        "mode": "delayed_scripts",
+        "delayedScripts": 21,
+        "prefetchRequests": 15,
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "accountRequests": 0,
+        "cumulativeRequests": 82
+      },
+      {
+        "path": "/zh/hi3/weapons",
+        "locale": "zh",
+        "width": 1440,
+        "mode": "no_javascript",
+        "delayedScripts": 0,
+        "prefetchRequests": 0,
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "accountRequests": 0,
+        "cumulativeRequests": 85
+      },
+      {
+        "path": "/en/hi3/weapons",
+        "locale": "en",
+        "width": 1440,
+        "mode": "interactive",
+        "delayedScripts": 0,
+        "prefetchRequests": 15,
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "accountRequests": 0,
+        "cumulativeRequests": 126
+      },
+      {
+        "path": "/en/hi3/weapons",
+        "locale": "en",
+        "width": 1440,
+        "mode": "delayed_scripts",
+        "delayedScripts": 21,
+        "prefetchRequests": 15,
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "accountRequests": 0,
+        "cumulativeRequests": 167
+      },
+      {
+        "path": "/en/hi3/weapons",
+        "locale": "en",
+        "width": 1440,
+        "mode": "no_javascript",
+        "delayedScripts": 0,
+        "prefetchRequests": 0,
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "accountRequests": 0,
+        "cumulativeRequests": 170
+      },
+      {
+        "path": "/ja/hi3/weapons",
+        "locale": "ja",
+        "width": 1440,
+        "mode": "interactive",
+        "delayedScripts": 0,
+        "prefetchRequests": 15,
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "accountRequests": 0,
+        "cumulativeRequests": 211
+      },
+      {
+        "path": "/ja/hi3/weapons",
+        "locale": "ja",
+        "width": 1440,
+        "mode": "delayed_scripts",
+        "delayedScripts": 21,
+        "prefetchRequests": 15,
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "accountRequests": 0,
+        "cumulativeRequests": 252
+      },
+      {
+        "path": "/ja/hi3/weapons",
+        "locale": "ja",
+        "width": 1440,
+        "mode": "no_javascript",
+        "delayedScripts": 0,
+        "prefetchRequests": 0,
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "accountRequests": 0,
+        "cumulativeRequests": 255
+      },
+      {
+        "path": "/zh/hi3/weapons",
+        "locale": "zh",
+        "width": 390,
+        "mode": "interactive",
+        "delayedScripts": 0,
+        "prefetchRequests": 13,
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "accountRequests": 0,
+        "cumulativeRequests": 294
+      },
+      {
+        "path": "/zh/hi3/weapons",
+        "locale": "zh",
+        "width": 390,
+        "mode": "delayed_scripts",
+        "delayedScripts": 21,
+        "prefetchRequests": 13,
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "accountRequests": 0,
+        "cumulativeRequests": 333
+      },
+      {
+        "path": "/zh/hi3/weapons",
+        "locale": "zh",
+        "width": 390,
+        "mode": "no_javascript",
+        "delayedScripts": 0,
+        "prefetchRequests": 0,
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "accountRequests": 0,
+        "cumulativeRequests": 336
+      },
+      {
+        "path": "/en/hi3/weapons",
+        "locale": "en",
+        "width": 390,
+        "mode": "interactive",
+        "delayedScripts": 0,
+        "prefetchRequests": 13,
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "accountRequests": 0,
+        "cumulativeRequests": 375
+      },
+      {
+        "path": "/en/hi3/weapons",
+        "locale": "en",
+        "width": 390,
+        "mode": "delayed_scripts",
+        "delayedScripts": 21,
+        "prefetchRequests": 13,
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "accountRequests": 0,
+        "cumulativeRequests": 414
+      },
+      {
+        "path": "/en/hi3/weapons",
+        "locale": "en",
+        "width": 390,
+        "mode": "no_javascript",
+        "delayedScripts": 0,
+        "prefetchRequests": 0,
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "accountRequests": 0,
+        "cumulativeRequests": 417
+      },
+      {
+        "path": "/ja/hi3/weapons",
+        "locale": "ja",
+        "width": 390,
+        "mode": "interactive",
+        "delayedScripts": 0,
+        "prefetchRequests": 12,
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "accountRequests": 0,
+        "cumulativeRequests": 455
+      },
+      {
+        "path": "/ja/hi3/weapons",
+        "locale": "ja",
+        "width": 390,
+        "mode": "delayed_scripts",
+        "delayedScripts": 21,
+        "prefetchRequests": 12,
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "accountRequests": 0,
+        "cumulativeRequests": 493
+      },
+      {
+        "path": "/ja/hi3/weapons",
+        "locale": "ja",
+        "width": 390,
+        "mode": "no_javascript",
+        "delayedScripts": 0,
+        "prefetchRequests": 0,
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "accountRequests": 0,
+        "cumulativeRequests": 496
+      }
+    ],
+    "realCrossOwnerNavigation": [
+      {
+        "width": 1440,
+        "game": "genshin",
+        "status": 200,
+        "owner": "genshin",
+        "crossRequests": [
+          {
+            "document": true,
+            "rsc": false
+          }
+        ],
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "back": true
+      },
+      {
+        "width": 1440,
+        "game": "nte",
+        "status": 200,
+        "owner": "nte",
+        "crossRequests": [
+          {
+            "document": true,
+            "rsc": false
+          }
+        ],
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "back": true
+      },
+      {
+        "width": 1440,
+        "game": "azur-promilia",
+        "status": 200,
+        "owner": "azur-promilia",
+        "crossRequests": [
+          {
+            "document": true,
+            "rsc": false
+          }
+        ],
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "back": true
+      },
+      {
+        "width": 1440,
+        "game": "lvmeng",
+        "status": 200,
+        "owner": "lvmeng",
+        "crossRequests": [
+          {
+            "document": true,
+            "rsc": false
+          }
+        ],
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "back": true
+      },
+      {
+        "width": 390,
+        "game": "genshin",
+        "status": 200,
+        "owner": "genshin",
+        "crossRequests": [
+          {
+            "document": true,
+            "rsc": false
+          }
+        ],
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "back": true
+      },
+      {
+        "width": 390,
+        "game": "nte",
+        "status": 200,
+        "owner": "nte",
+        "crossRequests": [
+          {
+            "document": true,
+            "rsc": false
+          }
+        ],
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "back": true
+      },
+      {
+        "width": 390,
+        "game": "azur-promilia",
+        "status": 200,
+        "owner": "azur-promilia",
+        "crossRequests": [
+          {
+            "document": true,
+            "rsc": false
+          }
+        ],
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "back": true
+      },
+      {
+        "width": 390,
+        "game": "lvmeng",
+        "status": 200,
+        "owner": "lvmeng",
+        "crossRequests": [
+          {
+            "document": true,
+            "rsc": false
+          }
+        ],
+        "runtimeErrors": 0,
+        "failedAssets": 0,
+        "back": true
+      }
+    ],
+    "realCrossOwnerRequests": 683,
+    "oldEntryAssetByteChecks": 23,
+    "independentAcceptanceStartedAt": "2026-10-23T14:53:45.318Z",
+    "independentAcceptanceFinishedAt": "2026-10-23T14:56:24.908Z"
+  },
+  "observation": {
+    "status": "short_window_probes_passed",
+    "deployedAt": "2026-10-23T14:50:43.051304Z",
+    "independentStartedAt": "2026-10-23T14:53:45.163Z",
+    "finishedAt": "2026-10-23T15:00:59.502Z",
+    "probes": [
+      {
+        "at": "2026-10-23T14:53:45.164Z",
+        "secondsAfterDeployment": 182.113,
+        "checks": 34,
+        "failures": []
+      },
+      {
+        "at": "2026-10-23T14:55:43.054Z",
+        "secondsAfterDeployment": 300.003,
+        "checks": 34,
+        "failures": []
+      },
+      {
+        "at": "2026-10-23T15:00:43.055Z",
+        "secondsAfterDeployment": 600.004,
+        "checks": 34,
+        "failures": []
+      }
+    ],
+    "analytics": {
+      "windowStart": "2026-10-23T14:50:43.051304Z",
+      "windowEnd": "2026-10-23T15:00:57.618Z",
+      "workersInvocationsAdaptive": [
+        {
+          "dimensions": {
+            "scriptName": "gachia"
+          },
+          "sum": {
+            "errors": 0,
+            "requests": 914,
+            "subrequests": 148
+          }
+        }
+      ],
+      "samplingAndAggregationDelayPossible": true,
+      "includesSyntheticProbes": true,
+      "notAllHttpOrClientErrorRate": true,
+      "notLongTermSlo": true
+    }
+  },
+  "cloudReconciliation": {
+    "at": "2026-10-23T15:00:22.168Z",
+    "mode": "final",
+    "services": {
+      "gachia": {
+        "deploymentId": "67efb2f6-b62c-4059-bcc5-c6b3143db458",
+        "versions": [
+          {
+            "version_id": "80d20cea-4407-4ece-a87c-30f27c915021",
+            "percentage": 100
+          }
+        ],
+        "createdOn": "2026-10-23T14:50:43.051304Z",
+        "settingsUnchanged": true
+      },
+      "gachia-router": {
+        "deploymentId": "04a74338-c9ba-4e87-9857-0fe414457ff5",
+        "versions": [
+          {
+            "version_id": "239bb325-998c-4893-98e5-ddd24d50c99a",
+            "percentage": 100
+          }
+        ],
+        "createdOn": "2026-10-09T14:55:23.062535Z",
+        "settingsUnchanged": true
+      },
+      "gachia-game-nte": {
+        "deploymentId": "c344161b-5b10-4e87-8551-4e950366a5f1",
+        "versions": [
+          {
+            "version_id": "6b079ce0-7fce-4bef-a649-150c1a947135",
+            "percentage": 100
+          }
+        ],
+        "createdOn": "2026-10-18T11:23:20.107554Z",
+        "settingsUnchanged": true
+      },
+      "gachia-game-azur-promilia": {
+        "deploymentId": "06712d57-5067-4ceb-b039-bfe710b66126",
+        "versions": [
+          {
+            "version_id": "472903c2-3fca-43c0-a613-8c54f108bf73",
+            "percentage": 100
+          }
+        ],
+        "createdOn": "2026-10-15T09:52:48.720592Z",
+        "settingsUnchanged": true
+      },
+      "gachia-game-genshin": {
+        "deploymentId": "c087254a-58f4-4c61-b92b-0fd44d9f2f2b",
+        "versions": [
+          {
+            "version_id": "b2952171-bf58-4d64-a16e-8cea41cf9529",
+            "percentage": 100
+          }
+        ],
+        "createdOn": "2026-10-15T09:51:39.317581Z",
+        "settingsUnchanged": true
+      },
+      "gachia-game-lvmeng": {
+        "deploymentId": "d04a1d7d-d9d0-46d5-8f26-b8985e596f64",
+        "versions": [
+          {
+            "version_id": "815be742-10a4-4609-a32a-cfd0cd968487",
+            "percentage": 100
+          }
+        ],
+        "createdOn": "2026-10-18T11:22:43.202469Z",
+        "settingsUnchanged": true
+      },
+      "gachia-staging": {
+        "deploymentId": "065c4336-816c-4af4-8efe-aca03056e18e",
+        "versions": [
+          {
+            "version_id": "0c4a7fef-2eff-4259-b2aa-446be234590e",
+            "percentage": 100
+          }
+        ],
+        "createdOn": "2026-10-23T14:47:54.850932Z",
+        "settingsUnchanged": true
+      },
+      "gachia-router-staging": {
+        "deploymentId": "9a4196c1-f5ee-4b5e-906f-b17b7d75081f",
+        "versions": [
+          {
+            "version_id": "7b78ea79-6d5d-4df7-83df-f5c5f8953501",
+            "percentage": 100
+          }
+        ],
+        "createdOn": "2026-09-09T05:23:15.267041Z",
+        "settingsUnchanged": true
+      },
+      "gachia-game-azur-promilia-staging": {
+        "deploymentId": "bf548185-0862-401a-94de-dedce1d5ea26",
+        "versions": [
+          {
+            "version_id": "440ed712-bdbf-47eb-9f6c-17cca4416a41",
+            "percentage": 100
+          }
+        ],
+        "createdOn": "2026-10-23T04:01:11.146949Z",
+        "settingsUnchanged": true
+      }
+    },
+    "routesUnchanged": true,
+    "domainsUnchanged": true,
+    "rollback": {
+      "id": "db8e1a59-f46a-4f31-b57a-a318b2d70c23",
+      "number": 974,
+      "readable": true
+    }
+  },
+  "operations": {
+    "mainProductionDeployments": 1,
+    "mainStagingDeployments": 1,
+    "gameDeployments": 0,
+    "routerDeployments": 0,
+    "newCloudServices": 0,
+    "databaseOperations": false,
+    "secretChanges": false,
+    "routeChanges": false,
+    "fileCleanup": false,
+    "claimedDiskSavings": false,
+    "finalDocsPushed": false,
+    "backgroundAutomationCreated": false
+  },
+  "remaining": [
+    "production_game_runtime_rollouts_not_performed",
+    "whole_site_content_indexing_and_GSC_CWV_not_accepted",
+    "real_production_rollback_not_rehearsed",
+    "old_rollback_may_restore_login_entry_and_break_new_lazy_chunks_until_refresh",
+    "current_artifact_expiry_and_recursive_static_retention_require_lifecycle_review",
+    "independent_environment_approval_not_configured",
+    "actions_remaining_allowance_unknown",
+    "artifact_actions_Node20_migration_and_existing_lint_warning_deferred"
+  ],
+  "evidence": [
+    {
+      "path": ".release-records/s1-production-readiness/push-run.json",
+      "sha256": "d7502cd2d5788908032088834fbea205f6c0257e95c3723afa8dd45417c31e15"
+    },
+    {
+      "path": ".release-records/s1-production-readiness/production-failed-run.json",
+      "sha256": "428357d09a3f0acb1d9324c3cefcb53cc98c5435e7951b648c89a65a1e987170"
+    },
+    {
+      "path": ".release-records/s1-production-readiness/fix-push-run.json",
+      "sha256": "7b855b8a85dd81f7f88a119dbd8214121919297d9469d66bdfb1b6c29dcbfa43"
+    },
+    {
+      "path": ".release-records/s1-production-readiness/production-run.json",
+      "sha256": "b68d5a96e210a14f55e8a221cd914a9e3a499814d1a6e66dff47af24591ed6ab"
+    },
+    {
+      "path": ".release-records/s1-production-readiness/deployment-identity.json",
+      "sha256": "827348dec0b9d82a4207b3143c7209a3d169e2514e902d4093955a3c6dd4e976"
+    },
+    {
+      "path": ".release-records/s1-production-readiness/production-artifacts.json",
+      "sha256": "51955dcb99a047b255774c26d659528d5f4c8886136e45d334917fc40e2ed58f"
+    },
+    {
+      "path": ".release-records/s1-production-readiness/future-rollback-provenance.json",
+      "sha256": "9b94e74abc81594e7280b045cbf48998f5182930ea194941fee6f1bccdf5b3e8"
+    },
+    {
+      "path": ".release-records/s1-production-readiness/cloud-confirmation.json",
+      "sha256": "70edb6660b9ee17b1f5666eb8ad61380880e95081cfe6dfa7333e7abee34b64f"
+    },
+    {
+      "path": ".release-records/s1-production-readiness/cloud-before.json",
+      "sha256": "c50252ac198c3f4763635e00da59b3b182af69d7cb8c31fce1091b80e59ea9c5"
+    },
+    {
+      "path": ".release-records/s1-production-readiness/cloud-after.json",
+      "sha256": "e9ea02890effb508fa8c9dcd99028a9acc78fd88211605c6570a6bb3933822e6"
+    },
+    {
+      "path": ".release-records/s1-production-readiness/cloud-final.json",
+      "sha256": "f23e7276e31fff568e125623916781b4b9cdbc9a164c00cec871680b1dcfa0e2"
+    },
+    {
+      "path": ".release-records/s1-production-readiness/production-acceptance.json",
+      "sha256": "55e641f465390575c4a0d55d1ab10f362eb8cbe3a5c807dc0e0dc2db085bdfa2"
+    },
+    {
+      "path": ".release-records/s1-production-readiness/observation.json",
+      "sha256": "fd4ef812e3709a95b7449f5e99fd541455f927076c5db7b29185693eb8ede3e4"
+    },
+    {
+      "path": ".release-records/s1-production-readiness/metrics-before.json",
+      "sha256": "0bcca01936357776c26d4fb48dd8fba1f5963984f495ccf5dd644881771a0ed7"
+    },
+    {
+      "path": ".release-records/s1-production-readiness/gh-compat-new-cli.json",
+      "sha256": "0a74db940aa054d681b4d12383ff150d7729e53f38935a98aa54ab2d4a677254"
+    },
+    {
+      "path": ".release-records/s1-production-readiness/gh-compat-real-cli.json",
+      "sha256": "df9cb98b023fb91fd1f5400197826c309e2e28df7e5b1a1f9adca7aedb4c833c"
+    },
+    {
+      "path": ".release-records/s1-production-readiness/new-gh-metadata.json",
+      "sha256": "538fe47ee861cb3b66ec9c5ae09e2ebaae22a03a55fae95e9abc11a67eecfa7b"
+    },
+    {
+      "path": ".release-records/s1-production-readiness/gh-compat-release-tests.log",
+      "sha256": "d7e578d8f7e357f2b05825b4cde740c9fd98b4f1929c47ddb3495aa02c942608"
+    },
+    {
+      "path": ".release-records/s1-production-readiness/gh-compat-ci-tests.log",
+      "sha256": "92f851cc1e1674ad1b46f39d4b2febd5e2d794b1d9a5c6d27128410949589f1c"
+    },
+    {
+      "path": ".release-records/s1-production-readiness/github-production.log",
+      "sha256": "7484c1b0a509f328cfbe8608e4461f3003d33abe76979700bccd3e715d32134c"
+    },
+    {
+      "path": ".release-records/s1-production-readiness/production-failed-step.log",
+      "sha256": "519ff3eddd406a6fd7e22f38028877b8119ddf0f3274b57d11d0097bca8c7e5d"
+    },
+    {
+      "path": ".release-records/s1-main-preflight/old-entry-assets.json",
+      "sha256": "70c785e1bde30a60aec26e5dd4aff4304f63dde584d38fb28c4734c97198f9f4"
+    },
+    {
+      "path": ".release-records/rollout-web-480ba6a1-d644-4826-8684-2563841b1bf1/result.json",
+      "sha256": "984073b612f1f4688039f1e672245fa4c1b626065828b1674c3b74fb9942bf67"
+    }
+  ]
+}
