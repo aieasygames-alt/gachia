@@ -4,6 +4,7 @@ import { createHash, randomUUID } from 'node:crypto';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { stripVTControlCharacters } from 'node:util';
 import { retainWebAssets, verifyRetainedWebAssets } from './retain-web-assets.mjs';
 
 const repository = 'aieasygames-alt/gachia';
@@ -33,13 +34,30 @@ export function verifyPreviousDeploymentLog(log, input) {
   assert(new RegExp(`Current Version ID: ${input.versionId}(?:\\s|$)`).test(log), 'Previous deployment log does not identify the active rollback version');
 }
 
+export function createPreviousArtifactApi(exec = execFileSync) {
+  let allowMachineEscapes;
+  return (path, binary = false) => {
+    assert(/^(?:actions\/artifacts\/[1-9][0-9]*(?:\/zip)?|actions\/runs\/[1-9][0-9]*\/jobs\?per_page=100|actions\/jobs\/[1-9][0-9]*\/logs)$/.test(path), 'Unsupported previous artifact API path');
+    assert.equal(binary, path.endsWith('/zip'), 'Binary mode is only valid and required for the artifact ZIP');
+    const machinePayload = binary || path.endsWith('/logs');
+    if (machinePayload && allowMachineEscapes === undefined) {
+      const help = exec('gh', ['api', '--help'], { encoding: 'utf8', maxBuffer: 1024 * 1024, timeout: 15000 });
+      allowMachineEscapes = /--allow-escape-sequences\b/.test(help);
+    }
+    // New gh protects terminal output; these payloads stay in pipes, never a terminal.
+    const flags = machinePayload && allowMachineEscapes ? ['--allow-escape-sequences'] : [];
+    const response = exec('gh', ['api', ...flags, `/repos/${repository}/${path}`], {
+      encoding: binary ? undefined : 'utf8', maxBuffer: 128 * 1024 * 1024, timeout: binary ? 300000 : 180000,
+    });
+    return path.endsWith('/logs') ? stripVTControlCharacters(response) : response;
+  };
+}
+
 async function main() {
   if (process.argv.length !== 2) throw Error('Use explicit PREVIOUS_WEB_ARTIFACT_ID, PREVIOUS_WEB_ARTIFACT_SHA256 and ROLLBACK_VERSION');
   const input = previousArtifactInput(process.env);
   const root = resolve(import.meta.dirname, '..');
-  const api = (path, binary = false) => execFileSync('gh', ['api', `/repos/${repository}/${path}`], {
-    encoding: binary ? undefined : 'utf8', maxBuffer: 128 * 1024 * 1024, timeout: binary ? 300000 : 180000,
-  });
+  const api = createPreviousArtifactApi();
   const metadata = JSON.parse(api(`actions/artifacts/${input.artifactId}`));
   const runId = verifyPreviousArtifact(metadata, input);
   const jobs = JSON.parse(api(`actions/runs/${runId}/jobs?per_page=100`)).jobs;

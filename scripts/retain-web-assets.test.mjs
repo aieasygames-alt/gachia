@@ -4,7 +4,7 @@ import { mkdtempSync, mkdirSync, readFileSync, realpathSync, rmSync, symlinkSync
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { retainWebAssets, verifyRetainedWebAssets, verifyStagedRetainedAssets } from './retain-web-assets.mjs';
-import { previousArtifactInput, verifyPreviousArtifact, verifyPreviousDeploymentLog } from './prepare-previous-web-assets.mjs';
+import { createPreviousArtifactApi, previousArtifactInput, verifyPreviousArtifact, verifyPreviousDeploymentLog } from './prepare-previous-web-assets.mjs';
 
 const source = { artifactId: '123', archiveSha256: 'a'.repeat(64), versionId: '12345678-1234-1234-1234-123456789abc' };
 function fixture(t) {
@@ -107,4 +107,49 @@ test('deployment log must bind the exact artifact to the current version, not ju
   verifyPreviousDeploymentLog(log, source);
   for (const text of ['', log.replace('ids: 123', 'ids: 1234'), log.replace(source.versionId, source.versionId + 'bad'),
     log.replace('Current Version ID:', 'Previous Version ID:')]) assert.throws(() => verifyPreviousDeploymentLog(text, source));
+});
+
+test('new gh escape protection is opted into only for captured machine payloads', () => {
+  const calls = [];
+  const archive = Buffer.from([0x50, 0x4b, 0x1b, 0x00, 0xff]);
+  const api = createPreviousArtifactApi((command, args, options) => {
+    assert.equal(command, 'gh'); calls.push(args);
+    if (args.includes('--help')) return 'Flags: --allow-escape-sequences';
+    assert.equal(options.maxBuffer, 128 * 1024 * 1024);
+    assert(!options.stdio, 'Raw response must stay in captured pipes');
+    const path = args.at(-1);
+    if (path.endsWith('/logs')) {
+      if (!args.includes('--allow-escape-sequences')) throw Error('the response contains terminal escape sequences');
+      assert.equal(options.encoding, 'utf8'); assert.equal(options.timeout, 180000);
+      return `\u001b[32martifact-ids: 123\u001b[0m\nCurrent Version ID: ${source.versionId}\n`;
+    }
+    if (path.endsWith('/zip')) {
+      assert(args.includes('--allow-escape-sequences'));
+      assert.equal(options.encoding, undefined); assert.equal(options.timeout, 300000);
+      return archive;
+    }
+    assert(!args.includes('--allow-escape-sequences'), 'Metadata keeps normal gh protection');
+    return '{}';
+  });
+  assert.equal(api('actions/artifacts/123'), '{}');
+  const log = api('actions/jobs/456/logs');
+  assert(!log.includes('\u001b')); verifyPreviousDeploymentLog(log, source);
+  assert.equal(api('actions/artifacts/123/zip', true), archive);
+  assert.equal(calls.filter(args => args.includes('--help')).length, 1);
+});
+
+test('older gh stays compatible and the machine reader cannot select arbitrary endpoints', () => {
+  const calls = [];
+  const api = createPreviousArtifactApi((command, args) => {
+    calls.push(args); assert(!args.includes('--allow-escape-sequences'));
+    return args.includes('--help') ? 'Legacy gh api flags' : 'captured log';
+  });
+  assert.equal(api('actions/jobs/456/logs'), 'captured log');
+  assert.equal(api('actions/jobs/789/logs'), 'captured log');
+  assert.equal(calls.filter(args => args.includes('--help')).length, 1);
+  for (const path of ['https://example.com/logs', '../logs', 'actions/jobs/1/logs?other=1', 'actions/artifacts/1/zip/extra']) {
+    assert.throws(() => api(path), /Unsupported previous artifact API path/);
+  }
+  assert.throws(() => api('actions/jobs/456/logs', true), /Binary mode/);
+  assert.throws(() => api('actions/artifacts/123/zip'), /Binary mode/);
 });

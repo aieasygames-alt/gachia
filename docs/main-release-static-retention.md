@@ -15,6 +15,8 @@
 
 `scripts/prepare-previous-web-assets.mjs` 只读取固定仓库的 Actions API，确认 artifact 未过期、摘要一致、来自本仓 main，并核对成功 deploy job 日志中的 artifact ID 和 `Current Version ID`。下载后再次核验 ZIP 摘要，不执行旧产物里的代码。build job 仅增加 `actions: read`；生产 deploy job 不获得这项额外权限。
 
+GitHub runner 的 `gh` 版本可能比本地更新。读取部署日志/ZIP 时按 `gh api --help` 检测是否支持 `--allow-escape-sequences`，仅对固定白名单中的这两类机器载荷启用，输出始终捕获在管道中，不展示原始控制字符或二进制。日志去除终端控制序列后再核验对应关系；ZIP 字节保持不变再校验摘要。普通元数据不使用此开关，旧版 CLI 不传不支持的参数。
+
 旧资源只能来自可证明对应当前线上版本的产物。过期、找不到对应日志、混合流量版本或线上版本漂移时停止，不从任意 commit 重建来冒充原始产物。
 
 ## 产物顺序
