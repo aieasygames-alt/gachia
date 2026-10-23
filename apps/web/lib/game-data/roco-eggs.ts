@@ -12,24 +12,8 @@ export interface RocoEggEntry {
 }
 
 export const ROCO_EGGS: Record<RocoEggGameId, RocoEggEntry[]> = {
-  roco: [
-    {
-      id: 'starter-friend-catches',
-      name: { zh: '御三家补全', en: 'Starter completion', ja: '御三家補完' },
-      source: { zh: '好友世界捕捉，CBT 后核验', en: "Friends' worlds; recheck after CBT", ja: 'フレンド世界で捕獲。CBT後確認' },
-      status: 'watchlist',
-      priority: 'high',
-      note: { zh: '未选择御三家后续可补，首测重点确认捕捉条件。', en: 'Unpicked starters can be completed later; verify CBT capture rules.', ja: '選ばなかった御三家の補完条件をCBTで確認。' },
-    },
-    {
-      id: 'shiny-egg-watch',
-      name: { zh: '异色精灵蛋观察', en: 'Shiny egg watch', ja: '色違い卵ウォッチ' },
-      source: { zh: '国际服活动/预约奖励待确认', en: 'Pending global events and preregistration rewards', ja: '国際版イベント・事前登録報酬待ち' },
-      status: 'watchlist',
-      priority: 'medium',
-      note: { zh: '国际服奖励池尚未公开，不提前承诺掉率或蛋种。', en: 'Global reward pools are not public, so no odds or egg species are promised.', ja: '報酬プール未公開のため確率や卵種は未確定。' },
-    },
-  ],
+  // Unsupported international recommendations are preserved in the S2.10 decision archive.
+  roco: [],
   'roco-cn': [
     {
       id: 'shimmering-jinie-egg',

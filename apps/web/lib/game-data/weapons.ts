@@ -81,7 +81,7 @@ export async function getWeaponsForStaticParams(gameId: GameId): Promise<Array<{
     }
     case 'roco': {
       const mod = await import('@gachia/data/games/roco/weapons');
-      return mod.rocoWeapons.map((weapon) => ({ id: weapon.id }));
+      return mod.rocoLegacyWeaponIds.map((id) => ({ id }));
     }
     default:
       return [];
@@ -288,25 +288,8 @@ export async function getWeaponListData(
         };
       });
     }
-    case 'roco': {
-      const mod = await import('@gachia/data/games/roco/weapons');
-      return mod.rocoWeapons.map((weapon) => {
-        const effect = mod.getRocoWeaponEffect(weapon, locale);
-        const rank = rankFromRarity(weapon.rarity);
-        return {
-          id: weapon.id,
-          name: mod.getRocoWeaponName(weapon, locale),
-          rankGroup: rank,
-          rankLabel: rank,
-          typeGroup: weapon.weaponType,
-          typeLabel: weapon.weaponType,
-          stats: [],
-          effectName: effect.name,
-          effectDescription: effect.description,
-          source: mod.getRocoWeaponSource(weapon, locale),
-        };
-      });
-    }
+    case 'roco':
+      return [];
     default:
       return [];
   }
@@ -391,13 +374,8 @@ export async function getWeaponMetaData(gameId: GameId, id: string, locale: Supp
       const effect = mod.getRocoCnWeaponEffect(weapon, locale);
       return { weapon, name: mod.getRocoCnWeaponName(weapon, locale), effect };
     }
-    case 'roco': {
-      const mod = await import('@gachia/data/games/roco/weapons');
-      const weapon = mod.getRocoWeaponById(id);
-      if (!weapon) return null;
-      const effect = mod.getRocoWeaponEffect(weapon, locale);
-      return { weapon, name: mod.getRocoWeaponName(weapon, locale), effect };
-    }
+    case 'roco':
+      return null;
     default:
       return null;
   }
@@ -710,25 +688,8 @@ export async function getWeaponDetailData(
         effectTitle: getWeaponEffectTitle(gameId, locale), effectName: effect.name, effectDescription: effect.description, source, statsLine, hasPassive: true,
       };
     }
-    case 'roco': {
-      const mod = await import('@gachia/data/games/roco/weapons');
-      const weapon = mod.getRocoWeaponById(id);
-      if (!weapon) return null;
-      const effect = mod.getRocoWeaponEffect(weapon, locale);
-      const source = mod.getRocoWeaponSource(weapon, locale);
-      const name = mod.getRocoWeaponName(weapon, locale);
-      const type = ROCO_WEAPON_TYPE_LABELS[weapon.weaponType]?.[locale] ?? weapon.weaponType;
-      const statsLine = locale === 'zh' ? `${weapon.rarity}★, ${type}` : `★${weapon.rarity}, ${type}`;
-      return {
-        gameId, id: weapon.id, name, nameAlt: locale === 'zh' ? weapon.nameEn : weapon.name, rarity: weapon.rarity, titleStat: type,
-        infoCards: [
-          { label: statLabel(locale, '类型', 'タイプ', 'Type'), value: type },
-          { label: statLabel(locale, '定位', '役割', 'Role'), value: effect.name },
-          { label: statLabel(locale, '稀有度', 'レア度', 'Rarity'), value: `${weapon.rarity}★` },
-        ],
-        effectTitle: getWeaponEffectTitle(gameId, locale), effectName: effect.name, effectDescription: effect.description, source, statsLine, hasPassive: true,
-      };
-    }
+    case 'roco':
+      return null;
     default:
       return null;
   }

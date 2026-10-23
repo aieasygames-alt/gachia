@@ -2,6 +2,8 @@ import { CATEGORY_LABELS, GAMES, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
 import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
+import { rocoPublicReviewMetadata } from '@/lib/roco-public-review';
+import { RocoPublicReviewPage } from '@/components/wiki/roco-public-review-page';
 import {
   getEggPriorityLabel,
   getEggStatusLabel,
@@ -33,11 +35,7 @@ const COPY = {
 };
 
 const ROUTE_STEPS = {
-  roco: [
-    { zh: '先完成 CBT 报名和平台确认。', en: 'Finish CBT signup and platform checks first.', ja: 'まずCBT登録とプラットフォーム確認。' },
-    { zh: '开测后确认御三家补全、活动蛋和预约奖励。', en: 'After CBT opens, verify starter completion, event eggs, and preregistration rewards.', ja: 'CBT開始後、御三家補完、イベント卵、事前登録報酬を確認。' },
-    { zh: '不要提前按国服掉率推断国际服蛋池。', en: 'Do not infer global hatch pools directly from CN odds.', ja: '中国版確率をそのまま国際版に当てはめない。' },
-  ],
+  roco: [],
   'roco-cn': [
     { zh: '先换限时活动蛋和可能绝版的精灵蛋。', en: 'Exchange limited and possibly non-rerun eggs first.', ja: '限定・復刻不明の卵を先に交換。' },
     { zh: '再处理异色相关蛋和捕捉辅助蛋。', en: 'Then prioritize shiny-related and catching-utility eggs.', ja: '次に色違い関連と捕獲補助卵。' },
@@ -67,6 +65,8 @@ export async function generateMetadata({
   const { lang, game } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+
+  if (gameId === 'roco') return rocoPublicReviewMetadata('eggs', locale);
 
   if (!isRocoEggGame(gameId)) {
     return { robots: { index: false, follow: false } };
@@ -111,6 +111,8 @@ export default async function RocoEggsPage({
   const { lang, game } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+
+  if (gameId === 'roco') return <RocoPublicReviewPage route="eggs" locale={locale} />;
 
   if (!isRocoEggGame(gameId)) return null;
 

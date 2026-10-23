@@ -1,7 +1,8 @@
+import { getGameRouteLabel } from '@/lib/games/registry';
 import { serializeJsonLd } from '@/lib/jsonld-script';
 import type { Metadata } from 'next';
 import type { SupportedLocale } from '@gachia/core';
-import { GAMES, GAME_IDS, CATEGORY_LABELS } from '@gachia/core';
+import { GAMES, GAME_IDS } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
 import { buildHomepageJsonLd } from '@/lib/jsonld';
 import zhMessages from '@/messages/zh.json';
@@ -353,7 +354,7 @@ function getGameCtas(gameId: keyof typeof GAMES, locale: SupportedLocale) {
     .filter((route) => routes[route])
     .map((route) => ({
       href: `/${gameId}/${route}`,
-      label: CATEGORY_LABELS[route]?.[locale] ?? route,
+      label: getGameRouteLabel(gameId, route, locale),
     }))
     .slice(0, 4);
 }

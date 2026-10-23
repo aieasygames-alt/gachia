@@ -8,6 +8,9 @@ import { buildWeaponJsonLd } from '@/lib/jsonld';
 import { serializeJsonLd } from '@/lib/jsonld-script';
 import { buildLocalizedAlternates, limitMetaTitle } from '@/lib/seo-metadata';
 import { hi3WeaponMetadata, hi3WeaponScope } from '@/lib/hi3-weapon-scope';
+import { isRocoLegacyWeaponId } from '@gachia/data/games/roco/weapons';
+import { rocoWeaponReviewMetadata } from '@/lib/roco-public-review';
+import { RocoPublicReviewPage } from '@/components/wiki/roco-public-review-page';
 
 const RARITY_COLORS: Record<number, string> = { 1: '#9ca3af', 2: '#4ade80', 3: '#60a5fa', 4: '#a855f7', 5: '#eab308' };
 
@@ -337,6 +340,7 @@ export async function generateMetadata({
   const { lang, game, id } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+  if (gameId === 'roco') return rocoWeaponReviewMetadata(id, locale) ?? {};
   const gameName = GAMES[gameId]?.name[locale] ?? '';
   const detail = await getWeaponDetailData(gameId, id, locale);
 
@@ -398,6 +402,11 @@ export default async function WeaponDetailPage({
   const { lang, game, id } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+
+  if (gameId === 'roco') {
+    if (!isRocoLegacyWeaponId(id)) notFound();
+    return <RocoPublicReviewPage route="weapons" locale={locale} legacyId={id} />;
+  }
 
   if (gameId === 'sea') {
     notFound();

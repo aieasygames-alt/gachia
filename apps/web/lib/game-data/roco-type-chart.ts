@@ -41,21 +41,22 @@ const RESISTED: Record<string, string[]> = {
 };
 
 export function getRocoTypeElements(gameId: RocoTypeChartGameId) {
+  if (gameId === 'roco') return [];
   return GAMES[gameId].elements;
 }
 
 export function getRocoTypeMatchups(gameId: RocoTypeChartGameId): RocoTypeMatchup[] {
   const elementIds = getRocoTypeElements(gameId).map((element) => element.id);
-  return elementIds.flatMap((attack) =>
-    elementIds.map((defense) => ({
-      attack,
-      defense,
-      multiplier: getTypeMultiplier(attack, defense),
-    })),
-  );
+  return elementIds.flatMap(attack => elementIds.flatMap(defense => {
+    const multiplier = getTypeMultiplier(gameId, attack, defense);
+    return multiplier === null ? [] : [{ attack, defense, multiplier }];
+  }));
 }
 
-export function getTypeMultiplier(attack: string, defense: string): TypeEffectiveness {
+export function getTypeMultiplier(gameId: RocoTypeChartGameId, attack: string, defense: string): TypeEffectiveness | null {
+  // No international evidence: missing rules must not become neutral damage.
+  const elements = getRocoTypeElements(gameId);
+  if (!elements.some(element => element.id === attack) || !elements.some(element => element.id === defense)) return null;
   if (SUPER_EFFECTIVE[attack]?.includes(defense)) return 2;
   if (RESISTED[attack]?.includes(defense)) return 0.5;
   return 1;

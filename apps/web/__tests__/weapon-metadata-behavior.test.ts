@@ -4,6 +4,8 @@ import { describe, expect, it } from 'vitest';
 import * as core from '@gachia/core';
 import * as seo from '@/lib/seo-metadata';
 import * as scope from '@/lib/hi3-weapon-scope';
+import * as rocoReview from '@/lib/roco-public-review';
+import * as rocoWeapons from '@gachia/data/games/roco/weapons';
 
 type Metadata = {
   title?: string;
@@ -24,6 +26,9 @@ function metadataExport(page: string, detail: unknown) {
     '@gachia/core': core,
     '@/lib/seo-metadata': seo,
     '@/lib/hi3-weapon-scope': scope,
+    '@/lib/roco-public-review': rocoReview,
+    '@gachia/data/games/roco/weapons': rocoWeapons,
+    '@/components/wiki/roco-public-review-page': {},
     '@/lib/game-data/weapons': { getWeaponDetailData: async () => detail },
     'next/dynamic': { default: () => null },
     'next/navigation': {},
@@ -73,5 +78,16 @@ describe('weapon page metadata behavior (not rendered Next head)', () => {
 
   it('missing detail returns no metadata instead of inventing an announcement', async () => {
     expect(await metadataExport('[id]/page.tsx', null)({ lang: 'en', game: 'hi3', id: 'missing' })).toEqual({});
+  });
+
+  it.each(['zh', 'en', 'ja'] as const)('uses review-only metadata before generic weapon claims in %s', async locale => {
+    const id = rocoWeapons.rocoLegacyWeaponIds[0];
+    for (const page of ['page.tsx', '[id]/page.tsx']) {
+      const metadata = await metadataExport(page, { name: 'Unsupported', titleStat: '5 stars', effectDescription: 'Unverified effect' })({ lang: locale, game: 'roco', id });
+      expect(metadata).toMatchObject({ robots: { index: false, follow: true }, description: rocoReview.ROCO_PUBLIC_REVIEW.weapons[locale].description });
+      expect(metadata).not.toHaveProperty('alternates.languages');
+      expect(metadata.title).not.toContain('Unsupported');
+    }
+    expect(await metadataExport('[id]/page.tsx', { name: 'Unsupported' })({ lang: locale, game: 'roco', id: 'missing' })).toEqual({});
   });
 });

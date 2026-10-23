@@ -1,7 +1,8 @@
 import { ChevronRight } from 'lucide-react';
-import { GAMES, CATEGORY_LABELS, LOCALE_NAMES } from '@gachia/core';
+import { GAMES, LOCALE_NAMES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
+import { getGameRouteLabel } from '@/lib/games/registry';
 
 interface BreadcrumbsProps {
   lang: string;
@@ -22,7 +23,7 @@ export function Breadcrumbs({ lang, game, category, slug, slugLabel }: Breadcrum
 
   if (category) {
     items.push({
-      label: CATEGORY_LABELS[category]?.[locale] ?? category,
+      label: getGameRouteLabel(game, category, locale),
       href: `/${game}/${category}` as '/',
     });
   }

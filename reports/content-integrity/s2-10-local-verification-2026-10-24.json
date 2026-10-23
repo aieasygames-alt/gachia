@@ -1,0 +1,368 @@
+{
+  "schemaVersion": 1,
+  "phase": "S2.10",
+  "recordedAt": "2026-10-23T23:56:11.545Z",
+  "localPhaseDate": "2026-10-24 Asia/Shanghai",
+  "baseline": "146df3f",
+  "branch": "codex/multi-game-s1-release-safety",
+  "conclusion": "bounded_withdrawal_of_unverified_global_tools; not official verification, cancellation evidence, whole-site fact approval or production approval",
+  "sourceDecisions": "reports/content-integrity/s2-10-source-decisions-2026-10-24.json",
+  "coverage": {
+    "publicToolRoutes": [
+      "type-chart",
+      "eggs",
+      "merchant",
+      "weapons"
+    ],
+    "legacyWeaponIds": 10,
+    "reviewedThreeLocaleUrls": 42,
+    "cnBehaviorPreservedNotNewlyFactVerified": true,
+    "noNewOfficialGlobalEvidence": true,
+    "sharedThreeLocaleFooterAttributionCorrected": true
+  },
+  "protection": {
+    "baseline": "146df3f",
+    "originalSourcesExactlyEqualBaseline": 13,
+    "rawFilesByteUnchanged": 185,
+    "clientsAndManifestsByteUnchanged": 345,
+    "cnSourceAndMirrorFilesByteUnchanged": 20,
+    "coreRegistryByteUnchanged": true,
+    "heldLedgerByteUnchanged": true,
+    "internalEvidenceCopiedToPublicAssets": false,
+    "inventory": {
+      "contract": "raw-inventory-v1",
+      "pairs": 90,
+      "equal": 90,
+      "sourceOnly": 5,
+      "pending": [],
+      "holds": [
+        {
+          "path": "roco/raw-characters.json",
+          "status": "needs_review",
+          "sourceSha256": "c726ca7b9fdfab0274fbc4e2689bac07908cbc662020204f157fd567beb537fe",
+          "mirrorSha256": "c726ca7b9fdfab0274fbc4e2689bac07908cbc662020204f157fd567beb537fe",
+          "reason": "All six details now withhold unverified identity/appearance/mechanics claims; retained names/classifications and legacy navigation artwork remain independently unverified.",
+          "reviewDocument": "plans/multi-game-s2-8-roco-public-scope-closeout-2026-10-24.md"
+        },
+        {
+          "path": "roco/raw-guides.json",
+          "status": "needs_review",
+          "sourceSha256": "0b2ca41b4e51ea1f6e5b100dca9531795e2962c140d474a0d5de980a75263268",
+          "mirrorSha256": "0b2ca41b4e51ea1f6e5b100dca9531795e2962c140d474a0d5de980a75263268",
+          "reason": "All 30 guide URLs now carry scoped review policy: 13 verification checklists and 17 archived editorial proposals. Classification is not official game verification; identities, other public tools and registry cross-consumers remain unapproved.",
+          "reviewDocument": "plans/multi-game-s2-9-roco-editorial-separation-closeout-2026-10-24.md"
+        }
+      ],
+      "issues": [],
+      "engineeringReady": true,
+      "contentReleaseReady": false,
+      "factualApproval": "not_implied_by_mirror_equality"
+    },
+    "managed": {
+      "contract": "managed-raw-mirrors-v1",
+      "pairs": 7,
+      "entries": 111
+    },
+    "negativeGates": [
+      {
+        "name": "readiness",
+        "command": "pnpm content:release-ready",
+        "exit": 1,
+        "blockedBeforeBuildOrUpload": true
+      },
+      {
+        "name": "deploy",
+        "command": "pnpm --filter @gachia/web run deploy",
+        "exit": 1,
+        "blockedBeforeBuildOrUpload": true
+      },
+      {
+        "name": "upload",
+        "command": "pnpm --filter @gachia/web run upload",
+        "exit": 1,
+        "blockedBeforeBuildOrUpload": true
+      }
+    ]
+  },
+  "sitemap": {
+    "baselineFile": ".release-records/managed-content-49e1ed75-6e56-46ab-8855-a8baa10eecc0/main-sitemap.xml",
+    "currentFile": ".release-records/managed-content-a648229f-9932-4ba9-acf5-b4f3a6cff7e9/main-sitemap.xml",
+    "prerenderFile": "apps/web/.next/server/app/sitemaps/main/sitemap.xml.body",
+    "baselineType": "previous local compiled Worker; not current production HTTP",
+    "before": 4359,
+    "after": 4347,
+    "removed": [
+      "https://gachia.com/en/roco/eggs",
+      "https://gachia.com/en/roco/merchant",
+      "https://gachia.com/en/roco/type-chart",
+      "https://gachia.com/en/roco/weapons",
+      "https://gachia.com/ja/roco/eggs",
+      "https://gachia.com/ja/roco/merchant",
+      "https://gachia.com/ja/roco/type-chart",
+      "https://gachia.com/ja/roco/weapons",
+      "https://gachia.com/zh/roco/eggs",
+      "https://gachia.com/zh/roco/merchant",
+      "https://gachia.com/zh/roco/type-chart",
+      "https://gachia.com/zh/roco/weapons"
+    ],
+    "added": [],
+    "actualWorkerEqualsPrerender": true,
+    "rootIndexXmlUnchanged": true,
+    "rootOwnersUnchanged": true,
+    "byLocale": {
+      "zh": 1527,
+      "en": 1524,
+      "ja": 1296
+    }
+  },
+  "verification": {
+    "dataTests": {
+      "passed": 133,
+      "files": 11
+    },
+    "webTests": {
+      "passed": 321,
+      "files": 69
+    },
+    "routerTests": {
+      "passed": 31,
+      "files": 3
+    },
+    "releaseNodeTests": 104,
+    "retentionPythonTests": 9,
+    "xmlPythonTests": 8,
+    "typeChecks": {
+      "apps": [
+        "data",
+        "web",
+        "game-genshin",
+        "game-nte",
+        "game-lvmeng",
+        "game-azur-promilia"
+      ],
+      "passed": true
+    },
+    "dataValidation": true,
+    "manifestValidation": true,
+    "lint": {
+      "errors": 0,
+      "warnings": 1,
+      "existingWarning": "auth-dialog react-hooks/exhaustive-deps"
+    },
+    "mainOpenNextBuild": true,
+    "wranglerDryRun": {
+      "passed": true,
+      "uploadKiB": 14055.35,
+      "gzipKiB": 2889.75,
+      "actualUpload": false
+    },
+    "managedContent": {
+      "record": ".release-records/managed-content-a648229f-9932-4ba9-acf5-b4f3a6cff7e9/result.json",
+      "browserCases": 448,
+      "successfulPages": 436,
+      "expected404Cases": 12,
+      "rawJsonCases": 7,
+      "searchJsonCases": 3,
+      "realListDetailClicks": 18,
+      "realToolNavigationClicks": 24,
+      "byKind": {
+        "archive": 4,
+        "backport": 6,
+        "cn-map": 6,
+        "codes": 6,
+        "echo": 18,
+        "echo-list": 6,
+        "region": 6,
+        "roco-characters-list": 6,
+        "roco-cn-tool": 30,
+        "roco-events": 6,
+        "roco-guides-list": 6,
+        "roco-home": 6,
+        "roco-public-review": 48,
+        "roco-reviewed-character": 36,
+        "roco-reviewed-guide": 180,
+        "roco-unknown-weapon": 12,
+        "roco-version": 6,
+        "roco-weapon-review": 60
+      }
+    },
+    "runtime": {
+      "record": ".release-records/rollout-web-a3d3ed70-50ed-4a04-a243-e4656398caae/result.json",
+      "status": "local_runtime_verified",
+      "httpCases": 32,
+      "browserCases": 18
+    },
+    "seoDiscovery": {
+      "record": ".release-records/seo-discovery-web-5e71e11f-08c6-46e7-8df6-5bcd512de2f0/result.json",
+      "status": "local_seo_discovery_verified",
+      "browserCases": 32
+    },
+    "supersededCompiledRuns": [
+      {
+        "record": ".release-records/managed-content-5153fed2-bdff-4e09-bc9a-f2e8c92b10c3/result.json",
+        "reason": "CN weapon selector included next-step and surrounding headings (14 instead of 10). Scoped to item headings under rarity groups, then repeated the complete compiled suite. Intermediate failure is not final acceptance."
+      },
+      {
+        "record": ".release-records/managed-content-5ff66390-7db0-4ae8-814b-3951f13b5daf/result.json",
+        "runtimeRecord": ".release-records/rollout-web-fbb370d5-2779-41f0-a6c5-7efdec634aaa/result.json",
+        "discoveryRecord": ".release-records/seo-discovery-web-29ec7d0e-5a26-45c5-9d18-c439cd4c0948/result.json",
+        "reason": "All suites passed the earlier artifact, but visual review found the shared footer still asserted blanket game-client sourcing. Corrected all three locales and rebuilt/repeated every compiled suite; these earlier passes do not accept the final artifact."
+      }
+    ],
+    "visualInspection": {
+      "viewed": [
+        ".release-records/managed-content-a648229f-9932-4ba9-acf5-b4f3a6cff7e9/roco-public-review-type-chart-1440.png",
+        ".release-records/managed-content-a648229f-9932-4ba9-acf5-b4f3a6cff7e9/roco-weapon-review-huanxing-xingguang-390.png"
+      ],
+      "result": "Desktop correction scope and checks, mobile legacy URL label, wrapped navigation and shared source disclaimer are readable in the existing visual language. No claim of CDN health, image identity or asset authorization."
+    },
+    "externalResources": "Blocked outside the local Worker; CDN health, image identity and live game rules not verified",
+    "actions": "not_run",
+    "cloudStaging": "not_performed",
+    "productionHttp": "not_performed"
+  },
+  "localArtifact": {
+    "root": "apps/web/.open-next",
+    "fileCount": 3145,
+    "fileBytes": 108365305,
+    "treeSha256": "a572e02106b10938e5901d35743c3fa645662286c57c7ec742823088d99c54e5",
+    "fileTreeSha256": "cf862a36a170806736952617ff37a35c2d06665354f5ad5da2519656b032dd75",
+    "symlinkTreeSha256": "73f878dbcc7526ebd9735bfadd46c79ac511758453cc31eeb8edec0bdf8da656",
+    "symlinks": [
+      {
+        "path": "server-functions/default/apps/web/node_modules/next",
+        "target": "../../../node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/next",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/apps/web/node_modules/react",
+        "target": "../../../node_modules/.pnpm/react@19.2.4/node_modules/react",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/@next/env",
+        "target": "../../../@next+env@15.5.28/node_modules/@next/env",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/@swc/helpers",
+        "target": "../../../@swc+helpers@0.5.15/node_modules/@swc/helpers",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/postcss",
+        "target": "../../postcss@8.4.31/node_modules/postcss",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/react",
+        "target": "../../react@19.2.4/node_modules/react",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/react-dom",
+        "target": "../../react-dom@19.2.4_react@19.2.4/node_modules/react-dom",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/styled-jsx",
+        "target": "../../styled-jsx@5.1.6_react@19.2.4/node_modules/styled-jsx",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/node_modules/source-map-support",
+        "target": "../source-map-support@0.5.21/node_modules/source-map-support",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/postcss@8.4.31/node_modules/nanoid",
+        "target": "../../nanoid@3.3.15/node_modules/nanoid",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/postcss@8.4.31/node_modules/picocolors",
+        "target": "../../picocolors@1.1.1/node_modules/picocolors",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/postcss@8.4.31/node_modules/source-map-js",
+        "target": "../../source-map-js@1.2.1/node_modules/source-map-js",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/react-dom@19.2.4_react@19.2.4/node_modules/react",
+        "target": "../../react@19.2.4/node_modules/react",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/sharp@0.35.5_@types+node@25.6.0/node_modules/detect-libc",
+        "target": "../../detect-libc@2.1.2/node_modules/detect-libc",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/sharp@0.35.5_@types+node@25.6.0/node_modules/semver",
+        "target": "../../semver@7.8.5/node_modules/semver",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/source-map-support@0.5.21/node_modules/buffer-from",
+        "target": "../../buffer-from@1.1.2/node_modules/buffer-from",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/source-map-support@0.5.21/node_modules/source-map",
+        "target": "../../source-map@0.6.1/node_modules/source-map",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/styled-jsx@5.1.6_react@19.2.4/node_modules/client-only",
+        "target": "../../client-only@0.0.1/node_modules/client-only",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/styled-jsx@5.1.6_react@19.2.4/node_modules/react",
+        "target": "../../react@19.2.4/node_modules/react",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      }
+    ],
+    "hashAlgorithm": "Composite SHA256: file-tree-v1 + NUL + hex fileTreeSha256 + NUL + symlink-tree-v1 + NUL + hex symlinkTreeSha256. File tree: sorted relative UTF-8 path + NUL + binary file SHA256; link tree: sorted relative path + NUL + literal target + NUL; do not follow directory links",
+    "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+    "note": "Entrypoint alone is not complete artifact identity; no cloud sealing or promotion implied"
+  },
+  "remaining": [
+    "Six historical character identities, names, artwork rights and classifications lack independent evidence",
+    "Remaining registry, item/redeem-code aggregations and dead legacy copy require bounded consumer review",
+    "Both factual holds and Genshin strict migration/cross-owner cloud acceptance remain outstanding"
+  ],
+  "safety": {
+    "push": false,
+    "cloudDeployment": false,
+    "actionsTriggered": false,
+    "databaseChange": false,
+    "loginChange": false,
+    "topologyChange": false,
+    "newTelemetry": false,
+    "fileCleanupOrHistoricalEvidenceDeletion": false,
+    "originalDirtyCheckoutTouched": false
+  },
+  "evidenceDirectory": ".release-records/s2-10"
+}

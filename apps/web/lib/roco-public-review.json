@@ -116,6 +116,122 @@
           "地点の掲載保留は地域や機能の不存在を意味しません。確認前に旧ルートで資源や時間を計画しないでください。"
         ]
       }
+    },
+    "type-chart": {
+      "zh": {
+        "title": "国际服属性倍率撤回说明",
+        "description": "旧表复用了国服参考关系，并把未列组合默认填成 1 倍，无法证明国际服伤害规则，现已撤回。本页不提供替代倍率，不据此配队或安排培养。",
+        "checks": [
+          "每条关系须核对作品、区服、客户端版本、攻击与防御属性及可复现的伤害记录。",
+          "未知不等于普通伤害；不能用默认 1 倍、零伤害或其他游戏的相性补齐空格。",
+          "国服参考表的保留不是国际服规则已获确认；复合属性、技能例外与免疫须分别取证。"
+        ]
+      },
+      "en": {
+        "title": "Global Type Multipliers Withdrawn",
+        "description": "The old chart reused CN reference relationships and defaulted unlisted pairs to 1x. This cannot establish global damage rules and is withdrawn. No replacement multipliers or team and investment advice are offered here.",
+        "checks": [
+          "Each relationship needs game identity, region, client version, attack and defense types, and reproducible damage records.",
+          "Unknown is not neutral damage. Never fill gaps with default 1x, zero damage or another game's type rules.",
+          "Retaining the CN reference is not global verification. Dual types, skill exceptions and immunities need separate evidence."
+        ]
+      },
+      "ja": {
+        "title": "国際版属性倍率の撤回",
+        "description": "旧表は中国版参考相性を流用し、未掲載の組合せを1倍で埋めていました。国際版のダメージ規則の根拠にならないため撤回しました。代替倍率や編成・育成推奨は掲載しません。",
+        "checks": [
+          "相性ごとに作品、地域、クライアント版、攻撃・防御属性、再現可能なダメージ記録を確認します。",
+          "不明は通常ダメージではありません。既定の1倍、ゼロ、他作品の相性で穴を埋めないでください。",
+          "中国版参考表の保存は国際版の検証ではありません。複合属性、スキル例外、無効化は個別に根拠が必要です。"
+        ]
+      }
+    },
+    "eggs": {
+      "zh": {
+        "title": "国际服精灵蛋资料审核",
+        "description": "旧条目的好友世界补全、异色蛋、预约奖励及兑换优先级没有可复核的国际服依据，现已撤回。本页不提供蛋池、概率、保底、截止日或补全路线，也不证明对应功能不存在。",
+        "checks": [
+          "先核对物品身份、区服、版本和原始来源，区分精灵捕捉与孵化系统。",
+          "蛋池、概率、保底、兑换条件和有效期分别核实，不能从国服或旧占位条目推导。",
+          "在条件确认前不建议报名、付费、兑换或为所谓限时奖励安排资源。"
+        ]
+      },
+      "en": {
+        "title": "Global Egg Information Review",
+        "description": "Earlier friend-world completion, shiny eggs, preregistration rewards and exchange priorities lack reproducible global support and are withdrawn. No pools, odds, pity, deadlines or completion route are provided; this does not establish feature nonexistence.",
+        "checks": [
+          "Check item identity, region, version and original sources, distinguishing creature capture from a hatching system.",
+          "Verify pools, odds, pity, exchange conditions and validity separately. CN records or old placeholders cannot establish them.",
+          "Do not sign up, pay, exchange or plan resources for supposed limited rewards before the conditions are verified."
+        ]
+      },
+      "ja": {
+        "title": "国際版の卵資料の確認",
+        "description": "旧項目のフレンド世界での補完、色違い卵、事前登録報酬、交換優先度には再確認可能な国際版の根拠がなく、撤回しました。プール、確率、保証、期限、補完ルートを掲載せず、機能の不存在も断定しません。",
+        "checks": [
+          "アイテム、地域、版、原典を確認し、精霊の捕獲と孵化の仕組みを区別します。",
+          "プール、確率、保証、交換条件、有効期間を個別に確認します。中国版や旧仮項目から推定しません。",
+          "条件を確認するまで、応募、支払い、交換、限定報酬を想定した資源投入を勧めません。"
+        ]
+      }
+    },
+    "merchant": {
+      "zh": {
+        "title": "国际服商人与购买建议审核",
+        "description": "旧观察条目在商人身份、库存、价格与经济规则尚未核实时仍推荐优先购买捕捉道具，现已撤回。本页不提供刷新时间、位置、实时库存或购买排序，不将未知写成免费、零价或缺货。",
+        "checks": [
+          "商人身份、地点、刷新周期、时区和客户端版本需要可复核的来源。",
+          "商品、货币、价格、限购及资源产出分别核实；国服清单不能证明国际服库存。",
+          "未核实条目不提供购买优先级；无数据不表示商店不存在、已售罄或活动取消。"
+        ]
+      },
+      "en": {
+        "title": "Global Merchant and Buying Advice Review",
+        "description": "The old watchlist recommended buying capture items before merchant identity, stock, prices and economy rules were verified. That advice is withdrawn. No refresh times, locations, live stock or buy order are supplied; unknown is not free, zero-price or sold out.",
+        "checks": [
+          "Merchant identity, location, refresh cycle, time zone and client version require reproducible sources.",
+          "Verify goods, currency, prices, limits and resource income separately. A CN list cannot establish global inventory.",
+          "Unverified entries must not carry purchase priorities. Missing data does not prove a shop absent, sold out or cancelled."
+        ]
+      },
+      "ja": {
+        "title": "国際版商人・購入推奨の確認",
+        "description": "旧確認待ち項目は商人、在庫、価格、経済規則が未確認のまま捕獲道具の優先購入を勧めていたため撤回しました。更新時刻、場所、リアルタイム在庫、購入順は掲載しません。不明を無料・ゼロ価格・売切れにしません。",
+        "checks": [
+          "商人、場所、更新周期、タイムゾーン、クライアント版には再確認可能な出典が必要です。",
+          "商品、通貨、価格、制限、資源供給を個別に確認します。中国版の一覧は国際版の在庫を証明しません。",
+          "未確認項目に購入優先度を付けません。データ不足は商店の不存在、売切れ、中止を意味しません。"
+        ]
+      }
+    },
+    "weapons": {
+      "zh": {
+        "title": "国际服法杖历史资料撤回说明",
+        "description": "旧法杖清单假定国服与国际服共用外观系统，列出未经独立核实的名称、星级、特效、变身与赛季获取方式，现已撤回。历史地址仅保留纠错说明，不代表已确认国际服物品或收藏建议。",
+        "checks": [
+          "逐项核对物品身份、区服、版本、名称与翻译，国服社区清单不能直接证明国际服实装。",
+          "外观、战斗作用、稀有度、赛季与获取条件分别核实；未知不等于纯外观、无攻击成长或免费。",
+          "旧 URL 标识只用于追溯，不是官方名称或数量证据。核实前不据此购买战令、参与活动或决定收集。"
+        ]
+      },
+      "en": {
+        "title": "Global Staff Legacy Information Withdrawn",
+        "description": "The old staff list assumed shared CN and global cosmetics, with independently unverified names, stars, effects, transformations and season acquisition. These claims are withdrawn. Legacy URLs retain corrections only, not confirmed global items or collection advice.",
+        "checks": [
+          "Check item identity, region, version, name and translation individually. A CN community list cannot establish global implementation.",
+          "Verify visuals, combat effects, rarity, seasons and acquisition separately. Unknown is not cosmetic-only, no attack growth or free.",
+          "Old URL keys are for traceability, not official names or inventory counts. Do not buy passes, join events or plan collections on this basis."
+        ]
+      },
+      "ja": {
+        "title": "国際版の杖・過去資料の撤回",
+        "description": "旧一覧は中国版と国際版の外観システム共通を前提とし、独立未確認の名称、星、演出、変身、シーズン入手先を掲載していました。これらを撤回し、旧URLには訂正説明のみを残します。確認済み国際版アイテムや収集推奨ではありません。",
+        "checks": [
+          "アイテム、地域、版、名称、翻訳を個別に確認します。中国版コミュニティ一覧は国際版実装の証明になりません。",
+          "外観、戦闘効果、レア度、シーズン、入手条件を分けて確認します。不明は外観専用、攻撃成長なし、無料ではありません。",
+          "旧URLのキーは追跡用で、公式名称や総数の根拠ではありません。確認前にパス購入、イベント参加、収集判断に使わないでください。"
+        ]
+      }
     }
   },
   "lists": {
@@ -152,6 +268,20 @@
         "description": "編集確認リストと非公式製品提案の保存説明を分けた資料索引。公式の事実確認や本站の開発約束ではありません。",
         "notice": "注目欄は編集確認リストのみです。過去の製品・運営提案を別の保存分類に分け、原文は内部審査記録に残します。保存説明はプレイヤー攻略・公式計画・本站の実装済み機能ではありません。全詳細の検索提出を保留し、記録数は公式内容の規模を示しません。"
       }
+    }
+  },
+  "navigation": {
+    "zh": {
+      "reviewSuffix": "（审核说明）",
+      "legacyId": "历史地址标识（非官方物品身份）"
+    },
+    "en": {
+      "reviewSuffix": " (review notice)",
+      "legacyId": "Legacy URL key (not official item identity)"
+    },
+    "ja": {
+      "reviewSuffix": "（確認説明）",
+      "legacyId": "旧URLキー（公式アイテムの同一性ではありません）"
     }
   }
 }

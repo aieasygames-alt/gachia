@@ -9,6 +9,8 @@ import {
   isRocoTypeChartGame,
 } from '@/lib/game-data/roco-type-chart';
 import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
+import { rocoPublicReviewMetadata } from '@/lib/roco-public-review';
+import { RocoPublicReviewPage } from '@/components/wiki/roco-public-review-page';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -69,6 +71,8 @@ export async function generateMetadata({
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
 
+  if (gameId === 'roco') return rocoPublicReviewMetadata('type-chart', locale);
+
   if (!isRocoTypeChartGame(gameId)) {
     return { robots: { index: false, follow: false } };
   }
@@ -112,6 +116,8 @@ export default async function RocoTypeChartPage({
   const { lang, game } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+
+  if (gameId === 'roco') return <RocoPublicReviewPage route="type-chart" locale={locale} />;
 
   if (!isRocoTypeChartGame(gameId)) {
     return null;
@@ -180,7 +186,7 @@ export default async function RocoTypeChartPage({
                   {attack.name[locale]}
                 </th>
                 {elements.map((defense) => {
-                  const multiplier = getTypeMultiplier(attack.id, defense.id);
+                  const multiplier = getTypeMultiplier(gameId, attack.id, defense.id);
                   const tone = multiplier === 2
                     ? 'border-emerald-500/40 bg-emerald-500/10 text-emerald-300'
                     : multiplier === 0.5
@@ -189,7 +195,7 @@ export default async function RocoTypeChartPage({
                   return (
                     <td key={defense.id} className="p-2 text-center">
                       <span className={`inline-flex min-w-14 items-center justify-center rounded border px-2 py-1 text-xs font-semibold ${tone}`}>
-                        {multiplier}x
+                        {multiplier === null ? { zh: '待核实', en: 'Unverified', ja: '未確認' }[locale] : `${multiplier}x`}
                       </span>
                     </td>
                   );

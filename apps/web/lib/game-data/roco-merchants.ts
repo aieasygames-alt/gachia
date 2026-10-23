@@ -19,28 +19,8 @@ export interface RocoMerchantEntry {
 }
 
 export const ROCO_MERCHANTS: Record<RocoMerchantGameId, RocoMerchantEntry[]> = {
-  roco: [
-    {
-      id: 'global-cbt-watchlist',
-      name: { zh: '国际服 CBT 商人观察', en: 'Global CBT Merchant Watchlist', ja: '国際版CBT商人ウォッチ' },
-      location: { zh: 'CBT 开服后核验', en: 'Recheck after CBT opens', ja: 'CBT開始後に確認' },
-      refresh: { zh: '待官方/实测确认', en: 'Pending official or hands-on confirmation', ja: '公式または実測待ち' },
-      status: 'watchlist',
-      updatedAt: '2026-09-07',
-      items: [
-        {
-          name: { zh: '捕捉球类', en: 'Capture pods', ja: '捕獲ポッド' },
-          priority: 'buy',
-          note: { zh: '开荒、抓宠和图鉴补全的第一优先级。', en: 'Highest priority for catching and early codex progress.', ja: '捕獲と図鑑進行の最優先。' },
-        },
-        {
-          name: { zh: '经验与培养材料', en: 'EXP and training materials', ja: '経験値・育成素材' },
-          priority: 'consider',
-          note: { zh: '确认 CBT 资源产出后再调整优先级。', en: 'Adjust after CBT economy and drops are known.', ja: 'CBTの資源入手量を確認後に調整。' },
-        },
-      ],
-    },
-  ],
+  // Unsupported international recommendations are preserved in the S2.10 decision archive.
+  roco: [],
   'roco-cn': [
     {
       id: 'wandering-merchant',

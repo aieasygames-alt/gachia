@@ -18,7 +18,7 @@ export function SiteFooter({ locale }: SiteFooterProps) {
           {/* Brand */}
           <div>
             <h3 className="mb-2 text-lg font-bold text-game-primary">Gachia</h3>
-            <p className="text-sm text-game-text-muted">
+            <p data-source-disclaimer className="text-sm text-game-text-muted">
               {t('disclaimer')}
             </p>
           </div>

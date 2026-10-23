@@ -7,6 +7,8 @@ import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
 import { hi3WeaponMetadata, hi3WeaponScope } from '@/lib/hi3-weapon-scope';
 import { serializeJsonLd } from '@/lib/jsonld-script';
+import { rocoPublicReviewMetadata } from '@/lib/roco-public-review';
+import { RocoPublicReviewPage } from '@/components/wiki/roco-public-review-page';
 
 const BASE_URL = 'https://gachia.com';
 const ZzzQueuedWeapons = dynamic(() => import('./zzz-queued-weapons').then((mod) => mod.ZzzQueuedWeapons));
@@ -22,7 +24,6 @@ const WEAPON_DESC: Record<string, Record<string, string>> = {
   endfield: { zh: '明日方舟：终末地武器图鉴，收录 Pioneer Test 武器属性、效果和适配参考。后续测试与正式版请以官方公告为准。', en: 'Arknights: Endfield weapon roster with Pioneer Test stats, effects, and fit references. Use official announcements for future tests and release data.', ja: 'アークナイツ：エンドフィールド武器図鑑。Pioneer Test の性能、効果、適性参考を収録。今後のテストと正式版は公式発表を基準にしてください。' },
   skjh: { zh: '失控进化武器与工具图鉴，覆盖石斧、石镐、木矛、猎弓和预约外观，方便你区分开荒工具、战斗武器和外观奖励。', en: 'Ashfall Evolution weapon and tool list with stone tools, spear, bow, and reservation cosmetics, covering early-game tools, combat gear, and rewards.', ja: '失控進化の武器・道具一覧。石斧、石つるはし、槍、弓、予約外観を整理しています。' },
   'roco-cn': { zh: '洛克王国：世界国服魔法杖图鉴，覆盖 S1/S2/S3 赛季战令限定与活动赠送的法杖，整理每把法杖的施法特效、变身表现与获取方式，方便你规划外观收集。', en: 'Roco Kingdom: World CN magic staff list covering S1/S2/S3 battle-pass and event staves, with casting effects, transformation looks, and how to obtain them for collection planning.', ja: 'ロコ・キングダム：ワールド中国版の魔法杖図鑑。S1/S2/S3バトルパスとイベントの杖を網羅し、演出・変身見た目・入手方法を整理。' },
-  'roco': { zh: '洛克王国：世界国际服魔法杖图鉴，覆盖赛季战令限定与活动赠送的法杖，整理每把法杖的施法特效、变身表现与获取方式，方便你规划外观收集。', en: 'Roco Kingdom: World global magic staff list covering battle-pass and event staves, with casting effects, transformation looks, and how to obtain them for collection planning.', ja: 'ロコ・キングダム：ワールド国際版の魔法杖図鑑。バトルパスとイベントの杖を網羅し、演出・変身見た目・入手方法を整理。' },
 };
 
 const WEAPON_INTRO: Record<string, Record<SupportedLocale, string>> = {
@@ -81,11 +82,6 @@ const WEAPON_INTRO: Record<string, Record<SupportedLocale, string>> = {
     en: 'Browse the Roco Kingdom: World CN staff wiki by rarity and source to review each staff’s casting effect and transformation look before prioritizing your collection.',
     ja: 'ロコ・キングダム：ワールド中国版の杖図鑑をレアリティ・入手先で確認し、演出と変身見た目を把握してから収集優先度を決められます。',
   },
-  'roco': {
-    zh: '按稀有度和获取方式快速浏览洛克王国：世界国际服法杖图鉴，适合先看每把法杖的施法特效与变身表现，再决定外观收集优先级。',
-    en: 'Browse the Roco Kingdom: World global staff wiki by rarity and source to review each staff’s casting effect and transformation look before prioritizing your collection.',
-    ja: 'ロコ・キングダム：ワールド国際版の杖図鑑をレアリティ・入手先で確認し、演出と変身見た目を把握してから収集優先度を決められます。',
-  },
 };
 
 function getWeaponIntro(gameId: string, locale: SupportedLocale) {
@@ -100,6 +96,7 @@ export async function generateMetadata({
   const { lang, game } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+  if (gameId === 'roco') return rocoPublicReviewMetadata('weapons', locale);
   const gameName = GAMES[gameId]?.name[locale];
   const categoryLabel = CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons';
   const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/weapons`, LOCALES);
@@ -141,6 +138,7 @@ export default async function WeaponsPage({
   const { lang, game } = await params;
   const gameId = game as GameId;
   const locale = lang as SupportedLocale;
+  if (gameId === 'roco') return <RocoPublicReviewPage route="weapons" locale={locale} />;
   const gameConfig = GAMES[gameId];
   const gameName = gameConfig?.name[locale] ?? '';
 
@@ -276,18 +274,11 @@ const ROCO_CN_WEAPON_NEXT_STEPS: NextStepLink[] = [
   { href: '/roco-cn/guides', title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' }, description: { zh: '继续看版本与养成攻略', en: 'Continue with version and build guides', ja: '版本・育成ガイドへ進む' } },
 ];
 
-const ROCO_WEAPON_NEXT_STEPS: NextStepLink[] = [
-  { href: '/roco/characters', title: { zh: '看精灵图鉴', en: 'Browse sprites', ja: 'スプライト図鑑へ' }, description: { zh: '先看精灵属性、技能与种族值', en: 'Review sprite stats, skills, and base stats', ja: 'スプライトの属性・スキル・種族値を見る' } },
-  { href: '/roco/tier-list', title: { zh: '看节奏榜', en: 'Open tier list', ja: 'Tierリストへ' }, description: { zh: '按强度优先级决定先养谁', en: 'Pick which sprites to build first by tier', ja: 'Tierで育成優先度を決める' } },
-  { href: '/roco/guides', title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' }, description: { zh: '继续看版本与养成攻略', en: 'Continue with version and build guides', ja: '版本・育成ガイドへ進む' } },
-];
-
 function getWeaponNextSteps(gameId: GameId) {
   if (gameId === 'wuwa') return WUWA_WEAPON_NEXT_STEPS;
   if (gameId === 'zzz') return ZZZ_WEAPON_NEXT_STEPS;
   if (gameId === 'endfield') return ENDFIELD_WEAPON_NEXT_STEPS;
   if (gameId === 'roco-cn') return ROCO_CN_WEAPON_NEXT_STEPS;
-  if (gameId === 'roco') return ROCO_WEAPON_NEXT_STEPS;
   return undefined;
 }
 

@@ -2,6 +2,8 @@ import { CATEGORY_LABELS, GAMES, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
 import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
+import { rocoPublicReviewMetadata } from '@/lib/roco-public-review';
+import { RocoPublicReviewPage } from '@/components/wiki/roco-public-review-page';
 import {
   getPriorityLabel,
   getStatusLabel,
@@ -57,6 +59,8 @@ export async function generateMetadata({
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
 
+  if (gameId === 'roco') return rocoPublicReviewMetadata('merchant', locale);
+
   if (!isRocoMerchantGame(gameId)) {
     return { robots: { index: false, follow: false } };
   }
@@ -100,6 +104,8 @@ export default async function RocoMerchantPage({
   const { lang, game } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+
+  if (gameId === 'roco') return <RocoPublicReviewPage route="merchant" locale={locale} />;
 
   if (!isRocoMerchantGame(gameId)) return null;
 

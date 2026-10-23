@@ -1,5 +1,11 @@
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
+import { isRocoPublicPageUnderReview, ROCO_REVIEW_NAVIGATION } from '../roco-public-review';
+
+export function getGameRouteLabel(gameId: GameId, route: string, locale: SupportedLocale) {
+  const label = CATEGORY_LABELS[route]?.[locale] ?? route;
+  return isRocoPublicPageUnderReview(gameId, route) ? `${label}${ROCO_REVIEW_NAVIGATION[locale].reviewSuffix}` : label;
+}
 
 /**
  * Get game configuration by ID.
@@ -21,7 +27,7 @@ export function getGameRoutes(gameId: GameId) {
     .map(([route]) => ({
       slug: route,
       label: (locale: SupportedLocale) =>
-        CATEGORY_LABELS[route]?.[locale] ?? route,
+        getGameRouteLabel(gameId, route, locale),
     }));
 }
 
