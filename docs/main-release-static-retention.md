@@ -8,7 +8,7 @@
 
 ## 生产输入与可信链
 
-正式发布仍通过 `.github/workflows/deploy.yml` 的手动 production 入口，要求 main ref、`RELEASE_MAIN_ONLY`、production 环境审批和当前 100% 活跃版本。新增两个显式输入：
+正式发布仍通过 `.github/workflows/deploy.yml` 的手动 production 入口，要求 main ref、`RELEASE_MAIN_ONLY`、production environment job 和当前 100% 活跃版本。environment job 只有在仓库配置了保护规则后才提供人工审批，不得仅凭存在 environment 名称就声称已经审批。新增两个显式输入：
 
 - `previous_web_artifact_id`：产生当前线上版本的精确 GitHub artifact ID；同 commit 的不同运行不能互换。
 - `previous_web_artifact_sha256`：GitHub artifact ZIP 的 SHA-256，不是 ZIP 内 `web-worker.tar.gz` 的摘要。
