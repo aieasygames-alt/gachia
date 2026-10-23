@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "baselineCommit": "7184be2",
+  "phase": "S2.2",
+  "scope": "local committed-content engineering reconciliation; no cloud or external official fact verification",
+  "pairedFiles": 90,
+  "equalPairs": 87,
+  "remainingDriftPairs": 3,
+  "resolved": [
+    {
+      "source": "packages/data/games/wuwa/raw-redeem-codes.json",
+      "mirror": "apps/web/public/data/wuwa/raw-redeem-codes.json",
+      "beforeSourceFileSha256": "5712ba38c2d9da9d5f3a5664d1dd2f0279446b66556bc182c390ec318d0bfce7",
+      "beforeMirrorFileSha256": "20290ea77e501e4795bf32aa2d89b91e1546344b9a2fc15fbe9d99072f83e42b",
+      "afterSourceFileSha256": "5712ba38c2d9da9d5f3a5664d1dd2f0279446b66556bc182c390ec318d0bfce7",
+      "afterMirrorFileSha256": "5712ba38c2d9da9d5f3a5664d1dd2f0279446b66556bc182c390ec318d0bfce7",
+      "sourceChangedIds": [],
+      "mirrorChangedIds": [
+        "WUTHRINGWAVES",
+        "WUWACNY2026",
+        "ROYALFROST2026"
+      ],
+      "decision": "Retain source commit 8988558 restrictive inactive classifications; do not re-promote expired/to-recheck records from the stale public mirror. Not a live official redemption verification.",
+      "status": "engineering-parity-resolved; editorial freshness not re-certified"
+    },
+    {
+      "source": "packages/data/games/skjh/raw-guides.json",
+      "mirror": "apps/web/public/data/skjh/raw-guides.json",
+      "beforeSourceFileSha256": "28a66a70f6db0f0fede390c079b504fb2e6fec1f03e9a1da84fd97ac3f9c61b1",
+      "beforeMirrorFileSha256": "eb7002cc027a652e89059ec45733e42898d9b8421883a3e7eb32a4372f51a9d3",
+      "afterSourceFileSha256": "eb7002cc027a652e89059ec45733e42898d9b8421883a3e7eb32a4372f51a9d3",
+      "afterMirrorFileSha256": "eb7002cc027a652e89059ec45733e42898d9b8421883a3e7eb32a4372f51a9d3",
+      "sourceChangedIds": [
+        "season-1-launch",
+        "launch-rewards-complete",
+        "launch-rewards",
+        "preload-install-guide"
+      ],
+      "mirrorChangedIds": [],
+      "decision": "Backport the existing public-only editorial revision from 9796db5 into source, retaining all four changed guides and original dates. No assertion of new official fact verification.",
+      "status": "engineering-parity-resolved; editorial freshness not re-certified"
+    },
+    {
+      "source": "packages/data/games/roco-cn/raw-guides.json",
+      "mirror": "apps/web/public/data/roco-cn/raw-guides.json",
+      "beforeSourceFileSha256": "8fdc9bd8a6509d2791f0557e44964af7fb8e2fca704daa8a12dc0742da333ebb",
+      "beforeMirrorFileSha256": "c89ac74025e35bac498d99d5429683f6c06ea4e26688e1025b52889d72156d98",
+      "afterSourceFileSha256": "7a3a5bb63d114d42d2c3cd6b4214a8174e8d75c3eeb2c2498727025fdcf37df9",
+      "afterMirrorFileSha256": "7a3a5bb63d114d42d2c3cd6b4214a8174e8d75c3eeb2c2498727025fdcf37df9",
+      "sourceChangedIds": [
+        "daily-events-merchant-guide"
+      ],
+      "mirrorChangedIds": [
+        "daily-events-merchant-guide"
+      ],
+      "decision": "Publish the existing source-only September 7 checklist as explicitly historical context; preserve all original body/FAQ, keep English retired across delivery and discovery.",
+      "status": "engineering-parity-resolved; editorial freshness not re-certified"
+    }
+  ],
+  "remaining": [
+    {
+      "source": "packages/data/games/roco/raw-characters.json",
+      "mirror": "apps/web/public/data/roco/raw-characters.json",
+      "decision": "hold; unchanged from S2.1; factual/region/version review required before expansion"
+    },
+    {
+      "source": "packages/data/games/wuwa/raw-echoes.json",
+      "mirror": "apps/web/public/data/wuwa/raw-echoes.json",
+      "decision": "hold; unchanged from S2.1; factual/region/version review required before expansion"
+    },
+    {
+      "source": "packages/data/games/wuwa/raw-regions.json",
+      "mirror": "apps/web/public/data/wuwa/raw-regions.json",
+      "decision": "hold; unchanged from S2.1; factual/region/version review required before expansion"
+    }
+  ],
+  "contentDeleted": false,
+  "productionDeployed": false
+}

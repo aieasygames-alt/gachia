@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 import { describe, expect, it } from 'vitest';
+import { isRetiredPage } from '../lib/retired-pages';
 
 const middleware = readFileSync(join(__dirname, '../middleware.ts'), 'utf8');
 const anomaliesPage = readFileSync(join(__dirname, '../app/[lang]/[game]/anomalies/page.tsx'), 'utf8');
@@ -31,8 +32,9 @@ describe('SEO redirect contracts', () => {
     expect(middleware).toContain("'/update-radar'");
     expect(middleware).toContain('LEGACY_PATH_REDIRECTS');
     expect(middleware).toContain('const decodedPathname = decodeURIComponent(pathname);');
-    expect(middleware).toContain('const RETIRED_PATHS = new Set([');
-    expect(middleware).toContain('/en/roco-cn/guides/daily-events-merchant-guide');
+    expect(middleware).toContain("import { isRetiredPage } from './lib/retired-pages'");
+    expect(isRetiredPage('/en/roco-cn/guides/daily-events-merchant-guide')).toBe(true);
+    expect(middleware).toContain('isRetiredPage(decodedPathname)');
     expect(middleware).toContain('spongebob-collab-summer-faq-SpongeBob夏');
     expect(middleware).toContain('steam-3-0-start-guide-Steam入門');
     expect(middleware).toContain('stripLabelSuffix(fourthSegment)');

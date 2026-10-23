@@ -57,13 +57,13 @@ const REDEEM_DESC: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
   },
 };
 
-function getLastCheckedAt(codes: RedeemCodeEntry[]): string {
+function getLatestRevealedAt(codes: RedeemCodeEntry[]): string | undefined {
   const latestReveal = codes
     .map((code) => code.revealedAt)
     .filter(Boolean)
     .sort()
     .at(-1);
-  return latestReveal ?? '2026-07-26';
+  return latestReveal;
 }
 
 function formatDateLabel(date: string, locale: SupportedLocale): string {
@@ -129,7 +129,7 @@ export default async function RedeemCodesPage({
   const codes = await getRedeemCodesForGame(gameId);
   const activeCodes = codes.filter((code) => isRedeemCodeActive(code));
   const expiredCodes = codes.filter((code) => !isRedeemCodeActive(code));
-  const lastCheckedAt = getLastCheckedAt(codes);
+  const latestRevealedAt = getLatestRevealedAt(codes);
   const isOfficialWatchlist = (gameId === 'aniimo' && activeCodes.length === 0 && codes.some((code) => code.status === 'Watchlist'))
     || (gameId === 'zzz' && codes.some((code) => code.status === 'watchlist' && code.source === 'official-watchlist'));
 
@@ -227,13 +227,18 @@ export default async function RedeemCodesPage({
         </div>
         <div className="rounded-lg border border-game-border bg-game-surface p-3">
           <div className="text-xs text-game-text-muted">
-            {locale === 'zh' ? '最后核验' : locale === 'ja' ? '最終確認' : 'Last Checked'}
+            {locale === 'zh' ? '记录中的最近公开日' : locale === 'ja' ? '記録上の最新公開日' : 'Latest Reveal Date (Recorded)'}
           </div>
           <div className="mt-1 text-sm font-semibold text-game-text">
-            {formatDateLabel(lastCheckedAt, locale)}
+            {latestRevealedAt ? formatDateLabel(latestRevealedAt, locale) : (locale === 'zh' ? '未提供' : locale === 'ja' ? '未提供' : 'Not provided')}
           </div>
         </div>
       </div>
+      {gameId === 'wuwa' && (
+        <p className="mb-4 text-sm text-game-text-muted">
+          {locale === 'zh' ? '本页按历史收录状态和到期日分类，不代表实时兑换验证。已失效或待复核的记录不列为有效码；实际可用性请以官方公告和游戏内结果为准。' : locale === 'ja' ? '過去の掲載状態と期限に基づく分類で、リアルタイムの交換確認ではありません。失効・要確認の記録は有効扱いにせず、公式告知とゲーム内の結果を優先してください。' : 'Classification follows recorded status and expiry, not a live redemption check. Inactive or to-recheck records are not promoted as active; confirm availability through official notices and the in-game result.'}
+        </p>
+      )}
       {redeemInstructions[gameId] && (
         <p className="mb-6 text-xs text-game-text-muted">
           {redeemInstructions[gameId][locale] ?? redeemInstructions[gameId]['en']}

@@ -4,6 +4,7 @@ import { routing } from './lib/i18n/routing';
 import { GAME_IDS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { isWorkerPreviewOrigin } from './lib/preview-origin';
+import { isRetiredPage } from './lib/retired-pages';
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -41,10 +42,6 @@ const LEGACY_PATH_REDIRECTS: Record<string, string> = {
   '/sea/guides/spongebob-collab-summer-faq-SpongeBob夏': '/zh/sea/guides/spongebob-collab-summer-faq',
   '/zzz/guides/steam-3-0-start-guide-Steam入門': '/zh/zzz/guides/steam-3-0-start-guide',
 };
-
-const RETIRED_PATHS = new Set([
-  '/en/roco-cn/guides/daily-events-merchant-guide',
-]);
 
 const GAME_ROUTE_DENYLIST: Partial<Record<GameId, readonly string[]>> = {
   aniimo: ['weapons', 'items', 'tier-list', 'build', 'compare', 'teams', 'artifacts', 'drive-discs', 'disk-sets', 'calculator', 'gacha', 'anomalies'],
@@ -119,7 +116,7 @@ function routeMiddleware(request: NextRequest) {
   const legacyPathTarget = LEGACY_PATH_REDIRECTS[decodedPathname];
   if (legacyPathTarget) return redirectTo(request, legacyPathTarget);
 
-  if (RETIRED_PATHS.has(decodedPathname)) {
+  if (isRetiredPage(decodedPathname)) {
     return new NextResponse(null, { status: 404 });
   }
 

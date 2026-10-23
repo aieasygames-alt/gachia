@@ -3,6 +3,8 @@ import { isRedeemCodeActive } from '@/lib/redeem-codes';
 import { getRedeemCodesForGame } from '@/lib/game-data/redeem-codes';
 import seaCodes from '../public/data/sea/raw-redeem-codes.json';
 import zzzCodes from '../public/data/zzz/raw-redeem-codes.json';
+import wuwaCodes from '../public/data/wuwa/raw-redeem-codes.json';
+import { getActiveRedeemCodes as getWuwaActiveCodes } from '@gachia/data/games/wuwa/redeem-codes';
 
 describe('redeem code status', () => {
   const now = new Date('2026-07-26T12:00:00Z');
@@ -31,6 +33,24 @@ describe('redeem code status', () => {
   it('treats expired dates and non-active statuses as inactive', () => {
     expect(isRedeemCodeActive({ status: 'active', expiresAt: '2026-07-25' }, now)).toBe(false);
     expect(isRedeemCodeActive({ status: 'expired', expiresAt: '2026-08-01' }, now)).toBe(false);
+  });
+
+  it('keeps restrictive WuWa classifications in the public mirror and shares the date-aware module policy', () => {
+    const date = new Date('2026-10-23T00:00:00Z');
+    for (const code of ['WUTHRINGWAVES', 'WUWACNY2026', 'ROYALFROST2026']) {
+      const record = wuwaCodes.find(entry => entry.code === code)!;
+      expect(record.status).toBe('expired');
+      expect(isRedeemCodeActive(record, date)).toBe(false);
+    }
+    const expected = wuwaCodes.filter(code => isRedeemCodeActive(code, date)).map(code => code.code);
+    expect(getWuwaActiveCodes(date).map(code => code.code)).toEqual(expected);
+    expect(expected).not.toContain('WUWAVER30UPDATE');
+  });
+
+  it('handles the whole UTC date and fails closed on invalid expiry', () => {
+    expect(isRedeemCodeActive({ status: 'active', expiresAt: '2026-10-23' }, new Date('2026-10-23T23:59:59.999Z'))).toBe(true);
+    expect(isRedeemCodeActive({ status: 'active', expiresAt: '2026-10-23' }, new Date('2026-10-24T00:00:00Z'))).toBe(false);
+    expect(isRedeemCodeActive({ status: 'active', expiresAt: 'unknown' }, now)).toBe(false);
   });
 
   it('keeps the ZZZ v3.2 livestream code out of active code modules', () => {

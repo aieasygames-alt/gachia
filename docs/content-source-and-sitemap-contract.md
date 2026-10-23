@@ -1,6 +1,6 @@
 # 内容源与 Sitemap 契约
 
-适用版本：S2.1。本契约目前覆盖主站 sitemap 所有权及遗忘之海攻略的派生物一致性，不表示全站内容事实已核验。
+适用版本：S2.2。本契约目前覆盖主站 sitemap 所有权、遗忘之海攻略派生物及三对受管原始镜像的一致性，不表示全站内容事实已核验。
 
 ## 1. 公开发现入口
 
@@ -68,11 +68,30 @@ pnpm test:release
 
 旧清单格式为 `[{"url":"https://gachia.com/zh"}, ...]`。检查器只访问显式 loopback origin 的根图和主站子图，不自动访问四个生产游戏、不跟随重定向、不使用系统代理。检查 XML namespace、根结构、canonical origin、重复 URL、主站/游戏 owner 边界及旧 URL 移除原因；未知移除立即失败，没有“全部忽略”的开关。XML HTTP 类型也必须正确。
 
-本地 fixture 无真实云端缓存绑定，必须区分源码求值、Next 预渲染、ASSETS 回退和实际生产 HTTP。S2.1 已发现 roco-cn 源/镜像缺条导致三语言 URL 的差异，不能用忽略列表消除这个信号。见阶段报告的源/运行时边界记录。
+本地 fixture 无真实云端缓存绑定，必须区分源码求值、Next 预渲染、ASSETS 回退和实际生产 HTTP。S2.1 发现的 roco-cn 源/镜像缺条已在 S2.2 闭合：保留中日文历史归档，英文继续退役；Next 预渲染和本地编译 Worker 的 URL 集合均为 4,464 条且完全一致。这不代表已核验当前生产缓存或全部独立游戏子图。
 
-## 4. 后续推广与回退
+完成 OpenNext 构建后执行 `pnpm test:managed-content:local`，自动启动隔离本地 Worker，检查三份 raw JSON、XML、归档/退役发现路径及三语言代表页面，覆盖 1440/390px。脚本不接受远程 origin 或其他 CLI 参数，不使用生产数据库、认证密钥或云端绑定；浏览器阻断外部请求，证据保留于 `.release-records/managed-content-*`。它不能代替原有 `runtime-rollout-smoke` 和生产发布门禁。
 
-- S2.1 不自动把六对非试点漂移同步为源版本；skjh 的公开镜像含源中没有的运营修订，单向覆盖会丢内容。
+## 4. 三对受管原始镜像
+
+固定注册表为 `packages/data/scripts/raw-mirror-contract.mjs`：wuwa/raw-redeem-codes.json、skjh/raw-guides.json、roco-cn/raw-guides.json，合计 54 条记录。S2.2 的归并依据是既有提交及保守状态处理，不是新一次官方事实审核。其余三对已知漂移未纳入自动同步。
+
+```sh
+# 审核源及历史差异后，显式生成；检查命令自身不写文件。
+pnpm --filter @gachia/data generate:raw-mirrors
+pnpm --filter @gachia/data check:raw-mirrors
+pnpm --filter @gachia/data verify:manifests
+```
+
+生成器先验证全部受管输入的非空数组及唯一 id/code，再写受管镜像；不删除文件，不复制未受管的数据，不选择事实权威，不刷新业务日期。检查器拒绝缺失、非法 JSON 和语义差异。manifest 生成器复用相同实现，主站运行时前置检查和 CI 生成前检查均接入此门禁。不得先运行生成器再以检查通过证明原提交无漂移。
+
+退役规则集中在 `apps/web/lib/retired-pages.ts`，同时约束 middleware、详情渲染/静态参数、首页与攻略列表、相关推荐、主站 sitemap、hreflang 和语言切换。`/en/roco-cn/guides/daily-events-merchant-guide`（含末尾斜杠）仍为 404；同步公开原始 JSON 不等于恢复英文阅读或索引。中日文归档保留原正文/FAQ 和 2026-09-07 日期，以标题、摘要及正文告知其历史适用范围。
+
+兑换码的历史 active 状态还需通过到期日判断；日期型到期值按 UTC 当日结束，带时区时间保留其语义。公开日不是核验日，不能用 revealedAt 或固定回退日期显示“最后核验”。历史分类与工程同源检查均不证明当前兑换成功。
+
+## 5. 后续推广与回退
+
+- 90 对原始 JSON 目前 87 对一致、3 对待审：roco 角色、wuwa 声骸与区域；保留原始审计基线，不把工程归并当成事实重新认证。skjh 公开镜像中的四篇运营修订已完整回迁源，未以旧源覆盖。
 - 扩展下一游戏前，先确认官方事实/区服/日期和退役 URL，再把源、镜像、页面语言与 sitemap 作为同批变更验收。
 - 真正发布前仍需受控 staging、根索引及全部子图 HTTP、正文与语言契约、静态资产保留、生产回滚版本和 Actions 预算核验。单元测试或本地 XML 通过不表示已上线。
 - 回退必须回退完整代码及派生物组合，不能仅回退原始源或一份公开镜像。S1 静态资源保留与无账号策略继续适用；不得恢复登录、覆盖其他 Worker 或删除保留证据。

@@ -10,6 +10,7 @@ import { BANNER_INTENT_PANELS } from '@/lib/banner-intent';
 import { HI3_GUIDE_NEXT_STEPS, HI3_GUIDE_SCOPE } from '@/lib/hi3-guide-navigation';
 import { join } from 'node:path';
 import { loadJson } from '@gachia/data/load-json';
+import { isGuideReadable } from '@/lib/retired-pages';
 
 export const dynamicParams = false;
 
@@ -766,7 +767,7 @@ export async function generateStaticParams() {
     MAIN_WORKER_GAME_IDS
       .map(async (gameId) => {
       const runtime = await getGuideRuntime(gameId);
-      return LOCALES.flatMap((lang) => runtime.guides.map((guide) => ({ lang, game: gameId, slug: guide.id })));
+      return LOCALES.flatMap((lang) => runtime.guides.filter(guide => isGuideReadable(gameId, guide.id, lang)).map((guide) => ({ lang, game: gameId, slug: guide.id })));
       })
   );
 
@@ -781,7 +782,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
   const runtime = await getGuideRuntime(gameId);
   const guide = await getGuideBySlug(runtime, gameId, slug);
-  if (!guide) return {};
+  if (!guide || !isGuideReadable(gameId, slug, locale)) return {};
 
   const gameName = GAMES[gameId].name[locale];
   const meta = buildGuideMeta(guide, runtime.getTitle(guide, locale), runtime.getSummary(guide, locale), gameName, locale, gameId);
@@ -789,7 +790,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return withGuideIndexing(locale, guide, {
     ...meta,
     alternates: buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/guides/${slug}`, LOCALES, {
-      includeLocale: (lang) => hasLocalizedContent(guide, lang),
+      includeLocale: (lang) => isGuideReadable(gameId, slug, lang) && hasLocalizedContent(guide, lang),
     }),
     openGraph: {
       title: meta.title,
@@ -810,7 +811,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ la
 
   const runtime = await getGuideRuntime(gameId);
   const guide = await getGuideBySlug(runtime, gameId, slug);
-  if (!guide) notFound();
+  if (!guide || !isGuideReadable(gameId, slug, locale)) notFound();
 
   const title = runtime.getTitle(guide, locale);
   const summary = runtime.getSummary(guide, locale);
@@ -1015,7 +1016,9 @@ function GuideFreshnessSection({ guide, locale, gameId }: { guide: GuideLike; lo
   if (!guide.updatedAt && !guide.currentVersion && facts.length === 0) return null;
 
   const updatedLabel = locale === 'zh' ? '更新于' : locale === 'ja' ? '更新日' : 'Updated';
-  const versionLabel = gameId === 'hi3' ? HI3_GUIDE_SCOPE[locale].label : locale === 'zh' ? '当前版本' : locale === 'ja' ? '現在版本' : 'Current version';
+  const versionLabel = isHistoricalGuideVersion(guide.currentVersion ?? '')
+    ? (locale === 'zh' ? '归档版本' : locale === 'ja' ? '過去のバージョン' : 'Archived version')
+    : gameId === 'hi3' ? HI3_GUIDE_SCOPE[locale].label : locale === 'zh' ? '当前版本' : locale === 'ja' ? '現在版本' : 'Current version';
 
   return (
     <section className="mb-6 rounded-lg border border-game-border bg-game-surface p-4">
@@ -1234,7 +1237,7 @@ function NextStepSection({ gameId, currentSlug, locale }: { gameId: GameId; curr
 }
 
 function RelatedGuidesSection({ runtime, gameId, current, locale }: { runtime: GuideRuntime; gameId: GameId; current: GuideLike; locale: SupportedLocale }) {
-  const related = selectRelatedGuides(runtime.guides, current);
+  const related = selectRelatedGuides(runtime.guides.filter(guide => isGuideReadable(gameId, guide.id, locale)), current);
 
   if (related.length === 0) return null;
 

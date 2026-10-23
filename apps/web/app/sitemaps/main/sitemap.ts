@@ -2,6 +2,7 @@ import { GAMES, LOCALES } from '@gachia/core';
 import type { MetadataRoute } from 'next';
 import { getEntryUpdatedAt, hasLocalizedContent, isAniimoCharacterIndexable } from '@/lib/seo-metadata';
 import { GAME_DEPLOYMENTS } from '@gachia/core';
+import { isGuideReadable } from '@/lib/retired-pages';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -110,7 +111,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       if (GUIDE_GAMES.includes(gameId as typeof GUIDE_GAMES[number])) {
         const guides = await getGuidesForGame(gameId);
         for (const guide of guides) {
-          if (!hasLocalizedContent(guide, locale)) continue;
+          if (!isGuideReadable(gameId, guide.id, locale) || !hasLocalizedContent(guide, locale)) continue;
           const guideHints = getGuideSitemapHints(guide);
 
           entries.push({

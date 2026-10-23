@@ -1,6 +1,7 @@
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { join } from 'node:path';
 import { loadJson } from '@gachia/data/load-json';
+import { isGuideReadable } from '../retired-pages';
 
 export interface GuideListEntry {
   id: string;
@@ -76,7 +77,14 @@ function buildGuideListData<T extends RawGuide>(
   return { guides: entries, categories, categoryLabels };
 }
 
-export async function getGuideListData(
+export async function getGuideListData(gameId: GameId, locale: SupportedLocale): Promise<GuideListData> {
+  const data = await loadGuideListData(gameId, locale);
+  const guides = data.guides.filter(guide => isGuideReadable(gameId, guide.id, locale));
+  const categories = [...new Set(guides.map(guide => guide.category))];
+  return { guides, categories, categoryLabels: Object.fromEntries(categories.map(category => [category, data.categoryLabels[category] ?? category])) };
+}
+
+async function loadGuideListData(
   gameId: GameId,
   locale: SupportedLocale,
 ): Promise<GuideListData> {

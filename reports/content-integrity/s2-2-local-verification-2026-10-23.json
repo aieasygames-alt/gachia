@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "phase": "S2.2",
+  "baselineCommit": "7184be2",
+  "recordedAt": "2026-10-23T16:02:31.153651+00:00",
+  "status": "local_verified_not_deployed",
+  "cloudVerification": "not_performed",
+  "externalOfficialFactVerification": "not_performed",
+  "mirrorInventory": {
+    "pairedFiles": 90,
+    "equalPairs": 87,
+    "remaining": [
+      "packages/data/games/roco/raw-characters.json",
+      "packages/data/games/wuwa/raw-echoes.json",
+      "packages/data/games/wuwa/raw-regions.json"
+    ]
+  },
+  "sitemap": {
+    "actualWorkerUrls": 4464,
+    "nextPrerenderUrls": 4464,
+    "urlSetsEqual": true,
+    "xmlAudit": {
+      "schemaVersion": 1,
+      "status": "local_compiled_worker_xml_verified",
+      "cloudVerification": "not_performed",
+      "children": [
+        "https://gachia.com/sitemaps/main/sitemap.xml",
+        "https://gachia.com/sitemaps/genshin/index.xml",
+        "https://gachia.com/sitemaps/nte/index.xml",
+        "https://gachia.com/sitemaps/azur-promilia/index.xml",
+        "https://gachia.com/sitemaps/lvmeng/index.xml"
+      ],
+      "dedicatedOwners": [
+        "azur-promilia",
+        "genshin",
+        "lvmeng",
+        "nte"
+      ],
+      "mainUrlCount": 4464,
+      "mainByLocale": {
+        "zh": 1570,
+        "en": 1567,
+        "ja": 1327
+      },
+      "indexXmlSha256": "1b45434d7ab02973b799c76fd6b8b38b9d131461fbeeee67eaf6a5fe854a3e80",
+      "mainXmlSha256": "5899ec20337ed3d2e324989bf6ea5bfca71d517e9334065fb5c92e57b1320e96"
+    },
+    "runtimeDiff": {
+      "baselineKind": "runtime-assets-reconstruction-not-production-capture",
+      "before": 4462,
+      "after": 4464,
+      "added": [
+        "https://gachia.com/ja/roco-cn/guides/daily-events-merchant-guide",
+        "https://gachia.com/zh/roco-cn/guides/daily-events-merchant-guide"
+      ],
+      "removed": []
+    },
+    "sourceDiff": {
+      "baselineKind": "s2-1-source-evaluation",
+      "before": 4465,
+      "after": 4464,
+      "added": [],
+      "removed": [
+        "https://gachia.com/en/roco-cn/guides/daily-events-merchant-guide"
+      ],
+      "removalReason": "Existing retired English detail now excluded from all discovery consumers; remains 404."
+    }
+  },
+  "tests": {
+    "data": 65,
+    "web": 277,
+    "router": 31,
+    "releaseNode": 98,
+    "releasePythonRetention": 9,
+    "releasePythonXml": 8,
+    "dataTypecheck": "passed",
+    "webTypecheck": "passed",
+    "webLint": {
+      "errors": 0,
+      "preexistingWarnings": 1
+    },
+    "dataValidate": "passed",
+    "manifestVerify": "passed",
+    "openNextBuild": "passed",
+    "wranglerDryRun": {
+      "status": "passed",
+      "assets": 1425,
+      "uploadKiB": 13922.17,
+      "gzipKiB": 2838.45
+    }
+  },
+  "managedContentAcceptance": {
+    "status": "local_managed_content_verified",
+    "cloudVerification": "not_performed",
+    "startedAt": "2026-10-23T15:58:10.670Z",
+    "acceptance": {
+      "json": [
+        {
+          "path": "/data/wuwa/raw-redeem-codes.json",
+          "status": 200,
+          "sourceEqual": true
+        },
+        {
+          "path": "/data/skjh/raw-guides.json",
+          "status": 200,
+          "sourceEqual": true
+        },
+        {
+          "path": "/data/roco-cn/raw-guides.json",
+          "status": 200,
+          "sourceEqual": true
+        }
+      ],
+      "browser": [
+        {
+          "path": "/zh/wuwa/redeem-codes",
+          "width": 1440,
+          "status": 200,
+          "kind": "codes",
+          "errors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/en/wuwa/redeem-codes",
+          "width": 1440,
+          "status": 200,
+          "kind": "codes",
+          "errors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/ja/wuwa/redeem-codes",
+          "width": 1440,
+          "status": 200,
+          "kind": "codes",
+          "errors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/zh/roco-cn/guides/daily-events-merchant-guide",
+          "width": 1440,
+          "status": 200,
+          "kind": "archive",
+          "errors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/ja/roco-cn/guides/daily-events-merchant-guide",
+          "width": 1440,
+          "status": 200,
+          "kind": "archive",
+          "errors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/zh/skjh/guides/season-1-launch",
+          "width": 1440,
+          "status": 200,
+          "kind": "backport",
+          "errors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/en/skjh/guides/season-1-launch",
+          "width": 1440,
+          "status": 200,
+          "kind": "backport",
+          "errors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/ja/skjh/guides/season-1-launch",
+          "width": 1440,
+          "status": 200,
+          "kind": "backport",
+          "errors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/zh/wuwa/redeem-codes",
+          "width": 390,
+          "status": 200,
+          "kind": "codes",
+          "errors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/en/wuwa/redeem-codes",
+          "width": 390,
+          "status": 200,
+          "kind": "codes",
+          "errors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/ja/wuwa/redeem-codes",
+          "width": 390,
+          "status": 200,
+          "kind": "codes",
+          "errors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/zh/roco-cn/guides/daily-events-merchant-guide",
+          "width": 390,
+          "status": 200,
+          "kind": "archive",
+          "errors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/ja/roco-cn/guides/daily-events-merchant-guide",
+          "width": 390,
+          "status": 200,
+          "kind": "archive",
+          "errors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/zh/skjh/guides/season-1-launch",
+          "width": 390,
+          "status": 200,
+          "kind": "backport",
+          "errors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/en/skjh/guides/season-1-launch",
+          "width": 390,
+          "status": 200,
+          "kind": "backport",
+          "errors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/ja/skjh/guides/season-1-launch",
+          "width": 390,
+          "status": 200,
+          "kind": "backport",
+          "errors": 0,
+          "failedAssets": 0
+        }
+      ]
+    },
+    "finishedAt": "2026-10-23T15:58:27.685Z"
+  },
+  "runtimeRegression": {
+    "status": "local_runtime_verified",
+    "httpCases": 32,
+    "browserCases": 18,
+    "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+    "accountPolicy": "disabled_without_database_or_auth_secrets"
+  },
+  "visualReview": {
+    "viewed": [
+      "archive-390.png",
+      "codes-390.png"
+    ],
+    "result": "archive notice and date visible, retired English target disabled, mobile layout readable"
+  },
+  "evidence": {
+    "managed": ".release-records/managed-content-4da55880-2075-4408-a2e0-f30630f36bca",
+    "runtime": ".release-records/rollout-web-0345722f-e4cd-4ef2-85e4-738189772093/result.json",
+    "logs": ".release-records/s2-2/"
+  },
+  "productionDeployed": false,
+  "filesDeleted": false
+}
