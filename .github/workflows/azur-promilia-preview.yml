@@ -17,6 +17,8 @@ on:
       - 'scripts/game-runtime-browser.mjs'
       - 'scripts/runtime-rollout-smoke.mjs'
       - 'scripts/runtime-rollout-smoke.test.mjs'
+      - 'scripts/game-staging-acceptance.mjs'
+      - 'scripts/game-staging-acceptance.test.mjs'
       - 'scripts/verify-next-deferred-patch.mjs'
       - 'patches/**'
       - 'package.json'

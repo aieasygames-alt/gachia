@@ -22,7 +22,7 @@
     "test:browser": "playwright test",
     "audit:production": "node scripts/production-site-audit.mjs",
     "release:game": "node scripts/game-release.mjs",
-    "test:release": "node --test scripts/game-release.test.mjs scripts/game-runtime.test.mjs scripts/runtime-rollout-smoke.test.mjs"
+    "test:release": "node --test scripts/game-release.test.mjs scripts/game-runtime.test.mjs scripts/runtime-rollout-smoke.test.mjs scripts/game-staging-acceptance.test.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",

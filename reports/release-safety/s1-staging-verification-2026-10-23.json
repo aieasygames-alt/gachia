@@ -1,0 +1,830 @@
+{
+  "schemaVersion": 1,
+  "phase": "S1.3_isolated_cloud_staging_acceptance",
+  "date": "2026-10-23",
+  "timezone": "Asia/Shanghai",
+  "deployedSourceCommit": "67a8a384d00ccda1599d9f3924ca8c0816c2b758",
+  "branch": "codex/multi-game-s1-release-safety",
+  "status": "azur_staging_accepted_production_not_promoted",
+  "scope": "one_isolated_game_staging_not_full_site",
+  "runtime": {
+    "node": "22.22.2",
+    "pnpm": "10.10.0",
+    "next": "15.5.28",
+    "openNext": "1.20.13",
+    "wrangler": "4.148.0"
+  },
+  "preflight": {
+    "remoteMainCommit": "18cfe049b4c34d177049def95e645763c2cef0b2",
+    "remoteMainIsAncestor": true,
+    "cleanWorktreeAtDeployment": true,
+    "targetPreviouslyAbsent": true,
+    "targetAbsentHttpStatus": 404,
+    "billingAndLimitEvidence": {
+      "observedAt": "2026-10-23T04:00:11.781Z",
+      "method": "authenticated_browser_visible_dom_read_only",
+      "cloudflare": {
+        "url": "https://dash.cloudflare.com/e6472b6c6172a3ac1e1596ef100543ae/workers/plans",
+        "plan": "Paid",
+        "signal": "Paid card: Current plan (disabled)",
+        "basePrice": "$5 / month + usage",
+        "planChanged": false
+      },
+      "limits": {
+        "url": "https://developers.cloudflare.com/workers/platform/limits/#worker-size",
+        "workerSizeUncompressedMiB": 64,
+        "compressedSizeLimit": null,
+        "verbatim": "There is no compressed size limit. Only the uncompressed bundle size counts.",
+        "startupTimeSeconds": 1,
+        "workersPaidAccountCount": 500
+      },
+      "github": {
+        "url": "https://github.com/settings/billing",
+        "account": "aieasygames-alt",
+        "month": "2026-10",
+        "actionsMinutesUsed": 413,
+        "actionsMinutesIncluded": 2000,
+        "actionsStorageUsedGB": 0.3,
+        "actionsStorageIncludedGB": 0.5,
+        "resetInDays": 9,
+        "actionsBillableUsageUSD": 0,
+        "plannedActionsMinutesThisPhase": 0
+      },
+      "billingApiLimitations": {
+        "cloudflareSubscriptionsHttpStatus": 403,
+        "githubUsageHttpStatus": 404,
+        "githubMissingScope": "user",
+        "noCredentialScopeChanges": true
+      },
+      "releaseDecision": {
+        "service": "gachia-game-azur-promilia-staging",
+        "newWorkerWithinExistingPaidAccount": true,
+        "subscriptionUpgrade": false,
+        "productionRoutes": false,
+        "dataBindings": false,
+        "plannedDeploymentCount": 1,
+        "plannedLoadTest": false,
+        "testingRequests": "bounded functional checks; no load generation",
+        "incrementalMeteredUsage": "possible under existing paid usage rates; no claim of zero billable Cloudflare usage"
+      }
+    },
+    "rollbackVersionReferences": [
+      {
+        "service": "gachia",
+        "versionId": "db8e1a59-f46a-4f31-b57a-a318b2d70c23",
+        "percentage": 100,
+        "httpStatus": 200,
+        "number": 974,
+        "createdOn": "2026-10-18T11:31:37.696612Z",
+        "source": "wrangler",
+        "compatibility": {
+          "assets": {
+            "headers": {
+              "version": 2,
+              "rules": {
+                "/_next/static/*": {
+                  "set": {
+                    "cache-control": "public,max-age=31536000,immutable"
+                  },
+                  "unset": []
+                }
+              }
+            },
+            "raw_headers": "/_next/static/*\n  Cache-Control: public,max-age=31536000,immutable\n",
+            "serve_directly": true,
+            "raw_run_worker_first": false,
+            "base_path": "/"
+          },
+          "compatibility_date": "2026-07-08",
+          "compatibility_flags": [
+            "nodejs_compat"
+          ],
+          "usage_model": "standard"
+        }
+      },
+      {
+        "service": "gachia-router",
+        "versionId": "239bb325-998c-4893-98e5-ddd24d50c99a",
+        "percentage": 100,
+        "httpStatus": 200,
+        "number": 102,
+        "createdOn": "2026-10-09T14:55:22.40322Z",
+        "source": "wrangler",
+        "compatibility": {
+          "compatibility_date": "2026-07-08",
+          "usage_model": "standard"
+        }
+      },
+      {
+        "service": "gachia-game-nte",
+        "versionId": "6b079ce0-7fce-4bef-a649-150c1a947135",
+        "percentage": 100,
+        "httpStatus": 200,
+        "number": 21,
+        "createdOn": "2026-10-18T11:23:18.725637Z",
+        "source": "wrangler",
+        "compatibility": {
+          "assets": {
+            "serve_directly": true,
+            "raw_run_worker_first": false,
+            "base_path": "/"
+          },
+          "compatibility_date": "2026-07-08",
+          "compatibility_flags": [
+            "nodejs_compat"
+          ],
+          "usage_model": "standard"
+        }
+      },
+      {
+        "service": "gachia-game-azur-promilia",
+        "versionId": "472903c2-3fca-43c0-a613-8c54f108bf73",
+        "percentage": 100,
+        "httpStatus": 200,
+        "number": 79,
+        "createdOn": "2026-10-15T09:52:47.30364Z",
+        "source": "wrangler",
+        "compatibility": {
+          "assets": {
+            "serve_directly": true,
+            "raw_run_worker_first": false,
+            "base_path": "/"
+          },
+          "compatibility_date": "2026-07-08",
+          "compatibility_flags": [
+            "nodejs_compat"
+          ],
+          "usage_model": "standard"
+        }
+      },
+      {
+        "service": "gachia-game-genshin",
+        "versionId": "b2952171-bf58-4d64-a16e-8cea41cf9529",
+        "percentage": 100,
+        "httpStatus": 200,
+        "number": 43,
+        "createdOn": "2026-10-15T09:51:37.353198Z",
+        "source": "wrangler",
+        "compatibility": {
+          "assets": {
+            "serve_directly": true,
+            "raw_run_worker_first": false,
+            "base_path": "/"
+          },
+          "compatibility_date": "2026-07-08",
+          "compatibility_flags": [
+            "nodejs_compat"
+          ],
+          "usage_model": "standard"
+        }
+      },
+      {
+        "service": "gachia-game-lvmeng",
+        "versionId": "815be742-10a4-4609-a32a-cfd0cd968487",
+        "percentage": 100,
+        "httpStatus": 200,
+        "number": 28,
+        "createdOn": "2026-10-18T11:22:41.949622Z",
+        "source": "wrangler",
+        "compatibility": {
+          "assets": {
+            "serve_directly": true,
+            "raw_run_worker_first": false,
+            "base_path": "/"
+          },
+          "compatibility_date": "2026-07-08",
+          "compatibility_flags": [
+            "nodejs_compat"
+          ],
+          "usage_model": "standard"
+        }
+      }
+    ],
+    "rollbackRehearsal": false
+  },
+  "deployment": {
+    "service": "gachia-game-azur-promilia-staging",
+    "deploymentId": "bf548185-0862-401a-94de-dedce1d5ea26",
+    "versions": [
+      {
+        "version_id": "440ed712-bdbf-47eb-9f6c-17cca4416a41",
+        "percentage": 100
+      }
+    ],
+    "createdOn": "2026-10-23T04:01:11.146949Z",
+    "versionNumber": 1,
+    "settings": {
+      "compatibility_date": "2026-07-08",
+      "compatibility_flags": [
+        "nodejs_compat"
+      ],
+      "bindings": [
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "name": "AZUR_PROMILIA_DEPLOYMENT_MODE",
+          "text": "preview",
+          "type": "plain_text"
+        },
+        {
+          "name": "NEXT_PUBLIC_APP_URL",
+          "text": "https://gachia.com",
+          "type": "plain_text"
+        }
+      ]
+    },
+    "subdomain": {
+      "enabled": true,
+      "previews_enabled": true
+    },
+    "deploymentsExecuted": 1,
+    "origin": "https://gachia-game-azur-promilia-staging.aieasygames.workers.dev",
+    "uncompressedKiB": 5275.26,
+    "gzipKiB": 1045.25,
+    "startupTimeMs": 13,
+    "assetsNewlyUploaded": 23,
+    "assetsPreviouslyUploaded": 49,
+    "command": "pnpm --filter @gachia/game-azur-promilia deploy:staging",
+    "receipt": {
+      "path": ".release-records/azur-promilia-36d00af1-e10d-4ae1-9b12-3fc62a4a2b27.json",
+      "sha256": "812596ed4eb93d28db3a55659f40a742b26a581f28bc8b4e5190120c4045f775"
+    },
+    "originalReceiptStatus": "deployment_command_succeeded_verification_pending",
+    "originalReceiptUnmodified": true,
+    "log": {
+      "path": ".release-records/s1-cloud-acceptance/azur-staging-deploy.log",
+      "sha256": "af07eb1b9aae9e7e2dcdabd67bdfae3e5d60dc3d8c5dcf2c94b5b8d95ec1aaf0"
+    }
+  },
+  "acceptance": {
+    "record": {
+      "path": ".release-records/staging-azur-promilia-654bd3be-47ab-43fa-b70b-3bde979e7a3d/result.json",
+      "sha256": "2a58d46d5d449a10c7abaf385a5efa1fbe2cb5f1f8f6b64eea61c769190d471e"
+    },
+    "schemaVersion": 1,
+    "startedAt": "2026-10-23T04:06:31.266Z",
+    "game": "azur-promilia",
+    "subdomain": "aieasygames",
+    "origin": "https://gachia-game-azur-promilia-staging.aieasygames.workers.dev",
+    "status": "bounded_staging_checks_passed",
+    "productionAccepted": false,
+    "http": {
+      "status": "staging_http_verified",
+      "origin": "https://gachia-game-azur-promilia-staging.aieasygames.workers.dev",
+      "observations": [
+        {
+          "path": "/robots.txt",
+          "status": 200,
+          "contentType": "text/plain",
+          "xRobotsTag": "noindex, nofollow"
+        },
+        {
+          "path": "/sitemap.xml",
+          "status": 200,
+          "contentType": "application/xml",
+          "xRobotsTag": "noindex, nofollow"
+        },
+        {
+          "path": "/zh/azur-promilia",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "xRobotsTag": "noindex, nofollow"
+        },
+        {
+          "path": "/zh/azur-promilia/characters",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "xRobotsTag": "noindex, nofollow"
+        },
+        {
+          "path": "/zh/azur-promilia/characters/abby",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "xRobotsTag": "noindex, nofollow"
+        },
+        {
+          "path": "/en/azur-promilia",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "xRobotsTag": "noindex, nofollow"
+        },
+        {
+          "path": "/en/azur-promilia/characters",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "xRobotsTag": "noindex, nofollow"
+        },
+        {
+          "path": "/en/azur-promilia/characters/abby",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "xRobotsTag": "noindex, nofollow"
+        },
+        {
+          "path": "/ja/azur-promilia",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "xRobotsTag": "noindex, nofollow"
+        },
+        {
+          "path": "/ja/azur-promilia/characters",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "xRobotsTag": "noindex, nofollow"
+        },
+        {
+          "path": "/ja/azur-promilia/characters/abby",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "xRobotsTag": "noindex, nofollow"
+        },
+        {
+          "path": "/_games/azur-promilia/_next/static/chunks/webpack-ab27a0009b5e7231.js",
+          "status": 200,
+          "contentType": "text/javascript",
+          "xRobotsTag": null
+        },
+        {
+          "path": "/_next/static/chunks/webpack-ab27a0009b5e7231.js",
+          "status": 200,
+          "contentType": "text/javascript",
+          "xRobotsTag": null
+        },
+        {
+          "path": "/_games/azur-promilia/_next/static/css/9aa93cdcbed4bf47.css",
+          "status": 200,
+          "contentType": "text/css",
+          "xRobotsTag": null
+        },
+        {
+          "path": "/_next/static/css/9aa93cdcbed4bf47.css",
+          "status": 200,
+          "contentType": "text/css",
+          "xRobotsTag": null
+        },
+        {
+          "path": "/zh/azur-promilia/__staging_acceptance_missing__",
+          "status": 404,
+          "contentType": "text/html; charset=utf-8",
+          "xRobotsTag": "noindex, nofollow"
+        }
+      ],
+      "sitemapUrls": 156
+    },
+    "browser": {
+      "status": "staging_browser_verified",
+      "requests": 147,
+      "requestLimit": 1000,
+      "observations": [
+        {
+          "width": 1440,
+          "locale": "zh",
+          "javaScriptEnabled": true,
+          "cards": 19,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "width": 1440,
+          "locale": "zh",
+          "javaScriptEnabled": false,
+          "cards": 19,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "width": 1440,
+          "locale": "en",
+          "javaScriptEnabled": true,
+          "cards": 19,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "width": 1440,
+          "locale": "en",
+          "javaScriptEnabled": false,
+          "cards": 19,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "width": 1440,
+          "locale": "ja",
+          "javaScriptEnabled": true,
+          "cards": 19,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "width": 1440,
+          "locale": "ja",
+          "javaScriptEnabled": false,
+          "cards": 19,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "width": 390,
+          "locale": "zh",
+          "javaScriptEnabled": true,
+          "cards": 19,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "width": 390,
+          "locale": "zh",
+          "javaScriptEnabled": false,
+          "cards": 19,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "width": 390,
+          "locale": "en",
+          "javaScriptEnabled": true,
+          "cards": 19,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "width": 390,
+          "locale": "en",
+          "javaScriptEnabled": false,
+          "cards": 19,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "width": 390,
+          "locale": "ja",
+          "javaScriptEnabled": true,
+          "cards": 19,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "width": 390,
+          "locale": "ja",
+          "javaScriptEnabled": false,
+          "cards": 19,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        }
+      ],
+      "scope": "reading_filter_navigation_not_production_or_auth_acceptance"
+    },
+    "finishedAt": "2026-10-23T04:07:05.099Z",
+    "transport": {
+      "initialDirectNodeFetch": "UND_ERR_CONNECT_TIMEOUT",
+      "existingSystemProxyUsed": true,
+      "systemProxyModified": false,
+      "proxyLocation": "loopback_http_existing_user_configuration",
+      "tlsVerificationDisabled": false,
+      "cloudDeploymentRetried": false,
+      "nodeExperimentalProxyWarning": true
+    },
+    "screenshots": [
+      {
+        "path": ".release-records/staging-azur-promilia-654bd3be-47ab-43fa-b70b-3bde979e7a3d/staging-1440.png",
+        "sha256": "6748bdf25ff07b518ecd63f1bc0ab70e45b7fd414d0ff70b54c18697859e0e67"
+      },
+      {
+        "path": ".release-records/staging-azur-promilia-654bd3be-47ab-43fa-b70b-3bde979e7a3d/staging-390.png",
+        "sha256": "a1a71e0f2bad34094ebabe5de896f567a4d5c6273126e62ee7297401f56f6cb1"
+      }
+    ]
+  },
+  "productionProtection": {
+    "services": {
+      "gachia": {
+        "deploymentId": "0508ac4a-eebc-4479-8fc4-8efa260367d8",
+        "versions": [
+          {
+            "version_id": "db8e1a59-f46a-4f31-b57a-a318b2d70c23",
+            "percentage": 100
+          }
+        ],
+        "unchanged": true
+      },
+      "gachia-router": {
+        "deploymentId": "04a74338-c9ba-4e87-9857-0fe414457ff5",
+        "versions": [
+          {
+            "version_id": "239bb325-998c-4893-98e5-ddd24d50c99a",
+            "percentage": 100
+          }
+        ],
+        "unchanged": true
+      },
+      "gachia-game-nte": {
+        "deploymentId": "c344161b-5b10-4e87-8551-4e950366a5f1",
+        "versions": [
+          {
+            "version_id": "6b079ce0-7fce-4bef-a649-150c1a947135",
+            "percentage": 100
+          }
+        ],
+        "unchanged": true
+      },
+      "gachia-game-azur-promilia": {
+        "deploymentId": "06712d57-5067-4ceb-b039-bfe710b66126",
+        "versions": [
+          {
+            "version_id": "472903c2-3fca-43c0-a613-8c54f108bf73",
+            "percentage": 100
+          }
+        ],
+        "unchanged": true
+      },
+      "gachia-game-genshin": {
+        "deploymentId": "c087254a-58f4-4c61-b92b-0fd44d9f2f2b",
+        "versions": [
+          {
+            "version_id": "b2952171-bf58-4d64-a16e-8cea41cf9529",
+            "percentage": 100
+          }
+        ],
+        "unchanged": true
+      },
+      "gachia-game-lvmeng": {
+        "deploymentId": "d04a1d7d-d9d0-46d5-8f26-b8985e596f64",
+        "versions": [
+          {
+            "version_id": "815be742-10a4-4609-a32a-cfd0cd968487",
+            "percentage": 100
+          }
+        ],
+        "unchanged": true
+      }
+    },
+    "routes": {
+      "unchanged": true,
+      "result": [
+        {
+          "id": "5d458ae420024634af3334086a387691",
+          "pattern": "www.gachia.com/*",
+          "script": "gachia-router",
+          "request_limit_fail_open": false
+        },
+        {
+          "id": "98176d21d6624341904e5bb0ee26d076",
+          "pattern": "gachia.com/*",
+          "script": "gachia-router",
+          "request_limit_fail_open": false
+        }
+      ]
+    },
+    "customDomains": {
+      "unchanged": true,
+      "targetHasCustomDomain": false
+    },
+    "finalReconciliation": {
+      "at": "2026-10-23T04:10:47.390Z",
+      "services": [
+        {
+          "service": "gachia",
+          "deploymentId": "0508ac4a-eebc-4479-8fc4-8efa260367d8",
+          "versions": [
+            {
+              "version_id": "db8e1a59-f46a-4f31-b57a-a318b2d70c23",
+              "percentage": 100
+            }
+          ],
+          "unchangedSincePostDeployment": true
+        },
+        {
+          "service": "gachia-router",
+          "deploymentId": "04a74338-c9ba-4e87-9857-0fe414457ff5",
+          "versions": [
+            {
+              "version_id": "239bb325-998c-4893-98e5-ddd24d50c99a",
+              "percentage": 100
+            }
+          ],
+          "unchangedSincePostDeployment": true
+        },
+        {
+          "service": "gachia-game-nte",
+          "deploymentId": "c344161b-5b10-4e87-8551-4e950366a5f1",
+          "versions": [
+            {
+              "version_id": "6b079ce0-7fce-4bef-a649-150c1a947135",
+              "percentage": 100
+            }
+          ],
+          "unchangedSincePostDeployment": true
+        },
+        {
+          "service": "gachia-game-azur-promilia",
+          "deploymentId": "06712d57-5067-4ceb-b039-bfe710b66126",
+          "versions": [
+            {
+              "version_id": "472903c2-3fca-43c0-a613-8c54f108bf73",
+              "percentage": 100
+            }
+          ],
+          "unchangedSincePostDeployment": true
+        },
+        {
+          "service": "gachia-game-genshin",
+          "deploymentId": "c087254a-58f4-4c61-b92b-0fd44d9f2f2b",
+          "versions": [
+            {
+              "version_id": "b2952171-bf58-4d64-a16e-8cea41cf9529",
+              "percentage": 100
+            }
+          ],
+          "unchangedSincePostDeployment": true
+        },
+        {
+          "service": "gachia-game-lvmeng",
+          "deploymentId": "d04a1d7d-d9d0-46d5-8f26-b8985e596f64",
+          "versions": [
+            {
+              "version_id": "815be742-10a4-4609-a32a-cfd0cd968487",
+              "percentage": 100
+            }
+          ],
+          "unchangedSincePostDeployment": true
+        },
+        {
+          "service": "gachia-game-azur-promilia-staging",
+          "deploymentId": "bf548185-0862-401a-94de-dedce1d5ea26",
+          "versions": [
+            {
+              "version_id": "440ed712-bdbf-47eb-9f6c-17cca4416a41",
+              "percentage": 100
+            }
+          ],
+          "unchangedSincePostDeployment": true
+        }
+      ],
+      "productionHttp": [
+        {
+          "path": "/zh",
+          "status": 200,
+          "canonical": "https://gachia.com/zh",
+          "noindex": false,
+          "xRobotsTag": null
+        },
+        {
+          "path": "/zh/azur-promilia",
+          "status": 200,
+          "canonical": "https://gachia.com/zh/azur-promilia",
+          "noindex": false,
+          "xRobotsTag": null
+        },
+        {
+          "path": "/zh/azur-promilia/characters",
+          "status": 200,
+          "canonical": "https://gachia.com/zh/azur-promilia/characters",
+          "noindex": false,
+          "xRobotsTag": null
+        },
+        {
+          "path": "/zh/hi3/weapons",
+          "status": 200,
+          "canonical": "https://gachia.com/zh/hi3/weapons",
+          "noindex": false,
+          "xRobotsTag": null
+        },
+        {
+          "path": "/robots.txt",
+          "status": 200,
+          "noindex": false,
+          "xRobotsTag": null
+        },
+        {
+          "path": "/sitemap.xml",
+          "status": 200,
+          "noindex": false,
+          "xRobotsTag": null
+        }
+      ]
+    }
+  },
+  "mainReadiness": {
+    "productionSecretsPresent": true,
+    "stagingMissingOAuthSecrets": [
+      "GOOGLE_CLIENT_ID",
+      "GOOGLE_CLIENT_SECRET"
+    ],
+    "databaseIdsDifferent": true,
+    "bucketsDifferent": true,
+    "databaseValuesInspected": false,
+    "secretValuesRead": false,
+    "newMainCandidateDeployed": false,
+    "realOAuthTested": false,
+    "routerStagingConfigurationDriftObserved": true,
+    "mainUncompressedKiBFromS12": 13882.49,
+    "mainCurrentPublishedSizeLimitMiB": 64,
+    "old3MiBGzipAssumptionSuperseded": true,
+    "mainStartupOrCpuAcceptance": false
+  },
+  "localTests": {
+    "beforeDeployReleasePassed": 69,
+    "finalReleasePassed": 76,
+    "newStagingUnitTestsPassed": 7,
+    "adminCiAndPatchContractsPassed": 8,
+    "ciScopeContractsPassed": 2,
+    "frozenOfflineInstall": "passed",
+    "webAndRouterFullSuites": "not_rerun_this_phase_application_sources_unchanged_from_S1.2",
+    "logs": [
+      {
+        "path": ".release-records/s1-cloud-acceptance/local-gates.log",
+        "sha256": "7ae144c69e7188fc0471b504737774f3020d2ff5cda8f7f99aa3fb2f7cf9f021"
+      },
+      {
+        "path": ".release-records/s1-cloud-acceptance/staging-check-tests.log",
+        "sha256": "a81fb58200ca0b4188558e06738731aff1b92fe70f3e36e3c1924a9d2c9be7ba"
+      },
+      {
+        "path": ".release-records/s1-cloud-acceptance/final-local-tests.log",
+        "sha256": "c9ccad72a7177cdcc5c41cfc3e788f06fd95bc435261af92a789beae95a43380"
+      }
+    ]
+  },
+  "knownFailuresAndCorrections": [
+    {
+      "issue": "Direct Node connection to workers.dev timed out",
+      "failedRecord": {
+        "path": ".release-records/staging-azur-promilia-e043d65a-7fb9-4da9-b754-9a8909f51ca6/result.json",
+        "sha256": "266c4a5c0ebc01884b5fe929f931fe80654efdc28fa5549221ef01f484f6f682"
+      },
+      "resolution": "Used existing local system proxy for Node and isolated Chromium; no TLS bypass, global network change or redeployment"
+    },
+    {
+      "issue": "Production metadata comparison initially compared undefined canonical property with JSON-omitted property on robots/sitemap",
+      "resolution": "Normalized current observations to the same JSON schema; all six HTTP samples and seven service deployment references reconciled"
+    }
+  ],
+  "remainingReleaseGates": [
+    "Configure staging-specific Google OAuth client and approved test account/scope without copying production secrets",
+    "Deploy and accept the main candidate independently, including trusted IP, cookie domain, Router and cross-Worker paths",
+    "Review existing Router staging configuration drift before using it",
+    "Re-read current versions and verify rollback/asset/data compatibility immediately before any production release",
+    "Other game Workers have not received cloud acceptance for this runtime"
+  ],
+  "sideEffects": {
+    "newWorkers": [
+      "gachia-game-azur-promilia-staging"
+    ],
+    "productionVersionChanges": false,
+    "productionRouteChanges": false,
+    "subscriptionChanges": false,
+    "remoteDataOrSecretChanges": false,
+    "businessDatabaseRecordsRead": false,
+    "githubPush": false,
+    "githubActionsRunsTriggered": 0,
+    "deletions": false,
+    "stagingLeftAvailable": true,
+    "workerSecretValuesRead": false,
+    "existingWranglerOAuthUsedForAuthentication": true,
+    "authenticationCredentialValuesLogged": false
+  },
+  "evidence": [
+    {
+      "path": ".release-records/s1-cloud-acceptance/account-preflight.json",
+      "sha256": "86c2b2e51e9fa323bd1b808fd46ca498d331013bc0a9c7e6c52dac9620e648bb"
+    },
+    {
+      "path": ".release-records/s1-cloud-acceptance/cloud-before.json",
+      "sha256": "48d7ecadb2c76c91a758307b6d2e08a9c2e261e85a31b0f0dd719b9a3ed07e2e"
+    },
+    {
+      "path": ".release-records/s1-cloud-acceptance/cloud-after.json",
+      "sha256": "1acf66410f7e1285b3d9401dfcc479778677256ac8ed5984580e97a9ccd9dc9f"
+    },
+    {
+      "path": ".release-records/s1-cloud-acceptance/rollback-preflight.json",
+      "sha256": "817385d2a7926a41a9f4747a4045bf316b9dac17b956cb6b41ec51a0551b869c"
+    },
+    {
+      "path": ".release-records/s1-cloud-acceptance/github-preflight.log",
+      "sha256": "2429c3f7c3ea3bf013595d2a377aec78395eda1037ec5710729cf88898e115d0"
+    },
+    {
+      "path": ".release-records/s1-cloud-acceptance/browser-budget-evidence.json",
+      "sha256": "297a8507162b7139f2f00110cd3131387c5f53e1c25ce29ce5286dc7dbaea440"
+    },
+    {
+      "path": ".release-records/s1-cloud-acceptance/final-reconciliation.json",
+      "sha256": "baed979c07c5c1d68a88f775f90db0220504017d047bea268002e9607c7d7805"
+    }
+  ],
+  "verificationToolSources": [
+    {
+      "path": "scripts/game-staging-acceptance.mjs",
+      "sha256": "31f01d61be6992d68c683896a189fbc14a6cf74b74e5644cad3ebe329d8abe39"
+    },
+    {
+      "path": "scripts/game-staging-acceptance.test.mjs",
+      "sha256": "cb4c6e281f0da04058da5e9a0c3bb143dc3b7f533b09259a72d9ff81dc71ed26"
+    }
+  ],
+  "nextStep": "Prepare dedicated main-staging OAuth configuration and authorization for real login tests; no production promotion in this phase"
+}

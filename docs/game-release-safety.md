@@ -1,6 +1,6 @@
 # Game Release Safety：S1 本地发布门禁
 
-更新：2026-10-23（S1.2）。远程发布门禁仍仅覆盖异环与蓝色星原；运行时检查已覆盖全部五个 Next 应用。不是全站发布平台，也不是已经完成云端验收的声明。
+更新：2026-10-23（S1.3）。远程发布门禁仍仅覆盖异环与蓝色星原；运行时检查已覆盖全部五个 Next 应用。蓝色星原已完成一次独立云端 staging 验收，不是全站发布平台或生产放行声明。
 
 ## 1. 本阶段解决什么
 
@@ -12,7 +12,7 @@
 - 生产执行要求精确服务名确认和操作者提供的回滚 UUID；工具不会冒称已经验证云端 UUID。
 - 写入本地状态记录，严格区分构建、检查、执行部署命令和线上验收。
 
-未修改主站、Router、原神和绿梦的发布目标或生产流量；没有创建远程 staging 服务。独立 staging 配置仅在未来实际执行远程部署时创建或更新对应服务。
+未修改主站、Router、原神和绿梦的发布目标或生产流量。S1.3 已创建独立 `gachia-game-azur-promilia-staging`，部署前后六个生产服务版本未变；异环的同名 staging 配置仍未在本批执行。详见 [S1.3 交付记录](../plans/multi-game-s1-staging-closeout-2026-10-23.md)。
 
 ## 2. 目标映射
 
@@ -90,7 +90,7 @@ node scripts/runtime-rollout-smoke.mjs game-lvmeng
 
 ## 5. 远程操作：仅在满足发布前置条件后
 
-下列命令会写入 Cloudflare Worker 和静态资源，不是只读检查。本阶段没有执行。
+下列命令会写入 Cloudflare Worker 和静态资源，不是只读检查。S1.3 仅实际执行了蓝色星原 `deploy:staging` 一次，未执行生产命令。
 
 ```bash
 # 只更新对应 staging Worker，不修改 Router。
@@ -106,6 +106,16 @@ pnpm --filter @gachia/game-nte deploy \
 占位 UUID 不可直接使用。要求精确确认是误操作门禁，不是线上版本真实性证明。生产 Worker 已由 Router 绑定时，更新该 Worker 会影响生产流量，即使没有重新部署 Router。
 
 没有自动 rollback：如果上传/部署返回失败，平台可能已产生副作用，记录为 `deployment_failed_needs_reconciliation`，由操作者读取实际云端状态后决定恢复。不得自动重试同一发布。
+
+### 独立 staging 的只读验收
+
+```bash
+node scripts/game-staging-acceptance.mjs --game azur-promilia --subdomain aieasygames
+```
+
+该命令不构建、不部署、不发送认证凭据、不跟随 HTTP 重定向，只访问构造的 `https://gachia-game-<game>-staging.<subdomain>.workers.dev`。覆盖三语言正文/索引/资源/404，以及桌面手机有/无 JS、筛选与详情导航。浏览器只允许同源 GET/HEAD，并有 1,000 次请求上限；不得用于压力测试。单元测试使用注入的模拟响应，不访问远程。
+
+仅当本机已有可用代理时，可显式设置 `HTTPS_PROXY` 并使用 Node `--use-env-proxy`，另用 `STAGING_CHECK_PROXY` 为测试 Chromium 指定同一本地 HTTP 代理；不会自动修改系统网络或禁用 TLS 校验。输出在 `.release-records/staging-<game>-<uuid>/`，包含成功或失败记录及限定截图。脚本不核实云端版本、路由和生产前后状态，这些需要独立 API 对账，不能仅凭 HTTP 通过宣称发布完成。
 
 ## 6. 本地记录与并发限制
 
@@ -149,10 +159,12 @@ pnpm release:game status --record .release-records/<record-file>.json
 ## 8. 云端验收清单与已复核边界
 
 - [x] 全部五个 Next 应用默认构建、运行时精确版本与自定义补丁的限定本地回归通过。
-- [ ] 核对真实账户、目标环境、凭据权限与当前版本。
-- [ ] staging 实际部署后检查 noindex、robots、正文、canonical、JS/CSS、404。
-- [ ] 发布前后确认生产版本未被 staging 修改。
+- [x] S1.3 核对真实账户、目标环境、现有权限与当前版本；Paid 套餐与 Actions 预算通过已登录控制台只读确认。
+- [x] 蓝色星原 staging 实际部署后检查 noindex、robots、正文、canonical、JS/CSS、404；异环及其他应用仍需各自验收。
+- [x] 本次 staging 部署前后确认六个生产服务版本与生产路由未变。
 - [ ] 生产候选的版本、承载流量与回滚 UUID 真实可用。
 - [ ] 切流后通过统一域名核验 Router、资源和关键页面。
 
 入口复核：原神已有独立 staging 配置，绿梦无同名 `deploy:preview` 别名；二者未接入本门禁。绿梦默认配置名仍是生产服务，直接使用默认配置不能解释为安全预览。主站与 Router 的 staging/production 流程继续遵循其原有门禁，不根据本阶段测试推断全站环境隔离已经完成。
+
+S1.3 新发现：主站 staging 缺少两个 Google OAuth secret；Router staging 的云端配置与本地声明不同。本批未修改这些服务，不能借蓝色星原直连验收放行主站或 Router。新游戏预览地址的 noindex 不是身份认证，不应存放非公开资料。
