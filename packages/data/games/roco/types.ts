@@ -82,6 +82,7 @@ export interface RocoContentReview {
   status: 'needs_verification';
   reviewedAt: string;
   scope: string;
+  kind?: 'editorial_proposal_archive';
 }
 
 // --- Material Types ---

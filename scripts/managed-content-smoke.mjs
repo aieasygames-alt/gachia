@@ -155,6 +155,12 @@ export async function verifyManagedContent(value, directory) {
             for (const text of [body, await page.title(), await page.locator('meta[name="description"]').getAttribute('content'), ...await page.locator('script[type="application/ld+json"]').allTextContents()]) assert(!forbidden.test(text), `${path}: withdrawn claim remains: ${text.slice(0, 180)}`);
             const article = page.locator('main');
             if (kind === 'roco-reviewed-guide') {
+              if (row.contentReview.kind === 'editorial_proposal_archive') {
+                assert.equal(await page.locator('[data-content-review]').getAttribute('data-content-review'), 'editorial_proposal_archive', path);
+                assert(body.includes({ zh: '非官方编辑设想归档', en: 'Unofficial editorial proposal archive', ja: '非公式の編集提案アーカイブ' }[locale]), path);
+                assert(await page.locator('[data-content-review]').evaluate(node => node.scrollWidth <= node.clientWidth), `${path}: archive notice overflows`);
+                if (locale === 'ja') assert.equal(await article.getByText(row.categoryEn, { exact: true }).count(), 0, `${path}: archive breadcrumb must not fall back to English`);
+              }
               assert(body.includes(row[`summary${suffix}`]));
               for (const line of row[`content${suffix}`].split('\n').map(line => line.replace(/^(?:#{1,6}|-)\s+/, '').trim()).filter(Boolean)) assert(body.includes(line), `${path}: missing checklist text`);
               const schemas = (await page.locator('script[type="application/ld+json"]').allTextContents()).map(text => JSON.parse(text));
@@ -188,6 +194,11 @@ export async function verifyManagedContent(value, directory) {
               for (const text of await card.allInnerTexts()) {
                 assert(!/10\/27|10\/20|2026-10-27|400\+|★★★★/.test(text), text);
                 if (section === 'characters') assert(text.includes({ zh: '待核实', en: 'Unverified', ja: '未確認' }[locale]));
+              }
+              if (section === 'guides') {
+                const kind = row.contentReview.kind === 'editorial_proposal_archive' ? 'editorial_proposal_archive' : 'verification_checklist';
+                for (const node of await card.all()) assert.equal(await node.locator(`[data-guide-review="${kind}"]`).count(), 1, `${path}: missing publication kind for ${row.id}`);
+                if (kind === 'editorial_proposal_archive') assert.equal(await card.count(), 1, `${path}: do not feature archived product proposals`);
               }
             }
           } else if (kind.startsWith('roco-')) {

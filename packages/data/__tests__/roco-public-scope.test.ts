@@ -7,6 +7,7 @@ import { tierLists } from '../games/roco/tier-lists';
 import { characters as genericCharacters } from '../games/roco/characters';
 
 const proof = JSON.parse(readFileSync(new URL('../../../reports/content-integrity/s2-8-source-decisions-2026-10-24.json', import.meta.url), 'utf8'));
+const editorialProof = JSON.parse(readFileSync(new URL('../../../reports/content-integrity/s2-9-source-decisions-2026-10-24.json', import.meta.url), 'utf8'));
 const ids = proof.originalGuides.map((row: { id: string }) => row.id);
 const hash = (value: unknown) => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
@@ -35,8 +36,9 @@ it('marks all six details unverified while preserving the earlier three correcti
 it('rewrites exactly four mechanics guides and leaves the other twenty-six records and all dates intact', () => {
   expect(ids).toHaveLength(4);
   expect(guides.map(row => row.id)).toEqual(proof.preservation.guideIds);
-  expect(hash(guides.filter(row => !ids.includes(row.id)))).toBe(proof.preservation.otherTwentySixGuidesSerializationSha256);
-  expect(guides.filter(row => 'contentReview' in row)).toHaveLength(13);
+  const beforeEditorialSeparation = guides.map(row => editorialProof.originalGuides.find((original: { id: string }) => original.id === row.id) ?? row);
+  expect(hash(beforeEditorialSeparation.filter(row => !ids.includes(row.id)))).toBe(proof.preservation.otherTwentySixGuidesSerializationSha256);
+  expect(guides.filter(row => row.contentReview.kind !== 'editorial_proposal_archive')).toHaveLength(13);
   for (const old of proof.originalGuides) {
     const row = guides.find(row => row.id === old.id)!;
     expect(row.updatedAt).toBe(old.updatedAt);

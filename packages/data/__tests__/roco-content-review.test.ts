@@ -7,6 +7,7 @@ import { characters, getRocoCharacterDescription, rocoCharacters } from '../game
 
 const proof = JSON.parse(readFileSync(new URL('../../../reports/content-integrity/s2-7-source-decisions-2026-10-24.json', import.meta.url), 'utf8'));
 const nextProof = JSON.parse(readFileSync(new URL('../../../reports/content-integrity/s2-8-source-decisions-2026-10-24.json', import.meta.url), 'utf8'));
+const editorialProof = JSON.parse(readFileSync(new URL('../../../reports/content-integrity/s2-9-source-decisions-2026-10-24.json', import.meta.url), 'utf8'));
 const ids = proof.originalCharacters.source.map((row: { id: string }) => row.id);
 const guideIds = proof.originalGuides.map((row: { id: string }) => row.id);
 const hash = (value: unknown) => createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -31,7 +32,8 @@ it('withdraws copied international skills and values without inventing zero stat
 it('preserves all other guides and original dates while replacing nine assertion pages with localized checklists', () => {
   expect(rawGuides.map(row => row.id)).toEqual(proof.preservation.guideIds);
   expect(guideIds).toHaveLength(9);
-  const beforeNextWithdrawal = rawGuides.map(row => nextProof.originalGuides.find((original: { id: string }) => original.id === row.id) ?? row);
+  const beforeNextWithdrawal = rawGuides.map(row => nextProof.originalGuides.find((original: { id: string }) => original.id === row.id)
+    ?? editorialProof.originalGuides.find((original: { id: string }) => original.id === row.id) ?? row);
   expect(hash(beforeNextWithdrawal.filter(row => !guideIds.includes(row.id)))).toBe(proof.preservation.otherTwentyOneGuidesSerializationSha256);
   for (const old of proof.originalGuides) {
     const guide = rawGuides.find(row => row.id === old.id)!;

@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-23T23:22:45.634788+00:00",
+  "phase": "S2.9",
+  "baseline": "e08aa02",
+  "branch": "codex/multi-game-s1-release-safety",
+  "conclusion": "bounded_editorial_proposal_separation_and_public_archive_policy; not official verification or production approval",
+  "contracts": {
+    "inventory": {
+      "contract": "raw-inventory-v1",
+      "pairs": 90,
+      "equal": 90,
+      "sourceOnly": 5,
+      "pending": [],
+      "holds": [
+        {
+          "path": "roco/raw-characters.json",
+          "status": "needs_review",
+          "sourceSha256": "c726ca7b9fdfab0274fbc4e2689bac07908cbc662020204f157fd567beb537fe",
+          "mirrorSha256": "c726ca7b9fdfab0274fbc4e2689bac07908cbc662020204f157fd567beb537fe",
+          "reason": "All six details now withhold unverified identity/appearance/mechanics claims; retained names/classifications and legacy navigation artwork remain independently unverified.",
+          "reviewDocument": "plans/multi-game-s2-8-roco-public-scope-closeout-2026-10-24.md"
+        },
+        {
+          "path": "roco/raw-guides.json",
+          "status": "needs_review",
+          "sourceSha256": "0b2ca41b4e51ea1f6e5b100dca9531795e2962c140d474a0d5de980a75263268",
+          "mirrorSha256": "0b2ca41b4e51ea1f6e5b100dca9531795e2962c140d474a0d5de980a75263268",
+          "reason": "All 30 guide URLs now carry scoped review policy: 13 verification checklists and 17 archived editorial proposals. Classification is not official game verification; identities, other public tools and registry cross-consumers remain unapproved.",
+          "reviewDocument": "plans/multi-game-s2-9-roco-editorial-separation-closeout-2026-10-24.md"
+        }
+      ],
+      "issues": [],
+      "engineeringReady": true,
+      "contentReleaseReady": false,
+      "factualApproval": "not_implied_by_mirror_equality"
+    },
+    "managed": {
+      "contract": "managed-raw-mirrors-v1",
+      "pairs": 7,
+      "entries": 111
+    }
+  },
+  "rawProtection": {
+    "rawFiles": {
+      "total": 185,
+      "byteUnchanged": 183,
+      "changed": [
+        "apps/web/public/data/roco/raw-guides.json",
+        "packages/data/games/roco/raw-guides.json"
+      ]
+    },
+    "allCharactersByteUnchanged": true,
+    "priorThirteenGuidesSemanticallyUnchanged": true,
+    "allGuideIdsOrderAndOriginalUpdatedAtPreserved": true,
+    "allDataClientAndManifestFilesByteUnchanged": 345
+  },
+  "sources": {
+    "decisionReport": "reports/content-integrity/s2-9-source-decisions-2026-10-24.json",
+    "internalReviewDocument": "docs/editorial/roco-product-proposal-review-2026-10-24.md",
+    "scope": "Editorial classification and conservative publication withdrawal only. No new official game evidence, live game/network verification or proof of cancellation. Existing non-official disclaimers are acknowledged, not reclassified as lies.",
+    "completeArchivedOriginals": 17,
+    "priorChecklistsUnchanged": 13,
+    "totalReviewedGuideUrls": 30,
+    "removedAndArchivedHardcodedBlocks": 17,
+    "classifications": {
+      "site_candidate": 9,
+      "game_only": 8
+    },
+    "siteAdoptionsApproved": 0,
+    "newOfficialRocoVerification": false,
+    "internalReviewFilesCopiedToPublicAssets": []
+  },
+  "sitemap": {
+    "mainUrlCount": 4359,
+    "byLocale": {
+      "en": 1528,
+      "ja": 1300,
+      "zh": 1531
+    },
+    "added": [],
+    "removed": [
+      "https://gachia.com/en/roco/guides/global-accessibility-cross-device-playbook",
+      "https://gachia.com/en/roco/guides/global-cbt-to-launch-decision-gates",
+      "https://gachia.com/en/roco/guides/global-change-communication-playbook",
+      "https://gachia.com/en/roco/guides/global-cn-release-governance",
+      "https://gachia.com/en/roco/guides/global-days-31-90-season-event-plan",
+      "https://gachia.com/en/roco/guides/global-economy-monetization-fairness-playbook",
+      "https://gachia.com/en/roco/guides/global-fair-play-integrity-playbook",
+      "https://gachia.com/en/roco/guides/global-first-30-days-pve-plan",
+      "https://gachia.com/en/roco/guides/global-launch-readiness-checklist",
+      "https://gachia.com/en/roco/guides/global-live-ops-metrics-experiments",
+      "https://gachia.com/en/roco/guides/global-localization-cultural-event-playbook",
+      "https://gachia.com/en/roco/guides/global-onboarding-learning-recovery-playbook",
+      "https://gachia.com/en/roco/guides/global-player-discovery-codex-playbook",
+      "https://gachia.com/en/roco/guides/global-player-feedback-roadmap-playbook",
+      "https://gachia.com/en/roco/guides/global-player-support-trust-playbook",
+      "https://gachia.com/en/roco/guides/global-returning-player-event-legacy-playbook",
+      "https://gachia.com/en/roco/guides/global-social-safety-guild-playbook",
+      "https://gachia.com/ja/roco/guides/global-accessibility-cross-device-playbook",
+      "https://gachia.com/ja/roco/guides/global-cbt-to-launch-decision-gates",
+      "https://gachia.com/ja/roco/guides/global-change-communication-playbook",
+      "https://gachia.com/ja/roco/guides/global-cn-release-governance",
+      "https://gachia.com/ja/roco/guides/global-days-31-90-season-event-plan",
+      "https://gachia.com/ja/roco/guides/global-economy-monetization-fairness-playbook",
+      "https://gachia.com/ja/roco/guides/global-fair-play-integrity-playbook",
+      "https://gachia.com/ja/roco/guides/global-first-30-days-pve-plan",
+      "https://gachia.com/ja/roco/guides/global-launch-readiness-checklist",
+      "https://gachia.com/ja/roco/guides/global-live-ops-metrics-experiments",
+      "https://gachia.com/ja/roco/guides/global-localization-cultural-event-playbook",
+      "https://gachia.com/ja/roco/guides/global-onboarding-learning-recovery-playbook",
+      "https://gachia.com/ja/roco/guides/global-player-discovery-codex-playbook",
+      "https://gachia.com/ja/roco/guides/global-player-feedback-roadmap-playbook",
+      "https://gachia.com/ja/roco/guides/global-player-support-trust-playbook",
+      "https://gachia.com/ja/roco/guides/global-returning-player-event-legacy-playbook",
+      "https://gachia.com/ja/roco/guides/global-social-safety-guild-playbook",
+      "https://gachia.com/zh/roco/guides/global-accessibility-cross-device-playbook",
+      "https://gachia.com/zh/roco/guides/global-cbt-to-launch-decision-gates",
+      "https://gachia.com/zh/roco/guides/global-change-communication-playbook",
+      "https://gachia.com/zh/roco/guides/global-cn-release-governance",
+      "https://gachia.com/zh/roco/guides/global-days-31-90-season-event-plan",
+      "https://gachia.com/zh/roco/guides/global-economy-monetization-fairness-playbook",
+      "https://gachia.com/zh/roco/guides/global-fair-play-integrity-playbook",
+      "https://gachia.com/zh/roco/guides/global-first-30-days-pve-plan",
+      "https://gachia.com/zh/roco/guides/global-launch-readiness-checklist",
+      "https://gachia.com/zh/roco/guides/global-live-ops-metrics-experiments",
+      "https://gachia.com/zh/roco/guides/global-localization-cultural-event-playbook",
+      "https://gachia.com/zh/roco/guides/global-onboarding-learning-recovery-playbook",
+      "https://gachia.com/zh/roco/guides/global-player-discovery-codex-playbook",
+      "https://gachia.com/zh/roco/guides/global-player-feedback-roadmap-playbook",
+      "https://gachia.com/zh/roco/guides/global-player-support-trust-playbook",
+      "https://gachia.com/zh/roco/guides/global-returning-player-event-legacy-playbook",
+      "https://gachia.com/zh/roco/guides/global-social-safety-guild-playbook"
+    ],
+    "actualWorkerEqualsPrerender": true,
+    "removalsExactlyMatchSeventeenExistingThreeLocaleGuideUrls": true,
+    "reviewedGuideDetailsSubmitted": 0,
+    "rootIndexXmlUnchanged": true,
+    "rootOwnersChanged": false,
+    "baselineType": "previous local compiled Worker, not current production HTTP",
+    "baselineFile": ".release-records/managed-content-2e34596f-8f2d-4c9e-ab3c-a499ed60ba34/main-sitemap.xml",
+    "currentFile": ".release-records/managed-content-49e1ed75-6e56-46ab-8855-a8baa10eecc0/main-sitemap.xml",
+    "prerenderFile": "apps/web/.next/server/app/sitemaps/main/sitemap.xml.body"
+  },
+  "verification": {
+    "dataTests": {
+      "passed": 131,
+      "files": 10,
+      "log": ".release-records/s2-9/data-test.log"
+    },
+    "webTests": {
+      "passed": 310,
+      "files": 68,
+      "log": ".release-records/s2-9/web-test.log"
+    },
+    "routerTests": {
+      "passed": 31,
+      "files": 3,
+      "log": ".release-records/s2-9/router-tests.log"
+    },
+    "releaseNodeTests": {
+      "passed": 104,
+      "log": ".release-records/s2-9/release-tests.log"
+    },
+    "retentionPythonTests": 9,
+    "xmlPythonTests": 8,
+    "typeChecks": {
+      "packages": [
+        "data",
+        "web",
+        "game-genshin",
+        "game-nte",
+        "game-lvmeng",
+        "game-azur-promilia"
+      ],
+      "passed": true,
+      "logPattern": ".release-records/s2-9/<package>-typecheck.log"
+    },
+    "dataValidation": {
+      "passed": true,
+      "log": ".release-records/s2-9/data-validation.log"
+    },
+    "manifestValidation": {
+      "passed": true,
+      "log": ".release-records/s2-9/manifests.log"
+    },
+    "lint": {
+      "errors": 0,
+      "warnings": 1,
+      "warning": "Existing auth-dialog react-hooks/exhaustive-deps warning",
+      "log": ".release-records/s2-9/web-lint.log"
+    },
+    "mainBuild": {
+      "passed": true,
+      "log": ".release-records/s2-9/build.log"
+    },
+    "wranglerDryRun": {
+      "passed": true,
+      "uploadKiB": 14002.57,
+      "gzipKiB": 2869.54,
+      "actualUpload": false,
+      "log": ".release-records/s2-9/dry-run.log"
+    },
+    "managedContent": {
+      "record": ".release-records/managed-content-49e1ed75-6e56-46ab-8855-a8baa10eecc0/result.json",
+      "browserCases": 322,
+      "rawJsonCases": 7,
+      "searchJsonCases": 3,
+      "realListDetailClicks": 18,
+      "viewports": [
+        1440,
+        390
+      ],
+      "kinds": [
+        "archive",
+        "backport",
+        "cn-map",
+        "codes",
+        "echo",
+        "echo-list",
+        "region",
+        "roco-characters-list",
+        "roco-events",
+        "roco-guides-list",
+        "roco-home",
+        "roco-public-review",
+        "roco-reviewed-character",
+        "roco-reviewed-guide",
+        "roco-version"
+      ]
+    },
+    "runtime": {
+      "record": ".release-records/rollout-web-bfa7508a-769f-4b53-b8a2-2e824921c74e/result.json",
+      "status": "local_runtime_verified",
+      "browserCases": 18,
+      "httpCases": 32
+    },
+    "seoDiscovery": {
+      "record": ".release-records/seo-discovery-web-21660970-f5d9-4334-8554-59339f68d370/result.json",
+      "status": "local_seo_discovery_verified",
+      "browserCases": 32
+    },
+    "productionNegativeGates": [
+      {
+        "command": "pnpm content:release-ready",
+        "exit": 1,
+        "reason": "two factual holds; blocked before build/upload",
+        "log": ".release-records/s2-9/negative-readiness.log"
+      },
+      {
+        "command": "pnpm --filter @gachia/web run deploy",
+        "exit": 1,
+        "reason": "two factual holds; blocked before build/upload",
+        "log": ".release-records/s2-9/negative-deploy.log"
+      },
+      {
+        "command": "pnpm --filter @gachia/web run upload",
+        "exit": 1,
+        "reason": "two factual holds; blocked before build/upload",
+        "log": ".release-records/s2-9/negative-upload.log"
+      }
+    ],
+    "testImplementationNotes": [
+      "A valid localized summary was 78 characters; assert the explicit publication-role statement rather than an arbitrary 80-character summary minimum. Japanese content indexing threshold remains unchanged.",
+      "Next preserves JSX; actual notice rendering uses the existing TypeScript transpile/React contract-test pattern without changing application JSX settings."
+    ],
+    "actions": "not_run",
+    "cloudStaging": "not_performed",
+    "productionHttp": "not_performed",
+    "supersededCompiledRun": {
+      "record": ".release-records/managed-content-e5d78e30-6aed-41f1-a3f2-8f2f9d0cde47/result.json",
+      "reason": "Category accessor localized first; final review found breadcrumb category registry still used English. Registry corrected, then rebuilt and repeated every compiled suite. This intermediate record is not final-artifact acceptance."
+    },
+    "visualInspection": {
+      "viewed": [
+        ".release-records/managed-content-49e1ed75-6e56-46ab-8855-a8baa10eecc0/roco-reviewed-guide-global-player-feedback-roadmap-playbook-390.png"
+      ],
+      "result": "Mobile archive title, scope notice, topic boundaries, FAQ and list navigation remain readable in the existing visual language. External resource identity/health is not verified by an offline fixture."
+    }
+  },
+  "localArtifact": {
+    "root": "apps/web/.open-next",
+    "fileCount": 3143,
+    "fileBytes": 108249613,
+    "treeSha256": "261d32f5f0f7401f50cfbddead7519c2b5d2bdc54d6752a2df2a1aefd316d191",
+    "hashAlgorithm": "SHA256 over sorted relative UTF-8 path + NUL + binary SHA256 of each file",
+    "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+    "note": "Entrypoint alone is not artifact identity; includes server/assets/caches. No cloud seal or promotion implied."
+  },
+  "remaining": [
+    "Six historical character identities/names/artwork/classifications still lack independent evidence",
+    "Other public tools, registry/navigation copy and downstream consumers are not approved by this guide-only classification",
+    "Thirteen checklists and seventeen archive notices are editorial states, not game facts or site commitments",
+    "Genshin strict migration and all-owner cloud/rollback acceptance remain outstanding"
+  ],
+  "safety": {
+    "push": false,
+    "cloudDeployment": false,
+    "actionsTriggered": false,
+    "databaseChange": false,
+    "loginChange": false,
+    "topologyChange": false,
+    "newTelemetryOrAccountCollection": false,
+    "businessOrHistoricalFileDeletion": false,
+    "originalDirtyCheckoutTouched": false
+  },
+  "evidenceDirectory": ".release-records/s2-9"
+}

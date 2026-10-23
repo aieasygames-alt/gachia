@@ -12,6 +12,9 @@ export interface GuideListEntry {
   tags: string[];
   updatedAt?: string;
   currentVersion?: string;
+  contentReview?: {
+    status: 'needs_verification'; reviewedAt: string; kind?: 'editorial_proposal_archive';
+  };
 }
 
 export interface GuideListData {
@@ -26,6 +29,7 @@ type RawGuide = {
   tags?: string[];
   updatedAt?: string;
   currentVersion?: string;
+  contentReview?: GuideListEntry['contentReview'];
 };
 
 type SeaGuideSummary = RawGuide & {
@@ -56,6 +60,7 @@ function toGuideListEntry<T extends RawGuide>(
     tags: guide.tags ?? [],
     updatedAt: guide.updatedAt,
     currentVersion: guide.currentVersion,
+    ...(guide.contentReview ? { contentReview: guide.contentReview } : {}),
   };
 }
 

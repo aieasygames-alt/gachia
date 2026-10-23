@@ -127,10 +127,10 @@
     {
       "path": "roco/raw-guides.json",
       "status": "needs_review",
-      "sourceSha256": "4f60cececee0e63dc27d8e0bff725060462f83a4d4b8f2a1c55b32c21ef38edb",
-      "mirrorSha256": "4f60cececee0e63dc27d8e0bff725060462f83a4d4b8f2a1c55b32c21ef38edb",
-      "reason": "Thirteen guides now contain editorial verification checklists; remaining seventeen guides and other public tools/registry copy still require factual and scope review.",
-      "reviewDocument": "plans/multi-game-s2-8-roco-public-scope-closeout-2026-10-24.md"
+      "sourceSha256": "0b2ca41b4e51ea1f6e5b100dca9531795e2962c140d474a0d5de980a75263268",
+      "mirrorSha256": "0b2ca41b4e51ea1f6e5b100dca9531795e2962c140d474a0d5de980a75263268",
+      "reason": "All 30 guide URLs now carry scoped review policy: 13 verification checklists and 17 archived editorial proposals. Classification is not official game verification; identities, other public tools and registry cross-consumers remain unapproved.",
+      "reviewDocument": "plans/multi-game-s2-9-roco-editorial-separation-closeout-2026-10-24.md"
     }
   ]
 }

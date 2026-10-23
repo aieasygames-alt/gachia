@@ -50,7 +50,7 @@ export function getRocoGuideSummary(guide: RocoGuide, locale: SupportedLocale): 
 }
 
 export function getRocoGuideCategory(guide: RocoGuide, locale: SupportedLocale): string {
-  return localeStr(guide.categoryZh, guide.categoryEn, locale);
+  return localeStr(guide.categoryZh, guide.categoryEn, locale, guide.categoryJa);
 }
 
 export function getRocoGuideCategories(): string[] {
@@ -80,6 +80,6 @@ export function getRocoGuideFaqAnswer(faq: RocoGuideFaq, locale: SupportedLocale
 export const ROCO_GUIDE_CATEGORIES: Record<string, Record<SupportedLocale, string>> = {};
 for (const g of rocoGuides) {
   if (!ROCO_GUIDE_CATEGORIES[g.category]) {
-    ROCO_GUIDE_CATEGORIES[g.category] = { zh: g.categoryZh, en: g.categoryEn, ja: g.categoryEn };
+    ROCO_GUIDE_CATEGORIES[g.category] = { zh: g.categoryZh, en: g.categoryEn, ja: g.categoryJa ?? g.categoryEn };
   }
 }

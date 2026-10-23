@@ -3,7 +3,7 @@ import type { GameId, SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
 import type { GuideListEntry } from '@/lib/game-data/guides';
 import { getGuideListData } from '@/lib/game-data/guides';
-import { buildLocalizedAlternates, ensureMetaLength, getEntryCurrentVersion, getEntryUpdatedAt } from '@/lib/seo-metadata';
+import { buildLocalizedAlternates, ensureMetaLength, getEntryCurrentVersion, getEntryUpdatedAt, isContentUnderReview, isEditorialProposalArchive } from '@/lib/seo-metadata';
 import { ROCO_LIST_REVIEW } from '@/lib/roco-public-review';
 
 const BASE_URL = 'https://gachia.com';
@@ -1832,6 +1832,12 @@ async function RocoGuides({ locale, gameId }: { locale: SupportedLocale; gameId:
 function GuideFreshnessMeta({ guide, locale }: { guide: unknown; locale: SupportedLocale }) {
   const updatedAt = getEntryUpdatedAt(guide);
   const currentVersion = getEntryCurrentVersion(guide);
+  if (isContentUnderReview(guide)) return <div data-guide-review={isEditorialProposalArchive(guide) ? 'editorial_proposal_archive' : 'verification_checklist'} className="mt-3 flex flex-wrap gap-1.5 text-xs text-game-text-muted">
+    <span className="rounded bg-game-surface-alt px-2 py-0.5">{isEditorialProposalArchive(guide)
+      ? { zh: '非官方编辑设想归档', en: 'Unofficial proposal archive', ja: '非公式提案の保存' }[locale]
+      : { zh: '编辑核验清单（非官方确认）', en: 'Editorial checklist (not confirmation)', ja: '編集確認リスト（公式確認ではありません）' }[locale]}</span>
+    {updatedAt && <span>{ { zh: '原文日期', en: 'Original article date', ja: '原文の日付' }[locale]} {updatedAt}</span>}
+  </div>;
   if (!updatedAt && !currentVersion) return null;
 
   return (

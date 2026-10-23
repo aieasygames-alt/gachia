@@ -138,19 +138,19 @@
     },
     "guides": {
       "zh": {
-        "title": "洛克国际服资料审核目录 — 核验清单与历史文章",
-        "description": "洛克国际服资料审核目录，优先列出已纠错的核验清单，保留其余历史文章。清单不是官方确认，其他文章仍待审查。",
-        "notice": "推荐区仅展示已撤回确定断言的编辑核验清单，不代表游戏事实已确认。其余历史文章仍在审核，不应据此报名、付款、下载或决定培养；文章数量不代表官方内容规模。"
+        "title": "洛克国际服资料审核目录 — 清单与非官方设想归档",
+        "description": "洛克国际服资料目录，分开展示编辑核验清单与非官方产品设想的归档说明；不代表官方事实确认或本站功能承诺。",
+        "notice": "精选仅列编辑核验清单。历史产品与运营建议已另分归档类别，原文留存内部审查记录；归档说明不是玩家攻略、官方计划或本站已实施功能。所有详情暂不提交索引，本站记录数量不代表官方内容规模。"
       },
       "en": {
-        "title": "Roco Global Review Directory — Checklists and Legacy Articles",
-        "description": "A Roco Global review directory prioritizing corrected verification checklists while retaining legacy articles. Checklists are not official confirmation; other articles remain under review.",
-        "notice": "Featured items are editorial checklists with definite claims withdrawn, not confirmed game facts. Other legacy articles remain under review. Do not rely on them for signup, payment, downloads or investment; article counts do not measure official content."
+        "title": "Roco Global Review Directory — Checklists and Unofficial Archives",
+        "description": "A Roco Global directory separating editorial checklists from archival notices for unofficial product proposals; neither official fact verification nor site feature commitments.",
+        "notice": "Featured items are editorial checklists only. Historical product and operations proposals have a separate archive category, with originals retained internally. Archive notices are not player guides, official plans or implemented site features. All details are withheld from search submission; record counts do not measure official content."
       },
       "ja": {
-        "title": "ロコ国際版資料の確認索引 — チェックリストと過去記事",
-        "description": "訂正済みの確認リストを優先し、過去の記事を保存する国際版資料の索引。リストは公式確認ではなく、他の記事は引き続き審査中です。",
-        "notice": "注目欄は断定を撤回した編集上の確認リストであり、ゲームの確定情報ではありません。他の過去記事は審査中です。応募・支払い・DL・育成の根拠にしないでください。記事数は公式コンテンツの規模を示しません。"
+        "title": "ロコ国際版資料索引 — 確認リストと非公式提案の保存",
+        "description": "編集確認リストと非公式製品提案の保存説明を分けた資料索引。公式の事実確認や本站の開発約束ではありません。",
+        "notice": "注目欄は編集確認リストのみです。過去の製品・運営提案を別の保存分類に分け、原文は内部審査記録に残します。保存説明はプレイヤー攻略・公式計画・本站の実装済み機能ではありません。全詳細の検索提出を保留し、記録数は公式内容の規模を示しません。"
       }
     }
   }

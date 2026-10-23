@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import { Link } from '@/lib/i18n/navigation';
 import { ClientMarkdown } from '@/components/wiki/client-markdown';
 import { buildGuideJsonLd } from '@/lib/jsonld';
-import { buildLocalizedAlternates, ensureMetaLength, getEntryUpdatedAt, hasLocalizedContent, limitMetaTitle, isContentUnderReview } from '@/lib/seo-metadata';
+import { buildLocalizedAlternates, ensureMetaLength, getEntryUpdatedAt, hasLocalizedContent, limitMetaTitle, isContentUnderReview, isEditorialProposalArchive } from '@/lib/seo-metadata';
 import { ContentReviewNotice } from '@/components/wiki/content-review-notice';
 import { BANNER_INTENT_PANELS } from '@/lib/banner-intent';
 import { HI3_GUIDE_NEXT_STEPS, HI3_GUIDE_SCOPE } from '@/lib/hi3-guide-navigation';
@@ -35,7 +35,7 @@ type GuideLike = {
   serpTitle?: LocalizedText;
   serpDescription?: LocalizedText;
   quickFacts?: Partial<Record<SupportedLocale, string[]>>;
-  contentReview?: { status: 'needs_verification'; reviewedAt: string };
+  contentReview?: { status: 'needs_verification'; reviewedAt: string; kind?: 'editorial_proposal_archive' };
 };
 
 function isHistoricalGuideVersion(currentVersion: string) {
@@ -367,119 +367,6 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
     ],
   },
   roco: {
-    'global-launch-readiness-checklist': [
-      { href: '/roco/guides/global-onboarding-learning-recovery-playbook', label: { zh: '新手学习与恢复', en: 'Onboarding & recovery', ja: '導入・失敗復帰' }, description: { zh: '将教学、练习、失败恢复与帮助升级纳入首发新手验收。', en: 'Put teaching, practice, recovery, and help escalation into launch onboarding checks.', ja: '教学、練習、失敗復帰、ヘルプ移行をローンチ導入確認へ。' } },
-      { href: '/roco/guides/global-player-discovery-codex-playbook', label: { zh: '玩家发现与图鉴', en: 'Discovery & codex trust', ja: '発見・図鑑信頼性' }, description: { zh: '将任务导航、资料状态和版本边界纳入新手与首发验收。', en: 'Add quest navigation, information state, and version scope to launch validation.', ja: '任務導線、情報状態、版境界を導入・ローンチ検証へ加える。' } },
-      { href: '/roco/guides/global-cbt-to-launch-decision-gates', label: { zh: 'CBT 上线决策', en: 'CBT launch gates', ja: 'CBTローンチ判断' }, description: { zh: '把验收清单转成测试问题、缺陷优先级和 Go/No-Go 门槛。', en: 'Turn acceptance checks into test questions, defect priority, and Go/No-Go gates.', ja: '確認項目をテスト課題、不具合優先度、Go/No-Goへ変換。' } },
-      { href: '/roco/guides/global-accessibility-cross-device-playbook', label: { zh: '无障碍与跨设备', en: 'Accessibility & devices', ja: 'アクセシビリティ・端末' }, description: { zh: '把键鼠、手柄、触控、文本和断线恢复纳入首发验收。', en: 'Add keyboard, controller, touch, text, and recovery to launch validation.', ja: '鍵盤、パッド、タッチ、文字、切断復旧をローンチ検証へ。' } },
-      { href: '/roco/guides/global-first-30-days-pve-plan', label: { zh: '前 30 天 PvE 包', en: 'Days 1–30 PvE plan', ja: '1〜30日PvE案' }, description: { zh: '首发通过后，安排稳定的挑战区、周常和追赶机制。', en: 'After launch readiness, plan challenge zones, weekly goals, and catch-up.', ja: 'ローンチ確認後、挑戦、週次、追いつきへ。' } },
-      { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '运营指标与实验', en: 'Live-ops metrics', ja: '運営指標と実験' }, description: { zh: '用统一指标验证首发，而不是只看下载和总参与。', en: 'Validate launch with shared metrics, not downloads alone.', ja: 'DL数だけでなく共通指標でローンチを検証。' } },
-    ],
-    'global-first-30-days-pve-plan': [
-      { href: '/roco/guides/global-onboarding-learning-recovery-playbook', label: { zh: '新手学习与恢复', en: 'Onboarding & recovery', ja: '導入・失敗復帰' }, description: { zh: '将挑战区的首次失败、重试与材料教学变为可恢复的学习环。', en: 'Turn first challenge failure, retry, and material teaching into a recoverable learning loop.', ja: '挑戦区の初回失敗、再挑戦、素材教学を復帰可能な学習ループへ。' } },
-      { href: '/roco/guides/global-player-discovery-codex-playbook', label: { zh: '玩家发现与图鉴', en: 'Discovery & codex trust', ja: '発見・図鑑信頼性' }, description: { zh: '让挑战、材料与养成目标有可验证的来源状态和游戏内下一步。', en: 'Give challenges, materials, and progression goals verified source state and next steps.', ja: '挑戦、素材、育成目標に検証済み入手状態とゲーム内の次の行動を付ける。' } },
-      { href: '/roco/guides/global-returning-player-event-legacy-playbook', label: { zh: '回流与活动遗产', en: 'Return & event legacy', ja: '復帰・イベント遺産' }, description: { zh: '为中断玩家补上核心养成、故事归档和可规划的追赶路径。', en: 'Add core progression, story archive, and plannable catch-up for returners.', ja: '復帰者へ核心育成、物語記録、計画可能な追いつきを追加。' } },
-      { href: '/roco/guides/global-days-31-90-season-event-plan', label: { zh: '31–90 天赛季包', en: 'Days 31–90 season plan', ja: '31〜90日シーズン案' }, description: { zh: '首月循环稳定后，再进入首赛季和全球社区活动。', en: 'Move into first-season and global-event planning after month one stabilizes.', ja: '初月安定後に初回シーズンと世界イベントへ。' } },
-      { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '首月指标', en: 'Month-one metrics', ja: '初月指標' }, description: { zh: '检查失败重试、材料来源和回归追赶是否有效。', en: 'Check retries, material sourcing, and returner catch-up.', ja: '再挑戦、素材導線、復帰者追いつきを確認。' } },
-    ],
-    'global-days-31-90-season-event-plan': [
-      { href: '/roco/guides/global-returning-player-event-legacy-playbook', label: { zh: '回流与活动遗产', en: 'Return & event legacy', ja: '復帰・イベント遺産' }, description: { zh: '把赛季结束后的归档、核心奖励替代和回流追赶写入活动设计。', en: 'Put archives, core-reward alternatives, and returner catch-up into season design.', ja: 'アーカイブ、核心報酬代替、復帰者追いつきをシーズン設計へ。' } },
-      { href: '/roco/guides/global-localization-cultural-event-playbook', label: { zh: '本地化与文化活动', en: 'Localization playbook', ja: 'ローカライズ手帳' }, description: { zh: '为赛季和全球活动补上术语、时区、补领与复刻规则。', en: 'Add terminology, time-zone, late-claim, and rerun rules to seasonal events.', ja: 'シーズンイベントへ用語、時区、補受取、復刻規則を追加。' } },
-      { href: '/roco/guides/global-cn-release-governance', label: { zh: '跨服版本治理', en: 'CN-global governance', ja: '地域間リリース統治' }, description: { zh: '把赛季移植、区域差异、补领与回滚写进发布规则。', en: 'Put ports, regional differences, late claims, and rollback into release rules.', ja: '移植、地域差、補受取、ロールバックを配信規則へ。' } },
-      { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '活动复盘指标', en: 'Event recap metrics', ja: 'イベント振り返り指標' }, description: { zh: '评估时区公平、活动回流和旧新精灵使用分布。', en: 'Evaluate time-zone fairness, return, and old/new creature use.', ja: '時区公平、復帰、旧新精霊の利用を評価。' } },
-    ],
-    'global-cn-release-governance': [
-      { href: '/roco/guides/global-change-communication-playbook', label: { zh: '版本沟通与热修', en: 'Patch communication', ja: '変更・ホットフィックス' }, description: { zh: '将同步、延后、暂停和回滚转化为玩家可追踪的公告状态。', en: 'Turn parity, delay, pause, and rollback into trackable player notices.', ja: '同期、延期、停止、ロールバックを追跡可能な告知状態へ。' } },
-      { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '治理指标与实验', en: 'Governance metrics', ja: '統治指標と実験' }, description: { zh: '将发布门槛与上线后的数据、实验和事故复盘连接起来。', en: 'Connect release gates with live data, experiments, and incident reviews.', ja: 'リリースゲートを運用データ、実験、事故振り返りへ接続。' } },
-      { href: '/roco/guides/global-cn-content-roadmap', label: { zh: '回到补充路线图', en: 'Return to roadmap', ja: '補完ロードマップへ戻る' }, description: { zh: '查看首发到 90 天的内容顺序和长期双向策略。', en: 'Review launch-to-day-90 sequencing and long-term two-way strategy.', ja: 'ローンチから90日と長期双方向戦略を確認。' } },
-    ],
-    'global-live-ops-metrics-experiments': [
-      { href: '/roco/guides/global-player-feedback-roadmap-playbook', label: { zh: '玩家反馈与路线图', en: 'Feedback & roadmap', ja: 'フィードバック・計画' }, description: { zh: '将实验、工单与玩家建议按证据和优先级转成可回告的决策状态。', en: 'Turn experiments, tickets, and suggestions into evidence-based, follow-through decisions.', ja: '実験、問い合わせ、提案を証拠と優先度に基づく回答可能な決定状態へ。' } },
-      { href: '/roco/guides/global-fair-play-integrity-playbook', label: { zh: '公平竞争与完整性', en: 'Fair play & integrity', ja: 'フェアプレイ・完全性' }, description: { zh: '将异常、榜单冻结、误伤恢复和申诉改判纳入运营复盘。', en: 'Add anomalies, leaderboard freezes, recovery, and appeal reversals to live-ops review.', ja: '異常、ランキング凍結、復旧、異議改判を運営振り返りへ加える。' } },
-      { href: '/roco/guides/global-change-communication-playbook', label: { zh: '版本沟通与热修', en: 'Patch communication', ja: '変更・ホットフィックス' }, description: { zh: '用公告时效、语言差和已知问题处理时长补齐运营复盘。', en: 'Add notice timing, language gaps, and issue-resolution time to live-ops review.', ja: '告知時効、言語差、問題解決時間を運営振り返りへ加える。' } },
-      { href: '/roco/guides/global-cbt-to-launch-decision-gates', label: { zh: 'CBT 上线决策', en: 'CBT launch gates', ja: 'CBTローンチ判断' }, description: { zh: '将测试指标和缺陷证据用于正式上线的 Go/No-Go 判断。', en: 'Use test metrics and defect evidence for launch Go/No-Go decisions.', ja: 'テスト指標と不具合証拠をGo/No-Go判断に使う。' } },
-      { href: '/roco/guides/global-launch-readiness-checklist', label: { zh: '首发验收清单', en: 'Launch checklist', ja: 'ローンチ確認リスト' }, description: { zh: '将指标回写到新手、跨端、本地化与安全验收。', en: 'Feed metrics back into onboarding, cross-play, localization, and safety acceptance.', ja: '指標を導入、クロスプレイ、翻訳、安全の確認へ戻す。' } },
-      { href: '/roco/guides/global-days-31-90-season-event-plan', label: { zh: '赛季与活动包', en: 'Season and event plan', ja: 'シーズン・イベント案' }, description: { zh: '将实验结果用于下一阶段赛季和全球活动调整。', en: 'Use experiment results to tune the next season and global event.', ja: '実験結果を次のシーズンと世界イベントへ反映。' } },
-    ],
-    'global-localization-cultural-event-playbook': [
-      { href: '/roco/guides/global-player-feedback-roadmap-playbook', label: { zh: '玩家反馈与路线图', en: 'Feedback & roadmap', ja: 'フィードバック・計画' }, description: { zh: '让不同语言、时区和文化语境的反馈以可比较证据进入内容决策。', en: 'Bring language, time-zone, and cultural-context feedback into comparable evidence for decisions.', ja: '言語、時区、文化文脈のフィードバックを比較可能な証拠として決定へ。' } },
-      { href: '/roco/guides/global-player-discovery-codex-playbook', label: { zh: '玩家发现与图鉴', en: 'Discovery & codex trust', ja: '発見・図鑑信頼性' }, description: { zh: '让多语言任务、活动资料和归档状态可读、可搜索且不混淆版本。', en: 'Keep multilingual quests, event information, and archives readable and version-clear.', ja: '多言語任務、イベント情報、アーカイブを可読・検索可能・版明確に保つ。' } },
-      { href: '/roco/guides/global-player-support-trust-playbook', label: { zh: '玩家支持与信任', en: 'Player support', ja: 'プレイヤーサポート' }, description: { zh: '将本地化、奖励和时区问题接入可追踪的支持与补偿路径。', en: 'Connect localization, reward, and time-zone issues to trackable support and compensation paths.', ja: '翻訳、報酬、時区問題を追跡可能なサポート・補償導線へ。' } },
-      { href: '/roco/guides/global-days-31-90-season-event-plan', label: { zh: '31–90 天赛季包', en: 'Days 31–90 season plan', ja: '31〜90日シーズン案' }, description: { zh: '将文化活动模板应用到首赛季与全球社区活动。', en: 'Apply the cultural-event template to the first season and global community event.', ja: '文化イベントの型を初回シーズンと世界イベントに適用。' } },
-      { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '本地化指标', en: 'Localization metrics', ja: 'ローカライズ指標' }, description: { zh: '用时区参与、文本理解和补领数据复盘本地化效果。', en: 'Review localization through time-zone, comprehension, and late-claim data.', ja: '時区参加、文章理解、補受取データでローカライズを振り返る。' } },
-    ],
-    'global-cbt-to-launch-decision-gates': [
-      { href: '/roco/guides/global-player-feedback-roadmap-playbook', label: { zh: '玩家反馈与路线图', en: 'Feedback & roadmap', ja: 'フィードバック・計画' }, description: { zh: '将 CBT 建议、可复现问题和样本边界转为透明的决策回告。', en: 'Turn CBT suggestions, reproducible issues, and sample limits into transparent follow-through.', ja: 'CBT提案、再現可能な問題、サンプル境界を透明な決定回答へ。' } },
-      { href: '/roco/guides/global-onboarding-learning-recovery-playbook', label: { zh: '新手学习与恢复', en: 'Onboarding & recovery', ja: '導入・失敗復帰' }, description: { zh: '用首次捕捉、战斗、失败重试和帮助升级验证新手是否真正学会。', en: 'Validate learning with first capture, battle, retry, and help escalation.', ja: '初捕獲、戦闘、再挑戦、ヘルプ移行で導入学習を検証。' } },
-      { href: '/roco/guides/global-fair-play-integrity-playbook', label: { zh: '公平竞争与完整性', en: 'Fair play & integrity', ja: 'フェアプレイ・完全性' }, description: { zh: '验证漏洞保护、排行榜结算与误伤恢复是否具备可审计门槛。', en: 'Validate auditable exploit protection, leaderboard settlement, and false-positive recovery.', ja: '不具合保護、ランキング決算、誤検知復旧の監査可能なゲートを検証。' } },
-      { href: '/roco/guides/global-change-communication-playbook', label: { zh: '版本沟通与热修', en: 'Patch communication', ja: '変更・ホットフィックス' }, description: { zh: '把更新说明、已知问题和暂停负责人纳入首发 Go/No-Go。', en: 'Include notices, known issues, and pause ownership in launch Go/No-Go.', ja: '更新告知、既知問題、停止責任者をローンチGo/No-Goへ。' } },
-      { href: '/roco/guides/global-accessibility-cross-device-playbook', label: { zh: '无障碍与跨设备', en: 'Accessibility & devices', ja: 'アクセシビリティ・端末' }, description: { zh: '验证不同输入、语言、网络和设备都可完成核心流程。', en: 'Verify core completion across input, language, network, and device conditions.', ja: '入力、言語、通信、端末の違いでもコア完了を検証。' } },
-      { href: '/roco/guides/global-economy-monetization-fairness-playbook', label: { zh: '经济与付费公平', en: 'Economy & fairness', ja: '経済・課金公平性' }, description: { zh: '将核心养成来源、价格透明和故障恢复列入上线门槛。', en: 'Put progression sources, price clarity, and recovery into launch gates.', ja: '育成入手元、価格透明性、障害復旧をローンチゲートへ。' } },
-      { href: '/roco/guides/global-social-safety-guild-playbook', label: { zh: '社交安全与公会', en: 'Social safety & guilds', ja: 'ソーシャル安全・ギルド' }, description: { zh: '将跨端组队、权限、举报与未成年人保护列入上线门槛。', en: 'Include cross-play parties, permissions, reports, and youth safety in launch gates.', ja: 'クロスプレイPT、権限、通報、未成年保護をローンチゲートへ。' } },
-      { href: '/roco/guides/global-launch-readiness-checklist', label: { zh: '首发验收清单', en: 'Launch checklist', ja: 'ローンチ確認リスト' }, description: { zh: '回到核心循环、跨端、本地化和服务的上线条件。', en: 'Return to core-loop, cross-play, localization, and service readiness.', ja: '基本循環、クロスプレイ、翻訳、サービスの準備条件へ戻る。' } },
-      { href: '/roco/guides/global-cn-release-governance', label: { zh: '跨服版本治理', en: 'CN-global governance', ja: '地域間リリース統治' }, description: { zh: '将 CBT 结论接入跨服移植、公告和回滚规则。', en: 'Connect CBT conclusions to cross-region ports, communication, and rollback.', ja: 'CBT結論を地域間移植、告知、ロールバックへ接続。' } },
-    ],
-    'global-player-support-trust-playbook': [
-      { href: '/roco/guides/global-player-feedback-roadmap-playbook', label: { zh: '玩家反馈与路线图', en: 'Feedback & roadmap', ja: 'フィードバック・計画' }, description: { zh: '区分需私密处理的支持事件与可公开评估的体验、功能建议。', en: 'Separate private support incidents from publicly assessable experience and feature feedback.', ja: '非公開サポート事象と公開評価可能な体験・機能提案を分ける。' } },
-      { href: '/roco/guides/global-fair-play-integrity-playbook', label: { zh: '公平竞争与完整性', en: 'Fair play & integrity', ja: 'フェアプレイ・完全性' }, description: { zh: '将漏洞、自动化、异常奖励和误伤申诉接入可追踪支持流程。', en: 'Route exploits, automation, reward anomalies, and false-positive appeals into support.', ja: '不具合、自動化、報酬異常、誤検知申立てをサポートへ接続。' } },
-      { href: '/roco/guides/global-change-communication-playbook', label: { zh: '版本沟通与热修', en: 'Patch communication', ja: '変更・ホットフィックス' }, description: { zh: '让事故公告、已知问题和工单状态使用同一套可追踪事实。', en: 'Keep incident notices, known issues, and ticket state on one traceable fact base.', ja: '事故告知、既知問題、問い合わせ状態を同じ追跡可能な事実基盤へ。' } },
-      { href: '/roco/guides/global-economy-monetization-fairness-playbook', label: { zh: '经济与付费公平', en: 'Economy & fairness', ja: '経済・課金公平性' }, description: { zh: '把价格、退款、未交付和代币异常接入公平性与恢复规则。', en: 'Connect prices, refunds, non-delivery, and token faults to fairness and recovery rules.', ja: '価格、返金、未配信、代币異常を公平性・復旧規則へ接続。' } },
-      { href: '/roco/guides/global-social-safety-guild-playbook', label: { zh: '社交安全与公会', en: 'Social safety & guilds', ja: 'ソーシャル安全・ギルド' }, description: { zh: '将举报、申诉、权限事故和社区保护纳入支持闭环。', en: 'Bring reports, appeals, permission incidents, and community protection into support operations.', ja: '通報、異議申立て、権限事故、コミュニティ保護をサポート運用へ。' } },
-      { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '支持与信任指标', en: 'Support metrics', ja: 'サポート指標' }, description: { zh: '用处理时长、补发正确率和语言差异改进服务。', en: 'Improve service through resolution time, restoration accuracy, and language-gap data.', ja: '処理時間、復旧正確性、言語差データでサービスを改善。' } },
-    ],
-    'global-social-safety-guild-playbook': [
-      { href: '/roco/guides/global-fair-play-integrity-playbook', label: { zh: '公平竞争与完整性', en: 'Fair play & integrity', ja: 'フェアプレイ・完全性' }, description: { zh: '查看自动化、漏洞、恶意举报和活动榜单异常的比例处置规则。', en: 'Review proportional rules for automation, exploits, report abuse, and leaderboard anomalies.', ja: '自動化、不具合、通報悪用、ランキング異常の比例措置を確認。' } },
-      { href: '/roco/guides/global-player-support-trust-playbook', label: { zh: '玩家支持与信任', en: 'Player support', ja: 'プレイヤーサポート' }, description: { zh: '查看进度、奖励、退款、申诉和隐私问题的支持规则。', en: 'Review support rules for progression, rewards, refunds, appeals, and privacy.', ja: '進行、報酬、返金、異議申立て、プライバシーのサポート規則へ。' } },
-      { href: '/roco/guides/global-first-30-days-pve-plan', label: { zh: '前 30 天 PvE 包', en: 'Days 1–30 PvE plan', ja: '1〜30日PvE案' }, description: { zh: '确认单人、公开匹配和公会协作都能获得核心养成。', en: 'Ensure solo, public-match, and guild routes all access core progression.', ja: 'ソロ、公開マッチ、ギルドの全ルートで核心育成へアクセス。' } },
-    ],
-    'global-economy-monetization-fairness-playbook': [
-      { href: '/roco/guides/global-returning-player-event-legacy-playbook', label: { zh: '回流与活动遗产', en: 'Return & event legacy', ja: '復帰・イベント遺産' }, description: { zh: '将代币期限、核心奖励替代和回流追赶接入经济公平性审查。', en: 'Connect token expiry, core-reward alternatives, and returner catch-up to fairness review.', ja: '代币期限、核心報酬代替、復帰者追いつきを公平性レビューへ接続。' } },
-      { href: '/roco/guides/global-player-support-trust-playbook', label: { zh: '玩家支持与信任', en: 'Player support', ja: 'プレイヤーサポート' }, description: { zh: '补齐退款、未交付、补偿与隐私的可追踪支持路径。', en: 'Add trackable support for refunds, non-delivery, compensation, and privacy.', ja: '返金、未配信、補償、プライバシーの追跡可能なサポートを確認。' } },
-      { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '运营指标与实验', en: 'Live-ops metrics', ja: '運営指標と実験' }, description: { zh: '用来源/消耗、回流追赶和地区差异验证经济是否健康。', en: 'Use source/sink, catch-up, and regional gaps to validate economic health.', ja: '入手/消費、追いつき、地域差で経済の健全性を検証。' } },
-      { href: '/roco/guides/global-first-30-days-pve-plan', label: { zh: '前 30 天 PvE 包', en: 'Days 1–30 PvE plan', ja: '1〜30日PvE案' }, description: { zh: '把稳定的核心养成来源和追赶路径写入首月内容。', en: 'Put dependable progression sources and catch-up into month-one content.', ja: '安定した育成入手元と追いつきを初月コンテンツへ。' } },
-    ],
-    'global-accessibility-cross-device-playbook': [
-      { href: '/roco/guides/global-onboarding-learning-recovery-playbook', label: { zh: '新手学习与恢复', en: 'Onboarding & recovery', ja: '導入・失敗復帰' }, description: { zh: '为教学、提示、练习和失败恢复检查所有输入与辅助场景。', en: 'Check all input and assistive scenarios for teaching, hints, practice, and recovery.', ja: '教学、ヒント、練習、失敗復帰を全入力・補助場面で確認。' } },
-      { href: '/roco/guides/global-cbt-to-launch-decision-gates', label: { zh: 'CBT 上线决策', en: 'CBT launch gates', ja: 'CBTローンチ判断' }, description: { zh: '把跨设备与无障碍证据转成可阻止上线的明确门槛。', en: 'Turn cross-device and accessibility evidence into concrete launch gates.', ja: 'クロスデバイス・アクセシビリティ証拠を明確なローンチゲートへ。' } },
-      { href: '/roco/guides/global-localization-cultural-event-playbook', label: { zh: '本地化与文化活动', en: 'Localization playbook', ja: 'ローカライズ手帳' }, description: { zh: '检查大字体、小屏、手柄焦点和多语言任务的可读性。', en: 'Check large text, small screens, controller focus, and multilingual task readability.', ja: '大きな文字、小画面、パッド焦点、多言語任務の可読性を確認。' } },
-      { href: '/roco/guides/global-player-support-trust-playbook', label: { zh: '玩家支持与信任', en: 'Player support', ja: 'プレイヤーサポート' }, description: { zh: '将无法操作、无法阅读或断线恢复问题接入支持和事故响应。', en: 'Connect blocked input, unreadable text, and recovery issues to support response.', ja: '操作不能、読めない文章、復旧問題をサポート対応へ接続。' } },
-    ],
-    'global-returning-player-event-legacy-playbook': [
-      { href: '/roco/guides/global-player-discovery-codex-playbook', label: { zh: '玩家发现与图鉴', en: 'Discovery & codex trust', ja: '発見・図鑑信頼性' }, description: { zh: '将现行、历史和待确认资料分开，让回流玩家找到可执行的下一步。', en: 'Separate current, historical, and pending information so returners find executable next steps.', ja: '現行、歴史、確認待ちを分け、復帰者が実行可能な次の行動を見つける。' } },
-      { href: '/roco/guides/global-change-communication-playbook', label: { zh: '版本沟通与热修', en: 'Patch communication', ja: '変更・ホットフィックス' }, description: { zh: '保留旧规则的修改记录，并将补领与回滚状态明确告知玩家。', en: 'Retain old-rule revisions and clearly communicate late-claim and rollback status.', ja: '旧規則の改訂履歴と補受取・ロールバック状態を明確に伝える。' } },
-      { href: '/roco/guides/global-days-31-90-season-event-plan', label: { zh: '31–90 天赛季包', en: 'Days 31–90 season plan', ja: '31〜90日シーズン案' }, description: { zh: '将归档、替代来源和回流数据用于下一季活动设计。', en: 'Use archives, alternatives, and returner data in next-season design.', ja: 'アーカイブ、代替入手元、復帰データを次シーズン設計へ。' } },
-      { href: '/roco/guides/global-economy-monetization-fairness-playbook', label: { zh: '经济与付费公平', en: 'Economy & fairness', ja: '経済・課金公平性' }, description: { zh: '检查追赶材料、过期代币和可选收藏是否保持公平与透明。', en: 'Review catch-up materials, expiring tokens, and optional collections for fairness.', ja: '追いつき素材、期限付き代币、任意コレクションの公平性を確認。' } },
-      { href: '/roco/guides/global-localization-cultural-event-playbook', label: { zh: '本地化与文化活动', en: 'Localization playbook', ja: 'ローカライズ手帳' }, description: { zh: '为旧活动保留多语言故事摘要、规则和文化语境。', en: 'Preserve multilingual story recaps, rules, and cultural context for past events.', ja: '過去イベントに多言語の物語要約、規則、文化文脈を残す。' } },
-    ],
-    'global-change-communication-playbook': [
-      { href: '/roco/guides/global-player-feedback-roadmap-playbook', label: { zh: '玩家反馈与路线图', en: 'Feedback & roadmap', ja: 'フィードバック・計画' }, description: { zh: '将玩家建议的证据、范围与不采用原因纳入可追踪的沟通状态。', en: 'Add suggestion evidence, scope, and decline reasons to traceable communication state.', ja: '提案の証拠、範囲、不採用理由を追跡可能なコミュニケーション状態へ。' } },
-      { href: '/roco/guides/global-fair-play-integrity-playbook', label: { zh: '公平竞争与完整性', en: 'Fair play & integrity', ja: 'フェアプレイ・完全性' }, description: { zh: '为漏洞、榜单异常和奖励保护提供可解释的暂停、修复和申诉沟通。', en: 'Communicate pauses, fixes, and appeals for exploits, leaderboard anomalies, and rewards.', ja: '不具合、ランキング異常、報酬保護の停止、修正、申立てを説明可能に伝える。' } },
-      { href: '/roco/guides/global-cn-release-governance', label: { zh: '跨服版本治理', en: 'CN-global governance', ja: '地域間リリース統治' }, description: { zh: '查看哪些内容同步、哪些需要本地化验证，以及暂停与回滚的决策边界。', en: 'Review parity, localization validation, and the decision boundary for pauses and rollback.', ja: '同期、ローカライズ検証、停止とロールバックの判断境界を確認。' } },
-      { href: '/roco/guides/global-player-support-trust-playbook', label: { zh: '玩家支持与信任', en: 'Player support', ja: 'プレイヤーサポート' }, description: { zh: '把公告中的进度、奖励、支付和安全问题接入安全支持路径。', en: 'Connect progression, reward, payment, and safety notices to safe support paths.', ja: '進行、報酬、決済、安全の告知を安全なサポート導線へ接続。' } },
-      { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '运营指标与实验', en: 'Live-ops metrics', ja: '運営指標と実験' }, description: { zh: '用公告时效、解决时长和地区理解差持续改善沟通。', en: 'Improve communication with notice timing, resolution time, and regional comprehension gaps.', ja: '告知時効、解決時間、地域理解差でコミュニケーションを改善。' } },
-    ],
-    'global-fair-play-integrity-playbook': [
-      { href: '/roco/guides/global-change-communication-playbook', label: { zh: '版本沟通与热修', en: 'Patch communication', ja: '変更・ホットフィックス' }, description: { zh: '用同一事实源说明漏洞、榜单冻结、暂停、恢复与下一次状态更新。', en: 'Use one fact base for exploits, leaderboard freezes, pauses, recovery, and next status.', ja: '不具合、ランキング凍結、停止、復旧、次回状態を同じ事実源で伝える。' } },
-      { href: '/roco/guides/global-player-support-trust-playbook', label: { zh: '玩家支持与信任', en: 'Player support', ja: 'プレイヤーサポート' }, description: { zh: '为误伤、奖励修正、账号限制和隐私提供安全的工单与申诉路径。', en: 'Provide safe tickets and appeals for false positives, reward correction, restrictions, and privacy.', ja: '誤検知、報酬修正、制限、プライバシーへの安全な問い合わせ・申立て導線。' } },
-      { href: '/roco/guides/global-social-safety-guild-playbook', label: { zh: '社交安全与公会', en: 'Social safety & guilds', ja: 'ソーシャル安全・ギルド' }, description: { zh: '将恶意举报、权限事故和社群保护与公平竞争流程对齐。', en: 'Align report abuse, permission incidents, and community protection with fair-play operations.', ja: '通報悪用、権限事故、コミュニティ保護をフェアプレイ運用と整合。' } },
-    ],
-    'global-player-discovery-codex-playbook': [
-      { href: '/roco/guides/global-onboarding-learning-recovery-playbook', label: { zh: '新手学习与恢复', en: 'Onboarding & recovery', ja: '導入・失敗復帰' }, description: { zh: '把图鉴与任务中的下一步、练习和帮助入口连接成学习路径。', en: 'Connect codex and quest next steps, practice, and help into a learning path.', ja: '図鑑・任務の次の行動、練習、ヘルプを学習導線として接続。' } },
-      { href: '/roco/guides/global-launch-readiness-checklist', label: { zh: '首发验收清单', en: 'Launch checklist', ja: 'ローンチ確認リスト' }, description: { zh: '将资料可信度、任务恢复和跨设备导航纳入首发验收。', en: 'Put information trust, quest recovery, and cross-device navigation into launch checks.', ja: '情報信頼性、任務復帰、クロスデバイス導線をローンチ確認へ。' } },
-      { href: '/roco/guides/global-returning-player-event-legacy-playbook', label: { zh: '回流与活动遗产', en: 'Return & event legacy', ja: '復帰・イベント遺産' }, description: { zh: '为历史活动、过期资料和核心奖励替代提供清晰的回流路径。', en: 'Provide clear return routes for past events, stale information, and core-reward alternatives.', ja: '過去イベント、古い情報、核心報酬代替への明確な復帰導線を用意。' } },
-      { href: '/roco/guides/global-localization-cultural-event-playbook', label: { zh: '本地化与文化活动', en: 'Localization playbook', ja: 'ローカライズ手帳' }, description: { zh: '将术语、文化语境和时区规则写入可读、可搜索的内容资料。', en: 'Put terminology, cultural context, and time-zone rules into readable, searchable content data.', ja: '用語、文化文脈、時区規則を可読・検索可能なコンテンツ情報へ。' } },
-    ],
-    'global-onboarding-learning-recovery-playbook': [
-      { href: '/roco/guides/global-player-feedback-roadmap-playbook', label: { zh: '玩家反馈与路线图', en: 'Feedback & roadmap', ja: 'フィードバック・計画' }, description: { zh: '将新手失败、提示无效和帮助升级的信号纳入透明的改善回告。', en: 'Feed onboarding failure, unhelpful hints, and escalations into transparent improvement follow-through.', ja: '導入失敗、無効なヒント、ヘルプ移行を透明な改善回答へつなぐ。' } },
-      { href: '/roco/guides/global-player-discovery-codex-playbook', label: { zh: '玩家发现与图鉴', en: 'Discovery & codex trust', ja: '発見・図鑑信頼性' }, description: { zh: '让教学结束后仍能找到任务、精灵、材料和活动的可靠下一步。', en: 'Keep reliable next steps for quests, creatures, materials, and events after teaching ends.', ja: '教学後も任務、精霊、素材、イベントの信頼できる次の行動を見つける。' } },
-      { href: '/roco/guides/global-accessibility-cross-device-playbook', label: { zh: '无障碍与跨设备', en: 'Accessibility & devices', ja: 'アクセシビリティ・端末' }, description: { zh: '确认提示、练习和恢复在键鼠、手柄、触控及辅助场景下都可完成。', en: 'Ensure hints, practice, and recovery work on keyboard, controller, touch, and assistive setups.', ja: 'ヒント、練習、復帰が鍵盤、パッド、タッチ、補助環境で完了できることを確認。' } },
-      { href: '/roco/guides/global-player-support-trust-playbook', label: { zh: '玩家支持与信任', en: 'Player support', ja: 'プレイヤーサポート' }, description: { zh: '当教学无法解决账号、支付、进度或安全问题时，转入可追踪支持路径。', en: 'Escalate account, payment, progression, and safety issues beyond teaching to trackable support.', ja: '教学で解決できないアカウント、決済、進行、安全問題を追跡可能なサポートへ移行。' } },
-    ],
-    'global-player-feedback-roadmap-playbook': [
-      { href: '/roco/guides/global-live-ops-metrics-experiments', label: { zh: '运营指标与实验', en: 'Live-ops metrics', ja: '運営指標と実験' }, description: { zh: '将玩家叙述与实验、行为、支持和技术证据放在同一评估框架。', en: 'Evaluate player accounts alongside experiment, behavior, support, and technical evidence.', ja: 'プレイヤーの声を実験、行動、サポート、技術証拠と同じ枠で評価。' } },
-      { href: '/roco/guides/global-change-communication-playbook', label: { zh: '版本沟通与热修', en: 'Patch communication', ja: '変更・ホットフィックス' }, description: { zh: '把状态、范围、已知限制和下一次更新点说清楚，而不把探索写成承诺。', en: 'State status, scope, limits, and next update without writing exploration as a promise.', ja: '探索を約束にせず、状態、範囲、制限、次回更新を明確に伝える。' } },
-      { href: '/roco/guides/global-player-support-trust-playbook', label: { zh: '玩家支持与信任', en: 'Player support', ja: 'プレイヤーサポート' }, description: { zh: '将账号、支付、隐私、安全和无障碍阻塞导入私密、可追踪支持通道。', en: 'Route account, payment, privacy, safety, and accessibility blockers to private support.', ja: 'アカウント、決済、プライバシー、安全、アクセシビリティ阻害を非公開サポートへ。' } },
-    ],
   },
 };
 
@@ -876,7 +763,7 @@ function withGuideIndexing(locale: SupportedLocale, guide: unknown, metadata: ob
 }
 
 function GuideFreshnessSection({ guide, locale, gameId }: { guide: GuideLike; locale: SupportedLocale; gameId: GameId }) {
-  if (guide.contentReview) return <ContentReviewNotice reviewedAt={guide.contentReview.reviewedAt} locale={locale} />;
+  if (isContentUnderReview(guide) && guide.contentReview) return <ContentReviewNotice reviewedAt={guide.contentReview.reviewedAt} locale={locale} proposalArchive={isEditorialProposalArchive(guide)} />;
   const facts = guide.quickFacts?.[locale] ?? guide.quickFacts?.en ?? guide.quickFacts?.zh ?? [];
   if (!guide.updatedAt && !guide.currentVersion && facts.length === 0) return null;
 

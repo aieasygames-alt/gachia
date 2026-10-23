@@ -124,6 +124,11 @@ export function isContentUnderReview(entry: unknown): boolean {
   return !!review && typeof review === 'object' && (review as { status?: unknown }).status === 'needs_verification';
 }
 
+export function isEditorialProposalArchive(entry: unknown): boolean {
+  return isContentUnderReview(entry) &&
+    (entry as { contentReview: { kind?: unknown } }).contentReview.kind === 'editorial_proposal_archive';
+}
+
 export function getEntryCurrentVersion(entry: unknown): string | undefined {
   if (!entry || typeof entry !== 'object') return undefined;
   const currentVersion = (entry as { currentVersion?: unknown }).currentVersion;
