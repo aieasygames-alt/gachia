@@ -3,6 +3,7 @@ import type { MetadataRoute } from 'next';
 import { getEntryUpdatedAt, hasLocalizedContent, isAniimoCharacterIndexable, isContentUnderReview } from '@/lib/seo-metadata';
 import { GAME_DEPLOYMENTS } from '@gachia/core';
 import { isGuideReadable } from '@/lib/retired-pages';
+import { isRocoPublicPageUnderReview } from '@/lib/roco-public-review';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -58,7 +59,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       if (deployment?.deployment === 'game' || (deployment?.status && deployment.status !== 'live')) continue;
 
       // Game home page
-      entries.push({
+      if (!isRocoPublicPageUnderReview(gameId)) entries.push({
         url: `${BASE_URL}/${locale}/${gameId}`,
         changeFrequency: 'weekly',
         priority: 0.9,
@@ -66,6 +67,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
       // Category pages (only real content routes)
       for (const route of realRoutes) {
+        if (isRocoPublicPageUnderReview(gameId, route)) continue;
         if (!game.routes[route as keyof typeof game.routes]) continue;
         entries.push({
           url: `${BASE_URL}/${locale}/${gameId}/${route}`,

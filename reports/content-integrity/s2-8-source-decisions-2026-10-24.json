@@ -1,0 +1,593 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-23T18:21:06.642068+00:00",
+  "baseline": "81c534f",
+  "decision": "withdraw_unsupported_global_rankings_mechanics_and_public_entry_promises_not_new_official_verification",
+  "evidenceScope": "No new independent official Roco announcement, live CDN, store, in-game or network verification. Historical claims are archived and conservatively withdrawn; missing evidence is not cancellation or proof of unannounced status.",
+  "provenance": [
+    "reports/content-integrity/s2-7-source-decisions-2026-10-24.json",
+    "reports/content-integrity/s2-6-source-decisions-2026-10-24.json",
+    "reports/content-integrity/s2-5-source-decisions-2026-10-24.json"
+  ],
+  "originalCharacters": [
+    {
+      "id": "blazehound",
+      "number": "004",
+      "name": "焰犬",
+      "nameEn": "Blazehound",
+      "attribute": "fire",
+      "attributeEn": "Fire",
+      "rarity": 3,
+      "habitat": "卡洛西亚野外",
+      "habitatEn": "Carosia Wilds",
+      "evolution": "待公开",
+      "evolutionEn": "TBA",
+      "description": "官方预告与媒体试玩中出现的火系野外精灵（狼），领地意识强，会对闯入领地的玩家咆哮。注意：焰犬并非御三家。详细信息待 CBT 官方图鉴确认。",
+      "descriptionEn": "A Fire-type wild Jinie (wolf) shown in official previews and press hands-ons. Highly territorial — it growls at players who enter its territory. Note: Blazehound is NOT a starter. Full details TBA via the official CBT codex.",
+      "status": "revealed"
+    },
+    {
+      "id": "catapawn",
+      "number": "005",
+      "name": "水爪",
+      "nameEn": "Catapawn",
+      "attribute": "water",
+      "attributeEn": "Water",
+      "rarity": 3,
+      "habitat": "卡洛西亚湖畔",
+      "habitatEn": "Carosia Lakeside",
+      "evolution": "待公开",
+      "evolutionEn": "TBA",
+      "description": "官方预告与媒体试玩中出现的野外水系精灵（龟），性格胆小，受惊时会缩进壳里防御。注意：水爪并非御三家。详细信息待 CBT 官方图鉴确认。",
+      "descriptionEn": "A wild Water-type Jinie (turtle) shown in official previews and press hands-ons. Timid by nature — it hides inside its shell when startled. Note: Catapawn is NOT a starter. Full details TBA via the official CBT codex.",
+      "status": "revealed"
+    },
+    {
+      "id": "dustler",
+      "number": "006",
+      "name": "尘帚",
+      "nameEn": "Dustler",
+      "attribute": "normal",
+      "attributeEn": "Normal",
+      "rarity": 3,
+      "habitat": "卡洛西亚城镇",
+      "habitatEn": "Carosia Towns",
+      "evolution": "待公开",
+      "evolutionEn": "TBA",
+      "description": "官方确认的普通系扫帚精灵，性格友善，会主动帮忙清理玩家帽子上的灰尘。详细信息待 CBT 官方图鉴确认。",
+      "descriptionEn": "An officially confirmed Normal-type broom Jinie with a friendly demeanor — it kindly cleans the dust off your avatar's hat when given the chance. Full details TBA via the official CBT codex.",
+      "status": "revealed"
+    }
+  ],
+  "originalGuides": [
+    {
+      "id": "starter-guide",
+      "title": "Roco Kingdom 御三家选择指南：Sparka、Meewee、Cerulla 怎么选",
+      "titleEn": "Roco Kingdom Starter Guide: Sparka, Meewee, or Cerulla?",
+      "category": "starter",
+      "categoryZh": "新手入门",
+      "categoryEn": "Starter",
+      "summary": "国际服御三家为草系 Meewee、火系 Sparka、水系 Cerulla。本文结合国服开荒经验，从开荒速度、生存能力与后续捕捉三个角度给出选择建议。",
+      "summaryEn": "The international starters are the Grass-type Meewee, Fire-type Sparka, and Water-type Cerulla. This guide compares early-game pacing, survivability, and availability so you can choose wisely.",
+      "content": "## Roco Kingdom 御三家怎么选\n\n国际服开局三选一的御三家为：**草系 Meewee（叶猫）、火系 Sparka（火牛）、水系 Cerulla（水泡）**。三只均为满资质，未被选中的御三家后续可以在好友的世界中捕捉。\n\n### 三只对比\n\n| 御三家 | 属性 | 定位 | 开荒特点 |\n| --- | --- | --- | --- |\n| Sparka | 火 | 快速输出 | 伤害直接，前期打野与 NPC 效率高，克草系 |\n| Meewee | 草 | 续航型 | 每回合回能量，持久战强，克水系 |\n| Cerulla | 水 | 坦克型 | 水泡盾 + 水炮循环，生存能力优秀，克火系 |\n\n### 怎么选\n\n- **想快速开荒**：选 Sparka，火系前期压制面广，打怪和推剧情节奏最快。\n- **想要稳定生存**：选 Cerulla，坦度高，遇到火系外的多数敌人不容易翻车。\n- **喜欢持久战**：选 Meewee，草系续航优秀，首领化（Alpha）后强度可观。\n\n### 注意事项\n\n- 御三家不是唯一选择：国服公测后还提供了迪莫等后期强力精灵兜底，前期不必过度纠结。\n- 未选择的御三家可以去好友的世界捕捉，路线容错高。\n- 国际服 CBT 的具体进化链、技能表与种族值以官方图鉴为准，本文先按官方预览稿整理。",
+      "contentEn": "## Roco Kingdom Starter Guide\n\nAt the start of the journey you choose one of three starters: **Meewee (Grass-type leaf cat), Sparka (Fire-type ox), or Cerulla (Water-type blob)**. All three start at full aptitude, and the starters you do not pick can later be caught in friends' worlds.\n\n### Comparison\n\n| Starter | Type | Role | Early-game note |\n| --- | --- | --- | --- |\n| Sparka | Fire | Fast offense | Direct damage, clears early mobs and NPCs fast; beats Grass |\n| Meewee | Grass | Sustained fighter | Recovers energy each turn, strong in long fights; beats Water |\n| Cerulla | Water | Tank | Bubble shield + water cannon loop, excellent survivability; beats Fire |\n\n### Which one should you pick?\n\n- **Fastest early progression**: Sparka. Fire has wide early coverage and the quickest story/NPC pacing.\n- **Most stable survivability**: Cerulla. Great bulk, rarely flips in fights outside Water counters.\n- **Best in sustained fights**: Meewee. Grass sustain shines in longer battles and its Alpha form is strong later.\n\n### Notes\n\n- The starter is not your only ace: the CN launch later featured strong late-game Jinies such as Dimo as a safety net, so do not overthink the choice.\n- Unpicked starters can be caught in friends' worlds, so the route has plenty of flexibility.\n- CBT-specific evolution lines, skill sets, and base stats follow the official codex; this guide reflects official previews.",
+      "tags": [
+        "starter",
+        "meewee",
+        "sparka",
+        "cerulla",
+        "beginner",
+        "jinies",
+        "roco-kingdom"
+      ],
+      "faq": [
+        {
+          "question": "Which starter is best for fast progression?",
+          "questionZh": "哪个御三家开荒最快？",
+          "answer": "Sparka (Fire). Its direct damage clears early content fastest, consistent with CN launch experience.",
+          "answerZh": "Sparka（火系）。伤害直接、前期推进最快，与国服公测经验一致。"
+        },
+        {
+          "question": "Can I still get the starters I did not pick?",
+          "questionZh": "没选的御三家还能获得吗？",
+          "answer": "Yes. Unpicked starters can be caught in friends' worlds, and later strong Jinies like Dimo provide a safety net.",
+          "answerZh": "可以。未选择的御三家可以在好友的世界中捕捉，后续还有迪莫等强力精灵兜底。"
+        }
+      ],
+      "updatedAt": "2026-08-27",
+      "quickFacts": {
+        "zh": [
+          "御三家：Sparka（火）、Meewee（草）、Cerulla（水）。",
+          "想快选火，想稳选水，想持久选草。",
+          "没选的御三家可在好友世界捕捉。"
+        ],
+        "en": [
+          "Starters: Sparka (Fire), Meewee (Grass), Cerulla (Water).",
+          "Pick Fire for speed, Water for bulk, Grass for sustain.",
+          "Unpicked starters can be caught in friends' worlds."
+        ],
+        "ja": [
+          "御三家: Sparka（炎）、Meewee（草）、Cerulla（水）。",
+          "速さ=炎、安定=水、持久=草。",
+          "選ばなかった御三家はフレンドの世界で捕獲可能。"
+        ]
+      },
+      "serpTitle": {
+        "zh": "Roco Kingdom 御三家选择指南｜Sparka / Meewee / Cerulla 对比",
+        "en": "Roco Kingdom Starter Guide — Sparka, Meewee & Cerulla Compared",
+        "ja": "ロコキングダム御三家ガイド｜Sparka・Meewee・Cerulla比較"
+      },
+      "serpDescription": {
+        "zh": "Roco Kingdom 国际服御三家 Sparka（火）、Meewee（草）、Cerulla（水）怎么选？从开荒速度、生存能力到后期路线给出选择建议。",
+        "en": "Choose between Roco Kingdom's starters Sparka (Fire), Meewee (Grass), and Cerulla (Water) by pacing, survivability, and late-game value.",
+        "ja": "ロコキングダムの御三家 Sparka（炎）・Meewee（草）・Cerulla（水）の選び方。開拓速度、生存力、後半の価値を比較。"
+      }
+    },
+    {
+      "id": "jinies-guide",
+      "title": "Roco Kingdom Jinies 图鉴入门：血统、特殊形态与捕捉方式",
+      "titleEn": "Roco Kingdom Jinies Guide: Bloodlines, Special Forms, and Catching",
+      "category": "gameplay",
+      "categoryZh": "玩法攻略",
+      "categoryEn": "Gameplay",
+      "summary": "Jinies 是 Carosia 大陆的精灵，官方已确认超过 400 只。本文介绍 Jinies 的体型差异、18 种元素、血统（Bloodline）系统、Alpha/Exotic 特殊形态与 Buddy Pods 捕捉方式。",
+      "summaryEn": "Jinies are the creatures of Carosia, with 400+ species confirmed. This guide covers size variation, the 18 elements, the Bloodline system, Alpha/Exotic special forms, and catching with Buddy Pods.",
+      "content": "## Roco Kingdom Jinies 图鉴入门\n\n**Jinies（精灵）** 是 Carosia 大陆上生活的小精灵，官方确认正式版将超过 **400 只**。它们是本作的核心收集对象，玩法覆盖捕捉、养成、进化、对战与联机互动。\n\n### 基本设定\n\n- **个体差异**：每只 Jinies 的身高、体型、体重都不同，同一物种也可能遇到特殊外观个体（如棱镜光辉、异色、被 Nightmare 腐化的形态）。\n- **生态行为**：不同精灵有自己的行为树——例如 Catapawn 受惊会缩进壳里，Blazehound 会对闯入领地的玩家咆哮，Dustler 会帮忙清理玩家的帽子。\n- **元素（Type）**：已确认至少 **18 种元素**，包含 Shadow（影）、Wing（翼）、Common（普通）等，对应宝可梦中的幽灵/飞行/普通等类型。\n\n### 血统（Bloodline）系统\n\n每只 Jinies 除了主属性，还有一个副血统（Bloodline）：\n\n- **可更换**：玩家可以改变精灵的血统，从而习得其他元素系的技能，在对战中弥补被克制的劣势。\n- **Alpha 血统**：部分精灵可临时变身为更强的 boss 级形态，机制接近宝可梦的 Mega/Gigantamax。\n- **Exotic 血统**：可遭遇被 Nightmare 腐化的特殊精灵，是更具原创性的特殊形态。\n\n### 捕捉方式\n\n- 使用 **Buddy Pods（伙伴球）** 捕捉野生精灵，机制接近传统精灵球。\n- 对精灵好，它们会带礼物回来；虐待它们会逃跑、哭泣甚至用头撞你。\n- 未选择的御三家可以在好友的世界中捕捉。\n\n### 已曝光精灵（截至 2026-08）\n\n官方预告与媒体预览中已确认：御三家 **Meewee（草）、Sparka（火）、Cerulla（水）**，以及野外精灵 **Blazehound（火系狼）、Catapawn（水系龟）、Dustler（普通系扫帚精灵）**。Sparka 的最终进化为 Pyreon，Pyreon 可 Alpha 化变为 Blazion。其余精灵名单与进化链待 CBT 官方图鉴公布。",
+      "contentEn": "## Roco Kingdom Jinies Guide\n\n**Jinies** are the creatures living across Carosia — over **400 species** confirmed for launch. They are the heart of collection, raising, evolution, battling, and social play.\n\n### Basics\n\n- **One-of-a-kind variation**: every Jinie differs in height, build, and weight. Special individuals exist with prism-like radiance, alternate colors, or forms corrupted by Nightmares.\n- **Living behavior**: species have behavior trees — Catapawn hides in its shell when startled, Blazehound growls at players who enter its territory, and Dustler politely cleans your avatar's hat.\n- **Types**: at least **18 elements** are confirmed, including Shadow, Wing, and Common (comparable to Ghost, Flying, and Normal types).\n\n### Bloodline system\n\nEach Jinie has a secondary Bloodline alongside its main type:\n\n- **Changeable**: you can swap a Jinie's Bloodline to learn skills from another element class, covering bad matchups in battles.\n- **Alpha Bloodline**: some Jinies can temporarily transform into stronger boss-level forms — a middle ground between Mega Evolution and Gigantamax.\n- **Exotic Bloodline**: corrupted Nightmare Jinies, a more original take on special forms.\n\n### Catching\n\n- Capture wild Jinies with **Buddy Pods**, the game's take on monster balls.\n- Treat Jinies well and they bring gifts; mistreat them and they run, cry, or headbutt you.\n- Unpicked starters can be caught in friends' worlds.\n\n### Revealed Jinies (as of August 2026)\n\nOfficial trailers and press previews confirmed the starters **Meewee (Grass), Sparka (Fire), and Cerulla (Water)**, plus wild species **Blazehound (Fire-type wolf), Catapawn (Water-type turtle), and Dustler (Normal-type broom)**. Sparka's final evolution is Pyreon, which can Alpha-transform into Blazion. The full roster and evolution lines await the official CBT codex.",
+      "tags": [
+        "jinies",
+        "bloodline",
+        "alpha",
+        "exotic",
+        "buddy-pods",
+        "elements",
+        "types"
+      ],
+      "faq": [
+        {
+          "question": "How many elements does Roco Kingdom have?",
+          "questionZh": "Roco Kingdom 有多少种元素？",
+          "answer": "At least 18 elements are confirmed, including Shadow, Wing, and Common; the full type chart awaits the official CBT codex.",
+          "answerZh": "已确认至少 18 种元素，包含 Shadow（影）、Wing（翼）、Common（普通）；完整克制表待 CBT 官方图鉴公布。"
+        },
+        {
+          "question": "What is the Bloodline system?",
+          "questionZh": "血统（Bloodline）系统是什么？",
+          "answer": "A secondary element class that can be changed to learn skills from other elements. Alpha Bloodlines enable temporary boss forms; Exotic Bloodlines are Nightmare-corrupted forms.",
+          "answerZh": "精灵的副元素体系，可更换以获得其他元素技能。Alpha 血统可临时变身 boss 级形态，Exotic 血统为 Nightmare 腐化形态。"
+        }
+      ],
+      "updatedAt": "2026-08-27",
+      "quickFacts": {
+        "zh": [
+          "正式版 Jinies 超过 400 只，个体体型/重量各不相同。",
+          "至少 18 种元素，含 Shadow/Wing/Common。",
+          "血统可更换；Alpha 变身；Buddy Pods 捕捉。"
+        ],
+        "en": [
+          "400+ Jinies at launch, each with unique size and weight.",
+          "At least 18 elements including Shadow, Wing, Common.",
+          "Changeable Bloodlines, Alpha forms, Buddy Pods catching."
+        ],
+        "ja": [
+          "ジニーは正式版で400種以上、個体ごとに体格差。",
+          "元素は少なくとも18種（Shadow、Wing、Common等）。",
+          "ブラッドライン変更、Alpha変身、Buddy Podsで捕獲。"
+        ]
+      },
+      "serpTitle": {
+        "zh": "Roco Kingdom Jinies 图鉴入门｜血统、特殊形态与捕捉方式",
+        "en": "Roco Kingdom Jinies Guide — Bloodlines, Special Forms & Catching",
+        "ja": "ロコキングダム ジニー入門ガイド｜ブラッドライン、特殊形態"
+      },
+      "serpDescription": {
+        "zh": "Jinies 图鉴入门：400+ 只精灵、18 种元素、可更换的血统系统、Alpha/Exotic 特殊形态，以及 Buddy Pods 捕捉方式一页看懂。",
+        "en": "Jinies explained: 400+ species, 18 elements, changeable Bloodlines, Alpha/Exotic forms, and Buddy Pods catching mechanics.",
+        "ja": "ジニー入門：400種超、18元素、変更可能なブラッドライン、Alpha/Exotic形態、Buddy Podsでの捕獲を解説。"
+      }
+    },
+    {
+      "id": "battle-system-guide",
+      "title": "Roco Kingdom 战斗系统指南：回合制、体力条与元素克制",
+      "titleEn": "Roco Kingdom Battle System Guide: Turn-Based Combat, Stamina, and Matchups",
+      "category": "gameplay",
+      "categoryZh": "玩法攻略",
+      "categoryEn": "Gameplay",
+      "summary": "Roco Kingdom 的战斗为回合制：每只精灵 4 个技能、星级体力条、克制关系可见。本文解析体力管理、换人预判、血统技能覆盖与 PvP 等级标准化机制。",
+      "summaryEn": "Roco Kingdom battles are turn-based: four skills per Jinie, a star-based stamina bar, and visible matchup hints. This guide breaks down stamina management, switch prediction, Bloodline coverage, and normalized PvP levels.",
+      "content": "## Roco Kingdom 战斗系统指南\n\nRoco Kingdom 采用**传统回合制战斗**，上手简单但 PvP 有深度：每只精灵 4 个技能，攻击会消耗体力，属性克制关系在战斗中直接可见。\n\n### 基础规则\n\n- **回合制**：双方轮流行动，每只 Jinie 携带 4 个技能。\n- **星级体力条（Stamina）**：每次攻击消耗一定体力，体力见底时必须花一回合休息恢复。\n- **克制可见**：选技能时能直接看到该攻击对敌人是否命中弱点，无需背克制表。\n- **等级标准化（PvP）**：对战精灵等级会标准化，胜负更多取决于元素克制、队伍构成与操作，而不是单纯的数据碾压。\n\n### 进阶技巧\n\n- **体力管理**：对方如果选择换人，你可以预判并在该回合休息，抢占下回合的行动优势。\n- **血统覆盖**：通过更换精灵的 Bloodline 血统，习得其他元素系技能来弥补不利克制。\n- **队伍构成**：不同职业/属性精灵搭配应对多类敌人，PvP 围绕职业相克展开。\n\n### PvP 特色\n\n- 官方强调 **无 Pay-to-Win**：没有氪金抽卡，胜负由策略、队伍与临场判断决定。\n- 所有 Jinies 都能通过正常游玩获得，不存在只能靠付费获取的强力精灵。\n\n> 说明：CBT 具体技能表、克制数值与种族值以官方图鉴为准，本文先按官方预览稿与媒体试玩整理。",
+      "contentEn": "## Roco Kingdom Battle System Guide\n\nRoco Kingdom uses **classic turn-based combat** — easy to pick up, with real depth in PvP: four skills per Jinie, attacks that consume stamina, and matchup hints shown directly in battle.\n\n### Core rules\n\n- **Turn-based**: both sides act in turns; each Jinie carries four skills.\n- **Star stamina bar**: each attack costs stamina. When the bar runs low, you must spend a turn resting to recover.\n- **Visible matchups**: before attacking you can see whether a move hits the enemy's weakness — no need to memorize the type chart.\n- **Normalized levels (PvP)**: battle levels are standardized, so outcomes lean on elemental matchups, team composition, and play rather than stat gaps.\n\n### Advanced tips\n\n- **Stamina play**: if the opponent switches, predict it and rest on that turn to seize tempo.\n- **Bloodline coverage**: change a Jinie's Bloodline to learn skills from another element class and cover bad matchups.\n- **Team building**: mix classes and elements to handle diverse threats; PvP revolves around class matchups.\n\n### PvP notes\n\n- The publisher stresses **no pay-to-win**: no gacha, no paid power; battles are decided by strategy, composition, and reads.\n- Every Jinie can be obtained through normal play — none are locked behind payments.\n\n> Note: exact skill sets, matchup values, and base stats follow the official CBT codex; this guide reflects official previews and press hands-on.",
+      "tags": [
+        "battle",
+        "combat",
+        "turn-based",
+        "stamina",
+        "matchups",
+        "pvp",
+        "bloodline"
+      ],
+      "faq": [
+        {
+          "question": "Is Roco Kingdom PvP pay-to-win?",
+          "questionZh": "Roco Kingdom 的 PvP 是氪金就能赢吗？",
+          "answer": "No. Levels are normalized in PvP, there is no gacha, and all Jinies can be obtained through normal play.",
+          "answerZh": "不是。PvP 等级标准化、无抽卡，所有 Jinies 均可通过正常游玩获得。"
+        },
+        {
+          "question": "How does the stamina bar work?",
+          "questionZh": "体力条怎么运作？",
+          "answer": "Every attack costs stamina (shown as stars). When low, your Jinie must rest a turn to recover; predict opponent switches to rest profitably.",
+          "answerZh": "每次攻击消耗体力（以星表示）。体力不足时精灵必须花一回合休息恢复；预判对手换人时机休息可赚回合差。"
+        }
+      ],
+      "updatedAt": "2026-08-27",
+      "quickFacts": {
+        "zh": [
+          "回合制，每只精灵 4 技能。",
+          "体力条用星表示，攻击消耗体力。",
+          "PvP 等级标准化，无 P2W、无抽卡。"
+        ],
+        "en": [
+          "Turn-based with four skills per Jinie.",
+          "Star stamina bar; attacks cost stamina.",
+          "PvP levels normalized; no P2W, no gacha."
+        ],
+        "ja": [
+          "ターン制、1体につき4スキル。",
+          "スター型スタミナ。攻撃で消費。",
+          "PvPはレベル標準化、P2Wなし、ガチャなし。"
+        ]
+      },
+      "serpTitle": {
+        "zh": "Roco Kingdom 战斗系统指南｜回合制、体力条与克制详解",
+        "en": "Roco Kingdom Battle System Guide — Turn-Based Combat Explained",
+        "ja": "ロコキングダム戦闘システムガイド｜ターン制とスタミナ"
+      },
+      "serpDescription": {
+        "zh": "Roco Kingdom 战斗系统解析：回合制、星级体力条、可见克制提示、换人预判、血统技能覆盖与 PvP 等级标准化机制。",
+        "en": "Roco Kingdom combat explained: turn-based fights, star stamina, visible matchups, switch reads, Bloodline coverage, and normalized PvP.",
+        "ja": "ロコキングダムの戦闘解説：ターン制、スタミナ、弱点表示、交代読み、ブラッドライン、PvP標準化。"
+      }
+    },
+    {
+      "id": "co-op-and-social-guide",
+      "title": "Roco Kingdom 联机与社交指南：跨平台组队、共同骑行与家园",
+      "titleEn": "Roco Kingdom Co-op and Social Guide: Cross-Platform Parties, Co-Riding, and Homes",
+      "category": "gameplay",
+      "categoryZh": "玩法攻略",
+      "categoryEn": "Gameplay",
+      "summary": "Roco Kingdom 强调社交玩法：跨平台组队冒险、共同骑行精灵、拜访与装饰家园、一起种田和友好决斗。本文整理联机功能清单与入坑建议。",
+      "summaryEn": "Roco Kingdom puts social play first: cross-platform party-ups, co-riding Jinies, visiting and decorating homes, farming together, and friendly duels. This guide lists every co-op feature and gives onboarding tips.",
+      "content": "## Roco Kingdom 联机与社交指南\n\nRoco Kingdom 的联机是**跨平台互通**的：PC、主机、移动端玩家可以在同一个世界中组队冒险，社交系统贯穿家园、骑行、种田与决斗。\n\n### 联机功能清单\n\n- **跨平台组队**：PC、主机、手机玩家无需分开服务器即可组队，移动端可无缝加入 PC/主机朋友的会话。\n- **共同骑行（Co-riding）**：可以一起骑乘精灵在大陆旅行。\n- **家园系统**：建造与装饰自己的家园，邀请朋友参观；也可以互相拜访。\n- **种田**：与朋友一起种田，共享玩法体验。\n- **友好决斗**：与好友进行友好对战。\n- **资源与经验共享**：联机会话中收集的奖励与战斗经验会共享。\n\n### 单人体验\n\n- 游戏完全支持单人游玩，不想组队也能顺畅推进主线。\n- 未选择的御三家可以在好友的世界中捕捉，社交也能反哺收集进度。\n\n### 入坑建议\n\n- **CBT 阶段**：先确认跨平台组队与基础社交功能是否如预告所示，再决定长期主玩平台。\n- **平台选择**：如果好友主要在手机上玩，PC 端也能直接加入，无需重复选择。\n\n> 说明：国际服 CBT 的联机服务器规则、好友上限与账号绑定细节以官方公告为准。",
+      "contentEn": "## Roco Kingdom Co-op and Social Guide\n\nRoco Kingdom's online play is **fully cross-platform**: PC, console, and mobile players can party up in one shared world, with social systems across homes, co-riding, farming, and duels.\n\n### Co-op features\n\n- **Cross-platform parties**: PC, console, and mobile players group up without separate servers; mobile players can join PC/console friends seamlessly.\n- **Co-riding**: ride a Jinie together while traveling the continent.\n- **Homes**: build and decorate your home, invite friends to visit, and visit theirs.\n- **Farming**: farm together with friends.\n- **Friendly duels**: battle friends in friendly matches.\n- **Shared rewards**: rewards and battle experience gathered in co-op sessions are shared.\n\n### Solo play\n\n- The game fully supports solo play; you can push the story without a group.\n- Unpicked starters can be caught in friends' worlds, so social play feeds collection progress too.\n\n### Tips\n\n- **During CBT**: verify cross-platform parties and social features work as previewed before committing to a main platform.\n- **Platform choice**: if your friends are mostly on mobile, the PC client can still join them directly.\n\n> Note: international CBT server rules, friend caps, and account-linking details follow official announcements.",
+      "tags": [
+        "co-op",
+        "multiplayer",
+        "cross-play",
+        "homes",
+        "farming",
+        "social",
+        "co-riding"
+      ],
+      "faq": [
+        {
+          "question": "Is cross-platform play available from day one?",
+          "questionZh": "跨平台联机开服就有吗？",
+          "answer": "Yes. Cross-platform play is a confirmed day-one feature for the full release; mobile players can join PC/console friends.",
+          "answerZh": "是。正式版确认上线即支持跨平台联机，移动端玩家可加入 PC/主机好友的会话。"
+        },
+        {
+          "question": "Can I play Roco Kingdom solo?",
+          "questionZh": "可以单人游玩吗？",
+          "answer": "Yes. The game fully supports solo play; co-op is optional and feeds collection progress (e.g., catching unpicked starters in friends' worlds).",
+          "answerZh": "可以。游戏完全支持单人游玩；联机为可选玩法，也能帮助收集（例如在好友世界捕捉未选的御三家）。"
+        }
+      ],
+      "updatedAt": "2026-08-27",
+      "quickFacts": {
+        "zh": [
+          "跨平台组队：PC/主机/移动端互通。",
+          "社交玩法：家园、种田、共同骑行、友好决斗。",
+          "完全支持单人游玩，联机可选。"
+        ],
+        "en": [
+          "Cross-platform parties: PC, console, mobile.",
+          "Social play: homes, farming, co-riding, friendly duels.",
+          "Fully playable solo; co-op optional."
+        ],
+        "ja": [
+          "クロスプレイ：PC・コンソール・モバイル。",
+          "ハウス、農場、共同ライド、友好デュエル。",
+          "ソロプレイも完全対応。"
+        ]
+      },
+      "serpTitle": {
+        "zh": "Roco Kingdom 联机与社交指南｜跨平台组队、骑行与家园",
+        "en": "Roco Kingdom Co-op & Social Guide — Cross-Play, Homes & Farming",
+        "ja": "ロコキングダム協力・ソーシャルガイド｜クロスプレイとハウス"
+      },
+      "serpDescription": {
+        "zh": "Roco Kingdom 联机玩法一览：跨平台组队、共同骑行精灵、家园装饰与种田、友好决斗，以及单人玩家的入坑建议。",
+        "en": "Roco Kingdom co-op overview: cross-platform parties, co-riding, home decorating, farming, and friendly duels, plus solo-play tips.",
+        "ja": "ロコキングダムのマルチプレイ解説：クロスプラットフォームPT、共同ライド、ハウス、農業、友好デュエル。"
+      }
+    }
+  ],
+  "originalTierSource": "import type { TierList } from '@gachia/core';\n\n// 节奏榜（精灵强度榜）— 国际服（roco）早测阵容仅 6 只，数据为准。\n// 御三家（meewee/sparka/cerulla）与国服同 creatures，沿用 A 级；\n// 其余早测野外宠（blazehound/catapawn/dustler）强度暂定 B，待社区天梯数据补充。\n// 国际服技能/种族值官方仍 TBA，本榜为养成参考的初步分级。\n\ntype RocoTierRow = { id: string; tier: 'SS' | 'S' | 'A' | 'B' | 'C' | 'D'; roleZh: string; roleEn: string };\n\nconst ROCO_TIER: RocoTierRow[] = [\n  { id: 'meewee', tier: 'A', roleZh: '坦克/续航', roleEn: 'Tank' },\n  { id: 'sparka', tier: 'A', roleZh: '物理输出', roleEn: 'Physical DPS' },\n  { id: 'cerulla', tier: 'A', roleZh: '魔法输出', roleEn: 'Magic DPS' },\n  { id: 'blazehound', tier: 'B', roleZh: '物理输出', roleEn: 'Physical DPS' },\n  { id: 'catapawn', tier: 'B', roleZh: '坦克', roleEn: 'Tank' },\n  { id: 'dustler', tier: 'B', roleZh: '辅助', roleEn: 'Support' },\n];\n\nexport const tierLists: TierList[] = [\n  {\n    gameId: 'roco',\n    category: 'overall',\n    locale: 'zh',\n    updatedAt: '2026-08-28',\n    entries: ROCO_TIER.map((e) => ({ characterId: e.id, tier: e.tier, role: e.roleZh })),\n  },\n  {\n    gameId: 'roco',\n    category: 'overall',\n    locale: 'en',\n    updatedAt: '2026-08-28',\n    entries: ROCO_TIER.map((e) => ({ characterId: e.id, tier: e.tier, role: e.roleEn })),\n  },\n  {\n    gameId: 'roco',\n    category: 'overall',\n    locale: 'ja',\n    updatedAt: '2026-08-28',\n    entries: ROCO_TIER.map((e) => ({ characterId: e.id, tier: e.tier, role: e.roleEn })),\n  },\n];\n",
+  "originalHolds": [
+    {
+      "path": "roco/raw-characters.json",
+      "status": "needs_review",
+      "sourceSha256": "443c6c6cca88ff5372760e4e39887168650a5668ac4ec710615e7f94f91510d7",
+      "mirrorSha256": "443c6c6cca88ff5372760e4e39887168650a5668ac4ec710615e7f94f91510d7",
+      "reason": "Copied international skills/stats withdrawn for three entries; legacy identities/classifications and the other three entries remain independently unverified.",
+      "reviewDocument": "plans/multi-game-s2-7-roco-content-closeout-2026-10-24.md"
+    },
+    {
+      "path": "roco/raw-guides.json",
+      "status": "needs_review",
+      "sourceSha256": "c01e0925be5404c38f90be4b911f9caeff4f4681cd1261fbe2f65be36792d2dd",
+      "mirrorSha256": "c01e0925be5404c38f90be4b911f9caeff4f4681cd1261fbe2f65be36792d2dd",
+      "reason": "Nine guides rewritten as editorial verification checklists; other 21 guides and related public feature/release assertions still require factual review.",
+      "reviewDocument": "plans/multi-game-s2-7-roco-content-closeout-2026-10-24.md"
+    }
+  ],
+  "preservation": {
+    "characterIds": [
+      "meewee",
+      "sparka",
+      "cerulla",
+      "blazehound",
+      "catapawn",
+      "dustler"
+    ],
+    "guideIds": [
+      "global-player-feedback-roadmap-playbook",
+      "global-onboarding-learning-recovery-playbook",
+      "global-player-discovery-codex-playbook",
+      "global-fair-play-integrity-playbook",
+      "global-change-communication-playbook",
+      "global-returning-player-event-legacy-playbook",
+      "global-economy-monetization-fairness-playbook",
+      "global-accessibility-cross-device-playbook",
+      "global-player-support-trust-playbook",
+      "global-social-safety-guild-playbook",
+      "global-localization-cultural-event-playbook",
+      "global-cbt-to-launch-decision-gates",
+      "global-cn-release-governance",
+      "global-live-ops-metrics-experiments",
+      "global-launch-readiness-checklist",
+      "global-first-30-days-pve-plan",
+      "global-days-31-90-season-event-plan",
+      "global-cn-content-roadmap",
+      "cbt-registration-guide",
+      "starter-guide",
+      "what-is-roco-kingdom",
+      "platforms-and-download-guide",
+      "jinies-guide",
+      "battle-system-guide",
+      "co-op-and-social-guide",
+      "pre-registration-rewards-faq",
+      "is-roco-kingdom-free-to-play",
+      "roco-kingdom-release-date-guide",
+      "roco-kingdom-vs-pokemon",
+      "roco-kingdom-crossplay-guide"
+    ],
+    "firstThreeCharactersSerializationSha256": "6805cc181afd27a8ee07fc0b13c060378e630238602f75ca284a9d0aa07a12f9",
+    "otherTwentySixGuidesSerializationSha256": "5cda78f061f92d9952916c3c88eaa3c1126c37da3e2eb0c3b89c7e2ba9e30fbb"
+  },
+  "remaining": [
+    "All six legacy character identities/names/artwork/classifications require independent evidence before factual approval",
+    "Seventeen other guides and other public tools/registry descriptions remain unapproved; corrected lists do not approve their contents",
+    "Thirteen rewritten guides are editorial verification checklists, not official game facts",
+    "Genshin strict migration and all-owner cloud/rollback acceptance remain outstanding"
+  ],
+  "withdrawnPublicBlocks": [
+    {
+      "file": "apps/web/app/[lang]/[game]/page.tsx",
+      "container": "GAME_DESCRIPTIONS",
+      "originalBlock": "roco: {\n    zh: '《洛克王国：世界》国际服精灵图鉴、法杖数据库、节奏榜与攻略百科，覆盖 CBT「等等鸭测试」已曝光精灵的属性、稀有度、进化链与定位。法杖为外观特效武器，无数值攻击力；节奏榜基于早测暂定分级，正式版以官方为准。同时收录 CBT 报名、版本节点与实用入口，方便继续深入浏览。',\n    en: 'Roco Kingdom global Jinie database, staff catalog, tier list, and guides for the \"Quack Quack Test\" CBT. Covers officially revealed Jinies\\' attributes, rarity, evolution chains, and roles. Staves are cosmetic effect weapons with no attack stats; the tier list uses provisional CBT ratings pending official release. Also links to CBT sign-up, version milestones, and tools.',\n    ja: 'ロコキングダム国際版のジニー図鑑、杖データベース、Tier、攻略百科を「Quack Quack Test」CBT向けに整理。公式公開ジニーの属性、レアリティ、進化、役割を網羅。杖は攻撃数値なしの外観武器。TierはCBT暫定。応募、版本、ツールも導線あり。',\n  },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/page.tsx",
+      "container": "GAME_ABOUT",
+      "originalBlock": "roco: {\n    zh: '《洛克王国：世界》国际服是腾讯面向全球发行的开放世界精灵收集 RPG，首轮 CBT「等等鸭测试」于 2026-10-27 开启。Gachia 整理官方已曝光精灵的属性、稀有度、进化链与基础定位，CBT 结束后持续补全。法杖系统为外观特效武器，无数值攻击力，通过战令与活动获取。节奏榜基于早测暂定分级，正式版以官方数据为准。国际服与国服数据相互独立，正式版支持繁中、英文、日文等多语言。',\n    en: 'The Roco Kingdom global version is Tencent\\'s worldwide open-world creature-collection RPG. The first CBT \"Quack Quack Test\" opens October 27, 2026. Gachia tracks officially revealed Jinies\\' attributes, rarity, evolution chains, and basic roles, expanding after CBT. The staff system is a cosmetic effect weapon with no attack stats, obtained from battle passes and events. Our tier list uses provisional CBT ratings pending the official release. The global and CN versions keep independent data; the global release supports Traditional Chinese, English, Japanese, and more.',\n    ja: 'ロコキングダム国際版はTencentのグローバル向けオープンワールド収集RPG。初回CBT「Quack Quack Test」は2026年10月27日開始。Gachiaは公式公開ジニーの属性、レアリティ、進化、役割を整理し、CBT後に拡充。杖は攻撃数値なしの外観武器で、バトルパスとイベントから入手。TierはCBT暫定。国際版と中国版は独立、多言語対応。',\n  },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/page.tsx",
+      "container": "SPECIAL_HOME_COPY",
+      "originalBlock": "roco: {\n    eyebrow: { zh: 'CBT「等等鸭测试」/ 玩法入口', en: 'CBT Quack Quack Test / Gameplay', ja: 'CBT「Quack Quack Test」/ 玩法導線' },\n    title: { zh: '国际服精灵图鉴、法杖与节奏榜入口', en: 'Global Jinie wiki, staves, and tier list', ja: '国際版ジニー図鑑・杖・Tier' },\n    description: {\n      zh: '把 CBT 已曝光精灵图鉴、法杖和早测节奏榜合到首页，先看御三家与属性克制。',\n      en: 'Bring the CBT-revealed Jinie wiki, staves, and provisional tier list to the front page; start with starters and type matchups.',\n      ja: 'CBT公開ジニー図鑑、杖、暫定Tierをトップにまとめ、御三家と属性相性から。',\n    },\n    chips: {\n      zh: ['CBT 10/27', '御三家', '法杖', '早测节奏榜', '属性克制'],\n      en: ['CBT Oct 27', 'Starters', 'Staves', 'Provisional tier', 'Type matchups'],\n      ja: ['CBT 10/27', '御三家', '杖', '暫定Tier', '属性相性'],\n    },\n    cta: { zh: '去 CBT 专题', en: 'Open CBT hub', ja: 'CBT特集へ' },\n    tracks: {\n      zh: [\n        { title: '精灵图鉴与节奏榜', description: '先看 CBT 已曝光精灵图鉴和早测强度分级。', links: [{ href: '/roco/characters', label: '精灵图鉴' }, { href: '/roco/tier-list', label: '早测节奏榜' }] },\n      { title: '法杖系统', description: '法杖是纯外观特效武器，无数值攻击力，通过战令与活动获取。', links: [{ href: '/roco/weapons', label: '法杖图鉴' }, { href: '/roco/version', label: 'CBT 专题' }] },\n        { title: 'CBT 与报名', description: '继续看 CBT 时间线、报名窗口与平台选择。', links: [{ href: '/roco/version', label: 'CBT 专题' }, { href: '/roco/characters', label: '精灵图鉴' }] },\n      ],\n      en: [\n        { title: 'Jinie wiki & tier list', description: 'Check the CBT-revealed roster and provisional strength tiers.', links: [{ href: '/roco/characters', label: 'Jinie wiki' }, { href: '/roco/tier-list', label: 'Provisional tier' }] },\n        { title: 'Staff system', description: 'Staves are cosmetic effect weapons with no attack stats, from passes and events.', links: [{ href: '/roco/weapons', label: 'Staff catalog' }, { href: '/roco/version', label: 'CBT hub' }] },\n        { title: 'CBT & sign-up', description: 'Continue into the CBT timeline, sign-up window, and platforms.', links: [{ href: '/roco/version', label: 'CBT hub' }, { href: '/roco/characters', label: 'Jinie wiki' }] },\n      ],\n      ja: [\n        { title: 'ジニー図鑑とTier', description: 'CBT公開ジニー図鑑と暫定Tierを確認。', links: [{ href: '/roco/characters', label: 'ジニー図鑑' }, { href: '/roco/tier-list', label: '暫定Tier' }] },\n      { title: '杖システム', description: '杖は攻撃数値なしの純粋な外観武器で、パスとイベントから入手。', links: [{ href: '/roco/weapons', label: '杖図鑑' }, { href: '/roco/version', label: 'CBT特集' }] },\n        { title: 'CBTと応募', description: 'CBTタイムライン、応募窓口、プラットフォームを続けて確認。', links: [{ href: '/roco/version', label: 'CBT特集' }, { href: '/roco/characters', label: 'ジニー図鑑' }] },\n      ],\n    },\n    faq: [\n      {\n        question: { zh: '国际服法杖有攻击力吗？', en: 'Do global staves have attack stats?', ja: '国際版の杖に攻撃力はありますか？' },\n        answer: { zh: '没有。法杖是外观特效武器，无数值攻击力，主要影响战斗特效与外观，不影响精灵基础属性。', en: 'No. Staves are cosmetic effect weapons with no attack stats; they affect combat visuals and appearance, not a Jinie\\'s base stats.', ja: 'いいえ。杖は攻撃数値を持たない外観・エフェクト武器で、戦闘エフェクトと外観に影響し、ジニーの基礎ステータスには影響しません。' },\n      },\n      {\n        question: { zh: '早测节奏榜准吗？', en: 'Is the provisional tier list reliable?', ja: '暫定Tierは信頼できますか？' },\n        answer: { zh: '早测节奏榜基于 CBT 暂定分级，仅作参考；正式版精灵与数值以官方发布为准，开测后会持续校准。', en: 'The provisional tier list uses CBT ratings for reference only; the official release stats and roster take precedence and will be recalibrated after launch.', ja: '暫定TierはCBTベースの参考値です。正式版の数値とラインナップは公式基準で、開測後に調整します。' },\n      },\n    ],\n  },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/page.tsx",
+      "container": "ROCO_DAILY_COPY",
+      "originalBlock": "roco: [\n    {\n      href: '/roco/events',\n      icon: '📰',\n      title: { zh: 'CBT 活动日历', en: 'CBT events', ja: 'CBTイベント' },\n      description: {\n        zh: '跟进报名窗口、首测时间和官方奖励节点。',\n        en: 'Track sign-up windows, CBT timing, and official reward milestones.',\n        ja: '応募期間、CBT日程、公式報酬节点を確認。',\n      },\n      metric: () => 'Live',\n      action: { zh: '看活动', en: 'Open events', ja: 'イベントへ' },\n    },\n    {\n      href: '/roco/characters',\n      icon: '👤',\n      title: { zh: '精灵图鉴', en: 'Jinie wiki', ja: 'ジニー図鑑' },\n      description: {\n        zh: '查看已曝光精灵、属性、稀有度与进化链。',\n        en: 'Browse revealed Jinies, types, rarity, and evolution lines.',\n        ja: '公開ジニー、属性、レア度、進化を確認。',\n      },\n      metric: (stats, locale) => locale === 'zh' ? `${stats.characters} 只` : locale === 'ja' ? `${stats.characters}体` : `${stats.characters} Jinies`,\n      action: { zh: '打开图鉴', en: 'Open wiki', ja: '図鑑へ' },\n    },\n    {\n      href: '/roco/tier-list',\n      icon: '🏆',\n      title: { zh: '早测节奏榜', en: 'Provisional tier', ja: '暫定Tier' },\n      description: {\n        zh: '基于 CBT 暂定分级，正式上线后继续校准。',\n        en: 'CBT-based ratings that will be recalibrated after launch.',\n        ja: 'CBTベースの評価。リリース後に調整。',\n      },\n      metric: () => 'CBT',\n      action: { zh: '看强度', en: 'View tiers', ja: 'Tierを見る' },\n    },\n    {\n      href: '/roco/weapons',\n      icon: '⚔️',\n      title: { zh: '法杖外观', en: 'Staff catalog', ja: '杖図鑑' },\n      description: {\n        zh: '法杖是外观特效武器，不提供攻击力成长。',\n        en: 'Staves are cosmetic effect weapons, not attack-stat gear.',\n        ja: '杖は攻撃値なしの外観武器です。',\n      },\n      metric: (stats, locale) => locale === 'zh' ? `${stats.weapons} 款` : locale === 'ja' ? `${stats.weapons}本` : `${stats.weapons} staves`,\n      action: { zh: '查看法杖', en: 'View staves', ja: '杖を見る' },\n    },\n    {\n      href: '/roco/eggs',\n      icon: '🥚',\n      title: { zh: '精灵蛋观察', en: 'Egg watch', ja: '卵ウォッチ' },\n      description: {\n        zh: '整理蛋种、预约奖励和首测后需要核验的孵化信息。',\n        en: 'Track egg types, preregistration rewards, and CBT hatching checks.',\n        ja: '卵種、事前登録報酬、CBT孵化確認を整理。',\n      },\n      metric: () => 'Watch',\n      action: { zh: '看精灵蛋', en: 'Open eggs', ja: '卵へ' },\n    },\n    {\n      href: '/roco/merchant',\n      icon: '🧾',\n      title: { zh: '商人待核验', en: 'Merchant watch', ja: '商人確認待ち' },\n      description: {\n        zh: '开测后优先核验捕捉球、经验材料和周期商店。',\n        en: 'Track capture pods, EXP materials, and shop rotations after CBT opens.',\n        ja: 'CBT後に捕獲、経験値素材、ショップ周期を確認。',\n      },\n      metric: () => 'Watch',\n      action: { zh: '看商人', en: 'Open merchant', ja: '商人へ' },\n    },\n  ],"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/download/page.tsx",
+      "container": "DOWNLOAD_COPY",
+      "originalBlock": "roco: {\n    officialUrl: 'https://www.rocokingdom.com/',\n    status: {\n      zh: '国际服首轮全球封闭测试（CBT）定于 2026-10-27 开启，报名通道已在官网开放；CBT 可玩平台为 PC、iOS、Android，正式版将扩展至 PS5、Xbox、Steam、Epic 与 Microsoft Store。',\n      en: 'The first global Closed Beta Test (CBT) starts on October 27, 2026, with pre-registration open now on the official site; the CBT is playable on PC, iOS, and Android, with PS5, Xbox, Steam, Epic, and Microsoft Store arriving at full release.',\n      ja: '初回グローバルCBTは2026年10月27日開始予定で、公式サイトで事前登録受付中。CBTはPC、iOS、Androidでプレイ可能。PS5、Xbox、Steam、Epic、MS Storeは正式版で対応予定。',\n    },\n    intro: {\n      zh: '集中查看《洛克王国:世界》国际服官网入口、CBT 报名与下载、CBT 可玩平台（PC/iOS/Android）、正式版平台（PS5/Xbox/Steam/Epic/MS Store）、配置要求和预约福利，再继续看 CBT 注册指南、版本时间线和兑换码。',\n      en: 'A hub for Roco Kingdom official site, CBT pre-registration and download, CBT platforms (PC/iOS/Android), full-release platforms (PS5/Xbox/Steam/Epic/MS Store), specs, and pre-registration rewards, then routing into the CBT guide, version timeline, and redeem codes.',\n      ja: 'ロコキングダム公式サイト、CBT事前登録とDL、CBT対応平台（PC/iOS/Android）、正式版平台（PS5/Xbox/Steam/Epic/MS Store）、推奨環境、予約特典をまとめ、CBTガイド、版本、交換コードへ案内します。',\n    },\n    officialNote: DEFAULT_STATUS,\n    platforms: [\n      platform('Official site', '优先入口', 'Primary entry', '優先入口', 'CBT 报名、资格查询和下载状态的第一入口。', 'The first stop for CBT signup, eligibility, and download status.', 'CBT応募、資格確認、DL状態の第一入口。'),\n      platform('PC (Windows)', 'CBT 可玩', 'Playable in CBT', 'CBT対応', '10/27 首测可玩平台之一，客户端入口以官网为准。', 'One of the playable CBT platforms starting October 27; client entry follows the official site.', '10/27のCBTでプレイ可能な平台の一つ。クライアントは公式サイト基準。'),\n      platform('iOS', 'CBT 可玩', 'Playable in CBT', 'CBT対応', '10/27 首测可玩平台之一，下载以上架后的 App Store 为准。', 'One of the playable CBT platforms starting October 27; download follows App Store availability.', '10/27のCBT対応平台。DLはApp Store配信基準。'),\n      platform('Android', 'CBT 可玩', 'Playable in CBT', 'CBT対応', '10/27 首测可玩平台之一，下载以 Google Play 等商店上架为准。', 'One of the playable CBT platforms starting October 27; download follows Google Play availability.', '10/27のCBT対応平台。DLはGoogle Play等の配信基準。'),\n      platform('PS5 / Xbox / Steam / Epic / MS Store', '正式版平台', 'Full-release platforms', '正式版平台', '属于正式版而非 CBT；Steam 商店页已上线但锁国区，国际服下载以官网为准。', 'These are full-release platforms, not CBT; the Steam page is live but region-locked for CN — use the official site for the international version.', '正式版のみの対応。Steamページは公開済みだが中国リージョンはロック中。国際版は公式サイト基準。'),\n    ],\n    specs: specs('开放世界精灵收集游戏对存储和网络稳定性有要求，CBT 具体配置与包体大小以官方公告为准。', 'An open-world creature-collector needs storage and stable network; exact CBT specs and package size follow official notices.', 'オープンワールド捕獲ゲームは容量と安定回線が必要です。CBTの推奨環境と容量は公式告知を確認。'),\n    cloud: cloudUnreleased(),\n    crossPlay: unreleasedCrossPlay(),\n    nextLinks: [\n      {\n        href: '/roco/guides/cbt-registration-guide',\n        label: { zh: 'CBT 报名指南', en: 'CBT registration', ja: 'CBT応募' },\n        description: { zh: '确认报名问卷、资格邮件、平台和测试前检查。', en: 'Check questionnaire, eligibility mail, platforms, and pre-test steps.', ja: '応募フォーム、資格メール、平台、テスト前確認を整理。' },\n      },\n      {\n        href: '/roco/version',\n        label: { zh: 'CBT 时间线', en: 'CBT timeline', ja: 'CBT日程' },\n        description: { zh: '跟进 2026-10-27 CBT、平台边界和正式版计划。', en: 'Track the Oct 27, 2026 CBT, platform scope, and full-release plan.', ja: '2026-10-27 CBT、平台範囲、正式版予定を確認。' },\n      },\n      {\n        href: '/roco/characters',\n        label: { zh: '精灵图鉴', en: 'Jinie wiki', ja: 'ジニー図鑑' },\n        description: { zh: '下载前先看已曝光精灵、属性和进化链。', en: 'Review revealed Jinies, types, and evolution lines before downloading.', ja: 'DL前に公開ジニー、属性、進化を確認。' },\n      },\n      {\n        href: '/roco/map',\n        label: { zh: '地图核验入口', en: 'Map watch', ja: 'マップ確認' },\n        description: { zh: '记录 CBT 后需要补的区域、捕捉点和路线。', en: 'Track regions, capture spots, and routes queued for CBT checks.', ja: 'CBT後に確認する地域、捕獲地点、ルートを追跡。' },\n      },\n    ],\n    faq: [\n      {\n        question: { zh: '国际服 CBT 怎么报名？', en: 'How do I sign up for the international CBT?', ja: '国際CBTにはどう申し込む？' },\n        answer: { zh: '前往官网 www.rocokingdom.com 报名并完成预注册，测试资格、设备要求和后续下载说明都以官方邮件与官网公告为准。', en: 'Pre-register on the official site at www.rocokingdom.com; eligibility, device requirements, and download instructions follow official emails and site notices.', ja: '公式サイト（www.rocokingdom.com）で事前登録を完了してください。資格、端末要件、DL手順は公式メールと告知基準です。' },\n      },\n      {\n        question: { zh: '国际服和国服数据互通吗？', en: 'Do the international and CN versions share data?', ja: '国際版と中国版のデータは共有されますか？' },\n        answer: { zh: '不互通。官方明确国际服与国服数据相互独立，国际服正式版支持繁中、英文、日文等多语言。', en: 'No. Tencent confirmed the international and CN versions have independent data; the global release supports Traditional Chinese, English, Japanese, and more.', ja: 'いいえ。国際版と中国版のデータは独立しています。国際版は繁体中文、英語、日本語などに対応予定です。' },\n      },\n    ],\n  },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/map/page.tsx",
+      "container": "MAP_META_TITLES",
+      "originalBlock": "roco: {\n    zh: '洛克王国：世界国际服地图｜CBT 区域、捕捉点与探索路线',\n    en: 'Roco Kingdom Global Map — CBT Regions, Capture Spots & Routes',\n    ja: 'ロコキングダム国際版マップ｜CBT地域・捕獲地点・探索ルート',\n  },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/map/page.tsx",
+      "container": "MAP_META_DESCRIPTIONS",
+      "originalBlock": "roco: {\n    zh: '洛克王国：世界国际服地图入口，当前用于追踪 CBT 区域、已曝光精灵、捕捉点、地图路线和上线后点位核验。继续查看精灵图鉴、CBT 专题、法杖与攻略。',\n    en: 'Roco Kingdom global map hub for CBT regions, revealed Jinies, capture spots, exploration routes, and launch verification. Continue into Jinies, CBT hub, staves, and guides.',\n    ja: 'ロコキングダム国際版マップ入口。CBT地域、公開ジニー、捕獲地点、探索ルート、リリース後確認を追跡します。',\n  },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/map/page.tsx",
+      "container": "ROCO_MAP_STATS",
+      "originalBlock": "roco: [\n    ['CBT', '测试阶段', 'Test Phase', 'テスト段階'],\n    ['Watch', '点位状态', 'Marker Status', '地点状態'],\n    ['6', '资源入口', 'Resource Links', '導線'],\n    ['Launch', '上线后核验', 'Launch Checks', 'リリース後確認'],\n  ],"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/map/page.tsx",
+      "container": "ROCO_MAP_LINKS",
+      "originalBlock": "roco: [\n    ['/roco/characters', '精灵图鉴', 'Jinie wiki', 'ジニー図鑑', '按属性、稀有度和进化链继续查已曝光精灵。', 'Browse revealed Jinies by type, rarity, and evolution line.', '公開ジニーを属性、レア度、進化で確認。'],\n    ['/roco/version', 'CBT 专题', 'CBT hub', 'CBT特集', '确认测试时间、平台、报名和下载状态。', 'Check test timing, platforms, signup, and download status.', 'テスト日程、平台、応募、DL状況を確認。'],\n    ['/roco/tier-list', '早测节奏榜', 'Provisional tier', '暫定Tier', '先用 CBT 分级判断捕捉与培养优先级。', 'Use CBT ratings to plan capture and training priorities.', 'CBT評価で捕獲・育成優先度を判断。'],\n    ['/roco/weapons', '法杖图鉴', 'Staff catalog', '杖図鑑', '法杖为外观特效武器，不提供攻击力。', 'Staves are cosmetic effects, not attack-stat gear.', '杖は攻撃値なしの外観武器。'],\n    ['/roco/guides/cbt-registration-guide', 'CBT 报名', 'CBT signup', 'CBT応募', '报名、问卷、资格邮件和测试平台集中查看。', 'Registration, questionnaire, eligibility mail, and platforms.', '応募、アンケート、資格メール、平台を確認。'],\n    ['/roco/download', '下载入口', 'Download hub', 'DL入口', '按官网和平台商店确认安全下载边界。', 'Verify safe download entry through official and store pages.', '公式とストアで安全なDL入口を確認。'],\n  ],"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/map/page.tsx",
+      "container": "RocoMapHub",
+      "originalBlock": "function RocoMapHub({ gameId, locale }: { gameId: 'roco' | 'roco-cn'; locale: SupportedLocale }) {\n  const gameConfig = GAMES[gameId];\n  const pick = (zh: string, en: string, ja?: string) => locale === 'zh' ? zh : locale === 'ja' ? (ja ?? en) : en;\n\n  return (\n    <div>\n      <h1 className=\"mb-2 text-2xl font-bold\" style={{ color: gameConfig.theme.primary }}>\n        {gameId === 'roco'\n          ? pick('国际服 CBT 地图核验入口', 'Global CBT Map Watch', '国際版CBTマップ確認')\n          : pick('国服地图与资源路线入口', 'CN Map and Resource Route Hub', '中国版マップ・資源ルート')}\n      </h1>\n      <p className=\"mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted\">\n        {gameId === 'roco'\n          ? pick(\n              '国际服地图点位仍等待 CBT 与正式上线后核验。这里先把精灵图鉴、CBT 专题、法杖、下载和待补地图路线集中起来，避免把未确认点位当成实时地图。',\n              'Global map markers still need CBT and launch verification. This hub groups Jinies, CBT timing, staves, downloads, and map-route watch items without presenting unverified markers as live data.',\n              '国際版の地点はCBTとリリース後の確認待ちです。未確認地点をリアルタイム地図として扱わず、図鑑、CBT、杖、DL、確認項目をまとめます。'\n            )\n          : pick(\n              '国服地图内容先作为资源路线入口维护，重点串联精灵图鉴、兑换码、赛季、法杖和后续商人/活动刷新核验。',\n              'CN map content starts as a resource-route hub that connects Jinies, codes, season pages, staves, and future merchant/event refresh checks.',\n              '中国版マップは資源ルート入口として、ジニー、コード、シーズン、杖、商人/イベント確認へつなげます。'\n            )}\n      </p>\n\n      <div className=\"mb-8 grid grid-cols-2 gap-3 sm:grid-cols-4\">\n        {ROCO_MAP_STATS[gameId].map(([value, zh, en, ja]) => (\n          <div key={zh} className=\"rounded-lg border border-game-border bg-game-surface p-3 text-center\">\n            <div className=\"text-lg font-bold text-game-primary\">{value}</div>\n            <div className=\"text-xs text-game-text-muted\">{pick(zh, en, ja)}</div>\n          </div>\n        ))}\n      </div>\n\n      <section className=\"mb-6 rounded-lg border border-game-border bg-game-surface p-4\">\n        <h2 className=\"mb-2 text-lg font-semibold text-game-text\">\n          {pick('地图相关资源', 'Related Map Resources', 'マップ関連リソース')}\n        </h2>\n        <p className=\"mb-4 text-sm leading-6 text-game-text-muted\">\n          {pick(\n            '完整交互点位上线前，先用这些入口完成捕捉、培养、活动和版本判断。',\n            'Before full interactive markers are available, use these entries for capture, progression, event, and version decisions.',\n            '完全なインタラクティブ地点公開前に、捕獲、育成、イベント、版本判断へ進めます。'\n          )}\n        </p>\n        <div className=\"grid gap-3 md:grid-cols-3\">\n          {ROCO_MAP_LINKS[gameId].map(([href, zh, en, ja, descZh, descEn, descJa]) => (\n            <a key={href} href={`/${locale}${href}`} className=\"rounded-lg border border-game-border bg-game-surface-alt p-3 transition hover:border-game-primary\">\n              <span className=\"block text-sm font-semibold text-game-text\">{pick(zh, en, ja)}</span>\n              <span className=\"mt-1 block text-xs leading-5 text-game-text-muted\">{pick(descZh, descEn, descJa)}</span>\n            </a>\n          ))}\n        </div>\n      </section>\n\n      <section className=\"rounded-lg border border-dashed border-game-border bg-game-surface-alt p-5\">\n        <h2 className=\"mb-2 text-lg font-semibold text-game-text\">\n          {pick('点位核验状态', 'Marker Verification Status', '地点確認状況')}\n        </h2>\n        <p className=\"text-sm leading-relaxed text-game-text-muted\">\n          {gameId === 'roco'\n            ? pick(\n                '当前不展示未确认坐标。CBT 开启后优先补区域名称、御三家捕捉相关路线、材料来源和地图截图来源。',\n                'Unverified coordinates are not shown. After CBT opens, priority checks are region names, starter-related routes, material sources, and map screenshot sources.',\n                '未確認座標は表示しません。CBT開始後、地域名、御三家関連ルート、素材来源、地図画像来源を優先確認します。'\n              )\n            : pick(\n                '当前先维护资源入口与站内导流；后续补商人刷新、活动点位、稀有精灵捕捉点和材料路线时，需要标注来源与更新时间。',\n                'This page currently maintains resource routing and internal links. Future merchant refreshes, event spots, rare Jinie captures, and material routes should include source and update time.',\n                '現在は導線を先に維持します。今後の商人更新、イベント地点、希少ジニー捕獲、素材ルートには来源と更新日を付けます。'\n              )}\n        </p>\n      </section>\n    </div>\n  );\n}"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/tier-list/page.tsx",
+      "container": "TIER_DESC",
+      "originalBlock": "'roco': { zh: '洛克王国：世界国际服精灵强度节奏榜（早测参考）。国际服当前为 6 只精灵的早测阵容，御三家沿用 A 级，其余野外宠暂定 B 级，后续会随社区天梯数据继续校准。', en: 'Roco Kingdom: World global sprite tier list (provisional reference). The global roster is currently limited to 6 sprites; starters sit at A and wild sprites are provisionally B, pending further ladder data.', ja: 'ロコ・キングダム：ワールド国際版スプライトTierリスト（暫定参考）。国際版は現在6体のみで、御三家はA、野生は仮B、今後ラダーデータで調整予定。' },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/tier-list/page.tsx",
+      "container": "getTierIntro",
+      "originalBlock": "if (gameId === 'roco') {\n    return locale === 'zh'\n      ? '国际服早测阵容仅 6 只精灵，本榜为初步分级（御三家 A、其余暂定 B），供开荒节奏参考；国际服技能与种族值官方仍 TBA，待社区数据后校准。'\n      : locale === 'ja'\n        ? '国際版は早テストで6体のみのため暫定評価（御三家A、その他仮B）。開荒目安としてご利用ください。国際版のスキル・種族値は公式TBAのため、社区データで更新します。'\n        : 'The global roster is early-access with only 6 sprites, so this is a provisional ranking (starters A, others tentative B) for pacing reference. Global skills and base stats are still TBA officially and will be recalibrated with community data.';\n  }"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_QUICK_ANSWERS.roco",
+      "originalBlock": "'starter-guide': {\n      heading: { zh: '快速结论：按开荒节奏选，Meewee 稳妥、Sparka 快攻、Cerulla 抗压', en: 'Quick answer: pick by early pacing — Meewee balances, Sparka speeds up, Cerulla survives', ja: '要点：序盤のペースで選ぶ — Meewee安定、Sparka速攻、Cerulla耐久' },\n      points: {\n        zh: ['国际服御三家为草系 Meewee、火系 Sparka、水系 Cerulla。', '追求稳妥万能先 Meewee；想打快先 Sparka；怕翻车先 Cerulla。', '三只都能在野外补抓，御三家选择不锁定长期进度。'],\n        en: ['The international starters are Grass-type Meewee, Fire-type Sparka, and Water-type Cerulla.', 'Pick Meewee for a balanced route, Sparka for aggressive early pacing, or Cerulla for survivability.', 'All three can be caught in the wild later, so the starter pick does not lock your long-term progress.'],\n        ja: ['国際版スターターは草Meewee、炎Sparka、水Cerulla。', '万能ならMeewee、速攻ならSparka、耐久ならCerulla。', '3匹とも野生で捕まえられるため、スターターで長期進行は固定されません。'],\n      },\n    },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_QUICK_ANSWERS.roco",
+      "originalBlock": "'jinies-guide': {\n      heading: { zh: '快速结论：先懂 18 元素、血统与捕捉方式再谈培养', en: 'Quick answer: learn the 18 elements, Bloodline, and catching before building', ja: '要点：18元素、血統、捕獲方法を先に把握' },\n      points: {\n        zh: ['官方已确认 400+ 只 Jinies，分为 18 种元素。', '血统（Bloodline）系统、Alpha/Exotic 特殊形态与 Buddy Pods 捕捉是本作特色。', 'Alpha 血统化可在特定精灵上获得，Blazion 为 Sparka 血统的 boss 级形态。'],\n        en: ['400+ Jinies are confirmed, split across 18 elements.', 'The Bloodline system, Alpha/Exotic special forms, and Buddy Pods catching define progression.', 'Alpha conversion applies to select creatures; Blazion is the boss-tier Bloodline form of Sparka.'],\n        ja: ['公式確認済みは400体超、18属性。', '血統（Bloodline）、Alpha/Exotic形態、Buddy Pods捕獲が特徴。', 'Alpha化は特定のジニーに適用され、BlazionはSparka血統のボス級形態。'],\n      },\n    },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_QUICK_ANSWERS.roco",
+      "originalBlock": "'battle-system-guide': {\n      heading: { zh: '快速结论：回合制核心是体力条、换人与克制预判', en: 'Quick answer: master the stamina bar, switching, and type hints in turn-based combat', ja: '要点：スタミナ管理、交代、相性読みが鍵' },\n      points: {\n        zh: ['每只精灵 4 个技能、星级体力条，克制关系在界面上可见。', '体力（Stamina）是资源，换人预判决定回合主动权。', '血统技能可覆盖普通技能，PvP 采用等级标准化机制。'],\n        en: ['Each Jinie has four skills and a star-based stamina bar, with matchup hints shown in the UI.', 'Stamina is the core resource; anticipating switches decides tempo.', 'Bloodline skills can overwrite normal skills, and PvP uses level-standardized rules.'],\n        ja: ['各ジニーは4スキルと星スタミナバー、相性ヒントはUI表示。', 'スタミナが核心リソースで、交代読みが主導権を握る。', '血統スキルは通常スキルを上書き可能。PvPはレベル標準化。'],\n      },\n    },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_QUICK_ANSWERS.roco",
+      "originalBlock": "'co-op-and-social-guide': {\n      heading: { zh: '快速结论：联机主打组队探索、共骑、家园与友好决斗', en: 'Quick answer: co-op covers party exploration, co-riding, homes, and friendly duels', ja: '要点：パーティ探索、共乗り、ホーム、友好決闘が中心' },\n      points: {\n        zh: ['支持跨平台组队冒险与共同骑行精灵。', '可以拜访、装饰家园，一起种田。', '友好决斗与跨服好友是社交玩法的主要入口。'],\n        en: ['Cross-platform party play and co-riding Jinies are core co-op features.', 'Visit and decorate homes, and farm together with friends.', 'Friendly duels and cross-server friends are the main social loops.'],\n        ja: ['クロスプラットフォームのパーティ探索とジニー共乗りが核。', 'ホーム訪問・装飾と共同農作業が可能。', '友好決闘とクロスサーバーフレンドが主なソーシャル導線。'],\n      },\n    },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_NEXT_STEPS.roco",
+      "originalBlock": "'starter-guide': [\n      { href: '/roco/guides/jinies-guide', label: { zh: '精灵图鉴', en: 'Jinies guide', ja: 'ジニー図鑑' }, description: { zh: '御三家之外，看 18 元素、血统和特殊形态。', en: 'Beyond starters, learn the 18 elements, Bloodline, and special forms.', ja: 'スターター以外に18属性、血統、特殊形態を確認。' } },\n      { href: '/roco/guides/battle-system-guide', label: { zh: '战斗系统', en: 'Battle system', ja: '戦闘システム' }, description: { zh: '先懂回合制、体力条和克制再定养成方向。', en: 'Understand turn-based combat, stamina, and type hints before building.', ja: 'ターン制、スタミナ、相性を見てから育成方針を決める。' } },\n    ],"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_NEXT_STEPS.roco",
+      "originalBlock": "'jinies-guide': [\n      { href: '/roco/characters', label: { zh: '精灵图鉴数据库', en: 'Jinie database', ja: 'ジニーデータベース' }, description: { zh: '按属性、稀有度和栖息地继续查具体精灵。', en: 'Browse specific Jinies by element, rarity, and habitat.', ja: '属性、レア度、生息地で具体的なジニーを確認。' } },\n      { href: '/roco/guides/battle-system-guide', label: { zh: '战斗系统', en: 'Battle system', ja: '戦闘システム' }, description: { zh: '把元素克制和血统技能接进实战。', en: 'Connect elements and Bloodline skills to real combat.', ja: '元素相性と血統スキルを実戦に活かす。' } },\n    ],"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_NEXT_STEPS.roco",
+      "originalBlock": "'battle-system-guide': [\n      { href: '/roco/guides/jinies-guide', label: { zh: '精灵图鉴', en: 'Jinies guide', ja: 'ジニー図鑑' }, description: { zh: '先确认元素、血统和捕捉方式再组队。', en: 'Check elements, Bloodline, and catching before teambuilding.', ja: '編成前に属性、血統、捕獲方法を確認。' } },\n      { href: '/roco/guides/starter-guide', label: { zh: '御三家选择', en: 'Starter guide', ja: 'スターター選択' }, description: { zh: '回到开局，按节奏和生存需求选御三家。', en: 'Return to the opener and pick a starter by pace and survival.', ja: '序盤のペースと耐久でスターターを選ぶ。' } },\n    ],"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_NEXT_STEPS.roco",
+      "originalBlock": "'co-op-and-social-guide': [\n      { href: '/roco/guides/cbt-registration-guide', label: { zh: 'CBT 报名', en: 'CBT registration', ja: 'CBT登録' }, description: { zh: '找队友前先确认自己是否拿到测试资格。', en: 'Confirm your own CBT eligibility before forming groups.', ja: '仲間集めの前に自分のCBT資格を確認。' } },\n      { href: '/roco/guides/what-is-roco-kingdom', label: { zh: '游戏是什么', en: 'What is Roco Kingdom?', ja: 'ゲーム概要' }, description: { zh: '了解世界设定和社交定位。', en: 'Review the setting and social positioning.', ja: '世界観とソーシャル定位を振り返る。' } },\n    ],"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_FALLBACK_NEXT_STEPS",
+      "originalBlock": "roco: [\n    { href: '/roco/version', label: { zh: '测试信息核验状态', en: 'Test verification status', ja: 'テスト情報の確認状況' }, description: { zh: '先核实来源，不按旧攻略报名。', en: 'Verify sources; do not sign up based on older guides.', ja: '旧ガイドで応募せず出典を確認。' } },\n    { href: '/roco/guides/starter-guide', label: { zh: '御三家选择', en: 'Starter guide', ja: 'スターター選択' }, description: { zh: '开局路线与捕捉建议。', en: 'Early pacing and catching advice.', ja: '序盤ルートと捕獲のコツ。' } },\n  ]"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/page.tsx",
+      "container": "GameHome legacy shortcuts",
+      "originalBlock": "{gameId === 'roco' && (\n                  <>\n                    <Link href={`/${gameId}/characters` as '/'} className=\"rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary\">\n                      {locale === 'zh' ? '精灵图鉴' : locale === 'ja' ? 'ジニー図鑑' : 'Jinie wiki'}\n                    </Link>\n                    <Link href={`/${gameId}/weapons` as '/'} className=\"rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary\">\n                      {locale === 'zh' ? '法杖图鉴' : locale === 'ja' ? '杖図鑑' : 'Staff catalog'}\n                    </Link>\n                    <Link href={`/${gameId}/tier-list` as '/'} className=\"rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary\">\n                      {locale === 'zh' ? '早测节奏榜' : locale === 'ja' ? '暫定Tier' : 'Provisional tier'}\n                    </Link>\n                    <Link href={`/${gameId}/version` as '/'} className=\"rounded-full border border-game-border px-4 py-2 text-sm text-game-text-muted transition-colors hover:border-game-primary hover:text-game-primary\">\n                      {locale === 'zh' ? 'CBT 专题' : locale === 'ja' ? 'CBT特集' : 'CBT hub'}\n                    </Link>\n                  </>\n                )}"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/characters/page.tsx",
+      "container": "CHAR_DESC",
+      "originalBlock": "roco: { zh: '《洛克王国：世界》国际服精灵图鉴，覆盖官方已曝光精灵的属性、稀有度、栖息地、进化链与获取说明，CBT 开测后持续补全。', en: 'Roco Kingdom international character encyclopedia, covering officially revealed Jinies\\' attributes, rarity, habitats, evolution chains, and acquisition notes. Will expand after CBT launch.', ja: 'ロコキングダム国際版のジニー図鑑。公式公開済みジニーの属性、レアリティ、生息地、進化、入手方法をまとめ、CBT 後に随時追加。' },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/characters/page.tsx",
+      "container": "CHARACTER_INTRO",
+      "originalBlock": "roco: {\n    zh: '按属性、稀有度快速浏览《洛克王国：世界》国际服精灵图鉴，CBT 期间优先看御三家与官方已曝光精灵的栖息地、进化链和基础定位。',\n    en: 'Browse the Roco Kingdom character wiki by element and rarity during CBT. Focus on starters and officially revealed Jinies\\' habitats, evolution chains, and basic roles.',\n    ja: '属性・レアリティでロコキングダム国際版のジニー図鑑を確認。CBT 期間は御三家と公式公開ジニーの生息地、進化、役割を優先。',\n  },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/page.tsx",
+      "container": "GUIDE_DESC",
+      "originalBlock": "roco: { zh: '《洛克王国:世界》国际服攻略百科，聚焦 CBT 报名注册、版本时间线、下载安装、精灵图鉴和兑换码，帮助你在 10 月首测前做好准备。', en: 'Roco Kingdom (Global) guides focused on CBT sign-up, version timeline, download & install, Jinie database, and redeem codes to get you ready before the October playtest.', ja: 'ロコキングダム（国際版）攻略百科。CBT登録、版本タイムライン、DL/インストール、ジニー図鑑、交換コードをまとめ、10月のテストに備えます。' },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/page.tsx",
+      "container": "FEATURED_GUIDE_IDS",
+      "originalBlock": "roco: ['cbt-registration-guide', 'global-cn-content-roadmap', 'global-launch-readiness-checklist', 'global-cbt-to-launch-decision-gates', 'global-player-feedback-roadmap-playbook', 'global-onboarding-learning-recovery-playbook', 'global-player-discovery-codex-playbook', 'global-change-communication-playbook', 'global-fair-play-integrity-playbook', 'global-accessibility-cross-device-playbook', 'global-economy-monetization-fairness-playbook', 'global-returning-player-event-legacy-playbook', 'global-first-30-days-pve-plan', 'global-days-31-90-season-event-plan', 'global-localization-cultural-event-playbook', 'global-player-support-trust-playbook', 'global-social-safety-guild-playbook', 'global-cn-release-governance', 'global-live-ops-metrics-experiments', 'starter-guide', 'what-is-roco-kingdom', 'platforms-and-download-guide'],"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/page.tsx",
+      "container": "ROCO_ACTION_LINKS",
+      "originalBlock": "roco: [\n    {\n      id: 'cbt',\n      href: '/roco/events',\n      label: {\n        zh: 'CBT 活动日历',\n        en: 'CBT events calendar',\n        ja: 'CBTイベント日程',\n      },\n      description: {\n        zh: '把报名窗口、开测时间、奖励节点和结束状态放在一起看。',\n        en: 'Review signup windows, test dates, reward milestones, and event status together.',\n        ja: '応募期間、テスト日、報酬节点、状態をまとめて確認します。',\n      },\n    },\n    {\n      id: 'starter',\n      href: '/roco/type-chart',\n      label: {\n        zh: '属性克制速查',\n        en: 'Type matchup chart',\n        ja: 'タイプ相性早見',\n      },\n      description: {\n        zh: '战斗、抓宠和配队前，先查攻击属性与防御属性的克制关系。',\n        en: 'Check attack and defense type matchups before battles, catching, and team planning.',\n        ja: '戦闘、捕獲、編成前に攻撃と防御タイプの相性を確認します。',\n      },\n    },\n    {\n      id: 'map',\n      href: '/roco/eggs',\n      label: {\n        zh: '精灵蛋与孵化',\n        en: 'Eggs and hatching',\n        ja: '卵と孵化',\n      },\n      description: {\n        zh: '先整理蛋种、预约奖励和 CBT 后需要核验的孵化信息。',\n        en: 'Track egg types, preregistration rewards, and hatching notes to verify after CBT.',\n        ja: '卵種、事前登録報酬、CBT後に確認する孵化情報を整理します。',\n      },\n    },\n    {\n      id: 'codes',\n      href: '/roco/merchant',\n      label: {\n        zh: '商人刷新观察',\n        en: 'Merchant refresh watch',\n        ja: '商人更新ウォッチ',\n      },\n      description: {\n        zh: '国际服开测后优先核验捕捉球、经验材料和周期商店。',\n        en: 'Track capture pods, EXP items, and shop rotations once the CBT opens.',\n        ja: 'CBT開始後に捕獲、経験値素材、ショップ周期を確認します。',\n      },\n    },\n  ],"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/page.tsx",
+      "container": "legacy_list_metadata_and_generic_coverage",
+      "originalBlock": "洛克王国世界国际服攻略 — CBT报名、地图、兑换码与精灵\nロコキングダム国際版攻略 — CBT・地図・コード・ジニー\nRoco Kingdom Global Guides — CBT, Map, Codes & Jinies\n角色定位、技能、配装、配队和培养建议按版本持续复核；抽卡前请结合当前版本和自己的队伍缺口判断。\nRoles, skills, builds, teams, and investment advice are reviewed by patch. Check the current version and your roster gaps before pulling.\n役割、スキル、ビルド、編成、育成情報はバージョンごとに確認。引く前に現在版本と手持ちの不足を確認してください。",
+      "note": "First three lines were guide metadata; final three were generic characters CoverageNote fallback. Both now bypassed for international Roco only."
+    }
+  ],
+  "reviewedInventory": {
+    "contract": "raw-inventory-v1",
+    "pairs": 90,
+    "equal": 90,
+    "sourceOnly": 5,
+    "pending": [],
+    "holds": [
+      {
+        "path": "roco/raw-characters.json",
+        "status": "needs_review",
+        "sourceSha256": "c726ca7b9fdfab0274fbc4e2689bac07908cbc662020204f157fd567beb537fe",
+        "mirrorSha256": "c726ca7b9fdfab0274fbc4e2689bac07908cbc662020204f157fd567beb537fe",
+        "reason": "All six details now withhold unverified identity/appearance/mechanics claims; retained names/classifications and legacy navigation artwork remain independently unverified.",
+        "reviewDocument": "plans/multi-game-s2-8-roco-public-scope-closeout-2026-10-24.md"
+      },
+      {
+        "path": "roco/raw-guides.json",
+        "status": "needs_review",
+        "sourceSha256": "4f60cececee0e63dc27d8e0bff725060462f83a4d4b8f2a1c55b32c21ef38edb",
+        "mirrorSha256": "4f60cececee0e63dc27d8e0bff725060462f83a4d4b8f2a1c55b32c21ef38edb",
+        "reason": "Thirteen guides now contain editorial verification checklists; remaining seventeen guides and other public tools/registry copy still require factual and scope review.",
+        "reviewDocument": "plans/multi-game-s2-8-roco-public-scope-closeout-2026-10-24.md"
+      }
+    ],
+    "issues": [],
+    "engineeringReady": true,
+    "contentReleaseReady": false,
+    "factualApproval": "not_implied_by_mirror_equality"
+  },
+  "rawProtection": {
+    "rawFiles": {
+      "total": 185,
+      "byteUnchanged": 181,
+      "changed": [
+        "apps/web/public/data/roco/raw-characters.json",
+        "apps/web/public/data/roco/raw-guides.json",
+        "packages/data/games/roco/raw-characters.json",
+        "packages/data/games/roco/raw-guides.json"
+      ]
+    },
+    "firstThreeCharactersSemanticallyUnchanged": true,
+    "otherTwentySixGuidesSemanticallyUnchanged": true,
+    "allCharacterAndGuideIdsOrderAndOriginalUpdatedAtPreserved": true,
+    "allDataClientAndManifestFilesByteUnchanged": 345
+  },
+  "managed": {
+    "contract": "managed-raw-mirrors-v1",
+    "pairs": 7,
+    "entries": 111
+  },
+  "verificationReport": "reports/content-integrity/s2-8-local-verification-2026-10-24.json",
+  "decisionSummary": {
+    "allInternationalRatingsWithdrawn": true,
+    "additionalCharacterClaimsWithdrawn": 3,
+    "additionalGuideChecklists": 4,
+    "publicEntryNoindexRoutes": [
+      "",
+      "tier-list",
+      "download",
+      "map"
+    ],
+    "listsRemainUsableAndIndexable": true,
+    "factualHoldsClosed": 0,
+    "notOfficialFactVerification": true
+  }
+}

@@ -37,6 +37,7 @@ export async function verifyManagedContent(value, directory) {
   const reviewedRegion = JSON.parse(readFileSync(resolve(ROOT, 'packages/data/games/wuwa/raw-regions.json'), 'utf8')).find(entry => entry.id === 'simulacrum-nexus');
   const rocoGuides = JSON.parse(readFileSync(resolve(ROOT, 'packages/data/games/roco/raw-guides.json'), 'utf8')).filter(entry => entry.contentReview?.status === 'needs_verification');
   const rocoCharacters = JSON.parse(readFileSync(resolve(ROOT, 'packages/data/games/roco/raw-characters.json'), 'utf8')).filter(entry => entry.contentReview?.status === 'needs_verification');
+  const rocoPublicReview = JSON.parse(readFileSync(resolve(ROOT, 'apps/web/lib/roco-public-review.json'), 'utf8'));
   for (const locale of ['zh', 'en', 'ja']) {
     const path = `/data-manifest/search-${locale}.json`;
     const response = await fetch(origin + path, { redirect: 'manual', signal: AbortSignal.timeout(30000) });
@@ -54,6 +55,7 @@ export async function verifyManagedContent(value, directory) {
   const cases = [
     ...['zh', 'en', 'ja'].map(locale => ({ locale, path: `/${locale}/wuwa/redeem-codes`, kind: 'codes' })),
     ...['zh', 'ja'].map(locale => ({ locale, path: `/${locale}/roco-cn/guides/${SLUG}`, kind: 'archive' })),
+    ...['zh', 'en', 'ja'].map(locale => ({ locale, path: `/${locale}/roco-cn/map`, kind: 'cn-map' })),
     ...['zh', 'en', 'ja'].map(locale => ({ locale, path: `/${locale}/skjh/guides/season-1-launch`, kind: 'backport' })),
     ...['zh', 'en', 'ja'].flatMap(locale => reviewedEchoes.map(set => ({ locale, path: `/${locale}/wuwa/echoes/${set.id}`, kind: 'echo', id: set.id }))),
     ...['zh', 'en', 'ja'].map(locale => ({ locale, path: `/${locale}/wuwa/artifacts`, kind: 'echo-list' })),
@@ -64,6 +66,7 @@ export async function verifyManagedContent(value, directory) {
     ...['zh', 'en', 'ja'].flatMap(locale => rocoGuides.map(row => ({ locale, path: `/${locale}/roco/guides/${row.id}`, kind: 'roco-reviewed-guide', id: row.id }))),
     ...['zh', 'en', 'ja'].flatMap(locale => rocoCharacters.map(row => ({ locale, path: `/${locale}/roco/characters/${row.id}`, kind: 'roco-reviewed-character', id: row.id }))),
     ...['zh', 'en', 'ja'].flatMap(locale => ['guides', 'characters'].map(section => ({ locale, path: `/${locale}/roco/${section}`, kind: `roco-${section}-list` }))),
+    ...['zh', 'en', 'ja'].flatMap(locale => Object.keys(rocoPublicReview.pages).map(route => ({ locale, path: `/${locale}/roco${route ? `/${route}` : ''}`, kind: 'roco-public-review', id: route || 'home' }))),
   ];
   const browser = await chromium.launch({ headless: true });
   try {
@@ -88,6 +91,10 @@ export async function verifyManagedContent(value, directory) {
             const languages = await page.locator('link[rel="alternate"][hreflang]').evaluateAll(nodes => nodes.map(node => node.getAttribute('hreflang')));
             assert(!languages.includes('en') && languages.includes('ja') && languages.includes('zh-Hans'));
             assert.equal(await page.locator(`a[href="/en/roco-cn/guides/${SLUG}"]`).count(), 0, 'Language switcher must not link to a retired page');
+          } else if (kind === 'cn-map') {
+            assert.equal(await page.locator('[data-roco-public-review]').count(), 0);
+            assert.equal(await page.locator('h1').innerText(), { zh: '国服地图与资源路线入口', en: 'CN Map and Resource Route Hub', ja: '中国版マップ・資源ルート' }[locale]);
+            for (const route of ['characters', 'redeem-codes', 'version', 'guides', 'weapons', 'tier-list']) assert((await page.locator(`main a[href="/${locale}/roco-cn/${route}"]`).count()) > 0, `${path}: missing CN map navigation`);
           } else if (kind === 'backport') {
             assert.equal(await page.locator('h1').innerText(), locale === 'zh' ? skjh.title : locale === 'ja' ? (skjh.titleJa ?? skjh.titleEn) : skjh.titleEn);
           } else if (kind === 'echo' || kind === 'echo-list') {
@@ -121,6 +128,22 @@ export async function verifyManagedContent(value, directory) {
             assert.equal(await page.locator('[data-region-source]').count(), 1, 'Do not label older regions reviewed');
             assert(await card.evaluate(node => node.scrollWidth <= node.clientWidth), `${path}: region card overflows viewport`);
             if (directory && locale === 'zh') await card.screenshot({ path: resolve(directory, `region-card-${width}.png`) });
+          } else if (kind === 'roco-public-review') {
+            const copy = rocoPublicReview.pages[id === 'home' ? '' : id][locale];
+            const article = page.locator(`[data-roco-public-review="${id}"]`);
+            assert.equal(await article.count(), 1, path);
+            assert.equal(await article.locator('h1').innerText(), copy.title);
+            const text = await article.innerText();
+            for (const line of [copy.description, ...copy.checks]) assert(text.includes(line), `${path}: missing scoped correction text`);
+            assert.equal(await article.locator('[data-content-review]').count(), 1, path);
+            assert.equal(await article.locator('[data-review-navigation] a').count(), 3, path);
+            assert.equal(await article.locator('a[href^="http"], table, img, button').count(), 0, 'Do not endorse external downloads or render provisional rankings');
+            assert.equal(await page.locator('link[rel="alternate"][hreflang]').count(), 0, path);
+            assert.match(await page.locator('meta[name="robots"]').getAttribute('content'), /noindex,\s*follow/);
+            assert((await page.title()).includes(copy.title), path);
+            assert.equal(await page.locator('meta[name="description"]').getAttribute('content'), copy.description, path);
+            assert(!/10\/27|10\/20|2026-10-27|3688140|400\+/.test(body), path);
+            assert(await article.evaluate(node => node.scrollWidth <= node.clientWidth), `${path}: review content overflows`);
           } else if (kind.startsWith('roco-reviewed-')) {
             const row = (kind === 'roco-reviewed-guide' ? rocoGuides : rocoCharacters).find(row => row.id === id);
             const suffix = { zh: '', en: 'En', ja: 'Ja' }[locale];
@@ -153,6 +176,12 @@ export async function verifyManagedContent(value, directory) {
           } else if (kind === 'roco-guides-list' || kind === 'roco-characters-list') {
             const entries = kind === 'roco-guides-list' ? rocoGuides : rocoCharacters;
             const section = kind === 'roco-guides-list' ? 'guides' : 'characters';
+            assert.equal(await page.locator(`[data-roco-list-review="${section}"]`).innerText(), rocoPublicReview.lists[section][locale].notice);
+            assert.equal(await page.locator('meta[name="description"]').getAttribute('content'), rocoPublicReview.lists[section][locale].description);
+            if (section === 'guides') {
+              const directory = page.locator('[data-roco-list-review="guides"]').locator('..');
+              for (const route of ['eggs', 'merchant', 'type-chart']) assert.equal(await directory.locator(`a[href="/${locale}/roco/${route}"]`).count(), 0, `${path}: withdrawn action-hub promotion ${route}`);
+            }
             for (const row of entries) {
               const card = page.locator(`main a[href="/${locale}/roco/${section}/${row.id}"]`);
               assert((await card.count()) > 0, `${path}: missing ${row.id} card`);
@@ -184,7 +213,11 @@ export async function verifyManagedContent(value, directory) {
           assert.deepEqual(errors, [], path);
           assert.deepEqual(failedAssets, [], path);
           observations.browser.push({ path, width, status: 200, kind, errors: 0, failedAssets: 0 });
-          if (directory && locale === 'zh' && kind !== 'backport') await page.screenshot({ path: resolve(directory, `${kind}${id ? `-${id}` : ''}-${width}.png`), fullPage: kind.startsWith('roco-reviewed-') });
+          if (directory && locale === 'zh' && kind !== 'backport') {
+            await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+            await page.waitForFunction(() => window.scrollY === 0);
+            await page.screenshot({ path: resolve(directory, `${kind}${id ? `-${id}` : ''}-${width}.png`), fullPage: kind.startsWith('roco-reviewed-') || kind === 'roco-public-review' });
+          }
           if (kind === 'echo-list') {
             const first = reviewedEchoes[0];
             const href = `/${locale}/wuwa/echoes/${first.id}`;

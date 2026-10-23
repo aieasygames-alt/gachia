@@ -3,6 +3,8 @@ import type { GameId, SupportedLocale } from '@gachia/core';
 import { notFound } from 'next/navigation';
 import { Link } from '@/lib/i18n/navigation';
 import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
+import { rocoPublicReviewMetadata } from '@/lib/roco-public-review';
+import { RocoPublicReviewPage } from '@/components/wiki/roco-public-review-page';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -365,62 +367,6 @@ const DOWNLOAD_COPY: Partial<Record<GameId, DownloadCopy>> = {
     nextLinks: commonLinks('skjh', 'platform-download-guide'),
     faq: liveFaq('失控进化', 'Ashfall Evolution', '失控進化'),
   },
-  roco: {
-    officialUrl: 'https://www.rocokingdom.com/',
-    status: {
-      zh: '国际服首轮全球封闭测试（CBT）定于 2026-10-27 开启，报名通道已在官网开放；CBT 可玩平台为 PC、iOS、Android，正式版将扩展至 PS5、Xbox、Steam、Epic 与 Microsoft Store。',
-      en: 'The first global Closed Beta Test (CBT) starts on October 27, 2026, with pre-registration open now on the official site; the CBT is playable on PC, iOS, and Android, with PS5, Xbox, Steam, Epic, and Microsoft Store arriving at full release.',
-      ja: '初回グローバルCBTは2026年10月27日開始予定で、公式サイトで事前登録受付中。CBTはPC、iOS、Androidでプレイ可能。PS5、Xbox、Steam、Epic、MS Storeは正式版で対応予定。',
-    },
-    intro: {
-      zh: '集中查看《洛克王国:世界》国际服官网入口、CBT 报名与下载、CBT 可玩平台（PC/iOS/Android）、正式版平台（PS5/Xbox/Steam/Epic/MS Store）、配置要求和预约福利，再继续看 CBT 注册指南、版本时间线和兑换码。',
-      en: 'A hub for Roco Kingdom official site, CBT pre-registration and download, CBT platforms (PC/iOS/Android), full-release platforms (PS5/Xbox/Steam/Epic/MS Store), specs, and pre-registration rewards, then routing into the CBT guide, version timeline, and redeem codes.',
-      ja: 'ロコキングダム公式サイト、CBT事前登録とDL、CBT対応平台（PC/iOS/Android）、正式版平台（PS5/Xbox/Steam/Epic/MS Store）、推奨環境、予約特典をまとめ、CBTガイド、版本、交換コードへ案内します。',
-    },
-    officialNote: DEFAULT_STATUS,
-    platforms: [
-      platform('Official site', '优先入口', 'Primary entry', '優先入口', 'CBT 报名、资格查询和下载状态的第一入口。', 'The first stop for CBT signup, eligibility, and download status.', 'CBT応募、資格確認、DL状態の第一入口。'),
-      platform('PC (Windows)', 'CBT 可玩', 'Playable in CBT', 'CBT対応', '10/27 首测可玩平台之一，客户端入口以官网为准。', 'One of the playable CBT platforms starting October 27; client entry follows the official site.', '10/27のCBTでプレイ可能な平台の一つ。クライアントは公式サイト基準。'),
-      platform('iOS', 'CBT 可玩', 'Playable in CBT', 'CBT対応', '10/27 首测可玩平台之一，下载以上架后的 App Store 为准。', 'One of the playable CBT platforms starting October 27; download follows App Store availability.', '10/27のCBT対応平台。DLはApp Store配信基準。'),
-      platform('Android', 'CBT 可玩', 'Playable in CBT', 'CBT対応', '10/27 首测可玩平台之一，下载以 Google Play 等商店上架为准。', 'One of the playable CBT platforms starting October 27; download follows Google Play availability.', '10/27のCBT対応平台。DLはGoogle Play等の配信基準。'),
-      platform('PS5 / Xbox / Steam / Epic / MS Store', '正式版平台', 'Full-release platforms', '正式版平台', '属于正式版而非 CBT；Steam 商店页已上线但锁国区，国际服下载以官网为准。', 'These are full-release platforms, not CBT; the Steam page is live but region-locked for CN — use the official site for the international version.', '正式版のみの対応。Steamページは公開済みだが中国リージョンはロック中。国際版は公式サイト基準。'),
-    ],
-    specs: specs('开放世界精灵收集游戏对存储和网络稳定性有要求，CBT 具体配置与包体大小以官方公告为准。', 'An open-world creature-collector needs storage and stable network; exact CBT specs and package size follow official notices.', 'オープンワールド捕獲ゲームは容量と安定回線が必要です。CBTの推奨環境と容量は公式告知を確認。'),
-    cloud: cloudUnreleased(),
-    crossPlay: unreleasedCrossPlay(),
-    nextLinks: [
-      {
-        href: '/roco/guides/cbt-registration-guide',
-        label: { zh: 'CBT 报名指南', en: 'CBT registration', ja: 'CBT応募' },
-        description: { zh: '确认报名问卷、资格邮件、平台和测试前检查。', en: 'Check questionnaire, eligibility mail, platforms, and pre-test steps.', ja: '応募フォーム、資格メール、平台、テスト前確認を整理。' },
-      },
-      {
-        href: '/roco/version',
-        label: { zh: 'CBT 时间线', en: 'CBT timeline', ja: 'CBT日程' },
-        description: { zh: '跟进 2026-10-27 CBT、平台边界和正式版计划。', en: 'Track the Oct 27, 2026 CBT, platform scope, and full-release plan.', ja: '2026-10-27 CBT、平台範囲、正式版予定を確認。' },
-      },
-      {
-        href: '/roco/characters',
-        label: { zh: '精灵图鉴', en: 'Jinie wiki', ja: 'ジニー図鑑' },
-        description: { zh: '下载前先看已曝光精灵、属性和进化链。', en: 'Review revealed Jinies, types, and evolution lines before downloading.', ja: 'DL前に公開ジニー、属性、進化を確認。' },
-      },
-      {
-        href: '/roco/map',
-        label: { zh: '地图核验入口', en: 'Map watch', ja: 'マップ確認' },
-        description: { zh: '记录 CBT 后需要补的区域、捕捉点和路线。', en: 'Track regions, capture spots, and routes queued for CBT checks.', ja: 'CBT後に確認する地域、捕獲地点、ルートを追跡。' },
-      },
-    ],
-    faq: [
-      {
-        question: { zh: '国际服 CBT 怎么报名？', en: 'How do I sign up for the international CBT?', ja: '国際CBTにはどう申し込む？' },
-        answer: { zh: '前往官网 www.rocokingdom.com 报名并完成预注册，测试资格、设备要求和后续下载说明都以官方邮件与官网公告为准。', en: 'Pre-register on the official site at www.rocokingdom.com; eligibility, device requirements, and download instructions follow official emails and site notices.', ja: '公式サイト（www.rocokingdom.com）で事前登録を完了してください。資格、端末要件、DL手順は公式メールと告知基準です。' },
-      },
-      {
-        question: { zh: '国际服和国服数据互通吗？', en: 'Do the international and CN versions share data?', ja: '国際版と中国版のデータは共有されますか？' },
-        answer: { zh: '不互通。官方明确国际服与国服数据相互独立，国际服正式版支持繁中、英文、日文等多语言。', en: 'No. Tencent confirmed the international and CN versions have independent data; the global release supports Traditional Chinese, English, Japanese, and more.', ja: 'いいえ。国際版と中国版のデータは独立しています。国際版は繁体中文、英語、日本語などに対応予定です。' },
-      },
-    ],
-  },
   'roco-cn': {
     officialUrl: 'https://rocom.qq.com/',
     status: {
@@ -562,6 +508,7 @@ export async function generateMetadata({
   const gameConfig = GAMES[gameId];
   const copy = DOWNLOAD_COPY[gameId];
 
+  if (gameId === 'roco') return rocoPublicReviewMetadata('download', locale);
   if (!gameConfig || !copy) return {};
 
   const gameName = gameConfig.name[locale];
@@ -599,6 +546,7 @@ export default async function DownloadPage({
   const gameConfig = GAMES[gameId];
   const copy = DOWNLOAD_COPY[gameId];
 
+  if (gameId === 'roco') return <RocoPublicReviewPage route="download" locale={locale} />;
   if (!gameConfig || !copy) notFound();
 
   const gameName = gameConfig.name[locale];

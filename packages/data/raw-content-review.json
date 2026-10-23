@@ -119,18 +119,18 @@
     {
       "path": "roco/raw-characters.json",
       "status": "needs_review",
-      "sourceSha256": "443c6c6cca88ff5372760e4e39887168650a5668ac4ec710615e7f94f91510d7",
-      "mirrorSha256": "443c6c6cca88ff5372760e4e39887168650a5668ac4ec710615e7f94f91510d7",
-      "reason": "Copied international skills/stats withdrawn for three entries; legacy identities/classifications and the other three entries remain independently unverified.",
-      "reviewDocument": "plans/multi-game-s2-7-roco-content-closeout-2026-10-24.md"
+      "sourceSha256": "c726ca7b9fdfab0274fbc4e2689bac07908cbc662020204f157fd567beb537fe",
+      "mirrorSha256": "c726ca7b9fdfab0274fbc4e2689bac07908cbc662020204f157fd567beb537fe",
+      "reason": "All six details now withhold unverified identity/appearance/mechanics claims; retained names/classifications and legacy navigation artwork remain independently unverified.",
+      "reviewDocument": "plans/multi-game-s2-8-roco-public-scope-closeout-2026-10-24.md"
     },
     {
       "path": "roco/raw-guides.json",
       "status": "needs_review",
-      "sourceSha256": "c01e0925be5404c38f90be4b911f9caeff4f4681cd1261fbe2f65be36792d2dd",
-      "mirrorSha256": "c01e0925be5404c38f90be4b911f9caeff4f4681cd1261fbe2f65be36792d2dd",
-      "reason": "Nine guides rewritten as editorial verification checklists; other 21 guides and related public feature/release assertions still require factual review.",
-      "reviewDocument": "plans/multi-game-s2-7-roco-content-closeout-2026-10-24.md"
+      "sourceSha256": "4f60cececee0e63dc27d8e0bff725060462f83a4d4b8f2a1c55b32c21ef38edb",
+      "mirrorSha256": "4f60cececee0e63dc27d8e0bff725060462f83a4d4b8f2a1c55b32c21ef38edb",
+      "reason": "Thirteen guides now contain editorial verification checklists; remaining seventeen guides and other public tools/registry copy still require factual and scope review.",
+      "reviewDocument": "plans/multi-game-s2-8-roco-public-scope-closeout-2026-10-24.md"
     }
   ]
 }

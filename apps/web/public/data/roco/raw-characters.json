@@ -73,13 +73,19 @@
     "attribute": "fire",
     "attributeEn": "Fire",
     "rarity": 3,
-    "habitat": "卡洛西亚野外",
-    "habitatEn": "Carosia Wilds",
-    "evolution": "待公开",
-    "evolutionEn": "TBA",
-    "description": "官方预告与媒体试玩中出现的火系野外精灵（狼），领地意识强，会对闯入领地的玩家咆哮。注意：焰犬并非御三家。详细信息待 CBT 官方图鉴确认。",
-    "descriptionEn": "A Fire-type wild Jinie (wolf) shown in official previews and press hands-ons. Highly territorial — it growls at players who enter its territory. Note: Blazehound is NOT a starter. Full details TBA via the official CBT codex.",
-    "status": "revealed"
+    "habitat": "待核实",
+    "habitatEn": "Unverified",
+    "evolution": "待核实",
+    "evolutionEn": "Unverified",
+    "description": "本站保留的 Blazehound 历史资料入口。旧官方确认、属性、外形行为、野外身份及栖息地断言缺乏独立国际服依据，现予撤回。保留名称和内部分类仅供导航，不代表实装、官方译名或可用阵容；身份、形象、机制与数值仍待核实。",
+    "descriptionEn": "This is the legacy Blazehound navigation entry. Earlier claims of official confirmation, type, appearance, behavior, wild identity and habitat lack independent global support and are withdrawn. Retained names and internal classifications are not proof of implementation, official naming or a playable roster. Identity, artwork, mechanics and values remain unverified.",
+    "status": "revealed",
+    "descriptionJa": "過去のBlazehound資料へのナビです。旧公式確認、属性、外形・行動、野生の同一性、生息地には独立した国際版根拠がなく、撤回しました。名前と内部分類は実装、公式訳名、利用可能な編成の証明ではありません。同一性、画像、仕組み、値は未確認です。",
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "international_identity_appearance_and_mechanics_unverified"
+    }
   },
   {
     "id": "catapawn",
@@ -89,13 +95,19 @@
     "attribute": "water",
     "attributeEn": "Water",
     "rarity": 3,
-    "habitat": "卡洛西亚湖畔",
-    "habitatEn": "Carosia Lakeside",
-    "evolution": "待公开",
-    "evolutionEn": "TBA",
-    "description": "官方预告与媒体试玩中出现的野外水系精灵（龟），性格胆小，受惊时会缩进壳里防御。注意：水爪并非御三家。详细信息待 CBT 官方图鉴确认。",
-    "descriptionEn": "A wild Water-type Jinie (turtle) shown in official previews and press hands-ons. Timid by nature — it hides inside its shell when startled. Note: Catapawn is NOT a starter. Full details TBA via the official CBT codex.",
-    "status": "revealed"
+    "habitat": "待核实",
+    "habitatEn": "Unverified",
+    "evolution": "待核实",
+    "evolutionEn": "Unverified",
+    "description": "本站保留的 Catapawn 历史资料入口。旧官方确认、属性、外形行为、野外身份及栖息地断言缺乏独立国际服依据，现予撤回。保留名称和内部分类仅供导航，不代表实装、官方译名或可用阵容；身份、形象、机制与数值仍待核实。",
+    "descriptionEn": "This is the legacy Catapawn navigation entry. Earlier claims of official confirmation, type, appearance, behavior, wild identity and habitat lack independent global support and are withdrawn. Retained names and internal classifications are not proof of implementation, official naming or a playable roster. Identity, artwork, mechanics and values remain unverified.",
+    "status": "revealed",
+    "descriptionJa": "過去のCatapawn資料へのナビです。旧公式確認、属性、外形・行動、野生の同一性、生息地には独立した国際版根拠がなく、撤回しました。名前と内部分類は実装、公式訳名、利用可能な編成の証明ではありません。同一性、画像、仕組み、値は未確認です。",
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "international_identity_appearance_and_mechanics_unverified"
+    }
   },
   {
     "id": "dustler",
@@ -105,12 +117,18 @@
     "attribute": "normal",
     "attributeEn": "Normal",
     "rarity": 3,
-    "habitat": "卡洛西亚城镇",
-    "habitatEn": "Carosia Towns",
-    "evolution": "待公开",
-    "evolutionEn": "TBA",
-    "description": "官方确认的普通系扫帚精灵，性格友善，会主动帮忙清理玩家帽子上的灰尘。详细信息待 CBT 官方图鉴确认。",
-    "descriptionEn": "An officially confirmed Normal-type broom Jinie with a friendly demeanor — it kindly cleans the dust off your avatar's hat when given the chance. Full details TBA via the official CBT codex.",
-    "status": "revealed"
+    "habitat": "待核实",
+    "habitatEn": "Unverified",
+    "evolution": "待核实",
+    "evolutionEn": "Unverified",
+    "description": "本站保留的 Dustler 历史资料入口。旧官方确认、属性、外形行为、野外身份及栖息地断言缺乏独立国际服依据，现予撤回。保留名称和内部分类仅供导航，不代表实装、官方译名或可用阵容；身份、形象、机制与数值仍待核实。",
+    "descriptionEn": "This is the legacy Dustler navigation entry. Earlier claims of official confirmation, type, appearance, behavior, wild identity and habitat lack independent global support and are withdrawn. Retained names and internal classifications are not proof of implementation, official naming or a playable roster. Identity, artwork, mechanics and values remain unverified.",
+    "status": "revealed",
+    "descriptionJa": "過去のDustler資料へのナビです。旧公式確認、属性、外形・行動、野生の同一性、生息地には独立した国際版根拠がなく、撤回しました。名前と内部分類は実装、公式訳名、利用可能な編成の証明ではありません。同一性、画像、仕組み、値は未確認です。",
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "international_identity_appearance_and_mechanics_unverified"
+    }
   }
 ]

@@ -1185,66 +1185,59 @@
   },
   {
     "id": "starter-guide",
-    "title": "Roco Kingdom 御三家选择指南：Sparka、Meewee、Cerulla 怎么选",
-    "titleEn": "Roco Kingdom Starter Guide: Sparka, Meewee, or Cerulla?",
+    "title": "国际服初始精灵选择：证据核验清单",
+    "titleEn": "Global Starter Choice: Evidence Checklist",
     "category": "starter",
     "categoryZh": "新手入门",
     "categoryEn": "Starter",
-    "summary": "国际服御三家为草系 Meewee、火系 Sparka、水系 Cerulla。本文结合国服开荒经验，从开荒速度、生存能力与后续捕捉三个角度给出选择建议。",
-    "summaryEn": "The international starters are the Grass-type Meewee, Fire-type Sparka, and Water-type Cerulla. This guide compares early-game pacing, survivability, and availability so you can choose wisely.",
-    "content": "## Roco Kingdom 御三家怎么选\n\n国际服开局三选一的御三家为：**草系 Meewee（叶猫）、火系 Sparka（火牛）、水系 Cerulla（水泡）**。三只均为满资质，未被选中的御三家后续可以在好友的世界中捕捉。\n\n### 三只对比\n\n| 御三家 | 属性 | 定位 | 开荒特点 |\n| --- | --- | --- | --- |\n| Sparka | 火 | 快速输出 | 伤害直接，前期打野与 NPC 效率高，克草系 |\n| Meewee | 草 | 续航型 | 每回合回能量，持久战强，克水系 |\n| Cerulla | 水 | 坦克型 | 水泡盾 + 水炮循环，生存能力优秀，克火系 |\n\n### 怎么选\n\n- **想快速开荒**：选 Sparka，火系前期压制面广，打怪和推剧情节奏最快。\n- **想要稳定生存**：选 Cerulla，坦度高，遇到火系外的多数敌人不容易翻车。\n- **喜欢持久战**：选 Meewee，草系续航优秀，首领化（Alpha）后强度可观。\n\n### 注意事项\n\n- 御三家不是唯一选择：国服公测后还提供了迪莫等后期强力精灵兜底，前期不必过度纠结。\n- 未选择的御三家可以去好友的世界捕捉，路线容错高。\n- 国际服 CBT 的具体进化链、技能表与种族值以官方图鉴为准，本文先按官方预览稿整理。",
-    "contentEn": "## Roco Kingdom Starter Guide\n\nAt the start of the journey you choose one of three starters: **Meewee (Grass-type leaf cat), Sparka (Fire-type ox), or Cerulla (Water-type blob)**. All three start at full aptitude, and the starters you do not pick can later be caught in friends' worlds.\n\n### Comparison\n\n| Starter | Type | Role | Early-game note |\n| --- | --- | --- | --- |\n| Sparka | Fire | Fast offense | Direct damage, clears early mobs and NPCs fast; beats Grass |\n| Meewee | Grass | Sustained fighter | Recovers energy each turn, strong in long fights; beats Water |\n| Cerulla | Water | Tank | Bubble shield + water cannon loop, excellent survivability; beats Fire |\n\n### Which one should you pick?\n\n- **Fastest early progression**: Sparka. Fire has wide early coverage and the quickest story/NPC pacing.\n- **Most stable survivability**: Cerulla. Great bulk, rarely flips in fights outside Water counters.\n- **Best in sustained fights**: Meewee. Grass sustain shines in longer battles and its Alpha form is strong later.\n\n### Notes\n\n- The starter is not your only ace: the CN launch later featured strong late-game Jinies such as Dimo as a safety net, so do not overthink the choice.\n- Unpicked starters can be caught in friends' worlds, so the route has plenty of flexibility.\n- CBT-specific evolution lines, skill sets, and base stats follow the official codex; this guide reflects official previews.",
+    "summary": "旧文的初始阵容、战斗定位、满资质和好友世界补抓承诺缺乏独立国际服依据，现予撤回。本页不推荐先选或培养哪只精灵。",
+    "summaryEn": "Earlier starter identities, combat roles, full-aptitude claims and friend-world catching promises lacked independent global support and are withdrawn. This page does not recommend which creature to pick or build.",
+    "content": "## 选择建议需要哪些证据\n\n- 先核对当前国际服版本是否有初始选择，以及具体可选对象。本站保留的名字和六条导航记录不能证明官方名单或数量。\n- 分别验证属性、数值、资质、技能、进化与后续获取条件；国服同名或相似形象不代表规则相同。\n- 比较培养成本、关卡环境与可重复实测后再给建议。未知表现不能自动排成 A 级或当作零值。\n\n## 在核实之前\n\n不要按旧“稳定续航、快速开荒、随时补抓”说法投入资源。缺乏依据不证明这些对象或机制不存在。",
+    "contentEn": "## Evidence needed for a recommendation\n\n- Verify whether the relevant global version has a starter choice and which options it offers. Legacy names and six navigation records cannot establish an official list or total.\n- Check types, values, aptitude, skills, evolution and later acquisition separately. CN names or similar artwork do not establish identical rules.\n- Compare investment costs, content conditions and reproducible play tests before recommending a choice. Unknown performance must not default to A or zero.\n\n## Before verification\n\nDo not invest based on the old sustain, fast-start or catch-later promises. Missing support does not prove the creatures or mechanics do not exist.",
     "tags": [
-      "starter",
-      "meewee",
-      "sparka",
-      "cerulla",
-      "beginner",
-      "jinies",
-      "roco-kingdom"
+      "source-review",
+      "international-scope"
     ],
     "faq": [
       {
-        "question": "Which starter is best for fast progression?",
-        "questionZh": "哪个御三家开荒最快？",
-        "answer": "Sparka (Fire). Its direct damage clears early content fastest, consistent with CN launch experience.",
-        "answerZh": "Sparka（火系）。伤害直接、前期推进最快，与国服公测经验一致。"
-      },
-      {
-        "question": "Can I still get the starters I did not pick?",
-        "questionZh": "没选的御三家还能获得吗？",
-        "answer": "Yes. Unpicked starters can be caught in friends' worlds, and later strong Jinies like Dimo provide a safety net.",
-        "answerZh": "可以。未选择的御三家可以在好友的世界中捕捉，后续还有迪莫等强力精灵兜底。"
+        "questionZh": "这是已核实的国际服规则吗？",
+        "question": "Are these verified global rules?",
+        "questionJa": "確認済みの国際版規則ですか？",
+        "answerZh": "不是。这是编辑纠错和核验条件，旧确定断言已撤回；没有新取得的独立国际服证据，不能作为实装、培养或付费依据，也不是取消公告。",
+        "answer": "No. This is an editorial correction and a set of verification conditions. Earlier definite claims are withdrawn; no new independent global evidence was obtained. This is not proof of implementation, investment or payment advice, or a cancellation notice.",
+        "answerJa": "いいえ。編集訂正と確認条件です。旧断定を撤回し、新しい独立した国際版根拠は取得していません。実装、育成、購入の根拠でも中止告知でもありません。"
       }
     ],
     "updatedAt": "2026-08-27",
     "quickFacts": {
       "zh": [
-        "御三家：Sparka（火）、Meewee（草）、Cerulla（水）。",
-        "想快选火，想稳选水，想持久选草。",
-        "没选的御三家可在好友世界捕捉。"
+        "旧文的初始阵容、战斗定位、满资质和好友世界补抓承诺缺乏独立国际服依据，现予撤回。本页不推荐先选或培养哪只精灵。"
       ],
       "en": [
-        "Starters: Sparka (Fire), Meewee (Grass), Cerulla (Water).",
-        "Pick Fire for speed, Water for bulk, Grass for sustain.",
-        "Unpicked starters can be caught in friends' worlds."
+        "Earlier starter identities, combat roles, full-aptitude claims and friend-world catching promises lacked independent global support and are withdrawn. This page does not recommend which creature to pick or build."
       ],
       "ja": [
-        "御三家: Sparka（炎）、Meewee（草）、Cerulla（水）。",
-        "速さ=炎、安定=水、持久=草。",
-        "選ばなかった御三家はフレンドの世界で捕獲可能。"
+        "旧スターターの同一性、戦闘役割、最高資質、友人世界での捕獲には独立した国際版根拠がなく、撤回しました。選択や育成の推奨は掲載しません。"
       ]
     },
     "serpTitle": {
-      "zh": "Roco Kingdom 御三家选择指南｜Sparka / Meewee / Cerulla 对比",
-      "en": "Roco Kingdom Starter Guide — Sparka, Meewee & Cerulla Compared",
-      "ja": "ロコキングダム御三家ガイド｜Sparka・Meewee・Cerulla比較"
+      "zh": "国际服初始精灵选择：证据核验清单",
+      "en": "Global Starter Choice: Evidence Checklist",
+      "ja": "国際版スターター選択：根拠確認リスト"
     },
     "serpDescription": {
-      "zh": "Roco Kingdom 国际服御三家 Sparka（火）、Meewee（草）、Cerulla（水）怎么选？从开荒速度、生存能力到后期路线给出选择建议。",
-      "en": "Choose between Roco Kingdom's starters Sparka (Fire), Meewee (Grass), and Cerulla (Water) by pacing, survivability, and late-game value.",
-      "ja": "ロコキングダムの御三家 Sparka（炎）・Meewee（草）・Cerulla（水）の選び方。開拓速度、生存力、後半の価値を比較。"
-    }
+      "zh": "旧文的初始阵容、战斗定位、满资质和好友世界补抓承诺缺乏独立国际服依据，现予撤回。本页不推荐先选或培养哪只精灵。",
+      "en": "Earlier starter identities, combat roles, full-aptitude claims and friend-world catching promises lacked independent global support and are withdrawn. This page does not recommend which creature to pick or build.",
+      "ja": "旧スターターの同一性、戦闘役割、最高資質、友人世界での捕獲には独立した国際版根拠がなく、撤回しました。選択や育成の推奨は掲載しません。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "editorial_mechanics_withdrawal_not_official_confirmation"
+    },
+    "titleJa": "国際版スターター選択：根拠確認リスト",
+    "summaryJa": "旧スターターの同一性、戦闘役割、最高資質、友人世界での捕獲には独立した国際版根拠がなく、撤回しました。選択や育成の推奨は掲載しません。",
+    "contentJa": "## 推奨に必要な根拠\n\n- 対象の国際版に初期選択があるか、何を選べるかを確認します。過去の名前や六件のナビは公式一覧・総数の証明ではありません。\n- 属性、値、資質、スキル、進化、後の入手を別々に確認します。中国版の同名や似た画像から規則の一致は判断できません。\n- 育成費用、攻略条件、再現可能な実測を比較してから推奨します。不明な性能をAやゼロで補わないでください。\n\n## 確認できるまで\n\n旧継戦、速攻、後日捕獲の約束で資源を投入しないでください。根拠不足は対象や仕組みの不存在を意味しません。"
   },
   {
     "id": "what-is-roco-kingdom",
@@ -1360,192 +1353,171 @@
   },
   {
     "id": "jinies-guide",
-    "title": "Roco Kingdom Jinies 图鉴入门：血统、特殊形态与捕捉方式",
-    "titleEn": "Roco Kingdom Jinies Guide: Bloodlines, Special Forms, and Catching",
+    "title": "国际服精灵图鉴：身份与机制核验清单",
+    "titleEn": "Global Creature Codex: Identity and Mechanics Checklist",
     "category": "gameplay",
     "categoryZh": "玩法攻略",
     "categoryEn": "Gameplay",
-    "summary": "Jinies 是 Carosia 大陆的精灵，官方已确认超过 400 只。本文介绍 Jinies 的体型差异、18 种元素、血统（Bloodline）系统、Alpha/Exotic 特殊形态与 Buddy Pods 捕捉方式。",
-    "summaryEn": "Jinies are the creatures of Carosia, with 400+ species confirmed. This guide covers size variation, the 18 elements, the Bloodline system, Alpha/Exotic special forms, and catching with Buddy Pods.",
-    "content": "## Roco Kingdom Jinies 图鉴入门\n\n**Jinies（精灵）** 是 Carosia 大陆上生活的小精灵，官方确认正式版将超过 **400 只**。它们是本作的核心收集对象，玩法覆盖捕捉、养成、进化、对战与联机互动。\n\n### 基本设定\n\n- **个体差异**：每只 Jinies 的身高、体型、体重都不同，同一物种也可能遇到特殊外观个体（如棱镜光辉、异色、被 Nightmare 腐化的形态）。\n- **生态行为**：不同精灵有自己的行为树——例如 Catapawn 受惊会缩进壳里，Blazehound 会对闯入领地的玩家咆哮，Dustler 会帮忙清理玩家的帽子。\n- **元素（Type）**：已确认至少 **18 种元素**，包含 Shadow（影）、Wing（翼）、Common（普通）等，对应宝可梦中的幽灵/飞行/普通等类型。\n\n### 血统（Bloodline）系统\n\n每只 Jinies 除了主属性，还有一个副血统（Bloodline）：\n\n- **可更换**：玩家可以改变精灵的血统，从而习得其他元素系的技能，在对战中弥补被克制的劣势。\n- **Alpha 血统**：部分精灵可临时变身为更强的 boss 级形态，机制接近宝可梦的 Mega/Gigantamax。\n- **Exotic 血统**：可遭遇被 Nightmare 腐化的特殊精灵，是更具原创性的特殊形态。\n\n### 捕捉方式\n\n- 使用 **Buddy Pods（伙伴球）** 捕捉野生精灵，机制接近传统精灵球。\n- 对精灵好，它们会带礼物回来；虐待它们会逃跑、哭泣甚至用头撞你。\n- 未选择的御三家可以在好友的世界中捕捉。\n\n### 已曝光精灵（截至 2026-08）\n\n官方预告与媒体预览中已确认：御三家 **Meewee（草）、Sparka（火）、Cerulla（水）**，以及野外精灵 **Blazehound（火系狼）、Catapawn（水系龟）、Dustler（普通系扫帚精灵）**。Sparka 的最终进化为 Pyreon，Pyreon 可 Alpha 化变为 Blazion。其余精灵名单与进化链待 CBT 官方图鉴公布。",
-    "contentEn": "## Roco Kingdom Jinies Guide\n\n**Jinies** are the creatures living across Carosia — over **400 species** confirmed for launch. They are the heart of collection, raising, evolution, battling, and social play.\n\n### Basics\n\n- **One-of-a-kind variation**: every Jinie differs in height, build, and weight. Special individuals exist with prism-like radiance, alternate colors, or forms corrupted by Nightmares.\n- **Living behavior**: species have behavior trees — Catapawn hides in its shell when startled, Blazehound growls at players who enter its territory, and Dustler politely cleans your avatar's hat.\n- **Types**: at least **18 elements** are confirmed, including Shadow, Wing, and Common (comparable to Ghost, Flying, and Normal types).\n\n### Bloodline system\n\nEach Jinie has a secondary Bloodline alongside its main type:\n\n- **Changeable**: you can swap a Jinie's Bloodline to learn skills from another element class, covering bad matchups in battles.\n- **Alpha Bloodline**: some Jinies can temporarily transform into stronger boss-level forms — a middle ground between Mega Evolution and Gigantamax.\n- **Exotic Bloodline**: corrupted Nightmare Jinies, a more original take on special forms.\n\n### Catching\n\n- Capture wild Jinies with **Buddy Pods**, the game's take on monster balls.\n- Treat Jinies well and they bring gifts; mistreat them and they run, cry, or headbutt you.\n- Unpicked starters can be caught in friends' worlds.\n\n### Revealed Jinies (as of August 2026)\n\nOfficial trailers and press previews confirmed the starters **Meewee (Grass), Sparka (Fire), and Cerulla (Water)**, plus wild species **Blazehound (Fire-type wolf), Catapawn (Water-type turtle), and Dustler (Normal-type broom)**. Sparka's final evolution is Pyreon, which can Alpha-transform into Blazion. The full roster and evolution lines await the official CBT codex.",
+    "summary": "旧文的精灵总数、元素数量、血统、特殊形态、行为和捕捉工具断言现予撤回。六条历史资料入口不等于已确认的实装图鉴。",
+    "summaryEn": "Earlier claims about creature totals, element counts, Bloodline, special forms, behavior and capture tools are withdrawn. Six legacy entries are not a confirmed implemented codex.",
+    "content": "## 图鉴条目应逐项确认\n\n- 每条记录应附对应区服、版本、来源原文与官方名称；不能凭翻译、媒体转述或国服图鉴确认国际服身份。\n- 分别核对属性、形象、行为、获取地点及捕捉条件，不从预告片的一段画面推导完整机制。\n- 数量、元素分类、血统和特殊形态都需要独立证据。没有核实条目不代表数量为零，也不代表内容不存在。\n\n## 阅读本站记录时\n\n历史名称与图片只作导航，不是官方认证。本页不提供已确认的捕捉清单或养成路线。",
+    "contentEn": "## Verify each codex field\n\n- Attach region, version, source excerpt and official name to each record. Translations, press retellings and CN codex entries cannot establish global identity.\n- Verify types, appearance, behavior, locations and catching conditions separately. One trailer scene does not establish a complete mechanic.\n- Totals, element classifications, Bloodline and special forms each require evidence. An unverified entry is neither a zero count nor proof of nonexistence.\n\n## Reading legacy records\n\nRetained names and artwork are navigation, not official certification. This page provides no verified catching list or progression route.",
     "tags": [
-      "jinies",
-      "bloodline",
-      "alpha",
-      "exotic",
-      "buddy-pods",
-      "elements",
-      "types"
+      "source-review",
+      "international-scope"
     ],
     "faq": [
       {
-        "question": "How many elements does Roco Kingdom have?",
-        "questionZh": "Roco Kingdom 有多少种元素？",
-        "answer": "At least 18 elements are confirmed, including Shadow, Wing, and Common; the full type chart awaits the official CBT codex.",
-        "answerZh": "已确认至少 18 种元素，包含 Shadow（影）、Wing（翼）、Common（普通）；完整克制表待 CBT 官方图鉴公布。"
-      },
-      {
-        "question": "What is the Bloodline system?",
-        "questionZh": "血统（Bloodline）系统是什么？",
-        "answer": "A secondary element class that can be changed to learn skills from other elements. Alpha Bloodlines enable temporary boss forms; Exotic Bloodlines are Nightmare-corrupted forms.",
-        "answerZh": "精灵的副元素体系，可更换以获得其他元素技能。Alpha 血统可临时变身 boss 级形态，Exotic 血统为 Nightmare 腐化形态。"
+        "questionZh": "这是已核实的国际服规则吗？",
+        "question": "Are these verified global rules?",
+        "questionJa": "確認済みの国際版規則ですか？",
+        "answerZh": "不是。这是编辑纠错和核验条件，旧确定断言已撤回；没有新取得的独立国际服证据，不能作为实装、培养或付费依据，也不是取消公告。",
+        "answer": "No. This is an editorial correction and a set of verification conditions. Earlier definite claims are withdrawn; no new independent global evidence was obtained. This is not proof of implementation, investment or payment advice, or a cancellation notice.",
+        "answerJa": "いいえ。編集訂正と確認条件です。旧断定を撤回し、新しい独立した国際版根拠は取得していません。実装、育成、購入の根拠でも中止告知でもありません。"
       }
     ],
     "updatedAt": "2026-08-27",
     "quickFacts": {
       "zh": [
-        "正式版 Jinies 超过 400 只，个体体型/重量各不相同。",
-        "至少 18 种元素，含 Shadow/Wing/Common。",
-        "血统可更换；Alpha 变身；Buddy Pods 捕捉。"
+        "旧文的精灵总数、元素数量、血统、特殊形态、行为和捕捉工具断言现予撤回。六条历史资料入口不等于已确认的实装图鉴。"
       ],
       "en": [
-        "400+ Jinies at launch, each with unique size and weight.",
-        "At least 18 elements including Shadow, Wing, Common.",
-        "Changeable Bloodlines, Alpha forms, Buddy Pods catching."
+        "Earlier claims about creature totals, element counts, Bloodline, special forms, behavior and capture tools are withdrawn. Six legacy entries are not a confirmed implemented codex."
       ],
       "ja": [
-        "ジニーは正式版で400種以上、個体ごとに体格差。",
-        "元素は少なくとも18種（Shadow、Wing、Common等）。",
-        "ブラッドライン変更、Alpha変身、Buddy Podsで捕獲。"
+        "旧精霊総数、属性数、血統、特殊形態、行動、捕獲道具の断定を撤回しました。過去六件の記録は実装済み公式図鑑ではありません。"
       ]
     },
     "serpTitle": {
-      "zh": "Roco Kingdom Jinies 图鉴入门｜血统、特殊形态与捕捉方式",
-      "en": "Roco Kingdom Jinies Guide — Bloodlines, Special Forms & Catching",
-      "ja": "ロコキングダム ジニー入門ガイド｜ブラッドライン、特殊形態"
+      "zh": "国际服精灵图鉴：身份与机制核验清单",
+      "en": "Global Creature Codex: Identity and Mechanics Checklist",
+      "ja": "国際版図鑑：同一性と仕組みの確認リスト"
     },
     "serpDescription": {
-      "zh": "Jinies 图鉴入门：400+ 只精灵、18 种元素、可更换的血统系统、Alpha/Exotic 特殊形态，以及 Buddy Pods 捕捉方式一页看懂。",
-      "en": "Jinies explained: 400+ species, 18 elements, changeable Bloodlines, Alpha/Exotic forms, and Buddy Pods catching mechanics.",
-      "ja": "ジニー入門：400種超、18元素、変更可能なブラッドライン、Alpha/Exotic形態、Buddy Podsでの捕獲を解説。"
-    }
+      "zh": "旧文的精灵总数、元素数量、血统、特殊形态、行为和捕捉工具断言现予撤回。六条历史资料入口不等于已确认的实装图鉴。",
+      "en": "Earlier claims about creature totals, element counts, Bloodline, special forms, behavior and capture tools are withdrawn. Six legacy entries are not a confirmed implemented codex.",
+      "ja": "旧精霊総数、属性数、血統、特殊形態、行動、捕獲道具の断定を撤回しました。過去六件の記録は実装済み公式図鑑ではありません。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "editorial_mechanics_withdrawal_not_official_confirmation"
+    },
+    "titleJa": "国際版図鑑：同一性と仕組みの確認リスト",
+    "summaryJa": "旧精霊総数、属性数、血統、特殊形態、行動、捕獲道具の断定を撤回しました。過去六件の記録は実装済み公式図鑑ではありません。",
+    "contentJa": "## 図鑑項目ごとの確認\n\n- 地域、版、出典原文、公式名を記録します。訳名、媒体の再説明、中国版図鑑で国際版の同一性は証明できません。\n- 属性、外見、行動、出現地、捕獲条件を個別に確認します。映像の一場面から仕組み全体を推定しません。\n- 総数、属性分類、血統、特殊形態には個別の根拠が必要です。未確認はゼロや不存在を意味しません。\n\n## 過去記録を読むとき\n\n名前や画像はナビ用で、公式認定ではありません。確認済み捕獲一覧や育成ルートは掲載しません。"
   },
   {
     "id": "battle-system-guide",
-    "title": "Roco Kingdom 战斗系统指南：回合制、体力条与元素克制",
-    "titleEn": "Roco Kingdom Battle System Guide: Turn-Based Combat, Stamina, and Matchups",
+    "title": "国际服战斗系统：规则与数值核验清单",
+    "titleEn": "Global Battle System: Rules and Values Checklist",
     "category": "gameplay",
     "categoryZh": "玩法攻略",
     "categoryEn": "Gameplay",
-    "summary": "Roco Kingdom 的战斗为回合制：每只精灵 4 个技能、星级体力条、克制关系可见。本文解析体力管理、换人预判、血统技能覆盖与 PvP 等级标准化机制。",
-    "summaryEn": "Roco Kingdom battles are turn-based: four skills per Jinie, a star-based stamina bar, and visible matchup hints. This guide breaks down stamina management, switch prediction, Bloodline coverage, and normalized PvP levels.",
-    "content": "## Roco Kingdom 战斗系统指南\n\nRoco Kingdom 采用**传统回合制战斗**，上手简单但 PvP 有深度：每只精灵 4 个技能，攻击会消耗体力，属性克制关系在战斗中直接可见。\n\n### 基础规则\n\n- **回合制**：双方轮流行动，每只 Jinie 携带 4 个技能。\n- **星级体力条（Stamina）**：每次攻击消耗一定体力，体力见底时必须花一回合休息恢复。\n- **克制可见**：选技能时能直接看到该攻击对敌人是否命中弱点，无需背克制表。\n- **等级标准化（PvP）**：对战精灵等级会标准化，胜负更多取决于元素克制、队伍构成与操作，而不是单纯的数据碾压。\n\n### 进阶技巧\n\n- **体力管理**：对方如果选择换人，你可以预判并在该回合休息，抢占下回合的行动优势。\n- **血统覆盖**：通过更换精灵的 Bloodline 血统，习得其他元素系技能来弥补不利克制。\n- **队伍构成**：不同职业/属性精灵搭配应对多类敌人，PvP 围绕职业相克展开。\n\n### PvP 特色\n\n- 官方强调 **无 Pay-to-Win**：没有氪金抽卡，胜负由策略、队伍与临场判断决定。\n- 所有 Jinies 都能通过正常游玩获得，不存在只能靠付费获取的强力精灵。\n\n> 说明：CBT 具体技能表、克制数值与种族值以官方图鉴为准，本文先按官方预览稿与媒体试玩整理。",
-    "contentEn": "## Roco Kingdom Battle System Guide\n\nRoco Kingdom uses **classic turn-based combat** — easy to pick up, with real depth in PvP: four skills per Jinie, attacks that consume stamina, and matchup hints shown directly in battle.\n\n### Core rules\n\n- **Turn-based**: both sides act in turns; each Jinie carries four skills.\n- **Star stamina bar**: each attack costs stamina. When the bar runs low, you must spend a turn resting to recover.\n- **Visible matchups**: before attacking you can see whether a move hits the enemy's weakness — no need to memorize the type chart.\n- **Normalized levels (PvP)**: battle levels are standardized, so outcomes lean on elemental matchups, team composition, and play rather than stat gaps.\n\n### Advanced tips\n\n- **Stamina play**: if the opponent switches, predict it and rest on that turn to seize tempo.\n- **Bloodline coverage**: change a Jinie's Bloodline to learn skills from another element class and cover bad matchups.\n- **Team building**: mix classes and elements to handle diverse threats; PvP revolves around class matchups.\n\n### PvP notes\n\n- The publisher stresses **no pay-to-win**: no gacha, no paid power; battles are decided by strategy, composition, and reads.\n- Every Jinie can be obtained through normal play — none are locked behind payments.\n\n> Note: exact skill sets, matchup values, and base stats follow the official CBT codex; this guide reflects official previews and press hands-on.",
+    "summary": "旧回合规则、技能槽位、体力条、克制提示、血统覆盖与竞技等级标准化断言现予撤回。本页不再将未核实规则用于战斗教学。",
+    "summaryEn": "Earlier turn rules, skill slots, stamina, matchup hints, Bloodline overrides and normalized competitive levels are withdrawn. Unverified rules are no longer presented as combat instruction here.",
+    "content": "## 重建战斗资料的条件\n\n- 记录客户端版本、区服、玩法与证据来源，把预告展示、测试实测和正式规则分开。\n- 技能数量、行动顺序、体力消耗与恢复、换人、属性克制和提示界面需逐项验证，不能从国服照搬。\n- 竞技匹配、等级或装备调整需要对应模式的规则与可复现测试；未知数值不填零，个例不扩展为全部玩法。\n\n## 实测与发布边界\n\n先验证条件，再提供带版本的操作建议。旧强度榜和互相引用的攻略不能补足缺失的国际服证据。",
+    "contentEn": "## Conditions for rebuilding battle information\n\n- Record client version, region, mode and evidence source. Distinguish trailer demonstrations, beta observations and release rules.\n- Verify skill counts, action order, stamina costs and recovery, switching, type interactions and interface hints individually rather than copying CN rules.\n- Competitive matchmaking, level or gear adjustments need mode-specific rules and reproducible tests. Unknown values are not zero, and one case does not establish every mode.\n\n## Testing and publication limits\n\nVerify conditions before publishing versioned advice. Old rankings and circular citations between our guides cannot replace missing global evidence.",
     "tags": [
-      "battle",
-      "combat",
-      "turn-based",
-      "stamina",
-      "matchups",
-      "pvp",
-      "bloodline"
+      "source-review",
+      "international-scope"
     ],
     "faq": [
       {
-        "question": "Is Roco Kingdom PvP pay-to-win?",
-        "questionZh": "Roco Kingdom 的 PvP 是氪金就能赢吗？",
-        "answer": "No. Levels are normalized in PvP, there is no gacha, and all Jinies can be obtained through normal play.",
-        "answerZh": "不是。PvP 等级标准化、无抽卡，所有 Jinies 均可通过正常游玩获得。"
-      },
-      {
-        "question": "How does the stamina bar work?",
-        "questionZh": "体力条怎么运作？",
-        "answer": "Every attack costs stamina (shown as stars). When low, your Jinie must rest a turn to recover; predict opponent switches to rest profitably.",
-        "answerZh": "每次攻击消耗体力（以星表示）。体力不足时精灵必须花一回合休息恢复；预判对手换人时机休息可赚回合差。"
+        "questionZh": "这是已核实的国际服规则吗？",
+        "question": "Are these verified global rules?",
+        "questionJa": "確認済みの国際版規則ですか？",
+        "answerZh": "不是。这是编辑纠错和核验条件，旧确定断言已撤回；没有新取得的独立国际服证据，不能作为实装、培养或付费依据，也不是取消公告。",
+        "answer": "No. This is an editorial correction and a set of verification conditions. Earlier definite claims are withdrawn; no new independent global evidence was obtained. This is not proof of implementation, investment or payment advice, or a cancellation notice.",
+        "answerJa": "いいえ。編集訂正と確認条件です。旧断定を撤回し、新しい独立した国際版根拠は取得していません。実装、育成、購入の根拠でも中止告知でもありません。"
       }
     ],
     "updatedAt": "2026-08-27",
     "quickFacts": {
       "zh": [
-        "回合制，每只精灵 4 技能。",
-        "体力条用星表示，攻击消耗体力。",
-        "PvP 等级标准化，无 P2W、无抽卡。"
+        "旧回合规则、技能槽位、体力条、克制提示、血统覆盖与竞技等级标准化断言现予撤回。本页不再将未核实规则用于战斗教学。"
       ],
       "en": [
-        "Turn-based with four skills per Jinie.",
-        "Star stamina bar; attacks cost stamina.",
-        "PvP levels normalized; no P2W, no gacha."
+        "Earlier turn rules, skill slots, stamina, matchup hints, Bloodline overrides and normalized competitive levels are withdrawn. Unverified rules are no longer presented as combat instruction here."
       ],
       "ja": [
-        "ターン制、1体につき4スキル。",
-        "スター型スタミナ。攻撃で消費。",
-        "PvPはレベル標準化、P2Wなし、ガチャなし。"
+        "旧ターン規則、スキル枠、スタミナ、相性表示、血統の上書き、対戦レベル標準化の断定を撤回しました。未確認の規則を戦闘手順として教えません。"
       ]
     },
     "serpTitle": {
-      "zh": "Roco Kingdom 战斗系统指南｜回合制、体力条与克制详解",
-      "en": "Roco Kingdom Battle System Guide — Turn-Based Combat Explained",
-      "ja": "ロコキングダム戦闘システムガイド｜ターン制とスタミナ"
+      "zh": "国际服战斗系统：规则与数值核验清单",
+      "en": "Global Battle System: Rules and Values Checklist",
+      "ja": "国際版戦闘：規則と数値の確認リスト"
     },
     "serpDescription": {
-      "zh": "Roco Kingdom 战斗系统解析：回合制、星级体力条、可见克制提示、换人预判、血统技能覆盖与 PvP 等级标准化机制。",
-      "en": "Roco Kingdom combat explained: turn-based fights, star stamina, visible matchups, switch reads, Bloodline coverage, and normalized PvP.",
-      "ja": "ロコキングダムの戦闘解説：ターン制、スタミナ、弱点表示、交代読み、ブラッドライン、PvP標準化。"
-    }
+      "zh": "旧回合规则、技能槽位、体力条、克制提示、血统覆盖与竞技等级标准化断言现予撤回。本页不再将未核实规则用于战斗教学。",
+      "en": "Earlier turn rules, skill slots, stamina, matchup hints, Bloodline overrides and normalized competitive levels are withdrawn. Unverified rules are no longer presented as combat instruction here.",
+      "ja": "旧ターン規則、スキル枠、スタミナ、相性表示、血統の上書き、対戦レベル標準化の断定を撤回しました。未確認の規則を戦闘手順として教えません。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "editorial_mechanics_withdrawal_not_official_confirmation"
+    },
+    "titleJa": "国際版戦闘：規則と数値の確認リスト",
+    "summaryJa": "旧ターン規則、スキル枠、スタミナ、相性表示、血統の上書き、対戦レベル標準化の断定を撤回しました。未確認の規則を戦闘手順として教えません。",
+    "contentJa": "## 戦闘資料を再構築する条件\n\n- クライアント版、地域、モード、出典を記録し、映像、テスト観察、正式規則を区別します。\n- スキル数、行動順、消費と回復、交代、属性相性、UI表示を個別に確認し、中国版を転用しません。\n- 対戦マッチング、レベル、装備補正には対象モードの規則と再現試験が必要です。不明値はゼロではなく、一例を全モードに広げません。\n\n## 実測と公開の境界\n\n条件を確認した後、版を明示して操作を案内します。旧評価や本站ガイド同士の循環引用では国際版根拠を補えません。"
   },
   {
     "id": "co-op-and-social-guide",
-    "title": "Roco Kingdom 联机与社交指南：跨平台组队、共同骑行与家园",
-    "titleEn": "Roco Kingdom Co-op and Social Guide: Cross-Platform Parties, Co-Riding, and Homes",
+    "title": "国际服联机与社交：功能边界核验清单",
+    "titleEn": "Global Co-op and Social Features: Scope Checklist",
     "category": "gameplay",
     "categoryZh": "玩法攻略",
     "categoryEn": "Gameplay",
-    "summary": "Roco Kingdom 强调社交玩法：跨平台组队冒险、共同骑行精灵、拜访与装饰家园、一起种田和友好决斗。本文整理联机功能清单与入坑建议。",
-    "summaryEn": "Roco Kingdom puts social play first: cross-platform party-ups, co-riding Jinies, visiting and decorating homes, farming together, and friendly duels. This guide lists every co-op feature and gives onboarding tips.",
-    "content": "## Roco Kingdom 联机与社交指南\n\nRoco Kingdom 的联机是**跨平台互通**的：PC、主机、移动端玩家可以在同一个世界中组队冒险，社交系统贯穿家园、骑行、种田与决斗。\n\n### 联机功能清单\n\n- **跨平台组队**：PC、主机、手机玩家无需分开服务器即可组队，移动端可无缝加入 PC/主机朋友的会话。\n- **共同骑行（Co-riding）**：可以一起骑乘精灵在大陆旅行。\n- **家园系统**：建造与装饰自己的家园，邀请朋友参观；也可以互相拜访。\n- **种田**：与朋友一起种田，共享玩法体验。\n- **友好决斗**：与好友进行友好对战。\n- **资源与经验共享**：联机会话中收集的奖励与战斗经验会共享。\n\n### 单人体验\n\n- 游戏完全支持单人游玩，不想组队也能顺畅推进主线。\n- 未选择的御三家可以在好友的世界中捕捉，社交也能反哺收集进度。\n\n### 入坑建议\n\n- **CBT 阶段**：先确认跨平台组队与基础社交功能是否如预告所示，再决定长期主玩平台。\n- **平台选择**：如果好友主要在手机上玩，PC 端也能直接加入，无需重复选择。\n\n> 说明：国际服 CBT 的联机服务器规则、好友上限与账号绑定细节以官方公告为准。",
-    "contentEn": "## Roco Kingdom Co-op and Social Guide\n\nRoco Kingdom's online play is **fully cross-platform**: PC, console, and mobile players can party up in one shared world, with social systems across homes, co-riding, farming, and duels.\n\n### Co-op features\n\n- **Cross-platform parties**: PC, console, and mobile players group up without separate servers; mobile players can join PC/console friends seamlessly.\n- **Co-riding**: ride a Jinie together while traveling the continent.\n- **Homes**: build and decorate your home, invite friends to visit, and visit theirs.\n- **Farming**: farm together with friends.\n- **Friendly duels**: battle friends in friendly matches.\n- **Shared rewards**: rewards and battle experience gathered in co-op sessions are shared.\n\n### Solo play\n\n- The game fully supports solo play; you can push the story without a group.\n- Unpicked starters can be caught in friends' worlds, so social play feeds collection progress too.\n\n### Tips\n\n- **During CBT**: verify cross-platform parties and social features work as previewed before committing to a main platform.\n- **Platform choice**: if your friends are mostly on mobile, the PC client can still join them directly.\n\n> Note: international CBT server rules, friend caps, and account-linking details follow official announcements.",
+    "summary": "旧全平台共服、共骑、家园、种田、友好决斗和跨服好友承诺现予撤回。本页不提供已确认的组队或进度共享步骤。",
+    "summaryEn": "Earlier promises of all-platform shared servers, co-riding, homes, farming, friendly duels and cross-server friends are withdrawn. No confirmed party or shared-progression procedure is provided here.",
+    "content": "## 按功能和设备组合核验\n\n- 分别确认组队人数、设备组合、地区服务器、版本和测试资格；支持某设备不代表可以和所有设备联机。\n- 联机、进度继承、购买权益和好友关系是不同能力，需要各自条款；不从跨平台宣传概括全部互通。\n- 共骑、家园、种植、决斗和跨服交互分别记录证据与限制，不把试玩或国服玩法扩展成国际服承诺。\n\n## 与朋友计划之前\n\n不要按旧矩阵购买设备、付费或安装客户端。本站缺乏证据不是功能取消的公告，核验清单也不代表功能已实现。",
+    "contentEn": "## Verify functions and device combinations\n\n- Check party size, device pairings, region servers, version and beta eligibility separately. Device support does not imply play with every other device.\n- Multiplayer, progress carryover, purchases and friend relationships are separate capabilities with separate terms. A cross-platform label does not establish all sharing.\n- Record evidence and limits separately for co-riding, housing, farming, duels and cross-server interaction. A hands-on or CN feature is not a global promise.\n\n## Before planning with friends\n\nDo not buy hardware, pay or install clients based on the old matrix. Missing evidence here is not a cancellation announcement, and a checklist is not proof of implementation.",
     "tags": [
-      "co-op",
-      "multiplayer",
-      "cross-play",
-      "homes",
-      "farming",
-      "social",
-      "co-riding"
+      "source-review",
+      "international-scope"
     ],
     "faq": [
       {
-        "question": "Is cross-platform play available from day one?",
-        "questionZh": "跨平台联机开服就有吗？",
-        "answer": "Yes. Cross-platform play is a confirmed day-one feature for the full release; mobile players can join PC/console friends.",
-        "answerZh": "是。正式版确认上线即支持跨平台联机，移动端玩家可加入 PC/主机好友的会话。"
-      },
-      {
-        "question": "Can I play Roco Kingdom solo?",
-        "questionZh": "可以单人游玩吗？",
-        "answer": "Yes. The game fully supports solo play; co-op is optional and feeds collection progress (e.g., catching unpicked starters in friends' worlds).",
-        "answerZh": "可以。游戏完全支持单人游玩；联机为可选玩法，也能帮助收集（例如在好友世界捕捉未选的御三家）。"
+        "questionZh": "这是已核实的国际服规则吗？",
+        "question": "Are these verified global rules?",
+        "questionJa": "確認済みの国際版規則ですか？",
+        "answerZh": "不是。这是编辑纠错和核验条件，旧确定断言已撤回；没有新取得的独立国际服证据，不能作为实装、培养或付费依据，也不是取消公告。",
+        "answer": "No. This is an editorial correction and a set of verification conditions. Earlier definite claims are withdrawn; no new independent global evidence was obtained. This is not proof of implementation, investment or payment advice, or a cancellation notice.",
+        "answerJa": "いいえ。編集訂正と確認条件です。旧断定を撤回し、新しい独立した国際版根拠は取得していません。実装、育成、購入の根拠でも中止告知でもありません。"
       }
     ],
     "updatedAt": "2026-08-27",
     "quickFacts": {
       "zh": [
-        "跨平台组队：PC/主机/移动端互通。",
-        "社交玩法：家园、种田、共同骑行、友好决斗。",
-        "完全支持单人游玩，联机可选。"
+        "旧全平台共服、共骑、家园、种田、友好决斗和跨服好友承诺现予撤回。本页不提供已确认的组队或进度共享步骤。"
       ],
       "en": [
-        "Cross-platform parties: PC, console, mobile.",
-        "Social play: homes, farming, co-riding, friendly duels.",
-        "Fully playable solo; co-op optional."
+        "Earlier promises of all-platform shared servers, co-riding, homes, farming, friendly duels and cross-server friends are withdrawn. No confirmed party or shared-progression procedure is provided here."
       ],
       "ja": [
-        "クロスプレイ：PC・コンソール・モバイル。",
-        "ハウス、農場、共同ライド、友好デュエル。",
-        "ソロプレイも完全対応。"
+        "旧全機種同一サーバー、共乗り、ホーム、農作業、友好決闘、サーバー間フレンドの約束を撤回しました。確認済みの組隊・進行共有手順は掲載しません。"
       ]
     },
     "serpTitle": {
-      "zh": "Roco Kingdom 联机与社交指南｜跨平台组队、骑行与家园",
-      "en": "Roco Kingdom Co-op & Social Guide — Cross-Play, Homes & Farming",
-      "ja": "ロコキングダム協力・ソーシャルガイド｜クロスプレイとハウス"
+      "zh": "国际服联机与社交：功能边界核验清单",
+      "en": "Global Co-op and Social Features: Scope Checklist",
+      "ja": "国際版協力・交流：機能範囲の確認リスト"
     },
     "serpDescription": {
-      "zh": "Roco Kingdom 联机玩法一览：跨平台组队、共同骑行精灵、家园装饰与种田、友好决斗，以及单人玩家的入坑建议。",
-      "en": "Roco Kingdom co-op overview: cross-platform parties, co-riding, home decorating, farming, and friendly duels, plus solo-play tips.",
-      "ja": "ロコキングダムのマルチプレイ解説：クロスプラットフォームPT、共同ライド、ハウス、農業、友好デュエル。"
-    }
+      "zh": "旧全平台共服、共骑、家园、种田、友好决斗和跨服好友承诺现予撤回。本页不提供已确认的组队或进度共享步骤。",
+      "en": "Earlier promises of all-platform shared servers, co-riding, homes, farming, friendly duels and cross-server friends are withdrawn. No confirmed party or shared-progression procedure is provided here.",
+      "ja": "旧全機種同一サーバー、共乗り、ホーム、農作業、友好決闘、サーバー間フレンドの約束を撤回しました。確認済みの組隊・進行共有手順は掲載しません。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "editorial_mechanics_withdrawal_not_official_confirmation"
+    },
+    "titleJa": "国際版協力・交流：機能範囲の確認リスト",
+    "summaryJa": "旧全機種同一サーバー、共乗り、ホーム、農作業、友好決闘、サーバー間フレンドの約束を撤回しました。確認済みの組隊・進行共有手順は掲載しません。",
+    "contentJa": "## 機能と端末の組合せを確認\n\n- 人数、端末組合せ、地域サーバー、版、テスト資格を個別に確認します。対応端末だから全端末と遊べるとは限りません。\n- マルチ、進行引継ぎ、購入権利、フレンドは別能力で、各規約が必要です。クロス対応だけで全共有を判断しません。\n- 共乗り、住宅、栽培、決闘、サーバー間交流に個別の根拠と制限を記録します。試遊や中国版を国際版の約束に広げません。\n\n## 友人と計画する前に\n\n旧対応表で機器購入、支払い、導入をしないでください。根拠不足は中止告知ではなく、確認リストも実装証明ではありません。"
   },
   {
     "id": "pre-registration-rewards-faq",

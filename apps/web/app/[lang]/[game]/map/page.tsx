@@ -5,6 +5,8 @@ import { MapLoader } from './_components/MapLoader';
 import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
 import { getMapPageData } from '@/lib/game-data/maps';
 import type { MapPageData, MapRegionEntry } from '@/lib/game-data/maps';
+import { rocoPublicReviewMetadata } from '@/lib/roco-public-review';
+import { RocoPublicReviewPage } from '@/components/wiki/roco-public-review-page';
 
 const REGION_ICONS: Record<string, string> = {
   mondstadt: '🌬️', liyue: '⛰️', inazuma: '⚡', sumeru: '🌿', fontaine: '💧', natlan: '🔥', chasm: '⛏️',
@@ -22,11 +24,6 @@ const MAP_META_TITLES: Partial<Record<GameId, Record<SupportedLocale, string>>> 
     zh: '伊莫地图指南｜已公开区域、精灵线索与上线后核验',
     en: 'Aniimo Map Guide — Public Regions, Creature Leads & Launch Checks',
     ja: 'アニモマップガイド｜公開地域・生物の手掛かり・リリース後確認',
-  },
-  roco: {
-    zh: '洛克王国：世界国际服地图｜CBT 区域、捕捉点与探索路线',
-    en: 'Roco Kingdom Global Map — CBT Regions, Capture Spots & Routes',
-    ja: 'ロコキングダム国際版マップ｜CBT地域・捕獲地点・探索ルート',
   },
   'roco-cn': {
     zh: '洛克王国：世界地图｜区域、精灵捕捉点与资源路线',
@@ -50,11 +47,6 @@ const MAP_META_DESCRIPTIONS: Partial<Record<GameId, Record<SupportedLocale, stri
     zh: '伊莫地图指南，整理已公开区域、代表精灵、探索线索与上线后需要核验的出没条件。本页不是逐点位互动地图；查精灵、奖励和新手路线请继续进入相关页面。',
     en: 'Aniimo region map guide for public regions, representative creatures, exploration leads, and launch-day spawn checks. This is not a marker-by-marker interactive map; continue to creature, reward, and beginner routes.',
     ja: 'アニモの地域マップガイド。公開地域、代表生物、探索の手掛かり、リリース後に確認する出現条件を整理します。ピン単位のインタラクティブマップではありません。',
-  },
-  roco: {
-    zh: '洛克王国：世界国际服地图入口，当前用于追踪 CBT 区域、已曝光精灵、捕捉点、地图路线和上线后点位核验。继续查看精灵图鉴、CBT 专题、法杖与攻略。',
-    en: 'Roco Kingdom global map hub for CBT regions, revealed Jinies, capture spots, exploration routes, and launch verification. Continue into Jinies, CBT hub, staves, and guides.',
-    ja: 'ロコキングダム国際版マップ入口。CBT地域、公開ジニー、捕獲地点、探索ルート、リリース後確認を追跡します。',
   },
   'roco-cn': {
     zh: '洛克王国：世界国服地图入口，整理区域、精灵捕捉点、资源路线、活动与商人刷新待核验清单，并连接精灵图鉴、兑换码、法杖和节奏榜。',
@@ -86,6 +78,7 @@ export async function generateMetadata({
     return { title: 'Map', robots: { index: false, follow: false } };
   }
   const gameName = gameConfig.name[locale];
+  if (gameId === 'roco') return rocoPublicReviewMetadata('map', locale);
   const title = MAP_META_TITLES[gameId]?.[locale] ?? (gameId === 'skjh'
     ? locale === 'zh'
       ? `${gameName}荒岛路线地图 — 据点、采集线、基地选址`
@@ -137,12 +130,13 @@ export default async function MapPage({
   const gameConfig = GAMES[gameId];
 
   if (!gameConfig) return null;
+  if (gameId === 'roco') return <RocoPublicReviewPage route="map" locale={locale} />;
 
   if (gameId === 'skjh') {
     return <SkjhMapPage locale={locale} />;
   }
 
-  if (gameId === 'roco' || gameId === 'roco-cn') {
+  if (gameId === 'roco-cn') {
     return <RocoMapHub gameId={gameId} locale={locale} />;
   }
 
@@ -386,12 +380,6 @@ function RegionCard({ region, gameId, locale }: { region: MapRegionEntry; gameId
 }
 
 const ROCO_MAP_STATS = {
-  roco: [
-    ['CBT', '测试阶段', 'Test Phase', 'テスト段階'],
-    ['Watch', '点位状态', 'Marker Status', '地点状態'],
-    ['6', '资源入口', 'Resource Links', '導線'],
-    ['Launch', '上线后核验', 'Launch Checks', 'リリース後確認'],
-  ],
   'roco-cn': [
     ['S1', '当前赛季', 'Current Season', '現在シーズン'],
     ['Watch', '商人与活动', 'Merchant & Events', '商人とイベント'],
@@ -401,14 +389,6 @@ const ROCO_MAP_STATS = {
 } as const;
 
 const ROCO_MAP_LINKS = {
-  roco: [
-    ['/roco/characters', '精灵图鉴', 'Jinie wiki', 'ジニー図鑑', '按属性、稀有度和进化链继续查已曝光精灵。', 'Browse revealed Jinies by type, rarity, and evolution line.', '公開ジニーを属性、レア度、進化で確認。'],
-    ['/roco/version', 'CBT 专题', 'CBT hub', 'CBT特集', '确认测试时间、平台、报名和下载状态。', 'Check test timing, platforms, signup, and download status.', 'テスト日程、平台、応募、DL状況を確認。'],
-    ['/roco/tier-list', '早测节奏榜', 'Provisional tier', '暫定Tier', '先用 CBT 分级判断捕捉与培养优先级。', 'Use CBT ratings to plan capture and training priorities.', 'CBT評価で捕獲・育成優先度を判断。'],
-    ['/roco/weapons', '法杖图鉴', 'Staff catalog', '杖図鑑', '法杖为外观特效武器，不提供攻击力。', 'Staves are cosmetic effects, not attack-stat gear.', '杖は攻撃値なしの外観武器。'],
-    ['/roco/guides/cbt-registration-guide', 'CBT 报名', 'CBT signup', 'CBT応募', '报名、问卷、资格邮件和测试平台集中查看。', 'Registration, questionnaire, eligibility mail, and platforms.', '応募、アンケート、資格メール、平台を確認。'],
-    ['/roco/download', '下载入口', 'Download hub', 'DL入口', '按官网和平台商店确认安全下载边界。', 'Verify safe download entry through official and store pages.', '公式とストアで安全なDL入口を確認。'],
-  ],
   'roco-cn': [
     ['/roco-cn/characters', '精灵图鉴', 'Jinie wiki', 'ジニー図鑑', '筛选国服精灵、属性、技能和进化链。', 'Filter CN Jinies by type, skills, and evolution line.', '中国版ジニーを属性、スキル、進化で確認。'],
     ['/roco-cn/redeem-codes', '兑换码', 'Redeem codes', '交換コード', '核验礼包码、奖励和过期状态。', 'Check gift codes, rewards, and expiration status.', 'コード、報酬、期限を確認。'],
@@ -419,25 +399,17 @@ const ROCO_MAP_LINKS = {
   ],
 } as const;
 
-function RocoMapHub({ gameId, locale }: { gameId: 'roco' | 'roco-cn'; locale: SupportedLocale }) {
+function RocoMapHub({ gameId, locale }: { gameId: 'roco-cn'; locale: SupportedLocale }) {
   const gameConfig = GAMES[gameId];
   const pick = (zh: string, en: string, ja?: string) => locale === 'zh' ? zh : locale === 'ja' ? (ja ?? en) : en;
 
   return (
     <div>
       <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {gameId === 'roco'
-          ? pick('国际服 CBT 地图核验入口', 'Global CBT Map Watch', '国際版CBTマップ確認')
-          : pick('国服地图与资源路线入口', 'CN Map and Resource Route Hub', '中国版マップ・資源ルート')}
+        {pick('国服地图与资源路线入口', 'CN Map and Resource Route Hub', '中国版マップ・資源ルート')}
       </h1>
       <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
-        {gameId === 'roco'
-          ? pick(
-              '国际服地图点位仍等待 CBT 与正式上线后核验。这里先把精灵图鉴、CBT 专题、法杖、下载和待补地图路线集中起来，避免把未确认点位当成实时地图。',
-              'Global map markers still need CBT and launch verification. This hub groups Jinies, CBT timing, staves, downloads, and map-route watch items without presenting unverified markers as live data.',
-              '国際版の地点はCBTとリリース後の確認待ちです。未確認地点をリアルタイム地図として扱わず、図鑑、CBT、杖、DL、確認項目をまとめます。'
-            )
-          : pick(
+        {pick(
               '国服地图内容先作为资源路线入口维护，重点串联精灵图鉴、兑换码、赛季、法杖和后续商人/活动刷新核验。',
               'CN map content starts as a resource-route hub that connects Jinies, codes, season pages, staves, and future merchant/event refresh checks.',
               '中国版マップは資源ルート入口として、ジニー、コード、シーズン、杖、商人/イベント確認へつなげます。'
@@ -479,13 +451,7 @@ function RocoMapHub({ gameId, locale }: { gameId: 'roco' | 'roco-cn'; locale: Su
           {pick('点位核验状态', 'Marker Verification Status', '地点確認状況')}
         </h2>
         <p className="text-sm leading-relaxed text-game-text-muted">
-          {gameId === 'roco'
-            ? pick(
-                '当前不展示未确认坐标。CBT 开启后优先补区域名称、御三家捕捉相关路线、材料来源和地图截图来源。',
-                'Unverified coordinates are not shown. After CBT opens, priority checks are region names, starter-related routes, material sources, and map screenshot sources.',
-                '未確認座標は表示しません。CBT開始後、地域名、御三家関連ルート、素材来源、地図画像来源を優先確認します。'
-              )
-            : pick(
+          {pick(
                 '当前先维护资源入口与站内导流；后续补商人刷新、活动点位、稀有精灵捕捉点和材料路线时，需要标注来源与更新时间。',
                 'This page currently maintains resource routing and internal links. Future merchant refreshes, event spots, rare Jinie captures, and material routes should include source and update time.',
                 '現在は導線を先に維持します。今後の商人更新、イベント地点、希少ジニー捕獲、素材ルートには来源と更新日を付けます。'

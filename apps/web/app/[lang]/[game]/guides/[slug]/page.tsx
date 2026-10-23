@@ -237,38 +237,6 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> 
     },
   },
   roco: {
-    'starter-guide': {
-      heading: { zh: '快速结论：按开荒节奏选，Meewee 稳妥、Sparka 快攻、Cerulla 抗压', en: 'Quick answer: pick by early pacing — Meewee balances, Sparka speeds up, Cerulla survives', ja: '要点：序盤のペースで選ぶ — Meewee安定、Sparka速攻、Cerulla耐久' },
-      points: {
-        zh: ['国际服御三家为草系 Meewee、火系 Sparka、水系 Cerulla。', '追求稳妥万能先 Meewee；想打快先 Sparka；怕翻车先 Cerulla。', '三只都能在野外补抓，御三家选择不锁定长期进度。'],
-        en: ['The international starters are Grass-type Meewee, Fire-type Sparka, and Water-type Cerulla.', 'Pick Meewee for a balanced route, Sparka for aggressive early pacing, or Cerulla for survivability.', 'All three can be caught in the wild later, so the starter pick does not lock your long-term progress.'],
-        ja: ['国際版スターターは草Meewee、炎Sparka、水Cerulla。', '万能ならMeewee、速攻ならSparka、耐久ならCerulla。', '3匹とも野生で捕まえられるため、スターターで長期進行は固定されません。'],
-      },
-    },
-    'jinies-guide': {
-      heading: { zh: '快速结论：先懂 18 元素、血统与捕捉方式再谈培养', en: 'Quick answer: learn the 18 elements, Bloodline, and catching before building', ja: '要点：18元素、血統、捕獲方法を先に把握' },
-      points: {
-        zh: ['官方已确认 400+ 只 Jinies，分为 18 种元素。', '血统（Bloodline）系统、Alpha/Exotic 特殊形态与 Buddy Pods 捕捉是本作特色。', 'Alpha 血统化可在特定精灵上获得，Blazion 为 Sparka 血统的 boss 级形态。'],
-        en: ['400+ Jinies are confirmed, split across 18 elements.', 'The Bloodline system, Alpha/Exotic special forms, and Buddy Pods catching define progression.', 'Alpha conversion applies to select creatures; Blazion is the boss-tier Bloodline form of Sparka.'],
-        ja: ['公式確認済みは400体超、18属性。', '血統（Bloodline）、Alpha/Exotic形態、Buddy Pods捕獲が特徴。', 'Alpha化は特定のジニーに適用され、BlazionはSparka血統のボス級形態。'],
-      },
-    },
-    'battle-system-guide': {
-      heading: { zh: '快速结论：回合制核心是体力条、换人与克制预判', en: 'Quick answer: master the stamina bar, switching, and type hints in turn-based combat', ja: '要点：スタミナ管理、交代、相性読みが鍵' },
-      points: {
-        zh: ['每只精灵 4 个技能、星级体力条，克制关系在界面上可见。', '体力（Stamina）是资源，换人预判决定回合主动权。', '血统技能可覆盖普通技能，PvP 采用等级标准化机制。'],
-        en: ['Each Jinie has four skills and a star-based stamina bar, with matchup hints shown in the UI.', 'Stamina is the core resource; anticipating switches decides tempo.', 'Bloodline skills can overwrite normal skills, and PvP uses level-standardized rules.'],
-        ja: ['各ジニーは4スキルと星スタミナバー、相性ヒントはUI表示。', 'スタミナが核心リソースで、交代読みが主導権を握る。', '血統スキルは通常スキルを上書き可能。PvPはレベル標準化。'],
-      },
-    },
-    'co-op-and-social-guide': {
-      heading: { zh: '快速结论：联机主打组队探索、共骑、家园与友好决斗', en: 'Quick answer: co-op covers party exploration, co-riding, homes, and friendly duels', ja: '要点：パーティ探索、共乗り、ホーム、友好決闘が中心' },
-      points: {
-        zh: ['支持跨平台组队冒险与共同骑行精灵。', '可以拜访、装饰家园，一起种田。', '友好决斗与跨服好友是社交玩法的主要入口。'],
-        en: ['Cross-platform party play and co-riding Jinies are core co-op features.', 'Visit and decorate homes, and farm together with friends.', 'Friendly duels and cross-server friends are the main social loops.'],
-        ja: ['クロスプラットフォームのパーティ探索とジニー共乗りが核。', 'ホーム訪問・装飾と共同農作業が可能。', '友好決闘とクロスサーバーフレンドが主なソーシャル導線。'],
-      },
-    },
   },
 };
 
@@ -512,22 +480,6 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
       { href: '/roco/guides/global-change-communication-playbook', label: { zh: '版本沟通与热修', en: 'Patch communication', ja: '変更・ホットフィックス' }, description: { zh: '把状态、范围、已知限制和下一次更新点说清楚，而不把探索写成承诺。', en: 'State status, scope, limits, and next update without writing exploration as a promise.', ja: '探索を約束にせず、状態、範囲、制限、次回更新を明確に伝える。' } },
       { href: '/roco/guides/global-player-support-trust-playbook', label: { zh: '玩家支持与信任', en: 'Player support', ja: 'プレイヤーサポート' }, description: { zh: '将账号、支付、隐私、安全和无障碍阻塞导入私密、可追踪支持通道。', en: 'Route account, payment, privacy, safety, and accessibility blockers to private support.', ja: 'アカウント、決済、プライバシー、安全、アクセシビリティ阻害を非公開サポートへ。' } },
     ],
-    'starter-guide': [
-      { href: '/roco/guides/jinies-guide', label: { zh: '精灵图鉴', en: 'Jinies guide', ja: 'ジニー図鑑' }, description: { zh: '御三家之外，看 18 元素、血统和特殊形态。', en: 'Beyond starters, learn the 18 elements, Bloodline, and special forms.', ja: 'スターター以外に18属性、血統、特殊形態を確認。' } },
-      { href: '/roco/guides/battle-system-guide', label: { zh: '战斗系统', en: 'Battle system', ja: '戦闘システム' }, description: { zh: '先懂回合制、体力条和克制再定养成方向。', en: 'Understand turn-based combat, stamina, and type hints before building.', ja: 'ターン制、スタミナ、相性を見てから育成方針を決める。' } },
-    ],
-    'jinies-guide': [
-      { href: '/roco/characters', label: { zh: '精灵图鉴数据库', en: 'Jinie database', ja: 'ジニーデータベース' }, description: { zh: '按属性、稀有度和栖息地继续查具体精灵。', en: 'Browse specific Jinies by element, rarity, and habitat.', ja: '属性、レア度、生息地で具体的なジニーを確認。' } },
-      { href: '/roco/guides/battle-system-guide', label: { zh: '战斗系统', en: 'Battle system', ja: '戦闘システム' }, description: { zh: '把元素克制和血统技能接进实战。', en: 'Connect elements and Bloodline skills to real combat.', ja: '元素相性と血統スキルを実戦に活かす。' } },
-    ],
-    'battle-system-guide': [
-      { href: '/roco/guides/jinies-guide', label: { zh: '精灵图鉴', en: 'Jinies guide', ja: 'ジニー図鑑' }, description: { zh: '先确认元素、血统和捕捉方式再组队。', en: 'Check elements, Bloodline, and catching before teambuilding.', ja: '編成前に属性、血統、捕獲方法を確認。' } },
-      { href: '/roco/guides/starter-guide', label: { zh: '御三家选择', en: 'Starter guide', ja: 'スターター選択' }, description: { zh: '回到开局，按节奏和生存需求选御三家。', en: 'Return to the opener and pick a starter by pace and survival.', ja: '序盤のペースと耐久でスターターを選ぶ。' } },
-    ],
-    'co-op-and-social-guide': [
-      { href: '/roco/guides/cbt-registration-guide', label: { zh: 'CBT 报名', en: 'CBT registration', ja: 'CBT登録' }, description: { zh: '找队友前先确认自己是否拿到测试资格。', en: 'Confirm your own CBT eligibility before forming groups.', ja: '仲間集めの前に自分のCBT資格を確認。' } },
-      { href: '/roco/guides/what-is-roco-kingdom', label: { zh: '游戏是什么', en: 'What is Roco Kingdom?', ja: 'ゲーム概要' }, description: { zh: '了解世界设定和社交定位。', en: 'Review the setting and social positioning.', ja: '世界観とソーシャル定位を振り返る。' } },
-    ],
   },
 };
 
@@ -550,7 +502,7 @@ const GUIDE_FALLBACK_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
   ],
   roco: [
     { href: '/roco/version', label: { zh: '测试信息核验状态', en: 'Test verification status', ja: 'テスト情報の確認状況' }, description: { zh: '先核实来源，不按旧攻略报名。', en: 'Verify sources; do not sign up based on older guides.', ja: '旧ガイドで応募せず出典を確認。' } },
-    { href: '/roco/guides/starter-guide', label: { zh: '御三家选择', en: 'Starter guide', ja: 'スターター選択' }, description: { zh: '开局路线与捕捉建议。', en: 'Early pacing and catching advice.', ja: '序盤ルートと捕獲のコツ。' } },
+    { href: '/roco/guides/starter-guide', label: { zh: '初始精灵核验清单', en: 'Starter verification checklist', ja: 'スターター確認リスト' }, description: { zh: '旧培养与捕捉承诺已撤回。', en: 'Earlier investment and catching promises are withdrawn.', ja: '旧育成・捕獲の約束は撤回済みです。' } },
   ],
   'roco-cn': [
     { href: '/roco-cn/guides/redeem-codes-cn', label: { zh: '兑换码大全', en: 'Redeem codes', ja: '交換コード一覧' }, description: { zh: '先领当前可用的洛克钻与资源。', en: 'Claim Luoke Diamonds and resources first.', ja: '先にロックダイヤと資源を回収。' } },

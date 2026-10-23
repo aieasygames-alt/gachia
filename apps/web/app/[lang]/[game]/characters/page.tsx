@@ -6,6 +6,7 @@ import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
 import { notFound } from 'next/navigation';
+import { ROCO_LIST_REVIEW } from '@/lib/roco-public-review';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -105,7 +106,6 @@ const CHAR_DESC: Record<string, Record<string, string>> = {
   guihuan: { zh: '归环全使灵图鉴，覆盖SSR、SR角色数据、元素和配装推荐，方便你先看清定位，再决定培养顺序。', en: 'Complete Guihuan Spirit roster with SSR and SR data, elements, and build recommendations so you can prioritize the right spirits first.', ja: '帰環全精霊図鑑。SSR・SRのデータ、元素、ビルド案を整理しています。' },
   endfield: { zh: '明日方舟：终末地干员图鉴，收录 Pioneer Test 角色、元素属性和配装参考。后续测试与正式版本请以官方公告为准。', en: 'Arknights: Endfield operator roster with Pioneer Test character, element, and build references. Use official announcements for future tests and release data.', ja: 'エンドフィールド干員図鑑。Pioneer Test のキャラ、属性、ビルド参考を収録。今後のテストと正式版は公式発表を基準にしてください。' },
   sea: { zh: '遗忘之海角色图鉴 Wiki，覆盖 Traveler、Ais、Little Axe、Princess、Molly 等角色属性、定位、强度、配队和开荒培养顺序。', en: 'Sea of Remnants characters wiki with Traveler, Ais, Little Axe, Princess, Molly, roles, attributes, tier notes, teams, and early progression picks.', ja: 'シー・オブ・レムナンツキャラWiki。Traveler、Ais、Little Axe、Princess、Molly、役割、属性、Tier、育成順を整理。' },
-  roco: { zh: '《洛克王国：世界》国际服精灵图鉴，覆盖官方已曝光精灵的属性、稀有度、栖息地、进化链与获取说明，CBT 开测后持续补全。', en: 'Roco Kingdom international character encyclopedia, covering officially revealed Jinies\' attributes, rarity, habitats, evolution chains, and acquisition notes. Will expand after CBT launch.', ja: 'ロコキングダム国際版のジニー図鑑。公式公開済みジニーの属性、レアリティ、生息地、進化、入手方法をまとめ、CBT 後に随時追加。' },
   'roco-cn': { zh: '《洛克王国：世界》国服精灵图鉴，覆盖 S2 赛季已登场精灵的属性、技能、进化链和培养方向，适合先查图鉴再决定捕捉与培养顺序。', en: 'Roco Kingdom CN character encyclopedia, covering S2 season Jinies\' attributes, skills, evolution chains, and build directions for capture and progression planning.', ja: 'ロコキングダム中国版のジニー図鑑。S2 シーズンのジニー属性、スキル、進化、育成方針を整理。' },
 };
 
@@ -160,11 +160,6 @@ const CHARACTER_INTRO: Record<string, Record<SupportedLocale, string>> = {
     en: 'Browse the Sea of Remnants characters wiki by attribute, role, and tier value to review early-game picks, team duties, tier list context, and progression paths.',
     ja: '属性、役割、Tier価値でSea of RemnantsキャラWikiを確認し、序盤候補、編成分担、育成導線を把握できます。',
   },
-  roco: {
-    zh: '按属性、稀有度快速浏览《洛克王国：世界》国际服精灵图鉴，CBT 期间优先看御三家与官方已曝光精灵的栖息地、进化链和基础定位。',
-    en: 'Browse the Roco Kingdom character wiki by element and rarity during CBT. Focus on starters and officially revealed Jinies\' habitats, evolution chains, and basic roles.',
-    ja: '属性・レアリティでロコキングダム国際版のジニー図鑑を確認。CBT 期間は御三家と公式公開ジニーの生息地、進化、役割を優先。',
-  },
   'roco-cn': {
     zh: '按属性、稀有度浏览《洛克王国：世界》国服精灵图鉴，S2 赛季优先看已登场精灵的捕捉位置、进化链和培养路线。',
     en: 'Browse the Roco Kingdom CN character wiki by element and rarity. Focus on S2 live Jinies\' capture spots, evolution chains, and progression routes.',
@@ -173,6 +168,7 @@ const CHARACTER_INTRO: Record<string, Record<SupportedLocale, string>> = {
 };
 
 function getCharacterIntro(gameId: string, locale: SupportedLocale) {
+  if (gameId === 'roco') return ROCO_LIST_REVIEW.characters[locale].description;
   return CHARACTER_INTRO[gameId]?.[locale] ?? CHARACTER_INTRO.genshin?.[locale] ?? '';
 }
 
@@ -190,7 +186,7 @@ export async function generateMetadata({
   const intro = CHARACTER_INTRO[gameId]?.[locale];
   const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/characters`, LOCALES);
 
-  const title = gameId === 'hi3'
+  const title = gameId === 'roco' ? ROCO_LIST_REVIEW.characters[locale].title : gameId === 'hi3'
     ? { zh: '崩坏3女武神与人偶资料 — 定位与版本档案', en: 'HI3 Battlesuit and AstralOp Entries — Roles and Version Archive', ja: '崩壊3rd 戦乙女・人偶資料 — 役割とバージョン' }[locale]
     : gameId === 'sea'
     ? locale === 'zh'
@@ -210,7 +206,7 @@ export async function generateMetadata({
           ? `${gameName}キャラ図鑑 — Wiki、ビルド、スキル、編成`
           : `${gameName} Characters Wiki — Builds, Skills & Team Planning`;
 
-  const description = ensureMetaLength(
+  const description = gameId === 'roco' ? ROCO_LIST_REVIEW.characters[locale].description : ensureMetaLength(
     intro ?? desc ?? `${gameName} ${categoryLabel} roster with stats, skills, roles, and build recommendations`,
     locale,
   );
@@ -367,7 +363,7 @@ function CharacterListPage({ chars, locale, gameId, gameConfig }: { chars: Chara
   return (
     <div>
       <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {gameId === 'sea' || gameId === 'nte' || gameId === 'zzz'
+        {gameId === 'roco' ? ROCO_LIST_REVIEW.characters[locale].title : gameId === 'sea' || gameId === 'nte' || gameId === 'zzz'
           ? gameId === 'nte'
             ? locale === 'zh' ? '异环角色图鉴 Wiki' : locale === 'ja' ? 'NTE キャラWiki' : 'NTE Characters Wiki'
             : gameId === 'zzz'
@@ -376,7 +372,7 @@ function CharacterListPage({ chars, locale, gameId, gameConfig }: { chars: Chara
           : CATEGORY_LABELS.characters?.[locale] ?? 'Characters'}
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
-        {gameId === 'sea' || gameId === 'nte' || gameId === 'zzz'
+        {gameId === 'roco' ? { zh: `${chars.length} 条历史导航记录`, en: `${chars.length} legacy navigation records`, ja: `${chars.length} 件の過去のナビゲーション記録` }[locale] : gameId === 'sea' || gameId === 'nte' || gameId === 'zzz'
           ? gameId === 'nte'
             ? locale === 'zh'
               ? `共 ${chars.length} 名异环角色，覆盖属性、定位、强度排行、抽卡价值和培养优先级。`
@@ -422,6 +418,7 @@ function CharacterListPage({ chars, locale, gameId, gameConfig }: { chars: Chara
 }
 
 function CoverageNote({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
+  if (gameId === 'roco') return <aside data-roco-list-review="characters" className="mb-6 rounded-md border border-game-border bg-game-surface px-4 py-3 text-sm leading-relaxed text-game-text-muted">{ROCO_LIST_REVIEW.characters[locale].notice}</aside>;
   const copy = gameId === 'wuwa'
     ? {
         zh: '鸣潮角色页优先展示已有完整属性、武器、等级属性、材料与已核验强度信息。3.7 的心/锁暝已在版本路线与活动看板中标注上线信息；完整技能、材料、数值和配队资料仅在结构化数据核验后加入图鉴与计算器。',

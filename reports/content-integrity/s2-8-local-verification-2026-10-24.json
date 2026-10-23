@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-23T18:54:48.110619+00:00",
+  "phase": "S2.8",
+  "baseline": "81c534f",
+  "branch": "codex/multi-game-s1-release-safety",
+  "conclusion": "bounded_local_editorial_withdrawal_public_entry_and_list_policy; not production approval",
+  "contracts": {
+    "inventory": {
+      "contract": "raw-inventory-v1",
+      "pairs": 90,
+      "equal": 90,
+      "sourceOnly": 5,
+      "pending": [],
+      "holds": [
+        {
+          "path": "roco/raw-characters.json",
+          "status": "needs_review",
+          "sourceSha256": "c726ca7b9fdfab0274fbc4e2689bac07908cbc662020204f157fd567beb537fe",
+          "mirrorSha256": "c726ca7b9fdfab0274fbc4e2689bac07908cbc662020204f157fd567beb537fe",
+          "reason": "All six details now withhold unverified identity/appearance/mechanics claims; retained names/classifications and legacy navigation artwork remain independently unverified.",
+          "reviewDocument": "plans/multi-game-s2-8-roco-public-scope-closeout-2026-10-24.md"
+        },
+        {
+          "path": "roco/raw-guides.json",
+          "status": "needs_review",
+          "sourceSha256": "4f60cececee0e63dc27d8e0bff725060462f83a4d4b8f2a1c55b32c21ef38edb",
+          "mirrorSha256": "4f60cececee0e63dc27d8e0bff725060462f83a4d4b8f2a1c55b32c21ef38edb",
+          "reason": "Thirteen guides now contain editorial verification checklists; remaining seventeen guides and other public tools/registry copy still require factual and scope review.",
+          "reviewDocument": "plans/multi-game-s2-8-roco-public-scope-closeout-2026-10-24.md"
+        }
+      ],
+      "issues": [],
+      "engineeringReady": true,
+      "contentReleaseReady": false,
+      "factualApproval": "not_implied_by_mirror_equality"
+    },
+    "managed": {
+      "contract": "managed-raw-mirrors-v1",
+      "pairs": 7,
+      "entries": 111
+    }
+  },
+  "rawProtection": {
+    "rawFiles": {
+      "total": 185,
+      "byteUnchanged": 181,
+      "changed": [
+        "apps/web/public/data/roco/raw-characters.json",
+        "apps/web/public/data/roco/raw-guides.json",
+        "packages/data/games/roco/raw-characters.json",
+        "packages/data/games/roco/raw-guides.json"
+      ]
+    },
+    "firstThreeCharactersSemanticallyUnchanged": true,
+    "otherTwentySixGuidesSemanticallyUnchanged": true,
+    "allCharacterAndGuideIdsOrderAndOriginalUpdatedAtPreserved": true,
+    "allDataClientAndManifestFilesByteUnchanged": 345
+  },
+  "sources": {
+    "decisionReport": "reports/content-integrity/s2-8-source-decisions-2026-10-24.json",
+    "scope": "No new independent official Roco announcement, live CDN, store, in-game or network verification. Historical claims are archived and conservatively withdrawn; missing evidence is not cancellation or proof of unannounced status.",
+    "newlyReviewedCharacters": 3,
+    "newlyRewrittenGuides": 4,
+    "totalMarkedCharacters": 6,
+    "totalMarkedGuides": 13,
+    "reviewedPublicRoutes": [
+      "",
+      "tier-list",
+      "download",
+      "map"
+    ],
+    "correctedLists": [
+      "characters",
+      "guides"
+    ],
+    "removedAndArchivedHardcodedBlocks": 28,
+    "newOfficialRocoVerification": false
+  },
+  "sitemap": {
+    "mainUrlCount": 4410,
+    "byLocale": {
+      "en": 1545,
+      "ja": 1317,
+      "zh": 1548
+    },
+    "added": [],
+    "removed": [
+      "https://gachia.com/en/roco",
+      "https://gachia.com/en/roco/characters/blazehound",
+      "https://gachia.com/en/roco/characters/catapawn",
+      "https://gachia.com/en/roco/characters/dustler",
+      "https://gachia.com/en/roco/download",
+      "https://gachia.com/en/roco/guides/battle-system-guide",
+      "https://gachia.com/en/roco/guides/co-op-and-social-guide",
+      "https://gachia.com/en/roco/guides/jinies-guide",
+      "https://gachia.com/en/roco/guides/starter-guide",
+      "https://gachia.com/en/roco/tier-list",
+      "https://gachia.com/ja/roco",
+      "https://gachia.com/ja/roco/characters/blazehound",
+      "https://gachia.com/ja/roco/characters/catapawn",
+      "https://gachia.com/ja/roco/characters/dustler",
+      "https://gachia.com/ja/roco/download",
+      "https://gachia.com/ja/roco/tier-list",
+      "https://gachia.com/zh/roco",
+      "https://gachia.com/zh/roco/characters/blazehound",
+      "https://gachia.com/zh/roco/characters/catapawn",
+      "https://gachia.com/zh/roco/characters/dustler",
+      "https://gachia.com/zh/roco/download",
+      "https://gachia.com/zh/roco/guides/battle-system-guide",
+      "https://gachia.com/zh/roco/guides/co-op-and-social-guide",
+      "https://gachia.com/zh/roco/guides/jinies-guide",
+      "https://gachia.com/zh/roco/guides/starter-guide",
+      "https://gachia.com/zh/roco/tier-list"
+    ],
+    "actualWorkerEqualsPrerender": true,
+    "removalsExactlyMatchBoundedWithdrawal": true,
+    "reviewedReadableDetails": 57,
+    "reviewedReadablePublicEntries": 12,
+    "reviewedDetailsOrPublicEntriesSubmitted": 0,
+    "baselineType": "previous local compiled Worker, not current production HTTP",
+    "baselineFile": ".release-records/managed-content-171e539e-cab2-4791-b434-939e263a8c04/main-sitemap.xml",
+    "currentFile": ".release-records/managed-content-2e34596f-8f2d-4c9e-ab3c-a499ed60ba34/main-sitemap.xml",
+    "prerenderFile": "apps/web/.next/server/app/sitemaps/main/sitemap.xml.body",
+    "rootOwnersChanged": false
+  },
+  "verification": {
+    "dataTests": {
+      "passed": 125,
+      "files": 9,
+      "log": ".release-records/s2-8/data-test.log"
+    },
+    "webTests": {
+      "passed": 306,
+      "files": 67,
+      "log": ".release-records/s2-8/web-test.log"
+    },
+    "routerTests": {
+      "passed": 31,
+      "files": 3,
+      "log": ".release-records/s2-8/router-tests.log"
+    },
+    "releaseNodeTests": {
+      "passed": 104,
+      "log": ".release-records/s2-8/release-tests.log"
+    },
+    "retentionPythonTests": 9,
+    "xmlPythonTests": 8,
+    "typeChecks": {
+      "packages": [
+        "data",
+        "web",
+        "game-genshin",
+        "game-nte",
+        "game-lvmeng",
+        "game-azur-promilia"
+      ],
+      "passed": true,
+      "logPattern": ".release-records/s2-8/<package>-typecheck.log"
+    },
+    "dataValidation": {
+      "passed": true,
+      "log": ".release-records/s2-8/data-validation.log"
+    },
+    "manifestValidation": {
+      "passed": true,
+      "log": ".release-records/s2-8/manifests.log"
+    },
+    "lint": {
+      "errors": 0,
+      "warnings": 1,
+      "warning": "Existing auth-dialog react-hooks/exhaustive-deps warning",
+      "log": ".release-records/s2-8/web-lint.log"
+    },
+    "mainBuild": {
+      "passed": true,
+      "log": ".release-records/s2-8/build.log"
+    },
+    "wranglerDryRun": {
+      "passed": true,
+      "uploadKiB": 14032.32,
+      "gzipKiB": 2865.07,
+      "actualUpload": false,
+      "log": ".release-records/s2-8/dry-run.log"
+    },
+    "managedContent": {
+      "record": ".release-records/managed-content-2e34596f-8f2d-4c9e-ab3c-a499ed60ba34/result.json",
+      "browserCases": 220,
+      "rawJsonCases": 7,
+      "searchJsonCases": 3,
+      "realListDetailClicks": 18,
+      "viewports": [
+        1440,
+        390
+      ],
+      "kinds": [
+        "archive",
+        "backport",
+        "cn-map",
+        "codes",
+        "echo",
+        "echo-list",
+        "region",
+        "roco-characters-list",
+        "roco-events",
+        "roco-guides-list",
+        "roco-home",
+        "roco-public-review",
+        "roco-reviewed-character",
+        "roco-reviewed-guide",
+        "roco-version"
+      ]
+    },
+    "runtime": {
+      "record": ".release-records/rollout-web-4f7b44b5-f3b8-4075-a67d-913b39f0a634/result.json",
+      "status": "local_runtime_verified",
+      "browserCases": 18,
+      "httpCases": 32
+    },
+    "seoDiscovery": {
+      "record": ".release-records/seo-discovery-web-82ab5390-a95e-41cb-9c7d-dee4acc93ef7/result.json",
+      "status": "local_seo_discovery_verified",
+      "browserCases": 32
+    },
+    "productionNegativeGates": [
+      {
+        "command": "pnpm content:release-ready",
+        "exit": 1,
+        "reason": "two factual holds; blocked before build/upload",
+        "log": ".release-records/s2-8/negative-readiness.log"
+      },
+      {
+        "command": "pnpm --filter @gachia/web run deploy",
+        "exit": 1,
+        "reason": "two factual holds; blocked before build/upload",
+        "log": ".release-records/s2-8/negative-deploy.log"
+      },
+      {
+        "command": "pnpm --filter @gachia/web run upload",
+        "exit": 1,
+        "reason": "two factual holds; blocked before build/upload",
+        "log": ".release-records/s2-8/negative-upload.log"
+      }
+    ],
+    "correctedLocalTestAssumptions": [
+      {
+        "record": ".release-records/managed-content-b9bed2ab-fb07-4e37-9baa-c88c79dbc71c/result.json",
+        "reason": "A shared sidebar remains neutral navigation. Bound action-hub promotion absence to the guide directory container, not the enclosing main layout; preserve notice/metadata/card/content assertions."
+      }
+    ],
+    "actions": "not_run",
+    "cloudStaging": "not_performed",
+    "productionHttp": "not_performed",
+    "visualInspection": {
+      "viewed": [
+        ".release-records/managed-content-2e34596f-8f2d-4c9e-ab3c-a499ed60ba34/roco-public-review-download-390.png",
+        ".release-records/managed-content-2e34596f-8f2d-4c9e-ab3c-a499ed60ba34/roco-characters-list-390.png"
+      ],
+      "result": "Review notice/checklist/navigation remain readable. Legacy card remote images are intentionally blocked in the fixture, not verified as available or authentic."
+    }
+  },
+  "localArtifact": {
+    "root": "apps/web/.open-next",
+    "fileCount": 3146,
+    "fileBytes": 108521638,
+    "treeSha256": "e496095d10d901968993c3ed0bbf9e4f83e5a4857575c067ee1f73cbc6cb3995",
+    "hashAlgorithm": "SHA256 over sorted relative UTF-8 path + NUL + binary SHA256 of each file",
+    "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+    "note": "Entrypoint alone is not artifact identity. Includes server/assets/caches; no cloud seal/promotion implied."
+  },
+  "remaining": [
+    "All six legacy character identities/names/artwork/classifications require independent evidence before factual approval",
+    "Seventeen other guides and other public tools/registry descriptions remain unapproved; corrected lists do not approve their contents",
+    "Thirteen rewritten guides are editorial verification checklists, not official game facts",
+    "Genshin strict migration and all-owner cloud/rollback acceptance remain outstanding"
+  ],
+  "safety": {
+    "push": false,
+    "cloudDeployment": false,
+    "actionsTriggered": false,
+    "databaseChange": false,
+    "loginChange": false,
+    "topologyChange": false,
+    "businessOrHistoricalFileDeletion": false,
+    "originalDirtyCheckoutTouched": false
+  },
+  "evidenceDirectory": ".release-records/s2-8"
+}

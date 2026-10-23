@@ -37,5 +37,6 @@ it('excludes reviewed details in every locale without globally dropping readable
     expect(urls.has(`https://gachia.com/${locale}/roco/characters`)).toBe(true);
     expect(urls.has(`https://gachia.com/${locale}/roco/guides`)).toBe(true);
   }
-  expect(urls.has('https://gachia.com/en/roco/guides/starter-guide')).toBe(true);
+  expect(urls.has('https://gachia.com/en/roco/guides/starter-guide')).toBe(false);
+  expect(urls.has('https://gachia.com/en/roco/guides/global-player-feedback-roadmap-playbook')).toBe(true);
 });

@@ -1,0 +1,157 @@
+{
+  "reviewedAt": "2026-10-24",
+  "pages": {
+    "": {
+      "zh": {
+        "title": "国际服资料审核入口",
+        "description": "旧首页的已确认玩法、平台、精灵数量和培养承诺已撤回。这里保留本站资料的阅读与纠错入口，不发布新的国际服事实，也不代表测试取消。",
+        "checks": [
+          "先核对作品、区服、版本和来源身份；国服资料不能直接证明国际服规则。",
+          "六条角色记录是历史导航条目，不是已确认阵容总数；名称、形象和分类仍待核实。",
+          "攻略中的核验清单是编辑方法，不是已实装功能或官方开发路线图。"
+        ]
+      },
+      "en": {
+        "title": "Global Information Review Hub",
+        "description": "Earlier homepage promises about confirmed features, platforms, roster size and investment priorities are withdrawn. Keep reading the editorial corrections here; this is neither new global-game evidence nor a cancellation notice.",
+        "checks": [
+          "Check the exact game, region, version and source identity. CN information cannot establish global rules.",
+          "Six legacy character records are navigation entries, not a confirmed roster total. Names, appearance and classifications remain unverified.",
+          "Verification checklists explain editorial methods, not implemented features or an official development roadmap."
+        ]
+      },
+      "ja": {
+        "title": "国際版資料の確認入口",
+        "description": "旧トップの確認済み機能、対応機種、精霊数、育成推奨の約束を撤回しました。資料と訂正への入口は残しますが、新たな国際版の事実や中止告知ではありません。",
+        "checks": [
+          "作品、地域、版、出典の同一性を確認します。中国版の資料で国際版の規則は証明できません。",
+          "過去のキャラ記録六件はナビ用で、公式の総数ではありません。名前、外見、分類は未確認です。",
+          "確認リストは編集の方法で、実装済み機能や公式開発計画ではありません。"
+        ]
+      }
+    },
+    "tier-list": {
+      "zh": {
+        "title": "国际服评级撤回说明",
+        "description": "旧 A/B 级、战斗定位和初始精灵培养顺序缺乏可复核的国际服依据，现已撤回。暂不提供替代排名，也不从国服数值或历史六条记录推导强度。",
+        "checks": [
+          "评级需要明确客户端版本、玩法、队伍、装备、样本与可复现测试过程。",
+          "未知表现不等于低强度；空排名不能被自动填成 B 级或零分。",
+          "在身份、规则及评测条件核实前，不应据本站旧榜决定捕捉、付费或培养投入。"
+        ]
+      },
+      "en": {
+        "title": "Global Ratings Withdrawal",
+        "description": "The earlier A/B ratings, combat roles and starter investment order lacked reproducible global evidence and are withdrawn. No replacement ranking is provided, and CN values or six legacy records cannot establish performance.",
+        "checks": [
+          "Ratings need a client version, mode, team, equipment, sample and reproducible test method.",
+          "Unknown performance is not low performance. An empty ranking must not default to B or zero.",
+          "Do not use the old list for capture, payment or investment decisions before identity, rules and evaluation conditions are verified."
+        ]
+      },
+      "ja": {
+        "title": "国際版評価の撤回について",
+        "description": "旧A/B評価、戦闘役割、スターター育成順には再確認できる国際版の根拠がなく、撤回しました。代替順位は掲載せず、中国版の値や過去六件の記録から性能を推定しません。",
+        "checks": [
+          "評価にはクライアント版、モード、編成、装備、標本、再現可能な試験方法が必要です。",
+          "性能不明は低性能ではありません。空の評価をBやゼロで補わないでください。",
+          "同一性、規則、評価条件が確認できるまで、旧榜を捕獲、購入、育成判断に使わないでください。"
+        ]
+      }
+    },
+    "download": {
+      "zh": {
+        "title": "国际服下载信息审核",
+        "description": "旧下载页的官网认证、报名步骤、平台矩阵、配置和奖励承诺已撤回。本页不提供已验证的客户端或报名链接，不据此安装、付款或提交个人信息。",
+        "checks": [
+          "分别核对域名运营方、作品身份、地区商店页、发行方及安装包签名，不能仅凭同名判定官方身份。",
+          "测试资格、可下载状态、设备要求、跨平台进度和奖励条款需要各自的版本与来源。",
+          "没有核实链接不等于游戏不存在或没有公告；不要用搜索广告、镜像包或猜测商店 ID 填补缺口。"
+        ]
+      },
+      "en": {
+        "title": "Global Download Information Review",
+        "description": "Earlier official-site endorsements, signup steps, platform tables, specifications and reward promises are withdrawn. No verified client or signup link is provided here; do not install, pay or submit personal information based on this page.",
+        "checks": [
+          "Verify the domain operator, game identity, regional store listing, publisher and package signature separately. A matching name is not proof of official identity.",
+          "Eligibility, download availability, device requirements, cross-progression and rewards each need their own version and source.",
+          "Withholding an unverified link does not establish nonexistence or an absence of announcements. Do not fill the gap with ads, mirror packages or guessed store IDs."
+        ]
+      },
+      "ja": {
+        "title": "国際版DL情報の確認",
+        "description": "旧ページの公式サイト認定、応募手順、対応機種表、必要環境、報酬の約束を撤回しました。検証済みのクライアントや応募リンクは掲載せず、このページを根拠に導入、支払い、個人情報送信をしないでください。",
+        "checks": [
+          "ドメイン運営者、作品、地域ストア、配信元、パッケージ署名を個別に確認します。同名だけでは公式性を証明できません。",
+          "参加資格、DL可否、端末要件、進行共有、報酬には、それぞれ版と出典が必要です。",
+          "リンクの確認保留は不存在や未発表の証明ではありません。広告、転載パッケージ、推測IDで補わないでください。"
+        ]
+      }
+    },
+    "map": {
+      "zh": {
+        "title": "国际服地图资料审核",
+        "description": "旧地图入口对捕捉路线、精灵分布、法杖机制和早测培养的确定推荐已撤回。本页不提供已核实坐标或可用互动地图，不把国服地图直接当作国际服地图。",
+        "checks": [
+          "地图点位需要对应地区、客户端版本、坐标系和可复核采集记录。",
+          "捕捉、刷新、材料和进度继承需要分别验证；截图或同名地点不能证明所有机制一致。",
+          "暂不列点位不表示对应地区或内容不存在；核实前不按旧路线安排资源和游玩时间。"
+        ]
+      },
+      "en": {
+        "title": "Global Map Information Review",
+        "description": "Earlier recommendations for capture routes, creature distribution, staff mechanics and beta investment are withdrawn. No verified coordinates or working interactive map are provided here, and a CN map cannot simply stand in for a global map.",
+        "checks": [
+          "Map points need a region, client version, coordinate system and reproducible collection record.",
+          "Verify capture, respawn, materials and progress carryover separately. Screenshots or matching place names cannot establish all mechanics.",
+          "Withheld points do not prove a region or feature does not exist. Do not plan resources or play time around old routes before verification."
+        ]
+      },
+      "ja": {
+        "title": "国際版マップ資料の確認",
+        "description": "旧入口の捕獲ルート、精霊分布、杖の仕組み、テスト育成の推奨を撤回しました。確認済み座標や利用可能なインタラクティブ地図は掲載せず、中国版を国際版の代わりにしません。",
+        "checks": [
+          "地点には地域、クライアント版、座標系、再確認可能な採取記録が必要です。",
+          "捕獲、再出現、素材、進行引継ぎを個別に確認します。画像や同名地名だけで全規則の一致は証明できません。",
+          "地点の掲載保留は地域や機能の不存在を意味しません。確認前に旧ルートで資源や時間を計画しないでください。"
+        ]
+      }
+    }
+  },
+  "lists": {
+    "characters": {
+      "zh": {
+        "title": "洛克国际服角色历史条目 — 待核实导航",
+        "description": "保留洛克国际服角色历史条目供导航；名称、图片、属性与稀有度不代表已核实的国际服资料，不提供培养或强度结论。",
+        "notice": "条目数量只是本站历史记录数，不是官方图鉴总数。卡片图片、名称与分类尚未完成独立身份核验；详情已撤回未经核实的技能、数值与行为断言。请勿用于培养决策。"
+      },
+      "en": {
+        "title": "Roco Global Legacy Character Entries — Review Directory",
+        "description": "Browse legacy Roco Global entries for navigation only. Names, artwork, elements and rarity are not verified international data; no build or strength advice is offered.",
+        "notice": "The count is our legacy record count, not an official roster total. Card artwork, names and classifications lack independent identity verification. Details withdraw unsupported skill, stat and behavior claims. Do not use them for investment decisions."
+      },
+      "ja": {
+        "title": "ロコ国際版キャラ履歴 — 確認中の索引",
+        "description": "国際版キャラの過去の項目を閲覧用に保存。名称・画像・属性・レアリティは検証済み国際版資料ではなく、育成や強さの結論を示しません。",
+        "notice": "件数は本站の過去の記録数であり、公式図鑑の総数ではありません。画像・名称・分類の独立した本人確認は未完了です。詳細では未確認のスキル・数値・行動の断定を撤回しました。育成判断には使用しないでください。"
+      }
+    },
+    "guides": {
+      "zh": {
+        "title": "洛克国际服资料审核目录 — 核验清单与历史文章",
+        "description": "洛克国际服资料审核目录，优先列出已纠错的核验清单，保留其余历史文章。清单不是官方确认，其他文章仍待审查。",
+        "notice": "推荐区仅展示已撤回确定断言的编辑核验清单，不代表游戏事实已确认。其余历史文章仍在审核，不应据此报名、付款、下载或决定培养；文章数量不代表官方内容规模。"
+      },
+      "en": {
+        "title": "Roco Global Review Directory — Checklists and Legacy Articles",
+        "description": "A Roco Global review directory prioritizing corrected verification checklists while retaining legacy articles. Checklists are not official confirmation; other articles remain under review.",
+        "notice": "Featured items are editorial checklists with definite claims withdrawn, not confirmed game facts. Other legacy articles remain under review. Do not rely on them for signup, payment, downloads or investment; article counts do not measure official content."
+      },
+      "ja": {
+        "title": "ロコ国際版資料の確認索引 — チェックリストと過去記事",
+        "description": "訂正済みの確認リストを優先し、過去の記事を保存する国際版資料の索引。リストは公式確認ではなく、他の記事は引き続き審査中です。",
+        "notice": "注目欄は断定を撤回した編集上の確認リストであり、ゲームの確定情報ではありません。他の過去記事は審査中です。応募・支払い・DL・育成の根拠にしないでください。記事数は公式コンテンツの規模を示しません。"
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@ import { Link } from '@/lib/i18n/navigation';
 import type { GuideListEntry } from '@/lib/game-data/guides';
 import { getGuideListData } from '@/lib/game-data/guides';
 import { buildLocalizedAlternates, ensureMetaLength, getEntryCurrentVersion, getEntryUpdatedAt } from '@/lib/seo-metadata';
+import { ROCO_LIST_REVIEW } from '@/lib/roco-public-review';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -19,7 +20,6 @@ const GUIDE_DESC: Record<string, Record<string, string>> = {
   endfield: { zh: '明日方舟：终末地攻略百科，当前优先整理国服丹青渡官方更新、寻访活动与工业系统，Pioneer Test另作历史档案；旧战斗、抽卡和活动攻略均标明测试期资料边界。', en: 'Arknights: Endfield guides prioritize CN Danqingdu official updates, searches, events and industry systems, with Pioneer Test kept historical; older combat, gacha, and event pages are clearly scoped as test-period references.', ja: 'アークナイツ：エンドフィールド攻略百科。中国版丹青渡告知・尋訪・イベント・工業更新を優先し、Pioneer Testは履歴として区別、、旧戦闘・ガチャ・イベント攻略はテスト期の参考として明示します。' },
   sea: { zh: '遗忘之海攻略百科，提供公测中心、下载安装、新手开荒、捏脸、云捏脸、配置要求和版本专题，帮助你先抓住最重要的信息，再继续深入浏览。', en: 'Sea of Remnants guides with an open beta center, download/install help, beginner routes, face sculpting, cloud sculpting, PC requirements, version hubs, and follow-up pages that help you catch the important basics before going deeper.', ja: 'シー・オブ・レムナンツ攻略百科。CBT特集、DL/インストール、初心者ルート、顔作成、クラウド作成、PC環境、版本特集をまとめています。' },
   skjh: { zh: '失控进化攻略百科，整理新手开荒、基地建设、资源科技树、基因流派、武器和公测福利，适合从版本总览一路看到账户养成。', en: 'Ashfall Evolution guides covering beginner routes, base building, resource tech, gene builds, weapons, and launch rewards so players can plan progression end to end.', ja: '失控進化攻略百科。初心者ルート、拠点建築、資源テック、遺伝子ビルド、武器、公測報酬をまとめて案内します。' },
-  roco: { zh: '《洛克王国:世界》国际服攻略百科，聚焦 CBT 报名注册、版本时间线、下载安装、精灵图鉴和兑换码，帮助你在 10 月首测前做好准备。', en: 'Roco Kingdom (Global) guides focused on CBT sign-up, version timeline, download & install, Jinie database, and redeem codes to get you ready before the October playtest.', ja: 'ロコキングダム（国際版）攻略百科。CBT登録、版本タイムライン、DL/インストール、ジニー図鑑、交換コードをまとめ、10月のテストに備えます。' },
   'roco-cn': { zh: '《洛克王国:世界》国服攻略百科，覆盖版本专题、赛季活动、精灵图鉴、养成攻略与兑换码，内容陆续补充中。', en: 'Roco Kingdom (CN) guides covering version hubs, seasons, the Jinie database, build guides, and redeem codes — content is being added.', ja: 'ロコキングダム（中国版）攻略百科。版本特集、シーズン、ジニー図鑑、育成、交換コードをカバーし、順次追加中。' },
   aniimo: { zh: '伊莫 S1 攻略百科，覆盖新手开荒、虹光研究、家园资源、地图区域、Aniimo 图鉴、兑换码状态与当前客户端核验。', en: 'Aniimo S1 guides for new-player routes, Rainbow research, Homeland resources, regions, the Aniimo database, code status, and live-client verification.', ja: 'Aniimo S1攻略百科。初心者ルート、虹光研究、ホームランド資源、地域、Aniimo図鑑、コード状態、現行クライアント確認を整理します。' },
   'azur-promilia': { zh: '蓝色星原：旅谣攻略百科，优先整理官方信息核对、角色、武器、版本与兑换码状态。', en: 'Azur Promilia guides focused on official-information checks, characters, weapons, versions, and code status.', ja: 'アズールプロミリア攻略百科。公式情報の確認、キャラクター、武器、バージョン、コード状態を整理します。' },
@@ -36,7 +36,7 @@ const FEATURED_GUIDE_IDS: Partial<Record<GameId, string[]>> = {
   endfield: ['danqingdu-cn-update-guide', 'blueprint-aic-factory-guide', 'pioneer-test-post-test-route'],
   sea: ['open-beta-version-center', 'launch-day-guide', 'download-install-guide'],
   skjh: ['week-one-live-ops-overview', 'anti-cheat-reporting-guide', 'custom-mode-community-server-guide'],
-  roco: ['cbt-registration-guide', 'global-cn-content-roadmap', 'global-launch-readiness-checklist', 'global-cbt-to-launch-decision-gates', 'global-player-feedback-roadmap-playbook', 'global-onboarding-learning-recovery-playbook', 'global-player-discovery-codex-playbook', 'global-change-communication-playbook', 'global-fair-play-integrity-playbook', 'global-accessibility-cross-device-playbook', 'global-economy-monetization-fairness-playbook', 'global-returning-player-event-legacy-playbook', 'global-first-30-days-pve-plan', 'global-days-31-90-season-event-plan', 'global-localization-cultural-event-playbook', 'global-player-support-trust-playbook', 'global-social-safety-guild-playbook', 'global-cn-release-governance', 'global-live-ops-metrics-experiments', 'starter-guide', 'what-is-roco-kingdom', 'platforms-and-download-guide'],
+  roco: ["global-cn-content-roadmap","cbt-registration-guide","starter-guide","what-is-roco-kingdom","platforms-and-download-guide","jinies-guide","battle-system-guide","co-op-and-social-guide","pre-registration-rewards-faq","is-roco-kingdom-free-to-play","roco-kingdom-release-date-guide","roco-kingdom-vs-pokemon","roco-kingdom-crossplay-guide"],
   'roco-cn': ['daily-events-merchant-guide', 'redeem-codes-cn', 's2-season-guide', 'starter-guide-cn'],
   aniimo: ['s1-new-player-route', 'rainbow-aniimo-guide', 'homeland-resource-guide', 'map-regions', 'codes-rewards'],
   'azur-promilia': ['official-information-checklist'],
@@ -204,64 +204,7 @@ const ROCO_ACTION_LINKS: Record<'roco' | 'roco-cn', Array<{
   label: Record<SupportedLocale, string>;
   description: Record<SupportedLocale, string>;
 }>> = {
-  roco: [
-    {
-      id: 'cbt',
-      href: '/roco/events',
-      label: {
-        zh: 'CBT 活动日历',
-        en: 'CBT events calendar',
-        ja: 'CBTイベント日程',
-      },
-      description: {
-        zh: '把报名窗口、开测时间、奖励节点和结束状态放在一起看。',
-        en: 'Review signup windows, test dates, reward milestones, and event status together.',
-        ja: '応募期間、テスト日、報酬节点、状態をまとめて確認します。',
-      },
-    },
-    {
-      id: 'starter',
-      href: '/roco/type-chart',
-      label: {
-        zh: '属性克制速查',
-        en: 'Type matchup chart',
-        ja: 'タイプ相性早見',
-      },
-      description: {
-        zh: '战斗、抓宠和配队前，先查攻击属性与防御属性的克制关系。',
-        en: 'Check attack and defense type matchups before battles, catching, and team planning.',
-        ja: '戦闘、捕獲、編成前に攻撃と防御タイプの相性を確認します。',
-      },
-    },
-    {
-      id: 'map',
-      href: '/roco/eggs',
-      label: {
-        zh: '精灵蛋与孵化',
-        en: 'Eggs and hatching',
-        ja: '卵と孵化',
-      },
-      description: {
-        zh: '先整理蛋种、预约奖励和 CBT 后需要核验的孵化信息。',
-        en: 'Track egg types, preregistration rewards, and hatching notes to verify after CBT.',
-        ja: '卵種、事前登録報酬、CBT後に確認する孵化情報を整理します。',
-      },
-    },
-    {
-      id: 'codes',
-      href: '/roco/merchant',
-      label: {
-        zh: '商人刷新观察',
-        en: 'Merchant refresh watch',
-        ja: '商人更新ウォッチ',
-      },
-      description: {
-        zh: '国际服开测后优先核验捕捉球、经验材料和周期商店。',
-        en: 'Track capture pods, EXP items, and shop rotations once the CBT opens.',
-        ja: 'CBT開始後に捕獲、経験値素材、ショップ周期を確認します。',
-      },
-    },
-  ],
+  roco: [],
   'roco-cn': [
     {
       id: 'season',
@@ -336,7 +279,7 @@ export async function generateMetadata({
   const categoryLabel = CATEGORY_LABELS.guides?.[locale] ?? 'Guides';
   const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/guides`, LOCALES);
 
-  const desc = GUIDE_DESC[gameId]?.[locale] ?? `${gameName} ${categoryLabel} with beginner tips, builds, teams, and practical walkthroughs`;
+  const desc = (gameId === 'roco' ? ROCO_LIST_REVIEW.guides[locale].description : GUIDE_DESC[gameId]?.[locale]) ?? `${gameName} ${categoryLabel} with beginner tips, builds, teams, and practical walkthroughs`;
   const title = gameId === 'genshin'
     ? locale === 'zh'
       ? '原神攻略大全 — 当前祈愿、Nod-Krai、月反应、配队与材料'
@@ -350,11 +293,7 @@ export async function generateMetadata({
           ? '鳴潮攻略 — バナー、エコー、スタミナ、編成、素材'
           : 'WuWa Guides — Next Banner, Echo Builds, Farming & Materials'
       : gameId === 'roco'
-        ? locale === 'zh'
-          ? '洛克王国世界国际服攻略 — CBT报名、地图、兑换码与精灵'
-          : locale === 'ja'
-            ? 'ロコキングダム国際版攻略 — CBT・地図・コード・ジニー'
-            : 'Roco Kingdom Global Guides — CBT, Map, Codes & Jinies'
+        ? ROCO_LIST_REVIEW.guides[locale].title
       : gameId === 'roco-cn'
         ? locale === 'zh'
           ? '洛克王国世界国服攻略 — S2活动、兑换码、地图与精灵'
@@ -373,7 +312,7 @@ export async function generateMetadata({
         ? `${gameName}攻略百科 — ガイド一覧`
         : `${gameName} Guides — Builds, Teams & Tips`;
 
-  const description = ensureMetaLength(desc, locale);
+  const description = gameId === 'roco' ? desc : ensureMetaLength(desc, locale);
 
   return {
     title,
@@ -1751,7 +1690,7 @@ async function RocoGuides({ locale, gameId }: { locale: SupportedLocale; gameId:
   return (
     <div>
       <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {CATEGORY_LABELS.guides?.[locale] ?? 'Guides'}
+        {gameId === 'roco' ? ROCO_LIST_REVIEW.guides[locale].title : CATEGORY_LABELS.guides?.[locale] ?? 'Guides'}
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
         {locale === 'zh'
@@ -1761,7 +1700,9 @@ async function RocoGuides({ locale, gameId }: { locale: SupportedLocale; gameId:
           : `${guides.length} guides`}
       </p>
 
-      <section className="mb-8">
+      {gameId === 'roco' && <aside data-roco-list-review="guides" className="mb-6 rounded-md border border-game-border bg-game-surface p-4 text-sm leading-relaxed text-game-text-muted">{ROCO_LIST_REVIEW.guides[locale].notice}</aside>}
+
+      {actionLinks.length > 0 && <section className="mb-8">
         <div className="mb-4 flex items-center justify-between gap-4">
           <h2 className="text-lg font-semibold text-game-text">
             {locale === 'zh' ? '今日行动入口' : locale === 'ja' ? '今日の行動入口' : 'Daily Action Hub'}
@@ -1790,7 +1731,7 @@ async function RocoGuides({ locale, gameId }: { locale: SupportedLocale; gameId:
             </Link>
           ))}
         </div>
-      </section>
+      </section>}
 
       {featuredGuides.length > 0 && (
         <section className="mb-8">
