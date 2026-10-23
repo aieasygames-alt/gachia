@@ -2,12 +2,13 @@
 
 import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
-import { THREE_GAME_STATUS_CARDS } from '@/lib/three-game-status';
+import { THREE_GAME_STATUS_CARDS, THREE_GAME_STATUS_LABELS } from '@/lib/three-game-status';
+import { Link } from '@/lib/i18n/navigation';
 
 export function ThreeGameNextStep() {
   const [selectedId, setSelectedId] = useState(THREE_GAME_STATUS_CARDS[0]!.id);
   const selected = THREE_GAME_STATUS_CARDS.find((item) => item.id === selectedId) ?? THREE_GAME_STATUS_CARDS[0]!;
-  const stage = selected.status === 'live' ? '已上线' : selected.status === 'test' ? '测试中' : selected.status === 'post-test' ? '测试已结束' : '待开服';
+  const stage = THREE_GAME_STATUS_LABELS[selected.status];
   const prompt = selected.status === 'live'
     ? '先确认官方客户端与账号，再进入首日路线和系统资料。'
     : selected.status === 'test'
@@ -27,7 +28,7 @@ export function ThreeGameNextStep() {
     <div className="mt-5 grid gap-3 md:grid-cols-3" role="radiogroup" aria-label="选择游戏">
       {THREE_GAME_STATUS_CARDS.map((item) => {
         const active = item.id === selected.id;
-        const label = item.status === 'live' ? '已上线' : item.status === 'test' ? '测试中' : item.status === 'post-test' ? '测试已结束' : '待开服';
+        const label = THREE_GAME_STATUS_LABELS[item.status];
         return <button key={item.id} type="button" role="radio" aria-checked={active} onClick={() => setSelectedId(item.id)} className={`min-h-24 border p-4 text-left transition-colors ${active ? 'border-game-primary bg-game-primary/10' : 'border-game-border bg-game-surface-alt hover:border-game-primary/60'}`}>
           <span className="block text-xs font-semibold text-game-primary">{label}</span>
           <span className="mt-1 block text-sm font-semibold text-game-text">{item.title}</span>
@@ -40,9 +41,9 @@ export function ThreeGameNextStep() {
         <h3 className="mt-1 text-lg font-semibold text-game-text">{selected.action}</h3>
         <p className="mt-2 max-w-2xl text-sm leading-6 text-game-text-muted">{prompt} {selected.summary}</p>
       </div>
-      <a href={selected.href} className="inline-flex items-center justify-center gap-2 rounded-md bg-game-primary px-4 py-3 text-sm font-semibold text-game-bg transition-opacity hover:opacity-90">
+      <Link href={selected.href} className="inline-flex items-center justify-center gap-2 rounded-md bg-game-primary px-4 py-3 text-sm font-semibold text-game-bg transition-opacity hover:opacity-90">
         打开行动页 <ArrowRight className="h-4 w-4" aria-hidden="true" />
-      </a>
+      </Link>
     </div>
   </section>;
 }

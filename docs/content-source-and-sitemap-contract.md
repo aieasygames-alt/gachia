@@ -1,6 +1,6 @@
 # 内容源与 Sitemap 契约
 
-适用版本：S2.2。本契约目前覆盖主站 sitemap 所有权、遗忘之海攻略派生物及三对受管原始镜像的一致性，不表示全站内容事实已核验。
+适用版本：S2.3。本契约覆盖主站 sitemap 所有权、Sea 派生物、三对受管原始镜像、原神攻略语言决策及五类平台页面元数据；不表示全站内容事实或翻译质量已核验。
 
 ## 1. 公开发现入口
 
@@ -89,7 +89,36 @@ pnpm --filter @gachia/data verify:manifests
 
 兑换码的历史 active 状态还需通过到期日判断；日期型到期值按 UTC 当日结束，带时区时间保留其语义。公开日不是核验日，不能用 revealedAt 或固定回退日期显示“最后核验”。历史分类与工程同源检查均不证明当前兑换成功。
 
-## 5. 后续推广与回退
+## 5. 原神攻略语言契约
+
+独立 owner 使用 `apps/game-genshin/lib/guide-policy.ts`，统一决定详情阅读语言、metadata、hreflang、FAQ 与独立 sitemap。覆盖范围仅为攻略，不自动改变角色、武器、圣遗物等资料页的语言策略。
+
+- 标题、摘要非空且对应正文去空白后至少 80 字符，才具备该语言的工程索引资格。只有日文标题/摘要不算完整翻译；长度检查也不等于翻译质量、时效或事实审批。
+- 缺译详情保留原 URL 和 200 阅读，显示请求语言的原文提示及原文页面入口，整段标题/摘要/正文优先一致回退英文，其次其他完整语言，不拼接“日文摘要 + 未标识英文正文”。正文、FAQ 区域及 Article/WebPage 的 inLanguage 声明实际阅读语言。
+- production 缺译页为 `noindex, follow`、自身 canonical；其他完整语言的 hreflang 不宣称这个缺译页是译文。完整翻译页保留正常索引资格。非 production 一律 `noindex, nofollow`，不弱化原有预览保护。
+- sitemap 不再提交缺译详情，但列表仍保留并标识原文回退，避免删除玩家阅读入口。日文 FAQ 仅输出有完整日文问答的条目，页面与 FAQPage 使用同一集合；不在日文正文下冒充日文显示英文 FAQ。
+
+S2.3 基线 31 篇攻略：zh/en 各 31 篇，ja 仅 `lightrace-wish-phase-ii-faq` 具备正文。独立 sitemap 源码清单 1,602 → 1,572，仅移出 30 条缺译日文详情；本地 Worker 与 Next 预渲染的 URL 集合严格相等。公开 Router 入口仍为 `/sitemaps/genshin/index.xml`，本地独立 Worker 的验收入口为 `/sitemap.xml`，未改 Router 或部署声明。
+
+```sh
+# 先完成对应应用 OpenNext 构建；原神构建需显式 production 模式并准备双路径静态资产。
+pnpm test:seo-discovery:local web
+pnpm test:seo-discovery:local game-genshin
+node scripts/runtime-rollout-smoke.mjs web
+node scripts/runtime-rollout-smoke.mjs game-genshin
+```
+
+新 discovery 工具只接受上述应用参数，内部启动隔离 loopback Worker，不接受远程 origin；通过标准 XML 解析器核对实际清单，并在 1440/390px 验证缺译、部分译文、完整译文、canonical/robots/hreflang、实际正文和 FAQ。证据位于 `.release-records/seo-discovery-*`。原有远程 `genshin-seo-parity` 是旧版本等价迁移工具，strict 模式可能因这次有意的缺译页 title/description 改动失败；不能关闭 strict 或重新加入假译文来获得通过。真实发布须审查差异并建立相应候选基线，本地工具不替代云端发布验收。
+
+## 6. 平台元数据与首页路径
+
+首页、关于、联系、隐私、条款通过 `apps/web/lib/platform-metadata.ts` 提供自身 canonical、三语言/x-default、对应页面的 Open Graph/Twitter 标题描述和 URL，避免继承中文根级分享文案。原有正文、政策日期及 URL 不变。
+
+三游戏状态数据的 href 为不含语言前缀的站内路径，由国际化 Link 添加一次 locale；首页、更新雷达和下一步选择器使用同一状态标签表，post-test 必须显示“测试已结束”，不得落入“待开服”。独立 owner 仍复用 S1 的原生跨 Worker 导航保护；不为修重复前缀而修改整个 Link 的语义。
+
+主站 CI 在安装浏览器之后、封存产物之前运行 `pnpm test:seo-discovery:local web`；只复用现有构建，不新增构建任务或云端环境。未在本批启动 Actions。原神的本地 discovery 命令已可复用，但尚未接管历史远程迁移工作流。
+
+## 7. 后续推广与回退
 
 - 90 对原始 JSON 目前 87 对一致、3 对待审：roco 角色、wuwa 声骸与区域；保留原始审计基线，不把工程归并当成事实重新认证。skjh 公开镜像中的四篇运营修订已完整回迁源，未以旧源覆盖。
 - 扩展下一游戏前，先确认官方事实/区服/日期和退役 URL，再把源、镜像、页面语言与 sitemap 作为同批变更验收。

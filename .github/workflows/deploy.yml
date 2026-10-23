@@ -162,6 +162,10 @@ jobs:
         if: steps.scope.outputs.scope != 'admin'
         run: pnpm exec playwright install --with-deps chromium
 
+      - name: Verify compiled platform discovery metadata
+        if: steps.scope.outputs.scope != 'admin'
+        run: pnpm test:seo-discovery:local web
+
       - name: Start web server for browser tests
         if: steps.scope.outputs.scope != 'admin'
         run: |

@@ -9,7 +9,8 @@ describe('three-game update radar', () => {
       expect(item.focus.title).not.toBe('');
       expect(item.focus.description).not.toBe('');
       expect(item.focus.checklist).toHaveLength(3);
-      expect(item.href).toMatch(/^\/zh\//);
+      expect(item.href).toMatch(/^\/(aniimo|azur-promilia|lvmeng)\//);
+      expect(item.href).not.toMatch(/^\/(zh|en|ja)\//);
     }
   });
 });

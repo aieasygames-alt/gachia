@@ -1,0 +1,669 @@
+{
+  "schemaVersion": 1,
+  "phase": "S2.3",
+  "baselineCommit": "11a3e1e",
+  "recordedAt": "2026-10-23T16:24:20.691332+00:00",
+  "status": "local_verified_not_deployed",
+  "cloudVerification": "not_performed",
+  "externalOfficialFactVerification": "not_performed",
+  "scope": [
+    "Genshin guide translation/readability/indexability contract",
+    "platform home/about/contact/privacy/terms metadata",
+    "Chinese status-card localization and post-test labels"
+  ],
+  "sitemap": {
+    "genshin": {
+      "baselineKind": "committed-source-evaluation-not-production-capture",
+      "publicRouterPath": "/sitemaps/genshin/index.xml",
+      "localWorkerPath": "/sitemap.xml",
+      "before": 1602,
+      "after": 1572,
+      "nextPrerenderCount": 1572,
+      "urlSetsEqual": true,
+      "added": [],
+      "removed": [
+        "https://gachia.com/ja/genshin/guides/abyss-endgame-guide",
+        "https://gachia.com/ja/genshin/guides/abyss-general-strategy",
+        "https://gachia.com/ja/genshin/guides/abyss-team-building",
+        "https://gachia.com/ja/genshin/guides/artifact-guide",
+        "https://gachia.com/ja/genshin/guides/banner-schedule-guide",
+        "https://gachia.com/ja/genshin/guides/boss-strategy-guide",
+        "https://gachia.com/ja/genshin/guides/build-furina",
+        "https://gachia.com/ja/genshin/guides/build-hu-tao",
+        "https://gachia.com/ja/genshin/guides/build-kazuha",
+        "https://gachia.com/ja/genshin/guides/build-nahida",
+        "https://gachia.com/ja/genshin/guides/build-raiden-shogun",
+        "https://gachia.com/ja/genshin/guides/character-progression-guide",
+        "https://gachia.com/ja/genshin/guides/cross-game-comparison-guide",
+        "https://gachia.com/ja/genshin/guides/elemental-reaction-guide",
+        "https://gachia.com/ja/genshin/guides/exploration-guide",
+        "https://gachia.com/ja/genshin/guides/farming-route-guide",
+        "https://gachia.com/ja/genshin/guides/gacha-system-guide",
+        "https://gachia.com/ja/genshin/guides/luna-viii-sandrone-guide",
+        "https://gachia.com/ja/genshin/guides/lunar-reaction-guide",
+        "https://gachia.com/ja/genshin/guides/meta-teams-guide",
+        "https://gachia.com/ja/genshin/guides/natlan-exploration-guide",
+        "https://gachia.com/ja/genshin/guides/nod-krai-cryoculus-phase-ii-checklist",
+        "https://gachia.com/ja/genshin/guides/nod-krai-guide",
+        "https://gachia.com/ja/genshin/guides/phase-ii-columbina-raiden-pull-plan",
+        "https://gachia.com/ja/genshin/guides/quick-start-guide",
+        "https://gachia.com/ja/genshin/guides/resin-planning-guide",
+        "https://gachia.com/ja/genshin/guides/snezhnaya-version-guide",
+        "https://gachia.com/ja/genshin/guides/teapot-guide",
+        "https://gachia.com/ja/genshin/guides/v6-7-version-guide",
+        "https://gachia.com/ja/genshin/guides/weapon-enhancement-guide"
+      ],
+      "removalReason": "No complete Japanese guide body; reading URL retained with explicit source-language notice and noindex/follow. Not a deletion or redirect.",
+      "guideLocales": {
+        "zh": 31,
+        "en": 31,
+        "ja": 1
+      },
+      "allByLocale": {
+        "zh": 534,
+        "en": 534,
+        "ja": 504
+      },
+      "xmlSha256": "1c485f2463ca9510b655394f5371ba48e7bd700fe775b867d8625a0a46bf25c8"
+    },
+    "main": {
+      "before": 4464,
+      "after": 4464,
+      "urlSetUnchanged": true,
+      "nextPrerenderUrlSetEqual": true,
+      "xmlAudit": {
+        "schemaVersion": 1,
+        "status": "local_compiled_worker_xml_verified",
+        "cloudVerification": "not_performed",
+        "children": [
+          "https://gachia.com/sitemaps/main/sitemap.xml",
+          "https://gachia.com/sitemaps/genshin/index.xml",
+          "https://gachia.com/sitemaps/nte/index.xml",
+          "https://gachia.com/sitemaps/azur-promilia/index.xml",
+          "https://gachia.com/sitemaps/lvmeng/index.xml"
+        ],
+        "dedicatedOwners": [
+          "azur-promilia",
+          "genshin",
+          "lvmeng",
+          "nte"
+        ],
+        "mainUrlCount": 4464,
+        "mainByLocale": {
+          "zh": 1570,
+          "en": 1567,
+          "ja": 1327
+        },
+        "indexXmlSha256": "1b45434d7ab02973b799c76fd6b8b38b9d131461fbeeee67eaf6a5fe854a3e80",
+        "mainXmlSha256": "5899ec20337ed3d2e324989bf6ea5bfca71d517e9334065fb5c92e57b1320e96"
+      }
+    }
+  },
+  "rawContent": {
+    "unchangedFromBaseline": true,
+    "pairedFiles": 90,
+    "equalPairs": 87,
+    "remainingDrift": [
+      "packages/data/games/roco/raw-characters.json",
+      "packages/data/games/wuwa/raw-echoes.json",
+      "packages/data/games/wuwa/raw-regions.json"
+    ],
+    "factualFreshnessRecertified": false
+  },
+  "tests": {
+    "web": 288,
+    "data": 65,
+    "router": 31,
+    "releaseNode": 100,
+    "releasePythonRetention": 9,
+    "releasePythonXml": 8,
+    "webTypecheck": "passed",
+    "genshinTypecheck": "passed",
+    "webLint": {
+      "errors": 0,
+      "preexistingWarnings": 1
+    },
+    "manifests": "passed",
+    "workflowYaml": "parsed; gate after browser installation and before artifact sealing",
+    "builds": {
+      "web": "passed",
+      "game-genshin": "passed"
+    },
+    "dryRuns": {
+      "web": {
+        "assets": 1425,
+        "uploadKiB": 13931.82,
+        "gzipKiB": 2830.72
+      },
+      "game-genshin": {
+        "assets": 151,
+        "uploadKiB": 8713.76,
+        "gzipKiB": 1338.72
+      }
+    }
+  },
+  "discoveryAcceptance": {
+    "web": {
+      "app": "web",
+      "status": "local_seo_discovery_verified",
+      "cloudVerification": "not_performed",
+      "startedAt": "2026-10-23T16:22:14.462Z",
+      "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+      "acceptance": {
+        "sitemapUrls": 4464,
+        "browser": [
+          {
+            "path": "/zh",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/zh/about",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/zh/contact",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/zh/privacy",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/zh/terms",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/en",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/en/about",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/en/contact",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/en/privacy",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/en/terms",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/ja",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/ja/about",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/ja/contact",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/ja/privacy",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/ja/terms",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/zh/update-radar",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/zh",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/zh/about",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/zh/contact",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/zh/privacy",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/zh/terms",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/en",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/en/about",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/en/contact",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/en/privacy",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/en/terms",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/ja",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/ja/about",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/ja/contact",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/ja/privacy",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/ja/terms",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/zh/update-radar",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          }
+        ]
+      },
+      "finishedAt": "2026-10-23T16:22:37.508Z"
+    },
+    "genshin": {
+      "app": "game-genshin",
+      "status": "local_seo_discovery_verified",
+      "cloudVerification": "not_performed",
+      "startedAt": "2026-10-23T16:22:38.160Z",
+      "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+      "acceptance": {
+        "sitemapUrls": 1572,
+        "browser": [
+          {
+            "path": "/zh/genshin/guides",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/zh/genshin/guides/banner-schedule-guide",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/zh/genshin/guides/phase-ii-columbina-raiden-pull-plan",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/zh/genshin/guides/lightrace-wish-phase-ii-faq",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/en/genshin/guides",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/en/genshin/guides/banner-schedule-guide",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/en/genshin/guides/phase-ii-columbina-raiden-pull-plan",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/en/genshin/guides/lightrace-wish-phase-ii-faq",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/ja/genshin/guides",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/ja/genshin/guides/banner-schedule-guide",
+            "width": 1440,
+            "status": 200,
+            "fallback": true,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/ja/genshin/guides/phase-ii-columbina-raiden-pull-plan",
+            "width": 1440,
+            "status": 200,
+            "fallback": true,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/ja/genshin/guides/lightrace-wish-phase-ii-faq",
+            "width": 1440,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/zh/genshin/guides",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/zh/genshin/guides/banner-schedule-guide",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/zh/genshin/guides/phase-ii-columbina-raiden-pull-plan",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/zh/genshin/guides/lightrace-wish-phase-ii-faq",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/en/genshin/guides",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/en/genshin/guides/banner-schedule-guide",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/en/genshin/guides/phase-ii-columbina-raiden-pull-plan",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/en/genshin/guides/lightrace-wish-phase-ii-faq",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/ja/genshin/guides",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/ja/genshin/guides/banner-schedule-guide",
+            "width": 390,
+            "status": 200,
+            "fallback": true,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/ja/genshin/guides/phase-ii-columbina-raiden-pull-plan",
+            "width": 390,
+            "status": 200,
+            "fallback": true,
+            "errors": 0,
+            "failedAssets": 0
+          },
+          {
+            "path": "/ja/genshin/guides/lightrace-wish-phase-ii-faq",
+            "width": 390,
+            "status": 200,
+            "fallback": false,
+            "errors": 0,
+            "failedAssets": 0
+          }
+        ]
+      },
+      "finishedAt": "2026-10-23T16:22:54.153Z"
+    }
+  },
+  "runtimeRegression": [
+    {
+      "app": "web",
+      "httpCases": 32,
+      "browserCases": 18,
+      "status": "local_runtime_verified",
+      "evidence": ".release-records/rollout-web-25e3532b-38dd-45ae-bb24-98d01e785302/result.json",
+      "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45"
+    },
+    {
+      "app": "game-genshin",
+      "httpCases": 14,
+      "browserCases": 18,
+      "status": "local_runtime_verified",
+      "evidence": ".release-records/rollout-game-genshin-2631a3d0-7cf5-4225-bac1-c5d1e018c1f7/result.json",
+      "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45"
+    }
+  ],
+  "managedContentRegression": {
+    "status": "local_managed_content_verified",
+    "jsonCases": 3,
+    "browserCases": 16,
+    "evidence": ".release-records/managed-content-fda3256c-3508-4fba-b6d0-7d46845b636b"
+  },
+  "visualReview": {
+    "viewed": [
+      "home-390.png",
+      "banner-schedule-guide-390.png",
+      "lightrace-wish-phase-ii-faq-390.png"
+    ],
+    "result": "Visible source-language notice and readable fallback/translated body; post-test selector and action link consistent. Not an accessibility or full-renderer audit."
+  },
+  "evidence": {
+    "logs": ".release-records/s2-3/",
+    "webDiscovery": ".release-records/seo-discovery-web-aa3ddfe0-f6b1-4539-8413-5f3b9caa4221",
+    "genshinDiscovery": ".release-records/seo-discovery-game-genshin-346b15aa-4121-4638-8180-05a453080cb3"
+  },
+  "limitations": [
+    "Not a production HTTP union or Search Console coverage audit",
+    "Other Genshin entity pages are not covered by the guide-only language policy",
+    "Completeness threshold is not translation quality or factual approval",
+    "Legacy Genshin strict old-baseline parity is unchanged and may reject intentional Japanese metadata differences; requires a reviewed release baseline, not disabling its gate",
+    "Remaining three raw mirror factual reviews not performed",
+    "No disk cleanup or historical/business data deletion"
+  ],
+  "productionDeployed": false,
+  "workerTopologyChanged": false,
+  "accountsReenabled": false
+}

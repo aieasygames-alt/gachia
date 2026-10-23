@@ -17,6 +17,7 @@
     "scaffold:game": "node scripts/scaffold-game.mjs",
     "audit:seo-contract": "node scripts/seo-contract-audit.mjs",
     "test:managed-content:local": "node scripts/managed-content-smoke.mjs",
+    "test:seo-discovery:local": "node scripts/seo-discovery-smoke.mjs",
     "audit:sitemap-contract:local": "python3 -B scripts/web-sitemap-contract-audit.py",
     "test:sitemap-contract": "python3 -B scripts/web-sitemap-contract-audit.test.py",
     "content:freshness": "NODE_OPTIONS=--disable-warning=MODULE_TYPELESS_PACKAGE_JSON node scripts/content-freshness-audit.mjs",
@@ -25,7 +26,7 @@
     "test:browser": "playwright test",
     "audit:production": "node scripts/production-site-audit.mjs",
     "release:game": "node scripts/game-release.mjs",
-    "test:release": "node --test scripts/game-release.test.mjs scripts/game-runtime.test.mjs scripts/runtime-rollout-smoke.test.mjs scripts/game-staging-acceptance.test.mjs scripts/web-release-policy.test.mjs scripts/production-site-audit.test.mjs scripts/retain-web-assets.test.mjs scripts/managed-content-smoke.test.mjs && python3 -B scripts/extract-previous-web-assets.test.py && python3 -B scripts/web-sitemap-contract-audit.test.py"
+    "test:release": "node --test scripts/game-release.test.mjs scripts/game-runtime.test.mjs scripts/runtime-rollout-smoke.test.mjs scripts/game-staging-acceptance.test.mjs scripts/web-release-policy.test.mjs scripts/production-site-audit.test.mjs scripts/retain-web-assets.test.mjs scripts/managed-content-smoke.test.mjs scripts/seo-discovery-smoke.test.mjs && python3 -B scripts/extract-previous-web-assets.test.py && python3 -B scripts/web-sitemap-contract-audit.test.py"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",

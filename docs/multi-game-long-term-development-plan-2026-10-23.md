@@ -1,6 +1,6 @@
 # Gachia 多游戏长期运营与架构治理开发文档
 
-> 版本：v1.8，含 S2.2 镜像归并与退役发现路径本地交付
+> 版本：v1.9，含 S2.3 原神攻略语言契约与平台发现路径本地交付
 >
 > 编制日期：2026-10-23，Asia/Shanghai
 >
@@ -21,6 +21,8 @@ Gachia 是面向多游戏玩家的资料、攻略和工具站，现有 16 个游
 S2.1 追加进展：完成根 sitemapindex/主站子图所有权改造、Sea 75 篇攻略的 77 个派生物一致性门禁及本地 Worker 验收；没有生产部署。六对历史漂移均完成归因和暂缓覆盖决策，但未完成事实核验/合并。源码与 ASSETS 回退仍存在 roco-cn 三语言 URL 的已知差异，S2 整体验收、原神缺译策略、首页及基础元数据仍待继续。见 [S2.1 交付记录](../plans/multi-game-s2-1-content-contract-closeout-2026-10-23.md)与[维护契约](content-source-and-sitemap-contract.md)。
 
 S2.2 追加进展（2026-10-23 启动，10-24 本地收尾）：按既有提交归并三对历史镜像，90 对中 87 对一致、3 对仍待事实审核；增加生成前只读门禁。roco-cn 中日文旧清单明确归档，英文维持 404，并从列表、推荐、hreflang、语言切换和 XML 排除。预渲染/本地 Worker 主站 URL 集合均为 4,464 条且一致，闭合 S2.1 已知边界；兑换码公开日期不再冒充核验日期。未重新认证官方事实、未部署、未清理。原神缺译策略及首页/基础元数据仍待后续，S2 整体未完成。见 [S2.2 交付记录](../plans/multi-game-s2-2-mirror-retirement-closeout-2026-10-23.md)。
+
+S2.3 追加进展（2026-10-24）：原神攻略的阅读回退、robots、hreflang、FAQ 与独立 sitemap 已统一。31 篇中 30 篇缺日文正文，保留原文阅读但退出日文索引提交；已有日文正文的一篇不误伤。独立清单 1,602 → 1,572，本地 Worker 与预渲染一致，主站 4,464 条集合不变。补齐首页及关于/联系/隐私/条款的本地元数据验收，修复三游戏状态卡重复语言前缀与 post-test 错标，并接入主站 CI 的编译后发现路径检查。未修改原始游戏事实或日期、未部署、未启动 Actions 或清理；剩余三对数据事实审核、云端完整提交集及后续运营闭环仍待继续。见 [S2.3 交付记录](../plans/multi-game-s2-3-language-discovery-closeout-2026-10-24.md)。
 
 本次审计的核心结论：
 
@@ -509,6 +511,7 @@ planned -> validated -> preview_ready -> approved -> promoting -> verifying -> r
 | 根 sitemap 与主站子图 | `apps/web/app/sitemap.xml/route.ts`、`apps/web/lib/sitemap-index.ts`、`apps/web/app/sitemaps/main/sitemap.ts` |
 | Sea 攻略派生物契约 | `packages/data/scripts/sea-guide-contract.mjs`、[维护说明](content-source-and-sitemap-contract.md) |
 | 受管原始镜像与退役页面 | `packages/data/scripts/raw-mirror-contract.mjs`、`apps/web/lib/retired-pages.ts`、[S2.2 交付记录](../plans/multi-game-s2-2-mirror-retirement-closeout-2026-10-23.md) |
+| 攻略语言及平台元数据 | `apps/game-genshin/lib/guide-policy.ts`、`apps/web/lib/platform-metadata.ts`、`scripts/seo-discovery-smoke.mjs`、[S2.3 交付记录](../plans/multi-game-s2-3-language-discovery-closeout-2026-10-24.md) |
 | 日文索引与 fallback | `apps/web/lib/seo-metadata.ts`、`apps/game-nte/lib/seo.ts`、`apps/game-genshin/app/sitemap.ts`、`packages/data/games/genshin/guides.ts` |
 | 内容加载与镜像 | `packages/data/load-json.ts`、`packages/data/games`、`apps/web/public/data` |
 | 内容 freshness | `scripts/content-freshness-audit.mjs`、`apps/web/lib/content-freshness.ts` |

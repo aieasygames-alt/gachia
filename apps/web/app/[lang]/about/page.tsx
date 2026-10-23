@@ -1,3 +1,4 @@
+import { platformMetadata } from '@/lib/platform-metadata';
 import { serializeJsonLd } from '@/lib/jsonld-script';
 import type { Metadata } from 'next';
 import type { SupportedLocale } from '@gachia/core';
@@ -86,7 +87,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale = lang as SupportedLocale;
-  return { title: TITLE[locale], description: DESCRIPTION[locale] };
+  return platformMetadata(locale, '/about', TITLE[locale]!, DESCRIPTION[locale]!);
 }
 
 export default async function AboutPage({

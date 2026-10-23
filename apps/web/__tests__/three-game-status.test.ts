@@ -8,7 +8,8 @@ describe('three-game status cards', () => {
     expect(THREE_GAME_STATUS_CARDS.map((item) => item.status)).toEqual(['live', 'post-test', 'live']);
 
     for (const item of THREE_GAME_STATUS_CARDS) {
-      expect(item.href).toMatch(/^\/zh\//);
+      expect(item.href).toMatch(/^\/(aniimo|azur-promilia|lvmeng)\//);
+      expect(item.href).not.toMatch(/^\/(zh|en|ja)\//);
       expect(item.action.trim()).not.toBe('');
       expect(item.checkedAt).toBe(item.id === 'aniimo' ? '2026-09-30' : THREE_GAME_STATUS_UPDATED_AT);
       expect(item.sourceUrl).toMatch(/^https:\/\//);

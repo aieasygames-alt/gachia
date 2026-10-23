@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import ts from 'typescript';
+import { platformMetadata } from '../lib/platform-metadata';
 
 const source = readFileSync(new URL('../app/[lang]/privacy/page.tsx', import.meta.url), 'utf8');
 const compiled = ts.transpileModule(source, { compilerOptions: {
@@ -10,7 +11,11 @@ type Input = { params: Promise<{ lang: string }> };
 const exports: { default?: (input: Input) => Promise<unknown>;
   generateMetadata?: (input: Input) => Promise<{ description: string }> } = {};
 const jsx = (type: unknown, props: unknown) => ({ type, props });
-new Function('require', 'exports', compiled)(() => ({ jsx, jsxs: jsx }), exports);
+new Function('require', 'exports', compiled)((name: string) => {
+  if (name === 'react/jsx-runtime') return { jsx, jsxs: jsx };
+  if (name === '@/lib/platform-metadata') return { platformMetadata };
+  throw new Error(`Unexpected privacy page dependency: ${name}`);
+}, exports);
 
 function text(node: unknown): string {
   if (typeof node === 'string' || typeof node === 'number') return String(node);

@@ -20,7 +20,8 @@ import {
   localizeText,
   sortByPriority,
 } from '@/lib/live-content';
-import { THREE_GAME_STATUS_CARDS } from '@/lib/three-game-status';
+import { THREE_GAME_STATUS_CARDS, THREE_GAME_STATUS_LABELS } from '@/lib/three-game-status';
+import { platformMetadata } from '@/lib/platform-metadata';
 import { ThreeGameNextStep } from '@/components/three-game-next-step';
 
 const MESSAGES: Record<string, Record<string, string>> = {
@@ -368,13 +369,13 @@ function getStatusForGame(gameId: keyof typeof GAMES) {
   return liveItem?.status;
 }
 
-const DESCRIPTIONS: Record<string, string> = {
+const DESCRIPTIONS: Record<SupportedLocale, string> = {
   zh: 'Gachia 是多游戏攻略 Wiki 与实时规划入口，覆盖原神、崩铁、鸣潮、绝区零、异环、蓝色星原：旅谣等游戏的当前卡池、版本专题、兑换码、角色图鉴、武器数据和攻略。',
   en: 'Gachia is a multi-game wiki and live planning hub for banners, version updates, redeem codes, characters, weapons, builds, and guides across Genshin, HSR, WuWa, ZZZ, NTE, Azur Promilia, and more.',
   ja: 'Gachia は多ゲーム攻略 Wiki とリアルタイム計画ハブです。原神、HSR、鳴潮、ZZZ、NTE、アズールプロミリアなどのバナー、版本更新、コード、キャラ、武器、攻略を整理します。',
 };
 
-const TITLES: Record<string, string> = {
+const TITLES: Record<SupportedLocale, string> = {
   zh: 'Gachia 游戏攻略 Wiki：卡池、版本、兑换码与角色图鉴',
   en: 'Gachia Game Wiki: Banners, Version Hubs, Codes & Character Guides',
   ja: 'Gachia ゲーム攻略 Wiki：バナー、版本、コード、キャラ',
@@ -390,19 +391,7 @@ export async function generateMetadata({
   const description = DESCRIPTIONS[locale] ?? DESCRIPTIONS.zh;
   const title = TITLES[locale] ?? TITLES.zh;
 
-  return {
-    title,
-    description,
-    alternates: {
-      canonical: `https://gachia.com/${locale}`,
-      languages: {
-        'zh-Hans': 'https://gachia.com/zh',
-        en: 'https://gachia.com/en',
-        ja: 'https://gachia.com/ja',
-        'x-default': 'https://gachia.com/zh',
-      },
-    },
-  };
+  return platformMetadata(locale, '', title, description);
 }
 
 export default async function LocaleHome({
@@ -555,7 +544,7 @@ export default async function LocaleHome({
                   <div className="flex items-center justify-between gap-3">
                     <h3 className="text-base font-semibold text-game-text group-hover:text-game-primary">{item.title}</h3>
                     <span className="rounded-full bg-game-surface px-2 py-1 text-[11px] font-semibold text-game-text-muted">
-                      {item.status === 'live' ? '已上线' : item.status === 'test' ? '测试中' : '待开服'}
+                      {THREE_GAME_STATUS_LABELS[item.status]}
                     </span>
                   </div>
                   <p className="mt-3 text-sm leading-6 text-game-text-muted">{item.summary}</p>

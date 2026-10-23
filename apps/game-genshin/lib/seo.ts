@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import type { SupportedLocale } from '@gachia/core';
+import type { GenshinGuide } from '@gachia/data/games/genshin/guides';
+import { guideAlternates, isGuideLocaleIndexable } from './guide-policy';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -138,6 +140,24 @@ export function genshinMetadata(locale: SupportedLocale, path: string, title: st
     },
     openGraph: { title: resolvedTitle, description: resolvedDescription, url, siteName: 'Gachia', type: 'website', images: [{ url: `${BASE_URL}/images/og/genshin.webp`, width: 1200, height: 630, alt: resolvedTitle }] },
     twitter: { card: 'summary_large_image', title: resolvedTitle, description: resolvedDescription, images: [`${BASE_URL}/images/og/genshin.webp`] },
+  };
+}
+
+export function genshinGuideMetadata(guide: GenshinGuide, locale: SupportedLocale, title: string, description: string): Metadata {
+  const metadata = genshinMetadata(locale, `guides/${guide.id}`, title, description);
+  const indexable = isGuideLocaleIndexable(guide, locale);
+  return {
+    ...metadata,
+    ...(!indexable ? { title, description } : {}),
+    alternates: guideAlternates(guide, locale),
+    // Reading fallbacks stay available, but only actual translations may be indexed.
+    robots: process.env.GENSHIN_DEPLOYMENT_MODE !== 'production'
+      ? { index: false, follow: false }
+      : indexable ? { index: true, follow: true } : { index: false, follow: true },
+    ...(!indexable ? {
+      openGraph: { ...metadata.openGraph, title, description },
+      twitter: { ...metadata.twitter, title, description },
+    } : {}),
   };
 }
 

@@ -1,3 +1,4 @@
+import { platformMetadata } from '@/lib/platform-metadata';
 import type { Metadata } from 'next';
 import type { SupportedLocale } from '@gachia/core';
 
@@ -15,7 +16,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale = lang as SupportedLocale;
-  return { title: TITLE[locale], description: DESCRIPTION[locale] };
+  return platformMetadata(locale, '/contact', TITLE[locale]!, DESCRIPTION[locale]!);
 }
 
 const CONTENT: Record<string, { title: string; sections: { heading: string; body: string }[] }> = {

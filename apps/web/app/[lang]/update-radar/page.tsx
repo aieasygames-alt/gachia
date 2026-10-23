@@ -2,7 +2,7 @@ import { serializeJsonLd } from '@/lib/jsonld-script';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Link } from '@/lib/i18n/navigation';
-import { THREE_GAME_STATUS_UPDATED_AT } from '@/lib/three-game-status';
+import { THREE_GAME_STATUS_UPDATED_AT, THREE_GAME_STATUS_LABELS } from '@/lib/three-game-status';
 import { THREE_GAME_UPDATE_RADAR } from '@/lib/three-game-update-radar';
 
 const BASE_URL = 'https://gachia.com';
@@ -29,7 +29,7 @@ export default async function UpdateRadarPage({ params }: { params: Promise<{ la
 
     <section className="mt-10 grid gap-5 lg:grid-cols-3">
       {THREE_GAME_UPDATE_RADAR.map((item) => {
-        const state = item.status === 'live' ? '已上线' : item.status === 'test' ? '测试中' : item.status === 'post-test' ? '测试已结束' : '待开服';
+        const state = THREE_GAME_STATUS_LABELS[item.status];
         return <article key={item.id} className="rounded-lg border border-game-border bg-game-surface p-5">
           <p className="text-xs font-semibold text-game-primary">{state} · {item.focus.title}</p>
           <h2 className="mt-2 text-xl font-semibold text-game-text">{item.title}</h2>
