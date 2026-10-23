@@ -20,6 +20,14 @@ on:
         description: 'Production only: previously active main Worker version UUID, verified by operator'
         type: string
         default: ''
+      previous_web_artifact_id:
+        description: 'Production only: immutable GitHub artifact ID from the current main deployment'
+        type: string
+        default: ''
+      previous_web_artifact_sha256:
+        description: 'Production only: SHA-256 of that GitHub artifact ZIP (not the inner tar)'
+        type: string
+        default: ''
 
 permissions:
   contents: read
@@ -32,6 +40,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
     outputs:
       web-artifact-id: ${{ steps.web-artifact.outputs.artifact-id }}
       web-artifact-sha256: ${{ steps.seal-web.outputs.sha256 }}
@@ -42,12 +53,16 @@ jobs:
           CONFIRMATION: ${{ inputs.production_confirmation }}
           ROLLBACK_VERSION: ${{ inputs.rollback_version }}
           RELEASE_REF: ${{ github.ref }}
+          PREVIOUS_WEB_ARTIFACT_ID: ${{ inputs.previous_web_artifact_id }}
+          PREVIOUS_WEB_ARTIFACT_SHA256: ${{ inputs.previous_web_artifact_sha256 }}
         run: |
           set -euo pipefail
           if [ "$RELEASE_TARGET" = 'production' ]; then
             test "$RELEASE_REF" = 'refs/heads/main'
             test "$CONFIRMATION" = 'RELEASE_MAIN_ONLY'
-            [[ "$ROLLBACK_VERSION" =~ ^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$ ]]
+            [[ "$ROLLBACK_VERSION" =~ ^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$ ]] || exit 1
+            [[ "$PREVIOUS_WEB_ARTIFACT_ID" =~ ^[1-9][0-9]*$ ]] || exit 1
+            [[ "$PREVIOUS_WEB_ARTIFACT_SHA256" =~ ^[a-f0-9]{64}$ ]] || exit 1
           fi
 
       - uses: actions/checkout@v7.0.0
@@ -172,6 +187,15 @@ jobs:
         if: steps.scope.outputs.scope != 'admin'
         run: node scripts/validate-llms-route.mjs
 
+      - name: Retain previous production static assets
+        if: github.event_name == 'workflow_dispatch' && inputs.release_target == 'production'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PREVIOUS_WEB_ARTIFACT_ID: ${{ inputs.previous_web_artifact_id }}
+          PREVIOUS_WEB_ARTIFACT_SHA256: ${{ inputs.previous_web_artifact_sha256 }}
+          ROLLBACK_VERSION: ${{ inputs.rollback_version }}
+        run: node scripts/prepare-previous-web-assets.mjs
+
       - name: Verify self-contained web artifact
         if: steps.scope.outputs.scope != 'admin'
         run: node scripts/verify-worker-artifact.mjs apps/web/.open-next
@@ -195,7 +219,7 @@ jobs:
           name: web-worker-${{ github.sha }}-${{ github.run_attempt }}
           path: web-worker.tar.gz
           if-no-files-found: error
-          retention-days: 7
+          retention-days: ${{ inputs.release_target == 'production' && 30 || 7 }}
 
   deploy-staging:
     needs: build
@@ -245,6 +269,12 @@ jobs:
           test -s apps/web/.open-next/worker.js
           test -s apps/web/.open-next/.build/open-next.config.edge.mjs
 
+      - name: Verify production static retention before staging
+        if: inputs.release_target == 'production'
+        env:
+          ROLLBACK_VERSION: ${{ inputs.rollback_version }}
+        run: node scripts/retain-web-assets.mjs verify "$ROLLBACK_VERSION"
+
       - name: Verify staging Worker secrets
         working-directory: apps/web
         run: |
@@ -274,6 +304,12 @@ jobs:
             curl --fail --silent --show-error --retry 5 --retry-all-errors --retry-delay 2 --max-time 30 "$url" > /dev/null
           done
           node scripts/web-release-policy.mjs account-smoke "$STAGING_ORIGIN"
+
+      - name: Verify retained static assets on staging
+        if: inputs.release_target == 'production'
+        env:
+          ROLLBACK_VERSION: ${{ inputs.rollback_version }}
+        run: node scripts/retain-web-assets.mjs staging "$ROLLBACK_VERSION"
 
       - name: Smoke test HI3 reading routes
         env:
@@ -367,6 +403,11 @@ jobs:
             throw new Error('Rollback version must match the currently active 100% main version');
           }
           EOF
+
+      - name: Verify production static retention before promotion
+        env:
+          ROLLBACK_VERSION: ${{ inputs.rollback_version }}
+        run: node scripts/retain-web-assets.mjs verify "$ROLLBACK_VERSION"
 
       - name: Preserve rollback evidence
         uses: actions/upload-artifact@v4

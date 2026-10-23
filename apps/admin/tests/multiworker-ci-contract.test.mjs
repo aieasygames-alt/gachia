@@ -40,14 +40,39 @@ test('main release is explicit, serialized and cannot migrate or redeploy other 
   }
   const gate = workflow.jobs.build.steps.find(s => s.name === 'Validate explicit release request');
   const run = env => spawnSync('bash', ['-c', gate.run], { encoding: 'utf8', env: { ...process.env,
-    RELEASE_TARGET: 'production', RELEASE_REF: 'refs/heads/main', CONFIRMATION: '', ROLLBACK_VERSION: '', ...env } });
+    RELEASE_TARGET: 'production', RELEASE_REF: 'refs/heads/main', CONFIRMATION: '', ROLLBACK_VERSION: '',
+    PREVIOUS_WEB_ARTIFACT_ID: '123', PREVIOUS_WEB_ARTIFACT_SHA256: 'a'.repeat(64), ...env } });
   assert.notEqual(run({}).status, 0);
   assert.notEqual(run({ CONFIRMATION: 'RELEASE_MAIN_ONLY', ROLLBACK_VERSION: 'not-a-version' }).status, 0);
   assert.equal(run({ CONFIRMATION: 'RELEASE_MAIN_ONLY', ROLLBACK_VERSION: '12345678-1234-1234-1234-123456789abc' }).status, 0);
   assert.notEqual(run({ RELEASE_REF: 'refs/heads/candidate', CONFIRMATION: 'RELEASE_MAIN_ONLY', ROLLBACK_VERSION: '12345678-1234-1234-1234-123456789abc' }).status, 0);
+  for (const invalid of [{ PREVIOUS_WEB_ARTIFACT_ID: '' }, { PREVIOUS_WEB_ARTIFACT_SHA256: 'invalid' }]) {
+    assert.notEqual(run({ CONFIRMATION: 'RELEASE_MAIN_ONLY', ROLLBACK_VERSION: '12345678-1234-1234-1234-123456789abc', ...invalid }).status, 0);
+  }
   assert.equal(run({ RELEASE_TARGET: 'verify' }).status, 0);
   const steps = workflow.jobs.deploy.steps;
   assert.ok(steps.findIndex(s => s.name === 'Preserve rollback evidence') < steps.findIndex(s => s.name === 'Deploy to Cloudflare'));
+});
+
+test('previous static assets are pinned, sealed once and verified before both cloud writes', () => {
+  const require = createRequire(import.meta.url);
+  const workflow = require('yaml').parse(readFileSync(new URL('../../../.github/workflows/deploy.yml', import.meta.url), 'utf8'));
+  assert.equal(workflow.jobs.build.permissions.actions, 'read');
+  const steps = workflow.jobs.build.steps;
+  const retain = steps.findIndex(s => s.name === 'Retain previous production static assets');
+  assert(retain > steps.findIndex(s => s.name === 'Build Cloudflare Worker'));
+  assert(retain < steps.findIndex(s => s.id === 'seal-web'));
+  assert.match(steps[retain].if, /workflow_dispatch/);
+  assert.match(steps[retain].if, /release_target == 'production'/);
+  assert.equal(steps[retain].run, 'node scripts/prepare-previous-web-assets.mjs');
+  for (const name of ['deploy-staging', 'deploy']) {
+    const release = workflow.jobs[name].steps;
+    const gate = release.findIndex(s => s.run === 'node scripts/retain-web-assets.mjs verify "$ROLLBACK_VERSION"');
+    assert(gate > release.findIndex(s => s.name === 'Verify and restore web artifact'));
+    assert(gate < release.findIndex(s => /opennextjs-cloudflare deploy/.test(s.run ?? '')));
+    assert(!release.some(s => /opennextjs-cloudflare build/.test(s.run ?? '')));
+  }
+  assert(workflow.jobs['deploy-staging'].steps.some(s => s.run === 'node scripts/retain-web-assets.mjs staging "$ROLLBACK_VERSION"'));
 });
 
 test('rollback evidence must identify the latest fully active main version', () => {

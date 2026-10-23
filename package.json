@@ -22,7 +22,7 @@
     "test:browser": "playwright test",
     "audit:production": "node scripts/production-site-audit.mjs",
     "release:game": "node scripts/game-release.mjs",
-    "test:release": "node --test scripts/game-release.test.mjs scripts/game-runtime.test.mjs scripts/runtime-rollout-smoke.test.mjs scripts/game-staging-acceptance.test.mjs scripts/web-release-policy.test.mjs"
+    "test:release": "node --test scripts/game-release.test.mjs scripts/game-runtime.test.mjs scripts/runtime-rollout-smoke.test.mjs scripts/game-staging-acceptance.test.mjs scripts/web-release-policy.test.mjs scripts/production-site-audit.test.mjs scripts/retain-web-assets.test.mjs && python3 -B scripts/extract-previous-web-assets.test.py"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",

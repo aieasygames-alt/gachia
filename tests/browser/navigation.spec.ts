@@ -34,3 +34,27 @@ for (const path of pages) {
     if (path === '/zh/nte') expect(seo.breadcrumbCount, 'NTE should not render duplicate top breadcrumbs').toBe(0);
   });
 }
+
+for (const game of ['genshin', 'nte', 'azur-promilia', 'lvmeng']) {
+  test(`main game directory crosses ${game} ownership without RSC prefetch`, async ({ page }) => {
+    const requests: { document: boolean; rsc: boolean }[] = [];
+    await page.route(new RegExp(`/zh/${game}(?:[/?]|$)`), async (route) => {
+      const request = route.request();
+      requests.push({ document: request.isNavigationRequest(), rsc: request.headers().rsc === '1' });
+      await route.fulfill({ contentType: 'text/html', body: '<!doctype html><h1>Independent Worker fixture</h1>' });
+    });
+    await page.goto('/zh/games', { waitUntil: 'networkidle' });
+    await expect(page.getByRole('button', { name: '搜索', exact: true })).toBeEnabled();
+    await page.evaluate(() => { (window as Window & { ownerDocument?: string }).ownerDocument = 'main'; });
+    const link = page.locator(`main a[href="/zh/${game}"]`).first();
+    await link.hover();
+    expect(requests).toEqual([]);
+    await link.click();
+    await expect(page.getByRole('heading', { name: 'Independent Worker fixture' })).toBeVisible();
+    expect(requests).toEqual([{ document: true, rsc: false }]);
+    expect(await page.evaluate(() => (window as Window & { ownerDocument?: string }).ownerDocument)).toBeUndefined();
+    await page.goBack();
+    await expect(page).toHaveURL(/\/zh\/games$/);
+    await expect(page.locator('main h1')).toBeVisible();
+  });
+}
