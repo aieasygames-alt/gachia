@@ -1,5 +1,7 @@
 # S1.3 交付：云端前置核验与蓝色星原 staging 验收
 
+> 后续决策：用户已决定暂时下线站点登录。本文保留 S1.3 当时证据；其中“先配置 staging OAuth”的下一步已由 [S1.4 无账号运营交付](multi-game-s1-accounts-disabled-closeout-2026-10-23.md)取代，不再作为当前无账号版本的上线前提。
+
 日期：2026-10-23，Asia/Shanghai。部署源码基线：`67a8a384d00ccda1599d9f3924ca8c0816c2b758`。实施分支：`codex/multi-game-s1-release-safety`。
 
 **结论：完成一次独立蓝色星原 staging 部署、云端版本对账及限定 HTTP/浏览器验收。六个生产服务的承载版本、生产路由均保持不变。没有生产发布；全站仍不具备无条件上线结论。**

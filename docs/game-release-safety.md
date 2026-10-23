@@ -161,6 +161,7 @@ pnpm release:game status --record .release-records/<record-file>.json
 - [x] 全部五个 Next 应用默认构建、运行时精确版本与自定义补丁的限定本地回归通过。
 - [x] S1.3 核对真实账户、目标环境、现有权限与当前版本；Paid 套餐与 Actions 预算通过已登录控制台只读确认。
 - [x] 蓝色星原 staging 实际部署后检查 noindex、robots、正文、canonical、JS/CSS、404；异环及其他应用仍需各自验收。
+- [x] S1.4 主站无账号候选直连 staging 的阅读、搜索、账号关闭、预览 noindex 及资源检查通过；不覆盖 Router 或其他应用。
 - [x] 本次 staging 部署前后确认六个生产服务版本与生产路由未变。
 - [ ] 生产候选的版本、承载流量与回滚 UUID 真实可用。
 - [ ] 切流后通过统一域名核验 Router、资源和关键页面。
@@ -168,3 +169,13 @@ pnpm release:game status --record .release-records/<record-file>.json
 入口复核：原神已有独立 staging 配置，绿梦无同名 `deploy:preview` 别名；二者未接入本门禁。绿梦默认配置名仍是生产服务，直接使用默认配置不能解释为安全预览。主站与 Router 的 staging/production 流程继续遵循其原有门禁，不根据本阶段测试推断全站环境隔离已经完成。
 
 S1.3 新发现：主站 staging 缺少两个 Google OAuth secret；Router staging 的云端配置与本地声明不同。本批未修改这些服务，不能借蓝色星原直连验收放行主站或 Router。新游戏预览地址的 noindex 不是身份认证，不应存放非公开资料。
+
+## 9. S1.4 无账号主站候选
+
+用户决定暂时下线站点登录，当前主站账号开关为 `apps/web/site-features.json` 中的 `accountFeatures: false`。认证、收藏、角色云存档、地图云同步与分享创建在访问认证/限流/数据库前被拒绝；浏览器不构造认证客户端。已有公开分享读取及无账号本地工具保持原行为，历史账号数据没有删除。
+
+主站 staging/production secret 名称检查统一读取同一策略；无账号版本只免除认证专用 secret，仍要求 `INDEXNOW_AUTH_TOKEN`。未来启用时同时要求认证与 Google OAuth secret，且必须更新启用验收，不能直接翻开关。S1.3 缺少 OAuth 配置的观察保留为历史证据，但不再阻塞当前无账号候选。
+
+主站的 `*.workers.dev` 运行时添加 noindex 和禁爬 robots，正式域名不改变公开索引规则。主站专用验收入口 `node scripts/web-staging-acceptance.mjs` 固定到隔离 main staging，不接受自由 origin。HTTP 包括少量带退役 Cookie、损坏请求体的账号写方法拒绝测试，不能当作生产只读审计使用。复用的本地可信 IP 夹具不得把模拟 `CF-Connecting-IP` 带到云端；已增加本地 origin 限定和回归测试。
+
+最新主站验收、候选版本、回滚引用和未覆盖事项见 [S1.4 交付记录](../plans/multi-game-s1-accounts-disabled-closeout-2026-10-23.md)；恢复条件见[账号下线与恢复规范](account-features-retirement.md)。取消登录不取消不可变产物、生产确认、当前版本对账、Router/资源验证或回滚门禁。
