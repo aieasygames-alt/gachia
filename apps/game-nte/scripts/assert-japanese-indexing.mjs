@@ -16,7 +16,7 @@ const required = [
   [data, 'isNteJapanesePathIndexable'],
   [data, 'isNteLocaleIndexable'],
   [metadata, "robots: isPreview ? { index: false, follow: false } : indexable ? undefined : { index: false, follow: true }"],
-  [seo, 'robots: indexable ? undefined : { index: false, follow: true }'],
+  [seo, 'robots: isPreview ? { index: false, follow: false } : indexable ? undefined : { index: false, follow: true }'],
   [sitemap, "if (locale === 'ja') continue;"],
   [sitemap, 'hasJapaneseNteGuideContent(guide)'],
   [rootLayout, 'return children;'],

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
-const isPreview = process.env.AZUR_PROMILIA_DEPLOYMENT_MODE === 'preview';
+const isPreview = process.env.AZUR_PROMILIA_DEPLOYMENT_MODE !== 'production';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://gachia.com'),

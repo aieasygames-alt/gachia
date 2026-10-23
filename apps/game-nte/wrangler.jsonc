@@ -10,5 +10,15 @@
   "vars": {
     "NEXT_PUBLIC_APP_URL": "https://gachia.com",
     "NTE_DEPLOYMENT_MODE": "live"
+  },
+  "env": {
+    "staging": {
+      "name": "gachia-game-nte-staging",
+      "workers_dev": true,
+      "vars": {
+        "NEXT_PUBLIC_APP_URL": "https://gachia.com",
+        "NTE_DEPLOYMENT_MODE": "preview"
+      }
+    }
   }
 }

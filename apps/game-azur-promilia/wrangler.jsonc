@@ -12,4 +12,14 @@
     "NEXT_PUBLIC_APP_URL": "https://gachia.com",
     "AZUR_PROMILIA_DEPLOYMENT_MODE": "production"
   },
+  "env": {
+    "staging": {
+      "name": "gachia-game-azur-promilia-staging",
+      "workers_dev": true,
+      "vars": {
+        "NEXT_PUBLIC_APP_URL": "https://gachia.com",
+        "AZUR_PROMILIA_DEPLOYMENT_MODE": "preview"
+      }
+    }
+  }
 }

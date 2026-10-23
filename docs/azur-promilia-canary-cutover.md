@@ -7,6 +7,7 @@ Azur Promilia is currently a `live` independent Worker. Production Router routin
 - Production `AZUR_PROMILIA_ENABLED` is `true`; staging remains disabled and canary-gated.
 - `GAME_DEPLOYMENTS['azur-promilia'].status` is `live`, so public navigation and sitemap inclusion are intentional.
 - Use `AZUR_PROMILIA_DEPLOYMENT_MODE=preview` for any new staging Worker; preview must emit `noindex,nofollow` and disallow crawling.
+- The guarded release commands and their local verification limits are documented in [Game release safety](game-release-safety.md). Production requires an exact service confirmation and an operator-verified rollback UUID.
 - Router uses Service Bindings. Do not proxy to a public Worker URL.
 
 ## Staging Verification
@@ -23,13 +24,13 @@ The command uses the `staging` Wrangler environment and does not modify the prod
 2. Run the protected Worker smoke check:
 
 ```bash
-AZUR_PROMILIA_PREVIEW_ORIGIN=https://<preview-origin> pnpm --filter @gachia/game-azur-promilia smoke
+AZUR_PROMILIA_ORIGIN=https://<preview-origin> pnpm --filter @gachia/game-azur-promilia smoke
 ```
 
 Equivalent package script:
 
 ```bash
-AZUR_PROMILIA_PREVIEW_ORIGIN=https://<preview-origin> pnpm --filter @gachia/game-azur-promilia smoke:staging
+AZUR_PROMILIA_ORIGIN=https://<preview-origin> pnpm --filter @gachia/game-azur-promilia smoke:staging
 ```
 
 3. Run the staging SEO check:

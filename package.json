@@ -20,7 +20,9 @@
     "content:freshness:md": "NODE_OPTIONS=--disable-warning=MODULE_TYPELESS_PACKAGE_JSON node scripts/content-freshness-audit.mjs --markdown",
     "content:freshness:report": "NODE_OPTIONS=--disable-warning=MODULE_TYPELESS_PACKAGE_JSON node scripts/content-freshness-audit.mjs --markdown --output plans/content-freshness-latest.md",
     "test:browser": "playwright test",
-    "audit:production": "node scripts/production-site-audit.mjs"
+    "audit:production": "node scripts/production-site-audit.mjs",
+    "release:game": "node scripts/game-release.mjs",
+    "test:release": "node --test scripts/game-release.test.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",

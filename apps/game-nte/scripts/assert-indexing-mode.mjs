@@ -3,11 +3,12 @@ import { resolve } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
 const packageJson = JSON.parse(await readFile(resolve(root, 'package.json'), 'utf8'));
-const [nextConfig, layout, metadata, robots] = await Promise.all([
+const [nextConfig, layout, metadata, robots, seo] = await Promise.all([
   readFile(resolve(root, 'next.config.ts'), 'utf8'),
   readFile(resolve(root, 'app/layout.tsx'), 'utf8'),
   readFile(resolve(root, 'lib/metadata.ts'), 'utf8'),
   readFile(resolve(root, 'app/robots.ts'), 'utf8'),
+  readFile(resolve(root, 'lib/seo.ts'), 'utf8'),
 ]);
 
 const required = [
@@ -15,6 +16,8 @@ const required = [
   [nextConfig, "{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }"],
   [layout, "robots: isPreview ? { index: false, follow: false } : undefined"],
   [metadata, "robots: isPreview ? { index: false, follow: false } : indexable ? undefined : { index: false, follow: true }"],
+  [seo, "const isPreview = process.env.NTE_DEPLOYMENT_MODE !== 'live'"],
+  [seo, "robots: isPreview ? { index: false, follow: false } : indexable ? undefined : { index: false, follow: true }"],
   [robots, "process.env.NTE_DEPLOYMENT_MODE !== 'live'"],
   [robots, "sitemap: 'https://gachia.com/sitemaps/nte/index.xml'"],
 ];

@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "build:worker": "opennextjs-cloudflare build",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview --config wrangler.jsonc",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy --config wrangler.jsonc --env \"\"",
-    "deploy:production": "pnpm run deploy",
-    "deploy:preview": "pnpm run deploy",
+    "build:worker": "AZUR_PROMILIA_DEPLOYMENT_MODE=production opennextjs-cloudflare build --config wrangler.jsonc --env \"\" && node ../../scripts/game-release.mjs prepare-assets --game azur-promilia --environment production",
+    "preview": "AZUR_PROMILIA_DEPLOYMENT_MODE=preview opennextjs-cloudflare build --config wrangler.jsonc --env staging && node ../../scripts/game-release.mjs prepare-assets --game azur-promilia --environment staging && AZUR_PROMILIA_DEPLOYMENT_MODE=preview opennextjs-cloudflare preview --config wrangler.jsonc --env staging",
+    "deploy": "node ../../scripts/game-release.mjs deploy --game azur-promilia --environment production",
+    "deploy:production": "node ../../scripts/game-release.mjs deploy --game azur-promilia --environment production",
+    "deploy:preview": "node ../../scripts/game-release.mjs deploy --game azur-promilia --environment staging",
     "verify:production": "node ../../scripts/azur-promilia-production-audit.mjs",
     "smoke:production": "pnpm run verify:production",
     "smoke:preview": "node scripts/smoke.mjs",
@@ -16,8 +16,11 @@
     "seo:parity": "node ../../scripts/azur-promilia-seo-parity.mjs",
     "audit:production": "node ../../scripts/azur-promilia-production-audit.mjs",
     "audit:content": "node ../../scripts/azur-promilia-content-audit.mjs",
-    "verify:bundle": "opennextjs-cloudflare build && wrangler deploy --dry-run --config wrangler.jsonc --env \"\"",
-    "type-check": "tsc --noEmit"
+    "verify:bundle": "node ../../scripts/game-release.mjs verify --game azur-promilia --environment production",
+    "type-check": "tsc --noEmit",
+    "deploy:staging": "node ../../scripts/game-release.mjs deploy --game azur-promilia --environment staging",
+    "verify:preview": "node ../../scripts/game-release.mjs verify --game azur-promilia --environment staging",
+    "smoke:staging": "node scripts/smoke.mjs"
   },
   "dependencies": {
     "@gachia/core": "workspace:*",

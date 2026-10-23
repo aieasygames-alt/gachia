@@ -16,3 +16,4 @@ coverage/
 .workbuddy/
 plans/content-freshness-latest.md
 .gachia-workbench/
+.release-records/

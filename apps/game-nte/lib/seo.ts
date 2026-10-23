@@ -3,6 +3,7 @@ import type { SupportedLocale } from '@gachia/core';
 import { isNteJapanesePathIndexable, isNteLocaleIndexable } from './data';
 
 export const BASE_URL = 'https://gachia.com';
+const isPreview = process.env.NTE_DEPLOYMENT_MODE !== 'live';
 
 function limit(value: string, max: number) {
   return value.length <= max ? value : `${value.slice(0, Math.max(0, max - 1)).trimEnd()}...`;
@@ -38,7 +39,7 @@ export function productionMetadata(title: string, description: string, locale: S
   return {
     title: limitVisible(title, 68),
     description: limitVisible(description, 155),
-    robots: indexable ? undefined : { index: false, follow: true },
+    robots: isPreview ? { index: false, follow: false } : indexable ? undefined : { index: false, follow: true },
     alternates: alternates(locale, path),
     openGraph: { title: limitVisible(title, 68), description: limitVisible(description, 155), url: `${BASE_URL}/${locale}/nte${path}`, siteName: 'Gachia', type: 'website', images: [{ url: `${BASE_URL}/images/og/nte.webp`, width: 1200, height: 630, alt: limitVisible(title, 68) }] },
     twitter: { card: 'summary_large_image', title: limitVisible(title, 68), description: limitVisible(description, 155), images: [`${BASE_URL}/images/og/nte.webp`] },

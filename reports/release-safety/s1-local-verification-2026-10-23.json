@@ -1,0 +1,377 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "timezone": "Asia/Shanghai",
+  "phase": "S0_local_baseline_and_S1_scoped_local_engineering",
+  "status": "local_verification_complete_cloud_acceptance_pending",
+  "baselineCommit": "18cfe049b4c34d177049def95e645763c2cef0b2",
+  "branch": "codex/multi-game-s1-release-safety",
+  "toolchain": {
+    "node": "22.22.2",
+    "pnpm": "10.10.0",
+    "next": "15.5.18",
+    "openNextCloudflare": "1.20.1",
+    "dependencyVersionsChanged": false
+  },
+  "validation": {
+    "releaseTests": {
+      "passed": 58,
+      "failed": 0
+    },
+    "routerTests": {
+      "passed": 31,
+      "failed": 0
+    },
+    "ciScopeTests": {
+      "passed": 2,
+      "failed": 0
+    },
+    "typeChecks": [
+      "game-nte",
+      "game-azur-promilia",
+      "router"
+    ],
+    "nteIndexingContracts": "passed",
+    "existingGameDeploymentValidation": {
+      "games": 4,
+      "status": "passed"
+    },
+    "workflowYamlParsing": "passed",
+    "localHttpObservations": 44
+  },
+  "builds": [
+    {
+      "game": "nte",
+      "environment": "staging",
+      "service": "gachia-game-nte-staging",
+      "status": "bundle_verified_not_deployed",
+      "compatibilityException": "local_verification_only_unsupported_next",
+      "completedAt": "2026-10-23T01:39:57.238Z",
+      "configurationSha256": "24a9c035334cd7cd8fd9587ed36d8fbac2b2d4a685b0ee8277b92f3ca7724ebf",
+      "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+      "sourceObservation": {
+        "commit": "18cfe049b4c34d177049def95e645763c2cef0b2",
+        "dirty": true,
+        "scope": "head_and_config_not_full_source_attestation"
+      },
+      "bundleSizeKiB": 6765.88,
+      "gzipSizeKiB": 1325.11,
+      "namespacedAssets": {
+        "files": 44,
+        "prefix": "/_games/nte/_next",
+        "originalPathsPreserved": true
+      },
+      "runtime": {
+        "status": "local_worker_http_verified",
+        "cloudVerification": "not_performed",
+        "observations": [
+          {
+            "path": "/robots.txt",
+            "status": 200
+          },
+          {
+            "path": "/sitemap.xml",
+            "status": 200
+          },
+          {
+            "path": "/zh/nte",
+            "status": 200
+          },
+          {
+            "path": "/en/nte",
+            "status": 200
+          },
+          {
+            "path": "/zh/nte/characters",
+            "status": 200
+          },
+          {
+            "path": "/zh/nte/characters/nanally",
+            "status": 200
+          },
+          {
+            "path": "/_games/nte/_next/static/chunks/webpack-0f710859ea7f0ae9.js",
+            "status": 200
+          },
+          {
+            "path": "/_next/static/chunks/webpack-0f710859ea7f0ae9.js",
+            "status": 200
+          },
+          {
+            "path": "/_games/nte/_next/static/css/a03f215a7bc52d77.css",
+            "status": 200
+          },
+          {
+            "path": "/_next/static/css/a03f215a7bc52d77.css",
+            "status": 200
+          },
+          {
+            "path": "/zh/nte/__release_smoke_missing__",
+            "status": 404
+          }
+        ]
+      },
+      "localEvidence": {
+        "record": ".release-records/nte-7262c191-eef8-436d-8135-148c0b140553.json",
+        "log": ".release-records/s1-nte-staging-final.log",
+        "committed": false
+      }
+    },
+    {
+      "game": "nte",
+      "environment": "production",
+      "service": "gachia-game-nte",
+      "status": "bundle_verified_not_deployed",
+      "compatibilityException": "local_verification_only_unsupported_next",
+      "completedAt": "2026-10-23T01:40:18.136Z",
+      "configurationSha256": "24a9c035334cd7cd8fd9587ed36d8fbac2b2d4a685b0ee8277b92f3ca7724ebf",
+      "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+      "sourceObservation": {
+        "commit": "18cfe049b4c34d177049def95e645763c2cef0b2",
+        "dirty": true,
+        "scope": "head_and_config_not_full_source_attestation"
+      },
+      "bundleSizeKiB": 6765.64,
+      "gzipSizeKiB": 1314.74,
+      "namespacedAssets": {
+        "files": 44,
+        "prefix": "/_games/nte/_next",
+        "originalPathsPreserved": true
+      },
+      "runtime": {
+        "status": "local_worker_http_verified",
+        "cloudVerification": "not_performed",
+        "observations": [
+          {
+            "path": "/robots.txt",
+            "status": 200
+          },
+          {
+            "path": "/sitemap.xml",
+            "status": 200
+          },
+          {
+            "path": "/zh/nte",
+            "status": 200
+          },
+          {
+            "path": "/en/nte",
+            "status": 200
+          },
+          {
+            "path": "/zh/nte/characters",
+            "status": 200
+          },
+          {
+            "path": "/zh/nte/characters/nanally",
+            "status": 200
+          },
+          {
+            "path": "/_games/nte/_next/static/chunks/webpack-0f710859ea7f0ae9.js",
+            "status": 200
+          },
+          {
+            "path": "/_next/static/chunks/webpack-0f710859ea7f0ae9.js",
+            "status": 200
+          },
+          {
+            "path": "/_games/nte/_next/static/css/a03f215a7bc52d77.css",
+            "status": 200
+          },
+          {
+            "path": "/_next/static/css/a03f215a7bc52d77.css",
+            "status": 200
+          },
+          {
+            "path": "/zh/nte/__release_smoke_missing__",
+            "status": 404
+          }
+        ]
+      },
+      "localEvidence": {
+        "record": ".release-records/nte-6a5792b4-460d-43ed-b153-ab06a30801d8.json",
+        "log": ".release-records/s1-nte-production-final.log",
+        "committed": false
+      }
+    },
+    {
+      "game": "azur-promilia",
+      "environment": "staging",
+      "service": "gachia-game-azur-promilia-staging",
+      "status": "bundle_verified_not_deployed",
+      "compatibilityException": "local_verification_only_unsupported_next",
+      "completedAt": "2026-10-23T01:40:38.591Z",
+      "configurationSha256": "72ee33655dfb2150d645c6f6e1203497de605d106a22c4b0bad06d3e3c2faab0",
+      "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+      "sourceObservation": {
+        "commit": "18cfe049b4c34d177049def95e645763c2cef0b2",
+        "dirty": true,
+        "scope": "head_and_config_not_full_source_attestation"
+      },
+      "bundleSizeKiB": 5172.34,
+      "gzipSizeKiB": 1013.87,
+      "namespacedAssets": {
+        "files": 35,
+        "prefix": "/_games/azur-promilia/_next",
+        "originalPathsPreserved": true
+      },
+      "runtime": {
+        "status": "local_worker_http_verified",
+        "cloudVerification": "not_performed",
+        "observations": [
+          {
+            "path": "/robots.txt",
+            "status": 200
+          },
+          {
+            "path": "/sitemap.xml",
+            "status": 200
+          },
+          {
+            "path": "/zh/azur-promilia",
+            "status": 200
+          },
+          {
+            "path": "/en/azur-promilia",
+            "status": 200
+          },
+          {
+            "path": "/zh/azur-promilia/characters",
+            "status": 200
+          },
+          {
+            "path": "/zh/azur-promilia/characters/abby",
+            "status": 200
+          },
+          {
+            "path": "/_games/azur-promilia/_next/static/chunks/webpack-7f4954f5c5baa9f3.js",
+            "status": 200
+          },
+          {
+            "path": "/_next/static/chunks/webpack-7f4954f5c5baa9f3.js",
+            "status": 200
+          },
+          {
+            "path": "/_games/azur-promilia/_next/static/css/9aa93cdcbed4bf47.css",
+            "status": 200
+          },
+          {
+            "path": "/_next/static/css/9aa93cdcbed4bf47.css",
+            "status": 200
+          },
+          {
+            "path": "/zh/azur-promilia/__release_smoke_missing__",
+            "status": 404
+          }
+        ]
+      },
+      "localEvidence": {
+        "record": ".release-records/azur-promilia-15d87f54-35d9-4cb6-9d49-bf6a59625841.json",
+        "log": ".release-records/s1-azur-promilia-staging-final.log",
+        "committed": false
+      }
+    },
+    {
+      "game": "azur-promilia",
+      "environment": "production",
+      "service": "gachia-game-azur-promilia",
+      "status": "bundle_verified_not_deployed",
+      "compatibilityException": "local_verification_only_unsupported_next",
+      "completedAt": "2026-10-23T01:36:35.453Z",
+      "configurationSha256": "72ee33655dfb2150d645c6f6e1203497de605d106a22c4b0bad06d3e3c2faab0",
+      "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+      "sourceObservation": {
+        "commit": "18cfe049b4c34d177049def95e645763c2cef0b2",
+        "dirty": true,
+        "scope": "head_and_config_not_full_source_attestation"
+      },
+      "bundleSizeKiB": 5171.97,
+      "gzipSizeKiB": 1019.76,
+      "namespacedAssets": {
+        "files": 35,
+        "prefix": "/_games/azur-promilia/_next",
+        "originalPathsPreserved": true
+      },
+      "runtime": {
+        "status": "local_worker_http_verified",
+        "cloudVerification": "not_performed",
+        "observations": [
+          {
+            "path": "/robots.txt",
+            "status": 200
+          },
+          {
+            "path": "/sitemap.xml",
+            "status": 200
+          },
+          {
+            "path": "/zh/azur-promilia",
+            "status": 200
+          },
+          {
+            "path": "/en/azur-promilia",
+            "status": 200
+          },
+          {
+            "path": "/zh/azur-promilia/characters",
+            "status": 200
+          },
+          {
+            "path": "/zh/azur-promilia/characters/abby",
+            "status": 200
+          },
+          {
+            "path": "/_games/azur-promilia/_next/static/chunks/webpack-7f4954f5c5baa9f3.js",
+            "status": 200
+          },
+          {
+            "path": "/_next/static/chunks/webpack-7f4954f5c5baa9f3.js",
+            "status": 200
+          },
+          {
+            "path": "/_games/azur-promilia/_next/static/css/9aa93cdcbed4bf47.css",
+            "status": 200
+          },
+          {
+            "path": "/_next/static/css/9aa93cdcbed4bf47.css",
+            "status": 200
+          },
+          {
+            "path": "/zh/azur-promilia/__release_smoke_missing__",
+            "status": 404
+          }
+        ]
+      },
+      "localEvidence": {
+        "record": ".release-records/azur-promilia-261d9a82-3929-49db-b97e-aa4d085bfe7a.json",
+        "log": ".release-records/s1-azur-promilia-production.log",
+        "committed": false
+      }
+    }
+  ],
+  "releaseBlocker": {
+    "status": "unresolved",
+    "reason": "Pinned Next.js version rejected by OpenNext support-window check",
+    "defaultGateRetained": true,
+    "verificationOnlyExceptionUsed": true,
+    "deploymentExceptionAllowed": false
+  },
+  "boundaries": {
+    "cloudWrites": 0,
+    "cloudState": "not_observed",
+    "cloudVerification": "not_performed",
+    "productionReady": false,
+    "pushed": false,
+    "pullRequestCreated": false,
+    "remoteCiTriggered": false,
+    "businessFilesDeleted": false,
+    "fullSourceOrAssetAttestation": false,
+    "localWorkerProcessesStopped": true,
+    "notes": [
+      "Local HTTP and dry-run results are not live Cloudflare acceptance.",
+      "HEAD plus dirty flag and selected hashes are not a complete source or asset seal.",
+      "Sizes measure local candidates, not current production bundles.",
+      "Full browser interaction, cross-service routing and real rollback remain outside this verification."
+    ]
+  }
+}
