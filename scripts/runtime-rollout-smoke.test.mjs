@@ -2,10 +2,17 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import test from 'node:test';
-import { localFixtureConfig, ROLLOUT_APPS } from './runtime-rollout-smoke.mjs';
+import { fixtureIpHeaders, localFixtureConfig, ROLLOUT_APPS } from './runtime-rollout-smoke.mjs';
 import { readAssetPlan, readReleasePlan } from './game-release.mjs';
 
 const root = resolve(import.meta.dirname, '..');
+
+test('remote acceptance never sends synthetic Cloudflare trusted-IP headers', () => {
+  assert.deepEqual(fixtureIpHeaders('http://127.0.0.1:8080', '192.0.2.1'), { 'cf-connecting-ip': '192.0.2.1' });
+  for (const origin of ['https://gachia-staging.aieasygames.workers.dev', 'https://gachia.com', 'http://example.test:8080', 'http://127.0.0.1']) {
+    assert.deepEqual(fixtureIpHeaders(origin, '192.0.2.1'), {});
+  }
+});
 
 test('rollout fixtures never inherit cloud resources, routes or credentials', () => {
   for (const app of ROLLOUT_APPS) {

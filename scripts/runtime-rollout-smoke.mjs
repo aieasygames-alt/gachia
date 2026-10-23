@@ -14,6 +14,13 @@ export const ROLLOUT_APPS = Object.freeze(['web', 'game-genshin', 'game-lvmeng']
 const HI3_IDS = ['vermillion-liuli', 'vermillion-liuli-full-burn', 'volatile-sparkler'];
 const sha = value => createHash('sha256').update(value).digest('hex');
 
+export function fixtureIpHeaders(origin, ip) {
+  const url = new URL(origin);
+  // Synthetic trusted-IP headers are exclusively for the local Worker fixture.
+  return url.protocol === 'http:' && url.hostname === '127.0.0.1' && url.port
+    ? { 'cf-connecting-ip': ip } : {};
+}
+
 export function localFixtureConfig(app, root) {
   if (!ROLLOUT_APPS.includes(app)) throw new Error('Unknown rollout application');
   const directory = resolve(root, 'apps', app);
@@ -35,7 +42,7 @@ export async function verifyHttp(app, origin, { preview = false } = {}) {
     const url = new URL(path, origin);
     assert.equal(url.origin, origin, 'Cross-origin probe rejected');
     const response = await fetch(url, { redirect: 'manual', signal: AbortSignal.timeout(30000), ...init,
-      headers: { 'cf-connecting-ip': '192.0.2.1', ...init.headers } });
+      headers: { ...fixtureIpHeaders(origin, '192.0.2.1'), ...init.headers } });
     const body = await response.text();
     assert.equal(response.status, expected, `${path}: ${response.status} ${body.slice(0, 160)}`);
     observations.push({ path, method: init.method ?? 'GET', status: response.status });
@@ -83,7 +90,7 @@ export async function verifyBrowser(app, origin, { proxy, directory, requestBudg
   const locales = app === 'game-lvmeng' ? ['zh'] : ['zh', 'en', 'ja'];
   try {
     for (const width of [1440, 390]) for (const locale of locales) for (const mode of ['interactive', 'delayed_scripts', 'no_javascript']) {
-      const context = await browser.newContext({ viewport: { width, height: 900 }, javaScriptEnabled: mode !== 'no_javascript', serviceWorkers: 'block', extraHTTPHeaders: { 'cf-connecting-ip': `192.0.2.${observations.length + 10}` } });
+      const context = await browser.newContext({ viewport: { width, height: 900 }, javaScriptEnabled: mode !== 'no_javascript', serviceWorkers: 'block', extraHTTPHeaders: fixtureIpHeaders(origin, `192.0.2.${observations.length + 10}`) });
       try {
         const page = await context.newPage();
         page.setDefaultTimeout(20000);
