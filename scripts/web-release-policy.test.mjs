@@ -14,7 +14,7 @@ test('raw review CLI distinguishes engineering checks from a blocked production 
     const report = JSON.parse(result.stdout);
     assert.equal(report.engineeringReady, true);
     assert.equal(report.contentReleaseReady, false);
-    assert.equal(report.pending.length, 3);
+    assert.equal(report.pending.length, 2);
   }
   const unknown = spawnSync(process.execPath, [script, '--allow-pending'], { encoding: 'utf8', timeout: 10000 });
   assert.equal(unknown.status, 1);

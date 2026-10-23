@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-23T16:59:26.908103+00:00",
+  "baseline": "82a093f",
+  "decision": "close_wuwa_echo_mirror_with_official_localizations_and_explicit_withdrawals",
+  "notices": [
+    {
+      "language": "zh",
+      "url": "https://media-cdn-mingchao.kurogame.com/akiwebsite/website2.0/json/G152/zh/article/5569.json",
+      "articleId": 5569,
+      "title": "「镜锁妄世，心照红尘」3.7版本内容说明",
+      "publishedValue": "2026-09-30 10:00:00",
+      "publishedTimezone": "not_assumed_from_unzoned_field",
+      "responseSha256": "783a26f6a8460dd572070bf9cc478a522829e04ee6ef67cac4f0e6c807b5988e",
+      "responseBytes": 30245,
+      "excerpts": [
+        {
+          "entity": "heart-that-illuminates-dreams",
+          "name": "衔梦照世之心",
+          "quote": "「衔梦照世之心」（5件套）：角色为敌人添加【电磁效应】时，或自身获得同奏、响应同奏时，自身暴击提升15%，导电伤害提升22.5%，持续30秒。"
+        },
+        {
+          "entity": "mirror-shadow-flowing-lightning",
+          "name": "镜影流电之瞬",
+          "quote": "「镜影流电之瞬」（5件套）：角色为敌人添加【电磁效应】时，自身获得下述效果：导电伤害提升10%，持续15秒。持续期间内施放延奏技能后，下一个变奏技能登场的角色导电伤害提升25%，持续15秒。"
+        },
+        {
+          "entity": "flower-of-crimson-reminiscence",
+          "name": "茜染怀想之花",
+          "quote": "「茜染怀想之花」（5件套）：为队伍中角色提供治疗时，队伍中角色攻击提升10%，持续30秒，同名效果之间不可叠加。上述效果持续期间，若角色获得同奏、响应同奏，攻击额外提升15%。"
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "url": "https://hw-media-cdn-mingchao.kurogame.com/akiwebsite/website2.0/json/G152/en/article/5571.json",
+      "articleId": 5571,
+      "title": "Patch Notes for Wuthering Waves Version 3.7: Prism's Illusion, Heart's Illumination",
+      "publishedValue": "2026-09-30 10:00:00",
+      "publishedTimezone": "not_assumed_from_unzoned_field",
+      "responseSha256": "ac2224b158b9be029480b52a4d2a5906f4d11c1212e0affe4b84fb35007a509d",
+      "responseBytes": 57258,
+      "excerpts": [
+        {
+          "entity": "heart-that-illuminates-dreams",
+          "name": "Heart of Sworn Vigil",
+          "quote": "Heart of Sworn Vigil (5pcs Set): Inflicting Electro Flare on the target, obtaining Unison, or triggering Unison Response increases the Resonator's Crit. Rate by 15% and grants them 22.5% Electro DMG for 30s."
+        },
+        {
+          "entity": "mirror-shadow-flowing-lightning",
+          "name": "Flash of Electric Reflection",
+          "quote": "Flash of Electric Reflection (5pcs Set): When the Resonator inflicts Electro Flare on enemies, they gain the following effects: Gain 10% Electro DMG Bonus for 15s. While this effect is active, casting Outro Skill grants the incoming Resonator 25% Electro DMG Bonus for 15s."
+        },
+        {
+          "entity": "flower-of-crimson-reminiscence",
+          "name": "Flower of Tinged Yearning",
+          "quote": "Flower of Tinged Yearning (5pcs Set): Healing a Resonator in the team increases the ATK of all Resonators in the team by 10% for 30s. Effects of the same name do not stack. While the effect is active, if the Resonator gains Unison effect or triggers Unison Response, their ATK is further increased by 15%."
+        }
+      ]
+    },
+    {
+      "language": "ja",
+      "url": "https://hw-media-cdn-mingchao.kurogame.com/akiwebsite/website2.0/json/G152/jp/article/5570.json",
+      "articleId": 5570,
+      "title": "Ver.3.7「鏡に鎖す妄世、心で照らす紅塵」 コンテンツ紹介",
+      "publishedValue": "2026-09-30 09:50:00",
+      "publishedTimezone": "not_assumed_from_unzoned_field",
+      "responseSha256": "2b539c3cc4d2ac24e2367c6e1ac6934b4d4fc86b1875683d8852184403bbd871",
+      "responseBytes": 64559,
+      "excerpts": [
+        {
+          "entity": "heart-that-illuminates-dreams",
+          "name": "銜夢照世の心",
+          "quote": "「銜夢照世の心」（5セット）：キャラが敵に【電磁効果】を付与した時、または自身が同奏を獲得するか、同奏にレスポンスした時、自身のクリティカル率が15%、電導ダメージが22.5%アップ、30秒間持続。"
+        },
+        {
+          "entity": "mirror-shadow-flowing-lightning",
+          "name": "鏡影流電の閃",
+          "quote": "「鏡影流電の閃」（5セット）：キャラが敵に【電磁効果】を付与すると、自身の電導ダメージが10%アップ、15秒間持続。効果時間中に終奏スキルを発動すると、次に変奏スキルで登場するキャラの電導ダメージが25%アップ、15秒間持続。"
+        },
+        {
+          "entity": "flower-of-crimson-reminiscence",
+          "name": "フラワー・レミニセンス",
+          "quote": "「フラワー・レミニセンス」（5セット）：キャラがチーム内キャラのHPを回復すると、チーム内キャラの攻撃力が10%アップ、30秒間持続。同名効果は重複発動できない。この効果の持続中、キャラが同奏を獲得するか、同奏にレスポンスすると、攻撃力が追加で15%アップ。"
+        }
+      ]
+    }
+  ],
+  "scope": "Historical official v3.7 notices in each language; not a live check of current version or in-game redemption. HTTP cache metadata retained locally.",
+  "retainedEntityIds": [
+    "heart-that-illuminates-dreams",
+    "mirror-shadow-flowing-lightning",
+    "flower-of-crimson-reminiscence"
+  ],
+  "withdrawnClaims": {
+    "originalPendingSnapshot": {
+      "path": "wuwa/raw-echoes.json",
+      "status": "needs_review",
+      "sourceSha256": "715fa7f63026dd4c3939fbd33118f1278a483785dca0adb9b02553d9d084a5b4",
+      "mirrorSha256": "d75e6d53f627b4ee455d8feb18bb9da71027b6b7ad5db992efebe620f5deca84",
+      "changes": [
+        {
+          "id": "flower-of-crimson-reminiscence",
+          "kind": "source-only",
+          "fields": [
+            "bestFor",
+            "bonus2pc",
+            "bonus2pcEn",
+            "bonus5pc",
+            "bonus5pcEn",
+            "id",
+            "name",
+            "nameEn"
+          ]
+        },
+        {
+          "id": "heart-that-illuminates-dreams",
+          "kind": "source-only",
+          "fields": [
+            "bestFor",
+            "bonus2pc",
+            "bonus2pcEn",
+            "bonus5pc",
+            "bonus5pcEn",
+            "id",
+            "name",
+            "nameEn"
+          ]
+        },
+        {
+          "id": "mirror-shadow-flowing-lightning",
+          "kind": "source-only",
+          "fields": [
+            "bestFor",
+            "bonus2pc",
+            "bonus2pcEn",
+            "bonus5pc",
+            "bonus5pcEn",
+            "id",
+            "name",
+            "nameEn"
+          ]
+        }
+      ],
+      "reason": "CN official v3.7 notice supports only part of these additions; localized names, two-piece effects, recommendations or location-specific claims remain unverified.",
+      "reviewDocument": "plans/multi-game-s2-4-content-review-closeout-2026-10-24.md"
+    },
+    "originalSourceRecords": [
+      {
+        "id": "heart-that-illuminates-dreams",
+        "name": "衔梦照世之心",
+        "nameEn": "Heart That Illuminates Dreams",
+        "bonus2pc": "导电伤害提升10%。",
+        "bonus2pcEn": "Electro DMG Bonus +10%.",
+        "bonus5pc": "角色为敌人添加电磁效应时，或自身获得同奏、响应同奏时，自身暴击提升15%，导电伤害提升22.5%，持续30秒。",
+        "bonus5pcEn": "When applying Electro Magnetism to an enemy, or when gaining Unison or responding to Unison, gain 15% CRIT and 22.5% Electro DMG for 30s.",
+        "bestFor": [
+          "hsin"
+        ]
+      },
+      {
+        "id": "mirror-shadow-flowing-lightning",
+        "name": "镜影流电之瞬",
+        "nameEn": "Moment of Mirror-Shadow Flowing Lightning",
+        "bonus2pc": "导电伤害提升10%。",
+        "bonus2pcEn": "Electro DMG Bonus +10%.",
+        "bonus5pc": "角色为敌人添加电磁效应时，自身导电伤害提升10%，持续15秒。期间施放延奏技能后，下一个变奏技能登场的角色导电伤害提升25%，持续15秒。",
+        "bonus5pcEn": "When applying Electro Magnetism, gain 10% Electro DMG for 15s. After casting an Outro Skill during this effect, the next character entering with an Intro Skill gains 25% Electro DMG for 15s.",
+        "bestFor": [
+          "suoming"
+        ]
+      },
+      {
+        "id": "flower-of-crimson-reminiscence",
+        "name": "茜染怀想之花",
+        "nameEn": "Flower of Crimson Reminiscence",
+        "bonus2pc": "治疗效果提升10%。",
+        "bonus2pcEn": "Healing Bonus +10%.",
+        "bonus5pc": "为队伍中角色提供治疗时，队伍中角色攻击提升10%，持续30秒，同名效果之间不可叠加。效果持续期间，若角色获得同奏、响应同奏，攻击额外提升15%。",
+        "bonus5pcEn": "When healing a team member, all team members gain 10% ATK for 30s; effects of the same name do not stack. While active, gaining Unison or responding to Unison grants an additional 15% ATK.",
+        "bestFor": []
+      }
+    ],
+    "originalMirrorRecords": [],
+    "actions": [
+      "Replaced the three unofficial English names with the official English names; retained all IDs and URLs.",
+      "Added official Japanese names and five-piece effects.",
+      "Replaced five-piece summaries with exact corresponding official notice text.",
+      "Removed unverified two-piece values instead of copying adjacent sets; UI explicitly displays unknown.",
+      "Withdrew unsubstantiated bestFor recommendations; an empty list is not a negative compatibility claim."
+    ],
+    "notAPublicPayload": true
+  },
+  "steamIdentityReview": {
+    "url": "https://store.steampowered.com/api/appdetails?appids=3688140&l=english",
+    "responseSha256": "db998dee30379356364827605b53ef9f70a58ab010ea44d3015895deedbb1b83",
+    "steamAppId": 3688140,
+    "name": "Mine Spiders",
+    "developers": [
+      "Monstro Games"
+    ],
+    "publishers": [
+      "Monstro Games"
+    ],
+    "decision": "withdraw_wrong_game_source_and_downgrade_roco_market_intel_signal_not_cancel_beta",
+    "scope": "Does not verify the correct Roco Steam app ID or rule out an official beta notice elsewhere."
+  },
+  "remainingPending": [
+    "roco/raw-characters.json",
+    "wuwa/raw-regions.json"
+  ],
+  "localEvidenceDirectory": ".release-records/s2-5/"
+}

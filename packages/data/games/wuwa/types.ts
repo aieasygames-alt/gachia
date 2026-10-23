@@ -111,11 +111,18 @@ export interface WuWaEchoSet {
   id: string;
   name: string;       // Chinese name
   nameEn: string;     // English name
-  bonus2pc: string;    // Chinese 2-piece bonus
-  bonus2pcEn: string;  // English 2-piece bonus
+  nameJa?: string;
+  bonus2pc?: string;   // Absent when the reviewed source does not establish it.
+  bonus2pcEn?: string;
+  bonus2pcJa?: string;
   bonus5pc?: string;   // Chinese 5-piece bonus (optional)
   bonus5pcEn?: string; // English 5-piece bonus (optional)
+  bonus5pcJa?: string;
   bestFor: string[];   // character IDs this set is recommended for
+  sourceReview?: {
+    version: string;
+    sources: { language: SupportedLocale; url: string }[];
+  };
 }
 
 // --- Locale Helper ---

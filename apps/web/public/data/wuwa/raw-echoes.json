@@ -1,5 +1,86 @@
 [
   {
+    "id": "heart-that-illuminates-dreams",
+    "name": "衔梦照世之心",
+    "nameEn": "Heart of Sworn Vigil",
+    "bonus5pc": "角色为敌人添加【电磁效应】时，或自身获得同奏、响应同奏时，自身暴击提升15%，导电伤害提升22.5%，持续30秒。",
+    "bonus5pcEn": "Inflicting Electro Flare on the target, obtaining Unison, or triggering Unison Response increases the Resonator's Crit. Rate by 15% and grants them 22.5% Electro DMG for 30s.",
+    "bestFor": [],
+    "nameJa": "銜夢照世の心",
+    "bonus5pcJa": "キャラが敵に【電磁効果】を付与した時、または自身が同奏を獲得するか、同奏にレスポンスした時、自身のクリティカル率が15%、電導ダメージが22.5%アップ、30秒間持続。",
+    "sourceReview": {
+      "version": "3.7",
+      "sources": [
+        {
+          "language": "zh",
+          "url": "https://media-cdn-mingchao.kurogame.com/akiwebsite/website2.0/json/G152/zh/article/5569.json"
+        },
+        {
+          "language": "en",
+          "url": "https://hw-media-cdn-mingchao.kurogame.com/akiwebsite/website2.0/json/G152/en/article/5571.json"
+        },
+        {
+          "language": "ja",
+          "url": "https://hw-media-cdn-mingchao.kurogame.com/akiwebsite/website2.0/json/G152/jp/article/5570.json"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mirror-shadow-flowing-lightning",
+    "name": "镜影流电之瞬",
+    "nameEn": "Flash of Electric Reflection",
+    "bonus5pc": "角色为敌人添加【电磁效应】时，自身获得下述效果：导电伤害提升10%，持续15秒。持续期间内施放延奏技能后，下一个变奏技能登场的角色导电伤害提升25%，持续15秒。",
+    "bonus5pcEn": "When the Resonator inflicts Electro Flare on enemies, they gain the following effects: Gain 10% Electro DMG Bonus for 15s. While this effect is active, casting Outro Skill grants the incoming Resonator 25% Electro DMG Bonus for 15s.",
+    "bestFor": [],
+    "nameJa": "鏡影流電の閃",
+    "bonus5pcJa": "キャラが敵に【電磁効果】を付与すると、自身の電導ダメージが10%アップ、15秒間持続。効果時間中に終奏スキルを発動すると、次に変奏スキルで登場するキャラの電導ダメージが25%アップ、15秒間持続。",
+    "sourceReview": {
+      "version": "3.7",
+      "sources": [
+        {
+          "language": "zh",
+          "url": "https://media-cdn-mingchao.kurogame.com/akiwebsite/website2.0/json/G152/zh/article/5569.json"
+        },
+        {
+          "language": "en",
+          "url": "https://hw-media-cdn-mingchao.kurogame.com/akiwebsite/website2.0/json/G152/en/article/5571.json"
+        },
+        {
+          "language": "ja",
+          "url": "https://hw-media-cdn-mingchao.kurogame.com/akiwebsite/website2.0/json/G152/jp/article/5570.json"
+        }
+      ]
+    }
+  },
+  {
+    "id": "flower-of-crimson-reminiscence",
+    "name": "茜染怀想之花",
+    "nameEn": "Flower of Tinged Yearning",
+    "bonus5pc": "为队伍中角色提供治疗时，队伍中角色攻击提升10%，持续30秒，同名效果之间不可叠加。上述效果持续期间，若角色获得同奏、响应同奏，攻击额外提升15%。",
+    "bonus5pcEn": "Healing a Resonator in the team increases the ATK of all Resonators in the team by 10% for 30s. Effects of the same name do not stack. While the effect is active, if the Resonator gains Unison effect or triggers Unison Response, their ATK is further increased by 15%.",
+    "bestFor": [],
+    "nameJa": "フラワー・レミニセンス",
+    "bonus5pcJa": "キャラがチーム内キャラのHPを回復すると、チーム内キャラの攻撃力が10%アップ、30秒間持続。同名効果は重複発動できない。この効果の持続中、キャラが同奏を獲得するか、同奏にレスポンスすると、攻撃力が追加で15%アップ。",
+    "sourceReview": {
+      "version": "3.7",
+      "sources": [
+        {
+          "language": "zh",
+          "url": "https://media-cdn-mingchao.kurogame.com/akiwebsite/website2.0/json/G152/zh/article/5569.json"
+        },
+        {
+          "language": "en",
+          "url": "https://hw-media-cdn-mingchao.kurogame.com/akiwebsite/website2.0/json/G152/en/article/5571.json"
+        },
+        {
+          "language": "ja",
+          "url": "https://hw-media-cdn-mingchao.kurogame.com/akiwebsite/website2.0/json/G152/jp/article/5570.json"
+        }
+      ]
+    }
+  },
+  {
     "id": "freezing-frost",
     "name": "凝夜白霜",
     "nameEn": "Freezing Frost",
@@ -7,7 +88,12 @@
     "bonus2pcEn": "Glacio DMG Bonus +10%",
     "bonus5pc": "施放变奏技能时，冷凝伤害提升30%，持续15秒",
     "bonus5pcEn": "After using Intro Skill, Glacio DMG Bonus +30% for 15s",
-    "bestFor": ["lingyang", "sanhua", "baizhi", "zhezhi"]
+    "bestFor": [
+      "lingyang",
+      "sanhua",
+      "baizhi",
+      "zhezhi"
+    ]
   },
   {
     "id": "molten-rift",
@@ -17,7 +103,12 @@
     "bonus2pcEn": "Fusion DMG Bonus +10%",
     "bonus5pc": "施放变奏技能时，热熔伤害提升30%，持续15秒",
     "bonus5pcEn": "After using Intro Skill, Fusion DMG Bonus +30% for 15s",
-    "bestFor": ["encore", "changli", "chixia", "mortefi"]
+    "bestFor": [
+      "encore",
+      "changli",
+      "chixia",
+      "mortefi"
+    ]
   },
   {
     "id": "thundering-mammoth",
@@ -27,7 +118,12 @@
     "bonus2pcEn": "Electro DMG Bonus +10%",
     "bonus5pc": "施放变奏技能时，导电伤害提升30%，持续15秒",
     "bonus5pcEn": "After using Intro Skill, Electro DMG Bonus +30% for 15s",
-    "bestFor": ["calcharo", "yinlin", "xiangli-yao", "yuanwu"]
+    "bestFor": [
+      "calcharo",
+      "yinlin",
+      "xiangli-yao",
+      "yuanwu"
+    ]
   },
   {
     "id": "sierra-gale",
@@ -37,7 +133,12 @@
     "bonus2pcEn": "Aero DMG Bonus +10%",
     "bonus5pc": "施放变奏技能时，气动伤害提升30%，持续15秒",
     "bonus5pcEn": "After using Intro Skill, Aero DMG Bonus +30% for 15s",
-    "bestFor": ["jiyan", "aalto", "jianxin", "yangyang"]
+    "bestFor": [
+      "jiyan",
+      "aalto",
+      "jianxin",
+      "yangyang"
+    ]
   },
   {
     "id": "celestial-light",
@@ -47,7 +148,11 @@
     "bonus2pcEn": "Spectro DMG Bonus +10%",
     "bonus5pc": "施放变奏技能时，衍射伤害提升30%，持续15秒",
     "bonus5pcEn": "After using Intro Skill, Spectro DMG Bonus +30% for 15s",
-    "bestFor": ["jinhsi", "verina", "rover-spectro"]
+    "bestFor": [
+      "jinhsi",
+      "verina",
+      "rover-spectro"
+    ]
   },
   {
     "id": "sun-sinking-eclipse",
@@ -57,7 +162,11 @@
     "bonus2pcEn": "Havoc DMG Bonus +10%",
     "bonus5pc": "施放变奏技能时，湮灭伤害提升30%，持续15秒",
     "bonus5pcEn": "After using Intro Skill, Havoc DMG Bonus +30% for 15s",
-    "bestFor": ["danjin", "rover-havoc", "taoqi"]
+    "bestFor": [
+      "danjin",
+      "rover-havoc",
+      "taoqi"
+    ]
   },
   {
     "id": "rejuvenating-glow",
@@ -67,7 +176,11 @@
     "bonus2pcEn": "Healing Bonus +10%",
     "bonus5pc": "对目标施放延奏技能时，为队伍中附近角色回复生命值上限20%的生命",
     "bonus5pcEn": "When using Outro Skill on a target, heals nearby team members for 20% of their Max HP",
-    "bestFor": ["baizhi", "verina", "jianxin"]
+    "bestFor": [
+      "baizhi",
+      "verina",
+      "jianxin"
+    ]
   },
   {
     "id": "moonlit-clouds",
@@ -77,7 +190,12 @@
     "bonus2pcEn": "Energy Regen +10%",
     "bonus5pc": "施放延奏技能时，使下一个登场的角色攻击力提升22.5%，持续15秒",
     "bonus5pcEn": "When using Outro Skill, the next character's ATK increases by 22.5% for 15s",
-    "bestFor": ["verina", "baizhi", "jianxin", "mortefi"]
+    "bestFor": [
+      "verina",
+      "baizhi",
+      "jianxin",
+      "mortefi"
+    ]
   },
   {
     "id": "lingering-tunes",
@@ -87,7 +205,12 @@
     "bonus2pcEn": "ATK +10%",
     "bonus5pc": "施放延奏技能时，自身攻击力提升15%，共鸣技能伤害提升15%，持续15秒",
     "bonus5pcEn": "After using Outro Skill, ATK +15% and Resonance Skill DMG +15% for 15s",
-    "bestFor": ["encore", "jiyan", "calcharo", "changli"]
+    "bestFor": [
+      "encore",
+      "jiyan",
+      "calcharo",
+      "changli"
+    ]
   },
   {
     "id": "halo-tide",
@@ -97,7 +220,12 @@
     "bonus2pcEn": "Resonance Skill DMG Bonus +12%",
     "bonus5pc": "施放共鸣技能后，共鸣解放伤害提升24%，持续15秒",
     "bonus5pcEn": "After using Resonance Skill, Resonance Liberation DMG +24% for 15s",
-    "bestFor": ["jinhsi", "xiangli-yao", "zhezhi", "calcharo"]
+    "bestFor": [
+      "jinhsi",
+      "xiangli-yao",
+      "zhezhi",
+      "calcharo"
+    ]
   },
   {
     "id": "wishes-of-quiet-snowfall",
@@ -107,7 +235,11 @@
     "bonus2pcEn": "Glacio DMG Bonus +10%",
     "bonus5pc": "触发冷凝焦灼时，装备者攻击力提升15%，持续15秒",
     "bonus5pcEn": "When triggering Glacio Chafe, equipper's ATK increases by 15% for 15s",
-    "bestFor": ["hiyuki", "lucilla", "sanhua"]
+    "bestFor": [
+      "hiyuki",
+      "lucilla",
+      "sanhua"
+    ]
   },
   {
     "id": "shadow-of-shattered-dreams",
@@ -117,6 +249,8 @@
     "bonus2pcEn": "ATK +10%",
     "bonus5pc": "对目标施加「骇入·偏移」时触发效果，适合Lucy的技能机制",
     "bonus5pcEn": "Triggers effects when inflicting Hack - Shifting on targets. Tailored for Lucy's kit",
-    "bestFor": ["lucy"]
+    "bestFor": [
+      "lucy"
+    ]
   }
 ]

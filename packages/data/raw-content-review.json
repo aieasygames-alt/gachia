@@ -157,58 +157,6 @@
       "reviewDocument": "plans/multi-game-s2-4-content-review-closeout-2026-10-24.md"
     },
     {
-      "path": "wuwa/raw-echoes.json",
-      "status": "needs_review",
-      "sourceSha256": "715fa7f63026dd4c3939fbd33118f1278a483785dca0adb9b02553d9d084a5b4",
-      "mirrorSha256": "d75e6d53f627b4ee455d8feb18bb9da71027b6b7ad5db992efebe620f5deca84",
-      "changes": [
-        {
-          "id": "flower-of-crimson-reminiscence",
-          "kind": "source-only",
-          "fields": [
-            "bestFor",
-            "bonus2pc",
-            "bonus2pcEn",
-            "bonus5pc",
-            "bonus5pcEn",
-            "id",
-            "name",
-            "nameEn"
-          ]
-        },
-        {
-          "id": "heart-that-illuminates-dreams",
-          "kind": "source-only",
-          "fields": [
-            "bestFor",
-            "bonus2pc",
-            "bonus2pcEn",
-            "bonus5pc",
-            "bonus5pcEn",
-            "id",
-            "name",
-            "nameEn"
-          ]
-        },
-        {
-          "id": "mirror-shadow-flowing-lightning",
-          "kind": "source-only",
-          "fields": [
-            "bestFor",
-            "bonus2pc",
-            "bonus2pcEn",
-            "bonus5pc",
-            "bonus5pcEn",
-            "id",
-            "name",
-            "nameEn"
-          ]
-        }
-      ],
-      "reason": "CN official v3.7 notice supports only part of these additions; localized names, two-piece effects, recommendations or location-specific claims remain unverified.",
-      "reviewDocument": "plans/multi-game-s2-4-content-review-closeout-2026-10-24.md"
-    },
-    {
       "path": "wuwa/raw-regions.json",
       "status": "needs_review",
       "sourceSha256": "385fe0b5bbcf5387fd178e41ea150c0431b2d299f8bd3306bc45d3a8e28b7706",

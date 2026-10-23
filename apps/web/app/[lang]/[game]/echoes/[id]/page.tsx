@@ -79,6 +79,23 @@ export default async function EchoDetailPage({
         {nameAlt && <p className="mt-1 text-sm text-game-text-muted">{nameAlt}</p>}
       </div>
 
+      {set.sourceReview && (
+        <aside data-echo-source className="mb-6 rounded-lg border border-game-border bg-game-surface p-4 text-sm text-game-text-muted">
+          <p>{locale === 'zh'
+            ? `资料范围：${set.sourceReview.version} 官方公告摘录，不代表当前版本的实时核验。未列出的推荐不代表没有适配角色。`
+            : locale === 'ja'
+              ? `資料範囲：${set.sourceReview.version}公式告知の抜粋です。現行版のリアルタイム確認ではありません。おすすめの未掲載は適性がないという意味ではありません。`
+              : `Scope: official ${set.sourceReview.version} patch-note excerpts, not a live check of the current version. Unlisted recommendations do not mean no compatible Resonators.`}</p>
+          <div className="mt-2 flex flex-wrap gap-4">
+            {set.sourceReview.sources.map(source => (
+              <a key={source.language} href={source.url} rel="noopener noreferrer" className="text-game-primary underline">
+                {{ zh: '中文公告', en: 'English notice', ja: '日本語告知' }[source.language]}
+              </a>
+            ))}
+          </div>
+        </aside>
+      )}
+
       {/* Set Bonuses */}
       <section className="mb-8">
         <h2 className="mb-3 text-lg font-semibold text-game-text">

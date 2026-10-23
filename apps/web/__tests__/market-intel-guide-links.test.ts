@@ -113,7 +113,7 @@ describe('market-intel guide links', () => {
 
   it('keeps every completed opportunity tied to at least one reachable guide or hub page', () => {
     for (const opportunity of MARKET_INTEL_OPPORTUNITIES) {
-      expect(opportunity.status).toBe('done');
+      expect(opportunity.status).toBe(opportunity.id === 'roco-global-quack-quack-test-official-watch' ? 'watch' : 'done');
       expect(opportunity.targetPages.some((page) => page.includes('/guides/') || page.endsWith('/version'))).toBe(true);
     }
   });

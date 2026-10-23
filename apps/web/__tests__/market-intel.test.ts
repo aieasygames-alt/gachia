@@ -17,6 +17,14 @@ import { VERSION_SNAPSHOTS } from '@/lib/version-snapshots';
 const repoRoot = join(__dirname, '..', '..', '..');
 
 describe('market intelligence backlog', () => {
+  it('withdraws the wrong Steam game as evidence instead of confirming a Roco beta date', () => {
+    const row = MARKET_INTEL_OPPORTUNITIES.find(item => item.id === 'roco-global-quack-quack-test-official-watch')!;
+    expect(row.status).toBe('watch');
+    expect(row.signal).toEqual({ strength: 'needs_verification' });
+    expect(row.sourceUrls).toEqual(['https://www.rocokingdom.com/']);
+    expect(row.notes).toContain('Mine Spiders');
+    expect(row.sourceDate).toBe('2026-09-21');
+  });
   it('stores the current sampling batch as structured opportunities', () => {
     expect(MARKET_INTEL_BATCH_ID).toBe('market-intel-2026-09-30');
     expect(MARKET_INTEL_SOURCE_REPORT).toBe('/plans/game-content-update-2026-09-30.md');
@@ -78,7 +86,7 @@ describe('market intelligence backlog', () => {
     ]);
 
     for (const opportunity of p0) {
-      expect(opportunity.status).toBe('done');
+      expect(opportunity.status).toBe(opportunity.id === 'roco-global-quack-quack-test-official-watch' ? 'watch' : 'done');
       if (opportunity.gameId !== 'azur-promilia' && opportunity.gameId !== 'lvmeng') {
         expect(VERSION_SNAPSHOTS[opportunity.gameId]).toBeDefined();
       }
@@ -137,13 +145,15 @@ describe('market intelligence backlog', () => {
     const roco = MARKET_INTEL_OPPORTUNITIES.find((opportunity) => opportunity.gameId === 'roco');
 
     for (const opportunity of p0) {
-      expect(['confirmed', 'mixed']).toContain(opportunity.signal?.strength);
-      if (opportunity.id === 'aniimo-launch-recap-mobile-countdown' || opportunity.gameId === 'roco') {
+      if (opportunity.id === 'roco-global-quack-quack-test-official-watch') {
+        expect(opportunity.signal).toEqual({ strength: 'needs_verification' });
+      } else expect(['confirmed', 'mixed']).toContain(opportunity.signal?.strength);
+      if (opportunity.id === 'aniimo-launch-recap-mobile-countdown') {
         expect(opportunity.signal?.deadline).toBeDefined();
       }
     }
 
-    expect(roco?.signal).toEqual({ strength: 'confirmed', deadline: '2026-10-27' });
+    expect(roco?.signal).toEqual({ strength: 'needs_verification' });
 
     for (const opportunity of MARKET_INTEL_OPPORTUNITIES) {
       if (opportunity.signal?.deadline) {

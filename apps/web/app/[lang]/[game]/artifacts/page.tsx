@@ -126,7 +126,7 @@ export default async function ArtifactsPage({
 }
 
 function ArtifactSetCard({ set, locale, gameId }: { set: ArtifactSetSummary; locale: SupportedLocale; gameId: string }) {
-  const href = gameId === 'wuwa' ? undefined : `/${gameId}/artifacts/${set.id}`;
+  const href = gameId === 'wuwa' ? `/wuwa/echoes/${set.id}` : `/${gameId}/artifacts/${set.id}`;
   const content = (
     <>
       <div className="mb-2 flex items-center gap-2">
@@ -147,10 +147,6 @@ function ArtifactSetCard({ set, locale, gameId }: { set: ArtifactSetSummary; loc
       )}
     </>
   );
-
-  if (!href) {
-    return <div className="rounded-lg border border-game-border bg-game-surface p-4">{content}</div>;
-  }
 
   return (
     <Link href={href as '/'} className="block rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary/50">
