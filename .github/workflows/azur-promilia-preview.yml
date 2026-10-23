@@ -12,6 +12,12 @@ on:
       - 'scripts/game-release.mjs'
       - 'scripts/game-release.test.mjs'
       - 'scripts/game-release-smoke.mjs'
+      - 'scripts/require-game-runtime.mjs'
+      - 'scripts/game-runtime.test.mjs'
+      - 'scripts/game-runtime-browser.mjs'
+      - 'scripts/verify-next-deferred-patch.mjs'
+      - 'patches/**'
+      - 'package.json'
   workflow_dispatch:
 
 concurrency:

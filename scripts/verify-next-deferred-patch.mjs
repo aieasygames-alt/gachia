@@ -5,16 +5,20 @@ import { dirname, join, resolve, relative, isAbsolute } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const digest = value => createHash('sha256').update(value).digest('hex');
-const manifestPath = fileURLToPath(new URL('../patches/next-15.5.18-deferred-initial.json', import.meta.url));
+const manifests = new Map(['15.5.18', '15.5.28'].map(version => [version,
+  fileURLToPath(new URL(`../patches/next-${version}-deferred-initial.json`, import.meta.url)),
+]));
 
 // Read-only: this does not apply a patch or enable it in package-manager config.
 export function verifyNextDeferredPatch(packageRoot, { requirePatched = false } = {}) {
+  const root = realpathSync(packageRoot);
+  const pkg = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8'));
+  const manifestPath = manifests.get(pkg.version);
+  if (pkg.name !== 'next' || !manifestPath) throw Error('Exact Next version required');
   const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
   if (digest(readFileSync(join(dirname(manifestPath), manifest.patch))) !== manifest.patchSha256) {
     throw Error('Patch digest mismatch');
   }
-  const root = realpathSync(packageRoot);
-  const pkg = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8'));
   if (pkg.name !== manifest.package || pkg.version !== manifest.version) throw Error('Exact Next version required');
   const files = manifest.files.map(file => {
     const path = realpathSync(join(root, file.path));

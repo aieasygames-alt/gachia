@@ -1,0 +1,1128 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "timezone": "Asia/Shanghai",
+  "phase": "S1.1_pilot_runtime_compatibility",
+  "baselineCommit": "798ab037e77325a55d46767377c8bf9d13ca2693",
+  "branch": "codex/multi-game-s1-release-safety",
+  "status": "pilot_default_local_verification_complete_cloud_acceptance_pending",
+  "runtime": {
+    "node": "22.22.2",
+    "pnpm": "10.10.0",
+    "next": "15.5.28",
+    "openNextCloudflare": "1.20.13",
+    "openNextAws": "4.1.12",
+    "wrangler": "4.148.0",
+    "workersTypes": "5.20261006.1",
+    "react": "19.2.4",
+    "reactDom": "19.2.4"
+  },
+  "input": {
+    "dirty": true,
+    "lockfileSha256": "ba6da94a41adbb0da0d2a74b487702721ba25095989bfc4193e9b6c6c43c9552",
+    "patchManifest": {
+      "schemaVersion": 1,
+      "package": "next",
+      "version": "15.5.28",
+      "status": "reviewed_candidate_not_production_enabled",
+      "patch": "next-15.5.28-deferred-initial.patch",
+      "patchSha256": "08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c2",
+      "files": [
+        {
+          "path": "dist/client/components/layout-router.js",
+          "originalSha256": "0821f45a91c9e4894d2b8e3f6f2fc5a776a5635d90e90edaf048affbb8ec7be2",
+          "patchedSha256": "0c1ca06f109657d840d520ca1ddf8a94c605ebe1e16ea3eb7ddcb3078eb6a464"
+        },
+        {
+          "path": "dist/client/components/app-router.js",
+          "originalSha256": "40965882017793245be84902100bdfcf8fa23d470288e3c2beed86988125f90f",
+          "patchedSha256": "85b52001d3faabf563e3fd7b4107047f63f9e391bc652848a1011fef2b537d3e"
+        },
+        {
+          "path": "dist/esm/client/components/layout-router.js",
+          "originalSha256": "83c23e6df225a99f2288c4a2c8c2b0b18568f59a4bd4b7b208ac9c618d0292a0",
+          "patchedSha256": "61d2635e7e869b0414e85ff9bc9cd7a4d9deec1a69426f2d62a271b3ae7359c1"
+        },
+        {
+          "path": "dist/esm/client/components/app-router.js",
+          "originalSha256": "21a31be2bf9ecb0057c3f2c26140a3f6afdb2279f34bd3539c1eab8b6323a26e",
+          "patchedSha256": "6a1cc9777a102a77355ae18caa308dd975c4349fa595b6c3911da0f2d16d9fd4"
+        }
+      ],
+      "scope": "Absent-prefetch initialValue only; CJS and ESM layout/head; pilot games only",
+      "acceptanceReport": "reports/release-safety/s1-runtime-verification-2026-10-23.json"
+    },
+    "fullSourceOrAssetAttestation": false
+  },
+  "supportEvidence": {
+    "observedAt": "2026-10-23",
+    "officialPolicy": "https://nextjs.org/support-policy",
+    "officialPolicyHtmlSha256": "b92e3946dde25b262a59be551e3a03a4443838937ebc721873f87ec09b74ce15",
+    "officialTable": {
+      "15.x": "Maintenance LTS",
+      "16.x": "Active LTS"
+    },
+    "adapterPeerMetadata": "https://registry.npmjs.org/@opennextjs%2fcloudflare/1.20.13",
+    "nextPeerRange": ">=15.5.28 <16 || >=16.4.1",
+    "correction": "Old adapter refusal was observed, but it did not establish that official support for every Next 15 version had ended.",
+    "candidateNotAdopted": {
+      "next": "16.4.2",
+      "reason": "Default _global-error.html failed preview noindex check; major router and bundler migration unnecessary for this bounded fix."
+    }
+  },
+  "validation": {
+    "releaseAndRuntimeTests": {
+      "passed": 64,
+      "failed": 0
+    },
+    "legacyPatchAndCiScopeTests": {
+      "passed": 7,
+      "failed": 0
+    },
+    "routerTests": {
+      "passed": 31,
+      "failed": 0
+    },
+    "webTests": {
+      "passed": 198,
+      "failed": 0
+    },
+    "typeChecks": [
+      "core",
+      "db",
+      "data",
+      "router",
+      "game-nte",
+      "game-azur-promilia",
+      "game-genshin",
+      "game-lvmeng",
+      "web"
+    ],
+    "webNextBuild": {
+      "status": "passed",
+      "next": "15.5.18",
+      "generatedStaticPages": 7523,
+      "workerBuild": false
+    },
+    "frozenOfflineInstall": "passed",
+    "nteIndexingContracts": "passed",
+    "nteJapaneseIndexableGuides": 53,
+    "gameDeploymentValidation": {
+      "status": "passed",
+      "games": 4
+    },
+    "defaultBuildsAndDryRuns": 4,
+    "buildHttpObservations": 44,
+    "browserScenarios": 56,
+    "javascriptScenarios": 32,
+    "noJavascriptScenarios": 24,
+    "delayedScriptScenariosIncluded": 8
+  },
+  "builds": [
+    {
+      "game": "nte",
+      "environment": "staging",
+      "service": "gachia-game-nte-staging",
+      "status": "bundle_verified_not_deployed",
+      "compatibilityException": null,
+      "completedAt": "2026-10-23T02:05:40.053Z",
+      "configurationSha256": "24a9c035334cd7cd8fd9587ed36d8fbac2b2d4a685b0ee8277b92f3ca7724ebf",
+      "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+      "versions": {
+        "next": "15.5.28",
+        "@opennextjs/cloudflare": "1.20.13",
+        "wrangler": "4.148.0"
+      },
+      "bundleSizeKiB": 6868.18,
+      "gzipSizeKiB": 1341.84,
+      "http": [
+        {
+          "path": "/robots.txt",
+          "status": 200
+        },
+        {
+          "path": "/sitemap.xml",
+          "status": 200
+        },
+        {
+          "path": "/zh/nte",
+          "status": 200
+        },
+        {
+          "path": "/en/nte",
+          "status": 200
+        },
+        {
+          "path": "/zh/nte/characters",
+          "status": 200
+        },
+        {
+          "path": "/zh/nte/characters/nanally",
+          "status": 200
+        },
+        {
+          "path": "/_games/nte/_next/static/chunks/webpack-78aede61962d179a.js",
+          "status": 200
+        },
+        {
+          "path": "/_next/static/chunks/webpack-78aede61962d179a.js",
+          "status": 200
+        },
+        {
+          "path": "/_games/nte/_next/static/css/a03f215a7bc52d77.css",
+          "status": 200
+        },
+        {
+          "path": "/_next/static/css/a03f215a7bc52d77.css",
+          "status": 200
+        },
+        {
+          "path": "/zh/nte/__release_smoke_missing__",
+          "status": 404
+        }
+      ],
+      "browser": {
+        "status": "local_browser_verified",
+        "engine": "chromium",
+        "cases": [
+          {
+            "viewport": "desktop",
+            "locale": "zh",
+            "mode": "interactive",
+            "path": "/zh/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 20,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "en",
+            "mode": "interactive",
+            "path": "/en/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 20,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "ja",
+            "mode": "interactive",
+            "path": "/ja/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 20,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "zh",
+            "mode": "delayed_scripts",
+            "path": "/zh/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 7,
+            "prefetchRequests": 20,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "zh",
+            "mode": "no_javascript",
+            "path": "/zh/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "en",
+            "mode": "no_javascript",
+            "path": "/en/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "ja",
+            "mode": "no_javascript",
+            "path": "/ja/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "zh",
+            "mode": "interactive",
+            "path": "/zh/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 10,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "en",
+            "mode": "interactive",
+            "path": "/en/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 10,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "ja",
+            "mode": "interactive",
+            "path": "/ja/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 10,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "zh",
+            "mode": "delayed_scripts",
+            "path": "/zh/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 7,
+            "prefetchRequests": 10,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "zh",
+            "mode": "no_javascript",
+            "path": "/zh/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "en",
+            "mode": "no_javascript",
+            "path": "/en/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "ja",
+            "mode": "no_javascript",
+            "path": "/ja/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          }
+        ]
+      },
+      "localEvidence": {
+        "releaseRecord": ".release-records/nte-26e7e5c6-5e8a-4d87-a14e-c7f4b7197fde.json",
+        "log": ".release-records/s1-runtime-nte-staging.log",
+        "browserRecord": ".release-records/runtime-browser-nte-staging.json",
+        "committed": false
+      }
+    },
+    {
+      "game": "nte",
+      "environment": "production",
+      "service": "gachia-game-nte",
+      "status": "bundle_verified_not_deployed",
+      "compatibilityException": null,
+      "completedAt": "2026-10-23T02:09:23.138Z",
+      "configurationSha256": "24a9c035334cd7cd8fd9587ed36d8fbac2b2d4a685b0ee8277b92f3ca7724ebf",
+      "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+      "versions": {
+        "next": "15.5.28",
+        "@opennextjs/cloudflare": "1.20.13",
+        "wrangler": "4.148.0"
+      },
+      "bundleSizeKiB": 6867.93,
+      "gzipSizeKiB": 1336.69,
+      "http": [
+        {
+          "path": "/robots.txt",
+          "status": 200
+        },
+        {
+          "path": "/sitemap.xml",
+          "status": 200
+        },
+        {
+          "path": "/zh/nte",
+          "status": 200
+        },
+        {
+          "path": "/en/nte",
+          "status": 200
+        },
+        {
+          "path": "/zh/nte/characters",
+          "status": 200
+        },
+        {
+          "path": "/zh/nte/characters/nanally",
+          "status": 200
+        },
+        {
+          "path": "/_games/nte/_next/static/chunks/webpack-78aede61962d179a.js",
+          "status": 200
+        },
+        {
+          "path": "/_next/static/chunks/webpack-78aede61962d179a.js",
+          "status": 200
+        },
+        {
+          "path": "/_games/nte/_next/static/css/a03f215a7bc52d77.css",
+          "status": 200
+        },
+        {
+          "path": "/_next/static/css/a03f215a7bc52d77.css",
+          "status": 200
+        },
+        {
+          "path": "/zh/nte/__release_smoke_missing__",
+          "status": 404
+        }
+      ],
+      "browser": {
+        "status": "local_browser_verified",
+        "engine": "chromium",
+        "cases": [
+          {
+            "viewport": "desktop",
+            "locale": "zh",
+            "mode": "interactive",
+            "path": "/zh/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 20,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "en",
+            "mode": "interactive",
+            "path": "/en/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 20,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "ja",
+            "mode": "interactive",
+            "path": "/ja/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 20,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "zh",
+            "mode": "delayed_scripts",
+            "path": "/zh/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 7,
+            "prefetchRequests": 20,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "zh",
+            "mode": "no_javascript",
+            "path": "/zh/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "en",
+            "mode": "no_javascript",
+            "path": "/en/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "ja",
+            "mode": "no_javascript",
+            "path": "/ja/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "zh",
+            "mode": "interactive",
+            "path": "/zh/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 10,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "en",
+            "mode": "interactive",
+            "path": "/en/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 10,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "ja",
+            "mode": "interactive",
+            "path": "/ja/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 10,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "zh",
+            "mode": "delayed_scripts",
+            "path": "/zh/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 7,
+            "prefetchRequests": 10,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "zh",
+            "mode": "no_javascript",
+            "path": "/zh/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "en",
+            "mode": "no_javascript",
+            "path": "/en/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "ja",
+            "mode": "no_javascript",
+            "path": "/ja/nte/characters",
+            "serverRenderedCards": 42,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          }
+        ]
+      },
+      "localEvidence": {
+        "releaseRecord": ".release-records/nte-0396d534-3170-41fe-86a5-ca01106c8382.json",
+        "log": ".release-records/s1-runtime-nte-production.log",
+        "browserRecord": ".release-records/runtime-browser-nte-production.json",
+        "committed": false
+      }
+    },
+    {
+      "game": "azur-promilia",
+      "environment": "staging",
+      "service": "gachia-game-azur-promilia-staging",
+      "status": "bundle_verified_not_deployed",
+      "compatibilityException": null,
+      "completedAt": "2026-10-23T02:05:33.385Z",
+      "configurationSha256": "72ee33655dfb2150d645c6f6e1203497de605d106a22c4b0bad06d3e3c2faab0",
+      "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+      "versions": {
+        "next": "15.5.28",
+        "@opennextjs/cloudflare": "1.20.13",
+        "wrangler": "4.148.0"
+      },
+      "bundleSizeKiB": 5275.26,
+      "gzipSizeKiB": 1039.28,
+      "http": [
+        {
+          "path": "/robots.txt",
+          "status": 200
+        },
+        {
+          "path": "/sitemap.xml",
+          "status": 200
+        },
+        {
+          "path": "/zh/azur-promilia",
+          "status": 200
+        },
+        {
+          "path": "/en/azur-promilia",
+          "status": 200
+        },
+        {
+          "path": "/zh/azur-promilia/characters",
+          "status": 200
+        },
+        {
+          "path": "/zh/azur-promilia/characters/abby",
+          "status": 200
+        },
+        {
+          "path": "/_games/azur-promilia/_next/static/chunks/webpack-ab27a0009b5e7231.js",
+          "status": 200
+        },
+        {
+          "path": "/_next/static/chunks/webpack-ab27a0009b5e7231.js",
+          "status": 200
+        },
+        {
+          "path": "/_games/azur-promilia/_next/static/css/9aa93cdcbed4bf47.css",
+          "status": 200
+        },
+        {
+          "path": "/_next/static/css/9aa93cdcbed4bf47.css",
+          "status": 200
+        },
+        {
+          "path": "/zh/azur-promilia/__release_smoke_missing__",
+          "status": 404
+        }
+      ],
+      "browser": {
+        "status": "local_browser_verified",
+        "engine": "chromium",
+        "cases": [
+          {
+            "viewport": "desktop",
+            "locale": "zh",
+            "mode": "interactive",
+            "path": "/zh/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 19,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "en",
+            "mode": "interactive",
+            "path": "/en/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 19,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "ja",
+            "mode": "interactive",
+            "path": "/ja/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 19,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "zh",
+            "mode": "delayed_scripts",
+            "path": "/zh/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 8,
+            "prefetchRequests": 19,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "zh",
+            "mode": "no_javascript",
+            "path": "/zh/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "en",
+            "mode": "no_javascript",
+            "path": "/en/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "ja",
+            "mode": "no_javascript",
+            "path": "/ja/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "zh",
+            "mode": "interactive",
+            "path": "/zh/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 8,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "en",
+            "mode": "interactive",
+            "path": "/en/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 7,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "ja",
+            "mode": "interactive",
+            "path": "/ja/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 7,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "zh",
+            "mode": "delayed_scripts",
+            "path": "/zh/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 8,
+            "prefetchRequests": 8,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "zh",
+            "mode": "no_javascript",
+            "path": "/zh/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "en",
+            "mode": "no_javascript",
+            "path": "/en/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "ja",
+            "mode": "no_javascript",
+            "path": "/ja/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          }
+        ]
+      },
+      "localEvidence": {
+        "releaseRecord": ".release-records/azur-promilia-46d33294-0269-498e-8f7a-83cf53bef6ea.json",
+        "log": ".release-records/s1-runtime-azur-staging.log",
+        "browserRecord": ".release-records/runtime-browser-azur-promilia-staging.json",
+        "committed": false
+      }
+    },
+    {
+      "game": "azur-promilia",
+      "environment": "production",
+      "service": "gachia-game-azur-promilia",
+      "status": "bundle_verified_not_deployed",
+      "compatibilityException": null,
+      "completedAt": "2026-10-23T02:09:35.124Z",
+      "configurationSha256": "72ee33655dfb2150d645c6f6e1203497de605d106a22c4b0bad06d3e3c2faab0",
+      "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+      "versions": {
+        "next": "15.5.28",
+        "@opennextjs/cloudflare": "1.20.13",
+        "wrangler": "4.148.0"
+      },
+      "bundleSizeKiB": 5274.9,
+      "gzipSizeKiB": 1038.97,
+      "http": [
+        {
+          "path": "/robots.txt",
+          "status": 200
+        },
+        {
+          "path": "/sitemap.xml",
+          "status": 200
+        },
+        {
+          "path": "/zh/azur-promilia",
+          "status": 200
+        },
+        {
+          "path": "/en/azur-promilia",
+          "status": 200
+        },
+        {
+          "path": "/zh/azur-promilia/characters",
+          "status": 200
+        },
+        {
+          "path": "/zh/azur-promilia/characters/abby",
+          "status": 200
+        },
+        {
+          "path": "/_games/azur-promilia/_next/static/chunks/webpack-ab27a0009b5e7231.js",
+          "status": 200
+        },
+        {
+          "path": "/_next/static/chunks/webpack-ab27a0009b5e7231.js",
+          "status": 200
+        },
+        {
+          "path": "/_games/azur-promilia/_next/static/css/9aa93cdcbed4bf47.css",
+          "status": 200
+        },
+        {
+          "path": "/_next/static/css/9aa93cdcbed4bf47.css",
+          "status": 200
+        },
+        {
+          "path": "/zh/azur-promilia/__release_smoke_missing__",
+          "status": 404
+        }
+      ],
+      "browser": {
+        "status": "local_browser_verified",
+        "engine": "chromium",
+        "cases": [
+          {
+            "viewport": "desktop",
+            "locale": "zh",
+            "mode": "interactive",
+            "path": "/zh/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 19,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "en",
+            "mode": "interactive",
+            "path": "/en/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 19,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "ja",
+            "mode": "interactive",
+            "path": "/ja/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 19,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "zh",
+            "mode": "delayed_scripts",
+            "path": "/zh/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 8,
+            "prefetchRequests": 19,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "zh",
+            "mode": "no_javascript",
+            "path": "/zh/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "en",
+            "mode": "no_javascript",
+            "path": "/en/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "desktop",
+            "locale": "ja",
+            "mode": "no_javascript",
+            "path": "/ja/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "zh",
+            "mode": "interactive",
+            "path": "/zh/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 8,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "en",
+            "mode": "interactive",
+            "path": "/en/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 7,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "ja",
+            "mode": "interactive",
+            "path": "/ja/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 7,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "zh",
+            "mode": "delayed_scripts",
+            "path": "/zh/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 8,
+            "prefetchRequests": 8,
+            "clientInteraction": true,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "zh",
+            "mode": "no_javascript",
+            "path": "/zh/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "en",
+            "mode": "no_javascript",
+            "path": "/en/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          },
+          {
+            "viewport": "mobile",
+            "locale": "ja",
+            "mode": "no_javascript",
+            "path": "/ja/azur-promilia/characters",
+            "serverRenderedCards": 19,
+            "delayedScripts": 0,
+            "prefetchRequests": 0,
+            "clientInteraction": false,
+            "hydrationErrors": 0,
+            "failedAssets": 0
+          }
+        ]
+      },
+      "localEvidence": {
+        "releaseRecord": ".release-records/azur-promilia-240f365e-67f8-4919-b788-50357720626e.json",
+        "log": ".release-records/s1-runtime-azur-production.log",
+        "browserRecord": ".release-records/runtime-browser-azur-promilia-production.json",
+        "committed": false
+      }
+    }
+  ],
+  "remaining": {
+    "legacyRuntimeApps": [
+      "web",
+      "game-genshin",
+      "game-lvmeng"
+    ],
+    "legacyNext": "15.5.18",
+    "legacyOpenNextCloudflare": "1.20.1",
+    "sharedLockfilePeerContextsChanged": [
+      "web",
+      "router",
+      "data"
+    ],
+    "routerExistingWorkersTypesPeerWarning": true,
+    "webExistingAuthDialogEffectCleanupLintWarning": true,
+    "cloudVerification": "not_performed",
+    "currentCloudVersion": "not_observed",
+    "productionReadiness": "not_established",
+    "fullDependencySecurityAudit": "not_performed",
+    "fullBrowserOrAuthenticationAcceptance": "not_performed"
+  },
+  "boundaries": {
+    "cloudWrites": 0,
+    "productionDeployments": 0,
+    "remoteCiTriggered": false,
+    "pushed": false,
+    "pullRequestCreated": false,
+    "businessFilesDeleted": false,
+    "localWorkersStopped": true,
+    "browserExternalRequests": "blocked",
+    "mobileCoverage": "chromium_viewports_not_real_devices",
+    "hydrationInteraction": "after_async_resources_settled_not_pre_hydration_input_replay"
+  }
+}

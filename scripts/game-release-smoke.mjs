@@ -55,7 +55,7 @@ export async function verifyOrigin(plan, origin, request = fetch) {
   return { status: 'local_worker_http_verified', cloudVerification: 'not_performed', observations };
 }
 
-export async function verifyLocalWorker(plan, root, { timeoutMs = 90000 } = {}) {
+export async function verifyLocalWorker(plan, root, { timeoutMs = 90000, verify = verifyOrigin } = {}) {
   const child = spawn('pnpm', ['exec', 'wrangler', 'dev', '--local', '--ip', '127.0.0.1', '--port', '0', '--inspector-port', '0', '--config', 'wrangler.jsonc', '--env', plan.wranglerEnvironment], {
     cwd: resolve(root, plan.app),
     env: { ...process.env, ...plan.buildEnvironment, WRANGLER_SEND_METRICS: 'false', BROWSER: 'none' },
@@ -78,7 +78,7 @@ export async function verifyLocalWorker(plan, root, { timeoutMs = 90000 } = {}) 
       child.once('exit', (code) => reject(new Error(`Local Worker exited before readiness (${code})`)));
     });
     clearTimeout(timer);
-    return await verifyOrigin(plan, origin);
+    return await verify(plan, origin);
   } finally {
     clearTimeout(timer);
     if (child.pid && child.exitCode === null && child.signalCode === null) {

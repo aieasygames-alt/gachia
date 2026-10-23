@@ -1,5 +1,28 @@
 # Next deferred initial-value candidate
 
+## Current pilot runtime: Next 15.5.28
+
+NTE and Azur Promilia use the exact Next 15.5.28 / OpenNext 1.20.13 /
+Wrangler 4.148.0 combination. Other apps retain Next 15.5.18 and its original
+patch registration until their separate runtime acceptance. Node 22+ is required.
+
+`next-15.5.28-deferred-initial.patch` is a separately verified port of the same
+four absent-prefetch fallback changes. The patch bytes happen to be identical;
+the distribution source digests are not. Its adjacent JSON manifest records
+the new original and patched digests. Never use a version range to select a
+manifest or reuse the old source hashes. The verifier resolves the app's package
+and accepts only one of the two exact reviewed versions, rejecting partial or
+drifted sources. The pilot build gate additionally checks exact adapter/CLI
+versions and retains the caller's indexing mode.
+
+Local runtime and browser acceptance is documented in
+[S1.1 closeout](../plans/multi-game-s1-runtime-closeout-2026-10-23.md).
+This is not cloud acceptance or approval to deploy the patch to production.
+Original source maps remain unchanged and must not be treated as accurate
+mappings of the four patched source files.
+
+## Legacy Next 15.5.18 baseline
+
 Status: package-manager registration and lockfile integrated after limited local acceptance.
 The main checkout dependency directory has NOT been reinstalled and still contains original Next files.
 No production deployment is authorized or accepted.
@@ -20,7 +43,7 @@ node scripts/verify-next-deferred-patch.mjs --require-patched
 node scripts/verify-next-deferred-patch.mjs /absolute/path/to/isolated/next
 ```
 
-The gate accepts only Next 15.5.18 with all four original or all four patched
+For this legacy manifest, the gate accepts only Next 15.5.18 with all four original or all four patched
 digests. It rejects partial application and source drift. It never writes files.
 The adjacent JSON manifest binds the patch and expected source digests.
 

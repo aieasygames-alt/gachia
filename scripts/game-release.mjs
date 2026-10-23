@@ -5,6 +5,7 @@ import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import ts from 'typescript';
 import { verifyLocalWorker } from './game-release-smoke.mjs';
+import { verifyGameRuntime } from './require-game-runtime.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const TARGETS = Object.freeze({
@@ -252,7 +253,7 @@ async function main() {
     const dirty = Boolean(execFileSync('git', ['status', '--porcelain'], { cwd: ROOT, encoding: 'utf8' }).trim());
     const record = await executeRelease(plan, options, {
       refreshPlan: () => readReleasePlan(options),
-      verifyArtifacts: async () => ({ namespacedAssets: prepareNamespacedAssets(plan), ...verifyBuiltIndexing(plan), runtime: await verifyLocalWorker(plan, ROOT) }),
+      verifyArtifacts: async () => ({ runtimePolicy: verifyGameRuntime(resolve(ROOT, plan.app)), namespacedAssets: prepareNamespacedAssets(plan), ...verifyBuiltIndexing(plan), runtime: await verifyLocalWorker(plan, ROOT) }),
       save: (record) => {
         writeFileSync(`${path}.tmp`, `${JSON.stringify({ ...record, input: { commit, dirty, scope: 'head_and_config_not_full_source_attestation' } }, null, 2)}\n`, { mode: 0o600 });
         renameSync(`${path}.tmp`, path);

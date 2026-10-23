@@ -22,7 +22,7 @@
     "test:browser": "playwright test",
     "audit:production": "node scripts/production-site-audit.mjs",
     "release:game": "node scripts/game-release.mjs",
-    "test:release": "node --test scripts/game-release.test.mjs"
+    "test:release": "node --test scripts/game-release.test.mjs scripts/game-runtime.test.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",
@@ -32,7 +32,8 @@
   "packageManager": "pnpm@10.10.0",
   "pnpm": {
     "patchedDependencies": {
-      "next@15.5.18": "patches/next-15.5.18-deferred-initial.patch"
+      "next@15.5.18": "patches/next-15.5.18-deferred-initial.patch",
+      "next@15.5.28": "patches/next-15.5.28-deferred-initial.patch"
     },
     "onlyBuiltDependencies": [
       "@swc/core",
@@ -47,6 +48,6 @@
     }
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22.0.0"
   }
 }

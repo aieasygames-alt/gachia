@@ -31,7 +31,7 @@ for (const game of ['nte', 'azur-promilia']) {
     assert.match(scripts.deploy, /game-release\.mjs deploy.*--environment production/);
     assert.equal(scripts['deploy:staging'], scripts['deploy:preview']);
     assert.equal(scripts['deploy:production'], scripts.deploy);
-    assert.equal(scripts.build, 'next build', 'nested Next builds must retain the selected mode');
+    assert.equal(scripts.build, 'node ../../scripts/require-game-runtime.mjs && next build', 'nested Next builds must retain the selected mode and verified runtime');
     assert.match(scripts.preview, /--env staging.*--env staging/);
     assert.match(scripts['verify:bundle'], /game-release\.mjs verify.*--environment production/);
   });

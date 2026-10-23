@@ -49,20 +49,27 @@ pnpm --filter @gachia/game-azur-promilia verify:bundle
 - 两者会创建可再生构建物、本地 Miniflare 状态和发布验证记录，不是只读命令。
 - 推荐 Node 22；本阶段验证使用 Node 22.22.2 与冻结锁文件安装。
 
-### 当前运行时支持期阻断
+### 当前试点运行时与历史阻断
 
-2026-10-23 实测：锁定的 Next.js 15.5.18 被 OpenNext 1.20.1 拒绝，提示超出支持期。默认命令保留该拒绝，不自动增加 `--dangerouslyUseUnsupportedNextVersion`。
+S1.1 将两个试点精确锁定为 Next.js 15.5.28、OpenNext 1.20.13、Wrangler 4.148.0，使用 Node 22 或更新版本。默认验证命令不再需要例外参数。构建前从当前应用解析实际依赖，核对声明版本、安装版本与四处补丁摘要；未知版本或不完整补丁拒绝构建。发布记录包含该运行时检查结果。
 
-为了在不升级框架、不允许云部署的前提下检查 S1，可显式使用本地验证例外：
+上一阶段的拒绝是真实观察，但不能直接等同于官方已停止支持所有 Next 15：当时 OpenNext 1.20.1 使用两年日期截止判断；2026-10-23 官方支持表仍列 15.x 为 Maintenance LTS，新版 OpenNext 已加入 Active/Maintenance LTS 判断，并将可接受的 15.x peer 下限提高到 15.5.28。证据、试验取舍与未迁移范围见 [S1.1 交付记录](../plans/multi-game-s1-runtime-closeout-2026-10-23.md)。
+
+旧的 `--allow-unsupported-next-for-verification` 仍仅限本地诊断，不能用于 deploy；本阶段验收不使用它，也不把它加入 CI。主站、原神、绿梦仍使用旧运行时，不能从两个试点的成功推断全站运行时已完成升级。
+
+### 浏览器回归
+
+先执行对应环境的默认 verify，再检查其已生成的本地产物：
 
 ```bash
-pnpm --filter @gachia/game-nte verify:preview --allow-unsupported-next-for-verification
-pnpm --filter @gachia/game-nte verify:bundle --allow-unsupported-next-for-verification
-pnpm --filter @gachia/game-azur-promilia verify:preview --allow-unsupported-next-for-verification
-pnpm --filter @gachia/game-azur-promilia verify:bundle --allow-unsupported-next-for-verification
+pnpm --filter @gachia/game-nte verify:preview
+node scripts/game-runtime-browser.mjs --game nte --environment staging
+# production 模式对应 verify:bundle；仍然只启动本地 Worker，不部署。
+pnpm --filter @gachia/game-azur-promilia verify:bundle
+node scripts/game-runtime-browser.mjs --game azur-promilia --environment production
 ```
 
-该选项仅接受于 `verify`，明确记录 `compatibilityException=local_verification_only_unsupported_next`。`deploy` 拒绝此例外，生产默认构建仍受支持期检查保护。这些结果不代表运行时仍受安全支持，也不代表下一次完整 CI 会通过；正式云端发布前需要独立的框架升级与自定义补丁兼容验收。
+需要与锁文件中 Playwright 匹配的 Chromium（缺少时先运行 `pnpm exec playwright install chromium`）。覆盖桌面/手机、中英日角色列表、无 JS 阅读、延迟脚本后的筛选、客户端详情导航和返回；不等同于全站交互、登录或真实移动设备验收。浏览器仅访问启动的本地 origin，阻止外部请求，共用每游戏锁，并在退出时停止浏览器与 Worker。结果保存在 `.release-records/runtime-browser-<game>-<environment>.json`。
 
 ## 5. 远程操作：仅在满足发布前置条件后
 
@@ -122,7 +129,7 @@ pnpm release:game status --record .release-records/<record-file>.json
 
 ## 8. 云端验收清单与已复核边界
 
-- [ ] 运行时支持期问题解决，依赖升级与自定义补丁兼容性通过。
+- [x] 两试点默认构建、运行时精确版本与自定义补丁的限定本地回归通过；其他应用待独立迁移。
 - [ ] 核对真实账户、目标环境、凭据权限与当前版本。
 - [ ] staging 实际部署后检查 noindex、robots、正文、canonical、JS/CSS、404。
 - [ ] 发布前后确认生产版本未被 staging 修改。
