@@ -311,6 +311,31 @@ jobs:
           ROLLBACK_VERSION: ${{ inputs.rollback_version }}
         run: node scripts/retain-web-assets.mjs staging "$ROLLBACK_VERSION"
 
+      - name: Install browser for production candidate acceptance
+        if: inputs.release_target == 'production'
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Accept compiled main production candidate on staging
+        if: inputs.release_target == 'production'
+        run: node scripts/web-staging-acceptance.mjs
+
+      - name: Verify compiled cross-owner navigation on staging
+        if: inputs.release_target == 'production'
+        env:
+          PLAYWRIGHT_BASE_URL: https://gachia-staging.aieasygames.workers.dev
+        run: pnpm exec playwright test tests/browser/navigation.spec.ts --grep "without RSC prefetch" --workers=2
+
+      - name: Preserve failed production candidate acceptance
+        if: failure() && inputs.release_target == 'production'
+        uses: actions/upload-artifact@v4
+        with:
+          name: main-staging-acceptance-failure-${{ github.run_id }}
+          path: |
+            .release-records/web-staging-*/result.json
+            test-results/
+          if-no-files-found: ignore
+          retention-days: 7
+
       - name: Smoke test HI3 reading routes
         env:
           READING_ORIGIN: ${{ env.STAGING_ORIGIN }}

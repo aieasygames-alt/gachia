@@ -24,7 +24,7 @@
 3. 合并旧静态资源；相同路径必须字节相同，否则视为不可变资源冲突，停止，不覆盖候选文件。
 4. 生成非公开 `retained-web-assets.json`：记录来源、文件路径、大小、SHA-256 和 Worker 入口摘要；验证产物可移植性。
 5. 封存一个不可变 tar，staging 与 production 下载同一 artifact ID 并验证同一 tar 摘要；中途不重建。
-6. 两次部署前均核验保留清单。staging 额外对最多 12 个旧资源 GET 校验字节，优先覆盖 webpack/CSS；这不意味着执行了所有历史 chunk。
+6. 两次部署前均核验保留清单。production 请求的 staging 作业对最多 12 个旧资源 GET 校验字节，优先覆盖 webpack/CSS，并为下载的编译产物执行 31 项 HTTP、18 场景浏览器验收及 8 项跨 owner 浏览器夹具检查；不能用 build 作业的 dev-server 测试替代。失败阻断 production，并保留失败记录；这不意味着执行了所有历史 chunk。
 7. production 写入前再次读取当前部署，确认回滚 UUID 仍为唯一 100% 活跃版本；保留证据后才能发布。
 
 本地预备入口（执行前先完成生产版本/产物对应关系核验）：

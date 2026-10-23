@@ -75,6 +75,25 @@ test('previous static assets are pinned, sealed once and verified before both cl
   assert(workflow.jobs['deploy-staging'].steps.some(s => s.run === 'node scripts/retain-web-assets.mjs staging "$ROLLBACK_VERSION"'));
 });
 
+test('production waits for browser acceptance of the exact compiled staging artifact', () => {
+  const require = createRequire(import.meta.url);
+  const workflow = require('yaml').parse(readFileSync(new URL('../../../.github/workflows/deploy.yml', import.meta.url), 'utf8'));
+  const steps = workflow.jobs['deploy-staging'].steps;
+  const deploy = steps.findIndex(s => s.name === 'Deploy to Cloudflare staging');
+  const browser = steps.findIndex(s => s.name === 'Install browser for production candidate acceptance');
+  const runtime = steps.findIndex(s => s.run === 'node scripts/web-staging-acceptance.mjs');
+  const boundary = steps.findIndex(s => s.name === 'Verify compiled cross-owner navigation on staging');
+  assert(browser > deploy && runtime > browser && boundary > runtime);
+  for (const index of [browser, runtime, boundary]) {
+    assert.equal(steps[index].if, "inputs.release_target == 'production'");
+    assert.notEqual(steps[index]['continue-on-error'], true);
+  }
+  assert.equal(steps[boundary].env.PLAYWRIGHT_BASE_URL, 'https://gachia-staging.aieasygames.workers.dev');
+  assert.match(steps[boundary].run, /without RSC prefetch/);
+  assert(workflow.jobs.deploy.needs.includes('deploy-staging'));
+  assert.match(workflow.jobs.deploy.if, /needs\.deploy-staging\.result == 'success'/);
+});
+
 test('rollback evidence must identify the latest fully active main version', () => {
   const require = createRequire(import.meta.url);
   const workflow = require('yaml').parse(readFileSync(new URL('../../../.github/workflows/deploy.yml', import.meta.url), 'utf8'));

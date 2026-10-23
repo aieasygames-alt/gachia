@@ -1,0 +1,350 @@
+{
+  "schemaVersion": 1,
+  "phase": "S1.5",
+  "date": "2026-10-23",
+  "status": "main_staging_verified_navigation_and_previous_assets",
+  "scope": "main_release_preflight_not_full_site_production_acceptance",
+  "source": {
+    "functionalCandidateCommit": "1114fb5c09704edb0e2e9e9eebf20a1500a1df71",
+    "cleanWorktreeAtDeployment": true,
+    "applicationRebuilt": true,
+    "subsequentChanges": "compiled_staging_CI_gates_and_docs_only_no_application_or_artifact_changes",
+    "workflowSha256": "2fb17644444d3059c099351b81031f57be3fa05de89490c9d8bc130cd6f383c8"
+  },
+  "fixes": [
+    "disabled_session_contract_in_production_audit",
+    "digest_pinned_current_production_static_asset_retention",
+    "native_document_navigation_from_main_to_live_game_owners",
+    "compiled_staging_browser_gates_before_production"
+  ],
+  "accountFeatures": false,
+  "previousProductionArtifact": {
+    "artifactId": "12135470423",
+    "archiveSha256": "18dd82b28d781661a792b998d39d341b978024f7be1fa805ac23e6a7b7fdcd35",
+    "versionId": "db8e1a59-f46a-4f31-b57a-a318b2d70c23",
+    "runId": 39122963558,
+    "headSha": "18cfe049b4c34d177049def95e645763c2cef0b2",
+    "name": "web-worker-18cfe049b4c34d177049def95e645763c2cef0b2-1",
+    "innerTarSha256": "b38c656f966fb340026c10fbb1f150855687569ec80d0ff715606ec04710a0b6",
+    "expiresAt": "2026-10-25T11:29:11Z",
+    "staticFiles": 131,
+    "newFilesCopied": 126,
+    "retainedBytes": 4019894,
+    "oldEntryAssets": 23
+  },
+  "localChecks": {
+    "web": {
+      "tests": 268,
+      "files": 59
+    },
+    "releaseNodeTests": 94,
+    "archivePythonTests": 9,
+    "ciPatchArtifactContracts": 13,
+    "ciScopeTests": 2,
+    "router": {
+      "tests": 31,
+      "files": 3
+    },
+    "typecheck": {
+      "passed": 9,
+      "cached": 8
+    },
+    "lint": {
+      "errors": 0,
+      "existingAuthDialogWarnings": 1
+    },
+    "build": {
+      "passed": true,
+      "staticPages": 7523
+    },
+    "artifactPortability": {
+      "files": 3264,
+      "links": 19,
+      "portable": true,
+      "scope": "filesystem_portability_not_runtime_or_platform_acceptance"
+    },
+    "http": {
+      "checks": 31
+    },
+    "browser": {
+      "scenarios": 18,
+      "requests": 490,
+      "accountRequests": 0,
+      "runtimeErrors": 0,
+      "failedAssets": 0
+    },
+    "compiledCrossOwnerBrowserFixtures": 8,
+    "oldAssetByteChecks": 23,
+    "hybridActualRouter": {
+      "scenarios": 16,
+      "upstreamGets": 774,
+      "main": "local_compiled_candidate",
+      "games": "current_cloud_production_workers",
+      "router": "local_current_source_with_read_only_production_vars_snapshot",
+      "modes": [
+        "javascript",
+        "no_javascript"
+      ],
+      "widths": [
+        1440,
+        390
+      ],
+      "runtimeErrors": 0,
+      "failedAssets": 0
+    }
+  },
+  "staging": {
+    "origin": "https://gachia-staging.aieasygames.workers.dev",
+    "service": "gachia-staging",
+    "versionId": "ec3fd2cd-f624-47b2-b67e-ea90a15a519d",
+    "versionNumber": 211,
+    "deploymentId": "f21c39cc-3bb3-4f4f-b9ea-7827420ff8a3",
+    "deployedAt": "2026-10-23T13:25:23.606789Z",
+    "startupMs": 17,
+    "workerRawKiB": 13906.18,
+    "workerGzipKiB": 2838.7,
+    "http": {
+      "checks": 31
+    },
+    "browser": {
+      "scenarios": 18,
+      "requests": 490,
+      "accountRequests": 0,
+      "runtimeErrors": 0,
+      "failedAssets": 0
+    },
+    "compiledCrossOwnerBrowserFixtures": 8,
+    "oldAssetByteChecks": 23,
+    "boundedOldAssetSmoke": {
+      "verified": true,
+      "sampledFiles": 12,
+      "totalFiles": 131,
+      "scope": "bounded_staging_byte_probe_not_all_chunks_executed"
+    },
+    "hybridActualRouter": {
+      "scenarios": 16,
+      "upstreamGets": 774,
+      "main": "cloud_main_staging",
+      "games": "current_cloud_production_workers",
+      "router": "local_loopback_actual_router_not_cloud_service_binding_acceptance",
+      "runtimeErrors": 0,
+      "failedAssets": 0
+    },
+    "rollbackReference": "ac713549-2c34-4d41-a77f-6cc74566845e",
+    "rollbackRehearsed": false
+  },
+  "artifact": {
+    "archiveSha256": "077c827f379ebb31250046f7d3f0b65475cb5a19c8f6ad8fe96b15eb8b1d5c19",
+    "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+    "fullFileListSha256": "f09686eb531bfed06eb3863f663985b51f6f94de017f7cd333c4715732c3288f",
+    "workerEntrypointAloneDoesNotProveApplicationIdentity": true,
+    "allFilesAndLinksUnchangedAfterDeployment": true,
+    "previousS14SealUnchanged": true
+  },
+  "production": {
+    "trafficSwitched": false,
+    "newAccountPolicyDeployed": false,
+    "readOnlyBaseline": {
+      "accountFeatures": true,
+      "siteGets": 15,
+      "ownerGets": 19,
+      "failures": []
+    },
+    "oldAssetByteChecks": 23,
+    "services": {
+      "gachia": {
+        "versionId": "db8e1a59-f46a-4f31-b57a-a318b2d70c23",
+        "deploymentId": "0508ac4a-eebc-4479-8fc4-8efa260367d8"
+      },
+      "gachia-router": {
+        "versionId": "239bb325-998c-4893-98e5-ddd24d50c99a",
+        "deploymentId": "04a74338-c9ba-4e87-9857-0fe414457ff5"
+      },
+      "gachia-game-nte": {
+        "versionId": "6b079ce0-7fce-4bef-a649-150c1a947135",
+        "deploymentId": "c344161b-5b10-4e87-8551-4e950366a5f1"
+      },
+      "gachia-game-azur-promilia": {
+        "versionId": "472903c2-3fca-43c0-a613-8c54f108bf73",
+        "deploymentId": "06712d57-5067-4ceb-b039-bfe710b66126"
+      },
+      "gachia-game-genshin": {
+        "versionId": "b2952171-bf58-4d64-a16e-8cea41cf9529",
+        "deploymentId": "c087254a-58f4-4c61-b92b-0fd44d9f2f2b"
+      },
+      "gachia-game-lvmeng": {
+        "versionId": "815be742-10a4-4609-a32a-cfd0cd968487",
+        "deploymentId": "d04a1d7d-d9d0-46d5-8f26-b8985e596f64"
+      }
+    },
+    "routesUnchanged": true,
+    "domainsUnchanged": true,
+    "finalVersionConfirmation": {
+      "at": "2026-10-23T13:31:11.413Z",
+      "services": {
+        "gachia": {
+          "deploymentId": "0508ac4a-eebc-4479-8fc4-8efa260367d8",
+          "versions": [
+            {
+              "version_id": "db8e1a59-f46a-4f31-b57a-a318b2d70c23",
+              "percentage": 100
+            }
+          ]
+        },
+        "gachia-router": {
+          "deploymentId": "04a74338-c9ba-4e87-9857-0fe414457ff5",
+          "versions": [
+            {
+              "version_id": "239bb325-998c-4893-98e5-ddd24d50c99a",
+              "percentage": 100
+            }
+          ]
+        },
+        "gachia-game-nte": {
+          "deploymentId": "c344161b-5b10-4e87-8551-4e950366a5f1",
+          "versions": [
+            {
+              "version_id": "6b079ce0-7fce-4bef-a649-150c1a947135",
+              "percentage": 100
+            }
+          ]
+        },
+        "gachia-game-azur-promilia": {
+          "deploymentId": "06712d57-5067-4ceb-b039-bfe710b66126",
+          "versions": [
+            {
+              "version_id": "472903c2-3fca-43c0-a613-8c54f108bf73",
+              "percentage": 100
+            }
+          ]
+        },
+        "gachia-game-genshin": {
+          "deploymentId": "c087254a-58f4-4c61-b92b-0fd44d9f2f2b",
+          "versions": [
+            {
+              "version_id": "b2952171-bf58-4d64-a16e-8cea41cf9529",
+              "percentage": 100
+            }
+          ]
+        },
+        "gachia-game-lvmeng": {
+          "deploymentId": "d04a1d7d-d9d0-46d5-8f26-b8985e596f64",
+          "versions": [
+            {
+              "version_id": "815be742-10a4-4609-a32a-cfd0cd968487",
+              "percentage": 100
+            }
+          ]
+        },
+        "gachia-staging": {
+          "deploymentId": "f21c39cc-3bb3-4f4f-b9ea-7827420ff8a3",
+          "versions": [
+            {
+              "version_id": "ec3fd2cd-f624-47b2-b67e-ea90a15a519d",
+              "percentage": 100
+            }
+          ]
+        },
+        "gachia-router-staging": {
+          "deploymentId": "9a4196c1-f5ee-4b5e-906f-b17b7d75081f",
+          "versions": [
+            {
+              "version_id": "7b78ea79-6d5d-4df7-83df-f5c5f8953501",
+              "percentage": 100
+            }
+          ]
+        },
+        "gachia-game-azur-promilia-staging": {
+          "deploymentId": "bf548185-0862-401a-94de-dedce1d5ea26",
+          "versions": [
+            {
+              "version_id": "440ed712-bdbf-47eb-9f6c-17cca4416a41",
+              "percentage": 100
+            }
+          ]
+        }
+      },
+      "routesUnchanged": true,
+      "stagingBindingsUnchanged": true
+    }
+  },
+  "operations": {
+    "stagingDeployments": 1,
+    "productionDeployments": 0,
+    "gameDeployments": 0,
+    "routerDeployments": 0,
+    "actionsRuns": 0,
+    "pushed": false,
+    "databaseOperations": false,
+    "secretChanges": false,
+    "fileCleanup": false,
+    "newCloudServices": false,
+    "rawEvidenceDirectoriesApproxMiB": 113,
+    "notNetDiskChangeMeasurement": true,
+    "network": "existing_local_proxy_only_no_DNS_WAF_TLS_changes",
+    "authReadRetry": "final_API_read_first_401_due_to_existing_OAuth_expiry_wrangler_whoami_refreshed_then_all_nine_versions_and_routes_reconfirmed",
+    "downloadRetry": "first_180s_download_timed_out_one_explicit_proxy_300s_retry_succeeded_with_same_digest"
+  },
+  "remaining": [
+    "merge_to_main_then_explicit_main_only_production_workflow_with_fresh_current_version_and_artifact_provenance",
+    "future_CI_build_creates_a_new_seal_and_must_repeat_compiled_staging_gates_not_claim_local_tar_equivalence",
+    "production_rollback_client_chunk_compatibility_and_observation_window_not_rehearsed",
+    "production_old_session_policy_will_remain_until_main_promoted",
+    "historical_asset_generations_and_artifact_expiry_need_explicit_lifecycle_policy_no_automatic_GC",
+    "other_game_runtime_rollouts_full_tools_GSC_CWV_cost_SLO_and_S2_work_not_covered"
+  ],
+  "evidence": [
+    {
+      "path": ".release-records/s1-main-preflight/candidate.json",
+      "sha256": "cb3ab49eff44bef1fb9348e49eb283e58ac437df59d669d5956e6cc709008627"
+    },
+    {
+      "path": ".release-records/s1-main-preflight/retention-final.json",
+      "sha256": "df0d9c73a41d7c7957e37f224846937240e43641e346d5b0e225aaf47470824d"
+    },
+    {
+      "path": ".release-records/s1-main-preflight/production-audits.json",
+      "sha256": "2932bb48b24297cca44e6cea3caccf1e5abfa08263e2eb1d6da941461df5314a"
+    },
+    {
+      "path": ".release-records/s1-main-preflight/old-assets-cloud.json",
+      "sha256": "03b0973e48d4cb9f7ccf6442fcf9a232bcf82d8f43e50d6254d17d0d5d1818e8"
+    },
+    {
+      "path": ".release-records/s1-main-preflight/router-rehearsal-local.json",
+      "sha256": "7e72203ac8632e3fe86b67e142f6e75fe5d9649934b165a242d85d49beb874fc"
+    },
+    {
+      "path": ".release-records/s1-main-preflight/router-rehearsal-cloud.json",
+      "sha256": "02cbc5f718825d32a7a4c8ce814325229b8e83d9af1caeb7a4ffa726b44b5fb2"
+    },
+    {
+      "path": ".release-records/s1-main-preflight/reconciliation.json",
+      "sha256": "6bd699fdb96948ee49466e82222942ea5281433d570fe55159b5998dba85e3d2"
+    },
+    {
+      "path": ".release-records/s1-main-preflight/final-version-confirmation.json",
+      "sha256": "73b8cd1a46de8f38d794a5b418b310928796b4a792a1f5eccdf32c64a9849124"
+    },
+    {
+      "path": ".release-records/s1-main-preflight/web-tests-final.log",
+      "sha256": "7265ef946514ed3add6f2df519cd1f1d638035b0e3ce5ee5fbb154e45ca73fd2"
+    },
+    {
+      "path": ".release-records/s1-main-preflight/release-tests-final.log",
+      "sha256": "36a886a1a5385325ffd34f1d6324f9fa9695e59084a72a6921c6a976c555c7d8"
+    },
+    {
+      "path": ".release-records/s1-main-preflight/ci-contracts-final.log",
+      "sha256": "c9593105264f468b209390135073109a6be3b5736b3d10f9d63b8d524008b3a4"
+    },
+    {
+      "path": ".release-records/s1-main-preflight/navigation-playwright.log",
+      "sha256": "52b45f395fa9c4e63e5c6829ad6a2060ea017fcf31554b14b4c8f967861980de"
+    },
+    {
+      "path": ".release-records/s1-main-preflight/navigation-staging-playwright.log",
+      "sha256": "03c4c7739a6573a835da0ed676fb053fcb5d4b98d8adbb879cf44455b4b954c4"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Gachia 多游戏长期运营与架构治理开发文档
 
-> 版本：v1.4，含分阶段实施进展与无账号运营决策
+> 版本：v1.5，含无账号运营、主站资源保留与跨 Worker 导航验收
 >
 > 编制日期：2026-10-23，Asia/Shanghai
 >
@@ -14,7 +14,7 @@
 
 ## 1. 项目定位与核心结论
 
-实施进展：S0 本地基线与 S1 限定工程实现已完成；S1.1/S1.2 完成五个 Next 应用统一运行时及限定本地回归，S1.3 完成账户/容量/预算核验及蓝色星原独立云端 staging 验收。S1.4 根据用户决定暂时下线站点登录，取消当前无账号版本对 Google OAuth 的依赖，保留历史数据与本地工具；主站候选及云端验收结论见 [S1.4 交付记录](../plans/multi-game-s1-accounts-disabled-closeout-2026-10-23.md)。此前证据见 [S1 阶段交付记录](../plans/multi-game-s1-closeout-2026-10-23.md)、[S1.1 运行时交付记录](../plans/multi-game-s1-runtime-closeout-2026-10-23.md)、[S1.2 交付记录](../plans/multi-game-s1-runtime-rollout-closeout-2026-10-23.md)及 [S1.3 交付记录](../plans/multi-game-s1-staging-closeout-2026-10-23.md)。生产流量未变，未合并 Worker、未删除业务或历史文件；不据此视为整个方案完成。
+实施进展：S0 本地基线与 S1 限定工程实现已完成；S1.1/S1.2 完成五个 Next 应用统一运行时及限定本地回归，S1.3 完成账户/容量/预算核验及蓝色星原独立云端 staging 验收。S1.4 根据用户决定暂时下线站点登录，取消当前无账号版本对 Google OAuth 的依赖，保留历史数据与本地工具；见 [S1.4 交付记录](../plans/multi-game-s1-accounts-disabled-closeout-2026-10-23.md)。S1.5 补齐停用账号的生产审计、精确旧静态资源保留及主站跨 owner 原生导航，重新构建并通过主站 staging、浏览器及实际 Router 源码组合演练；将编译后验收纳入生产 CI 门禁，见 [S1.5 交付记录](../plans/multi-game-s1-main-preflight-closeout-2026-10-23.md)和[主站发布规范](main-release-static-retention.md)。此前证据见 [S1 阶段交付记录](../plans/multi-game-s1-closeout-2026-10-23.md)、[S1.1 运行时交付记录](../plans/multi-game-s1-runtime-closeout-2026-10-23.md)、[S1.2 交付记录](../plans/multi-game-s1-runtime-rollout-closeout-2026-10-23.md)及 [S1.3 交付记录](../plans/multi-game-s1-staging-closeout-2026-10-23.md)。生产流量未变，线上仍是旧账号策略，未合并 Worker、未删除业务或历史文件；不据此视为整个方案完成。
 
 Gachia 是面向多游戏玩家的资料、攻略和工具站，现有 16 个游戏，并计划持续接入新游戏。平台需要同时满足内容可信、搜索可发现、发布安全和低维护成本，而不是单纯追求页面总量或 Worker 数量最少。
 
