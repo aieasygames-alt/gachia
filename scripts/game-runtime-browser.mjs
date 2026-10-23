@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { chromium, expect } from '@playwright/test';
 import { parseArguments, readReleasePlan, verifyBuiltIndexing } from './game-release.mjs';
 import { verifyLocalWorker, verifyOrigin } from './game-release-smoke.mjs';
-import { verifyGameRuntime } from './require-game-runtime.mjs';
+import { verifyAppRuntime } from './require-app-runtime.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
 
@@ -109,7 +109,7 @@ async function main() {
   const lock = resolve(directory, `${plan.game}.lock`);
   writeFileSync(lock, JSON.stringify({ pid: process.pid, action: 'browser_verification' }), { flag: 'wx', mode: 0o600 });
   try {
-    const runtimePolicy = verifyGameRuntime(resolve(ROOT, plan.app));
+    const runtimePolicy = verifyAppRuntime(resolve(ROOT, plan.app));
     const indexing = verifyBuiltIndexing(plan);
     const result = await verifyLocalWorker(plan, ROOT, { verify: async (plan, origin) => ({ http: await verifyOrigin(plan, origin), browser: await verifyBrowser(plan, origin) }) });
     const path = resolve(directory, `runtime-browser-${plan.game}-${plan.environment}.json`);

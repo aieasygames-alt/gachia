@@ -55,8 +55,8 @@ export async function verifyOrigin(plan, origin, request = fetch) {
   return { status: 'local_worker_http_verified', cloudVerification: 'not_performed', observations };
 }
 
-export async function verifyLocalWorker(plan, root, { timeoutMs = 90000, verify = verifyOrigin } = {}) {
-  const child = spawn('pnpm', ['exec', 'wrangler', 'dev', '--local', '--ip', '127.0.0.1', '--port', '0', '--inspector-port', '0', '--config', 'wrangler.jsonc', '--env', plan.wranglerEnvironment], {
+export async function verifyLocalWorker(plan, root, { timeoutMs = 90000, verify = verifyOrigin, configPath = 'wrangler.jsonc', persistTo, onOutput = () => {} } = {}) {
+  const child = spawn('pnpm', ['exec', 'wrangler', 'dev', '--local', '--ip', '127.0.0.1', '--port', '0', '--inspector-port', '0', '--config', configPath, '--env', plan.wranglerEnvironment, ...(persistTo ? ['--persist-to', persistTo] : [])], {
     cwd: resolve(root, plan.app),
     env: { ...process.env, ...plan.buildEnvironment, WRANGLER_SEND_METRICS: 'false', BROWSER: 'none' },
     stdio: ['ignore', 'pipe', 'pipe'], detached: process.platform !== 'win32',
@@ -68,6 +68,7 @@ export async function verifyLocalWorker(plan, root, { timeoutMs = 90000, verify 
     const origin = await new Promise((resolveReady, reject) => {
       timer = setTimeout(() => reject(new Error('Local Worker readiness timed out')), timeoutMs);
       const collect = (chunk) => {
+        onOutput(chunk.toString());
         output = (output + chunk.toString()).slice(-32768);
         const match = output.match(/Ready on (http:\/\/127\.0\.0\.1:\d+)/);
         if (match) resolveReady(match[1]);

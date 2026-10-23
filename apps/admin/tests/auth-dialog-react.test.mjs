@@ -6,7 +6,8 @@ import { fileURLToPath } from 'node:url';
 
 test('real React auth dialog ignores stale results and permits retry after returned errors', { skip: process.env.WORKBENCH_BROWSER_TESTS !== '1' }, async () => {
   const root = fileURLToPath(new URL('../../..', import.meta.url)); const web = resolve(root, 'apps/web');
-  const { build } = createRequire(import.meta.url)(resolve(root, 'node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild'));
+  const require = createRequire(import.meta.url);
+  const { build } = createRequire(require.resolve('tsx/package.json'))('esbuild');
   const bundled = await build({ write: false, bundle: true, format: 'iife', platform: 'browser', jsx: 'automatic',
     define: { 'process.env.NODE_ENV': '"development"' }, alias: { '@': web },
     stdin: { resolveDir: web, loader: 'tsx', contents: `

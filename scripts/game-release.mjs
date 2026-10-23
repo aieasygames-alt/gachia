@@ -5,7 +5,7 @@ import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import ts from 'typescript';
 import { verifyLocalWorker } from './game-release-smoke.mjs';
-import { verifyGameRuntime } from './require-game-runtime.mjs';
+import { verifyAppRuntime } from './require-app-runtime.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const TARGETS = Object.freeze({
@@ -96,6 +96,18 @@ export function createReleasePlan({ game, environment, rollbackVersion, allowUns
 export function readReleasePlan(options, root = ROOT) {
   if (!Object.hasOwn(TARGETS, options.game)) throw new Error('Unsupported game: expected nte or azur-promilia');
   return createReleasePlan(options, readFileSync(resolve(root, `apps/game-${options.game}/wrangler.jsonc`), 'utf8'));
+}
+
+export function readAssetPlan(options, root = ROOT) {
+  if (!['genshin', 'lvmeng'].includes(options.game)) return readReleasePlan(options, root);
+  if (!['staging', 'production'].includes(options.environment)) throw new Error('Explicit asset environment required');
+  const app = `apps/game-${options.game}`;
+  const config = parseWrangler(readFileSync(resolve(root, app, 'wrangler.jsonc'), 'utf8'));
+  if (config.name !== `gachia-game-${options.game}` || config.assets?.directory !== '.open-next/assets') {
+    throw new Error('Unexpected game asset target');
+  }
+  // This local-only capability does not register either game for deploy/verify.
+  return { game: options.game, app };
 }
 
 export function checkExecutionPermission(plan, { action, confirmation }) {
@@ -231,13 +243,13 @@ async function main() {
     console.log(JSON.stringify({ ...record, observation: 'local_record_only_not_live_cloud_state' }, null, 2));
     return;
   }
+  if (options.action === 'prepare-assets') {
+    console.log(JSON.stringify({ status: 'local_assets_prepared_not_deployed', ...prepareNamespacedAssets(readAssetPlan(options)) }, null, 2));
+    return;
+  }
   const plan = readReleasePlan(options);
   if (options.action === 'plan') {
     console.log(JSON.stringify({ status: 'planned_not_executed', ...plan }, null, 2));
-    return;
-  }
-  if (options.action === 'prepare-assets') {
-    console.log(JSON.stringify({ status: 'local_assets_prepared_not_deployed', ...prepareNamespacedAssets(plan) }, null, 2));
     return;
   }
   checkExecutionPermission(plan, options);
@@ -253,7 +265,7 @@ async function main() {
     const dirty = Boolean(execFileSync('git', ['status', '--porcelain'], { cwd: ROOT, encoding: 'utf8' }).trim());
     const record = await executeRelease(plan, options, {
       refreshPlan: () => readReleasePlan(options),
-      verifyArtifacts: async () => ({ runtimePolicy: verifyGameRuntime(resolve(ROOT, plan.app)), namespacedAssets: prepareNamespacedAssets(plan), ...verifyBuiltIndexing(plan), runtime: await verifyLocalWorker(plan, ROOT) }),
+      verifyArtifacts: async () => ({ runtimePolicy: verifyAppRuntime(resolve(ROOT, plan.app)), namespacedAssets: prepareNamespacedAssets(plan), ...verifyBuiltIndexing(plan), runtime: await verifyLocalWorker(plan, ROOT) }),
       save: (record) => {
         writeFileSync(`${path}.tmp`, `${JSON.stringify({ ...record, input: { commit, dirty, scope: 'head_and_config_not_full_source_attestation' } }, null, 2)}\n`, { mode: 0o600 });
         renameSync(`${path}.tmp`, path);

@@ -140,7 +140,7 @@ test('distribution patch applies exactly and verifier rejects partial, drift and
       mkdirSync(dirname(target), { recursive: true });
       writeFileSync(target, readFileSync(join(next, file.path)));
     }
-    const patch = fileURLToPath(new URL('../../../patches/next-15.5.18-deferred-initial.patch', import.meta.url));
+    const patch = fileURLToPath(new URL(`../../../patches/next-${before.nextVersion}-deferred-initial.patch`, import.meta.url));
     if (before.state === 'patched') {
       const reverse = spawnSync('git', ['apply', '--reverse', '--unsafe-paths', patch], { cwd: root, encoding: 'utf8' });
       assert.equal(reverse.status, 0, reverse.stderr);

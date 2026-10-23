@@ -1,0 +1,1992 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "timezone": "Asia/Shanghai",
+  "phase": "S1.2_application_runtime_rollout",
+  "baselineCommit": "3ea77da082b38e6a7f993d92361150db4f7ef417",
+  "branch": "codex/multi-game-s1-release-safety",
+  "status": "bounded_local_verification_complete_cloud_acceptance_pending",
+  "runtime": {
+    "node": "22.22.2",
+    "pnpm": "10.10.0",
+    "next": "15.5.28",
+    "openNextCloudflare": "1.20.13",
+    "wrangler": "4.148.0",
+    "workersTypes": "5.20261006.1",
+    "react": "19.2.4",
+    "reactDom": "19.2.4"
+  },
+  "input": {
+    "dirtyDuringVerification": true,
+    "files": [
+      {
+        "path": "package.json",
+        "sha256": "982111598160362950496ca1a39c05517c1b9c95b5d46f6ca4a5f7a879b8741c"
+      },
+      {
+        "path": "pnpm-lock.yaml",
+        "sha256": "30a3512fcb1a8053c34a64f9761b147ab12b09cde17198136591dbea9b4e043c"
+      },
+      {
+        "path": "scripts/require-app-runtime.mjs",
+        "sha256": "b7d9c8129051c4f08e88f2f3fd548e234bec39a92a6ee530e2a8725dd3f4bc8c"
+      },
+      {
+        "path": "scripts/require-patched-next.mjs",
+        "sha256": "cb6f24c73b497a42eb5ae39796bc60be79eeb1d2489aca407abfdfdfd89bb607"
+      },
+      {
+        "path": "scripts/runtime-rollout-smoke.mjs",
+        "sha256": "29ee37623fe033addd02ca90b822a0582bd163a116e44cd9db9b7861f592b6c8"
+      },
+      {
+        "path": "scripts/runtime-rollout-smoke.test.mjs",
+        "sha256": "a2039b5d3e6bb4794c606dc1a7c2c65d294d9b7062264cfa3bcae40977c66a1d"
+      },
+      {
+        "path": "scripts/game-release.mjs",
+        "sha256": "78860e14e749107979c299e9526290ba74f18c4bb8d3e6bd78e59b554452e645"
+      },
+      {
+        "path": "scripts/game-release-smoke.mjs",
+        "sha256": "5e01ba9d61d94edd34d469730361e2866a34fb235120fe8cc81c7653efc96fd0"
+      },
+      {
+        "path": "scripts/game-runtime-browser.mjs",
+        "sha256": "809d7ed3e7e2f139f451d814dd64821c70cf8e0b1c51fa26a5673900e8b4f048"
+      },
+      {
+        "path": "apps/web/package.json",
+        "sha256": "644676e29f6a255fff7fd9dbbb9a1b74d5f30eb4919a263eb84f96fd8e8039aa"
+      },
+      {
+        "path": "apps/game-genshin/package.json",
+        "sha256": "0c85afb58cc6d1d629668c22eec6c53a129ace2f3b7be54366656dd6075ae58a"
+      },
+      {
+        "path": "apps/game-lvmeng/package.json",
+        "sha256": "fbe67fc7ff12ab27ae47f941767d1be7cd4a77b7e379d9ea9df37261326bd1d1"
+      },
+      {
+        "path": "apps/game-nte/package.json",
+        "sha256": "e2d5a1d8d6b584105dae3a775f389f0590241acf2acce2fdb65e324ad795ccc5"
+      },
+      {
+        "path": "apps/game-azur-promilia/package.json",
+        "sha256": "7353418293afef613c4db69214b3f02b2c7fe25006d99c579f53fb4c04ababa5"
+      }
+    ],
+    "patchManifest": {
+      "schemaVersion": 1,
+      "package": "next",
+      "version": "15.5.28",
+      "status": "reviewed_candidate_not_production_enabled",
+      "patch": "next-15.5.28-deferred-initial.patch",
+      "patchSha256": "08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c2",
+      "files": [
+        {
+          "path": "dist/client/components/layout-router.js",
+          "originalSha256": "0821f45a91c9e4894d2b8e3f6f2fc5a776a5635d90e90edaf048affbb8ec7be2",
+          "patchedSha256": "0c1ca06f109657d840d520ca1ddf8a94c605ebe1e16ea3eb7ddcb3078eb6a464"
+        },
+        {
+          "path": "dist/client/components/app-router.js",
+          "originalSha256": "40965882017793245be84902100bdfcf8fa23d470288e3c2beed86988125f90f",
+          "patchedSha256": "85b52001d3faabf563e3fd7b4107047f63f9e391bc652848a1011fef2b537d3e"
+        },
+        {
+          "path": "dist/esm/client/components/layout-router.js",
+          "originalSha256": "83c23e6df225a99f2288c4a2c8c2b0b18568f59a4bd4b7b208ac9c618d0292a0",
+          "patchedSha256": "61d2635e7e869b0414e85ff9bc9cd7a4d9deec1a69426f2d62a271b3ae7359c1"
+        },
+        {
+          "path": "dist/esm/client/components/app-router.js",
+          "originalSha256": "21a31be2bf9ecb0057c3f2c26140a3f6afdb2279f34bd3539c1eab8b6323a26e",
+          "patchedSha256": "6a1cc9777a102a77355ae18caa308dd975c4349fa595b6c3911da0f2d16d9fd4"
+        }
+      ],
+      "scope": "Absent-prefetch initialValue only; CJS and ESM layout/head; all five Next applications, local acceptance only",
+      "acceptanceReport": "reports/release-safety/s1-runtime-rollout-verification-2026-10-23.json"
+    },
+    "fullSourceOrAssetAttestation": false
+  },
+  "builds": [
+    {
+      "app": "web",
+      "environment": "production",
+      "build": "passed",
+      "dryRun": "passed",
+      "rawKiB": 13882.49,
+      "gzipKiB": 2826.59,
+      "log": {
+        "path": ".release-records/s1-rollout-web-build.log",
+        "sha256": "edb6cf5f8453a048ad2a17dee5e89e051b129dc42f8ac8d229435fb8740b3ff1"
+      }
+    },
+    {
+      "app": "genshin",
+      "environment": "production",
+      "build": "passed",
+      "dryRun": "passed",
+      "rawKiB": 8708.5,
+      "gzipKiB": 1338.19,
+      "log": {
+        "path": ".release-records/s1-rollout-genshin-build.log",
+        "sha256": "6b03929c9d279c1ea3dbf6891e0216c7debf0af55636a336ae1d2e98f11c5f53"
+      }
+    },
+    {
+      "app": "genshin",
+      "environment": "staging",
+      "build": "passed",
+      "dryRun": "passed",
+      "rawKiB": 8708.63,
+      "gzipKiB": 1337.56,
+      "log": {
+        "path": ".release-records/s1-rollout-genshin-staging.log",
+        "sha256": "ec29c7ae11a5d17fca430edc20beb409248ea9d91f3de96acd74f54043bf6a5e"
+      },
+      "note": "Build and dry-run passed; subsequent incorrect empty-sitemap assertion failed in this log, corrected HTTP retest recorded separately"
+    },
+    {
+      "app": "lvmeng",
+      "environment": "production",
+      "build": "passed",
+      "dryRun": "passed",
+      "rawKiB": 5116.88,
+      "gzipKiB": 1006.61,
+      "log": {
+        "path": ".release-records/s1-rollout-lvmeng-build.log",
+        "sha256": "2eb893187d2cf38545a98861c470a3773614b6dbd80eaa5994655359b28dce1b"
+      }
+    },
+    {
+      "app": "nte",
+      "environment": "staging",
+      "build": "passed",
+      "dryRun": "passed",
+      "rawKiB": 6868.18,
+      "gzipKiB": 1342.05,
+      "log": {
+        "path": ".release-records/s1-rollout-nte-staging.log",
+        "sha256": "b727ee42830f8c22b81316066643244c94b8dff77df7e544705732d036ed03bd"
+      }
+    },
+    {
+      "app": "nte",
+      "environment": "production",
+      "build": "passed",
+      "dryRun": "passed",
+      "rawKiB": 6867.93,
+      "gzipKiB": 1335.78,
+      "log": {
+        "path": ".release-records/s1-rollout-nte-production.log",
+        "sha256": "1b0153b5d97c74db6dcda9a4e3eda4b19af73ed8f194a12b6b8237d81c33c8bb"
+      }
+    },
+    {
+      "app": "azur-promilia",
+      "environment": "staging",
+      "build": "passed",
+      "dryRun": "passed",
+      "rawKiB": 5275.26,
+      "gzipKiB": 1039.01,
+      "log": {
+        "path": ".release-records/s1-rollout-azur-promilia-staging.log",
+        "sha256": "fdef4ee5c89833ecd2b1dafbb43d1f3ef9dcdb68d5a69b1d37a0b6caa4b54c8d"
+      }
+    },
+    {
+      "app": "azur-promilia",
+      "environment": "production",
+      "build": "passed",
+      "dryRun": "passed",
+      "rawKiB": 5274.9,
+      "gzipKiB": 1045.17,
+      "log": {
+        "path": ".release-records/s1-rollout-azur-promilia-production.log",
+        "sha256": "9d09485fc5ac793bf059a958cb89c329ad552b14e9f0ee617bf2a783b65d7093"
+      }
+    }
+  ],
+  "rollout": [
+    {
+      "app": "web",
+      "record": {
+        "path": ".release-records/rollout-web-52b7171b-7097-4e36-972b-9b74981db7f9/result.json",
+        "sha256": "f5569a7572209eed47fe0e67c9478fabbba08c4bf2e573114603ecf8a037161c"
+      },
+      "startedAt": "2026-10-23T02:46:29.882Z",
+      "finishedAt": "2026-10-23T02:47:05.772Z",
+      "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+      "httpCount": 49,
+      "browserCount": 18,
+      "http": [
+        {
+          "path": "/zh/hi3/weapons",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/zh/hi3/weapons/vermillion-liuli",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/zh/hi3/weapons/vermillion-liuli-full-burn",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/zh/hi3/weapons/volatile-sparkler",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/en/hi3/weapons",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/en/hi3/weapons/vermillion-liuli",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/en/hi3/weapons/vermillion-liuli-full-burn",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/en/hi3/weapons/volatile-sparkler",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/ja/hi3/weapons",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/ja/hi3/weapons/vermillion-liuli",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/ja/hi3/weapons/vermillion-liuli-full-burn",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/ja/hi3/weapons/volatile-sparkler",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/robots.txt",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/sitemap.xml",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/_next/static/chunks/webpack-91bc35b9ef2be0a4.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/_next/static/css/184abcb05771b732.css",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/zh/hi3/weapons/__runtime_missing__",
+          "method": "GET",
+          "status": 404
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/favorites",
+          "method": "GET",
+          "status": 401
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/favorites",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/favorites",
+          "method": "POST",
+          "status": 200
+        },
+        {
+          "path": "/api/favorites",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/sign-out",
+          "method": "POST",
+          "status": 403
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/sign-out",
+          "method": "POST",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/get-session",
+          "method": "GET",
+          "status": 429
+        }
+      ],
+      "browser": [
+        {
+          "path": "/zh/hi3/weapons",
+          "locale": "zh",
+          "width": 1440,
+          "mode": "interactive",
+          "delayedScripts": 0,
+          "prefetchRequests": 17,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/zh/hi3/weapons",
+          "locale": "zh",
+          "width": 1440,
+          "mode": "delayed_scripts",
+          "delayedScripts": 20,
+          "prefetchRequests": 17,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/zh/hi3/weapons",
+          "locale": "zh",
+          "width": 1440,
+          "mode": "no_javascript",
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/en/hi3/weapons",
+          "locale": "en",
+          "width": 1440,
+          "mode": "interactive",
+          "delayedScripts": 0,
+          "prefetchRequests": 16,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/en/hi3/weapons",
+          "locale": "en",
+          "width": 1440,
+          "mode": "delayed_scripts",
+          "delayedScripts": 20,
+          "prefetchRequests": 16,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/en/hi3/weapons",
+          "locale": "en",
+          "width": 1440,
+          "mode": "no_javascript",
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/ja/hi3/weapons",
+          "locale": "ja",
+          "width": 1440,
+          "mode": "interactive",
+          "delayedScripts": 0,
+          "prefetchRequests": 16,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/ja/hi3/weapons",
+          "locale": "ja",
+          "width": 1440,
+          "mode": "delayed_scripts",
+          "delayedScripts": 20,
+          "prefetchRequests": 16,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/ja/hi3/weapons",
+          "locale": "ja",
+          "width": 1440,
+          "mode": "no_javascript",
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/zh/hi3/weapons",
+          "locale": "zh",
+          "width": 390,
+          "mode": "interactive",
+          "delayedScripts": 0,
+          "prefetchRequests": 14,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/zh/hi3/weapons",
+          "locale": "zh",
+          "width": 390,
+          "mode": "delayed_scripts",
+          "delayedScripts": 20,
+          "prefetchRequests": 14,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/zh/hi3/weapons",
+          "locale": "zh",
+          "width": 390,
+          "mode": "no_javascript",
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/en/hi3/weapons",
+          "locale": "en",
+          "width": 390,
+          "mode": "interactive",
+          "delayedScripts": 0,
+          "prefetchRequests": 13,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/en/hi3/weapons",
+          "locale": "en",
+          "width": 390,
+          "mode": "delayed_scripts",
+          "delayedScripts": 20,
+          "prefetchRequests": 13,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/en/hi3/weapons",
+          "locale": "en",
+          "width": 390,
+          "mode": "no_javascript",
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/ja/hi3/weapons",
+          "locale": "ja",
+          "width": 390,
+          "mode": "interactive",
+          "delayedScripts": 0,
+          "prefetchRequests": 12,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/ja/hi3/weapons",
+          "locale": "ja",
+          "width": 390,
+          "mode": "delayed_scripts",
+          "delayedScripts": 20,
+          "prefetchRequests": 12,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/ja/hi3/weapons",
+          "locale": "ja",
+          "width": 390,
+          "mode": "no_javascript",
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        }
+      ],
+      "cloudVerification": "not_performed",
+      "realOAuth": "not_performed",
+      "syntheticDatabase": true
+    },
+    {
+      "app": "game-genshin",
+      "record": {
+        "path": ".release-records/rollout-game-genshin-c5cb4034-7ce0-466d-8673-614e60dbe3f5/result.json",
+        "sha256": "09af2eecf2aa84cb5a5096d80e50d215bc326dfd21ec58294e1eb8bb86cb4309"
+      },
+      "startedAt": "2026-10-23T02:46:39.272Z",
+      "finishedAt": "2026-10-23T02:47:09.013Z",
+      "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+      "httpCount": 14,
+      "browserCount": 18,
+      "http": [
+        {
+          "path": "/zh/genshin",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/zh/genshin/characters",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/zh/genshin/calculator",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/en/genshin",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/en/genshin/characters",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/en/genshin/calculator",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/ja/genshin",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/ja/genshin/characters",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/ja/genshin/calculator",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/robots.txt",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/sitemap.xml",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/_games/genshin/_next/static/chunks/webpack-b3c4034404eb8d2b.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/_games/genshin/_next/static/css/4e6b2dc0fa1e36bc.css",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/zh/genshin/__runtime_missing__",
+          "method": "GET",
+          "status": 404
+        }
+      ],
+      "browser": [
+        {
+          "path": "/zh/genshin/calculator",
+          "locale": "zh",
+          "width": 1440,
+          "mode": "interactive",
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/zh/genshin/calculator",
+          "locale": "zh",
+          "width": 1440,
+          "mode": "delayed_scripts",
+          "delayedScripts": 10,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/zh/genshin/calculator",
+          "locale": "zh",
+          "width": 1440,
+          "mode": "no_javascript",
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/en/genshin/calculator",
+          "locale": "en",
+          "width": 1440,
+          "mode": "interactive",
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/en/genshin/calculator",
+          "locale": "en",
+          "width": 1440,
+          "mode": "delayed_scripts",
+          "delayedScripts": 10,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/en/genshin/calculator",
+          "locale": "en",
+          "width": 1440,
+          "mode": "no_javascript",
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/ja/genshin/calculator",
+          "locale": "ja",
+          "width": 1440,
+          "mode": "interactive",
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/ja/genshin/calculator",
+          "locale": "ja",
+          "width": 1440,
+          "mode": "delayed_scripts",
+          "delayedScripts": 10,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/ja/genshin/calculator",
+          "locale": "ja",
+          "width": 1440,
+          "mode": "no_javascript",
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/zh/genshin/calculator",
+          "locale": "zh",
+          "width": 390,
+          "mode": "interactive",
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/zh/genshin/calculator",
+          "locale": "zh",
+          "width": 390,
+          "mode": "delayed_scripts",
+          "delayedScripts": 10,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/zh/genshin/calculator",
+          "locale": "zh",
+          "width": 390,
+          "mode": "no_javascript",
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/en/genshin/calculator",
+          "locale": "en",
+          "width": 390,
+          "mode": "interactive",
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/en/genshin/calculator",
+          "locale": "en",
+          "width": 390,
+          "mode": "delayed_scripts",
+          "delayedScripts": 10,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/en/genshin/calculator",
+          "locale": "en",
+          "width": 390,
+          "mode": "no_javascript",
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/ja/genshin/calculator",
+          "locale": "ja",
+          "width": 390,
+          "mode": "interactive",
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/ja/genshin/calculator",
+          "locale": "ja",
+          "width": 390,
+          "mode": "delayed_scripts",
+          "delayedScripts": 10,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/ja/genshin/calculator",
+          "locale": "ja",
+          "width": 390,
+          "mode": "no_javascript",
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        }
+      ],
+      "cloudVerification": "not_performed",
+      "realOAuth": "not_performed",
+      "syntheticDatabase": false
+    },
+    {
+      "app": "game-lvmeng",
+      "record": {
+        "path": ".release-records/rollout-game-lvmeng-bb14c11b-dac4-4e97-b32e-161979c41764/result.json",
+        "sha256": "9109af5043305076cac02ba1dc7c420c77a271c76649971dc310d0b8ecf878e8"
+      },
+      "startedAt": "2026-10-23T02:47:09.353Z",
+      "finishedAt": "2026-10-23T02:47:20.724Z",
+      "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+      "httpCount": 12,
+      "browserCount": 6,
+      "http": [
+        {
+          "path": "/zh/lvmeng",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/zh/lvmeng/characters",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/zh/lvmeng/guides",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/zh/lvmeng/launch-check",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/zh/lvmeng/download",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/robots.txt",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/sitemap.xml",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/_games/lvmeng/_next/static/chunks/webpack-4b0fd5dc141f7074.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/_games/lvmeng/_next/static/css/6d814f1a9060c47b.css",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "path": "/zh/lvmeng/__runtime_missing__",
+          "method": "GET",
+          "status": 404
+        },
+        {
+          "path": "/en/lvmeng",
+          "method": "GET",
+          "status": 404
+        },
+        {
+          "path": "/ja/lvmeng",
+          "method": "GET",
+          "status": 404
+        }
+      ],
+      "browser": [
+        {
+          "path": "/zh/lvmeng/launch-check",
+          "locale": "zh",
+          "width": 1440,
+          "mode": "interactive",
+          "delayedScripts": 0,
+          "prefetchRequests": 6,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/zh/lvmeng/launch-check",
+          "locale": "zh",
+          "width": 1440,
+          "mode": "delayed_scripts",
+          "delayedScripts": 12,
+          "prefetchRequests": 6,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/zh/lvmeng/launch-check",
+          "locale": "zh",
+          "width": 1440,
+          "mode": "no_javascript",
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/zh/lvmeng/launch-check",
+          "locale": "zh",
+          "width": 390,
+          "mode": "interactive",
+          "delayedScripts": 0,
+          "prefetchRequests": 2,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/zh/lvmeng/launch-check",
+          "locale": "zh",
+          "width": 390,
+          "mode": "delayed_scripts",
+          "delayedScripts": 12,
+          "prefetchRequests": 2,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "path": "/zh/lvmeng/launch-check",
+          "locale": "zh",
+          "width": 390,
+          "mode": "no_javascript",
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "runtimeErrors": 0,
+          "failedAssets": 0
+        }
+      ],
+      "cloudVerification": "not_performed",
+      "realOAuth": "not_performed",
+      "syntheticDatabase": false
+    }
+  ],
+  "pilots": [
+    {
+      "game": "nte",
+      "environment": "staging",
+      "buildRecord": {
+        "path": ".release-records/nte-696bb5b9-b65d-4650-ae20-cc51f409e5c5.json",
+        "sha256": "3e7e44932fbe6fdb121aa64c8fbffbc739db2758328cf8302dd57c6ed79ddf77"
+      },
+      "browserRecord": {
+        "path": ".release-records/runtime-browser-nte-staging.json",
+        "sha256": "95e7e186706956596e941b03de759bc3bbe95319b128b569399cfa94aa34f01e"
+      },
+      "log": {
+        "path": ".release-records/s1-rollout-nte-staging.log",
+        "sha256": "b727ee42830f8c22b81316066643244c94b8dff77df7e544705732d036ed03bd"
+      },
+      "httpCount": 11,
+      "browserCount": 14,
+      "browser": [
+        {
+          "viewport": "desktop",
+          "locale": "zh",
+          "mode": "interactive",
+          "path": "/zh/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 20,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "en",
+          "mode": "interactive",
+          "path": "/en/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 20,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "ja",
+          "mode": "interactive",
+          "path": "/ja/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 20,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "zh",
+          "mode": "delayed_scripts",
+          "path": "/zh/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 7,
+          "prefetchRequests": 20,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "zh",
+          "mode": "no_javascript",
+          "path": "/zh/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "en",
+          "mode": "no_javascript",
+          "path": "/en/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "ja",
+          "mode": "no_javascript",
+          "path": "/ja/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "zh",
+          "mode": "interactive",
+          "path": "/zh/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 10,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "en",
+          "mode": "interactive",
+          "path": "/en/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 10,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "ja",
+          "mode": "interactive",
+          "path": "/ja/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 10,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "zh",
+          "mode": "delayed_scripts",
+          "path": "/zh/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 7,
+          "prefetchRequests": 10,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "zh",
+          "mode": "no_javascript",
+          "path": "/zh/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "en",
+          "mode": "no_javascript",
+          "path": "/en/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "ja",
+          "mode": "no_javascript",
+          "path": "/ja/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        }
+      ],
+      "cloudVerification": "not_performed"
+    },
+    {
+      "game": "nte",
+      "environment": "production",
+      "buildRecord": {
+        "path": ".release-records/nte-c087b771-f938-4da6-87ea-e2785532b147.json",
+        "sha256": "d2c8215e250c9bf9d979b8a2bea946eefe109943883326f362e60d0e14512fee"
+      },
+      "browserRecord": {
+        "path": ".release-records/runtime-browser-nte-production.json",
+        "sha256": "c78dcc64eb49ec244a6bb33bf9091c05084cf1b3cbd288554dcaf4996430c5c3"
+      },
+      "log": {
+        "path": ".release-records/s1-rollout-nte-production.log",
+        "sha256": "1b0153b5d97c74db6dcda9a4e3eda4b19af73ed8f194a12b6b8237d81c33c8bb"
+      },
+      "httpCount": 11,
+      "browserCount": 14,
+      "browser": [
+        {
+          "viewport": "desktop",
+          "locale": "zh",
+          "mode": "interactive",
+          "path": "/zh/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 20,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "en",
+          "mode": "interactive",
+          "path": "/en/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 20,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "ja",
+          "mode": "interactive",
+          "path": "/ja/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 20,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "zh",
+          "mode": "delayed_scripts",
+          "path": "/zh/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 7,
+          "prefetchRequests": 20,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "zh",
+          "mode": "no_javascript",
+          "path": "/zh/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "en",
+          "mode": "no_javascript",
+          "path": "/en/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "ja",
+          "mode": "no_javascript",
+          "path": "/ja/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "zh",
+          "mode": "interactive",
+          "path": "/zh/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 10,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "en",
+          "mode": "interactive",
+          "path": "/en/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 10,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "ja",
+          "mode": "interactive",
+          "path": "/ja/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 10,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "zh",
+          "mode": "delayed_scripts",
+          "path": "/zh/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 7,
+          "prefetchRequests": 10,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "zh",
+          "mode": "no_javascript",
+          "path": "/zh/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "en",
+          "mode": "no_javascript",
+          "path": "/en/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "ja",
+          "mode": "no_javascript",
+          "path": "/ja/nte/characters",
+          "serverRenderedCards": 42,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        }
+      ],
+      "cloudVerification": "not_performed"
+    },
+    {
+      "game": "azur-promilia",
+      "environment": "staging",
+      "buildRecord": {
+        "path": ".release-records/azur-promilia-1e00e44d-2a08-44c3-b5fe-fa2a109b0729.json",
+        "sha256": "c342827d116327fffc6bfbdb29717f8e1b64ef7da5e2eb38fe2ca5e996472513"
+      },
+      "browserRecord": {
+        "path": ".release-records/runtime-browser-azur-promilia-staging.json",
+        "sha256": "14dd96d4bc3a324e95b1c50c132d5286cc6c65111fb5c21d83fe955ca5fab44e"
+      },
+      "log": {
+        "path": ".release-records/s1-rollout-azur-promilia-staging.log",
+        "sha256": "fdef4ee5c89833ecd2b1dafbb43d1f3ef9dcdb68d5a69b1d37a0b6caa4b54c8d"
+      },
+      "httpCount": 11,
+      "browserCount": 14,
+      "browser": [
+        {
+          "viewport": "desktop",
+          "locale": "zh",
+          "mode": "interactive",
+          "path": "/zh/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 19,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "en",
+          "mode": "interactive",
+          "path": "/en/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 19,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "ja",
+          "mode": "interactive",
+          "path": "/ja/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 19,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "zh",
+          "mode": "delayed_scripts",
+          "path": "/zh/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 8,
+          "prefetchRequests": 19,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "zh",
+          "mode": "no_javascript",
+          "path": "/zh/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "en",
+          "mode": "no_javascript",
+          "path": "/en/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "ja",
+          "mode": "no_javascript",
+          "path": "/ja/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "zh",
+          "mode": "interactive",
+          "path": "/zh/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 8,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "en",
+          "mode": "interactive",
+          "path": "/en/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 7,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "ja",
+          "mode": "interactive",
+          "path": "/ja/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 7,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "zh",
+          "mode": "delayed_scripts",
+          "path": "/zh/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 8,
+          "prefetchRequests": 8,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "zh",
+          "mode": "no_javascript",
+          "path": "/zh/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "en",
+          "mode": "no_javascript",
+          "path": "/en/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "ja",
+          "mode": "no_javascript",
+          "path": "/ja/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        }
+      ],
+      "cloudVerification": "not_performed"
+    },
+    {
+      "game": "azur-promilia",
+      "environment": "production",
+      "buildRecord": {
+        "path": ".release-records/azur-promilia-895a474a-3f87-47dd-9883-78b31f4a4bd5.json",
+        "sha256": "781d79bcd26e716830af214e72935b54c31e0e1972e0ffca941a86a982252242"
+      },
+      "browserRecord": {
+        "path": ".release-records/runtime-browser-azur-promilia-production.json",
+        "sha256": "d566394f578125c4f632b3806cbde3c72a5c00d470b6a24dac0f5c0c4b9f5408"
+      },
+      "log": {
+        "path": ".release-records/s1-rollout-azur-promilia-production.log",
+        "sha256": "9d09485fc5ac793bf059a958cb89c329ad552b14e9f0ee617bf2a783b65d7093"
+      },
+      "httpCount": 11,
+      "browserCount": 14,
+      "browser": [
+        {
+          "viewport": "desktop",
+          "locale": "zh",
+          "mode": "interactive",
+          "path": "/zh/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 19,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "en",
+          "mode": "interactive",
+          "path": "/en/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 19,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "ja",
+          "mode": "interactive",
+          "path": "/ja/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 19,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "zh",
+          "mode": "delayed_scripts",
+          "path": "/zh/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 8,
+          "prefetchRequests": 19,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "zh",
+          "mode": "no_javascript",
+          "path": "/zh/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "en",
+          "mode": "no_javascript",
+          "path": "/en/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "desktop",
+          "locale": "ja",
+          "mode": "no_javascript",
+          "path": "/ja/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "zh",
+          "mode": "interactive",
+          "path": "/zh/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 8,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "en",
+          "mode": "interactive",
+          "path": "/en/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 7,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "ja",
+          "mode": "interactive",
+          "path": "/ja/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 7,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "zh",
+          "mode": "delayed_scripts",
+          "path": "/zh/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 8,
+          "prefetchRequests": 8,
+          "clientInteraction": true,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "zh",
+          "mode": "no_javascript",
+          "path": "/zh/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "en",
+          "mode": "no_javascript",
+          "path": "/en/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        },
+        {
+          "viewport": "mobile",
+          "locale": "ja",
+          "mode": "no_javascript",
+          "path": "/ja/azur-promilia/characters",
+          "serverRenderedCards": 19,
+          "delayedScripts": 0,
+          "prefetchRequests": 0,
+          "clientInteraction": false,
+          "hydrationErrors": 0,
+          "failedAssets": 0
+        }
+      ],
+      "cloudVerification": "not_performed"
+    }
+  ],
+  "genshinStaging": {
+    "record": {
+      "path": ".release-records/s1-rollout-genshin-staging-result.json",
+      "sha256": "21350d1199dd4f33151b206f0ab60c5cf31c6b555868ac58da0d045995d8f32f"
+    },
+    "status": "local_staging_http_verified",
+    "cloudVerification": "not_performed",
+    "sitemapPolicy": "retains_public_production_urls_not_preview_origins",
+    "sitemapUrlCount": 1602,
+    "observations": [
+      {
+        "path": "/zh/genshin/calculator",
+        "status": 200
+      },
+      {
+        "path": "/_games/genshin/_next/static/chunks/webpack-b3c4034404eb8d2b.js",
+        "status": 200
+      },
+      {
+        "path": "/_games/genshin/_next/static/css/4e6b2dc0fa1e36bc.css",
+        "status": 200
+      },
+      {
+        "path": "/en/genshin/calculator",
+        "status": 200
+      },
+      {
+        "path": "/_games/genshin/_next/static/chunks/webpack-b3c4034404eb8d2b.js",
+        "status": 200
+      },
+      {
+        "path": "/_games/genshin/_next/static/css/4e6b2dc0fa1e36bc.css",
+        "status": 200
+      },
+      {
+        "path": "/ja/genshin/calculator",
+        "status": 200
+      },
+      {
+        "path": "/_games/genshin/_next/static/chunks/webpack-b3c4034404eb8d2b.js",
+        "status": 200
+      },
+      {
+        "path": "/_games/genshin/_next/static/css/4e6b2dc0fa1e36bc.css",
+        "status": 200
+      },
+      {
+        "path": "/robots.txt",
+        "status": 200
+      },
+      {
+        "path": "/sitemap.xml",
+        "status": 200
+      },
+      {
+        "path": "/zh/genshin/__runtime_missing__",
+        "status": 404
+      }
+    ]
+  },
+  "tests": {
+    "release": {
+      "pass": 69,
+      "fail": 0
+    },
+    "web": {
+      "pass": 198,
+      "files": 55
+    },
+    "router": {
+      "pass": 31,
+      "files": 3
+    },
+    "typecheck": {
+      "successfulTasks": 9,
+      "totalTasks": 9
+    },
+    "targetedAdmin": {
+      "pass": 23,
+      "skip": 1,
+      "fail": 0,
+      "skipped": "official-source real browser fixture; unrelated to runtime acceptance",
+      "fullAdminSuite": false
+    },
+    "ciScope": {
+      "pass": 2
+    },
+    "authDialogReactFixture": {
+      "pass": 1,
+      "widths": [
+        1440,
+        390
+      ],
+      "realOAuth": false
+    },
+    "nteIndexingMode": "passed",
+    "nteJapaneseIndexing": {
+      "status": "passed",
+      "indexableGuides": 53
+    },
+    "deploymentRegistry": {
+      "status": "passed",
+      "games": 4
+    },
+    "routerGeneratedConfig": "passed",
+    "frozenOfflineInstall": "passed",
+    "rolloutHttpCount": 75,
+    "rolloutBrowserCount": 42,
+    "pilotBrowserCount": 56,
+    "logs": [
+      {
+        "path": ".release-records/s1-rollout-regression.log",
+        "sha256": "6fd2820865acab27514d03c7d12c7bdca4ed4bcb918343124d37c8989a228d28"
+      },
+      {
+        "path": ".release-records/s1-rollout-regression-final.log",
+        "sha256": "b8eb16703659b110299d965259f9edebf5a02c720fca9ec2c48c24ab5e6289a1"
+      },
+      {
+        "path": ".release-records/s1-rollout-final-gates.log",
+        "sha256": "9387df8b7b7f1e611ea9024a87cd4ac5cd6b119359844e609ba899599672f2ae"
+      },
+      {
+        "path": ".release-records/s1-rollout-genshin-staging-http.log",
+        "sha256": "a45913a85a0aef05bde3eb1d23adb5ceb9482ceeaf1b7df183aa3b66bda6b3eb"
+      }
+    ]
+  },
+  "resolvedFindings": [
+    {
+      "issue": "Workers type upgrade removes Buffer.equals from test-visible type",
+      "resolution": "Compare Uint8Array contents without weakening equality assertions; web tests and all types passed"
+    },
+    {
+      "issue": "Auth browser fixture hardcodes pnpm esbuild path",
+      "resolution": "Resolve esbuild from declared tsx dependency; real React fixture passed"
+    },
+    {
+      "issue": "Initial wildcard selected official tests without tsx loader",
+      "resolution": "Correct admin --import tsx invocation passed; initial failures retained"
+    },
+    {
+      "issue": "Ad hoc staging test incorrectly assumed empty sitemap",
+      "resolution": "Existing Genshin sitemap retains production URLs; verify only public origins plus preview noindex/robots. HTTP retest passed without changing business policy"
+    }
+  ],
+  "remainingRisks": [
+    "No cloud deploy/version/traffic/account/rollback acceptance",
+    "No real Google OAuth, production cookie-domain, TLS or trusted-IP validation",
+    "Better Auth internal limiter reports missing trusted IP; only application D1 limiter verified locally",
+    "Main gzip has only 245.41 KiB margin under a hypothetical 3 MiB limit; account plan unknown",
+    "Router retains existing workers-types peer warning and separate toolchain",
+    "Genshin and Lvmeng do not join guarded remote deploy allowlist; Lvmeng default service is not safe staging",
+    "Not full-site, all-game, full-auth, accessibility or real-device acceptance",
+    "Genshin current generated output is staging from final supplemental test; rebuild production before reuse"
+  ],
+  "sideEffects": {
+    "localBuilds": true,
+    "isolatedSyntheticD1Writes": true,
+    "originalCheckoutModified": false,
+    "productionDataAccess": false,
+    "cloudDeployment": false,
+    "githubPush": false,
+    "githubActions": false,
+    "businessOrHistoricalFilesDeleted": false,
+    "diskReclaimedMeasured": false
+  },
+  "nextStep": "Read-only account/capacity/current-version/rollback preflight, then separately authorized bounded staging acceptance"
+}

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "node ../../scripts/require-game-runtime.mjs && next build",
+    "build": "node ../../scripts/require-app-runtime.mjs && next build",
     "build:worker": "NTE_DEPLOYMENT_MODE=live opennextjs-cloudflare build --config wrangler.jsonc --env \"\" && node ../../scripts/game-release.mjs prepare-assets --game nte --environment production",
     "deploy": "node ../../scripts/game-release.mjs deploy --game nte --environment production",
     "preview": "NTE_DEPLOYMENT_MODE=preview opennextjs-cloudflare build --config wrangler.jsonc --env staging && node ../../scripts/game-release.mjs prepare-assets --game nte --environment staging && NTE_DEPLOYMENT_MODE=preview opennextjs-cloudflare preview --config wrangler.jsonc --env staging",

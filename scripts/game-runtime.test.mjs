@@ -5,44 +5,71 @@ import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'nod
 import { tmpdir } from 'node:os';
 import { dirname, resolve } from 'node:path';
 import test from 'node:test';
-import { assertGameRuntime, GAME_RUNTIME, readResolvedPackage, verifyGameRuntime } from './require-game-runtime.mjs';
+import { assertAppRuntime, APP_RUNTIME, RUNTIME_APPS, readResolvedPackage, verifyAppRuntime } from './require-app-runtime.mjs';
 import { verifyNextDeferredPatch } from './verify-next-deferred-patch.mjs';
 
 const root = resolve(import.meta.dirname, '..');
-const fixture = () => ({ name: '@gachia/game-nte', declared: { ...GAME_RUNTIME }, installed: { ...GAME_RUNTIME }, nodeVersion: '22.22.2' });
+const fixture = () => ({ name: '@gachia/game-nte', declared: { ...APP_RUNTIME }, installed: { ...APP_RUNTIME }, nodeVersion: '22.22.2' });
 
 test('runtime requires reviewed exact declarations, resolutions, app and Node version', () => {
-  assert.doesNotThrow(() => assertGameRuntime(fixture()));
+  assert.doesNotThrow(() => assertAppRuntime(fixture()));
   for (const side of ['declared', 'installed']) {
-    for (const dependency of Object.keys(GAME_RUNTIME)) {
-      for (const value of [undefined, `^${GAME_RUNTIME[dependency]}`, '99.0.0']) {
+    for (const dependency of Object.keys(APP_RUNTIME)) {
+      for (const value of [undefined, `^${APP_RUNTIME[dependency]}`, '99.0.0']) {
         const input = fixture(); input[side][dependency] = value;
-        assert.throws(() => assertGameRuntime(input), /Unreviewed runtime/);
+        assert.throws(() => assertAppRuntime(input), /Unreviewed runtime/);
       }
     }
   }
-  for (const nodeVersion of ['20.19.0', '21.0.0', 'invalid']) assert.throws(() => assertGameRuntime({ ...fixture(), nodeVersion }), /Node 22/);
-  assert.throws(() => assertGameRuntime({ ...fixture(), name: '@gachia/web' }), /pilot games/);
+  for (const nodeVersion of ['20.19.0', '21.0.0', 'invalid']) assert.throws(() => assertAppRuntime({ ...fixture(), nodeVersion }), /Node 22/);
+  assert.throws(() => assertAppRuntime({ ...fixture(), name: '@gachia/router' }), /registered Next application/);
 });
 
 for (const game of ['nte', 'azur-promilia']) {
   test(`${game}: installed supported runtime and per-version patch are verified from the app`, () => {
-    const result = verifyGameRuntime(resolve(root, `apps/game-${game}`));
-    assert.deepEqual(result.versions, GAME_RUNTIME);
+    const result = verifyAppRuntime(resolve(root, `apps/game-${game}`));
+    assert.deepEqual(result.versions, APP_RUNTIME);
     assert.equal(result.patch.state, 'patched');
     assert.equal(result.patch.nextVersion, '15.5.28');
     assert.equal(result.cloudVerification, 'not_performed');
     const pkg = JSON.parse(readFileSync(resolve(root, `apps/game-${game}/package.json`), 'utf8'));
-    assert.equal(pkg.scripts.build, 'node ../../scripts/require-game-runtime.mjs && next build');
+    assert.equal(pkg.scripts.build, 'node ../../scripts/require-app-runtime.mjs && next build');
   });
 }
 
-test('legacy applications retain their previous resolved Next and adapter versions', () => {
-  for (const app of ['web', 'game-genshin', 'game-lvmeng']) {
+test('all five Next applications share one reviewed runtime and patch registration', () => {
+  for (const app of RUNTIME_APPS) {
     const require = createRequire(resolve(root, `apps/${app}/package.json`));
-    assert.equal(require('next/package.json').version, '15.5.18', app);
-    assert.equal(readResolvedPackage(require, '@opennextjs/cloudflare').version, '1.20.1', app);
+    assert.equal(require('next/package.json').version, '15.5.28', app);
+    assert.equal(readResolvedPackage(require, '@opennextjs/cloudflare').version, '1.20.13', app);
+    assert.equal(readResolvedPackage(require, 'wrangler').version, '4.148.0', app);
+    assert.equal(verifyAppRuntime(resolve(root, `apps/${app}`)).status, 'reviewed_application_runtime');
     assert.equal(verifyNextDeferredPatch(dirname(require.resolve('next/package.json')), { requirePatched: true }).state, 'patched');
+  }
+  const pkg = JSON.parse(readFileSync(resolve(root, 'package.json'), 'utf8'));
+  assert.deepEqual(Object.keys(pkg.pnpm.patchedDependencies), ['next@15.5.28']);
+});
+
+test('runtime inventory CLI reports all apps and rejects unknown flags', () => {
+  const file = resolve(root, 'scripts/require-app-runtime.mjs');
+  const result = spawnSync(process.execPath, [file, '--all'], { cwd: root, encoding: 'utf8' });
+  assert.equal(result.status, 0, result.stderr);
+  assert.equal(JSON.parse(result.stdout).length, RUNTIME_APPS.length);
+  const invalid = spawnSync(process.execPath, [file, '--ignore-version'], { cwd: root, encoding: 'utf8' });
+  assert.notEqual(invalid.status, 0);
+});
+
+test('main CI verifies exact runtime before building or restoring an artifact', () => {
+  const require = createRequire(resolve(root, 'apps/admin/package.json'));
+  const { jobs } = require('yaml').parse(readFileSync(resolve(root, '.github/workflows/deploy.yml'), 'utf8'));
+  for (const name of ['build', 'deploy-staging', 'deploy']) {
+    const steps = jobs[name].steps;
+    const install = steps.findIndex(step => step.run === 'pnpm install --frozen-lockfile');
+    const gate = steps.findIndex(step => step.run === 'node scripts/require-app-runtime.mjs --all');
+    const action = name === 'build'
+      ? steps.findIndex(step => step.run === 'pnpm --filter @gachia/web exec opennextjs-cloudflare build')
+      : steps.findIndex(step => step.name === 'Verify and restore web artifact');
+    assert(gate > install && action > gate, name);
   }
 });
 

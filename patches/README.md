@@ -1,10 +1,11 @@
 # Next deferred initial-value candidate
 
-## Current pilot runtime: Next 15.5.28
+## Current application runtime: Next 15.5.28
 
-NTE and Azur Promilia use the exact Next 15.5.28 / OpenNext 1.20.13 /
-Wrangler 4.148.0 combination. Other apps retain Next 15.5.18 and its original
-patch registration until their separate runtime acceptance. Node 22+ is required.
+All five Next apps (web, Genshin, Lvmeng, NTE and Azur Promilia) use the exact
+Next 15.5.28 / OpenNext 1.20.13 / Wrangler 4.148.0 combination after S1.2 local
+acceptance. Only the 15.5.28 patch is registered. Node 22+ is required.
+Router remains on its separate toolchain; this is not a cloud rollout.
 
 `next-15.5.28-deferred-initial.patch` is a separately verified port of the same
 four absent-prefetch fallback changes. The patch bytes happen to be identical;
@@ -12,16 +13,21 @@ the distribution source digests are not. Its adjacent JSON manifest records
 the new original and patched digests. Never use a version range to select a
 manifest or reuse the old source hashes. The verifier resolves the app's package
 and accepts only one of the two exact reviewed versions, rejecting partial or
-drifted sources. The pilot build gate additionally checks exact adapter/CLI
+drifted sources. The application build gate additionally checks exact adapter/CLI
 versions and retains the caller's indexing mode.
 
 Local runtime and browser acceptance is documented in
-[S1.1 closeout](../plans/multi-game-s1-runtime-closeout-2026-10-23.md).
+[S1.2 closeout](../plans/multi-game-s1-runtime-rollout-closeout-2026-10-23.md).
+Run `node scripts/require-app-runtime.mjs --all` to check all five apps.
 This is not cloud acceptance or approval to deploy the patch to production.
 Original source maps remain unchanged and must not be treated as accurate
 mappings of the four patched source files.
 
 ## Legacy Next 15.5.18 baseline
+
+The following is historical evidence, not the current dependency state. S1.2
+removed the old registration and lockfile resolution, retaining these files
+for audit history. The original main checkout was not reinstalled or modified.
 
 Status: package-manager registration and lockfile integrated after limited local acceptance.
 The main checkout dependency directory has NOT been reinstalled and still contains original Next files.

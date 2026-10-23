@@ -27,6 +27,6 @@
       "patchedSha256": "6a1cc9777a102a77355ae18caa308dd975c4349fa595b6c3911da0f2d16d9fd4"
     }
   ],
-  "scope": "Absent-prefetch initialValue only; CJS and ESM layout/head; pilot games only",
-  "acceptanceReport": "reports/release-safety/s1-runtime-verification-2026-10-23.json"
+  "scope": "Absent-prefetch initialValue only; CJS and ESM layout/head; all five Next applications, local acceptance only",
+  "acceptanceReport": "reports/release-safety/s1-runtime-rollout-verification-2026-10-23.json"
 }

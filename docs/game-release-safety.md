@@ -1,6 +1,6 @@
 # Game Release Safety：S1 本地发布门禁
 
-更新：2026-10-23。范围仅为异环与蓝色星原的受控包脚本，不是全站发布平台，也不是已经完成云端验收的声明。
+更新：2026-10-23（S1.2）。远程发布门禁仍仅覆盖异环与蓝色星原；运行时检查已覆盖全部五个 Next 应用。不是全站发布平台，也不是已经完成云端验收的声明。
 
 ## 1. 本阶段解决什么
 
@@ -49,13 +49,15 @@ pnpm --filter @gachia/game-azur-promilia verify:bundle
 - 两者会创建可再生构建物、本地 Miniflare 状态和发布验证记录，不是只读命令。
 - 推荐 Node 22；本阶段验证使用 Node 22.22.2 与冻结锁文件安装。
 
-### 当前试点运行时与历史阻断
+### 当前统一运行时与历史阻断
 
-S1.1 将两个试点精确锁定为 Next.js 15.5.28、OpenNext 1.20.13、Wrangler 4.148.0，使用 Node 22 或更新版本。默认验证命令不再需要例外参数。构建前从当前应用解析实际依赖，核对声明版本、安装版本与四处补丁摘要；未知版本或不完整补丁拒绝构建。发布记录包含该运行时检查结果。
+S1.1 完成两个试点，S1.2 将主站、原神、绿梦也精确锁定为 Next.js 15.5.28、OpenNext 1.20.13、Wrangler 4.148.0，使用 Node 22 或更新版本。默认验证命令不再需要例外参数。构建前从当前应用解析实际依赖，核对声明版本、安装版本与四处补丁摘要；未知版本或不完整补丁拒绝构建。发布记录包含该运行时检查结果。Router 不属于 Next 应用，本阶段未更新其依赖。
+
+统一入口为 `scripts/require-app-runtime.mjs`，从应用目录无参调用，或在根目录运行 `node scripts/require-app-runtime.mjs --all`。主站保留 `require-patched-next.mjs` 兼容入口，内部委托统一门禁；CI 在构建与恢复部署产物前检查全部五个应用。
 
 上一阶段的拒绝是真实观察，但不能直接等同于官方已停止支持所有 Next 15：当时 OpenNext 1.20.1 使用两年日期截止判断；2026-10-23 官方支持表仍列 15.x 为 Maintenance LTS，新版 OpenNext 已加入 Active/Maintenance LTS 判断，并将可接受的 15.x peer 下限提高到 15.5.28。证据、试验取舍与未迁移范围见 [S1.1 交付记录](../plans/multi-game-s1-runtime-closeout-2026-10-23.md)。
 
-旧的 `--allow-unsupported-next-for-verification` 仍仅限本地诊断，不能用于 deploy；本阶段验收不使用它，也不把它加入 CI。主站、原神、绿梦仍使用旧运行时，不能从两个试点的成功推断全站运行时已完成升级。
+旧的 `--allow-unsupported-next-for-verification` 仍仅限本地诊断，不能用于 deploy；本阶段验收不使用它，也不把它加入 CI。全部五个应用的限定本地证据见 [S1.2 交付记录](../plans/multi-game-s1-runtime-rollout-closeout-2026-10-23.md)，不等于生产环境或全部游戏页面验收。
 
 ### 浏览器回归
 
@@ -70,6 +72,21 @@ node scripts/game-runtime-browser.mjs --game azur-promilia --environment product
 ```
 
 需要与锁文件中 Playwright 匹配的 Chromium（缺少时先运行 `pnpm exec playwright install chromium`）。覆盖桌面/手机、中英日角色列表、无 JS 阅读、延迟脚本后的筛选、客户端详情导航和返回；不等同于全站交互、登录或真实移动设备验收。浏览器仅访问启动的本地 origin，阻止外部请求，共用每游戏锁，并在退出时停止浏览器与 Worker。结果保存在 `.release-records/runtime-browser-<game>-<environment>.json`。
+
+### 主站、原神和绿梦本地回归
+
+先构建对应生产模式产物，再运行本地专用测试：
+
+```bash
+pnpm --filter @gachia/web exec opennextjs-cloudflare build --config wrangler.jsonc --env ""
+node scripts/runtime-rollout-smoke.mjs web
+pnpm --filter @gachia/game-genshin verify:bundle
+node scripts/runtime-rollout-smoke.mjs game-genshin
+pnpm --filter @gachia/game-lvmeng verify:bundle
+node scripts/runtime-rollout-smoke.mjs game-lvmeng
+```
+
+此脚本不构建、不部署。每次创建独立本地配置与状态目录，不继承真实 D1/R2 标识、服务绑定或路由。主站测试在新建本地 D1 应用仓库迁移、写入合成账号并验证会话及收藏，不连接线上业务数据库。Google OAuth 禁用，只验证错误恢复；不能据此宣称真实 OAuth 已验收。记录位于 `.release-records/rollout-<app>-<uuid>/result.json`；合成凭据、种子 SQL、日志及本地库不提交。运行前应确认已有构建为生产模式；同一应用不要并行重建。
 
 ## 5. 远程操作：仅在满足发布前置条件后
 
@@ -118,7 +135,7 @@ pnpm release:game status --record .release-records/<record-file>.json
 
 实际本地 Worker 冒烟发现：页面引用 `/_games/<game>/_next/...`，但 OpenNext 产物只有 `/_next/...`。线上 Router 可剥离前缀，直接 staging origin 没有 Router，页面 HTML 可成功但脚本返回 404。Next rewrites 不足以保证该 Worker 静态资源路径生效。
 
-受控构建后为生成的 `_next` 小目录增加 namespaced 副本，同时保留原路径：
+四个独立游戏构建后为生成的 `_next` 小目录增加 namespaced 副本，同时保留原路径：
 
 ```text
 .open-next/assets/_next/...
@@ -127,9 +144,11 @@ pnpm release:game status --record .release-records/<record-file>.json
 
 不复制游戏数据和图片，不编辑生成的 Worker 源码，不改变 Router 约定。两种路径均在本地检查；生产仍保留 Router 使用的原路径。该步骤发生在本地构建输出，不修改源码资源。
 
+`prepare-assets` 允许四个游戏，但 `plan`、`verify`、`deploy` 仍只允许异环和蓝色星原。原神、绿梦只是复用本地资源准备能力，并未因此获得受控远程发布权限。原神本地 preview 显式选择 staging；绿梦生产构建与 dry-run 显式选择 production，未新增 staging 服务。
+
 ## 8. 云端验收清单与已复核边界
 
-- [x] 两试点默认构建、运行时精确版本与自定义补丁的限定本地回归通过；其他应用待独立迁移。
+- [x] 全部五个 Next 应用默认构建、运行时精确版本与自定义补丁的限定本地回归通过。
 - [ ] 核对真实账户、目标环境、凭据权限与当前版本。
 - [ ] staging 实际部署后检查 noindex、robots、正文、canonical、JS/CSS、404。
 - [ ] 发布前后确认生产版本未被 staging 修改。

@@ -4,25 +4,25 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "build:worker": "LVMENG_DEPLOYMENT_MODE=production opennextjs-cloudflare build",
+    "build": "node ../../scripts/require-app-runtime.mjs && next build",
+    "build:worker": "LVMENG_DEPLOYMENT_MODE=production opennextjs-cloudflare build --config wrangler.jsonc --env production && node ../../scripts/game-release.mjs prepare-assets --game lvmeng --environment production",
     "type-check": "tsc --noEmit",
-    "verify:bundle": "LVMENG_DEPLOYMENT_MODE=production opennextjs-cloudflare build && wrangler deploy --dry-run --config wrangler.jsonc --env production",
+    "verify:bundle": "pnpm run build:worker && wrangler deploy --dry-run --config wrangler.jsonc --env production",
     "smoke": "node scripts/smoke.mjs",
-    "deploy": "LVMENG_DEPLOYMENT_MODE=production opennextjs-cloudflare build && opennextjs-cloudflare deploy --config wrangler.jsonc --env production"
+    "deploy": "pnpm run build:worker && opennextjs-cloudflare deploy --config wrangler.jsonc --env production"
   },
   "dependencies": {
-    "next": "^15.5.18",
+    "next": "15.5.28",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^5.20260708.1",
-    "@opennextjs/cloudflare": "^1.20.1",
+    "@cloudflare/workers-types": "5.20261006.1",
+    "@opennextjs/cloudflare": "1.20.13",
     "@types/node": "25.6.0",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
     "typescript": "^5.8.0",
-    "wrangler": "^4.110.0"
+    "wrangler": "4.148.0"
   }
 }

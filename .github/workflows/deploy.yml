@@ -76,6 +76,10 @@ jobs:
         if: steps.scope.outputs.scope != 'admin'
         run: pnpm test:release
 
+      - name: Verify unified application runtime
+        if: steps.scope.outputs.scope != 'admin'
+        run: node scripts/require-app-runtime.mjs --all
+
       - name: Test local workbench directly without Turbo build dependencies
         if: steps.scope.outputs.scope == 'admin'
         run: pnpm --filter @gachia/admin test
@@ -218,6 +222,9 @@ jobs:
       - name: Verify pinned Next hydration patch
         run: node scripts/verify-next-deferred-patch.mjs --require-patched
 
+      - name: Verify unified application runtime
+        run: node scripts/require-app-runtime.mjs --all
+
       - name: Download verified web artifact
         uses: actions/download-artifact@v4
         with:
@@ -318,6 +325,9 @@ jobs:
 
       - name: Verify pinned Next hydration patch
         run: node scripts/verify-next-deferred-patch.mjs --require-patched
+
+      - name: Verify unified application runtime
+        run: node scripts/require-app-runtime.mjs --all
 
       - name: Download verified web artifact
         uses: actions/download-artifact@v4

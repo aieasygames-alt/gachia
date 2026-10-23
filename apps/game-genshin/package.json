@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "next build",
-    "build:worker": "GENSHIN_DEPLOYMENT_MODE=production opennextjs-cloudflare build",
-    "preview": "GENSHIN_DEPLOYMENT_MODE=preview opennextjs-cloudflare build && opennextjs-cloudflare preview --config wrangler.jsonc",
-    "deploy": "GENSHIN_DEPLOYMENT_MODE=production opennextjs-cloudflare build && opennextjs-cloudflare deploy --config wrangler.jsonc --env \"\"",
-    "deploy:staging": "GENSHIN_DEPLOYMENT_MODE=preview opennextjs-cloudflare build && opennextjs-cloudflare deploy --config wrangler.jsonc --env staging",
-    "verify:bundle": "GENSHIN_DEPLOYMENT_MODE=production opennextjs-cloudflare build && wrangler deploy --dry-run --config wrangler.jsonc --env \"\"",
+    "build": "node ../../scripts/require-app-runtime.mjs && next build",
+    "build:worker": "GENSHIN_DEPLOYMENT_MODE=production opennextjs-cloudflare build --config wrangler.jsonc --env \"\" && node ../../scripts/game-release.mjs prepare-assets --game genshin --environment production",
+    "preview": "GENSHIN_DEPLOYMENT_MODE=preview opennextjs-cloudflare build --config wrangler.jsonc --env staging && node ../../scripts/game-release.mjs prepare-assets --game genshin --environment staging && opennextjs-cloudflare preview --config wrangler.jsonc --env staging",
+    "deploy": "pnpm run build:worker && opennextjs-cloudflare deploy --config wrangler.jsonc --env \"\"",
+    "deploy:staging": "GENSHIN_DEPLOYMENT_MODE=preview opennextjs-cloudflare build --config wrangler.jsonc --env staging && node ../../scripts/game-release.mjs prepare-assets --game genshin --environment staging && opennextjs-cloudflare deploy --config wrangler.jsonc --env staging",
+    "verify:bundle": "pnpm run build:worker && wrangler deploy --dry-run --config wrangler.jsonc --env \"\"",
     "seo:parity": "node ../../scripts/genshin-seo-parity.mjs",
     "api:boundary-smoke": "node ../../scripts/genshin-api-boundary-smoke.mjs",
     "type-check": "tsc --noEmit"
@@ -17,17 +17,17 @@
     "@gachia/core": "workspace:*",
     "@gachia/data": "workspace:*",
     "@gachia/ui": "workspace:*",
-    "next": "^15.5.18",
+    "next": "15.5.28",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^5.20260708.1",
-    "@opennextjs/cloudflare": "^1.20.1",
+    "@cloudflare/workers-types": "5.20261006.1",
+    "@opennextjs/cloudflare": "1.20.13",
     "@types/node": "25.6.0",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
     "typescript": "^5.8.0",
-    "wrangler": "^4.110.0"
+    "wrangler": "4.148.0"
   }
 }

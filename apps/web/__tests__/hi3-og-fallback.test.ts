@@ -8,8 +8,8 @@ it('uses the existing Gachia brand asset at the HI3 URL, not another game artwor
   const generic = await readFile(join(root, 'default.webp'));
   const brand = await readFile(join(process.cwd(), 'public/images/logo.webp'));
   const hi3 = await readFile(join(root, 'hi3.webp'));
-  expect(hi3.equals(brand)).toBe(true);
-  expect(hi3.equals(generic)).toBe(false);
+  expect(new Uint8Array(hi3)).toEqual(new Uint8Array(brand));
+  expect(new Uint8Array(hi3)).not.toEqual(new Uint8Array(generic));
   expect(hi3.subarray(0, 4).toString()).toBe('RIFF');
   expect(hi3.subarray(8, 12).toString()).toBe('WEBP');
 });
