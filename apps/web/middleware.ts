@@ -3,6 +3,7 @@ import createMiddleware from 'next-intl/middleware';
 import { routing } from './lib/i18n/routing';
 import { GAME_IDS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
+import { isWorkerPreviewOrigin } from './lib/preview-origin';
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -106,8 +107,9 @@ function stripLabelSuffix(segment?: string) {
   return stripped && stripped !== segment ? stripped : undefined;
 }
 
-export default function middleware(request: NextRequest) {
+function routeMiddleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  if (pathname === '/robots.txt') return NextResponse.next();
   const decodedPathname = decodeURIComponent(pathname);
   const segments = pathname.split('/').filter(Boolean);
   const [firstSegment, secondSegment, thirdSegment, fourthSegment] = segments;
@@ -273,9 +275,19 @@ export default function middleware(request: NextRequest) {
   return response;
 }
 
+export default function middleware(request: NextRequest) {
+  if (!isWorkerPreviewOrigin(request.nextUrl.origin)) return routeMiddleware(request);
+  const response = request.nextUrl.pathname === '/robots.txt'
+    ? new NextResponse('User-agent: *\nDisallow: /\n', { headers: { 'Content-Type': 'text/plain; charset=utf-8' } })
+    : routeMiddleware(request);
+  response.headers.set('X-Robots-Tag', 'noindex, nofollow');
+  return response;
+}
+
 export const config = {
   matcher: [
     '/',
+    '/robots.txt',
     '/about',
     '/calendar',
     '/characters',

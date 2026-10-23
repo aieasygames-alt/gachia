@@ -1,3 +1,4 @@
+import { accountFeatureUnavailable } from '@/lib/site-features';
 import { NextRequest, NextResponse } from 'next/server';
 import { getDb, getD1 } from '@/lib/db';
 import { mapProgress, eq, and } from '@gachia/db';
@@ -14,6 +15,8 @@ async function getSession(request: NextRequest) {
 
 // GET /api/map/progress?map_id=teyvat — Get all collected markers for a map
 export async function GET(request: NextRequest) {
+  const unavailable = accountFeatureUnavailable();
+  if (unavailable) return unavailable;
   const limited = await checkRateLimit(request, RL);
   if (limited) return limited;
 
@@ -43,6 +46,8 @@ export async function GET(request: NextRequest) {
 
 // POST /api/map/progress — Toggle a single marker
 export async function POST(request: NextRequest) {
+  const unavailable = accountFeatureUnavailable();
+  if (unavailable) return unavailable;
   const limited = await checkRateLimit(request, RL);
   if (limited) return limited;
 
@@ -88,6 +93,8 @@ export async function POST(request: NextRequest) {
 
 // PUT /api/map/progress — Batch sync
 export async function PUT(request: NextRequest) {
+  const unavailable = accountFeatureUnavailable();
+  if (unavailable) return unavailable;
   const limited = await checkRateLimit(request, RL);
   if (limited) return limited;
 

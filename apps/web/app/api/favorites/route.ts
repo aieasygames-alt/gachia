@@ -1,3 +1,4 @@
+import { accountFeatureUnavailable } from '@/lib/site-features';
 import { NextRequest, NextResponse } from 'next/server';
 import { getDb } from '@/lib/db';
 import { userFavorites, eq, and } from '@gachia/db';
@@ -15,6 +16,8 @@ async function getSession(request: NextRequest) {
 }
 
 export async function GET(request: NextRequest) {
+  const unavailable = accountFeatureUnavailable();
+  if (unavailable) return unavailable;
   const limited = await checkRateLimit(request, RL);
   if (limited) return limited;
 
@@ -41,6 +44,8 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  const unavailable = accountFeatureUnavailable();
+  if (unavailable) return unavailable;
   const limited = await checkRateLimit(request, RL);
   if (limited) return limited;
 
@@ -71,6 +76,8 @@ export async function POST(request: NextRequest) {
 }
 
 export async function DELETE(request: NextRequest) {
+  const unavailable = accountFeatureUnavailable();
+  if (unavailable) return unavailable;
   const limited = await checkRateLimit(request, RL);
   if (limited) return limited;
 

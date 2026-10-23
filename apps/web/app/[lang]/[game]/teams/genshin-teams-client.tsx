@@ -7,6 +7,7 @@ import { useState, useMemo, type ReactNode } from 'react';
 import { GAMES } from '@gachia/core';
 
 import { NextStepStrip, type NextStepLink } from '@/components/wiki/next-step-strip';
+import { ACCOUNT_FEATURES_ENABLED } from '@/lib/site-features';
 
 import {
   genshinCharacters,
@@ -345,7 +346,7 @@ export function GenshinTeams({ locale }: { locale: SupportedLocale }) {
           )}
 
           {/* Share Team */}
-          {activeChars.length > 0 && (
+          {ACCOUNT_FEATURES_ENABLED && activeChars.length > 0 && (
             <div className="mb-6">
               <button
                 onClick={async () => {

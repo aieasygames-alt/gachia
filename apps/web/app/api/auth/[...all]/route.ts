@@ -1,3 +1,4 @@
+import { accountFeatureUnavailable } from '@/lib/site-features';
 import { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 import { createAuth } from '@/lib/auth';
@@ -12,6 +13,8 @@ function isUnavailableAuthError(error: unknown) {
 }
 
 async function handler(request: NextRequest) {
+  const unavailable = accountFeatureUnavailable();
+  if (unavailable) return unavailable;
   try {
     const limited = await checkRateLimit(request, { limit: 20, windowSeconds: 60, prefix: '/api/auth' });
     if (limited) return limited;

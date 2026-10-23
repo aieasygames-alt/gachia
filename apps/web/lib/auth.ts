@@ -5,8 +5,10 @@ import { nextCookies } from 'better-auth/next-js';
 import { getDb } from './db';
 import { users, sessions, accounts, verifications } from '@gachia/db';
 import { resolveAuthPolicy } from './auth-policy';
+import { ACCOUNT_FEATURES_ENABLED } from './site-features';
 
 export function createAuth(request?: NextRequest) {
+  if (!ACCOUNT_FEATURES_ENABLED) throw new Error('Account features are disabled');
   const googleClientId = process.env.GOOGLE_CLIENT_ID;
   const googleClientSecret = process.env.GOOGLE_CLIENT_SECRET;
   const betterAuthSecret = process.env.BETTER_AUTH_SECRET;

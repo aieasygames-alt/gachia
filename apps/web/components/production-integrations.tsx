@@ -6,9 +6,9 @@ import { allowProductionIntegrations } from '@/lib/production-integrations';
 import { allowAnalytics, PRIVACY_KEY, readPrivacyChoice, savePrivacyChoice } from '@/lib/privacy-preferences';
 
 const COPY = {
-  zh: { title: '隐私偏好', body: '可选择启用 Google Analytics 访问分析。拒绝不影响阅读或 Google 登录。广告与 Clarity 会话回放暂不启用。更改选择会重新加载页面；已发送的数据不会被撤回。', accept: '允许访问分析', reject: '拒绝非必要服务', link: '隐私政策', failure: '无法保存偏好，非必要服务保持关闭。', close: '收起' },
-  en: { title: 'Privacy preferences', body: 'You can enable Google Analytics. Rejecting does not affect reading or Google sign-in. Ads and Clarity session replay remain disabled. Changes reload the page; data already sent cannot be recalled.', accept: 'Allow analytics', reject: 'Reject optional services', link: 'Privacy policy', failure: 'Preferences could not be saved. Optional services stay off.', close: 'Close' },
-  ja: { title: 'プライバシー設定', body: 'Google Analyticsの利用を選択できます。拒否しても閲覧とGoogleログインは利用可能です。広告とClarityのセッション再生は無効です。変更時に再読み込みします。送信済みデータは取り消せません。', accept: 'アクセス分析を許可', reject: '任意サービスを拒否', link: 'プライバシーポリシー', failure: '設定を保存できません。任意サービスは無効のままです。', close: '閉じる' },
+  zh: { title: '隐私偏好', body: '可选择启用 Google Analytics 访问分析。拒绝不影响阅读或本地工具。广告与 Clarity 会话回放暂不启用。更改选择会重新加载页面；已发送的数据不会被撤回。', accept: '允许访问分析', reject: '拒绝非必要服务', link: '隐私政策', failure: '无法保存偏好，非必要服务保持关闭。', close: '收起' },
+  en: { title: 'Privacy preferences', body: 'You can enable Google Analytics. Rejecting does not affect reading or local tools. Ads and Clarity session replay remain disabled. Changes reload the page; data already sent cannot be recalled.', accept: 'Allow analytics', reject: 'Reject optional services', link: 'Privacy policy', failure: 'Preferences could not be saved. Optional services stay off.', close: 'Close' },
+  ja: { title: 'プライバシー設定', body: 'Google Analyticsの利用を選択できます。拒否しても閲覧とローカルツールは利用可能です。広告とClarityのセッション再生は無効です。変更時に再読み込みします。送信済みデータは取り消せません。', accept: 'アクセス分析を許可', reject: '任意サービスを拒否', link: 'プライバシーポリシー', failure: '設定を保存できません。任意サービスは無効のままです。', close: '閉じる' },
 };
 
 export function ProductionIntegrations() {

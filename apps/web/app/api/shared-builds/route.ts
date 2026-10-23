@@ -1,3 +1,4 @@
+import { accountFeatureUnavailable } from '@/lib/site-features';
 import { NextRequest, NextResponse } from 'next/server';
 import { getDb } from '@/lib/db';
 import { sharedBuilds, eq } from '@gachia/db';
@@ -9,6 +10,8 @@ import { GAME_IDS } from '@gachia/core';
 const gameIds = new Set<string>(GAME_IDS);
 
 export async function POST(request: NextRequest) {
+  const unavailable = accountFeatureUnavailable();
+  if (unavailable) return unavailable;
   const limited = await checkRateLimit(request, { limit: 10, windowSeconds: 60, prefix: '/api/shared-builds' });
   if (limited) return limited;
 

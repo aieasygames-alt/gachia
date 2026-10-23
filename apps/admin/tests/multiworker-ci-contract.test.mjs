@@ -64,3 +64,16 @@ test('rollback evidence must identify the latest fully active main version', () 
   for (const fixture of [[], {}, [deployment('2026-10-14', 'active'), deployment('2026-10-15', 'other')],
     [deployment('2026-10-15', 'active', 50)]]) assert.notEqual(run(fixture).status, 0);
 });
+
+test('main secret gates share the checked-in account policy without weakening other releases', () => {
+  const require = createRequire(import.meta.url);
+  const workflow = require('yaml').parse(readFileSync(new URL('../../../.github/workflows/deploy.yml', import.meta.url), 'utf8'));
+  for (const job of ['deploy-staging', 'deploy']) {
+    const step = workflow.jobs[job].steps.find(s => s.name === `Verify ${job === 'deploy' ? 'production' : 'staging'} Worker secrets`);
+    assert.match(step.run, /wrangler secret list/);
+    assert.match(step.run, /node ..\/..\/scripts\/web-release-policy.mjs secrets \/tmp\/worker-secrets.json/);
+  }
+  const smoke = workflow.jobs['deploy-staging'].steps.find(s => s.name === 'Smoke test staging');
+  assert.match(smoke.run, /account-smoke "\$STAGING_ORIGIN"/);
+  assert.doesNotMatch(smoke.run, /for path in .*api\/auth\/get-session/);
+});

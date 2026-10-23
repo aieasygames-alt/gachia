@@ -250,16 +250,7 @@ jobs:
         run: |
           set -euo pipefail
           pnpm exec wrangler secret list --config wrangler.jsonc --env staging --format json > /tmp/worker-secrets.json
-          node --input-type=module <<'EOF'
-          import fs from 'node:fs';
-          const configured = new Set(JSON.parse(fs.readFileSync('/tmp/worker-secrets.json', 'utf8')).map(({ name }) => name));
-          const required = ['BETTER_AUTH_SECRET', 'INDEXNOW_AUTH_TOKEN'];
-          const missing = required.filter((name) => !configured.has(name));
-          if (missing.length) {
-            console.error(`Missing staging Worker secrets: ${missing.join(', ')}`);
-            process.exit(1);
-          }
-          EOF
+          node ../../scripts/web-release-policy.mjs secrets /tmp/worker-secrets.json
 
       - name: Deploy to Cloudflare staging
         working-directory: apps/web
@@ -277,11 +268,12 @@ jobs:
         run: |
           set -euo pipefail
           : "${STAGING_ORIGIN:?STAGING_ORIGIN was not exported by the deploy step}"
-          for path in sitemap.xml api/auth/get-session; do
+          for path in sitemap.xml; do
             url="${STAGING_ORIGIN}/${path}"
             echo "Checking ${url}"
             curl --fail --silent --show-error --retry 5 --retry-all-errors --retry-delay 2 --max-time 30 "$url" > /dev/null
           done
+          node scripts/web-release-policy.mjs account-smoke "$STAGING_ORIGIN"
 
       - name: Smoke test HI3 reading routes
         env:
@@ -354,16 +346,7 @@ jobs:
         run: |
           set -euo pipefail
           pnpm exec wrangler secret list --config wrangler.jsonc --env "" --format json > /tmp/worker-secrets.json
-          node --input-type=module <<'EOF'
-          import fs from 'node:fs';
-          const configured = new Set(JSON.parse(fs.readFileSync('/tmp/worker-secrets.json', 'utf8')).map(({ name }) => name));
-          const required = ['BETTER_AUTH_SECRET', 'GOOGLE_CLIENT_ID', 'GOOGLE_CLIENT_SECRET', 'INDEXNOW_AUTH_TOKEN'];
-          const missing = required.filter((name) => !configured.has(name));
-          if (missing.length) {
-            console.error(`Missing production Worker secrets: ${missing.join(', ')}`);
-            process.exit(1);
-          }
-          EOF
+          node ../../scripts/web-release-policy.mjs secrets /tmp/worker-secrets.json
 
       - name: Record main deployment before promotion
         working-directory: apps/web

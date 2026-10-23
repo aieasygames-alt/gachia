@@ -1,6 +1,5 @@
 import assert from 'node:assert/strict';
-import { createHash, createHmac, randomBytes, randomUUID } from 'node:crypto';
-import { execFileSync } from 'node:child_process';
+import { createHash, randomUUID } from 'node:crypto';
 import { appendFileSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -8,16 +7,15 @@ import { chromium, expect } from '@playwright/test';
 import { parseWrangler } from './game-release.mjs';
 import { verifyLocalWorker } from './game-release-smoke.mjs';
 import { verifyAppRuntime } from './require-app-runtime.mjs';
+import { verifyDisabledAccounts } from './web-release-policy.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
 export const ROLLOUT_APPS = Object.freeze(['web', 'game-genshin', 'game-lvmeng']);
 const HI3_IDS = ['vermillion-liuli', 'vermillion-liuli-full-burn', 'volatile-sparkler'];
 const sha = value => createHash('sha256').update(value).digest('hex');
-const authOrigin = 'https://runtime-local.invalid';
 
-export function localFixtureConfig(app, root, secret) {
+export function localFixtureConfig(app, root) {
   if (!ROLLOUT_APPS.includes(app)) throw new Error('Unknown rollout application');
-  if (typeof secret !== 'string' || secret.length < 32) throw new Error('Synthetic fixture secret required');
   const directory = resolve(root, 'apps', app);
   const original = parseWrangler(readFileSync(resolve(directory, 'wrangler.jsonc'), 'utf8'));
   // Do not copy routes, service bindings, real IDs, secrets or environment blocks.
@@ -27,24 +25,16 @@ export function localFixtureConfig(app, root, secret) {
     assets: { directory: resolve(directory, '.open-next/assets'), binding: 'ASSETS' },
     vars: { NEXT_PUBLIC_APP_URL: 'https://gachia.com' },
   };
-  if (app === 'web') {
-    Object.assign(config.vars, { BETTER_AUTH_URL: authOrigin, BETTER_AUTH_SECRET: secret, GOOGLE_CLIENT_ID: '', GOOGLE_CLIENT_SECRET: '' });
-    config.d1_databases = [{ binding: 'DB', database_name: 'runtime-local-db', database_id: '00000000-0000-0000-0000-000000000001', migrations_dir: resolve(root, 'packages/db/src/migrations'), remote: false }];
-    config.r2_buckets = [{ binding: 'IMAGES', bucket_name: 'runtime-local-images', remote: false }];
-  } else {
-    config.vars[`${app.slice(5).toUpperCase()}_DEPLOYMENT_MODE`] = 'production';
-  }
+  if (app !== 'web') config.vars[`${app.slice(5).toUpperCase()}_DEPLOYMENT_MODE`] = 'production';
   return config;
 }
 
-export function fixtureD1Args(configPath, persistTo, file) {
-  return ['exec', 'wrangler', 'd1', file ? 'execute' : 'migrations', ...(file ? [] : ['apply']), 'DB', '--local', '--config', configPath, '--persist-to', persistTo, ...(file ? ['--file', file] : [])];
-}
-
-async function verifyHttp(app, origin, cookie) {
+export async function verifyHttp(app, origin, { preview = false } = {}) {
   const observations = [];
   const get = async (path, expected = 200, init = {}) => {
-    const response = await fetch(new URL(path, origin), { redirect: 'manual', signal: AbortSignal.timeout(30000), ...init,
+    const url = new URL(path, origin);
+    assert.equal(url.origin, origin, 'Cross-origin probe rejected');
+    const response = await fetch(url, { redirect: 'manual', signal: AbortSignal.timeout(30000), ...init,
       headers: { 'cf-connecting-ip': '192.0.2.1', ...init.headers } });
     const body = await response.text();
     assert.equal(response.status, expected, `${path}: ${response.status} ${body.slice(0, 160)}`);
@@ -62,10 +52,12 @@ async function verifyHttp(app, origin, cookie) {
     assert.match(result.body, /<h1\b/i);
     assert(result.body.includes(`href="https://gachia.com${path}"`), `${path}: canonical`);
     assert(!/name="robots" content="[^"]*noindex/.test(result.body), `${path}: unexpected noindex`);
+    if (preview) assert.match(result.response.headers.get('x-robots-tag') ?? '', /noindex/i);
     first ??= result.body;
   }
   const robots = await get('/robots.txt');
-  assert(!/^Disallow:\s*\/\s*$/m.test(robots.body));
+  if (preview) assert.match(robots.body, /^Disallow:\s*\/\s*$/m);
+  else assert(!/^Disallow:\s*\/\s*$/m.test(robots.body));
   const sitemap = await get('/sitemap.xml');
   assert.match(sitemap.response.headers.get('content-type') ?? '', /xml/);
   for (const path of paths) assert(sitemap.body.includes(`https://gachia.com${path}</loc>`), `Missing sitemap path: ${path}`);
@@ -80,36 +72,14 @@ async function verifyHttp(app, origin, cookie) {
     await get('/en/lvmeng', 404);
     await get('/ja/lvmeng', 404);
   }
-  if (app === 'web') {
-    const empty = await get('/api/auth/get-session');
-    assert.equal(JSON.parse(empty.body), null);
-    const denied = await get('/api/favorites', 401);
-    assert.match(denied.response.headers.get('cache-control') ?? '', /no-store/);
-    const bad = await get('/api/auth/get-session', 200, { headers: { cookie: '__Secure-better-auth.session_token=invalid' } });
-    assert.equal(JSON.parse(bad.body), null);
-    const authenticated = await get('/api/auth/get-session', 200, { headers: { cookie } });
-    assert.equal(JSON.parse(authenticated.body).user.id, 'runtime-fixture-user');
-    const favorites = await get('/api/favorites', 200, { headers: { cookie } });
-    assert.deepEqual(JSON.parse(favorites.body), []);
-    await get('/api/favorites', 200, { method: 'POST', headers: { cookie, 'content-type': 'application/json', origin: authOrigin }, body: JSON.stringify({ gameId: 'hi3', characterId: 'runtime-fixture-character' }) });
-    const saved = JSON.parse((await get('/api/favorites', 200, { headers: { cookie } })).body);
-    assert.equal(saved[0]?.characterId, 'runtime-fixture-character');
-    await get('/api/auth/sign-out', 403, { method: 'POST', headers: { cookie, origin: 'https://untrusted.invalid', 'content-type': 'application/json' }, body: '{}' });
-    assert.equal(JSON.parse((await get('/api/auth/get-session', 200, { headers: { cookie } })).body).user.id, 'runtime-fixture-user');
-    const signedOut = await get('/api/auth/sign-out', 200, { method: 'POST', headers: { cookie, origin: authOrigin, 'content-type': 'application/json' }, body: '{}' });
-    assert.match(signedOut.response.headers.get('set-cookie') ?? '', /httponly/i);
-    assert.match(signedOut.response.headers.get('set-cookie') ?? '', /secure/i);
-    assert.equal(JSON.parse((await get('/api/auth/get-session', 200, { headers: { cookie } })).body), null);
-    for (let i = 0; i < 20; i++) await get('/api/auth/get-session', 200, { headers: { 'cf-connecting-ip': '192.0.2.99' } });
-    const limited = await get('/api/auth/get-session', 429, { headers: { 'cf-connecting-ip': '192.0.2.99' } });
-    assert(Number(limited.response.headers.get('retry-after')) > 0);
-  }
+  if (app === 'web') observations.push(...await verifyDisabledAccounts(origin));
   return observations;
 }
 
-async function verifyBrowser(app, origin) {
-  const browser = await chromium.launch({ headless: true });
+export async function verifyBrowser(app, origin, { proxy, directory, requestBudget = 3000 } = {}) {
+  const browser = await chromium.launch({ headless: true, proxy });
   const observations = [];
+  let requests = 0;
   const locales = app === 'game-lvmeng' ? ['zh'] : ['zh', 'en', 'ja'];
   try {
     for (const width of [1440, 390]) for (const locale of locales) for (const mode of ['interactive', 'delayed_scripts', 'no_javascript']) {
@@ -117,17 +87,22 @@ async function verifyBrowser(app, origin) {
       try {
         const page = await context.newPage();
         page.setDefaultTimeout(20000);
-        const errors = [], failedAssets = [], prefetches = [];
+        const errors = [], failedAssets = [], prefetches = [], accountRequests = [];
         let delayedScripts = 0;
         await context.route('**/*', async route => {
           const request = route.request();
           if (new URL(request.url()).origin !== origin) return route.abort('blockedbyclient');
+          if (++requests > requestBudget) return route.abort('blockedbyclient');
           if (mode === 'delayed_scripts' && request.resourceType() === 'script') { delayedScripts++; await new Promise(done => setTimeout(done, 1000)); }
           return route.continue();
         });
         page.on('pageerror', error => errors.push(error.message));
         page.on('console', message => { if (message.type() === 'error' && /hydration|Minified React error|uncaught/i.test(message.text())) errors.push(message.text()); });
-        page.on('request', request => { if (request.headers()['next-router-prefetch']) prefetches.push(new URL(request.url()).pathname); });
+        page.on('request', request => {
+          const path = new URL(request.url()).pathname;
+          if (/^\/api\/(auth(?:\/|$)|favorites$|user-characters$|map\/progress$|shared-builds$)/.test(path)) accountRequests.push(path);
+          if (request.headers()['next-router-prefetch']) prefetches.push(path);
+        });
         page.on('response', response => { if (['script', 'stylesheet'].includes(response.request().resourceType()) && response.status() >= 400) failedAssets.push(response.url()); });
         const path = app === 'web' ? `/${locale}/hi3/weapons` : app === 'game-genshin' ? `/${locale}/genshin/calculator` : '/zh/lvmeng/launch-check';
         const response = await page.goto(`${origin}${path}`, { waitUntil: 'domcontentloaded', timeout: 60000 });
@@ -153,14 +128,6 @@ async function verifyBrowser(app, origin) {
             await page.keyboard.press('Escape');
             await expect(dialog).toHaveCount(0);
             await expect(search).toBeFocused();
-            const login = page.getByRole('button', { name: { zh: '登录', en: 'Login', ja: 'ログイン' }[locale], exact: true });
-            await login.click();
-            const auth = page.getByRole('dialog', { name: '登录 Gachia', exact: true });
-            await auth.getByRole('button', { name: '使用 Google 登录', exact: true }).click();
-            await expect(auth.getByRole('alert')).toBeVisible();
-            await expect(auth.getByRole('button', { name: '使用 Google 登录', exact: true })).toBeEnabled();
-            await page.keyboard.press('Escape');
-            await expect(auth).toHaveCount(0); await expect(login).toBeFocused();
           } else {
             await page.waitForLoadState('networkidle');
             if (app === 'game-genshin') {
@@ -181,9 +148,16 @@ async function verifyBrowser(app, origin) {
           }
           if (mode === 'delayed_scripts') assert(delayedScripts > 0);
         }
+        if (app === 'web') {
+          await expect(page.getByRole('button', { name: /^(Login|登录|ログイン)$/ })).toHaveCount(0);
+          await expect(page.getByRole('dialog', { name: '登录 Gachia', exact: true })).toHaveCount(0);
+          assert.deepEqual(accountRequests, [], 'Account client must not poll sessions or cloud APIs');
+        }
         assert.deepEqual(errors, [], `${app}/${locale}/${width}/${mode}: runtime errors`);
         assert.deepEqual(failedAssets, [], 'Failed JS/CSS responses');
-        observations.push({ path, locale, width, mode, delayedScripts, prefetchRequests: prefetches.length, runtimeErrors: errors.length, failedAssets: failedAssets.length });
+        assert(requests <= requestBudget, 'Browser request budget exceeded');
+        if (directory && locale === 'zh' && mode === 'interactive') await page.screenshot({ path: resolve(directory, `web-${width}.png`) });
+        observations.push({ path, locale, width, mode, delayedScripts, prefetchRequests: prefetches.length, runtimeErrors: errors.length, failedAssets: failedAssets.length, accountRequests: accountRequests.length, cumulativeRequests: requests });
       } finally { await context.close(); }
     }
   } finally { await browser.close(); }
@@ -204,30 +178,18 @@ async function main() {
   try {
     record.runtimePolicy = verifyAppRuntime(resolve(ROOT, 'apps', app));
     record.workerEntrypointSha256 = sha(readFileSync(resolve(ROOT, 'apps', app, '.open-next/worker.js')));
-    const secret = randomBytes(32).toString('hex');
-    const token = randomBytes(24).toString('hex');
-    const config = localFixtureConfig(app, ROOT, secret);
+    const config = localFixtureConfig(app, ROOT);
     const configPath = resolve(directory, 'wrangler.json');
     const persistTo = resolve(directory, 'state');
     writeFileSync(configPath, JSON.stringify(config, null, 2), { mode: 0o600 });
-    const command = args => {
-      const result = execFileSync('pnpm', args, { cwd: resolve(ROOT, 'apps', app), encoding: 'utf8', timeout: 120000, env: { ...process.env, CI: 'true', WRANGLER_SEND_METRICS: 'false' } });
-      appendFileSync(resolve(directory, 'database.log'), result, { mode: 0o600 });
-    };
-    if (app === 'web') {
-      command(fixtureD1Args(configPath, persistTo));
-      const seed = resolve(directory, 'seed.sql');
-      writeFileSync(seed, `INSERT INTO user (id,name,email) VALUES ('runtime-fixture-user','Runtime Fixture','runtime@example.invalid');\nINSERT INTO session (id,user_id,token,expires_at) VALUES ('runtime-fixture-session','runtime-fixture-user','${token}',${Math.floor(Date.now()/1000) + 3600});\n`, { mode: 0o600 });
-      command(fixtureD1Args(configPath, persistTo, seed));
-    }
-    const cookie = `__Secure-better-auth.session_token=${encodeURIComponent(`${token}.${createHmac('sha256', secret).update(token).digest('base64')}`)}`;
     const plan = { app: `apps/${app}`, wranglerEnvironment: '', buildEnvironment: {} };
     Object.assign(record, await verifyLocalWorker(plan, ROOT, { configPath, persistTo,
-      onOutput: output => appendFileSync(resolve(directory, 'worker.log'), output.replaceAll(secret, '[synthetic-secret]'), { mode: 0o600 }),
-      verify: async (_, origin) => ({ http: await verifyHttp(app, origin, cookie), browser: await verifyBrowser(app, origin) }),
+      onOutput: output => appendFileSync(resolve(directory, 'worker.log'), output, { mode: 0o600 }),
+      verify: async (_, origin) => ({ http: await verifyHttp(app, origin), browser: await verifyBrowser(app, origin) }),
     }));
     record.status = 'local_runtime_verified';
-    record.syntheticDatabase = app === 'web';
+    record.syntheticDatabase = false;
+    record.accountPolicy = 'disabled_without_database_or_auth_secrets';
     record.realOAuth = 'not_performed';
   } catch (error) {
     record.status = 'failed'; record.error = error.message; throw error;

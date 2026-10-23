@@ -9,6 +9,7 @@ import { LocaleSwitcher } from './locale-switcher';
 import { UserMenu } from '@/components/auth/user-menu';
 import { AuthDialog } from '@/components/auth/auth-dialog';
 import { useSession } from '@/lib/auth-client';
+import { ACCOUNT_FEATURES_ENABLED } from '@/lib/site-features';
 import { Search } from 'lucide-react';
 import { SearchLoader } from '@/components/search/search-loader';
 
@@ -83,7 +84,7 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
             <LocaleSwitcher locale={locale} />
 
             {/* Auth */}
-            {mounted ? (
+            {ACCOUNT_FEATURES_ENABLED && (mounted ? (
               <AuthGate locale={locale} onOpenAuth={() => setAuthOpen(true)} />
             ) : (
               <button
@@ -92,7 +93,7 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
               >
                 {locale === 'zh' ? '登录' : locale === 'ja' ? 'ログイン' : 'Login'}
               </button>
-            )}
+            ))}
             </div>
           </div>
         </div>
@@ -113,7 +114,7 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
       </header>
 
       {searchOpen ? <SearchLoader locale={locale} open={searchOpen} onClose={() => setSearchOpen(false)} /> : null}
-      {authOpen ? <AuthDialog open={authOpen} onClose={() => setAuthOpen(false)} /> : null}
+      {ACCOUNT_FEATURES_ENABLED && authOpen ? <AuthDialog open={authOpen} onClose={() => setAuthOpen(false)} /> : null}
     </>
   );
 }
