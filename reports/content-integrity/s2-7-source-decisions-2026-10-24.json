@@ -1,0 +1,1176 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-23T17:43:39.785200+00:00",
+  "baseline": "dc3359b",
+  "decision": "withdraw_unverified_international_values_and_guide_assertions_without_claiming_official_confirmation",
+  "evidenceScope": "Historical provenance and editorial withdrawal only. No new independent official Roco facts, no current in-game or network verification. Wrong Steam identity evidence remains in S2.5; absence of verification is not evidence of cancellation or unannounced status.",
+  "provenance": {
+    "cnReuseCommit": "bc613dbcd33a852c7db8bc005598f43f6bf66590",
+    "sourceIdentityDecision": "reports/content-integrity/s2-5-source-decisions-2026-10-24.json",
+    "publicScheduleWithdrawal": "reports/content-integrity/s2-6-source-decisions-2026-10-24.json"
+  },
+  "originalCharacters": {
+    "source": [
+      {
+        "id": "meewee",
+        "number": "001",
+        "name": "喵喵",
+        "nameEn": "Meewee",
+        "attribute": "grass",
+        "attributeEn": "Grass",
+        "rarity": 4,
+        "habitat": "卡洛西亚魔法学院",
+        "habitatEn": "Carosia Magic Academy",
+        "evolution": "喵喵 → 待公开",
+        "evolutionEn": "Meewee → TBA",
+        "description": "官方确认的国际服草系御三家（叶猫），性格亲和，战斗中每回合回复能量、续航出色。技能与种族值已收录（与叶猫共享数据）；国际服进化链待官方图鉴公布。未被选中的御三家可在好友的世界中捕捉。",
+        "descriptionEn": "Officially confirmed Grass-type global starter (a leaf cat) with a friendly demeanor; recovers energy each turn for strong sustain. Skills and base stats are documented (shared with the leaf cat); the global evolution line is TBA via the official codex. Unpicked starters can be caught in friends' worlds.",
+        "status": "revealed",
+        "skills": [
+          {
+            "level": 1,
+            "name": "抓挠",
+            "nameEn": "Scratch",
+            "element": "normal",
+            "category": "physical",
+            "power": 40,
+            "description": "对敌方精灵造成物理伤害并恢复能量。",
+            "descriptionEn": "Deals physical damage and restores energy."
+          },
+          {
+            "level": 1,
+            "name": "种子弹",
+            "nameEn": "Seed Shot",
+            "element": "grass",
+            "category": "physical",
+            "power": 40,
+            "description": "对敌方精灵造成草属性物理伤害并获得能量。",
+            "descriptionEn": "Deals Grass physical damage and restores energy."
+          },
+          {
+            "name": "藤绞",
+            "nameEn": "Vine Grapple",
+            "element": "grass",
+            "category": "physical",
+            "power": 50,
+            "description": "对敌方精灵造成物理伤害，获得 5 点能量。",
+            "descriptionEn": "Deals physical damage and grants 5 energy."
+          },
+          {
+            "name": "荆棘爪",
+            "nameEn": "Thorn Claw",
+            "element": "grass",
+            "category": "physical",
+            "description": "融合荆棘之力释放强力爪击，对敌方精灵造成草属性物理伤害。",
+            "descriptionEn": "A thorn-fused claw strike dealing Grass physical damage."
+          }
+        ],
+        "stats": {
+          "total": 325
+        },
+        "releaseVersion": "国际服"
+      },
+      {
+        "id": "sparka",
+        "number": "002",
+        "name": "火花",
+        "nameEn": "Sparka",
+        "attribute": "fire",
+        "attributeEn": "Fire",
+        "rarity": 4,
+        "habitat": "卡洛西亚魔法学院",
+        "habitatEn": "Carosia Magic Academy",
+        "evolution": "火花 → … → Pyreon（可 Alpha 化 Blazion）",
+        "evolutionEn": "Sparka → … → Pyreon (Alpha form: Blazion)",
+        "description": "官方确认的国际服火系御三家（火牛），高爆发输出，前期开荒与推剧情效率最高。最终进化为 Pyreon，可通过 Alpha 血统临时变身为 boss 级形态 Blazion。中间进化形态待 CBT 官方图鉴确认。",
+        "descriptionEn": "Officially confirmed Fire-type global starter (a fire ox) with high burst damage and the fastest early-game pacing. Its final evolution is Pyreon, which can temporarily Alpha-transform into the boss-level Blazion. The intermediate stage TBA via the official CBT codex.",
+        "status": "revealed",
+        "skills": [
+          {
+            "level": 1,
+            "name": "猛烈撞击",
+            "nameEn": "Powerful Slam",
+            "element": "normal",
+            "category": "physical",
+            "power": 65,
+            "description": "对敌方精灵造成物理伤害。",
+            "descriptionEn": "Deals physical damage to the enemy."
+          },
+          {
+            "level": 1,
+            "name": "火苗",
+            "nameEn": "Ember",
+            "element": "fire",
+            "category": "magic",
+            "power": 40,
+            "description": "对敌方精灵造成火属性魔法伤害。",
+            "descriptionEn": "Deals Fire magic damage to the enemy."
+          },
+          {
+            "level": 1,
+            "name": "防御",
+            "nameEn": "Defend",
+            "element": "normal",
+            "category": "defense",
+            "description": "减伤 70%，应对攻击。",
+            "descriptionEn": "Reduces damage by 70%; counters attacks."
+          },
+          {
+            "name": "火焰切割",
+            "nameEn": "Flame Cutter",
+            "element": "fire",
+            "category": "physical",
+            "description": "火系物理攻击，命中可触发「助燃」叠层。",
+            "descriptionEn": "Fire physical attack that triggers the Combustion stack."
+          },
+          {
+            "name": "打鼾",
+            "nameEn": "Snore",
+            "element": "normal",
+            "category": "magic",
+            "power": 150,
+            "description": "对敌方精灵造成高额魔法伤害。",
+            "descriptionEn": "Deals heavy magic damage to the enemy."
+          }
+        ],
+        "stats": {
+          "total": 368,
+          "hp": 70,
+          "atk": 84,
+          "matk": 37,
+          "def": 56,
+          "mdef": 43,
+          "spd": 78
+        },
+        "releaseVersion": "国际服"
+      },
+      {
+        "id": "cerulla",
+        "number": "003",
+        "name": "水蓝蓝",
+        "nameEn": "Cerulla",
+        "attribute": "water",
+        "attributeEn": "Water",
+        "rarity": 4,
+        "habitat": "卡洛西亚魔法学院",
+        "habitatEn": "Carosia Magic Academy",
+        "evolution": "水蓝蓝 → 待公开",
+        "evolutionEn": "Cerulla → TBA",
+        "description": "官方确认的国际服水系御三家（水泡），坦度优秀，水泡盾 + 水炮循环生存能力出色。技能与种族值已收录（与水泡共享数据）；国际服进化链待官方图鉴公布。英文名取自 cerulean（蔚蓝）加可爱后缀 -la。",
+        "descriptionEn": "Officially confirmed Water-type global starter (a water blob) with excellent bulk and a bubble-shield / water-cannon survival loop. Skills and base stats are documented (shared with the water blob); the global evolution line is TBA via the official codex. Its English name derives from 'cerulean' with a cute '-la' suffix.",
+        "status": "revealed",
+        "skills": [
+          {
+            "level": 1,
+            "name": "甩水",
+            "nameEn": "Water Flick",
+            "element": "water",
+            "category": "magic",
+            "power": 40,
+            "description": "对敌方精灵造成水属性魔法伤害并获得能量。",
+            "descriptionEn": "Deals Water magic damage and restores energy."
+          },
+          {
+            "level": 1,
+            "name": "水弹枪",
+            "nameEn": "Water Dart",
+            "element": "water",
+            "category": "physical",
+            "description": "对敌方精灵造成水属性伤害。",
+            "descriptionEn": "Deals Water damage to the enemy."
+          },
+          {
+            "level": 1,
+            "name": "防御",
+            "nameEn": "Defend",
+            "element": "normal",
+            "category": "defense",
+            "description": "减伤 70%，应对攻击。",
+            "descriptionEn": "Reduces damage by 70%; counters attacks."
+          },
+          {
+            "name": "气泡",
+            "nameEn": "Bubble",
+            "element": "water",
+            "category": "magic",
+            "description": "对敌方精灵造成水属性魔法伤害。",
+            "descriptionEn": "Deals Water magic damage to the enemy."
+          },
+          {
+            "name": "潮汐",
+            "nameEn": "Tide",
+            "element": "water",
+            "category": "magic",
+            "description": "高伤魔攻，配合「浸润」特性几乎无消耗。",
+            "descriptionEn": "High-power magic attack, nearly free with the Permeation trait."
+          }
+        ],
+        "stats": {
+          "total": 372
+        },
+        "releaseVersion": "国际服"
+      }
+    ],
+    "mirror": [
+      {
+        "id": "meewee",
+        "number": "001",
+        "name": "喵喵",
+        "nameEn": "Meewee",
+        "attribute": "grass",
+        "attributeEn": "Grass",
+        "rarity": 4,
+        "habitat": "卡洛西亚魔法学院",
+        "habitatEn": "Carosia Magic Academy",
+        "evolution": "喵喵 → 待公开",
+        "evolutionEn": "Meewee → TBA",
+        "description": "官方确认的国际服草系御三家（叶猫），性格亲和，战斗中每回合回复能量、续航出色。未被选中的御三家可在好友的世界中捕捉。国际服完整技能与进化链待 CBT 官方图鉴公布。",
+        "descriptionEn": "Officially confirmed Grass-type global starter (a leaf cat) with a friendly demeanor; recovers energy each turn for strong sustain. Unpicked starters can be caught in friends' worlds. Full skills and evolution line TBA via the official CBT codex.",
+        "status": "revealed"
+      },
+      {
+        "id": "sparka",
+        "number": "002",
+        "name": "火花",
+        "nameEn": "Sparka",
+        "attribute": "fire",
+        "attributeEn": "Fire",
+        "rarity": 4,
+        "habitat": "卡洛西亚魔法学院",
+        "habitatEn": "Carosia Magic Academy",
+        "evolution": "火花 → … → Pyreon（可 Alpha 化 Blazion）",
+        "evolutionEn": "Sparka → … → Pyreon (Alpha form: Blazion)",
+        "description": "官方确认的国际服火系御三家（火牛），高爆发输出，前期开荒与推剧情效率最高。最终进化为 Pyreon，可通过 Alpha 血统临时变身为 boss 级形态 Blazion。中间进化形态待 CBT 官方图鉴确认。",
+        "descriptionEn": "Officially confirmed Fire-type global starter (a fire ox) with high burst damage and the fastest early-game pacing. Its final evolution is Pyreon, which can temporarily Alpha-transform into the boss-level Blazion. The intermediate stage TBA via the official CBT codex.",
+        "status": "revealed"
+      },
+      {
+        "id": "cerulla",
+        "number": "003",
+        "name": "水蓝蓝",
+        "nameEn": "Cerulla",
+        "attribute": "water",
+        "attributeEn": "Water",
+        "rarity": 4,
+        "habitat": "卡洛西亚魔法学院",
+        "habitatEn": "Carosia Magic Academy",
+        "evolution": "水蓝蓝 → 待公开",
+        "evolutionEn": "Cerulla → TBA",
+        "description": "官方确认的国际服水系御三家（水泡），坦度优秀，水泡盾 + 水炮循环生存能力出色。英文名取自 cerulean（蔚蓝）加可爱后缀 -la。完整技能与进化链待 CBT 官方图鉴公布。",
+        "descriptionEn": "Officially confirmed Water-type global starter (a water blob) with excellent bulk and a bubble-shield / water-cannon survival loop. Its English name derives from 'cerulean' with a cute '-la' suffix. Full skills and evolution line TBA via the official CBT codex.",
+        "status": "revealed"
+      }
+    ]
+  },
+  "originalGuides": [
+    {
+      "id": "global-cn-content-roadmap",
+      "title": "洛克王国：世界国服与国际服内容差距：国际服补充路线图",
+      "titleEn": "Roco Kingdom CN vs Global: Content Gap and Global Rollout Roadmap",
+      "titleJa": "ロコキングダム中国版とグローバル版：コンテンツ差分と展開ロードマップ",
+      "category": "version",
+      "categoryZh": "版本攻略",
+      "categoryEn": "Version Guide",
+      "categoryJa": "バージョンガイド",
+      "summary": "基于已公开的国服上线与国际服 CBT 信息，拆解两服的版本、平台、本地化和运营差距，并给出国际服首发至上线后 90 天的补充顺序。本文中的路线图为产品建议，不是官方更新公告。",
+      "summaryEn": "Using publicly confirmed CN launch and global-CBT information, this guide separates version, platform, localization, and live-ops gaps, then proposes a global rollout from launch through day 90. The roadmap is editorial product analysis, not an official update notice.",
+      "summaryJa": "中国版の配信状況とグローバルCBTの公開情報を基に、バージョン、プラットフォーム、ローカライズ、運営の差を整理し、配信から90日までの補完順を提案します。本記事のロードマップは編集部の分析であり、公式告知ではありません。",
+      "content": "## 先说结论：国际服应该少而完整，不能只把国服活动逐条翻译\n\n截至 2026-10-07，国服《洛克王国：世界》已经运营，国际服即将进入 Quack Quack Test CBT。两服因此不是成熟版本之间的静态内容对比：国服拥有上线后的图鉴、活动与赛季积累；国际服的优先任务是把新玩家能理解、能跨端游玩、能持续回流的核心循环先做完整。\n\n> **信息边界**：本文把公开确认的事实与产品建议分开书写。国际服 CBT 时间、平台、语言和账号/数据独立性请以官方或商店公告为准；后文的版本节奏、功能与数量均为补充方案，不代表已上线或已承诺的内容。\n\n### 当前差距\n\n| 维度 | 国服现状 | 国际服首测/首发面向 | 应补的内容 |\n| --- | --- | --- | --- |\n| 版本库存 | 已有开服后图鉴、活动与赛季积累 | 首次全球 CBT，需先验证基础体验 | 用完整主线、基础生态、养成和 PvE 循环建立可玩底座 |\n| 叙事理解 | 玩家熟悉卡洛西亚与系列角色 | 新玩家没有历史 IP 记忆 | 增加可收集的“卡洛西亚导览册”、角色关系与区域支线 |\n| 平台体验 | 以国服移动端/PC 路径为主 | 面向移动、PC 与后续主机生态 | 统一账号、存档与组队；为手柄、触屏和键鼠分别设计操作与 UI |\n| 语言文化 | 简中语境与国内节日节点 | 英语、日语及多地区玩家 | 建立术语库、语音/字幕 QA 和可复用的文化说明 |\n| 活动运营 | 可围绕中国节日和国内社区节奏 | 需要覆盖多时区与不同节日偏好 | 将节日活动改为“文化原型 + 全球任务 + 可复刻奖励” |\n| 服务与商业化 | 国内账号、支付、社区规则 | 独立账号、平台商店与地区规则 | 单独定义好友、公会、支付、退款、客服和未成年人流程 |\n\n### 第一阶段：CBT 到首发，先补齐核心版本\n\n国际服不能以“精灵数量追平国服”为首发门槛，而应完成以下六项可验证能力：\n\n1. **可闭环的新手与主线第一章**：从首次捕捉、队伍编成、属性克制到第一个首领目标，都要有明确任务提示和失败后的恢复路径。\n2. **基础生态与图鉴可信度**：每只首发精灵都标明栖息地、捕捉条件、进化/培养入口和可重复获得方式；未确认信息明确标为待验证。\n3. **可重复 PvE**：提供日常资源、首领挑战和低压力协作目标，奖励以培养材料、外观和便利性为主，避免把数值门槛塞进首发付费。\n4. **跨端账户底座**：用同一国际账号管理进度、好友和设置；跨平台存档、组队和付费物品是否开放必须在商店页和游戏内一致说明。\n5. **无障碍与输入适配**：字幕大小、色觉区分、镜头晕动选项、键位/手柄重映射和触屏操作都应在 CBT 验证。\n6. **地区化客服与安全**：建立英语/日语的举报、申诉、退款与隐私入口；国服与国际服角色、货币和付费物品不互通时，需要在注册和首充前反复提示。\n\n### 第二阶段：上线后 90 天补充顺序\n\n| 时间 | 内容包 | 玩家目标 | 验收点 |\n| --- | --- | --- | --- |\n| 上线至第 30 天 | 挑战区与养成周常 | 给完成主线的玩家稳定的资源目标 | 首周完成主线率、首次稀有精灵前流失率、挑战完成率 |\n| 第 31–60 天 | 首个赛季主题 | 一条地区支线、首领生态、可捕捉精灵组与公会协作 | 新内容首周参与率、公会组队成功率、异常掉线率 |\n| 第 61–90 天 | 全球社区事件 | 多时区共同推进，解锁故事档案与非限定奖励 | 各地区参与差、奖励领取率、30 日回流率 |\n\n每个内容包都应保留一条“错过后仍可完成”的路径。限时外观可以复刻，但功能精灵、主线进度和关键养成材料不应被单一活动窗口永久锁死。\n\n### 第三阶段：文化内容采用双轨，而非替换原设定\n\n保留洛克王国的中国文化表达和魔法学院世界观，但为海外玩家补足上下文。具体做法如下：\n\n- 为地名、精灵名、角色称呼和历史事件建立简中、英语、日语三语术语库，并设置版本控制与译名评审。\n- 节日内容采用“文化原型 + 区域任务 + 全球奖励”：例如灯会可以保留灯谜、灯会和团圆叙事，但任务目标与奖励可在全年返场，不只绑定中国春节窗口。\n- 英语版本优先补世界观词条、目标说明和辅助功能；日语版本优先补日语配音审校、角色名一致性和主机式任务追踪。\n- 所有文化说明应服务于任务和角色，不要把解释写成阻断游玩的长篇百科。\n\n### 第四阶段：国服与国际服的长期版本关系\n\n建议采用 **“两个小版本滞后 + 核心系统同步”**：\n\n- 战斗平衡、基础精灵规则、修复和反作弊尽量同步，避免两服长期形成不同的基础玩法。\n- 剧情、节日、联动、外观和地区商业合作允许区域化，但应写清可用地区、结束时间和复刻政策。\n- 国服先验证高风险玩法，国际服在完成语言、性能、主机认证和本地合规后发布；不把该滞后窗口宣传为全球版本同步。\n- 每个国际服赛季至少保留一部分国际服先发的区域故事或社群目标，再根据数据决定是否回流国服，避免国际服长期只是翻译仓。\n\n### 发布前清单\n\n- [ ] 主线第一章、首次捕捉、队伍编成和首领挑战可以全程无付费完成。\n- [ ] 国际服与国服的数据不互通、支持平台、语言、删档与付费规则在官网、商店和游戏内一致。\n- [ ] 英语/日语任务文本、物品名、图鉴名和语音字幕完成术语一致性审校。\n- [ ] 跨平台好友、组队、断线重连、存档冲突和退款路径已完成测试。\n- [ ] 活动奖励存在复刻或常驻替代路径，核心强度不被限时窗口永久锁定。\n- [ ] 仪表盘已追踪首周主线完成率、首只稀有精灵前流失、组队成功率、非中文文本理解反馈与内容延期率。\n\n### FAQ\n\n**国际服应该在首发就追平国服精灵和活动数量吗？**\n不建议。先把主线、捕捉、战斗、养成、协作和跨端体验做完整；经过本地化和技术验证后，再按赛季补充国服已验证内容。\n\n**国服玩家的数据能迁移到国际服吗？**\n公开信息指向两服为独立数据体系。不要预期角色、精灵、货币或购买内容自动迁移，最终以官方服务条款和测试公告为准。\n\n**中国节日活动是否应从国际服移除？**\n不应移除。应保留其文化原型，同时增加解释、可复刻任务和面向全球时区的参与方式。\n\n**如何判断补充方案是否有效？**\n把首周主线完成率、首只稀有精灵前流失、跨平台组队成功率、非中文理解反馈和 30 日留存作为共同指标；只看活动参与人数会掩盖新手与平台问题。",
+      "contentEn": "## Bottom line: global should launch smaller but complete, not translate CN events one by one\n\nAs of October 7, 2026, _Roco Kingdom: World_ is live in China while the global version is approaching the Quack Quack Test CBT. This is not a static comparison between two mature releases. CN has accumulated post-launch encyclopedia, event, and season content; global first needs a core loop that new players understand, can play across platforms, and can return to.\n\n> **Scope note:** confirmed public information and editorial recommendations are separated here. Follow official and storefront notices for CBT dates, platforms, languages, and account/data separation. The cadence, features, and quantities below are a proposed roadmap, not announced game content.\n\n### Content gap\n\n| Area | CN context | Global launch need | Recommended supplement |\n| --- | --- | --- | --- |\n| Version inventory | Post-launch encyclopedia, events, and seasons | First global CBT and launch validation | Complete first chapter, base ecology, progression, and repeatable PvE loop |\n| Narrative | Players already know Carosia and the franchise | New players have no legacy context | Collectible Carosia field guide, relationship notes, and regional side stories |\n| Platforms | CN mobile/PC path | Mobile, PC, and later console audiences | Unified account, progress, and party experience; input-specific UI |\n| Localization | Simplified Chinese and domestic calendar | English, Japanese, and multi-region audiences | Glossary, VO/subtitle QA, and reusable cultural context |\n| Live ops | China holidays and domestic community rhythm | Multiple time zones and holiday expectations | Cultural source + global tasks + repeatable rewards |\n| Services | Domestic account/payment/community rules | Separate accounts, storefronts, and regional rules | Explicit social, payment, refund, support, and youth-safety paths |\n\n### Phase 1: CBT to launch, complete the core build\n\nDo not make content-count parity the global launch gate. Ship these six verifiable capabilities instead:\n\n1. **A closed-loop tutorial and chapter one** covering first capture, party assembly, type matchups, and a first boss, with recovery guidance after failure.\n2. **Trustworthy base ecology and encyclopedia**: every launch creature states habitat, capture conditions, progression route, and repeatable availability; label unverified information as pending.\n3. **Repeatable PvE** through resource routines, boss challenges, and low-pressure cooperative goals. Prioritize progression materials, cosmetics, and convenience over pay-gated combat power.\n4. **Cross-platform account foundation** for progress, friends, and settings. Explain cross-save, partying, and paid-item rules consistently in game and storefronts.\n5. **Accessibility and input adaptation**, including subtitle scale, color distinction, motion options, remapping, controller, and touch controls.\n6. **Regional support and safety**, with English/Japanese reporting, appeals, refunds, and privacy routes. Reiterate non-transferability of CN/global characters, currency, and purchases before sign-up and payment.\n\n### Phase 2: first 90 days after launch\n\n| Timing | Content package | Player goal | Validation |\n| --- | --- | --- | --- |\n| Days 1–30 | Challenge zone and weekly progression | Give chapter-completers a reliable resource objective | Week-one chapter completion, churn before first rare creature, challenge completion |\n| Days 31–60 | First seasonal theme | One regional side story, boss ecology, collectible creature set, guild cooperation | First-week participation, successful guild parties, disconnect rate |\n| Days 61–90 | Global community event | Shared multi-time-zone progress that unlocks story archives and non-exclusive rewards | Regional participation gap, reward claim rate, 30-day return rate |\n\nEvery package needs a catch-up path. Limited cosmetics may return, but functional creatures, story progress, and key upgrade materials should never be permanently locked behind one event window.\n\n### Phase 3: localize through two tracks, not replacement\n\nKeep the franchise's Chinese cultural expression and magical-school setting, while giving new audiences usable context.\n\n- Maintain a versioned CN/EN/JA terminology glossary for place names, creatures, character titles, and history.\n- Build celebrations as “cultural source + regional tasks + global rewards.” A lantern festival can keep riddles, lights, and reunion themes while its objectives and rewards return outside the Lunar New Year window.\n- Prioritize lore references, objective clarity, and accessibility for English; prioritize Japanese voice review, name consistency, and console-style quest tracking for Japanese.\n- Put cultural explanation in quests and character moments, rather than blocking play with encyclopedia-length exposition.\n\n### Phase 4: long-term CN/global relationship\n\nUse **two small-version lag with core-system parity**:\n\n- Synchronize combat balance, base creature rules, fixes, and anti-cheat as closely as practical.\n- Localize story, holidays, collaborations, cosmetics, and regional business deals, but publish availability, end dates, and rerun policy.\n- Let CN validate higher-risk features; release globally after language, performance, console certification, and local compliance checks. Do not market this lag as simultaneous global parity.\n- Reserve part of every global season for globally-first regional stories or community objectives, then consider CN backports from evidence rather than treating global as a translation warehouse.\n\n### Release checklist\n\n- [ ] Chapter one, first capture, party assembly, and boss challenge are fully completable without payment.\n- [ ] CN/global data separation, platforms, languages, wipes, and payment rules agree across site, store, and in-game UI.\n- [ ] English/Japanese quests, items, encyclopedia names, and subtitles have glossary-consistency review.\n- [ ] Cross-platform friends, parties, reconnects, save conflicts, and refunds have been tested.\n- [ ] Events have reruns or permanent alternatives; core power is not permanently time-gated.\n- [ ] Dashboards cover week-one chapter completion, pre-rare-creature churn, party success, non-Chinese comprehension feedback, and content-delay rate.\n\n### FAQ\n\n**Should global match CN creature and event volume at launch?**\nNo. Complete the story, capture, battle, progression, social, and cross-platform loops first; add CN-validated content seasonally after localization and technical verification.\n\n**Can CN data move to global?**\nPublic information indicates separate data systems. Do not expect automatic character, creature, currency, or purchase migration; follow the final official terms and test notices.\n\n**Should Chinese holiday content be removed from global?**\nNo. Keep its cultural source, then add context, repeatable tasks, and multi-time-zone participation.\n\n**How do we know the roadmap works?**\nTrack week-one chapter completion, churn before the first rare creature, cross-platform party success, non-Chinese comprehension feedback, and 30-day retention together. Event participation alone conceals onboarding and platform problems.",
+      "contentJa": "## 結論：グローバル版は量よりも、完結した体験を先に届ける\n\n2026年10月7日時点で、中国版は運営中であり、グローバル版はQuack Quack Test CBTを控えています。したがって、両者は完成済みの二つの地域版を比較する段階ではありません。中国版には図鑑、イベント、シーズンの蓄積があり、グローバル版は新規プレイヤーが理解でき、クロスプラットフォームで遊べ、継続して戻れる基本サイクルを先に完成させる必要があります。\n\n> **注意**：公開確認情報と編集部の提案を分けています。CBTの日程、対応機種、言語、アカウント/データ分離は公式またはストア告知を確認してください。以下の内容量、機能、配信順は公式発表ではなく提案です。\n\n### 差分の整理\n\n| 項目 | 中国版の状況 | グローバル版に必要なこと | 補完案 |\n| --- | --- | --- | --- |\n| バージョン資産 | 配信後の図鑑、イベント、シーズン | 初回CBTとローンチ検証 | 第1章、基礎生態、育成、反復PvEを完成 |\n| 物語理解 | Carosiaとシリーズを知るプレイヤーが多い | 既存IPの知識がない | 収集型のCarosia案内帳、人物関係、地域サブストーリー |\n| プラットフォーム | 中国版のモバイル/PC導線 | モバイル、PC、将来のコンソール | アカウント、進行、パーティーを統一し入力別UIを用意 |\n| ローカライズ | 簡体字と中国の運営カレンダー | 英語、日本語、多地域 | 用語集、音声/字幕QA、文化背景の導線 |\n| ライブ運営 | 中国の祝日とコミュニティ節奏 | 多時区と各地域の祝日 | 文化の起点 + 世界共通タスク + 復刻報酬 |\n\n### 第1段階：CBTから正式配信\n\n精霊数の中国版同等化をローンチ条件にせず、次の6点を検証可能な状態にします。\n\n1. **チュートリアルと第1章の完結性**：最初の捕獲、編成、属性相性、最初のボスまでを案内し、失敗後の復帰導線も用意。\n2. **信頼できる生態と図鑑**：ローンチ精霊ごとに生息地、捕獲条件、育成導線、再入手方法を表示。未確認情報は保留と明記。\n3. **反復PvE**：資源獲得、ボス挑戦、低圧な協力目標を提供。報酬は育成素材、外見、利便性を中心にする。\n4. **クロスプラットフォームの基盤**：進行、フレンド、設定を国際アカウントで扱い、クロスセーブや有償アイテム規則を各所で統一表示。\n5. **アクセシビリティと操作適応**：字幕サイズ、色の識別、酔い対策、キー/パッド再設定、タッチ操作をCBTで検証。\n6. **地域別サポートと安全**：英語/日本語で通報、異議申立て、返金、プライバシー導線を用意。中国版とグローバル版の資産非移行も明確にする。\n\n### 第2段階：配信後90日\n\n| 時期 | コンテンツ | 目的 | 確認指標 |\n| --- | --- | --- | --- |\n| 1〜30日 | 挑戦エリアと週次育成 | 本編後の安定した目標 | 第1週の本編完了率、初レア前離脱、挑戦完了率 |\n| 31〜60日 | 初回シーズンテーマ | 地域サブストーリー、ボス生態、捕獲精霊、ギルド協力 | 初週参加率、ギルドPT成功率、切断率 |\n| 61〜90日 | 世界共通イベント | 時区をまたぐ進行と物語/非限定報酬の解放 | 地域別参加差、報酬受取率、30日復帰率 |\n\nすべての内容に追いつき手段を用意します。限定衣装は復刻できても、機能精霊、物語、重要育成素材を一度きりのイベントで恒久的に失わせないことが重要です。\n\n### 第3段階：置換ではなく二層の文化ローカライズ\n\n中国文化の表現と魔法学校の世界観は残しつつ、新規プレイヤーが使える背景説明を追加します。\n\n- 地名、精霊名、役職、歴史用語の中/英/日用語集をバージョン管理する。\n- 祝日は「文化の起点 + 地域タスク + 世界共通報酬」で構成する。灯会なら灯り、なぞなぞ、団らんを残し、タスクと報酬は旧正月以外にも復刻可能にする。\n- 英語版は世界観、目標説明、アクセシビリティを優先し、日本語版は音声監修、名称統一、コンソール的な任務追跡を優先する。\n- 長い解説でプレイを止めず、任務と人物の場面で文化背景を伝える。\n\n### 第4段階：中国版とグローバル版の長期関係\n\n**小規模バージョン二つ分の遅延 + コアシステム同等性**を推奨します。\n\n- 戦闘バランス、基礎ルール、修正、アンチチートはできる限り同期。\n- 物語、祝日、コラボ、外見、地域提携は地域化できるが、対象地域、終了日、復刻方針を明示。\n- 高リスク機能は中国版で検証し、言語、性能、コンソール認証、地域コンプライアンス後にグローバル配信。これを同時配信とは表現しない。\n- 各グローバルシーズンに先行の地域物語または共通目標を残し、単なる翻訳版にしない。\n\n### FAQ\n\n**グローバル版はローンチ時に中国版と同数の精霊やイベントが必要ですか？**\n不要です。物語、捕獲、戦闘、育成、協力、クロスプラットフォーム体験を先に完成させ、ローカライズと技術検証後にシーズンごとに追加します。\n\n**中国版のデータはグローバル版へ移せますか？**\n公開情報では別データ体系とされています。キャラクター、精霊、通貨、購入品の自動移行を前提にせず、最終的には公式規約とテスト告知を確認してください。\n\n**中国の祝日イベントはグローバル版から除外すべきですか？**\nいいえ。文化の起点を残し、説明、復刻可能なタスク、多時区で参加できる仕組みを加えるべきです。",
+      "tags": [
+        "roco-kingdom",
+        "global",
+        "cn-server",
+        "content-roadmap",
+        "localization",
+        "cross-platform",
+        "live-ops"
+      ],
+      "faq": [
+        {
+          "question": "Should the global version match the CN server's content volume at launch?",
+          "questionZh": "国际服应该在首发就追平国服内容量吗？",
+          "questionJa": "グローバル版はローンチ時に中国版と同じコンテンツ量が必要ですか？",
+          "answer": "No. Prioritize a complete story, capture, battle, progression, social, and cross-platform loop, then add CN-validated content seasonally after localization and technical verification.",
+          "answerZh": "不建议。优先完成主线、捕捉、战斗、养成、社交与跨端循环，再在本地化和技术验证后按赛季补充国服已验证内容。",
+          "answerJa": "不要です。物語、捕獲、戦闘、育成、協力、クロスプラットフォームの基本サイクルを先に完成させ、ローカライズと技術検証後に中国版で検証済みの内容を追加します。"
+        },
+        {
+          "question": "Can CN progress or purchases transfer to the global version?",
+          "questionZh": "国服进度或付费内容可以迁移到国际服吗？",
+          "questionJa": "中国版の進行や購入品はグローバル版へ移せますか？",
+          "answer": "Public information indicates separate data systems. Do not expect automatic transfer; follow final official terms and test notices.",
+          "answerZh": "公开信息指向两服数据独立。不要预期自动迁移，最终以官方服务条款和测试公告为准。",
+          "answerJa": "公開情報では別データ体系とされています。自動移行を前提にせず、最終的な公式規約とテスト告知を確認してください。"
+        },
+        {
+          "question": "Is this an official Roco Kingdom content roadmap?",
+          "questionZh": "这是洛克王国：世界的官方内容路线图吗？",
+          "questionJa": "これはロコキングダムの公式コンテンツロードマップですか？",
+          "answer": "No. It is an editorial recommendation based on publicly available release context. Only official announcements confirm future game content.",
+          "answerZh": "不是。这是基于公开版本信息的编辑建议，未来游戏内容仅以官方公告为准。",
+          "answerJa": "いいえ。公開されている配信状況を基にした編集提案です。将来のゲーム内容は公式告知だけが確定情報です。"
+        }
+      ],
+      "updatedAt": "2026-10-07",
+      "quickFacts": {
+        "zh": [
+          "路线图是产品建议，不是官方更新公告。",
+          "国际服首发优先补完整核心循环、跨端体验和新玩家叙事。",
+          "建议按 1–30、31–60、61–90 天分三包补齐 PvE、赛季和全球事件。"
+        ],
+        "en": [
+          "This is an editorial roadmap, not an official update announcement.",
+          "Global launch should prioritize a complete core loop, cross-platform play, and new-player narrative context.",
+          "Use 1–30, 31–60, and 61–90 day packages for PvE, season, and global-event additions."
+        ],
+        "ja": [
+          "本記事は公式告知ではなく、編集部のロードマップ提案です。",
+          "グローバル版は基本サイクル、クロスプラットフォーム、新規プレイヤーの物語導線を優先します。",
+          "1〜30日、31〜60日、61〜90日の三段階でPvE、シーズン、世界共通イベントを補います。"
+        ]
+      },
+      "serpTitle": {
+        "zh": "洛克王国：世界国服与国际服差距｜国际服补充路线图",
+        "en": "Roco Kingdom CN vs Global Content Gap and Rollout Roadmap",
+        "ja": "ロコキングダム中国版とグローバル版の差分・展開ロードマップ"
+      },
+      "serpDescription": {
+        "zh": "拆解洛克王国：世界国服与国际服的版本、平台、叙事、本地化和活动差距，给出国际服首发到上线后 90 天的内容补充方案。本文为产品建议，非官方公告。",
+        "en": "Compare Roco Kingdom CN and global version gaps across version scope, platforms, narrative, localization, and events, with a proposed global launch-to-day-90 content roadmap. Editorial analysis, not an official announcement.",
+        "ja": "ロコキングダム中国版とグローバル版のバージョン、プラットフォーム、物語、ローカライズ、イベント差分を整理し、配信から90日までの補完案を提示します。公式告知ではありません。"
+      }
+    },
+    {
+      "id": "cbt-registration-guide",
+      "title": "Roco Kingdom 国际服 CBT 注册指南：预约、平台与语言说明",
+      "titleEn": "Roco Kingdom CBT Registration Guide: Sign-up, Platforms, and Languages",
+      "category": "version",
+      "categoryZh": "版本攻略",
+      "categoryEn": "Version Guide",
+      "summary": "Roco Kingdom（洛克王国：世界）国际服首测 CBT 将于 2026-10-27 开启，报名窗口为 8/26–10/20，本文整理报名入口、必填问卷、推荐机制、CBT 可玩平台与语言说明。",
+      "summaryEn": "Roco Kingdom global CBT starts on October 27, 2026, with sign-ups open from August 26 to October 20. This guide covers the registration page, mandatory questionnaire, referral system, CBT platforms, and languages.",
+      "content": "## Roco Kingdom 国际服 CBT 注册指南\n\n《洛克王国：世界》（Roco Kingdom，海外大陆 Carosia）国际服首测 CBT（官方测试名 “Quack Quack Test”）将于 **2026-10-27** 开启，**报名窗口为 2026-08-26 至 2026-10-20**，目前在官网 rocokingdom.com 可报名。\n\n### 报名步骤\n\n1. 前往官网 rocokingdom.com，点击 “Join the Test”。\n2. **必填报名问卷**：填写偏好的游玩环境、计划使用的设备等信息，问卷提交是获得资格的前提。\n3. 通过专属邀请链接邀请好友完成预注册，被邀请人数越多，入选优先级越高（邀请不替代本人的问卷提交）。\n4. 保存报名确认信息，等待 CBT 资格通知。\n\n### CBT 可玩平台（2026-10-27 首测）\n\n| 平台 | CBT 状态 |\n| --- | --- |\n| Windows (PC) | 可玩 |\n| iOS | 可玩 |\n| Android | 可玩 |\n\n### 正式版平台（CBT 之外）\n\n完整版将登陆 Windows PC、PlayStation 5、Xbox Series X|S、iOS、Android。PC 版计划上架 **Steam、Epic Games Store、Microsoft Store**；PlayStation 5 版已有 PS Store 页面。Steam 页面目前锁国区，请以国际服商店为准。\n\n### 语言支持\n\n- 字幕：官方称国际服支持繁中、英、日等 18 种字幕。\n- 配音：仅英 / 日。\n- 国际服无简中，国服数据与国际服数据独立不互通。\n\n### 常见问题\n\n**CBT 资格如何发放？**\n一般通过报名邮箱分批发放，报名问卷完整度与被邀请人数会影响入选优先级，具体规则以官方公告为准。\n\n**报名截止到什么时候？**\n2026-10-20。建议尽早提交问卷并保留确认信息。\n\n**国服玩家能玩国际服吗？**\n国际服与国服数据独立，国服玩家如需体验国际服需使用国际服账号并遵守当地平台规则。\n\n**这是付费测试吗？**\n官方强调 Roco Kingdom 非 Pay-to-Win，CBT 具体付费/删档规则以官方公告为准。",
+      "contentEn": "## Roco Kingdom Global CBT Registration Guide\n\n_Roco Kingdom_ (洛克王国：世界, set on the overseas continent Carosia) is developed by Tencent's Morefun Studios. The global CBT — officially named the “Quack Quack Test” — starts on **October 27, 2026**, with **sign-ups open from August 26 to October 20, 2026** on the official site.\n\n### How to sign up\n\n1. Visit rocokingdom.com and open the “Join the Test” page.\n2. **Complete the mandatory questionnaire**: state your preferred play environment and planned device. The questionnaire is required for eligibility.\n3. Invite friends through your unique referral link; more friends who finish pre-registration can raise your selection priority (referrals do not replace your own questionnaire).\n4. Save your confirmation and wait for CBT invitation emails.\n\n### Playable platforms for the October 27 CBT\n\n| Platform | CBT status |\n| --- | --- |\n| Windows (PC) | Playable |\n| iOS | Playable |\n| Android | Playable |\n\n### Full-release platforms\n\nThe full game targets Windows PC, PlayStation 5, Xbox Series X|S, iOS, and Android. The PC version is listed for Steam, the Epic Games Store, and the Microsoft Store; a PlayStation 5 store page is live. The Steam page is currently geo-restricted for CN — use the international store.\n\n### Languages\n\n- Subtitles: the global version supports 18 subtitle languages including Traditional Chinese, English, and Japanese.\n- Voice: English and Japanese only.\n- The international version excludes Simplified Chinese; global and CN server data are separate.\n\n### FAQ\n\n**How are CBT invites distributed?**\nUsually in batches via your registration email. Questionnaire completeness and referral counts can affect priority; follow official announcements.\n\n**When does sign-up close?**\nOctober 20, 2026. Submit your questionnaire early and keep the confirmation.\n\n**Can CN players join the global CBT?**\nGlobal and CN servers are separate. CN players need a global account and must follow local platform rules.\n\n**Is the CBT pay-to-win?**\nThe publisher emphasizes Roco Kingdom is not pay-to-win; exact CBT monetization/wipes follow official announcements.",
+      "tags": [
+        "cbt",
+        "registration",
+        "sign-up",
+        "quack-quack-test",
+        "platforms",
+        "download",
+        "roco-kingdom"
+      ],
+      "faq": [
+        {
+          "question": "When does the Roco Kingdom global CBT start and close?",
+          "questionZh": "Roco Kingdom 国际服 CBT 什么时候开始/截止报名？",
+          "answer": "The CBT starts on October 27, 2026; sign-ups run from August 26 to October 20 on rocokingdom.com.",
+          "answerZh": "CBT 于 2026-10-27 开启；报名窗口为 8/26–10/20，官网 rocokingdom.com 报名。"
+        },
+        {
+          "question": "Which platforms can I play in the CBT?",
+          "questionZh": "CBT 能玩哪些平台？",
+          "answer": "Only PC (Windows), iOS, and Android are playable in the October 27 CBT. PS5/Xbox/Steam/Epic are full-release platforms.",
+          "answerZh": "10/27 首测仅支持 PC（Windows）、iOS、Android。PS5/Xbox/Steam/Epic 属于正式版平台。"
+        },
+        {
+          "question": "Is the sign-up questionnaire mandatory?",
+          "questionZh": "报名问卷必须填吗？",
+          "answer": "Yes. Submitting the questionnaire is required for eligibility; referrals can raise selection priority but do not replace it.",
+          "answerZh": "必须。问卷提交是获得资格的前提；推荐链接可提高入选优先级，但不能替代问卷。"
+        }
+      ],
+      "updatedAt": "2026-08-27",
+      "quickFacts": {
+        "zh": [
+          "CBT 开测：2026-10-27，报名 8/26–10/20。",
+          "CBT 可玩平台：PC、iOS、Android。",
+          "问卷必填，邀请好友可提高入选优先级。"
+        ],
+        "en": [
+          "CBT starts October 27, 2026; sign-ups run Aug 26 – Oct 20.",
+          "CBT platforms: PC, iOS, Android.",
+          "Questionnaire required; referrals raise selection priority."
+        ],
+        "ja": [
+          "CBTは2026年10月27日開始、申込は8/26〜10/20。",
+          "CBT対応: PC、iOS、Android。",
+          "アンケート必須。招待で優先度UP。"
+        ]
+      },
+      "serpTitle": {
+        "zh": "Roco Kingdom 国际服 CBT 注册指南｜报名入口、问卷与平台（2026-10-27）",
+        "en": "Roco Kingdom CBT Registration Guide — Sign-up, Questionnaire & Platforms",
+        "ja": "ロコキングダムCBT登録ガイド｜申込、アンケート、対応機種"
+      },
+      "serpDescription": {
+        "zh": "Roco Kingdom 国际服 CBT 将于 2026-10-27 开测、8/26–10/20 报名。本文整理官网报名入口、必填问卷、邀请推荐机制、CBT 可玩平台与语言支持。",
+        "en": "The Roco Kingdom global CBT starts October 27, 2026. Sign up via rocokingdom.com, complete the questionnaire, and check CBT platforms and languages.",
+        "ja": "ロコキングダム国際CBTは2026年10月27日開始。公式サイトでの申込、アンケート、CBT対応機種、言語を整理。"
+      }
+    },
+    {
+      "id": "what-is-roco-kingdom",
+      "title": "Roco Kingdom 是什么游戏：Carosia、Jinies 与核心玩法介绍",
+      "titleEn": "What Is Roco Kingdom? Carosia, Jinies, and Core Gameplay Explained",
+      "category": "starter",
+      "categoryZh": "新手入门",
+      "categoryEn": "Starter",
+      "summary": "Roco Kingdom 是腾讯魔方工作室开发的免费开放世界精灵收集游戏，玩家扮演魔法学院学生 Roco，在 Carosia 大陆捕捉 400+ 只名为 Jinies 的精灵，支持跨平台联机与回合制 PvP。",
+      "summaryEn": "Roco Kingdom is a free-to-play open-world creature-collector from Tencent's Morefun Studios. You play as a Roco — a magic-academy student — catching 400+ creatures called Jinies across Carosia, with cross-platform co-op and turn-based PvP.",
+      "content": "## Roco Kingdom 是什么游戏\n\nRoco Kingdom（洛克王国：世界）是腾讯魔方工作室（Morefun Studios）开发的**免费、开放世界、精灵收集**游戏，玩家扮演魔法学院学生 **Roco**，在 **Carosia** 大陆捕捉、培养并指挥精灵 **Jinies**。\n\n### 核心设定\n\n- **400+ 只 Jinies**：每只都有独立的身高、体型与体重，同种精灵也各不相同。\n- **生态化开放世界**：不同生物群系塑造精灵的栖息与行为（例如毒系精灵会喷出毒泡形成环境危害）。\n- **魔法学院设定**：玩家进入学院学习成为魔法师，剧情围绕学院生活与大陆冒险展开。\n\n### 玩法构成\n\n- **捕捉与养成**：使用 Buddy Pods 捕捉精灵，通过捕捉、训练、进化组建队伍。\n- **回合制 PvP**：基于属性克制、队伍构成与体力管理，官方强调**无 Pay-to-Win**、无抽卡。\n- **跨平台联机**：PC、主机、移动端玩家可组队冒险、共同骑行、拜访家园与种田。\n\n### 背景信息\n\n- 开发商：腾讯魔方工作室（Morefun Studios），代表作《Arena Breakout》。\n- 国服 2026-03 上线，13 小时内突破 1500 万玩家，首月日均 DAU 超 1300 万。\n- 国际服 2026-08 科隆游戏展官宣，CBT 定于 2026-10-27，正式发售日待定。\n- 国际服与国服数据独立，国际服支持繁中/英/日等 18 种字幕。",
+      "contentEn": "## What Is Roco Kingdom?\n\nRoco Kingdom (洛克王国：世界) is a **free-to-play open-world creature-collector** developed by Tencent's Morefun Studios. You play as a **Roco** — a student at the magic academy — catching, training, and commanding creatures called **Jinies** across the continent of **Carosia**.\n\n### Core setting\n\n- **400+ unique Jinies**: every creature varies in height, size, and weight, so even the same species feels one-of-a-kind.\n- **Living ecosystems**: biomes shape where and how Jinies live — for example, Poison-type Jinies can spray toxic bubbles that become environmental hazards.\n- **Magic-academy story**: you enroll to become a mage, with a narrative-driven campaign around academy life and continent-wide adventure.\n\n### Gameplay pillars\n\n- **Catch and raise**: capture Jinies with Buddy Pods, then train, evolve, and build your team.\n- **Turn-based PvP**: battles are decided by elemental matchups, team composition, and stamina management — the publisher stresses **no pay-to-win** and no gacha.\n- **Cross-platform co-op**: party up across PC, console, and mobile, co-ride Jinies, visit homes, and farm together.\n\n### Background\n\n- Developer: Tencent's Morefun Studios (Arena Breakout).\n- The CN version launched March 2026, passing 15 million players in 13 hours and averaging over 13 million DAU in its first month.\n- The international version was revealed at gamescom August 2026; the CBT starts October 27, 2026, with the full release date TBA.\n- Global and CN server data are separate; the global version supports 18 subtitle languages including Traditional Chinese, English, and Japanese.",
+      "tags": [
+        "what-is",
+        "carosia",
+        "jinies",
+        "overview",
+        "roco-kingdom",
+        "morefun"
+      ],
+      "faq": [
+        {
+          "question": "Who develops Roco Kingdom?",
+          "questionZh": "Roco Kingdom 是谁开发的？",
+          "answer": "Tencent's Morefun Studios, best known for Arena Breakout. Tencent publishes the game globally.",
+          "answerZh": "腾讯魔方工作室（Morefun Studios），代表作《Arena Breakout》，由腾讯全球发行。"
+        },
+        {
+          "question": "Is Roco Kingdom pay-to-win?",
+          "questionZh": "Roco Kingdom 是氪金游戏吗？",
+          "answer": "No. The publisher states PvP has no pay-to-win mechanics and no gacha; all Jinies can be obtained through normal play.",
+          "answerZh": "不是。官方声明 PvP 无 Pay-to-Win 机制、无抽卡，所有 Jinies 均可通过正常游玩获得。"
+        }
+      ],
+      "updatedAt": "2026-08-27",
+      "quickFacts": {
+        "zh": [
+          "开放世界精灵收集游戏，Jinies 超过 400 只。",
+          "玩家扮演魔法学院学生 Roco，舞台是 Carosia 大陆。",
+          "免费游玩、无 P2W、无抽卡，跨平台联机。"
+        ],
+        "en": [
+          "Open-world creature-collector with 400+ Jinies.",
+          "You play a Roco (academy student) on the continent of Carosia.",
+          "Free-to-play, no P2W, no gacha, cross-platform."
+        ],
+        "ja": [
+          "オープンワールド捕獲RPG、ジニー400種以上。",
+          "魔法学院の生徒 Roco として Carosia 大陸を冒険。",
+          "基本無料、P2Wなし、ガチャなし、クロスプレイ。"
+        ]
+      },
+      "serpTitle": {
+        "zh": "Roco Kingdom 是什么游戏？｜Carosia 大陆、Jinies 与玩法详解",
+        "en": "What Is Roco Kingdom? Carosia, Jinies & Gameplay Explained",
+        "ja": "ロコキングダムとは？｜Carosia、ジニー、遊び方解説"
+      },
+      "serpDescription": {
+        "zh": "Roco Kingdom 是什么？由腾讯魔方工作室开发的免费开放世界精灵收集游戏：Carosia 大陆、400+ 只 Jinies、魔法学院设定、回合制 PvP 与跨平台联机一次看懂。",
+        "en": "What is Roco Kingdom? A free open-world creature-collector from Tencent's Morefun Studios: 400+ Jinies on the continent of Carosia, turn-based PvP, and cross-platform co-op.",
+        "ja": "ロコキングダムとは？Tencent Morefun Studios の基本無料オープンワールド捕獲RPG。Carosia大陸、ジニー400種、PvP、クロスプレイを解説。"
+      }
+    },
+    {
+      "id": "platforms-and-download-guide",
+      "title": "Roco Kingdom 平台与下载指南：CBT 平台 vs 正式版平台",
+      "titleEn": "Roco Kingdom Platforms and Download Guide: CBT vs Full Release",
+      "category": "version",
+      "categoryZh": "版本攻略",
+      "categoryEn": "Version Guide",
+      "summary": "Roco Kingdom 国际服 CBT（2026-10-27）可玩平台为 PC、iOS、Android；正式版将登陆 PC、PS5、Xbox、iOS、Android，PC 版含 Steam/Epic/Microsoft Store。本文整理各平台入口与注意事项。",
+      "summaryEn": "The October 27 CBT is playable on PC, iOS, and Android; the full release targets PC, PS5, Xbox, iOS, and Android, with the PC version on Steam, Epic, and Microsoft Store. This guide covers every platform entry point.",
+      "content": "## Roco Kingdom 平台与下载指南\n\n下载入口**以官网 rocokingdom.com 为准**。注意区分 **CBT 可玩平台**与**正式版平台**：10/27 首测只有 PC、iOS、Android 三端可玩，PS5/Xbox/Steam/Epic 是正式版平台，不要混淆。\n\n### CBT（2026-10-27 首测）可玩平台\n\n| 平台 | 说明 |\n| --- | --- |\n| Windows (PC) | 官网报名后按官方指引下载 |\n| iOS | App Store 国际区 |\n| Android | Google Play 或官方安装包 |\n\n### 正式版平台\n\n- **PC**：Steam、Epic Games Store、Microsoft Store。Steam 页面目前锁国区。\n- **主机**：PlayStation 5、Xbox Series X|S。PS5 已有 PS Store 页面。\n- **移动端**：iOS、Android。\n\n### 下载注意事项\n\n- **无简中**：国际服不含简体中文，界面以繁中/英/日等为准。\n- **数据隔离**：国际服与国服数据独立，国服玩家不能将国服进度带到国际服。\n- **账号**：国际服需单独注册账号并完成报名问卷，CBT 资格、安装包与更新方式以官方邮件和官网公告为准。\n- **包体大小与配置**：CBT 具体配置要求与包体大小尚未公布，正式版为开放世界精灵收集游戏，对存储空间和网络稳定性有要求。",
+      "contentEn": "## Roco Kingdom Platforms and Download Guide\n\nAlways start from the **official site rocokingdom.com**. Keep the **CBT platforms** and **full-release platforms** separate: the October 27 CBT is playable only on PC, iOS, and Android; PS5, Xbox, Steam, and Epic belong to the full release.\n\n### CBT (October 27) playable platforms\n\n| Platform | Notes |\n| --- | --- |\n| Windows (PC) | Download via official instructions after signing up |\n| iOS | App Store (international region) |\n| Android | Google Play or official package |\n\n### Full-release platforms\n\n- **PC**: Steam, Epic Games Store, Microsoft Store. The Steam page is currently geo-restricted for CN.\n- **Console**: PlayStation 5, Xbox Series X|S. A PS5 store page is already live.\n- **Mobile**: iOS, Android.\n\n### Download notes\n\n- **No Simplified Chinese**: the international version excludes zh-CN; UI follows Traditional Chinese, English, Japanese, and more.\n- **Separate data**: global and CN server data are independent; CN players cannot carry CN progress into the global version.\n- **Account**: register a global account and complete the sign-up questionnaire. CBT invites, builds, and update methods follow official emails and site notices.\n- **Specs and size**: exact CBT specs and package size are not yet announced. As an open-world creature-collector, expect meaningful storage and a stable connection.",
+      "tags": [
+        "platforms",
+        "download",
+        "pc",
+        "ios",
+        "android",
+        "steam",
+        "epic",
+        "ps5",
+        "xbox"
+      ],
+      "faq": [
+        {
+          "question": "Can I play the CBT on Steam?",
+          "questionZh": "CBT 能上 Steam 玩吗？",
+          "answer": "No. The October 27 CBT supports only PC (Windows), iOS, and Android. Steam/Epic are full-release storefronts and the Steam page is geo-restricted for CN.",
+          "answerZh": "不能。10/27 CBT 仅支持 PC（Windows）、iOS、Android。Steam/Epic 是正式版商店渠道，且 Steam 页面锁国区。"
+        },
+        {
+          "question": "Which consoles will Roco Kingdom support?",
+          "questionZh": "正式版支持哪些主机？",
+          "answer": "PlayStation 5 and Xbox Series X|S are planned for the full release; a PS5 store page is live.",
+          "answerZh": "正式版计划支持 PlayStation 5 与 Xbox Series X|S，PS5 已有商店页面。"
+        }
+      ],
+      "updatedAt": "2026-08-27",
+      "quickFacts": {
+        "zh": [
+          "CBT 可玩：PC、iOS、Android。",
+          "正式版：PC/PS5/Xbox/iOS/Android。",
+          "Steam 锁国区，国际服无简中。"
+        ],
+        "en": [
+          "CBT playable on PC, iOS, Android.",
+          "Full release: PC, PS5, Xbox, iOS, Android.",
+          "Steam geo-restricted for CN; no Simplified Chinese."
+        ],
+        "ja": [
+          "CBT対応: PC、iOS、Android。",
+          "正式版: PC、PS5、Xbox、iOS、Android。",
+          "Steamは中国向けロック、簡体中文なし。"
+        ]
+      },
+      "serpTitle": {
+        "zh": "Roco Kingdom 平台与下载指南｜CBT 三平台 vs 正式版全平台",
+        "en": "Roco Kingdom Platforms & Download — CBT vs Full Release",
+        "ja": "ロコキングダム対応機種・DLガイド｜CBTと正式版"
+      },
+      "serpDescription": {
+        "zh": "Roco Kingdom 国际服怎么下载？CBT（10/27）仅 PC/iOS/Android 可玩，正式版支持 PC、PS5、Xbox、iOS、Android，附 Steam 锁国区与无简中说明。",
+        "en": "How to download Roco Kingdom: the CBT (Oct 27) runs on PC, iOS, and Android; the full release adds PS5, Xbox, Steam, Epic, and Microsoft Store.",
+        "ja": "ロコキングダムのDL方法。CBT（10/27）はPC・iOS・Android。正式版はPS5、Xbox、Steam、Epic、Microsoft Store。"
+      }
+    },
+    {
+      "id": "pre-registration-rewards-faq",
+      "title": "Roco Kingdom 预约奖励与资格 FAQ：预注册福利、删档与语言",
+      "titleEn": "Roco Kingdom Pre-Registration Rewards FAQ: Bonuses, Wipes, and Languages",
+      "category": "version",
+      "categoryZh": "版本攻略",
+      "categoryEn": "Version Guide",
+      "summary": "Roco Kingdom 国际服预注册已在官网开放。本文回答预约福利、CBT 资格、删档规则、付费与语言支持等高频问题，国际服具体奖励暂未公布，将持续更新。",
+      "summaryEn": "Roco Kingdom international pre-registration is open on the official site. This FAQ answers rewards, CBT eligibility, wipe rules, monetization, and language questions. Specific global rewards are not announced yet and will be updated.",
+      "content": "## Roco Kingdom 预约奖励与资格 FAQ\n\n国际服预注册已在官网 rocokingdom.com 开放。**国际服具体预约奖励尚未公布**（截至 2026-08-27），本文持续跟踪，先整理已知的资格与规则。\n\n### 高频问题\n\n**预注册能拿什么奖励？**\n国际服具体奖励未公布。参考国服经验，国服公测曾提供预约精灵蛋（燃了鸭）与全套外观等奖励，国际服以官方公告为准。\n\n**预注册 = 获得 CBT 资格吗？**\n不等于。CBT 资格通过报名问卷筛选，预注册与问卷是两件事，两者都完成更稳妥。\n\n**CBT 会删档吗？**\n删档规则官方尚未明确说明。多数封闭测试会删档或重置，以官方公告为准。\n\n**国际服有简中吗？**\n没有。国际服支持繁中、英、日等 18 种字幕，配音仅英/日。国服与国际服数据独立。\n\n**正式版什么时候出？**\n尚未公布。CBT 于 2026-10-27 开启，正式发售日以官方公告为准。\n\n### 跟踪项（watch/monitor）\n\n- 国际服预约奖励内容与发放方式\n- CBT 删档/保留规则\n- 正式发售日与首发平台最终名单",
+      "contentEn": "## Roco Kingdom Pre-Registration Rewards FAQ\n\nInternational pre-registration is open at rocokingdom.com. **Specific global pre-registration rewards are not announced yet** (as of August 27, 2026); this page tracks them and covers what is already known.\n\n### Common questions\n\n**What rewards come with pre-registration?**\nGlobal rewards are not announced. For reference, the CN launch offered a pre-registration Jinie egg (Ranye Duck) with a full cosmetic set; international details follow official announcements.\n\n**Does pre-registration guarantee a CBT invite?**\nNo. CBT invites are selected via the sign-up questionnaire. Pre-registration and the questionnaire are separate — complete both to be safe.\n\n**Will the CBT wipe progress?**\nWipe rules are not officially specified. Most closed tests wipe or reset; follow official announcements.\n\n**Does the international version have Simplified Chinese?**\nNo. It supports 18 subtitle languages including Traditional Chinese, English, and Japanese, with English/Japanese voice acting. Global and CN data are separate.\n\n**When is the full release?**\nNot announced. The CBT starts October 27, 2026; the full release date follows official announcements.\n\n### Watch / monitor\n\n- Global pre-registration reward details and delivery\n- CBT wipe/retention rules\n- Full release date and final platform list",
+      "tags": [
+        "pre-registration",
+        "rewards",
+        "faq",
+        "wipe",
+        "cbt",
+        "languages"
+      ],
+      "faq": [
+        {
+          "question": "What are the global pre-registration rewards?",
+          "questionZh": "国际服预注册奖励是什么？",
+          "answer": "Not announced as of 2026-08-27. We track official announcements and update this page.",
+          "answerZh": "截至 2026-08-27 尚未公布。我们将持续跟踪官方公告并更新本页。"
+        },
+        {
+          "question": "Does pre-registration guarantee CBT access?",
+          "questionZh": "预注册了就一定能进 CBT 吗？",
+          "answer": "No. CBT invites come from the sign-up questionnaire selection; complete both the questionnaire and pre-registration.",
+          "answerZh": "不一定。CBT 资格通过报名问卷筛选，建议同时完成问卷与预注册。"
+        }
+      ],
+      "updatedAt": "2026-08-27",
+      "quickFacts": {
+        "zh": [
+          "国际服预约奖励未公布（watch）。",
+          "预注册 ≠ CBT 资格，问卷必填。",
+          "CBT 删档规则以官方公告为准。"
+        ],
+        "en": [
+          "Global rewards not announced (watch).",
+          "Pre-registration ≠ CBT invite; questionnaire required.",
+          "Wipe rules TBA."
+        ],
+        "ja": [
+          "国際版の予約特典は未発表（watch）。",
+          "事前登録≠CBT権利。アンケート必須。",
+          "CBTの消去ルールは公式発表待ち。"
+        ]
+      },
+      "serpTitle": {
+        "zh": "Roco Kingdom 预约奖励与资格 FAQ｜预注册福利持续更新",
+        "en": "Roco Kingdom Pre-Registration Rewards FAQ — Tracked & Updated",
+        "ja": "ロコキングダム予約特典FAQ｜随時更新"
+      },
+      "serpDescription": {
+        "zh": "Roco Kingdom 国际服预约奖励、CBT 资格、删档规则与语言支持 FAQ。国际服具体奖励未公布，本页持续跟踪更新。",
+        "en": "Roco Kingdom pre-registration rewards, CBT eligibility, wipe rules, and languages. Global rewards are tracked and updated as they are announced.",
+        "ja": "ロコキングダムの予約特典、CBT権利、消去ルール、言語をまとめたFAQ。国際版特典は未発表のため随時更新。"
+      }
+    },
+    {
+      "id": "is-roco-kingdom-free-to-play",
+      "title": "Roco Kingdom 免费吗？商业模式详解：F2P、无 Pay-to-Win 内购",
+      "titleEn": "Is Roco Kingdom Free to Play? Business Model Explained: F2P, No Pay-to-Win",
+      "category": "starter",
+      "categoryZh": "新手攻略",
+      "categoryEn": "Starter",
+      "summary": "Roco Kingdom 国际服确认免费游玩（F2P）。官方明确 PvP 不含 Pay-to-Win 机制，400+ 精灵全部可通过正常游玩获得。本文梳理商业模式要点与内购预期。",
+      "summaryEn": "Yes — the global version of Roco Kingdom is free to play. The developer confirms PvP has no pay-to-win mechanics, and all 400+ Jinies are obtainable through normal play. This guide breaks down the business model.",
+      "content": "## Roco Kingdom 免费吗？\n\n**是。** Roco Kingdom 国际服定位为免费游玩（free-to-play）的开放世界精灵收集游戏，登陆 PC、PlayStation、Xbox、iOS 与 Android 平台，下载与游玩本身不收费。\n\n### 商业模式要点\n\n- **免费下载、免费游玩**：官方在科隆游戏展全球官宣时即确认 F2P 定位。\n- **无 Pay-to-Win**：开发商 Morefun Studios（腾讯）明确 PvP 不使用 Pay-to-Win 机制。对战胜负取决于属性克制、队伍构筑与策略，而非付费深度。\n- **精灵全游戏内获取**：首发 400+ 只精灵（Jinies）全部可以通过正常游玩获得，不存在\"付费限定精灵\"或抽卡墙。\n- **CBT 阶段无内购**：10/27 首测（Quack Quack Test）为删档测试，不含内购。\n\n### 与传统买断制精灵收集游戏的区别\n\n| 维度 | Roco Kingdom | 传统买断制精灵收集 |\n|---|---|---|\n| 价格 | 免费（F2P） | 一次性买断 |\n| 平台 | PC/PS5/Xbox/iOS/Android 跨平台 | 通常单平台 |\n| 精灵获取 | 全部游戏内获得 | 版本内容随 DLC 扩展 |\n| PvP | 免费、策略导向 | 视作品而定 |\n\n### 给玩家的建议\n\n- 免费入坑门槛低，10/27 CBT 前可先在官网预注册。\n- 若对\"无 P2W\"承诺存疑，可在 CBT 期间亲自验证内购设计，再决定长期投入。\n- 关注官方后续公布的商业化细节（外观类内购预期），本文将随官方信息更新。",
+      "contentEn": "## Is Roco Kingdom free to play?\n\n**Yes.** The global version of Roco Kingdom is a free-to-play open-world creature collector launching on PC, PlayStation, Xbox, iOS, and Android. Downloading and playing costs nothing.\n\n### Business model key points\n\n- **Free to download and play**: The F2P positioning was confirmed at the global announcement during gamescom Opening Night Live.\n- **No pay-to-win**: Developer Morefun Studios (Tencent) states PvP will not use pay-to-win mechanics. Battles are decided by type matchups, team composition, and reading your opponent — not wallet size.\n- **Every Jini earnable in-game**: All 400+ Jinies at launch can be obtained through normal play. There are no pay-only creatures and no gacha wall.\n- **No purchases in the CBT**: The October 27 Quack Quack Test is a wipe-based beta with no in-game purchases.\n\n### How it compares to premium creature collectors\n\n| Dimension | Roco Kingdom | Traditional premium collector |\n|---|---|---|\n| Price | Free (F2P) | One-time purchase |\n| Platforms | PC/PS5/Xbox/iOS/Android cross-platform | Usually single platform |\n| Creature access | All earnable in-game | Content expands via paid DLC |\n| PvP | Free, strategy-driven | Varies by title |\n\n### Recommendations for players\n\n- The free entry point is low — pre-register on the official site before the October 27 CBT.\n- If you are skeptical of the \"no P2W\" promise, use the CBT to inspect the monetization design yourself before committing long-term.\n- Watch for official monetization details (cosmetic purchases are expected); this guide will be updated as news lands.",
+      "tags": [
+        "free-to-play",
+        "f2p",
+        "monetization",
+        "pay-to-win",
+        "business-model",
+        "pvp"
+      ],
+      "faq": [
+        {
+          "question": "Is Roco Kingdom free to play?",
+          "questionZh": "Roco Kingdom 免费吗？",
+          "answer": "Yes. The global version is free to play on PC, PlayStation, Xbox, iOS, and Android, as confirmed during the gamescom global announcement.",
+          "answerZh": "是。国际服在科隆游戏展全球官宣时确认 PC、PlayStation、Xbox、iOS、Android 全平台免费游玩。"
+        },
+        {
+          "question": "Is Roco Kingdom pay-to-win?",
+          "questionZh": "Roco Kingdom 是氪金变强的游戏吗？",
+          "answer": "No. Morefun Studios states PvP is free of pay-to-win mechanics, and every one of the 400+ Jinies can be earned through normal play.",
+          "answerZh": "不是。官方明确 PvP 不使用 Pay-to-Win 机制，且 400+ 只精灵全部可通过正常游玩获得。"
+        },
+        {
+          "question": "Does the closed beta have in-app purchases?",
+          "questionZh": "CBT 测试期间有内购吗？",
+          "answer": "No. The October 27 Quack Quack Test is a wipe-based closed beta without in-game purchases.",
+          "answerZh": "没有。10/27 的 Quack Quack Test 为删档测试，不含游戏内购买。"
+        }
+      ],
+      "updatedAt": "2026-08-27",
+      "quickFacts": {
+        "zh": [
+          "免费游玩（F2P），全平台免费下载。",
+          "官方确认 PvP 无 Pay-to-Win。",
+          "400+ 精灵全部游戏内可获得。"
+        ],
+        "en": [
+          "Free to play on every platform.",
+          "Developer-confirmed no pay-to-win PvP.",
+          "All 400+ Jinies earnable in-game."
+        ],
+        "ja": [
+          "全プラットフォームで基本無料。",
+          "PvPは課金優遇なし（公式）。",
+          "400種以上のジニーは全てゲーム内で獲得可能。"
+        ]
+      },
+      "serpTitle": {
+        "zh": "Roco Kingdom 免费吗？F2P 商业模式与无 P2W 说明（2026）",
+        "en": "Is Roco Kingdom Free to Play? F2P Model & No Pay-to-Win Explained",
+        "ja": "ロコキングダムは基本無料？F2Pと課金要素を解説"
+      },
+      "serpDescription": {
+        "zh": "Roco Kingdom 国际服免费游玩，官方确认 PvP 无 Pay-to-Win，400+ 精灵全部游戏内获得。商业模式详解与常见问题。",
+        "en": "Yes, Roco Kingdom is free to play. Developer-confirmed no pay-to-win PvP, all 400+ Jinies earnable in-game, and the CBT has no purchases.",
+        "ja": "ロコキングダムは基本無料。PvPは課金優遇なし、400種以上のジニーは全てゲーム内で獲得可能。CBTに課金なし。"
+      }
+    },
+    {
+      "id": "roco-kingdom-release-date-guide",
+      "title": "Roco Kingdom 发售日指南：CBT 时间、正式版窗口与版本路线图",
+      "titleEn": "Roco Kingdom Release Date Guide: CBT Schedule, Launch Window, and Roadmap",
+      "category": "version",
+      "categoryZh": "版本攻略",
+      "categoryEn": "Version Guide",
+      "summary": "Roco Kingdom 正式发售日尚未公布。已确认节点：10/27 全球首测（PC/iOS/Android）、报名 8/26–10/20、正式版登陆 PC/PS5/Xbox/移动端并支持跨平台。本文汇总完整时间线。",
+      "summaryEn": "Roco Kingdom has no announced launch date yet. Confirmed milestones: the global CBT on October 27 (PC/iOS/Android), sign-ups from August 26 to October 20, and a full release on PC, PS5, Xbox, and mobile with cross-play. Full timeline inside.",
+      "content": "## Roco Kingdom 发售日指南\n\nRoco Kingdom **正式版发售日尚未公布**——官方在科隆游戏展开幕夜全球官宣时只确认了测试与平台信息。以下是当前已确认的完整时间线。\n\n### 已确认时间线\n\n| 节点 | 时间 | 说明 |\n|---|---|---|\n| 全球官宣 | 2026-08-26 | 科隆游戏展 Opening Night Live |\n| CBT 报名窗口 | 2026-08-26 ~ 10-20 | 官网 rocokingdom.com 问卷必填 |\n| CBT 资格查询 | 2026-10-23 起 | 官网可查测试资格 |\n| 全球首测（Quack Quack Test） | 2026-10-27 02:00 UTC | PC/iOS/Android，删档、无内购 |\n| 正式版 | 未公布 | PC/PS5/Xbox/iOS/Android |\n\n### 正式版平台阵容\n\n- **PC、PlayStation、Xbox、iOS、Android** 五端齐发，上线即支持跨平台联机（cross-play）。\n- Steam、Epic Games、Microsoft Store 均在正式版发行计划内。\n\n### 官方长期路线图\n\n开发商 Morefun Studios 已确认长期内容计划：\n\n- **新赛季**：持续的赛季更新。\n- **地图扩展**：Carosia 大陆逐步开放新区域。\n- **剧情内容**：主线与故事持续追加。\n\n### 参考时间线：国服\n\n国服《洛克王国:世界》已于 2026 年 3 月上线，首日 13 小时内涌入 1500 万玩家、首月 PC+移动双端日均活跃超 1300 万——国际服的内容节奏可参考国服的赛季推进方式。\n\n### 常见问题\n\n- **CBT 是正式版吗？** 不是。10/27 首测为删档测试，仅 PC/iOS/Android 可玩。\n- **CBT 进度会保留吗？** 不会，测试删档。\n- **正式版要等多久？** 官方未公布窗口期。按惯例，全球 F2P 多端项目在 CBT 后会有 1–2 轮测试再上线，请以官方公告为准。",
+      "contentEn": "## Roco Kingdom Release Date Guide\n\nRoco Kingdom **does not have an announced launch date yet** — the gamescom Opening Night Live reveal only confirmed the beta schedule and platforms. Here is every confirmed milestone so far.\n\n### Confirmed timeline\n\n| Milestone | Date | Notes |\n|---|---|---|\n| Global reveal | Aug 26, 2026 | gamescom Opening Night Live |\n| CBT sign-up window | Aug 26 – Oct 20, 2026 | Mandatory questionnaire on rocokingdom.com |\n| CBT eligibility check | From Oct 23, 2026 | Results viewable on the official site |\n| Global CBT (Quack Quack Test) | Oct 27, 2026, 02:00 UTC | PC/iOS/Android; wiped, no purchases |\n| Full release | TBA | PC/PS5/Xbox/iOS/Android |\n\n### Full-release platform lineup\n\n- **PC, PlayStation, Xbox, iOS, and Android** at launch, with cross-play supported from day one.\n- Steam, Epic Games, and Microsoft Store are all part of the release plan.\n\n### Official long-term roadmap\n\nDeveloper Morefun Studios has committed to a long-term content plan:\n\n- **New seasons**: Ongoing seasonal updates.\n- **Map expansions**: New regions of Carosia opening over time.\n- **Story content**: Continued main-quest and narrative additions.\n\n### A useful reference: the Chinese launch\n\nRoco Kingdom launched in China in March 2026, drawing 15 million players within 13 hours and averaging over 13 million daily active users across PC and mobile in its first month. The international release can be expected to follow a similar season-based content cadence.\n\n### FAQ\n\n- **Is the CBT the full release?** No. The October 27 test is a wipe-based beta playable on PC, iOS, and Android only.\n- **Will CBT progress carry over?** No, the beta is wiped.\n- **How long until the full release?** No window has been announced. Global F2P multiplatform titles typically run one or two test phases after a CBT before launch — watch for official announcements.",
+      "tags": [
+        "release-date",
+        "launch",
+        "cbt",
+        "roadmap",
+        "timeline",
+        "platforms"
+      ],
+      "faq": [
+        {
+          "question": "When does Roco Kingdom release?",
+          "questionZh": "Roco Kingdom 什么时候发售？",
+          "answer": "No specific launch date has been announced. The first global closed beta runs October 27, 2026 on PC, iOS, and Android; the full release targets PC, PlayStation, Xbox, and mobile.",
+          "answerZh": "正式发售日尚未公布。首轮全球测试于 2026-10-27 在 PC/iOS/Android 开启；正式版将登陆 PC、PlayStation、Xbox 与移动端。"
+        },
+        {
+          "question": "Is the October 27 test the full release?",
+          "questionZh": "10/27 的测试是正式上线吗？",
+          "answer": "No. October 27 is the Quack Quack Test, a wipe-based closed beta with no in-game purchases. The full release date is unannounced.",
+          "answerZh": "不是。10/27 是删档首测 Quack Quack Test，不含内购。正式版日期未公布。"
+        },
+        {
+          "question": "What comes after the closed beta?",
+          "questionZh": "CBT 之后官方有什么计划？",
+          "answer": "Morefun Studios has confirmed a long-term roadmap with new seasons, expanding maps, and story content after launch.",
+          "answerZh": "官方已确认长期路线图：上线后将持续推出新赛季、扩展地图与剧情内容。"
+        }
+      ],
+      "updatedAt": "2026-08-27",
+      "quickFacts": {
+        "zh": [
+          "正式版发售日未公布。",
+          "全球首测 2026-10-27（PC/iOS/Android，删档）。",
+          "正式版五端齐发并支持跨平台联机。"
+        ],
+        "en": [
+          "No launch date announced yet.",
+          "Global CBT October 27 on PC/iOS/Android, wiped.",
+          "Full release hits PC, PS5, Xbox, and mobile with cross-play."
+        ],
+        "ja": [
+          "正式リリース日は未発表。",
+          "CBTは10月27日、PC/iOS/Android、データ消去あり。",
+          "正式版はPC・PS5・Xbox・モバイルでクロスプレイ対応。"
+        ]
+      },
+      "serpTitle": {
+        "zh": "Roco Kingdom 发售日与时间线｜10/27 首测、正式版平台（2026）",
+        "en": "Roco Kingdom Release Date — CBT Oct 27, Platforms & Roadmap",
+        "ja": "ロコキングダム発売日ガイド｜CBTと正式版スケジュール"
+      },
+      "serpDescription": {
+        "zh": "Roco Kingdom 正式版日期未公布；10/27 全球删档首测（PC/iOS/Android），正式版登陆 PC/PS5/Xbox/移动端。完整时间线与路线图。",
+        "en": "Roco Kingdom has no launch date yet. Global CBT starts October 27 on PC/iOS/Android; the full release targets PC, PS5, Xbox, and mobile with cross-play.",
+        "ja": "ロコキングダムの正式発売日は未発表。10月27日にCBT開始、正式版はPC・PS5・Xbox・モバイル対応。詳細タイムラインを紹介。"
+      }
+    },
+    {
+      "id": "roco-kingdom-vs-pokemon",
+      "title": "Roco Kingdom 与宝可梦对比：共享开放世界、F2P 模式与 PvP 设计差异",
+      "titleEn": "Roco Kingdom vs Pokemon: Shared Open World, F2P Model, and PvP Design Differences",
+      "category": "gameplay",
+      "categoryZh": "玩法攻略",
+      "categoryEn": "Gameplay",
+      "summary": "Roco Kingdom 常被称为\"中国版宝可梦\"，但两者设计差异明显：共享开放世界+社交玩法、免费商业模式、class-based 回合 PvP 与生态系统模拟。本文逐项对比帮你决定玩哪个。",
+      "summaryEn": "Roco Kingdom is often called China's answer to Pokemon, but the designs diverge sharply: a shared open world with social systems, a free-to-play model, and class-based turn-based PvP. This comparison breaks down which experience fits you.",
+      "content": "## Roco Kingdom 与宝可梦对比\n\nRoco Kingdom 在海外报道中常被称作\"China's answer to Pokemon\"（PC Gamer 等媒体）。两者同属回合制精灵收集 RPG，但从世界结构到商业模式都差异明显。\n\n### 相似之处\n\n- **核心循环**：捕捉、培养、进化和对战精灵（Roco 侧为 Jinies）。\n- **回合制对战**：都采用属性克制（rock-paper-scissors type matchups）与进化链设计。\n\n### 关键差异\n\n| 维度 | Roco Kingdom | 宝可梦（主系列） |\n|---|---|---|\n| 世界结构 | 多人共享开放世界 Carosia | 单机冒险（联机对战/交换为辅） |\n| 商业模式 | 免费 F2P、无 P2W | 买断制 + 双版本 |\n| 平台 | PC/PS5/Xbox/iOS/Android 跨平台 | 主机/掌机独占为主 |\n| 社交玩法 | 家园装修、共同种田、共乘精灵、友好决斗 | 有限联机 |\n| PvP 设计 | class-based 组队、策略导向 | 竞技规则成熟的传统对战 |\n| 精灵规模 | 首发 400+ 只，体型（身高/大小/体重）有个体差异 | 每代新增，总量 1000+ |\n\n### Roco Kingdom 的独特卖点\n\n- **生态系统模拟**：精灵有各自栖息行为与互动——例如毒系精灵会向空中喷毒泡形成环境危害，大体型水獭会把小精灵当排球玩（PC Gamer 试玩报道）。这是六年研发投入的重点。\n- **跨平台社交**：PC、主机、手机玩家同世界组队，支持跨平台进度。\n- **IP 背景**：洛克王国是中国 16 年经典 IP，浏览器游戏注册玩家超 3.5 亿，衍生 4 部电影、100+ 册图书与长篇动画——在中国的影响力对标宝可梦。\n\n### 怎么选\n\n- **想要和朋友在同一个世界长期经营（家园/农场/组队冒险）**：Roco Kingdom 更合适。\n- **想要纯单机叙事冒险与成熟竞技对战**：宝可梦主系列仍是标杆。\n- **预算敏感**：Roco Kingdom 免费入坑，试错成本为零。\n- 两者不冲突：Roco Kingdom 10/27 首测免费报名，可以先测再决定。\n\n### 同赛道新作参考\n\n精灵收集品类正在爆发：Aniimo（微软）、Spirit Rancher（Steam 农场+收集）、ADORE（巴西，实时动作驯服）都是近期值得关注的竞品，Roco Kingdom 以 400+ 精灵规模与社交深度差异化竞争。",
+      "contentEn": "## Roco Kingdom vs Pokemon\n\nRoco Kingdom is frequently described in Western media as \"China's answer to Pokemon\" (PC Gamer, among others). Both are turn-based creature collectors, but they diverge sharply in world structure and business model.\n\n### What they share\n\n- **Core loop**: Catching, training, evolving, and battling creatures (Jinies, in Roco's case).\n- **Turn-based battles**: Both use rock-paper-scissors type matchups and evolution chains.\n\n### Key differences\n\n| Dimension | Roco Kingdom | Pokemon (main series) |\n|---|---|---|\n| World | Shared multiplayer open world (Carosia) | Single-player adventure (trading/battling secondary) |\n| Business model | Free-to-play, no P2W | Premium purchase, dual versions |\n| Platforms | PC/PS5/Xbox/iOS/Android cross-platform | Mostly Nintendo hardware |\n| Social play | Home decorating, co-op farming, co-riding, friendly duels | Limited online features |\n| PvP design | Class-based team building, strategy-first | Mature, long-established competitive rules |\n| Roster | 400+ Jinies at launch, each varying in height/size/weight | 1,000+ cumulative across generations |\n\n### Roco Kingdom's distinctive selling points\n\n- **Ecosystem simulation**: Jinies have their own behaviors and interactions — poison-type Jinies spray toxic bubbles into the air as environmental hazards, and large otter-type creatures were seen using a smaller Jini as a volleyball (per PC Gamer's hands-on). This simulation depth is the product of six years of development.\n- **Cross-platform social play**: PC, console, and mobile players share one world, with cross-platform progression.\n- **IP pedigree**: Roco Kingdom is a 16-year-old Chinese franchise with over 350 million registered browser-game players, four feature films, 100+ published books, and a long-running animated series — arguably China's own Pokemon-scale property.\n\n### Which should you play?\n\n- **If you want to share a persistent world with friends (homes, farming, party adventures)**: Roco Kingdom fits better.\n- **If you want a pure single-player narrative and mature competitive battling**: Pokemon remains the benchmark.\n- **Budget-sensitive?**: Roco Kingdom is free to try — zero risk.\n- You don't have to choose: the Roco Kingdom CBT on October 27 is free to join.\n\n### Other creature collectors to watch\n\nThe genre is heating up: Aniimo (Microsoft), Spirit Rancher (farming + collection on Steam), and ADORE (real-time action taming from Brazil) are recent competitors. Roco Kingdom differentiates through its 400+ Jinie roster and social depth.",
+      "tags": [
+        "comparison",
+        "pokemon",
+        "creature-collector",
+        "vs",
+        "guides",
+        "recommendation"
+      ],
+      "faq": [
+        {
+          "question": "Is Roco Kingdom like Pokemon?",
+          "questionZh": "Roco Kingdom 和宝可梦像吗？",
+          "answer": "They share the turn-based creature-collecting core, but Roco Kingdom is a shared multiplayer open world with social systems, free-to-play monetization, and class-based PvP — a different experience from the single-player Pokemon adventures.",
+          "answerZh": "核心循环相似（回合制收集养成），但 Roco Kingdom 是多人共享开放世界，带家园/农场/组队等社交系统，且免费游玩——与单机向的宝可梦主系列体验不同。"
+        },
+        {
+          "question": "Is Roco Kingdom a Pokemon clone?",
+          "questionZh": "Roco Kingdom 是宝可梦抄袭吗？",
+          "answer": "No. Roco Kingdom is built on a 16-year-old Chinese franchise that began as a browser game in 2010, with its own world (Carosia), creatures (Jinies), and design pillars like ecosystem simulation and shared-world social play.",
+          "answerZh": "不是。洛克王国是始于 2010 年浏览器游戏的 16 年中国原创 IP，拥有独立世界观（Carosia）、精灵体系（Jinies）与生态模拟、共享世界社交等自有设计。"
+        },
+        {
+          "question": "Which one should I play?",
+          "questionZh": "我该玩哪个？",
+          "answer": "Choose Roco Kingdom for shared-world social play and a free entry point; choose Pokemon for narrative single-player adventures and established competitive battling. The Roco Kingdom CBT on October 27 is free to try.",
+          "answerZh": "想和朋友共享世界长期玩选 Roco Kingdom（免费）；想要单机叙事与成熟对战选宝可梦。也可以先免费参加 10/27 的 Roco Kingdom 首测再决定。"
+        }
+      ],
+      "updatedAt": "2026-08-27",
+      "quickFacts": {
+        "zh": [
+          "核心循环相似，世界结构完全不同（共享开放世界 vs 单机）。",
+          "Roco Kingdom 免费、跨平台；宝可梦买断、单平台为主。",
+          "Roco 有 16 年中国 IP 底蕴（3.5 亿注册玩家）。"
+        ],
+        "en": [
+          "Similar core loop, different worlds: shared open world vs single-player.",
+          "Roco Kingdom is free and cross-platform; Pokemon is premium and platform-bound.",
+          "Roco has a 16-year Chinese IP pedigree (350M+ registered players)."
+        ],
+        "ja": [
+          "基本ループは類似、世界設計は共有オープンワールド vs シングル。",
+          "ロコは無料・マルチプラットフォーム、ポケモンは買い切り。",
+          "ロコは16年の中国IP（登録3.5億人以上）。"
+        ]
+      },
+      "serpTitle": {
+        "zh": "Roco Kingdom 和宝可梦哪个好玩？差异对比与选择建议",
+        "en": "Roco Kingdom vs Pokemon — Key Differences & Which to Play",
+        "ja": "ロコキングダムとポケモン比較｜違いと選び方"
+      },
+      "serpDescription": {
+        "zh": "Roco Kingdom 与宝可梦对比：共享开放世界、免费 F2P、跨平台、class-based PvP 与生态模拟差异，附选择建议。",
+        "en": "Roco Kingdom vs Pokemon compared: shared open world, free-to-play model, cross-platform play, class-based PvP, and ecosystem simulation — plus which one fits you.",
+        "ja": "ロコキングダムとポケモンの違いを比較：共有オープンワールド、基本無料、クロスプラットフォーム、PvP設計の差を解説。"
+      }
+    },
+    {
+      "id": "roco-kingdom-crossplay-guide",
+      "title": "Roco Kingdom 跨平台联机指南：Crossplay 支持平台与账号进度互通",
+      "titleEn": "Roco Kingdom Crossplay Guide: Supported Platforms and Cross-Platform Progression",
+      "category": "gameplay",
+      "categoryZh": "玩法攻略",
+      "categoryEn": "Gameplay",
+      "summary": "Roco Kingdom 确认正式版上线即支持全平台 Crossplay：PC（含 Steam Deck）、PS5、Xbox 与移动端玩家同世界联机，并支持跨平台进度。本文梳理平台支持与 CBT 阶段差异。",
+      "summaryEn": "Roco Kingdom confirms day-one crossplay for the full release: PC (including Steam Deck), PS5, Xbox, and mobile players share one world, with cross-platform progression. This guide covers platform support and CBT differences.",
+      "content": "## Roco Kingdom 跨平台联机指南\n\nRoco Kingdom **正式版确认上线即支持全平台 Crossplay**——PC、PlayStation、Xbox 与移动端玩家可以在同一个 Carosia 大陆组队冒险，并支持跨平台进度（cross-platform progression）。\n\n### 平台支持矩阵\n\n| 平台 | 正式版联机 | CBT（10/27） |\n|---|---|---|\n| Windows PC | ✅ | ✅ 可玩 |\n| Steam Deck / 掌机 PC | ✅（PC Gamer 提及桌面与掌机可同游） | 视安装方式而定 |\n| PS5 | ✅ | ❌ 不在 CBT |\n| Xbox Series X|S | ✅ | ❌ 不在 CBT |\n| iOS / Android | ✅ | ✅ 可玩 |\n\n### 跨平台进度\n\n- 官方描述跨平台进度为\"移动端玩家可无障碍加入 PC/主机朋友的会话\"。\n- 换设备继续玩的账号级互通细节（登录体系等）尚未完整公布，关注官方后续说明。\n\n### CBT 阶段注意\n\n- 10/27 首测仅 **PC、iOS、Android** 可玩，主机端不参与首测。\n- 想和朋友一起测：确保三人都在这三个平台之一，并都拿到测试资格。\n\n### 联机玩法能做什么\n\n- 跨平台组队冒险、共同骑乘精灵（co-riding）\n- 拜访与装饰彼此家园、一起种田\n- 友好决斗\n\n详细社交玩法清单见《Roco Kingdom 联机与社交指南》。\n\n### 给玩家的建议\n\n- 固定队友里有人只用主机？正式版没有平台墙，但需要等正式上线。\n- 移动端玩家不必担心\"手机没人一起玩\"——跨平台意味着同一世界全端互通。\n- CBT 期间可以在 PC 与移动端分别体验，感受两端操作差异。",
+      "contentEn": "## Roco Kingdom Crossplay Guide\n\nRoco Kingdom **confirms day-one crossplay for the full release** — PC, PlayStation, Xbox, and mobile players will share the same continent of Carosia, with cross-platform progression supported.\n\n### Platform support matrix\n\n| Platform | Full-release play | CBT (Oct 27) |\n|---|---|---|\n| Windows PC | ✅ | ✅ Playable |\n| Steam Deck / handheld PC | ✅ (PC Gamer notes desk and handheld players share the same world) | Depends on install method |\n| PS5 | ✅ | ❌ Not in the CBT |\n| Xbox Series X|S | ✅ | ❌ Not in the CBT |\n| iOS / Android | ✅ | ✅ Playable |\n\n### Cross-platform progression\n\n- The developer describes cross-platform progression as mobile players joining PC or console friends' sessions \"without barriers.\"\n- Account-level details for continuing across devices (login systems, etc.) have not been fully published yet — watch for official updates.\n\n### CBT caveats\n\n- The October 27 test is playable on **PC, iOS, and Android only**; consoles are not part of the first beta.\n- Want to test with friends? Make sure everyone is on one of those three platforms and everyone has beta access.\n\n### What crossplay unlocks\n\n- Cross-platform party adventures and co-riding Jinies\n- Visiting and decorating each other's homes, farming together\n- Friendly duels\n\nSee the full co-op and social feature list in our Roco Kingdom co-op guide.\n\n### Recommendations\n\n- Have friends who only play on console? There is no platform wall at launch — but you will need to wait for the full release.\n- Mobile players should not worry about a split player base: cross-play means one shared world across every device.\n- During the CBT, try both PC and mobile to feel the control differences first-hand.",
+      "tags": [
+        "crossplay",
+        "cross-platform",
+        "multiplayer",
+        "platforms",
+        "progression",
+        "account"
+      ],
+      "faq": [
+        {
+          "question": "Does Roco Kingdom have crossplay?",
+          "questionZh": "Roco Kingdom 支持跨平台联机吗？",
+          "answer": "Yes. Cross-platform play is confirmed as a day-one feature of the full release — PC, PlayStation, Xbox, and mobile players share the same world.",
+          "answerZh": "支持。官方确认正式版上线即支持跨平台联机，PC、PlayStation、Xbox 与移动端玩家同世界游玩。"
+        },
+        {
+          "question": "Is there cross-platform progression?",
+          "questionZh": "有跨平台进度互通吗？",
+          "answer": "Yes. The developer describes mobile players joining PC or console friends' sessions without barriers, with cross-platform progression supported at launch.",
+          "answerZh": "有。官方表示移动端玩家可无障碍加入 PC/主机好友的会话，正式版支持跨平台进度。"
+        },
+        {
+          "question": "Can consoles play the October 27 beta?",
+          "questionZh": "主机能参加 10/27 测试吗？",
+          "answer": "No. The Quack Quack Test on October 27 is limited to PC, iOS, and Android. Consoles join at the full release.",
+          "answerZh": "不能。10/27 的 Quack Quack Test 仅限 PC、iOS、Android，主机在正式版加入。"
+        }
+      ],
+      "updatedAt": "2026-08-27",
+      "quickFacts": {
+        "zh": [
+          "正式版 day-one 全平台 Crossplay。",
+          "支持跨平台进度互通。",
+          "CBT 仅 PC/iOS/Android，主机不参与。"
+        ],
+        "en": [
+          "Day-one crossplay across all platforms at launch.",
+          "Cross-platform progression is supported.",
+          "The CBT covers PC/iOS/Android only — no consoles."
+        ],
+        "ja": [
+          "正式版は全プラットフォームでクロスプレイ対応。",
+          "クロスプラットフォームの進行共有に対応。",
+          "CBTはPC/iOS/Androidのみ。"
+        ]
+      },
+      "serpTitle": {
+        "zh": "Roco Kingdom 跨平台联机支持吗？Crossplay 与进度互通说明",
+        "en": "Roco Kingdom Crossplay — Supported Platforms & Progression",
+        "ja": "ロコキングダムはクロスプレイ対応？プラットフォームと進行共有"
+      },
+      "serpDescription": {
+        "zh": "Roco Kingdom 正式版上线即支持 PC/PS5/Xbox/移动端跨平台联机与进度互通；CBT 阶段仅 PC/iOS/Android。平台矩阵与注意事项。",
+        "en": "Roco Kingdom supports day-one crossplay across PC, PS5, Xbox, and mobile with cross-platform progression. The CBT covers PC/iOS/Android only — details inside.",
+        "ja": "ロコキングダムは正式版でPC・PS5・Xbox・モバイルのクロスプレイと進行共有に対応。CBTはPC/iOS/Androidのみ。"
+      }
+    }
+  ],
+  "originalPendingSnapshot": {
+    "path": "roco/raw-characters.json",
+    "status": "needs_review",
+    "sourceSha256": "154c996ee0666726475fd5a74b1837c69446373060c82c22c9d35ef2367a667a",
+    "mirrorSha256": "d1e392a5532739cc71185808bc7708773e075095b436b760c806fa5d7f0645f9",
+    "changes": [
+      {
+        "id": "cerulla",
+        "kind": "changed",
+        "fields": [
+          "description",
+          "descriptionEn",
+          "releaseVersion",
+          "skills",
+          "stats"
+        ]
+      },
+      {
+        "id": "meewee",
+        "kind": "changed",
+        "fields": [
+          "description",
+          "descriptionEn",
+          "releaseVersion",
+          "skills",
+          "stats"
+        ]
+      },
+      {
+        "id": "sparka",
+        "kind": "changed",
+        "fields": [
+          "releaseVersion",
+          "skills",
+          "stats"
+        ]
+      }
+    ],
+    "reason": "International starter skills/stats were reused from CN in a historical commit; international scope and values are not established.",
+    "reviewDocument": "plans/multi-game-s2-4-content-review-closeout-2026-10-24.md"
+  },
+  "preservation": {
+    "characterIds": [
+      "meewee",
+      "sparka",
+      "cerulla",
+      "blazehound",
+      "catapawn",
+      "dustler"
+    ],
+    "guideIds": [
+      "global-player-feedback-roadmap-playbook",
+      "global-onboarding-learning-recovery-playbook",
+      "global-player-discovery-codex-playbook",
+      "global-fair-play-integrity-playbook",
+      "global-change-communication-playbook",
+      "global-returning-player-event-legacy-playbook",
+      "global-economy-monetization-fairness-playbook",
+      "global-accessibility-cross-device-playbook",
+      "global-player-support-trust-playbook",
+      "global-social-safety-guild-playbook",
+      "global-localization-cultural-event-playbook",
+      "global-cbt-to-launch-decision-gates",
+      "global-cn-release-governance",
+      "global-live-ops-metrics-experiments",
+      "global-launch-readiness-checklist",
+      "global-first-30-days-pve-plan",
+      "global-days-31-90-season-event-plan",
+      "global-cn-content-roadmap",
+      "cbt-registration-guide",
+      "starter-guide",
+      "what-is-roco-kingdom",
+      "platforms-and-download-guide",
+      "jinies-guide",
+      "battle-system-guide",
+      "co-op-and-social-guide",
+      "pre-registration-rewards-faq",
+      "is-roco-kingdom-free-to-play",
+      "roco-kingdom-release-date-guide",
+      "roco-kingdom-vs-pokemon",
+      "roco-kingdom-crossplay-guide"
+    ],
+    "otherThreeCharactersSerializationSha256": "f0c135853d70d646e329a29205534e2064790c849af1047a18e954ef7f4c3735",
+    "otherTwentyOneGuidesSerializationSha256": "a0a9f6475988d1cf6038ddcd8417dde190b9367b0d728c366bc7aa7075042cc0"
+  },
+  "remaining": [
+    "Roco identities, names, attributes and rarities in legacy data are not independently approved",
+    "21 other Roco guides, provisional tier ranks, game home/download/map and static promotional copy still require scope/fact review",
+    "Nine rewritten guides are verification checklists, not official feature, launch or monetization announcements",
+    "Genshin strict baseline review and all-owner cloud/rollback acceptance remain outstanding"
+  ],
+  "withdrawnHardcodedGuideBlocks": [
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_QUICK_ANSWERS",
+      "id": "cbt-registration-guide",
+      "originalBlock": "'cbt-registration-guide': {\n      heading: { zh: '快速结论：10/27 首测，先完成官网报名与问卷', en: 'Quick answer: sign up on the official site before the October 27 CBT', ja: '要点：10/27テスト前に公式サイトで申し込み' },\n      points: {\n        zh: ['国际服 CBT 于 2026-10-27 开启，报名窗口为 8/26–10/20。', '前往 www.rocokingdom.com 预注册并完成必填问卷，测试资格以官方邮件与公告为准。', 'CBT 仅 PC、iOS、Android 可玩，PS5/Xbox/Steam/Epic/MS Store 属正式版平台。'],\n        en: ['The global CBT starts October 27, 2026; sign-ups run from August 26 to October 20.', 'Pre-register on www.rocokingdom.com and complete the mandatory questionnaire; eligibility follows official emails and notices.', 'The CBT is playable on PC, iOS, and Android only; PS5, Xbox, Steam, Epic, and MS Store are full-release platforms.'],\n        ja: ['グローバルCBTは2026年10月27日開始、申込は8/26–10/20。', '公式サイトで事前登録と必須アンケートを完了。資格は公式メールと告知基準。', 'CBTはPC、iOS、Androidのみ。PS5/Xbox/Steam/Epic/MS Storeは正式版プラットフォーム。'],\n      },\n    },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_QUICK_ANSWERS",
+      "id": "what-is-roco-kingdom",
+      "originalBlock": "'what-is-roco-kingdom': {\n      heading: { zh: '快速结论：免费开放世界精灵收集，主打抓宠、回合战斗与社交', en: 'Quick answer: a free open-world creature-collector focused on catching, turn-based battle, and social play', ja: '要点：無料オープンワールドの捕獲ゲーム' },\n      points: {\n        zh: ['开发方为腾讯魔方工作室，玩家扮演魔法学院学生 Roco 在 Carosia 大陆冒险。', '可捕捉 400+ 只名为 Jinies 的精灵，战斗为回合制。', '国际服与国服数据相互独立，正式版支持繁中、英文、日文等多语言。'],\n        en: ['Developed by Tencent Morefun Studios; you play as a magic-academy student called a Roco exploring Carosia.', 'Catch 400+ creatures named Jinies and battle in turn-based combat.', 'The international and CN versions keep separate data; the global release supports Traditional Chinese, English, Japanese, and more.'],\n        ja: ['開発はテンセント魔方工作室。魔法学院生「Roco」となりCarosia大陸を冒険。', '400体以上の「Jinies」を捕獲し、ターン制バトル。', '国際版と中国版のデータは独立。正式版は繁体中文、英語、日本語などに対応予定。'],\n      },\n    },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_QUICK_ANSWERS",
+      "id": "platforms-and-download-guide",
+      "originalBlock": "'platforms-and-download-guide': {\n      heading: { zh: '快速结论：CBT 只上 PC/iOS/Android，正式版才扩到主机', en: 'Quick answer: the CBT is PC/iOS/Android; console platforms arrive at full release', ja: '要点：CBTはPC/iOS/Androidのみ' },\n      points: {\n        zh: ['CBT（10/27）可玩平台为 PC、iOS、Android。', '正式版目标平台为 PC、PS5、Xbox、iOS、Android，PC 端含 Steam、Epic、MS Store。', 'Steam 商店页已上线但锁国区；国际服下载以官网为准。'],\n        en: ['The October 27 CBT supports PC, iOS, and Android.', 'The full release targets PC, PS5, Xbox, iOS, and Android, with the PC version on Steam, Epic, and Microsoft Store.', 'The Steam page is live but region-locked for CN; use the official site for downloads.'],\n        ja: ['CBTはPC、iOS、Androidに対応。', '正式版はPC、PS5、Xbox、iOS、Androidを予定。PC版はSteam、Epic、MS Store。', 'Steamページは中国リージョンロック中。DLは公式サイト基準。'],\n      },\n    },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_QUICK_ANSWERS",
+      "id": "pre-registration-rewards-faq",
+      "originalBlock": "'pre-registration-rewards-faq': {\n      heading: { zh: '快速结论：官网预注册开放中，具体奖励待官方公布', en: 'Quick answer: pre-registration is open; specific rewards are still pending official reveal', ja: '要点：事前登録受付中、報酬詳細は公式発表待ち' },\n      points: {\n        zh: ['国际服预注册已在官网开放，CBT 资格与预约报名联动。', '具体预约奖励、删档规则与付费细节暂未公布，将持续更新。', 'CBT 数据通常不继承到正式版，避免投入过多养成资源。'],\n        en: ['International pre-registration is live on the official site and linked to CBT eligibility.', 'Specific rewards, wipe rules, and monetization details are unannounced and will be updated here.', 'CBT progress typically does not carry to launch, so avoid heavy investment.'],\n        ja: ['国際版の事前登録は公式サイトで受付中、CBT資格と連動。', '報酬詳細、データ削除規則、課金は未発表のため随時更新。', 'CBTデータは正式版に引き継がれないことが多いため育成投資は控えめに。'],\n      },\n    },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_QUICK_ANSWERS",
+      "id": "is-roco-kingdom-free-to-play",
+      "originalBlock": "'is-roco-kingdom-free-to-play': {\n      heading: { zh: '快速结论：免费游玩，官方确认无 Pay-to-Win', en: 'Quick answer: free to play, with developer-confirmed no pay-to-win', ja: '要点：基本無料、課金優遇なし（公式）' },\n      points: {\n        zh: ['国际服全平台免费下载游玩（F2P）。', '官方明确 PvP 无 Pay-to-Win，400+ 精灵全部游戏内可获得。', '10/27 首测为删档测试，不含内购。'],\n        en: ['The global version is free to play on every platform.', 'PvP is developer-confirmed no pay-to-win, and all 400+ Jinies are earnable in-game.', 'The October 27 CBT is wipe-based with no purchases.'],\n        ja: ['国際版は全プラットフォームで基本無料。', 'PvPは課金優遇なし（公式）、400種以上は全てゲーム内で獲得可能。', '10/27 CBTはデータ消去型で課金なし。'],\n      },\n    },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_QUICK_ANSWERS",
+      "id": "roco-kingdom-release-date-guide",
+      "originalBlock": "'roco-kingdom-release-date-guide': {\n      heading: { zh: '快速结论：正式版日期未公布，10/27 首测先行', en: 'Quick answer: no launch date yet; the October 27 CBT comes first', ja: '要点：正式版日は未発表、まず10/27 CBT' },\n      points: {\n        zh: ['正式版发售日尚未公布，官方已确认长期路线图（新赛季/地图/剧情）。', '已确认节点：8/26–10/20 报名、10/23 查资格、10/27 首测。', '正式版登陆 PC/PS5/Xbox/iOS/Android，上线即支持跨平台联机。'],\n        en: ['No specific launch date is announced; a long-term roadmap (seasons, maps, story) is confirmed.', 'Confirmed milestones: sign-ups Aug 26–Oct 20, eligibility check Oct 23, CBT Oct 27.', 'The full release targets PC/PS5/Xbox/iOS/Android with day-one cross-play.'],\n        ja: ['正式版リリース日は未発表。シーズン・マップ・ストーリーの長期ロードマップは確定。', '申込8/26–10/20、資格確認10/23、CBT10/27。', '正式版はPC/PS5/Xbox/iOS/Android、クロスプレイ対応。'],\n      },\n    },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_QUICK_ANSWERS",
+      "id": "roco-kingdom-vs-pokemon",
+      "originalBlock": "'roco-kingdom-vs-pokemon': {\n      heading: { zh: '快速结论：想共享世界选 Roco，想单机叙事选宝可梦', en: 'Quick answer: pick Roco for a shared world, Pokemon for solo narrative', ja: '要点：共有世界ならロコ、シングルならポケモン' },\n      points: {\n        zh: ['核心循环相似（回合制收集养成），世界结构完全不同。', 'Roco Kingdom 免费跨平台、社交深度高；宝可梦买断制单机叙事强。', 'Roco 有 16 年中国 IP 底蕴（3.5 亿注册玩家），非简单模仿。'],\n        en: ['Similar core loop (turn-based collecting), very different world structure.', 'Roco Kingdom is free, cross-platform, and socially deep; Pokemon is premium and narrative-strong.', 'Roco has a 16-year Chinese IP pedigree (350M+ registered players), not a simple clone.'],\n        ja: ['基本ループは類似、世界設計は大きく異なる。', 'ロコは無料・クロスプラットフォーム・ソーシャル重視。ポケモンは買い切り・ストーリー重視。', 'ロコは16年の中国IP（登録3.5億人以上）。'],\n      },\n    },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_QUICK_ANSWERS",
+      "id": "roco-kingdom-crossplay-guide",
+      "originalBlock": "'roco-kingdom-crossplay-guide': {\n      heading: { zh: '快速结论：正式版 day-one 全平台联机，CBT 仅三端', en: 'Quick answer: day-one crossplay at launch; CBT covers three platforms', ja: '要点：正式版は全機種クロスプレイ、CBTは3平台' },\n      points: {\n        zh: ['正式版 PC/PS5/Xbox/移动端上线即支持跨平台联机与进度互通。', '10/27 首测仅 PC、iOS、Android 可玩，主机不参与。', '联机玩法含组队冒险、共骑、家园与友好决斗。'],\n        en: ['Day-one crossplay and cross-platform progression across PC/PS5/Xbox/mobile at launch.', 'The October 27 CBT is PC, iOS, and Android only — no consoles.', 'Co-op covers party exploration, co-riding, homes, and friendly duels.'],\n        ja: ['正式版はPC/PS5/Xbox/モバイルでクロスプレイと進行共有対応。', '10/27 CBTはPC・iOS・Androidのみ。', '協力はパーティ探索、共乗り、ホーム、友好決闘。'],\n      },\n    },"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_NEXT_STEPS",
+      "id": "global-cn-content-roadmap",
+      "originalBlock": "'global-cn-content-roadmap': [\n      { href: '/roco/guides/global-launch-readiness-checklist', label: { zh: '首发验收清单', en: 'Launch checklist', ja: 'ローンチ確認リスト' }, description: { zh: '将路线图转成 CBT 到首发的可验收条件。', en: 'Turn the roadmap into CBT-to-launch acceptance criteria.', ja: 'ロードマップをCBTからローンチまでの確認条件へ。' } },\n      { href: '/roco/guides/global-cn-release-governance', label: { zh: '跨服版本治理', en: 'CN-global governance', ja: '地域間リリース統治' }, description: { zh: '明确什么同步、什么本地化验证、何时公告或回滚。', en: 'Define parity, localization gates, communication, and rollback.', ja: '同期、翻訳ゲート、告知、ロールバックを定義。' } },\n    ],"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_NEXT_STEPS",
+      "id": "cbt-registration-guide",
+      "originalBlock": "'cbt-registration-guide': [\n      { href: '/roco/version', label: { zh: '版本时间线', en: 'Version timeline', ja: '版本タイムライン' }, description: { zh: '报名后接着看 CBT 到正式版的节点和已确认内容。', en: 'After signing up, continue into the CBT-to-launch timeline and confirmed content.', ja: '申込後はCBTから正式版までの予定と確定情報へ。' } },\n      { href: '/roco/guides/platforms-and-download-guide', label: { zh: '平台与下载', en: 'Platforms & download', ja: '平台とDL' }, description: { zh: '确认 CBT 可玩平台与设备要求。', en: 'Confirm CBT platforms and device requirements.', ja: 'CBTの対応平台と端末要件を確認。' } },\n    ],"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_NEXT_STEPS",
+      "id": "what-is-roco-kingdom",
+      "originalBlock": "'what-is-roco-kingdom': [\n      { href: '/roco/guides/cbt-registration-guide', label: { zh: 'CBT 报名指南', en: 'CBT registration', ja: 'CBT登録ガイド' }, description: { zh: '了解游戏后，先完成 10/27 首测报名。', en: 'Now that you know the game, sign up for the October 27 CBT.', ja: 'ゲーム理解後は10/27のCBTに申し込み。' } },\n      { href: '/roco/guides/pre-registration-rewards-faq', label: { zh: '预约奖励 FAQ', en: 'Pre-registration FAQ', ja: '事前登録FAQ' }, description: { zh: '预约福利、资格和语言支持疑问看这里。', en: 'Check rewards, eligibility, and language support here.', ja: '報酬、資格、言語サポートをここで確認。' } },\n    ],"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_NEXT_STEPS",
+      "id": "platforms-and-download-guide",
+      "originalBlock": "'platforms-and-download-guide': [\n      { href: '/roco/download', label: { zh: '下载主入口', en: 'Download hub', ja: 'DL入口' }, description: { zh: '把官网、商店和平台状态集中到可执行下载页。', en: 'Move into the executable download page with store status.', ja: 'ストア状況を含むDLページへ進みます。' } },\n      { href: '/roco/guides/cbt-registration-guide', label: { zh: 'CBT 报名', en: 'CBT registration', ja: 'CBT登録' }, description: { zh: 'CBT 资格与报名绑定，先完成预注册。', en: 'CBT eligibility ties to pre-registration, so sign up first.', ja: 'CBT資格は事前登録と連動するため先に申し込み。' } },\n    ],"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_NEXT_STEPS",
+      "id": "pre-registration-rewards-faq",
+      "originalBlock": "'pre-registration-rewards-faq': [\n      { href: '/roco/guides/cbt-registration-guide', label: { zh: 'CBT 报名指南', en: 'CBT registration', ja: 'CBT登録ガイド' }, description: { zh: '福利之外，报名入口和必填问卷在这里。', en: 'Beyond rewards, find the signup page and questionnaire here.', ja: '報酬以外に申込入口と必須アンケートはこちら。' } },\n      { href: '/roco/guides/platforms-and-download-guide', label: { zh: '平台与下载', en: 'Platforms & download', ja: '平台とDL' }, description: { zh: '确认可玩平台后规划设备。', en: 'Plan your device after checking supported platforms.', ja: '対応平台確認後に端末を準備。' } },\n    ],"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_NEXT_STEPS",
+      "id": "is-roco-kingdom-free-to-play",
+      "originalBlock": "'is-roco-kingdom-free-to-play': [\n      { href: '/roco/guides/cbt-registration-guide', label: { zh: 'CBT 报名指南', en: 'CBT registration', ja: 'CBT登録ガイド' }, description: { zh: '免费入坑，先报名 10/27 首测。', en: 'Free to start — sign up for the October 27 CBT.', ja: '無料で開始。まず10/27 CBTに申込。' } },\n      { href: '/roco/guides/roco-kingdom-vs-pokemon', label: { zh: '对比宝可梦', en: 'vs Pokemon', ja: 'ポケモン比較' }, description: { zh: '和买断制精灵收集游戏怎么选。', en: 'How it compares to premium creature collectors.', ja: '買い切り収集ゲームとの違い。' } },\n    ],"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_NEXT_STEPS",
+      "id": "roco-kingdom-release-date-guide",
+      "originalBlock": "'roco-kingdom-release-date-guide': [\n      { href: '/roco/guides/cbt-registration-guide', label: { zh: 'CBT 报名指南', en: 'CBT registration', ja: 'CBT登録ガイド' }, description: { zh: '等正式版之前，先参加 10/27 首测。', en: 'While waiting for launch, join the October 27 CBT.', ja: '正式版待ちの間に10/27 CBTへ。' } },\n      { href: '/roco/guides/platforms-and-download-guide', label: { zh: '平台与下载', en: 'Platforms & download', ja: '平台とDL' }, description: { zh: '确认各阶段可玩平台。', en: 'Check platforms per release phase.', ja: '各段階の対応平台を確認。' } },\n    ],"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_NEXT_STEPS",
+      "id": "roco-kingdom-vs-pokemon",
+      "originalBlock": "'roco-kingdom-vs-pokemon': [\n      { href: '/roco/guides/is-roco-kingdom-free-to-play', label: { zh: '免费模式详解', en: 'F2P model', ja: 'F2Pモデル' }, description: { zh: '商业模式差异的具体说明。', en: 'Details on the monetization difference.', ja: '課金モデルの違いを詳しく。' } },\n      { href: '/roco/guides/co-op-and-social-guide', label: { zh: '联机与社交', en: 'Co-op & social', ja: '協力・ソーシャル' }, description: { zh: '共享世界的社交玩法一览。', en: 'See the shared-world social features.', ja: '共有世界のソーシャル機能。' } },\n    ],"
+    },
+    {
+      "file": "apps/web/app/[lang]/[game]/guides/[slug]/page.tsx",
+      "container": "GUIDE_NEXT_STEPS",
+      "id": "roco-kingdom-crossplay-guide",
+      "originalBlock": "'roco-kingdom-crossplay-guide': [\n      { href: '/roco/guides/co-op-and-social-guide', label: { zh: '联机与社交指南', en: 'Co-op guide', ja: '協力ガイド' }, description: { zh: '跨平台组队能玩什么。', en: 'What cross-platform parties can do together.', ja: 'クロスプレイでできること。' } },\n      { href: '/roco/guides/platforms-and-download-guide', label: { zh: '平台与下载', en: 'Platforms & download', ja: '平台とDL' }, description: { zh: '各平台下载入口。', en: 'Download entry points per platform.', ja: '各平台のDL入口。' } },\n    ],"
+    }
+  ],
+  "closeout": {
+    "reviewedAt": "2026-10-24",
+    "gameVerification": "not_performed",
+    "method": "editorial_withdrawal_after_historical_provenance_review_not_new_official_confirmation",
+    "characters": {
+      "ids": [
+        "meewee",
+        "sparka",
+        "cerulla"
+      ],
+      "withdrawnFields": [
+        "skills",
+        "stats",
+        "releaseVersion"
+      ],
+      "rewrittenFields": [
+        "description",
+        "descriptionEn",
+        "descriptionJa",
+        "habitat",
+        "habitatEn",
+        "evolution",
+        "evolutionEn"
+      ],
+      "legacyIdentityClassificationAndListArtwork": "retained_for_navigation_not_factually_approved",
+      "detailArtwork": "withheld_pending_identity_review",
+      "otherThreeRecords": "semantically_unchanged_not_approved"
+    },
+    "guides": {
+      "ids": [
+        "global-cn-content-roadmap",
+        "cbt-registration-guide",
+        "what-is-roco-kingdom",
+        "platforms-and-download-guide",
+        "pre-registration-rewards-faq",
+        "is-roco-kingdom-free-to-play",
+        "roco-kingdom-release-date-guide",
+        "roco-kingdom-vs-pokemon",
+        "roco-kingdom-crossplay-guide"
+      ],
+      "localizedFields": [
+        "title",
+        "summary",
+        "content",
+        "quickFacts",
+        "serpTitle",
+        "serpDescription",
+        "faq"
+      ],
+      "languages": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "purpose": "topic_specific_verification_checklists_not_official_game_facts",
+      "originalUpdatedAt": "unchanged",
+      "editorialDate": "contentReview.reviewedAt",
+      "removedHardcodedBlocks": 17,
+      "reviewedPageDynamicModules": "quick_answers_banner_intent_images_next_steps_related_guides_suppressed",
+      "otherTwentyOneRecords": "semantically_unchanged_not_approved"
+    },
+    "indexing": {
+      "readingStatus": 200,
+      "canonical": "self",
+      "robots": "noindex, follow",
+      "hreflang": "absent",
+      "sitemap": "exclude_reviewed_details",
+      "existingSearchRemoval": "not_guaranteed"
+    },
+    "inventory": {
+      "contract": "raw-inventory-v1",
+      "pairs": 90,
+      "equal": 90,
+      "sourceOnly": 5,
+      "pending": [],
+      "holds": [
+        {
+          "path": "roco/raw-characters.json",
+          "status": "needs_review",
+          "sourceSha256": "443c6c6cca88ff5372760e4e39887168650a5668ac4ec710615e7f94f91510d7",
+          "mirrorSha256": "443c6c6cca88ff5372760e4e39887168650a5668ac4ec710615e7f94f91510d7",
+          "reason": "Copied international skills/stats withdrawn for three entries; legacy identities/classifications and the other three entries remain independently unverified.",
+          "reviewDocument": "plans/multi-game-s2-7-roco-content-closeout-2026-10-24.md"
+        },
+        {
+          "path": "roco/raw-guides.json",
+          "status": "needs_review",
+          "sourceSha256": "c01e0925be5404c38f90be4b911f9caeff4f4681cd1261fbe2f65be36792d2dd",
+          "mirrorSha256": "c01e0925be5404c38f90be4b911f9caeff4f4681cd1261fbe2f65be36792d2dd",
+          "reason": "Nine guides rewritten as editorial verification checklists; other 21 guides and related public feature/release assertions still require factual review.",
+          "reviewDocument": "plans/multi-game-s2-7-roco-content-closeout-2026-10-24.md"
+        }
+      ],
+      "issues": [],
+      "engineeringReady": true,
+      "contentReleaseReady": false,
+      "factualApproval": "not_implied_by_mirror_equality"
+    },
+    "managed": {
+      "contract": "managed-raw-mirrors-v1",
+      "pairs": 7,
+      "entries": 111
+    },
+    "holdPolicy": "Two file-level factual holds remain even with 90 equal pairs; source+mirror simultaneous semantic changes require explicit new review. No automated ledger refresh or production approval."
+  }
+}

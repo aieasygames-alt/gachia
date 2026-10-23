@@ -1,6 +1,6 @@
 import { GAMES, LOCALES } from '@gachia/core';
 import type { MetadataRoute } from 'next';
-import { getEntryUpdatedAt, hasLocalizedContent, isAniimoCharacterIndexable } from '@/lib/seo-metadata';
+import { getEntryUpdatedAt, hasLocalizedContent, isAniimoCharacterIndexable, isContentUnderReview } from '@/lib/seo-metadata';
 import { GAME_DEPLOYMENTS } from '@gachia/core';
 import { isGuideReadable } from '@/lib/retired-pages';
 
@@ -86,6 +86,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       if (CHAR_GAMES.includes(gameId as typeof CHAR_GAMES[number])) {
         const chars = await getCharactersForGame(gameId);
         for (const char of chars) {
+          if (isContentUnderReview(char)) continue;
           if (gameId === 'aniimo' && !isAniimoCharacterIndexable(char, locale)) continue;
           entries.push({
             url: `${BASE_URL}/${locale}/${gameId}/characters/${char.id}`,
@@ -111,7 +112,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       if (GUIDE_GAMES.includes(gameId as typeof GUIDE_GAMES[number])) {
         const guides = await getGuidesForGame(gameId);
         for (const guide of guides) {
-          if (!isGuideReadable(gameId, guide.id, locale) || !hasLocalizedContent(guide, locale)) continue;
+          if (isContentUnderReview(guide) || !isGuideReadable(gameId, guide.id, locale) || !hasLocalizedContent(guide, locale)) continue;
           const guideHints = getGuideSitemapHints(guide);
 
           entries.push({

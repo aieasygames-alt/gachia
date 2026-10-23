@@ -18,6 +18,7 @@ import { Section, NextStepSection } from './character-detail-shared';
 import type { RocoCnSkill, RocoCnStats } from '@gachia/data/games/roco-cn/types';
 import { loadJson } from '@gachia/data/load-json';
 import { join } from 'node:path';
+import { ContentReviewNotice } from '@/components/wiki/content-review-notice';
 
 // ============================================================
 // Roco Kingdom Jinie Detail
@@ -91,6 +92,8 @@ interface JinieLike {
   evolutionEn: string;
   description: string;
   descriptionEn: string;
+  descriptionJa?: string;
+  contentReview?: { status: 'needs_verification'; reviewedAt: string };
   status: string;
   skills?: RocoCnSkill[];
   stats?: RocoCnStats;
@@ -142,12 +145,14 @@ function JinieDetail({
       {/* Header */}
       <div className="mb-6 flex flex-col gap-6 md:flex-row">
         <div className="shrink-0 overflow-hidden rounded-lg border border-game-border bg-game-surface">
-          <CharacterAvatar
+          {char.contentReview ? <div data-review-portrait className="flex h-64 w-64 items-center justify-center text-sm text-game-text-muted">
+            {{ zh: '形象待核实', en: 'Appearance unverified', ja: '外見未確認' }[locale]}
+          </div> : <CharacterAvatar
             src={imageUrl}
             alt={charName}
             element={char.attribute}
             className="h-64 w-64 object-cover object-top"
-          />
+          />}
         </div>
         <div className="flex-1">
           <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
@@ -156,7 +161,7 @@ function JinieDetail({
           <div className="mb-3">
             <FavoriteButton gameId={gameId} characterId={char.id} />
           </div>
-          <div className="mb-3 flex flex-wrap gap-2">
+          {!char.contentReview && <div className="mb-3 flex flex-wrap gap-2">
             <span className="rounded px-2 py-0.5 text-sm font-medium text-white" style={{ backgroundColor: ROCO_ELEMENT_COLORS[char.attribute] ?? '#888' }}>
               {elementName}
             </span>
@@ -173,15 +178,16 @@ function JinieDetail({
                 {char.releaseVersion}
               </span>
             )}
-          </div>
+          </div>}
           <p className="mb-3 text-sm leading-relaxed text-game-text-muted">
-            {localeStr(char.description, char.descriptionEn, locale)}
+            {localeStr(char.description, char.descriptionEn, locale, char.descriptionJa)}
           </p>
         </div>
       </div>
 
       {/* Attributes */}
-      <Section title={locale === 'zh' ? '基本信息' : locale === 'ja' ? '基本情報' : 'Profile'}>
+      {char.contentReview && <ContentReviewNotice reviewedAt={char.contentReview.reviewedAt} locale={locale} />}
+      {!char.contentReview && <Section title={locale === 'zh' ? '基本信息' : locale === 'ja' ? '基本情報' : 'Profile'}>
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="rounded-lg border border-game-border bg-game-surface p-4">
             <div className="mb-1 text-xs text-game-text-muted">
@@ -200,7 +206,7 @@ function JinieDetail({
             </div>
           </div>
         </div>
-      </Section>
+      </Section>}
 
       {/* Stats (base stats / racial values) */}
       {char.stats && (
@@ -293,7 +299,7 @@ function JinieDetail({
         </Section>
       )}
 
-      <NextStepSection locale={locale} gameId={gameId} />
+      {!char.contentReview && <NextStepSection locale={locale} gameId={gameId} />}
 
       {/* Back */}
       <div className="border-t border-game-border pt-4">

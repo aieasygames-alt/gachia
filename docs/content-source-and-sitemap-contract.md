@@ -1,6 +1,6 @@
 # 内容源与 Sitemap 契约
 
-适用版本：S2.6。本契约覆盖主站 sitemap 所有权、Sea 派生物、五对受管原始镜像、原神攻略语言决策、五类平台页面元数据及原始文件全清单/待审门禁；不表示全站内容事实或翻译质量已核验。
+适用版本：S2.7。本契约覆盖主站 sitemap 所有权、Sea 派生物、七对受管原始镜像、原神攻略语言决策、五类平台页面元数据及原始文件全清单/待审/事实保留门禁；不表示全站内容事实或翻译质量已核验。
 
 ## 1. 公开发现入口
 
@@ -72,9 +72,11 @@ pnpm test:release
 
 完成 OpenNext 构建后执行 `pnpm test:managed-content:local`，自动启动隔离本地 Worker，检查五份 raw JSON、三份搜索索引、XML、归档/退役发现路径及三语言代表页面，覆盖 1440/390px。S2.6 扩展至 64 个浏览器例，保留官方声骸名称/效果、未知二件套、来源、推荐撤回及列表点击，新增鸣潮区域三语言展示和洛克首页/版本/日历撤回；主站 CI 在封存前复用此检查。脚本不接受远程 origin 或其他 CLI 参数，不使用生产数据库、认证密钥或云端绑定；浏览器阻断外部请求，证据保留于 `.release-records/managed-content-*`。它不能代替原有 `runtime-rollout-smoke` 和生产发布门禁。
 
+S2.7 扩至七份 raw JSON、三份搜索和 148 个浏览器例：新增九篇 Roco 攻略、三只角色的三语双尺寸正文/FAQ/元数据/索引检查，以及列表的全部相关卡片和实际点击。主站本地清单变为 4,436 条，仅移出这些实体原有的 28 条（zh/en 各十二、ja 四），新补日文清单不进入索引；详情继续 200。外部 CDN 被 fixture 阻断，不将本地通过解释为生产图片可达或身份核验。真实发布仍须比较当天完整云端 sitemap 并集。
+
 ## 4. 受管原始镜像
 
-固定注册表为 `packages/data/scripts/raw-mirror-contract.mjs`：wuwa/raw-redeem-codes.json、skjh/raw-guides.json、roco-cn/raw-guides.json、wuwa/raw-echoes.json、wuwa/raw-regions.json，合计 75 条记录。前三对 S2.2 的归并依据是既有提交及保守状态处理，不是新一次官方事实审核。声骸在 S2.5 经三语言公告核对与不明数值/推荐撤回后纳入；区域在 S2.6 经公告摘录及不明归属撤回纳入；剩余 roco 角色一对仍不自动同步。
+固定注册表为 `packages/data/scripts/raw-mirror-contract.mjs`：wuwa/raw-redeem-codes.json、skjh/raw-guides.json、roco-cn/raw-guides.json、wuwa/raw-echoes.json、wuwa/raw-regions.json、roco/raw-characters.json、roco/raw-guides.json，合计 111 条记录。前三对 S2.2 的归并依据是既有提交及保守状态处理，不是新一次官方事实审核。声骸在 S2.5 经三语言公告核对与不明数值/推荐撤回后纳入；区域在 S2.6 经公告摘录及不明归属撤回纳入；Roco 两对在 S2.7 撤回选定断言后纳入，仍有独立事实 hold，不能将受管视为已核实。
 
 声骸的新三条保留 ID/URL，使用官方中英日名称和五件套原文，新增来源范围说明；`bonus2pc` 允许缺失，由访问器输出本地化未知提示，不从其他套装填值。推荐置空不是不适配结论。三语言搜索与实际列表/详情使用同一名称；较旧 12 条并未在本批重新认证。详见 [S2.5 逐字段决策](../plans/multi-game-s2-5-official-echo-closeout-2026-10-24.md)。
 
@@ -122,19 +124,23 @@ node scripts/runtime-rollout-smoke.mjs game-genshin
 
 ## 7. 原始文件全清单与待审内容保护
 
-`packages/data/raw-content-review.json` 显式登记 90 对 raw 镜像和 5 个仅源文件（四份角色摘要及独立蓝色星原角色源），由 `packages/data/scripts/raw-inventory-contract.mjs` 扫描双方目录并比对。当前为 89 对相等、1 对待审、3 个差异实体；仅源边界不是漏生成，也不允许自动新增主站镜像。
+`packages/data/raw-content-review.json` 显式登记 90 对 raw 镜像和 5 个仅源文件（四份角色摘要及独立蓝色星原角色源），由 `packages/data/scripts/raw-inventory-contract.mjs` 扫描双方目录并比对。S2.7 为 90 对相等、pending 0，但 Roco 角色/攻略两份源各有事实 hold；仅源边界不是漏生成，也不允许自动新增主站镜像。
 
 pending 绑定双方完整文档的语义 SHA-256、实体与字段差分、原因及可读取的审查文档；未知漂移、文件增删/非法 JSON、符号链接、待审值改变或静默同步都会失败。对象键顺序/空白不影响摘要，数组顺序影响。普通相等项允许审查后的同批源/镜像更新，新游戏文件须登记全清单。检查器只读，不联网、不自动更新台账、不批准内容。
 
+`holds` 与 `pending` 独立：前者记录尚未关闭的事实/适用范围风险，不要求镜像不同；后者专门记录已知漂移。hold 也绑定双方完整语义摘要、原因、状态和可读 plans 审查文档，禁止未知路径、重复路径、非法状态/摘要或空原因。即使双方同时改成相等新内容，旧 hold 也会阻断工程检查。精确快照可供本地构建/隔离审查；生产要求两种未决项均为零。变更或关闭 hold 必须附逐项内容决策，不能只刷新摘要让检查变绿。未登记 hold 的其他相等文件也不因此取得全站事实批准。
+
 ```sh
 pnpm --filter @gachia/data check:raw-inventory
-# 当前因一对 pending 预期退出 1；输出 engineeringReady 与 contentReleaseReady 的不同状态。
+# 当前因两项事实 hold 预期退出 1，虽然 pending 已清零。
 pnpm content:release-ready
 ```
 
-工程检查接入现有应用前置脚本、manifest 生成前/验证、CI 生成前和测试；精确已知 pending 允许开发/build/staging 审查，不把未知差异当警告。主站 deploy/upload 先执行 `--release`；主站 production workflow 在昂贵构建前及真正推广前重复执行，pending 非零即失败。独立游戏不因主站已知 pending 被统一阻断，其既有生产保护仍生效。手写底层 CLI 可绕开仓库检查，不属于受支持发布方式，门禁不是云端权限控制。
+工程检查接入现有应用前置脚本、manifest 生成前/验证、CI 生成前和测试；精确已知 pending/holds 允许开发/build/staging 审查，不把未知差异当警告。主站 deploy/upload 先执行 `--release`；主站 production workflow 在昂贵构建前及真正推广前重复执行，pending 或 holds 非零即失败。独立游戏不因主站已知未决项被统一阻断，其既有生产保护仍生效。手写底层 CLI 可绕开仓库检查，不属于受支持发布方式，门禁不是云端权限控制。
 
-待审值并未从历史源或所有页面隔离：roco 角色仍静态导入待审原始源；区域 source/public 回退在 S2.6 已同批归并，仍不能宣称争议内容已经下架或生产当前与镜像相同。详见 [S2.4 结案流程、来源核对及边界](../plans/multi-game-s2-4-content-review-closeout-2026-10-24.md)。待审关闭必须记录字段采用/纠正/撤回依据、区服/语言/版本范围并同批归并，禁止仅改哈希或清空 pending 放行。
+S2.7 撤回三只角色从国服复用的技能/数值和旧描述，把九篇攻略改为三语主题核验清单；标记 `contentReview.status=needs_verification` 的详情保持 200、自身 canonical、noindex/follow，无 hreflang，也不进入 sitemap。角色不再展示星级/属性/编号/进化/栖息地断言，未知数值不以零代填，详情使用“形象待核实”占位而非确认旧立绘身份。攻略不展示硬编码快速回答、下一步、相关文章及配图，九篇对应的旧快速回答/下一步配置同时移除并归档，避免撤标记后复活旧承诺。列表仍可读可点击且显示纠错后的标题/状态，不将无证据视为测试取消。编辑纠错日与游戏核验日分开，noindex 也不保证搜索引擎立即移除已有收录。
+
+这不是整个 Roco 的隔离：保留的历史身份/分类、另外三只角色、二十一篇攻略、强度榜和首页/下载/地图等文案仍需审查；其他游戏历史相等数据也未全量重审。详见 [S2.7 决策、验收与后续门槛](../plans/multi-game-s2-7-roco-content-closeout-2026-10-24.md)和 [S2.4 结案流程](../plans/multi-game-s2-4-content-review-closeout-2026-10-24.md)。
 
 ## 8. 区域资料与错误来源传播
 
@@ -142,11 +148,11 @@ S2.6 复用 S2.5 已捕获的中英日官方 3.7 响应，核对梦枢天罗的�
 
 洛克旧 Steam 来源身份错误的影响扩展到首页推广、版本快照/页面/元数据/FAQ 和两组日历条目：撤回确认日期和官方源等级，不通过新填日期/改时区制造倒计时；快照可显式缺日期并展示“日程尚未核实”，来源类型为 needs_verification。编辑纠错日不是游戏公告或开服日。活动页解释暂不分类不代表取消，保留原条目到决策报告，不删除历史证据。
 
-**尚未完成：**洛克 30 篇源攻略中按精确测试名称/日程标记命中 9 篇，正文、FAQ、摘要等仍可能包含重复断言；它们和 roco 角色值尚未全面纠正，未声称整个游戏已隔离。清单只是定位线索，不证明所有断言都由同一 Steam 引用产生。它们需要独立证据或保守撤回，不能在将来 raw pending 清零后自动当作事实通过。较旧五个鸣潮区域也未在本批复核。详见 [S2.6 交付记录](../plans/multi-game-s2-6-region-source-closeout-2026-10-24.md)及其来源报告。
+S2.6 定位的九篇攻略在 S2.7 已撤回确定断言，原文/FAQ/角色源与镜像原值均留存；不是取得新的官方事实依据，也不证明全部旧说法都来自同一错误 Steam 引用。剩余二十一篇及其他公共入口仍待核验，较旧五个鸣潮区域也未在本批复核。不能因为 raw pending 清零或已翻译三语就放行生产。
 
 ## 9. 后续推广与回退
 
-- 90 对原始 JSON 目前 89 对一致、1 对待审：roco 角色；保留原始审计基线，不把工程归并当成事实重新认证。skjh 公开镜像中的四篇运营修订已完整回迁源，未以旧源覆盖。
+- 90 对原始 JSON 全部一致、pending 0、事实 holds 2：roco 角色与攻略；保留原始审计基线，不把工程归并当成事实重新认证。skjh 公开镜像中的四篇运营修订已完整回迁源，未以旧源覆盖。
 - 扩展下一游戏前，先确认官方事实/区服/日期和退役 URL，再把源、镜像、页面语言与 sitemap 作为同批变更验收。
 - 真正发布前仍需受控 staging、根索引及全部子图 HTTP、正文与语言契约、静态资产保留、生产回滚版本和 Actions 预算核验。单元测试或本地 XML 通过不表示已上线。
 - 回退必须回退完整代码及派生物组合，不能仅回退原始源或一份公开镜像。S1 静态资源保留与无账号策略继续适用；不得恢复登录、覆盖其他 Worker 或删除保留证据。

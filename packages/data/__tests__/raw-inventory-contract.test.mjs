@@ -32,10 +32,11 @@ afterEach(async () => { await Promise.all(roots.splice(0).map(root => rm(root, {
 
 it('checks all committed pairs and does not confuse containment with approval', async () => {
   const result = await verifyRawInventory();
-  expect(result).toMatchObject({ pairs: 90, equal: 89, sourceOnly: 5, issues: [], engineeringReady: true, contentReleaseReady: false });
-  expect(result.pending.map(row => row.path)).toEqual(['roco/raw-characters.json']);
-  expect(result.pending.flatMap(row => row.changes)).toHaveLength(3);
-  await expect(verifyRawInventory(undefined, { release: true })).rejects.toThrow('1 raw pairs');
+  expect(result).toMatchObject({ pairs: 90, equal: 90, sourceOnly: 5, issues: [], engineeringReady: true, contentReleaseReady: false });
+  expect(result.pending).toEqual([]);
+  expect(result.holds.map(row => row.path)).toEqual(['roco/raw-characters.json', 'roco/raw-guides.json']);
+
+  await expect(verifyRawInventory(undefined, { release: true })).rejects.toThrow('2 factual holds');
 });
 it('allows bounded engineering with pending content but blocks release without writing anything', async () => {
   const { root } = await fixture();
@@ -48,6 +49,40 @@ it('allows bounded engineering with pending content but blocks release without w
 it('allows an explicitly resolved equal inventory, without claiming factual approval', async () => {
   const { root } = await fixture({ pending: false });
   expect(await verifyRawInventory(root, { release: true })).toMatchObject({ contentReleaseReady: true, factualApproval: 'not_implied_by_mirror_equality' });
+});
+async function heldFixture() {
+  const result = await fixture({ pending: false });
+  result.ledger.holds = [{ path: pair, status: 'needs_review', sourceSha256: rawSemanticHash(before), mirrorSha256: rawSemanticHash(before),
+    reason: 'Equal mirrors still contain unverified claims', reviewDocument: 'plans/review.md' }];
+  await put(result.root, RAW_REVIEW_LEDGER, result.ledger);
+  return result;
+}
+it('keeps an equal factual hold engineering-readable but not release-ready, without rewriting evidence', async () => {
+  const { root } = await heldFixture();
+  const original = await readFile(resolve(root, RAW_REVIEW_LEDGER), 'utf8');
+  expect(await verifyRawInventory(root)).toMatchObject({ equal: 1, pending: [], engineeringReady: true, contentReleaseReady: false });
+  await expect(verifyRawInventory(root, { release: true })).rejects.toThrow('1 factual holds');
+  expect(await readFile(resolve(root, RAW_REVIEW_LEDGER), 'utf8')).toBe(original);
+});
+it('rejects simultaneous source and mirror changes under a factual hold even when still equal', async () => {
+  const { root } = await heldFixture();
+  for (const directory of [SOURCE, MIRROR]) await put(root, `${directory}/${pair}`, after);
+  await expect(verifyRawInventory(root)).rejects.toThrow('held content changed since review');
+});
+it.each(['duplicate', 'path', 'status', 'source-hash', 'mirror-hash', 'reason', 'document', 'missing-document', 'not-array'])('rejects invalid factual hold: %s', async kind => {
+  const { root, ledger } = await heldFixture();
+  const hold = ledger.holds[0];
+  if (kind === 'duplicate') ledger.holds.push({ ...hold });
+  if (kind === 'path') hold.path = only;
+  if (kind === 'status') hold.status = 'approved';
+  if (kind === 'source-hash') hold.sourceSha256 = 'bad';
+  if (kind === 'mirror-hash') hold.mirrorSha256 = 'bad';
+  if (kind === 'reason') hold.reason = '';
+  if (kind === 'document') hold.reviewDocument = '../secret.md';
+  if (kind === 'missing-document') await rm(resolve(root, 'plans/review.md'));
+  if (kind === 'not-array') ledger.holds = {};
+  await put(root, RAW_REVIEW_LEDGER, ledger);
+  await expect(verifyRawInventory(root)).rejects.toThrow(/Invalid|review document/);
 });
 it.each([SOURCE, MIRROR])('blocks changed pending bytes semantically on %s', async directory => {
   const { root } = await fixture();

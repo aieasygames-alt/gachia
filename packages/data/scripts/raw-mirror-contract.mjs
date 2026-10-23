@@ -10,6 +10,8 @@ export const MANAGED_MIRRORS = Object.freeze([
   { game: 'roco-cn', file: 'raw-guides.json', key: 'id' },
   { game: 'wuwa', file: 'raw-echoes.json', key: 'id' },
   { game: 'wuwa', file: 'raw-regions.json', key: 'id' },
+  { game: 'roco', file: 'raw-characters.json', key: 'id' },
+  { game: 'roco', file: 'raw-guides.json', key: 'id' },
 ].map(Object.freeze));
 
 async function inputs(root) {

@@ -114,47 +114,23 @@
       "reason": "Source-only compact input consumed by manifest generation; not a public raw mirror."
     }
   ],
-  "pending": [
+  "pending": [],
+  "holds": [
     {
       "path": "roco/raw-characters.json",
       "status": "needs_review",
-      "sourceSha256": "154c996ee0666726475fd5a74b1837c69446373060c82c22c9d35ef2367a667a",
-      "mirrorSha256": "d1e392a5532739cc71185808bc7708773e075095b436b760c806fa5d7f0645f9",
-      "changes": [
-        {
-          "id": "cerulla",
-          "kind": "changed",
-          "fields": [
-            "description",
-            "descriptionEn",
-            "releaseVersion",
-            "skills",
-            "stats"
-          ]
-        },
-        {
-          "id": "meewee",
-          "kind": "changed",
-          "fields": [
-            "description",
-            "descriptionEn",
-            "releaseVersion",
-            "skills",
-            "stats"
-          ]
-        },
-        {
-          "id": "sparka",
-          "kind": "changed",
-          "fields": [
-            "releaseVersion",
-            "skills",
-            "stats"
-          ]
-        }
-      ],
-      "reason": "International starter skills/stats were reused from CN in a historical commit; international scope and values are not established.",
-      "reviewDocument": "plans/multi-game-s2-4-content-review-closeout-2026-10-24.md"
+      "sourceSha256": "443c6c6cca88ff5372760e4e39887168650a5668ac4ec710615e7f94f91510d7",
+      "mirrorSha256": "443c6c6cca88ff5372760e4e39887168650a5668ac4ec710615e7f94f91510d7",
+      "reason": "Copied international skills/stats withdrawn for three entries; legacy identities/classifications and the other three entries remain independently unverified.",
+      "reviewDocument": "plans/multi-game-s2-7-roco-content-closeout-2026-10-24.md"
+    },
+    {
+      "path": "roco/raw-guides.json",
+      "status": "needs_review",
+      "sourceSha256": "c01e0925be5404c38f90be4b911f9caeff4f4681cd1261fbe2f65be36792d2dd",
+      "mirrorSha256": "c01e0925be5404c38f90be4b911f9caeff4f4681cd1261fbe2f65be36792d2dd",
+      "reason": "Nine guides rewritten as editorial verification checklists; other 21 guides and related public feature/release assertions still require factual review.",
+      "reviewDocument": "plans/multi-game-s2-7-roco-content-closeout-2026-10-24.md"
     }
   ]
 }

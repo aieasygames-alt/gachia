@@ -7,13 +7,19 @@
     "attribute": "grass",
     "attributeEn": "Grass",
     "rarity": 4,
-    "habitat": "卡洛西亚魔法学院",
-    "habitatEn": "Carosia Magic Academy",
-    "evolution": "喵喵 → 待公开",
-    "evolutionEn": "Meewee → TBA",
-    "description": "官方确认的国际服草系御三家（叶猫），性格亲和，战斗中每回合回复能量、续航出色。未被选中的御三家可在好友的世界中捕捉。国际服完整技能与进化链待 CBT 官方图鉴公布。",
-    "descriptionEn": "Officially confirmed Grass-type global starter (a leaf cat) with a friendly demeanor; recovers energy each turn for strong sustain. Unpicked starters can be caught in friends' worlds. Full skills and evolution line TBA via the official CBT codex.",
-    "status": "revealed"
+    "habitat": "尚未独立核实",
+    "habitatEn": "Not independently verified",
+    "evolution": "尚未独立核实",
+    "evolutionEn": "Not independently verified",
+    "description": "本站保留的 Meewee 资料入口，名称与分类仅用于历史导航，不代表官方译名或已核实的国际服御三家定位。此前从国服复用的技能、种族值和相关战斗描述已撤回；国际服身份、数值与机制仍待独立核实。",
+    "descriptionEn": "Retained reference entry for Meewee. Names and classifications are legacy navigation labels, not verified official names or global starter identities. Skills, base stats and combat claims reused from CN data are withdrawn; global identity, values and mechanics still need independent verification.",
+    "status": "revealed",
+    "descriptionJa": "Meewee の既存資料入口です。名称と分類は過去のナビゲーション用であり、公式名や国際版の御三家としての確認ではありません。中国版から流用したスキル、種族値、戦闘説明は撤回し、国際版の同一性、数値、仕組みは独立した確認待ちです。",
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "international_identity_and_values_unverified"
+    }
   },
   {
     "id": "sparka",
@@ -23,13 +29,19 @@
     "attribute": "fire",
     "attributeEn": "Fire",
     "rarity": 4,
-    "habitat": "卡洛西亚魔法学院",
-    "habitatEn": "Carosia Magic Academy",
-    "evolution": "火花 → … → Pyreon（可 Alpha 化 Blazion）",
-    "evolutionEn": "Sparka → … → Pyreon (Alpha form: Blazion)",
-    "description": "官方确认的国际服火系御三家（火牛），高爆发输出，前期开荒与推剧情效率最高。最终进化为 Pyreon，可通过 Alpha 血统临时变身为 boss 级形态 Blazion。中间进化形态待 CBT 官方图鉴确认。",
-    "descriptionEn": "Officially confirmed Fire-type global starter (a fire ox) with high burst damage and the fastest early-game pacing. Its final evolution is Pyreon, which can temporarily Alpha-transform into the boss-level Blazion. The intermediate stage TBA via the official CBT codex.",
-    "status": "revealed"
+    "habitat": "尚未独立核实",
+    "habitatEn": "Not independently verified",
+    "evolution": "尚未独立核实",
+    "evolutionEn": "Not independently verified",
+    "description": "本站保留的 Sparka 资料入口，名称与分类仅用于历史导航，不代表官方译名或已核实的国际服御三家定位。此前从国服复用的技能、种族值和相关战斗描述已撤回；国际服身份、数值与机制仍待独立核实。",
+    "descriptionEn": "Retained reference entry for Sparka. Names and classifications are legacy navigation labels, not verified official names or global starter identities. Skills, base stats and combat claims reused from CN data are withdrawn; global identity, values and mechanics still need independent verification.",
+    "status": "revealed",
+    "descriptionJa": "Sparka の既存資料入口です。名称と分類は過去のナビゲーション用であり、公式名や国際版の御三家としての確認ではありません。中国版から流用したスキル、種族値、戦闘説明は撤回し、国際版の同一性、数値、仕組みは独立した確認待ちです。",
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "international_identity_and_values_unverified"
+    }
   },
   {
     "id": "cerulla",
@@ -39,13 +51,19 @@
     "attribute": "water",
     "attributeEn": "Water",
     "rarity": 4,
-    "habitat": "卡洛西亚魔法学院",
-    "habitatEn": "Carosia Magic Academy",
-    "evolution": "水蓝蓝 → 待公开",
-    "evolutionEn": "Cerulla → TBA",
-    "description": "官方确认的国际服水系御三家（水泡），坦度优秀，水泡盾 + 水炮循环生存能力出色。英文名取自 cerulean（蔚蓝）加可爱后缀 -la。完整技能与进化链待 CBT 官方图鉴公布。",
-    "descriptionEn": "Officially confirmed Water-type global starter (a water blob) with excellent bulk and a bubble-shield / water-cannon survival loop. Its English name derives from 'cerulean' with a cute '-la' suffix. Full skills and evolution line TBA via the official CBT codex.",
-    "status": "revealed"
+    "habitat": "尚未独立核实",
+    "habitatEn": "Not independently verified",
+    "evolution": "尚未独立核实",
+    "evolutionEn": "Not independently verified",
+    "description": "本站保留的 Cerulla 资料入口，名称与分类仅用于历史导航，不代表官方译名或已核实的国际服御三家定位。此前从国服复用的技能、种族值和相关战斗描述已撤回；国际服身份、数值与机制仍待独立核实。",
+    "descriptionEn": "Retained reference entry for Cerulla. Names and classifications are legacy navigation labels, not verified official names or global starter identities. Skills, base stats and combat claims reused from CN data are withdrawn; global identity, values and mechanics still need independent verification.",
+    "status": "revealed",
+    "descriptionJa": "Cerulla の既存資料入口です。名称と分類は過去のナビゲーション用であり、公式名や国際版の御三家としての確認ではありません。中国版から流用したスキル、種族値、戦闘説明は撤回し、国際版の同一性、数値、仕組みは独立した確認待ちです。",
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "international_identity_and_values_unverified"
+    }
   },
   {
     "id": "blazehound",

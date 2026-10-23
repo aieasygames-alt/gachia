@@ -2,6 +2,7 @@ import type { SupportedLocale } from '@gachia/core';
 import { join } from 'node:path';
 import { loadJson } from '../../load-json';
 import { localeStr } from './types';
+import type { RocoContentReview } from './types';
 const rawGuides = await loadJson<unknown>(join(process.cwd(), '../../packages/data/games/roco/raw-guides.json'), '/data/roco/raw-guides.json');
 
 export interface RocoGuideFaq {
@@ -31,6 +32,7 @@ export interface RocoGuide {
   tags: string[];
   faq: RocoGuideFaq[];
   updatedAt?: string;
+  contentReview?: RocoContentReview;
 }
 
 export const rocoGuides: RocoGuide[] = rawGuides as unknown as RocoGuide[];

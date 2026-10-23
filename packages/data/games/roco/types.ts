@@ -17,6 +17,8 @@ export interface RocoJinie {
   evolutionEn: string;
   description: string;
   descriptionEn: string;
+  descriptionJa?: string;
+  contentReview?: RocoContentReview;
   status: string;
   skills?: RocoSkill[];
   stats?: RocoStats;
@@ -73,6 +75,13 @@ export interface RocoGuide {
   tags: string[];
   faq: RocoGuideFaq[];
   updatedAt?: string;
+  contentReview?: RocoContentReview;
+}
+
+export interface RocoContentReview {
+  status: 'needs_verification';
+  reviewedAt: string;
+  scope: string;
 }
 
 // --- Material Types ---

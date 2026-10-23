@@ -11,4 +11,4 @@ console.log(`Sea guides: ${content.guides} guides / ${content.outputs} outputs v
 const mirrors = await verifyRawMirrors();
 console.log(`Managed raw mirrors: ${mirrors.pairs} pairs verified`);
 const inventory = await verifyRawInventory();
-console.log(`Raw inventory: ${inventory.equal}/${inventory.pairs} equal; ${inventory.pending.length} pending review (not production approval)`);
+console.log(`Raw inventory: ${inventory.equal}/${inventory.pairs} equal; ${inventory.pending.length} pending; ${inventory.holds.length} factual holds (not production approval)`);

@@ -26,6 +26,7 @@ export interface CharacterMetaData {
   pathLabel?: string;
   specialtyLabel?: string;
   tierRank?: string;
+  contentReview?: { status: string; reviewedAt: string };
 }
 
 function toAbs(path: string) {
@@ -357,6 +358,7 @@ export async function getCharacterMetaData(
         id: character.id,
         name: mod.getRocoCharacterName(character, locale),
         description: mod.getRocoCharacterDescription(character, locale),
+        contentReview: character.contentReview,
         image: toAbs(mod.getRocoCharacterImage(character)),
         element: character.attribute,
         elementLabel: character.attributeEn,
@@ -548,10 +550,10 @@ export async function getCharacterListData(
         name: mod.getRocoCharacterName(character, locale),
         image: toAbs(mod.getRocoCharacterImage(character)),
         element: character.attribute,
-        elementLabel: labelFromId(character.attributeEn),
-        rarityLabel: `${character.rarity}★`,
-        rankGroup: `${character.rarity}★`,
-        subtitle: character.attributeEn,
+        elementLabel: character.contentReview ? { zh: '待核实', en: 'Unverified', ja: '未確認' }[locale] : labelFromId(character.attributeEn),
+        rarityLabel: character.contentReview ? undefined : `${character.rarity}★`,
+        rankGroup: character.contentReview ? 'all' : `${character.rarity}★`,
+        subtitle: character.contentReview ? { zh: '国际服资料待核实', en: 'Global information under review', ja: '国際版資料確認中' }[locale] : character.attributeEn,
       }));
     }
     case 'roco-cn': {

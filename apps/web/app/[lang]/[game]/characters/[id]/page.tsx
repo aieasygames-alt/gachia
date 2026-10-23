@@ -15,7 +15,7 @@ import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 import { CHARACTER_META_OVERRIDES } from './character-detail-shared';
-import { ensureMetaLength, isAniimoCharacterIndexable } from '@/lib/seo-metadata';
+import { ensureMetaLength, isAniimoCharacterIndexable, isContentUnderReview } from '@/lib/seo-metadata';
 import { getAniimoCharacterById } from '@gachia/data/games/aniimo/characters';
 
 export const dynamicParams = false;
@@ -86,6 +86,13 @@ export async function generateMetadata({
     locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
   };
 
+  if (isContentUnderReview(meta)) return {
+    title: `${meta.name} — ${locale === 'zh' ? '资料待核实' : locale === 'ja' ? '資料確認中' : 'Information Under Review'}`,
+    description: ensureMetaLength(meta.description, locale),
+    robots: { index: false, follow: true },
+    alternates: { canonical: alternates.canonical },
+    openGraph: { ...openGraph, description: meta.description },
+  };
   if (override) return { ...override, openGraph, alternates };
 
   const roleParts = [meta.elementLabel, meta.weaponLabel, meta.pathLabel, meta.specialtyLabel].filter(Boolean).join(' ');

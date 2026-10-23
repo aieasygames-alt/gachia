@@ -15,7 +15,7 @@ export function getRocoCharacterName(char: RocoJinie, locale: SupportedLocale): 
 }
 
 export function getRocoCharacterDescription(char: RocoJinie, locale: SupportedLocale): string {
-  return localeStr(char.description, char.descriptionEn, locale);
+  return localeStr(char.description, char.descriptionEn, locale, char.descriptionJa);
 }
 
 export function getRocoCharacterImage(char: RocoJinie): string {
@@ -33,7 +33,7 @@ export const characters: Character[] = rocoCharacters.map((char) => ({
   rarity: char.rarity,
   element: char.attribute,
   weaponType: 'jinie',
-  description: { zh: char.description, en: char.descriptionEn, ja: char.descriptionEn },
+  description: { zh: char.description, en: char.descriptionEn, ja: char.descriptionJa ?? char.descriptionEn },
   images: {
     icon: `/images/roco/characters/${char.id}.webp`,
     card: `/images/roco/characters/${char.id}.webp`,

@@ -118,6 +118,12 @@ export function getEntryUpdatedAt(entry: unknown): string | undefined {
   return typeof updatedAt === 'string' ? updatedAt : undefined;
 }
 
+export function isContentUnderReview(entry: unknown): boolean {
+  if (!entry || typeof entry !== 'object') return false;
+  const review = (entry as { contentReview?: unknown }).contentReview;
+  return !!review && typeof review === 'object' && (review as { status?: unknown }).status === 'needs_verification';
+}
+
 export function getEntryCurrentVersion(entry: unknown): string | undefined {
   if (!entry || typeof entry !== 'object') return undefined;
   const currentVersion = (entry as { currentVersion?: unknown }).currentVersion;

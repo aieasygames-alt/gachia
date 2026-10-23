@@ -35,6 +35,8 @@ export async function verifyManagedContent(value, directory) {
   const skjh = JSON.parse(readFileSync(resolve(ROOT, 'packages/data/games/skjh/raw-guides.json'), 'utf8')).find(entry => entry.id === 'season-1-launch');
   const reviewedEchoes = JSON.parse(readFileSync(resolve(ROOT, 'packages/data/games/wuwa/raw-echoes.json'), 'utf8')).filter(entry => entry.sourceReview);
   const reviewedRegion = JSON.parse(readFileSync(resolve(ROOT, 'packages/data/games/wuwa/raw-regions.json'), 'utf8')).find(entry => entry.id === 'simulacrum-nexus');
+  const rocoGuides = JSON.parse(readFileSync(resolve(ROOT, 'packages/data/games/roco/raw-guides.json'), 'utf8')).filter(entry => entry.contentReview?.status === 'needs_verification');
+  const rocoCharacters = JSON.parse(readFileSync(resolve(ROOT, 'packages/data/games/roco/raw-characters.json'), 'utf8')).filter(entry => entry.contentReview?.status === 'needs_verification');
   for (const locale of ['zh', 'en', 'ja']) {
     const path = `/data-manifest/search-${locale}.json`;
     const response = await fetch(origin + path, { redirect: 'manual', signal: AbortSignal.timeout(30000) });
@@ -59,6 +61,9 @@ export async function verifyManagedContent(value, directory) {
     ...['zh', 'en', 'ja'].map(locale => ({ locale, path: `/${locale}/roco/version`, kind: 'roco-version' })),
     ...['zh', 'en', 'ja'].map(locale => ({ locale, path: `/${locale}/roco/events`, kind: 'roco-events' })),
     ...['zh', 'en', 'ja'].map(locale => ({ locale, path: `/${locale}`, kind: 'roco-home' })),
+    ...['zh', 'en', 'ja'].flatMap(locale => rocoGuides.map(row => ({ locale, path: `/${locale}/roco/guides/${row.id}`, kind: 'roco-reviewed-guide', id: row.id }))),
+    ...['zh', 'en', 'ja'].flatMap(locale => rocoCharacters.map(row => ({ locale, path: `/${locale}/roco/characters/${row.id}`, kind: 'roco-reviewed-character', id: row.id }))),
+    ...['zh', 'en', 'ja'].flatMap(locale => ['guides', 'characters'].map(section => ({ locale, path: `/${locale}/roco/${section}`, kind: `roco-${section}-list` }))),
   ];
   const browser = await chromium.launch({ headless: true });
   try {
@@ -116,6 +121,46 @@ export async function verifyManagedContent(value, directory) {
             assert.equal(await page.locator('[data-region-source]').count(), 1, 'Do not label older regions reviewed');
             assert(await card.evaluate(node => node.scrollWidth <= node.clientWidth), `${path}: region card overflows viewport`);
             if (directory && locale === 'zh') await card.screenshot({ path: resolve(directory, `region-card-${width}.png`) });
+          } else if (kind.startsWith('roco-reviewed-')) {
+            const row = (kind === 'roco-reviewed-guide' ? rocoGuides : rocoCharacters).find(row => row.id === id);
+            const suffix = { zh: '', en: 'En', ja: 'Ja' }[locale];
+            assert.equal(await page.locator('h1').innerText(), row[`${kind === 'roco-reviewed-guide' ? 'title' : 'name'}${suffix}`] ?? row.nameEn);
+            assert.equal(await page.locator('[data-content-review]').count(), 1);
+            assert.match(await page.locator('meta[name="robots"]').getAttribute('content'), /noindex,\s*follow/);
+            assert.equal(await page.locator('link[rel="alternate"][hreflang]').count(), 0);
+            const forbidden = /10\/27|10\/20|Oct(?:ober)? 27|Oct(?:ober)? 20|10月27|10月20|2026-10-27|2026-10-20|3688140|400\+|★★★★/;
+            for (const text of [body, await page.title(), await page.locator('meta[name="description"]').getAttribute('content'), ...await page.locator('script[type="application/ld+json"]').allTextContents()]) assert(!forbidden.test(text), `${path}: withdrawn claim remains: ${text.slice(0, 180)}`);
+            const article = page.locator('main');
+            if (kind === 'roco-reviewed-guide') {
+              assert(body.includes(row[`summary${suffix}`]));
+              for (const line of row[`content${suffix}`].split('\n').map(line => line.replace(/^(?:#{1,6}|-)\s+/, '').trim()).filter(Boolean)) assert(body.includes(line), `${path}: missing checklist text`);
+              const schemas = (await page.locator('script[type="application/ld+json"]').allTextContents()).map(text => JSON.parse(text));
+              assert.equal(schemas.find(schema => schema['@type'] === 'Article')?.dateModified, row.contentReview.reviewedAt, path);
+              assert.equal(await article.getByRole('heading', { name: /^(快速回答|快速结论|Quick answer|クイックアンサー|要点|下一步|Next steps|次のステップ|相关推荐|Related guides|関連ガイド)/i }).count(), 0);
+              const statusLink = article.getByRole('link', { name: { zh: '查看资料核验状态', en: 'View information review status', ja: '資料の確認状況を見る' }[locale], exact: true });
+              assert.equal(await statusLink.count(), 1, path);
+              assert.equal(await statusLink.getAttribute('href'), `/${locale}/roco/version`);
+              const faq = article.locator('details');
+              assert.equal(await faq.count(), 1);
+              await faq.first().click();
+              assert((await faq.first().innerText()).includes(row.faq[0][{ zh: 'answerZh', en: 'answer', ja: 'answerJa' }[locale]]));
+            } else {
+              assert(body.includes(row[`description${suffix}`]));
+              assert.equal(await page.locator('[data-review-portrait]').innerText(), { zh: '形象待核实', en: 'Appearance unverified', ja: '外見未確認' }[locale]);
+              assert.equal(await page.locator('[data-review-portrait] img').count(), 0);
+              assert.equal(await article.getByRole('heading', { name: /^(种族值|種族値|Base Stats|技能表|スキル一覧|Skills|基本信息|基本情報|Profile)$/ }).count(), 0);
+            }
+          } else if (kind === 'roco-guides-list' || kind === 'roco-characters-list') {
+            const entries = kind === 'roco-guides-list' ? rocoGuides : rocoCharacters;
+            const section = kind === 'roco-guides-list' ? 'guides' : 'characters';
+            for (const row of entries) {
+              const card = page.locator(`main a[href="/${locale}/roco/${section}/${row.id}"]`);
+              assert((await card.count()) > 0, `${path}: missing ${row.id} card`);
+              for (const text of await card.allInnerTexts()) {
+                assert(!/10\/27|10\/20|2026-10-27|400\+|★★★★/.test(text), text);
+                if (section === 'characters') assert(text.includes({ zh: '待核实', en: 'Unverified', ja: '未確認' }[locale]));
+              }
+            }
           } else if (kind.startsWith('roco-')) {
             const forbidden = /10\/27|10\/20|Oct(?:ober)? 27|Oct(?:ober)? 20|10月27|10月20|2026-10-27|2026-10-20|3688140/;
             if (kind === 'roco-home') {
@@ -139,7 +184,7 @@ export async function verifyManagedContent(value, directory) {
           assert.deepEqual(errors, [], path);
           assert.deepEqual(failedAssets, [], path);
           observations.browser.push({ path, width, status: 200, kind, errors: 0, failedAssets: 0 });
-          if (directory && locale === 'zh' && kind !== 'backport') await page.screenshot({ path: resolve(directory, `${kind}${id ? `-${id}` : ''}-${width}.png`) });
+          if (directory && locale === 'zh' && kind !== 'backport') await page.screenshot({ path: resolve(directory, `${kind}${id ? `-${id}` : ''}-${width}.png`), fullPage: kind.startsWith('roco-reviewed-') });
           if (kind === 'echo-list') {
             const first = reviewedEchoes[0];
             const href = `/${locale}/wuwa/echoes/${first.id}`;
@@ -147,6 +192,15 @@ export async function verifyManagedContent(value, directory) {
             await page.waitForURL(origin + href);
             assert.equal(await page.locator('h1').innerText(), locale === 'zh' ? first.name : locale === 'ja' ? first.nameJa : first.nameEn);
             assert.equal(await page.locator('[data-echo-source]').count(), 1);
+            observations.browser.at(-1).detailNavigationVerified = true;
+          }
+          if (kind === 'roco-guides-list' || kind === 'roco-characters-list') {
+            const section = kind === 'roco-guides-list' ? 'guides' : 'characters';
+            const first = section === 'guides' ? rocoGuides[0] : rocoCharacters[0];
+            const href = `/${locale}/roco/${section}/${first.id}`;
+            await page.locator(`main a[href="${href}"]`).first().click();
+            await page.waitForURL(origin + href);
+            assert.equal(await page.locator('[data-content-review]').count(), 1);
             observations.browser.at(-1).detailNavigationVerified = true;
           }
         }
