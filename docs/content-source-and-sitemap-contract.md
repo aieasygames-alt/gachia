@@ -1,6 +1,6 @@
 # 内容源与 Sitemap 契约
 
-适用版本：S2.3。本契约覆盖主站 sitemap 所有权、Sea 派生物、三对受管原始镜像、原神攻略语言决策及五类平台页面元数据；不表示全站内容事实或翻译质量已核验。
+适用版本：S2.4。本契约覆盖主站 sitemap 所有权、Sea 派生物、三对受管原始镜像、原神攻略语言决策、五类平台页面元数据及原始文件全清单/待审门禁；不表示全站内容事实或翻译质量已核验。
 
 ## 1. 公开发现入口
 
@@ -118,7 +118,23 @@ node scripts/runtime-rollout-smoke.mjs game-genshin
 
 主站 CI 在安装浏览器之后、封存产物之前运行 `pnpm test:seo-discovery:local web`；只复用现有构建，不新增构建任务或云端环境。未在本批启动 Actions。原神的本地 discovery 命令已可复用，但尚未接管历史远程迁移工作流。
 
-## 7. 后续推广与回退
+## 7. 原始文件全清单与待审内容保护
+
+`packages/data/raw-content-review.json` 显式登记 90 对 raw 镜像和 5 个仅源文件（四份角色摘要及独立蓝色星原角色源），由 `packages/data/scripts/raw-inventory-contract.mjs` 扫描双方目录并比对。当前为 87 对相等、3 对待审、7 个差异实体；仅源边界不是漏生成，也不允许自动新增主站镜像。
+
+三对 pending 绑定双方完整文档的语义 SHA-256、实体与字段差分、原因及可读取的审查文档；未知漂移、文件增删/非法 JSON、符号链接、待审值改变或静默同步都会失败。对象键顺序/空白不影响摘要，数组顺序影响。普通相等项允许审查后的同批源/镜像更新，新游戏文件须登记全清单。检查器只读，不联网、不自动更新台账、不批准内容。
+
+```sh
+pnpm --filter @gachia/data check:raw-inventory
+# 当前因三对 pending 预期退出 1；输出 engineeringReady 与 contentReleaseReady 的不同状态。
+pnpm content:release-ready
+```
+
+工程检查接入现有应用前置脚本、manifest 生成前/验证、CI 生成前和测试；精确已知 pending 允许开发/build/staging 审查，不把未知差异当警告。主站 deploy/upload 先执行 `--release`；主站 production workflow 在昂贵构建前及真正推广前重复执行，pending 非零即失败。独立游戏不因主站已知 pending 被统一阻断，其既有生产保护仍生效。手写底层 CLI 可绕开仓库检查，不属于受支持发布方式，门禁不是云端权限控制。
+
+待审值并未从历史源或所有页面隔离：roco 角色与 wuwa 声骸静态导入原始源，区域有 source/public 回退。本批没有改这些输入，不能宣称争议内容已经下架或生产当前与镜像相同。详见 [S2.4 结案流程、来源核对及边界](../plans/multi-game-s2-4-content-review-closeout-2026-10-24.md)。三对关闭时必须记录字段采用/纠正/撤回依据、区服/语言/版本范围并同批归并，禁止仅改哈希或清空 pending 放行。
+
+## 8. 后续推广与回退
 
 - 90 对原始 JSON 目前 87 对一致、3 对待审：roco 角色、wuwa 声骸与区域；保留原始审计基线，不把工程归并当成事实重新认证。skjh 公开镜像中的四篇运营修订已完整回迁源，未以旧源覆盖。
 - 扩展下一游戏前，先确认官方事实/区服/日期和退役 URL，再把源、镜像、页面语言与 sitemap 作为同批变更验收。

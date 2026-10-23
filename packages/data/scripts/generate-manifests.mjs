@@ -1,6 +1,7 @@
 import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { writeSeaGuideOutputs } from './sea-guide-contract.mjs';
 import { writeRawMirrors } from './raw-mirror-contract.mjs';
+import { verifyRawInventory } from './raw-inventory-contract.mjs';
 
 const gamesRoot = new URL('../games/', import.meta.url);
 const outputRoot = new URL('../../../apps/web/public/data-manifest/', import.meta.url);
@@ -14,6 +15,8 @@ function idsFromJson(value) {
   return value.flatMap((entry) => typeof entry?.id === 'string' ? [entry.id] : []);
 }
 
+// Inspect committed content before any generation can conceal a new drift.
+await verifyRawInventory();
 await writeRawMirrors();
 await mkdir(outputRoot, { recursive: true });
 await mkdir(clientDataRoot, { recursive: true });

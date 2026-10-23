@@ -85,6 +85,10 @@ jobs:
           node-version: 22
           cache: pnpm
 
+      - name: Block unresolved Main content before production build
+        if: inputs.release_target == 'production'
+        run: node packages/data/scripts/raw-inventory-contract.mjs --release
+
       - run: pnpm install --frozen-lockfile
 
       - name: Verify game release environment isolation
@@ -124,6 +128,7 @@ jobs:
         run: |
           pnpm --filter @gachia/data check:sea-guides
           pnpm --filter @gachia/data check:raw-mirrors
+          pnpm --filter @gachia/data check:raw-inventory
 
       - name: Generate data manifests
         if: steps.scope.outputs.scope != 'admin'
@@ -411,6 +416,9 @@ jobs:
           tar -C apps/web -xzf .release-web/web-worker.tar.gz
           test -s apps/web/.open-next/worker.js
           test -s apps/web/.open-next/.build/open-next.config.edge.mjs
+
+      - name: Recheck Main content before production promotion
+        run: node packages/data/scripts/raw-inventory-contract.mjs --release
 
       - name: Verify production Worker secrets
         working-directory: apps/web

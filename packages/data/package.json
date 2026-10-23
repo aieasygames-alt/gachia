@@ -13,6 +13,7 @@
     "check:sea-guides": "node scripts/sea-guide-contract.mjs",
     "generate:sea-guides": "node scripts/sea-guide-contract.mjs --write",
     "check:raw-mirrors": "node scripts/raw-mirror-contract.mjs",
+    "check:raw-inventory": "node scripts/raw-inventory-contract.mjs",
     "generate:raw-mirrors": "node scripts/raw-mirror-contract.mjs --write",
     "generate:character-summaries": "node scripts/generate-character-summaries.mjs",
     "test": "vitest run",

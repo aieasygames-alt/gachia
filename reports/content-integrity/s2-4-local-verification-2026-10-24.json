@@ -1,0 +1,270 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-23T16:50:39.876383+00:00",
+  "phase": "S2.4",
+  "baseline": "b08851b",
+  "branch": "codex/multi-game-s1-release-safety",
+  "conclusion": "local_engineering_slice_complete_factual_reviews_open_main_content_release_blocked",
+  "inventory": {
+    "contract": "raw-inventory-v1",
+    "pairs": 90,
+    "equal": 87,
+    "sourceOnly": 5,
+    "pending": [
+      {
+        "path": "roco/raw-characters.json",
+        "status": "needs_review",
+        "sourceSha256": "154c996ee0666726475fd5a74b1837c69446373060c82c22c9d35ef2367a667a",
+        "mirrorSha256": "d1e392a5532739cc71185808bc7708773e075095b436b760c806fa5d7f0645f9",
+        "changes": [
+          {
+            "id": "cerulla",
+            "kind": "changed",
+            "fields": [
+              "description",
+              "descriptionEn",
+              "releaseVersion",
+              "skills",
+              "stats"
+            ]
+          },
+          {
+            "id": "meewee",
+            "kind": "changed",
+            "fields": [
+              "description",
+              "descriptionEn",
+              "releaseVersion",
+              "skills",
+              "stats"
+            ]
+          },
+          {
+            "id": "sparka",
+            "kind": "changed",
+            "fields": [
+              "releaseVersion",
+              "skills",
+              "stats"
+            ]
+          }
+        ],
+        "reason": "International starter skills/stats were reused from CN in a historical commit; international scope and values are not established.",
+        "reviewDocument": "plans/multi-game-s2-4-content-review-closeout-2026-10-24.md"
+      },
+      {
+        "path": "wuwa/raw-echoes.json",
+        "status": "needs_review",
+        "sourceSha256": "715fa7f63026dd4c3939fbd33118f1278a483785dca0adb9b02553d9d084a5b4",
+        "mirrorSha256": "d75e6d53f627b4ee455d8feb18bb9da71027b6b7ad5db992efebe620f5deca84",
+        "changes": [
+          {
+            "id": "flower-of-crimson-reminiscence",
+            "kind": "source-only",
+            "fields": [
+              "bestFor",
+              "bonus2pc",
+              "bonus2pcEn",
+              "bonus5pc",
+              "bonus5pcEn",
+              "id",
+              "name",
+              "nameEn"
+            ]
+          },
+          {
+            "id": "heart-that-illuminates-dreams",
+            "kind": "source-only",
+            "fields": [
+              "bestFor",
+              "bonus2pc",
+              "bonus2pcEn",
+              "bonus5pc",
+              "bonus5pcEn",
+              "id",
+              "name",
+              "nameEn"
+            ]
+          },
+          {
+            "id": "mirror-shadow-flowing-lightning",
+            "kind": "source-only",
+            "fields": [
+              "bestFor",
+              "bonus2pc",
+              "bonus2pcEn",
+              "bonus5pc",
+              "bonus5pcEn",
+              "id",
+              "name",
+              "nameEn"
+            ]
+          }
+        ],
+        "reason": "CN official v3.7 notice supports only part of these additions; localized names, two-piece effects, recommendations or location-specific claims remain unverified.",
+        "reviewDocument": "plans/multi-game-s2-4-content-review-closeout-2026-10-24.md"
+      },
+      {
+        "path": "wuwa/raw-regions.json",
+        "status": "needs_review",
+        "sourceSha256": "385fe0b5bbcf5387fd178e41ea150c0431b2d299f8bd3306bc45d3a8e28b7706",
+        "mirrorSha256": "e29d96b543b3be716bb90d58dacbf6788de2f09c932570403bdd8e001b4170e9",
+        "changes": [
+          {
+            "id": "simulacrum-nexus",
+            "kind": "source-only",
+            "fields": [
+              "bosses",
+              "description",
+              "descriptionEn",
+              "descriptionJa",
+              "domains",
+              "highlights",
+              "id",
+              "name",
+              "nameEn",
+              "nameJa",
+              "specialties",
+              "subRegions",
+              "tips"
+            ]
+          }
+        ],
+        "reason": "CN official v3.7 notice supports only part of these additions; localized names, two-piece effects, recommendations or location-specific claims remain unverified.",
+        "reviewDocument": "plans/multi-game-s2-4-content-review-closeout-2026-10-24.md"
+      }
+    ],
+    "issues": [],
+    "engineeringReady": true,
+    "contentReleaseReady": false,
+    "factualApproval": "not_implied_by_mirror_equality"
+  },
+  "rawByteProtection": {
+    "sourceFiles": 95,
+    "publicMirrorFiles": 90,
+    "comparedFiles": 185,
+    "changedFromBaseline": [],
+    "fingerprintAlgorithm": "sha256(JSON.stringify(sorted array of {path,sha256}), compact separators)",
+    "currentAndBaselineFingerprint": "593f6e59a84b7f5c8ff9f4be7f37b5bc046bd160b56af72013c6f379c666f8af"
+  },
+  "verification": {
+    "dataTests": {
+      "status": "passed",
+      "tests": 91,
+      "newTests": 26
+    },
+    "webTests": {
+      "status": "passed",
+      "tests": 288
+    },
+    "routerTests": {
+      "status": "passed",
+      "tests": 31
+    },
+    "releaseNodeTests": {
+      "status": "passed",
+      "tests": 103,
+      "newTests": 3
+    },
+    "releaseRetentionPythonTests": {
+      "status": "passed",
+      "tests": 9
+    },
+    "releaseXmlPythonTests": {
+      "status": "passed",
+      "tests": 8
+    },
+    "ciScopeTests": {
+      "status": "passed",
+      "tests": 2
+    },
+    "dataValidation": "passed_existing_validator_scope_only",
+    "types": {
+      "data": "passed",
+      "web": "passed"
+    },
+    "lint": {
+      "web": "passed",
+      "errors": 0,
+      "preExistingWarnings": 1,
+      "warningFile": "apps/web/components/auth/auth-dialog.tsx"
+    },
+    "manifestGeneration": "passed_all_14_game_manifests",
+    "manifestVerification": "passed_after_generation_and_after_restoring_Sea_raw_serialization",
+    "preflight": {
+      "status": "passed",
+      "applications": [
+        "web",
+        "game-genshin",
+        "game-lvmeng",
+        "game-nte",
+        "game-azur-promilia"
+      ],
+      "checks": [
+        "pinned_runtime_and_patch",
+        "sea_guides_75_77",
+        "managed_mirrors_3",
+        "full_raw_inventory_known_pending_only"
+      ]
+    },
+    "workflow": "YAML_parsed_production_gate_order_and_staging_preservation_asserted",
+    "negativeReleaseGates": [
+      {
+        "command": [
+          "pnpm",
+          "content:release-ready"
+        ],
+        "status": "expected_rejection_before_build_or_cloud_execution",
+        "exitCode": 1
+      },
+      {
+        "command": [
+          "pnpm",
+          "--filter",
+          "@gachia/web",
+          "run",
+          "deploy"
+        ],
+        "status": "expected_rejection_before_build_or_cloud_execution",
+        "exitCode": 1
+      },
+      {
+        "command": [
+          "pnpm",
+          "--filter",
+          "@gachia/web",
+          "run",
+          "upload"
+        ],
+        "status": "expected_rejection_before_build_or_cloud_execution",
+        "exitCode": 1
+      }
+    ],
+    "opennextBuild": "not_rerun_no_page_or_runtime_dependency_changes",
+    "wranglerDryRun": "not_rerun",
+    "compiledWorkerBrowser": "not_rerun",
+    "cloudStaging": "not_run",
+    "productionHttp": "not_run"
+  },
+  "sources": "reports/content-integrity/s2-4-source-review-2026-10-24.json",
+  "scope": {
+    "rawDataBytesChanged": false,
+    "businessDatesChanged": false,
+    "loginReenabled": false,
+    "workerTopologyChanged": false,
+    "databaseModified": false,
+    "filesCleaned": false,
+    "pushPerformed": false,
+    "actionsTriggered": false,
+    "cloudDeploymentPerformed": false,
+    "originalDirtyCheckoutTouched": false
+  },
+  "limitations": [
+    "Three factual/region/translation reviews remain open; no blanket synchronization or approval.",
+    "Known pending values are not quarantined from historical source consumers.",
+    "Full inventory is not complete schema validation or official factual verification.",
+    "Direct low-level deployment CLIs can bypass repository scripts; no IAM claim.",
+    "S2 full-cloud sitemap union and reviewed Genshin parity baseline are outstanding."
+  ],
+  "evidenceDirectory": ".release-records/s2-4/"
+}

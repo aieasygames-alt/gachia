@@ -21,6 +21,7 @@
     "audit:sitemap-contract:local": "python3 -B scripts/web-sitemap-contract-audit.py",
     "test:sitemap-contract": "python3 -B scripts/web-sitemap-contract-audit.test.py",
     "content:freshness": "NODE_OPTIONS=--disable-warning=MODULE_TYPELESS_PACKAGE_JSON node scripts/content-freshness-audit.mjs",
+    "content:release-ready": "node packages/data/scripts/raw-inventory-contract.mjs --release",
     "content:freshness:md": "NODE_OPTIONS=--disable-warning=MODULE_TYPELESS_PACKAGE_JSON node scripts/content-freshness-audit.mjs --markdown",
     "content:freshness:report": "NODE_OPTIONS=--disable-warning=MODULE_TYPELESS_PACKAGE_JSON node scripts/content-freshness-audit.mjs --markdown --output plans/content-freshness-latest.md",
     "test:browser": "playwright test",

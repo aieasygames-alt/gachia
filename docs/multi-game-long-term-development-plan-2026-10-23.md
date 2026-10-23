@@ -1,6 +1,6 @@
 # Gachia 多游戏长期运营与架构治理开发文档
 
-> 版本：v1.9，含 S2.3 原神攻略语言契约与平台发现路径本地交付
+> 版本：v1.10，含 S2.4 原始数据全清单、来源核对与待审发布门禁
 >
 > 编制日期：2026-10-23，Asia/Shanghai
 >
@@ -23,6 +23,8 @@ S2.1 追加进展：完成根 sitemapindex/主站子图所有权改造、Sea 75 
 S2.2 追加进展（2026-10-23 启动，10-24 本地收尾）：按既有提交归并三对历史镜像，90 对中 87 对一致、3 对仍待事实审核；增加生成前只读门禁。roco-cn 中日文旧清单明确归档，英文维持 404，并从列表、推荐、hreflang、语言切换和 XML 排除。预渲染/本地 Worker 主站 URL 集合均为 4,464 条且一致，闭合 S2.1 已知边界；兑换码公开日期不再冒充核验日期。未重新认证官方事实、未部署、未清理。原神缺译策略及首页/基础元数据仍待后续，S2 整体未完成。见 [S2.2 交付记录](../plans/multi-game-s2-2-mirror-retirement-closeout-2026-10-23.md)。
 
 S2.3 追加进展（2026-10-24）：原神攻略的阅读回退、robots、hreflang、FAQ 与独立 sitemap 已统一。31 篇中 30 篇缺日文正文，保留原文阅读但退出日文索引提交；已有日文正文的一篇不误伤。独立清单 1,602 → 1,572，本地 Worker 与预渲染一致，主站 4,464 条集合不变。补齐首页及关于/联系/隐私/条款的本地元数据验收，修复三游戏状态卡重复语言前缀与 post-test 错标，并接入主站 CI 的编译后发现路径检查。未修改原始游戏事实或日期、未部署、未启动 Actions 或清理；剩余三对数据事实审核、云端完整提交集及后续运营闭环仍待继续。见 [S2.3 交付记录](../plans/multi-game-s2-3-language-discovery-closeout-2026-10-24.md)。
+
+S2.4 追加进展（2026-10-24）：新增 95 个源 / 90 个镜像的全清单检查，将剩余三对差异的双端语义摘要、7 个实体及字段锁定到待审记录；新漂移、漏文件、待审内容变化或静默同步均阻断工程检查。重新取得鸣潮官方中文 3.7 公告，部分名称/五件套和区域内容有依据，但二件套、外语及区服/区域断言仍未全部证实。主站 deploy/upload 和 production workflow 新增内容放行门禁，当前 pending 非零，**候选仍不可生产发布**；本地开发和隔离 staging 可继续审查。未改原始游戏数据、未部署或清理，非 S2 完成。见 [S2.4 交付记录](../plans/multi-game-s2-4-content-review-closeout-2026-10-24.md)。
 
 本次审计的核心结论：
 
@@ -511,6 +513,7 @@ planned -> validated -> preview_ready -> approved -> promoting -> verifying -> r
 | 根 sitemap 与主站子图 | `apps/web/app/sitemap.xml/route.ts`、`apps/web/lib/sitemap-index.ts`、`apps/web/app/sitemaps/main/sitemap.ts` |
 | Sea 攻略派生物契约 | `packages/data/scripts/sea-guide-contract.mjs`、[维护说明](content-source-and-sitemap-contract.md) |
 | 受管原始镜像与退役页面 | `packages/data/scripts/raw-mirror-contract.mjs`、`apps/web/lib/retired-pages.ts`、[S2.2 交付记录](../plans/multi-game-s2-2-mirror-retirement-closeout-2026-10-23.md) |
+| 原始数据全清单与未结案保护 | `packages/data/scripts/raw-inventory-contract.mjs`、`packages/data/raw-content-review.json`、[S2.4 交付记录](../plans/multi-game-s2-4-content-review-closeout-2026-10-24.md) |
 | 攻略语言及平台元数据 | `apps/game-genshin/lib/guide-policy.ts`、`apps/web/lib/platform-metadata.ts`、`scripts/seo-discovery-smoke.mjs`、[S2.3 交付记录](../plans/multi-game-s2-3-language-discovery-closeout-2026-10-24.md) |
 | 日文索引与 fallback | `apps/web/lib/seo-metadata.ts`、`apps/game-nte/lib/seo.ts`、`apps/game-genshin/app/sitemap.ts`、`packages/data/games/genshin/guides.ts` |
 | 内容加载与镜像 | `packages/data/load-json.ts`、`packages/data/games`、`apps/web/public/data` |

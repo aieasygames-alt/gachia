@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-23T16:43:01.006481+00:00",
+  "baseline": "b08851b",
+  "decision": "partial_official_support_all_three_pairs_remain_needs_review",
+  "officialNotice": {
+    "pageUrl": "https://mc.kurogames.com/main/news/detail/5569",
+    "pageResponse": "200_spa_shell_without_article_body",
+    "articleUrl": "https://media-cdn-mingchao.kurogame.com/akiwebsite/website2.0/json/G152/zh/article/5569.json",
+    "discovery": "The page loads index-64d35fba.js and detail-98279b69.js; apiPrefix uses G152/zh and getArticleJson requests article/{id}.json. No third-party proxy was used.",
+    "httpStatus": 200,
+    "responseBytes": 30245,
+    "responseSha256": "783a26f6a8460dd572070bf9cc478a522829e04ee6ef67cac4f0e6c807b5988e",
+    "articleId": 5569,
+    "title": "「镜锁妄世，心照红尘」3.7版本内容说明",
+    "publishedValue": "2026-09-30 10:00:00",
+    "publishedTimezone": "not_declared_by_response",
+    "language": "zh",
+    "gameId": "G152",
+    "cacheAgeSeconds": 1064386,
+    "lastModified": "Wed, 30 Sep 2026 02:01:12 GMT",
+    "scope": "Official CN historical v3.7 announcement, not proof of the current version, English/Japanese official names or global-server values.",
+    "excerpts": [
+      "「梦枢天罗」",
+      "该区域包含场景：「心相迷宫」、「烬心域」、「凄心域」、「怡心域」、「沉心域」、「墟心域」、「相心域」",
+      "玄方城的控制中枢，亦被称为「万相神宫」，司掌着维持玄方城运转的底层秩序。",
+      "※跟随【潮汐任务】第四章・第四幕「梦枢心相由心生」的任务指引即可前往。",
+      "●新增【合鸣效果】：「衔梦照世之心」（5件套）、「镜影流电之瞬」（5件套）、「茜染怀想之花」（5件套）",
+      "「衔梦照世之心」（5件套）：角色为敌人添加【电磁效应】时，或自身获得同奏、响应同奏时，自身暴击提升15%，导电伤害提升22.5%，持续30秒。",
+      "「镜影流电之瞬」（5件套）：角色为敌人添加【电磁效应】时，自身获得下述效果：导电伤害提升10%，持续15秒。持续期间内施放延奏技能后，下一个变奏技能登场的角色导电伤害提升25%，持续15秒。",
+      "「茜染怀想之花」（5件套）：为队伍中角色提供治疗时，队伍中角色攻击提升10%，持续30秒，同名效果之间不可叠加。上述效果持续期间，若角色获得同奏、响应同奏，攻击额外提升15%。",
+      "●新增【无音区】：「沉心域无音区」、「烬心域无音区」",
+      "●新增【残象聚落】：「梦枢天罗残象聚落」",
+      "✦开放条件：完成【潮汐任务】第四章・幕间「幽客销残声」后解锁。"
+    ]
+  },
+  "reviews": [
+    {
+      "path": "roco/raw-characters.json",
+      "entities": [
+        "cerulla",
+        "meewee",
+        "sparka"
+      ],
+      "historicalCommit": "bc613dbcd33a852c7db8bc005598f43f6bf66590",
+      "commitQuote": "roco 角色扩展 skills/stats/releaseVersion（3 只御三家复用已核实国服数据）",
+      "status": "needs_review",
+      "supported": [],
+      "unverified": [
+        "International-server skill values and conditions",
+        "International-server stats and releaseVersion",
+        "Changed descriptions claiming shared values"
+      ],
+      "officialAttempt": {
+        "url": "https://www.rocokingdom.com/",
+        "result": "HTTP 302 to https://rocokingdom.com:443/, then curl timed out after 35 seconds without final response body",
+        "meaning": "No evidence obtained; timeout does not establish absence of official data."
+      },
+      "runtimeExposure": "characters.ts statically imports the source JSON; pending values are not quarantined from rendered pages."
+    },
+    {
+      "path": "wuwa/raw-echoes.json",
+      "entities": [
+        "flower-of-crimson-reminiscence",
+        "heart-that-illuminates-dreams",
+        "mirror-shadow-flowing-lightning"
+      ],
+      "historicalCommit": "8988558af9ce6833df9a5e3ba067899d830aa1b8",
+      "status": "needs_review",
+      "supported": [
+        "CN names of the three new five-piece sets",
+        "The announcement five-piece trigger conditions, magnitudes and durations are consistent with the source Chinese summaries"
+      ],
+      "unverified": [
+        "All three two-piece effects (not established by the quoted notice)",
+        "Official English set names and mechanic terminology",
+        "bestFor recommendations need separate editorial reasoning, not official attribution"
+      ],
+      "runtimeExposure": "echoes.ts statically imports source JSON; source-only additions are already build inputs even though the raw public mirror lacks them."
+    },
+    {
+      "path": "wuwa/raw-regions.json",
+      "entities": [
+        "simulacrum-nexus"
+      ],
+      "historicalCommit": "8988558af9ce6833df9a5e3ba067899d830aa1b8",
+      "status": "needs_review",
+      "supported": [
+        "CN region name, control-center description and seven listed scenes",
+        "Chapter IV Act IV entry guidance, and its interlude prerequisite",
+        "Two named tacet fields and the named remnant settlement"
+      ],
+      "unverified": [
+        "Official English and Japanese region/scene translations",
+        "Assigning announcement-wide new echoes to this region as bosses",
+        "Map reward-progress claims need exact feature/region mapping"
+      ],
+      "runtimeExposure": "regions.ts uses loadJson source-or-public fallback; compiled local fallback behavior is not remeasured in S2.4."
+    }
+  ],
+  "safety": {
+    "rawContentChanged": false,
+    "officialFactsAutoApproved": false,
+    "existingAdminFactStoreModified": false,
+    "cloudDeployments": false,
+    "actionsRuns": false,
+    "sourceReviewIsReleaseApproval": false
+  },
+  "originalLocalEvidence": ".release-records/s2-4/"
+}

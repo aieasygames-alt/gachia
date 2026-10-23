@@ -6,6 +6,8 @@
 
 这是主站发布门禁，不是合并 Worker、恢复账号或自动清理历史文件的授权。当前版本的账号接口应为 404 + `ACCOUNT_FEATURES_DISABLED`，而非旧版的 session 200。
 
+S2.4 增加前置内容门禁：正式准备发布前先执行 `pnpm content:release-ready`。当前三对 raw 数据待审，命令预期失败，主站 production 请求在依赖安装/构建前即停止，真正推广前再次核验。本地 deploy/upload 同样阻断，普通 build/preview 和隔离 staging 保留审查用途。不得只同步待审文件或清空台账获得通过；需按[内容契约](content-source-and-sitemap-contract.md)完成字段/区服/语言审核。这个门禁不代替本页的静态资源、生产版本和回滚保护；本页后续步骤仅在内容门禁通过后适用。
+
 ## 生产输入与可信链
 
 正式发布仍通过 `.github/workflows/deploy.yml` 的手动 production 入口，要求 main ref、`RELEASE_MAIN_ONLY`、production environment job 和当前 100% 活跃版本。environment job 只有在仓库配置了保护规则后才提供人工审批，不得仅凭存在 environment 名称就声称已经审批。新增两个显式输入：
