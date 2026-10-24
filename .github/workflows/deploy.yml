@@ -157,6 +157,7 @@ jobs:
         with:
           name: main-fallback-coverage-${{ github.run_id }}
           path: .release-records/main-fallback-coverage.json
+          include-hidden-files: true
           if-no-files-found: warn
           retention-days: 30
 
@@ -366,6 +367,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: main-staging-acceptance-failure-${{ github.run_id }}
+          include-hidden-files: true
           path: |
             .release-records/web-staging-*/result.json
             test-results/
@@ -377,6 +379,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: main-staging-acceptance-${{ github.run_id }}
+          include-hidden-files: true
           path: |
             .release-records/web-staging-*/result.json
             .release-records/staging-sitemap-graph.json
@@ -538,6 +541,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: main-production-acceptance-${{ github.run_id }}
+          include-hidden-files: true
           path: |
             .release-records/web-production-*/result.json
             .release-records/production-sitemap-graph.json

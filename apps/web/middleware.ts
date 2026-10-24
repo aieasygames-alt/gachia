@@ -106,7 +106,7 @@ function stripLabelSuffix(segment?: string) {
 
 function routeMiddleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  if (pathname === '/robots.txt') return NextResponse.next();
+  if (pathname === '/robots.txt' || pathname === '/sitemap.xml' || pathname.startsWith('/sitemaps/')) return NextResponse.next();
   const decodedPathname = decodeURIComponent(pathname);
   const segments = pathname.split('/').filter(Boolean);
   const [firstSegment, secondSegment, thirdSegment, fourthSegment] = segments;
@@ -287,6 +287,8 @@ export const config = {
   matcher: [
     '/',
     '/robots.txt',
+    '/sitemap.xml',
+    '/sitemaps/:path*',
     '/about',
     '/calendar',
     '/characters',

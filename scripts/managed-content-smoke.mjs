@@ -94,6 +94,19 @@ export function assertMainFallbackSnapshot(snapshot, path, expectedName) {
   assert(!snapshot.scripts.some(src => src.startsWith('/_games/')), path);
 }
 
+export function assertRocoLegacyRedirect(location, origin, suffix, { localFixture = false } = {}) {
+  assert(typeof location === 'string' && location.length > 0, 'Missing legacy redirect Location');
+  const target = new URL(location, origin);
+  assert.equal(target.pathname, `/zh/roco/${suffix}`);
+  if (localFixture) {
+    assert.equal(target.protocol, 'http:');
+    assert(['127.0.0.1', 'localhost'].includes(target.hostname));
+    assert.equal(target.port, new URL(origin).port);
+  } else assert.equal(target.origin, origin);
+  assert(!target.username && !target.password && !target.search && !target.hash);
+  return target;
+}
+
 async function verifyContent(origin, directory, { localFixture, proxy }) {
   const observations = { http: [], fallbackHttp: [], json: [], search: [], browser: [], indexnow: [], retainedAssets: [] };
   const nteMaterials = JSON.parse(readFileSync(resolve(ROOT, 'packages/data/games/nte/raw-materials.json'), 'utf8'));
@@ -138,14 +151,7 @@ async function verifyContent(origin, directory, { localFixture, proxy }) {
     const response = await fetch(origin + path, { redirect: 'manual', signal: AbortSignal.timeout(30000) });
     assert.equal(response.status, 301, path);
     const location = response.headers.get('location');
-    const target = new URL(location);
-    assert.equal(target.pathname, `/zh/roco/${suffix}`, path);
-    if (localFixture) {
-      assert.equal(target.protocol, 'http:', path);
-      assert(['127.0.0.1', 'localhost'].includes(target.hostname), path);
-      assert.equal(target.port, new URL(origin).port, path);
-    } else assert.equal(target.origin, origin, path);
-    assert(!target.username && !target.password && !target.search && !target.hash, path);
+    assertRocoLegacyRedirect(location, origin, suffix, { localFixture });
     observations.http.push({ path, status: 301, location });
   }
   const indexnowCases = [

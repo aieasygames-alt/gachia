@@ -3,7 +3,36 @@ import test from 'node:test';
 import { readFileSync, mkdtempSync, mkdirSync, writeFileSync, rmSync, copyFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { assertMainFallbackSnapshot, requireLocalContentOrigin, requirePublishedContentOrigin, verifyPublishedIndexNow, verifyPublishedManagedContent, verifyManagedContent, verifyNoLegacyIndexNowTransport, verifyWithdrawnRocoAssets } from './managed-content-smoke.mjs';
+import { assertMainFallbackSnapshot, assertRocoLegacyRedirect, requireLocalContentOrigin, requirePublishedContentOrigin, verifyPublishedIndexNow, verifyPublishedManagedContent, verifyManagedContent, verifyNoLegacyIndexNowTransport, verifyWithdrawnRocoAssets } from './managed-content-smoke.mjs';
+
+test('legacy redirects accept relative cloud locations without allowing origin or path drift', () => {
+  for (const origin of ['https://gachia.com', 'https://gachia-staging.aieasygames.workers.dev']) {
+    for (const suffix of ['items', 'items/gulu-ball']) {
+      const path = `/zh/roco/${suffix}`;
+      for (const location of [path, origin + path]) assert.equal(assertRocoLegacyRedirect(location, origin, suffix).href, origin + path);
+      for (const location of [null, '', '//evil.example' + path, 'https://evil.example' + path,
+        'http://' + new URL(origin).host + path, '/en/roco/' + suffix, path + '?x=1', path + '#x',
+        origin.replace('https://', 'https://u:p@') + path]) {
+        assert.throws(() => assertRocoLegacyRedirect(location, origin, suffix));
+      }
+    }
+  }
+  const origin = 'http://127.0.0.1:8080';
+  assertRocoLegacyRedirect('/zh/roco/items', origin, 'items', { localFixture: true });
+  assertRocoLegacyRedirect('http://localhost:8080/zh/roco/items', origin, 'items', { localFixture: true });
+  for (const location of ['http://localhost:8081/zh/roco/items', 'https://localhost:8080/zh/roco/items', 'http://evil.example:8080/zh/roco/items']) {
+    assert.throws(() => assertRocoLegacyRedirect(location, origin, 'items', { localFixture: true }));
+  }
+});
+
+test('release evidence uploads explicitly include the hidden release-records directory', () => {
+  const workflow = readFileSync(new URL('../.github/workflows/deploy.yml', import.meta.url), 'utf8');
+  for (const name of ['Preserve fallback publication precheck', 'Preserve failed production candidate acceptance', 'Preserve staging release acceptance records', 'Preserve production release acceptance records']) {
+    const step = workflow.split(`- name: ${name}\n`)[1]?.split('\n      - ')[0];
+    assert(step?.includes('include-hidden-files: true'), name);
+    assert(step.includes('.release-records/'), name);
+  }
+});
 
 test('Main fallback acceptance rejects canonical, index policy, name and runtime ownership drift', () => {
   const path = '/ja/nte/items/annulith';

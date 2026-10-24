@@ -46,7 +46,7 @@ Roco 原始事实和内部审查证据保留，不将撤回描述为已获官方
 
 ## 5. 发布与验收记录
 
-本地预检已完成：全仓 9 个类型任务，强制无缓存单元测试 Web 354、Router 35、Data 162、Admin 265（17 个既有跳过），发布回归 Node 127、Python 9/11/7 通过。lint 无错误，保留一项停用 auth-dialog 的既有警告。
+本地预检已完成：全仓 9 个类型任务，强制无缓存单元测试 Web 354、Router 35、Data 162、Admin 265（17 个既有跳过），首轮发布回归 Node 167、Python 9/11/7 通过。lint 无错误，保留一项停用 auth-dialog 的既有警告。
 
 重新构建 Main、dry-run、精确旧产物来源验证及 262 份/7,829,308 字节静态保留通过；编译运行时 HTTP 32/浏览器 18，受管内容浏览器 520、HTTP 23、NTE 全量 171、raw 7、搜索 3、IndexNow 本地 8、旧资源抽样 12，SEO 发现浏览器 32 全部通过。本地开发导航浏览器 16 通过、8 个既有专用 canary 用例按环境跳过，不冒称这 8 个通过；跨 owner 导航八例包含在通过集合。
 
@@ -54,6 +54,31 @@ Azur/Lvmeng bundle dry-run、Azur 内容、llms、所有数据/manifest/配置�
 重新读取实际四个生产游戏 XML，并与本地 Main 组合：6 个文档、Main 4,515 + Azur 150 + Genshin 1,602 + Lvmeng 27 + NTE 389 = 6,683 唯一 URL，无重复/owner 冲突；迁移增加 263、移除 209 与既有差分完全一致。这仍是发布前组合验证，不冒充线上主站已更新。
 公网 15 个基础边界和 19 个跨 owner 页面/资源/XML 基线检查通过。
 
-当前状态：本地候选已验证，尚未推送或触发 Actions；云端最终结果待追加。
+### 5.1 首次正式运行：安全停在 staging
+
+候选 `643ae1edeb43b12da62a6819240ab1e44daee2c9` 已集中推送 main，手动运行 `40118354177`，build 成功。
+封存 artifact `12571130414`，GitHub ZIP SHA-256 `81287a4f13b1e13acc3d492a8189ac893b25864fc8b02468e93c6ff166bf7ef2`；内部 tar SHA-256 `6acc618e610091a0d8a103bd99430e1ca34e70593edfc6f53908f0cfe52bf745`。
+实际下载并核对 ZIP、内部 tar 及全部 262 个旧静态文件，来源清单与本地完全一致；复制数量因跨平台生成块碰撞不同为 224，不把它误认成漏文件。
+
+staging 已更新为 `68a5e26c-b3f1-4278-ab22-5fe965a77c6d`，但完整验收报 `Invalid URL`，因此 production job 被跳过，Main 仍为旧版本，其他生产服务/路由/域名均未变。
+根因是 `/roco/items` 返回正确的 301 和相对 `Location: /zh/roco/items`，旧脚本只使用 `new URL(location)`。修复为基于受限目标 origin 解析，再继续严格核对 origin/协议、路径、端口、凭据、query/hash；不改站点路由、不跟随重定向到外站。
+
+同时发现 Actions upload 默认排除 `.release-records` 隐藏目录，导致 runner 中已产生的首次失败 JSON 未上传；该原始 JSON 未能恢复，不假称已保留。已保存 workflow/job 日志、精确 CI artifact、独立 API 快照和重新读取的 HTTP 头。四处精确限定的证据上传增加 `include-hidden-files: true`，不上传整个目录或任何凭据配置。
+增加相对/绝对地址及安全拒绝、证据上传配置回归，修复后 Node 169、Python 9/11/7 通过。
+首次运行 API `run_duration_ms=1382000`；billable 字段为 0，不能据此宣称没有计费。修复后必须先对现有 staging 完成完整验收，再启动新提交的正式流程；不能重跑旧 SHA 冒用新验证器，也不手动跳过 staging 推广生产。
+
+### 5.2 追加发现：staging XML 的实际隔离缺口
+
+独立执行严格 XML 验收时，实际 staging 根图与 Main 子图均缺少 `X-Robots-Tag: noindex`，门禁正确拒绝。
+现有 middleware 虽按 workers.dev 运行时主机添加保护，但 matcher 没有覆盖 `/sitemap.xml` 或 `/sitemaps/*`；单独调用 middleware 的旧测试未覆盖实际匹配，因此漏检。
+新增精确 matcher，并让 XML 直接透传，不进入 next-intl 语言重定向；仍由外层运行时主机判断是否附加 noindex，同一产物在生产没有该禁止头。
+增加 Next 实际 matcher 测试，Web 355 项通过。重新构建后，使用只在本地运行的隔离 wrapper 将请求 URL 切换为两种受限虚拟主机，实际执行编译 Worker：两种主机 × 两个 XML 路径均 200/XML、不重定向，仅 workers.dev 有 noindex。该本地虚拟主机验收不冒充真实 staging 已修复；真实修复须待下一次受控部署验证。
+最初仅设置 HTTP Host 的本地试验被 Wrangler 开发代理改写，未能模拟预览 origin，失败输出保留；不据此修改业务规则或降低断言。
+
+修复重定向验证器后，针对首次部署的实际 staging 完整执行运行时 HTTP 32/浏览器 18、受管内容浏览器 520、NTE HTTP 171、raw/搜索/旧资源和匿名 IndexNow 边界，均通过。该验收不包含尚未部署的 XML middleware 修复，不将其当作全部 staging 放行。
+新增 XML middleware 的重新构建、dry-run、旧资源来源及 262 文件保留、171 URL 覆盖、完整本地 520 内容/32 SEO/18 运行时浏览器和 4 个虚拟主机 XML 场景通过；类型及 lint 通过。受管内容与发现 XML 集合、摘要均未变化。
+第二次正式运行仍须完整 build/staging/production，同产物推广及新 staging 真实 XML noindex 检查不可跳过。预计另需约 50–70 runner 分钟，实际配额仍未知；这是修复已定位根因后的必要发布，不重复旧 SHA，也不通过改短测试或删除门禁降低费用。
+
+当前状态：第二轮候选本地验证完成，生产尚未推广；第二轮真实发布结果待追加。
 完整本地记录位于 `.release-records/s2-19/`，后续 Actions 运行、immutable artifact、两个实际新版本、验收结果和其他 owner 不变证明以最终记录为准。
 不得在部署完成前把本计划标为已上线。
