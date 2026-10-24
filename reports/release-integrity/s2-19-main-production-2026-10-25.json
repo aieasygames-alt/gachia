@@ -1,0 +1,451 @@
+{
+  "schemaVersion": 1,
+  "phase": "S2.19",
+  "recordedAt": "2026-10-24T19:44:16.211104+00:00",
+  "status": "main_production_deployed_independent_acceptance_passed_ci_postcheck_failure_unresolved",
+  "source": {
+    "baseline": "7512b82",
+    "firstAttempt": "643ae1edeb43b12da62a6819240ab1e44daee2c9",
+    "production": "2a24738ea1155067842fac491e354e2cd281307c",
+    "productionBranch": "main",
+    "documentationOnlyCloseoutNotPushed": true
+  },
+  "scope": {
+    "mainStagingDeployments": 2,
+    "mainProductionDeployments": 1,
+    "otherProductionWorkerDeployments": 0,
+    "routerDeployed": false,
+    "routingOrDomainChanges": false,
+    "mainBindingChanges": false,
+    "databaseChanges": false,
+    "accountsRestored": false,
+    "workersMergedOrAdded": false,
+    "diskCleanup": false,
+    "productionRollbackPerformed": false,
+    "originalDirtyWorkspaceUsed": false
+  },
+  "deployment": {
+    "finalCloudSnapshotAt": "2026-10-24T19:40:52.787Z",
+    "services": {
+      "gachia": {
+        "id": "7f51f348-5416-4168-a1d4-8768992c457f",
+        "createdOn": "2026-10-24T19:13:45.294888Z",
+        "versions": [
+          {
+            "version_id": "c0615321-071d-4f44-b635-70dbdba117c2",
+            "percentage": 100
+          }
+        ]
+      },
+      "gachia-staging": {
+        "id": "37fd8892-7455-463d-916a-ebffdbddac0d",
+        "createdOn": "2026-10-24T19:01:16.646524Z",
+        "versions": [
+          {
+            "version_id": "338d9de9-e536-4921-b870-3e05ca2ac9d8",
+            "percentage": 100
+          }
+        ]
+      },
+      "gachia-router": {
+        "id": "04a74338-c9ba-4e87-9857-0fe414457ff5",
+        "createdOn": "2026-10-09T14:55:23.062535Z",
+        "versions": [
+          {
+            "version_id": "239bb325-998c-4893-98e5-ddd24d50c99a",
+            "percentage": 100
+          }
+        ]
+      },
+      "gachia-game-genshin": {
+        "id": "c087254a-58f4-4c61-b92b-0fd44d9f2f2b",
+        "createdOn": "2026-10-15T09:51:39.317581Z",
+        "versions": [
+          {
+            "version_id": "b2952171-bf58-4d64-a16e-8cea41cf9529",
+            "percentage": 100
+          }
+        ]
+      },
+      "gachia-game-nte": {
+        "id": "c344161b-5b10-4e87-8551-4e950366a5f1",
+        "createdOn": "2026-10-18T11:23:20.107554Z",
+        "versions": [
+          {
+            "version_id": "6b079ce0-7fce-4bef-a649-150c1a947135",
+            "percentage": 100
+          }
+        ]
+      },
+      "gachia-game-lvmeng": {
+        "id": "d04a1d7d-d9d0-46d5-8f26-b8985e596f64",
+        "createdOn": "2026-10-18T11:22:43.202469Z",
+        "versions": [
+          {
+            "version_id": "815be742-10a4-4609-a32a-cfd0cd968487",
+            "percentage": 100
+          }
+        ]
+      },
+      "gachia-game-azur-promilia": {
+        "id": "fcc7ddf4-f591-4607-9d95-f28ba096229d",
+        "createdOn": "2026-10-24T16:53:32.568953Z",
+        "versions": [
+          {
+            "version_id": "9867e978-20fa-46f9-8dd4-c96c400e6919",
+            "percentage": 100
+          }
+        ]
+      },
+      "gachia-game-azur-promilia-staging": {
+        "id": "95c17034-e3af-4b21-ae7b-f504e59e0fd4",
+        "createdOn": "2026-10-24T10:49:52.035337Z",
+        "versions": [
+          {
+            "version_id": "c6b46257-2441-4cc2-b9c6-c31d4d4d1cca",
+            "percentage": 100
+          }
+        ]
+      }
+    },
+    "otherProductionServicesAndAzurStagingUnchanged": [
+      "gachia-router",
+      "gachia-game-genshin",
+      "gachia-game-nte",
+      "gachia-game-lvmeng",
+      "gachia-game-azur-promilia",
+      "gachia-game-azur-promilia-staging"
+    ],
+    "routesAndDomainsUnchanged": true
+  },
+  "artifact": {
+    "artifactId": 12571493654,
+    "zipBytes": 54025034,
+    "zipSha256": "ee750c335f49ce18bea4ff184e8dcd7d16b271f160f4c3c8161133ca46f671ee",
+    "innerTarBytes": 54032088,
+    "innerTarSha256": "ba5c25f0b54976b8baf1c90e86f87b4abd385d156df05726ad504079c5003e1f",
+    "retainedStaticFiles": 262,
+    "retainedStaticBytes": 7829308,
+    "source": {
+      "artifactId": "12509287773",
+      "archiveSha256": "b1a8016284dbf39855d69c9ab54a7255a9b6db81e39b2670a936058fa6338858",
+      "versionId": "80d20cea-4407-4ece-a87c-30f27c915021",
+      "runId": 39971089654,
+      "headSha": "e88ceae39e4a836725c8039884c54eba18ebdaa1"
+    },
+    "staticCopied": 225,
+    "symlinks": 19,
+    "regularFiles": 3369,
+    "sameImmutableArtifactIdAndInnerTarSha256InStagingAndProductionLogs": true,
+    "selfContainedCiVerified": true,
+    "currentArtifactAcceptedByExistingNextReleaseProvenanceGate": false,
+    "nextReleaseGateReason": "prepare-previous-web-assets requires a successful deploy job; current deploy job failed after real deployment; controlled read-only acceptance/provenance closeout is required, not removal of the success predicate"
+  },
+  "actions": [
+    {
+      "runId": 40118354177,
+      "source": "643ae1edeb43b12da62a6819240ab1e44daee2c9",
+      "url": "https://github.com/aieasygames-alt/gachia/actions/runs/40118354177",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "name": "build",
+          "conclusion": "success",
+          "startedAt": "2026-10-24T17:55:49Z",
+          "completedAt": "2026-10-24T18:16:19Z"
+        },
+        {
+          "name": "deploy-staging",
+          "conclusion": "failure",
+          "startedAt": "2026-10-24T18:16:21Z",
+          "completedAt": "2026-10-24T18:18:47Z"
+        },
+        {
+          "name": "deploy",
+          "conclusion": "skipped",
+          "startedAt": "2026-10-24T18:18:48Z",
+          "completedAt": "2026-10-24T18:18:48Z"
+        }
+      ]
+    },
+    {
+      "runId": 40121743063,
+      "source": "2a24738ea1155067842fac491e354e2cd281307c",
+      "url": "https://github.com/aieasygames-alt/gachia/actions/runs/40121743063",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "name": "build",
+          "conclusion": "success",
+          "startedAt": "2026-10-24T18:40:05Z",
+          "completedAt": "2026-10-24T19:00:15Z"
+        },
+        {
+          "name": "deploy-staging",
+          "conclusion": "success",
+          "startedAt": "2026-10-24T19:00:18Z",
+          "completedAt": "2026-10-24T19:12:37Z"
+        },
+        {
+          "name": "deploy",
+          "conclusion": "failure",
+          "startedAt": "2026-10-24T19:12:40Z",
+          "completedAt": "2026-10-24T19:19:56Z"
+        }
+      ]
+    }
+  ],
+  "ciFailure": {
+    "firstAttempt": "staging Invalid URL on a valid relative legacy redirect; evidence glob excluded hidden directory",
+    "firstAttemptRepaired": true,
+    "additionalXmlGap": "preview middleware matcher omitted XML; repaired and actual staging strict graph passed",
+    "secondAttempt": "postdeploy managed browser /ja/roco/weapons/lianjinshu recorded 12 same-origin JS request failures",
+    "secondAttemptRootCause": "undetermined_not_reproduced_in_subsequent_complete_independent_acceptance",
+    "originalFailureRecordPreserved": true,
+    "ciWorkflowSuccess": false,
+    "ciProductionXmlAndFinalHi3StepsRan": false,
+    "blindRedeployOrRollbackAfterFailure": false
+  },
+  "localChecks": {
+    "typeCheckTasks": 9,
+    "webTestsFinal": 355,
+    "routerTests": 35,
+    "dataTests": 162,
+    "adminTests": 265,
+    "adminExistingSkips": 17,
+    "nodeReleaseTestsFinal": 169,
+    "pythonRetentionTests": 9,
+    "pythonXmlTests": 11,
+    "pythonPublishedXmlTests": 7,
+    "lintErrors": 0,
+    "existingInactiveAuthDialogWarnings": 1,
+    "managedBrowser": 520,
+    "mainFallbackHttp": 171,
+    "runtimeHttp": 32,
+    "runtimeBrowser": 18,
+    "discoveryBrowser": 32,
+    "developmentNavigationBrowser": 16,
+    "existingCanaryEnvironmentSkips": 8,
+    "compiledVirtualHostXmlCases": 4,
+    "configDataBundlesLlmsPassed": true
+  },
+  "publishedAcceptance": {
+    "staging": {
+      "artifactId": 12572323124,
+      "status": "main_staging_verified_accounts_disabled",
+      "http": 32,
+      "runtimeBrowser": 18,
+      "managedContent": {
+        "http": 23,
+        "fallbackHttp": 171,
+        "json": 7,
+        "search": 3,
+        "browser": 520,
+        "indexnow": 1,
+        "retainedAssets": 12
+      },
+      "crossOwnerBrowser": 8,
+      "strictXmlGraphPassed": true
+    },
+    "productionCi": {
+      "status": "failed_after_runtime_pass",
+      "runtimeHttpPassed": 32,
+      "runtimeBrowserPassed": 18,
+      "managedContentFullPass": false,
+      "failureArtifactId": 12572820450
+    },
+    "productionIndependent": {
+      "record": ".release-records/web-production-7a191da6-64a1-4ca4-86a6-561ff75a8f42/result.json",
+      "status": "main_production_verified_accounts_disabled",
+      "startedAt": "2026-10-24T19:22:48.123Z",
+      "finishedAt": "2026-10-24T19:40:30.316Z",
+      "sourceOrDeploymentChangedForRecheck": false,
+      "assertionsRelaxedOrCasesSkipped": false,
+      "http": 32,
+      "runtimeBrowser": 18,
+      "managedContent": {
+        "http": 23,
+        "fallbackHttp": 171,
+        "json": 7,
+        "search": 3,
+        "browser": 520,
+        "indexnow": 1,
+        "retainedAssets": 12
+      },
+      "strictXmlGraphPassed": true,
+      "sameOriginAssetFailurePageLocalesTimesWidths": 6,
+      "allSealedMainJsCssByteVerified": 359,
+      "allPreviousMainStaticByteVerified": 262,
+      "oldStaticBytes": 7829308,
+      "cloudIndexNowAuthenticatedProbeOrSubmission": false
+    }
+  },
+  "sitemap": {
+    "mainCount": 4515,
+    "mainByLocale": {
+      "zh": 1583,
+      "ja": 1352,
+      "en": 1580
+    },
+    "ownerCounts": {
+      "main": 4515,
+      "azur-promilia": 150,
+      "genshin": 1602,
+      "lvmeng": 27,
+      "nte": 389
+    },
+    "unionCount": 6683,
+    "documents": 6,
+    "mainArtifactExactSet": true,
+    "fallbackCoverage": {
+      "requiredCount": 171,
+      "missingCount": 0,
+      "missing": [],
+      "status": "main_fallback_urls_present"
+    },
+    "baselineRootRecords": 6629,
+    "addedCount": 263,
+    "removedCount": 209,
+    "publishedSetsEqualFreshPreflightReviewedSets": true,
+    "genshinIndependent1572CandidatePublished": false
+  },
+  "budget": {
+    "pushes": 2,
+    "actionsRunsStarted": 2,
+    "observedJobWallSeconds": 3761.0,
+    "observedRunnerMinutesNotBilledMinutes": 62.68,
+    "actualRemainingAllowance": "unavailable_with_current_credentials",
+    "actualBilling": "unknown_timing_api_zero_not_treated_as_free",
+    "documentationOnlyActions": 0
+  },
+  "limitations": [
+    "Original production CI same-origin JS failures remain unexplained; no claim that workflow is green or that root cause was fixed.",
+    "Current production artifact is precisely proven but not automatically eligible as next old artifact under the existing success-only provenance gate.",
+    "Genshin independent guide policy remains pending; old origin-only workflow is unsuitable for already-live routing.",
+    "Previous Main version readable after deployment, no live rollback rehearsal.",
+    "No 24-hour performance/error trend or search-indexing acceptance, and no claim all historical game facts are verified.",
+    "Ignored full artifacts and evidence require separate backup before workspace archival; no disk cleanup performed."
+  ],
+  "evidence": [
+    {
+      "path": ".release-records/s2-19/cloud-before.json",
+      "bytes": 19171,
+      "sha256": "d9318b9355e2f7c81946edcda10b14592f5a57c3739c426b641dbed307bec2f3"
+    },
+    {
+      "path": ".release-records/s2-19/preflight-xml.json",
+      "bytes": 434961,
+      "sha256": "fe6de5dad10a90b65ce38c0e3bbf4e495d9c09764fb8121743b09af5ab41dacc"
+    },
+    {
+      "path": ".release-records/s2-19/actions-final.json",
+      "bytes": 13059,
+      "sha256": "73c0b83384e58e1193acc19b339d7543336bb72a015110e064ba365d6dec2e30"
+    },
+    {
+      "path": ".release-records/s2-19/actions-failed.log",
+      "bytes": 4322,
+      "sha256": "1730c384760dd5a32d8b18c94f5bb631584ace2b9ffa948dcc3952319dc0077d"
+    },
+    {
+      "path": ".release-records/s2-19/ci-artifact-identity.json",
+      "bytes": 256,
+      "sha256": "c3d0e08d6b068cf78c1965b94f0fa9d29a594ec14e90e804a08066309d47766f"
+    },
+    {
+      "path": ".release-records/s2-19/staging-sitemap-pre-repair-failure.json",
+      "bytes": 313,
+      "sha256": "480502c1150cb1746c9e23368a4dc31fd731950c1a1f9e1c105092fd614f3048"
+    },
+    {
+      "path": ".release-records/s2-19/compiled-xml-boundary/result.json",
+      "bytes": 654,
+      "sha256": "a20115399bfef2574837fd223a6e28179843736227129a079d9e2a2d48ec2970"
+    },
+    {
+      "path": ".release-records/s2-19/local-release-tests-repair.log",
+      "bytes": 35828,
+      "sha256": "22eb95cf17ceee63b95b9b9fbec20534dc6920f7aece79fbe774eb6cb77473aa"
+    },
+    {
+      "path": ".release-records/s2-19/local-web-tests-repair.log",
+      "bytes": 383,
+      "sha256": "e8127e03a9f260f49ca604c9470de9ac64c3fd91ae6c42d0e8d19f82d931616d"
+    },
+    {
+      "path": ".release-records/s2-19/attempt-2/actions-final.json",
+      "bytes": 17525,
+      "sha256": "fec0c2581d4fc795ee0781dec664b341c52180524450739422f28277a794ef86"
+    },
+    {
+      "path": ".release-records/s2-19/attempt-2/actions-build.log",
+      "bytes": 357578,
+      "sha256": "220e95c058009bd742a8f99c0842376835f13c6b55e1d2a375feec4f6c753344"
+    },
+    {
+      "path": ".release-records/s2-19/attempt-2/actions-staging.log",
+      "bytes": 84904,
+      "sha256": "2201f970aa25d0dcbc595c076f34b8686587676ff54c6bddb573464b024974e1"
+    },
+    {
+      "path": ".release-records/s2-19/attempt-2/actions-production.log",
+      "bytes": 94551,
+      "sha256": "df6c8a788860194453532e4b9448cbd0abf2ce2a2a00dd55afdd740f5c6b9fa3"
+    },
+    {
+      "path": ".release-records/s2-19/attempt-2/production-failure-result.json",
+      "bytes": 9662,
+      "sha256": "a6089922e123989d40070fa3f0e773d02443f657cb7972d437ca7d888b1bb3ac"
+    },
+    {
+      "path": ".release-records/s2-19/attempt-2/staging-result.json",
+      "bytes": 162937,
+      "sha256": "a0ca8c5c8703af54f3832edff2eb1f02f2bffb3b60569b7642894ebfce64b1ef"
+    },
+    {
+      "path": ".release-records/s2-19/attempt-2/staging-sitemap-graph.json",
+      "bytes": 406685,
+      "sha256": "ca2328fb7a020500595d270a4d8fee4cbf342114c400fdef4152276a53d7e332"
+    },
+    {
+      "path": ".release-records/s2-19/attempt-2/ci-artifact-identity.json",
+      "bytes": 667,
+      "sha256": "2287312f043e76c251bb5a69708a2f9ac1be85f6574c43dc8b8b0704b113d2f0"
+    },
+    {
+      "path": ".release-records/s2-19/attempt-2/all-ci-static-public-result.json",
+      "bytes": 76934,
+      "sha256": "6d767ecfd7364d79afff662153755aa29b195fe7a0aad64a7579841c896aacef"
+    },
+    {
+      "path": ".release-records/s2-19/attempt-2/all-old-main-assets-public.json",
+      "bytes": 56940,
+      "sha256": "b326493400f3933eff2ab36531a4da240013b5ff8edd070b558e0949e39b1526"
+    },
+    {
+      "path": ".release-records/s2-19/attempt-2/diagnostic-weapons-pages.json",
+      "bytes": 17058,
+      "sha256": "e21591f4c8153d5cee4df6ae68aad838462218be8bf8992438469958efff855f"
+    },
+    {
+      "path": ".release-records/s2-19/attempt-2/independent-production-sitemap-graph.json",
+      "bytes": 406604,
+      "sha256": "a4b7f7a46470da22b008965619b3d23417bc43ba4e2acb2c57882ed75ab04719"
+    },
+    {
+      "path": ".release-records/s2-19/attempt-2/cloud-final.json",
+      "bytes": 19490,
+      "sha256": "8c95ecaa92b4e24abc1de88d39a698a6b1853a58c06b1fce82676f2b248f8cb1"
+    },
+    {
+      "path": ".release-records/s2-19/attempt-2/previous-main-version-after-deploy.json",
+      "bytes": 2715,
+      "sha256": "9023c086d84c3db23f7cbae848b0b8aa52e16ec98ba123d6f1e7ffa410dc181f"
+    },
+    {
+      "path": ".release-records/web-production-7a191da6-64a1-4ca4-86a6-561ff75a8f42/result.json",
+      "bytes": 162909,
+      "sha256": "868051a40e1e132380c3b5b898ef836c6e207c9823e175b5f5d938fc7f45f9b7"
+    }
+  ]
+}
