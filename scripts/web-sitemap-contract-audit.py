@@ -13,13 +13,39 @@ import xml.etree.ElementTree as ET
 NS = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
 PUBLIC = "https://gachia.com"
 MAIN = "/sitemaps/main/sitemap.xml"
+ROUTE_CONTRACT = json.loads((Path(__file__).resolve().parent.parent / "packages/core/route-ownership.json").read_text())
+if ROUTE_CONTRACT.get("schemaVersion") != 1 or set(ROUTE_CONTRACT["games"]) != {"nte", "genshin", "azur-promilia", "lvmeng"}:
+    raise ValueError("Unsupported route ownership contract")
+ROUTE_GAMES = ROUTE_CONTRACT["games"]
+
+
+def route_owner(path):
+    segments = [part for part in path.split("/") if part]
+    for owner, routes in ROUTE_GAMES.items():
+        if len(segments) < 2 or segments[1] != owner:
+            continue
+        if segments[0] in ("_games", "sitemaps"):
+            return owner
+        if segments[0] in routes["locales"] and (len(segments) == 2 or
+                (len(segments) == 3 and segments[2] in routes["pages"]) or
+                (len(segments) == 4 and segments[2] in routes["details"])):
+            return owner
+    return "main"
+
+
+def main_sitemap_path(path):
+    segments = [part for part in path.split("/") if part]
+    if not segments or segments[0] not in ("zh", "en", "ja") or route_owner(path) != "main":
+        return False
+    routes = ROUTE_GAMES.get(segments[1]) if len(segments) > 1 else None
+    return not routes or (len(segments) == 4 and segments[2] in routes["mainIndexableDetails"])
 
 
 def canonical_path(value):
     url = urllib.parse.urlsplit(value)
     if url.scheme != "https" or url.netloc != "gachia.com" or url.query or url.fragment:
         raise ValueError(f"Noncanonical sitemap URL: {value}")
-    if not url.path.startswith("/") or "//" in url.path or any(part in (".", "..") for part in url.path.split("/")):
+    if not url.path.startswith("/") or "//" in url.path or "%" in url.path or "\\" in url.path or any(part in (".", "..") for part in url.path.split("/")):
         raise ValueError(f"Invalid sitemap path: {value}")
     return url.path
 
@@ -55,14 +81,18 @@ def verify_documents(index_xml, main_xml):
         match = re.fullmatch(r"/sitemaps/([a-z0-9-]+)/index\.xml", path)
         if not match:
             raise ValueError(f"Unknown sitemap child: {child}")
+        if match[1] not in ROUTE_GAMES:
+            raise ValueError(f"Unknown sitemap owner: {child}")
         owners.add(match[1])
     pages = locations(main_xml, "urlset", "url")
     for url in pages:
         segments = canonical_path(url).split("/")[1:]
         if segments[0] not in ("zh", "en", "ja"):
             raise ValueError(f"Main shard contains a non-page URL: {url}")
-        if len(segments) > 1 and segments[1] in owners:
+        if route_owner(canonical_path(url)) != "main":
             raise ValueError(f"Main shard overrides a dedicated owner: {url}")
+        if not main_sitemap_path(canonical_path(url)):
+            raise ValueError(f"Main shard contains an unapproved fallback page: {url}")
     return {"children": children, "dedicatedOwners": sorted(owners), "mainUrls": pages}
 
 
@@ -75,8 +105,8 @@ def compare_before(before, verified):
         segments = path.split("/")[1:]
         if url in verified["children"]:
             reason = "sitemap-reference-moved-to-index"
-        elif len(segments) > 1 and segments[0] in ("zh", "en", "ja") and segments[1] in verified["dedicatedOwners"]:
-            reason = f"dedicated-owner:{segments[1]}"
+        elif route_owner(path) in verified["dedicatedOwners"]:
+            reason = f"dedicated-owner:{route_owner(path)}"
         else:
             raise ValueError(f"Unexplained removal from main sitemap: {url}")
         removed.setdefault(reason, []).append(url)

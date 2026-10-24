@@ -49,6 +49,14 @@ staging 入口增加 `verifyPublishedManagedContent`，与本地编译验收共�
 
 随后再完成蓝色星原独立来源/产物/回滚审查及 staging、生产验收，核对其他 owner 未变，才推进 Main；参见 [S2.15 交付与发布顺序](../plans/multi-game-s2-15-release-preflight-2026-10-24.md)。严格检查继续拒绝两项未解决的线上/候选依赖，不用基线豁免获得通过。
 
+### S2.16 本地修复进展
+
+上述“171 条缺失”属于 S2.15 的历史阻断。S2.16 通过共享路径合同恢复其实际 Main 归属，重新构建后覆盖门禁为 required 171 / missing 0；新 Main XML 为 4,515 条，较 S2.15 本地候选只增加这 171 条。XML 验收同时拒绝独立 owner 越界及未批准的 Main 回退，门禁没有删除或放宽。完整说明见[路径合同](content-source-and-sitemap-contract.md#18-s216-路径归属与索引许可分离2026-10-24)及 [S2.16 交付](../plans/multi-game-s2-16-route-ownership-2026-10-24.md)。
+
+复用 S2.14 已核实来源的旧生产 ZIP/静态集合，重新检查 ZIP 摘要、复制并验证全部 262 个旧静态文件，不复用旧 HTML 或服务器代码。这是本地候选准备，不是重新读取了当前生产版本；正式发布仍必须实时复核当前 UUID、精确 artifact、期限、main 漂移及预算。该阶段没有执行任何云端发布验收或部署；蓝色星原独立发布依赖和其余迁移差分不能因 Main local gate 通过而视为完成。
+
+共享受管内容验收增加全部 171 个详情的 HTTP/HTML 检查，以及首尾物品三语、双视口共 12 个浏览器用例，验证自身 canonical、index/follow、Main 资产、源中的现有名称与返回独立目录的文档导航。staging 要求全局 noindex，正式域拒绝全局 noindex，页面 metadata 检查与预览索引隔离不混淆。这些断言已接入原有本地及受限云端入口，不另开绕过封存制品的发布通道。
+
 本地预备入口（执行前先完成生产版本/产物对应关系核验）：
 
 ```bash

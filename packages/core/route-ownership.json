@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "games": {
+    "nte": {
+      "locales": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "pages": [
+        "characters",
+        "guides",
+        "weapons",
+        "redeem-codes",
+        "version",
+        "items",
+        "disk-sets",
+        "tier-list",
+        "download",
+        "gacha",
+        "anomalies",
+        "build",
+        "teams",
+        "compare",
+        "calculator",
+        "events",
+        "merchant",
+        "map"
+      ],
+      "details": [
+        "characters",
+        "guides",
+        "disk-sets",
+        "weapons"
+      ],
+      "mainIndexableDetails": [
+        "items"
+      ]
+    },
+    "azur-promilia": {
+      "locales": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "pages": [
+        "characters",
+        "guides",
+        "weapons",
+        "tier-list",
+        "redeem-codes",
+        "kibo",
+        "world",
+        "planner",
+        "version",
+        "systems",
+        "travel-trace"
+      ],
+      "details": [
+        "characters",
+        "guides",
+        "weapons"
+      ],
+      "mainIndexableDetails": []
+    },
+    "genshin": {
+      "locales": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "pages": [
+        "characters",
+        "guides",
+        "weapons",
+        "artifacts",
+        "items",
+        "redeem-codes",
+        "gacha",
+        "version",
+        "tier-list",
+        "download",
+        "map",
+        "build",
+        "teams",
+        "compare",
+        "calculator"
+      ],
+      "details": [
+        "characters",
+        "guides",
+        "weapons",
+        "artifacts",
+        "items"
+      ],
+      "mainIndexableDetails": []
+    },
+    "lvmeng": {
+      "locales": [
+        "zh"
+      ],
+      "pages": [
+        "characters",
+        "guides",
+        "starter-guide",
+        "world",
+        "map",
+        "progression",
+        "news",
+        "version",
+        "download",
+        "redeem-codes",
+        "faq",
+        "roadmap",
+        "launch-check"
+      ],
+      "details": [
+        "characters"
+      ],
+      "mainIndexableDetails": []
+    }
+  }
+}

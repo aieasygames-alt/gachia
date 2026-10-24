@@ -20,8 +20,10 @@ def main_fallback_coverage(main_urls, materials):
     ids = [entry.get("id") for entry in materials]
     if not ids or any(not isinstance(value, str) or not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", value) for value in ids) or len(ids) != len(set(ids)):
         raise ValueError("Invalid Main-owned NTE material inventory")
-    # Router NTE_DETAIL_PAGES excludes items: these details still fall back to Main.
+    # Inventory coverage must agree with path ownership, not merely a game prefix.
     required = {f"{contract.PUBLIC}/{locale}/nte/items/{value}" for locale in ("zh", "en", "ja") for value in ids}
+    if any(not contract.main_sitemap_path(contract.canonical_path(url)) for url in required):
+        raise ValueError("Main fallback inventory conflicts with route ownership contract")
     missing = sorted(required - set(main_urls))
     return {"requiredCount": len(required), "missingCount": len(missing), "missing": missing,
             "status": "blocked_main_owned_urls_missing" if missing else "main_fallback_urls_present"}
@@ -30,7 +32,7 @@ def main_fallback_coverage(main_urls, materials):
 def verify_owner_pages(pages, owner):
     for url in pages:
         segments = contract.canonical_path(url).split("/")[1:]
-        if len(segments) < 2 or segments[0] not in ("zh", "en", "ja") or segments[1] != owner:
+        if len(segments) < 2 or segments[0] not in ("zh", "en", "ja") or contract.route_owner(contract.canonical_path(url)) != owner:
             raise ValueError(f"Wrong sitemap owner {owner}: {url}")
 
 

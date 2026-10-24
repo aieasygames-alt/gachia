@@ -1,4 +1,4 @@
-import { GAMES, LOCALES } from '@gachia/core';
+import { GAMES, LOCALES, isMainSitemapPath } from '@gachia/core';
 import type { MetadataRoute } from 'next';
 import { getEntryUpdatedAt, hasLocalizedContent, isAniimoCharacterIndexable, isContentUnderReview } from '@/lib/seo-metadata';
 import { GAME_DEPLOYMENTS } from '@gachia/core';
@@ -54,9 +54,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (const [gameId, game] of Object.entries(GAMES)) {
       const realRoutes = REAL_CONTENT_ROUTES[gameId];
       if (!realRoutes) continue;
-      // A dedicated Worker owns its entire URL set, including language gates.
+      // Deployment status is separate from the path owner and indexing policy.
       const deployment = GAME_DEPLOYMENTS[gameId as keyof typeof GAME_DEPLOYMENTS];
-      if (deployment?.deployment === 'game' || (deployment?.status && deployment.status !== 'live')) continue;
+      if (deployment?.status && deployment.status !== 'live') continue;
 
       // Game home page
       if (!isRocoPublicPageUnderReview(gameId)) entries.push({
@@ -197,7 +197,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
-  return entries;
+  return entries.filter(entry => isMainSitemapPath(new URL(entry.url).pathname));
 }
 
 function getGuideSitemapHints(entry: unknown): Pick<MetadataRoute.Sitemap[number], 'changeFrequency' | 'priority'> {

@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 1,
+  "phase": "S2.16",
+  "sourceBaseline": "8fa7610",
+  "recordedAt": "2026-10-24T03:12:09.672879+00:00",
+  "status": "local_candidate_verified_cloud_dependencies_pending",
+  "scope": {
+    "routeOwnershipShared": true,
+    "effectiveRouterBehaviorChanged": false,
+    "trafficConfigurationChanged": false,
+    "databaseOrAccountFeaturesChanged": false,
+    "publicSourceDataChanged": false,
+    "historicalEvidenceDeleted": false,
+    "cloudMutations": 0,
+    "productionReadOnlyBoundaryRequests": 85,
+    "actionsRunsStarted": 0,
+    "pushPerformed": false,
+    "publishedCandidateAcceptance": "not_performed"
+  },
+  "routeContract": {
+    "path": "packages/core/route-ownership.json",
+    "sha256": "0e58f71f574fb81b8d78dfb0b68ad4e700e6b526d122d2f9cd17c2bafb81f019",
+    "legacySource": "8fa7610:apps/router/src/index.ts",
+    "legacyMatrixCases": 772,
+    "legacyMatrixSha256": "6f4629fabf35c459f9518341c811c8337762fbd4505af0f82291f355259e08f3",
+    "typescriptAndPythonMatrixTestsPassed": true
+  },
+  "mainSitemap": {
+    "beforeLocalCount": 4344,
+    "afterLocalCount": 4515,
+    "byLocale": {
+      "en": 1580,
+      "zh": 1583,
+      "ja": 1352
+    },
+    "addedCount": 171,
+    "removedCount": 0,
+    "addedSetExactlyNteMaterialInventory": true,
+    "compiledAndLocalHttpXmlEqual": true,
+    "xmlSha256": "cbf2520d3e543b5fb142f0e6feaa84eba3fe3cfca921945f1e591daa379584b1",
+    "fallbackCoverage": {
+      "requiredCount": 171,
+      "missingCount": 0,
+      "missing": [],
+      "status": "main_fallback_urls_present"
+    }
+  },
+  "s215CaptureProjection": {
+    "kind": "new_local_compiled_main_vs_prior_local_and_s2_15_cloud_captures_not_current_cloud_acceptance",
+    "legacyRootCount": 6629,
+    "projectedUnionCount": 6683,
+    "addedCount": 263,
+    "removedCount": 209,
+    "removedByPrefix": {
+      "en/roco": 44,
+      "ja/nte": 85,
+      "ja/roco": 32,
+      "sitemaps/azur-promilia": 1,
+      "sitemaps/genshin": 1,
+      "sitemaps/lvmeng": 1,
+      "sitemaps/nte": 1,
+      "zh/roco": 44
+    },
+    "dedicatedOwners": {
+      "genshin": {
+        "records": 1602,
+        "unique": 1602,
+        "wrongOwner": []
+      },
+      "nte": {
+        "records": 389,
+        "unique": 389,
+        "wrongOwner": []
+      },
+      "azur-promilia": {
+        "records": 156,
+        "unique": 150,
+        "wrongOwner": []
+      },
+      "lvmeng": {
+        "records": 27,
+        "unique": 27,
+        "wrongOwner": []
+      }
+    },
+    "currentCloudGraphAccepted": false,
+    "strictOfflineReplay": {
+      "kind": "offline_replay_of_s2_15_cloud_xml_captures_with_s2_16_local_main",
+      "cloudRequestsPerformed": false,
+      "expectedRejection": true,
+      "dependency": "azur-promilia duplicate locations",
+      "strictGraphPassed": false,
+      "error": "Duplicate sitemap locations"
+    }
+  },
+  "currentNteJapaneseRemovalBoundaries": {
+    "kind": "read_only_current_public_nte_japanese_discovery_boundary_http_capture",
+    "checkedAt": "2026-10-24T03:07:11.117893+00:00",
+    "requests": 85,
+    "allRemovalBoundariesSupported": true,
+    "statusCounts": {
+      "200": 85
+    },
+    "limitations": [
+      "HTTP and indexing boundary only; not full translated text, facts, image-rights or browser acceptance",
+      "No secrets, cookies, trusted-IP, mutations or redirect following"
+    ],
+    "sourceCandidateDiffSha256": "59efd95598d74507a8eed4fcc147b7d67f4b94bb930599825b4721bfd86e5a46",
+    "noindexMetaCount": 85,
+    "selfCanonicalCount": 85
+  },
+  "localChecks": {
+    "typeCheck": {
+      "passed": true,
+      "tasks": 9
+    },
+    "unitTests": {
+      "passed": true,
+      "turboCacheUsed": false,
+      "web": {
+        "passed": 354,
+        "files": 75
+      },
+      "router": {
+        "passed": 35,
+        "files": 4
+      },
+      "data": {
+        "passed": 162,
+        "files": 13
+      },
+      "admin": {
+        "passed": 265,
+        "skipped": 17,
+        "failed": 0
+      }
+    },
+    "releaseTests": {
+      "node": 125,
+      "pythonRetention": 9,
+      "pythonXmlContract": 11,
+      "pythonPublishedXml": 7,
+      "passed": true
+    },
+    "lint": {
+      "errors": 0,
+      "existingInactiveAuthDialogWarnings": 1
+    },
+    "configurationAndData": {
+      "passed": true,
+      "checks": [
+        "runtime_all_apps",
+        "patched_next",
+        "data_validate",
+        "raw_release_gate",
+        "raw_mirrors",
+        "sea_guides",
+        "manifests",
+        "deployment_config",
+        "generated_router"
+      ]
+    },
+    "managedContent": {
+      "status": "local_managed_content_verified",
+      "counts": {
+        "http": 23,
+        "fallbackHttp": 171,
+        "json": 7,
+        "search": 3,
+        "browser": 520,
+        "indexnow": 8,
+        "retainedAssets": 12
+      },
+      "newFallbackBrowserCases": 12,
+      "dedicatedListDocumentNavigations": 12,
+      "record": ".release-records/managed-content-6bbaf194-5377-4de6-95a7-b42a231b18f8/result.json",
+      "withdrawnAssets": {
+        "inspectedFiles": 1522,
+        "withdrawnImagesPublished": false,
+        "privateEvidencePublished": false,
+        "scope": "international_paths_and_unregistered_byte_aliases; existing_independent_CN_paths_retained_not_newly_verified"
+      }
+    },
+    "compiledRuntime": {
+      "status": "local_runtime_verified",
+      "http": 32,
+      "browser": 18,
+      "accountPolicy": "disabled_without_database_or_auth_secrets",
+      "record": ".release-records/rollout-web-5e1c42b6-8050-4445-a66b-2628c54abbf0/result.json"
+    },
+    "discovery": {
+      "status": "local_seo_discovery_verified",
+      "sitemapUrls": 4515,
+      "browser": 32,
+      "record": ".release-records/seo-discovery-web-6942fb2d-8ff3-450a-af13-89f489361c5a/result.json"
+    },
+    "mainDryRun": {
+      "passed": true,
+      "uploadKiB": 13985.4,
+      "gzipKiB": 2851.15,
+      "uploaded": false
+    },
+    "routerDryRun": {
+      "passed": true,
+      "uploadKiB": 11.09,
+      "gzipKiB": 2.62,
+      "uploaded": false
+    }
+  },
+  "previousStaticRetention": {
+    "copied": 228,
+    "source": {
+      "artifactId": "12509287773",
+      "archiveSha256": "b1a8016284dbf39855d69c9ab54a7255a9b6db81e39b2670a936058fa6338858",
+      "versionId": "80d20cea-4407-4ece-a87c-30f27c915021",
+      "runId": 39971089654,
+      "headSha": "e88ceae39e4a836725c8039884c54eba18ebdaa1"
+    },
+    "versionId": "80d20cea-4407-4ece-a87c-30f27c915021",
+    "files": 262,
+    "bytes": 7829308,
+    "verified": true,
+    "sourceEvidence": "S2.14 previously verified production provenance; archive hash and all static bytes rechecked locally; current cloud version not re-read"
+  },
+  "mainArtifact": {
+    "schemaVersion": 1,
+    "directory": "apps/web/.open-next",
+    "algorithm": "sha256(canonical JSON {files:[{path,bytes,sha256}],symlinks:[{path,target}]}), path-sorted; sort_keys=True, separators=(comma,colon), ensure_ascii=True; symlink directories not followed",
+    "fileCount": 3372,
+    "fileBytes": 114377483,
+    "linkCount": 19,
+    "treeSha256": "a9cfff445a3530c2024bc0f522af235c4a092c18e17026818c0e4ebb0aee3918",
+    "fileTreeSha256": "d90d082989a166e8fd49466ebb27ad69611537092b55368ea5ed9ddacb803428",
+    "symlinkTreeSha256": "a60bc6e29618e7e658a192681aaa2398df536c36ea92d36d44544317de552f6b",
+    "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+    "notCloudSealed": true,
+    "sameAlgorithmAsS215": "not_asserted",
+    "cloudVerification": "not_performed",
+    "verifiedUnchangedAfterAcceptance": true,
+    "serverHandlerSha256": "a94076adc10280d277352898380e7ba1a363457a8eb4c6b648a974b18c45218a"
+  },
+  "remainingReleaseConditions": [
+    "independent Azur current version/artifact/accumulated-diff/rollback review and controlled release; prior observed duplicates remain a strict dependency until fresh verification",
+    "explicit sitemap migration review, including new pages and Roco withdrawal boundaries",
+    "fresh Main unique-version/artifact-expiry/digest/main-drift/protection/budget checks",
+    "existing production workflow same sealed artifact staging and production full acceptance, provenance and observation",
+    "Genshin independent language-policy strict-baseline rollout remains separate"
+  ],
+  "evidence": [
+    {
+      "path": ".release-records/s2-16/legacy-dispatch-matrix.json",
+      "sha256": "36f386762ba04eb58778c9f1ed8c039d54886fd02a38747c696a2c2649e24bcd"
+    },
+    {
+      "path": ".release-records/s2-16/main-fallback-coverage.json",
+      "sha256": "0f31639a0fc8c6a3d11ca075f840b4798356a0363d2e4a5d7e44743aead34b69"
+    },
+    {
+      "path": ".release-records/s2-16/sitemap-diff.json",
+      "sha256": "59efd95598d74507a8eed4fcc147b7d67f4b94bb930599825b4721bfd86e5a46"
+    },
+    {
+      "path": ".release-records/s2-16/captured-graph-replay.json",
+      "sha256": "c74ba8a0f7ffca19982cc917632fa482449b0ce9c9fbac518db0466165261049"
+    },
+    {
+      "path": ".release-records/s2-16/nte-japanese-removal-boundaries.json",
+      "sha256": "58d911bf65a3a2a63ac866dcc248bdcd6e65f67889836d2ab94e1220c19d9286"
+    },
+    {
+      "path": ".release-records/s2-16/retained-assets.json",
+      "sha256": "4fc3a783f8d6ea0e36f651238017afec5583d54ad9145e4b8ddbeb5431927d8e"
+    },
+    {
+      "path": ".release-records/s2-16/main-artifact-identity.json",
+      "sha256": "5d737b79077a16c43e6e734c2a1957d1dba2da01ae44632202bc04be4abc25d3"
+    },
+    {
+      "path": ".release-records/s2-16/main-artifact-files.json",
+      "sha256": "dd4fd20f6d93ae59242cc2c3aebf13315ff0126e18755c15aae4bce611e1cedc"
+    },
+    {
+      "path": ".release-records/s2-16/main-build.log",
+      "sha256": "9cef3d39b3cd57c6d37ed71261976b057fd443a22605b60b6901fbf148db349a"
+    },
+    {
+      "path": ".release-records/s2-16/main-dry-run.log",
+      "sha256": "3fe5f7eaae016bf5feb2c106c0cb1ad0059309f7f24c4c52252d4ebdde632e08"
+    },
+    {
+      "path": ".release-records/s2-16/router-dry-run.log",
+      "sha256": "88d03736a9ec13c49c503cceedd0bc47096d05aa9c10858156d270369bf8c99f"
+    },
+    {
+      "path": ".release-records/s2-16/typecheck-final.log",
+      "sha256": "9fda2296c494d67e049417fa4eb834f7a6304907022cf0b64be23e2cd964c268"
+    },
+    {
+      "path": ".release-records/s2-16/tests-final.log",
+      "sha256": "6d11b64303fb1b9f377c6b6019ec7ac270c61439e4c26e659b0d36b61765df7f"
+    },
+    {
+      "path": ".release-records/s2-16/release-tests-final.log",
+      "sha256": "aaa9ef27195152c4971bcf3d9fbdc24c5146c3a526fdfef0e9275edddf85c4f6"
+    },
+    {
+      "path": ".release-records/s2-16/lint.log",
+      "sha256": "69dd22fdfb4b1a946b61f8d554f631e08e275a56c952c07da3153ec0be54dca5"
+    },
+    {
+      "path": ".release-records/s2-16/runtime-final.log",
+      "sha256": "2df68fbd24c60a011481453b9d0a0e5effe4679fdb2851d8b7db63d952358073"
+    },
+    {
+      "path": ".release-records/s2-16/data-validate.log",
+      "sha256": "6759b81bb76867f062d796ee4075dd80fb100fd4358681d50123e68325ccce7a"
+    },
+    {
+      "path": ".release-records/s2-16/content-gate.log",
+      "sha256": "0b06cca97a1664e3c84fde6395ed6de60f65dc828ce0a3e18884eef38cdbdd2e"
+    },
+    {
+      "path": ".release-records/s2-16/manifests.log",
+      "sha256": "cbd5c420213eb5d8cb3c007b56eb426e050158fca02bfcb40b77d1afe349a901"
+    },
+    {
+      "path": ".release-records/s2-16/deployments.log",
+      "sha256": "9c609456f0bbc6a3885a81db57fd04339522dce0b6eeda856227645ca7986627"
+    },
+    {
+      "path": ".release-records/managed-content-6bbaf194-5377-4de6-95a7-b42a231b18f8/result.json",
+      "sha256": "27600268a6d00290ca570a810666ab383a06a57efd702884879ed6a26a7f36c2"
+    },
+    {
+      "path": ".release-records/rollout-web-5e1c42b6-8050-4445-a66b-2628c54abbf0/result.json",
+      "sha256": "a35012d0d18daffd88c3d5edff90e86b3b9ec38b7fbca1a85a0fbd87520f3708"
+    },
+    {
+      "path": ".release-records/seo-discovery-web-6942fb2d-8ff3-450a-af13-89f489361c5a/result.json",
+      "sha256": "d73d08fd1ab6e77d1a35434fcbca3c6cee4498bc76e71edc7e710854451d0620"
+    },
+    {
+      "path": ".release-records/s2-16/lint-final.log",
+      "sha256": "ee5eab6479d60f2e31d8f37d7a830b801d5ac4008340d8377fdfc2dc0adaf124"
+    },
+    {
+      "path": ".release-records/s2-16/final-fallback-recheck.json",
+      "sha256": "0f31639a0fc8c6a3d11ca075f840b4798356a0363d2e4a5d7e44743aead34b69"
+    }
+  ]
+}

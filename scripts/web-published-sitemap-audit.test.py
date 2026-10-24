@@ -45,12 +45,19 @@ class PublishedSitemapTests(unittest.TestCase):
                 audit.verify_graph(self.index, self.main, documents.__getitem__)
 
     def test_rejects_wrong_page_owner_unknown_owner_and_duplicates(self):
-        for paths in [["/en/roco"], ["/zh/nte", "/zh/nte"], ["/xx/nte"]]:
+        for paths in [["/en/roco"], ["/zh/nte", "/zh/nte"], ["/xx/nte"], ["/ja/nte/items/annulith"], ["/zh/nte/unknown/sample"]]:
             documents = {**self.documents, "/sitemaps/nte/index.xml": xml("urlset", "url", paths)}
             with self.assertRaises(ValueError):
                 audit.verify_graph(self.index, self.main, documents.__getitem__)
         with self.assertRaises(ValueError):
             audit.verify_graph(self.index.replace("lvmeng", "unknown"), self.main, self.documents.__getitem__)
+
+    def test_main_item_and_dedicated_list_are_disjoint_by_route_not_game(self):
+        main = xml("urlset", "url", ["/zh", "/ja/nte/items/annulith"])
+        result = audit.verify_graph(self.index, main, self.documents.__getitem__)
+        self.assertIn("https://gachia.com/ja/nte/items/annulith", result["owners"]["main"])
+        with self.assertRaises(ValueError):
+            audit.verify_owner_pages(["https://gachia.com/en/lvmeng"], "lvmeng")
 
     def test_rejects_dtd_and_preview_locations(self):
         for document in ["<!DOCTYPE urlset>" + self.documents["/sitemaps/nte/index.xml"], self.documents["/sitemaps/nte/index.xml"].replace("https://gachia.com", "https://preview.example")]:

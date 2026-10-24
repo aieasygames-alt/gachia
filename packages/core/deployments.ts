@@ -12,8 +12,8 @@ export type GameDeployment = {
 };
 
 /**
- * Single source of truth for game delivery. A game remains on the main Worker
- * until its Router binding is explicitly enabled after preview verification.
+ * Deployment inventory, not whole-game URL ownership (see route-ownership.ts).
+ * Router bindings and switches are enabled only after preview verification.
  */
 export const GAME_DEPLOYMENTS: Partial<Record<GameId, GameDeployment>> = {
   genshin: {

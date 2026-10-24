@@ -86,8 +86,18 @@ export async function verifyPublishedIndexNow(value, request = fetch) {
     pauseEvidence: 'sealed_code_transport_absence_and_local_authenticated_fixture_not_cloud_authenticated_probe' }];
 }
 
+export function assertMainFallbackSnapshot(snapshot, path, expectedName) {
+  assert.equal(snapshot.canonical, `https://gachia.com${path}`, path);
+  assert.match(snapshot.robots ?? '', /^index\s*,\s*follow$/, path);
+  assert.equal(snapshot.name, expectedName, path);
+  assert(snapshot.scripts.some(src => src.startsWith('/_next/static/')), path);
+  assert(!snapshot.scripts.some(src => src.startsWith('/_games/')), path);
+}
+
 async function verifyContent(origin, directory, { localFixture, proxy }) {
-  const observations = { http: [], json: [], search: [], browser: [], indexnow: [], retainedAssets: [] };
+  const observations = { http: [], fallbackHttp: [], json: [], search: [], browser: [], indexnow: [], retainedAssets: [] };
+  const nteMaterials = JSON.parse(readFileSync(resolve(ROOT, 'packages/data/games/nte/raw-materials.json'), 'utf8'));
+  assert(nteMaterials.length > 0 && new Set(nteMaterials.map(item => item.id)).size === nteMaterials.length);
   const retentionPath = resolve(ROOT, 'apps/web/.open-next/retained-web-assets.json');
   if (existsSync(retentionPath)) {
     const retained = JSON.parse(readFileSync(retentionPath, 'utf8'));
@@ -194,6 +204,7 @@ async function verifyContent(origin, directory, { localFixture, proxy }) {
     observations.search.push({ path, status: 200, officialNamesVerified: reviewedEchoes.length });
   }
   const cases = [
+    ...['zh', 'en', 'ja'].flatMap(locale => [nteMaterials[0], nteMaterials.at(-1)].map(item => ({ locale, path: `/${locale}/nte/items/${item.id}`, kind: 'nte-main-item', id: item.id }))),
     ...['zh', 'en', 'ja'].map(locale => ({ locale, path: `/${locale}/tools/market-intel`, kind: 'market-intel-review' })),
     ...['zh', 'en', 'ja'].map(locale => ({ locale, path: `/${locale}/roco-cn`, kind: 'cn-home' })),
     ...['zh', 'en', 'ja'].map(locale => ({ locale, path: `/${locale}/wuwa/redeem-codes`, kind: 'codes' })),
@@ -230,6 +241,28 @@ async function verifyContent(origin, directory, { localFixture, proxy }) {
         page.on('console', message => { if (message.type() === 'error' && /hydration|Minified React error|uncaught/i.test(message.text())) errors.push(message.text()); });
         page.on('response', response => { if (['script', 'stylesheet'].includes(response.request().resourceType()) && response.status() >= 400) failedAssets.push(response.url()); });
         page.on('requestfailed', request => { if (new URL(request.url()).origin === origin && ['script', 'stylesheet'].includes(request.resourceType())) failedAssets.push(request.url()); });
+        if (width === 1440) {
+          // Check every restored URL; DOMParser inspects HTTP HTML without executing it.
+          for (const locale of ['zh', 'en', 'ja']) for (const item of nteMaterials) {
+            const path = `/${locale}/nte/items/${item.id}`;
+            const response = await fetch(origin + path, { redirect: 'manual', credentials: 'omit', signal: AbortSignal.timeout(30000) });
+            assert.equal(response.status, 200, path);
+            assert.equal(response.headers.get('location'), null, path);
+            assert.match(response.headers.get('content-type') ?? '', /text\/html/, path);
+            assert.equal(/noindex/i.test(response.headers.get('x-robots-tag') ?? ''), origin === 'https://gachia-staging.aieasygames.workers.dev', path);
+            const metadata = await page.evaluate(html => {
+              const document = new DOMParser().parseFromString(html, 'text/html');
+              return {
+                canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href'),
+                robots: document.querySelector('meta[name="robots"]')?.getAttribute('content'),
+                name: document.querySelector('h1')?.textContent,
+                scripts: [...document.querySelectorAll('script[src]')].map(node => node.getAttribute('src')),
+              };
+            }, await response.text());
+            assertMainFallbackSnapshot(metadata, path, locale === 'zh' ? item.name : item.nameEn);
+            observations.fallbackHttp.push({ path, status: 200, mainAssets: true, canonical: metadata.canonical, robots: metadata.robots });
+          }
+        }
         for (const locale of ['zh', 'en', 'ja']) {
           for (const suffix of ['items', 'items/gulu-ball', 'items/not-a-record']) {
             const path = `/${locale}/roco/${suffix}`;
@@ -253,7 +286,23 @@ async function verifyContent(origin, directory, { localFixture, proxy }) {
           assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), `https://gachia.com${path}`);
           const body = await page.locator('body').innerText();
           assert.equal(await page.locator('[data-source-disclaimer]').innerText(), messages[locale].footer.disclaimer, path);
-          if (kind === 'market-intel-review') {
+          if (kind === 'nte-main-item') {
+            const item = nteMaterials.find(item => item.id === id);
+            assert.equal(await page.locator('h1').innerText(), locale === 'zh' ? item.name : item.nameEn);
+            assert.match(await page.locator('meta[name="robots"]').getAttribute('content'), /^index,\s*follow$/);
+            assert.equal(await page.locator('script[src^="/_games/"]').count(), 0, path);
+            const target = `/${locale}/nte/items`;
+            const navigation = [];
+            const listener = request => { if (request.isNavigationRequest() && request.frame() === page.mainFrame()) navigation.push(new URL(request.url()).pathname); };
+            page.on('request', listener);
+            try {
+              await page.locator(`main nav a[href="${target}"]`).last().click();
+              await page.waitForURL(origin + target);
+              assert(navigation.includes(target), `${path}: crossing to the dedicated list must request a document, not Main RSC`);
+              // This local fixture hosts only Main; real owner selection is covered by Router tests.
+              await page.goto(origin + path, { waitUntil: 'networkidle' });
+            } finally { page.off('request', listener); }
+          } else if (kind === 'market-intel-review') {
             const card = page.locator('article').filter({ has: page.getByRole('heading', { name: 'Roco Global source review (unverified)', exact: true }) });
             assert.equal(await card.count(), 1, path);
             const text = await card.innerText();
@@ -454,7 +503,8 @@ async function verifyContent(origin, directory, { localFixture, proxy }) {
           }
           assert.deepEqual(errors, [], path);
           assert.deepEqual(failedAssets, [], path);
-          observations.browser.push({ path, width, status: 200, kind, errors: 0, failedAssets: 0 });
+          observations.browser.push({ path, width, status: 200, kind, errors: 0, failedAssets: 0,
+            ...(kind === 'nte-main-item' ? { dedicatedListDocumentNavigationVerified: true } : {}) });
           if (directory && locale === 'zh' && kind !== 'backport') {
             await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
             await page.waitForFunction(() => window.scrollY === 0);

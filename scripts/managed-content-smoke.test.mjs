@@ -3,7 +3,19 @@ import test from 'node:test';
 import { readFileSync, mkdtempSync, mkdirSync, writeFileSync, rmSync, copyFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { requireLocalContentOrigin, requirePublishedContentOrigin, verifyPublishedIndexNow, verifyPublishedManagedContent, verifyManagedContent, verifyNoLegacyIndexNowTransport, verifyWithdrawnRocoAssets } from './managed-content-smoke.mjs';
+import { assertMainFallbackSnapshot, requireLocalContentOrigin, requirePublishedContentOrigin, verifyPublishedIndexNow, verifyPublishedManagedContent, verifyManagedContent, verifyNoLegacyIndexNowTransport, verifyWithdrawnRocoAssets } from './managed-content-smoke.mjs';
+
+test('Main fallback acceptance rejects canonical, index policy, name and runtime ownership drift', () => {
+  const path = '/ja/nte/items/annulith';
+  const valid = { canonical: 'https://gachia.com' + path, robots: 'index, follow', name: 'Annulith', scripts: ['/_next/static/runtime.js'] };
+  assertMainFallbackSnapshot(valid, path, 'Annulith');
+  for (const change of [
+    { canonical: 'https://gachia.com/ja/nte/items' }, { robots: 'noindex, follow' },
+    { robots: 'index, nofollow' }, { robots: undefined }, { name: 'Not the item' },
+    { scripts: [] }, { scripts: ['/_games/nte/_next/static/runtime.js'] },
+    { scripts: [...valid.scripts, '/_games/nte/_next/static/runtime.js'] },
+  ]) assert.throws(() => assertMainFallbackSnapshot({ ...valid, ...change }, path, 'Annulith'));
+});
 
 test('cloud IndexNow probe never sends credentials, follows redirects or claims authenticated pause verification', async () => {
   const calls = [];

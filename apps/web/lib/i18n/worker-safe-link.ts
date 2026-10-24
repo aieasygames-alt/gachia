@@ -17,7 +17,7 @@ type Props = Omit<ComponentProps<typeof IntlLink>, 'as' | 'href'> & {
 export const WorkerSafeLink = forwardRef<HTMLAnchorElement, Props>(function WorkerSafeLink(props, ref) {
   const currentLocale = useLocale() as SupportedLocale;
   const pathname = typeof props.href === 'string' ? props.href : props.href.pathname;
-  if (!requiresMainDocumentNavigation(pathname)) return createElement(IntlLink, { ...props, ref });
+  if (!requiresMainDocumentNavigation(pathname, props.locale ?? currentLocale)) return createElement(IntlLink, { ...props, ref });
   const hash = typeof props.href === 'object' ? props.href.hash : undefined;
   const localizedHref = getPathname({ href: props.href, locale: props.locale ?? currentLocale })
     + (hash ? (hash.startsWith('#') ? hash : `#${hash}`) : '');

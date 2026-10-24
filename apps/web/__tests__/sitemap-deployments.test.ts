@@ -1,4 +1,5 @@
-import { GAME_DEPLOYMENTS } from '@gachia/core';
+import { GAME_DEPLOYMENTS, getRouteOwner, isMainSitemapPath } from '@gachia/core';
+import { nteMaterials } from '@gachia/data/games/nte/items';
 import { describe, expect, it } from 'vitest';
 import sitemap from '../app/sitemaps/main/sitemap';
 import { GET } from '../app/sitemap.xml/route';
@@ -34,13 +35,21 @@ describe('sitemap deployment shards', () => {
     expect(() => getSitemapPaths({ a: deployment, b: deployment })).toThrow();
   });
 
-  it('keeps every dedicated owner out of the main page shard, including protected NTE Japanese URLs', async () => {
+  it('keeps dedicated paths out while restoring every confirmed Main fallback item', async () => {
     const urls = (await sitemap()).map(entry => entry.url);
     expect(new Set(urls).size).toBe(urls.length);
-    for (const [game, deployment] of Object.entries(GAME_DEPLOYMENTS)) {
-      if (deployment?.deployment !== 'game') continue;
-      expect(urls.filter(url => new URL(url).pathname.split('/')[2] === game)).toEqual([]);
+    for (const url of urls) {
+      expect(getRouteOwner(new URL(url).pathname)).toBe('main');
+      expect(isMainSitemapPath(new URL(url).pathname)).toBe(true);
     }
+    const expectedItems = ['zh', 'en', 'ja'].flatMap(locale => nteMaterials.map(item => `https://gachia.com/${locale}/nte/items/${item.id}`));
+    expect(expectedItems.length).toBe(171);
+    expect(urls.filter(url => new URL(url).pathname.split('/')[2] === 'nte').sort()).toEqual(expectedItems.sort());
+    for (const game of ['genshin', 'azur-promilia', 'lvmeng']) {
+      expect(urls.some(url => new URL(url).pathname.split('/')[2] === game)).toBe(false);
+    }
+    expect(urls).not.toContain('https://gachia.com/ja/nte/guides/untranslated');
+    expect(urls).not.toContain('https://gachia.com/ja/nte/characters');
     expect(urls.some(url => new URL(url).pathname.startsWith('/sitemaps/'))).toBe(false);
   });
 

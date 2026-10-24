@@ -34,6 +34,32 @@ class SitemapContractTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "dedicated owner"):
             audit.verify_documents(self.index, xml("urlset", "url", ["/ja/nte/guides/untranslated"]))
 
+    def test_only_approved_main_fallback_details_are_accepted(self):
+        paths = [f"/{locale}/nte/items/annulith" for locale in ("zh", "en", "ja")]
+        self.assertEqual(len(audit.verify_documents(self.index, xml("urlset", "url", paths))["mainUrls"]), 3)
+        for path in ["/ja/nte/items", "/en/lvmeng", "/zh/nte/unknown/sample", "/ja/nte/items/annulith/extra", "/ja/nte/items/%61nnulith"]:
+            with self.assertRaises(ValueError):
+                audit.verify_documents(self.index, xml("urlset", "url", [path]))
+
+    def test_main_fallback_removal_cannot_be_excused_as_a_dedicated_owner(self):
+        result = audit.verify_documents(self.index, self.pages)
+        with self.assertRaisesRegex(ValueError, "Unexplained removal"):
+            audit.compare_before([{"url": "https://gachia.com/ja/nte/items/annulith"}], result)
+
+    def test_legacy_dispatch_matrix_matches_typescript(self):
+        paths = set()
+        for game, rule in audit.ROUTE_GAMES.items():
+            for locale in ("zh", "en", "ja", "fr"):
+                paths.add(f"/{locale}/{game}")
+                for section in set(rule["pages"] + rule["details"] + ["unknown"]):
+                    for suffix in ("", "/sample", "/sample/extra"):
+                        paths.add(f"/{locale}/{game}/{section}{suffix}")
+            for prefix in ("_games", "sitemaps"):
+                for suffix in ("", "/index.xml", "/nested/file"):
+                    paths.add(f"/{prefix}/{game}{suffix}")
+        matrix = "".join(f"{path}\t{audit.route_owner(path)}\n" for path in sorted(paths))
+        self.assertEqual(audit.hashlib.sha256(matrix.encode()).hexdigest(), "6f4629fabf35c459f9518341c811c8337762fbd4505af0f82291f355259e08f3")
+
     def test_no_duplicates_or_preview_origins(self):
         for pages in [xml("urlset", "url", ["/zh", "/zh"]), self.pages.replace("https://gachia.com", "https://preview.workers.dev")]:
             with self.assertRaises(ValueError):

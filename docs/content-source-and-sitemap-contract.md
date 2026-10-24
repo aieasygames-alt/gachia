@@ -236,3 +236,18 @@ S2.15 增加封存前 fallback 覆盖门禁，以真实材料库导出期望 URL
 下一阶段应将路径级所有权合同用于 Router、导航和 sitemap，保留真实 Main 回退并更新 XML/测试；之后才能放行。
 蓝色星原六个重复 loc 已本地修复，但线上未部署；同样不能用读到 200 的子图豁免重复。
 详细证据与后续顺序见 [S2.15](../plans/multi-game-s2-15-release-preflight-2026-10-24.md)。
+
+## 18. S2.16 路径归属与索引许可分离（2026-10-24）
+
+本节取代历史上按整款游戏排除 Main 的实现假设。`packages/core/route-ownership.json` 是路径集合的共享输入，`route-ownership.ts` 提供 TypeScript 分类，Python XML 验收读取同一 JSON；`GAME_DEPLOYMENTS` 只管理部署清单，不证明整个游戏前缀已迁出 Main。
+
+1. `getRouteOwner(pathname)` 表示既定路径的目标 owner，不包含流量开关、binding、canary 或 HI3 阅读预览决策。Router 继续执行原来的环境/灰度规则；旧 Router 772 个路径矩阵摘要锁定等价行为，配置与流量不变。`/_games/{owner}` 和 `/sitemaps/{owner}` 保留原命名空间处理及改写。
+2. 独立 Worker 只接管合同中对应语言的首页、一级目录和允许的单层详情。NTE `items` 是独立目录，`items/{id}` 仍为 Main；绿梦只接管中文页面，不把英文/日文自动转给绿梦。未知或更深路径继续按原行为回退 Main，不因此承诺存在或可索引。
+3. `isMainSitemapPath` 在 owner 检查外，对独立游戏的 Main 回退要求显式索引许可。目前只批准 NTE 的 `items/{id}` 类别，实际 ID 仍来自材料源；禁止将全部日文 NTE 页面、绿梦非中文页或任意未知回退页放入 Main。既有内容审核、语言和退役限制继续叠加，不由路由分类替代。
+4. 主站 Link 以实际目标语言和路径决定是否使用原生锚点。Main 物品详情可以复用 Main runtime；从详情返回独立物品目录仍要求完整文档请求，不能预取或复用 Main RSC。直接调用 Router 和双视口浏览器分别验证 owner 及跨构建导航，不将 Main-only 本地夹具误称为实际独立 Worker 联调。
+5. Main XML 必须只含经许可的 Main 路径；独立子图必须匹配真实路径 owner，NTE 子图不能代收 Main 物品详情。迁移差分不能再以“dedicated-owner:nte”为理由解释这些详情被移除。编码路径别名、重复和错误 owner 均拒绝，完整子图并集检查不放宽。
+6. 封存前覆盖门禁继续从真实 NTE 材料源导出三语必需集合，并要求这些路径与共享合同一致。少一条、清空/重复/非法 ID、改变归属而未迁移发现责任都会拒绝。不能只调整报告、删 guard 或用 noindex 迎合旧假设。
+
+新增游戏或迁移详情类别时，同批更新路径合同、部署清单、页面/导航/语言政策、源驱动发现清单、XML 和回归；审批记录必须说明 owner、版本、旧 URL、预期增删与回退。等价矩阵基线只在真实路由决策变更且经过独立验收后更新，不用“重新生成摘要”掩盖意外切流。
+
+S2.16 本地新产物 Main 为 4,515 条，恢复集合恰为 171 条、移除 0 条；不表示新增事实已经官方核验，也不表示已上线。云端每个 owner 仍需各自的版本/产物/回滚和验收记录。详见 [S2.16](../plans/multi-game-s2-16-route-ownership-2026-10-24.md)。
