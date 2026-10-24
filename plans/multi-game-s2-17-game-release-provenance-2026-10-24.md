@@ -2,7 +2,7 @@
 
 日期：2026-10-24，Asia/Shanghai。
 
-范围：独立 owner 蓝色星原；不合并 Worker、不改路由/切流开关、不恢复登录、不修改数据库或游戏事实、不删除历史证据。本阶段先完成发布前安全工具，再从干净源码提交执行一次隔离 staging；生产单独放行。本文在源码封存时记录本地结果，实际云端结果在完成对账后追加，不将计划写成已完成。
+范围：独立 owner 蓝色星原；不合并 Worker、不改路由/切流开关、不恢复登录、不修改数据库或游戏事实、不删除历史证据。本阶段已完成发布前安全工具、真实双模式本地验收及一次隔离 staging；生产单独放行。源码封存提交为 `56fbafc1d71df3a4082ac6c002652c2df14f96d2`；随后仅追加现场对账与文档，不把 staging 通过视为生产发布。
 
 ## 1. 生产来源调查
 
@@ -66,11 +66,29 @@
 
 本地构建期间源码尚未封存，记录诚实标记 `dirty: true`，仅作为开发验证，不作为云端源码版本。云端 staging 必须在提交后从干净源码执行受控入口，重新构建并保留独立发布记录。
 
-## 5. 云端推进与退出标准
+## 5. 实际云端 staging 与退出结果
 
-拟执行一次蓝色星原隔离 staging，0 次生产部署、0 次 push / Actions；本地 deploy 不耗 GitHub Actions 分钟，但有 Cloudflare 请求/存储/构建配额风险。未重新核实 Actions 剩余额度，不据此判断 Main 发布预算充足。
+实际执行一次蓝色星原隔离 staging，0 次生产部署、0 次 push / Actions；本地 deploy 不耗 GitHub Actions 分钟，但有 Cloudflare 请求/存储/构建配额风险。未重新核实 Actions 剩余额度，不据此判断 Main 发布预算充足。
 
-验收需满足：实际候选 UUID/100% 承载、preview 模式、150 个唯一 URL 与本地候选相同、70 条旧资源字节、三语桌面/手机有无 JS、筛选/客户端导航/返回、六个生产 Worker 版本和路由/域名前后不变。任何失败保存证据、停止，不自动重试、回滚或继续生产。
+部署前再次读取全部服务，确认没有外部变更；先探测远端可达性。直接 Node 请求 workers.dev 失败，采用本机已有系统代理 `127.0.0.1:7890` 后 robots 读取成功；没有改系统网络、禁用 TLS 校验或修改认证权限。
+
+通过既有 `release:game deploy --environment staging` 从上述干净 HEAD 重新构建，receipt 同步重验，部署记录 `dirty: false`。实际新版本为 `c6b46257-2441-4cc2-b9c6-c31d4d4d1cca`，部署 `95c17034-e3af-4b21-ae7b-f504e59e0fd4`，2026-10-24 10:49:52 UTC 创建。API 确认唯一 100% 承载、模式 preview、仅原 ASSETS 和公开变量。上传包体 5,273.62 KiB / gzip 1,050.80 KiB，与本地 preview dry-run 的压缩结果分开记录。
+
+远端验收在 10:50:25–10:51:12 UTC 完成：
+
+| 检查 | 实际结果 |
+|---|---|
+| 正文/索引/canonical/robots/当前 JS-CSS/404 | 16 个 HTTP 检查通过 |
+| 候选 sitemap | 150 条且唯一，与实际本地 staging 构建 URL 集合完全相同 |
+| 旧静态资源 | 两种命名空间共 70 次 GET，全部 200 且字节摘要一致 |
+| 浏览器 | 三语 × 桌面/手机 × 有/无 JS，共 12 例通过；含筛选、客户端详情导航和返回 |
+| 浏览器资源/水合 | 147 次同源 GET/HEAD 请求，0 水合错误、0 JS/CSS 失败 |
+| 生产隔离 | Main、Router 和四个独立游戏生产版本/部署均未变；路由、域名未变 |
+| 收尾版本 | 10:52:15 UTC 再读 API，staging 仍为该候选，六个生产服务仍未变 |
+
+本地 staging 完整构建树另存清单：1,531 个普通文件、31,998,254 字节、19 个可移植链接；清单 SHA-256 为 `e8b66d6e89dc032dcfca0f17873a52efadbf0af1951fee0d1289372eeefa9a88`。该值是部署后本地构建树摘要，不是云端上传 bundle 的 ETag，也不是之后生产模式产物的摘要。
+
+原始发布记录仍为 `deployment_command_succeeded_verification_pending`、`cloudVerification: not_performed`，未篡改入口记账。独立 API/远端验收报告补充实测结果，明确 `productionAccepted: false`；不能把两类记录混写成入口自动完成了云端放行。
 
 当前公网仍为 156 条 / 150 唯一 URL，重复项是三语言 kibo/world 共六条。新候选集合相同，不能因本地去重就宣称线上已修复。
 
@@ -82,4 +100,9 @@
 4. 生产观察关闭后，再解除 Main 的蓝色星原重复依赖；Main 继续走自己的迁移差分、内容门禁和同封存 artifact 的 staging→production，不借独立游戏验证绕过。
 5. 后续游戏独立发布都需登记源码、完整制品摘要、版本关联、旧静态保留和保留期，减少再次从历史日志反推的维护成本。资源保留设容量预算和观察窗口，先完成可恢复证明再清理，不删除唯一证据以节省磁盘。
 
-原始记录保存在忽略目录 `.release-records/s2-17/`，不提交 OAuth、账户元数据、脚本正文或历史原日志。机器摘要在现场验收完成后写入 `reports/release-integrity/`。
+本阶段已达到“独立游戏发布安全补齐 + 隔离 staging 验收”的退出标准，不是全站上线验收或 S2 整体完成。
+
+机器摘要：`reports/release-integrity/s2-17-game-release-provenance-2026-10-24.json`。
+原始来源、捕获字节、构建、清单和云 API 记录：`.release-records/s2-17/`。
+远端验收：`.release-records/staging-azur-promilia-24fbf92a-db26-4bca-a188-f22e2fa27bef/result.json`。
+不提交 OAuth、账户元数据、脚本正文、旧静态二进制或历史原日志。未清理构建或证据，后续需按保留期和可恢复性单独处理。
