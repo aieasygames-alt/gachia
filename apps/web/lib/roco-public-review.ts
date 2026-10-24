@@ -2,7 +2,7 @@ import type { SupportedLocale } from '@gachia/core';
 import publicReview from './roco-public-review.json';
 import { isRocoLegacyWeaponId } from '@gachia/data/games/roco/weapons';
 
-export const ROCO_REVIEWED_ROUTES = ['', 'tier-list', 'download', 'map', 'type-chart', 'eggs', 'merchant', 'weapons'] as const;
+export const ROCO_REVIEWED_ROUTES = ['', 'tier-list', 'download', 'map', 'type-chart', 'eggs', 'merchant', 'weapons', 'redeem-codes'] as const;
 export type RocoReviewRoute = typeof ROCO_REVIEWED_ROUTES[number];
 export const ROCO_PUBLIC_REVIEW_DATE = publicReview.reviewedAt;
 export const ROCO_LIST_REVIEW = publicReview.lists;

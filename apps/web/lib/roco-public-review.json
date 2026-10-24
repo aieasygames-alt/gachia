@@ -1,6 +1,35 @@
 {
   "reviewedAt": "2026-10-24",
   "pages": {
+    "redeem-codes": {
+      "zh": {
+        "title": "国际服兑换码与奖励信息撤回说明",
+        "description": "旧页的测试日期、报名优先级、奖励类别、平台资格与官方来源背书缺乏可复核的国际服依据，现已撤回。本页不提供已核实的兑换码、奖励数量或领取步骤；空记录不代表官方没有兑换码或相关系统。",
+        "checks": [
+          "先核对作品、区服、版本与发布方身份；域名、邮件或商店名称标签不能单独证明官方来源。",
+          "兑换入口、口令、适用地区、有效期、奖励和领取条件须逐项核实，不从国服规则或旧占位内容推导。",
+          "核实前不据旧页报名、付款、安装客户端或提交个人信息；撤回不是测试取消或奖励不存在的证明。"
+        ]
+      },
+      "en": {
+        "title": "Global Code and Reward Claims Withdrawn",
+        "description": "Earlier test dates, signup priorities, reward categories, platform eligibility and official-source endorsements lacked reproducible global evidence and are withdrawn. No verified codes, reward counts or claim steps are provided. Empty records do not establish that official codes or systems are absent.",
+        "checks": [
+          "Check game identity, region, version and publisher. Domain, email or store-name labels alone cannot establish an official source.",
+          "Verify the redemption entry, code, region, validity, rewards and conditions separately. Do not infer them from CN rules or old placeholders.",
+          "Do not sign up, pay, install a client or submit personal information based on the old page before verification. Withdrawal is not evidence of cancellation or absent rewards."
+        ]
+      },
+      "ja": {
+        "title": "国際版コード・報酬情報の撤回",
+        "description": "旧ページのテスト日程、応募優先度、報酬分類、機種別資格、公式出典の認定には再確認可能な国際版の根拠がなく撤回しました。確認済みコード、報酬数、受取手順を掲載しません。空の記録は公式コードや機能の不存在を意味しません。",
+        "checks": [
+          "作品、地域、版、配信元の同一性を確認します。ドメイン、メール、ストア名のラベルだけで公式性は証明できません。",
+          "交換入口、コード、地域、有効期間、報酬、条件を個別に確認し、中国版の規則や旧仮項目から推定しません。",
+          "確認前に旧ページを根拠として応募、支払い、導入、個人情報送信をしないでください。撤回は中止や報酬の不存在の証明ではありません。"
+        ]
+      }
+    },
     "": {
       "zh": {
         "title": "国际服资料审核入口",

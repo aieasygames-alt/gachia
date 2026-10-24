@@ -1,4 +1,5 @@
 import { serializeJsonLd } from '@/lib/jsonld-script';
+import { notFound } from 'next/navigation';
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import type { GearSetListEntry, ItemListEntry } from '@/lib/game-data/items';
@@ -144,6 +145,7 @@ export async function generateMetadata({
   const { lang, game } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+  if (gameId === 'roco') notFound();
   const gameName = GAMES[gameId]?.name[locale];
   const categoryLabel = CATEGORY_LABELS.items?.[locale] ?? 'Items';
   const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/items`, LOCALES);
@@ -195,6 +197,7 @@ export default async function ItemsPage({
 }) {
   const { lang, game } = await params;
   const gameId = game as GameId;
+  if (gameId === 'roco') notFound();
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];
   const gameName = gameConfig?.name[locale] ?? '';

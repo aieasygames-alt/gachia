@@ -1,0 +1,533 @@
+{
+  "schemaVersion": 1,
+  "phase": "S2.13",
+  "recordedAt": "2026-10-24T01:14:08.562Z",
+  "localPhaseDate": "2026-10-24 Asia/Shanghai",
+  "baseline": "6ad78a1",
+  "branch": "codex/multi-game-s1-release-safety",
+  "conclusion": "roco_redeem_claims_withdrawn_and_disabled_items_rejected; not official verification, cancellation evidence, whole-site fact approval or production approval",
+  "sourceDecisions": "reports/content-integrity/s2-13-source-decisions-2026-10-24.json",
+  "coverage": {
+    "internationalRedeemCodes": "200 correction notice before raw loading; noindex follow; own canonical; no hreflang; sitemap excluded",
+    "internationalItemList": "narrow middleware exception lets page and metadata explicit notFound return 404",
+    "internationalItemDetails": "unsupported adapter remains null; unknown details 404",
+    "versionSnapshotItemsLink": "replaced with explicitly labeled code correction",
+    "originalSourcesArchived": 7,
+    "rawGameDataUnchanged": true,
+    "cnBoundaryPreserved": true
+  },
+  "protection": {
+    "localLegacyImageFilesByteUnchanged": 3,
+    "baseline": "6ad78a1",
+    "originalSourcesExactlyEqualBaseline": 7,
+    "rawFilesByteUnchanged": 185,
+    "clientsAndManifestsByteUnchanged": 345,
+    "cnSourceAndMirrorFilesByteUnchanged": 20,
+    "coreRegistryByteUnchanged": true,
+    "heldLedgerByteUnchanged": true,
+    "internalEvidenceCopiedToPublicAssets": false,
+    "inventory": {
+      "contract": "raw-inventory-v1",
+      "pairs": 90,
+      "equal": 90,
+      "sourceOnly": 5,
+      "pending": [],
+      "holds": [
+        {
+          "path": "roco/raw-characters.json",
+          "status": "needs_review",
+          "sourceSha256": "c726ca7b9fdfab0274fbc4e2689bac07908cbc662020204f157fd567beb537fe",
+          "mirrorSha256": "c726ca7b9fdfab0274fbc4e2689bac07908cbc662020204f157fd567beb537fe",
+          "reason": "All six details now withhold unverified identity/appearance/mechanics claims; retained names/classifications and legacy navigation artwork remain independently unverified.",
+          "reviewDocument": "plans/multi-game-s2-8-roco-public-scope-closeout-2026-10-24.md"
+        },
+        {
+          "path": "roco/raw-guides.json",
+          "status": "needs_review",
+          "sourceSha256": "0b2ca41b4e51ea1f6e5b100dca9531795e2962c140d474a0d5de980a75263268",
+          "mirrorSha256": "0b2ca41b4e51ea1f6e5b100dca9531795e2962c140d474a0d5de980a75263268",
+          "reason": "All 30 guide URLs now carry scoped review policy: 13 verification checklists and 17 archived editorial proposals. Classification is not official game verification; identities, other public tools and registry cross-consumers remain unapproved.",
+          "reviewDocument": "plans/multi-game-s2-9-roco-editorial-separation-closeout-2026-10-24.md"
+        }
+      ],
+      "issues": [],
+      "engineeringReady": true,
+      "contentReleaseReady": false,
+      "factualApproval": "not_implied_by_mirror_equality"
+    },
+    "managed": {
+      "contract": "managed-raw-mirrors-v1",
+      "pairs": 7,
+      "entries": 111
+    },
+    "negativeGates": [
+      {
+        "name": "readiness",
+        "command": "pnpm content:release-ready",
+        "exit": 1,
+        "blockedBeforeBuildOrUpload": true
+      },
+      {
+        "name": "deploy",
+        "command": "pnpm --filter @gachia/web run deploy",
+        "exit": 1,
+        "blockedBeforeBuildOrUpload": true
+      },
+      {
+        "name": "upload",
+        "command": "pnpm --filter @gachia/web run upload",
+        "exit": 1,
+        "blockedBeforeBuildOrUpload": true
+      }
+    ]
+  },
+  "sitemap": {
+    "baselineFile": ".release-records/managed-content-7bf52345-8f82-420b-9f99-e4b03887a53b/main-sitemap.xml",
+    "currentFile": ".release-records/managed-content-e0c79109-c3f0-4789-a6c5-12971d8610e0/main-sitemap.xml",
+    "prerenderFile": "apps/web/.next/server/app/sitemaps/main/sitemap.xml.body",
+    "baselineType": "previous local compiled Worker; not current production HTTP",
+    "before": 4347,
+    "after": 4344,
+    "removed": [
+      "https://gachia.com/en/roco/redeem-codes",
+      "https://gachia.com/ja/roco/redeem-codes",
+      "https://gachia.com/zh/roco/redeem-codes"
+    ],
+    "added": [],
+    "actualWorkerEqualsPrerender": true,
+    "rootIndexXmlUnchanged": true,
+    "rootOwnersUnchanged": true,
+    "byLocale": {
+      "zh": 1526,
+      "en": 1523,
+      "ja": 1295
+    }
+  },
+  "verification": {
+    "dataTests": {
+      "passed": 137,
+      "files": 12
+    },
+    "webTests": {
+      "passed": 351,
+      "files": 73
+    },
+    "routerTests": {
+      "passed": 31,
+      "files": 3
+    },
+    "releaseNodeTests": 118,
+    "retentionPythonTests": 9,
+    "xmlPythonTests": 8,
+    "typeChecks": {
+      "apps": [
+        "core",
+        "data",
+        "web",
+        "game-genshin",
+        "game-nte",
+        "game-lvmeng",
+        "game-azur-promilia"
+      ],
+      "passed": true
+    },
+    "dataValidation": true,
+    "manifestValidation": true,
+    "lint": {
+      "errors": 0,
+      "warnings": 1,
+      "existingWarning": "auth-dialog react-hooks/exhaustive-deps"
+    },
+    "mainOpenNextBuild": true,
+    "wranglerDryRun": {
+      "passed": true,
+      "uploadKiB": 14006.15,
+      "gzipKiB": 2847.52,
+      "actualUpload": false
+    },
+    "indexnow": {
+      "policy": "paused",
+      "actualExternalRequests": 0,
+      "compiledApiCases": [
+        {
+          "name": "unauthorized",
+          "status": 401,
+          "submissionAttempted": false
+        },
+        {
+          "name": "paused-page",
+          "status": 503,
+          "submissionAttempted": false
+        },
+        {
+          "name": "paused-held-detail",
+          "status": 503,
+          "submissionAttempted": false
+        },
+        {
+          "name": "paused-dedicated-owner",
+          "status": 503,
+          "submissionAttempted": false
+        },
+        {
+          "name": "invalid-external",
+          "status": 400,
+          "submissionAttempted": false
+        },
+        {
+          "name": "invalid-query",
+          "status": 400,
+          "submissionAttempted": false
+        },
+        {
+          "name": "invalid-credentials",
+          "status": 400,
+          "submissionAttempted": false
+        },
+        {
+          "name": "invalid-empty",
+          "status": 400,
+          "submissionAttempted": false
+        }
+      ],
+      "compiledTransportGuard": {
+        "codeFiles": 2771,
+        "legacyTransportStringsPresent": false
+      },
+      "withdrawnRedeemCandidate": {
+        "schemaVersion": 1,
+        "mode": "offline_plan_only",
+        "policy": {
+          "mode": "paused",
+          "reason": "content_and_production_review_required",
+          "message": "IndexNow outbound submission is paused pending content review and cross-owner production acceptance. Offline plans are not approval."
+        },
+        "networkRequests": 0,
+        "submissionApproved": false,
+        "inputCount": 1,
+        "uniqueCandidates": 1,
+        "evidence": {
+          "kind": "supplied_local_snapshots_not_production_acceptance",
+          "snapshots": [
+            {
+              "path": "/Users/robert/.codex/worktrees/multi-game-s1-release-safety/gachia/.release-records/managed-content-e0c79109-c3f0-4789-a6c5-12971d8610e0/main-sitemap.xml",
+              "sha256": "8a6a1b93e33a57e4f1bb5a4d44494487987d42135bb5e8cd73cd32a606b2de44",
+              "urlCount": 4344
+            }
+          ]
+        },
+        "candidates": [
+          {
+            "url": "https://gachia.com/en/roco/redeem-codes",
+            "snapshotStatus": "not_listed_in_supplied_snapshots",
+            "submissionAllowed": false
+          }
+        ],
+        "limitations": [
+          "Snapshot membership is not live HTTP, robots, canonical, owner completeness or content approval.",
+          "Missing URLs may belong to an unsupplied owner; absence alone is not proof of retirement or noindex.",
+          "This tool plans discovery/promotion only; no removal notification or external submission is implemented."
+        ]
+      }
+    },
+    "managedContent": {
+      "record": ".release-records/managed-content-e0c79109-c3f0-4789-a6c5-12971d8610e0/result.json",
+      "browserCases": 496,
+      "successfulPages": 454,
+      "expected404Cases": 42,
+      "rawJsonCases": 7,
+      "searchJsonCases": 3,
+      "realListDetailClicks": 18,
+      "realToolNavigationClicks": 30,
+      "byKind": {
+        "archive": 4,
+        "backport": 6,
+        "cn-map": 6,
+        "codes": 6,
+        "echo": 18,
+        "echo-list": 6,
+        "region": 6,
+        "roco-characters-list": 6,
+        "roco-cn-tool": 42,
+        "roco-disabled-items": 18,
+        "roco-events": 6,
+        "roco-guides-list": 6,
+        "roco-home": 6,
+        "roco-public-review": 54,
+        "roco-reviewed-character": 36,
+        "roco-reviewed-guide": 180,
+        "roco-unknown-character": 12,
+        "roco-unknown-weapon": 12,
+        "roco-version": 6,
+        "roco-weapon-review": 60
+      }
+    },
+    "disabledItemsHttp": [
+      {
+        "path": "/zh/roco/items",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/zh/roco/items/gulu-ball",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/zh/roco/items/not-a-record",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/en/roco/items",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/en/roco/items/gulu-ball",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/en/roco/items/not-a-record",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/ja/roco/items",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/ja/roco/items/gulu-ball",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/ja/roco/items/not-a-record",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/roco/items",
+        "status": 301,
+        "location": "http://localhost:60339/zh/roco/items"
+      },
+      {
+        "path": "/roco/items/gulu-ball",
+        "status": 301,
+        "location": "http://localhost:60339/zh/roco/items/gulu-ball"
+      }
+    ],
+    "sharedRendererCompatibility": {
+      "baseline": "6ad78a1",
+      "localizedNonRocoDescriptionEntriesByteUnchanged": 9,
+      "localizedNonRocoInstructionEntriesByteUnchanged": 9,
+      "sharedFunctionsByteUnchanged": [
+        "getLatestRevealedAt",
+        "formatDateLabel",
+        "AniimoRedeemHub",
+        "SkjhRedeemHub",
+        "CodeSection",
+        "CodeCard"
+      ],
+      "note": "Source compatibility check, not new official fact verification or live redemption testing"
+    },
+    "runtime": {
+      "record": ".release-records/rollout-web-f17dfc02-5e1f-4d38-97b4-26c8aaf9be62/result.json",
+      "status": "local_runtime_verified",
+      "httpCases": 32,
+      "browserCases": 18
+    },
+    "seoDiscovery": {
+      "record": ".release-records/seo-discovery-web-5f59f8bc-d0fb-4170-8593-7bcf14bf02e1/result.json",
+      "status": "local_seo_discovery_verified",
+      "browserCases": 32
+    },
+    "supersededCompiledRuns": [
+      {
+        "record": ".release-records/managed-content-1312ea72-b6ac-47ef-b8aa-32aaa07b91a9/result.json",
+        "status": "failed",
+        "reason": "Pre-existing middleware redirected the item list 301 to game home; browser observed 200 rather than expected 404. Added narrow middleware exception and regression tests; this is not final acceptance."
+      },
+      {
+        "record": ".release-records/managed-content-9c1684f9-6b96-4fc3-a8ec-11912685fafe/result.json",
+        "status": "failed",
+        "reason": "All nine item HTTP cases were 404; test expected 127.0.0.1 redirect authority but Wrangler used localhost. Restrict to loopback and same port, never follow Location; no product change."
+      },
+      {
+        "record": ".release-records/managed-content-0659ac80-1e40-4ae9-ad1c-4a2a9645dc17/result.json",
+        "status": "failed",
+        "reason": "404 DOM has both inherited index/follow and Next noindex meta. Corrected overly strict single-element locator to assert restrictive noindex, 404 and absence of item canonical/hreflang; preserve actual inherited metadata observations. No production configuration change."
+      }
+    ],
+    "developmentObservations": [
+      "Initial direct TSX import test failed because Vitest preserves Next JSX; switched the test-only harness to explicit TypeScript transpilation without changing production or global test configuration. Seven focused tests then passed."
+    ],
+    "visualInspection": {
+      "viewed": [
+        ".release-records/managed-content-e0c79109-c3f0-4789-a6c5-12971d8610e0/roco-public-review-redeem-codes-1440.png",
+        ".release-records/managed-content-e0c79109-c3f0-4789-a6c5-12971d8610e0/roco-public-review-redeem-codes-390.png",
+        ".release-records/managed-content-e0c79109-c3f0-4789-a6c5-12971d8610e0/roco-disabled-items-1440.png",
+        ".release-records/managed-content-e0c79109-c3f0-4789-a6c5-12971d8610e0/roco-disabled-items-390.png"
+      ],
+      "widths": [
+        1440,
+        390
+      ],
+      "localesViewed": [
+        "zh"
+      ],
+      "result": "Actually viewed these four final fixture images. Correction title, notice, checks and links are readable with natural mobile wrapping; no main content clipping observed. Existing horizontal game navigation and English 404 copy are unchanged. No claim to have inspected every language screenshot or external assets."
+    },
+    "externalResources": "Blocked outside the local Worker; CDN health, image identity and live game rules not verified",
+    "actions": "not_run",
+    "cloudStaging": "not_performed",
+    "productionHttp": "not_performed"
+  },
+  "localArtifact": {
+    "root": "apps/web/.open-next",
+    "fileCount": 3146,
+    "fileBytes": 108275254,
+    "treeSha256": "9d7ed7c94813ee460f7e827b3a44335a473ce165f9d5681c0577401e9ee86f67",
+    "fileTreeSha256": "0d0469cb7a4a85bc8c5472c723896e17fd075d64b453f80054ecf3efc4ed1293",
+    "symlinkTreeSha256": "73f878dbcc7526ebd9735bfadd46c79ac511758453cc31eeb8edec0bdf8da656",
+    "symlinks": [
+      {
+        "path": "server-functions/default/apps/web/node_modules/next",
+        "target": "../../../node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/next",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/apps/web/node_modules/react",
+        "target": "../../../node_modules/.pnpm/react@19.2.4/node_modules/react",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/@next/env",
+        "target": "../../../@next+env@15.5.28/node_modules/@next/env",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/@swc/helpers",
+        "target": "../../../@swc+helpers@0.5.15/node_modules/@swc/helpers",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/postcss",
+        "target": "../../postcss@8.4.31/node_modules/postcss",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/react",
+        "target": "../../react@19.2.4/node_modules/react",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/react-dom",
+        "target": "../../react-dom@19.2.4_react@19.2.4/node_modules/react-dom",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/styled-jsx",
+        "target": "../../styled-jsx@5.1.6_react@19.2.4/node_modules/styled-jsx",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/node_modules/source-map-support",
+        "target": "../source-map-support@0.5.21/node_modules/source-map-support",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/postcss@8.4.31/node_modules/nanoid",
+        "target": "../../nanoid@3.3.15/node_modules/nanoid",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/postcss@8.4.31/node_modules/picocolors",
+        "target": "../../picocolors@1.1.1/node_modules/picocolors",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/postcss@8.4.31/node_modules/source-map-js",
+        "target": "../../source-map-js@1.2.1/node_modules/source-map-js",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/react-dom@19.2.4_react@19.2.4/node_modules/react",
+        "target": "../../react@19.2.4/node_modules/react",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/sharp@0.35.5_@types+node@25.6.0/node_modules/detect-libc",
+        "target": "../../detect-libc@2.1.2/node_modules/detect-libc",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/sharp@0.35.5_@types+node@25.6.0/node_modules/semver",
+        "target": "../../semver@7.8.5/node_modules/semver",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/source-map-support@0.5.21/node_modules/buffer-from",
+        "target": "../../buffer-from@1.1.2/node_modules/buffer-from",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/source-map-support@0.5.21/node_modules/source-map",
+        "target": "../../source-map@0.6.1/node_modules/source-map",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/styled-jsx@5.1.6_react@19.2.4/node_modules/client-only",
+        "target": "../../client-only@0.0.1/node_modules/client-only",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/styled-jsx@5.1.6_react@19.2.4/node_modules/react",
+        "target": "../../react@19.2.4/node_modules/react",
+        "targetExists": true,
+        "resolvedInsideArtifact": true
+      }
+    ],
+    "hashAlgorithm": "Composite SHA256: file-tree-v1 + NUL + hex fileTreeSha256 + NUL + symlink-tree-v1 + NUL + hex symlinkTreeSha256. File tree: sorted relative UTF-8 path + NUL + binary file SHA256; link tree: sorted relative path + NUL + literal target + NUL; do not follow directory links",
+    "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+    "note": "Entrypoint alone is not complete artifact identity; no cloud sealing or promotion implied"
+  },
+  "remaining": [
+    "Both factual holds and original raw/direct historical assets remain; correction pages do not establish factual approval or usage rights",
+    "Dormant international homepage copy and remaining cross-region/registry consumers need a bounded follow-up; this batch does not certify them",
+    "Production IndexNow state has not been inspected or changed; local pause remains undeployed",
+    "Cross-owner cloud and rollback acceptance, Genshin strict migration and separate disk governance remain outstanding"
+  ],
+  "safety": {
+    "push": false,
+    "cloudDeployment": false,
+    "actionsTriggered": false,
+    "databaseChange": false,
+    "loginChange": false,
+    "topologyChange": false,
+    "newTelemetry": false,
+    "fileCleanupOrHistoricalEvidenceDeletion": false,
+    "originalDirtyCheckoutTouched": false
+  },
+  "evidenceDirectory": ".release-records/s2-13"
+}

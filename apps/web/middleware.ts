@@ -112,6 +112,8 @@ function routeMiddleware(request: NextRequest) {
   const [firstSegment, secondSegment, thirdSegment, fourthSegment] = segments;
   const locale = asLocale(firstSegment);
   const game = asGame(locale ? secondSegment : firstSegment);
+  // Let the unsupported items page return 404, not a misleading redirect to the review hub.
+  const requiresRocoItemsNotFound = game === 'roco' && (locale ? thirdSegment : secondSegment) === 'items';
 
   const legacyPathTarget = LEGACY_PATH_REDIRECTS[decodedPathname];
   if (legacyPathTarget) return redirectTo(request, legacyPathTarget);
@@ -213,7 +215,7 @@ function routeMiddleware(request: NextRequest) {
   }
 
   if (locale && game && thirdSegment && !fourthSegment) {
-    if (!isIndexableRoute(game, thirdSegment) || isUnsupportedGameRoute(game, thirdSegment)) {
+    if (!requiresRocoItemsNotFound && (!isIndexableRoute(game, thirdSegment) || isUnsupportedGameRoute(game, thirdSegment))) {
       return redirectTo(request, `/${locale}/${game}`);
     }
   }
@@ -223,7 +225,7 @@ function routeMiddleware(request: NextRequest) {
     const targetLocale = DEFAULT_CANONICAL_LOCALE;
 
     if (secondSegment && !thirdSegment) {
-      if (!isIndexableRoute(game, secondSegment)) {
+      if (!requiresRocoItemsNotFound && !isIndexableRoute(game, secondSegment)) {
         return redirectTo(request, `/${targetLocale}/${game}`);
       }
     }

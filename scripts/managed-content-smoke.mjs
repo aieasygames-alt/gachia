@@ -34,7 +34,29 @@ export function requireLocalContentOrigin(value) {
 
 export async function verifyManagedContent(value, directory) {
   const origin = requireLocalContentOrigin(value);
-  const observations = { json: [], search: [], browser: [], indexnow: [] };
+  const observations = { http: [], json: [], search: [], browser: [], indexnow: [] };
+  for (const locale of ['zh', 'en', 'ja']) {
+    for (const suffix of ['items', 'items/gulu-ball', 'items/not-a-record']) {
+      const path = `/${locale}/roco/${suffix}`;
+      const response = await fetch(origin + path, { redirect: 'manual', signal: AbortSignal.timeout(30000) });
+      assert.equal(response.status, 404, path);
+      assert.equal(response.headers.get('location'), null, path);
+      observations.http.push({ path, status: 404, redirected: false });
+    }
+  }
+  for (const suffix of ['items', 'items/gulu-ball']) {
+    const path = `/roco/${suffix}`;
+    const response = await fetch(origin + path, { redirect: 'manual', signal: AbortSignal.timeout(30000) });
+    assert.equal(response.status, 301, path);
+    const location = response.headers.get('location');
+    const target = new URL(location);
+    assert.equal(target.pathname, `/zh/roco/${suffix}`, path);
+    assert.equal(target.protocol, 'http:', path);
+    assert(['127.0.0.1', 'localhost'].includes(target.hostname), path);
+    assert.equal(target.port, new URL(origin).port, path);
+    assert(!target.username && !target.password && !target.search && !target.hash, path);
+    observations.http.push({ path, status: 301, location });
+  }
   for (const [name, token, payload, status] of [
     ['unauthorized', 'wrong-local-token', { urls: ['https://gachia.com/zh'] }, 401],
     ['paused-page', INDEXNOW_FIXTURE_TOKEN, { urls: ['https://gachia.com/zh'] }, 503],
@@ -68,7 +90,7 @@ export async function verifyManagedContent(value, directory) {
   const rocoCharacters = JSON.parse(readFileSync(resolve(ROOT, 'packages/data/games/roco/raw-characters.json'), 'utf8')).filter(entry => entry.contentReview?.status === 'needs_verification');
   const rocoPublicReview = JSON.parse(readFileSync(resolve(ROOT, 'apps/web/lib/roco-public-review.json'), 'utf8'));
   const { legacyWeaponIds } = JSON.parse(readFileSync(resolve(ROOT, 'reports/content-integrity/s2-10-source-decisions-2026-10-24.json'), 'utf8'));
-  const reviewedTools = ['type-chart', 'eggs', 'merchant', 'weapons'];
+  const reviewedTools = ['type-chart', 'eggs', 'merchant', 'weapons', 'redeem-codes'];
   const messages = Object.fromEntries(['zh', 'en', 'ja'].map(locale => [locale, JSON.parse(readFileSync(resolve(ROOT, `apps/web/messages/${locale}.json`), 'utf8'))]));
   for (const locale of ['zh', 'en', 'ja']) {
     const path = `/data-manifest/search-${locale}.json`;
@@ -100,7 +122,7 @@ export async function verifyManagedContent(value, directory) {
     ...['zh', 'en', 'ja'].flatMap(locale => ['guides', 'characters'].map(section => ({ locale, path: `/${locale}/roco/${section}`, kind: `roco-${section}-list` }))),
     ...['zh', 'en', 'ja'].flatMap(locale => Object.keys(rocoPublicReview.pages).map(route => ({ locale, path: `/${locale}/roco${route ? `/${route}` : ''}`, kind: 'roco-public-review', id: route || 'home' }))),
     ...['zh', 'en', 'ja'].flatMap(locale => legacyWeaponIds.map(id => ({ locale, path: `/${locale}/roco/weapons/${id}`, kind: 'roco-weapon-review', id }))),
-    ...['zh', 'en', 'ja'].flatMap(locale => [...reviewedTools, `weapons/${legacyWeaponIds[0]}`].map(id => ({ locale, path: `/${locale}/roco-cn/${id}`, kind: 'roco-cn-tool', id }))),
+    ...['zh', 'en', 'ja'].flatMap(locale => [...reviewedTools, 'items', `weapons/${legacyWeaponIds[0]}`].map(id => ({ locale, path: `/${locale}/roco-cn/${id}`, kind: 'roco-cn-tool', id }))),
   ];
   const browser = await chromium.launch({ headless: true });
   try {
@@ -114,6 +136,23 @@ export async function verifyManagedContent(value, directory) {
         page.on('console', message => { if (message.type() === 'error' && /hydration|Minified React error|uncaught/i.test(message.text())) errors.push(message.text()); });
         page.on('response', response => { if (['script', 'stylesheet'].includes(response.request().resourceType()) && response.status() >= 400) failedAssets.push(response.url()); });
         page.on('requestfailed', request => { if (new URL(request.url()).origin === origin && ['script', 'stylesheet'].includes(request.resourceType())) failedAssets.push(request.url()); });
+        for (const locale of ['zh', 'en', 'ja']) {
+          for (const suffix of ['items', 'items/gulu-ball', 'items/not-a-record']) {
+            const path = `/${locale}/roco/${suffix}`;
+            const response = await page.goto(origin + path, { waitUntil: 'networkidle' });
+            assert.equal(response.status(), 404, path);
+            const robots = await page.locator('meta[name="robots"]').evaluateAll(nodes => nodes.map(node => node.getAttribute('content')));
+            assert(robots.some(value => /noindex/.test(value ?? '')), path);
+            assert.equal(await page.locator(`link[rel="canonical"][href="https://gachia.com${path}"]`).count(), 0, path);
+            const alternateHrefs = await page.locator('link[rel="alternate"][hreflang]').evaluateAll(nodes => nodes.map(node => node.getAttribute('href')));
+            assert(!alternateHrefs.some(href => /\/roco\/items(?:\/|$)/.test(href ?? '')), path);
+            assert(!(await page.locator('main').innerText()).includes('Coming Soon'), path);
+            assert.deepEqual(errors, [], path);
+            assert.deepEqual(failedAssets, [], path);
+            if (directory && locale === 'zh' && suffix === 'items') await page.screenshot({ path: resolve(directory, `roco-disabled-items-${width}.png`) });
+            observations.browser.push({ path, width, status: 404, kind: 'roco-disabled-items', robots, alternateHrefs });
+          }
+        }
         for (const { locale, path, kind, id } of cases) {
           const response = await page.goto(origin + path, { waitUntil: 'networkidle', timeout: 60000 });
           assert.equal(response.status(), 200, path);
@@ -165,7 +204,7 @@ export async function verifyManagedContent(value, directory) {
             if (directory && locale === 'zh') await card.screenshot({ path: resolve(directory, `region-card-${width}.png`) });
           } else if (kind === 'roco-cn-tool') {
             assert.equal(await page.locator('[data-roco-public-review], [data-content-review]').count(), 0, path);
-            assert.equal(await page.locator('link[rel="alternate"][hreflang]').count(), 4, path);
+            assert.equal(await page.locator('link[rel="alternate"][hreflang]').count(), id === 'redeem-codes' ? 0 : 4, path);
             assert(!/noindex/.test(await page.locator('meta[name="robots"]').getAttribute('content') ?? ''), path);
             if (id === 'type-chart') {
               assert.equal(await page.locator('table tbody tr').count(), 12);
@@ -174,7 +213,13 @@ export async function verifyManagedContent(value, directory) {
             } else if (id === 'eggs') assert.equal(await page.locator('main article').count(), 3);
             else if (id === 'merchant') assert.equal(await page.locator('main article').count(), 2);
             else if (id === 'weapons') assert.equal(await page.locator('main section > h2').filter({ hasText: /^\s*[345]★/ }).locator('..').locator('h3').count(), 10);
-            else {
+            else if (id === 'redeem-codes') {
+              assert(body.includes({ zh: '兑换码', en: 'Redeem Codes', ja: '交換コード' }[locale]), path);
+              assert.equal(await page.locator('main code').count() > 0, true, path);
+            } else if (id === 'items') {
+              assert((await page.locator(`main a[href^="/${locale}/roco-cn/items/"]`).count()) > 0, path);
+              assert(!body.includes('Coming Soon'), path);
+            } else {
               assert(body.includes({ zh: '幻影星光法杖', en: 'Phantom Starlight Staff', ja: 'Phantom Starlight Staff' }[locale]), path);
               assert(body.includes('5'), path);
             }
@@ -204,6 +249,12 @@ export async function verifyManagedContent(value, directory) {
             assert((await page.title()).includes(copy.title), path);
             assert.equal(await page.locator('meta[name="description"]').getAttribute('content'), copy.description, path);
             assert(!/10\/27|10\/20|2026-10-27|3688140|400\+/.test(body), path);
+            if (id === 'redeem-codes') {
+              for (const text of [body, await page.title(), await page.locator('meta[name="description"]').getAttribute('content'), ...await page.locator('script[type="application/ld+json"]').allTextContents()]) {
+                assert(!/2026-09-07|2026-10-27|rocokingdom\.com|CBT eligibility email|Pre-registration milestones|Steam \/ Epic \/ Microsoft Store/.test(text), path);
+              }
+              assert.equal(await article.locator('code').count(), 0, path);
+            }
             assert(await article.evaluate(node => node.scrollWidth <= node.clientWidth), `${path}: review content overflows`);
           } else if (kind.startsWith('roco-reviewed-')) {
             const row = (kind === 'roco-reviewed-guide' ? rocoGuides : rocoCharacters).find(row => row.id === id);

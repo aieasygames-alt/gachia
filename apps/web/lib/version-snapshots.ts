@@ -370,7 +370,7 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
     ],
     links: [
       { type: 'download', href: '/roco/download', label: { zh: '平台入口', en: 'Platform entry', ja: '平台入口' } },
-      { type: 'codes', href: '/roco/items', label: { zh: '资料入口', en: 'Data hub', ja: 'データ' } },
+      { type: 'codes', href: '/roco/redeem-codes', label: { zh: '兑换码撤回说明', en: 'Code claims withdrawal', ja: 'コード情報の撤回' } },
       { type: 'characters', href: '/roco/characters', label: { zh: '生物图鉴', en: 'Creatures', ja: '生物図鑑' } },
       { type: 'guides', href: '/roco/guides/global-cn-content-roadmap', label: { zh: '国服差距与补充方案', en: 'CN gap & rollout plan', ja: '中国版との差分・展開案' } },
       { type: 'guides', href: '/roco/guides/global-launch-readiness-checklist', label: { zh: '首发验收清单', en: 'Launch checklist', ja: 'ローンチ確認' } },

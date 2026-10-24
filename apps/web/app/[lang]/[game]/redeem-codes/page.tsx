@@ -3,6 +3,8 @@ import type { GameId, SupportedLocale } from '@gachia/core';
 import { getRedeemCodeReward, getRedeemCodesForGame, GAMES_WITH_REDEEM_CODES } from '@/lib/game-data/redeem-codes';
 import type { RedeemCodeEntry } from '@/lib/game-data/redeem-codes';
 import { isRedeemCodeActive } from '@/lib/redeem-codes';
+import { RocoPublicReviewPage } from '@/components/wiki/roco-public-review-page';
+import { rocoPublicReviewMetadata } from '@/lib/roco-public-review';
 
 const REDEEM_DESC: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
   genshin: {
@@ -39,11 +41,6 @@ const REDEEM_DESC: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
     zh: '失控进化兑换码大全，追踪官网、WeGame、B站、微信公众号、TapTap、公测礼包、预约奖励和开服活动码，方便你及时领取福利。',
     en: 'Ashfall Evolution redeem code tracker covering official site, WeGame, Bilibili, WeChat, TapTap, launch gifts, reservation rewards, and event codes.',
     ja: '失控進化の交換コード一覧。公式サイト、WeGame、Bilibili、WeChat、TapTap、リリース特典を整理しています。',
-  },
-  roco: {
-    zh: 'Roco Kingdom 国际服兑换码与 CBT 奖励追踪，区分暂无公开兑换码、CBT 报名奖励、预约奖励和上线后需要核验的兑换入口。',
-    en: 'Roco Kingdom global code and CBT reward tracker separating no confirmed public codes from CBT signup rewards, pre-registration rewards, and launch verification.',
-    ja: 'ロコキングダム国際版のコードとCBT報酬を追跡。公開コード未確認、CBT応募報酬、事前登録、リリース後確認を分けて整理します。',
   },
   'roco-cn': {
     zh: '《洛克王国：世界》国服兑换码大全，整理公测长期码、S2 赛季码、主播码、渠道码与限时口令，帮助小洛克及时领取洛克钻、咕噜球与经验果。',
@@ -89,6 +86,7 @@ export async function generateMetadata({
   const { lang, game } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+  if (gameId === 'roco') return rocoPublicReviewMetadata('redeem-codes', locale);
   if (!GAMES_WITH_REDEEM_CODES.includes(gameId)) return { robots: { index: false, follow: false } };
   const title = locale === 'zh'
     ? `${GAMES[gameId].name.zh}兑换码大全｜最新礼包码与领取方法`
@@ -112,6 +110,8 @@ export default async function RedeemCodesPage({
   const gameId = game as GameId;
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];
+
+  if (gameId === 'roco') return <RocoPublicReviewPage route="redeem-codes" locale={locale} />;
 
   if (!GAMES_WITH_REDEEM_CODES.includes(gameId)) {
     return (
@@ -185,11 +185,6 @@ export default async function RedeemCodesPage({
       zh: '《失控进化》公测兑换码暂未公开。上线前后请关注官网、WeGame、B站、微信公众号、TapTap 与本页更新；已确认的预约和绑定奖励会通过游戏邮箱或活动规则发放。',
       en: 'Ashfall Evolution launch redeem codes are not public yet. Watch the official site, WeGame, Bilibili, WeChat, TapTap, and this page. Confirmed reservation and binding rewards should follow official event rules.',
       ja: '『失控進化』のリリース交換コードはまだ公開されていません。公式サイト、WeGame、Bilibili、WeChat、TapTap、本ページを確認してください。',
-    },
-    roco: {
-      zh: 'Roco Kingdom 国际服目前没有已确认公开兑换码。CBT 报名、预约奖励、资格邮件和上线后兑换入口以官网、官方邮件和平台商店为准。',
-      en: 'Roco Kingdom global has no confirmed public redeem code yet. CBT signup, pre-registration rewards, eligibility mail, and launch redemption flow follow the official site, official emails, and platform stores.',
-      ja: 'ロコキングダム国際版の公開交換コードはまだ確認されていません。CBT応募、事前登録報酬、資格メール、交換入口は公式サイト、公式メール、ストア基準です。',
     },
     'roco-cn': {
       zh: '进入游戏主界面点击左下角齿轮（设置）→ 用户 → 兑换码，完整输入口令后提交，奖励发放至游戏邮箱。所有码单账号限兑一次、区分大小写，限时码会过期，请及时兑换。',
@@ -306,15 +301,11 @@ export default async function RedeemCodesPage({
         <SkjhRedeemHub locale={locale} />
       )}
 
-      {codes.length === 0 && gameId === 'roco' && (
-        <RocoRedeemHub locale={locale} />
-      )}
-
       {gameId === 'aniimo' && (
         <AniimoRedeemHub locale={locale} />
       )}
 
-      {gameId !== 'aniimo' && !(codes.length === 0 && (gameId === 'skjh' || gameId === 'roco')) && (
+      {gameId !== 'aniimo' && !(codes.length === 0 && gameId === 'skjh') && (
         <>
           <CodeSection
             title={locale === 'zh' ? '有效兑换码' : locale === 'ja' ? '有効な交換コード' : 'Active Redeem Codes'}
@@ -397,76 +388,6 @@ function AniimoRedeemHub({ locale }: { locale: SupportedLocale }) {
           {sources.map((source) => (
             <span key={source} className="rounded bg-game-surface-alt px-3 py-1.5 text-sm text-game-text">
               {source}
-            </span>
-          ))}
-        </div>
-      </section>
-    </div>
-  );
-}
-
-function RocoRedeemHub({ locale }: { locale: SupportedLocale }) {
-  const t = (zh: string, en: string, ja?: string) => locale === 'zh' ? zh : locale === 'ja' ? (ja ?? en) : en;
-  const rewards = [
-    ['CBT 报名资格邮件', 'CBT eligibility email', 'CBT資格メール'],
-    ['预注册里程碑奖励', 'Pre-registration milestones', '事前登録マイルストーン'],
-    ['测试平台下载资格', 'CBT platform download access', 'CBT平台DL資格'],
-    ['上线后活动奖励', 'Launch event rewards', 'リリース後イベント報酬'],
-  ] as const;
-  const sources = [
-    ['官网 rocokingdom.com', 'Official site rocokingdom.com', '公式 rocokingdom.com'],
-    ['官方资格邮件', 'Official eligibility emails', '公式資格メール'],
-    ['App Store / Google Play', 'App Store / Google Play', 'App Store / Google Play'],
-    ['Steam / Epic / Microsoft Store', 'Steam / Epic / Microsoft Store', 'Steam / Epic / Microsoft Store'],
-    ['官方社媒公告', 'Official social posts', '公式SNS告知'],
-  ] as const;
-
-  return (
-    <div className="mb-8 space-y-6">
-      <section className="rounded-lg border border-game-border bg-game-surface p-6">
-        <h2 className="mb-3 text-lg font-semibold text-game-text">
-          {t('Roco Kingdom 国际服兑换码状态', 'Roco Kingdom Global Code Status', 'ロコキングダム国際版コード状況')}
-        </h2>
-        <p className="mb-4 text-sm leading-relaxed text-game-text-muted">
-          {t(
-            '截至 2026-09-07，国际服暂无已确认的公开兑换码。当前最重要的是 CBT 报名、资格邮件、预注册里程碑和 2026-10-27 开测后的游戏内入口核验。',
-            'As of 2026-09-07, the global version has no confirmed public redeem codes. The current priority is CBT registration, eligibility mail, pre-registration milestones, and in-client verification after the October 27, 2026 test opens.',
-            '2026-09-07時点で、国際版の公開交換コードは未確認です。現在はCBT応募、資格メール、事前登録マイルストーン、2026-10-27開始後のゲーム内入口確認が優先です。'
-          )}
-        </p>
-        <div className="grid gap-3 sm:grid-cols-3">
-          <div className="rounded bg-game-surface-alt p-3">
-            <div className="text-xs text-game-text-muted">{t('当前有效码', 'Active Codes', '有効コード')}</div>
-            <div className="mt-1 text-xl font-bold text-game-primary">0</div>
-          </div>
-          <div className="rounded bg-game-surface-alt p-3">
-            <div className="text-xs text-game-text-muted">{t('待核验奖励', 'Rewards to Track', '確認待ち報酬')}</div>
-            <div className="mt-1 text-xl font-bold text-game-primary">{rewards.length}</div>
-          </div>
-          <div className="rounded bg-game-surface-alt p-3">
-            <div className="text-xs text-game-text-muted">{t('下一次重点核验', 'Next Check', '次回確認')}</div>
-            <div className="mt-1 text-sm font-semibold text-game-text">2026-10-27</div>
-          </div>
-        </div>
-      </section>
-
-      <section className="rounded-lg border border-game-border bg-game-surface p-6">
-        <h2 className="mb-3 text-lg font-semibold text-game-text">{t('需要追踪的奖励', 'Rewards to Track', '追跡する報酬')}</h2>
-        <div className="grid gap-3 md:grid-cols-2">
-          {rewards.map(([zh, en, ja]) => (
-            <div key={en} className="rounded bg-game-surface-alt p-3 text-sm text-game-text">
-              {t(zh, en, ja)}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="rounded-lg border border-game-border bg-game-surface p-6">
-        <h2 className="mb-3 text-lg font-semibold text-game-text">{t('上线后核验来源', 'Launch Verification Sources', 'リリース後確認元')}</h2>
-        <div className="flex flex-wrap gap-2">
-          {sources.map(([zh, en, ja]) => (
-            <span key={en} className="rounded bg-game-surface-alt px-3 py-1.5 text-sm text-game-text">
-              {t(zh, en, ja)}
             </span>
           ))}
         </div>
