@@ -1,7 +1,21 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { readFileSync } from 'node:fs';
-import { requireLocalContentOrigin, verifyManagedContent } from './managed-content-smoke.mjs';
+import { readFileSync, mkdtempSync, writeFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { requireLocalContentOrigin, verifyManagedContent, verifyNoLegacyIndexNowTransport } from './managed-content-smoke.mjs';
+
+test('refuses a stale compiled IndexNow sender before starting authenticated local requests', () => {
+  const directory = mkdtempSync(join(tmpdir(), 'gachia-compiled-indexnow-'));
+  try {
+    assert.throws(() => verifyNoLegacyIndexNowTransport(directory), /No compiled code/);
+    const path = join(directory, 'handler.mjs');
+    writeFileSync(path, 'fetch("https://api.indexnow.org/indexnow")');
+    assert.throws(() => verifyNoLegacyIndexNowTransport(directory), /Legacy IndexNow transport/);
+    writeFileSync(path, 'export const status = "paused";');
+    assert.deepEqual(verifyNoLegacyIndexNowTransport(directory), { codeFiles: 1, legacyTransportStringsPresent: false });
+  } finally { rmSync(directory, { recursive: true, force: true }); }
+});
 
 test('managed content checks reject remote origins, credentials and implicit ports before requesting data', async () => {
   for (const origin of ['https://gachia.com', 'http://localhost:8080', 'http://127.0.0.1', 'http://user:secret@127.0.0.1:8080', 'http://127.0.0.1:8080/other', 'http://127.0.0.1:8080/?token=secret']) {

@@ -24,11 +24,12 @@ describe('game registration', () => {
     expect(middleware).toContain('return new NextResponse(null, { status: 404 });');
   });
 
-  it('keeps IndexNow new-page submission aligned with core games', () => {
+  it('does not infer IndexNow URLs for every game from a shared source template', () => {
     const script = readProjectFile('scripts/indexnow-submit-new-pages.mjs');
 
-    expect(script).toContain("import { GAME_IDS } from '@gachia/core'");
-    expect(script).not.toMatch(/const GAMES = \[[^\]]+\]/);
+    expect(script).toContain("from './indexnow-plan.mjs'");
+    expect(script).toContain('runIndexNowPlan(process.argv.slice(2)');
+    expect(script).not.toMatch(/GAME_IDS|gitAddedFiles|routeFromAddedFile|fetch\(/);
   });
 
   it('keeps authenticated user APIs aligned with core games', () => {

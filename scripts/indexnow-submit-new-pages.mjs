@@ -1,68 +1,7 @@
-import { execFileSync } from 'node:child_process';
-import path from 'node:path';
-import { GAME_IDS } from '@gachia/core';
+import { isDirectIndexNowScript, runIndexNowPlan } from './indexnow-plan.mjs';
 
-const BASE_URL = 'https://gachia.com';
-const INDEXNOW_KEY = 'gachia2026indexnowkey';
-const ENDPOINTS = ['https://api.indexnow.org/indexnow', 'https://www.bing.com/indexnow'];
-const LOCALES = ['zh', 'en', 'ja'];
-const GAMES = GAME_IDS;
-
-function gitAddedFiles() {
-  const output = execFileSync('git', ['-C', process.cwd(), 'status', '--porcelain=v1', '--untracked-files=all'], {
-    encoding: 'utf8',
-  });
-  return output
-    .split('\n')
-    .map((line) => line.trim())
-    .filter(Boolean)
-    .filter((line) => line.startsWith('A ') || line.startsWith('?? '))
-    .map((line) => line.slice(3).trim());
+// A source template addition is not proof that every game's URL exists or is indexable.
+if (isDirectIndexNowScript(import.meta.url)) {
+  try { runIndexNowPlan(process.argv.slice(2), { command: 'indexnow:new-pages' }); }
+  catch (error) { console.error(error.message); process.exitCode = 1; }
 }
-
-function toPosix(p) {
-  return p.split(path.sep).join('/');
-}
-
-function routeFromAddedFile(filePath) {
-  const normalized = toPosix(path.relative(process.cwd(), filePath));
-  const prefix = 'apps/web/app/';
-  if (!normalized.startsWith(prefix) || !normalized.endsWith('/page.tsx')) return null;
-
-  const segments = normalized.slice(prefix.length, -'/page.tsx'.length).split('/');
-  if (segments.length === 0) return null;
-
-  if (segments[0] === '[lang]' && segments[1] === '[game]' && segments[2] === 'version') {
-    return LOCALES.flatMap((lang) => GAMES.map((game) => `/${lang}/${game}/version`));
-  }
-
-  return null;
-}
-
-async function submit(urls) {
-  if (urls.length === 0) {
-    console.log('No new page URLs found for IndexNow.');
-    return;
-  }
-
-  const urlList = [...new Set(urls)].slice(0, 10_000);
-  const body = { host: 'gachia.com', key: INDEXNOW_KEY, keyLocation: `${BASE_URL}/${INDEXNOW_KEY}.txt`, urlList };
-  for (const endpoint of ENDPOINTS) {
-    const res = await fetch(endpoint, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) });
-    console.log(`${endpoint} -> ${res.status} (${urlList.length} URLs)`);
-  }
-
-  console.log(`Submitted ${urlList.length} URLs.`);
-}
-
-const addedFiles = gitAddedFiles();
-const urls = new Set();
-for (const file of addedFiles) {
-  const resolved = path.resolve(process.cwd(), file);
-  const routeUrls = routeFromAddedFile(resolved);
-  if (routeUrls) {
-    for (const url of routeUrls) urls.add(url);
-  }
-}
-
-await submit([...urls]);

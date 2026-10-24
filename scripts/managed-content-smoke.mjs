@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
-import { mkdirSync, readFileSync, writeFileSync, unlinkSync, appendFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync, unlinkSync, appendFileSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
@@ -11,6 +11,19 @@ import { verifyLocalWorker } from './game-release-smoke.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const SLUG = 'daily-events-merchant-guide';
+const INDEXNOW_FIXTURE_TOKEN = 'local-indexnow-paused-fixture';
+
+export function verifyNoLegacyIndexNowTransport(directory) {
+  let codeFiles = 0;
+  for (const entry of readdirSync(directory, { recursive: true, withFileTypes: true })) {
+    if (!entry.isFile() || !/\.(?:m?js|cjs)$/.test(entry.name)) continue;
+    const path = resolve(entry.parentPath, entry.name);
+    assert(!/api\.indexnow\.org|www\.bing\.com\/indexnow|search\.seznam\.cz\/indexnow|yandex\.com\/indexnow/.test(readFileSync(path, 'utf8')), 'Legacy IndexNow transport found in compiled code; refuse to start authenticated fixture');
+    codeFiles++;
+  }
+  assert(codeFiles > 0, 'No compiled code inspected');
+  return { codeFiles, legacyTransportStringsPresent: false };
+}
 
 export function requireLocalContentOrigin(value) {
   const url = new URL(value);
@@ -21,7 +34,23 @@ export function requireLocalContentOrigin(value) {
 
 export async function verifyManagedContent(value, directory) {
   const origin = requireLocalContentOrigin(value);
-  const observations = { json: [], search: [], browser: [] };
+  const observations = { json: [], search: [], browser: [], indexnow: [] };
+  for (const [name, token, payload, status] of [
+    ['unauthorized', 'wrong-local-token', { urls: ['https://gachia.com/zh'] }, 401],
+    ['paused-page', INDEXNOW_FIXTURE_TOKEN, { urls: ['https://gachia.com/zh'] }, 503],
+    ['paused-held-detail', INDEXNOW_FIXTURE_TOKEN, { urls: ['https://gachia.com/en/roco/characters/meewee'], approved: true }, 503],
+    ['paused-dedicated-owner', INDEXNOW_FIXTURE_TOKEN, { urls: ['https://gachia.com/ja/genshin/guides/starter-guide'] }, 503],
+    ['invalid-external', INDEXNOW_FIXTURE_TOKEN, { urls: ['https://evil.example/zh'] }, 400],
+    ['invalid-query', INDEXNOW_FIXTURE_TOKEN, { urls: ['https://gachia.com/zh?x=1'] }, 400],
+    ['invalid-credentials', INDEXNOW_FIXTURE_TOKEN, { urls: ['https://u:p@gachia.com/zh'] }, 400],
+    ['invalid-empty', INDEXNOW_FIXTURE_TOKEN, { urls: [] }, 400],
+  ]) {
+    const response = await fetch(`${origin}/api/indexnow`, { method: 'POST', headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json' }, body: JSON.stringify(payload), redirect: 'manual', signal: AbortSignal.timeout(30000) });
+    assert.equal(response.status, status, `IndexNow ${name}`);
+    const body = await response.json();
+    if (status === 503) assert.equal(body.submissionApproved, false, name);
+    observations.indexnow.push({ name, status, submissionAttempted: false });
+  }
   for (const { game, file } of MANAGED_MIRRORS) {
     const path = `/data/${game}/${file}`;
     const response = await fetch(origin + path, { redirect: 'manual', signal: AbortSignal.timeout(30000) });
@@ -337,8 +366,11 @@ async function main() {
   const record = { status: 'running', cloudVerification: 'not_performed', startedAt: new Date().toISOString() };
   try {
     mkdirSync(directory, { mode: 0o700 });
+    record.indexnowTransport = verifyNoLegacyIndexNowTransport(resolve(ROOT, 'apps/web/.open-next'));
     const configPath = resolve(directory, 'wrangler.json');
-    writeFileSync(configPath, JSON.stringify(localFixtureConfig('web', ROOT)), { mode: 0o600 });
+    const config = localFixtureConfig('web', ROOT);
+    config.vars.INDEXNOW_AUTH_TOKEN = INDEXNOW_FIXTURE_TOKEN;
+    writeFileSync(configPath, JSON.stringify(config), { mode: 0o600 });
     await verifyLocalWorker({ app: 'apps/web', wranglerEnvironment: '', buildEnvironment: {} }, ROOT, {
       configPath, persistTo: resolve(directory, 'state'), onOutput: output => appendFileSync(resolve(directory, 'worker.log'), output),
       verify: async (_, origin) => {
