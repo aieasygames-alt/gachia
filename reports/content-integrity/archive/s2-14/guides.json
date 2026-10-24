@@ -1,0 +1,1785 @@
+[
+  {
+    "id": "global-player-feedback-roadmap-playbook",
+    "title": "历史编辑设想：反馈与路线图（非官方）",
+    "titleEn": "Archived Editorial Proposal: Feedback and roadmap (Unofficial)",
+    "titleJa": "過去の編集提案：フィードバックとロードマップ（非公式）",
+    "category": "editorial-archive",
+    "categoryZh": "历史编辑设想（非官方）",
+    "categoryEn": "Archived Editorial Proposals",
+    "categoryJa": "過去の編集提案（非公式）",
+    "summary": "原文讨论反馈状态、代表性与决策回告，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+    "summaryEn": "The original discussed feedback states, representation and decision follow-through as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+    "summaryJa": "原文は受付状態・代表性・決定の回答をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。",
+    "content": "## 历史方案的适用范围\n\n- 主题是反馈状态、代表性与决策回告。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。\n- 不把高票、探索状态或建议接收写成已承诺功能。\n- 已有“非官方建议”声明不等于其中每个产品前提已核实；本次归类也不证明相关功能不存在或被取消。\n\n## 后续重新发布的条件\n\n若要写成玩家资料，应重新取得对应区服、平台、版本与规则的独立证据，再单独编写和验收。若作为本站开发建议，须经过需求评审、负责人和验收标准确认；本站不经营游戏服务器，也不因保存设想而恢复登录或新增采集。",
+    "contentEn": "## Scope of the historical proposal\n\n- The subject was feedback states, representation and decision follow-through. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.\n- Do not turn votes, exploration or receipt of suggestions into feature commitments.\n- An existing unofficial disclaimer did not verify every product premise. This classification does not establish that a feature is nonexistent or cancelled.\n\n## Conditions for future publication\n\nPlayer information requires fresh independent evidence scoped to region, platform, version and rule, followed by separate writing and validation. A site idea requires requirements review, ownership and acceptance criteria. This site does not operate game servers; preserving an idea does not restore login or add data collection.",
+    "contentJa": "## 過去の案の適用範囲\n\n- 対象は受付状態・代表性・決定の回答です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。\n- 高得票・探索・提案受付を実装の約束に変えないこと。\n- 非公式という注記があっても、全ての製品上の前提が確認済みになるわけではありません。この分類は機能の不存在や中止を意味しません。\n\n## 再公開に必要な条件\n\nプレイヤー資料にする場合は地域・端末・版・規則に対応する独立した根拠を取得し、別途執筆・検査します。本站の案として採用するには要件審査・担当・合格条件が必要です。本站はゲームサーバーを運営せず、提案保存によってログイン再開やデータ収集を追加しません。",
+    "tags": [
+      "Editorial archive",
+      "Unofficial proposal",
+      "Not a player guide"
+    ],
+    "faq": [
+      {
+        "question": "Is this an official plan or a site development commitment?",
+        "questionZh": "这是否代表官方计划或本站开发承诺？",
+        "questionJa": "公式計画や本站の開発の約束ですか？",
+        "answer": "No. This is an archival notice for a historical editorial proposal, not an official plan or an approved or implemented site feature. Game facts and site requirements require separate verification and review.",
+        "answerZh": "不是。这是历史编辑设想的归档说明，既不是官方计划，也不是已经批准或实施的本站功能；游戏事实与站内需求必须分别核验和评审。",
+        "answerJa": "いいえ。過去の編集提案の保存説明であり、公式計画でも承認・実装済みの本站機能でもありません。ゲームの事実と本站の要件は別々に検証・審査する必要があります。"
+      }
+    ],
+    "updatedAt": "2026-10-08",
+    "quickFacts": {
+      "zh": [
+        "主题是反馈状态、代表性与决策回告。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。",
+        "不把高票、探索状态或建议接收写成已承诺功能。"
+      ],
+      "en": [
+        "The subject was feedback states, representation and decision follow-through. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.",
+        "Do not turn votes, exploration or receipt of suggestions into feature commitments."
+      ],
+      "ja": [
+        "対象は受付状態・代表性・決定の回答です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。",
+        "高得票・探索・提案受付を実装の約束に変えないこと。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "历史编辑设想：反馈与路线图（非官方）",
+      "en": "Archived Editorial Proposal: Feedback and roadmap (Unofficial)",
+      "ja": "過去の編集提案：フィードバックとロードマップ（非公式）"
+    },
+    "serpDescription": {
+      "zh": "原文讨论反馈状态、代表性与决策回告，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+      "en": "The original discussed feedback states, representation and decision follow-through as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+      "ja": "原文は受付状態・代表性・決定の回答をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "non_official_product_proposal_archived_not_fact_verification",
+      "kind": "editorial_proposal_archive"
+    }
+  },
+  {
+    "id": "global-onboarding-learning-recovery-playbook",
+    "title": "历史编辑设想：新手学习与失败恢复（非官方）",
+    "titleEn": "Archived Editorial Proposal: Onboarding and recovery (Unofficial)",
+    "titleJa": "過去の編集提案：導入学習と失敗からの復帰（非公式）",
+    "category": "editorial-archive",
+    "categoryZh": "历史编辑设想（非官方）",
+    "categoryEn": "Archived Editorial Proposals",
+    "categoryJa": "過去の編集提案（非公式）",
+    "summary": "原文讨论教学、提示与帮助升级，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+    "summaryEn": "The original discussed tutorials, hints and help escalation as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+    "summaryJa": "原文は導入・ヒント・ヘルプへの移行をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。",
+    "content": "## 历史方案的适用范围\n\n- 主题是教学、提示与帮助升级。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。\n- 教学、重试与进度恢复方案不证明游戏具有对应流程。\n- 已有“非官方建议”声明不等于其中每个产品前提已核实；本次归类也不证明相关功能不存在或被取消。\n\n## 后续重新发布的条件\n\n若要写成玩家资料，应重新取得对应区服、平台、版本与规则的独立证据，再单独编写和验收。若作为本站开发建议，须经过需求评审、负责人和验收标准确认；本站不经营游戏服务器，也不因保存设想而恢复登录或新增采集。",
+    "contentEn": "## Scope of the historical proposal\n\n- The subject was tutorials, hints and help escalation. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.\n- Tutorial, retry and recovery designs do not establish implemented game flows.\n- An existing unofficial disclaimer did not verify every product premise. This classification does not establish that a feature is nonexistent or cancelled.\n\n## Conditions for future publication\n\nPlayer information requires fresh independent evidence scoped to region, platform, version and rule, followed by separate writing and validation. A site idea requires requirements review, ownership and acceptance criteria. This site does not operate game servers; preserving an idea does not restore login or add data collection.",
+    "contentJa": "## 過去の案の適用範囲\n\n- 対象は導入・ヒント・ヘルプへの移行です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。\n- 導入・再試行・復帰の設計案は実装済み手順の証明ではありません。\n- 非公式という注記があっても、全ての製品上の前提が確認済みになるわけではありません。この分類は機能の不存在や中止を意味しません。\n\n## 再公開に必要な条件\n\nプレイヤー資料にする場合は地域・端末・版・規則に対応する独立した根拠を取得し、別途執筆・検査します。本站の案として採用するには要件審査・担当・合格条件が必要です。本站はゲームサーバーを運営せず、提案保存によってログイン再開やデータ収集を追加しません。",
+    "tags": [
+      "Editorial archive",
+      "Unofficial proposal",
+      "Not a player guide"
+    ],
+    "faq": [
+      {
+        "question": "Is this an official plan or a site development commitment?",
+        "questionZh": "这是否代表官方计划或本站开发承诺？",
+        "questionJa": "公式計画や本站の開発の約束ですか？",
+        "answer": "No. This is an archival notice for a historical editorial proposal, not an official plan or an approved or implemented site feature. Game facts and site requirements require separate verification and review.",
+        "answerZh": "不是。这是历史编辑设想的归档说明，既不是官方计划，也不是已经批准或实施的本站功能；游戏事实与站内需求必须分别核验和评审。",
+        "answerJa": "いいえ。過去の編集提案の保存説明であり、公式計画でも承認・実装済みの本站機能でもありません。ゲームの事実と本站の要件は別々に検証・審査する必要があります。"
+      }
+    ],
+    "updatedAt": "2026-10-08",
+    "quickFacts": {
+      "zh": [
+        "主题是教学、提示与帮助升级。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。",
+        "教学、重试与进度恢复方案不证明游戏具有对应流程。"
+      ],
+      "en": [
+        "The subject was tutorials, hints and help escalation. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.",
+        "Tutorial, retry and recovery designs do not establish implemented game flows."
+      ],
+      "ja": [
+        "対象は導入・ヒント・ヘルプへの移行です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。",
+        "導入・再試行・復帰の設計案は実装済み手順の証明ではありません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "历史编辑设想：新手学习与失败恢复（非官方）",
+      "en": "Archived Editorial Proposal: Onboarding and recovery (Unofficial)",
+      "ja": "過去の編集提案：導入学習と失敗からの復帰（非公式）"
+    },
+    "serpDescription": {
+      "zh": "原文讨论教学、提示与帮助升级，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+      "en": "The original discussed tutorials, hints and help escalation as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+      "ja": "原文は導入・ヒント・ヘルプへの移行をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "non_official_product_proposal_archived_not_fact_verification",
+      "kind": "editorial_proposal_archive"
+    }
+  },
+  {
+    "id": "global-player-discovery-codex-playbook",
+    "title": "历史编辑设想：发现体验与图鉴可信度（非官方）",
+    "titleEn": "Archived Editorial Proposal: Discovery and codex trust (Unofficial)",
+    "titleJa": "過去の編集提案：発見体験と図鑑の信頼性（非公式）",
+    "category": "editorial-archive",
+    "categoryZh": "历史编辑设想（非官方）",
+    "categoryEn": "Archived Editorial Proposals",
+    "categoryJa": "過去の編集提案（非公式）",
+    "summary": "原文讨论导航、资料状态与版本边界，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+    "summaryEn": "The original discussed navigation, information states and version scope as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+    "summaryJa": "原文はナビ・資料状態・バージョン範囲をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。",
+    "content": "## 历史方案的适用范围\n\n- 主题是导航、资料状态与版本边界。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。\n- 图鉴、掉落、任务与获取路线必须另有对应版本证据。\n- 已有“非官方建议”声明不等于其中每个产品前提已核实；本次归类也不证明相关功能不存在或被取消。\n\n## 后续重新发布的条件\n\n若要写成玩家资料，应重新取得对应区服、平台、版本与规则的独立证据，再单独编写和验收。若作为本站开发建议，须经过需求评审、负责人和验收标准确认；本站不经营游戏服务器，也不因保存设想而恢复登录或新增采集。",
+    "contentEn": "## Scope of the historical proposal\n\n- The subject was navigation, information states and version scope. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.\n- Codex, drops, quests and acquisition routes require separate version-specific evidence.\n- An existing unofficial disclaimer did not verify every product premise. This classification does not establish that a feature is nonexistent or cancelled.\n\n## Conditions for future publication\n\nPlayer information requires fresh independent evidence scoped to region, platform, version and rule, followed by separate writing and validation. A site idea requires requirements review, ownership and acceptance criteria. This site does not operate game servers; preserving an idea does not restore login or add data collection.",
+    "contentJa": "## 過去の案の適用範囲\n\n- 対象はナビ・資料状態・バージョン範囲です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。\n- 図鑑・ドロップ・任務・入手経路には対象版の別の根拠が必要です。\n- 非公式という注記があっても、全ての製品上の前提が確認済みになるわけではありません。この分類は機能の不存在や中止を意味しません。\n\n## 再公開に必要な条件\n\nプレイヤー資料にする場合は地域・端末・版・規則に対応する独立した根拠を取得し、別途執筆・検査します。本站の案として採用するには要件審査・担当・合格条件が必要です。本站はゲームサーバーを運営せず、提案保存によってログイン再開やデータ収集を追加しません。",
+    "tags": [
+      "Editorial archive",
+      "Unofficial proposal",
+      "Not a player guide"
+    ],
+    "faq": [
+      {
+        "question": "Is this an official plan or a site development commitment?",
+        "questionZh": "这是否代表官方计划或本站开发承诺？",
+        "questionJa": "公式計画や本站の開発の約束ですか？",
+        "answer": "No. This is an archival notice for a historical editorial proposal, not an official plan or an approved or implemented site feature. Game facts and site requirements require separate verification and review.",
+        "answerZh": "不是。这是历史编辑设想的归档说明，既不是官方计划，也不是已经批准或实施的本站功能；游戏事实与站内需求必须分别核验和评审。",
+        "answerJa": "いいえ。過去の編集提案の保存説明であり、公式計画でも承認・実装済みの本站機能でもありません。ゲームの事実と本站の要件は別々に検証・審査する必要があります。"
+      }
+    ],
+    "updatedAt": "2026-10-08",
+    "quickFacts": {
+      "zh": [
+        "主题是导航、资料状态与版本边界。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。",
+        "图鉴、掉落、任务与获取路线必须另有对应版本证据。"
+      ],
+      "en": [
+        "The subject was navigation, information states and version scope. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.",
+        "Codex, drops, quests and acquisition routes require separate version-specific evidence."
+      ],
+      "ja": [
+        "対象はナビ・資料状態・バージョン範囲です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。",
+        "図鑑・ドロップ・任務・入手経路には対象版の別の根拠が必要です。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "历史编辑设想：发现体验与图鉴可信度（非官方）",
+      "en": "Archived Editorial Proposal: Discovery and codex trust (Unofficial)",
+      "ja": "過去の編集提案：発見体験と図鑑の信頼性（非公式）"
+    },
+    "serpDescription": {
+      "zh": "原文讨论导航、资料状态与版本边界，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+      "en": "The original discussed navigation, information states and version scope as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+      "ja": "原文はナビ・資料状態・バージョン範囲をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "non_official_product_proposal_archived_not_fact_verification",
+      "kind": "editorial_proposal_archive"
+    }
+  },
+  {
+    "id": "global-fair-play-integrity-playbook",
+    "title": "历史编辑设想：公平竞争与完整性（非官方）",
+    "titleEn": "Archived Editorial Proposal: Fair play and integrity (Unofficial)",
+    "titleJa": "過去の編集提案：フェアプレイと完全性（非公式）",
+    "category": "editorial-archive",
+    "categoryZh": "历史编辑设想（非官方）",
+    "categoryEn": "Archived Editorial Proposals",
+    "categoryJa": "過去の編集提案（非公式）",
+    "summary": "原文讨论异常分级、申诉与误伤恢复，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+    "summaryEn": "The original discussed anomaly classification, appeals and recovery as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+    "summaryJa": "原文は異常分類・異議申立て・誤検知復旧をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。",
+    "content": "## 历史方案的适用范围\n\n- 主题是异常分级、申诉与误伤恢复。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。\n- 排行榜、奖励保护与处罚规则不是本站可替官方设定的政策。\n- 已有“非官方建议”声明不等于其中每个产品前提已核实；本次归类也不证明相关功能不存在或被取消。\n\n## 后续重新发布的条件\n\n若要写成玩家资料，应重新取得对应区服、平台、版本与规则的独立证据，再单独编写和验收。若作为本站开发建议，须经过需求评审、负责人和验收标准确认；本站不经营游戏服务器，也不因保存设想而恢复登录或新增采集。",
+    "contentEn": "## Scope of the historical proposal\n\n- The subject was anomaly classification, appeals and recovery. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.\n- Leaderboard, reward-protection and penalty rules cannot be set by this site on behalf of the operator.\n- An existing unofficial disclaimer did not verify every product premise. This classification does not establish that a feature is nonexistent or cancelled.\n\n## Conditions for future publication\n\nPlayer information requires fresh independent evidence scoped to region, platform, version and rule, followed by separate writing and validation. A site idea requires requirements review, ownership and acceptance criteria. This site does not operate game servers; preserving an idea does not restore login or add data collection.",
+    "contentJa": "## 過去の案の適用範囲\n\n- 対象は異常分類・異議申立て・誤検知復旧です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。\n- ランキング・報酬保護・処罰規則を本站が運営の代わりに定めることはできません。\n- 非公式という注記があっても、全ての製品上の前提が確認済みになるわけではありません。この分類は機能の不存在や中止を意味しません。\n\n## 再公開に必要な条件\n\nプレイヤー資料にする場合は地域・端末・版・規則に対応する独立した根拠を取得し、別途執筆・検査します。本站の案として採用するには要件審査・担当・合格条件が必要です。本站はゲームサーバーを運営せず、提案保存によってログイン再開やデータ収集を追加しません。",
+    "tags": [
+      "Editorial archive",
+      "Unofficial proposal",
+      "Not a player guide"
+    ],
+    "faq": [
+      {
+        "question": "Is this an official plan or a site development commitment?",
+        "questionZh": "这是否代表官方计划或本站开发承诺？",
+        "questionJa": "公式計画や本站の開発の約束ですか？",
+        "answer": "No. This is an archival notice for a historical editorial proposal, not an official plan or an approved or implemented site feature. Game facts and site requirements require separate verification and review.",
+        "answerZh": "不是。这是历史编辑设想的归档说明，既不是官方计划，也不是已经批准或实施的本站功能；游戏事实与站内需求必须分别核验和评审。",
+        "answerJa": "いいえ。過去の編集提案の保存説明であり、公式計画でも承認・実装済みの本站機能でもありません。ゲームの事実と本站の要件は別々に検証・審査する必要があります。"
+      }
+    ],
+    "updatedAt": "2026-10-08",
+    "quickFacts": {
+      "zh": [
+        "主题是异常分级、申诉与误伤恢复。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。",
+        "排行榜、奖励保护与处罚规则不是本站可替官方设定的政策。"
+      ],
+      "en": [
+        "The subject was anomaly classification, appeals and recovery. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.",
+        "Leaderboard, reward-protection and penalty rules cannot be set by this site on behalf of the operator."
+      ],
+      "ja": [
+        "対象は異常分類・異議申立て・誤検知復旧です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。",
+        "ランキング・報酬保護・処罰規則を本站が運営の代わりに定めることはできません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "历史编辑设想：公平竞争与完整性（非官方）",
+      "en": "Archived Editorial Proposal: Fair play and integrity (Unofficial)",
+      "ja": "過去の編集提案：フェアプレイと完全性（非公式）"
+    },
+    "serpDescription": {
+      "zh": "原文讨论异常分级、申诉与误伤恢复，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+      "en": "The original discussed anomaly classification, appeals and recovery as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+      "ja": "原文は異常分類・異議申立て・誤検知復旧をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "non_official_product_proposal_archived_not_fact_verification",
+      "kind": "editorial_proposal_archive"
+    }
+  },
+  {
+    "id": "global-change-communication-playbook",
+    "title": "历史编辑设想：版本沟通与事故说明（非官方）",
+    "titleEn": "Archived Editorial Proposal: Change communication (Unofficial)",
+    "titleJa": "過去の編集提案：変更と障害の説明（非公式）",
+    "category": "editorial-archive",
+    "categoryZh": "历史编辑设想（非官方）",
+    "categoryEn": "Archived Editorial Proposals",
+    "categoryJa": "過去の編集提案（非公式）",
+    "summary": "原文讨论变更状态、已知问题与结案，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+    "summaryEn": "The original discussed change states, known issues and closure as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+    "summaryJa": "原文は変更状態・既知問題・結案をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。",
+    "content": "## 历史方案的适用范围\n\n- 主题是变更状态、已知问题与结案。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。\n- 建议的热修或回滚流程不构成游戏已执行更新的记录。\n- 已有“非官方建议”声明不等于其中每个产品前提已核实；本次归类也不证明相关功能不存在或被取消。\n\n## 后续重新发布的条件\n\n若要写成玩家资料，应重新取得对应区服、平台、版本与规则的独立证据，再单独编写和验收。若作为本站开发建议，须经过需求评审、负责人和验收标准确认；本站不经营游戏服务器，也不因保存设想而恢复登录或新增采集。",
+    "contentEn": "## Scope of the historical proposal\n\n- The subject was change states, known issues and closure. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.\n- Suggested hotfix or rollback processes are not records of game updates actually performed.\n- An existing unofficial disclaimer did not verify every product premise. This classification does not establish that a feature is nonexistent or cancelled.\n\n## Conditions for future publication\n\nPlayer information requires fresh independent evidence scoped to region, platform, version and rule, followed by separate writing and validation. A site idea requires requirements review, ownership and acceptance criteria. This site does not operate game servers; preserving an idea does not restore login or add data collection.",
+    "contentJa": "## 過去の案の適用範囲\n\n- 対象は変更状態・既知問題・結案です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。\n- ホットフィックスやロールバックの案は実施済み更新の記録ではありません。\n- 非公式という注記があっても、全ての製品上の前提が確認済みになるわけではありません。この分類は機能の不存在や中止を意味しません。\n\n## 再公開に必要な条件\n\nプレイヤー資料にする場合は地域・端末・版・規則に対応する独立した根拠を取得し、別途執筆・検査します。本站の案として採用するには要件審査・担当・合格条件が必要です。本站はゲームサーバーを運営せず、提案保存によってログイン再開やデータ収集を追加しません。",
+    "tags": [
+      "Editorial archive",
+      "Unofficial proposal",
+      "Not a player guide"
+    ],
+    "faq": [
+      {
+        "question": "Is this an official plan or a site development commitment?",
+        "questionZh": "这是否代表官方计划或本站开发承诺？",
+        "questionJa": "公式計画や本站の開発の約束ですか？",
+        "answer": "No. This is an archival notice for a historical editorial proposal, not an official plan or an approved or implemented site feature. Game facts and site requirements require separate verification and review.",
+        "answerZh": "不是。这是历史编辑设想的归档说明，既不是官方计划，也不是已经批准或实施的本站功能；游戏事实与站内需求必须分别核验和评审。",
+        "answerJa": "いいえ。過去の編集提案の保存説明であり、公式計画でも承認・実装済みの本站機能でもありません。ゲームの事実と本站の要件は別々に検証・審査する必要があります。"
+      }
+    ],
+    "updatedAt": "2026-10-08",
+    "quickFacts": {
+      "zh": [
+        "主题是变更状态、已知问题与结案。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。",
+        "建议的热修或回滚流程不构成游戏已执行更新的记录。"
+      ],
+      "en": [
+        "The subject was change states, known issues and closure. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.",
+        "Suggested hotfix or rollback processes are not records of game updates actually performed."
+      ],
+      "ja": [
+        "対象は変更状態・既知問題・結案です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。",
+        "ホットフィックスやロールバックの案は実施済み更新の記録ではありません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "历史编辑设想：版本沟通与事故说明（非官方）",
+      "en": "Archived Editorial Proposal: Change communication (Unofficial)",
+      "ja": "過去の編集提案：変更と障害の説明（非公式）"
+    },
+    "serpDescription": {
+      "zh": "原文讨论变更状态、已知问题与结案，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+      "en": "The original discussed change states, known issues and closure as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+      "ja": "原文は変更状態・既知問題・結案をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "non_official_product_proposal_archived_not_fact_verification",
+      "kind": "editorial_proposal_archive"
+    }
+  },
+  {
+    "id": "global-returning-player-event-legacy-playbook",
+    "title": "历史编辑设想：回流与活动资料保留（非官方）",
+    "titleEn": "Archived Editorial Proposal: Returning players and event archives (Unofficial)",
+    "titleJa": "過去の編集提案：復帰とイベント資料の保存（非公式）",
+    "category": "editorial-archive",
+    "categoryZh": "历史编辑设想（非官方）",
+    "categoryEn": "Archived Editorial Proposals",
+    "categoryJa": "過去の編集提案（非公式）",
+    "summary": "原文讨论追赶、归档与替代来源，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+    "summaryEn": "The original discussed catch-up, archives and alternative sources as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+    "summaryJa": "原文は追い付き・保存・代替入手先をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。",
+    "content": "## 历史方案的适用范围\n\n- 主题是追赶、归档与替代来源。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。\n- 活动复刻、补领与常驻奖励不能从编辑建议推定。\n- 已有“非官方建议”声明不等于其中每个产品前提已核实；本次归类也不证明相关功能不存在或被取消。\n\n## 后续重新发布的条件\n\n若要写成玩家资料，应重新取得对应区服、平台、版本与规则的独立证据，再单独编写和验收。若作为本站开发建议，须经过需求评审、负责人和验收标准确认；本站不经营游戏服务器，也不因保存设想而恢复登录或新增采集。",
+    "contentEn": "## Scope of the historical proposal\n\n- The subject was catch-up, archives and alternative sources. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.\n- Reruns, late claims and permanent rewards cannot be inferred from editorial suggestions.\n- An existing unofficial disclaimer did not verify every product premise. This classification does not establish that a feature is nonexistent or cancelled.\n\n## Conditions for future publication\n\nPlayer information requires fresh independent evidence scoped to region, platform, version and rule, followed by separate writing and validation. A site idea requires requirements review, ownership and acceptance criteria. This site does not operate game servers; preserving an idea does not restore login or add data collection.",
+    "contentJa": "## 過去の案の適用範囲\n\n- 対象は追い付き・保存・代替入手先です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。\n- 復刻・補受取・常設報酬を編集提案から推定できません。\n- 非公式という注記があっても、全ての製品上の前提が確認済みになるわけではありません。この分類は機能の不存在や中止を意味しません。\n\n## 再公開に必要な条件\n\nプレイヤー資料にする場合は地域・端末・版・規則に対応する独立した根拠を取得し、別途執筆・検査します。本站の案として採用するには要件審査・担当・合格条件が必要です。本站はゲームサーバーを運営せず、提案保存によってログイン再開やデータ収集を追加しません。",
+    "tags": [
+      "Editorial archive",
+      "Unofficial proposal",
+      "Not a player guide"
+    ],
+    "faq": [
+      {
+        "question": "Is this an official plan or a site development commitment?",
+        "questionZh": "这是否代表官方计划或本站开发承诺？",
+        "questionJa": "公式計画や本站の開発の約束ですか？",
+        "answer": "No. This is an archival notice for a historical editorial proposal, not an official plan or an approved or implemented site feature. Game facts and site requirements require separate verification and review.",
+        "answerZh": "不是。这是历史编辑设想的归档说明，既不是官方计划，也不是已经批准或实施的本站功能；游戏事实与站内需求必须分别核验和评审。",
+        "answerJa": "いいえ。過去の編集提案の保存説明であり、公式計画でも承認・実装済みの本站機能でもありません。ゲームの事実と本站の要件は別々に検証・審査する必要があります。"
+      }
+    ],
+    "updatedAt": "2026-10-08",
+    "quickFacts": {
+      "zh": [
+        "主题是追赶、归档与替代来源。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。",
+        "活动复刻、补领与常驻奖励不能从编辑建议推定。"
+      ],
+      "en": [
+        "The subject was catch-up, archives and alternative sources. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.",
+        "Reruns, late claims and permanent rewards cannot be inferred from editorial suggestions."
+      ],
+      "ja": [
+        "対象は追い付き・保存・代替入手先です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。",
+        "復刻・補受取・常設報酬を編集提案から推定できません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "历史编辑设想：回流与活动资料保留（非官方）",
+      "en": "Archived Editorial Proposal: Returning players and event archives (Unofficial)",
+      "ja": "過去の編集提案：復帰とイベント資料の保存（非公式）"
+    },
+    "serpDescription": {
+      "zh": "原文讨论追赶、归档与替代来源，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+      "en": "The original discussed catch-up, archives and alternative sources as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+      "ja": "原文は追い付き・保存・代替入手先をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "non_official_product_proposal_archived_not_fact_verification",
+      "kind": "editorial_proposal_archive"
+    }
+  },
+  {
+    "id": "global-economy-monetization-fairness-playbook",
+    "title": "历史编辑设想：经济与付费公平（非官方）",
+    "titleEn": "Archived Editorial Proposal: Economy and monetization fairness (Unofficial)",
+    "titleJa": "過去の編集提案：経済と課金の公平性（非公式）",
+    "category": "editorial-archive",
+    "categoryZh": "历史编辑设想（非官方）",
+    "categoryEn": "Archived Editorial Proposals",
+    "categoryJa": "過去の編集提案（非公式）",
+    "summary": "原文讨论价格透明与非压迫设计，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+    "summaryEn": "The original discussed price transparency and non-coercive design as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+    "summaryJa": "原文は価格透明性と非強制設計をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。",
+    "content": "## 历史方案的适用范围\n\n- 主题是价格透明与非压迫设计。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。\n- 不得据此承诺免费获取、商品价格、概率或退款权利。\n- 已有“非官方建议”声明不等于其中每个产品前提已核实；本次归类也不证明相关功能不存在或被取消。\n\n## 后续重新发布的条件\n\n若要写成玩家资料，应重新取得对应区服、平台、版本与规则的独立证据，再单独编写和验收。若作为本站开发建议，须经过需求评审、负责人和验收标准确认；本站不经营游戏服务器，也不因保存设想而恢复登录或新增采集。",
+    "contentEn": "## Scope of the historical proposal\n\n- The subject was price transparency and non-coercive design. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.\n- Do not derive free acquisition, prices, odds or refund entitlements from this proposal.\n- An existing unofficial disclaimer did not verify every product premise. This classification does not establish that a feature is nonexistent or cancelled.\n\n## Conditions for future publication\n\nPlayer information requires fresh independent evidence scoped to region, platform, version and rule, followed by separate writing and validation. A site idea requires requirements review, ownership and acceptance criteria. This site does not operate game servers; preserving an idea does not restore login or add data collection.",
+    "contentJa": "## 過去の案の適用範囲\n\n- 対象は価格透明性と非強制設計です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。\n- 無料入手・価格・確率・返金権利の約束には使えません。\n- 非公式という注記があっても、全ての製品上の前提が確認済みになるわけではありません。この分類は機能の不存在や中止を意味しません。\n\n## 再公開に必要な条件\n\nプレイヤー資料にする場合は地域・端末・版・規則に対応する独立した根拠を取得し、別途執筆・検査します。本站の案として採用するには要件審査・担当・合格条件が必要です。本站はゲームサーバーを運営せず、提案保存によってログイン再開やデータ収集を追加しません。",
+    "tags": [
+      "Editorial archive",
+      "Unofficial proposal",
+      "Not a player guide"
+    ],
+    "faq": [
+      {
+        "question": "Is this an official plan or a site development commitment?",
+        "questionZh": "这是否代表官方计划或本站开发承诺？",
+        "questionJa": "公式計画や本站の開発の約束ですか？",
+        "answer": "No. This is an archival notice for a historical editorial proposal, not an official plan or an approved or implemented site feature. Game facts and site requirements require separate verification and review.",
+        "answerZh": "不是。这是历史编辑设想的归档说明，既不是官方计划，也不是已经批准或实施的本站功能；游戏事实与站内需求必须分别核验和评审。",
+        "answerJa": "いいえ。過去の編集提案の保存説明であり、公式計画でも承認・実装済みの本站機能でもありません。ゲームの事実と本站の要件は別々に検証・審査する必要があります。"
+      }
+    ],
+    "updatedAt": "2026-10-08",
+    "quickFacts": {
+      "zh": [
+        "主题是价格透明与非压迫设计。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。",
+        "不得据此承诺免费获取、商品价格、概率或退款权利。"
+      ],
+      "en": [
+        "The subject was price transparency and non-coercive design. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.",
+        "Do not derive free acquisition, prices, odds or refund entitlements from this proposal."
+      ],
+      "ja": [
+        "対象は価格透明性と非強制設計です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。",
+        "無料入手・価格・確率・返金権利の約束には使えません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "历史编辑设想：经济与付费公平（非官方）",
+      "en": "Archived Editorial Proposal: Economy and monetization fairness (Unofficial)",
+      "ja": "過去の編集提案：経済と課金の公平性（非公式）"
+    },
+    "serpDescription": {
+      "zh": "原文讨论价格透明与非压迫设计，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+      "en": "The original discussed price transparency and non-coercive design as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+      "ja": "原文は価格透明性と非強制設計をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "non_official_product_proposal_archived_not_fact_verification",
+      "kind": "editorial_proposal_archive"
+    }
+  },
+  {
+    "id": "global-accessibility-cross-device-playbook",
+    "title": "历史编辑设想：无障碍与跨设备体验（非官方）",
+    "titleEn": "Archived Editorial Proposal: Accessibility and device experience (Unofficial)",
+    "titleJa": "過去の編集提案：アクセシビリティと端末体験（非公式）",
+    "category": "editorial-archive",
+    "categoryZh": "历史编辑设想（非官方）",
+    "categoryEn": "Archived Editorial Proposals",
+    "categoryJa": "過去の編集提案（非公式）",
+    "summary": "原文讨论输入、可读性与恢复，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+    "summaryEn": "The original discussed input, readability and recovery as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+    "summaryJa": "原文は入力・可読性・復帰をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。",
+    "content": "## 历史方案的适用范围\n\n- 主题是输入、可读性与恢复。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。\n- 设备验收建议不是平台支持、跨端存档或账号互通承诺。\n- 已有“非官方建议”声明不等于其中每个产品前提已核实；本次归类也不证明相关功能不存在或被取消。\n\n## 后续重新发布的条件\n\n若要写成玩家资料，应重新取得对应区服、平台、版本与规则的独立证据，再单独编写和验收。若作为本站开发建议，须经过需求评审、负责人和验收标准确认；本站不经营游戏服务器，也不因保存设想而恢复登录或新增采集。",
+    "contentEn": "## Scope of the historical proposal\n\n- The subject was input, readability and recovery. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.\n- Device checks are not platform-support, cross-save or account-sharing promises.\n- An existing unofficial disclaimer did not verify every product premise. This classification does not establish that a feature is nonexistent or cancelled.\n\n## Conditions for future publication\n\nPlayer information requires fresh independent evidence scoped to region, platform, version and rule, followed by separate writing and validation. A site idea requires requirements review, ownership and acceptance criteria. This site does not operate game servers; preserving an idea does not restore login or add data collection.",
+    "contentJa": "## 過去の案の適用範囲\n\n- 対象は入力・可読性・復帰です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。\n- 端末の検査案は対応機種・セーブ共有・アカウント共有の約束ではありません。\n- 非公式という注記があっても、全ての製品上の前提が確認済みになるわけではありません。この分類は機能の不存在や中止を意味しません。\n\n## 再公開に必要な条件\n\nプレイヤー資料にする場合は地域・端末・版・規則に対応する独立した根拠を取得し、別途執筆・検査します。本站の案として採用するには要件審査・担当・合格条件が必要です。本站はゲームサーバーを運営せず、提案保存によってログイン再開やデータ収集を追加しません。",
+    "tags": [
+      "Editorial archive",
+      "Unofficial proposal",
+      "Not a player guide"
+    ],
+    "faq": [
+      {
+        "question": "Is this an official plan or a site development commitment?",
+        "questionZh": "这是否代表官方计划或本站开发承诺？",
+        "questionJa": "公式計画や本站の開発の約束ですか？",
+        "answer": "No. This is an archival notice for a historical editorial proposal, not an official plan or an approved or implemented site feature. Game facts and site requirements require separate verification and review.",
+        "answerZh": "不是。这是历史编辑设想的归档说明，既不是官方计划，也不是已经批准或实施的本站功能；游戏事实与站内需求必须分别核验和评审。",
+        "answerJa": "いいえ。過去の編集提案の保存説明であり、公式計画でも承認・実装済みの本站機能でもありません。ゲームの事実と本站の要件は別々に検証・審査する必要があります。"
+      }
+    ],
+    "updatedAt": "2026-10-08",
+    "quickFacts": {
+      "zh": [
+        "主题是输入、可读性与恢复。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。",
+        "设备验收建议不是平台支持、跨端存档或账号互通承诺。"
+      ],
+      "en": [
+        "The subject was input, readability and recovery. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.",
+        "Device checks are not platform-support, cross-save or account-sharing promises."
+      ],
+      "ja": [
+        "対象は入力・可読性・復帰です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。",
+        "端末の検査案は対応機種・セーブ共有・アカウント共有の約束ではありません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "历史编辑设想：无障碍与跨设备体验（非官方）",
+      "en": "Archived Editorial Proposal: Accessibility and device experience (Unofficial)",
+      "ja": "過去の編集提案：アクセシビリティと端末体験（非公式）"
+    },
+    "serpDescription": {
+      "zh": "原文讨论输入、可读性与恢复，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+      "en": "The original discussed input, readability and recovery as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+      "ja": "原文は入力・可読性・復帰をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "non_official_product_proposal_archived_not_fact_verification",
+      "kind": "editorial_proposal_archive"
+    }
+  },
+  {
+    "id": "global-player-support-trust-playbook",
+    "title": "历史编辑设想：玩家支持与信任（非官方）",
+    "titleEn": "Archived Editorial Proposal: Player support and trust (Unofficial)",
+    "titleJa": "過去の編集提案：サポートと信頼（非公式）",
+    "category": "editorial-archive",
+    "categoryZh": "历史编辑设想（非官方）",
+    "categoryEn": "Archived Editorial Proposals",
+    "categoryJa": "過去の編集提案（非公式）",
+    "summary": "原文讨论支持分类、隐私与升级路径，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+    "summaryEn": "The original discussed support categories, privacy and escalation as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+    "summaryJa": "原文はサポート分類・プライバシー・移行先をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。",
+    "content": "## 历史方案的适用范围\n\n- 主题是支持分类、隐私与升级路径。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。\n- 本站不代办官方工单、补偿、退款或账号恢复。\n- 已有“非官方建议”声明不等于其中每个产品前提已核实；本次归类也不证明相关功能不存在或被取消。\n\n## 后续重新发布的条件\n\n若要写成玩家资料，应重新取得对应区服、平台、版本与规则的独立证据，再单独编写和验收。若作为本站开发建议，须经过需求评审、负责人和验收标准确认；本站不经营游戏服务器，也不因保存设想而恢复登录或新增采集。",
+    "contentEn": "## Scope of the historical proposal\n\n- The subject was support categories, privacy and escalation. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.\n- This site does not handle official tickets, compensation, refunds or account recovery.\n- An existing unofficial disclaimer did not verify every product premise. This classification does not establish that a feature is nonexistent or cancelled.\n\n## Conditions for future publication\n\nPlayer information requires fresh independent evidence scoped to region, platform, version and rule, followed by separate writing and validation. A site idea requires requirements review, ownership and acceptance criteria. This site does not operate game servers; preserving an idea does not restore login or add data collection.",
+    "contentJa": "## 過去の案の適用範囲\n\n- 対象はサポート分類・プライバシー・移行先です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。\n- 本站は公式問い合わせ・補償・返金・アカウント復旧を代行しません。\n- 非公式という注記があっても、全ての製品上の前提が確認済みになるわけではありません。この分類は機能の不存在や中止を意味しません。\n\n## 再公開に必要な条件\n\nプレイヤー資料にする場合は地域・端末・版・規則に対応する独立した根拠を取得し、別途執筆・検査します。本站の案として採用するには要件審査・担当・合格条件が必要です。本站はゲームサーバーを運営せず、提案保存によってログイン再開やデータ収集を追加しません。",
+    "tags": [
+      "Editorial archive",
+      "Unofficial proposal",
+      "Not a player guide"
+    ],
+    "faq": [
+      {
+        "question": "Is this an official plan or a site development commitment?",
+        "questionZh": "这是否代表官方计划或本站开发承诺？",
+        "questionJa": "公式計画や本站の開発の約束ですか？",
+        "answer": "No. This is an archival notice for a historical editorial proposal, not an official plan or an approved or implemented site feature. Game facts and site requirements require separate verification and review.",
+        "answerZh": "不是。这是历史编辑设想的归档说明，既不是官方计划，也不是已经批准或实施的本站功能；游戏事实与站内需求必须分别核验和评审。",
+        "answerJa": "いいえ。過去の編集提案の保存説明であり、公式計画でも承認・実装済みの本站機能でもありません。ゲームの事実と本站の要件は別々に検証・審査する必要があります。"
+      }
+    ],
+    "updatedAt": "2026-10-08",
+    "quickFacts": {
+      "zh": [
+        "主题是支持分类、隐私与升级路径。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。",
+        "本站不代办官方工单、补偿、退款或账号恢复。"
+      ],
+      "en": [
+        "The subject was support categories, privacy and escalation. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.",
+        "This site does not handle official tickets, compensation, refunds or account recovery."
+      ],
+      "ja": [
+        "対象はサポート分類・プライバシー・移行先です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。",
+        "本站は公式問い合わせ・補償・返金・アカウント復旧を代行しません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "历史编辑设想：玩家支持与信任（非官方）",
+      "en": "Archived Editorial Proposal: Player support and trust (Unofficial)",
+      "ja": "過去の編集提案：サポートと信頼（非公式）"
+    },
+    "serpDescription": {
+      "zh": "原文讨论支持分类、隐私与升级路径，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+      "en": "The original discussed support categories, privacy and escalation as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+      "ja": "原文はサポート分類・プライバシー・移行先をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "non_official_product_proposal_archived_not_fact_verification",
+      "kind": "editorial_proposal_archive"
+    }
+  },
+  {
+    "id": "global-social-safety-guild-playbook",
+    "title": "历史编辑设想：社交安全与公会治理（非官方）",
+    "titleEn": "Archived Editorial Proposal: Social safety and guild governance (Unofficial)",
+    "titleJa": "過去の編集提案：交流の安全とギルド運営（非公式）",
+    "category": "editorial-archive",
+    "categoryZh": "历史编辑设想（非官方）",
+    "categoryEn": "Archived Editorial Proposals",
+    "categoryJa": "過去の編集提案（非公式）",
+    "summary": "原文讨论同意、权限与举报边界，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+    "summaryEn": "The original discussed consent, permissions and reporting limits as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+    "summaryJa": "原文は同意・権限・通報の範囲をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。",
+    "content": "## 历史方案的适用范围\n\n- 主题是同意、权限与举报边界。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。\n- 公会、家园、共骑与跨端社交都是未在本批证实的前提。\n- 已有“非官方建议”声明不等于其中每个产品前提已核实；本次归类也不证明相关功能不存在或被取消。\n\n## 后续重新发布的条件\n\n若要写成玩家资料，应重新取得对应区服、平台、版本与规则的独立证据，再单独编写和验收。若作为本站开发建议，须经过需求评审、负责人和验收标准确认；本站不经营游戏服务器，也不因保存设想而恢复登录或新增采集。",
+    "contentEn": "## Scope of the historical proposal\n\n- The subject was consent, permissions and reporting limits. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.\n- Guilds, housing, co-riding and cross-device social features are premises not verified in this batch.\n- An existing unofficial disclaimer did not verify every product premise. This classification does not establish that a feature is nonexistent or cancelled.\n\n## Conditions for future publication\n\nPlayer information requires fresh independent evidence scoped to region, platform, version and rule, followed by separate writing and validation. A site idea requires requirements review, ownership and acceptance criteria. This site does not operate game servers; preserving an idea does not restore login or add data collection.",
+    "contentJa": "## 過去の案の適用範囲\n\n- 対象は同意・権限・通報の範囲です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。\n- ギルド・ホーム・共乗り・端末間交流は本批で確認していない前提です。\n- 非公式という注記があっても、全ての製品上の前提が確認済みになるわけではありません。この分類は機能の不存在や中止を意味しません。\n\n## 再公開に必要な条件\n\nプレイヤー資料にする場合は地域・端末・版・規則に対応する独立した根拠を取得し、別途執筆・検査します。本站の案として採用するには要件審査・担当・合格条件が必要です。本站はゲームサーバーを運営せず、提案保存によってログイン再開やデータ収集を追加しません。",
+    "tags": [
+      "Editorial archive",
+      "Unofficial proposal",
+      "Not a player guide"
+    ],
+    "faq": [
+      {
+        "question": "Is this an official plan or a site development commitment?",
+        "questionZh": "这是否代表官方计划或本站开发承诺？",
+        "questionJa": "公式計画や本站の開発の約束ですか？",
+        "answer": "No. This is an archival notice for a historical editorial proposal, not an official plan or an approved or implemented site feature. Game facts and site requirements require separate verification and review.",
+        "answerZh": "不是。这是历史编辑设想的归档说明，既不是官方计划，也不是已经批准或实施的本站功能；游戏事实与站内需求必须分别核验和评审。",
+        "answerJa": "いいえ。過去の編集提案の保存説明であり、公式計画でも承認・実装済みの本站機能でもありません。ゲームの事実と本站の要件は別々に検証・審査する必要があります。"
+      }
+    ],
+    "updatedAt": "2026-10-08",
+    "quickFacts": {
+      "zh": [
+        "主题是同意、权限与举报边界。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。",
+        "公会、家园、共骑与跨端社交都是未在本批证实的前提。"
+      ],
+      "en": [
+        "The subject was consent, permissions and reporting limits. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.",
+        "Guilds, housing, co-riding and cross-device social features are premises not verified in this batch."
+      ],
+      "ja": [
+        "対象は同意・権限・通報の範囲です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。",
+        "ギルド・ホーム・共乗り・端末間交流は本批で確認していない前提です。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "历史编辑设想：社交安全与公会治理（非官方）",
+      "en": "Archived Editorial Proposal: Social safety and guild governance (Unofficial)",
+      "ja": "過去の編集提案：交流の安全とギルド運営（非公式）"
+    },
+    "serpDescription": {
+      "zh": "原文讨论同意、权限与举报边界，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+      "en": "The original discussed consent, permissions and reporting limits as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+      "ja": "原文は同意・権限・通報の範囲をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "non_official_product_proposal_archived_not_fact_verification",
+      "kind": "editorial_proposal_archive"
+    }
+  },
+  {
+    "id": "global-localization-cultural-event-playbook",
+    "title": "历史编辑设想：本地化与文化活动（非官方）",
+    "titleEn": "Archived Editorial Proposal: Localization and cultural events (Unofficial)",
+    "titleJa": "過去の編集提案：ローカライズと文化イベント（非公式）",
+    "category": "editorial-archive",
+    "categoryZh": "历史编辑设想（非官方）",
+    "categoryEn": "Archived Editorial Proposals",
+    "categoryJa": "過去の編集提案（非公式）",
+    "summary": "原文讨论术语、时区与文化解释，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+    "summaryEn": "The original discussed terminology, time zones and cultural context as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+    "summaryJa": "原文は用語・時区・文化の説明をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。",
+    "content": "## 历史方案的适用范围\n\n- 主题是术语、时区与文化解释。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。\n- 文化活动、奖励和开放时间不得作为官方安排发布。\n- 已有“非官方建议”声明不等于其中每个产品前提已核实；本次归类也不证明相关功能不存在或被取消。\n\n## 后续重新发布的条件\n\n若要写成玩家资料，应重新取得对应区服、平台、版本与规则的独立证据，再单独编写和验收。若作为本站开发建议，须经过需求评审、负责人和验收标准确认；本站不经营游戏服务器，也不因保存设想而恢复登录或新增采集。",
+    "contentEn": "## Scope of the historical proposal\n\n- The subject was terminology, time zones and cultural context. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.\n- Cultural events, rewards and opening times must not be published as official arrangements.\n- An existing unofficial disclaimer did not verify every product premise. This classification does not establish that a feature is nonexistent or cancelled.\n\n## Conditions for future publication\n\nPlayer information requires fresh independent evidence scoped to region, platform, version and rule, followed by separate writing and validation. A site idea requires requirements review, ownership and acceptance criteria. This site does not operate game servers; preserving an idea does not restore login or add data collection.",
+    "contentJa": "## 過去の案の適用範囲\n\n- 対象は用語・時区・文化の説明です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。\n- 文化イベント・報酬・開催時刻を公式予定として公開しないこと。\n- 非公式という注記があっても、全ての製品上の前提が確認済みになるわけではありません。この分類は機能の不存在や中止を意味しません。\n\n## 再公開に必要な条件\n\nプレイヤー資料にする場合は地域・端末・版・規則に対応する独立した根拠を取得し、別途執筆・検査します。本站の案として採用するには要件審査・担当・合格条件が必要です。本站はゲームサーバーを運営せず、提案保存によってログイン再開やデータ収集を追加しません。",
+    "tags": [
+      "Editorial archive",
+      "Unofficial proposal",
+      "Not a player guide"
+    ],
+    "faq": [
+      {
+        "question": "Is this an official plan or a site development commitment?",
+        "questionZh": "这是否代表官方计划或本站开发承诺？",
+        "questionJa": "公式計画や本站の開発の約束ですか？",
+        "answer": "No. This is an archival notice for a historical editorial proposal, not an official plan or an approved or implemented site feature. Game facts and site requirements require separate verification and review.",
+        "answerZh": "不是。这是历史编辑设想的归档说明，既不是官方计划，也不是已经批准或实施的本站功能；游戏事实与站内需求必须分别核验和评审。",
+        "answerJa": "いいえ。過去の編集提案の保存説明であり、公式計画でも承認・実装済みの本站機能でもありません。ゲームの事実と本站の要件は別々に検証・審査する必要があります。"
+      }
+    ],
+    "updatedAt": "2026-10-08",
+    "quickFacts": {
+      "zh": [
+        "主题是术语、时区与文化解释。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。",
+        "文化活动、奖励和开放时间不得作为官方安排发布。"
+      ],
+      "en": [
+        "The subject was terminology, time zones and cultural context. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.",
+        "Cultural events, rewards and opening times must not be published as official arrangements."
+      ],
+      "ja": [
+        "対象は用語・時区・文化の説明です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。",
+        "文化イベント・報酬・開催時刻を公式予定として公開しないこと。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "历史编辑设想：本地化与文化活动（非官方）",
+      "en": "Archived Editorial Proposal: Localization and cultural events (Unofficial)",
+      "ja": "過去の編集提案：ローカライズと文化イベント（非公式）"
+    },
+    "serpDescription": {
+      "zh": "原文讨论术语、时区与文化解释，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+      "en": "The original discussed terminology, time zones and cultural context as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+      "ja": "原文は用語・時区・文化の説明をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "non_official_product_proposal_archived_not_fact_verification",
+      "kind": "editorial_proposal_archive"
+    }
+  },
+  {
+    "id": "global-cbt-to-launch-decision-gates",
+    "title": "历史编辑设想：测试与上线决策（非官方）",
+    "titleEn": "Archived Editorial Proposal: Test-to-launch decisions (Unofficial)",
+    "titleJa": "過去の編集提案：テストから公開までの判断（非公式）",
+    "category": "editorial-archive",
+    "categoryZh": "历史编辑设想（非官方）",
+    "categoryEn": "Archived Editorial Proposals",
+    "categoryJa": "過去の編集提案（非公式）",
+    "summary": "原文讨论样本、风险与决策记录，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+    "summaryEn": "The original discussed samples, risks and decision records as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+    "summaryJa": "原文は標本・リスク・判断記録をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。",
+    "content": "## 历史方案的适用范围\n\n- 主题是样本、风险与决策记录。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。\n- 建议的 Go/No-Go 条件不证明测试日期或官方上线决策。\n- 已有“非官方建议”声明不等于其中每个产品前提已核实；本次归类也不证明相关功能不存在或被取消。\n\n## 后续重新发布的条件\n\n若要写成玩家资料，应重新取得对应区服、平台、版本与规则的独立证据，再单独编写和验收。若作为本站开发建议，须经过需求评审、负责人和验收标准确认；本站不经营游戏服务器，也不因保存设想而恢复登录或新增采集。",
+    "contentEn": "## Scope of the historical proposal\n\n- The subject was samples, risks and decision records. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.\n- Suggested Go/No-Go criteria establish neither test dates nor official launch decisions.\n- An existing unofficial disclaimer did not verify every product premise. This classification does not establish that a feature is nonexistent or cancelled.\n\n## Conditions for future publication\n\nPlayer information requires fresh independent evidence scoped to region, platform, version and rule, followed by separate writing and validation. A site idea requires requirements review, ownership and acceptance criteria. This site does not operate game servers; preserving an idea does not restore login or add data collection.",
+    "contentJa": "## 過去の案の適用範囲\n\n- 対象は標本・リスク・判断記録です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。\n- Go/No-Go基準案はテスト日や公式公開判断の証明ではありません。\n- 非公式という注記があっても、全ての製品上の前提が確認済みになるわけではありません。この分類は機能の不存在や中止を意味しません。\n\n## 再公開に必要な条件\n\nプレイヤー資料にする場合は地域・端末・版・規則に対応する独立した根拠を取得し、別途執筆・検査します。本站の案として採用するには要件審査・担当・合格条件が必要です。本站はゲームサーバーを運営せず、提案保存によってログイン再開やデータ収集を追加しません。",
+    "tags": [
+      "Editorial archive",
+      "Unofficial proposal",
+      "Not a player guide"
+    ],
+    "faq": [
+      {
+        "question": "Is this an official plan or a site development commitment?",
+        "questionZh": "这是否代表官方计划或本站开发承诺？",
+        "questionJa": "公式計画や本站の開発の約束ですか？",
+        "answer": "No. This is an archival notice for a historical editorial proposal, not an official plan or an approved or implemented site feature. Game facts and site requirements require separate verification and review.",
+        "answerZh": "不是。这是历史编辑设想的归档说明，既不是官方计划，也不是已经批准或实施的本站功能；游戏事实与站内需求必须分别核验和评审。",
+        "answerJa": "いいえ。過去の編集提案の保存説明であり、公式計画でも承認・実装済みの本站機能でもありません。ゲームの事実と本站の要件は別々に検証・審査する必要があります。"
+      }
+    ],
+    "updatedAt": "2026-10-08",
+    "quickFacts": {
+      "zh": [
+        "主题是样本、风险与决策记录。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。",
+        "建议的 Go/No-Go 条件不证明测试日期或官方上线决策。"
+      ],
+      "en": [
+        "The subject was samples, risks and decision records. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.",
+        "Suggested Go/No-Go criteria establish neither test dates nor official launch decisions."
+      ],
+      "ja": [
+        "対象は標本・リスク・判断記録です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。",
+        "Go/No-Go基準案はテスト日や公式公開判断の証明ではありません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "历史编辑设想：测试与上线决策（非官方）",
+      "en": "Archived Editorial Proposal: Test-to-launch decisions (Unofficial)",
+      "ja": "過去の編集提案：テストから公開までの判断（非公式）"
+    },
+    "serpDescription": {
+      "zh": "原文讨论样本、风险与决策记录，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+      "en": "The original discussed samples, risks and decision records as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+      "ja": "原文は標本・リスク・判断記録をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "non_official_product_proposal_archived_not_fact_verification",
+      "kind": "editorial_proposal_archive"
+    }
+  },
+  {
+    "id": "global-cn-release-governance",
+    "title": "历史编辑设想：区服版本治理（非官方）",
+    "titleEn": "Archived Editorial Proposal: Regional release governance (Unofficial)",
+    "titleJa": "過去の編集提案：地域別バージョン管理（非公式）",
+    "category": "editorial-archive",
+    "categoryZh": "历史编辑设想（非官方）",
+    "categoryEn": "Archived Editorial Proposals",
+    "categoryJa": "過去の編集提案（非公式）",
+    "summary": "原文讨论差异解释与迁移条件，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+    "summaryEn": "The original discussed difference disclosure and migration conditions as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+    "summaryJa": "原文は差分説明と移行条件をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。",
+    "content": "## 历史方案的适用范围\n\n- 主题是差异解释与迁移条件。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。\n- 固定版本滞后、跨服互通和先发内容不是已确认计划。\n- 已有“非官方建议”声明不等于其中每个产品前提已核实；本次归类也不证明相关功能不存在或被取消。\n\n## 后续重新发布的条件\n\n若要写成玩家资料，应重新取得对应区服、平台、版本与规则的独立证据，再单独编写和验收。若作为本站开发建议，须经过需求评审、负责人和验收标准确认；本站不经营游戏服务器，也不因保存设想而恢复登录或新增采集。",
+    "contentEn": "## Scope of the historical proposal\n\n- The subject was difference disclosure and migration conditions. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.\n- Fixed version lag, cross-region sharing and first-release content are not confirmed plans.\n- An existing unofficial disclaimer did not verify every product premise. This classification does not establish that a feature is nonexistent or cancelled.\n\n## Conditions for future publication\n\nPlayer information requires fresh independent evidence scoped to region, platform, version and rule, followed by separate writing and validation. A site idea requires requirements review, ownership and acceptance criteria. This site does not operate game servers; preserving an idea does not restore login or add data collection.",
+    "contentJa": "## 過去の案の適用範囲\n\n- 対象は差分説明と移行条件です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。\n- 固定版遅延・地域間共有・先行内容は確認済み計画ではありません。\n- 非公式という注記があっても、全ての製品上の前提が確認済みになるわけではありません。この分類は機能の不存在や中止を意味しません。\n\n## 再公開に必要な条件\n\nプレイヤー資料にする場合は地域・端末・版・規則に対応する独立した根拠を取得し、別途執筆・検査します。本站の案として採用するには要件審査・担当・合格条件が必要です。本站はゲームサーバーを運営せず、提案保存によってログイン再開やデータ収集を追加しません。",
+    "tags": [
+      "Editorial archive",
+      "Unofficial proposal",
+      "Not a player guide"
+    ],
+    "faq": [
+      {
+        "question": "Is this an official plan or a site development commitment?",
+        "questionZh": "这是否代表官方计划或本站开发承诺？",
+        "questionJa": "公式計画や本站の開発の約束ですか？",
+        "answer": "No. This is an archival notice for a historical editorial proposal, not an official plan or an approved or implemented site feature. Game facts and site requirements require separate verification and review.",
+        "answerZh": "不是。这是历史编辑设想的归档说明，既不是官方计划，也不是已经批准或实施的本站功能；游戏事实与站内需求必须分别核验和评审。",
+        "answerJa": "いいえ。過去の編集提案の保存説明であり、公式計画でも承認・実装済みの本站機能でもありません。ゲームの事実と本站の要件は別々に検証・審査する必要があります。"
+      }
+    ],
+    "updatedAt": "2026-10-07",
+    "quickFacts": {
+      "zh": [
+        "主题是差异解释与迁移条件。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。",
+        "固定版本滞后、跨服互通和先发内容不是已确认计划。"
+      ],
+      "en": [
+        "The subject was difference disclosure and migration conditions. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.",
+        "Fixed version lag, cross-region sharing and first-release content are not confirmed plans."
+      ],
+      "ja": [
+        "対象は差分説明と移行条件です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。",
+        "固定版遅延・地域間共有・先行内容は確認済み計画ではありません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "历史编辑设想：区服版本治理（非官方）",
+      "en": "Archived Editorial Proposal: Regional release governance (Unofficial)",
+      "ja": "過去の編集提案：地域別バージョン管理（非公式）"
+    },
+    "serpDescription": {
+      "zh": "原文讨论差异解释与迁移条件，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+      "en": "The original discussed difference disclosure and migration conditions as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+      "ja": "原文は差分説明と移行条件をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "non_official_product_proposal_archived_not_fact_verification",
+      "kind": "editorial_proposal_archive"
+    }
+  },
+  {
+    "id": "global-live-ops-metrics-experiments",
+    "title": "历史编辑设想：运营指标与实验（非官方）",
+    "titleEn": "Archived Editorial Proposal: Metrics and experiments (Unofficial)",
+    "titleJa": "過去の編集提案：運営指標と実験（非公式）",
+    "category": "editorial-archive",
+    "categoryZh": "历史编辑设想（非官方）",
+    "categoryEn": "Archived Editorial Proposals",
+    "categoryJa": "過去の編集提案（非公式）",
+    "summary": "原文讨论指标定义、聚合样本与停止条件，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+    "summaryEn": "The original discussed metric definitions, aggregate samples and stop conditions as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+    "summaryJa": "原文は指標定義・集計標本・停止条件をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。",
+    "content": "## 历史方案的适用范围\n\n- 主题是指标定义、聚合样本与停止条件。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。\n- 不声称拥有游戏留存、支付、账号或实验数据，也不新增采集。\n- 已有“非官方建议”声明不等于其中每个产品前提已核实；本次归类也不证明相关功能不存在或被取消。\n\n## 后续重新发布的条件\n\n若要写成玩家资料，应重新取得对应区服、平台、版本与规则的独立证据，再单独编写和验收。若作为本站开发建议，须经过需求评审、负责人和验收标准确认；本站不经营游戏服务器，也不因保存设想而恢复登录或新增采集。",
+    "contentEn": "## Scope of the historical proposal\n\n- The subject was metric definitions, aggregate samples and stop conditions. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.\n- Do not claim access to game retention, payment, account or experiment data; no collection is added.\n- An existing unofficial disclaimer did not verify every product premise. This classification does not establish that a feature is nonexistent or cancelled.\n\n## Conditions for future publication\n\nPlayer information requires fresh independent evidence scoped to region, platform, version and rule, followed by separate writing and validation. A site idea requires requirements review, ownership and acceptance criteria. This site does not operate game servers; preserving an idea does not restore login or add data collection.",
+    "contentJa": "## 過去の案の適用範囲\n\n- 対象は指標定義・集計標本・停止条件です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。\n- ゲームの継続率・決済・アカウント・実験データを保有すると主張せず、新たな収集もしません。\n- 非公式という注記があっても、全ての製品上の前提が確認済みになるわけではありません。この分類は機能の不存在や中止を意味しません。\n\n## 再公開に必要な条件\n\nプレイヤー資料にする場合は地域・端末・版・規則に対応する独立した根拠を取得し、別途執筆・検査します。本站の案として採用するには要件審査・担当・合格条件が必要です。本站はゲームサーバーを運営せず、提案保存によってログイン再開やデータ収集を追加しません。",
+    "tags": [
+      "Editorial archive",
+      "Unofficial proposal",
+      "Not a player guide"
+    ],
+    "faq": [
+      {
+        "question": "Is this an official plan or a site development commitment?",
+        "questionZh": "这是否代表官方计划或本站开发承诺？",
+        "questionJa": "公式計画や本站の開発の約束ですか？",
+        "answer": "No. This is an archival notice for a historical editorial proposal, not an official plan or an approved or implemented site feature. Game facts and site requirements require separate verification and review.",
+        "answerZh": "不是。这是历史编辑设想的归档说明，既不是官方计划，也不是已经批准或实施的本站功能；游戏事实与站内需求必须分别核验和评审。",
+        "answerJa": "いいえ。過去の編集提案の保存説明であり、公式計画でも承認・実装済みの本站機能でもありません。ゲームの事実と本站の要件は別々に検証・審査する必要があります。"
+      }
+    ],
+    "updatedAt": "2026-10-07",
+    "quickFacts": {
+      "zh": [
+        "主题是指标定义、聚合样本与停止条件。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。",
+        "不声称拥有游戏留存、支付、账号或实验数据，也不新增采集。"
+      ],
+      "en": [
+        "The subject was metric definitions, aggregate samples and stop conditions. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.",
+        "Do not claim access to game retention, payment, account or experiment data; no collection is added."
+      ],
+      "ja": [
+        "対象は指標定義・集計標本・停止条件です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。",
+        "ゲームの継続率・決済・アカウント・実験データを保有すると主張せず、新たな収集もしません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "历史编辑设想：运营指标与实验（非官方）",
+      "en": "Archived Editorial Proposal: Metrics and experiments (Unofficial)",
+      "ja": "過去の編集提案：運営指標と実験（非公式）"
+    },
+    "serpDescription": {
+      "zh": "原文讨论指标定义、聚合样本与停止条件，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+      "en": "The original discussed metric definitions, aggregate samples and stop conditions as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+      "ja": "原文は指標定義・集計標本・停止条件をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "non_official_product_proposal_archived_not_fact_verification",
+      "kind": "editorial_proposal_archive"
+    }
+  },
+  {
+    "id": "global-launch-readiness-checklist",
+    "title": "历史编辑设想：首发质量评审（非官方）",
+    "titleEn": "Archived Editorial Proposal: Launch-quality review (Unofficial)",
+    "titleJa": "過去の編集提案：公開品質の評価（非公式）",
+    "category": "editorial-archive",
+    "categoryZh": "历史编辑设想（非官方）",
+    "categoryEn": "Archived Editorial Proposals",
+    "categoryJa": "過去の編集提案（非公式）",
+    "summary": "原文讨论风险清单与验收职责，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+    "summaryEn": "The original discussed risk checklists and validation ownership as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+    "summaryJa": "原文はリスク一覧と検査責任をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。",
+    "content": "## 历史方案的适用范围\n\n- 主题是风险清单与验收职责。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。\n- 编辑清单不证明官方功能存在，也不是本站已完成的发布验收。\n- 已有“非官方建议”声明不等于其中每个产品前提已核实；本次归类也不证明相关功能不存在或被取消。\n\n## 后续重新发布的条件\n\n若要写成玩家资料，应重新取得对应区服、平台、版本与规则的独立证据，再单独编写和验收。若作为本站开发建议，须经过需求评审、负责人和验收标准确认；本站不经营游戏服务器，也不因保存设想而恢复登录或新增采集。",
+    "contentEn": "## Scope of the historical proposal\n\n- The subject was risk checklists and validation ownership. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.\n- An editorial checklist proves neither official features nor completed site-release acceptance.\n- An existing unofficial disclaimer did not verify every product premise. This classification does not establish that a feature is nonexistent or cancelled.\n\n## Conditions for future publication\n\nPlayer information requires fresh independent evidence scoped to region, platform, version and rule, followed by separate writing and validation. A site idea requires requirements review, ownership and acceptance criteria. This site does not operate game servers; preserving an idea does not restore login or add data collection.",
+    "contentJa": "## 過去の案の適用範囲\n\n- 対象はリスク一覧と検査責任です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。\n- 編集チェックリストは公式機能や本站の公開検査完了を証明しません。\n- 非公式という注記があっても、全ての製品上の前提が確認済みになるわけではありません。この分類は機能の不存在や中止を意味しません。\n\n## 再公開に必要な条件\n\nプレイヤー資料にする場合は地域・端末・版・規則に対応する独立した根拠を取得し、別途執筆・検査します。本站の案として採用するには要件審査・担当・合格条件が必要です。本站はゲームサーバーを運営せず、提案保存によってログイン再開やデータ収集を追加しません。",
+    "tags": [
+      "Editorial archive",
+      "Unofficial proposal",
+      "Not a player guide"
+    ],
+    "faq": [
+      {
+        "question": "Is this an official plan or a site development commitment?",
+        "questionZh": "这是否代表官方计划或本站开发承诺？",
+        "questionJa": "公式計画や本站の開発の約束ですか？",
+        "answer": "No. This is an archival notice for a historical editorial proposal, not an official plan or an approved or implemented site feature. Game facts and site requirements require separate verification and review.",
+        "answerZh": "不是。这是历史编辑设想的归档说明，既不是官方计划，也不是已经批准或实施的本站功能；游戏事实与站内需求必须分别核验和评审。",
+        "answerJa": "いいえ。過去の編集提案の保存説明であり、公式計画でも承認・実装済みの本站機能でもありません。ゲームの事実と本站の要件は別々に検証・審査する必要があります。"
+      }
+    ],
+    "updatedAt": "2026-10-07",
+    "quickFacts": {
+      "zh": [
+        "主题是风险清单与验收职责。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。",
+        "编辑清单不证明官方功能存在，也不是本站已完成的发布验收。"
+      ],
+      "en": [
+        "The subject was risk checklists and validation ownership. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.",
+        "An editorial checklist proves neither official features nor completed site-release acceptance."
+      ],
+      "ja": [
+        "対象はリスク一覧と検査責任です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。",
+        "編集チェックリストは公式機能や本站の公開検査完了を証明しません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "历史编辑设想：首发质量评审（非官方）",
+      "en": "Archived Editorial Proposal: Launch-quality review (Unofficial)",
+      "ja": "過去の編集提案：公開品質の評価（非公式）"
+    },
+    "serpDescription": {
+      "zh": "原文讨论风险清单与验收职责，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+      "en": "The original discussed risk checklists and validation ownership as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+      "ja": "原文はリスク一覧と検査責任をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "non_official_product_proposal_archived_not_fact_verification",
+      "kind": "editorial_proposal_archive"
+    }
+  },
+  {
+    "id": "global-first-30-days-pve-plan",
+    "title": "历史编辑设想：首月 PvE 内容设想（非官方）",
+    "titleEn": "Archived Editorial Proposal: First-month PvE ideas (Unofficial)",
+    "titleJa": "過去の編集提案：初月PvEの構想（非公式）",
+    "category": "editorial-archive",
+    "categoryZh": "历史编辑设想（非官方）",
+    "categoryEn": "Archived Editorial Proposals",
+    "categoryJa": "過去の編集提案（非公式）",
+    "summary": "原文讨论挑战、周常与追赶设计，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+    "summaryEn": "The original discussed challenges, weekly goals and catch-up design as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+    "summaryJa": "原文は挑戦・週間目標・追い付き設計をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。",
+    "content": "## 历史方案的适用范围\n\n- 主题是挑战、周常与追赶设计。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。\n- 前 30 天是历史方案分段，不是游戏时间表或可执行养成路线。\n- 已有“非官方建议”声明不等于其中每个产品前提已核实；本次归类也不证明相关功能不存在或被取消。\n\n## 后续重新发布的条件\n\n若要写成玩家资料，应重新取得对应区服、平台、版本与规则的独立证据，再单独编写和验收。若作为本站开发建议，须经过需求评审、负责人和验收标准确认；本站不经营游戏服务器，也不因保存设想而恢复登录或新增采集。",
+    "contentEn": "## Scope of the historical proposal\n\n- The subject was challenges, weekly goals and catch-up design. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.\n- The first 30 days is a historical proposal interval, not a game schedule or actionable progression route.\n- An existing unofficial disclaimer did not verify every product premise. This classification does not establish that a feature is nonexistent or cancelled.\n\n## Conditions for future publication\n\nPlayer information requires fresh independent evidence scoped to region, platform, version and rule, followed by separate writing and validation. A site idea requires requirements review, ownership and acceptance criteria. This site does not operate game servers; preserving an idea does not restore login or add data collection.",
+    "contentJa": "## 過去の案の適用範囲\n\n- 対象は挑戦・週間目標・追い付き設計です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。\n- 最初の30日は過去案の区分であり、ゲーム日程や実行可能な育成経路ではありません。\n- 非公式という注記があっても、全ての製品上の前提が確認済みになるわけではありません。この分類は機能の不存在や中止を意味しません。\n\n## 再公開に必要な条件\n\nプレイヤー資料にする場合は地域・端末・版・規則に対応する独立した根拠を取得し、別途執筆・検査します。本站の案として採用するには要件審査・担当・合格条件が必要です。本站はゲームサーバーを運営せず、提案保存によってログイン再開やデータ収集を追加しません。",
+    "tags": [
+      "Editorial archive",
+      "Unofficial proposal",
+      "Not a player guide"
+    ],
+    "faq": [
+      {
+        "question": "Is this an official plan or a site development commitment?",
+        "questionZh": "这是否代表官方计划或本站开发承诺？",
+        "questionJa": "公式計画や本站の開発の約束ですか？",
+        "answer": "No. This is an archival notice for a historical editorial proposal, not an official plan or an approved or implemented site feature. Game facts and site requirements require separate verification and review.",
+        "answerZh": "不是。这是历史编辑设想的归档说明，既不是官方计划，也不是已经批准或实施的本站功能；游戏事实与站内需求必须分别核验和评审。",
+        "answerJa": "いいえ。過去の編集提案の保存説明であり、公式計画でも承認・実装済みの本站機能でもありません。ゲームの事実と本站の要件は別々に検証・審査する必要があります。"
+      }
+    ],
+    "updatedAt": "2026-10-07",
+    "quickFacts": {
+      "zh": [
+        "主题是挑战、周常与追赶设计。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。",
+        "前 30 天是历史方案分段，不是游戏时间表或可执行养成路线。"
+      ],
+      "en": [
+        "The subject was challenges, weekly goals and catch-up design. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.",
+        "The first 30 days is a historical proposal interval, not a game schedule or actionable progression route."
+      ],
+      "ja": [
+        "対象は挑戦・週間目標・追い付き設計です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。",
+        "最初の30日は過去案の区分であり、ゲーム日程や実行可能な育成経路ではありません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "历史编辑设想：首月 PvE 内容设想（非官方）",
+      "en": "Archived Editorial Proposal: First-month PvE ideas (Unofficial)",
+      "ja": "過去の編集提案：初月PvEの構想（非公式）"
+    },
+    "serpDescription": {
+      "zh": "原文讨论挑战、周常与追赶设计，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+      "en": "The original discussed challenges, weekly goals and catch-up design as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+      "ja": "原文は挑戦・週間目標・追い付き設計をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "non_official_product_proposal_archived_not_fact_verification",
+      "kind": "editorial_proposal_archive"
+    }
+  },
+  {
+    "id": "global-days-31-90-season-event-plan",
+    "title": "历史编辑设想：赛季与社区活动设想（非官方）",
+    "titleEn": "Archived Editorial Proposal: Season and community-event ideas (Unofficial)",
+    "titleJa": "過去の編集提案：シーズンと交流イベントの構想（非公式）",
+    "category": "editorial-archive",
+    "categoryZh": "历史编辑设想（非官方）",
+    "categoryEn": "Archived Editorial Proposals",
+    "categoryJa": "過去の編集提案（非公式）",
+    "summary": "原文讨论分阶段内容与非强迫参与，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+    "summaryEn": "The original discussed phased content and non-coercive participation as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+    "summaryJa": "原文は段階別内容と参加の任意性をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。",
+    "content": "## 历史方案的适用范围\n\n- 主题是分阶段内容与非强迫参与。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。\n- 31–90 天、赛季主题和全球事件均非官方排期或活动公告。\n- 已有“非官方建议”声明不等于其中每个产品前提已核实；本次归类也不证明相关功能不存在或被取消。\n\n## 后续重新发布的条件\n\n若要写成玩家资料，应重新取得对应区服、平台、版本与规则的独立证据，再单独编写和验收。若作为本站开发建议，须经过需求评审、负责人和验收标准确认；本站不经营游戏服务器，也不因保存设想而恢复登录或新增采集。",
+    "contentEn": "## Scope of the historical proposal\n\n- The subject was phased content and non-coercive participation. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.\n- Days 31–90, season themes and global events are not official schedules or announcements.\n- An existing unofficial disclaimer did not verify every product premise. This classification does not establish that a feature is nonexistent or cancelled.\n\n## Conditions for future publication\n\nPlayer information requires fresh independent evidence scoped to region, platform, version and rule, followed by separate writing and validation. A site idea requires requirements review, ownership and acceptance criteria. This site does not operate game servers; preserving an idea does not restore login or add data collection.",
+    "contentJa": "## 過去の案の適用範囲\n\n- 対象は段階別内容と参加の任意性です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。\n- 31〜90日・シーズン主題・世界イベントは公式日程や告知ではありません。\n- 非公式という注記があっても、全ての製品上の前提が確認済みになるわけではありません。この分類は機能の不存在や中止を意味しません。\n\n## 再公開に必要な条件\n\nプレイヤー資料にする場合は地域・端末・版・規則に対応する独立した根拠を取得し、別途執筆・検査します。本站の案として採用するには要件審査・担当・合格条件が必要です。本站はゲームサーバーを運営せず、提案保存によってログイン再開やデータ収集を追加しません。",
+    "tags": [
+      "Editorial archive",
+      "Unofficial proposal",
+      "Not a player guide"
+    ],
+    "faq": [
+      {
+        "question": "Is this an official plan or a site development commitment?",
+        "questionZh": "这是否代表官方计划或本站开发承诺？",
+        "questionJa": "公式計画や本站の開発の約束ですか？",
+        "answer": "No. This is an archival notice for a historical editorial proposal, not an official plan or an approved or implemented site feature. Game facts and site requirements require separate verification and review.",
+        "answerZh": "不是。这是历史编辑设想的归档说明，既不是官方计划，也不是已经批准或实施的本站功能；游戏事实与站内需求必须分别核验和评审。",
+        "answerJa": "いいえ。過去の編集提案の保存説明であり、公式計画でも承認・実装済みの本站機能でもありません。ゲームの事実と本站の要件は別々に検証・審査する必要があります。"
+      }
+    ],
+    "updatedAt": "2026-10-07",
+    "quickFacts": {
+      "zh": [
+        "主题是分阶段内容与非强迫参与。原有建议及其措辞保存在内部审查档案，不继续作为可执行的游戏说明发布。",
+        "31–90 天、赛季主题和全球事件均非官方排期或活动公告。"
+      ],
+      "en": [
+        "The subject was phased content and non-coercive participation. Original suggestions and wording remain in the internal review archive rather than actionable game instructions.",
+        "Days 31–90, season themes and global events are not official schedules or announcements."
+      ],
+      "ja": [
+        "対象は段階別内容と参加の任意性です。元の提案と表現は内部審査記録に保存し、実行可能なゲーム手順として公開しません。",
+        "31〜90日・シーズン主題・世界イベントは公式日程や告知ではありません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "历史编辑设想：赛季与社区活动设想（非官方）",
+      "en": "Archived Editorial Proposal: Season and community-event ideas (Unofficial)",
+      "ja": "過去の編集提案：シーズンと交流イベントの構想（非公式）"
+    },
+    "serpDescription": {
+      "zh": "原文讨论分阶段内容与非强迫参与，属于面向游戏开发方的编辑建议，不是玩家攻略、官方规则或本站已实施功能。原文已留存内部审查档案，本 URL 保留归档说明。",
+      "en": "The original discussed phased content and non-coercive participation as advice to a game developer, not a player guide, official rule or implemented site feature. The original is retained in an internal review archive; this URL preserves the archival notice.",
+      "ja": "原文は段階別内容と参加の任意性をゲーム開発者への提案として扱っており、プレイヤー攻略・公式規則・本站の実装済み機能ではありません。原文は内部審査記録に保存し、このURLは保存説明を残します。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "non_official_product_proposal_archived_not_fact_verification",
+      "kind": "editorial_proposal_archive"
+    }
+  },
+  {
+    "id": "global-cn-content-roadmap",
+    "title": "国服与国际服资料差异核验清单",
+    "titleEn": "CN and Global Content Verification Checklist",
+    "titleJa": "中国版と国際版の資料差分・確認チェックリスト",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "categoryJa": "バージョンガイド",
+    "summary": "国服资料不能直接证明国际服版本、数值或运营规则。本页保留跨服对照的方法，撤回未经独立核实的上线与测试前提；不是官方路线图。",
+    "summaryEn": "CN data does not establish global versions, values or operating rules. This page retains a comparison method while withdrawing unverified launch and test assumptions. It is not an official roadmap.",
+    "summaryJa": "中国版の資料だけでは国際版のバージョン、数値、運営ルールを証明できません。未確認の配信・テスト前提を撤回し、比較方法を残します。公式ロードマップではありません。",
+    "content": "## 跨服对照应记录什么\n\n- 逐项记录游戏名称、发行地区、公告 URL、公告日期与对应客户端版本，不要只写“官网确认”。\n- 把语言、平台、账号互通、角色数值和赛季安排分开查证；同名角色也不能自动共用技能或种族值。\n- 将已实装、测试中、产品建议和待核实分栏；上线后若干天的规划只能作为编辑建议，不能写成承诺。\n\n## 如何推进后续资料\n\n先获得可复核的国际服证据，再建立适用范围；没有依据的字段保持待核实，不从国服补值。",
+    "contentEn": "## What to record when comparing regions\n\n- Record the game identity, release region, announcement URL, publication date and client version separately. “Officially confirmed” without a reproducible citation is insufficient.\n- Verify languages, platforms, account sharing, character values and seasons independently. A matching character name does not establish identical skills or base stats.\n- Separate implemented features, tests, editorial proposals and unknowns. Plans for the first weeks after a launch are suggestions, not delivery commitments.\n\n## How to expand the reference\n\nObtain reproducible global evidence before setting its scope. Leave unsupported fields unverified rather than filling them from CN data.",
+    "contentJa": "## 地域間比較で記録する項目\n\n- ゲーム名、対象地域、告知URL、公開日、クライアント版を別々に記録してください。再確認できる引用のない「公式確認済み」だけでは不十分です。\n- 言語、対応機種、アカウント共有、キャラクター数値、シーズンを個別に確認します。同名でもスキルや種族値の一致は証明できません。\n- 実装済み、テスト中、編集上の提案、未確認を区分してください。配信後の運営案は提案であり、実施の約束ではありません。\n\n## 今後の資料整備\n\n再確認できる国際版の根拠を得てから適用範囲を定めます。不明な項目を中国版の値で埋めないでください。",
+    "tags": [
+      "source-review",
+      "international-scope"
+    ],
+    "faq": [
+      {
+        "questionZh": "这些信息已经官方核实了吗？",
+        "question": "Is this officially verified information?",
+        "questionJa": "公式確認済みの情報ですか？",
+        "answerZh": "不是。本页是编辑纠错与核验清单，缺乏独立依据的确定断言已撤回；不代表测试取消，也不能作为报名、付款或下载依据。",
+        "answer": "No. This is an editorial correction and verification checklist. Definite claims lacking independent support are withdrawn. It is not a cancellation notice or a basis for signup, payment or downloading.",
+        "answerJa": "いいえ。編集訂正と確認リストです。独立した根拠のない断定を撤回しました。中止告知でも、応募・支払い・DLの根拠でもありません。"
+      }
+    ],
+    "updatedAt": "2026-10-07",
+    "quickFacts": {
+      "zh": [
+        "国服资料不能直接证明国际服版本、数值或运营规则。本页保留跨服对照的方法，撤回未经独立核实的上线与测试前提；不是官方路线图。"
+      ],
+      "en": [
+        "CN data does not establish global versions, values or operating rules. This page retains a comparison method while withdrawing unverified launch and test assumptions. It is not an official roadmap."
+      ],
+      "ja": [
+        "中国版の資料だけでは国際版のバージョン、数値、運営ルールを証明できません。未確認の配信・テスト前提を撤回し、比較方法を残します。公式ロードマップではありません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "国服与国际服资料差异核验清单",
+      "en": "CN and Global Content Verification Checklist",
+      "ja": "中国版と国際版の資料差分・確認チェックリスト"
+    },
+    "serpDescription": {
+      "zh": "国服资料不能直接证明国际服版本、数值或运营规则。本页保留跨服对照的方法，撤回未经独立核实的上线与测试前提；不是官方路线图。",
+      "en": "CN data does not establish global versions, values or operating rules. This page retains a comparison method while withdrawing unverified launch and test assumptions. It is not an official roadmap.",
+      "ja": "中国版の資料だけでは国際版のバージョン、数値、運営ルールを証明できません。未確認の配信・テスト前提を撤回し、比較方法を残します。公式ロードマップではありません。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "editorial_withdrawal_not_official_confirmation"
+    }
+  },
+  {
+    "id": "cbt-registration-guide",
+    "title": "国际服测试报名信息核验清单",
+    "titleEn": "Global Test Signup Verification Checklist",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "summary": "旧报名日期、资格查询、问卷与邀请规则缺乏可独立复核的依据，已撤回。本页只说明安全核验步骤，不表示报名正在开放或测试取消。",
+    "summaryEn": "The old signup dates, eligibility checks, questionnaire and invitation rules lack independently reproducible support and are withdrawn. This is a safety checklist, not an announcement that signup is open or a test is cancelled.",
+    "content": "## 报名之前先确认\n\n- 核对公告是否属于正确游戏、区服和测试批次，保存原始 URL 与发布日期。旧 Steam 引用对应其他游戏，不能作为报名依据。\n- 分别确认报名起止时间、时区、资格发放方式和所需平台；不要把预约成功当作获得测试资格。\n- 不要依据旧攻略提交身份证明、付款或安装客户端。邀请链接也需要确认来源和适用活动。\n\n## 资格与后续安排\n\n只有获得可核实公告后才能写确定日程；资格邮件与下载入口应分别核验，缺一项就保留待核实。",
+    "contentEn": "## Before attempting signup\n\n- Match the announcement to the correct game, region and test batch. Preserve its original URL and publication date. The old Steam citation identifies another game and cannot establish signup rules.\n- Check the signup window, time zone, eligibility distribution and platforms separately. Pre-registration is not itself proof of beta access.\n- Do not submit identity documents, pay or install clients based on the older guide. Referral links also need a verified issuer and event scope.\n\n## Eligibility and next steps\n\nPublish a definite schedule only after obtaining reproducible evidence. Verify eligibility messages and download destinations separately; leave missing information unverified.",
+    "tags": [
+      "source-review",
+      "international-scope"
+    ],
+    "faq": [
+      {
+        "questionZh": "这些信息已经官方核实了吗？",
+        "question": "Is this officially verified information?",
+        "questionJa": "公式確認済みの情報ですか？",
+        "answerZh": "不是。本页是编辑纠错与核验清单，缺乏独立依据的确定断言已撤回；不代表测试取消，也不能作为报名、付款或下载依据。",
+        "answer": "No. This is an editorial correction and verification checklist. Definite claims lacking independent support are withdrawn. It is not a cancellation notice or a basis for signup, payment or downloading.",
+        "answerJa": "いいえ。編集訂正と確認リストです。独立した根拠のない断定を撤回しました。中止告知でも、応募・支払い・DLの根拠でもありません。"
+      }
+    ],
+    "updatedAt": "2026-08-27",
+    "quickFacts": {
+      "zh": [
+        "旧报名日期、资格查询、问卷与邀请规则缺乏可独立复核的依据，已撤回。本页只说明安全核验步骤，不表示报名正在开放或测试取消。"
+      ],
+      "en": [
+        "The old signup dates, eligibility checks, questionnaire and invitation rules lack independently reproducible support and are withdrawn. This is a safety checklist, not an announcement that signup is open or a test is cancelled."
+      ],
+      "ja": [
+        "旧応募日程、資格照会、アンケート、招待ルールは独立して再確認できる根拠がなく撤回しました。安全確認の手順であり、応募開始やテスト中止の告知ではありません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "国际服测试报名信息核验清单",
+      "en": "Global Test Signup Verification Checklist",
+      "ja": "国際版テスト応募情報の確認チェックリスト"
+    },
+    "serpDescription": {
+      "zh": "旧报名日期、资格查询、问卷与邀请规则缺乏可独立复核的依据，已撤回。本页只说明安全核验步骤，不表示报名正在开放或测试取消。",
+      "en": "The old signup dates, eligibility checks, questionnaire and invitation rules lack independently reproducible support and are withdrawn. This is a safety checklist, not an announcement that signup is open or a test is cancelled.",
+      "ja": "旧応募日程、資格照会、アンケート、招待ルールは独立して再確認できる根拠がなく撤回しました。安全確認の手順であり、応募開始やテスト中止の告知ではありません。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "editorial_withdrawal_not_official_confirmation"
+    },
+    "titleJa": "国際版テスト応募情報の確認チェックリスト",
+    "summaryJa": "旧応募日程、資格照会、アンケート、招待ルールは独立して再確認できる根拠がなく撤回しました。安全確認の手順であり、応募開始やテスト中止の告知ではありません。",
+    "contentJa": "## 応募前に確認すること\n\n- 告知が正しいゲーム、対象地域、テスト回のものか確認し、元URLと公開日を保存してください。旧Steam引用は別のゲームを示し、応募の根拠にはなりません。\n- 応募期間、時差、資格配布方法、対応機種を個別に確認します。事前登録の完了だけでテスト資格を得たとは判断できません。\n- 旧ガイドを根拠に身分証の提出、支払い、クライアント導入をしないでください。紹介リンクも発行元と対象活動の確認が必要です。\n\n## 資格と今後の案内\n\n再確認できる根拠を得てから確定日程を掲載します。資格通知とDL先を別々に確認し、不明な項目は未確認のまま残してください。"
+  },
+  {
+    "id": "starter-guide",
+    "title": "国际服初始精灵选择：证据核验清单",
+    "titleEn": "Global Starter Choice: Evidence Checklist",
+    "category": "starter",
+    "categoryZh": "新手入门",
+    "categoryEn": "Starter",
+    "summary": "旧文的初始阵容、战斗定位、满资质和好友世界补抓承诺缺乏独立国际服依据，现予撤回。本页不推荐先选或培养哪只精灵。",
+    "summaryEn": "Earlier starter identities, combat roles, full-aptitude claims and friend-world catching promises lacked independent global support and are withdrawn. This page does not recommend which creature to pick or build.",
+    "content": "## 选择建议需要哪些证据\n\n- 先核对当前国际服版本是否有初始选择，以及具体可选对象。本站保留的名字和六条导航记录不能证明官方名单或数量。\n- 分别验证属性、数值、资质、技能、进化与后续获取条件；国服同名或相似形象不代表规则相同。\n- 比较培养成本、关卡环境与可重复实测后再给建议。未知表现不能自动排成 A 级或当作零值。\n\n## 在核实之前\n\n不要按旧“稳定续航、快速开荒、随时补抓”说法投入资源。缺乏依据不证明这些对象或机制不存在。",
+    "contentEn": "## Evidence needed for a recommendation\n\n- Verify whether the relevant global version has a starter choice and which options it offers. Legacy names and six navigation records cannot establish an official list or total.\n- Check types, values, aptitude, skills, evolution and later acquisition separately. CN names or similar artwork do not establish identical rules.\n- Compare investment costs, content conditions and reproducible play tests before recommending a choice. Unknown performance must not default to A or zero.\n\n## Before verification\n\nDo not invest based on the old sustain, fast-start or catch-later promises. Missing support does not prove the creatures or mechanics do not exist.",
+    "tags": [
+      "source-review",
+      "international-scope"
+    ],
+    "faq": [
+      {
+        "questionZh": "这是已核实的国际服规则吗？",
+        "question": "Are these verified global rules?",
+        "questionJa": "確認済みの国際版規則ですか？",
+        "answerZh": "不是。这是编辑纠错和核验条件，旧确定断言已撤回；没有新取得的独立国际服证据，不能作为实装、培养或付费依据，也不是取消公告。",
+        "answer": "No. This is an editorial correction and a set of verification conditions. Earlier definite claims are withdrawn; no new independent global evidence was obtained. This is not proof of implementation, investment or payment advice, or a cancellation notice.",
+        "answerJa": "いいえ。編集訂正と確認条件です。旧断定を撤回し、新しい独立した国際版根拠は取得していません。実装、育成、購入の根拠でも中止告知でもありません。"
+      }
+    ],
+    "updatedAt": "2026-08-27",
+    "quickFacts": {
+      "zh": [
+        "旧文的初始阵容、战斗定位、满资质和好友世界补抓承诺缺乏独立国际服依据，现予撤回。本页不推荐先选或培养哪只精灵。"
+      ],
+      "en": [
+        "Earlier starter identities, combat roles, full-aptitude claims and friend-world catching promises lacked independent global support and are withdrawn. This page does not recommend which creature to pick or build."
+      ],
+      "ja": [
+        "旧スターターの同一性、戦闘役割、最高資質、友人世界での捕獲には独立した国際版根拠がなく、撤回しました。選択や育成の推奨は掲載しません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "国际服初始精灵选择：证据核验清单",
+      "en": "Global Starter Choice: Evidence Checklist",
+      "ja": "国際版スターター選択：根拠確認リスト"
+    },
+    "serpDescription": {
+      "zh": "旧文的初始阵容、战斗定位、满资质和好友世界补抓承诺缺乏独立国际服依据，现予撤回。本页不推荐先选或培养哪只精灵。",
+      "en": "Earlier starter identities, combat roles, full-aptitude claims and friend-world catching promises lacked independent global support and are withdrawn. This page does not recommend which creature to pick or build.",
+      "ja": "旧スターターの同一性、戦闘役割、最高資質、友人世界での捕獲には独立した国際版根拠がなく、撤回しました。選択や育成の推奨は掲載しません。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "editorial_mechanics_withdrawal_not_official_confirmation"
+    },
+    "titleJa": "国際版スターター選択：根拠確認リスト",
+    "summaryJa": "旧スターターの同一性、戦闘役割、最高資質、友人世界での捕獲には独立した国際版根拠がなく、撤回しました。選択や育成の推奨は掲載しません。",
+    "contentJa": "## 推奨に必要な根拠\n\n- 対象の国際版に初期選択があるか、何を選べるかを確認します。過去の名前や六件のナビは公式一覧・総数の証明ではありません。\n- 属性、値、資質、スキル、進化、後の入手を別々に確認します。中国版の同名や似た画像から規則の一致は判断できません。\n- 育成費用、攻略条件、再現可能な実測を比較してから推奨します。不明な性能をAやゼロで補わないでください。\n\n## 確認できるまで\n\n旧継戦、速攻、後日捕獲の約束で資源を投入しないでください。根拠不足は対象や仕組みの不存在を意味しません。"
+  },
+  {
+    "id": "what-is-roco-kingdom",
+    "title": "Roco Kingdom 游戏信息核验：世界、精灵与玩法",
+    "titleEn": "Roco Kingdom Game Information: What Needs Verification",
+    "category": "starter",
+    "categoryZh": "新手入门",
+    "categoryEn": "Starter",
+    "summary": "此前关于精灵数量、世界设定、免费模式、平台和测试的确定表述暂不作为已核实事实。本页列出了解游戏时应分别核验的项目。",
+    "summaryEn": "Earlier definite claims about creature counts, world design, free-to-play terms, platforms and tests are not treated as verified facts. This page lists the separate checks needed to understand the product.",
+    "content": "## 先建立产品身份\n\n- 先确认游戏名称、开发或发行主体、地区版本和公告出处；不要以商店链接的名称尾缀代替 App ID 身份。\n- 精灵名称、数量、捕捉方式与战斗机制应各有可复核出处。宣传片展示不等于完整功能清单，也不证明所有地区已实装。\n- 区分单机、联机、测试体验与正式版规则；不要从同类游戏或国服体验推导国际服设定。\n\n## 了解玩法的可靠顺序\n\n先核对实际适用版本与客户端，再整理有依据的玩法条目。本文不承诺首发数量、免费游玩或特定平台支持。",
+    "contentEn": "## Establish the product identity first\n\n- Check the game name, developer or publisher, region and announcement source. A name appended to a store URL does not replace App ID identity verification.\n- Creature names, counts, acquisition methods and battle rules each need reproducible support. A trailer is not a complete feature list or proof of implementation in every region.\n- Separate solo play, multiplayer, test experience and release rules. Similar games and CN experience do not establish global settings.\n\n## A reliable order for learning about gameplay\n\nVerify the applicable version and client before documenting supported mechanics. This page promises no launch roster size, free-to-play terms or platform support.",
+    "tags": [
+      "source-review",
+      "international-scope"
+    ],
+    "faq": [
+      {
+        "questionZh": "这些信息已经官方核实了吗？",
+        "question": "Is this officially verified information?",
+        "questionJa": "公式確認済みの情報ですか？",
+        "answerZh": "不是。本页是编辑纠错与核验清单，缺乏独立依据的确定断言已撤回；不代表测试取消，也不能作为报名、付款或下载依据。",
+        "answer": "No. This is an editorial correction and verification checklist. Definite claims lacking independent support are withdrawn. It is not a cancellation notice or a basis for signup, payment or downloading.",
+        "answerJa": "いいえ。編集訂正と確認リストです。独立した根拠のない断定を撤回しました。中止告知でも、応募・支払い・DLの根拠でもありません。"
+      }
+    ],
+    "updatedAt": "2026-08-27",
+    "quickFacts": {
+      "zh": [
+        "此前关于精灵数量、世界设定、免费模式、平台和测试的确定表述暂不作为已核实事实。本页列出了解游戏时应分别核验的项目。"
+      ],
+      "en": [
+        "Earlier definite claims about creature counts, world design, free-to-play terms, platforms and tests are not treated as verified facts. This page lists the separate checks needed to understand the product."
+      ],
+      "ja": [
+        "精霊数、世界設定、無料モデル、対応機種、テストについての旧断定は、確認済みの事実として扱いません。製品を知るための確認項目を分けて整理します。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "Roco Kingdom 游戏信息核验：世界、精灵与玩法",
+      "en": "Roco Kingdom Game Information: What Needs Verification",
+      "ja": "Roco Kingdomのゲーム情報確認：世界・精霊・遊び方"
+    },
+    "serpDescription": {
+      "zh": "此前关于精灵数量、世界设定、免费模式、平台和测试的确定表述暂不作为已核实事实。本页列出了解游戏时应分别核验的项目。",
+      "en": "Earlier definite claims about creature counts, world design, free-to-play terms, platforms and tests are not treated as verified facts. This page lists the separate checks needed to understand the product.",
+      "ja": "精霊数、世界設定、無料モデル、対応機種、テストについての旧断定は、確認済みの事実として扱いません。製品を知るための確認項目を分けて整理します。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "editorial_withdrawal_not_official_confirmation"
+    },
+    "titleJa": "Roco Kingdomのゲーム情報確認：世界・精霊・遊び方",
+    "summaryJa": "精霊数、世界設定、無料モデル、対応機種、テストについての旧断定は、確認済みの事実として扱いません。製品を知るための確認項目を分けて整理します。",
+    "contentJa": "## まず製品の同一性を確認\n\n- ゲーム名、開発・販売元、地域版、告知元を確認します。ストアURL末尾の名称だけではApp IDの同一性を証明できません。\n- 精霊名、数、入手方法、戦闘ルールにはそれぞれ再確認できる根拠が必要です。映像は完全な機能一覧や全地域での実装証明ではありません。\n- ソロ、マルチ、テスト体験、正式版のルールを分け、類似作品や中国版の体験から国際版の仕様を推測しないでください。\n\n## 遊び方を調べる順序\n\n対象バージョンとクライアントを確認してから根拠のある仕組みを整理します。初期精霊数、無料条件、対応機種を約束する資料ではありません。"
+  },
+  {
+    "id": "platforms-and-download-guide",
+    "title": "国际服平台与下载信息核验清单",
+    "titleEn": "Global Platforms and Downloads Verification Checklist",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "summary": "旧平台清单、商店安排和测试下载条件尚未独立核实，已撤回确定表述。本页不提供已验证的客户端安装入口。",
+    "summaryEn": "The earlier platform lineup, store plans and beta download conditions have not been independently verified. Definite claims are withdrawn. This page provides no verified client installation destination.",
+    "content": "## 按平台分别检查\n\n- 确认对应区服、操作系统、设备要求、商店发行主体与 App ID；一个平台的公告不自动覆盖其他平台。\n- 区分商店愿望单、预注册、测试资格、预下载和正式可玩状态，不把“有页面”写成“可下载游玩”。\n- 不要使用旧错误 Steam 链接、第三方安装包或付费售卖资格的链接。先核验来源，再判断是否需要下载。\n\n## 下载前的最后一步\n\n对照官方来源中的版本、发布日期和完整下载域名；不能核实就停止安装，不以本文代替安全认证。",
+    "contentEn": "## Check each platform separately\n\n- Match the region, operating system, device requirements, store publisher and App ID. An announcement for one platform does not automatically cover others.\n- Distinguish wishlists, pre-registration, beta eligibility, preloads and playable release status. A store page is not proof that a client is available to play.\n- Do not use the old wrong-game Steam link, third-party packages or paid access offers. Verify the issuer before deciding whether to download.\n\n## The final check before downloading\n\nCompare version, publication date and complete download domain with a reproducible official source. Stop installation when verification is missing; this page is not a security certification.",
+    "tags": [
+      "source-review",
+      "international-scope"
+    ],
+    "faq": [
+      {
+        "questionZh": "这些信息已经官方核实了吗？",
+        "question": "Is this officially verified information?",
+        "questionJa": "公式確認済みの情報ですか？",
+        "answerZh": "不是。本页是编辑纠错与核验清单，缺乏独立依据的确定断言已撤回；不代表测试取消，也不能作为报名、付款或下载依据。",
+        "answer": "No. This is an editorial correction and verification checklist. Definite claims lacking independent support are withdrawn. It is not a cancellation notice or a basis for signup, payment or downloading.",
+        "answerJa": "いいえ。編集訂正と確認リストです。独立した根拠のない断定を撤回しました。中止告知でも、応募・支払い・DLの根拠でもありません。"
+      }
+    ],
+    "updatedAt": "2026-08-27",
+    "quickFacts": {
+      "zh": [
+        "旧平台清单、商店安排和测试下载条件尚未独立核实，已撤回确定表述。本页不提供已验证的客户端安装入口。"
+      ],
+      "en": [
+        "The earlier platform lineup, store plans and beta download conditions have not been independently verified. Definite claims are withdrawn. This page provides no verified client installation destination."
+      ],
+      "ja": [
+        "旧対応機種一覧、ストア展開、テストDL条件は独立した確認がなく、断定を撤回しました。本ページは検証済みクライアント導入先を提供しません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "国际服平台与下载信息核验清单",
+      "en": "Global Platforms and Downloads Verification Checklist",
+      "ja": "国際版の対応機種とダウンロード・確認チェックリスト"
+    },
+    "serpDescription": {
+      "zh": "旧平台清单、商店安排和测试下载条件尚未独立核实，已撤回确定表述。本页不提供已验证的客户端安装入口。",
+      "en": "The earlier platform lineup, store plans and beta download conditions have not been independently verified. Definite claims are withdrawn. This page provides no verified client installation destination.",
+      "ja": "旧対応機種一覧、ストア展開、テストDL条件は独立した確認がなく、断定を撤回しました。本ページは検証済みクライアント導入先を提供しません。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "editorial_withdrawal_not_official_confirmation"
+    },
+    "titleJa": "国際版の対応機種とダウンロード・確認チェックリスト",
+    "summaryJa": "旧対応機種一覧、ストア展開、テストDL条件は独立した確認がなく、断定を撤回しました。本ページは検証済みクライアント導入先を提供しません。",
+    "contentJa": "## 機種ごとに確認\n\n- 地域版、OS、端末条件、ストア販売元、App IDを照合してください。ある機種の告知が他機種にも適用されるとは限りません。\n- ウィッシュリスト、事前登録、資格、事前DL、実際に遊べる状態を分けます。ページの存在だけでプレイ可能とは判断できません。\n- 旧Steamの別作品リンク、第三者配布パッケージ、有料資格販売を利用しないでください。先に発行元を確認します。\n\n## 導入直前の確認\n\n検証できる公式出典でバージョン、公開日、DL先の完全なドメインを照合します。確認できなければ導入を止めてください。本文は安全認証ではありません。"
+  },
+  {
+    "id": "jinies-guide",
+    "title": "国际服精灵图鉴：身份与机制核验清单",
+    "titleEn": "Global Creature Codex: Identity and Mechanics Checklist",
+    "category": "gameplay",
+    "categoryZh": "玩法攻略",
+    "categoryEn": "Gameplay",
+    "summary": "旧文的精灵总数、元素数量、血统、特殊形态、行为和捕捉工具断言现予撤回。六条历史资料入口不等于已确认的实装图鉴。",
+    "summaryEn": "Earlier claims about creature totals, element counts, Bloodline, special forms, behavior and capture tools are withdrawn. Six legacy entries are not a confirmed implemented codex.",
+    "content": "## 图鉴条目应逐项确认\n\n- 每条记录应附对应区服、版本、来源原文与官方名称；不能凭翻译、媒体转述或国服图鉴确认国际服身份。\n- 分别核对属性、形象、行为、获取地点及捕捉条件，不从预告片的一段画面推导完整机制。\n- 数量、元素分类、血统和特殊形态都需要独立证据。没有核实条目不代表数量为零，也不代表内容不存在。\n\n## 阅读本站记录时\n\n历史名称与图片只作导航，不是官方认证。本页不提供已确认的捕捉清单或养成路线。",
+    "contentEn": "## Verify each codex field\n\n- Attach region, version, source excerpt and official name to each record. Translations, press retellings and CN codex entries cannot establish global identity.\n- Verify types, appearance, behavior, locations and catching conditions separately. One trailer scene does not establish a complete mechanic.\n- Totals, element classifications, Bloodline and special forms each require evidence. An unverified entry is neither a zero count nor proof of nonexistence.\n\n## Reading legacy records\n\nRetained names and artwork are navigation, not official certification. This page provides no verified catching list or progression route.",
+    "tags": [
+      "source-review",
+      "international-scope"
+    ],
+    "faq": [
+      {
+        "questionZh": "这是已核实的国际服规则吗？",
+        "question": "Are these verified global rules?",
+        "questionJa": "確認済みの国際版規則ですか？",
+        "answerZh": "不是。这是编辑纠错和核验条件，旧确定断言已撤回；没有新取得的独立国际服证据，不能作为实装、培养或付费依据，也不是取消公告。",
+        "answer": "No. This is an editorial correction and a set of verification conditions. Earlier definite claims are withdrawn; no new independent global evidence was obtained. This is not proof of implementation, investment or payment advice, or a cancellation notice.",
+        "answerJa": "いいえ。編集訂正と確認条件です。旧断定を撤回し、新しい独立した国際版根拠は取得していません。実装、育成、購入の根拠でも中止告知でもありません。"
+      }
+    ],
+    "updatedAt": "2026-08-27",
+    "quickFacts": {
+      "zh": [
+        "旧文的精灵总数、元素数量、血统、特殊形态、行为和捕捉工具断言现予撤回。六条历史资料入口不等于已确认的实装图鉴。"
+      ],
+      "en": [
+        "Earlier claims about creature totals, element counts, Bloodline, special forms, behavior and capture tools are withdrawn. Six legacy entries are not a confirmed implemented codex."
+      ],
+      "ja": [
+        "旧精霊総数、属性数、血統、特殊形態、行動、捕獲道具の断定を撤回しました。過去六件の記録は実装済み公式図鑑ではありません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "国际服精灵图鉴：身份与机制核验清单",
+      "en": "Global Creature Codex: Identity and Mechanics Checklist",
+      "ja": "国際版図鑑：同一性と仕組みの確認リスト"
+    },
+    "serpDescription": {
+      "zh": "旧文的精灵总数、元素数量、血统、特殊形态、行为和捕捉工具断言现予撤回。六条历史资料入口不等于已确认的实装图鉴。",
+      "en": "Earlier claims about creature totals, element counts, Bloodline, special forms, behavior and capture tools are withdrawn. Six legacy entries are not a confirmed implemented codex.",
+      "ja": "旧精霊総数、属性数、血統、特殊形態、行動、捕獲道具の断定を撤回しました。過去六件の記録は実装済み公式図鑑ではありません。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "editorial_mechanics_withdrawal_not_official_confirmation"
+    },
+    "titleJa": "国際版図鑑：同一性と仕組みの確認リスト",
+    "summaryJa": "旧精霊総数、属性数、血統、特殊形態、行動、捕獲道具の断定を撤回しました。過去六件の記録は実装済み公式図鑑ではありません。",
+    "contentJa": "## 図鑑項目ごとの確認\n\n- 地域、版、出典原文、公式名を記録します。訳名、媒体の再説明、中国版図鑑で国際版の同一性は証明できません。\n- 属性、外見、行動、出現地、捕獲条件を個別に確認します。映像の一場面から仕組み全体を推定しません。\n- 総数、属性分類、血統、特殊形態には個別の根拠が必要です。未確認はゼロや不存在を意味しません。\n\n## 過去記録を読むとき\n\n名前や画像はナビ用で、公式認定ではありません。確認済み捕獲一覧や育成ルートは掲載しません。"
+  },
+  {
+    "id": "battle-system-guide",
+    "title": "国际服战斗系统：规则与数值核验清单",
+    "titleEn": "Global Battle System: Rules and Values Checklist",
+    "category": "gameplay",
+    "categoryZh": "玩法攻略",
+    "categoryEn": "Gameplay",
+    "summary": "旧回合规则、技能槽位、体力条、克制提示、血统覆盖与竞技等级标准化断言现予撤回。本页不再将未核实规则用于战斗教学。",
+    "summaryEn": "Earlier turn rules, skill slots, stamina, matchup hints, Bloodline overrides and normalized competitive levels are withdrawn. Unverified rules are no longer presented as combat instruction here.",
+    "content": "## 重建战斗资料的条件\n\n- 记录客户端版本、区服、玩法与证据来源，把预告展示、测试实测和正式规则分开。\n- 技能数量、行动顺序、体力消耗与恢复、换人、属性克制和提示界面需逐项验证，不能从国服照搬。\n- 竞技匹配、等级或装备调整需要对应模式的规则与可复现测试；未知数值不填零，个例不扩展为全部玩法。\n\n## 实测与发布边界\n\n先验证条件，再提供带版本的操作建议。旧强度榜和互相引用的攻略不能补足缺失的国际服证据。",
+    "contentEn": "## Conditions for rebuilding battle information\n\n- Record client version, region, mode and evidence source. Distinguish trailer demonstrations, beta observations and release rules.\n- Verify skill counts, action order, stamina costs and recovery, switching, type interactions and interface hints individually rather than copying CN rules.\n- Competitive matchmaking, level or gear adjustments need mode-specific rules and reproducible tests. Unknown values are not zero, and one case does not establish every mode.\n\n## Testing and publication limits\n\nVerify conditions before publishing versioned advice. Old rankings and circular citations between our guides cannot replace missing global evidence.",
+    "tags": [
+      "source-review",
+      "international-scope"
+    ],
+    "faq": [
+      {
+        "questionZh": "这是已核实的国际服规则吗？",
+        "question": "Are these verified global rules?",
+        "questionJa": "確認済みの国際版規則ですか？",
+        "answerZh": "不是。这是编辑纠错和核验条件，旧确定断言已撤回；没有新取得的独立国际服证据，不能作为实装、培养或付费依据，也不是取消公告。",
+        "answer": "No. This is an editorial correction and a set of verification conditions. Earlier definite claims are withdrawn; no new independent global evidence was obtained. This is not proof of implementation, investment or payment advice, or a cancellation notice.",
+        "answerJa": "いいえ。編集訂正と確認条件です。旧断定を撤回し、新しい独立した国際版根拠は取得していません。実装、育成、購入の根拠でも中止告知でもありません。"
+      }
+    ],
+    "updatedAt": "2026-08-27",
+    "quickFacts": {
+      "zh": [
+        "旧回合规则、技能槽位、体力条、克制提示、血统覆盖与竞技等级标准化断言现予撤回。本页不再将未核实规则用于战斗教学。"
+      ],
+      "en": [
+        "Earlier turn rules, skill slots, stamina, matchup hints, Bloodline overrides and normalized competitive levels are withdrawn. Unverified rules are no longer presented as combat instruction here."
+      ],
+      "ja": [
+        "旧ターン規則、スキル枠、スタミナ、相性表示、血統の上書き、対戦レベル標準化の断定を撤回しました。未確認の規則を戦闘手順として教えません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "国际服战斗系统：规则与数值核验清单",
+      "en": "Global Battle System: Rules and Values Checklist",
+      "ja": "国際版戦闘：規則と数値の確認リスト"
+    },
+    "serpDescription": {
+      "zh": "旧回合规则、技能槽位、体力条、克制提示、血统覆盖与竞技等级标准化断言现予撤回。本页不再将未核实规则用于战斗教学。",
+      "en": "Earlier turn rules, skill slots, stamina, matchup hints, Bloodline overrides and normalized competitive levels are withdrawn. Unverified rules are no longer presented as combat instruction here.",
+      "ja": "旧ターン規則、スキル枠、スタミナ、相性表示、血統の上書き、対戦レベル標準化の断定を撤回しました。未確認の規則を戦闘手順として教えません。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "editorial_mechanics_withdrawal_not_official_confirmation"
+    },
+    "titleJa": "国際版戦闘：規則と数値の確認リスト",
+    "summaryJa": "旧ターン規則、スキル枠、スタミナ、相性表示、血統の上書き、対戦レベル標準化の断定を撤回しました。未確認の規則を戦闘手順として教えません。",
+    "contentJa": "## 戦闘資料を再構築する条件\n\n- クライアント版、地域、モード、出典を記録し、映像、テスト観察、正式規則を区別します。\n- スキル数、行動順、消費と回復、交代、属性相性、UI表示を個別に確認し、中国版を転用しません。\n- 対戦マッチング、レベル、装備補正には対象モードの規則と再現試験が必要です。不明値はゼロではなく、一例を全モードに広げません。\n\n## 実測と公開の境界\n\n条件を確認した後、版を明示して操作を案内します。旧評価や本站ガイド同士の循環引用では国際版根拠を補えません。"
+  },
+  {
+    "id": "co-op-and-social-guide",
+    "title": "国际服联机与社交：功能边界核验清单",
+    "titleEn": "Global Co-op and Social Features: Scope Checklist",
+    "category": "gameplay",
+    "categoryZh": "玩法攻略",
+    "categoryEn": "Gameplay",
+    "summary": "旧全平台共服、共骑、家园、种田、友好决斗和跨服好友承诺现予撤回。本页不提供已确认的组队或进度共享步骤。",
+    "summaryEn": "Earlier promises of all-platform shared servers, co-riding, homes, farming, friendly duels and cross-server friends are withdrawn. No confirmed party or shared-progression procedure is provided here.",
+    "content": "## 按功能和设备组合核验\n\n- 分别确认组队人数、设备组合、地区服务器、版本和测试资格；支持某设备不代表可以和所有设备联机。\n- 联机、进度继承、购买权益和好友关系是不同能力，需要各自条款；不从跨平台宣传概括全部互通。\n- 共骑、家园、种植、决斗和跨服交互分别记录证据与限制，不把试玩或国服玩法扩展成国际服承诺。\n\n## 与朋友计划之前\n\n不要按旧矩阵购买设备、付费或安装客户端。本站缺乏证据不是功能取消的公告，核验清单也不代表功能已实现。",
+    "contentEn": "## Verify functions and device combinations\n\n- Check party size, device pairings, region servers, version and beta eligibility separately. Device support does not imply play with every other device.\n- Multiplayer, progress carryover, purchases and friend relationships are separate capabilities with separate terms. A cross-platform label does not establish all sharing.\n- Record evidence and limits separately for co-riding, housing, farming, duels and cross-server interaction. A hands-on or CN feature is not a global promise.\n\n## Before planning with friends\n\nDo not buy hardware, pay or install clients based on the old matrix. Missing evidence here is not a cancellation announcement, and a checklist is not proof of implementation.",
+    "tags": [
+      "source-review",
+      "international-scope"
+    ],
+    "faq": [
+      {
+        "questionZh": "这是已核实的国际服规则吗？",
+        "question": "Are these verified global rules?",
+        "questionJa": "確認済みの国際版規則ですか？",
+        "answerZh": "不是。这是编辑纠错和核验条件，旧确定断言已撤回；没有新取得的独立国际服证据，不能作为实装、培养或付费依据，也不是取消公告。",
+        "answer": "No. This is an editorial correction and a set of verification conditions. Earlier definite claims are withdrawn; no new independent global evidence was obtained. This is not proof of implementation, investment or payment advice, or a cancellation notice.",
+        "answerJa": "いいえ。編集訂正と確認条件です。旧断定を撤回し、新しい独立した国際版根拠は取得していません。実装、育成、購入の根拠でも中止告知でもありません。"
+      }
+    ],
+    "updatedAt": "2026-08-27",
+    "quickFacts": {
+      "zh": [
+        "旧全平台共服、共骑、家园、种田、友好决斗和跨服好友承诺现予撤回。本页不提供已确认的组队或进度共享步骤。"
+      ],
+      "en": [
+        "Earlier promises of all-platform shared servers, co-riding, homes, farming, friendly duels and cross-server friends are withdrawn. No confirmed party or shared-progression procedure is provided here."
+      ],
+      "ja": [
+        "旧全機種同一サーバー、共乗り、ホーム、農作業、友好決闘、サーバー間フレンドの約束を撤回しました。確認済みの組隊・進行共有手順は掲載しません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "国际服联机与社交：功能边界核验清单",
+      "en": "Global Co-op and Social Features: Scope Checklist",
+      "ja": "国際版協力・交流：機能範囲の確認リスト"
+    },
+    "serpDescription": {
+      "zh": "旧全平台共服、共骑、家园、种田、友好决斗和跨服好友承诺现予撤回。本页不提供已确认的组队或进度共享步骤。",
+      "en": "Earlier promises of all-platform shared servers, co-riding, homes, farming, friendly duels and cross-server friends are withdrawn. No confirmed party or shared-progression procedure is provided here.",
+      "ja": "旧全機種同一サーバー、共乗り、ホーム、農作業、友好決闘、サーバー間フレンドの約束を撤回しました。確認済みの組隊・進行共有手順は掲載しません。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "editorial_mechanics_withdrawal_not_official_confirmation"
+    },
+    "titleJa": "国際版協力・交流：機能範囲の確認リスト",
+    "summaryJa": "旧全機種同一サーバー、共乗り、ホーム、農作業、友好決闘、サーバー間フレンドの約束を撤回しました。確認済みの組隊・進行共有手順は掲載しません。",
+    "contentJa": "## 機能と端末の組合せを確認\n\n- 人数、端末組合せ、地域サーバー、版、テスト資格を個別に確認します。対応端末だから全端末と遊べるとは限りません。\n- マルチ、進行引継ぎ、購入権利、フレンドは別能力で、各規約が必要です。クロス対応だけで全共有を判断しません。\n- 共乗り、住宅、栽培、決闘、サーバー間交流に個別の根拠と制限を記録します。試遊や中国版を国際版の約束に広げません。\n\n## 友人と計画する前に\n\n旧対応表で機器購入、支払い、導入をしないでください。根拠不足は中止告知ではなく、確認リストも実装証明ではありません。"
+  },
+  {
+    "id": "pre-registration-rewards-faq",
+    "title": "国际服预约奖励与资格规则核验清单",
+    "titleEn": "Global Pre-registration Rewards and Eligibility Checklist",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "summary": "预约开放状态、奖励、资格、删档、语言和付费规则仍待独立核实。已撤回旧攻略中的确定表述，不据此宣称奖励不存在或测试取消。",
+    "summaryEn": "Signup availability, rewards, access, wipes, languages and payment rules still need independent verification. Earlier definite claims are withdrawn; this is not proof that rewards do not exist or that a test is cancelled.",
+    "content": "## 预约与资格不是同一个问题\n\n- 分别核对预约活动的适用区服、时间、参与条件、奖励内容和领取渠道。不要把其他地区的福利迁移过来。\n- 确认是否另需问卷、邀请或资格筛选，并核对规则原文；本站旧攻略之间的重复表述不是独立证据。\n- 删档与奖励继承、语言与配音、付费与退款必须分别确认，不用测试惯例代替具体规则。\n\n## 在领取或提交信息之前\n\n保留完整活动出处和条件截图，不要凭未经验证的奖励承诺付款或提交敏感信息。",
+    "contentEn": "## Registration and eligibility are different questions\n\n- Verify the promotion region, dates, entry conditions, rewards and claim channel independently. Do not transfer another region’s benefits to the global release.\n- Check whether a questionnaire, invitation or selection step is required against the actual rules. Repetition between our older guides is not independent evidence.\n- Verify progress wipes and reward carryover, text and voice languages, and payments and refunds separately. General beta conventions cannot establish specific rules.\n\n## Before claiming or sharing information\n\nKeep the complete promotion source and conditions. Do not pay or disclose sensitive data based on an unverified reward promise.",
+    "tags": [
+      "source-review",
+      "international-scope"
+    ],
+    "faq": [
+      {
+        "questionZh": "这些信息已经官方核实了吗？",
+        "question": "Is this officially verified information?",
+        "questionJa": "公式確認済みの情報ですか？",
+        "answerZh": "不是。本页是编辑纠错与核验清单，缺乏独立依据的确定断言已撤回；不代表测试取消，也不能作为报名、付款或下载依据。",
+        "answer": "No. This is an editorial correction and verification checklist. Definite claims lacking independent support are withdrawn. It is not a cancellation notice or a basis for signup, payment or downloading.",
+        "answerJa": "いいえ。編集訂正と確認リストです。独立した根拠のない断定を撤回しました。中止告知でも、応募・支払い・DLの根拠でもありません。"
+      }
+    ],
+    "updatedAt": "2026-08-27",
+    "quickFacts": {
+      "zh": [
+        "预约开放状态、奖励、资格、删档、语言和付费规则仍待独立核实。已撤回旧攻略中的确定表述，不据此宣称奖励不存在或测试取消。"
+      ],
+      "en": [
+        "Signup availability, rewards, access, wipes, languages and payment rules still need independent verification. Earlier definite claims are withdrawn; this is not proof that rewards do not exist or that a test is cancelled."
+      ],
+      "ja": [
+        "応募状況、報酬、資格、データ削除、言語、支払いルールは独立した確認待ちです。旧断定を撤回しましたが、報酬の不存在や中止を証明するものではありません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "国际服预约奖励与资格规则核验清单",
+      "en": "Global Pre-registration Rewards and Eligibility Checklist",
+      "ja": "国際版の事前登録報酬と資格・確認チェックリスト"
+    },
+    "serpDescription": {
+      "zh": "预约开放状态、奖励、资格、删档、语言和付费规则仍待独立核实。已撤回旧攻略中的确定表述，不据此宣称奖励不存在或测试取消。",
+      "en": "Signup availability, rewards, access, wipes, languages and payment rules still need independent verification. Earlier definite claims are withdrawn; this is not proof that rewards do not exist or that a test is cancelled.",
+      "ja": "応募状況、報酬、資格、データ削除、言語、支払いルールは独立した確認待ちです。旧断定を撤回しましたが、報酬の不存在や中止を証明するものではありません。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "editorial_withdrawal_not_official_confirmation"
+    },
+    "titleJa": "国際版の事前登録報酬と資格・確認チェックリスト",
+    "summaryJa": "応募状況、報酬、資格、データ削除、言語、支払いルールは独立した確認待ちです。旧断定を撤回しましたが、報酬の不存在や中止を証明するものではありません。",
+    "contentJa": "## 登録と資格は別の問題\n\n- 活動の対象地域、期間、参加条件、報酬、受取先を個別に確認してください。他地域の特典を国際版へ移して判断しないでください。\n- アンケート、招待、選考が必要か実際の規約で確認します。本站の旧ガイド同士の重複記述は独立した根拠ではありません。\n- 進行削除と報酬引継ぎ、字幕と音声、支払いと返金を別々に確認します。一般的なテスト慣習では個別ルールを証明できません。\n\n## 受取・情報送信の前に\n\n活動の原出典と条件を保存してください。未確認の報酬を根拠に支払いや機微情報の送信をしないでください。"
+  },
+  {
+    "id": "is-roco-kingdom-free-to-play",
+    "title": "国际服商业模式核验：免费、付费与公平性",
+    "titleEn": "Global Monetization Verification: Free Access, Payments and Fairness",
+    "category": "starter",
+    "categoryZh": "新手攻略",
+    "categoryEn": "Starter",
+    "summary": "旧“确认免费”“无付费优势”“精灵全部免费获取”和测试无内购的结论缺乏本批可独立复核的依据，暂予撤回。未知不等于收费或存在付费优势。",
+    "summaryEn": "The earlier confirmed-free, no-paid-advantage, all-creatures-free and no-beta-purchases conclusions lack independently reproducible support in this review and are withdrawn. Unknown does not mean paid access or pay-to-win.",
+    "content": "## 商业模式需要拆开核验\n\n- 分别确认下载价格、游玩门槛、平台订阅、内购种类、抽取机制与精灵获取方式，不能用一个“免费”概括。\n- 核对声明适用的是测试还是正式版、国服还是国际服；测试不开付费也不能证明正式版无内购。\n- 公平性需要明确竞技模式、付费道具效果与获取途径；没有证据时不承诺“无 Pay-to-Win”。\n\n## 做消费决定前\n\n以适用地区的价格、协议和退款规则为准，不用未经核实的商业承诺估算长期成本。",
+    "contentEn": "## Verify separate parts of the business model\n\n- Check download price, access requirements, platform subscriptions, purchase categories, random acquisition and creature unlock methods independently. A single “free” label cannot cover them all.\n- Identify whether a statement covers a beta or release, CN or global. A test without payments would not establish a release without purchases.\n- Fairness claims need a defined competitive mode, item effects and acquisition methods. Do not promise no pay-to-win without evidence.\n\n## Before making spending decisions\n\nUse the prices, terms and refund rules for the applicable region. Unverified commercial promises are not a reliable long-term cost estimate.",
+    "tags": [
+      "source-review",
+      "international-scope"
+    ],
+    "faq": [
+      {
+        "questionZh": "这些信息已经官方核实了吗？",
+        "question": "Is this officially verified information?",
+        "questionJa": "公式確認済みの情報ですか？",
+        "answerZh": "不是。本页是编辑纠错与核验清单，缺乏独立依据的确定断言已撤回；不代表测试取消，也不能作为报名、付款或下载依据。",
+        "answer": "No. This is an editorial correction and verification checklist. Definite claims lacking independent support are withdrawn. It is not a cancellation notice or a basis for signup, payment or downloading.",
+        "answerJa": "いいえ。編集訂正と確認リストです。独立した根拠のない断定を撤回しました。中止告知でも、応募・支払い・DLの根拠でもありません。"
+      }
+    ],
+    "updatedAt": "2026-08-27",
+    "quickFacts": {
+      "zh": [
+        "旧“确认免费”“无付费优势”“精灵全部免费获取”和测试无内购的结论缺乏本批可独立复核的依据，暂予撤回。未知不等于收费或存在付费优势。"
+      ],
+      "en": [
+        "The earlier confirmed-free, no-paid-advantage, all-creatures-free and no-beta-purchases conclusions lack independently reproducible support in this review and are withdrawn. Unknown does not mean paid access or pay-to-win."
+      ],
+      "ja": [
+        "旧「無料確認済み」「有料優位なし」「全精霊を無料入手」「テスト課金なし」は本確認で独立して再検証できる根拠がなく撤回しました。未確認は有料や課金優位を意味しません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "国际服商业模式核验：免费、付费与公平性",
+      "en": "Global Monetization Verification: Free Access, Payments and Fairness",
+      "ja": "国際版の商業モデル確認：無料・課金・公平性"
+    },
+    "serpDescription": {
+      "zh": "旧“确认免费”“无付费优势”“精灵全部免费获取”和测试无内购的结论缺乏本批可独立复核的依据，暂予撤回。未知不等于收费或存在付费优势。",
+      "en": "The earlier confirmed-free, no-paid-advantage, all-creatures-free and no-beta-purchases conclusions lack independently reproducible support in this review and are withdrawn. Unknown does not mean paid access or pay-to-win.",
+      "ja": "旧「無料確認済み」「有料優位なし」「全精霊を無料入手」「テスト課金なし」は本確認で独立して再検証できる根拠がなく撤回しました。未確認は有料や課金優位を意味しません。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "editorial_withdrawal_not_official_confirmation"
+    },
+    "titleJa": "国際版の商業モデル確認：無料・課金・公平性",
+    "summaryJa": "旧「無料確認済み」「有料優位なし」「全精霊を無料入手」「テスト課金なし」は本確認で独立して再検証できる根拠がなく撤回しました。未確認は有料や課金優位を意味しません。",
+    "contentJa": "## 商業モデルを分けて確認\n\n- DL価格、参加条件、機種別の定額契約、内課金の種類、抽選、精霊の入手方法を個別に確認します。「無料」の一語だけでは説明できません。\n- 発言の対象がテストか正式版か、中国版か国際版かを確認します。仮にテストで課金がなくても正式版の課金を否定する証拠にはなりません。\n- 公平性の判断には対戦モード、課金アイテムの効果、入手方法が必要です。根拠なくPay-to-Winなしと約束しないでください。\n\n## 購入を決める前に\n\n対象地域の価格、契約、返金条件を確認します。未確認の商業上の約束から長期費用を見積もらないでください。"
+  },
+  {
+    "id": "roco-kingdom-release-date-guide",
+    "title": "国际服测试与发售日信息核验清单",
+    "titleEn": "Global Test and Release Date Verification Checklist",
+    "category": "version",
+    "categoryZh": "版本攻略",
+    "categoryEn": "Version Guide",
+    "summary": "旧测试时间、报名窗口、资格日期和正式版平台承诺已撤回。本文暂不提供已确认的日程，也不把证据不足写成“官方尚未公布”。",
+    "summaryEn": "Old test timing, signup windows, eligibility dates and release-platform promises are withdrawn. This page provides no confirmed schedule and does not equate missing evidence with an official statement that nothing has been announced.",
+    "content": "## 一条日程至少核对什么\n\n- 记录原公告、游戏身份、地区、版本或测试批次、日期、时间和时区；只有日期没有时区时，不自行补成 UTC。\n- 区分公告日、报名日、资格查询、预下载、开测和正式发售。编辑更新时间不能替代任何游戏日程。\n- 旧 Steam 引用对应其他游戏，不能证明这些日期；反复引用本站旧文章也不能补足证据。\n\n## 如何订立个人计划\n\n获得可复核日程前不要据此安排休假、消费或下载。国际服时间不应从国服进度或同类游戏经验推算。",
+    "contentEn": "## What a schedule needs\n\n- Record the original notice, game identity, region, version or test batch, date, time and time zone. Do not invent UTC when a source supplies only a date.\n- Separate announcement, signup, eligibility results, preload, test start and release dates. An editorial update is none of those milestones.\n- The old Steam citation identifies another game and cannot establish these dates. Repeated links to our older articles do not fill the evidence gap.\n\n## Planning your own time\n\nDo not use this page to book leave, spend or download before obtaining a verifiable schedule. CN progress and genre conventions cannot predict global dates.",
+    "tags": [
+      "source-review",
+      "international-scope"
+    ],
+    "faq": [
+      {
+        "questionZh": "这些信息已经官方核实了吗？",
+        "question": "Is this officially verified information?",
+        "questionJa": "公式確認済みの情報ですか？",
+        "answerZh": "不是。本页是编辑纠错与核验清单，缺乏独立依据的确定断言已撤回；不代表测试取消，也不能作为报名、付款或下载依据。",
+        "answer": "No. This is an editorial correction and verification checklist. Definite claims lacking independent support are withdrawn. It is not a cancellation notice or a basis for signup, payment or downloading.",
+        "answerJa": "いいえ。編集訂正と確認リストです。独立した根拠のない断定を撤回しました。中止告知でも、応募・支払い・DLの根拠でもありません。"
+      }
+    ],
+    "updatedAt": "2026-08-27",
+    "quickFacts": {
+      "zh": [
+        "旧测试时间、报名窗口、资格日期和正式版平台承诺已撤回。本文暂不提供已确认的日程，也不把证据不足写成“官方尚未公布”。"
+      ],
+      "en": [
+        "Old test timing, signup windows, eligibility dates and release-platform promises are withdrawn. This page provides no confirmed schedule and does not equate missing evidence with an official statement that nothing has been announced."
+      ],
+      "ja": [
+        "旧テスト開始、応募期間、資格照会日、正式版の対応機種の約束を撤回しました。確認済み日程は掲載せず、根拠不足を「公式未発表」とも断定しません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "国际服测试与发售日信息核验清单",
+      "en": "Global Test and Release Date Verification Checklist",
+      "ja": "国際版テスト・発売日の確認チェックリスト"
+    },
+    "serpDescription": {
+      "zh": "旧测试时间、报名窗口、资格日期和正式版平台承诺已撤回。本文暂不提供已确认的日程，也不把证据不足写成“官方尚未公布”。",
+      "en": "Old test timing, signup windows, eligibility dates and release-platform promises are withdrawn. This page provides no confirmed schedule and does not equate missing evidence with an official statement that nothing has been announced.",
+      "ja": "旧テスト開始、応募期間、資格照会日、正式版の対応機種の約束を撤回しました。確認済み日程は掲載せず、根拠不足を「公式未発表」とも断定しません。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "editorial_withdrawal_not_official_confirmation"
+    },
+    "titleJa": "国際版テスト・発売日の確認チェックリスト",
+    "summaryJa": "旧テスト開始、応募期間、資格照会日、正式版の対応機種の約束を撤回しました。確認済み日程は掲載せず、根拠不足を「公式未発表」とも断定しません。",
+    "contentJa": "## 日程に必要な確認項目\n\n- 元告知、ゲーム名、地域、版またはテスト回、日付、時刻、時差を記録します。日付しかない出典にUTCを補わないでください。\n- 告知日、応募日、資格照会、事前DL、テスト開始、正式発売を区別します。編集更新日はどのゲーム日程の代わりにもなりません。\n- 旧Steam引用は別のゲームを示し、日程の根拠になりません。本站の旧記事を繰り返し引用しても不足した根拠は埋まりません。\n\n## 個人の予定を立てる前に\n\n再確認できる日程を得るまで、休暇、購入、DLの計画に使わないでください。中国版の進行や同ジャンルの慣習から国際版の日程を推算しないでください。"
+  },
+  {
+    "id": "roco-kingdom-vs-pokemon",
+    "title": "Roco Kingdom 与宝可梦：对比前的信息核验清单",
+    "titleEn": "Roco Kingdom and Pokemon: Verify Before Comparing",
+    "category": "gameplay",
+    "categoryZh": "玩法攻略",
+    "categoryEn": "Gameplay",
+    "summary": "旧文将未经独立核实的国际服功能、免费承诺、精灵数量与测试日期作为对比前提，本批撤回这些结论。此页提供比较方法，不是新的产品评测。",
+    "summaryEn": "The old comparison relied on unverified global features, free-access promises, roster counts and test dates. Those conclusions are withdrawn. This page is a comparison method, not a new product review.",
+    "content": "## 如何做可复核的对比\n\n- 指定两款作品的具体版本、地区和平台，不把一个系列的全部作品当作单一产品。\n- 分别比较价格、单人或联机、战斗、收集和账号进度；每一格附适用范围和来源，没有依据就写待核实。\n- 宣传片、媒体试玩和正式客户端证据分层，不把体验片段推广为所有版本的功能承诺。\n\n## 如何做选择\n\n先列自己的预算、设备和游玩方式，再核对双方已确认条件。不要依据旧“免费参加测试”或跨平台承诺决定消费。",
+    "contentEn": "## Building a reproducible comparison\n\n- Identify the exact edition, region and platform on each side. A whole franchise is not a single product with one feature set.\n- Compare pricing, solo or multiplayer access, battles, collection and account progress separately. Give each cell a source and scope; mark unsupported cells unverified.\n- Keep trailers, press hands-ons and release-client evidence distinct. A short demonstration does not promise the same features in every version.\n\n## Making a choice\n\nList your budget, device and preferred play style, then verify both products against those needs. Do not spend based on the old free-beta or cross-platform promises.",
+    "tags": [
+      "source-review",
+      "international-scope"
+    ],
+    "faq": [
+      {
+        "questionZh": "这些信息已经官方核实了吗？",
+        "question": "Is this officially verified information?",
+        "questionJa": "公式確認済みの情報ですか？",
+        "answerZh": "不是。本页是编辑纠错与核验清单，缺乏独立依据的确定断言已撤回；不代表测试取消，也不能作为报名、付款或下载依据。",
+        "answer": "No. This is an editorial correction and verification checklist. Definite claims lacking independent support are withdrawn. It is not a cancellation notice or a basis for signup, payment or downloading.",
+        "answerJa": "いいえ。編集訂正と確認リストです。独立した根拠のない断定を撤回しました。中止告知でも、応募・支払い・DLの根拠でもありません。"
+      }
+    ],
+    "updatedAt": "2026-08-27",
+    "quickFacts": {
+      "zh": [
+        "旧文将未经独立核实的国际服功能、免费承诺、精灵数量与测试日期作为对比前提，本批撤回这些结论。此页提供比较方法，不是新的产品评测。"
+      ],
+      "en": [
+        "The old comparison relied on unverified global features, free-access promises, roster counts and test dates. Those conclusions are withdrawn. This page is a comparison method, not a new product review."
+      ],
+      "ja": [
+        "旧比較は未確認の国際版機能、無料の約束、精霊数、テスト日を前提にしていたため、結論を撤回しました。比較方法であり、新しい製品レビューではありません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "Roco Kingdom 与宝可梦：对比前的信息核验清单",
+      "en": "Roco Kingdom and Pokemon: Verify Before Comparing",
+      "ja": "Roco Kingdomとポケモン：比較前の情報確認リスト"
+    },
+    "serpDescription": {
+      "zh": "旧文将未经独立核实的国际服功能、免费承诺、精灵数量与测试日期作为对比前提，本批撤回这些结论。此页提供比较方法，不是新的产品评测。",
+      "en": "The old comparison relied on unverified global features, free-access promises, roster counts and test dates. Those conclusions are withdrawn. This page is a comparison method, not a new product review.",
+      "ja": "旧比較は未確認の国際版機能、無料の約束、精霊数、テスト日を前提にしていたため、結論を撤回しました。比較方法であり、新しい製品レビューではありません。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "editorial_withdrawal_not_official_confirmation"
+    },
+    "titleJa": "Roco Kingdomとポケモン：比較前の情報確認リスト",
+    "summaryJa": "旧比較は未確認の国際版機能、無料の約束、精霊数、テスト日を前提にしていたため、結論を撤回しました。比較方法であり、新しい製品レビューではありません。",
+    "contentJa": "## 再確認できる比較の作り方\n\n- 両側の作品・版・地域・機種を指定し、シリーズ全体を単一製品として扱わないでください。\n- 価格、ソロ・マルチ、戦闘、収集、アカウント進行を個別に比較し、各項目に出典と範囲を付けます。不明なら未確認と記載します。\n- 映像、媒体の試遊、正式クライアントの根拠を区分し、一部分の体験から全版の機能を約束しないでください。\n\n## 選択する前に\n\n予算、機器、遊び方を先に整理し、両製品の確認済み条件と照合します。旧無料テスト案内や機種間共有の約束で購入を決めないでください。"
+  },
+  {
+    "id": "roco-kingdom-crossplay-guide",
+    "title": "国际服跨平台信息核验：联机与进度互通",
+    "titleEn": "Global Cross-platform Verification: Play and Progression",
+    "category": "gameplay",
+    "categoryZh": "玩法攻略",
+    "categoryEn": "Gameplay",
+    "summary": "旧“首日全平台联机”、平台矩阵和进度共享的确定承诺暂予撤回。本文区分跨平台联机、跨平台进度与测试资格，不证明这些功能已实装。",
+    "summaryEn": "Earlier promises of day-one all-platform play, the platform matrix and shared progression are withdrawn. This page distinguishes crossplay, cross-progression and beta access; it does not prove implementation.",
+    "content": "## 互通需要分别回答的问题\n\n- 跨平台联机指不同设备是否能在同一会话游玩；跨平台进度指账号进度能否在设备间继续，两者不能互相替代。\n- 按设备组合、地区服务器和游戏版本查证，确认是否有联机限制、邀请条件或测试资格要求。\n- 购买权益、账号绑定与存档继承需要单独的条款，不从“支持跨平台”四字推导全部互通。\n\n## 与朋友一起游玩前\n\n逐人确认设备、地区与资格，再按可复核公告核对功能。不要按旧平台矩阵购买设备或安装客户端。",
+    "contentEn": "## Questions that need separate answers\n\n- Crossplay concerns whether different devices can join the same session. Cross-progression concerns continuing account progress across devices. Neither implies the other.\n- Verify each device pairing, region server and game version, including session restrictions, invitations and test eligibility.\n- Purchases, account linking and save carryover require separate terms. A cross-platform label cannot establish all forms of sharing.\n\n## Before planning with friends\n\nCheck each player’s device, region and access, then verify the feature against a reproducible announcement. Do not buy hardware or install clients based on the old matrix.",
+    "tags": [
+      "source-review",
+      "international-scope"
+    ],
+    "faq": [
+      {
+        "questionZh": "这些信息已经官方核实了吗？",
+        "question": "Is this officially verified information?",
+        "questionJa": "公式確認済みの情報ですか？",
+        "answerZh": "不是。本页是编辑纠错与核验清单，缺乏独立依据的确定断言已撤回；不代表测试取消，也不能作为报名、付款或下载依据。",
+        "answer": "No. This is an editorial correction and verification checklist. Definite claims lacking independent support are withdrawn. It is not a cancellation notice or a basis for signup, payment or downloading.",
+        "answerJa": "いいえ。編集訂正と確認リストです。独立した根拠のない断定を撤回しました。中止告知でも、応募・支払い・DLの根拠でもありません。"
+      }
+    ],
+    "updatedAt": "2026-08-27",
+    "quickFacts": {
+      "zh": [
+        "旧“首日全平台联机”、平台矩阵和进度共享的确定承诺暂予撤回。本文区分跨平台联机、跨平台进度与测试资格，不证明这些功能已实装。"
+      ],
+      "en": [
+        "Earlier promises of day-one all-platform play, the platform matrix and shared progression are withdrawn. This page distinguishes crossplay, cross-progression and beta access; it does not prove implementation."
+      ],
+      "ja": [
+        "旧初日全機種対応、機種別一覧、進行共有の約束を撤回しました。クロスプレイ、クロスセーブ、テスト資格を区別する資料であり、実装証明ではありません。"
+      ]
+    },
+    "serpTitle": {
+      "zh": "国际服跨平台信息核验：联机与进度互通",
+      "en": "Global Cross-platform Verification: Play and Progression",
+      "ja": "国際版の機種間共有確認：マルチと進行引継ぎ"
+    },
+    "serpDescription": {
+      "zh": "旧“首日全平台联机”、平台矩阵和进度共享的确定承诺暂予撤回。本文区分跨平台联机、跨平台进度与测试资格，不证明这些功能已实装。",
+      "en": "Earlier promises of day-one all-platform play, the platform matrix and shared progression are withdrawn. This page distinguishes crossplay, cross-progression and beta access; it does not prove implementation.",
+      "ja": "旧初日全機種対応、機種別一覧、進行共有の約束を撤回しました。クロスプレイ、クロスセーブ、テスト資格を区別する資料であり、実装証明ではありません。"
+    },
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "editorial_withdrawal_not_official_confirmation"
+    },
+    "titleJa": "国際版の機種間共有確認：マルチと進行引継ぎ",
+    "summaryJa": "旧初日全機種対応、機種別一覧、進行共有の約束を撤回しました。クロスプレイ、クロスセーブ、テスト資格を区別する資料であり、実装証明ではありません。",
+    "contentJa": "## 別々に答える必要がある問題\n\n- クロスプレイは異なる端末で同じセッションに参加できるか、クロスセーブは端末間で進行を継続できるかという問題で、一方から他方は証明できません。\n- 端末の組合せ、地域サーバー、版ごとに、参加制限、招待条件、テスト資格を確認します。\n- 購入権利、アカウント連携、セーブ引継ぎには別の規約が必要です。「クロスプラットフォーム」だけで全共有を判断しないでください。\n\n## 友人と計画する前に\n\n各自の端末、地域、資格を確認し、再検証できる告知で機能を照合します。旧機種一覧を根拠に機器購入や導入をしないでください。"
+  }
+]

@@ -2,6 +2,7 @@ import type { SupportedLocale } from '@gachia/core';
 
 // --- Jinie (Creature) Types ---
 
+/** Historical schema only; active URL correction records use RocoLegacyEntry. */
 export interface RocoJinie {
   id: string;
   number: string;

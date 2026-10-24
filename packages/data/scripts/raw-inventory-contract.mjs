@@ -3,6 +3,7 @@ import { readFile, readdir } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { isDeepStrictEqual } from 'node:util';
 import { fileURLToPath } from 'node:url';
+import { checkRocoPublication } from './roco-publication-contract.mjs';
 
 const ROOT = fileURLToPath(new URL('../../../', import.meta.url));
 export const RAW_REVIEW_LEDGER = 'packages/data/raw-content-review.json';
@@ -131,8 +132,11 @@ export async function checkRawInventory(root = ROOT) {
       issues.push(`held content changed since review: ${hold.path}`);
     }
   }
+  let withdrawal = null;
+  try { withdrawal = await checkRocoPublication(root, { ledger, documents, semanticHash: rawSemanticHash }); }
+  catch (error) { issues.push(`Roco withdrawal contract: ${error.message}`); }
   return { contract: 'raw-inventory-v1', pairs: ledger.pairs.length, equal, sourceOnly: ledger.sourceOnly.length,
-    pending, holds, issues, engineeringReady: issues.length === 0,
+    pending, holds, withdrawal, issues, engineeringReady: issues.length === 0,
     contentReleaseReady: issues.length === 0 && ledger.pending.length === 0 && holds.length === 0,
     factualApproval: 'not_implied_by_mirror_equality' };
 }

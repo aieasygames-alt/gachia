@@ -1,9 +1,29 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { readFileSync, mkdtempSync, writeFileSync, rmSync } from 'node:fs';
+import { readFileSync, mkdtempSync, mkdirSync, writeFileSync, rmSync, copyFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { requireLocalContentOrigin, verifyManagedContent, verifyNoLegacyIndexNowTransport } from './managed-content-smoke.mjs';
+import { requireLocalContentOrigin, verifyManagedContent, verifyNoLegacyIndexNowTransport, verifyWithdrawnRocoAssets } from './managed-content-smoke.mjs';
+
+test('refuses stale static images and private withdrawal evidence in compiled assets', () => {
+  const directory = mkdtempSync(join(tmpdir(), 'gachia-withdrawn-assets-'));
+  const assets = join(directory, 'assets'); mkdirSync(assets);
+  try {
+    assert.throws(() => verifyWithdrawnRocoAssets(directory), /No compiled assets/);
+    writeFileSync(join(assets, 'robots.txt'), 'User-agent: *');
+    assert.equal(verifyWithdrawnRocoAssets(directory).withdrawnImagesPublished, false);
+    for (const path of ['images/roco/characters/meewee.webp', 'images/roco/characters/new.webp', 'reports/content-integrity/archive/s2-14/characters.json']) {
+      const target = join(assets, path); mkdirSync(join(target, '..'), { recursive: true }); writeFileSync(target, 'private');
+      assert.throws(() => verifyWithdrawnRocoAssets(directory), /Withdrawn Roco asset or private evidence/);
+      rmSync(target);
+    }
+    const original = new URL('../reports/content-integrity/archive/s2-14/images/meewee.webp', import.meta.url);
+    const alias = join(assets, 'renamed.webp'); copyFileSync(original, alias);
+    assert.throws(() => verifyWithdrawnRocoAssets(directory), /under another path/); rmSync(alias);
+    const cn = join(assets, 'images/roco-cn/characters/miaomiao.webp'); mkdirSync(join(cn, '..'), { recursive: true }); copyFileSync(original, cn);
+    assert.equal(verifyWithdrawnRocoAssets(directory).withdrawnImagesPublished, false);
+  } finally { rmSync(directory, { recursive: true, force: true }); }
+});
 
 test('refuses a stale compiled IndexNow sender before starting authenticated local requests', () => {
   const directory = mkdtempSync(join(tmpdir(), 'gachia-compiled-indexnow-'));

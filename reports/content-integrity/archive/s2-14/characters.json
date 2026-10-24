@@ -1,0 +1,134 @@
+[
+  {
+    "id": "meewee",
+    "number": "001",
+    "name": "喵喵",
+    "nameEn": "Meewee",
+    "attribute": "grass",
+    "attributeEn": "Grass",
+    "rarity": 4,
+    "habitat": "尚未独立核实",
+    "habitatEn": "Not independently verified",
+    "evolution": "尚未独立核实",
+    "evolutionEn": "Not independently verified",
+    "description": "本站保留的 Meewee 资料入口，名称与分类仅用于历史导航，不代表官方译名或已核实的国际服御三家定位。此前从国服复用的技能、种族值和相关战斗描述已撤回；国际服身份、数值与机制仍待独立核实。",
+    "descriptionEn": "Retained reference entry for Meewee. Names and classifications are legacy navigation labels, not verified official names or global starter identities. Skills, base stats and combat claims reused from CN data are withdrawn; global identity, values and mechanics still need independent verification.",
+    "status": "revealed",
+    "descriptionJa": "Meewee の既存資料入口です。名称と分類は過去のナビゲーション用であり、公式名や国際版の御三家としての確認ではありません。中国版から流用したスキル、種族値、戦闘説明は撤回し、国際版の同一性、数値、仕組みは独立した確認待ちです。",
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "international_identity_and_values_unverified"
+    }
+  },
+  {
+    "id": "sparka",
+    "number": "002",
+    "name": "火花",
+    "nameEn": "Sparka",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 4,
+    "habitat": "尚未独立核实",
+    "habitatEn": "Not independently verified",
+    "evolution": "尚未独立核实",
+    "evolutionEn": "Not independently verified",
+    "description": "本站保留的 Sparka 资料入口，名称与分类仅用于历史导航，不代表官方译名或已核实的国际服御三家定位。此前从国服复用的技能、种族值和相关战斗描述已撤回；国际服身份、数值与机制仍待独立核实。",
+    "descriptionEn": "Retained reference entry for Sparka. Names and classifications are legacy navigation labels, not verified official names or global starter identities. Skills, base stats and combat claims reused from CN data are withdrawn; global identity, values and mechanics still need independent verification.",
+    "status": "revealed",
+    "descriptionJa": "Sparka の既存資料入口です。名称と分類は過去のナビゲーション用であり、公式名や国際版の御三家としての確認ではありません。中国版から流用したスキル、種族値、戦闘説明は撤回し、国際版の同一性、数値、仕組みは独立した確認待ちです。",
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "international_identity_and_values_unverified"
+    }
+  },
+  {
+    "id": "cerulla",
+    "number": "003",
+    "name": "水蓝蓝",
+    "nameEn": "Cerulla",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 4,
+    "habitat": "尚未独立核实",
+    "habitatEn": "Not independently verified",
+    "evolution": "尚未独立核实",
+    "evolutionEn": "Not independently verified",
+    "description": "本站保留的 Cerulla 资料入口，名称与分类仅用于历史导航，不代表官方译名或已核实的国际服御三家定位。此前从国服复用的技能、种族值和相关战斗描述已撤回；国际服身份、数值与机制仍待独立核实。",
+    "descriptionEn": "Retained reference entry for Cerulla. Names and classifications are legacy navigation labels, not verified official names or global starter identities. Skills, base stats and combat claims reused from CN data are withdrawn; global identity, values and mechanics still need independent verification.",
+    "status": "revealed",
+    "descriptionJa": "Cerulla の既存資料入口です。名称と分類は過去のナビゲーション用であり、公式名や国際版の御三家としての確認ではありません。中国版から流用したスキル、種族値、戦闘説明は撤回し、国際版の同一性、数値、仕組みは独立した確認待ちです。",
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "international_identity_and_values_unverified"
+    }
+  },
+  {
+    "id": "blazehound",
+    "number": "004",
+    "name": "焰犬",
+    "nameEn": "Blazehound",
+    "attribute": "fire",
+    "attributeEn": "Fire",
+    "rarity": 3,
+    "habitat": "待核实",
+    "habitatEn": "Unverified",
+    "evolution": "待核实",
+    "evolutionEn": "Unverified",
+    "description": "本站保留的 Blazehound 历史资料入口。旧官方确认、属性、外形行为、野外身份及栖息地断言缺乏独立国际服依据，现予撤回。保留名称和内部分类仅供导航，不代表实装、官方译名或可用阵容；身份、形象、机制与数值仍待核实。",
+    "descriptionEn": "This is the legacy Blazehound navigation entry. Earlier claims of official confirmation, type, appearance, behavior, wild identity and habitat lack independent global support and are withdrawn. Retained names and internal classifications are not proof of implementation, official naming or a playable roster. Identity, artwork, mechanics and values remain unverified.",
+    "status": "revealed",
+    "descriptionJa": "過去のBlazehound資料へのナビです。旧公式確認、属性、外形・行動、野生の同一性、生息地には独立した国際版根拠がなく、撤回しました。名前と内部分類は実装、公式訳名、利用可能な編成の証明ではありません。同一性、画像、仕組み、値は未確認です。",
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "international_identity_appearance_and_mechanics_unverified"
+    }
+  },
+  {
+    "id": "catapawn",
+    "number": "005",
+    "name": "水爪",
+    "nameEn": "Catapawn",
+    "attribute": "water",
+    "attributeEn": "Water",
+    "rarity": 3,
+    "habitat": "待核实",
+    "habitatEn": "Unverified",
+    "evolution": "待核实",
+    "evolutionEn": "Unverified",
+    "description": "本站保留的 Catapawn 历史资料入口。旧官方确认、属性、外形行为、野外身份及栖息地断言缺乏独立国际服依据，现予撤回。保留名称和内部分类仅供导航，不代表实装、官方译名或可用阵容；身份、形象、机制与数值仍待核实。",
+    "descriptionEn": "This is the legacy Catapawn navigation entry. Earlier claims of official confirmation, type, appearance, behavior, wild identity and habitat lack independent global support and are withdrawn. Retained names and internal classifications are not proof of implementation, official naming or a playable roster. Identity, artwork, mechanics and values remain unverified.",
+    "status": "revealed",
+    "descriptionJa": "過去のCatapawn資料へのナビです。旧公式確認、属性、外形・行動、野生の同一性、生息地には独立した国際版根拠がなく、撤回しました。名前と内部分類は実装、公式訳名、利用可能な編成の証明ではありません。同一性、画像、仕組み、値は未確認です。",
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "international_identity_appearance_and_mechanics_unverified"
+    }
+  },
+  {
+    "id": "dustler",
+    "number": "006",
+    "name": "尘帚",
+    "nameEn": "Dustler",
+    "attribute": "normal",
+    "attributeEn": "Normal",
+    "rarity": 3,
+    "habitat": "待核实",
+    "habitatEn": "Unverified",
+    "evolution": "待核实",
+    "evolutionEn": "Unverified",
+    "description": "本站保留的 Dustler 历史资料入口。旧官方确认、属性、外形行为、野外身份及栖息地断言缺乏独立国际服依据，现予撤回。保留名称和内部分类仅供导航，不代表实装、官方译名或可用阵容；身份、形象、机制与数值仍待核实。",
+    "descriptionEn": "This is the legacy Dustler navigation entry. Earlier claims of official confirmation, type, appearance, behavior, wild identity and habitat lack independent global support and are withdrawn. Retained names and internal classifications are not proof of implementation, official naming or a playable roster. Identity, artwork, mechanics and values remain unverified.",
+    "status": "revealed",
+    "descriptionJa": "過去のDustler資料へのナビです。旧公式確認、属性、外形・行動、野生の同一性、生息地には独立した国際版根拠がなく、撤回しました。名前と内部分類は実装、公式訳名、利用可能な編成の証明ではありません。同一性、画像、仕組み、値は未確認です。",
+    "contentReview": {
+      "status": "needs_verification",
+      "reviewedAt": "2026-10-24",
+      "scope": "international_identity_appearance_and_mechanics_unverified"
+    }
+  }
+]

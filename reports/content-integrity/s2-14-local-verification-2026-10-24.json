@@ -1,0 +1,722 @@
+{
+  "schemaVersion": 1,
+  "phase": "S2.14",
+  "recordedAt": "2026-10-24T01:56:54.021Z",
+  "localPhaseDate": "2026-10-24 Asia/Shanghai",
+  "baseline": "c73fbb5",
+  "branch": "codex/multi-game-s1-release-safety",
+  "conclusion": "local_release_candidate_verified; two prior content holds resolved by withdrawal, not official verification; actual cloud candidate acceptance and production promotion not performed",
+  "productionApproved": false,
+  "sourceDecisions": "reports/content-integrity/s2-14-source-decisions-2026-10-24.json",
+  "resolutionRecord": "packages/data/roco-publication-resolution.json",
+  "protection": {
+    "baseline": "c73fbb5",
+    "protectedFiles": 542,
+    "rawFilesByteUnchanged": 181,
+    "clientsAndManifestsByteUnchanged": 345,
+    "originalRawAndLedgerExactlyArchived": 3,
+    "originalImagesExactlyArchived": 3,
+    "CNImageAliasesByteUnchanged": 3,
+    "inventory": {
+      "contract": "raw-inventory-v1",
+      "pairs": 90,
+      "equal": 90,
+      "sourceOnly": 5,
+      "pending": [],
+      "holds": [],
+      "withdrawal": {
+        "decision": "withdrawn_not_verified",
+        "resolved": [
+          "roco/raw-characters.json",
+          "roco/raw-guides.json"
+        ],
+        "officialFactsApproved": false,
+        "archivedImages": 3
+      },
+      "issues": [],
+      "engineeringReady": true,
+      "contentReleaseReady": true,
+      "factualApproval": "not_implied_by_mirror_equality"
+    },
+    "managed": {
+      "contract": "managed-raw-mirrors-v1",
+      "pairs": 7,
+      "entries": 111
+    },
+    "safety": {
+      "originalCheckoutTouched": false,
+      "push": false,
+      "cloudWrite": false,
+      "actions": false,
+      "evidenceDeleted": false
+    }
+  },
+  "sitemap": {
+    "baselineFile": ".release-records/managed-content-e0c79109-c3f0-4789-a6c5-12971d8610e0/main-sitemap.xml",
+    "currentFile": ".release-records/managed-content-27ad3ff4-ca74-46b5-95fe-bc1b7bed4b6f/main-sitemap.xml",
+    "prerenderFile": "apps/web/.next/server/app/sitemaps/main/sitemap.xml.body",
+    "baselineType": "S2.13 local compiled fixture, not production",
+    "before": 4344,
+    "after": 4344,
+    "added": [],
+    "removed": [],
+    "actualWorkerEqualsPrerender": true,
+    "rootIndexUnchanged": true,
+    "rootOwnersUnchanged": true,
+    "byLocale": {
+      "zh": 1526,
+      "en": 1523,
+      "ja": 1295
+    }
+  },
+  "verification": {
+    "dataTests": {
+      "passed": 162,
+      "files": 13
+    },
+    "webTests": {
+      "passed": 354,
+      "files": 74
+    },
+    "routerTests": {
+      "passed": 31,
+      "files": 3
+    },
+    "releaseNodeTests": 120,
+    "retentionPythonTests": 9,
+    "xmlPythonTests": 8,
+    "typeChecks": [
+      "core",
+      "data",
+      "web",
+      "game-genshin",
+      "game-nte",
+      "game-lvmeng",
+      "game-azur-promilia"
+    ],
+    "dataValidation": true,
+    "manifestValidation": true,
+    "lint": {
+      "errors": 0,
+      "warnings": 1,
+      "existingWarning": "auth-dialog react-hooks/exhaustive-deps"
+    },
+    "mainOpenNextBuild": true,
+    "wranglerDryRun": {
+      "uploadKiB": 13982.3,
+      "gzipKiB": 2843.21,
+      "actualUpload": false
+    },
+    "managedContent": {
+      "record": ".release-records/managed-content-27ad3ff4-ca74-46b5-95fe-bc1b7bed4b6f/result.json",
+      "browserCases": 508,
+      "successfulPages": 466,
+      "expected404Cases": 42,
+      "rawJsonCases": 7,
+      "searchJsonCases": 3,
+      "realListDetailClicks": 18,
+      "realToolNavigationClicks": 30,
+      "byKind": {
+        "archive": 4,
+        "backport": 6,
+        "cn-home": 6,
+        "cn-map": 6,
+        "codes": 6,
+        "echo": 18,
+        "echo-list": 6,
+        "market-intel-review": 6,
+        "region": 6,
+        "roco-characters-list": 6,
+        "roco-cn-tool": 42,
+        "roco-disabled-items": 18,
+        "roco-events": 6,
+        "roco-guides-list": 6,
+        "roco-home": 6,
+        "roco-public-review": 54,
+        "roco-reviewed-character": 36,
+        "roco-reviewed-guide": 180,
+        "roco-unknown-character": 12,
+        "roco-unknown-weapon": 12,
+        "roco-version": 6,
+        "roco-weapon-review": 60
+      }
+    },
+    "withdrawnAssets": {
+      "inspectedFiles": 1505,
+      "withdrawnImagesPublished": false,
+      "privateEvidencePublished": false,
+      "scope": "international_paths_and_unregistered_byte_aliases; existing_independent_CN_paths_retained_not_newly_verified"
+    },
+    "directHttpBoundaries": [
+      {
+        "path": "/images/roco/characters/meewee.webp",
+        "method": "GET",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/meewee.webp",
+        "method": "HEAD",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/meewee.webp?withdrawal-probe=1",
+        "method": "GET",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/meewee.webp?withdrawal-probe=1",
+        "method": "HEAD",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/sparka.webp",
+        "method": "GET",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/sparka.webp",
+        "method": "HEAD",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/sparka.webp?withdrawal-probe=1",
+        "method": "GET",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/sparka.webp?withdrawal-probe=1",
+        "method": "HEAD",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/cerulla.webp",
+        "method": "GET",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/cerulla.webp",
+        "method": "HEAD",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/cerulla.webp?withdrawal-probe=1",
+        "method": "GET",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/cerulla.webp?withdrawal-probe=1",
+        "method": "HEAD",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/zh/roco/items",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/zh/roco/items/gulu-ball",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/zh/roco/items/not-a-record",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/en/roco/items",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/en/roco/items/gulu-ball",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/en/roco/items/not-a-record",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/ja/roco/items",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/ja/roco/items/gulu-ball",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/ja/roco/items/not-a-record",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/roco/items",
+        "status": 301,
+        "location": "http://localhost:49898/zh/roco/items"
+      },
+      {
+        "path": "/roco/items/gulu-ball",
+        "status": 301,
+        "location": "http://localhost:49898/zh/roco/items/gulu-ball"
+      }
+    ],
+    "retainedAssetHttpByteSamples": [
+      {
+        "path": "/_next/static/chunks/webpack-3df35ff23edba597.js",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "80d20cea-4407-4ece-a87c-30f27c915021"
+      },
+      {
+        "path": "/_next/static/chunks/webpack-d27460adc2ebae12.js",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "80d20cea-4407-4ece-a87c-30f27c915021"
+      },
+      {
+        "path": "/_next/static/css/184abcb05771b732.css",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "80d20cea-4407-4ece-a87c-30f27c915021"
+      },
+      {
+        "path": "/_next/static/css/ec5eee9cfeecd060.css",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "80d20cea-4407-4ece-a87c-30f27c915021"
+      },
+      {
+        "path": "/_next/static/chunks/1040.de46b903ce26d87c.js",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "80d20cea-4407-4ece-a87c-30f27c915021"
+      },
+      {
+        "path": "/_next/static/chunks/1057.869540b4a4a926b7.js",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "80d20cea-4407-4ece-a87c-30f27c915021"
+      },
+      {
+        "path": "/_next/static/chunks/1199.804ba3bf1caf6b23.js",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "80d20cea-4407-4ece-a87c-30f27c915021"
+      },
+      {
+        "path": "/_next/static/chunks/1212.9e6002ea04da6eef.js",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "80d20cea-4407-4ece-a87c-30f27c915021"
+      },
+      {
+        "path": "/_next/static/chunks/1335-92794ba93bd6800a.js",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "80d20cea-4407-4ece-a87c-30f27c915021"
+      },
+      {
+        "path": "/_next/static/chunks/1390.7458f2b739f8bf76.js",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "80d20cea-4407-4ece-a87c-30f27c915021"
+      },
+      {
+        "path": "/_next/static/chunks/1490.d4618049d74da70d.js",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "80d20cea-4407-4ece-a87c-30f27c915021"
+      },
+      {
+        "path": "/_next/static/chunks/1507.85a84da47a658377.js",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "80d20cea-4407-4ece-a87c-30f27c915021"
+      }
+    ],
+    "indexnow": {
+      "transport": {
+        "codeFiles": 2980,
+        "legacyTransportStringsPresent": false
+      },
+      "api": [
+        {
+          "name": "unauthorized",
+          "status": 401,
+          "submissionAttempted": false
+        },
+        {
+          "name": "paused-page",
+          "status": 503,
+          "submissionAttempted": false
+        },
+        {
+          "name": "paused-held-detail",
+          "status": 503,
+          "submissionAttempted": false
+        },
+        {
+          "name": "paused-dedicated-owner",
+          "status": 503,
+          "submissionAttempted": false
+        },
+        {
+          "name": "invalid-external",
+          "status": 400,
+          "submissionAttempted": false
+        },
+        {
+          "name": "invalid-query",
+          "status": 400,
+          "submissionAttempted": false
+        },
+        {
+          "name": "invalid-credentials",
+          "status": 400,
+          "submissionAttempted": false
+        },
+        {
+          "name": "invalid-empty",
+          "status": 400,
+          "submissionAttempted": false
+        }
+      ],
+      "actualExternalSubmissions": 0
+    },
+    "runtime": {
+      "record": ".release-records/rollout-web-805ae4f2-db52-4cb1-bdb8-f52f21673385/result.json",
+      "httpCases": 32,
+      "browserCases": 18
+    },
+    "seoDiscovery": {
+      "record": ".release-records/seo-discovery-web-55d2459b-9ee4-491b-8ed4-682df2b98dc4/result.json",
+      "browserCases": 32
+    },
+    "interimRuns": [
+      {
+        "record": ".release-records/managed-content-ac31c27e-8fda-4fdc-97c9-21c0a152c34c/result.json",
+        "status": "superseded_not_final_acceptance",
+        "reason": "Later source scan corrected reachable market-intel endorsement and dormant home dashboard. Rebuilt and reran all compiled suites; do not mix artifact identity."
+      },
+      {
+        "record": ".release-records/managed-content-d5e25e41-162d-498e-bc00-8383aa9b8a93/result.json",
+        "status": "superseded_not_final_acceptance",
+        "reason": "Mobile inspection found legacy global-CBT wording still in CN introductory/SEO description. Replaced all three languages, strengthened browser body/metadata rejection and rebuilt/reran the final artifact."
+      }
+    ],
+    "developmentObservations": [
+      "Updated historical CLI expectations with an actual independent held fixture; retained negative gating tests.",
+      "Canonicalized macOS temporary test path so CLI executes rather than silently importing under a /var alias.",
+      "Fingerprint scan found three exact CN artwork aliases; retained only their pre-existing independent paths, tested global withdrawal and unregistered alias rejection."
+    ],
+    "externalResources": "Browser blocks external resources; not a CDN, rights or live-game-fact certification",
+    "visualInspection": {
+      "viewed": [
+        ".release-records/managed-content-27ad3ff4-ca74-46b5-95fe-bc1b7bed4b6f/cn-home-390.png",
+        ".release-records/managed-content-27ad3ff4-ca74-46b5-95fe-bc1b7bed4b6f/roco-reviewed-guide-jinies-guide-390.png",
+        ".release-records/managed-content-27ad3ff4-ca74-46b5-95fe-bc1b7bed4b6f/roco-reviewed-character-meewee-390.png"
+      ],
+      "localesViewed": [
+        "zh"
+      ],
+      "widthsViewed": [
+        390
+      ],
+      "result": "Actually viewed these three final mobile screenshots. CN introductory correction, guide notice and neutral portrait are readable with natural wrapping and no observed main-content clipping. Existing horizontal game navigation and footer are retained. Not a claim to manually inspect all locales or desktop screenshots."
+    }
+  },
+  "staticRetention": {
+    "copied": 211,
+    "verification": {
+      "versionId": "80d20cea-4407-4ece-a87c-30f27c915021",
+      "files": 262,
+      "bytes": 7829308,
+      "verified": true
+    },
+    "artifact": {
+      "files": 3354,
+      "links": 19,
+      "portable": true,
+      "scope": "filesystem_portability_not_runtime_or_platform_acceptance"
+    },
+    "assets": {
+      "inspectedFiles": 1505,
+      "withdrawnImagesPublished": false,
+      "privateEvidencePublished": false,
+      "scope": "international_paths_and_unregistered_byte_aliases; existing_independent_CN_paths_retained_not_newly_verified"
+    },
+    "scope": "local retention from reverified actual production ZIP; no cloud upload"
+  },
+  "readOnlyProductionPreflight": {
+    "activeVersion": "80d20cea-4407-4ece-a87c-30f27c915021",
+    "deploymentId": "67efb2f6-b62c-4059-bcc5-c6b3143db458",
+    "percentage": 100,
+    "source": {
+      "artifactId": "12509287773",
+      "archiveSha256": "b1a8016284dbf39855d69c9ab54a7255a9b6db81e39b2670a936058fa6338858",
+      "versionId": "80d20cea-4407-4ece-a87c-30f27c915021",
+      "runId": 39971089654,
+      "headSha": "e88ceae39e4a836725c8039884c54eba18ebdaa1"
+    },
+    "artifactExpiry": "2026-11-22T14:46:36Z",
+    "artifactExpired": false,
+    "downloadedZipBytes": 53929751,
+    "downloadedZipSha256": "b1a8016284dbf39855d69c9ab54a7255a9b6db81e39b2670a936058fa6338858",
+    "productionLogBoundToArtifactAndVersion": true,
+    "extraction": {
+      "files": 262,
+      "bytes": 7829308,
+      "scope": "next_static_only"
+    },
+    "publicAudit": {
+      "baseHttpCases": 15,
+      "ownerAssetAndSitemapCases": 19,
+      "failures": 0,
+      "log": ".release-records/s2-14/production-audit.log"
+    },
+    "contentBaseline": {
+      "recordedAt": "2026-10-24T01:32:59.455Z",
+      "readOnly": true,
+      "observations": [
+        {
+          "path": "/data/roco/raw-characters.json",
+          "status": 200,
+          "contentType": "application/json",
+          "cacheControl": "public, max-age=0, must-revalidate",
+          "cfCacheStatus": "MISS",
+          "location": null,
+          "bytes": 5052,
+          "sha256": "220717e25088439ca95343e5b19d36d29cb0fadbdb96c89566fa81d20be99f4d",
+          "records": 6,
+          "firstRecordFields": [
+            "attribute",
+            "attributeEn",
+            "description",
+            "descriptionEn",
+            "evolution",
+            "evolutionEn",
+            "habitat",
+            "habitatEn",
+            "id",
+            "name",
+            "nameEn",
+            "number",
+            "rarity",
+            "status"
+          ]
+        },
+        {
+          "path": "/data/roco/raw-guides.json",
+          "status": 200,
+          "contentType": "application/json",
+          "cacheControl": "public, max-age=0, must-revalidate",
+          "cfCacheStatus": "HIT",
+          "location": null,
+          "bytes": 330735,
+          "sha256": "46530c83e6af3d986387c385b3864ff9ca3b64cca5f7737e2acc10c9c5a78f0b",
+          "records": 30,
+          "firstRecordFields": [
+            "category",
+            "categoryEn",
+            "categoryJa",
+            "categoryZh",
+            "content",
+            "contentEn",
+            "contentJa",
+            "faq",
+            "id",
+            "quickFacts",
+            "serpDescription",
+            "serpTitle",
+            "summary",
+            "summaryEn",
+            "summaryJa",
+            "tags",
+            "title",
+            "titleEn",
+            "titleJa",
+            "updatedAt"
+          ]
+        },
+        {
+          "path": "/images/roco/characters/meewee.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "cacheControl": "public, max-age=0, must-revalidate",
+          "cfCacheStatus": "HIT",
+          "location": null,
+          "bytes": 58982,
+          "sha256": "eca6eae6d536f2c4f07aeebb5a325531bacfdd7098a232589a693e28eb3ebae6"
+        },
+        {
+          "path": "/images/roco/characters/sparka.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "cacheControl": "public, max-age=0, must-revalidate",
+          "cfCacheStatus": "HIT",
+          "location": null,
+          "bytes": 88368,
+          "sha256": "137a05e63db6ae59d2083e41eaa3979526b78bec25e0b3a762aa2522e7971110"
+        },
+        {
+          "path": "/images/roco/characters/cerulla.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "cacheControl": "public, max-age=0, must-revalidate",
+          "cfCacheStatus": "HIT",
+          "location": null,
+          "bytes": 81652,
+          "sha256": "31269f4400c90ff1d976593a833e9ea339e382ef2315474f8e2f11757bfd205c"
+        },
+        {
+          "path": "/en/roco/redeem-codes",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+          "cfCacheStatus": null,
+          "location": null,
+          "bytes": 52065,
+          "sha256": "e08486445f66686e88fdf1e8232ab6ab7382fa5e96725b6818a4686331c57579"
+        },
+        {
+          "path": "/en/roco/items",
+          "status": 301,
+          "contentType": null,
+          "cacheControl": null,
+          "cfCacheStatus": null,
+          "location": "/en/roco",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "note": "Current deployed baseline only; this candidate has not been deployed. No purge or production mutation."
+    },
+    "note": "Actual read-only baseline. Candidate not uploaded. Old Roco content/images still served in production; local fixes are not live."
+  },
+  "localArtifact": {
+    "root": "apps/web/.open-next",
+    "fileCount": 3354,
+    "fileBytes": 113586261,
+    "treeSha256": "3d91f22b834319b7c2863bd9b12b1aec8268f80445cce983a0ab6e2ef7ed4a37",
+    "fileTreeSha256": "e531c855a6c695897cca5f04098e19108bfd1da104e0f417f9907dab360cbd18",
+    "symlinkTreeSha256": "73f878dbcc7526ebd9735bfadd46c79ac511758453cc31eeb8edec0bdf8da656",
+    "symlinks": [
+      {
+        "path": "server-functions/default/apps/web/node_modules/next",
+        "target": "../../../node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/next"
+      },
+      {
+        "path": "server-functions/default/apps/web/node_modules/react",
+        "target": "../../../node_modules/.pnpm/react@19.2.4/node_modules/react"
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/@next/env",
+        "target": "../../../@next+env@15.5.28/node_modules/@next/env"
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/@swc/helpers",
+        "target": "../../../@swc+helpers@0.5.15/node_modules/@swc/helpers"
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/postcss",
+        "target": "../../postcss@8.4.31/node_modules/postcss"
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/react",
+        "target": "../../react@19.2.4/node_modules/react"
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/react-dom",
+        "target": "../../react-dom@19.2.4_react@19.2.4/node_modules/react-dom"
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/styled-jsx",
+        "target": "../../styled-jsx@5.1.6_react@19.2.4/node_modules/styled-jsx"
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/node_modules/source-map-support",
+        "target": "../source-map-support@0.5.21/node_modules/source-map-support"
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/postcss@8.4.31/node_modules/nanoid",
+        "target": "../../nanoid@3.3.15/node_modules/nanoid"
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/postcss@8.4.31/node_modules/picocolors",
+        "target": "../../picocolors@1.1.1/node_modules/picocolors"
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/postcss@8.4.31/node_modules/source-map-js",
+        "target": "../../source-map-js@1.2.1/node_modules/source-map-js"
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/react-dom@19.2.4_react@19.2.4/node_modules/react",
+        "target": "../../react@19.2.4/node_modules/react"
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/sharp@0.35.5_@types+node@25.6.0/node_modules/detect-libc",
+        "target": "../../detect-libc@2.1.2/node_modules/detect-libc"
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/sharp@0.35.5_@types+node@25.6.0/node_modules/semver",
+        "target": "../../semver@7.8.5/node_modules/semver"
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/source-map-support@0.5.21/node_modules/buffer-from",
+        "target": "../../buffer-from@1.1.2/node_modules/buffer-from"
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/source-map-support@0.5.21/node_modules/source-map",
+        "target": "../../source-map@0.6.1/node_modules/source-map"
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/styled-jsx@5.1.6_react@19.2.4/node_modules/client-only",
+        "target": "../../client-only@0.0.1/node_modules/client-only"
+      },
+      {
+        "path": "server-functions/default/node_modules/.pnpm/styled-jsx@5.1.6_react@19.2.4/node_modules/react",
+        "target": "../../react@19.2.4/node_modules/react"
+      }
+    ],
+    "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+    "hashAlgorithm": "Composite SHA256 file-tree-v1 + NUL + hex sorted file-tree SHA + NUL + symlink-tree-v1 + NUL + hex sorted symlink-tree SHA; file entries path + NUL + binary file SHA; link entries path + NUL + literal target + NUL",
+    "note": "Complete local artifact digest after actual production static retention; not a cloud-sealed/promoted artifact"
+  },
+  "remainingReleaseSteps": [
+    "Approved main integration and Actions budget disclosure/check",
+    "Requery active unique version and exact unexpired production artifact before real release",
+    "One sealed artifact through actual cloud staging and same-artifact promotion; no rebuild between stages",
+    "Cloud cross-owner native navigation, retained byte samples, content/raw/image/IndexNow/account boundaries, complete production sitemap union",
+    "Production postdeploy cache/content verification and observation; old rollback version still contains known Roco claims"
+  ],
+  "safety": {
+    "originalDirtyCheckoutTouched": false,
+    "push": false,
+    "cloudWrites": false,
+    "cloudDeployment": false,
+    "actionsTriggered": false,
+    "actionsMinutes": 0,
+    "databaseChange": false,
+    "loginRestored": false,
+    "topologyChange": false,
+    "externalIndexNowSubmission": false,
+    "historicalEvidenceDeleted": false
+  },
+  "evidenceDirectory": ".release-records/s2-14"
+}

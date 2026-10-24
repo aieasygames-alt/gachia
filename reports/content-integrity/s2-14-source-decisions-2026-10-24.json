@@ -1,0 +1,4759 @@
+{
+  "schemaVersion": 1,
+  "phase": "S2.14",
+  "baseline": "c73fbb5",
+  "decision": "withdrawn_not_verified",
+  "archive": "reports/content-integrity/archive/s2-14",
+  "protection": [
+    {
+      "path": "apps/game-azur-promilia/wrangler.jsonc",
+      "sha256": "72ee33655dfb2150d645c6f6e1203497de605d106a22c4b0bad06d3e3c2faab0"
+    },
+    {
+      "path": "apps/game-genshin/wrangler.jsonc",
+      "sha256": "71044abce9df463b547e471016b62f83715aba87c764d394bdd9336e0724add2"
+    },
+    {
+      "path": "apps/game-lvmeng/wrangler.jsonc",
+      "sha256": "7693781000248999d9c72f5481196a8f63d3ddd34a21ce90249b880cfc5a03c6"
+    },
+    {
+      "path": "apps/game-nte/wrangler.jsonc",
+      "sha256": "24a9c035334cd7cd8fd9587ed36d8fbac2b2d4a685b0ee8277b92f3ca7724ebf"
+    },
+    {
+      "path": "apps/router/wrangler.jsonc",
+      "sha256": "271086b3498a5fa24dd77e5be3f04da8211b0ef2bc0be158c67f137f51d2219a"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters.json",
+      "sha256": "dc7b65a4c76ca8b63741e2dbf277225161143ad6e2c6aea95e5083dfc14a3b04"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/abu.json",
+      "sha256": "8344a5c2bffb2d4246d45fae0e6bcf82663b59ba5fd9746290fb0b6e4cdd15ef"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/aijiaopapa.json",
+      "sha256": "04578e013a9f51c30e3b8f7c6150068d06565c796b2f85d53210698d5ce3cefc"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/amiyate.json",
+      "sha256": "3c4358d5ff39ae7b06f35b13b066d6fd57c134464252fc8e28d6cc0e1f289264"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/amiying.json",
+      "sha256": "f741cec01e1860f1a1fd693acbbe08f4c31f1356d0d3791062ed683b9a94c50e"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/anyinglingmian.json",
+      "sha256": "c604e4a76c9e951dabecb29e573049b35e408aa1e7dc5a5d98ce322aeecff909"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/baifalanren.json",
+      "sha256": "754743da1032837a4b04eaa6b7ca89ba7f2a74354d5a2529161c08e531552ea8"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/baifalulu.json",
+      "sha256": "973946ec1fe11161c2a709563a06d9f09b3a69cb2bd1da681132f4012662961e"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/baijindujiaoshou.json",
+      "sha256": "a1c7239743cca2561b106aaf622e91c606280a940be6942f458e2dcc9f9fd520"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/banban.json",
+      "sha256": "7cccedd4a20dda2bcf58028f1a3f34d7610fe3f02276c5adab8163200489f31d"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/banbanke.json",
+      "sha256": "58fc67d9ae960861fce1f56bd85d3e2a576c13f84d05cdd7acacb62d36e027a4"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/banxiao.json",
+      "sha256": "96c34d9e655b977cf654fadf190db2347bba3203cc1957f9e14335cd52a660d8"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/baozhensongshu.json",
+      "sha256": "e205038b9be7e0a6fc709b19f0314dcc007d1066c3cd609b1afe9d80a4c573a0"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/benboshu.json",
+      "sha256": "dc790ba1c51c5a8f42ab1f6527afe6f2b9b39ac23629dd9492117c1a5bed63b7"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/bengbengcao-haishenqiuxingtai.json",
+      "sha256": "59d804c0821d07c8fd7a129909cc79a14ebcbb33ee969f13cc1b5fc9c39db577"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/bengbenghua-haishenqiuxingtai.json",
+      "sha256": "205af6ff1fd5da118ad1d1c04ffc6e7acfc6db74e21894db91c4f0ea020363da"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/bengbengzhongzi-haishenqiuxingtai.json",
+      "sha256": "c39303d1dda29c711e866f07591e28c326a02a04927a39e96168bceb77d8d4b6"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/bengchuangsongshu.json",
+      "sha256": "d0ebcbae895e29a9e9df67acac428c2f0e0e3bd28c833bf4112931d6cc1a0b18"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/benlelu.json",
+      "sha256": "5e5ac88c070f8505c97dfe3c3cbf2dca00c2649135d4aa930d85faf5514ca92a"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/bimuyu.json",
+      "sha256": "bbc72f6bd4000a5bda6c5b863221bf994162d20e2210b4b35eefb728b76ff408"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/bingfengyuanling.json",
+      "sha256": "1b1801c11caff8795c922bd9bcbc883c88106ececba8b6314530f453c6356f55"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/bingzuanbulusi.json",
+      "sha256": "05551cc29efd444d89be8297122758051f7b321f5ab2f3757c206168442b5dfe"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/bobola.json",
+      "sha256": "960a04d8bc831bcaf3cacf844621e70b23df702c53e9fd46062d3fcf623c270c"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/boboluo-2.json",
+      "sha256": "a49c8ef926a2b43b43e4b262f364478e9237ee27dd6cda3d6ff4d0a821e571e4"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/boduoxi.json",
+      "sha256": "933c58d0e3152e6ffce8a1f416f8d8e42d8872e4a2452a6a4b0db9d755e23718"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/bukelengyan.json",
+      "sha256": "5b66f5c8eb4fcfa42e72dd7a91d78ebe7e9022ddf2442cb24e7d484be720b087"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/bukugu.json",
+      "sha256": "3d7ba32e08768d2adef6d03d95f206fbcd3acaecb9a18cf9a7011cb17224f0ec"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/bulusi.json",
+      "sha256": "41fe3ce038dcf450a7a46b00c91f5e7911fe812977d0670bced754a5936331c2"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/bushishi.json",
+      "sha256": "93ae2380b15c550cd633c2f91ce8d02dc0e45e7afacd304f373699c53a5d2b2e"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/bushiyan.json",
+      "sha256": "37633ef5a6b1446e73d7a9b66827bc67cd32c8462db3a587fbc4989f81650905"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/buxugu.json",
+      "sha256": "fb052f76d80b7c286b878ad8abea7fca2f528a5b7eeff6f203a1529416f2dfe8"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/caotouya.json",
+      "sha256": "f27ef5a4797599c2e7696410fdbad0f3ef9199786f201a8be829a49d1100c295"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/caoyichong.json",
+      "sha256": "5ae3d370603547a7a646d52a8039aa332ad767fed3d48536b813d02e1f3991bc"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/chireyuan.json",
+      "sha256": "f8206763ad9d7fc349c928baca438fb6043855a5cd9de508a6b75aa044c1c327"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/chixinyongshi.json",
+      "sha256": "0610a2a56294b8832f4fa883243512707fc536f70aee5b402a1a0b592ec9d89a"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/chiyanshi.json",
+      "sha256": "78bacb17884ba6ec3c791c7b2ab8fb11818bb7b47e94ae7e368635eb930d1e49"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/chuitouguan.json",
+      "sha256": "8bedd39d5227a6a5d76c7e895a63ad84dab434b51d088562af4d0a4e629933f6"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/cidianhuan.json",
+      "sha256": "844f90e8a62af29a20e6650c107ab0385cd7d432339b9781d5bb0e6d92caa1a8"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/cikuichong.json",
+      "sha256": "4a6bbfde71fd6fcc7eed85977da144f834cfbe27466b7e9fba0a66756dbe2879"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/ciluntuo.json",
+      "sha256": "de48a55968de2cbfe0aacf72a5c7095aef11a5ab9a3cca8ea194e42375ab8979"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/cuidinfuren.json",
+      "sha256": "2fb9c3ebb1adf521a16bacb3b8309fd202d070d4cc3e209feda0255c8f43b9fe"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/cuitongtiantian.json",
+      "sha256": "87adcb59be673729efb55ac4bbaa6ad125ea532a512bcb8ef45b68779b5c9306"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/daermaodou.json",
+      "sha256": "d424a813dae88719ad491aee0a265aec4d574cae84097f61930af07a0f319c7e"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/daixiaolu.json",
+      "sha256": "12e7dfca89f0aa145ebaa0fbdbaf3d6839e0fdbb0f51d83c42c9370dd9141e7a"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/danxiaomanyu.json",
+      "sha256": "d0690871f73bcda5ad2f522e3e4005039e436094b2febe9c66a477bff97c22bf"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/diandongchangjinglu.json",
+      "sha256": "4550b7612c5a13846e6c4c51e51754dbb187d8c62e705812402bd3da079e42a1"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/dianmiemie.json",
+      "sha256": "c3c6369432f15653cd00cb8dbead77327d3c22f5f36a682f256c77076f5097df"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/dianqie.json",
+      "sha256": "ac58e62ba9622d5958e18d10e85b4a1d8aad0b4f91c2a540b27b80023060baae"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/dianqiumiemie.json",
+      "sha256": "8b8af68b59c63fe09d6e8b50cce0d5db1d8a5f3ab625907fddf0a5d8af1f3b14"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/dimo.json",
+      "sha256": "aba0fa6a40decc458e2abecf683ef082670e62a6459874cf937f27b6d663f136"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/dingdingemo.json",
+      "sha256": "273faf071ea276720928fb3b5580a5d2cef9a5ad869c0229bfa108b1b74454f7"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/diudiu.json",
+      "sha256": "46446c31f06828b0d623e1f2aecab1578fcb94158b1012fb69c2b93f4769ecea"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/dongliyuan.json",
+      "sha256": "88bd3a9336ee469f76f5470076ce1ee76e8d56b9aa7ef52cbe182b17b7f22f65"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/dongyuque.json",
+      "sha256": "34be4513ff8db06573980203dce1ae55c6ef31a7bcf5d435bd655ffef2f5fa45"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/doudingyu.json",
+      "sha256": "542d4124e10c1cbbeb33ef1e3da913451c16d525022d13af99c24699747ac6ee"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/doudou.json",
+      "sha256": "29fb88a4a286af2fed843bcfaf266af2460e4a877bb926c9ddab438c54df6611"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/dudubao.json",
+      "sha256": "f708fce6a6c5d9382e72c948ccc8e99c08c8acb5ecb1de1196d4f7ee7e0ad763"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/duduguo.json",
+      "sha256": "d5c23801799f9ca043e58fd38dc2a49ca4a1886da4602505080768e7ccb82889"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/duoduo.json",
+      "sha256": "1569b7f9ea94de3809a2e885e9e4359049f50a75b8184f75628e99d41172c7d3"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/duoguding.json",
+      "sha256": "44cb7c80ebe661598d3063ace1f581268fc946b7f8e380cc04a300dd52253737"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/duoladuo.json",
+      "sha256": "57294f25a5e8c16a137020b227be4128590a0c6b394827f556e662d2db4f2c14"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/duoxi.json",
+      "sha256": "4630d1bc2b6e77bef5839ad666170565f5d1d2962f0c1a5edb7bfbb9a528c3c4"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/emoding.json",
+      "sha256": "7e91ed72dffa6df0cf5e07ef889c02c9c584bc5e4f40cd910936f89c323ca620"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/emohongzuan.json",
+      "sha256": "e3c0017d293c360029663a21dcc946b024b7ce0103af1ff9c8f10930921e26be"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/emolang.json",
+      "sha256": "552297182f95404169153cda57d23c3d63e5d0b5c95dafcfca7795c1fd28b7cf"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/feicuishuimu.json",
+      "sha256": "3afd372bee2601f9067a5de08dd4361cacc5e454e8a25484b15bfb71cadea932"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/fenggunmuchong.json",
+      "sha256": "5efe0ce23080c97e5030ece66eb0f2f0d088d3b94e5b9658f13e51b40a71e8c8"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/fenglingsha.json",
+      "sha256": "c5ea0f30c12ab58f1598dd8bf8e52320ca0848a3d9d428fe6510efe40094a639"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/fenmiemie.json",
+      "sha256": "5fe1fd18de9f60ace945047a8ec0838d447551d4bcc798b23410f66a5d2696f0"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/fudishou.json",
+      "sha256": "5ab54bd0b7bbb3ff55652a3f1cc6d919f44c0bdcb8575362434393add7825d62"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/gaojiaoyu.json",
+      "sha256": "26dccc6fa622e224d62375946dd04a1d9768708349d58624e25c1317e82a50a6"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/gongpingge.json",
+      "sha256": "3bb483c8b87b3f04c3f3dcf55618aa0443e0e89ff2bc06bcc9bb4d8de25a6457"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/guaiguaihu.json",
+      "sha256": "20e4aac1b55a54f6af4b047565d5240e21af4023a738911a1648b71ab8fa73a9"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/guguding.json",
+      "sha256": "32deeed3e300790dbb3e4300e2b98c88d8514797f37f6c2110c4a1c6db81bc14"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/guladuo.json",
+      "sha256": "a3abc6eb62e3ea97d7a0e8cd856c86415ea277ce946e1eaa286b907a8f264481"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/guzhongshe.json",
+      "sha256": "86df52e3c91d279edba46789d0725a0b95e098fe5c17d04973cdfc4024a9d581"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/haibaochuanchang.json",
+      "sha256": "3d424add40d31cb49c42ca10152c7682f28b8b9874145794acf5f71ab7c557ed"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/haibaozhanshi.json",
+      "sha256": "e421ff0207001004eded863f7bc47037f0c1d8e513f4313d1b40091811dc342d"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/haikuichong.json",
+      "sha256": "be44a5316c0984bcba394ac3a6c93930a90d5077ca00c4fcab754b0d81bc9ccd"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/haizhizhi.json",
+      "sha256": "e8c30189d4be918eae2e5fe22943c3c5e28aebff0829426c415d2efe4ccafc86"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/hanyinshe.json",
+      "sha256": "4b781ffa80e8aafbe844fde1a765cd0f7e54e0cfaac718e52d958d73b279f069"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/haoeryu.json",
+      "sha256": "a82890a3321f5add4bf451c3f8984974e711cf94f303a63620f78524d8280c90"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/heimaowushi.json",
+      "sha256": "23d95628bf569acc0f7b4dfc19036b51d1c75f87f6bdaeaecd92872604988854"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/heiyufuren.json",
+      "sha256": "f284c78372c02104379bddc979ef15a133c1379e8b1efc9c3fb309b92a336d2c"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/hongrongshizi.json",
+      "sha256": "03cc4f02c1280efe1825f748d01ceef79d554efcfb59ef0964069823b71cc544"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/hongsirong.json",
+      "sha256": "192d58eb0e3838383e535d70b082c23c6e6e75fe9753ea57be69663df94866f0"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/huadie.json",
+      "sha256": "1422cc177e7e213c747de1fbbb3efd683328c97292c1d32574cf03265496da8e"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/huangfenghou.json",
+      "sha256": "1606dbb3707a3ac57a7aa144609b0504be60839d33321e5a5ad62281cd24d897"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/huangjia-shijiu.json",
+      "sha256": "11a610d125cb22945caf95b5840a57f48f91d6d95a837b5a4c8c8886158f41c4"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/huanlinggu.json",
+      "sha256": "0310b97ab11a13ad4895dc9ac9684a44141a2d799dce958df25ff20d28a13025"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/huanyinglinggu.json",
+      "sha256": "388d99865894ec9de6706753e3085215fffe9876942c7ed2a6b75de2c5aac497"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/huayidie.json",
+      "sha256": "4ccd7a02c7887d9b4e6615774879a2218b914b269b85f3a9e6db825ec1f5a615"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/huayinglingyang.json",
+      "sha256": "f9bc9980174866c080fb7afa13dd7b8eb984fdf5a0b496c38dd855e0e353713d"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/huayuanman.json",
+      "sha256": "e1ced5a22b1dabec162a2367728967d926512edeb73163cac082e84bf74664cf"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/huhuzhu.json",
+      "sha256": "962076dc636a19a9146f4e0d4950d47dda905a458525c63ad851a0ec66caee82"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/huohua.json",
+      "sha256": "6d28178dbfa0124f6db615efcd434d733a48d4623ff57bdc00fd4e0407f0028d"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/huoshen.json",
+      "sha256": "c5d45c6560879c472bca62968b057265e6b5501f6efd759649ffb87201b06664"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/huoweiwate.json",
+      "sha256": "16b3d20ddcf6d9a2eaa6e1b08fdb1324d5e0b9c78361c03958f42f914ffa6b8e"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/huoweizhanshi.json",
+      "sha256": "95c8ecd18a4494dd2459cbfd0898d59d062ab26de69368d6c34a87cbc649bd12"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/huoyanyuan.json",
+      "sha256": "af38957c73310930f6ebb78afb620e36aa26014b74c26b01b5a06d9e94aa75a6"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/huyouli.json",
+      "sha256": "d769e80c19a853ed27548a2d3c9eb759fec9aab62c4a6035603a65e9885235f5"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/huzhuquan.json",
+      "sha256": "4276e58e71852d594a2bf5f40606c9e75baf07a3feb8816dbd189506ed5dc322"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/jianjiaozhizhu.json",
+      "sha256": "4155e70c82cf4431deb918dd46fb4a5240507a06228756df5de653e81b0e8839"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/jianzuihuxian.json",
+      "sha256": "ba48744aa3142b6d2b20847ed2a27ae23cdcff1a0266699d1f5e4ec52215a1e6"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/jingjidianhuan.json",
+      "sha256": "9ebb6563bc9bef6c30e96c8f73da88f55d8fa89a559ae2f16b1820938cdcdb7b"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/jingshiwo.json",
+      "sha256": "0a4070a5b862628e7b0512afe23a482eb364996ca9839b269565066c1722ec28"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/jiuweihu.json",
+      "sha256": "9003d71ff79530b8b314fe76c5f4b2827220191a8470372c429d0084cfa0ea52"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/jiuyougu.json",
+      "sha256": "d800e9eb4b4a3652b68f3734b78f0188239d066e947ef59e9bda0e5d0ddf4051"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/jiyishi.json",
+      "sha256": "51c9bffe1a8a5996862fcff4748585a66b78b9e806cb2a56e0fab8a3aa028769"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/juanhujuta.json",
+      "sha256": "735b2bf78750afc50968a375b0e64a29bb3bde703a8c6e4e01dbdd1751857f47"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/juanmaoya.json",
+      "sha256": "0b84cd860eb930c40ab48164b56c3f53467ca299c77e700e5bebb499861608d5"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/jueshilu.json",
+      "sha256": "69166130ac7a7195d09587a0082fbe89df4ff71bda8a77f6cb07fdd3f0800b8e"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/juhuali.json",
+      "sha256": "9e7e555546dd9c6c6189922ee4454fdcf8fbe3ed224b638a984ed628365dc49b"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/julingshi.json",
+      "sha256": "b8f3179ccf170ca8aba82c9f03deed02b2dbcb58f5c9468337e177adc9407342"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/jushizhenyan.json",
+      "sha256": "45c934fbd2c28a87e0b88b15bedf34b2bcce4fa91a6229e1394913618c614a7e"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/kakachong.json",
+      "sha256": "d85e06097c029ded6701ba17973b3e81f76bb5203ee188ce38e825bb3e883c86"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/kakake.json",
+      "sha256": "21b84e1d2601dea34b1665f156a66225fd8e60f2a9f1e6496c598e630ad63a4a"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/kakaniao.json",
+      "sha256": "5fa12efac92a47f44ac6a74f1c1ec525ea26b9bdfdeeb8a76a88098112425b8a"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/kakaque.json",
+      "sha256": "01e003974238ed9e6960edc5e2bb4689bc577b4c1214f50332bda0bb73a34af0"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/kakayumao.json",
+      "sha256": "1fc2c626d3367a63537ba0afdb3e2ac343fdbd50e182f10fbcedc7ad25c5a81d"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/kaluoer.json",
+      "sha256": "f1d038a75d05354746db8faef82fa58976ae22d14a2e00407c8b9e9c4617b239"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/kawazhong.json",
+      "sha256": "0425fa3ce9d0d91c6de980724b29a5eb8c66e90583800232236a397b72a2c102"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/keaiyuan.json",
+      "sha256": "1c7dad78567588fef2d74ddb251c10419cebb50d8d930916845cc16fa8eb3a23"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/keshuiwang.json",
+      "sha256": "0a5d8e71d7c4d0e1ee8c06bbf1dc3c44874b53e561fff7780d3d95a667d5b131"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/keyiluo.json",
+      "sha256": "a926201e292f2e37c758763874242c13700baee725e2616ae6fd633ab63f19ee"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/kuaiqiyu.json",
+      "sha256": "1ee1b9c08a497c0f4952bdd1904d3ac8b43bd31e21976560d9e4f43aa4196b72"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/kuangjingchong.json",
+      "sha256": "d3c15586e945dfa31b7fdb363044a6edd5aa0824c1b01be6fcc33258490ab7cf"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/kuduoxi.json",
+      "sha256": "ef45e88ed248289cfc38c193524a8512adeeed655ae8e8f0eed57bf2ffeb6d5a"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/kukugu.json",
+      "sha256": "52d1482921b5999e2a1d330f89746cc6a87b77acb1706c98e31bdae11414ec8c"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/kula.json",
+      "sha256": "b37cfd5bf63e69be2d24f1e12c6246850b90821283a9015f0c1bde191dd30c8f"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/l-caojingling.json",
+      "sha256": "6435cc3276fe4bf3de5689fa8cb4da35da7f19a97d261db165487d591642f748"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/l-ersongshu.json",
+      "sha256": "4e999db3333380d0c39a10a28b1bb6bde4f6eec52e3c8983e4aba031bf0209df"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/l-yiniao.json",
+      "sha256": "f123b91dd97831accb4109a009a2ffd01934aefff4e7642866921ecded84c93a"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/landiesha.json",
+      "sha256": "5e2f61db8e483f6ca5fd8f7fc34342a349713dc049ba9a47d6336446b3821f19"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/lanniao.json",
+      "sha256": "52605218e9d1f499b5612a25f2cdc6dbb78d5316e0601933124522d0350f64b2"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/lanzhutiane.json",
+      "sha256": "9d238864ecdada4ae1f3d1244ff5cc585709bd96eb7c77a6d5706000c4d3859d"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/late.json",
+      "sha256": "4645d80bd92e8ad04e8af2bda36cd84c3f17a09645c746777a9f2e27c8c4fd94"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/liao.json",
+      "sha256": "a95d22d2baa2dc55304e3e7c70d64b90f43d4dce4f34bd5738cc60ff88a28350"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/liaoyazhu.json",
+      "sha256": "1791f118dcd2432fecfe471dac2a573503054fd2d7af0552a1f2928b19010d35"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/liehuoshouhu.json",
+      "sha256": "35e2d883669a61b472094517aa260a8deb3bcf5a7417e3aaddf264e93c0a90ae"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/liehuozhanshen.json",
+      "sha256": "579dfd780a9996854e1a20043694c2bbb12f4ee2a807893e2f5ef0d26b05dd3e"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/lilayao.json",
+      "sha256": "d0604addabe111002197fa01ff06ef2a15df2c47f9d740cd317baf67710b34f8"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/linghu.json",
+      "sha256": "321ee2514dba68dafe8d7949df86459447677b100cfd98914b3929928a515ff8"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/linglanyang.json",
+      "sha256": "6c97782e1e717585aabc0131902ebc062222743bb58ddfed608d525c0e5d39ad"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/lingyuyongshi.json",
+      "sha256": "da955b25c6d0b6d1694a2766738af4f60fb57433248544cf0179311d5b01c937"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/liulangshu.json",
+      "sha256": "55f6b07d096c1956ffc8e74ebe3d447a83e35a258920b1d5b6337de3bb86b7c5"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/liulishuimu.json",
+      "sha256": "220327581e8aa25127bc53f593e3ecd310d6335ce5ef0041905d9926333fd7c3"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/longyu.json",
+      "sha256": "b920214fdb6381da3475a6ad0a2ce0519d543c82f5c9e28a72ba26a13a93ed45"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/luoyin.json",
+      "sha256": "74b8b66c0bfafe44b976be66fffd5214cfd1ce2f2cb50c0b1a3acc86e1fbe5ac"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/manweishou.json",
+      "sha256": "02955b8dc44a60ca22cd17c26ba316dce3e7873204f41a9c2a09db0cb18f080f"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/maodouwawa.json",
+      "sha256": "16761a689464ae1c331a7bb86cbd28f68ef9fe975bfb837ba505d41ab7f91aca"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/maomao.json",
+      "sha256": "58ef9c5b1325ccf2328d57e9de9fb1c89e3110b40b0665d05413245a94996a48"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/mengxiangsansan.json",
+      "sha256": "67759f193df6b54d6ba26df06d7d6e28bcd48ca91d74fe666aa35939fda84cc0"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/mengyou.json",
+      "sha256": "e52770f101f90f14655e3bff29524f2069e0daab5b60208083de32475c3586db"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/mengyouyou.json",
+      "sha256": "fce93aa51adf9207932eb70d1270e3ca631268e39305ee134cb22947effca509"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/miaomiao.json",
+      "sha256": "8bd193e45eaef1c52407df91018d94f27c7cf72532827f2f232e183eb78f9a32"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/miaowu.json",
+      "sha256": "8fe907e6987287b701c110a887ca9039047ea71269bdc73f5d88c84fe479388b"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/mimixiangguai.json",
+      "sha256": "9d61a0155bd144a93864ef8df5206271aaf9e9c6f06d0f5419b0913362517757"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/miniwu.json",
+      "sha256": "d7d28f2ee7f5098e28b4d9364c952e767af77453a1a8f759e72135c681c43bb4"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/mojuanniao.json",
+      "sha256": "2de9519cc4755c7a830e3afbfead55febe91525f4bf87d8767120cd8a4bae8aa"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/molimao.json",
+      "sha256": "eda3d43bf47477f9cb658a495640c655940895ea54d0111b92c96db912dab0ed"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/moyiniao.json",
+      "sha256": "6706f35b84fe00701a39fc8a4ecf86abdd1df04da2bd9d33face898406627230"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/numusongmao.json",
+      "sha256": "7994e8f5a3eae272553fe51950d46372bb4820533ec7a6b9250a18a6cf4cbd0d"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/nvwangfeng.json",
+      "sha256": "57dc425a0b8550c82f606a20c512e7cc8e16beb7e78c08cc5e29e8bb77a0c148"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/papa.json",
+      "sha256": "94bfc4049a4e02d7b950030a599aee90aeb65b99803cc18fecdd4a461e331676"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/pengyechong.json",
+      "sha256": "df256c5ef2653525a8067d5217eb942c50e8f71f74a8392132b53b86fa2c38db"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/pugongying.json",
+      "sha256": "11af50da97fa942aeede2307f34481a5606dbf7071dbe3c7fcf30d87cd85f856"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/pugongyingwawa.json",
+      "sha256": "3e0b1b966912f431bfd4386b277977c306176e0a5190b10ecfbb284f32184274"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/qianjikui.json",
+      "sha256": "dd7e237e5f56ee5c0d1cabaeefc45619c2383ad33ef03e2f3010c377eb9543ee"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/qilicao.json",
+      "sha256": "caf4b1399da79308cbbdd2df96eb83043c2ce29aaf48b0ea395733d1c8498eee"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/qilihua.json",
+      "sha256": "a84cb650db22bc1f014215c2b8dd290ea313b563159dddd33e2d155ee1241eff"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/qiliye.json",
+      "sha256": "b4092cfd8e29c607c31ad813d912e814ae1fed00d85eab25a7b11af5d68d258d"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/qiqi.json",
+      "sha256": "fc829b878d14dca9514f55286248694554458a8f58eb514f2cd682fc9908845a"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/qiqidu.json",
+      "sha256": "93d84ee91c2311c5effad1113f885faa6a6b86a8f18872f1fccab6e1071eb191"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/qiqihou.json",
+      "sha256": "0d61b5c43cc631b3de683a170463d5212bb1fcdbc372335f05dbde8b788cb376"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/qiqilei.json",
+      "sha256": "3b8f92d7292821bed43809b8fd96940731482601c7635fa88d03bb6e428bd8d8"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/qiqishi.json",
+      "sha256": "471a9f26f88e0cabb751366e50e0ba53c2fa29275bbecc5447844eb83419d156"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/qiqiumao.json",
+      "sha256": "69b91bb7d88db3a3bfab0e5a6b671e4fae9171bcaaa85cb1171d4243eb21cf15"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/qiuka.json",
+      "sha256": "d058c13ac25dacf84cae0567da0345bea1e41b56d36b67eb2e5dfd5a5c06de49"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/qiuli.json",
+      "sha256": "1bc99dddd67df5109889b842536fbaef68eaccdb2e0ad10c7562e83f5359b297"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/qiuluo.json",
+      "sha256": "afd576d706a22989af4f2467964da4d6d53a85894b9730677230ef1c7234e1e0"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/quanzhang-v.json",
+      "sha256": "85835ed21f86b63f46de645c791ccca6f42f85ecfa0421b48ed242ce5cbb5dd5"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/quanzhang.json",
+      "sha256": "b576c15835077cd84ed5190c3164604fb807a1f9d8e2414ead8e172307e3cc1c"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/shandianhuan.json",
+      "sha256": "79a9274d80d18346ed5c4e2090fd95e439d3a1e0b14afdcfe3ae7be6cf749e71"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/shandianmanyu.json",
+      "sha256": "91d43e723220e3e1122dbbd0e0a98b25e451b1373c1b9cfcfe8de2c471dd3e24"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/shengbotita.json",
+      "sha256": "034c02a0fd7629a9c022c64fe2a4139c3b91f2a9c6568a05877f7975197ef813"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/shengdaitiantian-2.json",
+      "sha256": "e56495a5c6fd82f28f9c5d1536f0021fe7d5a1d8c1b3ce636d60b25e3aa58b6f"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/shengshuishouhu.json",
+      "sha256": "4725a0ff611188d469939addca4c2be573779af71742a82be1efe8c3cc171efe"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/shengyuyiwang.json",
+      "sha256": "3a38ccf403611e959b322770b6c2f82a2fbd83b93a94e5d22e8abb99dbef8751"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/shenshengshijiu.json",
+      "sha256": "5e6d6a3851704886f522d5c5cba47890ebae45ca09cca9b74d7772ada69ac39b"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/shenyusha.json",
+      "sha256": "0c4910f6ee8cf6ced681b15260d76e2c083977a401791d2dd76dc2297914ad67"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/shiboluo-2.json",
+      "sha256": "562828ad2ec39cf155a08e8e2924f658573b8b428f55a5f4222cc0ada61f8f69"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/shicixi.json",
+      "sha256": "2efcb92ac10b3ccf78c9b7d4c179bea18e07fc78465d0a18feb0335ffcb0f10b"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/shifuxi.json",
+      "sha256": "66a6f4da94a180a0bf0cc851043232429263dffd39e248def6d53ede47c20b59"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/shiguanwangxi.json",
+      "sha256": "ac3d2d88cc41b99d58e14bb3c1e71b6d648fa836b226214ee0f4bdcc512bc98d"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/shishi.json",
+      "sha256": "a91c2b087c68a6bfafdaeaf0433810701bd439cb5443e96678726edd1fea1472"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/shouhualei.json",
+      "sha256": "ed51be63bae2cf8f00efbed02d30cfeb4f347a13c59e5cf76627cc4081c9d61a"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/shuidishe.json",
+      "sha256": "5ff0b3732dd499a9ef22818223eca3d7aa2dc2f07b993a7f9836ec9f6262d1f1"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/shuilanlan.json",
+      "sha256": "4c23f09e21d362804cd69dd9972e691e3d8a313b5979fa4fb3091fb8c05e6885"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/shuiling.json",
+      "sha256": "d69f8d0a9816d5c27577bad05e1a22e852529a6a8a0f328b69900f53851c0573"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/shuipaoke.json",
+      "sha256": "2b82c7b328664120bd9e03991ad543e31252112d29ebd03271f7455753ac7178"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/shuishesuo.json",
+      "sha256": "c65ba7d2a3826d9a6885e1e140a1ad8819d563f4a9c13751aef5d1c25a30eb85"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/shuoyeyifu.json",
+      "sha256": "154ed5f5f7ab69b7bdf5f8910d732c18412d6690320eceaa84fb488e12f54464"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/songyeyang.json",
+      "sha256": "49bce7b95dcaef09fb8bf0e08d791c9c61c60ba2956c253acb2cbc392283dd1c"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/songzai.json",
+      "sha256": "56ec0e6320e30d8c2f060f3c55e82de438111458eff7d0395cceb49da635956a"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/tanshiyan.json",
+      "sha256": "b09472a579dcfc1281ef76249d89d311ffe7e3dc02c4f20052d44a6082f99a55"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/tiantianluo.json",
+      "sha256": "092b7c91c28c6ef5db5caf6ef30ef086fbaa11c942f19656cef98a2158265b99"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/tita.json",
+      "sha256": "d0770e2c8ab735a4d4251d518e7cccc434ee28e804e4fa27b635ac0559d51c4e"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/wuda.json",
+      "sha256": "4dedb58f1aed99a735443eefaaf96e713379bca68c666c3c4762d2ad2639b1de"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/wudonglulu.json",
+      "sha256": "586d9dc6e248f151c3a94eb3dd9864bb6ae3fcc9d85159211de2ead655184641"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/wulata.json",
+      "sha256": "1c356c7aa7eb758ccf7ea47728ce1d78060093c5a48bfd299d1b3ebb794544af"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xiangcaotiantian-2.json",
+      "sha256": "38a4bafa4aeff5c4aa2eee9c58980050cb28ad8771291150598714dd78bb240e"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xiaoboluo-2.json",
+      "sha256": "d44174e962e7821d383b9b28988c00ca36c51ed5f5d134cb0989affa738150f9"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xiaocaochong.json",
+      "sha256": "9372a8f065375ee94b2c2eb278965a004e825bb102f7e8ebb98ff01878dfee99"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xiaodianqie.json",
+      "sha256": "2fcf515a5067e05317b6d781f5baff74294d56e86a039288cd0cda358267155f"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xiaodujiaoshou.json",
+      "sha256": "b2c466f09e798d9d0fa8e54c1fcf876e2086e423d2ca805f2bcc12db29b78fed"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xiaoheimao.json",
+      "sha256": "5a824f5106b9db77e7a3a8c9f893cca5fe6bd7b9677011efc34f58d8e51868ef"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xiaolinggu.json",
+      "sha256": "388ee79ee65e8407b5801d9d63e066571c1731ff80327ea4330dc6a70482a934"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xiaolingmian.json",
+      "sha256": "06f7f9612082e6da2b9a0b7b6c2c73aaa0b2ecd6791ee445b01ecdec44cbd0ba"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xiaoshijiu.json",
+      "sha256": "f44617e7df55d8a448b8e8d47b90c390073e6c0155340749de88c56e026a958e"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xiaoshuta.json",
+      "sha256": "d7f6656bba0c443e9c7a1dc9d188c0aaacd073c9c0a549ccc6675ee99f6cf9e5"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xiaosongmao.json",
+      "sha256": "b9be9238ad865a196e65cc2179d4e9768cb7f1759d84c0afcef360a646b768f1"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xiaoxiangguai.json",
+      "sha256": "7ca83d2784f4ca7d1ff4065a5316f658297b57ab65143ef333685fcb78e6f20d"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xiaoye.json",
+      "sha256": "c1c56c75b763521018089f3664899a8a1f2174a041d67b5ab0ecad655e2d7f6a"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xiaoyilong.json",
+      "sha256": "936d845a4d1c826eec4e44b1e0ff987ceb4883fc985efabdb71945b19895c9d6"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xiaoyongshi.json",
+      "sha256": "40ad585dc9ffecb9ef862f739889eed326c7fa24c1555503d0783fc6b8322dee"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xiaoyu.json",
+      "sha256": "c9fa1c00778760c6543e67fb9dc724a3b51ce1ec0c0de8dcab2108a2b6c1d12b"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xuanyechong.json",
+      "sha256": "85f176ed7ff5e8a41ceb0b394976a41965892588cce0835f39fdec116beef1e0"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xuedingbulusi.json",
+      "sha256": "6425521fd2d4ae465bf5503c1a543e037394e80323bf1e99c8a74416f116348b"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xuedouding.json",
+      "sha256": "1a32295eb5eec102638c751a16cb34236679c39a341f56b535e7b0931f06044f"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xuejuren.json",
+      "sha256": "1bb38c67bb6932054313d126425ea47a389b57c149bf06e9e0c82900d3bc049d"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xueling.json",
+      "sha256": "9e9fc5862d59442a2ab6a067108dacf76b3bf93dbc2942db7a9bf94d4310ab0b"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xuemanren.json",
+      "sha256": "72e0cc58a32ff350068cf0a83a19904a1b0b7ad7f8182833156f0bb8af72cffc"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xuerongniao.json",
+      "sha256": "a9887927590c5cb0d8aed0924e8987b8da524ce9f18d50ae2f51bb1a40a40934"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xuewawa.json",
+      "sha256": "f7865e45d8e5aa886d96a906b2bfac0bcea5ac265cb4751a450e2bb06cc7c894"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/xueyingwawa.json",
+      "sha256": "3f2d6f678258863daa22ed6382fc41f09e760f7802a26af653c55603fa0070ff"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/yajiji.json",
+      "sha256": "6421f821949ff4f233107eba91311c7ab9b0d9f17c903534d5a14bc31b34e9a4"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/yanhuo.json",
+      "sha256": "5345a80231604df1d91bf7ab3a63b51c8596c31ee88d3690e524a72f743cc14f"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/yanweita.json",
+      "sha256": "a22b6f2e2d4234d61acb0cec7d0d6735b7146f44f056e4557dabdbd1f6619d5b"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/yibeier.json",
+      "sha256": "ce21e768d32072450114637df0b0bdb59c000326bacde5523204a2c586c170de"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/yibeifenfen.json",
+      "sha256": "80d0244a7309e736df8490dc37461a2536b630973a0926f4b937ed15528f8201"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/yilanyalong.json",
+      "sha256": "6b61b34b2c0dcb7f467aaa9737bf38c24cfbf7de03e75f9cbb70c7e982d5d424"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/yileilong.json",
+      "sha256": "852fd3b805ed2ed30a10e6d8f5cc625e364454ced06891283765ec9307ceceee"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/yilong.json",
+      "sha256": "f86bdc2d95d3ea22dddc5d6ace7f77d56326bb4577cc6231d10a51a98fa73116"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/yingli.json",
+      "sha256": "4232fe306256a1cd6d4ae68fd50e795084e2ccae6f0244377b053a4e76f342b3"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/yinsuquan.json",
+      "sha256": "a2e28c6182af745e18b10507881fbe3d8b69edeb3b1f226638cb0ce60301a368"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/yishijuxiang.json",
+      "sha256": "65b7948046983b95182f86315b5d6b58816d3a33981138b93a2d298047c67aa3"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/yishizhe.json",
+      "sha256": "d5ed3ed1ffce16e9f0e4ac8bb75189652e57e75031d1b409f4470dec2e88a47a"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/yishizhixing.json",
+      "sha256": "5b3b0d8d8cb44876729c6503136d86ecc24b0889e201fde8ac0e11b692960a15"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/yiwofeng.json",
+      "sha256": "e134d7e6b3671109098b2c9d1ca9083982aadf44e25154e833295fa9ccec3108"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/youguang-rongrong.json",
+      "sha256": "ae566536867b28a52dec991297f2f405a49f15ea09ffca8636a748ebe4b5325f"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/youmingyan.json",
+      "sha256": "a2e7b800d1fcabea394fdad2294a24ec2d8ca69a235de6073735ad3586d24230"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/youshemoshi.json",
+      "sha256": "dc4fa532f0e1d5ae92b3497c14ceeca967fe8ca46aa9427105eabe044257c7eb"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/youyingshu.json",
+      "sha256": "53557b93fe47918cf2ffb625c4c0a2fa66816a1a4b196a95e3ca1f81bcb06d7d"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/yuanhaoyu.json",
+      "sha256": "ad5ea14f155eb5c3c6b17f40b825b46fd87677fe210a697465807f945c64c402"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/yuanyanzhizhu.json",
+      "sha256": "9850d725f1cb6d4255fabd7e61b1ada5b8821b9e12e7793a1fce6e754105914a"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/yueliangtuo.json",
+      "sha256": "ccc9e335dfeb617fc59e910a5b77e9ece32c32e33077935ca5a9adbf9a795436"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/yuxiangjujiaozhu.json",
+      "sha256": "67a2bda3db7c9bf5b55a22a238be848f1e67e422b400c63bfa3e6c4bc47572c1"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/zhenyexunlin.json",
+      "sha256": "73523a450a785379de75f46615dca7687996803bb1d787e53f286147f15e9d52"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/zhiyutu.json",
+      "sha256": "be60dbf8d90d36f4cf8c579ff7fed6b6729922d82efa4263bd1e948d0f8392e1"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/zhuiweiyang.json",
+      "sha256": "d3682338d09e66fc9d5d178f37d4ad0da1105b94d37ed3ca6d885f881b6268c2"
+    },
+    {
+      "path": "apps/web/public/data-client/roco-cn/characters/ziye.json",
+      "sha256": "5085b1d9294959c4b7673421d7f962499fa1b30a856083e98be3078ba6ac3842"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides.json",
+      "sha256": "8ce321441c974f0b37d2aaadaa566baace1ad89a8afd7e98f33b2bd2c625ae09"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/app-store-official-download-verification-guide.json",
+      "sha256": "fe7aa173d2936d5b147c62b46826d206fe89dda94412c975fc7fd368b51c35ea"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/beginner-guide.json",
+      "sha256": "0c5c81bfacc9d31579e6d7851351e7d1be56ab5c6161f60fa317d41c6a6f191b"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/black-ticket-six-selector-guide.json",
+      "sha256": "bb12269f4621435413dec258f7ad54cbf90ebe7dbed9339b208712477a9483f7"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/bluewave-band-music-character-guide.json",
+      "sha256": "4080c6c610d5be29e846943bd372527dfe3d2c3e9a945d749524d0c3d1e96018"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/bridge-sea-campfire-checklist.json",
+      "sha256": "4c1fd24051630ed34c500fe4996972110d070e180ec7d867ac707afaff64863f"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/channel-rewards-code-verification-guide.json",
+      "sha256": "8c68ed6b3c484c21af4da7d916b0d23435b363c07282fda53cc724d261f044a6"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/character-vs-outfit-pull-guide.json",
+      "sha256": "b88d4997450986bf0744d2b025697bff267642e7797a09699bf2d9e9ac77beac"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/cloud-face-sculpt-guide.json",
+      "sha256": "9a0078906988e6e0c5623be3566ad07e19e5c6964168ce930cfadc9b648ddcf6"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/cloud-sea-download-crossplay-guide.json",
+      "sha256": "75106b60de133a916dc4b7b2c805cf18ed480ccdb3fc23dbefc4c07c177de854"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/collaborations-guide.json",
+      "sha256": "535549c7cec68378ec88edc84044974e07e1946d1b4ec5b3059b3f9f0978276a"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/combat-system-guide.json",
+      "sha256": "c8246108ccc812482905f18075412eb32dabb03fe02570779ccb57e6a54a7e78"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/download-install-guide.json",
+      "sha256": "e24a3489c398b9c894811e228f788620240bee0b6392f18b782f25f477d802a7"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/early-2027-december-closed-beta-faq.json",
+      "sha256": "d9c718c12d55e2bf33b9e91e79e755172f70c7bda7e45100295016ae683ca699"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/farming-guide.json",
+      "sha256": "591b1cb01c0f34427993dbb0d0eb04252ef172fdb253118b8702be2dceaa09aa"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/full-walkthrough-guide.json",
+      "sha256": "44a1c7dc774b4ff71d414186e27111e4b2d8526225e8a94710048e6a366124ea"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/gacha-recruitment-guide.json",
+      "sha256": "48a83dfa0245e2a22a6ec2dcf2e47c02138e890165793661b6a2d18e0edfae51"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/gamescom-demo-gameplay-review-faq.json",
+      "sha256": "ffa1fce8d0ebab174aace0c5dc256a9d7ef96ef8569aa05c64cef8921255452a"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/gamescom-demo-review-gameplay-faq.json",
+      "sha256": "399d005833cee6fada25fb87adb34250f5935d610d6497ceea2e882cc0994a0c"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/good-gold-bricks-farming-guide.json",
+      "sha256": "4f1528b6fb759cd08d2e2120add3c1ab47cec70c14a243ad4560e84724de00ac"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/guide-freshness-toxic-advice-checklist.json",
+      "sha256": "fed0726cb5f71c3e2fb6d40641d73777fe2c20cd502b76ce693de87cc8f9d6af"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/haizang-combat-highlight-guide.json",
+      "sha256": "3abff52d9504f0104e99474f4005b66aa090406fc24e1cc86877dc7ef9e66c91"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/heige-haizang-double-intellect-team-guide.json",
+      "sha256": "7ca006710ee9ccd9f60097b874318d01c0aa32931ad04920a77270ff9189552f"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/hidden-sea-ending-guide.json",
+      "sha256": "1f49827767472ad4d521c9a8b2c2e03148882ecbac5c36aadd51a36e7761acd4"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/horn-farming-economy-guide.json",
+      "sha256": "15a0e4b829a06a6f865c58210bfca6e7e71a751b6bf822c1b300ecee46a5cff9"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/hotfix-feedback-roadmap-guide.json",
+      "sha256": "c570e3d45402c12cda9955d811898990703da54099ed69e48c01f99ad63c35b5"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/identity-v-collaboration-guide.json",
+      "sha256": "678264b9f782411186b6e66f13d28df2e8315c8b74fe1a5f2db959f4e612eb3f"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/identity-v-mobile-launch-event-guide.json",
+      "sha256": "ddd8ed2c7900b0d3cfa836b8614ce5c39235e93dea3ffb57346b195b0d2f4454"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/identity-v-signin-screenshot-rewards-guide.json",
+      "sha256": "676e63710fd40dde5082a108524a2f7a3f855a955a26b60cab96b466b0eea947"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/known-issues-hotfix-guide.json",
+      "sha256": "b6bb0286536be8d9d59aff60d2c6d4dd66e3f049debd58de59abc4e43fe1ebad"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/launch-30min-checklist.json",
+      "sha256": "abb795b75932ce06c875f2629eff17c5771fbf426518e3a32784b5822e0e586f"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/launch-boss-map-guide.json",
+      "sha256": "2dfeabc21d67f49dad19c5666a941bdc27de7a6ab1ee8273a5bd4305044a35a7"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/launch-day-guide.json",
+      "sha256": "1cb76dfebf89dee1f3330419532fa1c54594182ffcfff0e944e4c59993c2a209"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/launch-day-vs-ashfall.json",
+      "sha256": "8c31f9ee78c536fff6bb415dc71272cf7d862946de70891545f62a5737713583"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/launch-preview-calendar.json",
+      "sha256": "d19f30f02e643b345aeef02828edf0768066be96daf91fd0dc125800c61d1500"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/launch-rewards-codes-guide.json",
+      "sha256": "64f6c08f91b7ea0017695c7e56cb8640e33503d29b2bc0ffa119388d3c07815c"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/launch-week-daily-checklist.json",
+      "sha256": "5dd91c36544e1a91a5cbad656fc2b32a053c9ca4001e140ac09d17da85e1c019"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/launch-week-overview.json",
+      "sha256": "7573ff9c12f10863fb59f8d619fdc3bd9cf528256ceddd24a4b7b25abfbcbdec"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/lost-sea-act-two-july-30-prep-guide.json",
+      "sha256": "5032397ec7d2ede59e0315f570f83cb63b26d041848d32a7a14b6e77be400627"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/lost-sea-act-two-live-route.json",
+      "sha256": "75055e600bec2082bc1c1c7bf1331472652f32062e46e9d4e8923b49853661c2"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/lost-sea-new-islands-ship-prep-guide.json",
+      "sha256": "12fb9d3a12113f7480fb88226acd11b33e646ffa259aacc5194dd98739ed648e"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/mechanics-faq-guide.json",
+      "sha256": "efd435e5c1a31d211ac34784589925cfe88fb164e6bb0b38c6f2440f59757887"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/memory-reunion-guide.json",
+      "sha256": "ff574c6e850e8eb9034e3e4f36fe71a55c6df67b84f6dadf9b0bf2a31d6ebeb2"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/memory-tower-weekly-dredging-guide.json",
+      "sha256": "025a7799b54c5e1e60aeb6a12f8faf480d49516cb91a5083117379046ad435bd"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/mobile-graphics-fps-heat-settings-guide.json",
+      "sha256": "05af1a4c30ae19c872126781380f575d2e4d025e4419dfc90c7a4e4da3c0a9fc"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/mobile-launch-guide.json",
+      "sha256": "0b9c1052f09505440bec4f317c42708aef0fbbfd887259ce8552333ece9efffa"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/mobile-troubleshooting-guide.json",
+      "sha256": "8dbd21d358b6b07cdd03afd59bf6ba14999b93cc7172454c8802292700c2a12e"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/molly-starter-team-guide.json",
+      "sha256": "fcde15d0d86aa72f0553b5f1882051cfaf480e0ad49bcf7c74db256822cf391d"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/n3-abyss-week-one-route.json",
+      "sha256": "1eba34e2a9e91d19377da523e6a563ee99cbeda27e550465273f6c4917a26da8"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/name-disambiguation.json",
+      "sha256": "2830442d2807925881a70eab5e1ff31f41f184a64658d4ef31ddd158875b161d"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/official-2026-test-timeline-guide.json",
+      "sha256": "2bd0e561b1d40f803c4d028ec098a8ecc06edc1ba0373018c90bfb92c98f5b18"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/offline-seafood-stall-event-guide.json",
+      "sha256": "bcb8cf08cbe12b78d910425ad8eee1eb18c9d486fd6d2208e78e553a8a54c20c"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/open-beta-version-center.json",
+      "sha256": "dde32e947c15a3f6bf6d01e0e67498c0abe8c7128b6a25f78037dab1a6035b46"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/otopia-endings-trade-guide.json",
+      "sha256": "e1bcb4047f1b6c57079b2fbb5ee4e28481e6e35fd7a2eb59407c572b14a10bfc"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/past-shadows-guide.json",
+      "sha256": "42852a081800404d5bfe547729952d720f006880044f3d344d5e25e9302b6a77"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/payment-model-guide.json",
+      "sha256": "eae2d9ddeff415e48c9ce06b3bc15df4dc9ff27453b4d404e11431d2f344828d"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/pc-mobile-cross-progression-faq.json",
+      "sha256": "37df88807791aecda35d86acb4ca2737a8a7bf3b1bfa0f6545af2caff852265b"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/platform-download-guide.json",
+      "sha256": "58ffd35bf440bd97a4955525f84b91fee747c91bcb9a041ed16206fd18573d1d"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/progression-guide.json",
+      "sha256": "e6d96ac9b715acc96b90925677a740056f75d3a8a5e08888eb4e5c201c885e0d"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/ps5-release-guide.json",
+      "sha256": "9682b855ae55b8c5231f63ed02ddc74d95f7eb97b367895c5778ec64b9e4873e"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/ps5-xbox-review-gameplay-faq.json",
+      "sha256": "b3c1900808485dd6c64b650c15d31b49aca27d725ec45d782126fa5e53bfaffe"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/scarlet-duchess-boss-guide.json",
+      "sha256": "704f7907418497de00fb1c759604b84782132e0831e748c6eb2b14c2c164caac"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/sea-of-remnants-p2w-gacha-explained.json",
+      "sha256": "2f1d3b4de72ba477bb367e47deb308364a7ef4dd87b43e1a7388049523be230e"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/spongebob-collab-summer-faq.json",
+      "sha256": "59756e8f125521b53a9a716c022403a47e6734480322ad226468e202572b8778"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/steam-release-gacha-solo-faq.json",
+      "sha256": "b30b8f2b329f3df78335e0d86c3b2bf235b15074dbc46adbe0671d261f8a1468"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/system-requirements-guide.json",
+      "sha256": "5b20eaa24d97323a1cd38034cf17c19c2326cb322961b0f8115291ec3ec3ef11"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/team-building-guide.json",
+      "sha256": "78683a1a750aac3d6ec318374379f7da74eb297ffc2f835ecd704ec62b57232e"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/tier-list-guide.json",
+      "sha256": "98963fb1a7ad9b0cc53175b1eef58b76544eba0d7ad98149f52473c0b79ce69d"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/today-live-events-calendar-guide.json",
+      "sha256": "7e29e0a14a89018ca340ba608521dd4c8285fa94314f33cf08416d0fa9e36659"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/trade-market-guide.json",
+      "sha256": "8e9adb0888e0e6b5052e3a2e0df556d59f3901757d115ac7e15ac99e77fe13fa"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/vs-aniimo-guide.json",
+      "sha256": "bd1f6603e2796cc689f7ea3504179fd99db5ebb56d10e5b79fef2c4efb8cc028"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/vs-sea-of-thieves-guide.json",
+      "sha256": "8a8be2c8fe530038de1aad5e51777c0417e387a9cd987f84869413f7d0d931db"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/wave-chaser-program-guide.json",
+      "sha256": "3100aa2d08bf6d749456243758be0c884c567a5d3f0d1fbf84eb8d7f0391f530"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/week-one-daily-checklist.json",
+      "sha256": "6b5800b1ab94ffde757733252a50187cbd7585dcc596c287c989a59b3229265f"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/week-one-live-ops-overview.json",
+      "sha256": "72ce1ab8932fa434442237e100d32f6c9802b1a9bb0cd7fadac2501b9ec8437d"
+    },
+    {
+      "path": "apps/web/public/data-client/sea/guides/what-is-forgotten-sea.json",
+      "sha256": "9706487165149681644bec5b7875c4a5d4428ebb3d068c71680dfc0413503a67"
+    },
+    {
+      "path": "apps/web/public/data-client/tier-list-genshin.json",
+      "sha256": "2ca590c38ff62e736ab8e2d413d7f09c60a14170a571d59868c7b1e542a96fcb"
+    },
+    {
+      "path": "apps/web/public/data-client/tier-list-starrail.json",
+      "sha256": "2a480a0217ccc7ed0c0d74d4c19c97e24049d93eddc2535d3ff62d085124e145"
+    },
+    {
+      "path": "apps/web/public/data-client/tier-list-wuwa.json",
+      "sha256": "d4e129cf0f054e560094d71e0ec0fbef3800de5e7e18c40c2e8c5ef2195a97ef"
+    },
+    {
+      "path": "apps/web/public/data-manifest/games.json",
+      "sha256": "6d890af900dedddaf826bd85184609e20f2362c3f06dd27fa0b19be6f7838d18"
+    },
+    {
+      "path": "apps/web/public/data-manifest/search-en.json",
+      "sha256": "87e778839b1f7f05c8b52d6a6b9ebfff8a6902a88afaace6b003eb10bbbb4e1f"
+    },
+    {
+      "path": "apps/web/public/data-manifest/search-ja.json",
+      "sha256": "893cb4ced2d7defd879d888e656657cf54a8b0ad83ed530f63586fa7da437691"
+    },
+    {
+      "path": "apps/web/public/data-manifest/search-zh.json",
+      "sha256": "ba4f2f73ee4031a773d8491715583ec6fa6a723cbe6888f4c6132ffaccbf7540"
+    },
+    {
+      "path": "apps/web/public/data/ananta/raw-character-materials.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "apps/web/public/data/ananta/raw-characters.json",
+      "sha256": "7d8394e1777c3bef7a7f9f72c6d6adc633fad68977affd087d6aafa8a4ec143b"
+    },
+    {
+      "path": "apps/web/public/data/ananta/raw-guides.json",
+      "sha256": "239272401eac2a09a0c0edcafe9e8eb5df37fbc64443e627f0794b5abeb7eaf1"
+    },
+    {
+      "path": "apps/web/public/data/ananta/raw-materials.json",
+      "sha256": "87b9ad367244b3dc62ee5fe3e48604c5153edf2bd21cafcb5145531ca63d6700"
+    },
+    {
+      "path": "apps/web/public/data/ananta/raw-weapons.json",
+      "sha256": "af7e4bc6cc6b6def48c4319c4cf0cc9098ecb214cf8d9c24e14d7cf3907b924d"
+    },
+    {
+      "path": "apps/web/public/data/aniimo/raw-characters.json",
+      "sha256": "292e096e35fdb5cd98d1188d1d23a9e46998741930e2095f5a1d8ee928094c39"
+    },
+    {
+      "path": "apps/web/public/data/aniimo/raw-guides.json",
+      "sha256": "4d31d4fd827512aaabf04b9821810685481e90f6989ae0bba41043eb114e1ba8"
+    },
+    {
+      "path": "apps/web/public/data/aniimo/raw-redeem-codes.json",
+      "sha256": "6eafa12c388c59db5a67398b94fd903a82ae70f4ebf36f729312da567e924cef"
+    },
+    {
+      "path": "apps/web/public/data/aniimo/raw-regions.json",
+      "sha256": "5d61d30a90b2e75a2484acb147debb2168b3ed79fa96929239f9e6a497c29b12"
+    },
+    {
+      "path": "apps/web/public/data/endfield/raw-character-materials.json",
+      "sha256": "3170dc7edb9f022388aa6bb0fec010665f7cdb70c29df01fcc2283790a8dced3"
+    },
+    {
+      "path": "apps/web/public/data/endfield/raw-characters.json",
+      "sha256": "6d1dc554a8a2772aab0cee23de6b655191c35fb2503403d29ecf043412c64e19"
+    },
+    {
+      "path": "apps/web/public/data/endfield/raw-gear-sets.json",
+      "sha256": "a56407c714f74032e99f21507fb9ed8a2d6b85838cdfc50871fbae29d2f9568a"
+    },
+    {
+      "path": "apps/web/public/data/endfield/raw-guides.json",
+      "sha256": "f5d7aafb060a93b2f2d1b0a911079445f85749ce8c303b6f0d0841908cb30efa"
+    },
+    {
+      "path": "apps/web/public/data/endfield/raw-materials.json",
+      "sha256": "107b4c3f3b78019b6620a9c3df8fa42883e54c34e1b27416e007b0d77758858e"
+    },
+    {
+      "path": "apps/web/public/data/endfield/raw-regions.json",
+      "sha256": "07936da77a16f69b568a75c1cb56b2821c37723882807ccf0161fb878751f5ab"
+    },
+    {
+      "path": "apps/web/public/data/endfield/raw-weapons.json",
+      "sha256": "d03e4dab76a5a94309a71582dd3e17521b60366fa16522069dea0379c72d05f1"
+    },
+    {
+      "path": "apps/web/public/data/genshin/raw-artifacts.json",
+      "sha256": "ab5a90d0ea792560a058f87cf1d5be606f7dd2e1ec5f8191d0075541eac619e6"
+    },
+    {
+      "path": "apps/web/public/data/genshin/raw-character-materials.json",
+      "sha256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16"
+    },
+    {
+      "path": "apps/web/public/data/genshin/raw-characters.json",
+      "sha256": "59f006e360b1576fc1ca691d355a9de8df69b2fa99f42005afc85758fc8554ce"
+    },
+    {
+      "path": "apps/web/public/data/genshin/raw-guides.json",
+      "sha256": "8d0c81f541218f4df90fb9766fa13351bd8ca1147f012be36bb694db3accc310"
+    },
+    {
+      "path": "apps/web/public/data/genshin/raw-materials.json",
+      "sha256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867"
+    },
+    {
+      "path": "apps/web/public/data/genshin/raw-redeem-codes.json",
+      "sha256": "859af362400044021a85a1cf353d86ad6da2cfd0b54072e1582dc8564bd7f9d4"
+    },
+    {
+      "path": "apps/web/public/data/genshin/raw-regions.json",
+      "sha256": "037c917f292e5515e43e5772cd1910878caf9dac0c2d964ac4d4c74d5e33d6d6"
+    },
+    {
+      "path": "apps/web/public/data/genshin/raw-weapons.json",
+      "sha256": "9154393f32c850d015754d2f793e0d05cdbabdaee285bca2e2f9c8868ca60e4e"
+    },
+    {
+      "path": "apps/web/public/data/guihuan/raw-character-materials.json",
+      "sha256": "61104ae86d31d33589b182c45ec52e27af0763d07e0d36545e85e5e34acb6963"
+    },
+    {
+      "path": "apps/web/public/data/guihuan/raw-characters.json",
+      "sha256": "7150c0c560afba80877cb7d1946f4cdc373fcdae4a9d3c2a74fa4f3ef2aa601c"
+    },
+    {
+      "path": "apps/web/public/data/guihuan/raw-guides.json",
+      "sha256": "da7ea0afb0577fe6c59325c815e12c89735ffcdc5a25dda9fe39d25e7cca4265"
+    },
+    {
+      "path": "apps/web/public/data/guihuan/raw-materials.json",
+      "sha256": "9c011ad9715c0fdc604f8482f01d0a20319580368a048aa7bd90f9ebb16f6c43"
+    },
+    {
+      "path": "apps/web/public/data/guihuan/raw-regions.json",
+      "sha256": "389458b3f0fddf4e1bc42ec27e5f3079d47d537312385135f31ab191a41ab327"
+    },
+    {
+      "path": "apps/web/public/data/guihuan/raw-weapons.json",
+      "sha256": "648a1787bd21454dc0ca832621bcf366a12bb17558e6ca515cef25c7a1310c23"
+    },
+    {
+      "path": "apps/web/public/data/hi3/raw-astral-ops.json",
+      "sha256": "8853f5e88811a5091166b7fa69d2ec36cebc047d97613ee234f478a06947afbb"
+    },
+    {
+      "path": "apps/web/public/data/hi3/raw-characters.json",
+      "sha256": "2fefa58de0b12a061717c9a355e2c1f87f3b37752c55c635c91cace21d07061f"
+    },
+    {
+      "path": "apps/web/public/data/hi3/raw-guides.json",
+      "sha256": "565d913c7c58809e28f4a03e1348d69e118a56e3a44f7aaf955ab5932ba24608"
+    },
+    {
+      "path": "apps/web/public/data/hi3/raw-materials.json",
+      "sha256": "b3abcff08b66da1b21336fddb95bc2300be0da351de23aa32f032e06d04886ec"
+    },
+    {
+      "path": "apps/web/public/data/hi3/raw-stigma-sets.json",
+      "sha256": "f90b36f9e54ce1f667bec08ab5d8893e6cc18081ec875cd4c2b861f6d3fbc528"
+    },
+    {
+      "path": "apps/web/public/data/hi3/raw-weapons.json",
+      "sha256": "16b7c3bb461d84d5b28995f0f2b2b8d4bb991fe1903d6d95b6be47e51ef2967a"
+    },
+    {
+      "path": "apps/web/public/data/nte/raw-anomalies.json",
+      "sha256": "429676a71330490b69718c8fdd65a30f2e7ee7c7d030f132ba5b26ccbc83e903"
+    },
+    {
+      "path": "apps/web/public/data/nte/raw-builds.json",
+      "sha256": "de0c7cb8db8615592f6a94917bf387c20421d38049bb56570c99d6687e57c381"
+    },
+    {
+      "path": "apps/web/public/data/nte/raw-character-materials.json",
+      "sha256": "e749d53d5307bd0ce0f5bbdeb0c5b1f81134f5ba2c4d70725da0eb974d6002f3"
+    },
+    {
+      "path": "apps/web/public/data/nte/raw-characters.json",
+      "sha256": "b3693e9cb5d8b6ba29a9ec3bb81dfd3755764b34255af3a2e454ad8c0e3ad938"
+    },
+    {
+      "path": "apps/web/public/data/nte/raw-disk-sets.json",
+      "sha256": "43db37750a46b2b63affc1ff43f3bf43c8e2de03166f2a4d4009c2efc08112f6"
+    },
+    {
+      "path": "apps/web/public/data/nte/raw-gacha-system.json",
+      "sha256": "116bf6ec0d9d172fa9f0f19a651fce95362a855e070708ce0492e5a530d44be0"
+    },
+    {
+      "path": "apps/web/public/data/nte/raw-guides.json",
+      "sha256": "0f2427eb8d971895220b28ccce923acf2bd9c214055eba1dfd2a5964c4ed3c3e"
+    },
+    {
+      "path": "apps/web/public/data/nte/raw-image-sources.json",
+      "sha256": "e0982edbf354d45e42d8e606d467a46a5089a1f160e6ac72cc5dce2b3c025838"
+    },
+    {
+      "path": "apps/web/public/data/nte/raw-materials.json",
+      "sha256": "eb493d5923b34bf20e840b31bfa93d145c6a3397163798b73e1f85a8f0b6328c"
+    },
+    {
+      "path": "apps/web/public/data/nte/raw-redeem-codes.json",
+      "sha256": "2d906e1df4b8ed9da52193ce1749426827978f5be532aee83fbd6887f2b22d39"
+    },
+    {
+      "path": "apps/web/public/data/nte/raw-regions.json",
+      "sha256": "edbb257de77e51ef540d8f617a155c2eb9a99dfb3d0e29334929cbe06ecff910"
+    },
+    {
+      "path": "apps/web/public/data/nte/raw-weapons.json",
+      "sha256": "f46984d25d5c7013e4434dcee1ed0cf0544687b480e845c0e4e3c4b20bf508dc"
+    },
+    {
+      "path": "apps/web/public/data/roco-cn/raw-characters.json",
+      "sha256": "47e0e1fbbd475fd80e63c3b96f0fb3b6ec26b6e6c8756e676793589228a2659a"
+    },
+    {
+      "path": "apps/web/public/data/roco-cn/raw-guides.json",
+      "sha256": "7a3a5bb63d114d42d2c3cd6b4214a8174e8d75c3eeb2c2498727025fdcf37df9"
+    },
+    {
+      "path": "apps/web/public/data/roco-cn/raw-materials.json",
+      "sha256": "ffea53c1592f82c65a17d6b28d7008832676aa3ea20c48a9a3cc21442b315ed1"
+    },
+    {
+      "path": "apps/web/public/data/roco-cn/raw-redeem-codes.json",
+      "sha256": "3cf6cc72eb329a0abb23f3a4ae41e1765012be5c222f39076dc07c3a3ab664f2"
+    },
+    {
+      "path": "apps/web/public/data/roco-cn/raw-weapons.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "apps/web/public/data/roco/raw-materials.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "apps/web/public/data/roco/raw-redeem-codes.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "apps/web/public/data/roco/raw-weapons.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "apps/web/public/data/sea/raw-character-materials.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "apps/web/public/data/sea/raw-characters.json",
+      "sha256": "b8dd35af7c7076f8944e37a9677badeb5c373b6fcbb0e161044a85ac8e47a9ab"
+    },
+    {
+      "path": "apps/web/public/data/sea/raw-guides.json",
+      "sha256": "b69e519c94ce674d761edacef45689a969948a1d2f9bf53950ce41a3040df041"
+    },
+    {
+      "path": "apps/web/public/data/sea/raw-materials.json",
+      "sha256": "9cd7dfb2eb3a23f2a594dbfe76f050d1d221f99457808b38e62de07b69f175c6"
+    },
+    {
+      "path": "apps/web/public/data/sea/raw-redeem-codes.json",
+      "sha256": "620ffabb94306ccafb456fe1b666d1053dae56f3dcb6c14e05b5e1f4828add19"
+    },
+    {
+      "path": "apps/web/public/data/sea/raw-weapons.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "apps/web/public/data/skjh/raw-guides.json",
+      "sha256": "eb7002cc027a652e89059ec45733e42898d9b8421883a3e7eb32a4372f51a9d3"
+    },
+    {
+      "path": "apps/web/public/data/skjh/raw-materials.json",
+      "sha256": "d4417ce41e46786f35c4b4364bc32278f3fa1419f6480621f3a9ff4300c9a03d"
+    },
+    {
+      "path": "apps/web/public/data/skjh/raw-redeem-codes.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "apps/web/public/data/skjh/raw-weapons.json",
+      "sha256": "c7c4d7dfa74718b066188eee10192dd90af5b78aba1a3de4aa9a0782d94a3ced"
+    },
+    {
+      "path": "apps/web/public/data/starrail/raw-character-materials.json",
+      "sha256": "f80c66941355b2f40f166850551c5b30ff1bfbd14b952d32683406c5a5885641"
+    },
+    {
+      "path": "apps/web/public/data/starrail/raw-characters.json",
+      "sha256": "75d68d458694f46a95e15a94216b7a0fb9da5eadb14e1dfef3f90d56a2480f38"
+    },
+    {
+      "path": "apps/web/public/data/starrail/raw-guides.json",
+      "sha256": "21f5f702ac56e818e0d8ccdd308e2208d031dc7e2e97ac3a6456ba8a2926f080"
+    },
+    {
+      "path": "apps/web/public/data/starrail/raw-light-cones.json",
+      "sha256": "3c5b5b3107a3281899f354370a91a475d66c0eeb0f2b7f5778517086aba30ffc"
+    },
+    {
+      "path": "apps/web/public/data/starrail/raw-materials.json",
+      "sha256": "226e8b8549fcd324d3c2fc06a81cbd4d71b71d07b2e63ea5249e206b5beab901"
+    },
+    {
+      "path": "apps/web/public/data/starrail/raw-redeem-codes.json",
+      "sha256": "d21cd2bb00612bd0324c728bc2730c9a76e432e17925a9f7b665351992c1cd31"
+    },
+    {
+      "path": "apps/web/public/data/starrail/raw-regions.json",
+      "sha256": "e7ff83d71e9558fa344d04b64e96fa24cfca40a0a9ed2bbb66162552f6e170a3"
+    },
+    {
+      "path": "apps/web/public/data/starrail/raw-relics.json",
+      "sha256": "08d7a4eefa45002708c9591c50ca1e4fd67a71370051bc80b213a261867eab92"
+    },
+    {
+      "path": "apps/web/public/data/wuwa/raw-character-materials.json",
+      "sha256": "09114fa267a69901e11e7da7ac9fe1355c9daa199425abdcfb52d6b71a89db7f"
+    },
+    {
+      "path": "apps/web/public/data/wuwa/raw-characters.json",
+      "sha256": "d0adb35281c040fd593c3f8d3a07c13f1f81ec95b7f221f0dca4bbc3e1391bb2"
+    },
+    {
+      "path": "apps/web/public/data/wuwa/raw-echoes.json",
+      "sha256": "ed7224d05f9353a4bda5f2a049ef3b69de4d719e35c273d3769bbc096123d3fb"
+    },
+    {
+      "path": "apps/web/public/data/wuwa/raw-guides.json",
+      "sha256": "0c0b6aefd18f3fe8e1b3750e750dffadba7d50fd44daaa7a1ac8b6fb2f088603"
+    },
+    {
+      "path": "apps/web/public/data/wuwa/raw-materials.json",
+      "sha256": "36e7e3193b0c2922569ac0b01c95fc8cace1c0819b297a53eba27750a1bd741a"
+    },
+    {
+      "path": "apps/web/public/data/wuwa/raw-redeem-codes.json",
+      "sha256": "5712ba38c2d9da9d5f3a5664d1dd2f0279446b66556bc182c390ec318d0bfce7"
+    },
+    {
+      "path": "apps/web/public/data/wuwa/raw-regions.json",
+      "sha256": "239528d752485917563f8459a47f3eadce09dd14a251886bd374905a47d8edc9"
+    },
+    {
+      "path": "apps/web/public/data/wuwa/raw-weapons.json",
+      "sha256": "82db9f066ae1bc720f44471f37209222db445cd2084dcfa32627470041eed5d9"
+    },
+    {
+      "path": "apps/web/public/data/zzz/raw-characters.json",
+      "sha256": "86f1cc7eab09058cc6e25def488d126927dbfc1a65bcd1a9edabf72662f52e99"
+    },
+    {
+      "path": "apps/web/public/data/zzz/raw-drive-discs.json",
+      "sha256": "3a797420263ee6e2405730fe28127226992d76a59c2d7751df254799f8c9783c"
+    },
+    {
+      "path": "apps/web/public/data/zzz/raw-guides.json",
+      "sha256": "f7d520157ea36eacf83426b7354f4eb9d8accfa202c713f1b934732ec9d166a8"
+    },
+    {
+      "path": "apps/web/public/data/zzz/raw-materials.json",
+      "sha256": "63896b2f68e013f333830fa22b7c22fb63fea2c68b8ce34350513fb03908b0cd"
+    },
+    {
+      "path": "apps/web/public/data/zzz/raw-redeem-codes.json",
+      "sha256": "a827f1e443b9777294d89fd7b8cedae96d5c23353864e827ff9188982ce36b70"
+    },
+    {
+      "path": "apps/web/public/data/zzz/raw-weapons.json",
+      "sha256": "d20de925010d0e59b6dcc8f1fe518708cc2511666c54693ca4bb511b7809c59f"
+    },
+    {
+      "path": "apps/web/wrangler.jsonc",
+      "sha256": "b1693ed74f4428f9180e877643d3455c43aef29161dc03ed223c3f4c64b973ff"
+    },
+    {
+      "path": "packages/data/games/ananta/raw-character-materials.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "packages/data/games/ananta/raw-characters.json",
+      "sha256": "7d8394e1777c3bef7a7f9f72c6d6adc633fad68977affd087d6aafa8a4ec143b"
+    },
+    {
+      "path": "packages/data/games/ananta/raw-guides.json",
+      "sha256": "239272401eac2a09a0c0edcafe9e8eb5df37fbc64443e627f0794b5abeb7eaf1"
+    },
+    {
+      "path": "packages/data/games/ananta/raw-materials.json",
+      "sha256": "87b9ad367244b3dc62ee5fe3e48604c5153edf2bd21cafcb5145531ca63d6700"
+    },
+    {
+      "path": "packages/data/games/ananta/raw-weapons.json",
+      "sha256": "af7e4bc6cc6b6def48c4319c4cf0cc9098ecb214cf8d9c24e14d7cf3907b924d"
+    },
+    {
+      "path": "packages/data/games/aniimo/raw-characters.json",
+      "sha256": "292e096e35fdb5cd98d1188d1d23a9e46998741930e2095f5a1d8ee928094c39"
+    },
+    {
+      "path": "packages/data/games/aniimo/raw-guides.json",
+      "sha256": "4d31d4fd827512aaabf04b9821810685481e90f6989ae0bba41043eb114e1ba8"
+    },
+    {
+      "path": "packages/data/games/aniimo/raw-redeem-codes.json",
+      "sha256": "6eafa12c388c59db5a67398b94fd903a82ae70f4ebf36f729312da567e924cef"
+    },
+    {
+      "path": "packages/data/games/aniimo/raw-regions.json",
+      "sha256": "5d61d30a90b2e75a2484acb147debb2168b3ed79fa96929239f9e6a497c29b12"
+    },
+    {
+      "path": "packages/data/games/azur-promilia/raw-characters.json",
+      "sha256": "e4479476d98f53d2a9add1c5dca7158d904897667fd54a320ee82b056aea8866"
+    },
+    {
+      "path": "packages/data/games/endfield/raw-character-materials.json",
+      "sha256": "3170dc7edb9f022388aa6bb0fec010665f7cdb70c29df01fcc2283790a8dced3"
+    },
+    {
+      "path": "packages/data/games/endfield/raw-characters.json",
+      "sha256": "6d1dc554a8a2772aab0cee23de6b655191c35fb2503403d29ecf043412c64e19"
+    },
+    {
+      "path": "packages/data/games/endfield/raw-gear-sets.json",
+      "sha256": "a56407c714f74032e99f21507fb9ed8a2d6b85838cdfc50871fbae29d2f9568a"
+    },
+    {
+      "path": "packages/data/games/endfield/raw-guides.json",
+      "sha256": "f5d7aafb060a93b2f2d1b0a911079445f85749ce8c303b6f0d0841908cb30efa"
+    },
+    {
+      "path": "packages/data/games/endfield/raw-materials.json",
+      "sha256": "107b4c3f3b78019b6620a9c3df8fa42883e54c34e1b27416e007b0d77758858e"
+    },
+    {
+      "path": "packages/data/games/endfield/raw-regions.json",
+      "sha256": "07936da77a16f69b568a75c1cb56b2821c37723882807ccf0161fb878751f5ab"
+    },
+    {
+      "path": "packages/data/games/endfield/raw-weapons.json",
+      "sha256": "d03e4dab76a5a94309a71582dd3e17521b60366fa16522069dea0379c72d05f1"
+    },
+    {
+      "path": "packages/data/games/genshin/raw-artifacts.json",
+      "sha256": "ab5a90d0ea792560a058f87cf1d5be606f7dd2e1ec5f8191d0075541eac619e6"
+    },
+    {
+      "path": "packages/data/games/genshin/raw-character-materials.json",
+      "sha256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16"
+    },
+    {
+      "path": "packages/data/games/genshin/raw-character-summaries.json",
+      "sha256": "8588962d427724d5fce89485edfcad1d16b47ed1e8690c46f258925422039b88"
+    },
+    {
+      "path": "packages/data/games/genshin/raw-characters.json",
+      "sha256": "59f006e360b1576fc1ca691d355a9de8df69b2fa99f42005afc85758fc8554ce"
+    },
+    {
+      "path": "packages/data/games/genshin/raw-guides.json",
+      "sha256": "8d0c81f541218f4df90fb9766fa13351bd8ca1147f012be36bb694db3accc310"
+    },
+    {
+      "path": "packages/data/games/genshin/raw-materials.json",
+      "sha256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867"
+    },
+    {
+      "path": "packages/data/games/genshin/raw-redeem-codes.json",
+      "sha256": "859af362400044021a85a1cf353d86ad6da2cfd0b54072e1582dc8564bd7f9d4"
+    },
+    {
+      "path": "packages/data/games/genshin/raw-regions.json",
+      "sha256": "037c917f292e5515e43e5772cd1910878caf9dac0c2d964ac4d4c74d5e33d6d6"
+    },
+    {
+      "path": "packages/data/games/genshin/raw-weapons.json",
+      "sha256": "9154393f32c850d015754d2f793e0d05cdbabdaee285bca2e2f9c8868ca60e4e"
+    },
+    {
+      "path": "packages/data/games/guihuan/raw-character-materials.json",
+      "sha256": "61104ae86d31d33589b182c45ec52e27af0763d07e0d36545e85e5e34acb6963"
+    },
+    {
+      "path": "packages/data/games/guihuan/raw-characters.json",
+      "sha256": "7150c0c560afba80877cb7d1946f4cdc373fcdae4a9d3c2a74fa4f3ef2aa601c"
+    },
+    {
+      "path": "packages/data/games/guihuan/raw-guides.json",
+      "sha256": "da7ea0afb0577fe6c59325c815e12c89735ffcdc5a25dda9fe39d25e7cca4265"
+    },
+    {
+      "path": "packages/data/games/guihuan/raw-materials.json",
+      "sha256": "9c011ad9715c0fdc604f8482f01d0a20319580368a048aa7bd90f9ebb16f6c43"
+    },
+    {
+      "path": "packages/data/games/guihuan/raw-regions.json",
+      "sha256": "389458b3f0fddf4e1bc42ec27e5f3079d47d537312385135f31ab191a41ab327"
+    },
+    {
+      "path": "packages/data/games/guihuan/raw-weapons.json",
+      "sha256": "648a1787bd21454dc0ca832621bcf366a12bb17558e6ca515cef25c7a1310c23"
+    },
+    {
+      "path": "packages/data/games/hi3/raw-astral-ops.json",
+      "sha256": "8853f5e88811a5091166b7fa69d2ec36cebc047d97613ee234f478a06947afbb"
+    },
+    {
+      "path": "packages/data/games/hi3/raw-characters.json",
+      "sha256": "2fefa58de0b12a061717c9a355e2c1f87f3b37752c55c635c91cace21d07061f"
+    },
+    {
+      "path": "packages/data/games/hi3/raw-guides.json",
+      "sha256": "565d913c7c58809e28f4a03e1348d69e118a56e3a44f7aaf955ab5932ba24608"
+    },
+    {
+      "path": "packages/data/games/hi3/raw-materials.json",
+      "sha256": "b3abcff08b66da1b21336fddb95bc2300be0da351de23aa32f032e06d04886ec"
+    },
+    {
+      "path": "packages/data/games/hi3/raw-stigma-sets.json",
+      "sha256": "f90b36f9e54ce1f667bec08ab5d8893e6cc18081ec875cd4c2b861f6d3fbc528"
+    },
+    {
+      "path": "packages/data/games/hi3/raw-weapons.json",
+      "sha256": "16b7c3bb461d84d5b28995f0f2b2b8d4bb991fe1903d6d95b6be47e51ef2967a"
+    },
+    {
+      "path": "packages/data/games/nte/raw-anomalies.json",
+      "sha256": "429676a71330490b69718c8fdd65a30f2e7ee7c7d030f132ba5b26ccbc83e903"
+    },
+    {
+      "path": "packages/data/games/nte/raw-builds.json",
+      "sha256": "de0c7cb8db8615592f6a94917bf387c20421d38049bb56570c99d6687e57c381"
+    },
+    {
+      "path": "packages/data/games/nte/raw-character-materials.json",
+      "sha256": "e749d53d5307bd0ce0f5bbdeb0c5b1f81134f5ba2c4d70725da0eb974d6002f3"
+    },
+    {
+      "path": "packages/data/games/nte/raw-character-summaries.json",
+      "sha256": "8e16cc5e060f3bf2803bb4f36848d56b08c7924961c41c7bca345d7e769f27cc"
+    },
+    {
+      "path": "packages/data/games/nte/raw-characters.json",
+      "sha256": "b3693e9cb5d8b6ba29a9ec3bb81dfd3755764b34255af3a2e454ad8c0e3ad938"
+    },
+    {
+      "path": "packages/data/games/nte/raw-disk-sets.json",
+      "sha256": "43db37750a46b2b63affc1ff43f3bf43c8e2de03166f2a4d4009c2efc08112f6"
+    },
+    {
+      "path": "packages/data/games/nte/raw-gacha-system.json",
+      "sha256": "116bf6ec0d9d172fa9f0f19a651fce95362a855e070708ce0492e5a530d44be0"
+    },
+    {
+      "path": "packages/data/games/nte/raw-guides.json",
+      "sha256": "0f2427eb8d971895220b28ccce923acf2bd9c214055eba1dfd2a5964c4ed3c3e"
+    },
+    {
+      "path": "packages/data/games/nte/raw-image-sources.json",
+      "sha256": "e0982edbf354d45e42d8e606d467a46a5089a1f160e6ac72cc5dce2b3c025838"
+    },
+    {
+      "path": "packages/data/games/nte/raw-materials.json",
+      "sha256": "eb493d5923b34bf20e840b31bfa93d145c6a3397163798b73e1f85a8f0b6328c"
+    },
+    {
+      "path": "packages/data/games/nte/raw-redeem-codes.json",
+      "sha256": "2d906e1df4b8ed9da52193ce1749426827978f5be532aee83fbd6887f2b22d39"
+    },
+    {
+      "path": "packages/data/games/nte/raw-regions.json",
+      "sha256": "edbb257de77e51ef540d8f617a155c2eb9a99dfb3d0e29334929cbe06ecff910"
+    },
+    {
+      "path": "packages/data/games/nte/raw-weapons.json",
+      "sha256": "f46984d25d5c7013e4434dcee1ed0cf0544687b480e845c0e4e3c4b20bf508dc"
+    },
+    {
+      "path": "packages/data/games/roco-cn/character-summaries.ts",
+      "sha256": "aae64ec52cae1a3158c9570b17d8c4730fcbf82d7f273c5028ce6613c3abd683"
+    },
+    {
+      "path": "packages/data/games/roco-cn/characters.ts",
+      "sha256": "c07fa70b5547d4166617cbcd768dea0048b248252078c6be1e5201cf9cf68949"
+    },
+    {
+      "path": "packages/data/games/roco-cn/guides.ts",
+      "sha256": "5d3e308aa13452c1adb2276c6bb0b0d3e57754aee0c03381422d81aed03c89d6"
+    },
+    {
+      "path": "packages/data/games/roco-cn/index.ts",
+      "sha256": "c4d88e6ea6ebf27d0a333de691dc9819a8c1b141e54794120b3ca1af3cda56b0"
+    },
+    {
+      "path": "packages/data/games/roco-cn/items.ts",
+      "sha256": "f1360ef434590ffd70e7893fd04e9c1ad7956e839bb6ac402a8a73aa04d8c291"
+    },
+    {
+      "path": "packages/data/games/roco-cn/raw-character-summaries.json",
+      "sha256": "6dec9aea8d9f2f52eadc9d8d1f8e56777879f74d5a7d75500fbd89fadeb289e8"
+    },
+    {
+      "path": "packages/data/games/roco-cn/raw-characters.json",
+      "sha256": "47e0e1fbbd475fd80e63c3b96f0fb3b6ec26b6e6c8756e676793589228a2659a"
+    },
+    {
+      "path": "packages/data/games/roco-cn/raw-guides.json",
+      "sha256": "7a3a5bb63d114d42d2c3cd6b4214a8174e8d75c3eeb2c2498727025fdcf37df9"
+    },
+    {
+      "path": "packages/data/games/roco-cn/raw-materials.json",
+      "sha256": "ffea53c1592f82c65a17d6b28d7008832676aa3ea20c48a9a3cc21442b315ed1"
+    },
+    {
+      "path": "packages/data/games/roco-cn/raw-redeem-codes.json",
+      "sha256": "3cf6cc72eb329a0abb23f3a4ae41e1765012be5c222f39076dc07c3a3ab664f2"
+    },
+    {
+      "path": "packages/data/games/roco-cn/raw-weapons.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "packages/data/games/roco-cn/redeem-codes.ts",
+      "sha256": "a94ecacf88ffa6fc4e18460582fced910a518dd7fff58aba54004eaf4b79edfd"
+    },
+    {
+      "path": "packages/data/games/roco-cn/tier-lists.ts",
+      "sha256": "25300bf3e74af0395b36732811517b3d3779b70fc78411d8df2bf91c3aa66504"
+    },
+    {
+      "path": "packages/data/games/roco-cn/types.ts",
+      "sha256": "94d2ab3df60703afdf57e86d9079ee1d0bc03381824ede0d4de9494adba8aefa"
+    },
+    {
+      "path": "packages/data/games/roco-cn/weapons.ts",
+      "sha256": "6f4a237e107fca644d63c9e2308726a23d9aed1673179426d7db3fe3a542b1c9"
+    },
+    {
+      "path": "packages/data/games/roco/raw-materials.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "packages/data/games/roco/raw-redeem-codes.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "packages/data/games/roco/raw-weapons.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "packages/data/games/sea/raw-character-materials.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "packages/data/games/sea/raw-characters.json",
+      "sha256": "b8dd35af7c7076f8944e37a9677badeb5c373b6fcbb0e161044a85ac8e47a9ab"
+    },
+    {
+      "path": "packages/data/games/sea/raw-guides.json",
+      "sha256": "b69e519c94ce674d761edacef45689a969948a1d2f9bf53950ce41a3040df041"
+    },
+    {
+      "path": "packages/data/games/sea/raw-materials.json",
+      "sha256": "9cd7dfb2eb3a23f2a594dbfe76f050d1d221f99457808b38e62de07b69f175c6"
+    },
+    {
+      "path": "packages/data/games/sea/raw-redeem-codes.json",
+      "sha256": "620ffabb94306ccafb456fe1b666d1053dae56f3dcb6c14e05b5e1f4828add19"
+    },
+    {
+      "path": "packages/data/games/sea/raw-weapons.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "packages/data/games/skjh/raw-guides.json",
+      "sha256": "eb7002cc027a652e89059ec45733e42898d9b8421883a3e7eb32a4372f51a9d3"
+    },
+    {
+      "path": "packages/data/games/skjh/raw-materials.json",
+      "sha256": "d4417ce41e46786f35c4b4364bc32278f3fa1419f6480621f3a9ff4300c9a03d"
+    },
+    {
+      "path": "packages/data/games/skjh/raw-redeem-codes.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "packages/data/games/skjh/raw-weapons.json",
+      "sha256": "c7c4d7dfa74718b066188eee10192dd90af5b78aba1a3de4aa9a0782d94a3ced"
+    },
+    {
+      "path": "packages/data/games/starrail/raw-character-materials.json",
+      "sha256": "f80c66941355b2f40f166850551c5b30ff1bfbd14b952d32683406c5a5885641"
+    },
+    {
+      "path": "packages/data/games/starrail/raw-character-summaries.json",
+      "sha256": "7ccb54ff98020190a4d1d4997ec69efcf645fcf0d21b94645d8f635089d19d76"
+    },
+    {
+      "path": "packages/data/games/starrail/raw-characters.json",
+      "sha256": "75d68d458694f46a95e15a94216b7a0fb9da5eadb14e1dfef3f90d56a2480f38"
+    },
+    {
+      "path": "packages/data/games/starrail/raw-guides.json",
+      "sha256": "21f5f702ac56e818e0d8ccdd308e2208d031dc7e2e97ac3a6456ba8a2926f080"
+    },
+    {
+      "path": "packages/data/games/starrail/raw-light-cones.json",
+      "sha256": "3c5b5b3107a3281899f354370a91a475d66c0eeb0f2b7f5778517086aba30ffc"
+    },
+    {
+      "path": "packages/data/games/starrail/raw-materials.json",
+      "sha256": "226e8b8549fcd324d3c2fc06a81cbd4d71b71d07b2e63ea5249e206b5beab901"
+    },
+    {
+      "path": "packages/data/games/starrail/raw-redeem-codes.json",
+      "sha256": "d21cd2bb00612bd0324c728bc2730c9a76e432e17925a9f7b665351992c1cd31"
+    },
+    {
+      "path": "packages/data/games/starrail/raw-regions.json",
+      "sha256": "e7ff83d71e9558fa344d04b64e96fa24cfca40a0a9ed2bbb66162552f6e170a3"
+    },
+    {
+      "path": "packages/data/games/starrail/raw-relics.json",
+      "sha256": "08d7a4eefa45002708c9591c50ca1e4fd67a71370051bc80b213a261867eab92"
+    },
+    {
+      "path": "packages/data/games/wuwa/raw-character-materials.json",
+      "sha256": "09114fa267a69901e11e7da7ac9fe1355c9daa199425abdcfb52d6b71a89db7f"
+    },
+    {
+      "path": "packages/data/games/wuwa/raw-characters.json",
+      "sha256": "d0adb35281c040fd593c3f8d3a07c13f1f81ec95b7f221f0dca4bbc3e1391bb2"
+    },
+    {
+      "path": "packages/data/games/wuwa/raw-echoes.json",
+      "sha256": "ed7224d05f9353a4bda5f2a049ef3b69de4d719e35c273d3769bbc096123d3fb"
+    },
+    {
+      "path": "packages/data/games/wuwa/raw-guides.json",
+      "sha256": "0c0b6aefd18f3fe8e1b3750e750dffadba7d50fd44daaa7a1ac8b6fb2f088603"
+    },
+    {
+      "path": "packages/data/games/wuwa/raw-materials.json",
+      "sha256": "36e7e3193b0c2922569ac0b01c95fc8cace1c0819b297a53eba27750a1bd741a"
+    },
+    {
+      "path": "packages/data/games/wuwa/raw-redeem-codes.json",
+      "sha256": "5712ba38c2d9da9d5f3a5664d1dd2f0279446b66556bc182c390ec318d0bfce7"
+    },
+    {
+      "path": "packages/data/games/wuwa/raw-regions.json",
+      "sha256": "239528d752485917563f8459a47f3eadce09dd14a251886bd374905a47d8edc9"
+    },
+    {
+      "path": "packages/data/games/wuwa/raw-weapons.json",
+      "sha256": "82db9f066ae1bc720f44471f37209222db445cd2084dcfa32627470041eed5d9"
+    },
+    {
+      "path": "packages/data/games/zzz/raw-characters.json",
+      "sha256": "86f1cc7eab09058cc6e25def488d126927dbfc1a65bcd1a9edabf72662f52e99"
+    },
+    {
+      "path": "packages/data/games/zzz/raw-drive-discs.json",
+      "sha256": "3a797420263ee6e2405730fe28127226992d76a59c2d7751df254799f8c9783c"
+    },
+    {
+      "path": "packages/data/games/zzz/raw-guides.json",
+      "sha256": "f7d520157ea36eacf83426b7354f4eb9d8accfa202c713f1b934732ec9d166a8"
+    },
+    {
+      "path": "packages/data/games/zzz/raw-materials.json",
+      "sha256": "63896b2f68e013f333830fa22b7c22fb63fea2c68b8ce34350513fb03908b0cd"
+    },
+    {
+      "path": "packages/data/games/zzz/raw-redeem-codes.json",
+      "sha256": "a827f1e443b9777294d89fd7b8cedae96d5c23353864e827ff9188982ce36b70"
+    },
+    {
+      "path": "packages/data/games/zzz/raw-weapons.json",
+      "sha256": "d20de925010d0e59b6dcc8f1fe518708cc2511666c54693ca4bb511b7809c59f"
+    },
+    {
+      "path": "wrangler.jsonc",
+      "sha256": "49d1599b567dd1fd37c6853212f78369746199690f46b1cdc10f079b63973598"
+    }
+  ],
+  "notes": [
+    "Original raw, hold ledger and original image bytes retained outside all public roots. Git history retains other edited sources.",
+    "Guide review checks editorial instructions, not official game facts; future game claims require new evidence."
+  ],
+  "guideReview": [
+    {
+      "id": "global-player-feedback-roadmap-playbook",
+      "kind": "editorial_proposal_archive",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Only historical subject, non-adoption and re-publication criteria; not game instructions."
+    },
+    {
+      "id": "global-onboarding-learning-recovery-playbook",
+      "kind": "editorial_proposal_archive",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Only historical subject, non-adoption and re-publication criteria; not game instructions."
+    },
+    {
+      "id": "global-player-discovery-codex-playbook",
+      "kind": "editorial_proposal_archive",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Only historical subject, non-adoption and re-publication criteria; not game instructions."
+    },
+    {
+      "id": "global-fair-play-integrity-playbook",
+      "kind": "editorial_proposal_archive",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Only historical subject, non-adoption and re-publication criteria; not game instructions."
+    },
+    {
+      "id": "global-change-communication-playbook",
+      "kind": "editorial_proposal_archive",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Only historical subject, non-adoption and re-publication criteria; not game instructions."
+    },
+    {
+      "id": "global-returning-player-event-legacy-playbook",
+      "kind": "editorial_proposal_archive",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Only historical subject, non-adoption and re-publication criteria; not game instructions."
+    },
+    {
+      "id": "global-economy-monetization-fairness-playbook",
+      "kind": "editorial_proposal_archive",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Only historical subject, non-adoption and re-publication criteria; not game instructions."
+    },
+    {
+      "id": "global-accessibility-cross-device-playbook",
+      "kind": "editorial_proposal_archive",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Only historical subject, non-adoption and re-publication criteria; not game instructions."
+    },
+    {
+      "id": "global-player-support-trust-playbook",
+      "kind": "editorial_proposal_archive",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Only historical subject, non-adoption and re-publication criteria; not game instructions."
+    },
+    {
+      "id": "global-social-safety-guild-playbook",
+      "kind": "editorial_proposal_archive",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Only historical subject, non-adoption and re-publication criteria; not game instructions."
+    },
+    {
+      "id": "global-localization-cultural-event-playbook",
+      "kind": "editorial_proposal_archive",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Only historical subject, non-adoption and re-publication criteria; not game instructions."
+    },
+    {
+      "id": "global-cbt-to-launch-decision-gates",
+      "kind": "editorial_proposal_archive",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Only historical subject, non-adoption and re-publication criteria; not game instructions."
+    },
+    {
+      "id": "global-cn-release-governance",
+      "kind": "editorial_proposal_archive",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Only historical subject, non-adoption and re-publication criteria; not game instructions."
+    },
+    {
+      "id": "global-live-ops-metrics-experiments",
+      "kind": "editorial_proposal_archive",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Only historical subject, non-adoption and re-publication criteria; not game instructions."
+    },
+    {
+      "id": "global-launch-readiness-checklist",
+      "kind": "editorial_proposal_archive",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Only historical subject, non-adoption and re-publication criteria; not game instructions."
+    },
+    {
+      "id": "global-first-30-days-pve-plan",
+      "kind": "editorial_proposal_archive",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Only historical subject, non-adoption and re-publication criteria; not game instructions."
+    },
+    {
+      "id": "global-days-31-90-season-event-plan",
+      "kind": "editorial_proposal_archive",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Only historical subject, non-adoption and re-publication criteria; not game instructions."
+    },
+    {
+      "id": "global-cn-content-roadmap",
+      "kind": "verification_checklist",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Evidence-scoping and safety checklist; prior definite game claims explicitly withdrawn."
+    },
+    {
+      "id": "cbt-registration-guide",
+      "kind": "verification_checklist",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Evidence-scoping and safety checklist; prior definite game claims explicitly withdrawn."
+    },
+    {
+      "id": "starter-guide",
+      "kind": "verification_checklist",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Evidence-scoping and safety checklist; prior definite game claims explicitly withdrawn."
+    },
+    {
+      "id": "what-is-roco-kingdom",
+      "kind": "verification_checklist",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Evidence-scoping and safety checklist; prior definite game claims explicitly withdrawn."
+    },
+    {
+      "id": "platforms-and-download-guide",
+      "kind": "verification_checklist",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Evidence-scoping and safety checklist; prior definite game claims explicitly withdrawn."
+    },
+    {
+      "id": "jinies-guide",
+      "kind": "verification_checklist",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": true,
+      "reason": "Evidence-scoping and safety checklist; prior definite game claims explicitly withdrawn."
+    },
+    {
+      "id": "battle-system-guide",
+      "kind": "verification_checklist",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Evidence-scoping and safety checklist; prior definite game claims explicitly withdrawn."
+    },
+    {
+      "id": "co-op-and-social-guide",
+      "kind": "verification_checklist",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Evidence-scoping and safety checklist; prior definite game claims explicitly withdrawn."
+    },
+    {
+      "id": "pre-registration-rewards-faq",
+      "kind": "verification_checklist",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Evidence-scoping and safety checklist; prior definite game claims explicitly withdrawn."
+    },
+    {
+      "id": "is-roco-kingdom-free-to-play",
+      "kind": "verification_checklist",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Evidence-scoping and safety checklist; prior definite game claims explicitly withdrawn."
+    },
+    {
+      "id": "roco-kingdom-release-date-guide",
+      "kind": "verification_checklist",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Evidence-scoping and safety checklist; prior definite game claims explicitly withdrawn."
+    },
+    {
+      "id": "roco-kingdom-vs-pokemon",
+      "kind": "verification_checklist",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Evidence-scoping and safety checklist; prior definite game claims explicitly withdrawn."
+    },
+    {
+      "id": "roco-kingdom-crossplay-guide",
+      "kind": "verification_checklist",
+      "languagesReviewed": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "decision": "publish_correction_or_archive_only",
+      "officialVerification": false,
+      "siteAdoption": false,
+      "changed": false,
+      "reason": "Evidence-scoping and safety checklist; prior definite game claims explicitly withdrawn."
+    }
+  ],
+  "withdrawnRegistry": {
+    "id": "roco",
+    "name": {
+      "zh": "洛克王国：世界（国际服）",
+      "en": "Roco Kingdom",
+      "ja": "ロコキングダム"
+    },
+    "theme": {
+      "primary": "#4ade80",
+      "accent": "#f59e0b",
+      "background": "#0d1410",
+      "surface": "#16211a"
+    },
+    "elements": [
+      {
+        "id": "grass",
+        "name": {
+          "zh": "草",
+          "en": "Grass",
+          "ja": "くさ"
+        },
+        "color": "#4ade80"
+      },
+      {
+        "id": "fire",
+        "name": {
+          "zh": "火",
+          "en": "Fire",
+          "ja": "ほのお"
+        },
+        "color": "#ef4444"
+      },
+      {
+        "id": "water",
+        "name": {
+          "zh": "水",
+          "en": "Water",
+          "ja": "みず"
+        },
+        "color": "#3b82f6"
+      },
+      {
+        "id": "electric",
+        "name": {
+          "zh": "电",
+          "en": "Electric",
+          "ja": "でんき"
+        },
+        "color": "#facc15"
+      },
+      {
+        "id": "normal",
+        "name": {
+          "zh": "普通",
+          "en": "Normal",
+          "ja": "ノーマル"
+        },
+        "color": "#9ca3af"
+      },
+      {
+        "id": "ice",
+        "name": {
+          "zh": "冰",
+          "en": "Ice",
+          "ja": "こおり"
+        },
+        "color": "#67e8f9"
+      },
+      {
+        "id": "poison",
+        "name": {
+          "zh": "毒",
+          "en": "Poison",
+          "ja": "どく"
+        },
+        "color": "#a855f7"
+      },
+      {
+        "id": "ground",
+        "name": {
+          "zh": "土",
+          "en": "Ground",
+          "ja": "じめん"
+        },
+        "color": "#f59e0b"
+      },
+      {
+        "id": "flying",
+        "name": {
+          "zh": "翼",
+          "en": "Flying",
+          "ja": "ひこう"
+        },
+        "color": "#6ee7b7"
+      },
+      {
+        "id": "bug",
+        "name": {
+          "zh": "虫",
+          "en": "Bug",
+          "ja": "むし"
+        },
+        "color": "#84cc16"
+      },
+      {
+        "id": "light",
+        "name": {
+          "zh": "光",
+          "en": "Light",
+          "ja": "ひかり"
+        },
+        "color": "#fbbf24"
+      },
+      {
+        "id": "dark",
+        "name": {
+          "zh": "暗",
+          "en": "Dark",
+          "ja": "あく"
+        },
+        "color": "#6b7280"
+      }
+    ],
+    "rarities": [
+      {
+        "stars": 3,
+        "color": "#60a5fa",
+        "label": {
+          "zh": "普通",
+          "en": "Common",
+          "ja": "コモン"
+        }
+      },
+      {
+        "stars": 4,
+        "color": "#a855f7",
+        "label": {
+          "zh": "稀有",
+          "en": "Rare",
+          "ja": "レア"
+        }
+      },
+      {
+        "stars": 5,
+        "color": "#f59e0b",
+        "label": {
+          "zh": "史诗",
+          "en": "Epic",
+          "ja": "エピック"
+        }
+      }
+    ],
+    "stats": {
+      "baseStats": [
+        "hp",
+        "atk",
+        "def",
+        "spAtk",
+        "spDef",
+        "spd"
+      ],
+      "subStats": [],
+      "specialStats": []
+    },
+    "routes": {
+      "characters": true,
+      "weapons": true,
+      "items": false,
+      "tier-list": true,
+      "calculator": false,
+      "map": true,
+      "version": true,
+      "download": true,
+      "guides": true,
+      "build": false,
+      "compare": false,
+      "teams": false,
+      "redeem-codes": true,
+      "type-chart": true,
+      "merchant": true,
+      "eggs": true,
+      "events": true
+    }
+  },
+  "nonRocoRegistryBefore": {
+    "genshin": {
+      "id": "genshin",
+      "name": {
+        "zh": "原神",
+        "en": "Genshin Impact",
+        "ja": "原神"
+      },
+      "theme": {
+        "primary": "#d4a254",
+        "accent": "#ff6b35",
+        "background": "#1a1a2e",
+        "surface": "#16213e"
+      },
+      "elements": [
+        {
+          "id": "pyro",
+          "name": {
+            "zh": "火",
+            "en": "Pyro",
+            "ja": "炎"
+          },
+          "color": "#ef4444"
+        },
+        {
+          "id": "hydro",
+          "name": {
+            "zh": "水",
+            "en": "Hydro",
+            "ja": "水"
+          },
+          "color": "#3b82f6"
+        },
+        {
+          "id": "electro",
+          "name": {
+            "zh": "雷",
+            "en": "Electro",
+            "ja": "雷"
+          },
+          "color": "#8b5cf6"
+        },
+        {
+          "id": "cryo",
+          "name": {
+            "zh": "冰",
+            "en": "Cryo",
+            "ja": "氷"
+          },
+          "color": "#67e8f9"
+        },
+        {
+          "id": "dendro",
+          "name": {
+            "zh": "草",
+            "en": "Dendro",
+            "ja": "草"
+          },
+          "color": "#4ade80"
+        },
+        {
+          "id": "anemo",
+          "name": {
+            "zh": "风",
+            "en": "Anemo",
+            "ja": "風"
+          },
+          "color": "#6ee7b7"
+        },
+        {
+          "id": "geo",
+          "name": {
+            "zh": "岩",
+            "en": "Geo",
+            "ja": "岩"
+          },
+          "color": "#fbbf24"
+        }
+      ],
+      "rarities": [
+        {
+          "stars": 4,
+          "color": "#a855f7",
+          "label": {
+            "zh": "四星",
+            "en": "4-Star",
+            "ja": "★4"
+          }
+        },
+        {
+          "stars": 5,
+          "color": "#eab308",
+          "label": {
+            "zh": "五星",
+            "en": "5-Star",
+            "ja": "★5"
+          }
+        }
+      ],
+      "stats": {
+        "baseStats": [
+          "hp",
+          "atk",
+          "def"
+        ],
+        "subStats": [
+          "hpPercent",
+          "atkPercent",
+          "defPercent",
+          "em",
+          "er",
+          "critRate",
+          "critDmg"
+        ],
+        "specialStats": []
+      },
+      "routes": {
+        "characters": true,
+        "weapons": true,
+        "items": true,
+        "tier-list": true,
+        "calculator": true,
+        "map": true,
+        "version": true,
+        "download": true,
+        "guides": true,
+        "artifacts": true,
+        "build": true,
+        "compare": true,
+        "teams": true,
+        "redeem-codes": true
+      }
+    },
+    "starrail": {
+      "id": "starrail",
+      "name": {
+        "zh": "崩坏：星穹铁道",
+        "en": "Honkai: Star Rail",
+        "ja": "崩壊：スターレイル"
+      },
+      "theme": {
+        "primary": "#7b68ee",
+        "accent": "#e6b422",
+        "background": "#0f0f1a",
+        "surface": "#1a1a2e"
+      },
+      "elements": [
+        {
+          "id": "fire",
+          "name": {
+            "zh": "火",
+            "en": "Fire",
+            "ja": "炎"
+          },
+          "color": "#ef4444"
+        },
+        {
+          "id": "ice",
+          "name": {
+            "zh": "冰",
+            "en": "Ice",
+            "ja": "氷"
+          },
+          "color": "#67e8f9"
+        },
+        {
+          "id": "lightning",
+          "name": {
+            "zh": "雷",
+            "en": "Lightning",
+            "ja": "雷"
+          },
+          "color": "#8b5cf6"
+        },
+        {
+          "id": "wind",
+          "name": {
+            "zh": "风",
+            "en": "Wind",
+            "ja": "風"
+          },
+          "color": "#6ee7b7"
+        },
+        {
+          "id": "physical",
+          "name": {
+            "zh": "物理",
+            "en": "Physical",
+            "ja": "物理"
+          },
+          "color": "#9ca3af"
+        },
+        {
+          "id": "quantum",
+          "name": {
+            "zh": "量子",
+            "en": "Quantum",
+            "ja": "量子"
+          },
+          "color": "#6366f1"
+        },
+        {
+          "id": "imaginary",
+          "name": {
+            "zh": "虚数",
+            "en": "Imaginary",
+            "ja": "虚数"
+          },
+          "color": "#fbbf24"
+        }
+      ],
+      "rarities": [
+        {
+          "stars": 4,
+          "color": "#a855f7",
+          "label": {
+            "zh": "四星",
+            "en": "4-Star",
+            "ja": "★4"
+          }
+        },
+        {
+          "stars": 5,
+          "color": "#eab308",
+          "label": {
+            "zh": "五星",
+            "en": "5-Star",
+            "ja": "★5"
+          }
+        }
+      ],
+      "stats": {
+        "baseStats": [
+          "hp",
+          "atk",
+          "def",
+          "spd"
+        ],
+        "subStats": [
+          "hpPercent",
+          "atkPercent",
+          "defPercent",
+          "spd",
+          "critRate",
+          "critDmg",
+          "be",
+          "ehr",
+          "res"
+        ],
+        "specialStats": [
+          "be",
+          "ehr",
+          "res"
+        ]
+      },
+      "routes": {
+        "characters": true,
+        "weapons": true,
+        "items": true,
+        "tier-list": true,
+        "calculator": true,
+        "map": true,
+        "version": true,
+        "download": true,
+        "guides": true,
+        "artifacts": true,
+        "build": true,
+        "compare": true,
+        "teams": true,
+        "redeem-codes": true,
+        "events": true
+      }
+    },
+    "wuwa": {
+      "id": "wuwa",
+      "name": {
+        "zh": "鸣潮",
+        "en": "Wuthering Waves",
+        "ja": "鳴潮"
+      },
+      "theme": {
+        "primary": "#3b82f6",
+        "accent": "#06b6d4",
+        "background": "#0a0a1a",
+        "surface": "#111827"
+      },
+      "elements": [
+        {
+          "id": "glacio",
+          "name": {
+            "zh": "冷凝",
+            "en": "Glacio",
+            "ja": "氷凝"
+          },
+          "color": "#67e8f9"
+        },
+        {
+          "id": "fusion",
+          "name": {
+            "zh": "热熔",
+            "en": "Fusion",
+            "ja": "融合"
+          },
+          "color": "#ef4444"
+        },
+        {
+          "id": "electro",
+          "name": {
+            "zh": "导电",
+            "en": "Electro",
+            "ja": "導電"
+          },
+          "color": "#8b5cf6"
+        },
+        {
+          "id": "aero",
+          "name": {
+            "zh": "气动",
+            "en": "Aero",
+            "ja": "気動"
+          },
+          "color": "#6ee7b7"
+        },
+        {
+          "id": "spectro",
+          "name": {
+            "zh": "衍射",
+            "en": "Spectro",
+            "ja": "回折"
+          },
+          "color": "#fbbf24"
+        },
+        {
+          "id": "havoc",
+          "name": {
+            "zh": "湮灭",
+            "en": "Havoc",
+            "ja": "壊滅"
+          },
+          "color": "#a855f7"
+        }
+      ],
+      "rarities": [
+        {
+          "stars": 4,
+          "color": "#a855f7",
+          "label": {
+            "zh": "四星",
+            "en": "4-Star",
+            "ja": "★4"
+          }
+        },
+        {
+          "stars": 5,
+          "color": "#eab308",
+          "label": {
+            "zh": "五星",
+            "en": "5-Star",
+            "ja": "★5"
+          }
+        }
+      ],
+      "stats": {
+        "baseStats": [
+          "hp",
+          "atk",
+          "def"
+        ],
+        "subStats": [
+          "hpPercent",
+          "atkPercent",
+          "defPercent",
+          "critRate",
+          "critDmg",
+          "healing"
+        ],
+        "specialStats": [
+          "healing"
+        ]
+      },
+      "routes": {
+        "characters": true,
+        "weapons": true,
+        "items": true,
+        "tier-list": true,
+        "calculator": false,
+        "map": true,
+        "version": true,
+        "download": true,
+        "guides": true,
+        "build": true,
+        "compare": true,
+        "teams": true,
+        "redeem-codes": true
+      }
+    },
+    "nte": {
+      "id": "nte",
+      "name": {
+        "zh": "异环",
+        "en": "Neverness to Everness",
+        "ja": "異環"
+      },
+      "theme": {
+        "primary": "#00d4aa",
+        "accent": "#ff6b9d",
+        "background": "#0a0f1a",
+        "surface": "#111827"
+      },
+      "elements": [
+        {
+          "id": "anima",
+          "name": {
+            "zh": "创生",
+            "en": "Anima",
+            "ja": "創生"
+          },
+          "color": "#4ade80"
+        },
+        {
+          "id": "chaos",
+          "name": {
+            "zh": "混沌",
+            "en": "Chaos",
+            "ja": "混沌"
+          },
+          "color": "#8b5cf6"
+        },
+        {
+          "id": "cosmos",
+          "name": {
+            "zh": "宇宙",
+            "en": "Cosmos",
+            "ja": "宇宙"
+          },
+          "color": "#3b82f6"
+        },
+        {
+          "id": "incantation",
+          "name": {
+            "zh": "咒术",
+            "en": "Incantation",
+            "ja": "呪術"
+          },
+          "color": "#f59e0b"
+        },
+        {
+          "id": "lakshana",
+          "name": {
+            "zh": "相",
+            "en": "Lakshana",
+            "ja": "ラクシャナ"
+          },
+          "color": "#ec4899"
+        },
+        {
+          "id": "psyche",
+          "name": {
+            "zh": "精神",
+            "en": "Psyche",
+            "ja": "サイキ"
+          },
+          "color": "#06b6d4"
+        }
+      ],
+      "rarities": [
+        {
+          "stars": 5,
+          "color": "#eab308",
+          "label": {
+            "zh": "S级",
+            "en": "S-Rank",
+            "ja": "S級"
+          }
+        },
+        {
+          "stars": 4,
+          "color": "#a855f7",
+          "label": {
+            "zh": "A级",
+            "en": "A-Rank",
+            "ja": "A級"
+          }
+        },
+        {
+          "stars": 3,
+          "color": "#60a5fa",
+          "label": {
+            "zh": "B级",
+            "en": "B-Rank",
+            "ja": "B級"
+          }
+        }
+      ],
+      "stats": {
+        "baseStats": [
+          "hp",
+          "atk",
+          "def"
+        ],
+        "subStats": [
+          "hpPercent",
+          "atkPercent",
+          "defPercent",
+          "critRate",
+          "critDmg",
+          "chargeEff"
+        ],
+        "specialStats": [
+          "chargeEff"
+        ]
+      },
+      "routes": {
+        "characters": true,
+        "weapons": true,
+        "items": true,
+        "tier-list": true,
+        "calculator": false,
+        "map": true,
+        "version": true,
+        "download": true,
+        "guides": true,
+        "disk-sets": true,
+        "redeem-codes": true,
+        "gacha": true,
+        "anomalies": true
+      }
+    },
+    "zzz": {
+      "id": "zzz",
+      "name": {
+        "zh": "绝区零",
+        "en": "Zenless Zone Zero",
+        "ja": "ゼンレスゾーンゼロ"
+      },
+      "theme": {
+        "primary": "#f5c518",
+        "accent": "#00d4aa",
+        "background": "#0f0f1a",
+        "surface": "#1a1a2e"
+      },
+      "elements": [
+        {
+          "id": "physical",
+          "name": {
+            "zh": "物理",
+            "en": "Physical",
+            "ja": "物理"
+          },
+          "color": "#9ca3af"
+        },
+        {
+          "id": "fire",
+          "name": {
+            "zh": "火",
+            "en": "Fire",
+            "ja": "炎"
+          },
+          "color": "#ef4444"
+        },
+        {
+          "id": "ice",
+          "name": {
+            "zh": "冰",
+            "en": "Ice",
+            "ja": "氷"
+          },
+          "color": "#67e8f9"
+        },
+        {
+          "id": "electric",
+          "name": {
+            "zh": "电",
+            "en": "Electric",
+            "ja": "電"
+          },
+          "color": "#8b5cf6"
+        },
+        {
+          "id": "ether",
+          "name": {
+            "zh": "以太",
+            "en": "Ether",
+            "ja": "エーテル"
+          },
+          "color": "#ec4899"
+        },
+        {
+          "id": "auric-ink",
+          "name": {
+            "zh": "墨韵",
+            "en": "Auric Ink",
+            "ja": "墨韻"
+          },
+          "color": "#d4a017"
+        },
+        {
+          "id": "honed-edge",
+          "name": {
+            "zh": "利刃",
+            "en": "Honed Edge",
+            "ja": "切刃"
+          },
+          "color": "#c0c0c0"
+        },
+        {
+          "id": "wind",
+          "name": {
+            "zh": "风",
+            "en": "Wind",
+            "ja": "風"
+          },
+          "color": "#6ee7b7"
+        }
+      ],
+      "rarities": [
+        {
+          "stars": 5,
+          "color": "#f5c518",
+          "label": {
+            "zh": "S级",
+            "en": "S-Rank",
+            "ja": "S級"
+          }
+        },
+        {
+          "stars": 4,
+          "color": "#a855f7",
+          "label": {
+            "zh": "A级",
+            "en": "A-Rank",
+            "ja": "A級"
+          }
+        },
+        {
+          "stars": 3,
+          "color": "#60a5fa",
+          "label": {
+            "zh": "B级",
+            "en": "B-Rank",
+            "ja": "B級"
+          }
+        }
+      ],
+      "stats": {
+        "baseStats": [
+          "hp",
+          "atk",
+          "def",
+          "impact",
+          "anomalyMastery"
+        ],
+        "subStats": [
+          "hpPercent",
+          "atkPercent",
+          "defPercent",
+          "critRate",
+          "critDmg",
+          "impact",
+          "anomalyMastery",
+          "penRatio",
+          "energyRegen"
+        ],
+        "specialStats": [
+          "impact",
+          "anomalyMastery",
+          "penRatio",
+          "energyRegen"
+        ]
+      },
+      "routes": {
+        "characters": true,
+        "weapons": true,
+        "items": true,
+        "tier-list": true,
+        "calculator": true,
+        "map": false,
+        "version": true,
+        "download": true,
+        "guides": true,
+        "drive-discs": true,
+        "build": true,
+        "compare": true,
+        "teams": true,
+        "redeem-codes": true
+      }
+    },
+    "hi3": {
+      "id": "hi3",
+      "name": {
+        "zh": "崩坏3",
+        "en": "Honkai Impact 3rd",
+        "ja": "崩壊3rd"
+      },
+      "theme": {
+        "primary": "#e85a8d",
+        "accent": "#69d2e7",
+        "background": "#171321",
+        "surface": "#241b35"
+      },
+      "elements": [
+        {
+          "id": "physical",
+          "name": {
+            "zh": "物理",
+            "en": "Physical",
+            "ja": "物理"
+          },
+          "color": "#cbd5e1"
+        },
+        {
+          "id": "fire",
+          "name": {
+            "zh": "火焰",
+            "en": "Fire",
+            "ja": "炎"
+          },
+          "color": "#f97316"
+        },
+        {
+          "id": "ice",
+          "name": {
+            "zh": "冰冻",
+            "en": "Ice",
+            "ja": "氷"
+          },
+          "color": "#67e8f9"
+        },
+        {
+          "id": "lightning",
+          "name": {
+            "zh": "雷电",
+            "en": "Lightning",
+            "ja": "雷"
+          },
+          "color": "#a78bfa"
+        }
+      ],
+      "rarities": [
+        {
+          "stars": 5,
+          "color": "#eab308",
+          "label": {
+            "zh": "S级",
+            "en": "S-Rank",
+            "ja": "S級"
+          }
+        },
+        {
+          "stars": 4,
+          "color": "#a855f7",
+          "label": {
+            "zh": "A级",
+            "en": "A-Rank",
+            "ja": "A級"
+          }
+        }
+      ],
+      "stats": {
+        "baseStats": [
+          "hp",
+          "atk",
+          "def"
+        ],
+        "subStats": [
+          "critRate",
+          "critDmg",
+          "elementalDmg",
+          "physicalDmg"
+        ],
+        "specialStats": [
+          "astralRing"
+        ]
+      },
+      "routes": {
+        "characters": true,
+        "weapons": true,
+        "items": true,
+        "tier-list": false,
+        "calculator": false,
+        "map": false,
+        "version": true,
+        "download": true,
+        "guides": true,
+        "build": false,
+        "compare": false,
+        "teams": false,
+        "redeem-codes": false
+      }
+    },
+    "guihuan": {
+      "id": "guihuan",
+      "name": {
+        "zh": "归环",
+        "en": "Guihuan",
+        "ja": "帰環"
+      },
+      "theme": {
+        "primary": "#22d3ee",
+        "accent": "#f472b6",
+        "background": "#0a0a1a",
+        "surface": "#111827"
+      },
+      "elements": [
+        {
+          "id": "flame",
+          "name": {
+            "zh": "烈焰",
+            "en": "Flame",
+            "ja": "烈焔"
+          },
+          "color": "#ef4444"
+        },
+        {
+          "id": "frost",
+          "name": {
+            "zh": "霜寒",
+            "en": "Frost",
+            "ja": "霜寒"
+          },
+          "color": "#67e8f9"
+        },
+        {
+          "id": "thunder",
+          "name": {
+            "zh": "雷霆",
+            "en": "Thunder",
+            "ja": "雷霆"
+          },
+          "color": "#8b5cf6"
+        },
+        {
+          "id": "gale",
+          "name": {
+            "zh": "疾风",
+            "en": "Gale",
+            "ja": "疾風"
+          },
+          "color": "#6ee7b7"
+        },
+        {
+          "id": "radiance",
+          "name": {
+            "zh": "光辉",
+            "en": "Radiance",
+            "ja": "光輝"
+          },
+          "color": "#fbbf24"
+        },
+        {
+          "id": "void",
+          "name": {
+            "zh": "虚空",
+            "en": "Void",
+            "ja": "虚空"
+          },
+          "color": "#a855f7"
+        }
+      ],
+      "rarities": [
+        {
+          "stars": 5,
+          "color": "#22d3ee",
+          "label": {
+            "zh": "SSR",
+            "en": "SSR",
+            "ja": "SSR"
+          }
+        },
+        {
+          "stars": 4,
+          "color": "#a855f7",
+          "label": {
+            "zh": "SR",
+            "en": "SR",
+            "ja": "SR"
+          }
+        },
+        {
+          "stars": 3,
+          "color": "#60a5fa",
+          "label": {
+            "zh": "R",
+            "en": "R",
+            "ja": "R"
+          }
+        }
+      ],
+      "stats": {
+        "baseStats": [
+          "hp",
+          "atk",
+          "def"
+        ],
+        "subStats": [
+          "hpPercent",
+          "atkPercent",
+          "defPercent",
+          "critRate",
+          "critDmg"
+        ],
+        "specialStats": []
+      },
+      "routes": {
+        "characters": true,
+        "weapons": true,
+        "items": true,
+        "tier-list": true,
+        "calculator": false,
+        "map": true,
+        "version": true,
+        "download": true,
+        "guides": true,
+        "build": true,
+        "compare": true,
+        "teams": true
+      }
+    },
+    "ananta": {
+      "id": "ananta",
+      "name": {
+        "zh": "无限大",
+        "en": "Ananta",
+        "ja": "アナンタ"
+      },
+      "theme": {
+        "primary": "#8b5cf6",
+        "accent": "#06b6d4",
+        "background": "#0a0a1a",
+        "surface": "#111827"
+      },
+      "elements": [
+        {
+          "id": "chaos",
+          "name": {
+            "zh": "混沌",
+            "en": "Chaos",
+            "ja": "カオス"
+          },
+          "color": "#8b5cf6"
+        },
+        {
+          "id": "psyche",
+          "name": {
+            "zh": "精神",
+            "en": "Psyche",
+            "ja": "サイキ"
+          },
+          "color": "#06b6d4"
+        },
+        {
+          "id": "spark",
+          "name": {
+            "zh": "火花",
+            "en": "Spark",
+            "ja": "スパーク"
+          },
+          "color": "#f59e0b"
+        },
+        {
+          "id": "surge",
+          "name": {
+            "zh": "涌流",
+            "en": "Surge",
+            "ja": "サージ"
+          },
+          "color": "#3b82f6"
+        },
+        {
+          "id": "bloom",
+          "name": {
+            "zh": "绽放",
+            "en": "Bloom",
+            "ja": "ブルーム"
+          },
+          "color": "#4ade80"
+        },
+        {
+          "id": "void",
+          "name": {
+            "zh": "虚空",
+            "en": "Void",
+            "ja": "ヴォイド"
+          },
+          "color": "#ec4899"
+        }
+      ],
+      "rarities": [
+        {
+          "stars": 5,
+          "color": "#8b5cf6",
+          "label": {
+            "zh": "SSR",
+            "en": "SSR",
+            "ja": "SSR"
+          }
+        },
+        {
+          "stars": 4,
+          "color": "#a855f7",
+          "label": {
+            "zh": "SR",
+            "en": "SR",
+            "ja": "SR"
+          }
+        },
+        {
+          "stars": 3,
+          "color": "#60a5fa",
+          "label": {
+            "zh": "R",
+            "en": "R",
+            "ja": "R"
+          }
+        }
+      ],
+      "stats": {
+        "baseStats": [
+          "hp",
+          "atk",
+          "def"
+        ],
+        "subStats": [
+          "hpPercent",
+          "atkPercent",
+          "defPercent",
+          "critRate",
+          "critDmg"
+        ],
+        "specialStats": []
+      },
+      "routes": {
+        "characters": true,
+        "weapons": true,
+        "items": true,
+        "tier-list": true,
+        "calculator": false,
+        "map": true,
+        "version": true,
+        "download": true,
+        "guides": true,
+        "build": true,
+        "compare": true,
+        "teams": true
+      }
+    },
+    "endfield": {
+      "id": "endfield",
+      "name": {
+        "zh": "明日方舟：终末地",
+        "en": "Arknights: Endfield",
+        "ja": "アークナイツ：エンドフィールド"
+      },
+      "theme": {
+        "primary": "#00b4d8",
+        "accent": "#90e0ef",
+        "background": "#0a0e1a",
+        "surface": "#111827"
+      },
+      "elements": [
+        {
+          "id": "physical",
+          "name": {
+            "zh": "物理",
+            "en": "Physical",
+            "ja": "物理"
+          },
+          "color": "#9ca3af"
+        },
+        {
+          "id": "heat",
+          "name": {
+            "zh": "热能",
+            "en": "Heat",
+            "ja": "ヒート"
+          },
+          "color": "#ef4444"
+        },
+        {
+          "id": "cryo",
+          "name": {
+            "zh": "冷冻",
+            "en": "Cryo",
+            "ja": "フロスト"
+          },
+          "color": "#67e8f9"
+        },
+        {
+          "id": "nature",
+          "name": {
+            "zh": "自然",
+            "en": "Nature",
+            "ja": "ネイチャー"
+          },
+          "color": "#4ade80"
+        },
+        {
+          "id": "electric",
+          "name": {
+            "zh": "电击",
+            "en": "Electric",
+            "ja": "エレキ"
+          },
+          "color": "#facc15"
+        }
+      ],
+      "rarities": [
+        {
+          "stars": 6,
+          "color": "#f59e0b",
+          "label": {
+            "zh": "六星",
+            "en": "6-Star",
+            "ja": "★6"
+          }
+        },
+        {
+          "stars": 5,
+          "color": "#eab308",
+          "label": {
+            "zh": "五星",
+            "en": "5-Star",
+            "ja": "★5"
+          }
+        },
+        {
+          "stars": 4,
+          "color": "#a855f7",
+          "label": {
+            "zh": "四星",
+            "en": "4-Star",
+            "ja": "★4"
+          }
+        }
+      ],
+      "stats": {
+        "baseStats": [
+          "hp",
+          "atk",
+          "def"
+        ],
+        "subStats": [
+          "hpPercent",
+          "atkPercent",
+          "defPercent",
+          "critRate",
+          "critDmg"
+        ],
+        "specialStats": []
+      },
+      "routes": {
+        "characters": true,
+        "weapons": true,
+        "items": true,
+        "tier-list": true,
+        "calculator": false,
+        "map": true,
+        "version": true,
+        "download": true,
+        "guides": true,
+        "build": true,
+        "compare": true,
+        "teams": true
+      }
+    },
+    "sea": {
+      "id": "sea",
+      "name": {
+        "zh": "遗忘之海",
+        "en": "Sea of Remnants",
+        "ja": "シー・オブ・レムナンツ"
+      },
+      "theme": {
+        "primary": "#e11d48",
+        "accent": "#06b6d4",
+        "background": "#0c1222",
+        "surface": "#1e293b"
+      },
+      "elements": [
+        {
+          "id": "str",
+          "name": {
+            "zh": "力量",
+            "en": "Strength",
+            "ja": "筋力"
+          },
+          "color": "#ef4444"
+        },
+        {
+          "id": "agi",
+          "name": {
+            "zh": "敏捷",
+            "en": "Agility",
+            "ja": "俊敏"
+          },
+          "color": "#22c55e"
+        },
+        {
+          "id": "con",
+          "name": {
+            "zh": "体质",
+            "en": "Constitution",
+            "ja": "体質"
+          },
+          "color": "#f97316"
+        },
+        {
+          "id": "int",
+          "name": {
+            "zh": "智力",
+            "en": "Intelligence",
+            "ja": "知力"
+          },
+          "color": "#8b5cf6"
+        },
+        {
+          "id": "per",
+          "name": {
+            "zh": "感知",
+            "en": "Perception",
+            "ja": "感知"
+          },
+          "color": "#3b82f6"
+        },
+        {
+          "id": "cha",
+          "name": {
+            "zh": "魅力",
+            "en": "Charisma",
+            "ja": "魅力"
+          },
+          "color": "#ec4899"
+        }
+      ],
+      "rarities": [
+        {
+          "stars": 5,
+          "color": "#fbbf24",
+          "label": {
+            "zh": "黑券",
+            "en": "Black Ticket",
+            "ja": "黒券"
+          }
+        },
+        {
+          "stars": 4,
+          "color": "#a855f7",
+          "label": {
+            "zh": "紫券",
+            "en": "Purple Ticket",
+            "ja": "紫券"
+          }
+        }
+      ],
+      "stats": {
+        "baseStats": [
+          "hp",
+          "atk",
+          "def"
+        ],
+        "subStats": [
+          "speed",
+          "critRate",
+          "critDmg"
+        ],
+        "specialStats": []
+      },
+      "routes": {
+        "characters": true,
+        "weapons": false,
+        "items": true,
+        "tier-list": true,
+        "calculator": false,
+        "map": false,
+        "version": true,
+        "download": true,
+        "guides": true,
+        "build": false,
+        "compare": true,
+        "teams": false,
+        "redeem-codes": true,
+        "type-chart": true,
+        "merchant": true,
+        "eggs": true,
+        "events": true
+      }
+    },
+    "skjh": {
+      "id": "skjh",
+      "name": {
+        "zh": "失控进化",
+        "en": "Ashfall Evolution",
+        "ja": "失控進化"
+      },
+      "theme": {
+        "primary": "#f97316",
+        "accent": "#22c55e",
+        "background": "#10140f",
+        "surface": "#1c2419"
+      },
+      "elements": [
+        {
+          "id": "survival",
+          "name": {
+            "zh": "生存",
+            "en": "Survival",
+            "ja": "生存"
+          },
+          "color": "#22c55e"
+        },
+        {
+          "id": "combat",
+          "name": {
+            "zh": "战斗",
+            "en": "Combat",
+            "ja": "戦闘"
+          },
+          "color": "#ef4444"
+        },
+        {
+          "id": "building",
+          "name": {
+            "zh": "建筑",
+            "en": "Building",
+            "ja": "建築"
+          },
+          "color": "#f97316"
+        },
+        {
+          "id": "electricity",
+          "name": {
+            "zh": "电力",
+            "en": "Electricity",
+            "ja": "電力"
+          },
+          "color": "#eab308"
+        },
+        {
+          "id": "gene",
+          "name": {
+            "zh": "基因",
+            "en": "Gene",
+            "ja": "遺伝子"
+          },
+          "color": "#8b5cf6"
+        }
+      ],
+      "rarities": [
+        {
+          "stars": 4,
+          "color": "#f97316",
+          "label": {
+            "zh": "稀有",
+            "en": "Rare",
+            "ja": "レア"
+          }
+        },
+        {
+          "stars": 3,
+          "color": "#60a5fa",
+          "label": {
+            "zh": "精良",
+            "en": "Uncommon",
+            "ja": "アンコモン"
+          }
+        },
+        {
+          "stars": 2,
+          "color": "#4ade80",
+          "label": {
+            "zh": "常用",
+            "en": "Common",
+            "ja": "コモン"
+          }
+        },
+        {
+          "stars": 1,
+          "color": "#9ca3af",
+          "label": {
+            "zh": "基础",
+            "en": "Basic",
+            "ja": "基本"
+          }
+        }
+      ],
+      "stats": {
+        "baseStats": [
+          "hp",
+          "hunger",
+          "thirst"
+        ],
+        "subStats": [
+          "temperature",
+          "radiation",
+          "stamina",
+          "upkeep"
+        ],
+        "specialStats": [
+          "radiation",
+          "upkeep"
+        ]
+      },
+      "routes": {
+        "characters": false,
+        "weapons": true,
+        "items": true,
+        "tier-list": false,
+        "calculator": true,
+        "map": true,
+        "version": true,
+        "download": true,
+        "guides": true,
+        "build": false,
+        "compare": false,
+        "teams": true,
+        "redeem-codes": true
+      }
+    },
+    "roco-cn": {
+      "id": "roco-cn",
+      "name": {
+        "zh": "洛克王国：世界",
+        "en": "Roco Kingdom (CN)",
+        "ja": "ロコキングダム（中国版）"
+      },
+      "theme": {
+        "primary": "#4ade80",
+        "accent": "#f59e0b",
+        "background": "#0d1410",
+        "surface": "#16211a"
+      },
+      "elements": [
+        {
+          "id": "grass",
+          "name": {
+            "zh": "草",
+            "en": "Grass",
+            "ja": "くさ"
+          },
+          "color": "#4ade80"
+        },
+        {
+          "id": "fire",
+          "name": {
+            "zh": "火",
+            "en": "Fire",
+            "ja": "ほのお"
+          },
+          "color": "#ef4444"
+        },
+        {
+          "id": "water",
+          "name": {
+            "zh": "水",
+            "en": "Water",
+            "ja": "みず"
+          },
+          "color": "#3b82f6"
+        },
+        {
+          "id": "electric",
+          "name": {
+            "zh": "电",
+            "en": "Electric",
+            "ja": "でんき"
+          },
+          "color": "#facc15"
+        },
+        {
+          "id": "normal",
+          "name": {
+            "zh": "普通",
+            "en": "Normal",
+            "ja": "ノーマル"
+          },
+          "color": "#9ca3af"
+        },
+        {
+          "id": "ice",
+          "name": {
+            "zh": "冰",
+            "en": "Ice",
+            "ja": "こおり"
+          },
+          "color": "#67e8f9"
+        },
+        {
+          "id": "poison",
+          "name": {
+            "zh": "毒",
+            "en": "Poison",
+            "ja": "どく"
+          },
+          "color": "#a855f7"
+        },
+        {
+          "id": "ground",
+          "name": {
+            "zh": "土",
+            "en": "Ground",
+            "ja": "じめん"
+          },
+          "color": "#f59e0b"
+        },
+        {
+          "id": "flying",
+          "name": {
+            "zh": "翼",
+            "en": "Flying",
+            "ja": "ひこう"
+          },
+          "color": "#6ee7b7"
+        },
+        {
+          "id": "bug",
+          "name": {
+            "zh": "虫",
+            "en": "Bug",
+            "ja": "むし"
+          },
+          "color": "#84cc16"
+        },
+        {
+          "id": "light",
+          "name": {
+            "zh": "光",
+            "en": "Light",
+            "ja": "ひかり"
+          },
+          "color": "#fbbf24"
+        },
+        {
+          "id": "dark",
+          "name": {
+            "zh": "暗",
+            "en": "Dark",
+            "ja": "あく"
+          },
+          "color": "#6b7280"
+        }
+      ],
+      "rarities": [
+        {
+          "stars": 3,
+          "color": "#60a5fa",
+          "label": {
+            "zh": "普通",
+            "en": "Common",
+            "ja": "コモン"
+          }
+        },
+        {
+          "stars": 4,
+          "color": "#a855f7",
+          "label": {
+            "zh": "稀有",
+            "en": "Rare",
+            "ja": "レア"
+          }
+        },
+        {
+          "stars": 5,
+          "color": "#f59e0b",
+          "label": {
+            "zh": "史诗",
+            "en": "Epic",
+            "ja": "エピック"
+          }
+        }
+      ],
+      "stats": {
+        "baseStats": [
+          "hp",
+          "atk",
+          "def",
+          "spAtk",
+          "spDef",
+          "spd"
+        ],
+        "subStats": [],
+        "specialStats": []
+      },
+      "routes": {
+        "characters": true,
+        "weapons": true,
+        "items": true,
+        "tier-list": true,
+        "calculator": false,
+        "map": false,
+        "version": true,
+        "download": true,
+        "guides": true,
+        "build": false,
+        "compare": false,
+        "teams": false,
+        "redeem-codes": true,
+        "type-chart": true,
+        "merchant": true,
+        "eggs": true,
+        "events": true
+      }
+    },
+    "aniimo": {
+      "id": "aniimo",
+      "name": {
+        "zh": "伊莫",
+        "en": "Aniimo",
+        "ja": "アニモ"
+      },
+      "theme": {
+        "primary": "#22c55e",
+        "accent": "#38bdf8",
+        "background": "#101714",
+        "surface": "#16221e"
+      },
+      "elements": [
+        {
+          "id": "fire",
+          "name": {
+            "zh": "火",
+            "en": "Fire",
+            "ja": "火"
+          },
+          "color": "#ef4444"
+        },
+        {
+          "id": "water",
+          "name": {
+            "zh": "水",
+            "en": "Water",
+            "ja": "水"
+          },
+          "color": "#3b82f6"
+        },
+        {
+          "id": "grass",
+          "name": {
+            "zh": "草",
+            "en": "Grass",
+            "ja": "草"
+          },
+          "color": "#4ade80"
+        },
+        {
+          "id": "wind",
+          "name": {
+            "zh": "风",
+            "en": "Wind",
+            "ja": "風"
+          },
+          "color": "#6ee7b7"
+        },
+        {
+          "id": "rock",
+          "name": {
+            "zh": "岩",
+            "en": "Rock",
+            "ja": "岩"
+          },
+          "color": "#f59e0b"
+        },
+        {
+          "id": "electric",
+          "name": {
+            "zh": "电",
+            "en": "Electric",
+            "ja": "電気"
+          },
+          "color": "#facc15"
+        },
+        {
+          "id": "ice",
+          "name": {
+            "zh": "冰",
+            "en": "Ice",
+            "ja": "氷"
+          },
+          "color": "#67e8f9"
+        },
+        {
+          "id": "holy",
+          "name": {
+            "zh": "圣",
+            "en": "Holy",
+            "ja": "聖"
+          },
+          "color": "#fbbf24"
+        },
+        {
+          "id": "dark",
+          "name": {
+            "zh": "暗",
+            "en": "Dark",
+            "ja": "闇"
+          },
+          "color": "#64748b"
+        },
+        {
+          "id": "unknown",
+          "name": {
+            "zh": "未知",
+            "en": "Unknown",
+            "ja": "不明"
+          },
+          "color": "#9ca3af"
+        }
+      ],
+      "rarities": [
+        {
+          "stars": 5,
+          "color": "#fbbf24",
+          "label": {
+            "zh": "Nova",
+            "en": "Nova Stage",
+            "ja": "Nova"
+          }
+        },
+        {
+          "stars": 4,
+          "color": "#a855f7",
+          "label": {
+            "zh": "Gamma",
+            "en": "Gamma Stage",
+            "ja": "Gamma"
+          }
+        },
+        {
+          "stars": 3,
+          "color": "#60a5fa",
+          "label": {
+            "zh": "Lumin",
+            "en": "Lumin Stage",
+            "ja": "Lumin"
+          }
+        },
+        {
+          "stars": 2,
+          "color": "#9ca3af",
+          "label": {
+            "zh": "索引",
+            "en": "Official Index",
+            "ja": "Index"
+          }
+        }
+      ],
+      "stats": {
+        "baseStats": [
+          "hp",
+          "atk",
+          "def"
+        ],
+        "subStats": [
+          "stage",
+          "region",
+          "ability"
+        ],
+        "specialStats": [
+          "twine"
+        ]
+      },
+      "routes": {
+        "characters": true,
+        "weapons": false,
+        "items": false,
+        "tier-list": false,
+        "calculator": false,
+        "map": true,
+        "version": true,
+        "download": true,
+        "guides": true,
+        "build": false,
+        "compare": false,
+        "teams": false,
+        "redeem-codes": true
+      }
+    },
+    "azur-promilia": {
+      "id": "azur-promilia",
+      "name": {
+        "zh": "蓝色星原：旅谣",
+        "en": "Azur Promilia",
+        "ja": "アズールプロミリア"
+      },
+      "theme": {
+        "primary": "#4cc9f0",
+        "accent": "#f9c74f",
+        "background": "#10233f",
+        "surface": "#183454"
+      },
+      "elements": [
+        {
+          "id": "fire",
+          "name": {
+            "zh": "火",
+            "en": "Fire",
+            "ja": "火"
+          },
+          "color": "#ef4444"
+        },
+        {
+          "id": "wind",
+          "name": {
+            "zh": "风",
+            "en": "Wind",
+            "ja": "風"
+          },
+          "color": "#6ee7b7"
+        },
+        {
+          "id": "water",
+          "name": {
+            "zh": "水",
+            "en": "Water",
+            "ja": "水"
+          },
+          "color": "#3b82f6"
+        },
+        {
+          "id": "nature",
+          "name": {
+            "zh": "自然",
+            "en": "Nature",
+            "ja": "自然"
+          },
+          "color": "#4ade80"
+        },
+        {
+          "id": "thunder",
+          "name": {
+            "zh": "雷",
+            "en": "Thunder",
+            "ja": "雷"
+          },
+          "color": "#facc15"
+        },
+        {
+          "id": "earth",
+          "name": {
+            "zh": "土",
+            "en": "Earth",
+            "ja": "土"
+          },
+          "color": "#f59e0b"
+        },
+        {
+          "id": "light",
+          "name": {
+            "zh": "光",
+            "en": "Light",
+            "ja": "光"
+          },
+          "color": "#fde68a"
+        },
+        {
+          "id": "ice",
+          "name": {
+            "zh": "冰",
+            "en": "Ice",
+            "ja": "氷"
+          },
+          "color": "#67e8f9"
+        },
+        {
+          "id": "unknown",
+          "name": {
+            "zh": "未公布",
+            "en": "Unannounced",
+            "ja": "未発表"
+          },
+          "color": "#94a3b8"
+        }
+      ],
+      "rarities": [
+        {
+          "stars": 4,
+          "color": "#a855f7",
+          "label": {
+            "zh": "紫",
+            "en": "Purple",
+            "ja": "紫"
+          }
+        },
+        {
+          "stars": 5,
+          "color": "#eab308",
+          "label": {
+            "zh": "金",
+            "en": "Gold",
+            "ja": "金"
+          }
+        }
+      ],
+      "stats": {
+        "baseStats": [
+          "hp",
+          "atk",
+          "def"
+        ],
+        "subStats": [],
+        "specialStats": []
+      },
+      "routes": {
+        "characters": true,
+        "weapons": true,
+        "items": false,
+        "tier-list": true,
+        "calculator": false,
+        "map": false,
+        "guides": true,
+        "redeem-codes": true
+      }
+    },
+    "lvmeng": {
+      "id": "lvmeng",
+      "name": {
+        "zh": "绿梦：时空之声",
+        "en": "Lvmeng: Echoes of Time",
+        "ja": "緑夢：時空の声"
+      },
+      "theme": {
+        "primary": "#55c681",
+        "accent": "#e9b44c",
+        "background": "#10251f",
+        "surface": "#19372e"
+      },
+      "elements": [],
+      "rarities": [],
+      "stats": {
+        "baseStats": [],
+        "subStats": [],
+        "specialStats": []
+      },
+      "routes": {
+        "characters": false,
+        "weapons": false,
+        "items": false,
+        "tier-list": false,
+        "calculator": false,
+        "map": false,
+        "guides": true,
+        "version": true,
+        "download": true,
+        "redeem-codes": true
+      }
+    }
+  },
+  "retainedCNArtwork": {
+    "paths": {
+      "meewee": "images/roco-cn/characters/miaomiao.webp",
+      "sparka": "images/roco-cn/characters/huohua.webp",
+      "cerulla": "images/roco-cn/characters/shuilanlan.webp"
+    },
+    "decision": "retain_preexisting_independent_CN_paths_not_global_identity_evidence",
+    "note": "Three archived international images are byte-identical to existing CN artwork. CN paths remain unchanged and are explicitly allowlisted; this is scoped withdrawal, not worldwide byte erasure or new CN rights verification."
+  },
+  "consumerAudit": {
+    "scope": [
+      "source/public raw",
+      "character adapters and compatibility accessors",
+      "core registry",
+      "home CN cross-region metadata and visible copy",
+      "dormant dashboard",
+      "version snapshots",
+      "reachable market-intel",
+      "search and ID manifests",
+      "reviewed tools and item boundaries",
+      "static ASSETS and fingerprint aliases"
+    ],
+    "manifestDecision": "ID-only character keys remain for URL continuity; the only application manifest consumer creates static params, not official roster counts. Search excludes international roco. All 345 derived files unchanged.",
+    "marketIntelDecision": "Historical ID and source date retained; title/date keywords and external endorsement withdrawn; self correction link explicitly not independent evidence.",
+    "internationalImageFilesRemaining": 0
+  }
+}

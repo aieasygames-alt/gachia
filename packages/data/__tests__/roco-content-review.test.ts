@@ -1,8 +1,9 @@
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { expect, it } from 'vitest';
-import rawCharacters from '../games/roco/raw-characters.json';
-import rawGuides from '../games/roco/raw-guides.json';
+import rawCharacters from '../../../reports/content-integrity/archive/s2-14/characters.json';
+import rawGuides from '../../../reports/content-integrity/archive/s2-14/guides.json';
+import { ROCO_CHARACTER_IDENTITY_REVIEW } from '../games/roco/character-review';
 import { characters, getRocoCharacterDescription, rocoCharacters } from '../games/roco/characters';
 
 const proof = JSON.parse(readFileSync(new URL('../../../reports/content-integrity/s2-7-source-decisions-2026-10-24.json', import.meta.url), 'utf8'));
@@ -21,7 +22,7 @@ it('withdraws copied international skills and values without inventing zero stat
     expect(source).not.toHaveProperty('releaseVersion');
     expect(source).toHaveProperty('contentReview.status', 'needs_verification');
     expect(characters.find(row => row.id === id)).toBeUndefined();
-    expect(getRocoCharacterDescription(rocoCharacters.find(row => row.id === id)!, 'ja')).toBe(source.descriptionJa);
+    expect(getRocoCharacterDescription(rocoCharacters.find(row => row.id === id)!, 'ja')).toBe(ROCO_CHARACTER_IDENTITY_REVIEW.ja.description);
   }
   expect(characters).toEqual([]);
   expect(proof.originalCharacters.source.every((row: { skills: unknown[]; stats: unknown }) => row.skills.length && row.stats)).toBe(true);

@@ -115,22 +115,5 @@
     }
   ],
   "pending": [],
-  "holds": [
-    {
-      "path": "roco/raw-characters.json",
-      "status": "needs_review",
-      "sourceSha256": "c726ca7b9fdfab0274fbc4e2689bac07908cbc662020204f157fd567beb537fe",
-      "mirrorSha256": "c726ca7b9fdfab0274fbc4e2689bac07908cbc662020204f157fd567beb537fe",
-      "reason": "All six details now withhold unverified identity/appearance/mechanics claims; retained names/classifications and legacy navigation artwork remain independently unverified.",
-      "reviewDocument": "plans/multi-game-s2-8-roco-public-scope-closeout-2026-10-24.md"
-    },
-    {
-      "path": "roco/raw-guides.json",
-      "status": "needs_review",
-      "sourceSha256": "0b2ca41b4e51ea1f6e5b100dca9531795e2962c140d474a0d5de980a75263268",
-      "mirrorSha256": "0b2ca41b4e51ea1f6e5b100dca9531795e2962c140d474a0d5de980a75263268",
-      "reason": "All 30 guide URLs now carry scoped review policy: 13 verification checklists and 17 archived editorial proposals. Classification is not official game verification; identities, other public tools and registry cross-consumers remain unapproved.",
-      "reviewDocument": "plans/multi-game-s2-9-roco-editorial-separation-closeout-2026-10-24.md"
-    }
-  ]
+  "holds": []
 }

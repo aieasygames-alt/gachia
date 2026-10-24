@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { expect, it } from 'vitest';
-import guides from '../games/roco/raw-guides.json';
+import guides from '../../../reports/content-integrity/archive/s2-14/guides.json';
 import { getRocoGuideCategory, rocoGuides, ROCO_GUIDE_CATEGORIES } from '../games/roco/guides';
 
 const proof = JSON.parse(readFileSync(new URL('../../../reports/content-integrity/s2-9-source-decisions-2026-10-24.json', import.meta.url), 'utf8'));
@@ -16,7 +16,7 @@ it('preserves the complete original proposals internally and keeps the thirteen 
   expect(hash(preserved)).toBe(proof.preservation.priorThirteenGuidesSerializationSha256);
   const reconstructed = guides.map(row => proof.originalGuides.find((old: { id: string }) => old.id === row.id) ?? row);
   expect(hash(reconstructed)).toBe(proof.preservation.originalAllGuidesSerializationSha256);
-  const bytes = readFileSync(new URL('../games/roco/raw-characters.json', import.meta.url));
+  const bytes = readFileSync(new URL('../../../reports/content-integrity/archive/s2-14/characters.json', import.meta.url));
   expect(createHash('sha256').update(bytes).digest('hex')).toBe(proof.preservation.charactersBytesSha256);
 });
 
@@ -45,11 +45,11 @@ it.each(['zh', 'en', 'ja'] as const)('provides an explicit localized editorial c
   }
 });
 
-it('archives and removes all seventeen matching next-step blocks, keeping the release holds', () => {
+it('archives and removes all seventeen matching next-step blocks, preserving historical release holds in the archive', () => {
   const page = readFileSync(new URL('../../../apps/web/app/[lang]/[game]/guides/[slug]/page.tsx', import.meta.url), 'utf8');
   expect(proof.withdrawnHardcodedGuideBlocks).toHaveLength(17);
   for (const block of proof.withdrawnHardcodedGuideBlocks) expect(page).not.toContain(block.originalBlock);
-  const ledger = JSON.parse(readFileSync(new URL('../raw-content-review.json', import.meta.url), 'utf8'));
+  const ledger = JSON.parse(readFileSync(new URL('../../../reports/content-integrity/archive/s2-14/ledger.json', import.meta.url), 'utf8'));
   expect(ledger.pending).toEqual([]);
   expect(ledger.holds.map((hold: { path: string }) => hold.path)).toEqual(['roco/raw-characters.json', 'roco/raw-guides.json']);
 });

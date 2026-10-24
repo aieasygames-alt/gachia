@@ -1,26 +1,57 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { readFileSync } from 'node:fs';
+import { readFileSync, mkdtempSync, mkdirSync, writeFileSync, copyFileSync, rmSync, realpathSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { dirname, join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { requiredWebSecrets, WEB_FEATURES, DISABLED_ACCOUNT_ROUTES, verifyDisabledAccounts } from './web-release-policy.mjs';
 import { webStagingOrigin } from './web-staging-acceptance.mjs';
+import { rawSemanticHash } from '../packages/data/scripts/raw-inventory-contract.mjs';
 
-test('raw review CLI distinguishes engineering checks from a blocked production release', () => {
+test('raw review CLI admits explicit withdrawals without claiming verified game facts', () => {
   const script = fileURLToPath(new URL('../packages/data/scripts/raw-inventory-contract.mjs', import.meta.url));
   for (const release of [false, true]) {
     const result = spawnSync(process.execPath, [script, ...(release ? ['--release'] : [])], { encoding: 'utf8', timeout: 10000 });
-    assert.equal(result.status, release ? 1 : 0, result.stderr);
+    assert.equal(result.status, 0, result.stderr);
     const report = JSON.parse(result.stdout);
     assert.equal(report.engineeringReady, true);
-    assert.equal(report.contentReleaseReady, false);
+    assert.equal(report.contentReleaseReady, true);
     assert.equal(report.pending.length, 0);
-    assert.equal(report.holds.length, 2);
+    assert.equal(report.holds.length, 0);
+    assert.equal(report.withdrawal.decision, 'withdrawn_not_verified');
+    assert.equal(report.withdrawal.officialFactsApproved, false);
     assert.equal(report.equal, 90);
   }
   const unknown = spawnSync(process.execPath, [script, '--allow-pending'], { encoding: 'utf8', timeout: 10000 });
   assert.equal(unknown.status, 1);
   assert.match(unknown.stderr, /Usage/);
+});
+
+test('raw review CLI still blocks an equal factual hold before a chained build or upload', () => {
+  const root = realpathSync(mkdtempSync(join(tmpdir(), 'gachia-held-cli-')));
+  const data = [{ id: 'one', title: 'Unverified' }];
+  const put = (path, bytes) => { mkdirSync(dirname(join(root, path)), { recursive: true }); writeFileSync(join(root, path), bytes); };
+  const path = 'pilot/raw-guides.json';
+  try {
+    for (const script of ['raw-inventory-contract.mjs', 'roco-publication-contract.mjs']) {
+      const destination = join(root, 'packages/data/scripts', script); mkdirSync(dirname(destination), { recursive: true });
+      copyFileSync(new URL(`../packages/data/scripts/${script}`, import.meta.url), destination);
+    }
+    for (const prefix of ['packages/data/games', 'apps/web/public/data']) put(`${prefix}/${path}`, JSON.stringify(data));
+    put('plans/review.md', 'Unresolved factual scope.');
+    put('packages/data/raw-content-review.json', JSON.stringify({ schemaVersion: 1, pairs: [path], sourceOnly: [], pending: [], holds: [{ path,
+      status: 'needs_review', sourceSha256: rawSemanticHash(data), mirrorSha256: rawSemanticHash(data), reason: 'Unverified', reviewDocument: 'plans/review.md' }] }));
+    for (const release of [false, true]) {
+      const result = spawnSync(process.execPath, [join(root, 'packages/data/scripts/raw-inventory-contract.mjs'), ...(release ? ['--release'] : [])], { encoding: 'utf8' });
+      assert.equal(result.status, release ? 1 : 0, result.stderr);
+      assert(result.stdout.trim(), result.stderr);
+      assert.equal(JSON.parse(result.stdout).contentReleaseReady, false);
+    }
+    const result = spawnSync('/bin/sh', ['-c', '"$NODE" packages/data/scripts/raw-inventory-contract.mjs --release && echo MUST_NOT_BUILD_OR_UPLOAD'], { cwd: root, env: { ...process.env, NODE: process.execPath }, encoding: 'utf8' });
+    assert.equal(result.status, 1);
+    assert(!result.stdout.includes('MUST_NOT_BUILD_OR_UPLOAD'));
+  } finally { rmSync(root, { recursive: true, force: true }); }
 });
 
 test('main production deploy and upload check content before building, while staging remains reviewable', () => {

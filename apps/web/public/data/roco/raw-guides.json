@@ -1343,8 +1343,8 @@
     "categoryEn": "Gameplay",
     "summary": "旧文的精灵总数、元素数量、血统、特殊形态、行为和捕捉工具断言现予撤回。六条历史资料入口不等于已确认的实装图鉴。",
     "summaryEn": "Earlier claims about creature totals, element counts, Bloodline, special forms, behavior and capture tools are withdrawn. Six legacy entries are not a confirmed implemented codex.",
-    "content": "## 图鉴条目应逐项确认\n\n- 每条记录应附对应区服、版本、来源原文与官方名称；不能凭翻译、媒体转述或国服图鉴确认国际服身份。\n- 分别核对属性、形象、行为、获取地点及捕捉条件，不从预告片的一段画面推导完整机制。\n- 数量、元素分类、血统和特殊形态都需要独立证据。没有核实条目不代表数量为零，也不代表内容不存在。\n\n## 阅读本站记录时\n\n历史名称与图片只作导航，不是官方认证。本页不提供已确认的捕捉清单或养成路线。",
-    "contentEn": "## Verify each codex field\n\n- Attach region, version, source excerpt and official name to each record. Translations, press retellings and CN codex entries cannot establish global identity.\n- Verify types, appearance, behavior, locations and catching conditions separately. One trailer scene does not establish a complete mechanic.\n- Totals, element classifications, Bloodline and special forms each require evidence. An unverified entry is neither a zero count nor proof of nonexistence.\n\n## Reading legacy records\n\nRetained names and artwork are navigation, not official certification. This page provides no verified catching list or progression route.",
+    "content": "## 图鉴条目应逐项确认\n\n- 每条记录应附对应区服、版本、来源原文与官方名称；不能凭翻译、媒体转述或国服图鉴确认国际服身份。\n- 分别核对属性、形象、行为、获取地点及捕捉条件，不从预告片的一段画面推导完整机制。\n- 数量、元素分类、血统和特殊形态都需要独立证据。没有核实条目不代表数量为零，也不代表内容不存在。\n\n## 阅读本站记录时\n\n此处仅保留历史 URL 标识，不再公开旧名称、分类或原图；这不是官方身份认证。本页不提供已确认的捕捉清单或养成路线。",
+    "contentEn": "## Verify each codex field\n\n- Attach region, version, source excerpt and official name to each record. Translations, press retellings and CN codex entries cannot establish global identity.\n- Verify types, appearance, behavior, locations and catching conditions separately. One trailer scene does not establish a complete mechanic.\n- Totals, element classifications, Bloodline and special forms each require evidence. An unverified entry is neither a zero count nor proof of nonexistence.\n\n## Reading legacy records\n\nOnly legacy URL identifiers remain; earlier names, classifications and artwork are no longer published. This is not official identity certification. This page provides no verified catching list or progression route.",
     "tags": [
       "source-review",
       "international-scope"
@@ -1388,7 +1388,7 @@
     },
     "titleJa": "国際版図鑑：同一性と仕組みの確認リスト",
     "summaryJa": "旧精霊総数、属性数、血統、特殊形態、行動、捕獲道具の断定を撤回しました。過去六件の記録は実装済み公式図鑑ではありません。",
-    "contentJa": "## 図鑑項目ごとの確認\n\n- 地域、版、出典原文、公式名を記録します。訳名、媒体の再説明、中国版図鑑で国際版の同一性は証明できません。\n- 属性、外見、行動、出現地、捕獲条件を個別に確認します。映像の一場面から仕組み全体を推定しません。\n- 総数、属性分類、血統、特殊形態には個別の根拠が必要です。未確認はゼロや不存在を意味しません。\n\n## 過去記録を読むとき\n\n名前や画像はナビ用で、公式認定ではありません。確認済み捕獲一覧や育成ルートは掲載しません。"
+    "contentJa": "## 図鑑項目ごとの確認\n\n- 地域、版、出典原文、公式名を記録します。訳名、媒体の再説明、中国版図鑑で国際版の同一性は証明できません。\n- 属性、外見、行動、出現地、捕獲条件を個別に確認します。映像の一場面から仕組み全体を推定しません。\n- 総数、属性分類、血統、特殊形態には個別の根拠が必要です。未確認はゼロや不存在を意味しません。\n\n## 過去記録を読むとき\n\n過去のURL識別子のみを残し、旧名称・分類・原画像は公開しません。公式の同一性認定ではありません。確認済み捕獲一覧や育成ルートは掲載しません。"
   },
   {
     "id": "battle-system-guide",

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "decision": "withdrawn_not_verified",
+  "reviewedAt": "2026-10-24",
+  "reviewDocument": "plans/multi-game-s2-14-production-candidate-2026-10-24.md",
+  "resolutions": [
+    {
+      "path": "roco/raw-characters.json",
+      "previousHoldSha256": "c726ca7b9fdfab0274fbc4e2689bac07908cbc662020204f157fd567beb537fe",
+      "archive": "reports/content-integrity/archive/s2-14/characters.json",
+      "activeSha256": "87c5a110625ae3634fccedb9bddcd7e3e1428237c57c8553eac8f10dc3310cb3",
+      "reason": "All six records reduced to URL IDs and review status; historical names, classifications and images withdrawn from publication, not approved."
+    },
+    {
+      "path": "roco/raw-guides.json",
+      "previousHoldSha256": "0b2ca41b4e51ea1f6e5b100dca9531795e2962c140d474a0d5de980a75263268",
+      "archive": "reports/content-integrity/archive/s2-14/guides.json",
+      "activeSha256": "63484e7b9405095cdca050e1b4735673dee92d59057469d3637a90919d01b44a",
+      "reason": "All 30 records reviewed as editorial corrections or archival notices only; no official facts, implemented features or site development commitments approved."
+    }
+  ],
+  "assets": [
+    {
+      "path": "images/roco/characters/meewee.webp",
+      "archive": "reports/content-integrity/archive/s2-14/images/meewee.webp",
+      "sha256": "eca6eae6d536f2c4f07aeebb5a325531bacfdd7098a232589a693e28eb3ebae6"
+    },
+    {
+      "path": "images/roco/characters/sparka.webp",
+      "archive": "reports/content-integrity/archive/s2-14/images/sparka.webp",
+      "sha256": "137a05e63db6ae59d2083e41eaa3979526b78bec25e0b3a762aa2522e7971110"
+    },
+    {
+      "path": "images/roco/characters/cerulla.webp",
+      "archive": "reports/content-integrity/archive/s2-14/images/cerulla.webp",
+      "sha256": "31269f4400c90ff1d976593a833e9ea339e382ef2315474f8e2f11757bfd205c"
+    }
+  ]
+}

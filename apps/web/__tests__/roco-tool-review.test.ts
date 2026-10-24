@@ -33,10 +33,13 @@ function legacyModule<T>(path: string): T {
 }
 
 it('requires explicit region and does not turn unknown international rules into 1x', () => {
+  const withdrawn = JSON.parse(readFileSync(new URL('../../../reports/content-integrity/s2-14-source-decisions-2026-10-24.json', import.meta.url), 'utf8')).withdrawnRegistry;
+  const originalElements = withdrawn.elements.map((row: { id: string }) => row.id);
+  expect(originalElements).toHaveLength(12);
   expect(getRocoTypeElements('roco')).toEqual([]);
   expect(getRocoTypeMatchups('roco')).toEqual([]);
-  for (const attack of [...GAMES.roco.elements.map(row => row.id), 'missing']) {
-    for (const defense of [...GAMES.roco.elements.map(row => row.id), 'missing']) {
+  for (const attack of [...originalElements, 'missing']) {
+    for (const defense of [...originalElements, 'missing']) {
       expect(getTypeMultiplier('roco', attack, defense)).toBeNull();
     }
   }

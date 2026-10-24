@@ -6,8 +6,10 @@ import { getRocoLegacyCharacterById, getRocoLegacyCharacterName, rocoLegacyChara
 
 const proof = JSON.parse(readFileSync(new URL('../../../reports/content-integrity/s2-11-source-decisions-2026-10-24.json', import.meta.url), 'utf8'));
 
-it('preserves original records while separating URL keys from the verified roster', () => {
-  expect(rawCharacters).toEqual(proof.originalCharacters);
+it('preserves original records privately while publishing only URL correction records', () => {
+  const archived = JSON.parse(readFileSync(new URL('../../../reports/content-integrity/archive/s2-14/characters.json', import.meta.url), 'utf8'));
+  expect(archived).toEqual(proof.originalCharacters);
+  expect(rawCharacters).toEqual(rocoLegacyCharacterEntries);
   expect(characters).toEqual([]);
   expect(rocoLegacyCharacterEntries.map(row => row.id)).toEqual(proof.originalCharacters.map((row: { id: string }) => row.id));
   expect(rocoLegacyCharacterEntries).toHaveLength(6);

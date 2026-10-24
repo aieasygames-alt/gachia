@@ -21,7 +21,10 @@ describe('market intelligence backlog', () => {
     const row = MARKET_INTEL_OPPORTUNITIES.find(item => item.id === 'roco-global-quack-quack-test-official-watch')!;
     expect(row.status).toBe('watch');
     expect(row.signal).toEqual({ strength: 'needs_verification' });
-    expect(row.sourceUrls).toEqual(['https://www.rocokingdom.com/']);
+    expect(row.sourceUrls).toEqual(['https://gachia.com/en/roco/version']);
+    expect(row.title).toBe('Roco Global source review (unverified)');
+    expect(row.keywordCluster).not.toContain('October 27');
+    expect(row.notes).toContain('不是新的独立来源');
     expect(row.notes).toContain('Mine Spiders');
     expect(row.sourceDate).toBe('2026-09-21');
   });

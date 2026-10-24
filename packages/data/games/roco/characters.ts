@@ -1,29 +1,28 @@
 import type { SupportedLocale, Character } from '@gachia/core';
-import type { RocoJinie } from './types';
 import rawCharacters from './raw-characters.json';
-import { localeStr } from './types';
-import { getRocoLegacyCharacterName } from './character-review';
+import { getRocoLegacyCharacterName, ROCO_CHARACTER_IDENTITY_REVIEW } from './character-review';
 
-const allCharacters: RocoJinie[] = rawCharacters as unknown as RocoJinie[];
+export interface RocoLegacyEntry {
+  id: string;
+  contentReview: { status: string; reviewedAt: string };
+}
 
-/** Historical source access only; public consumers must use character-review. */
-export const rocoCharacters: RocoJinie[] = allCharacters.filter(
-  (c) => c.status !== 'upcoming'
-);
+// Compatibility access exposes correction records, never an asserted game roster.
+export const rocoCharacters: RocoLegacyEntry[] = rawCharacters;
 
-export function getRocoCharacterName(char: RocoJinie, locale: SupportedLocale): string {
+export function getRocoCharacterName(char: RocoLegacyEntry, locale: SupportedLocale): string {
   return getRocoLegacyCharacterName(char.id, locale);
 }
 
-export function getRocoCharacterDescription(char: RocoJinie, locale: SupportedLocale): string {
-  return localeStr(char.description, char.descriptionEn, locale, char.descriptionJa);
+export function getRocoCharacterDescription(_char: RocoLegacyEntry, locale: SupportedLocale): string {
+  return ROCO_CHARACTER_IDENTITY_REVIEW[locale].description;
 }
 
-export function getRocoCharacterImage(_char: RocoJinie): string {
+export function getRocoCharacterImage(_char: RocoLegacyEntry): string {
   return '';
 }
 
-export function getRocoCharacterById(id: string): RocoJinie | undefined {
+export function getRocoCharacterById(id: string): RocoLegacyEntry | undefined {
   return rocoCharacters.find((c) => c.id === id);
 }
 

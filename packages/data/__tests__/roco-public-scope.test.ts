@@ -1,8 +1,8 @@
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { expect, it } from 'vitest';
-import characters from '../games/roco/raw-characters.json';
-import guides from '../games/roco/raw-guides.json';
+import characters from '../../../reports/content-integrity/archive/s2-14/characters.json';
+import guides from '../../../reports/content-integrity/archive/s2-14/guides.json';
 import { tierLists } from '../games/roco/tier-lists';
 import { characters as genericCharacters } from '../games/roco/characters';
 

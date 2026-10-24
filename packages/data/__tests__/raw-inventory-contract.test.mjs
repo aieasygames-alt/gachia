@@ -32,11 +32,12 @@ afterEach(async () => { await Promise.all(roots.splice(0).map(root => rm(root, {
 
 it('checks all committed pairs and does not confuse containment with approval', async () => {
   const result = await verifyRawInventory();
-  expect(result).toMatchObject({ pairs: 90, equal: 90, sourceOnly: 5, issues: [], engineeringReady: true, contentReleaseReady: false });
+  expect(result).toMatchObject({ pairs: 90, equal: 90, sourceOnly: 5, issues: [], engineeringReady: true, contentReleaseReady: true });
   expect(result.pending).toEqual([]);
-  expect(result.holds.map(row => row.path)).toEqual(['roco/raw-characters.json', 'roco/raw-guides.json']);
+  expect(result.holds).toEqual([]);
+  expect(result.withdrawal).toMatchObject({ decision: 'withdrawn_not_verified', officialFactsApproved: false, resolved: ['roco/raw-characters.json', 'roco/raw-guides.json'] });
 
-  await expect(verifyRawInventory(undefined, { release: true })).rejects.toThrow('2 factual holds');
+  await expect(verifyRawInventory(undefined, { release: true })).resolves.toHaveProperty('contentReleaseReady', true);
 });
 it('allows bounded engineering with pending content but blocks release without writing anything', async () => {
   const { root } = await fixture();

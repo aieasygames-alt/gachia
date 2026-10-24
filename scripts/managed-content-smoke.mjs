@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
-import { randomUUID } from 'node:crypto';
-import { mkdirSync, readFileSync, writeFileSync, unlinkSync, appendFileSync, readdirSync } from 'node:fs';
+import { createHash, randomUUID } from 'node:crypto';
+import { existsSync, mkdirSync, readFileSync, writeFileSync, unlinkSync, appendFileSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
@@ -8,10 +8,33 @@ import { chromium } from '@playwright/test';
 import { MANAGED_MIRRORS, verifyRawMirrors } from '../packages/data/scripts/raw-mirror-contract.mjs';
 import { fixtureIpHeaders, localFixtureConfig } from './runtime-rollout-smoke.mjs';
 import { verifyLocalWorker } from './game-release-smoke.mjs';
+import { ROCO_RETAINED_CN_IMAGE_PATHS } from '../packages/data/scripts/roco-publication-contract.mjs';
+import { verifyRetainedWebAssets } from './retain-web-assets.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const SLUG = 'daily-events-merchant-guide';
 const INDEXNOW_FIXTURE_TOKEN = 'local-indexnow-paused-fixture';
+
+export function verifyWithdrawnRocoAssets(directory) {
+  const assets = resolve(directory, 'assets');
+  const entries = readdirSync(assets, { recursive: true, withFileTypes: true });
+  assert(!entries.some(entry => entry.isSymbolicLink()), 'Linked published assets are not supported by the withdrawal check');
+  const files = entries.filter(entry => entry.isFile());
+  const withdrawn = JSON.parse(readFileSync(resolve(ROOT, 'packages/data/roco-publication-resolution.json'), 'utf8')).assets;
+  assert(files.length > 0, 'No compiled assets inspected');
+  const forbidden = /(?:^|\/)images\/roco\/characters\/|(?:^|\/)reports\/content-integrity\/|s2-14\/(?:characters|guides|ledger)\.json$/;
+  for (const entry of files) {
+    const path = resolve(entry.parentPath, entry.name).slice(assets.length + 1);
+    assert(!forbidden.test(path), `Withdrawn Roco asset or private evidence published: ${path}`);
+    const hash = createHash('sha256').update(readFileSync(resolve(assets, path))).digest('hex');
+    const image = withdrawn.find(row => row.sha256 === hash);
+    if (image) {
+      const id = image.path.split('/').at(-1).replace('.webp', '');
+      assert.equal(path, ROCO_RETAINED_CN_IMAGE_PATHS[id], 'Withdrawn image published under another path');
+    }
+  }
+  return { inspectedFiles: files.length, withdrawnImagesPublished: false, privateEvidencePublished: false, scope: 'international_paths_and_unregistered_byte_aliases; existing_independent_CN_paths_retained_not_newly_verified' };
+}
 
 export function verifyNoLegacyIndexNowTransport(directory) {
   let codeFiles = 0;
@@ -34,7 +57,33 @@ export function requireLocalContentOrigin(value) {
 
 export async function verifyManagedContent(value, directory) {
   const origin = requireLocalContentOrigin(value);
-  const observations = { http: [], json: [], search: [], browser: [], indexnow: [] };
+  const observations = { http: [], json: [], search: [], browser: [], indexnow: [], retainedAssets: [] };
+  const retentionPath = resolve(ROOT, 'apps/web/.open-next/retained-web-assets.json');
+  if (existsSync(retentionPath)) {
+    const retained = JSON.parse(readFileSync(retentionPath, 'utf8'));
+    verifyRetainedWebAssets(resolve(ROOT, 'apps/web/.open-next'), retained.source.versionId);
+    const selected = [...retained.files.filter(file => /(?:webpack[^/]*\.js|\.css)$/.test(file.path)), ...retained.files];
+    for (const file of [...new Map(selected.map(file => [file.path, file])).values()].slice(0, 12)) {
+      const path = '/_next/static/' + file.path.split('/').map(encodeURIComponent).join('/');
+      const response = await fetch(origin + path, { redirect: 'manual', signal: AbortSignal.timeout(30000) });
+      assert.equal(response.status, 200, path);
+      const bytes = Buffer.from(await response.arrayBuffer());
+      assert.equal(bytes.length, file.bytes, path);
+      assert.equal(createHash('sha256').update(bytes).digest('hex'), file.sha256, path);
+      observations.retainedAssets.push({ path, status: 200, byteEqual: true, versionId: retained.source.versionId });
+    }
+  }
+  for (const id of ['meewee', 'sparka', 'cerulla']) {
+    for (const suffix of ['', '?withdrawal-probe=1']) for (const method of ['GET', 'HEAD']) {
+      const path = `/images/roco/characters/${id}.webp${suffix}`;
+      const response = await fetch(origin + path, { method, redirect: 'manual', signal: AbortSignal.timeout(30000) });
+      assert.equal(response.status, 404, `Withdrawn image ${method} ${path}`);
+      assert.equal(response.headers.get('location'), null, path);
+      assert(!/^image\//i.test(response.headers.get('content-type') ?? ''), path);
+      await response.arrayBuffer();
+      observations.http.push({ path, method, status: 404, withdrawnImage: true });
+    }
+  }
   for (const locale of ['zh', 'en', 'ja']) {
     for (const suffix of ['items', 'items/gulu-ball', 'items/not-a-record']) {
       const path = `/${locale}/roco/${suffix}`;
@@ -88,6 +137,9 @@ export async function verifyManagedContent(value, directory) {
   const reviewedRegion = JSON.parse(readFileSync(resolve(ROOT, 'packages/data/games/wuwa/raw-regions.json'), 'utf8')).find(entry => entry.id === 'simulacrum-nexus');
   const rocoGuides = JSON.parse(readFileSync(resolve(ROOT, 'packages/data/games/roco/raw-guides.json'), 'utf8')).filter(entry => entry.contentReview?.status === 'needs_verification');
   const rocoCharacters = JSON.parse(readFileSync(resolve(ROOT, 'packages/data/games/roco/raw-characters.json'), 'utf8')).filter(entry => entry.contentReview?.status === 'needs_verification');
+  // Keep negative identity checks non-vacuous after stripping names from public raw.
+  const archivedCharacters = JSON.parse(readFileSync(resolve(ROOT, 'reports/content-integrity/archive/s2-14/characters.json'), 'utf8'));
+  assert.equal(archivedCharacters.length, 6);
   const rocoPublicReview = JSON.parse(readFileSync(resolve(ROOT, 'apps/web/lib/roco-public-review.json'), 'utf8'));
   const { legacyWeaponIds } = JSON.parse(readFileSync(resolve(ROOT, 'reports/content-integrity/s2-10-source-decisions-2026-10-24.json'), 'utf8'));
   const reviewedTools = ['type-chart', 'eggs', 'merchant', 'weapons', 'redeem-codes'];
@@ -107,6 +159,8 @@ export async function verifyManagedContent(value, directory) {
     observations.search.push({ path, status: 200, officialNamesVerified: reviewedEchoes.length });
   }
   const cases = [
+    ...['zh', 'en', 'ja'].map(locale => ({ locale, path: `/${locale}/tools/market-intel`, kind: 'market-intel-review' })),
+    ...['zh', 'en', 'ja'].map(locale => ({ locale, path: `/${locale}/roco-cn`, kind: 'cn-home' })),
     ...['zh', 'en', 'ja'].map(locale => ({ locale, path: `/${locale}/wuwa/redeem-codes`, kind: 'codes' })),
     ...['zh', 'ja'].map(locale => ({ locale, path: `/${locale}/roco-cn/guides/${SLUG}`, kind: 'archive' })),
     ...['zh', 'en', 'ja'].map(locale => ({ locale, path: `/${locale}/roco-cn/map`, kind: 'cn-map' })),
@@ -159,7 +213,19 @@ export async function verifyManagedContent(value, directory) {
           assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), `https://gachia.com${path}`);
           const body = await page.locator('body').innerText();
           assert.equal(await page.locator('[data-source-disclaimer]').innerText(), messages[locale].footer.disclaimer, path);
-          if (kind === 'archive') {
+          if (kind === 'market-intel-review') {
+            const card = page.locator('article').filter({ has: page.getByRole('heading', { name: 'Roco Global source review (unverified)', exact: true }) });
+            assert.equal(await card.count(), 1, path);
+            const text = await card.innerText();
+            assert(text.includes('不是新的独立来源或官方测试公告'), path);
+            assert(!/Quack Quack|October 27|10\/27|3688140|rocokingdom\.com/.test(text), path);
+            assert.match(await page.locator('meta[name="robots"]').getAttribute('content'), /noindex,\s*nofollow/);
+          } else if (kind === 'cn-home') {
+            assert(!/Quack Quack|CBT/i.test(body), path);
+            assert(!/CBT/i.test(await page.locator('meta[name="description"]').getAttribute('content')), path);
+            assert(body.includes({ zh: '国际服入口是纠错说明，不是测试公告', en: 'the global link is a correction notice, not a test announcement', ja: '国際版へのリンクは訂正説明で、テスト告知ではありません' }[locale]), path);
+            assert((await page.locator(`a[href="/${locale}/roco/version"]`).count()) > 0, path);
+          } else if (kind === 'archive') {
             assert.equal(await page.locator('h1').innerText(), locale === 'zh' ? guide.title : guide.titleJa);
             assert(body.includes(locale === 'zh' ? '历史归档说明' : '過去の記録について'));
             const languages = await page.locator('link[rel="alternate"][hreflang]').evaluateAll(nodes => nodes.map(node => node.getAttribute('hreflang')));
@@ -290,7 +356,9 @@ export async function verifyManagedContent(value, directory) {
               assert.equal(await article.locator('img, table, button').count(), 0, path);
               assert.equal(await page.locator('meta[property="og:image"]').count(), 0, path);
               assert(body.includes({ zh: '使用权', en: 'usage rights', ja: '利用権' }[locale]), path);
-              for (const name of [row.name, row.nameEn, row.nameJa].filter(Boolean)) assert(!body.includes(name), `${path}: unverified name ${name}`);
+              const archived = archivedCharacters.find(entry => entry.id === id);
+              assert(archived?.name && archived?.nameEn, `${path}: missing archived negative assertion inputs`);
+              for (const name of [archived.name, archived.nameEn, archived.nameJa].filter(Boolean)) assert(!body.includes(name), `${path}: unverified name ${name}`);
               assert.equal(await page.locator('[data-review-portrait]').innerText(), { zh: '形象待核实', en: 'Appearance unverified', ja: '外見未確認' }[locale]);
               assert.equal(await page.locator('[data-review-portrait] img').count(), 0);
               assert.equal(await article.getByRole('heading', { name: /^(种族值|種族値|Base Stats|技能表|スキル一覧|Skills|基本信息|基本情報|Profile)$/ }).count(), 0);
@@ -418,6 +486,7 @@ async function main() {
   try {
     mkdirSync(directory, { mode: 0o700 });
     record.indexnowTransport = verifyNoLegacyIndexNowTransport(resolve(ROOT, 'apps/web/.open-next'));
+    record.withdrawnAssets = verifyWithdrawnRocoAssets(resolve(ROOT, 'apps/web/.open-next'));
     const configPath = resolve(directory, 'wrangler.json');
     const config = localFixtureConfig('web', ROOT);
     config.vars.INDEXNOW_AUTH_TOKEN = INDEXNOW_FIXTURE_TOKEN;

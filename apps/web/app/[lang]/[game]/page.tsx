@@ -85,9 +85,9 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     ja: '失控進化のハードコアサバイバル攻略。現在はS2「制霸王座」、公式/WeGame/TapTap DL、報酬期限、サーバーモード、安全区/標準/挑戦、0-2時間開荒、防衛を重点化します。',
   },
   'roco-cn': {
-    zh: '《洛克王国：世界》国服已上线，Gachia 重点整理兑换码有效期、宠物图鉴、活动路线、宠物推荐、精灵培养、新手路线和与 Roco Global 的版本分流，帮助玩家避免把国服和国际服 CBT 信息混在一起。',
-    en: 'Roco Kingdom: World CN is live. Gachia focuses on code validity, creature encyclopedia, events, creature picks, training, beginner routes, and separation from Roco Global so players do not mix CN live content with global CBT information.',
-    ja: 'ロコキングダム：中国版は配信中。Gachiaはコード期限、ペット図鑑、イベント、推薦、育成、初心者導線、Roco Globalとの分流を整理し、中国版と国際CBTを混同しないようにします。',
+    zh: '《洛克王国：世界》国服已上线，Gachia 重点整理兑换码有效期、宠物图鉴、活动路线、宠物推荐、精灵培养、新手路线和与 Roco Global 的版本分流，国际服入口只提供纠错与核验说明，不能据此确认测试、报名或平台安排。',
+    en: 'Roco Kingdom: World CN is live. Gachia focuses on code validity, creature encyclopedia, events, creature picks, training, beginner routes, and separation from Roco Global with global correction and verification notices, not confirmation of tests, signup or platforms.',
+    ja: 'ロコキングダム：中国版は配信中。Gachiaはコード期限、ペット図鑑、イベント、推薦、育成、初心者導線、Roco Globalとの分流を整理し、国際版へのリンクは訂正・確認説明であり、テスト・応募・対応機種の確認ではありません。',
   },
 };
 
@@ -623,8 +623,8 @@ const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
     description: { zh: '把国服兑换码有效期、宠物图鉴、活动、宠物推荐、精灵培养、新手路线和与 Roco Global 分流放到首页。', en: 'Bring CN code validity, creature encyclopedia, events, creature picks, training, beginner routes, and separation from Roco Global to the homepage.', ja: '中国版コード期限、ペット図鑑、イベント、推薦、育成、初心者導線、Roco Globalとの分流をトップに出します。' },
     chips: { zh: ['国服已上线', '兑换码有效期', '宠物图鉴', '活动路线', '宠物推荐', '国际服分流'], en: ['CN live', 'Code validity', 'Creature index', 'Event route', 'Creature picks', 'Global split'], ja: ['中国版配信中', 'コード期限', 'ペット図鑑', 'イベント導線', '推薦', '国際版分流'] },
     cta: { zh: '去国服专题', en: 'Open CN hub', ja: '中国版特集へ' },
-    tracks: { zh: [{ title: '兑换码与活动', description: '先确认兑换码来源、有效期和当前活动入口。', links: [{ href: '/roco-cn/redeem-codes', label: '兑换码' }, { href: '/roco-cn/version', label: '国服专题' }] }, { title: '宠物图鉴与培养', description: '先看图鉴、属性克制、宠物推荐和培养顺序。', links: [{ href: '/roco-cn/characters', label: '宠物图鉴' }, { href: '/roco-cn/tier-list', label: '节奏榜' }] }, { title: '版本分流', description: '国服上线内容和 Global CBT / Quack Quack Test 分开阅读。', links: [{ href: '/roco-cn/download', label: '国服入口' }, { href: '/roco/version', label: 'Global CBT' }] }], en: [{ title: 'Codes and events', description: 'Verify code source, validity, and current event entry first.', links: [{ href: '/roco-cn/redeem-codes', label: 'Codes' }, { href: '/roco-cn/version', label: 'CN hub' }] }, { title: 'Creatures and training', description: 'Start with the encyclopedia, type matchups, creature picks, and training order.', links: [{ href: '/roco-cn/characters', label: 'Creature index' }, { href: '/roco-cn/tier-list', label: 'Tier list' }] }, { title: 'Version split', description: 'Keep CN live content separate from Global CBT / Quack Quack Test.', links: [{ href: '/roco-cn/download', label: 'CN entry' }, { href: '/roco/version', label: 'Global CBT' }] }], ja: [{ title: 'コードとイベント', description: 'コード出典、期限、現在イベント入口を先に確認します。', links: [{ href: '/roco-cn/redeem-codes', label: 'コード' }, { href: '/roco-cn/version', label: '中国版特集' }] }, { title: 'ペット図鑑と育成', description: '図鑑、属性相性、推薦、育成順を先に確認します。', links: [{ href: '/roco-cn/characters', label: 'ペット図鑑' }, { href: '/roco-cn/tier-list', label: 'Tier' }] }, { title: '版本分流', description: '中国版配信内容とGlobal CBT / Quack Quack Testを分けて読みます。', links: [{ href: '/roco-cn/download', label: '中国版入口' }, { href: '/roco/version', label: 'Global CBT' }] }] },
-    faq: [{ question: { zh: '国服和国际服内容怎么分？', en: 'How should I separate CN and global Roco content?', ja: '中国版と国際版はどう分ける？' }, answer: { zh: '国服页面看兑换码、图鉴、活动和培养；Roco Global 页面看 CBT、预注册、平台和 Quack Quack Test。', en: 'Use CN pages for codes, encyclopedia, events, and progression; use Roco Global for CBT, preregistration, platforms, and Quack Quack Test.', ja: '中国版ページはコード、図鑑、イベント、育成。Roco GlobalはCBT、事前登録、平台、Quack Quack Testへ。' } }],
+    tracks: { zh: [{ title: '兑换码与活动', description: '先确认兑换码来源、有效期和当前活动入口。', links: [{ href: '/roco-cn/redeem-codes', label: '兑换码' }, { href: '/roco-cn/version', label: '国服专题' }] }, { title: '宠物图鉴与培养', description: '先看图鉴、属性克制、宠物推荐和培养顺序。', links: [{ href: '/roco-cn/characters', label: '宠物图鉴' }, { href: '/roco-cn/tier-list', label: '节奏榜' }] }, { title: '版本分流', description: '国服内容与国际服待核实资料分开阅读；国际服入口是纠错说明，不是测试公告。', links: [{ href: '/roco-cn/download', label: '国服入口' }, { href: '/roco/version', label: 'Global review' }] }], en: [{ title: 'Codes and events', description: 'Verify code source, validity, and current event entry first.', links: [{ href: '/roco-cn/redeem-codes', label: 'Codes' }, { href: '/roco-cn/version', label: 'CN hub' }] }, { title: 'Creatures and training', description: 'Start with the encyclopedia, type matchups, creature picks, and training order.', links: [{ href: '/roco-cn/characters', label: 'Creature index' }, { href: '/roco-cn/tier-list', label: 'Tier list' }] }, { title: 'Version split', description: 'Keep CN content separate from unverified global information; the global link is a correction notice, not a test announcement.', links: [{ href: '/roco-cn/download', label: 'CN entry' }, { href: '/roco/version', label: 'Global review' }] }], ja: [{ title: 'コードとイベント', description: 'コード出典、期限、現在イベント入口を先に確認します。', links: [{ href: '/roco-cn/redeem-codes', label: 'コード' }, { href: '/roco-cn/version', label: '中国版特集' }] }, { title: 'ペット図鑑と育成', description: '図鑑、属性相性、推薦、育成順を先に確認します。', links: [{ href: '/roco-cn/characters', label: 'ペット図鑑' }, { href: '/roco-cn/tier-list', label: 'Tier' }] }, { title: '版本分流', description: '中国版と未確認の国際版資料を区別します。国際版へのリンクは訂正説明で、テスト告知ではありません。', links: [{ href: '/roco-cn/download', label: '中国版入口' }, { href: '/roco/version', label: 'Global review' }] }] },
+    faq: [{ question: { zh: '国服和国际服内容怎么分？', en: 'How should I separate CN and global Roco content?', ja: '中国版と国際版はどう分ける？' }, answer: { zh: '国服页面看兑换码、图鉴、活动和培养；Roco Global 页面仅提供国际服资料纠错与核验说明，不证明测试、预约或平台已经确认。', en: 'Use CN pages for codes, encyclopedia, events, and progression; use Roco Global for correction and verification notices, not confirmation of tests, preregistration or platforms.', ja: '中国版ページはコード、図鑑、イベント、育成。Roco Globalは訂正・確認説明であり、テスト・事前登録・対応機種の確認ではありません。' } }],
   },
 };
 
@@ -755,20 +755,6 @@ async function getRocoDashboardStats(
   guideCount: number,
   enabledRouteCount: number,
 ): Promise<RocoDashboardStats | null> {
-  if (gameId === 'roco') {
-    const [{ rocoCharacters }, { rocoWeapons }] = await Promise.all([
-      import('@gachia/data/games/roco/characters'),
-      import('@gachia/data/games/roco/weapons'),
-    ]);
-    return {
-      characters: rocoCharacters.length,
-      guides: guideCount,
-      weapons: rocoWeapons.length,
-      enabledRoutes: enabledRouteCount,
-      codeStatus: 'watch',
-    };
-  }
-
   if (gameId === 'roco-cn') {
     const [{ rocoCnCharacterSummaries }, { rocoCnWeapons }] = await Promise.all([
       import('@gachia/data/games/roco-cn/character-summaries'),
@@ -1111,7 +1097,7 @@ export default async function GameHome({
         </section>
       )}
 
-      {rocoDashboardStats && rocoDailyCards && (
+      {gameId === 'roco-cn' && rocoDashboardStats && rocoDailyCards && (
         <section className="mb-10 rounded-2xl border border-game-border bg-game-surface p-6 shadow-lg">
           <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
@@ -1119,22 +1105,14 @@ export default async function GameHome({
                 {locale === 'zh' ? '今日入口' : locale === 'ja' ? '今日の入口' : 'Today hub'}
               </p>
               <h2 className="mt-1 text-2xl font-bold text-game-text">
-                {gameId === 'roco-cn'
-                  ? locale === 'zh' ? '国服日常资料入口' : locale === 'ja' ? '中国版デイリー資料入口' : 'CN daily data hub'
-                  : locale === 'zh' ? '国际服 CBT 跟进入口' : locale === 'ja' ? '国際版CBT確認入口' : 'Global CBT watch hub'}
+                {locale === 'zh' ? '国服日常资料入口' : locale === 'ja' ? '中国版デイリー資料入口' : 'CN daily data hub'}
               </h2>
               <p className="mt-2 max-w-3xl text-sm leading-relaxed text-game-text-muted">
-                {gameId === 'roco-cn'
-                  ? locale === 'zh'
-                    ? '把活动、兑换码、精灵图鉴、法杖和地图路线放在同一屏，适合每天快速确认下一步。'
-                    : locale === 'ja'
-                      ? 'イベント、コード、ジニー図鑑、杖、マップ導線を一画面にまとめます。'
-                      : 'Events, codes, Jinies, staves, and map routes are grouped for quick daily checks.'
-                  : locale === 'zh'
-                    ? '国际服仍处于 CBT 信息核验阶段，先追踪测试节点、精灵图鉴、法杖和待补地图。'
-                    : locale === 'ja'
-                      ? '国際版はCBT情報確認中。日程、ジニー、杖、マップ待ち項目を先に追跡します。'
-                      : 'Global is still in CBT verification, so this hub tracks timing, Jinies, staves, and map watch items.'}
+                {locale === 'zh'
+                  ? '把活动、兑换码、精灵图鉴、法杖和地图路线放在同一屏，适合每天快速确认下一步。'
+                  : locale === 'ja'
+                    ? 'イベント、コード、ジニー図鑑、杖、マップ導線を一画面にまとめます。'
+                    : 'Events, codes, Jinies, staves, and map routes are grouped for quick daily checks.'}
               </p>
             </div>
             <div className="grid grid-cols-2 gap-2 text-right text-xs text-game-text-muted sm:grid-cols-4">
