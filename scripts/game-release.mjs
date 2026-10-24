@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 import ts from 'typescript';
 import { verifyLocalWorker } from './game-release-smoke.mjs';
 import { verifyAppRuntime } from './require-app-runtime.mjs';
+import { readPreviousGameAssets, retainPreviousGameAssets } from './retain-game-assets.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const TARGETS = Object.freeze({
@@ -89,13 +90,19 @@ export function createReleasePlan({ game, environment, rollbackVersion, allowUns
     candidateVersion: { status: 'not_observed', value: null },
     rollbackVersion: { status: rollbackVersion ? 'operator_supplied_unverified' : 'not_supplied', value: rollbackVersion ?? null },
     cloudVerification: 'not_performed',
-    productionGate: 'exact_service_confirmation_and_operator_verified_rollback_uuid_required',
+    productionGate: game === 'azur-promilia'
+      ? 'exact_service_confirmation_operator_verified_rollback_uuid_and_previous_assets_receipt_required'
+      : 'exact_service_confirmation_and_operator_verified_rollback_uuid_required',
   };
 }
 
 export function readReleasePlan(options, root = ROOT) {
   if (!Object.hasOwn(TARGETS, options.game)) throw new Error('Unsupported game: expected nte or azur-promilia');
-  return createReleasePlan(options, readFileSync(resolve(root, `apps/game-${options.game}/wrangler.jsonc`), 'utf8'));
+  const plan = createReleasePlan(options, readFileSync(resolve(root, `apps/game-${options.game}/wrangler.jsonc`), 'utf8'));
+  if (options.previousAssetsReceipt) {
+    plan.previousAssets = readPreviousGameAssets(resolve(root, options.previousAssetsReceipt), options).summary;
+  }
+  return plan;
 }
 
 export function readAssetPlan(options, root = ROOT) {
@@ -117,6 +124,15 @@ export function checkExecutionPermission(plan, { action, confirmation }) {
     if (confirmation !== plan.service || !UUID.test(plan.rollbackVersion.value ?? '')) {
       throw new Error(`Production blocked: --confirm ${plan.service} and --rollback-version <verified-UUID> are required`);
     }
+    if (plan.game === 'azur-promilia' && (!plan.previousAssets || plan.previousAssets.versionId !== plan.rollbackVersion.value)) {
+      throw new Error('Production blocked: --previous-assets-receipt must bind the Azur rollback version');
+    }
+  }
+}
+
+export function checkSourcePermission(plan, { action }, { dirty, commit, expectedCommit = commit }) {
+  if (action === 'deploy' && plan.game === 'azur-promilia' && (dirty || commit !== expectedCommit)) {
+    throw new Error('Azur deployment requires a clean committed source tree; local verification remains available');
   }
 }
 
@@ -216,7 +232,7 @@ export function parseArguments(argv) {
   const [action, ...args] = argv;
   if (!['plan', 'verify', 'deploy', 'prepare-assets', 'status'].includes(action)) throw new Error('Usage: game-release.mjs plan|verify|deploy|prepare-assets --game <id> --environment staging|production; status --record <path>');
   const options = { action };
-  const keys = { '--game': 'game', '--environment': 'environment', '--confirm': 'confirmation', '--rollback-version': 'rollbackVersion', '--record': 'record' };
+  const keys = { '--game': 'game', '--environment': 'environment', '--confirm': 'confirmation', '--rollback-version': 'rollbackVersion', '--record': 'record', '--previous-assets-receipt': 'previousAssetsReceipt' };
   for (let i = 0; i < args.length; i += 2) {
     if (args[i] === '--allow-unsupported-next-for-verification') {
       if (action !== 'verify' || options.allowUnsupportedNextForVerification) throw new Error('Compatibility exception is only allowed once for verify');
@@ -232,6 +248,7 @@ export function parseArguments(argv) {
   if (action === 'status') {
     if (!options.record || Object.keys(options).length !== 2) throw new Error('status requires only --record');
   } else if (options.record || !options.game || !options.environment) throw new Error('Explicit --game and --environment are required');
+  if (action === 'prepare-assets' && options.previousAssetsReceipt) throw new Error('Previous assets require the controlled plan/verify/deploy entrypoint');
   return options;
 }
 
@@ -263,9 +280,19 @@ async function main() {
   try {
     const commit = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: ROOT, encoding: 'utf8' }).trim();
     const dirty = Boolean(execFileSync('git', ['status', '--porcelain'], { cwd: ROOT, encoding: 'utf8' }).trim());
+    checkSourcePermission(plan, options, { dirty });
     const record = await executeRelease(plan, options, {
-      refreshPlan: () => readReleasePlan(options),
-      verifyArtifacts: async () => ({ runtimePolicy: verifyAppRuntime(resolve(ROOT, plan.app)), namespacedAssets: prepareNamespacedAssets(plan), ...verifyBuiltIndexing(plan), runtime: await verifyLocalWorker(plan, ROOT) }),
+      refreshPlan: () => {
+        if (options.action === 'deploy' && plan.game === 'azur-promilia') {
+          checkSourcePermission(plan, options, {
+            expectedCommit: commit,
+            commit: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: ROOT, encoding: 'utf8' }).trim(),
+            dirty: Boolean(execFileSync('git', ['status', '--porcelain'], { cwd: ROOT, encoding: 'utf8' }).trim()),
+          });
+        }
+        return readReleasePlan(options);
+      },
+      verifyArtifacts: async () => ({ runtimePolicy: verifyAppRuntime(resolve(ROOT, plan.app)), namespacedAssets: prepareNamespacedAssets(plan), previousAssets: retainPreviousGameAssets(plan, ROOT), ...verifyBuiltIndexing(plan), runtime: await verifyLocalWorker(plan, ROOT) }),
       save: (record) => {
         writeFileSync(`${path}.tmp`, `${JSON.stringify({ ...record, input: { commit, dirty, scope: 'head_and_config_not_full_source_attestation' } }, null, 2)}\n`, { mode: 0o600 });
         renameSync(`${path}.tmp`, path);

@@ -1,7 +1,9 @@
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
 import { once } from 'node:events';
+import { createHash } from 'node:crypto';
 import { resolve } from 'node:path';
+import { readPreviousGameAssets } from './retain-game-assets.mjs';
 
 const noindexMeta = /<meta\b(?=[^>]*\bname=["']robots["'])(?=[^>]*\bcontent=["'][^"']*\bnoindex\b)[^>]*>/i;
 
@@ -53,7 +55,21 @@ export async function verifyOrigin(plan, origin, request = fetch) {
     assert.equal(original.body, body, 'Direct preview and Router asset paths must serve identical bytes');
   }
   await get(`${homePath}/__release_smoke_missing__`, 404);
-  return { status: 'local_worker_http_verified', cloudVerification: 'not_performed', observations };
+  let retainedStaticPaths = 0;
+  if (plan.previousAssets) {
+    const capture = readPreviousGameAssets(plan.previousAssets.receiptPath, { game: plan.game, rollbackVersion: plan.rollbackVersion.value });
+    assert.deepEqual(capture.summary, plan.previousAssets, 'Previous asset evidence changed');
+    for (const file of capture.files) for (const prefix of ['/_next/static/', `/_games/${plan.game}/_next/static/`]) {
+      const path = prefix + file.path.split('/').map(encodeURIComponent).join('/');
+      const response = await request(new URL(path, address), { method: 'GET', redirect: 'manual', credentials: 'omit', signal: AbortSignal.timeout(20000) });
+      assert.equal(response.status, 200, `${path}: retained asset missing`);
+      const bytes = Buffer.from(await response.arrayBuffer());
+      assert.equal(bytes.length, file.bytes.length, `${path}: retained asset size changed`);
+      assert.equal(createHash('sha256').update(bytes).digest('hex'), file.sha256, `${path}: retained asset digest changed`);
+      retainedStaticPaths++;
+    }
+  }
+  return { status: 'local_worker_http_verified', cloudVerification: 'not_performed', observations, retainedStaticPaths };
 }
 
 export async function verifyLocalWorker(plan, root, { timeoutMs = 90000, verify = verifyOrigin, configPath = 'wrangler.jsonc', persistTo, onOutput = () => {} } = {}) {

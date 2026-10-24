@@ -34,6 +34,7 @@ test('staging origin is constructed from reviewed game and a single account labe
 
 test('CLI rejects origin overrides, missing fields and duplicate flags', () => {
   assert.deepEqual(parseStagingArguments(['--game', 'azur-promilia', '--subdomain', 'fixture-account']), options);
+  assert.deepEqual(parseStagingArguments(['--game', 'azur-promilia', '--subdomain', 'fixture-account', '--previous-assets-receipt', 'receipt.json', '--expected-sitemap', 'candidate.xml']), { ...options, previousAssetsReceipt: 'receipt.json', expectedSitemap: 'candidate.xml' });
   for (const args of [[], ['--game', 'nte'], ['--origin', 'https://gachia.com'], ['--game', 'nte', '--game', 'nte'], ['--game', '--subdomain'], ['--subdomain', 'fixture-account', '--game', 'nte', '--deploy', 'true']]) assert.throws(() => parseStagingArguments(args));
 });
 
@@ -74,4 +75,15 @@ test('staging rejects missing noindex, bad canonical and preview sitemap URLs', 
 test('staging rejects divergent assets and a soft 404', async () => {
   await assert.rejects(verifyStagingHttp(options, fixture({ '/_next/test.js': { body: 'different bytes' } }).request));
   await assert.rejects(verifyStagingHttp(options, fixture({ [`${base}/__staging_acceptance_missing__`]: { status: 200 } }).request));
+});
+
+test('staging rejects duplicated or cross-owner sitemap entries before page probes', async () => {
+  const entry = '<url><loc>https://gachia.com/zh/azur-promilia/characters/example</loc></url>';
+  for (const body of [`<urlset>${entry}${entry}</urlset>`, ...[
+    '/zh/nte/characters/example', '/zh/azur-promilia-other', '/zh/azur-promilia?preview=1', '/zh/azur-promilia#part',
+  ].map(path => `<urlset><url><loc>https://gachia.com${path}</loc></url></urlset>`)]) {
+    const f = fixture({ '/sitemap.xml': { body } });
+    await assert.rejects(verifyStagingHttp(options, f.request), /Duplicate|outside/);
+    assert.equal(f.calls.length, 2);
+  }
 });

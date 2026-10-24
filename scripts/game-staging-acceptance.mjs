@@ -1,9 +1,10 @@
 import assert from 'node:assert/strict';
 import { createHash, randomUUID } from 'node:crypto';
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { lstatSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { chromium, expect } from '@playwright/test';
+import { readPreviousGameAssets } from './retain-game-assets.mjs';
 
 const GAMES = ['nte', 'azur-promilia'];
 const ROOT = resolve(import.meta.dirname, '..');
@@ -20,7 +21,7 @@ export function stagingOrigin({ game, subdomain }) {
 export function parseStagingArguments(args) {
   const options = {};
   for (let i = 0; i < args.length; i += 2) {
-    const key = { '--game': 'game', '--subdomain': 'subdomain' }[args[i]];
+    const key = { '--game': 'game', '--subdomain': 'subdomain', '--previous-assets-receipt': 'previousAssetsReceipt', '--expected-sitemap': 'expectedSitemap' }[args[i]];
     if (!key || Object.hasOwn(options, key) || !args[i + 1] || args[i + 1].startsWith('--')) {
       throw new Error('Usage: --game nte|azur-promilia --subdomain <workers-dev-account>');
     }
@@ -43,6 +44,14 @@ export function localBrowserProxy(value) {
 // accepts a free-form origin, follows redirects, deploys, or sends credentials.
 export async function verifyStagingHttp(options, request = fetch) {
   const origin = stagingOrigin(options);
+  const previous = options.previousAssetsReceipt ? readPreviousGameAssets(options.previousAssetsReceipt, options) : null;
+  let expectedUrls;
+  if (options.expectedSitemap) {
+    const file = lstatSync(options.expectedSitemap);
+    assert(file.isFile() && file.size > 0 && file.size <= 1024 * 1024, 'Expected sitemap must be a bounded regular file');
+    expectedUrls = [...readFileSync(options.expectedSitemap, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => new URL(match[1]).href).sort();
+    assert(expectedUrls.length > 0 && new Set(expectedUrls).size === expectedUrls.length, 'Expected sitemap must contain unique URLs');
+  }
   const observations = [];
   const get = async (path, status = 200) => {
     const url = new URL(path, origin);
@@ -59,6 +68,9 @@ export async function verifyStagingHttp(options, request = fetch) {
   const urls = [...sitemap.body.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => new URL(match[1]));
   assert(urls.length > 0, 'Expected public sitemap URLs');
   assert(urls.every(url => url.origin === 'https://gachia.com'), 'Sitemap must contain only the public production origin');
+  assert.equal(new Set(urls.map(url => url.href)).size, urls.length, 'Duplicate sitemap URLs');
+  assert(urls.every(url => !url.search && !url.hash && !url.username && !url.password && new RegExp(`^/(zh|en|ja)/${options.game}(?:/|$)`).test(url.pathname)), 'Sitemap URL outside the reviewed owner');
+  if (expectedUrls) assert.deepEqual(urls.map(url => url.href).sort(), expectedUrls, 'Remote sitemap differs from the candidate');
   let home;
   for (const locale of ['zh', 'en', 'ja']) {
     const base = `/${locale}/${options.game}`;
@@ -87,7 +99,17 @@ export async function verifyStagingHttp(options, request = fetch) {
   }
   const missing = await get(`/zh/${options.game}/__staging_acceptance_missing__`, 404);
   assert.match(missing.response.headers.get('x-robots-tag') ?? '', /noindex/i);
-  return { status: 'staging_http_verified', origin, observations, sitemapUrls: urls.length };
+  let retainedStaticPaths = 0;
+  for (const file of previous?.files ?? []) for (const prefix of ['/_next/static/', `/_games/${options.game}/_next/static/`]) {
+    const path = prefix + file.path.split('/').map(encodeURIComponent).join('/');
+    const response = await request(new URL(path, origin), { method: 'GET', redirect: 'manual', credentials: 'omit', signal: AbortSignal.timeout(30000) });
+    assert.equal(response.status, 200, `${path}: retained asset missing`);
+    const bytes = Buffer.from(await response.arrayBuffer());
+    assert.equal(bytes.length, file.bytes.length, `${path}: retained asset size changed`);
+    assert.equal(createHash('sha256').update(bytes).digest('hex'), file.sha256, `${path}: retained asset digest changed`);
+    retainedStaticPaths++;
+  }
+  return { status: 'staging_http_verified', origin, observations, sitemapUrls: urls.length, candidateSitemapCompared: Boolean(expectedUrls), previousAssets: previous?.summary ?? null, retainedStaticPaths };
 }
 
 export async function verifyStagingBrowser(options, directory) {

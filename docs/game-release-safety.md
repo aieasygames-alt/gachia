@@ -179,3 +179,45 @@ S1.3 新发现：主站 staging 缺少两个 Google OAuth secret；Router stagin
 主站的 `*.workers.dev` 运行时添加 noindex 和禁爬 robots，正式域名不改变公开索引规则。主站专用验收入口 `node scripts/web-staging-acceptance.mjs` 固定到隔离 main staging，不接受自由 origin。HTTP 包括少量带退役 Cookie、损坏请求体的账号写方法拒绝测试，不能当作生产只读审计使用。复用的本地可信 IP 夹具不得把模拟 `CF-Connecting-IP` 带到云端；已增加本地 origin 限定和回归测试。
 
 最新主站验收、候选版本、回滚引用和未覆盖事项见 [S1.4 交付记录](../plans/multi-game-s1-accounts-disabled-closeout-2026-10-23.md)；恢复条件见[账号下线与恢复规范](account-features-retirement.md)。取消登录不取消不可变产物、生产确认、当前版本对账、Router/资源验证或回滚门禁。
+
+## 10. S2.17 独立游戏的旧静态资源证据
+
+仅复制当前 `_next` 不能保护已经打开的旧页面。蓝色星原的受控入口新增 `--previous-assets-receipt <path>`：plan 读取并校验证据，verify/deploy 在新构建完成后、运行时检查前保留旧文件。生产 deploy 必须提供与 `--rollback-version` 相同版本的有效 receipt；离线 verify 仍允许不提供，不伪造云端凭据。当前仅支持蓝色星原，不据此宣称其他游戏已经具备旧资源保留。
+
+```bash
+# 只构建、本地 HTTP 和 dry-run；不会上传。
+pnpm release:game verify --game azur-promilia --environment staging \
+  --previous-assets-receipt .release-records/<capture>/previous-assets-receipt.json
+
+# 写入隔离 staging，须先核实成本、当前状态与干净源码。
+pnpm release:game deploy --game azur-promilia --environment staging \
+  --previous-assets-receipt .release-records/<capture>/previous-assets-receipt.json
+
+# 部署后只读验收：与实际 staging 构建清单和旧资源逐字节对照。
+node scripts/game-staging-acceptance.mjs --game azur-promilia --subdomain aieasygames \
+  --expected-sitemap apps/game-azur-promilia/.next/server/app/sitemap.xml.body \
+  --previous-assets-receipt .release-records/<capture>/previous-assets-receipt.json
+```
+
+receipt 是本机操作者保存的证据，不是 Cloudflare 签发的证明。必需字段如下，不能手工刷新摘要来掩盖证据变化：
+
+| 字段 | 约束 |
+|---|---|
+| `schemaVersion/game/service` | `1/azur-promilia/gachia-game-azur-promilia` |
+| `versionId/deploymentId/scriptEtag/capturedAt` | 实际唯一 100% 生产版本、部署、脚本 ETag 与采集时间 |
+| `before/after` | 两次实际只读观察中的同一部署、版本、脚本 ETag 和 `percentage: 100`；采集期间变化则废弃本轮证据 |
+| `workerArchive` | 权威云端 `content/v2` multipart 的相对路径、字节数、SHA-256；不是完整 assets 备份 |
+| `inventory` | 绑定服务、版本、历史部署日志摘要的路径清单 JSON；含 `nextStaticPaths`，每项带 `/_next/static/` 前缀 |
+| `staticDirectory/files` | 采集目录与相对静态路径、字节数、SHA-256；必须与日志 Next 静态集合完全一致 |
+| `sourceCommit` | 此类旧云端采集固定为 `not_attested`，不冒充已核实 Git 来源 |
+| `cloudAssetManifestCompleteness` | 固定为 `not_asserted`，历史日志路径不冒充云端完整 manifest |
+
+所有引用限制在 receipt 同目录内；拒绝路径穿越、编码/绝对路径、符号链接、重复清单、错误所有者/回滚版本、缺失/变更文件以及相同目标路径的不同字节。单静态文件不超过 8 MiB，全部不超过 64 MiB / 2,000 个；云端脚本 archive 不超过 16 MiB。当前静态类型只允许 JS、CSS 和字体；新增其他类型需单独审查。
+
+只把登记的 `_next/static` 写到原路径及 `/_games/azur-promilia/_next/static`；不复制旧 Worker、HTML、图片、游戏数据或 `BUILD_ID`。先检查全部目标碰撞再复制，已有路径必须字节相同。运行时实际 GET 两种路径的全部旧文件，拒绝 404、重定向、返回 200 的错误页或字节变化。receipt 及全部引用字节在发布计划重读时重新校验，不能构建后换清单再部署。
+
+这些检查仅证明保存的证据/字节内部一致。入口**不自动查询当前云端版本，不证明旧 Git commit，不证明旧版本仍可回滚，也不验证完整云端 asset manifest**。正式发布前必须另做实时 API 对账、旧版兼容审查、候选源码封存、独立 staging 验收和生产路径检查；任一未完成都不能凭 receipt 放行生产。不得把 multipart 直接当作完整回滚包上传，也不得为了符合 Main 的 artifact 字段编造 GitHub artifact ID。
+
+蓝色星原远程 deploy 在构建前拒绝 dirty Git 工作区，staging 与 production 都适用；本地 verify 不受影响。干净 HEAD 只是来源记录的起点，不是完整依赖/产物供应链证明。构建和发布仍须串行执行，且部署后另外核实实际 UUID、源码和制品关联。
+
+独立 staging 的 sitemap 验收新增唯一 URL 和 owner/语言边界检查；仍不是完整 XML 图解析或全站 SEO 验收。生产全图的严格 XML/重复门禁继续保留。S2.17 现场来源与缺口见[阶段记录](../plans/multi-game-s2-17-game-release-provenance-2026-10-24.md)。
