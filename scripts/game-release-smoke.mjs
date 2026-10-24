@@ -25,8 +25,9 @@ export async function verifyOrigin(plan, origin, request = fetch) {
   const sitemap = await get('/sitemap.xml');
   assert.match(sitemap.response.headers.get('content-type') ?? '', /xml/i);
   assert(!sitemap.body.includes('-staging.') && !sitemap.body.includes('127.0.0.1'), 'sitemap must never publish preview origins');
-  const detail = [...sitemap.body.matchAll(/<loc>([^<]+)<\/loc>/g)]
-    .map((match) => new URL(match[1]))
+  const locations = [...sitemap.body.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
+  assert.equal(new Set(locations).size, locations.length, 'Duplicate sitemap locations');
+  const detail = locations.map(value => new URL(value))
     .find((url) => url.origin === 'https://gachia.com' && url.pathname.startsWith(`${homePath}/characters/`));
   assert(detail, 'sitemap must expose a real character detail for the smoke test');
   let home;

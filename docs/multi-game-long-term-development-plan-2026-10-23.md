@@ -1,6 +1,6 @@
 # Gachia 多游戏长期运营与架构治理开发文档
 
-> 版本：v1.20，含 S2.14 生产候选收敛、撤回结案合同与真实回滚产物预检
+> 版本：v1.21，含 S2.15 云端验收补齐、全图上线预检与独立 owner 发布依赖
 >
 > 编制日期：2026-10-23，Asia/Shanghai
 >
@@ -13,6 +13,8 @@
 > 原有任务状态：项目当前任务总表（原主工作区文件：`plans/project-task-status-current.md`）。本方案不自动替换该表、不重新打开已验收事项；实施前需确认纳入的工作包。
 
 ## 1. 项目定位与核心结论
+
+S2.15 最新进展（2026-10-24）：将受管内容浏览器/HTTP 验收复用到受限云端入口，补齐推广后验收、XML 完整 owner 并集及证据留存。本轮只读发现蓝色星原六个重复 loc，本地已修复为 150 条且唯一集合不变；进一步发现 57 个 NTE 物品详情仍回退 Main，整游戏排除策略会遗漏三语共 171 个可索引 URL。后者尚未修复，新增生产封存前覆盖门禁明确拒绝候选，阻止上传。Main 发布暂停，不扩大独立 Worker 连带发布，也不消耗 Actions 试错。下一步先修路由级归属及 XML 合同、重新编译验收，再独立审查/发布蓝色星原修复，最后推进 Main 同一制品 staging→production。原神独立语言策略、磁盘治理和 Worker 合并仍独立排期。详见 [S2.15 交付记录](../plans/multi-game-s2-15-release-preflight-2026-10-24.md)。
 
 实施进展：S0 本地基线与 S1 限定工程实现已完成；S1.1/S1.2 完成五个 Next 应用统一运行时及限定本地回归，S1.3 完成账户/容量/预算核验及蓝色星原独立云端 staging 验收。S1.4 根据用户决定暂时下线站点登录，取消当前无账号版本对 Google OAuth 的依赖，保留历史数据与本地工具；见 [S1.4 交付记录](../plans/multi-game-s1-accounts-disabled-closeout-2026-10-23.md)。S1.5 补齐停用账号的生产审计、精确旧静态资源保留及主站跨 owner 原生导航，重新构建并通过主站 staging、浏览器及实际 Router 源码组合演练；将编译后验收纳入生产 CI 门禁，见 [S1.5 交付记录](../plans/multi-game-s1-main-preflight-closeout-2026-10-23.md)和[主站发布规范](main-release-static-retention.md)。S1.6 已将主站代码合入 main，通过显式 production 流程推广同一封存产物，线上采用无账号策略；实际版本、生产验收与观察边界见 [S1.6 交付记录](../plans/multi-game-s1-main-production-closeout-2026-10-23.md)。此前证据见 [S1 阶段交付记录](../plans/multi-game-s1-closeout-2026-10-23.md)、[S1.1 运行时交付记录](../plans/multi-game-s1-runtime-closeout-2026-10-23.md)、[S1.2 交付记录](../plans/multi-game-s1-runtime-rollout-closeout-2026-10-23.md)及 [S1.3 交付记录](../plans/multi-game-s1-staging-closeout-2026-10-23.md)。四个游戏 Worker 与 Router 未在 S1.6 发布，未合并 Worker、未删除业务或历史文件；不据此视为全站运行时、SEO、内容治理或整个方案完成。
 

@@ -147,6 +147,19 @@ jobs:
         working-directory: apps/web
         run: pnpm exec wrangler deploy --dry-run --config wrangler.jsonc --env ""
 
+      - name: Block loss of Main-owned fallback discovery before sealing
+        if: github.event_name == 'workflow_dispatch' && inputs.release_target == 'production'
+        run: python3 -B scripts/web-published-sitemap-audit.py local --output .release-records/main-fallback-coverage.json
+
+      - name: Preserve fallback publication precheck
+        if: always() && github.event_name == 'workflow_dispatch' && inputs.release_target == 'production'
+        uses: actions/upload-artifact@v4
+        with:
+          name: main-fallback-coverage-${{ github.run_id }}
+          path: .release-records/main-fallback-coverage.json
+          if-no-files-found: warn
+          retention-days: 30
+
       - name: Type check Router
         if: steps.scope.outputs.scope != 'admin'
         run: pnpm --filter @gachia/router type-check
@@ -338,6 +351,10 @@ jobs:
         if: inputs.release_target == 'production'
         run: node scripts/web-staging-acceptance.mjs
 
+      - name: Verify staging Main XML and unchanged production owner graph
+        if: inputs.release_target == 'production'
+        run: python3 -B scripts/web-published-sitemap-audit.py staging --output .release-records/staging-sitemap-graph.json
+
       - name: Verify compiled cross-owner navigation on staging
         if: inputs.release_target == 'production'
         env:
@@ -354,6 +371,17 @@ jobs:
             test-results/
           if-no-files-found: ignore
           retention-days: 7
+
+      - name: Preserve staging release acceptance records
+        if: always() && inputs.release_target == 'production'
+        uses: actions/upload-artifact@v4
+        with:
+          name: main-staging-acceptance-${{ github.run_id }}
+          path: |
+            .release-records/web-staging-*/result.json
+            .release-records/staging-sitemap-graph.json
+          if-no-files-found: error
+          retention-days: 30
 
       - name: Smoke test HI3 reading routes
         env:
@@ -495,6 +523,26 @@ jobs:
 
       - name: Audit production site
         run: pnpm audit:production
+
+      - name: Install browser for production acceptance
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Accept published main content and runtime
+        run: node scripts/web-production-acceptance.mjs
+
+      - name: Verify production XML owner union against sealed Main
+        run: python3 -B scripts/web-published-sitemap-audit.py production --output .release-records/production-sitemap-graph.json
+
+      - name: Preserve production release acceptance records
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: main-production-acceptance-${{ github.run_id }}
+          path: |
+            .release-records/web-production-*/result.json
+            .release-records/production-sitemap-graph.json
+          if-no-files-found: error
+          retention-days: 30
 
       - name: Smoke test HI3 reading routes
         env:

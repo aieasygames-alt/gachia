@@ -4,6 +4,7 @@ import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { localBrowserProxy } from './game-staging-acceptance.mjs';
 import { verifyHttp, verifyBrowser } from './runtime-rollout-smoke.mjs';
+import { verifyPublishedManagedContent } from './managed-content-smoke.mjs';
 
 export function webStagingOrigin(args = []) {
   if (args.length) throw new Error('No arguments accepted; only the isolated main staging is permitted');
@@ -18,6 +19,7 @@ async function main() {
   try {
     record.http = await verifyHttp('web', origin, { preview: true });
     record.browser = await verifyBrowser('web', origin, { proxy: localBrowserProxy(process.env.STAGING_CHECK_PROXY), directory });
+    record.managedContent = await verifyPublishedManagedContent(origin, directory, { proxy: localBrowserProxy(process.env.STAGING_CHECK_PROXY) });
     record.status = 'main_staging_verified_accounts_disabled';
   } catch (error) { record.status = 'failed'; record.error = error.message; throw error; }
   finally {

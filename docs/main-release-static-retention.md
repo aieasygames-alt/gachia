@@ -32,8 +32,22 @@ S2.14 在 2026-10-24 只读复核主站仍为 `80d20cea-4407-4ece-a87c-30f27c915
 3. 合并旧静态资源；相同路径必须字节相同，否则视为不可变资源冲突，停止，不覆盖候选文件。
 4. 生成非公开 `retained-web-assets.json`：记录来源、文件路径、大小、SHA-256 和 Worker 入口摘要；验证产物可移植性。
 5. 封存一个不可变 tar，staging 与 production 下载同一 artifact ID 并验证同一 tar 摘要；中途不重建。
-6. 两次部署前均核验保留清单。production 请求的 staging 作业对最多 12 个旧资源 GET 校验字节，优先覆盖 webpack/CSS，并为下载的编译产物执行 31 项 HTTP、18 场景浏览器验收及 8 项跨 owner 浏览器夹具检查；不能用 build 作业的 dev-server 测试替代。失败阻断 production，并保留失败记录；这不意味着执行了所有历史 chunk。
+6. 两次部署前均核验保留清单。production 请求的 staging 作业对最多 12 个旧资源 GET 校验字节，优先覆盖 webpack/CSS，并为下载的编译产物执行当前无账号契约的 32 项 HTTP、18 场景浏览器验收及 8 项跨 owner 浏览器夹具检查；不能用 build 作业的 dev-server 测试替代。失败阻断 production，并保留失败记录；这不意味着执行了所有历史 chunk。
 7. production 写入前再次读取当前部署，确认回滚 UUID 仍为唯一 100% 活跃版本；保留证据后才能发布。
+
+### S2.15：内容和 XML 的云端验收
+
+staging 入口增加 `verifyPublishedManagedContent`，与本地编译验收共用内容断言，覆盖三语双尺寸 508 个浏览器场景、23 个 HTTP 边界、7 份 raw、3 份搜索及旧资源字节抽样。固定允许主站 staging 与正式域名，拒绝凭据、查询、路径及任意 origin。原 `verifyManagedContent` 仍只接受显式 loopback，不放宽本地夹具规则。远端不发送合成 trusted-IP 或 IndexNow token，不使用真实密钥；仅做无凭据 IndexNow 401 拒绝测试。暂停依据是封存代码中不存在外部 transport 加本地认证夹具，不宣称远端已完成认证后暂停测试。
+
+`web-published-sitemap-audit.py` 解析 XML 并检查封存产物中主站 index/子图 URL 集合与云端相等，再遍历四个独立 owner 的实际生产子图，检查命名空间、重复、owner 分区、子图引用、循环/深度及响应预算。staging 的 Main 来自 staging，独立 owner 仍来自生产，报告分别标记，不能解释成四个游戏候选也部署到 staging。预览 XML 要求 noindex，生产 XML 拒绝 noindex。脚本不接受任意 origin，不修改 Router。
+
+正式推广后再执行无账号 HTTP/运行时浏览器和同一内容检查，以及完整生产子图并集检查；发现问题使发布运行失败，但不会自动回滚至带有旧内容风险的版本。staging 与 production 的结果 JSON/完整子图报告无论成功失败都通过独立 artifact 留存 30 天；没有改变同一制品、摘要复查和不重建规则。
+
+2026-10-24 实际预检发现两个问题：蓝色星原生产子图 156 条含 6 个重复项；Main 候选按整款游戏排除 NTE，漏掉实际仍回退 Main 的 57 个物品详情的三语共 171 个 URL。前者已做本地修复但未部署；后者尚待路由级归属修复，不能把“独立 NTE 没有详情路由”误写成“公网没有详情”。线上抽样实际仍是可索引 200。
+
+生产 build 在封存前新增纯本地 fallback 覆盖检查，当前必须以 171 个遗漏明确失败，阻止任何 staging/production 上传；远端 XML 入口也先执行同一前置检查。raw 内容放行不等于此发布门禁通过。先修路由级所有权及 XML 合同，保留 Main 实际承载的详情；或另行取得明确迁移/退役决定并验证全过程，不得删 guard、清空数据或整款游戏豁免。这个临时显式 guard 应收敛为 Router、导航、sitemap 共用的路径合同，不再扩展成散落例外。
+
+随后再完成蓝色星原独立来源/产物/回滚审查及 staging、生产验收，核对其他 owner 未变，才推进 Main；参见 [S2.15 交付与发布顺序](../plans/multi-game-s2-15-release-preflight-2026-10-24.md)。严格检查继续拒绝两项未解决的线上/候选依赖，不用基线豁免获得通过。
 
 本地预备入口（执行前先完成生产版本/产物对应关系核验）：
 

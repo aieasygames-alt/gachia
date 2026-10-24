@@ -1,0 +1,429 @@
+{
+  "schemaVersion": 1,
+  "phase": "S2.15",
+  "recordedAt": "2026-10-24T02:26:43.956181+00:00",
+  "baseline": "13d931c",
+  "branch": "codex/multi-game-s1-release-safety",
+  "status": "engineering_checks_passed_publication_blocked_before_cloud",
+  "productionApproved": false,
+  "blockers": [
+    {
+      "priority": "P1",
+      "id": "main-owned-nte-item-discovery-loss",
+      "state": "confirmed_unfixed_fail_closed",
+      "materialCount": 57,
+      "urlCount": 171,
+      "cause": "Whole-game sitemap exclusion disagrees with actual Router path ownership. NTE_DETAIL_PAGES excludes items, which continue to fall back to Main.",
+      "observedProductionSamples": [
+        {
+          "path": "/zh/nte/items/annulith",
+          "status": 200,
+          "routeTarget": null,
+          "firstScript": "/_next/static/chunks/b3ac7baf-74c52409bde470f2.js",
+          "namespacedNteScripts": false,
+          "canonical": "https://gachia.com/zh/nte/items/annulith"
+        },
+        {
+          "path": "/en/nte/items/annulith",
+          "status": 200,
+          "routeTarget": null,
+          "firstScript": "/_next/static/chunks/b3ac7baf-74c52409bde470f2.js",
+          "namespacedNteScripts": false,
+          "canonical": "https://gachia.com/en/nte/items/annulith"
+        },
+        {
+          "path": "/ja/nte/items/annulith",
+          "status": 200,
+          "routeTarget": null,
+          "firstScript": "/_next/static/chunks/b3ac7baf-74c52409bde470f2.js",
+          "namespacedNteScripts": false,
+          "canonical": "https://gachia.com/ja/nte/items/annulith"
+        }
+      ],
+      "guard": "scripts/web-published-sitemap-audit.py local",
+      "guardResult": {
+        "status": "blocked_main_owned_urls_missing",
+        "missingCount": 171,
+        "cloudRequestsPerformed": false,
+        "exitStatus": 1
+      },
+      "requiredFix": "Shared route-level ownership contract across Router, navigation and sitemaps; preserve real Main fallback URLs and revalidate compiled XML."
+    },
+    {
+      "priority": "P2",
+      "id": "azur-sitemap-duplicate-locations",
+      "state": "fixed_locally_not_deployed",
+      "productionRecords": 156,
+      "productionUnique": 150,
+      "duplicates": {
+        "https://gachia.com/zh/azur-promilia/kibo": 2,
+        "https://gachia.com/zh/azur-promilia/world": 2,
+        "https://gachia.com/en/azur-promilia/kibo": 2,
+        "https://gachia.com/en/azur-promilia/world": 2,
+        "https://gachia.com/ja/azur-promilia/kibo": 2,
+        "https://gachia.com/ja/azur-promilia/world": 2
+      },
+      "localProductionAndPreviewRecords": 150,
+      "uniqueUrlsAdded": 0,
+      "uniqueUrlsRemoved": 0,
+      "requiredFix": "Independent owner provenance and rollback review, isolated staging and production publication; do not assume only sitemap differs from the deployed runtime."
+    }
+  ],
+  "readOnlyPreflight": {
+    "remoteMain": "e88ceae39e4a836725c8039884c54eba18ebdaa1",
+    "remoteMainIsCandidateAncestor": true,
+    "activeMainDeployment": "67efb2f6-b62c-4059-bcc5-c6b3143db458",
+    "mainVersions": [
+      {
+        "version_id": "80d20cea-4407-4ece-a87c-30f27c915021",
+        "percentage": 100
+      }
+    ],
+    "azurDeployment": "06712d57-5067-4ceb-b039-bfe710b66126",
+    "azurVersions": [
+      {
+        "version_id": "472903c2-3fca-43c0-a613-8c54f108bf73",
+        "percentage": 100
+      }
+    ],
+    "previousArtifact": {
+      "digest": "sha256:b1a8016284dbf39855d69c9ab54a7255a9b6db81e39b2670a936058fa6338858",
+      "expired": false,
+      "expires_at": "2026-11-22T14:46:36Z",
+      "id": 12509287773,
+      "workflow_run": {
+        "head_branch": "main",
+        "head_repository_id": 1229333607,
+        "head_sha": "e88ceae39e4a836725c8039884c54eba18ebdaa1",
+        "id": 39971089654,
+        "repository_id": 1229333607
+      }
+    },
+    "artifactReDownloadedThisPhase": false,
+    "artifactDownloadProvenanceReference": "reports/content-integrity/s2-14-local-verification-2026-10-24.json",
+    "environmentProtectionRules": {
+      "staging": [],
+      "production": []
+    },
+    "githubDeploySwitches": {
+      "staging": true,
+      "production": true
+    },
+    "actionsBudget": {
+      "remaining": "unknown",
+      "readFailure": "404 / insufficient scope",
+      "permissionsExpanded": false,
+      "previousFullReleaseRoundedRunnerMinutes": 52,
+      "newChecksIncreaseExpectedCost": true,
+      "runsStarted": 0
+    },
+    "publicBaseAudit": {
+      "baseHttp": 15,
+      "ownerAssetSitemap": 19,
+      "failures": 0,
+      "scope": "existing_production_bounded_samples_not_candidate_acceptance"
+    }
+  },
+  "sitemapObservation": {
+    "legacyRoot": {
+      "kind": "actual_production_urlset_http_capture",
+      "uniqueUrls": 6629
+    },
+    "dedicated": {
+      "genshin": {
+        "path": "/sitemaps/genshin/index.xml",
+        "status": 200,
+        "count": 1602,
+        "unique": 1602,
+        "duplicates": {}
+      },
+      "nte": {
+        "path": "/sitemaps/nte/index.xml",
+        "status": 200,
+        "count": 389,
+        "unique": 389,
+        "duplicates": {}
+      },
+      "azur-promilia": {
+        "path": "/sitemaps/azur-promilia/index.xml",
+        "status": 200,
+        "count": 156,
+        "unique": 150,
+        "duplicates": {
+          "https://gachia.com/zh/azur-promilia/kibo": 2,
+          "https://gachia.com/zh/azur-promilia/world": 2,
+          "https://gachia.com/en/azur-promilia/kibo": 2,
+          "https://gachia.com/en/azur-promilia/world": 2,
+          "https://gachia.com/ja/azur-promilia/kibo": 2,
+          "https://gachia.com/ja/azur-promilia/world": 2
+        }
+      },
+      "lvmeng": {
+        "path": "/sitemaps/lvmeng/index.xml",
+        "status": 200,
+        "count": 27,
+        "unique": 27,
+        "duplicates": {}
+      }
+    },
+    "candidateMainUrls": 4344,
+    "projection": {
+      "kind": "local_main_plus_observed_dedicated_unique_sets_projection_not_cloud_accepted_graph",
+      "strictGatePassed": false,
+      "unionCount": 6512,
+      "added": 263,
+      "removed": 380,
+      "removedCategories": {
+        "Main_owned_NTE_items_unresolved": 171,
+        "NTE_Japanese_other_paths_require_policy_review": 85,
+        "Roco_review_withdrawal_paths": 120,
+        "XML_references_moved_out_of_urlset": 4
+      },
+      "fullLocalDiffSha256": "810e9f39ff5561f9bf191bd8e7c88d9f73516845bf1eaf27589ffbe9f9781f72",
+      "approvedMigration": false
+    },
+    "boundarySamples": {
+      "scope": "bounded_current_production_samples_not_candidate_cloud_acceptance",
+      "observations": [
+        {
+          "path": "/zh/nte/items/annulith",
+          "status": 200,
+          "location": null,
+          "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+          "cfCacheStatus": null,
+          "contentType": "text/html; charset=utf-8",
+          "headerRobots": null,
+          "metaRobots": [
+            "index, follow"
+          ],
+          "canonical": "https://gachia.com/zh/nte/items/annulith"
+        },
+        {
+          "path": "/en/nte/items/annulith",
+          "status": 200,
+          "location": null,
+          "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+          "cfCacheStatus": null,
+          "contentType": "text/html; charset=utf-8",
+          "headerRobots": null,
+          "metaRobots": [
+            "index, follow"
+          ],
+          "canonical": "https://gachia.com/en/nte/items/annulith"
+        },
+        {
+          "path": "/ja/nte/items/annulith",
+          "status": 200,
+          "location": null,
+          "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+          "cfCacheStatus": null,
+          "contentType": "text/html; charset=utf-8",
+          "headerRobots": null,
+          "metaRobots": [
+            "index, follow"
+          ],
+          "canonical": "https://gachia.com/ja/nte/items/annulith"
+        },
+        {
+          "path": "/ja/nte/characters/adler",
+          "status": 200,
+          "location": null,
+          "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+          "cfCacheStatus": null,
+          "contentType": "text/html; charset=utf-8",
+          "headerRobots": null,
+          "metaRobots": [
+            "noindex, follow"
+          ],
+          "canonical": "https://gachia.com/ja/nte/characters/adler"
+        },
+        {
+          "path": "/ja/nte/guides/starter-guide",
+          "status": 404,
+          "location": null,
+          "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+          "cfCacheStatus": null,
+          "contentType": "text/html; charset=utf-8",
+          "headerRobots": null,
+          "metaRobots": [
+            "noindex"
+          ],
+          "canonical": null
+        },
+        {
+          "path": "/ja/genshin/guides/build-hu-tao",
+          "status": 200,
+          "location": null,
+          "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+          "cfCacheStatus": null,
+          "contentType": "text/html; charset=utf-8",
+          "headerRobots": null,
+          "metaRobots": [],
+          "canonical": "https://gachia.com/ja/genshin/guides/build-hu-tao"
+        },
+        {
+          "path": "/images/roco/characters/meewee.webp",
+          "status": 200,
+          "location": null,
+          "cacheControl": "public, max-age=0, must-revalidate",
+          "cfCacheStatus": "HIT",
+          "contentType": "image/webp",
+          "headerRobots": null,
+          "metaRobots": [],
+          "canonical": null
+        },
+        {
+          "path": "/zh/roco/items",
+          "status": 301,
+          "location": "/zh/roco",
+          "cacheControl": null,
+          "cfCacheStatus": null,
+          "contentType": null,
+          "headerRobots": null,
+          "metaRobots": [],
+          "canonical": null
+        }
+      ]
+    }
+  },
+  "verification": {
+    "frozenInstall": true,
+    "runtimeAndPatchPolicy": true,
+    "typecheckTurboTasks": 9,
+    "fullTests": {
+      "forced": true,
+      "tasks": 4,
+      "cachedTasks": 0,
+      "web": {
+        "passed": 355,
+        "files": 75
+      },
+      "data": {
+        "passed": 162,
+        "files": 13
+      },
+      "router": {
+        "passed": 31,
+        "files": 3
+      },
+      "admin": {
+        "passed": 265,
+        "skipped": 17,
+        "failed": 0
+      }
+    },
+    "releaseTests": {
+      "node": 124,
+      "pythonRetainedAssets": 9,
+      "pythonLocalXml": 8,
+      "pythonPublishedXml": 6
+    },
+    "lint": {
+      "errors": 0,
+      "existingAuthDialogWarnings": 1
+    },
+    "dataAndManifestChecks": true,
+    "routerGeneratedConfigUnchanged": true,
+    "azurContentAudit": true,
+    "lvmengBundleDryRun": true,
+    "llmsRouteCheck": true,
+    "devBrowser": {
+      "passed": 16,
+      "skippedGenshinCanaryWithoutToken": 8,
+      "record": ".release-records/s2-15/dev-browser.log"
+    },
+    "managedContent": {
+      "record": ".release-records/managed-content-6c0f3fe9-e208-454c-9c98-ae8671586161/result.json",
+      "status": "local_managed_content_verified",
+      "counts": {
+        "http": 23,
+        "json": 7,
+        "search": 3,
+        "browser": 508,
+        "indexnow": 8,
+        "retainedAssets": 12
+      },
+      "realCloudVerification": "not_performed"
+    },
+    "mainBuild": {
+      "rebuiltThisPhase": false,
+      "reusedS214ArtifactCompleteTreeEqual": true,
+      "dryRunUploadKiB": 13982.3,
+      "dryRunGzipKiB": 2843.21,
+      "uploaded": false
+    },
+    "azurLocalModes": {
+      "staging": {
+        "http": 11,
+        "browser": 14,
+        "cloudVerification": "not_performed",
+        "record": ".release-records/s2-15/azur-browser-staging.json"
+      },
+      "production": {
+        "http": 11,
+        "browser": 14,
+        "cloudVerification": "not_performed",
+        "record": ".release-records/s2-15/azur-browser-production.json"
+      }
+    },
+    "publicationGate": {
+      "passed": false,
+      "expectedRejection": true,
+      "missingMainOwnedUrls": 171
+    }
+  },
+  "mainArtifact": {
+    "directory": "apps/web/.open-next",
+    "fileCount": 3354,
+    "fileBytes": 113586261,
+    "linkCount": 19,
+    "treeSha256": "3d91f22b834319b7c2863bd9b12b1aec8268f80445cce983a0ab6e2ef7ed4a37",
+    "fileTreeSha256": "e531c855a6c695897cca5f04098e19108bfd1da104e0f417f9907dab360cbd18",
+    "symlinkTreeSha256": "73f878dbcc7526ebd9735bfadd46c79ac511758453cc31eeb8edec0bdf8da656",
+    "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+    "sameAsS214": true,
+    "notCloudSealed": true
+  },
+  "cloudAcceptanceImplementation": {
+    "exactOrigins": [
+      "https://gachia-staging.aieasygames.workers.dev",
+      "https://gachia.com"
+    ],
+    "localFixtureOriginPolicyUnchanged": true,
+    "realIndexNowTokensSent": false,
+    "syntheticTrustedIpSentRemotely": false,
+    "remoteIndexNowProbe": "unauthenticated_401_only_not_authenticated_pause_proof",
+    "browserRequestBudget": 20000,
+    "xmlBudgets": {
+      "documents": 40,
+      "depth": 3,
+      "bytesPerDocument": 10485760,
+      "urlsPerDedicatedOwner": 50000
+    },
+    "sameArtifactPromotionPreserved": true,
+    "successAndFailureRecordsRetentionDays": 30,
+    "actuallyExecutedInCloudThisPhase": false
+  },
+  "safety": {
+    "push": false,
+    "actionsRunsStarted": 0,
+    "workerDeployments": false,
+    "routerConfigChanges": false,
+    "databaseChanges": false,
+    "loginRestored": false,
+    "cachePurge": false,
+    "externalIndexNowSubmissions": 0,
+    "historicalEvidenceDeleted": false,
+    "originalDirtyWorkspaceModified": false,
+    "mainArtifactRebuilt": false,
+    "leftLocalWorkerLocks": false
+  },
+  "nextSteps": [
+    "Repair route-level ownership and missing Main fallback discovery, update strict XML contract and rebuild/revalidate Main.",
+    "Review and publish Azur independently through the supported guarded release path; recheck exact active versions and rollback compatibility.",
+    "Review actual root/child migration delta and separate Genshin language rollout.",
+    "Recheck main drift, artifact validity and Actions cost; only then use main-only immutable staging-to-production workflow."
+  ],
+  "evidenceDirectory": ".release-records/s2-15/",
+  "phaseDocument": "plans/multi-game-s2-15-release-preflight-2026-10-24.md"
+}

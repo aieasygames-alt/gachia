@@ -311,7 +311,7 @@ for (const environment of ['staging', 'production']) {
   });
 }
 
-for (const kind of ['noindex', 'canonical', 'assets', 'redirect', 'soft404', 'xml']) {
+for (const kind of ['noindex', 'canonical', 'assets', 'redirect', 'soft404', 'xml', 'duplicate-sitemap']) {
   test(`runtime smoke rejects ${kind} regressions`, async () => {
     const plan = planFor();
     const request = fakeWorker(plan, (r) => {
@@ -321,6 +321,7 @@ for (const kind of ['noindex', 'canonical', 'assets', 'redirect', 'soft404', 'xm
       if (kind === 'redirect' && r.path === '/zh/nte') r.status = 301;
       if (kind === 'soft404' && r.status === 404) r.status = 200;
       if (kind === 'xml' && r.path === '/sitemap.xml') r.headers['content-type'] = 'text/html';
+      if (kind === 'duplicate-sitemap' && r.path === '/sitemap.xml') r.body = r.body.replace('</urlset>', '<url><loc>https://gachia.com/zh/nte/characters/example</loc></url></urlset>');
       return r;
     });
     await assert.rejects(verifyOrigin(plan, 'http://127.0.0.1:1234', request));

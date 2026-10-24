@@ -57,6 +57,36 @@ export function requireLocalContentOrigin(value) {
 
 export async function verifyManagedContent(value, directory) {
   const origin = requireLocalContentOrigin(value);
+  return verifyContent(origin, directory, { localFixture: true });
+}
+
+export function requirePublishedContentOrigin(value) {
+  assert(['https://gachia-staging.aieasygames.workers.dev', 'https://gachia.com'].includes(value),
+    'Published content acceptance only permits the exact main staging or production origin');
+  return value;
+}
+
+export async function verifyPublishedManagedContent(value, directory, { proxy } = {}) {
+  const origin = requirePublishedContentOrigin(value);
+  verifyNoLegacyIndexNowTransport(resolve(ROOT, 'apps/web/.open-next'));
+  verifyWithdrawnRocoAssets(resolve(ROOT, 'apps/web/.open-next'));
+  return verifyContent(origin, directory, { localFixture: false, proxy });
+}
+
+export async function verifyPublishedIndexNow(value, request = fetch) {
+  const origin = requirePublishedContentOrigin(value);
+  const response = await request(`${origin}/api/indexnow`, {
+    method: 'POST', headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ urls: ['https://gachia.com/zh'] }),
+    redirect: 'manual', credentials: 'omit', signal: AbortSignal.timeout(30000),
+  });
+  assert.equal(response.status, 401, 'Published IndexNow must reject unauthenticated requests');
+  assert.equal((await response.json()).error, 'Unauthorized');
+  return [{ name: 'unauthorized', status: 401, submissionAttempted: false,
+    pauseEvidence: 'sealed_code_transport_absence_and_local_authenticated_fixture_not_cloud_authenticated_probe' }];
+}
+
+async function verifyContent(origin, directory, { localFixture, proxy }) {
   const observations = { http: [], json: [], search: [], browser: [], indexnow: [], retainedAssets: [] };
   const retentionPath = resolve(ROOT, 'apps/web/.open-next/retained-web-assets.json');
   if (existsSync(retentionPath)) {
@@ -100,13 +130,15 @@ export async function verifyManagedContent(value, directory) {
     const location = response.headers.get('location');
     const target = new URL(location);
     assert.equal(target.pathname, `/zh/roco/${suffix}`, path);
-    assert.equal(target.protocol, 'http:', path);
-    assert(['127.0.0.1', 'localhost'].includes(target.hostname), path);
-    assert.equal(target.port, new URL(origin).port, path);
+    if (localFixture) {
+      assert.equal(target.protocol, 'http:', path);
+      assert(['127.0.0.1', 'localhost'].includes(target.hostname), path);
+      assert.equal(target.port, new URL(origin).port, path);
+    } else assert.equal(target.origin, origin, path);
     assert(!target.username && !target.password && !target.search && !target.hash, path);
     observations.http.push({ path, status: 301, location });
   }
-  for (const [name, token, payload, status] of [
+  const indexnowCases = [
     ['unauthorized', 'wrong-local-token', { urls: ['https://gachia.com/zh'] }, 401],
     ['paused-page', INDEXNOW_FIXTURE_TOKEN, { urls: ['https://gachia.com/zh'] }, 503],
     ['paused-held-detail', INDEXNOW_FIXTURE_TOKEN, { urls: ['https://gachia.com/en/roco/characters/meewee'], approved: true }, 503],
@@ -115,8 +147,11 @@ export async function verifyManagedContent(value, directory) {
     ['invalid-query', INDEXNOW_FIXTURE_TOKEN, { urls: ['https://gachia.com/zh?x=1'] }, 400],
     ['invalid-credentials', INDEXNOW_FIXTURE_TOKEN, { urls: ['https://u:p@gachia.com/zh'] }, 400],
     ['invalid-empty', INDEXNOW_FIXTURE_TOKEN, { urls: [] }, 400],
-  ]) {
-    const response = await fetch(`${origin}/api/indexnow`, { method: 'POST', headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json' }, body: JSON.stringify(payload), redirect: 'manual', signal: AbortSignal.timeout(30000) });
+  ];
+  // Real cloud secrets and synthetic trusted-IP headers never leave the local fixture.
+  if (!localFixture) observations.indexnow = await verifyPublishedIndexNow(origin);
+  for (const [name, token, payload, status] of localFixture ? indexnowCases : []) {
+    const response = await fetch(`${origin}/api/indexnow`, { method: 'POST', headers: { ...(token ? { authorization: `Bearer ${token}` } : {}), 'content-type': 'application/json' }, body: JSON.stringify(payload), redirect: 'manual', signal: AbortSignal.timeout(30000) });
     assert.equal(response.status, status, `IndexNow ${name}`);
     const body = await response.json();
     if (status === 503) assert.equal(body.submissionApproved, false, name);
@@ -178,12 +213,17 @@ export async function verifyManagedContent(value, directory) {
     ...['zh', 'en', 'ja'].flatMap(locale => legacyWeaponIds.map(id => ({ locale, path: `/${locale}/roco/weapons/${id}`, kind: 'roco-weapon-review', id }))),
     ...['zh', 'en', 'ja'].flatMap(locale => [...reviewedTools, 'items', `weapons/${legacyWeaponIds[0]}`].map(id => ({ locale, path: `/${locale}/roco-cn/${id}`, kind: 'roco-cn-tool', id }))),
   ];
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({ headless: true, proxy });
+  let requests = 0;
   try {
     for (const width of [1440, 390]) {
       const context = await browser.newContext({ viewport: { width, height: 900 }, serviceWorkers: 'block', extraHTTPHeaders: fixtureIpHeaders(origin, '192.0.2.202') });
       try {
-        await context.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort('blockedbyclient'));
+        await context.route('**/*', route => {
+          if (new URL(route.request().url()).origin !== origin) return route.abort('blockedbyclient');
+          assert(++requests <= 20000, 'Managed browser request budget exceeded');
+          return route.continue();
+        });
         const page = await context.newPage();
         const errors = [], failedAssets = [];
         page.on('pageerror', error => errors.push(error.message));

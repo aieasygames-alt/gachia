@@ -76,10 +76,12 @@ test('web promotion uses one immutable artifact ID and digest, preserving hidden
   } finally { rmSync(root, { recursive: true, force: true }); }
 });
 
-test('web direct build and release scripts check their own resolved patch first', () => {
+test('web scripts require their resolved patch before build, after production content approval', () => {
   const pkg = JSON.parse(readFileSync(new URL('../../web/package.json', import.meta.url), 'utf8'));
   for (const name of ['build', 'preview', 'preview:staging', 'deploy', 'deploy:staging', 'upload']) {
-    assert.ok(pkg.scripts[name].startsWith('node ../../scripts/require-patched-next.mjs && '), name);
+    const contentGate = ['deploy', 'upload'].includes(name)
+      ? 'node ../../packages/data/scripts/raw-inventory-contract.mjs --release && ' : '';
+    assert.ok(pkg.scripts[name].startsWith(contentGate + 'node ../../scripts/require-patched-next.mjs && '), name);
   }
   const result = spawnSync(process.execPath,
     [fileURLToPath(new URL('../../../scripts/require-patched-next.mjs', import.meta.url))],
