@@ -1,0 +1,478 @@
+{
+  "schemaVersion": 1,
+  "phase": "S2.18",
+  "localDate": "2026-10-25",
+  "timezone": "Asia/Shanghai",
+  "recordedAt": "2026-10-24T17:03:47.476Z",
+  "status": "azur_production_released_and_bounded_acceptance_passed",
+  "scope": {
+    "productionOwner": "azur-promilia",
+    "productionDeployments": 1,
+    "stagingDeployments": 0,
+    "otherProductionDeployments": 0,
+    "topologyChanges": false,
+    "routingChanges": false,
+    "schemaChanges": false,
+    "loginChanges": false,
+    "newWorkers": 0,
+    "manualCleanup": false,
+    "pushes": 0,
+    "githubActionsStarted": 0,
+    "originalWorkspaceModified": false
+  },
+  "source": {
+    "commit": "cb9def4756590c506ba61cd4f730717ccce9deab",
+    "dirty": false,
+    "stagingSource": "56fbafc1d71df3a4082ac6c002652c2df14f96d2",
+    "changesSinceStagingSource": "documentation_and_reports_only_no_runtime_source_changes",
+    "configurationSha256": "72ee33655dfb2150d645c6f6e1203497de605d106a22c4b0bad06d3e3c2faab0",
+    "productionBuiltSeparately": true
+  },
+  "releaseDecision": {
+    "at": "2026-10-24T16:51:48.498Z",
+    "authorization": "用户：继续，将开发验证过的内容部署到线上",
+    "scope": "independent Azur production only; no Main, Router, topology, routing or schema change",
+    "sourceCommit": "cb9def4756590c506ba61cd4f730717ccce9deab",
+    "oldGitSource": "not_attested",
+    "disposition": "accept limited historical provenance for this bounded stateless owner release using authoritative current cloud script capture, version-bound logged static bytes, readable active rollback version, unchanged data schema and accepted isolated staging; do not represent old Git source as proven",
+    "rollback": {
+      "version": "472903c2-3fca-43c0-a613-8c54f108bf73",
+      "availableViaFreshGetVersion": true,
+      "executed": false,
+      "noAutomaticRetryOrRollback": true,
+      "commandFromApp": "pnpm exec wrangler rollback 472903c2-3fca-43c0-a613-8c54f108bf73 --config wrangler.jsonc --env \"\" --name gachia-game-azur-promilia --message \"S2.18 runtime rollback\" --yes",
+      "limitation": "rollbacks do not revert external data; no state bindings or migration are present; old Git and full cloud asset manifest are not attested; emergency rollback may require users with newly opened tabs to reload because the old asset manifest need not contain new chunks"
+    },
+    "githubActions": 0,
+    "cloudflareUsage": "one production deployment plus bounded acceptance requests may incur metered usage"
+  },
+  "production": {
+    "service": "gachia-game-azur-promilia",
+    "before": {
+      "id": "06712d57-5067-4ceb-b039-bfe710b66126",
+      "createdOn": "2026-10-15T09:52:48.720592Z",
+      "versions": [
+        {
+          "version_id": "472903c2-3fca-43c0-a613-8c54f108bf73",
+          "percentage": 100
+        }
+      ]
+    },
+    "after": {
+      "id": "fcc7ddf4-f591-4607-9d95-f28ba096229d",
+      "createdOn": "2026-10-24T16:53:32.568953Z",
+      "versions": [
+        {
+          "version_id": "9867e978-20fa-46f9-8dd4-c96c400e6919",
+          "percentage": 100
+        }
+      ]
+    },
+    "versionNumber": 80,
+    "scriptEtag": "bb12236733599fc9eb4513a868e0c717adc1cca891bf95d2ca1284fac779bfdd",
+    "mode": "production",
+    "uploadKiB": 5273.26,
+    "gzipKiB": 1039.82,
+    "startupMs": 18,
+    "releaseRecord": {
+      "path": ".release-records/azur-promilia-1f724d61-5563-46b6-89ad-2d97bdb4984d.json",
+      "sha256": "95f9acb320dba5c230d47050a3cc86f5777cce8e52a126170e0823545943189d",
+      "status": "deployment_command_succeeded_verification_pending",
+      "cloudVerificationInOriginalRecord": "not_performed"
+    },
+    "runtime": {
+      "status": "local_worker_http_verified",
+      "cloudVerification": "not_performed",
+      "observations": [
+        {
+          "path": "/robots.txt",
+          "status": 200
+        },
+        {
+          "path": "/sitemap.xml",
+          "status": 200
+        },
+        {
+          "path": "/zh/azur-promilia",
+          "status": 200
+        },
+        {
+          "path": "/en/azur-promilia",
+          "status": 200
+        },
+        {
+          "path": "/zh/azur-promilia/characters",
+          "status": 200
+        },
+        {
+          "path": "/zh/azur-promilia/characters/abby",
+          "status": 200
+        },
+        {
+          "path": "/_games/azur-promilia/_next/static/chunks/webpack-ab27a0009b5e7231.js",
+          "status": 200
+        },
+        {
+          "path": "/_next/static/chunks/webpack-ab27a0009b5e7231.js",
+          "status": 200
+        },
+        {
+          "path": "/_games/azur-promilia/_next/static/css/9aa93cdcbed4bf47.css",
+          "status": 200
+        },
+        {
+          "path": "/_next/static/css/9aa93cdcbed4bf47.css",
+          "status": 200
+        },
+        {
+          "path": "/zh/azur-promilia/__release_smoke_missing__",
+          "status": 404
+        }
+      ],
+      "retainedStaticPaths": 70
+    },
+    "retainedStatic": {
+      "files": 35,
+      "bytes": 863724,
+      "localWorkerOriginalAndNamespacedPathsVerified": 70,
+      "publicNamespacedPathsVerified": 35,
+      "receiptSha256": "ab7e67200bd61ffaefc541ab63b16e2e8ab313ddbe68623dcf4c49873a1bfa67"
+    },
+    "localArtifact": {
+      "algorithm": "sha256_of_compact_json_utf8_array_plus_LF_entries_sorted_by_relative_path_UTF16_file_bytes_sha256_link_target_not_followed",
+      "manifestSha256": "b1d9ba08b89206b3b38182d411352b6c2222a1ca74ed6976ddd51d93788d9b57",
+      "files": 1531,
+      "bytes": 31997156,
+      "links": 19,
+      "portability": {
+        "files": 1531,
+        "links": 19,
+        "portable": true,
+        "scope": "filesystem_portability_not_runtime_or_platform_acceptance"
+      },
+      "scope": "local_post_deployment_build_tree_not_cloud_uploaded_bundle_digest"
+    },
+    "sealedLocalArtifact": {
+      "createdAt": "2026-10-24T17:01:04.065Z",
+      "path": ".release-records/s2-18/production-open-next.tar.gz",
+      "bytes": 7278275,
+      "sha256": "613586c6641c2f021b7dc0d491ebebcd6b05c125af44b7d2f17d1e627169fc7b",
+      "sourceCommit": "cb9def4756590c506ba61cd4f730717ccce9deab",
+      "sourceDirty": false,
+      "configurationSha256": "72ee33655dfb2150d645c6f6e1203497de605d106a22c4b0bad06d3e3c2faab0",
+      "versionId": "9867e978-20fa-46f9-8dd4-c96c400e6919",
+      "localManifestSha256": "b1d9ba08b89206b3b38182d411352b6c2222a1ca74ed6976ddd51d93788d9b57",
+      "scope": "sealed local OpenNext tree tied by controlled deploy record and independent cloud version reconciliation; not a signed platform artifact or the uploaded script byte hash"
+    },
+    "authoritativeCloudScript": {
+      "capturedAt": "2026-10-24T16:58:08.790Z",
+      "kind": "authoritative_current_cloud_script_bracketed_by_deployment_reads_not_full_cloud_asset_manifest_or_signed_git_attestation",
+      "versionId": "9867e978-20fa-46f9-8dd4-c96c400e6919",
+      "deploymentId": "fcc7ddf4-f591-4607-9d95-f28ba096229d",
+      "etag": "bb12236733599fc9eb4513a868e0c717adc1cca891bf95d2ca1284fac779bfdd",
+      "bytes": 5400067,
+      "sha256": "be3289f13cdc04e42ebcf5258480669d818598febd1de0da1d1172b3cabf171e",
+      "modules": [
+        {
+          "name": "worker.js",
+          "bytes": 5399816,
+          "sha256": "083f01784b2e5a817d65e0213a341f27700a15ad4c878dcd71d3bc1024e476cc"
+        }
+      ],
+      "stable": true
+    }
+  },
+  "checks": {
+    "freshReleaseNodeTests": 165,
+    "freshPythonTests": {
+      "previousAssets": 9,
+      "sitemapContract": 11,
+      "publishedXml": 7
+    },
+    "deploymentConfigGames": 4,
+    "fullUnitAndTypes": "S2.17 baseline reused with no runtime source changes; not claimed freshly rerun this phase",
+    "localWorker": {
+      "http": 11,
+      "retainedStaticPaths": 70
+    },
+    "strictPublicOwnerXml": {
+      "status": "strict_owner_xml_verified",
+      "scope": "Azur owner only, not full Main published graph",
+      "total": 150,
+      "unique": 150,
+      "previousUniqueSetEqual": true,
+      "added": 0,
+      "removed": 0,
+      "duplicateRecordsRemoved": 6
+    },
+    "public": {
+      "status": "bounded_public_production_acceptance_passed",
+      "startedAt": "2026-10-24T16:59:31.153Z",
+      "finishedAt": "2026-10-24T17:00:46.211Z",
+      "requests": 500,
+      "pages": 150,
+      "currentJsCssAssets": 16,
+      "oldStaticAssets": 35,
+      "browserCases": 12,
+      "plannerCases": 6,
+      "canonicalSelf": true,
+      "allPublishedPagesIndexable": true,
+      "robots": {
+        "sha256": "23a5dd24285b7363e87779b8097b8fcb76d2c0f338886ca518f5a9dead936d08",
+        "wildcardPagesAllowed": 150,
+        "managedCrawlerGroupsNotInterpretedAsWildcard": true
+      },
+      "owned404Checks": 3,
+      "unknownSectionMainFallback404Checks": 3,
+      "hydrationErrors": 0,
+      "failedBrowserAssets": 0,
+      "path": "ignored evidence: production-acceptance.json",
+      "sha256": "891aed8cfce2753dca4b250ddbb98a4da761a9490aaebab55c70753a8720baf3",
+      "localeAlternatePresenceChecked": true
+    }
+  },
+  "validationCorrections": {
+    "preservedAttempts": [
+      {
+        "path": "production-acceptance-initial-failed.json",
+        "sha256": "c92c70c14708518dde047f84aeb7d0baf7db3d5b3dc21b94793b27d6a25a5943",
+        "error": "Public robots must not prohibit all crawling",
+        "requests": 203,
+        "pagesPassed": 150,
+        "currentAssetsPassed": 16,
+        "oldAssetsPassed": 35
+      },
+      {
+        "path": "production-acceptance-404-owner-failed.json",
+        "sha256": "08310681122541968a99bc611565c52d5d0273664a155e7cbee8ed834e452be5",
+        "error": "/zh/azur-promilia/__s2_18_missing__: Router owner\n+ actual - expected\n\n+ null\n- 'azur-promilia'\n",
+        "requests": 204,
+        "pagesPassed": 150,
+        "currentAssetsPassed": 16,
+        "oldAssetsPassed": 35
+      }
+    ],
+    "explanation": [
+      "Initial temporary harness incorrectly treated any named crawler Disallow as wildcard policy; corrected to parse and merge wildcard groups, check each of 150 page paths, with block/allow/API fixtures",
+      "Second temporary harness incorrectly required Azur ownership for unknown section paths which the unchanged Router assigns to Main; corrected by checking both dedicated character missing paths and Main fallback 404 paths"
+    ],
+    "productionCodeModifiedToPass": false,
+    "repeatedProductionDeployments": 0,
+    "completePublicAcceptanceRerunPassed": true
+  },
+  "reconciliation": {
+    "beforeAt": "2026-10-24T16:51:39.600Z",
+    "afterAt": "2026-10-24T17:02:01.184Z",
+    "otherFiveProductionDeploymentsUnchanged": true,
+    "isolatedStagingUnchanged": true,
+    "routesUnchanged": true,
+    "domainsUnchanged": true,
+    "services": {
+      "gachia": {
+        "before": {
+          "id": "67efb2f6-b62c-4059-bcc5-c6b3143db458",
+          "createdOn": "2026-10-23T14:50:43.051304Z",
+          "versions": [
+            {
+              "version_id": "80d20cea-4407-4ece-a87c-30f27c915021",
+              "percentage": 100
+            }
+          ]
+        },
+        "after": {
+          "id": "67efb2f6-b62c-4059-bcc5-c6b3143db458",
+          "createdOn": "2026-10-23T14:50:43.051304Z",
+          "versions": [
+            {
+              "version_id": "80d20cea-4407-4ece-a87c-30f27c915021",
+              "percentage": 100
+            }
+          ]
+        }
+      },
+      "gachia-router": {
+        "before": {
+          "id": "04a74338-c9ba-4e87-9857-0fe414457ff5",
+          "createdOn": "2026-10-09T14:55:23.062535Z",
+          "versions": [
+            {
+              "version_id": "239bb325-998c-4893-98e5-ddd24d50c99a",
+              "percentage": 100
+            }
+          ]
+        },
+        "after": {
+          "id": "04a74338-c9ba-4e87-9857-0fe414457ff5",
+          "createdOn": "2026-10-09T14:55:23.062535Z",
+          "versions": [
+            {
+              "version_id": "239bb325-998c-4893-98e5-ddd24d50c99a",
+              "percentage": 100
+            }
+          ]
+        }
+      },
+      "gachia-game-genshin": {
+        "before": {
+          "id": "c087254a-58f4-4c61-b92b-0fd44d9f2f2b",
+          "createdOn": "2026-10-15T09:51:39.317581Z",
+          "versions": [
+            {
+              "version_id": "b2952171-bf58-4d64-a16e-8cea41cf9529",
+              "percentage": 100
+            }
+          ]
+        },
+        "after": {
+          "id": "c087254a-58f4-4c61-b92b-0fd44d9f2f2b",
+          "createdOn": "2026-10-15T09:51:39.317581Z",
+          "versions": [
+            {
+              "version_id": "b2952171-bf58-4d64-a16e-8cea41cf9529",
+              "percentage": 100
+            }
+          ]
+        }
+      },
+      "gachia-game-nte": {
+        "before": {
+          "id": "c344161b-5b10-4e87-8551-4e950366a5f1",
+          "createdOn": "2026-10-18T11:23:20.107554Z",
+          "versions": [
+            {
+              "version_id": "6b079ce0-7fce-4bef-a649-150c1a947135",
+              "percentage": 100
+            }
+          ]
+        },
+        "after": {
+          "id": "c344161b-5b10-4e87-8551-4e950366a5f1",
+          "createdOn": "2026-10-18T11:23:20.107554Z",
+          "versions": [
+            {
+              "version_id": "6b079ce0-7fce-4bef-a649-150c1a947135",
+              "percentage": 100
+            }
+          ]
+        }
+      },
+      "gachia-game-lvmeng": {
+        "before": {
+          "id": "d04a1d7d-d9d0-46d5-8f26-b8985e596f64",
+          "createdOn": "2026-10-18T11:22:43.202469Z",
+          "versions": [
+            {
+              "version_id": "815be742-10a4-4609-a32a-cfd0cd968487",
+              "percentage": 100
+            }
+          ]
+        },
+        "after": {
+          "id": "d04a1d7d-d9d0-46d5-8f26-b8985e596f64",
+          "createdOn": "2026-10-18T11:22:43.202469Z",
+          "versions": [
+            {
+              "version_id": "815be742-10a4-4609-a32a-cfd0cd968487",
+              "percentage": 100
+            }
+          ]
+        }
+      },
+      "gachia-game-azur-promilia": {
+        "before": {
+          "id": "06712d57-5067-4ceb-b039-bfe710b66126",
+          "createdOn": "2026-10-15T09:52:48.720592Z",
+          "versions": [
+            {
+              "version_id": "472903c2-3fca-43c0-a613-8c54f108bf73",
+              "percentage": 100
+            }
+          ]
+        },
+        "after": {
+          "id": "fcc7ddf4-f591-4607-9d95-f28ba096229d",
+          "createdOn": "2026-10-24T16:53:32.568953Z",
+          "versions": [
+            {
+              "version_id": "9867e978-20fa-46f9-8dd4-c96c400e6919",
+              "percentage": 100
+            }
+          ]
+        }
+      },
+      "gachia-game-azur-promilia-staging": {
+        "before": {
+          "id": "95c17034-e3af-4b21-ae7b-f504e59e0fd4",
+          "createdOn": "2026-10-24T10:49:52.035337Z",
+          "versions": [
+            {
+              "version_id": "c6b46257-2441-4cc2-b9c6-c31d4d4d1cca",
+              "percentage": 100
+            }
+          ]
+        },
+        "after": {
+          "id": "95c17034-e3af-4b21-ae7b-f504e59e0fd4",
+          "createdOn": "2026-10-24T10:49:52.035337Z",
+          "versions": [
+            {
+              "version_id": "c6b46257-2441-4cc2-b9c6-c31d4d4d1cca",
+              "percentage": 100
+            }
+          ]
+        }
+      }
+    },
+    "control": {
+      "at": "2026-10-24T17:02:30.329Z",
+      "observations": [
+        {
+          "path": "/zh",
+          "status": 200,
+          "owner": null,
+          "bytes": 260246,
+          "xmlUrls": 0,
+          "unique": 0,
+          "sha256": "29fa4b5c4134ca7353fc38c0eb68d67089d11cc23e28d375c65fbde9d6d9085b"
+        },
+        {
+          "path": "/sitemap.xml",
+          "status": 200,
+          "owner": null,
+          "bytes": 886356,
+          "xmlUrls": 6629,
+          "unique": 6629,
+          "sha256": "464815edbe9e8d4770a22a46e5252b5c0ca3729c3894267189672be7e7eed78b"
+        },
+        {
+          "path": "/sitemaps/azur-promilia/index.xml",
+          "status": 200,
+          "owner": "azur-promilia",
+          "bytes": 21431,
+          "xmlUrls": 150,
+          "unique": 150,
+          "sha256": "f4f92a7b7b4b562b41228f8e4f290a2cbe6b492b21ef81d166da5bcc828ef6d7"
+        }
+      ],
+      "scope": "control read only; does not compare live Main against unpublished Main candidate"
+    },
+    "rollbackTargetAfterDeployment": {
+      "at": "2026-10-24T17:07:06.335Z",
+      "versionId": "472903c2-3fca-43c0-a613-8c54f108bf73",
+      "number": 79,
+      "scriptEtag": "899d776c53b6a0a932201ca7ab8caf3b0312ddeab547fd825ecee059900ef8d2",
+      "readableAfterProductionDeployment": true,
+      "rollbackExecuted": false
+    }
+  },
+  "limits": [
+    "Old production Git source and full old cloud assets manifest remain not attested; bounded limited-provenance decision recorded, not relabeled as proof",
+    "Rollback target read and preserved; no live rollback test executed; rollback may require newly opened clients to reload and does not revert external data",
+    "Local tree/archive digest is not the cloud uploaded bundle digest or a signed source/version attestation",
+    "Bounded in-turn observation only, not long-term traffic, CPU, SEO ranking or uptime validation",
+    "Main current root remains 6629 URLs; unpublished 4515-URL Main candidate and Genshin language changes are not released by this deployment",
+    "Actions minutes used: zero; remaining budget and incremental Cloudflare bill were not re-observed",
+    "Full binaries and raw evidence are ignored local files; preserve separately before archiving or deleting the worktree"
+  ],
+  "evidenceDirectory": ".release-records/s2-18"
+}
