@@ -2,10 +2,31 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import test from 'node:test';
-import { fixtureIpHeaders, localFixtureConfig, ROLLOUT_APPS } from './runtime-rollout-smoke.mjs';
+import { fixtureIpHeaders, localFixtureConfig, ROLLOUT_APPS, wildcardRobotsAllows } from './runtime-rollout-smoke.mjs';
 import { readAssetPlan, readReleasePlan } from './game-release.mjs';
 
 const root = resolve(import.meta.dirname, '..');
+
+test('robots acceptance separates named crawler blocks and combines wildcard groups', () => {
+  const robots = 'User-agent: *\nContent-Signal: search=yes\nAllow: /\n\nUser-agent: GPTBot\nDisallow: /\nUser-agent: *\nDisallow: /api/\n';
+  assert.equal(wildcardRobotsAllows(robots, '/zh/hi3/weapons'), true);
+  assert.equal(wildcardRobotsAllows(robots, '/sitemap.xml'), true);
+  assert.equal(wildcardRobotsAllows(robots, '/api/auth'), false);
+  assert.equal(wildcardRobotsAllows('User-agent: GPTBot\nAllow: /\nUser-agent: *\nDisallow: /', '/zh'), false);
+  assert.throws(() => wildcardRobotsAllows('User-agent: GPTBot\nDisallow: /', '/'), /Missing wildcard/);
+});
+
+test('robots acceptance preserves preview exclusion and longest-match allow precedence', () => {
+  for (const path of ['/', '/zh', '/sitemap.xml']) {
+    assert.equal(wildcardRobotsAllows('USER-AGENT: *\nDisallow: / # preview\n', path), false);
+  }
+  const robots = 'User-agent: *\nUser-agent: Googlebot\nDisallow: /private/*\nAllow: /private/open$\nDisallow: /private/open$\n';
+  assert.equal(wildcardRobotsAllows(robots, '/private/closed'), false);
+  assert.equal(wildcardRobotsAllows(robots, '/private/open'), true);
+  assert.equal(wildcardRobotsAllows(robots, '/private/open/child'), false);
+  assert.equal(wildcardRobotsAllows(robots, '/zh'), true);
+  assert.equal(wildcardRobotsAllows('User-agent: *\nDisallow:\n', '/'), true);
+});
 
 test('remote acceptance never sends synthetic Cloudflare trusted-IP headers', () => {
   assert.deepEqual(fixtureIpHeaders('http://127.0.0.1:8080', '192.0.2.1'), { 'cf-connecting-ip': '192.0.2.1' });

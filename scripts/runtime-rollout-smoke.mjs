@@ -36,6 +36,33 @@ export function localFixtureConfig(app, root) {
   return config;
 }
 
+export function wildcardRobotsAllows(text, path) {
+  const groups = [];
+  let group, directives = false;
+  for (const line of text.split(/\r?\n/)) {
+    const match = line.replace(/#.*$/, '').trim().match(/^([^:]+):\s*(.*)$/);
+    if (!match) continue;
+    const name = match[1].trim().toLowerCase(), value = match[2].trim();
+    if (name === 'user-agent') {
+      if (!group || directives) {
+        group = { agents: [], rules: [] }; groups.push(group); directives = false;
+      }
+      group.agents.push(value.toLowerCase());
+    } else if (group) {
+      directives = true;
+      if (['allow', 'disallow'].includes(name) && value) group.rules.push({ allow: name === 'allow', path: value });
+    }
+  }
+  const wildcard = groups.filter(entry => entry.agents.includes('*'));
+  assert(wildcard.length, 'Missing wildcard robots group');
+  // Combine wildcard groups; named managed-crawler restrictions do not apply here.
+  const matches = wildcard.flatMap(entry => entry.rules).filter(rule => {
+    const pattern = rule.path.replace(/[.+?^${}()|[\]\\]/g, '\\$&').replace(/\*/g, '.*').replace(/\\\$$/, '$');
+    return new RegExp('^' + pattern).test(path);
+  }).sort((a, b) => b.path.replace(/\*|\$$/g, '').length - a.path.replace(/\*|\$$/g, '').length || Number(b.allow) - Number(a.allow));
+  return matches[0]?.allow ?? true;
+}
+
 export async function verifyHttp(app, origin, { preview = false } = {}) {
   const observations = [];
   const get = async (path, expected = 200, init = {}) => {
@@ -63,8 +90,9 @@ export async function verifyHttp(app, origin, { preview = false } = {}) {
     first ??= result.body;
   }
   const robots = await get('/robots.txt');
-  if (preview) assert.match(robots.body, /^Disallow:\s*\/\s*$/m);
-  else assert(!/^Disallow:\s*\/\s*$/m.test(robots.body));
+  for (const path of ['/', ...paths, '/sitemap.xml']) {
+    assert.equal(wildcardRobotsAllows(robots.body, path), !preview, `${path}: unexpected wildcard robots policy`);
+  }
   const sitemap = await get('/sitemap.xml');
   assert.match(sitemap.response.headers.get('content-type') ?? '', /xml/);
   let pageSitemap = sitemap;
