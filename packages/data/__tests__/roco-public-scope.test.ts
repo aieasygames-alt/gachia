@@ -27,10 +27,7 @@ it('marks all six details unverified while preserving the earlier three correcti
     expect(row).not.toHaveProperty('skills');
     expect(row).not.toHaveProperty('stats');
   }
-  for (const row of genericCharacters) {
-    expect(row.skills).toEqual([]);
-    expect(row.stats).toEqual({ baseHp: [], baseAtk: [], baseDef: [] });
-  }
+  expect(genericCharacters).toEqual([]);
 });
 
 it('rewrites exactly four mechanics guides and leaves the other twenty-six records and all dates intact', () => {

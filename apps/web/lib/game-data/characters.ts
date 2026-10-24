@@ -114,10 +114,10 @@ export async function getCharacterSummariesByIds(
       });
     }
     case 'roco': {
-      const mod = await import('@gachia/data/games/roco/characters');
-      return ids.flatMap((id) => {
-        const character = mod.rocoCharacters.find((entry) => entry.id === id);
-        return character ? [{ id: character.id, name: mod.getRocoCharacterName(character, locale), image: toAbs(mod.getRocoCharacterImage(character)) }] : [];
+      const mod = await import('@gachia/data/games/roco/character-review');
+      return ids.flatMap(id => {
+        const entry = mod.getRocoLegacyCharacterById(id);
+        return entry ? [{ id, name: mod.getRocoLegacyCharacterName(id, locale), image: '' }] : [];
       });
     }
     case 'roco-cn': {
@@ -183,8 +183,8 @@ export async function getCharactersForStaticParams(gameId: GameId): Promise<Arra
       return mod.seaCharacters.map((character) => ({ id: character.id }));
     }
     case 'roco': {
-      const mod = await import('@gachia/data/games/roco/characters');
-      return mod.rocoCharacters.map((character) => ({ id: character.id }));
+      const mod = await import('@gachia/data/games/roco/character-review');
+      return mod.rocoLegacyCharacterEntries.map(({ id }) => ({ id }));
     }
     case 'roco-cn': {
       const mod = await import('@gachia/data/games/roco-cn/character-summaries');
@@ -351,17 +351,17 @@ export async function getCharacterMetaData(
       };
     }
     case 'roco': {
-      const mod = await import('@gachia/data/games/roco/characters');
-      const character = mod.getRocoCharacterById(id);
-      if (!character) return null;
+      const mod = await import('@gachia/data/games/roco/character-review');
+      const entry = mod.getRocoLegacyCharacterById(id);
+      if (!entry) return null;
       return {
-        id: character.id,
-        name: mod.getRocoCharacterName(character, locale),
-        description: mod.getRocoCharacterDescription(character, locale),
-        contentReview: character.contentReview,
-        image: toAbs(mod.getRocoCharacterImage(character)),
-        element: character.attribute,
-        elementLabel: character.attributeEn,
+        id,
+        name: mod.getRocoLegacyCharacterName(id, locale),
+        description: mod.ROCO_CHARACTER_IDENTITY_REVIEW[locale].description,
+        contentReview: entry.contentReview,
+        image: '',
+        element: '',
+        elementLabel: mod.ROCO_CHARACTER_IDENTITY_REVIEW[locale].unverified,
       };
     }
     case 'roco-cn': {
@@ -544,16 +544,15 @@ export async function getCharacterListData(
       }));
     }
     case 'roco': {
-      const mod = await import('@gachia/data/games/roco/characters');
-      return mod.rocoCharacters.map((character) => ({
-        id: character.id,
-        name: mod.getRocoCharacterName(character, locale),
-        image: toAbs(mod.getRocoCharacterImage(character)),
-        element: character.attribute,
-        elementLabel: character.contentReview ? { zh: '待核实', en: 'Unverified', ja: '未確認' }[locale] : labelFromId(character.attributeEn),
-        rarityLabel: character.contentReview ? undefined : `${character.rarity}★`,
-        rankGroup: character.contentReview ? 'all' : `${character.rarity}★`,
-        subtitle: character.contentReview ? { zh: '国际服资料待核实', en: 'Global information under review', ja: '国際版資料確認中' }[locale] : character.attributeEn,
+      const mod = await import('@gachia/data/games/roco/character-review');
+      return mod.rocoLegacyCharacterEntries.map(({ id }) => ({
+        id,
+        name: mod.getRocoLegacyCharacterName(id, locale),
+        image: '',
+        element: '',
+        elementLabel: mod.ROCO_CHARACTER_IDENTITY_REVIEW[locale].unverified,
+        rankGroup: 'all',
+        subtitle: mod.ROCO_CHARACTER_IDENTITY_REVIEW[locale].portrait,
       }));
     }
     case 'roco-cn': {

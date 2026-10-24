@@ -20,11 +20,10 @@ it('withdraws copied international skills and values without inventing zero stat
     expect(source).not.toHaveProperty('stats');
     expect(source).not.toHaveProperty('releaseVersion');
     expect(source).toHaveProperty('contentReview.status', 'needs_verification');
-    const mapped = characters.find(row => row.id === id)!;
-    expect(mapped.skills).toEqual([]);
-    expect(mapped.stats).toEqual({ baseHp: [], baseAtk: [], baseDef: [] });
+    expect(characters.find(row => row.id === id)).toBeUndefined();
     expect(getRocoCharacterDescription(rocoCharacters.find(row => row.id === id)!, 'ja')).toBe(source.descriptionJa);
   }
+  expect(characters).toEqual([]);
   expect(proof.originalCharacters.source.every((row: { skills: unknown[]; stats: unknown }) => row.skills.length && row.stats)).toBe(true);
   expect(hash(nextProof.originalCharacters)).toBe(proof.preservation.otherThreeCharactersSerializationSha256);
 });

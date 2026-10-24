@@ -91,7 +91,7 @@ export async function generateMetadata({
     description: ensureMetaLength(meta.description, locale),
     robots: { index: false, follow: true },
     alternates: { canonical: alternates.canonical },
-    openGraph: { ...openGraph, description: meta.description },
+    openGraph: { title: meta.name, description: meta.description, url: alternates.canonical },
   };
   if (override) return { ...override, openGraph, alternates };
 

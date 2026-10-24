@@ -156,25 +156,8 @@ export async function getTierListGroups(gameId: GameId, locale: SupportedLocale)
         }),
       }));
     }
-    case 'roco': {
-      const [{ rocoCharacters, getRocoCharacterImage, getRocoCharacterName }, { tierLists }] = await Promise.all([
-        import('@gachia/data/games/roco/characters'),
-        import('@gachia/data/games/roco/tier-lists'),
-      ]);
-      const tierData = tierLists.find((tl) => tl.gameId === 'roco' && tl.category === 'overall' && tl.locale === locale)
-        ?? tierLists.find((tl) => tl.gameId === 'roco' && tl.category === 'overall');
-      const entries = tierData?.entries ?? [];
-      const charMap = new Map(rocoCharacters.map((char) => [char.id, char]));
-      return idsByTier(entries, TIER_ORDER).map((group) => ({
-        tier: group.tier,
-        characters: group.ids.flatMap((id) => {
-          const char = charMap.get(id);
-          if (!char) return [];
-          const entry = entries.find((e) => e.characterId === id);
-          return [{ id: char.id, name: getRocoCharacterName(char, locale), href: `/roco/characters/${char.id}`, imageUrl: getRocoCharacterImage(char), element: char.attribute, role: entry?.role ?? char.attributeEn }];
-        }),
-      }));
-    }
+    case 'roco':
+      return [];
     default:
       return [];
   }

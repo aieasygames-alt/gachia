@@ -312,10 +312,17 @@ function JinieDetail({
 }
 
 export async function RocoCharacterDetailPage({ id, locale }: { id: string; locale: SupportedLocale }) {
-  const { getRocoCharacterById, getRocoCharacterImage } = await import('@gachia/data/games/roco/characters');
-  const char = getRocoCharacterById(id);
-  if (!char) notFound();
-  return <JinieDetail char={char} locale={locale} gameId="roco" imageUrl={getRocoCharacterImage(char)} />;
+  const { getRocoLegacyCharacterById, getRocoLegacyCharacterName, ROCO_CHARACTER_IDENTITY_REVIEW } = await import('@gachia/data/games/roco/character-review');
+  const entry = getRocoLegacyCharacterById(id);
+  if (!entry) notFound();
+  const copy = ROCO_CHARACTER_IDENTITY_REVIEW[locale];
+  return <article data-roco-character-review={id}>
+    <h1 className="mb-4 break-words text-2xl font-bold text-game-text">{getRocoLegacyCharacterName(id, locale)}</h1>
+    <div data-review-portrait className="mb-4 flex h-40 items-center justify-center rounded-lg border border-game-border bg-game-surface text-sm text-game-text-muted">{copy.portrait}</div>
+    <p className="mb-6 text-sm leading-relaxed text-game-text-muted">{copy.description}</p>
+    <ContentReviewNotice reviewedAt={entry.contentReview.reviewedAt} locale={locale} />
+    <Link href="/roco/characters" className="text-sm text-game-primary">{{ zh: '返回历史条目目录', en: 'Back to legacy directory', ja: '過去の項目の索引に戻る' }[locale]}</Link>
+  </article>;
 }
 
 export async function RocoCnCharacterDetailPage({ id, locale }: { id: string; locale: SupportedLocale }) {

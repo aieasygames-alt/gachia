@@ -179,7 +179,7 @@ export async function verifyManagedContent(value, directory) {
           } else if (kind.startsWith('roco-reviewed-')) {
             const row = (kind === 'roco-reviewed-guide' ? rocoGuides : rocoCharacters).find(row => row.id === id);
             const suffix = { zh: '', en: 'En', ja: 'Ja' }[locale];
-            assert.equal(await page.locator('h1').innerText(), row[`${kind === 'roco-reviewed-guide' ? 'title' : 'name'}${suffix}`] ?? row.nameEn);
+            assert.equal(await page.locator('h1').innerText(), kind === 'roco-reviewed-guide' ? row[`title${suffix}`] : `${{ zh: '历史条目', en: 'Legacy entry', ja: '過去の項目' }[locale]} · ${id}`);
             assert.equal(await page.locator('[data-content-review]').count(), 1);
             assert.match(await page.locator('meta[name="robots"]').getAttribute('content'), /noindex,\s*follow/);
             assert.equal(await page.locator('link[rel="alternate"][hreflang]').count(), 0);
@@ -206,7 +206,11 @@ export async function verifyManagedContent(value, directory) {
               await faq.first().click();
               assert((await faq.first().innerText()).includes(row.faq[0][{ zh: 'answerZh', en: 'answer', ja: 'answerJa' }[locale]]));
             } else {
-              assert(body.includes(row[`description${suffix}`]));
+              assert.equal(await article.locator('[data-roco-character-review]').getAttribute('data-roco-character-review'), id);
+              assert.equal(await article.locator('img, table, button').count(), 0, path);
+              assert.equal(await page.locator('meta[property="og:image"]').count(), 0, path);
+              assert(body.includes({ zh: '使用权', en: 'usage rights', ja: '利用権' }[locale]), path);
+              for (const name of [row.name, row.nameEn, row.nameJa].filter(Boolean)) assert(!body.includes(name), `${path}: unverified name ${name}`);
               assert.equal(await page.locator('[data-review-portrait]').innerText(), { zh: '形象待核实', en: 'Appearance unverified', ja: '外見未確認' }[locale]);
               assert.equal(await page.locator('[data-review-portrait] img').count(), 0);
               assert.equal(await article.getByRole('heading', { name: /^(种族值|種族値|Base Stats|技能表|スキル一覧|Skills|基本信息|基本情報|Profile)$/ }).count(), 0);
@@ -227,6 +231,11 @@ export async function verifyManagedContent(value, directory) {
                 assert(!/10\/27|10\/20|2026-10-27|400\+|★★★★/.test(text), text);
                 if (section === 'characters') assert(text.includes({ zh: '待核实', en: 'Unverified', ja: '未確認' }[locale]));
               }
+              if (section === 'characters') {
+                assert.equal(await card.locator('img').count(), 0, path);
+                assert.equal(await card.locator('[data-review-card-portrait]').count(), 1, path);
+                assert((await card.innerText()).includes(`${{ zh: '历史条目', en: 'Legacy entry', ja: '過去の項目' }[locale]} · ${row.id}`), path);
+              }
               if (section === 'guides') {
                 const kind = row.contentReview.kind === 'editorial_proposal_archive' ? 'editorial_proposal_archive' : 'verification_checklist';
                 for (const node of await card.all()) assert.equal(await node.locator(`[data-guide-review="${kind}"]`).count(), 1, `${path}: missing publication kind for ${row.id}`);
@@ -236,6 +245,8 @@ export async function verifyManagedContent(value, directory) {
           } else if (kind.startsWith('roco-')) {
             const forbidden = /10\/27|10\/20|Oct(?:ober)? 27|Oct(?:ober)? 20|10月27|10月20|2026-10-27|2026-10-20|3688140/;
             if (kind === 'roco-home') {
+              assert.equal(await page.locator(`main a[href^="/${locale}/roco/characters/"]`).count(), 0, path);
+              assert.equal(await page.locator('img[src*="/images/roco/characters/"]').count(), 0, path);
               const links = page.locator(`main a[href^="/${locale}/roco/"]`);
               assert((await links.count()) > 0);
               for (const text of await links.allInnerTexts()) assert(!forbidden.test(text), text);
@@ -298,6 +309,11 @@ export async function verifyManagedContent(value, directory) {
         }
         assert.equal((await page.goto(`${origin}/en/roco-cn/guides/${SLUG}`, { waitUntil: 'domcontentloaded' })).status(), 404);
         for (const locale of ['zh', 'en', 'ja']) {
+          for (const id of ['not-a-record', `${rocoCharacters[0].id}/extra`]) {
+            const path = `/${locale}/roco/characters/${id}`;
+            assert.equal((await page.goto(origin + path, { waitUntil: 'domcontentloaded' })).status(), 404, path);
+            observations.browser.push({ path, width, status: 404, kind: 'roco-unknown-character' });
+          }
           for (const id of ['not-a-record', `${legacyWeaponIds[0]}/extra`]) {
             const path = `/${locale}/roco/weapons/${id}`;
             assert.equal((await page.goto(origin + path, { waitUntil: 'domcontentloaded' })).status(), 404, path);

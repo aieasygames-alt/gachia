@@ -77,11 +77,6 @@ const FEATURED: Partial<Record<keyof typeof GAMES, FeaturedCharacter[]>> = {
     { id: 'ais', name: { zh: '艾丝', en: 'Ais', ja: 'アイス' } },
     { id: 'little-axe', name: { zh: '小斧', en: 'Little Axe', ja: 'リトルアックス' } },
   ],
-  roco: [
-    { id: 'meewee', name: { zh: '米维', en: 'Meewee', ja: 'ミーウィー' } },
-    { id: 'sparka', name: { zh: '斯帕卡', en: 'Sparka', ja: 'スパーカ' } },
-    { id: 'cerulla', name: { zh: '瑟露拉', en: 'Cerulla', ja: 'セルラ' } },
-  ],
   aniimo: [
     { id: 'susuta', name: { zh: 'Susuta', en: 'Susuta', ja: 'Susuta' } },
     { id: 'emberpup', name: { zh: 'Emberpup', en: 'Emberpup', ja: 'Emberpup' } },

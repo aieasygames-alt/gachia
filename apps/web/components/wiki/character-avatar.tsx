@@ -25,7 +25,7 @@ export function CharacterAvatar({ src, alt, element, className }: CharacterAvata
   const [failed, setFailed] = useState(false);
   const bgColor = (element && ELEMENT_COLORS[element]) || '#6b7280';
 
-  if (failed) {
+  if (!src || failed) {
     return (
       <div
         className={className}

@@ -238,18 +238,18 @@
     "characters": {
       "zh": {
         "title": "洛克国际服角色历史条目 — 待核实导航",
-        "description": "保留洛克国际服角色历史条目供导航；名称、图片、属性与稀有度不代表已核实的国际服资料，不提供培养或强度结论。",
-        "notice": "条目数量只是本站历史记录数，不是官方图鉴总数。卡片图片、名称与分类尚未完成独立身份核验；详情已撤回未经核实的技能、数值与行为断言。请勿用于培养决策。"
+        "description": "历史地址索引，不代表已确认的国际服角色阵容。旧名称、画像、属性和稀有度已停止作为角色资料展示，仅保留地址标识与审核说明。",
+        "notice": "件数只是本站历史记录数，不是官方图鉴总数。卡片改为文字占位，不展示未经核实的旧名称、图片或分类。图片来源、角色对应关系及使用权未获核实；详情保留纠错说明，不提供培养建议。"
       },
       "en": {
         "title": "Roco Global Legacy Character Entries — Review Directory",
-        "description": "Browse legacy Roco Global entries for navigation only. Names, artwork, elements and rarity are not verified international data; no build or strength advice is offered.",
-        "notice": "The count is our legacy record count, not an official roster total. Card artwork, names and classifications lack independent identity verification. Details withdraw unsupported skill, stat and behavior claims. Do not use them for investment decisions."
+        "description": "A legacy URL directory, not a confirmed international roster. Earlier names, portraits, elements and rarity are withdrawn from character presentation; only URL keys and review notices remain.",
+        "notice": "The count is our historical record count, not an official roster total. Cards use text placeholders without unverified names, images or classifications. Image provenance, character identity and usage rights remain unverified. Details preserve corrections, not investment advice."
       },
       "ja": {
         "title": "ロコ国際版キャラ履歴 — 確認中の索引",
-        "description": "国際版キャラの過去の項目を閲覧用に保存。名称・画像・属性・レアリティは検証済み国際版資料ではなく、育成や強さの結論を示しません。",
-        "notice": "件数は本站の過去の記録数であり、公式図鑑の総数ではありません。画像・名称・分類の独立した本人確認は未完了です。詳細では未確認のスキル・数値・行動の断定を撤回しました。育成判断には使用しないでください。"
+        "description": "公式の国際版編成ではなく、過去URLの索引です。旧名称・画像・属性・レアリティをキャラ資料として表示せず、URLキーと確認説明のみを残します。",
+        "notice": "件数は本站の過去の記録数で、公式図鑑の総数ではありません。カードは文字の代替表示とし、未確認の旧名称・画像・分類を表示しません。画像の出典・同一性・利用権は未確認です。詳細は訂正説明で、育成推奨ではありません。"
       }
     },
     "guides": {

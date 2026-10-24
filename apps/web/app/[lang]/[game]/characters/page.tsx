@@ -220,7 +220,7 @@ export async function generateMetadata({
       description,
       url: `${BASE_URL}/${locale}/${gameId}/characters`,
       siteName: 'Gachia',
-      images: [{ url: `${BASE_URL}/images/og/${gameId}.webp`, width: 1200, height: 630 }],
+      images: gameId === 'roco' ? [] : [{ url: `${BASE_URL}/images/og/${gameId}.webp`, width: 1200, height: 630 }],
       locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
     },
   };
@@ -449,12 +449,12 @@ function CharacterCard({ char, gameId }: { char: CharacterCardEntry; gameId: Gam
       className="group flex flex-col overflow-hidden rounded-lg border border-game-border bg-game-surface transition-all hover:border-game-primary hover:shadow-lg"
     >
       <div className="relative aspect-square overflow-hidden bg-game-surface-alt">
-        <CharacterAvatar
+        {gameId === 'roco' ? <div data-review-card-portrait className="flex h-full items-center justify-center text-sm text-game-text-muted">{char.subtitle}</div> : <CharacterAvatar
           src={char.image}
           alt={char.name}
           element={char.element}
           className="h-full w-full object-cover object-top transition-transform group-hover:scale-105"
-        />
+        />}
         <span className="absolute bottom-1.5 left-1.5 rounded px-1.5 py-0.5 text-xs font-medium text-white" style={{ backgroundColor: elementColor }}>
           {char.elementLabel}
         </span>
