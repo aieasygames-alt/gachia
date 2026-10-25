@@ -1,0 +1,13 @@
+{
+  "syntheticLocalFixture": true,
+  "timeoutStillRejects": true,
+  "pending": [
+    {
+      "url": "http://127.0.0.1:53322/pending.js",
+      "type": "script",
+      "navigation": "http://127.0.0.1:53322/",
+      "elapsedMs": 2997
+    }
+  ],
+  "note": "Chromium has not emitted a response event; status remains unknown rather than inferred from server writes"
+}

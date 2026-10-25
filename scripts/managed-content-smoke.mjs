@@ -236,6 +236,7 @@ async function verifyContent(origin, directory, { localFixture, proxy }) {
   try {
     for (const width of [1440, 390]) {
       const context = await browser.newContext({ viewport: { width, height: 900 }, serviceWorkers: 'block', extraHTTPHeaders: fixtureIpHeaders(origin, '192.0.2.202') });
+      let diagnostics;
       try {
         await context.route('**/*', route => {
           if (new URL(route.request().url()).origin !== origin) return route.abort('blockedbyclient');
@@ -246,7 +247,7 @@ async function verifyContent(origin, directory, { localFixture, proxy }) {
         const errors = [], failedAssets = [];
         page.on('pageerror', error => errors.push(error.message));
         page.on('console', message => { if (message.type() === 'error' && /hydration|Minified React error|uncaught/i.test(message.text())) errors.push(message.text()); });
-        observeBrowserAssets(page, origin, failedAssets, directory, width);
+        diagnostics = observeBrowserAssets(page, origin, failedAssets, directory, width);
         if (width === 1440) {
           // Check every restored URL; DOMParser inspects HTTP HTML without executing it.
           for (const locale of ['zh', 'en', 'ja']) for (const item of nteMaterials) {
@@ -567,7 +568,7 @@ async function verifyContent(origin, directory, { localFixture, proxy }) {
       } catch (error) {
         if (directory) {
           const page = context.pages()[0];
-          writeFileSync(resolve(directory, `browser-failure-${width}.json`), JSON.stringify({ page: page?.url(), message: error.message }, null, 2) + '\n', { mode: 0o600 });
+          writeFileSync(resolve(directory, `browser-failure-${width}.json`), JSON.stringify({ page: page?.url(), message: error.message, pendingRequests: diagnostics?.snapshot() ?? [] }, null, 2) + '\n', { mode: 0o600 });
           await page?.screenshot({ path: resolve(directory, `browser-failure-${width}.png`) }).catch(() => {});
         }
         throw error;

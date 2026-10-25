@@ -15,7 +15,7 @@ test('same-origin failures retain strict rejection and persist the reason and na
   const failures = [];
   observeBrowserAssets(page, 'https://gachia.com', failures, directory, 390);
   const request = (url, type = 'script') => ({ url: () => url, resourceType: () => type, failure: () => ({ errorText: 'net::ERR_CONNECTION_RESET' }), isNavigationRequest: () => false });
-  page.emit('request', { isNavigationRequest: () => true, frame: () => frame, url: page.url });
+  page.emit('request', { isNavigationRequest: () => true, frame: () => frame, url: page.url, resourceType: () => 'document' });
   page.emit('requestfailed', request('https://gachia.com/_next/static/a.js'));
   page.emit('requestfailed', request('https://static.cloudflareinsights.com/beacon.js'));
   page.emit('requestfailed', request('https://gachia.com/image.png', 'image'));
@@ -26,4 +26,25 @@ test('same-origin failures retain strict rejection and persist the reason and na
   assert.equal(rows[1].reason, 'net::ERR_CONNECTION_RESET');
   assert.equal(rows[1].navigation, page.url());
   assert.equal(rows[2].status, 404);
+});
+
+test('timeout snapshots retain unfinished response bodies and distinguish identical URLs', () => {
+  const page = new EventEmitter();
+  page.url = () => 'https://gachia.com/zh';
+  const failures = [];
+  const observer = observeBrowserAssets(page, 'https://gachia.com', failures);
+  const request = () => ({ url: () => 'https://gachia.com/image.png', resourceType: () => 'image', isNavigationRequest: () => false });
+  const first = request(), second = request();
+  page.emit('request', first);
+  page.emit('request', second);
+  page.emit('response', { request: () => first, status: () => 200 });
+  assert.equal(observer.snapshot().length, 2);
+  assert.equal(observer.snapshot()[0].status, 200);
+  page.emit('requestfinished', second);
+  assert.equal(observer.snapshot().length, 1);
+  assert.equal(observer.snapshot()[0].type, 'image');
+  assert(observer.snapshot()[0].elapsedMs >= 0);
+  page.emit('requestfailed', first);
+  assert.deepEqual(observer.snapshot(), []);
+  assert.deepEqual(failures, []);
 });

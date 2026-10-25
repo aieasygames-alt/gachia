@@ -1,0 +1,54 @@
+[
+  {
+    "path": "pending-body-integration-passed.json",
+    "sha256": "26cf6e14c910c79a206b1873da58f9857b090fa219a11b3b5f8b7bd8a8802292"
+  },
+  {
+    "path": "summary.json",
+    "sha256": "da057ccb8b83ad58d8ef2e568d43870955eeae72e35922c1a94fc3729a5c69eb"
+  },
+  {
+    "path": "candidate-pin.json",
+    "sha256": "d68fdb17da768e225c885cf1cc8e5a17d93b226b45db7b888188b0be614cf08f"
+  },
+  {
+    "path": "staging-acceptance.json",
+    "sha256": "1c57527ca4b700dd4c30a5965677655a842edff6ed5c2950580a4c31d4404940"
+  },
+  {
+    "path": "workflow-final.json",
+    "sha256": "0fbd84155aab7466d9de3fda4f2cd97bb56ee44a5c425a206dcd4b5857ade6a4"
+  },
+  {
+    "path": "final-release-tests.log",
+    "sha256": "de994efea7ebea79901dd9a3e6abca69bc411541a42a706d1608a59f8f4ef995"
+  },
+  {
+    "path": "local-staging-recheck.json",
+    "sha256": "65bc0859f195c47605ae53674a2e948d59aa02373594b2d312d0d77a98f76170"
+  },
+  {
+    "path": "production-acceptance.json",
+    "sha256": "760cce55b65c4fdce1b07128eb89c5ed89292bbd4833be7501234a3b2ec3dd98"
+  },
+  {
+    "path": "retained-staging.json",
+    "sha256": "55bb37bf918f898c861f6c20448f3fd61c05a23346b91ae452f4a2551ea11774"
+  },
+  {
+    "path": "cross-owner.json",
+    "sha256": "eebcd3791c93180e7f69f0010236d094337525ba54a88659d954fb53bb68af2e"
+  },
+  {
+    "path": "artifacts-final.json",
+    "sha256": "2f34dfbf5a8316f1e776c03ec3cce8a83aed8aa0aa04719ac6776f3006be41f3"
+  },
+  {
+    "path": "production-sitemap.json",
+    "sha256": "e0b6b8cfde2a4e3a23e2d772f47f44d5b28895513eb6888c7e8b9219a5497b1b"
+  },
+  {
+    "path": "staging-sitemap.json",
+    "sha256": "85d058be8bc46a0435bffc421bfe50c15e62cc9db3af477c4f3afa3ee9293de8"
+  }
+]

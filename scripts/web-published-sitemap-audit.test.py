@@ -15,6 +15,16 @@ def xml(root, entry, paths):
 
 
 class PublishedSitemapTests(unittest.TestCase):
+    def test_proxy_requires_explicit_credential_free_loopback(self):
+        self.assertEqual(audit.local_proxy(None), {})
+        for proxy in ["http://127.0.0.1:7890", "http://localhost:7890/"]:
+            self.assertEqual(audit.local_proxy(proxy), {"http": proxy, "https": proxy})
+        for proxy in ["http://example.com:7890", "https://127.0.0.1:7890", "http://127.0.0.1",
+                      "http://user@localhost:7890", "http://localhost:7890/path", "http://localhost:7890/?q=1",
+                      "http://localhost:7890/#fragment", "http://localhost:99999", "http://localhost:0"]:
+            with self.assertRaises(ValueError):
+                audit.local_proxy(proxy)
+
     def test_main_owned_item_details_cannot_disappear_with_whole_game_filtering(self):
         records = [{"id": "annulith"}, {"id": "fons"}]
         result = audit.main_fallback_coverage([], records)

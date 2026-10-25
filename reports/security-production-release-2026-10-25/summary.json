@@ -1,0 +1,23 @@
+{
+  "status": "main_production_accepted",
+  "sourceCommit": "e011d3e9950000275d9bbdcd55bec8e5b1d79eb5",
+  "runId": 40182701738,
+  "attempt": 2,
+  "artifact": {
+    "artifactId": 12595024086,
+    "zipSha256": "77fe18ca9d3053fcc3e5f0e3634db6732a8ff40210e2e036364d6ce6e64d4b11",
+    "tarSha256": "d4091169d48924510a7a7419c692dbf0df61ebbda15450438727d144d41a8695",
+    "sourceCommit": "e011d3e9950000275d9bbdcd55bec8e5b1d79eb5"
+  },
+  "mainVersion": "38263bf8-7c06-4991-8e8a-b4f81bb8cf71",
+  "mainDeployment": "ccbff012-40dc-47b5-9aff-f63aa4ccbad1",
+  "stagingVersion": "4f7da764-6a70-474f-9c34-1f26265fd0ff",
+  "originalAttempt": "failed_staging_networkidle_timeout_preserved",
+  "rootCause": "not_proven",
+  "buildRerun": false,
+  "stagingRedeployedSameArtifact": true,
+  "otherProductionOwnersChanged": false,
+  "accountFeaturesRestored": false,
+  "databaseMigration": false,
+  "sourceDiagnosticsDeployed": false
+}

@@ -1,0 +1,6172 @@
+{
+  "schemaVersion": 1,
+  "origin": "https://gachia.com",
+  "startedAt": "2026-10-25T11:11:00.908Z",
+  "status": "main_production_verified_accounts_disabled",
+  "deploymentPerformed": false,
+  "http": [
+    {
+      "path": "/zh/hi3/weapons",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/zh/hi3/weapons/vermillion-liuli",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/zh/hi3/weapons/vermillion-liuli-full-burn",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/zh/hi3/weapons/volatile-sparkler",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/en/hi3/weapons",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/en/hi3/weapons/vermillion-liuli",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/en/hi3/weapons/vermillion-liuli-full-burn",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/en/hi3/weapons/volatile-sparkler",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/ja/hi3/weapons",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/ja/hi3/weapons/vermillion-liuli",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/ja/hi3/weapons/vermillion-liuli-full-burn",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/ja/hi3/weapons/volatile-sparkler",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/robots.txt",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/sitemap.xml",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/sitemaps/main/sitemap.xml",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/webpack-02932d580e3c7274.js",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/css/e89dd0dfedbe06e5.css",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/zh/hi3/weapons/__runtime_missing__",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/auth/get-session",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/auth/sign-in/social",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "path": "/api/auth/callback/google?code=disabled&state=disabled",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/auth/sign-out",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "path": "/api/favorites",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/favorites",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "path": "/api/favorites",
+      "method": "DELETE",
+      "status": 404
+    },
+    {
+      "path": "/api/user-characters",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/user-characters",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "path": "/api/user-characters",
+      "method": "DELETE",
+      "status": 404
+    },
+    {
+      "path": "/api/map/progress",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/map/progress",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "path": "/api/map/progress",
+      "method": "PUT",
+      "status": 404
+    },
+    {
+      "path": "/api/shared-builds",
+      "method": "POST",
+      "status": 404
+    }
+  ],
+  "browser": [
+    {
+      "path": "/zh/hi3/weapons",
+      "locale": "zh",
+      "width": 1440,
+      "mode": "interactive",
+      "delayedScripts": 0,
+      "prefetchRequests": 15,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 41
+    },
+    {
+      "path": "/zh/hi3/weapons",
+      "locale": "zh",
+      "width": 1440,
+      "mode": "delayed_scripts",
+      "delayedScripts": 21,
+      "prefetchRequests": 15,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 82
+    },
+    {
+      "path": "/zh/hi3/weapons",
+      "locale": "zh",
+      "width": 1440,
+      "mode": "no_javascript",
+      "delayedScripts": 0,
+      "prefetchRequests": 0,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 85
+    },
+    {
+      "path": "/en/hi3/weapons",
+      "locale": "en",
+      "width": 1440,
+      "mode": "interactive",
+      "delayedScripts": 0,
+      "prefetchRequests": 15,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 126
+    },
+    {
+      "path": "/en/hi3/weapons",
+      "locale": "en",
+      "width": 1440,
+      "mode": "delayed_scripts",
+      "delayedScripts": 21,
+      "prefetchRequests": 15,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 167
+    },
+    {
+      "path": "/en/hi3/weapons",
+      "locale": "en",
+      "width": 1440,
+      "mode": "no_javascript",
+      "delayedScripts": 0,
+      "prefetchRequests": 0,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 170
+    },
+    {
+      "path": "/ja/hi3/weapons",
+      "locale": "ja",
+      "width": 1440,
+      "mode": "interactive",
+      "delayedScripts": 0,
+      "prefetchRequests": 15,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 211
+    },
+    {
+      "path": "/ja/hi3/weapons",
+      "locale": "ja",
+      "width": 1440,
+      "mode": "delayed_scripts",
+      "delayedScripts": 21,
+      "prefetchRequests": 15,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 252
+    },
+    {
+      "path": "/ja/hi3/weapons",
+      "locale": "ja",
+      "width": 1440,
+      "mode": "no_javascript",
+      "delayedScripts": 0,
+      "prefetchRequests": 0,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 255
+    },
+    {
+      "path": "/zh/hi3/weapons",
+      "locale": "zh",
+      "width": 390,
+      "mode": "interactive",
+      "delayedScripts": 0,
+      "prefetchRequests": 13,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 294
+    },
+    {
+      "path": "/zh/hi3/weapons",
+      "locale": "zh",
+      "width": 390,
+      "mode": "delayed_scripts",
+      "delayedScripts": 21,
+      "prefetchRequests": 13,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 333
+    },
+    {
+      "path": "/zh/hi3/weapons",
+      "locale": "zh",
+      "width": 390,
+      "mode": "no_javascript",
+      "delayedScripts": 0,
+      "prefetchRequests": 0,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 336
+    },
+    {
+      "path": "/en/hi3/weapons",
+      "locale": "en",
+      "width": 390,
+      "mode": "interactive",
+      "delayedScripts": 0,
+      "prefetchRequests": 12,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 374
+    },
+    {
+      "path": "/en/hi3/weapons",
+      "locale": "en",
+      "width": 390,
+      "mode": "delayed_scripts",
+      "delayedScripts": 21,
+      "prefetchRequests": 12,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 412
+    },
+    {
+      "path": "/en/hi3/weapons",
+      "locale": "en",
+      "width": 390,
+      "mode": "no_javascript",
+      "delayedScripts": 0,
+      "prefetchRequests": 0,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 415
+    },
+    {
+      "path": "/ja/hi3/weapons",
+      "locale": "ja",
+      "width": 390,
+      "mode": "interactive",
+      "delayedScripts": 0,
+      "prefetchRequests": 12,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 453
+    },
+    {
+      "path": "/ja/hi3/weapons",
+      "locale": "ja",
+      "width": 390,
+      "mode": "delayed_scripts",
+      "delayedScripts": 21,
+      "prefetchRequests": 12,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 491
+    },
+    {
+      "path": "/ja/hi3/weapons",
+      "locale": "ja",
+      "width": 390,
+      "mode": "no_javascript",
+      "delayedScripts": 0,
+      "prefetchRequests": 0,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 494
+    }
+  ],
+  "managedContent": {
+    "http": [
+      {
+        "path": "/images/roco/characters/meewee.webp",
+        "method": "GET",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/meewee.webp",
+        "method": "HEAD",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/meewee.webp?withdrawal-probe=1",
+        "method": "GET",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/meewee.webp?withdrawal-probe=1",
+        "method": "HEAD",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/sparka.webp",
+        "method": "GET",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/sparka.webp",
+        "method": "HEAD",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/sparka.webp?withdrawal-probe=1",
+        "method": "GET",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/sparka.webp?withdrawal-probe=1",
+        "method": "HEAD",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/cerulla.webp",
+        "method": "GET",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/cerulla.webp",
+        "method": "HEAD",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/cerulla.webp?withdrawal-probe=1",
+        "method": "GET",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/images/roco/characters/cerulla.webp?withdrawal-probe=1",
+        "method": "HEAD",
+        "status": 404,
+        "withdrawnImage": true
+      },
+      {
+        "path": "/zh/roco/items",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/zh/roco/items/gulu-ball",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/zh/roco/items/not-a-record",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/en/roco/items",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/en/roco/items/gulu-ball",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/en/roco/items/not-a-record",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/ja/roco/items",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/ja/roco/items/gulu-ball",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/ja/roco/items/not-a-record",
+        "status": 404,
+        "redirected": false
+      },
+      {
+        "path": "/roco/items",
+        "status": 301,
+        "location": "/zh/roco/items"
+      },
+      {
+        "path": "/roco/items/gulu-ball",
+        "status": 301,
+        "location": "/zh/roco/items/gulu-ball"
+      }
+    ],
+    "fallbackHttp": [
+      {
+        "path": "/zh/nte/items/rising-hunter-guide",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/rising-hunter-guide",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/senior-hunter-guide",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/senior-hunter-guide",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/elite-hunter-guide",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/elite-hunter-guide",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/light-dye",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/light-dye",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/colorless-dye",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/colorless-dye",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/chaotic-dye",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/chaotic-dye",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/manhole-thug",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/manhole-thug",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/manhole-crook",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/manhole-crook",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/manhole-boss",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/manhole-boss",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/lost-whispers",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/lost-whispers",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/obscure-whispers",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/obscure-whispers",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/paradoxical-whispers",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/paradoxical-whispers",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/fading-silhouette",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/fading-silhouette",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/blurred-silhouette",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/blurred-silhouette",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/chaos-silhouette",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/chaos-silhouette",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/blurred-numeral",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/blurred-numeral",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/unsolved-numeral",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/unsolved-numeral",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/distorted-numeral",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/distorted-numeral",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/suspended-delusions",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/suspended-delusions",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/yearning-delusions",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/yearning-delusions",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/transcendent-delusions",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/transcendent-delusions",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/confessional-flower-seed",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/confessional-flower-seed",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/charging-knight-spark-plug",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/charging-knight-spark-plug",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/page-from-delusions-shore",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/page-from-delusions-shore",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/water-moon-pick",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/water-moon-pick",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/nest-guard-fragment",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/nest-guard-fragment",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/colorful-ticket-stub",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/colorful-ticket-stub",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/tear-of-the-sea",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/tear-of-the-sea",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/good-boy-stamp",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/good-boy-stamp",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/the-good-boy",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/the-good-boy",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/dandelion",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/dandelion",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/dress-sleeves-of-vanity",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/dress-sleeves-of-vanity",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/crown-called-nobility",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/crown-called-nobility",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/scepter-called-prestige",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/scepter-called-prestige",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/iron-appleseed",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/iron-appleseed",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/silver-appleseed",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/silver-appleseed",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/golden-appleseed",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/golden-appleseed",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/beaty",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/beaty",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/versey",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/versey",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/harmony",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/harmony",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/liquid-dream-trial-kit",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/liquid-dream-trial-kit",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/liquid-dream-travel-kit",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/liquid-dream-travel-kit",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/liquid-dream-can",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/liquid-dream-can",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/flavorless-cold-dessert",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/flavorless-cold-dessert",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/plain-cold-dessert",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/plain-cold-dessert",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/special-cold-dessert",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/special-cold-dessert",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/beginner-drama-core",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/beginner-drama-core",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/master-drama-core",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/master-drama-core",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/collectors-drama-core",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/collectors-drama-core",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/fabricated-dice",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/fabricated-dice",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/solid-dice",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/solid-dice",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/warp-piece",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/warp-piece",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/lost-piece",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/lost-piece",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/tri-key",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/tri-key",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/fons",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/fons",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/beetle-coin",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/beetle-coin",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/zh/nte/items/annulith",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/zh/nte/items/annulith",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/rising-hunter-guide",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/rising-hunter-guide",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/senior-hunter-guide",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/senior-hunter-guide",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/elite-hunter-guide",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/elite-hunter-guide",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/light-dye",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/light-dye",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/colorless-dye",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/colorless-dye",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/chaotic-dye",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/chaotic-dye",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/manhole-thug",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/manhole-thug",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/manhole-crook",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/manhole-crook",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/manhole-boss",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/manhole-boss",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/lost-whispers",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/lost-whispers",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/obscure-whispers",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/obscure-whispers",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/paradoxical-whispers",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/paradoxical-whispers",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/fading-silhouette",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/fading-silhouette",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/blurred-silhouette",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/blurred-silhouette",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/chaos-silhouette",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/chaos-silhouette",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/blurred-numeral",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/blurred-numeral",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/unsolved-numeral",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/unsolved-numeral",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/distorted-numeral",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/distorted-numeral",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/suspended-delusions",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/suspended-delusions",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/yearning-delusions",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/yearning-delusions",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/transcendent-delusions",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/transcendent-delusions",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/confessional-flower-seed",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/confessional-flower-seed",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/charging-knight-spark-plug",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/charging-knight-spark-plug",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/page-from-delusions-shore",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/page-from-delusions-shore",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/water-moon-pick",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/water-moon-pick",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/nest-guard-fragment",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/nest-guard-fragment",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/colorful-ticket-stub",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/colorful-ticket-stub",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/tear-of-the-sea",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/tear-of-the-sea",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/good-boy-stamp",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/good-boy-stamp",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/the-good-boy",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/the-good-boy",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/dandelion",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/dandelion",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/dress-sleeves-of-vanity",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/dress-sleeves-of-vanity",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/crown-called-nobility",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/crown-called-nobility",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/scepter-called-prestige",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/scepter-called-prestige",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/iron-appleseed",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/iron-appleseed",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/silver-appleseed",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/silver-appleseed",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/golden-appleseed",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/golden-appleseed",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/beaty",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/beaty",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/versey",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/versey",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/harmony",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/harmony",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/liquid-dream-trial-kit",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/liquid-dream-trial-kit",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/liquid-dream-travel-kit",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/liquid-dream-travel-kit",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/liquid-dream-can",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/liquid-dream-can",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/flavorless-cold-dessert",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/flavorless-cold-dessert",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/plain-cold-dessert",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/plain-cold-dessert",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/special-cold-dessert",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/special-cold-dessert",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/beginner-drama-core",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/beginner-drama-core",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/master-drama-core",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/master-drama-core",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/collectors-drama-core",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/collectors-drama-core",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/fabricated-dice",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/fabricated-dice",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/solid-dice",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/solid-dice",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/warp-piece",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/warp-piece",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/lost-piece",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/lost-piece",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/tri-key",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/tri-key",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/fons",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/fons",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/beetle-coin",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/beetle-coin",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/en/nte/items/annulith",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/en/nte/items/annulith",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/rising-hunter-guide",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/rising-hunter-guide",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/senior-hunter-guide",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/senior-hunter-guide",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/elite-hunter-guide",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/elite-hunter-guide",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/light-dye",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/light-dye",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/colorless-dye",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/colorless-dye",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/chaotic-dye",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/chaotic-dye",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/manhole-thug",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/manhole-thug",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/manhole-crook",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/manhole-crook",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/manhole-boss",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/manhole-boss",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/lost-whispers",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/lost-whispers",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/obscure-whispers",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/obscure-whispers",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/paradoxical-whispers",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/paradoxical-whispers",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/fading-silhouette",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/fading-silhouette",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/blurred-silhouette",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/blurred-silhouette",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/chaos-silhouette",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/chaos-silhouette",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/blurred-numeral",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/blurred-numeral",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/unsolved-numeral",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/unsolved-numeral",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/distorted-numeral",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/distorted-numeral",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/suspended-delusions",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/suspended-delusions",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/yearning-delusions",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/yearning-delusions",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/transcendent-delusions",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/transcendent-delusions",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/confessional-flower-seed",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/confessional-flower-seed",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/charging-knight-spark-plug",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/charging-knight-spark-plug",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/page-from-delusions-shore",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/page-from-delusions-shore",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/water-moon-pick",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/water-moon-pick",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/nest-guard-fragment",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/nest-guard-fragment",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/colorful-ticket-stub",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/colorful-ticket-stub",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/tear-of-the-sea",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/tear-of-the-sea",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/good-boy-stamp",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/good-boy-stamp",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/the-good-boy",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/the-good-boy",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/dandelion",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/dandelion",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/dress-sleeves-of-vanity",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/dress-sleeves-of-vanity",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/crown-called-nobility",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/crown-called-nobility",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/scepter-called-prestige",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/scepter-called-prestige",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/iron-appleseed",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/iron-appleseed",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/silver-appleseed",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/silver-appleseed",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/golden-appleseed",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/golden-appleseed",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/beaty",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/beaty",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/versey",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/versey",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/harmony",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/harmony",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/liquid-dream-trial-kit",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/liquid-dream-trial-kit",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/liquid-dream-travel-kit",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/liquid-dream-travel-kit",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/liquid-dream-can",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/liquid-dream-can",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/flavorless-cold-dessert",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/flavorless-cold-dessert",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/plain-cold-dessert",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/plain-cold-dessert",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/special-cold-dessert",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/special-cold-dessert",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/beginner-drama-core",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/beginner-drama-core",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/master-drama-core",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/master-drama-core",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/collectors-drama-core",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/collectors-drama-core",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/fabricated-dice",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/fabricated-dice",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/solid-dice",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/solid-dice",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/warp-piece",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/warp-piece",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/lost-piece",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/lost-piece",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/tri-key",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/tri-key",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/fons",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/fons",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/beetle-coin",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/beetle-coin",
+        "robots": "index, follow"
+      },
+      {
+        "path": "/ja/nte/items/annulith",
+        "status": 200,
+        "mainAssets": true,
+        "canonical": "https://gachia.com/ja/nte/items/annulith",
+        "robots": "index, follow"
+      }
+    ],
+    "json": [
+      {
+        "path": "/data/wuwa/raw-redeem-codes.json",
+        "status": 200,
+        "sourceEqual": true
+      },
+      {
+        "path": "/data/skjh/raw-guides.json",
+        "status": 200,
+        "sourceEqual": true
+      },
+      {
+        "path": "/data/roco-cn/raw-guides.json",
+        "status": 200,
+        "sourceEqual": true
+      },
+      {
+        "path": "/data/wuwa/raw-echoes.json",
+        "status": 200,
+        "sourceEqual": true
+      },
+      {
+        "path": "/data/wuwa/raw-regions.json",
+        "status": 200,
+        "sourceEqual": true
+      },
+      {
+        "path": "/data/roco/raw-characters.json",
+        "status": 200,
+        "sourceEqual": true
+      },
+      {
+        "path": "/data/roco/raw-guides.json",
+        "status": 200,
+        "sourceEqual": true
+      }
+    ],
+    "search": [
+      {
+        "path": "/data-manifest/search-zh.json",
+        "status": 200,
+        "officialNamesVerified": 3
+      },
+      {
+        "path": "/data-manifest/search-en.json",
+        "status": 200,
+        "officialNamesVerified": 3
+      },
+      {
+        "path": "/data-manifest/search-ja.json",
+        "status": 200,
+        "officialNamesVerified": 3
+      }
+    ],
+    "browser": [
+      {
+        "path": "/zh/roco/items",
+        "width": 1440,
+        "status": 404,
+        "kind": "roco-disabled-items",
+        "robots": [
+          "index, follow",
+          "noindex"
+        ],
+        "alternateHrefs": [
+          "https://gachia.com/zh/roco",
+          "https://gachia.com/en/roco",
+          "https://gachia.com/ja/roco",
+          "https://gachia.com/zh/roco"
+        ]
+      },
+      {
+        "path": "/zh/roco/items/gulu-ball",
+        "width": 1440,
+        "status": 404,
+        "kind": "roco-disabled-items",
+        "robots": [
+          "index, follow",
+          "noindex"
+        ],
+        "alternateHrefs": [
+          "https://gachia.com/zh/roco",
+          "https://gachia.com/en/roco",
+          "https://gachia.com/ja/roco",
+          "https://gachia.com/zh/roco"
+        ]
+      },
+      {
+        "path": "/zh/roco/items/not-a-record",
+        "width": 1440,
+        "status": 404,
+        "kind": "roco-disabled-items",
+        "robots": [
+          "index, follow",
+          "noindex"
+        ],
+        "alternateHrefs": [
+          "https://gachia.com/zh/roco",
+          "https://gachia.com/en/roco",
+          "https://gachia.com/ja/roco",
+          "https://gachia.com/zh/roco"
+        ]
+      },
+      {
+        "path": "/en/roco/items",
+        "width": 1440,
+        "status": 404,
+        "kind": "roco-disabled-items",
+        "robots": [
+          "index, follow",
+          "noindex"
+        ],
+        "alternateHrefs": [
+          "https://gachia.com/zh/roco",
+          "https://gachia.com/en/roco",
+          "https://gachia.com/ja/roco",
+          "https://gachia.com/zh/roco"
+        ]
+      },
+      {
+        "path": "/en/roco/items/gulu-ball",
+        "width": 1440,
+        "status": 404,
+        "kind": "roco-disabled-items",
+        "robots": [
+          "index, follow",
+          "noindex"
+        ],
+        "alternateHrefs": [
+          "https://gachia.com/zh/roco",
+          "https://gachia.com/en/roco",
+          "https://gachia.com/ja/roco",
+          "https://gachia.com/zh/roco"
+        ]
+      },
+      {
+        "path": "/en/roco/items/not-a-record",
+        "width": 1440,
+        "status": 404,
+        "kind": "roco-disabled-items",
+        "robots": [
+          "index, follow",
+          "noindex"
+        ],
+        "alternateHrefs": [
+          "https://gachia.com/zh/roco",
+          "https://gachia.com/en/roco",
+          "https://gachia.com/ja/roco",
+          "https://gachia.com/zh/roco"
+        ]
+      },
+      {
+        "path": "/ja/roco/items",
+        "width": 1440,
+        "status": 404,
+        "kind": "roco-disabled-items",
+        "robots": [
+          "index, follow",
+          "noindex"
+        ],
+        "alternateHrefs": [
+          "https://gachia.com/zh/roco",
+          "https://gachia.com/en/roco",
+          "https://gachia.com/ja/roco",
+          "https://gachia.com/zh/roco"
+        ]
+      },
+      {
+        "path": "/ja/roco/items/gulu-ball",
+        "width": 1440,
+        "status": 404,
+        "kind": "roco-disabled-items",
+        "robots": [
+          "index, follow",
+          "noindex"
+        ],
+        "alternateHrefs": [
+          "https://gachia.com/zh/roco",
+          "https://gachia.com/en/roco",
+          "https://gachia.com/ja/roco",
+          "https://gachia.com/zh/roco"
+        ]
+      },
+      {
+        "path": "/ja/roco/items/not-a-record",
+        "width": 1440,
+        "status": 404,
+        "kind": "roco-disabled-items",
+        "robots": [
+          "index, follow",
+          "noindex"
+        ],
+        "alternateHrefs": [
+          "https://gachia.com/zh/roco",
+          "https://gachia.com/en/roco",
+          "https://gachia.com/ja/roco",
+          "https://gachia.com/zh/roco"
+        ]
+      },
+      {
+        "path": "/zh/nte/items/rising-hunter-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "nte-main-item",
+        "errors": 0,
+        "failedAssets": 0,
+        "dedicatedListDocumentNavigationVerified": true
+      },
+      {
+        "path": "/zh/nte/items/annulith",
+        "width": 1440,
+        "status": 200,
+        "kind": "nte-main-item",
+        "errors": 0,
+        "failedAssets": 0,
+        "dedicatedListDocumentNavigationVerified": true
+      },
+      {
+        "path": "/en/nte/items/rising-hunter-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "nte-main-item",
+        "errors": 0,
+        "failedAssets": 0,
+        "dedicatedListDocumentNavigationVerified": true
+      },
+      {
+        "path": "/en/nte/items/annulith",
+        "width": 1440,
+        "status": 200,
+        "kind": "nte-main-item",
+        "errors": 0,
+        "failedAssets": 0,
+        "dedicatedListDocumentNavigationVerified": true
+      },
+      {
+        "path": "/ja/nte/items/rising-hunter-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "nte-main-item",
+        "errors": 0,
+        "failedAssets": 0,
+        "dedicatedListDocumentNavigationVerified": true
+      },
+      {
+        "path": "/ja/nte/items/annulith",
+        "width": 1440,
+        "status": 200,
+        "kind": "nte-main-item",
+        "errors": 0,
+        "failedAssets": 0,
+        "dedicatedListDocumentNavigationVerified": true
+      },
+      {
+        "path": "/zh/tools/market-intel",
+        "width": 1440,
+        "status": 200,
+        "kind": "market-intel-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/tools/market-intel",
+        "width": 1440,
+        "status": 200,
+        "kind": "market-intel-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/tools/market-intel",
+        "width": 1440,
+        "status": 200,
+        "kind": "market-intel-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco-cn",
+        "width": 1440,
+        "status": 200,
+        "kind": "cn-home",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco-cn",
+        "width": 1440,
+        "status": 200,
+        "kind": "cn-home",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco-cn",
+        "width": 1440,
+        "status": 200,
+        "kind": "cn-home",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/wuwa/redeem-codes",
+        "width": 1440,
+        "status": 200,
+        "kind": "codes",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/wuwa/redeem-codes",
+        "width": 1440,
+        "status": 200,
+        "kind": "codes",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/wuwa/redeem-codes",
+        "width": 1440,
+        "status": 200,
+        "kind": "codes",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco-cn/guides/daily-events-merchant-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "archive",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco-cn/guides/daily-events-merchant-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "archive",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco-cn/map",
+        "width": 1440,
+        "status": 200,
+        "kind": "cn-map",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco-cn/map",
+        "width": 1440,
+        "status": 200,
+        "kind": "cn-map",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco-cn/map",
+        "width": 1440,
+        "status": 200,
+        "kind": "cn-map",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/skjh/guides/season-1-launch",
+        "width": 1440,
+        "status": 200,
+        "kind": "backport",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/skjh/guides/season-1-launch",
+        "width": 1440,
+        "status": 200,
+        "kind": "backport",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/skjh/guides/season-1-launch",
+        "width": 1440,
+        "status": 200,
+        "kind": "backport",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/wuwa/echoes/heart-that-illuminates-dreams",
+        "width": 1440,
+        "status": 200,
+        "kind": "echo",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/wuwa/echoes/mirror-shadow-flowing-lightning",
+        "width": 1440,
+        "status": 200,
+        "kind": "echo",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/wuwa/echoes/flower-of-crimson-reminiscence",
+        "width": 1440,
+        "status": 200,
+        "kind": "echo",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/wuwa/echoes/heart-that-illuminates-dreams",
+        "width": 1440,
+        "status": 200,
+        "kind": "echo",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/wuwa/echoes/mirror-shadow-flowing-lightning",
+        "width": 1440,
+        "status": 200,
+        "kind": "echo",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/wuwa/echoes/flower-of-crimson-reminiscence",
+        "width": 1440,
+        "status": 200,
+        "kind": "echo",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/wuwa/echoes/heart-that-illuminates-dreams",
+        "width": 1440,
+        "status": 200,
+        "kind": "echo",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/wuwa/echoes/mirror-shadow-flowing-lightning",
+        "width": 1440,
+        "status": 200,
+        "kind": "echo",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/wuwa/echoes/flower-of-crimson-reminiscence",
+        "width": 1440,
+        "status": 200,
+        "kind": "echo",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/wuwa/artifacts",
+        "width": 1440,
+        "status": 200,
+        "kind": "echo-list",
+        "errors": 0,
+        "failedAssets": 0,
+        "detailNavigationVerified": true
+      },
+      {
+        "path": "/en/wuwa/artifacts",
+        "width": 1440,
+        "status": 200,
+        "kind": "echo-list",
+        "errors": 0,
+        "failedAssets": 0,
+        "detailNavigationVerified": true
+      },
+      {
+        "path": "/ja/wuwa/artifacts",
+        "width": 1440,
+        "status": 200,
+        "kind": "echo-list",
+        "errors": 0,
+        "failedAssets": 0,
+        "detailNavigationVerified": true
+      },
+      {
+        "path": "/zh/wuwa/map",
+        "width": 1440,
+        "status": 200,
+        "kind": "region",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/wuwa/map",
+        "width": 1440,
+        "status": 200,
+        "kind": "region",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/wuwa/map",
+        "width": 1440,
+        "status": 200,
+        "kind": "region",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/version",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-version",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/version",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-version",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/version",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-version",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/events",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-events",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/events",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-events",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/events",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-events",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-home",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-home",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-home",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-player-feedback-roadmap-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-onboarding-learning-recovery-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-player-discovery-codex-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-fair-play-integrity-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-change-communication-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-returning-player-event-legacy-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-economy-monetization-fairness-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-accessibility-cross-device-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-player-support-trust-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-social-safety-guild-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-localization-cultural-event-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-cbt-to-launch-decision-gates",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-cn-release-governance",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-live-ops-metrics-experiments",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-launch-readiness-checklist",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-first-30-days-pve-plan",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-days-31-90-season-event-plan",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-cn-content-roadmap",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/cbt-registration-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/starter-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/what-is-roco-kingdom",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/platforms-and-download-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/jinies-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/battle-system-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/co-op-and-social-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/pre-registration-rewards-faq",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/is-roco-kingdom-free-to-play",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/roco-kingdom-release-date-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/roco-kingdom-vs-pokemon",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/roco-kingdom-crossplay-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-player-feedback-roadmap-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-onboarding-learning-recovery-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-player-discovery-codex-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-fair-play-integrity-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-change-communication-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-returning-player-event-legacy-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-economy-monetization-fairness-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-accessibility-cross-device-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-player-support-trust-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-social-safety-guild-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-localization-cultural-event-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-cbt-to-launch-decision-gates",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-cn-release-governance",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-live-ops-metrics-experiments",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-launch-readiness-checklist",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-first-30-days-pve-plan",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-days-31-90-season-event-plan",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-cn-content-roadmap",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/cbt-registration-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/starter-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/what-is-roco-kingdom",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/platforms-and-download-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/jinies-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/battle-system-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/co-op-and-social-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/pre-registration-rewards-faq",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/is-roco-kingdom-free-to-play",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/roco-kingdom-release-date-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/roco-kingdom-vs-pokemon",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/roco-kingdom-crossplay-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-player-feedback-roadmap-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-onboarding-learning-recovery-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-player-discovery-codex-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-fair-play-integrity-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-change-communication-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-returning-player-event-legacy-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-economy-monetization-fairness-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-accessibility-cross-device-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-player-support-trust-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-social-safety-guild-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-localization-cultural-event-playbook",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-cbt-to-launch-decision-gates",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-cn-release-governance",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-live-ops-metrics-experiments",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-launch-readiness-checklist",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-first-30-days-pve-plan",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-days-31-90-season-event-plan",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-cn-content-roadmap",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/cbt-registration-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/starter-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/what-is-roco-kingdom",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/platforms-and-download-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/jinies-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/battle-system-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/co-op-and-social-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/pre-registration-rewards-faq",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/is-roco-kingdom-free-to-play",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/roco-kingdom-release-date-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/roco-kingdom-vs-pokemon",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/roco-kingdom-crossplay-guide",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/characters/meewee",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/characters/sparka",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/characters/cerulla",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/characters/blazehound",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/characters/catapawn",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/characters/dustler",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/characters/meewee",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/characters/sparka",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/characters/cerulla",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/characters/blazehound",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/characters/catapawn",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/characters/dustler",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/characters/meewee",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/characters/sparka",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/characters/cerulla",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/characters/blazehound",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/characters/catapawn",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/characters/dustler",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-guides-list",
+        "errors": 0,
+        "failedAssets": 0,
+        "detailNavigationVerified": true
+      },
+      {
+        "path": "/zh/roco/characters",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-characters-list",
+        "errors": 0,
+        "failedAssets": 0,
+        "detailNavigationVerified": true
+      },
+      {
+        "path": "/en/roco/guides",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-guides-list",
+        "errors": 0,
+        "failedAssets": 0,
+        "detailNavigationVerified": true
+      },
+      {
+        "path": "/en/roco/characters",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-characters-list",
+        "errors": 0,
+        "failedAssets": 0,
+        "detailNavigationVerified": true
+      },
+      {
+        "path": "/ja/roco/guides",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-guides-list",
+        "errors": 0,
+        "failedAssets": 0,
+        "detailNavigationVerified": true
+      },
+      {
+        "path": "/ja/roco/characters",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-characters-list",
+        "errors": 0,
+        "failedAssets": 0,
+        "detailNavigationVerified": true
+      },
+      {
+        "path": "/zh/roco/redeem-codes",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/zh/roco",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/tier-list",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/download",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/map",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/type-chart",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/zh/roco/eggs",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/zh/roco/merchant",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/zh/roco/weapons",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/en/roco/redeem-codes",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/en/roco",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/tier-list",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/download",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/map",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/type-chart",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/en/roco/eggs",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/en/roco/merchant",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/en/roco/weapons",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/ja/roco/redeem-codes",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/ja/roco",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/tier-list",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/download",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/map",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/type-chart",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/ja/roco/eggs",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/ja/roco/merchant",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/ja/roco/weapons",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/zh/roco/weapons/huanxing-xingguang",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/weapons/tonghuashu",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/weapons/lianjinshu",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/weapons/shenhai-kuizeng",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/weapons/bilu-huoban",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/weapons/jufeng-xingji",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/weapons/xingluo-fanhua",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/weapons/mimi-qianru",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/weapons/chuxinzhe",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/weapons/mengjing-liulangzhe",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/weapons/huanxing-xingguang",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/weapons/tonghuashu",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/weapons/lianjinshu",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/weapons/shenhai-kuizeng",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/weapons/bilu-huoban",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/weapons/jufeng-xingji",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/weapons/xingluo-fanhua",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/weapons/mimi-qianru",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/weapons/chuxinzhe",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/weapons/mengjing-liulangzhe",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/weapons/huanxing-xingguang",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/weapons/tonghuashu",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/weapons/lianjinshu",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/weapons/shenhai-kuizeng",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/weapons/bilu-huoban",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/weapons/jufeng-xingji",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/weapons/xingluo-fanhua",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/weapons/mimi-qianru",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/weapons/chuxinzhe",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/weapons/mengjing-liulangzhe",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco-cn/type-chart",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco-cn/eggs",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco-cn/merchant",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco-cn/weapons",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco-cn/redeem-codes",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco-cn/items",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco-cn/weapons/huanxing-xingguang",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco-cn/type-chart",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco-cn/eggs",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco-cn/merchant",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco-cn/weapons",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco-cn/redeem-codes",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco-cn/items",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco-cn/weapons/huanxing-xingguang",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco-cn/type-chart",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco-cn/eggs",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco-cn/merchant",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco-cn/weapons",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco-cn/redeem-codes",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco-cn/items",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco-cn/weapons/huanxing-xingguang",
+        "width": 1440,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/characters/not-a-record",
+        "width": 1440,
+        "status": 404,
+        "kind": "roco-unknown-character"
+      },
+      {
+        "path": "/zh/roco/characters/meewee/extra",
+        "width": 1440,
+        "status": 404,
+        "kind": "roco-unknown-character"
+      },
+      {
+        "path": "/zh/roco/weapons/not-a-record",
+        "width": 1440,
+        "status": 404,
+        "kind": "roco-unknown-weapon"
+      },
+      {
+        "path": "/zh/roco/weapons/huanxing-xingguang/extra",
+        "width": 1440,
+        "status": 404,
+        "kind": "roco-unknown-weapon"
+      },
+      {
+        "path": "/en/roco/characters/not-a-record",
+        "width": 1440,
+        "status": 404,
+        "kind": "roco-unknown-character"
+      },
+      {
+        "path": "/en/roco/characters/meewee/extra",
+        "width": 1440,
+        "status": 404,
+        "kind": "roco-unknown-character"
+      },
+      {
+        "path": "/en/roco/weapons/not-a-record",
+        "width": 1440,
+        "status": 404,
+        "kind": "roco-unknown-weapon"
+      },
+      {
+        "path": "/en/roco/weapons/huanxing-xingguang/extra",
+        "width": 1440,
+        "status": 404,
+        "kind": "roco-unknown-weapon"
+      },
+      {
+        "path": "/ja/roco/characters/not-a-record",
+        "width": 1440,
+        "status": 404,
+        "kind": "roco-unknown-character"
+      },
+      {
+        "path": "/ja/roco/characters/meewee/extra",
+        "width": 1440,
+        "status": 404,
+        "kind": "roco-unknown-character"
+      },
+      {
+        "path": "/ja/roco/weapons/not-a-record",
+        "width": 1440,
+        "status": 404,
+        "kind": "roco-unknown-weapon"
+      },
+      {
+        "path": "/ja/roco/weapons/huanxing-xingguang/extra",
+        "width": 1440,
+        "status": 404,
+        "kind": "roco-unknown-weapon"
+      },
+      {
+        "path": "/zh/roco/items",
+        "width": 390,
+        "status": 404,
+        "kind": "roco-disabled-items",
+        "robots": [
+          "index, follow",
+          "noindex"
+        ],
+        "alternateHrefs": [
+          "https://gachia.com/zh/roco",
+          "https://gachia.com/en/roco",
+          "https://gachia.com/ja/roco",
+          "https://gachia.com/zh/roco"
+        ]
+      },
+      {
+        "path": "/zh/roco/items/gulu-ball",
+        "width": 390,
+        "status": 404,
+        "kind": "roco-disabled-items",
+        "robots": [
+          "index, follow",
+          "noindex"
+        ],
+        "alternateHrefs": [
+          "https://gachia.com/zh/roco",
+          "https://gachia.com/en/roco",
+          "https://gachia.com/ja/roco",
+          "https://gachia.com/zh/roco"
+        ]
+      },
+      {
+        "path": "/zh/roco/items/not-a-record",
+        "width": 390,
+        "status": 404,
+        "kind": "roco-disabled-items",
+        "robots": [
+          "index, follow",
+          "noindex"
+        ],
+        "alternateHrefs": [
+          "https://gachia.com/zh/roco",
+          "https://gachia.com/en/roco",
+          "https://gachia.com/ja/roco",
+          "https://gachia.com/zh/roco"
+        ]
+      },
+      {
+        "path": "/en/roco/items",
+        "width": 390,
+        "status": 404,
+        "kind": "roco-disabled-items",
+        "robots": [
+          "index, follow",
+          "noindex"
+        ],
+        "alternateHrefs": [
+          "https://gachia.com/zh/roco",
+          "https://gachia.com/en/roco",
+          "https://gachia.com/ja/roco",
+          "https://gachia.com/zh/roco"
+        ]
+      },
+      {
+        "path": "/en/roco/items/gulu-ball",
+        "width": 390,
+        "status": 404,
+        "kind": "roco-disabled-items",
+        "robots": [
+          "index, follow",
+          "noindex"
+        ],
+        "alternateHrefs": [
+          "https://gachia.com/zh/roco",
+          "https://gachia.com/en/roco",
+          "https://gachia.com/ja/roco",
+          "https://gachia.com/zh/roco"
+        ]
+      },
+      {
+        "path": "/en/roco/items/not-a-record",
+        "width": 390,
+        "status": 404,
+        "kind": "roco-disabled-items",
+        "robots": [
+          "index, follow",
+          "noindex"
+        ],
+        "alternateHrefs": [
+          "https://gachia.com/zh/roco",
+          "https://gachia.com/en/roco",
+          "https://gachia.com/ja/roco",
+          "https://gachia.com/zh/roco"
+        ]
+      },
+      {
+        "path": "/ja/roco/items",
+        "width": 390,
+        "status": 404,
+        "kind": "roco-disabled-items",
+        "robots": [
+          "index, follow",
+          "noindex"
+        ],
+        "alternateHrefs": [
+          "https://gachia.com/zh/roco",
+          "https://gachia.com/en/roco",
+          "https://gachia.com/ja/roco",
+          "https://gachia.com/zh/roco"
+        ]
+      },
+      {
+        "path": "/ja/roco/items/gulu-ball",
+        "width": 390,
+        "status": 404,
+        "kind": "roco-disabled-items",
+        "robots": [
+          "index, follow",
+          "noindex"
+        ],
+        "alternateHrefs": [
+          "https://gachia.com/zh/roco",
+          "https://gachia.com/en/roco",
+          "https://gachia.com/ja/roco",
+          "https://gachia.com/zh/roco"
+        ]
+      },
+      {
+        "path": "/ja/roco/items/not-a-record",
+        "width": 390,
+        "status": 404,
+        "kind": "roco-disabled-items",
+        "robots": [
+          "index, follow",
+          "noindex"
+        ],
+        "alternateHrefs": [
+          "https://gachia.com/zh/roco",
+          "https://gachia.com/en/roco",
+          "https://gachia.com/ja/roco",
+          "https://gachia.com/zh/roco"
+        ]
+      },
+      {
+        "path": "/zh/nte/items/rising-hunter-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "nte-main-item",
+        "errors": 0,
+        "failedAssets": 0,
+        "dedicatedListDocumentNavigationVerified": true
+      },
+      {
+        "path": "/zh/nte/items/annulith",
+        "width": 390,
+        "status": 200,
+        "kind": "nte-main-item",
+        "errors": 0,
+        "failedAssets": 0,
+        "dedicatedListDocumentNavigationVerified": true
+      },
+      {
+        "path": "/en/nte/items/rising-hunter-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "nte-main-item",
+        "errors": 0,
+        "failedAssets": 0,
+        "dedicatedListDocumentNavigationVerified": true
+      },
+      {
+        "path": "/en/nte/items/annulith",
+        "width": 390,
+        "status": 200,
+        "kind": "nte-main-item",
+        "errors": 0,
+        "failedAssets": 0,
+        "dedicatedListDocumentNavigationVerified": true
+      },
+      {
+        "path": "/ja/nte/items/rising-hunter-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "nte-main-item",
+        "errors": 0,
+        "failedAssets": 0,
+        "dedicatedListDocumentNavigationVerified": true
+      },
+      {
+        "path": "/ja/nte/items/annulith",
+        "width": 390,
+        "status": 200,
+        "kind": "nte-main-item",
+        "errors": 0,
+        "failedAssets": 0,
+        "dedicatedListDocumentNavigationVerified": true
+      },
+      {
+        "path": "/zh/tools/market-intel",
+        "width": 390,
+        "status": 200,
+        "kind": "market-intel-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/tools/market-intel",
+        "width": 390,
+        "status": 200,
+        "kind": "market-intel-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/tools/market-intel",
+        "width": 390,
+        "status": 200,
+        "kind": "market-intel-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco-cn",
+        "width": 390,
+        "status": 200,
+        "kind": "cn-home",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco-cn",
+        "width": 390,
+        "status": 200,
+        "kind": "cn-home",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco-cn",
+        "width": 390,
+        "status": 200,
+        "kind": "cn-home",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/wuwa/redeem-codes",
+        "width": 390,
+        "status": 200,
+        "kind": "codes",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/wuwa/redeem-codes",
+        "width": 390,
+        "status": 200,
+        "kind": "codes",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/wuwa/redeem-codes",
+        "width": 390,
+        "status": 200,
+        "kind": "codes",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco-cn/guides/daily-events-merchant-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "archive",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco-cn/guides/daily-events-merchant-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "archive",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco-cn/map",
+        "width": 390,
+        "status": 200,
+        "kind": "cn-map",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco-cn/map",
+        "width": 390,
+        "status": 200,
+        "kind": "cn-map",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco-cn/map",
+        "width": 390,
+        "status": 200,
+        "kind": "cn-map",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/skjh/guides/season-1-launch",
+        "width": 390,
+        "status": 200,
+        "kind": "backport",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/skjh/guides/season-1-launch",
+        "width": 390,
+        "status": 200,
+        "kind": "backport",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/skjh/guides/season-1-launch",
+        "width": 390,
+        "status": 200,
+        "kind": "backport",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/wuwa/echoes/heart-that-illuminates-dreams",
+        "width": 390,
+        "status": 200,
+        "kind": "echo",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/wuwa/echoes/mirror-shadow-flowing-lightning",
+        "width": 390,
+        "status": 200,
+        "kind": "echo",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/wuwa/echoes/flower-of-crimson-reminiscence",
+        "width": 390,
+        "status": 200,
+        "kind": "echo",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/wuwa/echoes/heart-that-illuminates-dreams",
+        "width": 390,
+        "status": 200,
+        "kind": "echo",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/wuwa/echoes/mirror-shadow-flowing-lightning",
+        "width": 390,
+        "status": 200,
+        "kind": "echo",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/wuwa/echoes/flower-of-crimson-reminiscence",
+        "width": 390,
+        "status": 200,
+        "kind": "echo",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/wuwa/echoes/heart-that-illuminates-dreams",
+        "width": 390,
+        "status": 200,
+        "kind": "echo",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/wuwa/echoes/mirror-shadow-flowing-lightning",
+        "width": 390,
+        "status": 200,
+        "kind": "echo",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/wuwa/echoes/flower-of-crimson-reminiscence",
+        "width": 390,
+        "status": 200,
+        "kind": "echo",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/wuwa/artifacts",
+        "width": 390,
+        "status": 200,
+        "kind": "echo-list",
+        "errors": 0,
+        "failedAssets": 0,
+        "detailNavigationVerified": true
+      },
+      {
+        "path": "/en/wuwa/artifacts",
+        "width": 390,
+        "status": 200,
+        "kind": "echo-list",
+        "errors": 0,
+        "failedAssets": 0,
+        "detailNavigationVerified": true
+      },
+      {
+        "path": "/ja/wuwa/artifacts",
+        "width": 390,
+        "status": 200,
+        "kind": "echo-list",
+        "errors": 0,
+        "failedAssets": 0,
+        "detailNavigationVerified": true
+      },
+      {
+        "path": "/zh/wuwa/map",
+        "width": 390,
+        "status": 200,
+        "kind": "region",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/wuwa/map",
+        "width": 390,
+        "status": 200,
+        "kind": "region",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/wuwa/map",
+        "width": 390,
+        "status": 200,
+        "kind": "region",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/version",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-version",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/version",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-version",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/version",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-version",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/events",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-events",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/events",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-events",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/events",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-events",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-home",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-home",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-home",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-player-feedback-roadmap-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-onboarding-learning-recovery-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-player-discovery-codex-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-fair-play-integrity-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-change-communication-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-returning-player-event-legacy-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-economy-monetization-fairness-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-accessibility-cross-device-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-player-support-trust-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-social-safety-guild-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-localization-cultural-event-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-cbt-to-launch-decision-gates",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-cn-release-governance",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-live-ops-metrics-experiments",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-launch-readiness-checklist",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-first-30-days-pve-plan",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-days-31-90-season-event-plan",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/global-cn-content-roadmap",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/cbt-registration-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/starter-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/what-is-roco-kingdom",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/platforms-and-download-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/jinies-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/battle-system-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/co-op-and-social-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/pre-registration-rewards-faq",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/is-roco-kingdom-free-to-play",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/roco-kingdom-release-date-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/roco-kingdom-vs-pokemon",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides/roco-kingdom-crossplay-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-player-feedback-roadmap-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-onboarding-learning-recovery-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-player-discovery-codex-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-fair-play-integrity-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-change-communication-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-returning-player-event-legacy-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-economy-monetization-fairness-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-accessibility-cross-device-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-player-support-trust-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-social-safety-guild-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-localization-cultural-event-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-cbt-to-launch-decision-gates",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-cn-release-governance",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-live-ops-metrics-experiments",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-launch-readiness-checklist",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-first-30-days-pve-plan",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-days-31-90-season-event-plan",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/global-cn-content-roadmap",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/cbt-registration-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/starter-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/what-is-roco-kingdom",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/platforms-and-download-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/jinies-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/battle-system-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/co-op-and-social-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/pre-registration-rewards-faq",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/is-roco-kingdom-free-to-play",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/roco-kingdom-release-date-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/roco-kingdom-vs-pokemon",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/guides/roco-kingdom-crossplay-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-player-feedback-roadmap-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-onboarding-learning-recovery-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-player-discovery-codex-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-fair-play-integrity-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-change-communication-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-returning-player-event-legacy-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-economy-monetization-fairness-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-accessibility-cross-device-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-player-support-trust-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-social-safety-guild-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-localization-cultural-event-playbook",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-cbt-to-launch-decision-gates",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-cn-release-governance",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-live-ops-metrics-experiments",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-launch-readiness-checklist",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-first-30-days-pve-plan",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-days-31-90-season-event-plan",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/global-cn-content-roadmap",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/cbt-registration-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/starter-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/what-is-roco-kingdom",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/platforms-and-download-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/jinies-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/battle-system-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/co-op-and-social-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/pre-registration-rewards-faq",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/is-roco-kingdom-free-to-play",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/roco-kingdom-release-date-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/roco-kingdom-vs-pokemon",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/guides/roco-kingdom-crossplay-guide",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-guide",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/characters/meewee",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/characters/sparka",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/characters/cerulla",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/characters/blazehound",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/characters/catapawn",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/characters/dustler",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/characters/meewee",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/characters/sparka",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/characters/cerulla",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/characters/blazehound",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/characters/catapawn",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/characters/dustler",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/characters/meewee",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/characters/sparka",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/characters/cerulla",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/characters/blazehound",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/characters/catapawn",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/characters/dustler",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-reviewed-character",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/guides",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-guides-list",
+        "errors": 0,
+        "failedAssets": 0,
+        "detailNavigationVerified": true
+      },
+      {
+        "path": "/zh/roco/characters",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-characters-list",
+        "errors": 0,
+        "failedAssets": 0,
+        "detailNavigationVerified": true
+      },
+      {
+        "path": "/en/roco/guides",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-guides-list",
+        "errors": 0,
+        "failedAssets": 0,
+        "detailNavigationVerified": true
+      },
+      {
+        "path": "/en/roco/characters",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-characters-list",
+        "errors": 0,
+        "failedAssets": 0,
+        "detailNavigationVerified": true
+      },
+      {
+        "path": "/ja/roco/guides",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-guides-list",
+        "errors": 0,
+        "failedAssets": 0,
+        "detailNavigationVerified": true
+      },
+      {
+        "path": "/ja/roco/characters",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-characters-list",
+        "errors": 0,
+        "failedAssets": 0,
+        "detailNavigationVerified": true
+      },
+      {
+        "path": "/zh/roco/redeem-codes",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/zh/roco",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/tier-list",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/download",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/map",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/type-chart",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/zh/roco/eggs",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/zh/roco/merchant",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/zh/roco/weapons",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/en/roco/redeem-codes",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/en/roco",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/tier-list",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/download",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/map",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/type-chart",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/en/roco/eggs",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/en/roco/merchant",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/en/roco/weapons",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/ja/roco/redeem-codes",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/ja/roco",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/tier-list",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/download",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/map",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/type-chart",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/ja/roco/eggs",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/ja/roco/merchant",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/ja/roco/weapons",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-public-review",
+        "errors": 0,
+        "failedAssets": 0,
+        "reviewNavigationVerified": true
+      },
+      {
+        "path": "/zh/roco/weapons/huanxing-xingguang",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/weapons/tonghuashu",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/weapons/lianjinshu",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/weapons/shenhai-kuizeng",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/weapons/bilu-huoban",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/weapons/jufeng-xingji",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/weapons/xingluo-fanhua",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/weapons/mimi-qianru",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/weapons/chuxinzhe",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/weapons/mengjing-liulangzhe",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/weapons/huanxing-xingguang",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/weapons/tonghuashu",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/weapons/lianjinshu",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/weapons/shenhai-kuizeng",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/weapons/bilu-huoban",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/weapons/jufeng-xingji",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/weapons/xingluo-fanhua",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/weapons/mimi-qianru",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/weapons/chuxinzhe",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco/weapons/mengjing-liulangzhe",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/weapons/huanxing-xingguang",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/weapons/tonghuashu",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/weapons/lianjinshu",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/weapons/shenhai-kuizeng",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/weapons/bilu-huoban",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/weapons/jufeng-xingji",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/weapons/xingluo-fanhua",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/weapons/mimi-qianru",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/weapons/chuxinzhe",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco/weapons/mengjing-liulangzhe",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-weapon-review",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco-cn/type-chart",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco-cn/eggs",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco-cn/merchant",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco-cn/weapons",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco-cn/redeem-codes",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco-cn/items",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco-cn/weapons/huanxing-xingguang",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco-cn/type-chart",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco-cn/eggs",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco-cn/merchant",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco-cn/weapons",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco-cn/redeem-codes",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco-cn/items",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/roco-cn/weapons/huanxing-xingguang",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco-cn/type-chart",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco-cn/eggs",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco-cn/merchant",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco-cn/weapons",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco-cn/redeem-codes",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco-cn/items",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/roco-cn/weapons/huanxing-xingguang",
+        "width": 390,
+        "status": 200,
+        "kind": "roco-cn-tool",
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/roco/characters/not-a-record",
+        "width": 390,
+        "status": 404,
+        "kind": "roco-unknown-character"
+      },
+      {
+        "path": "/zh/roco/characters/meewee/extra",
+        "width": 390,
+        "status": 404,
+        "kind": "roco-unknown-character"
+      },
+      {
+        "path": "/zh/roco/weapons/not-a-record",
+        "width": 390,
+        "status": 404,
+        "kind": "roco-unknown-weapon"
+      },
+      {
+        "path": "/zh/roco/weapons/huanxing-xingguang/extra",
+        "width": 390,
+        "status": 404,
+        "kind": "roco-unknown-weapon"
+      },
+      {
+        "path": "/en/roco/characters/not-a-record",
+        "width": 390,
+        "status": 404,
+        "kind": "roco-unknown-character"
+      },
+      {
+        "path": "/en/roco/characters/meewee/extra",
+        "width": 390,
+        "status": 404,
+        "kind": "roco-unknown-character"
+      },
+      {
+        "path": "/en/roco/weapons/not-a-record",
+        "width": 390,
+        "status": 404,
+        "kind": "roco-unknown-weapon"
+      },
+      {
+        "path": "/en/roco/weapons/huanxing-xingguang/extra",
+        "width": 390,
+        "status": 404,
+        "kind": "roco-unknown-weapon"
+      },
+      {
+        "path": "/ja/roco/characters/not-a-record",
+        "width": 390,
+        "status": 404,
+        "kind": "roco-unknown-character"
+      },
+      {
+        "path": "/ja/roco/characters/meewee/extra",
+        "width": 390,
+        "status": 404,
+        "kind": "roco-unknown-character"
+      },
+      {
+        "path": "/ja/roco/weapons/not-a-record",
+        "width": 390,
+        "status": 404,
+        "kind": "roco-unknown-weapon"
+      },
+      {
+        "path": "/ja/roco/weapons/huanxing-xingguang/extra",
+        "width": 390,
+        "status": 404,
+        "kind": "roco-unknown-weapon"
+      }
+    ],
+    "indexnow": [
+      {
+        "name": "unauthorized",
+        "status": 401,
+        "submissionAttempted": false,
+        "pauseEvidence": "sealed_code_transport_absence_and_local_authenticated_fixture_not_cloud_authenticated_probe"
+      }
+    ],
+    "retainedAssets": [
+      {
+        "path": "/_next/static/chunks/webpack-3df35ff23edba597.js",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "c96323b1-c9a3-4390-aa7d-d17a4fa83c45"
+      },
+      {
+        "path": "/_next/static/chunks/webpack-5eff57400eab7b22.js",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "c96323b1-c9a3-4390-aa7d-d17a4fa83c45"
+      },
+      {
+        "path": "/_next/static/chunks/webpack-a2a9ed52ac91ee8e.js",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "c96323b1-c9a3-4390-aa7d-d17a4fa83c45"
+      },
+      {
+        "path": "/_next/static/chunks/webpack-d27460adc2ebae12.js",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "c96323b1-c9a3-4390-aa7d-d17a4fa83c45"
+      },
+      {
+        "path": "/_next/static/css/184abcb05771b732.css",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "c96323b1-c9a3-4390-aa7d-d17a4fa83c45"
+      },
+      {
+        "path": "/_next/static/css/939ae1da26761c90.css",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "c96323b1-c9a3-4390-aa7d-d17a4fa83c45"
+      },
+      {
+        "path": "/_next/static/css/e89dd0dfedbe06e5.css",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "c96323b1-c9a3-4390-aa7d-d17a4fa83c45"
+      },
+      {
+        "path": "/_next/static/css/ec5eee9cfeecd060.css",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "c96323b1-c9a3-4390-aa7d-d17a4fa83c45"
+      },
+      {
+        "path": "/_next/static/1KWmUfWxkzt7OisgzXLbL/_buildManifest.js",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "c96323b1-c9a3-4390-aa7d-d17a4fa83c45"
+      },
+      {
+        "path": "/_next/static/1KWmUfWxkzt7OisgzXLbL/_ssgManifest.js",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "c96323b1-c9a3-4390-aa7d-d17a4fa83c45"
+      },
+      {
+        "path": "/_next/static/chunks/1040.11578a0b525935ce.js",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "c96323b1-c9a3-4390-aa7d-d17a4fa83c45"
+      },
+      {
+        "path": "/_next/static/chunks/1040.de46b903ce26d87c.js",
+        "status": 200,
+        "byteEqual": true,
+        "versionId": "c96323b1-c9a3-4390-aa7d-d17a4fa83c45"
+      }
+    ]
+  },
+  "finishedAt": "2026-10-25T11:19:43.277Z"
+}

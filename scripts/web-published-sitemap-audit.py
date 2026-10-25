@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import re
 import urllib.request
+from urllib.parse import urlsplit
 import xml.etree.ElementTree as ET
 
 spec = importlib.util.spec_from_file_location("contract", Path(__file__).with_name("web-sitemap-contract-audit.py"))
@@ -14,6 +15,17 @@ contract = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(contract)
 ROOT = Path(__file__).resolve().parent.parent
 ORIGINS = {"staging": "https://gachia-staging.aieasygames.workers.dev", "production": contract.PUBLIC}
+
+
+def local_proxy(value):
+    if value is None:
+        return {}
+    url = urlsplit(value)
+    if (url.scheme != "http" or url.hostname not in ("127.0.0.1", "localhost")
+            or not url.port or url.username is not None or url.password is not None
+            or url.path not in ("", "/") or url.query or url.fragment):
+        raise ValueError("Proxy must be an explicit credential-free local HTTP proxy")
+    return {"http": value, "https": value}
 
 
 def main_fallback_coverage(main_urls, materials):
@@ -102,7 +114,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("environment", choices=["local", *ORIGINS])
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--proxy", help="Optional credential-free loopback HTTP proxy; environment proxies stay disabled")
     args = parser.parse_args()
+    proxies = local_proxy(args.proxy)
     expected = compiled_documents(ROOT / "apps/web/.open-next")
     coverage = main_fallback_coverage(expected["mainUrls"], json.loads((ROOT / "packages/data/games/nte/raw-materials.json").read_text()))
     precheck = {"schemaVersion": 1, "status": coverage["status"], "environment": args.environment, "cloudRequestsPerformed": False, "fallbackCoverage": coverage}
@@ -114,7 +128,7 @@ def main():
         print(json.dumps(precheck, indent=2))
         return
     origin = ORIGINS[args.environment]
-    opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), contract.NoRedirect())
+    opener = urllib.request.build_opener(urllib.request.ProxyHandler(proxies), contract.NoRedirect())
     observations = []
 
     def get(path, target=contract.PUBLIC):
