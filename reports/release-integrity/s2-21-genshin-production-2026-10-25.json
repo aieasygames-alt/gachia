@@ -1,0 +1,655 @@
+{
+  "schemaVersion": 1,
+  "phase": "S2.21",
+  "recordedAt": "2026-10-25T02:43:37.293289+00:00",
+  "status": "genshin_live_owner_promoted_and_bounded_production_acceptance_passed",
+  "sourceCommit": "c146113aab2c54fa51b8b7955dc4917da30adecb",
+  "deploymentToolingCommit": "3b1a1cb0329e190ec2de04cc14f21ce87079c383",
+  "provenance": "operator_controlled_local_seal_and_cloud_module_comparison_not_independent_remote_build_attestation",
+  "artifact": {
+    "manifestSha256": "f5f22ea286f246fff3826d2c05e1440990d4cfc1a2d1a1bbfa7f5591941b24cc",
+    "treeSha256": "874465a9be97bbac104807f993fbb5c9122ece54ad8ddebe3bfeeda0645e6752",
+    "entries": 3706,
+    "bytes": 135420328
+  },
+  "previousProduction": {
+    "versionId": "b2952171-bf58-4d64-a16e-8cea41cf9529",
+    "deploymentId": "c087254a-58f4-4c61-b92b-0fd44d9f2f2b",
+    "scriptEtag": "c5828f0668cec3b3b2a06fce42e3e009eb640de4e0c773e8a70d09d5eda0ac4c",
+    "sourceCommit": "not_attested",
+    "cloudAssetManifestCompleteness": "not_asserted"
+  },
+  "previousStatic": {
+    "files": 41,
+    "bytes": 846953,
+    "scope": "logged previous-version Next JS/CSS/font only, not all historical assets"
+  },
+  "deployments": {
+    "staging": {
+      "service": "gachia-game-genshin-staging",
+      "versionId": "97f3bae6-3e9f-423f-a2c7-8a460f9911f4",
+      "deploymentId": "590f2ba5-e933-416c-b860-cc0b2c9e5678",
+      "scriptEtag": "47b20ca406109b010f6325e5ff038aa3cbd72d0717cf3c771bf85fe19ff322cd",
+      "startedAt": "2026-10-25T02:18:09.083Z",
+      "finishedAt": "2026-10-25T02:18:39.163Z"
+    },
+    "production": {
+      "service": "gachia-game-genshin",
+      "versionId": "a0045a48-8165-459b-9cd5-47c0261ce87e",
+      "deploymentId": "2e6401bb-cd07-4677-be8c-dbe512c1c5ce",
+      "scriptEtag": "47b20ca406109b010f6325e5ff038aa3cbd72d0717cf3c771bf85fe19ff322cd",
+      "startedAt": "2026-10-25T02:26:23.927Z",
+      "finishedAt": "2026-10-25T02:26:53.869Z"
+    }
+  },
+  "cloudModules": [
+    {
+      "name": "worker.js",
+      "type": "application/javascript+module",
+      "bytes": 9092325,
+      "sha256": "cdf9023873a3065254f9195117acd1433b4e9cacd62e8cd02b94dd223ff77d8b"
+    }
+  ],
+  "sameCloudWorkerModules": true,
+  "acceptance": {
+    "local": {
+      "status": "candidate_acceptance_passed",
+      "htmlPages": 1602,
+      "guideLanguagePages": 93,
+      "staticPathChecks": 160,
+      "browserCases": 18,
+      "browserRequests": 662,
+      "httpRequests": 1769,
+      "intentionalDisabledScriptEvents": 6,
+      "finishedAt": "2026-10-25T02:17:48.066Z"
+    },
+    "staging": {
+      "status": "candidate_acceptance_passed",
+      "htmlPages": 1602,
+      "guideLanguagePages": 93,
+      "staticPathChecks": 160,
+      "browserCases": 18,
+      "browserRequests": 662,
+      "httpRequests": 1765,
+      "intentionalDisabledScriptEvents": 6,
+      "finishedAt": "2026-10-25T02:24:55.899Z"
+    },
+    "production": {
+      "status": "candidate_acceptance_passed",
+      "htmlPages": 1602,
+      "guideLanguagePages": 93,
+      "staticPathChecks": 80,
+      "browserCases": 18,
+      "browserRequests": 662,
+      "httpRequests": 1686,
+      "intentionalDisabledScriptEvents": 6,
+      "finishedAt": "2026-10-25T02:38:24.197Z"
+    }
+  },
+  "supplementalProduction": {
+    "directWorkerOriginalStaticPaths": 80,
+    "guideRobotsAndStructuredLanguageChecks": 93,
+    "readingFallbacks": 30,
+    "crossOwnerBrowserCases": 6,
+    "nativeOwnerHops": 12,
+    "siteHttpChecks": 15,
+    "ownerHttpChecks": 19,
+    "noAccountRequestsInCrossOwnerCases": true,
+    "notFound": {
+      "unknownSection": "main_fallback_on_production",
+      "unknownCharacter": "genshin",
+      "bothStatus": 404
+    },
+    "directWorkerNoindexPaths": 3
+  },
+  "sitemap": {
+    "documents": 6,
+    "beforeCounts": {
+      "main": 4515,
+      "azur-promilia": 150,
+      "genshin": 1602,
+      "lvmeng": 27,
+      "nte": 389
+    },
+    "afterCounts": {
+      "main": 4515,
+      "azur-promilia": 150,
+      "genshin": 1572,
+      "lvmeng": 27,
+      "nte": 389
+    },
+    "unionBefore": 6683,
+    "unionAfter": 6653,
+    "onlyGenshinOwnerChanged": true,
+    "removed": [
+      "https://gachia.com/ja/genshin/guides/abyss-endgame-guide",
+      "https://gachia.com/ja/genshin/guides/abyss-general-strategy",
+      "https://gachia.com/ja/genshin/guides/abyss-team-building",
+      "https://gachia.com/ja/genshin/guides/artifact-guide",
+      "https://gachia.com/ja/genshin/guides/banner-schedule-guide",
+      "https://gachia.com/ja/genshin/guides/boss-strategy-guide",
+      "https://gachia.com/ja/genshin/guides/build-furina",
+      "https://gachia.com/ja/genshin/guides/build-hu-tao",
+      "https://gachia.com/ja/genshin/guides/build-kazuha",
+      "https://gachia.com/ja/genshin/guides/build-nahida",
+      "https://gachia.com/ja/genshin/guides/build-raiden-shogun",
+      "https://gachia.com/ja/genshin/guides/character-progression-guide",
+      "https://gachia.com/ja/genshin/guides/cross-game-comparison-guide",
+      "https://gachia.com/ja/genshin/guides/elemental-reaction-guide",
+      "https://gachia.com/ja/genshin/guides/exploration-guide",
+      "https://gachia.com/ja/genshin/guides/farming-route-guide",
+      "https://gachia.com/ja/genshin/guides/gacha-system-guide",
+      "https://gachia.com/ja/genshin/guides/luna-viii-sandrone-guide",
+      "https://gachia.com/ja/genshin/guides/lunar-reaction-guide",
+      "https://gachia.com/ja/genshin/guides/meta-teams-guide",
+      "https://gachia.com/ja/genshin/guides/natlan-exploration-guide",
+      "https://gachia.com/ja/genshin/guides/nod-krai-cryoculus-phase-ii-checklist",
+      "https://gachia.com/ja/genshin/guides/nod-krai-guide",
+      "https://gachia.com/ja/genshin/guides/phase-ii-columbina-raiden-pull-plan",
+      "https://gachia.com/ja/genshin/guides/quick-start-guide",
+      "https://gachia.com/ja/genshin/guides/resin-planning-guide",
+      "https://gachia.com/ja/genshin/guides/snezhnaya-version-guide",
+      "https://gachia.com/ja/genshin/guides/teapot-guide",
+      "https://gachia.com/ja/genshin/guides/v6-7-version-guide",
+      "https://gachia.com/ja/genshin/guides/weapon-enhancement-guide"
+    ],
+    "added": [],
+    "mainFallbackUrlsPreserved": 171
+  },
+  "controlPlane": {
+    "changedServices": [
+      "gachia-game-genshin",
+      "gachia-game-genshin-staging"
+    ],
+    "unrelatedServicesUnchanged": 7,
+    "allNineServiceBindingsReconciled": true,
+    "routesUnchanged": true,
+    "domainsUnchanged": true,
+    "routerDeployed": false,
+    "workersAdded": false,
+    "databaseChanged": false,
+    "loginEnabled": false,
+    "cachePurged": false,
+    "diskCleanupPerformed": false
+  },
+  "rollback": {
+    "oldVersionStillReadableAfterPromotion": true,
+    "localCompatibilityFallback": {
+      "status": "local_compatibility_fallback_verified_not_deployed",
+      "at": "2026-10-25T02:25:36.939Z",
+      "oldVersionId": "b2952171-bf58-4d64-a16e-8cea41cf9529",
+      "oldCloudModuleSha256": "548335cae09f2ff21e4b9ac83058afb5114512833a46fcfca0a0e078eedccf72",
+      "wrapperSha256": "ce49e8bb7c273f02adee758598d1cec642e808e876c2f679f3621a7d46c9d99c",
+      "assetManifestSha256": "f5f22ea286f246fff3826d2c05e1440990d4cfc1a2d1a1bbfa7f5591941b24cc",
+      "sourceCommit": "not_attested",
+      "cloudRollbackDrill": false,
+      "limitations": [
+        "Local HTTP and old/new static bytes only; not an online rollback drill or browser acceptance.",
+        "Old renderer would restore previous language/indexing policy and old planner behavior.",
+        "Raw Cloudflare version rollback does not prove retention of new candidate chunks; do not substitute it for this compatibility fallback."
+      ],
+      "http": {
+        "status": "local_worker_http_verified",
+        "cloudVerification": "not_performed",
+        "observations": [
+          {
+            "path": "/robots.txt",
+            "status": 200
+          },
+          {
+            "path": "/sitemap.xml",
+            "status": 200
+          },
+          {
+            "path": "/zh/genshin",
+            "status": 200
+          },
+          {
+            "path": "/en/genshin",
+            "status": 200
+          },
+          {
+            "path": "/zh/genshin/characters",
+            "status": 200
+          },
+          {
+            "path": "/zh/genshin/characters/hu-tao",
+            "status": 200
+          },
+          {
+            "path": "/_games/genshin/_next/static/chunks/webpack-7617905341b98b06.js",
+            "status": 200
+          },
+          {
+            "path": "/_next/static/chunks/webpack-7617905341b98b06.js",
+            "status": 200
+          },
+          {
+            "path": "/_games/genshin/_next/static/css/4e6b2dc0fa1e36bc.css",
+            "status": 200
+          },
+          {
+            "path": "/_next/static/css/4e6b2dc0fa1e36bc.css",
+            "status": 200
+          },
+          {
+            "path": "/zh/genshin/__release_smoke_missing__",
+            "status": 404
+          }
+        ],
+        "retainedStaticPaths": 82
+      },
+      "oldSitemapUrls": 1602,
+      "oldAndNewStaticChecks": 160
+    },
+    "onlineRollbackDrill": false,
+    "rawVersionRollbackCompatibility": "not_asserted"
+  },
+  "tests": {
+    "releaseNodePassed": 198,
+    "releasePythonPassed": 30,
+    "freshUnitPassed": 817,
+    "freshUnitSkipped": 17,
+    "freshTurboTasks": 4,
+    "typeCheckTasks": 9,
+    "lintErrors": 0,
+    "existingLintWarnings": 1
+  },
+  "actions": {
+    "workflowsDispatched": 0,
+    "remainingMinutes": "not_queried_not_assumed",
+    "previousMainFailedRunUnchanged": 40121743063,
+    "previousMainFailureRootCause": "unknown; not attributed to intentional no-JS CSP events"
+  },
+  "remaining": [
+    "NTE and Lvmeng runtime/resource candidates remain unpublished; no dedicated staging service was added.",
+    "Router shared-contract implementation is not redeployed; routing semantics remain equivalent.",
+    "Dedicated shared search links redirect to the homepage; a usable search-entry contract remains to be implemented.",
+    "Existing Genshin weapon metadata wording, three gacha sitemap/canonical aliases, calculator navigation and obsolete account-boundary copy require separate UX/SEO review.",
+    "No online rollback drill, off-device full-artifact recovery drill, multi-region soak, performance field-data or official game-fact approval is asserted.",
+    "The reusable artifact CLI is local-only; this release used reviewed operator-controlled helpers, not a completed generic promotion platform.",
+    "Protected local release evidence is not a disk cleanup candidate without a separate recoverability and retention review."
+  ],
+  "evidence": [
+    {
+      "path": ".release-records/s2-21/artifact-pin.json",
+      "bytes": 424,
+      "sha256": "345e45ae7e0d1aa3760a1476bfacca2422c361e5318f6fe3d1d8f80098a9d836"
+    },
+    {
+      "path": ".release-records/s2-21/artifact-pin-restored.json",
+      "bytes": 462,
+      "sha256": "573a81510a1b543ac01cb596e072301111a4bc0103db97266ec45775f54e795b"
+    },
+    {
+      "path": ".release-records/s2-21/artifact-restoration.json",
+      "bytes": 437,
+      "sha256": "acc13b36488d751a7195b4ae7158b69edbcfeab8c4a416920cd7d9f9e6efca05"
+    },
+    {
+      "path": ".release-records/s2-21/genshin-artifact-restored/manifest.json",
+      "bytes": 1189701,
+      "sha256": "f5f22ea286f246fff3826d2c05e1440990d4cfc1a2d1a1bbfa7f5591941b24cc"
+    },
+    {
+      "path": ".release-records/s2-21/previous-assets-receipt.json",
+      "bytes": 8832,
+      "sha256": "62b5f6fa19301292404d192267d9a22ee1fb868da954019fa6c33adc4923a2fe"
+    },
+    {
+      "path": ".release-records/s2-21/previous-static-inventory.json",
+      "bytes": 3122,
+      "sha256": "eb1cdcf16ae198b0ca756812e0831dbfd831fbc7df7b92b30c7b31f749356619"
+    },
+    {
+      "path": ".release-records/s2-21/previous-production-worker.multipart",
+      "bytes": 8792270,
+      "sha256": "369437187600d1e27849ea6903698d92a6576210e49389495211ac74289621ae"
+    },
+    {
+      "path": ".release-records/s2-21/capture.log",
+      "bytes": 516,
+      "sha256": "3598f7ed0d8f53dea6e693509fcf84eaac1863fc0874b801e648097d81bd5eaa"
+    },
+    {
+      "path": ".release-records/s2-21/capture-retry.log",
+      "bytes": 186,
+      "sha256": "c1740bf257934a48bb26dddc62fbdba8c0231f61f774f86fd2834e06a3997567"
+    },
+    {
+      "path": ".release-records/s2-21/cloud-before.json",
+      "bytes": 26359,
+      "sha256": "076e81d579f973850af9be318d5b6c24cea6ba2532759892a15f78333ee258f5"
+    },
+    {
+      "path": ".release-records/s2-21/cloud-pre-staging.json",
+      "bytes": 26359,
+      "sha256": "2e64cc1cf4daff6ebc7628b47f8da0d8436f0f2b69d33f9f8bfeacfa12e3699c"
+    },
+    {
+      "path": ".release-records/s2-21/cloud-after-production.json",
+      "bytes": 26226,
+      "sha256": "1ffbc6a22a104db70734b5ad83050e0eecf4840bd707aed072e3d8f64356f4f3"
+    },
+    {
+      "path": ".release-records/s2-21/cloud-final.json",
+      "bytes": 26226,
+      "sha256": "d7cf0098dc26d526f45d47d99653158ccc6d02578ba5fe56d00d3c760a8de3d5"
+    },
+    {
+      "path": ".release-records/s2-21/cloud-final.log",
+      "bytes": 686,
+      "sha256": "31da4e701a3a4b3b4df52a613a4106ac10e0e8813386fde722485cbe1fc54543"
+    },
+    {
+      "path": ".release-records/s2-21/cloud-final-2.log",
+      "bytes": 1727,
+      "sha256": "2a9acf1527581407ea6f873e832f5b9cc10c43f69edfc12c462f525d7365f825"
+    },
+    {
+      "path": ".release-records/s2-21/final-binding-comparison.json",
+      "bytes": 7305,
+      "sha256": "79f50e8599419150a155e999da1c6cf14c88551111a423cd3ea485e0b045d462"
+    },
+    {
+      "path": ".release-records/s2-21/rollback-version-final.json",
+      "bytes": 1788,
+      "sha256": "4b950dbd2ccdb06e5b368365ca42862303123658f3c1ae708b6323f8f11d7718"
+    },
+    {
+      "path": ".release-records/s2-21/build-sealed.log",
+      "bytes": 8545,
+      "sha256": "78ac161de52c3f860326ae35872bea24a1955f91cc3e91dd32617485b8bb1350"
+    },
+    {
+      "path": ".release-records/s2-21/artifact-final-verification.log",
+      "bytes": 677,
+      "sha256": "af8ba1cfe98484d6aad8e90ddf7f5472fdca3eb53f2f9cf24d0d723fb507c6fe"
+    },
+    {
+      "path": ".release-records/s2-21/focused-tests.log",
+      "bytes": 9589,
+      "sha256": "94c067d57c7ced8667ec621e48230f617755682159f49976b03edc06ff7b5316"
+    },
+    {
+      "path": ".release-records/s2-21/artifact-tests-final.log",
+      "bytes": 3596,
+      "sha256": "625bf750a2cd032c05586903fa41e3fda27a8c26338072619b00bce627a5181e"
+    },
+    {
+      "path": ".release-records/s2-21/release-tests-final.log",
+      "bytes": 41960,
+      "sha256": "f6b484a35e93a50b2979e027b89ff4101e68b62d38bdd3e098b3a75d85bb41ca"
+    },
+    {
+      "path": ".release-records/s2-21/all-types.log",
+      "bytes": 3400,
+      "sha256": "64e3feb8033453b72fb05ca9fe1fc9f2172c3c2f08d815d4a465e9aedfb8a814"
+    },
+    {
+      "path": ".release-records/s2-21/unit-tests-fresh.log",
+      "bytes": 117244,
+      "sha256": "fe1edc8dd15a2b304f9f4430d29175d93f59437f3af2bf0391e6575b29c561eb"
+    },
+    {
+      "path": ".release-records/s2-21/lint.log",
+      "bytes": 1319,
+      "sha256": "644d56d1e3133b288846c4bd1ec2cbec1f7478591e4bf9830e7fd07ba7dce2f2"
+    },
+    {
+      "path": ".release-records/s2-21/deployment-config.log",
+      "bytes": 188,
+      "sha256": "06b779c06b859c10732ed19170376911e593ca969ccfb9598ec795ac93480d79"
+    },
+    {
+      "path": ".release-records/s2-21/content-release.log",
+      "bytes": 628,
+      "sha256": "0b06cca97a1664e3c84fde6395ed6de60f65dc828ce0a3e18884eef38cdbdd2e"
+    },
+    {
+      "path": ".release-records/s2-21/old-public-compatibility.json",
+      "bytes": 891,
+      "sha256": "04f860877076a687a5eebcc32fba1d55fd9cc7655e4404e978e951692ee3de00"
+    },
+    {
+      "path": ".release-records/s2-21/local-acceptance/result.json",
+      "bytes": 2743,
+      "sha256": "7733daccf84fd296de449307dbb032e0494eaf631757ff2c3c9c60d61b794d31"
+    },
+    {
+      "path": ".release-records/s2-21/local-acceptance-2/result.json",
+      "bytes": 351414,
+      "sha256": "bd000368bc92fff147a5dc5b7fd5b9b218b944eff154808dc1c050d1c2f4c202"
+    },
+    {
+      "path": ".release-records/s2-21/local-acceptance-3/result.json",
+      "bytes": 355204,
+      "sha256": "56510440b570dd16dbaac40a9f170996e0512f476ff45e8476e41de6b41986f3"
+    },
+    {
+      "path": ".release-records/s2-21/local-acceptance-2.log",
+      "bytes": 40696,
+      "sha256": "3b49950b0252ce7778591399295cf74b39ffd3d6d45ce6f001e4e2b20a5ee343"
+    },
+    {
+      "path": ".release-records/s2-21/local-acceptance-3.log",
+      "bytes": 1047,
+      "sha256": "747cc0e1cebf2b6f9caaaef0faf3d6b0d970fecf38456b6153e4318bbf2b2db4"
+    },
+    {
+      "path": ".release-records/s2-21/local-acceptance-4.log",
+      "bytes": 131,
+      "sha256": "32d8a831a3e938ee117af926e3d95bcf351ae6c562045b4c34bb244165885a1b"
+    },
+    {
+      "path": ".release-records/s2-21/staging-acceptance-3/result.json",
+      "bytes": 354867,
+      "sha256": "35fb2b67f13ed8681573a216a8f801474a22aafbb00d8af01ad415ad2528ab52"
+    },
+    {
+      "path": ".release-records/s2-21/staging-targeted.json",
+      "bytes": 640,
+      "sha256": "ea4f5d5c7af6b6e89c48af7f5b037134cc272337a63a31ff5f44aba65034c183"
+    },
+    {
+      "path": ".release-records/s2-21/production-acceptance-3/result.json",
+      "bytes": 334408,
+      "sha256": "eb29060b9e5bc35ca0870d173b50856acb40615261a8c1a91ec46c9a4af86d3c"
+    },
+    {
+      "path": ".release-records/s2-21/production-acceptance-4/result.json",
+      "bytes": 338931,
+      "sha256": "6369995cd1281f2e0a16a57a1cc263a6128d4481e823467d3dee705e53662015"
+    },
+    {
+      "path": ".release-records/s2-21/direct-production-assets.json",
+      "bytes": 16309,
+      "sha256": "2a265dcf08fccb1d8e48813a73e6d732bbabedda82000e7bafc8f0ead50ff5f6"
+    },
+    {
+      "path": ".release-records/s2-21/direct-worker-indexing.json",
+      "bytes": 447,
+      "sha256": "ca5c3dfac27ba1f2ee10a801f43fac7c1ed6ad9d43d58296d7e343c678b9664e"
+    },
+    {
+      "path": ".release-records/s2-21/guide-policy-online.json",
+      "bytes": 19940,
+      "sha256": "e88d01dc5921efbeeade7443b8541236602c12152b468db68cc7bef85dd684a2"
+    },
+    {
+      "path": ".release-records/s2-21/cross-owner-acceptance.json",
+      "bytes": 4262,
+      "sha256": "1da7d723da88c03a71ff2fb8aa68451d2aee65324ecdc65b0848b01f22f4c955"
+    },
+    {
+      "path": ".release-records/s2-21/cross-owner-acceptance-2.json",
+      "bytes": 5160,
+      "sha256": "a11abdc4a460b0e6fd0893ec35d825dab8ecf3ecb83b9eb4c6840499a1a8b5e3"
+    },
+    {
+      "path": ".release-records/s2-21/sitemap-before.json",
+      "bytes": 406604,
+      "sha256": "1b5ff7e2c0f595785948e1dcf3bcf666745ef52f33fca197664276b6aedc91f6"
+    },
+    {
+      "path": ".release-records/s2-21/sitemap-after.json",
+      "bytes": 404597,
+      "sha256": "5bf042126f130229bde3164046207339844d6761e07811352ae7486a4df1dde5"
+    },
+    {
+      "path": ".release-records/s2-21/residual-backlog-evidence.json",
+      "bytes": 1462,
+      "sha256": "efb8e5da2d5a52aedcd7aad87e4bbea82ac8ff6b5b3f4d64b1ab99ebfcd6d805"
+    },
+    {
+      "path": ".release-records/s2-21/rollback-local/result.json",
+      "bytes": 2066,
+      "sha256": "9f2c9bc7bc71b3b8c8a799df4c8533b06d7e518d18433db6774a588901d172f1"
+    },
+    {
+      "path": ".release-records/s2-21/rollback-local/worker.js",
+      "bytes": 636,
+      "sha256": "ce49e8bb7c273f02adee758598d1cec642e808e876c2f679f3621a7d46c9d99c"
+    },
+    {
+      "path": ".release-records/s2-21/rollback-local/previous-worker.js",
+      "bytes": 8792019,
+      "sha256": "548335cae09f2ff21e4b9ac83058afb5114512833a46fcfca0a0e078eedccf72"
+    },
+    {
+      "path": ".release-records/s2-21/production-preflight/module-comparison.json",
+      "bytes": 261,
+      "sha256": "b42b7259a8fd083628960d47f85c5bb118229558741193104459f023ff036f04"
+    },
+    {
+      "path": ".release-records/s2-21/accept-candidate.mjs",
+      "bytes": 15982,
+      "sha256": "e4521da6931a33e455c2ca7e5cf85aedc25b8b221d999f630ac699f613762b45"
+    },
+    {
+      "path": ".release-records/s2-21/accept-candidate-before-404-fix.mjs",
+      "bytes": 15615,
+      "sha256": "bfbe14352edb29759636567e9974d7a9e849dc3998765ae48578ce3361220704"
+    },
+    {
+      "path": ".release-records/s2-21/deploy-sealed.mjs",
+      "bytes": 9043,
+      "sha256": "74bae07c9f2e2f590ed153756d303495d7e1298ceaee27a37c2173396b5ca8d9"
+    },
+    {
+      "path": ".release-records/s2-21/capture-published.mjs",
+      "bytes": 3171,
+      "sha256": "f50ffc10c9aad6e83b392ab097103f3ecd9b96acc7a23617d7860c3eb4d2a203"
+    },
+    {
+      "path": ".release-records/s2-21/prepare-rollback.mjs",
+      "bytes": 4710,
+      "sha256": "1fe31488cbc71f73df6b447533ddecbc2ac4d4cbbf0cecc8bae88db2dab4f8a7"
+    },
+    {
+      "path": ".release-records/s2-21/cross-owner-first.mjs",
+      "bytes": 3294,
+      "sha256": "c10229356f756624a68e668ca40f6b95518ec02296db8f4d6d72f40aa8d65e69"
+    },
+    {
+      "path": ".release-records/s2-21/cross-owner.mjs",
+      "bytes": 3489,
+      "sha256": "d6918cd3662df7ce458149ea8afd61402084ece6eefc8c51a28e1c6c5f03fc47"
+    },
+    {
+      "path": ".release-records/s2-21/guide-policy-online.mjs",
+      "bytes": 1793,
+      "sha256": "99ccbbf4116e7036d7b590ec9dd0065d979ec53b75772cf8c889b3a6d9abd9a6"
+    },
+    {
+      "path": ".release-records/s2-21/cloud-snapshot.mjs",
+      "bytes": 3135,
+      "sha256": "cca6b7f26383f702af98831853231a3f784d45cbeca80bafdd016bb3f23a842d"
+    },
+    {
+      "path": ".release-records/s2-21/final-bindings.mjs",
+      "bytes": 2536,
+      "sha256": "1b6c3dc85cc459e1a2786e6d71daa34e0aa7e2a2fdbe81c104606211fb60db44"
+    },
+    {
+      "path": ".release-records/s2-21/actions-tooling-commit.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": ".release-records/s2-21/actions-source-commit.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": ".release-records/s2-21/staging-deployment/result.json",
+      "bytes": 1005,
+      "sha256": "a360c5507b7fccc319436121c8591f874a38c8317885138d60fe7a354e87cfdc"
+    },
+    {
+      "path": ".release-records/s2-21/staging-deployment/deploy.log",
+      "bytes": 3071,
+      "sha256": "0a40998415324021011948a62b20010c7e23594ed8cc2245cfef1fa29c43302b"
+    },
+    {
+      "path": ".release-records/s2-21/staging-deployment/cloud-before.json",
+      "bytes": 9623,
+      "sha256": "64ab703a8daecabd656e17e366f6c9b429555bc8a87e8324c2af094866bc46a3"
+    },
+    {
+      "path": ".release-records/s2-21/staging-deployment/cloud-after.json",
+      "bytes": 9626,
+      "sha256": "efa7a50fa8b81cd24d569fe11046ab6acd1d79c6eb3abc7b7d9e4ad5cd893ee8"
+    },
+    {
+      "path": ".release-records/s2-21/staging-deployment/published-version.json",
+      "bytes": 1568,
+      "sha256": "a6c47276cda2920cadef0ceeaaf6a1c3d7a20d812866e2c51f7bbae06f7711a9"
+    },
+    {
+      "path": ".release-records/s2-21/staging-deployment/published-modules.json",
+      "bytes": 623,
+      "sha256": "d27ff9594caca55f634057ff28519a3467752c799449301cd74bd0b78f173dc1"
+    },
+    {
+      "path": ".release-records/s2-21/staging-deployment/published-worker.multipart",
+      "bytes": 9092576,
+      "sha256": "4c82d420edab05e9ba09ffb076749d96bd02f5c61a52af8ac3f13f94f37ea771"
+    },
+    {
+      "path": ".release-records/s2-21/production-deployment/result.json",
+      "bytes": 1000,
+      "sha256": "bd49274fbd3cd88f92682c4bc34b6d2b3774252bf154ebbb01a1a4810793d5c6"
+    },
+    {
+      "path": ".release-records/s2-21/production-deployment/deploy.log",
+      "bytes": 2156,
+      "sha256": "b8beeed4d8237628e7e23c9af4b282c2b1d21570c2333c006b578b01d3e3dfd4"
+    },
+    {
+      "path": ".release-records/s2-21/production-deployment/cloud-before.json",
+      "bytes": 9626,
+      "sha256": "c6d4fa1be61af08af0873ad2c57b69427b690535dd4c44080ac66bf2c240eb2c"
+    },
+    {
+      "path": ".release-records/s2-21/production-deployment/cloud-after.json",
+      "bytes": 9626,
+      "sha256": "4292dc0bdc7bc1e0bba81410330c9a0afa0917dfe86215156f21a88524279134"
+    },
+    {
+      "path": ".release-records/s2-21/production-deployment/published-version.json",
+      "bytes": 1568,
+      "sha256": "e620fc871205d5e8082fba7ebb3107416109f8e2a8c15e6a2bbc28cba8966778"
+    },
+    {
+      "path": ".release-records/s2-21/production-deployment/published-modules.json",
+      "bytes": 721,
+      "sha256": "d43ff93d9831b7e2c2a0f138ba4808c344312833a68a82237d01bb84abd973a8"
+    },
+    {
+      "path": ".release-records/s2-21/production-deployment/published-worker.multipart",
+      "bytes": 9092576,
+      "sha256": "bc493401c86e716313c3fc83e03c7a74963af253af815c9ee4a06f405f1874ea"
+    }
+  ]
+}

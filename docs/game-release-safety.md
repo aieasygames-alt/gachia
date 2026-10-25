@@ -1,6 +1,6 @@
 # Game Release Safety：S1 本地发布门禁
 
-更新：2026-10-23（S1.3）。远程发布门禁仍仅覆盖异环与蓝色星原；运行时检查已覆盖全部五个 Next 应用。蓝色星原已完成一次独立云端 staging 验收，不是全站发布平台或生产放行声明。
+更新：2026-10-25（S2.21 补充）。`game-release.mjs` 的通用远程执行许可仍仅覆盖异环与蓝色星原；运行时检查已覆盖全部五个 Next 应用。原神新增独立的本地产物封存入口，并按明确的操作者控制流程复用既有 staging 推广生产，契约见 [原神 Live Owner 发布规范](genshin-live-owner-release.md)。不能把一次游戏上线解释为通用平台、独立审批或全站放行。以下 S1 段落保留其历史阶段边界。
 
 ## 1. 本阶段解决什么
 
@@ -182,7 +182,7 @@ S1.3 新发现：主站 staging 缺少两个 Google OAuth secret；Router stagin
 
 ## 10. S2.17 独立游戏的旧静态资源证据
 
-仅复制当前 `_next` 不能保护已经打开的旧页面。蓝色星原的受控入口新增 `--previous-assets-receipt <path>`：plan 读取并校验证据，verify/deploy 在新构建完成后、运行时检查前保留旧文件。生产 deploy 必须提供与 `--rollback-version` 相同版本的有效 receipt；离线 verify 仍允许不提供，不伪造云端凭据。当前仅支持蓝色星原，不据此宣称其他游戏已经具备旧资源保留。
+仅复制当前 `_next` 不能保护已经打开的旧页面。蓝色星原的受控入口新增 `--previous-assets-receipt <path>`：plan 读取并校验证据，verify/deploy 在新构建完成后、运行时检查前保留旧文件。生产 deploy 必须提供与 `--rollback-version` 相同版本的有效 receipt；离线 verify 仍允许不提供，不伪造云端凭据。S2.21 将底层来源回执与静态保留许可扩展到原神，但不扩展 `game-release.mjs` 的远程 deploy 许可；原神必须使用独立封存契约。异环和绿梦尚未接入这类来源回执，不能据此宣称它们已具备旧资源保留。
 
 ```bash
 # 只构建、本地 HTTP 和 dry-run；不会上传。
