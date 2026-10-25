@@ -1,0 +1,1432 @@
+{
+  "schemaVersion": 1,
+  "phase": "S2.22",
+  "checkedAt": "2026-10-25T03:21:46.939Z",
+  "evidenceHashesDescribeSavedCloseoutFilesNotExecutionAttestation": true,
+  "status": "nte_lvmeng_promoted_and_production_accepted",
+  "sourceCommit": "c86b08236373199f390b35acf1737eed429735ef",
+  "verificationToolingCommit": "c6e19a829cf71f99bf5bf5c330e75b22bc862d4c",
+  "scope": {
+    "updatedServices": [
+      "gachia-game-nte",
+      "gachia-game-lvmeng"
+    ],
+    "newWorkers": 0,
+    "routerDeployment": false,
+    "routingOrDomainChanges": false,
+    "databaseMigration": false,
+    "accountFeaturesRestored": false,
+    "cachePurge": false,
+    "evidenceDeletion": false,
+    "actionsRunsStarted": 0
+  },
+  "games": {
+    "nte": {
+      "artifact": {
+        "game": "nte",
+        "directory": "/Users/robert/.codex/worktrees/multi-game-s1-release-safety/gachia/.release-records/s2-22/nte/artifact",
+        "sourceCommit": "c86b08236373199f390b35acf1737eed429735ef",
+        "manifestSha256": "384ccf5f648c67c5cd9c66ead8a0bf2f8981af56dea3577c0e707e5418fc1f61",
+        "treeSha256": "c3a4ab8bd93bf74ea7d39b6296e08a1fd94641aafa193b95f80f31936583b44c",
+        "entries": 2118,
+        "bytes": 36127559
+      },
+      "previousVersion": "6b079ce0-7fce-4bef-a649-150c1a947135",
+      "oldStaticFiles": 44,
+      "upload": {
+        "status": "uploaded_without_live_change",
+        "at": "2026-10-25T03:03:45.196Z",
+        "versionId": "9d8f09b2-2417-43e5-970f-991ae8194c1b",
+        "previewUrl": "https://9d8f09b2-gachia-game-nte.aieasygames.workers.dev",
+        "moduleSha256": "75e6c6e779d66d29ebbcc1dc3c1e79aec5da5a4e2daa3b40edb0441e314a9048",
+        "artifact": {
+          "game": "nte",
+          "directory": "/Users/robert/.codex/worktrees/multi-game-s1-release-safety/gachia/.release-records/s2-22/nte/artifact",
+          "sourceCommit": "c86b08236373199f390b35acf1737eed429735ef",
+          "manifestSha256": "384ccf5f648c67c5cd9c66ead8a0bf2f8981af56dea3577c0e707e5418fc1f61",
+          "treeSha256": "c3a4ab8bd93bf74ea7d39b6296e08a1fd94641aafa193b95f80f31936583b44c",
+          "entries": 2118,
+          "bytes": 36127559
+        },
+        "cloudVersion": {
+          "id": "9d8f09b2-2417-43e5-970f-991ae8194c1b",
+          "number": 22,
+          "metadata": {
+            "created_on": "2026-10-25T03:01:45.425547Z",
+            "source": "wrangler",
+            "has_preview": true
+          },
+          "annotations": {
+            "workers/message": "S2.22 nte candidate c86b08236373199f390b35acf1737eed429735ef",
+            "workers/triggered_by": "version_upload"
+          },
+          "resources": {
+            "script": {
+              "etag": "765c23c0d1c6f0f0fac161a8cd07eaca72bae9dcc6f91d5e7774ded8ddccc899",
+              "handlers": [
+                "fetch"
+              ],
+              "named_handlers": [
+                {
+                  "name": "BucketCachePurge",
+                  "handlers": [
+                    "class"
+                  ]
+                },
+                {
+                  "name": "DOQueueHandler",
+                  "handlers": [
+                    "class"
+                  ]
+                },
+                {
+                  "name": "DOShardedTagCache",
+                  "handlers": [
+                    "class"
+                  ]
+                }
+              ],
+              "last_deployed_from": "wrangler"
+            },
+            "script_runtime": {
+              "assets": {
+                "serve_directly": true,
+                "raw_run_worker_first": false,
+                "base_path": "/"
+              },
+              "compatibility_date": "2026-07-08",
+              "compatibility_flags": [
+                "nodejs_compat"
+              ],
+              "usage_model": "standard"
+            },
+            "bindings": [
+              {
+                "name": "ASSETS",
+                "type": "assets"
+              },
+              {
+                "name": "NEXT_PUBLIC_APP_URL",
+                "text": "https://gachia.com",
+                "type": "plain_text"
+              },
+              {
+                "name": "NTE_DEPLOYMENT_MODE",
+                "text": "live",
+                "type": "plain_text"
+              }
+            ]
+          }
+        },
+        "readonlyRecovery": "Original gate correctly stopped on unmodelled workers/message metadata. Reconciled exact operator message; no re-upload or traffic switch."
+      },
+      "promotion": {
+        "status": "accepted_version_promoted_pending_production_acceptance",
+        "at": "2026-10-25T03:07:36.063Z",
+        "versionId": "9d8f09b2-2417-43e5-970f-991ae8194c1b",
+        "deploymentId": "ee1ebff5-a275-424f-b080-437be0ce5855",
+        "moduleSha256": "75e6c6e779d66d29ebbcc1dc3c1e79aec5da5a4e2daa3b40edb0441e314a9048",
+        "artifact": {
+          "game": "nte",
+          "directory": "/Users/robert/.codex/worktrees/multi-game-s1-release-safety/gachia/.release-records/s2-22/nte/artifact",
+          "sourceCommit": "c86b08236373199f390b35acf1737eed429735ef",
+          "manifestSha256": "384ccf5f648c67c5cd9c66ead8a0bf2f8981af56dea3577c0e707e5418fc1f61",
+          "treeSha256": "c3a4ab8bd93bf74ea7d39b6296e08a1fd94641aafa193b95f80f31936583b44c",
+          "entries": 2118,
+          "bytes": 36127559
+        },
+        "cloudVersion": {
+          "id": "9d8f09b2-2417-43e5-970f-991ae8194c1b",
+          "number": 22,
+          "metadata": {
+            "created_on": "2026-10-25T03:01:45.425547Z",
+            "source": "wrangler",
+            "has_preview": true
+          },
+          "annotations": {
+            "workers/message": "S2.22 nte candidate c86b08236373199f390b35acf1737eed429735ef",
+            "workers/triggered_by": "version_upload"
+          },
+          "resources": {
+            "script": {
+              "etag": "765c23c0d1c6f0f0fac161a8cd07eaca72bae9dcc6f91d5e7774ded8ddccc899",
+              "handlers": [
+                "fetch"
+              ],
+              "named_handlers": [
+                {
+                  "name": "BucketCachePurge",
+                  "handlers": [
+                    "class"
+                  ]
+                },
+                {
+                  "name": "DOQueueHandler",
+                  "handlers": [
+                    "class"
+                  ]
+                },
+                {
+                  "name": "DOShardedTagCache",
+                  "handlers": [
+                    "class"
+                  ]
+                }
+              ],
+              "last_deployed_from": "wrangler"
+            },
+            "script_runtime": {
+              "assets": {
+                "serve_directly": true,
+                "raw_run_worker_first": false,
+                "base_path": "/"
+              },
+              "compatibility_date": "2026-07-08",
+              "compatibility_flags": [
+                "nodejs_compat"
+              ],
+              "usage_model": "standard"
+            },
+            "bindings": [
+              {
+                "name": "ASSETS",
+                "type": "assets"
+              },
+              {
+                "name": "NEXT_PUBLIC_APP_URL",
+                "text": "https://gachia.com",
+                "type": "plain_text"
+              },
+              {
+                "name": "NTE_DEPLOYMENT_MODE",
+                "text": "live",
+                "type": "plain_text"
+              }
+            ]
+          }
+        }
+      },
+      "acceptance": {
+        "local": {
+          "status": "candidate_acceptance_passed",
+          "startedAt": "2026-10-25T02:59:25.020Z",
+          "finishedAt": "2026-10-25T02:59:52.459Z",
+          "pages": 504,
+          "assets": 170,
+          "browsers": 18,
+          "sitemap": {
+            "urls": 389,
+            "unchangedUrlSet": true,
+            "sha256": "b8cfec0de4937f0e9a5eb9dde3690c80fe5812b5a9323cb9e10d1ba807571e51"
+          },
+          "requests": 682
+        },
+        "preview": {
+          "status": "candidate_acceptance_passed",
+          "startedAt": "2026-10-25T03:03:45.624Z",
+          "finishedAt": "2026-10-25T03:06:59.209Z",
+          "pages": 504,
+          "assets": 170,
+          "browsers": 18,
+          "sitemap": {
+            "urls": 389,
+            "unchangedUrlSet": true,
+            "sha256": "b8cfec0de4937f0e9a5eb9dde3690c80fe5812b5a9323cb9e10d1ba807571e51"
+          },
+          "requests": 678
+        },
+        "production": {
+          "status": "candidate_acceptance_passed",
+          "startedAt": "2026-10-25T03:11:04.362Z",
+          "finishedAt": "2026-10-25T03:13:30.664Z",
+          "pages": 504,
+          "assets": 170,
+          "browsers": 18,
+          "sitemap": {
+            "urls": 389,
+            "unchangedUrlSet": true,
+            "sha256": "b8cfec0de4937f0e9a5eb9dde3690c80fe5812b5a9323cb9e10d1ba807571e51"
+          },
+          "requests": 678
+        }
+      },
+      "rollback": {
+        "status": "local_compatibility_fallback_verified_not_deployed",
+        "at": "2026-10-25T03:00:56.014Z",
+        "game": "nte",
+        "oldVersionId": "6b079ce0-7fce-4bef-a649-150c1a947135",
+        "oldCloudModuleSha256": "516105f95936ba9d27200e8aa41c1cdc5cc054a7820f58059cb251a165bc37b0",
+        "wrapperSha256": "d20ffc9dacb558bd160c7a582a31559ec9445783284d6079ab66cfa4a0730147",
+        "assetManifestSha256": "384ccf5f648c67c5cd9c66ead8a0bf2f8981af56dea3577c0e707e5418fc1f61",
+        "sourceCommit": "not_attested",
+        "cloudRollbackDrill": false,
+        "pages": 504,
+        "assets": 170,
+        "limitations": [
+          "Local HTTP, host policy and old/new static bytes only; not online rollback drill or browser acceptance.",
+          "Old renderer restores previous runtime and old Lvmeng storage behavior.",
+          "Raw version rollback cannot prove new chunks remain available.",
+          "This local-only config is not an approved remote fallback target."
+        ]
+      }
+    },
+    "lvmeng": {
+      "artifact": {
+        "game": "lvmeng",
+        "directory": "/Users/robert/.codex/worktrees/multi-game-s1-release-safety/gachia/.release-records/s2-22/lvmeng/artifact",
+        "sourceCommit": "c86b08236373199f390b35acf1737eed429735ef",
+        "manifestSha256": "e426504adab6c6a9053d9f0927a34da2e8479bb93c7a99ceae90d9668cc9a064",
+        "treeSha256": "d8cd15fc1d8377e3a840d609280ef44033af52dc824f011fb6ae96bef406b99d",
+        "entries": 2026,
+        "bytes": 31822600
+      },
+      "previousVersion": "815be742-10a4-4609-a32a-cfd0cd968487",
+      "oldStaticFiles": 35,
+      "upload": {
+        "status": "uploaded_without_live_change",
+        "at": "2026-10-25T03:14:15.805Z",
+        "versionId": "e6cb7815-64be-48df-890f-fd610a8f05a9",
+        "previewUrl": "https://e6cb7815-gachia-game-lvmeng.aieasygames.workers.dev",
+        "moduleSha256": "0b82ec14f024703fffb6d1bf38e1659adbdda084d68f8adea128db23939980a4",
+        "artifact": {
+          "game": "lvmeng",
+          "directory": "/Users/robert/.codex/worktrees/multi-game-s1-release-safety/gachia/.release-records/s2-22/lvmeng/artifact",
+          "sourceCommit": "c86b08236373199f390b35acf1737eed429735ef",
+          "manifestSha256": "e426504adab6c6a9053d9f0927a34da2e8479bb93c7a99ceae90d9668cc9a064",
+          "treeSha256": "d8cd15fc1d8377e3a840d609280ef44033af52dc824f011fb6ae96bef406b99d",
+          "entries": 2026,
+          "bytes": 31822600
+        },
+        "cloudVersion": {
+          "id": "e6cb7815-64be-48df-890f-fd610a8f05a9",
+          "number": 29,
+          "metadata": {
+            "created_on": "2026-10-25T03:13:54.535674Z",
+            "source": "wrangler",
+            "has_preview": true
+          },
+          "annotations": {
+            "workers/message": "S2.22 lvmeng candidate c86b08236373199f390b35acf1737eed429735ef",
+            "workers/triggered_by": "version_upload"
+          },
+          "resources": {
+            "script": {
+              "etag": "ff1dd2562161a0e363c47341e523c026cd72401327d609f6bfa4f59b4ad89ae5",
+              "handlers": [
+                "fetch"
+              ],
+              "named_handlers": [
+                {
+                  "name": "BucketCachePurge",
+                  "handlers": [
+                    "class"
+                  ]
+                },
+                {
+                  "name": "DOQueueHandler",
+                  "handlers": [
+                    "class"
+                  ]
+                },
+                {
+                  "name": "DOShardedTagCache",
+                  "handlers": [
+                    "class"
+                  ]
+                }
+              ],
+              "last_deployed_from": "wrangler"
+            },
+            "script_runtime": {
+              "assets": {
+                "serve_directly": true,
+                "raw_run_worker_first": false,
+                "base_path": "/"
+              },
+              "compatibility_date": "2026-07-08",
+              "compatibility_flags": [
+                "nodejs_compat"
+              ],
+              "usage_model": "standard"
+            },
+            "bindings": [
+              {
+                "name": "ASSETS",
+                "type": "assets"
+              },
+              {
+                "name": "LVMENG_DEPLOYMENT_MODE",
+                "text": "production",
+                "type": "plain_text"
+              },
+              {
+                "name": "NEXT_PUBLIC_APP_URL",
+                "text": "https://gachia.com",
+                "type": "plain_text"
+              }
+            ]
+          }
+        }
+      },
+      "promotion": {
+        "status": "accepted_version_promoted_pending_production_acceptance",
+        "at": "2026-10-25T03:16:50.094Z",
+        "versionId": "e6cb7815-64be-48df-890f-fd610a8f05a9",
+        "deploymentId": "49586e5c-90ee-498b-9882-75e33618df2c",
+        "moduleSha256": "0b82ec14f024703fffb6d1bf38e1659adbdda084d68f8adea128db23939980a4",
+        "artifact": {
+          "game": "lvmeng",
+          "directory": "/Users/robert/.codex/worktrees/multi-game-s1-release-safety/gachia/.release-records/s2-22/lvmeng/artifact",
+          "sourceCommit": "c86b08236373199f390b35acf1737eed429735ef",
+          "manifestSha256": "e426504adab6c6a9053d9f0927a34da2e8479bb93c7a99ceae90d9668cc9a064",
+          "treeSha256": "d8cd15fc1d8377e3a840d609280ef44033af52dc824f011fb6ae96bef406b99d",
+          "entries": 2026,
+          "bytes": 31822600
+        },
+        "cloudVersion": {
+          "id": "e6cb7815-64be-48df-890f-fd610a8f05a9",
+          "number": 29,
+          "metadata": {
+            "created_on": "2026-10-25T03:13:54.535674Z",
+            "source": "wrangler",
+            "has_preview": true
+          },
+          "annotations": {
+            "workers/message": "S2.22 lvmeng candidate c86b08236373199f390b35acf1737eed429735ef",
+            "workers/triggered_by": "version_upload"
+          },
+          "resources": {
+            "script": {
+              "etag": "ff1dd2562161a0e363c47341e523c026cd72401327d609f6bfa4f59b4ad89ae5",
+              "handlers": [
+                "fetch"
+              ],
+              "named_handlers": [
+                {
+                  "name": "BucketCachePurge",
+                  "handlers": [
+                    "class"
+                  ]
+                },
+                {
+                  "name": "DOQueueHandler",
+                  "handlers": [
+                    "class"
+                  ]
+                },
+                {
+                  "name": "DOShardedTagCache",
+                  "handlers": [
+                    "class"
+                  ]
+                }
+              ],
+              "last_deployed_from": "wrangler"
+            },
+            "script_runtime": {
+              "assets": {
+                "serve_directly": true,
+                "raw_run_worker_first": false,
+                "base_path": "/"
+              },
+              "compatibility_date": "2026-07-08",
+              "compatibility_flags": [
+                "nodejs_compat"
+              ],
+              "usage_model": "standard"
+            },
+            "bindings": [
+              {
+                "name": "ASSETS",
+                "type": "assets"
+              },
+              {
+                "name": "LVMENG_DEPLOYMENT_MODE",
+                "text": "production",
+                "type": "plain_text"
+              },
+              {
+                "name": "NEXT_PUBLIC_APP_URL",
+                "text": "https://gachia.com",
+                "type": "plain_text"
+              }
+            ]
+          }
+        }
+      },
+      "acceptance": {
+        "local": {
+          "status": "candidate_acceptance_passed",
+          "startedAt": "2026-10-25T03:00:03.889Z",
+          "finishedAt": "2026-10-25T03:00:41.263Z",
+          "pages": 27,
+          "assets": 136,
+          "browsers": 6,
+          "sitemap": {
+            "urls": 27,
+            "unchangedUrlSet": true,
+            "sha256": "33942cef7938f589c82001c4eeac0a63cd68aef8b177539229a12e0999628dc0"
+          },
+          "requests": 173
+        },
+        "preview": {
+          "status": "candidate_acceptance_passed",
+          "startedAt": "2026-10-25T03:14:16.257Z",
+          "finishedAt": "2026-10-25T03:16:15.079Z",
+          "pages": 27,
+          "assets": 136,
+          "browsers": 6,
+          "sitemap": {
+            "urls": 27,
+            "unchangedUrlSet": true,
+            "sha256": "33942cef7938f589c82001c4eeac0a63cd68aef8b177539229a12e0999628dc0"
+          },
+          "requests": 169
+        },
+        "production": {
+          "status": "candidate_acceptance_passed",
+          "startedAt": "2026-10-25T03:16:50.534Z",
+          "finishedAt": "2026-10-25T03:18:56.893Z",
+          "pages": 27,
+          "assets": 136,
+          "browsers": 6,
+          "sitemap": {
+            "urls": 27,
+            "unchangedUrlSet": true,
+            "sha256": "33942cef7938f589c82001c4eeac0a63cd68aef8b177539229a12e0999628dc0"
+          },
+          "requests": 169
+        }
+      },
+      "rollback": {
+        "status": "local_compatibility_fallback_verified_not_deployed",
+        "at": "2026-10-25T03:00:58.472Z",
+        "game": "lvmeng",
+        "oldVersionId": "815be742-10a4-4609-a32a-cfd0cd968487",
+        "oldCloudModuleSha256": "10bbf73edaa94c3288c969799af701c08c5039bfc2c973648355ca4ef663e715",
+        "wrapperSha256": "d20ffc9dacb558bd160c7a582a31559ec9445783284d6079ab66cfa4a0730147",
+        "assetManifestSha256": "e426504adab6c6a9053d9f0927a34da2e8479bb93c7a99ceae90d9668cc9a064",
+        "sourceCommit": "not_attested",
+        "cloudRollbackDrill": false,
+        "pages": 27,
+        "assets": 136,
+        "limitations": [
+          "Local HTTP, host policy and old/new static bytes only; not online rollback drill or browser acceptance.",
+          "Old renderer restores previous runtime and old Lvmeng storage behavior.",
+          "Raw version rollback cannot prove new chunks remain available.",
+          "This local-only config is not an approved remote fallback target."
+        ]
+      }
+    }
+  },
+  "verification": {
+    "releaseNodeTests": {
+      "passed": 239,
+      "failed": 0
+    },
+    "releasePythonTests": {
+      "passed": 30,
+      "failed": 0
+    },
+    "freshUnitTests": {
+      "passed": 817,
+      "existingSkipped": 17
+    },
+    "typeCheckTasks": 9,
+    "controlPlane": {
+      "at": "2026-10-25T03:21:46.657Z",
+      "status": "all_deployments_bindings_settings_routes_domains_reconciled",
+      "changedServices": [
+        "gachia-game-nte",
+        "gachia-game-lvmeng"
+      ],
+      "allowedSettingsMetadataChanges": {
+        "gachia-game-nte": "S2.22 nte candidate c86b08236373199f390b35acf1737eed429735ef",
+        "gachia-game-lvmeng": "S2.22 lvmeng candidate c86b08236373199f390b35acf1737eed429735ef"
+      },
+      "nonVersionedRuntimeSettingsUnchanged": true,
+      "workerInventoryUnchanged": true,
+      "routerRoutesDomainsUnchanged": true,
+      "unrelatedServicesUnchanged": true,
+      "lastProductionAcceptanceAt": "2026-10-25T03:21:02.746Z",
+      "postAcceptanceControlPlaneEqual": true,
+      "comparedSnapshots": [
+        "control-final.json",
+        "control-post-acceptance.json"
+      ]
+    },
+    "publicImages": {
+      "images": 45,
+      "failures": 1,
+      "gapBaseline": {
+        "at": "2026-10-25T03:13:23.824Z",
+        "status": "existing_shared_image_gap_proven_not_candidate_path_regression",
+        "oldCloudVersion": "6b079ce0-7fce-4bef-a649-150c1a947135",
+        "oldGitSource": "not_attested",
+        "publicImageGap": {
+          "path": "/images/characters/chaos.webp",
+          "status": 404,
+          "contentType": "text/html; charset=utf-8",
+          "owner": "main",
+          "bytes": 9700,
+          "sha256": "a58d3b929d457286f84b5fc23792322a451f4cae9659eb11cda673bdab6c13a7"
+        },
+        "records": [
+          {
+            "kind": "old_cloud_renderer",
+            "status": 200,
+            "images": [
+              "/images/logo.webp",
+              "/images/characters/chaos.webp"
+            ],
+            "htmlSha256": "b7af154d78596c946eed6087ab10b1354f10a1f4899794d0d4c262de25730158"
+          },
+          {
+            "kind": "candidate",
+            "status": 200,
+            "images": [
+              "/images/logo.webp",
+              "/images/characters/chaos.webp"
+            ],
+            "htmlSha256": "5abe114ec116898ea0fffb7a43635c5cc93bffaf91351929d247ce5f6bd8405a"
+          }
+        ],
+        "decision": "Do not claim all images passed. Preserve existing data/identity, do not invent artwork or deploy unrelated Main. Track separately for verified image source or deliberate placeholder policy."
+      },
+      "previewLimitation": "Game direct/version preview has only logo; character images are shared Main /images assets. This production audit checks their public owner, HTTP type and bytes; standalone preview screenshots may omit those images."
+    },
+    "sitemapGraph": {
+      "documents": 6,
+      "counts": {
+        "main": 4515,
+        "azur-promilia": 150,
+        "genshin": 1572,
+        "lvmeng": 27,
+        "nte": 389
+      },
+      "unionCount": 6653,
+      "mainArtifactEqual": true,
+      "fallbackCoverage": {
+        "requiredCount": 171,
+        "missingCount": 0,
+        "missing": [],
+        "status": "main_fallback_urls_present"
+      }
+    },
+    "crossOwner": {
+      "http": 15,
+      "ownerChecks": 19,
+      "mainNteDetails": 171,
+      "browsers": 8,
+      "nativeOwnerHops": 16
+    }
+  },
+  "preservedFailures": [
+    {
+      "record": "public-images.log",
+      "explanation": "Expanded 45-image public audit found existing Main-owned /images/characters/chaos.webp 404. Actual captured old cloud renderer and candidate both reference it. 44 other images passed; keep this audit failure and track separately, not a candidate path regression or an all-images pass."
+    },
+    {
+      "record": "nte-production.log",
+      "explanation": "First production acceptance passed 504 pages and 170 static checks then stopped on Main-owned unknown-section 301 versus a wrong 404 expectation. Main source proves the exact hub redirect; verification-only patch and new regression test, no Worker rebuild/re-upload/redeployment. Full second production run is separate."
+    },
+    {
+      "record": "nte-capture.log",
+      "explanation": "Read-only capture expected a Wrangler-composed preview suffix from the raw subdomain API. Corrected to actual enabled/previews_enabled fields; no cloud write."
+    },
+    {
+      "record": "nte-parity.log",
+      "explanation": "Legacy parity invoked without preview origin and rejected. Obsolete mandatory ja hreflang contract replaced by full current-policy acceptance, not marked passed."
+    },
+    {
+      "record": "nte-upload-operation.log",
+      "explanation": "Upload completed without live traffic change; strict gate stopped on latest-version workers/message metadata. Exact operator message reconciled read-only, no re-upload; all runtime settings/deployments unchanged."
+    }
+  ],
+  "limitations": [
+    "Existing Main-owned NTE chaos portrait is still 404; expanded image audit is not all green. Dedicated standalone preview also lacks Main-owned character images by design; public-domain image checks are separate.",
+    "Old production Git source is not attested and historical static inventory completeness is not asserted.",
+    "Old renderer plus new/old assets passed local HTTP compatibility, not an online rollback drill or independently approved remote fallback target.",
+    "Operator build and hashes are not remote build attestation or independent production approval.",
+    "Main original CI failure remains failure; previous successful read-only recovery receipt remains separate.",
+    "No full performance audit, content fact audit, Worker consolidation, off-device restore exercise or disk cleanup performed.",
+    "Existing dedicated search and Genshin metadata/navigation backlog remains outside this release."
+  ],
+  "evidence": [
+    {
+      "path": ".release-records/s2-22/accept-candidate.mjs",
+      "bytes": 2091,
+      "sha256": "e26209c83bb93b6361ee25c760c29cc6b3c7fe26f76f476ffd66c387adeeec39"
+    },
+    {
+      "path": ".release-records/s2-22/actions-observation.json",
+      "bytes": 295,
+      "sha256": "dc9d6f2695473069b03576846981c9a7d932d10a0c851d36d5f94281d78b73fa"
+    },
+    {
+      "path": ".release-records/s2-22/browser-assets-1440.jsonl",
+      "bytes": 1481,
+      "sha256": "8794068dde4e0e9fa359024a281015464cbef012e23f7e1a1fab31466b78a530"
+    },
+    {
+      "path": ".release-records/s2-22/browser-assets-390.jsonl",
+      "bytes": 1481,
+      "sha256": "28c68f47774eb8cde5d00559ca2437641bb6278aefa3bd474cbae6d5a185c2cb"
+    },
+    {
+      "path": ".release-records/s2-22/build-candidate.mjs",
+      "bytes": 2996,
+      "sha256": "d94e7a4bcf9eb4f0c5f6c18a474a928aba85a04bcd8edae24c008f2e4e58d3c6"
+    },
+    {
+      "path": ".release-records/s2-22/capture-previous-v2.mjs",
+      "bytes": 4622,
+      "sha256": "532a88b5d8716b706bad34207a0251794d9568434b043985d10f5f719d4eca41"
+    },
+    {
+      "path": ".release-records/s2-22/capture-previous.mjs",
+      "bytes": 4653,
+      "sha256": "01f581aae8e7cce746491d795f4c62eb425f68e0f8e89e3aef3dc08532fe853a"
+    },
+    {
+      "path": ".release-records/s2-22/closeout-docs.mjs",
+      "bytes": 8514,
+      "sha256": "530877bebc5dbf3b39f5b499e298f6df6b2d0c6b9983d71d9d8909b65566a96e"
+    },
+    {
+      "path": ".release-records/s2-22/cloud-before.json",
+      "bytes": 32265,
+      "sha256": "730b2903541e316fcedd71d771a2fc3a4ba4ad3e5b154de9cac31b4e3a209b8a"
+    },
+    {
+      "path": ".release-records/s2-22/cloud-control.mjs",
+      "bytes": 7137,
+      "sha256": "406dd9bf51f7a6c09ae53b0499d55563af955bb3ea7da2ef32d0bf8afb4429f4"
+    },
+    {
+      "path": ".release-records/s2-22/cloud-snapshot.mjs",
+      "bytes": 3073,
+      "sha256": "0f89e189cb43f7921181bd9d900a19b976e3217a023893fd459af73015c1754a"
+    },
+    {
+      "path": ".release-records/s2-22/control-final.json",
+      "bytes": 19235,
+      "sha256": "702be10a087d441d307725af379ba664072801ec05e3a6c12839e6066d804545"
+    },
+    {
+      "path": ".release-records/s2-22/control-lvmeng-after-promotion.json",
+      "bytes": 19235,
+      "sha256": "cc83a0a9e732ffd140c186c3992df8d0a0d28269e367a7df0a2f1a5c03624f77"
+    },
+    {
+      "path": ".release-records/s2-22/control-lvmeng-after-upload.json",
+      "bytes": 19164,
+      "sha256": "bad9e1a9efb29f9f2fcff12716569c92d9f6797da8d00dac559be0db13bd7479"
+    },
+    {
+      "path": ".release-records/s2-22/control-lvmeng-before-promotion.json",
+      "bytes": 19164,
+      "sha256": "b3d58a93663f735785fdff7794cc17cd354d5094dcc9ac489b1918a0cae7aa42"
+    },
+    {
+      "path": ".release-records/s2-22/control-lvmeng-before-upload.json",
+      "bytes": 19068,
+      "sha256": "7d1a2598c40248a77bd7a242879d1728b0f61dd02d4add02cabdc2e08e9e8f98"
+    },
+    {
+      "path": ".release-records/s2-22/control-nte-after-promotion.json",
+      "bytes": 19068,
+      "sha256": "0499a5c17f96098fdd8051e9c8cf86aece7792dbef770224c04fcb8fcd1886c0"
+    },
+    {
+      "path": ".release-records/s2-22/control-nte-after-upload.json",
+      "bytes": 19000,
+      "sha256": "2c3677a61213d0913f0cd39c3a5323ddbf8d90b7ada4d316d40d7bc3883185ff"
+    },
+    {
+      "path": ".release-records/s2-22/control-nte-before-promotion.json",
+      "bytes": 19000,
+      "sha256": "354719db27b7437082e28c661b95d1a3bc77a0fb8d7ef416e850b3321e5da15f"
+    },
+    {
+      "path": ".release-records/s2-22/control-nte-before-upload.json",
+      "bytes": 18907,
+      "sha256": "09f56c8b91cc5fbb73dbb3cbef7423a3136deab5100150f836046e0f7355c363"
+    },
+    {
+      "path": ".release-records/s2-22/control-nte-upload-readonly-revalidation.json",
+      "bytes": 19000,
+      "sha256": "e6ac8162ca05d31a80bf6e3533977ca23e44c7f7cd9fee07efc2f4d9af84fc4e"
+    },
+    {
+      "path": ".release-records/s2-22/control-plane-acceptance.json",
+      "bytes": 574,
+      "sha256": "852dde7918d0fe6b496726edad7b27c4120afa11e88cf8bd9d7a3058115d290f"
+    },
+    {
+      "path": ".release-records/s2-22/control-plane-post-acceptance.json",
+      "bytes": 768,
+      "sha256": "fca8f5fdd1de89c2736d63e629d9f2b2215902c54fa844652061bddca2e42469"
+    },
+    {
+      "path": ".release-records/s2-22/control-post-acceptance.json",
+      "bytes": 19235,
+      "sha256": "5a1d629b6737b72d455abb0926272917568a7a4fe7f0360dba8b725a50c68d92"
+    },
+    {
+      "path": ".release-records/s2-22/cross-owner-acceptance.json",
+      "bytes": 23218,
+      "sha256": "b3d9e732b2568a3f9c781ca5a59bf8108b842d1a18b1c40b294b680e698d0dbb"
+    },
+    {
+      "path": ".release-records/s2-22/cross-owner.log",
+      "bytes": 297,
+      "sha256": "4c3daba11175af7d09af4504357db6ba60bb8f72f3904a44d903276eb4d600a0"
+    },
+    {
+      "path": ".release-records/s2-22/cross-owner.mjs",
+      "bytes": 4085,
+      "sha256": "e61d0c15939ebe5ff9d998692dc6f9494ac9e8d936d77698b65c5af2fc5c0f5b"
+    },
+    {
+      "path": ".release-records/s2-22/final-control.log",
+      "bytes": 135,
+      "sha256": "bb253e567419e534a271b7287cfc1bc201d521077c9817bb54a90e22d22d30f8"
+    },
+    {
+      "path": ".release-records/s2-22/final-verification.mjs",
+      "bytes": 1786,
+      "sha256": "d689814b1af38fe5b70bbcdc00ac6ae7a216f7055a12ee532c42488d80d314f1"
+    },
+    {
+      "path": ".release-records/s2-22/finalize-existing-nte-upload.mjs",
+      "bytes": 1822,
+      "sha256": "fea49248c859c4499950a2249299b91a259007802fde1d1327a8800e813f154d"
+    },
+    {
+      "path": ".release-records/s2-22/generate-report.mjs",
+      "bytes": 7093,
+      "sha256": "d8ea703275c5ffe7135907e686737af1567e9cf4f000aee25a453bbada3b4697"
+    },
+    {
+      "path": ".release-records/s2-22/image-gap-baseline.json",
+      "bytes": 1194,
+      "sha256": "359f81244e47e4cc9f7283452301e4238537e297824104e839a8be5b8ccf99ff"
+    },
+    {
+      "path": ".release-records/s2-22/image-gap-baseline.log",
+      "bytes": 145,
+      "sha256": "9505af924572d95c05aa4703349c6f496a60fb28e7922853d581335552bc3c05"
+    },
+    {
+      "path": ".release-records/s2-22/image-gap-baseline.mjs",
+      "bytes": 2237,
+      "sha256": "50ee27559f0d9b853b42fee13b17367294b20e655c1da3bfe960b7bf8a79ff78"
+    },
+    {
+      "path": ".release-records/s2-22/live-owner-version-promotion.draft.md",
+      "bytes": 7559,
+      "sha256": "d2df11f34f854e39e4946282fc5403b62b664db28661041be706e6c7009aa087"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng-build.log",
+      "bytes": 6472,
+      "sha256": "c8659262441f26d7f3af74ed4c06d809d5070639c23800b5469fc2b33cb82b84"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng-capture-v2.log",
+      "bytes": 186,
+      "sha256": "aab811c84263ecfe1428621069316a44a8da8332aa2c353d61651150b6769d37"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng-local.log",
+      "bytes": 125,
+      "sha256": "a0535060fddfd2946c3743d8ce48222f570bfd33e19833c3d68d1a1fd0d01497"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng-preview.log",
+      "bytes": 305,
+      "sha256": "75e9b5715c9c55b39fe83a903fbb9853af94f519ee5e82ab83dfaaa22d47534b"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng-production.log",
+      "bytes": 308,
+      "sha256": "1406e895e2de7d66c975d1d461749db56ac81c346ea0b6a9850663ea3e20e0d5"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng-promote-operation.log",
+      "bytes": 272,
+      "sha256": "f63959db07e8eb84e0669f269d82f1c4bf4a9d987de7bde114feedc2ba8d970e"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng-rollback-local.log",
+      "bytes": 104,
+      "sha256": "6465a877201834749bd4a97d3091597abdb442369b2e35d7f6fd95b8c7773bf1"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng-subdomain-observed.json",
+      "bytes": 125,
+      "sha256": "af7e4d3721be77fe7c890c34e9e13188bb731427c7476b643487bae91611afab"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng-upload-operation.log",
+      "bytes": 266,
+      "sha256": "a56cd11fa256bc673fe9e32432538d3de1a60950f1cb2e98f5bf898c769809e3"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/artifact-pin.json",
+      "bytes": 421,
+      "sha256": "42ced288890a5fde87966278a0ef11f65df9eb72328a88b8dba502a6e8efdcbb"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/artifact/candidate-sitemap.xml",
+      "bytes": 4611,
+      "sha256": "33942cef7938f589c82001c4eeac0a63cd68aef8b177539229a12e0999628dc0"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/artifact/manifest.json",
+      "bytes": 657287,
+      "sha256": "e426504adab6c6a9053d9f0927a34da2e8479bb93c7a99ceae90d9668cc9a064"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/build-result.json",
+      "bytes": 484,
+      "sha256": "f931b644e83631f014f68fef38f3f000e6afe03dac82f5b4b71bb581d1860d13"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/local-acceptance-1/acceptance.jsonl",
+      "bytes": 32447,
+      "sha256": "14339b0ad6d08853a93323c5a415f1b4467e7df2c4c711d88fbda973c045f9c1"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/local-acceptance-1/browser-events.jsonl",
+      "bytes": 461,
+      "sha256": "d1e70f227b91526c5f915083a3ef84ada579bd2f8f5ae39769d75bef787599a5"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/local-acceptance-1/lvmeng-1440.png",
+      "bytes": 498862,
+      "sha256": "5e88bb8bc91038c58f796bfe51e4384674b2264ccc848fd31e31f9eb4f8a5637"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/local-acceptance-1/lvmeng-390.png",
+      "bytes": 209904,
+      "sha256": "2b0da8a398cf57bbf034b5e853cb426f439ec2a5c6d4b07d8196fbc7d8ba582f"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/local-acceptance-1/worker.log",
+      "bytes": 58572,
+      "sha256": "d2d33e5491633d0e713d3b5ece0aee5ff7a7400518b1f035b9213dfa12d8c2ca"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/preview-acceptance-1/acceptance.jsonl",
+      "bytes": 37337,
+      "sha256": "5fc96b87d7f0c91980ffb2b4a12918d4f3dbeae588d2e84802841aeb67bfc29f"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/preview-acceptance-1/browser-events.jsonl",
+      "bytes": 535,
+      "sha256": "a364e606c14c5ea0aed1674504b58b482992d11fcf545da489c544ae91228ba3"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/preview-acceptance-1/lvmeng-1440.png",
+      "bytes": 498862,
+      "sha256": "5e88bb8bc91038c58f796bfe51e4384674b2264ccc848fd31e31f9eb4f8a5637"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/preview-acceptance-1/lvmeng-390.png",
+      "bytes": 209904,
+      "sha256": "2b0da8a398cf57bbf034b5e853cb426f439ec2a5c6d4b07d8196fbc7d8ba582f"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/previous-assets-receipt.json",
+      "bytes": 7657,
+      "sha256": "5129747a2f8913d1c58f7bd6508cc71087efb329c512627f9e66299adf6418d0"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/previous-production-worker.multipart",
+      "bytes": 5118815,
+      "sha256": "490132ccfa0881954471af111a922316fbdd4010c6ab6cfcbee3772d8bab9316"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/previous-robots.txt",
+      "bytes": 3123,
+      "sha256": "23a5dd24285b7363e87779b8097b8fcb76d2c0f338886ca518f5a9dead936d08"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/previous-sitemap.xml",
+      "bytes": 4611,
+      "sha256": "33942cef7938f589c82001c4eeac0a63cd68aef8b177539229a12e0999628dc0"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/previous-static-inventory.json",
+      "bytes": 2620,
+      "sha256": "856830bcbe9d028732fbec15df813539611cc6c419c6b5ff1f4a83f37f4f39e6"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/production-acceptance-1/acceptance.jsonl",
+      "bytes": 33897,
+      "sha256": "ce03c30f7d9e8120297e4b1dc7a2e1fcfd7ea90c215e31b5ae4913082309ba7f"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/production-acceptance-1/browser-events.jsonl",
+      "bytes": 453,
+      "sha256": "8745809266ae0384435e9afd3cb89c60f240dbec4ff00b4ecad0d37939d02058"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/production-acceptance-1/lvmeng-1440.png",
+      "bytes": 498862,
+      "sha256": "5e88bb8bc91038c58f796bfe51e4384674b2264ccc848fd31e31f9eb4f8a5637"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/production-acceptance-1/lvmeng-390.png",
+      "bytes": 209904,
+      "sha256": "2b0da8a398cf57bbf034b5e853cb426f439ec2a5c6d4b07d8196fbc7d8ba582f"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/promote.log",
+      "bytes": 1508,
+      "sha256": "2f820033abe36b285a8beadd78657743c2c8002d2a1ad3e24d5a59dadce073eb"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/promotion-result.json",
+      "bytes": 2579,
+      "sha256": "3240735cc8c2e1e016a75b968e2feeaf35e95a74b44b0934e5531a690f36ee81"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/published-worker.multipart",
+      "bytes": 5409908,
+      "sha256": "72ee79508eb65d3faedf679bff2387ba2dce618a0c536a6ced1772b621df9b42"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/rollback-local/acceptance.jsonl",
+      "bytes": 31665,
+      "sha256": "ab6eb2efd990ea77390e135cf41b75b4bbd0c310ccb36a42ac0078fd169f81b1"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/rollback-local/previous-worker.js",
+      "bytes": 5118564,
+      "sha256": "10bbf73edaa94c3288c969799af701c08c5039bfc2c973648355ca4ef663e715"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/rollback-local/result.json",
+      "bytes": 910,
+      "sha256": "450e91e6df6fb6e94c635a4b15155fd1f0165dcf096f2096fb74ea15e7106a77"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/rollback-local/worker.js",
+      "bytes": 627,
+      "sha256": "d20ffc9dacb558bd160c7a582a31559ec9445783284d6079ab66cfa4a0730147"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/rollback-local/worker.log",
+      "bytes": 18643,
+      "sha256": "72ffd4a836927bc0fe2ba3da29ed5044f44c898ea87dd74fe33189806dad4b1b"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/rollback-local/wrangler.json",
+      "bytes": 571,
+      "sha256": "8983d3767e54db4be0b1482c8b7043bdc7c9e615bbc6568973cc11dff502baec"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/rollback-version-final.json",
+      "bytes": 1815,
+      "sha256": "a4726ffc015c3f45b3a75beddb27bef3c2e277c37d18701ff9692653476ddca0"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/subdomain.json",
+      "bytes": 50,
+      "sha256": "b9dffb49e429b642816eac2c4caaeeb9646dfcbf1efec1ac12c1085ebd0c42f7"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/upload-result.json",
+      "bytes": 2573,
+      "sha256": "7410b81ae610be1db92350811f6230b0500b23155230beee22316f506e7b24d4"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/upload.log",
+      "bytes": 2480,
+      "sha256": "f305b49385a8153c3d523d913b65101d4fd1d10cd9bb4a5cd6cfb12978d78e89"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/uploaded-worker.multipart",
+      "bytes": 5410743,
+      "sha256": "fbab4b7d77da51fde71a33cc4255ae92039a3fe73829820eee4a0a577114b789"
+    },
+    {
+      "path": ".release-records/s2-22/lvmeng/wrangler.execution.json",
+      "bytes": 926,
+      "sha256": "f4673de110ced9ca8f113a25a9a32bde04de6eda7582a7fd671b3cb3b8cb328d"
+    },
+    {
+      "path": ".release-records/s2-22/nte-build.log",
+      "bytes": 9322,
+      "sha256": "111910e94ac42d234ec259554b876a2feec53dc4804a67e295521e25d97722a3"
+    },
+    {
+      "path": ".release-records/s2-22/nte-capture-v2.log",
+      "bytes": 186,
+      "sha256": "547b29cf9c271cd5ab50ec1548fd4327d3a8e5c51a2804bd5902ada80b827f35"
+    },
+    {
+      "path": ".release-records/s2-22/nte-capture.log",
+      "bytes": 596,
+      "sha256": "265af413dd8a75bde08584bb826bec0350c701d5ebbdef99b0dce9de1a7ae7ed"
+    },
+    {
+      "path": ".release-records/s2-22/nte-indexing.log",
+      "bytes": 440,
+      "sha256": "1c1dbee8c6a93a8329898a12327bd14f78889eef940c2e5a64234cef3c047cc5"
+    },
+    {
+      "path": ".release-records/s2-22/nte-local.log",
+      "bytes": 124,
+      "sha256": "9ea814eab44328f7dccaba7cf7b5ec49034ac14df972963ebfe35f0174f2d948"
+    },
+    {
+      "path": ".release-records/s2-22/nte-parity.log",
+      "bytes": 1098,
+      "sha256": "38d912cf5ccfd7ee0276f6f34d030daa2d06edacb8baf1e2d29ccdfdfa0c7cd2"
+    },
+    {
+      "path": ".release-records/s2-22/nte-preview.log",
+      "bytes": 304,
+      "sha256": "d0d54d1b77cb0276cb8f39db7f5e0a333f2050d70223f68cd9ab7d6fe8f40618"
+    },
+    {
+      "path": ".release-records/s2-22/nte-production-2.log",
+      "bytes": 307,
+      "sha256": "522b33ce71bcf7ec82b7c87e558fc7999a66a83ddd21246c7276fffecdef9d54"
+    },
+    {
+      "path": ".release-records/s2-22/nte-production.log",
+      "bytes": 977,
+      "sha256": "5a26a90ead5cba937067e0462d264f9c28aae0649d05c52c7430633005e83ede"
+    },
+    {
+      "path": ".release-records/s2-22/nte-promote-operation.log",
+      "bytes": 269,
+      "sha256": "789a3c2a9105e8fc7940416b49e9c86644a1158a49c2e0c7066f90606223c026"
+    },
+    {
+      "path": ".release-records/s2-22/nte-rollback-local.log",
+      "bytes": 102,
+      "sha256": "740d0d179bdc8e2f3886e5ddfc457de597a28ecf177a4df588922269daacea95"
+    },
+    {
+      "path": ".release-records/s2-22/nte-subdomain-observed.json",
+      "bytes": 125,
+      "sha256": "af7e4d3721be77fe7c890c34e9e13188bb731427c7476b643487bae91611afab"
+    },
+    {
+      "path": ".release-records/s2-22/nte-upload-operation.log",
+      "bytes": 1996,
+      "sha256": "672181e1bfa6bfe0719ab40ef58a22ab7bd18967947f2b9b77a1df5da9aac5e0"
+    },
+    {
+      "path": ".release-records/s2-22/nte-upload-revalidation.log",
+      "bytes": 260,
+      "sha256": "26e9b1c3585cd137fea7080794cdcfedd7374235c9e52b702131db08951fe2c1"
+    },
+    {
+      "path": ".release-records/s2-22/nte/artifact-pin.json",
+      "bytes": 415,
+      "sha256": "6b23abe217f574eff366ed4afc7dc71779153385926f3c1f8802dd9558a1561f"
+    },
+    {
+      "path": ".release-records/s2-22/nte/artifact/candidate-sitemap.xml",
+      "bytes": 50332,
+      "sha256": "b8cfec0de4937f0e9a5eb9dde3690c80fe5812b5a9323cb9e10d1ba807571e51"
+    },
+    {
+      "path": ".release-records/s2-22/nte/artifact/manifest.json",
+      "bytes": 675966,
+      "sha256": "384ccf5f648c67c5cd9c66ead8a0bf2f8981af56dea3577c0e707e5418fc1f61"
+    },
+    {
+      "path": ".release-records/s2-22/nte/build-result.json",
+      "bytes": 478,
+      "sha256": "f2cc1366da3f4c6038dae9788260d999e8a7470de4a8fc69df071a90e8daf1cb"
+    },
+    {
+      "path": ".release-records/s2-22/nte/image-gap-candidate/chaos.html",
+      "bytes": 28353,
+      "sha256": "5abe114ec116898ea0fffb7a43635c5cc93bffaf91351929d247ce5f6bd8405a"
+    },
+    {
+      "path": ".release-records/s2-22/nte/image-gap-old_cloud_renderer/chaos.html",
+      "bytes": 28355,
+      "sha256": "b7af154d78596c946eed6087ab10b1354f10a1f4899794d0d4c262de25730158"
+    },
+    {
+      "path": ".release-records/s2-22/nte/local-acceptance-1/acceptance.jsonl",
+      "bytes": 103125,
+      "sha256": "4bdbff67c74c673a077d4b7b71788cf5313c700b993e288490aa72fc9ae42694"
+    },
+    {
+      "path": ".release-records/s2-22/nte/local-acceptance-1/browser-events.jsonl",
+      "bytes": 1347,
+      "sha256": "ba933eae33c8888eaeea852d950438132662c62bfd54441535c9eb01944f407d"
+    },
+    {
+      "path": ".release-records/s2-22/nte/local-acceptance-1/nte-1440.png",
+      "bytes": 132130,
+      "sha256": "51333282d6558ad42e599a9a362c9fe732ef25d406dde14ceeac678c2938cf45"
+    },
+    {
+      "path": ".release-records/s2-22/nte/local-acceptance-1/nte-390.png",
+      "bytes": 63040,
+      "sha256": "4475ede5c8934d41c478d8e1874036cbf4c246c551476df3a0db3d09441f490d"
+    },
+    {
+      "path": ".release-records/s2-22/nte/local-acceptance-1/worker.log",
+      "bytes": 73399,
+      "sha256": "726ce0c3fb645d5a5e3991f34f8b636160e74d987264cfad3027c568317327ac"
+    },
+    {
+      "path": ".release-records/s2-22/nte/preview-acceptance-1/acceptance.jsonl",
+      "bytes": 108701,
+      "sha256": "c474994ca26c1bc492323496c9db9d93b82f3944c54f1b744b52ad95ba45889c"
+    },
+    {
+      "path": ".release-records/s2-22/nte/preview-acceptance-1/browser-events.jsonl",
+      "bytes": 1551,
+      "sha256": "c8b3a3922e6fff87959c2ddf66d314bb2245ac8127c2266ebd8422a9fcfd021f"
+    },
+    {
+      "path": ".release-records/s2-22/nte/preview-acceptance-1/nte-1440.png",
+      "bytes": 132130,
+      "sha256": "51333282d6558ad42e599a9a362c9fe732ef25d406dde14ceeac678c2938cf45"
+    },
+    {
+      "path": ".release-records/s2-22/nte/preview-acceptance-1/nte-390.png",
+      "bytes": 63040,
+      "sha256": "4475ede5c8934d41c478d8e1874036cbf4c246c551476df3a0db3d09441f490d"
+    },
+    {
+      "path": ".release-records/s2-22/nte/previous-assets-receipt.json",
+      "bytes": 9272,
+      "sha256": "635d2af32c61bc44570580b6f45f5797304badd0fdb0cc2eef4bc8dc1dc0159c"
+    },
+    {
+      "path": ".release-records/s2-22/nte/previous-production-worker.multipart",
+      "bytes": 6898414,
+      "sha256": "f855550a13df87c65a0d5c18df89eb8b3f003a1e8dd6b598bd168693e4747991"
+    },
+    {
+      "path": ".release-records/s2-22/nte/previous-robots.txt",
+      "bytes": 3123,
+      "sha256": "23a5dd24285b7363e87779b8097b8fcb76d2c0f338886ca518f5a9dead936d08"
+    },
+    {
+      "path": ".release-records/s2-22/nte/previous-sitemap.xml",
+      "bytes": 50332,
+      "sha256": "b8cfec0de4937f0e9a5eb9dde3690c80fe5812b5a9323cb9e10d1ba807571e51"
+    },
+    {
+      "path": ".release-records/s2-22/nte/previous-static-inventory.json",
+      "bytes": 3227,
+      "sha256": "0446fe13e08d3828426b1260d0c6c7466b6d19becae606c07fd5b10bdf772425"
+    },
+    {
+      "path": ".release-records/s2-22/nte/production-acceptance-1/acceptance.jsonl",
+      "bytes": 102367,
+      "sha256": "df7ea363d4b430107441db3eebc588dc111256c1bcf6ae6c1dd18ba09510ad32"
+    },
+    {
+      "path": ".release-records/s2-22/nte/production-acceptance-2/acceptance.jsonl",
+      "bytes": 104739,
+      "sha256": "24f49a26734fbc25ff5a3ab0224fa1bb1871cc49d0cfe7f87654a49c1945c017"
+    },
+    {
+      "path": ".release-records/s2-22/nte/production-acceptance-2/browser-events.jsonl",
+      "bytes": 1323,
+      "sha256": "3261cf162d2b4e25011f5693531a5c84c9b553091a8a5ef35249c887cbce0f03"
+    },
+    {
+      "path": ".release-records/s2-22/nte/production-acceptance-2/nte-1440.png",
+      "bytes": 206886,
+      "sha256": "353fc9603fc834d467e01090e8971db4f331d607ed46c083527ee1f1a8506e2c"
+    },
+    {
+      "path": ".release-records/s2-22/nte/production-acceptance-2/nte-390.png",
+      "bytes": 141563,
+      "sha256": "61747ec1423358c2339bb306911899f90d600633fff862debc56bda412a9448b"
+    },
+    {
+      "path": ".release-records/s2-22/nte/promote.log",
+      "bytes": 1226,
+      "sha256": "16823f000c99b290b333a7f45b1c63dfa4a8d7b42d94f2ae9cd2e1dc2da772ce"
+    },
+    {
+      "path": ".release-records/s2-22/nte/promotion-result.json",
+      "bytes": 2561,
+      "sha256": "84235c26d9311c70f987e8550258e3582ddb7ee26f75dc826090166fe81d5481"
+    },
+    {
+      "path": ".release-records/s2-22/nte/published-worker.multipart",
+      "bytes": 7201567,
+      "sha256": "91dcd937071faaecf619a085be2a10283dc71ba02737233e06fb5ca39898115f"
+    },
+    {
+      "path": ".release-records/s2-22/nte/rollback-local/acceptance.jsonl",
+      "bytes": 100777,
+      "sha256": "b8d56ee8bea56cf4be0d79dfdee1310eaf342b7fa387f7cd4d88302c44e26306"
+    },
+    {
+      "path": ".release-records/s2-22/nte/rollback-local/previous-worker.js",
+      "bytes": 6898163,
+      "sha256": "516105f95936ba9d27200e8aa41c1cdc5cc054a7820f58059cb251a165bc37b0"
+    },
+    {
+      "path": ".release-records/s2-22/nte/rollback-local/result.json",
+      "bytes": 908,
+      "sha256": "aa8170c7a422e3d43cc7486eab6a32419834829204fae511cf6506f827040891"
+    },
+    {
+      "path": ".release-records/s2-22/nte/rollback-local/worker.js",
+      "bytes": 627,
+      "sha256": "d20ffc9dacb558bd160c7a582a31559ec9445783284d6079ab66cfa4a0730147"
+    },
+    {
+      "path": ".release-records/s2-22/nte/rollback-local/worker.log",
+      "bytes": 51956,
+      "sha256": "772c5bb30cd44e23f1aa53be03745263ba167002d58efa53be87c64687e94c50"
+    },
+    {
+      "path": ".release-records/s2-22/nte/rollback-local/wrangler.json",
+      "bytes": 553,
+      "sha256": "77af8077bcae67beba1cdec07a6aa2be0a75811d743dbae46d244674919600ad"
+    },
+    {
+      "path": ".release-records/s2-22/nte/rollback-version-final.json",
+      "bytes": 1806,
+      "sha256": "a83478afa20a9890cf971923d56359945af288cb7b1c5de932689efb86367066"
+    },
+    {
+      "path": ".release-records/s2-22/nte/subdomain.json",
+      "bytes": 50,
+      "sha256": "b9dffb49e429b642816eac2c4caaeeb9646dfcbf1efec1ac12c1085ebd0c42f7"
+    },
+    {
+      "path": ".release-records/s2-22/nte/upload-result.json",
+      "bytes": 2716,
+      "sha256": "7ae2570e9eadc41dc32da6c0860c8d35b75594228e3dfceaafd4b4af65d16ac2"
+    },
+    {
+      "path": ".release-records/s2-22/nte/upload.log",
+      "bytes": 2690,
+      "sha256": "acc25c3878b7ae0375755508f1eac0ec37daaa08d105f87b31b0a4d9d4723360"
+    },
+    {
+      "path": ".release-records/s2-22/nte/uploaded-worker.multipart",
+      "bytes": 7202390,
+      "sha256": "75facc74bdd9787e8522210f76dc4f3f6ecd3138840224e88a9bac7784b39a65"
+    },
+    {
+      "path": ".release-records/s2-22/nte/wrangler.execution.json",
+      "bytes": 543,
+      "sha256": "90d991e11ce7a9e7eb3d6c242ef39344d4e4775db3fffa715358775a03a16629"
+    },
+    {
+      "path": ".release-records/s2-22/post-acceptance-control.log",
+      "bytes": 93,
+      "sha256": "3f264bd653ae8d72be46a94edfb05af3af47cf233f586d21a54d1819ee1d8a67"
+    },
+    {
+      "path": ".release-records/s2-22/post-acceptance-control.mjs",
+      "bytes": 1017,
+      "sha256": "e4f5e36429aeaf0f72fe887308c1e13452f55119a8af55f2a6428786dc41aae3"
+    },
+    {
+      "path": ".release-records/s2-22/prepare-rollback.mjs",
+      "bytes": 4049,
+      "sha256": "086f8ced5fa9af9607eca5c0b19e3546bd877561ce12fb69134bb524f5a59226"
+    },
+    {
+      "path": ".release-records/s2-22/promote-candidate.mjs",
+      "bytes": 2532,
+      "sha256": "95f29773977c5740406a2736503dfd0d5ffe8de9a89114057290df98d0c2fa53"
+    },
+    {
+      "path": ".release-records/s2-22/public-image-acceptance.json",
+      "bytes": 11668,
+      "sha256": "b53c1d11dd3b22d2681ce3ce9b877abc9486c9eab951538c8c78ac6ce385c96a"
+    },
+    {
+      "path": ".release-records/s2-22/public-images.log",
+      "bytes": 1098,
+      "sha256": "4c17981b930adbfcc7df7831174456a1565cd1f3d38724e2a0eaf275404180eb"
+    },
+    {
+      "path": ".release-records/s2-22/public-images.mjs",
+      "bytes": 1799,
+      "sha256": "9a54f125155710dbe4e16cc381a49c30b0ebffa1d6006f544f3316cc3d772d58"
+    },
+    {
+      "path": ".release-records/s2-22/published-sitemap-graph.json",
+      "bytes": 404597,
+      "sha256": "a4cd8d1afb32fc1f4b1400d2d004f69ab9f9cec6abceeb3ff485a14fab228382"
+    },
+    {
+      "path": ".release-records/s2-22/published-sitemap-graph.log",
+      "bytes": 618,
+      "sha256": "c9848fd6b48ea01009963e60a0a2ad140d8c01fd0b22b502cb8d0c3211b8e288"
+    },
+    {
+      "path": ".release-records/s2-22/release-tests-2.log",
+      "bytes": 49697,
+      "sha256": "4ff4587f5f52315698e14c0125336cd12a9b42a873ea4e2da6d9e6334e16ba89"
+    },
+    {
+      "path": ".release-records/s2-22/release-tests-3.log",
+      "bytes": 49963,
+      "sha256": "448d7a0bebccc8c52b69d1c042b74a0759accae5afc0414bb0f122d128f23005"
+    },
+    {
+      "path": ".release-records/s2-22/release-tests.log",
+      "bytes": 48460,
+      "sha256": "64ae514d963c0e899c790723241e3787c90850867fdbfad68b12a0372ffd22dd"
+    },
+    {
+      "path": ".release-records/s2-22/run-final-verification.sh",
+      "bytes": 517,
+      "sha256": "5c0926d89e42068602e41572ae1763c37c55decf6cac999ab866411e1209148f"
+    },
+    {
+      "path": ".release-records/s2-22/tooling-commit.txt",
+      "bytes": 41,
+      "sha256": "c7c7c934dc296456c649108957efffe4c710542b417a9c66702b27ba0785181f"
+    },
+    {
+      "path": ".release-records/s2-22/type-check-2.log",
+      "bytes": 3416,
+      "sha256": "b26db11e2c10725e738abe9e35350be9e65e7883e6207d90c4e88bb8d92c0fe7"
+    },
+    {
+      "path": ".release-records/s2-22/type-check.log",
+      "bytes": 3395,
+      "sha256": "39ccbfe9d00caa328df8c859cc9f7ffdd878e5566d7e815404e770953839b5aa"
+    },
+    {
+      "path": ".release-records/s2-22/unit-tests.log",
+      "bytes": 117338,
+      "sha256": "68868ed3bd33848c3c36d3c486bdb6c9c3c11c89d5a671ddaa5e1c0e9079966d"
+    },
+    {
+      "path": ".release-records/s2-22/upload-candidate.mjs",
+      "bytes": 2732,
+      "sha256": "075985c462cb3bef395c08cb7d3feab4972799ead909dbacf2bd8d11335ad625"
+    },
+    {
+      "path": ".release-records/s2-22/wrangler-versions-deploy-help.txt",
+      "bytes": 2053,
+      "sha256": "cc5e9918a525dcbd08b6054702db42a430e28a8056a915a23ec9f91efd806816"
+    },
+    {
+      "path": ".release-records/s2-22/wrangler-versions-upload-help.txt",
+      "bytes": 4119,
+      "sha256": "8e87eb3216a015d3ca59345ce4a05a6aec701e3b87d4231b9ccfedea0f7a6507"
+    }
+  ]
+}
