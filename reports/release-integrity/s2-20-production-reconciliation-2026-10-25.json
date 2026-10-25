@@ -1,0 +1,452 @@
+{
+  "schemaVersion": 1,
+  "phase": "S2.20",
+  "recordedAt": "2026-10-25T01:56:45.105094+00:00",
+  "status": "published_main_and_azur_verified_recovery_provenance_closed_independent_game_updates_still_pending",
+  "allRecentDevelopmentDeployed": false,
+  "source": {
+    "baseline": "9bd09f7",
+    "verificationTools": "32278eadac3a195deef034ef1a8347e9e5ca813d",
+    "deployedMain": "2a24738ea1155067842fac491e354e2cd281307c",
+    "repositoryToolsAreNotWorkerRuntime": true,
+    "closeoutIncludesLocalTestedRecoveryIdentityPersistenceOnlyNoNewCloudRun": true
+  },
+  "scope": {
+    "workerDeployments": 0,
+    "routerDeployed": false,
+    "routingOrDomainChanges": false,
+    "bindingChanges": false,
+    "databaseChanges": false,
+    "accountsRestored": false,
+    "workersMergedOrAdded": false,
+    "diskCleanup": false,
+    "rollbackPerformed": false,
+    "originalDirtyWorkspaceUsed": false,
+    "publicProbeMutationMethods": "disabled-account rejection probes with synthetic retired cookie and malformed body; unauthenticated IndexNow 401; no business writes or search-engine submissions"
+  },
+  "deployment": {
+    "finalCloudSnapshotAt": "2026-10-25T01:52:02.834Z",
+    "services": {
+      "gachia": {
+        "id": "7f51f348-5416-4168-a1d4-8768992c457f",
+        "createdOn": "2026-10-24T19:13:45.294888Z",
+        "versions": [
+          {
+            "version_id": "c0615321-071d-4f44-b635-70dbdba117c2",
+            "percentage": 100
+          }
+        ]
+      },
+      "gachia-staging": {
+        "id": "37fd8892-7455-463d-916a-ebffdbddac0d",
+        "createdOn": "2026-10-24T19:01:16.646524Z",
+        "versions": [
+          {
+            "version_id": "338d9de9-e536-4921-b870-3e05ca2ac9d8",
+            "percentage": 100
+          }
+        ]
+      },
+      "gachia-router": {
+        "id": "04a74338-c9ba-4e87-9857-0fe414457ff5",
+        "createdOn": "2026-10-09T14:55:23.062535Z",
+        "versions": [
+          {
+            "version_id": "239bb325-998c-4893-98e5-ddd24d50c99a",
+            "percentage": 100
+          }
+        ]
+      },
+      "gachia-game-genshin": {
+        "id": "c087254a-58f4-4c61-b92b-0fd44d9f2f2b",
+        "createdOn": "2026-10-15T09:51:39.317581Z",
+        "versions": [
+          {
+            "version_id": "b2952171-bf58-4d64-a16e-8cea41cf9529",
+            "percentage": 100
+          }
+        ]
+      },
+      "gachia-game-nte": {
+        "id": "c344161b-5b10-4e87-8551-4e950366a5f1",
+        "createdOn": "2026-10-18T11:23:20.107554Z",
+        "versions": [
+          {
+            "version_id": "6b079ce0-7fce-4bef-a649-150c1a947135",
+            "percentage": 100
+          }
+        ]
+      },
+      "gachia-game-lvmeng": {
+        "id": "d04a1d7d-d9d0-46d5-8f26-b8985e596f64",
+        "createdOn": "2026-10-18T11:22:43.202469Z",
+        "versions": [
+          {
+            "version_id": "815be742-10a4-4609-a32a-cfd0cd968487",
+            "percentage": 100
+          }
+        ]
+      },
+      "gachia-game-azur-promilia": {
+        "id": "fcc7ddf4-f591-4607-9d95-f28ba096229d",
+        "createdOn": "2026-10-24T16:53:32.568953Z",
+        "versions": [
+          {
+            "version_id": "9867e978-20fa-46f9-8dd4-c96c400e6919",
+            "percentage": 100
+          }
+        ]
+      },
+      "gachia-game-azur-promilia-staging": {
+        "id": "95c17034-e3af-4b21-ae7b-f504e59e0fd4",
+        "createdOn": "2026-10-24T10:49:52.035337Z",
+        "versions": [
+          {
+            "version_id": "c6b46257-2441-4cc2-b9c6-c31d4d4d1cca",
+            "percentage": 100
+          }
+        ]
+      }
+    },
+    "beforeAfterAllEightServiceSnapshotsEqual": true,
+    "routesAndDomainsEqual": true
+  },
+  "mainRecovery": {
+    "runId": 40151438723,
+    "jobId": 121043633348,
+    "conclusion": "success",
+    "workflow": ".github/workflows/web-production-recovery.yml",
+    "headSha": "32278eadac3a195deef034ef1a8347e9e5ca813d",
+    "source": {
+      "artifactId": "12571493654",
+      "archiveSha256": "ee750c335f49ce18bea4ff184e8dcd7d16b271f160f4c3c8161133ca46f671ee",
+      "versionId": "c0615321-071d-4f44-b635-70dbdba117c2",
+      "runId": 40121743063,
+      "headSha": "2a24738ea1155067842fac491e354e2cd281307c",
+      "tarSha256": "ba5c25f0b54976b8baf1c90e86f87b4abd385d156df05726ad504079c5003e1f"
+    },
+    "startedAt": "2026-10-25T01:39:46.459Z",
+    "finishedAt": "2026-10-25T01:50:21.904Z",
+    "artifacts": [
+      {
+        "id": 12583545510,
+        "name": "main-recovery-evidence-40151438723-1",
+        "digest": "sha256:7c562403101353c2b7c2462c9a60b62c6c09c1c9984853f13deb888d4b6ebcf6",
+        "size_in_bytes": 157763,
+        "expires_at": "2026-11-24T01:50:23Z"
+      },
+      {
+        "id": 12583191927,
+        "name": "main-recovery-receipt-40151438723-1",
+        "digest": "sha256:4198684398e6c7be0fa326224fb4c689f9ffdb85e7afc3052f12caa6fe4931e1",
+        "size_in_bytes": 2376,
+        "expires_at": "2026-11-24T01:50:22Z"
+      }
+    ],
+    "http": 32,
+    "runtimeBrowser": 18,
+    "managedHttp": 23,
+    "nteMainFallbackHttp": 171,
+    "raw": 7,
+    "search": 3,
+    "managedBrowser": 520,
+    "retainedStaticSample": 12,
+    "unauthenticatedIndexNow": 1,
+    "hi3Reading": 12,
+    "allStatic": {
+      "files": 362,
+      "bytes": 10368359,
+      "js": 356,
+      "css": 3,
+      "png": 3,
+      "allBytesEqual": true,
+      "includesAll262PriorStaticFiles": true
+    },
+    "xml": {
+      "documents": 6,
+      "counts": {
+        "main": 4515,
+        "azur-promilia": 150,
+        "genshin": 1602,
+        "lvmeng": 27,
+        "nte": 389
+      },
+      "unionCount": 6683,
+      "mainArtifactEqual": true
+    },
+    "ownerGraphUnchanged": true,
+    "originalCI": {
+      "id": 40121743063,
+      "conclusion": "failure",
+      "unchanged": true,
+      "originalJavaScriptRequestFailureRootCause": "undetermined; not reproduced in independent complete acceptance; do not relabel as proven transient network or navigation abort"
+    },
+    "sourceGateE2E": {
+      "status": "passed",
+      "isolatedFixtureOnly": true,
+      "initialSourceZipActuallyDownloaded": true,
+      "identityPersistenceRepeatUsesSameDigestVerifiedSourceZipCache": true,
+      "allOtherGitHubMetadataLogAndReceiptReadsFresh": true,
+      "files": 362,
+      "bytes": 10368359,
+      "recoveryIdentity": {
+        "artifactId": "12583191927",
+        "archiveSha256": "4198684398e6c7be0fa326224fb4c689f9ffdb85e7afc3052f12caa6fe4931e1",
+        "runId": 40151438723,
+        "headSha": "32278eadac3a195deef034ef1a8347e9e5ca813d"
+      }
+    }
+  },
+  "azurRecheck": {
+    "status": "bounded_public_production_acceptance_passed",
+    "pages": 150,
+    "currentAssets": 16,
+    "oldAssets": 35,
+    "browser": 12,
+    "planner": 6,
+    "startedAt": "2026-10-25T01:41:42.162Z",
+    "finishedAt": "2026-10-25T01:42:55.025Z",
+    "staticComparisonSource": "S2.18 sealed local manifest tied by historical controlled deploy and cloud reconciliation; not platform-signed bundle attestation",
+    "initialNoJsFailure": "preserved; reason=csp only when JavaScript explicitly disabled; normal JS and all other failures remain strict"
+  },
+  "pendingOwners": [
+    {
+      "owner": "genshin",
+      "pending": "language indexing plus new runtime/resource candidate",
+      "liveSitemap": 1602,
+      "localCandidate": 1572,
+      "removedJapaneseGuideUrls": [
+        "https://gachia.com/ja/genshin/guides/abyss-endgame-guide",
+        "https://gachia.com/ja/genshin/guides/abyss-general-strategy",
+        "https://gachia.com/ja/genshin/guides/abyss-team-building",
+        "https://gachia.com/ja/genshin/guides/artifact-guide",
+        "https://gachia.com/ja/genshin/guides/banner-schedule-guide",
+        "https://gachia.com/ja/genshin/guides/boss-strategy-guide",
+        "https://gachia.com/ja/genshin/guides/build-furina",
+        "https://gachia.com/ja/genshin/guides/build-hu-tao",
+        "https://gachia.com/ja/genshin/guides/build-kazuha",
+        "https://gachia.com/ja/genshin/guides/build-nahida",
+        "https://gachia.com/ja/genshin/guides/build-raiden-shogun",
+        "https://gachia.com/ja/genshin/guides/character-progression-guide",
+        "https://gachia.com/ja/genshin/guides/cross-game-comparison-guide",
+        "https://gachia.com/ja/genshin/guides/elemental-reaction-guide",
+        "https://gachia.com/ja/genshin/guides/exploration-guide",
+        "https://gachia.com/ja/genshin/guides/farming-route-guide",
+        "https://gachia.com/ja/genshin/guides/gacha-system-guide",
+        "https://gachia.com/ja/genshin/guides/luna-viii-sandrone-guide",
+        "https://gachia.com/ja/genshin/guides/lunar-reaction-guide",
+        "https://gachia.com/ja/genshin/guides/meta-teams-guide",
+        "https://gachia.com/ja/genshin/guides/natlan-exploration-guide",
+        "https://gachia.com/ja/genshin/guides/nod-krai-cryoculus-phase-ii-checklist",
+        "https://gachia.com/ja/genshin/guides/nod-krai-guide",
+        "https://gachia.com/ja/genshin/guides/phase-ii-columbina-raiden-pull-plan",
+        "https://gachia.com/ja/genshin/guides/quick-start-guide",
+        "https://gachia.com/ja/genshin/guides/resin-planning-guide",
+        "https://gachia.com/ja/genshin/guides/snezhnaya-version-guide",
+        "https://gachia.com/ja/genshin/guides/teapot-guide",
+        "https://gachia.com/ja/genshin/guides/v6-7-version-guide",
+        "https://gachia.com/ja/genshin/guides/weapon-enhancement-guide"
+      ],
+      "added": [],
+      "live30UrlChecks": 30
+    },
+    {
+      "owner": "nte",
+      "pending": "new locked runtime and resource namespace candidate; production deployment still 2026-10-18; repository release tools available but new bundle not promoted"
+    },
+    {
+      "owner": "lvmeng",
+      "pending": "new locked runtime and resource namespace candidate; production deployment still 2026-10-18; controlled live-owner deployment path incomplete"
+    },
+    {
+      "owner": "router",
+      "pending": "shared ownership source refactor not deployed; existing 772-path behavior equivalence accepted, no blind re-release"
+    }
+  ],
+  "remainingRisks": [
+    "original failed request root cause undetermined",
+    "Genshin known Japanese indexing mismatch still live",
+    "Genshin/NTE/Lvmeng runtime candidate rollouts incomplete; old exact dependency versions not recovered",
+    "NTE/Lvmeng isolated staging service absent; do not add Workers by default",
+    "no production rollback drill",
+    "Actions upload-artifact v4 forced Node24 deprecation annotation; upgrade separately with contract tests",
+    "actual billed Actions minutes and quota unknown"
+  ],
+  "localValidation": {
+    "releaseNode": 178,
+    "python": [
+      3,
+      9,
+      11,
+      7
+    ],
+    "typeTasks": 9,
+    "unitForceNoCache": {
+      "web": 355,
+      "router": 35,
+      "data": 162,
+      "adminPass": 265,
+      "adminExistingSkips": 17
+    },
+    "lintErrors": 0,
+    "existingInactiveAuthWarning": 1
+  },
+  "actionsBudget": {
+    "observedJobWallMinutes": 11.783333333333333,
+    "actualBillingMinutes": "unknown",
+    "quotaRemaining": "unknown",
+    "additionalProductionDeployments": 0
+  },
+  "evidence": [
+    {
+      "path": ".release-records/s2-20/cloud-before.json",
+      "sha256": "da02c20f52202c1ff6fbaa17206c42dd9d9c83ce1db3e36555dcab07a40a78cb",
+      "bytes": 19490
+    },
+    {
+      "path": ".release-records/s2-20/cloud-final.json",
+      "sha256": "0f672e0aeab9e098ece2ad43a9d5045415227c5f91ba4d660a99f76d4b0864a4",
+      "bytes": 19490
+    },
+    {
+      "path": ".release-records/s2-20/service-inventory.json",
+      "sha256": "ec998105e6f5f99e213334fc817fb5512c49a27bd262b27eaaf958842ec23dc8",
+      "bytes": 2117
+    },
+    {
+      "path": ".release-records/s2-20/recent-owner-commits.json",
+      "sha256": "f03c83471f5e8fa3e51565910118e9018b9096e63656b38fecd2d6460fde4229",
+      "bytes": 7507
+    },
+    {
+      "path": ".release-records/s2-20/recovery-run.json",
+      "sha256": "5c89418bbddad398ff62493418fd489e7229d90fceeed70ac6f9086daeb2abcf",
+      "bytes": 12738
+    },
+    {
+      "path": ".release-records/s2-20/recovery-jobs.json",
+      "sha256": "02a53df4a167d0e47808b6e306980142485fa23295ce0e673c668f76c8d6ef79",
+      "bytes": 3363
+    },
+    {
+      "path": ".release-records/s2-20/recovery-artifacts.json",
+      "sha256": "b41f111eec05f10574990cd718b2a4cf180526aec726c14c2449c8de0ece2f8d",
+      "bytes": 1446
+    },
+    {
+      "path": ".release-records/s2-20/recovery-receipt.zip",
+      "sha256": "4198684398e6c7be0fa326224fb4c689f9ffdb85e7afc3052f12caa6fe4931e1",
+      "bytes": 2376
+    },
+    {
+      "path": ".release-records/s2-20/recovery-evidence.zip",
+      "sha256": "7c562403101353c2b7c2462c9a60b62c6c09c1c9984853f13deb888d4b6ebcf6",
+      "bytes": 157763
+    },
+    {
+      "path": ".release-records/s2-20/recovery-receipt/receipt.json",
+      "sha256": "e56f4e38147c202e46fb6eed53a56f66f634c5deef34992de6710f9c642d605f",
+      "bytes": 20190
+    },
+    {
+      "path": ".release-records/s2-20/recovery-evidence/main-recovery/xml.json",
+      "sha256": "f37c4e80b2bb8cf7966b21ea85c4688a080fc32dfba538e7f18b1f7ed36742af",
+      "bytes": 406604
+    },
+    {
+      "path": ".release-records/s2-20/recovery-evidence/main-recovery/xml-before.json",
+      "sha256": "a4b7f7a46470da22b008965619b3d23417bc43ba4e2acb2c57882ed75ab04719",
+      "bytes": 406604
+    },
+    {
+      "path": ".release-records/s2-20/local-release-tests-closeout.log",
+      "sha256": "07317e7262e4c0f54a1ba62c735f87453b2b0757f2f3a2c5776a22c6a1df5626",
+      "bytes": 38198
+    },
+    {
+      "path": ".release-records/s2-20/local-types.log",
+      "sha256": "c0f05e1628125024506b214e6b23675a2fdc6f4a511f2634fedb9029fe7d578c",
+      "bytes": 3416
+    },
+    {
+      "path": ".release-records/s2-20/local-lint.log",
+      "sha256": "48bbb49f3816a4406a57d71d2c1bef59b702b2910a51d62f0aff559ecbdb804c",
+      "bytes": 1319
+    },
+    {
+      "path": ".release-records/s2-20/local-unit-tests.log",
+      "sha256": "d3667a80a81f1971ca174250186202043577bbf48bca31344067db7ffe9a8e72",
+      "bytes": 117410
+    },
+    {
+      "path": ".release-records/s2-20/local-deployment-config.log",
+      "sha256": "06b779c06b859c10732ed19170376911e593ca969ccfb9598ec795ac93480d79",
+      "bytes": 188
+    },
+    {
+      "path": ".release-records/s2-20/local-runtime-versions.log",
+      "sha256": "54f50fa8beaf22034ff36cce40cf3f9d7bc3bbe4b16b77e28e327c766f7ee60a",
+      "bytes": 6085
+    },
+    {
+      "path": ".release-records/s2-20/production-acceptance.json",
+      "sha256": "bdfe17cfa5e8516884265202c1167baf138de51ed18dedf5a42000bc5c56dc09",
+      "bytes": 77412
+    },
+    {
+      "path": ".release-records/s2-20/azur-nojs-fixture-failure.json",
+      "sha256": "5ba3d5616269dcf652dc8f6e1bff1ce6759f2b0d5e5e863af97f121c8f48d1ab",
+      "bytes": 75310
+    },
+    {
+      "path": ".release-records/s2-20/azur-online-recheck.log",
+      "sha256": "85518e9c38c4ea8363d4bb2f81f91aa67b241dc0ef8eb8dd419ed4e075e86233",
+      "bytes": 1134
+    },
+    {
+      "path": ".release-records/s2-20/azur-online-recheck-2.log",
+      "sha256": "fad26a3e5b6e6103b080c5012d0abfdddb3d6786c8af90927e3255cbbfda5cc4",
+      "bytes": 321
+    },
+    {
+      "path": ".release-records/s2-20/azur-nojs-policy-events.jsonl",
+      "sha256": "f76e605a6cdafd3417498274a7027261683e737a6372144cfc75d137a975e2fd",
+      "bytes": 1035
+    },
+    {
+      "path": ".release-records/s2-20/accept-azur-production.mjs",
+      "sha256": "9cdec2ae57cb0c2e3778b4d336e20b0e41771fc5d5593568f95409995cb775e3",
+      "bytes": 14537
+    },
+    {
+      "path": ".release-records/s2-20/genshin-release-gap.json",
+      "sha256": "fb1cfe6782d3ae251dd8cafbba96d0e13de6cd8b378cda03af40d3077eea8f52",
+      "bytes": 9790
+    },
+    {
+      "path": ".release-records/s2-20/genshin-live-sitemap.xml",
+      "sha256": "e11079800afc90d8702c998cb82b2f05f69872b22297e7112c95ae7566c8b08a",
+      "bytes": 216698
+    },
+    {
+      "path": ".release-records/s2-20/source-gate-e2e-result.json",
+      "sha256": "0b9244dd0691b1e9b51d78052d3e8ea3c858e55b2bdd5d0468beff8896f8f968",
+      "bytes": 606
+    },
+    {
+      "path": ".release-records/s2-20/source-gate-e2e-cached-result.json",
+      "sha256": "00f6466b8d0667cf24fbb056d9eeb38d08f953b59aa86888f7dbb5ae00db9ac4",
+      "bytes": 843
+    },
+    {
+      "path": ".release-records/s2-20/source-gate-fixture-check.json",
+      "sha256": "048ab39c1a4ea4c534e6c8634420a05c23217a05956244d834319055bb224166",
+      "bytes": 248
+    },
+    {
+      "path": ".release-records/s2-20/recovery-evidence/web-production-24c71daf-2e1b-45e8-9ef9-75c96f885608/result.json",
+      "sha256": "edf4d8bc947a34ca2b92c0a90d73b108c669a728d66f1aaa781878a8d2dfda23",
+      "bytes": 162909
+    }
+  ]
+}

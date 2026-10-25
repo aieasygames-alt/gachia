@@ -38,6 +38,15 @@ test('all immutable collisions are rejected before any file is copied', t => {
   assert(!existsSync(join(f.target, 'old.js')));
 });
 
+test('verified recovery identity remains attached to the next retained-source manifest', t => {
+  const f = fixture(t);
+  f.source = { ...source, recovery: { artifactId: '789', archiveSha256: 'c'.repeat(64), runId: 678, headSha: 'd'.repeat(40) } };
+  retainWebAssets(f);
+  const manifest = JSON.parse(readFileSync(join(f.artifactDirectory, 'retained-web-assets.json')));
+  assert.deepEqual(manifest.source.recovery, f.source.recovery);
+  assert.equal(verifyRetainedWebAssets(f.artifactDirectory, source.versionId).verified, true);
+});
+
 test('retention rejects source links, linked ancestors and dangling target links', t => {
   const f = fixture(t);
   symlinkSync('missing', join(f.previousStatic, 'link'));

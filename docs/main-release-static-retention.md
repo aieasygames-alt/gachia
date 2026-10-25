@@ -1,12 +1,24 @@
 # 主站发布：旧静态资源保留与生产验收
 
-## S2.19 实际发布与下一次来源限制
+## S2.19 实际发布与当时的来源限制
 
 2026-10-25，Main 已更新为 `c0615321-071d-4f44-b635-70dbdba117c2`，实际产物 `12571493654`，ZIP 摘要 `ee750c335f49ce18bea4ff184e8dcd7d16b271f160f4c3c8161133ca46f671ee`。同一封存产物先 staging 完整通过再推广，独立完整生产复验、359 个 JS/CSS 及旧 262 文件字节验证通过。但运行 `40121743063` 的生产后检出现未复现 JS 请求失败，deploy job 和整个 Actions 仍为 failure，不能假称 workflow 成功。
 
-因此，这个已验证的当前产物**尚不满足现有 `prepare-previous-web-assets.mjs` 对成功 deploy job 的自动来源要求**。下一次发布先建立受控只读复验与原版本/产物/部署日志绑定的证明闭环，不删除 success 条件简单接纳失败 run，不改用本地重新构建包充当旧来源，不为变绿再部署相同产物。证据、失败和明确后续工作见 [S2.19](../plans/multi-game-s2-19-main-production-2026-10-25.md)。
+当时，这个已验证的当前产物**不满足旧门禁对成功 deploy job 的自动来源要求**。S2.20 已通过独立只读 workflow `40151438723` 建立与原版本/产物/部署日志绑定的恢复凭据；下文给出受控接纳方式。原始 CI 保留 failure，不删除 success 条件简单接纳失败 run，不改用本地重建包充当旧来源，不为变绿重新部署。历史证据见 [S2.19](../plans/multi-game-s2-19-main-production-2026-10-25.md)，新回执身份与有效期见 [S2.20](../plans/multi-game-s2-20-production-reconciliation-2026-10-25.md)。
 
 ## 目的与边界
+
+### S2.20：部署后检失败的独立只读恢复路径
+
+原始成功 deploy job 的默认来源规则不变。若实际部署步骤已成功、后续验收导致 job 失败，不能只移除 success 条件或重发相同产物获得绿灯。新增 `.github/workflows/web-production-recovery.yml`，只接受 main 手动触发，与 Main 发布共用互斥组，固定正式域名与服务，无部署/回滚/构建/流量修改命令。
+
+输入是原 artifact ID、GitHub ZIP 摘要、内部 tar 摘要以及实际唯一 100% Main UUID。流程重新读取可信 main 原始运行，要求 build 和 staging 成功、恢复产物/原活跃版本记录/旧资源验证/实际部署步骤成功，日志中的精确 artifact 与版本相符；安全恢复原产物，拒绝在已有构建上复验。当前实现还要求应用、数据、锁文件及核心运行时/XML 验收与原源提交无差异，仅允许诊断和恢复工具的演进。
+
+完整既有验收和 XML 前后 owner 集合比较、全部静态文件字节比较、HI3 阅读探针通过，且前后 Worker 部署/绑定、路由与域名未变化，才生成 `receipt.json`。账号拒绝探针仍使用合成过期 Cookie 和畸形请求体，IndexNow 仅做未认证拒绝检查；不进行真实账号操作或搜索引擎提交。浏览器失败现在逐条保存原因、前后页面与截图，不把未复现事件断言为网络问题。
+
+下次 Main 发布若原 deploy job 为 failure，需额外输入 `previous_web_recovery_artifact_id` 与 `previous_web_recovery_sha256`。消费者通过固定仓库 API 核对独立恢复 workflow 路径、可信 main ref/仓库、run 与 verify-production job 成功、运行 attempt、精确 receipt ZIP 摘要/ID、产物/源提交/版本对应。失败、过期、摘要不符、混合流量、任意其他 workflow、缺漏验收或缺少回执均拒绝；不从本地 JSON 或任意 URL 接纳回执。原生产写入前的当前版本重读门禁继续执行，历史回执不是永不过期发布授权。
+
+此恢复结论不改写原 CI 的 failure，也不证明原请求失败根因。Main 回执不能为 Genshin/Azur/NTE/Lvmeng 的独立待发代码背书；各 owner 仍须各自完成推广和兼容验证。运行结果与实际回执身份见 [S2.20 对账记录](../plans/multi-game-s2-20-production-reconciliation-2026-10-25.md)。
 
 主站部署会替换静态资源集合。仍打开旧页面的用户可能继续请求旧 chunk，因此“新首页返回 200”不足以证明发布安全。本规则仅保留当前生产构建的 `.open-next/assets/_next/static/`，不引入旧 Worker、HTML、数据库、服务端缓存或配置，不改变四个游戏 Worker 与 Router。
 

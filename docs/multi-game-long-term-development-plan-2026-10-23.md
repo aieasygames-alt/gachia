@@ -1,6 +1,6 @@
 # Gachia 多游戏长期运营与架构治理开发文档
 
-> 版本：v1.25，含 S2.19 Main 生产发布、独立完整复验与 CI 告警交接
+> 版本：v1.26，含 S2.20 成功只读生产复验、旧来源恢复凭据及逐 owner 待发对账
 >
 > 编制日期：2026-10-23，Asia/Shanghai
 >
@@ -13,6 +13,8 @@
 > 原有任务状态：项目当前任务总表（原主工作区文件：`plans/project-task-status-current.md`）。本方案不自动替换该表、不重新打开已验收事项；实施前需确认纳入的工作包。
 
 ## 1. 项目定位与核心结论
+
+S2.20 最新进展（2026-10-25）：实时对账确认 Main/Azur 的近期业务功能已上线，但**不是所有近期开发都已发布**：原神 30 条日文缺译索引策略及原神/NTE/Lvmeng 的新运行时/资源候选仍待独立发布，Router 合同重构源码也未部署（既有路由语义等价，不盲目重发）。NTE/Lvmeng 不能因没有专属业务页面改动而被遗漏。仓库工具生效与 Worker 新包承载流量分别记账。只读生产 workflow `40151438723` 成功：32 HTTP、18 runtime browser、520 managed browser、171 NTE 回退、严格 6 文档/6,683 URL 图及全部 362 静态文件字节通过，前后部署/绑定/路由/域名无变化。独立回执 `12583191927` 使当前 Main 产物可在严格来源检查下供下次发布显式引用；原 CI 保留 failure，原 JS 请求失败根因仍未确定。Azur 150 页、当前/旧资源与 12 浏览器/6 planner 复验通过。退役不适用于已切流原神的旧 production-origin 入口；没有再次部署任何 Worker、合并服务或清盘。详见 [S2.20 交付记录](../plans/multi-game-s2-20-production-reconciliation-2026-10-25.md)。
 
 S2.19 最新进展（2026-10-25）：按实际多 Worker owner 拆分发布范围，保持 Router、四个游戏生产、路由/域名及 Main 绑定不变，通过正式 workflow 将同一 artifact `12571493654` 从 staging 推广 Main，新版本 `c0615321-071d-4f44-b635-70dbdba117c2` 承载 100%。主站 4,515 条，完整图 6,683 唯一 URL，171 个 NTE Main 详情覆盖闭合。发布中修复按组解析 robots、相对重定向验收、隐藏证据上传及 staging XML matcher/noindex 缺口。首次流程安全停在 staging；第二次 staging 完整通过并推广，但生产内容浏览器记录同域 JS 失败，**Actions 最终仍为 failure**。不改代码、不重发的独立完整生产复验（520 内容/18 运行时浏览器、171 详情）和严格 XML、359 个全部 JS/CSS 字节验证随后通过，根因未定，不伪装 CI 全绿。现有下一次旧产物来源门禁要求成功 deploy job，当前 artifact 不能直接当作该自动条件已满足；应先补齐受控只读复验/来源闭环，再发原神。无账号/数据库变更、无 Worker 合并或磁盘清理；详见 [S2.19 交付记录](../plans/multi-game-s2-19-main-production-2026-10-25.md)。
 
