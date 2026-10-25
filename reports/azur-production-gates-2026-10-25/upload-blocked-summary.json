@@ -1,0 +1,112 @@
+{
+  "status": "uploaded_not_promoted_control_plane_gate_failed",
+  "at": "2026-10-25T12:41:59.535Z",
+  "sourceCommit": "698423a115a0b642fdbd041a3ab6a9c9946993b1",
+  "artifact": {
+    "directory": "/Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/azur-production-rollout/artifact",
+    "game": "azur-promilia",
+    "sourceCommit": "698423a115a0b642fdbd041a3ab6a9c9946993b1",
+    "manifestSha256": "40f61390b4b1450a7b66a3ea76d2c3c5dd946d981a3e8c24fbf83d5490fb1762",
+    "treeSha256": "691bfbf9afa91d98ba5028dd4a55135d639f8e69397cd7babe811c9852f41637",
+    "entries": 2067,
+    "bytes": 32704599
+  },
+  "versionId": "6c0b7274-ecec-458b-9cfa-dff944754a0d",
+  "previewUrl": "https://6c0b7274-gachia-game-azur-promilia.aieasygames.workers.dev",
+  "moduleSha256": "23d11cdfc684fb5361169cccfdf11001b0992a9d46df076464931e2569dae17f",
+  "activeVersionId": "9867e978-20fa-46f9-8dd4-c96c400e6919",
+  "activeDeploymentId": "fcc7ddf4-f591-4607-9d95-f28ba096229d",
+  "allNineDeploymentsUnchanged": true,
+  "bindingsUnchanged": true,
+  "subdomainsUnchanged": true,
+  "routesUnchanged": true,
+  "domainsUnchanged": true,
+  "workerInventoryUnchanged": true,
+  "unexpectedChange": {
+    "service": "gachia-game-azur-promilia",
+    "field": "settings.tags",
+    "before": [
+      "cf:service=gachia-game-azur-promilia"
+    ],
+    "after": []
+  },
+  "expectedAnnotationChange": {
+    "workers/message": "Security and runtime host guard azur-promilia 698423a115a0b642fdbd041a3ab6a9c9946993b1",
+    "workers/triggered_by": "version_upload"
+  },
+  "previewAcceptance": "not_performed",
+  "promotionAttempted": false,
+  "productionAcceptance": "not_performed",
+  "candidateVersion": {
+    "id": "6c0b7274-ecec-458b-9cfa-dff944754a0d",
+    "number": 81,
+    "metadata": {
+      "created_on": "2026-10-25T12:40:11.800985Z",
+      "source": "wrangler",
+      "author_id": "3a7c299ef441611896bb25058f41782a",
+      "author_email": "aieasygames@gmail.com",
+      "has_preview": true
+    },
+    "annotations": {
+      "workers/message": "Security and runtime host guard azur-promilia 698423a115a0b642fdbd041a3ab6a9c9946993b1",
+      "workers/triggered_by": "version_upload"
+    },
+    "resources": {
+      "script": {
+        "etag": "43ec1105c848a123ad63d432f6abafbcf8c167c4a2b462a715793f5cffa30798",
+        "handlers": [
+          "fetch"
+        ],
+        "named_handlers": [
+          {
+            "name": "BucketCachePurge",
+            "handlers": [
+              "class"
+            ]
+          },
+          {
+            "name": "DOQueueHandler",
+            "handlers": [
+              "class"
+            ]
+          },
+          {
+            "name": "DOShardedTagCache",
+            "handlers": [
+              "class"
+            ]
+          }
+        ],
+        "last_deployed_from": "wrangler"
+      },
+      "script_runtime": {
+        "assets": {
+          "serve_directly": true,
+          "raw_run_worker_first": false,
+          "base_path": "/"
+        },
+        "compatibility_date": "2026-07-08",
+        "compatibility_flags": [
+          "nodejs_compat"
+        ],
+        "usage_model": "standard"
+      },
+      "bindings": [
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "name": "AZUR_PROMILIA_DEPLOYMENT_MODE",
+          "text": "production",
+          "type": "plain_text"
+        },
+        {
+          "name": "NEXT_PUBLIC_APP_URL",
+          "text": "https://gachia.com",
+          "type": "plain_text"
+        }
+      ]
+    }
+  }
+}

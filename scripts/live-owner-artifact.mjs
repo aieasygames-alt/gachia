@@ -22,10 +22,15 @@ export function liveOwnerConfig(game, text) {
     : { name, ...base, workers_dev: true, observability: { enabled: true, logs: { enabled: true, persist: true, invocation_logs: true } },
       vars: vars(game, 'preview'), env: { production: { name, vars: vars(game, 'production') } } };
   assert.deepEqual(config, expected, 'Unreviewed owner configuration');
-  if (game === 'nte' || game === 'azur-promilia') {
+  if (game === 'azur-promilia') {
+    // Wrangler derives the existing cf:service tag from defined environments,
+    // even with --env "". Removing this block clears that non-versioned tag.
+    return { config, environment: '', mode: 'production' };
+  }
+  if (game === 'nte') {
     const { env: _env, ...production } = config;
     // No environment block: preserve the live service's empty CF service tags.
-    return { config: production, environment: '', mode: game === 'nte' ? 'live' : 'production' };
+    return { config: production, environment: '', mode: 'live' };
   }
   // Keep explicit production selection (and existing CF environment tags).
   // Default preview mode uses the SAME service name and must never be uploaded.

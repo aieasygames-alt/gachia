@@ -1,0 +1,76 @@
+control snapshot complete
+current version read
+capturing module
+content request started 2026-10-25T12:35:54.364Z
+content headers received { elapsedMs: 594, status: 200, length: null }
+content body received { elapsedMs: 86962, bytes: 5400067 }
+module captured
+static assets/_next/static/chunks/134-993bbc04f5d351fc.js
+static assets/_next/static/chunks/297-13607c6b09b34b5d.js
+static assets/_next/static/chunks/545-6e93eb050fa72f60.js
+static assets/_next/static/chunks/652-fb3b46b5e03210e4.js
+static assets/_next/static/chunks/721-1995520c574a32d7.js
+static assets/_next/static/chunks/866-bd83348ffaa20514.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/characters/[id]/page-33d41164b18f8dcb.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/characters/[id]/page-f4c802b7419916b7.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/characters/page-51731143a05c8af3.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/characters/page-ac720ada7b638c8b.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/guides/[id]/page-33d41164b18f8dcb.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/guides/[id]/page-f4c802b7419916b7.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/guides/page-33d41164b18f8dcb.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/guides/page-f4c802b7419916b7.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/kibo/page-b7a48189689aed94.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/kibo/page-f385ff6e4f39a1b7.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/page-33d41164b18f8dcb.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/page-f4c802b7419916b7.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/planner/page-b2e32b5cfea14fae.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/planner/page-b52e266783e7c119.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/redeem-codes/page-4e406c811e66b2d5.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/redeem-codes/page-640ca98210018140.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/systems/page-4e406c811e66b2d5.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/systems/page-640ca98210018140.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/tier-list/page-33d41164b18f8dcb.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/tier-list/page-f4c802b7419916b7.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/travel-trace/page-33d41164b18f8dcb.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/travel-trace/page-f4c802b7419916b7.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/version/page-4e406c811e66b2d5.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/version/page-640ca98210018140.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/weapons/[id]/page-33d41164b18f8dcb.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/weapons/[id]/page-f4c802b7419916b7.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/weapons/page-4e406c811e66b2d5.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/weapons/page-640ca98210018140.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/world/page-4e406c811e66b2d5.js
+static assets/_next/static/chunks/app/[lang]/azur-promilia/world/page-640ca98210018140.js
+static assets/_next/static/chunks/app/[lang]/layout-4e406c811e66b2d5.js
+static assets/_next/static/chunks/app/[lang]/layout-640ca98210018140.js
+static assets/_next/static/chunks/app/_not-found/page-1d7b51a07ed78421.js
+static assets/_next/static/chunks/app/_not-found/page-37a003ce7c5a6f07.js
+static assets/_next/static/chunks/app/layout-20c77415e70e103b.js
+static assets/_next/static/chunks/app/layout-7e4bebbcc6a265b4.js
+static assets/_next/static/chunks/app/page-4e406c811e66b2d5.js
+static assets/_next/static/chunks/app/page-640ca98210018140.js
+static assets/_next/static/chunks/app/robots.txt/route-4e406c811e66b2d5.js
+static assets/_next/static/chunks/app/robots.txt/route-640ca98210018140.js
+static assets/_next/static/chunks/app/sitemap.xml/route-4e406c811e66b2d5.js
+static assets/_next/static/chunks/app/sitemap.xml/route-640ca98210018140.js
+static assets/_next/static/chunks/b3ac7baf-c40001c3c1648c37.js
+static assets/_next/static/chunks/cb95ab63-e7f3ca90b1b85bbe.js
+static assets/_next/static/chunks/framework-53958d1d0f917bbb.js
+static assets/_next/static/chunks/framework-9696696a185c78ac.js
+static assets/_next/static/chunks/main-014656a35b18953e.js
+static assets/_next/static/chunks/main-291cc0b51596f64c.js
+static assets/_next/static/chunks/main-app-3c36f568c7a05fa8.js
+static assets/_next/static/chunks/main-app-651a19d72f1d115b.js
+static assets/_next/static/chunks/pages/_app-7d404bf9bd0fdb29.js
+static assets/_next/static/chunks/pages/_app-c8e994ea496efdaa.js
+static assets/_next/static/chunks/pages/_error-4a2748c8029baa0a.js
+static assets/_next/static/chunks/pages/_error-ca53de236ad1d553.js
+static assets/_next/static/chunks/polyfills-42372ed130431b0a.js
+static assets/_next/static/chunks/webpack-7f4954f5c5baa9f3.js
+static assets/_next/static/chunks/webpack-ab27a0009b5e7231.js
+static assets/_next/static/css/9aa93cdcbed4bf47.css
+static assets/_next/static/lrBjX3R43Sm4lpAmnGfM9/_buildManifest.js
+static assets/_next/static/lrBjX3R43Sm4lpAmnGfM9/_ssgManifest.js
+static assets/_next/static/ot7de9YK0E9eMMZpCizCh/_buildManifest.js
+static assets/_next/static/ot7de9YK0E9eMMZpCizCh/_ssgManifest.js
+{"receiptPath":"/Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/azur-production-rollout/previous-assets-receipt.json","receiptSha256":"4c99b966965f202657a1ed7467123a4016788386306913a0f2a2d57fa5b6c2d0","versionId":"9867e978-20fa-46f9-8dd4-c96c400e6919","deploymentId":"fcc7ddf4-f591-4607-9d95-f28ba096229d","scriptEtag":"bb12236733599fc9eb4513a868e0c717adc1cca891bf95d2ca1284fac779bfdd","workerArchiveSha256":"d6519163f24d5fe805853f2bd520be04464fb1a13aafefa7458a9d29fed5f4dc","inventorySha256":"bd46db0500c0de04b597d0cce304c48dddd39f9a84485f28fc0cb298f8e096e9","files":68,"bytes":1601493,"capturedAt":"2026-10-25T12:38:09.569Z","sourceCommit":"not_attested","cloudAssetManifestCompleteness":"not_asserted","verification":"local_evidence_integrity_only_not_live_cloud_state"}

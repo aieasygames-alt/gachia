@@ -73,16 +73,41 @@ for(const game of ['nte','lvmeng','azur-promilia']) test(`${game} preview host g
  assert.equal(isWorkerPreviewOrigin(`https://1234abcd-gachia-game-${game}.aieasygames.workers.dev`),true);
  for(const url of ['https://gachia.com','https://workers.dev.evil.invalid','https://gachia.com/path.workers.dev','https://name.workers.dev@evil.invalid','invalid'])assert.equal(isWorkerPreviewOrigin(url),false);
 });
-test('Azur production artifact policy preserves production mode without staging configuration', () => {
+test('Azur production artifact policy preserves production mode and existing service grouping', () => {
  const text=readFileSync(new URL('../apps/game-azur-promilia/wrangler.jsonc',import.meta.url),'utf8');
  const target=liveOwnerConfig('azur-promilia',text);
  assert.equal(target.mode,'production');
  assert.equal(target.config.vars.AZUR_PROMILIA_DEPLOYMENT_MODE,'production');
- assert.equal(target.config.env,undefined);
+ assert.deepEqual(target.config.env,JSON.parse(text).env);
  assert.equal(target.config.workers_dev,true);
  for(const mutate of [c=>{c.vars.AZUR_PROMILIA_DEPLOYMENT_MODE='preview';},c=>{c.env.staging.vars.AZUR_PROMILIA_DEPLOYMENT_MODE='production';},c=>{c.workers_dev=false;}]) {
   const c=JSON.parse(text);mutate(c);assert.throws(()=>liveOwnerConfig('azur-promilia',JSON.stringify(c)));
  }
+});
+test('Azur sealed configuration preserves the service tag under installed Wrangler semantics', t => {
+ const require=createRequire(new URL('../apps/game-azur-promilia/package.json',import.meta.url));
+ const {unstable_readConfig}=require('wrangler');
+ const root=mkdtempSync(join(tmpdir(),'azur-service-tag-'));
+ t.after(()=>rmSync(root,{recursive:true,force:true}));
+ const text=readFileSync(new URL('../apps/game-azur-promilia/wrangler.jsonc',import.meta.url),'utf8');
+ const target=liveOwnerConfig('azur-promilia',text),path=join(root,'wrangler.json');
+ writeFileSync(path,JSON.stringify(target.config));
+ const parsed=unstable_readConfig({config:path,env:target.environment});
+ assert.equal(parsed.name,'gachia-game-azur-promilia');
+ assert.equal(parsed.targetEnvironment,'');
+ assert.deepEqual(parsed.definedEnvironments,['staging']);
+ assert.equal(parsed.vars.AZUR_PROMILIA_DEPLOYMENT_MODE,'production');
+ // Exercise the pinned CLI's actual tag transformation, not a copied model.
+ const source=readFileSync(require.resolve('wrangler'),'utf8');
+ const start=source.indexOf('function hasDefinedEnvironments(config2) {');
+ const end=source.indexOf('function warnOnErrorUpdatingServiceAndEnvironmentTags()',start);
+ assert(start>=0&&end>start,'Installed Wrangler tag helper changed; review before release');
+ const applyTags=new Function('SERVICE_TAG_PREFIX','ENVIRONMENT_TAG_PREFIX','logger',source.slice(start,end)+'; return applyServiceAndEnvironmentTags;')('cf:service=','cf:environment=',{warn:message=>assert.fail(message)});
+ const tags=['cf:service=gachia-game-azur-promilia'];
+ assert.deepEqual(applyTags(parsed,tags),tags);
+ const {env:_env,...stripped}=target.config;
+ writeFileSync(path,JSON.stringify(stripped));
+ assert.deepEqual(applyTags(unstable_readConfig({config:path,env:''}),tags),[]);
 });
 test('Azur middleware blocks Worker hosts without trusting forwarded-host or changing public indexing', async () => {
  const require=createRequire(new URL('../apps/game-azur-promilia/package.json',import.meta.url));

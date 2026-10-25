@@ -1,0 +1,85 @@
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: gachia-game-azur-promilia: settings changed beyond exact candidate version annotation
++ actual - expected
+... Skipped lines
+
+  {
+    annotations: {
+      'workers/message': 'Security and runtime host guard azur-promilia 698423a115a0b642fdbd041a3ab6a9c9946993b1',
+      'workers/triggered_by': 'version_upload'
+    },
+...
+    placement: {},
++   tags: [],
+-   tags: [
+-     'cf:service=gachia-game-azur-promilia'
+-   ],
+    tail_consumers: [],
+    usage_model: 'standard'
+  }
+
+    at compare (file:///Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/azur-production-rollout/cloud-control.mjs:9:721)
+    at file:///Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/azur-production-rollout/ops.mjs:16:46
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: {
+    placement: {},
+    compatibility_date: '2026-07-08',
+    compatibility_flags: [ 'nodejs_compat' ],
+    usage_model: 'standard',
+    tags: [],
+    tail_consumers: [],
+    logpush: false,
+    annotations: {
+      'workers/message': 'Security and runtime host guard azur-promilia 698423a115a0b642fdbd041a3ab6a9c9946993b1',
+      'workers/triggered_by': 'version_upload'
+    },
+    bindings: [
+      { name: 'ASSETS', type: 'assets' },
+      {
+        name: 'AZUR_PROMILIA_DEPLOYMENT_MODE',
+        text: 'production',
+        type: 'plain_text'
+      },
+      {
+        name: 'NEXT_PUBLIC_APP_URL',
+        text: 'https://gachia.com',
+        type: 'plain_text'
+      }
+    ]
+  },
+  expected: {
+    placement: {},
+    compatibility_date: '2026-07-08',
+    compatibility_flags: [ 'nodejs_compat' ],
+    usage_model: 'standard',
+    tags: [ 'cf:service=gachia-game-azur-promilia' ],
+    tail_consumers: [],
+    logpush: false,
+    annotations: {
+      'workers/message': 'Security and runtime host guard azur-promilia 698423a115a0b642fdbd041a3ab6a9c9946993b1',
+      'workers/triggered_by': 'version_upload'
+    },
+    bindings: [
+      { name: 'ASSETS', type: 'assets' },
+      {
+        name: 'AZUR_PROMILIA_DEPLOYMENT_MODE',
+        text: 'production',
+        type: 'plain_text'
+      },
+      {
+        name: 'NEXT_PUBLIC_APP_URL',
+        text: 'https://gachia.com',
+        type: 'plain_text'
+      }
+    ]
+  },
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.22.2

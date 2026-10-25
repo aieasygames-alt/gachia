@@ -1,0 +1,4789 @@
+{
+  "startedAt": "2026-10-25T12:38:36.496Z",
+  "origin": "http://127.0.0.1:58700",
+  "status": "candidate_acceptance_passed",
+  "observations": [
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "owner": null,
+      "bytes": 21431
+    },
+    {
+      "path": "/en/azur-promilia",
+      "status": 200,
+      "owner": null,
+      "bytes": 32000
+    },
+    {
+      "path": "/en/azur-promilia/characters",
+      "status": 200,
+      "owner": null,
+      "bytes": 132521
+    },
+    {
+      "path": "/en/azur-promilia/characters/abby",
+      "status": 200,
+      "owner": null,
+      "bytes": 27490
+    },
+    {
+      "path": "/en/azur-promilia/characters/anais",
+      "status": 200,
+      "owner": null,
+      "bytes": 31560
+    },
+    {
+      "path": "/en/azur-promilia/characters/cathbelle",
+      "status": 200,
+      "owner": null,
+      "bytes": 31810
+    },
+    {
+      "path": "/en/azur-promilia/characters/faridah",
+      "status": 200,
+      "owner": null,
+      "bytes": 29731
+    },
+    {
+      "path": "/en/azur-promilia/characters/han-youyou",
+      "status": 200,
+      "owner": null,
+      "bytes": 29849
+    },
+    {
+      "path": "/en/azur-promilia/characters/katalua",
+      "status": 200,
+      "owner": null,
+      "bytes": 29629
+    },
+    {
+      "path": "/en/azur-promilia/characters/lily",
+      "status": 200,
+      "owner": null,
+      "bytes": 29522
+    },
+    {
+      "path": "/en/azur-promilia/characters/luruka",
+      "status": 200,
+      "owner": null,
+      "bytes": 29760
+    },
+    {
+      "path": "/en/azur-promilia/characters/metsa",
+      "status": 200,
+      "owner": null,
+      "bytes": 31528
+    },
+    {
+      "path": "/en/azur-promilia/characters/mitty",
+      "status": 200,
+      "owner": null,
+      "bytes": 29540
+    },
+    {
+      "path": "/en/azur-promilia/characters/morwyn-halkon",
+      "status": 200,
+      "owner": null,
+      "bytes": 29857
+    },
+    {
+      "path": "/en/azur-promilia/characters/nono",
+      "status": 200,
+      "owner": null,
+      "bytes": 29645
+    },
+    {
+      "path": "/en/azur-promilia/characters/pengpeng",
+      "status": 200,
+      "owner": null,
+      "bytes": 29658
+    },
+    {
+      "path": "/en/azur-promilia/characters/ruby",
+      "status": 200,
+      "owner": null,
+      "bytes": 29686
+    },
+    {
+      "path": "/en/azur-promilia/characters/shalle-ensys",
+      "status": 200,
+      "owner": null,
+      "bytes": 29825
+    },
+    {
+      "path": "/en/azur-promilia/characters/starborn",
+      "status": 200,
+      "owner": null,
+      "bytes": 29696
+    },
+    {
+      "path": "/en/azur-promilia/characters/symphoria",
+      "status": 200,
+      "owner": null,
+      "bytes": 31563
+    },
+    {
+      "path": "/en/azur-promilia/characters/terara",
+      "status": 200,
+      "owner": null,
+      "bytes": 31818
+    },
+    {
+      "path": "/en/azur-promilia/characters/xiaoyu",
+      "status": 200,
+      "owner": null,
+      "bytes": 29858
+    },
+    {
+      "path": "/en/azur-promilia/guides",
+      "status": 200,
+      "owner": null,
+      "bytes": 41555
+    },
+    {
+      "path": "/en/azur-promilia/guides/banner-system-status",
+      "status": 200,
+      "owner": null,
+      "bytes": 26313
+    },
+    {
+      "path": "/en/azur-promilia/guides/cbt-beginner-progression-priorities",
+      "status": 200,
+      "owner": null,
+      "bytes": 26114
+    },
+    {
+      "path": "/en/azur-promilia/guides/cbt-character-index-reading-guide",
+      "status": 200,
+      "owner": null,
+      "bytes": 26653
+    },
+    {
+      "path": "/en/azur-promilia/guides/cbt-combat-controls-and-tuning-guide",
+      "status": 200,
+      "owner": null,
+      "bytes": 25889
+    },
+    {
+      "path": "/en/azur-promilia/guides/cbt-combat-system-reference",
+      "status": 200,
+      "owner": null,
+      "bytes": 27207
+    },
+    {
+      "path": "/en/azur-promilia/guides/cbt-exploration-tools-mounts-and-resources",
+      "status": 200,
+      "owner": null,
+      "bytes": 26810
+    },
+    {
+      "path": "/en/azur-promilia/guides/cbt-homestead-facility-decision-guide",
+      "status": 200,
+      "owner": null,
+      "bytes": 26595
+    },
+    {
+      "path": "/en/azur-promilia/guides/cbt-kibo-capture-growth-mount-dispatch",
+      "status": 200,
+      "owner": null,
+      "bytes": 26486
+    },
+    {
+      "path": "/en/azur-promilia/guides/cbt-kibo-growth-and-collection-log",
+      "status": 200,
+      "owner": null,
+      "bytes": 26646
+    },
+    {
+      "path": "/en/azur-promilia/guides/cbt-kibo-system-reference",
+      "status": 200,
+      "owner": null,
+      "bytes": 26281
+    },
+    {
+      "path": "/en/azur-promilia/guides/cbt-weapons-and-equipment-reference",
+      "status": 200,
+      "owner": null,
+      "bytes": 26859
+    },
+    {
+      "path": "/en/azur-promilia/guides/homestead-progression",
+      "status": 200,
+      "owner": null,
+      "bytes": 26902
+    },
+    {
+      "path": "/en/azur-promilia/guides/kibo-battle-and-ecology",
+      "status": 200,
+      "owner": null,
+      "bytes": 26380
+    },
+    {
+      "path": "/en/azur-promilia/guides/latest-test-feedback-and-content-watch",
+      "status": 200,
+      "owner": null,
+      "bytes": 26197
+    },
+    {
+      "path": "/en/azur-promilia/guides/official-character-index",
+      "status": 200,
+      "owner": null,
+      "bytes": 24660
+    },
+    {
+      "path": "/en/azur-promilia/guides/official-character-region-guide",
+      "status": 200,
+      "owner": null,
+      "bytes": 26405
+    },
+    {
+      "path": "/en/azur-promilia/guides/official-information-checklist",
+      "status": 200,
+      "owner": null,
+      "bytes": 25416
+    },
+    {
+      "path": "/en/azur-promilia/guides/patch-notes-and-feedback-watch-guide",
+      "status": 200,
+      "owner": null,
+      "bytes": 26766
+    },
+    {
+      "path": "/en/azur-promilia/guides/test-feedback-tracker",
+      "status": 200,
+      "owner": null,
+      "bytes": 26642
+    },
+    {
+      "path": "/en/azur-promilia/guides/test-registration-download-verification-guide",
+      "status": 200,
+      "owner": null,
+      "bytes": 26567
+    },
+    {
+      "path": "/en/azur-promilia/kibo",
+      "status": 200,
+      "owner": null,
+      "bytes": 56715
+    },
+    {
+      "path": "/en/azur-promilia/planner",
+      "status": 200,
+      "owner": null,
+      "bytes": 103130
+    },
+    {
+      "path": "/en/azur-promilia/redeem-codes",
+      "status": 200,
+      "owner": null,
+      "bytes": 23121
+    },
+    {
+      "path": "/en/azur-promilia/systems",
+      "status": 200,
+      "owner": null,
+      "bytes": 26881
+    },
+    {
+      "path": "/en/azur-promilia/travel-trace",
+      "status": 200,
+      "owner": null,
+      "bytes": 31854
+    },
+    {
+      "path": "/en/azur-promilia/version",
+      "status": 200,
+      "owner": null,
+      "bytes": 31434
+    },
+    {
+      "path": "/en/azur-promilia/weapons",
+      "status": 200,
+      "owner": null,
+      "bytes": 24883
+    },
+    {
+      "path": "/en/azur-promilia/world",
+      "status": 200,
+      "owner": null,
+      "bytes": 26339
+    },
+    {
+      "path": "/ja/azur-promilia",
+      "status": 200,
+      "owner": null,
+      "bytes": 32980
+    },
+    {
+      "path": "/ja/azur-promilia/characters",
+      "status": 200,
+      "owner": null,
+      "bytes": 133817
+    },
+    {
+      "path": "/ja/azur-promilia/characters/abby",
+      "status": 200,
+      "owner": null,
+      "bytes": 28182
+    },
+    {
+      "path": "/ja/azur-promilia/characters/anais",
+      "status": 200,
+      "owner": null,
+      "bytes": 32436
+    },
+    {
+      "path": "/ja/azur-promilia/characters/cathbelle",
+      "status": 200,
+      "owner": null,
+      "bytes": 32344
+    },
+    {
+      "path": "/ja/azur-promilia/characters/faridah",
+      "status": 200,
+      "owner": null,
+      "bytes": 30433
+    },
+    {
+      "path": "/ja/azur-promilia/characters/han-youyou",
+      "status": 200,
+      "owner": null,
+      "bytes": 30507
+    },
+    {
+      "path": "/ja/azur-promilia/characters/katalua",
+      "status": 200,
+      "owner": null,
+      "bytes": 30377
+    },
+    {
+      "path": "/ja/azur-promilia/characters/lily",
+      "status": 200,
+      "owner": null,
+      "bytes": 30274
+    },
+    {
+      "path": "/ja/azur-promilia/characters/luruka",
+      "status": 200,
+      "owner": null,
+      "bytes": 30470
+    },
+    {
+      "path": "/ja/azur-promilia/characters/metsa",
+      "status": 200,
+      "owner": null,
+      "bytes": 32382
+    },
+    {
+      "path": "/ja/azur-promilia/characters/mitty",
+      "status": 200,
+      "owner": null,
+      "bytes": 30330
+    },
+    {
+      "path": "/ja/azur-promilia/characters/morwyn-halkon",
+      "status": 200,
+      "owner": null,
+      "bytes": 30761
+    },
+    {
+      "path": "/ja/azur-promilia/characters/nono",
+      "status": 200,
+      "owner": null,
+      "bytes": 30337
+    },
+    {
+      "path": "/ja/azur-promilia/characters/pengpeng",
+      "status": 200,
+      "owner": null,
+      "bytes": 30328
+    },
+    {
+      "path": "/ja/azur-promilia/characters/ruby",
+      "status": 200,
+      "owner": null,
+      "bytes": 30374
+    },
+    {
+      "path": "/ja/azur-promilia/characters/shalle-ensys",
+      "status": 200,
+      "owner": null,
+      "bytes": 30647
+    },
+    {
+      "path": "/ja/azur-promilia/characters/starborn",
+      "status": 200,
+      "owner": null,
+      "bytes": 30538
+    },
+    {
+      "path": "/ja/azur-promilia/characters/symphoria",
+      "status": 200,
+      "owner": null,
+      "bytes": 32425
+    },
+    {
+      "path": "/ja/azur-promilia/characters/terara",
+      "status": 200,
+      "owner": null,
+      "bytes": 32431
+    },
+    {
+      "path": "/ja/azur-promilia/characters/xiaoyu",
+      "status": 200,
+      "owner": null,
+      "bytes": 30561
+    },
+    {
+      "path": "/ja/azur-promilia/guides",
+      "status": 200,
+      "owner": null,
+      "bytes": 42705
+    },
+    {
+      "path": "/ja/azur-promilia/guides/banner-system-status",
+      "status": 200,
+      "owner": null,
+      "bytes": 27085
+    },
+    {
+      "path": "/ja/azur-promilia/guides/cbt-beginner-progression-priorities",
+      "status": 200,
+      "owner": null,
+      "bytes": 27154
+    },
+    {
+      "path": "/ja/azur-promilia/guides/cbt-character-index-reading-guide",
+      "status": 200,
+      "owner": null,
+      "bytes": 26342
+    },
+    {
+      "path": "/ja/azur-promilia/guides/cbt-combat-controls-and-tuning-guide",
+      "status": 200,
+      "owner": null,
+      "bytes": 26287
+    },
+    {
+      "path": "/ja/azur-promilia/guides/cbt-combat-system-reference",
+      "status": 200,
+      "owner": null,
+      "bytes": 28124
+    },
+    {
+      "path": "/ja/azur-promilia/guides/cbt-exploration-tools-mounts-and-resources",
+      "status": 200,
+      "owner": null,
+      "bytes": 25991
+    },
+    {
+      "path": "/ja/azur-promilia/guides/cbt-homestead-facility-decision-guide",
+      "status": 200,
+      "owner": null,
+      "bytes": 25798
+    },
+    {
+      "path": "/ja/azur-promilia/guides/cbt-kibo-capture-growth-mount-dispatch",
+      "status": 200,
+      "owner": null,
+      "bytes": 26841
+    },
+    {
+      "path": "/ja/azur-promilia/guides/cbt-kibo-growth-and-collection-log",
+      "status": 200,
+      "owner": null,
+      "bytes": 26253
+    },
+    {
+      "path": "/ja/azur-promilia/guides/cbt-kibo-system-reference",
+      "status": 200,
+      "owner": null,
+      "bytes": 26814
+    },
+    {
+      "path": "/ja/azur-promilia/guides/cbt-weapons-and-equipment-reference",
+      "status": 200,
+      "owner": null,
+      "bytes": 27788
+    },
+    {
+      "path": "/ja/azur-promilia/guides/homestead-progression",
+      "status": 200,
+      "owner": null,
+      "bytes": 26990
+    },
+    {
+      "path": "/ja/azur-promilia/guides/kibo-battle-and-ecology",
+      "status": 200,
+      "owner": null,
+      "bytes": 27096
+    },
+    {
+      "path": "/ja/azur-promilia/guides/latest-test-feedback-and-content-watch",
+      "status": 200,
+      "owner": null,
+      "bytes": 26845
+    },
+    {
+      "path": "/ja/azur-promilia/guides/official-character-index",
+      "status": 200,
+      "owner": null,
+      "bytes": 25510
+    },
+    {
+      "path": "/ja/azur-promilia/guides/official-character-region-guide",
+      "status": 200,
+      "owner": null,
+      "bytes": 25814
+    },
+    {
+      "path": "/ja/azur-promilia/guides/official-information-checklist",
+      "status": 200,
+      "owner": null,
+      "bytes": 26402
+    },
+    {
+      "path": "/ja/azur-promilia/guides/patch-notes-and-feedback-watch-guide",
+      "status": 200,
+      "owner": null,
+      "bytes": 26389
+    },
+    {
+      "path": "/ja/azur-promilia/guides/test-feedback-tracker",
+      "status": 200,
+      "owner": null,
+      "bytes": 27264
+    },
+    {
+      "path": "/ja/azur-promilia/guides/test-registration-download-verification-guide",
+      "status": 200,
+      "owner": null,
+      "bytes": 26092
+    },
+    {
+      "path": "/ja/azur-promilia/kibo",
+      "status": 200,
+      "owner": null,
+      "bytes": 57113
+    },
+    {
+      "path": "/ja/azur-promilia/planner",
+      "status": 200,
+      "owner": null,
+      "bytes": 103699
+    },
+    {
+      "path": "/ja/azur-promilia/redeem-codes",
+      "status": 200,
+      "owner": null,
+      "bytes": 23969
+    },
+    {
+      "path": "/ja/azur-promilia/systems",
+      "status": 200,
+      "owner": null,
+      "bytes": 27573
+    },
+    {
+      "path": "/ja/azur-promilia/travel-trace",
+      "status": 200,
+      "owner": null,
+      "bytes": 33605
+    },
+    {
+      "path": "/ja/azur-promilia/version",
+      "status": 200,
+      "owner": null,
+      "bytes": 32337
+    },
+    {
+      "path": "/ja/azur-promilia/weapons",
+      "status": 200,
+      "owner": null,
+      "bytes": 25173
+    },
+    {
+      "path": "/ja/azur-promilia/world",
+      "status": 200,
+      "owner": null,
+      "bytes": 26682
+    },
+    {
+      "path": "/zh/azur-promilia",
+      "status": 200,
+      "owner": null,
+      "bytes": 31651
+    },
+    {
+      "path": "/zh/azur-promilia/characters",
+      "status": 200,
+      "owner": null,
+      "bytes": 132861
+    },
+    {
+      "path": "/zh/azur-promilia/characters/abby",
+      "status": 200,
+      "owner": null,
+      "bytes": 27633
+    },
+    {
+      "path": "/zh/azur-promilia/characters/anais",
+      "status": 200,
+      "owner": null,
+      "bytes": 31405
+    },
+    {
+      "path": "/zh/azur-promilia/characters/cathbelle",
+      "status": 200,
+      "owner": null,
+      "bytes": 31343
+    },
+    {
+      "path": "/zh/azur-promilia/characters/faridah",
+      "status": 200,
+      "owner": null,
+      "bytes": 29786
+    },
+    {
+      "path": "/zh/azur-promilia/characters/han-youyou",
+      "status": 200,
+      "owner": null,
+      "bytes": 29858
+    },
+    {
+      "path": "/zh/azur-promilia/characters/katalua",
+      "status": 200,
+      "owner": null,
+      "bytes": 29718
+    },
+    {
+      "path": "/zh/azur-promilia/characters/lily",
+      "status": 200,
+      "owner": null,
+      "bytes": 29579
+    },
+    {
+      "path": "/zh/azur-promilia/characters/luruka",
+      "status": 200,
+      "owner": null,
+      "bytes": 29793
+    },
+    {
+      "path": "/zh/azur-promilia/characters/metsa",
+      "status": 200,
+      "owner": null,
+      "bytes": 31311
+    },
+    {
+      "path": "/zh/azur-promilia/characters/mitty",
+      "status": 200,
+      "owner": null,
+      "bytes": 29557
+    },
+    {
+      "path": "/zh/azur-promilia/characters/morwyn-halkon",
+      "status": 200,
+      "owner": null,
+      "bytes": 29914
+    },
+    {
+      "path": "/zh/azur-promilia/characters/nono",
+      "status": 200,
+      "owner": null,
+      "bytes": 29716
+    },
+    {
+      "path": "/zh/azur-promilia/characters/pengpeng",
+      "status": 200,
+      "owner": null,
+      "bytes": 29639
+    },
+    {
+      "path": "/zh/azur-promilia/characters/ruby",
+      "status": 200,
+      "owner": null,
+      "bytes": 29727
+    },
+    {
+      "path": "/zh/azur-promilia/characters/shalle-ensys",
+      "status": 200,
+      "owner": null,
+      "bytes": 29894
+    },
+    {
+      "path": "/zh/azur-promilia/characters/starborn",
+      "status": 200,
+      "owner": null,
+      "bytes": 29757
+    },
+    {
+      "path": "/zh/azur-promilia/characters/symphoria",
+      "status": 200,
+      "owner": null,
+      "bytes": 31512
+    },
+    {
+      "path": "/zh/azur-promilia/characters/terara",
+      "status": 200,
+      "owner": null,
+      "bytes": 31556
+    },
+    {
+      "path": "/zh/azur-promilia/characters/xiaoyu",
+      "status": 200,
+      "owner": null,
+      "bytes": 29910
+    },
+    {
+      "path": "/zh/azur-promilia/guides",
+      "status": 200,
+      "owner": null,
+      "bytes": 41137
+    },
+    {
+      "path": "/zh/azur-promilia/guides/banner-system-status",
+      "status": 200,
+      "owner": null,
+      "bytes": 26704
+    },
+    {
+      "path": "/zh/azur-promilia/guides/cbt-beginner-progression-priorities",
+      "status": 200,
+      "owner": null,
+      "bytes": 26179
+    },
+    {
+      "path": "/zh/azur-promilia/guides/cbt-character-index-reading-guide",
+      "status": 200,
+      "owner": null,
+      "bytes": 26760
+    },
+    {
+      "path": "/zh/azur-promilia/guides/cbt-combat-controls-and-tuning-guide",
+      "status": 200,
+      "owner": null,
+      "bytes": 25948
+    },
+    {
+      "path": "/zh/azur-promilia/guides/cbt-combat-system-reference",
+      "status": 200,
+      "owner": null,
+      "bytes": 26979
+    },
+    {
+      "path": "/zh/azur-promilia/guides/cbt-exploration-tools-mounts-and-resources",
+      "status": 200,
+      "owner": null,
+      "bytes": 26641
+    },
+    {
+      "path": "/zh/azur-promilia/guides/cbt-homestead-facility-decision-guide",
+      "status": 200,
+      "owner": null,
+      "bytes": 26504
+    },
+    {
+      "path": "/zh/azur-promilia/guides/cbt-kibo-capture-growth-mount-dispatch",
+      "status": 200,
+      "owner": null,
+      "bytes": 26466
+    },
+    {
+      "path": "/zh/azur-promilia/guides/cbt-kibo-growth-and-collection-log",
+      "status": 200,
+      "owner": null,
+      "bytes": 25724
+    },
+    {
+      "path": "/zh/azur-promilia/guides/cbt-kibo-system-reference",
+      "status": 200,
+      "owner": null,
+      "bytes": 26115
+    },
+    {
+      "path": "/zh/azur-promilia/guides/cbt-weapons-and-equipment-reference",
+      "status": 200,
+      "owner": null,
+      "bytes": 26553
+    },
+    {
+      "path": "/zh/azur-promilia/guides/homestead-progression",
+      "status": 200,
+      "owner": null,
+      "bytes": 26473
+    },
+    {
+      "path": "/zh/azur-promilia/guides/kibo-battle-and-ecology",
+      "status": 200,
+      "owner": null,
+      "bytes": 26507
+    },
+    {
+      "path": "/zh/azur-promilia/guides/latest-test-feedback-and-content-watch",
+      "status": 200,
+      "owner": null,
+      "bytes": 26112
+    },
+    {
+      "path": "/zh/azur-promilia/guides/official-character-index",
+      "status": 200,
+      "owner": null,
+      "bytes": 24981
+    },
+    {
+      "path": "/zh/azur-promilia/guides/official-character-region-guide",
+      "status": 200,
+      "owner": null,
+      "bytes": 26320
+    },
+    {
+      "path": "/zh/azur-promilia/guides/official-information-checklist",
+      "status": 200,
+      "owner": null,
+      "bytes": 25453
+    },
+    {
+      "path": "/zh/azur-promilia/guides/patch-notes-and-feedback-watch-guide",
+      "status": 200,
+      "owner": null,
+      "bytes": 26895
+    },
+    {
+      "path": "/zh/azur-promilia/guides/test-feedback-tracker",
+      "status": 200,
+      "owner": null,
+      "bytes": 26505
+    },
+    {
+      "path": "/zh/azur-promilia/guides/test-registration-download-verification-guide",
+      "status": 200,
+      "owner": null,
+      "bytes": 26200
+    },
+    {
+      "path": "/zh/azur-promilia/kibo",
+      "status": 200,
+      "owner": null,
+      "bytes": 56307
+    },
+    {
+      "path": "/zh/azur-promilia/planner",
+      "status": 200,
+      "owner": null,
+      "bytes": 103264
+    },
+    {
+      "path": "/zh/azur-promilia/redeem-codes",
+      "status": 200,
+      "owner": null,
+      "bytes": 23416
+    },
+    {
+      "path": "/zh/azur-promilia/systems",
+      "status": 200,
+      "owner": null,
+      "bytes": 26821
+    },
+    {
+      "path": "/zh/azur-promilia/travel-trace",
+      "status": 200,
+      "owner": null,
+      "bytes": 31510
+    },
+    {
+      "path": "/zh/azur-promilia/version",
+      "status": 200,
+      "owner": null,
+      "bytes": 31006
+    },
+    {
+      "path": "/zh/azur-promilia/weapons",
+      "status": 200,
+      "owner": null,
+      "bytes": 25090
+    },
+    {
+      "path": "/zh/azur-promilia/world",
+      "status": 200,
+      "owner": null,
+      "bytes": 26116
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/css/9aa93cdcbed4bf47.css",
+      "status": 200,
+      "owner": null,
+      "bytes": 14412
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/webpack-ab27a0009b5e7231.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 3424
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/b3ac7baf-c40001c3c1648c37.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 173018
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/721-1995520c574a32d7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 174137
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-app-7bf6336b6bc12646.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 556
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/545-6e93eb050fa72f60.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 8533
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/page-bd63058b3120d322.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 112594
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/297-13607c6b09b34b5d.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 24001
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/page-5a27b709564eac49.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 9697
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/%5Bid%5D/page-bd63058b3120d322.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/page-bd63058b3120d322.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/%5Bid%5D/page-bd63058b3120d322.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/kibo/page-acaf159c441edc64.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 3629
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/planner/page-cf00f3186db745bf.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 6405
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/travel-trace/page-bd63058b3120d322.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/134-993bbc04f5d351fc.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 173345
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/297-13607c6b09b34b5d.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 24001
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/545-6e93eb050fa72f60.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 8533
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/652-fb3b46b5e03210e4.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 8535
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/721-1995520c574a32d7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 174137
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/866-bd83348ffaa20514.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 24001
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/%5Bid%5D/page-33d41164b18f8dcb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 203
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/%5Bid%5D/page-f4c802b7419916b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/page-51731143a05c8af3.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 9697
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/page-ac720ada7b638c8b.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 9703
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/%5Bid%5D/page-33d41164b18f8dcb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 203
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/%5Bid%5D/page-f4c802b7419916b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/page-33d41164b18f8dcb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 203
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/page-f4c802b7419916b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/kibo/page-b7a48189689aed94.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 3629
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/kibo/page-f385ff6e4f39a1b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 3629
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/page-33d41164b18f8dcb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 203
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/page-f4c802b7419916b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/planner/page-b2e32b5cfea14fae.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 6405
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/planner/page-b52e266783e7c119.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 6405
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/redeem-codes/page-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/redeem-codes/page-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/systems/page-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/systems/page-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/tier-list/page-33d41164b18f8dcb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 203
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/tier-list/page-f4c802b7419916b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/travel-trace/page-33d41164b18f8dcb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 203
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/travel-trace/page-f4c802b7419916b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/version/page-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/version/page-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/weapons/%5Bid%5D/page-33d41164b18f8dcb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 203
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/weapons/%5Bid%5D/page-f4c802b7419916b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/weapons/page-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/weapons/page-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/world/page-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/world/page-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/layout-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/layout-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/_not-found/page-1d7b51a07ed78421.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 2670
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/_not-found/page-37a003ce7c5a6f07.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 2670
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/layout-20c77415e70e103b.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 195
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/layout-7e4bebbcc6a265b4.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 195
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/page-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/page-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/robots.txt/route-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/robots.txt/route-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/sitemap.xml/route-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/sitemap.xml/route-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/b3ac7baf-c40001c3c1648c37.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 173018
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/cb95ab63-e7f3ca90b1b85bbe.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 173017
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/framework-53958d1d0f917bbb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 189765
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/framework-9696696a185c78ac.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 189765
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-014656a35b18953e.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 137518
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-291cc0b51596f64c.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 137237
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-app-3c36f568c7a05fa8.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 556
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-app-651a19d72f1d115b.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 554
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/pages/_app-7d404bf9bd0fdb29.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 236
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/pages/_app-c8e994ea496efdaa.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 236
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/pages/_error-4a2748c8029baa0a.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 218
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/pages/_error-ca53de236ad1d553.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 216
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 112594
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/webpack-7f4954f5c5baa9f3.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 3425
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/webpack-ab27a0009b5e7231.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 3424
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/css/9aa93cdcbed4bf47.css",
+      "status": 200,
+      "owner": null,
+      "bytes": 14412
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/lrBjX3R43Sm4lpAmnGfM9/_buildManifest.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 801
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/lrBjX3R43Sm4lpAmnGfM9/_ssgManifest.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 80
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/ot7de9YK0E9eMMZpCizCh/_buildManifest.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 801
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/ot7de9YK0E9eMMZpCizCh/_ssgManifest.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 80
+    },
+    {
+      "path": "/_next/static/chunks/134-993bbc04f5d351fc.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 173345
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/134-993bbc04f5d351fc.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 173345
+    },
+    {
+      "path": "/_next/static/chunks/297-13607c6b09b34b5d.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 24001
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/297-13607c6b09b34b5d.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 24001
+    },
+    {
+      "path": "/_next/static/chunks/545-6e93eb050fa72f60.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 8533
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/545-6e93eb050fa72f60.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 8533
+    },
+    {
+      "path": "/_next/static/chunks/652-fb3b46b5e03210e4.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 8535
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/652-fb3b46b5e03210e4.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 8535
+    },
+    {
+      "path": "/_next/static/chunks/721-1995520c574a32d7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 174137
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/721-1995520c574a32d7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 174137
+    },
+    {
+      "path": "/_next/static/chunks/866-bd83348ffaa20514.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 24001
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/866-bd83348ffaa20514.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 24001
+    },
+    {
+      "path": "/_next/static/chunks/app/_not-found/page-1d7b51a07ed78421.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 2670
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/_not-found/page-1d7b51a07ed78421.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 2670
+    },
+    {
+      "path": "/_next/static/chunks/app/_not-found/page-37a003ce7c5a6f07.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 2670
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/_not-found/page-37a003ce7c5a6f07.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 2670
+    },
+    {
+      "path": "/_next/static/chunks/app/_not-found/page-e85e57f7e9878369.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 2668
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/_not-found/page-e85e57f7e9878369.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 2668
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/%5Bid%5D/page-33d41164b18f8dcb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 203
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/%5Bid%5D/page-33d41164b18f8dcb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 203
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/%5Bid%5D/page-bd63058b3120d322.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/%5Bid%5D/page-bd63058b3120d322.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/%5Bid%5D/page-f4c802b7419916b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/%5Bid%5D/page-f4c802b7419916b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/page-51731143a05c8af3.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 9697
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/page-51731143a05c8af3.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 9697
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/page-5a27b709564eac49.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 9697
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/page-5a27b709564eac49.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 9697
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/page-ac720ada7b638c8b.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 9703
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/page-ac720ada7b638c8b.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 9703
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/%5Bid%5D/page-33d41164b18f8dcb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 203
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/%5Bid%5D/page-33d41164b18f8dcb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 203
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/%5Bid%5D/page-bd63058b3120d322.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/%5Bid%5D/page-bd63058b3120d322.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/%5Bid%5D/page-f4c802b7419916b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/%5Bid%5D/page-f4c802b7419916b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/page-33d41164b18f8dcb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 203
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/page-33d41164b18f8dcb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 203
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/page-bd63058b3120d322.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/page-bd63058b3120d322.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/page-f4c802b7419916b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/page-f4c802b7419916b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/kibo/page-acaf159c441edc64.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 3629
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/kibo/page-acaf159c441edc64.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 3629
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/kibo/page-b7a48189689aed94.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 3629
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/kibo/page-b7a48189689aed94.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 3629
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/kibo/page-f385ff6e4f39a1b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 3629
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/kibo/page-f385ff6e4f39a1b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 3629
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/page-33d41164b18f8dcb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 203
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/page-33d41164b18f8dcb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 203
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/page-bd63058b3120d322.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/page-bd63058b3120d322.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/page-f4c802b7419916b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/page-f4c802b7419916b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/planner/page-b2e32b5cfea14fae.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 6405
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/planner/page-b2e32b5cfea14fae.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 6405
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/planner/page-b52e266783e7c119.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 6405
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/planner/page-b52e266783e7c119.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 6405
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/planner/page-cf00f3186db745bf.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 6405
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/planner/page-cf00f3186db745bf.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 6405
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/redeem-codes/page-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/redeem-codes/page-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/redeem-codes/page-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/redeem-codes/page-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/systems/page-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/systems/page-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/systems/page-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/systems/page-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/tier-list/page-33d41164b18f8dcb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 203
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/tier-list/page-33d41164b18f8dcb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 203
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/tier-list/page-bd63058b3120d322.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/tier-list/page-bd63058b3120d322.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/tier-list/page-f4c802b7419916b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/tier-list/page-f4c802b7419916b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/travel-trace/page-33d41164b18f8dcb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 203
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/travel-trace/page-33d41164b18f8dcb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 203
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/travel-trace/page-bd63058b3120d322.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/travel-trace/page-bd63058b3120d322.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/travel-trace/page-f4c802b7419916b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/travel-trace/page-f4c802b7419916b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/version/page-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/version/page-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/version/page-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/version/page-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/weapons/%5Bid%5D/page-33d41164b18f8dcb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 203
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/weapons/%5Bid%5D/page-33d41164b18f8dcb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 203
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/weapons/%5Bid%5D/page-bd63058b3120d322.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/weapons/%5Bid%5D/page-bd63058b3120d322.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/weapons/%5Bid%5D/page-f4c802b7419916b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/weapons/%5Bid%5D/page-f4c802b7419916b7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/weapons/page-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/weapons/page-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/weapons/page-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/weapons/page-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/world/page-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/world/page-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/azur-promilia/world/page-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/world/page-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/layout-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/layout-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/layout-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/layout-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/layout-20c77415e70e103b.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 195
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/layout-20c77415e70e103b.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 195
+    },
+    {
+      "path": "/_next/static/chunks/app/layout-7e4bebbcc6a265b4.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 195
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/layout-7e4bebbcc6a265b4.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 195
+    },
+    {
+      "path": "/_next/static/chunks/app/layout-dbf401f94f7332c7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 195
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/layout-dbf401f94f7332c7.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 195
+    },
+    {
+      "path": "/_next/static/chunks/app/page-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/page-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/page-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/page-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/robots.txt/route-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/robots.txt/route-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/robots.txt/route-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/robots.txt/route-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/sitemap.xml/route-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/sitemap.xml/route-4e406c811e66b2d5.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/sitemap.xml/route-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/sitemap.xml/route-640ca98210018140.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/b3ac7baf-c40001c3c1648c37.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 173018
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/b3ac7baf-c40001c3c1648c37.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 173018
+    },
+    {
+      "path": "/_next/static/chunks/cb95ab63-e7f3ca90b1b85bbe.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 173017
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/cb95ab63-e7f3ca90b1b85bbe.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 173017
+    },
+    {
+      "path": "/_next/static/chunks/framework-53958d1d0f917bbb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 189765
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/framework-53958d1d0f917bbb.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 189765
+    },
+    {
+      "path": "/_next/static/chunks/framework-9696696a185c78ac.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 189765
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/framework-9696696a185c78ac.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 189765
+    },
+    {
+      "path": "/_next/static/chunks/main-014656a35b18953e.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 137518
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-014656a35b18953e.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 137518
+    },
+    {
+      "path": "/_next/static/chunks/main-291cc0b51596f64c.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 137237
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-291cc0b51596f64c.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 137237
+    },
+    {
+      "path": "/_next/static/chunks/main-app-3c36f568c7a05fa8.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 556
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-app-3c36f568c7a05fa8.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 556
+    },
+    {
+      "path": "/_next/static/chunks/main-app-651a19d72f1d115b.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 554
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-app-651a19d72f1d115b.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 554
+    },
+    {
+      "path": "/_next/static/chunks/main-app-7bf6336b6bc12646.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 556
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-app-7bf6336b6bc12646.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 556
+    },
+    {
+      "path": "/_next/static/chunks/main-e08da73cad2c86b2.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 137740
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-e08da73cad2c86b2.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 137740
+    },
+    {
+      "path": "/_next/static/chunks/pages/_app-7d404bf9bd0fdb29.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 236
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/pages/_app-7d404bf9bd0fdb29.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 236
+    },
+    {
+      "path": "/_next/static/chunks/pages/_app-c8e994ea496efdaa.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 236
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/pages/_app-c8e994ea496efdaa.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 236
+    },
+    {
+      "path": "/_next/static/chunks/pages/_error-4a2748c8029baa0a.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 218
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/pages/_error-4a2748c8029baa0a.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 218
+    },
+    {
+      "path": "/_next/static/chunks/pages/_error-ca53de236ad1d553.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 216
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/pages/_error-ca53de236ad1d553.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 216
+    },
+    {
+      "path": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 112594
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 112594
+    },
+    {
+      "path": "/_next/static/chunks/webpack-7f4954f5c5baa9f3.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 3425
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/webpack-7f4954f5c5baa9f3.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 3425
+    },
+    {
+      "path": "/_next/static/chunks/webpack-ab27a0009b5e7231.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 3424
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/webpack-ab27a0009b5e7231.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 3424
+    },
+    {
+      "path": "/_next/static/css/9aa93cdcbed4bf47.css",
+      "status": 200,
+      "owner": null,
+      "bytes": 14412
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/css/9aa93cdcbed4bf47.css",
+      "status": 200,
+      "owner": null,
+      "bytes": 14412
+    },
+    {
+      "path": "/_next/static/HbeSOtMqF0yBDQIQlleKB/_buildManifest.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 801
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/HbeSOtMqF0yBDQIQlleKB/_buildManifest.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 801
+    },
+    {
+      "path": "/_next/static/HbeSOtMqF0yBDQIQlleKB/_ssgManifest.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 80
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/HbeSOtMqF0yBDQIQlleKB/_ssgManifest.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 80
+    },
+    {
+      "path": "/_next/static/lrBjX3R43Sm4lpAmnGfM9/_buildManifest.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 801
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/lrBjX3R43Sm4lpAmnGfM9/_buildManifest.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 801
+    },
+    {
+      "path": "/_next/static/lrBjX3R43Sm4lpAmnGfM9/_ssgManifest.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 80
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/lrBjX3R43Sm4lpAmnGfM9/_ssgManifest.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 80
+    },
+    {
+      "path": "/_next/static/ot7de9YK0E9eMMZpCizCh/_buildManifest.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 801
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/ot7de9YK0E9eMMZpCizCh/_buildManifest.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 801
+    },
+    {
+      "path": "/_next/static/ot7de9YK0E9eMMZpCizCh/_ssgManifest.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 80
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/ot7de9YK0E9eMMZpCizCh/_ssgManifest.js",
+      "status": 200,
+      "owner": null,
+      "bytes": 80
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "owner": null,
+      "bytes": 85
+    },
+    {
+      "path": "/zh/azur-promilia/characters/s2-18-missing-character",
+      "status": 404,
+      "owner": null,
+      "bytes": 7355
+    },
+    {
+      "path": "/zh/azur-promilia/__s2_18_missing__",
+      "status": 404,
+      "owner": null,
+      "bytes": 5983
+    },
+    {
+      "path": "/en/azur-promilia/characters/s2-18-missing-character",
+      "status": 404,
+      "owner": null,
+      "bytes": 7350
+    },
+    {
+      "path": "/en/azur-promilia/__s2_18_missing__",
+      "status": 404,
+      "owner": null,
+      "bytes": 5983
+    },
+    {
+      "path": "/ja/azur-promilia/characters/s2-18-missing-character",
+      "status": 404,
+      "owner": null,
+      "bytes": 7350
+    },
+    {
+      "path": "/ja/azur-promilia/__s2_18_missing__",
+      "status": 404,
+      "owner": null,
+      "bytes": 5983
+    }
+  ],
+  "pages": [
+    {
+      "path": "/en/azur-promilia",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/characters",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/characters",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/characters/abby",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/characters/abby",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/characters/anais",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/characters/anais",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/characters/cathbelle",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/characters/cathbelle",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/characters/faridah",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/characters/faridah",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/characters/han-youyou",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/characters/han-youyou",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/characters/katalua",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/characters/katalua",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/characters/lily",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/characters/lily",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/characters/luruka",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/characters/luruka",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/characters/metsa",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/characters/metsa",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/characters/mitty",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/characters/mitty",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/characters/morwyn-halkon",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/characters/morwyn-halkon",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/characters/nono",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/characters/nono",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/characters/pengpeng",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/characters/pengpeng",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/characters/ruby",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/characters/ruby",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/characters/shalle-ensys",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/characters/shalle-ensys",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/characters/starborn",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/characters/starborn",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/characters/symphoria",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/characters/symphoria",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/characters/terara",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/characters/terara",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/characters/xiaoyu",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/characters/xiaoyu",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/guides",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/guides",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/guides/banner-system-status",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/guides/banner-system-status",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/guides/cbt-beginner-progression-priorities",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/guides/cbt-beginner-progression-priorities",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/guides/cbt-character-index-reading-guide",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/guides/cbt-character-index-reading-guide",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/guides/cbt-combat-controls-and-tuning-guide",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/guides/cbt-combat-controls-and-tuning-guide",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/guides/cbt-combat-system-reference",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/guides/cbt-combat-system-reference",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/guides/cbt-exploration-tools-mounts-and-resources",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/guides/cbt-exploration-tools-mounts-and-resources",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/guides/cbt-homestead-facility-decision-guide",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/guides/cbt-homestead-facility-decision-guide",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/guides/cbt-kibo-capture-growth-mount-dispatch",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/guides/cbt-kibo-capture-growth-mount-dispatch",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/guides/cbt-kibo-growth-and-collection-log",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/guides/cbt-kibo-growth-and-collection-log",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/guides/cbt-kibo-system-reference",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/guides/cbt-kibo-system-reference",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/guides/cbt-weapons-and-equipment-reference",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/guides/cbt-weapons-and-equipment-reference",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/guides/homestead-progression",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/guides/homestead-progression",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/guides/kibo-battle-and-ecology",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/guides/kibo-battle-and-ecology",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/guides/latest-test-feedback-and-content-watch",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/guides/latest-test-feedback-and-content-watch",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/guides/official-character-index",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/guides/official-character-index",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/guides/official-character-region-guide",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/guides/official-character-region-guide",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/guides/official-information-checklist",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/guides/official-information-checklist",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/guides/patch-notes-and-feedback-watch-guide",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/guides/patch-notes-and-feedback-watch-guide",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/guides/test-feedback-tracker",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/guides/test-feedback-tracker",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/guides/test-registration-download-verification-guide",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/guides/test-registration-download-verification-guide",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/kibo",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/kibo",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/planner",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/planner",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/redeem-codes",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/redeem-codes",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/systems",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/systems",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/travel-trace",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/travel-trace",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/version",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/version",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/weapons",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/weapons",
+      "indexable": true
+    },
+    {
+      "path": "/en/azur-promilia/world",
+      "status": 200,
+      "canonical": "https://gachia.com/en/azur-promilia/world",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/characters",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/characters",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/characters/abby",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/characters/abby",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/characters/anais",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/characters/anais",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/characters/cathbelle",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/characters/cathbelle",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/characters/faridah",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/characters/faridah",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/characters/han-youyou",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/characters/han-youyou",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/characters/katalua",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/characters/katalua",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/characters/lily",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/characters/lily",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/characters/luruka",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/characters/luruka",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/characters/metsa",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/characters/metsa",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/characters/mitty",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/characters/mitty",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/characters/morwyn-halkon",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/characters/morwyn-halkon",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/characters/nono",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/characters/nono",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/characters/pengpeng",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/characters/pengpeng",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/characters/ruby",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/characters/ruby",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/characters/shalle-ensys",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/characters/shalle-ensys",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/characters/starborn",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/characters/starborn",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/characters/symphoria",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/characters/symphoria",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/characters/terara",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/characters/terara",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/characters/xiaoyu",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/characters/xiaoyu",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/guides",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/guides",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/guides/banner-system-status",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/guides/banner-system-status",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/guides/cbt-beginner-progression-priorities",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/guides/cbt-beginner-progression-priorities",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/guides/cbt-character-index-reading-guide",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/guides/cbt-character-index-reading-guide",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/guides/cbt-combat-controls-and-tuning-guide",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/guides/cbt-combat-controls-and-tuning-guide",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/guides/cbt-combat-system-reference",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/guides/cbt-combat-system-reference",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/guides/cbt-exploration-tools-mounts-and-resources",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/guides/cbt-exploration-tools-mounts-and-resources",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/guides/cbt-homestead-facility-decision-guide",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/guides/cbt-homestead-facility-decision-guide",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/guides/cbt-kibo-capture-growth-mount-dispatch",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/guides/cbt-kibo-capture-growth-mount-dispatch",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/guides/cbt-kibo-growth-and-collection-log",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/guides/cbt-kibo-growth-and-collection-log",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/guides/cbt-kibo-system-reference",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/guides/cbt-kibo-system-reference",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/guides/cbt-weapons-and-equipment-reference",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/guides/cbt-weapons-and-equipment-reference",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/guides/homestead-progression",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/guides/homestead-progression",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/guides/kibo-battle-and-ecology",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/guides/kibo-battle-and-ecology",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/guides/latest-test-feedback-and-content-watch",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/guides/latest-test-feedback-and-content-watch",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/guides/official-character-index",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/guides/official-character-index",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/guides/official-character-region-guide",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/guides/official-character-region-guide",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/guides/official-information-checklist",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/guides/official-information-checklist",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/guides/patch-notes-and-feedback-watch-guide",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/guides/patch-notes-and-feedback-watch-guide",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/guides/test-feedback-tracker",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/guides/test-feedback-tracker",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/guides/test-registration-download-verification-guide",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/guides/test-registration-download-verification-guide",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/kibo",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/kibo",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/planner",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/planner",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/redeem-codes",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/redeem-codes",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/systems",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/systems",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/travel-trace",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/travel-trace",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/version",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/version",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/weapons",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/weapons",
+      "indexable": true
+    },
+    {
+      "path": "/ja/azur-promilia/world",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/azur-promilia/world",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/characters",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/characters",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/characters/abby",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/characters/abby",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/characters/anais",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/characters/anais",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/characters/cathbelle",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/characters/cathbelle",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/characters/faridah",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/characters/faridah",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/characters/han-youyou",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/characters/han-youyou",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/characters/katalua",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/characters/katalua",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/characters/lily",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/characters/lily",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/characters/luruka",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/characters/luruka",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/characters/metsa",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/characters/metsa",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/characters/mitty",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/characters/mitty",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/characters/morwyn-halkon",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/characters/morwyn-halkon",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/characters/nono",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/characters/nono",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/characters/pengpeng",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/characters/pengpeng",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/characters/ruby",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/characters/ruby",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/characters/shalle-ensys",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/characters/shalle-ensys",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/characters/starborn",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/characters/starborn",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/characters/symphoria",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/characters/symphoria",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/characters/terara",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/characters/terara",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/characters/xiaoyu",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/characters/xiaoyu",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/guides",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides/banner-system-status",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/guides/banner-system-status",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides/cbt-beginner-progression-priorities",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/guides/cbt-beginner-progression-priorities",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides/cbt-character-index-reading-guide",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/guides/cbt-character-index-reading-guide",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides/cbt-combat-controls-and-tuning-guide",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/guides/cbt-combat-controls-and-tuning-guide",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides/cbt-combat-system-reference",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/guides/cbt-combat-system-reference",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides/cbt-exploration-tools-mounts-and-resources",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/guides/cbt-exploration-tools-mounts-and-resources",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides/cbt-homestead-facility-decision-guide",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/guides/cbt-homestead-facility-decision-guide",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides/cbt-kibo-capture-growth-mount-dispatch",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/guides/cbt-kibo-capture-growth-mount-dispatch",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides/cbt-kibo-growth-and-collection-log",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/guides/cbt-kibo-growth-and-collection-log",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides/cbt-kibo-system-reference",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/guides/cbt-kibo-system-reference",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides/cbt-weapons-and-equipment-reference",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/guides/cbt-weapons-and-equipment-reference",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides/homestead-progression",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/guides/homestead-progression",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides/kibo-battle-and-ecology",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/guides/kibo-battle-and-ecology",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides/latest-test-feedback-and-content-watch",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/guides/latest-test-feedback-and-content-watch",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides/official-character-index",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/guides/official-character-index",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides/official-character-region-guide",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/guides/official-character-region-guide",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides/official-information-checklist",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/guides/official-information-checklist",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides/patch-notes-and-feedback-watch-guide",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/guides/patch-notes-and-feedback-watch-guide",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides/test-feedback-tracker",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/guides/test-feedback-tracker",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/guides/test-registration-download-verification-guide",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/guides/test-registration-download-verification-guide",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/kibo",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/kibo",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/planner",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/planner",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/redeem-codes",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/redeem-codes",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/systems",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/systems",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/travel-trace",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/travel-trace",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/version",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/version",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/weapons",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/weapons",
+      "indexable": true
+    },
+    {
+      "path": "/zh/azur-promilia/world",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/azur-promilia/world",
+      "indexable": true
+    }
+  ],
+  "currentAssets": [
+    {
+      "path": "/_games/azur-promilia/_next/static/css/9aa93cdcbed4bf47.css",
+      "sha256": "333f501ae66e810147972ada7eb5137d5b4475c2084f0bcf6c6e72d1f178ceb3",
+      "bytes": 14412
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/webpack-ab27a0009b5e7231.js",
+      "sha256": "ad08e1f6fa492d96df0aa8ed0fe2e470703224ccc2a0f1efba4b6a89b975fd67",
+      "bytes": 3424
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/b3ac7baf-c40001c3c1648c37.js",
+      "sha256": "0acbfe483471d226b8984baa718694a91bf1102c52f6506a4322fc1c29de6729",
+      "bytes": 173018
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/721-1995520c574a32d7.js",
+      "sha256": "0c353970f4875f983651cf55e2e017d7a4b611a67852a84c43106c1acd1a18c2",
+      "bytes": 174137
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-app-7bf6336b6bc12646.js",
+      "sha256": "27ab33d830f470b76b844e468f1e4148a54e113fa6ddbf1d8989f4cf314bb785",
+      "bytes": 556
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/545-6e93eb050fa72f60.js",
+      "sha256": "bbddeacd209251d11cef3f05fdda915471b6f94720f0a5712c897b0c35e07776",
+      "bytes": 8533
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/page-bd63058b3120d322.js",
+      "sha256": "d532b9537bab2a0e27943bd5b0d8dbf3a2549c9ea0f7f698ba8f23a5be68ecd9",
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "sha256": "0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683",
+      "bytes": 112594
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/297-13607c6b09b34b5d.js",
+      "sha256": "2081e76cb2bdf72956788b862dd617d75697b55cd2c9e17b4f0d783a708b17ef",
+      "bytes": 24001
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/page-5a27b709564eac49.js",
+      "sha256": "37356ff16f0a3823a26a5368b89cd3cdfdb681e56ddf395e0cb56fac0ab900bd",
+      "bytes": 9697
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/%5Bid%5D/page-bd63058b3120d322.js",
+      "sha256": "d532b9537bab2a0e27943bd5b0d8dbf3a2549c9ea0f7f698ba8f23a5be68ecd9",
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/page-bd63058b3120d322.js",
+      "sha256": "d532b9537bab2a0e27943bd5b0d8dbf3a2549c9ea0f7f698ba8f23a5be68ecd9",
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/%5Bid%5D/page-bd63058b3120d322.js",
+      "sha256": "d532b9537bab2a0e27943bd5b0d8dbf3a2549c9ea0f7f698ba8f23a5be68ecd9",
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/kibo/page-acaf159c441edc64.js",
+      "sha256": "7d138e6cde4c31637e24683477ee7fbba1d4c481843ac4eac4ee49457475fd78",
+      "bytes": 3629
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/planner/page-cf00f3186db745bf.js",
+      "sha256": "e5910d6102aaae765a121660532f38cc9132ad4ca3f348bb1f83e489fd034bdb",
+      "bytes": 6405
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/travel-trace/page-bd63058b3120d322.js",
+      "sha256": "d532b9537bab2a0e27943bd5b0d8dbf3a2549c9ea0f7f698ba8f23a5be68ecd9",
+      "bytes": 205
+    }
+  ],
+  "oldAssets": [
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/134-993bbc04f5d351fc.js",
+      "bytes": 173345,
+      "sha256": "33b0bd577c8547d5e8fe3a803869bd60f6132f2f387e8c4a9d092ca431b9ad09"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/297-13607c6b09b34b5d.js",
+      "bytes": 24001,
+      "sha256": "2081e76cb2bdf72956788b862dd617d75697b55cd2c9e17b4f0d783a708b17ef"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/545-6e93eb050fa72f60.js",
+      "bytes": 8533,
+      "sha256": "bbddeacd209251d11cef3f05fdda915471b6f94720f0a5712c897b0c35e07776"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/652-fb3b46b5e03210e4.js",
+      "bytes": 8535,
+      "sha256": "522cecfd4d820c476e319b028697e39bbb5356eb747274da921e61acd34191ef"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/721-1995520c574a32d7.js",
+      "bytes": 174137,
+      "sha256": "0c353970f4875f983651cf55e2e017d7a4b611a67852a84c43106c1acd1a18c2"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/866-bd83348ffaa20514.js",
+      "bytes": 24001,
+      "sha256": "ecbda6dbcc9030c8321d74810b9c25d97ad799ed4bf73b850592119c7685dbd5"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/%5Bid%5D/page-33d41164b18f8dcb.js",
+      "bytes": 203,
+      "sha256": "3adc7a3a88af9e091f6cfafa3ebd1817962885c0c6afc888f3c97d2fc091fc75"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/%5Bid%5D/page-f4c802b7419916b7.js",
+      "bytes": 205,
+      "sha256": "176b5a9f2958c43e75f9f50fb2d631d202fc6b0027b2e42135c2660c02fe8ead"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/page-51731143a05c8af3.js",
+      "bytes": 9697,
+      "sha256": "cf2ae4a37e8fe7eeeb78260dc43d0f6a2c987fe0d643b244bf6f2de706c907f7"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/characters/page-ac720ada7b638c8b.js",
+      "bytes": 9703,
+      "sha256": "112e095c273640facd77a094a2a19580d562a3521bf91515f52ec9c450e53753"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/%5Bid%5D/page-33d41164b18f8dcb.js",
+      "bytes": 203,
+      "sha256": "3adc7a3a88af9e091f6cfafa3ebd1817962885c0c6afc888f3c97d2fc091fc75"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/%5Bid%5D/page-f4c802b7419916b7.js",
+      "bytes": 205,
+      "sha256": "176b5a9f2958c43e75f9f50fb2d631d202fc6b0027b2e42135c2660c02fe8ead"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/page-33d41164b18f8dcb.js",
+      "bytes": 203,
+      "sha256": "3adc7a3a88af9e091f6cfafa3ebd1817962885c0c6afc888f3c97d2fc091fc75"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/guides/page-f4c802b7419916b7.js",
+      "bytes": 205,
+      "sha256": "176b5a9f2958c43e75f9f50fb2d631d202fc6b0027b2e42135c2660c02fe8ead"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/kibo/page-b7a48189689aed94.js",
+      "bytes": 3629,
+      "sha256": "3f85e15e2f8f5cfcbc112b04432b57f51eabfed67ace1e098b63b6abd70d8da3"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/kibo/page-f385ff6e4f39a1b7.js",
+      "bytes": 3629,
+      "sha256": "bd598e73a4e123782db455bc861ef27043af43a79281ac39014e8de8ca3949f5"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/page-33d41164b18f8dcb.js",
+      "bytes": 203,
+      "sha256": "3adc7a3a88af9e091f6cfafa3ebd1817962885c0c6afc888f3c97d2fc091fc75"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/page-f4c802b7419916b7.js",
+      "bytes": 205,
+      "sha256": "176b5a9f2958c43e75f9f50fb2d631d202fc6b0027b2e42135c2660c02fe8ead"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/planner/page-b2e32b5cfea14fae.js",
+      "bytes": 6405,
+      "sha256": "f337a6e75e951ac02aad01e40af17b12141c2e3ae9b264f8a2956247f5b4f1bd"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/planner/page-b52e266783e7c119.js",
+      "bytes": 6405,
+      "sha256": "4a1c45f7688f7c3df0854654b53666542cce1dbce45886169c083b817e71bdf2"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/redeem-codes/page-4e406c811e66b2d5.js",
+      "bytes": 163,
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/redeem-codes/page-640ca98210018140.js",
+      "bytes": 163,
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/systems/page-4e406c811e66b2d5.js",
+      "bytes": 163,
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/systems/page-640ca98210018140.js",
+      "bytes": 163,
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/tier-list/page-33d41164b18f8dcb.js",
+      "bytes": 203,
+      "sha256": "3adc7a3a88af9e091f6cfafa3ebd1817962885c0c6afc888f3c97d2fc091fc75"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/tier-list/page-f4c802b7419916b7.js",
+      "bytes": 205,
+      "sha256": "176b5a9f2958c43e75f9f50fb2d631d202fc6b0027b2e42135c2660c02fe8ead"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/travel-trace/page-33d41164b18f8dcb.js",
+      "bytes": 203,
+      "sha256": "3adc7a3a88af9e091f6cfafa3ebd1817962885c0c6afc888f3c97d2fc091fc75"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/travel-trace/page-f4c802b7419916b7.js",
+      "bytes": 205,
+      "sha256": "176b5a9f2958c43e75f9f50fb2d631d202fc6b0027b2e42135c2660c02fe8ead"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/version/page-4e406c811e66b2d5.js",
+      "bytes": 163,
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/version/page-640ca98210018140.js",
+      "bytes": 163,
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/weapons/%5Bid%5D/page-33d41164b18f8dcb.js",
+      "bytes": 203,
+      "sha256": "3adc7a3a88af9e091f6cfafa3ebd1817962885c0c6afc888f3c97d2fc091fc75"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/weapons/%5Bid%5D/page-f4c802b7419916b7.js",
+      "bytes": 205,
+      "sha256": "176b5a9f2958c43e75f9f50fb2d631d202fc6b0027b2e42135c2660c02fe8ead"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/weapons/page-4e406c811e66b2d5.js",
+      "bytes": 163,
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/weapons/page-640ca98210018140.js",
+      "bytes": 163,
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/world/page-4e406c811e66b2d5.js",
+      "bytes": 163,
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/azur-promilia/world/page-640ca98210018140.js",
+      "bytes": 163,
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/layout-4e406c811e66b2d5.js",
+      "bytes": 163,
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/%5Blang%5D/layout-640ca98210018140.js",
+      "bytes": 163,
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/_not-found/page-1d7b51a07ed78421.js",
+      "bytes": 2670,
+      "sha256": "6fa38e324c72ef9585d564031f97aa0a3b26ec9adf66ea0d1a3c7e4a29631ab4"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/_not-found/page-37a003ce7c5a6f07.js",
+      "bytes": 2670,
+      "sha256": "bb37d43472dc80fbda6c3a7f1e8837e85228c91e54e65388dd85a289ffe53dfb"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/layout-20c77415e70e103b.js",
+      "bytes": 195,
+      "sha256": "6578c281bb4309dd9d3fdcc5ef4279b4d3d4aa14fdd44997cd634ffa961efca4"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/layout-7e4bebbcc6a265b4.js",
+      "bytes": 195,
+      "sha256": "9ccf998c2f7d83e962185f4849b7984ec7c247c3962a50c5449b334c9d5278b3"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/page-4e406c811e66b2d5.js",
+      "bytes": 163,
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/page-640ca98210018140.js",
+      "bytes": 163,
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/robots.txt/route-4e406c811e66b2d5.js",
+      "bytes": 163,
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/robots.txt/route-640ca98210018140.js",
+      "bytes": 163,
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/sitemap.xml/route-4e406c811e66b2d5.js",
+      "bytes": 163,
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/sitemap.xml/route-640ca98210018140.js",
+      "bytes": 163,
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/b3ac7baf-c40001c3c1648c37.js",
+      "bytes": 173018,
+      "sha256": "0acbfe483471d226b8984baa718694a91bf1102c52f6506a4322fc1c29de6729"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/cb95ab63-e7f3ca90b1b85bbe.js",
+      "bytes": 173017,
+      "sha256": "87c8da227b1b98e63c7f2b40b2ca5379200c3feaacf525fb1144a1b4dcc00df9"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/framework-53958d1d0f917bbb.js",
+      "bytes": 189765,
+      "sha256": "45abd73cb7d35889e62fa2bd172229424a8e21404639f5699d84ecb474110eb4"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/framework-9696696a185c78ac.js",
+      "bytes": 189765,
+      "sha256": "7cc6e3090fe318ee2e44a91618678c5a7c1f862f61fbd9a82d65c8a841d87201"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-014656a35b18953e.js",
+      "bytes": 137518,
+      "sha256": "057a730b18ef1b7cd452014b659236b72bb48acba5d85a197b5e13e8454a86ec"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-291cc0b51596f64c.js",
+      "bytes": 137237,
+      "sha256": "b3ac5a861bddde0dfc6b3b5c290f96ad428c174d018bd5e7f703aa9da95e5076"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-app-3c36f568c7a05fa8.js",
+      "bytes": 556,
+      "sha256": "e3fde6a2681ef2a1ea5b963612efd5347976d1129b022e7a5f8a30376e456974"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-app-651a19d72f1d115b.js",
+      "bytes": 554,
+      "sha256": "c14b02306eb09038d4f504d947dfd9d9e2bd903c3bacbfa1471cb787f0ef1a1d"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/pages/_app-7d404bf9bd0fdb29.js",
+      "bytes": 236,
+      "sha256": "abf55f9b450809a507b1ba2bf3f32dcedd047609787a55f65dd9d8960b2eb660"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/pages/_app-c8e994ea496efdaa.js",
+      "bytes": 236,
+      "sha256": "8483ef687db555fda25098452116be580f1d517b9c8851585b89348c2fb0019b"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/pages/_error-4a2748c8029baa0a.js",
+      "bytes": 218,
+      "sha256": "e8a4a0d74e759f47f837e0eb62da7e849e03cd763559a6c5e78ef40ca5d86730"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/pages/_error-ca53de236ad1d553.js",
+      "bytes": 216,
+      "sha256": "afebe9dcc6f3dcaf39287cec34fcf7c3fb664444dedf10ce5dd5121a8443f19c"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "bytes": 112594,
+      "sha256": "0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/webpack-7f4954f5c5baa9f3.js",
+      "bytes": 3425,
+      "sha256": "3c165ec07a23b1e7564ca95369dd5a3de7e4fa2cb3d55b04eb1bc3a9ab7ad87c"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/webpack-ab27a0009b5e7231.js",
+      "bytes": 3424,
+      "sha256": "ad08e1f6fa492d96df0aa8ed0fe2e470703224ccc2a0f1efba4b6a89b975fd67"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/css/9aa93cdcbed4bf47.css",
+      "bytes": 14412,
+      "sha256": "333f501ae66e810147972ada7eb5137d5b4475c2084f0bcf6c6e72d1f178ceb3"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/lrBjX3R43Sm4lpAmnGfM9/_buildManifest.js",
+      "bytes": 801,
+      "sha256": "2fa7acd2049a3d89ffec5f9158802d34082d56ce6fd2a4a4fc85516903323751"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/lrBjX3R43Sm4lpAmnGfM9/_ssgManifest.js",
+      "bytes": 80,
+      "sha256": "678f6ce2cb80b1fe72fc67e7412be6e2ab6ada083111b64f7c40d35e3cba5e00"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/ot7de9YK0E9eMMZpCizCh/_buildManifest.js",
+      "bytes": 801,
+      "sha256": "a4a7f099b574334f16aa6fe0ecfea0316e1f36ad167d89f5c9bb128124bf2b19"
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/ot7de9YK0E9eMMZpCizCh/_ssgManifest.js",
+      "bytes": 80,
+      "sha256": "678f6ce2cb80b1fe72fc67e7412be6e2ab6ada083111b64f7c40d35e3cba5e00"
+    }
+  ],
+  "browsers": [
+    {
+      "width": 1440,
+      "locale": "zh",
+      "javaScriptEnabled": true,
+      "cards": 19,
+      "errors": 0,
+      "failedAssets": 0
+    },
+    {
+      "width": 1440,
+      "locale": "zh",
+      "javaScriptEnabled": false,
+      "cards": 19,
+      "errors": 0,
+      "failedAssets": 0
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "javaScriptEnabled": true,
+      "cards": 19,
+      "errors": 0,
+      "failedAssets": 0
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "javaScriptEnabled": false,
+      "cards": 19,
+      "errors": 0,
+      "failedAssets": 0
+    },
+    {
+      "width": 1440,
+      "locale": "ja",
+      "javaScriptEnabled": true,
+      "cards": 19,
+      "errors": 0,
+      "failedAssets": 0
+    },
+    {
+      "width": 1440,
+      "locale": "ja",
+      "javaScriptEnabled": false,
+      "cards": 19,
+      "errors": 0,
+      "failedAssets": 0
+    },
+    {
+      "width": 390,
+      "locale": "zh",
+      "javaScriptEnabled": true,
+      "cards": 19,
+      "errors": 0,
+      "failedAssets": 0
+    },
+    {
+      "width": 390,
+      "locale": "zh",
+      "javaScriptEnabled": false,
+      "cards": 19,
+      "errors": 0,
+      "failedAssets": 0
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "javaScriptEnabled": true,
+      "cards": 19,
+      "errors": 0,
+      "failedAssets": 0
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "javaScriptEnabled": false,
+      "cards": 19,
+      "errors": 0,
+      "failedAssets": 0
+    },
+    {
+      "width": 390,
+      "locale": "ja",
+      "javaScriptEnabled": true,
+      "cards": 19,
+      "errors": 0,
+      "failedAssets": 0
+    },
+    {
+      "width": 390,
+      "locale": "ja",
+      "javaScriptEnabled": false,
+      "cards": 19,
+      "errors": 0,
+      "failedAssets": 0
+    }
+  ],
+  "planner": [
+    {
+      "width": 1440,
+      "locale": "zh",
+      "oldShapePreserved": true,
+      "saveReloadRemove": true
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "oldShapePreserved": true,
+      "saveReloadRemove": true
+    },
+    {
+      "width": 1440,
+      "locale": "ja",
+      "oldShapePreserved": true,
+      "saveReloadRemove": true
+    },
+    {
+      "width": 390,
+      "locale": "zh",
+      "oldShapePreserved": true,
+      "saveReloadRemove": true
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "oldShapePreserved": true,
+      "saveReloadRemove": true
+    },
+    {
+      "width": 390,
+      "locale": "ja",
+      "oldShapePreserved": true,
+      "saveReloadRemove": true
+    }
+  ],
+  "scope": "Azur only, not whole-site or Main release acceptance",
+  "sitemap": {
+    "urls": 150,
+    "unique": 150,
+    "candidateSetEqual": true,
+    "sha256": "f4f92a7b7b4b562b41228f8e4f290a2cbe6b492b21ef81d166da5bcc828ef6d7"
+  },
+  "allAssets": [
+    {
+      "path": "/_next/static/chunks/134-993bbc04f5d351fc.js",
+      "sha256": "33b0bd577c8547d5e8fe3a803869bd60f6132f2f387e8c4a9d092ca431b9ad09",
+      "bytes": 173345
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/134-993bbc04f5d351fc.js",
+      "sha256": "33b0bd577c8547d5e8fe3a803869bd60f6132f2f387e8c4a9d092ca431b9ad09",
+      "bytes": 173345
+    },
+    {
+      "path": "/_next/static/chunks/297-13607c6b09b34b5d.js",
+      "sha256": "2081e76cb2bdf72956788b862dd617d75697b55cd2c9e17b4f0d783a708b17ef",
+      "bytes": 24001
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/297-13607c6b09b34b5d.js",
+      "sha256": "2081e76cb2bdf72956788b862dd617d75697b55cd2c9e17b4f0d783a708b17ef",
+      "bytes": 24001
+    },
+    {
+      "path": "/_next/static/chunks/545-6e93eb050fa72f60.js",
+      "sha256": "bbddeacd209251d11cef3f05fdda915471b6f94720f0a5712c897b0c35e07776",
+      "bytes": 8533
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/545-6e93eb050fa72f60.js",
+      "sha256": "bbddeacd209251d11cef3f05fdda915471b6f94720f0a5712c897b0c35e07776",
+      "bytes": 8533
+    },
+    {
+      "path": "/_next/static/chunks/652-fb3b46b5e03210e4.js",
+      "sha256": "522cecfd4d820c476e319b028697e39bbb5356eb747274da921e61acd34191ef",
+      "bytes": 8535
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/652-fb3b46b5e03210e4.js",
+      "sha256": "522cecfd4d820c476e319b028697e39bbb5356eb747274da921e61acd34191ef",
+      "bytes": 8535
+    },
+    {
+      "path": "/_next/static/chunks/721-1995520c574a32d7.js",
+      "sha256": "0c353970f4875f983651cf55e2e017d7a4b611a67852a84c43106c1acd1a18c2",
+      "bytes": 174137
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/721-1995520c574a32d7.js",
+      "sha256": "0c353970f4875f983651cf55e2e017d7a4b611a67852a84c43106c1acd1a18c2",
+      "bytes": 174137
+    },
+    {
+      "path": "/_next/static/chunks/866-bd83348ffaa20514.js",
+      "sha256": "ecbda6dbcc9030c8321d74810b9c25d97ad799ed4bf73b850592119c7685dbd5",
+      "bytes": 24001
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/866-bd83348ffaa20514.js",
+      "sha256": "ecbda6dbcc9030c8321d74810b9c25d97ad799ed4bf73b850592119c7685dbd5",
+      "bytes": 24001
+    },
+    {
+      "path": "/_next/static/chunks/app/_not-found/page-1d7b51a07ed78421.js",
+      "sha256": "6fa38e324c72ef9585d564031f97aa0a3b26ec9adf66ea0d1a3c7e4a29631ab4",
+      "bytes": 2670
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/_not-found/page-1d7b51a07ed78421.js",
+      "sha256": "6fa38e324c72ef9585d564031f97aa0a3b26ec9adf66ea0d1a3c7e4a29631ab4",
+      "bytes": 2670
+    },
+    {
+      "path": "/_next/static/chunks/app/_not-found/page-37a003ce7c5a6f07.js",
+      "sha256": "bb37d43472dc80fbda6c3a7f1e8837e85228c91e54e65388dd85a289ffe53dfb",
+      "bytes": 2670
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/_not-found/page-37a003ce7c5a6f07.js",
+      "sha256": "bb37d43472dc80fbda6c3a7f1e8837e85228c91e54e65388dd85a289ffe53dfb",
+      "bytes": 2670
+    },
+    {
+      "path": "/_next/static/chunks/app/_not-found/page-e85e57f7e9878369.js",
+      "sha256": "82761a251e75f1bba80032b1f36902d2aab89ea92e801d4d2c7facc13a1be48b",
+      "bytes": 2668
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/_not-found/page-e85e57f7e9878369.js",
+      "sha256": "82761a251e75f1bba80032b1f36902d2aab89ea92e801d4d2c7facc13a1be48b",
+      "bytes": 2668
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/characters/[id]/page-33d41164b18f8dcb.js",
+      "sha256": "3adc7a3a88af9e091f6cfafa3ebd1817962885c0c6afc888f3c97d2fc091fc75",
+      "bytes": 203
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/characters/[id]/page-33d41164b18f8dcb.js",
+      "sha256": "3adc7a3a88af9e091f6cfafa3ebd1817962885c0c6afc888f3c97d2fc091fc75",
+      "bytes": 203
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/characters/[id]/page-bd63058b3120d322.js",
+      "sha256": "d532b9537bab2a0e27943bd5b0d8dbf3a2549c9ea0f7f698ba8f23a5be68ecd9",
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/characters/[id]/page-bd63058b3120d322.js",
+      "sha256": "d532b9537bab2a0e27943bd5b0d8dbf3a2549c9ea0f7f698ba8f23a5be68ecd9",
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/characters/[id]/page-f4c802b7419916b7.js",
+      "sha256": "176b5a9f2958c43e75f9f50fb2d631d202fc6b0027b2e42135c2660c02fe8ead",
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/characters/[id]/page-f4c802b7419916b7.js",
+      "sha256": "176b5a9f2958c43e75f9f50fb2d631d202fc6b0027b2e42135c2660c02fe8ead",
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/characters/page-51731143a05c8af3.js",
+      "sha256": "cf2ae4a37e8fe7eeeb78260dc43d0f6a2c987fe0d643b244bf6f2de706c907f7",
+      "bytes": 9697
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/characters/page-51731143a05c8af3.js",
+      "sha256": "cf2ae4a37e8fe7eeeb78260dc43d0f6a2c987fe0d643b244bf6f2de706c907f7",
+      "bytes": 9697
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/characters/page-5a27b709564eac49.js",
+      "sha256": "37356ff16f0a3823a26a5368b89cd3cdfdb681e56ddf395e0cb56fac0ab900bd",
+      "bytes": 9697
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/characters/page-5a27b709564eac49.js",
+      "sha256": "37356ff16f0a3823a26a5368b89cd3cdfdb681e56ddf395e0cb56fac0ab900bd",
+      "bytes": 9697
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/characters/page-ac720ada7b638c8b.js",
+      "sha256": "112e095c273640facd77a094a2a19580d562a3521bf91515f52ec9c450e53753",
+      "bytes": 9703
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/characters/page-ac720ada7b638c8b.js",
+      "sha256": "112e095c273640facd77a094a2a19580d562a3521bf91515f52ec9c450e53753",
+      "bytes": 9703
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/guides/[id]/page-33d41164b18f8dcb.js",
+      "sha256": "3adc7a3a88af9e091f6cfafa3ebd1817962885c0c6afc888f3c97d2fc091fc75",
+      "bytes": 203
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/guides/[id]/page-33d41164b18f8dcb.js",
+      "sha256": "3adc7a3a88af9e091f6cfafa3ebd1817962885c0c6afc888f3c97d2fc091fc75",
+      "bytes": 203
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/guides/[id]/page-bd63058b3120d322.js",
+      "sha256": "d532b9537bab2a0e27943bd5b0d8dbf3a2549c9ea0f7f698ba8f23a5be68ecd9",
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/guides/[id]/page-bd63058b3120d322.js",
+      "sha256": "d532b9537bab2a0e27943bd5b0d8dbf3a2549c9ea0f7f698ba8f23a5be68ecd9",
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/guides/[id]/page-f4c802b7419916b7.js",
+      "sha256": "176b5a9f2958c43e75f9f50fb2d631d202fc6b0027b2e42135c2660c02fe8ead",
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/guides/[id]/page-f4c802b7419916b7.js",
+      "sha256": "176b5a9f2958c43e75f9f50fb2d631d202fc6b0027b2e42135c2660c02fe8ead",
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/guides/page-33d41164b18f8dcb.js",
+      "sha256": "3adc7a3a88af9e091f6cfafa3ebd1817962885c0c6afc888f3c97d2fc091fc75",
+      "bytes": 203
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/guides/page-33d41164b18f8dcb.js",
+      "sha256": "3adc7a3a88af9e091f6cfafa3ebd1817962885c0c6afc888f3c97d2fc091fc75",
+      "bytes": 203
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/guides/page-bd63058b3120d322.js",
+      "sha256": "d532b9537bab2a0e27943bd5b0d8dbf3a2549c9ea0f7f698ba8f23a5be68ecd9",
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/guides/page-bd63058b3120d322.js",
+      "sha256": "d532b9537bab2a0e27943bd5b0d8dbf3a2549c9ea0f7f698ba8f23a5be68ecd9",
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/guides/page-f4c802b7419916b7.js",
+      "sha256": "176b5a9f2958c43e75f9f50fb2d631d202fc6b0027b2e42135c2660c02fe8ead",
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/guides/page-f4c802b7419916b7.js",
+      "sha256": "176b5a9f2958c43e75f9f50fb2d631d202fc6b0027b2e42135c2660c02fe8ead",
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/kibo/page-acaf159c441edc64.js",
+      "sha256": "7d138e6cde4c31637e24683477ee7fbba1d4c481843ac4eac4ee49457475fd78",
+      "bytes": 3629
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/kibo/page-acaf159c441edc64.js",
+      "sha256": "7d138e6cde4c31637e24683477ee7fbba1d4c481843ac4eac4ee49457475fd78",
+      "bytes": 3629
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/kibo/page-b7a48189689aed94.js",
+      "sha256": "3f85e15e2f8f5cfcbc112b04432b57f51eabfed67ace1e098b63b6abd70d8da3",
+      "bytes": 3629
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/kibo/page-b7a48189689aed94.js",
+      "sha256": "3f85e15e2f8f5cfcbc112b04432b57f51eabfed67ace1e098b63b6abd70d8da3",
+      "bytes": 3629
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/kibo/page-f385ff6e4f39a1b7.js",
+      "sha256": "bd598e73a4e123782db455bc861ef27043af43a79281ac39014e8de8ca3949f5",
+      "bytes": 3629
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/kibo/page-f385ff6e4f39a1b7.js",
+      "sha256": "bd598e73a4e123782db455bc861ef27043af43a79281ac39014e8de8ca3949f5",
+      "bytes": 3629
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/page-33d41164b18f8dcb.js",
+      "sha256": "3adc7a3a88af9e091f6cfafa3ebd1817962885c0c6afc888f3c97d2fc091fc75",
+      "bytes": 203
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/page-33d41164b18f8dcb.js",
+      "sha256": "3adc7a3a88af9e091f6cfafa3ebd1817962885c0c6afc888f3c97d2fc091fc75",
+      "bytes": 203
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/page-bd63058b3120d322.js",
+      "sha256": "d532b9537bab2a0e27943bd5b0d8dbf3a2549c9ea0f7f698ba8f23a5be68ecd9",
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/page-bd63058b3120d322.js",
+      "sha256": "d532b9537bab2a0e27943bd5b0d8dbf3a2549c9ea0f7f698ba8f23a5be68ecd9",
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/page-f4c802b7419916b7.js",
+      "sha256": "176b5a9f2958c43e75f9f50fb2d631d202fc6b0027b2e42135c2660c02fe8ead",
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/page-f4c802b7419916b7.js",
+      "sha256": "176b5a9f2958c43e75f9f50fb2d631d202fc6b0027b2e42135c2660c02fe8ead",
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/planner/page-b2e32b5cfea14fae.js",
+      "sha256": "f337a6e75e951ac02aad01e40af17b12141c2e3ae9b264f8a2956247f5b4f1bd",
+      "bytes": 6405
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/planner/page-b2e32b5cfea14fae.js",
+      "sha256": "f337a6e75e951ac02aad01e40af17b12141c2e3ae9b264f8a2956247f5b4f1bd",
+      "bytes": 6405
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/planner/page-b52e266783e7c119.js",
+      "sha256": "4a1c45f7688f7c3df0854654b53666542cce1dbce45886169c083b817e71bdf2",
+      "bytes": 6405
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/planner/page-b52e266783e7c119.js",
+      "sha256": "4a1c45f7688f7c3df0854654b53666542cce1dbce45886169c083b817e71bdf2",
+      "bytes": 6405
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/planner/page-cf00f3186db745bf.js",
+      "sha256": "e5910d6102aaae765a121660532f38cc9132ad4ca3f348bb1f83e489fd034bdb",
+      "bytes": 6405
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/planner/page-cf00f3186db745bf.js",
+      "sha256": "e5910d6102aaae765a121660532f38cc9132ad4ca3f348bb1f83e489fd034bdb",
+      "bytes": 6405
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/redeem-codes/page-4e406c811e66b2d5.js",
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164",
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/redeem-codes/page-4e406c811e66b2d5.js",
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164",
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/redeem-codes/page-640ca98210018140.js",
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0",
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/redeem-codes/page-640ca98210018140.js",
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0",
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/systems/page-4e406c811e66b2d5.js",
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164",
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/systems/page-4e406c811e66b2d5.js",
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164",
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/systems/page-640ca98210018140.js",
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0",
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/systems/page-640ca98210018140.js",
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0",
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/tier-list/page-33d41164b18f8dcb.js",
+      "sha256": "3adc7a3a88af9e091f6cfafa3ebd1817962885c0c6afc888f3c97d2fc091fc75",
+      "bytes": 203
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/tier-list/page-33d41164b18f8dcb.js",
+      "sha256": "3adc7a3a88af9e091f6cfafa3ebd1817962885c0c6afc888f3c97d2fc091fc75",
+      "bytes": 203
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/tier-list/page-bd63058b3120d322.js",
+      "sha256": "d532b9537bab2a0e27943bd5b0d8dbf3a2549c9ea0f7f698ba8f23a5be68ecd9",
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/tier-list/page-bd63058b3120d322.js",
+      "sha256": "d532b9537bab2a0e27943bd5b0d8dbf3a2549c9ea0f7f698ba8f23a5be68ecd9",
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/tier-list/page-f4c802b7419916b7.js",
+      "sha256": "176b5a9f2958c43e75f9f50fb2d631d202fc6b0027b2e42135c2660c02fe8ead",
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/tier-list/page-f4c802b7419916b7.js",
+      "sha256": "176b5a9f2958c43e75f9f50fb2d631d202fc6b0027b2e42135c2660c02fe8ead",
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/travel-trace/page-33d41164b18f8dcb.js",
+      "sha256": "3adc7a3a88af9e091f6cfafa3ebd1817962885c0c6afc888f3c97d2fc091fc75",
+      "bytes": 203
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/travel-trace/page-33d41164b18f8dcb.js",
+      "sha256": "3adc7a3a88af9e091f6cfafa3ebd1817962885c0c6afc888f3c97d2fc091fc75",
+      "bytes": 203
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/travel-trace/page-bd63058b3120d322.js",
+      "sha256": "d532b9537bab2a0e27943bd5b0d8dbf3a2549c9ea0f7f698ba8f23a5be68ecd9",
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/travel-trace/page-bd63058b3120d322.js",
+      "sha256": "d532b9537bab2a0e27943bd5b0d8dbf3a2549c9ea0f7f698ba8f23a5be68ecd9",
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/travel-trace/page-f4c802b7419916b7.js",
+      "sha256": "176b5a9f2958c43e75f9f50fb2d631d202fc6b0027b2e42135c2660c02fe8ead",
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/travel-trace/page-f4c802b7419916b7.js",
+      "sha256": "176b5a9f2958c43e75f9f50fb2d631d202fc6b0027b2e42135c2660c02fe8ead",
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/version/page-4e406c811e66b2d5.js",
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164",
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/version/page-4e406c811e66b2d5.js",
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164",
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/version/page-640ca98210018140.js",
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0",
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/version/page-640ca98210018140.js",
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0",
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/weapons/[id]/page-33d41164b18f8dcb.js",
+      "sha256": "3adc7a3a88af9e091f6cfafa3ebd1817962885c0c6afc888f3c97d2fc091fc75",
+      "bytes": 203
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/weapons/[id]/page-33d41164b18f8dcb.js",
+      "sha256": "3adc7a3a88af9e091f6cfafa3ebd1817962885c0c6afc888f3c97d2fc091fc75",
+      "bytes": 203
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/weapons/[id]/page-bd63058b3120d322.js",
+      "sha256": "d532b9537bab2a0e27943bd5b0d8dbf3a2549c9ea0f7f698ba8f23a5be68ecd9",
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/weapons/[id]/page-bd63058b3120d322.js",
+      "sha256": "d532b9537bab2a0e27943bd5b0d8dbf3a2549c9ea0f7f698ba8f23a5be68ecd9",
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/weapons/[id]/page-f4c802b7419916b7.js",
+      "sha256": "176b5a9f2958c43e75f9f50fb2d631d202fc6b0027b2e42135c2660c02fe8ead",
+      "bytes": 205
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/weapons/[id]/page-f4c802b7419916b7.js",
+      "sha256": "176b5a9f2958c43e75f9f50fb2d631d202fc6b0027b2e42135c2660c02fe8ead",
+      "bytes": 205
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/weapons/page-4e406c811e66b2d5.js",
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164",
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/weapons/page-4e406c811e66b2d5.js",
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164",
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/weapons/page-640ca98210018140.js",
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0",
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/weapons/page-640ca98210018140.js",
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0",
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/world/page-4e406c811e66b2d5.js",
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164",
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/world/page-4e406c811e66b2d5.js",
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164",
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/azur-promilia/world/page-640ca98210018140.js",
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0",
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/azur-promilia/world/page-640ca98210018140.js",
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0",
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/layout-4e406c811e66b2d5.js",
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164",
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/layout-4e406c811e66b2d5.js",
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164",
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/[lang]/layout-640ca98210018140.js",
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0",
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/[lang]/layout-640ca98210018140.js",
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0",
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/layout-20c77415e70e103b.js",
+      "sha256": "6578c281bb4309dd9d3fdcc5ef4279b4d3d4aa14fdd44997cd634ffa961efca4",
+      "bytes": 195
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/layout-20c77415e70e103b.js",
+      "sha256": "6578c281bb4309dd9d3fdcc5ef4279b4d3d4aa14fdd44997cd634ffa961efca4",
+      "bytes": 195
+    },
+    {
+      "path": "/_next/static/chunks/app/layout-7e4bebbcc6a265b4.js",
+      "sha256": "9ccf998c2f7d83e962185f4849b7984ec7c247c3962a50c5449b334c9d5278b3",
+      "bytes": 195
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/layout-7e4bebbcc6a265b4.js",
+      "sha256": "9ccf998c2f7d83e962185f4849b7984ec7c247c3962a50c5449b334c9d5278b3",
+      "bytes": 195
+    },
+    {
+      "path": "/_next/static/chunks/app/layout-dbf401f94f7332c7.js",
+      "sha256": "c19f2dc93658c5788ce6d847c54db5e8203051008c742fc8e9c4d46b8415b1e0",
+      "bytes": 195
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/layout-dbf401f94f7332c7.js",
+      "sha256": "c19f2dc93658c5788ce6d847c54db5e8203051008c742fc8e9c4d46b8415b1e0",
+      "bytes": 195
+    },
+    {
+      "path": "/_next/static/chunks/app/page-4e406c811e66b2d5.js",
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164",
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/page-4e406c811e66b2d5.js",
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164",
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/page-640ca98210018140.js",
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0",
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/page-640ca98210018140.js",
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0",
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/robots.txt/route-4e406c811e66b2d5.js",
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164",
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/robots.txt/route-4e406c811e66b2d5.js",
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164",
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/robots.txt/route-640ca98210018140.js",
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0",
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/robots.txt/route-640ca98210018140.js",
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0",
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/sitemap.xml/route-4e406c811e66b2d5.js",
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164",
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/sitemap.xml/route-4e406c811e66b2d5.js",
+      "sha256": "5d850267f5d2e9168e75b98e08a746096c0ebd322203622e7bdd45dc0b66b164",
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/app/sitemap.xml/route-640ca98210018140.js",
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0",
+      "bytes": 163
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/app/sitemap.xml/route-640ca98210018140.js",
+      "sha256": "2ce053cec4f3b268889b68d4e2f5cf714421cdf60296aeeb4d2fdebd28b911d0",
+      "bytes": 163
+    },
+    {
+      "path": "/_next/static/chunks/b3ac7baf-c40001c3c1648c37.js",
+      "sha256": "0acbfe483471d226b8984baa718694a91bf1102c52f6506a4322fc1c29de6729",
+      "bytes": 173018
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/b3ac7baf-c40001c3c1648c37.js",
+      "sha256": "0acbfe483471d226b8984baa718694a91bf1102c52f6506a4322fc1c29de6729",
+      "bytes": 173018
+    },
+    {
+      "path": "/_next/static/chunks/cb95ab63-e7f3ca90b1b85bbe.js",
+      "sha256": "87c8da227b1b98e63c7f2b40b2ca5379200c3feaacf525fb1144a1b4dcc00df9",
+      "bytes": 173017
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/cb95ab63-e7f3ca90b1b85bbe.js",
+      "sha256": "87c8da227b1b98e63c7f2b40b2ca5379200c3feaacf525fb1144a1b4dcc00df9",
+      "bytes": 173017
+    },
+    {
+      "path": "/_next/static/chunks/framework-53958d1d0f917bbb.js",
+      "sha256": "45abd73cb7d35889e62fa2bd172229424a8e21404639f5699d84ecb474110eb4",
+      "bytes": 189765
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/framework-53958d1d0f917bbb.js",
+      "sha256": "45abd73cb7d35889e62fa2bd172229424a8e21404639f5699d84ecb474110eb4",
+      "bytes": 189765
+    },
+    {
+      "path": "/_next/static/chunks/framework-9696696a185c78ac.js",
+      "sha256": "7cc6e3090fe318ee2e44a91618678c5a7c1f862f61fbd9a82d65c8a841d87201",
+      "bytes": 189765
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/framework-9696696a185c78ac.js",
+      "sha256": "7cc6e3090fe318ee2e44a91618678c5a7c1f862f61fbd9a82d65c8a841d87201",
+      "bytes": 189765
+    },
+    {
+      "path": "/_next/static/chunks/main-014656a35b18953e.js",
+      "sha256": "057a730b18ef1b7cd452014b659236b72bb48acba5d85a197b5e13e8454a86ec",
+      "bytes": 137518
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-014656a35b18953e.js",
+      "sha256": "057a730b18ef1b7cd452014b659236b72bb48acba5d85a197b5e13e8454a86ec",
+      "bytes": 137518
+    },
+    {
+      "path": "/_next/static/chunks/main-291cc0b51596f64c.js",
+      "sha256": "b3ac5a861bddde0dfc6b3b5c290f96ad428c174d018bd5e7f703aa9da95e5076",
+      "bytes": 137237
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-291cc0b51596f64c.js",
+      "sha256": "b3ac5a861bddde0dfc6b3b5c290f96ad428c174d018bd5e7f703aa9da95e5076",
+      "bytes": 137237
+    },
+    {
+      "path": "/_next/static/chunks/main-app-3c36f568c7a05fa8.js",
+      "sha256": "e3fde6a2681ef2a1ea5b963612efd5347976d1129b022e7a5f8a30376e456974",
+      "bytes": 556
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-app-3c36f568c7a05fa8.js",
+      "sha256": "e3fde6a2681ef2a1ea5b963612efd5347976d1129b022e7a5f8a30376e456974",
+      "bytes": 556
+    },
+    {
+      "path": "/_next/static/chunks/main-app-651a19d72f1d115b.js",
+      "sha256": "c14b02306eb09038d4f504d947dfd9d9e2bd903c3bacbfa1471cb787f0ef1a1d",
+      "bytes": 554
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-app-651a19d72f1d115b.js",
+      "sha256": "c14b02306eb09038d4f504d947dfd9d9e2bd903c3bacbfa1471cb787f0ef1a1d",
+      "bytes": 554
+    },
+    {
+      "path": "/_next/static/chunks/main-app-7bf6336b6bc12646.js",
+      "sha256": "27ab33d830f470b76b844e468f1e4148a54e113fa6ddbf1d8989f4cf314bb785",
+      "bytes": 556
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-app-7bf6336b6bc12646.js",
+      "sha256": "27ab33d830f470b76b844e468f1e4148a54e113fa6ddbf1d8989f4cf314bb785",
+      "bytes": 556
+    },
+    {
+      "path": "/_next/static/chunks/main-e08da73cad2c86b2.js",
+      "sha256": "2046ccdd10545dc1e4de36e8c61a1520a6f1914c289914fc1eec966ec3dffcb8",
+      "bytes": 137740
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/main-e08da73cad2c86b2.js",
+      "sha256": "2046ccdd10545dc1e4de36e8c61a1520a6f1914c289914fc1eec966ec3dffcb8",
+      "bytes": 137740
+    },
+    {
+      "path": "/_next/static/chunks/pages/_app-7d404bf9bd0fdb29.js",
+      "sha256": "abf55f9b450809a507b1ba2bf3f32dcedd047609787a55f65dd9d8960b2eb660",
+      "bytes": 236
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/pages/_app-7d404bf9bd0fdb29.js",
+      "sha256": "abf55f9b450809a507b1ba2bf3f32dcedd047609787a55f65dd9d8960b2eb660",
+      "bytes": 236
+    },
+    {
+      "path": "/_next/static/chunks/pages/_app-c8e994ea496efdaa.js",
+      "sha256": "8483ef687db555fda25098452116be580f1d517b9c8851585b89348c2fb0019b",
+      "bytes": 236
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/pages/_app-c8e994ea496efdaa.js",
+      "sha256": "8483ef687db555fda25098452116be580f1d517b9c8851585b89348c2fb0019b",
+      "bytes": 236
+    },
+    {
+      "path": "/_next/static/chunks/pages/_error-4a2748c8029baa0a.js",
+      "sha256": "e8a4a0d74e759f47f837e0eb62da7e849e03cd763559a6c5e78ef40ca5d86730",
+      "bytes": 218
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/pages/_error-4a2748c8029baa0a.js",
+      "sha256": "e8a4a0d74e759f47f837e0eb62da7e849e03cd763559a6c5e78ef40ca5d86730",
+      "bytes": 218
+    },
+    {
+      "path": "/_next/static/chunks/pages/_error-ca53de236ad1d553.js",
+      "sha256": "afebe9dcc6f3dcaf39287cec34fcf7c3fb664444dedf10ce5dd5121a8443f19c",
+      "bytes": 216
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/pages/_error-ca53de236ad1d553.js",
+      "sha256": "afebe9dcc6f3dcaf39287cec34fcf7c3fb664444dedf10ce5dd5121a8443f19c",
+      "bytes": 216
+    },
+    {
+      "path": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "sha256": "0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683",
+      "bytes": 112594
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "sha256": "0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683",
+      "bytes": 112594
+    },
+    {
+      "path": "/_next/static/chunks/webpack-7f4954f5c5baa9f3.js",
+      "sha256": "3c165ec07a23b1e7564ca95369dd5a3de7e4fa2cb3d55b04eb1bc3a9ab7ad87c",
+      "bytes": 3425
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/webpack-7f4954f5c5baa9f3.js",
+      "sha256": "3c165ec07a23b1e7564ca95369dd5a3de7e4fa2cb3d55b04eb1bc3a9ab7ad87c",
+      "bytes": 3425
+    },
+    {
+      "path": "/_next/static/chunks/webpack-ab27a0009b5e7231.js",
+      "sha256": "ad08e1f6fa492d96df0aa8ed0fe2e470703224ccc2a0f1efba4b6a89b975fd67",
+      "bytes": 3424
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/webpack-ab27a0009b5e7231.js",
+      "sha256": "ad08e1f6fa492d96df0aa8ed0fe2e470703224ccc2a0f1efba4b6a89b975fd67",
+      "bytes": 3424
+    },
+    {
+      "path": "/_next/static/css/9aa93cdcbed4bf47.css",
+      "sha256": "333f501ae66e810147972ada7eb5137d5b4475c2084f0bcf6c6e72d1f178ceb3",
+      "bytes": 14412
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/css/9aa93cdcbed4bf47.css",
+      "sha256": "333f501ae66e810147972ada7eb5137d5b4475c2084f0bcf6c6e72d1f178ceb3",
+      "bytes": 14412
+    },
+    {
+      "path": "/_next/static/HbeSOtMqF0yBDQIQlleKB/_buildManifest.js",
+      "sha256": "a4a7f099b574334f16aa6fe0ecfea0316e1f36ad167d89f5c9bb128124bf2b19",
+      "bytes": 801
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/HbeSOtMqF0yBDQIQlleKB/_buildManifest.js",
+      "sha256": "a4a7f099b574334f16aa6fe0ecfea0316e1f36ad167d89f5c9bb128124bf2b19",
+      "bytes": 801
+    },
+    {
+      "path": "/_next/static/HbeSOtMqF0yBDQIQlleKB/_ssgManifest.js",
+      "sha256": "678f6ce2cb80b1fe72fc67e7412be6e2ab6ada083111b64f7c40d35e3cba5e00",
+      "bytes": 80
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/HbeSOtMqF0yBDQIQlleKB/_ssgManifest.js",
+      "sha256": "678f6ce2cb80b1fe72fc67e7412be6e2ab6ada083111b64f7c40d35e3cba5e00",
+      "bytes": 80
+    },
+    {
+      "path": "/_next/static/lrBjX3R43Sm4lpAmnGfM9/_buildManifest.js",
+      "sha256": "2fa7acd2049a3d89ffec5f9158802d34082d56ce6fd2a4a4fc85516903323751",
+      "bytes": 801
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/lrBjX3R43Sm4lpAmnGfM9/_buildManifest.js",
+      "sha256": "2fa7acd2049a3d89ffec5f9158802d34082d56ce6fd2a4a4fc85516903323751",
+      "bytes": 801
+    },
+    {
+      "path": "/_next/static/lrBjX3R43Sm4lpAmnGfM9/_ssgManifest.js",
+      "sha256": "678f6ce2cb80b1fe72fc67e7412be6e2ab6ada083111b64f7c40d35e3cba5e00",
+      "bytes": 80
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/lrBjX3R43Sm4lpAmnGfM9/_ssgManifest.js",
+      "sha256": "678f6ce2cb80b1fe72fc67e7412be6e2ab6ada083111b64f7c40d35e3cba5e00",
+      "bytes": 80
+    },
+    {
+      "path": "/_next/static/ot7de9YK0E9eMMZpCizCh/_buildManifest.js",
+      "sha256": "a4a7f099b574334f16aa6fe0ecfea0316e1f36ad167d89f5c9bb128124bf2b19",
+      "bytes": 801
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/ot7de9YK0E9eMMZpCizCh/_buildManifest.js",
+      "sha256": "a4a7f099b574334f16aa6fe0ecfea0316e1f36ad167d89f5c9bb128124bf2b19",
+      "bytes": 801
+    },
+    {
+      "path": "/_next/static/ot7de9YK0E9eMMZpCizCh/_ssgManifest.js",
+      "sha256": "678f6ce2cb80b1fe72fc67e7412be6e2ab6ada083111b64f7c40d35e3cba5e00",
+      "bytes": 80
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/ot7de9YK0E9eMMZpCizCh/_ssgManifest.js",
+      "sha256": "678f6ce2cb80b1fe72fc67e7412be6e2ab6ada083111b64f7c40d35e3cba5e00",
+      "bytes": 80
+    }
+  ],
+  "robots": {
+    "sha256": "9479175ece1f977a36372f09bf8e803e82ae97b82530b4b4b041868f23f5833a",
+    "wildcardPagesAllowed": 150,
+    "managedCrawlerGroupsNotInterpretedAsWildcard": true
+  },
+  "artifact": {
+    "manifestSha256": "40f61390b4b1450a7b66a3ea76d2c3c5dd946d981a3e8c24fbf83d5490fb1762"
+  },
+  "phase": "local",
+  "finishedAt": "2026-10-25T12:38:54.594Z",
+  "requests": 701
+}

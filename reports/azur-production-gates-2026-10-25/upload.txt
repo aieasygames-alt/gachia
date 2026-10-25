@@ -1,0 +1,37 @@
+⛅️ wrangler 4.148.0 (update available 4.152.0)
+───────────────────────────────────────────────
+🌀 Building list of assets...
+✨ Read 229 files from the assets directory /Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/azur-production-rollout/artifact/.open-next/assets
+🌀 Starting asset upload...
+🌀 Found 9 new or modified static assets to upload. Proceeding with upload...
++ /BUILD_ID
++ /_next/static/chunks/main-app-7bf6336b6bc12646.js
++ /_next/static/chunks/app/[lang]/azur-promilia/planner/page-cf00f3186db745bf.js
++ /_next/static/chunks/app/layout-dbf401f94f7332c7.js
++ /_next/static/chunks/app/_not-found/page-e85e57f7e9878369.js
++ /_next/static/chunks/app/[lang]/azur-promilia/characters/page-5a27b709564eac49.js
++ /_next/static/chunks/app/[lang]/azur-promilia/page-bd63058b3120d322.js
++ /_next/static/chunks/app/[lang]/azur-promilia/kibo/page-acaf159c441edc64.js
++ /_next/static/chunks/main-e08da73cad2c86b2.js
+Uploaded 3 of 9 assets
+Uploaded 6 of 9 assets
+Uploaded 9 of 9 assets
+✨ Success! Uploaded 9 files (161 already uploaded) (4.53 sec)
+
+Total Upload: 5498.88 KiB / gzip: 1101.24 KiB
+Worker Startup Time: 14 ms
+Your Worker has access to the following bindings:
+Binding                                                       Resource
+env.ASSETS                                                    Assets
+env.NEXT_PUBLIC_APP_URL ("https://gachia.com")                Environment Variable
+env.AZUR_PROMILIA_DEPLOYMENT_MODE ("production")              Environment Variable
+
+Uploaded gachia-game-azur-promilia (15.61 sec)
+Worker Version ID: 6c0b7274-ecec-458b-9cfa-dff944754a0d
+Version Preview URL: https://6c0b7274-gachia-game-azur-promilia.aieasygames.workers.dev
+
+To deploy this version to production traffic use the command wrangler versions deploy
+
+Changes to non-versioned settings (config properties 'logpush' or 'tail_consumers') take effect after your next deployment using the command wrangler versions deploy
+
+Changes to triggers (routes, custom domains, cron schedules, etc) must be applied with the command wrangler triggers deploy

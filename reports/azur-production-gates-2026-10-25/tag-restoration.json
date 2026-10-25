@@ -1,0 +1,17 @@
+{
+  "status": "original_service_tag_restored_no_traffic_change",
+  "at": "2026-10-25T12:44:30.297Z",
+  "operation": "PATCH script-settings tags only",
+  "tags": [
+    "cf:service=gachia-game-azur-promilia"
+  ],
+  "activeVersionId": "9867e978-20fa-46f9-8dd4-c96c400e6919",
+  "allNineDeploymentsUnchanged": true,
+  "bindingsUnchanged": true,
+  "subdomainsUnchanged": true,
+  "routesUnchanged": true,
+  "domainsUnchanged": true,
+  "workerInventoryUnchanged": true,
+  "remainingExpectedDifference": "candidate upload message annotation",
+  "candidatePromoted": false
+}
