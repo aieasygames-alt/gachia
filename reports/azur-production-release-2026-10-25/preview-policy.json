@@ -1,0 +1,37 @@
+{
+  "status": "preview_noindex_verified",
+  "versionId": "86353da1-7aa9-40e1-836c-a344eeb4dad0",
+  "manifestSha256": "4fa6215c5be3e473c282b19fe1baa2c810618b061e7bcd721a9570501ff95a51",
+  "observations": [
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "xRobotsTag": "noindex",
+      "indexable": false
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "xRobotsTag": "noindex",
+      "indexable": false
+    },
+    {
+      "path": "/zh/azur-promilia",
+      "status": 200,
+      "xRobotsTag": "noindex",
+      "indexable": false
+    },
+    {
+      "path": "/en/azur-promilia",
+      "status": 200,
+      "xRobotsTag": "noindex",
+      "indexable": false
+    },
+    {
+      "path": "/ja/azur-promilia",
+      "status": 200,
+      "xRobotsTag": "noindex",
+      "indexable": false
+    }
+  ]
+}

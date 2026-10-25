@@ -1,0 +1,16 @@
+{
+  "status": "promoted_pending_production_acceptance",
+  "at": "2026-10-25T13:03:46.514Z",
+  "versionId": "86353da1-7aa9-40e1-836c-a344eeb4dad0",
+  "deploymentId": "3438d584-7cc5-4000-bd7d-562fe7c489b8",
+  "moduleSha256": "09098926809202d100c2232ec14b9ba6062ec2267e2783d489d910eebcb7bb53",
+  "artifact": {
+    "directory": "/Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/azur-production-release/artifact",
+    "game": "azur-promilia",
+    "sourceCommit": "4ed0714e74ded83c9398f00e47005284f43e85e0",
+    "manifestSha256": "4fa6215c5be3e473c282b19fe1baa2c810618b061e7bcd721a9570501ff95a51",
+    "treeSha256": "bd0c3da3a4b5cb8495ec6c4fb792a79444fa814eb5efd6eeca2c314dccc4b8b9",
+    "entries": 2067,
+    "bytes": 32704844
+  }
+}

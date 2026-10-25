@@ -1,0 +1,1120 @@
+{
+  "startedAt": "2026-10-25T13:04:45.913Z",
+  "status": "production_owner_regression_passed",
+  "browsers": [
+    {
+      "game": "nte",
+      "width": 1440,
+      "locale": "zh",
+      "nativeOwnerHops": 2,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0
+    },
+    {
+      "game": "nte",
+      "width": 1440,
+      "locale": "en",
+      "nativeOwnerHops": 2,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0
+    },
+    {
+      "game": "nte",
+      "width": 1440,
+      "locale": "ja",
+      "nativeOwnerHops": 2,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0
+    },
+    {
+      "game": "nte",
+      "width": 390,
+      "locale": "zh",
+      "nativeOwnerHops": 2,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0
+    },
+    {
+      "game": "nte",
+      "width": 390,
+      "locale": "en",
+      "nativeOwnerHops": 2,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0
+    },
+    {
+      "game": "nte",
+      "width": 390,
+      "locale": "ja",
+      "nativeOwnerHops": 2,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0
+    },
+    {
+      "game": "lvmeng",
+      "width": 1440,
+      "locale": "zh",
+      "nativeOwnerHops": 2,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0
+    },
+    {
+      "game": "lvmeng",
+      "width": 390,
+      "locale": "zh",
+      "nativeOwnerHops": 2,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0
+    }
+  ],
+  "mainNteDetails": [
+    {
+      "path": "/zh/nte/items/rising-hunter-guide",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/elite-hunter-guide",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/light-dye",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/colorless-dye",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/chaotic-dye",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/senior-hunter-guide",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/manhole-thug",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/manhole-crook",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/lost-whispers",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/manhole-boss",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/obscure-whispers",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/paradoxical-whispers",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/fading-silhouette",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/blurred-silhouette",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/chaos-silhouette",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/blurred-numeral",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/unsolved-numeral",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/distorted-numeral",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/suspended-delusions",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/yearning-delusions",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/transcendent-delusions",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/confessional-flower-seed",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/charging-knight-spark-plug",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/page-from-delusions-shore",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/water-moon-pick",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/nest-guard-fragment",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/colorful-ticket-stub",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/tear-of-the-sea",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/good-boy-stamp",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/the-good-boy",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/dandelion",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/dress-sleeves-of-vanity",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/crown-called-nobility",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/scepter-called-prestige",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/iron-appleseed",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/silver-appleseed",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/golden-appleseed",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/beaty",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/versey",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/harmony",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/liquid-dream-trial-kit",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/liquid-dream-travel-kit",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/liquid-dream-can",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/flavorless-cold-dessert",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/plain-cold-dessert",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/special-cold-dessert",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/beginner-drama-core",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/master-drama-core",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/collectors-drama-core",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/fabricated-dice",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/solid-dice",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/warp-piece",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/lost-piece",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/fons",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/tri-key",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/beetle-coin",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/zh/nte/items/annulith",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/rising-hunter-guide",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/senior-hunter-guide",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/elite-hunter-guide",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/light-dye",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/colorless-dye",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/chaotic-dye",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/manhole-thug",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/manhole-crook",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/lost-whispers",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/manhole-boss",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/obscure-whispers",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/paradoxical-whispers",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/fading-silhouette",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/blurred-silhouette",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/blurred-numeral",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/chaos-silhouette",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/unsolved-numeral",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/distorted-numeral",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/suspended-delusions",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/yearning-delusions",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/transcendent-delusions",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/confessional-flower-seed",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/charging-knight-spark-plug",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/water-moon-pick",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/page-from-delusions-shore",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/nest-guard-fragment",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/colorful-ticket-stub",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/tear-of-the-sea",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/good-boy-stamp",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/the-good-boy",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/dandelion",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/dress-sleeves-of-vanity",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/crown-called-nobility",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/scepter-called-prestige",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/iron-appleseed",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/silver-appleseed",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/golden-appleseed",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/beaty",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/versey",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/harmony",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/liquid-dream-trial-kit",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/liquid-dream-travel-kit",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/flavorless-cold-dessert",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/liquid-dream-can",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/plain-cold-dessert",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/special-cold-dessert",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/master-drama-core",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/collectors-drama-core",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/beginner-drama-core",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/fabricated-dice",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/solid-dice",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/warp-piece",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/tri-key",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/lost-piece",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/beetle-coin",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/fons",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/en/nte/items/annulith",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/rising-hunter-guide",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/elite-hunter-guide",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/senior-hunter-guide",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/light-dye",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/colorless-dye",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/chaotic-dye",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/manhole-thug",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/manhole-crook",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/lost-whispers",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/manhole-boss",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/obscure-whispers",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/paradoxical-whispers",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/fading-silhouette",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/blurred-silhouette",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/chaos-silhouette",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/unsolved-numeral",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/blurred-numeral",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/distorted-numeral",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/suspended-delusions",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/yearning-delusions",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/transcendent-delusions",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/confessional-flower-seed",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/page-from-delusions-shore",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/charging-knight-spark-plug",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/water-moon-pick",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/nest-guard-fragment",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/colorful-ticket-stub",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/good-boy-stamp",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/tear-of-the-sea",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/the-good-boy",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/dandelion",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/dress-sleeves-of-vanity",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/crown-called-nobility",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/scepter-called-prestige",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/iron-appleseed",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/silver-appleseed",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/beaty",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/golden-appleseed",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/versey",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/harmony",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/liquid-dream-trial-kit",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/liquid-dream-travel-kit",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/liquid-dream-can",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/plain-cold-dessert",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/flavorless-cold-dessert",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/special-cold-dessert",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/beginner-drama-core",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/master-drama-core",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/collectors-drama-core",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/fabricated-dice",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/warp-piece",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/solid-dice",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/lost-piece",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/tri-key",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/fons",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/annulith",
+      "status": 200,
+      "owner": "main"
+    },
+    {
+      "path": "/ja/nte/items/beetle-coin",
+      "status": 200,
+      "owner": "main"
+    }
+  ],
+  "requests": 912,
+  "site": {
+    "origin": "https://gachia.com",
+    "accountFeatures": false,
+    "observations": [
+      {
+        "path": "/",
+        "status": 307
+      },
+      {
+        "path": "/zh",
+        "status": 200
+      },
+      {
+        "path": "/en",
+        "status": 200
+      },
+      {
+        "path": "/ja",
+        "status": 200
+      },
+      {
+        "path": "/zh/genshin",
+        "status": 200
+      },
+      {
+        "path": "/zh/nte",
+        "status": 200
+      },
+      {
+        "path": "/zh/azur-promilia",
+        "status": 200
+      },
+      {
+        "path": "/zh/games",
+        "status": 200
+      },
+      {
+        "path": "/sitemap.xml",
+        "status": 200
+      },
+      {
+        "path": "/sitemaps/nte/index.xml",
+        "status": 200
+      },
+      {
+        "path": "/sitemaps/azur-promilia/index.xml",
+        "status": 200
+      },
+      {
+        "path": "/robots.txt",
+        "status": 200
+      },
+      {
+        "path": "/ads.txt",
+        "status": 200
+      },
+      {
+        "path": "/api/auth/get-session",
+        "status": 404
+      },
+      {
+        "path": "/sitemaps/nte/index.xml?source=production-audit",
+        "status": 200
+      }
+    ],
+    "failures": []
+  },
+  "owners": [
+    {
+      "path": "/zh",
+      "owner": "main",
+      "kind": "html",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/webpack-02932d580e3c7274.js",
+      "owner": "main",
+      "kind": "js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/css/e89dd0dfedbe06e5.css",
+      "owner": "main",
+      "kind": "css",
+      "status": 200
+    },
+    {
+      "path": "/zh/genshin",
+      "owner": "genshin",
+      "kind": "html",
+      "status": 200
+    },
+    {
+      "path": "/_games/genshin/_next/static/chunks/webpack-b3c4034404eb8d2b.js",
+      "owner": "genshin",
+      "kind": "js",
+      "status": 200
+    },
+    {
+      "path": "/_games/genshin/_next/static/css/4e6b2dc0fa1e36bc.css",
+      "owner": "genshin",
+      "kind": "css",
+      "status": 200
+    },
+    {
+      "path": "/sitemaps/genshin/index.xml",
+      "owner": "genshin",
+      "kind": "xml",
+      "status": 200
+    },
+    {
+      "path": "/zh/nte",
+      "owner": "nte",
+      "kind": "html",
+      "status": 200
+    },
+    {
+      "path": "/_games/nte/_next/static/chunks/webpack-78aede61962d179a.js",
+      "owner": "nte",
+      "kind": "js",
+      "status": 200
+    },
+    {
+      "path": "/_games/nte/_next/static/css/a03f215a7bc52d77.css",
+      "owner": "nte",
+      "kind": "css",
+      "status": 200
+    },
+    {
+      "path": "/sitemaps/nte/index.xml",
+      "owner": "nte",
+      "kind": "xml",
+      "status": 200
+    },
+    {
+      "path": "/zh/azur-promilia",
+      "owner": "azur-promilia",
+      "kind": "html",
+      "status": 200
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/webpack-ab27a0009b5e7231.js",
+      "owner": "azur-promilia",
+      "kind": "js",
+      "status": 200
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/css/9aa93cdcbed4bf47.css",
+      "owner": "azur-promilia",
+      "kind": "css",
+      "status": 200
+    },
+    {
+      "path": "/sitemaps/azur-promilia/index.xml",
+      "owner": "azur-promilia",
+      "kind": "xml",
+      "status": 200
+    },
+    {
+      "path": "/zh/lvmeng",
+      "owner": "lvmeng",
+      "kind": "html",
+      "status": 200
+    },
+    {
+      "path": "/_games/lvmeng/_next/static/chunks/webpack-4b0fd5dc141f7074.js",
+      "owner": "lvmeng",
+      "kind": "js",
+      "status": 200
+    },
+    {
+      "path": "/_games/lvmeng/_next/static/css/6d814f1a9060c47b.css",
+      "owner": "lvmeng",
+      "kind": "css",
+      "status": 200
+    },
+    {
+      "path": "/sitemaps/lvmeng/index.xml",
+      "owner": "lvmeng",
+      "kind": "xml",
+      "status": 200
+    }
+  ],
+  "finishedAt": "2026-10-25T13:06:30.222Z"
+}

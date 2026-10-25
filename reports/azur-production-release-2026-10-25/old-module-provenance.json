@@ -1,0 +1,15 @@
+{
+  "source": "previous_authoritative_capture_matched_to_same_live_version_deployment_and_etag",
+  "previousReceiptSha256": "4c99b966965f202657a1ed7467123a4016788386306913a0f2a2d57fa5b6c2d0",
+  "previousCapturedAt": "2026-10-25T12:38:09.569Z",
+  "archiveSha256": "d6519163f24d5fe805853f2bd520be04464fb1a13aafefa7458a9d29fed5f4dc",
+  "moduleSha256": "083f01784b2e5a817d65e0213a341f27700a15ad4c878dcd71d3bc1024e476cc",
+  "currentObservation": {
+    "versionId": "9867e978-20fa-46f9-8dd4-c96c400e6919",
+    "deploymentId": "fcc7ddf4-f591-4607-9d95-f28ba096229d",
+    "scriptEtag": "bb12236733599fc9eb4513a868e0c717adc1cca891bf95d2ca1284fac779bfdd",
+    "percentage": 100
+  },
+  "currentDownloadPerformed": false,
+  "reason": "content/v2 now returns last uploaded unpromoted candidate; ETag mismatch rejected"
+}

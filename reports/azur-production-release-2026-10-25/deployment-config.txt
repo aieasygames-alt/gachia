@@ -1,0 +1,4 @@
+> gachia@ validate:game-deployments /Users/robert/.codex/worktrees/account-deletion-release/gachia
+> node scripts/validate-game-deployment.mjs
+
+Validated 4 Router game deployment(s).

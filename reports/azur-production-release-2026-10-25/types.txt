@@ -1,0 +1,2 @@
+> @gachia/game-azur-promilia@0.0.1 type-check /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/game-azur-promilia
+> tsc --noEmit

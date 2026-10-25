@@ -1,0 +1,13 @@
+{
+  "status": "local_compatibility_fallback_verified_not_deployed",
+  "oldVersionId": "9867e978-20fa-46f9-8dd4-c96c400e6919",
+  "oldCloudModuleSha256": "083f01784b2e5a817d65e0213a341f27700a15ad4c878dcd71d3bc1024e476cc",
+  "assetManifestSha256": "4fa6215c5be3e473c282b19fe1baa2c810618b061e7bcd721a9570501ff95a51",
+  "pages": 150,
+  "assets": 168,
+  "cloudRollbackDrill": false,
+  "limitations": [
+    "Local compatibility only; not an approved remote fallback configuration.",
+    "Raw rollback can lose new assets and restores missing direct-host protection."
+  ]
+}

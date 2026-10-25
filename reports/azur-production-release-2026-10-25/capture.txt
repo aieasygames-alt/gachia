@@ -1,0 +1,27 @@
+control snapshot complete
+current version read
+capturing module
+content request started 2026-10-25T12:52:34.437Z
+content headers received { elapsedMs: 466, status: 200, length: null }
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '43ec1105c848a123ad63d432f6abafbcf8c167c4a2b462a715793f5cffa30798'
+- 'bb12236733599fc9eb4513a868e0c717adc1cca891bf95d2ca1284fac779bfdd'
+
+    at captureModule (file:///Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/azur-production-release/cloud-control.mjs:16:459)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/azur-production-release/capture-diagnostic.mjs:10:44 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: '43ec1105c848a123ad63d432f6abafbcf8c167c4a2b462a715793f5cffa30798',
+  expected: 'bb12236733599fc9eb4513a868e0c717adc1cca891bf95d2ca1284fac779bfdd',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.22.2

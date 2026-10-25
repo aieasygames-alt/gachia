@@ -1,0 +1,9 @@
+{
+  "observation": "content/v2 ETag matched the previously uploaded unpromoted candidate, not the active deployment",
+  "activeVersionId": "9867e978-20fa-46f9-8dd4-c96c400e6919",
+  "latestUnpromotedVersionId": "6c0b7274-ecec-458b-9cfa-dff944754a0d",
+  "observedEtag": "43ec1105c848a123ad63d432f6abafbcf8c167c4a2b462a715793f5cffa30798",
+  "oldModuleProvenance": "old-module-provenance.json",
+  "initialFetchRejected": true,
+  "scope": "observed endpoint behavior, not a claim about all Cloudflare APIs"
+}

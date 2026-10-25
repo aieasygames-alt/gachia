@@ -1,0 +1,34 @@
+⛅️ wrangler 4.148.0 (update available 4.152.0)
+───────────────────────────────────────────────
+╭ Deploy Worker Versions by splitting traffic between multiple versions
+│
+├ Fetching latest deployment
+│
+├ Your current deployment has 1 version(s):
+│
+│ (100%) 9867e978-20fa-46f9-8dd4-c96c400e6919
+│       Created:  2026-10-24T16:53:31.422955Z
+│           Tag:  -
+│       Message:  -
+│
+├ Fetching versions
+│
+├ Which version(s) do you want to deploy?
+├ 1 Worker Version(s) selected
+│
+├     Worker Version 1:  86353da1-7aa9-40e1-836c-a344eeb4dad0
+│              Created:  2026-10-25T12:57:37.884585Z
+│                  Tag:  -
+│              Message:  Security and runtime host guard azur-promilia 4ed0714e74ded83c9398f00e47005284f43e85e0
+│
+├ What percentage of traffic should Worker Version 1 receive?
+├ 100% of traffic
+├
+├ Add a deployment message
+│ Deployment message Accepted azur-promilia 4fa6215c5be3e473
+│
+├ Deploying 1 version(s)
+│
+│ No non-versioned settings to sync. Skipping...
+│
+╰  SUCCESS  Deployed gachia-game-azur-promilia version 86353da1-7aa9-40e1-836c-a344eeb4dad0 at 100% (0.80 sec)

@@ -1,0 +1,24 @@
+> gachia@ content:release-ready /Users/robert/.codex/worktrees/account-deletion-release/gachia
+> node packages/data/scripts/raw-inventory-contract.mjs --release
+
+{
+  "contract": "raw-inventory-v1",
+  "pairs": 90,
+  "equal": 90,
+  "sourceOnly": 5,
+  "pending": [],
+  "holds": [],
+  "withdrawal": {
+    "decision": "withdrawn_not_verified",
+    "resolved": [
+      "roco/raw-characters.json",
+      "roco/raw-guides.json"
+    ],
+    "officialFactsApproved": false,
+    "archivedImages": 3
+  },
+  "issues": [],
+  "engineeringReady": true,
+  "contentReleaseReady": true,
+  "factualApproval": "not_implied_by_mirror_equality"
+}

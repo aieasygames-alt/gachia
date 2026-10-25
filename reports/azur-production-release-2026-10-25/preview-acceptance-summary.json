@@ -1,0 +1,20 @@
+{
+  "status": "candidate_acceptance_passed",
+  "phase": "preview",
+  "origin": "https://86353da1-gachia-game-azur-promilia.aieasygames.workers.dev",
+  "artifact": {
+    "manifestSha256": "4fa6215c5be3e473c282b19fe1baa2c810618b061e7bcd721a9570501ff95a51"
+  },
+  "pages": 150,
+  "currentReferencedAssets": 16,
+  "oldAssets": 68,
+  "allDualPathAssetChecks": 168,
+  "browserScenarios": 12,
+  "plannerScenarios": 6,
+  "requests": 701,
+  "responseNoindexVerified": true,
+  "wildcardRobotsDisallowVerified": true,
+  "rawRecord": ".release-records/azur-production-release/preview-acceptance-proxy/result.json",
+  "rawRecordSha256": "4714adb5c0c43a7068c3f068e4747a7513ec57b50d4e9d93b3d2621317cc1e70",
+  "interpretation": "Legacy raw record indexable/wildcardPagesAllowed fields describe body metadata/counts; response noindex and robots disallow are checked by phase assertions and independently by preview-policy.json."
+}

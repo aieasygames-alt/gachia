@@ -1,0 +1,18 @@
+{
+  "status": "production_accepted",
+  "sourceCommit": "4ed0714e74ded83c9398f00e47005284f43e85e0",
+  "versionId": "86353da1-7aa9-40e1-836c-a344eeb4dad0",
+  "deploymentId": "3438d584-7cc5-4000-bd7d-562fe7c489b8",
+  "manifestSha256": "4fa6215c5be3e473c282b19fe1baa2c810618b061e7bcd721a9570501ff95a51",
+  "moduleSha256": "09098926809202d100c2232ec14b9ba6062ec2267e2783d489d910eebcb7bb53",
+  "trafficPercentage": 100,
+  "serviceTagsPreserved": [
+    "cf:service=gachia-game-azur-promilia"
+  ],
+  "uploadsThisBatch": 1,
+  "promotionsThisBatch": 1,
+  "githubActionsStarted": 0,
+  "wholeSiteAcceptance": "production_and_whole_site_acceptance_passed",
+  "remainingOwner": "lvmeng",
+  "remainingOwnerVersion": "e6cb7815-64be-48df-890f-fd610a8f05a9"
+}

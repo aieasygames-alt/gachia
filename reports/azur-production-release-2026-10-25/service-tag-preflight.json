@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "configPath": "/Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/azur-production-release/wrangler.execution.json",
+  "targetEnvironment": "",
+  "definedEnvironments": [
+    "staging"
+  ],
+  "mode": "production",
+  "tagsBefore": [
+    "cf:service=gachia-game-azur-promilia"
+  ],
+  "tagsAfter": [
+    "cf:service=gachia-game-azur-promilia"
+  ],
+  "scope": "actual_installed_wrangler_parser_and_tag_transform_on_sealed_execution_config"
+}
