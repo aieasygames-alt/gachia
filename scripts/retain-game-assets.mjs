@@ -2,7 +2,7 @@ import { createHash } from 'node:crypto';
 import { existsSync, lstatSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, isAbsolute, resolve } from 'node:path';
 
-const GAMES = new Set(['azur-promilia', 'genshin']);
+const GAMES = new Set(['azur-promilia', 'genshin', 'nte', 'lvmeng']);
 const UUID = /^[a-f0-9]{8}-(?:[a-f0-9]{4}-){3}[a-f0-9]{12}$/i;
 const SHA = /^[a-f0-9]{64}$/;
 const MAX_FILE = 8 * 1024 * 1024;
@@ -43,7 +43,7 @@ function readBoundFile(root, entry, maxBytes) {
 // This validates operator-saved evidence and bytes, not Cloudflare state or Git
 // provenance. A fresh cloud version check is still required before deployment.
 export function readPreviousGameAssets(receiptPath, { game, rollbackVersion } = {}) {
-  requireThat(GAMES.has(game), 'only the reviewed Azur or Genshin owner is supported');
+  requireThat(GAMES.has(game), 'only reviewed dedicated owners are supported');
   const service = `gachia-game-${game}`;
   const absolute = resolve(receiptPath);
   const root = dirname(absolute);

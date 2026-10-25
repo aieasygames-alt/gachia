@@ -95,7 +95,7 @@ for (const [name, mutate] of Object.entries({
 test('wrong rollback owner/version and unsupported game fail before a release', t => {
   const f = fixture(t);
   assert.throws(() => readPreviousGameAssets(f.receiptPath, { ...f.options, rollbackVersion: '01234567-89ab-cdef-0123-456789abcdef' }), /rollback version/);
-  assert.throws(() => readPreviousGameAssets(f.receiptPath, { game: 'nte' }), /reviewed Azur/);
+  assert.throws(() => readPreviousGameAssets(f.receiptPath, { game: 'unreviewed' }), /reviewed dedicated/);
   const plan = readReleasePlan({ game, environment: 'production', rollbackVersion: versionId });
   assert.throws(() => checkExecutionPermission(plan, { action: 'deploy', confirmation: plan.service }), /previous-assets-receipt/);
   assert.doesNotThrow(() => checkExecutionPermission(plan, { action: 'verify' }));
@@ -202,4 +202,11 @@ for (const failure of [null, 'missing', 'soft-404', 'redirect', 'sitemap-differe
     assert.equal(result.retainedStaticPaths, 4); assert.equal(result.candidateSitemapCompared, true); assert.equal(calls.length, 20);
     for (const { url, init } of calls) { assert.equal(url.origin, 'https://gachia-game-azur-promilia-staging.fixture-account.workers.dev'); assert.equal(init.method, 'GET'); assert.equal(init.redirect, 'manual'); assert.equal(init.credentials, 'omit'); }
   }
+});
+
+for (const owner of ['nte', 'lvmeng']) test(`${owner} retention binds its own cloud evidence`, t => {
+  const f = fixture(t, owner); const plan = f.makePlan();
+  assert.equal(retainPreviousGameAssets(plan, f.root).copiedPaths, 4);
+  assert.throws(() => readPreviousGameAssets(f.receiptPath, { ...f.options, game }), /owner/);
+  assert.equal(readFileSync(resolve(f.root, plan.app, '.open-next/assets/_games', owner, '_next/static/css/old.css'), 'utf8'), 'old css');
 });

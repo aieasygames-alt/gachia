@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo } from 'react';
+import { useVerificationProgress } from './use-verification-progress';
 
 type Check = { id: string; title: string; description: string };
 
@@ -14,24 +15,14 @@ const checks: Check[] = [
 
 export function VerificationChecklist() {
   const storageKey = 'gachia-lvmeng-progression-verification-v1';
-  const [complete, setComplete] = useState<string[]>([]);
-  const [hydrated, setHydrated] = useState(false);
-  useEffect(() => {
-    try {
-      const saved = window.localStorage.getItem(storageKey);
-      if (saved) {
-        const ids = JSON.parse(saved);
-        if (Array.isArray(ids)) setComplete(ids.filter((id): id is string => typeof id === 'string'));
-      }
-    } catch { /* Ignore malformed browser state. */ } finally { setHydrated(true); }
-  }, []);
-  useEffect(() => { if (hydrated) window.localStorage.setItem(storageKey, JSON.stringify(complete)); }, [complete, hydrated]);
+  const { complete, setComplete, storageUnavailable } = useVerificationProgress(storageKey);
   const done = useMemo(() => checks.filter((check) => complete.includes(check.id)).length, [complete]);
   const toggle = (id: string) => setComplete((current) => current.includes(id) ? current.filter((item) => item !== id) : [...current, id]);
 
   return <section className="verification-checklist">
     <div className="verification-checklist__head"><div><span>发布前核验</span><h2>资料录入检查表</h2></div><strong aria-live="polite">{done} / {checks.length}</strong></div>
     <p>该清单仅保存在当前浏览器，用于追踪已完成的资料核验；它不会把未确认内容变成正式数据。</p>
+    {storageUnavailable && <p role="status">浏览器存储不可用，当前勾选仅在本页有效，关闭页面后可能丢失。</p>}
     <div className="verification-checklist__list">{checks.map((check) => {
       const checked = complete.includes(check.id);
       return <label className={checked ? 'verification-checklist__item verification-checklist__item--done' : 'verification-checklist__item'} key={check.id}>
