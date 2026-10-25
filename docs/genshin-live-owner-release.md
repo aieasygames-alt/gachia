@@ -51,6 +51,8 @@ pnpm release:genshin:artifact verify \
 
 该校验只证明本地完整性，不等于云端部署、浏览器功能验收或独立审批。
 
+执行本地 Worker 或 Wrangler 时，先通过 `genshinExecutionConfig` 校验封存并生成绝对路径配置，把该配置保存到封存目录以外的独立执行目录。Wrangler 会在配置旁写 `.wrangler/tmp`；不能直接用封存内配置运行工具，也不能因此给完整性校验增加忽略目录。执行前后均需重新验证原封存摘要。
+
 ## 4. staging 与生产的不同点
 
 两份封存配置除服务名外完全相同，均使用生产构建和生产模式。不得在 staging 验收后重新构建，再把新构建称为同产物推广。

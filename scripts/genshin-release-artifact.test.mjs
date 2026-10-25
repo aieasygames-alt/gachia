@@ -4,7 +4,7 @@ import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import test from 'node:test';
 import ts from 'typescript';
-import { genshinArtifactConfigs, parseGenshinArtifactArguments, sealGenshinArtifact, sha256, verifyGenshinArtifact } from './genshin-release-artifact.mjs';
+import { genshinArtifactConfigs, genshinExecutionConfig, parseGenshinArtifactArguments, sealGenshinArtifact, sha256, verifyGenshinArtifact } from './genshin-release-artifact.mjs';
 
 const configText = readFileSync(new URL('../apps/game-genshin/wrangler.jsonc', import.meta.url), 'utf8');
 const commit = 'a'.repeat(40);
@@ -66,6 +66,20 @@ test('seals the full portable artifact and separately pins the manifest identity
   assert.equal(f.verify().provenance, 'local_operator_build_and_integrity_not_remote_attestation');
   assert.equal(sha256(readFileSync(join(f.directory, 'manifest.json'))), f.options.manifestSha256);
   assert.throws(() => sealGenshinArtifact(f.input), /EEXIST/);
+});
+
+test('execution config relocates only paths and keeps Wrangler state outside the seal', t => {
+  const f = fixture(t);
+  const before = readFileSync(join(f.directory, 'manifest.json'));
+  for (const environment of ['staging', 'production']) {
+    const config = genshinExecutionConfig(f.directory, environment, f.options);
+    const expected = genshinArtifactConfigs(configText)[environment];
+    assert.deepEqual(config, { ...expected, main: join(f.directory, '.open-next/worker.js'), assets: { ...expected.assets, directory: join(f.directory, '.open-next/assets') } });
+  }
+  assert.deepEqual(readFileSync(join(f.directory, 'manifest.json')), before);
+  assert.throws(() => genshinExecutionConfig(f.directory, 'other', f.options));
+  f.put(join(f.directory, 'extra'), 'unexpected');
+  assert.throws(() => genshinExecutionConfig(f.directory, 'production', f.options), /entries changed/);
 });
 
 for (const [name, mutate] of Object.entries({

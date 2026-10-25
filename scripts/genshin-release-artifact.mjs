@@ -111,6 +111,15 @@ export function verifyGenshinArtifact(directory, { manifestSha256, sourceCommit,
   return manifest;
 }
 
+export function genshinExecutionConfig(directory, environment, verification) {
+  assert(['production', 'staging'].includes(environment), 'Unknown Genshin execution target');
+  verifyGenshinArtifact(directory, verification);
+  const config = boundedJson(join(directory, `wrangler.${environment}.json`));
+  // Wrangler writes .wrangler/tmp next to its config. Save this derived config
+  // outside the seal; absolute paths still point to the exact verified payload.
+  return { ...config, main: resolve(directory, config.main), assets: { ...config.assets, directory: resolve(directory, config.assets.directory) } };
+}
+
 function cleanCommit(root) {
   const git = args => execFileSync('git', args, { cwd: root, encoding: 'utf8' }).trim();
   assert.equal(git(['status', '--porcelain']), '', 'A clean committed tree is required');
