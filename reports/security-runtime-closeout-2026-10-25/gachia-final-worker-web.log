@@ -1,0 +1,305 @@
+
+┌─────────────────────────────┐
+│ OpenNext — Cloudflare build │
+└─────────────────────────────┘
+
+Monorepo detected at /Users/robert/.codex/worktrees/account-deletion-release/gachia
+App directory: /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/web
+Next.js version : 15.5.28
+@opennextjs/cloudflare version: 1.20.13
+@opennextjs/aws version: 4.1.12
+workerd compatibility_date: 2026-07-08
+
+┌─────────────────────────────────┐
+│ OpenNext — Building Next.js app │
+└─────────────────────────────────┘
+
+
+> @gachia/web@0.0.1 build /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/web
+> node ../../scripts/require-patched-next.mjs && next build
+
+Next 15.5.28: required patch and application runtime verified
+Sea guides: 75 guides / 77 outputs verified (c4c48f4b7e9ddeccd7531cf96b306be7b6047f1aabc2e816f3768d4f4444f542)
+Managed raw mirrors: 7 pairs verified
+Raw inventory: 90/90 equal; 0 pending; 0 factual holds (not production approval)
+   ▲ Next.js 15.5.28
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 7.2s
+   Linting and checking validity of types ...
+
+./components/auth/auth-dialog.tsx
+25:28  Warning: The ref value 'attempt.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy 'attempt.current' to a variable inside the effect, and use that variable in the cleanup function.  react-hooks/exhaustive-deps
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+   Collecting page data ...
+   Generating static pages (0/7526) ...
+   Generating static pages (1881/7526) 
+   Generating static pages (3762/7526) 
+   Generating static pages (5644/7526) 
+ ✓ Generating static pages (7526/7526)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                               Size  First Load JS
+┌ ○ /_not-found                                           1 kB         105 kB
+├ ● /[lang]                                            6.99 kB         146 kB
+├   ├ /zh
+├   ├ /en
+├   └ /ja
+├ ● /[lang]/[game]                                       137 B         143 kB
+├   ├ /zh/genshin
+├   ├ /zh/starrail
+├   ├ /zh/wuwa
+├   └ [+45 more paths]
+├ ● /[lang]/[game]/anomalies                             184 B         104 kB
+├   ├ /zh/genshin/anomalies
+├   ├ /zh/starrail/anomalies
+├   ├ /zh/wuwa/anomalies
+├   └ [+45 more paths]
+├ ● /[lang]/[game]/artifacts                             137 B         143 kB
+├   ├ /zh/genshin/artifacts
+├   ├ /zh/starrail/artifacts
+├   ├ /zh/wuwa/artifacts
+├   └ [+45 more paths]
+├ ● /[lang]/[game]/artifacts/[id]                        137 B         143 kB
+├   ├ /zh/genshin/artifacts/archaic-petra
+├   ├ /zh/genshin/artifacts/blizzard-strayer
+├   ├ /zh/genshin/artifacts/bloodstained-chivalry
+├   └ [+213 more paths]
+├ ● /[lang]/[game]/build                               3.31 kB         147 kB
+├   ├ /zh/genshin/build
+├   ├ /zh/starrail/build
+├   ├ /zh/wuwa/build
+├   └ [+45 more paths]
+├ ● /[lang]/[game]/calculator                          14.3 kB         150 kB
+├   ├ /zh/genshin/calculator
+├   ├ /zh/starrail/calculator
+├   ├ /zh/wuwa/calculator
+├   └ [+45 more paths]
+├ ● /[lang]/[game]/characters                            137 B         143 kB
+├   ├ /zh/genshin/characters
+├   ├ /zh/starrail/characters
+├   ├ /zh/wuwa/characters
+├   └ [+45 more paths]
+├ ● /[lang]/[game]/characters/[id]                     6.33 kB         155 kB
+├   ├ /zh/nte/characters/nanally
+├   ├ /zh/nte/characters/sakiri
+├   ├ /zh/nte/characters/fadia
+├   └ [+2169 more paths]
+├ ● /[lang]/[game]/compare                             3.39 kB         147 kB
+├   ├ /zh/genshin/compare
+├   ├ /zh/starrail/compare
+├   ├ /zh/wuwa/compare
+├   └ [+45 more paths]
+├ ● /[lang]/[game]/disk-sets                             184 B         104 kB
+├   ├ /zh/genshin/disk-sets
+├   ├ /zh/starrail/disk-sets
+├   ├ /zh/wuwa/disk-sets
+├   └ [+45 more paths]
+├ ● /[lang]/[game]/disk-sets/[id]                        137 B         143 kB
+├   ├ /zh/nte/disk-sets/shadow-creed
+├   ├ /zh/nte/disk-sets/diabolos
+├   ├ /zh/nte/disk-sets/lost-radiance
+├   └ [+33 more paths]
+├ ● /[lang]/[game]/download                              137 B         143 kB
+├   ├ /zh/genshin/download
+├   ├ /zh/starrail/download
+├   ├ /zh/wuwa/download
+├   └ [+45 more paths]
+├ ● /[lang]/[game]/drive-discs                           11 kB         169 kB
+├   ├ /zh/genshin/drive-discs
+├   ├ /zh/starrail/drive-discs
+├   ├ /zh/wuwa/drive-discs
+├   └ [+45 more paths]
+├ ● /[lang]/[game]/drive-discs/[id]                      165 B         107 kB
+├   ├ /zh/zzz/drive-discs/chaos-jazz
+├   ├ /zh/zzz/drive-discs/polar-metal
+├   ├ /zh/zzz/drive-discs/fanged-metal
+├   └ [+69 more paths]
+├ ● /[lang]/[game]/echoes/[id]                           137 B         143 kB
+├   ├ /zh/wuwa/echoes/heart-that-illuminates-dreams
+├   ├ /zh/wuwa/echoes/mirror-shadow-flowing-lightning
+├   ├ /zh/wuwa/echoes/flower-of-crimson-reminiscence
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/eggs                                  137 B         143 kB
+├   ├ /zh/roco/eggs
+├   ├ /zh/roco-cn/eggs
+├   ├ /en/roco/eggs
+├   └ [+3 more paths]
+├ ● /[lang]/[game]/events                                137 B         143 kB
+├   ├ /zh/roco/events
+├   ├ /zh/roco-cn/events
+├   ├ /zh/wuwa/events
+├   └ [+12 more paths]
+├ ● /[lang]/[game]/gacha                               10.3 kB         168 kB
+├   ├ /zh/genshin/gacha
+├   ├ /zh/starrail/gacha
+├   ├ /zh/wuwa/gacha
+├   └ [+45 more paths]
+├ ● /[lang]/[game]/guides                                136 B         143 kB
+├   ├ /zh/genshin/guides
+├   ├ /zh/starrail/guides
+├   ├ /zh/wuwa/guides
+├   └ [+45 more paths]
+├ ● /[lang]/[game]/guides/[slug]                       5.84 kB         144 kB
+├   ├ /zh/starrail/guides/v4-4-preview-guide
+├   ├ /zh/starrail/guides/v4-3-version-guide
+├   ├ /zh/starrail/guides/quick-start-guide
+├   └ [+932 more paths]
+├ ● /[lang]/[game]/items                                 137 B         143 kB
+├   ├ /zh/genshin/items
+├   ├ /zh/starrail/items
+├   ├ /zh/wuwa/items
+├   └ [+45 more paths]
+├ ● /[lang]/[game]/items/[id]                            137 B         143 kB
+├   ├ /zh/genshin/items/agnidus-agate-sliver
+├   ├ /zh/genshin/items/agnidus-agate-fragment
+├   ├ /zh/genshin/items/agnidus-agate-chunk
+├   └ [+1608 more paths]
+├ ● /[lang]/[game]/map                                 5.83 kB         144 kB
+├   ├ /zh/genshin/map
+├   ├ /zh/starrail/map
+├   ├ /zh/wuwa/map
+├   └ [+45 more paths]
+├ ● /[lang]/[game]/merchant                              137 B         143 kB
+├   ├ /zh/roco/merchant
+├   ├ /zh/roco-cn/merchant
+├   ├ /en/roco/merchant
+├   └ [+3 more paths]
+├ ● /[lang]/[game]/redeem-codes                          137 B         143 kB
+├   ├ /zh/genshin/redeem-codes
+├   ├ /zh/starrail/redeem-codes
+├   ├ /zh/wuwa/redeem-codes
+├   └ [+45 more paths]
+├ ● /[lang]/[game]/s1-check                              136 B         143 kB
+├   ├ /zh/genshin/s1-check
+├   ├ /zh/starrail/s1-check
+├   ├ /zh/wuwa/s1-check
+├   └ [+45 more paths]
+├ ● /[lang]/[game]/shared/[id]                           136 B         143 kB
+├ ● /[lang]/[game]/teams                                6.5 kB         150 kB
+├   ├ /zh/genshin/teams
+├   ├ /zh/starrail/teams
+├   ├ /zh/wuwa/teams
+├   └ [+45 more paths]
+├ ● /[lang]/[game]/tier-list                            9.6 kB         148 kB
+├   ├ /zh/genshin/tier-list
+├   ├ /zh/starrail/tier-list
+├   ├ /zh/wuwa/tier-list
+├   └ [+45 more paths]
+├ ● /[lang]/[game]/type-chart                            136 B         143 kB
+├   ├ /zh/roco/type-chart
+├   ├ /zh/roco-cn/type-chart
+├   ├ /en/roco/type-chart
+├   └ [+3 more paths]
+├ ● /[lang]/[game]/version                              6.5 kB         145 kB
+├   ├ /zh/genshin/version
+├   ├ /zh/starrail/version
+├   ├ /zh/wuwa/version
+├   └ [+45 more paths]
+├ ● /[lang]/[game]/weapons                             6.22 kB         164 kB
+├   ├ /zh/genshin/weapons
+├   ├ /zh/starrail/weapons
+├   ├ /zh/wuwa/weapons
+├   └ [+45 more paths]
+├ ● /[lang]/[game]/weapons/[id]                          137 B         143 kB
+├   ├ /zh/genshin/weapons/aquila-favonia
+├   ├ /zh/genshin/weapons/skyward-blade
+├   ├ /zh/genshin/weapons/freedom-sworn
+├   └ [+1386 more paths]
+├ ● /[lang]/about                                        184 B         104 kB
+├   ├ /zh/about
+├   ├ /en/about
+├   └ /ja/about
+├ ● /[lang]/api                                          184 B         104 kB
+├   ├ /zh/api
+├   ├ /en/api
+├   └ /ja/api
+├ ● /[lang]/calendar                                   9.41 kB         148 kB
+├   ├ /zh/calendar
+├   ├ /en/calendar
+├   └ /ja/calendar
+├ ● /[lang]/contact                                      184 B         104 kB
+├   ├ /zh/contact
+├   ├ /en/contact
+├   └ /ja/contact
+├ ● /[lang]/content-verification                         137 B         143 kB
+├   ├ /zh/content-verification
+├   ├ /en/content-verification
+├   └ /ja/content-verification
+├ ● /[lang]/games                                        136 B         143 kB
+├   ├ /zh/games
+├   ├ /en/games
+├   └ /ja/games
+├ ● /[lang]/privacy                                      184 B         104 kB
+├   ├ /zh/privacy
+├   ├ /en/privacy
+├   └ /ja/privacy
+├ ● /[lang]/search                                     3.63 kB         139 kB
+├   ├ /zh/search
+├   ├ /en/search
+├   └ /ja/search
+├ ● /[lang]/sitemap                                      137 B         143 kB
+├   ├ /zh/sitemap
+├   ├ /en/sitemap
+├   └ /ja/sitemap
+├ ● /[lang]/terms                                        184 B         104 kB
+├   ├ /zh/terms
+├   ├ /en/terms
+├   └ /ja/terms
+├ ● /[lang]/tools/market-intel                           184 B         104 kB
+├   ├ /zh/tools/market-intel
+├   ├ /en/tools/market-intel
+├   └ /ja/tools/market-intel
+├ ● /[lang]/tools/pull-planner                         5.18 kB         140 kB
+├   ├ /zh/tools/pull-planner
+├   ├ /en/tools/pull-planner
+├   └ /ja/tools/pull-planner
+├ ● /[lang]/update-radar                                 136 B         143 kB
+├   ├ /zh/update-radar
+├   ├ /en/update-radar
+├   └ /ja/update-radar
+├ ƒ /api/auth/[...all]                                   184 B         104 kB
+├ ƒ /api/favorites                                       184 B         104 kB
+├ ƒ /api/indexnow                                        184 B         104 kB
+├ ƒ /api/map                                             184 B         104 kB
+├ ƒ /api/map/points                                      184 B         104 kB
+├ ƒ /api/map/progress                                    184 B         104 kB
+├ ƒ /api/map/tile                                        184 B         104 kB
+├ ƒ /api/shared-builds                                   184 B         104 kB
+├ ƒ /api/user-characters                                 184 B         104 kB
+├ ƒ /llms.txt                                            184 B         104 kB
+├ ○ /robots.txt                                          184 B         104 kB
+├ ○ /sitemap.xml                                         184 B         104 kB
+└ ○ /sitemaps/main/sitemap.xml                           184 B         104 kB
++ First Load JS shared by all                           104 kB
+  ├ chunks/5721-2ddf70d25934bdae.js                    46.7 kB
+  ├ chunks/b3ac7baf-74c52409bde470f2.js                54.2 kB
+  └ other shared chunks (total)                        2.65 kB
+
+
+ƒ Middleware                                           73.5 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+
+┌──────────────────────────────┐
+│ OpenNext — Generating bundle │
+└──────────────────────────────┘
+
+(node:77971) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Bundling middleware function...
+Bundling static assets...
+Bundling cache assets...
+Building server function: default...
+Applying code patches: 2.141s
+# copyPackageTemplateFiles
+[35m⚙️ Bundling the OpenNext server...
+[0m
+[35mWorker saved in `.open-next/worker.js` 🚀
+[0m
+OpenNext build complete.

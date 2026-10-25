@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "status": "local_compiled_worker_xml_verified",
+  "cloudVerification": "not_performed",
+  "children": [
+    "https://gachia.com/sitemaps/main/sitemap.xml",
+    "https://gachia.com/sitemaps/genshin/index.xml",
+    "https://gachia.com/sitemaps/nte/index.xml",
+    "https://gachia.com/sitemaps/azur-promilia/index.xml",
+    "https://gachia.com/sitemaps/lvmeng/index.xml"
+  ],
+  "dedicatedOwners": [
+    "azur-promilia",
+    "genshin",
+    "lvmeng",
+    "nte"
+  ],
+  "mainUrlCount": 4515,
+  "mainByLocale": {
+    "zh": 1583,
+    "en": 1580,
+    "ja": 1352
+  },
+  "indexXmlSha256": "1b45434d7ab02973b799c76fd6b8b38b9d131461fbeeee67eaf6a5fe854a3e80",
+  "mainXmlSha256": "cbf2520d3e543b5fb142f0e6feaa84eba3fe3cfca921945f1e591daa379584b1"
+}

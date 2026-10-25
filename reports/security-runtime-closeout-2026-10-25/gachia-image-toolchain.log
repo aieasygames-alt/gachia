@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: updated native image toolchain converts synthetic pixels without external files
+ok 1 - updated native image toolchain converts synthetic pixels without external files
+  ---
+  duration_ms: 6.096625
+  type: 'test'
+  ...
+# Subtest: updated SVG rasterizer handles a bounded synthetic image
+ok 2 - updated SVG rasterizer handles a bounded synthetic image
+  ---
+  duration_ms: 1.747834
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1041.895334

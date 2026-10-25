@@ -1,0 +1,125 @@
+{
+  "app": "game-genshin",
+  "startedAt": "2026-10-25T09:35:43.970Z",
+  "status": "local_repairs_verified",
+  "cloudWrites": false,
+  "http": [
+    {
+      "path": "/zh/genshin",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/genshin"
+    },
+    {
+      "path": "/zh/genshin/gacha",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/genshin/gacha"
+    },
+    {
+      "path": "/zh/genshin/weapons",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/genshin/weapons"
+    },
+    {
+      "path": "/zh/genshin/calculator",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/genshin/calculator"
+    },
+    {
+      "path": "/en/genshin",
+      "status": 200,
+      "canonical": "https://gachia.com/en/genshin"
+    },
+    {
+      "path": "/en/genshin/gacha",
+      "status": 200,
+      "canonical": "https://gachia.com/en/genshin/gacha"
+    },
+    {
+      "path": "/en/genshin/weapons",
+      "status": 200,
+      "canonical": "https://gachia.com/en/genshin/weapons"
+    },
+    {
+      "path": "/en/genshin/calculator",
+      "status": 200,
+      "canonical": "https://gachia.com/en/genshin/calculator"
+    },
+    {
+      "path": "/ja/genshin",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/genshin"
+    },
+    {
+      "path": "/ja/genshin/gacha",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/genshin/gacha"
+    },
+    {
+      "path": "/ja/genshin/weapons",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/genshin/weapons"
+    },
+    {
+      "path": "/ja/genshin/calculator",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/genshin/calculator"
+    }
+  ],
+  "browser": [
+    {
+      "app": "game-genshin",
+      "width": 1440,
+      "locale": "zh",
+      "runtimeErrors": [],
+      "failedAssets": [],
+      "accountRequests": [],
+      "missingPortraitRequests": []
+    },
+    {
+      "app": "game-genshin",
+      "width": 1440,
+      "locale": "en",
+      "runtimeErrors": [],
+      "failedAssets": [],
+      "accountRequests": [],
+      "missingPortraitRequests": []
+    },
+    {
+      "app": "game-genshin",
+      "width": 1440,
+      "locale": "ja",
+      "runtimeErrors": [],
+      "failedAssets": [],
+      "accountRequests": [],
+      "missingPortraitRequests": []
+    },
+    {
+      "app": "game-genshin",
+      "width": 390,
+      "locale": "zh",
+      "runtimeErrors": [],
+      "failedAssets": [],
+      "accountRequests": [],
+      "missingPortraitRequests": []
+    },
+    {
+      "app": "game-genshin",
+      "width": 390,
+      "locale": "en",
+      "runtimeErrors": [],
+      "failedAssets": [],
+      "accountRequests": [],
+      "missingPortraitRequests": []
+    },
+    {
+      "app": "game-genshin",
+      "width": 390,
+      "locale": "ja",
+      "runtimeErrors": [],
+      "failedAssets": [],
+      "accountRequests": [],
+      "missingPortraitRequests": []
+    }
+  ],
+  "finishedAt": "2026-10-25T09:35:57.009Z"
+}

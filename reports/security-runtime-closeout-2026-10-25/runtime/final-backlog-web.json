@@ -1,0 +1,100 @@
+{
+  "app": "web",
+  "startedAt": "2026-10-25T09:35:01.893Z",
+  "status": "local_repairs_verified",
+  "cloudWrites": false,
+  "http": [
+    {
+      "path": "/zh/search?q=nanally",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/search"
+    },
+    {
+      "path": "/zh/search?q=%3Cscript%3Ewindow.__repairQueryXss%3D1%3C%2Fscript%3E",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/search"
+    },
+    {
+      "path": "/en/search?q=nanally",
+      "status": 200,
+      "canonical": "https://gachia.com/en/search"
+    },
+    {
+      "path": "/en/search?q=%3Cscript%3Ewindow.__repairQueryXss%3D1%3C%2Fscript%3E",
+      "status": 200,
+      "canonical": "https://gachia.com/en/search"
+    },
+    {
+      "path": "/ja/search?q=nanally",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/search"
+    },
+    {
+      "path": "/ja/search?q=%3Cscript%3Ewindow.__repairQueryXss%3D1%3C%2Fscript%3E",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/search"
+    }
+  ],
+  "browser": [
+    {
+      "app": "web",
+      "width": 1440,
+      "locale": "zh",
+      "runtimeErrors": [],
+      "failedAssets": [],
+      "accountRequests": [],
+      "missingPortraitRequests": []
+    },
+    {
+      "app": "web",
+      "width": 1440,
+      "locale": "en",
+      "runtimeErrors": [],
+      "failedAssets": [],
+      "accountRequests": [],
+      "missingPortraitRequests": []
+    },
+    {
+      "app": "web",
+      "width": 1440,
+      "locale": "ja",
+      "runtimeErrors": [],
+      "failedAssets": [],
+      "accountRequests": [],
+      "missingPortraitRequests": []
+    },
+    {
+      "app": "web",
+      "width": 390,
+      "locale": "zh",
+      "runtimeErrors": [],
+      "failedAssets": [],
+      "accountRequests": [],
+      "missingPortraitRequests": []
+    },
+    {
+      "app": "web",
+      "width": 390,
+      "locale": "en",
+      "runtimeErrors": [],
+      "failedAssets": [],
+      "accountRequests": [],
+      "missingPortraitRequests": []
+    },
+    {
+      "app": "web",
+      "width": 390,
+      "locale": "ja",
+      "runtimeErrors": [],
+      "failedAssets": [],
+      "accountRequests": [],
+      "missingPortraitRequests": []
+    },
+    {
+      "app": "web",
+      "mode": "javascript-disabled",
+      "fallbackVisible": true
+    }
+  ],
+  "finishedAt": "2026-10-25T09:35:13.018Z"
+}

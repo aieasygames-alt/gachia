@@ -1,0 +1,205 @@
+{
+  "app": "game-genshin",
+  "status": "local_seo_discovery_verified",
+  "cloudVerification": "not_performed",
+  "startedAt": "2026-10-25T09:41:42.157Z",
+  "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+  "acceptance": {
+    "sitemapUrls": 1572,
+    "browser": [
+      {
+        "path": "/zh/genshin/guides",
+        "width": 1440,
+        "status": 200,
+        "fallback": false,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/genshin/guides/banner-schedule-guide",
+        "width": 1440,
+        "status": 200,
+        "fallback": false,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/genshin/guides/phase-ii-columbina-raiden-pull-plan",
+        "width": 1440,
+        "status": 200,
+        "fallback": false,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/genshin/guides/lightrace-wish-phase-ii-faq",
+        "width": 1440,
+        "status": 200,
+        "fallback": false,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/genshin/guides",
+        "width": 1440,
+        "status": 200,
+        "fallback": false,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/genshin/guides/banner-schedule-guide",
+        "width": 1440,
+        "status": 200,
+        "fallback": false,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/genshin/guides/phase-ii-columbina-raiden-pull-plan",
+        "width": 1440,
+        "status": 200,
+        "fallback": false,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/genshin/guides/lightrace-wish-phase-ii-faq",
+        "width": 1440,
+        "status": 200,
+        "fallback": false,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/genshin/guides",
+        "width": 1440,
+        "status": 200,
+        "fallback": false,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/genshin/guides/banner-schedule-guide",
+        "width": 1440,
+        "status": 200,
+        "fallback": true,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/genshin/guides/phase-ii-columbina-raiden-pull-plan",
+        "width": 1440,
+        "status": 200,
+        "fallback": true,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/genshin/guides/lightrace-wish-phase-ii-faq",
+        "width": 1440,
+        "status": 200,
+        "fallback": false,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/genshin/guides",
+        "width": 390,
+        "status": 200,
+        "fallback": false,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/genshin/guides/banner-schedule-guide",
+        "width": 390,
+        "status": 200,
+        "fallback": false,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/genshin/guides/phase-ii-columbina-raiden-pull-plan",
+        "width": 390,
+        "status": 200,
+        "fallback": false,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/zh/genshin/guides/lightrace-wish-phase-ii-faq",
+        "width": 390,
+        "status": 200,
+        "fallback": false,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/genshin/guides",
+        "width": 390,
+        "status": 200,
+        "fallback": false,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/genshin/guides/banner-schedule-guide",
+        "width": 390,
+        "status": 200,
+        "fallback": false,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/genshin/guides/phase-ii-columbina-raiden-pull-plan",
+        "width": 390,
+        "status": 200,
+        "fallback": false,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/en/genshin/guides/lightrace-wish-phase-ii-faq",
+        "width": 390,
+        "status": 200,
+        "fallback": false,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/genshin/guides",
+        "width": 390,
+        "status": 200,
+        "fallback": false,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/genshin/guides/banner-schedule-guide",
+        "width": 390,
+        "status": 200,
+        "fallback": true,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/genshin/guides/phase-ii-columbina-raiden-pull-plan",
+        "width": 390,
+        "status": 200,
+        "fallback": true,
+        "errors": 0,
+        "failedAssets": 0
+      },
+      {
+        "path": "/ja/genshin/guides/lightrace-wish-phase-ii-faq",
+        "width": 390,
+        "status": 200,
+        "fallback": false,
+        "errors": 0,
+        "failedAssets": 0
+      }
+    ]
+  },
+  "finishedAt": "2026-10-25T09:41:58.779Z"
+}

@@ -1,0 +1,10 @@
+=== web ===
+{"files":3146,"links":19,"portable":true,"scope":"filesystem_portability_not_runtime_or_platform_acceptance"}
+=== game-genshin ===
+{"files":3051,"links":19,"portable":true,"scope":"filesystem_portability_not_runtime_or_platform_acceptance"}
+=== game-nte ===
+{"files":1510,"links":19,"portable":true,"scope":"filesystem_portability_not_runtime_or_platform_acceptance"}
+=== game-azur-promilia ===
+{"files":1465,"links":19,"portable":true,"scope":"filesystem_portability_not_runtime_or_platform_acceptance"}
+=== game-lvmeng ===
+{"files":1462,"links":19,"portable":true,"scope":"filesystem_portability_not_runtime_or_platform_acceptance"}

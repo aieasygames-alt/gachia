@@ -1,0 +1,13 @@
+
+> @gachia/router@0.0.1 test /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/router
+> vitest run
+
+
+ RUN  v4.1.12 /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/router
+
+
+ Test Files  4 passed (4)
+      Tests  35 passed (35)
+   Start at  17:18:08
+   Duration  204ms (transform 105ms, setup 0ms, import 183ms, tests 135ms, environment 0ms)
+

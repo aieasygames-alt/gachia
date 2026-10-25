@@ -1,0 +1,58 @@
+{
+  "base": "855254ba3556131bc258250642f2790f521cf064",
+  "scope": "modified_and_new_engineering_files_not_a_signed_release",
+  "files": [
+    {
+      "path": "apps/web/__tests__/map-progress-write.test.ts",
+      "sha256": "eb334f23de094684077ae759fd584bc7fb5b36e2b7214e919d676bb12333f3fe"
+    },
+    {
+      "path": "packages/data/__tests__/schema-compatibility.test.ts",
+      "sha256": "c5ae3e69af59a6d47496c192d88f2a7e506c856f8192e03c4113e16a71e25e9a"
+    },
+    {
+      "path": "scripts/db-toolchain.test.mjs",
+      "sha256": "c08f7475f767af672d3963e83bc91c54edab07ba610bfdf957258b109ce46d0f"
+    },
+    {
+      "path": "scripts/image-toolchain.test.mjs",
+      "sha256": "52316c01f4e434a2d63f9cbeff1eb09d5f2d8ea77ddd6910debecd95c2d81405"
+    },
+    {
+      "path": "apps/router/package.json",
+      "sha256": "3b39477f47a2ef16d10fe7035c29cd2ab3404ddc89d79da2da78e84791c266c1"
+    },
+    {
+      "path": "apps/web/app/api/map/progress/route.ts",
+      "sha256": "0d4e4a9cad12bcdaee0fb68a8e065acb9c7312780525f43a400ad2fde1aad2eb"
+    },
+    {
+      "path": "apps/web/package.json",
+      "sha256": "892ad4d70068cc81e6d5e0d9722fbeed10bd8d08c1cddeed51d3d1ff102907b8"
+    },
+    {
+      "path": "package.json",
+      "sha256": "69f87e4251a0f44f2180283710e04ead1a8ea18b9da562811698f313a5a99476"
+    },
+    {
+      "path": "packages/core/package.json",
+      "sha256": "987bd9480abc335bac65293d61da66ba9719a06a14fbe15da07d8ba6c1c07e5b"
+    },
+    {
+      "path": "packages/core/schemas/index.ts",
+      "sha256": "a267a427df185c7acaef2bdc92d179a2b20ca8de2245a336dd663c350e728bdd"
+    },
+    {
+      "path": "packages/data/package.json",
+      "sha256": "0baaec4954270ec6bde99dea05a800fe1a42e80018347d5e70271737a722d97e"
+    },
+    {
+      "path": "packages/db/package.json",
+      "sha256": "1f716d1ef3f6ac5a1d3f15e2fa8a893f45d44b91d89c7308d50800dbc37c04e8"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "sha256": "a8b66b525bebab35c2d44ad756f099386a9f3c97cdc48e4d5aaa65ae5ba6fb7b"
+    }
+  ]
+}

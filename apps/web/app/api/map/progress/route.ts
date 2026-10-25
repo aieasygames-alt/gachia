@@ -72,22 +72,21 @@ export async function POST(request: NextRequest) {
     .where(and(eq(mapProgress.userId, session.user.id), eq(mapProgress.mapId, mapId), eq(mapProgress.markerId, markerId)))
     .limit(1);
 
-  if (existing.length > 0) {
-    // Remove
-    await d1.prepare('DELETE FROM map_progress WHERE id = ?').bind(existing[0]!.id).run();
-    return NextResponse.json({ collected: false });
-  } else {
-    // Add
-    try {
-      await db.insert(mapProgress).values({
-        userId: session.user.id,
-        mapId,
-        markerId,
-      });
-    } catch {
-      // Duplicate — ignore
+  try {
+    if (existing.length > 0) {
+      await d1.prepare('DELETE FROM map_progress WHERE id = ? AND user_id = ?')
+        .bind(existing[0]!.id, session.user.id).run();
+      return NextResponse.json({ collected: false });
     }
+    // Ignore only a concurrent insertion of this exact marker, not storage errors.
+    await d1.prepare(`INSERT INTO map_progress (user_id, map_id, marker_id, created_at)
+      VALUES (?, ?, ?, unixepoch()) ON CONFLICT(user_id, map_id, marker_id) DO NOTHING`)
+      .bind(session.user.id, mapId, markerId).run();
     return NextResponse.json({ collected: true });
+  } catch {
+    return NextResponse.json({ error: 'Failed to save map progress' }, {
+      status: 503, headers: { 'Cache-Control': 'no-store' },
+    });
   }
 }
 

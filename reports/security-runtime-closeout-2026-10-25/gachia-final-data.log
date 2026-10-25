@@ -1,0 +1,13 @@
+
+> @gachia/data@0.0.1 test /Users/robert/.codex/worktrees/account-deletion-release/gachia/packages/data
+> vitest run
+
+
+ RUN  v4.1.12 /Users/robert/.codex/worktrees/account-deletion-release/gachia/packages/data
+
+
+ Test Files  14 passed (14)
+      Tests  168 passed (168)
+   Start at  17:31:41
+   Duration  853ms (transform 990ms, setup 0ms, import 1.46s, tests 1.44s, environment 1ms)
+

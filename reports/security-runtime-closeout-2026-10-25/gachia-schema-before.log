@@ -1,0 +1,9 @@
+
+ RUN  v4.1.12 /Users/robert/.codex/worktrees/account-deletion-release/gachia/packages/data
+
+
+ Test Files  1 passed (1)
+      Tests  6 passed (6)
+   Start at  17:26:20
+   Duration  151ms (transform 49ms, setup 0ms, import 64ms, tests 4ms, environment 0ms)
+

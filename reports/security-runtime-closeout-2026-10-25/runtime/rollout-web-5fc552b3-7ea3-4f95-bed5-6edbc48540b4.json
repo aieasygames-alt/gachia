@@ -1,0 +1,431 @@
+{
+  "schemaVersion": 1,
+  "app": "web",
+  "runId": "5fc552b3-7ea3-4f95-bed5-6edbc48540b4",
+  "startedAt": "2026-10-25T09:33:20.050Z",
+  "status": "local_runtime_verified",
+  "cloudVerification": "not_performed",
+  "runtimePolicy": {
+    "status": "reviewed_application_runtime",
+    "app": "@gachia/web",
+    "nodeVersion": "22.22.2",
+    "versions": {
+      "next": "15.5.28",
+      "@opennextjs/cloudflare": "1.20.13",
+      "wrangler": "4.148.0"
+    },
+    "patch": {
+      "nextVersion": "15.5.28",
+      "state": "patched",
+      "files": [
+        {
+          "path": "dist/client/components/layout-router.js",
+          "sha256": "0c1ca06f109657d840d520ca1ddf8a94c605ebe1e16ea3eb7ddcb3078eb6a464",
+          "state": "patched"
+        },
+        {
+          "path": "dist/client/components/app-router.js",
+          "sha256": "85b52001d3faabf563e3fd7b4107047f63f9e391bc652848a1011fef2b537d3e",
+          "state": "patched"
+        },
+        {
+          "path": "dist/esm/client/components/layout-router.js",
+          "sha256": "61d2635e7e869b0414e85ff9bc9cd7a4d9deec1a69426f2d62a271b3ae7359c1",
+          "state": "patched"
+        },
+        {
+          "path": "dist/esm/client/components/app-router.js",
+          "sha256": "6a1cc9777a102a77355ae18caa308dd975c4349fa595b6c3911da0f2d16d9fd4",
+          "state": "patched"
+        }
+      ],
+      "productionEnabled": false
+    },
+    "cloudVerification": "not_performed"
+  },
+  "workerEntrypointSha256": "d05223bf4d44c84108a102ab62aa3bc9c5568f0c3ac2064c37be5cc65c64bc45",
+  "http": [
+    {
+      "path": "/zh/hi3/weapons",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/zh/hi3/weapons/vermillion-liuli",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/zh/hi3/weapons/vermillion-liuli-full-burn",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/zh/hi3/weapons/volatile-sparkler",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/en/hi3/weapons",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/en/hi3/weapons/vermillion-liuli",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/en/hi3/weapons/vermillion-liuli-full-burn",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/en/hi3/weapons/volatile-sparkler",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/ja/hi3/weapons",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/ja/hi3/weapons/vermillion-liuli",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/ja/hi3/weapons/vermillion-liuli-full-burn",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/ja/hi3/weapons/volatile-sparkler",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/robots.txt",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/sitemap.xml",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/sitemaps/main/sitemap.xml",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/webpack-02932d580e3c7274.js",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/css/e89dd0dfedbe06e5.css",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/zh/hi3/weapons/__runtime_missing__",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/auth/get-session",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/auth/sign-in/social",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "path": "/api/auth/callback/google?code=disabled&state=disabled",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/auth/sign-out",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "path": "/api/favorites",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/favorites",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "path": "/api/favorites",
+      "method": "DELETE",
+      "status": 404
+    },
+    {
+      "path": "/api/user-characters",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/user-characters",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "path": "/api/user-characters",
+      "method": "DELETE",
+      "status": 404
+    },
+    {
+      "path": "/api/map/progress",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/map/progress",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "path": "/api/map/progress",
+      "method": "PUT",
+      "status": 404
+    },
+    {
+      "path": "/api/shared-builds",
+      "method": "POST",
+      "status": 404
+    }
+  ],
+  "browser": [
+    {
+      "path": "/zh/hi3/weapons",
+      "locale": "zh",
+      "width": 1440,
+      "mode": "interactive",
+      "delayedScripts": 0,
+      "prefetchRequests": 15,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 41
+    },
+    {
+      "path": "/zh/hi3/weapons",
+      "locale": "zh",
+      "width": 1440,
+      "mode": "delayed_scripts",
+      "delayedScripts": 21,
+      "prefetchRequests": 15,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 82
+    },
+    {
+      "path": "/zh/hi3/weapons",
+      "locale": "zh",
+      "width": 1440,
+      "mode": "no_javascript",
+      "delayedScripts": 0,
+      "prefetchRequests": 0,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 85
+    },
+    {
+      "path": "/en/hi3/weapons",
+      "locale": "en",
+      "width": 1440,
+      "mode": "interactive",
+      "delayedScripts": 0,
+      "prefetchRequests": 15,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 126
+    },
+    {
+      "path": "/en/hi3/weapons",
+      "locale": "en",
+      "width": 1440,
+      "mode": "delayed_scripts",
+      "delayedScripts": 21,
+      "prefetchRequests": 15,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 167
+    },
+    {
+      "path": "/en/hi3/weapons",
+      "locale": "en",
+      "width": 1440,
+      "mode": "no_javascript",
+      "delayedScripts": 0,
+      "prefetchRequests": 0,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 170
+    },
+    {
+      "path": "/ja/hi3/weapons",
+      "locale": "ja",
+      "width": 1440,
+      "mode": "interactive",
+      "delayedScripts": 0,
+      "prefetchRequests": 15,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 211
+    },
+    {
+      "path": "/ja/hi3/weapons",
+      "locale": "ja",
+      "width": 1440,
+      "mode": "delayed_scripts",
+      "delayedScripts": 21,
+      "prefetchRequests": 15,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 252
+    },
+    {
+      "path": "/ja/hi3/weapons",
+      "locale": "ja",
+      "width": 1440,
+      "mode": "no_javascript",
+      "delayedScripts": 0,
+      "prefetchRequests": 0,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 255
+    },
+    {
+      "path": "/zh/hi3/weapons",
+      "locale": "zh",
+      "width": 390,
+      "mode": "interactive",
+      "delayedScripts": 0,
+      "prefetchRequests": 12,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 293
+    },
+    {
+      "path": "/zh/hi3/weapons",
+      "locale": "zh",
+      "width": 390,
+      "mode": "delayed_scripts",
+      "delayedScripts": 21,
+      "prefetchRequests": 12,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 331
+    },
+    {
+      "path": "/zh/hi3/weapons",
+      "locale": "zh",
+      "width": 390,
+      "mode": "no_javascript",
+      "delayedScripts": 0,
+      "prefetchRequests": 0,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 334
+    },
+    {
+      "path": "/en/hi3/weapons",
+      "locale": "en",
+      "width": 390,
+      "mode": "interactive",
+      "delayedScripts": 0,
+      "prefetchRequests": 12,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 372
+    },
+    {
+      "path": "/en/hi3/weapons",
+      "locale": "en",
+      "width": 390,
+      "mode": "delayed_scripts",
+      "delayedScripts": 21,
+      "prefetchRequests": 12,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 410
+    },
+    {
+      "path": "/en/hi3/weapons",
+      "locale": "en",
+      "width": 390,
+      "mode": "no_javascript",
+      "delayedScripts": 0,
+      "prefetchRequests": 0,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 413
+    },
+    {
+      "path": "/ja/hi3/weapons",
+      "locale": "ja",
+      "width": 390,
+      "mode": "interactive",
+      "delayedScripts": 0,
+      "prefetchRequests": 11,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 450
+    },
+    {
+      "path": "/ja/hi3/weapons",
+      "locale": "ja",
+      "width": 390,
+      "mode": "delayed_scripts",
+      "delayedScripts": 21,
+      "prefetchRequests": 11,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 487
+    },
+    {
+      "path": "/ja/hi3/weapons",
+      "locale": "ja",
+      "width": 390,
+      "mode": "no_javascript",
+      "delayedScripts": 0,
+      "prefetchRequests": 0,
+      "runtimeErrors": 0,
+      "failedAssets": 0,
+      "accountRequests": 0,
+      "cumulativeRequests": 490
+    }
+  ],
+  "syntheticDatabase": false,
+  "accountPolicy": "disabled_without_database_or_auth_secrets",
+  "realOAuth": "not_performed",
+  "finishedAt": "2026-10-25T09:33:51.358Z"
+}

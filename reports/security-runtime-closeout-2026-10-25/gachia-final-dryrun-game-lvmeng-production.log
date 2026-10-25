@@ -1,0 +1,12 @@
+
+ ⛅️ wrangler 4.148.0 (update available 4.152.0)
+───────────────────────────────────────────────
+✨ Read 129 files from the assets directory /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/game-lvmeng/.open-next/assets
+Total Upload: 5344.01 KiB / gzip: 1062.87 KiB
+Your Worker has access to the following bindings:
+Binding                                                Resource                  
+env.ASSETS                                             Assets                    
+env.NEXT_PUBLIC_APP_URL ("https://gachia.com")         Environment Variable      
+env.LVMENG_DEPLOYMENT_MODE ("production")              Environment Variable      
+
+--dry-run: exiting now.

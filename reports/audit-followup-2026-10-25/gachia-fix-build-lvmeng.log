@@ -1,0 +1,100 @@
+
+> @gachia/game-lvmeng@0.0.1 build /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/game-lvmeng
+> node ../../scripts/require-app-runtime.mjs && next build
+
+{
+  "status": "reviewed_application_runtime",
+  "app": "@gachia/game-lvmeng",
+  "nodeVersion": "22.22.2",
+  "versions": {
+    "next": "15.5.28",
+    "@opennextjs/cloudflare": "1.20.13",
+    "wrangler": "4.148.0"
+  },
+  "patch": {
+    "nextVersion": "15.5.28",
+    "state": "patched",
+    "files": [
+      {
+        "path": "dist/client/components/layout-router.js",
+        "sha256": "0c1ca06f109657d840d520ca1ddf8a94c605ebe1e16ea3eb7ddcb3078eb6a464",
+        "state": "patched"
+      },
+      {
+        "path": "dist/client/components/app-router.js",
+        "sha256": "85b52001d3faabf563e3fd7b4107047f63f9e391bc652848a1011fef2b537d3e",
+        "state": "patched"
+      },
+      {
+        "path": "dist/esm/client/components/layout-router.js",
+        "sha256": "61d2635e7e869b0414e85ff9bc9cd7a4d9deec1a69426f2d62a271b3ae7359c1",
+        "state": "patched"
+      },
+      {
+        "path": "dist/esm/client/components/app-router.js",
+        "sha256": "6a1cc9777a102a77355ae18caa308dd975c4349fa595b6c3911da0f2d16d9fd4",
+        "state": "patched"
+      }
+    ],
+    "productionEnabled": false
+  },
+  "cloudVerification": "not_performed"
+}
+   ▲ Next.js 15.5.28
+
+   Creating an optimized production build ...
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/Users/robert/.codex/worktrees/account-deletion-release/gachia/node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!/Users/robert/.codex/worktrees/account-deletion-release/gachia/node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!/Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/game-lvmeng/app/globals.css': No serializer registered for Warning
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> Array { 1 items } -> webpack/lib/ModuleWarning -> Warning
+ ⚠ Compiled with warnings in 821ms
+
+./app/globals.css.webpack[javascript/auto]!=!../../node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!../../node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./app/globals.css
+Warning
+
+(106:39) autoprefixer: end value has mixed support, consider using flex-end instead
+
+Import trace for requested module:
+./app/globals.css.webpack[javascript/auto]!=!../../node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!../../node_modules/.pnpm/next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./app/globals.css
+./app/globals.css
+
+ ✓ Compiled successfully in 2.6s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/5) ...
+   Generating static pages (1/5) 
+   Generating static pages (2/5) 
+   Generating static pages (3/5) 
+ ✓ Generating static pages (5/5)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+┌ ○ /_not-found                            999 B         104 kB
+├ ƒ /[lang]                                146 B         103 kB
+├ ƒ /[lang]/lvmeng                         179 B         106 kB
+├ ƒ /[lang]/lvmeng/characters              179 B         106 kB
+├ ƒ /[lang]/lvmeng/characters/[slug]       179 B         106 kB
+├ ƒ /[lang]/lvmeng/download                179 B         106 kB
+├ ƒ /[lang]/lvmeng/faq                     179 B         106 kB
+├ ƒ /[lang]/lvmeng/guides                  146 B         103 kB
+├ ƒ /[lang]/lvmeng/launch-check          1.41 kB         108 kB
+├ ƒ /[lang]/lvmeng/map                     146 B         103 kB
+├ ƒ /[lang]/lvmeng/news                    179 B         106 kB
+├ ƒ /[lang]/lvmeng/progression           1.55 kB         104 kB
+├ ƒ /[lang]/lvmeng/redeem-codes            146 B         103 kB
+├ ƒ /[lang]/lvmeng/roadmap                 179 B         106 kB
+├ ƒ /[lang]/lvmeng/starter-guide           146 B         103 kB
+├ ƒ /[lang]/lvmeng/version                 179 B         106 kB
+├ ƒ /[lang]/lvmeng/world                   146 B         103 kB
+├ ○ /robots.txt                            146 B         103 kB
+└ ○ /sitemap.xml                           146 B         103 kB
++ First Load JS shared by all             103 kB
+  ├ chunks/721-1995520c574a32d7.js       46.7 kB
+  ├ chunks/b3ac7baf-c40001c3c1648c37.js  54.2 kB
+  └ other shared chunks (total)          1.93 kB
+
+
+ƒ Middleware                               34 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

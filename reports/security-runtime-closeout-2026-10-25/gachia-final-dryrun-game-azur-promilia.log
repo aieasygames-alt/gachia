@@ -1,0 +1,12 @@
+
+ ⛅️ wrangler 4.148.0 (update available 4.152.0)
+───────────────────────────────────────────────
+✨ Read 127 files from the assets directory /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/game-azur-promilia/.open-next/assets
+Total Upload: 5332.82 KiB / gzip: 1064.47 KiB
+Your Worker has access to the following bindings:
+Binding                                                       Resource                  
+env.ASSETS                                                    Assets                    
+env.NEXT_PUBLIC_APP_URL ("https://gachia.com")                Environment Variable      
+env.AZUR_PROMILIA_DEPLOYMENT_MODE ("production")              Environment Variable      
+
+--dry-run: exiting now.

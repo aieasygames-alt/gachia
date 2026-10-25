@@ -1,0 +1,95 @@
+{
+  "scope": "local_compiled_workers_not_cloud_release",
+  "cloudWrites": false,
+  "records": [
+    {
+      "record": "runtime/final-backlog-game-genshin.json",
+      "status": "local_repairs_verified",
+      "sha256": "410092133d0b2128978cf211fee8a27c7a0401f1356a44ea7f2d7f5910203136",
+      "http": 12,
+      "browser": 6
+    },
+    {
+      "record": "runtime/final-backlog-game-nte.json",
+      "status": "local_repairs_verified",
+      "sha256": "d23e554e1c32169a4ac833d7e4fc6447ca03d1d0a5a1aba33fcf43888e46b398",
+      "http": 6,
+      "browser": 6
+    },
+    {
+      "record": "runtime/final-backlog-web.json",
+      "status": "local_repairs_verified",
+      "sha256": "6d4be685f988bf45dc4bd796d94b0dce84b614f9acdadb56e9387ad2e3e88f6a",
+      "http": 6,
+      "browser": 7
+    },
+    {
+      "record": "runtime/managed-content-3878e1e0-f922-4079-bd07-6a691d40c58d.json",
+      "status": "local_managed_content_verified",
+      "sha256": "53931f6f6cf7395f629988c3afef90ae5396db8efbb34d66dd19b43dd66dfb74",
+      "http": 23,
+      "browser": 520,
+      "fallbackHttp": 171,
+      "json": 7,
+      "search": 3,
+      "indexnow": 8
+    },
+    {
+      "record": "runtime/rollout-game-genshin-35a16e3b-9325-45f5-bdd0-9255c1b55f57.json",
+      "status": "local_runtime_verified",
+      "sha256": "7df7741026d643982491ecf28da0ff0d53ab1bb04e7a46db3b57668e63169144",
+      "http": 14,
+      "browser": 18
+    },
+    {
+      "record": "runtime/rollout-game-lvmeng-d1ea2a7d-0ca5-4278-8781-65673d51d7ee.json",
+      "status": "local_runtime_verified",
+      "sha256": "aaee3c4e32b53a694da24cb911538d3cee68734fce061abcd50613a6d2a84fe7",
+      "http": 12,
+      "browser": 6
+    },
+    {
+      "record": "runtime/rollout-web-5fc552b3-7ea3-4f95-bed5-6edbc48540b4.json",
+      "status": "local_runtime_verified",
+      "sha256": "fd39728664a7bacaa7dae8115bd5fd9d114c5efb257e3b7802a840579d77aa37",
+      "http": 32,
+      "browser": 18
+    },
+    {
+      "record": "runtime/seo-discovery-game-genshin-b5dd24ae-e2e0-40d6-a808-8d138fce941d.json",
+      "status": "local_seo_discovery_verified",
+      "sha256": "9f82874b2595fa96da0e58596356a7ec67addbc0470ec84e05cf722969967f11",
+      "browser": 24,
+      "sitemapUrls": 1572
+    },
+    {
+      "record": "runtime/seo-discovery-web-930f8266-c831-4048-8a93-bcd8e346a8f8.json",
+      "status": "local_seo_discovery_verified",
+      "sha256": "a23c472a5189a6c4287d7a088e162af8c3fc1a442b6363e567b3dda2645ab81a",
+      "browser": 32,
+      "sitemapUrls": 4515
+    },
+    {
+      "record": "runtime/runtime-browser-nte-production.json",
+      "status": "local_browser_verified",
+      "http": 11,
+      "browser": 14,
+      "sha256": "22bb6c99acd16b986cda96f9ab5d9ca2473b52143bf9d598dd97a93e7287b770"
+    },
+    {
+      "record": "runtime/runtime-browser-azur-promilia-production.json",
+      "status": "local_browser_verified",
+      "http": 11,
+      "browser": 14,
+      "sha256": "c017f6bc7f71a615eb43e393297fa8f1c0d57f7bb20e0debc800c45756d4eab7"
+    }
+  ],
+  "browserObservations": 665,
+  "workersGzipKiB": {
+    "web": 2896.82,
+    "genshin": 1382.13,
+    "nte": 1401.55,
+    "azur-promilia": 1064.47,
+    "lvmeng": 1062.87
+  }
+}

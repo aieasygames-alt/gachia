@@ -10,6 +10,9 @@ import type { GameId } from '../types';
 
 export const SupportedLocaleSchema = z.enum(['zh', 'en', 'ja']);
 
+// Zod 4 enum records require every key; preserve the existing partial-translation contract.
+const LocalizedTextSchema = z.partialRecord(SupportedLocaleSchema, z.string());
+
 // --- Game ---
 
 export const GameIdSchema = z.enum(GAME_IDS as [GameId, ...GameId[]]);
@@ -23,7 +26,7 @@ export const GameThemeSchema = z.object({
 
 export const ElementSchema = z.object({
   id: z.string(),
-  name: z.record(SupportedLocaleSchema, z.string()),
+  name: LocalizedTextSchema,
   color: z.string(),
   icon: z.string().optional(),
 });
@@ -31,7 +34,7 @@ export const ElementSchema = z.object({
 export const RaritySchema = z.object({
   stars: z.number().int().min(1).max(5),
   color: z.string(),
-  label: z.record(SupportedLocaleSchema, z.string()),
+  label: LocalizedTextSchema,
 });
 
 export const StatConfigSchema = z.object({
@@ -66,7 +69,7 @@ export const GameRouteConfigSchema = z.object({
 
 export const GameModuleSchema = z.object({
   id: GameIdSchema,
-  name: z.record(SupportedLocaleSchema, z.string()),
+  name: LocalizedTextSchema,
   theme: GameThemeSchema,
   elements: z.array(ElementSchema),
   rarities: z.array(RaritySchema),
@@ -91,8 +94,8 @@ export const SkillSchema = z.object({
 
 export const ConstellationSchema = z.object({
   level: z.number().int().min(1).max(6),
-  name: z.record(SupportedLocaleSchema, z.string()),
-  description: z.record(SupportedLocaleSchema, z.string()),
+  name: LocalizedTextSchema,
+  description: LocalizedTextSchema,
 });
 
 export const CharacterImagesSchema = z.object({
@@ -104,11 +107,11 @@ export const CharacterImagesSchema = z.object({
 export const CharacterSchema = z.object({
   id: z.string(),
   gameId: GameIdSchema,
-  name: z.record(SupportedLocaleSchema, z.string()),
+  name: LocalizedTextSchema,
   rarity: z.number().int().min(1).max(6), // Support Endfield's 6-star system
   element: z.string(),
   weaponType: z.string(),
-  description: z.record(SupportedLocaleSchema, z.string()),
+  description: LocalizedTextSchema,
   images: CharacterImagesSchema,
   // Support both array format (most games) and object format (Endfield)
   stats: z.union([
@@ -124,17 +127,17 @@ export const CharacterSchema = z.object({
 // --- Weapon ---
 
 export const WeaponPassiveSchema = z.object({
-  name: z.record(SupportedLocaleSchema, z.string()),
-  description: z.record(SupportedLocaleSchema, z.string()),
+  name: LocalizedTextSchema,
+  description: LocalizedTextSchema,
 });
 
 export const WeaponSchema = z.object({
   id: z.string(),
   gameId: GameIdSchema,
-  name: z.record(SupportedLocaleSchema, z.string()),
+  name: LocalizedTextSchema,
   rarity: z.number().int().min(1).max(6), // Support Endfield's 6-star system
   weaponType: z.string(),
-  description: z.record(SupportedLocaleSchema, z.string()),
+  description: LocalizedTextSchema,
   images: z.object({ icon: z.string(), awakenIcon: z.string().optional() }),
   stats: z.object({
     baseAtk: z.array(z.number()),
@@ -149,12 +152,12 @@ export const WeaponSchema = z.object({
 export const ItemSchema = z.object({
   id: z.string(),
   gameId: GameIdSchema,
-  name: z.record(SupportedLocaleSchema, z.string()),
+  name: LocalizedTextSchema,
   type: z.string(),
   rarity: z.number().int().min(1).max(6), // Support Endfield's 6-star system
-  description: z.record(SupportedLocaleSchema, z.string()),
+  description: LocalizedTextSchema,
   icon: z.string(),
-  sources: z.array(z.record(SupportedLocaleSchema, z.string())),
+  sources: z.array(LocalizedTextSchema),
 });
 
 // --- Tier List ---

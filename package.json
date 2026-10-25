@@ -29,7 +29,7 @@
     "audit:production": "node scripts/production-site-audit.mjs",
     "release:game": "node scripts/game-release.mjs",
     "release:genshin:artifact": "node scripts/genshin-release-artifact.mjs",
-    "test:release": "node --test scripts/backlog-repairs-smoke.test.mjs scripts/live-owner-acceptance.test.mjs scripts/live-owner-artifact.test.mjs scripts/genshin-release-artifact.test.mjs scripts/web-recovery-policy.test.mjs scripts/browser-asset-diagnostics.test.mjs scripts/indexnow-plan.test.mjs scripts/game-release.test.mjs scripts/game-runtime.test.mjs scripts/runtime-rollout-smoke.test.mjs scripts/game-staging-acceptance.test.mjs scripts/web-release-policy.test.mjs scripts/production-site-audit.test.mjs scripts/retain-web-assets.test.mjs scripts/retain-game-assets.test.mjs scripts/managed-content-smoke.test.mjs scripts/seo-discovery-smoke.test.mjs && python3 -B scripts/restore-recovery-artifact.test.py && python3 -B scripts/extract-previous-web-assets.test.py && python3 -B scripts/web-sitemap-contract-audit.test.py && python3 -B scripts/web-published-sitemap-audit.test.py"
+    "test:release": "node --test scripts/db-toolchain.test.mjs scripts/image-toolchain.test.mjs scripts/backlog-repairs-smoke.test.mjs scripts/live-owner-acceptance.test.mjs scripts/live-owner-artifact.test.mjs scripts/genshin-release-artifact.test.mjs scripts/web-recovery-policy.test.mjs scripts/browser-asset-diagnostics.test.mjs scripts/indexnow-plan.test.mjs scripts/game-release.test.mjs scripts/game-runtime.test.mjs scripts/runtime-rollout-smoke.test.mjs scripts/game-staging-acceptance.test.mjs scripts/web-release-policy.test.mjs scripts/production-site-audit.test.mjs scripts/retain-web-assets.test.mjs scripts/retain-game-assets.test.mjs scripts/managed-content-smoke.test.mjs scripts/seo-discovery-smoke.test.mjs && python3 -B scripts/restore-recovery-artifact.test.py && python3 -B scripts/extract-previous-web-assets.test.py && python3 -B scripts/web-sitemap-contract-audit.test.py && python3 -B scripts/web-published-sitemap-audit.test.py"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",
@@ -50,7 +50,25 @@
     ],
     "overrides": {
       "kysely": "0.28.17",
-      "vite": "8.0.16"
+      "vite": "8.1.6",
+      "postcss": "8.5.23",
+      "nanoid@3": "3.3.18",
+      "source-map-js": "1.2.2",
+      "esbuild@0.27.7": "0.28.1",
+      "zod@4": "4.6.6",
+      "drizzle-kit@0.31.11>@esbuild-kit/esm-loader": "-",
+      "glob@10": "10.5.0",
+      "brace-expansion@1": "1.1.21",
+      "brace-expansion@2": "2.1.7",
+      "brace-expansion@5": "5.0.12",
+      "form-data@4": "4.0.6",
+      "ws@7": "7.5.11",
+      "sharp": "0.35.5",
+      "undici@7": "7.30.1",
+      "js-yaml@4": "4.3.2",
+      "qs@6": "6.16.0",
+      "proxy-addr@2": "2.0.8",
+      "body-parser@2": "2.4.0"
     }
   },
   "engines": {

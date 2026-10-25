@@ -1,0 +1,154 @@
+
+┌─────────────────────────────┐
+│ OpenNext — Cloudflare build │
+└─────────────────────────────┘
+
+Monorepo detected at /Users/robert/.codex/worktrees/account-deletion-release/gachia
+App directory: /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/game-genshin
+Next.js version : 15.5.28
+@opennextjs/cloudflare version: 1.20.13
+@opennextjs/aws version: 4.1.12
+workerd compatibility_date: 2026-07-08
+
+┌─────────────────────────────────┐
+│ OpenNext — Building Next.js app │
+└─────────────────────────────────┘
+
+
+> @gachia/game-genshin@0.0.1 build /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/game-genshin
+> node ../../scripts/require-app-runtime.mjs && next build
+
+{
+  "status": "reviewed_application_runtime",
+  "app": "@gachia/game-genshin",
+  "nodeVersion": "22.22.2",
+  "versions": {
+    "next": "15.5.28",
+    "@opennextjs/cloudflare": "1.20.13",
+    "wrangler": "4.148.0"
+  },
+  "patch": {
+    "nextVersion": "15.5.28",
+    "state": "patched",
+    "files": [
+      {
+        "path": "dist/client/components/layout-router.js",
+        "sha256": "0c1ca06f109657d840d520ca1ddf8a94c605ebe1e16ea3eb7ddcb3078eb6a464",
+        "state": "patched"
+      },
+      {
+        "path": "dist/client/components/app-router.js",
+        "sha256": "85b52001d3faabf563e3fd7b4107047f63f9e391bc652848a1011fef2b537d3e",
+        "state": "patched"
+      },
+      {
+        "path": "dist/esm/client/components/layout-router.js",
+        "sha256": "61d2635e7e869b0414e85ff9bc9cd7a4d9deec1a69426f2d62a271b3ae7359c1",
+        "state": "patched"
+      },
+      {
+        "path": "dist/esm/client/components/app-router.js",
+        "sha256": "6a1cc9777a102a77355ae18caa308dd975c4349fa595b6c3911da0f2d16d9fd4",
+        "state": "patched"
+      }
+    ],
+    "productionEnabled": false
+  },
+  "cloudVerification": "not_performed"
+}
+   ▲ Next.js 15.5.28
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 2.2s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/1560) ...
+   Generating static pages (390/1560) 
+   Generating static pages (780/1560) 
+   Generating static pages (1170/1560) 
+ ✓ Generating static pages (1560/1560)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                           Size  First Load JS
+┌ ○ /                                                142 B         103 kB
+├ ○ /_not-found                                      999 B         104 kB
+├ ƒ /[lang]/genshin                                  204 B         106 kB
+├ ƒ /[lang]/genshin/artifacts                        204 B         106 kB
+├ ● /[lang]/genshin/artifacts/[id]                   204 B         106 kB
+├   ├ /zh/genshin/artifacts/archaic-petra
+├   ├ /zh/genshin/artifacts/blizzard-strayer
+├   ├ /zh/genshin/artifacts/bloodstained-chivalry
+├   └ [+117 more paths]
+├ ƒ /[lang]/genshin/build                            204 B         106 kB
+├ ƒ /[lang]/genshin/calculator                     2.56 kB         105 kB
+├ ƒ /[lang]/genshin/characters                       204 B         106 kB
+├ ● /[lang]/genshin/characters/[id]                  204 B         106 kB
+├   ├ /zh/genshin/characters/hu-tao
+├   ├ /zh/genshin/characters/diluc
+├   ├ /zh/genshin/characters/klee
+├   └ [+339 more paths]
+├ ƒ /[lang]/genshin/compare                          142 B         103 kB
+├ ƒ /[lang]/genshin/download                         204 B         106 kB
+├ ƒ /[lang]/genshin/gacha                            204 B         106 kB
+├ ƒ /[lang]/genshin/guides                           204 B         106 kB
+├ ● /[lang]/genshin/guides/[slug]                    204 B         106 kB
+├   ├ /zh/genshin/guides/luna-viii-sandrone-guide
+├   ├ /zh/genshin/guides/snezhnaya-version-guide
+├   ├ /zh/genshin/guides/lunar-reaction-guide
+├   └ [+90 more paths]
+├ ƒ /[lang]/genshin/items                            204 B         106 kB
+├ ● /[lang]/genshin/items/[id]                       204 B         106 kB
+├   ├ /zh/genshin/items/agnidus-agate-sliver
+├   ├ /zh/genshin/items/agnidus-agate-fragment
+├   ├ /zh/genshin/items/agnidus-agate-chunk
+├   └ [+552 more paths]
+├ ƒ /[lang]/genshin/map                              204 B         106 kB
+├ ƒ /[lang]/genshin/redeem-codes                     142 B         103 kB
+├ ƒ /[lang]/genshin/teams                            204 B         106 kB
+├ ƒ /[lang]/genshin/tier-list                        204 B         106 kB
+├ ƒ /[lang]/genshin/version                          204 B         106 kB
+├ ƒ /[lang]/genshin/weapons                          204 B         106 kB
+├ ● /[lang]/genshin/weapons/[id]                     204 B         106 kB
+├   ├ /zh/genshin/weapons/aquila-favonia
+├   ├ /zh/genshin/weapons/skyward-blade
+├   ├ /zh/genshin/weapons/freedom-sworn
+├   └ [+441 more paths]
+├ ○ /robots.txt                                      142 B         103 kB
+└ ○ /sitemap.xml                                     142 B         103 kB
++ First Load JS shared by all                       103 kB
+  ├ chunks/721-1995520c574a32d7.js                 46.7 kB
+  ├ chunks/b3ac7baf-c40001c3c1648c37.js            54.2 kB
+  └ other shared chunks (total)                     1.9 kB
+
+
+ƒ Middleware                                       34.1 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+
+┌──────────────────────────────┐
+│ OpenNext — Generating bundle │
+└──────────────────────────────┘
+
+(node:78463) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Bundling middleware function...
+Bundling static assets...
+Bundling cache assets...
+Building server function: default...
+Applying code patches: 2.233s
+# copyPackageTemplateFiles
+[35m⚙️ Bundling the OpenNext server...
+[0m
+[35mWorker saved in `.open-next/worker.js` 🚀
+[0m
+OpenNext build complete.
+{
+  "status": "local_assets_prepared_not_deployed",
+  "files": 41,
+  "prefix": "/_games/genshin/_next",
+  "originalPathsPreserved": true
+}

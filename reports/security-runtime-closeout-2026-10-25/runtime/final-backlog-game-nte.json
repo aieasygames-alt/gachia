@@ -1,0 +1,95 @@
+{
+  "app": "game-nte",
+  "startedAt": "2026-10-25T09:35:57.359Z",
+  "status": "local_repairs_verified",
+  "cloudWrites": false,
+  "http": [
+    {
+      "path": "/zh/nte/characters/chaos",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/nte/characters/chaos"
+    },
+    {
+      "path": "/zh/nte/characters/nanally",
+      "status": 200,
+      "canonical": "https://gachia.com/zh/nte/characters/nanally"
+    },
+    {
+      "path": "/en/nte/characters/chaos",
+      "status": 200,
+      "canonical": "https://gachia.com/en/nte/characters/chaos"
+    },
+    {
+      "path": "/en/nte/characters/nanally",
+      "status": 200,
+      "canonical": "https://gachia.com/en/nte/characters/nanally"
+    },
+    {
+      "path": "/ja/nte/characters/chaos",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/nte/characters/chaos"
+    },
+    {
+      "path": "/ja/nte/characters/nanally",
+      "status": 200,
+      "canonical": "https://gachia.com/ja/nte/characters/nanally"
+    }
+  ],
+  "browser": [
+    {
+      "app": "game-nte",
+      "width": 1440,
+      "locale": "zh",
+      "runtimeErrors": [],
+      "failedAssets": [],
+      "accountRequests": [],
+      "missingPortraitRequests": []
+    },
+    {
+      "app": "game-nte",
+      "width": 1440,
+      "locale": "en",
+      "runtimeErrors": [],
+      "failedAssets": [],
+      "accountRequests": [],
+      "missingPortraitRequests": []
+    },
+    {
+      "app": "game-nte",
+      "width": 1440,
+      "locale": "ja",
+      "runtimeErrors": [],
+      "failedAssets": [],
+      "accountRequests": [],
+      "missingPortraitRequests": []
+    },
+    {
+      "app": "game-nte",
+      "width": 390,
+      "locale": "zh",
+      "runtimeErrors": [],
+      "failedAssets": [],
+      "accountRequests": [],
+      "missingPortraitRequests": []
+    },
+    {
+      "app": "game-nte",
+      "width": 390,
+      "locale": "en",
+      "runtimeErrors": [],
+      "failedAssets": [],
+      "accountRequests": [],
+      "missingPortraitRequests": []
+    },
+    {
+      "app": "game-nte",
+      "width": 390,
+      "locale": "ja",
+      "runtimeErrors": [],
+      "failedAssets": [],
+      "accountRequests": [],
+      "missingPortraitRequests": []
+    }
+  ],
+  "finishedAt": "2026-10-25T09:36:03.351Z"
+}
