@@ -7,23 +7,25 @@ import { inventoryGenshinArtifact as inventoryArtifact, sha256 } from './genshin
 export { sha256 };
 const base = { main: '.open-next/worker.js', assets: { directory: '.open-next/assets', binding: 'ASSETS' },
   compatibility_date: '2026-07-08', compatibility_flags: ['nodejs_compat'] };
-const vars = (game, mode) => ({ NEXT_PUBLIC_APP_URL: 'https://gachia.com', [`${game.toUpperCase()}_DEPLOYMENT_MODE`]: mode });
+const vars = (game, mode) => ({ NEXT_PUBLIC_APP_URL: 'https://gachia.com', [`${game.toUpperCase().replaceAll('-', '_')}_DEPLOYMENT_MODE`]: mode });
 
 // These policies authorize local sealing only. Upload and traffic promotion need
 // separate fresh cloud checks; neither operation is exposed by this module.
 export function liveOwnerConfig(game, text) {
-  assert(['nte', 'lvmeng'].includes(game), 'Unreviewed owner');
+  assert(['nte', 'lvmeng', 'azur-promilia'].includes(game), 'Unreviewed owner');
   const name = `gachia-game-${game}`;
   const config = parseWrangler(text);
   const expected = game === 'nte'
     ? { name, ...base, vars: vars(game, 'live'), env: { staging: { name: `${name}-staging`, workers_dev: true, vars: vars(game, 'preview') } } }
+    : game === 'azur-promilia'
+    ? { name, ...base, workers_dev: true, vars: vars(game, 'production'), env: { staging: { name: `${name}-staging`, workers_dev: true, vars: vars(game, 'preview') } } }
     : { name, ...base, workers_dev: true, observability: { enabled: true, logs: { enabled: true, persist: true, invocation_logs: true } },
       vars: vars(game, 'preview'), env: { production: { name, vars: vars(game, 'production') } } };
   assert.deepEqual(config, expected, 'Unreviewed owner configuration');
-  if (game === 'nte') {
+  if (game === 'nte' || game === 'azur-promilia') {
     const { env: _env, ...production } = config;
     // No environment block: preserve the live service's empty CF service tags.
-    return { config: production, environment: '', mode: 'live' };
+    return { config: production, environment: '', mode: game === 'nte' ? 'live' : 'production' };
   }
   // Keep explicit production selection (and existing CF environment tags).
   // Default preview mode uses the SAME service name and must never be uploaded.

@@ -1,0 +1,334 @@
+TAP version 13
+# Subtest: nte: exact target policy rejects unreviewed control-plane changes
+ok 1 - nte: exact target policy rejects unreviewed control-plane changes
+  ---
+  duration_ms: 6.347791
+  type: 'test'
+  ...
+# Subtest: seals the full portable artifact and separately pins the manifest identity
+ok 2 - seals the full portable artifact and separately pins the manifest identity
+  ---
+  duration_ms: 13.450833
+  type: 'test'
+  ...
+# Subtest: execution config stays outside seal and selects the reviewed environment
+ok 3 - execution config stays outside seal and selects the reviewed environment
+  ---
+  duration_ms: 4.837333
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects chunk
+ok 4 - artifact verification rejects chunk
+  ---
+  duration_ms: 4.558958
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects extra file
+ok 5 - artifact verification rejects extra file
+  ---
+  duration_ms: 4.698417
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects extra empty directory
+ok 6 - artifact verification rejects extra empty directory
+  ---
+  duration_ms: 4.085459
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects manifest change
+ok 7 - artifact verification rejects manifest change
+  ---
+  duration_ms: 3.683375
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects target config
+ok 8 - artifact verification rejects target config
+  ---
+  duration_ms: 3.700625
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects missing file
+ok 9 - artifact verification rejects missing file
+  ---
+  duration_ms: 3.676083
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects external link
+ok 10 - artifact verification rejects external link
+  ---
+  duration_ms: 4.936584
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects dangling link
+ok 11 - artifact verification rejects dangling link
+  ---
+  duration_ms: 4.157958
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects outside Worker link
+ok 12 - artifact verification rejects outside Worker link
+  ---
+  duration_ms: 3.963667
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects wrong commit
+ok 13 - artifact verification rejects wrong commit
+  ---
+  duration_ms: 3.284291
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects wrong receipt
+ok 14 - artifact verification rejects wrong receipt
+  ---
+  duration_ms: 3.267958
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects wrong pinned digest
+ok 15 - artifact verification rejects wrong pinned digest
+  ---
+  duration_ms: 3.216375
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects changed source config
+ok 16 - artifact verification rejects changed source config
+  ---
+  duration_ms: 3.29675
+  type: 'test'
+  ...
+# Subtest: lvmeng: exact target policy rejects unreviewed control-plane changes
+ok 17 - lvmeng: exact target policy rejects unreviewed control-plane changes
+  ---
+  duration_ms: 1.226334
+  type: 'test'
+  ...
+# Subtest: seals the full portable artifact and separately pins the manifest identity
+ok 18 - seals the full portable artifact and separately pins the manifest identity
+  ---
+  duration_ms: 4.690792
+  type: 'test'
+  ...
+# Subtest: execution config stays outside seal and selects the reviewed environment
+ok 19 - execution config stays outside seal and selects the reviewed environment
+  ---
+  duration_ms: 5.721
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects chunk
+ok 20 - artifact verification rejects chunk
+  ---
+  duration_ms: 5.215459
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects extra file
+ok 21 - artifact verification rejects extra file
+  ---
+  duration_ms: 4.026167
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects extra empty directory
+ok 22 - artifact verification rejects extra empty directory
+  ---
+  duration_ms: 3.75775
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects manifest change
+ok 23 - artifact verification rejects manifest change
+  ---
+  duration_ms: 3.214333
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects target config
+ok 24 - artifact verification rejects target config
+  ---
+  duration_ms: 3.298708
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects missing file
+ok 25 - artifact verification rejects missing file
+  ---
+  duration_ms: 3.480917
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects external link
+ok 26 - artifact verification rejects external link
+  ---
+  duration_ms: 3.632375
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects dangling link
+ok 27 - artifact verification rejects dangling link
+  ---
+  duration_ms: 3.904709
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects outside Worker link
+ok 28 - artifact verification rejects outside Worker link
+  ---
+  duration_ms: 4.782375
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects wrong commit
+ok 29 - artifact verification rejects wrong commit
+  ---
+  duration_ms: 3.867
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects wrong receipt
+ok 30 - artifact verification rejects wrong receipt
+  ---
+  duration_ms: 3.838625
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects wrong pinned digest
+ok 31 - artifact verification rejects wrong pinned digest
+  ---
+  duration_ms: 3.545834
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects changed source config
+ok 32 - artifact verification rejects changed source config
+  ---
+  duration_ms: 3.240209
+  type: 'test'
+  ...
+# Subtest: azur-promilia: exact target policy rejects unreviewed control-plane changes
+ok 33 - azur-promilia: exact target policy rejects unreviewed control-plane changes
+  ---
+  duration_ms: 0.596
+  type: 'test'
+  ...
+# Subtest: seals the full portable artifact and separately pins the manifest identity
+ok 34 - seals the full portable artifact and separately pins the manifest identity
+  ---
+  duration_ms: 4.284292
+  type: 'test'
+  ...
+# Subtest: execution config stays outside seal and selects the reviewed environment
+ok 35 - execution config stays outside seal and selects the reviewed environment
+  ---
+  duration_ms: 4.120583
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects chunk
+ok 36 - artifact verification rejects chunk
+  ---
+  duration_ms: 3.94525
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects extra file
+ok 37 - artifact verification rejects extra file
+  ---
+  duration_ms: 4.554041
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects extra empty directory
+ok 38 - artifact verification rejects extra empty directory
+  ---
+  duration_ms: 4.25275
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects manifest change
+ok 39 - artifact verification rejects manifest change
+  ---
+  duration_ms: 3.5805
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects target config
+ok 40 - artifact verification rejects target config
+  ---
+  duration_ms: 3.133375
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects missing file
+ok 41 - artifact verification rejects missing file
+  ---
+  duration_ms: 3.121792
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects external link
+ok 42 - artifact verification rejects external link
+  ---
+  duration_ms: 3.208833
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects dangling link
+ok 43 - artifact verification rejects dangling link
+  ---
+  duration_ms: 3.29375
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects outside Worker link
+ok 44 - artifact verification rejects outside Worker link
+  ---
+  duration_ms: 3.425791
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects wrong commit
+ok 45 - artifact verification rejects wrong commit
+  ---
+  duration_ms: 3.670625
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects wrong receipt
+ok 46 - artifact verification rejects wrong receipt
+  ---
+  duration_ms: 3.9895
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects wrong pinned digest
+ok 47 - artifact verification rejects wrong pinned digest
+  ---
+  duration_ms: 3.262042
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects changed source config
+ok 48 - artifact verification rejects changed source config
+  ---
+  duration_ms: 3.161291
+  type: 'test'
+  ...
+# Subtest: nte preview host guard cannot be spoofed by path or userinfo
+ok 49 - nte preview host guard cannot be spoofed by path or userinfo
+  ---
+  duration_ms: 13.500416
+  type: 'test'
+  ...
+# Subtest: lvmeng preview host guard cannot be spoofed by path or userinfo
+ok 50 - lvmeng preview host guard cannot be spoofed by path or userinfo
+  ---
+  duration_ms: 1.248416
+  type: 'test'
+  ...
+# Subtest: azur-promilia preview host guard cannot be spoofed by path or userinfo
+ok 51 - azur-promilia preview host guard cannot be spoofed by path or userinfo
+  ---
+  duration_ms: 1.243958
+  type: 'test'
+  ...
+# Subtest: Azur production artifact policy preserves production mode without staging configuration
+ok 52 - Azur production artifact policy preserves production mode without staging configuration
+  ---
+  duration_ms: 0.7085
+  type: 'test'
+  ...
+# Subtest: Azur middleware blocks Worker hosts without trusting forwarded-host or changing public indexing
+ok 53 - Azur middleware blocks Worker hosts without trusting forwarded-host or changing public indexing
+  ---
+  duration_ms: 51.319083
+  type: 'test'
+  ...
+# Subtest: Lvmeng progress keeps old and unknown string IDs but rejects malformed or unbounded state
+ok 54 - Lvmeng progress keeps old and unknown string IDs but rejects malformed or unbounded state
+  ---
+  duration_ms: 2.915667
+  type: 'test'
+  ...
+1..54
+# tests 54
+# suites 0
+# pass 54
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 522.265542
