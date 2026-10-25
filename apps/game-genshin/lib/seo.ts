@@ -20,7 +20,7 @@ const mainMetaBaseline: Record<string, Record<SupportedLocale, MetaCopy>> = {
   },
   weapons: {
     zh: { title: '原神武器图鉴 — 外观法杖Wiki、特效与获取方式', description: '按武器类型、稀有度和适配角色快速浏览原神武器图鉴，适合在配装前先看主词条、特效和毕业选择。，同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。' },
-    en: { title: 'Genshin Impact Weapons Wiki — Cosmetic Staffs, Effects & Sources', description: 'Browse the Genshin Impact weapon wiki by type, rarity, and best users to review main stats, passives, and endgame picks before building. It also links to characters, weapons, guides, and useful tools for deeper browsing.' },
+    en: { title: 'Genshin Impact Weapons Wiki — Stats, Effects & Sources', description: 'Browse the Genshin Impact weapon wiki by type, rarity, and best users to review main stats, passives, and endgame picks before building. It also links to characters, weapons, guides, and useful tools for deeper browsing.' },
     ja: { title: '原神武器図鑑 — 杖Wiki、演出効果、入手方法', description: '武器種別、レアリティ、適性キャラで原神武器図鑑を確認し、メインステ、効果、最終候補を把握できます。さらにキャラ、武器、攻略、実用ツールへの導線もまとめています。' },
   },
   artifacts: {
@@ -47,11 +47,6 @@ const mainMetaBaseline: Record<string, Record<SupportedLocale, MetaCopy>> = {
     zh: { title: '原神7.1版本专题：当前祈愿、剧情与活动', description: '原神7.1已上线，整理当前祈愿、剧情、活动、角色材料和资源规划；期限与奖励以官方公告及客户端为准。' },
     en: { title: 'Genshin v7.1 Live: Wishes, Story & Events', description: 'Track Genshin v7.1 watch, Luna II, Snezhnaya, Sandrone, livestream codes, current and next banners, Nod-Krai long-tail intent, and Primogem planning.' },
     ja: { title: '原神v7.1配信中：祈願・物語・イベント', description: '原神 v7.1、Luna II、Snezhnaya、Sandrone、配信コード、現在/次回バナー、Nod-Krai長尾、原石計画を確認できます。' },
-  },
-  gacha: {
-    zh: { title: '原神 Wiki | Gachia', description: '原神角色图鉴、武器数据、圣遗物推荐、攻略百科 — Gachia' },
-    en: { title: 'Genshin Impact Wiki | Gachia', description: 'Genshin Impact character guide, weapon database, artifact builds, wiki — Gachia' },
-    ja: { title: '原神 Wiki | Gachia', description: '原神キャラ図鑑、武器データ、聖遺物おすすめ、攻略百科 — Gachia' },
   },
   build: {
     zh: { title: '原神 配装推荐', description: '原神 角色配装推荐、最佳武器、圣遗物搭配，整理毕业思路、词条优先级、常见阵容与版本答案，帮助你快速完成养成决策。，同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。' },
@@ -116,16 +111,9 @@ export function genshinMetadata(locale: SupportedLocale, path: string, title: st
   const baseline = mainMetaBaseline[path]?.[locale];
   const resolvedTitle = baseline?.title ?? title;
   const resolvedDescription = baseline?.description ?? description;
-  const legacyHubCanonical = path === 'gacha';
   const legacyNoAlternates = path === 'redeem-codes';
   const legacyNoJapaneseAlternate = path === 'guides/banner-schedule-guide';
-  const canonicalUrl = legacyHubCanonical ? `${BASE_URL}/${locale}/genshin` : url;
-  const languages = legacyNoAlternates ? undefined : legacyHubCanonical ? {
-    'zh-Hans': `${BASE_URL}/zh/genshin`,
-    en: `${BASE_URL}/en/genshin`,
-    ja: `${BASE_URL}/ja/genshin`,
-    'x-default': `${BASE_URL}/zh/genshin`,
-  } : {
+  const languages = legacyNoAlternates ? undefined : {
     'zh-Hans': `${BASE_URL}/zh/genshin${normalized}`,
     en: `${BASE_URL}/en/genshin${normalized}`,
     ...(legacyNoJapaneseAlternate ? {} : { ja: `${BASE_URL}/ja/genshin${normalized}` }),
@@ -135,7 +123,7 @@ export function genshinMetadata(locale: SupportedLocale, path: string, title: st
     title: resolvedTitle,
     description: resolvedDescription,
     alternates: {
-      canonical: canonicalUrl,
+      canonical: url,
       ...(languages ? { languages } : {}),
     },
     openGraph: { title: resolvedTitle, description: resolvedDescription, url, siteName: 'Gachia', type: 'website', images: [{ url: `${BASE_URL}/images/og/genshin.webp`, width: 1200, height: 630, alt: resolvedTitle }] },

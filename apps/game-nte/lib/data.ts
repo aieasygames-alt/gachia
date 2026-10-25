@@ -120,9 +120,7 @@ export function characterName(character: (typeof nteCharacterSummaries)[number],
   return locale === 'zh' ? character.name : locale === 'ja' ? character.nameJa ?? character.nameEn : character.nameEn;
 }
 
-export function characterImage(character: (typeof nteCharacterSummaries)[number]) {
-  return `/images/characters/${character.id}.webp`;
-}
+export { characterImage } from './character-media';
 
 export function getNteCharacter(id: string): NteCharacter | undefined {
   return nteCharacters.find((entry) => entry.id === id) ?? nteCharacterSummaries.find((entry) => entry.id === id) as NteCharacter | undefined;

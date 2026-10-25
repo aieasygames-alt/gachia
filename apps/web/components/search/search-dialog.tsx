@@ -3,22 +3,12 @@
 import { hi3WeaponSearchScope } from '@/lib/hi3-weapon-scope';
 
 import { useState, useEffect, useMemo, useRef } from 'react';
-import type { SupportedLocale, GameId } from '@gachia/core';
+import type { SupportedLocale } from '@gachia/core';
 import { isBlockedNoiseQuery } from '@/lib/keyword-governance';
-import { loadSearchDataset, type SearchDataset } from '@/lib/search-dataset';
+import { loadSearchDataset } from '@/lib/search-dataset';
+import { buildSearchItems, searchItems, SEARCH_QUERY_LIMIT, type SearchItem } from '@/lib/search-results';
 import { isolateModalBackground, isActiveModal } from '@/lib/modal-background';
 import { moveSearchFocus } from '@/lib/search-keyboard';
-
-interface SearchItem {
-  id: string;
-  gameId: GameId;
-  name: string;
-  nameAlt: string;
-  type: 'character' | 'weapon' | 'item' | 'artifact';
-  url: string;
-}
-
-type SearchType = SearchItem['type'];
 
 function t(locale: SupportedLocale, zh: string, en: string) {
   return locale === 'zh' ? zh : locale === 'ja' ? zh : en;
@@ -43,13 +33,6 @@ const TYPE_LABELS: Record<string, Record<string, string>> = {
   weapon: { zh: '武器', en: 'Weapon', ja: '武器' },
   item: { zh: '材料', en: 'Item', ja: '素材' },
   artifact: { zh: '套装', en: 'Set', ja: 'セット' },
-};
-
-const TYPE_ORDER: Record<SearchType, number> = {
-  character: 0,
-  weapon: 1,
-  artifact: 2,
-  item: 3,
 };
 
 // Search data is kept in a generated static index so this client component
@@ -77,23 +60,7 @@ export function SearchDialog({ locale, open, onClose }: {
     loadSearchDataset(locale)
       .then((datasets) => {
         if (cancelled) return;
-        const items: SearchItem[] = [];
-        for (const [gameId, dataset] of Object.entries(datasets) as Array<[GameId, SearchDataset]>) {
-          for (const character of dataset.characters ?? []) {
-            items.push({ id: `${gameId}-char-${character.id}`, gameId, name: character.name, nameAlt: character.nameAlt, type: 'character', url: `/${gameId}/characters/${character.id}` });
-          }
-          for (const weapon of dataset.weapons ?? []) {
-            items.push({ id: `${gameId}-weapon-${weapon.id}`, gameId, name: weapon.name, nameAlt: weapon.nameAlt, type: 'weapon', url: `/${gameId}/weapons/${weapon.id}` });
-          }
-          for (const item of dataset.items ?? []) {
-            items.push({ id: `${gameId}-item-${item.id}`, gameId, name: item.name, nameAlt: item.nameAlt, type: 'item', url: `/${gameId}/items/${item.id}` });
-          }
-          for (const artifact of dataset.artifacts ?? []) {
-            const artifactRoute = gameId === 'starrail' ? 'relics' : gameId === 'wuwa' ? 'echoes' : gameId === 'nte' ? 'disk-sets' : 'artifacts';
-            items.push({ id: `${gameId}-artifact-${artifact.id}`, gameId, name: artifact.name, nameAlt: artifact.nameAlt, type: 'artifact', url: `/${gameId}/${artifactRoute}/${artifact.id}` });
-          }
-        }
-        setIndex(items);
+        setIndex(buildSearchItems(datasets));
         setLoadState('ready');
       })
       .catch(() => {
@@ -129,19 +96,7 @@ export function SearchDialog({ locale, open, onClose }: {
     return () => { window.removeEventListener('keydown', handleKey); restoreBackground(); if (previous?.isConnected) previous.focus(); };
   }, [open]);
 
-  const results = useMemo(() => {
-    if (!query.trim()) return [];
-    if (isBlockedNoiseQuery(query)) return [];
-    const q = query.toLowerCase();
-    return index
-      .filter((item) =>
-        item.name.toLowerCase().includes(q) ||
-        item.nameAlt.toLowerCase().includes(q) ||
-        item.id.includes(q),
-      )
-      .sort((a, b) => TYPE_ORDER[a.type] - TYPE_ORDER[b.type])
-      .slice(0, 30);
-  }, [query, index]);
+  const results = useMemo(() => searchItems(index, query), [query, index]);
 
   if (!open) return null;
 
@@ -161,6 +116,7 @@ export function SearchDialog({ locale, open, onClose }: {
           <input
             ref={inputRef}
             type="text"
+            maxLength={SEARCH_QUERY_LIMIT}
             aria-label={locale === 'zh' ? '搜索关键词' : locale === 'ja' ? '検索キーワード' : 'Search query'}
             value={query}
             onChange={(e) => setQuery(e.target.value)}

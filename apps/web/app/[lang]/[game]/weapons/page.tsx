@@ -110,7 +110,7 @@ export async function generateMetadata({
     ? `${gameName}武器图鉴 — 外观法杖Wiki、特效与获取方式`
     : locale === 'ja'
       ? `${gameName}武器図鑑 — 杖Wiki、演出効果、入手方法`
-      : `${gameName} Weapons Wiki — Cosmetic Staffs, Effects & Sources`;
+      : `${gameName} Weapons Wiki — Stats, Effects & Sources`;
 
   const description = gameId === 'hi3' ? hi3WeaponMetadata(locale).description : ensureMetaLength(intro ?? desc, locale);
 

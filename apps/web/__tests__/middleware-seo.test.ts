@@ -14,9 +14,11 @@ const tierListPage = readFileSync(join(__dirname, '../app/[lang]/[game]/tier-lis
 const weaponsPage = readFileSync(join(__dirname, '../app/[lang]/[game]/weapons/page.tsx'), 'utf8');
 
 describe('SEO redirect contracts', () => {
-  it('removes search placeholder URLs from the indexable URL set', () => {
-    expect(middleware).toContain("if (locale && secondSegment === 'search')");
-    expect(middleware).toContain('return redirectTo(request, `/${locale}`, true);');
+  it('serves the real search utility without discarding the query or indexing results', () => {
+    expect(middleware).not.toContain("if (locale && secondSegment === 'search')");
+    const search = readFileSync(join(__dirname, '../app/[lang]/search/page.tsx'), 'utf8');
+    expect(search).toContain('robots: { index: false, follow: true }');
+    expect(search).toContain('canonical: `https://gachia.com/${locale}/search`');
   });
 
   it('keeps language-less and unsupported game routes out of the canonical URL set', () => {

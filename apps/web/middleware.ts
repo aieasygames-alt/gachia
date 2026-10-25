@@ -175,11 +175,6 @@ function routeMiddleware(request: NextRequest) {
     return redirectTo(request, `/${locale}/${segments.slice(2).join('/')}`);
   }
 
-  // The site does not have a public search-results route. Keep stale schema URLs indexable-safe.
-  if (locale && secondSegment === 'search') {
-    return redirectTo(request, `/${locale}`, true);
-  }
-
   // Repair historical URLs that dropped the game segment.
   if (locale && secondSegment === 'items' && thirdSegment && (thirdSegment === 'stagnant-shadow-shape-of-abundance' || LEGACY_STARRAIL_ITEM_SLUGS.includes(thirdSegment as typeof LEGACY_STARRAIL_ITEM_SLUGS[number]))) {
     return redirectTo(request, `/${locale}/starrail/items/${thirdSegment}`);
